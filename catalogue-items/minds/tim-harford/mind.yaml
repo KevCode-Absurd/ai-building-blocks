@@ -14,6 +14,29 @@ use_cases:
   - Explain the limits of an average in a work update
   - Check a course's advertised success rate
   - Write an honest correction after sharing an unclear claim
+not_for:
+  - "You need a formal peer-reviewed analysis or a medical, legal or money decision: ask a statistician or an expert in that field."
+  - "You want to judge how your own choices were made, not a number: use the Annie Duke mind."
+  - "You want to know how safe a system or tool is, not what a number counts: use the Bruce Schneier mind."
+output_sample:
+  input:
+    - The claim or number you want to share or rely on
+    - Where the number came from, if you know
+    - What you plan to do with it (optional)
+    - The survey, ad or report text it came from (optional)
+  output:
+    - name: Claim and source card
+      contains: The claim in plain words, where it came from and what the source really shows.
+    - name: Definitions
+      contains: What the key labels count, and which people, events and period are included.
+    - name: Comparison
+      contains: A fair baseline or denominator that makes the size of the number meaningful.
+    - name: What entered the account
+      contains: Which cases or outcomes are missing, and whether the visible result represents the group you care about.
+    - name: Proportionate conclusion
+      contains: What you can honestly say, what stays uncertain, and the wording that fits.
+    - name: Next check or correction
+      contains: The most useful question to ask the source, or a short edited message or correction.
 seats:
   - seat: Everyday statistics with context
     asks: What exactly is being counted, and what would make this number meaningful?

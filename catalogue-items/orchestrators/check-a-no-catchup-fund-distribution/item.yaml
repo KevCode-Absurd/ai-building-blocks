@@ -1,15 +1,13 @@
 slug: check-a-no-catchup-fund-distribution
 name: Check a no-catchup fund distribution
-summary: Carry a verified simple preference balance into capital-first residual carry allocation.
+summary: "Check a fund distribution with no GP catch-up: see the preferred return owed, what LPs get first, and the carry the GP earns."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: A script finds the cuts, and the AI only explains them.
 new_slug: dead-air-and-retake-cutter
 name: Dead air and retake cutter
-summary: Give it your recording transcript. Get a timed list of pauses, fillers
-  and retakes to cut.
+summary: Find the pauses, filler lines and retakes to cut from your video transcript. You get a timed cut list to apply in your editor.
 job: grow-social
 headline: Dead air and retake cutter
-subhead: "A list of exact cut points for your recording, taken from its
-  transcript: silences, filler lines and sentences you started over. You apply
-  the cuts in your editor, so nothing in your footage changes without you."
+subhead: "A list of exact cut points for your recording, taken from its transcript: silences, filler lines and sentences you started over. You apply the cuts in your editor, so nothing in your footage changes without you."
 explain: |
   A list of exact cut points for your recording, taken from its transcript: silences, filler lines and sentences you started over. You apply the cuts in your editor, so nothing in your footage changes without you.
 
@@ -18,6 +15,10 @@ when:
   - You have a transcript and need timecodes for pauses to trim.
   - A take has restarts and you want to find the best attempt.
   - You want to know how much shorter a video could be.
+not_for:
+  - "You have no transcript yet: make one first with a speech-to-text tool such as Whisper, or use YouTube captions. This skill does not guess timings."
+  - "Your video has long silent demos: the time saved only counts speech, so check the cut list against your footage by hand."
+  - "You want the file edited for you: this skill only lists cuts. Make them yourself in your video editor."
 you_give:
   - A timestamped transcript
   - Silence length to cut (optional)
@@ -28,8 +29,26 @@ you_get:
   - Estimated time saved
   - JSON version for tools (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run Python code.
+output_sample:
+  input:
+    - Your transcript as an SRT, VTT or Whisper JSON file
+    - The shortest silence to cut (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - A timestamped transcript of your recording
+  output:
+    - name: DEAD cuts
+      contains: Gaps longer than your limit, with timecodes, trimmed from the middle so both sides keep a breath.
+    - name: FILLER cuts
+      contains: Lines that hold only words like um or so yeah, with timecodes.
+    - name: REPEAT cuts
+      contains: Sentences you started over, compared with the last real speech, even when an um sits between takes.
+    - name: Time saved
+      contains: The share of speech you would cut, shown at the end of the report.
+    - name: JSON version
+      contains: The same cut list in a form other tools can read, when you ask for it.
+    - name: Ship it or change it
+      contains: A closing question asking if you want to use the list or change it.

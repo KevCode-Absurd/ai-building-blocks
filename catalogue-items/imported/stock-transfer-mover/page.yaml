@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It subtracts in one place and adds in another.
 new_slug: stock-transfer-mover
 name: Stock transfer mover
-summary: Name a product, two locations and a number. Get stock moved from one to
-  the other. Changes live stock levels.
+summary: Move stock between Shopify locations by naming a product code, two locations and a quantity. You see a preview before any live stock changes.
 job: run-your-store
 headline: Stock transfer mover
-subhead: Move units of a product from one of your locations to another in
-  Shopify, with the two sides kept in step. You name the products by code, the
-  source and destination locations and the quantities.
+subhead: Move units of a product from one of your locations to another in Shopify, with the two sides kept in step. You name the products by code, the source and destination locations and the quantities.
 explain: |
   Move units of a product from one of your locations to another in Shopify, with the two sides kept in step. You name the products by code, the source and destination locations and the quantities. The skill takes stock off the source and adds it to the destination.
 
@@ -17,8 +14,11 @@ when:
   - You are shipping stock from your warehouse to a retail shop.
   - A location is running out while another has too much.
   - You are closing a pop-up and moving what is left home.
-  - You need to move many products between places without editing each one by
-    hand.
+  - You need to move many products between places without editing each one by hand.
+not_for:
+  - "You need a formal transfer record with an audit trail: use Shopify's own transfer order feature in your admin, since this makes direct stock adjustments only."
+  - "You do not yet know which location has extra stock: check your stock levels in each location in Shopify admin first, then come back to move it."
+  - "You want to fix a miscount at one location: edit that product's count in Shopify admin, because this moves stock between two places."
 you_give:
   - Your Shopify store link and access
   - Source and destination locations
@@ -29,9 +29,29 @@ you_get:
   - A warning if a source would go negative
   - A record of what was moved
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Use an AI that can run code and connect to your Shopify store. A plain chat window cannot change stock.
+  - Give your AI the skill and your store link. Sign in to Shopify when it asks.
+  - List the source location, the destination location, and each product code with its quantity.
+  - Run the preview first. Check each line and any low stock warning.
+  - If the numbers look right, ask your AI to run it for real. This changes live stock.
+  - Keep the CSV file it makes. It is your record of the move.
+output_sample:
+  input:
+    - Your Shopify store link and access
+    - The location to move stock from
+    - The location to move stock to
+    - Product codes (SKUs) with the quantity for each
+  prerequisites:
+    - An AI that can run code and connect to your Shopify store
+    - Shopify access that can read and change inventory
+  output:
+    - name: Preview of changes
+      contains: Each product with the stock to take off the source and add to the destination, shown before anything is written.
+    - name: Progress log
+      contains: A line for each step that says what was checked or changed and what came back.
+    - name: Low stock warnings
+      contains: A flag for any product where the source has less stock than you asked to move.
+    - name: Outcome summary
+      contains: Counts of products moved, units moved, warnings and errors.
+    - name: inventory_transfer CSV file
+      contains: One row per product with stock before and after at both locations, plus names and codes.

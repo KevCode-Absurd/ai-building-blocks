@@ -1,0 +1,42 @@
+slug: agency-unity-architect
+name: Unity Architect agent
+summary: "Plan a Unity project structure with ScriptableObjects so systems stay separate, designers can edit data, and oversized scripts get split up."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/unity/unity-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unity/unity-architect.md
+  licence: MIT
+  original_name: Unity Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 15502fbcd46fcd7559bcd85d15b512317ceed27ffb90fc54e79f3c32bf682c1a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Unity Architect
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Unity Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unity/unity-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

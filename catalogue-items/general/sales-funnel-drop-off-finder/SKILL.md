@@ -59,7 +59,7 @@ How to start:
 9. **Keep what the owner would act on this month.** Cut advice that doesn't fit the business's size, such as tests a small store can't run.
 10. **Name what's missing and what works.** Missing returns terms, delivery times, a size guide or a stated rating are findings too. Name the sections that already work. Don't pad.
 11. **Mock-ups (optional).** If asked for before and after images: the BEFORE is always a real screenshot of the exact section, never redrawn. The AFTER is labelled "mock-up", changes one thing, and shows only the business's real prices, offers and proof. Where none is held, show a labelled grey box.
-12. **Score it.** The page score measures how much stands in a buyer's way on the page behind the leakiest step, from your findings. Start at 100. Take off 20 for each finding that stops the sale, 8 for each that slows buyers and 2 for each minor one, and stop at 0. Then give the score with the ship-now fixes made. Show both sums. It is not a sales forecast.
+12. **Score it.** The page score measures how much stands in a buyer's way on the page behind the leakiest step, from your findings. Start at 100. First list every finding by number under its severity: stops the sale, slows buyers, minor. Count each list, so the number of findings counted matches the labels. Take off 20 for each finding that stops the sale, 8 for each that slows buyers and 2 for each minor one, and stop at 0. Then give the score with the ship-now fixes made. Show both sums, for example `100 - 20 x 1 - 8 x 5 - 2 x 1 = 38`. It is not a sales forecast.
 
 ## What you hand back
 1. **Mode and sources**: with numbers or page only, date range, ads checked, how and when the pages were captured.
@@ -102,12 +102,5 @@ Write `MISSING: <what>`. No ad: the ad match isn't judged. No step counts: page 
 - Calling a sized fix a forecast.
 
 
-## Optional mobile walkthrough and resumable audit deck
-
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-cro-audit.md.
-
-For a full store audit, walk accessible surfaces in buying order: home, navigation, collection, product, campaign page, FAQ/info, cart and checkout. Record viewport, URL, time and capture ID. Do not order or alter a live account outside the requested test scope.
-
-A BEFORE is a real capture; an AFTER is a labelled proposal. Never generate a fake current screenshot, rating, press logo or demand count. Rank findings by evidence, impact, ease and confidence. With real matched inputs, sessions times change in conversion rate times average order value is an illustrative revenue scenario, not guaranteed profit or causal lift. Show assumptions and do not size a gap without data.
-
-Use a resumable manifest: finding ID, real BEFORE, hypothesis, evidence, proposed AFTER slot, version, status and next action. Resume incomplete slots rather than rebuild everything. A deck puts observations beside proposals and proof needed. Shared-app writes need the authorized destination.
+## Optional: whole-store audit
+If the owner asks for the whole store, walk the pages in buying order: home, navigation, collection, product, campaign page, FAQ, cart and checkout. For each, note the page address, the phone size used and the time. Do not place an order or change anything in a live account. Treat each page as a separate finding list under the same step table. The BEFORE of any mock-up is always a real screenshot, and the AFTER is a labelled proposal. Never invent a current screenshot, rating, press logo or demand count. The longer method is in `references/cmo-method-cro-audit.md`.

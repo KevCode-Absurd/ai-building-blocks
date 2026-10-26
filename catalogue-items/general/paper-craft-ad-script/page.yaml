@@ -1,29 +1,36 @@
 new_slug: paper-craft-ad-script
 name: "Paper craft video ad script writer"
-summary: "Paste your brief and product facts. Get a paper-craft video script and a cast note."
+summary: "Write a 15 to 40 second paper-craft video ad script from your brief and product facts, with a cast note for the video step."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Paper craft video ad script writer"
-subhead: Give it your brief, product facts and approved claims. It picks the real paper mechanism that shows your point, like a flap or pop-up, and tests every paper change as a claim. You get a 15 to 40 second paper-craft script and a cast note for the video.
+subhead: Give it your brief, product facts and approved claims. It picks the real paper trick that shows your point, such as a flap or a pop-up, and tests every paper change as a claim. You get a paper-craft video ad script and a cast note.
 
 explain: |
-  A world of real paper makes a small everyday problem feel like a picture book, and a pop-up that rises as a page turns feels like opening a gift. Ask an AI tool for "paper" carelessly, though, and you get flat clip art, a craft model sitting on a desk, or a coffee cup that comes out as a real cup because nobody said it was card.
+  Paper turns a small everyday problem into a picture book. A pop-up that rises as a page turns feels like opening a gift. But ask an AI tool for "paper" carelessly and you get flat clip art, a craft model on a desk, or a coffee cup that comes out as a real cup because nobody said it was card.
 
-  This skill starts from the job. It asks what the turning shot must show (a reveal, something spreading, two things joining, parts adding up, a mood calming, or the product held still) and picks the mechanism paper engineers use for exactly that. A lift-the-flap or a pop-up reveals. A concertina spreads across the scene. Layers stacked front to back show many parts. It sets how deep the paper is built, names the paper on every object, and reads every paper change as a sentence your claims must back.
+  This skill starts from the job. It asks what the turning shot must show: a reveal, something spreading, two things joining, parts adding up, a mood calming, or the product held still. Then it picks the paper trick made for that. A flap or pop-up reveals. A concertina spreads across the scene. Stacked layers show many parts.
 
-  It ends with a cast note: one paper figure, paper hands only, or the product alone, and why. The skill that turns a paper-craft script into shots takes it from there. Want a still instead? Use "Paper craft image ad maker".
+  It sets how deep the paper is built and names the paper on every object. It reads each paper change as a sentence your claims must back. It ends with a cast note: one paper figure, paper hands only, or the product alone, and why.
 
 when:
   - Your product fixes a small everyday problem you can tell as a short story.
   - You want a warm, handmade-looking ad for people who don't know your brand yet.
   - You want a reveal that feels like a gift, with your product popping up from the page.
+  - You need a script that a video tool can turn into shots, with the paper named in every picture.
+
+not_for:
+  - You want a still image, not a video. Use the Paper craft image ad maker.
+  - You want a quick explainer with flat cutout figures. Use the Paper cutout explainer video ad script writer.
+  - You already have a paper-craft script and want shots. Use the Paper craft video clip prompt writer.
+  - Real texture or proof is the point, such as fabric, food or a before and after. Film it instead. The skill will tell you if paper is a weak fit.
 
 you_give:
-  - The reason someone buys, what the buyer knows, the selling idea and the length
+  - The reason someone buys, what the buyer knows, your selling idea in one sentence and the length, from your ad brief
   - A photo of your product (attach it; your AI can see pictures), its biggest label lines and how it's used
-  - Your approved claims, banned claims and offer
+  - Your approved claims, banned claims and the offer with its terms
   - Your buyer's moment and words, brand colors and voice (optional)
 you_get:
   - A show plan with the paper mechanism, the build and the claim it implies
@@ -33,12 +40,12 @@ you_get:
   - Any of its own checks the script still missed, one line each, or none
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts, biggest label lines and claims underneath.
-  - Write the selling idea in one sentence and the buyer's moment in another.
-  - Say the length, such as "30 seconds".
-  - Check that every object in the picture notes names its paper. Anything without it will come out real.
-  - Take the script and cast note to the skill that turns a paper-craft script into shots. It runs the video process from there.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It needs no tools. Attach a product photo if your AI can read pictures.
+  - Paste your product facts, biggest label lines, claims and offer.
+  - Write the selling idea in one sentence and the buyer's moment in another. Say the length, such as "30 seconds".
+  - Check that every object in the picture notes names its paper, in every row. Anything without it will come out real.
+  - Check each line in CLAIMS SHOWN against your approved claims. Cut any paper change you can't back.
+  - Take the script and cast note to the Paper craft video clip prompt writer. It makes the shots and clips from there.
 
 how_it_works:
   - title: Checks the fit
@@ -155,6 +162,30 @@ example:
     the pack arrives in her hands at the turn.
     MISSING: what the single daily pack's printing looks like; line 4
     assumes plain green.
+
+output_sample:
+  input:
+    - "Your brief: why someone buys, what the buyer knows, the selling idea and the length"
+    - "Product facts, its biggest label lines and a photo"
+    - "Your approved claims, banned claims and offer terms"
+    - "Your buyer's moment and words (optional)"
+  prerequisites:
+    - "A brand brain from the Website brand brain builder, for facts and claims (optional)"
+  output:
+    - name: "Show plan"
+      contains: "The selling idea, the show job, the paper mechanism, the build and paper, and the sentence the turn implies."
+    - name: "Script table"
+      contains: "One row per line: narration, the picture with paper named, camera spot and one move, with the turn marked."
+    - name: "Timing and clip split"
+      contains: "Word count, seconds at about 2.2 words a second, and how the script splits into clips."
+    - name: "Claims shown"
+      contains: "Each paper change with its source, plus the changes rejected and why."
+    - name: "Cast note"
+      contains: "Who carries the ad (one paper figure, paper hands only or the product alone) and why."
+    - name: "MISSING lines"
+      contains: "Facts it needed and did not get."
+    - name: "Checks missed"
+      contains: "One line for each check the script still fails, or none."
 
 tweaks:
   - what: The show job

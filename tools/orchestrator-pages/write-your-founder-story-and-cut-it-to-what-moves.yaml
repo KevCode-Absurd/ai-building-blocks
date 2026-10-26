@@ -1,6 +1,6 @@
 new_slug: write-your-founder-story-and-cut-it-to-what-moves
 name: Write your founder story and cut it to what moves
-summary: Give it the true facts of how you started. Get a shaped, trimmed story in plain words.
+summary: Write your founder story from the true facts of how you started. Get a shaped story, cut by a tenth and put in plain words you would say aloud.
 job: write-and-tell-stories
 thinking: medium
 thinking_why: Four text skills in a row. A mid-size model works. Use your strongest one if the story is long.
@@ -14,6 +14,10 @@ when:
   - You need an About page, an intro or a talk opener about how you started.
   - Your story is a list of dates and does not move.
   - Your draft is long, and you cannot tell what to cut.
+not_for:
+  - "You need a formal company history or a legal bio: ask a lawyer or your communications lead to write it from records."
+  - "You only want a short tagline: use the Brand voice editor with your brand brain instead."
+  - "You have a finished draft and only want fewer words: use the Ten percent cutter on its own."
 you_give:
   - The true facts, what happened, in what order, with rough dates
   - What it cost you and what you gave up
@@ -26,10 +30,32 @@ you_get:
   - A line of the story's ups and downs, its shape and the flat spots
   - A version cut by a tenth, with a log of every cut, then a plain-words edit
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Give it facts only. It will not add scenes, quotes or numbers you did not provide.
+  - Open Claude, ChatGPT or Gemini in a chat where you can attach or paste files.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the four skill files this workflow uses.
+  - Attach the files and say "Follow HANDOFF.md". Then paste your facts, true ones only, in order.
+  - It will not add scenes, quotes or numbers you did not give it.
   - At the pause, make the one change the shape check suggests and fix the flat spots yourself. Then hand the draft back.
+output_sample:
+  input:
+    - The true facts of how you started, in order, with rough dates
+    - What it cost you and what you gave up
+    - What you learned, and who gains from it
+    - Who will read or hear it, and how long it should be
+    - Your brand brain or voice notes (optional)
+  prerequisites:
+    - An AI that can work with several files, such as Claude with a Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Story map
+      contains: Your facts in order, marked as call, point of no return, hardest stretch, change and return, plus a first draft.
+    - name: Story shape
+      contains: Each beat scored from good to bad fortune, a line of the ups and downs, the shape and the flat spots.
+    - name: Cut draft and cut log
+      contains: The draft trimmed by a tenth, with every cut listed by pass and the reason for it.
+    - name: Plain words edit
+      contains: The point in one sentence, marked phrases and swaps, and the final draft you could say aloud.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Map the facts into a story
     text: Lists every true fact in order, marks the call, the point of no return, the trial, the change and the return, drops any stage that rests on a guess and drafts the story.
@@ -38,7 +64,7 @@ how_it_works:
   - title: Pause and fix the flat spots
     text: You make the one change and rewrite the flat spots, keeping every fact true.
   - title: Cut ten percent
-    text: Sets a target of 90% of the words and cuts in passes. Protects anything set up for later, and logs every cut with its reason.
+    text: Takes your reworked draft, with the shape fixes made, and sets a target of 90% of the words and cuts in passes. Protects anything set up for later, and logs every cut with its reason.
   - title: Put it in plain words
     text: States the point in one sentence, swaps stale phrases and jargon, makes passive lines active, and reads it aloud to catch lines you would not say.
 output_shape: |-

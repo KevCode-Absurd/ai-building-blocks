@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It judges what the AI needs to see, and when.
 new_slug: agent-context-setter
 name: Agent context setter
-summary: Describe your project. Get the right rules and files loaded so your AI
-  stays accurate through long sessions.
+summary: Set up your AI coding project with a rules file and the right files per task, so answers stay accurate in long sessions.
 job: set-up-ai
 headline: Agent context setter
-subhead: A short rules file and a tidy set of project files that tell your AI
-  what you are building and how you work, so it stops guessing.
+subhead: A short rules file and a tidy set of project files that tell your AI what you are building and how you work, so it stops guessing.
 explain: |
   A short rules file and a tidy set of project files that tell your AI what you are building and how you work, so it stops guessing. Answers get worse when the AI sees too little, and also when it sees too much.
 
   The skill sorts what the AI sees into layers. At the top sit always-on rules: your tools, run commands, code style and hard limits. Below that come specs for the current feature, then only the source files the task touches, then the latest error or test output. It also tells you when to start a fresh session, and to paste the real error instead of describing it.
 when:
-  - Your AI keeps ignoring your project's style or inventing functions that do
-    not exist.
+  - Your AI keeps ignoring your project's style or inventing functions that do not exist.
   - You are starting a new project and want the AI set up properly from day one.
   - Answers got worse halfway through a long session and you do not know why.
-  - You are switching to a different part of the project and need the AI to
-    catch up.
+  - You are switching to a different part of the project and need the AI to catch up.
+not_for:
+  - "You want help with writing, research or other non-coding work: use a plain chat prompt instead."
+  - "You have one quick question about code: ask it in a normal chat, no setup needed."
+  - "You have no project files or code yet: write down your goals in a short note first, then come back."
 you_give:
   - A short description of your project
   - The tools and commands you use
@@ -30,8 +30,32 @@ you_get:
   - Rules for when to reset or trim the session
   - A checklist for spotting drifting answers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI coding tool, such as Claude Code, in your project folder. Paste this skill into the chat.
+  - Describe your project in a few lines. Add your tools, run commands and any rules your AI keeps breaking.
+  - Ask your AI to write the rules file. In Claude Code, save it as CLAUDE.md in the top folder of your project.
+  - Start a new session. Your AI now reads the rules file first. Give it the spec and files for one task.
+  - Run the Verification checklist from the skill after the first few tasks. Reset the session when answers drift.
+  - No coding tool? Paste the skill into Claude, ChatGPT or Gemini and ask for the rules file. Then paste it at the start of each new chat.
+output_sample:
+  input:
+    - A short description of your project
+    - The tools and commands you use
+    - Rules your AI keeps breaking (optional)
+    - Specs or notes for the current task (optional)
+  prerequisites:
+    - An AI that can read your project files, such as Claude Code, for the full setup
+  output:
+    - name: Rules file (CLAUDE.md)
+      contains: Your tech stack, run commands, code style, hard limits and one short example of good code.
+    - name: Specs and architecture
+      contains: Which design notes to load for the feature you are working on.
+    - name: Relevant source files
+      contains: The files to read before each task, plus a similar example already in your code.
+    - name: Error output
+      contains: How to pass the exact error back to your AI instead of a long log.
+    - name: Conversation management
+      contains: When to start a fresh session and how to restart it cleanly.
+    - name: Project map
+      contains: A short map of your code areas so your AI knows where things live.
+    - name: Verification checklist
+      contains: Signs that your AI is drifting, and checks to run before you trust its answers.

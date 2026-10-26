@@ -1,37 +1,137 @@
 new_slug: two-pass-meta-ads-agent-builder
 name: Two-pass Meta Ads agent builder
-summary: Build a Meta Ads agent that gathers evidence before writing findings. Keep account scope, cost limits and proposed actions clear.
+summary: Plan a Meta Ads agent that checks the numbers first, then asks a stronger AI only about hard cases. Get a build plan, cost caps and tests.
 job: build-software
 headline: Two-pass Meta Ads agent builder
-subhead: Build a Meta Ads agent that gathers evidence before writing findings. Keep account scope, cost limits and proposed actions clear.
+subhead: Tell it about your project, the Meta ad account to review and your spend limits. It plans an agent that reads the numbers first, then sends only the unclear findings to a stronger AI. You get a file plan, a report layout, cost caps and tests. Nothing is built or run.
 explain: |-
-  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+  A Meta Ads agent reads an ad account and writes up what it finds. The easy way sends every number to one large AI model. Figures get mixed up, no one can trace them back, and the bill grows. This skill plans a two-pass agent instead.
 
-  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+  Pass one is plain code. It pulls the account's numbers, works out the metrics and ranks what looks wrong. Every finding keeps an ID that points to the raw record. Pass two is a stronger AI model. It sees only the few findings that are unclear, with the same records and a clear question. A last check reads the report before anyone sees it. It looks for numbers with no source, data from the wrong account and secrets.
+
+  The plan stops at advice. The agent proposes changes and a person approves each one. A model's reply is never permission to change a budget. The skill writes a plan and draft code. It does not call Meta or any AI model.
 when:
-  - You need a concrete setup or code-change plan with required files.
+  - You want an agent that reviews a Meta ad account on a schedule and writes findings with proof.
+  - Your agent sends every number to one costly AI model and the bill keeps rising.
+  - Your reports contain figures nobody can trace back to the ad account.
+  - You run ads for several clients and must keep each account's data apart.
+not_for:
+  - You want a one-time check of an ad account's results. Use the Meta Ads 30-check account auditor.
+  - You want a report app that compares dated results, not an agent. Use the Meta Ads reporting app planner.
+  - You want the agent to pause ads or change budgets. This plan only proposes changes. A person approves each one.
+  - You have no Meta read access yet. Start with the Meta developer app setup planner.
+  - Your ads run on Google. Use the Google Ads agent development planner.
 you_give:
-  - The selected codebase, schemas and service setup
-  - The exact change you want and actions you authorize
+  - Your project's code, or a note on its language, where jobs run and how it calls an AI model
+  - The Meta ad account to review (an ID with part hidden is fine) and the date range
+  - Your currency, attribution window, target cost per purchase or return on ad spend, and monthly budget cap
+  - The cheap and the strong AI model you plan to use, and the most you will spend per run and per account
+  - What the agent may do. Read only is the default
+  - Your metric definitions or past reports (optional)
 you_get:
-  - A concrete setup or code-change plan with required files
-  - Missing inputs and a bounded verification plan
+  - A file-by-file plan for the two passes, with the gaps in your project named
+  - A findings record with dates, currency, attribution window, source numbers, missing fields and an evidence ID
+  - Rules for which findings go to the second pass, with call, time and cost caps for each run
+  - A report layout with findings and evidence IDs, proposed changes, open questions and checks not run
+  - Tests on made-up data, and a list of what is still missing
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in your AI. Claude Code or Codex can read your project. In a chat AI, paste the code that fetches data and calls AI models.
+  - Give the account, date range, currency and targets. Never paste a token or key. Name the setting that holds it.
+  - Say which AI models you use and your cost caps. Mark any number you are guessing.
+  - Read the part on what you have and what is missing first. Check that each point is true for your project.
+  - Ask for draft code only after you accept the plan. Run it on made-up data before any real account.
+  - Before a real run, fill every line under MISSING. Meta read access comes first. The Meta developer app setup planner covers it.
 how_it_works:
-  - title: Step 1
-    text: Inspect the selected runtime and explicit Meta account scope. Confirm available data fetchers, job handlers, metrics definitions, model gateway, response filter and approval/budget controls. Missing private course modules are missing dependencies, not installed capabilities.
-  - title: Step 2
-    text: Define a typed observation record containing dates, currency, attribution, source metrics, missing fields and validated derived values. Fetch only the authorized account data and preserve raw evidence IDs for every finding.
-  - title: Step 3
-    text: Build the first pass as bounded triage over deterministic metrics and known account targets. Mark missing data and rank potential issues. Do not let a low-cost model invent metrics or turn an alert into an approved account action.
-  - title: Step 4
-    text: Route only selected complex or ambiguous findings to the second reasoning pass, carrying the same scoped evidence and explicit questions. Enforce per-run and per-account call/time/cost limits before each pass. A more expensive model is not inherently a correct reviewer.
-  - title: Step 5
-    text: Validate the final report for supported numerical claims, client scope, secrets, contradictory advice and clear action ownership. Return recommended checks and proposed changes, not direct campaign mutations, unless the current user separately authorized the exact operation.
-  - title: Step 6
-    text: Use synthetic fixtures for normal findings, sparse data, conflicting signals, invalid scope, budget denial and model failure. Return code or a complete implementation plan with missing dependencies and actual tests distinguished from proposed tests. Keep the last successful report and a checkpoint for a later authorized run.
+  - title: Check what exists
+    text: Lists your data fetchers, job handlers, metric definitions, AI model access and cost controls. Anything you do not have is marked missing, not assumed.
+  - title: Define the findings record
+    text: Gives every finding dates, currency, attribution window, source numbers, missing fields and an evidence ID that points to the raw data.
+  - title: Pass one, triage
+    text: Code compares the account's numbers with your targets and ranks what looks wrong. A low-cost model may sort the list but never supplies a number.
+  - title: Pass two, hard cases
+    text: Only unclear findings go to a stronger model, with the same records and clear questions. Per-run and per-account caps are checked before each call.
+  - title: Check the report
+    text: Confirms each number has support, the account is the right one, no secret appears and no advice clashes. Changes are proposals with an owner.
+  - title: Test and recover
+    text: Plans tests for normal, thin, conflicting and wrong-account data, a budget stop and a model failure. Keeps the last good report so a failed run loses nothing.
+output_shape: |-
+  STATUS
+  <plan and draft code only; nothing run; what was read>
+
+  WHAT EXISTS AND WHAT IS MISSING
+  <data fetchers, job handlers, metric definitions, model access, cost controls: present | missing>
+
+  FINDINGS RECORD (draft)
+  <fields: dates, currency, attribution window, source metrics, missing fields, derived values, evidence ID>
+
+  PASS ONE: TRIAGE
+  <what the code checks, against which targets, how findings are ranked>
+
+  PASS TWO: HARD CASES
+  <which findings go on, the question for each, call, time and cost caps>
+
+  REPORT LAYOUT
+  Findings with evidence IDs | Proposed changes | Open questions | Checks not run
+
+  CHECKS BEFORE THE REPORT IS SHOWN
+  <numbers supported, right account, no secrets, no clashing advice>
+
+  TESTS TO RUN
+  <number> | <case> | <expected result>
+
+  ASSUMPTIONS
+  <each starting value and what to check it against>
+
+  MISSING
+  <each missing input and what it stops>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your project's code, or a note on how it runs jobs and calls an AI model
+    - The Meta ad account, date range, currency and targets
+    - The two AI models and your cost caps
+    - What the agent may do, with read only as the default
+  prerequisites:
+    - Read access to the Meta ad account, through your own Meta developer app (optional until you run it for real)
+    - An AI that can read your code, or code pasted into the chat
+  output:
+    - name: Status
+      contains: A plain note that this is a plan and draft code, nothing was run, and what was read.
+    - name: What exists and what is missing
+      contains: Your data fetchers, job handlers, metric definitions, model access and cost controls, each marked present or missing.
+    - name: Findings record
+      contains: The fields every finding carries, including dates, currency, attribution window and an evidence ID.
+    - name: Pass one and pass two
+      contains: What the code checks first, which findings go to the stronger model, and the caps on calls, time and cost.
+    - name: Report layout
+      contains: Findings with evidence IDs, proposed changes, open questions and checks not run.
+    - name: Tests to run
+      contains: Cases such as thin data, conflicting signals, the wrong account, a budget stop and a model failure.
+    - name: Assumptions, missing and next step
+      contains: Starting values to confirm, inputs still missing, and the one smallest step to take first.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: Reads your fetchers, job handlers and model calls together, so the plan names real files.
+    - name: A Meta developer app with read access
+      why: Gives the agent data to read. Set it up first with the Meta developer app setup planner.
+    - name: An AI model API from your provider
+      why: The built agent calls it, and it costs money per call. The plan sets caps before you spend.
+  inputs:
+    - A list of the metrics you judge an account by, with the exact meaning of each
+    - Two or three past account reports, so the report layout matches what you already read
+terms:
+  - term: Two-pass agent
+    meaning: An agent that triages with plain code first, then asks a stronger AI model only about the findings that stay unclear.
+  - term: Evidence ID
+    meaning: A reference on each finding that points back to the raw record it came from, so anyone can check it.
+  - term: Attribution window
+    meaning: How long after a click or view Meta still credits a sale to an ad.
+  - term: Model gateway
+    meaning: A service that sits between your code and AI models and routes each call. It is how many projects reach a model.
+  - term: Triage
+    meaning: A fast first sort that ranks what looks worst and needs a closer look.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

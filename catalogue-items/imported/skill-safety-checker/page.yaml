@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scans files against a list of risky patterns.
 new_slug: skill-safety-checker
 name: Skill safety checker
-summary: Give it a skill or bundle before you add it. Get a list of risky code,
-  data leaks and hidden payloads.
+summary: Check a skill or bundle for risky code, data leaks and hidden commands before you add it. You get a safety report with a score and fixes.
 job: make-skills
 headline: Skill safety checker
-subhead: A list of risky code, data leaks and hidden payloads in a skill or
-  bundle, found before you add it. It checks without running anything, on
-  Windows, Mac, Linux and mobile.
+subhead: A list of risky code, data leaks and hidden payloads in a skill or bundle, found before you add it. It checks without running anything, on Windows, Mac, Linux and mobile.
 explain: |
   A list of risky code, data leaks and hidden payloads in a skill or bundle, found before you add it. It checks without running anything, on Windows, Mac, Linux and mobile.
 
@@ -18,6 +15,10 @@ when:
   - You work on Windows and the checks you find are for Linux only.
   - A skill touches system folders and you want to know why.
   - You review skills for a company.
+not_for:
+  - "You need a full security audit by an expert: hire a security professional, because this only reads files and cannot prove a skill is safe."
+  - "You want to check a live computer or server: use your IT team or a security scanner, because this does not look at running systems."
+  - "You want to build a new skill: write it with your AI first, then run this check on the finished folder."
 you_give:
   - A skill or bundle folder
   - Your operating system (optional)
@@ -28,8 +29,26 @@ you_get:
   - Platform-specific notes
   - A summary of what to remove or ask about
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI. Use Claude, ChatGPT or Gemini. No code runs and nothing is installed.
+  - Add this skill to the chat, then add the skill files you want checked. Paste the text if your AI cannot read files.
+  - Say your operating system if you know it. Add where the skill came from if you know that too.
+  - Ask your AI to audit the skill. Read the score and the flagged actions first.
+  - Remove anything flagged that the skill does not need, or ask its author why it is there. A clean report is not proof the skill is safe.
+output_sample:
+  input:
+    - Your skill or bundle folder
+    - Your operating system (optional)
+    - Where the skill came from (optional)
+  prerequisites:
+    - An AI that can read the files in the folder, or you paste the file text into the chat
+  output:
+    - name: Security score
+      contains: A score from 0 to 10 for how risky the skill looks.
+    - name: Platform target
+      contains: "Which systems the skill is aimed at: Windows, Mac, Linux, Android or iOS."
+    - name: Flagged actions
+      contains: Each risky command or file touch found, with the file it sits in.
+    - name: Threat analysis
+      contains: What each flagged action could do and why it matters.
+    - name: Mitigation recommendations
+      contains: What to remove, change or ask the skill's author about.

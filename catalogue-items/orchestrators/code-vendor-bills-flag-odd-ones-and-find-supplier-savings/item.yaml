@@ -12,9 +12,9 @@ outputs:
   - {type: audit_report}
 uses: [vendor-bill-coder, unusual-transaction-finder, spend-savings-finder]
 steps:
-  - {uses: vendor-bill-coder, note: "Turns the pile of bills into one coded table. Nothing is paid until you say yes."}
-  - {uses: unusual-transaction-finder, note: "Looks through the coded table for repeats, jumps and bills that do not fit a vendor pattern."}
-  - {uses: spend-savings-finder, note: "Uses the coded table to group spend and rank savings, leaving out bills the last step flagged as errors."}
+  - {uses: vendor-bill-coder, note: "Turns the pile of bills into one coded table. Nothing is paid until you say yes. Hands the coded table to the next two steps."}
+  - {uses: unusual-transaction-finder, note: "Uses step 1's coded table. Looks for repeats, jumps and bills that do not fit a vendor pattern. Hands the flagged bills to the savings step."}
+  - {uses: spend-savings-finder, note: "Uses step 1's coded table and step 2's flagged bills. Groups spend and ranks savings, leaving out bills the last step flagged as errors."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/code-vendor-bills-flag-odd-ones-and-find-supplier-savings/skeleton.yaml

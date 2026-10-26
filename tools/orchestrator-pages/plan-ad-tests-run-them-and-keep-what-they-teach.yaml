@@ -1,6 +1,6 @@
 new_slug: plan-ad-tests-run-them-and-keep-what-they-teach
 name: Plan ad tests, run them and keep what they teach
-summary: Give it your past ads. Get five untried ideas, a test campaign layout, and after the run, what the results taught.
+summary: "Plan ad tests from your past ads: get five untried ideas, a test campaign layout, and after the run, a rule for what the winners share."
 job: plan-ad-tests
 thinking: high
 thinking_why: It compares many past ads across five lenses, then reads results after the test. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have months of ads and no record of what they taught.
   - You are about to brief a new round of ads and want ideas that differ from past ones.
   - A test ended and you cannot say why the winner won.
+not_for:
+  - "You have fewer than ten past ads with results: use the Untried ad idea finder on its own first, or plan one simple test by hand."
+  - "You only want to read the results of a test that already ran: use the Ad results report writer."
+  - "Your sales dropped and you need to know why: use the Ad sales drop analyst."
 you_give:
   - Your brand file
   - Your past ads and their results (spend, sales or replies)
@@ -29,6 +33,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Export your past ads with dates, spend and results for the first step.
   - At the pause, launch the pack and do not change it until the read window ends. Then export results and come back.
+output_sample:
+  input:
+    - Your brand brain, or your brand facts pasted in (optional)
+    - Your past ads with dates, spend and results
+    - Your daily test budget and how many products to test
+    - After the pause, the results export for the test ads
+  prerequisites:
+    - An AI that can read files, such as Claude with files attached
+    - Your brand brain from the Website brand brain builder (optional, makes it better)
+    - A Meta ads account to launch the test yourself
+  output:
+    - name: outputs/step-01-untried-ad-idea-finder.md
+      contains: Evidence grade, a gap map across five lenses, five ranked gaps, and five ideas each with a test question.
+    - name: outputs/step-02-meta-test-campaign-planner.md
+      contains: Campaign structure, ad packs, budget split, CBO or ABO choice, and the keep, cut and scale rules.
+    - name: Pause
+      contains: You launch the test, leave it alone for the read window, then export the results.
+    - name: outputs/step-03-winners-and-losers-ad-comparer.md
+      contains: Ranked ads, a checklist per ad, what winners share, a rule to test next, and how strong the evidence is.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find the ideas you have not tried
     text: Records each past ad, looks for gaps across moment, value, buyer knowledge, opening and form, ranks the five biggest and writes one idea per gap.
@@ -37,7 +62,7 @@ how_it_works:
   - title: Pause. Launch and wait
     text: You run the test without changes for the read window, then export the results.
   - title: Learn from the winners and losers
-    text: Puts a number on each ad, ranks them, fills a checklist for each, finds what winners share, checks it is not a place effect and writes the rule.
+    text: Starts from the results you export after the run, and reads them against the ideas and the pack names and rules. Puts a number on each ad, ranks them, fills a checklist for each, finds what winners share, checks it is not a place effect and writes the rule.
 output_shape: |-
   STEP 1: UNTRIED IDEAS
     Evidence grade | gap map by lens | five ranked gaps | five ideas with a test question each

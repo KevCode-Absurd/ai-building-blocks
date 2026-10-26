@@ -1,52 +1,90 @@
 new_slug: prepare-a-clear-client-project-kickoff
 name: Prepare a clear client project kickoff
 headline: Prepare a clear client project kickoff
-summary: Share the source files. Get a kickoff brief, meeting agenda and action register.
+summary: "Prepare a client project kickoff: a one-page brief, an agenda only if a meeting is worth holding, and an action list with owners."
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A kickoff brief, meeting agenda and action register. Share approved website or creative design scope, participants, decision owner, meeting duration, cost assumptions, milestones and open questions. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the approved scope, who will attend, who decides and your milestones. It writes the kickoff brief, tells you whether to hold a meeting at all, and sets up the action list with owners and dates.
 explain: |-
-  A kickoff brief, meeting agenda and action register.
+  A kickoff goes wrong when the scope is fuzzy, nobody owns the open questions or the meeting could have been a short note. This workflow prepares a client project kickoff so the brief, the meeting and the action list agree.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Success criteria, responsibilities and change handling are stated; open decisions have owners. Missing tools or evidence stay visible in the final summary.
+  Step 1 writes a short brief: goal, audience, tone, what is in and out of scope, limits and milestones, plus the questions still open. It is built on a creative brief, so it suits website, design and marketing projects best. Step 2 asks one question first: should this be a meeting? It prices the meeting from attendees, length and pay rates, then gives one of three answers. Step 3 turns confirmed commitments into an action list and keeps owners you proposed marked as unconfirmed.
+
+  The three answers are plain. ASYNC means there is no decision to make, so send a note instead. NOT-READY means there is a decision but no agenda or owner yet. MEET means all three are in place, and you get a timed agenda with a closing action recap.
 when:
-  - You need a kickoff brief, meeting agenda and action register.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A client has signed and you start next week, with scope in a proposal.
+  - A new client expects a kickoff call and you are not sure what it should cover.
+  - Your team keeps saying yes to kickoff calls that end without decisions.
+  - A website or design project has open questions that only the client can answer.
+not_for:
+  - The project is internal and has no client. Use the Project kickoff brief writer on its own.
+  - The kickoff already happened and you only want to track actions. Use the Executive action register.
+  - You only want to know if a meeting is worth holding. Use the Meeting agenda and cost planner.
+  - A client has asked for a change after work began. Use the Prepare a client scope change brief workflow.
+  - The scope is not approved yet. Settle the scope first, because this workflow plans from approved work only.
 you_give:
-  - Approved website or creative design scope, participants, decision owner, meeting duration, cost assumptions, milestones and open questions.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - "The approved scope: what is in and what is out (from the signed proposal or statement of work)"
+  - Who will attend, who decides, and the length of the meeting you have in mind
+  - The average hourly pay of the attendees, to price the meeting (optional)
+  - Milestones and dates, and the goal, audience and tone the client has given you
+  - Questions you still need the client to answer
 you_get:
-  - A kickoff brief, meeting agenda and action register.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A kickoff brief of about one page
+  - "A clear verdict: send a note, not ready, or hold the meeting, with the cost of the meeting"
+  - A timed agenda, only when the verdict is to hold the meeting
+  - An action list with owner, due date and source for each item
+  - A list of open questions, each with who must answer
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run Python code if you want the meeting cost worked out by script.
+  - Add the workflow pack. Paste the approved scope, the attendee list, who decides, the meeting length and your milestones.
+  - After step 1, read the brief with the client in mind. Does each line match what they signed? Fix anything that goes beyond it.
+  - After step 2, accept the verdict. If it says send a note, send the brief by email and skip the meeting.
+  - After step 3, check that each action has a real owner or is marked unconfirmed. After the meeting, add your notes and run step 3 again.
 how_it_works:
   - title: Project kickoff brief writer
-    text: Summarize scope, outcomes, responsibilities, milestones and unresolved assumptions.
+    text: "Writes the kickoff brief from the approved scope: goal, audience, tone, what is in and out, limits and milestones, with the open questions listed. Hands step 2 the open questions, the people and the decision to be made. Check before moving on: nothing in the brief goes beyond the signed scope."
   - title: Meeting agenda and cost planner
-    text: Run its ASYNC, NOT-READY or MEET gate. Use supplied attendee, duration and cost assumptions; only a MEET result gets an agenda with the required action recap.
+    text: "Asks whether this should be a meeting. It prices it from your attendees, length and pay rates, then answers ASYNC, NOT-READY or MEET. Only MEET gets a timed agenda, and every topic needs an outcome. Hands step 3 the agenda, or the note to send. Check before moving on: a MEET has a decision, an agenda and an owner."
   - title: Executive action register keeper
-    text: Convert confirmed commitments into a sourced action list; keep proposed owners unconfirmed.
+    text: "Turns commitments that are confirmed in the scope and brief into an action list with owner, due date and source. A proposed owner stays marked unconfirmed until someone says yes. Hand-back check: every action traces to a source line."
 output_shape: |-
-  Scope and source coverage
-  A kickoff brief, meeting agenda and action register.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  KICKOFF BRIEF      goal | audience | tone | in scope | out of scope | limits | milestones | sign-off needed from <person>
+  OPEN QUESTIONS     <question> | who answers | needed by
+  MEETING VERDICT    <ASYNC | NOT-READY | MEET> | reason | cost <amount> for <people> x <minutes>
+  AGENDA (MEET)      <minutes> <topic> | outcome wanted | owner, closing 5-minute action recap
+  ACTION LIST        id | task | owner (confirmed or proposed) | due | source
+  MISSING            <each gap, and what it stops>
+  CHECKS MISSED      <one line each, or none>
+output_sample:
+  input:
+    - The approved scope, in and out
+    - Who will attend, who decides, and the meeting length
+    - Milestones, and the goal, audience and tone
+    - The average hourly pay of attendees, for the meeting cost (optional)
+  prerequisites:
+    - A signed proposal or statement of work
+    - An AI that can run Python code, for the meeting cost script (optional)
+  output:
+    - name: Kickoff brief
+      contains: Goal, audience, tone, scope in and out, limits and milestones in about one page.
+    - name: Open questions
+      contains: What the client still has to answer, who answers and by when.
+    - name: Meeting verdict
+      contains: Send a note, not ready or hold the meeting, with the reason and the meeting cost.
+    - name: Agenda
+      contains: A timed, decision-first agenda with an outcome for each topic, only when you should meet.
+    - name: Action list
+      contains: Each commitment with an owner, a due date and its source, with unconfirmed owners marked.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in the scope or inputs, and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Success criteria, responsibilities and change handling are stated; open decisions have owners.
+  - what: A shorter call
+    how: Cut the meeting length. The agenda drops lower-priority topics or the verdict changes.
+  - what: More attendees
+    how: Add people. The meeting cost rises, and the verdict may say send a note to some of them.
+  - what: After the meeting
+    how: Add your raw notes and run step 3 again. Actions without an owner or a date are flagged.
 judge:
   - Success criteria, responsibilities and change handling are stated; open decisions have owners.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +97,27 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the signed scope and the kickoff brief together, so later changes are compared with the same page.
+  - Ask the client to confirm the open questions in writing.
+  - Reuse your own attendee pay rates each time, so the cost stays comparable.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that can run Python code
+      why: The Meeting agenda and cost planner uses small scripts to price the meeting and build the agenda. Without code, the AI does the sums by hand and says so.
+    - name: A shared doc
+      why: Put the brief and the action list where the client can read and confirm them.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The client's own words about their goal, audience and tone.
+    - Examples the client likes, if the project is creative.
 terms:
+  - term: ASYNC
+    meaning: There is no decision to make in a meeting, so send a written note instead.
+  - term: NOT-READY
+    meaning: A decision exists, but the agenda or the owner is missing. Fix that first.
+  - term: MEET
+    meaning: The decision, agenda and owner are in place, so the meeting is worth its cost.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+next:
+  - prepare-a-client-scope-change-brief
+  - plan-a-manual-first-customer-delivery

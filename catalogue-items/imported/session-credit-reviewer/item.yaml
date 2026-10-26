@@ -1,6 +1,6 @@
 slug: session-credit-reviewer
 name: Session credit reviewer
-summary: Finish a work session. Get a record of what you drove, what Claude did and where you steered.
+summary: "Turn a Claude Code session into a record of what you decided, what Claude did and where you steered, with a decisions log and work log."
 category: general
 boards: []
 type: skill

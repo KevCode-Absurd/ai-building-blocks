@@ -10,6 +10,33 @@ metadata:
 
 Plan for and respond to workforce crises — safety incidents, natural disasters, sudden leadership departures, or reputational scandals — with clear roles, fast communication, and employee-centered decision-making under pressure.
 
+## What to ask for first
+
+Before you write anything, collect:
+
+1. The type of crisis, and whether it is live or you are planning ahead.
+2. Company size and number of sites.
+3. Optional: legal and security contacts, and the facts known so far.
+
+If the crisis type or size is missing, ask once. If it is still missing, write `MISSING: <what>` and say what you assumed. If the crisis is live, use only the facts the person gives you. Mark anything unknown as "not yet known". Never invent causes, numbers, names, dates or legal duties.
+
+## What to hand back
+
+Return these sections, in this order:
+
+1. **Roles and decision rights**: a table of who decides, who acts and who must be told across HR, legal, security and communications.
+2. **First-hour message to staff**: short, calm and honest. It says what is known, what is not, what staff should do now, and when the next update comes.
+3. **24-hour action list**: ordered actions, each with an owner. Put staff safety and wellbeing first.
+4. **Manager talking points**: plain answers for common questions, and what to pass up instead of guessing.
+5. **Post-crisis review plan**: what to ask, who to ask, and how to update the playbook.
+
+Planning ahead means writing the same sections with placeholders such as `<site name>` for the facts you do not have yet.
+
+End with: "This is not legal advice. Have your lawyer or legal contact read every message before it goes out." If staff pay, dismissal, injury reporting or notice rules may apply, say that the rules differ by country and region and send the person to employment counsel. Do not quote laws or thresholds.
+
+If the situation is a layoff, a product failure or a system outage, say another tool fits better and name it: the layoff plan writer, the crisis response planner or the outage incident leader.
+
+
 ## Supported tasks
 
 - Building HR crisis response playbooks for common scenario types

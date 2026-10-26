@@ -1,7 +1,6 @@
 slug: powerpoint-chart-data-rebuilder
 name: PowerPoint editable chart rebuilder
-summary: Share chart source data and your deck. Get native editable PowerPoint
-  charts with matched labels and numbers.
+summary: "Turn picture charts in your deck into editable PowerPoint charts from your real data, with every value checked against the source."
 category: general
 type: skill
 role: build
@@ -13,7 +12,7 @@ inputs:
   - type: slide_deck
     required: true
   - type: spreadsheet
-    required: true
+    required: false
 outputs:
   - type: slide_deck
     required: true

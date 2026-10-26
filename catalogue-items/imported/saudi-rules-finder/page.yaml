@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It picks the rules first, then applies them.
 new_slug: saudi-rules-finder
 name: Saudi rules finder
-summary: Describe your Saudi operations. Check official sources for rules that
-  may apply and see the steps and open questions.
+summary: Check which Saudi rules may apply to your business. Give your sector, licences and data. You get a source check, steps and open questions.
 job: check-contracts
 headline: Saudi rules finder
-subhead: Share your Saudi business, licences, data and cloud use; get a source
-  check of rules and facts still to confirm.
+subhead: Share your Saudi business, licences, data and cloud use; get a source check of rules and facts still to confirm.
 explain: |
   Share your sector, licences, data and cloud setup. The skill checks current Saudi sources, maps possible rules and lists facts still to confirm.
 
   It starts with an intake. What type of organisation are you: government, critical infrastructure, bank or insurer, telecom or cloud provider? What licences do you hold, what personal data do you handle and where is it hosted? Your answers route you to the right frameworks, such as the National Cybersecurity Authority controls, the Personal Data Protection Law, the central bank cyber framework and cloud rules. It then guides each one and can map them to ISO 27001, NIST or SOC 2.
 when:
-  - You plan to enter the Saudi market and need to know what applies.
+  - You plan to enter the Saudi market and need to know which rules apply.
   - You handle personal data of people in Saudi Arabia.
-  - You are a bank, insurer or fintech and need to meet the central bank
-    framework.
+  - You are a bank, insurer or fintech and want to check the central bank cyber framework.
   - You want a gap check against Saudi cyber controls.
+not_for:
+  - "You need a legal opinion or a filing made: use qualified Saudi counsel or an accredited assessor."
+  - "You need a final answer without checking the official text: check the current NCA, SDAIA, SAMA or CST source first."
+  - "Your business has no link to Saudi Arabia: use a person who knows the rules of your own country."
 you_give:
   - Your organisation type and sector
   - Licences you hold or need
@@ -29,7 +30,31 @@ you_get:
   - A gap view against your current setup
   - A mapping to ISO 27001, NIST or SOC 2
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Use one that can browse the web, so it can check official sources.
+  - Paste the skill text into the chat.
+  - Describe your organisation, sector, licences, data and cloud setup. Add your ISO 27001 or SOC 2 status if you have it (optional).
+  - Answer any questions your AI asks. It will not guess missing facts.
+  - Check each source link and date in the result before you rely on it.
+  - Give the gap table to Saudi counsel or an accredited assessor. Reuse your ISO 27001 or SOC 2 evidence where the mapping shows it fits.
+output_sample:
+  input:
+    - Your organisation type, such as bank, telecom, government or private company
+    - Your sector and any licences you hold or need
+    - The personal data you handle, and whose it is
+    - Where your cloud and data are hosted
+    - Your current certifications, such as ISO 27001 or SOC 2 (optional)
+  prerequisites:
+    - Access to official Saudi regulator pages, so your AI can check current rule text and dates
+  output:
+    - name: Applicability matrix
+      contains: Each Saudi rule, who issues it, and whether it applies to you, with the official source and date checked.
+    - name: Open questions
+      contains: Facts still missing, so no rule is ruled in or out by guesswork.
+    - name: Gap table
+      contains: "For each rule that applies: requirement, control reference, current state, gap, evidence needed and priority."
+    - name: Personal data steps
+      contains: What the Saudi personal data law asks of you, such as notices, records, transfers and breach reporting.
+    - name: Market entry roadmap
+      contains: An ordered plan of what to do first if you are entering Saudi Arabia.
+    - name: Framework mapping
+      contains: How Saudi requirements line up with ISO 27001, NIST CSF or SOC 2, so you can reuse evidence.

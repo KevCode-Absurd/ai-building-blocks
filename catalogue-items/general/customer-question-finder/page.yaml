@@ -1,6 +1,6 @@
 new_slug: customer-question-finder
 name: "Unanswered customer question finder"
-summary: "Paste customer questions and page screenshots. Get unanswered doubts, answers to add and a score out of 100."
+summary: "Find the customer questions your product page leaves unanswered. Paste reviews and phone screenshots. Get a doubt table, fixes and a score out of 100."
 job: audit-landing-page
 thinking: high
 thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
@@ -17,6 +17,10 @@ when:
   - Customers keep asking support things you thought the page already said.
   - Reviews mention the same worry again and again, and you want to know if the page addresses it.
   - You're rewriting a product page FAQ and want it built on real questions.
+not_for:
+  - "You have no live product page yet: write the page first, or build your brand facts with the Brand profile builder."
+  - "You have no customer words yet: collect reviews, support emails or call notes first, or expect a smaller map built from guesses."
+  - "You want to rewrite the page around the answers: use the Ad-matched landing page writer after this."
 
 you_give:
   - Customer words such as reviews, return reasons, support tickets, pre-sale questions or call notes, each with a source
@@ -34,6 +38,25 @@ how_to_use:
   - Attach phone screenshots of the whole page, with the FAQ opened and every gallery photo. Paste the page text too if you have it.
   - Add any policies, measurements or test results you have.
   - Fix "hidden" answers first (they only need moving), then collect the facts listed for the "needs a fact" rows.
+output_sample:
+  input:
+    - Your customer words, such as reviews, return reasons, support tickets or call notes, each with a source
+    - Phone screenshots of your page, with the FAQ opened, every gallery photo and the buying area
+    - Facts you can stand behind, such as policies, measurements and test results (optional)
+  prerequisites:
+    - An AI that can read images, so it can check your screenshots
+    - Your brand brain from the Brand profile builder (optional)
+  output:
+    - name: Doubt map
+      contains: One row per customer doubt, with a quote, source count, where the page answers it and how visible that is.
+    - name: Top 5 fixes
+      contains: The five changes that matter most, one line each.
+    - name: Facts to collect before writing
+      contains: Facts or tests your records lack, each marked MISSING, so answers are not made up.
+    - name: Coverage score
+      contains: A score out of 100 for how many doubts the page answers in view, now and with new answers in.
+    - name: What this can't tell you
+      contains: Two or three lines on the limits of your sources, such as how few customer words you gave.
 
 how_it_works:
   - title: Lists the doubts

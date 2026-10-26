@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It checks the order, then edits one field.
 new_slug: order-address-fixer
 name: Order address fixer
-summary: Give it an order and the right address. Get the shipping address
-  changed before it ships. Changes a live order.
+summary: Fix a wrong shipping address on a Shopify order before it ships. Give it the order ID and the new address. It checks the order first.
 job: run-your-store
 headline: Order address fixer
-subhead: A wrong ZIP code or street typo fixed on a Shopify order before it
-  leaves the building. The change goes straight through the Shopify API, so
-  nobody clicks around the admin screens.
+subhead: A wrong ZIP code or street typo fixed on a Shopify order before it leaves the building. The change goes straight through the Shopify API, so nobody clicks around the admin screens.
 explain: |
   A wrong ZIP code or street typo fixed on a Shopify order before it leaves the building. The change goes straight through the Shopify API, so nobody clicks around the admin screens.
 
@@ -18,20 +15,43 @@ when:
   - You spot a typo in a ZIP code before packing.
   - You need to fix several orders and want a preview first.
   - A support agent needs a fast fix without the admin interface.
+not_for:
+  - "The order has shipped or is partly shipped: contact the carrier, since this tool only edits unfulfilled orders."
+  - "A fulfilment partner already has the order: tell them yourself, because only the Shopify record changes."
+  - "Someone other than the customer asks for the change: check who they are through your support process first."
 you_give:
-  - Store domain
-  - Order ID
-  - The corrected address
-  - Preview or run choice (optional)
-  - Shopify CLI sign-in with order access
+  - Your store domain, like mystore.myshopify.com
+  - The order ID, which starts with gid://shopify/Order/ (find it by asking your AI to look up the order first)
+  - The corrected address, with a two-letter country code like US, CA or GB
+  - Preview or run choice (optional, the default is run, so choose preview first)
 you_get:
   - A check that the order is unfulfilled
   - A preview of the change
   - The updated shipping address
   - A confirmation or error message
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Sign in to the Shopify CLI for your store. This tool needs an AI that can run commands and files, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Give your AI the skill file and your store domain.
+  - Paste the order ID and the corrected address.
+  - Ask for a preview first. Check the current address and the order status it shows.
+  - Ask it to run the change. The live order is updated right away.
+  - If you use a fulfilment partner, tell them about the new address yourself.
+output_sample:
+  input:
+    - Your store domain
+    - The order ID (a Shopify ID that starts with gid://shopify/Order/)
+    - The new shipping address
+    - Preview or run choice (optional)
+  prerequisites:
+    - An AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A signed-in Shopify CLI session for your store
+    - Access to read and write orders
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: "Step 1: order check"
+      contains: The order name, its fulfilment status and the address now on file. It stops if the order is not unfulfilled.
+    - name: "Step 2: address update"
+      contains: The new shipping address saved on the order, or the error Shopify returned. Skipped in preview mode.
+    - name: Outcome summary
+      contains: The order name, whether the address changed and the number of errors, in plain text or JSON.

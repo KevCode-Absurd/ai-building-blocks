@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows standard model calls.
 new_slug: image-object-cutter
 name: Image object cutter
-summary: Click a point or draw a box on a picture. Get the exact outline of that
-  object, or of every object.
+summary: Cut out any object from a photo with one click or a box, or split out every object at once. A free image object cutter using Meta's SAM.
 job: build-software
 headline: Image object cutter
-subhead: The exact outline of any object in a picture, from one click or a drawn
-  box. Or let it find every object and cut them all out at once.
+subhead: The exact outline of any object in a picture, from one click or a drawn box. Or let it find every object and cut them all out at once.
 explain: |
   The exact outline of any object in a picture, from one click or a drawn box. Or let it find every object and cut them all out at once. It uses Meta's Segment Anything Model, which works on new kinds of images with no extra training.
 
@@ -17,6 +15,10 @@ when:
   - You are building labeled data to train a vision model.
   - You want every object in an image separated automatically.
   - You are working with medical or satellite images with no labels.
+not_for:
+  - "You need to find and name objects by type in live video: use YOLO or Detectron2, which label each object with a class."
+  - 'You want to cut out objects by typing a word like "dog": use GroundingDINO with SAM, since this skill only takes clicks, boxes or masks.'
+  - "You work with video clips: use SAM 2, the video version of this model."
 you_give:
   - An image
   - A click point or a box around the object (optional)
@@ -27,8 +29,31 @@ you_get:
   - Confidence scores for each mask
   - Code you can adapt for your own tool
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open an AI that can run Python code, or use your own computer. Install the package with pip install git+https://github.com/facebookresearch/segment-anything.git.
+  - Download one model file. The smallest, ViT-B, is 375 MB and the fastest. The largest, ViT-H, is 2.4 GB and the most accurate.
+  - Check for a CUDA GPU. Without one, it runs on the CPU and will be slow.
+  - Load your image. Add a click point, or a box around the object. Or skip both to cut out every object.
+  - Check the scores and pick the best mask. If the edge is off, add a click on the object or off it and run it again.
+  - Save the mask or the cutout with a clear background, and use it in your tool or training data.
+output_sample:
+  input:
+    - Your image file
+    - A click point or a box around the object (optional)
+    - A saved model file (checkpoint) in one of three sizes
+  prerequisites:
+    - An AI that can run Python code
+    - Python with torch and the segment-anything package installed
+    - A CUDA GPU is best, because a CPU will be slow
+  output:
+    - name: masks
+      contains: One mask per option, each a yes or no map of the image showing which pixels belong to the object.
+    - name: scores
+      contains: A quality score for each mask, so you can pick the best one.
+    - name: logits
+      contains: A rough version of each mask you can feed back in to refine the cutout.
+    - name: Automatic mask list
+      contains: One entry for every object found, with its mask, box, pixel area, predicted quality and stability score.
+    - name: Cutout with clear background
+      contains: An optional image of the chosen object with the rest made transparent.
+    - name: ONNX model file
+      contains: An optional export of the model for browsers and small devices, which needs the export script.

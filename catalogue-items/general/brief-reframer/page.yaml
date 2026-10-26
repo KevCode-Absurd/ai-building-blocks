@@ -1,6 +1,6 @@
 new_slug: brief-reframer
 name: "Brief reframer"
-summary: "Paste your brief or goal. Get it rewritten three ways, with a cheaper change in how it feels to try first."
+summary: "Reframe your brief before you spend money on it. Paste it and get three new versions of the question, each with a cheap test to try first."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to question the brief itself and find options that are not obvious, which takes open reasoning."
@@ -17,6 +17,10 @@ when:
   - You have a brief and a feeling it asks the wrong question.
   - The obvious fix is costly and you want a cheaper thing to try first.
   - A team is stuck on a problem that keeps coming back.
+not_for:
+  - Your brief is settled and has no open question. Write the plan yourself or ask your AI for a plain project plan.
+  - You need finished ad copy or a design. Use your own writer or designer once the question is clear.
+  - You have no brief yet, only a vague wish. Write one rough paragraph on the goal first, then bring it here.
 
 you_give:
   - "The brief, goal or problem as it was written"
@@ -36,6 +40,27 @@ how_to_use:
   - "Say who asked for it and what they hope will change."
   - "Pick one or two of the new versions and run the cheap tests."
   - "Bring back what you learned and ask it to sharpen the next round."
+output_sample:
+  input:
+    - Your brief, goal or problem, pasted as it was written
+    - Why the work was asked for (optional)
+    - What has been tried already (optional)
+    - Your brand brain or brand file (optional)
+  output:
+    - name: The brief as written
+      contains: Your brief quoted in full, so you can see how far the new versions move from it.
+    - name: Why the job exists
+      contains: What the person really wants from the change, and what would be true if it went well.
+    - name: Ready-made answers
+      contains: Each line in the brief that already decides what to do, with the question it skipped.
+    - name: New versions of the question
+      contains: Two or three different questions, each with a cheap test, a way to judge it, and one marked odd idea.
+    - name: The issue under the brief
+      contains: The tension the team cannot quite solve, written as one sentence.
+    - name: Start here
+      contains: The cheapest test to run first and why it goes first.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts it could not find, and any of its own checks it did not pass.
 
 how_it_works:
   - title: Quotes the brief

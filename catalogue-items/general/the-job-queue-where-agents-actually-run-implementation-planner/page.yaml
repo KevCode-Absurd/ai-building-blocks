@@ -1,38 +1,123 @@
 new_slug: the-job-queue-where-agents-actually-run-implementation-planner
 name: Recoverable agent job queue builder
-summary: Build a scoped job queue with repeat-safe work, retries, recovery and a clear path for failed jobs.
+summary: Plan an AI agent job queue that survives crashes, with no repeated paid work, capped retries, lost-job recovery and a safe path for failed jobs.
 job: build-software
 headline: Recoverable agent job queue builder
-subhead: Build a scoped job queue with repeat-safe work, retries, recovery and a clear path for failed jobs.
+subhead: Give it your job record, your Redis set-up, the list of agents that take jobs and your retry rules. It plans the queue worker, the start-up recovery and the path for jobs that keep failing. You get code changes to review and test cases, not a running queue.
 explain: |-
-  Share job schema, redis connection, worker registry and retry rules. Get an idempotent queue worker with recovery and dead-letter handling.
+  A job queue for AI agents breaks in quiet ways. Redis restarts and forgets the jobs. A worker dies halfway through a paid call. A slow job is picked up a second time. A failed job gets replayed and charges you again.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill plans the fix around one rule: the database is the record, and the queue only runs the work. Each job gets a row first, and that row's ID becomes the queue's job ID. On start-up the worker puts back any job the queue lost. Retries are capped and spaced out. A job that keeps failing is kept with its evidence instead of replayed blind.
+
+  It starts from a small worker file and a list of known failures that come with the skill. It adapts them to your job record and agents. It never runs the code or touches your Redis.
 when:
-  - You need an idempotent queue worker with recovery and dead-letter handling.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - Jobs sit in "queued" forever after a Redis restart or a deploy.
+  - A job ran twice and a paid AI call was charged twice.
+  - You are moving agent work out of a web request and into a background worker.
+  - A failed-jobs list keeps growing and nobody knows which ones are safe to replay.
+not_for:
+  - Your queue works and you only want alerts. Use the Agent anomaly monitoring builder instead.
+  - You want to cap AI spend, not run jobs. Use the Agent spending cap builder instead.
+  - You can't run Redis. Use a managed queue service from your host and ask this skill only for the job record and recovery ideas.
+  - You want a single task run by one agent with no queue. Use the Single-task agent heartbeat builder.
 you_give:
-  - Job schema, Redis connection, worker registry and retry rules
+  - Your job record, meaning the table or type that holds one job (ID, agent, status, input, cost, error, tries)
+  - Which Redis service you use and whether it needs TLS (not the address or password)
+  - The list of agents or job types the worker should run
+  - Your retry rules, such as how many tries and how long to wait
+  - Your spend caps per agent or per day (optional)
+  - Your longest job time and jobs per hour (optional)
 you_get:
-  - An idempotent queue worker with recovery and dead-letter handling
-  - A failure checklist and synthetic test cases
+  - A worker plan with the code changes needed in your files
+  - The job states and who moves a job from one to the next
+  - Start-up recovery steps and a dead-letter path with replay rules
+  - A failure checklist for the 10 most common queue problems
+  - Test cases to run before you rely on it
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in an AI that can read your code, such as Claude Code or Codex. A plain chat works if you paste the files in.
+  - Paste your job record and your list of agents. Say which Redis service you use and whether it needs TLS. Never paste the Redis address, a password or a key.
+  - Add your retry rules and spend caps. If you skip them, the plan marks them MISSING and denies jobs with no cap.
+  - Read WORKER PLAN first. Check that each change names a file in your project.
+  - Run the test cases in your own project. This skill never runs code.
+  - Keep the start-up test jobs out of production.
 how_it_works:
-  - title: Step 1
-    text: Create a durable scoped job before enqueueing its stable ID.
-  - title: Step 2
-    text: Bound retries with backoff.
-  - title: Step 3
-    text: Check budget and policy before work.
-  - title: Step 4
-    text: Mark active, complete or failed states.
-  - title: Step 5
-    text: Recover orphaned jobs without repeating side effects.
-  - title: Step 6
-    text: Diagnose stuck jobs and preserve dead-letter evidence before any replay.
+  - title: Writes the job first
+    text: Saves the job row, then queues it using the row's ID so a repeat add does nothing.
+  - title: Limits the retries
+    text: Sets a top number of tries with growing waits, and lists errors that should never retry.
+  - title: Checks spend before work
+    text: Denies a job when no cap is set, and needs the owner to raise any cap.
+  - title: Recovers on start-up
+    text: Finds jobs in the database that are missing from Redis and adds them back, skipping finished work.
+  - title: Sets the stall time from real jobs
+    text: Checks the 20 minute starter value against your longest job so slow jobs don't run twice.
+  - title: Keeps failures as evidence
+    text: Saves the error, input and tries of a dead job, groups them by cause and bounds any replay.
+output_shape: |-
+  BASIS
+  <what was read>
+  MISSING: <each missing input and what it stops>
+
+  WORKER PLAN
+  <file> | <change> | <why>
+
+  JOB STATES
+  <state> | <meaning> | <who moves it> | <what is saved>
+
+  RECOVERY AND DEAD-LETTER
+  <start-up steps, evidence kept, replay rules>
+
+  FAILURE CHECKLIST
+  <symptom> | <likely cause> | <first check> | <fix>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <the smallest useful thing to do now>
+output_sample:
+  input:
+    - Your job record (the table or type that holds one job)
+    - Your Redis service and whether it needs TLS
+    - The agents or job types the worker runs
+    - Your retry rules and spend caps (optional)
+  prerequisites:
+    - An AI that can read your code files, or code pasted into the chat
+    - A Redis service and a database you control
+  output:
+    - name: BASIS
+      contains: What was read, what was left out and every missing input, with what each gap stops.
+    - name: WORKER PLAN
+      contains: Each file to change, what to change and why, from the queue set-up to the spend check.
+    - name: JOB STATES
+      contains: The states a job moves through, who moves it and what is saved at each step.
+    - name: RECOVERY AND DEAD-LETTER
+      contains: How lost jobs return on start-up, what is kept for failed jobs and when a replay is allowed.
+    - name: FAILURE CHECKLIST
+      contains: Ten common queue problems with the likely cause, the first thing to check and the fix.
+    - name: TEST CASES
+      contains: Cases such as a lost job, a double add, a worker stopped mid-job and a job that fails every try.
+    - name: NEXT STEP
+      contains: The one smallest step to take next, such as adding the job row before queueing.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your worker and job files and the starter together and proposes exact edits.
+    - name: Redis
+      why: A managed Redis service keeps jobs between restarts, but a database row is still your record.
+  inputs:
+    - Logs from a recent failed or stuck job
+    - Your longest job time, so the stall setting can be checked
+terms:
+  - term: Job queue
+    meaning: A waiting line where work is added and a separate worker takes jobs one at a time.
+  - term: Worker
+    meaning: The program that takes jobs from the queue and runs them.
+  - term: Retry with backoff
+    meaning: Try again after a pause that gets longer each time.
+  - term: Dead-letter
+    meaning: A place where jobs go after they fail every try, so a person can look at them.
+  - term: Stalled job
+    meaning: A job the queue thinks is stuck because its worker stopped checking in.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

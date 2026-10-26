@@ -9,7 +9,7 @@ job: ops
 level: intermediate
 inputs:
   - type: source_text
-    required: true
+    required: false
   - type: brief
     required: true
 outputs:
@@ -33,4 +33,4 @@ credits:
   - title: time-expense skill
     by: erphq
     url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/departments/project-operations/01-org-under-100/time-expense
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and added a short run guide at the top of the skill.

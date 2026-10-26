@@ -1,0 +1,139 @@
+name: Sprint Prioritizer agent
+summary: Pick what your team builds next sprint. Paste your backlog and team capacity to get a ranked list, what fits, what waits and what to tell people.
+headline: Sprint Prioritizer agent
+subhead: Paste your backlog, your team's available days and the goal for the next sprint or two weeks. Your AI scores each item for value and effort, ranks them and draws the line at what fits. You get a ranked sprint plan, a list of what waits and the trade-offs to explain.
+job: organise-work
+thinking: high
+thinking_why: It weighs value against effort and checks the result against team capacity. Use a model that does careful arithmetic and says when a number is a guess.
+explain: |-
+  A backlog is always longer than a sprint. Teams usually pick by who asked loudest, or by what is easiest to start. This sprint planning agent picks by value for effort, and then checks the pick against how many days your team really has.
+
+  It scores each item with RICE, a simple formula: how many people it reaches, how big the effect is, how sure you are, and how much work it takes. It then sorts items into quick wins, big projects, fill-ins and time sinks. If you do not have the numbers for RICE, it will not make them up. It ranks by rough high, medium and low ratings and marks them as estimates.
+
+  Then it does the part most plans skip. It takes away time off and meetings from your capacity, holds back a buffer for surprises, and draws a line. Above the line is committed. Below it waits, with a reason you can give to the person who asked.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your backlog has 40 items and the team can do 8, and people are arguing about which.
+  - A stakeholder asks for one more thing mid-sprint, and you need to show what would drop out.
+  - Your sprints keep ending with half the work undone, and you suspect you are over-committing.
+  - You run a small product team and need a priority list you can defend to the boss or a client.
+not_for:
+  - You are deciding whether to build one feature at all. Use the Product Manager agent.
+  - You want a plan for a whole project with tasks and dates. Use the Senior Project Manager agent.
+  - You want to sort customer feedback into themes first. Use the Feedback Synthesizer agent.
+  - You need to track a test and decide what it proved. Use the Experiment Tracker agent.
+you_give:
+  - Your backlog, one line per item, with a short note on what each is for
+  - Your team size, the days each person can work this sprint, and any time off or fixed meetings
+  - The goal for this sprint or what the business needs most right now
+  - Any numbers you have, such as how many users an item affects or what it is worth (optional)
+  - What the team finished in the last few sprints (optional)
+you_get:
+  - A ranked list with a value and effort rating for each item, and a RICE score where you gave the numbers
+  - A line showing what fits in your real capacity, and what is stretch
+  - The items that wait, each with a one-line reason
+  - The dependencies and risks that could break the plan
+  - A short note for each stakeholder who lost out
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste the backlog, one item per line. Add team days, time off and the sprint goal. A spreadsheet export from Jira, Linear, Trello or Notion works.
+  - Add any numbers you trust, such as users affected or revenue at stake. Say which items you do not have numbers for.
+  - Read the ranked list and the line. Move any item the AI got wrong, and tell it why, then ask for a new ranking.
+  - Share the waiting list with the people who asked for those items before the sprint starts.
+how_it_works:
+  - title: Fix the goal and the capacity
+    text: It states the sprint goal in one line. It works out real working days after time off and meetings, and asks once for what is missing.
+  - title: Score each item
+    text: It rates value and effort for every item. It adds a RICE score only where you gave reach, impact, confidence and effort.
+  - title: Sort into groups
+    text: It labels each item a quick win, a big project, a fill-in or a time sink, and flags items that are really two jobs.
+  - title: Check dependencies
+    text: It finds items that block other items, or that need a person or a team outside yours, and moves them earlier or later.
+  - title: Draw the line
+    text: It adds items until capacity minus a buffer is full. What is above is committed, the next few are stretch, the rest wait.
+  - title: Prepare the trade-offs
+    text: It writes a short reason for each item that waits, and lists the risks that could break the plan.
+output_shape: |-
+  SPRINT GOAL
+    <one line, with how you will know it was met>
+
+  CAPACITY
+    People <n> | Working days <n> | Taken out for time off and meetings <n or MISSING> | Buffer <n> | Days to commit <n>
+
+  RANKED BACKLOG
+    <rank> | <item> | <value: high, medium or low> | <effort: days or size> | <RICE score or "not enough data"> | <group: quick win, big project, fill-in or time sink>
+
+  THE LINE
+    COMMITTED: <items> | <days used>
+    STRETCH: <items>
+    WAITING: <item> | <reason>
+
+  DEPENDENCIES AND RISKS
+    <item or risk> | <what it needs or could break> | <what to do>
+
+  TRADE-OFFS TO EXPLAIN
+    <person or group> | <what waits> | <suggested message in one or two lines>
+
+  ASSUMPTIONS AND CHECKS NOT DONE
+output_sample:
+  input:
+    - Your backlog, one line per item
+    - Your team size, working days, time off and meetings
+    - The sprint goal
+    - Any numbers on reach, impact or value (optional)
+    - What the team finished in recent sprints (optional)
+  prerequisites:
+    - An AI that can read a pasted list or a spreadsheet export
+  output:
+    - name: Sprint goal
+      contains: One line on what the sprint is for and how you will know it worked.
+    - name: Capacity
+      contains: Working days after time off and meetings, the buffer held back, and the days left to commit.
+    - name: Ranked backlog
+      contains: Every item ranked, with a value rating, an effort estimate, a RICE score where possible and a group.
+    - name: The line
+      contains: What is committed, what is stretch and what waits, each waiting item with a reason.
+    - name: Dependencies and risks
+      contains: Items that block others or need outside help, and what could break the plan.
+    - name: Trade-offs to explain
+      contains: A short message for each person whose request waits.
+    - name: Assumptions and checks not done
+      contains: Estimates the AI made and any step it could not check.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a backlog exported from Jira, Linear, Trello or a spreadsheet, and check the sum of effort against capacity.
+  inputs:
+    - The days each item took last time, if you have them. They make estimates more honest.
+    - Which items a client or boss has already been promised.
+    - Any hard deadline, such as a launch date or a contract date.
+terms:
+  - term: Sprint
+    meaning: A fixed work period, often one or two weeks, with a goal and a set of items the team commits to.
+  - term: Backlog
+    meaning: The list of everything the team might build or fix, in no fixed order.
+  - term: RICE
+    meaning: A score for ranking items. Reach times impact times confidence, divided by effort.
+  - term: Capacity
+    meaning: The working days your team really has once time off, meetings and a buffer are taken out.
+  - term: Stretch
+    meaning: Items you will only start if the committed ones finish early.
+tweaks:
+  - what: Planning length
+    how: Say if you plan by week, by two weeks or by month. The capacity line changes with it.
+  - what: Buffer
+    how: Tell it how much slack your team needs. If you do not say, it holds back a default buffer and says so.
+  - what: Ranking method
+    how: Ask for RICE only, or for value against effort only, if your team already knows one of them.
+improve:
+  - After each sprint, paste what finished and ask the AI to compare it with the plan. Use the gap to set a better buffer.
+  - Keep a standing list of items waiting for a second sprint so they are not lost.
+  - Add your real team days and usual meeting load to the pack so you do not retype them.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

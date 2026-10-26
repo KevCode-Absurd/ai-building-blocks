@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It links debt, cash and returns across many assumptions.
 new_slug: buyout-returns-modeler
 name: Buyout returns modeler
-summary: Give it a company and deal terms. Get a buyout model with debt paydown,
-  IRR and MOIC.
+summary: Find out if a buyout works. Give it a company and deal terms. You get a buyout returns model with debt paydown, IRR and MOIC.
 job: money-and-investing
 headline: Buyout returns modeler
-subhead: "Give it a company's financials, the entry price, the debt terms and
-  the exit plan. It builds a buyout model in order: sources and uses, a cash
-  flow forecast, debt paydown and exit. You get the tables, investor returns as
-  IRR and MOIC, and a sensitivity table on price, exit and growth."
+subhead: "Give it a company's financials, the entry price, the debt terms and the exit plan. It builds a buyout model in order: sources and uses, a cash flow forecast, debt paydown and exit. You get the tables, investor returns as IRR and MOIC, and a sensitivity table on price, exit and growth."
 explain: |
   You find out if a company is worth buying with borrowed money. Give it a company and deal terms, and you get a model showing how debt shrinks over time and what the investors earn at exit, as IRR and MOIC.
 
@@ -19,6 +15,10 @@ when:
   - You need to see how much debt a business can carry before it gets risky.
   - A deal looks good at one exit multiple and you want to see it at others.
   - You are learning how a buyout model fits together.
+not_for:
+  - The company loses money or is very early stage. Its cash flow can't pay down debt, so use a simple valuation check or ask a finance adviser.
+  - You only want a quick price for a company. Use a comparables check or a basic cash flow valuation instead of a full buyout model.
+  - You need a model that is ready to file or send to a lender. Have a finance professional build and check it.
 you_give:
   - Company financials and projected EBITDA growth
   - Entry price or multiple
@@ -30,7 +30,31 @@ you_get:
   - IRR and MOIC
   - A sensitivity table on price, exit and growth
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste the company's financials. Add the entry multiple, exit multiple, holding period, debt amounts, interest rates and capital spending.
+  - If your AI is missing any of these, it will ask you. Answer each one.
+  - For exact numbers, use an AI that can run Python code, so it can use the calculation script.
+  - Check the sources and uses first. Debt plus equity must equal the total price.
+  - Read the returns matrix to see how IRR changes when the exit multiple or growth changes.
+output_sample:
+  input:
+    - Company financials and expected EBITDA growth
+    - Entry multiple or price
+    - Debt amounts and interest rates for each layer
+    - Exit multiple and holding period
+    - Capital spending needs
+  prerequisites:
+    - An AI that can run Python code, if you want it to use the calculation script
+  output:
+    - name: Sources and uses
+      contains: The total purchase price, what it pays for, and how it is funded with new debt and investor equity.
+    - name: Operations forecast
+      contains: Revenue projected forward to free cash flow, after taxes, interest, capital spending and working capital changes.
+    - name: Debt schedule
+      contains: Required and optional debt repayments each year, using spare cash to pay down debt.
+    - name: Returns analysis
+      contains: IRR and MOIC for the base case, plus the exit year.
+    - name: LBO Analysis Summary
+      contains: The deal, the split between equity and debt, and the base case returns in one short view.
+    - name: Returns matrix
+      contains: A table of IRR across different exit multiples and revenue growth cases.

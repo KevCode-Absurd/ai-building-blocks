@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It applies a set rule list to your facts.
 new_slug: california-privacy-law-checker
 name: California privacy law checker
-summary: Describe how you use customer data. Get whether California privacy law
-  applies, your duties and gaps.
+summary: Check if California privacy law applies to your business. Describe your data use. You get a yes or no, your duties, gaps and a plan for requests.
 job: check-contracts
 headline: California privacy law checker
-subhead: Describe what personal data you collect, your revenue, your California
-  customers and who you share data with. It tests the legal thresholds, then
-  lists what the law asks of you. You get a yes or no on whether it applies,
-  your duties, gaps to close and a plan for consumer requests.
+subhead: Describe what personal data you collect, your revenue, your California customers and who you share data with. It tests the legal thresholds, then lists what the law asks of you. You get a yes or no on whether it applies, your duties, gaps to close and a plan for consumer requests.
 explain: |
   You learn whether California privacy law applies to you, what it requires, and where you fall short. Describe how you collect and use customer data, and you get duties, gaps and a plan for handling consumer requests.
 
@@ -17,9 +13,12 @@ explain: |
 when:
   - You are not sure the California privacy act covers your business.
   - A customer asks you to delete or share their data and you lack a process.
-  - You share customer data with ad or analytics partners and need to know what
-    that means.
+  - You share customer data with ad or analytics partners and need to know what that means.
   - You are updating your privacy policy and want a gap list first.
+not_for:
+  - You run a non-profit or a government body. California privacy law mostly does not cover you, so ask a privacy lawyer.
+  - You need sign-off on a contract or your privacy policy. Have a lawyer review it, since this only gives guidance.
+  - You sell to people in the EU or UK. Ask a privacy lawyer about GDPR, since this covers California only.
 you_give:
   - What personal data you collect and why
   - Your revenue and number of California customers
@@ -31,7 +30,26 @@ you_get:
   - Gaps to close
   - A plan for handling consumer requests
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Describe what personal data you collect and why. Add your yearly revenue and your number of California customers.
+  - List every company you share customer data with, and what each one does with it.
+  - Paste your privacy policy if you have one (optional).
+  - Read the yes or no first, then the duties and gaps. Fix the gaps in order.
+  - Show the result to a lawyer before you act on it. The skill notes the date its law facts were last checked.
+output_sample:
+  input:
+    - What personal data you collect and why
+    - Your yearly revenue and how many California customers you have
+    - Who you share customer data with, such as ad or analytics partners
+    - Your current privacy policy (optional)
+  output:
+    - name: Applicability result
+      contains: A yes or no on whether the law covers you, with each of the three thresholds tested.
+    - name: Data recipient classification
+      contains: Each company you share data with is labeled as a service provider, contractor or third party, and whether it counts as a sale.
+    - name: Duties table
+      contains: The duties that apply to you, such as notices, opt-out links and limits on sensitive data.
+    - name: Gap list
+      contains: Where your current practice falls short of those duties, so you know what to fix first.
+    - name: Request-handling plan
+      contains: Steps and deadlines for handling customer requests to see, delete, correct or limit their data.

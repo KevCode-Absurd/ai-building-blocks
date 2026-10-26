@@ -1,6 +1,6 @@
 new_slug: store-sign-in-security-checker
 name: "Sign-in security checker"
-summary: "Describe how staff and customers sign in. Get gaps ranked, a score out of 100 and a password and second-step policy."
+summary: "Check how staff and customers sign in to your store. Get ranked gaps, a score out of 100 and a one-page password and second-step policy."
 job: protect-your-store
 thinking: medium
 thinking_why: "It compares your sign-in setup with a fixed rule set and ranks the gaps. A mid-size model handles this well."
@@ -17,6 +17,10 @@ when:
   - You want to know whether your staff accounts are protected well enough before you add more people.
   - You run WooCommerce, a headless build or a custom login and want a developer-ready list of fixes.
   - You are deciding whether to ask customers for a second step, and want to avoid slowing checkout.
+not_for:
+  - "You are the only person on the store and have no staff: a password manager and a second step on your email and admin are enough."
+  - "You need a full security test of your site code or payment setup: hire a security professional or ask your platform's support."
+  - "You want rules for spotting scam emails: write a short staff note on phishing instead, as this checks sign-in setup only."
 
 you_give:
   - "How people sign in today: password, email link, social login or passkey"
@@ -36,6 +40,24 @@ how_to_use:
   - Paste your current password rules and describe the forgot-password steps.
   - List your staff accounts and the second step each one uses.
   - Fix the Critical gaps first, then paste the policy into your team notes.
+output_sample:
+  input:
+    - How staff and customers sign in today
+    - Your staff and admin accounts and the second step each one uses
+    - Your current password rules (optional)
+    - What happens when someone forgets a password (optional)
+    - "Your platform: Shopify, WooCommerce or custom"
+  output:
+    - name: What applies
+      contains: Which checks the platform handles for you and which checks are yours to fix.
+    - name: Gaps (ranked)
+      contains: Each gap marked Critical, High, Medium or Low, with the area and one fix.
+    - name: Score
+      contains: A score out of 100, how it was counted, and the score after the fixes.
+    - name: Policy
+      contains: One page on passwords, second steps, recovery, risky changes and when customers get a second step.
+    - name: Not run
+      contains: Checks that could not run, and what you need to add for them.
 
 how_it_works:
   - title: Sorts what applies

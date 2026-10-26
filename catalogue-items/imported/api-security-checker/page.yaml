@@ -2,34 +2,61 @@ thinking: high
 thinking_why: Access rules fail in subtle ways that need careful reading.
 new_slug: api-security-checker
 name: API security checker
-summary: Point it at your API routes. Get a check of sign-in, access rules and
-  input, with fixes for each gap.
+summary: Check your API routes for sign-in, access and input gaps before you ship. Get a fix and a test for each gap in your API security review.
 job: secure-code
 headline: API security checker
-subhead: A check of your API routes from the moment a request arrives to the
-  data it returns, with a fix for every gap it finds.
+subhead: A check of your API routes from the moment a request arrives to the data it returns, with a fix for every gap it finds.
 explain: |
   A check of your API routes from the moment a request arrives to the data it returns, with a fix for every gap it finds. It focuses on who the caller is, what they may touch and what they are allowed to send.
 
   The skill starts by writing down your routes, identity provider, tenant model and test scope. It then looks at sign-in, making sure tokens are verified with a fixed method, the right issuer and audience, and required claims. Next it checks that each record access tests ownership, not just login. It reviews input checks, database queries, rate limits, error messages and logs. It uses fake identities and keeps your existing login system.
 when:
   - You are adding a protected route and want a second look.
-  - Users might read each other's records by changing an ID.
+  - Users might read each other's records by changing an ID in the address.
   - You are replacing loose request parsing with strict checks.
-  - You are chasing a suspected abuse path.
+  - You are chasing a suspected abuse path on one route.
+not_for:
+  - "You want a full app audit or a penetration test: hire a security professional, because this checks API routes only."
+  - "You want to scan a live production API: get written approval first, and run it on a test copy with fake accounts."
+  - "You have one broken route and no idea why: start with that route and its callers, then run this on it."
 you_give:
   - The routes or code to review
-  - Your login provider and token setup
+  - Your login provider and how your tokens are set up
   - Your database schema
   - Test accounts with fake data
+  - Your stack, if it is not Node with Express, jsonwebtoken, Zod and Prisma (optional)
 you_get:
-  - Findings on sign-in, access and input
+  - A findings list for each route, with a severity for each gap
   - A fix for each gap
-  - Notes on rate limits and error leaks
-  - A list of what to test next
+  - Notes on rate limits, error leaks and logs
+  - The test that proves each fix works
+  - A list of routes and paths it could not check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste the route code, your login setup and your database schema. Say which stack you use.
+  - Say you only have test accounts with fake data. Do not give it live secrets or real user data.
+  - Read the findings for each route. Start with the highest severity.
+  - Apply each fix, then run the tests it lists. Check that every failure case is now blocked.
+  - If your AI cannot run code, run the tests yourself in your test setup.
+output_sample:
+  input:
+    - Your API routes or the code for them
+    - Your login provider and how tokens are set up
+    - Your database schema
+    - Test accounts with fake data
+  prerequisites:
+    - An AI that can read your project files, or code pasted into the chat
+    - A test setup with fake users, not your live data
+  output:
+    - name: Route policy
+      contains: Who may call each route, which records they may touch, and what each route lets them send.
+    - name: Sign-in findings
+      contains: Gaps in how tokens are checked, such as the method, issuer, audience and required claims.
+    - name: Access findings
+      contains: Places where a user could read or change another user's record, or another tenant's, by changing an ID.
+    - name: Input and abuse findings
+      contains: Weak request checks, unsafe queries, missing rate limits, and error messages or logs that leak details.
+    - name: Fixes
+      contains: A code change or setting for each gap, written for the stack in your project.
+    - name: Tests to run
+      contains: The failure cases to try, the command to run them, and any route or path left untested.

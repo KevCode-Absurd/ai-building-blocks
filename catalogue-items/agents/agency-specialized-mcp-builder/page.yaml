@@ -1,0 +1,139 @@
+name: MCP Builder agent
+summary: Plan an MCP server so your AI can use your app or API. Get named tools, typed inputs, error rules and a test plan a developer can build from.
+headline: MCP Builder agent
+subhead: Tell it which app or data your AI should reach, and what it may do there. The agent plans the MCP server. You get each tool's name and inputs, how it logs in, what it returns when something fails, and how to test it.
+job: connect-tools
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  An MCP server is the link that lets an AI such as Claude use your app, database or API. Planning one goes wrong when the tools are vague. The AI picks a tool by reading its name and its description. So this agent treats those words like screen copy and writes each one for the AI that will read it.
+
+  It starts from the job, not the API. It lists what the AI must do, then plans a few tools with one job each, such as search_tickets and update_ticket. It never merges them into one tool with a mode setting. Tools that only read are kept apart from tools that change data, so you can see what can do harm.
+
+  It also plans for trouble. It says what each tool returns when the app is down, rate limited or sent bad input. Keys stay in environment variables, never in code. It ends with questions to put to a real AI, to see if it picks the right tool. It plans in chat and cannot run or connect a server, so every check it has not done is listed as open.
+when:
+  - You want Claude or another AI to look things up or act in your helpdesk, database or internal API.
+  - A developer asks "what should the tools be?" before writing any code.
+  - Your AI keeps calling the wrong tool or sending bad inputs, and you think the tool names and descriptions are the cause.
+  - You must decide if the server can only read, or can also create, update or delete.
+not_for:
+  - You only need clear names and descriptions for a few tools. Use the MCP tool set designer.
+  - You have an API spec and want working server code. Use the API to MCP server builder, or the TypeScript MCP server starter builder or Python MCP server starter builder.
+  - Your problem is how people sign in to the server. Use the MCP server sign-in builder.
+you_give:
+  - The app, data or API your AI should reach
+  - What the AI should do there, split into looking things up and changing things
+  - API docs or two real sample answers with private data removed (optional)
+  - Your language, TypeScript or Python, and whether it runs on your own computer or a server (optional)
+  - How login works, such as an API key or OAuth. Name the type only. Never paste a real key or token.
+you_get:
+  - A tool list with a name, a one-line "use when" description, inputs and results for each tool
+  - Each tool marked as read-only or as one that changes data, with a confirm step for changes
+  - A setup plan covering language, how it connects and where secrets are kept
+  - Error rules for bad input, a down app and rate limits
+  - A test plan of real questions to ask an AI, and a list of checks not yet done
+how_to_use:
+  - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your brief. Say which app the AI should reach, what it should do there and what you know of the API. Leave out keys, tokens and customer data.
+  - Answer its questions. It asks once for anything missing, then marks the gap MISSING instead of guessing.
+  - Read the tool list first. For each tool, ask if a stranger could tell from the name and description when to use it.
+  - Hand the plan to a developer. Or ask for starter code and run it in Claude Code or a code editor. A chat cannot run or test a server.
+  - Run the test plan with a real AI. Send back any wrong picks so the descriptions can be fixed.
+how_it_works:
+  - title: Pin down the job
+    text: It confirms what the AI cannot do today, which system it must reach and which actions only read.
+  - title: Choose tools, resources and prompts
+    text: Actions become tools. Data the AI should read first becomes a resource. Jobs you repeat become prompt templates.
+  - title: Design each tool
+    text: Each gets a name like verb_noun, a description of when to use it, typed inputs with defaults and a clear result.
+  - title: Plan errors and login
+    text: It writes failure results the AI can act on, input checks at the edge, and keeps secrets in environment variables.
+  - title: Plan the tests
+    text: It writes questions for a real AI, the tool each should pick and the error cases to try.
+  - title: List what is unchecked
+    text: Facts it could not confirm from your docs, and anything it did not run, go in an open checks list.
+output_shape: |-
+  JOB
+    System <app or API> | Reads <list> | Changes <list>
+
+  TOOLS (one job each)
+    <verb_noun> | use when <one sentence> | inputs <name, type, default> | returns <shape> | <read-only or changes data>
+
+  RESOURCES AND PROMPTS (only where they help)
+    <name or address> | <what it gives the AI>
+
+  SETUP
+    Language <TypeScript or Python> | Connects by <on your computer or over the web> | Secrets <environment variable names>
+
+  ERRORS AND SAFETY
+    <failure> | <what the tool returns> | <what the AI should do next>
+    Changes that need your yes: <list>
+
+  TEST PLAN
+    <question to ask a real AI> | tool it should pick | result it should give
+
+  OPEN CHECKS
+    <what is unverified> | <how to check it>
+output_sample:
+  input:
+    - The app, database or API your AI should reach
+    - What the AI should read and what it may change
+    - API docs or sample answers (optional)
+    - Your language and where it will run (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A developer or Claude Code to build and run the server
+  output:
+    - name: Job summary
+      contains: What the AI must do, which system it reaches and which actions only read.
+    - name: Tool list
+      contains: Each tool's name, when to use it, inputs with types and defaults, and what it returns.
+    - name: Resources and prompts
+      contains: Data the AI can read first and reusable prompt templates, only where they help.
+    - name: Setup plan
+      contains: Language, how the server connects, and where secrets are kept.
+    - name: Error and safety rules
+      contains: What each tool returns on failure, and which changes need your yes.
+    - name: Test plan
+      contains: Real questions to ask an AI, and the tool each one should pick.
+    - name: Open checks
+      contains: What was not verified or run, and how to check it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Read-only or read and change
+    how: Start with read-only tools. Add tools that change data one at a time, each with a confirm step.
+  - what: Number of tools
+    how: Ask for the fewest tools that do the job. A few clear tools beat many vague ones.
+  - what: Sample answers
+    how: Paste two real answers from the API with private data removed, so the result shapes match your system.
+  - what: Where it runs
+    how: Say if it is for one person's computer or a team server. That changes how it connects and how login works.
+improve:
+  - Save the tool list with your project notes and give it to a developer as the build brief.
+  - After each test round, keep the descriptions that fixed a wrong pick and reuse that wording.
+  - Pair it with the MCP tool set designer to tighten names, and the MCP server sign-in builder when login is the hard part.
+terms:
+  - term: MCP
+    meaning: Model Context Protocol. A standard way for an AI to use outside tools and data.
+  - term: Tool
+    meaning: One action the AI can call, such as search_tickets.
+  - term: Resource
+    meaning: Data the AI can read before it acts.
+  - term: Environment variable
+    meaning: A private setting kept outside the code. Keys and tokens belong here.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can build the server, run it and test it against a real AI. A chat can only plan.
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good for the tool list and the plan, before any code is written.
+  inputs:
+    - Two or three real answers from the API, with private data removed.
+    - The ten questions people will ask your AI.
+    - The API's rate limits and login type, copied from its docs.

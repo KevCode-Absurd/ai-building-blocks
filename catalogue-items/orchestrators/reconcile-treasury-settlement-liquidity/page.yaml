@@ -1,53 +1,88 @@
 new_slug: reconcile-treasury-settlement-liquidity
 name: Reconcile treasury settlement liquidity
 headline: Reconcile treasury settlement liquidity
-summary: A dated settlement ladder, forecast drift and accessible cash reconciliation
+summary: Check how much cash you can reach today, test your last forecast against actuals, and build a dated settlement ladder that shows funding gaps.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A dated settlement ladder, forecast drift and accessible cash reconciliation. Share dated bank cash and restrictions, frozen prior forecast and matching actual net flows, current confirmed bucketed receipts/payments and approved cash floor.
+subhead: Give it dated bank balances and restrictions, your last frozen forecast with matching actuals, the confirmed receipts and payments coming up and your cash floor. It finds accessible cash, learns from the forecast's misses, then builds the ladder. You get a dated cash plan and any funding gap.
 explain: |-
-  A dated settlement ladder, forecast drift and accessible cash reconciliation.
+  A treasury plan fails when it starts from the wrong cash. The bank balance includes money you cannot touch. An old forecast gets overwritten, so you never learn how it missed. And payments are listed without a date order, so a gap in week two hides behind a surplus in week four.
 
-  Treasury settlement controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow starts from accessible cash: dated bank balances less restrictions that do not overlap. It then tests your frozen prior forecast against what happened, using that forecast's own opening balance, to show bias and drift. Last, it builds the current settlement ladder in date order from confirmed receipts and payments, starting from step 1's cash. Step 2 is used only to challenge timing, never to add its amounts.
+
+  It reports gaps against your cash floor and does not borrow, move or pay anything. A person who knows the accounts checks the restrictions first.
 when:
-  - You need a dated settlement ladder, forecast drift and accessible cash reconciliation.
-  - You work on treasury settlement controls and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You need to know whether cash covers the next few weeks of payments.
+  - Last quarter's forecast missed and you want to see how and by how much.
+  - Several accounts hold cash and part of it is restricted or pledged.
+  - A lender or board wants a dated view against a minimum cash level.
+not_for:
+  - You only need accessible cash today. Use the Restricted cash availability checker on its own.
+  - You only need to test a past forecast. Use the Treasury forecast backtest checker on its own.
+  - You only need the ladder. Use the Settlement liquidity ladder builder on its own.
+  - You want a seasonal cash buffer. Use the Prepare a seasonal cash buffer workflow.
 you_give:
-  - Dated bank cash and restrictions, frozen prior forecast and matching actual net flows, current confirmed bucketed receipts/payments and approved cash floor.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Dated bank balances and restrictions, by account (from bank statements and agreements)
+  - Your frozen prior net-flow forecast with its opening balance (from your last forecast file)
+  - The matching actual net flows for the same periods (from the ledger or bank)
+  - Confirmed receipts and payments coming up, grouped by date bucket (from invoices and payment runs)
+  - The approved cash floor, plus the currency and scale
 you_get:
-  - A dated settlement ladder, forecast drift and accessible cash reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Accessible cash on the opening date, with each restriction shown
+  - A forecast backtest showing each period's miss, bias and ending drift
+  - An ordered settlement ladder with cash at the end of each bucket
+  - Every funding gap against your cash floor, and the peak gap
+  - Every MISSING input and any check that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can build spreadsheets.
+  - Attach the bank statements, prior forecast, actual flows and upcoming payments. Say the dates, currency and scale once at the top.
+  - After step 1, check accessible cash against the statements. Each restriction should count once.
+  - After step 2, read the bias and drift. Do not add past errors to future cash.
+  - After step 3, check each bucket and the gaps. Fill every MISSING line before anyone acts on the plan.
 how_it_works:
   - title: Restricted cash availability checker
-    text: Establish current accessible cash from dated bank balances and nonoverlapping restrictions. Pass that dated opening amount, account scope and currency to the current settlement ladder; retain restriction evidence.
+    text: Works out current accessible cash from dated bank balances and restrictions that do not overlap. Hands step 3 the dated opening amount, account scope and currency. Check before moving on, each restriction counts once.
   - title: Treasury forecast backtest checker
-    text: Backtest the prior frozen net-flow forecast against matching actual periods using its own historical opening balance. Explain bias and ending drift without replacing the current opening balance or adding past forecast errors to future cash.
+    text: Tests the frozen prior forecast against matching actual periods, using its own opening balance. Explains bias and ending drift. Never replaces the current opening balance or adds past errors to future cash. Check before moving on, the forecast version is the frozen one.
   - title: Settlement liquidity ladder builder
-    text: Build the current ordered ladder from accessible cash in step1 and actual supplied settlement records. Use step2 only to challenge timing assumptions; never paste its illustrative amounts into the new forecast. Reconcile final cash to the actual source map.
+    text: Builds the ladder in date order from step 1's cash and your confirmed receipts and payments. Uses step 2 only to challenge timing. Ties final cash to the source map. Check before you rely on it, each bucket adds up and gaps are shown.
 output_shape: |-
-  A dated settlement ladder, forecast drift and accessible cash reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  OPENING DATE <date>, <currency>, <scale>
+
+  1 ACCESSIBLE CASH   bank balances <n> - restrictions <n> = accessible <n>
+  2 FORECAST BACKTEST period, forecast <n>, actual <n>, miss <n>; bias <n>, ending drift <n>
+  3 SETTLEMENT LADDER bucket, receipts <n>, payments <n>, closing cash <n>, vs floor <n>
+  PEAK FUNDING GAP    <n>, in bucket <date>
+
+  SOURCES             <each input, its source, date and unit>
+  MISSING             <each gap and the line it stops>
+  CHECKS MISSED       <one line each, or none>
+output_sample:
+  input:
+    - Dated bank balances and restrictions
+    - Your frozen prior forecast and its matching actuals
+    - Confirmed receipts and payments by date bucket
+    - The approved cash floor
+  prerequisites:
+    - An AI that can read files
+    - The prior forecast saved as it stood, not edited since
+  output:
+    - name: outputs/step-1-restricted-cash-availability-checker.md
+      contains: Accessible cash on the opening date, with each restriction shown.
+    - name: outputs/step-2-treasury-forecast-backtest-checker.md
+      contains: Each period's miss, the bias and the ending drift of the prior forecast.
+    - name: outputs/step-3-settlement-liquidity-ladder-builder.md
+      contains: A date-ordered ladder with closing cash, gaps against the floor and the peak gap.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Forecast errors use the frozen prior version; current opening cash equals verified accessible cash; each ordered bucket reconciles and funding gaps remain explicit.
+  - what: A higher cash floor
+    how: Raise the floor. More buckets show a gap and the peak gap grows.
+  - what: A late receipt
+    how: Move a receipt one bucket later. The ladder shows the gap that opens for that bucket.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and lists what it could not verify.
 judge:
   - Forecast errors use the frozen prior version; current opening cash equals verified accessible cash; each ordered bucket reconciles and funding gaps remain explicit.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +93,25 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Freeze each forecast as a dated file before the period starts, so the next backtest has something true to test.
+  - Keep a list of restrictions and pledges by account, and paste it in every time.
+  - Run it weekly in tight periods and monthly otherwise.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Bank statements, not a balance summary.
+    - The prior forecast as it stood on its start date.
+    - Confirmed payment runs and invoice due dates.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Accessible cash
+    meaning: Cash you can use today, after restricted and pledged amounts are taken out.
+  - term: Frozen forecast
+    meaning: A forecast saved as it was on its start date, so it can be tested later.
+  - term: Backtest
+    meaning: Comparing what a forecast said with what really happened.
+  - term: Settlement ladder
+    meaning: A list of expected receipts and payments in date order, with cash after each one.
+  - term: Cash floor
+    meaning: The minimum cash level you want to stay above.

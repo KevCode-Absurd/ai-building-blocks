@@ -1,7 +1,7 @@
 new_slug: inventory-charge-margin-bridge
 name: Inventory charge margin bridge
 headline: Inventory charge margin bridge
-summary: Reconcile disclosed inventory charges and reversals to their gross-margin contribution.
+summary: Find how much inventory write-downs and reversals moved your gross margin. Get a reported-to-charge-excluded margin bridge you can trace to its sources.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a reported-to-charge-excluded gross-margin bridge with recurring-cost cautions.
   - You work on issuer accounting and earnings and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need to value inventory or decide how big a reserve should be: ask your accountant or auditor, because this only shows what past charges did to margin."
+  - "You want to treat all write-downs as one-off costs: do not use this to hide them, because repeat obsolescence is a real cost of doing business."
+  - "You need to track an earlier write-down through later sales item by item: use an inventory ledger or a stock-level spreadsheet instead."
 you_give:
   - Reported revenue/COGS, inventory write-downs and reversals included in that COGS, plus accounting basis and notes.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,26 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Reported revenue and cost of goods sold (COGS) for the period
+    - Inventory write-downs and reversals included in that COGS, from the notes
+    - Accounting basis, reporting date, currency and scale
+    - Your spreadsheet tool and the file format you want (optional)
+  prerequisites:
+    - An AI that can create and reopen spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation script (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The period, accounting basis and the dated sources each figure comes from.
+    - name: Inputs and assumptions
+      contains: Revenue, COGS, charges and reversals as reported, with currency, scale and signs, kept apart from assumptions.
+    - name: Model calculations and reconciliations
+      contains: Net charge, COGS without it, and gross profit and margin before and after, tied back to the statements.
+    - name: Actual file verification
+      contains: "What was checked in the saved workbook: recalculation, changed input, formulas and reopening the file."
+    - name: "MISSING: and CHECKS MISSED"
+      contains: Inputs that could not be found and checks that failed or did not run, or none.
 how_it_works:
   - title: 1. Locate disclosed write-downs and reversals and verify both sit inside the selected COGS line rather than elsewhere
     text: Locate disclosed write-downs and reversals and verify both sit inside the selected COGS line rather than elsewhere.

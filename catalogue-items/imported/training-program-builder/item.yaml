@@ -1,6 +1,6 @@
 slug: training-program-builder
 name: Training program builder
-summary: Give it a skills gap. Get a learning plan, a training outline and coaching steps.
+summary: "Turn a skills gap into a training plan: ranked gaps, clear learning objectives, a session outline and a coaching plan for after."
 category: general
 boards: []
 type: skill
@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: document
+    required: false
 outputs:
   - type: plan
     required: true

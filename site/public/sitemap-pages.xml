@@ -5,6 +5,7 @@
   <url><loc>https://useaiblocks.com/how-it-works</loc></url>
   <url><loc>https://useaiblocks.com/minds</loc></url>
   <url><loc>https://useaiblocks.com/from-a-source</loc></url>
+  <url><loc>https://useaiblocks.com/community</loc></url>
   <url><loc>https://useaiblocks.com/tools</loc></url>
   <url><loc>https://useaiblocks.com/tools/word-counter</loc></url>
   <url><loc>https://useaiblocks.com/tools/text-cleaner</loc></url>
@@ -38,6 +39,16 @@
   <url><loc>https://useaiblocks.com/tools/time-log-summarizer</loc></url>
   <url><loc>https://useaiblocks.com/tools/meeting-action-register</loc></url>
   <url><loc>https://useaiblocks.com/tools/csv-column-selector</loc></url>
+  <url><loc>https://useaiblocks.com/tools/search-term-ngram-analyzer</loc></url>
+  <url><loc>https://useaiblocks.com/tools/issue-git-traceability-checker</loc></url>
+  <url><loc>https://useaiblocks.com/tools/population-shift-calculator</loc></url>
+  <url><loc>https://useaiblocks.com/tools/citation-lineage-checker</loc></url>
+  <url><loc>https://useaiblocks.com/tools/coordinate-csv-checker</loc></url>
+  <url><loc>https://useaiblocks.com/tools/frame-budget-checker</loc></url>
+  <url><loc>https://useaiblocks.com/tools/source-id-cross-checker</loc></url>
+  <url><loc>https://useaiblocks.com/tools/task-dependency-planner</loc></url>
+  <url><loc>https://useaiblocks.com/tools/study-review-date-planner</loc></url>
+  <url><loc>https://useaiblocks.com/tools/file-rename-preview</loc></url>
   <url><loc>https://useaiblocks.com/tools/print-image-size</loc></url>
   <url><loc>https://useaiblocks.com/tools/image-crop-planner</loc></url>
   <url><loc>https://useaiblocks.com/tools/layout-grid-calculator</loc></url>
@@ -107,7 +118,7 @@
   <url><loc>https://useaiblocks.com/tools/store-or-marketplace</loc></url>
   <url><loc>https://useaiblocks.com/tools/stock-weeks-of-cover</loc></url>
   <url><loc>https://useaiblocks.com/apps</loc></url>
-  <url><loc>https://useaiblocks.com/apps/starter-pack</loc></url>
+  <url><loc>https://useaiblocks.com/api-and-mcp</loc></url>
   <url><loc>https://useaiblocks.com/support</loc></url>
   <url><loc>https://useaiblocks.com/about</loc></url>
   <url><loc>https://useaiblocks.com/privacy</loc></url>

@@ -1,6 +1,6 @@
 new_slug: headline-type-tests
 name: "Get headlines sorted by type and the three worth testing"
-summary: "Give it your product and buyer. Get headlines sorted by type, ranked with a cover test, and a keyed test plan."
+summary: "Write 20 or more headlines sorted by type, rank them with a cover test, and get a keyed plan to test the best three before you spend on ads."
 job: write-ad-copy
 thinking: high
 thinking_why: "It picks a buying reason, writes a long list, judges it and plans a test. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You need a headline for an ad, email or page and want a long list sorted and narrowed before you spend on a test.
   - Your headlines read as clever but nobody can say what they offer.
   - You are arguing over a favourite and have no way to settle it.
+not_for:
+  - "You have no buyer evidence or no offer yet: use the Buyer brief writer first, then come back."
+  - "You only need one headline and no test: use the Ad headline writer."
+  - "You want the opening line of an ad, not the headline: use the Ad hook writer."
 
 you_give:
   - Your product facts, including amounts, times and dates
@@ -34,6 +38,26 @@ how_to_use:
   - Give it your product facts, your buyer and your offer.
   - It works step by step and saves each result. Read the ranked list before the test plan.
   - Show the three to people who do not know your product, then run the keyed test.
+output_sample:
+  input:
+    - Your product facts, with amounts, times and dates
+    - Who your buyer is
+    - Your offer and price
+    - Your customer reviews or other customer words (optional)
+  prerequisites:
+    - An AI chat that can work through a folder of files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Buying reasons"
+      contains: Your top three reasons to buy, each with where it goes and the proof that backs it.
+    - name: "Step 2: Headlines"
+      contains: Twenty or more headlines, each labelled self-interest, news or curiosity, with the buying reason it uses.
+    - name: "Step 3: Cover test"
+      contains: Each headline read alone, scored on five rules, with weak ones cut and the best three kept.
+    - name: "Step 4: Keyed test plan"
+      contains: A code for each of the three, a small test run and a winner rule set in advance.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Pick the buying reason to lead with

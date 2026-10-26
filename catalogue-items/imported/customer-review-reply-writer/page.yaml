@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It finds themes and writes replies in your voice.
 new_slug: customer-review-reply-writer
 name: Customer review reply writer
-summary: Give it your reviews and complaints. Get themes with quotes, a reply to
-  each review, and customers at risk. Scrapes sites.
+summary: Paste your customer reviews to get a reply for each one in your voice, plus the top complaint themes and customers who may be leaving.
 job: help-customers
 headline: Customer review reply writer
-subhead: Reviews, complaints and quiet customers all tell you something. Give it
-  your reviews and complaints and you get themes backed by exact quotes, a reply
-  for every review in your voice, and a list of customers who may be leaving.
+subhead: Reviews, complaints and quiet customers all tell you something. Give it your reviews and complaints and you get themes backed by exact quotes, a reply for every review in your voice, and a list of customers who may be leaving.
 explain: |
   Reviews, complaints and quiet customers all tell you something. Give it your reviews and complaints and you get themes backed by exact quotes, a reply for every review in your voice, and a list of customers who may be leaving.
 
@@ -18,6 +15,10 @@ when:
   - Your rating dropped and you want to know why.
   - You want to find customers who have gone quiet.
   - You want every review answered without writing each from scratch.
+not_for:
+  - "You need one reply to an upset customer and have no review text: use ticket-deflector."
+  - "You want to win back quiet customers only, with no review work: use the reactivate step named /reactivate."
+  - "You want a rating or review count with no reviews to give it: collect the reviews first, because it will not guess numbers."
 you_give:
   - Reviews, pasted or exported, or links to review pages
   - Complaints, tickets or emails (optional)
@@ -29,10 +30,31 @@ you_get:
   - A list of customers at risk
   - Win-back offer drafts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your reviews, or attach an export file. This is the safest route.
+  - Add complaints, tickets, your writing samples and a time period if you have them. It uses the last 90 days if you say nothing.
+  - Fetching review pages from the web needs web access. It may break a site's terms, so use pasted or exported files when you can.
+  - Read each drafted reply next to its review. Nothing should be posted or sent until you approve it.
+  - Pick the three actions at the end and do them this week.
+output_sample:
+  input:
+    - Your reviews, pasted or exported from Google, Yelp or Facebook
+    - Complaints, tickets or emails (optional)
+    - Samples of your own writing, so replies sound like you (optional)
+    - Order history, such as Shopify orders (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your shared voice profile, or enough of your writing to build one
+  output:
+    - name: Header
+      contains: "The date range and the rating picture: average, direction and review count, using only numbers pulled."
+    - name: Sources pulled
+      contains: Each source with its signal count, and any source that failed, named so gaps are clear.
+    - name: Themes
+      contains: Three to five recurring themes, each with a count and word-for-word customer quotes.
+    - name: Reviews needing a response
+      contains: Each review, oldest first, with a drafted reply under 60 words for you to approve.
+    - name: Quiet customers
+      contains: Customers who stopped ordering, ranked by past value, each with a drafted win-back message.
+    - name: Do these three things this week
+      contains: Three concrete steps tied to your top themes.

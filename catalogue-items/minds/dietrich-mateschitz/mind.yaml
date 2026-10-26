@@ -16,6 +16,29 @@ use_cases:
   - "Build a brand story that people spread for you"
   - "Plan a small, bold stunt or event that shows what your brand stands for"
   - "Keep control of your company and decide what you would never sell"
+not_for:
+  - "You need legal, financial or medical advice: ask a lawyer, an accountant or a doctor, since this mind only reasons from Red Bull's public record."
+  - "You want to price a commodity product or cut costs on a spreadsheet: use the Aswath Damodaran mind for the numbers behind value."
+  - "You want his view on events after 2022 or on politics: he died in October 2022 and left no record of those views, so ask a person who follows them."
+output_sample:
+  input:
+    - Your product or idea, in a few lines
+    - Who you think will buy it and where they spend time
+    - The choice you face, such as launch, sponsor or price
+    - What early testers or rivals have said (optional)
+  output:
+    - name: Category question
+      contains: Asks whether a market for this exists yet, or whether you must create and name one.
+    - name: Where your buyers gather
+      contains: Points to the places and scenes your crowd already uses, and asks if you are part of them.
+    - name: Sponsor or own
+      contains: Weighs buying space on someone else's event against building an event, team or channel you run.
+    - name: Reading early feedback
+      contains: Asks whether testers dislike the product because it is wrong or because it is new.
+    - name: Price and trade-offs
+      contains: Backs holding a premium as the original and names costs, such as lost share and slow starts.
+    - name: Questions to take away
+      contains: A short list of pointed questions for you to answer before you commit.
 seats:
   - {seat: "Creating a category", asks: "Is there a market for this yet? If not, how do we create one and own it?"}
   - {seat: "Own the culture", asks: "Where do our people already spend their time, and how do we become part of it instead of a sticker on it?"}

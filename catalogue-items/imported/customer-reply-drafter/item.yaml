@@ -10,6 +10,12 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: spreadsheet
+    required: false
+  - type: audit_report
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: copy_draft
 uses: []

@@ -1,36 +1,120 @@
 new_slug: graph-api-common-errors-implementation-planner
 name: Meta API access troubleshooter
-summary: Build a cause-by-cause access diagnosis and a safe retry plan.
+summary: Find why your Meta Graph API calls fail. Paste redacted errors and get the likely cause, a fix for each and a safe retry plan.
 job: build-software
 headline: Meta API access troubleshooter
-subhead: Share token scopes, account access and three redacted api probe results. Get a cause-by-cause access diagnosis and a safe retry plan.
+subhead: Paste the redacted error from each failing Meta API call, plus the permissions your token has. It sorts token problems from account access problems and bad requests. You get the likely cause, a fix for each and a retry plan with a limit. It makes no calls itself.
 explain: |-
-  Share token scopes, account access and three redacted api probe results. Get a cause-by-cause access diagnosis and a safe retry plan.
+  When a Meta Graph API call fails, the error message rarely says which of five things went wrong. The token may be expired. It may be missing a permission. Your Facebook login may not be an admin on the ad account. The request may ask for a field that endpoint does not allow. Or you may be using the wrong kind of token for the Ad Library. A Meta API access troubleshooter has to tell these apart before anyone changes anything.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill reads one call at a time: your ad accounts list, your Ad Library search and your insights pull. It treats each as its own test, so a failure in one does not blame the others. It uses the error code and message as clues, and the reference notes it carries for the common ones: a bad or expired token, a missing ads_read permission, an Ad Library rate limit and an account that is not ID-verified. If the evidence does not point to a cause, it says so and asks for one more probe. It does not guess.
+
+  The fix and the retry are kept apart. A login or permission error is never retried until it is fixed. A rate limit gets a wait and a cap on tries. The skill never asks you to add permissions "just in case". It plans only. You run the tests and make the changes in Meta yourself. If you are still setting up the Google side, use the Google Ads token and access check planner.
 when:
-  - You need a cause-by-cause access diagnosis and a safe retry plan.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - Your Meta Ads report script worked last week and now returns an error code.
+  - You can list your ad accounts but the insights call comes back empty.
+  - The Ad Library search fails even though your ad account token works.
+  - You just made a new token and want to know which permissions it is missing.
+not_for:
+  - You haven't made a Meta developer app or token yet. Set that up in your Meta app dashboard first, then come back with the first error.
+  - Meta has not approved your app for the permission you need. This skill can show the symptom, but only a Meta app review fixes it.
+  - Your ad was rejected or your account is restricted. Use the Meta ads compliance checker.
+  - You want code that pulls your Meta report. Use the Meta Ads report coding prompt.
 you_give:
-  - Token scopes, account access and three redacted API probe results
+  - The error code, type and message from each failing call, with the token removed
+  - Which call failed. Your ad accounts list, your Ad Library search or your insights pull
+  - The permissions your token has, as shown in Meta's token debugger
+  - Your role on the ad account, such as admin or analyst
+  - The request itself, with the token cut out, so fields and dates can be checked (optional)
 you_get:
-  - A cause-by-cause access diagnosis and a safe retry plan
-  - A failure checklist and synthetic test cases
+  - A list of what each call returned, with calls you did not test marked as such
+  - The likely cause for each failure, with the evidence behind it
+  - A fix for each cause, in the order to try them
+  - A retry plan with a wait and a limit on tries
+  - A checklist of the common failures, and made-up test cases to prove the fix
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill.
+  - Paste the error text for each failing call. Cut out the token first. Never paste a token or an app secret.
+  - Add which permissions the token has and your role on the ad account. Meta's token debugger shows the permissions.
+  - Read the PROBE SUMMARY first. Check that each call is labelled the way you ran it.
+  - Try the first fix in the DIAGNOSIS table, then test that one call again. Change one thing at a time.
+  - Keep the retry limit in your own code. Do not retry login or permission errors until they are fixed.
 how_it_works:
-  - title: Step 1
-    text: Compare the supplied error code and scope list.
-  - title: Step 2
-    text: Separate invalid tokens from missing account access.
-  - title: Step 3
-    text: Review account, Ads Library and insights probes in isolation.
-  - title: Step 4
-    text: Use redacted IDs and a bounded retry.
-  - title: Step 5
-    text: Do not broaden permissions without a specific need.
+  - title: Sorts the calls
+    text: Marks each of your three calls as passed, failed or not run. It does not diagnose a call you did not test.
+  - title: Reads the error
+    text: Uses the code and message, plus the notes on common errors. If the code is not in the notes, it says so.
+  - title: Splits token from access
+    text: Tells apart an expired or broken token, a missing permission and a login that is not an admin on the account.
+  - title: Checks the request
+    text: For calls that work but return nothing, checks the account ID, dates, country filter and field list.
+  - title: Plans the retry
+    text: Waits and caps tries for rate limits. Never retries a login or permission error until it is fixed.
+  - title: Writes the checklist and tests
+    text: Lists the failures to rule out and writes test cases from made-up errors.
+output_shape: |-
+  BASIS
+  <what you supplied, what is missing, nothing was run>
+
+  PROBE SUMMARY
+  <call> | <result: passed / failed / not run> | <error code and message>
+
+  DIAGNOSIS
+  <cause> | <evidence> | <confidence> | <proposed fix>
+
+  RETRY PLAN
+  <error type> | <retry: yes or no> | <wait> | <max tries>
+
+  FAILURE CHECKLIST
+  <common failure> | <ruled out or still open>
+
+  TEST CASES
+  <name> | <made-up error or setup> | <expected diagnosis>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - The error code and message from each failing call, with the token removed
+    - The permissions your token has, and your role on the ad account
+    - Your Ad Library token type, if the Ad Library call is failing (optional)
+  prerequisites:
+    - A Meta developer app and a token you have already tried
+    - Access to Meta's token debugger to read the permissions
+  output:
+    - name: Probe summary
+      contains: Each of your three calls marked passed, failed or not run, with its error.
+    - name: Diagnosis
+      contains: The likely cause for each failure, its evidence, how sure the AI is and the fix.
+    - name: Retry plan
+      contains: Which errors can be tried again, how long to wait and the most tries.
+    - name: Failure checklist
+      contains: The common failures, each marked ruled out or still open.
+    - name: Test cases
+      contains: Made-up errors with the diagnosis each should give, to check your fix.
+works_best_with:
+  tools:
+    - name: Claude
+      why: Reads long error output well and keeps each call separate in the table.
+    - name: Meta token debugger
+      why: Shows the permissions and expiry of a token, which this skill needs as input.
+    - name: Claude Code
+      why: Can read your own test scripts and logs, if you want the errors pulled from them.
+  inputs:
+    - The log lines from your script around each failed call
+    - The Graph API version number your code uses
+terms:
+  - term: Graph API
+    meaning: Meta's way for your code to read and change Facebook and Instagram data, such as ad accounts and reports.
+  - term: Token
+    meaning: A long text key that proves your login to Meta. Treat it like a password.
+  - term: Permission (scope)
+    meaning: One thing a token is allowed to do, such as read ads. A token without it gets an error.
+  - term: Ad Library
+    meaning: Meta's public list of active ads. It uses its own token and its own rules.
+  - term: Insights
+    meaning: The part of the API that returns your ad results, such as spend and clicks.
+  - term: Rate limit
+    meaning: A cap on how many calls you can make in a period. Past it, calls fail until the time passes.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

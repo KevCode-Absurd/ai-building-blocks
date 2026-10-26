@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs fit and behavior signals.
 new_slug: lead-prioritizer
 name: Lead prioritizer
-summary: Give it your leads. Get them scored on fit and activity and sorted into
-  ranked tiers.
+summary: Score and rank your sales leads by company fit and recent activity. Get a lead scoring rubric and Hot, Warm and Cold tiers so reps know who to call.
 job: sell-and-negotiate
 headline: Lead prioritizer
-subhead: Your leads in a ranked list, with hot ones at the top so your team
-  calls them first. Give your ideal customer profile, the activity signals you
-  track and a list of leads.
+subhead: Your leads in a ranked list, with hot ones at the top so your team calls them first. Give your ideal customer profile, the activity signals you track and a list of leads.
 explain: |
   Your leads in a ranked list, with hot ones at the top so your team calls them first. Give your ideal customer profile, the activity signals you track and a list of leads. The skill scores how well each company fits, using size, industry, funding stage and region, up to 50 points.
 
@@ -17,7 +14,11 @@ when:
   - Your sales team does not know which of 400 leads to call first.
   - You want a simple scoring model without buying software.
   - Marketing and sales disagree on what a good lead is.
-  - You want to route hot leads straight to a rep.
+  - You want to send hot leads straight to a rep.
+not_for:
+  - You have no activity data, only a bare list of companies. Score fit alone by hand, or use your CRM's built-in lead scoring.
+  - You need one score for a whole company when several contacts work there. Merge the contacts into one account first, then score it.
+  - You want to find new leads. Use a lead database or prospecting tool, then bring the list back here.
 you_give:
   - Your ideal customer profile
   - The activity signals you track
@@ -29,7 +30,26 @@ you_get:
   - Hot, Warm and Cold tiers
   - A ranked list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste in the skill text, then describe your ideal customer and the activity you track.
+  - Paste your leads as a table. Use columns for company, employees, industry, funding stage, region, tech stack and activity counts.
+  - Ask your AI to build the rubric first. Check the points and change any weights you disagree with.
+  - Ask it to score and rank the leads. Check that each total matches the rubric before you share the list.
+  - Send Hot leads to a rep and Warm leads to nurture emails. Review your tier cut-offs every quarter.
+output_sample:
+  input:
+    - "Your ideal customer profile: industries, company size, region, funding stage and tech stack"
+    - The activity signals you track, such as email clicks, page visits and demo requests
+    - A list of leads, ideally with columns for company, employees, industry, funding stage, region, tech stack and activity counts
+    - Past won deals to set the weights (optional)
+  output:
+    - name: Fit scoring rubric
+      contains: Points for each company trait, up to 50 in total, plus negative points for clear disqualifiers.
+    - name: Engagement scoring rubric
+      contains: Points for each activity signal, up to 50 in total, with rules for how old activity loses value.
+    - name: Tier thresholds
+      contains: Hot at 75 and above, Warm from 40 to 74, Cold below 40, each with a next action.
+    - name: Scored and ranked lead list
+      contains: Each lead with its fit score, engagement score, total score and tier, sorted from highest to lowest.
+    - name: Summary
+      contains: How many leads fall in each tier, plus notes on leads with strong fit but low activity.

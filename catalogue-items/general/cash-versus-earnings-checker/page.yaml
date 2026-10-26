@@ -1,6 +1,6 @@
 new_slug: cash-versus-earnings-checker
 name: Cash versus earnings checker
-summary: Paste your profit and cash figures. Get free cash flow beside earnings, what growth costs and a score out of 100.
+summary: Check your cash flow against profit. Paste several years of figures and get free cash flow, a growth payback test and a score out of 100.
 job: money-and-investing
 thinking: high
 thinking_why: It does several linked sums and judges whether growth pays for itself.
@@ -14,6 +14,10 @@ when:
   - Profit is growing but cash in the bank is not.
   - You are planning to spend heavily on growth and want to see if it pays back.
   - You are writing to owners or partners and want to show the cash view next to profit.
+not_for:
+  - "You want to manage your own household money: talk to a licensed adviser or use a simple budget sheet."
+  - "Your business spends almost nothing on equipment or shops: a plain profit and loss review is enough."
+  - "Your accountant already gave you a cash flow statement with the trend: read that instead."
 you_give:
   - Three or more years of earnings, depreciation, changes in working capital and capital spending
   - Share or owner counts for the same years
@@ -30,6 +34,29 @@ how_to_use:
   - Add the useful life of your main assets, and the share or owner counts.
   - Read the four tests, not only the score.
   - Use the findings in your next letter or review.
+output_sample:
+  input:
+    - Three or more years of earnings, depreciation, working capital change and capital spending
+    - Share or owner counts for the same years
+    - Useful life of your main assets (optional)
+    - Planned growth spending (optional)
+  output:
+    - name: Figures by year
+      contains: One row per year with earnings, depreciation, working capital, capital spending and share or owner counts.
+    - name: Free cash flow
+      contains: Operating cash flow minus capital spending for each year.
+    - name: Tests
+      contains: Four tests worth 25 points each, with the working and the reason for each score.
+    - name: Score
+      contains: A total out of 100 and what it measures.
+    - name: What growth is costing
+      contains: A plain summary of cash used by growth and whether it is paying back.
+    - name: Score after fixes
+      contains: The score again after fixes, and which changes were assumed.
+    - name: Missing
+      contains: Figures you did not give, marked so nothing is guessed.
+    - name: Checks missed
+      contains: One line for each check still failed, or none.
 how_it_works:
   - title: Collects the figures
     text: Earnings, depreciation, working capital and capital spending by year.

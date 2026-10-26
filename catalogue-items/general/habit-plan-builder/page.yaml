@@ -1,6 +1,6 @@
 new_slug: habit-plan-builder
 name: "Habit plan builder"
-summary: "Say a habit to start or stop. Get a two-minute first step, a cue, ways to add friction and a restart plan."
+summary: "Build a habit plan for a habit you want to start or stop. You get a two-minute first step, a daily cue, ways to add friction and a restart rule."
 job: think-and-decide
 thinking: low
 thinking_why: "It applies a fixed habit method to your situation, with little hard judgment."
@@ -17,6 +17,10 @@ when:
   - You keep starting a habit and dropping it within a week.
   - You want to stop a habit, such as scrolling late at night, and willpower is not working.
   - You are helping a team or client build a routine.
+not_for:
+  - "You need a plan for a health condition or one a doctor must oversee: ask your doctor or a qualified clinician."
+  - "You want a team to share one routine but have no shared routine yet: agree a simple team process first, then build habits on top of it."
+  - "You want to test whether a belief about yourself is true: write down evidence by hand in a notebook, because this plan does not test beliefs."
 
 you_give:
   - The habit to start or stop, and why it matters to you
@@ -34,6 +38,31 @@ how_to_use:
   - Pick the cue it suggests from things you already do. Change it if it does not fit your day.
   - Do the gateway step tomorrow, even if you do not feel like more.
   - Use the restart rule the first time you miss, and keep the tracking table where you can see it.
+output_sample:
+  input:
+    - The habit you want to start or stop, and why it matters to you
+    - A rough outline of a normal day, with wake time, meals, work and bed
+    - What has stopped you before (optional)
+    - Notes from an earlier plan (optional)
+  output:
+    - name: The person you are becoming
+      contains: One present-tense sentence about the kind of person who does this habit.
+    - name: Versions, easiest first
+      contains: Five versions of the habit, from a one-minute version up to the full target.
+    - name: Gateway step
+      contains: A first step that takes under two minutes and starts the habit.
+    - name: Cue
+      contains: "A link in the form: after I do a daily action, I do the gateway step."
+    - name: The four parts
+      contains: The habit written as cue, craving, response and reward.
+    - name: Friction
+      contains: Ways to make the habit easier and the cue obvious, or to hide the cue and add steps for a habit to stop.
+    - name: The rule
+      contains: A short name for the habit with a plain meaning.
+    - name: Tracking table
+      contains: A table with day, done or not, and a note.
+    - name: If you miss a day
+      contains: A restart rule with no catching up and no guilt, plus a step for two misses in a row.
 
 how_it_works:
   - title: Names the identity

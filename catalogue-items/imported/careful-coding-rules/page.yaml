@@ -2,34 +2,96 @@ thinking: low
 thinking_why: It is a short set of habits, not a long process.
 new_slug: careful-coding-rules
 name: Careful coding rules
-summary: Add four habits to your AI coder. Get smaller, simpler changes that
-  state their assumptions and prove they work.
+summary: Make your AI coder state its assumptions, change only what you asked and prove it works. Get smaller, simpler code changes.
 job: build-software
 headline: Careful coding rules
-subhead: Your AI coder makes smaller, simpler changes and shows its thinking
-  before it writes. Add four habits, and the code you get back states its
-  assumptions, does only what you asked, touches only what it must, and proves
-  it works.
+subhead: Add four habits to your AI coder. It states its assumptions before writing, builds only what you asked, touches only the lines it must, and checks its own work. You get smaller changes that are easy to review.
 explain: |
-  Your AI coder makes smaller, simpler changes and shows its thinking before it writes. Add four habits, and the code you get back states its assumptions, does only what you asked, touches only what it must, and proves it works.
+  AI coders often add features you never asked for, rewrite files for a small fix, and guess when a request is unclear. These four rules fix that. They come from Andrej Karpathy's public observations on common AI coding mistakes.
 
-  The habits come from observations on common AI coding mistakes. Think before coding: name assumptions, offer options, ask when unsure. Keep it simple: no extras, no one-use abstractions, rewrite 200 lines that could be 50. Make surgical edits: change only the lines needed and clean up only your own mess. Set a goal you can check, then loop until it is met. They lean toward care over speed.
+  The first rule is to think before coding: say the assumptions, list the options and ask when unsure. The second is to keep it simple: no extra features, no code built for one use, and a rewrite when 200 lines could be 50. The third is to make small edits: change only the lines needed, match the existing style and clean up only your own mess. The fourth is to set a goal you can check, such as a test, then loop until it passes.
+
+  The rules lean toward care over speed. That costs a little time on a trivial task, so use judgment there. You can paste the rules into any AI coder, or save them as a standing instruction.
 when:
   - Your AI assistant keeps adding features you did not ask for.
   - A small fix came back as a big rewrite across many files.
-  - You want the model to ask questions instead of guessing.
-  - Code reviews take long because changes are bigger than the task.
+  - You want your AI to ask a question instead of guessing.
+  - Code reviews take long because the changes are bigger than the task.
+not_for:
+  - "You need a one-line fix or an emergency hotfix: make the smallest fix and test it first. Skip the long planning."
+  - "You are building a quick throwaway prototype: some of the caution can wait."
+  - "You want a review of code that is already written: use the Hostile code reviewer or the Readable code reviewer."
+  - "You want your project's own style and architecture rules written down: these habits do not replace them."
 you_give:
-  - The coding task you want done
-  - The existing code to change
-  - A test or check that shows success (optional)
+  - The coding task, in one or two sentences
+  - The existing code to change, or the files it lives in
+  - A test or check that shows the task is done (optional)
 you_get:
-  - Stated assumptions before any code
-  - The smallest change that solves the problem
-  - Edits limited to the lines that matter
-  - A clear way to check the result
+  - A short list of assumptions and open questions before any code
+  - A plan where each step has a check
+  - The smallest change that solves the task
+  - Edits limited to lines that trace back to your request
+  - The check run, with what passed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI coder. Paste this skill, or save it as a standing instruction so it applies to every task.
+  - Describe the task and attach or point to the code. Say how you will know it is done.
+  - Read the assumptions and questions it lists first. Answer or correct them before it writes code.
+  - Look at the plan. Each step should have a check. Ask for one if a step has none.
+  - Review the changes. Every changed line should trace back to your request. Ask it to undo the rest.
+  - Run the check yourself. If the task has no test, ask for one before you accept the change.
+how_it_works:
+  - title: Think before coding
+    text: It names its assumptions, lays out options when a request can be read two ways, and asks when something is unclear.
+  - title: Keep it simple
+    text: It writes the least code that solves the problem. No extra features, no settings nobody asked for.
+  - title: Change only what you must
+    text: It leaves nearby code, comments and style alone and mentions unrelated problems without fixing them.
+  - title: Set a goal you can check
+    text: It turns the task into a check, such as a test that fails first, then loops until the check passes.
+output_shape: |
+  Assumptions
+    <what it is assuming>
+  Questions
+    <anything unclear it needs answered>
+  Plan
+    1. <step> -> check: <how to verify>
+    2. <step> -> check: <how to verify>
+  Changes
+    <file and the lines changed, each tied to your request>
+  Result
+    <check run and what passed>
+  Noticed, not changed
+    <unrelated problems it left alone>
+output_sample:
+  input:
+    - The coding task you want done
+    - The existing code, or the files it lives in
+    - A test or check that shows success (optional)
+  output:
+    - name: Assumptions and questions
+      contains: What your AI is assuming about the task, and anything it needs you to confirm first.
+    - name: Plan with checks
+      contains: Numbered steps, each with a way to verify it before moving on.
+    - name: Smallest change
+      contains: Only the code needed for the task, with no extra features or one-use helpers.
+    - name: Changed lines
+      contains: Each edited line tied back to your request, matching the style already in the code.
+    - name: Check result
+      contains: The test or check that was run and whether it passed.
+    - name: Noticed, not changed
+      contains: Unrelated problems it spotted and left for you to decide on.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can save the rules as a standing instruction and run your tests for you.
+    - name: Cursor or Codex
+      why: Both accept standing instructions, so the habits apply to every task.
+  inputs:
+    - Your project's existing tests
+    - A short note on code style you want kept
+    - The files the change should be limited to
+terms:
+  - term: Surgical change
+    meaning: An edit that touches only the lines the task needs.
+  - term: Standing instruction
+    meaning: A rule saved in your AI tool so it applies to every task without pasting it.

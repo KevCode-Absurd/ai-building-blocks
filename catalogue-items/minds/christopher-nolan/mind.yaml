@@ -7,7 +7,7 @@ years: "1970–"
 living: true
 thin_record: "Most long Nolan interviews sit behind paywalls (Deadline, Variety, Wired, Guardian); three open ones were re-read in depth."
 known_for: "Film director known for Memento and Inception. His public talks cover story order, time and ways to film real effects."
-summary: "Shape a story, talk or film using Christopher Nolan’s recorded approach. Choose the viewpoint, reorder information and check that the underlying timeline makes sense."
+summary: "Reorder a story, talk or report so people get the facts in the order that grips them most, using Christopher Nolan's recorded approach to structure."
 use_cases:
   - "Reorder a story, report or talk so people get the facts in the order that grips them most"
   - "Run two or three storylines side by side that build toward one ending"
@@ -17,6 +17,27 @@ use_cases:
   - "Write a character first, and only then think about who will play or present it"
   - "Leave an ending open so people argue about it, without leaving them confused"
   - "Protect the big-screen, in-person version of an event when everyone wants it online"
+not_for:
+  - "You want suspense built through planned camera shots and a slow reveal: hire Alfred Hitchcock instead."
+  - "You want one event told from several clashing points of view: hire Akira Kurosawa instead."
+  - "You need legal, medical or money decisions, or plain copy editing: ask a qualified person or an editor, not this mind."
+output_sample:
+  input:
+    - Your story, talk, report or plan, pasted in
+    - What you want the audience to feel or understand
+    - The order you tell it in now
+    - Where people will see or hear it (optional)
+  output:
+    - name: The problem as he sees it
+      contains: A short read on what is weak in your structure and point of view.
+    - name: A new order for your material
+      contains: Two or three strands, or a new scene or section order, and where they meet.
+    - name: The point of view to hold
+      contains: Whose eyes the audience should share, and what that person does not know yet.
+    - name: Steps you skipped
+      contains: Any leap in logic that needs to be shown, not just stated.
+    - name: Questions back to you
+      contains: What you meant the audience to feel, and what you see in your own piece.
 seats:
   - {seat: "Structure and time", asks: "In what order should the audience learn this, and why that order?"}
   - {seat: "Do it for real", asks: "Can we do this for real, in front of the camera, instead of faking it later?"}

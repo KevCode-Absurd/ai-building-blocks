@@ -1,0 +1,141 @@
+name: Game Audio Engineer agent
+summary: Plan your game's sound system with a named list of sound events, adaptive music rules, a voice and memory budget and tests to run on your target device.
+headline: Game Audio Engineer agent
+subhead: Name your game, engine and platforms, and list what happens in play. The agent plans every sound event, how the music reacts to tension, and how many sounds can play at once. You get a sound event table, a budget and tests before you build.
+job: work-with-audio
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A game can sound fine in the editor and stutter on a phone, because too many sounds play at once or too much audio sits in memory. This game audio engineer agent plans the sound system before you build it, so those limits are set early and not found at launch.
+
+  You give it the game, the engine, the target devices and the moments that need sound. It turns them into a sound event table: a clear name for each event, what triggers it, how important it is and how many copies can play. It plans adaptive music, where the score changes with a tension value from the game, such as how close the enemies are. It adds a spatial audio plan for sounds in the world, and a budget for voices, memory and processing time.
+
+  It plans and writes specs. It does not make or mix sound, and it cannot test on your device. Budget numbers it gives are starting proposals to confirm on your lowest target hardware. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its sample numbers are examples, not measured results.
+when:
+  - You are starting a game and want the sound plan settled before the first asset is made.
+  - Your game stutters or clips when many sounds play, and you need to know where the limit is.
+  - You want music that gets tenser in a fight and calms down after, without hard cuts.
+  - You are moving to FMOD or Wwise and need a naming scheme and event list your team can follow.
+not_for:
+  - "You want to mix, master or clean a finished audio file: use a person with an audio editor, or the Video audio finishing plan for video."
+  - "You want a prompt to make a music track or sound with an AI tool: use the Suno song and music bed prompt writer."
+  - "You want a voice for a character or a narrator: use the ElevenLabs voice description writer or the Voiceover maker."
+  - "You need music licensing or legal advice on samples."
+  - "You want game design, not sound: use the Game Designer agent."
+you_give:
+  - The game's genre and a short description of how it plays
+  - The engine and the sound tool, such as Unity, Unreal, Godot, FMOD, Wwise or the engine's own audio
+  - Target platforms, including the weakest device you must support
+  - A list of moments that need sound, such as footsteps, weapons, menus, ambience and music states
+  - How you want it to sound, in three words (optional)
+  - Any limits on voices, memory or team skills (optional)
+you_get:
+  - A sound event table with a name, trigger, type and priority for each event
+  - An adaptive music plan with the game values that drive it and how changes happen
+  - A budget proposal for voices, memory, file formats and which sounds stream
+  - A plan for sounds in 3D space, including how walls block sound and reverb by room type
+  - A test list for your lowest-end device, and a hand-off list for your audio and code people
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your game description, engine, platforms and list of sound moments. Say which device is the weakest one you must support.
+  - Say "Plan only. Do not invent budget numbers as facts." Your AI asks once for what is missing.
+  - Read the sound event table first. Add events the AI missed and cut ones you will not build.
+  - Read the budget as a starting point. Measure on your weakest device, then change the numbers.
+  - Give the event table to your sound maker, and the music and spatial parts to your programmer. Run the test list before you ship.
+how_it_works:
+  - title: Set the scope
+    text: It confirms the game, engine, devices and sound tool, and asks once for what is missing.
+  - title: Name the sound identity
+    text: It turns your three words into rules for tone, such as how dry or big the sound should be.
+  - title: List the sound events
+    text: It lists each moment, names it by a clear scheme, and sets trigger, priority, copies allowed and variation.
+  - title: Plan the music
+    text: It sets game values such as tension, who updates them and how often, and how music changes on the beat.
+  - title: Set the budget
+    text: It proposes voice limits, memory and file formats by sound type, and says which sounds stream.
+  - title: Plan tests
+    text: It lists stress tests for your weakest device and the checks for each transition and event.
+output_shape: |-
+  SOUND IDENTITY
+    <3 words> | <what each means for the mix>
+
+  SOUND EVENT TABLE
+    <event name> | <trigger in game> | <type SFX, music, UI, voice> | <priority> | <max copies> | <variation>
+
+  MUSIC PLAN
+    <game value> | <range and meaning> | <source> | <update rate> | <how music changes>
+
+  BUDGET PROPOSAL
+    Voices <per platform> | Memory <by sound type> | Format <by type> | Streams <which>
+    Confirm on <weakest device>
+
+  SPATIAL AUDIO
+    Distance <min and max> | Blocked sound <method> | Reverb <room type, length>
+
+  INTEGRATION CHECKS
+    <check> | <how to test> | <pass>
+
+  HAND-OFF
+    Sound maker <what they get> | Programmer <what they get>
+
+  OPEN CHECKS
+    <assumption> | <who confirms it>
+output_sample:
+  input:
+    - Your game's genre and how it plays
+    - Your engine, sound tool and target devices
+    - A list of moments that need sound
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - Your weakest target device, to confirm the budget on
+  output:
+    - name: Sound identity
+      contains: Three words for how the game should sound and what each means for the mix.
+    - name: Sound event table
+      contains: Each sound by name, with trigger, type, priority, copies allowed and variation.
+    - name: Music plan
+      contains: The game values that drive music, their ranges, update rate and how changes land on the beat.
+    - name: Budget proposal
+      contains: Starting limits for voices, memory, formats and streaming, to be confirmed on your weakest device.
+    - name: Spatial audio
+      contains: Distance, blocked-sound and reverb rules for sounds placed in the world.
+    - name: Integration checks
+      contains: Stress and transition tests, each with how to run it and what a pass looks like.
+    - name: Hand-off
+      contains: What your sound maker and your programmer each need to start.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scope
+    how: Ask for the event table only, or the music plan only, to get a shorter result.
+  - what: Tool
+    how: Say "FMOD", "Wwise" or "engine audio only" so the naming and setup match what you use.
+  - what: Platform
+    how: Name the weakest device first, such as a budget phone, so budgets start from the tightest limit.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: FMOD and Wwise
+    meaning: Two programs that sit between your game and its sounds, so audio changes do not need code changes.
+  - term: Adaptive music
+    meaning: Music that changes with what is happening in the game, such as calm in a quiet area and louder in a fight.
+  - term: Voice
+    meaning: One sound playing at one moment. Devices can play only so many at once.
+  - term: Spatial audio
+    meaning: Sound placed in 3D space, so it gets quieter with distance and changes when a wall is in the way.
+  - term: Occlusion
+    meaning: When a wall or object blocks sound, making it quieter and duller.
+  - term: Streaming
+    meaning: Playing a sound from storage as it goes, instead of loading it all into memory first.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan is text and tables, so pasted notes are enough. Any code it writes must be run in your game project.
+  inputs:
+    - A list of your levels or areas with a note on each one's mood.
+    - Your frame time target and the weakest device's specs.

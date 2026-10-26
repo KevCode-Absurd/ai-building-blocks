@@ -1,52 +1,119 @@
 new_slug: check-a-lesson-before-teaching-it
-name: Check a lesson before teaching it
-headline: Check a lesson before teaching it
-summary: Share the source files. Get a lesson review, revised sequence and short checks of understanding.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A lesson review, revised sequence and short checks of understanding. Share the lesson plan, learner prerequisites, available time and intended learning outcome. Your AI prepares the work and marks any facts it cannot verify.
+name: Check a lesson before teaching it
+headline: Check a lesson before teaching it
+summary: Check your lesson plan before you teach it. Get a lighter lesson, barriers to fix and quick checks that show who understands.
+subhead: Paste your lesson plan, your learners, the time you have and what they should be able to do by the end. Your AI looks for overload, then for barriers, then adds short checks of understanding. You get a revised lesson sequence to teach from.
 explain: |-
-  A lesson review, revised sequence and short checks of understanding.
+  Most lesson problems show up in the room, when it is too late to fix them. This workflow is a lesson plan checker you run the evening before. It reads your plan the way a learner meeting the topic for the first time would.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The lesson fits the time and avoids adding activities that do not support the learning goal. Missing tools or evidence stay visible in the final summary.
+  First it looks for overload: too many new ideas at once, missing background and activities that pull attention from the goal. Then it looks for barriers in the task, the language and the way learners must answer, using the class you describe. Last it adds quick checks at the points where a wrong answer would change what you do next.
+
+  Your original plan stays as it is. The revised sequence is a new file, with each change marked and a reason beside it. Nothing is added unless it serves the goal and fits your minutes.
 when:
-  - You need a lesson review, revised sequence and short checks of understanding.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You wrote a lesson and want a second pair of eyes before you teach it tomorrow.
+  - A lesson ran long or lost the class last time and you plan to teach it again.
+  - Your class includes learners who read slowly, are new to English or need extra support.
+  - A colleague handed you their plan and you need to know if it will work for your group.
+not_for:
+  - You need a whole course or unit mapped out. Use the Course scope and sequence planner.
+  - You have no lesson yet. Build one first with the Direct teaching lesson builder, then bring it back here.
+  - You only want to adapt a lesson for access needs. Use the Adapt a lesson for different access needs workflow.
+  - You only want a five-minute opener. Use the Lesson opener planner.
 you_give:
-  - The lesson plan, learner prerequisites, available time and intended learning outcome.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your lesson plan, with the tasks, handout text and timings
+  - What learners should know or be able to do by the end
+  - The year group or level, and what they have already learned
+  - How many minutes you have
+  - Notes on your class, such as learners new to English or with reading needs (optional)
+  - How you check understanding now, such as mini whiteboards (optional)
 you_get:
-  - A lesson review, revised sequence and short checks of understanding.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A list of where the lesson overloads learners, with an edit for each
+  - A list of barriers ranked by how much they matter, with a fix for each
+  - A hinge question, cold-call questions and an exit ticket, with what to do after each answer
+  - A revised lesson sequence in time order, with each change marked and a total against your minutes
+  - A summary of what could not be checked
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste your lesson plan, the goal, the level, the minutes and your class notes.
+  - Read the overload list first. Cross out any fix that removes something you need.
+  - Compare the revised sequence with your minutes, then teach from it. Keep your original plan as a backup.
 how_it_works:
   - title: Overloaded lesson checker
-    text: Find avoidable load, missing prerequisites and activities that compete with the central goal.
+    text: Finds too many new ideas at once, split attention and missing background. It hands the problem areas and their fixes to the barrier step.
   - title: Lesson barrier spotter
-    text: Identify task and language barriers using the actual learner context.
+    text: Predicts barriers in the task, the language and the way learners answer, from your class notes. It hands the top design changes to the checks step.
   - title: Lesson understanding check planner
-    text: Insert brief checks where their answers would change what the teacher does next.
+    text: Places short checks where the answer would change your next move. It hands each check and its stage to the sequence step.
+  - title: Revised sequence
+    text: Puts the fixes and checks into your lesson in time order and adds up the minutes. Your original plan is not edited.
 output_shape: |-
-  Scope and source coverage
-  A lesson review, revised sequence and short checks of understanding.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  LESSON REVIEW
+    Load: <low, medium or high> | where it overloads | fix for each
+
+  BARRIERS
+    Barrier | Who it affects | Severity | Fix
+    Needs specialist help: <who>
+
+  CHECKS OF UNDERSTANDING
+    Hinge question | cold-call questions | exit ticket | what to do next
+
+  REVISED LESSON SEQUENCE
+    <minutes> | <activity> | <change and why, or unchanged> | <check, if any>
+    Total: <minutes> of <minutes available>
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - Your lesson plan, with tasks, handout text and timings
+    - What learners should know or do by the end
+    - The year group or level, and what they already know
+    - The minutes you have, and notes on your class (optional)
+  prerequisites:
+    - A written plan, even a rough one. The AI will not invent a lesson from a topic alone.
+  output:
+    - name: Load check
+      contains: Where the lesson overloads learners and the edit that lightens each spot.
+    - name: Barrier check
+      contains: Barriers in the task, language and way of answering, with severity, a fix and who needs specialist help.
+    - name: Understanding checks
+      contains: A hinge question, cold-call questions and an exit ticket, with what to do after each answer.
+    - name: revised-lesson-sequence.md
+      contains: Your lesson in time order with fixes and checks placed, each change marked, and the total against your minutes.
+    - name: Hand-back summary
+      contains: Files saved, facts missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read your plan and handout as pasted text or files. None of them can watch your class.
+  inputs:
+    - The text of your handout or slides.
+    - Notes from the last time you taught this lesson, if you did.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Check one lesson at a time. A week of lessons gives vague answers.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the real plan and handout text, not a summary from memory.
   - what: Acceptance
-    how: The lesson fits the time and avoids adding activities that do not support the learning goal.
+    how: Say what must stay, such as a set text or the main task, so the AI does not cut it.
+improve:
+  - Note what happened in the room and bring it to the next run.
+  - Add the learners who struggled, so the barrier check fits your real class.
+  - Run it again after you cut or add an activity.
+next:
+  - adapt-a-lesson-for-different-access-needs
+  - teaching-reflection-prompts
+terms:
+  - term: Cognitive load
+    meaning: How much new information a learner must hold in mind at once.
+  - term: Hinge question
+    meaning: One multiple-choice question where each wrong answer shows a different mistake.
+  - term: Exit ticket
+    meaning: A few questions at the end of a lesson that show who is ready for the next one.
 judge:
   - The lesson fits the time and avoids adding activities that do not support the learning goal.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,17 +125,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

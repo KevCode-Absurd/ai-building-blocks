@@ -1,0 +1,42 @@
+slug: agency-engineering-database-reliability-engineer
+name: Database Reliability Engineer agent
+summary: Get a database recovery plan with restore and failover tests. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-database-reliability-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-database-reliability-engineer.md
+  licence: MIT
+  original_name: Database Reliability Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 0096dc3c1b31e33814c509fda43853cc77cef6252bb94da527b833be13b53a5a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Database Reliability Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Database Reliability Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-database-reliability-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

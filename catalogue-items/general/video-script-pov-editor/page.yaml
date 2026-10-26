@@ -1,6 +1,6 @@
 new_slug: video-script-pov-editor
 name: "Video ad script point-of-view editor"
-summary: "Paste a working script. Get it in a new voice, with every fact, line and length kept."
+summary: "Change who tells your video ad script (I, you or she) and when, with every fact and line kept. Get a new version to test, with notes."
 job: make-video-ads
 thinking: low
 thinking_why: "It reshapes what you give it, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - You have a script that sells and want more versions to test without writing new ones.
   - A customer story was written as "I", and you need a version an AI presenter can say honestly.
   - You want the same ad as a direct "you" script and as a told story, to see which one people watch.
+not_for:
+  - Your script has not run yet and you do not know it works. Test it first, or write a new one with the Video ad script writer from customer quotes.
+  - You need to change the message, offer or buying reason. Use the Video ad script writer from customer quotes to write a fresh script.
+  - You want the script easier to say aloud, with shorter lines. Use the Ad script read-aloud editor.
 
 you_give:
   - The script, line by line, with on-screen text and picture notes if you have them
@@ -36,6 +40,26 @@ how_to_use:
   - Write the new person and tense, for example "first person, past" or "third person, past, she".
   - Say who will say it. An AI presenter can't claim a result of its own, so this changes what's allowed.
   - Read the notes first. Then read the new script aloud and hold it next to the old one.
+output_sample:
+  input:
+    - Your script, line by line, with on-screen text and picture notes
+    - The new person and tense, such as third person, past
+    - Who will say it (a real customer, founder, creator or AI presenter)
+    - A name and pronoun for a third-person version (optional)
+    - Your brand voice (optional)
+  prerequisites:
+    - A video ad script you already trust, such as one from the Video ad script writer from customer quotes
+  output:
+    - name: Retold script
+      contains: Every line in its old place, with the new spoken words, on-screen text and picture note.
+    - name: Opening variants
+      contains: Each opening moved to the new voice, with a note on how it leads into line 2.
+    - name: Notes
+      contains: Lines kept in the old voice and why, picture changes, honesty limits, and any line off by more than 10% in length.
+    - name: MISSING
+      contains: Anything the skill needed and did not get, such as the speaker.
+    - name: CHECKS MISSED
+      contains: One line for each of its own checks the new script still misses, or none.
 
 how_it_works:
   - title: Picks the voice

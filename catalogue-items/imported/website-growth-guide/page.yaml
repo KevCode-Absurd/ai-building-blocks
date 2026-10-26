@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It chains several methods across research, copy and tests.
 new_slug: website-growth-guide
 name: Website growth guide
-summary: Give it your site and traffic. Get a plan to capture more leads and
-  sales through research, message and tests.
+summary: Turn a site with traffic but few leads into a clear growth plan. Get research steps, message fixes and a better offer, saved in a tracker.
 job: audit-landing-page
 headline: Website growth guide
-subhead: A growth plan for a site that already has visitors but turns too few
-  into leads and sales. The thinking is that most traffic problems are really
-  conversion problems, so you fix those before paying for more traffic.
+subhead: A growth plan for a site that already has visitors but turns too few into leads and sales. The thinking is that most traffic problems are really conversion problems, so you fix those before paying for more traffic.
 explain: |
   A growth plan for a site that already has visitors but turns too few into leads and sales. The thinking is that most traffic problems are really conversion problems, so you fix those before paying for more traffic.
 
@@ -18,6 +15,10 @@ when:
   - Your offer is not landing and you need to rework it.
   - You want a lead capture idea for people who are not ready to buy.
   - You want one plan from research to testing.
+not_for:
+  - "Your site has a broken funnel or hard-to-use pages: fix that first with the improve-website skill, then come back."
+  - "You have no site yet: use the create-website skill to build one first."
+  - "You only need to fix one leaking flow, such as checkout: use the conversion-optimization skill."
 you_give:
   - Your site address
   - Monthly traffic and current conversion rate
@@ -29,7 +30,31 @@ you_get:
   - A clearer message and offer
   - A tracker file to resume later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Install the eight skills this guide runs, in your AI tool. The names are listed under what you need first on this page.
+  - Start a new chat in a project where your AI can save files. Paste in this skill.
+  - "Say: I want to grow my website. Then answer its questions about your site, traffic, offer and audience."
+  - Work one phase at a time. At each choice, your AI asks you before it decides.
+  - Check the file saved at the end of each phase before you move on.
+  - To pick up later, open a new chat and ask your AI to continue from docs/GROW-WEBSITE-PLAN.md.
+output_sample:
+  input:
+    - Your site address
+    - Your monthly traffic and current conversion rate
+    - Your offer, price and audience
+    - Customer feedback or reviews (optional)
+  prerequisites:
+    - An AI that can read and save files in a project folder, so the tracker can be saved
+    - "The eight skills it runs, installed in your AI tool: cro-methodology, scorecard-marketing, storybrand-messaging, made-to-stick, influence-psychology, hundred-million-offers, contagious and one-page-marketing"
+  output:
+    - name: docs/WEBSITE.md
+      contains: What you learned about your site and why visitors leave, plus the lead capture idea added in phase 2.
+    - name: docs/METRICS.md
+      contains: The numbers you track, such as traffic and conversion rate, so you can judge each change.
+    - name: docs/EXPERIMENTS.md
+      contains: The tests worth running, ranked from the research on why visitors do not convert.
+    - name: docs/OFFER.md
+      contains: Your reworked offer, built in phase 6 of the plan.
+    - name: docs/MARKETING.md
+      contains: Your lead capture plan and how the wins link into one marketing plan.
+    - name: docs/GROW-WEBSITE-PLAN.md
+      contains: The phase-by-phase tracker showing what is done, your answers and what comes next, so you can resume later.

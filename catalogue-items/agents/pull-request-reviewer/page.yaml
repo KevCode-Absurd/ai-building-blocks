@@ -1,6 +1,6 @@
 new_slug: pull-request-reviewer
 name: Pull request reviewer
-summary: Point it at each new pull request. Get a risk rating, ranked findings and a review to post once you say yes.
+summary: Get a pull request review with a risk rating, ranked findings and draft comments. It checks every change and posts nothing without your yes.
 job: test-and-fix-code
 thinking: high
 thinking_why: It runs up to six reviews, picks which ones the change needs and compares with past pull requests. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your team opens pull requests faster than you can review them in depth.
   - You want the same checks on every change, with extra care where the risk is higher.
   - The same mistakes keep coming back and you want them tracked.
+not_for:
+  - "You only want a quick style or lint check: run your linter, or a simple formatting tool, instead."
+  - "You want the review posted, approved or merged for you: this agent never does that without a clear yes, so use your normal team review."
+  - "You have no repository or diff to share: ask a teammate to review by reading the change, since this agent needs the code."
 you_give:
   - The pull request, as a link or the pasted diff, with its description
   - The repository, so it can read the code around the change
@@ -24,11 +28,36 @@ you_get:
   - Repeat problems marked from past pull requests
   - Draft comments ready to post, and a suggested verdict
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it a pull request.
-  - The first time, tell it your standards and what to ignore. It saves them.
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it a pull request link or diff.
+  - The first time, tell it your standards and what to ignore. It saves them in a reviewer folder inside your project, along with its history of past reviews. Keep that folder in your repository so it is there next run.
+  - To run it on every new pull request, set a trigger yourself, such as a GitHub Actions workflow or a Claude Code hook. The agent does not set this up for you.
   - Read the verdict and the findings. Edit the draft comments if you like.
   - Say yes to post them, or post them yourself. It will not approve or merge.
   - When the author pushes changes, run it again. It lists what is fixed, still open and new.
+output_sample:
+  input:
+    - The pull request, as a link or the pasted diff, with its description
+    - The repository, so it can read the code around the change
+    - Your coding standards and what to ignore (optional)
+  prerequisites:
+    - An AI that can read your repository, such as Claude Code
+    - Access to the pull request on GitHub, or the diff pasted in
+    - Your review skills installed, or the AI can fetch them from the library
+  output:
+    - name: VERDICT
+      contains: "A suggested call: approve, approve with comments, or changes needed. It is advice for you."
+    - name: RISK
+      contains: The risk band, the size in lines and files, and the reasons for the rating.
+    - name: FINDINGS
+      contains: Problems ranked by severity, each with file, line, why it matters, the smallest fix and a repeat mark.
+    - name: TESTS
+      contains: New behaviour that no test covers.
+    - name: SINCE LAST PUSH
+      contains: On an updated pull request, what is fixed, still open and new.
+    - name: DRAFT COMMENTS
+      contains: One ready-to-post comment for each finding.
+    - name: SKIPPED AND MISSING
+      contains: Checks it skipped and why, plus every MISSING line.
 how_it_works:
   - title: Read its memory
     text: Opens your standards, the history of past reviews and the problems that keep repeating.

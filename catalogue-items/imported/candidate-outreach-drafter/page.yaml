@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: Good outreach needs a fresh angle for each person.
 new_slug: candidate-outreach-drafter
 name: Candidate outreach drafter
-summary: Describe the role and the person. Get a personal first message,
-  follow-ups and reply templates.
+summary: Write personal candidate outreach messages that get replies. Give it the role and the person. You get a first message, follow-ups and reply templates.
 job: hire-people
 headline: Candidate outreach drafter
-subhead: Describe the role, what makes it appealing, the person you want and the
-  channel you will use. It leads with what matters to the candidate and asks for
-  one small step. You get a personal first message, a four-step follow-up
-  sequence, a closing message and reply templates.
+subhead: Describe the role, what makes it appealing, the person you want and the channel you will use. It leads with what matters to the candidate and asks for one small step. You get a personal first message, a four-step follow-up sequence, a closing message and reply templates.
 explain: |
   Personal first messages that get replies, plus follow-ups to send after. Describe the role and the person you want, and you get a short opening note, a four-touch sequence and a polite last message.
 
@@ -18,8 +14,11 @@ when:
   - You found a strong person on LinkedIn or GitHub and need a first message.
   - Your cold messages get no replies.
   - You want a follow-up plan that does not feel pushy.
-  - A candidate replied with a question about pay or remote work and you need a
-    response.
+  - A candidate replied with a question about pay or remote work and you need a response.
+not_for:
+  - You want to mass mail an unknown list. Post the job on a job board instead, because this needs a real person to write to.
+  - You have no signal about the person, such as a profile, project or post. Ask a recruiter to run a search first, then come back.
+  - You need to write the job post itself. Write the job ad first, or ask a recruiter to help, then use this for the outreach.
 you_give:
   - The role and what makes it appealing
   - A profile or notes on the person
@@ -31,7 +30,28 @@ you_get:
   - A closing message
   - Reply templates for common questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code, files or paid tools are needed.
+  - Paste the role and what makes it appealing. Add the person's profile or your notes on their work.
+  - Say which channel you will use, such as LinkedIn or email. Add the hiring manager's name if they will send it (optional).
+  - Tell your AI the tone you want, such as professional, casual or technical. If you say nothing, it uses a friendly, professional tone.
+  - Read the first message. Check that the personal detail about the person is true, then send it.
+  - Send the follow-ups on the days listed in the sequence. Stop after the fourth touch.
+output_sample:
+  input:
+    - The role and what makes it appealing
+    - A profile or notes on the person
+    - The channel you will use, such as LinkedIn or email
+    - The hiring manager's name to send as (optional)
+  output:
+    - name: Sequence Overview
+      contains: A table of the four touches with the day, channel and purpose of each.
+    - name: Touch 1
+      contains: The first message, ready to send, with slots for details about the person.
+    - name: Touch 2
+      contains: A follow-up that adds a new angle instead of repeating the first note.
+    - name: Touch 3
+      contains: A follow-up on a different channel that lightly mentions your earlier message.
+    - name: "Touch 4: Breakup"
+      contains: A polite last message that leaves the door open with no guilt.
+    - name: Response Playbook
+      contains: Reply templates for interested, not now, pay questions and objections.

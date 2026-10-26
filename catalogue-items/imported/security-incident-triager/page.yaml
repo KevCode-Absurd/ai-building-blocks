@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Wrong calls here cost a lot, so it reasons carefully.
 new_slug: security-incident-triager
 name: Security incident triager
-summary: Give it a security alert. Get severity, who to tell, what to preserve
-  and the next steps.
+summary: Triage a security alert in the first hour. Get its severity, who to escalate to, what evidence to keep and what to do next.
 job: secure-code
 headline: Security incident triager
-subhead: Give it a security alert. Get severity, who to tell, what to preserve
-  and the next steps. Bring the alert or event details, in JSON if you have
-  them. Use the result to plan your next step.
+subhead: Give it a security alert. Get severity, who to tell, what to preserve and the next steps. Bring the alert or event details, in JSON if you have them. Use the result to plan your next step.
 explain: |
   The first hour of a security alert, sorted out: what kind of incident it is, how severe, who needs to know, and what evidence to keep. You feed it an alert from a SIEM, an endpoint tool, a threat feed or a user report.
 
@@ -18,6 +15,10 @@ when:
   - You must decide who to wake up and what to tell them.
   - You need to preserve logs and files before anything is changed.
   - You want to check whether the incident triggers a duty to notify regulators.
+not_for:
+  - "You want to hunt for threats before any alert fires: use a threat hunting process or your security team instead."
+  - "You need to map a past incident to compliance rules: use a compliance review with your legal or audit team."
+  - "You need a legal ruling on breach notice deadlines: ask your legal counsel, since the deadlines here are only a starting guide."
 you_give:
   - The alert or event details, in JSON if you have them
   - What systems and data are involved
@@ -30,7 +31,31 @@ you_get:
   - An evidence preservation list
   - Next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat with an AI that can run Python code, and paste in the skill instructions. Without code running, it can still triage by hand.
+  - Paste the alert details. Use JSON if you have it, plain text if not.
+  - Add the systems and data involved. Add your escalation contacts and your location and sector if you have them.
+  - Read the severity, the false positive flag and the escalation path first.
+  - If the severity is SEV1 or SEV2, alert your security lead at once. Then start the evidence list.
+  - Check any notice deadlines with legal counsel before you act on them.
+output_sample:
+  input:
+    - The alert or event details, in JSON if you have them
+    - The systems and data involved
+    - Your escalation contacts (optional)
+    - Your location and sector (optional, for notice rules)
+  prerequisites:
+    - An AI that can run Python code, if you want to use the triage script
+    - A security alert from a SIEM, an endpoint tool, a threat feed or a user report
+  output:
+    - name: Incident type
+      contains: Which of the 14 incident types the event matches, such as ransomware or credential compromise.
+    - name: Severity
+      contains: A SEV1 to SEV4 rating with the reason for it.
+    - name: False positive flag
+      contains: Whether the alert looks like a false alarm, and which filter caught it.
+    - name: Escalation path
+      contains: Who to alert, in what order, based on the severity and incident type.
+    - name: Evidence list
+      contains: What to collect first, starting with short-lived data, and how to keep chain of custody.
+    - name: Notification duties
+      contains: Possible legal notice deadlines to confirm with legal counsel.

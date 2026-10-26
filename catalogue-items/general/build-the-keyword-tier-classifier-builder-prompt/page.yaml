@@ -1,33 +1,118 @@
 new_slug: build-the-keyword-tier-classifier-builder-prompt
 name: Keyword grouping coding prompt
-summary: Get a coding brief to group keywords by intent and results, with clear rules, confidence and review cases.
+summary: Get a coding brief that sorts Google Ads keywords into five tiers by results, flags the ones to pause, and shows week-to-week moves. Read-only.
 job: build-software
 headline: Keyword grouping coding prompt
-subhead: Get a coding brief to group keywords by intent and results, with clear rules, confidence and review cases.
+subhead: Give your coding assistant your project, your target return and your brand terms. It plans a read-only module that sorts each Google Ads keyword into five tiers, from hero to zombie. It also shows which keywords moved since the last run. It never changes your account.
 explain: |-
-  Share your project and the required feature. Get a coding brief for the keyword tier classifier, with setup and test steps.
+  Most Google Ads accounts have a few keywords that bring the sales and many that only spend. Looking at them one by one does not show which is which. This prompt gives a coding assistant a brief to build a keyword tier classifier in your own project. It sorts every Google Ads keyword with enough data into one of five tiers: hero, volume driver, potential, question mark or zombie.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The tests run in a set order, and the first match wins. A keyword with 50 clicks and no sales is a zombie before any other test applies. Branded keywords get their own protection, because a brand keyword with no sales is often just brand defence. Each run is saved, so the next run can show which keywords moved up and which fell into the zombie tier.
+
+  All the limits in the brief are starting defaults, not Google rules. You confirm each one first. Heroes and volume drivers need your target return, and the brief skips them if you have none. It proposes actions and never applies them. To group the words people typed, use the Google search term coding prompt.
 when:
-  - You need a coding brief for the keyword tier classifier.
-  - You need build the keyword tier classifier prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You manage a Search account and can't tell which keywords earn their spend.
+  - You want a weekly list of keywords to pause and keywords to back.
+  - You want to see which keywords moved up or down since last week.
+  - You already have Google Ads code in a project and want the tiers saved with your other audit results.
+not_for:
+  - You want to group search terms people typed, or find negative keywords. Use the Google search term coding prompt.
+  - Your account has no conversion tracking. Tiers by results would mean nothing. Fix tracking first. The Google Ads report auditor can help check.
+  - You want a one-time review and no code. Paste your export into the Google Ads report auditor.
+  - You want it to pause keywords or change bids for you. It only proposes them. You apply them in Google Ads.
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, or its main folders and database schema, with where past audit runs are saved
+  - The customer ID and the names of the credentials your project uses (never the secrets)
+  - Your target ROAS or CPA (needed for the hero and volume driver tiers)
+  - Your brand terms, so brand keywords are not called zombies
+  - The date range to review, and the last run to compare with (optional)
 you_get:
-  - A coding brief for the keyword tier classifier
-  - Required files, setup gaps and test cases
+  - A list of setup gaps before any code is written
+  - A read-only module that sorts keywords into five tiers
+  - Findings with a proposed action for each tier
+  - Week-to-week moves, once a first run is saved
+  - Test cases and a sample result built from made-up rows
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your coding assistant, such as Claude Code or Codex, in your project folder. A plain chat AI can only write a plan.
+  - Paste the skill, then add your target return, brand terms and project details. Never paste a secret key.
+  - Read the setup gaps first. Fix each one, or tell the assistant to go on with placeholders.
+  - Say yes to each starting limit or change it. A wrong limit puts keywords in the wrong tier.
+  - Read every change before you accept it. Run the tests in your own project.
+  - Treat each finding as a proposal. Check a few keywords in Google Ads before you pause or change anything.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project first
+    text: Reads your folders, any Google Ads client, shared types and saved runs, then lists what is missing before it writes code.
+  - title: Sorts keywords in a set order
+    text: Tests zombie first, then hero, volume driver and potential. The first match wins. Keywords with too few impressions are counted and left out.
+  - title: Protects brand keywords
+    text: Brand keywords skip the zombie test unless their cost passes a limit you set.
+  - title: Writes a proposal per tier
+    text: Each finding shows its evidence and one action for a person to approve. It never applies a change.
+  - title: Compares with the last run
+    text: Shows which keywords moved up or down. A first run skips this step and says so.
+  - title: Plans tests and handover
+    text: Writes tests on made-up rows. It proposes a schedule but does not create one.
+output_shape: |-
+  SETUP GAPS
+  <what is missing: schemas, permissions, targets, brand terms>
+
+  FUNCTION SIGNATURE
+  classifyKeywordTiers(<input>) -> DiagnosticOutput
+
+  SAMPLE DiagnosticOutput (made-up rows)
+  <findings per tier with evidence and proposal>
+
+  DISTRIBUTION AND SPEND SHARE
+  <tier> | <keywords> | <share of cost>
+
+  TEST RESULTS
+  <passed, failed, or not run and why>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your code project, or its main folders and database schema
+    - The customer ID and the names of your Google Ads credentials
+    - Your target ROAS or CPA, and your brand terms
+    - The last saved run to compare with (optional)
+  prerequisites:
+    - A coding assistant that can open your project, such as Claude Code or Codex
+    - Google Ads API access with read permission, set up before you run the module
+    - Conversion tracking that works in the account
+  output:
+    - name: Setup gaps
+      contains: Missing schemas, permissions, targets and brand terms, each with what it stops.
+    - name: Function signature
+      contains: The inputs and result type of the tier function in your project.
+    - name: Sample DiagnosticOutput
+      contains: Findings from made-up rows, one tier at a time, each with evidence and a proposed action.
+    - name: Distribution and spend share
+      contains: How many keywords sit in each tier and what share of cost each tier takes.
+    - name: Test results
+      contains: Tests for each tier, the test order, brand protection and movement, or a note that none were run.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your project, reads your Google Ads files, edits code and runs your tests.
+    - name: Codex
+      why: Does the same work in a repository and shows each change for you to review.
+    - name: Google Ads keyword report
+      why: Lets you check a few flagged keywords by hand before you pause anything.
+  inputs:
+    - Your target ROAS or CPA per campaign
+    - A list of your brand names and common misspellings
+    - The run from last week, so moves can be shown
+terms:
+  - term: Tier
+    meaning: One of five groups a keyword falls into, based on its clicks, sales and cost.
+  - term: Zombie
+    meaning: A keyword that has many clicks and cost but no sales.
+  - term: Hero
+    meaning: A keyword that beats your target return by a clear margin.
+  - term: ROAS
+    meaning: Return on ad spend. Sales value divided by ad cost.
+  - term: Brand keyword
+    meaning: A keyword that contains your own business or product name.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

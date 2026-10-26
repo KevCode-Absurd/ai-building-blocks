@@ -1,6 +1,6 @@
 new_slug: unlikely-pairing-idea-generator
 name: "Unlikely pairing idea generator"
-summary: "Name two fields or styles. Get ten odd pairings, one limiting rule and a shortlist that passes a not-safe check."
+summary: "Find fresh ideas by crossing two to four styles or fields. Get ten odd pairings, one hard limit and a short list of ideas that hold together."
 job: design-work
 thinking: medium
 thinking_why: "It makes many options, drops weak ones and judges which are still safe, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - You are stuck with ideas that look like everyone else's.
   - You are naming, branding, designing or writing and want a new angle.
   - You want options to choose from, not a single answer.
+not_for:
+  - "You write legal, medical or compliance copy: ask a subject expert or a lawyer, because odd ideas can cause harm there."
+  - "Your audience wants the familiar: stay with the proven format and ask a colleague to polish it."
+  - "You already have one idea and need a full brief: write the brief yourself or ask a copywriter."
 
 you_give:
   - Who the work is for
@@ -34,6 +38,28 @@ how_to_use:
   - List two to four things you admire, even if they seem unrelated.
   - Read all ten pairings, including the bad ones, before you choose.
   - Pick the ones that make you slightly nervous and test them on someone in your audience.
+output_sample:
+  input:
+    - Who the work is for, in a sentence
+    - Two to four fields, styles or tones you admire
+    - A limit you already know applies (optional)
+  output:
+    - name: AUDIENCE
+      contains: Who the work is for, and any crowd-pleasing answers that were dropped.
+    - name: SOURCES
+      contains: Your two to four fields, styles or tones, with what you value in each.
+    - name: PAIRINGS
+      contains: Ten or more odd what-if pairings, each with a verdict on whether it holds or fails.
+    - name: THE LIMIT
+      contains: One hard rule that narrows the work, and how it applies to the pairings.
+    - name: THE ACCIDENT
+      contains: The strongest idea moved to a new order or format, and what changed.
+    - name: SHORTLIST
+      contains: Three to five pairings, each with what it borrows from each field and a comfort check result.
+    - name: MISSING
+      contains: What would sharpen the list, marked where an input was not given.
+    - name: CHECKS MISSED
+      contains: One line for each check the result failed, or none.
 
 how_it_works:
   - title: Names the real audience

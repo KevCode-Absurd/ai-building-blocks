@@ -30,7 +30,7 @@ credits:
   - title: hr-diversity-inclusion skill
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-diversity-inclusion
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Adapted under the MIT licence. We gave it a plain name and added steps, an output format and safety rules.
   - title: Original author
     by: Tuan Duc Tran
     url: https://github.com/tuanductran

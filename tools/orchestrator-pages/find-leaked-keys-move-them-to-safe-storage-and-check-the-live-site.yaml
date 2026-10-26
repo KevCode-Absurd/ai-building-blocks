@@ -1,6 +1,6 @@
 new_slug: find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site
 name: Find leaked keys, secure them and check your live site
-summary: Give it your project. Get leaked keys found, replaced, stored safely and checked on your live site.
+summary: Find leaked keys in your code and history, replace them, move secrets to safe storage and check your live site shows none to visitors.
 job: secure-code
 thinking: medium
 thinking_why: Each step is a focused scan or change. A mid-size model does it well.
@@ -14,6 +14,10 @@ when:
   - A key or password was pushed to a repo, pasted in chat or sent in a screenshot.
   - Your project has env files, keys in code or secrets in CI settings with no plan.
   - You want proof that your live site does not show any key to visitors.
+not_for:
+  - "You have a key you cannot replace yet: ask the provider for a limit or a lock on it first, then come back to run the scan."
+  - "You want to test a site you do not own: only scan your own site, or one you have written permission to test."
+  - "You only want a quick scan of one repo: turn on the secret scanning that your code host already offers."
 you_give:
   - Your project (a folder or repo the AI can open, with its history)
   - Where you run it, such as your host, your CI and the secret store you prefer (optional)
@@ -28,6 +32,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - It never needs to print a secret. Tell it to refer to keys by name and the last four characters.
   - Do not skip your two steps, which are replacing the keys and deploying.
+output_sample:
+  input:
+    - Your project (a folder or repo the AI can open, with its history)
+    - Where you run it, such as your host, your CI and the secret store you prefer (optional)
+    - The address of your live site, once you have deployed
+  prerequisites:
+    - An AI that can open your project folder and its git history
+    - A way to replace keys at each provider and to deploy your code
+  output:
+    - name: "Step 1: Secrets hygiene checker"
+      contains: Each leaked or loose secret by name, where it was found, and the order to replace them.
+    - name: "Your step: replace the keys"
+      contains: You replace each key at its provider in the given order and remove old copies from your files.
+    - name: "Step 2: Secrets setup helper"
+      contains: The store chosen, the code changes to read secrets from it, who may read each one, and a rotation plan.
+    - name: "Your step: deploy"
+      contains: You deploy the updated code and keep the address of your live site.
+    - name: "Step 3: Exposed secrets finder"
+      contains: What a visitor can read on your live site, ranked finds, and a fix for each.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find the leaked secrets
     text: Scans the files and the git history, checks env files and what git ignores, lists every secret to treat as leaked and writes the order to rotate them.

@@ -1,6 +1,6 @@
 new_slug: experience-drift-auditor
 name: "Experience drift auditor"
-summary: "List the changes you made while growing. Get which ones watered down what customers loved, and a reset plan."
+summary: "Find which growth changes watered down what customers loved, and get a reset plan. An experience drift audit for fast-growing businesses."
 job: plan-strategy
 thinking: medium
 thinking_why: "It links each loss to a decision and ranks fixes, but the steps are fixed and the facts come from you."
@@ -17,6 +17,10 @@ when:
   - Sales are fine but reviews say you have lost something you used to have.
   - You have grown fast and your first customers say it is not the same.
   - You are about to cut a cost or a step and want to know what it might remove.
+not_for:
+  - You have no earlier version to compare with. Ask customers a short survey question first, then come back.
+  - You only want to price the reset. Work out the cost with a simple sheet of your own, or ask your AI for a basic budget.
+  - You want to blame or review a person. This audit looks at decisions, not people, so use a normal staff review instead.
 
 you_give:
   - A list of the changes you made as you grew (required)
@@ -35,6 +39,29 @@ how_to_use:
   - Paste recent reviews or complaints, if you have them.
   - Read the list of lost details first, then the restore list.
   - Start the reset with the three details and measure how customers feel after eight weeks.
+output_sample:
+  input:
+    - The changes you made as you grew, with reasons and dates
+    - What customers loved about the first version
+    - Reviews, comments or survey answers (optional)
+    - Your team's current routine (optional)
+  output:
+    - name: What customers notice
+      contains: The small details people see, smell, hear and feel, each with its source or a MISSING mark.
+    - name: Decisions and what they removed
+      contains: Each change with its date, its reason and the detail it took away.
+    - name: Combined effect
+      contains: Changes that were fine alone but hurt together, and what customers now get.
+    - name: The damage
+      contains: A plain statement of what was lost and that it came from your own choices.
+    - name: Restore first
+      contains: The three details to bring back first, with how to do it and the cost.
+    - name: Staff reset
+      contains: What the team stops, starts and practises, in order, with a review date.
+    - name: How we will measure
+      contains: A measure of how customers feel, its baseline, and sales or visits as a second check.
+    - name: Missing and checks missed
+      contains: What would sharpen the audit, and any of its own checks it missed.
 
 how_it_works:
   - title: List the details

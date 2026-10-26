@@ -1,6 +1,6 @@
 new_slug: feature-request-screener
 name: "Feature request screener"
-summary: "Paste your feature requests and who asked. Get a yes, later or no on each, with the full cost of every yes."
+summary: "Screen your feature requests and get a yes, later or no on each, with the full cost of every yes and a kind reply for the customer."
 job: build-product
 thinking: medium
 thinking_why: "It counts repeat requests, lists hidden costs and tests each against your vision. The steps are fixed, with judgement on fit."
@@ -17,6 +17,10 @@ when:
   - Your request list is long and each item has a champion.
   - A big customer is pushing for something that would change what the product is.
   - You need a reply that says no without losing the customer.
+not_for:
+  - "You have a one-off bug to fix or a single loud customer: use a simple bug list or talk to that customer directly."
+  - "You need to fit the yes items into a launch date: use the Launch scope cutter after this."
+  - "You have no product vision written down yet: write one or two sentences first, because the vision test depends on it."
 
 you_give:
   - The request list, with who asked and when
@@ -35,6 +39,29 @@ how_to_use:
   - Paste your current plan so it can see what is already committed.
   - Read the costs for each yes before you agree to any.
   - Send the replies, edited to sound like you.
+output_sample:
+  input:
+    - Your list of feature requests, with who asked and when
+    - Your product vision in a sentence or two
+    - Your current plan or roadmap
+    - Customer comments or support emails (optional)
+  output:
+    - name: The vision
+      contains: Your product purpose in one sentence, used to test every request.
+    - name: Requests
+      contains: Each request with how many different people asked, over what time, and whether it counts as a repeat.
+    - name: Hidden costs
+      contains: For each repeat, the screens, help text, tour, copy, terms, promises at risk, pricing effect and total effort.
+    - name: Vision test
+      contains: For each repeat, whether it fits your vision, goes against it or is neutral, with a reason.
+    - name: Rulings
+      contains: A yes, later or no for each request, with one sentence of reason.
+    - name: Reply
+      contains: A short, kind note for each customer under 90 words, with no date promised.
+    - name: Missing
+      contains: Facts that would change a ruling, such as who asked or effort estimates.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: Starts at not now

@@ -2,14 +2,25 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: project-gutenberg-book-text-finder
 name: Project Gutenberg book text finder
-summary: Share a title or book number. Find available editions and extract readable text for research.
+summary: Find a public-domain book on Project Gutenberg by title or number. You get its details and clean, readable text to use for research.
 job: work-with-files
 headline: Project Gutenberg book text finder
-subhead: Share a title, author, or Project Gutenberg book number. It searches the catalog and retrieves a suitable text or ebook file. You get book details and readable text, with format limits shown. Live use needs Python and internet access; check reuse rights for your country.
+subhead: Give it a title, an author or a Project Gutenberg book number. It finds the book, downloads it and strips the license text. You get the book details and clean text, and it tells you if the file looks cut short.
+not_for:
+  - "The book is still in copyright in your country: get it from a library or buy it from the publisher."
+  - "You have no Python or internet access in your AI: ask your AI to read text you paste in, or download the book yourself from gutenberg.org."
+  - "You need a legal ruling on reuse: ask a lawyer or your library, as the skill does not give legal advice."
 you_give:
-  - A title, author, or book number, desired language or format, and a folder for downloads.
+  - A title, author or Project Gutenberg book number.
+  - The language or file type you want, such as plain text or EPUB (optional).
+  - A folder to save the files in (optional).
 you_get:
-  - Book metadata, available files, extracted text, and a fiction or nonfiction classification where useful.
+  - The book details, such as title, author, language and subjects.
+  - The list of file types you can download.
+  - The downloaded book file.
+  - Clean text with the Project Gutenberg license header and footer removed.
+  - A warning if the plain text looks too short, with a switch to EPUB.
+  - A label of fiction, non-fiction or ambiguous.
 how_it_works:
   - title: Find the right book
     text: Search the catalog or read the chosen book record and available formats.
@@ -22,5 +33,35 @@ works_best_with:
     - name: Python and internet access
       why: The included lookup helper needs these tools. Offline instruction checks do not prove that live catalog access works.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open an AI that can run Python and reach the internet. Say so first, as a plain chat without code running will not work.
+  - Paste the skill, or upload the skill folder with its scripts.
+  - Give your AI a title, author or book number, and name a folder for the files.
+  - "Ask it to run the full pipeline, then read the summary: check the title, author, format and any size warning."
+  - If the text looks short, ask your AI to try the EPUB version.
+  - Next, for fiction, use the clean text to study the story world, the author's craft and what is left unsaid. For non-fiction, use it for a summary or text analysis.
+output_sample:
+  input:
+    - A book title, author or Project Gutenberg book number
+    - The file type you want, such as plain text or EPUB (optional)
+    - A folder to save downloads in (optional)
+  prerequisites:
+    - An AI that can run Python 3.8 or newer
+    - Internet access, so the AI can reach the Gutendex catalog and gutenberg.org
+  output:
+    - name: Search results
+      contains: Matching books with ID, title, author, language, subjects and download count, most popular first.
+    - name: Metadata
+      contains: Title, authors, languages, subjects, bookshelves, copyright status and the file formats on offer.
+    - name: Downloaded file
+      contains: The book saved as plain text, EPUB or HTML, with a note on which format was really retrieved.
+    - name: Clean text
+      contains: The book text with the Project Gutenberg license header and footer removed, plus a warning if the file looks cut short.
+    - name: Fiction or non-fiction label
+      contains: A label of fiction, non-fiction or ambiguous, with the subjects that led to it.
+    - name: Pipeline summary
+      contains: A short wrap-up of the book ID, title, author, format, file path, size warning and label.
+when:
+  - You need the full text of a classic novel for a school or research project.
+  - You want to check a quote against the original book.
+  - You have a title and need to know if a free edition exists.
+  - You want clean text from an illustrated book that downloads as a short file.

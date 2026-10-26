@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set patterns but depends on the other service.
 new_slug: api-connector-builder
 name: API connector builder
-summary: Name the service you need to reach. Get working code with sign-in,
-  error handling and retries.
+summary: Name the service you need to reach and get working API connector code with sign-in, error handling and safe retries, ready to run.
 job: connect-tools
 headline: API connector builder
-subhead: Working code that talks to an outside service, with sign-in, error
-  handling and retries already in it. Name the service you want to reach and
-  describe what you need from it, and you get a connector you can run.
+subhead: Working code that talks to an outside service, with sign-in, error handling and retries already in it. Name the service you want to reach and describe what you need from it, and you get a connector you can run.
 explain: |
   Working code that talks to an outside service, with sign-in, error handling and retries already in it. Name the service you want to reach and describe what you need from it, and you get a connector you can run.
 
@@ -18,19 +15,47 @@ when:
   - A webhook should push events into your system.
   - Your current integration breaks whenever the other side has a hiccup.
   - Sign-in tokens keep expiring in a long-running job.
+not_for:
+  - "You only need a one-off data export: use the export button in the service, or a scheduled export, instead of building code."
+  - "You want to link two apps without writing code: use a no-code tool such as Zapier or Make."
+  - "You need to send payments with retries and have no idempotency key: ask a developer to check the code first, because a retried payment can charge twice."
 you_give:
-  - The service or its API docs
-  - What data you want to read or send
-  - Your language or framework
-  - Where secrets are stored (optional)
+  - The name of the service, or a link to its API docs
+  - What you want to read from it or send to it
+  - Your programming language or framework
+  - The account and the API key or token the service needs (optional)
+  - Where you keep secrets, such as environment variables (optional)
 you_get:
   - Working client or webhook code
   - Sign-in with token refresh
   - Retry and backoff rules
   - Logging for troubleshooting
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the internet.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell it the service, what data you need, and your language. Add the docs link if you have one.
+  - Say which sign-in the service uses. Keep real keys out of the chat and use placeholders.
+  - Read the code. For any POST that moves money, check it sends an idempotency key, or turn retries off for that call.
+  - Run it with your own key in an environment variable. This needs a place to run code and a connection to the internet.
+  - Test the connector, then wire its output into your workflow.
+output_sample:
+  input:
+    - The name of the service, or a link to its API docs
+    - What you want to read from it or send to it
+    - Your programming language or framework
+    - Your API key or token for that service (optional)
+  prerequisites:
+    - An AI that can run code and reach the internet, if you want it to test the connector
+    - An account with the service, and an API key or token for it
+  output:
+    - name: Client or webhook code
+      contains: A request client, webhook receiver, polling loop or wrapper around the official kit, chosen to fit the service.
+    - name: Sign-in setup
+      contains: API key, OAuth or token sign-in, with secrets kept in environment variables and token refresh for long jobs.
+    - name: Error handling and retries
+      contains: Rules that do not repeat bad requests and retry rate limits and server faults with growing waits.
+    - name: Circuit breaker
+      contains: A stop switch that pauses calls after repeated failures and later tries one test request.
+    - name: Logging
+      contains: Request and error logs to help you debug, with sensitive fields hidden.
+    - name: Usage examples and tests
+      contains: Short examples of how to call the connector, plus tests that use saved responses instead of the live service.

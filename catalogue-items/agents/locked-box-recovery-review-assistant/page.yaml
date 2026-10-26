@@ -1,51 +1,120 @@
 new_slug: locked-box-recovery-review-assistant
-name: Locked-box recovery review assistant
-headline: Locked-box recovery review assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+name: Fixed-price deal leakage reviewer
+headline: Fixed-price deal leakage reviewer
+summary: Check seller transfers and ticking compensation against a locked-box deal price. Get the leakage still to recover and the daily amount owed, apart.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A fixed-price adjustment bridge showing leakage and ticking compensation separately. Include changed inputs, source versions, branch reasons and checks still blocked. Share signed locked-box price, dated transfer ledger, permitted items, repayment evidence, daily ticking clause and counsel-confirmed eligible days. Include a dedicated leakage escrow agreement, account records and approved reserve evidence only if that collateral exists. Supply the previous approved review and actual changed source files with dates.
+subhead: Give it the signed deal terms, the dated list of money moved to the seller, proof of permission and repayment, and last review's record. It sorts each transfer, works out the leakage still unrecovered and the ticking amount owed, and checks any leakage escrow. You get a price bridge and open questions.
 explain: |-
-  A fixed-price adjustment bridge showing leakage and ticking compensation separately. Include changed inputs, source versions, branch reasons and checks still blocked.
+  In a locked-box deal, the price is fixed from a past balance sheet date, and the buyer takes the business as it stands at closing. In return, the seller may not take value out of the company between that date and closing, except in ways the contract allows. Money that leaks out is called leakage. The seller also earns a small daily amount, called a ticking fee, for the time between the two dates. If you treat every payment to the seller as leakage, you claim too much. If you add the ticking amount into the same line, you cannot see either one.
 
-  Acquisition closing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This fixed-price deal leakage reviewer keeps a short record of the last accepted review. It holds the transfers already sorted, the permitted items and their consents, the repayments confirmed, the ticking days counsel confirmed and the dedicated escrow, if there is one. When a new transfer, consent, repayment or day count arrives, it compares it with that record. Then it runs the Locked-box deal price checker. That workflow sorts each transfer as permitted, recovered or unrecovered, and keeps disputed ones apart. It works out the ticking amount on its own line.
+
+  Only when a dedicated escrow for leakage exists does it reconcile that account and its claims. With no such escrow, it asks a question and never uses an earn-out or an indemnity account. It does not decide what the contract means or if a claim will succeed, and it assumes no country's law. Lawyers and deal advisers decide that. It uses only the documents you give it, and a person who knows the deal checks the result.
 when:
-  - You need a fixed-price adjustment bridge showing leakage and ticking compensation separately. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on acquisition closing and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - You are the buyer or an adviser, and the seller moved money out of the target after the locked-box date. You need to know how much is leakage.
+  - The seller says a payment was allowed, and you want to see it against the permitted list and the consent it relies on.
+  - The seller repaid part of a transfer, and you want only the unrecovered part left in the price adjustment.
+  - Closing was delayed and you want the daily ticking amount worked out apart from any leakage.
+not_for:
+  - You only want to sort the seller transfers. Use the Locked-box seller transfer checker.
+  - You only want the ticking amount for a number of days. Use the Deal delay fee calculator.
+  - You only want to see what can be released from one escrow account. Use the Escrow release balance checker.
+  - The deal has no fixed locked-box price. It uses a completion accounts true-up, which this does not cover.
+  - You want to know if a claim will succeed, or what the contract means in law. Counsel decides that.
 you_give:
-  - Signed locked-box price, dated transfer ledger, permitted items, repayment evidence, daily ticking clause and counsel-confirmed eligible days. Include a dedicated leakage escrow agreement, account records and approved reserve evidence only if that collateral exists. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The signed locked-box terms with clause numbers: the price, the locked-box date, the list of permitted leakage and the ticking clause (from the share purchase agreement)"
+  - The dated list of transfers from the target to the seller or its group between the locked-box date and closing (from the target's bank and ledger records)
+  - "Proof for each permitted item: the consent or the schedule line it relies on"
+  - Proof of repayments or recoveries, with dates
+  - The daily ticking amount, and the number of eligible days your counsel confirmed
+  - The reporting date, currency and scale, and your materiality threshold
+  - A leakage escrow agreement, account records and approved claim reserves (optional, only if a dedicated escrow exists)
+  - Your last accepted review and its record (optional on a first run)
 you_get:
-  - A fixed-price adjustment bridge showing leakage and ticking compensation separately. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A transfer register. Each transfer is marked permitted, recovered, unrecovered or disputed, with its proof.
+  - The unrecovered leakage that comes off the price, with disputed items kept apart
+  - The ticking amount on its own line, with the day count and the base it applies to
+  - An escrow reconciliation, only if a dedicated leakage escrow exists
+  - Reviewer questions for anything missing, plus MISSING lines, checks that could not run and a record for next time
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, pick one that can create spreadsheets. In plain chat it returns the same tables as text.
+  - Say whether this is the first run. If not, paste the record from last time. Then attach the deal terms with clause numbers, the transfer list, the consents and the repayment proof, and give the counsel-confirmed day count.
+  - Read "changed since last review" first. Check each new transfer, consent and repayment against the document it came from.
+  - Check one transfer by hand. Gross transfers less permitted items and less confirmed repayments should equal the unrecovered leakage. Check that no repayment was counted twice.
+  - "Check the ticking amount: eligible days times the daily amount. Check which price it applies to under the contract, and that it was not already paid or included."
+  - Answer the questions or leave them marked MISSING. Nothing is sent to the seller or paid.
 how_it_works:
-  - title: Reconcile a locked-box closing price
-    text: Run the governing workflow when A new seller-benefit transfer, permitted-item consent, verified repayment or ticking-day confirmation is supplied.
-  - title: Escrow release checker
-    text: If unrecovered leakage has a specific approved escrow reserve, reconcile only that account and claim ledger before proposing a release or collateral shortfall. If no dedicated escrow or authority is evidenced, return a question and never divert an unrelated earnout or indemnity account.
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this deal, or sets a first baseline. Compares the transfer list, consents, repayments and day count with the record. If nothing changed and no review is due, it says so and stops.
+  - title: Sorts each transfer
+    text: Keeps only transfers inside the contract period. Finds the consent or permitted-leakage line for each. Takes out permitted items and confirmed repayments, and keeps disputed items on their own line.
+  - title: Works out unrecovered leakage
+    text: Takes the unrecovered amount off the fixed price. It leaves out any amount already recovered through another closing line. A suspected item is not treated as a claim that can be collected.
+  - title: Works out the ticking amount
+    text: Multiplies only the eligible days by the signed daily amount. If the contract applies it to a different price base, it keeps the original base and shows a separate bridge.
+  - title: Checks a leakage escrow if there is one
+    text: Matches paid and pending claims to unique IDs and checks the release conditions. It holds back the smaller of the approved pending claims and the escrow left, and shows any claims above the escrow. With no dedicated escrow, it asks and stops.
+  - title: Reconciles and saves the record
+    text: Ties the register, the leakage and the ticking amount to the documents, and writes a short record for next time. It keeps the old record.
 output_shape: |-
-  A fixed-price adjustment bridge showing leakage and ticking compensation separately. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+  LOCKED-BOX DATE <date>   CLOSING DATE <date>   FIXED PRICE <n>
+
+  CHANGED SINCE LAST REVIEW  <transfers, consents, repayments, day count>
+  TRANSFER REGISTER          <transfer | date | amount | permitted, recovered, unrecovered or disputed | proof>
+  LEAKAGE                    identified <n> - permitted <n> - repaid <n> = <n> unrecovered;
+                             disputed <n> held apart
+  PRICE AFTER LEAKAGE        <fixed price> - <unrecovered leakage> = <n>
+  TICKING AMOUNT             <eligible days> x <daily amount> = <n>; applies to <price base>;
+                             not already paid: <yes or no>
+  ESCROW                     <opening, paid, pending reserve, proposed release, shortfall,
+                             or "skipped: no dedicated escrow">
+  REVIEWER QUESTIONS         <one per gap>
+
+  RECORD FOR NEXT REVIEW  sorted transfers, consents, repayments, counsel-confirmed days, escrow ID
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The signed locked-box terms with clause numbers (price, date, permitted leakage, ticking clause)
+    - The dated list of transfers from the target to the seller between the locked-box date and closing
+    - Proof of permission for each permitted item, and proof of repayments
+    - The daily ticking amount and the counsel-confirmed day count
+    - A leakage escrow agreement and account records (optional)
+    - Your last accepted review and its record (optional on a first run)
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can create spreadsheets.
+    - A named person who knows the deal and will check the result, with counsel for the legal points
+  output:
+    - name: Changed since last review
+      contains: Each new transfer, consent, repayment or day count, with its source and date.
+    - name: Transfer register
+      contains: Each transfer marked permitted, recovered, unrecovered or disputed, with the proof it rests on.
+    - name: Leakage and price after leakage
+      contains: Identified transfers less permitted items and confirmed repayments, the unrecovered amount, and the price after it. Disputed items stay apart.
+    - name: Ticking amount
+      contains: Eligible days times the daily amount, the price base it applies to, and a check that it was not already paid.
+    - name: Escrow reconciliation (only if a dedicated escrow exists)
+      contains: Deposit less paid claims, the reserve for pending claims, the proposed release and any shortfall.
+    - name: Reviewer questions
+      contains: One question for each missing consent, proof, clause or day count.
+    - name: Record for next review
+      contains: Sorted transfers, consents, repayments, confirmed days and the escrow ID.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops. Each check that failed or could not run, or "none".
+    - name: Workbook (if your AI can make one)
+      contains: Inputs, formulas and a checks tab, with the register linked to both bridges.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Recoveries and ticking amounts are sourced once; the actual agreement determines whether the daily amount applies to original or adjusted price. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - what: A disputed transfer
+    how: Mark it disputed. It stays out of the unrecovered total and shows on its own line with both views.
+  - what: A different price base
+    how: Paste the clause. The ticking amount keeps the original base and adds a separate bridge on the other one.
+  - what: A new repayment
+    how: Add the proof and date. The unrecovered amount is rebuilt, and the register shows how far it moved.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - Recoveries and ticking amounts are sourced once; the actual agreement determines whether the daily amount applies to original or adjusted price. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +125,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
+  - Paste the deal's leakage and ticking clauses once into a clause sheet with clause numbers, and reuse it.
+  - Keep one transfer list with a proof column, so each consent or repayment can be checked line by line.
+  - Pair it with the Escrow release balance checker when a dedicated escrow holds money for leakage claims.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The signed purchase agreement
+      why: Holds the price, the permitted list and the ticking clause, each with a clause number you can cite.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed agreement and its permitted-leakage schedule, not a summary of them.
+    - The target's bank and ledger records for the locked-box period.
+    - A named reviewer who knows the deal, and counsel to confirm the ticking days.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Locked-box deal
+    meaning: A deal where the price is fixed from a past balance sheet date, and the seller agrees not to take value out of the company before closing.
+  - term: Leakage
+    meaning: Value that moves from the company to the seller or its group between the locked-box date and closing, other than what the contract permits.
+  - term: Permitted leakage
+    meaning: A transfer the contract lists as allowed, such as an agreed salary or an approved payment.
+  - term: Ticking fee
+    meaning: A daily amount the buyer pays the seller for the time between the locked-box date and closing, if the contract says so.
+  - term: Escrow
+    meaning: Money held by a third party until set conditions are met.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

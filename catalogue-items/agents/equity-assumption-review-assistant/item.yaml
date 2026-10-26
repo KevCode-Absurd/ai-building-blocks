@@ -1,32 +1,27 @@
 slug: equity-assumption-review-assistant
 name: Equity assumption review assistant
-summary: A checked valuation scenario report and assumption challenge list.
+summary: Check a share valuation model when new filings arrive. Get scenarios, assumptions to challenge and source gaps, with facts and guesses kept apart.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: source_text
-    required: false
   - type: spreadsheet
     required: false
-  - type: copy_draft
-    required: false
-outputs:
-  - type: document
-  - type: audit_report
+outputs: []
+needs_mode: manual
 uses:
-  - review-equity-valuation-sensitivity-assumptions
   - source-note-summariser
+  - review-equity-valuation-sensitivity-assumptions
 steps:
-  - uses: review-equity-valuation-sensitivity-assumptions
-    note: "Run when: A new filing, dated market exhibit or valuation assumption is supplied for the same company."
   - uses: source-note-summariser
-    note: Run review-equity-valuation-sensitivity-assumptions for changed evidence or a due review. If an input changed, extract its exact period and source before running the affected scenarios. If the exchange, currency or valuation date changed, establish a new baseline.
-schedule: On request after new company evidence is supplied. Installation does not create a schedule.
+    note: Run this first on each changed filing or market exhibit, to pull its exact period, figure and page. It hands the scenario step a list of changed inputs, each with its source.
+  - uses: review-equity-valuation-sensitivity-assumptions
+    note: "Run this when a new filing, dated market exhibit or valuation assumption arrives for the same company. It reruns only the affected scenarios, then checks the commentary against the evidence. If the exchange, currency or valuation date changed, set a new baseline instead of comparing."
+schedule: On request after new company evidence is supplied. Installing this agent creates no recurring schedule.
 asks_before:
   - Sending or submitting any message or form
   - Changing a live account, calendar, task, permission or published document
@@ -50,4 +45,5 @@ credits:
     by: AI Blocks
     url: https://useaiblocks.com/skills/source-note-summariser
     used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
-warnings: []
+warnings:
+  - Scenario values are what-ifs. This is not investment advice, a price target or a fairness opinion, and it contains no live market-data feed.

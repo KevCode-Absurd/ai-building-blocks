@@ -1,44 +1,108 @@
 new_slug: creative-gap-to-brief-queue-planner
 name: Creative gap-to-brief queue planner
-summary: Turn format, message and buyer gaps into five to ten production briefs. Rank the queue by fit and effort.
+summary: Turn gaps in your ad mix into 5 to 10 ready-to-make creative briefs. Get a ranked queue a designer or creator can start on today.
 job: plan-ad-tests
 headline: Creative gap-to-brief queue planner
-subhead: Share creative gap report, buyer groups, brand facts and capacity. Get a ranked brief queue with gap links and production needs.
-explain: |-
-  Turn format, message and buyer gaps into five to ten production briefs. Rank the queue by fit and effort.
+subhead: Give it your ad counts by format, message and buyer group, your brand facts and how many ads you can make. It names the biggest gaps and writes 5 to 10 briefs to fill them, ranked by what ships fastest or fills the biggest gap.
+explain: |
+  A diversity report tells you what is missing from your ads. It does not tell a designer what to make on Monday. This creative brief queue planner closes that gap. It reads your gaps in format, message and buyer group, and turns each one into a brief with the format, opening, body, call to action and production notes.
 
-  Share creative gap report, buyer groups, brand facts and capacity. Get a ranked brief queue with gap links and production needs.
+  It ranks the gaps first, then puts about two thirds of your making capacity on the biggest one. Next it orders the briefs by the constraint you pick: fastest to ship, biggest gap, or best past results. It will not brief more ads in the category you already overuse.
+
+  No diversity score? Count your live ads by format, message angle and buyer group, and paste the counts. The skill works from those.
 when:
-  - You need a ranked brief queue with gap links and production needs.
-  - You need creative gap-to-brief queue planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You know your ads look too alike and need to know what to make next.
+  - A sprint is coming and your team keeps asking "what ad should we make?"
+  - A designer or creator needs a brief they can start on without another meeting.
+  - Most of your ads are one format, such as static images, and you want a plan to spread them out.
+not_for:
+  - "You do not know your gaps yet. Run the Meta creative similarity risk reviewer first, or count your ads by hand."
+  - "You want a target mix across source, stage and format, not briefs. Use the Creative portfolio mix planner."
+  - "You want one brief built from reviews and product facts. Use the Creative brief writer."
+  - "You want tests with budgets and a calendar. Use the Meta concept diversity test planner."
 you_give:
-  - Creative gap report
-  - Buyer groups
-  - Brand facts and capacity
+  - Your live ads counted by format (short video, long video, static, carousel)
+  - Your live ads counted by message angle, such as social proof, offer, lifestyle or how-to
+  - Your live ads counted by buyer group (broad, lookalike, retargeting, customer list)
+  - Your brand facts, such as voice, buyer, product and category
+  - How many ads you can make in one sprint, and whether speed or the biggest gap matters more
+  - A report from the Meta creative similarity risk reviewer, your best ads and the assets you have (optional)
 you_get:
-  - A ranked brief queue with gap links and production needs
-  - The sources used, missing inputs and assumptions
+  - Your biggest gap in format, message and buyer group
+  - 5 to 10 briefs, each with format, size, opening, body, call to action and production notes
+  - The briefs ranked in the order you chose, with the reason for each place
+  - What each brief fills, plus a ship timeline at your capacity
+  - A MISSING list for anything you did not give
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code, files or web access.
+  - Paste your counts, or the report from the Meta creative similarity risk reviewer. For counts, list each live ad with its format, message angle and buyer group.
+  - Add your brand facts and how many ads you can make in a sprint. Say whether you need speed or the biggest gap filled.
+  - Check that the queue follows your choice. For "fastest to ship", the quickest brief must come first.
+  - Give each brief to a designer or creator. Plan the tests with the Meta concept diversity test planner.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm creative gap report, buyer groups, brand facts and capacity. Mark facts that are missing.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: Rank the Gaps
-    text: Follow the rank the gaps section in the full method and keep its required fields and decision rules.
-  - title: Translate Gaps to Briefs
-    text: Follow the translate gaps to briefs section in the full method and keep its required fields and decision rules.
-  - title: Write the Brief Queue
-    text: Follow the write the brief queue section in the full method and keep its required fields and decision rules.
-  - title: Rank the Queue
-    text: Follow the rank the queue section in the full method and keep its required fields and decision rules.
-  - title: Deliver
-    text: Follow the deliver section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a ranked brief queue with gap links and production needs. Check facts, math and the decisions before any action.
+  - title: Collect the counts
+    text: Format, message angle and buyer group counts, plus your capacity and your constraint. Missing items are marked, not guessed.
+  - title: Rank the gaps
+    text: With scores, each gap is weighted. With counts alone, empty categories come first, then any under 15 percent of ads, then any above 60 percent.
+  - title: Turn each gap into briefs
+    text: Format gaps, message gaps and buyer group gaps each have their own brief rules. A missing customer video means a real customer on a phone, not a studio shoot.
+  - title: Write the briefs
+    text: One layout for all, with format, size, angle, buyer fit, opening, body, call to action, why it is in the queue and production notes.
+  - title: Sort the queue
+    text: In the order of your constraint. The numbering is checked against that order before you get it.
+  - title: Report the effect
+    text: Which gap each brief fills. A projected score only if you gave a score, and marked as an estimate.
+output_shape: |
+  GAP SUMMARY (mode: <fastest to ship | biggest gap | past results>)
+  Format: <biggest gap> | Message: <biggest gap> | Buyer group: <biggest gap>
+
+  QUEUE (<n> briefs, in this order)
+  Brief 1: <title>
+  Format <...> | Size <...> | Angle <...> | Buyer group <...>
+  Opening (0-3s): <exact text, visual or action>
+  Body: <what happens, what is shown, what is said>
+  Call to action: <...>
+  Why this brief: <which gap it fills>
+  Production notes: <talent, place, props, assets> | Ship time: <days>
+  Brief 2 ...
+
+  EFFECT
+  Gaps filled: <list> | Score: <before to after, estimate, or "no score given">
+  Ship timeline at your capacity: <days>
+
+  MISSING: <...>
+output_sample:
+  input:
+    - Your live ads counted by format, message angle and buyer group
+    - Your brand facts, such as voice, buyer, product and category
+    - How many ads you can make per sprint, and speed or biggest gap
+    - A diversity report from the Meta creative similarity risk reviewer (optional)
+  prerequisites:
+    - A list of your live ads, which you can export from Meta Ads Manager (optional if you already have counts)
+  output:
+    - name: Gap summary
+      contains: The biggest gap in format, message and buyer group, and the ranking mode used.
+    - name: Brief queue
+      contains: Five to ten full briefs in order. Each has format, size, opening, body, call to action and production notes.
+    - name: Why this brief
+      contains: One line on each brief saying which gap it fills.
+    - name: Effect and timeline
+      contains: Gaps filled, a score estimate only if you gave a score, and days to ship at your capacity.
+    - name: Missing list
+      contains: Counts, brand facts or capacity you did not give.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  inputs:
+    - A report from the Meta creative similarity risk reviewer, so the gaps are already counted
+    - Your best ads, so new briefs borrow what works without copying it
+    - A list of the assets you own, such as product photos, customer videos and founder footage
+terms:
+  - term: Gap
+    meaning: A format, message or buyer group with few or no ads, next to others with many.
+  - term: Message angle
+    meaning: The main idea of an ad, such as social proof, an offer or a how-to.
+  - term: Buyer group
+    meaning: Who sees the ad, such as new people (broad), people like past buyers (lookalike), site visitors (retargeting) or your own list.
+  - term: Brief
+    meaning: A page that tells a designer or creator exactly what to make.

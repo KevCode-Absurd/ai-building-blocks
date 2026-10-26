@@ -2,34 +2,104 @@ thinking: medium
 thinking_why: It reads many comments and groups them into themes.
 new_slug: feedback-theme-finder
 name: Feedback theme finder
-summary: Give it NPS, CSAT or open comments. Get themes, trends and an insight
-  report you can act on.
+summary: Turn NPS or CSAT scores and open comments into an insight report. See why customers are happy or not, which themes are rising, and what to act on.
 job: understand-customers
 headline: Feedback theme finder
-subhead: Give it NPS, CSAT or open comments. Get themes, trends and an insight
-  report you can act on. Bring nPS or CSAT responses with comments. Use the
-  result to plan your next step.
+subhead: Give it survey scores with open comments, as a CSV or pasted rows. It works out NPS and CSAT, groups the comments into themes and compares with an earlier period. You get a scorecard, themes with exact quotes, trends and actions.
 explain: |
-  A report that shows why customers are happy or unhappy, with NPS and CSAT numbers, grouped themes and what changed since last period.
+  An NPS and CSAT analysis is only useful if you can see why the scores moved. A number like +32 tells you little. The comments tell you what to fix.
 
-  You give it survey scores and open comments in a CSV, JSON or described form. The skill removes duplicates, puts scales on the same footing, and groups the open text into themes such as slow reports or great support. It computes NPS as promoters minus detractors, CSAT averages and how often each theme appears. It then compares against earlier periods and flags new or growing themes. The final report has a summary of key points, a scorecard, theme details with quotes and suggestions.
+  This skill reads your survey scores and open comments together. It removes duplicates, puts different rating scales on one footing and groups the comments into themes, such as slow reports or great support. It works out NPS as promoters minus detractors, CSAT averages and how often each theme appears. It reads detractor and promoter comments separately, so one group does not drown out the other.
+
+  If you give it an earlier period, it flags themes that are new or growing. Quotes are copied exactly from your data. When scores, dates or segments are missing, it says so and skips that part. It does not guess.
 when:
-  - You ran a quarterly NPS survey and have 800 comments.
+  - You ran a quarterly NPS survey and now have hundreds of comments to read.
   - You want to know why detractors scored you low.
-  - A new complaint seems to be rising and you need numbers.
+  - A new complaint seems to be rising and you want numbers on it.
   - You need a clear summary for your leadership team.
+not_for:
+  - "You have fewer than about 50 responses, or one channel such as app reviews: read the comments yourself, or use the Review insight finder."
+  - "Your feedback comes from several places, such as tickets, calls and surveys: use the Feedback pile sorter."
+  - "Your survey tool is Delighted, GatherUp, Gleap or Simplesat and you want to pull the answers from it: use the Customer feedback report from survey tools."
 you_give:
-  - NPS or CSAT responses with comments
+  - Survey responses with a score and a comment, as a CSV, JSON or pasted rows
+  - The date of each response (optional, needed for trends)
   - Segments such as plan or region (optional)
-  - Earlier period data for comparison (optional)
-  - The question you want answered
+  - Data from an earlier period to compare with (optional)
+  - The question you want answered (optional)
 you_get:
-  - NPS and CSAT scorecard
-  - Themes with counts and quotes
-  - Trends versus last period
-  - Action points
+  - A scorecard with NPS and CSAT and how many responses sit behind each
+  - Themes with counts and exact quotes
+  - Detractor and promoter comments looked at separately
+  - Trends against the earlier period, if you gave one
+  - Actions tied to specific themes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text, or add it to your AI.
+  - Upload your survey export. It helps to have the columns score, comment, date and segment.
+  - Say what you want to know, such as "why did detractors score us low this quarter".
+  - Check the scorecard first. Count the responses yourself in your file and compare.
+  - Check two quotes against your file. They must match word for word.
+  - Read the actions as ideas to test. The skill does not predict how much a fix will move your score.
+how_it_works:
+  - title: Collect and tag
+    text: It reads all responses and tags each with date, segment and source where you gave them.
+  - title: Clean and normalize
+    text: It removes duplicates and spam, hides personal details and puts scales on one footing.
+  - title: Find the themes
+    text: It groups comments into themes and picks exact quotes for each one.
+  - title: Work out the scores
+    text: It computes NPS, CSAT and theme counts, overall and by segment, and shows how many responses sit behind each figure.
+  - title: Compare with before
+    text: It flags themes that are new or changed by 20 percent or more against your earlier period.
+  - title: Write the report
+    text: It writes a summary, scorecard, theme details, trends and actions that name the theme behind each one.
+output_shape: |
+  # Customer feedback report
+  ## Summary
+  3 to 5 key points
+  ## Scorecard
+  Table of <segment>, <promoters>, <passives>, <detractors>, <NPS>, <responses>
+  ## Themes
+  Table of <theme>, <share of comments>, <change vs last period>, <exact quote>
+  ## Trends and segments
+  ## Recommended actions
+  <action> tied to <theme>
+  ## Missing
+output_sample:
+  input:
+    - Survey responses with a score and a comment
+    - The date of each response (optional)
+    - Segments such as plan or region (optional)
+    - An earlier period to compare with (optional)
+  prerequisites:
+    - A survey export saved as CSV or JSON, or rows pasted into the chat
+  output:
+    - name: Executive summary
+      contains: Three to five key points about your scores and the main reasons behind them.
+    - name: Scorecard
+      contains: NPS and CSAT overall and by segment, with the number of responses behind each.
+    - name: Theme breakdown
+      contains: Each theme with its share of comments, change since the last period and exact quotes.
+    - name: Trend analysis
+      contains: Themes that are new, rising or falling against your earlier period.
+    - name: Recommended actions
+      contains: Steps ranked by how often the theme comes up, each tied to one theme.
+    - name: Missing
+      contains: Scores, dates or segments you did not give, noted so nothing is guessed.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can read a CSV and group comments into themes.
+    - name: Google Sheets or Excel
+      why: Use them to clean and export your survey results first.
+  inputs:
+    - Last period's results, to spot new or rising themes
+    - Plan, region or account size for each response
+    - A list of releases or outages, to see what moved the scores
+terms:
+  - term: NPS
+    meaning: Net Promoter Score. Percent of promoters (9 to 10) minus percent of detractors (0 to 6).
+  - term: CSAT
+    meaning: Customer satisfaction score. The average rating customers give after a support chat or purchase.
+  - term: Detractor
+    meaning: A customer who scored you 0 to 6.

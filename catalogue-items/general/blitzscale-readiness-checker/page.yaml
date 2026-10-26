@@ -1,6 +1,6 @@
 new_slug: blitzscale-readiness-checker
 name: "Blitzscale readiness checker"
-summary: "Describe your product and market. Get a check on whether to grow at speed, and a plan for the chaos."
+summary: "Check if your business is ready to grow at speed. Get yes, no or unknown on four conditions, what breaks first, and a slower plan if needed."
 job: plan-strategy
 thinking: high
 thinking_why: "It weighs four conditions that each depend on uncertain facts and must say unknown instead of guessing."
@@ -17,6 +17,10 @@ when:
   - Investors, advisers or rivals tell you to grow faster and you are unsure.
   - Your product seems to get better as more people join, and you want to test that.
   - You are about to spend heavily on growth before the model is proven.
+not_for:
+  - "Your market is settled and cash flow is steady: use a plain growth plan with a budget and monthly targets."
+  - "You have no product or users yet: talk to likely buyers first, then come back when you have some use to measure."
+  - "You need a dated plan with owners and tasks: use a project plan or a spreadsheet, as this only checks readiness."
 
 you_give:
   - "What the product is and who uses it"
@@ -37,6 +41,26 @@ how_to_use:
   - "Add what you know about rivals, the market size and your unit costs."
   - "Mark anything you only believe and cannot show."
   - "Take the break-first list to the people it names."
+output_sample:
+  input:
+    - What your product is and who uses it
+    - How new people find it today
+    - What you know about rivals, market size and speed
+    - Your price, your cost to win and serve a customer, and months of cash
+    - A growth plan you already have (optional)
+  output:
+    - name: The four conditions
+      contains: Each condition marked yes, no or unknown, with the evidence you gave for it.
+    - name: The answer
+      contains: "One of three answers: push now, not yet, or go slower, with two lines of reasoning."
+    - name: What breaks first
+      contains: "If yes: at least five likely failures, each with an owner, an early warning sign and a rough cost."
+    - name: The slower plan
+      contains: "If no or not yet: steps that still build the network, and a test for each unknown."
+    - name: MISSING
+      contains: The facts that would settle each unknown, so you know what to find out.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: Tests the network

@@ -14,6 +14,38 @@ Supporting files are included at skill-relative paths. See [UPSTREAM-NOTICE.md](
 
 # Polars
 
+## Run it: what you need, what you get
+
+**What you need.** Ask once for anything missing. Never invent it.
+
+- **A data file**: CSV or Parquet (also JSON or Excel). If the user has not given a path, ask for it.
+- **The question**: for example "total revenue per customer per month". If it is missing, ask once. Do not guess.
+- **Column names and known problems** (optional): read the header and a few rows first if the user did not describe them.
+- **Python with Polars installed** (`pip install polars`, free). The AI must be able to run Python and save files. Without that, write the script and tell the user how to run it.
+- **Cloud storage or BigQuery** (optional): these need the user's own credentials and account, and may cost money. Never ask the user to paste a password or key into the chat. Work from an exported file instead.
+
+**Steps.**
+
+1. Look at the file first: column names, types, row count, and a few rows. Say what you see.
+2. Write one script that reads the file lazily, applies the cleaning and the grouping, and writes the result. Keep it in plain steps with a comment above each one.
+3. Run it. Check the row count before and after each filter or join, and the totals against a simple check, such as the sum of a column before and after grouping.
+4. Save the script so the user can run it again on next month's file.
+
+**What you hand back.**
+
+- `analysis.py`: the script, which the user can rerun.
+- The result file, such as `result.csv` or `result.parquet`.
+- Notes: what each step did, row counts before and after, assumptions made (for example how blanks were handled), and anything you did not do.
+- The first rows of the result, shown in the chat.
+
+**Guard rails.**
+
+- Do not change or overwrite the original file. Write results to a new file.
+- Do not claim a speed gain. Polars is often much faster than pandas on large files, but the gain depends on the file and the computer. Time your own run and report that number, or say nothing about speed.
+- If the file is larger than the computer's memory, say so and suggest splitting it by month or using a tool built for that (Polars streaming, dask or vaex).
+- If a column you need is missing or has mixed types, stop and report it. Do not drop rows silently. Show how many rows were affected.
+- If the data holds personal details, do not paste them into the chat beyond a few sample rows.
+
 ## When to Use
 - You need a faster in-memory DataFrame workflow than pandas for data that still fits in RAM.
 - You are building ETL, analytics, or transformation pipelines that benefit from lazy evaluation and parallel execution.
@@ -21,7 +53,7 @@ Supporting files are included at skill-relative paths. See [UPSTREAM-NOTICE.md](
 
 ## Overview
 
-Polars is a lightning-fast DataFrame library for Python and Rust built on Apache Arrow. Work with Polars' expression-based API, lazy evaluation framework, and high-performance data manipulation capabilities for efficient data processing, pandas migration, and data pipeline optimization.
+Polars is a fast DataFrame library for Python and Rust built on Apache Arrow. Work with Polars' expression-based API, lazy evaluation framework, and high-performance data manipulation capabilities for efficient data processing, pandas migration, and data pipeline optimization.
 
 ## Quick Start
 

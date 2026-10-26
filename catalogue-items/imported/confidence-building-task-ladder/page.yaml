@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: Each step must be hard enough to matter and easy enough to win.
 new_slug: confidence-building-task-ladder
 name: Confidence-building task ladder
-summary: Give it a skill students avoid. Get a ladder of small wins that builds
-  confidence. Not medical advice.
+summary: Build a confidence building task ladder for a student who avoids a skill. Give the skill and year group. You get 4 to 6 small, winnable tasks.
 job: teach-and-train
 headline: Confidence-building task ladder
-subhead: A ladder of small, achievable tasks that rebuilds a student's belief
-  that they can do a skill they avoid. Each step is a real win, not a pep talk.
+subhead: A ladder of small, achievable tasks that rebuilds a student's belief that they can do a skill they avoid. Each step is a real win, not a pep talk.
 explain: |
   A ladder of small, achievable tasks that rebuilds a student's belief that they can do a skill they avoid. Each step is a real win, not a pep talk.
 
@@ -17,6 +15,10 @@ when:
   - You want an alternative to telling them to try harder.
   - A learner avoids a skill by asking for help straight away.
   - You need a gentle plan for a few weeks.
+not_for:
+  - "The student may have anxiety, a diagnosed need or a mental health concern: talk to your school's SENCO or counsellor instead."
+  - "You need a quick fix for one lesson: use a simple, short task your own class teacher picks, not a multi-week plan."
+  - "You want a medical or clinical plan: ask a qualified professional, as this is classroom support only."
 you_give:
   - The skill the student avoids
   - Year group
@@ -28,7 +30,25 @@ you_get:
   - Ways to show peer success
   - Signs to watch for progress
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full skill text from the download into a new chat.
+  - Fill in the skill the student avoids, their year group and what they do instead. Add strengths and past attempts if you know them.
+  - Send it. Read the diagnostic first to check it fits the student you know.
+  - Pick the first task and try it. Use the coaching wording when you give feedback.
+  - Come back after a week or two and ask your AI to adjust the next step.
+output_sample:
+  input:
+    - The skill the student avoids
+    - The student's year group
+    - What the student does to avoid the task
+    - Their strengths and past attempts (optional)
+    - The subject (optional)
+  output:
+    - name: Efficacy Diagnostic
+      contains: Which of the four sources of confidence is easiest to reach for this student, and why.
+    - name: Task Sequence
+      contains: A short run of tasks that start inside what the student can do and rise in small steps.
+    - name: Attribution Coaching Guide
+      contains: Wording for feedback that links success to the student's effort and choices, not luck or ability.
+    - name: Long-Term Plan
+      contains: How to keep building belief over the following weeks and what progress signs to watch for.

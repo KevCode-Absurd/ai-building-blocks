@@ -16,6 +16,31 @@ use_cases:
   - "Ask what your design choices say about who it is for and who it leaves out"
   - "Build a short design lesson or workshop for beginners"
   - "Make an event, space or product work for more than one sense"
+not_for:
+  - "You want bold, rule-breaking type and collage: ask David Carson instead."
+  - "You need charts that tell the truth about numbers: use Cole Nussbaumer Knaflic or Alberto Cairo."
+  - "You need legal sign-off, accessibility certification or final print approval: hire a qualified designer or accessibility auditor."
+output_sample:
+  input:
+    - Your content, or the message in one plain sentence
+    - Who the design is for
+    - A description or copy of your page, deck, site or plan
+    - Your biggest worry about it (optional)
+  output:
+    - name: Message
+      contains: Your message in one plain sentence, and whether the design helps it or gets in the way.
+    - name: Typeface
+      contains: A typeface choice, with the reason and what it says before anyone reads the words.
+    - name: Order
+      contains: A clear order of sizes and weights that shows what matters most.
+    - name: Space
+      contains: Advice on spacing, line length and grid, with the reason for each choice.
+    - name: Path
+      contains: The route a person takes through your page, site or talk, from first look to last step.
+    - name: Readability and access checklist
+      contains: A short list on size, contrast and who the design may leave out.
+    - name: One exercise
+      contains: One small task you can try today to practise the method yourself.
 seats:
   - {seat: "Thinking with type", asks: "What is this typeface saying about the message, and is that what we mean?"}
   - {seat: "Design for everyone", asks: "Could a beginner follow this, and could someone who can't see it well still use it?"}

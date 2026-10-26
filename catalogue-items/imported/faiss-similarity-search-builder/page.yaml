@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Choosing an index type trades speed against accuracy.
 new_slug: faiss-similarity-search-builder
 name: FAISS similarity search builder
-summary: Give it your embeddings. Get a fast index that finds the closest
-  matches among millions of items.
+summary: Build a FAISS similarity search index from your embeddings. Get Python code that finds the closest matches fast, plus a saved index file.
 job: build-software
 headline: FAISS similarity search builder
-subhead: A search index that finds the closest items among millions of vectors
-  in milliseconds, set up in code you can run. It is the engine behind "find
-  similar" for text, images and products.
+subhead: A search index that finds the closest items among millions of vectors in milliseconds, set up in code you can run. It is the engine behind "find similar" for text, images and products.
 explain: |
   A search index that finds the closest items among millions of vectors in milliseconds, set up in code you can run. It is the engine behind "find similar" for text, images and products.
 
@@ -18,6 +15,10 @@ when:
   - You want a find-similar feature for products or documents.
   - You need to pick between flat, IVF and compressed indexes.
   - You want to move your search from CPU to GPU.
+not_for:
+  - "You need to filter results by tags, dates or other details: use a vector database such as Chroma or Pinecone instead."
+  - "You have a small set, a few thousand items or fewer: a plain exact search in a spreadsheet or short script is enough."
+  - "You do not have embeddings yet: make them first with an embedding service, then come back."
 you_give:
   - Your embedding vectors
   - Vector size and item count
@@ -29,8 +30,32 @@ you_get:
   - A saved index file
   - A speed versus recall check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page.
+  - "Paste your embedding details: vector size, item count, and your speed and memory limits. Add test queries if you have them (optional)."
+  - Ask your AI to pick an index and write the build, search and save code.
+  - Run the code in Python with faiss installed. Your AI needs a code tool to run it for you, or you can run it yourself.
+  - Check the speed and recall table. Treat the figures as typical values, not results from your data, until you run the check.
+  - Only load saved index files you made yourself. Loading files from others can run harmful code.
+output_sample:
+  input:
+    - Your embedding vectors, as a numpy array
+    - Vector size and item count
+    - Your speed and memory limits
+    - A set of test queries (optional)
+  prerequisites:
+    - An AI that can run Python code, or a computer with Python
+    - The faiss-cpu library, or faiss-gpu if you have a GPU
+    - Embeddings you already made
+  output:
+    - name: Index choice
+      contains: The index type picked for your size and limits, with the reason, from Flat, IVF, HNSW or product quantization.
+    - name: Build code
+      contains: Python code that creates the index, trains it if needed, and adds your vectors.
+    - name: Search code
+      contains: Python code that finds the nearest neighbours for a query and returns their positions and distances.
+    - name: Saved index file
+      contains: The index written to disk, with code to load it again later.
+    - name: Speed versus recall table
+      contains: A check of how speed and accuracy change as you tune settings like nprobe, with typical values noted.
+    - name: Next steps
+      contains: What to do with the saved index, such as wiring it into a find-similar feature or re-checking recall after adding data.

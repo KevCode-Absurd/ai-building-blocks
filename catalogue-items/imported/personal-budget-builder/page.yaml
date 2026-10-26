@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts spending into a standard plan.
 new_slug: personal-budget-builder
 name: Personal budget builder
-summary: List your income and spending. Get a budget plan, such as zero-based or
-  50/30/20, and where money leaks.
+summary: Build a personal budget from your income and spending. Get a 50/30/20 or zero-based plan and see where your money leaks each month.
 job: money-and-investing
 headline: Personal budget builder
-subhead: A spending plan where every dollar has a job, and a clear view of where
-  money leaks. You get either a simple 50/30/20 split or a zero-based plan where
-  income minus spending equals zero.
+subhead: A spending plan where every dollar has a job, and a clear view of where money leaks. You get either a simple 50/30/20 split or a zero-based plan where income minus spending equals zero.
 explain: |
   A spending plan where every dollar has a job, and a clear view of where money leaks. You get either a simple 50/30/20 split or a zero-based plan where income minus spending equals zero.
 
@@ -18,6 +15,10 @@ when:
   - Money runs out before month end and you cannot see why.
   - You want to save for a goal such as a house deposit.
   - You are paying off debt and need room for extra payments.
+not_for:
+  - "You need a budget for a business or company cash flow: ask an accountant or use your accounting software."
+  - "You have no income figure yet: work out your monthly take-home pay first, then come back."
+  - "You only want to clear debt: use a debt payoff plan, then return here for the monthly budget."
 you_give:
   - Monthly take-home income
   - One to three months of statements (optional)
@@ -29,7 +30,26 @@ you_get:
   - A list of spending leaks
   - A savings target and monthly review steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI your monthly take-home pay and whether it is steady or changes.
+  - Add your fixed bills and your main money goal.
+  - Paste 1 to 3 months of statements if you have them (optional). Remove account numbers first.
+  - Read the plan and check the category totals against your own records.
+  - Use the check-in table at the end of the month, then ask your AI to reset the plan.
+output_sample:
+  input:
+    - Your monthly take-home pay, and whether it is steady or changes
+    - Your last 1 to 3 months of bank or card statements (optional)
+    - Your fixed bills, such as rent, utilities, insurance and minimum debt payments
+    - Your main money goal, such as an emergency fund or a house deposit
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code is needed.
+  output:
+    - name: Budget Summary
+      contains: Your income, totals for Needs, Wants and Savings, a comparison with the 50/30/20 targets, and any surplus or deficit.
+    - name: Savings rate
+      contains: Your monthly savings as a share of income, with a flag if it is under 10 percent.
+    - name: Action Plan
+      contains: The top three spending areas to cut, with a target for each, and a plan to move savings on payday.
+    - name: 30-Day Check-in Template
+      contains: A simple table to compare your plan with what you actually spend.

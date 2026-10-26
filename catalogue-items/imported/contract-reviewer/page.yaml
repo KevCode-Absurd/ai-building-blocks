@@ -2,35 +2,63 @@ thinking: high
 thinking_why: Contract wording hides risks that need close reading.
 new_slug: contract-reviewer
 name: Contract reviewer
-summary: Give it a contract and your rules. Get a clause by clause review and
-  suggested edits. Have a lawyer check it.
+summary: Review a contract against your own negotiation rules. Get each clause rated green, yellow or red, with edits you can send back. A lawyer should check it.
 job: check-contracts
 headline: Contract reviewer
-subhead: Give it a contract and your rules. Get a clause by clause review and
-  suggested edits. Have a lawyer check it. Bring the contract. Use the result to
-  plan your next step.
+subhead: Give it a contract and your negotiation rules. It reads each clause, rates it green, yellow or red, and writes edits you can send back. You get a plan for which points to push first.
 explain: |
   A clause-by-clause review of a vendor or customer contract against your own negotiation rules, with each clause rated green, yellow or red and wording you can send back as edits. You arrive at the negotiation knowing which fights matter.
 
   You provide the contract and your playbook of standard positions. It reads each clause, compares it with your rules, and rates the gap. For yellow and red items it writes suggested redlines and a fallback position. It then summarises business impact and a negotiation order, with must-haves first. If a contract system is connected, it can route the result there. A lawyer should check the final edits.
 when:
-  - A supplier sent their paper and you have a standard set of terms.
-  - You are negotiating a customer deal and need fallback positions ready.
-  - Your team reviews many contracts and wants a consistent method.
-  - You need redlines quickly before a call.
+  - A supplier sends their contract and you have your own standard terms.
+  - You are closing a customer deal and want fallback positions ready.
+  - Your team reviews many contracts and wants one steady method.
+  - You need edits drafted before a call about the contract.
+not_for:
+  - "You need final sign-off on a contract: have a lawyer read the full contract, because this review is a first pass only."
+  - "You have no written negotiation rules: write down your standard terms first, or ask a lawyer to review the whole contract."
+  - "You need legal advice for a dispute or a signed deal: talk to a lawyer, not an AI review."
 you_give:
-  - The contract
-  - Your negotiation playbook
-  - Deal context and deadline
-  - Which side you are on
+  - The contract, as a file, a link or pasted text
+  - Your negotiation playbook, which is your list of standard terms and limits
+  - Which side you are on, such as buyer or supplier
+  - Your deadline
+  - Deal context, such as size or past dealings (optional)
+  - Clauses you worry about most (optional)
 you_get:
-  - Clause ratings
-  - Suggested redlines
-  - Fallback positions
-  - Business impact summary
-  - Negotiation order
+  - A green, yellow or red rating for each clause
+  - Suggested edits with the reason for each
+  - A fallback position for each edit
+  - A summary of what each gap means for the business
+  - A negotiation order, with must-haves first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Add your contract. Upload the file or paste the text.
+  - Add your playbook, which is your standard terms and limits. If you keep it in a file such as legal.local.md, upload that file.
+  - "Answer the questions: which side you are on, your deadline and any worries. If you skip one, the AI notes its assumption."
+  - Read the red and yellow clauses first. Check the edits and fallbacks fit your deal.
+  - Give the edits to a lawyer to check before you send anything. This review is not legal advice.
+output_sample:
+  input:
+    - The contract, as a file, a link or pasted text
+    - Your negotiation playbook, which is your list of standard terms and limits
+    - Which side you are on, such as buyer or supplier
+    - Your deadline and any clauses you worry about (optional)
+    - Deal context, such as size or past dealings (optional)
+  prerequisites:
+    - Your playbook saved in a file such as legal.local.md, or pasted into the chat
+    - A lawyer to check the final edits before you send them
+  output:
+    - name: Contract Review Summary
+      contains: A short overview of the contract, which side you are on, the deadline and the overall risk level.
+    - name: Key Findings
+      contains: The most important gaps between the contract and your playbook, with the biggest risks first.
+    - name: Clause-by-Clause Analysis
+      contains: Each clause rated green, yellow or red, with a note on how it differs from your standard position.
+    - name: Redlines
+      contains: "For each yellow or red clause: the current wording, proposed edit, reason, priority and fallback position."
+    - name: Negotiation Strategy
+      contains: What the gaps mean for the business, and the order to raise them, must-haves first.
+    - name: Next Steps
+      contains: What to do after the review, such as who signs off and which edits to send.

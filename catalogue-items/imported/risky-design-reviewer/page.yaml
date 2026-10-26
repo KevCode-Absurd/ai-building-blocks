@@ -2,35 +2,56 @@ thinking: high
 thinking_why: It has to spot subtle ways people will misuse a design.
 new_slug: risky-design-reviewer
 name: Risky design reviewer
-summary: Give it an API or config design. Get the easy-to-misuse parts that lead
-  to security mistakes.
+summary: Find the parts of your API or config that are easy to misuse and lead to security mistakes, with a safer design for each one.
 job: secure-code
 headline: Risky design reviewer
-subhead: Give it an API or config design. Get the easy-to-misuse parts that lead
-  to security mistakes. Bring the API, library interface or config schema. Use
-  the result to plan your next step.
+subhead: Give your AI an API, library interface or config file. It looks for settings and choices where the easy path is the unsafe one. You get each risky spot, how it gets misused, and a safer design.
 explain: |
   A list of the places in your API or settings where the easy choice is the unsafe one, so developers cannot slip into security mistakes. You fix the design, not the people.
 
   The skill works from one idea: secure use should take the least effort. It reviews API designs, config options and crypto library use, and looks for dangerous defaults, switches that turn off safety and choices a rushed developer will get wrong. It rejects stock excuses like it is documented, or advanced users need flexibility. Each find comes with a fix, such as a safe default or removing the option. It is not for implementation bugs or business logic.
 when:
-  - You are releasing a library and want it hard to misuse.
+  - You are about to release a library and want it hard to misuse.
   - A config file has an option that turns off a security check.
-  - You are reviewing how authentication settings are exposed.
-  - A past incident came from a developer using your API wrongly.
+  - You are reviewing how your login or permission settings are shown to developers.
+  - A past incident came from a developer using your API the wrong way.
+not_for:
+  - "You want to find bugs in how the code is written: use a standard code review by a developer or your usual review tool."
+  - "You want to check business rules, like who may approve a refund: ask someone who knows that part of your business."
+  - "You want to speed up slow code: use a profiler or a performance review, since this only looks at security."
 you_give:
-  - The API, library interface or config schema
+  - Your API, library interface or config schema
   - The language or framework (optional)
-  - How developers use it (optional)
-  - Past misuse cases (optional)
+  - How developers use it today (optional)
+  - Past cases of misuse (optional)
 you_get:
-  - A list of risky design points
-  - Why each is easy to misuse
-  - A safer design for each
-  - Priority order for fixes
+  - A list of risky design points, each with its location
+  - Why each one is easy to misuse
+  - A safer design for each one
+  - A severity rating for each one
+  - The order to fix them in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool and paste in the skill instructions. If it can read files, give it your project folder.
+  - Paste your API, library interface or config schema. Add the language and any past misuse cases if you have them.
+  - Ask it to review the design for easy-to-misuse parts.
+  - Check the top findings first. Make sure each misuse could really happen in your code.
+  - Take the Critical and High fixes into a code change. Then run the review again on the changed design.
+output_sample:
+  input:
+    - Your API, library interface or config schema
+    - The language or framework (optional)
+    - How developers use it (optional)
+    - Past cases of misuse (optional)
+  prerequisites:
+    - An AI that can read your project files works best, but you can paste the code into a chat
+  output:
+    - name: Risky design points
+      contains: Each place where the easy choice is unsafe, with its location in your API or config.
+    - name: How it gets misused
+      contains: The mistake a rushed, lazy or confused developer could make, and why it is easy to make.
+    - name: Safer design
+      contains: A fix for each point, such as a safe default, a removed option or a stricter type.
+    - name: Severity
+      contains: A rating of Critical, High, Medium or Low, based on how easily the misuse breaks security.
+    - name: Fix priority
+      contains: The order to fix things in, with the most severe and most likely first.

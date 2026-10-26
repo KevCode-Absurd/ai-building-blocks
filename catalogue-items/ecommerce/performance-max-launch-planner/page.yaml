@@ -1,6 +1,6 @@
 new_slug: performance-max-launch-planner
 name: "Performance Max launch planner"
-summary: "Give it your catalogue, budget and break-even numbers. Get a fit verdict and a Performance Max build."
+summary: "Check if Performance Max fits your store before you spend. Give your budget and sales numbers. Get a go or wait verdict and a build plan."
 job: run-google-ads
 thinking: high
 thinking_why: "It weighs budget, data and conflicting advice before saying go or wait, so a stronger model avoids a costly wrong call."
@@ -17,6 +17,10 @@ when:
   - You run Search and Shopping and wonder whether to add Performance Max.
   - You launched Performance Max and it spends but you cannot tell what works.
   - You want your asset groups, signals and exclusions set up right before you spend.
+not_for:
+  - "Your daily budget is small, under about $100 a day, or you have under 30 conversions a month: run Search and Shopping campaigns instead, and come back later."
+  - "Your purchase tracking does not work or your product feed is not approved: fix those first in Google Ads and Google Merchant Center."
+  - "You want one lean feed-only setup or weekly checks on a running campaign: use the Feed-only Performance Max builder or the Performance Max routine keeper."
 
 you_give:
   - Feed status and conversions per month
@@ -36,6 +40,33 @@ how_to_use:
   - List your product categories and top sellers, and your break-even ROAS.
   - If it says wait, build what it names first. If it says go, set up the plan and leave it alone for the learning weeks.
   - Do not change big settings while it learns, since each change can reset learning.
+output_sample:
+  input:
+    - Your feed status and purchase tracking status
+    - Your conversions per month
+    - Your daily budget and average non-brand cost per sale
+    - Your product categories and top sellers
+    - Your break-even ROAS, images, headlines, brand list and customer list (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A Google Ads account with purchase tracking set up
+  output:
+    - name: FIT
+      contains: A go or wait verdict, with your feed, tracking, conversions and the two budget rules worked out.
+    - name: SHARE OF GOOGLE BUDGET
+      contains: The share of your Google budget Performance Max should get, and why.
+    - name: CAMPAIGN MAP
+      contains: Campaigns and asset groups, the products in each listing group, and a separate group for weak products.
+    - name: ASSETS
+      contains: How many headlines, long headlines, descriptions, images and extras to add.
+    - name: SWITCH OFF and EXCLUDE URLS
+      contains: Automatic settings to turn off and junk pages to keep out, such as blog and shipping pages.
+    - name: BRAND and SIGNALS
+      contains: A brand list with negative keywords, plus hints such as your customer list and converting search themes.
+    - name: BIDDING and REVIEW
+      contains: Which bid strategy to start with, when to set a target, and what not to change while it learns.
+    - name: CHECKS MISSED and MISSING
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Runs the fit test

@@ -2,36 +2,100 @@ thinking: high
 thinking_why: Limits and pricing trade off against each other.
 new_slug: free-plan-designer
 name: Free plan designer
-summary: Describe your product. Get a free tier with limits that win paid users
-  without anger or abuse.
+summary: Design a free plan for a developer product. Pick trial or free tier, set fair limits and plan upgrade prompts that do not annoy.
 job: plan-strategy
 headline: Free plan designer
-subhead: A free tier for a developer product with limits that let people build
-  real things and still lead many of them to pay. It avoids both stingy limits
-  and ones that invite abuse.
+subhead: Describe your developer product, how you sell and what a free user costs you. It picks between a free trial, a free tier, freemium and open core, then sets limits and a free feature list. You get the model, the limits with reasons, what to gate, upgrade prompts and pricing page answers.
 explain: |
-  A free tier for a developer product with limits that let people build real things and still lead many of them to pay. It avoids both stingy limits and ones that invite abuse.
+  A free plan has two ways to fail. If it is too tight, developers cannot build anything real and leave. If it is too loose, nobody has a reason to pay. This designer aims for the middle: free for hobby and side projects, paid when a project grows or a team joins.
 
-  It first compares four models: free trial, free tier, freemium and open core, and picks the one that suits how you sell. Then it sets limits on usage, projects, seats and features, based on when a hobby project turns into a paid one. It checks for abuse risks and for limits that feel like traps. Last, it sets up the upgrade message and tracks what to watch after launch.
+  It starts by comparing four models: free trial, free tier, freemium and open core, against how you sell. For developer tools it favors a free tier that does not expire. It then picks limit types that grow with success, such as calls, storage or seats, and avoids limits that punish your best users.
+
+  It also lists what to keep free, such as core features and integrations, and what to gate, such as team controls and support terms. It adds upgrade messages that warn early and offer a choice, plus the questions a pricing page should answer. The skill is written for developer tools, so some examples will not fit other products.
 when:
-  - You are launching a developer tool and must decide what to give free.
+  - You are launching a developer tool and must decide what to give away.
   - Your free users never pay, or they leave angry about limits.
-  - You think people are abusing your free plan.
-  - You are choosing between a trial and a permanent free tier.
+  - You are choosing between a time-limited trial and a free plan that never expires.
+  - You are adding paid plans and need to tell free users without a backlash.
+not_for:
+  - You need prices for your paid plans. Use the Technical SaaS pricing adviser.
+  - You want a free tool or sample that brings in leads for a store or service. Use the Free diagnostic tool planner or the Free sample offer planner.
+  - You want to plan how people find and sign up for your product. Use the Self serve product growth planner.
 you_give:
-  - What your product does
-  - How you sell (self-serve or sales-led)
-  - Costs per free user
-  - Paid plan prices
-  - "Who uses it: hobbyists or companies (optional)"
+  - What your product does and who uses it
+  - How you sell, such as self-serve or sales-led
+  - What one free user costs you each month
+  - Your paid plan names and prices
+  - Whether users are hobbyists, startups or large companies (optional)
 you_get:
-  - Model recommendation
-  - Free tier limits with reasons
-  - Abuse risks and guards
-  - Upgrade trigger points
-  - Metrics to track
+  - A model pick, with the reason
+  - Free plan limits, each with a reason
+  - A list of what stays free and what to gate
+  - Upgrade prompts that warn early and give options
+  - Pricing page questions to answer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
+  - Describe the product, who uses it and how you sell. Add what a free user costs you and your paid prices.
+  - Ask for the model pick first. Check that it fits how you really sell.
+  - Ask for limits, the free and gated feature lists, and the upgrade messages. Fix any line marked MISSING with your real numbers.
+  - Compare the draft with the failure patterns in the skill, such as hidden trials and moving free features behind a paywall.
+  - Treat company figures in the skill, such as Vercel or Supabase limits, as old examples. Check the vendor's page before you quote them. This needs no code and no paid tools.
+how_it_works:
+  - title: Pick the model
+    text: It compares free trial, free tier, freemium and open core with your sales motion and explains the pick.
+  - title: Choose limit types
+    text: It picks limits that grow with success, such as calls, compute, storage or seats, and avoids time traps and clutter.
+  - title: Set the free and gated lists
+    text: It keeps core features and integrations free, and gates team, scale and enterprise needs.
+  - title: Check for resentment
+    text: It tests the plan against hidden slowdowns, features pulled back, surprise limits and rude upgrade text.
+  - title: Write the upgrade prompts
+    text: It writes warnings at about 70, 85 and 95 percent of a limit, with a choice that is not only "upgrade".
+  - title: Plan the pricing page
+    text: It lists the limits table and the questions a pricing page must answer.
+output_shape: |
+  FREE PLAN DESIGN: <product>
+  1. Model: <trial, free tier, freemium or open core, and why>
+  2. Limits: <limit, free amount, reason, warning point>
+  3. Free features: <list>
+  4. Gated features: <list, with what triggers the need>
+  5. Upgrade prompts: <when it shows, what it says, options>
+  6. Resentment check: <risk, how the plan avoids it>
+  7. Pricing page: <limits table, questions to answer>
+  MISSING: <facts you did not give>
+output_sample:
+  input:
+    - What your product does and who uses it
+    - How you sell, such as self-serve or sales-led
+    - What one free user costs you each month
+    - Your paid plan names and prices
+  output:
+    - name: Model recommendation
+      contains: Trial, free tier, freemium or open core, with the reason it fits how you sell.
+    - name: Free plan limits
+      contains: Each limit with the free amount and why it is set there.
+    - name: Free and gated features
+      contains: What stays free and what moves to paid, with the need that triggers it.
+    - name: Upgrade prompts
+      contains: Messages that warn before a limit and offer a choice, with timing.
+    - name: Resentment check
+      contains: Common traps, such as hidden slowdowns, and how your plan avoids them.
+    - name: Pricing page copy outline
+      contains: A limits table and answers to the questions free users ask most.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can design the plan from the facts you paste.
+  inputs:
+    - Your cost per free user, in dollars per month
+    - A usage report that shows how many users hit each limit
+    - Your competitors' free plan pages, pasted as text
+terms:
+  - term: Free tier
+    meaning: A plan that stays free with limits, with no end date.
+  - term: Freemium
+    meaning: A free plan plus paid features you can buy.
+  - term: Open core
+    meaning: Free open source software, with paid extras on top.
+  - term: Gate
+    meaning: Put a feature behind a paid plan.

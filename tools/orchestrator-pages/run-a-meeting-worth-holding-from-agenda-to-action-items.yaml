@@ -1,6 +1,6 @@
 new_slug: run-a-meeting-worth-holding-from-agenda-to-action-items
 name: Run a meeting worth holding, from agenda to action items
-summary: Name a meeting. Get a call on whether to hold it, a pre-read, then notes with owners and dates.
+summary: Check if a meeting is worth holding, get a timed agenda and pre-read, then turn the recording into action items with owners and dates.
 job: organise-work
 thinking: medium
 thinking_why: Each step is short and clear. A mid-size model works well, and the notes step needs a good transcript.
@@ -14,6 +14,10 @@ when:
   - You are about to call a meeting and wonder if it needs one.
   - Your meetings end without clear next steps.
   - You need a record of what was decided and who owns what.
+not_for:
+  - "You only want to announce news or share an update: send an email instead, since nobody needs to decide anything."
+  - "The decision is already made and no one needs to discuss it: tell people in a short message and skip the meeting."
+  - "You already have a recording and only want notes: give it to a plain notes step in your AI, without the agenda and cost check."
 you_give:
   - The meeting idea, with the decision needed, who attends and how long
   - Background you want in the pre-read (optional)
@@ -30,6 +34,26 @@ how_to_use:
   - Tell it the decision the meeting must make, who comes and for how long.
   - Send the pre-read, hold the meeting and record it. Make sure everyone knows it is recorded.
   - Give it the audio file to get the notes.
+output_sample:
+  input:
+    - The decision the meeting must make
+    - Who attends and how long it will run
+    - Average hourly cost for attendees (optional)
+    - Background notes or your Notion pages (optional)
+    - The meeting recording, after you hold it
+  prerequisites:
+    - An AI that can read files, to follow the handoff pack
+    - Notion connected, only if you want background pulled into the pre-read
+    - A recording of the meeting, made with everyone told it is recorded
+  output:
+    - name: Gate and agenda
+      contains: The meeting cost in dollars, a call to hold it, wait or send an email, and a timed agenda with decisions first.
+    - name: Pre-read
+      contains: A short document for attendees with the goal, background, questions for each topic, and owners and timings.
+    - name: Meeting notes
+      contains: A transcript by speaker, a summary, the decisions made, and action items with an owner and a date.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Decide if the meeting is worth holding
     text: Prices the meeting in dollars, checks for a decision, an agenda and an owner, and says hold, not ready or send an email. Builds a timed agenda with decisions first.

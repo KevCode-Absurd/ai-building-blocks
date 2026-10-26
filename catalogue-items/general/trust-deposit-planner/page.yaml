@@ -1,6 +1,6 @@
 new_slug: trust-deposit-planner
 name: "Trust deposit planner"
-summary: "Name a relationship that matters. Get where trust stands and two small deposits to make before a hard talk."
+summary: "Plan how to rebuild trust before a hard talk. Rate the trust, then get two small deposits to make this week and one habit to stop."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It reads the history you give it and applies six fixed checks, so a mid-level model is enough."
@@ -14,6 +14,10 @@ when:
   - You need to ask for something big from someone and the relationship is strained.
   - A teammate, client or family member has stopped hearing you.
   - You broke a promise or let a small thing slide and want to repair it.
+not_for:
+  - "You are in a crisis or an abusive relationship: talk to a counsellor or your local support service first."
+  - "You need the words for the hard talk itself: use the Listen-first talk planner."
+  - "You need to set your stance before a deal: use the Win-win stance planner."
 you_give:
   - The relationship, its history and what you need from them soon
   - A stance or plan from an earlier step (optional)
@@ -24,11 +28,36 @@ you_get:
   - An audit of six kinds of deposit, with one move each
   - Two deposits for this week, one habit to stop and a plan for no response
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the relationship and what you want to ask. Give three good acts and three bad ones, with dates.
-  - Say what you know the other person values, and mark what you only guess.
-  - Do the two deposits this week. Keep the habit you chose to stop.
-  - Return on the date it sets and bring what changed.
+  - Open a chat with the skill. Add it to your AI or paste it in. No code or paid tool is needed.
+  - "Gather first: dated messages or events, your open promises, and anything they have said they value. Mark what you only guess."
+  - Describe the relationship and what you need from them soon. Give the date of the talk.
+  - Paste in three acts that added trust and three that drew it down, each with a date.
+  - Check the score and the call. Then do the two deposits and drop the one habit this week.
+  - Come back on the re-check date and share what changed.
+output_sample:
+  input:
+    - The relationship, its history and what you need from them soon
+    - Three recent acts that added trust and three that drew it down, with dates
+    - A list of promises you have made them that are still open (optional)
+    - Things they have said they like or dislike (optional)
+    - A stance or plan from an earlier step (optional)
+  output:
+    - name: TRUST NOW
+      contains: A score from 1 to 10, with the acts and signs from their side that back it up.
+    - name: CALL
+      contains: Whether to talk now, add deposits first or move the talk, with the reason.
+    - name: WHAT COUNTS TO THEM
+      contains: What this person values, each item marked as known or a guess.
+    - name: SIX DEPOSITS
+      contains: One finding and one move for understanding, kindnesses, promises, expectations, integrity and apology.
+    - name: THIS WEEK
+      contains: Two small deposits with a time each, one habit to stop and what to do instead.
+    - name: IF NOTHING CHANGES
+      contains: What to do on day 3 and day 10 if they stay wary.
+    - name: RE-CHECK
+      contains: A date to re-read the balance and the sign that shows you are ready.
+    - name: MISSING and CHECKS MISSED
+      contains: What would sharpen the plan, and any of its own checks that failed.
 how_it_works:
   - title: Reads the balance
     text: Three deposits, three withdrawals and signs from their side, rated 1 to 10.

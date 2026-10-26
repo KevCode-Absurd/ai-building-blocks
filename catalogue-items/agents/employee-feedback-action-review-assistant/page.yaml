@@ -1,55 +1,112 @@
 new_slug: employee-feedback-action-review-assistant
 name: Employee feedback action review assistant
 headline: Employee feedback action review assistant
-summary: A progress brief, new themes and proposed updates to the employee response.
+summary: Track the actions you agreed after employee feedback. Get new themes, overdue actions and a draft staff update, with small groups kept private.
 job: lead-people
 thinking: high
-thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A progress brief, new themes and proposed updates to the employee response. Share anonymized feedback, the agreed action register and evidence of progress since the last review. Your AI prepares the work and marks any facts it cannot verify.
+thinking_why: It handles staff feedback, so it must hold back small groups, keep quotes and names out of its record, and move an action to done only on proof.
+subhead: Give it anonymized employee feedback, the actions you agreed and proof of progress. It finds new themes, checks each action against its proof, and holds back any theme from a group below your minimum size. You get a progress brief and a draft update to staff.
 explain: |-
-  A progress brief, new themes and proposed updates to the employee response.
+  After an employee survey, leaders promise action. Months later the actions drift, and staff notice. This agent keeps your employee feedback action plan honest. Each review it reads new feedback, checks every agreed action against proof, and drafts what you tell staff next.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Small-group anonymity is preserved and status changes require evidence. Missing tools or evidence stay visible in the final summary.
+  A new batch of feedback, or an action that is overdue or blocked, starts a review. For new themes it runs the Turn employee feedback into owned actions workflow. That separates recurring themes from one-off comments, turns the themes into risks and proposed actions, and drafts a staff update. For actions already agreed, it uses the Executive action register keeper to compare proof with each commitment. An action moves to done only when proof is attached.
+
+  Privacy comes first. A theme from a group smaller than your minimum is held back, with no count, quote or team name that could point to a person. The saved record holds no quotes and no names. This is not for complaints about a named person.
 when:
-  - You need a progress brief, new themes and proposed updates to the employee response.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - Your survey results came in and you need to turn them into actions with owners.
+  - Three months after you promised changes, staff ask what happened.
+  - An action you agreed is overdue or blocked and you want to see which, and why.
+  - You are preparing a short "you said, we did" update for staff.
+not_for:
+  - A complaint, grievance or discipline case about a named person. Use your HR process. This reads group feedback only.
+  - A team too small to hide who said what. Report across several teams instead, or leave that group out.
+  - You want to design the survey itself. Use the Employee survey designer.
+  - You want to prepare a one-to-one with someone you manage. Use the Weekly one-on-one prep keeper.
+  - You want the update sent for you. It drafts and stops.
 you_give:
-  - Anonymized feedback, the agreed action register and evidence of progress since the last review.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The anonymized feedback, with no names or identifying details (an export or summary from your survey tool)
+  - How many people each team or theme covers
+  - The action list you agreed, with each action, owner, deadline and status
+  - Proof of progress since the last review, such as a published policy or a dated meeting note
+  - Your minimum group size for reporting (your own rule, from your HR policy)
+  - What staff were told about how their feedback would be used
+  - The last review's record (optional)
 you_get:
-  - A progress brief, new themes and proposed updates to the employee response.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - New themes since the last review, with small groups held back
+  - Each agreed action marked done with proof, in progress, overdue or blocked
+  - A two-minute progress brief for leaders
+  - A draft update to staff covering only what changed
+  - Changes to your response plan for you to approve
+  - A short record with no quotes and no names
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent with the pieces it uses, the Turn employee feedback into owned actions workflow and the Executive action register keeper. If your AI cannot open them, paste both in with the agent.
+  - Before you paste anything, remove names and any detail that points to one person. Tell the AI your minimum group size. Say what staff were told about how feedback would be used.
+  - Paste the feedback, the action list and the proof. If this is a repeat, paste last time's record.
+  - Read "Held back" first. Then check each action marked done against its proof.
+  - Edit the staff update and send it yourself. In plain chat it cannot save files, so keep the record it hands back.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep theme ID without identifying quotations, action ID, owner, deadline, evidence status and last review date. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: New anonymized feedback arrives or an agreed action is overdue or blocked.
-  - title: Choose the next step
-    text: Run the listening workflow for new themes. For existing actions, use executive-action-register to compare evidence with the agreed commitments and draft only the changed update.
-  - title: Check and save evidence
-    text: Small-group anonymity is preserved and status changes require evidence. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Reads the last record
+    text: Uses the saved record or sets a first baseline. The record holds theme IDs with no quotes, action IDs, owners, deadlines, proof status and the last review date.
+  - title: Checks the trigger
+    text: New anonymized feedback arrived, or an agreed action is overdue or blocked. If neither, it says so and stops.
+  - title: Applies the group-size rule
+    text: Any theme from fewer people than your minimum is held back. It shows no count, quote or team name that could point to a person.
+  - title: Finds new themes
+    text: For new feedback it runs the Turn employee feedback into owned actions workflow. Recurring themes are kept apart from one-off comments, then turned into risks, gaps in proof and proposed actions.
+  - title: Checks agreed actions
+    text: The Executive action register keeper reads your agreed action list and proof, plus the proposed actions from the step before, and compares proof with each commitment. An action moves to done only with dated proof. Overdue and blocked actions are listed.
+  - title: Drafts the staff update
+    text: Writes an update that covers only what changed, in plain words. It promises nothing you have not agreed.
+  - title: Saves the record
+    text: Writes a record with no quotes and no names, keeps the old one, and lists MISSING lines and CHECKS MISSED.
 output_shape: |-
-  Scope and source coverage
-  A progress brief, new themes and proposed updates to the employee response.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  REVIEW <date>, scope <teams, survey>   MINIMUM GROUP <n>   LAST REVIEW <date or first baseline>
+
+  PROGRESS BRIEF  <two or three lines: what moved, what is stuck>
+  NEW THEMES  <theme ID | theme in plain words | recurring or one-off | proposed action>
+  HELD BACK  <number of themes held back for group size, with no detail>
+  ACTION TRACKER
+    <action ID> | <action> | <owner> | <deadline> | <done with proof | in progress | overdue | blocked> | <proof, date>
+  DRAFT UPDATE TO STAFF (not sent)  <only what changed>
+  PLAN CHANGES FOR YOUR APPROVAL  <change, why>
+
+  RECORD FOR NEXT REVIEW  <theme IDs, action IDs, owners, deadlines, proof status, last review date>
+  MISSING  <each gap and what it affects>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The anonymized feedback, with no names or identifying details
+    - The action list you agreed, with owners, deadlines and status
+    - Proof of progress since the last review
+    - Your minimum group size for reporting
+    - The last review's record (optional)
+  prerequisites:
+    - An AI that can read pasted text or uploaded files, such as Claude, ChatGPT or Gemini
+    - The two pieces it uses, the Turn employee feedback into owned actions workflow and the Executive action register keeper
+  output:
+    - name: Progress brief
+      contains: Two or three plain lines for leaders on what moved since the last review and what is stuck. A first run says first baseline.
+    - name: New themes
+      contains: Each new theme in plain words, marked recurring or one-off, with a proposed action and owner to approve. No quotes.
+    - name: Held back for group size
+      contains: How many themes were held back because the group was below your minimum. It shows no detail that could point to a person.
+    - name: Action tracker
+      contains: Each agreed action with owner, deadline and status of done with proof, in progress, overdue or blocked, plus the proof and its date.
+    - name: Draft update to staff
+      contains: A short update that covers only what changed and promises nothing you have not agreed. Marked not sent.
+    - name: Record for next review
+      contains: A small block with theme IDs, action IDs, owners, deadlines, proof status and last review date. No quotes and no names.
+    - name: Saved files
+      contains: The brief, tracker and draft in a dated folder under reviews/employee-feedback-action-review-assistant/, when your AI can save files.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Small-group anonymity is preserved and status changes require evidence.
+  - what: Minimum group size
+    how: Set it from your own HR policy. A higher number holds back more themes and protects more people. If you give none, it uses 5 as a starting point and says so.
+  - what: One survey at a time
+    how: Review one survey and one set of actions per run. Mixed surveys blur which promise belongs to which.
+  - what: What counts as proof
+    how: Say what closes each action, such as a published policy or a dated meeting note. A manager saying it is done does not count.
+  - what: Who sees it
+    how: Say whether the brief goes to the board, leaders or staff. The update to staff is always shorter and has no team names.
 judge:
   - Small-group anonymity is preserved and status changes require evidence.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +119,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Write down what staff were told when they gave feedback, and check each new use against it.
+  - Add your own proof rules for each type of action, so "done" means the same thing every quarter.
+  - Keep each review's record in a folder named by date, with no quotes in it.
+  - Write down what you will never do with the feedback, such as using it in a review of one person, and tell staff.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads uploaded files
+      why: Claude, ChatGPT and Gemini can read your feedback summary and the pack. In plain chat you save the record yourself.
+    - name: Your survey tool's export
+      why: Give your AI the group-level summary and strip names and free-text details first.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your HR policy on survey privacy and minimum group size.
+    - The "you said, we did" update from last time.
+    - Headcount for each team.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Anonymized feedback
+    meaning: Feedback with names and identifying details removed, so no one can tell who said what.
+  - term: Minimum group size
+    meaning: The fewest people a result may cover before you report it. Below it, the result is held back.
+  - term: Theme
+    meaning: A topic that several people raised, such as workload or unclear goals.

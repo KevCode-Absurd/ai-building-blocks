@@ -1,6 +1,6 @@
 new_slug: paid-first-step-planner
 name: Paid first step planner
-summary: Paste your offer and lead plan. Get a cheap first piece, a booked second meeting and the upsell to your main offer.
+summary: "Plan a paid first step for your offer: one small piece sold cheap, a card taken, a second meeting booked, and an upsell to your main offer."
 job: make-offer
 thinking: medium
 thinking_why: It designs a short sequence and checks it with a sum. The steps are fixed and the choices depend on your offer.
@@ -14,10 +14,14 @@ when:
   - You want paying leads who actually show up.
   - Free sign-ups do not book or attend.
   - You cannot run free offers where you sell.
+not_for:
+  - "You cannot take a card, or you sell one product with no piece that stands alone: use a free first step, such as a free call or a sample."
+  - "You want to cut the price of your whole offer: change the offer itself, or run a short sale, because this plan never discounts the core."
+  - "You have not yet chosen how to find leads: pick your lead route first, then come back with it in one line."
 you_give:
-  - Your main offer and price
-  - The route and friction plan from earlier steps
-  - What a first meeting or piece could include
+  - Your main offer and its price
+  - Your lead route, in one line (for example, ads to a sign-up form, then a call)
+  - Parts of your offer that could stand alone (optional)
 you_get:
   - The piece to discount and its price
   - The booking sequence with the card taken and the second meeting set
@@ -28,6 +32,30 @@ how_to_use:
   - Paste the main offer and say what in it could stand alone.
   - Walk through the sequence as a buyer and fix any step that feels pushy.
   - Track show rate, second-meeting rate and main-offer rate for a month.
+output_sample:
+  input:
+    - Your main offer and its price
+    - Your lead route, in one line (for example, ads to a sign-up form, then a call)
+    - Parts of your offer that could stand alone (optional)
+  output:
+    - name: The piece
+      contains: The part of your offer to discount, its usual price, the cut price and the limit per person.
+    - name: Why it works for you
+      contains: A check that the piece sells alone, shows a problem and leads to the main offer.
+    - name: The sequence
+      contains: Each step the buyer sees, from sign-up to a card taken and a second meeting booked.
+    - name: No-show fee
+      contains: Plain wording for the fee, the amount and when the buyer agrees to it.
+    - name: The first meeting
+      contains: What the buyer gets from it and which problems it shows them.
+    - name: The upsell
+      contains: What you say at the second meeting, what you offer, and how the card on file is used.
+    - name: Numbers to watch
+      contains: Show rate, second-meeting rate, main-offer rate, and first-piece cash against ad cost.
+    - name: Missing
+      contains: Gaps in what you gave, marked so nothing is made up.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 how_it_works:
   - title: Picks the piece
     text: A standalone part of the offer, never the core.

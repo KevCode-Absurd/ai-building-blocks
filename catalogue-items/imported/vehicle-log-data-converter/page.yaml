@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Decoding needs the right signal database.
 new_slug: vehicle-log-data-converter
 name: Vehicle log data converter
-summary: Give it MDF, BLF or CAN log files. Get signals decoded and written to
-  the format you need.
+summary: Turn raw vehicle log files into named signals. Read MDF, MF4, BLF or ASC logs with your DBC file in MATLAB, or write data back to MDF or BLF.
 job: build-software
 headline: Vehicle log data converter
-subhead: Raw vehicle bus recordings turned into named signals you can plot and
-  analyze, and your own data written back to a standard log file. The skill
-  covers MDF and MF4, BLF and ASC log files in MATLAB.
+subhead: Raw vehicle bus recordings turned into named signals you can plot and analyze, and your own data written back to a standard log file. The skill covers MDF and MF4, BLF and ASC log files in MATLAB.
 explain: |
   Raw vehicle bus recordings turned into named signals you can plot and analyze, and your own data written back to a standard log file. 
   The skill covers MDF and MF4, BLF and ASC log files in MATLAB. It reads them and decodes CAN, CAN FD and LIN frames using your DBC, ARXML or LDF database. For writing, it converts a MATLAB timetable to MDF or CAN data to BLF, and it fixes column types that MDF cannot store, such as categories and dates. It also states what is not supported: no LIN to BLF, no ASC export. It needs MATLAB with Vehicle Network Toolbox, and it checks your release first.
@@ -17,6 +14,10 @@ when:
   - You have a DBC file and need engine speed and temperature as signals.
   - You want to save simulation output as a log file for another tool.
   - A BLF file will not open the way you expected.
+not_for:
+  - "You need live CAN data from a running vehicle: use MATLAB's live channel tools in Vehicle Network Toolbox, or ask a test engineer."
+  - "You want to write LIN data to BLF or save to ASC or TXT: use MDF for LIN, and BLF or MDF for CAN, with this skill."
+  - "Your DBC file uses hierarchical or extended multiplexing, or you decode multiplexed signals from ARXML or LIN: ask a vehicle network engineer for a custom decode."
 you_give:
   - The log file (MDF, MF4, BLF or ASC)
   - The database file (DBC, ARXML or LDF)
@@ -28,8 +29,32 @@ you_get:
   - An exported MDF or BLF file
   - A note on what your format cannot do
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Vehicle Network Toolbox.
+  - Open a chat with an AI that can run MATLAB code. Paste the skill text, or upload the skill folder.
+  - "Say what you have: the log file type, the database file and your MATLAB release."
+  - "Say what you want: decoded signals to plot, or a file saved as MDF or BLF."
+  - Check the first result. Look at the signal names and the time range before you go on.
+  - Read the limits note. If your format cannot do the job, follow its advice and use MDF or BLF instead.
+  - Next, plot the signals in MATLAB, or save the timetable to MDF or BLF to open it in another tool.
+output_sample:
+  input:
+    - Your log file (MDF, MF4, BLF or ASC)
+    - Your database file (DBC, ARXML or LDF)
+    - Your MATLAB release
+    - The format you want to save to (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with Vehicle Network Toolbox for BLF, ASC, TXT and decoding
+    - MATLAB R2023a or later to read MDF files
+  output:
+    - name: Release and toolbox check
+      contains: Your MATLAB release, and whether Vehicle Network Toolbox is installed, checked before any other step.
+    - name: Database check
+      contains: A scan of your DBC file for extended multiplexing, with the affected messages named so they can be left out.
+    - name: Decoded signal timetables
+      contains: MATLAB timetables with one column per signal, or raw frames if you gave no database.
+    - name: MATLAB read code
+      contains: Code that loads your file, loads the database and decodes the frames for your file type.
+    - name: Exported MDF or BLF file
+      contains: Your timetable written to a standard log file, with column types MDF cannot store converted first.
+    - name: Limits note
+      contains: A plain statement of what your format cannot do, such as ARXML with CAN FD or LIN to BLF.

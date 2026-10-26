@@ -1,6 +1,6 @@
 new_slug: jingle-video-ad-script-writer
 name: "Jingle video ad script writer"
-summary: "Paste product facts and buyer. Get a 6 to 30 second jingle script and a music-tool brief."
+summary: "Write a jingle video ad script: a short rhymed hook, a bar-by-bar lyric with a picture per line, and a music brief for 6, 15 or 30 seconds."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -19,6 +19,10 @@ when:
   - Your product sells on a feeling (ease, relief, fun) and a catchy line would help people remember it.
   - Your spoken ads explain well, but nobody remembers them a day later.
   - You want a 6, 15 or 30 second ad for people who know the problem but haven't picked a fix.
+not_for:
+  - Your buyer only needs the offer and the price. Write a short spoken ad instead, or ask a copywriter for a plain offer ad.
+  - You need to explain how the product works or prove a result. Use a spoken script or a demo video, not a song.
+  - You want finished music or a made video. This only writes the script and brief, so take it to a music tool such as Suno or Eleven Music.
 
 you_give:
   - Why people buy, how much they already know, and the length (6, 15 or 30 seconds)
@@ -39,6 +43,31 @@ how_to_use:
   - Say who the buyer is, the moment the product fits into, the length, and whether your brand uses music.
   - Clap the beat and sing the hook. Check every sung claim against your claims list.
   - Take the script and cast note to the skill that turns a song script into shots. It makes the music first, then runs the video process.
+output_sample:
+  input:
+    - Your product facts and the main benefit
+    - Your buyer and the moment the product fits into
+    - "The length: 6, 15 or 30 seconds"
+    - Your approved and banned claims, the offer and the guarantee
+    - Your brand lines and voice (optional)
+  prerequisites:
+    - A brand brain or buyer brief helps, but you can paste your own facts instead
+    - A separate music tool if you want to make the song
+  output:
+    - name: Hook drafts
+      contains: Three short hook lines about what the buyer gets, with the pick and the reason.
+    - name: Sound options
+      contains: Two sound choices, each with a reason that fits the buyer's moment, and the pick.
+    - name: Bar grid
+      contains: The lyric laid out bar by bar, with a picture, on-camera marks and on-screen text for each line.
+    - name: Sound brief
+      contains: Length, tempo, voice, instruments, arrangement and the lyric with section tags, ready to paste into a music tool.
+    - name: Claims list
+      contains: Each line that makes a claim, brand line or number, matched to its approved source.
+    - name: Cast note
+      contains: The singer's voice and who is on screen, with the reason.
+    - name: Checks missed
+      contains: One line for each check the script still fails, or none.
 
 how_it_works:
   - title: Checks the fit

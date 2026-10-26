@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares figures across posts and explains what worked.
 new_slug: social-content-results-reader
 name: Social content results reader
-summary: Give it social accounts. Get engagement figures and which posts did
-  best. Collects data from websites.
+summary: Read social media engagement for public accounts. Get figures per post, a saved file and a short note on which posts did best.
 job: grow-social
 headline: Social content results reader
-subhead: Engagement numbers for your social accounts and a clear read on which
-  posts did best. You name the accounts, and the skill collects public data from
-  Instagram, Facebook, YouTube and TikTok, then explains what worked.
+subhead: Engagement numbers for your social accounts and a clear read on which posts did best. You name the accounts, and the skill collects public data from Instagram, Facebook, YouTube and TikTok, then explains what worked.
 explain: |
   Engagement numbers for your social accounts and a clear read on which posts did best. You name the accounts, and the skill collects public data from Instagram, Facebook, YouTube and TikTok, then explains what worked.
 
@@ -18,6 +15,10 @@ when:
   - A client asks which reels worked best.
   - You need to track a competitor's follower growth.
   - You want a hashtag's performance in a spreadsheet.
+not_for:
+  - "You want numbers for your own private account: use the insights tab inside Instagram, Facebook, YouTube or TikTok."
+  - "You only have a few posts to compare: copy the figures by hand into a spreadsheet."
+  - "You can't run code or pay for Apify: ask a person to pull the numbers for you."
 you_give:
   - The accounts, posts or hashtags to analyse
   - An Apify token
@@ -29,8 +30,29 @@ you_get:
   - A ranked list of top posts
   - A short summary of what worked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Apify token.
+  - "Check setup first: you need Node.js 20.6 or newer, the mcpc tool and a .env file with your Apify token."
+  - Open an AI that can run code and add this skill.
+  - Say which public accounts, posts or hashtags to check.
+  - Pick quick answer, CSV or JSON, and how many results you want.
+  - Let your AI run the collector and read the summary it writes.
+  - Check the top posts against your own numbers before you act on them.
+output_sample:
+  input:
+    - The public accounts, posts or hashtags you want to check
+    - Your Apify token (a key from your paid Apify account)
+    - "The file type you want: quick answer in chat, CSV or JSON"
+    - How many results you want (optional)
+  prerequisites:
+    - An AI that can run code on your computer
+    - Node.js 20.6 or newer
+    - The mcpc command line tool
+    - A .env file that holds your Apify token
+  output:
+    - name: Quick answer
+      contains: A short list of the top results shown in chat, with no file saved.
+    - name: CSV file
+      contains: A full export with every field the collector returns, named with the date.
+    - name: JSON file
+      contains: The same full export in JSON form, named with the date.
+    - name: Summary of findings
+      contains: How many pieces were checked, where the file is, what performed best, and what to try next.

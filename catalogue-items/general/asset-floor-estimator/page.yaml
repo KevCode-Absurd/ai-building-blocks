@@ -1,6 +1,6 @@
 new_slug: asset-floor-estimator
 name: "Asset floor estimator"
-summary: "Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating."
+summary: "Check what a business would fetch if it stopped. Paste a balance sheet and price to get book value, a sale value floor and a cash strength rating."
 job: money-and-investing
 thinking: high
 thinking_why: "It marks assets down by class, deducts every claim and checks how fast losses could use up the cushion. That needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You want a second view of a company's value that does not depend on its profits.
   - A share price looks very low next to what the business owns.
   - You want to know if a company could pay its short-term bills in a bad year.
+not_for:
+  - "You want to value a bank or insurer, or a firm that mostly owns brands and software: asset floors mislead there, so use the Earnings value range builder."
+  - "You want to know if the price is a bargain against earnings: use the Earnings value range builder first, then the Price versus value gap judge."
+  - "You need advice on a large or personal money decision: talk to a licensed financial adviser."
 
 you_give:
   - The latest balance sheet, and the one before it if you have it
@@ -36,6 +40,27 @@ how_to_use:
   - Add the share count, the price and the earnings range.
   - Read the comparison with the price and the burn before the figures.
   - Take the result to "Price versus value gap judge".
+output_sample:
+  input:
+    - The latest balance sheet, and the one before it (optional)
+    - Your share count and the share price, or the asking price of a private business
+    - The earnings range from the earlier steps
+    - Notes on debts, leases and preferred shares (optional)
+  output:
+    - name: Per share
+      contains: Tangible book value, net current assets and cash assets for each share.
+    - name: Sale values
+      contains: A typical and a harsh sale value per share, with the markdown used for each asset type.
+    - name: Against the price
+      contains: Whether the price is under cash assets, net current assets or the sale values.
+    - name: Burn
+      contains: Yearly loss and how many years the cushion could cover it.
+    - name: Cash tests
+      contains: Current ratio, acid test, short-term debt notes and a rating of strong, adequate or weak.
+    - name: Missing
+      contains: Facts you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the skill failed, or none.
 
 how_it_works:
   - title: Counts the claims

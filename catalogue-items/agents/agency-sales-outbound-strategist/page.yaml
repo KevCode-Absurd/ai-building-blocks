@@ -1,0 +1,152 @@
+name: Outbound Strategist agent
+summary: "Get an outbound sales plan: who to target, which buying signals to watch and a multi-channel message sequence with draft emails you can send."
+headline: Outbound Strategist agent
+subhead: "Tell it what you sell and who buys. It builds a target profile, ranks the buying signals, sorts your accounts into tiers and drafts a touch-by-touch outreach sequence with sample messages. Nothing is sent until you approve it."
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  An outbound sales plan answers one question: who should hear from you this week, and why now? Most outbound fails because the message has no reason to exist. "Just checking in" and "we help companies like yours" give a buyer nothing to reply to. This agent starts from a reason, called a buying signal. That can be a new hire, a funding round, a visit to your pricing page or a job post for the problem you solve.
+
+  It first makes your target profile sharp enough to rule companies out. Then it ranks signals from strongest to weakest and sorts your accounts into three tiers. A few get deep research and several contacts each. A middle group gets a custom opening line. The long tail gets light personalization. For each tier it picks a channel order by job level and drafts an outreach sequence of 8 to 10 touches over 3 to 4 weeks, where every touch adds a new angle instead of repeating the ask.
+
+  It cannot see your CRM or watch signals live. You paste the accounts and signals you have, and it plans around them and marks the gaps. It writes drafts and never sends them.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are starting outbound sales and have no target list, no tiers and no sequence yet.
+  - Your cold emails get no replies and you think the problem is the reason for the message, not the wording.
+  - Someone new starts doing outreach for you next month and needs a plan to follow.
+  - You have a few big accounts you want to win and need a way to reach several people at each one.
+not_for:
+  - You want an email for one named company. Use the Account-based outreach drafter.
+  - You already know your buyer and only want cold emails and follow-ups. Use the Cold email writer.
+  - You need to answer replies, handle objections and move deals forward. Use the Sales Outreach agent.
+  - You want to plan your offer and lead channels first. Use the Offer & Lead Gen Strategist agent.
+  - You need a live list of companies or live buying signals. This agent cannot pull data. Get the list from your CRM or a data tool, then paste it in.
+you_give:
+  - What you sell, its price range and the problem it solves. Your website or sales deck has this.
+  - Who buys it, as job titles, company size and industry. Your 3 to 5 best customers help most.
+  - Channels you can use and limits, such as email only or no cold calls.
+  - A list of companies you want to reach (optional)
+  - Signals you can already see, such as new hires, funding news or pricing page visits (optional)
+you_get:
+  - A target profile with company filters, the event that makes a company ready to buy and who to rule out
+  - Buying signals ranked from strongest to weakest, with where to spot each and how fast to act
+  - Your accounts sorted into 3 tiers, each with how much research and how many contacts
+  - A sequence of 8 to 10 touches with the day, the channel and a new angle for each
+  - A draft first email, a LinkedIn note and a closing email, with placeholders for facts you did not give
+  - A short list of numbers to track and the first test to run
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write five or six lines: what you sell, who buys, your best customers and the channels you can use. Paste any account list or signals you have. No code or web access is needed.
+  - Type "Build my outbound plan. Do not invent any customer, signal or number I did not give you."
+  - Read the target profile and the signal list first. Cut anything that does not match your real buyers, then ask for the plan again.
+  - Check each draft message for a claim you cannot prove. Fill every placeholder in angle brackets with a real fact.
+  - Send nothing until you approve it. Run the first test it suggests and change one thing at a time.
+how_it_works:
+  - title: Pin the offer and buyer
+    text: It restates what you sell and who buys. It asks once for anything missing, then marks it MISSING.
+  - title: Sharpen the target profile
+    text: It writes filters, the event that makes a company a buyer now and a list of who to rule out.
+  - title: Rank the signals
+    text: It sorts signals into active buying, company change and tech or behavior hints, and says how fast to act on each.
+  - title: Tier the accounts
+    text: It splits accounts into deep, medium and light personalization, with how many contacts to reach at each.
+  - title: Match channel to job level
+    text: It picks a first, second and third channel for each level, and drops any channel you cannot use.
+  - title: Build the sequence
+    text: It lays out 8 to 10 touches over 3 to 4 weeks. Each touch has a new angle and the last is a short, honest closing email.
+  - title: Draft and check
+    text: It writes sample messages with placeholders, flags claims you cannot back and names the first test to run.
+output_shape: |-
+  TARGET PROFILE
+    Filters <industry, size, region, tools they use> | Ready to buy when <event> | Feels the pain <job title> | Rule out <who>
+
+  SIGNALS TO WATCH
+    <signal> | <active buying, company change or hint> | <where to spot it> | <act within>
+
+  ACCOUNT TIERS
+    <tier 1, 2 or 3> | <number of accounts> | <research depth> | <contacts per account>
+
+  CHANNEL PLAN
+    <job level> | <first channel> | <second> | <third>
+
+  SEQUENCE
+    Touch <n> | Day <n> | <channel> | <new angle> | <ask>
+
+  MESSAGE DRAFTS
+    Email 1: <subject> | <opening tied to a signal> | <one line of value> | <one ask>
+    LinkedIn note: <text, no pitch>
+    Closing email: <short, honest, door open>
+
+  WHAT TO TRACK AND TEST
+    <measure> | <how to count it>
+    First test: <one change>
+
+  ASSUMPTIONS AND CHECKS
+    <assumption> | <source: you, document or estimate>
+    Checks still needed: <list>
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your best 3 to 5 customers (optional)
+    - Companies or buying signals you already have (optional)
+    - The channels you can use and any sending limits
+  prerequisites:
+    - An AI that can read what you paste. Web search is optional and helps with account research.
+  output:
+    - name: Target profile
+      contains: Company filters, the event that makes a company ready to buy, who feels the pain and who to rule out.
+    - name: Signals to watch
+      contains: Buying signals ranked by strength, with where to spot each and how fast to act.
+    - name: Account tiers
+      contains: Three groups of accounts, each with a research depth and a number of contacts.
+    - name: Channel plan
+      contains: The first, second and third channel to use for each job level.
+    - name: Sequence
+      contains: Eight to ten touches over three to four weeks, each with its own angle.
+    - name: Message drafts
+      contains: A first email, a LinkedIn note and a closing email, with placeholders for missing facts.
+    - name: What to track and test
+      contains: A few numbers to count and the first single-change test.
+    - name: Assumptions and checks
+      contains: What the AI assumed and what you must confirm before you send.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can plan from pasted text. Pick one with web search if you want help researching accounts.
+  inputs:
+    - A spreadsheet of your last 20 won and lost deals. It shows which signals really came before a sale.
+    - Past outreach emails with the replies they got, so the new plan builds on what worked.
+    - Real case studies you can quote. Without them the drafts leave proof out rather than make it up.
+terms:
+  - term: Buying signal
+    meaning: An event that shows a company may need what you sell, such as a new hire or a funding round.
+  - term: Target profile (ICP)
+    meaning: A description of the company and the person most likely to buy from you.
+  - term: Touch
+    meaning: One contact attempt, such as an email, a call or a LinkedIn note.
+  - term: Reply rate
+    meaning: Replies divided by messages sent.
+tweaks:
+  - what: List size
+    how: Start with 20 accounts. A small list lets you test the message before you grow it.
+  - what: Channels
+    how: Say which channels you will not use, such as phone calls, so the plan skips them.
+  - what: Sequence length
+    how: Ask for a shorter five-touch version if your buyers are senior and busy.
+improve:
+  - Keep the plan with your results. After two weeks, paste the reply counts and ask which touch and which signal worked.
+  - Add your opt-out and sending rules to the pack, so every plan starts with them.
+  - Run each first email through the Cold email pre-send checker before you send it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -14,6 +14,29 @@ use_cases:
   - Set a practical verification routine for a volunteer group
   - Help a young reader practice checking an ordinary online claim
   - Review whether repeated citations are independent evidence
+not_for:
+  - "You face a medical, legal or money decision: ask a doctor, lawyer or licensed adviser, because a source check cannot replace their advice."
+  - "You need to check a technical claim that needs lab or data skills: ask a qualified specialist, then bring their answer back to this mind."
+  - "You want to see if a security risk or scam is real: use Bruce Schneier, who works on risk, privacy and how systems fail."
+output_sample:
+  input:
+    - The claim or post you want to share, with any link or screenshot
+    - Who would see it and what they might do because of it
+    - Any links that repeat the claim (optional)
+    - Whether you already shared it, and with whom (optional)
+  output:
+    - name: Claim and source record
+      contains: The exact claim, its original source, its date, and who actually saw or measured it.
+    - name: Dependency map
+      contains: Which links rely on one another, so you can see how many separate sources really exist.
+    - name: Status
+      contains: Whether the claim is supported, contradicted, incomplete or unverified, kept apart from any guess about intent.
+    - name: Recommended communication
+      contains: Whether to share with a source, hold for confirmation, or correct, plus the next action.
+    - name: Missing evidence
+      contains: The facts that could change the status, and who could confirm them.
+    - name: Correction draft
+      contains: A short, calm message with the current facts, ready to post if you already shared it.
 seats:
   - {seat: Everyday verification and informed sharing, asks: How do we know this, and what would sharing it add?}
   - {seat: Information paths and trust, asks: Are these independent sources or echoes of one claim?}

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows records back and explains a gap.
 new_slug: reconciliation-break-tracer
 name: Reconciliation break tracer
-summary: Give it a break from a reconciliation. Get it traced to its source
-  entries on both sides, and what differs.
+summary: Trace a reconciliation break to the entries behind it on both sides. You get the cause in one sentence, an owner and a next step.
 job: track-numbers
 headline: Reconciliation break tracer
-subhead: A break in your reconciliation traced back to the entries that caused
-  it, on both sides, with the differing detail named. You get a one-sentence
-  root cause, an owner and a next action.
+subhead: Give it one break from your reconciliation and the ledger and subledger entries behind it. It finds the entries on both sides and shows what differs. You get a one-sentence cause, an owner and a next step.
 explain: |
   A break in your reconciliation traced back to the entries that caused it, on both sides, with the differing detail named. You get a one-sentence root cause, an owner and a next action.
 
@@ -18,6 +15,10 @@ when:
   - You need to know if a gap is timing, FX, mapping or a duplicate.
   - A manager asks why a number does not match.
   - You want each break to have an owner and a next step.
+not_for:
+  - "You have no ledger or subledger extracts for the break: get both extracts first, or ask your accounting team to pull them."
+  - "You have not yet sorted the break into a type: run the gl-recon step first, then bring one break here."
+  - "You want the adjustment posted: this only finds the cause, so ask the person who posts adjustments."
 you_give:
   - The break row with key and values
   - Ledger extract
@@ -29,7 +30,32 @@ you_get:
   - One-sentence root cause
   - Owner, clear date and next action
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Run the gl-recon step first, so the break has a type and a likely cause.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Paste one break row with its key, ledger values and subledger values.
+  - Paste the ledger extract and the subledger extract. No system is connected, so your AI cannot look them up.
+  - Check the cause and the differing detail against your extracts. Then pass the owner and action on. This skill does not post adjustments.
+output_sample:
+  input:
+    - One break row with its key, ledger values and subledger values
+    - Your ledger extract, or a connected ledger system
+    - Your subledger extract, or a connected subledger system
+    - The break type and likely cause, if you know them (optional)
+  prerequisites:
+    - The break already sorted into a type by the gl-recon step
+    - Either a connected ledger and subledger system, or both extracts pasted in
+  output:
+    - name: Ledger entry
+      contains: "The journal entry behind the ledger line: entry ID, posting date, source system, batch ID and preparer."
+    - name: Subledger transaction
+      contains: "The matching subledger transaction: trade ID, trade and settle dates, counterparty, source feed and FX rate used."
+    - name: Attribute diff
+      contains: Posting date, FX rate, account mapping and signs lined up side by side, with the one that differs named.
+    - name: root_cause
+      contains: One sentence saying which side did what, and why.
+    - name: owner
+      contains: "Who fixes it: ops, reference-data, accounting or upstream-system."
+    - name: expected_clear_date
+      contains: The date the break should clear, or null if it will not clear by itself.
+    - name: action
+      contains: "The next step: monitor, adjust, raise-ticket or suppress."

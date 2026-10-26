@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a sequence from audience and goal.
 new_slug: outbound-email-sequence-writer
 name: Outbound email sequence writer
-summary: Describe your prospect. Get a multi-step email sequence with timing and
-  personal touches.
+summary: Write a cold email sequence for your prospect. You get several short emails, subject lines, personal fields and a send schedule.
 job: write-emails
 headline: Outbound email sequence writer
-subhead: Describe your prospect. Get a multi-step email sequence with timing and
-  personal touches. Bring target company type and person. Use the result to plan
-  your next step.
+subhead: Describe your prospect. Get a multi-step email sequence with timing and personal touches. Bring target company type and person. Use the result to plan your next step.
 explain: |
   A full cold email series that earns replies and ends with a booked meeting, each message short and different from the last.
 
@@ -18,6 +15,10 @@ when:
   - Your cold emails get opens but no replies.
   - You target a new job title and need fresh messaging.
   - You want a follow-up plan, not one-off emails.
+not_for:
+  - "You need one reply or a single message: ask your AI to draft it directly, or use an email drafting skill."
+  - "You only have a purchased list with no lawful basis to contact people: get consent or a lawful basis first."
+  - "You need a script for a live sales call: write call notes by hand or ask your AI for a call prep plan."
 you_give:
   - Target company type and person
   - Your offer and its main result
@@ -29,7 +30,33 @@ you_get:
   - Personal fields to fill in
   - A send schedule
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Describe the company type and the person you want to reach. Say what you sell and the result it gives.
+  - Add proof points and trigger events if you have them. Use only real, checked numbers.
+  - Say how many emails you want. Then ask for subject lines, personal fields and a send schedule.
+  - Read each email and fill in every field. Replace any figure or case study that is not true for you.
+  - Send from a real person's address. If a prospect replies, stop the sequence and answer by hand.
+output_sample:
+  input:
+    - The type of company and the person you are writing to
+    - Your offer and the main result it gives
+    - Proof points or case studies (optional)
+    - Trigger events you can mention (optional)
+    - How many emails you want (optional)
+  output:
+    - name: Persona and value statement
+      contains: The person's title and pains, and your offer boiled down to one clear result.
+    - name: Opening email
+      contains: A short first email with a relevant hook and one ask.
+    - name: Follow-up emails
+      contains: Short emails that each add a new angle or proof point.
+    - name: Value-add email
+      contains: An email that offers a useful resource with no hard sell.
+    - name: Breakup email
+      contains: A final short note that closes the thread politely.
+    - name: Subject line options
+      contains: A few short subject line choices for the emails.
+    - name: Personal fields
+      contains: Fill-in fields such as name, company and trigger event.
+    - name: Send schedule
+      contains: The day, time and gap between each email.

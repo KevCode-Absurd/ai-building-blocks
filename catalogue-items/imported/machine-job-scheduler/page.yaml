@@ -2,23 +2,23 @@ thinking: high
 thinking_why: Job order choices multiply fast.
 new_slug: machine-job-scheduler
 name: Machine job scheduler
-summary: Give it your jobs and machines. Get a job order that finishes
-  everything sooner.
+summary: Plan a job shop schedule that finishes sooner. Give it your jobs, machines and step times. You get a job order for each machine.
 job: plan-supply-chain
 headline: Machine job scheduler
-subhead: A job order for your machines that finishes everything sooner, or meets
-  due dates, while keeping each job's steps in the right sequence. This is the
-  classic job shop problem.
+subhead: A job order for your machines that finishes everything sooner, or meets due dates, while keeping each job's steps in the right sequence. This is the classic job shop problem.
 explain: |
   A job order for your machines that finishes everything sooner, or meets due dates, while keeping each job's steps in the right sequence. This is the classic job shop problem.
 
   First it asks about your jobs, machines, step times, setup times, due dates and limits like breakdown windows. It chooses a goal: shortest total finish time, least lateness, or a weighted mix. Then it picks a method by size. Small cases get exact solving. Mid-size ones get advanced search. Large ones get heuristic methods that give a good answer quickly. It can use a model with a disjunctive graph, where no machine runs two things at once and each job follows its route.
 when:
-  - You have a dozen jobs sharing a handful of machines and the order is
-    guesswork.
+  - You have a dozen jobs sharing a handful of machines and the order is guesswork.
   - Late orders keep cascading through your shop floor.
   - You want to see how much faster a better order would be.
   - Some machines go down for maintenance and you must plan around it.
+not_for:
+  - "Every job runs the machines in the same order: use the flow-shop-scheduling skill, which is built for flow shops."
+  - "You only have one machine: sort the jobs by due date or by shortest time first. A full schedule is too much."
+  - "You need a long-range production plan by week or month: use the production-scheduling skill instead."
 you_give:
   - The list of jobs and their steps
   - Machines and processing times
@@ -30,8 +30,27 @@ you_get:
   - Late jobs flagged
   - The method used and why
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can run code.
+  - Paste the skill text from this page into the chat.
+  - Paste your jobs, the steps in each job, the machine for each step and the time it takes.
+  - Add due dates, setup times and machine downtime if you have them. Say your main goal.
+  - Answer any questions your AI asks. Then check the schedule table and the late jobs it flags.
+  - Ask your AI to try another goal if you want to compare plans.
+output_sample:
+  input:
+    - Your list of jobs and the steps in each job
+    - The machine each step needs and how long it takes
+    - Due dates for each job (optional)
+    - Setup times between steps (optional)
+    - Your main goal, such as the shortest total finish time or the least lateness
+  prerequisites:
+    - An AI that can run code, so it can build and check the schedule
+  output:
+    - name: Problem summary
+      contains: The number of jobs, machines and steps, and the goal you chose.
+    - name: Solution table
+      contains: The total finish time, how busy each machine is, and the idle time.
+    - name: Gantt chart
+      contains: Each machine in a row, with its jobs listed in order with start and end times.
+    - name: Method used
+      contains: The way the AI solved it and why that way suits the size of your problem.

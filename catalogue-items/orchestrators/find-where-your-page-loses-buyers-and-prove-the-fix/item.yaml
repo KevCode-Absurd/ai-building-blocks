@@ -14,11 +14,11 @@ outputs:
   - {type: audit_report}
 uses: [heatmap-and-recording-reader, page-issue-sorter, test-idea-ranker, ab-test-traffic-checker, store-test-verdict-maker]
 steps:
-  - {uses: heatmap-and-recording-reader, note: "Reads heatmaps and recordings and lists what visitors do instead of buying."}
-  - {uses: page-issue-sorter, note: "Sorts what the reading found into a plan, worst leak first."}
-  - {uses: test-idea-ranker, note: "Turns the sorted issues into a short ranked list of tests worth running first."}
-  - {uses: ab-test-traffic-checker, note: "Checks the exported results had enough traffic to trust before anyone calls a winner."}
-  - {uses: store-test-verdict-maker, note: "Gives a ship, stop or keep-running verdict on the test the traffic check cleared."}
+  - {uses: heatmap-and-recording-reader, note: "Reads heatmaps and recordings and lists what visitors do instead of buying. Hands the friction report to step 2."}
+  - {uses: page-issue-sorter, note: "Sorts what the reading found into a plan, worst leak first. Hands the sorted plan to step 3."}
+  - {uses: test-idea-ranker, note: "Turns the sorted issues from step 2 into a short ranked list of tests worth running first. Hands the top test to step 4."}
+  - {uses: ab-test-traffic-checker, note: "Checks the exported results had enough traffic to trust before anyone calls a winner. Takes the top test from step 3 and your results export, and hands the traffic check to step 5."}
+  - {uses: store-test-verdict-maker, note: "Gives a ship, stop or keep-running verdict on the test the traffic check cleared. Uses your results export and the step 4 traffic check."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/find-where-your-page-loses-buyers-and-prove-the-fix/skeleton.yaml

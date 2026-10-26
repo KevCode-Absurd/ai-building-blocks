@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes one short reply from a few clear tests.
 new_slug: x-reply-writer
 name: X reply writer
-summary: Paste a tweet. Get a reply worth reading on its own, or a clear call to
-  skip it.
+summary: Paste a tweet and get a short X reply worth reading on its own, or a clear call to skip it. Also checks if the tweet is too old to reply to.
 job: grow-social
 headline: X reply writer
-subhead: A reply that gets read has to work as a post on its own. Paste a tweet
-  and this skill writes a short reply that does, or tells you plainly to skip
-  it.
+subhead: A reply that gets read has to work as a post on its own. Paste a tweet and this skill writes a short reply that does, or tells you plainly to skip it.
 explain: |
   A reply that gets read has to work as a post on its own. Paste a tweet and this skill writes a short reply that does, or tells you plainly to skip it.
 
@@ -18,6 +15,10 @@ when:
   - You reply often but nobody reacts.
   - You want to grow on X by joining conversations without sounding like a bot.
   - You are not sure if a tweet is too old to reply to.
+not_for:
+  - "You want a reply that sells your product or links to your site: write that yourself, or send a direct message, because this skill will not write an advert."
+  - "You want flattery or a reply meant to provoke the author: this skill will not write it, so write a short note by hand instead."
+  - "You want your own original post, not a reply: write it yourself, or turn the gap you found in the tweet into a post of your own."
 you_give:
   - The tweet text you want to reply to
   - How old the tweet is
@@ -29,7 +30,23 @@ you_get:
   - A note on timing
   - A shorter second option
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste the tweet you want to reply to. Say how old it is.
+  - Add your own view or a short story from your work (optional). It helps the reply sound like you.
+  - Read the result. If it says skip, skip. If it gives a reply, check that it reads well without the original tweet.
+  - Post the reply yourself. The skill never posts for you.
+output_sample:
+  input:
+    - The text of the tweet you want to reply to
+    - How old the tweet is (optional)
+    - Your own view or experience on the topic (optional)
+    - Your niche or voice (optional)
+  output:
+    - name: Reply or skip
+      contains: One or two lines that read well as a post on their own, or a plain call to skip.
+    - name: The gap
+      contains: "Which gap you found in the tweet: a hidden assumption, a missing fact, a different case, a vague example, or a missing next step."
+    - name: Timing note
+      contains: Whether the tweet is too old for the reply to be seen, and if it is still worth sending for the person.
+    - name: Reply guy check
+      contains: A warning if the reply looks like it is written just to be there.

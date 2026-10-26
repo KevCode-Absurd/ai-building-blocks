@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must change structure without changing what the code does.
 new_slug: code-simplifier
 name: Code simplifier
-summary: Point it at code that works but is hard to read. Get a simpler version
-  that behaves the same.
+summary: Make code that works easier to read without changing what it does. Give it your code and get a simpler version with a list of changes.
 job: test-and-fix-code
 headline: Code simplifier
-subhead: Code that works but is hard to read becomes simpler and behaves exactly
-  the same. The test is whether a new teammate would understand the new version
-  faster.
+subhead: Code that works but is hard to read becomes simpler and behaves exactly the same. The test is whether a new teammate would understand the new version faster.
 explain: |
   Code that works but is hard to read becomes simpler and behaves exactly the same. The test is whether a new teammate would understand the new version faster.
 
@@ -18,6 +15,10 @@ when:
   - A reviewer flagged deeply nested logic.
   - A merge left duplicate logic across files.
   - Code written in a hurry needs tidying before others read it.
+not_for:
+  - Your code is already clean and readable. Leave it alone.
+  - You do not yet understand what the code does. Read it or ask a teammate first, then simplify.
+  - The code must run as fast as possible and the simpler version would be slower. Keep the fast version.
 you_give:
   - The code to simplify
   - Tests that prove it still works (optional)
@@ -28,8 +29,26 @@ you_get:
   - Confirmation behavior is unchanged
   - Places left alone on purpose
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open a chat with an AI that can read your project files and run your tests. Claude Code works well for this.
+  - Paste this skill into the chat, or load it as a skill.
+  - Add the code you want simplified. Add your style guide or CLAUDE.md file if you have one.
+  - Ask your AI to explain what the code does before it changes anything.
+  - Check the list of changes and the test results. Reject any change that needed a test edit.
+  - Submit the result as its own pull request, apart from any new feature work. Run your tests and linter before you merge.
+output_sample:
+  input:
+    - The code you want simplified
+    - Your project's style guide or CLAUDE.md file (optional)
+    - Tests that prove the code still works (optional)
+    - Any speed limits the code must meet (optional)
+  prerequisites:
+    - An AI that can run code and read your project files, if you want it to run your tests
+  output:
+    - name: Simplified code
+      contains: The new version of your code, with the same inputs, outputs, errors and side effects as before.
+    - name: Changes
+      contains: Each change made, why it makes the code easier to read, and any risk to behavior.
+    - name: Test results
+      contains: Whether your tests, build and linter passed after each small change, with no test edits.
+    - name: Left alone on purpose
+      contains: Code it did not touch because it was clear, unclear in purpose, or out of scope.

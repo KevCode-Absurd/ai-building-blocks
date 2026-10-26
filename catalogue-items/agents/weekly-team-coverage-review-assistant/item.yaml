@@ -1,6 +1,6 @@
 slug: weekly-team-coverage-review-assistant
 name: Weekly team coverage review assistant
-summary: A coverage change brief, uncovered commitments and draft handovers.
+summary: "Spot critical work left without cover during absences. Get a team coverage brief, a list of uncovered commitments and draft handovers."
 category: agent
 type: agent
 role: orchestrate
@@ -21,9 +21,9 @@ uses:
   - team-capacity-planner
 steps:
   - uses: prepare-a-team-absence-handover
-    note: "Run when: An absence, delivery date or available cover changes for a critical commitment."
+    note: "Run when: An absence, delivery date or available cover changes for a critical commitment. Hands step 2 the plan and the handover document: each task with its cover owner or a named gap."
   - uses: team-capacity-planner
-    note: Run the coverage workflow for the changed window. If capacity is short, run team-capacity-planner and present defer, reduce or add-cover options for the manager.
+    note: Run only if step 1 left a task short or uncovered. Takes step 1's handover document as the work to size and your own hours, then hands the manager defer, reduce or add-cover options.
 schedule: Weekly when the team provides updated commitments and absence information.
 asks_before:
   - Sending or submitting any message or form

@@ -1,80 +1,93 @@
 new_slug: story-premise-tester
 name: "Story premise tester"
-summary: "Paste your story idea. Get the controlling idea, the idea that argues back, and a verdict on its strength."
+summary: "Test a story idea before you write it. Get the premise, the idea that argues back, the main turns and a go, rework or drop verdict."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It must find the real idea under a premise, argue against it and judge if it can carry a whole story."
 
 headline: "Story premise tester"
-subhead: "Paste your story idea. It states the premise in one sentence, names the truth the story expresses and the idea that argues back, tests whether it can grow without running out, outlines the main turns and gives a go, rework or drop verdict."
+subhead: "Paste your story idea. It says the premise in one sentence, names the truth your story proves and the idea that argues back, and checks the idea can last a whole story. You get the main turns and a go, rework or drop verdict."
 
 explain: |
-  A story idea often sounds good for one paragraph and then runs dry. The writer has a situation and a feeling but not a point. The middle sags, and the ending has nothing to land on.
+  A story idea can sound good for one paragraph and then run dry. You have a situation and a feeling, but no point. The middle sags and the ending has nothing to land on.
 
-  This skill tests the idea before you write. It states the premise in one plain sentence, then finds the controlling idea: the truth the story expresses, with a cause. It then finds the counter idea: the strongest argument against that truth, which the story must give real weight. It tests whether the two can grow through a full story, outlines the main turns from character choices, marks any recycled formula and gives a go, rework or drop verdict with reasons.
+  This story premise tester checks your idea before you write. It puts the premise in one plain sentence. It finds the controlling idea: the one truth your story proves by the end, and why. It then finds the counter idea: the strongest argument against that truth, which the story must treat as real. It asks whether the two can grow through a full story, and lists the main turns, each caused by a character's choice. It flags any turn that matches a well-known formula.
+
+  It needs your idea to start. Without one it asks for it and stops. It never makes up plot to fill a gap.
 
 when:
-- "You have an idea and want to know if it can fill a whole story."
-- "Your draft has a good start and a weak middle."
-- "You are choosing between several ideas and want a plain comparison."
+  - "You have an idea and want to know if it can fill a whole story, script or novel."
+  - "Your draft has a good start and a weak middle."
+  - "You are choosing between two or three ideas and want a plain comparison."
+  - "You are about to pitch an idea and want to know where it is thin."
+
+not_for:
+  - "You have a finished draft and want it checked line by line: use the Story rules checker."
+  - "You already have a scene list and want each scene tested for change: use the Scene turn checker."
+  - "You only know the feeling you want at the end: start with the Ending-first story planner."
+  - "You have real facts about a founder or project and want them shaped into a story: use the Hero story mapper."
 
 you_give:
-- "Your story idea in a paragraph or less"
-- "The kind of story and its length (optional)"
-- "The ending you have in mind (optional)"
-- "Other ideas to compare (optional)"
+  - "Your story idea, in a paragraph or less. Rough is fine."
+  - "The kind of story and how long it will be (optional)"
+  - "The ending you have in mind (optional)"
+  - "Other ideas to compare (optional)"
 you_get:
-- "The premise in one sentence"
-- "The controlling idea and the idea that argues back"
-- "The main turns in outline"
-- "A go, rework or drop verdict with reasons"
+  - "The premise in one sentence"
+  - "The truth your story proves and the idea that argues back"
+  - "The main turns, each with the choice that causes it and what it costs"
+  - "Any turn that matches a well-known formula"
+  - "A go, rework or drop verdict with three reasons"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Paste your idea as it is, rough or not."
-- "Say what kind of story it is and how long."
-- "Read the idea that argues back and ask if it is strong enough."
-- "If the verdict is rework, apply the changes and test again."
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start it by name. If not, paste the skill file into a new chat. It needs no files or paid tools."
+  - "Paste your idea as it is. Add the kind of story and its length if you know them."
+  - "Have two or three ideas? Paste them together and ask it to compare them."
+  - "Read the idea that argues back first. If nobody in your story believes it, the idea is one-sided."
+  - "If the verdict is rework, make the one change it names, paste the new idea and run it again."
 
 how_it_works:
-  - title: "State the premise"
-    text: "Write the premise in one plain sentence: who wants what, and what stands in the way."
-  - title: "Name the controlling idea"
-    text: "Write the single truth the story would express by its end, as a value and its cause, for example what wins or loses and because of what."
-  - title: "Name the counter idea"
-    text: "Write the strongest opposite truth."
-  - title: "Test it can grow"
-    text: "Check the idea can change shape three or more times as the story runs."
-  - title: "Outline the main turns"
-    text: "List the main turns in order."
-  - title: "Flag the formula"
-    text: "Mark where the idea matches a well-known formula."
-  - title: "Give a verdict"
-    text: "Say go, rework or drop."
-  - title: "Check it"
-    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+  - title: "Says the premise"
+    text: "One plain sentence: who wants what, and what stands in the way. If it will not fit in one sentence, it lists the parts that compete."
+  - title: "Names the truth"
+    text: "Writes the one truth the story proves by its end, with its cause, as a statement a reader could argue with."
+  - title: "Names the idea that argues back"
+    text: "Writes the strongest opposite truth and checks a character the reader respects could carry it."
+  - title: "Tests that it can grow"
+    text: "Checks the idea changes shape at least three times as the story runs, and marks where it would run dry."
+  - title: "Outlines the main turns"
+    text: "Lists each turn with the choice that causes it and its cost. Turns caused by luck or by someone explaining the plot are flagged."
+  - title: "Flags the formula"
+    text: "Marks where the idea matches a well-known formula and what would make it fresher. It never suggests copying a work."
+  - title: "Gives a verdict"
+    text: "Says go, rework or drop with three reasons. For rework it names the one change that matters most."
+  - title: "Checks itself"
+    text: "Runs its own checks and lists any it missed."
 
 output_shape: |
   PREMISE
   <one sentence>
 
   CONTROLLING IDEA
-  <value and cause>
+  <the truth, and its cause>
 
   COUNTER IDEA
-  <strongest opposite, who carries it>
+  <strongest opposite, and who carries it>
 
   CAN IT GROW
-  <start -> middle -> end, where it runs out>
+  <start -> middle -> end, where it runs out and what refills it>
 
   MAIN TURNS
-  1. <turn> | choice: <> | cost: <>
+  1. <turn> | choice: <what a character chooses> | cost: <what it costs them>
 
   FORMULA FLAGS
-  <match and what would make it original>
+  <match, and what would make it original>
 
   VERDICT
   <go / rework / drop> | Reasons: <three>
+
+  COMPARISON (only when you pasted more than one idea)
+  <which to write first, and why>
 
   MISSING
   <gaps>
@@ -82,34 +95,52 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "Your story idea, in a paragraph or less"
+    - "The kind of story and its length (optional)"
+    - "The ending you have in mind (optional)"
+    - "Other ideas to compare (optional)"
+  prerequisites:
+    - "An AI chat. No files, web access or paid tools are needed."
+  output:
+    - {name: "Premise", contains: "Who wants what and what stands in the way, in one sentence."}
+    - {name: "Controlling idea", contains: "The one truth the story proves by its end, with its cause."}
+    - {name: "Counter idea", contains: "The strongest argument against that truth, and the character who carries it."}
+    - {name: "Can it grow", contains: "How the idea changes from start to middle to end, and where it runs dry."}
+    - {name: "Main turns", contains: "Each turn in order, with the character's choice and what it costs."}
+    - {name: "Formula flags", contains: "Where the idea matches a known formula, and what would make it fresher."}
+    - {name: "Verdict", contains: "Go, rework or drop, with three reasons and the one change that matters most."}
+    - {name: "Missing", contains: "What you did not say that the test needed."}
+
 tweaks:
   - what: "Length"
-    how: "A short story needs fewer turns. Say how long it will be."
+    how: "A short story needs fewer turns than a novel. Say how long yours will be."
   - what: "The ending you want"
     how: "If you know it, say so. The test checks the idea can reach it."
   - what: "Other ideas"
-    how: "Paste them to compare verdicts."
-  - what: "Your fear"
-    how: "Tell it what worries you, such as a sagging middle."
+    how: "Paste them together to compare verdicts and pick which to write first."
+  - what: "Your worry"
+    how: "Say what bothers you, such as a sagging middle. It looks there first."
 
 judge:
-- "The premise really is one sentence."
-- "The controlling idea is a statement someone could argue with."
-- "The counter idea has a character who believes it."
-- "Each turn is caused by a choice with a cost."
-- "The verdict gives reasons, not just a label."
+  - "The premise really is one sentence."
+  - "The controlling idea is a statement someone could argue with."
+  - "The counter idea has a character who believes it."
+  - "Each turn is caused by a choice with a cost."
+  - "The verdict gives reasons, not just a label."
 
 test:
-- "Run it on a story you know well and see if the controlling idea matches your reading."
-- "Run it on two ideas and see if the verdicts differ for good reasons."
-- "Apply the rework change and test again."
-- "Give the counter idea to a friend and see if they find it convincing."
+  - "Run it on a story you know well and see if its controlling idea matches your reading."
+  - "Run it on two ideas and see if the verdicts differ for good reasons."
+  - "Run it with no idea pasted. It should ask for one and stop, not invent a plot."
+  - "Make the change it names for a rework verdict and test again."
 
 improve:
-- "Add the formulas common in your genre to step 6."
-- "Add your own definition of a strong ending."
-- "Keep tested ideas in a file with their verdicts."
-- "Pair it with \"Scene turn checker\" once you have a scene list."
+  - "Add the formulas common in your genre to the formula step."
+  - "Add your own definition of a strong ending."
+  - "Keep tested ideas in a file with their verdicts."
+  - "Pair it with the Scene turn checker once you have a scene list."
 
 works_best_with:
   tools:
@@ -122,6 +153,8 @@ works_best_with:
 
 terms:
   - term: "Controlling idea"
-    meaning: "The one truth the story expresses by its end, with its cause."
+    meaning: "The one truth the story proves by its end, with its cause."
   - term: "Counter idea"
     meaning: "The strongest argument against that truth."
+  - term: "Premise"
+    meaning: "Who wants what, and what stands in the way, in one sentence."

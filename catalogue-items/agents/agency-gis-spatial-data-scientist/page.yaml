@@ -1,0 +1,152 @@
+name: Spatial Data Scientist agent
+summary: Plan a spatial analysis, such as hot spots, clusters or location based prediction, with the right test, bias checks and plain language results.
+headline: Spatial Data Scientist agent
+subhead: Give it a location question and your data. The agent picks the method, such as hot spot tests or spatial regression, and plans the checks for bias and uncertainty. You get an analysis plan, draft code and a way to explain the result.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A map with a pattern on it is not proof of a pattern. Nearby places tend to look alike, and that breaks the rules of ordinary statistics. This spatial statistics agent plans the analysis so a hot spot or a model result can be trusted, or at least told apart from chance.
+
+  It begins with the question and a first look at the data. It tests whether nearby places are more alike than far ones, using tests such as Moran's I. Then it picks a method for the job: Getis-Ord Gi* for hot and cold spots, geographically weighted regression for effects that change across space, kriging to estimate unseen places, or DBSCAN for clusters. It plans checks for the usual traps: the choice of boundaries changing the answer, spatial dependence in the leftovers of a model, and results that only hold in one area.
+
+  It writes a plan and draft code for Python or R, and it cannot see your data or run the analysis. If you paste your own results back, it helps you read them. It never makes up a number. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience claims are not results measured by AI Blocks.
+when:
+  - You think complaints, sales or incidents cluster in places and want to test it.
+  - You want to model prices, risk or demand using location, such as retail site choice.
+  - A regression on area data gives odd results and you suspect neighbors affect each other.
+  - Your result changes when you change the zone boundaries, and you need to test how much.
+not_for:
+  - "You only need a clear map or a simple query: use the GIS Analyst agent."
+  - "You need to detect objects or land cover in images with machine learning: use the GeoAI/ML Engineer agent."
+  - "Your data is messy and needs cleaning or joining first: use the Spatial Data Engineer agent."
+  - "Your data has no location and you need general statistics: use the Statistician agent."
+you_give:
+  - The location question in one sentence, such as where are late deliveries clustered
+  - "Your data: what each row is, the measure, the time span and how many rows"
+  - The area units, such as points, postcodes, tracts or a grid
+  - Your tools, such as Python with GeoPandas, R, QGIS or ArcGIS Pro (optional)
+  - Whether this is exploring or testing a set idea, and who will read it
+  - Your own results to read, if you have run something (optional)
+you_get:
+  - The question written as a testable statement
+  - A first look plan, including a test for spatial dependence
+  - A method choice with the reason and a runner-up
+  - Numbered analysis steps and checks for bias and uncertainty
+  - Draft code in Python or R, marked as not run
+  - A way to explain the result with a map, the numbers and one plain sentence
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Write the question, then describe your data. List the columns, the unit of area and the row count. Leave out private details.
+  - Say 'Plan this spatial analysis. Do not guess my data.' Your AI asks once for what is missing.
+  - Read the method choice and the checks first. Say if you must use a tool you already have.
+  - Run the draft code on your data. The AI cannot. Paste the results back and ask it to help you read them.
+  - Have a qualified analyst review the work before you publish figures or make big decisions.
+how_it_works:
+  - title: Frame the question
+    text: It turns your question into one testable statement and marks missing facts as MISSING.
+  - title: Plan the first look
+    text: It plans maps, charts and a test for spatial dependence before any model.
+  - title: Choose the method
+    text: It picks a method that fits the question and the data, with a reason and a runner-up.
+  - title: Plan the model and checks
+    text: It plans the fit, then the leftovers check, the boundary sensitivity test and cross validation.
+  - title: Plan the uncertainty and records
+    text: It plans error ranges, fixed random seeds and a log of every data change.
+  - title: Plan the explanation
+    text: It plans a map, the key numbers and a plain sentence, and warns against reading cause from pattern.
+output_shape: |-
+  QUESTION AND ASSUMPTIONS
+    Question <one testable sentence> | Type <exploring or testing> | Reader <who>
+    Assumed: <list> | MISSING: <list>
+
+  DATA AND FIRST LOOK
+    <data item> | <check> | <what to look for> | spatial dependence test <name>
+
+  METHOD CHOICE
+    <method> | <reason> | <key assumption> | <runner-up>
+
+  ANALYSIS STEPS
+    <number> | <step> | <setting> | <output>
+
+  CHECKS
+    <check> | <how> | <what a pass looks like>
+    Boundary sensitivity <how> | Leftovers check <how> | Uncertainty <how>
+
+  RECORDS
+    Seed <value> | Data changes <log> | Failed attempts <note>
+
+  DRAFT CODE (not run)
+    <Python or R code>
+
+  EXPLAINING THE RESULT
+    Map <what> | Numbers <what> | Plain sentence <template> | Limits <list>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - The location question in one sentence
+    - "Your data: what each row is, the measure, the time span and the row count"
+    - The area units, such as points or postcodes
+    - Your tools, such as Python or R (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - Python or R with spatial packages to run the draft code
+  output:
+    - name: Question and assumptions
+      contains: The question as one testable statement, with assumptions and MISSING items.
+    - name: Data and first look
+      contains: Checks to run before modeling, including a test for spatial dependence.
+    - name: Method choice
+      contains: The method, why it fits, its key assumption and a runner-up.
+    - name: Analysis steps
+      contains: Numbered steps with settings and the output of each.
+    - name: Checks
+      contains: Boundary sensitivity, leftovers check, cross validation and uncertainty, each with a pass line.
+    - name: Draft code
+      contains: Python or R code for the main steps, marked as not run.
+    - name: Explaining the result
+      contains: What map and numbers to show, a plain sentence template and the limits.
+    - name: Open questions
+      contains: What is unknown and what each answer changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Language
+    how: Say Python or R so the draft code uses the packages you have.
+  - what: Purpose
+    how: Say if you are exploring or testing a set idea. It changes how strict the checks are.
+  - what: Area units
+    how: Name the zones you use, since the checks test if the answer changes with other zones.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Spatial autocorrelation
+    meaning: Nearby places tend to be more alike than distant ones.
+  - term: Moran's I
+    meaning: A test of whether values across a map are clustered, spread out or random.
+  - term: Hot spot (Getis-Ord Gi*)
+    meaning: A test that marks areas with high or low values that are unlikely to be chance.
+  - term: Geographically weighted regression
+    meaning: A model where the effect of a factor can change from place to place.
+  - term: Kriging
+    meaning: A way to estimate values at places you did not measure.
+  - term: MAUP
+    meaning: The effect where results change when you draw the zone boundaries differently.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan and draft code work from a pasted profile and your data description.
+    - name: Claude Code
+      why: It can read your data files and run Python in your project if you allow it, so you can check results.
+  inputs:
+    - The column names and first ten rows of your data.
+    - A map of the zone boundaries you use.

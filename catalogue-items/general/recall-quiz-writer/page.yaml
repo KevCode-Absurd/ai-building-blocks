@@ -1,6 +1,6 @@
 new_slug: recall-quiz-writer
 name: "Recall quiz writer"
-summary: "Paste your lesson notes. Get a low-stakes recall quiz at three levels, with answers."
+summary: "Turn your lesson notes into a recall quiz with easy, medium and hard questions, model answers and a repeat plan. Ready in one message."
 job: teach-and-train
 thinking: low
 thinking_why: "It turns notes into questions in a fixed shape, with little judgement."
@@ -17,6 +17,10 @@ when:
   - "You taught something and want it to stick."
   - "You need a starter quiz for the next lesson."
   - "You are studying and want to test yourself."
+not_for:
+  - "You need a graded exam: write it yourself or ask the person who sets the marks, since this quiz is low-stakes practice."
+  - "You have not taught the material yet: teach it first, then paste your notes here."
+  - "You want the full version with every check: use the Retrieval quiz writer."
 
 you_give:
   - "The lesson notes or topic"
@@ -34,6 +38,22 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - Your lesson notes or topic
+    - Who the learners are (optional)
+    - How many questions you want (optional, default 9)
+  output:
+    - name: KEY IDEAS
+      contains: The three to five ideas learners must still know in a month.
+    - name: QUIZ
+      contains: "Nine questions in three levels: easy facts, medium why or how, hard new cases. No answers shown."
+    - name: ANSWERS
+      contains: A short model answer for each question, using only what is in your notes.
+    - name: REPEAT PLAN
+      contains: "One line per level saying when to repeat: next day, next week, next month."
+    - name: MISSING
+      contains: Anything your notes did not cover that a question needed.
 
 how_it_works:
   - title: "Pick key ideas"

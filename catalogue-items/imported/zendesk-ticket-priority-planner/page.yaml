@@ -2,31 +2,84 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: zendesk-ticket-priority-planner
 name: Zendesk ticket priority planner
-summary: Connect Zendesk. Get waiting tickets grouped by urgency, issue type, and response deadline.
+summary: Sort your open Zendesk tickets into a priority list from P0 to P3, with type, age and response deadline status, so you know what to answer first.
 job: help-customers
 headline: Zendesk ticket priority planner
-subhead: Connect Zendesk and ask which tickets need attention first. It reads open and pending tickets, then up to fifteen full conversations. You get a queue grouped by urgency and issue type, with response deadline status and suggested next steps.
+subhead: Link your Zendesk account and ask which tickets need attention first. It reads your open and pending tickets, then up to fifteen full threads. You get a queue from P0 to P3, a type for each ticket, and next steps.
+explain: |
+  A Zendesk queue sorts by date, but the oldest ticket is not always the most urgent. This Zendesk ticket priority planner reads the tickets and ranks them by what is at stake.
+
+  P0 is for outages, data loss, security problems and escalations from VIPs. P1 is for broken features, billing disputes and people who have written more than once. P2 and P3 hold questions, minor bugs, requests and feedback.
+
+  Each ticket also gets a type, such as bug, billing, how-to, feature, account or integration. You see its age and whether it is near its response deadline. It reads the 15 most recent tickets in full, then ends with the next steps for the urgent ones. It does not reply or change tickets.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Your Zendesk queue has grown and you need to know what to answer first.
+  - You start the day and want a ranked list instead of a long inbox.
+  - A manager asks which open tickets are urgent right now.
+  - You want to spot billing disputes and bugs hiding in the queue.
+not_for:
+  - You use Gorgias, Freshdesk or Zoho Desk. Use the Gorgias ticket priority planner, the Freshdesk ticket priority planner or the Zoho Desk ticket priority planner.
+  - You have a pasted batch of emails, not a Zendesk queue. Use the Support ticket sorter.
+  - You want to rate how upset one customer is. Use the Customer message tone and urgency review.
+  - You have only a few tickets. Use your Zendesk views and sort them by hand.
 you_give:
-  - Open and pending Zendesk tickets and comment threads.
-  - Recorded response deadlines or your response targets.
+  - Your Zendesk account, linked through Composio
+  - Open and pending tickets, read for you (up to 15 in full)
+  - Your response targets or ticket due dates (optional)
+  - Names of VIP customers, if you want them flagged (optional)
 you_get:
-  - Return ticket details, ages, deadline status, and specific actions for urgent cases.
+  - Tickets ranked from P0 critical to P3 low
+  - A type for each ticket
+  - Each ticket's age and response deadline status
+  - A short list of next steps for the urgent ones
+how_to_use:
+  - Check you have a Zendesk account, and a Composio account with its command line tool. Check your own plans for any cost.
+  - Open an AI that can run commands and read skill files, such as Claude Code, and add the downloaded folder.
+  - Ask it to run the Zendesk ticket priority planner. If it says Zendesk is not connected, run composio link zendesk and ask again.
+  - Open the P0 tickets in Zendesk first. Check that each one is really urgent.
+  - No command line? Paste up to fifteen tickets with their threads into your AI and ask it to follow the skill. You get the same dashboard.
+output_sample:
+  input:
+    - Your Zendesk account, linked through Composio
+    - Open and pending tickets, read for you (up to 15 in full)
+    - Your response targets or due dates (optional)
+    - Your VIP customer names (optional)
+  prerequisites:
+    - An AI that can run commands, with Composio CLI installed
+    - A Zendesk account linked in Composio
+    - Ticket text is sent through Composio, so check this suits your privacy rules
+  output:
+    - name: P0 - Critical
+      contains: Outages, data loss, security issues and VIP escalations, with ID, subject, type, requester, age and deadline status.
+    - name: P1 - High
+      contains: Broken features, billing disputes and repeat contacts, in the same table.
+    - name: P2 - Medium / P3 - Low
+      contains: General questions, minor bugs, feature requests and feedback, in their own tables.
+    - name: Recommended Actions
+      contains: Specific next steps for the tickets that need attention first.
 how_it_works:
-  - title: Read waiting tickets
-    text: Fetch open and pending tickets, then read up to fifteen full conversation threads.
-  - title: Sort issues by urgency
-    text: Group serious outages, broken features, billing issues, questions, and feedback.
-  - title: Show the priority queue
-    text: Return ticket details, ages, deadline status, and specific actions for urgent cases.
+  - title: Find the Zendesk tools
+    text: It searches Composio for the tools that list tickets and read their threads.
+  - title: List open tickets
+    text: It pulls open and pending tickets, newest first, and pages through them if needed.
+  - title: Read the top fifteen
+    text: It reads the full thread for up to fifteen tickets.
+  - title: Rank and label
+    text: It puts each ticket in P0 to P3 and gives it a type such as bug or billing.
+  - title: Write the dashboard
+    text: It builds a table for each priority and lists the next steps for urgent tickets.
 works_best_with:
   tools:
     - name: Zendesk
-      why: Live lookups need Composio CLI access and connected accounts for these services.
-how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for zendesk ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Open and pending Zendesk tickets and comment threads.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+      why: It reads your open and pending tickets and their threads.
+    - name: Composio CLI
+      why: It links your AI to Zendesk. Your AI must be able to run commands.
+    - name: Claude Code or another AI that can run commands
+      why: The live lookup needs a command line. In a plain chat, paste your tickets instead.
+terms:
+  - term: SLA
+    meaning: A promised time to reply or fix a ticket.
+  - term: Triage
+    meaning: Sorting tickets by how urgent they are.
+  - term: Composio
+    meaning: A tool that links your AI to apps such as Zendesk.

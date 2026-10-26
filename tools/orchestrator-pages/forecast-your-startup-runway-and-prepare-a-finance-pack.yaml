@@ -73,3 +73,25 @@ improve:
   - Replace guesses with real numbers every month and rerun step 2.
   - Rerun after every hire or big contract.
   - Not worth running before you have a rough plan for revenue. Spend a week on that first.
+
+not_for:
+  - "You run an online store and want its cash and stock planned: use the Store financial model builder or the Inventory cash planner."
+  - "You only need a short cash forecast for the next few weeks: use the Cash forecast builder."
+  - "You only want practice for tough board questions: use the Hard-questions board prep coach."
+output_sample:
+  input:
+    - Your plan, with prices, expected customers and how long they stay
+    - Your team plan and fixed costs
+    - Your bank balance and 12 or more months of real monthly cash (optional)
+    - Planned hires, big purchases and money already promised
+  output:
+    - name: Monthly model
+      contains: Revenue, costs, team and cash flow in best, base and worst cases, with every assumption listed.
+    - name: Runway forecast
+      contains: Monthly burn, the cash-out month as a range, the window to raise and what moves it most.
+    - name: Unit economics
+      contains: Unit economics and payback for each group of customers, with the sums shown.
+    - name: Cut and raise triggers
+      contains: Cash levels, set in advance, at which you cut costs or start raising.
+    - name: Board pack
+      contains: Answers to hard questions, raise steps with dilution, and a finance plan for your board.

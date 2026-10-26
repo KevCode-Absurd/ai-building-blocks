@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs price, quality and risk with clear rules.
 new_slug: supplier-scorer
 name: Supplier scorer
-summary: Give it your needs and supplier offers. Get a weighted score for each
-  supplier and a clear pick with reasons.
+summary: Score and compare suppliers on price, quality and delivery. Give it your needs and offers. You get a weighted score and a clear pick with reasons.
 job: plan-supply-chain
 headline: Supplier scorer
-subhead: Supplier offers compared on the same scale, so the pick is clear and
-  you can explain it. It weighs price against delivery, quality and the other
-  things that decide the real cost.
+subhead: Supplier offers compared on the same scale, so the pick is clear and you can explain it. It weighs price against delivery, quality and the other things that decide the real cost.
 explain: |
   Supplier offers compared on the same scale, so the pick is clear and you can explain it. It weighs price against delivery, quality and the other things that decide the real cost.
 
@@ -18,6 +15,10 @@ when:
   - You must justify a vendor choice to your boss.
   - You are scoring RFP responses from several bidders.
   - Your team cannot agree what matters most.
+not_for:
+  - You are buying once from a single supplier. Just compare the quotes by hand, or ask the seller for their best price.
+  - You want to watch supplier risk over time. Use a supplier risk monitoring tool or a regular review with your team, not this scorer.
+  - You need help with contract terms after you pick. Talk to your lawyer or buyer, because this skill only helps you choose.
 you_give:
   - What you need to buy
   - Supplier offers or RFP responses
@@ -29,7 +30,31 @@ you_get:
   - Criteria weights
   - A clear recommendation with reasons
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your facts in a sheet first. Use these columns: what you need, unit, yearly volume, and for each supplier the price, lead time, defect rate and delivery history."
+  - Decide your criteria, such as price, quality, delivery and service. Give each one a weight. If your team cannot agree, say so, and ask your AI to help set the weights.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste your sheet and your criteria.
+  - Ask for the scores, the total cost comparison and a pick. For the best math, use an AI that can run code.
+  - Check the result. Make sure each number matches your sheet. The sample costs in the skill are only examples, so do not copy them.
+  - Next, take the top supplier into price talks, or use the cost breakdown to brief your manager.
+output_sample:
+  input:
+    - What you need to buy, with unit and yearly volume
+    - "Each supplier's offer: price, lead time and payment terms"
+    - Your criteria and how much each one matters
+    - Defect rate and delivery history for each supplier (optional)
+    - RFP responses, if you ran a formal bid (optional)
+  prerequisites:
+    - An AI that can run code, if you want it to do the score math with Python. A chat AI can still do a simpler version by hand.
+  output:
+    - name: Executive Summary
+      contains: The recommended supplier or suppliers, why they won, expected savings and the main risks.
+    - name: Evaluation Summary
+      contains: A ranked table with an overall score for each supplier, scores per criterion, yearly cost and a recommendation.
+    - name: Detailed Scoring
+      contains: Each supplier's score by group, such as technical, commercial, operational and strategic, with strengths, weaknesses and risks.
+    - name: Total Cost of Ownership Comparison
+      contains: Side-by-side costs for price, shipping, quality problems, stock held, admin and risk, added up per supplier.
+    - name: Recommendation
+      contains: Who to award, who to keep as backup, and when to review or re-bid.
+    - name: Implementation Plan
+      contains: Numbered steps with timing from contract talks to the first review.

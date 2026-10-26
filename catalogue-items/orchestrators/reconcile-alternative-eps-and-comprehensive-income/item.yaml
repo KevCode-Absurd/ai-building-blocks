@@ -1,25 +1,18 @@
 slug: reconcile-alternative-eps-and-comprehensive-income
 name: Reconcile alternative EPS and comprehensive income
-summary: Keep acquired-amortization adjustments and OCI recycling consistent with reported earnings and equity performance.
+summary: Turn reported profit into adjusted EPS and prove other comprehensive income still adds up. Get a linked workbook that ties both to reported totals.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - purchased-amortization-eps-bridge
   - oci-reclassification-bridge

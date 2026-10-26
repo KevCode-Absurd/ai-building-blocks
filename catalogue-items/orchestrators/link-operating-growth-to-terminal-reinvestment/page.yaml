@@ -1,46 +1,88 @@
 new_slug: link-operating-growth-to-terminal-reinvestment
 name: Link operating growth to terminal reinvestment
 headline: Link operating growth to terminal reinvestment
-summary: Connect an operating forecast’s growth to the investment needed in its stable terminal state.
+summary: Check that forecast growth is paid for by reinvestment and that terminal value holds up. Get a linked workbook from your NOPAT, capex and WACC.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked reinvestment/growth and terminal-consistency workbook. Share nOPAT forecast, net capex, operating working capital, incremental return assumptions, stable economics and matched WACC.
+subhead: Give it your forecast NOPAT (operating profit after tax), net capex, working capital and discount rate. It tests whether your growth is backed by reinvestment, checks the first stable year, then works backward from terminal value. You get a linked workbook and a list of gaps.
 explain: |-
-  A linked reinvestment/growth and terminal-consistency workbook.
+  Growth costs money. A company that grows must keep buying equipment, stock and working capital. A terminal value (what the business is worth after your forecast ends) that assumes steady growth but very little reinvestment is too high. This workflow checks that the two fit, and it shows the numbers.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  It runs three checks in order. First it asks whether your forecast reinvestment can pay for the growth you assumed, given the return the company earns on new money. Next it takes the first stable year and works out the reinvestment needed to hold the stable growth rate. Last it starts from the terminal value and works back to the cash flow and reinvestment that value implies, as a separate proof.
+
+  Most models pick a terminal growth rate and let reinvestment fall out by accident. Here reinvestment equals growth divided by the return on new capital, and the discount rate must be higher than growth. It checks your numbers. It does not say what the company is worth or whether to invest.
 when:
-  - You need a linked reinvestment/growth and terminal-consistency workbook.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your terminal value looks too big next to the cash the business would have left each year.
+  - Your model grows profit every year but reinvestment stays flat, and you want to know if that adds up.
+  - A reviewer asks how the growth gets paid for and you need the numbers laid out.
+  - You have a terminal value from a broker note or a deal model and want to see what it assumes about reinvestment.
+not_for:
+  - You are valuing a bank, insurer or other financial firm. Cash flow to the firm does not fit them, and this workflow stops and says so.
+  - "You want to see how fast above-average returns fade after the forecast: use the Long-term value assumption checker."
+  - "You want to test how the value moves when the discount rate or growth changes: use the Equity valuation scenario reviewer."
 you_give:
-  - NOPAT forecast, net capex, operating working capital, incremental return assumptions, stable economics and matched WACC.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Forecast NOPAT for each year, from your model (NOPAT is operating profit after tax)
+  - Net capex for each year (spending on equipment and assets, less depreciation) and the change in operating working capital
+  - The return you expect on new money put in, and where that view comes from
+  - Your discount rate (WACC) with its source and date
+  - The terminal value you want to test (optional)
+  - Currency, scale such as millions, fiscal year end and valuation date
 you_get:
-  - A linked reinvestment/growth and terminal-consistency workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A table of reinvestment rate and the growth it can pay for, next to your forecast growth
+  - The reinvestment the first stable year needs to hold your stable growth rate
+  - A terminal value rebuilt from cash flow, with the reinvestment rate it implies
+  - A list of gaps and any checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the workflow pack to Claude, ChatGPT or Gemini. To get a workbook, use an AI that can make spreadsheet files.
+  - Attach your forecast model, or paste the NOPAT, capex and working capital rows. Say the currency, scale and valuation date, and give your WACC with its source.
+  - Say what return you expect on new capital and why. If you have no view, say so. It will mark that MISSING and will not invent one.
+  - After step 1, check that actual and forecast NOPAT match your model and that depreciation is taken off once in net capex.
+  - After step 2, check that your discount rate is higher than your growth rate. If it is not, stop and fix the inputs.
+  - After step 3, check that the rebuilt cash flow gives back your terminal value. Read every MISSING line before you use the result.
 how_it_works:
   - title: Reinvestment-supported growth schedule
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile actual and forecast NOPAT and incremental reinvestment; compare the evidenced marginal ROC with the assumed growth path.
+    text: Lines up actual and forecast NOPAT, net capex and working capital on one business perimeter, leaving out acquisitions. Net reinvestment divided by NOPAT, times the return on new capital, gives the growth you can pay for. Compares it with your forecast and hands step 2 the first stable-year NOPAT and the growth and return it supports.
   - title: Terminal growth reinvestment check
-    text: Carry the first stable-year NOPAT and supported stable ROC/growth into terminal reinvestment; preserve separate period labels and a matched operating discount rate.
+    text: Takes the first stable year. Sets reinvestment equal to growth divided by return on capital, takes it off NOPAT to get free cash flow, and divides by the discount rate less growth. Hands step 3 the terminal value and its period label.
   - title: Implied terminal reinvestment schedule
-    text: Backsolve the generated terminal value to its implied FCFF and reinvestment rate as an independent reconstruction, then challenge alternative externally supplied terminal values.
+    text: Starts from the terminal value and works backward. Value times (discount rate less growth) gives cash flow, and NOPAT less cash flow gives reinvestment. Flags reinvestment at or below zero, or above 100% of NOPAT. Also tests any other terminal value you supply.
 output_shape: |-
-  A linked reinvestment/growth and terminal-consistency workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  LINK OPERATING GROWTH TO TERMINAL REINVESTMENT
+  <currency>, <scale>, valuation date <date>
+
+  1 GROWTH FROM REINVESTMENT  NOPAT <n>, net reinvestment <n>, reinvestment rate <%>
+                              return on new capital <%>
+                              supported growth <%> vs forecast growth <%>
+  2 STABLE YEAR CHECK         first stable-year NOPAT <n>, growth <%>, return on capital <%>
+                              reinvestment rate <%>, free cash flow <n>
+                              discount rate <%>, terminal value <n>
+  3 BACKSOLVE                 terminal value <n>, implied free cash flow <n>
+                              implied reinvestment <n> (<%> of NOPAT), implied return <%>
+
+  SOURCES        <each input, its source, date and unit>
+  MISSING        <each gap and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - Your forecast NOPAT, net capex and working capital change for each year
+    - Your return on new capital and your WACC, each with a source
+    - A terminal value to test (optional)
+    - Currency, scale and valuation date
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can make spreadsheets.
+  output:
+    - name: Growth from reinvestment
+      contains: Net reinvestment as a share of NOPAT, and the growth it can pay for, next to your forecast.
+    - name: Stable year check
+      contains: Reinvestment, free cash flow and terminal value for the first stable year.
+    - name: Backsolve
+      contains: The cash flow and reinvestment rate your terminal value implies, worked backward.
+    - name: Linked workbook
+      contains: Inputs, calculations and checks on separate tabs, when your AI can make files.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your inputs and any check that could not run.
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,15 +102,27 @@ test:
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds, recalculates and reopens a linked workbook. In plain chat you get the same tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your forecast model with the NOPAT, capex and working capital rows
+    - Someone who knows the business, to check the return you assume on new capital
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: NOPAT
+    meaning: Operating profit after tax, before any interest on debt.
+  - term: WACC
+    meaning: The average rate the business must earn to pay its lenders and owners. Used here as the discount rate.
+  - term: Terminal value
+    meaning: What the business is worth at the end of the forecast, when growth settles into a steady rate.
+  - term: Reinvestment rate
+    meaning: The share of NOPAT put back into the business through capex and working capital.
+  - term: Return on capital
+    meaning: The profit a company earns on each dollar it puts into the business.
+  - term: Free cash flow
+    meaning: NOPAT less reinvestment. The cash left for lenders and owners.
+next:
+  - challenge-terminal-value-with-excess-returns
+  - review-equity-valuation-sensitivity-assumptions

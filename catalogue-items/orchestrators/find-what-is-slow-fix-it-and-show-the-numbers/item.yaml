@@ -13,8 +13,8 @@ outputs:
   - {type: document}
 uses: [measure-first-slowdown-finder, slow-code-fixer, pull-request-writer]
 steps:
-  - {uses: measure-first-slowdown-finder, note: "Names the slowest stage and ranks what to fix, so the fix goes where the time is."}
-  - {uses: slow-code-fixer, note: "Fixes the stage the ranking named, with a before and after number."}
+  - {uses: measure-first-slowdown-finder, note: "Names the slowest stage and ranks what to fix, so the fix goes where the time is. Hands the ranked report to step 2."}
+  - {uses: slow-code-fixer, note: "Fixes the stage the ranking named, with a before and after number. Hands the code change to step 3."}
   - {uses: pull-request-writer, note: "Describes the speed fix with its before and after timings."}
 origin: rebuilt
 version: 1.0.0

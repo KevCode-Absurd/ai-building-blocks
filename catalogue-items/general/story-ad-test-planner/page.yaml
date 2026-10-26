@@ -1,6 +1,6 @@
 new_slug: story-ad-test-planner
 name: "Story ad test planner"
-summary: "Paste your facts and reviews. Get a fit verdict, an honest narrator and four story tests."
+summary: "Plan a story ad before you write it. Paste your facts and reviews to get a fit verdict, an honest narrator and four story tests."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -18,6 +18,10 @@ when:
   - Your reviews mention several problems and you need to pick one to lead with.
   - You have no customer cleared to be quoted and need an honest narrator anyway.
   - You want a few story ads to test that are different enough to learn from.
+not_for:
+  - "Your product is an impulse buy or a novelty with no switch history: run a short direct ad instead."
+  - "You want the story ad written now: use the Story image ad writer once this setup sheet is done."
+  - "You need a plan for reach and budget: use the Ad reach planning review."
 
 you_give:
   - Your product, who buys it, and the claims you may and may not make
@@ -34,10 +38,39 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste all your reviews, numbered, with where each came from.
-  - Paste your claims list. Say who has agreed to be quoted. If nobody has, say so.
+  - Paste all your reviews, numbered, with where each came from. This works in a normal chat. It needs no code and no web access.
+  - Paste your claims list. Say who has agreed in writing to be quoted. If nobody has, say so.
   - Read the fit verdict first. If it says the product doesn't suit a story ad, run a short direct ad instead.
-  - Hand the sheet to a skill that writes the story ad. It uses the lead problem, the narrator and the page.
+  - Check the sheet. Reviews should only appear in ads if the reviewer agreed, and your ad platform's rules still apply.
+  - Hand the sheet to the Story image ad writer. It uses the lead problem, the narrator and the page.
+output_sample:
+  input:
+    - Your product, who buys it, and the claims you may and may not make
+    - Customer reviews, emails or call notes, numbered, with where each came from
+    - What rivals already say (optional)
+    - People cleared to speak, such as the founder or a customer who agreed (optional)
+    - The page the ad will link to (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder (optional, but it helps)
+  output:
+    - name: FIT
+      contains: Whether a story ad suits the product, with the switch history and review numbers behind the verdict.
+    - name: PROBLEMS
+      contains: A table of problems with review numbers, counts and strength, then the lead problem and a backup.
+    - name: WHY THEY SWITCH
+      contains: The push, habit, doubt and pull for the lead problem, in buyers' exact words, plus things you could photograph.
+    - name: CLAIM LIMITS
+      contains: What the story may and may not say about this problem.
+    - name: AIM
+      contains: Whether the story opens on a shared moment or one kind of buyer, and why.
+    - name: NARRATOR
+      contains: Who tells the story, and which reviews may be quoted word for word.
+    - name: CLICK GOES TO
+      contains: The page the click opens and what its first screen must show, or a MISSING note.
+    - name: TEST PLAN
+      contains: Four story rows, each different in opening force, picture and opener.
+    - name: READING RESULTS, A PERSON CHECKS, MISSING, CHECKS MISSED
+      contains: Rules for judging results, what a person must check, every gap in one list, and any check missed.
 
 how_it_works:
   - title: Checks the fit

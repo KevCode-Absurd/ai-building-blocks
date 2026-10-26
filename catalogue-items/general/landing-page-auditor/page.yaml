@@ -1,6 +1,6 @@
 new_slug: landing-page-auditor
 name: Landing page conversion review
-summary: Share your page and screenshots. Get conversion problems ranked by impact, with recommended fixes and a score.
+summary: "Get a landing page conversion review: share your page text and phone screenshots, and get fixes ranked by impact, plus a score out of 100."
 job: audit-landing-page
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You want a page review today and don't have analytics, or don't trust them.
   - You inherited a page and want a ranked list of what to change, not a redesign.
   - You want a short list of quick wins for this week and a few bigger ideas to test later.
+not_for:
+  - Your page is not live yet or has no visitors. Use a short landing page checklist first, or ask a friend to read it cold.
+  - You want a full redesign brief. Hire a designer, or fix the ranked problems here first.
+  - You want fixes sized in money. Pair this with your own sales and analytics numbers, which this review does not have.
 you_give:
   - The page, as its full text and phone screenshots (attach them; your AI can see pictures), or its address
   - The ad or link that leads to it (optional, but best)
@@ -31,6 +35,33 @@ how_to_use:
   - Paste the ad that sends people there, so the first screen can be checked against it.
   - Add your guarantee, delivery and returns terms if they're not on the page. Missing terms are findings in their own right.
   - Do the quick wins this week. Only test the bigger ideas if your traffic can support a test.
+output_sample:
+  input:
+    - Your page text and phone screenshots, or its address
+    - The ad or link that leads to it (optional)
+    - Your guarantee, delivery and returns terms (optional)
+    - Your analytics (optional)
+  prerequisites:
+    - An AI that can read screenshots, if you attach pictures
+  output:
+    - name: Page job and verdict
+      contains: What the page is for, and a one-line verdict on how well it does that job.
+    - name: Scent
+      contains: Whether the first screen matches the ad, or a note that the ad is missing.
+    - name: Glance
+      contains: What the page is, who it is for, what to do next, and what stood out.
+    - name: Skim
+      contains: The two-line story a skimmer takes away from headings, pictures, prices and buttons.
+    - name: Findings table
+      contains: Each problem with where it sits, a quote, a fix, severity from 0 to 4 and ease.
+    - name: Quick wins this week
+      contains: Up to five easy fixes for serious problems that you can ship now.
+    - name: Tests
+      contains: Up to three bigger changes, each with a one-line reason to try it.
+    - name: Page score
+      contains: A score out of 100 now and after the quick wins, with the sums shown.
+    - name: What the page can't tell us
+      contains: Missing proof, terms or data that limit the review.
 how_it_works:
   - title: Names the page's job
     text: A first purchase, a lead, a bigger order or a return customer. The review is judged against that job.

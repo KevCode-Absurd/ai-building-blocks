@@ -1,15 +1,13 @@
 slug: loan-life-cash-cover-checker
 name: Loan life cash cover checker
-summary: A discounted loan-life cash cover and cushion
+summary: "Check whether three years of cash cover what you owe. Get the loan life cover ratio and the cash cushion above the loan balance."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before:
+  - project-cash-available-bridge
+next:
+  - debt-service-covenant-headroom-checker
+  - build-a-project-debt-service-cash-pack
 origin: own
 version: 1.0.0
 added: 2026-10-22

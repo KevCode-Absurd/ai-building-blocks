@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It applies a set law to your facts.
 new_slug: india-data-privacy-checker
 name: India data privacy checker
-summary: Describe your India data use. Check current Act and Rules sources,
-  map possible duties and list facts to confirm.
+summary: Check your India data privacy duties under the DPDP Act and Rules. Get possible duties by start date, gaps in your practice and facts to confirm.
 job: check-contracts
 headline: India data privacy checker
-subhead: Share your data use, purpose and role in India; get a dated map of
-  possible duties and open questions.
+subhead: Share your data use, purpose and role in India; get a dated map of possible duties and open questions.
 explain: |
   Share your data, purpose and role. The skill checks current Indian sources, maps possible duties by start date and flags unknowns.
 
@@ -18,6 +16,10 @@ when:
   - You must write a consent notice that meets Indian rules.
   - You want a gap list for the phased start dates.
   - A client asks how you protect personal data of people in India.
+not_for:
+  - "You need legal advice or a final compliance sign-off: ask a qualified lawyer in India."
+  - "Your records are on paper only and never turned digital: the Act does not cover them, so no check is needed."
+  - "You only need EU rules: ask a privacy lawyer or use the official GDPR text, as this checks India's law."
 you_give:
   - How you collect, store and share personal data
   - Where your users and servers are
@@ -29,7 +31,30 @@ you_get:
   - A prioritised fix plan
   - Notes on how it differs from GDPR
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Use one that can browse the web, so it can check current official sources.
+  - Paste the skill instructions into the chat, or upload the skill folder if your AI accepts files.
+  - Describe how you collect, store and share personal data. Say who your users are and where your servers are.
+  - Add your privacy notice and consent forms if you have them. Mention any children's data.
+  - Read the source list and dates first. Answer any questions about missing facts.
+  - Check the duties, gaps and fix plan with a qualified lawyer before you act.
+output_sample:
+  input:
+    - How you collect, store and share personal data
+    - Where your users and servers are
+    - Your current privacy notice and consent forms (optional)
+    - Any children's data you handle (optional)
+  prerequisites:
+    - An AI that can look up current official sources on the web, or official links you paste in yourself
+  output:
+    - name: Source check
+      contains: The official Act, Rules and notices used, with links and the date each was checked.
+    - name: Role and facts
+      contains: Your likely role, your data, your purpose and the facts still missing.
+    - name: Possible duties
+      contains: Duties that may apply to you, each tied to a section or rule and its start date.
+    - name: Gap analysis
+      contains: Where your current practice falls short, including children's data and Significant Data Fiduciary checks if they apply.
+    - name: DPDPA vs GDPR notes
+      contains: Main differences for teams that already follow GDPR.
+    - name: Fix plan
+      contains: Gaps in order of priority, with questions to confirm with counsel.

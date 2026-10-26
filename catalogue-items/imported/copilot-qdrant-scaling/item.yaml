@@ -1,6 +1,6 @@
 slug: copilot-qdrant-scaling
 name: Qdrant cluster capacity planner
-summary: Share your data size and traffic. Get a scaling plan and the evidence needed before adding nodes.
+summary: "Get a Qdrant scaling plan: how much RAM or how many nodes you need, in what order to add them, and what to measure first."
 category: general
 boards: []
 type: skill
@@ -8,8 +8,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: brief
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: plan
 uses: []

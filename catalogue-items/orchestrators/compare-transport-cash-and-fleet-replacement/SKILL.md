@@ -1,46 +1,30 @@
 ---
 name: compare-transport-cash-and-fleet-replacement
-description: "A trip contribution baseline and incremental replacement cash comparison"
+description: "Use when you have trip logs and a replacement quote and need the cash case for keeping or replacing a freight vehicle. Builds trip cash per loaded trip, then compares replacement cash on the same workload. Not for route or safety advice."
 ---
 
 # Compare transport cash and fleet replacement
 
-A trip contribution baseline and incremental replacement cash comparison.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Compare keeping a freight vehicle with replacing it. Two steps run in order: build the cash a loaded trip earns from actual trip records, then compare replacement cash against keeping on the same yearly workload. Trip contribution is a baseline, not a saving.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **Trip records** (yours): loaded and empty kilometers for comparable trips, from trip logs.
+- **Trip costs** (yours): measured fuel use per kilometer, diesel price, driver pay, tolls and maintenance cash.
+- **Trip receipts and yearly trip count** (yours): earned receipts, and the documented trips per year.
+- **The replacement case** (yours): the quote, the old vehicle's sale evidence today, yearly operating differences and the discount rate.
+- **End-of-horizon values** (yours): sale value of the new vehicle and of the old one if kept, at the same horizon.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** fuel-card exports and a second valuation of the old vehicle.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Actual comparable loaded/empty trips, fuel and maintenance cash, replacement quote, old sale evidence, annual workload, downtime and incremental terminal cash assumptions. Source both replacement and retained-vehicle terminal proceeds at the same horizon.
+The items under "Before you start", as of one reporting date, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without. If the retained vehicle's end-of-horizon value is missing, ask for it. Never set it to zero. If the yearly trip count is missing, do step 1 per trip and mark the yearly figure MISSING.
 
 ## Governing scope
 
@@ -50,9 +34,9 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Freight trip contribution builder** (`freight-trip-contribution-builder`). Build current trip cash contribution from actual loaded and empty kilometers. Preserve measured fuel and maintenance amounts and derive same-workload annual cost only with documented annual trip counts. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-freight-trip-contribution-builder.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Freight trip contribution builder** (`freight-trip-contribution-builder`). Build current trip cash contribution from actual loaded and empty kilometers. Preserve measured fuel and maintenance amounts and derive same-workload annual cost only with documented annual trip counts. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-freight-trip-contribution-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** loaded and empty kilometers match the trip records, each cost appears once, and contribution is not read as full fleet profit. If not, stop and say which line is off.
 
-2. **Fleet replacement cash comparer** (`fleet-replacement-cash-comparer`). Use sourced incremental annual operating differences, actual purchase/sale timing and terminal value to compare replacement cash. Do not substitute trip contribution for savings; disclose workload, downtime, tax and financing gaps. Carry the signed new-minus-keep terminal proceeds difference, not new-vehicle sale proceeds alone. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-fleet-replacement-cash-comparer.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Fleet replacement cash comparer** (`fleet-replacement-cash-comparer`). Use sourced incremental annual operating differences, actual purchase/sale timing and terminal value to compare replacement cash. Do not substitute trip contribution for savings; disclose workload, downtime, tax and financing gaps. Carry the signed new-minus-keep terminal proceeds difference, not new-vehicle sale proceeds alone. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-fleet-replacement-cash-comparer.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** both cases carry the same workload, the foregone old-vehicle sale is not left out, vehicle capital is not taken twice, and undiscounted and discounted totals are reported apart.
 
 ## Workbook checks
 
@@ -69,4 +53,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with two figures: cash earned per loaded trip, and the total replacement cash against keeping, undiscounted and discounted. Then list the gaps for downtime, tax and financing. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that nothing was bought, sold or signed, and that a person who knows the fleet must review the savings before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Fit the purchase to your cash limit** with the [Plan a purchase around your real budget](https://useaiblocks.com/workflows/plan-a-purchase-around-your-real-budget) workflow.
+- **Check funding and credit limits** with the [Review maturity funding and credit limits](https://useaiblocks.com/workflows/review-maturity-funding-and-credit-limits) workflow, if the purchase will be financed.
+If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

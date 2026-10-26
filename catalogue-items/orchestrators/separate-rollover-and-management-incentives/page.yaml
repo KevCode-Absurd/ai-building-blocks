@@ -1,53 +1,91 @@
 new_slug: separate-rollover-and-management-incentives
 name: Separate rollover and management incentives
 headline: Separate rollover and management incentives
-summary: Distinguish seller purchased equity, closing funding and a separate management award scenario.
+summary: Show seller cash, rolled equity and ownership in a buyout, how closing is funded, and what managers earn above a hurdle.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Seller cash and purchased ownership, funds-flow classification and a separate incentive payout scenario. Share seller proceeds and rollover election, identical-class price evidence, sponsor cash, closing sources and uses, and distinct vested management hurdle terms.
-explain: |-
-  Seller cash and purchased ownership, funds-flow classification and a separate incentive payout scenario.
+subhead: Give it the seller's proceeds and rollover choice, the sponsor's cash and the closing sources and uses, plus the management award terms. It works out seller cash and ownership, finds any funding gap, then tests the management payout on its own. You get three results that never count the same money twice.
+explain: |
+  In a buyout, the seller often keeps a stake instead of taking all the cash. That is a rollover. Managers may also get an incentive award that pays only above a set equity value. Teams mix these up. They count the rollover twice in the funding table, or call the management award voting ownership.
 
-  Private equity ownership. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow keeps three things apart. Step 1 works out what the seller rolls, takes in cash and owns, but only when the seller and the sponsor buy the same share class at the same price. Step 2 builds the sources and uses at closing, with the rollover counted once as a source that is not cash. Step 3 tests the management award on its own: equity value above a fixed hurdle, times the share it pays and the part that has vested.
+
+  It does sums on the terms you supply. It does not read the term sheet for you, settle tax or judge whether the deal is fair.
 when:
-  - You need seller cash and purchased ownership, funds-flow classification and a separate incentive payout scenario.
-  - You work on private equity ownership and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A seller is rolling part of its sale proceeds into the buyer's new company and you need each side's cash and ownership.
+  - Your closing funds flow shows a gap and you suspect the rollover is counted twice.
+  - Managers get an award above a hurdle and you need what it pays at a given exit value.
+  - A lender or investor asks who owns what at closing and how it was paid for.
+not_for:
+  - There is no rollover and no management award. Use the Deal funding gap checker on its own.
+  - The seller and the sponsor buy different share classes. Step 1 will not give an ownership figure.
+  - You want deal returns or an exit model. This checks one closing and one payout case.
+  - You want to check a locked-box price or seller closing cash. Use Reconcile a locked-box closing price or Reconcile seller closing cash.
 you_give:
-  - Seller proceeds and rollover election, identical-class price evidence, sponsor cash, closing sources and uses, and distinct vested management hurdle terms.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Seller proceeds before rollover and the rollover share (from the purchase agreement or term sheet)
+  - Proof that seller and sponsor buy the same share class at the same price
+  - Sponsor cash, new debt after fees, buyer cash, debt payoff, deal fees and required closing cash (from the funds flow and commitment letters)
+  - "The management award terms: hurdle, share paid and vested share (from the incentive plan), plus an exit equity value to test"
+  - The closing date, currency and scale
 you_get:
-  - Seller cash and purchased ownership, funds-flow classification and a separate incentive payout scenario.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Rolled amount, seller cash and seller ownership, with each sum shown
+  - A closing sources and uses table with the rollover counted once and a signed funding gap
+  - The management payout above the hurdle, kept apart from bought equity
+  - A list of terms to confirm in the documents
+  - Missing facts and the checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Pick one that can make spreadsheets if you want a workbook.
+  - Attach the term sheet or purchase agreement pages, the funds flow and the incentive plan terms. Say the closing date, currency and scale.
+  - After step 1, check that seller cash plus the rolled amount equals the seller's proceeds, and that ownership was worked out only for the same class and price.
+  - After step 2, check the rollover appears once, as a source that is not cash, and purchase use was not cut by it again.
+  - After step 3, check the award is apart from bought equity. Fill every MISSING line before anyone relies on it. Nothing here pays, sends or signs anything.
 how_it_works:
   - title: Rollover equity ownership checker
-    text: Reconcile seller cash and same-class purchased ownership using the actual rollover election; stop if sponsor and seller securities differ.
+    text: Confirms both sides buy the same class at the same price. Rolled amount is proceeds times the rollover share. Seller cash is what is left. Seller ownership is the rolled amount over total equity. Hands step 2 the rolled amount.
   - title: Deal funding gap checker
-    text: Map the rollover amount once as a noncash source against full equity purchase use, alongside actual sponsor cash and usable financing. Do not reduce purchase use by rollover again.
+    text: "Adds the uses: equity purchase, debt payoff, fees and closing cash. Adds the sources: debt cash after fees, buyer cash, sponsor cash and the rollover as a noncash source. Shows uses less sources as a signed gap."
   - title: Management equity hurdle checker
-    text: Keep the incentive award separate from purchased equity. Use a separately sourced net equity exit scenario, fixed hurdle and vested percentage; do not call its residual percentage current voting ownership.
+    text: Takes a separately sourced exit equity value. Subtracts the fixed hurdle, floors the rest at zero, then applies the participation share and the vested share. Reconciles the payout with the other holders' residual.
 output_shape: |-
-  Seller cash and purchased ownership, funds-flow classification and a separate incentive payout scenario.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  DEAL TERMS   <closing date>, <currency>, <scale>, <same class and price: confirmed or MISSING>
+
+  1 ROLLOVER     proceeds <n> x rollover <%> = rolled <n> | seller cash <n> | total equity <n> | seller ownership <%>
+
+  2 FUNDING      uses <n> | sources <n> (rollover <n> counted once, noncash) | gap <n, positive = short>
+
+  3 MANAGEMENT   exit equity <n> - hurdle <n> = <n> x participation <%> x vested <%> = payout <n> | other holders <n>
+
+  TO CONFIRM   <price per share, class, fees, voting, preferred return>
+  MISSING   <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Seller proceeds, the rollover share and proof of the same class and price
+    - Sponsor cash, new debt after fees, debt payoff, fees and closing cash
+    - The management award terms and an exit equity value to test
+    - The closing date, currency and scale
+  prerequisites:
+    - The term sheet or purchase agreement pages, and the funds flow
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: Step 1 rollover
+      contains: Rolled amount, seller cash, total equity and seller ownership, each with its sum.
+    - name: Step 2 funding
+      contains: Uses and sources at closing, the rollover counted once, and the signed funding gap.
+    - name: Step 3 management
+      contains: Equity above the hurdle, the participation and vested shares, and the payout.
+    - name: To confirm
+      contains: Price per share, share class, fees, voting and preferred return the documents must show.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Purchased rollover ownership and incentive participation never share a denominator or get presented as the same economic right.
+  - what: A bigger rollover
+    how: Raise the rollover share. Seller cash falls, seller ownership rises and the funding table updates.
+  - what: An exit value below the hurdle
+    how: Lower the exit value. The management payout is zero and the page shows the shortfall.
+  - what: Different share classes
+    how: Say the seller's shares differ. Step 1 marks ownership NOT CALCULATED and says why.
 judge:
   - Purchased rollover ownership and incentive participation never share a denominator or get presented as the same economic right.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +96,33 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the term sheet's share class, price and hurdle wording in one note and paste it into every run.
+  - Save each version of the funds flow, so a changed rollover shows which lines moved.
+  - Run Review sponsor debt cash demands next to test the debt side of the same closing.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: The signed or draft deal documents
+      why: They give the class, price, hurdle and vesting terms. Use the pages themselves, not a summary.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The funds flow memo with sources and uses.
+    - The incentive plan's hurdle, participation and vesting wording.
+    - A named reviewer who knows the deal.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Rollover
+    meaning: The seller keeps part of its proceeds as shares in the new company instead of taking cash.
+  - term: Sources and uses
+    meaning: A table of where closing money comes from and what it pays for.
+  - term: Hurdle
+    meaning: A fixed equity value that must be passed before the management award pays anything.
+  - term: Vesting
+    meaning: The part of an award that management has earned and can keep.
+  - term: Funding gap
+    meaning: Uses minus sources. A positive number means the sources fall short.
+  - term: Share class
+    meaning: A type of share with its own rights. Rollover ownership only compares like with like.
+before: []
+next:
+  - review-sponsor-debt-cash-demands
+  - reconcile-seller-closing-cash

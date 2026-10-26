@@ -1,15 +1,12 @@
 slug: prepare-a-powerpoint-deck-for-presenting-and-sharing
 name: Prepare a PowerPoint deck for presenting and sharing
-summary: Share your deck and sharing rules. Get appendix navigation, speaker
-  notes, accessibility findings and an audience handout.
+summary: Get a finished PowerPoint deck ready to present and share. Get appendix links, speaker notes, an accessibility review and an audience handout.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: slide_deck
     required: true
 outputs:
@@ -27,16 +24,13 @@ uses:
 execution: coordinator
 steps:
   - uses: powerpoint-appendix-navigator
-    note: Index actual backup evidence and test internal and return links in the
-      intended presentation environment.
+    note: Indexes the backup slides and links them to the main story, with a way back. Tests the links. Hands the linked deck to the notes step.
   - uses: powerpoint-speaker-note-builder
-    note: Add concise source-linked presenter notes with an estimated timing budget.
+    note: Adds short speaker notes tied to their sources, with a time budget. Hands the deck with notes to the accessibility review.
   - uses: powerpoint-accessibility-reviewer
-    note: Inspect logical reading order, titles, labels, contrast and alternative
-      text; state native checks that could not run.
+    note: Checks reading order, slide titles, labels, contrast and alternative text. Names every check it could not run. Hands the reviewed deck to the handout step.
   - uses: powerpoint-audience-handout-builder
-    note: Export the authorized audience copy under the explicit notes,
-      hidden-content and confidentiality rules; preserve the presenter source.
+    note: Exports the audience copy under your rules for notes, hidden slides and private information. Your presenter file stays unchanged.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -45,8 +39,6 @@ example_pending: true
 credits:
   - title: Original Excel and PowerPoint workflow methods
     by: AI Blocks
-    used: Original intake, file-preservation, execution and acceptance rules written
-      for this task.
+    used: Original intake, file-preservation, execution and acceptance rules written for this task.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.

@@ -1,6 +1,6 @@
 new_slug: business-power-tester
 name: "Business power tester"
-summary: "Describe your business and rivals. Get a test of whether your edge lasts and which of seven powers to build next."
+summary: "Test whether your business has a lasting edge. Name the benefit and barrier, then see which of seven powers to build next."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to tell a lasting edge from good execution, and the answer depends on weak evidence and fine distinctions."
@@ -17,6 +17,10 @@ when:
   - You think you have a moat but cannot say what stops a rival copying it.
   - You are choosing which advantage to build next with limited time and money.
   - You are judging whether a rival's edge is real before you decide how to respond.
+not_for:
+  - "You want to design a model a market leader would lose money by copying: use the Counter-positioning finder."
+  - "You are weighing a new market to enter: use the Second business picker."
+  - "You want advice on buying or selling shares: ask a licensed financial adviser, as this skill gives no investment advice."
 
 you_give:
   - A description of the business and how it makes money (required)
@@ -30,11 +34,35 @@ you_get:
   - The edge to build next and the evidence still missing
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe how the business makes money in a few sentences. Add price, cost and margin if you have them.
-  - Name your closest rivals and what stops them copying you, as you see it.
-  - Read the verdict, then the evidence list. Gather what is missing before you commit money.
-  - Re-run it every year or after a big change in your market.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill in, or open it if you added it. No code, files or paid tools are needed.
+  - Describe how your business makes money in a few sentences. This is the one thing it needs.
+  - Add your price, cost and margin if you have them. Without them the edge is marked unproven. A business with no sales yet cannot pass the size test.
+  - Name your closest rivals and what you think stops them copying you.
+  - Read the verdict, then the list of missing evidence. Gather it before you commit money.
+  - Run it again each year, or after a big change in your market.
+output_sample:
+  input:
+    - A few sentences on your business and how it makes money (required)
+    - Your price, cost and margin (optional, but needed for a firm answer)
+    - Your main rivals and what they do (optional)
+    - "Your stage: starting, growing or mature (optional)"
+  output:
+    - name: How the business makes money
+      contains: Three to five sentences on who pays, for what, what it costs and what is left, or TOO HARD TO JUDGE.
+    - name: Benefit
+      contains: What you get that rivals do not, as a higher price, lower cost or better margin, with its size.
+    - name: Barrier
+      contains: What stops a rival taking the benefit, tied to a fact you gave.
+    - name: Materiality
+      contains: Whether the benefit is big enough to show up in price, cost or margin, with a number or reason.
+    - name: Power and stage
+      contains: The best fit of the seven powers, or none, and whether you are starting, growing or steady.
+    - name: The edge
+      contains: Your edge in plain words, such as low cost or a trusted brand, or none found.
+    - name: What to build next
+      contains: The power most within reach, the first move and the evidence still needed.
+    - name: Missing and checks missed
+      contains: Gaps that would sharpen the test, and one line for each of its own checks it missed.
 
 how_it_works:
   - title: Name the benefit

@@ -1,0 +1,141 @@
+name: Study Abroad Advisor agent
+summary: Plan your study abroad applications. Get a reach, target and safety school list, a dated timeline, an essay check and visa questions.
+headline: Study Abroad Advisor agent
+subhead: Give it your grades, tests, experience, budget and the countries you are open to. It rates where you stand, builds a school list and a dated plan, and checks your essay. You get a study abroad plan, plus a list of facts to confirm on each school's own site.
+job: organise-work
+thinking: high
+thinking_why: School choice mixes your profile, cost and rules that change each year. Use a model that reasons well and labels every estimate as an estimate.
+explain: |-
+  Planning to study abroad goes wrong in two ways. A student with strong grades applies to the wrong mix of schools and gets no offers. Or a student starts essays and tests too late for the deadlines. This agent builds a study abroad application plan that handles both: who to apply to, and when to do what.
+
+  It starts from your profile: grades, test scores, work or research, goals and budget. It compares the application systems of the countries you name, then builds a school list in three groups. Reach schools are a stretch, target schools are a fair match and safety schools are likely. It works back from deadlines to give you a dated timeline, and it checks your essay for a clear story, not a list of things you did.
+
+  It will not write your essay for you, invent an experience or promise an offer. Admission chances are shown as ranges and marked as estimates. Costs, deadlines and visa rules change each year, so it marks each one "check on the school or embassy site" unless you gave the figure. The original profile was written for students from China, so a few tips name local forums. The method works for any student.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are a year or two out and want to know which countries and schools fit your grades and budget.
+  - You have a school list in mind and want to know which are reach, target and safety.
+  - Deadlines are coming and you need a dated plan for tests, essays and letters from teachers.
+  - You have a draft personal statement and want to know if it tells a clear story.
+not_for:
+  - You need a decision on a visa or immigration case. Use the official embassy site, or a licensed adviser.
+  - You want someone to write your essay. This agent coaches and edits. Your words and your experiences must stay yours.
+  - You need today's exact deadlines, fees or entry scores. Look them up on each school's own site and paste them in.
+  - You plan to study in a country outside the US, UK, Canada, Australia, mainland Europe, Hong Kong or Singapore. The method still helps, but its country notes will not cover you.
+you_give:
+  - Your level (undergraduate, master's or PhD), your field and your goal after study
+  - Your grades and test scores, or the tests you plan to take
+  - Your experience, such as internships, research, projects and awards (optional)
+  - Your budget per year and the countries you are open to
+  - Your start date and any deadlines you already know (optional)
+  - A draft essay or personal statement (optional)
+you_get:
+  - A summary of your profile with strengths and gaps
+  - A school list in reach, target and safety groups, each with why it fits
+  - A dated timeline from now to the first day of study
+  - A test and profile plan, ranked by what helps most in the time you have
+  - An essay check with the fixes that matter most
+  - A list of visa and move-abroad questions to answer on official sites
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste your grades, test scores, experience, budget and the countries you are open to. Say your start date.
+  - Ask for one job first, such as "Build my school list" or "Check my essay". Add the other jobs after.
+  - Read the "Facts to verify" list first. Look up each deadline, cost and rule on the school or embassy site, and paste back what you find.
+  - Treat the reach, target and safety labels as the AI's estimate. Check them with an official admissions page or a school counselor.
+  - Write your own essay. Use the AI only to find weak spots and to polish your own words.
+how_it_works:
+  - title: Read your profile
+    text: It sums up your level, scores, experience, goals and budget, and marks what is missing. Gaps are asked once, then marked MISSING.
+  - title: Compare countries
+    text: It sets the application systems of your countries side by side, such as program length, cost and work rules after study.
+  - title: Build the school list
+    text: It groups schools into reach, target and safety, with the reason for each. It shows chances as ranges, and marks them as estimates.
+  - title: Work back from deadlines
+    text: It builds a dated timeline for tests, essays, letters and applications. Dates you did not give are marked to check.
+  - title: Check the essay
+    text: If you give a draft, it checks for a clear story, specific detail and a fit with the school. It does not rewrite it for you.
+  - title: Flag what to verify
+    text: It lists each cost, deadline and visa rule you must confirm on an official site, and drafts the visa questions.
+output_shape: |-
+  PROFILE SUMMARY
+    Level <level> | Field <field> | Scores <list> | Budget <per year> | Start <date>
+    Strengths <list> | Gaps <list>
+
+  SCHOOL LIST
+    REACH: <school> | <country> | <program> | <why it fits> | <chance: range, estimate> | <check on school site>
+    TARGET: <same columns>
+    SAFETY: <same columns>
+
+  TIMELINE
+    <date or month> | <task> | <tests, essays, letters, applications, visa>
+
+  TEST AND PROFILE PLAN
+    <action> | <why it helps> | <time needed> | <rank>
+
+  ESSAY CHECK
+    <point> | <what you wrote or what is missing> | <fix>
+
+  VISA AND MOVE QUESTIONS
+    <question> | <where to find the answer>
+
+  FACTS TO VERIFY
+    <cost, deadline or rule> | <school or country> | <source to check>
+output_sample:
+  input:
+    - Your level, field and goal after study
+    - Your grades and test scores, or your test plan
+    - Your budget and the countries you are open to
+    - Your experience and a draft essay (optional)
+  output:
+    - name: Profile summary
+      contains: Your level, scores, budget and start date, with strengths and gaps.
+    - name: School list
+      contains: Reach, target and safety schools, each with why it fits and a chance range marked as an estimate.
+    - name: Timeline
+      contains: Dated tasks for tests, essays, letters, applications and the visa, working back from deadlines.
+    - name: Test and profile plan
+      contains: Actions ranked by what helps most in the time you have, with time needed.
+    - name: Essay check
+      contains: The weak points in your draft and the fix for each. It does not rewrite your essay.
+    - name: Visa and move questions
+      contains: What to ask or look up for each country, and where to find the answer.
+    - name: Facts to verify
+      contains: Every cost, deadline and rule you must confirm on an official site, with the source to check.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your transcript and your draft essay, and compare them with what you paste from school sites.
+    - name: A browser with web search
+      why: It lets you or the AI look up current deadlines, fees and visa rules on official pages.
+  inputs:
+    - Your transcript and test score reports.
+    - The admissions page of each school you are considering.
+    - Your resume or a list of experience, with dates.
+terms:
+  - term: Reach, target, safety
+    meaning: Reach is a stretch, target is a fair match and safety is a likely offer. They compare your profile with what a school publishes.
+  - term: Personal statement
+    meaning: The essay about you and your goals. Also called a statement of purpose, or SOP.
+  - term: Letter of recommendation
+    meaning: A letter from a teacher or boss who knows your work. The writer must be willing to back it.
+  - term: Student visa
+    meaning: Official permission to live in a country to study. Each country has its own rules and forms.
+tweaks:
+  - what: One job at a time
+    how: Ask for the school list first, then the timeline, then the essay check. One job at a time gives sharper answers.
+  - what: Budget
+    how: Give a total per year that includes living costs. It will then drop schools you cannot afford.
+  - what: Countries
+    how: Name two or three, not all. A short list makes the comparison clear.
+improve:
+  - Keep your school list and timeline in one note and update it as offers and dates come in.
+  - Once you have offers, ask for an offer comparison table with your own weights for cost, program, city and work rules.
+  - Paste back what you find on official sites, then ask it to rebuild the plan with those facts.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It balances due dates, setup time and machine load.
 new_slug: production-schedule-planner
 name: Production schedule planner
-summary: Give it your jobs, machines and due dates. Get a job order that meets
-  deadlines and keeps machines busy.
+summary: "Plan your production schedule: give it jobs, machines and due dates. You get a job order that cuts late orders and shows where work gets stuck."
 job: plan-supply-chain
 headline: Production schedule planner
-subhead: Put your jobs in the right order on the right machines so orders ship
-  on time and no machine sits idle. You get a concrete schedule instead of a
-  guess.
+subhead: Put your jobs in the right order on the right machines so orders ship on time and no machine sits idle. You get a concrete schedule instead of a guess.
 explain: |
   Put your jobs in the right order on the right machines so orders ship on time and no machine sits idle. You get a concrete schedule instead of a guess.
 
@@ -17,8 +14,11 @@ when:
   - You have more jobs than machines and need a clear order to run them.
   - Orders keep shipping late and you suspect poor sequencing.
   - Changeovers eat your day and you want to group similar jobs.
-  - You are replacing a whiteboard or spreadsheet schedule with something more
-    reasoned.
+  - You are replacing a whiteboard or spreadsheet schedule with something more reasoned.
+not_for:
+  - "You have one machine or a one-off job: sort a simple list by due date in a spreadsheet."
+  - "You need a long-range plan of how many machines or shifts you need: use a capacity planning step, or ask your operations lead."
+  - "You cannot share job times or due dates yet: gather them first, because the plan cannot be built without them."
 you_give:
   - List of jobs with routing and processing times
   - Machines and their limits
@@ -31,8 +31,32 @@ you_get:
   - Machine utilisation
   - Bottleneck and late job warnings
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
+  - "Describe your shop: job shop or flow shop, how many machines, shifts, and any tooling or labour limits."
+  - Paste your jobs as a table with job ID, machine, routing order, processing time, due date and setup time.
+  - Say your main goal, such as fewer late jobs or shortest total time.
+  - For the optimised schedule and Gantt chart, use an AI that can run Python code. Without it, you still get a reasoned job order.
+  - Check the bottleneck and late job warnings. Change any job that has moved, then run it again.
+output_sample:
+  input:
+    - Your jobs, with the machines each one needs and in what order
+    - Processing time for each job on each machine
+    - Due dates and priorities
+    - Setup or changeover times (optional)
+    - Your main goal, such as fewer late jobs or shorter total time
+  prerequisites:
+    - An AI that can run Python code, if you want the optimised schedule and Gantt chart
+    - A short note on your shop type, shifts and any tooling or labour limits
+  output:
+    - name: Executive summary
+      contains: The schedule period, key results, main bottlenecks and what changed from the last version.
+    - name: Detailed schedule by work center
+      contains: A table of each job and step with start time, end time, duration, setup time and status.
+    - name: Capacity analysis
+      contains: For each work center, hours available, hours scheduled, utilisation and any overload hours.
+    - name: Schedule performance metrics
+      contains: Total time to finish, average time in the shop, lateness, on-time delivery, work in progress and machine use.
+    - name: Gantt chart
+      contains: A visual timeline of jobs on each machine.
+    - name: Action items
+      contains: Overloaded work centers, jobs at risk of being late, setup savings and material holds, each with a suggested fix.

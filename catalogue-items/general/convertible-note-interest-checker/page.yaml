@@ -1,53 +1,111 @@
 new_slug: convertible-note-interest-checker
 name: Convertible note interest checker
 headline: Convertible note interest checker
-summary: Check simple accrued interest and the balance converting into shares.
+summary: "Work out the simple interest on a convertible note, the balance that converts and the shares it becomes. Missing facts are flagged."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Accrued interest, converting balance and unrounded shares. Share signed note, funded principal, simple annual rate, contractual year fraction, interest-conversion rule and approved conversion price.
+subhead: Give it the note's principal, the yearly interest rate, the time it has run and the conversion price. It works out the simple interest, the balance that converts and the number of shares before rounding. You get the figures and a list of missing facts.
 explain: |-
-  Accrued interest, converting balance and unrounded shares.
+  A convertible note is a loan that can turn into shares. Interest builds up while the note is open. When the note converts, the investor usually gets shares for the principal plus that interest. This convertible note interest checker works out how much interest has built up and how many shares it turns into.
 
-  Venture financing. Illustrative figures only. 100 at10% simple for2 years adds20, and120/2=60 shares;1 year yields110 and55 shares.
+  The sum is plain. Interest is principal times the yearly rate times the years the note has run. The converting balance is principal plus interest. Shares are the balance divided by the conversion price. The skill first checks the note really uses simple interest and really converts the interest. If the note pays interest in cash, or interest does not convert, the sum changes, and the skill says so.
+
+  The share count is not rounded. Many notes round in a set way, so check that with your lawyer. The skill takes the conversion price you give it. It does not set the price, and it does not decide if the note has been triggered. Practice numbers, not a real note: 100 at 10% simple for 2 years adds 20. The balance is 120. At a price of 2, that is 60 shares. After 1 year, the balance is 110 and the shares are 55.
 when:
-  - You need accrued interest, converting balance and unrounded shares.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A note is about to convert, and you want the interest and the balance that turns into shares.
+  - A founder asks how many shares a note holder gets at a given conversion price.
+  - You are checking a cap table or a lawyer's conversion schedule against the signed note.
+  - An investor asks how much interest has built up on their note.
+not_for:
+  - The conversion price depends on a cap or a discount. Use the Cap and discount conversion checker for the price, then bring it here.
+  - The investment is a SAFE, which has no interest. Use the Post-money SAFE ownership checker.
+  - The note pays part of its interest in cash and adds the rest to the loan. Use the Cash and PIK interest checker.
 you_give:
-  - Signed note, funded principal, simple annual rate, contractual year fraction, interest-conversion rule and approved conversion price.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The principal that was funded (from the signed note)
+  - The simple yearly interest rate (from the signed note)
+  - The time the note has run, in years, or the issue and conversion dates and the day count it uses
+  - Whether the interest converts into shares or is paid in cash (from the signed note)
+  - The conversion price per share (from the note, or from the Cap and discount conversion checker)
+  - The currency and units, such as USD thousands
 you_get:
-  - Accrued interest, converting balance and unrounded shares.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The interest that has built up
+  - The balance that converts, which is principal plus interest
+  - The number of shares before rounding
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the principal, the rate, the time the note has run and the conversion price. Say the currency and units. Attach the note's page on interest and conversion if you can.
+  - Ask in plain words, such as how much interest has built up, and how many shares does the note turn into?
+  - Check one line yourself. Interest is principal times rate times years. Shares are principal plus interest, divided by the conversion price.
+  - Read MISSING and CHECKS MISSED before you use any figure. Ask your lawyer how the note rounds shares.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Verify that all accrued interest converts and the actual note uses simple accrual with the supplied day-count year fraction
-    text: Verify that all accrued interest converts and the actual note uses simple accrual with the supplied day-count year fraction.
-  - title: 2. Compute principal times annual rate times year fraction, then add principal
-    text: Compute principal times annual rate times year fraction, then add principal.
-  - title: 3. Divide converting balance by approved conversion price; retain contractual share rounding for separate settlement review
-    text: Divide converting balance by approved conversion price; retain contractual share rounding for separate settlement review.
+  - title: Reads the note
+    text: Confirms the note uses simple interest, that the interest converts, and how the year count is set.
+  - title: Works out the interest
+    text: Multiplies principal by the yearly rate and by the years the note has run.
+  - title: Finds the converting balance
+    text: Adds the interest to the principal.
+  - title: Finds the shares
+    text: Divides the balance by the conversion price you give. The result is not rounded, because the note sets how to round.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given and lists checks it could not run. It never fills a gap with zero.
 output_shape: |-
-  Accrued interest, converting balance and unrounded shares.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Accrued interest <amount> | Converting balance <amount> | Shares before rounding <number>
+
+  SCOPE AND SOURCES
+  <dates, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <principal, yearly rate, years or dates and day count, interest-conversion rule, conversion price>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of balance to principal plus interest>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The principal that was funded
+    - The simple yearly interest rate
+    - The years the note has run, or its dates and day count
+    - The conversion price per share
+    - Whether the interest converts into shares
+  prerequisites:
+    - The signed note that sets the rate, the day count and what converts
+    - The conversion price, from the note or from the Cap and discount conversion checker
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The accrued interest, the converting balance and the shares before rounding.
+    - name: SCOPE AND SOURCES
+      contains: The dates, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that the balance equals principal plus interest.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Interest converts only if the note actually provides for it.
+  - what: A shorter or longer note
+    how: Change the years the note has run. Interest changes in a straight line with time.
+  - what: A different conversion price
+    how: Change the price. The balance stays the same and the share count moves.
+  - what: Interest that does not convert
+    how: Say so. The skill then converts the principal only and shows the interest apart, with how it is settled marked as unconfirmed.
 judge:
   - Interest converts only if the note actually provides for it.
   - Year fraction comes from dated evidence and contractual day count.
@@ -62,15 +120,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the signed note that sets the rate, the day count and the conversion terms
+    - The cap table or conversion schedule from your lawyer
+    - A named reviewer and the question you want answered
 terms:
+  - term: Convertible note
+    meaning: A loan that can turn into company shares instead of being paid back in cash.
+  - term: Simple interest
+    meaning: Interest worked out on the original principal only, with no interest on interest.
+  - term: Principal
+    meaning: The amount of money the investor put in.
+  - term: Conversion price
+    meaning: The price per share used to turn the note balance into shares.
+  - term: Day count
+    meaning: The rule the note uses to count days in a year.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real note.

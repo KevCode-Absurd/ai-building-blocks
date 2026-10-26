@@ -1,6 +1,6 @@
 new_slug: campaign-budget-scenario-planner
 name: Campaign budget scenario planner
-summary: Group campaigns by budget action and compare three plans. Check totals, learning risk and spend concentration before changing anything.
+summary: Plan your campaign budget in three scenarios. Check totals, learning risk and spend concentration before you move any ad budget.
 job: launch-and-scale-ads
 headline: Campaign budget scenario planner
 subhead: Share campaign spend, budget, results, targets and allowed total spend. Get three budget plans with balanced totals and change limits.
@@ -12,6 +12,10 @@ when:
   - You need three budget plans with balanced totals and change limits.
   - You need campaign budget scenario planner for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "You have no campaign-level spend and results data: pull a report from your ad platform first, then come back."
+  - "You run ads outside Meta and have not checked that platform's learning rules: use that platform's own budget tool."
+  - "Your campaigns all miss the target and none qualify to scale: get a creative review before you change budgets."
 you_give:
   - Campaign spend
   - Budget
@@ -21,9 +25,32 @@ you_get:
   - Three budget plans with balanced totals and change limits
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your AI tool and paste in the skill from the pack. No code or paid tool is needed.
+  - Paste your campaign numbers from the last 30 days. A table or a spreadsheet export works.
+  - Add your target return, total daily budget and how much risk you accept.
+  - Read the classification table first. Check that each campaign sits in the right group.
+  - Check that the new budgets add up to your total, then pick one of the three plans.
+  - Make the changes in your ad platform in the phases the plan gives. Leave each change alone for 72 hours.
+output_sample:
+  input:
+    - Each campaign's name, current daily budget and 30-day spend
+    - Each campaign's revenue and number of purchases
+    - Your target return on ad spend and your target cost per purchase (optional)
+    - Your total daily budget and how much risk you accept
+    - Lost impression share from budget and rank (optional)
+  output:
+    - name: Classification table
+      contains: Every campaign with its group (scale, maintain, reduce or pause), the action to take and the new daily budget.
+    - name: Scaling plan
+      contains: For each campaign to scale, three budget increases (conservative, moderate, aggressive) with phases and a risk level.
+    - name: Reduction plan
+      contains: For each campaign to cut, the new budget and the step-by-step phases, with no single move over 50%.
+    - name: Net impact summary
+      contains: Current daily spend and return next to the proposed spend and return, plus the monthly change.
+    - name: Implementation timeline
+      contains: What to change on day 1, days 2 to 3, days 4 to 7, day 8 and day 15.
+    - name: Monitoring checklist
+      contains: What to watch after each change, including when to revert and the no-edit window.
 how_it_works:
   - title: Check the inputs
     text: Confirm campaign spend, budget, results, targets and allowed total spend. Mark facts that are missing.

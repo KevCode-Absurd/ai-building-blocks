@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts your store into a type first, then applies the right rules.
 new_slug: online-store-auditor
 name: Online store auditor
-summary: Describe your store. Get ranked calls on marketing channels, homepage
-  layout, trust signals and marketplaces.
+summary: "Run an online store audit: describe what you sell and who buys. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces."
 job: run-your-store
 headline: Online store auditor
-subhead: Describe your store. Get ranked calls on marketing channels, homepage
-  layout, trust signals and marketplaces. Bring what you sell and who buys. Use
-  the result to plan your next step.
+subhead: Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces. Bring what you sell and who buys. Use the result to plan your next step.
 explain: |
   Ranked answers to the big whole-store questions: where to spend marketing money, how to lay out the homepage, which trust signals to show, and whether to sell on a marketplace. All of them depend on what kind of store you run, so it classifies first.
 
@@ -18,6 +15,10 @@ when:
   - Your homepage has a carousel and you wonder if it helps.
   - You are deciding whether to list on a big marketplace.
   - Customers hesitate and you need better trust signals.
+not_for:
+  - "You want to fix one product page: use a product page skill or ask your AI to review that page on its own."
+  - "You want to fix your cart or checkout form: review the checkout steps on their own, not the whole store."
+  - "You need help with prices, discounts, shipping, returns or loyalty: this audit does not cover them, so ask your AI for a focused review of each."
 you_give:
   - What you sell and who buys
   - Company size
@@ -29,7 +30,29 @@ you_get:
   - Homepage and category layout advice
   - Trust signal and marketplace recommendations
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Describe what you sell, who buys it, your size, channels, homepage and margin. Say so if you do not know something.
+  - Read the store classification first. Check that it matches how your buyers see your product.
+  - Some numbers are measured findings and some are practitioner tips. Check the sources in reference.md before you rely on a figure.
+  - Only offer a warranty or guarantee you can honour. Check any claim against your real product results.
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your company size, and whether your product is high-tech
+    - Your current marketing channels, homepage layout and recommendation label
+    - Your gross margin (optional)
+    - Any real sustainability practice, and whether you sell on a marketplace (optional)
+  output:
+    - name: Store classification
+      contains: Whether your product is bought for enjoyment or to do a job, which drives the other calls.
+    - name: Priority table
+      contains: Each row has a priority, an area, a recommendation, and the rule and number behind it.
+    - name: Channel mix
+      contains: Where to put marketing money, based on your product type.
+    - name: Layout and label calls
+      contains: Carousel or grid, visual style and how to label recommended products.
+    - name: Trust and marketplace calls
+      contains: Which trust signals to show and whether a marketplace listing suits your margin.
+    - name: What to leave alone
+      contains: Parts of your store that already work, with the reason to keep them.

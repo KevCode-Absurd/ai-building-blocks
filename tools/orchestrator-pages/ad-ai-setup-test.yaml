@@ -1,6 +1,6 @@
 new_slug: ad-ai-setup-test
 name: Prove your new ad AI setup beats the old one
-summary: Give it a story ad test plan. Get handoff cards that keep facts whole, then a blind old-versus-new score.
+summary: Test whether a changed AI setup really makes better ads. Run old and new side by side and get a blind score that says better, worse or cheaper.
 job: set-up-ai
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You changed how AI makes your ads and want proof before you switch.
   - Your AI steps drop a fact or invent one.
   - You pay for AI by use and want to know the cost per usable ad.
+not_for:
+  - "You have not changed your ads or AI setup yet: write the brief first with the Buyer brief writer."
+  - "You only want to check one ad before it goes live: use the Pre-launch ad checker."
+  - "You want to plan what to test with real ad spend: use the Ad test brief writer."
 you_give:
   - Customer reviews, copied as written
   - Your product facts
@@ -29,6 +33,27 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. It works step by step and saves each result.
+output_sample:
+  input:
+    - Customer reviews, copied as written, with source and date
+    - Your product facts, such as price, variants and how it is used
+    - The old setup and the image ads it made
+    - The new setup run on the same briefs
+    - Your landing page (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Both chains run on the same briefs, with every image ad saved
+  output:
+    - name: Story ad test plan
+      contains: The lead problem, the narrator, four stories and where the click goes.
+    - name: Handoff cards
+      contains: A card for each claim with full wording and limits, and a card for each AI step.
+    - name: Run rules
+      contains: How to save results, retry a failed step, resume a run and keep to budget.
+    - name: Old versus new score
+      contains: Pass rates, blind picks judged twice, failures, cost per usable ad and a decision.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plans the story ad test
     text: Uses the story ad test planner to sort customer words into problems and plan four stories on the lead problem.

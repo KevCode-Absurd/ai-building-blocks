@@ -1,0 +1,151 @@
+name: Healthcare Innovation Strategist agent
+summary: Draft or sharpen a healthcare investor memo, regulatory brief or grant section with one clear thesis and sourced claims. Not legal advice.
+headline: Healthcare Innovation Strategist agent
+subhead: Tell it about your healthcare company, who will read the document and what proof you already have. It drafts or sharpens one document for that one reader, keeps your story the same across documents, and flags every claim that has no source.
+job: plan-strategy
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  A healthcare investor memo, a regulatory brief and a pitch to a health
+  system all describe the same company. Trouble starts when each one tells a
+  slightly different story, or states an outcome nobody can source. This
+  healthcare innovation strategist agent keeps one thesis across all of them
+  and writes each document for one reader.
+
+
+  The thesis has three parts: the problem, why your solution works, and the
+  proof you already have. Each document opens with one specific credential,
+  such as years spent in a clinic or a risk programme you ran, not a vague claim
+  of healthcare experience. Regulatory risk is named, not softened. A rule that
+  is still contested is never written up as settled.
+
+
+  It also pushes back. If a memo will not land with its reader, it says so
+  before they do. It never decides for you. When a choice is still open, it
+  shows the trade-off, recommends one side and marks the decision as yours.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its audience
+  hooks and success targets describe the intended work. They are not measured
+  results from AI Blocks.
+when:
+  - You are writing a seed or Series A memo for a healthcare company and want the first paragraph to carry your strongest credential.
+  - Your product fits no existing regulatory category and you need a brief that names the question and your position.
+  - Your investor deck, grant draft and partner proposal have drifted apart and you want one version of each claim.
+  - A draft reads like a generic startup pitch and you want it sharpened for doctors, a health system or a funder.
+not_for:
+  - You want each health claim checked against its source. Use the Clinical Evidence agent.
+  - You want China healthcare ads or posts checked for banned claims. Use the Healthcare Marketing Compliance Specialist agent.
+  - You are approaching a national health ministry. Use the Health ministry engagement agent.
+  - You need legal advice or a regulatory filing. Ask a lawyer, because this agent only frames the question.
+you_give:
+  - Who will read the document and what you want them to do next, one reader per document
+  - What your company does and the problem it solves
+  - Your real credentials, such as clinical, healthcare finance or hospital operating experience, with specifics
+  - Your proof so far, such as pilot results, published studies or unit costs, with where each came from (optional)
+  - Your regulatory position, if you have one (optional)
+  - A draft to sharpen, or earlier documents to compare for drift (optional)
+you_get:
+  - One document drafted or sharpened for one reader, with specific rewrites where it is weak
+  - A thesis in three parts, which are the problem, why it works and your proof
+  - A credential line to open with, built only from facts you gave
+  - A list of open decisions, unsourced claims and regulatory points that need a lawyer
+  - A table of claims that differ between your documents, with one agreed wording for each (optional)
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Say who will read the document and what you want them to do. Then paste your company facts, your credentials and your proof, with the source of each. No code or web access is needed.
+  - Type "Draft the memo" for a new document, "Sharpen this draft" with your text pasted, or "Audit these documents" with two or more pasted.
+  - Read the open decisions list first. Answer what you can, then ask for a second draft.
+  - Check every number and every regulatory line against its source. Have a lawyer read the regulatory lines before anyone outside your team sees the document. The AI sends and posts nothing.
+how_it_works:
+  - title: Pick one reader
+    text: It names the one audience, such as an investor, a regulator, a health system or a funder, and the hook that suits that reader. It will not mix readers in one document.
+  - title: Anchor on a credential
+    text: It opens with one specific fact that shows why your team can solve this problem. If you gave no credential, it asks, and marks the gap if you have none.
+  - title: State the thesis
+    text: It writes the problem, the reason the solution works and the evidence, with proven points kept apart from projections.
+  - title: Frame the regulatory question
+    text: It names the rules that may apply, gives your position and the reason, and says plainly where the rule is contested.
+  - title: Sharpen or audit
+    text: For a draft it proposes specific rewrites, not general advice. For several documents it lists each claim and where the wording differs.
+  - title: Flag open items
+    text: It ends with decisions you have not made, claims with no source and points that need a lawyer or a doctor to review.
+output_shape: |-
+  DOCUMENT FOR <audience>
+    <first paragraph: credential anchor, then thesis>
+    <sections that suit this reader>
+
+  THESIS
+    Problem: <specific and sourced>
+    Why it works: <the mechanism>
+    Proof: <validated points with source> | Projections: <labelled as projections>
+
+  REGULATORY FRAMING
+    Question: <the rule question> | Our position: <position> | Basis: <reason> | Status: <settled or contested>
+
+  OPEN DECISIONS AND UNSOURCED CLAIMS
+    <item> | <what is needed to settle it>
+
+  NARRATIVE AUDIT (only when you share several documents)
+    <claim> | <where it appears> | <wording in each> | <one agreed wording>
+
+  CHECKS STILL NEEDED
+    <check> | <who should do it>
+output_sample:
+  input:
+    - The one reader and what you want from them
+    - What your company does, and your team's real credentials
+    - Your proof with sources, such as pilot data or studies (optional)
+    - A draft, or several earlier documents (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - A lawyer to review regulatory lines before you share the document
+  output:
+    - name: Document or rewrites
+      contains: A new memo or brief for one reader, or targeted rewrites of the weak lines in your draft.
+    - name: Thesis
+      contains: The problem, why the solution works and your proof, with projections labelled as projections.
+    - name: Credential anchor
+      contains: One specific opening fact about your team, built only from what you told it.
+    - name: Regulatory framing
+      contains: The rule question, your position, the reason, and whether the point is settled or contested.
+    - name: Open decisions and unsourced claims
+      contains: Each choice you have not made and each claim that still needs a source.
+    - name: Narrative audit
+      contains: Claims that read differently across your documents, with one agreed wording for each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your deck and earlier memos so it reads them instead of relying on a summary.
+  inputs:
+    - The studies, pilot data or unit costs behind each outcome claim.
+    - Two or three past documents that went to the same type of reader.
+    - A note of any decision you have already made, such as the market you will launch in first.
+terms:
+  - term: Credential anchor
+    meaning: One specific fact near the top that shows why your team can solve this problem.
+  - term: Thesis
+    meaning: Why this company exists, why now, and why this team can deliver it.
+  - term: Narrative drift
+    meaning: Your documents slowly tell different versions of the same story.
+  - term: Projection
+    meaning: A forecast that has not happened yet, so it must be labelled as one.
+  - term: Contested rule
+    meaning: A regulatory point where experts or regulators disagree, so it cannot be called settled.
+tweaks:
+  - what: Reader
+    how: Name one reader, such as seed investors, a health system or a grant funder. Ask for a second version for a different reader.
+  - what: Writing rules
+    how: The profile bans em dashes, passive voice and the words clinician and provider. Tell it if your reader needs other wording.
+  - what: Length
+    how: Ask for a one-page memo, a six-paragraph brief or a short talking-points list.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

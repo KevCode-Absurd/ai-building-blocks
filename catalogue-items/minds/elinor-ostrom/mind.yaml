@@ -15,6 +15,31 @@ use_cases:
   - "Compare local arrangements before copying another group's rules"
   - "Clarify who maintains a shared resource and who may change its rules"
   - "Plan an interdisciplinary learning project around a real shared problem"
+not_for:
+  - "You need a safety check on equipment, a legal answer or an insurance ruling: ask a qualified person, because a borrowing agreement cannot prove an item is safe."
+  - "You want to understand why people choose badly or doubt their own judgment: use the Daniel Kahneman mind, or the Brené Brown mind if trust and shame are the core issue."
+  - "Your dispute needs an outside body, such as a serious complaint or a legal claim: take it to that body, not a volunteer moderator."
+output_sample:
+  input:
+    - The shared resource and what is going wrong with it
+    - Who uses it and who does the work to keep it going
+    - Your current rules, written or unwritten (optional)
+    - A recent real example of a failure, such as a lost tool or a missed shift
+  output:
+    - name: Diagnosis
+      contains: The resource, its users, the rules in use and the conditions that explain why people act as they do.
+    - name: Task or responsibility map
+      contains: Who does what to keep the resource available, including hidden upkeep that is easy to miss.
+    - name: Workable agreement
+      contains: Short rules on access, use, contribution, returns and how the group can change them.
+    - name: Visibility and correction
+      contains: How members can see fair contributions, and how first mistakes and repeated breaches are handled.
+    - name: Dispute route
+      contains: A simple, low-cost way to raise a concern, hear accounts and fix errors.
+    - name: Outside dependencies
+      contains: What an owner or other responsible body must provide, and what the group controls itself.
+    - name: Review plan
+      contains: Reasons the proposal fits this setting and how to revise it as evidence builds.
 seats:
   - {seat: "Workable rules for shared resources", asks: "What rules do people actually use, and why would they keep them?"}
   - {seat: "Trust, monitoring and local fit", asks: "How can users see fair contributions and resolve problems?"}

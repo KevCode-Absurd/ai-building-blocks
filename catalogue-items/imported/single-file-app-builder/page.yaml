@@ -2,33 +2,55 @@ thinking: medium
 thinking_why: It sets up a project, builds it and bundles it with set steps.
 new_slug: single-file-app-builder
 name: Single-file app builder
-summary: Describe the app. Get a working React web app bundled into one HTML
-  file you can open or share.
+summary: Build a small React web app and get it bundled into one HTML file. Share it or open it with no install. Use it as a single-file app builder.
 job: build-websites
 headline: Single-file app builder
-subhead: A working React web app packed into one HTML file that you can open on
-  your own or share as is. No server or install needed for whoever opens it.
+subhead: Describe the app you want. Your AI builds it as a React project, then packs it into one HTML file. Whoever opens the file needs no server and no install.
 explain: |
   A working React web app packed into one HTML file that you can open on your own or share as is. No server or install needed for whoever opens it.
 
   It runs a script that creates a project with React, TypeScript, Vite, Tailwind CSS and more than forty shadcn/ui components. You edit the generated code to build your app. A second script then bundles everything into a single HTML file with Parcel. You see it displayed and can test it. The style rules push you away from plain defaults: centred everything, purple gradients, even rounded corners and the Inter font. You need Node on your computer.
 when:
   - You want a small tool, calculator or dashboard you can send as one file.
-  - A single text box prompt is not enough and you need real components.
-  - You want to share a prototype by email.
-  - You want a polished interface without hand-writing it.
+  - A plain prompt gives you a page that is too basic, and you need real parts like tabs, forms and sliders.
+  - You want to email a working prototype to a client or teammate.
+  - You want a clean, polished look without writing the code yourself.
+not_for:
+  - "You only need a simple one-page HTML or JSX file: ask your AI for it in a plain prompt, no project setup needed."
+  - "Your AI can't run code or use files: use a plain prompt to draft the page, or ask a web developer to build the app."
+  - "You need an app with a server, a login or a database: hire a developer, since one HTML file can't hold those."
 you_give:
-  - A description of the app
-  - Any colours or style notes (optional)
-  - Node installed
+  - A description of the app and what it should do
+  - Colours or style notes (optional)
+  - A name for the project
 you_get:
-  - A React project
-  - One bundled HTML file
-  - A preview you can test
-  - A look that avoids generic AI design
+  - A React project folder with your app code
+  - One file called bundle.html that holds the whole app
+  - A preview of the app you can try right away
+  - A design that avoids plain defaults like purple gradients and centred-everything layouts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run code and use files, and paste this skill. Check that Node 18 or newer is installed.
+  - Describe your app. Add style notes if you have them.
+  - Your AI runs the setup script with your project name. This makes the project folder.
+  - It edits the generated code to build your app.
+  - It runs the bundle script. This makes bundle.html with everything inside.
+  - Open bundle.html to try the app. Then send the file to others, or ask your AI to test it.
+output_sample:
+  input:
+    - A description of the app you want
+    - Colours or style notes (optional)
+    - Your app name, used as the project folder name
+  prerequisites:
+    - An AI that can run code and use files
+    - Node 18 or newer installed on the computer that runs it
+  output:
+    - name: Project folder
+      contains: A React and TypeScript project set up with Vite, Tailwind CSS and over 40 shadcn/ui components.
+    - name: Edited app code
+      contains: Your app, written by editing the generated files in the project.
+    - name: bundle.html
+      contains: One self-contained HTML file with all code and styles inside it, ready to open or share.
+    - name: Preview
+      contains: The bundled app shown to you in the chat so you can try it.
+    - name: Test check (optional)
+      contains: A check of the app with a browser tool, only if you ask for it or something breaks.

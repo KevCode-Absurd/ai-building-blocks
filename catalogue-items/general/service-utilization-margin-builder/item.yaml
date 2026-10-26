@@ -1,26 +1,25 @@
 slug: service-utilization-margin-builder
 name: Service utilization margin builder
-summary: A service hours and delivery contribution bridge
+summary: "Turn a month of paid hours into utilization, revenue and delivery margin for a service team, so you see what each billable hour really earns."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+before: []
+next: [pricing-decision-planner, bad-year-break-even-tester, cash-versus-earnings-checker]
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

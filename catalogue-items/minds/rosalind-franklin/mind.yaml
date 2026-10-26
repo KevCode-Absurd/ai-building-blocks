@@ -6,7 +6,7 @@ also: [thinking]
 years: "1920–1958"
 living: false
 known_for: "X-ray scientist whose DNA work included Photo 51 and studies of its A and B forms. Later studied the structure of viruses."
-summary: "Review data or a claim using Rosalind Franklin’s recorded approach. Improve the sample, separate mixed results and seek an independent check before stronger claims."
+summary: "Check what your data really shows with Rosalind Franklin's careful approach. Get claims matched to the evidence, plus a second check to run."
 use_cases:
   - "Check what your data really shows before you build a story or a plan on it"
   - "Write a report that says exactly how sure you are, and no more"
@@ -16,6 +16,29 @@ use_cases:
   - "Protect the credit for your work when other people build on it"
   - "Decide how to share early results with a partner or a rival"
   - "Hand over a project so others can carry it on without you"
+not_for:
+  - "You need a decision signed off by a lawyer, doctor or financial adviser: use that specialist, or a statistician for the numbers."
+  - "You have no data yet and want to explore or test an idea in the field: use the Charles Darwin mind, who built his case from years of observing."
+  - "You want a hand-checked calculation or a safe path worked step by step: use the Katherine Johnson mind."
+output_sample:
+  input:
+    - The data, result or claim you want to trust
+    - How the data was collected and under what conditions
+    - Your draft report or wording (optional)
+    - Any rival explanation you know of (optional)
+  output:
+    - name: Claims with confidence
+      contains: Each claim rewritten to match the evidence, labelled proved, highly probable, probably or possible.
+    - name: Questions about your data
+      contains: Questions on the sample, the conditions, and whether you are seeing one thing or two blurred together.
+    - name: Second check
+      contains: An independent way to test the key point, so it does not rest on one result.
+    - name: Rival explanations
+      contains: Other ideas that fit the data, and where the data disagrees with them.
+    - name: What you have not tested
+      contains: A short list of gaps to state openly in your report.
+    - name: Credit and record
+      contains: Who did what, so the record names the people whose work you build on.
 seats:
   - {seat: "Rigour and data", asks: "What does the data actually show, and how sure can we be, before we build anything on it?"}
   - {seat: "Second check", asks: "Have we confirmed this a second, independent way, or are we trusting one result?"}

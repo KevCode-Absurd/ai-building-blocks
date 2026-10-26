@@ -1,6 +1,6 @@
 new_slug: product-page-image-checker
 name: "Product page image checker"
-summary: "Attach your product images and plan. Get every fault, one fix each and a score out of 100."
+summary: "Check your product page images before you upload. Get a pass or fail for each image, one fix per fault and a score out of 100 for the set."
 job: product-photos
 thinking: high
 thinking_why: "It judges work against many checks, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - Your product page images are made and you're about to upload them.
   - A designer or an AI tool made the images and you want an independent check before you approve them.
   - You've remade one image and need to know the set still works together.
+not_for:
+  - "You have no plan for your images yet: use the Product page gallery planner first, then bring its plan here."
+  - "You want to check ad creatives or lifestyle shots: this checks product page gallery images only, so ask a designer or a person on your team to review ads."
+  - "You only have a screenshot of your live page: it can stand in for the phone check, but the word and figure checks need the full-size files."
 
 you_give:
   - Every finished image at full size, in each shape you'll upload
@@ -36,6 +40,27 @@ how_to_use:
   - Paste the plan and your facts, and attach the real product photos.
   - Fix the Stop faults first, one change per remake, then run the check again on the new images.
   - Upload only when every image passes and the set verdict is clean.
+output_sample:
+  input:
+    - Your finished product page images, at full size
+    - "Your plan for each image: its job and its exact words"
+    - Your real product photos
+    - Your facts, such as figures, claims and guarantee terms
+    - Where the images will go, such as your store or a marketplace (optional)
+  prerequisites:
+    - An AI that can read images you attach
+    - A plan for each image, for example from the Product page gallery planner
+  output:
+    - name: Image verdicts
+      contains: A PASS or FAIL for each image, with one line per fault and its severity.
+    - name: Fault lines
+      contains: "For each fault: the check, where it is, what was planned, what came out and the one fix."
+    - name: Set verdict (S1 to S4)
+      contains: Whether the set shows one product, gives each image one job, is in order and has a valid first image.
+    - name: Score
+      contains: A score out of 100 now and after the fixes, with the sum shown.
+    - name: Not run
+      contains: Any check that could not run, and what you need to add to run it.
 
 how_it_works:
   - title: Checks the set

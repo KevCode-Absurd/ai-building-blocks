@@ -1,51 +1,91 @@
 new_slug: test-input-inflation-against-stock-clearance
 name: Test input inflation against stock clearance
 headline: Test input inflation against stock clearance
-summary: A stock recovery bridge and separate replenishment margin scenario
+summary: See how much cash clearing old stock gets back, then test what a higher input cost and a price rise do to your next batch's margin.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A stock recovery bridge and separate replenishment margin scenario. Share historical stock cohort purchase costs, proposed full/markdown sell-through, actual clearance expenses and a separately approved future input-price/pass-through scenario.
-explain: |-
-  A stock recovery bridge and separate replenishment margin scenario.
+subhead: "Give it what you paid for the old stock, what sold at full price and on markdown, your clearance costs, and a price scenario for restocking. It reconciles the old batch, then tests the new batch on its own. You get two separate bridges: cash recovered on old stock and margin on the new batch."
+explain: |
+  A retailer holding old stock at the old cost faces two questions that get mixed together. How much cash does clearing the old stock get back? And if a key input now costs more, what happens to the margin on the next batch? Teams often use the new cost on the old stock, or treat the cost of unsold stock as new cash.
 
-  Retail purchasing and clearance. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow answers each question on its own. Step 1 reconciles the old batch: units sold at full price and on markdown, the money received, the cost of what sold, and the cost of what is still on the shelf. It reports the profit on units sold and, separately, the cash recovered against the whole batch's purchase cost. Step 2 takes the new input price and the share of the rise you pass into the selling price, using the physical amount of the input in each unit. It shows the rise recovered and the rise not recovered in the new batch.
+
+  It assumes demand does not change when you raise prices. It is arithmetic on your figures, not a pricing or hedging recommendation.
 when:
-  - You need a stock recovery bridge and separate replenishment margin scenario.
-  - You work on retail purchasing and clearance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You have old stock at the old cost and are deciding how deep to mark it down.
+  - The cost of a key input, such as cotton, coffee or resin, has risen and you want to know what a price rise must cover.
+  - A lender or partner asks how much of the old batch has paid back what you spent on it.
+  - You are planning a restock and want old-stock results kept out of the new batch's margin.
+not_for:
+  - You want a cash plan for your next stock order. Use Plan the cash for your next stock order.
+  - Your stock count does not match your records. Use Explain a warehouse stock count variance.
+  - You want to know how many units a higher price will sell. This assumes demand stays the same.
+  - You do not know what the old stock cost, or have no sales yet. Step 1 stops on missing records.
 you_give:
-  - Historical stock cohort purchase costs, proposed full/markdown sell-through, actual clearance expenses and a separately approved future input-price/pass-through scenario.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The old batch: units bought, cost per unit and when it was bought (from supplier invoices)"
+  - Units sold at full price and on markdown, with the prices received (from your sales report)
+  - Clearance costs paid, such as ads or handling (optional)
+  - "For the new batch: input cost per kilogram before and after, kilograms in each unit, other cost per unit and planned volume"
+  - The selling price you approved, the share of the cost rise it passes on, and the currency and dates
 you_get:
-  - A stock recovery bridge and separate replenishment margin scenario.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Units sold and units left, with the money received and the cost of the units sold
+  - Profit on units sold, after their cost and clearance costs
+  - Cash recovered so far against the whole batch's purchase cost
+  - New batch margin with the input rise, split into recovered and unrecovered cost
+  - Missing facts and the checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Pick one that can make spreadsheets if you want a workbook.
+  - Attach the supplier invoices for the old batch, your sales report and the clearance costs. Paste the new input price and the price you approved. Say the currency and dates.
+  - After step 1, check that units sold are no more than the batch, and that the cost of unsold stock is not counted as cash.
+  - After step 2, check the old-stock bridge and the new-batch margin are shown apart, and that only the pass-through you approved was used.
+  - Fill every MISSING line before anyone relies on the result. Nothing here changes a price, places an order or hedges a cost.
 how_it_works:
   - title: Retail markdown stock reconciler
-    text: Reconcile old-cohort units, receipts, sold purchase cost and held stock cost memo. Pass remaining quantity and actual purchase-cost vintage, not a hypothetical replacement price. Preserve both sold-unit contribution and full-cohort cumulative purchase cash recovery; never use the unsold purchase-cost memo as new cash.
-  - title: Commodity pass through cost bridge
-    text: Model the future replenishment input-price and approved price-recovery scenario using the correct physical intensity. Present old-stock cash recovery and new-cohort margin as separate bridges with explicit timing and no assumed demand response.
+    text: Freezes the old batch and its cost. Checks full-price plus markdown units against the batch and refuses overselling. Reports profit on units sold, and cumulative cash against the full batch cost. Hands step 2 the units left and the real cost of the old batch.
+  - title: Commodity pass-through cost bridge
+    text: Takes the old and new input cost per kilogram and the kilograms in each unit. Works out extra cost per unit, applies only the approved pass-through share to the price, and rebuilds unit and volume margin. Splits the rise into recovered and unrecovered.
 output_shape: |-
-  A stock recovery bridge and separate replenishment margin scenario.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  PERIOD, CURRENCY, UNITS   <period>, <currency>, <unit>
+
+  1 OLD STOCK   batch <units> at <cost> = <n>
+                sold full price <u> at <p> + markdown <u> at <p> = received <n>
+                cost of units sold <n> | clearance cost <n> | profit on units sold <n>
+                still held <units> (cost <n>, not cash) | cumulative cash vs full batch cost <n, signed>
+
+  2 NEW BATCH   input <old> to <new> per kg x <kg per unit> = extra cost per unit <n>
+                price rise <n> recovers <%> | margin per unit <old> to <new> | volume <u> | total <n>
+                recovered <n> | not recovered <n>
+
+  MISSING   <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - "The old batch: units, cost per unit and purchase date"
+    - Units sold at full price and on markdown, with prices received
+    - Clearance costs (optional)
+    - The new input cost, kilograms per unit, approved price and pass-through share
+  prerequisites:
+    - Supplier invoices for the old batch and your sales report
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: Step 1 old stock
+      contains: Units sold and left, money received, cost of units sold, clearance cost and profit on units sold.
+    - name: Cumulative cash
+      contains: Cash recovered so far against the full batch purchase cost, kept apart from profit.
+    - name: Step 2 new batch
+      contains: Extra cost per unit, the price rise, margin before and after, and total margin at planned volume.
+    - name: Recovered and not recovered
+      contains: How much of the input cost rise the new price covers, and how much it leaves.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Historical stock keeps its original purchase basis; prospective input inflation is not applied retroactively to existing inventory cost. Sold-unit contribution and cumulative cash after the full original cohort purchase remain distinct; stock cannot be oversold.
+  - what: A deeper markdown
+    how: Lower the markdown price. Money received and profit fall, and cumulative cash shows how far the batch is from paying back.
+  - what: More pass-through
+    how: Raise the share of the cost rise in the price. The unrecovered cost falls.
+  - what: Selling more than you bought
+    how: Enter more units sold than the batch. Step 1 refuses and says the records do not match.
 judge:
   - Historical stock keeps its original purchase basis; prospective input inflation is not applied retroactively to existing inventory cost. Sold-unit contribution and cumulative cash after the full original cohort purchase remain distinct; stock cannot be oversold.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +96,31 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each batch's purchase invoices and sales in one sheet, so the next clearance starts from clean records.
+  - Save each input price you tested, so you can compare with what you really paid at restock.
+  - Run Plan the cash for your next stock order next, to size the restock.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: Your sales report
+      why: It gives the real units and prices for each sale, which are facts, not estimates.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Supplier invoices that show the old batch's unit cost.
+    - The input's weight in each finished unit, from your bill of materials.
+    - A named person who approves price changes.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Markdown
+    meaning: A cut from the full price to move stock faster.
+  - term: Batch
+    meaning: One purchase of stock, tracked as a group. Also called a cohort.
+  - term: Profit on units sold
+    meaning: Money received less the cost of the units that sold and the clearance costs. Also called contribution.
+  - term: Pass-through
+    meaning: The share of an input cost rise that you pass on in the selling price.
+  - term: Cumulative cash
+    meaning: Everything received less the full batch purchase cost and clearance costs, across their actual dates.
+before: []
+next:
+  - plan-the-cash-for-your-next-stock-order
+  - explain-inventory-accounting-margin-effects

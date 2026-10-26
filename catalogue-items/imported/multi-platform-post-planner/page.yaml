@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Posts follow platform norms with simple choices.
 new_slug: multi-platform-post-planner
 name: Multi-platform post planner
-summary: Say what you want to share. Get posts made for each platform, with
-  hooks and a posting plan.
+summary: Turn one idea into social media posts for X, LinkedIn, Instagram and Facebook. Get hooks, hashtags and a weekly posting plan.
 job: grow-social
 headline: Multi-platform post planner
-subhead: Say what you want to share. Get posts made for each platform, with
-  hooks and a posting plan. Bring what you want to share. Use the result to plan
-  your next step.
+subhead: Say what you want to share. Get posts made for each platform, with hooks and a posting plan. Bring what you want to share. Use the result to plan your next step.
 explain: |
   Posts for X, LinkedIn, Instagram and Facebook from one idea, each written to suit its platform, plus a plan for when to post.
 
@@ -18,6 +15,10 @@ when:
   - Your posts get no replies and you do not know why.
   - You need a week of content planned in one sitting.
   - You are launching a product and need a post for each channel.
+not_for:
+  - "You post about regulated topics such as finance, health or law: have a compliance person review each post and use your approved templates."
+  - "A crisis or sad news event is happening: pause scheduled posts and write a short, calm note by hand."
+  - "You need the posts published for you: this plan only writes them, so use your platform's own scheduler to post them."
 you_give:
   - What you want to share
   - Your goal, such as sales or awareness
@@ -30,7 +31,27 @@ you_get:
   - A clear action to close each post
   - A posting calendar
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
+  - Add what you want to share, your goal, your audience and the platforms you use.
+  - Add your brand voice notes if you have them (optional).
+  - Read each post. Swap any offer, number or story you did not give with your own facts.
+  - Check the posting times against your own analytics before you schedule anything.
+output_sample:
+  input:
+    - What you want to share
+    - Your goal, such as awareness, leads or a launch
+    - Your audience and the platforms you use
+    - Your brand voice notes (optional)
+  output:
+    - name: Platform posts
+      contains: A separate post for X, LinkedIn, Instagram and Facebook, each in the length and style that suits it.
+    - name: Hooks
+      contains: A strong first line for each post, since it shows before the see more break.
+    - name: Calls to action
+      contains: One clear action at the end of each post, such as comment, share or click.
+    - name: Hashtags and mentions
+      contains: Hashtag picks for each platform and accounts worth tagging.
+    - name: Posting times
+      contains: General timing guidance for each platform, to check against your own analytics.
+    - name: Weekly content calendar
+      contains: Five to seven days of posts with platform, time, copy, media needed and a tracking tag.

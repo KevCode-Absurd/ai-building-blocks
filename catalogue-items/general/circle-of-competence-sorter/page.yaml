@@ -1,6 +1,6 @@
 new_slug: circle-of-competence-sorter
 name: "Circle of competence sorter"
-summary: "Describe a business or bet. Get it sorted as yes, no or too tough, with your real edge written down."
+summary: "Test whether you really understand a business or bet. Get a yes, no or too tough sort, plus your real edge and the first question you can't answer."
 job: money-and-investing
 thinking: medium
 thinking_why: "It judges your honest answers against fixed rules for each basket. The rules are clear, but it must spot where an answer is a guess."
@@ -17,6 +17,10 @@ when:
   - You like the look of a business or a deal but could not explain how it makes money without notes.
   - A friend, a headline or a salesperson has pushed you toward something outside your field.
   - You want to decide what to study next to widen what you can judge.
+not_for:
+  - "You need a buy or sell call on a named stock: this gives a method of analysis only, so talk to a licensed financial adviser."
+  - "You want to size up a market or a rival's strength: do that research first, then bring what you learn here."
+  - "You need to check if a business survives a bad year: work through the numbers in a spreadsheet or with your accountant."
 
 you_give:
   - The business, bet or field and what it sells
@@ -29,11 +33,33 @@ you_get:
   - The first question you cannot answer, and a plan to widen the circle if it is worth it
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the business or bet and say what you have done in the field.
-  - Answer the five questions without looking anything up. Say "blank" when you do not know.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill, or open it if you added it to your AI. No code, files or paid tools are needed.
+  - Describe the business or bet. Say what work you have done in the field.
+  - Answer the five questions without looking anything up. Write blank when you do not know.
   - Read the basket and the first question you could not answer.
-  - Take a yes to the "Business power tester" or a too-tough to your reading list.
+  - If you got a too tough, keep it on a reading list. If you got a yes, test the money side next with the Bad-year break-even tester.
+output_sample:
+  input:
+    - The business, bet or field, and what it sells
+    - Your background in the field, such as years worked or daily use (optional)
+    - A report on its edge or risks (optional)
+  output:
+    - name: The business
+      contains: One plain sentence on what it sells, who buys it and how the money comes in.
+    - name: The five answers
+      contains: Your answers on money in, costs, why customers leave, rivals and ten-year change, each marked KNOW, GUESS or BLANK.
+    - name: Your edge
+      contains: What you see better than the next person, or the words no edge.
+    - name: The basket
+      contains: YES, NO or TOO TOUGH, with the reason in a line.
+    - name: The first question you cannot answer
+      contains: The first sharp question where your knowledge runs out.
+    - name: To widen the circle
+      contains: What to learn and how long it takes, or a call to pass.
+    - name: Missing
+      contains: What information would change the sort.
+    - name: Checks missed
+      contains: One line for each check still failed, or none.
 
 how_it_works:
   - title: One plain sentence

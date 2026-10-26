@@ -1,7 +1,7 @@
 new_slug: retail-markdown-stock-reconciler
 name: Retail markdown stock reconciler
 headline: Retail markdown stock reconciler
-summary: A stock cohort reconciliation with sold contribution and cumulative purchase cash recovery
+summary: "Check a retail markdown stock reconciliation: see sold-unit contribution, units left and cash recovered against the full purchase cost of a stock batch."
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a stock cohort reconciliation with sold-unit contribution, remaining units and cumulative cash after the full cohort purchase.
   - You work on retail stock cash recovery and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need profit for a period or current-period cash flow: use your accountant or a finance planning tool instead."
+  - "You need tax reporting or sales tax figures: ask your accountant, since this does not cover tax."
+  - "You need to price a markdown or decide a clearance plan: use a spreadsheet or a pricing tool, since this only checks sales that already happened."
 you_give:
   - Opening stock cohort units and unit purchase cash cost, full-price and markdown units sold and realized prices, clearance cash expenses; identify the timing of the original cohort purchase.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,29 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Units in the opening stock batch and the purchase cost per unit
+    - When the batch was bought and the total purchase cash
+    - Units sold at full price and the price you got
+    - Units sold at markdown and the price you got
+    - Clearance costs paid in cash (optional)
+  prerequisites:
+    - An AI that can create and open spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Scope and dated sources
+      contains: The records used, their dates, the currency and what the work covers.
+    - name: Inputs and assumptions
+      contains: Every number you gave, with its source and any assumption marked as one.
+    - name: Model calculations and reconciliations
+      contains: Units sold against opening units, sold-unit contribution, units left and cumulative net cash for the batch.
+    - name: Editable workbook
+      contains: A spreadsheet with live formulas, an input schema and test cases you can change and recalculate.
+    - name: Actual file verification
+      contains: The checks that ran on the saved workbook, such as recalculation and reopening the file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs still needed and any check that failed or could not run, or none.
 how_it_works:
   - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
     text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.

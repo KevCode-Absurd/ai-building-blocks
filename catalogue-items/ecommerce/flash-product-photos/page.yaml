@@ -1,6 +1,6 @@
 new_slug: flash-product-photos
 name: Flash snapshot product photo maker
-summary: Attach your product photos. Get 6 flash snapshot prompts from one real occasion.
+summary: Plan six flash snapshot product photos from one real occasion. Get the flash settings, a shot roll and one image prompt per photo.
 job: product-photos
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,11 @@ when:
   - Your ads look too polished and you want photos that feel like real life.
   - You need a "people like you" strip of photos for social or an email.
   - Your product belongs to a real moment, such as breakfast, a picnic or a dinner with friends.
+not_for:
+  - "You want the first image on a product page. Flash glare makes colour and label hard to judge. Use the Product page gallery planner."
+  - "You want clean studio shots of the product alone. Use the Product photo shoot planner."
+  - "You want to copy the look of one photo you like. Use the Reference-style product photo maker."
+  - "Your product is for children and you want a child in the frame. This skill never shows a child or any part of one."
 you_give:
   - Real photos of the product, including one of it in a hand or in use
   - Who buys it, and where, when and with whom they use it
@@ -31,7 +36,7 @@ how_to_use:
   - Attach your product photos, including one of it in a hand if you have it.
   - Say who buys it and their moment, such as "busy parents, 7 am, kitchen, school run".
   - Read the dials and the roll. Cross out frames that don't fit your brand, then approve.
-  - Make the test photo first, check the product against your real photo, then make the rest.
+  - Make the test photo first in ChatGPT or Gemini, because Claude writes the prompts and cannot draw. Check the product against your real photo, then make the rest.
 how_it_works:
   - title: Writes down the product
     text: Fixes one phrase for your product, including what it is not, and repeats it word for word in every prompt.
@@ -145,6 +150,32 @@ example:
     beside the lens as fill, a hard shadow on the wall just behind her.
     Fine film grain, slightly off level. No added words, date stamps or
     borders.
+output_sample:
+  input:
+    - Real photos of your product, including one in a hand or in use
+    - Who buys it, and where, when and with whom they use it
+    - Your brand's places, colours and what you never show
+    - Where the photos will run, and how many you want (optional, six is the default)
+  prerequisites:
+    - An image AI that can draw, such as ChatGPT or Gemini, to make each photo from its prompt
+  output:
+    - name: Before we start
+      contains: What is missing from your photos or facts, and whether the flash look fits your brand.
+    - name: Product phrase
+      contains: One exact line for your product, and what it is not, repeated word for word in every prompt.
+    - name: Flash dials
+      contains: Three settings for light and colour. They are how much room light shows, how close the wall is and the colour of the room.
+    - name: The roll
+      contains: Six frames from one occasion in time order. Each has the moment, who is in it, a hand by hand action and a job.
+    - name: Test frame
+      contains: The one frame to make first, and what to check in it.
+    - name: Prompts
+      contains: One prompt per frame in a fixed order, ending with no added words or date stamps.
+    - name: Check log
+      contains: For each photo, what was asked, what came back and what was fixed.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
+
 tweaks:
   - what: The buyer and moment
     how: This sets the occasion and every room. "Busy parents on the school run" gives a bright kitchen with flash as fill; "friends at a dinner party" gives an evening table with lamps glowing.

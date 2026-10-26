@@ -1,0 +1,42 @@
+slug: agency-academic-narratologist
+name: "Narratologist agent for story structure"
+summary: "Check a story's structure, character arcs and pacing against named frameworks. Get what is weak, why, and two or three ways to fix it."
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: academic/academic-narratologist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-narratologist.md
+  licence: MIT
+  original_name: Narratologist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 12d7a6fa6134c014e3734f8203f0b8634e627cffe5985fa1b69d25c4a69094b5
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Narratologist
+  - Agency Agents
+  - Academic
+credits:
+  - title: Narratologist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-narratologist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

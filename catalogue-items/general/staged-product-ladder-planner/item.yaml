@@ -1,6 +1,6 @@
 slug: staged-product-ladder-planner
 name: "Staged product ladder planner"
-summary: "Describe your end goal and your first product. Get a step-by-step plan where each sale funds the next, cheaper product."
+summary: "Plan a product ladder where each sale pays for the next, cheaper product. Get prices, a funding check and a limit on your losses."
 category: general
 type: skill
 role: make
@@ -15,5 +15,8 @@ origin: rebuilt
 version: 1.0.0
 minds: [elon-musk]
 credits:
-  - {title: "Master Plan, Part Deux", by: "Elon Musk, filed with the SEC", used: "A staged plan where an early, costly, small-run product pays for the next, cheaper one, written in plain words"}
-  - {title: "Elon Musk", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Elon_Musk", used: "Background on risking only money you can afford to lose on a first step"}
+  - {title: "The Secret Tesla Motors Master Plan (just between you and me)", by: "Elon Musk, Tesla blog, 2006", used: "The idea of a small, costly first product whose sales pay for a cheaper, wider one, and so on to a broad product"}
+  - {title: "Master Plan, Part Deux", by: "Elon Musk, 2016", used: "Writing a plan in public, in plain words, so buyers can follow where you are going"}
+  - {title: "Elon Musk", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Elon_Musk", used: "Background reading only. The risk limit and pre-order cautions in this skill are our own guard rails, not his advice"}
+next: [price-first-cost-squeeze-planner, smallest-test-picker, first-customers-by-hand-planner, go-or-no-go-launch-checker]
+needs_mode: manual

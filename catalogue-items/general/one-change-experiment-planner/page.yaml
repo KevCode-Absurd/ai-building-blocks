@@ -1,6 +1,6 @@
 new_slug: one-change-experiment-planner
 name: "One-change experiment planner"
-summary: "Describe what to test. Get a plan that changes one thing and says what each result means."
+summary: "Plan a one-change experiment. Tell it what you want to learn and get a test plan that changes one thing and says what each result means."
 job: test-an-idea
 thinking: medium
 thinking_why: "It weighs which factor to test and what each result means, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - You changed three things at once and can't say which one worked.
   - Someone asks "does this work?" and you can't say what working means.
   - You are about to run a test and want a plan you can follow without second-guessing it.
+not_for:
+  - "You want to compare two versions of ad copy: use the Split-run test planner or the Cross-over copy test planner."
+  - "You have no number you can measure: first decide how you will count the result, or ask a person who sees the data."
+  - "You want many cheap tests, not one clean one: use the Trial log planner."
 
 you_give:
   - What you want to learn, in a sentence or two
@@ -33,6 +37,28 @@ how_to_use:
   - Answer its questions about what else might affect the result.
   - Write the no-effect result into your notes before you start the test.
   - Run one change at a time. Bring back the numbers and ask it what they mean.
+output_sample:
+  input:
+    - What you want to learn, in a sentence or two
+    - What you can change and what you can measure
+    - A draft plan you already have (optional)
+  output:
+    - name: QUESTION
+      contains: Your question as asked, then rewritten in plain terms with each loose word defined.
+    - name: WHAT COULD AFFECT THE RESULT
+      contains: At least eight factors that could move the result, one line each.
+    - name: THE ONE CHANGE
+      contains: The single thing to change, everything held fixed, and the number to measure.
+    - name: SECOND CHECK
+      contains: A follow-up test that isolates the effect further.
+    - name: NO-EFFECT RESULT
+      contains: What you would see if the change did nothing, including the normal swing.
+    - name: WHAT EACH RESULT MEANS
+      contains: For each possible result, what it tells you and a named next step.
+    - name: MISSING
+      contains: Facts that would sharpen the plan, marked so nothing is invented.
+    - name: CHECKS MISSED
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Fixes the words

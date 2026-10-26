@@ -1,6 +1,6 @@
 new_slug: one-channel-plan
 name: "Pick the one way to reach customers and plan it"
-summary: "Give it your product and price. Get one sales route, a plan for it and a pitch for hires."
+summary: "Pick the one sales route that fits your price and plan its first 90 days. Give it your product, price and buyer to get a route, a plan and a hiring pitch."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It runs three skills with some sums and choices. A strong model keeps the numbers and the plan consistent."
@@ -17,6 +17,10 @@ when:
   - You have a product and no clear way to reach buyers.
   - You are spending on several channels and can't tell which one works.
   - You are about to hire your first sellers or team members.
+not_for:
+  - "Your product already sells well through a proven channel: keep running that channel, and skip this plan."
+  - "You only need to pick a route and not plan it: use the Sales route picker on its own."
+  - "You want to test whether the idea itself can own its market: use the Business power tester."
 
 you_give:
   - What you sell, the price and who buys it
@@ -33,6 +37,23 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your price, margin and what you spend now. Mark any figure you are guessing.
   - Stop the routes it tells you to stop, and look at the weekly number every week.
+output_sample:
+  input:
+    - What you sell, its price and who buys it
+    - Your sales and ad spend and how many customers it brought (optional)
+    - Who can sell and the roles you want to hire for (optional)
+    - Your brand brain or your offer (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude
+  output:
+    - name: "Step 1: The route"
+      contains: Customer value, cost to win, a pass or fail, a dead zone flag, the one route picked and why others lose.
+    - name: "Step 2: The plan"
+      contains: Goal in deals, who sells, first five buyers, a proof ladder, the number to watch and a 30, 60 and 90 day plan.
+    - name: "Step 3: The pitch to hires"
+      contains: The mission, your people, a pay line, a message, a spoken pitch and a job post opening.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Picks the route from the numbers

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches a new objection to past wins.
 new_slug: live-objection-responder
 name: Live objection responder
-summary: Paste what the buyer said. Get what it really means, a reply that has
-  worked before and proof to use.
+summary: "Paste what the buyer said to get a live objection response: what it really means, a reply that has worked before, and proof to use."
 job: sell-and-negotiate
 headline: Live objection responder
-subhead: When a buyer says "too expensive" or "we're talking to a rival", you
-  need an answer now. Paste what they said and get what they likely mean, a
-  reply that has worked before and proof to back it.
+subhead: When a buyer says "too expensive" or "we're talking to a rival", you need an answer now. Paste what they said and get what they likely mean, a reply that has worked before and proof to back it.
 explain: |
   When a buyer says "too expensive" or "we're talking to a rival", you need an answer now. Paste what they said and get what they likely mean, a reply that has worked before and proof to back it.
 
@@ -18,6 +15,10 @@ when:
   - A buyer is comparing you with a named competitor.
   - You are on a call and need a response in minutes.
   - You want a reply built on real customer quotes.
+not_for:
+  - "You need a reply to a renewal or a pre-sale feature question: ask a teammate who knows the account, or write a plain answer from your product notes."
+  - "You want a full email written in your voice: ask your AI to draft the email after you have the reply from this skill."
+  - "You have no deal details and no history to share: expect a general answer, and gather the deal notes first."
 you_give:
   - The objection in the buyer's words
   - What you know about the deal
@@ -29,8 +30,30 @@ you_get:
   - Proof points to use
   - Evidence from your own history
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM and call notes.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Paste the objection exactly as the buyer said or wrote it.
+  - "Add what you know about the deal: stage, size, who is involved and what the buyer has said they want."
+  - Add win and loss notes, customer quotes or case studies if you have them. If your AI can read your CRM or call notes, let it pull them. If not, paste them by hand.
+  - Read the reply and check each proof point against its source before you use it with the buyer.
+  - If the objection came by email, ask your AI to draft the reply email from the response.
+output_sample:
+  input:
+    - The objection in the buyer's words, or the email or call excerpt where it came up
+    - What you know about the deal, such as stage, size and who is involved
+    - Win and loss notes (optional)
+    - Customer quotes, case studies or ROI documents (optional)
+  prerequisites:
+    - A CRM or call notes your AI can read, or the same details pasted into the chat (optional)
+  output:
+    - name: What's underneath it
+      contains: One or two sentences on the real concern, and whether it is an objection or a move to get a lower price.
+    - name: The response
+      contains: A talk track of three to five sentences that acknowledges the buyer, uses their own goals and one proof point, and ends with a question.
+    - name: Proof points to have ready
+      contains: Quotes, case studies or metrics that answer the concern, each with its source.
+    - name: If it's a competitor
+      contains: Where the rival is strong, where this buyer's needs differ, and a question that shows the difference.
+    - name: What history says
+      contains: How often this objection shows up in wins and losses, and what winning reps did next.
+    - name: The don't list
+      contains: Responses that tend to lose this deal, such as overdiscounting, listing features or arguing the point.

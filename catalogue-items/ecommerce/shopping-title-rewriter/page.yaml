@@ -1,6 +1,6 @@
 new_slug: shopping-title-rewriter
 name: "Shopping title rewriter"
-summary: "Paste product facts and search terms. Get Google Shopping titles in one order, plus a rollout."
+summary: "Rewrite your Google Shopping titles so buyer search words come first. Paste your products and search terms. Get new titles and a rollout plan."
 job: run-google-ads
 thinking: low
 thinking_why: "It rewrites titles from facts you give it."
@@ -17,6 +17,10 @@ when:
   - "Your Shopping ads get clicks from the wrong searches."
   - "You are setting up Shopping for the first time."
   - "Titles in your feed are brand names and codes."
+not_for:
+  - "You want the full set of title checks: use the Shopping feed title writer."
+  - "Your store has no search terms yet and shoppers only search your brand name: keep your titles and start from Google Keyword Planner terms first."
+  - "You need to fix prices, stock or images in your feed: change those in Google Merchant Center or ask your feed tool's support."
 
 you_give:
   - "Products (required): current title, colour, size, material, use and other true facts."
@@ -34,6 +38,23 @@ how_to_use:
   - "Under it, paste your details: products; converting search terms; brand name; top products by revenue."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Your products with current title, colour, size, material and use
+    - Search terms that led to sales, from your search terms report (advised)
+    - Your brand name, and whether shoppers search for it (advised)
+    - Your top products by revenue (optional)
+  output:
+    - name: TITLE ORDER
+      contains: The fixed order every title follows, written in one line.
+    - name: TITLES
+      contains: Each product with its old title, new title and character count.
+    - name: WHY
+      contains: The search term each new title leads with.
+    - name: ROLLOUT
+      contains: Batches of about ten products and what to check after 2 to 4 weeks.
+    - name: MISSING
+      contains: Facts or search terms you did not give, so you can add them.
 
 how_it_works:
   - title: "Pick one order"

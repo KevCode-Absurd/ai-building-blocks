@@ -1,0 +1,157 @@
+name: Game Designer agent
+summary: Turn a game idea into a game design plan. Get design pillars, a gameplay loop, mechanic specs, tuning numbers to test and a playtest plan.
+headline: Game Designer agent
+subhead: Tell it your game idea, who it is for and how long a play session lasts. It writes the gameplay loop at three time scales, spec sheets for each mechanic, a tuning table marked as guesses, and a playtest plan with questions to ask.
+job: build-product
+thinking: high
+thinking_why: It links player feelings to rules and numbers, and checks edge cases in each mechanic. Use a model that can reason through systems and show its working.
+explain: >-
+  A game idea is easy to describe and hard to build, because the details live in
+  the gaps. What does the player do in the first 30 seconds? Why do they play
+  one more round? What happens when two rules meet? This game designer agent
+  fills those gaps in writing before anyone codes.
+
+
+  It starts from what the player feels and decides, then works out to rules. It
+  sets three to five design pillars, then writes the loop at three levels:
+  seconds, one session and weeks. Each mechanic gets a spec with its purpose,
+  inputs, outputs, edge cases and failure states. Every number is a guess marked
+  PLACEHOLDER until you test it.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It designs on
+  paper. It does not write game code or prove a design is fun. The success
+  targets in the original, such as onboarding rates, are the author's goals, not
+  results from AI Blocks.
+when:
+  - You have a game idea in your head and need a written design a team can build from.
+  - Playtesters say "it felt off" and you need a loop and clear questions to test.
+  - You are adding a new mechanic and want to know how it touches the rest of the game.
+  - You want a first-session flow that teaches the main action without a long tutorial.
+not_for:
+  - You only need coins, gems, prices and drop rates. Use the Game economy designer agent.
+  - You are building on Roblox and need pass, product and retention advice. Use the Roblox Experience Designer agent.
+  - You need code for the game. Use the Unity Architect agent or the Godot Gameplay Scripter agent.
+  - You want proof the game is fun. Only playtests with real players can show that.
+you_give:
+  - Your game idea in a few lines, and the genre
+  - Who plays it and on what device
+  - How long one play session should last
+  - The feeling you want players to have, such as powerful, clever or relaxed
+  - Existing notes, rules or a draft design document (optional)
+you_get:
+  - Three to five design pillars the game must deliver
+  - The gameplay loop in three levels, with action, feedback and reward at each
+  - A spec sheet for each key mechanic, with edge cases and failure states
+  - A tuning table where every number is marked as a guess to playtest
+  - A first-session onboarding checklist
+  - A playtest plan with what to watch for and the questions to ask
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Say the game idea, genre, who plays it, session length and the feeling you want.
+  - Your AI asks once for anything missing. Anything still unknown is marked as an assumption you can change.
+  - Read the pillars and the loop first. Ask yourself if each pillar is something players would feel in the first five minutes. Fix them before you read the mechanics.
+  - Check the numbers in the tuning table are all marked as guesses. Build the loop on paper or in a spreadsheet, then test it with real players.
+  - Bring what players did and said back to the agent, and ask it to revise the design.
+how_it_works:
+  - title: Set the design pillars
+    text: It names three to five player experiences the game must deliver and uses them to judge every later choice.
+  - title: Find the fun hypothesis
+    text: It states the one thing that must feel good for the game to work, and tests the design against it.
+  - title: Write the loop
+    text: It writes what the player does, feels and earns in seconds, in one session and over weeks, with the choice they face at each level.
+  - title: Spec each mechanic
+    text: Each mechanic gets a purpose, player fantasy, input, output, success and failure states, edge cases, tuning levers and what it touches.
+  - title: Set tuning values
+    text: It builds a table of numbers with a reason for each and marks every one as a PLACEHOLDER until playtested.
+  - title: Plan onboarding and playtests
+    text: It writes a first-session flow, defines what "broken" looks like, and lists playtest questions that separate what happened from what it means.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <game idea> | <genre, platform, player, session length> | ASSUMED: <list> | MISSING: <list>
+
+  DESIGN PILLARS
+    <3 to 5 pillars> | fun hypothesis: <the one thing that must feel good>
+
+  CORE LOOP
+    Moment to moment (0 to 30 seconds): action <x> | feedback <y> | reward <z>
+    Session (5 to 30 minutes): goal <x> | tension <y> | resolution <z>
+    Long term (hours to weeks): progression <x> | reason to return <y>
+
+  MECHANIC SPECS (one per mechanic)
+    <name> | purpose <why> | player fantasy <feeling> | input | output | success <what working looks like> | failure <what goes wrong> | edge cases <list> | tuning levers <list> | touches <systems>
+
+  TUNING TABLE
+    <variable> | start value | min | max | reason | status <PLACEHOLDER until playtested>
+
+  ONBOARDING FLOW
+    <step> | time <seconds> | what the player learns | safe from failure <yes or no>
+
+  PLAYTEST PLAN
+    <what to test> | success looks like <measure> | broken looks like <measure> | question to ask <list>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your game idea, genre and who it is for
+    - How long one session should last
+    - The feeling you want players to have
+    - Existing notes or a draft design document (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Design pillars
+      contains: Three to five player experiences the game must deliver, plus the one thing that must feel good.
+    - name: Core loop
+      contains: What the player does, feels and earns in seconds, in one session and over weeks.
+    - name: Mechanic specs
+      contains: For each mechanic, its purpose, input, output, success and failure states and edge cases.
+    - name: Tuning table
+      contains: Starting numbers with min and max, each with a reason and marked as a guess to playtest.
+    - name: Onboarding flow
+      contains: A first-session path that teaches the main action quickly, with no failure in the first beat.
+    - name: Playtest plan
+      contains: What success and broken look like, what to watch and the questions to ask players.
+    - name: Open questions
+      contains: Gaps and assumptions to settle before you build.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach a draft design document or a spreadsheet of values to revise.
+    - name: A spreadsheet such as Google Sheets or Excel
+      why: Rebuild the tuning table with formulas, so you can change one number and see the effect.
+  inputs:
+    - Games you want yours to feel like, and what to borrow from each.
+    - Playtest notes, with what happened kept apart from what you think it means.
+    - Your target session length for each type of player.
+terms:
+  - term: Core loop
+    meaning: The short cycle of action, feedback and reward that players repeat. Games grow from it.
+  - term: Design pillar
+    meaning: A player experience the game must deliver. Every design choice is checked against it.
+  - term: Mechanic
+    meaning: One rule players can act on, such as a jump, a trade or a cooldown.
+  - term: Tuning
+    meaning: Adjusting numbers like damage or cost until the game feels right.
+  - term: PLACEHOLDER
+    meaning: A number that is a guess until real players test it.
+  - term: Onboarding
+    meaning: The first minutes that teach a new player what to do.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Genre and platform
+    how: Name them up front. Touch, controller and keyboard games need different feedback and tutorial rules.
+  - what: Scope
+    how: Ask for the loop and pillars only, or add specs for the three mechanics you worry about most.
+  - what: Player types
+    how: Say if you have more than one kind of player, such as casual and competitive, so the loop gives each a goal.
+improve:
+  - Keep your corrected tuning table and playtest notes, and paste them in at the start of the next run.
+  - After each playtest, write what happened apart from what you think it means, then ask for a revision.

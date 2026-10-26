@@ -1,6 +1,6 @@
 new_slug: store-name-tester
 name: "Store name tester"
-summary: "Paste your shortlisted names. Get each scored out of 100 with a keep, fix or drop call."
+summary: "Test your store name before you buy a domain or logo. Get each name scored out of 100 with a keep, fix or drop call and five real-world mock-ups."
 job: brand-file
 thinking: medium
 thinking_why: "It runs a set of tests on each name and writes short reasons. A mid-size model does this well, and a stronger one helps with tricky sound and meaning calls."
@@ -17,6 +17,10 @@ when:
   - You have a shortlist of two to five names and need to pick one with reasons.
   - You are about to buy a domain, a logo or packaging and want a last check on the name.
   - You are adding a new product line or bundle and want to test its name before launch.
+not_for:
+  - "Your store already has sales and search traffic under its name: use the Store rebrand planner, which covers redirects and relaunch."
+  - "You need to know if a name is legally free to use: search your country's trademark office and ask a trademark lawyer."
+  - "You have no names yet: use the Store name generator first, then bring your shortlist here."
 
 you_give:
   - Two to five names to test
@@ -37,6 +41,30 @@ how_to_use:
   - Say the name out loud to five people and ask them to write it down. Bring the results in so the spelling test has real data.
   - Read the table, then fix what the fix calls name. Run it again on the changed names.
   - Do the trademark and domain checks yourself before you commit.
+output_sample:
+  input:
+    - Two to five names you are choosing between
+    - What you sell, who buys it and the main benefit
+    - Your top three rivals' names (recommended)
+    - The markets and languages you sell in (optional)
+    - What five strangers wrote after hearing each name once (optional)
+  output:
+    - name: Score and call
+      contains: A score out of 100 for each name, the sum shown, and a keep, fix or drop call.
+    - name: Five scored tests
+      contains: Spell and search, ease of saying, surprise, sound fit and clear of rivals, each with a short reason.
+    - name: Flags (not scored)
+      contains: Positioning, generic risk, initials, seven qualities, name type and its cost, meaning by market, and colour.
+    - name: In context
+      contains: The name shown in a headline, a page title, a pack front, a search result and a creator caption.
+    - name: Believable in under a second
+      contains: A yes or no on whether the name sounds like a real brand, with why.
+    - name: Remembered as and Fix
+      contains: The one line a stranger would use for the name, and the one change that raises its score.
+    - name: Set note for decision makers
+      contains: The names ranked, with the reasons.
+    - name: Check with a person and Not run
+      contains: Trademark, domain and native speaker checks you must do, and any test that could not run.
 
 how_it_works:
   - title: Runs the spell and search test

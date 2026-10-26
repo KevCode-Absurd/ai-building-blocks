@@ -19,9 +19,9 @@ uses:
   - handover-note-writer
 steps:
   - uses: build-a-volunteer-induction-checklist
-    note: "Run when: An approved volunteer role or required induction evidence changes."
+    note: "Run when an approved role or required induction evidence changes, or when a review is asked for. Builds the checklist per role and sets each requirement's status. Never marks anyone cleared."
   - uses: handover-note-writer
-    note: Run build-a-volunteer-induction-checklist for changed evidence or a due review. If a supervisor changes, prepare a minimal handover of demonstrated practice and outstanding clearance; never label a volunteer cleared from attendance alone.
+    note: "Run when a supervisor changes. Write what the volunteer has shown and what is still open. Clearance stays with the named sign-off person."
 schedule: At each requested induction review. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

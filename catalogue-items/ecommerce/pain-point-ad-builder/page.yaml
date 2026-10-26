@@ -1,6 +1,6 @@
 new_slug: pain-point-ad-builder
 name: "Pain-point ad builder"
-summary: "Give it a real problem you solve. Get an honest pain-point ad and an answer to rival claims."
+summary: "Write a pain-point ad that names a real problem, shows your proof and one step to take. Checks the fix first and flags policy risks."
 job: write-ad-copy
 thinking: high
 thinking_why: "It must judge whether a worry is real and provable, and keep the ad inside truth and policy, which takes careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You solve a real, common problem and want an ad that names it honestly.
   - Rivals make a claim you want to answer without attacking them.
   - Your current ad lists features and doesn't say what problem they fix.
+not_for:
+  - "You have no proof the fix works: stop and gather reviews, test results or a guarantee first. The skill will not write the ad."
+  - "You sell a high-cost item: add tests, specs and long copy, and use the Split-run test planner to compare versions."
+  - "You only want to check an ad you already wrote: use the Meta ads compliance checker."
 
 you_give:
   - The problem and how common it is, with a source
@@ -35,6 +39,23 @@ how_to_use:
   - Say the one step you want the buyer to take. Add rival claims if you want to answer them.
   - Read the flags first. Remove or prove anything flagged, then check your ad platform's rules before launch.
   - Have a qualified person check any health, body or safety wording.
+output_sample:
+  input:
+    - The problem you solve, with a source for how common it is
+    - Your fix and the proof it works
+    - The one step you want the buyer to take
+    - Rival claims you want to answer (optional)
+  output:
+    - name: Four-part check
+      contains: A pass or fail on threat, fix, proof and buyer step, then a decision to write the ad or stop.
+    - name: Ad draft
+      contains: The ad in problem, fix, proof, step order.
+    - name: Answer the rival (optional)
+      contains: A warning, the rival claim in weak form, your answer, what they do well and your difference.
+    - name: Policy and truth flags
+      contains: Each line that needs proof or may break platform rules, with the reason.
+    - name: Missing and checks missed
+      contains: Any gap in your inputs and any check that failed, or none.
 
 how_it_works:
   - title: Checks the fix is real

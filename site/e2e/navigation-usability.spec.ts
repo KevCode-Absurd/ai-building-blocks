@@ -62,7 +62,7 @@ test("public library download starts while account setup is still waiting", asyn
   const held = new Promise<void>(resolve => { release = resolve; });
   await page.route("**/api/auth", async route => { await held; await route.fulfill({ json: { configured: false } }); });
   let requested = false;
-  page.on("request", request => { if (new URL(request.url()).pathname === "/data/blocks.json") requested = true; });
+  page.on("request", request => { if (new URL(request.url()).pathname === "/data/blocks-index.json") requested = true; });
   try {
     await page.goto("/", { waitUntil: "domcontentloaded" });
     await expect.poll(() => requested).toBe(true);

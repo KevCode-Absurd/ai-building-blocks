@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks the right query pattern for each task.
 new_slug: matlab-database-helper
 name: MATLAB database helper
-summary: Say which database and table. Get working code to read, filter, write
-  and update rows from MATLAB.
+summary: "Get working MATLAB database code: connect, read with filters, write and update rows, with safe passwords. Tell it your database and table."
 job: build-software
 headline: MATLAB database helper
-subhead: Working MATLAB code that reads from and writes to your database, with
-  safe habits built in. Tell it the database and table, and it writes the
-  connection, the queries and the updates.
+subhead: Working MATLAB code that reads from and writes to your database, with safe habits built in. Tell it the database and table, and it writes the connection, the queries and the updates.
 explain: |
   Working MATLAB code that reads from and writes to your database, with safe habits built in. Tell it the database and table, and it writes the connection, the queries and the updates.
 
@@ -18,6 +15,10 @@ when:
   - You want to write results back to a database after analysis.
   - Your code has a password typed into the connection line.
   - You are setting up an ODBC connection for the first time.
+not_for:
+  - "You work with DuckDB: use the matlab-use-duckdb skill, which is built for it."
+  - "You use MongoDB, Cassandra or Neo4j: they are not relational databases, so use each tool's own MATLAB support."
+  - "You only read a CSV or Excel file: use readtable or a datastore in MATLAB, no database needed."
 you_give:
   - Database type and connection details
   - Table and column names
@@ -29,8 +30,34 @@ you_get:
   - Insert and update code
   - A confirmation step before deletes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Database Toolbox.
+  - Open your AI tool and paste in this skill, or upload its folder if your tool takes files.
+  - Tell it your database type, data source name or connection string, table and column names, and MATLAB release.
+  - "Say what you want: read, add, change or delete rows. Add any filter, such as only active orders."
+  - Read the code it gives you. Check that passwords use secrets and filters run in the database.
+  - Run it in MATLAB with Database Toolbox. Your AI can only test it if it can run MATLAB.
+  - If it shows a delete or drop statement, check it carefully before you say yes.
+output_sample:
+  input:
+    - Your database type, such as PostgreSQL, MySQL, SQLite, SQL Server or Oracle
+    - Your data source name or connection string
+    - Your table and column names
+    - What you want to read, add, change or delete
+    - Your MATLAB release
+  prerequisites:
+    - MATLAB R2021a or later with Database Toolbox
+    - An AI that can run MATLAB (optional, to test the code)
+    - MATLAB R2023b or later, only if you want ORM
+    - MATLAB R2026a and Parallel Computing Toolbox, only for multithreaded reads and writes
+  output:
+    - name: Connection code
+      contains: Code that connects with a saved data source or a connection string, with passwords kept as secrets.
+    - name: Read code
+      contains: A read with the filter sent to the database, so only the rows you need come back.
+    - name: Write and update code
+      contains: Code to add new rows, change existing rows by a filter, and write large tables in chunks.
+    - name: Transaction code
+      contains: Steps that save together or roll back together if one step fails.
+    - name: Delete or drop SQL
+      contains: The statement shown to you first. Nothing runs until you say yes.
+    - name: Object mapping class
+      contains: A MATLAB class tied to a table, with write, read and update calls (optional).

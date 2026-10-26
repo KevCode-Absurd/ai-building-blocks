@@ -1,6 +1,6 @@
 new_slug: bug-evidence-plan-writer
 name: "Bug evidence plan writer"
-summary: "Paste the bug, the error and the code near it. Get ranked suspects and a check for each before you change anything."
+summary: "Find the cause of a bug before you change code. Paste the error and nearby code to get three ranked suspects and one quick check for each."
 job: test-and-fix-code
 thinking: high
 thinking_why: "Finding a real cause takes careful step by step reasoning."
@@ -17,6 +17,10 @@ when:
   - "Your AI keeps proposing fixes that do not work."
   - "The bug only happens sometimes."
   - "It broke after a change and you do not know which part."
+not_for:
+  - "You want a full multi-check run on a hard bug: use the Bug root cause finder."
+  - "You need speed tuning, not a bug hunt: profile the code with your language's own profiler or ask a developer."
+  - "The error is clear and the stack trace points to one line: fix that line directly, no plan needed."
 
 you_give:
   - "What you expected and what happened, with the exact error"
@@ -34,6 +38,23 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - What you expected and what happened, with the exact error
+    - How to trigger it
+    - The code near the problem
+    - What changed recently (optional)
+  output:
+    - name: BUG
+      contains: "The bug in two lines: what you expected, what happened, and whether it is every time, sometimes or after a change."
+    - name: SUSPECTS
+      contains: Three ranked causes, each with the place in your code, why it fits, and what would rule it out.
+    - name: CHECKS
+      contains: One small check per suspect, such as a value to print, and what each result would mean.
+    - name: WHAT I CANNOT TELL
+      contains: What the pasted material does not show, marked MISSING, and the one thing to send next.
+    - name: Waiting line
+      contains: A closing request to send back what each check showed so the cause is confirmed before any fix.
 
 how_it_works:
   - title: "Restate the bug"
@@ -91,8 +112,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "The full error with line numbers"
-  - "A note on what changed last"
+    - "The full error with line numbers"
+    - "A note on what changed last"
 
 terms:
   - term: "Root cause"

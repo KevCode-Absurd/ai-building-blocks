@@ -1,32 +1,31 @@
 slug: construction-variation-review-assistant
 name: Construction variation review assistant
-summary: A variation comparison, arithmetic review and decision brief.
+summary: Check a construction variation request against the signed contract and its prices. Get a cost and time check and a brief. Nothing is approved for you.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: document
+    required: true
+  - type: meeting_notes
     required: false
   - type: question
-    required: false
-  - type: meeting_notes
     required: false
 outputs:
   - type: document
   - type: audit_report
   - type: plan
+needs_mode: manual
 uses:
   - prepare-a-construction-variation-decision
   - executive-action-register
 steps:
   - uses: prepare-a-construction-variation-decision
-    note: "Run when: A priced variation or contract approval record changes."
+    note: "Run this when a priced variation or a contract approval record changes. Check the contract rules, recompute the cost and draft the decision brief. Hands the brief to the people who approve it; step 2 waits for their answer."
   - uses: executive-action-register
-    note: Run prepare-a-construction-variation-decision for changed evidence or a due review. If approval is supplied, extract the actual accepted scope, authority, amount and date before updating the decision trace. Do not equate submission with approval.
+    note: "Run this only when an approval arrives. Uses the approval record you supply (minutes, email or signed form), not step 1's brief. Records the accepted scope, authority, amount and date from the approval itself. A submitted variation is not an approval."
 schedule: When the user provides a revised variation or approval. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

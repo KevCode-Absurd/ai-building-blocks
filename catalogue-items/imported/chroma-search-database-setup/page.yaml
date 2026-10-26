@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a short, fixed setup.
 new_slug: chroma-search-database-setup
 name: Chroma search database setup
-summary: Give it your text. Get a searchable store that finds passages by
-  meaning, ready for question-answering.
+summary: Build a Chroma search database on your own computer. Add your text and find passages by meaning, ready for a question-answering app.
 job: build-software
 headline: Chroma search database setup
-subhead: A small searchable store for your documents that finds passages by
-  meaning instead of exact words. Ask a question and it brings back the closest
-  text, ready to feed into a question-answering app.
+subhead: A small searchable store for your documents that finds passages by meaning instead of exact words. Ask a question and it brings back the closest text, ready to feed into a question-answering app.
 explain: |
   A small searchable store for your documents that finds passages by meaning instead of exact words. Ask a question and it brings back the closest text, ready to feed into a question-answering app.
 
@@ -18,6 +15,10 @@ when:
   - Keyword search misses pages that use different wording.
   - You need to filter results by author, date or source.
   - You are prototyping on a laptop and do not want a paid hosted database.
+not_for:
+  - "You want a hosted database that grows on its own: use Pinecone, a managed cloud service."
+  - "You only need exact word search in a few files: use your editor's find tool or a spreadsheet filter."
+  - "You cannot run Python code or install packages: ask a developer to set it up for you."
 you_give:
   - Your text or documents
   - The labels to store with each piece
@@ -29,8 +30,32 @@ you_get:
   - Filters by label
   - A test search that returns matching passages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open Claude, ChatGPT or Gemini. Choose a mode that can run Python code, or plan to run the code yourself.
+  - Paste this skill and your text. Say where to save the store, and list the labels to keep with each piece.
+  - Ask your AI to write one Python script that sets up Chroma, adds your text and runs a test query.
+  - Run the script. The default model runs on your computer and needs no account. The OpenAI and HuggingFace options need an API key and may cost money.
+  - Check that the test query returns passages that match your question, with the right labels.
+  - Fix your text pieces or labels if the matches look wrong, then run the script again.
+output_sample:
+  input:
+    - Your text or documents
+    - The labels to store with each piece, such as source or date
+    - A folder path where the store is saved
+    - A few test questions (optional)
+  prerequisites:
+    - An AI that can run Python code, or a computer with Python installed
+    - The chromadb package, installed with pip
+    - An API key only if you pick the OpenAI or HuggingFace embedding options
+  output:
+    - name: Collection setup
+      contains: Code that creates a Chroma store on disk and a named collection to hold your text.
+    - name: Add documents
+      contains: Code that saves your text pieces with their labels and unique IDs in one batch.
+    - name: Query
+      contains: Code that takes a question and returns the closest passages with their labels and distances.
+    - name: Label filters
+      contains: Examples that narrow a search by source, category or number, using and, or and comparison rules.
+    - name: Update and delete
+      contains: Code that changes or removes saved text by ID or by label.
+    - name: Server mode (optional)
+      contains: A command to run Chroma as a server, and code to connect to it.

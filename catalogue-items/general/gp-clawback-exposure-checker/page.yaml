@@ -1,46 +1,110 @@
 new_slug: gp-clawback-exposure-checker
 name: GP clawback exposure checker
 headline: GP clawback exposure checker
-summary: Compare paid carry with verified final entitlement and the collateral available for a potential clawback.
+summary: Check a GP clawback. See the carry a manager may owe back, how much escrow covers and what stays unsecured, from carry paid and entitlement.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Potential outstanding clawback, collateral coverage and unsecured exposure. Share actual carry paid, independently verified final entitlement, explicit permitted tax deduction, prior recoveries and available clawback escrow.
+subhead: Give it the carry paid, the final carry the manager earned and the tax deduction the agreement allows. Add any amounts already repaid and the cash in escrow. You get the clawback that may be owed, the part escrow covers and the part left unsecured.
 explain: |-
-  Potential outstanding clawback, collateral coverage and unsecured exposure.
+  Funds often pay carried interest (the manager's share of profit) early, after the first good deals. If later deals lose money, the manager may have been paid more than they finally earned. The fund agreement may then require the extra to be paid back. That is a clawback. This GP clawback calculation shows how big it could be and how much is protected.
 
-  Private fund carry. Illustrative figures only. 20 paid less12 entitled,2 allowed tax and1 recovered leaves5; escrow4 leaves1 unsecured. Entitlement15 leaves2 covered.
+  The skill takes the final carry entitlement as an input you have checked on your own. It does not rebuild the payout rules. It subtracts that figure, the tax deduction the agreement allows and anything already repaid from the carry paid. It stops at zero, so a manager who is owed more is not shown as owing less. Not every tax payment counts. Only the part the agreement allows is taken off.
+
+  It then compares what may be owed with the cash in escrow and shows what is left without cover. Cover on paper is not proof the money can be collected. The skill says so, and it leaves the legal question to your fund counsel.
 when:
-  - You need potential outstanding clawback, collateral coverage and unsecured exposure.
-  - You work on private fund carry and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A fund is winding down and you need to know whether carry paid early may have to be repaid.
+  - Later losses or lower valuations could cut the manager's final carry, and you want to see the exposure.
+  - An investor, auditor or lender asks how much of a possible clawback the escrow covers.
+  - You are reviewing a year-end note on carry and want each number traced to its source.
+not_for:
+  - You need to work out the final carry itself from the payout rules. Use the Fund payout without catch-up checker if your fund has no catch-up, or ask your fund accountant. Here final entitlement is an input.
+  - You want a view on whether a clawback can be enforced or who is liable. This is arithmetic only. Ask fund counsel.
+  - You want to check fees, not carry. Use the Fund management fee offset checker.
+  - You want to know how much more the fund can call from investors. Use the Remaining fund commitment checker.
 you_give:
-  - Actual carry paid, independently verified final entitlement, explicit permitted tax deduction, prior recoveries and available clawback escrow.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Carry paid so far, from the fund's distribution records
+  - Final carry entitlement, worked out and checked outside this skill, on the same whole-fund basis and cut-off date as the carry paid
+  - The tax deduction your fund agreement allows, with the clause that allows it. Not all tax paid counts.
+  - Amounts already repaid or recovered
+  - Cash held in clawback escrow, with the statement date
+  - The date, the currency and whether figures are in units, thousands or millions
 you_get:
-  - Potential outstanding clawback, collateral coverage and unsecured exposure.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The potential clawback still outstanding, never below zero
+  - How much of it escrow covers
+  - The unsecured exposure left after escrow
+  - A note on any figure that could not be traced to a signed source
+  - A list of every input marked MISSING and every check that could not run
+  - A workbook version of the same lines, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste the text of SKILL.md into a new chat.
+  - Paste the five figures, the date, the currency and the units. Say where each one comes from, such as the distribution notice or the escrow statement.
+  - Paste the fund agreement clauses on the tax deduction and on clawback, if you have them. Without them the deduction is marked MISSING, not guessed.
+  - Check that carry paid, final entitlement and recoveries all use the same whole-fund basis and cut-off date.
+  - Read MISSING and CHECKS MISSED before you use any number.
+  - Have your fund counsel review the agreement before you act on the result.
 how_it_works:
-  - title: 1. Recompute final carry entitlement under the actual LPA separately; record tax caps, liability rules and prior recoveries
-    text: Recompute final carry entitlement under the actual LPA separately; record tax caps, liability rules and prior recoveries.
-  - title: 2. Subtract final entitlement, the contractually allowed tax deduction and prior recoveries from paid carry; floor remaining exposure at zero
-    text: Subtract final entitlement, the contractually allowed tax deduction and prior recoveries from paid carry; floor remaining exposure at zero.
-  - title: 3. Compare outstanding exposure with available escrow and show the uncovered amount without assuming collectability
-    text: Compare outstanding exposure with available escrow and show the uncovered amount without assuming collectability.
+  - title: 1. Map the sources
+    text: Lists each figure with its signed source, date, currency and units, and marks any gap.
+  - title: 2. Take the final entitlement as given
+    text: Uses your checked final carry figure. It records the tax rules and past repayments from the agreement.
+  - title: 3. Work out the clawback
+    text: Takes final entitlement, allowed tax and past repayments off the carry paid, and stops at zero.
+  - title: 4. Compare with escrow
+    text: Shows how much of the clawback escrow covers and how much is left unsecured. It does not assume anything can be collected.
+  - title: 5. Reconcile and report gaps
+    text: Ties each figure to a record and lists what is missing or could not be checked.
 output_shape: |-
-  Potential outstanding clawback, collateral coverage and unsecured exposure.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Potential clawback: <amount> | Covered by escrow: <amount> | Unsecured: <amount>
+
+  SCOPE AND DATED SOURCES
+  <fund, cut-off date, currency, units; each figure with its source and date>
+
+  INPUTS AND ASSUMPTIONS
+  <figures given, each assumption, and the agreement clauses used>
+
+  CLAWBACK CALCULATION
+  Carry paid: <amount>
+  Less final entitlement (verified): <amount>
+  Less allowed tax deduction: <amount>
+  Less prior recoveries: <amount>
+  Difference: <amount> | Potential clawback (not below zero): <amount>
+
+  ESCROW COVER
+  Escrow available: <amount> | Covered: <amount> | Unsecured exposure: <amount>
+
+  RECONCILIATIONS
+  <each figure tied to a record, with differences explained>
+
+  FILE CHECK
+  <what was checked in the workbook or calculator, or that none was made>
+
+  MISSING
+  <inputs not given>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+output_sample:
+  input:
+    - Carry paid so far, and the final carry entitlement you have checked
+    - The tax deduction your fund agreement allows, and any amounts already repaid
+    - Cash held in clawback escrow
+    - The fund agreement clauses on tax and clawback (optional)
+  prerequisites:
+    - A final carry entitlement worked out and checked elsewhere, on the same whole-fund basis as the carry paid
+    - An AI that can make files, if you want the workbook (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The fund, cut-off date, currency and units, and the source and date of each figure.
+    - name: Clawback calculation
+      contains: Carry paid, less final entitlement, allowed tax and prior recoveries, stopped at zero.
+    - name: Escrow cover
+      contains: The part of the clawback that escrow covers and the part left unsecured.
+    - name: Reconciliations
+      contains: Each figure tied to a record, with any difference explained.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not given, and every check that failed or could not run, or "none".
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,15 +126,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: It does the arithmetic and shows each line, so you can check it against your records.
+    - name: A spreadsheet app and an AI that can make files
+      why: Builds, recalculates and reopens the workbook version of the calculation.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small calculator in the pack on your own figures.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Distribution notices, the escrow statement and the fund agreement clauses on tax and clawback.
+    - Your fund counsel or fund accountant, who should review the result before anyone acts on it.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Carried interest (carry)
+    meaning: The fund manager's share of the fund's profit, paid on top of what they invest.
+  - term: Clawback
+    meaning: A rule that makes the manager repay carry that was paid early and turned out to be too much.
+  - term: Final entitlement
+    meaning: The total carry the manager has earned once the whole fund is wound up.
+  - term: Escrow
+    meaning: Cash held back by a third party as security, here to cover a possible clawback.
+  - term: Fund agreement (LPA)
+    meaning: The contract that sets how the fund shares profit, charges fees and handles clawbacks.

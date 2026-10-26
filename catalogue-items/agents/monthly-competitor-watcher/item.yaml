@@ -16,11 +16,11 @@ outputs:
   - {type: competitor_set}
 uses: [ad-library-teardown-counter, competitor-messaging-comparer, competitor-ad-gap-finder, owned-word-mapper, disruption-risk-checker]
 steps:
-  - {uses: ad-library-teardown-counter, note: "Every month, per rival: counts by format, age and awareness stage, set against last month's counts."}
-  - {uses: competitor-messaging-comparer, note: "Only for rivals whose ads or pages changed past the agent's bar: how their message and position moved."}
-  - {uses: competitor-ad-gap-finder, note: "Only when a rival's mix of ad types or claims shifted sharply: where rivals now crowd in and where nobody is."}
-  - {uses: owned-word-mapper, note: "Only every third month, or when a rival's headline word changed: which words are taken, contested or open."}
-  - {uses: disruption-risk-checker, note: "Only when a new, cheaper or simpler rival appears: whether it is a nuisance or a real threat."}
+  - {uses: ad-library-teardown-counter, note: "Every month, per rival: counts by format, age and awareness stage, set against last month's counts. Hands step 2 the rival set, with its counts."}
+  - {uses: competitor-messaging-comparer, note: "Only for rivals whose ads or pages changed past the agent's bar: how their message and position moved. Uses the rival set from step 1. Hands step 3 the rivals that moved and how their message shifted."}
+  - {uses: competitor-ad-gap-finder, note: "Only when a rival's mix of ad types or claims shifted sharply: where rivals now crowd in and where nobody is. Uses this month's ads, your brand file and the rival set. Hands step 4 the rival ads broken down by hook and claim."}
+  - {uses: owned-word-mapper, note: "Only every third month, or when a rival's headline word changed: which words are taken, contested or open. Uses the rival set and step 3's ad breakdowns for the headline words. Hands step 5 which words each rival now owns."}
+  - {uses: disruption-risk-checker, note: "Only when a new, cheaper or simpler rival appears: whether it is a nuisance or a real threat. Uses the new rival and your best customers, with step 4's word map as context if it ran."}
 schedule: "On the first Friday of each month, after the rival ads are collected"
 asks_before: [changing your prices, offers or ads, contacting or buying from a rival, running or pausing any ad, publishing a comparison naming a rival]
 origin: own

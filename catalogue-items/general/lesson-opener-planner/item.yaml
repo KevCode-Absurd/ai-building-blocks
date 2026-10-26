@@ -1,6 +1,6 @@
 slug: lesson-opener-planner
 name: "Lesson opener planner"
-summary: "Paste today's topic and last lesson. Get a five-minute opener that brings back what learners know."
+summary: "Plan a five-minute lesson opener from today's topic and last lesson. Get a task, what to say, how to read answers and the next move for each."
 category: general
 type: prompt
 role: make
@@ -14,3 +14,5 @@ uses: []
 origin: own
 version: 1.0.0
 example_pending: true
+next: [understanding-check-questions, recall-quiz-writer]
+needs_mode: manual

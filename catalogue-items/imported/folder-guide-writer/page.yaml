@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It reads a folder and writes one short file.
 new_slug: folder-guide-writer
 name: Folder guide writer
-summary: Pick a folder. Get a short CLAUDE.md that tells future AI helpers how
-  that folder works.
+summary: Write a CLAUDE.md for one project folder so your AI knows the rules, key files and decisions. Give it the folder. You get a short folder guide.
 job: set-up-ai
 headline: Folder guide writer
-subhead: A short CLAUDE.md file for one folder, so any AI helper that opens it
-  knows what the work is, which files matter and what not to touch.
+subhead: A short CLAUDE.md file for one folder, so any AI helper that opens it knows what the work is, which files matter and what not to touch.
 explain: |
   A short CLAUDE.md file for one folder, so any AI helper that opens it knows what the work is, which files matter and what not to touch. A matching AGENTS.md points to the same file.
 
@@ -17,6 +15,10 @@ when:
   - A folder has rules, such as files never to edit, that the AI keeps breaking.
   - You made decisions and do not want them reopened.
   - You want Claude Code and other agents to read the same instructions.
+not_for:
+  - Your folder only holds static reference files. Your AI can read them when needed, so skip the guide.
+  - You want rules that apply to every project. Put those in your global CLAUDE.md instead.
+  - You want the guide to list every file and subfolder. Use a plain file listing, since this guide only holds rules and decisions.
 you_give:
   - Path to the folder
   - All files in it, readable by the AI
@@ -28,8 +30,28 @@ you_get:
   - AGENTS.md linked to it
   - List of hard limits and locked decisions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write your project files.
+  - Open your AI in a tool that can read and write your project files, such as Claude Code.
+  - Paste this skill into the chat, or add it to your skills folder.
+  - Tell your AI which folder to write a guide for. Add any rules you want kept.
+  - Read the bullet list it shows first. Fix anything wrong or missing, then say go.
+  - Check the finished CLAUDE.md for rules that clash. Add any rule your AI keeps breaking.
+output_sample:
+  input:
+    - The path to one project folder
+    - All the files in that folder, open to your AI
+    - Rules and limits you want kept (optional)
+    - Notes on how you like to work (optional)
+  prerequisites:
+    - An AI that can read your folder, such as Claude Code or Codex
+    - An AI that can write files and make a link, if you want AGENTS.md made for you
+  output:
+    - name: Bullet list of planned content
+      contains: A grouped list of what the guide will hold, shown first so you can change it.
+    - name: CLAUDE.md
+      contains: The folder guide, with a one-line purpose header and short bullets under each section you approved.
+    - name: Constraints (MUST NOT)
+      contains: Hard rules for the folder, such as files the AI must never edit.
+    - name: Locked Decisions
+      contains: Choices already made and dated, so the AI does not reopen them.
+    - name: AGENTS.md
+      contains: A link to CLAUDE.md, so other AI tools read the same guide.

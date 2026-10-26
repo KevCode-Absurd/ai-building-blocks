@@ -1,6 +1,6 @@
 new_slug: open-word-finder
 name: Open word finder
-summary: Paste your rivals and their lines. Get the word each one owns and three open words to claim.
+summary: Find the word each rival owns and three open words you can claim. Paste rival taglines and ad lines into this open word finder prompt.
 job: study-competitors
 thinking: low
 thinking_why: It counts repeated words and sorts them, with few judgement calls.
@@ -14,6 +14,10 @@ when:
   - You are choosing a tagline and want a word rivals have not claimed.
   - Your ads sound like everyone else's.
   - You are entering a crowded category and need a gap.
+not_for:
+  - "You have no rivals yet, or you sell in a brand new category: write a positioning brief with a person or your AI instead."
+  - "You only need copy for your own brand: write your tagline directly, then paste it here to test it."
+  - "You want the full version with every check: use the Owned word mapper."
 you_give:
   - Five to eight rivals with their taglines or ad lines
   - Reviews or comments that name them (optional)
@@ -26,6 +30,24 @@ how_to_use:
   - List the market leader first.
   - Paste real lines from each rival's site or ads.
   - Pick one open word and check it against your own proof.
+output_sample:
+  input:
+    - Five to eight rivals, with their taglines, homepage headlines or ad lines
+    - Reviews or comments that name the rivals (optional)
+    - Who leads the market (optional)
+  output:
+    - name: Category
+      contains: The market named in the words a buyer would use.
+    - name: Rival table
+      contains: One row per rival with the word it owns, the signals behind it and how sure the match is.
+    - name: Taken, Contested, Open
+      contains: Each word sorted by whether one rival holds it, several fight over it, or none do.
+    - name: Empty claims
+      contains: Words every rival uses that none could argue against, so nobody can own them.
+    - name: Three open words for you
+      contains: Three free words buyers care about, each with where the evidence came from.
+    - name: Missing
+      contains: Anything the AI had to guess because you did not paste it.
 how_it_works:
   - title: Name the category
     text: In the words a buyer would use.

@@ -1,6 +1,6 @@
 new_slug: vsl-ad-scripter
 name: "VSL ad scripter"
-summary: "Give it your product, mechanism and reviews. Get a 7-part VSL script, hooks and short cuts."
+summary: "Write a video sales letter script from your product facts and reviews. You get a 7-part VSL ad script, hooks, shorter cuts and a page brief."
 job: make-video-ads
 thinking: high
 thinking_why: "It builds a long argument in a set order from your facts, so a stronger model writes a tighter script."
@@ -17,6 +17,10 @@ when:
   - Your product needs explaining, and short ads are not getting the sales you want.
   - You sell in a low-trust or brand-new category and need to educate buyers first.
   - You have reviews and proof ready and want one script that you can cut into several lengths.
+not_for:
+  - "Your product is simple or cheap and needs no explaining: a short demo video is enough, so film one."
+  - "You have no real proof yet, such as studies, customer counts or customer videos: gather proof first, or a person on your team can collect it."
+  - "You only want a script read aloud and checked line by line: use the Ad script read-aloud editor."
 
 you_give:
   - Your product facts and the mechanism, meaning why it works
@@ -36,6 +40,33 @@ how_to_use:
   - Start with a 1 to 3 minute script before trying longer ones.
   - Have your health or compliance contact read the claims before you film.
   - Film the master edit, cut the shorter versions, test the hooks and send the ad to a page built for it.
+output_sample:
+  input:
+    - Your product facts and why it works
+    - Reviews, support tickets or survey answers on why people almost did not buy
+    - Your proof, such as studies, customer videos, counts and ratings
+    - Your offer and guarantee terms
+    - The length and look you want (optional)
+  prerequisites:
+    - An AI chat that can read pasted text
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Fit check and length
+      contains: Says if a VSL suits your product, and sets the master length and the cut lengths.
+    - name: VSL script
+      contains: "Seven timed parts: hook, problem, mechanism, objections, proof, risk reversal and call to action."
+    - name: Alternative hooks
+      contains: Three to six opening lines to test, each with who it calls out and the first frame.
+    - name: Modular versions
+      contains: Reordered versions of the script to test against the standard order.
+    - name: Cut-down plan
+      contains: Which parts stay in the 45-second, 2-minute and 5-minute cuts.
+    - name: Editor notes
+      contains: Footage mix, one consistent look, text size and pacing for your editor.
+    - name: Landing page brief
+      contains: The page type, the parts to repeat from the ad, and the offer and guarantee.
+    - name: Checks missed and missing
+      contains: Lists any failed checks and any facts that would sharpen the script.
 
 how_it_works:
   - title: Checks the fit

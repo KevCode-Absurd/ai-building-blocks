@@ -1,51 +1,66 @@
 new_slug: reconcile-private-fund-fee-charges
-name: Reconcile private fund fee charges
-headline: Reconcile private fund fee charges
-summary: Carry a documented stepdown charge into the actual fee-offset ledger.
+name: Private fund fee and offset checker
+headline: Private fund fee and offset checker
+summary: Share fund fee terms, dates, eligible receipts and prior credits. Get the applicable gross fee, offset use, net invoice and remaining credit.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Fee-basis bridge, offset use, invoice and carryforward reconciliation. Share lPA rates and basis definitions, stepdown date, comparable-period eligible bases, received eligible portfolio fees and prior offset credits.
+subhead: Share the fee rates and basis from the fund agreement, the stepdown date, the fee base for each period, eligible fees the fund received and any credit from before. Your AI checks the fee before and after the change date and picks the charge for the invoice period. It then applies offsets. You get a fee bridge, the net invoice and any credit left over.
 explain: |-
-  Fee-basis bridge, offset use, invoice and carryforward reconciliation.
+  A private fund usually charges a management fee on a base that changes over time. After a set date, the rate or the base often steps down. Fees the manager earns from portfolio companies may be credited back against the management fee. Both rules sit in the fund agreement, and a small slip changes what a investor is invoiced.
 
-  Private fund fees. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow does both parts in order. First it recomputes the fee for each comparable period from the exact base and rate, then picks the one for the invoice period, splitting partial periods when needed. Then it puts that gross charge on the same currency scale as the offset ledger and applies the eligible fees received and any opening credit. It shows the net invoice and the ending credit.
+
+  Charges for different periods are compared, never added into one invoice. A credit carries forward only when the agreement allows it. Where a term is unclear, the workflow lists a question and does not invent a reading.
 when:
-  - You need fee-basis bridge, offset use, invoice and carryforward reconciliation.
-  - You work on private fund fees and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A fee invoice arrives after the stepdown date and you want to check the rate and the base.
+  - The fund received transaction fees and you need to know how much offsets the management fee.
+  - An investor asks why this quarter's invoice differs from the last one.
+  - You are checking whether an unused offset credit carries to the next period.
+not_for:
+  - "You want to check a capital call: use the Private fund commitment and capital call checker."
+  - "You want to check a payout under no-catch-up terms: use the No-catchup fund payout checker."
+  - "You only want to understand why the fee changed between periods: use the Fund management fee change checker."
+  - "You need a legal reading of the agreement: ask fund counsel. This applies the terms you supply."
 you_give:
-  - LPA rates and basis definitions, stepdown date, comparable-period eligible bases, received eligible portfolio fees and prior offset credits.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The fee rates and the definition of the fee basis, from the fund agreement
+  - The stepdown date and what changes on it
+  - The eligible fee base for each comparable period, from the fund's records
+  - Eligible portfolio fees the fund received, and any rule on how they offset
+  - Offset credits from earlier periods, and the currency scale of the offset ledger
 you_get:
-  - Fee-basis bridge, offset use, invoice and carryforward reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The fee for each comparable period, from the exact base and rate
+  - The charge for the invoice period, with partial periods split
+  - Offsets applied, in the offset ledger's currency scale
+  - The net invoice and the credit left over
+  - Open questions where the agreement is unclear, and checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the fee clauses from the agreement, the base for each period, the fees received and the offset ledger. Say the invoice period.
+  - Tell your AI to follow the pack and save each step's file. A spreadsheet helps, since the invoice builds from both steps.
+  - After step 1, check that the rate and base match the agreement for the invoice period. Check any partial period was split on the stepdown date.
+  - After step 2, check the currency scale matches, and that credit is carried forward only where the agreement allows.
 how_it_works:
-  - title: Management fee stepdown checker
-    text: Recompute both comparable-period fees using the exact basis and rates. Select the fee applicable to the actual invoice period and split partial periods separately when needed.
-  - title: Transaction fee offset checker
-    text: Convert the selected gross charge explicitly to the offset ledger currency scale, then apply actual eligible fee receipts and beginning credits. Reconcile ending credit and net invoice without inventing carryforward permission.
+  - title: Fund management fee change checker
+    text: "Works out both comparable-period fees from the exact base and rates. Selects the fee for the invoice period, splitting partial periods when needed. Hands step 2 the gross charge for that period only. Check before moving on: the rate and base match the agreement, and the two periods are compared, not added."
+  - title: Fund management fee offset checker
+    text: "Converts that gross charge to the offset ledger's currency scale, then applies eligible fees received and opening credits. Shows the ending credit and the net invoice. Does not assume credit can carry forward. Check before you use it: scale matches and carryforward follows the agreement."
 output_shape: |-
-  Fee-basis bridge, offset use, invoice and carryforward reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES    <agreement clauses, dates, currency, invoice period>
+  FEE BY PERIOD        <period | base | rate | fee>
+  INVOICE CHARGE       <selected period | gross fee | partial-period split>
+  OFFSET APPLICATION   <opening credit | eligible fees received | credit used | ending credit>
+  NET INVOICE          <gross fee | offsets | net due>
+  OPEN QUESTIONS       <unclear term | why it matters>
+  MISSING              <each gap and what it stops>
+  CHECKS MISSED        <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Apply the charge for the actual selected period; comparison-period charges are never added together as one invoice.
+  - what: Invoice period
+    how: Give the exact start and end dates. A period that crosses the stepdown date is split.
+  - what: Which fees offset
+    how: Say which portfolio fees count under the agreement. The default is only fees you mark as eligible.
+  - what: Carryforward
+    how: Give the clause that allows or bars carryforward. If you have none, your AI lists the question.
 judge:
   - Apply the charge for the actual selected period; comparison-period charges are never added together as one invoice.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -60,13 +75,36 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads long documents and builds spreadsheets
+      why: Fee clauses can be long and exact. In a plain chat, paste the fee and offset clauses and the schedules come back as tables.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The prior invoice, to compare (optional).
+    - Side letters that change fees for one investor (optional).
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Management fee
+    meaning: A regular charge a fund manager takes, based on an agreed base and rate.
+  - term: Stepdown
+    meaning: A set date after which the fee rate or the fee base is lower.
+  - term: Fee offset
+    meaning: A credit that reduces the management fee by fees the manager earned elsewhere.
+  - term: Carryforward
+    meaning: Credit left unused that moves to a later invoice.
+output_sample:
+  input:
+    - The fee rates, basis definition and stepdown date from the fund agreement
+    - The eligible fee base for each period and the fees the fund received
+    - Offset credits from earlier periods
+  prerequisites:
+    - An AI that can read files
+    - The invoice period you are checking
+  output:
+    - name: outputs/step-1-management-fee-stepdown-checker.md
+      contains: Fee for each comparable period and the charge picked for the invoice period.
+    - name: outputs/step-2-transaction-fee-offset-checker.md
+      contains: Offsets applied, net invoice and the credit left over.
+    - name: Open questions
+      contains: Terms in the agreement that are unclear, and why each matters.
+    - name: Workbook (optional)
+      contains: The fee bridge in one linked spreadsheet, if your AI can build files.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.

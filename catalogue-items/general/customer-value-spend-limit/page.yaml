@@ -1,6 +1,6 @@
 new_slug: customer-value-spend-limit
 name: "Customer value and spend limit calculator"
-summary: "Paste sales by customer type and source. Get what a customer is worth and the most you can spend to win one."
+summary: "Work out customer lifetime value and the most you can spend to win a customer. Paste sales by customer type and source to see profit per buyer."
 job: plan-strategy
 thinking: medium
 thinking_why: "The arithmetic is fixed, but sorting customers and choosing sensible assumptions needs care."
@@ -17,6 +17,10 @@ when:
   - You do not know how much you can afford to pay for a new customer.
   - Some customers cost a lot to win and you are not sure if they pay back.
   - You want to know which sources bring the best customers over time.
+not_for:
+  - "You have no sales history yet: run a small test budget first, or use the Smallest test picker to plan a cheap test."
+  - "You need to choose which growth lever to work on: use the Growth lever audit."
+  - "You want to judge one ad or one campaign on its own: check the ad platform report, since this tool looks at whole customer groups."
 
 you_give:
   - Sales data by customer type and by source, with dates (required)
@@ -35,6 +39,27 @@ how_to_use:
   - Add your cost to serve and what you pay in each source.
   - Read the spend limit and the flags. Check each labelled assumption.
   - Change the assumptions that look wrong and run it again.
+output_sample:
+  input:
+    - Your sales by customer type and source, with dates
+    - What you pay to win a customer in each source (optional)
+    - Your cost to serve a customer, such as delivery, support and returns (optional)
+    - Back-end sales or repeat products you offer (optional)
+  output:
+    - name: Groups
+      contains: Each buyer type and source, with the number of buyers and the dates the data covers.
+    - name: Value per buyer
+      contains: Orders, spend over the period, cost to serve and profit per buyer for each group.
+    - name: Spend limit
+      contains: The most you can pay to win a buyer in each group, with the sum and assumptions.
+    - name: What you pay now
+      contains: Your cost per new buyer in each source, next to the limit, flagged over, within or missing.
+    - name: How to raise the limit
+      contains: Back-end sales and repeat steps that could lift the limit, marked as measured or assumed.
+    - name: Missing
+      contains: What information would sharpen the numbers.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: Group the buyers

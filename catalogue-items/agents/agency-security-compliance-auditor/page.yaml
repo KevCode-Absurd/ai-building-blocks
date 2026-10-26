@@ -1,0 +1,134 @@
+name: Compliance Auditor agent
+summary: Check your security setup against SOC 2, ISO 27001, HIPAA or PCI-DSS. Get a gap table, an auditor proof list and a fix order.
+headline: Compliance Auditor agent
+subhead: Name the framework you are aiming for, such as SOC 2, and describe how your team handles logins, access, changes and incidents. It checks each control the way an auditor would. You get a gap table, a proof list and a fix order.
+job: check-contracts
+thinking: high
+thinking_why: It must compare your setup with each control, ask what an auditor would test and refuse to mark a control met without proof. Use a model that reasons carefully.
+explain: |-
+  A security compliance readiness check (also called a SOC 2 gap assessment) fails when it counts paper. A policy nobody follows looks fine on a checklist and fails in the audit. Auditors test whether a control worked across the whole audit period, not whether it exists today. This agent thinks like the auditor. For each control it asks what they would test, what proof they would request and how many items they would sample.
+
+  You start by naming the framework and what is in scope. It then goes control by control and marks each one Met, Partly met, Not met or No evidence. Each row has what you do today, what the framework expects, the steps to close the gap and how big the job is. It also lists the proof to collect, where that proof usually lives and how often to pull it.
+
+  It matches the work to your size. A ten-person startup does not need a bank's program. It is a readiness review by an AI, not an audit. Only an independent auditor can certify you.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A customer asks for your SOC 2 report and you have not started.
+  - You plan an audit in a few months and want to know how far away you are.
+  - Your last audit found problems and you need a plan to close them before the next one.
+  - A security questionnaire asks for proof and you do not know what evidence you hold.
+not_for:
+  - You need a real certification or report. Only an independent auditor can give one.
+  - You want a plain evidence checklist for one framework, with no review of your setup. Use the Compliance readiness checklist builder.
+  - You sell cloud software to the US government and need FedRAMP. Use the FedRAMP & RMF Compliance Engineer agent.
+you_give:
+  - The framework you are aiming for, such as SOC 2, ISO 27001, HIPAA or PCI-DSS, and your audit date if you have one
+  - The systems and tools in scope, such as your cloud host, login tool, ticket tool and code host
+  - Your policies, or a plain description of how you handle logins, access reviews, joiners and leavers, changes, monitoring and incidents
+  - Your last audit report or list of findings (optional)
+  - Your team size and who owns security (optional)
+you_get:
+  - A scope note that says what is in and out of the review
+  - A gap table, one row per control, marked Met, Partly met, Not met or No evidence
+  - A proof list that says what an auditor will ask for, where it lives and how often to collect it
+  - A fix plan in order, with each job marked small, medium or large
+  - Questions to put to your auditor
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Say which framework and audit type you are aiming for, and your audit dates if you know them.
+  - List the systems in scope, then paste your policies or describe how each control works today. It cannot log in to your tools, so export any proof you want it to read.
+  - Type "Run a readiness review. Mark a control Met only if you showed me proof. Tell me what an auditor would ask for."
+  - Work through the Not met and No evidence rows in order. Save the proof as you go.
+  - Run the review again before the real audit, and send the questions list to your auditor.
+how_it_works:
+  - title: Set the scope
+    text: It confirms the framework, the systems in scope, the audit period and what is left out, with a reason for each exclusion.
+  - title: Think like the auditor
+    text: For each control it asks what the auditor would test, what proof they would request and how many items they would sample.
+  - title: Mark each control
+    text: It marks each one Met, Partly met, Not met or No evidence, based on what you showed it.
+  - title: Describe the gap
+    text: Each gap row gives what you do today, what is expected, the fix steps and the size of the job.
+  - title: Build the proof list
+    text: It lists the proof for each control, where it usually lives and how often to collect it. Proof must show the control worked over the whole period.
+  - title: Plan the fixes
+    text: It orders the work by risk and audit timeline, and puts a role next to each job.
+  - title: Hand back questions
+    text: It lists what to ask your auditor, and offers a draft policy for any control that has none.
+output_shape: |-
+  SCOPE
+    Framework <name> | Audit type and period <dates> | In scope <systems> | Out of scope <systems and why>
+
+  GAP TABLE
+    <control area> | <control reference to confirm> | <Met, Partly met, Not met or No evidence> | <what you do today> | <what is expected> | <fix steps> | <small, medium or large> | <priority>
+
+  PROOF LIST
+    <control> | <proof an auditor asks for> | <where it lives> | <how to collect it> | <how often>
+
+  FIX PLAN (in order)
+    <job> | <why now> | <role that owns it> | <size>
+
+  READINESS TALLY
+    Met <n> | Partly met <n> | Not met <n> | No evidence <n> | out of <n> controls reviewed
+
+  QUESTIONS FOR YOUR AUDITOR
+    <question> | <control it relates to>
+output_sample:
+  input:
+    - The framework you are aiming for, and your audit dates
+    - The systems and tools in scope
+    - Your policies, or a description of how each control works today
+    - Your last audit findings (optional)
+  prerequisites:
+    - An AI that can read files, if you attach policies or exports
+  output:
+    - name: Scope
+      contains: The framework, audit period, what is in scope and what is left out, with reasons.
+    - name: Gap table
+      contains: One row per control, marked Met, Partly met, Not met or No evidence, with fix steps and size.
+    - name: Proof list
+      contains: For each control, the proof an auditor asks for, where it lives and how often to collect it.
+    - name: Fix plan
+      contains: The jobs in order of risk and audit timeline, each with an owner role and a size.
+    - name: Readiness tally
+      contains: A count of controls by status. It counts only the controls you gave proof about.
+    - name: Questions for your auditor
+      contains: Points to settle with the auditor, such as scope limits and how much proof is enough.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your policy files and exported reports side by side, and match each one to a control.
+  inputs:
+    - An export of who has access to your main systems, with dates.
+    - Your list of vendors that hold customer data.
+    - Tickets or logs that show a change, a new hire or a leaver being handled.
+terms:
+  - term: SOC 2
+    meaning: A report by an outside auditor on how well a company protects customer data. Type II covers a period of time.
+  - term: Control
+    meaning: One rule or safeguard a framework expects, such as removing a leaver's access.
+  - term: Evidence
+    meaning: Proof that a control works, such as a dated log, a ticket or an export.
+  - term: Audit period
+    meaning: The span of months an auditor tests, such as the last 6 months.
+  - term: Gap
+    meaning: The difference between what a control expects and what you do today.
+tweaks:
+  - what: Framework
+    how: Name one framework. If you need two, review the first and then ask what carries over to the second.
+  - what: Audit period
+    how: Give real dates. Proof must cover the whole period, so a late start changes what you can use.
+  - what: Scope
+    how: Keep the scope small and clear. Every system in scope needs its own proof.
+improve:
+  - Keep each review with its fix plan. Re-run it each quarter to see which gaps closed.
+  - Add the control references your auditor uses to the pack, so the table matches their wording.
+  - Ask for a draft policy for any control marked Not met, then have the owner edit it so people will follow it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

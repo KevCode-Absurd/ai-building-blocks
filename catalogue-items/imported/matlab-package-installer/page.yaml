@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It runs a few package commands.
 new_slug: matlab-package-installer
 name: MATLAB package installer
-summary: Name the package. Get it installed, updated or removed, with dependency
-  errors sorted.
+summary: Install, update or remove a MATLAB package from the command line, and fix dependency errors. Give it the package name and your release.
 job: build-software
 headline: MATLAB package installer
-subhead: Name the package. Get it installed, updated or removed, with dependency
-  errors sorted. Bring the package name. Use the result to plan your next step.
+subhead: Name the package. Get it installed, updated or removed, with dependency errors sorted. Bring the package name. Use the result to plan your next step.
 explain: |
   MATLAB packages installed, updated or removed from the command line, with dependency errors sorted out. Name the package and say what you want done.
 
@@ -17,6 +15,10 @@ when:
   - An install fails because of a missing dependency.
   - You want your project's packages written down so a teammate can match them.
   - You need to remove a package without breaking others.
+not_for:
+  - "You need to install MATLAB, Simulink or a toolbox from a shell: use the standalone installer from MathWorks, or ask a person who manages your MATLAB licence."
+  - "You want a list of installed toolboxes or products: run the ver command in MATLAB instead."
+  - "You use a release older than R2026b: use the Add-On Manager in MATLAB instead."
 you_give:
   - The package name
   - "What you want done: install, update or remove"
@@ -28,8 +30,30 @@ you_get:
   - Dependency fixes
   - A project file entry (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB R2026b or later.
+  - Check that you have MATLAB R2026b or later. Older releases use the Add-On Manager.
+  - Open an AI that can run code in MATLAB, and paste in this skill.
+  - Tell it the package name and whether to install, update or remove it.
+  - Read the dry run result first. Confirm it found the right package.
+  - Approve the change. If a force is needed, it will ask you before it runs.
+  - Check the package list to see the final result.
+output_sample:
+  input:
+    - The package name, or part of it
+    - "What you want done: install, update, remove, search or list"
+    - Your MATLAB release
+    - Your project folder (optional)
+  prerequisites:
+    - An AI that can run code in MATLAB R2026b or later
+  output:
+    - name: Package check
+      contains: A dry run that finds the package name in your configured sources before anything is installed.
+    - name: Install, update or remove commands
+      contains: Commands that run without prompts, so your script does not stop and wait for an answer.
+    - name: Package list
+      contains: What is installed now, with names and versions, so you can confirm the change worked.
+    - name: Dependency fixes
+      contains: Steps to clear errors such as a dependency that cannot be found.
+    - name: Project file entry
+      contains: A line in your matlab.toml file so a teammate can set up the same packages.
+    - name: Warnings
+      contains: Notes on risks, such as global installs or a forced install that removes other packages.

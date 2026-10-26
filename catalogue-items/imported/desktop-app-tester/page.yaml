@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It runs the app and decides what to try next.
 new_slug: desktop-app-tester
 name: Desktop app tester
-summary: Point it at your Electron app. Get it launched and driven by clicks and
-  typing, with screenshots and logs.
+summary: Test your Electron app by driving it like a person would. Get clicks, typing, screenshots and logs that show if a UI change really works.
 job: test-and-fix-code
 headline: Desktop app tester
-subhead: Your Electron app, opened and used by the AI the way a person would,
-  with screenshots and logs to show what happened. You can confirm a UI change
-  works in the real app, not just in unit tests.
+subhead: Your Electron app, opened and used by the AI the way a person would, with screenshots and logs to show what happened. You can confirm a UI change works in the real app, not just in unit tests.
 explain: |
   Your Electron app, opened and used by the AI the way a person would, with screenshots and logs to show what happened. You can confirm a UI change works in the real app, not just in unit tests.
 
   A script launches the app under Playwright in the background and keeps it running between commands. The AI reads an accessibility snapshot to find buttons and fields by name, then clicks, types, waits for text, and takes screenshots it can look at. Each run uses a fresh profile. It suits first-run screens and bugs that only show in a built app. It needs Electron and Playwright installed, and it handles one window at a time.
 when:
-  - You changed a screen in your Electron app and want proof it works before you
-    ship.
+  - You changed a screen in your Electron app and want proof it works before you ship.
   - A bug only shows up in the built app, not in development.
-  - You need to check the first-run or onboarding flow without clicking through
-    it yourself.
+  - You need to check the first-run or onboarding flow without clicking through it yourself.
   - You want to confirm a feature works end to end, including the main process.
+not_for:
+  - "You want to test a web app that is not Electron: use a browser testing tool such as Playwright on its own."
+  - "Your flow opens more than one window: check it by hand, because this skill only drives the first window."
+  - "You want a full automated test suite or a check of visual design: use your project's own tests and a person's eye."
 you_give:
   - Your Electron project folder
   - Electron and Playwright installed in it
@@ -31,8 +30,29 @@ you_get:
   - Console and app logs
   - A plain report of what worked and what broke
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and take screenshots.
+  - Open your AI tool in a place where it can run code in your project folder. A plain chat window will not work.
+  - Check that Electron and Playwright are already installed in the project. Your AI will ask you to install them, not do it itself.
+  - Paste or attach this skill. Tell your AI what to click or check, for example the first-run screen.
+  - Ask it to look at a snapshot or screenshot before each action, and to read the logs after each step.
+  - Read the report. Check the screenshots and any error lines in the logs, then ask it to stop the app.
+  - "Caution: the eval and main commands run code with the app's full rights, and start --build runs the build command from drive.config.json. Read that file first in any project you did not set up."
+output_sample:
+  input:
+    - Your Electron project folder
+    - What you want clicked or checked, in plain words
+    - A launch config file called drive.config.json (optional)
+  prerequisites:
+    - An AI that can run code and read screenshots
+    - Electron and playwright-core (version 1.49 or later) installed in your project
+    - Node.js 18 or later
+  output:
+    - name: Steps run
+      contains: The list of clicks, typing and waits the AI did, in order, and whether each one worked.
+    - name: Screenshots
+      contains: A picture of the app window at each important state, saved as image files the AI can look at.
+    - name: Logs
+      contains: Main process and app console lines, with any renderer error lines called out.
+    - name: Stop result
+      contains: How the app ended when stopped, and a note if it did not quit cleanly.
+    - name: Suggested drive.config.json
+      contains: A launch config the AI proposes when your project has none and the launch needed help.

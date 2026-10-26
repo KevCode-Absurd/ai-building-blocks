@@ -1,6 +1,6 @@
 new_slug: launch-tiktok-ads-and-read-your-first-test
 name: Launch TikTok ads and read your first test
-summary: Give it store screenshots, videos and results. Get a setup score, a starter campaign, ad verdicts and Spark picks.
+summary: Launch TikTok ads with a setup score, a starter campaign, a keep, fix or cut call on each test ad, and Spark ad picks from your best posts.
 job: launch-and-scale-ads
 thinking: high
 thinking_why: Four skills run in a row, and the test step makes a call on every ad. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have never run TikTok ads, or your last start went nowhere and you do not know why.
   - You have three or more finished videos and a daily budget you can spend for at least a week.
   - You have organic or creator posts that did well and want to know which to put money behind.
+not_for:
+  - "You have no store or pixel yet: set those up first, then come back. You can also run only the TikTok ads account setup checker on its own."
+  - "You only want organic growth: post and track your videos without ads. Come back when you want to boost a post."
+  - "You want Meta ads, not TikTok: use the Meta ad policy checker or the Pre-launch ad checker."
 you_give:
   - Screenshots of your Business Center, billing, Events Manager and the Pixel Helper check
   - Your daily budget and the most you can pay for one sale
@@ -31,6 +35,27 @@ how_to_use:
   - Attach screenshots of your account setup. The AI can read images, so you do not need to type it out.
   - When it pauses, do the fixes, run the ads for at least three days and export the results before you continue.
   - Pull stats on your organic and creator posts for the last step.
+output_sample:
+  input:
+    - Screenshots of your Business Center, billing, Events Manager and Pixel Helper
+    - Your daily budget and the most you can pay for one sale
+    - Three to five finished video ads, or their scripts
+    - Your test results export for a closed date window
+    - Stats on your organic and creator posts (optional)
+  prerequisites:
+    - An AI that can read images and files, such as Claude
+    - Three or more finished videos and a budget you can spend for at least a week
+  output:
+    - name: Setup check
+      contains: A setup score out of 100 and a do-first list covering accounts, billing, team security and the pixel.
+    - name: Starter campaign
+      contains: Launch status, campaign structure, budget math, audiences, a four-week ladder and cost expectations.
+    - name: Test read
+      contains: One block per ad with a keep, fix or cut call and score, plus a next test plan.
+    - name: Spark picks
+      contains: A shortlist of posts to boost, posts held back, a creator request and steps in Ads Manager.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the setup
     text: Scores accounts, billing, security, the pixel and its five events, and defaults. Lists what to fix before spending.

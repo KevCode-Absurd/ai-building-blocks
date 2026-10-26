@@ -1,6 +1,7 @@
 slug: prepare-a-team-absence-handover
 name: Prepare a team absence handover
-summary: Share the source files. Get a coverage map, handover notes and an escalation list.
+summary: Cover a team member's leave without dropped work. Get a coverage map,
+  task-by-task handover notes and an escalation list for the cover person.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -23,11 +24,17 @@ uses:
   - executive-action-register
 steps:
   - uses: team-capacity-planner
-    note: Compare the commitments with the actual capacity and cover available during the absence.
+    note: "Compares the person's commitments with the cover available during the
+      absence. Hands step 2 the plan: each task with its cover owner or a named
+      gap."
   - uses: handover-note-writer
-    note: Write task-level handovers with source links, current state and the next action.
+    note: Writes a handover for each task from step 1's plan and the person's work
+      list, with source links, current state and next action. Hands step 3 the
+      handover notes and their open items.
   - uses: executive-action-register
-    note: Create a coverage action list with owners, dates, dependencies and unresolved acceptance.
+    note: Reads step 2's handover notes and open items as its notes. Creates a
+      coverage action list with owners, dates, dependencies and acceptance.
+      Every action stays proposed until the cover person says yes.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -37,13 +44,19 @@ credits:
   - title: Team capacity planner
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Handover note writer
     by: AI Blocks
     url: https://useaiblocks.com/skills/handover-note-writer
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Executive action register keeper
     by: AI Blocks
     url: https://useaiblocks.com/skills/executive-action-register
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

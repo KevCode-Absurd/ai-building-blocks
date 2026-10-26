@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It audits a page against known patterns and proposes tests for you to pick.
 new_slug: conversion-problem-finder
 name: Conversion problem finder
-summary: Give it a landing page. Get the conversion problems found and a set of
-  tests worth running, each with a clear reason.
+summary: Find why your landing page loses visitors. Get the problems ranked by how bad they are, plus A/B tests worth running, each with a reason.
 job: audit-landing-page
 headline: Conversion problem finder
-subhead: A list of why a page or checkout loses visitors, scored by how bad it
-  is, plus A/B tests worth running, each with a reason behind it.
+subhead: A list of why a page or checkout loses visitors, scored by how bad it is, plus A/B tests worth running, each with a reason behind it.
 explain: |
   A list of why a page or checkout loses visitors, scored by how bad it is, plus A/B tests worth running, each with a reason behind it. It stops you from testing button colours while a bigger problem sits unfixed.
 
@@ -17,6 +15,10 @@ when:
   - People add to cart and then leave.
   - You want to test things but don't know where to start.
   - You need to explain to a team why a test is worth running.
+not_for:
+  - Your page has no visitors or sales data yet. Get some traffic first, or ask a few customers why they hesitate.
+  - You want an overall marketing plan. Use a marketing strategy guide, not this audit.
+  - Your problem is how the page looks or works, like confusing menus. Ask a designer or run a short usability test with five people.
 you_give:
   - The page URL or screenshots
   - Your current conversion rate
@@ -28,7 +30,27 @@ you_get:
   - Priority order
   - Test setup guidance
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add your page link or screenshots, plus your current conversion rate.
+  - Add your weekly visitors and any customer feedback you have. These are optional.
+  - Read the ranked problems first. Check that each one matches what you know about your customers.
+  - Pick the top test and write down the change, the expected result and the reason before you run it.
+output_sample:
+  input:
+    - Your page link or screenshots
+    - Your current conversion rate
+    - Your visitors per week (optional)
+    - What customers say about you, like survey answers or support emails (optional)
+  output:
+    - name: Score
+      contains: A score out of 10 from seven yes or no checks, with the checks your page fails.
+    - name: Problems found
+      contains: The reasons visitors leave, ranked from worst to least, with what each one costs you.
+    - name: Objections and answers
+      contains: The doubts buyers have and the proof or wording that answers each one.
+    - name: Test hypotheses
+      contains: Each test written as the change, the result you expect and the reason why.
+    - name: Priority order
+      contains: Which test to run first and which can wait.
+    - name: Test setup guidance
+      contains: How many visitors you need, how long to run each test and mistakes like stopping early.

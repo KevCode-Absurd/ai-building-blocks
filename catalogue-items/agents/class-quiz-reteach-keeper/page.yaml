@@ -1,6 +1,6 @@
 new_slug: class-quiz-reteach-keeper
 name: Class quiz reteach keeper
-summary: Give it each quiz's results. Get what to reteach and how, then a check next quiz on whether it worked.
+summary: Check your class quiz results to see what to reteach and how. Next quiz, it checks whether the reteach worked. Built for teachers.
 job: teach-and-train
 thinking: medium
 thinking_why: It reads a table, picks one of five reteach routes by rule and compares with the last quiz. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - You mark a quiz and want to know what to reteach, not only who struggled.
   - A topic keeps coming back wrong and you want to try something different.
   - You want a short recall starter for the topics students just missed.
+not_for:
+  - "You only want a fresh set of recall questions: use the retrieval-quiz-writer skill on its own, with no results table."
+  - "You have a very small class or a quiz of fewer than five questions: read the answers yourself, as the shares will swing too much."
+  - "You want marks changed, reports written or families contacted: do that yourself, as this agent never does it."
 you_give:
   - Quiz results, one row per student, with student numbers and no names
   - The quiz questions and the idea each one tests, the first time
@@ -29,6 +33,32 @@ how_to_use:
   - Take names out of your results. Use student numbers.
   - Add a few real wrong answers for the most-missed questions if you can. The causes are then seen, not guessed.
   - Choose what to teach from its list. Run it again after the next quiz and it compares with this one.
+output_sample:
+  input:
+    - Your quiz results, one row per student with a student number and no name
+    - The quiz questions and the idea each one tests (the first time)
+    - A few real wrong answers for the most-missed questions (optional)
+    - Your year group and time before the next lesson (optional)
+  prerequisites:
+    - An AI that can read a table or a pasted list
+    - Your reteach log from the last quiz, if you have one (optional)
+  output:
+    - name: The quiz in one line
+      contains: Class size, the average, and the most-missed questions with the share of the class who missed each.
+    - name: Against last time
+      contains: Each topic you reteached before, marked moved up, flat or worse, with the old and new shares.
+    - name: Why they missed it
+      contains: The likely cause for each topic, marked as seen in the answers or as a guess.
+    - name: What to reteach
+      contains: Each topic with the reteach chosen, the reason for the choice and the time it needs.
+    - name: Small group
+      contains: Student numbers who need hints rather than a whole-class lesson, with the topic.
+    - name: Stuck topics
+      contains: Any topic reteached twice with no gain, and the missing step underneath it.
+    - name: Recall starters
+      contains: Short questions to use one week and three weeks later on the topics you reteached.
+    - name: Files and missing
+      contains: Each step's file, then every MISSING line in one list.
 how_it_works:
   - title: Read the results
     text: Works out the share of the class who missed each question and ranks them. It says when the class is too small for the shares to be steady.

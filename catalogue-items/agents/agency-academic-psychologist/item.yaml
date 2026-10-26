@@ -1,0 +1,41 @@
+slug: agency-academic-psychologist
+name: Character Psychologist agent
+summary: "Get a psychology profile of a character or relationship, built on named theories, so their choices and clashes feel real and hold together."
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: academic/academic-psychologist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-psychologist.md
+  licence: MIT
+  original_name: Psychologist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 193b7dba6d04346d15ee21753fd1cdb69dc1a21a5ac30d5d62726654820a5633
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Psychologist
+  - Agency Agents
+  - Academic
+credits:
+  - title: Psychologist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-psychologist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

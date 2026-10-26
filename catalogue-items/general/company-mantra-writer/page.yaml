@@ -1,6 +1,6 @@
 new_slug: company-mantra-writer
 name: "Company mantra writer"
-summary: "Describe what you do and for whom. Get three two-to-four word mantras and a niche check."
+summary: "Write a company mantra of two to four words. Give it what you do and who for. You get three options, a grid check and a pick."
 job: plan-strategy
 thinking: medium
 thinking_why: "Short phrases take careful word choice, and the grid test needs a judgement about value and uniqueness."
@@ -17,6 +17,10 @@ when:
   - Your mission statement is a paragraph nobody can recall.
   - Your team keeps debating what to say yes and no to, and needs a short shared reference.
   - You are starting a business and want a short line that says what it is for.
+not_for:
+  - "You need a product name or a price claim: write that by hand or ask your AI directly, since this tool only writes short guiding phrases."
+  - "You have no clear angle that sets you apart from rivals: use the Product differentiation checker first, then come back here."
+  - "You want a slogan that sells in ads: ask your AI for ad lines, as a mantra guides your team more than it persuades buyers."
 
 you_give:
   - What you do, in a few lines (required)
@@ -35,6 +39,28 @@ how_to_use:
   - Read the three mantras aloud. Drop any you would be embarrassed to say to a customer.
   - Ask three people to say it back to you a day later.
   - Use the winner as the first line in your team notes and website.
+output_sample:
+  input:
+    - What you do, in a few lines
+    - Who it is for
+    - Your current mission statement (optional)
+    - Customer words on what they get from you (optional)
+    - What your rivals say about themselves (optional)
+  output:
+    - name: The benefit
+      contains: One sentence on what the person gets, not what you make.
+    - name: The meaning
+      contains: One or two lines on how the work makes someone's life better, easier or more fun.
+    - name: Three mantras
+      contains: Three phrases of two to four words, each with the long statement it replaces and a value and uniqueness rating.
+    - name: The pick
+      contains: The mantra in the valuable and unique corner, with the reason it won.
+    - name: The test
+      contains: A plan to ask three people to repeat the mantra a day later, with a pass mark.
+    - name: MISSING
+      contains: Lines naming what is lacking, such as rival wording, that would sharpen the options.
+    - name: CHECKS MISSED
+      contains: One line for each check the skill still failed, or none.
 
 how_it_works:
   - title: Benefit, not product

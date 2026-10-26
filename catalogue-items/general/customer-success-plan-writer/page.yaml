@@ -1,6 +1,6 @@
 new_slug: customer-success-plan-writer
 name: "Customer success plan writer"
-summary: "Paste why customers cancel. Get a plan for getting buyers to a result, with onboarding, teaching and a community step."
+summary: "Turn the reasons customers cancel into a customer success plan: first-days steps, teaching, a community step and warning signals."
 job: understand-customers
 thinking: medium
 thinking_why: "It sorts cancel reasons and chooses where to spend, within fixed steps."
@@ -17,6 +17,10 @@ when:
   - "Many new customers cancel or go quiet in the first weeks."
   - "You have cancel survey answers or support emails and no plan from them."
   - "You sell on repeat payments and want fewer people to leave."
+not_for:
+  - "You want to know why people bought in the first place: use the Customer buying reasons finder."
+  - "Your people never became customers: talk to them first, or use the Customer discovery interview planner."
+  - "You need ad copy or a sales page: use the Story image ad writer."
 
 you_give:
   - "What you want to fix, and what you can spend"
@@ -34,6 +38,30 @@ how_to_use:
   - "Paste cancel reasons, support emails or reviews, with dates."
   - "State your budget in time and money."
   - "Pick one step from the plan to start this week, usually the first-days plan."
+output_sample:
+  input:
+    - What you want to fix, and what you can spend
+    - Cancel reasons, support messages or reviews, with dates (optional)
+    - What the customer is trying to achieve (optional)
+  output:
+    - name: Result the customer paid for
+      contains: One line, in the customer's own words, on the change they wanted.
+    - name: Why they leave
+      contains: Cancel reasons sorted into groups with counts, and the top two marked.
+    - name: Where they stall
+      contains: The first day or step each top group stopped, with a quote that shows it.
+    - name: First days
+      contains: A day-by-day start with one customer action, one action from you, and an early first win.
+    - name: Teaching
+      contains: Five to eight lessons that answer the stall points and also help people who are not customers.
+    - name: Community
+      contains: A simple place for customers to help each other, with a host, a first month and one rule.
+    - name: Warning signals
+      contains: A visible sign, a threshold and a response for each risk.
+    - name: Steps, owners, cost
+      contains: Every step with an owner, a date and a cost, trimmed to your budget.
+    - name: Missing and checks missed
+      contains: Gaps in your data, plus any checks the plan still fails.
 
 how_it_works:
   - title: "States the result"

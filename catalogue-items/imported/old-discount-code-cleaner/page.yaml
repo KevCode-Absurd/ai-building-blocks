@@ -2,37 +2,56 @@ thinking: medium
 thinking_why: Deletes are permanent, so it previews first.
 new_slug: old-discount-code-cleaner
 name: Old discount code cleaner
-summary: Get expired, unused and duplicate discount codes found, then switched
-  off or deleted if you say so. Deletes cannot be undone.
+summary: Find expired and unused discount codes in your Shopify store, preview them, then delete only the ones you approve. Deletes cannot be undone.
 job: run-your-store
 headline: Old discount code cleaner
-subhead: Get expired, unused and duplicate discount codes found, then switched
-  off or deleted if you say so. Deletes cannot be undone. Bring your store
-  domain. Use the result to plan your next step.
+subhead: Give it your Shopify store domain. It lists codes that have expired or were never used. You review the list first, and it deletes only after you say so.
 explain: |
   A tidy list of discount codes in your Shopify store that are expired, never used or near-duplicates, with the option to switch them off or remove them. Old codes pile up after campaigns and make the admin hard to read.
 
   The skill connects to your store through the Shopify command line and reads all discounts. It flags codes past their end date, codes with zero redemptions, and families of codes with repeating prefixes. You choose what to flag and what to act on. By default it only reports, and it changes things only after you confirm. Deleting is permanent and cannot be undone, so deactivating is the safer first step. It needs a signed-in Shopify session with discount access.
 when:
-  - Your discount list has hundreds of codes from past sales and you cannot tell
-    what is live.
-  - You want to remove codes that never got used.
-  - A campaign ended and you want its codes switched off.
+  - Your discount list has hundreds of codes and you cannot tell which are live.
+  - A campaign ended and you want its old codes gone.
   - Customers keep finding old codes that should not work.
+  - You want a quarterly tidy of codes nobody used.
+not_for:
+  - "You want to switch codes off without deleting them: this skill only reports and deletes, so turn them off by hand in your Shopify admin."
+  - "You want to clean up automatic discounts: this skill only reads code-based discounts, so review automatic ones in your Shopify admin."
+  - "You have no Shopify store or cannot sign in with discount permission: ask the store owner to run it or give you access."
 you_give:
   - Your store domain
   - Access to Shopify with read and write discount permission
-  - "What to flag: expired, unused or duplicates"
-  - Whether to only report, deactivate or delete
+  - "What to flag: expired codes, unused codes, or both"
+  - How many days old an unused code must be (optional)
+  - Whether to only preview or also delete (optional)
 you_get:
-  - A report of expired, unused and duplicate codes
-  - Codes deactivated, if you approve
-  - Codes deleted, if you approve
-  - A summary of what changed
+  - A CSV list of expired and unused codes, with the reason each was flagged
+  - A preview of what would be deleted, before anything changes
+  - Deleted codes, only if you approve
+  - A short summary of what was scanned, flagged and deleted
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Use an AI that can run Shopify command line tools. A plain chat cannot do this.
+  - Sign in to your store with read and write discount permission.
+  - Give your AI the skill and your store domain. Pick what to flag.
+  - Keep it on preview first. Read the CSV list.
+  - Check that no flagged code is in an email campaign that has not gone out yet.
+  - Only then ask it to delete. Deleted codes cannot be brought back.
+output_sample:
+  input:
+    - Your store domain
+    - "What to flag: expired codes, unused codes, or both"
+    - How old an unused code must be before it is flagged (optional)
+    - Whether to only preview or also delete (optional)
+  prerequisites:
+    - An AI that can run Shopify command line tools
+    - A signed-in Shopify session with read and write discount permission
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step, with what was asked and how many codes came back.
+    - name: discount_cleanup CSV
+      contains: One row per flagged code with its title, status, dates, usage, the reason it was flagged and the action taken.
+    - name: Outcome summary
+      contains: Counts of codes scanned, expired, unused, flagged, deleted and errors, plus the CSV file name.

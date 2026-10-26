@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Good descriptions and error handling take careful drafting.
 new_slug: ai-tool-designer
 name: AI tool designer
-summary: Describe what your AI needs to do. Get clear tool definitions it can
-  call without guessing or failing silently.
+summary: Design AI tool definitions your agent can call without guessing. Give it the job, get tool names, schemas and descriptions that work.
 job: connect-tools
 headline: AI tool designer
-subhead: Tools the model understands and uses correctly, instead of guessing,
-  failing silently or burning tokens. Your AI never sees your code. It sees only
-  the name, the schema and the description, so those are what get designed here.
+subhead: Tools the model understands and uses correctly, instead of guessing, failing silently or burning tokens. Your AI never sees your code. It sees only the name, the schema and the description, so those are what get designed here.
 explain: |
   Tools the model understands and uses correctly, instead of guessing, failing silently or burning tokens. Your AI never sees your code. It sees only the name, the schema and the description, so those are what get designed here.
 
@@ -18,6 +15,10 @@ when:
   - You are about to build a set of tools for an agent from scratch.
   - Tool errors come back vague, so the agent just retries.
   - You want to expose your tools over MCP.
+not_for:
+  - "You only need one prompt and no tools: use a plain prompt in your AI chat."
+  - "You want a strict safety review of one existing tool: use the tool definition writer."
+  - "You want to run the agent or deploy the tools for you: ask a developer to build and host them."
 you_give:
   - What the AI should be able to do
   - The systems or APIs behind it
@@ -28,7 +29,32 @@ you_get:
   - Descriptions written for the model
   - Input checks and error messages the agent can act on
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool. Use one that can read files if you can, so it reads the whole skill folder.
+  - Upload the skill folder, or paste the SKILL.md text into a chat.
+  - Say what your AI should be able to do. Name the systems or APIs behind it.
+  - Add examples of calls that went wrong (optional).
+  - Check the tool list. Make sure each description says when to use the tool and when not to.
+  - Only the Python example needs code running. It also needs an Anthropic API key and a paid model. The design work needs neither.
+output_sample:
+  input:
+    - What your AI should be able to do
+    - The systems or APIs behind the tools
+    - Examples of calls that went wrong (optional)
+  prerequisites:
+    - An AI that can read the skill folder, including the detailed guide
+    - An Anthropic API key and a paid model, only if you run the Python example
+  output:
+    - name: Tool list
+      contains: A table of the proposed tools with a name, a schema and a description for each.
+    - name: JSON Schema
+      contains: The inputs each tool accepts, with types, required fields and short notes on each field.
+    - name: Tool descriptions
+      contains: Plain text for the model that says when to use the tool and when not to.
+    - name: Input checks
+      contains: Rules that reject bad or missing values before the tool runs.
+    - name: Error messages
+      contains: Clear messages that tell the agent what went wrong and what to try next.
+    - name: Python example
+      contains: A short working tool you can adapt, using the Anthropic tool runner.
+    - name: MCP notes
+      contains: How to share the same tools with other apps through the MCP standard.

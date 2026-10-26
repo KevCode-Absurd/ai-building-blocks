@@ -2,34 +2,72 @@ thinking: medium
 thinking_why: It must pick tests that fit the idea and set pass marks.
 new_slug: pretotype-experiment-designer
 name: Pretotype experiment designer
-summary: Give it a new product idea. Get cheap tests like landing pages and
-  pre-orders, each with a clear pass mark.
+summary: Test demand for a new product idea before you build it. Get an XYZ hypothesis and 2 or 3 cheap tests, like a landing page or pre-order, with pass marks.
 job: test-an-idea
 headline: Pretotype experiment designer
-subhead: Give it a new product idea. Get cheap tests like landing pages and
-  pre-orders, each with a clear pass mark. Bring product idea. Use the result to
-  plan your next step.
+subhead: Describe a new product idea and who it is for. Your AI writes one XYZ hypothesis, then designs two or three cheap tests, such as a landing page, a waitlist or a pre-order. Each test gets a method, a metric and a pass mark.
 explain: |
-  Cheap tests for a new product idea, each with a clear pass mark, so you learn if people want it before you build it.
+  This pretotype experiment designer helps you find out if people want a new product before you spend months building it. A pretotype is a fake-it-first test: you act as if the product exists and watch what real people do.
 
-  The skill turns your idea into an XYZ hypothesis: at least X percent of Y will do Z. It then suggests two or three low-effort tests such as a landing page, an explainer video, an email campaign, a pre-order or waitlist, or doing the service by hand. It follows Alberto Savoia's rules: ask for real commitment, not opinions, and collect your own data rather than relying on market reports. Each test gets its measure and its pass line.
+  It starts with an XYZ hypothesis: at least X percent of Y will do Z. For example, at least 5 percent of visitors from a certain group will join a waitlist. Then it picks two or three tests that fit your idea and budget. Options are a landing page, an explainer video, an email campaign, a waitlist or pre-order, or doing the service by hand.
+
+  It follows Alberto Savoia's book The Right It. Ask for real commitment such as time, money or a reputation at risk, not opinions. Collect your own data, not market reports about someone else's idea.
 when:
-  - You have an idea and no proof anyone wants it.
-  - You want to test demand this week without code.
-  - A pre-order would show real interest.
-  - You need a clear go or no-go rule before spending money.
+  - You have an idea and no proof that anyone wants it.
+  - You want to test demand this week, without writing code.
+  - You wonder if a pre-order or waitlist would show real interest.
+  - You need a clear go or no-go rule before you spend money.
+not_for:
+  - You already sell the product and have customer data. Use the One-change experiment planner, or read your analytics and interviews first.
+  - You have a long list of guesses and need to pick which to test. Use the Assumption test ranker first, then come back here.
+  - You want a five-day plan with real users. Use the Five-day idea test planner.
 you_give:
-  - Product idea
-  - Target customers
-  - Budget and time for tests
+  - Your product idea, in a sentence or two
+  - Who it is for, in specific words
+  - Your budget and the time you can give the tests
   - Any research you have (optional)
 you_get:
-  - XYZ hypothesis
-  - Two or three test designs
-  - Metric and pass mark for each
-  - Skin-in-the-game ideas
+  - One XYZ hypothesis with a number you can check
+  - Two or three test designs that fit your budget
+  - A method, a metric and a pass mark for each test
+  - Ways to make each test ask for real commitment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill.
+  - Describe your idea and who it is for. Add your budget, your time and any numbers or research you have.
+  - Check the XYZ hypothesis. Is Y a group you can actually reach? Does Z need real commitment, not just a click or a like?
+  - Pick one test to run first. Read the pass mark and agree it with yourself before you start, not after the results.
+  - Run the test yourself. This skill designs it, and it does not build pages or send emails.
+  - If the pass mark is hit, test a stronger commitment, such as a paid pre-order. If it is missed, change the idea or the audience.
+output_sample:
+  input:
+    - Your product idea in a sentence or two
+    - Who it is for
+    - Your budget and time for tests
+    - Research or market notes (optional)
+  prerequisites:
+    - An AI you can paste a brief into, such as Claude, ChatGPT or Gemini
+  output:
+    - name: XYZ hypothesis
+      contains: One sentence, at least X percent of Y will do Z, with your own numbers in it.
+    - name: Test designs
+      contains: Two or three cheap tests, such as a landing page, waitlist or pre-order, each with the steps to set it up.
+    - name: Metric and pass mark
+      contains: For each test, the one number to count and the line it must cross to count as a pass.
+    - name: Skin-in-the-game ideas
+      contains: Ways to ask for time, money or a promise, so the signal is real interest.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A plain chat is enough. You paste your idea and read the test plan.
+  inputs:
+    - The specific group you want to reach, such as "dog owners in Austin with two or more dogs".
+    - Your own earlier test results, if you have run any.
+terms:
+  - term: Pretotype
+    meaning: A very cheap fake version of a product, used to see if people would use or buy it.
+  - term: XYZ hypothesis
+    meaning: A guess in this shape, at least X percent of Y will do Z. It gives you a number to test.
+  - term: Skin in the game
+    meaning: Real commitment from the customer, such as money, time or a promise, not just a nice word.
+  - term: Pass mark
+    meaning: The number your test must reach to count as success, set before you run it.

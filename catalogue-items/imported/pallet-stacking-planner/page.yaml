@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tries several patterns and keeps the best fit.
 new_slug: pallet-stacking-planner
 name: Pallet stacking planner
-summary: Give it your box sizes and pallet size. Get a stacking pattern that
-  fits the most boxes safely.
+summary: Plan a pallet stacking pattern that fits the most boxes. Give it your box and pallet sizes, and get layers, box counts and weight and height checks.
 job: plan-supply-chain
 headline: Pallet stacking planner
-subhead: A stacking pattern that fits the most boxes on a pallet without
-  breaking weight, height or crush limits. You give box and pallet sizes, and it
-  works out the layers.
+subhead: A stacking pattern that fits the most boxes on a pallet without breaking weight, height or crush limits. You give box and pallet sizes, and it works out the layers.
 explain: |
   A stacking pattern that fits the most boxes on a pallet without breaking weight, height or crush limits. You give box and pallet sizes, and it works out the layers.
 
@@ -18,6 +15,10 @@ when:
   - A pallet leans or crushes the bottom layer.
   - You mix box sizes on one pallet.
   - A customer limits pallet height or weight.
+not_for:
+  - "You need to load pallets into a truck or shipping container: use a container loading tool or a loading plan from your carrier."
+  - "You have loose items of many odd shapes, not boxes: use a 3D packing tool, not this planner."
+  - "You need sign-off that a pallet is safe to ship: ask a qualified person to check it, since these checks are estimates."
 you_give:
   - Pallet type and size
   - Box sizes and weights
@@ -29,8 +30,26 @@ you_get:
   - Weight and height check
   - Wrapping and handling notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Gather your pallet type and size, your box sizes and weights, and your maximum height and weight.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Paste in your details. Add any fragile or no-stack rules (optional).
+  - Ask your AI to plan the pallet. It works best when your AI can run code (Python), but a plain chat can try too.
+  - Check each layer against the weight and height results. These are estimates.
+  - Have a qualified person check the pallet before it ships.
+output_sample:
+  input:
+    - Your pallet type and size
+    - Box sizes and weights
+    - Maximum pallet height and weight
+    - Fragile or no-stack rules (optional)
+  prerequisites:
+    - An AI that can run code (Python) works best, but you can also use a plain chat
+  output:
+    - name: Summary
+      contains: Pallet type, boxes loaded, total weight, total height, how full the pallet is, and a stability result.
+    - name: Loading pattern
+      contains: Each layer from the bottom up, with box count, box direction, layer height and layer weight.
+    - name: Stability analysis
+      contains: Where the load's center of gravity sits, how far it is off center, and whether it is stable.
+    - name: Shipping instructions
+      contains: Wrapping advice, forklift entry sides, whether pallets can be double-stacked, and labeling.

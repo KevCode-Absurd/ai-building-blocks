@@ -48,12 +48,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Make the fixes, starting with the biggest. Decide who will be on camera.
 
-2. **Short video format picker.** Use the skill `short-video-format-picker`. Chooses formats and hooks for the focus you set after the account check.
+2. **Short video format picker.** Use the skill `short-video-format-picker`. Chooses formats and hooks for the focus you set after the account check. Uses your product and who will be on camera, not step 1's report, and hands step 3 the hooks and script outlines.
 3. **Video hook scorer.** Use the skill `video-hook-scorer`. Give it the hooks and the script from the steps before. Scores the hooks from the format picker before you film.
 
 Pause here: Post your best 10 to 15 videos by hand over three weeks. Export views and watch time.
 
-4. **Organic format tester.** Use the skill `organic-format-tester`. Reads which of the formats you picked earned views and sets the next round.
+4. **Organic format tester.** Use the skill `organic-format-tester`. Reads which of the formats you picked earned views and sets the next round. Uses the export of the posts you filmed from steps 2 and 3 and published over three weeks, not step 3's scores.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

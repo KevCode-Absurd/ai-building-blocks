@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It must link outcomes, needs and ideas in a clear order.
 new_slug: opportunity-solution-tree
 name: Opportunity solution tree builder
-summary: Give it the outcome you want. Get a tree of customer opportunities,
-  solution ideas and the tests for each.
+summary: "Turn one goal into an opportunity solution tree: ranked customer needs, several ideas for each, and cheap tests to run first."
 job: build-product
 headline: Opportunity solution tree builder
-subhead: Instead of jumping to a feature, you get a one-page map that runs from
-  the result you want down to the tests you will run.
+subhead: Instead of jumping to a feature, you get a one-page map that runs from the result you want down to the tests you will run.
 explain: |
   Instead of jumping to a feature, you get a one-page map that runs from the result you want down to the tests you will run. Every branch ties back to what customers actually said or did.
 
@@ -17,6 +15,10 @@ when:
   - You have interview notes and need to turn them into a plan.
   - A leader gave you a goal and you must pick what to explore first.
   - You want to show why you chose one idea over others.
+not_for:
+  - "You need to fix one bug or build a feature your team already chose: skip the tree and write a plain task list."
+  - "You have no customer research yet: start with a simple ranked list of ideas, or talk to five customers first."
+  - "You want a full product strategy for many goals at once: build one tree per goal, or ask your product lead."
 you_give:
   - One measurable outcome
   - Customer interview notes or research (optional)
@@ -28,7 +30,25 @@ you_get:
   - Several solution ideas per opportunity
   - Cheap tests for the top ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Type your outcome after it, with a number, such as the metric and the target you want.
+  - Paste your interview notes or feedback if you have them. Add current metrics and existing ideas too.
+  - Check that each opportunity is a customer need, not a feature. Ask your AI to fix any that are not.
+  - Pick the top ideas and run their tests. Update the tree as you learn.
+output_sample:
+  input:
+    - One measurable outcome, such as a retention rate you want to reach
+    - Customer interview notes, survey answers or feedback (optional)
+    - Ideas your team already has (optional)
+  output:
+    - name: Desired outcome
+      contains: The single measurable goal at the top of the tree, confirmed or sharpened.
+    - name: Opportunities
+      contains: Three to seven customer needs written from the customer's view, grouped and ranked by opportunity score.
+    - name: Solutions
+      contains: At least three ideas for each top opportunity, from product, design and engineering views.
+    - name: Experiments
+      contains: One or two fast tests per strong idea, each with a hypothesis, method, metric and success threshold.
+    - name: Full tree
+      contains: The whole map laid out in one clear outline, from outcome down to tests.

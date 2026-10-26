@@ -1,6 +1,6 @@
 slug: supplier-correction-evidence-review-assistant
 name: Supplier correction evidence review assistant
-summary: A sourced issue review, corrective procedure draft and follow up register.
+summary: "Check supplier corrective action evidence against your acceptance standard. Get a sourced issue review and a follow-up register."
 category: agent
 type: agent
 role: orchestrate
@@ -23,9 +23,9 @@ uses:
   - source-note-summariser
 steps:
   - uses: prepare-a-supplier-corrective-action-review
-    note: "Run when: A supplier sends corrective action evidence or an effectiveness review becomes due."
+    note: "Run when a supplier sends corrective action evidence or an effectiveness review is due. It hands step 2 a review document and a plan of correction steps."
   - uses: source-note-summariser
-    note: Run prepare-a-supplier-corrective-action-review for changed evidence or a due review. If a corrective action is claimed complete, compare actual evidence to the owner-approved acceptance requirement. Unverified effectiveness remains open.
+    note: "Uses step 1's review document as its source, together with your inspection records and the supplier's reply. It sorts what you verified from what the supplier claims, so a fix stays open until the evidence meets your standard."
 schedule: At a requested supplier review checkpoint. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

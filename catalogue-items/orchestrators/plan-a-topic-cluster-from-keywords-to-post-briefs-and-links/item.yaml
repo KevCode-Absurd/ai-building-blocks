@@ -15,10 +15,10 @@ outputs:
   - {type: brief}
 uses: [keyword-researcher, search-intent-keyword-mapper, topic-cluster-mapper, content-brief-writer, internal-link-mapper]
 steps:
-  - {uses: keyword-researcher, note: "The searches around your topic, how often they are made and how hard they are, grouped so the pattern shows."}
-  - {uses: search-intent-keyword-mapper, note: "What the searcher wants behind each keyword (learn, compare, buy, fix) and the kind of page that answers it."}
-  - {uses: topic-cluster-mapper, note: "One main page for the broad search and supporting posts for the specific ones, each search given to exactly one page, with your current pages placed or retired."}
-  - {uses: content-brief-writer, note: "A brief for each post: the search it answers, the questions to cover, the length, the proof to include and the page it links to."}
+  - {uses: keyword-researcher, note: "The searches around your topic, how often they are made and how hard they are, grouped so the pattern shows. Hands the keyword list to the intent mapper."}
+  - {uses: search-intent-keyword-mapper, note: "What the searcher wants behind each keyword (learn, compare, buy, fix) and the kind of page that answers it. Hands the intent map to the cluster mapper."}
+  - {uses: topic-cluster-mapper, note: "One main page for the broad search and supporting posts for the specific ones, each search given to exactly one page, with your current pages placed or retired. Hands the cluster plan to the brief writer and the link mapper."}
+  - {uses: content-brief-writer, note: "A brief for each post: the search it answers, the questions to cover, the length, the proof to include and the page it links to. Hands the briefs to the link mapper."}
   - {uses: internal-link-mapper, note: "Which page links to which, with the anchor text, so every post points to the main page and related posts point to each other."}
 origin: own
 version: 1.0.0

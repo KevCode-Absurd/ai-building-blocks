@@ -2,15 +2,10 @@ thinking: low
 thinking_why: It collects and groups recent items.
 new_slug: activity-digest-writer
 name: Activity digest writer
-summary: Ask what you missed. Get a daily or weekly digest of mentions, action
-  items and decisions by project.
+summary: Catch up on what you missed with a daily or weekly activity digest. Get your action items, decisions and mentions, grouped by project.
 job: organise-work
 headline: Activity digest writer
-subhead: Say whether you want a day or a week, and which projects matter. It
-  pulls activity from your connected chat, email and document tools and picks
-  out what mentions you, decisions made and tasks waiting on you. You get your
-  action items at the top, decisions, updates grouped by project and a note on
-  any source it could not reach.
+subhead: Say whether you want a day or a week, and which projects matter. It pulls activity from your connected chat, email and document tools and picks out what mentions you, decisions made and tasks waiting on you. You get your action items at the top, decisions, updates grouped by project and a note on any source it could not reach.
 explain: |
   A daily or weekly digest of what you missed, grouped by project, puts your action items and decisions at the top. It is made for the morning after time away, or for Friday's review.
 
@@ -20,6 +15,10 @@ when:
   - You want a short summary of mentions and tasks at the start of the day.
   - Your team makes decisions in chat and you lose track of them.
   - You need a weekly recap grouped by project.
+not_for:
+  - "You need one urgent thread or message: search your chat or email tool directly."
+  - "You have no chat, email or document tool your AI can read: write your own recap by hand or paste the messages into a chat first."
+  - "You want a plan for your week, not a recap: build one from the action items in your digest with a task list."
 you_give:
   - Daily or weekly range
   - Connected chat, email and document tools
@@ -31,8 +30,31 @@ you_get:
   - Mentions of you
   - A note on any source that was unavailable
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your chat, email and docs.
+  - Check that your AI can reach your chat, email or document tools. If it cannot, it cannot build the digest.
+  - Paste the skill into your AI chat, or add it to your AI tool.
+  - "Say how far back to look: a day, a week, or a date such as since Monday. A day is the default."
+  - Name the projects to focus on if you want (optional).
+  - Read the action items first and start with the top one.
+  - Check the note on any source your AI could not reach. Look in that tool yourself.
+output_sample:
+  input:
+    - "How far back to look: a day, a week, or a start date"
+    - Your connected chat, email and document tools
+    - Projects or topics to focus on (optional)
+  prerequisites:
+    - An AI that can read your chat, email or document tools through a connection
+  output:
+    - name: Header and sources scanned
+      contains: The digest title, the date range and the list of tools your AI checked.
+    - name: Action Items
+      contains: A checklist of requests, tasks and questions waiting on you, each with who asked, where and when.
+    - name: Decisions Made
+      contains: Conclusions, approvals and direction changes, with short context, the source and the date.
+    - name: Project or topic groups
+      contains: Activity from chat, email, documents and trackers merged into one short block for each project.
+    - name: Mentions
+      contains: Times you were mentioned or named, with enough context to decide if you need to look closer.
+    - name: Documents Updated
+      contains: Files changed or shared with you, who changed them and when.
+    - name: Summary stats
+      contains: A closing line with counts of action items, decisions, mentions and document updates, plus sources and time range.

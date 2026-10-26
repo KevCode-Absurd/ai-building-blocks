@@ -1,17 +1,15 @@
 slug: extra-week-revenue-comparability
 name: Extra-week revenue comparability schedule
-summary: Isolate an evidenced extra fiscal week before comparing annual revenue growth.
+summary: Take one extra fiscal week out of this year's revenue to see real growth. You get reported growth and comparable growth side by side.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

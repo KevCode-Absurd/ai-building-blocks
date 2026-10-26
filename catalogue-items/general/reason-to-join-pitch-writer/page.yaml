@@ -1,6 +1,6 @@
 new_slug: reason-to-join-pitch-writer
 name: "Reason-to-join pitch writer"
-summary: "Paste your company and the role. Get a pitch to the people you need that rests on mission and team, not perks."
+summary: "Write a reason-to-join pitch that wins strong hires over a bigger firm. Get a message, a spoken pitch and a job post opening."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It is a writing task with clear rules, which most chat AIs do well."
@@ -14,9 +14,13 @@ explain: |
   This skill finds the claims every company makes and takes them out. It then writes your mission and your people in plain, checkable terms, with a short test that sends the wrong person away. It gives you three drafts to use at once.
 
 when:
-  - "You are hiring and the best people say no or go quiet."
-  - "Your job post could be for any company."
-  - "You are about to pitch investors or the press and want the same story throughout."
+  - You are hiring and the best people say no or go quiet.
+  - Your job post could be for any company.
+  - You are about to pitch investors or the press and want the same story throughout.
+not_for:
+  - "You want to hire one person you already know well: talk to them in person instead."
+  - "Your pitch needs legal or financial terms, such as an offer letter or equity details: use a lawyer or a recruiter."
+  - "You want the main pitch for your company, not for hiring: use the Rival-free pitch rewriter."
 
 you_give:
   - "Your company and what it is doing"
@@ -29,10 +33,40 @@ you_get:
   - "A message, a spoken pitch and a job post opening"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste your company description and the role. Say what the best candidate could do instead."
-  - "Add the real names, roles and history of the people they would work with."
-  - "Use the short message with one candidate this week and see how they reply."
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your company description and the role. Say what the best candidate could do instead.
+  - Add the real names, roles and history of the people they would work with.
+  - Check the result. Make sure no claim could be said by a rival, and fill in any MISSING lines.
+  - Send the short message to one candidate this week and see how they reply.
+output_sample:
+  input:
+    - Your company and what it is doing
+    - The role or person you need
+    - What the person could do instead (optional)
+    - "Your team: names, roles and history (optional)"
+  output:
+    - name: The hire and the alternative
+      contains: The role, the kind of person, and what the best alternative offers them.
+    - name: Claims cut
+      contains: The claims every company makes, crossed out so they stay out of the pitch.
+    - name: Mission
+      contains: One sentence on the work only you are doing and why it matters to this person.
+    - name: People
+      contains: Who they would work with, with names, history and the one thing each person owns.
+    - name: Pay
+      contains: An honest line on pay and ownership, with no perks used to sell.
+    - name: Fit test
+      contains: A line or two that tells the wrong person the work is not for them.
+    - name: Message to a candidate
+      contains: A short message to a named candidate built on the mission and people.
+    - name: Spoken pitch, ninety seconds
+      contains: A pitch you can say out loud in about ninety seconds.
+    - name: Job post opening
+      contains: The first paragraph of a job post with the claims removed.
+    - name: For investors and press
+      contains: Short notes on how the same core story changes for investors and the press.
+    - name: Missing
+      contains: Facts you did not give that would sharpen the pitch.
 
 how_it_works:
   - title: "Describes the hire"

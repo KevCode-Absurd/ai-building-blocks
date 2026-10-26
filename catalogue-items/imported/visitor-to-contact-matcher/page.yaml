@@ -2,36 +2,92 @@ thinking: high
 thinking_why: Wrong matches mislead you, so it weighs each link with care.
 new_slug: visitor-to-contact-matcher
 name: Visitor to contact matcher
-summary: Give it your site visit records and contact list. Get anonymous visits
-  linked to known contacts, with unclear links flagged.
+summary: Link site visits to known contacts only where there is proof, and flag shared devices. Get a matched, unclear or unlinked call for every visit.
 job: track-numbers
 headline: Visitor to contact matcher
-subhead: Anonymous website visits tied to the real contacts they belong to, with
-  doubtful matches flagged instead of guessed. You can then see which channels
-  brought in people you already know.
+subhead: Give it your website visit records, your contact list and the form fills or logins that tie a visitor to a person. It links visits to contacts only where it has evidence, flags shared devices and unclear cases, and tells you what the data cannot prove.
 explain: |
-  Anonymous website visits tied to the real contacts they belong to, with doubtful matches flagged instead of guessed. You can then see which channels brought in people you already know.
+  Your analytics tool sees visitors as IDs on a device. Your contact list knows people by email or phone. Visitor to contact matching joins the two, so you can see which channels brought in people you already know.
 
-  The skill runs small Node.js scripts on records you supply. It cleans emails and phone numbers, hashes them, and merges repeat touches within thirty minutes. It links a device to a contact only when there is evidence, such as a form fill or a login. It handles shared devices, cross-device history and events that arrive late. It also reads webhook events and ties them back to the visit. It does not store data or send anything out.
+  This skill joins them only with proof, such as a form fill or a login that shows an email on a visitor ID. It cleans emails and phones, turns them into hashes, and merges repeat visits that land within 30 minutes. It never guesses from an IP address. When two contacts share one device, it marks the visit as unclear instead of picking one.
+
+  It is a developer tool. It runs small Node.js scripts on records you supply. It stores nothing and sends nothing out. Only link people where you have consent or another lawful basis, because hashes still count as personal data.
 when:
-  - You have web visit logs and a contact list and want to know who visited.
-  - A lead converts on a phone but first visited on a laptop.
+  - You have web visit logs and a contact list, and want to know which visits belong to known contacts.
+  - A lead fills a form on their phone but first visited on a laptop, and you want both visits credited.
   - Several people share one device and your reports mix them up.
-  - Webhook events arrive after the visit and you want them credited properly.
+  - A form webhook arrives after the visit, and you want it tied back to the right visitor.
+not_for:
+  - You have only anonymous traffic and no contact list. Use your analytics tool's own reports.
+  - You cannot show consent or another lawful basis to link visits to people. Do not run this.
+  - You want to guess who a visitor is from an IP address or page timing. This never does that.
+  - You want to send conversions to Google Ads or Meta. This uses its own matching rules, so set up each platform's own tools.
 you_give:
-  - Site visit or clickstream records
-  - Your contact list with emails or phones
-  - Form, login or webhook events that link a visitor to a person
-  - Rules for what counts as a match (optional)
+  - Visit records with a visitor ID, time, channel, and campaign or click IDs if you have them
+  - Your contact list with an ID and an email or phone for each person
+  - Form fills, logins or webhook events that tie a visitor ID to an email or phone
+  - Which analytics source links to which contact system (for example one GA4 property to one CRM)
+  - Rules for your repeat-visit window or what counts as a match (optional)
 you_get:
-  - Visits linked to known contacts
-  - A flag on unclear or shared-device links
-  - Cleaned and hashed identities
+  - A call for each visit, matched, unclear or unlinked, with the evidence behind it
+  - Flags on shared devices, with the contacts involved
+  - Repeat visits merged, with different campaigns and click paths kept
+  - A match result for each form submission, with the method used and a confidence score
   - Notes on what the data cannot prove
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Node code and read your own visit and
-    contact data.
+  - Check that you may link these visits to contacts. You need consent or another lawful basis. If you are unsure, ask your legal adviser first.
+  - Export your visits, your contacts and the form fills or logins that link a visitor to a person. Keep real emails and phones out of any ID column.
+  - Use an AI that can run Node.js code, such as Claude Code, or give the skill folder to a developer. A plain chat cannot run the scripts.
+  - Paste the skill and ask your AI to list its rules first. These cover the 30-minute repeat window, what counts as evidence and which sources link to which contacts. Confirm them.
+  - Ask it to run the built-in tests, then your data. Read the count of matched, unclear and unlinked visits before anything else.
+  - Give no credit to unclear visits. Look at the shared-device flags and fix your data or rules where they are wrong.
+how_it_works:
+  - title: Clean and hash identities
+    text: It trims and lowercases emails, needs a country code on phones, and hashes both.
+  - title: Merge repeat visits
+    text: Same-campaign repeats under 30 minutes become one visit. Different campaigns are kept.
+  - title: Build the link graph
+    text: Each form fill or login that points to exactly one contact adds one link of evidence.
+  - title: Project the links onto visits
+    text: A visit is matched with one contact, unclear with several contacts, or unlinked with none.
+  - title: Resolve form webhooks
+    text: It tries a known visitor ID, then a page event, then a recent visitor with matching evidence.
+  - title: Report with limits
+    text: It lists unclear cases and what the data cannot prove, and avoids repeat credit on retries.
+output_shape: |
+  RULES        <repeat window, what counts as evidence, source links>
+  COUNTS       <visits matched / unclear / unlinked>
+  VISITS       <visit> | <time> | <channel> | <status> | <contact or contacts> | <evidence>
+  SHARED       <device> | <contacts> | reason: shared device
+  FORM MATCHES <submission> | <method> | <confidence score> | <notes>
+  LIMITS       <what the data cannot prove>
+  MISSING      <inputs not given, or none>
+output_sample:
+  input:
+    - Visit records with visitor ID, time, channel and campaign or click IDs
+    - Your contacts, each with an ID and an email or phone
+    - Form fills, logins or webhook events that tie a visitor ID to a person
+    - Which analytics source links to which contact system
+  prerequisites:
+    - An AI that can run Node.js code, or a developer
+    - Consent or another lawful basis to link visits to people
+  output:
+    - name: Visit decisions
+      contains: Each visit marked matched, unclear or unlinked, with the contact and the evidence keys.
+    - name: Merged visit list
+      contains: Repeat visits inside 30 minutes merged, with different campaigns and click IDs kept.
+    - name: Shared-device flags
+      contains: Visits where two or more contacts used one device, listed with the contacts involved.
+    - name: Form match results
+      contains: Which visitor each submission belongs to, the method used and a confidence score.
+    - name: Limits note
+      contains: What the data cannot prove, such as who used a device or what happened off site.
+terms:
+  - term: Hash
+    meaning: A fixed code made from an email or phone. It hides the original, but it is still personal data.
+  - term: Touch
+    meaning: One visit that has a channel or campaign, such as a click on an ad.
+  - term: Shared device
+    meaning: One browser or phone used by more than one person, so a visit cannot be tied to one.
+  - term: Webhook
+    meaning: A message your form tool sends to another system the moment someone submits.

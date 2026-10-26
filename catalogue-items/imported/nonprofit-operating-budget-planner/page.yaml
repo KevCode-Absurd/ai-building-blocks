@@ -1,22 +1,60 @@
 new_slug: nonprofit-operating-budget-planner
 name: Plan a nonprofit operating budget
-summary: Build a nonprofit budget with clear funding assumptions, program costs and shared-cost splits for board review.
+summary: Plan a nonprofit operating budget with funding sources, program costs and shared-cost splits, plus a board memo and variance plan.
 job: money-and-investing
 headline: Plan a nonprofit operating budget
 subhead: Bring prior costs, grant plans and staff needs. Build the budget by program, show how shared costs split and draft the board memo.
 explain: Bring prior costs, grant plans and staff needs. Build the budget by program, show how shared costs split and draft the board memo.
 when:
-  - You want to plan a nonprofit operating budget.
+  - Your board wants next year's budget and you are starting from last year's numbers.
+  - Your funding has dropped or changed and adding a small percent to everything will not work.
+  - A funder or board member asks how you split shared costs between programs and overhead.
+  - You need a one-page budget summary and a calendar for the finance committee.
+not_for:
+  - "You need audited year-end statements or a functional expense statement: ask your auditor or accountant, since this item only plans the year ahead."
+  - "You need a reserve target or a month-by-month cash forecast: use a reserves and cash flow plan from your finance lead or accountant."
+  - "You need a formal indirect cost rate for a federal or foundation grant: work with your grants accountant or your funder's finance contact."
 you_give:
-  - Prior actuals, expected funding and documented renewal assumptions
-  - Program plans, staffing costs and shared-cost allocation bases
+  - Your prior-year actual income and costs
+  - Your expected grants, gifts and other income, with any renewal notes
+  - Your program list and staffing plan with salaries and FTEs (full-time equivalents)
+  - Your shared costs and how you split them, such as headcount or square footage
+  - Your fiscal year end and board meeting dates (optional)
 you_get:
-  - Revenue and expense budget structure with functional roll-ups
-  - Assumptions memo, board summary and variance-review plan
+  - A budget assumptions memo you can hand to the finance committee
+  - Income and expense budgets tied to named sources and programs
+  - A split of costs into program, management and fundraising, with the method stated
+  - A one-page board summary showing net result and reserve impact
+  - A budget calendar and a variance report template
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Gather your prior-year actuals, grant award letters, staffing plan and shared-cost figures first.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your numbers and say which fiscal year you are budgeting. Name any big changes, such as a lost grant or new program.
+  - Check the budgeting method and assumptions your AI picks. Correct any it got wrong before it builds the tables.
+  - Look for anything marked missing and fill it in. Check that every shared-cost split has a stated basis.
+  - Have your finance lead review the draft before it goes to the board. The board adopts this, so errors carry through the year.
+output_sample:
+  input:
+    - Your prior-year actual income and costs
+    - Your expected grants and gifts, and any renewal notes
+    - Your program list and staffing plan with salaries
+    - How you split shared costs, such as headcount or square footage
+    - Your fiscal year end and board meeting dates (optional)
+  output:
+    - name: Budget assumptions memo
+      contains: "One page of written assumptions: pay rises, benefit costs, grant renewals and losses, new programs, and the budgeting method chosen."
+    - name: Revenue detail by source
+      contains: Each income line tied to a named source or stated assumption, weighted by how likely it is.
+    - name: Expense detail by category and program
+      contains: Costs by type, such as salaries and rent, each tagged to a program or department.
+    - name: Functional expense summary
+      contains: Costs split into program, management and general, and fundraising, with the basis for each shared-cost split.
+    - name: Board budget summary
+      contains: One page showing income by source, costs by function, net result and reserve impact, with detail as an appendix.
+    - name: Budget calendar
+      contains: Work-back dates from your board vote, with owners for each step.
+    - name: Variance report template
+      contains: A monthly or quarterly budget-versus-actual layout with a limit that triggers a written explanation.
 how_it_works:
   - title: Set assumptions and method
     text: Choose incremental, zero-based or priority-based budgeting to fit the organization’s situation and document the basis.

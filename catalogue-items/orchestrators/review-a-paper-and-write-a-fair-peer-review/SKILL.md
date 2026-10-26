@@ -36,10 +36,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Check the claims.** Use the skill `study-claim-checker`. Every claim in the abstract and discussion read against the paper's own results and methods, with the claims that go further than the data flagged.
-2. **Review methods and writing.** Use the skill `scholarly-work-reviewer`. Give it the manuscript and the claim check. Design, analysis, novelty, the literature it ignores and the writing, reviewed as a scholar in the field would, with what you said you cannot judge left out.
-3. **Draft the review.** Use the skill `manuscript-peer-review-drafter`. Give it the claim check and the review. The review in the standard shape: a summary in your words, major points, minor points and a recommendation, each point tied to a page or figure.
-4. **Make it specific and kind.** Use the skill `review-comment-humaniser`. Give it the draft review. Each comment rewritten so the author knows exactly what to change and why, in a tone you would use to a colleague. Nothing is submitted until you say so.
+1. **Check the claims.** Use the skill `study-claim-checker`. Every claim in the abstract and discussion read against the paper's own results and methods, with the claims that go further than the data flagged. It hands over the claim check.
+2. **Review methods and writing.** Use the skill `scholarly-work-reviewer`. Give it the manuscript and the claim check. Reads the manuscript, with the claim check from step 1 as a starting point. Design, analysis, novelty, the literature it ignores and the writing, reviewed as a scholar in the field would, with what you said you cannot judge left out. It hands over a review of the methods and writing.
+3. **Draft the review.** Use the skill `manuscript-peer-review-drafter`. Give it the claim check and the review. Reads the manuscript with the claim check from step 1 and the review from step 2. It hands over the review in the standard shape: a summary in your words, major points, minor points and a recommendation, each point tied to a page or figure.
+4. **Make it specific and kind.** Use the skill `review-comment-humaniser`. Give it the draft review. Takes the review text from step 3 and rewrites each comment so the author knows exactly what to change and why, in a tone you would use to a colleague. It hands over the review you submit. Nothing is submitted until you say so.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

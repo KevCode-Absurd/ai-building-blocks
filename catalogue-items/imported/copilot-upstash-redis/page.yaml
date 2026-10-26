@@ -2,17 +2,56 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-upstash-redis
 name: Edge Redis cache and limit builder
-summary: Share your serverless app. Get Redis caching or rate limits over HTTP
-  with the required setup explained.
+summary: Add Redis caching, sessions or a 429 rate limit to your serverless app over HTTP with Upstash. Get the code and the setup steps in order.
 job: build-software
 headline: Edge Redis cache and limit builder
-subhead: Share your serverless app. Get Redis caching or rate limits over HTTP
-  with the required setup explained. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Share your serverless app and what you want Redis to do. Your AI writes the Redis client plus caching, sessions or rate limiting. You also get the settings to add and a test for each step.
+not_for:
+  - "You run a long-lived server with a TCP Redis link: keep your current client, such as ioredis or node-redis."
+  - "You need vector search or RAG: use a vector database instead, or ask a developer to set it up."
+  - "You need very fast caching inside one process only: use a simple in-memory cache."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Create an Upstash Redis database if you do not have one. Copy its REST URL and token from the database page.
+  - Open your AI tool and paste this skill. Use a tool that can read your project files if you can.
+  - Tell it your framework, where it runs, and which routes to cache or limit.
+  - Add the two environment variables to your project. Keep the token out of browser code.
+  - Run the checkpoint after each step. For example, the 11th request in 10 seconds should return 429.
+  - Once the checks pass, load-test the limit and watch how often the cache is hit.
+output_sample:
+  input:
+    - Your framework and version
+    - Where it runs, such as Vercel, Cloudflare Workers, Deno or Bun
+    - The routes or functions you want to cache or limit
+    - Whether you already have an Upstash Redis database
+  prerequisites:
+    - An Upstash Redis database with its REST URL and token
+    - An AI that can read your project files
+  output:
+    - name: Install and client
+      contains: The install command and a lib/redis.ts file that makes one Redis client from your environment variables.
+    - name: Cache-aside with TTL
+      contains: Code to read a record from Redis first, fall back to your database, and clear it on change.
+    - name: Sessions with sliding expiration
+      contains: Code to create, read and destroy sessions that stay alive while the user is active.
+    - name: Rate limiting a route handler
+      contains: A limiter for your route that returns a 429 with retry headers when a caller goes over.
+    - name: Environment variables
+      contains: "The two settings to add: the Upstash REST URL and the REST token."
+    - name: Checkpoints and pitfalls
+      contains: A quick test after each step and the common mistakes to avoid.
+when:
+  - Your Next.js route or middleware needs Redis, but a normal Redis connection will not work.
+  - You want to cache slow database reads with an expiry time.
+  - You need to store login sessions that expire after inactivity.
+  - You want to block callers who send too many requests.
+you_give:
+  - Your framework and version
+  - "Where your app runs: Vercel, Cloudflare Workers, Deno or Bun"
+  - The routes or functions to cache or limit
+  - Whether you already have an Upstash database (optional)
+you_get:
+  - A lib/redis.ts client file
+  - Cache, session or rate-limit code for the parts you chose
+  - The two environment variables to set
+  - A check to run after each step
+  - A list of common mistakes to avoid

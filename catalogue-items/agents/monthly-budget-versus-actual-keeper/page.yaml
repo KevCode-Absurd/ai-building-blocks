@@ -1,6 +1,6 @@
 new_slug: monthly-budget-versus-actual-keeper
 name: Monthly budget versus actual keeper
-summary: Give it the month's spend by team. Get what moved against budget, why, and cash levers if the year is off.
+summary: Check your monthly budget versus actual by team. Get what moved and why, a full-year forecast, and cash levers ranked if the year is off track.
 job: track-numbers
 thinking: high
 thinking_why: It separates timing shifts from real overspend, refreshes a full-year forecast and judges when a cut protects survival. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run a small team with a budget by department or project and the monthly review keeps slipping.
   - One team is always a little over and you want to know whether it is timing or a pattern.
   - Cash is tight and you want a cut list ranked by what it frees, not by what is easiest.
+not_for:
+  - "You only need a cash forecast: use the Cash forecast builder, or a simple sheet of bills and what you are owed."
+  - "You have a one-off project with no budget: use a plain list of costs and a person to sign off each one."
+  - "You want to close the books and work out profit: use the Monthly profit close."
 you_give:
   - Last month's actual spend and income by team and line
   - Your budget for the year by team and month, or past spend to build one from
@@ -33,6 +37,31 @@ how_to_use:
   - Tell it your cash floor once. It saves it.
   - Ask each team owner for one line on last month and paste the lines in. The explanations get much better.
   - Read the moves and the levers. Approve what you agree with. Run it again on the 5th of next month.
+output_sample:
+  input:
+    - Last month's actual spend and income by team and line
+    - Your budget for the year by team and month, or past spend to build one from
+    - Bills due and what you are owed (optional)
+    - Your cash floor and the date the year must be back on plan (optional)
+    - One line from each team owner on last month (optional)
+  prerequisites:
+    - The six skills it calls (Department budget planner, Budget variance explainer, Budget and forecast builder, Cash forecast builder, Cash lever ranker, Room for error plan checker) added to your AI, or fetched from useaiblocks.com
+    - An AI that can keep files between months, such as Claude Code, if you want it to save the budget and tracking rows
+  output:
+    - name: THE MONTH
+      contains: Total budget, actual and gap, plus the full-year forecast set against the plan.
+    - name: CASH
+      contains: The 30, 60 and 90 day cash view against your floor, with any dip under it shown first.
+    - name: MOVES BY TEAM
+      contains: Each team's gap, the reason marked as the owner's or the agent's reading, and a note for the owner.
+    - name: REPEAT OFFENDERS
+      contains: Teams over budget two or more months running, and the pattern.
+    - name: LEVERS
+      contains: Six cash levers ranked by cash freed, each with a survival test, only when the year is off track.
+    - name: ROOM FOR ERROR
+      contains: A quarterly survival score, where the plan breaks in a bad quarter, and what gives it room.
+    - name: FILES AND MISSING
+      contains: Each step's saved file and every line marked MISSING.
 how_it_works:
   - title: Build the budget once
     text: If none exists, turns past spend and targets into a phased budget by team, saved only when you approve it.

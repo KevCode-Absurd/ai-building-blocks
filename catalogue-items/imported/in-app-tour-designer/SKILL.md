@@ -8,15 +8,47 @@ display_order: 8
 
 # Interactive Product Tour
 
-A senior product marketing director's playbook for designing in-product tours, tooltips, and contextual help that teach product capabilities without becoming friction. Trigger logic, tour architecture, contextual placement, completion tracking. The discipline of building help systems that surface at moments of need and disappear when not needed.
+A playbook for designing in-product tours, tooltips, and contextual help that teach product capabilities without becoming friction. Trigger logic, tour architecture, contextual placement, completion tracking. The discipline of building help systems that surface at moments of need and disappear when not needed.
 
 Most product tours fail in one of two ways. They paint every button, link, and feature with "click for tour" hints until the visual noise is so great that users develop blindness to the dots. Or they show a single first-login tour the user skips or skims, after which the same help never re-surfaces when the user actually hits a moment of friction. Help that is invisible at the moment of need is help that does not exist.
 
 The tours that work do something different. They trigger when the user is at a moment of friction, not all the time. They surface contextual hints when the user enters a section they have not explored, clicks into a feature requiring setup, or returns after a long absence. The system knows what the user knows and surfaces help at the right moment.
 
-The voice is the senior product marketing director who has watched feature adoption double when tours were redesigned and watched it collapse when more tooltips were piled onto every surface. Practical, opinionated about the trigger logic that distinguishes useful help from visual noise, willing to call out when no in-product tour at all is the right answer.
+The voice is practical and opinionated about the trigger logic that separates useful help from visual noise. It is willing to say that no in-product tour at all is the right answer.
 
 When to use this skill: scoping an in-product help system for the first time, auditing a tour system that produces engagement metrics with no adoption lift, designing the trigger logic that decides when help surfaces, or deciding which features warrant tours vs documentation.
+
+---
+
+## When not to use
+
+- You need a sequential first-run setup flow: use the First-run wizard designer.
+- You need chat-style help: use the Chatbot conversation designer.
+- You need help articles for features, not in-app tips: use the Help article writer from support tickets.
+- You want the engineering build spec. This skill plans what to build, not how to code it.
+
+## Inputs
+
+Ask once for anything missing. If the person cannot answer, mark it MISSING in the output and carry on. Never invent usage numbers, adoption rates or user behaviour.
+
+1. What the product is and who uses it.
+2. The 3 to 7 features or tasks new users must learn, and where each one lives in the app.
+3. How users learn today (current tour, help docs, support tickets) and what is not working.
+4. The success measure, such as feature adoption or fewer support tickets for one feature.
+5. Optional: whether the team can keep tour content current, and which tour tool they use, if any.
+
+## Output
+
+Return these sections, in this order. Keep the whole answer under about 900 words.
+
+1. **Verdict**: "Build a tour", "Build a small tour" or "Do not build a tour", with 2 to 3 reasons from the decision criteria below. If the verdict is no, say what to do instead (clearer menus, an empty state, a help page) and give only the Verdict and the Missing section.
+2. **Tip plan**: a table with one row per tip. Columns: feature, who sees it, trigger (event, time or state), placement (tooltip, spotlight, sidebar or inline), how it is dismissed, when it shows again, and the success measure.
+3. **Wording**: one line of tip text for each row. Say what to do, not what the feature is. Mark every line as a draft.
+4. **Tracking plan**: per tip, the events to record (seen, dismissed, completed) and the feature-use event that shows adoption. Say how to tell a click from a real change in use.
+5. **Upkeep**: who reviews the tips and how often, so they do not point at old screens.
+6. **Missing**: every input marked MISSING and how it limits the plan.
+
+Rules: no more than 7 tips in the first plan. Never show the same tip to someone who finished it. Do not claim a tour will lift adoption by any amount.
 
 ---
 

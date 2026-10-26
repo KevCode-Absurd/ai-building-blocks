@@ -1,6 +1,6 @@
 new_slug: find-your-honest-google-roas-and-decide-whether-to-raise-spend
 name: "Find your real Google ROAS and decide on spend"
-summary: Give it your margins and 30 days of Google data. Get break-even targets, true non-brand ROAS and a go or wait call.
+summary: Find your real Google Ads ROAS. Give it your margins and 30 days of data. Get break-even targets, non-brand ROAS and a go or wait call on spend.
 job: run-google-ads
 thinking: high
 thinking_why: The break-even sums feed every later step, and a wrong figure leads to a wrong spend call. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Google shows a good ROAS but sales are flat.
   - You are thinking of raising the budget and want to know it is safe.
   - Your Shopping or Performance Max campaigns seem to claim sales you would have made anyway.
+not_for:
+  - "You have under about 30 days of data or very few sales: wait and collect more first, because the numbers will be too noisy to act on."
+  - "You need to find out why sales dropped: use the Ad sales drop analyst."
+  - "You only want a report on how a past ad test did: use the Ad results report writer."
 you_give:
   - Prices, product costs, shipping and fees, so margin can be worked out
   - The last 30 days exported from Google Ads, with campaigns, search terms, spend and conversions
@@ -31,6 +35,25 @@ how_to_use:
   - Give it order value, product cost and fees first. It will not guess your margin.
   - When it pauses, export 30 days from Google Ads with search terms. Mark your brand terms.
   - Read the non-brand ROAS before the go or wait call. If it is below break-even, fix that before spending more.
+output_sample:
+  input:
+    - Your prices, product costs, shipping and fees
+    - The last 30 days exported from Google Ads, with campaigns, search terms, spend and conversions
+    - Which search terms are your brand, including misspellings
+    - Your planned new spend (optional)
+    - Your brand file (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - A Google Ads account you can export from
+  output:
+    - name: Break-even step
+      contains: Break-even ROAS and cost per sale, targets by product margin, and whether ads can pay at your clicks and sales rate.
+    - name: Brand split step
+      contains: Brand share of spend and sales, non-brand ROAS against break-even, campaigns leaking brand terms, and a split plan.
+    - name: Scale gates step
+      contains: A pass, fail or unknown result for feed, tracking, structure, creative and bid maturity, plus a go or wait call.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Work out break-even
     text: Checks your price, cost and margin inputs, then works out break-even ROAS and cost per sale. It gives separate targets where margins differ and says whether ads can pay at your clicks and conversion rate.

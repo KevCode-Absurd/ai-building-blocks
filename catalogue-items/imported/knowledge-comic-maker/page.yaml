@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans the story and panels, then follows set steps to draw them.
 new_slug: knowledge-comic-maker
 name: Knowledge comic maker
-summary: Give it a topic or story. Get a finished comic with panel layouts, a
-  chosen art style and drawn pages.
+summary: Turn a topic or story into a knowledge comic with a script, panel layouts and drawn pages in the art style and tone you pick.
 job: make-images
 headline: Knowledge comic maker
-subhead: A finished comic that teaches a topic or tells a story, planned panel
-  by panel and drawn page by page. Give it the subject. The skill asks you to
-  choose an art style and a tone, then writes a script and lays out each page.
+subhead: A finished comic that teaches a topic or tells a story, planned panel by panel and drawn page by page. Give it the subject. The skill asks you to choose an art style and a tone, then writes a script and lays out each page.
 explain: |
   A finished comic that teaches a topic or tells a story, planned panel by panel and drawn page by page. Give it the subject. The skill asks you to choose an art style and a tone, then writes a script and lays out each page.
 
@@ -18,6 +15,10 @@ when:
   - You have a story and need it as a comic.
   - You want a consistent art style across many pages.
   - You need a teaching handout that people will read.
+not_for:
+  - "You need one infographic or a single image: ask your AI image tool directly."
+  - "You only want a text handout or summary: use a plain document instead."
+  - "You have no image tool, or no way to run code: you will get the script and prompts but no drawn pages."
 you_give:
   - A topic, story or source text
   - Preferred art style and tone
@@ -29,8 +30,30 @@ you_get:
   - Saved image prompts
   - Drawn comic pages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can draw images with an image tool.
+  - Open an AI that can run code and use an image tool. Check that bun or npx is installed.
+  - Add the skill to your AI, or paste its instructions into the chat.
+  - Say what the comic is about. Paste your story or source text if you have it.
+  - On first run, answer the one-time setup questions. They save your preferences.
+  - Pick an art style and a tone when asked. Add a page count if you want a set length.
+  - Read the script and prompt files before the pages are drawn. Ask for changes, then let it draw.
+output_sample:
+  input:
+    - Your topic, story or source text
+    - Your pick of art style and tone
+    - Page count or length (optional)
+    - Your preferred image tool (optional)
+  prerequisites:
+    - An AI that can run code, with bun or npx installed
+    - An image tool your AI can use, which may need a paid account or API key
+    - A one-time preferences setup (EXTEND.md) that runs before any analysis
+  output:
+    - name: Analysis
+      contains: What your topic or story is about, who it is for, and the points the comic must teach.
+    - name: Storyboard
+      contains: The page list and the panels on each page, with the story beat for each panel.
+    - name: Character and style notes
+      contains: How the cast and the chosen art style and tone stay the same on every page.
+    - name: Image prompt files
+      contains: One saved prompt per picture, written before drawing so you can review and reuse it.
+    - name: Comic pages
+      contains: The drawn pages, one image per page, ready to share or publish.

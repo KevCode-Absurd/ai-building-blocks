@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: product_data
     required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: landing_page
 uses: []

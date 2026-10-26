@@ -22,12 +22,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Rank the risks.** Use the skill `pull-request-risk-reviewer`. Reads the change and ranks the issues a reviewer should raise.
+1. **Rank the risks.** Use the skill `pull-request-risk-reviewer`. Reads the change and ranks the issues a reviewer should raise. It hands over ranked review comments for you to post on the pull request.
 
 Pause here: Post the findings that matter as comments on the pull request.
 
-2. **Fix the comments.** Use the skill `review-comment-fixer`. Works through the comments you posted from the review and updates the code.
-3. **Sign off.** Use the skill `human-review-gate`. Give it the code change from the steps before. Takes the fixed change and holds it until a named person has reviewed it and no blocker is open.
+2. **Fix the comments.** Use the skill `review-comment-fixer`. Works through the comments you posted from step 1's review, read from the pull request, and the code branch. It changes only the comments you pick and hands over the fixed code.
+3. **Sign off.** Use the skill `human-review-gate`. Give it the code change from the steps before. Takes the fixed change from step 2 and holds it until a named person has reviewed it and no blocker is open. It hands over the one-page sign-off with proof.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

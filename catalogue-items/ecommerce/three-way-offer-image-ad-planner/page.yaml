@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: three-way-offer-image-ad-planner
 name: "Three-way offer image ad planner"
-summary: "Paste your offer. Get three offer image ads in two sizes and one offer block."
+summary: "Plan three offer image ads in feed and story sizes, one for price, one for the safety net, one for why start now, with one shared offer block."
 job: make-image-ads
 
 headline: "Three-way offer image ad planner"
@@ -14,9 +14,14 @@ explain: |
   This skill plans one ad per question. The price ad sets the offer block large. The safety-net ad leads with your guarantee or cancel terms in your site's words. The third ad gives a real reason to start now, or, if there isn't one, shows what's included and adds no urgency at all. The terms sit in one offer block that reads the same on every ad, and savings only compare with prices you really charged.
 
 when:
-  - You're about to run a sale, bundle or standing offer and need ads ready in every size.
+  - You are about to run a sale, bundle or standing offer and need ads ready in every size.
   - Your offer ads all look the same and you can't tell which part of the offer people care about.
-  - Your prices change often and you're tired of remaking every ad.
+  - Your prices change often and you are tired of remaking every ad.
+  - Your buyers already know your product and need a push on price, risk or timing.
+not_for:
+  - "You are selling to people who have never heard of you: start with a story ad, or ask a person on your team to write a short brand story first."
+  - "You want to set up the offer, plan sale dates or run ads in your ad account: do that in your shop and in Meta Ads Manager, this only plans the images."
+  - "You have a new product with no sales history and no earlier price: write one plain what's-included ad by hand, as there is nothing to compare."
 
 you_give:
   - The offer in your site's words, with the price, what it renews at, who qualifies and any dates
@@ -38,6 +43,28 @@ how_to_use:
   - Attach the real photos you have for each product or variant.
   - Read the MISSING and NOT ADDED lines first, then hand the plan to whoever makes the images.
   - When the offer changes, edit the offer block on every ad and keep the pictures.
+output_sample:
+  input:
+    - "Your offer in your site's words: price, renewal price, who qualifies and any dates"
+    - Your guarantee, returns or cancel terms, word for word
+    - Real photos of each product or variant in the offer
+    - Real reviews and product facts (optional)
+    - Your colours and typefaces (optional)
+  prerequisites:
+    - An AI that can read your photos. To get finished pictures, use one that can make images, such as ChatGPT or Gemini.
+  output:
+    - name: Offer block
+      contains: Up to three short lines with the price and terms, identical on every ad, with where each line came from.
+    - name: MISSING and NOT ADDED
+      contains: What the offer lacked, such as dates, earlier prices or photos, and any saving or urgency left out.
+    - name: Ad plans
+      contains: For each product, three ways in two sizes, with layout, colours, chosen photo and every line with its source.
+    - name: Contact sheet
+      contains: A pass or fail on whether the three ads can be told apart at stamp size.
+    - name: When the offer changes
+      contains: One line saying to edit the offer block on each ad and keep the pictures.
+    - name: Checks missed
+      contains: One line for each check the set still fails, or none.
 
 how_it_works:
   - title: Splits the offer in three

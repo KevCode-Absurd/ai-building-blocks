@@ -1,5 +1,27 @@
 /** Bounded, reviewable purpose mappings. These infer a job, never generate an answer. */
+import { TASKS } from './catalogue-taxonomy.mjs';
+const CLASSIFIED_TASKS = new Set(TASKS.map(task => task.id));
 export const SEARCH_INTENTS = [
+  { id: "value-investing", label: "Value investing", patterns: [/\bvalue\s+invest(?:ing|ment|ments|or|ors)?\b/, /\b(?:margin of safety|intrinsic value|owner earnings)\b/] },
+  { id: "business-valuation", label: "Business valuation", patterns: [/\b(?:business|company|equity|startup)\s+(?:valuation|value|worth)\b/, /\b(?:discounted cash flow|dcf model|valuation model|valuing a business)\b/] },
+  { id: "personal-budget", label: "Personal budgeting and saving", patterns: [/\b(?:personal|household|home|family)\s+(?:money|budget|financ|spending|saving)/, /\b(?:pay off|paying off|repay)\b.{0,30}\b(?:my debt|credit card|personal loan)\b/] },
+  { id: "cash-flow", label: "Cash flow and runway planning", patterns: [/\b(?:cash flow|cashflow|cash forecast|cash runway|startup runway|cash buffer|run(?:ning)? out of cash)\b/, /\b(?:forecast|plan|manage)\b.{0,45}\b(?:business cash|cash balance|working capital)\b/] },
+  { id: "accounting-close", label: "Accounting and reconciliation", patterns: [/\b(?:bookkeeping|month.end close|financial close|accounting close|close the books|reconcile accounts|bank reconciliation|journal entr|account reconciliat)/] },
+  { id: "invoice-review", label: "Invoice checking and reconciliation", patterns: [/\b(?:supplier invoices?|vendor bills?)\b/, /\binvoices?\b.{0,45}\b(?:review|check|match|errors?|mistakes?)\b/, /\b(?:review|check|match)\b.{0,45}\binvoices?\b/] },
+  { id: "tax-review", label: "Tax preparation and review", patterns: [/\b(?:tax|taxes)\b.{0,35}\b(?:prepar|calculat|review|plan|return|filing|deferred)/, /\b(?:prepar|calculat|review|plan|deferred)\w*\b.{0,35}\btax\b/] },
+  { id: "contract-review", label: "Contract and agreement review", patterns: [/\b(?:contract|agreement|nda|legal document)\b.{0,45}\b(?:review|check|risk|clauses|audit)\b/, /\b(?:review|check|audit)\b.{0,45}\b(?:contract|agreement|nda|legal document)\b/] },
+  { id: "project-planning", label: "Project planning and delivery", patterns: [/\b(?:project management|project planning|project plan|team capacity|project scope|delivery schedule)\b/, /\b(?:plan|manage|scope)\b.{0,35}\b(?:project|team capacity|delivery date)\b/] },
+  { id: "product-discovery", label: "Product discovery and validation", patterns: [/\b(?:product discovery|product validation|product management|product idea|validate a product|test a product idea)\b/] },
+  { id: "user-experience", label: "User experience and usability", patterns: [/\b(?:ux|user experience|usability|user interface|ui design)\b/] },
+  { id: "negotiation", label: "Negotiation", patterns: [/\b(?:negotiat\w*|bargaining|difficult conversation)\b/] },
+  { id: "copywriting", label: "Copywriting", patterns: [/\b(?:copywriting|copywriter|sales copy|ad copy|persuasive copy)\b/] },
+  { id: "data-visualisation", label: "Data visualisation", patterns: [/\b(?:data visuali[sz]ation|visuali[sz]e data|chart design|charts and graphs|data storytelling)\b/, /\b(?:csv|spreadsheet|dataset|data)\b.{0,50}\b(?:charts?|graphs?|visuali[sz])/] },
+  { id: "cybersecurity", label: "Cybersecurity and account safety", patterns: [/\b(?:cybersecurity|cyber security|data breach|phishing|account safety|security incident|security review)\b/] },
+  { id: "study-methods", label: "Learning and study methods", patterns: [/\b(?:study methods|study techniques|learning methods|learning techniques|retrieval practice|spaced repetition|active recall)\b/, /\b(?:remember|retain)\b.{0,40}\b(?:study|studied|learn|learning)\b/] },
+  { id: "research-literature", label: "Research papers and literature reviews", patterns: [/\b(?:literature review|research synthesis|research papers?|scientific papers?|academic papers?|review the literature)\b/] },
+  { id: "leadership", label: "Leadership and team management", patterns: [/\b(?:leadership|team management|managing people|manage a team|lead a team|team feedback)\b/] },
+  { id: "customer-service", label: "Customer service", patterns: [/\b(?:customer service|customer support|support tickets?|customer complaints?|help desk)\b/] },
+  { id: "mental-models", label: "Mental models and decision making", patterns: [/\b(?:mental models|decision making|cognitive bias|thinking models|inversion thinking)\b/] },
   { id: "answer-visibility", label: "AI answer visibility", patterns: [/\b(?:aeo|answer\s*engine\s*optimi[sz]ation|generative\s*engine\s*optimi[sz]ation|ai[ -]?search)\b/, /\b(?:ai|chatgpt|perplexity|claude|answer engine)\b.{0,60}\b(?:visibility|discoverab|brand mentions|brand recommendations)/, /\b(?:brand|business|company|website)\b.{0,90}\b(?:chatgpt|perplexity|ai answers)\b/, /\b(?:ai|chatgpt|perplexity|claude)\b.{0,70}\b(?:cite|citations?|references?)\b.{0,50}\b(?:brand|website|store|business|product page)\b/] },
   { id: "search-ranking", label: "Search engine visibility", patterns: [/\b(?:seo|search\s*engine\s*optimi[sz]ation|organic search|serp)\b/, /\b(?:rank|ranking|traffic|show up|found)\b.{0,50}\b(?:google|search engine)\b/, /\bgoogle\b.{0,50}\b(?:rank|ranking|traffic|visibility)\b/] },
   { id: "meeting-notes", label: "Meeting notes and actions", patterns: [/\b(?:meeting|call|session)\b.{0,60}\b(?:notes|minutes|transcript|actions|summary|summari[sz])/, /\b(?:notes|transcript|recording)\b.{0,60}\b(?:minutes|action items|follow[ -]?ups)\b/] },
@@ -20,7 +42,7 @@ export const SEARCH_INTENTS = [
   { id: "budget-review", label: "Budget and spending review", patterns: [/\b(?:budget variance|budget versus actual|budget vs actual|over budget|overspend|expense track|spending review|budget review|budget actual)/, /\b(?:where|explain|track|review)\b.{0,70}\b(?:money went|spending|expenses)\b/] },
   { id: "document-summary", label: "Summarising documents", patterns: [/\b(?:summari[sz]e|summary|digest|key points)\b.{0,60}\b(?:document|report|pdf|article|paper)\b/, /\b(?:document|report|pdf|article|paper)\b.{0,60}\b(?:summary|summari[sz]e|key points|digest)\b/] },
   { id: "data-analysis", label: "Finding patterns in data", patterns: [/\b(?:data analysis|analy[sz]e data|spreadsheet analysis)\b/, /\b(?:spreadsheet|dataset|csv|sales data)\b.{0,65}\b(?:pattern|trend|insight|analy[sz]|understand)/, /\b(?:explain|understand|analy[sz]e)\b.{0,65}\b(?:spreadsheet|dataset|csv|sales data)\b/] },
-  { id: "job-hiring", label: "Hiring and interviewing", patterns: [/\b(?:hiring|recruitment|candidate interview|job description|interview questions)\b/, /\b(?:hire|recruit|interview)\b.{0,60}\b(?:candidate|employee|designer|developer|marketer|team member)\b/] },
+  { id: "job-hiring", label: "Hiring and interviewing", patterns: [/\b(?:hiring|recruitment|candidate interview|job description|(?<!(?:customer|user|buyer|research|discovery|sales|podcast|guest) )interview questions)\b/, /\b(?:hire|recruit|interview)\b.{0,60}\b(?:candidate|employee|designer|developer|marketer|team member)\b/] },
   { id: "presentation", label: "Presentations and slide decks", patterns: [/\b(?:slide deck|presentation|pitch deck|slides)\b/, /\b(?:turn|make|create|build)\b.{0,60}\b(?:report into slides|investor pitch)\b/] },
 ] as const;
 /** GEO alone is a query shorthand, never evidence about a document's purpose. */
@@ -36,6 +58,26 @@ export function searchIntents(text: string, document = false) {
   return SEARCH_INTENTS.filter(intent => (intent.patterns.some(pattern => pattern.test(normalized)) || intent.id === "answer-visibility" && (answerVisibilityQuery || geoAnswerAlias(normalized, document))) && (intent.id !== "code-debug" || !/\b(?:crawl|indexing|search console|seo)\b/.test(normalized) || /\b(?:python|javascript|typescript|runtime|stack trace|failing tests|debugger|source code)\b/.test(normalized)) && (intent.id !== "interview-prep" || !/\b(?:customer|consumer|buyer|product research)\b/.test(normalized) || /\b(?:cv|resume|employment|job application)\b/.test(normalized)));
 }
 /** Employer hiring and buyer research do not imply applicant interview practice. */
-export function searchIntentExclusions(task: string): string[] {
-  return task === "hire-people" || task === "understand-customers" ? ["interview-prep"] : [];
+export function searchIntentExclusions(task: string, also: string[] = []): string[] {
+  const tasks = [task, ...also];
+  const exclusions = task === "hire-people" || task === "understand-customers" ? ["interview-prep"] : [];
+  // A customer complaint used as advertising research does not make an ad
+  // writer a support agent. Enforce the same domain distinction for every item,
+  // while retaining literal discovery of words in the complete instructions.
+  const scopes: Record<string, string[]> = {
+    'customer-service': ['help-customers', 'keep-customers', 'write-emails', 'organise-work', 'document-work', 'think-with-minds'],
+    'personal-budget': ['manage-personal-finances', 'money-and-investing', 'think-with-minds'],
+    'value-investing': ['money-and-investing', 'think-with-minds'],
+    'business-valuation': ['money-and-investing', 'raise-funding', 'plan-budgets-and-cash', 'think-with-minds'],
+    'accounting-close': ['manage-accounting', 'plan-budgets-and-cash', 'think-with-minds'],
+    'tax-review': ['manage-tax', 'manage-accounting', 'money-and-investing', 'think-with-minds'],
+    'contract-review': ['check-contracts', 'money-and-investing', 'raise-funding', 'think-with-minds'],
+    'research-literature': ['research-topics', 'teach-and-train', 'study-and-practice', 'document-work', 'think-with-minds'],
+  };
+  // Unknown/absent metadata remains searchable; scope only applies to known
+  // classifications rather than guessing a method's function from its words.
+  if (CLASSIFIED_TASKS.has(task)) {
+    for (const [intent, allowed] of Object.entries(scopes)) if (!tasks.some(id => allowed.includes(id))) exclusions.push(intent);
+  }
+  return exclusions;
 }

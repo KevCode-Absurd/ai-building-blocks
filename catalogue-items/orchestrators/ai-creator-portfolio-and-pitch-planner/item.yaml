@@ -1,21 +1,17 @@
 slug: ai-creator-portfolio-and-pitch-planner
 name: AI creator portfolio and pitch planner
-summary: Describe your creative service. Get a spec portfolio plan, draft pitch, scope fields and staged actions to find clients.
+summary: Plan a spec portfolio, a pitch and a 90-day client plan for your AI creative service. You get labelled sample projects, scope fields and weekly steps.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: image
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
-  - type: reference_set
-    required: false
 outputs:
   - type: plan
-    required: true
   - type: document
-    required: true
 uses: []
 execution: coordinator
 package_files: all

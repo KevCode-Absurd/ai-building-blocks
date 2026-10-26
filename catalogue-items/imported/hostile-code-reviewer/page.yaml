@@ -2,23 +2,23 @@ thinking: high
 thinking_why: It must argue against code it may have helped write.
 new_slug: hostile-code-reviewer
 name: Hostile code reviewer
-summary: Point it at recent changes. Get a tough review from three hostile
-  reviewers, with each finding ranked.
+summary: "Get a hostile code review of your changes from three angles: breakage, confusion and security. Findings are ranked, with a clear merge verdict."
 job: test-and-fix-code
 headline: Hostile code reviewer
-subhead: Code review from people who want to find fault, not approve. Point it
-  at staged changes, recent commits or one file, and get a ranked list of real
-  problems with a clear merge verdict.
+subhead: Code review from people who want to find fault, not approve. Point it at staged changes, recent commits or one file, and get a ranked list of real problems with a clear merge verdict.
 explain: |
   Code review from people who want to find fault, not approve. Point it at staged changes, recent commits or one file, and get a ranked list of real problems with a clear merge verdict.
 
   An AI that read the code shares its blind spots and tends to say it looks fine. This skill breaks that habit with three hostile reviewers. The Saboteur looks for what will break in production. The New Hire asks what will confuse the next person. The Security Auditor hunts for common attack holes. Each must find something. A problem spotted by two reviewers moves up a severity level. The report ends in BLOCK, CONCERNS or CLEAN.
 when:
-  - You wrote a change yourself and need a review that will not just agree with
-    you.
+  - You wrote a change yourself and need a review that will not just agree with you.
   - You are about to merge a pull request and want a final tough pass.
   - You want to know whether new code is easy for a teammate to maintain.
   - You need a quick security check on a file before it ships.
+not_for:
+  - "You need a full security audit of a whole system: hire a security specialist, or run a dedicated audit tool."
+  - "You have no changes or file to show your AI: there is nothing to review, so write or open the code first."
+  - "You want a quick style check only: use your linter or ask a teammate for a fast read."
 you_give:
   - The code changes, a commit range or a file path
   - A note on what the change is meant to do (optional)
@@ -29,8 +29,29 @@ you_get:
   - A BLOCK, CONCERNS or CLEAN verdict
   - Suggested fixes for each finding
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude Code, or any AI chat that can read your project files.
+  - Add the skill instructions to your AI. In a chat, paste the contents of SKILL.md first.
+  - Show it what to review. Say "review staged changes", "review the last 3 commits" or "review src/auth.ts". In a chat, paste the code or diff.
+  - Add what the change should do and what worries you (optional).
+  - Read the verdict first, then the Critical Findings. Fix those before you merge.
+  - Check each finding against your code. Treat any point your AI marks as unverified as a question to check, not a fact.
+output_sample:
+  input:
+    - Your code changes, a commit range, or one file
+    - A note on what the change should do (optional)
+    - Areas you worry about most (optional)
+  prerequisites:
+    - An AI that can read your code, either pasted into the chat or through git in a coding tool
+  output:
+    - name: Verdict
+      contains: BLOCK, CONCERNS or CLEAN, based on the worst findings.
+    - name: Scope
+      contains: The files reviewed, the lines changed and the type of change.
+    - name: Critical Findings
+      contains: Problems that could lose data, breach security or cause an outage, which block the merge.
+    - name: Warnings
+      contains: Likely bugs in edge cases or code that will confuse the next person. Fix them or accept the risk.
+    - name: Notes
+      contains: Small improvements and gaps, such as missing tests, left to your choice.
+    - name: Summary
+      contains: Two or three sentences on the overall risk and the one thing to fix first.

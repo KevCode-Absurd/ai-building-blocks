@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks each supplier against a set list of criteria.
 new_slug: responsible-sourcing-checker
 name: Responsible sourcing checker
-summary: Give it your suppliers. Get ethics and environment gaps found, a
-  questionnaire to send, and an improvement plan.
+summary: Check your suppliers for ethics and environment gaps. Get a scored report, a questionnaire to send and a ranked plan to fix the biggest risks.
 job: plan-supply-chain
 headline: Responsible sourcing checker
-subhead: Give it your suppliers. Get ethics and environment gaps found, a
-  questionnaire to send, and an improvement plan. Bring a list of your
-  suppliers. Use the result to plan your next step.
+subhead: Give it your suppliers. Get ethics and environment gaps found, a questionnaire to send, and an improvement plan. Bring a list of your suppliers. Use the result to plan your next step.
 explain: |
   A supplier review that shows where each supplier falls short on ethics and the environment, with a questionnaire ready to send and a plan to close the gaps. You choose what matters first, so effort goes to real risk and not a long checklist.
 
@@ -16,9 +13,12 @@ explain: |
 when:
   - A customer or investor has asked how ethical your suppliers are.
   - You buy from many suppliers and do not know which ones carry the most risk.
-  - You need a questionnaire to send to suppliers about their environmental and
-    labour practices.
+  - You need a questionnaire to send to suppliers about their environmental and labour practices.
   - You want a plan to improve sourcing without dropping suppliers overnight.
+not_for:
+  - "You need legal due-diligence sign-off or a certification claim: hire a third-party auditor, because this gives a first review only."
+  - "You only want to track your own carbon emissions: use a carbon footprint tool or your accountant, not this supplier review."
+  - "You have no supplier data at all: first build a simple spreadsheet of suppliers, spend and category, then come back."
 you_give:
   - A list of your suppliers
   - Your reason for checking (rules, customers, values)
@@ -31,7 +31,28 @@ you_get:
   - A ranked improvement plan
   - Follow-up checks to run later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather a spreadsheet of your suppliers with spend and category for each. Add certifications if you know them (optional).
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Tell your AI why you are checking, and which goals and supplier groups come first.
+  - Paste your supplier list. Give real figures for every supplier, because any metric you leave out is scored as a middle value of 50.
+  - Review the ranked plan and report sections, then send the questionnaire to your suppliers.
+  - Treat the scores as a first review. Use a third-party audit before you make any certification claim.
+output_sample:
+  input:
+    - Your list of suppliers, with spend and category if you have them
+    - "Your reason for checking: a rule, customer pressure or your own values"
+    - Your goals, such as lower carbon or no forced labour
+    - Certifications your suppliers already hold (optional)
+  output:
+    - name: Executive summary
+      contains: Your overall sourcing score, progress toward your goals, key wins and problems, and what the work will cost.
+    - name: Supplier ESG performance
+      contains: A table scoring each supplier on environment, social and governance, with a rating, a change and any red flags.
+    - name: Category performance
+      contains: Average scores by spend category, how many suppliers were assessed, and whether each category is on target.
+    - name: Sustainable sourcing KPIs
+      contains: Current and target values for score, spend with top-rated suppliers, assessment coverage and carbon intensity.
+    - name: Improvement initiatives
+      contains: Ranked actions with suppliers involved, investment, expected impact, timeline and status.
+    - name: Supplier questionnaire
+      contains: Questions on climate, water, waste, working conditions, safety and fair pay to send to your suppliers.

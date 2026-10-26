@@ -1,6 +1,6 @@
 new_slug: inbound-shipment-tracker-builder
 name: "Inbound shipment tracker builder"
-summary: "Give it your purchase orders and freight details. Get a shared tracker and a warehouse notice."
+summary: "Build a shared inbound shipment tracker from your purchase orders and freight quotes, plus a warehouse notice, so your team sees when stock lands."
 job: plan-supply-chain
 thinking: low
 thinking_why: "It lays out columns and a notice from your details, so a smaller, faster model is enough."
@@ -17,6 +17,10 @@ when:
   - You have orders from overseas and the team keeps asking where they are.
   - A warehouse receipt once came in short and you only found out weeks later.
   - You are choosing a freight forwarder and want quotes side by side.
+not_for:
+  - "You track shipments that are not store purchase orders: use the shipment-tracking planner, the general version."
+  - "You have one small parcel on its way: a carrier's tracking link and a note to your team is enough."
+  - "You need customs or duty checked: ask a customs broker, because this does not check them."
 
 you_give:
   - Purchase orders with SKUs, quantities and PO numbers
@@ -35,6 +39,28 @@ how_to_use:
   - Paste the freight quotes you have, and ask for two or three more.
   - Copy the columns into a shared sheet and name one person to update it.
   - Send the advance shipping notice to your warehouse before the container lands.
+output_sample:
+  input:
+    - Your purchase orders with SKUs, quantities and PO numbers
+    - Whether each order ships by sea or air
+    - Two or three freight forwarder quotes (optional)
+    - Your warehouse's receiving rules (optional)
+    - Who needs to see the tracker, such as marketing, support and finance (optional)
+  output:
+    - name: Two records
+      contains: The purchase order in your accounting software and the shared tracker, and how they must agree.
+    - name: Tracker columns
+      contains: The columns to copy into a sheet, from PO number to received quantity and difference.
+    - name: Update rules
+      contains: A named owner, when they update, and who is told when an arrival date moves.
+    - name: Freight quote comparison
+      contains: Each forwarder side by side on rate, transit time, what is included and customs.
+    - name: Advance shipping notice
+      contains: A summary for your warehouse with PO, items, carrier, arrival date and handling.
+    - name: Short-ship check
+      contains: A same-day comparison of received and ordered units, with who raises any gap.
+    - name: Checks missed
+      contains: Any check that failed, or none, plus anything marked MISSING.
 
 how_it_works:
   - title: Sets up two records

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies standard earned value formulas.
 new_slug: project-cost-progress-tracker
 name: Project cost progress tracker
-summary: Give it a project's budget, schedule and spend. Get cost and schedule
-  indexes and a finish cost estimate.
+summary: Check if your project is on budget and on time. Give it budget, planned work and spend. You get cost and schedule scores and a final cost forecast.
 job: money-and-investing
 headline: Project cost progress tracker
-subhead: A clear answer to whether your project is on budget and on time, plus a
-  forecast of what it will cost at the end. It replaces gut feel with three
-  numbers you can defend in a meeting.
+subhead: A clear answer to whether your project is on budget and on time, plus a forecast of what it will cost at the end. It replaces gut feel with three numbers you can defend in a meeting.
 explain: |
   A clear answer to whether your project is on budget and on time, plus a forecast of what it will cost at the end. It replaces gut feel with three numbers you can defend in a meeting.
 
@@ -18,6 +15,10 @@ when:
   - Your sponsor wants a forecast of the final cost.
   - Spend looks fine but you suspect the work is behind.
   - You need to know how much harder the team must work to finish within budget.
+not_for:
+  - Your project has no budget or schedule yet. Set the baseline first with a budget forecast, then come back.
+  - You want to judge if the project is still worth doing. Use a capital budgeting check, or ask your finance lead.
+  - You only want to know how much you have spent so far. A simple spreadsheet total will do.
 you_give:
   - Total budget
   - Planned value to date
@@ -29,7 +30,24 @@ you_get:
   - Efficiency needed on remaining work
   - A short dashboard in plain words
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - "Prepare a small table with these columns: task, budget, planned value to date, percent complete, actual cost."
+  - Paste the table into the chat. Add your total project budget.
+  - Measure percent complete by finished work, such as half the foundation poured, not by hours spent.
+  - Read the cost and schedule scores first. A score below 1.0 means over budget or behind.
+  - Check the forecast and the corrective actions, then share the dashboard with your sponsor.
+output_sample:
+  input:
+    - Your total budget for the project
+    - The budgeted cost of work planned by today
+    - The money actually spent so far
+    - Percent complete for each task or work package
+  output:
+    - name: Key Metrics
+      contains: The cost performance index and schedule performance index, each marked as over or under budget, ahead or behind.
+    - name: Forecasting
+      contains: Your original budget, the projected final cost, the gap between them, and an estimated finish date based on the schedule index.
+    - name: To-complete performance index
+      contains: The efficiency your team needs on the remaining work to finish within budget.
+    - name: Corrective Actions
+      contains: Short suggestions on what to change, based on where the project is trending over or behind.

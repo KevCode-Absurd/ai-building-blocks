@@ -17,11 +17,11 @@ outputs:
   - {type: objection_map}
 uses: [competitor-battle-card-builder, competitor-product-analyst, product-differentiation-checker, competitor-white-space-mapper, objection-answer-sheet-writer]
 steps:
-  - {uses: competitor-battle-card-builder, note: "Once, and for any rival that first appears in a lost deal: the card with product, pricing and customer views, and the feature grid."}
-  - {uses: competitor-product-analyst, note: "Every quarter, for each rival that appeared in three or more deals: their pricing, features and strengths set against yours, with gaps to act on."}
-  - {uses: product-differentiation-checker, note: "Every quarter: from won and lost deals, whether your edge is real, and which claims buyers chose you for."}
-  - {uses: competitor-white-space-mapper, note: "Once a year, or when a new rival takes a tenth of lost deals: the grid of what buyers value and where nobody is strong."}
-  - {uses: objection-answer-sheet-writer, note: "Every quarter, last: the doubts buyers raised in lost deals, each with an answer backed by proof you have."}
+  - {uses: competitor-battle-card-builder, note: "Once, and for any rival that first appears in a lost deal: the card with product, pricing and customer views, and the feature grid. Hands that rival card to step 2."}
+  - {uses: competitor-product-analyst, note: "Every quarter, for each rival that appeared in three or more deals: their pricing, features and strengths set against yours, with gaps to act on. Uses step 1's card plus your facts and deal reasons; hands the rival read to step 3 as who buyers weighed you against."}
+  - {uses: product-differentiation-checker, note: "Every quarter: from won and lost deals, whether your edge is real, and which claims buyers chose you for. Starts from your own facts and the won and lost deals, not step 2's report. Hands the verdict to the hand-back."}
+  - {uses: competitor-white-space-mapper, note: "Once a year, or when a new rival takes a tenth of lost deals: the grid of what buyers value and where nobody is strong. Uses the rival cards from step 1 and the deal reasons, not step 3's verdict. Hands the grid to the hand-back."}
+  - {uses: objection-answer-sheet-writer, note: "Every quarter, last: the doubts buyers raised in lost deals, each with an answer backed by proof you have. Uses the doubts from lost deals and your proof, not step 4's grid. Hands the sheet back for your yes."}
 schedule: "First two weeks of each quarter, after the quarter's deals are closed out"
 asks_before: [publishing or sending cards to the sales team, making any claim about a rival in public or to a buyer, contacting a rival or its customers, changing your pricing or positioning, buying competitor data]
 minds: [april-dunford]

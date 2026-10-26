@@ -1,6 +1,6 @@
 new_slug: store-brand-signal-auditor
 name: "Store brand signal auditor"
-summary: "Give it your site, emails, pack and ads. Get a score out of 100 for what each says."
+summary: "Check your store brand signals before a redesign. Give it your site, emails, pack and ads. You get a score out of 100 and a fix list."
 job: brand-file
 thinking: high
 thinking_why: "It reads screens closely and spots small mismatches across many touchpoints. A stronger model sees more of them."
@@ -17,6 +17,10 @@ when:
   - Your site, emails and pack were made at different times and you suspect they no longer match.
   - You are about to spend on a redesign and want to know what is actually wrong first.
   - Your price is rising, or you are moving upmarket, and you want to see if the signals back it up.
+not_for:
+  - "You want to know why visitors do not buy: use a landing page audit, since this checks fit and consistency, not sales."
+  - "You have no screens to attach and can only describe your store: get screenshots first, or the audit cannot judge the look."
+  - "You need a new promise or brand voice written: write your promise first, then bring it here to check it."
 
 you_give:
   - Your homepage, a product page, the cart and thank-you page, as screenshots or links
@@ -37,6 +41,30 @@ how_to_use:
   - Paste your promise and who it is for. If you used the Store promise writer, paste its output.
   - Read the fix list from the top. The first fixes are what the most shoppers see.
   - Show the changed assets to five target shoppers for three seconds each, and ask what they remind them of.
+output_sample:
+  input:
+    - Screenshots of your homepage, a product page, your pack and a promo email
+    - Screenshots of your main ad and social profiles (optional)
+    - Your promise and who it is for
+    - Five stores your audience trusts and five they distrust (optional)
+  prerequisites:
+    - An AI chat that can read images
+    - Your brand brain or Store promise writer result (optional)
+  output:
+    - name: SCORE
+      contains: A score out of 100 now and with fixes made, with the sum of five parts shown.
+    - name: TOUCHPOINTS
+      contains: Every place a buyer meets you, in order, with its name, tagline, voice and call to action.
+    - name: SIGNALS
+      contains: "For each asset: what it reminds a scanner of, who it attracts, who it repels, and a 0 to 5 score."
+    - name: CHECKS
+      contains: Scam cues, price fit, flags flown, switch test, sender voice, moments of truth, wording and promise against behaviour.
+    - name: FIX LIST
+      contains: Fixes in order of how many shoppers see the problem, each with an owner and touchpoint.
+    - name: COULD NOT CHECK
+      contains: Any asset or check the AI could not judge, and what it needs to do so.
+    - name: CONFIRM
+      contains: A reminder to show the assets to five target shoppers for three seconds each.
 
 how_it_works:
   - title: Scans each asset

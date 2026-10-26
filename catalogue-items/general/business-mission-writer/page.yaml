@@ -1,6 +1,6 @@
 new_slug: business-mission-writer
 name: "Business mission writer"
-summary: "Say what you make and who it helps. Get a one-paragraph mission bigger than profit, a staged plan and an announcement day."
+summary: "Write a business mission that names who you help and what good your work does. Get a staged plan and an announcement plan for your team."
 job: plan-strategy
 thinking: medium
 thinking_why: "It needs careful wording and judgement about what is true for your business, but follows a fixed order."
@@ -17,6 +17,10 @@ when:
   - Your current mission could belong to any company in your field.
   - The business is changing direction and you need to tell the team why.
   - You are new in a leader role and need your first message to the team.
+not_for:
+  - "You need a one-line statement that sets you apart from rivals: use the Onliness statement writer."
+  - "You want a product tagline or ad line: write it with a copywriter or a simple chat prompt, not a mission."
+  - "You have no idea yet who your business helps: talk to five customers first, then come back."
 
 you_give:
   - What you make or do, and who it helps
@@ -33,6 +37,28 @@ how_to_use:
   - Describe what you make, who buys it, and who uses it. Paste your current mission if you have one.
   - Answer its question about what good the work does. Say it badly if you need to.
   - Read the mission aloud. Change any word you would not say.
+output_sample:
+  input:
+    - What you make or do, and who it helps
+    - Your current mission or goal (optional)
+    - Your brand file, with voice, facts and history (optional)
+  output:
+    - name: The mission
+      contains: One short paragraph on who is helped, what they can do afterwards, and why the business does it.
+    - name: Who is helped
+      contains: The kind of people you serve and what they can do afterwards that they could not before.
+    - name: The stages
+      contains: A long plan in stages, each with dates, what it must do and how you will know it is done.
+    - name: What we will not do for growth
+      contains: A list of things the business will say no to, even if they would grow sales.
+    - name: Why the old goal no longer fits
+      contains: The old goal and the reason it no longer fits, in plain words.
+    - name: Announcement plan
+      contains: When, where and who speaks, a spoken version under 90 seconds, and how each person responds.
+    - name: Missing
+      contains: Any facts you did not give, marked so nothing is made up.
+    - name: Checks missed
+      contains: One line for each quality check that failed, or none.
 
 how_it_works:
   - title: Asks the higher question

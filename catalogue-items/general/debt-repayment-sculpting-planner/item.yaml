@@ -1,25 +1,21 @@
 slug: debt-repayment-sculpting-planner
 name: Debt repayment sculpting planner
-summary: A three-period sculpted debt schedule and residual balance
+summary: Size three years of loan repayments to cash flow and a target cover ratio, with interest, principal and any balance left at maturity.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
 origin: own
 version: 1.0.0

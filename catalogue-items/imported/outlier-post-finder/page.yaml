@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sets a baseline, then explains the winners.
 new_slug: outlier-post-finder
 name: Outlier post finder
-summary: Give it accounts. Get the posts that beat their normal reach, why they
-  worked, and a swipe file. Collects data from websites.
+summary: Find outlier posts that beat an account's normal reach, see why they worked, and get a swipe file of hooks. Needs a paid ScrapeCreators key.
 job: grow-social
 headline: Outlier post finder
-subhead: The posts that did far better than usual for that account, with the
-  reasons why and a swipe file to learn from. Raw view counts miss this, since
-  big accounts always get big numbers.
+subhead: The posts that did far better than usual for that account, with the reasons why and a swipe file to learn from. Raw view counts miss this, since big accounts always get big numbers.
 explain: |
   The posts that did far better than usual for that account, with the reasons why and a swipe file to learn from. Raw view counts miss this, since big accounts always get big numbers.
 
@@ -18,6 +15,10 @@ when:
   - You need hook ideas from posts that overperformed.
   - You want to learn why one reel took off.
   - You are building a swipe file for your content team.
+not_for:
+  - "You want to look up one post or one endpoint: use the ScrapeCreators API directly, not a full report."
+  - "The account is private, or you only have a few posts: the results will be thin, so read the posts by hand."
+  - "You need a content brief or finished scripts: use the hooks from the report as input to your own brief."
 you_give:
   - Accounts to analyse
   - Platform
@@ -29,8 +30,31 @@ you_get:
   - Repeatable patterns
   - Source links and a swipe file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - Get a ScrapeCreators API key. It is a paid service. Check each platform's terms before you collect its data.
+  - Open an AI that can run code, such as Claude with code tools. Add the skill and your key.
+  - List the accounts, the platform for each, and how far back to look.
+  - Ask your AI to find the outlier posts. It needs at least 10 posts per account to be sure.
+  - Read the table of outliers first. Check the links, then copy the hooks you want into your content brief.
+output_sample:
+  input:
+    - The accounts or links to check (yours, competitors or creators)
+    - The platform for each account
+    - Your ScrapeCreators API key
+    - How many posts or how far back to look (optional)
+  prerequisites:
+    - An AI that can run code and call web services
+    - A paid ScrapeCreators account and API key
+    - A check that your use fits each platform's terms
+  output:
+    - name: Summary
+      contains: Number of posts checked, the time window, the baseline for each account, and how sure the result is.
+    - name: Biggest Outliers
+      contains: A ranked table of posts with links, dates, main number, lift over the baseline and why each likely worked.
+    - name: Repeatable Patterns
+      contains: Patterns in hook, format and topic, each backed by evidence and example posts.
+    - name: Hooks to Steal
+      contains: Exact hooks taken from real captions or transcripts.
+    - name: Content Ideas Based on the Outliers
+      contains: New post ideas built from the patterns found.
+    - name: Notes and Caveats
+      contains: Reminders that data is public only and small samples are a guide, not proof.

@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows a set review method on your account of events.
 new_slug: failure-postmortem-writer
 name: Failure postmortem writer
-summary: Describe what went wrong. Get a blame-free five-whys review and a list
-  of changes to make.
+summary: Write a blame-free postmortem after a missed target, failed launch or outage. Get a five whys chain, root cause and dated action list.
 job: think-and-decide
 headline: Failure postmortem writer
-subhead: A review of a miss that finds the cause in your process, not a person
-  to blame, and ends with changes that will actually happen.
+subhead: A review of a miss that finds the cause in your process, not a person to blame, and ends with changes that will actually happen.
 explain: |
   A review of a miss that finds the cause in your process, not a person to blame, and ends with changes that will actually happen. It works for a missed target, a failed launch or an outage.
 
@@ -17,6 +15,10 @@ when:
   - A project failed and the same problem could happen again.
   - You need to write up an incident for leadership.
   - A past review ended with vague actions and nothing changed.
+not_for:
+  - "You had one small miss that a quick fix solves in a day: talk it over in a short team check-in instead."
+  - "You want to pick between options before you act: use a simple pros and cons list, or ask a trusted colleague."
+  - "You want someone held to account for a mistake: handle that in a private talk with their manager, not in this review."
 you_give:
   - What you expected and what happened
   - The impact in numbers
@@ -28,7 +30,32 @@ you_get:
   - Contributing factors listed apart from the root cause
   - Action items with owners
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into a new chat.
+  - "Describe the miss: what you expected, what happened, the cost, the timeline and who was involved. Add notes if you have them (optional)."
+  - Read the five whys. If an answer blames a person, ask your AI to go one level deeper into the process.
+  - Check that every action has a name, a date and a way to verify it. Ask for fixes if any are vague.
+  - Bring the change register to your next team or leadership review, and check it again on the verification date.
+output_sample:
+  input:
+    - What you expected and what actually happened
+    - The impact, in numbers if you have them
+    - A timeline and who was involved
+    - Notes or data from the time (optional)
+  output:
+    - name: Event summary
+      contains: The event name, what was expected, what happened and the cost, stated exactly.
+    - name: Timeline
+      contains: Dated points showing what happened or what was visible at each stage.
+    - name: 5 Whys
+      contains: Five linked questions, each answer going deeper, ending at a cause a specific change can fix.
+    - name: Root cause and contributing factors
+      contains: One sentence for the root cause, and a separate list of things that made it worse.
+    - name: Warning signs missed
+      contains: Signals that were visible earlier and why nobody acted on them.
+    - name: In your control and out of your control
+      contains: Two lists that split what you can change from what you can only prepare for.
+    - name: Change register
+      contains: A table of actions, each with an owner, a due date and a way to check it worked.
+    - name: Verification date
+      contains: The date you will check that the changes happened and worked.

@@ -1,6 +1,6 @@
 slug: check-a-lesson-before-teaching-it
 name: Check a lesson before teaching it
-summary: Share the source files. Get a lesson review, revised sequence and short checks of understanding.
+summary: Check your lesson plan before you teach it. Get a lighter lesson, barriers to fix and quick checks that show who understands.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -22,11 +22,11 @@ uses:
   - lesson-understanding-check
 steps:
   - uses: overloaded-lesson-checker
-    note: Find avoidable load, missing prerequisites and activities that compete with the central goal.
+    note: "Finds too many new ideas at once, split attention and missing background. Hands the problem areas and their fixes to the barrier step."
   - uses: lesson-barrier-spotter
-    note: Identify task and language barriers using the actual learner context.
+    note: "Predicts barriers in the task, the language and the way learners answer, from your lesson plan with step 1's fixes marked and your class notes. Hands the priority changes and the stuck points to the checks step."
   - uses: lesson-understanding-check
-    note: Insert brief checks where their answers would change what the teacher does next.
+    note: "Places a hinge question, cold-call questions and an exit ticket where the answer changes your next move. Uses the stuck points from steps 1 and 2 as what to probe. Hands each check and its stage to the revised sequence."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

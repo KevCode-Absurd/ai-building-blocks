@@ -1,0 +1,154 @@
+name: Database Optimizer agent
+summary: Get a ranked list of slow database queries, missing indexes and risky schema choices, with safe fixes you can test on a copy first.
+headline: Database Optimizer agent
+subhead: Paste your slow queries with their query plans, plus your tables and indexes. It finds what is slowing the database, ranks fixes by impact, and writes each change with a safe way to apply it and a way to undo it.
+job: build-software
+thinking: high
+thinking_why: It reads query plans, compares index choices and checks that each change is safe on a live database. Use a model that can reason about plans and say what it cannot confirm.
+explain: >-
+  A slow database is usually slow for a small number of reasons. A query
+  scans a whole table, a join has no index, or the app asks the database a
+  question once per row. This Database Optimizer agent starts from evidence. It
+  reads the query plan, not just the SQL. Then it says which fix removes the
+  most work.
+
+
+  It works mainly with PostgreSQL, and also covers MySQL and hosted services
+  such as Supabase and PlanetScale. Every proposed change comes with a way to
+  apply it without locking the table and a way to undo it. It does not promise
+  speed-ups. You measure before and after on a copy of your data.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The method is
+  the original author's. AI Blocks adds an intake, a fixed answer layout and
+  review rules. In a chat it reads what you paste. It cannot connect to your
+  database.
+when:
+  - A page or report is slow and you suspect the database.
+  - Your app makes one query per row in a loop, and the list page crawls.
+  - You are about to add an index or change a table on a live database and want it checked first.
+  - You are designing tables for a new feature and want indexes planned from the start.
+not_for:
+  - You have one slow query and want it rewritten. Use the Slow query fixer.
+  - You want queries written from plain words. Use the Plain-words SQL writer.
+  - Your concern is backups, failover or uptime. Use the Database Reliability Engineer agent.
+  - You run GaussDB. Use the GaussDB Expert Engineer agent.
+  - You plan to run changes on a live database with no copy to test on. Ask a database administrator.
+you_give:
+  - Your database engine and version, such as PostgreSQL 15 or MySQL 8.
+  - The slow queries, with the output of EXPLAIN ANALYZE for each.
+  - Your table definitions and existing indexes.
+  - Rough row counts for the biggest tables.
+  - How the app calls the database, such as an ORM or raw SQL (optional).
+  - Which queries matter most to your users (optional).
+you_get:
+  - Findings ranked by impact, each tied to evidence in your query plan.
+  - Exact index and query changes, with the reason for each.
+  - Fixes for repeated one-per-row queries, shown as one combined query.
+  - A safe way to apply each change on a live database, and a way to undo it.
+  - A list of checks to run on a copy of your data, with the numbers to compare.
+  - Notes on connection pooling and slow-query monitoring.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Run EXPLAIN ANALYZE on each slow query and copy the whole output. For a query that writes data, run it in a transaction and roll back, or ask the agent for plain EXPLAIN steps.
+  - Paste the queries, plans, table definitions, indexes and row counts. Name your engine and version.
+  - Your AI asks once for anything missing. Without a plan it gives only general advice and says so.
+  - Try each fix on a copy of your database. Run EXPLAIN ANALYZE again and compare with the first output.
+  - Apply changes to the live database yourself, one at a time, in a quiet period, using the undo step if needed.
+how_it_works:
+  - title: Read the plans
+    text: It reads each plan for full table scans, estimates that miss, slow joins and sorts that spill to disk.
+  - title: Find repeated queries
+    text: It spots the pattern where the app runs one query per row, and replaces it with one combined query.
+  - title: Check the indexes
+    text: It checks that joins have indexes and that filters match them. It considers partial and combined indexes where they fit.
+  - title: Review the schema
+    text: It checks table design, data types and constraints, and weighs clean structure against speed.
+  - title: Write safe changes
+    text: Each change is reversible. Indexes on live PostgreSQL tables use the option that avoids locking the table.
+  - title: Plan connections and monitoring
+    text: It checks that the app reuses connections, and that slow queries are logged, for example with pg_stat_statements.
+  - title: Plan the test
+    text: It lists what to run on a copy and which numbers to compare before and after.
+output_shape: |-
+  SETUP AND EVIDENCE USED
+    <engine and version> | <queries and plans supplied> | <missing evidence>
+
+  FINDINGS (ranked by impact)
+    <rank> | <problem> | <evidence in the plan> | <fix>
+
+  PROPOSED CHANGES
+    <index or query change> | <exact SQL or rewrite> | <why> | <cost, such as extra write work>
+
+  APPLY AND UNDO
+    <change> | <safe way to apply on a live database> | <undo step>
+
+  CHECKS ON A COPY
+    <query> | <measure before> | <measure after> | <pass rule>
+
+  CONNECTIONS AND MONITORING
+    <pooling note> | <slow-query logging> | <what to watch>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your database engine and version
+    - Slow queries with the full EXPLAIN ANALYZE output
+    - Table definitions, existing indexes and rough row counts
+    - Which queries matter most to users (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - A copy of your database to test on, because the agent proposes changes and runs none
+  output:
+    - name: Setup and evidence used
+      contains: Your engine and version, the plans it read and any evidence still missing.
+    - name: Findings
+      contains: Problems ranked by impact, each with the line in the plan that shows it and the fix.
+    - name: Proposed changes
+      contains: The exact index or query change for each finding, with the reason and its cost.
+    - name: Apply and undo
+      contains: A safe way to apply each change on a live database and the step to undo it.
+    - name: Checks on a copy
+      contains: The queries to rerun, what to measure before and after and the rule for a pass.
+    - name: Connections and monitoring
+      contains: Pooling notes and slow-query logging, with what to watch after the change.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read plans and schemas you paste. Give the full plan, not a summary.
+    - name: A staging copy of your database
+      why: It lets you test each change and compare plans before you touch the live data.
+  inputs:
+    - The slow query log from your database.
+    - Your ORM or app code for the slow page.
+    - Table sizes from your database's own statistics.
+terms:
+  - term: Query plan
+    meaning: The database's own steps for running a query, such as which tables it scans and which indexes it uses.
+  - term: EXPLAIN ANALYZE
+    meaning: A command that runs a query and shows its plan with real timings. It actually runs the query.
+  - term: Index
+    meaning: A lookup structure that lets the database find rows without reading the whole table.
+  - term: Full table scan
+    meaning: Reading every row in a table to answer a query. Called a sequential scan in PostgreSQL.
+  - term: N+1 query
+    meaning: One query to get a list, then one more query for every item in it.
+  - term: Connection pool
+    meaning: A set of open database connections that the app reuses instead of opening new ones.
+  - term: Migration
+    meaning: A scripted change to the database structure, which should be reversible.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Engine
+    how: Say if you use PostgreSQL, MySQL, Supabase or PlanetScale. Index and migration advice differs between them.
+  - what: Scope
+    how: Say if you want queries only, or schema and migrations as well.
+improve:
+  - Keep the before and after plans for each fix with your notes, and paste them back when a query slows again.

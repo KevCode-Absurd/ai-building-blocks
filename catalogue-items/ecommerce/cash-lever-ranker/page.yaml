@@ -1,6 +1,6 @@
 new_slug: cash-lever-ranker
 name: "Cash lever ranker"
-summary: "Give it your P&L and stock. Get six cash levers ranked by cash freed, scored out of 100."
+summary: "Find which cash lever frees the most cash for your store. Give it your P&L and stock. You get six levers ranked and a score out of 100."
 job: track-numbers
 thinking: high
 thinking_why: "It runs a small model six times and then in combination. A stronger model keeps the base steady and gets the sums right."
@@ -17,6 +17,10 @@ when:
   - Your bank balance is low even though sales are up, and you do not know where to look first.
   - You are choosing between cutting costs, raising prices, trimming products or lowering CAC.
   - You plan to grow ad spend but stock keeps eating the cash.
+not_for:
+  - "Your store makes digital goods or sells made-to-order items with no stock cycle: use a simple cash forecast in Google Sheets, or ask your accountant."
+  - "You only need order dates and amounts for stock: use the Inventory cash planner."
+  - "You want to decide ad spend on slow products: use the SKU ad money planner."
 
 you_give:
   - Your monthly P&L for the last three months, split into new and returning customers
@@ -36,6 +40,28 @@ how_to_use:
   - Tell it how far you think you can move each lever, such as a CAC cut or a price rise.
   - Read the ranking and the combination. Pick two or three moves, not six.
   - Track the numbers it lists for 90 days before you judge the result.
+output_sample:
+  input:
+    - Your monthly P&L for the last 3 months, split into new and returning customers
+    - Your stock value, purchase schedule and lead time
+    - Your CAC, AOV and share of revenue from returning customers
+    - Your 30-day sell-through by product and your fixed running costs
+    - Your starting cash and cash gap (optional)
+  output:
+    - name: Base
+      contains: Your stock value in days of cost of goods, your starting cash and your cash gap.
+    - name: Lever tests
+      contains: Cash at day 0, 30, 60 and 180 for each of six levers, tested one at a time.
+    - name: Rank
+      contains: The six levers ordered by cash freed at day 180, with net income change in its own column.
+    - name: Best combination
+      contains: Two or three levers rerun together, with cash at day 180 and the share of the gap closed.
+    - name: Watch for 90 days
+      contains: The numbers to track before you judge the result.
+    - name: Score
+      contains: A score out of 100 made of gap closed plus data quality, with the sum shown.
+    - name: MISSING
+      contains: Any input you did not give, so you know what to add.
 
 how_it_works:
   - title: Names the problem

@@ -1,6 +1,6 @@
 name: "Story carousel ad writer"
 new_slug: story-carousel-ad-writer
-summary: "Name your card count and buyer. Get each card's picture, words and headline, plus the main text."
+summary: "Write a story carousel ad card by card. Give your card count and buyer. You get each card's picture, words and headline, plus the main text."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You want to run a carousel but don't know what should go on each card.
   - Your carousels get views on card one and nobody swipes.
   - You have several real reasons or customer quotes and want to lay them out in order.
+not_for:
+  - "You want one image ad, not a set of cards: write a single-image ad with your AI, or ask a designer for one picture and one line."
+  - "You have no real customer quotes: skip the proof stack shape. This skill will use a how-it-works story instead and mark proof as missing."
+  - "You need to check an ad against Meta's rules: use a Meta ad policy checker after the cards are written."
 
 you_give:
   - How many cards (4 to 6 suits most stories)
@@ -36,6 +40,31 @@ how_to_use:
   - Describe the buyer in a sentence or two, including what they've already tried.
   - Paste your offer, guarantee, approved claims and any customer quotes with their sources.
   - Read the flags at the end. Any MISSING line is something to find or drop before the ad runs.
+output_sample:
+  input:
+    - How many cards you want (4 to 6 suits most stories)
+    - Who the buyer is, what they doubt and how much they know
+    - Your offer, guarantee and the claims you can back
+    - Your brand voice, colours and banned claims (optional)
+    - Real customer quotes with their sources (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your brand brain and buyer brief, if you have them (optional)
+  output:
+    - name: Shape line
+      contains: The story shape it picked, how aware the buyer is, and the number of cards.
+    - name: Card blocks
+      contains: One block per card with the picture, one or two sentences, and a headline for under the card, each with a count.
+    - name: Visual thread
+      contains: What stays the same on every card, such as layout, framing, light and colours.
+    - name: Main text
+      contains: The words above the ad, with card one's question, a short argument and the offer.
+    - name: Button
+      contains: The button wording to use on the ad.
+    - name: Flags
+      contains: Missing dates, proof or terms, plus quotes to check and anything left out.
+    - name: CHECKS MISSED
+      contains: One line per check the carousel still fails, or none.
 
 how_it_works:
   - title: Picks the story shape

@@ -12,9 +12,9 @@ outputs:
   - {type: test_report}
 uses: [web-font-pairing-picker, page-grid-and-type-planner, website-art-director, web-app-tester]
 steps:
-  - {uses: web-font-pairing-picker, note: "Picks fonts and sizes that fit the site's tone."}
-  - {uses: page-grid-and-type-planner, note: "Keeps the fonts from the step before and sets a grid and layout around them."}
-  - {uses: website-art-director, note: "Builds the page from the brief, following the type and grid you added."}
+  - {uses: web-font-pairing-picker, note: "Picks fonts and sizes that fit the site's tone. Hands step 2 the type direction."}
+  - {uses: page-grid-and-type-planner, note: "Keeps the fonts from step 1 and sets a grid and layout around them. Hands step 3 the design direction and the page layout, which you add to your brief at the pause."}
+  - {uses: website-art-director, note: "Builds the page from your brief plus the design direction and page layout from step 2, so the type and grid carry through. Hands step 4 the built page."}
   - {uses: web-app-tester, note: "Opens the built page and clicks through it to find what is broken."}
 origin: rebuilt
 version: 1.0.0

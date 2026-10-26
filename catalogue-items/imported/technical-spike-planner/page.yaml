@@ -1,12 +1,16 @@
 new_slug: technical-spike-planner
 name: Plan a time-boxed technical spike
-summary: Plan one short study that resolves a blocking code or design question, with tests, an owner and a deadline.
+summary: "Plan a time-boxed technical spike: give it one blocking question and a deadline. You get a study plan with tasks, tests and a decision record."
 job: research-topics
 headline: Plan a time-boxed technical spike
 subhead: Bring one technical unknown and a time limit. Get a study plan with proof needed to choose a path.
 explain: Bring one technical unknown and a time limit. Get a study plan with proof needed to choose a path.
 when:
   - You want to plan a time-boxed technical spike.
+not_for:
+  - "A question a quick read of the code or an existing decision record can answer: read those first, no spike needed."
+  - "A choice that spans several teams: hold a full design review with the people affected."
+  - "Work that is already decided and only needs building: write normal implementation tasks instead."
 you_give:
   - The blocking decision, affected code, constraints and deadline.
   - A named owner and realistic research or prototype time budget.
@@ -14,9 +18,36 @@ you_get:
   - A focused spike document with tasks, dependencies and completion criteria.
   - A findings/decision record that separates planned experiments from actual results.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open your AI chat, or your AI coding assistant if you want it to search code and run tests.
+  - Paste the skill text, then add your blocking question, the code it touches, your time limit, the owner and the deadline.
+  - Ask your AI to write the spike document. Check that it has one question only.
+  - Run the research tasks yourself, or let your AI do them if it can run code. Fill in the findings.
+  - Write the decision, then turn the follow-up actions into implementation tasks.
+output_sample:
+  input:
+    - The one technical question that blocks your work
+    - The code or system parts it affects
+    - Your time limit and decision deadline
+    - The name of the owner
+    - Known limits or requirements (optional)
+  prerequisites:
+    - An AI that can create files if you want the spike saved as a file. Otherwise copy the text from the chat.
+    - Code tools like search, fetch and run tasks are only needed if you want your AI to research and test for you.
+  output:
+    - name: Summary
+      contains: The spike goal, why it matters, the time limit and the date a decision is needed.
+    - name: Research Question(s)
+      contains: The main question and up to a few smaller questions that support it.
+    - name: Investigation Plan
+      contains: A checklist of research tasks and the signs that show the spike is finished.
+    - name: Technical Context
+      contains: The parts of the system affected, what depends on this, and known limits.
+    - name: Research Findings
+      contains: Space for results, prototype notes and links to the sources you used.
+    - name: Decision
+      contains: The recommendation, why it won over other options, notes for building it and follow-up actions.
+    - name: Status History
+      contains: A dated table that tracks the spike from not started to complete.
 how_it_works:
   - title: Fix the question and timebox
     text: Choose one technical decision, its downstream impact, owner and deadline.

@@ -1,6 +1,6 @@
 new_slug: shopify-page-rebuild
 name: "Rebuild a page you admire as your own Shopify page"
-summary: "Give it a page screenshot, your brand file and product facts. Get your own page, a design plan and Shopify files."
+summary: "Rebuild a page you admire as your own Shopify page. Give it a screenshot, your brand file and product facts. Get your copy, a design plan and theme files."
 job: write-landing-page
 
 headline: "Your own Shopify page, laid out like one you admire"
@@ -15,6 +15,10 @@ when:
   - You like how another brand's product page is laid out and want yours to work the same way.
   - Your product page is a standard theme with your copy dropped in, and it doesn't sell.
   - You want a new page built in Shopify without writing theme code.
+not_for:
+  - "You have no store yet or no product photos: set up your Shopify store first, then come back."
+  - "You already have the layout and only need a page built: use the Plain HTML landing page builder."
+  - "You want to score a page you already have: use the Landing page conversion reviewer or the 30-point landing page checker."
 
 you_give:
   - A screenshot of the page you admire
@@ -35,6 +39,28 @@ how_to_use:
   - Have your inputs ready. A full-page screenshot of the page you admire, your brand file and your product facts.
   - It works step by step and saves each result. After step 3, upload the files to your theme and publish the page.
   - Take screenshots of the live page on a phone and a computer, then give them to the last step.
+output_sample:
+  input:
+    - A full-page screenshot of the page you admire
+    - Your brand file with your facts, voice and colours
+    - Your product facts, such as price and variants (optional)
+    - Your offer (optional)
+    - Screenshots of your live page on a phone and a computer, after you install it
+  prerequisites:
+    - A Shopify store and a theme you can upload files to (Shopify is a paid service)
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Real product photos at full size
+  output:
+    - name: Layout plan
+      contains: A slot map with your own copy in every slot, and a note on what was borrowed and what was not.
+    - name: Design plan
+      contains: Three on-brand design directions and a build brief for the one you pick.
+    - name: Shopify theme files
+      contains: Your copy and chosen design loaded into theme files, with numbered install steps.
+    - name: Live page audit
+      contains: What blocks shoppers, changes to test, and a score out of 100, based on your screenshots.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Plans the layout
@@ -78,15 +104,15 @@ example:
     LAYOUT
     Borrowed: price card first, then proof, then how it works | Not borrowed: their words and photos
     Slot map: hero -> "Your first box of daily greens, now $29.99"
-    
+
     DESIGN PLAN
     Colours: cream hero, deep forest headings | Direction B picked: one price card
-    
+
     SHOPIFY FILES
     sections/sprout-hero.liquid ... Install: upload, add the section, publish
-    
+
     PAUSE: install and save screenshots
-    
+
     AUDIT
     Blocks shoppers: the cancel steps are missing | Score: 74/100
 

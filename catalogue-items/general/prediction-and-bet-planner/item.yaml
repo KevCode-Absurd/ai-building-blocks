@@ -1,6 +1,6 @@
 slug: prediction-and-bet-planner
 name: "Prediction and bet planner"
-summary: "Paste a belief you hold. Get what it predicts, what would prove it wrong, a small bet and a date to check."
+summary: "Turn a belief into a checkable bet. Get what it predicts, what would prove you wrong, a small stake and a date to check."
 category: general
 type: skill
 role: make
@@ -19,3 +19,4 @@ credits:
   - {title: "Into a Black Hole, lecture 2008", by: "Stephen Hawking", url: "https://www.hawking.org.uk/in-words/lectures/into-a-black-hole", used: "Setting out rival explanations and saying which you prefer and why"}
   - {title: "Thorne-Hawking-Preskill bet", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Thorne%E2%80%93Hawking%E2%80%93Preskill_bet", used: "How a stake and a date make a belief honest, and conceding in public when you lose"}
   - {title: "Hawking says he lost $100 bet over Higgs discovery", by: "Phys.org", used: "Paying up when the result goes against you and treating surprises as useful"}
+next: [one-change-experiment-planner, case-against-writer]

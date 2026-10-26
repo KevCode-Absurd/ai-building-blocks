@@ -1,52 +1,115 @@
 new_slug: prepare-feedback-students-can-act-on
-name: Prepare feedback students can act on
-headline: Prepare feedback students can act on
-summary: Share the source files. Get criterion-linked feedback, a revision task and a teacher review list.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: Criterion-linked feedback, a revision task and a teacher review list. Share the task, rubric, anonymized student work, existing teacher feedback drafts and the feedback rules you use. Your AI prepares the work and marks any facts it cannot verify.
+name: Prepare feedback students can act on
+headline: Prepare feedback students can act on
+summary: Turn your draft comments into feedback students can act on. Get a clear rubric, rewritten comments tied to it and a short revision task.
+subhead: Give it the task, your rubric or learning goal, a piece of student work with the name removed and the comments you plan to give. Your AI sharpens the target, checks each comment for a clear next step and writes a short revision task for the gap that matters most.
 explain: |-
-  Criterion-linked feedback, a revision task and a teacher review list.
+  Comments like "add more detail" leave students unsure what to do. This workflow helps you write feedback students can act on. Each comment points to one criterion, says what is there and what is missing, and names a next step.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Feedback cites the work and rubric; grades stay provisional until a teacher checks them. Missing tools or evidence stay visible in the final summary.
+  First it turns your goal into a single-point rubric: one description of the target, with open space for notes on what falls short or goes beyond it. Then it checks every comment you drafted. Is it specific? Is it about the work, not the student? Does it say what to do? Last it writes a short revision task aimed at the one gap the feedback found.
+
+  You stay the teacher. The AI works on work with names removed, and nothing goes back to a student until you have read it.
 when:
-  - You need criterion-linked feedback, a revision task and a teacher review list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have a stack of drafts and your comments are mostly "good, but more detail".
+  - Students read your feedback and then make the same mistake in the next piece.
+  - A colleague wants a second look at their comments before work goes back.
+  - You want feedback tied to a clear standard before a student redoes the work.
+not_for:
+  - You need a batch of work marked against a rubric. Use the Student work marking desk.
+  - You need a full marking grid with a level for each criterion. Use the Marking rubric writer.
+  - You only want to check comments you already wrote. Use the Written feedback checker.
+  - The feedback comes from an AI tutor. Use the AI feedback quality checker.
 you_give:
-  - The task, rubric, anonymized student work, existing teacher feedback drafts and the feedback rules you use.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The task students did and what it is meant to teach
+  - Your rubric, success criteria or learning goal
+  - A piece of student work, with the name and other personal details removed
+  - The comments you plan to give
+  - The year group or level
+  - Your own rules for feedback, such as one next step only (optional)
 you_get:
-  - Criterion-linked feedback, a revision task and a teacher review list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A single-point rubric for the task
+  - Each comment checked, with a rewrite where it is vague and a note on what changed
+  - A short revision task aimed at the main gap, with answers where it has one
+  - A teacher review list of what to confirm before work goes back
+  - A summary of what could not be checked and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the task, your rubric or goal, one piece of work with the name removed and your draft comments.
+  - Read the rewritten comments. Keep your own voice, and change any line that is not true to the work.
+  - Give students the revision task with the feedback, and check the answer key before you do.
 how_it_works:
   - title: Single-point rubric builder
-    text: Clarify the target standard and observable evidence for the supplied task.
+    text: Turns your goal into one clear standard with space for evidence and notes. It hands the standard to the comment check.
   - title: Written feedback checker
-    text: Check whether the draft feedback is specific, accurate and useful for the next revision.
+    text: Checks each draft comment against that standard for specificity, accuracy and a next step, and rewrites the weak ones. It hands the main gap to the task step.
   - title: Practice problem set writer
-    text: Create a short, checked revision task targeting the specific gap identified in the feedback.
+    text: Writes a short revision task for that gap and checks the answers and difficulty. It hands the task to the teacher review list.
 output_shape: |-
-  Scope and source coverage
-  Criterion-linked feedback, a revision task and a teacher review list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SINGLE-POINT RUBRIC
+    Criterion | what it looks like when met | space for gaps | space for evidence
+
+  CHECKED FEEDBACK
+    Original comment | problem | rewritten comment | what changed and why
+
+  REVISION TASK
+    Gap it targets | task | answers or marking notes
+
+  TEACHER REVIEW LIST
+    Confirm before work goes back: <item>
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - The task, and what it is meant to teach
+    - Your rubric or learning goal
+    - A piece of student work with the name removed
+    - The comments you plan to give
+  prerequisites:
+    - Permission to use student work with an AI tool under your school's rules
+  output:
+    - name: Single-point rubric
+      contains: One standard for the task, with space to note gaps and evidence.
+    - name: Checked feedback
+      contains: Each comment with its problem, a clearer rewrite and why it changed.
+    - name: Revision task
+      contains: A short task aimed at the main gap, with answers or marking notes.
+    - name: Teacher review list
+      contains: What you should confirm yourself before any feedback goes back to a student.
+    - name: Hand-back summary
+      contains: Files saved, facts missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read pasted work and your rubric. Check your school's rules before pasting student work.
+  inputs:
+    - Two or three more pieces of work, to see whether the same gap repeats.
+    - A strong example from a past class.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Start with one piece of work and one criterion. Repeat for the next.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the real work and your real comments. Rewrites of rewrites lose your voice.
   - what: Acceptance
-    how: Feedback cites the work and rubric; grades stay provisional until a teacher checks them.
+    how: Say what a good comment does in your class, such as naming one next step.
+improve:
+  - Keep the single-point rubric and reuse it next time you set this task.
+  - Note which rewrites you changed and tell the AI why.
+  - Check, after the next piece, whether the gap you targeted got smaller.
+next:
+  - student-work-gap-finder
+  - assessment-fairness-check
+terms:
+  - term: Single-point rubric
+    meaning: One description of the target standard, with open space for notes on gaps and strengths.
+  - term: Criterion
+    meaning: One thing the work is judged on.
+  - term: Revision task
+    meaning: A short piece of practice that fixes the gap before the student redoes the work.
 judge:
   - Feedback cites the work and rubric; grades stay provisional until a teacher checks them.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,17 +121,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

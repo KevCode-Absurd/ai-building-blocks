@@ -8,10 +8,13 @@ role: check
 job: ops
 level: advanced
 inputs:
+  - type: tool_connection
+    required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: audit_report
+    required: true
 uses: []
 origin: imported
 source:

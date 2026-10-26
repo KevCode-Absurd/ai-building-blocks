@@ -1,0 +1,139 @@
+name: Business Strategist agent
+summary: Make one big business choice. Get a strategy brief with the problem, three options, risks, a clear pick and what you will not do.
+headline: Business Strategist agent
+subhead: Tell it the decision you face, how your business makes money and what limits you. It tests your assumptions, compares at least three options, runs a good, base and bad case, and picks one. You get a business strategy brief with owners, dates and go or stop checks.
+job: plan-strategy
+thinking: high
+thinking_why: It must test assumptions, compare options and say hard things plainly. Use a model that reasons well and marks every estimate as an estimate.
+explain: |-
+  A business strategy brief answers one question: where will you compete, how will you win, and what will you not do? Many plans skip the last part and end up as a wish list. This agent starts with the problem, not the answer. It writes down what you believe about your market, then tests the beliefs that carry the most weight before it recommends anything.
+
+  It compares at least three options against the same tests: fit with your goals, money, how well you can run it and risk. It runs three cases for the future: a base case, a good case and a bad case. It names which moves hold up in all three, and which need a checkpoint tied to an early warning sign. Then it picks one and says plainly what you are giving up.
+
+  It uses only the numbers you give it. A market size or growth rate that you did not supply is marked "estimate, needs a source", never stated as fact. It leans on well-known tools such as the five forces, SWOT and business model canvas, but explains each result in plain words. It has a point of view and will say so when the data does not support your plan.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You face one big choice, such as enter a new market, change pricing or cut a product line, and need options side by side.
+  - You are planning next year and must choose the 3 to 5 things that matter most.
+  - You want to test whether your edge over rivals is real and hard to copy.
+  - A board, investor or partner asks for the case behind a decision, and you need a clear one-page recommendation.
+not_for:
+  - You want a quick read on an industry's profit pressure. Use the Five forces industry checker.
+  - You want to review last quarter and set the next one. Use the Quarterly strategy reviewer.
+  - You need to choose between pivoting or keeping going on a young product. Use the Pivot or persevere decider.
+  - You need tax, legal or investment advice, or a valuation. Take it to a qualified adviser.
+you_give:
+  - The decision or question, in one or two sentences, and the date you must decide by
+  - How your business makes money, with rough revenue, costs and margin
+  - Who you sell to, and who you compete with, including the alternative of doing nothing
+  - Your limits, such as cash, people, time and rules
+  - Any market data, customer notes or past analysis you trust (optional)
+  - Options you already have in mind (optional)
+you_get:
+  - The problem and your key assumptions, with the ones to test first
+  - At least three options compared on the same tests
+  - A base, good and bad case, with the warning signs for each
+  - One recommended option, with what you give up by choosing it
+  - An action plan with owners, dates and go or stop checkpoints
+  - Facts still missing and numbers that need a source
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - State the one decision you face and when you must make it. Add how your business makes money, with rough numbers, and your limits.
+  - Name your rivals and what customers do now. Paste any market data or notes you trust. No code or web access is needed.
+  - Read the assumptions and "Facts still missing" lists first. Fix any assumption that is wrong and ask it to run again.
+  - Check every market figure against a source before you use it. Estimates in the brief are marked.
+  - Take the recommendation and the checkpoints to the people who must agree. Ask a finance or legal adviser about money and rules.
+how_it_works:
+  - title: Frame the question
+    text: It restates the decision, your model, your limits and the deadline. Gaps are asked once, then marked MISSING.
+  - title: Test the assumptions
+    text: It lists what you believe about customers, rivals and costs, and tests the three that matter most.
+  - title: Compare the options
+    text: It sets at least three options side by side on fit, money, how well you can run it and risk. It uses the frameworks that suit your question.
+  - title: Run the scenarios
+    text: It writes a base, good and bad case, with the early warning sign for each and the moves that hold up in all of them.
+  - title: Pick and trade off
+    text: It recommends one option and states what you will not do and why.
+  - title: Plan the action
+    text: It sets owners, dates and go or stop checkpoints, and lists the facts still to confirm.
+output_shape: |-
+  STRATEGY BRIEF
+    Decision <question> | Decide by <date> | Recommendation <one line>
+
+  SITUATION AND ASSUMPTIONS
+    <how you make money> | <customers and rivals> | <limits>
+    <assumption> | <why it matters> | <how to test it>
+
+  OPTIONS COMPARED
+    <option> | <fit with goals> | <money needed and return, from your numbers> | <can you run it> | <risk>
+
+  SCENARIOS
+    <base, good or bad case> | <what happens> | <early warning sign> | <effect on the plan>
+
+  RECOMMENDATION
+    <chosen option> | <why> | <what you will not do> | <what would change the pick>
+
+  ACTION PLAN
+    <step> | <owner> | <date> | <go or stop check>
+
+  FACTS STILL MISSING
+    <fact or number> | <what it limits> | <source to check>
+output_sample:
+  input:
+    - The decision you face and the date to decide by
+    - How your business makes money, with rough numbers
+    - Your customers, your rivals and your limits
+    - Market data or notes you trust (optional)
+  output:
+    - name: Strategy brief
+      contains: The decision, the date and the recommendation in one line, up top.
+    - name: Situation and assumptions
+      contains: Your model, customers, rivals and limits, with the assumptions to test first.
+    - name: Options compared
+      contains: At least three options judged on fit, money, how well you can run each and risk.
+    - name: Scenarios
+      contains: A base, good and bad case, each with its early warning sign and effect on the plan.
+    - name: Recommendation
+      contains: The chosen option, why, what you will not do, and what would change the pick.
+    - name: Action plan
+      contains: Steps with owners, dates and go or stop checkpoints.
+    - name: Facts still missing
+      contains: Numbers and facts to confirm, with the source to check for each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a sales spreadsheet, a past plan or competitor notes next to your question, so the options use your real numbers.
+  inputs:
+    - Your last 12 months of revenue, costs and margin.
+    - Notes from customer calls or lost deals.
+    - A list of rivals with what they charge and who they sell to.
+terms:
+  - term: Assumption
+    meaning: Something you believe is true but have not proved, such as "customers will pay 10 percent more".
+  - term: Scenario
+    meaning: A picture of how the future could go, such as a base case, a good case and a bad case.
+  - term: Trade-off
+    meaning: What you give up when you choose one option over another.
+  - term: Moat
+    meaning: An edge over rivals that is hard to copy, such as a strong brand or low costs.
+  - term: Checkpoint
+    meaning: A set date to review early results and decide to go on or stop.
+tweaks:
+  - what: Decision
+    how: Ask one question at a time, such as "Should we open a second location?" A broad question gives a broad answer.
+  - what: Options
+    how: Name the options you are weighing, and add one you have ruled out. It will test that one too.
+  - what: Numbers
+    how: Give real figures for revenue, cost and cash. Without them, returns are marked "not enough data".
+improve:
+  - Keep the brief and the assumptions. After a quarter, mark which came true and ask it to update the plan.
+  - Save your standard business facts in the pack, such as margins and team size, so you do not retype them.
+  - Use the Objectives and key results writer to turn the chosen option into goals for next quarter.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

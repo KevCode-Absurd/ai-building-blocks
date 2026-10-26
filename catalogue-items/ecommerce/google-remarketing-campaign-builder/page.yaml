@@ -1,6 +1,6 @@
 new_slug: google-remarketing-campaign-builder
 name: "Google remarketing campaign builder"
-summary: "Give it your audiences and offer. Get remarketing setups with budgets, caps and five doubt-led ad concepts."
+summary: "Build Google remarketing campaigns for shoppers who left without buying. Get settings, budgets, caps and five ad concepts, one per doubt."
 job: run-google-ads
 thinking: medium
 thinking_why: "It follows set rules for settings and writes five short ad concepts, which a mid-size model handles well."
@@ -17,6 +17,10 @@ when:
   - You have a cart abandoner list of about 1,000 or more and nothing is running to bring those people back.
   - Your remarketing shows the same ad to everyone and results are flat.
   - You have Shopping and Search working and want to win back warm visitors.
+not_for:
+  - "Your lists are under about 1,000 people: start with broad visitors or email first, as the skill itself will tell you."
+  - "You want ads for people who have never visited your store: use a prospecting setup in Google Ads, not remarketing."
+  - "You only need ad copy or images: use the Fact-based ad copy writer or the Accurate product image ad maker."
 
 you_give:
   - Your audiences and their sizes, from the audience manager
@@ -35,6 +39,30 @@ how_to_use:
   - Pick one setup to test first. Do not run both at once on a small budget.
   - Build the five ad concepts with real photos, real reviews and real terms only.
   - Run for a few weeks, then use the network and audience breakdown to cut weak ones.
+output_sample:
+  input:
+    - Your audiences and their sizes, from Audience manager
+    - Your offer, plus shipping, returns and review count
+    - Your best videos or images (optional)
+    - Your total daily budget (optional)
+  prerequisites:
+    - A Google Ads account with conversions and a steady flow of new visitors
+    - A Google tag and GA4 linked, so your audiences exist
+  output:
+    - name: Readiness check
+      contains: "Your list sizes and a verdict: build, use broad visitors, or start with email."
+    - name: Setup A, video then display
+      contains: Bid, budget, share of total spend and feed settings for video first, then image-led display.
+    - name: Setup B, Demand Gen
+      contains: Goal, purchase optimising, custom audience only, channels, exclusions and budget for a cart abandoner campaign.
+    - name: Caps and options
+      contains: Frequency cap of 3 a day, video enhancements off, and mobile only for Shorts.
+    - name: Creative for returning visitors
+      contains: "A short brief: skip the intro and make the offer the message."
+    - name: Five doubts
+      contains: One ad concept each for distraction, price, trust, does it work and logistics, with real proof and its source.
+    - name: Review plan
+      contains: A weekly check by audience and network, to cut weak placements and keep the winner.
 
 how_it_works:
   - title: Checks readiness

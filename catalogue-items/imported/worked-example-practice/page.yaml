@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It steps support down at the right pace.
 new_slug: worked-example-practice
 name: Worked example to practice sequence builder
-summary: Give it a procedure. Get a sequence from fully worked examples to
-  solving it alone.
+summary: Turn any multi-step procedure into worked examples that fade into independent practice. Get a worked example sequence your students can follow.
 job: teach-and-train
 headline: Worked example to practice sequence builder
-subhead: A learning sequence that moves students from fully solved examples to
-  solving the task alone, so they do not drown in the first problem. It follows
-  how beginners really learn a procedure.
+subhead: A learning sequence that moves students from fully solved examples to solving the task alone, so they do not drown in the first problem. It follows how beginners really learn a procedure.
 explain: |
   A learning sequence that moves students from fully solved examples to solving the task alone, so they do not drown in the first problem. It follows how beginners really learn a procedure.
 
@@ -18,6 +15,10 @@ when:
   - You teach a multi-step procedure such as an algebra method.
   - You want a fair way to remove support gradually.
   - Mixed-ability groups need different starting points.
+not_for:
+  - "You teach an open-ended task like an essay or experiment design: write a set of practice problems or use a simple rubric instead."
+  - "You want to check what students understood after the lesson: ask a colleague or write quick quiz questions instead."
+  - "Your learners already know the procedure well: skip the worked examples and go straight to independent practice."
 you_give:
   - The procedure or skill to teach
   - Learners' age and level
@@ -30,7 +31,26 @@ you_get:
   - Self-explanation prompts
   - Guidance on pacing the fade
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the text of this skill into the chat.
+  - Fill in the skill you teach, your students' level and the number of steps. Add common mistakes if you know them.
+  - Read the result. Check that the blanks start at the end of the procedure and move backward, so students finish each problem themselves.
+  - Fix any example that does not match your students, then print or share the three stages in order.
+output_sample:
+  input:
+    - The procedure or skill you want to teach
+    - Your students' age and level (novice, developing or advanced)
+    - About how many steps the procedure has
+    - Mistakes students often make (optional)
+    - What students already know (optional)
+  output:
+    - name: "Stage 1: Complete Worked Example"
+      contains: One fully solved example with each step explained and prompts that ask students to explain the step themselves.
+    - name: "Stage 2: Completion Problems (Fading Sequence)"
+      contains: Three or four problems where more steps are left blank each time, until students do most of the work.
+    - name: "Stage 3: Independent Practice"
+      contains: Two or three problems students solve alone, with no steps filled in.
+    - name: Fading Rationale
+      contains: What help is removed at each stage and why that step comes out when it does.
+    - name: Expertise Reversal Note
+      contains: A warning on when to slow the fading or drop worked examples, because too much help can hurt stronger learners.

@@ -1,6 +1,6 @@
 new_slug: staying-power-checker
 name: Staying power checker
-summary: Describe what you may buy, join or back. Get what protects it for ten years, what could break it, and a grade.
+summary: Check how long a business, supplier or job path will last. Describe it and get what protects it, what could break it, and a grade.
 job: plan-strategy
 thinking: high
 thinking_why: It must judge what protects something over a decade, which needs reasoning across several fields.
@@ -14,6 +14,10 @@ when:
   - You are choosing a business, supplier, job path or product line that you must live with for years.
   - A thing is doing well now and you want to know if it will last.
   - A new technology could change the field and you cannot tell who benefits.
+not_for:
+  - "You will sell or switch within a year: a quick check of price and demand is enough, so ask a colleague or run a simple pros and cons list."
+  - "You do not yet know if you understand the field: start with the Circle of competence mapper, then come back here."
+  - "You want to know if the people running it can be trusted: use the People trust checker."
 you_give:
   - What you are considering, in a few lines
   - The result of "Circle of competence mapper" (optional)
@@ -28,6 +32,32 @@ how_to_use:
   - Describe what you are considering and what you know of its history.
   - Give any numbers on price, share or customers over the last three to five years.
   - If the grade is weak, ask for the one thing that would have to change.
+output_sample:
+  input:
+    - What you are considering, and the years you care about
+    - The result of the Circle of competence mapper (optional)
+    - "Numbers on its history: prices, share, customers, margins (optional)"
+  output:
+    - name: HORIZON
+      contains: What is being judged and the number of years that matter.
+    - name: PROTECTION
+      contains: What protects it, with one fact each, or a note that it is a commodity.
+    - name: TO COPY
+      contains: The money and years a smart rival would need to match it, with reasons.
+    - name: TREND
+      contains: Whether the protection is widening or narrowing, with facts.
+    - name: THREAT
+      contains: What could replace it and who has come close.
+    - name: TECHNOLOGY TEST
+      contains: Who keeps the gain if a new tool cuts cost or raises quality.
+    - name: PRICING POWER
+      contains: "Whether prices could rise without losing buyers: yes, no or unknown."
+    - name: BLOAT
+      contains: Signs of the slow damage that size can bring.
+    - name: GRADE
+      contains: Strong, fair or weak, the deciding fact, and the call.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in what you gave it, and any checks it could not pass.
 how_it_works:
   - title: State the horizon
     text: Writes what is being judged and the years that matter.

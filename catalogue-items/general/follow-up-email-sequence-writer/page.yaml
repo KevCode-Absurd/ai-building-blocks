@@ -1,37 +1,49 @@
 new_slug: follow-up-email-sequence-writer
 name: "Follow-up email sequence writer"
-summary: "Paste one email you planned to send once. Get a four-step sequence with timing and one ask."
+summary: "Turn one planned email into four follow-ups with a new reason each, one ask, send timing and a stop rule. Paste your email and offer."
 job: write-emails
 thinking: medium
 thinking_why: "It has to find four different reasons in one input and keep every fact straight across four emails."
 
 headline: "Follow-up email sequence writer"
-subhead: "Paste the one email you were going to send and the offer behind it. The prompt pins one ask, finds four different reasons to act, writes four short emails that each carry one reason, suggests the days between them and sets the stop rule."
+subhead: "Paste the one email you were going to send and the offer behind it. It pins one ask and finds four different reasons to act. You get four short emails, each with one reason, plus the days between them and a rule for when to stop."
 
 explain: |
-  Most people send one email and call it a campaign. The reader was busy, or not ready, or needed one more fact. Drayton Bird has said in public for decades that the follow-ups do most of the selling, as long as each one brings something new rather than "just bumping this".
+  Most people send one email and call it a campaign. The reader was busy, or not ready, or needed one more fact. A follow-up email sequence works when each message brings something new. A message that only says "just bumping this" gives them nothing to act on.
 
-  This prompt turns your single email into a sequence of four. Every email asks for the same one action. Each email carries one reason: the main benefit, the biggest doubt answered, the proof, then a short honest last note. It suggests the gaps between sends, keeps every price and deadline exactly as you gave them, and writes the rule that ends the sequence when someone replies or buys. Where you have no proof or no real deadline, it says MISSING instead of inventing one.
+  This prompt turns your single email into four. Every email asks for the same action. Each one carries a different reason: the main benefit, the biggest doubt answered, proof, then a short and honest last note. It suggests the gaps between sends. It keeps every price and deadline exactly as you gave them.
+
+  It also writes the rule that ends the sequence when someone replies or buys. If you have no proof or no real deadline, it says MISSING and writes a question instead of making one up.
 
 when:
   - "You wrote one sales or outreach email and are about to send it once to a list."
   - "People open your first email and nothing happens after."
   - "You have an offer with a real end date and want the run-up planned."
+  - "You send a lone reminder and want to know what a second and third email should say."
+
+not_for:
+  - "People started to buy or sign up and went quiet: use the Almost-buyer follow-up writer."
+  - "You need a weekly plan for your whole list, not one offer: use the Email cadence planner."
+  - "Your list never agreed to hear from you: check it first with the Email permission and message review."
+  - "You already send a sequence and want to know what works: use the Email sequence auditor."
 
 you_give:
-  - "The email or its facts"
-  - "The offer, with price, terms and deadline if real (advised)"
+  - "The email you planned to send, or its facts: what you offer, to whom, and the one action you want"
+  - "The offer, with price, terms and any real deadline (advised)"
   - "Who gets it and what they already know (advised)"
-  - "Proof you are allowed to use (optional)"
+  - "Proof you may use, such as a quote with permission or a number you can back (optional)"
 you_get:
-  - "One ask and four different reasons, each marked from the input or a gap"
-  - "Four emails under 150 words with subject lines"
-  - "Suggested timing with reasons, and the stop rule"
+  - "One ask, and four different reasons marked as from your input or a gap"
+  - "Four emails under 150 words each, with subject lines"
+  - "Suggested days between sends, with the reason for each gap"
+  - "A stop rule for when the sequence ends"
+  - "A list of facts it was missing"
 
 how_to_use:
-  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your email under it."
-  - "Add the offer facts and who the list is."
-  - "Check the REASONS list. Fill any GAP with a real fact and run again, or let that email ask a question instead."
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your email under it. It needs no files or paid tools."
+  - "Add the offer facts and who the list is. Give real prices and dates only."
+  - "Check the list of reasons first. Fill any gap with a real fact and run it again, or let that email ask a question."
+  - "Check every price, date and quote against your own records before you send."
   - "Load the four emails into your email tool with the suggested gaps and the stop rule."
 
 how_it_works:
@@ -57,6 +69,23 @@ output_shape: |
   STOP RULE       <when it ends>
   MISSING         <...>
   CHECKS MISSED   <one line each, or none>
+
+output_sample:
+  input:
+    - "The email you planned to send, or its facts"
+    - "The offer, with price, terms and any real deadline (advised)"
+    - "Who gets it and what they already know (advised)"
+    - "Proof you may use (optional)"
+  prerequisites:
+    - "An AI chat. No files, web access or paid tools are needed."
+    - "A list of people who already know you or opted in"
+  output:
+    - {name: "The ask", contains: "The one action every email asks for."}
+    - {name: "Reasons", contains: "Four different reasons to act, each marked from your input or a gap."}
+    - {name: "Timing", contains: "Suggested days between sends, with the reason for each gap."}
+    - {name: "Emails 1 to 4", contains: "A subject line, a short body and the ask line for each, under 150 words."}
+    - {name: "Stop rule", contains: "When the sequence ends: a reply, a purchase or an opt-out."}
+    - {name: "Missing", contains: "Offer facts, proof or deadlines you did not give."}
 
 example:
   business: sprout

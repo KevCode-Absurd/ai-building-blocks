@@ -2,36 +2,56 @@ thinking: high
 thinking_why: A full audit spans many areas and needs careful ranking.
 new_slug: seo-auditor
 name: SEO auditor
-summary: Give it a site or page. Get a scored SEO report and ranked fixes.
-  Collects data from websites.
+summary: Run an SEO audit on your website or a single page. You get a scored report and a ranked action plan, based on data fetched from the live pages.
 job: get-found-in-search
 headline: SEO auditor
-subhead: 'A scored SEO report on your site or page, plus an action plan with the
-  fixes in priority order. Say "perform seo analysis on" and a URL, and it runs
-  a full audit and saves two files: a detailed findings report and a ranked
-  action plan.'
+subhead: 'Give it a site or page link. It checks the page, scores your SEO and ranks the fixes. You get two files you can act on.'
 explain: |
   A scored SEO report on your site or page, plus an action plan with the fixes in priority order. Say "perform seo analysis on" and a URL, and it runs a full audit and saves two files: a detailed findings report and a ranked action plan. An HTML version is available too.
 
   The skill covers 16 areas, including technical checks, page-level analysis, content quality, structured data, sitemaps, images, AI search readiness, international targeting and GitHub repo discoverability. About 89 scripts collect evidence from the live pages, so findings rest on what was fetched. You can run one area alone, such as technical or schema, or a full audit. It collects data from websites, so you need Python and web access.
 when:
-  - You want a full SEO health check on a site, with a score.
-  - You need to know whether a single page is set up well.
-  - Your structured data may be broken and you want it checked.
-  - You want a prioritised list to hand to a developer or writer.
+  - You want a full SEO health check of your site, with a score.
+  - You need to know if one page is set up well for search.
+  - You think your structured data may be broken.
+  - You need a ranked fix list to hand to a developer or writer.
+not_for:
+  - "You want a quick keyword check: use a keyword tool or ask your AI a plain question."
+  - "You want ongoing monitoring over weeks: use a dedicated site crawler or analytics tool."
+  - "The site is not yours and you have no permission to scan it: ask the owner first."
 you_give:
-  - A site or page URL
-  - The area to focus on (optional)
-  - Python and web access
+  - Your site or page link
+  - The area to focus on, such as technical or schema (optional)
   - Your main keywords (optional)
+  - API keys for extra checks (optional)
 you_get:
-  - A scored audit report
-  - A prioritised action plan
-  - An HTML report (optional)
-  - Evidence from the fetched pages
+  - A scored audit report with findings by area
+  - A ranked action plan with the most important fixes first
+  - An HTML copy of the report (optional)
+  - Notes on any checks that could not run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the web.
+  - Install Python on your computer, and open an AI that can run code and reach the web.
+  - Download the skill folder. If you have API keys, copy .env.example to .env and add them.
+  - "Tell your AI: perform seo analysis on, then your page link."
+  - Wait for the run. Then open FULL-AUDIT-REPORT.md and check the score and the Critical items.
+  - Open ACTION-PLAN.md and hand it to your developer or writer.
+  - To check one area only, ask for it, such as seo schema with your link.
+output_sample:
+  input:
+    - Your site or page link
+    - The area to check, such as technical or schema (optional)
+    - Your main keywords (optional)
+    - API keys for extra checks (optional)
+  prerequisites:
+    - An AI that can run Python code and reach the web
+    - Python installed on your computer
+    - A .env file with your API keys, only if you use paid or login-based checks
+  output:
+    - name: FULL-AUDIT-REPORT.md
+      contains: Detailed findings by area, each marked Critical, Warning, Pass or Info, with a score and the evidence found.
+    - name: ACTION-PLAN.md
+      contains: Fixes ranked by impact, so you can hand the list to a developer or writer.
+    - name: SEO-REPORT.html
+      contains: A shareable web page version of the report, made only when the report script is run.
+    - name: Environment Limitations
+      contains: A section listing any checks blocked by network or access problems, marked as unconfirmed.

@@ -2,15 +2,15 @@ slug: jasper
 name: Jasper
 maker: Jasper
 url: https://www.jasper.ai
-promise: "Draft marketing content using your saved brand voice, product facts and audience details."
+promise: "Write marketing drafts in your saved brand voice, shared across your whole team."
 use_cases: [write-copy, run-ads]
 categories: [writing, marketing]
 what_it_does:
-  - Writes blog posts, emails, ads and social posts in a saved brand voice.
-  - "Runs agents for website content, campaigns and research."
-  - Stores your brand rules, product facts and audiences in one place.
-  - Makes content in batches from a grid, for many pages at once.
-  - Makes on-brand product images and checks how your brand shows up in AI answers.
+  - "Stores your brand voice, style guide, audiences and product facts in one place, and applies them to every draft (checked 26 Oct 2026)."
+  - "Offers a library of agents for SEO content, campaigns, email, social posts, research and translation (checked 26 Oct 2026)."
+  - "Lets you build your own agents in AI Studio. The no-code builder is listed on the Business plan (checked 26 Oct 2026)."
+  - "Makes content in batches from Jasper Grid, which is listed on the Business plan (checked 26 Oct 2026)."
+  - "Makes and edits on-brand product images, and checks how your brand shows up in AI answers with its GEO tools (checked 26 Oct 2026)."
 benefits:
   - "Use saved brand rules to guide drafts across writers and channels."
   - Turn one brief into many pieces of content without starting over.
@@ -21,19 +21,41 @@ best_for:
   - Brands with a fixed voice and style guide to follow.
   - Teams that want agents built for marketing jobs.
 not_for:
-  - "One-off writing that does not need a shared marketing workspace."
-  - Teams that need several seats on the entry plan, which means talking to sales.
+  - "One-off writing that does not need a shared marketing workspace. Use Claude or ChatGPT."
+  - "A team of several people on the entry plan. Pro includes one seat, so ask Jasper about more seats or look at Business."
+  - "Quick edits to text you already wrote. Grammarly is lighter."
 pricing:
   model: subscription
-  from: US$59 per month
-  note: Pro is US$59 per seat when billed yearly, or US$69 billed monthly, with a 7-day free trial. Business is priced on request.
+  from: US$59 per seat per month, billed yearly
+  note: "Checked 26 Oct 2026. Pro is US$69 per seat a month billed monthly, or US$59 a month billed yearly with a 12-month commitment. It has a 7-day free trial and includes 1 seat. Pro includes 2 brand voices, 5 knowledge items and 3 audiences. Business is priced on request, starts with a 12-month commitment and offers unlimited users. Business adds Grid, the no-code agent builder, API access and admin controls."
 works_with:
   - chatgpt
   - claude
 runs_in: [web, api, browser-extension]
 blocks: []
 alternatives: [copy-ai, grammarly, chatgpt, claude]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Sign up for the 7-day free trial at jasper.ai."
+  - "Add your brand voice. Paste a short style guide and two or three pieces of your own writing."
+  - "Add your product facts and one audience, such as who buys and what they worry about."
+  - "Ask for one short piece, such as a product email, using that voice and audience."
+  - "Read it against your own writing. Fix the voice settings, then run a bigger batch."
+needs:
+  - "A Jasper account. Pro includes one seat."
+  - "A written brand voice or style guide, and examples of your best writing."
+  - "Product facts, such as features, prices you can state and claims you can back up."
+  - "One audience described in a few lines."
+example:
+  task: "Write a launch email for one product, in the saved brand voice, for the saved audience."
+  cost: "Pro is US$59 per seat a month billed yearly, or US$69 billed monthly. The trial lasts 7 days."
+  reply: "A draft email in your voice that uses the product facts you saved. Check every claim and price against your own facts before you send."
+not_verified:
+  - "Which answer engines its GEO tools cover. The page does not say."
+  - "How many people a Pro plan allows. The page's visible text says one seat, while a hidden data block says up to 5 users."
+  - "Whether a Creator plan exists. A hidden data block mentions one, but the pricing page does not show it."
+  - "Its claims of faster, cheaper product images. We did not test them, so we left the numbers out."
 sources:
   - https://www.jasper.ai
   - https://www.jasper.ai/pricing

@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It uses set statistics and a fixed plan format.
 new_slug: product-experiment-designer
 name: Product experiment designer
-summary: Give it an idea to test. Get a clear hypothesis, sample size, test plan
-  and how to read the result.
+summary: Plan an A/B test you can trust. Give it your idea and baseline rate. You get a hypothesis, sample size, stopping rules and a way to read the result.
 job: test-an-idea
 headline: Product experiment designer
-subhead: "A test plan you can run and trust: a clear hypothesis, the right
-  sample size, and rules for when to stop and how to read the result."
+subhead: "A test plan you can run and trust: a clear hypothesis, the right sample size, and rules for when to stop and how to read the result."
 explain: |
   A test plan you can run and trust: a clear hypothesis, the right sample size, and rules for when to stop and how to read the result. It keeps you from calling a winner too early.
 
@@ -17,6 +15,10 @@ when:
   - You want to know how many users a test needs.
   - A test finished and you are unsure if the result is real.
   - You need a simple hypothesis the whole team can agree on.
+not_for:
+  - Your site has only a few hundred users a week. A test will take too long, so run a simple usability test with a handful of real users instead.
+  - You only want to compare copy or design taste. Ask a few customers directly or run a short usability test instead.
+  - You need to build the test in a tool or set up tracking. Ask your developer or analyst, or use your testing tool's own setup.
 you_give:
   - The change you want to test
   - Your current conversion rate or average
@@ -29,8 +31,30 @@ you_get:
   - ICE ranking of test ideas
   - A plain reading of the result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code, so it can work out the sample size.
+  - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
+  - Tell it the change you want to test, your current rate and the smallest gain that would matter.
+  - Add results from a finished test or a list of ideas to rank, if you have them.
+  - Check the hypothesis and the one main metric before you launch. Write down the stopping rule and stick to it.
+output_sample:
+  input:
+    - The change you want to test
+    - Your current conversion rate or average
+    - The smallest improvement that would matter
+    - Results from a finished test (optional)
+    - A list of test ideas to rank (optional)
+  prerequisites:
+    - An AI that can run Python code, to work out the sample size
+  output:
+    - name: Hypothesis
+      contains: Your idea written as If, Then, Because, with the expected change and the reason behind it.
+    - name: Metrics
+      contains: One primary metric for the decision, guardrail metrics to catch harm, and secondary metrics for diagnosis only.
+    - name: Sample size and duration
+      contains: How many users each version needs and in total, from your baseline, smallest change, confidence and power.
+    - name: ICE ranking
+      contains: Your test ideas scored on impact, confidence and ease, and put in order.
+    - name: Stopping rules
+      contains: A fixed sample size or length set before launch, and a warning against peeking early.
+    - name: Result reading
+      contains: What the result means, comparing the estimate and its range to the change that matters to you.

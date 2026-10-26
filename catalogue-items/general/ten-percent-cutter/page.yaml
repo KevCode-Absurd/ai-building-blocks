@@ -1,6 +1,6 @@
 new_slug: ten-percent-cutter
 name: "Ten percent cutter"
-summary: "Paste your draft. Get it cut to 90% of its length, with a log of every cut and a story check."
+summary: "Paste a long draft and cut 10 percent of its words. You get the shorter draft, a log of every cut and a check that the story still works."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It follows a fixed order of passes but must judge what is safe to cut."
@@ -17,6 +17,10 @@ when:
   - "Your draft is done but feels slow."
   - "Readers say it dragged in the middle."
   - "You are over a word limit."
+not_for:
+  - "Your draft has several good ideas fighting each other: use the Overstuffed draft cutter to pick one main idea first."
+  - "Your draft is already lean or needs new ideas: leave it as it is, or ask a friend or editor to read it."
+  - "You want your wording or voice rewritten: use a plain editing pass, since this only deletes and shortens."
 
 you_give:
   - "Your draft"
@@ -35,6 +39,25 @@ how_to_use:
   - "Add the theme plan so it knows what pulls away."
   - "Read the log first. Restore anything you want back."
   - "Run the story check by reading the opening and ending of the new draft."
+output_sample:
+  input:
+    - Your draft
+    - The theme plan from the Hidden theme finder (optional)
+    - A word limit, if there is one (optional)
+    - Parts you will not cut (optional)
+  output:
+    - name: The sums
+      contains: Words in, the 90 percent target, and how many words to cut.
+    - name: The cut draft
+      contains: Your draft with the cuts made. Nothing is rewritten.
+    - name: Cut log
+      contains: Words cut in each pass, with examples, and a total that adds up.
+    - name: Kept on purpose
+      contains: Planted details it kept and the later payoff each one sets up.
+    - name: Story check
+      contains: Whether the opening still hooks, the ending still lands and the voice is yours.
+    - name: Checks missed
+      contains: One line for each check it could not meet, or none.
 
 how_it_works:
   - title: "Counts and sets the target"

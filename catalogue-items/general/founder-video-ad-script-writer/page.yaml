@@ -1,6 +1,6 @@
 new_slug: founder-video-ad-script-writer
 name: "Founder video ad script writer"
-summary: "Paste your founder's words. Get a filming brief on one real decision, or interview questions first."
+summary: "Write a founder video ad script built on one real decision. Give it your founder's words and product facts. You get a filming brief."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your founder made real choices about the product that buyers don't know about.
   - Your current founder ad tells the brand story but doesn't sell anything.
   - You want a short brief your founder can film on a phone where the product is made.
+not_for:
+  - "You have no real founder or expert willing to appear on camera: ask for interview only, or film a customer or maker with consent."
+  - "You want a still image, not a video: use the Handwritten note image ad maker with your founder's own words."
+  - "You want a full shot list for the shoot: use the Video ad shot list maker once the brief is done."
 
 you_give:
   - Your founder's own answers and words, and the decisions behind the product
@@ -37,6 +41,30 @@ how_to_use:
   - Say the length, for example "60 seconds".
   - If you get interview questions back, have your founder answer them on camera, then run it again with the answers.
   - Film the main part once, then record each opening it suggests. For a full shot list for the shoot, take the brief to "Video ad shot list maker".
+output_sample:
+  input:
+    - Your founder's own words and the decisions behind the product
+    - Your product facts, claims with sources, proof and guarantee
+    - What makes your buyers hesitate, in their words
+    - Photos or screenshots of footage you already have (optional)
+    - "The length: 30 seconds, 60 seconds, or 2 to 3 minutes (optional)"
+  prerequisites:
+    - A real founder, maker or expert who agrees to appear as themselves
+    - Your brand brain from the Brand profile builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: Filming brief table
+      contains: Each line with its move, the words or a question for the founder, the picture tag and on-screen text.
+    - name: Openings to record
+      contains: Two or three opening lines, each true for this founder, to film separately.
+    - name: Interview questions
+      contains: Six to eight open questions for the founder, written when their own words are missing.
+    - name: Notes
+      contains: Questions for the founder, claims softened, and the proof behind each claim.
+    - name: Casting and wardrobe note
+      contains: Who appears, in what role, where they film, what they wear and what is in reach.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: Confirms the person

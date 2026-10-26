@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs risks across several sets of rules.
 new_slug: ai-impact-assessment-writer
 name: AI impact assessment writer
-summary: Describe an AI use at work. Get risks, rules that apply and conditions
-  to meet. Not legal advice.
+summary: Write an AI impact assessment for a tool your team plans to use. Get the risks, the rules that apply and the conditions to meet. Not legal advice.
 job: check-contracts
 headline: AI impact assessment writer
-subhead: Describe an AI use at work. Get risks, rules that apply and conditions
-  to meet. Not legal advice. Bring the AI use you are assessing. Use the result
-  to plan your next step.
+subhead: Describe an AI use at work. Get risks, rules that apply and conditions to meet. Not legal advice. Bring the AI use you are assessing. Use the result to plan your next step.
 explain: |
   A written impact assessment for an AI tool your team plans to use, with the risks, the rules that apply and the conditions to meet before it goes live. It is a decision record, not a form. This is not legal advice.
 
@@ -18,6 +15,10 @@ when:
   - A team asks to deploy an AI tool and you must decide if it is okay.
   - You need to know which AI rules apply in each place you operate.
   - You want a list of conditions the team must meet before launch.
+not_for:
+  - "You only have a privacy question: run a privacy impact assessment with your privacy lead instead."
+  - "The system runs in places you did not list: redo the places check first, or ask a lawyer who knows those rules."
+  - "You need legal advice or a sign-off: ask your own lawyer to review the result."
 you_give:
   - The AI use you are assessing
   - The places and people affected
@@ -29,11 +30,41 @@ you_get:
   - A list of conditions to meet
   - Flags for privacy and vendor review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web for current rules.
-  - Where the skill points to /ai-governance-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open your AI tool. Use one that can search the web, so it can check current rules.
+  - Paste the skill, or upload the skill folder if your tool takes files.
+  - Tell it the AI use you are assessing, such as AI résumé screening for HR.
+  - Answer its questions about what the system does, who is affected and who checks its results.
+  - Add your AI policy and a past assessment if you have them. Without them it uses a default format.
+  - Check every cited rule against the source before you rely on it. Then ask a lawyer to review.
+output_sample:
+  input:
+    - The AI use you are assessing, in plain words
+    - The places and people it affects
+    - Your AI policy (optional)
+    - A past impact assessment to copy the format from (optional)
+  prerequisites:
+    - An AI that can search the web, so it can check current rules and cite them
+    - Your team's house style and AI policy notes, if you have them. Without them it uses a default format.
+  output:
+    - name: Executive summary
+      contains: The system in brief, the overall risk and the recommendation.
+    - name: System description
+      contains: What the AI does and how it reaches its results.
+    - name: Affected parties
+      contains: Who is hurt or helped if the system gets it wrong.
+    - name: Data inputs
+      contains: What data goes in and where it comes from.
+    - name: Decision-making and oversight
+      contains: Which decisions the AI makes and where a person checks them.
+    - name: Accuracy and bias
+      contains: How it can fail and how that is tested.
+    - name: Regulatory classification
+      contains: For each region, the risk tier, banned uses and duties, with cited sources.
+    - name: AI policy consistency
+      contains: Where the plan matches or breaks your own AI policy.
+    - name: Risks and mitigations
+      contains: Each risk with the step that reduces it.
+    - name: Recommendation
+      contains: Go or no-go, plus the conditions to meet before launch.
+    - name: Handoff flags
+      contains: Notes on whether a privacy review or vendor review is needed.

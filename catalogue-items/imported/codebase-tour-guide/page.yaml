@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads the code and orders it into a story.
 new_slug: codebase-tour-guide
 name: Codebase tour guide
-summary: Name your audience. Get a step-by-step tour file that links real files
-  and lines for a new teammate.
+summary: Make a code tour for a new teammate. Name who it's for and get a step-by-step tour file that links real files and lines in VS Code.
 job: build-software
 headline: Codebase tour guide
-subhead: A guided walkthrough of your code, saved as a tour file that opens
-  inside VS Code and jumps to real files and lines. Each tour is written for one
-  person, so it tells them what matters and what to do next.
+subhead: A guided walkthrough of your code, saved as a tour file that opens inside VS Code and jumps to real files and lines. Each tour is written for one person, so it tells them what matters and what to do next.
 explain: |
   A guided walkthrough of your code, saved as a tour file that opens inside VS Code and jumps to real files and lines. Each tour is written for one person, so it tells them what matters and what to do next.
 
@@ -18,6 +15,10 @@ when:
   - You want a tour of what changed in a pull request.
   - You are explaining a bug's path to a colleague.
   - You need a contributor walkthrough for an open project.
+not_for:
+  - "You need a full security audit: use a security review by a person or a dedicated scanner, since a tour only points out where to look."
+  - "You want a plain API reference: use a docs generator or write a reference page by hand."
+  - "You want wider onboarding beyond the code, such as setup and team habits: use the codebase-onboarding skill from the same library of skills, or a written onboarding doc."
 you_give:
   - Your repository
   - Who the tour is for
@@ -28,8 +29,27 @@ you_get:
   - A story suited to the reader
   - Next-step pointers at the end
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your project folder in VS Code and install the CodeTour extension, so you can play the tour later.
+  - Open a chat with an AI that can read your project files and save new files. Paste in this skill.
+  - Tell it who the tour is for, such as a new teammate, a PR reviewer or a bug fixer. Add what to cover if you know.
+  - Let it read your project first. Then check that the new file in the .tours folder points to real files and lines.
+  - Open the tour in VS Code from the CodeTour panel and click through each step. Ask your AI to fix any step that lands on the wrong line.
+output_sample:
+  input:
+    - Your repository, open in your project folder
+    - Who the tour is for, such as a new hire or a PR reviewer
+    - What the tour should cover (optional)
+  prerequisites:
+    - An AI that can read your project files and save new files
+    - VS Code with the CodeTour extension installed, to play the tour
+  output:
+    - name: .tours/<persona>-<focus>.tour
+      contains: The saved tour file, with a title, a short description and the branch or commit it was written for.
+    - name: Opening step
+      contains: A file or folder step that orients the reader, so the tour never starts on a blank screen.
+    - name: Map steps
+      contains: One to three folder steps that show the main parts of the code.
+    - name: Core path steps
+      contains: File and line steps that tell the story, each saying what the code does, why it matters and what to watch for.
+    - name: Closing step
+      contains: What the reader can now do, with pointers to what to look at next.

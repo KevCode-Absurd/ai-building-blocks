@@ -1,6 +1,6 @@
 new_slug: review-quote-ad-card-planner
 name: Review quote ad card planner
-summary: Paste review lines. Get quote image ad cards with picture prompts and feed text that keep the words exact.
+summary: Turn real customer reviews into quote image ad cards. Get a picture prompt and feed text for each, with every quote kept word for word.
 job: make-image-ads
 thinking: medium
 thinking_why: It sorts quotes by the job they do and then lays out each card.
@@ -14,6 +14,10 @@ when:
   - You have good reviews and no time to design ads from them.
   - You want several different customers in one test.
   - You need to show you did not change what they said.
+not_for:
+  - "You have no permission to use the reviews, or cannot show they are real: get written permission from each reviewer first."
+  - "You want the full set of checks on one quote: use the Customer quote image ad."
+  - "You plan to run a result or health claim from a quote: check the proof first with the Ad claim proof gap finder."
 you_give:
   - Two to four review lines, each with its source
   - What the product looks like, or a photo
@@ -28,6 +32,30 @@ how_to_use:
   - Paste your reviews under the prompt, each with its source, copied exactly.
   - Paste each picture prompt into ChatGPT or Gemini, with your product photo attached.
   - Read the quote on every finished card against the source. Fix any changed letter by editing the text, not by making the image again.
+output_sample:
+  input:
+    - Two to four real review lines, each with its source
+    - What your product looks like, or a photo
+    - Whether each reviewer was verified, free or paid (optional)
+  prerequisites:
+    - An AI that can make images, such as ChatGPT or Gemini, to turn each picture prompt into a card
+  output:
+    - name: CARD
+      contains: The job the quote does (push, pull, doubt or habit) and the layout that suits it.
+    - name: Quote
+      contains: The review exactly as written, with its source.
+    - name: Other words on the image
+      contains: Any extra text on the card, kept plainer than the quote, or none.
+    - name: Picture prompt
+      contains: The background, where the quote sits and the real product, ready to paste into an image tool.
+    - name: Headline
+      contains: A headline of 27 characters or fewer, with its character count.
+    - name: Short text
+      contains: A line of 50 to 150 characters, with its count.
+    - name: TRIM RECORD
+      contains: What was cut from a quote, and why.
+    - name: FLAGS
+      contains: Free or paid reviewers, and health or result claims inside a quote.
 how_it_works:
   - title: Sorts the quotes
     text: Push, pull, doubt or habit, by what each quote does.

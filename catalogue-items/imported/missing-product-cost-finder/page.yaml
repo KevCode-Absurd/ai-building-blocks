@@ -2,34 +2,59 @@ thinking: low
 thinking_why: It flags blank fields.
 new_slug: missing-product-cost-finder
 name: Missing product cost finder
-summary: Get a list of products with no cost set, so your margin and stock value
-  reports stay right.
+summary: Find products in your Shopify store with no cost set, so your margin reports stay right. Get a CSV list of every variant that is missing a cost.
 job: run-your-store
 headline: Missing product cost finder
-subhead: A list of products in your Shopify store that have no cost, or a cost
-  of zero, so your margin and stock value reports can be trusted.
+subhead: Give it your Shopify store domain. It checks every product variant and lists those with no cost, or a cost of zero. You get a count, a share of your catalogue and a CSV to work from.
 explain: |
   A list of products in your Shopify store that have no cost, or a cost of zero, so your margin and stock value reports can be trusted. Reports built on missing costs look better than they are.
 
   It reads every variant in your catalogue and checks the cost recorded for each. You can limit it to active products, one vendor, or items in stock, and choose whether a zero cost counts as missing. It adds up how many are missing, their share of the catalogue, and the stock value affected. It only reads data and never edits anything, so it is safe to run at any time. It needs a signed-in Shopify CLI with read access to products and inventory.
 when:
   - Your profit report shows margins that look too good.
-  - You are preparing for a stock count or accounts review.
+  - You are getting ready for a stock count or an accounts review.
   - A new supplier's products were added in bulk with no costs.
   - You want to know how many items still need a cost entered.
+not_for:
+  - "You want your stock valued at cost: use your accounting tool or a stock valuation report. This only shows retail value at price."
+  - "You want to fill in the missing costs: edit them in Shopify admin or import a cost sheet. This only reads data and changes nothing."
+  - "Your store is not on Shopify: use a spreadsheet check of your own product export."
 you_give:
   - Your store domain
-  - Product status to check, such as active
+  - Product status to check, such as active (optional)
   - One vendor to focus on (optional)
-  - Whether to count zero cost as missing
+  - Whether a zero cost counts as missing (optional)
 you_get:
   - A list of variants with no cost
-  - The count and share of your catalogue
-  - Estimated stock value affected
-  - Output as a readable list or JSON
+  - The count of missing costs and their share of your catalogue
+  - The retail value of the stocked items with no cost
+  - A top vendors list to share the clean-up work
+  - A CSV file, or a JSON summary if you ask for it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Sign in to the Shopify CLI with read access to products and inventory.
+  - Paste the skill into your AI and give it your store domain. Add a vendor or status if you want to narrow it.
+  - Check the summary first. Then open the CSV file and see which variants need a cost.
+  - Hand the CSV to the person who enters costs. Run it again until the missing count is zero.
+output_sample:
+  input:
+    - Your store domain
+    - Product status to check, such as active (optional)
+    - One vendor to focus on (optional)
+    - Whether zero cost counts as missing (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A signed-in Shopify CLI session with read access to products and inventory
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step with the inputs used and how many results came back.
+    - name: Summary
+      contains: Variants checked, how many lack a cost, their share, and how many of those are in stock.
+    - name: Retail value at price
+      contains: Stock quantity times selling price for the missing-cost items. It is not stock value at cost.
+    - name: Top vendors
+      contains: Vendors with the most variants missing a cost, with the stocked count for each.
+    - name: cogs_audit CSV file
+      contains: One row per variant with SKU, product, vendor, status, price, cost, quantity and retail value.

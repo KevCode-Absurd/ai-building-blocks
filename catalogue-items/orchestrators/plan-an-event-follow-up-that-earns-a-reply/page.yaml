@@ -1,52 +1,102 @@
 new_slug: plan-an-event-follow-up-that-earns-a-reply
 name: Plan an event follow up that earns a reply
 headline: Plan an event follow up that earns a reply
-summary: Share the source files. Get segmented follow-up drafts with sources and pending commitments.
+summary: Turn event notes and your attendee list into follow-up drafts grouped by what each person asked for, with every promise you made tracked.
 job: write-emails
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: Segmented follow-up drafts with sources and pending commitments. Share consented attendee notes, promises made, recipient preferences and the actual event context. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your attendee list, your notes from the event and the promises you made. Your AI groups people by what they asked for, tracks each promise and drafts follow-up emails for you to review and send.
 explain: |-
-  Segmented follow-up drafts with sources and pending commitments.
+  After an event, the follow-up that works is specific. It names what the person asked for, delivers what you promised and asks for one next step. A single email to the whole list does none of that, and a forgotten promise costs trust.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Contact permissions and promises are explicit; attendance is not treated as permission for unrelated marketing. Missing tools or evidence stay visible in the final summary.
+  This workflow starts with your notes, not a template. It groups attendees by what they asked for and the goal of the event. It pulls out every promise you made, such as a deck, an introduction or a call, and gives each a date and an owner. Then it drafts one email per group or promise. Each draft says where its facts came from.
+
+  It drafts only. It does not send. And attendance alone is not permission to market to someone. People who did not ask for anything, or did not agree to be contacted, go on a hold list.
 when:
-  - You need segmented follow-up drafts with sources and pending commitments.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You came back from a trade show or conference with a pile of cards and notes and promised to send things
+  - You hosted a webinar or workshop and want replies from the people who asked questions
+  - You told three people "I'll introduce you" and want to be sure that happens
+  - A teammate met the leads, and you need to follow up from their notes, not from memory
+not_for:
+  - You have no event, only tasks due from email threads. Use Draft your due task follow ups.
+  - You want a multi-email sequence over weeks, after the first reply. Use the Follow-up email sequence writer.
+  - You want to plan the event itself, before and during. Use the Event marketing planner.
+  - You want to write to people who did not attend but showed interest. Use Offer useful information first and follow up with stalled leads.
 you_give:
-  - Consented attendee notes, promises made, recipient preferences and the actual event context.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your attendee list with names, emails, what each person asked for and whether they agreed to be contacted (a consent column)
+  - "Your dated notes from the event: who you met and what you promised"
+  - The event name, date and goal, from the agenda or invitation
+  - How each person prefers to be contacted (optional)
+  - A past follow-up email in your voice (optional)
 you_get:
-  - Segmented follow-up drafts with sources and pending commitments.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "Follow-up groups: people grouped by what they asked for, with the reason to write to each group"
+  - "A promise register: each promise with owner, due date and the note it came from"
+  - One unsent email draft per group or promise, with its source
+  - "A hold list: people not to contact, with the reason"
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Share the attendee list and your notes. Add a consent column if your list has none.
+  - Read the promise register first. Fix any wrong owner or date, and finish the ones that depend on you.
+  - Edit the drafts in your voice and send them yourself. Nothing is sent for you.
 how_it_works:
   - title: Event marketing planner
-    text: Group follow-up needs around the actual event goal and what attendees requested.
+    text: Groups follow-up needs around the event goal and what each attendee asked for. It hands on the groups and the reason to contact each one.
   - title: Executive action register keeper
-    text: Extract promised resources, introductions and follow-up actions with source evidence.
+    text: Pulls every promised file, introduction and follow-up from your notes, with the note it came from. It hands on a register with owner and due date.
   - title: Due task follow up drafter
-    text: Prepare relevant drafts for each supported commitment without sending them.
+    text: Writes a draft for each supported promise or group. It does not send, and it lists missing facts and approvals. It hands back drafts and a ledger.
 output_shape: |-
-  Scope and source coverage
-  Segmented follow-up drafts with sources and pending commitments.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  FOLLOW-UP GROUPS
+  Group | What they asked for | Reason to write | People
+
+  PROMISE REGISTER
+  Promise | Owner | Due | Source note | Status
+
+  DRAFTS
+  Group or promise | Subject | Body | Source | State (draft, not sent)
+
+  HOLD LIST
+  Person | Reason (no consent, no ask)
+
+  HAND-BACK SUMMARY
+  Files | MISSING lines | Checks missed | One next step
+output_sample:
+  input:
+    - Your attendee list, with what each person asked for and a consent column
+    - Your dated notes from the event, including what you promised
+    - The event name, date and goal
+    - A past follow-up email in your voice (optional)
+  prerequisites:
+    - An AI that can read your files or pasted text
+  output:
+    - name: Follow-up groups
+      contains: Attendees grouped by what they asked for, with the reason to write to each group.
+    - name: action-register.csv
+      contains: Each promise with an owner, due date, status and the note it came from.
+    - name: follow-up-drafts.md
+      contains: One unsent draft per group or promise, with subject, body and source.
+    - name: draft-ledger.csv
+      contains: The version and state of each draft, so you know what is still unsent.
+    - name: Hold list
+      contains: People not to contact, each with the reason.
+    - name: Hand-back summary
+      contains: Files saved, MISSING facts, checks not done and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Use one event per run. Say which promises matter most.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Share the real notes and the list, with dates, not a summary from memory.
   - what: Acceptance
-    how: Contact permissions and promises are explicit; attendance is not treated as permission for unrelated marketing.
+    how: Each draft has one clear ask and names the source of what it promises.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read your list and notes and draft emails. They draft only. You review and send from your own mail.
+  inputs:
+    - Photos or typed notes of business cards, with the date you met.
+    - A teammate who can confirm who promised what.
 judge:
   - Contact permissions and promises are explicit; attendance is not treated as permission for unrelated marketing.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,13 +112,13 @@ improve:
   - Add your own acceptance rules and one approved example without changing the component licences.
   - Keep corrections with the result so the next run uses current facts and the same definitions.
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+next:
+  - follow-up-email-sequence-writer
+  - draft-your-due-task-followups
 terms:
+  - term: Promise register
+    meaning: A list of what you said you would do, with who does it and by when.
+  - term: Hold list
+    meaning: People you do not contact yet, because they did not agree or did not ask for anything.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

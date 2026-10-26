@@ -1,6 +1,6 @@
 new_slug: competitor-ad-to-script
 name: "Turn competitor ads into a script of your own"
-summary: "Give it competitor ads and your reviews. You get an original script that borrows one idea, checked against ad rules."
+summary: "Turn competitor ads into a script of your own. Give it ads from Meta's Ad Library and your reviews. You get an original script and an ad rules check."
 job: study-competitors
 
 headline: "Turn competitor ads into a script of your own"
@@ -15,6 +15,10 @@ when:
   - You've saved competitor ads you admire and want to know why they work.
   - Your ads feel stuck and you want ideas from outside your own account.
   - You want to borrow what works without copying anyone's words, people or footage.
+not_for:
+  - "You have no competitor ads you can open in the public Ad Library: start with the Fact-based ad copy writer, or collect a few ads by hand first."
+  - "You want a single image ad, not a video script: use the Reference layout image ad maker."
+  - "You only want to check an ad you already wrote: use the Meta ad policy checker."
 
 you_give:
   - The ads you saved, each with its library ID, the brand, its start date, its words and a screenshot
@@ -35,6 +39,29 @@ how_to_use:
   - Have your inputs ready. Save the ads by hand from Meta's public Ad Library, with each one's library ID, start date, words and a screenshot. Add your brand file, reviews and product facts.
   - It works step by step and saves each result. If it can't see any real ads, it stops after step 1 and tells you exactly what to collect.
   - Read the distance check under the script. If any line says no, ask for a rewrite before you go further.
+output_sample:
+  input:
+    - Competitor ads you saved by hand, each with library ID, brand, start date, words and a screenshot
+    - Your brand file, or your website so one can be built
+    - Your customer reviews, copied as written
+    - Your product facts and the claims you may and may not make
+    - Your current ad's words and offer
+  prerequisites:
+    - An AI that can read files, such as Claude in a Project or Claude Code
+    - The handoff pack zip with HANDOFF.md from this page
+  output:
+    - name: Study board
+      contains: Saved ads filed into nine types, three per type, with brand, library ID, start date and what to study.
+    - name: Category map
+      contains: Which types are crowded, repeated claims word for word, and gaps your proof can fill.
+    - name: Script
+      contains: The one idea borrowed, a beat-by-beat script, and a five-line distance check.
+    - name: Read-aloud fixes
+      contains: Lines reworded so they sound natural when spoken, with no change to claims or facts.
+    - name: Ad rules check
+      contains: A verdict, exact lines that could get the ad rejected, and settings to choose at launch.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 
 how_it_works:
   - title: Sorts the ads

@@ -13,6 +13,30 @@ use_cases:
   - Run a meeting before everyone copies the first opinion
   - Admit a specific mistake without defending every earlier statement
   - Set a review point for an uncertain project
+not_for:
+  - You need to judge how likely a bet or choice is to pay off, so use Annie Duke, who writes on decision quality, outcomes and when to quit.
+  - You want to learn how to study or remember something, so use Barbara Oakley, who covers learning research for non-specialists.
+  - You face a legal, medical or personal money decision, so ask a lawyer, doctor or financial adviser. This mind cannot replace one.
+output_sample:
+  input:
+    - The exact claim or decision, and the source you have for it
+    - The answer you would prefer, before looking at the support
+    - Your options with their requirements and costs (optional)
+    - The other person's stated view, if there is a disagreement (optional)
+    - Your project goal and deadline, if the decision is about a project (optional)
+  output:
+    - name: Claim, evidence and scope note
+      contains: The narrow statement your source supports, with what was seen directly, what is assumed and what could not be checked.
+    - name: Fair comparison table
+      contains: Your options held to the same requirements, marking which points rest on direct evidence, reviews or assumptions.
+    - name: Recognizable summary of the other view
+      contains: A plain account of the other person's claim, reasons and priorities, plus the remaining difference and a focused reply.
+    - name: Meeting opening script and reason table
+      contains: A way to collect written views first, then compare reasons and assumptions before discussion.
+    - name: Correction note
+      contains: What was wrong, what is now supported and whether your recommendation changes.
+    - name: Decision note
+      contains: The next step, the key uncertainty, a review condition and who owns the check.
 seats:
   - seat: Curiosity before defending an answer
     asks: What would you expect to see if your preferred explanation were wrong?

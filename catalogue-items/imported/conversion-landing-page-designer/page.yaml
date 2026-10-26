@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks a set list of questions, then applies fixed layout and style rules.
 new_slug: conversion-landing-page-designer
 name: Conversion landing page designer
-summary: Tell it your offer and audience. Get a landing page plan, copy and
-  strict design rules that turn visitors into buyers.
+summary: Plan a landing page that turns visitors into buyers. Give your offer and audience. You get page order, copy, a layout pick and design rules.
 job: write-landing-page
 headline: Conversion landing page designer
-subhead: Tell it your offer and audience. Get a landing page plan, copy and
-  strict design rules that turn visitors into buyers. Bring your offer and
-  price. Use the result to plan your next step.
+subhead: Tell it your offer and audience. Get a landing page plan, copy and strict design rules that turn visitors into buyers. Bring your offer and price. Use the result to plan your next step.
 explain: |
   A complete landing page plan: the questions to ask, the section order, the layout, the copy, and strict visual rules so the page looks clean and sells. It handles both the words and the design, which usually get split and clash.
 
@@ -18,6 +15,10 @@ when:
   - Your page looks busy and inconsistent and you want clear design rules.
   - You are reviewing a page someone else built.
   - You need to hand a developer exact styles to follow.
+not_for:
+  - "You need a homepage or a site that serves many goals: use a plain site map and plan each page on its own."
+  - "You want to upgrade a site that already exists: use the redesign skill named in the skill file, then come back for the copy rules."
+  - "You only want ad copy or a short email: write that with your AI directly, as this plan is built for a full page."
 you_give:
   - Your offer and price
   - Your audience
@@ -30,7 +31,31 @@ you_get:
   - Hero section design
   - Build order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the full text of the skill file.
+  - Tell your AI your offer, price and audience. Add your proof and brand details if you have them.
+  - Answer any questions it asks. It asks for missing facts in one batch.
+  - Read the outline, hero copy and layout pick first. Fix anything that does not match your offer.
+  - Treat the design rules in Part B as one house style. Keep the ones you like and skip the rest, or hand them to your developer.
+  - This needs no code running, files or paid tools.
+output_sample:
+  input:
+    - Your offer and what the buyer gets
+    - Your price
+    - Your audience and their top doubts
+    - Proof such as reviews, numbers or guarantees (optional)
+    - Your brand colours and fonts (optional)
+  output:
+    - name: Page outline
+      contains: The sections of your page and the order they go in.
+    - name: Hero copy
+      contains: The headline, subheadline, button text and a proof line for the top of the page.
+    - name: Benefits
+      contains: Three to five short points that say what the buyer gains.
+    - name: How it works
+      contains: Three simple steps that show the buyer what happens next.
+    - name: FAQ
+      contains: Six to twelve questions and answers that deal with common doubts.
+    - name: SEO / AEO
+      contains: Whether search engines should list the page, plus a title and description if so.
+    - name: Layout recommendation
+      contains: One of four layouts, A to D, with the reason it fits.

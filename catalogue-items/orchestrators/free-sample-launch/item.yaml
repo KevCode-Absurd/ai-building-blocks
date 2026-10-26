@@ -14,9 +14,9 @@ outputs:
   - {type: audit_report}
 uses: [free-sample-offer-planner, small-launch-test-planner, cost-per-customer-calculator]
 steps:
-  - {uses: free-sample-offer-planner, note: "A free sample offer, who gets it, how to claim it and a cost-per-customer check"}
-  - {uses: small-launch-test-planner, note: "A small test in a few places and a rollout rule. Reads the offer from the step before"}
-  - {uses: cost-per-customer-calculator, note: "What a customer really costs, how soon it pays back and which ads to keep"}
+  - {uses: free-sample-offer-planner, note: "Makes the free sample offer, who gets it, how to claim it and a cost-per-customer check. It hands the offer to step 2."}
+  - {uses: small-launch-test-planner, note: "A small test in a few places and a rollout rule. Reads the offer from the step before. It hands you the test plan to run."}
+  - {uses: cost-per-customer-calculator, note: "Uses your own test results, written down after the test (samples sent, replies, orders and costs), not step 2's plan. Works out what a customer really costs, how soon it pays back and which ads to keep."}
 origin: rebuilt
 version: 1.0.0
 minds: [claude-hopkins]

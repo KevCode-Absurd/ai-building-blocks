@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans timing, then writes each email.
 new_slug: email-sequence-writer
 name: Email sequence writer
-summary: Say the goal. Get a welcome, nurture or win-back sequence with timing,
-  subject lines and full emails.
+summary: Write an email sequence from one goal. You get timing, subject lines and full copy for a welcome, nurture or win-back flow, ready to paste.
 job: write-emails
 headline: Email sequence writer
-subhead: A ready-to-send email sequence with timing, subject lines and full
-  copy. Say the goal, such as welcome, nurture or win-back, and you get the
-  whole series, not just an outline.
+subhead: A ready-to-send email sequence with timing, subject lines and full copy. Say the goal, such as welcome, nurture or win-back, and you get the whole series, not just an outline.
 explain: |
   A ready-to-send email sequence with timing, subject lines and full copy. Say the goal, such as welcome, nurture or win-back, and you get the whole series, not just an outline.
 
@@ -18,6 +15,10 @@ when:
   - You want to win back customers who went quiet.
   - You suspect your onboarding flow has gaps.
   - You want timing and copy done together.
+not_for:
+  - "You want cold outreach to people who don't know you: use cold-email, or write one short note by hand."
+  - "You want help inside your app, such as tips and tours: use onboarding, which covers in-app steps."
+  - "You want emails sent for you: this skill only writes them, so paste the copy into your email tool, such as Mailchimp."
 you_give:
   - The goal and trigger
   - Audience and offer
@@ -29,7 +30,25 @@ you_get:
   - Subject lines for each message
   - A list of missing lifecycle emails (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tool.
+  - Paste your product marketing notes, your offer and your audience. Add your current flow if you want a gap check.
+  - "Answer the questions your AI asks first: the sequence type, what starts it, who it is for and your goal."
+  - Read each email aloud. Check the subject lines, the one button per email and that every claim is true.
+  - Paste the emails into your email tool and set the send gaps. Send a test to yourself before you go live.
+output_sample:
+  input:
+    - Your goal and what starts the sequence
+    - Who the audience is and what you offer
+    - Your product marketing notes (optional)
+    - Your current email flow, to check for gaps (optional)
+  prerequisites:
+    - Your email tool, such as Mailchimp or Customer.io, to send the emails after you paste them in
+  output:
+    - name: Sequence overview
+      contains: The sequence name, what starts it, the goal, how many emails, the gaps between them and when people leave it.
+    - name: Each email
+      contains: The send timing, subject line, preview text, full body, button text with link, and any segment rule.
+    - name: Metrics plan
+      contains: What to measure for this sequence and what to compare it against.
+    - name: Missing lifecycle emails
+      contains: Emails your current flow lacks, listed only when you ask for a check of your flow.

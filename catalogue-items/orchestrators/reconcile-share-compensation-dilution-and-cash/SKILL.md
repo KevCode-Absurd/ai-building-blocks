@@ -1,46 +1,29 @@
 ---
 name: reconcile-share-compensation-dilution-and-cash
-description: "Separate accounting diluted shares from actual employee issuance and a cash-offset scenario."
+description: "Use when you need to separate accounting dilution from shares actually issued to staff and compare the cash cost of offsetting them with reported expense. Runs three checkers in order. Not for buybacks or full EPS tests."
 ---
 
 # Reconcile share compensation dilution and cash
 
-A linked award dilution and employee-share cash-offset workbook.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Keep issued, weighted and potential shares apart, then price a cash offset. Three steps run in order: weighted shares, option dilution, then the offset scenario. Each hands the next a verified share base.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (all as of each period end):
+- **Share award notes** (yours): terms for each award class.
+- **Average market prices** (yours): for each period, with their dates.
+- **Shares vested and issued** (yours): counts and issue dates, from the share ledger.
+- **Compensation expense and exercise proceeds** (yours): from the accounts.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** a price source note that names the dates the average covers.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Share-based award notes, average market prices, assumed proceeds, actual vested/issued shares and compensation expense.
+The items under "Before you start", all as of each period end, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,11 +33,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Weighted-average share schedule** (`weighted-average-share-schedule`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile actual employee issuance dates to basic weighted ordinary shares and distinguish issued shares from future potential shares. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-weighted-average-share-schedule.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Weighted-average share schedule** (`weighted-average-share-schedule`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile actual employee issuance dates to basic weighted ordinary shares and distinguish issued shares from future potential shares. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-weighted-average-share-schedule.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** weighted basic shares reconcile to the real issuance dates, and issued shares are kept apart from future potential shares. If not, stop and say which line is off.
 
-2. **Treasury-stock option dilution** (`treasury-stock-option-dilution`). Use award-class terms and the verified weighted basic denominator to calculate accounting incremental shares; do not substitute actual issued-share counts for weighted options. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-treasury-stock-option-dilution.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Treasury-stock option dilution** (`treasury-stock-option-dilution`). Use award-class terms and the verified weighted basic denominator to calculate accounting incremental shares; do not substitute actual issued-share counts for weighted options. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-treasury-stock-option-dilution.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** dilution uses each award class's terms and the verified weighted basic base, and exercise proceeds appear once.
 
-3. **Share compensation cash-offset cost** (`sbc-share-offset-cost`). Use separately sourced net shares actually issued and employee cash proceeds for an explicit offset scenario. Compare cash cost with accounting compensation while retaining both and avoiding duplicate dilution deductions. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-sbc-share-offset-cost.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Share compensation cash-offset cost** (`sbc-share-offset-cost`). Use separately sourced net shares actually issued and employee cash proceeds for an explicit offset scenario. Compare cash cost with accounting compensation while retaining both and avoiding duplicate dilution deductions. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-sbc-share-offset-cost.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** issued, weighted basic and potential diluted shares stay separate, and cash offset and reported expense are compared, not called equal.
 
 ## Workbook checks
 
@@ -71,4 +54,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the three share counts and the cash offset against reported expense. State plainly that no shares were bought or issued, and that a person who knows the award terms must check them before anyone acts. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- The [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow, when you also hold convertibles or want EPS tied to the report.
+- The [Reconcile buybacks with owner cash](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash) workflow, when real buybacks happened and you want them tied to owner cash.
+Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

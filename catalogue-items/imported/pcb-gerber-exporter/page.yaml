@@ -2,34 +2,63 @@ thinking: low
 thinking_why: It writes files with set commands.
 new_slug: pcb-gerber-exporter
 name: PCB Gerber exporter
-summary: Give it a finished PCB design. Get Gerber files with connectors, ready
-  to send to a maker.
+summary: Export your finished MATLAB RF board to Gerber files with connectors, set up for OSH Park, Seeed or Advanced Circuits. Needs MATLAB.
 job: build-software
 headline: PCB Gerber exporter
-subhead: Gerber files for a finished RF board, with the right connectors
-  attached and formatted for the company that will make it. It runs in MATLAB.
+subhead: Give it a finished RF board design in MATLAB. It adds your connectors and writes Gerber files named for your board maker. You get a folder ready to upload.
 explain: |
   Gerber files for a finished RF board, with the right connectors attached and formatted for the company that will make it. It runs in MATLAB.
 
   It takes a pcbComponent or pcbStack design and writes the manufacturing set with gerberWrite. You choose RF connectors such as SMA, SMB or MMCX, including edge-launch types, and attach them so shielded analysis matches the real part. It formats output for makers such as OSH Park, Seeed or Advanced Circuits. Design and validation should be done first. You need MATLAB with RF PCB Toolbox.
 when:
-  - Your design is finished and you need files for a board maker.
-  - You must place SMA connectors on the board.
-  - A fab house wants a specific file layout.
-  - You want analysis to include the connector.
+  - Your board design is done and checked, and a board maker needs Gerber files.
+  - You need SMA, SMB or MMCX connectors, or edge-launch connectors, on the board.
+  - Your fab house wants its own file names and layer layout.
+  - You want connector footprints in the design before you order.
+not_for:
+  - "You want to read a Gerber file into MATLAB: use the matlab-read-pcb-layout skill, since this one only writes files."
+  - "You still need to build or change the board shape: finish the design in MATLAB first, then come back to export it."
+  - "You have no MATLAB with RF PCB Toolbox: ask your board designer or a fab house to export the Gerber files for you."
 you_give:
-  - Finished PCB design in MATLAB
-  - Connector type
-  - Chosen fabrication service
-  - MATLAB with RF PCB Toolbox
+  - Your finished board design in MATLAB, as a pcbComponent or pcbStack variable
+  - The name of that design variable
+  - The connector type, such as SMA, SMB or MMCX
+  - Your board maker, such as OSH Park, Seeed or Advanced Circuits
+  - Your board thickness and connector footprint size, to check they fit
+  - A name for the output files (optional)
 you_get:
-  - Gerber file set
-  - Connectors attached to the design
-  - Fab-specific formatting
-  - Ready package for ordering
+  - "A folder of Gerber files: copper, solder mask, silkscreen and board outline"
+  - Drill files, including holes for your connectors
+  - Connectors placed at the feed points of your board
+  - File names and layers set for your chosen board maker
+  - The path to the folder, ready to check and upload
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Check that you have MATLAB with RF PCB Toolbox. Both are paid, and this page does not cover a free way to run them.
+  - Gather your design variable name, connector type, board thickness and board maker before you start.
+  - Open MATLAB and load your design, so the pcbComponent variable is in your workspace.
+  - Paste the skill into your AI, with the variable name, connector and board maker. Ask for the gerberWrite code.
+  - Run the code in MATLAB. Pass several connectors as a cell array, like {C1, C2}.
+  - Open the output folder. Check for the copper, solder mask, silkscreen and drill files, then upload them to your board maker.
+output_sample:
+  input:
+    - Your finished board design in MATLAB, saved as a pcbComponent or pcbStack variable
+    - The connector type, such as SMA, SMB or MMCX
+    - The fab service that will make the board
+    - The name you want for the output files (optional)
+  prerequisites:
+    - MATLAB with RF PCB Toolbox, which are paid licensed products
+    - An AI that can run MATLAB code, or you run the code it gives you
+    - A design that has already been built and checked
+  output:
+    - name: Copper layers
+      contains: Top and bottom copper Gerber files for the board.
+    - name: Solder mask and silkscreen
+      contains: Solder mask and silkscreen layers, set by the fab service you chose.
+    - name: Drill files
+      contains: Hole positions and sizes, including the pin holes for your connectors.
+    - name: Board outline
+      contains: The edge of the board, with extra board margin around the design if set.
+    - name: Connector pads
+      contains: Pad shapes and drill patterns for each connector, placed at the feed points.
+    - name: Writer object and output path
+      contains: Export settings from the run, and the folder path where the files were saved.

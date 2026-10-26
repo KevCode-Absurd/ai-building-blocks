@@ -2,34 +2,116 @@ thinking: medium
 thinking_why: It groups terms by intent and spots gaps.
 new_slug: keyword-researcher
 name: Keyword researcher
-summary: Name your topic. Get high-value search terms, search intent and content
-  gaps to target.
+summary: Get a keyword research report for your topic, with search terms grouped by intent, gaps against rivals and what to write first.
 job: get-found-in-search
 headline: Keyword researcher
-subhead: A search plan for your topic that shows which terms are worth writing
-  for. Name your topic, and add your site and audience if you can.
+subhead: Name your topic, your market and your website. Your AI builds a list of search terms, labels what each searcher wants and compares you with three to five rivals. You get keyword groups tied to content, in priority order, with ideas for titles.
 explain: |
-  A search plan for your topic that shows which terms are worth writing for. Name your topic, and add your site and audience if you can. The skill starts from seed words, then grows the list with long-tail variations, related questions and natural phrasing.
+  Keyword research is finding the words people type into Google when they look for what you offer. Start from the wrong words and you write pages nobody finds. This keyword researcher starts from your topic and grows it into a search plan you can act on.
 
-  It gathers or estimates monthly searches, difficulty, ad cost and trend for each term, and labels the intent behind each one. It compares your coverage with three to five competitors to find gaps they rank for and you do not. The final report groups keywords into themes that fit content pillars, with a priority score for each group. A table shows the best terms first.
+  It begins with a few seed words. It then adds long-tail searches (longer and more specific), questions, and comparisons such as "X vs Y". Each term is labelled by what the searcher wants: to learn, to find a site, to compare or to buy. That label tells you the page to write: a blog post, a comparison page or a product page. It also compares you with three to five rivals, to find terms they rank for and you do not, and pages of yours on page two of Google that could reach page one.
+
+  One warning. A chat AI cannot see real search data. Volume, difficulty and cost per click are estimates unless you paste an export from a keyword tool or from Google Search Console. The report labels each figure, so you know what to check before you spend time writing.
 when:
-  - You plan a content calendar and need topics backed by demand.
-  - A competitor outranks you and you want to know why.
-  - You want low-difficulty terms you can win.
-  - You need keyword groups to organize your site structure.
+  - You plan a content calendar and want topics based on what people search for.
+  - A rival outranks you and you want to see which terms they hold.
+  - You want low-competition terms that a newer site can win.
+  - You need keyword groups to decide which pages your site should have.
+not_for:
+  - "You want a quick ranked list of searches with no plan around it: use the Keyword research planner."
+  - "You only need tags or a single line of keywords from a text you already have: use the Keyword list maker."
+  - "You have an Ahrefs account and want a scored list of what rivals rank for that you do not: use the Rival keyword gap finder."
+  - "You only plan paid ads: use the keyword tool inside your ad platform."
 you_give:
-  - Your topic or product
-  - Your website (optional)
-  - Your target audience and market
-  - Competitors (optional)
+  - Your topic, product or service
+  - Your target market and language, such as the US in English
+  - What the content is for, such as blog posts or product pages (optional)
+  - Your website address (optional)
+  - Three to five rival websites (optional)
+  - A keyword export from a keyword tool or Google Search Console (optional, but it gives real numbers)
 you_get:
-  - A keyword table with volume, difficulty and intent
-  - Long-tail and question terms
-  - A competitor gap list
-  - Keyword groups by theme
-  - Priorities for content
+  - A keyword table with estimated volume, difficulty, cost and trend, and the intent of each term
+  - Long-tail, question and comparison searches
+  - A gap list of terms rivals rank for and you do not
+  - Keyword groups tied to content pillars, in priority order
+  - Content ideas for each group, with titles, length and internal links
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or paste the skill text into a new chat.
+  - Give your topic, your market and language, and what the content is for. Add your website and rivals if you want the gap list.
+  - For real numbers, paste a keyword export from a tool you use, or a Google Search Console export. Without one, every figure is an estimate and the report says so.
+  - Read the keyword groups and the priority order first. Keep only the groups that match something you sell or teach.
+  - Check the top terms in a keyword tool or in Google Trends before you write. Rival rankings are a guess unless you pasted real data.
+  - Turn each chosen group into a page with the Search page brief writer.
+how_it_works:
+  - title: Sets the scope
+    text: Collects your seed words, market, language and the kind of page you plan to write.
+  - title: Grows the list
+    text: Adds long-tail terms, questions, comparisons and words like best, free and review.
+  - title: Adds the numbers
+    text: Gives volume, difficulty, cost per click and trend for each term, from your data if you pasted it, and as labelled estimates if not.
+  - title: Labels intent
+    text: Marks each term as learn, find a site, compare or buy, which sets the page type.
+  - title: Finds the gaps
+    text: Compares you with three to five rivals, and flags terms where your page sits on page two.
+  - title: Writes the report
+    text: Groups terms into themes, ranks the groups, and suggests titles, length and internal links for each.
+output_shape: |
+  SCOPE
+  <topic | market | language | content type>
+
+  KEYWORD TABLE
+  <term> | <volume> | <difficulty> | <cost> | <trend> | <intent> | <priority>
+  Source of the numbers: <your data | estimate>
+
+  GAP ANALYSIS
+  <term> | <your rank> | <rival ranks> | <what to do>
+  Page-two terms: <terms within reach of page one>
+
+  KEYWORD GROUPS
+  <group> -> <content pillar> | <priority score> | <terms>
+
+  CONTENT IDEAS
+  <group>: <suggested titles> | <length> | <internal links>
+
+  NEXT
+  <the three groups to write first>
+output_sample:
+  input:
+    - Your topic, product or service
+    - Your target market and language
+    - Your website address and three to five rivals (optional)
+    - A keyword export or Search Console export (optional)
+  prerequisites:
+    - A keyword tool or Search Console export, if you want real numbers (optional)
+  output:
+    - name: Keyword table
+      contains: Each term with volume, difficulty, cost, trend, intent and priority, marked as your data or an estimate.
+    - name: Long-tail and question terms
+      contains: Longer searches, questions and comparisons built from your seed words.
+    - name: Gap analysis
+      contains: Terms rivals rank for and you do not, plus your terms on page two.
+    - name: Keyword groups
+      contains: Themes tied to content pillars, each with a priority score.
+    - name: Content ideas
+      contains: For each group, suggested titles, page length and internal links.
+works_best_with:
+  tools:
+    - name: Google Search Console
+      why: It is free and shows the real searches that already bring people to your site.
+    - name: Google Trends
+      why: It is free and shows whether a term is rising, steady or seasonal.
+    - name: A paid keyword tool such as Semrush or Ahrefs
+      why: It gives real volume, difficulty and rival rankings to paste in.
+  inputs:
+    - Your own list of products, so groups can be tied to what you sell
+    - Your customers' questions from emails and reviews
+    - Pages you already have, so the report can say what to update and not only what to add
+terms:
+  - term: Long-tail keyword
+    meaning: A longer, more specific search, such as "best project tool for small remote teams".
+  - term: Search intent
+    meaning: What a person wants when they search, such as to learn, to compare or to buy.
+  - term: Keyword difficulty
+    meaning: A tool's guess, from 0 to 100, of how hard it is to rank for a term.
+  - term: Content pillar
+    meaning: A main topic page that smaller pages on related searches link back to.

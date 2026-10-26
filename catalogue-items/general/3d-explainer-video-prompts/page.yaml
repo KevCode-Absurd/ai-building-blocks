@@ -1,6 +1,6 @@
 new_slug: 3d-explainer-video-prompts
 name: 3D how-it-works video prompt writer
-summary: Share a 3D script or sourced product facts. Get a storyboard, image and clip prompts, a voice brief and edit list.
+summary: "Turn a 3D script or sourced product facts into a 3D explainer video plan: storyboard, image and clip prompts, voice brief and edit list."
 job: make-video-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - Your product's benefit is invisible and you want an honest 3D film about how it works.
   - You have a 3D how-it-works script and want to make it with AI image and video tools.
   - Your earlier 3D clips changed the parts' colours or showed more than your claims allow.
+not_for:
+  - Your product's benefit is easy to see on camera. Film a simple demo with your phone instead.
+  - You can't source any step of how it works. Gather one source for each step first, or ask the maker or your supplier.
+  - You only need the script. Use the 3D how-it-works video ad script writer, then come back here.
 you_give:
   - A 3D how-it-works script and its cast note, or your product facts with a source for each step
   - Clean product photos (front, side, top) and every label line
@@ -32,6 +36,31 @@ how_to_use:
   - If it offers story options, pick one by its letter.
   - Approve the avatar cards, pick the reference renders, then approve the sheets and lock lines and the storyboard.
   - If your product sits in a field with claim rules (health, beauty, food, money, alcohol and the like), get the script checked before any picture is made.
+output_sample:
+  input:
+    - A 3D how-it-works script and cast note, or your product facts with a source for each step
+    - Clean product photos and every label line
+    - Your approved and banned claims
+    - Your colours, font and a voice you may use (optional)
+    - Your video tool's clip lengths (optional)
+  prerequisites:
+    - An AI tool that can write long, step-by-step answers
+    - An image and video tool, only if you want to make the pictures and clips yourself
+  output:
+    - name: "Stage 0: Script in"
+      contains: Your locked script, or tested chains, honesty notes and 2 or 3 story options for you to pick from.
+    - name: "Stage 1: Avatar cards"
+      contains: One name, colour, shape, motion and size for each part of the process, plus the product and any person.
+    - name: "Stage 2: Reference renders"
+      contains: Prompts for three or four renders of the working part and the product, so you can pick one of each.
+    - name: "Stage 3: Sheets and lock lines"
+      contains: Prompts for each part, the product and each size of the world, plus short lines that keep the look fixed.
+    - name: "Stage 4: Storyboard"
+      contains: Each frame with its size, parts, one mover, camera, narration and length, including the one long dive.
+    - name: "Stage 5: Clips and edit list"
+      contains: Clip prompts that describe only motion, a voice brief, captions, cuts, the offer and safe zones.
+    - name: Checks missed
+      contains: One line for each check the prompts could not meet, or the word none.
 how_it_works:
   - title: Reads or builds the script
     text: Tests a script you bring, or tests candidate chains, sets honesty rules and offers story options, then waits for your pick.

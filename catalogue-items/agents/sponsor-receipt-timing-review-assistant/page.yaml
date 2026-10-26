@@ -1,51 +1,121 @@
 new_slug: sponsor-receipt-timing-review-assistant
-name: Sponsor receipt timing review assistant
-headline: Sponsor receipt timing review assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+name: Sponsor cash return and payout reviewer
+headline: Sponsor cash return and payout reviewer
+summary: Recheck sponsor receipts and the management payout when a distribution, vesting or exit record changes. Get the payout and sponsor IRR for yearly dates.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked. Share actual sole institutional sponsor entry cash, separately vested residual management award, net equity proceeds after debt, first-anniversary distribution and second-anniversary exit evidence. Include actual rollover ownership records when a new holder or changed ownership is reported. Supply the previous approved review and actual changed source files with dates.
-explain: |-
-  Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked.
+subhead: Give it your last approved review, the new receipt or exit records and the management award terms. It checks what changed, works out the management payout from net equity proceeds, then works out the sponsor return. You get a payout bridge, the sponsor IRR and cash multiple, and the gaps.
 
-  Private equity distributions. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A private equity investor, called the sponsor, puts cash in and gets cash back later. Managers may earn a share of the equity above a set hurdle. The sponsor's return depends on dates and on what the managers are paid first. It is easy to compute the management payout from the wrong base, such as the full company value. It is also easy to quote an annual return from dates that are not a year apart.
+
+  This sponsor receipt and management payout review starts from your last approved review. When a distribution, a vesting record, an exit receipt or an ownership record changes, it lists what moved. It works out the vested management payout from net equity proceeds. It then works out the sponsor's IRR and cash multiple, using the Management award and investor cash return checker.
+
+  It handles one sponsor and a simple fixed hurdle award. If another holder appears, it stops the payout step and asks for the full ownership split. If the dates are not exact years, it does not quote an annual IRR. It says you need a date-based IRR tool. It reviews arithmetic against your records and approves nothing.
+
 when:
-  - You need management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on private equity distributions and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - The first-year distribution to the sponsor was paid, and you need the actual return so far.
+  - The exit receipt arrived, and you need the management payout and the sponsor's final IRR.
+  - A management award vested or its terms were amended, and the payout needs redoing.
+  - A new rollover holder shows up in the records, and you need to know if this review still applies.
+
+not_for:
+  - There is more than one investor, or preferred shares with their own terms. Use the Preferred share payout reviewer, or supply a full ownership split first.
+  - You want to check a fund's carry or distribution waterfall. Use the No-catchup fund payout checker.
+  - You only need the management payout and have no sponsor cash dates. Use the Management equity payout checker.
+  - Your cash dates are not exact years apart and you need an annual IRR. This review will not quote one. Run a date-based IRR in a spreadsheet with its XIRR function.
+  - You want investment advice or a price view. This checks records and arithmetic only.
+
 you_give:
-  - Actual sole institutional sponsor entry cash, separately vested residual management award, net equity proceeds after debt, first-anniversary distribution and second-anniversary exit evidence. Include actual rollover ownership records when a new holder or changed ownership is reported. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your last approved review and its record (optional on a first run)
+  - The sponsor's entry cash, with its date
+  - The net equity proceeds after debt at exit, and the exit receipt date
+  - The first-anniversary distribution to the sponsor and its date, if there was one
+  - The management award terms, with the fixed hurdle, the participation share and the vested share
+  - Ownership records, if another rollover holder or an ownership change was reported (optional)
+  - The currency, the scale and the name of who signs off
+
 you_get:
-  - Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A list of what changed since the last review, with the source and date of each change
+  - The vested management payout, worked out from net equity proceeds and shown with the hurdle
+  - The sponsor's exit receipt after the management payout
+  - The sponsor IRR and cash multiple, when the dates are exact years
+  - A clear stop and a request for the full ownership split, when another holder appears
+  - A MISSING list, CHECKS MISSED and a short record for the next review
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Use one that can read files. Add the checkers from the pack too.
+  - Say if this is a first run. If not, attach your last approved review and paste its record.
+  - Attach the entry, distribution and exit records and the award terms. Add ownership records if another holder was reported.
+  - Read "Changed since last review" first, and check each change against its record.
+  - Check the dates. If they are not exact years apart, expect a stop and not an IRR.
+  - Fill every MISSING line before anyone relies on a figure. Nothing is paid or sent. A named reviewer checks the sources.
+
 how_it_works:
-  - title: Check management payout and sponsor receipts
-    text: Run the governing workflow when Actual sponsor distribution, management vesting evidence, exit receipt or holder allocation changes.
-  - title: Rollover equity ownership checker
-    text: If another rollover holder appears, check same-class ownership but stop the sole-sponsor payout workflow until a complete holder allocation is supplied. Otherwise rerun only changed annual receipts. If dates are irregular, request a suitable XIRR engine instead of reporting the periodic fixture as annualized actual performance.
-output_shape: |-
-  Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compare with the last review
+    text: Reads the saved record if it belongs to this deal, or sets a first baseline. Lists each new or changed record. If nothing changed, it says so and stops.
+  - title: Check who holds the equity
+    text: If a new rollover holder appears, it checks same-class ownership with the Seller rollover ownership calculator. It then stops the sole-sponsor payout step until a complete holder split is supplied.
+  - title: Work out the management payout
+    text: Takes the fixed hurdle off net equity proceeds, floors the rest at zero, and applies the participation share and the vested share. The sponsor exit receipt is the other holder's share, not the full company value.
+  - title: Work out the sponsor return
+    text: Treats entry as the first outflow, the first-year distribution as a first-year inflow and the exit receipt as the second-year inflow. It computes a yearly IRR and a cash multiple only when the dates are exact years.
+  - title: Save and hand back
+    text: Saves the review files and a proposed new record, and keeps the old one. Lists every MISSING line and every check that did not run.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <record: old to new, date>
+  OWNERSHIP         <sole sponsor plus management: ok> or <another holder: payout step stopped>
+  MANAGEMENT PAYOUT net equity <n> - hurdle <n> = <n> x participation <p> x vested <v> = <n>
+                    sponsor exit receipt <n>
+  SPONSOR RETURN    entry <n> (<date>), distribution <n> (<date>), exit <n> (<date>)
+                    IRR <x>% and cash multiple <m>x, or <not given: dates are not exact years>
+  BRANCHES          <each branch: ran or skipped, with reason>
+
+  RECORD FOR NEXT REVIEW  entry amount, ownership evidence, award version, vesting date,
+                          distribution dates, exit receipt, timing flag
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Your last approved review and its record (optional on a first run)
+    - The sponsor's entry cash and the distribution and exit receipts, each with its date
+    - The management award terms and the net equity proceeds after debt
+    - Ownership records, if another holder was reported
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The checkers named in the pack
+    - A date-based IRR tool, only if your dates are not exact years apart
+  output:
+    - name: Changed since last review
+      contains: Each record that is new or changed, with its date and the figure it moved.
+    - name: Ownership check
+      contains: Whether this is one sponsor and a simple management award, or whether another holder stopped the payout step.
+    - name: Management payout
+      contains: Net equity, the hurdle, the participation and vested shares, the vested payout and the sponsor's exit receipt.
+    - name: Sponsor return
+      contains: Entry, distribution and exit with dates, the IRR and the cash multiple. With uneven dates it says why no IRR is given.
+    - name: Branches
+      contains: Which checks ran or were skipped, and the reason for each.
+    - name: Record for next review
+      contains: The entry amount, ownership evidence, award version, vesting date, distribution dates and exit receipt, to paste into the next run.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
+
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Use only a sole-sponsor plus simple management award structure; other rollover holders or preferences require a full ownership allocation first. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+    how: Use the same currency and scale in every input and in the result.
+  - what: A new holder
+    how: Add a second rollover holder to the ownership records. The payout step stops and asks for the full split.
+  - what: An uneven date
+    how: Move the exit by a few months. The review stops short of an annual IRR and names the tool you need.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Use only a sole-sponsor plus simple management award structure; other rollover holders or preferences require a full ownership allocation first. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +126,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
+  - Keep the signed award terms in one note, with the hurdle, the participation share and the vesting dates, and paste it in each time.
+  - Write each cash date from the bank record, not from the deal timetable.
+  - Pair it with the Management equity payout checker when you only need the payout.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: A date-based IRR function such as XIRR
+      why: Needed when cash dates are not exact years apart. This review does not replace it.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Bank records for the entry, distribution and exit cash, with dates.
+    - The signed award terms and the share register.
+    - A named reviewer and an explicit question.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Sponsor
+    meaning: The investment firm that puts the cash into the deal and takes the return.
+  - term: Hurdle
+    meaning: A fixed amount of equity value that must be reached before managers start to share in the gains.
+  - term: Vested
+    meaning: The part of an award that managers have earned and can keep.
+  - term: Rollover holder
+    meaning: A seller who keeps part of their old stake and owns shares in the new company.
+  - term: IRR
+    meaning: The yearly return that makes the money in and the money out balance.
+  - term: Cash multiple
+    meaning: Total cash received divided by the cash put in.

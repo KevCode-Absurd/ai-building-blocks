@@ -2,17 +2,25 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-support-reply-writer
 name: Gorgias support reply writer
-summary: Share a ticket number. Get a reply based on the whole thread, ready for review.
+summary: Give it a Gorgias ticket number. You get a support reply draft that reads the whole thread, ready for you to review and save to Gmail.
 job: help-customers
 headline: Gorgias support reply writer
 subhead: Give it a Gorgias ticket number and connect your support account. It reads the full thread, earlier fixes, and unanswered questions. You get a warm, clear reply to review, with an option to save it as a Gmail draft.
 when:
   - You use this tool for customer support and need help with this task.
+not_for:
+  - You need a refund or account change approved. Ask a person to make that call first, then write the reply.
+  - You answer a simple FAQ question. Use your helpdesk's own saved replies (macros) in Gorgias instead.
+  - You have no Gorgias account or no way to connect it. Paste the thread into your AI and ask for a reply by hand.
 you_give:
-  - A Gorgias ticket number and access to the full thread.
-  - Verified facts needed to answer any open questions.
+  - A Gorgias ticket number.
+  - Your Gorgias account, linked through the Composio CLI.
+  - Your Gmail account, linked the same way (optional).
 you_get:
-  - Show the draft and offer edits. Save it in Gmail only when you choose that option.
+  - A short summary of the ticket thread.
+  - A draft reply that answers each open question and names the next step.
+  - Options to edit the reply or change its tone.
+  - A Gmail draft, saved only if you choose that.
 how_it_works:
   - title: Read the conversation
     text: Read the full thread, customer details, current owner, and ticket status.
@@ -25,8 +33,29 @@ works_best_with:
     - name: Gorgias; Gmail for optional drafts
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias support reply writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide a Gorgias ticket number and access to the full thread.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run terminal commands and read skill files. Install the Composio CLI first.
+  - Link your Gorgias account with the command composio link gorgias. Link Gmail too if you want drafts.
+  - Ask your AI to run the Gorgias support reply writer with your ticket number.
+  - Read the summary and the draft. Check every fact against what you know is true.
+  - Ask for edits or a different tone until it sounds right.
+  - Choose the Gmail option only when you are happy. Then send the draft yourself from Gmail.
+output_sample:
+  input:
+    - Your Gorgias ticket number
+    - Your Gorgias account, connected through the Composio CLI
+    - Your Gmail account, only if you want a saved draft (optional)
+  prerequisites:
+    - An AI that can run commands in a terminal
+    - The Composio CLI installed, with Gorgias linked
+    - Gmail linked in Composio, only for saving drafts
+  output:
+    - name: Ticket header
+      contains: The ticket number, subject, customer name and email, status, message count and time of the last customer message.
+    - name: Conversation Summary
+      contains: A two or three sentence summary of the thread so far.
+    - name: Draft Reply
+      contains: A warm, short reply with a subject line that answers each point in the customer's latest message.
+    - name: Options
+      contains: "Three choices: save as a Gmail draft, edit the reply, or rewrite it in a formal, casual or technical tone."
+    - name: Gmail draft (optional)
+      contains: A draft saved in your inbox, made only after you approve the text.

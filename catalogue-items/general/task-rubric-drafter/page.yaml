@@ -1,6 +1,6 @@
 new_slug: task-rubric-drafter
 name: "Task rubric drafter"
-summary: "Describe a task and its goal. Get a rubric with clear wording at each level of work."
+summary: "Draft a task rubric from your task and goal. You get clear wording at each level of work and a feedback line for each level."
 job: teach-and-train
 thinking: low
 thinking_why: "It fills a standard grid from the task, with little judgement."
@@ -17,6 +17,10 @@ when:
   - "You set a new task and need a way to mark it."
   - "Markers disagree on the same piece of work."
   - "Learners ask what a top mark needs."
+not_for:
+  - "You mark multiple-choice tests or tasks with one right answer: use an answer key instead."
+  - "You need a full rubric with every check: use the Marking rubric writer."
+  - "You want a mark for one piece of work: ask a colleague or your AI to mark it against a rubric you already have."
 
 you_give:
   - "The task"
@@ -33,6 +37,20 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - The task learners or staff must produce
+    - The goal the task shows they can do
+    - Number of levels (optional)
+  output:
+    - name: Rubric table
+      contains: Three to five parts down the side, levels across the top, and a plain description in each cell.
+    - name: Feedback lines
+      contains: One line a marker can use at each level.
+    - name: How to use it
+      contains: A one-line note, such as mark each part and do not average.
+    - name: MISSING
+      contains: Anything about the task the AI needed and was not given.
 
 how_it_works:
   - title: "Pick the parts"

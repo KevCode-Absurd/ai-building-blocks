@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It sets criteria, screens sources and synthesises.
 new_slug: literature-reviewer
 name: Literature reviewer
-summary: Give it a topic. Get a structured review of sources chosen by clear
-  rules, with findings synthesised.
+summary: Write a structured literature review where every source is picked by clear rules. Give it a topic and get findings grouped by theme.
 job: test-an-idea
 headline: Literature reviewer
-subhead: A written literature review where every source was chosen by rules you
-  can state, not by whatever came up first. Give it a topic and get findings
-  drawn together by theme.
+subhead: A written literature review where every source was chosen by rules you can state, not by whatever came up first. Give it a topic and get findings drawn together by theme.
 explain: |
   A written literature review where every source was chosen by rules you can state, not by whatever came up first. Give it a topic and get findings drawn together by theme.
 
@@ -18,6 +15,10 @@ when:
   - You need to explain why you picked some studies and not others.
   - You want to see where researchers disagree on a topic.
   - You need a review protocol with a flow of included studies.
+not_for:
+  - "You want a quick web overview or a market scan: ask your AI for a plain web search and summary instead."
+  - "You need to check that a quote or citation is real: open each source yourself, or ask a librarian."
+  - "You need a medical or legal ruling: ask a qualified expert, and use this review only as background reading."
 you_give:
   - Your research topic
   - Inclusion and exclusion rules, if you have them (optional)
@@ -30,8 +31,29 @@ you_get:
   - A table of extracted findings
   - A written review with themes and gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Type your topic or question. Add your date range, the number of papers you want and who will read it.
+  - Say whether your AI can search the web. If it can't, paste in the papers or abstracts you have.
+  - Check the research question and the include and exclude rules before it screens anything.
+  - Open each reference and check it is real before you use the review. Treat any example numbers as placeholders, not findings.
+output_sample:
+  input:
+    - Your research topic or question
+    - Time range, source types and language rules (optional)
+    - Papers you already have (optional)
+    - How long the review should be and who will read it (optional)
+  prerequisites:
+    - An AI that can search the web, or papers you paste in yourself
+  output:
+    - name: Research question and scope
+      contains: A sharp question, built with a framework such as PICO, plus the time range, languages and source types.
+    - name: Search strategy
+      contains: The queries with keywords, synonyms and Boolean operators, and the databases to search, so others can repeat it.
+    - name: Screening record
+      contains: The include and exclude rules, and how many papers remained at each stage, in a PRISMA-style flow.
+    - name: Data extraction table
+      contains: "For each paper: title, authors, year, venue, method, key findings, limits and relevance."
+    - name: Thematic synthesis
+      contains: Findings grouped by theme, with where researchers agree, where they disagree and where gaps remain.
+    - name: Review document
+      contains: Introduction, method, themes, gaps and future directions, and a reference list in a standard citation style.

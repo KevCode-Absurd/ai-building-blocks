@@ -53,7 +53,35 @@ How to start:
 
 ## What you hand back
 
-The piece in one paragraph. The expert and the newcomer, each described. The two failure ends with a test each. The two promises. The shared ground. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+Print these headings in this order, even when a part is `MISSING:`:
+
+```
+THE PIECE
+<what it is, where it is met, the one idea>
+
+THE EXPERT
+Knows: <...>  Notices: <...>  Has seen too often: <...>  Stops reading if: <...>
+
+THE NEWCOMER
+Knows: <...>  Needs explained: <...>  Time they will give: <...>  Lost if: <...>
+
+TWO WAYS TO FAIL
+Too plain: <sign> | Test: <yes or no question for a draft>
+Too dense: <sign> | Test: <yes or no question for a draft>
+
+THE PROMISES
+Newcomer, first pass: <one line>
+Expert, second look: <one line>
+
+SHARED GROUND
+<what both want, and what may go to one group only>
+
+MISSING
+<facts about either group you would need>
+
+CHECKS MISSED
+<one line per check still missed, or none>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -73,7 +101,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> for <section>`. If the user has not said who the groups are, ask who they picture on each side before writing. Never invent a quote or reaction from either group.
+If the user has not said what they are making and where it will be met, stop. Reply with only this: "What are you making, and where will people meet it (a page, a stage, a feed, a shelf)? If you can, say who the experts are and who the newcomers are." Do this even if they say go ahead. Do not hand back a brief made only of `MISSING:` lines.
+
+If the piece is clear but the two groups are not, ask who they picture on each side before writing. If they cannot say, write each group from the norms of the field and mark it `MISSING: a real expert's reaction` or `MISSING: a real newcomer's reaction`.
+
+For other gaps, write `MISSING: <what> for <section>`. Never invent a quote or reaction from either group.
 
 ## Avoid
 

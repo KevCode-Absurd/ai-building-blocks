@@ -16,6 +16,28 @@ use_cases:
   - "Start a notebook of things you notice, and turn it into ideas"
   - "Use your own handwriting or found scraps to make a design feel human"
   - "Get honest feedback from peers before calling a job finished"
+not_for:
+  - "You need bold, simple logos for a small studio brand: use the Aaron Draplin mind."
+  - "You want to learn how to make honest charts from numbers: use the Cole Nussbaumer Knaflic mind."
+  - "Your job is a safety notice, legal, medical or money copy, or you need advice on anything after 2006: use plain copy checked by a person, because wit is the wrong tool and he has no record past 2006."
+output_sample:
+  input:
+    - Your brief, logo idea, poster or invitation, in a few lines
+    - What the job is for and who will see it
+    - Your last few jobs, if you think your style is stuck (optional)
+  output:
+    - name: The idea
+      contains: One named idea for the job, found by asking why it exists and reading between the lines of the brief.
+    - name: Literal answer beside the clever one
+      contains: The plain answer to the brief set next to a more surprising one, to show what the idea adds.
+    - name: A small twist
+      contains: One light touch for your logo, poster or invitation, plus a note on keeping the main message clear.
+    - name: Two-jobs check
+      contains: A look at whether one mark or shape could carry two meanings.
+    - name: Cliché check
+      contains: A question on whether you chose this because it is right or because you are good at it.
+    - name: Sketch direction and test
+      contains: A simple plan to sketch the idea and show it to a colleague for honest feedback.
 seats:
   - {seat: "Playful, clever design", asks: "Where's the idea here, and where's the wit? Is there a twist that makes it stick?"}
   - {seat: "Looking sideways", asks: "What happens if we read between the lines of this brief and look at it from an odd angle?"}

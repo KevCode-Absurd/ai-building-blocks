@@ -1,19 +1,26 @@
 slug: ownable-word-picker
 name: "Ownable word picker"
-summary: "Paste your word map and product. Get one word to own, two backups and a four-test result for each."
+summary: Pick the one word your brand can own. Get a four-test score for each candidate, two backups and a list of what to stop saying.
 category: general
 type: skill
 role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
-  - {type: product_data, required: false}
-  - {type: brand_brain, required: false}
+  - { type: audit_report, required: true }
+  - { type: product_data, required: false }
+  - { type: brand_brain, required: false }
 outputs:
-  - {type: shortlist}
+  - { type: shortlist }
 origin: rebuilt
 version: 1.0.0
-minds: [al-ries, jack-trout]
+minds: [ al-ries, jack-trout ]
 credits:
-  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The laws of perception, focus, exclusivity and attributes: simple benefit words that are available, the four kinds of word, the halo effect, preferring the opposite of the leader's attribute and trusting what buyers already believe over what research says they want"}
+  - { title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The laws of perception, focus, exclusivity and attributes: simple benefit words that are available, the four kinds of word, the halo effect, preferring the opposite of the leader's attribute and trusting what buyers already believe over what research says they want" }
+before:
+  - owned-word-mapper
+next:
+  - positioning-statement-writer
+  - give-up-list-planner
+  - candid-line-writer
+needs_mode: manual

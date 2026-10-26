@@ -1,6 +1,6 @@
 new_slug: bundle-and-quantity-break-builder
 name: "Bundle and quantity-break builder"
-summary: "Give it a hero product, cost and price. Get bundle tiers, a default, gifts and price lines."
+summary: "Build bundle tiers and quantity breaks for one product. Give your price, cost and shipping weight. Get a tier table, a default tier and price lines."
 job: make-offer
 thinking: medium
 thinking_why: "It prices tiers and writes lines from your numbers. A mid-size model is enough; check the sums yourself."
@@ -17,6 +17,10 @@ when:
   - You sell one product at one price and want a bigger first order.
   - You want to add a 3-pack or 6-pack but do not know what to charge.
   - Your bundles exist but buyers pick the cheapest tier every time.
+not_for:
+  - "You sell one-off items like a chair or a sofa: offer a set or add accessories instead, because tiers by unit count do not fit."
+  - "You want to mix different products in one bundle: sell them one by one, or add a free gift with the Gift-with-purchase planner."
+  - "You only need to know if one offer earns profit: use the Offer profit-per-session checker."
 
 you_give:
   - Your hero product, price, cost and shipping weight
@@ -37,6 +41,32 @@ how_to_use:
   - List any gifts and what each costs you, and any repeat data by pack size.
   - Run each tier through the Offer profit-per-session checker before launch.
   - Build the tiers in your bundle app or theme and test one change at a time.
+output_sample:
+  input:
+    - Your hero product, its price, cost and shipping weight
+    - How a buyer uses it, such as per day, per room or per person
+    - Your current average order value and unit split (optional)
+    - Gift ideas with what each costs you (optional)
+    - Days between reorders by pack size (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+  output:
+    - name: Tier table
+      contains: Each tier with units, price, price per unit, money saved, shipping per unit, margin and gift.
+    - name: Default
+      contains: The middle tier that comes pre-selected, and the reason it was chosen.
+    - name: Tier reasons
+      contains: One line per tier that ties the pack size to a real use.
+    - name: Price lines
+      contains: Price per unit, per day or per serving when true, plus what the buyer saves.
+    - name: Framing test
+      contains: A free-item offer set against a percent-off offer, so you can test both.
+    - name: Entry offer
+      contains: The starter product and pack size that suits a first order.
+    - name: Repeat note
+      contains: Which pack size is bought again soonest, or a note that there is no data.
+    - name: Checks missed and Missing
+      contains: Any checks that failed and any facts you did not give.
 
 how_it_works:
   - title: Bundles the same product

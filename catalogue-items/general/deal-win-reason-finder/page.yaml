@@ -1,6 +1,6 @@
 new_slug: deal-win-reason-finder
 name: "Deal win reason finder"
-summary: "Paste notes on deals you won and lost. Get why you really win, and the message built on it."
+summary: "Find why buyers really choose you. Paste notes on deals you won and lost, and get the win reasons and a value line built on buyer words."
 job: sell-and-negotiate
 thinking: high
 thinking_why: "It finds patterns across many deals from buyer words and must not invent a reason the quotes do not support."
@@ -17,6 +17,10 @@ when:
   - "Your pitch lists features and buyers' eyes glaze."
   - "You win some deals and lose others and cannot say why."
   - "You are rewriting your home page and want it built on real win reasons."
+not_for:
+  - "You have fewer than six deals, or a new product with no sales yet: talk to buyers first with a short set of interview questions you write yourself."
+  - "You want a short headline from a message you already have: use a one line position writer, not this deal analysis."
+  - "You only have your own summary of each deal, with no buyer words: ask the buyers why they chose you, then come back."
 
 you_give:
   - "Six or more deals, won and lost, with buyer words"
@@ -34,6 +38,29 @@ how_to_use:
   - "Include losses. The pattern needs both sides."
   - "Read WIN REASONS. If one surprises you, check the quotes behind it."
   - "Test the VALUE LINE on your next three calls before you put it on the site."
+output_sample:
+  input:
+    - Six or more deals you won and lost, with what buyers said
+    - What you sell, in one paragraph
+    - The alternatives buyers weigh, including doing nothing (advised)
+    - Your current message (optional)
+  output:
+    - name: DEALS
+      contains: "A table of each deal: won or lost, buyer type, the alternative, and quoted reasons and doubts."
+    - name: WIN PATTERN
+      contains: What winning buyers shared and valued, with quotes. Anything seen in fewer than two wins is marked THIN.
+    - name: LOSS PATTERN
+      contains: What losing buyers valued that you lacked, and which alternative beat you.
+    - name: WIN REASONS and OBJECTIONS HANDLED
+      contains: "Two lists: what buyers chose you for, and what you had to get past."
+    - name: BEST-FIT BUYER
+      contains: One paragraph on who cares most about what only you do.
+    - name: VALUE LINE and PROOF
+      contains: One or two sentences in buyer words, plus three proof points taken from the deals.
+    - name: CURRENT MESSAGE
+      contains: Where your current pitch talks about things winners never mentioned, and what it misses.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts not given, and any check that failed or could not run.
 
 how_it_works:
   - title: "Tables the deals"

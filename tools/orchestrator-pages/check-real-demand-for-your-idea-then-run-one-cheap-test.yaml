@@ -1,6 +1,6 @@
 new_slug: check-real-demand-for-your-idea-then-run-one-cheap-test
 name: Check demand for your idea, then run one cheap test
-summary: Give it your idea. Get real buyer words, the fact that could kill it and a cheap test.
+summary: Check demand for your idea before you build it. Get real buyer words, the one fact that could kill it, and a cheap test with a pass mark.
 job: test-an-idea
 thinking: medium
 thinking_why: Each step is short, but the kill check has to be honest. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - You have an idea and have not built anything yet.
   - Friends say it is great, but nobody has paid or signed up.
   - You can only afford one small test before you decide to go on.
+not_for:
+  - "Your idea already has paying customers: use a market-sizing check, or ask those customers what they want next."
+  - "You have no idea yet: talk to five people in your field about their daily problems first."
+  - "You want a full business plan or a financial forecast: ask an accountant or use a plan template."
 you_give:
   - Your idea in a sentence or two, and who you think it is for
   - The words you would search for to find people with the problem
@@ -29,6 +33,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Write the idea as a question, such as "do people want a way to do X?".
   - Run the cheapest test it picks for one to two weeks. Compare the numbers with the pass mark and stop if they fall short.
+output_sample:
+  input:
+    - Your idea in a sentence or two, and who it is for
+    - The words you would search for to find people with the problem
+    - What you know about rivals or workarounds (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - A ScrapeCreators account (paid) if you want step 1 to read public posts, or posts you gathered and pasted yourself
+    - An AI that can read files, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: What people post"
+      contains: Complaints, workarounds and buying signals about the problem, each with a link, plus a demand score.
+    - name: "Step 2: Buyer brief"
+      contains: The moment that sends people looking, the forces for and against, their own words, and the job in one line.
+    - name: "Step 3: The kill check"
+      contains: A verdict on the idea, the one fact that could end it, and the cheapest test left.
+    - name: "Step 4: Cheap tests"
+      contains: The claim as a share of people who will act, two or three tests, a number to watch and a pass mark.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Find the pain people post about
     text: Turns your idea into search phrases, reads public posts and comments, and groups complaints, workarounds and buying signals with links.

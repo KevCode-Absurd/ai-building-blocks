@@ -6,7 +6,7 @@ also: [leadership, thinking]
 years: "1934–2025"
 living: false
 known_for: "Studied wild chimpanzees at Gombe, including how they make tools. Her recorded work also covers care for animals, forests, communities and young people."
-summary: "Plan careful observation or a community project through Jane Goodall’s recorded approach. Record what happens, respect each person and choose a small shared action."
+summary: "Plan how to watch your customers or run a community project the way Jane Goodall did. Get a watch plan, the people it affects and one action for today."
 use_cases:
   - "Plan how to watch real users or customers before you decide what they need"
   - "Turn scattered notes and one-off stories into patterns worth testing"
@@ -16,6 +16,27 @@ use_cases:
   - "Keep hope and keep going on a long campaign that moves slowly"
   - "Start a small local group where each member picks a project and owns it"
   - "Check whether your team's habits treat people as numbers instead of individuals"
+not_for:
+  - "You need pricing, market or technology advice: use a numbers-focused expert, since this mind says it has little to say on money and markets."
+  - "You want to test an idea with experiments and evidence from the sky or lab: use the Carl Sagan mind, who pairs wonder with how to test a claim."
+  - "You want a quote or opinion from Jane Goodall on a recent event or her private life: this mind cannot give either, and it will not invent one."
+output_sample:
+  input:
+    - The people, animals or place you want to understand
+    - Your notes so far, and what you actually saw
+    - The change or cause you hope to make
+    - Who disagrees with you, if anyone (optional)
+  output:
+    - name: Opening story
+      contains: A short story about one individual that frames your problem in a calm, warm tone.
+    - name: Watch plan
+      contains: What to watch, for how long, and what to write down before deciding what it means.
+    - name: People affected
+      contains: The individuals and neighbours your plan touches, and the likely dark side to face honestly.
+    - name: Way to reach the opposition
+      contains: One gentle, story-based way to reach someone who disagrees without starting a fight.
+    - name: One action for today
+      contains: A single small step you can take now.
 seats:
   - {seat: "Field observation", asks: "Have we actually sat and watched this, for long enough, before deciding what it means?"}
   - {seat: "Head and heart", asks: "We have the clever answer. Does it also take care of the people and creatures it touches?"}

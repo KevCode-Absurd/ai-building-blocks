@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Auth mistakes are costly, so it weighs token, session and access choices.
 new_slug: login-and-access-builder
 name: Login and access builder
-summary: Describe your app's users. Get a login and permissions plan, or a
-  review of the one you have.
+summary: Plan who can sign in to your app and what each person may do, or review your current login setup. A clear login and access plan.
 job: secure-code
 headline: Login and access builder
-subhead: Describe your app's users. Get a login and permissions plan, or a
-  review of the one you have. Bring a description of your app and its users. Use
-  the result to plan your next step.
+subhead: Describe your app's users. Get a login and permissions plan, or a review of the one you have. Bring a description of your app and its users. Use the result to plan your next step.
 explain: |
   A written plan for who can sign in to your app and what each person is allowed to do, or a review of the setup you already have. Login mistakes are costly, so the plan is explicit about every boundary.
 
@@ -16,9 +13,12 @@ explain: |
 when:
   - You are adding sign-in, social login or single sign-on to an app.
   - You need roles so admins, staff and customers see different things.
-  - Your API lets someone reach data that is not theirs, and you need to find
-    why.
+  - Your API lets someone reach data that is not theirs, and you need to find why.
   - You want a second look at your session or token setup before launch.
+not_for:
+  - "You only need login page text or styling: ask a designer or write the copy yourself, as this plan covers no visuals."
+  - "Your task is servers or hosting with no sign-in or user roles: use your hosting provider's setup guide instead."
+  - "You cannot change how logins or passwords are stored: ask the person who owns that system to make the change first."
 you_give:
   - A description of your app and its users
   - Your current login code or setup (optional)
@@ -30,8 +30,25 @@ you_get:
   - Token lifetime and storage rules
   - A list of security gaps to fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read your project files.
+output_sample:
+  input:
+    - A description of your app and its users
+    - Your current login code or setup (optional)
+    - The sign-in methods you want
+    - Your tools and versions, such as your framework and sign-in provider (optional)
+  prerequisites:
+    - An AI that can read your project files works best, but you can paste text instead
+  output:
+    - name: Users and threats
+      contains: Who uses the app, how they sign in, and what could go wrong.
+    - name: Login and session design
+      contains: The method chosen, such as sessions, tokens or single sign-on, and how long each token lasts.
+    - name: Roles and permissions
+      contains: What each type of user may see and do, and where each check runs.
+    - name: Secrets and logging rules
+      contains: How keys are stored and changed, what is logged, and what is never logged.
+    - name: Security gaps
+      contains: Weak spots found in your setup, with the fix for each.

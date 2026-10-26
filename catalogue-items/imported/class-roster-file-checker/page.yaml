@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks many linked files against strict rules.
 new_slug: class-roster-file-checker
 name: Class roster file checker
-summary: Give it a OneRoster CSV set. Get broken links, bad encodings and
-  manifest errors found, with fixes.
+summary: Check your OneRoster roster files before upload. Get a line-numbered list of broken links, bad encoding and manifest errors, with fixes.
 job: work-with-files
 headline: Class roster file checker
-subhead: Find out why a student roster upload gets rejected before you send it.
-  Give it your OneRoster CSV files, and it lists broken links between files, bad
-  text encodings and manifest errors, each with a fix.
+subhead: Find out why a student roster upload gets rejected before you send it. Give it your OneRoster CSV files, and it lists broken links between files, bad text encodings and manifest errors, each with a fix.
 explain: |
   Find out why a student roster upload gets rejected before you send it. Give it your OneRoster CSV files, and it lists broken links between files, bad text encodings and manifest errors, each with a fix.
 
@@ -18,6 +15,10 @@ when:
   - You want to catch orphan enrolments before a nightly sync.
   - Your export has strange characters at the start of files.
   - You need a check that runs before every upload.
+not_for:
+  - "You need to connect to the OneRoster API (REST or OAuth): ask your SIS vendor or a developer, because this only checks CSV files."
+  - "Your spreadsheet is not in the OneRoster format: fix it with a spreadsheet tool or ask your vendor for their import template."
+  - "You want to make up sample students to test an import: do not use real or invented student data here, and ask your vendor for their test files."
 you_give:
   - Your OneRoster zip or CSV folder
   - The OneRoster version
@@ -30,8 +31,31 @@ you_get:
   - Encoding fixes
   - Steps to repair the bundle
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read files.
+  - Unzip your roster to a folder. Check that manifest.csv is at the top and not inside a subfolder.
+  - Note the OneRoster version in the manifest and whether the bundle is full or changes only.
+  - Open your AI and paste this skill. Add your CSV files, the version, the bundle type and any error message.
+  - Ask for the line-numbered report. Check that it names each file and row.
+  - Fix the rows it lists and zip the files again. Run the check on the new zip.
+  - Keep this check before each nightly sync. It works best when your AI can run code and read files.
+output_sample:
+  input:
+    - Your OneRoster zip, or the folder of CSV files
+    - The OneRoster version, 1.1 or 1.2
+    - Whether it is a full bundle or a changes bundle
+    - The error message from Clever or ClassLink (optional)
+  prerequisites:
+    - An AI that can read your files, and ideally run code
+    - Permission to use the student and staff data
+  output:
+    - name: Manifest check
+      contains: Whether manifest.csv sits at the top of the zip, names the version and lists every file.
+    - name: Full or changes check
+      contains: Whether the bundle keeps to one mode, with no mixed columns or bad timestamps.
+    - name: Broken links
+      contains: Rows that point to a missing user, class, course or school, such as orphan enrolments.
+    - name: Role check
+      contains: Role values that do not match the allowed list, with the right value to use.
+    - name: Encoding and format fixes
+      contains: Hidden characters at the start of files and unquoted commas that shift columns.
+    - name: Line-numbered audit report
+      contains: Every error by file and row, with the steps to repair it.

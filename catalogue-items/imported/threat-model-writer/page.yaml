@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It reasons about attackers across the whole codebase.
 new_slug: threat-model-writer
 name: Threat model writer
-summary: Point it at your code. Get a short threat model of what attackers could
-  reach, how, and how to stop them.
+summary: Write a threat model for your code. See what attackers could reach, how they would get in, and which fixes to make first.
 job: secure-code
 headline: Threat model writer
-subhead: Point it at your code. Get a short threat model of what attackers could
-  reach, how, and how to stop them. Bring your repository or folder path. Use
-  the result to plan your next step.
+subhead: Point it at your code. Get a short threat model of what attackers could reach, how, and how to stop them. Bring your repository or folder path. Use the result to plan your next step.
 explain: |
   A short, evidence-based threat model for your codebase: what is worth protecting, who might attack it, how they would get in, and what to do about it. It reads like an engineer's review, not a generic checklist.
 
@@ -18,6 +15,10 @@ when:
   - A customer or auditor asked for a threat model.
   - You inherited a repository and want to know where it is weakest.
   - You want to rank security work by real risk, not by gut feeling.
+not_for:
+  - "You want a plain summary of how your code is built: ask your AI for an architecture summary instead."
+  - "You want bugs found in a code change: use a code review or a security scanner instead."
+  - "You have no access to the code or a folder path: ask the engineer who built it to run this with you."
 you_give:
   - Your repository or folder path
   - How it runs and who can reach it
@@ -30,8 +31,32 @@ you_get:
   - A Markdown threat model
   - A list of assumptions you confirmed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI in a tool that can read your project files. A plain chat will not see your code unless you paste it.
+  - "Paste the skill, then say: Threat model the code at this path, and give the folder path."
+  - Add how it runs, who can reach it and what data it holds, if you know.
+  - Your AI will stop and ask 1 to 3 questions about your setup. Answer them, or say you don't know.
+  - Read the result in <repo-or-dir-name>-threat-model.md. Check the assumptions first.
+  - Turn the top-ranked threats into tickets and start with the highest priority.
+output_sample:
+  input:
+    - Your repository or folder path
+    - How it runs and who can reach it (optional)
+    - What data it handles (optional)
+    - Answers to 1 to 3 follow-up questions
+  prerequisites:
+    - An AI that can read your project files
+  output:
+    - name: System model
+      contains: The main parts of your code, its data stores and outside connections, based on what is in the repo.
+    - name: Trust boundaries and entry points
+      contains: Where one part talks to another, and where outsiders can send data in, such as endpoints and uploads.
+    - name: Assets and attacker capabilities
+      contains: What is worth protecting, what a realistic attacker could do, and what they could not do.
+    - name: Abuse paths
+      contains: A short list of threats, each tied to an asset, with likelihood, impact and overall priority.
+    - name: Assumptions and open questions
+      contains: What you confirmed or left open, and which of these change the ranking.
+    - name: Mitigations
+      contains: Fixes already in place and fixes to add, tied to a part, boundary or entry point.
+    - name: <repo-or-dir-name>-threat-model.md
+      contains: The final threat model, saved as one Markdown file named after your repo or folder.

@@ -1,6 +1,6 @@
 new_slug: community-evidence-researcher
 name: Community evidence researcher
-summary: Share posts, comments or files. Get sourced findings, counted themes and a clear note on what the sample cannot show.
+summary: Review customer posts, comments or files for a focused question. Get sourced findings, counted themes and a clear note on what the sample cannot show.
 job: research-topics
 thinking: medium
 thinking_why: It compares sources and keeps quotes, counts and guesses separate.
@@ -12,6 +12,10 @@ when:
   - You have Reddit posts or comments to review, or an approved reader that can access the named public sources.
   - You want to compare public company or market discussion without treating sentiment as verified fact.
   - You need counts and source locators alongside a short research brief.
+not_for:
+  - "You need market size or how common a view is across all customers: run a survey, or check your own sales and usage data."
+  - "You want investment advice or a price forecast from online talk: ask a licensed financial adviser."
+  - "You have no posts, files or approved sources to review: gather a few first, or interview some customers yourself."
 you_give:
   - A focused question and intended use
   - Supplied posts, comments, documents or approved public-source links
@@ -22,10 +26,33 @@ you_get:
   - Counts you can recheck, with the total used and how repeats were handled
   - A short answer showing where sources disagree, who is missing and what to check next
 how_to_use:
-  - State the question, date window and sources to include.
-  - Attach exports or identify public sources you authorize the available tools to read.
-  - Review the source list and check which words are quoted and which are put in new words.
-  - Use the findings only within the stated sample and limits.
+  - Write your question, the date window and the sources to include.
+  - Paste or attach your posts, comments or files. For public pages, use a reader tool you have approved in your AI.
+  - Know that public page access depends on that tool's rules and any paid use. The skill will not run paid tools without asking.
+  - Check the evidence table. Make sure each quote matches its source and each count adds up.
+  - Use the findings only for this sample. For next steps, run a survey or check a deduplicated feedback export.
+output_sample:
+  input:
+    - Your research question and what you will use it for
+    - Posts, comments, files or exports to review
+    - Date range and sources to include
+    - Terms, groups or exclusions to leave out (optional)
+  prerequisites:
+    - An AI that can read your files or pasted text
+    - A reader tool you approve, only if you want it to open public pages
+  output:
+    - name: Question and scope
+      contains: Your exact question, date window, sources and how the material was collected.
+    - name: Answer
+      contains: A short direct reply, limited to what the sample can support.
+    - name: Evidence table
+      contains: One row per finding with ID, date, source locator, type, theme, quote and caveat.
+    - name: Counts
+      contains: Records checked, repeats removed and theme counts, each with the total used.
+    - name: Conflicts and limits
+      contains: Views that disagree, who is missing, access gaps and sample bias.
+    - name: Next useful evidence
+      contains: The smallest extra source or question that would cut the main doubt.
 how_it_works:
   - title: Sets the boundary
     text: Records the question, subjects, dates and sources, plus how the material was gathered and what could not be read.

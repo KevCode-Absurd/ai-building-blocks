@@ -1,6 +1,6 @@
 new_slug: competitor-funnel-review
 name: "Competitor funnel mystery shopper"
-summary: "Paste your competitor list. Get a plan to subscribe, buy and note how each one follows up, upsells and handles a no."
+summary: "Plan a safe mystery shop of your competitors. Sign up, buy a low-priced item and get a report of what to copy, avoid and beat."
 job: study-competitors
 thinking: low
 thinking_why: "It sets a fixed routine and fills a report from what you captured."
@@ -17,6 +17,10 @@ when:
   - "A new rival has appeared and you do not know how it sells."
   - "Your own follow-up emails or upsells are weak and you want to see what rivals do."
   - "You are planning your funnel and want facts, not guesses."
+not_for:
+  - "You only want to see what rivals say in their ads: use a competitor ad skill, or look at their public ad library."
+  - "You need a market size or a price survey: ask your AI to research it, or use a market report."
+  - "You cannot sign up or buy from a rival under their site rules: skip the shop and ask a customer who bought from them."
 
 you_give:
   - "Your competitor list with websites"
@@ -34,6 +38,28 @@ how_to_use:
   - "Set up a fresh email and a folder as the plan says."
   - "Shop each rival, logging every step as you go."
   - "Paste your captures back and ask for the report."
+output_sample:
+  input:
+    - Your competitor list with their websites
+    - "Your dated captures: screenshots, emails and page text (optional)"
+    - The most you will spend on a low-priced item per rival (optional)
+  prerequisites:
+    - A fresh email address you own
+    - A phone to check each site
+    - Time to watch emails for at least two weeks
+  output:
+    - name: Rivals
+      contains: Each rival with its website, rough price level and sign-up offer.
+    - name: Rules
+      contains: Safe shopping rules, including checking each site's terms before you sign up or buy.
+    - name: Capture sheet
+      contains: Dated entries for emails, purchase steps, upsells, the back end, the no-thanks test and the phone check.
+    - name: Report
+      contains: For each rival, a dated timeline and a list of what to copy, avoid and beat.
+    - name: Missing
+      contains: Steps you have not captured yet, marked so nothing is guessed.
+    - name: Checks missed
+      contains: One line for each check the skill failed, or none.
 
 how_it_works:
   - title: "Lists the rivals"

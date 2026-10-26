@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies a fixed checklist to the code.
 new_slug: woocommerce-code-checker
 name: WooCommerce code checker
-summary: Give it new WooCommerce code. Get common AI mistakes caught, like
-  broken order storage and missed checkout checks.
+summary: Check WooCommerce code before it goes live. Find order storage bugs, checkout gaps, money errors and security holes in AI-written code.
 job: test-and-fix-code
 headline: WooCommerce code checker
-subhead: A review pass that catches the mistakes AI makes in WooCommerce code
-  before they reach a live store. These errors can lose orders or open a
-  security hole where money is involved.
+subhead: A review pass that catches the mistakes AI makes in WooCommerce code before they reach a live store. These errors can lose orders or open a security hole where money is involved.
 explain: |
   A review pass that catches the mistakes AI makes in WooCommerce code before they reach a live store. These errors can lose orders or open a security hole where money is involved.
 
@@ -18,6 +15,10 @@ when:
   - You customise checkout and fear breaking orders.
   - Your store uses high-performance order storage.
   - You are reviewing a plugin before putting it on a live store.
+not_for:
+  - "You want to check store settings or theme styling: ask a WooCommerce support person or do a store setup review."
+  - "You need payment provider account setup: use the provider's own setup guide or support team."
+  - "You need a full WordPress review beyond the security basics: use wp-guard, a separate WordPress code checker."
 you_give:
   - The WooCommerce code or diff
   - What the code is meant to do
@@ -30,8 +31,30 @@ you_get:
   - Corrected code suggestions
   - Self-check before shipping
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions from this page.
+  - Paste your WooCommerce code or the changed lines. Say what the code should do.
+  - Add your WooCommerce and PHP versions if you know them (optional).
+  - "Pick a mode: guard pass after the code is written, live while it is written, or review for a report only."
+  - Read the findings. Fix every Rule 1 to 5 item first, then run the self-check again.
+  - Pair it with wp-guard for the wider WordPress checks.
+output_sample:
+  input:
+    - Your WooCommerce code or the changed lines
+    - What the code is meant to do
+    - Your WooCommerce and PHP versions (optional)
+    - "Which mode you want: guard pass, live or review"
+  prerequisites:
+    - An AI that can read your code, pasted in chat or as files
+  output:
+    - name: Findings report
+      contains: Each rule broken, with the file, one line on what is wrong, the risk and the fix.
+    - name: Order and product data findings
+      contains: Old post-meta order reads, direct meta writes, and missing storage compatibility notices.
+    - name: Checkout and money findings
+      contains: Checks that only run in JavaScript, and prices handled as plain numbers instead of WooCommerce money tools.
+    - name: Runtime and update findings
+      contains: Cart or session use outside checkout, shipped template overrides, and background jobs that may not scale.
+    - name: Security floor check
+      contains: Whether output is escaped, input is cleaned, changes need permission and a nonce, and queries are prepared.
+    - name: Self-check
+      contains: Eight yes or no questions answered before the code is handed back, with fixes for any that fail.

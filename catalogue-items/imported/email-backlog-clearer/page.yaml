@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts by urgency and writes replies in your voice.
 new_slug: email-backlog-clearer
 name: Email backlog clearer
-summary: Point it at your inbox. Get what needs you, drafted replies in your
-  voice, and deadlines pulled from long threads.
+summary: Clear your email backlog fast. Get a short list of mail that needs you, replies drafted in your voice, and deadlines pulled from long threads.
 job: write-emails
 headline: Email backlog clearer
-subhead: An inbox cut down to a short list of choices. You get the few messages
-  that need you, replies already drafted in your voice, and the deadlines and
-  promises pulled out of long threads.
+subhead: An inbox cut down to a short list of choices. You get the few messages that need you, replies already drafted in your voice, and the deadlines and promises pulled out of long threads.
 explain: |
   An inbox cut down to a short list of choices. You get the few messages that need you, replies already drafted in your voice, and the deadlines and promises pulled out of long threads.
 
@@ -18,6 +15,10 @@ when:
   - You keep missing the one email that mattered.
   - You want replies drafted for you to approve.
   - You need deadlines pulled out of a long thread.
+not_for:
+  - "You need one short reply that takes a minute: write it yourself, or paste only that email into your AI."
+  - "You want to pay vendor bills: this tool passes bills to ap-processor, so use that to extract and code them."
+  - "You want to follow up on a new sales lead: use speed-to-lead, which qualifies it and drafts the reply."
 you_give:
   - Access to your inbox, or pasted emails
   - A sample of your writing voice (optional)
@@ -29,10 +30,30 @@ you_get:
   - Extracted asks, dates and amounts
   - Counts of mail handled and filed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If your AI can connect to Gmail or Microsoft 365, connect your mailbox first.
+  - If it can't read your mail, paste or forward a batch of emails instead. This works just as well.
+  - Add a few emails you wrote, and say what you promised in the last two weeks. This helps the replies sound like you.
+  - Read the Needs you list first. Check each ask, date and amount against the thread.
+  - Edit the drafted replies, then say yes to send them. Nothing is sent until you approve.
+  - Your AI archives finished mail only if it is connected to your mailbox. It never deletes.
+output_sample:
+  input:
+    - Your inbox, or a batch of pasted or forwarded emails
+    - Three emails you were happy with, so replies match your voice (optional)
+    - What you promised anyone in the last two weeks (optional)
+    - Your business details, so it knows which mailbox is yours (optional)
+  prerequisites:
+    - Gmail or Microsoft 365 connected to your AI, if you want it to read your inbox directly. Pasted mail works without it.
+  output:
+    - name: Headline
+      contains: One line on how many items need you, how many are drafted, and how many were handled.
+    - name: Needs you
+      contains: A ranked list of mail only you can decide, with the ask, amounts, dates, who is waiting and what you promised.
+    - name: Drafted replies
+      contains: A reply written in your voice for each message, waiting for your yes, with the full text ready to copy.
+    - name: Handoffs
+      contains: Bills, leads and overdue-invoice replies passed to other skills, each with the phrase that picks it up.
+    - name: Handled
+      contains: A count of receipts, newsletters and notices filed, with a line saying what kinds they were.
+    - name: Approval question
+      contains: A prompt to send all drafts, approve them one by one, or edit first. Nothing sends without your yes.

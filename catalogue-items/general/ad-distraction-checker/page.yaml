@@ -1,6 +1,6 @@
 new_slug: ad-distraction-checker
 name: "Ad distraction checker"
-summary: "Paste your ad and ten viewers' takes on it. Get what stole their attention and what to cut."
+summary: "Check your ad for distractions. Paste it with ten viewers' answers. See what stole attention from your claim and what to cut."
 job: check-ads
 thinking: medium
 thinking_why: "The counts and thresholds are fixed, but sorting what viewers said into causes takes judgment."
@@ -17,6 +17,10 @@ when:
   - "Your team loves an ad and nobody can say what it promises."
   - "You added a second benefit to an ad that was working and recall dropped."
   - "People remember the actor, the animal or the song, not the product."
+not_for:
+  - "You have fewer than five viewers: ask more people first, or use a simple recall survey."
+  - "Your ad has no single claim to test: write one claim first with the USP claim checker."
+  - "You want to know if the claim will sell: run a small paid test, because this only shows if the claim gets across."
 
 you_give:
   - "Your ad: script, storyboard or layout"
@@ -33,6 +37,30 @@ how_to_use:
   - "Show the ad to ten people who have not seen it. Ask only: what did that ad say? Write their words down."
   - "Paste the ad, the claim you meant, and all ten answers."
   - "Make the cuts, then test again with ten new people."
+output_sample:
+  input:
+    - "Your ad: script, storyboard or layout"
+    - The one claim it should get across
+    - What each viewer said the ad said, word for word (ten people if you can)
+  output:
+    - name: Claim meant
+      contains: Your one-sentence claim, fixed before any answer is read.
+    - name: Playback
+      contains: How many viewers said the claim, how many said part of it, and a verdict on our rule of thumb.
+    - name: What took the rest
+      contains: What viewers remembered instead, ranked by count and sorted by type, such as a second claim or a picture.
+    - name: Second claims
+      contains: Each extra claim in the ad, with a keep or cut call and a reason.
+    - name: Words against pictures
+      contains: Each line checked for what is said against what is shown, marked match or mismatch.
+    - name: Cut list
+      contains: Each cut in order of share stolen, with what to put there instead.
+    - name: Retest
+      contains: What to change and how to ask ten new people.
+    - name: Limit of this test
+      contains: One line saying the test shows if the claim gets across, not if it sells.
+    - name: Missing and checks missed
+      contains: What would sharpen the result, and any checks the AI could not pass.
 
 how_it_works:
   - title: "Scores each answer"

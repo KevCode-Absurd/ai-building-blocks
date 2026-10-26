@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reworks a lesson around who is in the room.
 new_slug: culturally-responsive-lesson
 name: Culturally responsive lesson rewriter
-summary: Paste a lesson and describe your learners. Get a rewrite that draws on
-  their backgrounds, communities and lived experience.
+summary: Rewrite a lesson around your students' backgrounds with this culturally responsive lesson rewriter. Paste your lesson and learners, get a new version.
 job: teach-and-train
 headline: Culturally responsive lesson rewriter
-subhead: A lesson that uses your students' own backgrounds is easier to care
-  about and to remember. Paste a lesson and describe your learners, and you get
-  a rewrite that draws on their communities and lived experience.
+subhead: A lesson that uses your students' own backgrounds is easier to care about and to remember. Paste a lesson and describe your learners, and you get a rewrite that draws on their communities and lived experience.
 explain: |
   A lesson that uses your students' own backgrounds is easier to care about and to remember. Paste a lesson and describe your learners, and you get a rewrite that draws on their communities and lived experience.
 
@@ -18,6 +15,10 @@ when:
   - You teach a mixed class and want content that includes everyone.
   - A required topic feels distant to your learners.
   - You want to move beyond a single point of view in a unit.
+not_for:
+  - "You need a plan for one student only: ask a tutor or use a plain lesson plan chat with that student's needs."
+  - "You have no information about your learners yet: talk to your students and families first, then come back."
+  - "You want a full unit built from group knowledge: use your AI with a simple unit planning prompt instead."
 you_give:
   - The lesson or learning objective
   - Description of your students and community
@@ -30,7 +31,31 @@ you_get:
   - Questions that connect to students' lives
   - Notes on what changed and why
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from SKILL.md into a new chat.
+  - Add your lesson or learning goal, and describe your students and their community.
+  - "Add any optional details you have: subject, year group, how you teach it now, school setting."
+  - Read the Current Approach vs. Culturally Responsive Approach section first, then check each new example against what you know of your students.
+  - Edit anything that feels wrong for your class before you teach it.
+output_sample:
+  input:
+    - Your lesson or learning goal
+    - A description of your students and their community
+    - Your subject and year group (optional)
+    - How you teach it now (optional)
+    - Your school setting and your own background (optional)
+  output:
+    - name: Culturally Responsive Lesson
+      contains: The rewritten lesson, titled with your content, that keeps the same learning goal.
+    - name: Current Approach vs. Culturally Responsive Approach
+      contains: A side by side look at what you use now and what changes.
+    - name: Cultural Connections
+      contains: Links between the lesson content and your students' knowledge, communities and daily lives.
+    - name: Critical Consciousness Element
+      contains: A way for students to question and discuss fairness and power linked to the topic.
+    - name: High Expectations Framework
+      contains: How the lesson keeps the work hard and supports every student to reach it.
+    - name: Lesson Redesign
+      contains: The new lesson steps, with examples, texts and activities.
+    - name: Teacher Reflection
+      contains: Questions to help you think about your own choices and what to check after teaching.

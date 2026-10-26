@@ -1,6 +1,6 @@
 new_slug: untapped-avatar-finder
 name: "Untapped avatar finder"
-summary: "Give it a crowded product. Get rivals' buyers, three or four unserved groups and a ranked pick."
+summary: "Find an untapped avatar for a crowded product. Get rivals' buyers, 3 or 4 unserved groups, a size check and one ranked pick to test."
 job: understand-customers
 thinking: medium
 thinking_why: "It compares groups and weighs evidence you paste in. A mid-size model does this well, and a larger one helps only if the notes are long."
@@ -17,6 +17,10 @@ when:
   - You sell a product many others sell and your ads fight rivals for the same buyer.
   - A rival with a bigger budget owns the obvious buyer and you cannot win on spend.
   - You want a new group to test, with proof that it exists, before you make new ads.
+not_for:
+  - "You sell something truly new with no rivals: talk to a few likely buyers yourself, because there are no rival ads or reviews to learn from."
+  - "You already know your buyer and want to go deeper: use the Forum and review avatar digger."
+  - "You want to test your ads or page against a buyer: use the Avatar fit checker."
 
 you_give:
   - Your product and the problem it solves
@@ -37,6 +41,33 @@ how_to_use:
   - Look at each rival's ads in the Meta Ad Library and paste in who they seem to talk to and what they promise.
   - Open the top Amazon product, sort by top reviews, and paste the long life stories with names removed.
   - Search each group's situation plus Reddit and paste what you find. Then ask it to rank the groups and pick one.
+output_sample:
+  input:
+    - Your product and the problem it solves
+    - Three to five rivals, as names or Meta Ad Library links
+    - Amazon links for the top-reviewed product or a similar one
+    - Review stories and forum threads you paste in, with names removed
+    - Who buys from you now and their order values (optional)
+  prerequisites:
+    - Free access to the Meta Ad Library, Amazon reviews and Reddit search, so you can collect the notes to paste
+    - A traffic tool for rival visits and order values (optional, often paid)
+  output:
+    - name: RIVAL BUYERS
+      contains: One row per rival with age range, gender, desires, selling points and source, plus the shared group to avoid.
+    - name: CANDIDATES
+      contains: Three or four groups, each with a story, a quote, a belief, fixes tried and a feeling.
+    - name: SIZE CHECK
+      contains: For each group, the search you used and whether forum threads were few, some or many.
+    - name: PICK
+      contains: The chosen group with the evidence, the wish for your product, and whether anyone speaks to them yet.
+    - name: LAYERS
+      contains: Narrower versions of the group, ranked by pain, ability to pay and size, with a one-sentence offer line.
+    - name: CONTRAST
+      contains: How the chosen group stands apart from what rivals say and who they talk to.
+    - name: TEST PLAN
+      contains: One ad angle per top layer and the result that decides it, with the product left alone.
+    - name: CLAIMS NOTE
+      contains: What your product may not claim for this group, plus any checks the skill missed.
 
 how_it_works:
   - title: Names the problem

@@ -1,7 +1,7 @@
 slug: india-earnings-preview
 renamed_from: earnings-preview-report-builder-for-india
 name: "Earnings preview report builder for India"
-summary: "Name an Indian stock. Get a short HTML earnings preview with consensus, past surprises and peers. It collects data from websites."
+summary: "Get a 4 to 5 page earnings preview for an Indian listed company, with consensus, past surprises, peers and beat or miss cases. It uses free web data."
 category: general
 boards: []
 type: skill

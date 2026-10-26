@@ -1,53 +1,108 @@
 new_slug: pro-rata-allocation-checker
 name: Pro rata allocation checker
 headline: Pro rata allocation checker
-summary: Calculate participation cash when the quoted round allocation excludes the existing investor.
+summary: Find the cash an investor needs to keep their share of a new round that leaves them out. Get their amount and the round total.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Required participation and inclusive total round cash. Share actual side letter, eligible ownership fraction, outside investor cash allocation and uniform financing price.
+subhead: Give it the investor's ownership share and the cash that outside investors are putting into the round. It works out the cash the investor needs to keep that share of the round, and the round total once they are in. It stops first if the quote already includes them.
 explain: |-
-  Required participation and inclusive total round cash.
+  A pro rata right lets an existing investor buy part of each new round, so their ownership share does not shrink. People often work the sum on the wrong base. Say an investor owns 10% and outside investors are putting in 90. Taking 10% of 90 gives 9. But then the investor is only 9 of 99, which is less than 10%. This pro rata allocation checker solves it properly.
 
-  Venture financing. Illustrative figures only. 10% of100 requires10 participation beside90 outside cash; outside180 requires20.
+  The sum is ownership share divided by one minus that share, times the outside cash. For 10% and 90, that is 10 / 90 x 90 = 10. The round total is then 100, and the investor's 10 is exactly 10% of it. The skill checks that last step every time. It also asks first whether the quoted round already includes the investor. If it does, this sum would count them twice, so it stops.
+
+  Practice numbers, not a real round: 10% ownership and 90 of outside cash. The investor needs 10, and the round is 100. With 180 of outside cash, the investor needs 20, and the round is 200.
 when:
-  - You need required participation and inclusive total round cash.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A founder shares a round with 90 of outside money, and your side letter gives you pro rata. You want to know what to wire to hold 10%.
+  - You are a founder and want to know how much room to leave for an investor with pro rata rights.
+  - A lawyer's closing sheet shows a pro rata amount, and you want to check it.
+  - Outside demand changes in the round, and you want to see how the investor's amount moves.
+not_for:
+  - The quoted round already includes the investor, for example a round total of 100 that has their 10 inside it. This sum would overcount. Use the quoted figures.
+  - More than one investor has rights, or the round is oversubscribed. You need a full allocation table. This covers one investor at one price.
+  - You want the cash to hold back across several companies for later rounds. Use the Follow-on reserve planner.
+  - You want ownership after a SAFE converts. Use the Post-money SAFE ownership checker.
 you_give:
-  - Actual side letter, eligible ownership fraction, outside investor cash allocation and uniform financing price.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The side letter or investment agreement wording on pro rata rights
+  - The investor's ownership share that the right covers, and the denominator it uses (from the side letter and cap table)
+  - The cash that outside investors are putting into the round
+  - Whether the quoted round total already includes this investor
+  - Your own round spreadsheet (optional)
 you_get:
-  - Required participation and inclusive total round cash.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The cash the investor needs to hold their share
+  - The round total once the investor is in
+  - A check that the investor's cash divided by the round total equals their share
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the side letter wording, the ownership share and the outside cash. Say whether the quoted round includes the investor. Say the currency and units, such as USD thousands.
+  - Ask in plain words, such as how much does the investor need to put in to hold 10% of this round?
+  - Check one line yourself. The investor's cash divided by the round total should equal their share.
+  - Read MISSING and CHECKS MISSED before you use any figure. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Verify eligible securities and whether the quoted allocation includes this investor
-    text: Verify eligible securities and whether the quoted allocation includes this investor.
-  - title: 2. For outside-only cash solve investor cash as ownership/(1 minus ownership) times outside cash
-    text: For outside-only cash solve investor cash as ownership/(1 minus ownership) times outside cash.
-  - title: 3. Recombine total round and verify participation divided by inclusive cash equals eligible stake; list any separate allocation limits
-    text: Recombine total round and verify participation divided by inclusive cash equals eligible stake; list any separate allocation limits.
+  - title: Checks the round basis
+    text: Confirms the securities are covered and whether the quoted allocation already includes this investor. If it does, it stops.
+  - title: Solves for the investor's cash
+    text: Multiplies the outside cash by the share divided by one minus the share. This keeps the investor at their share of the whole round.
+  - title: Adds up the round
+    text: Adds the investor's cash to the outside cash for the round total.
+  - title: Proves the share
+    text: Divides the investor's cash by the round total and checks it equals their share. It lists any separate cap or limit.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given. It never fills a gap with zero.
 output_shape: |-
-  Required participation and inclusive total round cash.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Investor cash <amount> | Round total <amount> | Investor share of round <percent>
+
+  SCOPE AND SOURCES
+  <currency and units; source and date for each input; whether the quote includes the investor>
+
+  INPUTS AND ASSUMPTIONS
+  <ownership share, outside cash, uniform price, any allocation limit>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures; investor cash divided by round total equals the share>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The investor's ownership share covered by the right
+    - The cash outside investors are putting into the round
+    - Whether the quoted round already includes this investor
+    - Your own round spreadsheet (optional)
+  prerequisites:
+    - The side letter or investment agreement that gives the pro rata right
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The investor's cash, the round total and the investor's share of the round.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, with the source of each input and whether the quote includes the investor.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that the investor's cash equals their share of the total.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Stake is below100% and matches the side-letter denominator.
+  - what: More outside money
+    how: Raise the outside cash. The investor's amount rises in step, and their share of the round stays the same.
+  - what: A different share
+    how: Change the ownership share, such as 5% or 20%. The investor's cash is worked out again.
+  - what: A cap in the side letter
+    how: Tell it about any limit on the amount. The skill shows the result with and without the limit.
 judge:
   - Stake is below100% and matches the side-letter denominator.
   - Never apply outside-only algebra to an already inclusive raise.
@@ -62,15 +117,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the side letter that sets the pro rata right and the share it covers
+    - The cap table and the round terms from the lead investor or the founder
+    - A named reviewer and the question you want answered
 terms:
+  - term: Pro rata right
+    meaning: The right to buy part of each new round, so your ownership share does not shrink.
+  - term: Side letter
+    meaning: A separate agreement that gives one investor extra rights.
+  - term: Outside cash
+    meaning: Money going into the round from everyone except the investor you are working out.
+  - term: Round total
+    meaning: All the new money in the round, with the investor's cash included.
+  - term: Oversubscribed
+    meaning: More people want to buy than there are shares in the round.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real round.

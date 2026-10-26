@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a fixed three-step lesson shape.
 new_slug: vocabulary-lesson-planner
 name: Three-step hands-on vocabulary lesson planner
-summary: Name the concept. Get a lesson that shows it, names it and checks it,
-  using real objects.
+summary: Plan a three-step vocabulary lesson with real objects. Name the concept and get a lesson that shows it, names it and checks it.
 job: teach-and-train
 headline: Three-step hands-on vocabulary lesson planner
-subhead: "A short lesson plan that teaches a new word or idea with real objects,
-  in three clear moves: show it, name it, then check it."
+subhead: "A short lesson plan that teaches a new word or idea with real objects, in three clear moves: show it, name it, then check it."
 explain: |
   A short lesson plan that teaches a new word or idea with real objects, in three clear moves: show it, name it, then check it. It is based on the three-period lesson used in Montessori classrooms.
 
@@ -17,6 +15,10 @@ when:
   - You teach with real objects and want a clear lesson order.
   - A student missed the first lesson and needs a quick re-teach.
   - You teach students who are learning in a second language.
+not_for:
+  - "You teach a whole class by talk or slides with no objects to handle: write a normal lesson plan or use a simple slide outline instead."
+  - "The concept has nothing physical to show, like an abstract idea: pick a different planner or a short worked example instead."
+  - "You want practice after the lesson to help students remember: use the Retrieval practice designer once the lesson is done."
 you_give:
   - The word or concept to teach
   - Objects or materials you have on hand
@@ -29,7 +31,31 @@ you_get:
   - A quick check for understanding
   - Notes for language learners
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Type the word or idea you want to teach.
+  - List the objects you have on hand. Add student age and group size if you know them.
+  - Ask your AI to write the three-step lesson.
+  - Read the lesson and check the teacher words fit your students. Change any object that you do not have.
+  - After the lesson, use the Retrieval practice designer to help students remember the word, or the Prepared environment designer to set up your room.
+output_sample:
+  input:
+    - The word or idea you want to teach
+    - The objects students can see and handle
+    - Student age or year group (optional)
+    - What students already know (optional)
+    - Group size and any language needs (optional)
+  output:
+    - name: Materials Preparation
+      contains: How to get the objects ready and lay them out before the lesson starts.
+    - name: "Period 1: Introduction (Naming)"
+      contains: Exact words for the teacher to say while students touch and look at each object.
+    - name: 'Period 2: Recognition ("Show Me")'
+      contains: Prompts that ask students to point to or fetch each item when they hear its name.
+    - name: "Period 3: Recall (Naming by Student)"
+      contains: Questions that ask students to say the name of each item themselves.
+    - name: Assessment Indicators
+      contains: Signs that show whether students have learned the word or need more time.
+    - name: Extensions
+      contains: Ideas for what to do next once students know the word well.
+    - name: Adaptation Notes
+      contains: Ways to change the lesson for age, group size, prior knowledge and language learners.

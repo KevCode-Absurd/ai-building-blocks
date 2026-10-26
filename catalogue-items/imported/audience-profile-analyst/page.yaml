@@ -2,36 +2,91 @@ thinking: medium
 thinking_why: It gathers figures, then reads the pattern behind them.
 new_slug: audience-profile-analyst
 name: Audience profile analyst
-summary: Give it a brand or account. Get who follows it, what they like and how
-  engaged they are. Collects data from websites.
+summary: Find who follows a brand or creator and how real their engagement looks. Get a public data file and a plain summary. Collects data from websites.
 job: understand-customers
 headline: Audience profile analyst
-subhead: A picture of who follows a brand or account, what they like and how
-  engaged they really are. Point it at a Facebook, Instagram, YouTube or TikTok
-  account, and it collects public data and writes up the findings.
+subhead: Give it a public Facebook, Instagram, YouTube or TikTok account. Your AI collects public follower or comment data with an Apify scraper, saves it to a file and writes up the patterns it sees in who follows, what they engage with and how real the engagement looks.
 explain: |
-  A picture of who follows a brand or account, what they like and how engaged they really are. Point it at a Facebook, Instagram, YouTube or TikTok account, and it collects public data and writes up the findings.
+  An audience analysis tells you who is really behind the numbers on a social account. It helps you check a competitor, vet an influencer or back up a pitch with facts.
 
-  It picks the right data collector, called an Actor, on the Apify service, reads what inputs that Actor needs, asks how you want the results saved, and runs it. Then it summarises demographics, behaviour patterns and engagement quality. You need an Apify account and token, Node.js, and a command line tool called mcpc, so it suits people comfortable with a terminal. Collection is paid by Apify.
+  The skill picks a ready-made data collector on Apify, called an Actor. It reads what that Actor needs, asks how you want the results saved, runs it and then summarises what came back. The summary covers who the audience seems to be, what they engage with and whether the engagement looks real.
+
+  These Actors return public profile fields and comments, not verified age or gender. Any demographic read is an inference, and the summary labels it that way. It reports patterns across the group, not facts about named people. You need an Apify account, which charges per run, plus Node.js and a command line tool. It suits people comfortable with a terminal.
 when:
-  - You want to know who really follows a competitor before you copy their
-    content.
-  - You are choosing an influencer and need to see if their audience is real.
+  - You want to know who follows a competitor before you copy their content.
+  - You are choosing an influencer and need to see if their audience looks real.
   - You need audience facts for a pitch or a brand deck.
-  - You want to compare followers across two platforms.
+  - You want to compare the commenters on two platforms for the same brand.
+not_for:
+  - You want a sponsorship fit check on one creator, with a fit rating. Use the Creator audience checker.
+  - The account is private, or the platform's terms forbid scraping it. Use the platform's own audience insights instead.
+  - You want facts about named people. This reports patterns for the group and never builds profiles of individuals.
+  - You will not set up Apify, Node.js and a token. A pasted sample of public comments in a plain chat can work as a rough read.
 you_give:
-  - The brand, account or page link
-  - Which platform
-  - An Apify account token
-  - Output format and file name (optional)
+  - The public account or page link
+  - The platform, one of Facebook, Instagram, YouTube or TikTok
+  - Your Apify account token, saved in a file called .env and never pasted into chat
+  - A cap on how many results to collect
+  - A file format, quick answer in chat, CSV or JSON (optional)
 you_get:
-  - A collected audience data file
-  - A summary of who the audience is
-  - Interests and behaviour patterns
-  - An engagement quality read
+  - A data file of the public records collected, if you ask for one
+  - A count of records and the file location
+  - A plain summary of who the audience seems to be and what they engage with
+  - An engagement read on how real it looks, with the signs it used
+  - Notes on what the data cannot show and suggested next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Apify token.
+  - Pick one public account and one platform. Decide what you want to learn, such as who engages or whether comments look real.
+  - Create an Apify account and an API token. Save the token in a file called .env as APIFY_TOKEN=your token. Do not paste it into chat. Apify charges for runs, so check the Actor's price first.
+  - Use an AI that can run commands, such as Claude Code. Install Node.js 20.6 or newer, the jq tool and the mcpc tool with npm install -g @apify/mcpc.
+  - Paste the skill and give your account link, platform and a small cap, such as 100 results, to start.
+  - Ask your AI to name the Actor it picked and what the run will cost before it runs. Try the quick answer first, which shows the top 5 results, to check you have the right data.
+  - Run the full export, then read the summary. Treat age, gender and location as guesses unless the data states them.
+how_it_works:
+  - title: Choose the Actor
+    text: It matches your platform and goal to a ready-made Apify Actor from its table.
+  - title: Read the Actor's inputs
+    text: It fetches the Actor's settings and the fields it returns, so the run is set up right.
+  - title: Ask how to save it
+    text: It asks for a quick answer in chat, a CSV file or a JSON file, and how many results.
+  - title: Run the collection
+    text: It runs the script with your token, waits for it and saves the data.
+  - title: Summarise the audience
+    text: It reports the record count, the file and the patterns it sees, and labels each guess.
+output_shape: |
+  RUN          <Actor used, platform, cap, records collected, file path>
+  AUDIENCE     <who they seem to be, marked as inferred: places, interests, languages>
+  ENGAGEMENT   <likes and comments against followers, repeat commenters, signs of real or bought activity>
+  PATTERNS     <what they talk about, what content gets a response>
+  LIMITS       <what public data cannot show, sample size>
+  NEXT         <deeper analysis or groups to split by>
+  MISSING      <inputs not given, or none>
+output_sample:
+  input:
+    - The public account or page link and the platform
+    - Your Apify token, saved in a .env file
+    - A cap on how many results to collect
+    - A format choice, quick answer, CSV or JSON (optional)
+  prerequisites:
+    - An Apify account, which charges per run
+    - An AI that can run commands
+    - Node.js 20.6 or newer, jq and the mcpc tool
+  output:
+    - name: Data file
+      contains: The public records collected, as CSV or JSON, saved with a dated file name.
+    - name: Quick answer
+      contains: The top 5 records shown in chat, so you can check the data first.
+    - name: Run report
+      contains: The Actor used, the number of records collected and where the file is.
+    - name: Audience summary
+      contains: Who the audience seems to be, their interests and engagement, with each guess labelled.
+    - name: Next steps
+      contains: Ideas for deeper analysis, such as splitting the audience into groups.
+terms:
+  - term: Actor
+    meaning: A ready-made data collector on the Apify service, built for one site or task.
+  - term: Apify token
+    meaning: A private key that lets your AI run Actors on your account. Keep it secret.
+  - term: mcpc
+    meaning: A command line tool that lets your AI read an Actor's settings.
+  - term: Engagement quality
+    meaning: Whether likes and comments look like real interest, not bots or giveaways.

@@ -16,6 +16,29 @@ use_cases:
   - "Decide if your unit economics are healthy enough to hire more salespeople"
   - "Plan for ramp time, staff turnover and lead supply before you grow a sales team"
   - "Find out whether a sales slump comes from the product, the leads or the team"
+not_for:
+  - "You want to improve how you ask buyers questions in a sales call: use the Neil Rackham mind."
+  - "You want to build outbound prospecting roles and a lead process: use the Aaron Ross mind."
+  - "You need legal, medical or personal money advice, or a guess at which startups will get funded: ask a qualified adviser instead."
+output_sample:
+  input:
+    - Your sales problem, such as a hiring plan, a pay plan or a dip in results
+    - How many customers you have, and whether they stay and use the product
+    - Your sales team size and how long new reps take to get going
+    - What your pay plan rewards today (optional)
+  output:
+    - name: The principle
+      contains: The core idea that applies to your problem, in plain words, and which parts are tested and which are a hunch.
+    - name: The metric
+      contains: A measure you can track, often written as a share of customers doing one thing within a set time.
+    - name: A HubSpot example
+      contains: A short story from his recorded work that shows the idea in use.
+    - name: The trap to avoid
+      contains: The common mistake in your situation, such as scaling sales before customers stay.
+    - name: Questions for you
+      contains: First questions he would ask, such as whether customers are staying or you just pitch well.
+    - name: One thing to measure this quarter
+      contains: A single next step to run for a quarter, then look at again.
 seats:
   - {seat: "Sales as a science", asks: "What does the data say, and what would we measure to know for sure?"}
   - {seat: "Hiring and coaching", asks: "Is this person coachable, and what one skill will we coach this month?"}

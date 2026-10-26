@@ -2,27 +2,29 @@ thinking: medium
 thinking_why: It follows set formulas but needs clean contract data.
 new_slug: subscription-revenue-tracker
 name: Subscription revenue tracker
-summary: Run it on your subscriptions. Get monthly and yearly recurring revenue,
-  active subscribers and churn.
+summary: "Work out your subscription revenue: monthly and yearly recurring revenue, active subscribers and churn, read from your Shopify store's contracts."
 job: run-your-store
 headline: Subscription revenue tracker
-subhead: "A read-only count of your subscription income: monthly and yearly
-  recurring revenue, active subscribers and churn, taken straight from your
-  store's subscription contracts. Nothing in the store is changed."
+subhead: "A read-only count of your subscription income: monthly and yearly recurring revenue, active subscribers and churn, taken straight from your store's subscription contracts. Nothing in the store is changed."
 explain: |
   A read-only count of your subscription income: monthly and yearly recurring revenue, active subscribers and churn, taken straight from your store's subscription contracts. Nothing in the store is changed.
 
   The skill queries subscription contract data through the store's API, then converts each plan to a monthly amount so weekly, monthly and yearly plans can be added together. It counts active subscribers, then tracks rolling churn by comparing who stayed and who cancelled over the period. It records the session and handles errors, such as missing permissions or large stores that need paging. It needs API access to a store with subscription products.
 when:
-  - You sell subscription boxes and want one number for monthly recurring
-    revenue.
+  - You sell subscription boxes and want one number for monthly recurring revenue.
   - You need churn for a board update.
   - You want a quick health check without exporting spreadsheets.
   - You are comparing plans with different billing periods.
+not_for:
+  - Your store has no Shopify subscription products. The result will be $0, so use a plain sales report instead.
+  - You want to study one-off purchases. Use a sales report from your store admin, not this tracker.
+  - You need exact cancel dates. This tracker infers them from each contract's last update date, so ask your finance tool for audited figures.
 you_give:
-  - Access to your store's subscription data
-  - The period for churn (optional)
-  - Currency or plan filters (optional)
+  - Your Shopify store domain, like mystore.myshopify.com
+  - A Shopify store that sells subscriptions with Shopify's own subscription tools
+  - A CLI login that has the read_own_subscription_contracts permission
+  - The period for churn, in days (optional, default 30)
+  - Whether to count paused contracts as active (optional)
 you_get:
   - Monthly recurring revenue
   - Annual recurring revenue
@@ -30,8 +32,31 @@ you_get:
   - Rolling churn rate
   - A short session log
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Check your store sells subscriptions in Shopify. If it does not, the result will be $0.
+  - Use an AI that can run code, such as Claude Code. Install the Shopify CLI.
+  - "Log in with: shopify store auth --store your-store.myshopify.com --scopes read_own_subscription_contracts"
+  - Paste the skill into your AI. Give it your store domain and, if you want, a churn period.
+  - Read the report. Check the contract counts first, then the revenue and churn figures.
+  - Open the CSV to see each contract. Stores with many currencies get one total per currency.
+output_sample:
+  input:
+    - Your store domain
+    - Churn window in days (optional, default 30)
+    - As-of date (optional, default today)
+    - Count paused contracts as active (optional)
+    - "Report format: readable or JSON (optional)"
+  prerequisites:
+    - A Shopify store that sells subscriptions with Shopify's own subscription tools
+    - An AI that can run code and the Shopify CLI
+    - A CLI login with the read_own_subscription_contracts permission
+  output:
+    - name: Session header
+      contains: Store, as-of date and start time, shown when the run begins.
+    - name: Step log
+      contains: One line per step with what was asked and how many results came back.
+    - name: Subscription MRR report
+      contains: Active, paused and cancelled counts, monthly and yearly recurring revenue, subscribers, average revenue per subscriber, churn and net new.
+    - name: Top subscription products
+      contains: The products that bring in the most monthly recurring revenue, with subscriber counts.
+    - name: subscription_mrr_<date>.csv
+      contains: One row per contract with status, customer, billing interval, billing amount and monthly revenue share.

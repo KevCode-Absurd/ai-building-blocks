@@ -1,26 +1,25 @@
 slug: project-payment-waterfall-builder
 name: Project payment waterfall builder
-summary: A payment priority waterfall with unpaid obligations
+summary: "Split one period's project cash across senior debt, reserve top-up and junior debt in the order your loan sets, with every unpaid amount shown."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: [project-cash-available-bridge]
+next: [shareholder-distribution-coverage,reconcile-project-reserves-and-payment-priority]
 origin: own
 version: 1.0.0
 added: 2026-10-22

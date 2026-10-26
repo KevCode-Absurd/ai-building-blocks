@@ -1,6 +1,6 @@
 new_slug: ad-awareness-stage-checker
 name: "Ad awareness stage checker"
-summary: "Attach your ad. Get its awareness stage, mismatches, a score out of 100 and rewrites."
+summary: "Check your ad's awareness stage. Attach the ad and get a score out of 100, the clashes between image and copy, and rewrites to fix them."
 job: check-ads
 thinking: medium
 thinking_why: "It judges one ad against a clear framework, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - An ad is not reaching new people and your frequency is high.
   - You are about to launch ads and want to know if the image and the copy tell the same story.
   - You want to check whether your live ads are all aimed at people who already know you.
+not_for:
+  - "You have a new store with no ads or images yet: use the Buyer awareness stage mapper first to learn where your buyers sit."
+  - "You need fresh ad copy written from your product facts: use the Fact-based ad copy writer instead."
+  - "You want to know if live ads are paying off: use the Campaign keep-or-change checker, which reads your ad results."
 
 you_give:
   - The ad's copy, script or captions
@@ -35,6 +39,29 @@ how_to_use:
   - Tell it what the product is and what a cold buyer already knows about the problem.
   - Add a list of your other live ads if you want the mix check.
   - Fix the mismatches first, then run it again on the new version.
+output_sample:
+  input:
+    - Your ad's copy, script or captions
+    - Your ad image or video, attached as a file
+    - Your product and what buyers already know about the problem
+    - Your other live ads (optional)
+  prerequisites:
+    - An AI that can read images and video, if you want the visual and video checks
+  output:
+    - name: Stage
+      contains: The awareness stage of the ad, with the hook words or first seconds that show it.
+    - name: Visual stage and copy stage
+      contains: Each rated on its own, with a yes or no on whether they match and what clashes.
+    - name: Video line
+      contains: The second the product first appears and whether the sense of being sold to rises slowly or in a staircase.
+    - name: Score
+      contains: A total out of 100 split into stage clarity, copy and visual match, curve shape and hook fit.
+    - name: Fixes
+      contains: Each change to make, with a rewrite that stays within the facts you gave.
+    - name: Mix check
+      contains: How your live ads split across stages against the target split, only if you gave other ads.
+    - name: Checks missed
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: Classifies the hook

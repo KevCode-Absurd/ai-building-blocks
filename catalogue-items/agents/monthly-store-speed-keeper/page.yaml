@@ -1,6 +1,6 @@
 new_slug: monthly-store-speed-keeper
 name: Monthly store speed keeper
-summary: Give it this month's speed reports and app list. It compares with last month, flags new app scripts, and ranks the fixes.
+summary: Check your Shopify store speed every month. Give it PageSpeed results and your app list. You get new app flags and a ranked fix list.
 job: speed-up-store
 thinking: medium
 thinking_why: It reads reports, compares two months and picks which fixes to run. A mid-level model is enough. Use your strongest one when code fixes are needed.
@@ -14,6 +14,10 @@ when:
   - You want your store's speed checked the same way every month.
   - You add apps often and want to know which ones cost you speed.
   - A sale is coming and you want the store checked beforehand.
+not_for:
+  - "You want a one-time speed check with no monthly comparison: use the Store speed report reader on its own."
+  - "Your store already passes everywhere and rarely changes: run this every second or third month instead."
+  - "You need someone to edit your live theme or remove an app: ask a developer, because this agent only writes code for a copy of your theme."
 you_give:
   - PageSpeed results for the homepage, a collection page and a product page, mobile and desktop
   - Your installed apps and theme app embeds, as a screenshot or list
@@ -32,6 +36,31 @@ how_to_use:
   - The first month it saves a baseline. Every month after, it compares against it.
   - Read the list. Test each change on a duplicate theme, then say yes to the ones you want.
   - Run it again next month. Wait 28 days before judging a fix on real-user data.
+output_sample:
+  input:
+    - PageSpeed results for your homepage, a collection page and a product page, mobile and desktop
+    - Your installed apps and theme app embeds, as a screenshot or list
+    - Monthly sessions by page type, conversion rate and average order value
+    - Your theme files (optional, needed for code fixes)
+    - What changed this month and any sale date (optional)
+  prerequisites:
+    - An AI that can save files in a folder, such as Claude Code, to keep last month's baseline
+    - Last month's baseline, if you have one (the first run saves it)
+  output:
+    - name: This month
+      contains: Your field score now and last month, and which speed metrics moved, page by page.
+    - name: Path taken
+      contains: Whether it held, checked apps, or ran fixes, and the reason.
+    - name: Apps
+      contains: Each new or removed app with a keep, remove, delay or one-page-only call.
+    - name: Fixes to approve
+      contains: A ranked list with page, owner, effort, risk, gain in orders as a range, and how to check it.
+    - name: Sale check
+      contains: A speed budget and checklist if a sale is within 30 days.
+    - name: Look again
+      contains: The date to re-check, since real-user data takes about 28 days to move.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line in one list.
 how_it_works:
   - title: Read the reports
     text: Scores real-user data, reads each page, and names the cause on the lab run.

@@ -16,6 +16,30 @@ use_cases:
   - "Write a one-page proposal for a new idea that a busy boss will say yes to"
   - "Think through who controls the data in a product, and how to hand that control to its users"
   - "Find the single points of failure or control in a plan, a network or an organisation"
+not_for:
+  - "You need a fast, plain-language way to explain code to non-experts: use the Grace Hopper mind."
+  - "You want help testing what a machine can really do, or setting a fair test for it: use the Alan Turing mind."
+  - "You need legal, medical or personal money advice, or his view on events after 2024: ask a qualified person, since this mind has no record of it."
+output_sample:
+  input:
+    - The tools, files or notes you want to connect or organise
+    - Where information gets lost or stuck today
+    - Who needs to add to it, and who needs to read it
+    - Whether you want to keep your format closed or share it
+    - What personal data is involved, if any (optional)
+  output:
+    - name: Picture in words
+      contains: Your things as circles and arrows, with each link saying how two items relate.
+    - name: Single point of failure
+      contains: The one person, tool or database everything depends on, and how to reduce that.
+    - name: Format advice
+      contains: The simplest format that does the job and that other tools can read.
+    - name: Open or closed view
+      contains: Whether to open your product or format, and what keeping it closed costs you.
+    - name: First useful version
+      contains: The first thing you could build with data you already have.
+    - name: Next steps
+      contains: What to do together next, plus any point he would concede or credit to others.
 seats:
   - {seat: "The open web", asks: "Could anyone build on this without asking us first?"}
   - {seat: "Systems architect", asks: "If someone else invented a rival version tomorrow, would ours still work with it?"}

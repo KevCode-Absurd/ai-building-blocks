@@ -1,6 +1,6 @@
 new_slug: weekly-growth-target-setter
 name: "Weekly growth target setter"
-summary: "Paste your weekly numbers. Get one growth target, what it means for the week and what to skip."
+summary: "Paste your weekly revenue or user numbers. Get one weekly growth target, a yearly view and which tasks to skip. Sets a clear weekly growth target."
 job: plan-strategy
 thinking: low
 thinking_why: "It is mostly arithmetic on a table and a short list of rules, so a fast model works."
@@ -17,6 +17,10 @@ when:
   - You work all week but cannot say whether the business grew.
   - Your task list is long and everything feels urgent.
   - You want a simple target that your whole team can read.
+not_for:
+  - "You have no weekly figures yet: start a simple sheet with one row per week, and come back after a few weeks."
+  - "You need a long calendar of work: use a plan builder or a person who knows your market, and keep this for the weekly target."
+  - "You only have vanity counts like page views or followers: pick a number that shows money or real use first."
 
 you_give:
   - "Weekly figures for revenue or active users, ideally six weeks or more"
@@ -36,6 +40,27 @@ how_to_use:
   - "Mark any week that had a one-off boost or drop, and say what caused it."
   - "Paste this week's task list."
   - "Come back every week with the new number and ask for a review."
+output_sample:
+  input:
+    - Your weekly revenue or active users, ideally six weeks or more
+    - Notes on any one-off week, such as a sale, launch or outage
+    - Your task list for this week
+    - What your team can spend (optional)
+  output:
+    - name: The measure
+      contains: The one number it picked, revenue or a stand-in for real use, and why.
+    - name: Your rate
+      contains: A table of weekly changes with the sums shown, the average, and the weeks left out as one-offs.
+    - name: The target
+      contains: A steady and a stretch weekly rate, what each adds up to in a year, and what each needs.
+    - name: This week's tasks
+      contains: Each task marked do, defer or skip with a one-line reason, plus a separate list of must-do tasks.
+    - name: What to watch
+      contains: The sign that growth is falling and the first two things to change.
+    - name: MISSING
+      contains: Any gap in your inputs that would sharpen the target.
+    - name: CHECKS MISSED
+      contains: One line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: Picks the measure

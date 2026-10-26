@@ -1,0 +1,137 @@
+name: Rapid Prototyper agent
+summary: Turn an app idea into a prototype plan with one thing to test, 3 to 5 features, a build schedule and pass or fail marks.
+headline: Rapid Prototyper agent
+subhead: Give it your app idea, who it is for and your limits. It picks the one guess worth testing and the fewest features that test it. You get a prototype plan with a build schedule and pass or fail marks.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A prototype plan answers one question before you spend weeks building: is this idea worth more time? The agent starts from a guess you can test, such as "owners will finish sign-up in under two minutes". Then it plans only the features that test that guess.
+
+  Its method comes from the Agency Agents profile. Pick fast tools. Build the main user path first. Set up feedback and basic usage tracking from day one. Features that do not serve the guess get cut. It sets the pass and fail marks before you build, so you cannot move the goal after you see the result.
+
+  This is an AI role profile shared under MIT. It writes a plan. It does not build, host or publish anything. The profile's own targets, such as a three day build, are goals and not results measured by AI Blocks. The starter tools it names (Next.js, Supabase, Clerk, Vercel) are examples, not rules.
+when:
+  - You have an app idea and want to test it with real people before paying for a full build.
+  - A founder or client says "can we mock this up by Friday?" and you need a clear scope.
+  - You have a long list of feature ideas and need to cut it to the 3 to 5 that matter.
+  - You are about to show a first version to users and need to know what to measure.
+not_for:
+  - You need code that is safe for real customers and payments. Use the Senior Developer agent to plan the build and the Code Reviewer agent to check it.
+  - You need a long-term system design for a product that already works. Use the Software Architect agent.
+  - You want a roadmap or a ranked list of what to build next. Use the Product Manager agent or the Sprint Prioritizer agent.
+you_give:
+  - Your app idea in one or two sentences
+  - Who it is for and the problem it solves for them
+  - The one thing you want to find out, such as "will people finish sign-up?"
+  - Your limits, such as days, budget, who builds it and tools you already use
+  - Sketches, links to similar apps or existing code (optional)
+  - A few people you can show it to, such as 5 customers you can email (optional)
+you_get:
+  - One test statement, with the guess, the people who test it and the pass and fail marks
+  - A cut list of 3 to 5 features to build, and what you leave out
+  - A tool suggestion for each part, with the reason for each pick
+  - A day by day build schedule
+  - A plan to collect feedback and track use from the first user
+  - What to do if the test passes, and what to do if it fails
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then references/source-agent.md.
+  - Type your idea, who it is for and the one thing you want to learn. Add your time, budget and tools.
+  - Say "Write the prototype plan. Ask me once if anything is missing."
+  - Read the test statement first. Check it is what you really want to learn, and fix it before you read the rest.
+  - Check the cut list. If a feature does not help the test, drop it.
+  - Take the plan to your builder or your no-code tool. This agent only writes. It does not run code, host the app or sign up for any tool.
+how_it_works:
+  - title: Set the guess
+    text: It turns your idea into one thing to test and names the people who will test it.
+  - title: Cut to the fewest features
+    text: It keeps the 3 to 5 features that serve the test and lists what it left out on purpose.
+  - title: Pick fast tools
+    text: It suggests the quickest tools for your skills and limits, such as ready-made sign-in, data and hosting services.
+  - title: Lay out the build
+    text: It orders the work by day, main user path first, polish last.
+  - title: Plan the feedback
+    text: It adds a feedback form, usage tracking and an optional A/B test from day one.
+  - title: Set pass and fail marks
+    text: It states what result means go on, change course or stop, and lists every assumption it made.
+output_shape: |-
+  PROTOTYPE PLAN: <project name>
+
+  TEST STATEMENT
+    Guess: <what you believe> | Tested by: <who> | Pass mark: <number or result> | Fail mark: <number or result>
+
+  FEATURES TO BUILD (3 to 5)
+    <feature> | <how it tests the guess>
+  LEFT OUT ON PURPOSE
+    <feature> | <why it can wait>
+
+  TOOLS
+    <part of the app> | <tool> | <why this one>
+
+  BUILD SCHEDULE
+    <day or step> | <what is done by the end>
+
+  FEEDBACK AND TRACKING
+    <what you ask users> | <what you measure> | <when you look>
+
+  NEXT STEPS
+    If it passes: <step> | If it fails: <step>
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your app idea and who it is for
+    - The one thing you want to learn
+    - Your time, budget and tools
+    - Sketches or existing code (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+  output:
+    - name: Test statement
+      contains: The guess to test, who tests it, and the pass and fail marks.
+    - name: Features to build
+      contains: 3 to 5 features that serve the test, plus what you left out and why.
+    - name: Tools
+      contains: The quickest tool for each part of the app, with the reason for each pick.
+    - name: Build schedule
+      contains: What is finished by the end of each day or step.
+    - name: Feedback and tracking
+      contains: How you collect comments from users and what you measure from the first day.
+    - name: Next steps
+      contains: What to do if the test passes and what to do if it fails.
+    - name: Assumptions and open questions
+      contains: What the agent had to guess and what you still need to answer.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Test size
+    how: Say how many people you can reach, such as 5 or 50, so the pass mark is realistic.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Prototype
+    meaning: A rough working version made to test an idea, not to sell.
+  - term: MVP
+    meaning: The smallest version of a product that still tests the main idea.
+  - term: A/B test
+    meaning: Show two versions to different people and see which one works better.
+  - term: No-code tool
+    meaning: A tool that builds an app by clicking, with no code to write.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat is enough. The agent writes a plan, so it needs no code tools.
+  inputs:
+    - Sketches or screenshots of apps you like, so it can match the main path.
+    - Questions your customers ask today, so the test statement uses their words.

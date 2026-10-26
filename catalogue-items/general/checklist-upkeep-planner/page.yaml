@@ -1,6 +1,6 @@
 new_slug: checklist-upkeep-planner
 name: Checklist upkeep planner
-summary: Paste what happened after a decision. Get it judged by the process, not the result, plus checklist changes and practice cases.
+summary: Check a past decision by how you made it, not just how it turned out. Get a checklist update and three practice cases for your next decision.
 job: think-and-decide
 thinking: medium
 thinking_why: It compares a record with an outcome and edits a list, which needs care but follows a fixed method.
@@ -11,13 +11,19 @@ explain: |-
 
   This skill pulls up the record you made before the decision and sets it beside what happened. It sorts the call into good, lucky, unlucky or mistaken, links each cause to a checklist item, and adds, sharpens or cuts items. It also writes short practice cases, like a flight simulator, so you keep using the list on rare problems.
 when:
-  - A decision has played out and you want to learn the right lesson.
+  - A decision has played out and you want to learn the right lesson from it.
+  - A good result came and you want to know if it was luck.
   - Your checklist has not changed in a year.
-  - You want to keep your skills sharp on decisions that come up rarely.
+  - You want practice on decisions that come up rarely.
+not_for:
+  - "You have no saved record of the decision yet: run the Decision checklist runner first to make one."
+  - "You are making a routine small choice: a quick pros and cons list is enough."
+  - "You want to make a new decision now: use the Decision checklist runner, not this planner."
 you_give:
-  - The record from "Decision checklist runner"
+  - The saved record from the Decision checklist runner
   - What happened, with dates and numbers
   - Your current checklist (optional)
+  - Which checklist items have helped in past runs (optional)
 you_get:
   - The call judged on process and outcome separately
   - Which items fired, which were missing, and what to add or cut
@@ -28,6 +34,31 @@ how_to_use:
   - Paste the saved record and say what happened.
   - Paste your checklist if you have it, so it can edit the list directly.
   - Run one practice case each month and put the review dates in your calendar.
+output_sample:
+  input:
+    - The saved record from the Decision checklist runner
+    - What happened, with dates and numbers
+    - Your current checklist (optional)
+    - Your history of which items have helped (optional)
+  prerequisites:
+    - A saved record made before the decision, from the Decision checklist runner
+  output:
+    - name: Expected and actual
+      contains: What you expected, what happened, and which of the facts that would show you wrong came true.
+    - name: The call
+      contains: "A separate verdict on process and outcome, and the box: good call, lucky, unlucky or mistaken."
+    - name: Causes
+      contains: The one to three main causes, each tied to a checklist item and marked covered, weak or missing.
+    - name: Changes
+      contains: Items to add, sharpen or cut, with a reason for each, keeping the list at twelve or fewer.
+    - name: Version log
+      contains: One line per change with the date and the case that caused it.
+    - name: Practice cases
+      contains: Three short cases to run through the list, each with what a good run should catch.
+    - name: Review dates
+      contains: When to review after the next result, each quarter, and a monthly practice case.
+    - name: Checks missed
+      contains: One line for each self-check that failed and why, or none.
 how_it_works:
   - title: Set record beside result
     text: Compares what you expected with what happened.

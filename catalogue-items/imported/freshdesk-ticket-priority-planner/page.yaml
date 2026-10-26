@@ -2,17 +2,27 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: freshdesk-ticket-priority-planner
 name: Freshdesk ticket priority planner
-summary: Connect Freshdesk. Get open tickets grouped by urgency, issue type, and response deadline.
+summary: Check your Freshdesk ticket queue and see which open tickets need action first, grouped by urgency, type and response deadline.
 job: help-customers
 headline: Freshdesk ticket priority planner
 subhead: Connect Freshdesk and ask which open tickets need attention first. It reads up to fifteen full ticket threads and checks priority, issue type, and response deadlines. You get a queue grouped by urgency with suggested next steps.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Your support queue has grown and you need to know what to answer first.
+  - You start your support day and want a ranked list of open tickets.
+  - You want to see which tickets are close to missing a response deadline.
+  - A manager asks which open tickets are urgent right now.
+not_for:
+  - "You want to check one ticket: open it in Freshdesk and read the thread."
+  - "Your tickets come from chat, phone or social channels: use the tools built into those channels."
+  - "You have no Freshdesk account: sort your tickets by hand in a spreadsheet."
 you_give:
   - Open and pending Freshdesk tickets and their full threads.
   - Your response targets or recorded ticket due dates.
 you_get:
-  - List urgent tickets first, show response deadline status, and suggest next actions.
+  - A queue grouped from critical to low priority.
+  - Each ticket tagged as bug, question, incident, feature request, billing or other.
+  - A count of tickets past due, due soon and on track.
+  - A short list of next steps.
 how_it_works:
   - title: Read open tickets
     text: Fetch open and pending tickets, then read the full threads for up to fifteen.
@@ -25,8 +35,30 @@ works_best_with:
     - name: Freshdesk
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for freshdesk ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Open and pending Freshdesk tickets and their full threads.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Check you have a Freshdesk account with API access and a Composio account with its command line tool.
+  - Open an AI that can run commands and read skill files, such as Claude Code, and add the downloaded folder.
+  - Ask it to run the Freshdesk ticket priority planner.
+  - If it says Freshdesk is not connected, run composio link freshdesk and ask again.
+  - Read the queue and check the urgent tickets first.
+  - Approve any changes before your AI makes them.
+output_sample:
+  input:
+    - Your Freshdesk account, connected through Composio
+    - Your open and pending tickets, read for you (up to 15 in full)
+    - Your response targets or ticket due dates (optional)
+  prerequisites:
+    - A Freshdesk account with API access
+    - A Composio account and its command line tool, with Freshdesk linked
+    - An AI that can run commands
+    - Ticket text is sent through Composio, so check this suits your privacy rules
+  output:
+    - name: P0 - Critical
+      contains: Urgent tickets such as outages, data loss or security issues, with subject, type, requester, group, age, deadline and summary.
+    - name: P1 - High
+      contains: Tickets about broken features, billing or escalations, in the same table layout.
+    - name: P2 - Medium / P3 - Low
+      contains: Questions, minor bugs, feature requests and feedback, each in its own table.
+    - name: SLA Overview
+      contains: A count of tickets that have missed their response deadline, are due soon, or are on track.
+    - name: Recommended Actions
+      contains: Specific next steps for the tickets that need attention first.

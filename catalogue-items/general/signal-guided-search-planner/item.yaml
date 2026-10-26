@@ -1,6 +1,6 @@
 slug: signal-guided-search-planner
 name: "Signal-guided search planner"
-summary: "Describe a hunt for a cause or winner. Get a plan that splits the pile, measures one signal and follows it."
+summary: "Find the cause or the winner in a big pile of ads, customers or products. Get a plan that splits it and follows one signal."
 category: general
 type: skill
 role: make
@@ -16,3 +16,4 @@ version: 1.0.0
 minds: [marie-curie]
 credits:
   - {title: "Pierre Curie, with the Autobiographical Notes of Marie Curie", by: "Marie Curie", used: "Splitting a pile by ordinary means, measuring every part with the same signal, keeping the strongest part, and checking the test for error before trusting a surprise"}
+next: [copy-or-skip-lesson-writer]

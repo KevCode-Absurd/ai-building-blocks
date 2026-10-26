@@ -14,6 +14,28 @@ use_cases:
   - Label a chart so its uncertainty is visible
   - Separate a missing fact from an unpredictable outcome
   - Write a balanced update when evidence changes
+not_for:
+  - "You face a medical, legal or personal money decision: ask a doctor, lawyer or financial adviser, since this mind only helps you prepare questions."
+  - "You want a bet or decision judged by its process, not its numbers: use Annie Duke, who writes on decision quality and outcomes."
+  - "You want a guaranteed probability or a promise that an event will succeed: no mind can give one, so gather more evidence or ask a subject expert."
+output_sample:
+  input:
+    - The exact claim, chart or wording you want to understand
+    - The numbers and where they came from
+    - The time period each number covers
+    - Who will read it and what they will decide (optional)
+    - Any known missing information or changed definitions (optional)
+  output:
+    - name: Defined quantity
+      contains: What is being counted, out of how many, and over which period.
+    - name: Comparison table
+      contains: Claims side by side with definitions, exposure, period and source, plus any cell that is still unresolved.
+    - name: Uncertainty note
+      contains: What is unknown, which assumptions sit behind the estimate, and what any range really means.
+    - name: Plain statement
+      contains: Fair wording you can use, with a revised chart caption where needed.
+    - name: Limits and follow-up
+      contains: What the evidence does not show, and the one question or source that would improve the decision.
 seats:
   - seat: Clear numbers and honest uncertainty
     asks: Out of how many, over what period, and how much do we really know?

@@ -23,11 +23,11 @@ uses:
   - colour-contrast-checker
 steps:
   - uses: type-led-poster-planner
-    note: Set a clear reading order for the event name, essential details and next action.
+    note: "Set a clear reading order for the event name, essential details and next action. Hands that reading order and the type feel to step 2."
   - uses: poster-designer
-    note: Build the poster from that hierarchy and the confirmed event facts.
+    note: "Build the poster from the reading order in step 1 and the confirmed event facts. Hands the finished poster and a note of its fonts and colours to step 3."
   - uses: colour-contrast-checker
-    note: Extract actual text and background colors into temporary CSS tokens and explicit pair data for the supplied checker. Check those pairs, then visually inspect image, gradient and opacity areas; mark any color or rendering evidence that is unavailable.
+    note: "Take the poster from step 2 and list each real text colour against the colour behind it, as pairs for the checker. Check those pairs, then look by eye at image, gradient and faded areas, and mark any colour you could not measure."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

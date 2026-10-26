@@ -8,17 +8,100 @@ dist/
 .DS_Store
 Thumbs.db
 __pycache__/
-# Local research helpers; published material lives in knowledge/ and tools/.
+*Zone.Identifier
+# Playwright output folders (test-results, test-results-*)
+test-results*/
+# Local research helpers
 _codex_*.py
-# run outputs and traces stay local unless promoted into reports/
+# Run outputs and traces stay local.
 runs/
 traces/
-# Raw browser traces may contain request headers; keep reviewed summaries and screenshots.
-reports/**/trace.zip
-reports/**/video.webm
-# intake engine: raw downloads and full transcripts stay private
-intake/*/raw/
-# mind source material (books, transcripts) stays local
-mind-sources/*
-!mind-sources/README.md
-!mind-sources/SOURCES.md
+# Local build caches (regenerated on demand).
+site/.speed-baseline/
+site/.copyable-build/
+.wrangler/
+
+# The repo holds what builds, tests and deploys the site, plus the scripts that make its content.
+# Everything below stays on this computer only: work notes, reports and screenshots, research and
+# source material, planning docs, and one-off release scripts.
+/reports/
+/intake/
+/knowledge/
+/mind-sources/
+/test-brands/
+/DECISIONS.md
+/.archify/
+/.codex-remote-attachments/
+/nul
+/brand/logo-options.html
+
+# docs: only the rules and pages the build and the content tools read.
+/docs/*
+!/docs/WRITING.md
+!/docs/PAGE-FORMAT.md
+!/docs/QUALITY-BAR.md
+!/docs/APPS-PRD.md
+!/docs/IMPORTING-SKILLS.md
+!/docs/SITE-SPEND-MONITOR.md
+!/docs/public-mcp/
+
+# tools: only what the build, the tests and the content pipeline use. Add a new tool here to keep it in the repo.
+/tools/*
+!/tools/README.md
+!/tools/package.json
+!/tools/package-lock.json
+!/tools/.gitkeep
+!/tools/lib/
+!/tools/test/
+!/tools/example-app/
+!/tools/orchestrator-pages/
+!/tools/import-map/
+!/tools/import-map.yaml
+!/tools/import-sources.yaml
+!/tools/build-mini-tool.mjs
+!/tools/check-masking.mjs
+!/tools/build-minds.mjs
+!/tools/audit-library.mjs
+!/tools/make-fake-catalogue.mjs
+!/tools/readability.mjs
+!/tools/reading-level.mjs
+!/tools/lint-pages.mjs
+!/tools/apply-renames.mjs
+!/tools/make-orchestrators.mjs
+!/tools/import-skills.mjs
+!/tools/import-all.mjs
+!/tools/retask-import-maps.mjs
+!/tools/check-import-maps.mjs
+!/tools/intake.mjs
+!/tools/page-copy.mjs
+!/tools/add-needs.mjs
+!/tools/add-making-it.mjs
+!/tools/check-catalogue-ports.mjs
+!/tools/check-minds.mjs
+!/tools/check-client-secrets.mjs
+!/tools/check-seo-contract.mjs
+!/tools/check-pages.mjs
+!/tools/screen-items.mjs
+!/tools/test-blocks.mjs
+!/tools/test-minds.mjs
+!/tools/spend-cap.mjs
+!/tools/monitor-site-spend.mjs
+!/tools/build-traction.mjs
+!/tools/build-everyday-workflows.mjs
+!/tools/everyday-workflows-data.mjs
+!/tools/next-100-data.mjs
+!/tools/review-catalogue-copy.mjs
+!/tools/clarify-library-copy.mjs
+!/tools/audit-audience-coverage.mjs
+!/tools/audit-everyday-workflows.mjs
+!/tools/usability-release-lib.mjs
+!/tools/check-ui-refinement-live.mjs
+!/tools/finalize-mcp-production.mjs
+!/tools/check-mcp-access-live.mjs
+!/tools/check-mcp-personal-live.mjs
+
+# site: one-off release and staging scripts.
+/site/scripts/*-release.mjs
+/site/scripts/serve-simplicity-preview.mjs
+/site/scripts/snapshot-simplicity-assets.mjs
+/site/scripts/check-simplicity-static.mjs

@@ -16,6 +16,29 @@ use_cases:
   - "Plan what you'll give customers after the sale to keep them loyal"
   - "Rework a sales pitch that leans on 'integrity' and 'added value' into real proof"
   - "Set daily actions for a goal instead of waiting for a perfect plan"
+not_for:
+  - "You need cold outreach to strangers or a steady calling habit: use the Jeb Blount mind."
+  - "You want to ask buyers better questions to find their problems: use the Neil Rackham mind."
+  - "You want to understand why people say yes to a request: use the Robert Cialdini mind."
+output_sample:
+  input:
+    - Your offer, or the pitch you use now
+    - The buyer's doubts or the reason a sale stalled
+    - Your last ten purchases, if you have them (optional)
+    - Real customer stories you can prove (optional)
+  output:
+    - name: Your own buying check
+      contains: Questions about your last ten purchases, so you see how your customers buy and what doubts they have.
+    - name: Weak words and proof gaps
+      contains: Claims like integrity or quality that have no proof behind them, and what proof to add.
+    - name: Value in the buyer's terms
+      contains: A rewrite of your pitch that opens with what the customer gains, produces or profits.
+    - name: Price-fight plan
+      contains: Value and profit points to put in the quote so price is not the only topic.
+    - name: After-sale plan
+      contains: What you give customers after the sale to earn loyalty, not just satisfaction.
+    - name: Task and deadline
+      contains: A short list of actions you can finish today, with a time to report back.
 seats:
   - {seat: "Why people buy", asks: "Would you buy this from you? Why, or why not?"}
   - {seat: "Value, not price", asks: "What does the customer gain, produce or profit from this, in their own terms?"}

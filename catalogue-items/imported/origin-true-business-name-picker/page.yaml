@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs culture and market fit for each name.
 new_slug: origin-true-business-name-picker
 name: Origin-true business name picker
-summary: Give it your roots and target markets. Get business names that stay
-  true to you and still work for buyers.
+summary: Find a business name that fits your roots and works in the markets you sell to. Give it your origin and markets. You get a name shortlist.
 job: brand-file
 headline: Origin-true business name picker
-subhead: Business names that honour where you come from and still land well with
-  the buyers you want. It catches the trap of a name that is lovely at home but
-  odd, funny or confusing elsewhere.
+subhead: Business names that honour where you come from and still land well with the buyers you want. It catches the trap of a name that is lovely at home but odd, funny or confusing elsewhere.
 explain: |
   Business names that honour where you come from and still land well with the buyers you want. It catches the trap of a name that is lovely at home but odd, funny or confusing elsewhere.
 
@@ -18,6 +15,10 @@ when:
   - You have three name options and need to pick one.
   - A name worked at home but your first overseas customers looked puzzled.
   - You want a name that fits a candy brand or a law firm, not both.
+not_for:
+  - "You need trademark or legal clearance: search the trademark register in each market, or ask a trademark lawyer."
+  - "You need a full brand look and voice: finish the name first, then use a brand guidelines step."
+  - "You need a final check of how a name sounds: ask a native speaker in each target market."
 you_give:
   - Your origin language or culture
   - Target markets
@@ -30,7 +31,27 @@ you_get:
   - Warnings about odd meanings or sounds
   - A shortlist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the full text of SKILL.md into the chat. If your tool supports skills, type /business-name-fit instead.
+  - Say if you want new names, a check of names you have, or both.
+  - "Answer the questions: your origin, target markets, business area, and the feeling you want. Add your own names if you have them."
+  - Read the table first. To see why a name scored as it did, ask about that name.
+  - To see a finished case, open Scenario A in references/worked-examples.md. It is optional. Attach that file if you want your AI to copy its style.
+  - Do the verification list at the end yourself before you commit to a name.
+output_sample:
+  input:
+    - Your origin language or culture
+    - The markets you want to sell in
+    - Your business area
+    - Names you already have (optional)
+    - The feeling you want, such as modern or premium (optional)
+  output:
+    - name: Fit table
+      contains: One row per name and market, with short marks for meaning, look-alike words, pronunciation, spelling, sound and tone.
+    - name: New name candidates
+      contains: Three to five names, each with its origin meaning, how the target market reads it, and a verdict.
+    - name: Distinctiveness note
+      contains: Says if a name is generic, descriptive, suggestive, arbitrary or coined, and how that affects registering it.
+    - name: Strongest options line
+      contains: One short line naming the two or three best names.
+    - name: Verification list
+      contains: "What you still must check: trademark, domain and handles, business registry, and a native speaker."

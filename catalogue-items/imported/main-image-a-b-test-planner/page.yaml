@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: A fair test changes one thing at a time, so it plans each version with care.
 new_slug: main-image-a-b-test-planner
 name: Main image A/B test planner
-summary: Give it a product photo and selling points. Get test versions that
-  change one thing each, plus a review sheet.
+summary: Plan a main image A/B test that changes one thing at a time. Give it a product photo and selling points. Get test images and a review sheet.
 job: plan-ad-tests
 headline: Main image A/B test planner
-subhead: A product image test you can learn from, not just a pile of extra
-  pictures. Each version differs from the control in one thing only, and you
-  write down which one you expect to win and why before you run it.
+subhead: A product image test you can learn from, not just a pile of extra pictures. Each version differs from the control in one thing only, and you write down which one you expect to win and why before you run it.
 explain: |
   A product image test you can learn from, not just a pile of extra pictures. Each version differs from the control in one thing only, and you write down which one you expect to win and why before you run it.
 
@@ -18,6 +15,10 @@ when:
   - You are tempted to change three things at once and need to stop.
   - You want a record of each test so you can learn from it later.
   - You sell on a marketplace with strict main image rules.
+not_for:
+  - "You want to test product claims, prices or listing text: use a plain copy test in your marketplace's own tools, or ask a person on your team."
+  - "You need a verdict on who won: this tool does not read your store data, so use your marketplace's own test reports."
+  - "You have no product photo yet: take a clean photo first, or ask a photographer, then come back."
 you_give:
   - Your product photo
   - Selling points
@@ -29,9 +30,32 @@ you_get:
   - A compliance check
   - A results table to fill in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. This skill makes images by running code, so use an AI that can run code and has files.
+  - Add your product photo and your selling points. Say which metric you care about, clicks or sales.
+  - Pick one thing to test. If you want to change three, ask for three rounds.
+  - Read and confirm the hypothesis for each version before any image is made.
+  - Check the images and the compliance result. Then run the test in your store.
+  - Fill in the review sheet after about two weeks. Do not call a winner on low traffic.
+output_sample:
+  input:
+    - Your product photo
+    - Your selling points
+    - The one thing to test, such as background or shot distance
+    - A pose reference photo, for clothing (optional)
+    - The marketplace you sell on (optional)
+  prerequisites:
+    - An AI that can run code, with Node and Python installed
+    - An image API key from OpenAI, Gemini, fal or Replicate, which may cost money per image
+  output:
+    - name: Control image (A)
+      contains: The base main image, made with the one thing you are not changing kept the same.
+    - name: Test image (B)
+      contains: The same image with only your chosen variable changed, made in a small batch so you can pick the best.
+    - name: Hypothesis
+      contains: Which version you expect to win and why, written before the test runs.
+    - name: Compliance check
+      contains: A pass or fail on marketplace image rules for each image, so a rejection does not spoil your data.
+    - name: Review sheet
+      contains: A table with the SKU, dates, variable, images and hypotheses, with blank spots for views, clicks, add-to-carts and sales.
+    - name: Conclusion and next step
+      contains: Empty lines for you to fill in after the test ends.

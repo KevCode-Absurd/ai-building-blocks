@@ -2,34 +2,95 @@ thinking: medium
 thinking_why: It matches symptoms to known failure patterns.
 new_slug: long-chat-failure-diagnoser
 name: Long chat failure diagnoser
-summary: Describe how your AI gets worse in long chats. Get the likely cause and
-  a fix to try.
+summary: Find out why your AI forgets or repeats mistakes in a long chat. Get the likely cause, one fix to try and a way to test it.
 job: set-up-ai
 headline: Long chat failure diagnoser
-subhead: A named cause for why your AI gets worse as a chat grows, and a fix you
-  can try today. Long chats fail in a few known ways, and each one needs a
-  different cure.
+subhead: "Describe how your AI gets worse as a chat grows, and paste one bad answer if you have it. It matches your problem to one of five known patterns. You get the cause, a fix to try first, a test to confirm it and a tip to prevent it."
 explain: |
-  A named cause for why your AI gets worse as a chat grows, and a fix you can try today. Long chats fail in a few known ways, and each one needs a different cure.
+  When an AI chat gets very long, answers can slip. The AI forgets a rule you gave it, repeats a mistake, or quotes an old fact. This long chat failure diagnoser finds out which kind of slip you have, because each kind has a different cure.
 
-  You describe what goes wrong. The skill matches it to a pattern: facts in the middle get ignored, an early mistake keeps getting repeated, too much unrelated text drowns the point, the AI cannot tell which instructions apply, or old and new facts clash. Then it suggests the fitting fix. That could be summarising the chat, hiding old tool output, splitting the work across fresh sessions, or moving key facts to the start or end.
+  It checks five patterns. Facts in the middle get missed. A wrong fact gets repeated. Too much unrelated text drowns the point. The AI cannot tell which rules apply. Or old and new facts clash. It matches your example to one pattern, shows the evidence from your own chat, and gives one fix to try first with a backup.
+
+  It does not give a number for when a model starts to fail. Those limits change with each model, so it tells you to test with your own material instead.
 when:
-  - Your AI forgets earlier instructions deep into a long session.
-  - The answers drift or repeat a mistake made 50 messages ago.
-  - You are designing an agent that must handle long documents reliably.
-  - You pasted a lot of material and the AI now misses obvious facts.
+  - Your AI forgets an early instruction deep into a long chat.
+  - It repeats a mistake you corrected 50 messages ago.
+  - You pasted a lot of material and now it misses facts you know are there.
+  - You are building an agent that must work through long documents.
+not_for:
+  - "The chat is short and the answer is still wrong: use the Prompt fixer, since the cause is more likely a vague request."
+  - "You want the long chat shrunk or carried into a new one: use the Long chat summariser or the Context shrinker."
+  - "The AI never got the file or data in the first place: fix the upload or tool first."
+  - "You want to design what an agent remembers between sessions: use the Agent memory designer."
 you_give:
-  - A description of the failure
-  - How long the chat or input is
-  - A sample of the bad output (optional)
+  - What goes wrong, in your own words
+  - How long the chat or pasted material is
+  - One bad answer and what a good answer would have said (optional)
   - What you already tried (optional)
+  - Which AI tool you use (optional)
 you_get:
-  - The likely cause, named
-  - A fix matched to that cause
-  - A way to test that it worked
-  - A note on how to prevent it next time
+  - The likely cause, named in plain words
+  - Evidence from your own chat, or a note that it is a guess
+  - One fix to try first, with a backup
+  - A test to confirm the fix worked
+  - One habit to prevent it next time
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Start a fresh chat. No code, files or paid tools are needed.
+  - Paste the skill text into the chat, or open the skill if you added it to your AI.
+  - Describe what goes wrong and how long the chat is. Paste one bad answer if you can.
+  - If you cannot give an example, say so. It will tell you the match is a guess.
+  - Try the first fix in your long chat or in a new one. Do not try all the fixes at once.
+  - Run the test it gives you. If the problem stays, try the backup fix, then tell it what happened.
+how_it_works:
+  - title: Get the symptom
+    text: It asks for one concrete thing the AI missed or got wrong, so it is not working from a vague complaint.
+  - title: Check the length
+    text: If the chat is short, it points to another cause such as a vague request.
+  - title: Match a pattern
+    text: It picks the best of five patterns, using the signs for each, and names a second one if two fit.
+  - title: Show the evidence
+    text: It points to the message or answer in your example that shows the pattern.
+  - title: Give the fix and test
+    text: It gives one fix to try first, a backup, and a way to check it worked.
+  - title: Add a prevention tip
+    text: It ends with one habit that stops the same problem next time.
+output_shape: |
+  Likely cause: <pattern name> in one plain sentence
+  Evidence: <what in your example fits>, or <a guess note>
+  Fix to try first: <numbered steps> and <one backup fix>
+  Test: <what to run> and <what a pass looks like>
+  Prevention: <one habit>
+output_sample:
+  input:
+    - What goes wrong, in your own words
+    - How long the chat or the pasted material is
+    - One bad answer and what a good answer would say (optional)
+    - What you already tried (optional)
+  output:
+    - name: Likely cause
+      contains: One of five patterns, such as lost in the middle or poisoning, in one plain sentence.
+    - name: Evidence from your chat
+      contains: The message or answer that shows the pattern, or a note that the match is a guess.
+    - name: Fix to try first
+      contains: Numbered steps for your AI tool, plus one backup fix.
+    - name: Test to confirm
+      contains: A way to check the fix worked, such as asking the same question again.
+    - name: Prevention
+      contains: One habit that stops it happening again.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can read your bad example and match it to a pattern.
+  inputs:
+    - The exact question where it went wrong
+    - The message where the first mistake appeared
+    - Any files or notes you pasted into the chat
+terms:
+  - term: Context
+    meaning: Everything the AI can see in the chat so far, including what you pasted.
+  - term: Lost in the middle
+    meaning: Facts in the middle of a long input get used less than facts at the start or end.
+  - term: Poisoning
+    meaning: A wrong fact gets repeated until it spreads through the chat.
+  - term: Compaction
+    meaning: Shrinking a long chat into a short summary you carry into a new chat.

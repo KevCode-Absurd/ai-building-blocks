@@ -1,39 +1,36 @@
 slug: design-handoff-completeness-assistant
 name: Design handoff completeness assistant
-summary: A handoff change list, missing states and an implementation review request.
+summary: "Find the states and variants still missing from a changed UI component, and get a review request your developers can act on."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: design_file
-    required: false
-  - type: codebase
-    required: false
+    required: true
   - type: brand_guide
+    required: false
+  - type: document
     required: false
 outputs:
   - type: audit_report
-  - type: code_change
-  - type: design_file
   - type: document
 uses:
   - give-developers-a-complete-component-brief
   - screen-states-designer
 steps:
   - uses: give-developers-a-complete-component-brief
-    note: "Run when: The component adds a variant, changes behavior or receives an implementation question."
+    note: "Run when the component adds a variant, changes behavior or gets a developer question. It audits the component against your system, lists every state, and maps styles to your tokens. Hands step 2 the list of states still missing."
   - uses: screen-states-designer
-    note: Run the component handoff workflow. If required states or accessibility behavior are missing, run screen-states-designer again; allow at most two correction passes, then list unresolved blockers.
+    note: "Run again when required states or accessible behavior are still missing. It uses your component's design or code, not step 1's brief, and step 1's missing-state list tells it what to cover. It allows two correction passes, then lists the blockers."
 schedule: When a component is proposed for implementation or its design changes.
 asks_before:
   - Sending or submitting any message or form
   - Changing a live account, calendar, task, permission or published document
   - Spending money, releasing a payment or signing a contract
   - Starting or changing any recurring schedule
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

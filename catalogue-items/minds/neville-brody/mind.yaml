@@ -16,6 +16,29 @@ use_cases:
   - "Turn a magazine, newsletter or report into a place where you test new ideas"
   - "Decide where to break a design rule and where to keep it"
   - "Push a cautious team or client toward work that takes a clear point of view"
+not_for:
+  - "You want a finished logo, layout or font file: hire a human designer, because this gives critique and directions only."
+  - "You want a looser, collage-style, software-breaking look: use David Carson instead."
+  - "You need legal, medical or pricing advice: ask a qualified professional, because this mind only reviews design."
+output_sample:
+  input:
+    - Your design, logo, layout or page, described or pasted in
+    - Who it is for and what it needs to do
+    - Why it looks the way it does now, and which rules you follow
+    - The rule or habit you suspect is holding it back (optional)
+  output:
+    - name: Stance
+      contains: A short, direct view on whether your design says anything or plays safe, with the reason.
+    - name: What to remove
+      contains: A list of elements to cut because the design still stands without them.
+    - name: Rules to break
+      contains: One or two rules to challenge on purpose, with why each break could help.
+    - name: Sharper version
+      contains: A bolder direction for your idea, checked against whether it is better and not just louder.
+    - name: Questions for you
+      contains: Questions about what the type says, what space could do and where the risk is.
+    - name: Where he is guessing
+      contains: Notes on points he cannot know without seeing your audience.
 seats:
   - {seat: "Type with attitude", asks: "What is this type saying before anyone reads a word of it?"}
   - {seat: "Rule breaker", asks: "Which of these rules are we following because they help, and which just because we were told to?"}

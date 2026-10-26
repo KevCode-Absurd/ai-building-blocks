@@ -2,34 +2,97 @@ thinking: medium
 thinking_why: It writes data code in a specific style.
 new_slug: fast-data-table-analyst
 name: Fast data table analyst
-summary: Give it a large data file. Get fast cleaning, grouping and analysis
-  with Polars code that you can rerun.
+summary: Clean, group and total a large CSV or Parquet file with a Polars script you can rerun next month. Get a result file and notes on each step.
 job: work-with-files
 headline: Fast data table analyst
-subhead: Large spreadsheets and data files cleaned, grouped and summed in
-  seconds, as Polars code you can run again next month. It beats slow pandas
-  scripts when your data is big but still fits in memory.
+subhead: Give it a big data file and a question, like monthly totals per customer. It writes a Polars script, runs it and checks the row counts. You get the script to rerun, a result file and notes on each step.
 explain: |
-  Large spreadsheets and data files cleaned, grouped and summed in seconds, as Polars code you can run again next month. It beats slow pandas scripts when your data is big but still fits in memory.
+  Polars is a free Python tool for tables of data. It is built for big files that still fit in your computer's memory, where a pandas script can crawl.
 
-  You describe the file and the question. The skill writes the steps using Polars expressions: select columns, filter rows, add computed columns, group and aggregate, join tables and reshape. For big files it uses lazy mode, so Polars plans the whole job and reads only what it needs, running in parallel. It also shows how to read CSV and Parquet files and how to avoid slow row-by-row loops. It needs Python with Polars installed.
+  You describe the file and the question. The skill looks at the columns first, then writes one script that reads the file in lazy mode. Lazy means Polars plans the whole job before it starts, and only reads the columns it needs. The script cleans, filters, groups and totals, or joins two tables.
+
+  It checks row counts before and after each step, and saves a new result file without touching your original. You also get the script, so next month's export takes one command. Speed depends on your file and computer. The skill does not promise a number.
 when:
   - Your pandas script takes minutes on a big CSV.
-  - You need monthly totals by customer from millions of rows.
+  - You need monthly totals per customer from millions of rows.
   - You want a repeatable cleaning step for a weekly export.
   - You need to join two large tables without freezing your computer.
+not_for:
+  - "Your file is small, or your current script is fast enough: keep what you have."
+  - "The file is bigger than your computer's memory: split it by month first, or use a tool built for that, such as dask or vaex."
+  - "You want a messy file cleaned with a change log and no code: use the Data cleaner."
+  - "You want trends and tests with a written answer: use the Data analyst."
 you_give:
-  - A data file, such as CSV or Parquet
-  - The question you want answered
-  - Column names and any known data problems (optional)
+  - A data file, such as CSV or Parquet, saved on your computer
+  - The question you want answered, such as totals per customer per month
+  - Column names and known data problems (optional)
+  - Python with Polars installed, which is free
 you_get:
-  - Polars code you can rerun
-  - Cleaned and grouped tables
-  - A result file
-  - Notes on speed choices
+  - A Polars script you can rerun on next month's file
+  - A result file, such as a CSV or Parquet file
+  - Notes on each step, with row counts before and after
+  - The first rows of the result, shown in the chat
+  - A list of assumptions, such as how blanks were handled
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - "Open an AI that can run Python and save files, such as Claude Code. Install Polars with pip install polars."
+  - Add the skill, then say where your file is and what you want, for example "total revenue per customer per month".
+  - Let it look at your columns first. Correct it if it misreads a column.
+  - Check the row counts in the notes. If rows were dropped, make sure you agree with why.
+  - Compare one total against your own spreadsheet. Then save the script and run it on next month’s file.
+  - "No code running? Paste the skill and ask for the script only. Run it yourself, then paste any error back."
+how_it_works:
+  - title: Look at the file
+    text: It reads the column names, types, row count and a few rows, and tells you what it sees.
+  - title: Plan the steps
+    text: It writes a lazy script, so Polars plans the whole job and reads only what it needs.
+  - title: Clean and filter
+    text: It fixes types, handles blanks and removes rows you asked to drop, counting rows at each step.
+  - title: Group and total
+    text: It groups, adds, joins or reshapes the data to answer your question.
+  - title: Check the result
+    text: It compares totals before and after, and shows the first rows.
+  - title: Save the script and result
+    text: It saves a rerunnable script, a new result file and notes, and leaves your original file alone.
+output_shape: |
+  analysis.py
+  Rerunnable Polars script, one comment above each step
+  result.csv or result.parquet
+  The answer table
+  Notes
+  <step>: <what it did>, rows <before> to <after>
+  Assumptions: <how blanks and odd values were handled>
+  Not done: <anything skipped>
+output_sample:
+  input:
+    - Your data file, such as CSV or Parquet
+    - The question you want answered
+    - Column names and known data problems (optional)
+  prerequisites:
+    - Python with Polars installed, which is free
+    - An AI that can run Python and save files
+  output:
+    - name: analysis.py
+      contains: A Polars script with a comment on each step, ready to rerun on a new file.
+    - name: result file
+      contains: The answer table, saved as a new CSV or Parquet file. Your original is untouched.
+    - name: Notes
+      contains: Each step, the row counts before and after, and the assumptions made.
+    - name: First rows
+      contains: The top rows of the result, shown in the chat so you can check them.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run Python, test the script and save the files for you.
+    - name: Polars
+      why: The free table tool the script is written in.
+  inputs:
+    - A header row and 20 sample rows if the file is private
+    - Your own spreadsheet total for one customer, to check against
+    - A second file, if you need a join
+terms:
+  - term: Polars
+    meaning: A free Python tool that works with tables of data quickly.
+  - term: Lazy mode
+    meaning: Polars plans the whole job first and reads only the columns it needs.
+  - term: Parquet
+    meaning: A compact file type for big tables, faster to read than CSV.

@@ -1,6 +1,6 @@
 new_slug: product-idea-risk-checker
 name: "Product idea risk checker"
-summary: "Paste your product idea and what you know. Get the four risks scored out of 100 and the cheapest first test."
+summary: "Check your product idea for risk before you build it. Paste what you know and get four risks scored out of 100, plus the cheapest first test."
 job: test-an-idea
 thinking: medium
 thinking_why: "It rates evidence against four fixed questions and picks the riskiest, which needs judgment but follows set steps."
@@ -17,6 +17,10 @@ when:
   - You have an idea and are about to spend weeks or money building it.
   - Someone has asked for a feature and you need to decide if it is worth doing.
   - A launch went badly and you want to see which risk you skipped.
+not_for:
+  - "You already sell the product and want to price it: ask your finance lead or run a simple price test with a few customers."
+  - "Your idea is fully proven and you only need a launch decision: use the Go or no-go launch checker."
+  - "You have a long feature list to sort, not one idea: use the Feature request screener."
 
 you_give:
   - The idea, the problem it solves and for whom
@@ -34,6 +38,27 @@ how_to_use:
   - Describe the idea in plain words and who it is for. Add what you know about each of the four risks.
   - Say who on your team would own each risk. Leave blank if you are alone.
   - Run the test it names before you build. Bring back the result.
+output_sample:
+  input:
+    - Your idea, the problem it solves and who it is for
+    - What you already know, such as customer words, tests, costs and limits
+    - Customer reviews or messages (optional)
+    - Your brand file, for rules on claims and fit (optional)
+  output:
+    - name: The problem
+      contains: The problem and the customer in plain words, written without naming your solution.
+    - name: The four risks
+      contains: Value, usability, feasibility and viability, each with evidence or unknown, a named owner and a score out of 25.
+    - name: Evidence score
+      contains: A score out of 100 for how strong your evidence is, not how good the idea is.
+    - name: The riskiest
+      contains: The weakest risk and the reason it matters most.
+    - name: The cheapest test
+      contains: A test that costs less than building, with its time and money, and the result that would change your plan.
+    - name: Missing
+      contains: Facts that would sharpen the ratings, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: States the problem

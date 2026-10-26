@@ -1,6 +1,6 @@
 new_slug: upsell-and-downsell-sequencer
 name: "Upsell and downsell sequencer"
-summary: "Give it prices and checkout steps. Get the offer order, a fallback for each no, and post-purchase rules."
+summary: "Plan the order of your upsell and downsell offers. Give it prices and checkout steps. You get a fallback for each no and post-purchase rules."
 job: make-offer
 thinking: medium
 thinking_why: "It sets an order of offers with rules and a few sums, so a mid-size model works if the honesty check is followed."
@@ -17,6 +17,10 @@ when:
   - You sell products with a range of tiers or add-ons and want to decide what a shopper sees first, second and third.
   - You want a fallback offer for shoppers who decline the big one, so you don't lose the sale.
   - You are adding a post-purchase offer and want rules, a discount and a margin floor.
+not_for:
+  - "You sell one product with no tiers or add-ons: there is nothing to order, so fix your product page first."
+  - "You need to pick price tiers or anchors: set those first with a pricing step, then bring them here."
+  - "You want add-on ideas for the cart and checkout: use a cart and checkout upsell planner, as this one sets order and fallbacks only."
 
 you_give:
   - Products with price and margin per item
@@ -36,6 +40,29 @@ how_to_use:
   - Say which apps handle post-purchase, and who could own it each week.
   - Read the honesty check first. Remove any offer that is not real before you build anything.
   - Test the top-down order against your current order, and watch returns for the fallback buyers.
+output_sample:
+  input:
+    - Your products with price and margin per item
+    - Your current cart, checkout and thank-you steps
+    - Your top sellers and what is bought with them
+    - Your weekly order count (optional)
+  prerequisites:
+    - A Shopify-style checkout or app that can show a step after payment, for the post-purchase part (optional)
+  output:
+    - name: OFFER ORDER
+      contains: What a shopper sees first and second on the product page, cart, checkout and after payment, capped at two or three offers.
+    - name: FALLBACKS
+      contains: A smaller real offer for each declined big offer, with the line that frames it as a step down.
+    - name: POST-PURCHASE RULES
+      contains: One offer per cart type, with a discount and a margin floor so the deal still leaves profit.
+    - name: MEASURE and TEST
+      contains: What to track for the big offer and the fallback, and how to test the new order against your current one.
+    - name: WATCH and OWNER
+      contains: Returns and cancellations to check for fallback buyers, and who looks at the offer each week.
+    - name: HONESTY CHECK
+      contains: A yes or no on whether each offer is real and each fallback is smaller.
+    - name: MISSING
+      contains: Any prices, margins, checkout steps or volume you did not give, marked and never invented.
 
 how_it_works:
   - title: Apply the contrast rule

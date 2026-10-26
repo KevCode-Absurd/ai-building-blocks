@@ -1,6 +1,6 @@
 new_slug: partner-deal-setup
 name: "Set up a partner deal both sides win from"
-summary: "Describe your offer. Get the partner's profit sum, fair terms in writing, an incentive check and supplier terms."
+summary: "Set up a partner deal or franchise terms that pay your partner fairly. Get their profit sum, a one-page term sheet, an incentive check and supplier terms."
 job: sell-and-negotiate
 thinking: high
 thinking_why: "The terms have to match the partner's profit sum and your own incentives, and a gap here costs real money. Give it your strongest model, then have a lawyer read the result."
@@ -19,6 +19,10 @@ when:
   - You want others to run your business, sell your product or use your name, and you want them to make money too.
   - Partners are leaving or struggling and you are not sure your fees are the reason.
   - A handshake deal has gone wrong, or you want to avoid one.
+not_for:
+  - "You are hiring an employee: use an employment contract from a lawyer or your local labour office, as this workflow is built for partners who run their own business."
+  - "You need a contract with one customer: ask a lawyer for a standard sales agreement, since this has no step for single-customer terms."
+  - "You want a signed contract: take the term sheet to a lawyer who knows franchise or agency law in your country, because this only writes a summary."
 
 you_give:
   - Your offer and every fee or required purchase the partner pays
@@ -35,6 +39,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your offer and list every payment from the partner to you. It works step by step and saves each result.
   - If step 1 calls the deal thin or unfair, change a fee and run the step again before you read the term sheet.
+output_sample:
+  input:
+    - Your offer and every fee or required purchase the partner pays
+    - The partner's expected sales, costs and hours (optional)
+    - What you buy from suppliers and what partners pay for it (optional)
+    - Your standards sheet or manual (optional)
+  prerequisites:
+    - An AI that can work with a folder of files, such as Claude Code or a Claude Project
+    - The handoff pack (a zip with HANDOFF.md and the skill files)
+  output:
+    - name: "Step 1: Partner's profit"
+      contains: The partner's year at your forecast and at sales a fifth lower, with pay per hour and a call of fair, thin or unfair.
+    - name: "Step 2: Term sheet"
+      contains: Who gives what, fixed and local standards, one fee table, changes in writing, exits and points for a lawyer.
+    - name: "Step 3: Incentives"
+      contains: Who is paid for what on your side, where it pulls against the partner, and a fix.
+    - name: "Step 4: Suppliers"
+      contains: What you need from suppliers, what you give back, a no-gifts rule, a savings split and a bad-week plan.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Tests that the partner makes money

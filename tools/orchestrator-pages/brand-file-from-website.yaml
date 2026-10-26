@@ -1,6 +1,6 @@
 new_slug: brand-file-from-website
 name: Build a brand file and brand guide from your website
-summary: Give it your website. Get a brand file, a founder interview to fill its gaps, and a brand guide.
+summary: Turn your website into a brand file, a founder interview plan and a brand guide with colours and fonts. Built to fix a missing brand file.
 job: brand-file
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to brief an AI, a designer or a freelancer and have nothing written down.
   - Your site says one thing and your team says another.
   - You want one place that holds your colours, fonts, voice and the claims you can make.
+not_for:
+  - "Your brand has no live website: use the Founder interview planner on its own to start your brand file from a call."
+  - "You only need a voice guide: use the Brand voice one-pager writer."
+  - "You already have a brand file and only want a guide for designers: use the Brand guide builder."
 you_give:
   - Your website address
   - Customer reviews, copied as written (optional)
@@ -29,6 +33,26 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. It works step by step and saves each result.
+output_sample:
+  input:
+    - Your website address
+    - Customer reviews, copied as written (optional)
+    - Your ad results (optional)
+    - Your product facts (optional)
+  prerequisites:
+    - An AI that can read files and work through the handoff folder
+    - The founder free for one call of about an hour
+  output:
+    - name: Brand file
+      contains: Eight files built from your site, with every gap marked unknown, disputed or inferred.
+    - name: Founder interview plan
+      contains: A ranked call list and a short written list, each question with why it matters and which file it fills.
+    - name: brand-guide.html
+      contains: A guide page you can open in a browser and print, built from the finished brand file.
+    - name: brand-tokens.md
+      contains: Your colours, the colour pairs checked for contrast, and your fonts.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Builds the brand file
     text: Uses the brand file builder to read your site, tag each fact, ask up to five questions and write the eight files.

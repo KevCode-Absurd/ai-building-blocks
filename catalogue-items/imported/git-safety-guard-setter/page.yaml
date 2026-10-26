@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sets up a fixed list of blocks.
 new_slug: git-safety-guard-setter
 name: Git safety guard setter
-summary: Say you want safe git. Get hooks that block risky commands like force
-  push and hard reset before they run.
+summary: Set up git safety hooks in Claude Code that block force push, reset --hard and other risky commands before they run. Pick one project or all.
 job: build-software
 headline: Git safety guard setter
-subhead: Your AI agent can no longer wreck your git history by accident. This
-  sets up a hook in Claude Code that checks each command before it runs, and
-  stops the risky ones.
+subhead: Your AI agent can no longer wreck your git history by accident. This sets up a hook in Claude Code that checks each command before it runs, and stops the risky ones.
 explain: |
   Your AI agent can no longer wreck your git history by accident. This sets up a hook in Claude Code that checks each command before it runs, and stops the risky ones.
 
@@ -18,19 +15,42 @@ when:
   - You want a hard stop on deleting branches or untracked files.
   - You are setting up a shared project and want the same safety for everyone.
   - You lost work once to a hard reset and never want that again.
+not_for:
+  - You do not use Claude Code. The hook only works there, so use your git host's branch protection rules instead.
+  - You want your AI to be able to push. This blocks every git push, so push yourself in a terminal after you review the changes.
+  - You need protection for people typing commands by hand. A hook only checks commands Claude runs, so ask a teammate to set up branch protection.
 you_give:
-  - "Scope choice: one project or all projects"
-  - Permission to edit your settings file
-  - Extra commands to block (optional)
-  - A shell that can run the script
+  - "Your choice: this project only, or all projects"
+  - Permission to edit your Claude Code settings file
+  - Extra commands to block or remove from the list (optional)
 you_get:
   - A hook script in the right folder
   - Settings updated with the hook
   - A list of blocked commands
   - A quick test that the guard works
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and change your Claude Code settings.
+  - Open Claude Code in the project you want to protect. This needs an AI that can run commands and edit files.
+  - Paste this skill and say you want git safety hooks.
+  - Choose this project only or all projects when asked.
+  - Say yes to any commands you want to add or remove from the blocked list.
+  - Check the test result. A working guard exits with code 2 and prints a BLOCKED message.
+  - If the guard blocks a command you need, run it yourself in a terminal after you review the change.
+output_sample:
+  input:
+    - "Your choice: this project only, or all projects"
+    - Permission to edit your Claude Code settings file
+    - Extra commands to block or allow (optional)
+  prerequisites:
+    - Claude Code, with an AI that can run shell commands and edit files
+    - A shell that can run the script
+  output:
+    - name: block-dangerous-git.sh
+      contains: The hook script that reads each command and blocks the risky git ones before they run.
+    - name: settings.json
+      contains: Your settings file with the new hook added next to any hooks you already had.
+    - name: Blocked list
+      contains: "The commands that are stopped: git push, reset --hard, clean -f, branch -D, checkout . and restore ."
+    - name: Custom patterns
+      contains: Any commands you asked to add or remove, edited into the script.
+    - name: Verify test
+      contains: A test run of a push command that should exit with code 2 and print a BLOCKED message.

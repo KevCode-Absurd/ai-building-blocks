@@ -1,6 +1,6 @@
 new_slug: winners-and-losers-ad-comparer
 name: "Winners and losers ad comparer"
-summary: "Paste your ads with their replies. Get them ranked, a checklist of what differs and what your winners share."
+summary: "Find what your best ads have in common. Give it results for five or more ads and get them ranked, with a rule to test and the counts behind it."
 job: check-ads
 thinking: high
 thinking_why: "It has to separate a real pattern from a place or season effect in a small set."
@@ -17,6 +17,10 @@ when:
   - You have results for five or more ads and have never looked at them side by side.
   - You keep hearing that something always works and want to see if it does for you.
   - You are about to brief new ads and want to copy a pattern, not a hunch.
+not_for:
+  - "You have one weak ad and want to know why it fell short: use the Ad pull diagnoser."
+  - "You only want the style of winning image ads: use the Winning image ad style finder."
+  - "You have fewer than five ads with results: wait for more results, or compare the few you have by eye."
 
 you_give:
   - "Results for each ad: replies or sales, with audience or spend"
@@ -30,11 +34,36 @@ you_get:
   - A rule to test and a lesson record
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your results, or attach the export.
-  - Add the ads or a short description of each if you have them.
-  - Run the test it writes on your next ad.
-  - Add the record to your file of lessons.
+  - Export your results from Meta Ads Manager, Google Ads, your email tool or your store. Include ad name, replies or sales, spend or audience, and date range.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill, or add it if your AI lets you.
+  - Paste your results or attach the export. No code or paid tool is needed.
+  - "Add the ads, or a short note on each: headline, offer, size and where it ran. More detail means more patterns."
+  - Check the counts behind each shared quality. A set under ten ads is a hint, not a rule.
+  - Run the rule as a test on your next ad, and save the lesson record.
+output_sample:
+  input:
+    - "Results for each ad: ad name, replies or sales, spend or audience size, and date range"
+    - "The ads themselves: headline, copy, picture, offer, size and where each ran (optional)"
+    - A diagnosis from the Ad pull diagnoser (optional)
+  prerequisites:
+    - Results for at least five ads, exported from your ad platform, email tool or store
+  output:
+    - name: RANKED
+      contains: Your ads in order from best to worst, each with a fair number and the base it uses.
+    - name: CHECKLIST
+      contains: One row per ad covering headline, reason, picture, copy, offer, size, medium and position, with blanks left blank.
+    - name: WHAT WINNERS SHARE
+      contains: Each quality that most winners have and few losers have, with counts for both groups.
+    - name: PLACE OR SEASON?
+      contains: A check on whether the pattern comes from the ad or from where and when it ran.
+    - name: RULE TO TEST
+      contains: One sentence rule with the counts, a rival explanation and a way to tell them apart.
+    - name: STRENGTH
+      contains: Whether the pattern is a hint or a rule, plus any ads that do not fit.
+    - name: LESSON RECORD
+      contains: Date range, set size, rule, evidence and next test, ready to save in your file of lessons.
+    - name: MISSING
+      contains: Every input that was not given, so no gap is filled with a guess.
 
 how_it_works:
   - title: Puts a fair number on each ad

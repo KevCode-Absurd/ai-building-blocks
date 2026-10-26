@@ -20,6 +20,12 @@ Unlike SQL (where you model data entities), or document stores (like MongoDB), t
 - **Performance Tuning**: Troubleshooting "hot partitions" or high latency in existing NoSQL systems.
 - **Microservices**: Implementing "database-per-service" patterns where highly optimized reads are required.
 
+## When Not to Use
+- SQL workloads, or a single-node database: use a relational design instead
+- Document stores such as MongoDB: they model differently (this skill covers Cassandra, ScyllaDB and DynamoDB)
+- You do not yet know your queries: list them first, since this design starts from them
+- A small app with low traffic: a plain relational database is usually simpler
+
 ## The Mental Shift: SQL vs. Distributed NoSQL
 
 | Feature | SQL (Relational) | Distributed NoSQL (Cassandra/DynamoDB) |
@@ -103,7 +109,7 @@ Before finalizing your NoSQL schema:
 
 -   [ ] **Access Pattern Coverage:** Does every query pattern map to a specific table or index?
 -   [ ] **Cardinality Check:** Does the Partition Key have enough unique values to spread traffic evenly?
--   [ ] **Split Partition Risk:** For any single partition (e.g., a single user's orders), will it grow indefinitely? (If > 10GB, you need to "shard" the partition, e.g., `USER#123#2024-01`).
+-   [ ] **Split Partition Risk:** For any single partition (e.g., a single user's orders), will it grow without limit? If so, split ("shard") it, e.g., `USER#123#2024-01`. Scope of limits: DynamoDB caps an item collection at 10 GB only for tables with a local secondary index. Cassandra has no hard cap, but very large partitions slow reads and repairs. Check real sizes with CloudWatch (DynamoDB) or `nodetool tablehistograms` (Cassandra).
 -   [ ] **Consistency Requirement:** Can the application tolerate eventual consistency for this read pattern?
 
 ## Common Anti-Patterns
@@ -112,11 +118,25 @@ Before finalizing your NoSQL schema:
 ❌ **Hot Keys:** Putting all "Monday" data into one partition.
 ❌ **Relational Modeling:** Creating `Author` and `Book` tables and trying to join them in code. (Instead, embed Book summaries in Author, or duplicate Author info in Books).
 
-## Example
+## Output Format
 
-**User request:**
+Reply with these sections, in order:
 
-> Use @nosql-expert for this task: Expert guidance for distributed NoSQL databases (Cassandra, DynamoDB).
+1. **Inputs**: the database (Cassandra, ScyllaDB or DynamoDB), the queries, expected size and traffic, and anything MISSING.
+2. **Access patterns**: a numbered list, one line each, such as "Get orders for a user, newest first".
+3. **Table and key design**: one table, or one per pattern. For each, the partition key, sort or clustering key, and which patterns it serves. A DynamoDB single-table design lists PK and SK values like the USER# and ORDER# rows above.
+4. **Hot partition check**: for each key, how many distinct values it has, how big one partition may grow, and any split plan.
+5. **Trade-offs**: copied data to keep in step, eventual consistency, and extra storage.
+6. **Next steps**: how to test the design before launch.
+
+If the queries, the database or the scale is missing, ask once, then mark it MISSING. Never invent traffic numbers, sizes or prices. If the user gives no numbers, say that the hot-spot check is by key type only and needs real numbers.
+
+## Next Steps
+
+- Load-test the key choice with realistic traffic, not an even test
+- Check partition or item collection sizes after real data has been loaded
+- Re-check the design whenever a new query is added, since new queries often need a new table or index
+- Treat this as a design to review, and have someone who runs your database look it over
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

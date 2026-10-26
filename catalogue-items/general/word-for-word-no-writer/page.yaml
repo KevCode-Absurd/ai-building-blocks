@@ -1,6 +1,6 @@
 new_slug: word-for-word-no-writer
 name: Word-for-word no writer
-summary: Paste the request you must turn down and why. Get a no you can say, with another way forward.
+summary: Write a no you can say out loud. Paste the request and your real reasons. You get a short script with the reasons first and another way forward.
 job: lead-people
 thinking: low
 thinking_why: It reshapes your reasons into a short script with few judgement calls.
@@ -11,6 +11,10 @@ when:
   - You must refuse a raise, a day off, a project or a favour.
   - You keep dodging the answer because you dread the talk.
   - You want words you can say out loud in two minutes.
+not_for:
+  - "You need a longer plan for a hard talk with many parts: use the Hard no planner."
+  - "The matter is a legal, HR or safety dispute: talk to a lawyer, your HR team or the right safety lead before you reply."
+  - "You have not decided yet, or you can still change your answer: take time to decide first, then come back."
 you_give:
   - The request, who made it and when
   - Your real reasons
@@ -25,6 +29,20 @@ how_to_use:
   - Under it, paste the request, your real reasons and what you can offer instead.
   - Send it and read the result.
   - Ask for a spoken version in short lines if you will say it aloud.
+output_sample:
+  input:
+    - The request, who made it and when
+    - Your real reasons for saying no
+    - What you can offer instead (optional)
+  output:
+    - name: THE NO
+      contains: The request restated, your real reasons, the no in one sentence and a way forward, in under 150 words.
+    - name: LIKELY GOAL
+      contains: A guess at what the person really wants, marked as a guess.
+    - name: FAIRNESS
+      contains: One line on whether you would give the same answer to anyone who asked.
+    - name: MISSING
+      contains: Any gap, such as a missing alternative, marked so nothing is made up.
 how_it_works:
   - title: Hear them first
     text: The request is said back in your words, with what they need.

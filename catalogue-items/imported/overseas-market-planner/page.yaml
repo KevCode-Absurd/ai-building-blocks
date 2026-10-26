@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Tax, shipping and law choices differ by country and carry real cost.
 new_slug: overseas-market-planner
 name: Overseas market planner
-summary: Name your store and goals. Get ranked countries, shipping and tax
-  costs, and a phased plan to sell abroad.
+summary: Plan how to sell abroad. Give it your store and goals. You get ranked countries, shipping and tax costs, and a phased plan for your next market.
 job: run-your-store
 headline: Overseas market planner
-subhead: Name your store and goals. Get ranked countries, shipping and tax
-  costs, and a phased plan to sell abroad. Bring your store and platform. Use
-  the result to plan your next step.
+subhead: Name your store and goals. Get ranked countries, shipping and tax costs, and a phased plan to sell abroad. Bring your store and platform. Use the result to plan your next step.
 explain: |
   A ranked list of countries to sell in next, what shipping and tax will cost, and a phased plan to get there.
 
@@ -18,6 +15,10 @@ when:
   - You must pick your next three countries.
   - You are losing money on shipping and returns overseas.
   - You need to understand VAT and customs before shipping to the EU.
+not_for:
+  - "You sell only in your home country and have no plans to ship abroad: use your platform's own growth tools or a local adviser."
+  - "You need a final tax ruling or a VAT filing: ask a tax adviser or your country's tax office, since rates and limits change."
+  - "You sell to other businesses (B2B) with contracts and freight: use a trade adviser or a freight forwarder."
 you_give:
   - Your store and platform
   - Products and monthly sales
@@ -30,8 +31,38 @@ you_get:
   - Tax and duty overview
   - A phased expansion roadmap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Tell it your store, platform, products, monthly sales and where you ship from.
+  - Add the countries you are considering (optional) and your goals.
+  - Turn on web search if your AI has it. This helps it check current tax and shipping facts.
+  - Read the country scores first. Check every tax and duty figure with your tax adviser or the official tax office before you act.
+  - Start with the Next Steps list, then work through the roadmap one phase at a time.
+output_sample:
+  input:
+    - Your store, products and platform
+    - Your monthly sales and where you ship from now
+    - Countries you are thinking about (optional)
+    - Your goals for selling abroad
+  prerequisites:
+    - An AI that can search the web, so it can check current rates and rules
+  output:
+    - name: Business Snapshot
+      contains: Your product, platform, sales, current markets and target markets in one table.
+    - name: Market Selection Scorecards
+      contains: Each country scored on 8 weighted points, with a combined score for ranking.
+    - name: Recommendation
+      contains: Your countries in ranked order, with the reason for each placing.
+    - name: Expansion Readiness Check
+      contains: A checklist showing what is ready and what is still missing before you start.
+    - name: Market Deep Dives
+      contains: "For each country: tax, fulfilment, payments, language, rivals and risks."
+    - name: Landed Cost Analysis
+      contains: Full cost per order in each country, and how margin compares with home.
+    - name: Expansion Roadmap
+      contains: Four phases over 12 months, each with actions and milestones.
+    - name: KPIs & Tracking
+      contains: Sales, orders, margin and other measures, with targets at months 3, 6 and 12.
+    - name: Budget Estimate
+      contains: Setup costs and monthly running costs for each country.
+    - name: Next Steps
+      contains: What to do this week.

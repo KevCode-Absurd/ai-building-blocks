@@ -6,26 +6,27 @@ promise: "Write and change project code with an AI agent inside your editor."
 use_cases: [code, build-apps]
 categories: [coding]
 what_it_does:
-  - Writes and changes code across several files from a plain request.
-  - Suggests the next lines as you type, with unlimited completions on the free plan.
-  - Makes quick inline edits to a selection.
-  - Runs cloud agents on paid plans.
-  - Lets you choose between several AI models, including open-source ones.
+  - "Is being renamed Devin Desktop. windsurf.com now sends you to devin.ai/desktop, which says the new name replaces Windsurf and keeps the full editor (checked 26 Oct 2026)."
+  - "Runs coding agents on tasks you set, on your machine or in Devin Cloud. It shows several agent sessions in one view (checked 26 Oct 2026)."
+  - "Suggests your next edit as you type. The Free plan has unlimited Tab completions and unlimited inline edits (checked 26 Oct 2026)."
+  - "Shows changes in a built-in diff review, so you read them before you keep them (checked 26 Oct 2026)."
+  - "Lets you pick from several AI models on paid plans, including open-source ones (checked 26 Oct 2026)."
 benefits:
-  - Hand a feature to the agent and review the change instead of writing it.
-  - Start free with a light daily quota before you pay.
+  - Hand a feature to an agent and review the change instead of writing it.
+  - Start free with a light quota before you pay.
   - Keep one editor for quick edits and bigger agent jobs.
 best_for:
   - Developers who want an AI editor and are happy to try a newer one.
   - Solo builders and small teams with a real codebase.
   - Teams that need admin and billing controls on a paid plan.
 not_for:
-  - Anyone who wants an app with no code visible (try Lovable or Bolt).
-  - "Buyers who need stable, published plans before choosing a paid editor."
+  - "Anyone who wants an app with no code visible. Try Lovable or Bolt."
+  - "Windows or Linux users. The download link we saw on 26 Oct 2026 listed only macOS, so check your system first."
+  - "Buyers who need stable, published plans before choosing a paid editor. The product is mid-rename."
 pricing:
   model: freemium
   from: US$20 per month
-  note: Free plan, then Pro at US$20 per month and Max at US$200 per month, per a July 2026 article. Windsurf's own pricing page now redirects to Devin and could not be read, so check the maker's site.
+  note: "Checked 26 Oct 2026 on Devin's pricing page, which windsurf.com now redirects to. Free is US$0 with a light quota, unlimited Tab completions and unlimited inline edits. Pro is US$20 a month with higher quotas, more models and access to Devin Cloud. Max is US$200 a month with much higher quotas. Teams is US$80 a month for the team plus US$40 a month for each full developer seat. Enterprise is by quote. Paid plans refresh their usage allowance daily and weekly, and the page gives no exact amounts. The page lists these as Devin plans and does not name Windsurf, so confirm your plan after you install."
 works_with:
   - claude
   - chatgpt
@@ -37,7 +38,31 @@ blocks:
   - mcp-config-version-checker
   - react-app-structure-planner
 alternatives: [cursor, claude-code, github-copilot, codex]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to devin.ai/desktop, the page windsurf.com now sends you to. Download the app, or sign up at app.devin.ai/auth/signup (checked 26 Oct 2026). The download listed was macOS only."
+  - "Open a project folder you already have in version control, so you can undo anything."
+  - "Ask the agent for one small change, such as adding a field to a form. Name the file or screen if you can."
+  - "Read the proposed changes in the diff review before you accept them. Run your own tests or load the page to check it works."
+  - "Commit what you keep, then try a bigger task."
+needs:
+  - "A computer the app supports. Only macOS was listed on 26 Oct 2026."
+  - "A free account to start. Paid plans add quota and models."
+  - "A code project in a folder, ideally in Git so you can undo changes."
+  - "A GitHub account, if you want to connect your repository (optional)."
+  - "Some ability to read code. The agent changes real files."
+example:
+  task: "Ask the agent to add an email field to a sign-up form in an existing project."
+  cost: "The Free plan has a light quota and the paid plans refresh a usage allowance daily and weekly (checked 26 Oct 2026). The pricing page gives no amounts, so we cannot say how many tasks a plan covers."
+  reply: "A proposed change to the files it needs, shown in a diff for you to review and accept or reject. Our example shows the shape only, not a measured result. Check that it runs before you commit."
+not_verified:
+  - "That the agent edits several files at once from a plain request. The pages we read name agent sessions but do not say this."
+  - "Cascade, the agent's older name. Nothing on the current pages mentions it."
+  - "Windows and Linux support. Only macOS was listed. Windsurf for JetBrains is mentioned as a separate product."
+  - "Exact usage quotas on any plan. The pricing page gives none."
+  - "That the plans on Devin's pricing page apply to Windsurf accounts. The page names only Devin."
 sources:
-  - https://windsurf.com/pricing
-  - https://automationatlas.io/answers/windsurf-pricing-explained-2026/
+  - https://devin.ai/desktop
+  - https://devin.ai/pricing
+  - https://windsurf.com

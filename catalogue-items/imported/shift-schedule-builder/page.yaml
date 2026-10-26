@@ -2,38 +2,100 @@ thinking: medium
 thinking_why: It fits cover and staff rules together.
 new_slug: shift-schedule-builder
 name: Shift schedule builder
-summary: Give it your busy hours and staff limits. Get a shift plan that covers
-  demand and respects time-off rules.
+summary: Build a shift schedule that covers your busy hours within your staff limits, with a coverage and cost check for each option before you publish.
 job: plan-supply-chain
 headline: Shift schedule builder
-subhead: A shift plan that puts the right number of people on the floor at the
-  right hours, without breaking your time-off and overtime rules. That means
-  fewer short-staffed peaks and less money spent on idle labour.
+subhead: Give it your busy hours, headcount and rules such as days in a row and overtime. It matches staff to demand hour by hour, tests each rule, and shows coverage and cost for each option. You get a schedule to review before you publish it.
 explain: |
-  A shift plan that puts the right number of people on the floor at the right hours, without breaking your time-off and overtime rules. That means fewer short-staffed peaks and less money spent on idle labour.
+  A rota built from habit leaves some hours short-staffed and others full of idle people. Overtime fills the gaps, and it costs more. This shift schedule builder starts from your demand and builds the schedule around it.
 
-  It starts by asking about demand (order volume, peak days, tasks, skills needed) and supply (headcount, part-timers, availability, shift lengths). Then it lists your limits: opening hours, minimum staffing, maximum days in a row, break rules and overtime costs. It matches labour to demand hour by hour, checks every rule, and shows the cost and coverage of the plan so you can compare options before you publish it.
+  It asks about demand (order volume, peak days, tasks, skills) and supply (headcount, part-timers, availability, shift lengths). Then it lists your limits: opening hours, minimum staffing, days in a row, breaks and overtime pay. It matches people to demand by hour, tests every rule you gave, and shows coverage and cost so you can compare options.
+
+  It plans from your rules and does not know your local employment law. It only ticks the rules you gave it, lists the rest as not checked, and asks a manager to review the plan before staff see it.
 when:
-  - Your warehouse or shop has busy and quiet hours and the rota no longer fits
-    them.
-  - You are paying too much overtime and want to see where the gaps really are.
-  - You need a plan for peak season that still respects days off and break rules.
-  - You are switching from 8-hour to 10-hour shifts and want to test the effect
-    first.
+  - Your warehouse or shop has busy and quiet hours and the rota no longer fits them.
+  - You pay too much overtime and want to see where the gaps are.
+  - You need a peak-season plan that still respects days off and breaks.
+  - You are moving from 8-hour to 10-hour shifts and want to test the effect first.
+not_for:
+  - Your team has fewer than about 5 people. A simple rota in a spreadsheet is enough.
+  - You need a fair rotation for nights and weekends, or a swap policy. Use the shift schedule planner.
+  - You need a legal check of rest or overtime rules. Ask an employment lawyer or your union rep.
 you_give:
-  - Demand by day and hour, or a rough pattern
-  - Headcount by role and contract type
+  - Demand by day and hour, or a rough busy and quiet pattern
+  - Headcount by role and contract type, from your staff list
   - Availability and time-off rules
   - Opening hours and minimum staffing
   - Overtime and labour costs (optional)
 you_get:
-  - A shift plan by day and role
+  - A shift schedule by day and role
   - A coverage check against demand
-  - Rule-compliance notes
+  - A rule-by-rule list: met, broken or not checked
   - A cost comparison of schedule options
+  - A short list of what a manager must review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Paste your demand pattern, staff list, availability, shift lengths and rules. A spreadsheet export works.
+  - Add pay rates if you want costs. Leave them out if you do not.
+  - Answer its questions. It marks anything you cannot answer as missing.
+  - Read the rule list. Any rule marked not checked is yours to check by hand.
+  - Have a manager review the plan, and check local employment law, before you share it with staff.
+  - For more than about 10 people, use an AI that can run Python. Small teams work in a plain chat.
+how_it_works:
+  - title: Collect demand and supply
+    text: It asks for demand by hour, headcount, skills, availability and shift lengths.
+  - title: List your rules
+    text: It lists opening hours, minimum staffing, days in a row, breaks and overtime pay.
+  - title: Match staff to demand
+    text: It fills each hour with enough people, using a quick method or an optimizer for larger teams.
+  - title: Test every rule
+    text: It checks the finished plan against each rule you gave, one by one, and marks any it could not test.
+  - title: Compare options
+    text: It shows coverage and cost for each option so you can pick before you publish.
+output_shape: |
+  Workforce Schedule Report
+  Summary: <day>, <shift>, <employees>, <hours>, <demand>, <gap>
+  Assignments: <person>, <role>, <day>, <shift>, <total hours>
+  Cost: <regular>, <overtime>, <temporary>, <total> (if pay rates given)
+  Metrics: <utilization>, <overtime share>, <coverage>
+  Rule check: <rule>, <met, broken or not checked>
+  Options: <option>, <coverage>, <cost>, <trade-off>
+output_sample:
+  input:
+    - Demand by day and hour, or a rough pattern
+    - Headcount by role and contract type
+    - Availability and time-off rules
+    - Opening hours, minimum staffing and your rules
+    - Pay and overtime rates (optional)
+  prerequisites:
+    - An AI that can run Python, for larger teams (optional)
+  output:
+    - name: Schedule summary
+      contains: For each day and shift, staff count, hours scheduled, demand and any coverage gap.
+    - name: Employee assignments
+      contains: Each person's shifts for the week, with start and end times and total hours.
+    - name: Cost analysis
+      contains: Regular, overtime and temporary hours, rates and total cost, if you gave pay rates.
+    - name: Performance metrics
+      contains: Utilization, overtime share, coverage and cost per hour, worked from your inputs.
+    - name: Schedule compliance
+      contains: Each rule you gave, marked met, broken or not checked.
+    - name: Options compared
+      contains: Coverage, cost and the main trade-off for each schedule option.
+works_best_with:
+  tools:
+    - name: ChatGPT with data analysis, or Claude with code execution
+      why: They can run the scheduling code and check every rule on the result.
+    - name: Any good chat AI
+      why: Fine for a small team and one week.
+  inputs:
+    - Last month of orders or footfall by hour
+    - Each person's availability and preferred shifts
+    - Your written rules from the contract or union agreement
+terms:
+  - term: Coverage
+    meaning: Whether you have enough people on shift for the work in each hour.
+  - term: Utilization
+    meaning: How much of the paid hours match real work.
+  - term: Overtime
+    meaning: Hours worked beyond the normal limit, usually paid at a higher rate.

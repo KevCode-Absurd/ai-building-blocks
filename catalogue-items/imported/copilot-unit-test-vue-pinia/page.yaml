@@ -2,17 +2,52 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-unit-test-vue-pinia
 name: Vue and Pinia test writer
-summary: Share your Vue components and stores. Get focused tests for user
-  behavior, state and failure cases.
+summary: Write Vue 3 unit tests for your components, composables and Pinia stores. Get focused tests for user actions, state and edge cases.
 job: test-and-fix-code
 headline: Vue and Pinia test writer
-subhead: Share your Vue components and stores. Get focused tests for user
-  behavior, state and failure cases. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Share your Vue 3 component, composable or Pinia store. Your AI writes or reviews unit tests that check what users see and what the store does. You get test code and a short note on how Pinia was set up.
+not_for:
+  - You use plain JavaScript or Vue 2. Use a testing guide made for your setup instead.
+  - You want to test full browser flows, like a user going through checkout. Use Playwright or Cypress instead.
+  - You want your app code fixed or rewritten. Ask your AI to edit the code directly, since this only writes and reviews tests.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your component, composable or store code. Add your test file if you want it reviewed or extended.
+  - Say if you want to create, update or review tests.
+  - Read the Pinia strategy note and any assumptions your AI lists.
+  - Copy the tests into your project and run them with Vitest. This step happens on your computer, not in the chat.
+  - Add tests for any coverage gaps the answer lists.
+output_sample:
+  input:
+    - Your Vue component, composable or Pinia store code
+    - Your existing test file to review or extend (optional)
+    - Your Vitest and Pinia versions (optional)
+    - What the code should do, if it is not clear from the code (optional)
+  prerequisites:
+    - Run the finished tests yourself with Vitest in your own project
+  output:
+    - name: Test code
+      contains: Finished Vitest tests for your component, composable or store, with names that describe the behavior being checked.
+    - name: Pinia strategy note
+      contains: A short note on how Pinia was set up in the tests and why that setup was chosen.
+    - name: Assumptions
+      contains: Any guess your AI made when the safest test setup was not clear.
+    - name: Review findings (review only)
+      contains: Problems found in existing tests, such as brittle selectors or checks tied to internal code.
+    - name: Coverage gaps
+      contains: Behaviors that still have no test, so you know what to add next.
+when:
+  - You built a new Vue component and need tests before you merge it.
+  - A Pinia store has no tests and you want to cover its state changes.
+  - Your current tests break whenever you rename something inside a component.
+  - You want a second opinion on tests a teammate wrote.
+you_give:
+  - The code of the component, composable or store to test
+  - Your existing test file to review or extend (optional)
+  - Your Vitest and Pinia versions (optional)
+  - A line on what the code should do (optional)
+you_get:
+  - Finished Vitest tests that check behavior, not inner code
+  - A short note on how Pinia was set up and why
+  - Clear test names that say what each test proves
+  - A list of gaps and fragile checks when you ask for a review

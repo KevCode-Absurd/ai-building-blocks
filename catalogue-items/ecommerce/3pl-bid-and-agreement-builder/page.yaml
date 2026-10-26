@@ -1,6 +1,6 @@
 new_slug: 3pl-bid-and-agreement-builder
 name: "3PL bid and agreement builder"
-summary: "Give it forecasts and product sizes. Get a request for pricing and agreement terms to demand."
+summary: "Build a 3PL request for pricing and compare warehouse bids by cost type. Give it forecasts and product sizes. Get terms to demand in your agreement."
 job: plan-supply-chain
 thinking: medium
 thinking_why: "It writes a request and compares bids by cost type, which a mid-range model does well."
@@ -17,6 +17,10 @@ when:
   - You are moving to your first 3PL or replacing one that is slow or loses stock.
   - You have bids that look different and cannot tell which is cheaper.
   - You want a pick-time promise and a penalty before peak season.
+not_for:
+  - "You dropship straight from the factory: you have no warehouse to pick, so talk to your supplier about shipping terms instead."
+  - "You want to check a supplier or factory before ordering: use the Supplier shortlist vetter."
+  - "You need a signed contract: ask a lawyer to draft it, because this only lists terms to ask for."
 
 you_give:
   - A 12-month forecast and your order history
@@ -35,6 +39,27 @@ how_to_use:
   - Send the request to at least three 3PLs and paste their bids back in.
   - Visit the top two with the checklist if you can.
   - Ask a lawyer to check the agreement before you sign.
+output_sample:
+  input:
+    - Your 12-month forecast and order history
+    - Product sizes and weights
+    - Ship-to countries and carrier needs
+    - Bids you already have (optional)
+  output:
+    - name: Request for pricing
+      contains: A message to send to several 3PLs with your forecast, products, countries and carriers, asking for each price separately.
+    - name: Site visit checklist
+      contains: Questions to ask and things to look for on the warehouse floor, including whether they let you in.
+    - name: Bid comparison
+      contains: A monthly estimate for each 3PL, split into pick and pack, inbound, outbound and storage, then the total.
+    - name: Agreement terms to demand
+      contains: A pick-on-time promise with a penalty, stock counts twice a year, barcode scanning and itemised pricing.
+    - name: Your own tracking
+      contains: A delivered-on-time check, with a look into picking or the courier if it falls under 95 percent.
+    - name: Check with a lawyer
+      contains: A reminder to have a lawyer read any agreement before you sign.
+    - name: Checks missed
+      contains: Any checks that failed, or none, plus a list of inputs marked MISSING.
 
 how_it_works:
   - title: Writes the request

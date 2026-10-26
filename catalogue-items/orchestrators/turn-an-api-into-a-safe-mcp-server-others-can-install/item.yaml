@@ -12,10 +12,10 @@ outputs:
   - {type: deploy_url}
 uses: [api-to-mcp-server-builder, mcp-server-sign-in-builder, mcp-server-hardener, mcp-server-publisher]
 steps:
-  - {uses: api-to-mcp-server-builder, note: "Builds the first version of the server from your API spec."}
-  - {uses: mcp-server-sign-in-builder, note: "Adds OAuth sign-in to the server you saved."}
-  - {uses: mcp-server-hardener, note: "Reviews the server with its sign-in in place and lists what to fix before anyone installs it."}
-  - {uses: mcp-server-publisher, note: "Hosts and packages the hardened server so others can install it."}
+  - {uses: api-to-mcp-server-builder, note: "Builds the first version of the server from your API spec and hands that server project to step 2."}
+  - {uses: mcp-server-sign-in-builder, note: "Adds OAuth sign-in to the server project from step 1 and hands the changed project to step 3."}
+  - {uses: mcp-server-hardener, note: "Reviews the server with its sign-in in place and lists what to fix before anyone installs it. Hands the security report to step 4."}
+  - {uses: mcp-server-publisher, note: "Hosts and packages the hardened server so others can install it. Uses the server project with the fixes from step 3 applied, and the security report."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/turn-an-api-into-a-safe-mcp-server-others-can-install/skeleton.yaml

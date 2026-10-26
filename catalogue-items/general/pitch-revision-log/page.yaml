@@ -1,6 +1,6 @@
 new_slug: pitch-revision-log
 name: "Pitch revision log"
-summary: "Paste your pitch and each no you heard. Get the doubts ranked, a revised pitch and the next advice questions to ask."
+summary: "Turn the nos you heard into a pitch revision log: ranked doubts, a fix-now list and a rewritten pitch that opens with the problem and market."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It sorts doubts and rewrites a pitch from them, with a fixed method."
@@ -17,6 +17,10 @@ when:
   - You have pitched five or more times and heard a mix of reasons.
   - Your pitch changes every week and you cannot tell if it is getting better.
   - You are about to ask for money or support again and want the doubts handled first.
+not_for:
+  - "You have not pitched yet and have no nos to learn from: talk to likely customers first, then come back."
+  - "You need a short answer to one tough objection: use the Hardest objections answer writer."
+  - "You want a pitch written from scratch for a new idea: ask your AI for a first draft, then bring it here after a few meetings."
 
 you_give:
   - Your current pitch as text
@@ -34,6 +38,29 @@ how_to_use:
   - Mark any doubt you heard more than once.
   - Use the revised pitch in your next meeting and start by asking for advice.
   - Paste in the next result and run it again.
+output_sample:
+  input:
+    - Your current pitch as text
+    - Each no you heard, with who said it and what they said
+    - Your market and traction figures (optional)
+    - Notes from the meetings (optional)
+  output:
+    - name: Doubt log
+      contains: Each no, the real doubt behind it in the listener's meaning, its group and how many times you heard it.
+    - name: Fix now
+      contains: Doubts you can answer with a pitch change or proof you already have, and the change to make.
+    - name: Fix later
+      contains: Doubts that need time, results or a new team member, and what would answer each one.
+    - name: Revised pitch
+      contains: Your pitch rewritten with the problem and the size of the market in the first minute.
+    - name: Slides kept and cut
+      contains: Each slide marked keep or cut, with the reason.
+    - name: Rivals, reframed
+      contains: Each big competitor described by the problem and how you earn, not by their size.
+    - name: Next meeting
+      contains: One advice question to open your next meeting.
+    - name: Missing and checks missed
+      contains: Facts you did not give, and any check the AI could not pass.
 
 how_it_works:
   - title: Logs each no

@@ -1,6 +1,6 @@
 new_slug: turn-an-api-into-a-safe-mcp-server-others-can-install
 name: Turn an API into a safe, installable MCP server
-summary: Give it an API spec. Get an MCP server with sign-in, a security review and a package.
+summary: "Turn an API into a safe MCP server: give it your API spec and get a server with sign-in, a security review and a package others can install."
 job: connect-tools
 thinking: high
 thinking_why: It builds, secures and ships a server across four skills. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want your AI, or other people's, to use your API through MCP.
   - You built a quick MCP server and now others need to connect to it.
   - You are about to publish a server and want it checked first.
+not_for:
+  - "You only need a quick MCP server for your own one-off script: use the API to MCP server builder skill on its own."
+  - "You already have a server and only want it checked: use the MCP server hardener skill on its own."
+  - "You only want to add sign-in to a server you already have: use the MCP server sign-in builder skill on its own."
 you_give:
   - Your API spec (OpenAPI or similar), or the API code
   - Which calls should be exposed, and which must not be
@@ -29,6 +33,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Use a test account and test data for the API while you build.
   - Do all three of your steps. Each one makes the next check read the real code.
+output_sample:
+  input:
+    - Your API spec (OpenAPI or similar) or the API code
+    - The calls to expose, and the ones that must stay private
+    - Who may connect, and how they sign in
+    - Where you want to host it (optional)
+  prerequisites:
+    - An AI that can open a folder of code and run it
+    - A test account and test data for your API
+    - A hosting account for step 4 (it may cost money, depending on where you host)
+  output:
+    - name: step-01-api-to-mcp-server-builder.md
+      contains: The server code, the list of exposed calls, the checked tool definitions and how the server runs.
+    - name: step-02-mcp-server-sign-in-builder.md
+      contains: The sign-in model chosen, the details clients look for, the token checks and the result of the flow test.
+    - name: step-03-mcp-server-hardener.md
+      contains: The attack risks found in the connection, sign-in, permissions and logging, with fixes ranked riskiest first.
+    - name: step-04-mcp-server-publisher.md
+      contains: The hosting choice, the install package, health checks, logging, the version plan and the deploy url.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the server
     text: Reads the API spec, picks the calls to expose, generates the server, checks each tool definition and schema and picks how it will run.

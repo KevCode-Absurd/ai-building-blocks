@@ -1,7 +1,7 @@
 new_slug: cash-funded-buyback-eps-bridge
 name: Cash-funded buyback EPS bridge
 headline: Cash-funded buyback EPS bridge
-summary: Separate share-count accretion from the earnings lost when cash funds a buyback.
+summary: Work out EPS before and after a cash-funded buyback, and see how much share-count accretion is offset by the lost cash earnings.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need before-and-after EPS and a cash opportunity-cost reconciliation.
   - You work on public equity and share counts and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You fund the buyback with debt or have costs: build a separate debt-funding schedule with your finance lead, because this skill only covers cash."
+  - "The buyback happens part way through the period: use a separate timing schedule built with your analyst or in your own spreadsheet."
+  - "You want to know if the buyback is good value or should happen: ask a qualified adviser, because this skill does not recommend or run a repurchase."
 you_give:
   - Ordinary profit, opening shares, cash-funded repurchase amount, execution price, timing and after-tax return forgone on cash.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,28 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your ordinary profit and opening share count
+    - The cash spent on the buyback and the price paid per share
+    - The timing of the buyback and the after-tax return lost on that cash
+    - "Reporting date, currency and scale (optional: your accounting basis and fiscal calendar)"
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Scope and dated sources
+      contains: The mandate, whether it is a scenario or a past review, and the dated sources used.
+    - name: Inputs and assumptions
+      contains: Every input with its source, date, currency and scale, kept apart from assumptions.
+    - name: Model calculations and reconciliations
+      contains: Shares retired, after-tax earnings lost, and the bridge from old EPS to new EPS.
+    - name: Actual file verification
+      contains: "The workbook checks that ran: recalculation, a changed input, formula review and reopening the saved file."
+    - name: "MISSING: lines"
+      contains: Each input or fact that was not supplied, left open and never filled in.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 how_it_works:
   - title: 1. Check the mandate is an illustrative scenario or historical review; distinguish announced authorization from actual executed repurchases
     text: Check the mandate is an illustrative scenario or historical review; distinguish announced authorization from actual executed repurchases.

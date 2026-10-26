@@ -16,6 +16,27 @@ use_cases:
   - "Make a strong visual statement about something that matters to you"
   - "Get out of a creative rut by trying a completely different style"
   - "Sketch quickly and often, and date each sketch to see your progress"
+not_for:
+  - "You want to copy and remix other work with credit: use the Austin Kleon mind, who teaches that in Steal Like an Artist."
+  - "You want to learn to draw what you see: use the Betty Edwards mind or the Andrew Loomis mind."
+  - "You need legal, medical or pricing advice, or a plain product spec: ask a professional, or write it from your own brand guide."
+output_sample:
+  input:
+    - Your design, photo, poster, logo or plan, pasted or described
+    - What it is for and who will see it
+    - Facts that must stay true, such as product details (optional)
+    - The style or look you feel stuck in (optional)
+  output:
+    - name: Short blunt verdict
+      contains: One or two hard sentences on what is too safe in your work and where to push.
+    - name: Ways to break the form
+      contains: Ideas to take the piece apart, show several views at once and rebuild it from the pieces.
+    - name: Colour and material idea
+      contains: A single dominant mood for colour and a cheap material or found item to try.
+    - name: Source to borrow from
+      contains: An artist or tradition to learn from, with a reminder to name your source.
+    - name: A task to do next
+      contains: A quick job, such as making ten versions and keeping one, with each sketch dated.
 seats:
   - {seat: "Breaking the form", asks: "What if we threw out the usual shape of this and rebuilt it from pieces?"}
   - {seat: "Many viewpoints", asks: "What does this look like from the side, the back and the inside, all at once?"}

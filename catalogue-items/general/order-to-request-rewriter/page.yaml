@@ -1,6 +1,6 @@
 new_slug: order-to-request-rewriter
 name: "Order-to-request rewriter"
-summary: "Paste a message full of orders. Get each turned into a question or request with their gain and an easy first step."
+summary: "Turn bossy messages into requests people say yes to. Paste your draft and get each order rewritten with their gain and a small first step."
 job: lead-people
 thinking: medium
 thinking_why: "It must judge which lines are orders and what gain is real, but the rewrite steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "You are about to send a message that is mostly instructions."
   - "A team keeps doing the bare minimum when you tell them what to do."
   - "You need someone to do a chore they dislike."
+not_for:
+  - "You need to discipline, dismiss or warn someone: write a plain, dated, written notice and ask HR or a lawyer to check it."
+  - "The message holds safety-critical steps: keep a clear, exact instruction and have a second person confirm it was read."
+  - "You are angry and about to send: pause first, then use the Anger pause and repair planner."
 
 you_give:
   - "The draft, with every order in it"
@@ -35,6 +39,27 @@ how_to_use:
   - "Add what the person cares about and anything true you can say about their work."
   - "Read the new version aloud. Change any line that is a hidden order."
   - "Send it or say it, and keep the changed lines for next time."
+output_sample:
+  input:
+    - Your draft message, orders and all
+    - What you need done and by when
+    - Notes on the person, such as what they care about (optional)
+    - What cannot change, such as a deadline (optional)
+  output:
+    - name: The rewritten message
+      contains: The full message with a question or request in place of each order.
+    - name: What changed
+      contains: For each line, the old order, the new line, and the gain for them with its source.
+    - name: Good name used
+      contains: The true quality you name in them, and the evidence for it.
+    - name: The first step
+      contains: The small first step for the task, and any help offered.
+    - name: Still clear?
+      contains: The need and the deadline, so the ask is not lost.
+    - name: Missing
+      contains: Anything the skill did not know, such as a real gain.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: "Marks the orders"

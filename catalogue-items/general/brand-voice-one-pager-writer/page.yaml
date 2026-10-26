@@ -1,61 +1,104 @@
 new_slug: brand-voice-one-pager-writer
 name: "Brand voice one-pager writer"
-summary: "Describe your brand and who you write for. Get a one-page voice guide with do and don't lines."
+summary: "Get a one-page brand voice guide with tone sliders, word lists and before and after lines from a short description of your brand and readers."
 job: brand-file
 thinking: medium
 thinking_why: "Capturing a voice takes some judgement about tone."
 
 headline: "Brand voice one-pager writer"
-subhead: "Describe your brand and who you write for. The prompt returns a one-page voice guide: a voice line, four tone sliders with right and wrong examples, words to use and avoid, three writing rules and before and after lines."
+subhead: "Tell it what you sell and who you write for. This prompt writes a one-page brand voice guide: one voice line, four tone sliders with a right and a wrong example each, words to use and avoid, three writing rules and three before and after lines."
 
 explain: |
-  When a brand has no written voice, every post and email sounds a bit different. AI tools make it worse, because they default to a generic tone.
+  When a brand has no written voice, every email, post and product page sounds a bit different. AI tools make it worse, because they fall back on a stock tone unless you tell them how you sound.
 
-  This prompt turns your answers into a short guide. It starts with one sentence that captures how you sound, then sets four tone sliders. Each slider has an example that fits and one that does not. You get words to use and avoid, three writing rules and three plain lines rewritten in your voice. Paste the guide above any writing request, or save it in your brand file.
+  This prompt turns a few answers into a short tone of voice guide. It starts with one sentence that says how the brand sounds. Then it places the brand on four sliders, such as casual to formal. Each slider gets a line that fits and a line that does not. You also get six words to use, six to avoid and three writing rules.
+
+  The last part shows three plain lines about your business, first as written and then in your voice. If you give it neither a brand nor a reader, it asks for them. It does not hand back an empty template.
 
 when:
-  - "Your emails, posts and pages sound different from each other."
-  - "You want an AI to write like you."
-  - "A new writer is joining."
+  - "Your emails, posts and product pages sound like they came from different people."
+  - "You want your AI to write like your brand and not in its stock tone."
+  - "A freelancer or new hire is about to write for you and needs a guide to follow."
+  - "You have no written voice guide and want a first draft today."
+
+not_for:
+  - "You have documents, call transcripts or past writing to learn from. Use the Brand voice guide builder."
+  - "You want the longer version with deeper rules. Use the Brand voice rules writer."
+  - "You already have a voice guide and want a draft checked against it. Use the Draft brand voice checker."
+  - "You want a printable guide with colours and fonts too. Use the Brand guide builder."
 
 you_give:
-  - "Your brand and what you sell"
-  - "Who you write for"
-  - "How you want to sound and never want to sound"
-  - "Two lines you like (optional)"
+  - "What your brand sells"
+  - "Who you write for and how they talk"
+  - "Three words for how you want to sound, and what you never want to sound like (recommended)"
+  - "Two lines of your own writing that you like (optional)"
+  - "A buyer brief from the Buyer brief writer (optional)"
 you_get:
-  - "A voice line and four tone sliders"
-  - "Words to use and avoid"
-  - "Three before and after lines in your voice"
+  - "One sentence that says how your brand sounds"
+  - "Four tone sliders, each with a line that fits and a line that does not"
+  - "Six words to use and six to avoid"
+  - "Three writing rules"
+  - "Three plain lines about your business, rewritten in your voice"
 
 how_to_use:
-  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
-  - "Under it, describe your brand and your readers."
-  - "Say three words for how you sound and what you never want to sound like."
-  - "Save the guide in your brand file and paste it above future writing requests."
+  - "Copy the prompt and paste it into Claude, ChatGPT or Gemini. It needs no files, web access or paid tools."
+  - "Under it, write what you sell and who reads your writing. Say how those readers talk."
+  - "Add three words for how you sound and what you never want to sound like. Paste two lines you like if you have them."
+  - "Check that each wrong example sounds wrong to you, and that the avoid list holds words you would really catch yourself using."
+  - "Save the guide in your brand file or notes. Paste it above your next writing request."
 
 how_it_works:
-  - title: "Write the voice line"
-    text: "One sentence."
-  - title: "Set four sliders"
-    text: "With a right and a wrong example."
-  - title: "List words"
-    text: "Six to use, six to avoid."
-  - title: "Show it"
-    text: "Three before and after lines."
+  - title: "Asks before it guesses"
+    text: "If it has no brand and no readers, it asks for both in one message. It does not write an empty guide."
+  - title: "Writes the voice line"
+    text: "One sentence in the form: the brand sounds like a person who is this, this and this, using your three words."
+  - title: "Sets four sliders"
+    text: "Casual to formal, playful to serious, expert to simple, corporate to human. Each has a short place on the scale, a right line and a wrong line."
+  - title: "Lists words"
+    text: "Six words or phrases to use, taken from how your buyers talk, and six to avoid, named exactly."
+  - title: "Sets three rules"
+    text: "Short rules for sentences and punctuation, such as short sentences and no exclamation marks."
+  - title: "Shows it in use"
+    text: "Rewrites three plain lines about your business in the voice, before and after side by side."
 
 output_shape: |
-  VOICE LINE: <Brand> sounds like <...>
+  VOICE LINE: <Brand> sounds like <a person>, <quality>, <quality> and <quality>.
   SLIDERS
-  <casual to formal>: <where> | right: "<...>" | wrong: "<...>"
+  <casual to formal>: <where you sit> | right: "<line that fits>" | wrong: "<line that does not>"
   (... four sliders)
   USE: <six words or phrases>
   AVOID: <six words or phrases>
   RULES
-  1 <...>
+  1 <rule>
+  2 <rule>
+  3 <rule>
   BEFORE AND AFTER
-  <plain line> -> <in your voice>
-  MISSING: <...>
+  <plain line> -> <same line in your voice>
+  (... three pairs)
+  MISSING: <facts it needed and did not have>
+  CHECKS MISSED: <one line per check not done, or none>
+
+output_sample:
+  input:
+    - "What your brand sells"
+    - "Who you write for and how they talk"
+    - "Three words for how you sound, and what you never want to sound like (recommended)"
+    - "Two lines of your own writing you like (optional)"
+  output:
+    - name: "VOICE LINE"
+      contains: "One sentence that says how your brand sounds, built from your three words."
+    - name: "SLIDERS"
+      contains: "Four tone scales, each with your place on it, a line that fits and a line that does not."
+    - name: "USE and AVOID"
+      contains: "Six words or phrases to use, taken from your buyers, and six to avoid."
+    - name: "RULES"
+      contains: "Three short rules for sentences and punctuation."
+    - name: "BEFORE AND AFTER"
+      contains: "Three plain lines about your business, each shown as written and in your voice."
+    - name: "MISSING"
+      contains: "Any fact it needed and did not have, so nothing is invented."
+    - name: "CHECKS MISSED"
+      contains: "Any check it could not finish, or the word none."
 
 tweaks:
   - what: "Your readers"
@@ -79,7 +122,7 @@ test:
 improve:
   - "Add your real customer phrases to the use list."
   - "Add the claims you cannot make."
-  - "Pair it with Tagline score card to test your line."
+  - "Pair it with Tagline checker and rewriter to test your line."
 
 works_best_with:
   tools:
@@ -88,3 +131,11 @@ works_best_with:
     - "Three emails or posts you are proud of"
     - "Customer reviews in their own words"
     - "A brand you admire for tone"
+
+terms:
+  - term: "Tone slider"
+    meaning: "A scale between two ends, such as casual to formal, that shows where your writing sits."
+  - term: "Voice line"
+    meaning: "One sentence that sums up how your brand sounds."
+  - term: "Brand file"
+    meaning: "A saved note or folder with your brand facts that you paste into your AI."

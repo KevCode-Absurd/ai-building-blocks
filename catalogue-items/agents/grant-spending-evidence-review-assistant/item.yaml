@@ -24,9 +24,9 @@ uses:
   - source-note-summariser
 steps:
   - uses: prepare-a-grant-spending-evidence-pack
-    note: "Run when: A grant reporting checkpoint is due or new eligible transaction evidence is supplied."
+    note: "Run when a reporting date is due or new transaction evidence arrives. Reconciles spending to the budget and award clauses and explains the variances."
   - uses: source-note-summariser
-    note: Run prepare-a-grant-spending-evidence-pack for changed evidence or a due review. If an award restriction or budget version changes, extract the actual clause before reclassifying the review table. Missing eligibility returns to the fund owner.
+    note: "Run when an award restriction or budget version changes. Pull the actual clause before any cost is reclassified. Costs with unclear eligibility go back to the fund owner as questions."
 schedule: At an explicitly requested grant reporting checkpoint. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

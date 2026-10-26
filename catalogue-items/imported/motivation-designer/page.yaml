@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies three clear ideas to your situation and suggests changes.
 new_slug: motivation-designer
 name: Motivation designer
-summary: Describe your team or product. Get ways to raise drive through choice,
-  skill growth and purpose.
+summary: Find out why your team or app has low drive. Get a motivation score out of 10 and fixes for choice, skill growth and purpose.
 job: lead-people
 headline: Motivation designer
-subhead: Ways to raise drive in your team or product that rely on choice, skill
-  growth and purpose instead of bonuses and threats. Each idea comes with a
-  score so you can see where you stand.
+subhead: Ways to raise drive in your team or product that rely on choice, skill growth and purpose instead of bonuses and threats. Each idea comes with a score so you can see where you stand.
 explain: |
   Ways to raise drive in your team or product that rely on choice, skill growth and purpose instead of bonuses and threats. Each idea comes with a score so you can see where you stand.
 
@@ -18,6 +15,10 @@ when:
   - Your team does the minimum and you have only bonuses to offer.
   - You are designing a points system for an app.
   - A manager asks why engaged people leave anyway.
+not_for:
+  - Your tasks are routine and rule-based, where rewards already work. Keep the rewards you have.
+  - You need to set pay, bonus bands or union terms. Ask HR or run a pay review instead.
+  - You want to build habit loops that bring users back to an app. Use a retention or habit design guide, not this.
 you_give:
   - A description of your team, product or program
   - How people are rewarded now
@@ -29,7 +30,28 @@ you_get:
   - Fixes for autonomy, skill growth and purpose
   - What to drop or change in your rewards
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. It needs no code, files or paid tools.
+  - "Write a short brief with four parts: who the people are, how you reward them now, the behavior you want more of, and any limits (optional)."
+  - "Ask your AI to score it. Say: 'Use the Drive motivation skill on my brief.'"
+  - Check the answers to the six quick checks. Fix any that are wrong for your setup and ask for a new score.
+  - Read the fixes for choice, skill growth and purpose. Pick one or two to try first.
+  - Look at the rewards to drop or change. Remove if-then rewards before you add anything new.
+output_sample:
+  input:
+    - A short description of your team, product or program
+    - How people are rewarded now
+    - The behavior you want more of
+    - Limits such as budget or union rules (optional)
+  output:
+    - name: Score
+      contains: A score out of 10, starting at 5, with a point added for each yes and 2 taken off for if-then rewards.
+    - name: Failed checks
+      contains: The rows of the quick check you answered no to, such as choice, progress, feedback or purpose.
+    - name: Autonomy fixes
+      contains: Ways to give people more say over what they do, when, how and with whom.
+    - name: Mastery fixes
+      contains: Ways to show progress, match challenge to skill and give quick feedback.
+    - name: Purpose fixes
+      contains: Ways to link the work to a bigger goal and show the impact people have.
+    - name: Rewards to drop or change
+      contains: Which if-then rewards to remove, and where to use fair pay or surprise thanks after the fact.

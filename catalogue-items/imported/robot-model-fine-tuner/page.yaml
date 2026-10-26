@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Robot model training has many fragile settings.
 new_slug: robot-model-fine-tuner
 name: Robot model fine-tuner
-summary: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a
-  server that runs it.
+summary: Fine-tune a pi0 robot model on your own robot data and serve it so your robot code can call it. Covers JAX and PyTorch training.
 job: build-software
 headline: Robot model fine-tuner
-subhead: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a
-  server that runs it. Bring your robot dataset. Use the result to plan your
-  next step.
+subhead: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a server that runs it. Bring your robot dataset. Use the result to plan your next step.
 explain: |
   A robot policy model trained on your own task data, plus a server that other code can call to get actions back. This covers the pi0 family from Physical Intelligence, using the open OpenPI project.
 
@@ -18,6 +15,10 @@ when:
   - You need a policy server that your robot code can call over a socket.
   - Training runs out of GPU memory and you need to know what to change.
   - You have a JAX checkpoint and need a PyTorch copy.
+not_for:
+  - You have no strong GPU. Rent a cloud GPU machine first, or ask an engineer to run the training for you.
+  - You want to train a different robot model family. Use that model's own training guide, since this covers only pi0, pi0-fast and pi0.5.
+  - You have no recorded robot demonstrations yet. Collect them first, because there is nothing to train on without data.
 you_give:
   - Your robot dataset
   - Which robot setup you use, such as ALOHA or DROID
@@ -29,9 +30,29 @@ you_get:
   - A running policy inference server
   - Fixes for stats and memory errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a strong
-    GPU.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can run Python code on a computer with a strong GPU.
+output_sample:
+  input:
+    - Your robot dataset, in LeRobot format
+    - Your robot setup, such as ALOHA, DROID or LIBERO
+    - Your GPU type and memory
+    - Which pi0 variant you want (optional)
+  prerequisites:
+    - An AI that can run code on a computer with a strong GPU
+    - The public openpi code, cloned from Physical Intelligence on GitHub
+    - The uv tool and Python installed
+  output:
+    - name: Training config
+      contains: A named setup in the openpi config file that points at your dataset and your chosen model variant.
+    - name: Norm stats
+      contains: The normalisation numbers computed from your data, which must be rerun after any config or dataset change.
+    - name: Fine-tuned checkpoint
+      contains: The trained model saved to disk, from JAX or PyTorch training.
+    - name: Converted checkpoint
+      contains: A PyTorch copy of a JAX checkpoint, if you need one.
+    - name: Policy inference server
+      contains: A running server that your robot code calls over a WebSocket to get actions back.
+    - name: Common issues fixes
+      contains: Steps to fix wrong norm stats and GPU memory limits.

@@ -1,6 +1,6 @@
 new_slug: price-rise-readiness-checker
 name: "Price rise readiness checker"
-summary: "Paste your offer, price and what buyers say. Get a readiness score out of 100 and what to add first."
+summary: "Check if your offer can carry a higher price. Paste your offer and buyer words. Get a readiness score out of 100 and what to add first."
 job: set-prices
 thinking: high
 thinking_why: "It judges an offer on four parts with evidence and has to resist scoring without proof."
@@ -17,6 +17,10 @@ when:
   - "Costs went up and you are not sure the offer can carry a higher price."
   - "You have not changed your price in two years and suspect you are leaving money on the table."
   - "You want to raise the price and add something so it still feels fair."
+not_for:
+  - "You have no reviews or buyer comments yet: run a short customer survey first, then come back."
+  - "You have no plan to change your price: there is nothing for this to check, so keep selling as you are."
+  - "You already know the price is going up and only need the message to customers: use the Price rise letter writer."
 
 you_give:
   - "The offer, price, terms and guarantee"
@@ -34,6 +38,28 @@ how_to_use:
   - "Paste twenty or more reviews or support messages, including the complaints."
   - "Read the band. Under 75, do the ADD FIRST items before changing the price."
   - "Run the TEST on one group for one month before you change the price for everyone."
+output_sample:
+  input:
+    - Your offer, current price, terms and guarantee
+    - The new price or a range (advised)
+    - Reviews, support questions and cancel reasons (advised)
+    - What rivals charge and include, described (optional)
+    - Your unit cost (optional)
+  output:
+    - name: READINESS SCORE
+      contains: Four scores out of 25 for result, certainty, speed and effort, added to a total out of 100 with its band.
+    - name: EVIDENCE
+      contains: One line per part quoting your input, or a GUESS mark where there is no proof.
+    - name: WEAKEST PART
+      contains: The part that holds the price back, with the buyer words that show it.
+    - name: ADD FIRST
+      contains: Three to five additions, each with its cost to you and the part it lifts.
+    - name: FLOOR AND RIVALS
+      contains: Your margin at the old and new price, and where the new price sits against rivals.
+    - name: TEST
+      contains: The smallest honest test, with the one number to watch.
+    - name: MISSING
+      contains: Any facts you did not give, so nothing is made up.
 
 how_it_works:
   - title: "Scores the four parts"

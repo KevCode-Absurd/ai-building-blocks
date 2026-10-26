@@ -1,0 +1,147 @@
+name: Spatial Data Engineer agent
+summary: Plan a pipeline that turns messy map data into clean, standard files, with coordinate fixes, field rules, quality checks and a repeatable run.
+headline: Spatial Data Engineer agent
+subhead: List your map data sources and where the clean data must end up. It plans each step from reading the files to writing a standard dataset, with checks after every step. You get a pipeline plan and optional draft scripts.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Map data arrives in many formats, with missing or wrong coordinate systems,
+  odd text encoding and field names that change from file to file. Fixing it by
+  hand each time wastes days and leaves no record. A geospatial ETL pipeline
+  (read, clean, convert, check, write) fixes it once and runs again when new
+  data arrives.
+
+
+  This agent plans that pipeline. It assesses each source first and never
+  assumes the coordinate system is right. It sets a target schema, then plans
+  the steps with a check after each one. It keeps your original files untouched
+  and writes the output to a new place. It plans the log, the failure rules and
+  how to refresh.
+
+
+  It writes plans and draft scripts. It does not run them or see your files, so
+  every check is yours to run. It is a role profile from Agency Agents, shared
+  under MIT. Tools it names, such as GDAL or FME, are options to confirm, not
+  requirements.
+when:
+  - You have shapefiles, CAD files, spreadsheets with coordinates and a government download, and need one clean dataset.
+  - The coordinate system is missing, mixed or wrong, and you need a safe way to fix it.
+  - You do the same conversion every month and want it as a repeatable script, not hand work.
+  - You need to publish data to PostGIS, a GeoPackage or ArcGIS Online and want the checks planned first.
+not_for:
+  - You need one map made once. Use the GIS Analyst agent.
+  - You need statistics on the data after it is clean. Use the Spatial Data Scientist agent.
+  - You need a live web map or API for the data. Use the Web GIS Developer agent.
+  - You need to read objects out of images with a model. Use the GeoAI/ML Engineer agent.
+you_give:
+  - Your data sources and their formats, such as shapefile, CSV with coordinates, KML or a file geodatabase
+  - Where the clean data must go and in what format
+  - Field names and types you want in the result, if you have a standard (optional)
+  - How often the data updates, and from where
+  - The tools you can use, such as Python, GDAL, FME or ArcGIS (optional)
+you_get:
+  - A source-by-source check of format, coordinate system, encoding and field quality
+  - A target schema with field names, types and allowed values
+  - Pipeline steps from read to write, with a check after each step
+  - A refresh and monitoring plan, if your data updates
+  - Draft scripts for the steps you ask for, marked as not run
+  - A list of known issues, assumptions and the checks left for you
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - List each source with its format and where you got it. Paste a few sample rows and any metadata files.
+  - Say where the clean data must end up. Type "Plan the pipeline and flag every coordinate or field problem." Your AI asks once for anything missing.
+  - Read the source check first. Confirm the coordinate system of each file with its owner before you trust it.
+  - Run the draft scripts on a copy of your data. Your AI cannot run them for you.
+  - Compare row counts and sample records before and after each step. Keep the log with the data.
+how_it_works:
+  - title: Assess each source
+    text: It notes format, coordinate system, encoding, fields and quality for each file. A missing or doubtful coordinate system is flagged, never assumed.
+  - title: Set the target schema
+    text: It sets field names, types, allowed values and how empty values are written, so every source maps to one standard.
+  - title: Plan the pipeline
+    text: It plans read, clean, convert, check and write. Originals are never changed, and each step records its settings and row counts.
+  - title: Plan the checks and failure rules
+    text: It adds geometry and field checks after each step. The run stops with a clear message if an input is missing or malformed.
+  - title: Plan the refresh
+    text: It plans settings kept in a config file, re-runs that give the same result, change detection and a check that the run finished and the volume looks right.
+output_shape: |-
+  SOURCES AND ASSUMPTIONS
+    <source> | <format> | <coordinate system and how it was confirmed> | <encoding> | <known problems>
+
+  TARGET SCHEMA
+    <field> | <type> | <allowed values> | <how empty is written> | <mapped from>
+
+  PIPELINE STEPS
+    <step number> | <read, clean, convert, check or write> | <tool> | <check after the step>
+
+  QUALITY CHECKS
+    <check> | <what a pass looks like> | <what happens on a fail>
+
+  REFRESH AND MONITORING
+    <schedule> | <change detection> | <alerts>
+
+  DRAFT SCRIPTS (NOT RUN)
+    <file name> | <what it does>
+
+  KNOWN ISSUES AND NEXT STEP
+    <issue> | <who can resolve it> | <next action>
+output_sample:
+  input:
+    - Your data sources and their formats
+    - Where the clean data must end up, and in what format
+    - Your target field names and types (optional)
+    - How often the data updates (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - A copy of your data to test on, kept apart from the originals
+  output:
+    - name: Sources and assumptions
+      contains: Each source with its format, coordinate system, encoding and known problems, and how each was confirmed.
+    - name: Target schema
+      contains: The fields, types and allowed values every source must map to.
+    - name: Pipeline steps
+      contains: Each step from read to write, with the tool and the check that follows it.
+    - name: Quality checks
+      contains: Geometry and field checks, what a pass looks like and what happens on a fail.
+    - name: Refresh and monitoring
+      contains: How and when the pipeline re-runs, what it ignores and what raises an alert.
+    - name: Draft scripts
+      contains: Scripts for the steps you asked for, marked as not run.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read file metadata and sample rows and spot coordinate and field problems in them.
+  inputs:
+    - The metadata or readme that came with each download.
+    - Ten to twenty sample rows from each source, so field types can be judged.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name one source and one target to start. Add the rest once that run is clean.
+  - what: Tools
+    how: Say which tools you already have, so the draft scripts use them and no installs are planned.
+improve:
+  - Keep the log of problems each run finds and paste it in next time, so new checks cover them.
+terms:
+  - term: ETL
+    meaning: Extract, transform, load. Read the data, change it, then write it somewhere new.
+  - term: Coordinate system
+    meaning: The rule that says what a coordinate means on the earth. A wrong one puts data in the wrong place.
+  - term: Reproject
+    meaning: Convert coordinates from one coordinate system to another.
+  - term: GeoPackage
+    meaning: A single-file format for map data that many GIS tools can open.
+  - term: Idempotent
+    meaning: Safe to run twice. The second run gives the same result as the first.
+  - term: Schema
+    meaning: The list of fields in a dataset, with their types and allowed values.

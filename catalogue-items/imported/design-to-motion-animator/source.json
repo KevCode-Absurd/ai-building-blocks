@@ -1,0 +1,55 @@
+{
+  "schema": "abb-upstream-skill/1",
+  "repository": "elayadesign/ai-design-skills",
+  "commit": "38bbe5765600b9178b5395a823c9f6c8d2b8e730",
+  "originalName": "design-to-motion",
+  "author": "Elaya",
+  "licence": "MIT",
+  "licenceEvidence": {
+    "file": "LICENSE",
+    "copyright": "Copyright (c) 2026 Elaya",
+    "standaloneLicenceFile": true,
+    "sha256": "5f9af6ce7083838497676a8dfa651ad8e2559fdabd4586afc73587beec476b0e"
+  },
+  "adapted": false,
+  "copiedFiles": {
+    "SKILL.md": {
+      "upstreamPath": "skills/design-to-motion/SKILL.md",
+      "sha256": "12240f8065147f3623424cf38bc198a94857441446736bb449429451d87a3d55",
+      "bytes": 39109,
+      "byteExactGitBlob": true
+    },
+    "LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "5f9af6ce7083838497676a8dfa651ad8e2559fdabd4586afc73587beec476b0e",
+      "bytes": 1062,
+      "byteExactGitBlob": true
+    }
+  },
+  "inheritedCredits": [
+    {
+      "repository": "emilkowalski/skills",
+      "url": "https://github.com/emilkowalski/skills",
+      "used": "Animating inexpensive properties, keeping blur small, avoiding zero-size growth and handling reduced motion."
+    },
+    {
+      "repository": "Owl-Listener/designer-skills",
+      "url": "https://github.com/Owl-Listener/designer-skills",
+      "used": "Content-shaped skeletons and staggered entrances."
+    },
+    {
+      "repository": "dylantarre/animation-principles",
+      "url": "https://github.com/dylantarre/animation-principles",
+      "used": "Offset sibling loops and continuous loop endings."
+    }
+  ],
+  "creditClaim": "Upstream says a few general motion rules were adapted, not copied, from the three credited MIT skill collections. The whole original Credits section is retained; no additional third-party code is copied.",
+  "packagingChanges": [
+    "Plain display metadata and usage notes only.",
+    "Primary instructions and Elaya MIT license are unchanged raw Git blobs."
+  ],
+  "upstreamCodeExecuted": false,
+  "externalDesignAccessed": false,
+  "renderExecuted": false,
+  "newExecutableFiles": 0
+}

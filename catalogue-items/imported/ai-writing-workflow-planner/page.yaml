@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It sets rules for a workflow from your answers.
 new_slug: ai-writing-workflow-planner
 name: AI writing workflow planner
-summary: Describe how your team writes. Get what AI should draft, what people
-  own, and rules that keep your voice.
+summary: "Plan your AI writing workflow: see which tasks AI drafts, which stay with people, and the voice rules and review checks that keep your content yours."
 job: set-up-ai
 headline: AI writing workflow planner
-subhead: A clear split of who does what when your team writes with AI. People
-  own the voice, the facts and what gets published. AI does the research
-  summaries, first drafts, edit suggestions and quality checks, always under a
-  person's direction.
+subhead: A clear split of who does what when your team writes with AI. People own the voice, the facts and what gets published. AI does the research summaries, first drafts, edit suggestions and quality checks, always under a person's direction.
 explain: |
   A clear split of who does what when your team writes with AI. People own the voice, the facts and what gets published. AI does the research summaries, first drafts, edit suggestions and quality checks, always under a person's direction.
 
@@ -19,6 +15,10 @@ when:
   - Writers use AI in different ways and quality is uneven.
   - You lead an editorial team and need clear rules for AI use.
   - You run an agency and need an agreed process to show clients.
+not_for:
+  - "You want to pick an AI tool or get ready-made prompts: try the tools yourself, or ask a colleague who already uses AI for writing."
+  - "You need one article written today: ask your AI to draft it directly, then edit it yourself."
+  - "You only need a legal or compliance sign-off on AI use: ask your lawyer or compliance lead."
 you_give:
   - How your team writes and publishes today
   - Where AI is already used
@@ -30,7 +30,29 @@ you_get:
   - Rules that protect your voice
   - A checklist for consistent team use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - "Paste the skill text into the chat, then say: Plan an AI writing workflow for my team."
+  - Describe how your team writes and publishes today, from idea to published piece. Say where AI is already used.
+  - Add your voice notes, a sample piece or who signs off, if you have them.
+  - Read the stage map. Check that each checkpoint has a named person.
+  - Share the checklist with your team and test it on your next piece.
+output_sample:
+  input:
+    - How your team writes and publishes today, stage by stage
+    - Where AI is already used
+    - Your brand voice notes or style guide (optional)
+    - One published piece (optional)
+    - Who signs off before publishing (optional)
+  output:
+    - name: Stage map
+      contains: Each stage of your writing process, with what AI may do and what a person must do.
+    - name: Human-owned decisions
+      contains: The calls that stay with people, such as voice, facts and what gets published.
+    - name: AI-permitted tasks
+      contains: Jobs where AI helps, such as research summaries, first drafts, edit suggestions and quality checks.
+    - name: Review checkpoints
+      contains: Where a person checks the work before it moves on or goes live.
+    - name: Voice rules
+      contains: Rules that keep drafts sounding like your brand and not generic.
+    - name: Team checklist
+      contains: A short list your team can use on every piece to stay consistent.

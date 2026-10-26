@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows known container patterns.
 new_slug: docker-setup-builder
 name: Docker setup builder
-summary: Point it at your app. Get a lean, safe Dockerfile and compose file that
-  run your project.
+summary: Get a smaller, safer Dockerfile and compose file for your app. Use it to fix a slow build, a huge image or weak container security.
 job: ship-and-host
 headline: Docker setup builder
-subhead: Point it at your app. Get a lean, safe Dockerfile and compose file that
-  run your project. Bring your project or existing Dockerfile. Use the result to
-  plan your next step.
+subhead: Point it at your app. Get a lean, safe Dockerfile and compose file that run your project. Bring your project or existing Dockerfile. Use the result to plan your next step.
 explain: |
   A lean, safer Dockerfile and compose file for your project, which usually means smaller images, faster builds and fewer security holes.
 
@@ -18,6 +15,10 @@ when:
   - Your image is over a gigabyte and you do not know why.
   - You want to know if your Dockerfile has security problems.
   - You need a first Dockerfile for a Node or Python app.
+not_for:
+  - "You need a Kubernetes setup or a CI pipeline: ask a DevOps engineer or use a tool built for that job, because this only covers Dockerfile and compose files."
+  - "You want to learn Docker from scratch: read the official Docker getting started guide first, since this makes firm choices and does not teach."
+  - "You need to scan your app code for security flaws: use a code security review by a person, since this only checks container settings."
 you_give:
   - Your project or existing Dockerfile
   - Your language and framework
@@ -29,8 +30,30 @@ you_get:
   - A security audit with fixes
   - Notes on what changed and why
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your Dockerfile, or describe your project, language and framework.
+  - "Say which job you want: optimize, compose or security. Say if it is for development or production."
+  - Add any services your app needs, such as a database (optional).
+  - Read the result and check the notes on what changed. Then build the image to test it.
+  - The analyzer and validator scripts only run if your AI can run code. Without that, you still get the files and the audit.
+output_sample:
+  input:
+    - Your existing Dockerfile, or your project files
+    - Your language and framework
+    - Whether it is for development or production
+    - Services your app needs, such as a database or cache (optional)
+  prerequisites:
+    - An AI that can run code, only if you want the Dockerfile analyzer and compose validator scripts to run
+  output:
+    - name: Optimized Dockerfile
+      contains: A rewritten Dockerfile with multi-stage build, ordered layers, a non-root user, and a comment on each choice.
+    - name: Size reduction estimate
+      contains: A short note on how much smaller the new image should be.
+    - name: docker-compose.yml
+      contains: Your services with healthchecks, named networks, named volumes, pinned versions and dev and prod notes.
+    - name: .env.example
+      contains: Every environment variable the compose file needs, with a note on each.
+    - name: .dockerignore
+      contains: A list of files kept out of the build, such as .git, node_modules and .env.
+    - name: Security audit report
+      contains: Findings counted by severity from critical to low, each with a fix.

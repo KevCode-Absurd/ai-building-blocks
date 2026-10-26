@@ -1,0 +1,129 @@
+name: Level Designer agent
+summary: Plan a game level with a pacing chart, encounter list, room specs and navigation checks, ready to build as a grey box from your brief.
+headline: Level Designer agent
+subhead: Give it your level idea, game type and what the player can do. It plans the layout, the fights and the pacing. You get a level document, a pacing chart, room specs and a checklist to test your grey box.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A game level plan starts with one question. What should the player feel, and where in the space does that happen? This agent writes the feeling, the one moment to remember and the pacing arc before it lays out a single room.
+
+  Then it plans a layout players can read without a map. Each fight gets two or more ways to win and a place to fall back. Difficulty comes from where things sit before it comes from enemy numbers. Each room gets a size, cover, lighting direction and a story clue in its props.
+
+  It follows the Level Designer profile from Agency Agents. It cannot open your engine or watch anyone play. So it ends with a checklist and playtest questions for you to run on a grey box. The times and targets it gives are plans, not results.
+when:
+  - You have a level idea and need a plan before you build the grey box.
+  - Testers get lost, miss the exit or say a fight felt unfair.
+  - An artist needs room sizes, cover and lighting direction to build from.
+  - A new mechanic needs a first level that teaches it without text.
+not_for:
+  - You need the core rules, loop or progression first. Use the Game Designer agent.
+  - You need the story, dialogue or choice paths. Use the Narrative Designer agent.
+  - You need streaming and landscape set up for a huge Unreal world. Use the Unreal World Builder agent.
+you_give:
+  - "What the level is for: the feeling, the story beat and any new mechanic it teaches"
+  - Your game type and camera, for example third-person shooter or 2D platformer
+  - "What the player can do by this level: moves, tools and enemy types"
+  - Target play time and how skilled the player is by now
+  - A sketch, map notes or playtest notes (optional)
+you_get:
+  - A level document with intent, layout type, play time and an encounter table
+  - A pacing chart that shows each beat and how tense it is
+  - A spec for each room with size, cover, lighting and exits
+  - A navigation checklist to run on your grey box
+  - Assumptions and playtest questions to answer next
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md, then references/source-agent.md, then your brief into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your brief using the list above. Name your engine, or say you have none. The agent does not open it.
+  - Say "Plan this level. Ask once for anything missing." Answer its questions, or let it mark gaps as MISSING.
+  - Read the pacing chart first. Check that the beats and tension match the feeling you want.
+  - Build a grey box from the room specs. Run the navigation checklist with someone who has not seen the level.
+  - Pass the room specs to your artists only after the grey box works. Art will not fix a layout that fails.
+how_it_works:
+  - title: Fix the brief
+    text: It confirms the feeling, the game type, the player's tools and the play time. It asks once about gaps, then marks them MISSING.
+  - title: Write the intent
+    text: One paragraph on what the player feels, the moment to remember and how tension rises and falls.
+  - title: Lay out the path
+    text: It picks a shape, then marks the main path and the optional branches before it draws rooms.
+  - title: Plan the encounters
+    text: Each fight gets time to read it, two or more ways to win and a fallback spot.
+  - title: Spec the rooms
+    text: Size, cover, lighting direction, exits and a story clue for each room.
+  - title: Check and hand off
+    text: It runs the navigation checklist on the plan and writes the playtest questions for your grey box.
+output_shape: |-
+  LEVEL INTENT
+    Player feeling <what they feel> | Moment to remember <one moment> | New mechanic <and how space teaches it> | Story beat <if any>
+  LAYOUT
+    Shape <linear, hub, open or labyrinth> | Planned play time <x to y minutes> | Main path <length or node count> | Optional areas <list with rewards>
+  ENCOUNTER LIST
+    <ID> | <type> | <enemy count> | <tactical options> | <fallback position> | <how the player sees it first>
+  FLOW DIAGRAM
+    [Entry] -> [<beat>] -> [<encounter>] -> [<fork>] -> [Exit]
+  PACING CHART
+    <time> | <activity> | <tension: low, medium or high> | <note>
+  ROOM SPECS (one per room)
+    <ID and name> | <size in metres> | <job> | <cover> | <lighting> | <entry and exit> | <story clue>
+  NAVIGATION CHECKLIST
+    <check> | <Pass, Risk or Can't tell> | <why>
+  PLAYTEST PLAN
+    <what to measure on the grey box> | <who tests> | <what counts as trouble>
+  ASSUMPTIONS AND OPEN QUESTIONS
+output_sample:
+  input:
+    - Your level idea, with the feeling you want and any mechanic it teaches
+    - Your game type, camera and what the player can do
+    - Target play time
+    - A sketch or playtest notes (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A way to build a grey box, to test the plan (the AI does not do this for you)
+  output:
+    - name: Level intent
+      contains: The feeling, the one moment to remember, the pacing arc and any new mechanic.
+    - name: Layout and flow diagram
+      contains: Layout shape, planned play time, the main path, optional areas and a text flow diagram.
+    - name: Encounter list
+      contains: Each fight with enemy count, tactical options, a fallback position and how the player sees it first.
+    - name: Pacing chart
+      contains: Planned time, activity and tension for each beat.
+    - name: Room specs
+      contains: Size, cover, lighting, entry and exit and a story clue for every room.
+    - name: Navigation checklist
+      contains: Each readability check marked Pass, Risk or Can't tell, with the reason.
+    - name: Playtest plan
+      contains: What to measure on the grey box, who to test with and what counts as trouble.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Level shape
+    how: Say if you want a linear, hub or open level, so the plan follows that shape.
+  - what: Play time
+    how: Give the minutes you want, and the pacing chart fits that length.
+improve:
+  - After your grey box playtest, paste the results back and ask for a revised layout and pacing chart.
+terms:
+  - term: Grey box
+    meaning: A level built from plain shapes with no art, used to test layout and flow.
+  - term: Critical path
+    meaning: The route the player must take to finish the level.
+  - term: Encounter
+    meaning: A planned fight or hazard in one place.
+  - term: Pacing arc
+    meaning: How tension rises and falls over the length of the level.
+  - term: Tactical option
+    meaning: A different way to win a fight, such as flanking or suppressing.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: It writes tables and flow diagrams as text, so any chat AI works. Pick one that can read a photo of your sketch.
+  inputs:
+    - A photo of your top-down sketch
+    - Notes from your last playtest, such as where people got lost
+    - Names of levels you admire, so it can say what makes them work

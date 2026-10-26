@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a standard method and checks the design first.
 new_slug: rna-seq-group-difference-finder
 name: RNA-seq group difference finder
-summary: Give it gene counts for two or more groups. Get which genes changed,
-  with checks, corrected p-values and plots.
+summary: Find which genes changed between your RNA-seq groups. Give it raw gene counts and a sample sheet. You get corrected p-values, effect sizes and plots.
 job: research-topics
 headline: RNA-seq group difference finder
-subhead: A list of genes that really changed between your groups, with corrected
-  p-values, effect sizes and plots, from the PyDESeq2 tool in Python. Checks
-  come first so a bad input does not give a confident wrong answer.
+subhead: A list of genes that really changed between your groups, with corrected p-values, effect sizes and plots, from the PyDESeq2 tool in Python. Checks come first so a bad input does not give a confident wrong answer.
 explain: |
   A list of genes that really changed between your groups, with corrected p-values, effect sizes and plots, from the PyDESeq2 tool in Python. Checks come first so a bad input does not give a confident wrong answer.
 
@@ -18,6 +15,10 @@ when:
   - You need a design with batch or other covariates.
   - A reviewer asked for corrected p-values and effect sizes.
   - You want volcano plots for a paper.
+not_for:
+  - "You have single-cell data and want per-cell tests: first sum counts per donor into pseudobulk, then use this skill on those totals."
+  - "You have only one sample per group, or cells and lanes from one donor: get more donors first, since this needs true biological replicates."
+  - "You only have TPM, FPKM or log values: go back to the raw integer counts, because this skill cannot use them."
 you_give:
   - A raw counts table, samples by genes
   - A sample sheet with group labels
@@ -30,8 +31,30 @@ you_get:
   - Volcano and related plots
   - Input checks and a note on what was excluded
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code.
+output_sample:
+  input:
+    - Your raw counts table, one count per gene and sample
+    - Your sample sheet with a group label for each sample
+    - The comparison to test, such as treated versus control
+    - Batch or other covariates (optional)
+  prerequisites:
+    - An AI that can run code
+    - Python 3.11 or newer with PyDESeq2 0.5.4 installed
+  output:
+    - name: deseq2_results.csv
+      contains: Every gene with its effect size, Wald statistic, p-value and corrected p-value. Effect sizes are shrunk if you asked for that.
+    - name: deseq2_results_unshrunken.csv
+      contains: The original test table before effect sizes were shrunk.
+    - name: significant_genes.csv
+      contains: Genes whose corrected p-value is below your chosen cutoff.
+    - name: results_sorted_by_padj.csv
+      contains: All results ordered from the smallest corrected p-value to the largest.
+    - name: deseq_dataset.h5ad
+      contains: A snapshot of the fitted data with counts and model fields, for inspection.
+    - name: analysis_manifest.json
+      contains: The comparison, cutoff, shrinkage coefficient and software versions used in the run.
+    - name: Volcano and MA plots
+      contains: Two PNG plots of the results, made only when you ask for plots.

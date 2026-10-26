@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It judges each control against evidence.
 new_slug: iso-27001-audit-planner
 name: ISO 27001 audit planner
-summary: Describe your security setup. Get an audit plan, control checks and a
-  list of findings to fix.
+summary: Plan your ISO 27001 internal audit. Describe your security setup and get a risk-based schedule, control checks and findings ready to fix.
 job: secure-code
 headline: ISO 27001 audit planner
-subhead: "A full audit plan for your information security system, with the
-  findings written the way auditors write them. Describe your setup and scope.
-  The skill builds a risk-based schedule: critical areas like privileged access
-  and logging are audited each quarter, others once a year."
+subhead: "A full audit plan for your information security system, with the findings written the way auditors write them. Describe your setup and scope. The skill builds a risk-based schedule: critical areas like privileged access and logging are audited each quarter, others once a year."
 explain: |
   A full audit plan for your information security system, with the findings written the way auditors write them. Describe your setup and scope. The skill builds a risk-based schedule: critical areas like privileged access and logging are audited each quarter, others once a year. It assigns auditors who are independent of the area under review.
 
@@ -19,6 +15,10 @@ when:
   - You want to know which controls to test first and how often.
   - You found problems and need them written up as proper findings.
   - You are preparing for an outside certification audit.
+not_for:
+  - "You need a formal certificate: use an accredited certification body, since this plan does not replace their audit."
+  - "You need the final call on audit scope or a pass or fail: ask a certified ISO 27001 lead auditor."
+  - "Your project has no information security system to audit: write a simple checklist with your team or ask a security adviser."
 you_give:
   - A description of your security setup and scope
   - Your last risk assessment (optional)
@@ -31,7 +31,30 @@ you_get:
   - A corrective action list
   - A certification readiness checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Describe your security setup and scope. Add your last risk assessment, past findings and recent incidents if you have them.
+  - Ask for the audit schedule first. Check that critical areas like privileged access and logging come up each quarter.
+  - Ask for test steps for the controls you want to check. Then ask for findings in the finding template.
+  - The scheduling script needs Python 3 and code running. Without it, ask your AI to write the schedule as a table in the chat.
+  - Have a lead auditor or your security owner review the plan before you send it for approval.
+output_sample:
+  input:
+    - A description of your security setup and audit scope
+    - Your last risk assessment (optional)
+    - Earlier audit findings (optional)
+    - Recent security incidents (optional)
+  prerequisites:
+    - An AI that can run Python 3, only if you want the scheduling script to build the plan file
+  output:
+    - name: Risk-based audit schedule
+      contains: Each control area with its risk level, how often to audit it, and which auditor is independent of it.
+    - name: Control testing steps
+      contains: For each control, the test method, sample size and the evidence to collect.
+    - name: Finding report
+      contains: Each finding with an ID, control reference, severity, evidence, risk impact, root cause and recommendation.
+    - name: Corrective action workflow
+      contains: Steps from acknowledging a finding to closing it, with response times by severity.
+    - name: Stage 1 and Stage 2 checklists
+      contains: Documents and proof you need ready before each stage of the certification audit.
+    - name: Surveillance audit cycle
+      contains: What to focus on in each period after you are certified.

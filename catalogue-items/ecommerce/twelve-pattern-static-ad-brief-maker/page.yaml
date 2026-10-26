@@ -1,29 +1,65 @@
 new_slug: twelve-pattern-static-ad-brief-maker
 name: Twelve-pattern static ad brief maker
-summary: Choose from twelve static ad patterns by buyer stage and proof. Get the copy, layout and image brief.
+summary: Pick one of 12 static ad patterns for your product and buyer stage. Get a static ad brief with copy, layout and image notes.
 job: make-image-ads
 headline: Twelve-pattern static ad brief maker
-subhead: Share product, buyer stage, offer, proof and production limits. Get a selected ad pattern with copy, visual, layout and proof checks.
+subhead: Tell your AI about your product, your buyer and the proof you have. It picks one of twelve static ad patterns and writes the brief. You get the copy, the layout and the image notes.
 explain: |-
   Choose from twelve static ad patterns by buyer stage and proof. Get the copy, layout and image brief.
 
   Share product, buyer stage, offer, proof and production limits. Get a selected ad pattern with copy, visual, layout and proof checks.
 when:
-  - You need a selected ad pattern with copy, visual, layout and proof checks.
-  - You need twelve-pattern static ad brief maker for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You need a still ad for Meta or another feed and want a proven pattern to start from.
+  - A designer asks for a brief and you only have a product and some reviews.
+  - You want two opposite ads to test against each other in the same spot.
+  - You are not sure which ad style fits a cold buyer and which fits a warm one.
+not_for:
+  - "You have no reviews, tests or other proof: write a plain product listing or ask a few customers for feedback first."
+  - "You want a video ad: this makes still images only, so brief a video with a person who shoots video."
+  - "You want to mix two ad styles in one ad: this picks one pattern per ad, so run it twice."
 you_give:
-  - Product
-  - Buyer stage
-  - Offer
-  - Proof and production limits
+  - Your product and a one-sentence description
+  - Your main buyer, in a line or two
+  - "Where the buyer is: cold, warm or ready to buy"
+  - Proof you have, such as real reviews, test results or demos
+  - Your offer terms (optional)
+  - Design or budget limits (optional)
 you_get:
-  - A selected ad pattern with copy, visual, layout and proof checks
-  - The sources used, missing inputs and assumptions
+  - One chosen ad pattern with the reason it fits
+  - Headline, sub line, proof line and a short call to action
+  - A simple layout diagram
+  - A list of proof you must have before you run the ad
+  - Notes for a photo shoot or AI image
+  - An opposite version to test (optional)
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Gather your product facts, your buyer, real reviews or test results, and any offer or budget limits.
+  - Open Claude, ChatGPT or Gemini and paste in the skill from this page. No code or paid tool is needed.
+  - Paste your product, buyer stage and proof. Tell your AI what you do not have.
+  - Read the pattern it picked. Check that every claim in the copy matches your real proof.
+  - Hand the brief to a designer, or use the production notes to make the image yourself.
+  - Ask for the opposite version if you want to test two ads.
+output_sample:
+  input:
+    - Your product and a one-sentence description
+    - Your main buyer, in a line or two
+    - "Where the buyer is: cold, warm or ready to buy"
+    - Proof you really have, such as reviews or test results
+    - Offer terms and design or budget limits (optional)
+  output:
+    - name: Archetype
+      contains: The one ad pattern picked from the twelve, based on buyer stage, proof and your strongest claim.
+    - name: Visual
+      contains: One sentence that describes the image the ad needs.
+    - name: Copy
+      contains: Headline, optional sub line, proof line and a call to action of three words at most.
+    - name: Layout
+      contains: A simple text diagram that shows where each part sits on the ad.
+    - name: Evidence required
+      contains: The proof you must have in hand before the ad can run.
+    - name: Production notes
+      contains: Notes for a photo shoot or for making the image with AI.
+    - name: Variation (optional)
+      contains: An opposite version of the same ad that you can test against it.
 how_it_works:
   - title: Check the inputs
     text: Confirm product, buyer stage, offer, proof and production limits. Mark facts that are missing.

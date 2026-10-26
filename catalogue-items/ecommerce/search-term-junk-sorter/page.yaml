@@ -1,6 +1,6 @@
 new_slug: search-term-junk-sorter
 name: "Search term junk sorter"
-summary: "Paste a search terms report. Get winners to promote, negatives to add and a waste score."
+summary: "Paste your Google Ads search terms report. Find winning search terms to promote, negative keywords to add, and a waste score out of 100."
 job: run-google-ads
 thinking: low
 thinking_why: "It sorts rows by clear rules."
@@ -17,6 +17,10 @@ when:
   - "Your Shopping or Performance Max spend feels leaky."
   - "It is your weekly search-term check."
   - "A new campaign has run for a few weeks."
+not_for:
+  - "You have fewer than about 30 conversions a month, or you have not checked that conversion tracking works: treat every verdict as an early read, or use the full Search term sorter."
+  - "You want to fix vague Shopping product titles: rewrite them with a Shopping feed title writer, not a search terms report."
+  - "You want to block competitor names or low-intent words without a look: this tool leaves those to you, so make that call yourself."
 
 you_give:
   - "Search terms report (required): term, clicks, conversions and cost for each. Add conversion value if you have it."
@@ -34,6 +38,27 @@ how_to_use:
   - "Under it, paste your details: search terms report; break-even cpa; brand name and spellings; what you do not sell."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - "Your Google search terms report: term, clicks, conversions and cost"
+    - Your break-even cost per sale, or your average order value and gross margin (advised)
+    - Your brand name and its common spellings (advised)
+    - What you do not sell (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tool needed.
+  output:
+    - name: DATA CHECK
+      contains: Your conversions a month, and whether the results are only an early read.
+    - name: WINNERS
+      contains: Terms that sold at or under break-even, with conversions, cost per sale and exact or phrase match.
+    - name: NEGATIVES
+      contains: Terms to block, with match type, account or campaign level, and the reason.
+    - name: YOUR CALL
+      contains: Competitor names, low-intent words and unproven terms, left for you to decide.
+    - name: BRAND TERMS IN COLD CAMPAIGNS
+      contains: Brand searches that are spending in campaigns meant for new buyers, with the spend.
+    - name: WASTE SCORE
+      contains: Your score out of 100, with the sum shown.
 
 how_it_works:
   - title: "Set the bar"

@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It sorts what was said into a fixed template.
 new_slug: interview-summary-writer
 name: Interview summary writer
-summary: Paste a customer interview transcript. Get a one-page summary of needs,
-  satisfaction and next steps.
+summary: Turn a customer interview transcript into a one-page summary with needs, satisfaction, key quotes and action items your team can use.
 job: understand-customers
 headline: Interview summary writer
-subhead: "A one-page summary of a customer interview that your team will really
-  read. Paste the transcript or attach the file. The skill reads it all first,
-  then fills a fixed template: who was interviewed, what they use today, what
-  they like, what frustrates them, and surprising quotes."
+subhead: "A one-page summary of a customer interview that your team will really read. Paste the transcript or attach the file. The skill reads it all first, then fills a fixed template: who was interviewed, what they use today, what they like, what frustrates them, and surprising quotes."
 explain: |
   A one-page summary of a customer interview that your team will really read. Paste the transcript or attach the file. The skill reads it all first, then fills a fixed template: who was interviewed, what they use today, what they like, what frustrates them, and surprising quotes.
 
@@ -19,6 +15,10 @@ when:
   - You need to share interview findings with people who were not there.
   - You are running many interviews and want the same format each time.
   - You want follow-up actions captured with owners and dates.
+not_for:
+  - "You have many interviews or survey answers and want themes across them: use a theme-analysis step on all the notes together, not this single-interview summary."
+  - "You only have notes and no transcript: write up the notes first, or ask the person who ran the call for a transcript."
+  - "You need a full research report with a plan and sample size: ask a researcher, since this skill only summarizes one call."
 you_give:
   - The interview transcript, pasted or as a file
   - The product or area you are exploring
@@ -29,7 +29,27 @@ you_get:
   - Key insights and notable quotes
   - Action items with dates and owners
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your transcript, or attach it as a file if your AI can read files.
+  - Tell your AI the product or area you are exploring, and the names and roles of the people on the call if you have them.
+  - Read the summary. Check that any missing detail shows as a dash and that the quotes match what was said.
+  - Copy the action items into your team tracker. Use the Key Insights when you map customer problems and opportunities.
+  - Save the summary as a markdown file if your AI can save files, or copy it into your own notes.
+output_sample:
+  input:
+    - Your interview transcript, pasted or attached as a file
+    - The product or area you are exploring
+    - Names and roles of the people on the call (optional)
+  output:
+    - name: Date, Participants, Background
+      contains: When the call happened, who took part and their roles, and a short background on the customer.
+    - name: Current Solution
+      contains: What the customer uses today to get the job done.
+    - name: What They Like About Current Solution
+      contains: Each job they get done well, with the outcome they want, its importance and how satisfied they are.
+    - name: Problems With Current Solution
+      contains: Each job that goes badly, with the outcome they want, its importance and their satisfaction level.
+    - name: Key Insights
+      contains: Unexpected findings and notable quotes from the call.
+    - name: Action Items
+      contains: Follow-ups, each with a date, an owner and the action to take.

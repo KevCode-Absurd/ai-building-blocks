@@ -1,7 +1,6 @@
 slug: powerpoint-slide-size-converter
 name: PowerPoint slide size converter
-summary: Share a deck and target slide size. Get a reflowed PowerPoint copy with
-  checked text, charts and image crops.
+summary: "Change a deck from 4:3 to 16:9 or any size. Get a reflowed PowerPoint copy with no stretched images and a list of layouts to check."
 category: general
 type: skill
 role: build

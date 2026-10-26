@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It reads your recall before it explains.
 new_slug: recall-first-study-tutor
 name: Recall-first study tutor
-summary: Write what you remember and rate your confidence first. Your AI then
-  fills gaps instead of repeating what you know.
+summary: Study with a recall-first study tutor. Write what you remember and rate your confidence, then your AI teaches only the gaps you missed.
 job: teach-and-train
 headline: Recall-first study tutor
-subhead: A study helper that makes you try first. You write what you remember
-  and rate how sure you are, and only then does your AI fill the gaps.
+subhead: A study helper that makes you try first. You write what you remember and rate how sure you are, and only then does your AI fill the gaps.
 explain: |
   A study helper that makes you try first. You write what you remember and rate how sure you are, and only then does your AI fill the gaps. This beats rereading, because pulling facts from memory is what makes them stick.
 
@@ -17,6 +15,10 @@ when:
   - You keep rereading notes and nothing sticks.
   - You want an AI that does not just hand over answers.
   - You want to catch topics where you feel sure but are wrong.
+not_for:
+  - "You need a graded test of what you know: use a teacher-set test, because this tutor helps you learn and does not score you."
+  - "You get very anxious when quizzed: start with a plain practice quiz you set yourself, or ask your teacher for gentler review."
+  - "You have never seen the topic before: read a short intro or ask your teacher first, then come back to test what stuck."
 you_give:
   - Topic you are studying
   - What you can recall, in your own words
@@ -28,7 +30,29 @@ you_get:
   - Explanation of only what you missed
   - Short retrieval quiz
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the system prompt from the skill file into the chat.
+  - Type your topic and a short note on your course or goal.
+  - "Answer the questions in order: first write what you remember, then rate your confidence."
+  - Read the gaps and errors, then the short explanation of what you missed.
+  - Answer the closing quiz from memory. Keep the evidence summary, then try the Explain-first interrogator or the Confidence calibration check next.
+output_sample:
+  input:
+    - The topic you are studying
+    - A short note on your course or goal
+    - What you remember about the topic, in your own words
+    - How sure you are, as a confidence rating
+    - Notes from earlier study sessions (optional)
+  output:
+    - name: Recall and confidence prompt
+      contains: Before any teaching, your AI asks you to write what you remember and rate how sure you are.
+    - name: Recall check
+      contains: A comparison of your recall to the facts, marking what you got right, missed or got wrong.
+    - name: Gaps and errors
+      contains: The missing and mistaken points, with a plain note where you felt sure but were wrong.
+    - name: Gap explanation
+      contains: A short lesson on only the points you missed, pitched to your level.
+    - name: Retrieval check
+      contains: A short quiz where you answer from memory, then rate your confidence again.
+    - name: Evidence capture summary
+      contains: A record of your attempt, confidence and reflection, to keep for later review.

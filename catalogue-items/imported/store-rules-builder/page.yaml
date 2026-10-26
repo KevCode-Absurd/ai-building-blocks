@@ -2,35 +2,60 @@ thinking: high
 thinking_why: Rule logic runs on every order, so mistakes cost money.
 new_slug: store-rules-builder
 name: Store rules builder
-summary: Say the discount, shipping or payment rule you want. Get a working
-  Shopify Function that runs it.
+summary: Turn a plain-words Shopify discount, shipping or payment rule into a working Shopify Function, with setup, test and deploy steps.
 job: build-software
 headline: Store rules builder
-subhead: Say the discount, shipping or payment rule you want. Get a working
-  Shopify Function that runs it. Bring the rule in plain words. Use the result
-  to plan your next step.
+subhead: Tell your AI the checkout rule you want, in plain words. It writes a Shopify Function in Rust or JavaScript and shows you how to test it. You need the Shopify CLI, a Partner account and some comfort with code.
 explain: |
   A custom rule for your Shopify checkout, written as working code. Say what you want in plain words, like 10 percent off when a cart has three of a product, hide a shipping option for large orders or block checkout for a bad cart, and get a Shopify Function that runs it.
 
   Functions are small programs that run on Shopify's servers in milliseconds. The skill covers the main types: discounts, delivery options, payment method rules, cart and checkout checks and order routing. It sets up the app, writes the logic in Rust or JavaScript and explains how to test it. You need Shopify CLI, a Partner account and some comfort with code.
 when:
-  - You want a discount rule Shopify's built-in options cannot do.
+  - You want a discount rule that Shopify's built-in options cannot do, like a deal for buying three or more.
   - You need to hide or rename shipping choices for certain carts.
-  - You want to remove a payment method for large orders.
-  - You need to stop checkout when a cart breaks a rule.
+  - You want to hide a payment method, such as cash on delivery, for large orders.
+  - You need to stop checkout with a clear message when a cart breaks a rule.
+not_for:
+  - "You want to change how checkout looks: use the checkout-customization skill, since this one only changes rules."
+  - "Shopify's built-in discount options already do what you want: set it up in your Shopify admin, no code needed."
+  - "You have no developer help and no comfort with code: ask a Shopify developer to build and check the rule."
 you_give:
-  - The rule in plain words
-  - Which part of checkout it affects
-  - A Shopify Partner account and CLI
+  - Your rule in plain words
+  - "The part of checkout it changes: discount, delivery, payment, cart check or cart changes"
+  - Your Shopify app folder, or a new one to create
   - Your language choice, Rust or JavaScript (optional)
 you_get:
-  - A working Shopify Function project
-  - The rule logic in code
-  - Setup and deploy steps
-  - Test cases to try
+  - A Function project with its settings file and cart query
+  - The rule written as code
+  - A sample cart to test it with
+  - Steps to test it and deploy it
+  - Admin screen code to set values like a percentage (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use the Shopify CLI.
+  - Open an AI that can run code and use the Shopify CLI. Paste in this skill.
+  - Describe your rule in plain words and say which part of checkout it changes.
+  - Ask your AI to create the Function with the Shopify CLI in your app, in Rust or JavaScript.
+  - Run the sample cart through it with the local test command. Check the result matches your rule.
+  - Try a large cart and a cart that should not match, then read the code once.
+  - Deploy with the Shopify CLI only when the tests pass. Turn it on in your Shopify admin.
+output_sample:
+  input:
+    - Your rule in plain words
+    - Which part of checkout it changes
+    - Your language choice, Rust or JavaScript (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A Shopify Partner account
+    - An existing Shopify app to add the Function to
+  output:
+    - name: shopify.extension.toml
+      contains: "The Function settings: API version, name, target, input query path and build command."
+    - name: input.graphql
+      contains: The cart data query that asks Shopify only for the details your rule needs.
+    - name: src/run.rs or src/run.js
+      contains: The rule logic in Rust or JavaScript, built for discounts, delivery, payment, validation or cart changes.
+    - name: Sample input JSON
+      contains: A test cart you can feed to the Function to see what it returns.
+    - name: Deploy steps
+      contains: The CLI commands to test it locally and deploy it with your app.
+    - name: Configuration screen (optional)
+      contains: Admin page code that saves rule settings, such as a minimum quantity or percentage, to a metafield.

@@ -1,6 +1,6 @@
 new_slug: find-a-product-idea-in-buyer-complaints-and-score-it
 name: Find a product idea in buyer complaints and score it
-summary: Give it a category. Get complaints that sell, the gap to own and a score out of 100.
+summary: Find a product idea in buyer complaints. Give it a category and get ranked complaints, the gap rivals leave open and a score out of 100.
 job: find-products
 thinking: medium
 thinking_why: It runs four skills in a row, and most of the work is reading and ranking. A mid-size model with web search is enough.
@@ -14,6 +14,10 @@ when:
   - You have a category in mind and no product yet.
   - You have a product idea and want to check that buyers actually complain about the gap.
   - You want a go or no-go with the margin sums before you order stock.
+not_for:
+  - "You already ordered the product and only want to sell it: use the Ad test brief writer to plan what to test."
+  - "You want to understand your current buyers' doubts, not find a new product: use the Customer objection coverage checker."
+  - "Your category is health, safety or legal: check the claims and rules with a qualified person before you act on the result."
 you_give:
   - A category or a market you want to sell in
   - Who you are, your budget and your country
@@ -29,6 +33,28 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Turn on web search if your AI has it. Without it, paste reviews in yourself.
   - When it pauses, choose one product for the top gap and write down its costs and price.
+output_sample:
+  input:
+    - A category or market you want to sell in
+    - Who you are, your budget and your country
+    - Reviews or forum posts from the category (optional)
+    - Product cost, shipping cost and planned price (asked for when it pauses)
+  prerequisites:
+    - An AI with web search helps. Without it, paste reviews in yourself.
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Rating gap product finder"
+      contains: Ranked buyer complaints with proof, willingness to pay, and sub-categories with weak ratings but strong search.
+    - name: "Step 2: Pain point niche finder"
+      contains: Thirty buyer problems, the best five and the brands already selling to each.
+    - name: "Step 3: Crowded category white space finder"
+      contains: A rival comparison, ranked gaps, a one-line position for the top gap and a short test.
+    - name: "Pause: your product choice"
+      contains: You pick one product for the top gap and write its cost, shipping cost and price.
+    - name: "Step 4: Winning product scorer"
+      contains: Margin sums, eleven pass, warn or fail rules, a score out of 100, a go or no-go and the first fix.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and every MISSING line in one list.
 how_it_works:
   - title: Find the complaints
     text: Lists the top unmet pain points with proof, looks for people saying they would pay more, and finds sub-categories with weak ratings but strong search. Keeps only gaps that two kinds of evidence agree on.

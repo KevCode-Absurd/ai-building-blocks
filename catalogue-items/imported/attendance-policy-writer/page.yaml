@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Rules must be clear and match local law.
 new_slug: attendance-policy-writer
 name: Attendance policy writer
-summary: Give it your shifts and country. Get clear lateness, overtime and
-  absence rules to review. Not legal advice.
+summary: Write an attendance policy for your team. Give it your shifts and country. You get lateness, overtime and absence rules to review.
 job: hire-people
 headline: Attendance policy writer
-subhead: Give it your shifts and country. Get clear lateness, overtime and
-  absence rules to review. Not legal advice. Bring shift patterns and industry.
-  Use the result to plan your next step.
+subhead: Give it your shifts and country. Get clear lateness, overtime and absence rules to review. Not legal advice. Bring shift patterns and industry. Use the result to plan your next step.
 explain: |
   A draft attendance policy in plain words that managers can follow and staff can understand. Describe your shifts, your country and your industry, and the AI writes rules for clocking in, lateness, breaks, overtime, absences and no-call, no-show cases.
 
@@ -18,6 +15,10 @@ when:
   - You are setting up a time clock and need rounding and overtime settings.
   - Your overtime pay is disputed because the rule is vague.
   - You need a short note telling staff about a policy change.
+not_for:
+  - "You need legal sign-off on the final rules: take the draft to an employment lawyer or HR adviser in your country."
+  - "You want to fix payroll errors in past pay runs: ask your payroll provider or accountant to check those records."
+  - "You need a policy for performance or conduct problems: write that with your HR adviser, not as an attendance rule."
 you_give:
   - Shift patterns and industry
   - Country or region
@@ -29,7 +30,27 @@ you_get:
   - Time-tracking system settings
   - A staff announcement and a manager guide
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Describe your shifts, your industry and your country or region.
+  - Say what hurts most, such as lateness, overtime disputes or no-shows.
+  - Ask for the policy first. Then ask for overtime rules, time clock settings, the staff message and the manager guide.
+  - Check the draft against your local labour law. Have a lawyer or HR adviser review it before you share it.
+output_sample:
+  input:
+    - Your shift patterns and industry
+    - Your country or region
+    - Your main problems, such as lateness or overtime
+    - The time clock or system you use (optional)
+  output:
+    - name: Attendance policy draft
+      contains: Plain rules for clocking in, lateness, breaks, absences and no-call, no-show cases.
+    - name: Overtime rules
+      contains: How overtime is worked out and who approves it, matched to your country's labour rules.
+    - name: Time-tracking settings
+      contains: Suggested rules for rounding, buddy-punch prevention and approving timesheet edits.
+    - name: Points system
+      contains: A way to track repeated lateness, with clear steps as the count grows.
+    - name: Staff announcement
+      contains: A short message telling your team what is changing and when.
+    - name: Manager guide
+      contains: Steps for handling exceptions and talking to someone about lateness.

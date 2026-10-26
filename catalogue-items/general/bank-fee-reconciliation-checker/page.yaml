@@ -1,32 +1,41 @@
 new_slug: bank-fee-reconciliation-checker
 name: Bank fee reconciliation checker
 headline: Bank fee reconciliation checker
-summary: A service charge bridge and billing difference
+summary: Check one month of bank service charges against your agreement. See what you should have paid, the credit applied and the gap to the bill.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A service charge bridge and billing difference. Share bank service agreement, transaction counts, per-item prices, fixed account fee, eligible balance credit and actual billed amount for one month.
+subhead: Give it your bank agreement, the month's service counts and the bank's invoice. It rebuilds the charge from per-item prices and the fixed fee, applies your balance credit and compares the result with what you were billed.
 explain: |-
-  A service charge bridge and billing difference.
+  A bank bill puts item prices, a fixed account fee and a credit on your balances into one number. This bank fee checker rebuilds that number from your agreement line by line, so you can see which line is off.
 
-  Treasury bank fees. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  It multiplies each service count by its contracted price, adds the fixed fee, then takes off only the credit the agreement allows. The credit cannot go above the gross fees, and any unused credit is shown on its own. The gap is the bill minus the expected charge, so a positive gap means you were billed more.
+
+  It changes nothing with the bank and does not say you are owed a refund. It gives you questions to take to the bank.
 when:
-  - You need a service charge bridge and billing difference.
-  - You work on treasury bank fees and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - The monthly bank bill looks higher than usual.
+  - You want to confirm that the credit on your balances was applied.
+  - The bank changed its prices and you want to see the effect on one month.
+  - A reviewer asks for a bridge from the agreement to the bill.
 you_give:
-  - Bank service agreement, transaction counts, per-item prices, fixed account fee, eligible balance credit and actual billed amount for one month.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your bank service agreement with the price list
+  - The month's count for each service, such as wires or deposits
+  - The fixed monthly account fee
+  - The balance credit the agreement allows (optional)
+  - The bank's invoice total for the same month
 you_get:
-  - A service charge bridge and billing difference.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The gross charge for each service line
+  - The credit applied and any credit left unused
+  - The expected charge and the gap to the bill
+  - Questions to ask the bank about each gap
+  - An editable workbook and a list of checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in.
+  - Attach the agreement and the invoice, and paste the counts for one month.
+  - Ask the AI to show which price and which count each line used.
+  - Check that every count and price use the same service unit and the same month.
+  - Read MISSING before you contact the bank. Nothing is sent to the bank for you.
+  - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
   - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
     text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
@@ -76,3 +85,30 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+not_for:
+  - "You want to match bank statement lines to your ledger: use Bank and ledger matcher."
+  - "You want to check interest and fees on a revolving credit line: use Revolver interest and fee checker."
+  - "You want group cash pool interest and bank charges checked: use Cash pool interest and fee checker."
+output_sample:
+  input:
+    - Your bank service agreement and price list
+    - The month's service counts
+    - The fixed account fee and any balance credit
+    - The bank's invoice total
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: Source map
+      contains: The agreement terms, counts, currency and period used, each with its date.
+    - name: Charge bridge
+      contains: Gross charge by line, the fixed fee, the credit applied and the expected net charge.
+    - name: Billing difference
+      contains: Billed amount minus expected amount, with the sign shown.
+    - name: Evidence questions
+      contains: What to ask the bank for each line that does not tie.
+    - name: Workbook
+      contains: An editable file with your inputs, formulas and test cases.
+    - name: MISSING lines
+      contains: Each input you did not supply, left open and never replaced with zero.
+    - name: CHECKS MISSED
+      contains: The checks that could not run, or the word none.

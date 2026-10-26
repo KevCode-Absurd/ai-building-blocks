@@ -2,12 +2,16 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-fundraising-event-planner
 name: Nonprofit fundraising event planner
-summary: Share your event goal and costs. Get a budget, income scenarios, auction tracker, and event-day schedule.
+summary: Plan a fundraising event budget from your net goal. Get income scenarios, an auction tracker, a run of show and a staffing plan.
 job: organise-work
 headline: Nonprofit fundraising event planner
 subhead: Share your event goal, expected attendance, costs, and planned income sources. It works back from the money left after expenses. You get a full budget, cautious and stretch scenarios, auction tracker, event-day schedule, and staffing plan.
 when:
   - You need this task done for a nonprofit, community program, or donated-goods store.
+not_for:
+  - "You need sponsor tiers or a pitch deck: use the nonprofit-corporate-sponsorships skill, then add the sponsor income to this budget."
+  - "You are planning a walk, run or ride with team fundraising: use the nonprofit-peer-to-peer-fundraising skill."
+  - "You need thank-you letters or tax receipt wording: use the nonprofit-donor-retention skill, and check the final wording with a qualified adviser."
 you_give:
   - Net fundraising goal, attendance assumptions, cost estimates, income sources, timing, and available staff.
 you_get:
@@ -28,3 +32,23 @@ works_best_with:
 how_to_use:
   - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - Your net fundraising goal for the event
+    - Your expected attendance and ticket price ideas
+    - Your cost quotes for venue, food and sound (optional)
+    - Your sponsor and auction item leads (optional)
+    - Last year's event results (optional)
+  output:
+    - name: Event budget and net-revenue projection
+      contains: Every expense line with a contingency, every income line, and the money left after costs.
+    - name: Revenue-mix scenario model
+      contains: Cautious, target and stretch income for tickets, sponsors, and auction or fund-a-need.
+    - name: Auction procurement tracker
+      contains: Target items, who asks for each, status, secured value and fair market value.
+    - name: Run of show
+      contains: A minute-by-minute event-day plan with a named owner for each part of the program.
+    - name: Volunteer and staffing plan
+      contains: Who covers check-in, auction runners, checkout and payments, and donor hosting.
+    - name: Post-event report
+      contains: Actual against budget, net revenue, cost to raise a dollar, and lessons for next year.

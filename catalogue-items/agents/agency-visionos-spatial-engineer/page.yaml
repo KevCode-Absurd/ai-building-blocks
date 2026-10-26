@@ -1,0 +1,144 @@
+name: visionOS Spatial Engineer agent
+summary: Plan a native visionOS app in SwiftUI and RealityKit. Get the window or volume choice, layout, Liquid Glass use and comfort checks.
+headline: visionOS Spatial Engineer agent
+subhead: Describe the screen or feature and your visionOS version. The agent chooses between a window, a volume and an immersive space, plans the layout in depth, and checks comfort and accessibility. You get a spatial plan with code sketches to try in Xcode.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A visionOS app is not an iPad app floating in a room. Where content sits, how deep it goes and how glass materials look all change how it feels to use. This agent plans a native Apple Vision Pro interface before you build it, so you start with the right scene type.
+
+  It covers SwiftUI windows and volumes, RealityKit content, ornaments, attachments and Liquid Glass backgrounds. The profile is written for visionOS 26, so the agent marks anything that depends on version for you to check in Apple's release notes.
+
+  It stays inside the SwiftUI and RealityKit stack. It does not cover Unity or cross-platform spatial apps. It cannot run Xcode or a headset, so comfort checks come back as steps for you to run in the simulator or on a device. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's targets are its own goals, not results measured by AI Blocks.
+when:
+  - You are starting a Vision Pro app and are not sure whether it should be a window, a volume or an immersive space.
+  - Your SwiftUI window looks flat or crowded in space and you need a layout plan.
+  - You want Liquid Glass backgrounds and need to know where they help and where they hurt readability.
+  - You need a VoiceOver and navigation plan before you build the screen.
+not_for:
+  - "You are building for iPhone or iPad only: use the Mobile App Builder agent."
+  - "You want a Mac app that draws 3D with Metal: use the macOS Spatial/Metal Engineer agent."
+  - "You want a browser-based VR or AR experience: use the XR Immersive Developer agent."
+  - "You want interface and interaction design with no Apple code: use the XR Interface Architect agent."
+you_give:
+  - What the screen or feature does, in a few sentences
+  - The visionOS version you target, such as 26
+  - Window, volume or immersive space, or 'not sure'
+  - Your SwiftUI or RealityKit code, or the names of your scenes (optional)
+  - Where people will use it, such as seated at a desk or standing in a room (optional)
+  - Accessibility needs, such as VoiceOver (optional)
+you_get:
+  - A recommendation for window, volume or immersive space, with the reason
+  - A layout plan with depth, ornaments and attachments
+  - Where to use Liquid Glass backgrounds and where to avoid them
+  - SwiftUI and RealityKit code sketches, marked as drafts you have not built
+  - Comfort, readability and accessibility checks
+  - Open questions for anything it could not know
+how_to_use:
+  - Download the pack and add it as a skill in your AI. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - "Write your brief: what the screen does, your visionOS version and your window or volume idea. Paste your SwiftUI views if you have them."
+  - Say 'Plan this for visionOS. Mark anything that depends on the version.' Your AI asks once for what is missing.
+  - Read the scene choice and assumptions first. Change them if they do not match your idea.
+  - Paste the code sketches into Xcode and build. Run the comfort and accessibility checks in the simulator or on a headset.
+  - Check each version-specific feature in Apple's visionOS release notes before you rely on it.
+how_it_works:
+  - title: Collect the brief
+    text: It confirms what the screen does, the visionOS version and your scene idea. It asks once for anything missing, then marks it MISSING.
+  - title: Choose the scene type
+    text: It picks a window, a volume or an immersive space and says why, using what the person does in it.
+  - title: Plan layout and depth
+    text: It places content, ornaments and attachments, and sets the spacing between layers.
+  - title: Place glass and materials
+    text: It decides where glass background effects help and where text needs a plainer surface.
+  - title: Check comfort, access and speed
+    text: It covers VoiceOver, spatial navigation, and the graphics cost of several glass windows and 3D content.
+  - title: List the checks
+    text: It gives numbered checks for the simulator or a headset and lists what is unknown.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Screen <what it does> | visionOS <version> | Scene idea <window, volume, space or not sure>
+    Assumed: <list> | MISSING: <list>
+
+  SCENE CHOICE
+    <window, volume or immersive space> | <reason>
+
+  LAYOUT AND DEPTH
+    <element> | <where it sits> | <depth> | <window, ornament or attachment>
+
+  GLASS AND MATERIALS
+    <area> | <glass or plain> | <readability note>
+
+  CODE SKETCHES (drafts, not built)
+    <name> | <short SwiftUI or RealityKit code>
+
+  COMFORT AND ACCESSIBILITY CHECKS
+    <number> | <check> | <what a pass looks like>
+
+  PERFORMANCE CHECKS
+    <check> | <how to run it>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - What your screen or feature does, in a few sentences
+    - The visionOS version you target
+    - Your window, volume or immersive space idea
+    - Your SwiftUI or RealityKit code (optional)
+  prerequisites:
+    - Xcode with the visionOS simulator, or an Apple Vision Pro, to try the plan
+    - An AI that takes a pasted profile, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brief and assumptions
+      contains: The screen, version and scene idea as understood, with assumptions and MISSING items.
+    - name: Scene choice
+      contains: Window, volume or immersive space, with the reason.
+    - name: Layout and depth
+      contains: Where each element sits, how deep, and whether it is a window part, ornament or attachment.
+    - name: Glass and materials
+      contains: Where Liquid Glass backgrounds fit and where text needs a plainer surface.
+    - name: Code sketches
+      contains: Short SwiftUI and RealityKit drafts, marked as not built.
+    - name: Comfort and accessibility checks
+      contains: Numbered checks for readability, VoiceOver and navigation, with what a pass looks like.
+    - name: Performance checks
+      contains: Checks for the cost of several glass windows and 3D content.
+    - name: Open questions
+      contains: What is unknown and what each answer changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scene type
+    how: Say 'not sure' if you are undecided, and describe what the person does in the app.
+  - what: Version
+    how: Give the exact visionOS version so version-specific features are flagged for it.
+  - what: Use setting
+    how: Say if people sit, stand or move, since it changes layout and comfort checks.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: visionOS
+    meaning: Apple's operating system for Apple Vision Pro.
+  - term: Window, volume and immersive space
+    meaning: A flat panel, a box of 3D content, and a scene that surrounds the person.
+  - term: Ornament
+    meaning: A control bar that attaches to the edge of a window.
+  - term: Liquid Glass
+    meaning: Apple's see-through material that adapts to light and to what is behind it.
+  - term: RealityKit
+    meaning: Apple's framework for 3D content and scenes.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan is mostly reasoning and short code, which any of them can do from a pasted profile.
+    - name: Claude Code
+      why: It can read your Xcode project files, so the plan fits your real views.
+  inputs:
+    - Screenshots of your current window from the simulator.
+    - Apple's visionOS release notes for your version.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Good questions need clear scoring tied to the job.
 new_slug: structured-interview-guide
 name: Structured interview guide builder
-summary: Name the role. Get set questions, strong and weak answer signs and a
-  scorecard. You make the hiring call, not the AI.
+summary: Build a structured interview guide for any role. Get set questions, strong and weak answer signs and a scorecard so you judge every candidate the same way.
 job: hire-people
 headline: Structured interview guide builder
-subhead: A fair, repeatable interview plan for a role, so every candidate is
-  judged on the same things. You name the role and level, and you get core
-  questions, follow-up probes, signs of strong and weak answers and a scorecard.
+subhead: A fair, repeatable interview plan for a role, so every candidate is judged on the same things. You name the role and level, and you get core questions, follow-up probes, signs of strong and weak answers and a scorecard.
 explain: |
   A fair, repeatable interview plan for a role, so every candidate is judged on the same things. You name the role and level, and you get core questions, follow-up probes, signs of strong and weak answers and a scorecard.
 
@@ -18,6 +15,10 @@ when:
   - Several people will interview and you want their scores to be comparable.
   - You are hiring for a role you have not hired before.
   - You want to reduce bias and keep notes you can defend.
+not_for:
+  - "You need legal, background or right-to-work checks: use your lawyer, a licensed screening provider or your local rules, not this guide."
+  - "You want to write the job ad or job description: write that first with a person who knows the role, then bring it here."
+  - "You want the AI to pick the hire: it will not. Your team makes the call from the scores and notes."
 you_give:
   - The role and seniority
   - Key skills or traits the job needs
@@ -30,7 +31,30 @@ you_get:
   - A scoring rubric and scorecard
   - A plan for each interviewer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill text first. No code, files or paid tools are needed.
+  - Type the role and level, for example a senior role in your team.
+  - Paste the skills the job needs. Add the job description, the interview stages and the panel size if you have them.
+  - Ask your AI to build the structured interview guide with a scorecard.
+  - Read the questions and cut any that do not fit the job. Check that none ask about age, family, religion or other personal topics.
+  - Give each interviewer the same guide. Ask them to score on their own before the team talks.
+output_sample:
+  input:
+    - The role and level
+    - The key skills or traits the job needs
+    - The job description (optional)
+    - The interview stages or panel size (optional)
+  output:
+    - name: Competencies
+      contains: The skills the role needs, picked before any question is written.
+    - name: Behavioral question
+      contains: One question per skill that asks for a real past example, in the STAR format.
+    - name: Situational question
+      contains: One realistic work scenario that tests judgment, priorities and decisions.
+    - name: Follow-up probes
+      contains: Two or three questions that check ownership, reasoning and what the candidate learned.
+    - name: Strong answer guidance
+      contains: What a good answer shows, such as clear ownership, sound reasoning and real results.
+    - name: Weak answer guidance
+      contains: Warning signs such as vague examples, blaming others or no results.
+    - name: Scorecard
+      contains: Rows for each skill with evidence, notes, strengths, concerns, rating and a hiring recommendation.

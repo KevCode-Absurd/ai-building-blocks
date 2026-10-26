@@ -1,6 +1,6 @@
 new_slug: cited-research-assistant
 name: Cited research assistant
-summary: Give it a question. Get a report where every claim has a source, or is marked unsourced after three rounds.
+summary: Get a cited research report where every claim has a source you can open, or is marked unsourced after three rounds of checking.
 job: research-topics
 thinking: high
 thinking_why: It searches, reads sources, compares them and decides which claims to keep. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You need a report you can defend, and each claim must trace to a source.
   - You have an AI draft and do not know which sentences are backed by anything.
   - You are researching a topic over weeks and want each round to start from the last ledger.
+not_for:
+  - "You can answer the question from one page you already know: just read that page."
+  - "You want a quick first draft with no source checks: ask your AI for a plain research summary instead."
+  - "You need someone to publish or send the report: do that step yourself, since this agent never sends anything without a yes."
 you_give:
   - Your question, who the report is for, and the time period or place if it matters
   - Papers, pages or notes you already have (optional)
@@ -29,6 +33,27 @@ how_to_use:
   - Let it run. It will ask before it pays for access, logs in to a site or sends anything.
   - Read the "Not sourced" list first. Decide which of those claims to cut and which to chase by hand.
   - To update the report later, run it again on the same topic. It reads the ledger and starts from the open claims.
+output_sample:
+  input:
+    - Your research question, who the report is for, and the time period or place
+    - Papers, pages or notes you already trust (optional)
+    - How strict to be about which claims need a source (optional)
+  prerequisites:
+    - An AI that can search the web and open pages, or it can only list claims and the kind of source each needs
+    - Somewhere to save files between rounds, such as Claude Code (optional)
+  output:
+    - name: Report
+      contains: The full write-up, with a source after each claim.
+    - name: Ledger summary
+      contains: Counts of claims, sourced, dropped and still open, plus how many rounds ran.
+    - name: Ledger
+      contains: One row per claim with its source, a short quote from the opened source, and its status.
+    - name: Not sourced
+      contains: Each claim still open, why it is open, and the kind of source that would settle it.
+    - name: Where sources disagree
+      contains: Each point where sources conflict, with both sides shown.
+    - name: Files and missing
+      contains: The ledger and round files, then every MISSING line in one list.
 how_it_works:
   - title: Check for earlier work
     text: Reads the topic's ledger if there is one, so a second run starts from the open claims.

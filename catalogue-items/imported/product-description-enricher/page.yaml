@@ -2,35 +2,58 @@ thinking: medium
 thinking_why: It rewrites from product facts and needs judgment on tone.
 new_slug: product-description-enricher
 name: Product description enricher
-summary: Point it at thin product descriptions. Get fact-rich rewrites with
-  materials, uses and shopper words. Updates live product pages.
+summary: Find thin product descriptions in your Shopify store and rewrite them with real facts. Review every product description rewrite before it goes live.
 job: build-websites
 headline: Product description enricher
-subhead: Thin product descriptions turned into copy with real facts in it. An AI
-  shopping tool quotes your description to explain why a product fits. A
-  one-liner gives it nothing to quote, so it moves on.
+subhead: Give it your Shopify store and a length rule for thin descriptions. It rewrites each short description with real facts from the product's own data. You approve the rewrites before anything goes live.
 explain: |
   Thin product descriptions turned into copy with real facts in it. An AI shopping tool quotes your description to explain why a product fits. A one-liner gives it nothing to quote, so it moves on.
 
   Claude finds products whose descriptions fall under a length threshold or lack key details. It rewrites each with a benefit-led opening line, then concrete facts: material, fit, size, uses and care, pulled from the product's own fields, options and type. It also works in the words shoppers actually type. You review the rewrites first. They update live product pages, so you need an authenticated Shopify CLI session with write access.
 when:
   - Many of your products have one-line or empty descriptions.
-  - AI tools describe your items vaguely or skip them.
-  - You want facts like material and care in a consistent layout.
-  - You are rewriting a whole catalog and need a fast first pass.
+  - AI shopping tools describe your items vaguely or skip them.
+  - You want material, fit and care shown in the same layout on every product.
+  - You are rewriting a whole catalog and want a fast first draft.
+not_for:
+  - "Your descriptions are already rich and detailed: leave them alone, or hand-write only the few that need work."
+  - "You want to edit product pages you have not reviewed: check the before and after list first, or make the change by hand in Shopify."
+  - "Your products have almost no data in their fields: add the facts to Shopify first, because this skill never invents specs."
 you_give:
-  - Your store domain
-  - The length rule for a thin description
-  - Brand tone notes (optional)
-  - Approval before updates go live
+  - Your store domain, like mystore.myshopify.com
+  - The length rule for a thin description (optional, the default is 120 characters)
+  - A collection or product tag to limit the run (optional)
+  - Notes on your brand voice (optional)
 you_get:
-  - A list of thin descriptions
-  - A fact-rich rewrite for each
-  - Consistent structure across products
-  - Updated live pages after approval
+  - A list of products with thin descriptions
+  - A rewrite for each, built only from facts in your product data
+  - The same layout across all rewritten products
+  - A before and after file to review
+  - Updated live pages, only for the products you approve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot update Shopify.
+  - Log in to Shopify first with the Shopify CLI, using an account that can read and change products.
+  - Give your AI the skill and your store domain. Add your length rule and voice notes if you have them.
+  - Ask for a dry run first. This shows the before and after for each product and changes nothing.
+  - Read the rewrites. Check the facts, and look hardest at your best sellers.
+  - Tell your AI which products to update. It then changes only those live pages.
+output_sample:
+  input:
+    - Your store domain
+    - The length rule for a thin description (optional, the default is 120 characters)
+    - A collection or product tag to limit the run (optional)
+    - Notes on your brand voice (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - A logged-in Shopify CLI session with read and write access to products
+  output:
+    - name: Thin product list
+      contains: Products whose plain-text description is shorter than your length rule, with the facts found in their fields, options and type.
+    - name: Before and after preview
+      contains: For each thin product, the old description next to the new draft, so you can review it.
+    - name: Rewritten description
+      contains: One benefit-led opening line, then a short list of facts taken only from the product's own data.
+    - name: Before and after CSV
+      contains: A file with product, old length, new length and new description for every product touched.
+    - name: Outcome summary
+      contains: How many products were enriched or skipped, and any errors Shopify returned.

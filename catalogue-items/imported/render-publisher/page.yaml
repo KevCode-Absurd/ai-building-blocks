@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set deploy path.
 new_slug: render-publisher
 name: Render publisher
-summary: Point it at your project. Get it deployed on Render, with a setup file
-  and the link.
+summary: Deploy your app to Render from a Git repo. Get a render.yaml setup file, a Blueprint link and a list of settings left to fill in.
 job: ship-and-host
 headline: Render publisher
-subhead: Your project live on Render, with the setup file written and the
-  dashboard link in your hand. You do not need to learn the hosting settings
-  first.
+subhead: Your project live on Render, with the setup file written and the dashboard link in your hand. You do not need to learn the hosting settings first.
 explain: |
   Your project live on Render, with the setup file written and the dashboard link in your hand. You do not need to learn the hosting settings first.
 
@@ -18,6 +15,10 @@ when:
   - You want your hosting setup saved as a file, not clicked together.
   - Your app needs a database and a scheduled job alongside it.
   - You are new to Render and want a guided start.
+not_for:
+  - "Your app is only a ready-made Docker image with no Git repo: use the Render dashboard image flow, because this skill cannot create image services."
+  - "Your app already runs well on another host: keep it there, or ask that host's own guide for help."
+  - "Your code is only on your computer: push it to GitHub, GitLab or Bitbucket first, then come back."
 you_give:
   - Project folder pushed to a Git host
   - Render account
@@ -29,8 +30,32 @@ you_get:
   - Link to the Render dashboard
   - List of settings still to fill in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and reach your Render account.
+  - Push your project to GitHub, GitLab or Bitbucket. Make sure you have a Render account.
+  - Open your AI tool and paste in this skill. Use an AI that can run commands if you can.
+  - Tell it your repo and whether Render should create a database and other extras.
+  - Answer its questions. It reads your code and writes render.yaml.
+  - Push the file to a branch and review it before you merge to main.
+  - Open the Blueprint link, add your secret settings in Render, and check that the deploy runs.
+output_sample:
+  input:
+    - Your project folder, pushed to GitHub, GitLab or Bitbucket
+    - Your Render account
+    - Whether Render should create a database and other extras
+    - Secret settings your app needs (optional)
+  prerequisites:
+    - A Render account
+    - Your code pushed to a Git host
+    - An AI that can run commands (to push and check the deploy)
+  output:
+    - name: Codebase analysis
+      contains: The language, build command, start command and settings your app needs, read from your code.
+    - name: render.yaml
+      contains: The setup file that lists each service, database and scheduled job for your app.
+    - name: Next steps
+      contains: What to do right after the file is made, including a branch to push and review before main.
+    - name: Blueprint deeplink
+      contains: A link that opens Render with your setup ready to create.
+    - name: Deploy check
+      contains: A look at the live service to confirm it started, with basic fixes if it did not.
+    - name: Settings to fill in
+      contains: The secret values you must add in the Render dashboard yourself.

@@ -44,15 +44,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Shopify Google tracking builder.** Use the skill `shopify-google-conversion-tracking-builder`. Sets up the purchase tracking and a test plan to run before any spend.
+1. **Shopify Google tracking builder.** Use the skill `shopify-google-conversion-tracking-builder`. Sets up the purchase tracking and a test plan to run before any spend. Hands step 2 the setup plan to check your test order against.
 
 Pause here: Add the tags, place a test order, and save screenshots of the Google Ads conversion page and Tag Assistant.
 
-2. **Google Ads purchase tracking checker.** Use the skill `google-ads-purchase-tracking-checker`. Checks the screenshots from your test order against the setup plan and lists what is still wrong.
+2. **Google Ads purchase tracking checker.** Use the skill `google-ads-purchase-tracking-checker`. Give it the screenshots from your test order and the setup plan from step 1. Checks the order against the plan and lists what is still wrong.
 
 Pause here: Fix the tracking faults, then run the tracking check again until it passes. Then export the Merchant Center products and issues list.
 
-3. **Merchant Center feed health checker.** Use the skill `merchant-center-feed-health-checker`. Ranks the feed problems so the products that earn most are fixed first.
+3. **Merchant Center feed health checker.** Use the skill `merchant-center-feed-health-checker`. Give it your own Merchant Center products and issues export, not step 2's audit. Ranks the feed problems so the products that earn most are fixed first.
 
 Pause here: Fix the feed faults, then run the feed check again until the gate passes.
 

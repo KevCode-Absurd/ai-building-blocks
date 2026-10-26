@@ -1,44 +1,56 @@
 new_slug: check-management-payout-and-sponsor-receipts
 name: Check management payout and sponsor receipts
 headline: Check management payout and sponsor receipts
-summary: Carry a simple vested incentive payout into a sole sponsor annual receipt timeline.
+summary: Check a management incentive payout from sale proceeds, then see the sponsor's yearly return and cash multiple on its own cash.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Management payout reconciliation and sponsor-only periodic IRR and cash multiple. Share actual sole institutional sponsor entry cash, separately vested residual management award, net equity proceeds after debt, first-anniversary distribution and second-anniversary exit evidence.
+subhead: Give it the sponsor's entry cash, the management award terms and the exit figures. Your AI works out the award, then the sponsor's yearly return and cash multiple, using the cash the sponsor really receives.
 explain: |-
-  Management payout reconciliation and sponsor-only periodic IRR and cash multiple.
+  In a buyout with one sponsor and a management award, the award comes out of the equity proceeds, so the sponsor does not receive all of them. Models often use the wrong base, such as the whole company value. This workflow uses net equity proceeds after debt, and gives the sponsor only what is left after the award.
 
-  Private equity distributions. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 works out the vested award from a fixed hurdle. Step 2 takes the sponsor's exit cash, its entry cash and a distribution at the first anniversary. It calculates the yearly return (IRR) and the cash multiple, which is cash back divided by cash in.
+
+  It works only when the cash dates are exactly one year apart. If they are not, you need a date-based IRR in a spreadsheet. It also stops when other holders or preferences sit ahead of management.
 when:
-  - You need management payout reconciliation and sponsor-only periodic IRR and cash multiple.
-  - You work on private equity distributions and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A sponsor is planning an exit and management asks what their award is worth.
+  - You want the sponsor's return after a dividend in the first year.
+  - A model gives a management award that looks too big or too small.
+  - A reviewer asks you to tie the award and the sponsor return to the same proceeds.
+not_for:
+  - "There are rollover holders, other investors or a preferred return ahead of management: use the Separate rollover and management incentives workflow."
+  - "Your cash dates are not exactly one year apart: this yearly IRR does not fit. Use a date-based IRR in a spreadsheet."
+  - "You want to compare exit terms for preferred shares: use the Compare preferred exit payout terms workflow."
 you_give:
-  - Actual sole institutional sponsor entry cash, separately vested residual management award, net equity proceeds after debt, first-anniversary distribution and second-anniversary exit evidence.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The sponsor's entry cash and date (from the closing statement)
+  - "The management award terms: vested part, hurdle and share (from the plan documents)"
+  - Net equity proceeds after debt at exit (from the exit statement)
+  - The sponsor's distribution at the first anniversary, such as a dividend recap
+  - The sponsor's receipt at the second anniversary exit
 you_get:
-  - Management payout reconciliation and sponsor-only periodic IRR and cash multiple.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The vested management award from net equity proceeds
+  - The sponsor's exit receipt after the award
+  - The sponsor's yearly return and cash multiple
+  - A note on whether the cash dates fit a yearly calculation
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the plan documents, closing and exit statements. Say the dates, currency and whether figures are in thousands.
+  - Ask your AI to follow the pack and save each step's file.
+  - After step 1, check the base is net equity proceeds after debt, not enterprise value.
+  - After step 2, check the dates are exactly a year apart before you quote the return. Finish every MISSING line first.
 how_it_works:
   - title: Management equity hurdle checker
-    text: Calculate only the vested fixed-hurdle award from actual net equity proceeds. Under the stated two-holder structure, identify otherHolders as the sponsor exit receipt, not gross enterprise value.
+    text: Works out only the vested, fixed-hurdle award from net equity proceeds. With one sponsor and management, the sponsor's exit receipt is what is left. Hands step 2 that receipt.
   - title: Dividend recap timing checker
-    text: Use the verified sponsor exit receipt, actual sponsor entry check and net first-anniversary sponsor distribution. Confirm exact annual timing; irregular dates require a separate XIRR engine and this periodic fixture cannot substitute.
+    text: Uses the sponsor's exit receipt, its entry cash and the net distribution at year one. Confirms the dates are exactly a year apart. Gives the yearly return and the cash multiple. Irregular dates need a separate date-based IRR.
 output_shape: |-
-  Management payout reconciliation and sponsor-only periodic IRR and cash multiple.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <plan documents, closing and exit statements, dates>
+  MANAGEMENT AWARD        <net equity proceeds | vested part | hurdle | award>
+  SPONSOR RECEIPTS        <entry cash | year-one distribution | exit receipt after award>
+  RETURNS                 <yearly return | cash multiple | date check>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,13 +72,40 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A spreadsheet tool and an AI that reads files
+      why: A return needs a full cash flow list. The AI should recalculate it and reopen the saved file.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The exit statement showing debt repaid.
+    - The management plan or award letter.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Sponsor
+    meaning: The investor, often a private equity firm, that buys the company.
+  - term: Management award
+    meaning: Equity or a payout that managers earn if the exit value passes a set hurdle.
+  - term: Net equity proceeds
+    meaning: What is left for owners after the company's debt is repaid.
+  - term: Dividend recap
+    meaning: A payout to owners funded by new debt, before the final exit.
+  - term: IRR
+    meaning: The yearly rate of return that ties cash in to cash back.
+  - term: Cash multiple
+    meaning: Total cash back divided by cash put in.
+output_sample:
+  input:
+    - The sponsor's entry cash and the management award terms
+    - Net equity proceeds after debt at exit
+    - The sponsor's year-one distribution and exit receipt
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-1-management-equity-hurdle-checker.md
+      contains: The vested award from net equity proceeds, and what is left for the sponsor.
+    - name: outputs/step-2-dividend-recap-timing-checker.md
+      contains: The sponsor's yearly return and cash multiple, with a check that dates are a year apart.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines, checks missed and one suggested next step.
+next:
+  - separate-rollover-and-management-incentives
+  - compare-preferred-exit-payout-terms
+  - review-sponsor-debt-cash-demands
+before: []

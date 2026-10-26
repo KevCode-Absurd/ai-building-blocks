@@ -10,6 +10,8 @@ inputs:
   - {type: transcript, required: true}
   - {type: performance_sheet, required: true}
   - {type: hooks, required: false}
+  - type: audit_report
+    required: false
 outputs:
   - {type: ad_style_dna}
   - {type: hooks}

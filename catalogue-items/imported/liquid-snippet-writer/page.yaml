@@ -2,34 +2,101 @@ thinking: medium
 thinking_why: It applies fixed Liquid rules to your own case.
 new_slug: liquid-snippet-writer
 name: Liquid snippet writer
-summary: Paste your theme code or say what you need. Get correct Liquid for
-  products, carts and loops.
+summary: Say what your Shopify theme should show. Get one working Liquid snippet, the file to put it in and steps to preview it first.
 job: build-software
 headline: Liquid snippet writer
-subhead: Working Shopify Liquid code for your theme, without trial and error.
-  Paste your theme code or say what you need, and get the right objects, filters
-  and loops for products, collections and carts.
+subhead: Describe one small thing your Shopify store should show, such as a sale badge or a cart total. Paste your current theme code if you have it. You get one Liquid snippet with the right objects, filters and loops, the file to place it in and how to preview it.
 explain: |
-  Working Shopify Liquid code for your theme, without trial and error. Paste your theme code or say what you need, and get the right objects, filters and loops for products, collections and carts.
+  Liquid is the code language behind Shopify themes. A small mistake, such as a price in cents shown as dollars, shows up on every product page. This Liquid snippet writer gives you one small piece of Liquid that does one job and is safe to try.
 
-  The skill knows Liquid's output tags, logic tags and whitespace control. It uses the right objects for products, collections, carts, customers and the shop, and picks the correct filters for text, numbers, lists, links, images and money. Then it builds conditionals and loops for dynamic content, like showing a badge on sale items or listing cart lines. It follows Liquid best practices so the snippet is safe to paste into a theme.
+  It picks the right Shopify objects for products, collections, carts, customers and the shop. It picks filters for text, numbers, lists, images and money. Then it adds the if and for logic that makes the content change, such as a badge only on sale items or one row for each cart line.
+
+  What sets it apart is size. You get one snippet, a file name and preview steps, not a rewrite of your theme. It follows Liquid good habits, such as using render instead of include and handling empty states.
+
+  You should always test the code on a copy of your theme before it goes live.
 when:
   - You want a sale badge that only shows when a product has a compare price.
   - Your theme loop is not showing the products you expect.
-  - You need to display cart totals in the right format.
+  - You need to show cart totals in the right money format.
   - You are editing a theme and do not know Liquid.
+not_for:
+  - You need a whole new theme section with settings in the theme editor. Use the Shopify theme code writer.
+  - You want to change checkout. Use the Shopify checkout customizer.
+  - You need an app with its own pages, sign-in or webhooks. Use the Shopify app builder.
+  - You want a theme-wide rebuild. Hire a Shopify developer.
 you_give:
-  - What the snippet should show
-  - The theme file it goes in (optional)
-  - Your existing code (optional)
-  - Product or collection details involved
+  - What the snippet should show, in plain words
+  - The theme file where it should go, such as product-card.liquid (optional)
+  - Your current code around it (optional)
+  - The product or collection details involved
 you_get:
-  - A working Liquid snippet
-  - The right objects and filters used
-  - Conditionals and loops for dynamic content
-  - A short note on where to place it
+  - One Liquid snippet in a single code block
+  - The theme file name to put it in
+  - A note on which objects and filters it uses
+  - Preview steps so you can check it before it goes live
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool and paste in this skill, or add it if your tool lets you add skills.
+  - Say what the snippet should show. Paste the theme file or the lines around where it should go, if you have them.
+  - Read the file name and the one-line note on each filter it used.
+  - In Shopify, duplicate your live theme. Then open Edit code on the copy and paste the snippet into the named file.
+  - Preview the copy on a sale product, a normal product and an empty cart. Publish the copy only when all three look right.
+how_it_works:
+  - title: Reads your request
+    text: Works out which page the snippet is on and which Shopify object holds the data you need.
+  - title: Picks objects and filters
+    text: Chooses the product, collection, cart, customer or shop fields and the filters for text, money and images.
+  - title: Adds logic
+    text: Writes the if, unless, case and for tags so the content changes with the data.
+  - title: Handles empty cases
+    text: Adds a fallback for items with no price, no image or an empty cart.
+  - title: Checks the habits
+    text: Uses render, not include, and keeps complex logic out of the snippet.
+  - title: Hands back one snippet
+    text: Gives one code block, the file name and a short preview note.
+output_shape: |
+  SNIPPET
+  <one Liquid code block>
+  PUT IT IN
+  <theme file name> | <where in the file>
+  WHAT IT USES
+  <object or filter>: <what it does>
+  PREVIEW
+  <steps to check on a copy of your theme>
+  OPEN QUESTIONS
+  <anything you did not give>
+output_sample:
+  input:
+    - What the snippet should show
+    - The theme file and the code around the spot (optional)
+    - The product, collection or cart details involved
+  prerequisites:
+    - A Shopify store with a theme you can edit
+    - A duplicate of your live theme to test on
+  output:
+    - name: Liquid snippet
+      contains: One code block of working Liquid for the job you described.
+    - name: File and place
+      contains: The theme file to paste it into and where in that file.
+    - name: Objects and filters used
+      contains: A line on each Shopify object and filter in the snippet.
+    - name: Preview steps
+      contains: How to check it on a copy of your theme before you publish.
+works_best_with:
+  tools:
+    - name: Shopify admin
+      why: A duplicate theme with Edit code lets you test the snippet without touching your live store.
+    - name: Any good chat AI
+      why: It can write the snippet from your description and your pasted code.
+  inputs:
+    - The theme name and version
+    - A link to a product page where the snippet should show
+    - A screenshot of what you want it to look like
+terms:
+  - term: Liquid
+    meaning: The code language Shopify themes use to show your products, prices and cart.
+  - term: Snippet
+    meaning: A small reusable file in your theme, called with the render tag.
+  - term: Filter
+    meaning: A step added after a value with a pipe, such as turning a price into money text.
+  - term: Compare at price
+    meaning: The old price a product shows with a line through it when it is on sale.

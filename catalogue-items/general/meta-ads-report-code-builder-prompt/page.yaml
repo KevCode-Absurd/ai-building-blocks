@@ -1,33 +1,140 @@
 new_slug: meta-ads-report-code-builder-prompt
 name: Meta Ads report coding prompt
-summary: Get a coding brief for a Meta Ads report that compares dated results, shows source data and flags missing evidence.
+summary: "Get a Claude Code prompt that builds a 17-section monthly Meta Ads report from your own data, with dates shown and missing numbers marked."
 job: build-software
 headline: Meta Ads report coding prompt
-subhead: Get a coding brief for a Meta Ads report that compares dated results, shows source data and flags missing evidence.
-explain: |-
-  Share your project and the required feature. Get a coding brief for meta ads report code builder, with setup and test steps.
+subhead: "Paste this prompt into Claude Code, inside your project. It builds a report function that reads one month of Meta Ads results, compares them with the month before and fills 17 sections. You also get a Markdown copy, a Slack message draft and tests."
+explain: |
+  A monthly Meta Ads report means pulling numbers, working out what changed and writing the story. This Meta Ads report generator prompt tells Claude Code to build that as code in your own project. It reads one month of daily results, compares them with the month before and fills all 17 sections of a client report.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The numbers come first. ROAS and CPA are worked out from month totals, not by averaging daily rows. The report shows the dates and the number of days in both months, so a 31-day month is never passed off as a 28-day one. A section your data cannot fill is marked "not available" with what is missing. It is never guessed.
+
+  Five sections get a written story: the summary, underperforming campaigns, wins, challenges and next-month actions. The AI sees only the numbers the code worked out. The Slack message is drafted but never posted.
+
 when:
-  - You need a coding brief for meta ads report code builder.
-  - You need build monthly report generator prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - "A client or boss wants a monthly Meta Ads report and you would rather build it once than write it every month."
+  - "You already store daily Meta results in a database and need a function that turns them into a report."
+  - "You run an agency and want the same 17 sections for every client, every month."
+  - "You want a short Slack summary of the month to review before it goes anywhere."
+
+not_for:
+  - "You only want to read one month of results and not build software: use the Ad results report writer."
+  - "You report on Google Ads: use the Google Ads report coding prompt."
+  - "You want to know why sales dropped: use the Ad sales drop analyst."
+  - "You have no stored daily results and no project folder. This prompt builds code, so it has nothing to run on."
+
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - "Your project folder, open in Claude Code"
+  - "Where your daily Meta Ads results are stored: a table or file with date, campaign, spend, revenue, purchases, clicks and impressions"
+  - "The month to report on, and a client ID if your data holds more than one client"
+  - "A minimum spend a campaign needs before it is ranked (optional)"
+  - "Your Slack setup, if you want a summary message drafted for it (optional)"
+
 you_get:
-  - A coding brief for meta ads report code builder
-  - Required files, setup gaps and test cases
+  - "A report function in your project that returns all 17 sections for one month"
+  - "A Markdown version of the full report"
+  - "A Slack message draft with the summary, key numbers, top campaigns and next actions. It is not posted"
+  - "Sections your data could not fill, marked not available, and a list of setup gaps"
+  - "Tests that use made-up numbers"
+
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open your project folder in Claude Code. It needs a coding tool that can read your folder, so it sees your real tables. A chat AI cannot do this. Claude Code runs on a paid Claude plan or an API account."
+  - "Copy the prompt from the skill file and paste it in. Add one line saying where your daily Meta results are stored, if you know."
+  - "Answer its questions about missing tables or columns before it writes code. Do not let it invent your schema."
+  - "Read the setup gaps and the sections marked not available. Fix the data, or accept the gaps."
+  - "Run the tests, then run the report on one past month. Check spend, purchases and revenue against Ads Manager before you send anything to a client."
+  - "Read the Slack draft. Add posting yourself only when you trust the numbers."
+
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: "Inspects your project"
+    text: "Finds where daily results are stored, how your project calls an AI model and whether Slack is set up. Lists what is missing before it writes code."
+  - title: "Totals the month"
+    text: "Adds up spend, revenue, purchases, impressions and clicks for the month and the month before. Shows both date ranges, day counts, currency, time zone and attribution window."
+  - title: "Fills 17 sections"
+    text: "Builds tables and trends from the totals. A section with no data behind it is marked not available."
+  - title: "Writes five stories"
+    text: "Writes the summary, underperformers, wins, challenges and next actions from the worked-out numbers only. A recommendation shows an impact estimate only when it can be calculated from your history."
+  - title: "Formats the result"
+    text: "Returns structured data, a full Markdown report and a Slack message draft. A PDF is left for later."
+  - title: "Tests and lists gaps"
+    text: "Writes tests on made-up numbers for sums, unequal month lengths, zero spend and missing sections. Reports only the tests it actually ran."
+
+output_shape: |
+  MONTHLY REPORT: <client> | <month>
+  PERIOD: <start to end, N days> | COMPARED WITH: <start to end, N days>
+  CURRENCY: <code> | TIME ZONE: <zone> | ATTRIBUTION WINDOW: <window or UNKNOWN>
+
+  1. Executive summary: <3 to 4 sentences, numbers from below>
+  2. Key metrics: <metric | this month | last month | change %>
+  3. Spend vs budget: <actual | planned | variance, or not available>
+  4. Revenue attribution: <purchases | revenue | ROAS>
+  5. ROAS trend: <weekly ROAS, last 8 weeks>
+  6. CPA trend: <weekly CPA vs your target>
+  7. Top campaigns: <5 by ROAS with spend and revenue>
+  8. Underperforming campaigns: <5 lowest by ROAS, with next steps>
+  9. Creative performance: <top 3 by CTR, top 3 by conversion rate>
+  10. Audience insights: <best audiences, or not available>
+  11. Platform breakdown: <only if other platforms are in the data>
+  12. Funnel: <impressions, clicks, add to cart, purchase, rates>
+  13. Creative fatigue: <ads past your frequency limit with falling CTR>
+  14. Budget allocation: <where money went and where it could go>
+  15. Wins: <what worked, with numbers>
+  16. Challenges and learnings: <what did not work and why>
+  17. Next month: <3 to 5 actions, each tied to the numbers behind it>
+
+  SLACK DRAFT: <sections 1, 2, 7 and 17, not posted>
+  SETUP GAPS: <missing tables, columns, permissions>
+  TESTS: <what ran and passed, what did not run>
+
+output_sample:
+  input:
+    - "Your project folder, open in Claude Code"
+    - "Where your daily Meta Ads results are stored"
+    - "The month to report on, and a client ID if needed"
+    - "A minimum spend for ranking campaigns (optional)"
+  prerequisites:
+    - "Claude Code, or another coding AI that can read your project folder"
+    - "Daily Meta Ads results already saved in your project"
+  output:
+    - name: "generateMonthlyReport"
+      contains: "The code function that reads one month of results and returns all 17 sections."
+    - name: "Sections 2 to 6, key numbers"
+      contains: "Metrics against last month, spend against budget, revenue and weekly ROAS and CPA trends."
+    - name: "Sections 7 to 10, campaigns and creative"
+      contains: "Top and bottom campaigns by ROAS, best creatives and audiences, each with spend."
+    - name: "Sections 11 to 14, diagnosis"
+      contains: "Platform split, funnel rates, creative fatigue and where the budget went."
+    - name: "Sections 1, 8, 15, 16 and 17, the stories"
+      contains: "Written summary, underperformers, wins, challenges and next actions, built only from the numbers."
+    - name: "Markdown report"
+      contains: "All 17 sections in one readable file, with dates, currency and gaps shown at the top."
+    - name: "generateSlackSummary"
+      contains: "A drafted Slack message with sections 1, 2, 7 and 17. It is not posted."
+    - name: "Setup gaps and tests"
+      contains: "Missing tables, columns and permissions, plus tests on made-up numbers and which ones ran."
+
+works_best_with:
+  tools:
+    - name: "Claude Code"
+      why: "It reads your project folder, so the report fits your real tables, helpers and test setup."
+    - name: "Any coding AI that works inside your folder"
+      why: "A chat AI cannot see your schema, so it has to guess. Guesses are marked, but you will rework more."
+  inputs:
+    - "A few sample rows of your daily Meta results, so it matches your column names"
+    - "Each client's monthly budget, so section 3 can be filled"
+    - "Each client's target CPA or ROAS, so section 6 has something to compare with"
+
+terms:
+  - term: "ROAS"
+    meaning: "Revenue from ads divided by what you spent on them."
+  - term: "CPA"
+    meaning: "What you paid for each purchase: spend divided by purchases."
+  - term: "Attribution window"
+    meaning: "How long after someone sees or clicks an ad a sale still counts for that ad."
+  - term: "Frequency"
+    meaning: "How many times, on average, one person saw the same ad."
+  - term: "Claude Code"
+    meaning: "A coding tool from Anthropic that works inside your project folder."
+
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It reads your project and compares numbers, then follows a fixed method.

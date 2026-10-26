@@ -8,7 +8,42 @@ metadata:
 
 # HR compensation and benefits
 
-Comprehensive compensation and benefits support — from pay analysis, salary surveys, and bonus plans to health programs, retirement benefits, total rewards statements, and retention strategies.
+Compensation and benefits support: pay analysis, salary surveys and bonus plans, through to health programs, retirement benefits, total rewards statements and retention strategies. Use it to turn a team's roles and budget into one draft plan.
+
+This is a draft for HR to refine. It is not legal, tax or job-evaluation advice. Say so in the output.
+
+## Before you start
+
+You need the roles (title and level), how many people in each, the pay budget, and the location and industry. Optional: current pay for each role, market data or a salary survey extract, and goals such as hiring, keeping people or cutting cost.
+
+If a required item is missing, ask for it once. If it stays missing, write "MISSING: <item>" in the plan and carry on with a clearly labelled assumption. Never invent market pay figures, survey data, benefit prices or statistics. If the user gives no market data, build the band structure from the midpoints they state and mark every market claim "needs market data".
+
+## Steps
+
+1. **Restate the brief.** Roles, headcount, budget, location, industry, goals, and any gaps.
+2. **Write the pay philosophy.** One short paragraph: where you aim to pay against the market (below, at or above), what pay rewards (skills, results, level), and how often pay is reviewed. Ask the user to choose if they haven't.
+3. **Group roles into grades.** Put similar roles in the same grade by scope and level, not by title. Say what each grade means in one line.
+4. **Build the pay bands.** For each grade give min, mid and max. Show the maths: spread = (max - min) / min, midpoint = (min + max) / 2, and the step from one grade's midpoint to the next. Use market data the user supplied for midpoints. Add a cost line: headcount x midpoint, compared with the budget.
+5. **Design the bonus plan.** Name the target bonus as a percent of base for each grade, the measures it depends on, and the payout formula. Show the cost if everyone hits target, and the cost against budget.
+6. **List the benefits.** Core benefits the user's location usually expects, then optional ones the budget allows. Do not quote prices or take-up rates unless the user gave them.
+7. **Draft the total rewards statement outline.** The headings an employee would see: base pay, bonus, benefits, time off, and development.
+8. **Check and flag.** List what you assumed, what needs market data, what needs HR or legal review (pay equity, leave, tax, equity grants), and the next three actions.
+
+Use the key prompts below to go deeper on any step.
+
+## Output
+
+```
+BRIEF AND ASSUMPTIONS
+PAY PHILOSOPHY        <one paragraph>
+GRADES                <grade> | <what it means> | <roles>
+PAY BANDS             <grade> | min | mid | max | spread | headcount | cost at mid
+BONUS PLAN            <grade> | target % | measures | formula | cost at target
+BENEFITS LIST         <core> | <optional> | why
+TOTAL REWARDS OUTLINE <headings>
+TOTAL COST VS BUDGET  <base + bonus + benefits> vs <budget> | gap
+FLAGS AND NEXT STEPS  <assumptions> | MISSING: <items> | review needed: <items>
+```
 
 ## Supported tasks
 
@@ -80,7 +115,7 @@ Comprehensive compensation and benefits support — from pay analysis, salary su
 ## Tips
 
 - Conduct regular market pay reviews (at least annually) to stay competitive and prevent talent flight.
-- Communicate total compensation clearly — most employees undervalue their benefits by 30-50%.
+- Show employees their total compensation clearly. Many don't see the value of benefits until it is spelled out.
 - Ensure all compensation decisions are documented and defensible against pay equity claims.
 - Design incentive plans with clear, measurable metrics that employees can directly influence.
 - Tailor benefits offerings to the demographics and preferences of your workforce through annual surveys.

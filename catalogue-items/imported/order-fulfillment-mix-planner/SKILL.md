@@ -5,6 +5,22 @@ description: When the user wants to optimize omnichannel fulfillment, manage buy
 
 # Omnichannel Fulfillment
 
+## How to run this version
+
+This block was added by AI Blocks. The method below is the original author's.
+
+**Ask first, never guess.** You need: where your stores and warehouses are, stock by location (ideally by product), order volume by channel (online, store, pick-up), current delivery times, cost per order, and the goal (speed, cost or stock use). If one is missing, ask once. If the user does not know, write MISSING next to it and say what it would change. Do not invent store counts, costs or order volumes.
+
+**Every number in the code is a placeholder.** The costs, scoring weights, impulse-purchase rate, basket size, home delivery cost, lifetime value gain and new-customer share are examples to show the shape of the math. They are not benchmarks. Replace each with the user's own figure and say where it came from (their order data, carrier invoices, finance). If the user cannot give one, leave that benefit out of the ROI and name it as unknown. Never report an ROI built on the placeholders.
+
+**Scoring.** The routing score adds delivery days, dollars and stock points on one scale, with weights of 0.4, 0.3, 0.2 and 0.1. Treat those weights as a starting point. Ask the user which of speed, cost and stock use matters most, and change the weights to match.
+
+**Tools.** The routing rules can be written and checked in plain chat for a small network. Running the Python needs an AI that can run code with pandas. Commercial order-management products are named near the end. They are paid and are not needed to use this skill.
+
+**Output.** Use the layout in "Output Format" below. The figures in that layout are placeholders showing where each number goes. Fill them only with figures from the user's data.
+
+**Stop and say so** if the business sells only online with no stores (use the ecommerce fulfillment skill) or has one location and no order history.
+
 You are an expert in omnichannel fulfillment strategy and execution. Your goal is to help retailers seamlessly fulfill orders across all channels (stores, online, mobile) using all available inventory nodes (stores, DCs, suppliers) to maximize sales, minimize costs, and deliver exceptional customer experiences.
 
 ## Initial Assessment
@@ -120,8 +136,10 @@ class OmnichannelOrderRouter:
         Balances speed, cost, and inventory health
         """
 
-        # Check inventory availability
-        if node['inventory'] < order['quantity']:
+        # Check inventory availability (per product when the node has inventory_by_sku)
+        stock = (node['inventory_by_sku'].get(order['sku'], 0)
+                 if 'inventory_by_sku' in node else node['inventory'])
+        if stock < order['quantity']:
             return float('inf')  # Cannot fulfill
 
         # Calculate distance/delivery time
@@ -168,7 +186,8 @@ class OmnichannelOrderRouter:
         else:
             capacity_score = 0
 
-        # Weighted total score
+        # Weighted total score. The parts use different units (days x 10, dollars,
+        # stock points), and the weights are a starting point. Set them with the user.
         total_score = (
             speed_score * 0.4 +
             cost_score * 0.3 +
@@ -316,9 +335,15 @@ fulfillment_nodes = pd.DataFrame({
     'capacity': [5000, 50, 50, 50],
     'inventory': [10000, 500, 300, 450],
     'sales_per_week': [2000, 100, 80, 90],
-    'orders_today': [2500, 25, 30, 20]
+    'orders_today': [2500, 25, 30, 20],
+    # Stock by product. The multi-item router reads this column.
+    'inventory_by_sku': [{'SKU123': 5000, 'SKU456': 5000},
+                          {'SKU123': 250, 'SKU456': 250},
+                          {'SKU123': 150, 'SKU456': 150},
+                          {'SKU123': 225, 'SKU456': 225}]
 })
 
+# Placeholder costs for the example. Replace with the user's own cost per order.
 cost_matrix = {
     'bopis': 2.50,
     'ship_from_store': 8.50,
@@ -462,7 +487,10 @@ class BOPISOptimizer:
                          'estimated_ready_time', 'requested_pickup_time']]
 
     def calculate_bopis_roi(self, bopis_orders_per_month, avg_basket_size,
-                           bopis_operating_cost_per_order=3.50):
+                           bopis_operating_cost_per_order,
+                           impulse_purchase_rate, avg_impulse_purchase,
+                           home_delivery_cost, ltv_increase_per_customer,
+                           new_customer_share, carrying_cost_saved_rate):
         """
         Calculate ROI of BOPIS program
 
@@ -478,8 +506,8 @@ class BOPISOptimizer:
 
         # Benefits
         # 1. Incremental purchases (customers buy more when picking up)
-        impulse_purchase_rate = 0.35  # 35% buy additional items
-        avg_impulse_purchase = 25
+        # Every rate and amount below is an argument. Use the user's own figures,
+        # from their sales data, carrier invoices and finance team.
         impulse_revenue = (
             bopis_orders_per_month *
             impulse_purchase_rate *
@@ -487,16 +515,14 @@ class BOPISOptimizer:
         )
 
         # 2. Cost savings vs. home delivery
-        home_delivery_cost = 8.50
         cost_savings = bopis_orders_per_month * (home_delivery_cost - bopis_operating_cost_per_order)
 
         # 3. Customer lifetime value increase (satisfaction)
-        ltv_increase_per_customer = 50
-        new_customers_per_month = bopis_orders_per_month * 0.3
+        new_customers_per_month = bopis_orders_per_month * new_customer_share
         ltv_benefit = new_customers_per_month * ltv_increase_per_customer
 
         # 4. Inventory turns improvement (use store inventory)
-        inventory_turn_benefit = bopis_orders_per_month * avg_basket_size * 0.05  # 5% carrying cost saved
+        inventory_turn_benefit = bopis_orders_per_month * avg_basket_size * carrying_cost_saved_rate
 
         total_monthly_benefit = (
             impulse_revenue +
@@ -534,9 +560,17 @@ print(f"Online allocation: {allocation['online_allocation']} units")
 print(f"In-store allocation: {allocation['instore_allocation']} units")
 
 # ROI calculation
+# All values below are placeholders. Replace each with the user's own figure.
 roi_analysis = bopis_optimizer.calculate_bopis_roi(
     bopis_orders_per_month=2500,
-    avg_basket_size=75
+    avg_basket_size=75,
+    bopis_operating_cost_per_order=3.50,
+    impulse_purchase_rate=0.35,
+    avg_impulse_purchase=25,
+    home_delivery_cost=8.50,
+    ltv_increase_per_customer=50,
+    new_customer_share=0.3,
+    carrying_cost_saved_rate=0.05
 )
 print(f"\nBOPIS ROI: {roi_analysis['roi']:.1%}")
 print(f"Net monthly benefit: ${roi_analysis['net_monthly_benefit']:,.0f}")
@@ -1079,80 +1113,34 @@ print(f"Channel allocations: {allocations}")
 ### Omnichannel Fulfillment Analysis Report
 
 **Executive Summary:**
-- Total orders by channel: Online 45%, Store 40%, BOPIS 15%
-- Current fulfillment costs: $8.20 per order
-- Ship-from-store percentage: 22%
-- Target: Increase SFS to 40%, reduce cost to $7.00
+- Orders by channel: online <percent>, store <percent>, pick-up <percent>
+- Current fulfillment cost: <cost> per order
+- Ship-from-store share: <percent>
+- Target: <share> from stores, <cost> per order
 
 **Channel Performance:**
 
-| Channel | Orders/Month | Avg Basket | Fulfillment Cost | Net Margin | Growth YoY |
-|---------|-------------|------------|------------------|------------|------------|
-| E-commerce | 45,000 | $72 | $9.50 | 18% | +35% |
-| BOPIS | 15,000 | $68 | $3.50 | 24% | +125% |
-| Ship from Store | 22,000 | $65 | $8.00 | 19% | +80% |
-| Store Retail | 40,000 | $58 | $2.00 | 22% | -5% |
+| Channel | Orders/Month | Avg Basket | Fulfillment Cost | Net Margin |
+|---------|-------------|------------|------------------|------------|
+| Online ship | <n> | <value> | <cost> | <percent> |
+| Pick-up in store | <n> | <value> | <cost> | <percent> |
+| Ship from store | <n> | <value> | <cost> | <percent> |
 
-**Fulfillment Network Utilization:**
+**Routing rules (the main result):**
 
-| Node Type | # Locations | Capacity Util | Orders/Day | Avg Distance | Delivery Speed |
-|-----------|-------------|---------------|------------|--------------|----------------|
-| Distribution Centers | 3 | 68% | 1,200 | 450 mi | 3.2 days |
-| Ship-from-Store | 45 | 42% | 800 | 35 mi | 1.8 days |
-| BOPIS Pickup | 120 | 35% | 500 | 8 mi | Same day |
+| Order type | First choice | Second choice | Rule |
+|------------|--------------|---------------|------|
+| <e.g. one item, near a store> | <location> | <location> | <plain rule> |
 
-**Order Routing Analysis:**
+**Pickup plan:** <ready-by time, pick slots per hour, stock held back for pick-up, who picks>
 
-- **Single-location fulfillment**: 78%
-- **Split shipments**: 22%
-- **Average splits per order**: 1.3 locations
-- **Routing efficiency**: 82% (% routed to optimal location)
+**Cost and speed trade-offs:** one line per option: <option>, <cost per order>, <days>, <main risk>
 
-**Optimization Opportunities:**
+**Targets to track:** <measure>, <today>, <target>, <how it is counted>
 
-1. **Expand ship-from-store (22% → 40%)**
-   - Enable 50 additional stores for SFS
-   - Investment: $250K (picking stations, training)
-   - Expected impact: -$1.20 per order, -0.8 days delivery time
-   - Annual savings: $650K
+**Opportunities (only those the user's data supports):** for each, <change>, <cost to do it, if known>, <expected effect, labelled estimate>. Mark any figure the user did not give as MISSING.
 
-2. **Improve inventory accuracy (85% → 95%)**
-   - RFID implementation in top 50 stores
-   - Investment: $400K
-   - Expected impact: -5% failed BOPIS, +8% BOPIS adoption
-   - Annual savings: $320K + revenue lift
-
-3. **Intelligent order routing optimization**
-   - Implement ML-based routing engine
-   - Investment: $150K
-   - Expected impact: +15% routing efficiency, -$0.40 per order
-   - Annual savings: $480K
-
-4. **BOPIS expansion**
-   - Add 30 BOPIS-capable stores
-   - Investment: $180K
-   - Expected impact: +10K orders/month, $25 impulse purchase lift
-   - Annual benefit: $850K
-
-**Implementation Roadmap:**
-
-| Quarter | Initiative | Investment | Annual Benefit | Payback |
-|---------|-----------|------------|----------------|---------|
-| Q1 | Order routing optimization | $150K | $480K | 3.8 mo |
-| Q2 | BOPIS expansion (30 stores) | $180K | $850K | 2.5 mo |
-| Q3 | SFS expansion (50 stores) | $250K | $650K | 4.6 mo |
-| Q4 | RFID inventory accuracy | $400K | $320K | 15 mo |
-
-**Expected Results (Year 1):**
-
-| Metric | Current | Year 1 Target | Improvement |
-|--------|---------|---------------|-------------|
-| Fulfillment cost per order | $8.20 | $7.00 | -15% |
-| Ship-from-store % | 22% | 40% | +18 pts |
-| Avg delivery speed | 2.8 days | 2.1 days | -0.7 days |
-| BOPIS orders/month | 15,000 | 25,000 | +67% |
-| Split shipment rate | 22% | 18% | -4 pts |
-| Inventory accuracy | 85% | 95% | +10 pts |
+**Order routing check:** single-location share, split-shipment share, and which orders split most.
 
 ---
 

@@ -28,6 +28,12 @@ cover a whole book; files-only, it mines whatever the user uploads.
 - **Scope**: my accounts (default) / team / named accounts
 - **Period**: last 30 days default
 
+## Quick path: files only
+
+No connectors needed. The user can paste or upload call transcripts, meeting notes or email threads, and name the topic. Use only what was given. If the topic is missing, ask once. If no source text was given, ask once for an upload or paste. Do not search from memory or invent a source.
+
+Connected tools are optional extras. Gong, a CRM, Google Drive or an email tool each need their own account, and may need admin rights or a paid plan from that vendor. Say which sources you used and which you could not reach.
+
 ## Tools used
 
 | Tool type | Used for | Required? |
@@ -67,6 +73,8 @@ map.
 
 ## Step 3 - Extract quotes (strict)
 
+Copy each quote character for character from the source. Mark cut words with an ellipsis. Never fix, shorten or reword a quote. If the speaker, account or date is not in the source, write "not stated". Do not guess it.
+
 Only customer-said, only on-topic, only verbatim: quote (1-3 sentences),
 speaker name + title + account, date, source link, one line of
 surrounding context. On the Gong route, only text Gong returns inside
@@ -82,6 +90,25 @@ represented with counts, and the gaps section (accounts in scope with no
 source in period; where the topic never came up) - gaps are data, not
 failure. Name which routes fed the result and what connecting more
 sources would add.
+
+Use this layout:
+
+```
+# What customers say about <topic>
+Period: <dates>. Sources used: <list>. Sources not reached: <list>.
+
+## Theme 1: <name> (<n> quotes from <n> accounts)
+> "<exact quote>"
+> <speaker, title>, <account>, <date>, <source>. Context: <one line>
+
+## Accounts represented
+<account>: <n> quotes
+
+## Gaps
+<accounts or sources with nothing to read in the period>
+```
+
+If nothing on the topic was found, say "No quotes found on <topic> in <sources>" and stop. Counts are counts of quotes found in the sources given, not of all customers.
 
 ## How it adapts (guidance for Claude; never show these labels to the user)
 

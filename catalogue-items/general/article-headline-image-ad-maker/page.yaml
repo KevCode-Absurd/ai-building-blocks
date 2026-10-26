@@ -1,6 +1,6 @@
 new_slug: article-headline-image-ad-maker
 name: "Article headline image ad maker"
-summary: "Paste your ad and page headline. Get a matching image prompt and a check that ad and page match."
+summary: "Turn your page headline into a square image ad prompt, with a check that the ad and the page match, so the click feels like one story."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your ad sends people to a long page and you want the two to feel like one story.
   - People click your ad but leave the page fast.
   - The problem needs a line of words before a photo of it makes sense.
+not_for:
+  - Your page does not open on the ad's story. Use a plain product photo ad, or change the page first.
+  - You want a photo with no words on it. Ask your AI for a plain candid photo prompt instead.
+  - You need the ad text itself. Use the Fact-based ad copy writer first, then come back here.
 
 you_give:
   - Your approved story ad
@@ -35,6 +39,35 @@ how_to_use:
   - Paste your page's first-screen headline and attach a screenshot of that screen. If there's no page yet, say so.
   - Paste the image prompt into your image tool. Check every letter of the line on the finished image.
   - Fix whatever the scent check flags, on the ad or on the page, before you spend.
+output_sample:
+  input:
+    - Your approved story ad
+    - The headline on your page's first screen
+    - A screenshot of that first screen (optional)
+    - Where and when the problem happens (optional)
+  prerequisites:
+    - An image tool such as ChatGPT, Gemini or Higgsfield, if you want the picture made
+  output:
+    - name: Scene
+      contains: What someone scrolling would say they saw in the picture.
+    - name: Where and when
+      contains: The place, the time and what is within reach.
+    - name: The photo
+      contains: The moment shown, with a plain area kept clear for the words.
+    - name: Words on the image
+      contains: The one line in quotes, with its word count and where it came from.
+    - name: Type and place
+      contains: Where the line sits, its colours and its weight.
+    - name: Blank version
+      contains: The same photo with no words on it.
+    - name: Line under the image
+      contains: A different short line to sit under the picture, with its character count.
+    - name: Scent check
+      contains: A match or a fix for the words, the scene and the promise.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt, ready to paste into your image tool.
+    - name: Checks missed
+      contains: One line for each check it could not meet, or none.
 
 how_it_works:
   - title: Sets the house rules

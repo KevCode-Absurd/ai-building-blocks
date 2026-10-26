@@ -1,6 +1,6 @@
 new_slug: visual-prompt-director
 name: Image and video prompt director
-summary: Share an image or video idea, rough prompt or bad result. Get a usable prompt, clear gaps and one focused next change.
+summary: Turn a rough idea or a bad result into an image or video prompt you can paste today. Get gaps flagged and one change to try next.
 job: make-images
 headline: Image and video prompt director
 subhead: Share an image or video idea, rough prompt or bad result. Get a usable prompt, clear gaps and one focused next change. Bring the brief and any files you want it to use.
@@ -11,6 +11,10 @@ explain: |-
 when:
   - You need a model-neutral image/video prompt with gap detection and focused repair.
   - You want a clear draft and checks from the material you already have.
+not_for:
+  - "You want the final image or video made: use an image or video generation tool, since this only writes the prompt."
+  - "You need a logo or full brand look: work with a designer, because this writes one-off prompts, not brand identity."
+  - "You already have a prompt that works and only want small word tweaks: edit it by hand."
 you_give:
   - brief
   - "Optional: reference set"
@@ -20,9 +24,30 @@ you_get:
   - video prompt
   - Missing inputs and steps that still need to run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the download.
+  - Paste your idea, rough prompt or bad result. Add reference images if your AI can view them.
+  - Say which image or video model you will use, if you know. If not, the prompt stays model-neutral.
+  - Read the confirmed details first. Fix anything the AI got wrong.
+  - Copy the prompt into your generation tool. Change only the one thing in the next step, then try again.
+output_sample:
+  input:
+    - Your image or video idea, or a rough prompt
+    - A bad result you want fixed (optional)
+    - Reference images or clips (optional)
+    - The AI model you plan to use (optional)
+  prerequisites:
+    - An AI that can view images, only if you share reference images
+  output:
+    - name: CONFIRMED DETAILS
+      contains: The facts that came from you or your references, kept apart from the AI's own choices.
+    - name: PROMPT
+      contains: A copy-ready prompt block built from your brief, with any assumptions marked.
+    - name: OPTIONAL GAPS
+      contains: Missing layers such as light or camera, each with one or two concrete ways to fill it.
+    - name: NEXT ITERATION
+      contains: One controlled change to try if the result was bad or needs work.
+    - name: NOT RUN
+      contains: Anything that was not checked or made, such as image generation or a reference it could not see.
 how_it_works:
   - title: Read the brief
     text: Pick idea, detailed brief, existing-prompt repair or bad-result diagnosis. Do not restart intake if the user already provided an actionable idea.

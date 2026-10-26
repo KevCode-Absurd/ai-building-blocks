@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Good boundaries depend on understanding how the whole code fits together.
 new_slug: software-structure-planner
 name: Software structure planner
-summary: Give it your codebase. Get a plan to keep business rules apart from
-  frameworks and databases. Uses the Clean Architecture method.
+summary: Find where your code breaks the dependency rule. Get a score out of 10 and a fix for each fail. A software structure plan for your own codebase.
 job: build-software
 headline: Software structure planner
-subhead: A plan that keeps your business rules free of frameworks, databases and
-  screens, so you can swap any of them later without a rewrite. You share your
-  codebase or describe it.
+subhead: A plan that keeps your business rules free of frameworks, databases and screens, so you can swap any of them later without a rewrite. You share your codebase or describe it.
 explain: |
   A plan that keeps your business rules free of frameworks, databases and screens, so you can swap any of them later without a rewrite. You share your codebase or describe it. The skill applies the Clean Architecture method, built on one rule: code dependencies point inward, from frameworks to use cases to core entities.
 
@@ -18,6 +15,10 @@ when:
   - Your business logic is tangled up with the web framework or the database.
   - You want to change frameworks or databases without rewriting everything.
   - You are reviewing module boundaries before a codebase grows further.
+not_for:
+  - "You have a single-file script or a throwaway prototype: skip the layers and keep the code simple."
+  - "You want to improve code at the line level, such as names and small functions: use a clean code review instead."
+  - "You want to model your business domain, such as terms and entities: use a domain-driven design method instead."
 you_give:
   - Your codebase or a description of its folders
   - The framework and database you use
@@ -28,7 +29,25 @@ you_get:
   - The fix for each broken dependency
   - A suggested layer layout
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the full text of the skill's SKILL.md into the chat.
+  - Paste your folder tree, or a short list of your main folders and what each holds.
+  - Say which framework and database you use. Add the change you want to make later, if you have one.
+  - Ask your AI to score your structure with the seven checks.
+  - Read the failed checks first. Make the fixes one at a time, starting with the dependency that leaks the most.
+output_sample:
+  input:
+    - Your codebase or a list of its folders
+    - The framework and database you use
+    - The change you want to make later (optional)
+  output:
+    - name: Score
+      contains: A score out of 10 for how well your structure keeps business rules apart from details.
+    - name: Quick Diagnostic
+      contains: The seven checks, each marked pass or fail.
+    - name: Failed checks
+      contains: For each failed check, what is wrong and where it shows up in your code.
+    - name: Fixes
+      contains: The change that reverses each bad dependency so it points inward.
+    - name: Layer layout
+      contains: A suggested split into entities, use cases, adapters and frameworks for your folders.

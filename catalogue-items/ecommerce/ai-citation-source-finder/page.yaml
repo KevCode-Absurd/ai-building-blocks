@@ -1,6 +1,6 @@
 new_slug: ai-citation-source-finder
 name: "AI citation source finder"
-summary: "Give it five buyer questions. Get the sites AI tools keep citing, ranked, with who to contact."
+summary: "Find the sites AI tools cite for your buyer questions. Get a ranked list of sources to pitch, with the placement type and a pitch angle for each."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It sorts and ranks lists you paste in, so steady reasoning is enough."
@@ -17,6 +17,10 @@ when:
   - You want to know which sites to approach so AI assistants and Google mention your store.
   - You have a budget for sponsored posts, affiliate placements or free product and need to spend it where it counts.
   - You ran your buyer questions through AI tools and don't know what to do with the long list of sources.
+not_for:
+  - "You have no cited pages or no budget for placements yet: start with a basic SEO check of your own site, or ask a freelancer to review it."
+  - "You want AI answers written for you: use the AI recommendation panel runner to see which brands AI tools name today."
+  - "You sell no products online: this plan is built for stores, so ask a PR or marketing person for outreach advice instead."
 
 you_give:
   - The 5 core buyer questions for one category
@@ -35,6 +39,30 @@ how_to_use:
   - Say your budget, how many hours a month you have, and who sends the outreach.
   - Mark the targets you can really reach, then contact the top one first.
   - Re-run it every quarter and check monthly that your mentions are still there.
+output_sample:
+  input:
+    - Five questions your buyers ask about one product category
+    - For each question, the search results, brands AI named and pages AI cited
+    - Your rivals (optional)
+    - Your monthly budget for placements and free product
+    - Who on your team can send outreach
+  prerequisites:
+    - Pages cited by AI tools, from a tracker or copied by hand from several AI tools
+  output:
+    - name: Top targets
+      contains: Domains ranked by how many questions and AI tools cite them, with a tier and an opportunity yes or no.
+    - name: Target sheet
+      contains: Each page with its type, citation count, contact, cost label and status.
+    - name: Type flags
+      contains: The kind of placement for each target, such as sponsored post, product review, Reddit thread or own listing.
+    - name: Pitch angle by type
+      contains: What to offer and how to say it for each type, with disclosure notes.
+    - name: Coverage
+      contains: The share of the top 10 sources where your brand appears now.
+    - name: Do not
+      contains: Tactics to avoid, such as bulk placements, fake roundups and undisclosed paid content.
+    - name: Recheck
+      contains: What to check monthly and when to re-run the questions.
 
 how_it_works:
   - title: Builds one sheet

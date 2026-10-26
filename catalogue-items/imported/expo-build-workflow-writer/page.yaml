@@ -2,34 +2,101 @@ thinking: medium
 thinking_why: It checks the schema, then writes the file.
 new_slug: expo-build-workflow-writer
 name: Expo build workflow writer
-summary: Say how you want your app built and released. Get a working EAS
-  workflow file that does it.
+summary: "Write an EAS workflow file for your Expo app that builds on every push, makes preview builds and submits to the app stores."
 job: ship-and-host
 headline: Expo build workflow writer
-subhead: A working EAS workflow file that builds, tests and releases your Expo
-  app the way you ask, written in the right format the first time.
+subhead: Tell it when your Expo app should build, test and release. It writes the EAS workflow file in the format Expo expects, then checks the file against Expo's own rules. You get a ready .eas/workflows file and a short note on each job.
 explain: |
-  A working EAS workflow file that builds, tests and releases your Expo app the way you ask, written in the right format the first time.
+  An EAS workflow is a file that tells Expo's build service what to do for you. For example, it can build your app each time you push code, or send a build to the app stores. The file has strict rules, and a small mistake means the workflow will not run.
 
-  Before writing anything, the skill downloads the official schema from Expo and the syntax guide, so job types, triggers, runners and options are correct, not remembered. It then writes the YAML for your case, such as a build on every push to main, a preview for each pull request, or a store submission. It checks the file against the schema and edits existing workflows without breaking them. You need Node and internet access for the fetch step.
+  This skill does not write the file from memory. It first downloads Expo's current rules, so job names, triggers and options are correct today. It then writes the file for your case, such as a build on every push to the main branch, a preview build for each pull request, or a store submission after a build. It checks the file against the rules, and fixes any error before it hands the file back.
+
+  It can also edit a workflow file you already have, without breaking it.
 when:
-  - You want every push to main to produce a test build.
-  - You need pull requests to create a preview you can share.
-  - You want store submission to run on its own after a build.
-  - Your workflow file keeps failing validation.
+  - You want every push to your main branch to make a test build.
+  - You want each pull request to make a preview build you can share.
+  - You want your app sent to the App Store or Google Play after a build passes.
+  - Your workflow file keeps failing with a format error.
+not_for:
+  - "Your app is not built with Expo: use the Build pipeline writer, which writes GitHub Actions or GitLab CI files."
+  - "You want to move your app to a newer Expo SDK: use the Expo upgrade helper."
+  - "You want help with store accounts, app signing and first-time store setup: use the Mobile app release shipper."
 you_give:
-  - How you want builds and releases to run
-  - "Platforms: iOS, Android or both"
-  - Triggers, such as push, pull request or tag
-  - Existing workflow file (optional)
+  - How you want builds and releases to run, in plain words
+  - The platforms to build, iOS, Android or both
+  - When it should start, such as a push, a pull request or a tag
+  - Your existing workflow file, if you have one (optional)
 you_get:
-  - EAS workflow YAML
-  - Validation against the official schema
-  - Edits to existing workflow files
-  - Short notes on each job
+  - A workflow file for the .eas/workflows folder
+  - A check of the file against Expo's current rules, with errors fixed
+  - Edits to your current workflow file, if you gave one
+  - A short note on what each job does and what it needs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude Code, or another AI that can run code and read your project folder. A chat window alone cannot fetch Expo's rules or run the check.
+  - Upload or open the skill folder, with its scripts, and open your Expo project.
+  - Say what you want, for example "build iOS and Android on every push to main, then submit". Add your existing workflow file if you have one.
+  - Make sure you have Node installed and an internet connection. The skill needs both to download Expo's rules.
+  - Read the note on each job. Check that the file passes the check, and commit it to your project in .eas/workflows.
+  - You need an Expo account to run the workflow. EAS builds can have limits or costs on your Expo plan, so check your plan first.
+how_it_works:
+  - title: Fetch the rules
+    text: It downloads Expo's current workflow schema and syntax guide, and does not rely on memory.
+  - title: Understand your goal
+    text: It turns your plain request into triggers, jobs and the order they run in.
+  - title: Write the file
+    text: It writes the workflow with the right job types, runners and options from the schema.
+  - title: Check references
+    text: It confirms that required fields are set, that jobs it depends on exist and that expressions point to valid values.
+  - title: Validate
+    text: It runs the validator script on the file and fixes every error it reports.
+  - title: Explain each job
+    text: It hands back the file with a short note on each job, and what the job needs.
+output_shape: |
+  YOUR REQUEST: <what should build, when, on which platforms>
+
+  FILE: .eas/workflows/<name>.yml
+  <the workflow YAML>
+
+  VALIDATION: <passed, or the errors fixed, or NOT VALIDATED and why>
+
+  JOBS
+  - <job name> : <what it does> : <what it needs>
+
+  BEFORE YOU RUN IT: <accounts, credentials or plan limits to check>
+output_sample:
+  input:
+    - How you want builds and releases to run
+    - The platforms and the triggers
+    - Your existing workflow file (optional)
+  prerequisites:
+    - An Expo project and an Expo account
+    - Node installed and an internet connection
+    - An AI that can run code and read your project files
+  output:
+    - name: Workflow file
+      contains: A YAML file for the .eas/workflows folder that runs your builds and releases.
+    - name: Validation result
+      contains: A pass, or the errors found and fixed, from Expo's own rules.
+    - name: Job notes
+      contains: One line per job on what it does and what it needs to run.
+    - name: Before you run it
+      contains: The accounts, credentials and plan limits to check first.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the fetch and validate scripts and write to your project folder.
+    - name: EAS from Expo
+      why: It runs the workflow file, and its build service may have plan limits.
+  inputs:
+    - Your existing workflow file
+    - Your app.json or app.config file
+    - The branch names you use
+terms:
+  - term: EAS
+    meaning: Expo Application Services, Expo's online service that builds and ships apps.
+  - term: Workflow
+    meaning: A file that lists the steps EAS should run, and when.
+  - term: Schema
+    meaning: The official list of rules a workflow file must follow.
+  - term: Trigger
+    meaning: The event that starts a workflow, such as a push or a pull request.

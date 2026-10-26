@@ -6,16 +6,12 @@ source: "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/
 date_added: "2026-02-27"
 ---
 
-## When to Use This Skill
-
-Design short-term, long-term, and graph-based memory architectures
-
-Use this skill when working with design short-term, long-term, and graph-based memory architectures.
 # Memory System Design
 
 Memory provides the persistence layer that allows agents to maintain continuity across sessions and reason over accumulated knowledge. Simple agents rely entirely on context for memory, losing all state when sessions end. Sophisticated agents implement layered memory architectures that balance immediate context needs with long-term knowledge retention. The evolution from vector stores to knowledge graphs to temporal knowledge graphs represents increasing investment in structured memory for improved retrieval and reasoning.
 
 ## When to Use
+
 Activate this skill when:
 - Building agents that must persist across sessions
 - Needing to maintain entity consistency across conversations
@@ -23,6 +19,35 @@ Activate this skill when:
 - Designing systems that learn from past interactions
 - Creating knowledge bases that grow over time
 - Building temporal-aware systems that track state changes
+
+## When Not to Use
+
+- The agent only works inside one session, or the tool is stateless. A plain notes file or a document store is enough. Say so and stop.
+- You only need to write the agent's instructions or goals: use the Agent prompt writer or the Agent goal writer.
+- You want ChatGPT or Claude to remember things about you in your own chats: use the AI memory habit setter.
+- You want to build a retrieval pipeline over documents: use the RAG pipeline designer.
+
+## Inputs
+
+Ask once for anything missing. If the person cannot answer, mark it MISSING in the output and carry on. Never invent the agent's behaviour, data volumes or accuracy needs.
+
+1. What the agent does and who uses it.
+2. What it must remember: facts, people, preferences, past decisions, task state.
+3. How long each kind of memory must last, and whether facts change over time.
+4. The kinds of questions it must answer from memory, for example "what did this customer order last month?" or "who owns this account?"
+5. Optional: storage tools already in use, privacy limits, and how accurate recall must be.
+
+## Output
+
+Return these sections, in this order. Keep the whole answer under about 900 words.
+
+1. **Memory needs in one paragraph**: what the agent must remember and the questions it must answer.
+2. **Layer table**: for each layer used (working, short-term, long-term, entity, time-aware graph), what it holds, how long it lasts and where it lives. Leave out layers the agent does not need and say why.
+3. **Storage choice**: one of file system, vector store with metadata, knowledge graph or time-aware knowledge graph, with reasons tied to the questions in section 1, and one runner-up.
+4. **What to save and what to drop**: rules for saving, merging, expiring and deleting memories, including how often to clean up.
+5. **Retrieval plan**: how memories get back into the agent's context (by meaning, by entity, by time), how many to load, and what happens when retrieval fails.
+6. **Privacy and safety**: what personal data is kept, who can read or delete it, and how it is backed up.
+7. **Open questions**: every input marked MISSING and how it limits the design.
 
 ## Core Concepts
 
@@ -35,9 +60,7 @@ Simple vector stores lack relationship and temporal structure. Knowledge graphs 
 ### Memory Architecture Fundamentals
 
 **The Context-Memory Spectrum**
-Memory exists on a spectrum from immediate context to permanent storage. At one extreme, working memory in the context window provides zero-latency access but vanishes when sessions end. At the other extreme, permanent storage persists indefinitely but requires retrieval to enter context. Effective architectures use multiple layers along this spectrum.
-
-The spectrum includes working memory (context window, zero latency, volatile), short-term memory (session-persistent, searchable, volatile), long-term memory (cross-session persistent, structured, semi-permanent), and permanent memory (archival, queryable, permanent). Each layer has different latency, capacity, and persistence characteristics.
+The spectrum includes working memory (context window, zero latency, volatile), short-term memory (session-persistent, searchable, volatile), long-term memory (cross-session persistent, structured, semi-permanent), and permanent memory (archival, queryable, permanent). Each layer has different latency, capacity, and persistence characteristics. Effective architectures use multiple layers along this spectrum.
 
 **Why Simple Vector Stores Fall Short**
 Vector RAG provides semantic retrieval by embedding queries and documents in a shared embedding space. Similarity search retrieves the most semantically similar documents. This works well for document retrieval but lacks structure for agent memory.
@@ -51,20 +74,7 @@ Knowledge graphs preserve relationships between entities. Instead of isolated do
 
 Temporal knowledge graphs add validity periods to facts. Each fact has a "valid from" and optionally "valid until" timestamp. This enables time-travel queries that reconstruct knowledge at specific points in time.
 
-**Benchmark Performance Comparison**
-The Deep Memory Retrieval (DMR) benchmark provides concrete performance data across memory architectures:
-
-| Memory System | DMR Accuracy | Retrieval Latency | Notes |
-|---------------|--------------|-------------------|-------|
-| Zep (Temporal KG) | 94.8% | 2.58s | Best accuracy, fast retrieval |
-| MemGPT | 93.4% | Variable | Good general performance |
-| GraphRAG | ~75-85% | Variable | 20-35% gains over baseline RAG |
-| Vector RAG | ~60-70% | Fast | Loses relationship structure |
-| Recursive Summarization | 35.3% | Low | Severe information loss |
-
-Zep demonstrated 90% reduction in retrieval latency compared to full-context baselines (2.58s vs 28.9s for GPT-5.2). This efficiency comes from retrieving only relevant subgraphs rather than entire context history.
-
-GraphRAG achieves approximately 20-35% accuracy gains over baseline RAG in complex reasoning tasks and reduces hallucination by up to 30% through community-based summarization.
+**About benchmark figures.** The original skill quoted accuracy and speed figures for named memory products and for graph retrieval. We could not check them against a dated source or test setup, so we removed them. Do not quote accuracy, speed or "percent better" figures for any product unless the person gives a dated source. Say instead that results depend on the data and the questions, and suggest the person test two options on their own questions.
 
 ### Memory Layer Architecture
 
@@ -155,7 +165,11 @@ Choose memory architecture based on requirements:
 - Relationship reasoning needs: Knowledge graph
 - Temporal validity needs: Temporal knowledge graph
 
+Start with the simplest option that answers the questions in the person's list. Move up only when a real question cannot be answered.
+
 ## Examples
+
+These two sketches show the idea. They are not runnable: `memory` and `temporal_graph` are placeholders for whatever store the person picks. Do not present them as working code.
 
 **Example 1: Entity Tracking**
 ```python

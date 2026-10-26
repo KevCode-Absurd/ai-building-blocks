@@ -29,3 +29,27 @@ how_it_works:
     text: Report observations, limits and adaptations with the brand proof needed for each.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+
+not_for:
+  - "You have no Foreplay account or export and want to use the public Facebook ad library: use the Facebook ad library collector."
+  - "You want a script from one competitor ad idea: use the Video script writer from a competitor ad idea."
+  - "You want to find the angles no rival uses yet: use the Competitor ad gap finder."
+output_sample:
+  input:
+    - Your competitor list or Foreplay boards, market and date window
+    - Foreplay access, or an export with ad IDs and media
+    - Your product facts and your goal for the study
+    - Your own past ad results (optional)
+  prerequisites:
+    - An AI that can open images and video, or Foreplay data it can read
+  output:
+    - name: Corpus and sample ledger
+      contains: The ads collected, duplicates removed, and which ones were picked for study and why.
+    - name: Format and angle map
+      contains: Ads grouped by format and angle, with counts per group.
+    - name: Teardown cards
+      contains: Per ad, the hook, beats, proof, call to action and production level, linked to the ad ID.
+    - name: Transferable formulas
+      contains: The repeating sequence in each group and how sure the AI is, based on your sample.
+    - name: HTML test brief
+      contains: Ranked test ideas, each with the audience problem, opening, scenes, proof needed and test question.

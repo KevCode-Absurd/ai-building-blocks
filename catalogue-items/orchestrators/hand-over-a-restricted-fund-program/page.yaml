@@ -1,50 +1,66 @@
 new_slug: hand-over-a-restricted-fund-program
 name: Hand over a restricted fund program
 headline: Hand over a restricted fund program
-summary: Share the source files. Get a restricted fund handover, obligations index and unresolved decisions.
+summary: Hand over a restricted fund to a new program owner. Share the fund agreement and records. Get a handover brief, rules index and open decisions.
 job: document-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A restricted fund handover, obligations index and unresolved decisions. Share the actual fund agreement, reporting commitments, approved program activities, spending evidence, contacts and incoming program owner. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share the fund agreement, reporting commitments, approved activities, spending records and the new owner's name. Your AI lists every restriction and reporting date with its section number, then writes a handover brief for the new owner and a list of decisions for the fund owner.
 explain: |-
-  A restricted fund handover, obligations index and unresolved decisions.
+  A restricted fund comes with rules. The money may only pay for certain activities, and reports are due on set dates. When a program changes hands, those rules often get lost. The new owner finds out when a report is late or a bill falls outside the agreement.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Restrictions and reporting dates quote the actual agreement; a handover never authorizes a new use of funds. Missing tools or evidence stay visible in the final summary.
+  Two skills run in order. The first reads your fund agreement and lists the purpose, each restriction, each reporting duty and each gap in the evidence, with the agreement section for every line. The second writes the handover brief for the new owner. It covers what is running now, what is due and when, where the records are, and the decisions only the fund owner can make.
+
+  The brief quotes the agreement. It never says a new use of the money is allowed, and it does not guess what an unclear clause means. Those questions go to the fund owner. Where your sources are silent, the AI says so.
 when:
-  - You need a restricted fund handover, obligations index and unresolved decisions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A program manager is leaving and someone new takes over the fund.
+  - The fund changes teams mid-year and nobody has read the agreement lately.
+  - A funder report is coming and the new owner does not know what it must cover.
+  - You have inherited a fund and cannot say what the money may be spent on.
+not_for:
+  - "The fund has no written agreement: get the terms in writing first. Until then, use the Handover note writer for a plain handover."
+  - "Nothing restricts the money: use the Handover note writer on its own."
+  - "You want to check that spending followed the agreement: use the Prepare a grant spending evidence pack workflow."
+  - "You need to know if a new use of the money is allowed: ask the fund owner or funder. A handover cannot approve it."
 you_give:
-  - The actual fund agreement, reporting commitments, approved program activities, spending evidence, contacts and incoming program owner.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The signed fund agreement, with any changes or side letters
+  - The reporting commitments and their due dates, if they are not in the agreement
+  - The program activities that were approved, such as a plan or budget
+  - Spending records or a ledger for the fund so far
+  - The name and role of the new program owner, and your key contacts
 you_get:
-  - A restricted fund handover, obligations index and unresolved decisions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A summary of the fund's purpose, restrictions and reporting duties, with a section number for each
+  - A list of gaps where the evidence is missing or does not match the agreement
+  - A handover brief for the new owner, with status, deadlines and where records are kept
+  - A list of decisions that need the fund owner
+  - A list of facts still MISSING
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the agreement and your records. Say who is leaving, who is taking over and the date of the handover.
+  - Tell your AI to follow the pack and save each step's file.
+  - After step 1, compare its restrictions and dates with the agreement. A wrong date here carries into the brief.
+  - After step 2, check each decision on the list is one only the fund owner can make. Then give the brief to the new owner.
 how_it_works:
   - title: Source note summariser
-    text: Extract the fund purpose, restrictions, reporting requirements and evidence gaps with agreement section references.
+    text: Reads the fund agreement and your records. Pulls out the purpose, each restriction, each reporting duty and each evidence gap, with the agreement section for each. Hands step 2 the rules index and the gaps. Check before moving on, each date and restriction matches the agreement text.
   - title: Handover note writer
-    text: Prepare the incoming program owner brief with current activity status, deadlines, source access locations and decisions requiring fund owner review.
+    text: Writes the new owner's brief. It starts with what will go wrong if nobody acts, then the deadlines, current activity, where records live and the decisions for the fund owner. Never includes passwords. Check before you send it, nothing in the brief allows a new use of the money.
 output_shape: |-
-  Scope and source coverage
-  A restricted fund handover, obligations index and unresolved decisions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCES      <agreement, records and dates you supplied>
+  FUND SUMMARY           <purpose | restrictions | reporting duties, each with its section>
+  RULES INDEX            <rule | section | quote | due date | status | evidence>
+  EVIDENCE GAPS          <what is missing or does not match the agreement>
+  HANDOVER BRIEF         <time-critical items | deadlines | current activity | where records live | people>
+  DECISIONS FOR THE FUND OWNER  <question | why it matters | who decides>
+  MISSING                <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Restrictions and reporting dates quote the actual agreement; a handover never authorizes a new use of funds.
+  - what: Handover date
+    how: Give the date the new owner takes over. Deadlines are sorted from that day.
+  - what: Several funds
+    how: Run one fund at a time. Each agreement has its own rules, and mixing them hides which section applies.
+  - what: Reader
+    how: Say how much the new owner already knows. A new hire needs more background than a colleague from the same team.
 judge:
   - Restrictions and reporting dates quote the actual agreement; a handover never authorizes a new use of funds.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +73,39 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the rules index as a running file, and update it when the funder amends the agreement.
+  - Add each report you file, with its date, so the next owner sees what was sent.
+  - Record each decision the fund owner makes, with its date, in the brief.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads long documents
+      why: Fund agreements can run long, and every rule needs its section number. In plain chat, paste the relevant sections.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Past reports sent to the funder.
+    - Emails where the funder allowed or refused a change.
 terms:
+  - term: Restricted fund
+    meaning: Money given for set purposes, which can only pay for what the agreement allows.
+  - term: Rules index
+    meaning: A table of every restriction and reporting duty, each with the agreement section it comes from.
+  - term: Fund owner
+    meaning: The person or body who decides what the fund may do, such as a funder, board or director.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.
+output_sample:
+  input:
+    - The signed fund agreement and any changes to it
+    - Reporting commitments, approved activities and spending records
+    - The new program owner and your key contacts
+  prerequisites:
+    - An AI that can read files
+    - The handover date
+  output:
+    - name: outputs/step-01-source-note-summariser.md
+      contains: The fund's purpose, restrictions, reporting duties and evidence gaps, each with its agreement section.
+    - name: outputs/step-02-handover-note-writer.md
+      contains: The new owner's brief, with time-critical items, deadlines, current activity, record locations and people.
+    - name: Decisions for the fund owner
+      contains: Each open question that only the fund owner can settle, and why it matters.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.

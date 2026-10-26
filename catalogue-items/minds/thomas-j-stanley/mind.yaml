@@ -16,6 +16,31 @@ use_cases:
   - "Find whether your networking problem is really a sales or research problem"
   - "Compare a high-income career with its actual work and costs"
   - "Use shared definitions in a household money conversation"
+not_for:
+  - "You want a share valuation or a view on what a company is worth: use the Aswath Damodaran mind."
+  - "You want to judge an investment price against value, with room for error: use the Benjamin Graham mind."
+  - "You need tax, legal, investment or medical advice: see a qualified adviser, because this mind gives worksheets, not personal advice."
+output_sample:
+  input:
+    - The money question or comparison that is bothering you
+    - Rough figures for your assets, debts, income and spending (optional)
+    - What you know and what you only assume about the other person or group
+    - Any role costs, client notes or success story you want checked
+  output:
+    - name: Definitions
+      contains: Plain meanings of income, net worth and appearances, so you know which one your question is about.
+    - name: Fact versus inference list
+      contains: What is documented, what is estimated and what is only assumed, side by side.
+    - name: Household financial position
+      contains: "Two linked tables: assets and debts, then monthly income and spending, with dated values."
+    - name: Role-cost worksheet
+      contains: Costs of a promotion sorted into confirmed, optional and unknown items.
+    - name: Reconnection message
+      contains: A short, useful note to a former client, with a line on why it is relevant.
+    - name: Career research plan
+      contains: Questions for people in the field and the assumptions behind a success story.
+    - name: Missing information and next conversation
+      contains: Gaps still to fill and who or what to ask next.
 seats:
   - {seat: "Wealth, income and useful relationships", asks: "Are you measuring income, net worth or appearances?"}
   - {seat: "Research and career assumptions", asks: "What does the person need beyond your product?"}

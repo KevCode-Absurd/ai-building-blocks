@@ -1,6 +1,6 @@
 new_slug: take-over-a-team-as-its-new-leader
 name: Take over a team as its new leader
-summary: Give it the team and your brief. Get a first message, a listening tour and results agreements.
+summary: Take over a team as its new leader. Give it your team and brief. Get a first message, a listening tour plan and a results agreement for each person.
 job: lead-people
 thinking: high
 thinking_why: It shapes how a team first sees you and what you commit to. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You start as manager of an existing team next week.
   - You have bought or inherited a business and its people.
   - You took over six months ago and it has not settled.
+not_for:
+  - "You only cover a team for a week: skip this and send a short note to the team with who to call and what stays the same."
+  - "You have one person with a performance problem: hold a plain one-to-one with that person instead of a full team takeover."
+  - "You already know the team well and only need goals for the year: set the goals with the team directly and agree them in your next one-to-ones."
 you_give:
   - "The team: who they are, their roles and how long they have been there"
   - What you were brought in to do and by whom
@@ -30,6 +34,27 @@ how_to_use:
   - Paste the team, your brief and what you know. It writes the first message and the listening tour.
   - Send the message and hold the one-to-ones. Paste your notes.
   - Read the situation call, then agree results with each person in the next one-to-one.
+output_sample:
+  input:
+    - "Your team: who they are, their roles and how long they have been there"
+    - What you were brought in to do, and by whom
+    - "What you know of the situation: numbers, morale, what happened before you"
+    - Your own way of working
+    - Your notes from each one-to-one (added after the listening tour)
+  prerequisites:
+    - An AI that can read files, such as Claude, to run the steps in order
+    - Time to send the first message and hold the one-to-ones before steps 3 and 4
+  output:
+    - name: First message
+      contains: A note to the team on who you are, how you work, what stays for now and when they hear more.
+    - name: Listening tour
+      contains: A one-to-one plan for each person, with when to meet and what to ask them.
+    - name: Situation read
+      contains: A call of peacetime or wartime, the evidence for it, how you lead this quarter and what you stop.
+    - name: Results agreements
+      contains: One agreement per person with the result, guidelines, resources, how it is measured and what follows.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write your first message
     text: "Writes your first message: who you are, how you work, what you will not change yet, in the manner of Nadella's first-day email."

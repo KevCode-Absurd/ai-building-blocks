@@ -1,44 +1,55 @@
 new_slug: check-adviser-fees-in-seller-proceeds
 name: Check adviser fees in seller proceeds
 headline: Check adviser fees in seller proceeds
-summary: Carry the signed success-fee invoice into seller closing proceeds.
+summary: Check an adviser's success fee against the engagement letter, credit the retainer you paid, and see what it takes off seller closing proceeds.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An adviser fee calculation and reconciled seller cash deduction. Share adviser engagement and transaction-value definition, paid retainer evidence, marginal tiers and actual closing price bridge with unpaid seller expenses.
+subhead: Give it the engagement letter, retainer payments and the closing statement. Your AI works out the fee tier by tier, credits the retainer, and shows the unpaid invoice that comes out of what the seller receives.
 explain: |-
-  An adviser fee calculation and reconciled seller cash deduction.
+  A sell-side adviser often charges a lower rate on the first slice of the deal value and a higher rate on the next slice, with a minimum fee and a credit for retainers already paid. Two mistakes are common. The top rate gets applied to the whole price, and the retainer gets taken off twice. This workflow checks the success fee and what it does to the seller's closing cash.
 
-  Investment banking fees. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 computes the fee by slice, applies the minimum and credits only what the letter allows. It saves the gross fee, the credit used and the invoice left to pay. Step 2 puts only that unpaid invoice with the seller's other unpaid expenses and ties the total to the draft closing statement.
+
+  Cash already paid stays out of the closing deduction. If the letter does not say how deal value is defined, the workflow asks you once and does not guess.
 when:
-  - You need an adviser fee calculation and reconciled seller cash deduction.
-  - You work on investment banking fees and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A sale price is agreed and the adviser's invoice arrives.
+  - The draft closing statement shows an adviser fee line you cannot trace.
+  - You paid a retainer and are not sure how much the letter credits.
+  - A seller wants to know the cash they will receive after fees.
+not_for:
+  - "You want the whole seller cash bridge, with working capital and escrow: use the Reconcile seller closing cash workflow."
+  - "Your price depends on leakage between the locked-box date and closing: use the Reconcile a locked-box closing price workflow."
+  - "The adviser charges a flat fee with no tiers: read the letter and check the invoice by hand. No tier check is needed."
 you_give:
-  - Adviser engagement and transaction-value definition, paid retainer evidence, marginal tiers and actual closing price bridge with unpaid seller expenses.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The engagement letter with the fee tiers, the minimum fee and how deal value is defined
+  - Proof of the retainer paid, and what the letter says about crediting it
+  - The agreed deal value and the price bridge from the signed agreement
+  - The draft closing statement, including other unpaid seller expenses
 you_get:
-  - An adviser fee calculation and reconciled seller cash deduction.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The success fee worked out slice by slice, with the minimum applied
+  - The retainer credit used and the invoice still to pay
+  - The seller's unpaid expenses with the adviser invoice counted once
+  - A tie to the draft closing statement
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the engagement letter, retainer proof and draft closing statement. Say the currency and whether figures are in thousands.
+  - Ask your AI to follow the pack and save each step's file.
+  - After step 1, compare the fee, credit and invoice with the adviser's invoice. A difference is a question for the adviser.
+  - After step 2, check the retainer is not deducted again at closing. Finish every MISSING line before the statement is agreed.
 how_it_works:
   - title: Adviser fee tier checker
-    text: Compute the actual two-tier marginal fee, minimum and allowed paid-retainer credit. Save gross fee, credit used and remaining invoice separately.
+    text: Computes the two-slice fee, applies the minimum and the retainer credit the letter allows. Saves the gross fee, the credit used and the remaining invoice as separate lines. Hands step 2 the unpaid invoice.
   - title: Closing equity proceeds checker
-    text: Include only the unpaid fee invoice with other distinct seller transaction expenses, using explicit currency/scale conversion. Reconcile to the draft closing statement and keep already-paid cash out of repeated deductions.
+    text: Adds the unpaid invoice to the other seller expenses, with currency and scale made explicit. Ties the total to the draft closing statement. Check before you agree the statement, paid retainer cash appears nowhere in the deductions.
 output_shape: |-
-  An adviser fee calculation and reconciled seller cash deduction.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <engagement letter, retainer proof, closing statement and dates>
+  FEE CALCULATION         <slice 1 | slice 2 | minimum | gross fee>
+  RETAINER AND INVOICE    <credit used | invoice still to pay>
+  SELLER PROCEEDS         <price bridge | unpaid expenses | cash to seller | tie to statement>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,13 +71,38 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A spreadsheet tool and an AI that reads files
+      why: The fee is slice-by-slice arithmetic. The AI should recalculate it and show each line.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The adviser's invoice, to compare with the result.
+    - The signed purchase agreement, for the deal value definition.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Success fee
+    meaning: The fee an adviser earns only when the sale closes.
+  - term: Marginal tier
+    meaning: A rate that applies only to the slice of value inside its band, not to the whole price.
+  - term: Retainer credit
+    meaning: Money already paid up front that the letter lets you take off the success fee.
+  - term: Transaction value
+    meaning: The amount the letter says the fee is based on. It may differ from the headline price.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A comparison that explains any difference between two sets of figures that should match.
+output_sample:
+  input:
+    - The adviser engagement letter
+    - Retainer payment proof
+    - The deal value and the draft closing statement
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-1-adviser-fee-tier-checker.md
+      contains: The fee by slice, the minimum, the retainer credit used and the invoice still due.
+    - name: outputs/step-2-closing-equity-proceeds-checker.md
+      contains: Seller proceeds after unpaid expenses, tied to the draft closing statement.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines, checks missed and one suggested next step.
+next:
+  - reconcile-seller-closing-cash
+  - reconcile-a-locked-box-closing-price
+  - separate-rollover-and-management-incentives
+before: []

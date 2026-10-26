@@ -1,0 +1,149 @@
+name: OrgScript Engineer agent
+summary: "Turn a written procedure into an OrgScript process file with triggers, rules, roles and state changes, plus a plain check. Bring your SOP."
+headline: OrgScript Engineer agent
+subhead: OrgScript is a plain-text language for writing down how a business process runs. Give this agent a written procedure, such as an SOP or an email thread. It returns a process file with the triggers, conditions and state changes, a diagram and the questions it needs answered.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Most business processes live in people's heads, old emails and long SOP
+  documents. A person can follow them. An AI or an automation tool often can't.
+  OrgScript writes a process as short, strict text: what starts it, which rules
+  apply, who is told, and how the status changes. This agent turns your
+  procedure into that form, so people and AI read the same thing.
+
+
+  It follows the OrgScript Engineer profile. OrgScript describes a process. It
+  is not a programming language, so the agent only uses the blocks and
+  statements the profile lists for version 0.1. When a step in your procedure
+  is unclear, it asks a question or marks the gap. It never makes up a rule.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its goals
+  describe the intended work. They are not measured results from AI Blocks.
+  The profile also covers work on the OrgScript parser and command line tool.
+  Your AI can write the file. It can only check it if it can run the OrgScript
+  tool.
+when:
+  - You have a written procedure and want it as a clean file that an AI can follow.
+  - You want lead routing, approval or refund rules written down as exact steps.
+  - You already use OrgScript and want a process, rule or state flow reviewed.
+  - You want a Mermaid flowchart of a process from its text.
+not_for:
+  - You only want the procedure written clearly in plain words. Use the Technical Writer agent.
+  - You want to design the software behind a process. Use the Software Architect agent.
+  - You don't use OrgScript and don't plan to. A plain checklist is simpler.
+you_give:
+  - The procedure as text, such as an SOP, an email thread or meeting notes
+  - What starts the process, and who takes part
+  - The rules with their numbers, such as "under $1,000 is disqualified"
+  - Your OrgScript spec or grammar file, if you have one (optional)
+  - An existing .orgs file to fix or review (optional)
+you_get:
+  - A .orgs file with a process, and rule, role, policy or state flow blocks where needed
+  - A list of assumptions and questions about unclear steps
+  - A Mermaid flowchart and a short plain summary of the process
+  - The exact commands to format and check the file, and their result if your AI could run them
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your procedure. Add what starts it, who is involved and the rules with their numbers.
+  - If you have the OrgScript spec or grammar file, paste it too. Without it, the agent uses only what the profile lists.
+  - Answer the questions it asks. Don't let it guess a rule you haven't given.
+  - Run the format, validate and check commands on the file yourself, unless your AI can run them.
+  - Read the plain summary back against your real procedure before you share the file.
+how_it_works:
+  - title: Read the procedure
+    text: It finds the trigger, the conditions, the roles, the state changes and where the process stops.
+  - title: Match it to what OrgScript allows
+    text: It checks each step against the supported blocks and statements, so the file stays a description, not a program.
+  - title: Draft the file
+    text: It writes the .orgs file with strict indentation, short lines and names a person can read.
+  - title: Flag gaps
+    text: Any step with no rule or no owner becomes a question, not a guess.
+  - title: Check the file
+    text: It gives the format, validate and check commands. If it can run them, it reports the result. If not, it marks the file unchecked.
+  - title: Export and explain
+    text: It writes a Mermaid diagram and a plain summary, and says if they were hand-written.
+output_shape: |-
+  PROCESS FILE (.orgs)
+    process <Name>
+      when <trigger>
+      if <condition> then
+        assign <field> = <value>
+        notify <role> with "<message>"
+      transition <item>.status to "<state>"
+
+  QUESTIONS AND ASSUMPTIONS
+    <step> | <what is unclear> | <assumption used, or MISSING>
+
+  MERMAID DIAGRAM
+    <flowchart text> | written by hand or exported by the tool
+
+  PLAIN SUMMARY
+    <the process in a few lines for a manager to check>
+
+  CHECK STATUS
+    format <file> | validate <file> | check <file> | <result or "not run">
+output_sample:
+  input:
+    - Your procedure as text, such as an SOP or email thread
+    - What starts the process, who takes part and the rules with their numbers
+    - Your OrgScript spec or grammar file (optional)
+    - An existing .orgs file to review (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - The OrgScript command line tool, only if you want the file checked by it (optional)
+  output:
+    - name: Process file (.orgs)
+      contains: Your process as strict text, with its trigger, conditions, notifications and status changes.
+    - name: Questions and assumptions
+      contains: Each unclear step, what you must confirm, and any assumption used.
+    - name: Mermaid diagram
+      contains: A flowchart of the process, marked as hand-written or tool-made.
+    - name: Plain summary
+      contains: The process in a few lines, for a manager to compare with the real procedure.
+    - name: Check status
+      contains: The format, validate and check commands, and whether each was run or not.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Spec file
+    how: Paste the OrgScript spec or grammar. The agent then uses its exact syntax, not only the profile's list.
+  - what: Size of the process
+    how: Start with one process. Split big SOPs into several process blocks.
+  - what: Names
+    how: Give your own role and field names, such as "sales" and "lead.status". The file uses them.
+improve:
+  - Keep your approved role and field names in a short file and paste it into every run.
+  - Save each checked .orgs file with the SOP it came from, so a change in the SOP shows what to update.
+  - Pair it with the Technical Writer agent when the same process also needs a readable guide.
+terms:
+  - term: OrgScript
+    meaning: A plain-text language for writing down how a business process works.
+  - term: SOP
+    meaning: Standard operating procedure. A written guide to how a task is done.
+  - term: Process
+    meaning: A block that says what starts something and what happens next.
+  - term: State flow
+    meaning: A block that lists the statuses something can have and how it moves between them.
+  - term: Mermaid
+    meaning: A text format that draws a flowchart.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read a long SOP and keep your rules and names straight.
+    - name: The OrgScript command line tool
+      why: The profile uses it to format, validate and check files and to export diagrams.
+  inputs:
+    - The OrgScript spec or grammar file.
+    - Two or three real cases that the process should handle, including an odd one.
+    - The names your team uses for roles and statuses.

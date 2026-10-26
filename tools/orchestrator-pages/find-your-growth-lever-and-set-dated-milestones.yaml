@@ -1,6 +1,6 @@
 new_slug: find-your-growth-lever-and-set-dated-milestones
 name: Find your growth lever and set dated milestones
-summary: Give it your sales numbers. Get the lever to pull, ranked ideas with tests, and dated milestones.
+summary: Find your growth lever from your sales numbers. Get the cheapest lever to pull, ranked ideas with tests, and dated milestones with predictions.
 job: plan-strategy
 thinking: medium
 thinking_why: The sums are small and the steps are short. A mid-range model is enough.
@@ -14,6 +14,10 @@ when:
   - Your cost to win a buyer keeps rising and you do not know what else to try.
   - You have a long list of growth ideas and no way to pick.
   - You want to show a partner or team a dated plan with numbers.
+not_for:
+  - "You have no sales numbers for a set period yet: start by writing down your buyers, orders and repeat rate, or ask your bookkeeper for them."
+  - "You only want to find why sales dropped: use the Ad sales drop analyst."
+  - "You want to know if one test has enough traffic to trust: use the A/B test traffic checker."
 you_give:
   - Your buyer count, orders, revenue, average sale and repeat rate for a period
   - Product facts (optional)
@@ -25,11 +29,29 @@ you_get:
   - A chain of rates with a starting figure for each
   - Three dated milestones with your predicted figure for each
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste one clean period of numbers, such as the last three months. Say what the period was.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
+  - Paste one clean period of numbers, such as the last three months. All figures must come from the same dates. Say what the period was.
   - Add every growth idea you have heard, even odd ones. Step 2 scores them all.
-  - Write your predicted figure for each milestone before you check results.
+  - Check each step's result before the next one runs. If a step fails its checks, fix the gap it names and run that step again.
+  - Write your predicted figure for each milestone before you look at results.
+output_sample:
+  input:
+    - Your buyer count, orders, revenue, average sale and repeat rate for one period
+    - Your list of growth ideas (or let it suggest some)
+    - Product facts (optional)
+    - Your goal in your own words (optional)
+  prerequisites:
+    - An AI that can read files, so it can follow HANDOFF.md and the skill files in the pack
+  output:
+    - name: "Step 1: Growth levers"
+      contains: Your numbers, the same small gain in each of three levers, the weakest steps, the cheapest lever and one test.
+    - name: "Step 2: Ranked ideas"
+      contains: Every idea scored for impact, confidence and ease, long builds flagged, and one test with a measure and stop date for the top ideas.
+    - name: "Step 3: Milestones"
+      contains: A chain of rates with starting figures, changes tied to rates, and three dated milestones with your predicted figure for each.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Size the three growth levers
     text: Lists your numbers, models the same small gain in each lever, maps each step from lead to repeat buyer, finds the weakest steps and picks the cheapest lever and one test.

@@ -14,10 +14,10 @@ outputs:
   - {type: audit_report}
 uses: [research-question-outliner, scholarly-database-searcher, cited-research-report-writer, unsupported-claim-spotter]
 steps:
-  - {uses: research-question-outliner, note: "The sub-questions, what evidence would answer each, and what kind of source counts for this reader."}
-  - {uses: scholarly-database-searcher, note: "Searches of scholarly and public databases for each sub-question, with a shortlist of sources and a note on what each one shows and how strong it is."}
-  - {uses: cited-research-report-writer, note: "The report, answering each sub-question in turn, with a citation on every claim in a format the reader can follow back."}
-  - {uses: unsupported-claim-spotter, note: "Every claim read against its cited source. Claims the source does not support are flagged and then fixed, softened or cut."}
+  - {uses: research-question-outliner, note: "Turns your question into sub-questions, what evidence would answer each, and what kind of source counts for this reader. It hands over that outline."}
+  - {uses: scholarly-database-searcher, note: "Searches scholarly and public databases for each sub-question in the outline from step 1. It hands over a shortlist of sources, with a note on what each one shows and how strong it is."}
+  - {uses: cited-research-report-writer, note: "Writes from your question, with the outline's sub-questions as its angles and the shortlist from step 2 as its first sources. It hands over the report, answering each sub-question in turn, with a citation on every claim."}
+  - {uses: unsupported-claim-spotter, note: "Reads every claim in the report from step 3 against its cited source. Claims the source does not support are flagged, then fixed, softened or cut. It hands over the claim check and the corrected report."}
 origin: own
 version: 1.0.0
 example_pending: true

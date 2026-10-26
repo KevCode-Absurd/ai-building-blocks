@@ -1,9 +1,45 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { Clerk } from "@clerk/clerk-js";
 import { library } from "./library-storage";
 
 type AccountState = "loading" | "unconfigured" | "signed-out" | "signed-in" | "error";
 type Usage = { completed: number; attemptsToday: number; dailyAttemptLimit: number | null; unlimited?: boolean; dailyIpAttemptLimit?: number | null };
+
+// Clerk's browser SDK is large, so it loads only when someone may have an account here:
+// a sign-in cookie or our own hint says so, an account page is open, or they ask to sign in.
+// Signed-out visitors on public pages never download it.
+const AUTH_HINT = "abb:auth-hint";
+/** Pages that always open the account connection (account, sign-in and private submission pages). */
+export const accountRoute = (path: string) => /^\/(account|sign-in|sign-up|space|publish|my-submissions|admin)(\/|$)/.test(path);
+/** True when this browser may hold a session. Only checks which cookies exist; their values never leave this check. */
+export function sessionHint(): boolean {
+  try {
+    for (const part of document.cookie.split(";")) {
+      const at = part.indexOf("="), name = part.slice(0, at).trim(), value = part.slice(at + 1).trim();
+      // Clerk writes __session (signed in) and __client_uat ("0" when signed out), sometimes with an instance suffix.
+      if (at > 0 && value && (/^__session(_[\w-]+)?$/.test(name) || /^__client_uat(_[\w-]+)?$/.test(name) && value !== "0")) return true;
+    }
+  } catch { /* No cookie access: fall back to the stored hint. */ }
+  try { if (localStorage.getItem(AUTH_HINT)) return true; } catch { /* Storage blocked. */ }
+  try { return [...new URLSearchParams(location.search).keys()].some(key => key.startsWith("__clerk") || key === "browser_save"); } catch { return false; }
+}
+const setHint = (value: string | null) => { try { if (value) localStorage.setItem(AUTH_HINT, value); else localStorage.removeItem(AUTH_HINT); } catch { /* Storage blocked. */ } };
+/** After a signed-out check, forget the hint, except one set moments ago by a sign-in redirect still under way. */
+const clearHint = () => { try { const value = localStorage.getItem(AUTH_HINT) ?? ""; if (!value.startsWith("pending:") || Date.now() - Number(value.slice(8)) > 30000) setHint(null); } catch { /* Storage blocked. */ } };
+let wanted = false;
+const wantedListeners = new Set<() => void>();
+/** Start the account connection everywhere (sign-in, an account feature). It stays open for the visit. */
+export function requestAccount() {
+  if (wanted) return;
+  wanted = true; wantedListeners.forEach(listener => listener());
+}
+const subscribeWanted = (listener: () => void) => { wantedListeners.add(listener); return () => { wantedListeners.delete(listener); }; };
+const isWanted = () => wanted;
+/** Look again when the tab returns or another tab signs in (it writes the stored hint). */
+const subscribeHint = (listener: () => void) => {
+  addEventListener("focus", listener); addEventListener("storage", listener); document.addEventListener("visibilitychange", listener);
+  return () => { removeEventListener("focus", listener); removeEventListener("storage", listener); document.removeEventListener("visibilitychange", listener); };
+};
 let clientPromise: Promise<Clerk> | null = null;
 let configPromise: Promise<{ configured: boolean; publishableKey?: string }> | null = null;
 function config() {
@@ -17,8 +53,11 @@ async function client(key: string) {
   }).catch(error => { clientPromise = null; throw error; });
   return clientPromise;
 }
-export function useComposerAccount(active: boolean, loadUsage = true) {
-  const [state, setState] = useState<AccountState>("loading");
+export function useComposerAccount(active: boolean, loadUsage = true, eager = false) {
+  const demanded = useSyncExternalStore(subscribeWanted, isWanted, isWanted);
+  const hinted = useSyncExternalStore(subscribeHint, sessionHint, () => false);
+  const needed = demanded || eager || hinted;
+  const [state, setState] = useState<AccountState>(() => needed ? "loading" : "signed-out");
   const [usage, setUsage] = useState<Usage | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
@@ -27,8 +66,12 @@ export function useComposerAccount(active: boolean, loadUsage = true) {
   const [revision, setRevision] = useState(0);
   useEffect(() => {
     if (!active) return;
+    // No session here and nothing asked for an account: signed out, without loading Clerk.
+    if (!needed) { setState("signed-out"); setSessionId(null); setUserId(null); return; }
     let live = true, unsubscribe: (() => void) | undefined;
     setState("loading");
+    // Once open, keep the connection for the rest of the visit, even after a sign-out clears the cookies.
+    requestAccount();
     void (async () => {
       const settings = await config();
       if (!settings.configured || !settings.publishableKey) { if (live) setState("unconfigured"); return; }
@@ -37,6 +80,8 @@ export function useComposerAccount(active: boolean, loadUsage = true) {
       clerk.current = sdk;
       unsubscribe = sdk.addListener(() => {
         if (!live) return;
+        // Remember a session so the next visit opens it straight away; forget it once signed out.
+        if (sdk.session?.status === "active") setHint("1"); else clearHint();
         setState(sdk.session?.status === "active" ? "signed-in" : "signed-out");
         setSessionId(sdk.session?.id ?? null);
         setUserId(sdk.session?.status === "active" ? sdk.session.user.id : null);
@@ -45,7 +90,7 @@ export function useComposerAccount(active: boolean, loadUsage = true) {
       });
     })().catch(() => { if (live) setState("error"); });
     return () => { live = false; unsubscribe?.(); };
-  }, [active, revision]);
+  }, [active, needed, revision]);
   const token = async (expectedUser?: string, forceRefresh = false) => {
     if (expectedUser && clerk.current?.session?.user.id !== expectedUser) throw Object.assign(Error("Your account changed. Reopen your saved work and try again."), { code: "AUTH_SESSION_REQUIRED" });
     const value = await clerk.current?.session?.getToken({ skipCache: forceRefresh });
@@ -70,14 +115,26 @@ export function useComposerAccount(active: boolean, loadUsage = true) {
     state, userId, profile, usage, token, refreshUsage,
     retry: () => { configPromise = null; setRevision(v => v + 1); },
     expired: () => { setState("signed-out"); setUsage(null); },
-    signIn: (signUp = false, destination?: string) => {
+    signIn: async (signUp = false, destination?: string) => {
+      // Clerk may not be here yet for a signed-out visitor: open it now, then redirect.
+      requestAccount();
+      let sdk = clerk.current;
+      if (!sdk) {
+        try {
+          const settings = await config();
+          if (!settings.configured || !settings.publishableKey) { setState("unconfigured"); return; }
+          sdk = clerk.current = await client(settings.publishableKey);
+        } catch { setState("error"); return; }
+      }
       const returnPath = destination ?? location.pathname + location.search;
       const target = new URL(returnPath, location.origin);
       // Both sign-in and account creation carry this browser's durable snapshot.
       const handoff = library.prepareSignUp();
       if (handoff) target.searchParams.set("browser_save", handoff);
       const options = { signInForceRedirectUrl: target.href, signUpForceRedirectUrl: target.href };
-      return signUp ? clerk.current?.redirectToSignUp(options) : clerk.current?.redirectToSignIn(options);
+      // Coming back from sign-in, open the account connection straight away.
+      setHint(`pending:${Date.now()}`);
+      return signUp ? sdk.redirectToSignUp(options) : sdk.redirectToSignIn(options);
     },
     manageProfile: () => clerk.current?.openUserProfile(),
     signOut: async () => {

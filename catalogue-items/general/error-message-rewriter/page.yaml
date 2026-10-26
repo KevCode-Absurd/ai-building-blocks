@@ -1,6 +1,6 @@
 new_slug: error-message-rewriter
 name: "Error message rewriter"
-summary: "Paste your error messages. Get each rewritten with what went wrong and what to do next."
+summary: "Paste your error messages. Get each one rewritten in plain words, with what went wrong and what to do next, costliest first."
 job: design-work
 thinking: low
 thinking_why: "It rewrites short messages by fixed rules, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - "Your app or checkout shows messages that are codes or stock phrases."
   - "Support gets the same question again and again after an error."
   - "You are launching a form and want every failure to have a clear way out."
+not_for:
+  - "You want to check a whole flow, not just the errors: use the Usability heuristic reviewer."
+  - "You have one error that no user will ever see: fix it in the code, not with a rewrite."
+  - "You need the system to stop the error from happening: ask your developer to fix it, then rewrite what is left."
 
 you_give:
   - "Every error message as it now appears"
@@ -36,6 +40,23 @@ how_to_use:
   - "Review the ranking and fix the top ones first."
   - "Show the rewrites to someone outside the team and ask what they would do next."
   - "Paste the winners into your code and your style guide."
+output_sample:
+  input:
+    - Every error message, exactly as it shows now
+    - What triggers each message, if you know
+    - Your voice notes, such as formal or friendly (optional)
+    - The screen where each message shows (optional)
+  output:
+    - name: Messages, costliest first
+      contains: Each message with the original text, its trigger, the cost of the mistake and the rewrite.
+    - name: Rewrite
+      contains: One sentence on what went wrong, without blame, then one clear next step.
+    - name: Prevent it by
+      contains: A change that could stop the error before it shows, or none.
+    - name: Missing
+      contains: Any trigger or fix you did not give, marked so nothing is guessed.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
 
 how_it_works:
   - title: "Lists each message"

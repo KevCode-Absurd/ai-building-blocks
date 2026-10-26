@@ -2,14 +2,14 @@ slug: canva
 name: Canva
 maker: Canva
 url: https://www.canva.com
-promise: "Design posts, slides, documents and videos with templates, brand assets and AI help."
+promise: "Design posts, slides, documents and videos with templates, your brand assets and AI help."
 use_cases: [design, make-images, slides-and-docs]
 categories: [design, image, productivity]
 what_it_does:
   - Gives you templates for posts, ads, decks, documents and video.
-  - Makes images from a written description.
-  - Removes backgrounds and resizes a design for each placement.
-  - Drafts text and presentations from a short prompt.
+  - "Makes images and short videos from a written description with Magic Media. It counts against your monthly AI allowance (checked 26 Oct 2026)."
+  - "Edits photos with Magic Studio tools such as Background Remover, Magic Eraser and Magic Expand (checked 26 Oct 2026)."
+  - "Drafts and rewrites text with Magic Write. Free plans get the core features with fair-use limits (checked 26 Oct 2026)."
   - Stores your logo, colours and fonts so every design matches.
 benefits:
   - "Use templates to make a set of social posts without starting each design from scratch."
@@ -21,12 +21,13 @@ best_for:
   - Social posts, ad images, flyers and slide decks.
   - Finishing an image from another AI product with text and a logo.
 not_for:
-  - Detailed interface design for apps.
-  - "Real-looking images that need tight control of each detail."
+  - Detailed interface design for apps. Use Figma AI for that.
+  - "Real-looking images that need tight control of each detail. Try Adobe Firefly, which edits and extends photos."
+  - "Heavy AI image use on the free plan. It allows up to 20 uses a month of the Standard or Premium AI tools, and none of the Ultra tools (checked 26 Oct 2026)."
 pricing:
   model: freemium
-  from: US$18 per month
-  note: Free plan has a monthly limit on AI use. Pro costs US$18 a month, or about US$12 a month billed yearly, and is for one person. Business is priced per person. Prices are from a June 2026 review, so check the page.
+  from: US$12 per month, billed yearly
+  note: "Canva Pro, for one person: about US$12 a month billed yearly (US$144 a year), or US$18 a month billed monthly. Prices are for the US and differ by region (Canva's own page, checked 26 Oct 2026). A 30-day Pro trial is listed. Free plan: up to 20 monthly uses of Standard or Premium AI tools, no Ultra tools. When the limit is hit, free users lose AI access until the next monthly reset. Business and Enterprise plans exist. We did not confirm their prices."
 works_with:
   - chatgpt
   - claude
@@ -45,6 +46,30 @@ blocks:
   - quote-and-proposal-builder
   - recurring-kpi-report-maker
 alternatives: [figma-ai, adobe-firefly, recraft, gamma]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  web:
+    - "Sign up on canva.com and pick Pro or stay on Free. Sign-in steps were not checked here."
+    - "Search the templates for the size you need, such as an Instagram post, and open one."
+    - "Add your logo, colours and fonts so the design matches your brand. Swap the photo and the words for yours."
+    - "Use a Magic Studio tool for one job, such as Background Remover on a product photo. Free plans have a monthly cap on these."
+    - "Download it, or resize it for a second placement and check each layout by eye."
+needs:
+  - "A Canva account. Free works to start."
+  - "Your logo, brand colours, fonts and 2 or 3 photos."
+  - "The words you want on the design, or a short brief for Magic Write."
+  - "A Pro plan if you hit the free AI cap."
+example:
+  task: "A square product post with a photo, a one-line offer and your logo."
+  cost: "Starting from a template costs no AI uses. Making an image with Magic Media or using a Premium AI tool counts against the monthly allowance, which is up to 20 uses on the free plan."
+  reply: "A finished design you can edit, download or share with your team. We did not check the file formats on offer, so look at the download menu. Read every word on it before you post."
+not_verified:
+  - "Magic Resize and Brand Kit details. We did not find them on Canva's pages this run."
+  - "Whether Background Remover is free or counts as an AI use."
+  - "Prices for Business and Enterprise plans."
+  - "The exact export file types and sizes."
 sources:
-  - https://designrr.io/canva-pricing/
+  - https://www.canva.com/learn/canva-pro-vs-canva-enterprise/
+  - https://www.canva.com/en_in/help/ai-access-variantb/
+  - https://www.canva.com/canva-ai/

@@ -1,52 +1,88 @@
 new_slug: check-a-conference-abstract-against-results
 name: Check a conference abstract against results
 headline: Check a conference abstract against results
-summary: Share the source files. Get a source-linked abstract revision and overclaim list.
+summary: Check your conference abstract against your study results. Get an overclaim list with table references and a plain revision that fits the word limit.
 job: research-topics
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A source-linked abstract revision and overclaim list. Share an existing abstract draft, actual methods and results, source tables and the conference word limit. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your abstract draft, your study's methods and results, and the word limit. It checks every number and claim in the abstract against your results. You get a list of overclaims with table references and a revised abstract that keeps the real denominators and limits.
 explain: |-
-  A source-linked abstract revision and overclaim list.
+  A conference abstract is short, so the strongest claim often wins the space. Numbers get rounded up, "was linked to" turns into "caused", and the sample size drops out to save words. Reviewers and your co-authors then find the gap. This workflow is an abstract checker: it compares each claim to your results before you submit.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The abstract keeps actual denominators, uncertainty and study limitations; no result is added to meet a word limit. Missing tools or evidence stay visible in the final summary.
+  Step 1 reads your completed study and records its methods, who was studied, the outcomes and the limits, with the table or page for each. Step 2 lays your abstract beside that record and lists every unsupported number, cause-and-effect claim and novelty claim. Step 3 edits the abstract for your reader and word limit. It keeps the verified results and leaves any unresolved claim as a marked gap.
+
+  It never adds a result to fill space, and it never cuts the denominator, the uncertainty or the main limit to meet the word count. It checks wording against your results. It does not judge whether your study is sound, and it does not submit anything.
 when:
-  - You need a source-linked abstract revision and overclaim list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your abstract is due and a co-author asks where each number comes from.
+  - You rewrote an abstract after the analysis changed and need to be sure the text still matches the tables.
+  - A reviewer or supervisor says the abstract claims more than the study shows.
+  - You are cutting to a word limit and want to know which words you can lose without losing the evidence.
+not_for:
+  - The study has no results yet. This workflow checks claims against finished results.
+  - You only want grammar and plain wording fixed. Use the Plain English editor.
+  - You want every unsourced claim found in a long draft, not an abstract checked against data. Use the Unsupported claim spotter.
+  - You are reviewing someone else's paper. Use the Check a paper's claims and write a fair peer review workflow.
 you_give:
-  - An existing abstract draft, actual methods and results, source tables and the conference word limit.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your abstract draft, as it stands
+  - Your study's methods and results, as the paper, report or tables, with table numbers or page numbers
+  - The conference word limit and who will read it (from the call for abstracts)
+  - Any rule on structure, such as headed sections (optional)
+  - Your deadline, and what you do not want changed (optional)
 you_get:
-  - A source-linked abstract revision and overclaim list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - An overclaim list of every number, cause-and-effect claim and novelty claim that your results do not support, each with its table or page reference
+  - A revised abstract in plain English, within your word limit, with the real denominators and limits kept
+  - A change log that says what was cut or reworded and why
+  - Gaps marked MISSING where the results do not settle a claim
+  - A hand-back summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini.
+  - Attach the abstract and the study results. Paste the word limit and the reader, for example "clinicians at a regional meeting".
+  - After step 1, check that the sample size, the outcomes and the main limit match your own records.
+  - After step 2, go through the overclaim list. For each claim, decide with your co-authors whether to soften it or to add the missing evidence.
+  - After step 3, count the words yourself and check every number against the tables. Submit the abstract yourself. Nothing here sends it.
 how_it_works:
   - title: Source note summariser
-    text: Extract located methods, population, outcomes and limitations from the supplied completed study; retain table and page references.
+    text: "Reads your completed study and records the methods, who or what was studied, the outcomes and the limits, with the table or page for each. Hands step 2 a record of what the results show."
   - title: Unsupported claim spotter
-    text: Check the existing abstract against that evidence and list unsupported numbers, causal assertions and claimed novelty.
+    text: "Lays the abstract beside that record and lists each unsupported number, cause-and-effect claim and novelty claim, with the risk and safer wording. Hands step 3 the list."
   - title: Plain English editor
-    text: Edit the supplied abstract for the stated audience and word limit, preserving verified results and retaining unresolved claims as marked gaps.
+    text: "Edits the abstract for your reader and word limit. Keeps the verified results, keeps technical terms your field uses, and leaves unresolved claims as marked gaps instead of dropping them."
 output_shape: |-
-  Scope and source coverage
-  A source-linked abstract revision and overclaim list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  OVERCLAIM LIST    <claim in the abstract | type | result it rests on (table or page) | status | safer wording>
+  REVISED ABSTRACT  <text> (<n> words of <limit>)
+  CHANGE LOG        <what changed | why | which result it follows>
+  FILES             <each saved file>
+  MISSING           <each gap and the claim it stops>
+  CHECKS MISSED     <one line each, or none>
+  NEXT STEP         <one step>
+output_sample:
+  input:
+    - Your abstract draft
+    - Your study's methods and results, with table numbers or page numbers
+    - The conference word limit and the reader
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - A finished analysis. The workflow does not run it for you.
+  output:
+    - name: Overclaim list
+      contains: Each unsupported number, cause-and-effect claim or novelty claim, with its status, table reference and safer wording.
+    - name: Revised abstract
+      contains: The abstract in plain English, within the word limit, with denominators, uncertainty and limits kept.
+    - name: Change log
+      contains: Each cut or rewording, why it was made and the result it follows.
+    - name: MISSING lines
+      contains: Claims the results do not settle, left as marked gaps for you and your co-authors.
+    - name: Hand-back summary
+      contains: Each saved file, source coverage, checks that did not run and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The abstract keeps actual denominators, uncertainty and study limitations; no result is added to meet a word limit.
+  - what: Word limit
+    how: Give the exact limit and say whether the title and references count. The edit cuts to it without dropping limits or denominators.
+  - what: Reader
+    how: Say who reads it, such as specialists or a mixed audience. The edit keeps the terms they use and explains the rest.
+  - what: Structure
+    how: Paste the conference's headings, such as Background, Methods, Results and Conclusion. The revised abstract follows them.
+  - what: Strictness
+    how: Say if "associated with" is fine and "improves" is not. Cause-and-effect claims are checked against your study design.
 judge:
   - The abstract keeps actual denominators, uncertainty and study limitations; no result is added to meet a word limit.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +95,21 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the overclaim list from each run. Next time you write an abstract, check your first draft against your own habits.
+  - Save your approved abstract with the results version it matched, so a later analysis change shows up.
+  - Ask a co-author who did not write the abstract to read the overclaim list before you submit.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Reads the full pack, your results tables and the abstract in one run.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The conference call for abstracts, with its word limit and headings.
+    - The final tables and figures, not an earlier draft of them.
+    - A co-author who can confirm the analysis.
 terms:
+  - term: Overclaim
+    meaning: A statement in the abstract that goes further than the results back up.
+  - term: Denominator
+    meaning: The total a count is out of, such as 12 of 80 patients.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

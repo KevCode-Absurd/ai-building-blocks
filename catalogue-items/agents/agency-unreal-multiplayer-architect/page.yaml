@@ -1,0 +1,148 @@
+name: Unreal Multiplayer Architect agent
+summary: Plan Unreal Engine 5 multiplayer. Decide which class owns each piece of state, what replicates and which server calls to check, with a cheat review.
+headline: Unreal Multiplayer Architect agent
+subhead: Describe your Unreal game, its player count and what must stay in sync. It decides what the server owns, puts each piece of state in the right Unreal class and lists every server call that needs a check. You get a replication plan, a cheat review and a profiling plan.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Unreal multiplayer breaks when state sits in the wrong class. A round timer
+  in the GameMode never reaches players. A private value in the GameState goes
+  to everyone. A server call with no check lets one player damage another. This
+  agent plans where each piece of state lives, so these bugs do not get built in.
+
+  It follows the Unreal Multiplayer Architect profile by Agency Agents, for
+  Unreal Engine 5. The server owns the truth. Clients ask through server RPCs
+  and the server checks each request. GameMode is server only. GameState and
+  PlayerState go to everyone. PlayerController goes only to its owner. It then
+  plans which variables replicate, how often, and to whom, and when an RPC must
+  be reliable.
+
+  One rule is easy to get wrong. A failed check on a server RPC can kick the
+  player. The agent saves that for input an honest player could never send, and
+  checks lag-prone cases, such as a target that moved, in the main function so
+  the player stays connected. Your AI plans and reviews. It cannot run Unreal or
+  profile your game. Any C++ is an outline for you to test.
+when:
+  - You are starting an Unreal multiplayer game and need to choose between a dedicated server and a listen server.
+  - A value shows on the server but never reaches players, or reaches the wrong players.
+  - You are using the Gameplay Ability System and abilities or attributes do not sync.
+  - You want every server RPC reviewed for cheats before launch.
+not_for:
+  - You want gameplay systems in general, not networking. Use the Unreal Systems Engineer agent.
+  - You use Unity. Use the Unity Multiplayer Engineer agent. For Godot, use the Godot Multiplayer Engineer agent.
+  - You want a general game design or a single-player game.
+  - You want world building or visuals. Use the Unreal World Builder agent or the Unreal Technical Artist agent.
+you_give:
+  - The game type and the most players one match holds
+  - The server type you want, such as dedicated or listen, or not decided
+  - Your Unreal Engine 5 version
+  - Everything that must stay in sync, such as positions, health, items, scores and abilities
+  - Whether you use the Gameplay Ability System
+  - Your current classes or the bug you see (optional)
+you_get:
+  - A server model and why it fits
+  - A map of which class holds each piece of state
+  - A list of variables to replicate, with update rate and who receives them
+  - A table of server RPCs with their checks and reliability
+  - A cheat review and a bandwidth and profiling plan
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe your game, the player count and the server type. List what must sync. Say MISSING for what you have not decided.
+  - Say "Plan this. Do not make up numbers I did not give." Your AI asks once for anything missing.
+  - Read the class and state map first. Check that nothing private sits in a class everyone receives.
+  - Build in Unreal. Test with a simulated delay and run the profiling steps from the plan.
+  - Paste your results back and ask for a re-check of the plan.
+how_it_works:
+  - title: Choose the server model
+    text: It picks dedicated server, listen server or peer-to-peer and says what that choice means for cheating and cost.
+  - title: Place the state
+    text: It puts each piece of state in GameMode, GameState, PlayerState, PlayerController or the actor itself.
+  - title: Plan replication
+    text: It marks which variables replicate, to whom, how often and whether clients must react when they change.
+  - title: Plan the server calls
+    text: It lists each server RPC, its checks, and whether it must arrive in order or can be dropped.
+  - title: Plan ability sync
+    text: If you use the Gameplay Ability System, it plans setup on both sides so abilities and attributes match.
+  - title: Plan profiling and cheats
+    text: It lists the Unreal tools to measure bandwidth and a check that no client can fake another player's actions.
+output_shape: |-
+  SERVER MODEL
+    <dedicated, listen or peer-to-peer> | <why> | <what it costs>
+
+  CLASS AND STATE MAP
+    <state> | <GameMode, GameState, PlayerState, PlayerController or actor> | <who receives it>
+
+  REPLICATION LIST
+    <variable> | <condition> | <update rate> | <reacts on change?>
+
+  RPC TABLE
+    <server RPC> | <reliable or unreliable> | <check in validation> | <check in the main function>
+
+  ABILITY SYNC (only if you use the Gameplay Ability System)
+    <setup step> | <why it is needed>
+
+  BANDWIDTH AND PROFILING
+    <tool> | <what to measure> | <what to compare it with>
+
+  CHEAT REVIEW
+    <RPC or state change> | <what a cheater could send> | <fix>
+
+  OPEN QUESTIONS
+    <what is missing or must be measured>
+output_sample:
+  input:
+    - Your game type and the most players one match holds
+    - Your server type
+    - Everything that must stay in sync
+    - Whether you use the Gameplay Ability System
+  prerequisites:
+    - An Unreal Engine 5 project, to build and profile the plan
+  output:
+    - name: Server model
+      contains: Whether a dedicated server, listen server or peer-to-peer fits, and what each costs you.
+    - name: Class and state map
+      contains: Which class holds each piece of state and who receives it.
+    - name: Replication list
+      contains: Each replicated variable with its condition, update rate and whether clients react to changes.
+    - name: RPC table
+      contains: Each server RPC, whether it is reliable, and which checks go in validation and which in the main function.
+    - name: Ability sync
+      contains: Setup steps on both sides for abilities and attributes. Only if you use the ability system.
+    - name: Bandwidth and profiling
+      contains: Which Unreal tools to use, what to measure and what to compare it with.
+    - name: Cheat review
+      contains: Each server call, what a cheater could send and the fix.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Replication
+    meaning: Unreal copying a value from the server to players so everyone sees the same thing.
+  - term: RPC
+    meaning: A function call sent over the network. A server RPC goes from a player to the server.
+  - term: GameMode, GameState, PlayerState, PlayerController
+    meaning: Four Unreal classes. GameMode runs on the server only. GameState and PlayerState go to all players. PlayerController goes only to its owner.
+  - term: Dedicated server
+    meaning: A server that runs the game with no player on it. A listen server is run by one of the players.
+  - term: Gameplay Ability System
+    meaning: Unreal's built-in system for abilities, stats and effects.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can plan the design and review each RPC. One that can browse can check Unreal's current docs.
+  inputs:
+    - The header files of your network classes.
+    - Output from the stat net command or the Network Profiler, from your own test.

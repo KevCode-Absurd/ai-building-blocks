@@ -35,3 +35,29 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
   - It works best when your AI can run code and save files.
+not_for:
+  - "You only want text from a scanned file. Use the Scanned PDF text reader."
+  - "You want a PDF turned into Word, HTML or Markdown. Use the PDF converter."
+  - "You want to write a new PDF and check each page as an image. Use the PDF maker and reader."
+  - "You cannot run code or save files in your AI tool. The checks need both, so a chat-only run gives you a plan but no proof."
+output_sample:
+  input:
+    - The source PDF or PDFs
+    - What you want done, with page ranges and the order
+    - Where to save the result and what to call it
+    - OCR language, if the file is scanned (optional)
+    - Whether the file is confidential
+  prerequisites:
+    - An AI that can run code and save files
+    - PDF tools on your computer, such as a PDF library, a page renderer and OCR if you need it
+  output:
+    - name: Output files
+      contains: New files at paths you can see. Your original is never overwritten.
+    - name: File facts
+      contains: SHA-256 hash, size, page count and encryption status for the source and each output.
+    - name: Operation log
+      contains: The tools, options, page mapping, OCR language, redactions and metadata changes.
+    - name: Checks
+      contains: Proof of structure, text and page appearance, plus what could not be checked.
+    - name: Caveats
+      contains: Password, signature, font, OCR or hidden-content limits you should know about.

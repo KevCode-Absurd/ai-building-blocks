@@ -1,6 +1,6 @@
 new_slug: returns-policy-designer
 name: "Returns policy designer"
-summary: "Give it your returns data and costs. Get refund timing, keep-it rules and a recovery budget."
+summary: "Set a returns policy that keeps customers. Give it your return costs and product list. You get refund timing, keep-it rules and a recovery budget."
 job: keep-customers
 thinking: medium
 thinking_why: "It weighs costs against risk for each product, so a mid-size model is enough if you give it your real return costs."
@@ -17,6 +17,10 @@ when:
   - Refunds take days and customers who return rarely buy again.
   - Return shipping and handling cost you more than some of the items are worth.
   - Support has to ask for approval every time a customer needs a fix.
+not_for:
+  - "Your store has very few returns or no resellable stock: a short plain returns page is enough."
+  - "You need legal wording for each country: ask a lawyer or adviser who knows the consumer law where you sell."
+  - "You only want the cost of one return or your refund speed: do the sum by hand in a spreadsheet first."
 
 you_give:
   - Return rate by product and by reason
@@ -36,6 +40,28 @@ how_to_use:
   - Say what your returns portal and helpdesk can do today.
   - Pilot instant refunds on repeat customers or low-value orders first, and set keep-it by case, not as a banner.
   - Check your numbers every 90 days with the matched comparison it gives you.
+output_sample:
+  input:
+    - Your return rate by product and by reason
+    - Your days from return request to refund today
+    - "Your cost per return: shipping, handling and written-off stock"
+    - Your product list with price, cost, weight and resale value after return
+    - Your repeat rate for returners and any abuse history (optional)
+  output:
+    - name: YOUR NUMBERS
+      contains: Days from request to refund start, store credit share, and repurchase within 60 days of a return.
+    - name: REFUND TIMING
+      contains: For each customer group, when money moves, and which group to pilot instant refunds on first.
+    - name: EXCHANGE AND CREDIT RULES
+      contains: The default of exchange or store credit, and the bonus for choosing credit.
+    - name: PRODUCT RULES
+      contains: Each product group with refund amount against return cost, a keep-it, return or repair-first rule, and a cap.
+    - name: RECOVERY PLAYBOOK
+      contains: How much support can spend per incident without approval, and on what.
+    - name: POLICY TEXT
+      contains: Short customer-facing wording, with a reminder to check consumer law before you publish.
+    - name: TRACK and REVIEW EVERY 90 DAYS
+      contains: The returns numbers to watch, and the matched comparison to run each quarter.
 
 how_it_works:
   - title: Measures three numbers

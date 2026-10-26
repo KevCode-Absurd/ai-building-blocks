@@ -15,16 +15,25 @@ most Indian errors:
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
   Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format shows
+  **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
 never substitute a proxy and present it as the real thing.
 
+## Before you start
+
+- **Files this skill names.** `india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md` and the runbook are not included in this folder. If you cannot load them, use the two rules above and the steps below. Say in your reply that they were not loaded.
+- **No invented buyers or contacts.** Name a buyer only if (a) the user gave it, (b) you can search the web and find a source such as a company site, a stock exchange filing or a news report of a past deal, or (c) it is a well-known company whose sector is not in doubt. For every row write the source, or mark the row `TO VERIFY`. Never write a person's name, role or relationship status unless the user gave it or you found it in a public source. If you have no web access, leave decision makers as `TO FIND` and list the places to look: the company's own site, its annual report and exchange filings.
+- **Fund and deal facts.** Fund size, recent deals and capacity are facts that change. Show the source and date, or write `TO VERIFY`. Do not guess them.
+- **Needs.** A chat AI is enough for the tables. Web search makes them better. Excel output needs an AI that can write files; if yours cannot, give each tab as a Markdown table.
+
 ## Workflow
 
 ### Step 1: Understand the Target
+
+If the sector or the revenue and profit are missing, ask once. If the user cannot say, mark them `MISSING` and say the list will be wider and less sure.
 
 - Company description, sector, and business model
 - Revenue, EBITDA, and growth profile
@@ -104,6 +113,7 @@ For each Tier 1 buyer:
   - Contact mapping for Tier 1
   - Summary statistics (total buyers by tier, by type)
 - One-page buyer universe summary for the engagement letter or pitch
+- Close with one line on the next step: ask the seller to strike or add names, then check every `TO VERIFY` row before anyone is called.
 
 ## Important Notes
 

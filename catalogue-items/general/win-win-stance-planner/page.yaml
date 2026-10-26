@@ -1,6 +1,6 @@
 new_slug: win-win-stance-planner
 name: "Win-win stance planner"
-summary: "Describe a deal or dispute. Get your likely stance, what a win is for each side, and where you walk away."
+summary: "Plan a negotiation or dispute: see each side's likely stance, what a win means for both, and the point where you walk away."
 job: sell-and-negotiate
 thinking: high
 thinking_why: "It reads two sides from thin evidence and separates fact from guess, which takes careful judgment."
@@ -14,6 +14,10 @@ when:
   - You are about to negotiate with a client, partner, boss or supplier you will deal with again.
   - A family or business dispute keeps going in circles.
   - You tend to give in, or to push too hard, and want a plan that does neither.
+not_for:
+  - "You need legal, money or safety advice on a dispute: use a lawyer or a professional adviser."
+  - "You already know your stance and want help running the talk itself: use the Listen-first talk planner."
+  - "You need to build trust before any deal talk starts: use the Trust deposit planner."
 you_give:
   - The deal or dispute, with who, what each wants and what is at stake
   - How often you will deal with them again (optional)
@@ -30,6 +34,29 @@ how_to_use:
   - Say what you would do if you walked away. Be honest about whether you can.
   - Read the stance list. Check where you swing between pushing and giving in.
   - Take the brief to "Listen-first talk planner".
+output_sample:
+  input:
+    - "The deal or dispute: who is involved, what each side wants and what is at stake"
+    - How often you will deal with them again (optional)
+    - What you would do if there is no deal (optional)
+    - Anything the other side has said, in their own words (optional)
+  output:
+    - name: Situation
+      contains: "Four facts: who is involved, what is at stake, how often you will meet again and how much trust there is."
+    - name: Stances
+      contains: The likely stance of each side, picked from six, with a quote or fact as evidence.
+    - name: Courage and consideration
+      contains: Your scores from 1 to 5 on each, with one thing to say and one thing to do.
+    - name: What a win is
+      contains: Your must-haves and nice-to-haves, and a marked guess at what a win is for them.
+    - name: No-deal line
+      contains: The point where you walk away, what you would do instead and a kind way to say it.
+    - name: Setting check
+      contains: A look at trust, agreement, rewards and methods around the deal.
+    - name: Talk brief
+      contains: Your stance, both win lists, your no-deal line, a first trust move and a question to bring.
+    - name: Missing and checks missed
+      contains: What would sharpen the plan, and any checks the skill could not pass.
 how_it_works:
   - title: Reads the situation
     text: Who, what is at stake, how often you will meet again and how much trust there is.

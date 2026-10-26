@@ -9,6 +9,27 @@ description: "This skill should be used when the user asks to write a candidate 
 
 Provide ready-to-customize communications for every candidate touchpoint from screening invite through onboarding welcome. Good candidate comms are fast, transparent, personalized, and respectful of the candidate's time.
 
+## How to run this skill
+
+1. **Collect the facts.** You need the candidate's first name, the role, the stage, the next step with its date, and who signs the message. One real detail from your conversation makes it personal. Ask once for what is missing. If the user cannot give a date, reason or detail, write a clear `[BRACKET]` in the draft. Never invent a date, a salary, a reason or something the candidate said.
+2. **Find the stage** in the map below, then open the matching template in `references/comms-templates.md`.
+3. **Draft the message** from that template. Keep to the principles: reply in a day, give a real timeline, one action, short paragraphs.
+4. **For a rejection,** follow the Rejection Framework. Share only what the table allows. Never give scores, other candidates' names or what an interviewer said.
+5. **For an offer,** write the call script or email structure only. Pay and terms come from the user, and HR or a lawyer should check the written offer.
+6. **Stop and say so** if the user wants first contact with someone who has not replied (use the Candidate outreach drafter), or the message is about a legal dispute or a dismissal (send them to HR or a lawyer).
+
+### Output format
+
+```
+Stage: <stage>
+Subject: <subject line>
+<email, two or three sentences per paragraph>
+One ask for the candidate: <the single action>
+Send: <when, from the timing table>
+Tone options: <warmer line> / <more direct line>
+Still to fill: <any [BRACKET] or missing fact>
+```
+
 ## Communication Principles
 
 1. **Speed wins** — respond within 24 hours at every stage. 48hrs max. Candidates evaluate you by your responsiveness.
@@ -24,7 +45,7 @@ What to send at each pipeline transition:
 
 | Pipeline Stage | Communication | Timing | Channel |
 |---------------|--------------|--------|---------|
-| Identified → Contacted | Initial outreach | Day 0 | See outreach-sequence.md |
+| Identified → Contacted | Initial outreach | Day 0 | Not covered here. Use the Candidate outreach drafter |
 | Responded (positive) → Screening | Screening invite | Within 24hrs of response | Email |
 | After Screening (advance) | Next stage confirmation + prep | Within 24hrs of decision | Email |
 | After Screening (reject) | Rejection (stage-appropriate) | Within 48hrs of decision | Email |
@@ -108,6 +129,6 @@ The most important communications to get right.
 
 ## Reference Files
 
-You are **stongly encouraged** to read the reference files
+Read the reference file before you draft:
 
 - **`references/comms-templates.md`** — Ready-to-customize templates for every stage.

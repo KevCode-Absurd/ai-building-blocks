@@ -1,55 +1,112 @@
 new_slug: design-handoff-completeness-assistant
 name: Design handoff completeness assistant
 headline: Design handoff completeness assistant
-summary: A handoff change list, missing states and an implementation review request.
+summary: Find the states and variants missing from a changed UI component, and get a review request your developers can act on.
 job: design-work
 thinking: high
-thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A handoff change list, missing states and an implementation review request. Share a changed component brief, system rules, implementation questions and the last approved handoff. Your AI prepares the work and marks any facts it cannot verify.
+thinking_why: It compares a changed component with the last approved handoff, checks every state and token, and must not draw what was never designed.
+subhead: Give it a changed component's design and your system rules. It compares them with the last approved handoff. You get the changed variants, the missing states and keyboard rules, and a review request for developers.
 explain: |-
-  A handoff change list, missing states and an implementation review request.
+  A component often reaches developers with only the happy path drawn. The default and hover are there. Empty, loading, error and keyboard behavior are not. Developers guess, and the guess ships. This agent runs a design handoff check on one component against your last approved handoff, so the gaps get fixed before the build.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Only the changed component is reviewed; states and tokens map to the current system. Missing tools or evidence stay visible in the final summary.
+  When a component adds a variant, changes behavior or draws a developer question, it runs the Give developers a complete component brief workflow. That audits the component against your design system, defines each state, and maps styles to the tokens you already approved. If states or accessible behavior are still missing, it runs the Screen states designer again. It allows two correction passes, then lists what is still open.
+
+  It reviews the one changed component. It reuses your tokens and never invents a new palette. It writes the review request and stops. It does not message developers or edit your design file.
 when:
-  - You need a handoff change list, missing states and an implementation review request.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A designer adds a variant to a button, input or card and developers have not seen it yet.
+  - A developer asks "what happens when this is empty or fails?" and no design shows it.
+  - A component's behavior changed, such as a new focus or keyboard rule, and the old handoff is out of date.
+  - You are about to hand a Figma component to developers and want one last check for gaps.
+not_for:
+  - You want a whole screen reviewed for quality. Use the New screen design reviewer.
+  - You want your whole product checked for drift from your design rules. Use the Monthly design system keeper.
+  - You want a built site tested for accessibility. Use the Quarterly accessibility keeper.
+  - You have no component design yet. Design it first, then run this.
+  - You want developers messaged for you. It writes the request and stops.
 you_give:
-  - A changed component brief, system rules, implementation questions and the last approved handoff.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The changed component's design, as a Figma link, screenshots or a written description of each variant
+  - Your system rules, such as design tokens, spacing and naming (from your design system file)
+  - What the component is for and where it appears (one or two lines)
+  - The last approved handoff for this component (optional, needed to see what changed)
+  - Developers' open questions about the component (optional)
 you_get:
-  - A handoff change list, missing states and an implementation review request.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A change list of new, changed and removed variants since the last approved handoff
+  - A grid of the states still missing for each variant, such as empty, loading, error and disabled
+  - The keyboard, focus and screen reader behavior still undefined
+  - Each style matched to an existing token, with any value that matches none flagged
+  - A review request for developers, ready to edit and send
+  - A short record for the next review
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent with the two pieces it uses, the Give developers a complete component brief workflow and the Screen states designer. If your AI cannot open them, paste both in with the agent.
+  - Say if this is the first run. If not, paste last time's record. Attach the component design and your system rules. Your AI cannot open a Figma file unless it has access, so screenshots or a written list of variants work too.
+  - Read the change list, then the missing-states grid. Check three or four cells against your design file.
+  - Draw or describe the missing states yourself, or ask for another pass. Edit the review request and send it to developers yourself.
+  - Run it again when the component changes. In plain chat it cannot save files, so keep the record it hands back.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep component ID, design version, approved variants, state coverage, token version and unresolved questions. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: The component adds a variant, changes behavior or receives an implementation question.
-  - title: Choose the next step
-    text: Run the component handoff workflow. If required states or accessibility behavior are missing, run screen-states-designer again; allow at most two correction passes, then list unresolved blockers.
-  - title: Check and save evidence
-    text: Only the changed component is reviewed; states and tokens map to the current system. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Reads the last record
+    text: Uses the saved record or sets a first baseline. The record holds component ID, design version, approved variants, state coverage, token version and open questions.
+  - title: Checks the trigger
+    text: The component added a variant, changed behavior or got a developer question. If none, it says so and stops.
+  - title: Audits against your system
+    text: The Design system auditor finds the patterns the component should reuse and the gaps. Only this one component is reviewed.
+  - title: Lists every state
+    text: The Screen states designer goes through each variant for the states that can happen, such as empty, loading, error and long content. It also covers keyboard, focus and recovery.
+  - title: Maps tokens
+    text: The Design token builder matches each style to your approved tokens. A value with no token is flagged. No new palette is made.
+  - title: Corrects, then stops
+    text: If required states or accessible behavior are missing, it runs the states step again. It allows two correction passes, then lists what is still open.
+  - title: Writes the request
+    text: Writes the developer review request and the new record. Keeps the old record.
 output_shape: |-
-  Scope and source coverage
-  A handoff change list, missing states and an implementation review request.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  REVIEW <date>, component <name, ID>, design version <v>   LAST APPROVED <version or first baseline>
+
+  CHANGED  <variant | new | changed | removed | unchanged> <what changed>
+  STATE GRID
+    <variant> | <state> | <drawn | described | MISSING | not applicable: reason>
+  BEHAVIOR NOT YET DEFINED  <keyboard, focus, screen reader name, error message>
+  TOKENS  <style> -> <token>   NO TOKEN: <value>
+  REVIEW REQUEST FOR DEVELOPERS (not sent)
+    final: <variants and states ready to build>
+    still open: <gaps, with who decides>
+    questions: <numbered>
+
+  RECORD FOR NEXT REVIEW  <component ID, design version, approved variants, state coverage, token version, open questions>
+  MISSING  <each gap and what it blocks>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The changed component's design (Figma link, screenshots or a written list of variants)
+    - Your system rules, such as tokens, spacing and naming
+    - What the component is for and where it appears
+    - The last approved handoff (optional, needed to see what changed)
+    - Developers' open questions (optional)
+  prerequisites:
+    - An AI that can read your design, through screenshots, a written description or access to your design file
+    - The two pieces it uses, the Give developers a complete component brief workflow and the Screen states designer
+  output:
+    - name: Change list
+      contains: Each variant marked new, changed, removed or unchanged since the last approved handoff, with what changed. A first run says first baseline.
+    - name: State grid
+      contains: Each variant against each state that can happen, marked drawn, described, missing or not applicable with a reason.
+    - name: Behavior not yet defined
+      contains: Keyboard operation, focus order, screen reader names and error messages that no design or note settles.
+    - name: Token mapping
+      contains: Each style matched to one of your tokens. A value that matches no token is flagged as NO TOKEN, never given a made-up name.
+    - name: Review request for developers
+      contains: What is final and ready to build, what is still open and who decides it, and numbered questions. Marked not sent.
+    - name: Record for next review
+      contains: A small block to paste next time with component ID, design version, approved variants, state coverage, token version and open questions.
+    - name: Saved files
+      contains: The step files and run log in a dated folder under reviews/design-handoff-completeness-assistant/, when your AI can save files.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Only the changed component is reviewed; states and tokens map to the current system.
+  - what: One component
+    how: Review one component at a time. Two components in one run blur which gaps belong to which.
+  - what: Which states count
+    how: Say which states can happen, such as whether data can be empty or a save can fail. A state that cannot happen is marked not applicable with your reason.
+  - what: Platform
+    how: Say if it is web, iOS or Android. Focus and keyboard rules differ, and so does what developers need.
+  - what: Token file
+    how: Attach your real token list. Without it, token matches are marked unverified.
 judge:
   - Only the changed component is reviewed; states and tokens map to the current system.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +119,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Add your own required states by component type, such as every input needs error and disabled, so the grid starts with the right rows.
+  - Keep the approved handoff for each component in one folder, so the next run compares with a true earlier version.
+  - Add your accessibility rules, such as your focus ring and the contrast ratio you test to, so the behavior check uses them.
+  - Pair it with the New screen design reviewer once the component sits in a real screen.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Figma or your design tool
+      why: Export the variants as images or text, or give your AI access, so it reads the real design.
+    - name: A chat AI that reads uploaded files
+      why: Claude, ChatGPT and Gemini can read your screenshots, token list and the pack. In plain chat you save the record yourself.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your design token list or design system file.
+    - Your accessibility rules.
+    - A short note from the developer on what they plan to build.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Variant
+    meaning: One version of a component, such as a primary button or a disabled button.
+  - term: State
+    meaning: A condition a component can be in, such as empty, loading or error.
+  - term: Design token
+    meaning: A named style value, such as a colour or a spacing step, that designers and developers share.

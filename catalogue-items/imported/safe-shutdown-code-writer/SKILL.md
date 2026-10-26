@@ -26,6 +26,32 @@ A skill for implementing graceful shutdown in servers, workers, and long-running
 - Use when the user says "graceful shutdown", "drain connections", "handle SIGTERM", "zero downtime", or "don't kill active requests"
 - Use when implementing health check endpoints (`/healthz`, `/readyz`) for orchestrators
 
+## When Not to Use
+
+- Short-lived scripts, one-off jobs and serverless functions. They do not run a long-lived process, so there is nothing to drain. Use the platform's own shutdown notes instead.
+- The user wants load balancing, autoscaling or Kubernetes rollout design. This skill only covers the app's side of a stop.
+- The app's code is not available. Ask for it first.
+
+## What You Need
+
+- The server or worker code: the file where the process starts and where connections, queues or timers are opened.
+- The language and framework (for example Node with Express, or Python with FastAPI under Uvicorn).
+- The longest time a request or job can take, and any stop time the host allows (Kubernetes `terminationGracePeriodSeconds`, Docker `stop_timeout`, or the platform's own limit).
+- Where it is deployed (optional but useful).
+
+If the code or the framework is missing, ask once. If the longest request time or the host's stop time is missing, write `MISSING: <what>`, use the 25 second drain and 30 second host defaults in the examples, and say they are placeholders to check. Never invent code the user did not share: show only the lines to add or change.
+
+## Output
+
+Return:
+
+1. **Shutdown plan**: the order your app will stop things, in 4 to 6 plain lines (stop new work, flip readiness, drain, close resources, exit).
+2. **The code**: the signal handler, the stop-new-work step, the drain with a deadline, and the resource cleanup, fitted to the user's code. Mark each change by file.
+3. **Health endpoints**: `/healthz` and `/readyz`, if the app has none.
+4. **Settings to change**: the host's grace period and drain time, with the rule `drain time < host stop time`.
+5. **A test**: how to send SIGTERM in a test and check that no request is dropped.
+6. **Not covered**: WebSocket or SSE connections, clustered workers, or anything else the code needs and this answer did not handle.
+
 ## How It Works
 
 ### Step 1: Register signal handlers early
@@ -39,7 +65,7 @@ function onShutdownSignal(signal: string): void {
   if (isShuttingDown) return; // prevent double-shutdown
   isShuttingDown = true;
   console.log(`Received ${signal}, starting graceful shutdown...`);
-  shutdown();
+  void shutdown(server); // see Step 2; `server` is your http.Server
 }
 
 process.on("SIGTERM", () => onShutdownSignal("SIGTERM"));
@@ -51,16 +77,26 @@ process.on("SIGINT", () => onShutdownSignal("SIGINT"));
 Immediately stop the server from accepting new connections. For HTTP servers, call `server.close()`. For queue workers, stop polling for new jobs.
 
 ```typescript
-async function shutdown(): Promise<void> {
-  // 1. Stop accepting new connections
+import type { Server } from "node:http";
+
+// `server` is the http.Server your app created with createServer(app)
+// or app.listen(). Pass it in, or import it from where you create it.
+async function shutdown(server: Server): Promise<void> {
+  // 1. Mark readiness as not-ready. isShuttingDown is already true (Step 1),
+  //    so the /readyz handler in Step 4 returns 503 from this point and
+  //    load balancers stop routing.
+
+  // 2. Stop accepting new connections
   server.close(() => {
     console.log("Server closed — no new connections accepted");
   });
 
-  // 2. Mark health check as not-ready so load balancers stop routing
-  //    (readiness probe returns 503 from this point)
+  // 3. Drain in-flight work, release resources, and exit (Step 3)
+  await drainAndExit();
 }
 ```
+
+In Step 1, call it as `shutdown(server)` from `onShutdownSignal`.
 
 ### Step 3: Drain in-flight work with a deadline
 
@@ -377,6 +413,10 @@ spec:
 - WebSocket and SSE connections require application-level close frames before severing — `server.close()` alone won't gracefully end them.
 - In clustered/multi-process setups (e.g., Node.js `cluster` module), each worker must handle signals independently.
 - Some cloud platforms (Heroku, Railway) send SIGTERM with very short grace periods (10-30s) — adjust drain timeouts accordingly.
+
+## Credit and licence
+
+Written by Prajeeth-12 (the front matter above lists MIT for the skill). This copy comes from the `sickn33/agentic-awesome-skills` collection, whose written content is under CC BY 4.0 (see `LICENSE-CONTENT`). Keep the credit to Prajeeth-12 and sickn33 when you reuse it.
 
 ## Related Skills
 

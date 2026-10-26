@@ -1,6 +1,6 @@
 slug: build-the-performance-max-diagnostics-module-builder-prompt
 name: Performance Max checks coding prompt
-summary: Get a coding brief for Performance Max checks. Show the data used, the gaps and what to check next.
+summary: "Get a coding brief for Google Ads Performance Max checks on asset groups, brand overlap and audience signals, with the data used and gaps shown."
 category: general
 type: prompt
 role: make

@@ -1,53 +1,116 @@
 new_slug: equity-cure-scenario-checker
 name: Equity cure scenario checker
 headline: Equity cure scenario checker
-summary: Check an EBITDA-only cure without giving the cash a second debt-netting benefit.
+summary: See how much equity cure a net debt to EBITDA covenant needs, how much your agreement allows, the new ratio and any gap left.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Required cure, allowed cure, residual gap and illustrative cured ratio. Share actual cure right and timing limits, agreed net debt, positive covenant EBITDA, leverage ceiling and remaining permitted cure amount.
+subhead: Give it net debt, covenant EBITDA, the maximum ratio and the cure amount you have left. It works out the cure needed, the cure allowed, the new ratio and any gap. The cure counts as EBITDA only. It never also cuts debt.
 explain: |-
-  Required cure, allowed cure, residual gap and illustrative cured ratio.
+  A debt covenant often says net debt must stay under a set multiple of EBITDA. EBITDA is a company's yearly profit before interest, tax and some other costs. When a company goes over the limit, some agreements let the owners put in new equity that counts as extra EBITDA. This is an equity cure. This equity cure scenario checker shows what a cure would have to be.
 
-  Private credit covenants. Illustrative figures only. 80/4 requires EBITDA20, five above15. Cure cap3 gives EBITDA18, ratio40/9 and2 remaining gap.
+  It finds the EBITDA you need by dividing net debt by the ceiling. It takes away today's EBITDA, and that is the cure needed. The cure is capped at what the agreement still allows. Then it works out the new ratio and what is still short. The cure money counts once, as EBITDA. It is not also taken off debt or added to cash.
+
+  A scenario is not a legal answer. Whether a cure is allowed depends on the signed agreement: how often, by when and whether the cash must arrive. Practice numbers: net debt of 80, a ceiling of 4.0 times and EBITDA of 15. You need EBITDA of 20, so the cure needed is 5. With only 3 left to use, EBITDA becomes 18, the ratio is about 4.44 times and 2 is still short.
 when:
-  - You need required cure, allowed cure, residual gap and illustrative cured ratio.
-  - You work on private credit covenants and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A forecast shows you will break the debt limit, and you want to know what cure would fix it.
+  - The owners ask how much new equity it would take to get back under the limit.
+  - Your agreement caps the cure, and you want to know whether the cap is enough.
+  - A draft compliance certificate lets the cure add EBITDA and also cut debt, and you want to check it.
+not_for:
+  - You need to check a requested EBITDA addback first. Use the Deal EBITDA addback checker.
+  - Your agreement cures with a cash paydown or a liquidity top-up. Those work differently. This skill covers an EBITDA-only cure.
+  - You want to know whether a default or waiver applies in law. Ask a lawyer and read the signed agreement. A scenario cannot say.
 you_give:
-  - Actual cure right and timing limits, agreed net debt, positive covenant EBITDA, leverage ceiling and remaining permitted cure amount.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Net debt as the agreement defines it, at the test date (from the compliance certificate)
+  - Covenant EBITDA for the test period, which must be above zero (from the same certificate)
+  - The maximum net debt to EBITDA ratio, for example 4.0 times (from the credit agreement)
+  - The cure amount you can still use, after earlier cures (from the agreement and your cure log)
+  - "The cure rules: how often, by when, and whether cash must be received (from the agreement)"
+  - The test date, currency and units
 you_get:
-  - Required cure, allowed cure, residual gap and illustrative cured ratio.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The EBITDA needed, the cure required and the cure allowed under the cap
+  - The ratio after the cure
+  - The gap still left, if the cap is not enough
+  - "A check of the cure rules: receipt, deadline and how often"
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste net debt, covenant EBITDA, the ceiling and the cure amount left. Add the cure rules from the agreement. Say the test date, currency and units.
+  - "Ask: what cure do we need, how much is allowed, and what is the ratio after it?"
+  - Check the sums. EBITDA needed is net debt divided by the ceiling. The cure needed is that minus today's EBITDA, never below zero. The cure allowed is the smaller of the cure needed and the cap left.
+  - Check that the cure raises EBITDA only. Net debt and cash must not change.
+  - Read MISSING and CHECKS MISSED. Confirm the result against the signed agreement with your lawyer before you act.
 how_it_works:
-  - title: 1. Verify EBITDA-only treatment, frequency limits, deadline, allowed amount and actual receipt requirements under the signed agreement
-    text: Verify EBITDA-only treatment, frequency limits, deadline, allowed amount and actual receipt requirements under the signed agreement.
-  - title: 2. Compute EBITDA needed as net debt divided by leverage ceiling; subtract current EBITDA and floor required cure at zero
-    text: Compute EBITDA needed as net debt divided by leverage ceiling; subtract current EBITDA and floor required cure at zero.
-  - title: 3. Limit cure to the approved remaining cap; recalculate EBITDA and ratio without reducing debt or increasing eligible cash
-    text: Limit cure to the approved remaining cap; recalculate EBITDA and ratio without reducing debt or increasing eligible cash.
+  - title: Checks the cure rights
+    text: Reads the signed agreement for EBITDA-only treatment, how often a cure can be used, the deadline, the cap and whether cash must be received.
+  - title: Finds the cure needed
+    text: Divides net debt by the ceiling to get the EBITDA required. Subtracts today's EBITDA. The result is never below zero.
+  - title: Applies the cap
+    text: Limits the cure to the amount the agreement still allows.
+  - title: Recalculates the ratio
+    text: Adds the allowed cure to EBITDA and works out the new ratio. Debt is not reduced and cash is not increased.
+  - title: Shows what is left
+    text: Shows any gap the cap leaves, and how far the ratio still sits above the ceiling.
+  - title: Marks the gaps
+    text: Writes MISSING for any figure it was not given. It never fills a gap with zero.
 output_shape: |-
-  Required cure, allowed cure, residual gap and illustrative cured ratio.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  EBITDA needed <amount> | Cure required <amount> | Cure allowed <amount> | Ratio after cure <x> | Gap left <amount>
+
+  CALCULATION
+  Net debt <amount> / ceiling <x> = EBITDA needed <amount>
+  EBITDA needed - current EBITDA <amount> = cure required <amount> (never below zero)
+  Cure allowed = the lesser of cure required and cap left <amount>
+  Cured EBITDA <amount>; net debt / cured EBITDA = <x>
+
+  CURE ELIGIBILITY
+  <how often | deadline | cash received: each with its evidence, or "not evidenced">
+
+  NO DOUBLE BENEFIT CHECK
+  <confirms the cure raises EBITDA only, with no cut to net debt and no extra cash>
+
+  INPUT SOURCES AND ASSUMPTIONS
+  <test date, currency and units, source and date for each input, workbook check if any>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Net debt at the test date
+    - Covenant EBITDA for the test period
+    - The maximum ratio (the ceiling)
+    - The cure amount you can still use
+    - The cure rules from the agreement
+  prerequisites:
+    - The signed credit agreement with its EBITDA definition and cure clause
+    - The compliance certificate that shows net debt and EBITDA
+  output:
+    - name: RESULT
+      contains: EBITDA needed, cure required, cure allowed, the ratio after the cure and any gap left.
+    - name: CALCULATION
+      contains: Each sum written out, from net debt and the ceiling to the cured ratio.
+    - name: CURE ELIGIBILITY
+      contains: How often, by when and whether cash must arrive, each with its evidence or marked not evidenced.
+    - name: NO DOUBLE BENEFIT CHECK
+      contains: Confirms the cure raises EBITDA only, with no cut to net debt and no extra cash.
+    - name: INPUT SOURCES AND ASSUMPTIONS
+      contains: Test date, currency, units and the source and date of every input.
+    - name: MISSING
+      contains: Each figure it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Cure proceeds do not improve both numerator and denominator.
+  - what: A smaller cap
+    how: Give the cure amount still allowed. The result shows the gap that is left.
+  - what: A different ceiling
+    how: Give the ceiling from the agreement for that test date. Some agreements change it over time.
+  - what: The cure is already paid in
+    how: Say when the cash was received and where. It only counts with proof of receipt.
 judge:
   - Cure proceeds do not improve both numerator and denominator.
   - Receipt, deadline and frequency eligibility require actual evidence before any compliance status changes.
@@ -62,15 +125,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can work through the sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed credit agreement pages for the EBITDA definition, the ceiling and the cure clause
+    - The compliance certificate for the test date, and a log of earlier cures
+    - A named reviewer and the question you want answered
 terms:
+  - term: EBITDA
+    meaning: Yearly profit before interest, tax and some other costs. The agreement defines which ones.
+  - term: Net debt
+    meaning: Debt less the cash the agreement lets you subtract.
+  - term: Ceiling
+    meaning: The most net debt the agreement allows, as a multiple of EBITDA.
+  - term: Equity cure
+    meaning: New owner money that the agreement counts as extra EBITDA to fix a missed test.
+  - term: Cure cap
+    meaning: The most the agreement lets you cure, in total or in one period.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real company.

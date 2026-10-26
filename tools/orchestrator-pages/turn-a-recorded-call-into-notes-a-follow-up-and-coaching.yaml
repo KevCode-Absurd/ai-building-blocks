@@ -1,6 +1,6 @@
 new_slug: turn-a-recorded-call-into-notes-a-follow-up-and-coaching
 name: Turn a recorded call into notes, a follow-up and coaching
-summary: Give it a call recording. Get notes, a follow-up draft and coaching on how the call went.
+summary: Turn a recorded call into notes, a follow-up email draft and coaching. Give it the recording. You get a transcript, actions and feedback.
 job: work-with-audio
 thinking: medium
 thinking_why: Each step reads one transcript and writes from it. A mid-level model is enough.
@@ -14,10 +14,15 @@ when:
   - You finish customer, sales or team calls and the follow-up always waits.
   - You want honest feedback on how you run calls.
   - You need notes that name an owner and a date for each action.
+not_for:
+  - "The people on the call have not agreed to be recorded: ask them first, or take notes by hand instead."
+  - "The call is an HR or legal matter: use a person trained for it, and keep the record they tell you to keep."
+  - "You only need a transcript with a short summary: run the Audio meeting notes writer on its own."
 you_give:
   - The call recording, as an audio or video file
   - Who was on the call and which voice is yours
   - What the call was for
+  - A yes from everyone on the call to being recorded
   - Your usual follow-up style (optional)
 you_get:
   - A transcript with each speaker labelled
@@ -30,6 +35,26 @@ how_to_use:
   - Point it at the recording and say which speaker is you.
   - Stop after step 2. Check the draft, fix any wrong detail and send it yourself.
   - Run step 3 for the coaching.
+output_sample:
+  input:
+    - Your call recording, as an audio or video file
+    - Who was on the call, and which voice is yours
+    - What the call was for
+    - One past follow-up email you liked (optional)
+  prerequisites:
+    - An AI that can read audio or video files, or a transcript you already have
+    - A yes from everyone on the call to being recorded
+  output:
+    - name: Step 1 notes
+      contains: A transcript with each speaker labelled, a short summary, decisions, and actions with an owner and a date.
+    - name: Step 2 follow-up
+      contains: A follow-up email draft, a team summary and a list of updates for you to approve.
+    - name: Pause
+      contains: You check the draft, fix any wrong detail and send it yourself. Nothing is sent for you.
+    - name: Step 3 coaching
+      contains: Speaking share, habits that hurt with quotes, and what to change on your next call.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the notes
     text: Transcribes the recording, labels each speaker, writes a short summary and lists decisions and actions.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It uses standard charts and a fixed fix method.
 new_slug: quality-control-plan-builder
 name: Quality control plan builder
-summary: Give it your defect data. Get control charts, the biggest causes
-  ranked, and a plan to cut defects.
+summary: "Turn your defect data into a quality control plan: control charts, ranked causes of defects, and steps to cut them. Needs counts or measurements."
 job: plan-supply-chain
 headline: Quality control plan builder
-subhead: A quality plan built from your own defect data. You see control charts
-  that show whether your process is stable, a ranked list of the biggest causes
-  of defects, and a step-by-step plan to cut them.
+subhead: A quality plan built from your own defect data. You see control charts that show whether your process is stable, a ranked list of the biggest causes of defects, and a step-by-step plan to cut them.
 explain: |
   A quality plan built from your own defect data. You see control charts that show whether your process is stable, a ranked list of the biggest causes of defects, and a step-by-step plan to cut them.
 
@@ -18,6 +15,10 @@ when:
   - You have defect counts and want to see if the process is in control.
   - You need to prepare for a customer audit or ISO review.
   - You want to move from sorting bad parts to stopping them early.
+not_for:
+  - "You need to check one batch only: use a simple inspection sheet or ask the supplier for a batch report."
+  - "Your work is not manufacturing, such as a service or office process: map the steps with a person who runs it first."
+  - "You want to cut waste and speed up flow, not defects: use lean-manufacturing or process-optimization, which are not in this library yet."
 you_give:
   - Defect or inspection data
   - Description of your process
@@ -28,8 +29,32 @@ you_get:
   - Ranked list of main defect causes
   - Improvement plan with owners and targets
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Pick a mode that can run Python code, so the charts and numbers are real.
+  - Paste in the skill text, or upload the skill file.
+  - Paste your defect or inspection data. Add a few lines on your process and what a defect costs you.
+  - Answer the questions your AI asks about your current checks and your target.
+  - Read the control chart status first. Fix any one-off causes before you trust the capability numbers.
+  - Pick the top item in the ranked causes. Give it an owner and a date.
+output_sample:
+  input:
+    - Your defect or inspection data, such as counts or measurements by date
+    - A short description of your process
+    - Your target defect level (optional)
+    - Your current quality system or certification (optional)
+  prerequisites:
+    - An AI that can run code (Python) for the charts and capability numbers
+  output:
+    - name: Executive Summary
+      contains: Your current quality level, the main problems found, the root causes and what to do first.
+    - name: Process Capability Analysis
+      contains: A table showing, for each quality measure, how well your process fits its limits.
+    - name: Control Chart Status
+      contains: For each process, whether it is stable, has a one-off cause, or is stable but not capable.
+    - name: Pareto Analysis
+      contains: Your defect types ranked from biggest to smallest, with each share of all defects.
+    - name: Root Cause Analysis
+      contains: The main, second and third causes behind the top defects.
+    - name: Recommendations
+      contains: Actions grouped as immediate, 30 days and 90 days.
+    - name: Expected Benefits
+      contains: The gains you can expect, such as fewer defects, lower cost of quality and fewer complaints.

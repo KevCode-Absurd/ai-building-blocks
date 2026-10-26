@@ -1,38 +1,128 @@
 new_slug: course-wide-implementation-planner
 name: Agent worker runtime starter builder
-summary: Adapt a TypeScript agent worker with scoped jobs, Slack messages, monitoring and graceful startup. Get a setup and test plan.
+summary: Adapt a starter TypeScript agent worker to your project. Get local Redis setup, Slack command checks and a startup test plan. Draft code only.
 job: build-software
 headline: Agent worker runtime starter builder
-subhead: Share your runtime, database, queue and Slack setup. Get an adapted worker starter, service config and failure checks.
+subhead: Give it your project and how you plan to run Redis and Slack. It reads a small starter for an AI agent worker, lists what the starter leaves out and plans the changes. You get a file plan, a local setup, a readiness review and a test plan. Nothing is run.
 explain: |-
-  Share local database and redis requirements, ports and persistence needs. Get a local service configuration and startup check list.
+  An AI agent worker is a program that stays running. It takes jobs from a queue, runs the right agent, and answers in Slack. Building one from scratch means wiring a queue, a Slack connection, a repeating timer and a safe shutdown. Each one is easy to get slightly wrong.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill starts from a small working starter: a job queue, a Slack command router, a repeating heartbeat and two example agents, one that echoes and one that posts a test alert. It does not trust the starter. It lists the gaps. The README points to an environment file that is not there. Jobs have no client field. Any user in any channel can run a command. Shutdown does not wait for running jobs. Then it plans the fix for each gap that applies to your project.
+
+  It also adapts a Docker file for a local Redis and Postgres, and works through a 30-point readiness review. A check counts as passed only when it can point to evidence in your files. The result is a plan and draft code. It does not run Docker, connect to Slack or deploy. To put the worker online, use the Deploy Worker to Render coding prompt.
 when:
-  - You need a complete worker starter with local service config.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - You want an AI agent to run all day, taking jobs from a queue and replying in Slack.
+  - You have a starter worker and need to know what it is missing before you rely on it.
+  - You want Redis and a database running on your laptop so you can test the worker before it goes online.
+  - Your agents will work for more than one client and you need each job to carry its scope.
+not_for:
+  - You want to put the worker online. Use the Deploy Worker to Render coding prompt, after this.
+  - You only need the job queue, with retries and failed-job handling. Use the Redis + BullMQ Job Queue coding prompt or the Recoverable agent job queue builder.
+  - You only want a Slack bot that answers commands. Use the First Slack Bot coding prompt.
+  - You don't write TypeScript or run a Slack workspace. The starter needs both, so it will not fit.
 you_give:
-  - Runtime and package versions
-  - Database schema, Redis setup and Slack app settings
-  - Permitted tools, budget policies and deployment target
+  - Your project folder, or its package file and main folders
+  - Your Node version and package manager
+  - Where Redis will run, such as Docker on your laptop or a hosted service
+  - Your Slack setup by name only: Socket Mode on or off, bot scopes and the ops channel name (never tokens)
+  - The agents you want first, and whether their work is for one client or several
 you_get:
-  - A complete worker starter with local service config
-  - A startup, shutdown, recovery and access test plan
+  - A list of gaps in the starter, each with a fix
+  - A file plan that maps each starter file to your project
+  - A local setup for Redis and Postgres, and the environment variable names to fill in
+  - Expected startup log lines, and a shutdown order
+  - A 30-point readiness review marked pass, fail or not checked
+  - A test plan using made-up data
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in an AI that can read your project, such as Claude Code or Codex. A chat AI works if you paste your package file and folder list.
+  - Give your Node version, where Redis will run and your Slack setup by name. Never paste a token.
+  - Read GAPS IN THE STARTER first. Mark each one as a problem for you or not.
+  - Check the FILE PLAN against your own folders. Say yes only to changes you understand.
+  - Read the READINESS REVIEW. Treat every "not checked" as work still to do.
+  - Run the tests in your own project, on your laptop, with a test Slack channel. This skill never runs anything.
 how_it_works:
-  - title: Step 1
-    text: Inspect the Docker services, volumes and environment placeholders.
-  - title: Step 2
-    text: Bind local ports deliberately.
-  - title: Step 3
-    text: Keep secrets outside version control.
-  - title: Step 4
-    text: Check connectivity and persistence with synthetic records.
-  - title: Step 5
-    text: Treat this compose file as local development, not hosted production.
+  - title: Reads your project and the starter
+    text: Compares your folders, module style and any existing queue or Slack code with the starter's files.
+  - title: Lists the gaps
+    text: Finds what the starter leaves out, such as no env example, no job scope, no channel allow-list and no wait on shutdown.
+  - title: Plans each file
+    text: Maps the boot file, agent base, queue, Slack router and heartbeat to your project, and adds scope and safety checks.
+  - title: Adapts the local setup
+    text: Plans Redis, and Postgres if you need it, with ports on your own machine only and no default passwords kept.
+  - title: Reviews readiness
+    text: Goes through 30 checks and marks each one with the evidence it found, or "not checked".
+  - title: Writes the tests
+    text: Plans tests on made-up data, and says which need a real Slack workspace.
+output_shape: |-
+  BASIS
+  <what was read; nothing was run>
+  MISSING: <inputs and what each stops>
+
+  GAPS IN THE STARTER
+  <#> | <what it does> | <why it matters> | <fix>
+
+  FILE PLAN
+  <starter file> | <becomes in your project> | <what changes>
+
+  LOCAL SETUP
+  <service> | <how it runs> | <change before use>
+  ENVIRONMENT NAMES
+  <name> | <what it holds> | <where the value comes from>
+
+  STARTUP AND SHUTDOWN
+  <expected log line> | <what a missing line means>
+
+  READINESS REVIEW
+  <#> | <check> | <pass / fail / not checked> | <evidence>
+
+  TEST PLAN
+  <name> | <made-up set-up> | <expected result> | <needs real Slack>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your project folder, or its package file and main folders
+    - Your Node version, and where Redis will run
+    - Your Slack setup by name, and the agents you want first
+  prerequisites:
+    - An AI that can read your project files, or the files pasted in
+    - Docker on your laptop, if you want to run Redis and Postgres locally
+    - A Slack app with Socket Mode, if you want the Slack commands
+  output:
+    - name: Gaps in the starter
+      contains: What the starter leaves out, why it matters for your project and the fix for each gap.
+    - name: File plan
+      contains: Each starter file, what it becomes in your project and the scope and safety checks added.
+    - name: Local setup
+      contains: How Redis and Postgres run on your laptop, what to change first and the variable names to fill.
+    - name: Startup and shutdown
+      contains: The log lines a healthy start prints, what a missing line means and the shutdown order.
+    - name: Readiness review
+      contains: Thirty checks, each marked pass, fail or not checked, with the evidence.
+    - name: Test plan
+      contains: Tests on made-up data, such as Redis down or a command from a blocked channel.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your folders and the starter files together and proposes exact edits.
+    - name: Docker Desktop
+      why: Runs the local Redis and Postgres the plan describes.
+    - name: Slack
+      why: A test channel lets you try the commands before real use.
+  inputs:
+    - Your current package file and any existing queue or Slack code
+    - A separate Slack workspace or channel just for testing
+terms:
+  - term: Worker
+    meaning: A program that stays running and does jobs as they arrive, instead of running once and stopping.
+  - term: Queue
+    meaning: A waiting line of jobs. Redis holds the line and BullMQ manages it.
+  - term: Socket Mode
+    meaning: A way for a Slack app to receive messages over a connection it opens itself, with no public web address.
+  - term: Heartbeat
+    meaning: A job that runs on a timer, such as every hour, so an agent can check something without being asked.
+  - term: Graceful shutdown
+    meaning: Stopping by finishing or handing back running jobs first, so none are lost half done.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

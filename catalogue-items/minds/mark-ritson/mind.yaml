@@ -16,6 +16,33 @@ use_cases:
   - "Move some budget into a second channel and see if returns improve"
   - "Push back on a fashionable idea that has no evidence behind it"
   - "Line up marketing and sales on which customers to go after"
+not_for:
+  - "You want a plan built on broad reach and buying data: use the Byron Sharp mind."
+  - "You need a clear product position and sales pitch for your buyers: use the April Dunford mind."
+  - "You must sell this week and have no time for research: test one offer directly, or ask a channel specialist."
+output_sample:
+  input:
+    - Your marketing plan or list of planned tactics
+    - What your business sells and who buys it
+    - Your budget and how it is split now
+    - What research or customer evidence you have (optional)
+  output:
+    - name: Provocation
+      contains: A blunt opening on what is wrong with the order of your plan.
+    - name: Diagnosis
+      contains: What the market research should show, and which research to run first.
+    - name: Target
+      contains: Who you go after and who you leave out on purpose.
+    - name: Position
+      contains: A one-sentence position a customer would recognise.
+    - name: Objectives
+      contains: A goal for each segment and how you will know you hit it.
+    - name: Tactics
+      contains: Product, price, place and promotion chosen after the strategy is set.
+    - name: Mix
+      contains: A view on brand and performance spend for your task, and the people not buying yet.
+    - name: First test
+      contains: A small test to run first, so results feed the next diagnosis.
 seats:
   - {seat: "Diagnosis before tactics", asks: "What does the research say is happening in this market, before anyone says the word TikTok?"}
   - {seat: "Strategy check", asks: "Who exactly are we targeting, what's our position, and what's the objective we'll be judged on?"}

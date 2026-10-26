@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows set steps but must match your database.
 new_slug: database-backup-setter
 name: Database backup setter
-summary: Name your database. Get full, incremental and point-in-time backups set
-  up and tested.
+summary: Get database backup scripts, a schedule, a retention rule and a restore test for PostgreSQL, MySQL or MongoDB. Know your backups work before you need them.
 job: ship-and-host
 headline: Database backup setter
-subhead: Backups that run on a schedule, get verified, and actually restore. A
-  backup nobody has tested is a guess, so this skill builds in the test.
+subhead: Backups that run on a schedule, get verified, and actually restore. A backup nobody has tested is a guess, so this skill builds in the test.
 explain: |
   Backups that run on a schedule, get verified, and actually restore. A backup nobody has tested is a guess, so this skill builds in the test.
 
@@ -17,6 +15,10 @@ when:
   - You need to restore to a moment just before a bad change.
   - Backup files are piling up and need a cleanup rule.
   - You want an alert when a nightly backup fails.
+not_for:
+  - "Your host already runs managed backups or snapshots: use those first, and add this only for extra copies."
+  - "You need a restore done right now on live data: ask your database admin, because a restore can wipe data."
+  - "You use a database type other than PostgreSQL, MySQL or MongoDB: use that database's own backup guide."
 you_give:
   - Database type and size
   - Acceptable data loss window
@@ -28,8 +30,30 @@ you_get:
   - Integrity check and restore test
   - Failure alert setup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach your database.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI your database type and size, how much data you can lose, how long you can be down, and where to store backups.
+  - Read the scripts and the restore steps before you run anything. Never put passwords in the chat or in the scripts.
+  - Run the scripts on a test setup first. This needs code running and access to your database, so a person with server access may need to do it.
+  - Do a test restore into staging before you rely on the backups.
+output_sample:
+  input:
+    - Your database type (PostgreSQL, MySQL or MongoDB) and its size
+    - How much data you can afford to lose
+    - How long you can be down
+    - Where backups should be stored, and whether you want encryption (optional)
+  prerequisites:
+    - An AI that can run code and reach your database, or a person who runs the scripts for you
+    - A staging copy of your database for the test restore
+  output:
+    - name: Backup strategy
+      contains: The chosen backup type (full, incremental, differential or point-in-time) and why it fits your data loss and downtime limits.
+    - name: Backup scripts
+      contains: Shell scripts using pg_dump, mysqldump or mongodump, with compression, optional encryption, dated file names and error handling.
+    - name: Schedule and retention rule
+      contains: A cron or timer entry plus a rule for how many daily, weekly and monthly backups to keep.
+    - name: Integrity check
+      contains: A check after each backup that the file is not empty and the checksum is valid.
+    - name: Restore test
+      contains: Steps to restore a backup into staging and check the data is really there.
+    - name: Monitoring and alerts
+      contains: Alerts for missed or failed backups, plus notes on schedule, storage location and restore steps.

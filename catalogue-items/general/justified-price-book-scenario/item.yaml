@@ -1,15 +1,13 @@
 slug: justified-price-book-scenario
 name: Justified price-to-book scenario
-summary: Link a stable price-to-book scenario to forward ROE, retention and required equity return.
+summary: "Work out the price-to-book ratio a steady company can justify from its return on equity, growth and required return, in one clear scenario."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before:
+  - book-value-per-share-rollforward
+next:
+  - one-period-residual-income-bridge
+  - build-a-clean-surplus-residual-income-model
 origin: own
 version: 1.0.0
 added: 2026-10-22

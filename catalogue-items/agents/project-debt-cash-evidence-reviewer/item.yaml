@@ -1,33 +1,26 @@
 slug: project-debt-cash-evidence-reviewer
 name: Project debt cash evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Work out yearly cash available for project debt, a repayment plan and loan-life cover. Redone when cash records or loan terms change.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - build-a-project-debt-service-cash-pack
   - availability-payment-deduction-checker
 steps:
   - uses: build-a-project-debt-service-cash-pack
-    note: Run the governing workflow when A project operating cash source, financing definition or annual loan-service assumption changes.
+    note: Run the governing workflow when a project operating cash source, the financing cash definition or an annual loan assumption changes. It hands back yearly cash for debt, a repayment schedule and the loan-life cover.
   - uses: availability-payment-deduction-checker
-    note: If the changed receipt is an availability payment and the actual contract deduction certificate is supplied, reconcile that certified deduction before revising the affected CFADS period. Otherwise preserve the missing payment evidence. Any changed receipt or cost source must preserve the declared accrual-versus-cash basis; do not deduct working-capital settlement twice.
+    note: If the changed receipt is an availability payment and the signed deduction certificate is supplied, reconcile the certified deduction before revising that year's cash. Otherwise keep the payment evidence MISSING. Keep the declared accrual-or-cash basis, and never deduct working capital twice.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It moves no money and approves no loan. Check the definitions, rates and source records before using the result in a lending or payout decision.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

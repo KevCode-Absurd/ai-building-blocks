@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It filters drafts by age.
 new_slug: stale-draft-order-cleaner
 name: Stale draft order cleaner
-summary: Get draft orders older than your set days found, and deleted if you say
-  so. Deletes cannot be undone.
+summary: Find Shopify draft orders older than a set number of days and clear them after you say yes. You see a dry-run list first. Deletes can't be undone.
 job: run-your-store
 headline: Stale draft order cleaner
-subhead: A list of Shopify draft orders older than a set number of days, and a
-  clean-up of them if you say yes. Old drafts pile up from abandoned quotes,
-  half-finished manual orders and retired integrations.
+subhead: A list of Shopify draft orders older than a set number of days, and a clean-up of them if you say yes. Old drafts pile up from abandoned quotes, half-finished manual orders and retired integrations.
 explain: |
   A list of Shopify draft orders older than a set number of days, and a clean-up of them if you say yes. Old drafts pile up from abandoned quotes, half-finished manual orders and retired integrations. They clutter the admin and inflate pending revenue.
 
@@ -18,6 +15,10 @@ when:
   - Pending revenue looks too high because of stale drafts.
   - You want to clear abandoned B2B quotes.
   - You want to preview before anything is deleted.
+not_for:
+  - You have B2B quotes still waiting for a customer to approve. Check each one by hand in your Shopify admin first, or set a longer age in days.
+  - You want to remove old drafts without Shopify command line access. Delete them by hand in your Shopify admin under Draft orders.
+  - You want to change or finish a draft order. Open it in your Shopify admin and edit it there.
 you_give:
   - Your store domain
   - Age in days that counts as stale (optional)
@@ -27,9 +28,26 @@ you_get:
   - Deletion of the ones you confirm
   - A summary of what was removed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Use an AI that can run code and the Shopify command line. A plain chat window can't do this.
+  - Sign in to your store with the Shopify command line, with permission to read and write orders.
+  - Give your AI the skill and your store domain. Add the number of days if you don't want 30.
+  - Read the dry-run list. It shows what would be deleted and nothing is removed yet. Look for notes, high values and open B2B quotes.
+  - Say yes only when the list is right. Deletes are permanent and can't be undone.
+  - Open the CSV file to see what was removed.
+output_sample:
+  input:
+    - Your store domain
+    - How many days old a draft must be to count as stale (optional, 30 by default)
+    - Whether to run as a dry run or delete for real (optional, dry run by default)
+  prerequisites:
+    - An AI that can run code and the Shopify command line
+    - A signed-in Shopify session with permission to read and write orders
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step lines
+      contains: One line per step showing what it asked Shopify and how many drafts it found or removed.
+    - name: Outcome summary
+      contains: Counts of stale drafts found and deleted, total value cleared, and any errors.
+    - name: draft_cleanup_<date>.csv
+      contains: One row per draft with its name, customer, date, value and the action taken.

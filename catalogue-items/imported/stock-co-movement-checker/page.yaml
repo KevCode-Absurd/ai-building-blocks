@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs set statistics and explains the pattern.
 new_slug: stock-co-movement-checker
 name: Stock co-movement checker
-summary: Give it a stock or group. Get which stocks move with it and how closely
-  that link holds. Collects data from websites.
+summary: Find which stocks move with yours and how closely. Give it a ticker, a pair or a group. It checks stock co-movement from Yahoo Finance prices.
 job: money-and-investing
 headline: Stock co-movement checker
-subhead: Find which stocks rise and fall together with the one you care about,
-  and how strong that link is. Give it a single ticker and it lists its closest
-  peers; give it a pair or a group and it measures how tightly they move.
+subhead: Find which stocks rise and fall together with the one you care about, and how strong that link is. Give it a single ticker and it lists its closest peers; give it a pair or a group and it measures how tightly they move.
 explain: |
   Find which stocks rise and fall together with the one you care about, and how strong that link is. Give it a single ticker and it lists its closest peers; give it a pair or a group and it measures how tightly they move.
 
@@ -18,19 +15,46 @@ when:
   - You want to see whether two companies really move as a pair.
   - You are mapping a sector and need to group tickers that behave alike.
   - You want to see if a link between two stocks has weakened lately.
+not_for:
+  - "You want to know when to buy or sell: this gives no trade timing or signals, so ask a licensed financial adviser."
+  - "You are checking a private or newly listed stock with a short price history: use a company reports review instead."
+  - "You want to judge a company's health or value: read its financial statements or use a stock fundamentals tool."
 you_give:
-  - One ticker, a pair, or a list of tickers
-  - Lookback period (optional)
-  - Minimum correlation to show (optional)
-  - A way to run Python
+  - One ticker, a pair of tickers, or a list of tickers
+  - How far back to look (optional)
+  - Lowest correlation to show (optional)
 you_get:
   - A ranked list of correlated peers
   - Correlation and beta for pairs
   - A correlation grid for a group
   - Rolling correlation over time
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run Python code and reach the internet. Your AI installs the yfinance, pandas and numpy packages if they are missing.
+  - Paste the skill into your chat, or upload the skill folder with its sector_universes.md file so it can find peers.
+  - Type your request, such as the ticker, a pair, or a list of tickers. Add a time period or a minimum correlation if you want.
+  - Check the period, the number of trading days and any dropped tickers at the top of the result.
+  - Remember Yahoo Finance data can be late or have gaps. Treat the result as research, not advice.
+output_sample:
+  input:
+    - One ticker, a pair of tickers, or a list of tickers
+    - How far back to look (optional, one year by default)
+    - Lowest correlation to show (optional, 0.60 by default)
+  prerequisites:
+    - An AI that can run Python code
+    - Internet access to reach Yahoo Finance
+    - The sector_universes.md reference file in the skill folder (needed to find peers for one ticker)
+  output:
+    - name: Ranked peer table
+      contains: "For one ticker: the top 10 correlated stocks with company name, correlation and a short reason each may be linked."
+    - name: Pair summary card
+      contains: "For two tickers: correlation, beta, R-squared, rolling correlation range and how far the price gap is from normal."
+    - name: Correlation matrix
+      contains: "For a group: a grid of every pair, ordered so similar stocks sit together."
+    - name: Clusters, outliers and pairs
+      contains: Groups of stocks that move alike, stocks that stand apart, and the five strongest and weakest pairs.
+    - name: Rolling correlation table
+      contains: How the link looks over 20, 60 and 120 days, with current, average, low and high values.
+    - name: Regime table
+      contains: Correlation on up days, down days, high-swing days and large drops, with the number of days in each.
+    - name: Notes and caveats
+      contains: The period, number of trading days, any dropped tickers, and a reminder that this is research, not advice.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Each type of claim has factors cutting both ways.
 new_slug: infringement-first-look-sorter
 name: Infringement first-look sorter
-summary: Describe a possible copy or a claim against you. Get a flag list of
-  factors. Not legal advice.
+summary: Sort a possible copy or a claim against you into flags that cut each way. Get an infringement first look and questions for your lawyer. Not legal advice.
 job: check-contracts
 headline: Infringement first-look sorter
-subhead: A flag list of the factors that matter when you think someone copied
-  you, or someone says you copied them. It is a first sort, not a finding, and
-  not legal advice.
+subhead: A flag list of the factors that matter when you think someone copied you, or someone says you copied them. It is a first sort, not a finding, and not legal advice.
 explain: |
   A flag list of the factors that matter when you think someone copied you, or someone says you copied them. It is a first sort, not a finding, and not legal advice. Acting on it without a lawyer can lead to fee awards or sanctions.
 
@@ -19,6 +16,10 @@ when:
   - You must decide whether to send a warning letter.
   - You want to separate trademark from copyright issues in one dispute.
   - Your team needs a quick method to sort incoming claims.
+not_for:
+  - "You need a ruling on whether someone infringed: hire an IP attorney, because this tool only sorts factors and never decides."
+  - "You want a cease-and-desist letter or a takedown notice drafted: ask an IP attorney, since this skill does not draft them on its own."
+  - "You only want to check a new name or product for risk before launch: use a clearance search with your lawyer first."
 you_give:
   - Which type of right is involved
   - "Your side: the owner or the accused"
@@ -30,10 +31,34 @@ you_get:
   - Missing facts to collect
   - Questions for your attorney
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /ip-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Finish the ip-legal plugin setup first. Run the cold-start-interview so your practice profile is saved at the plugin config path. The skill stops if it still holds a placeholder.
+  - Open your AI tool with the skill loaded. It needs to read and write files, so use a setup that allows this.
+  - "Describe the facts and name the right: trademark, copyright, patent or trade secret. For a mixed case, expect one run per right."
+  - "Answer the intake questions: your side, the place, the timing and the exhibits. Paste links or documents."
+  - Read the flag list and the summary of what cuts which way. Check every legal source it names.
+  - Bring the memo and the lawyer questions to an attorney before you send a letter, reply to a claim or file anything.
+output_sample:
+  input:
+    - "Which right is at issue: trademark, copyright, patent or trade secret"
+    - "Your side: the owner or the accused"
+    - Your country or state, and the key dates
+    - Links, photos or documents of the work in question
+  prerequisites:
+    - An AI that can read files and save a memo
+    - The ip-legal plugin setup finished, with your practice profile filled in
+    - For a design patent, the patent drawings and photos of the other product
+  output:
+    - name: Posture and scope
+      contains: Which right is at issue, which side you are on, the place, the timing and the exhibits reviewed.
+    - name: Factor analysis
+      contains: The factors for the chosen right, each flagged as cutting toward the owner, toward the accused, or mixed.
+    - name: Defenses and thresholds
+      contains: Defenses and early hurdles to check, such as fair use, registration or ownership gaps.
+    - name: What cuts which way, summary
+      contains: A short table of strong points, weak points and unknowns, ending with a line saying this is not a finding.
+    - name: Recommended next steps
+      contains: Facts to collect, questions to bring to an attorney, and a routing suggestion based on your practice profile.
+    - name: Citation verification
+      contains: A note on which legal sources named in the memo must be checked before anyone relies on them.
+    - name: Non-lawyer gate
+      contains: A reminder for non-lawyers to get attorney review before sending or answering any claim.

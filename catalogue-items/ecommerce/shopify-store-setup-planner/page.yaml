@@ -1,6 +1,6 @@
 new_slug: shopify-store-setup-planner
 name: "Shopify store setup planner"
-summary: "Tell it your country, team and catalogue. Get your plan, payments, domain and a build order."
+summary: "Plan your Shopify store setup: which plan to start on, payments for your country, domain checks and the order to build in."
 job: set-up-store
 thinking: low
 thinking_why: "It follows a fixed order and sorts your answers into a plan, so a fast, cheap model is enough."
@@ -17,6 +17,10 @@ when:
   - You are about to open a Shopify account and want to do the early choices in the right order.
   - You are choosing a brand name and a domain and want to check them before you commit.
   - You are not sure which plan you need or whether Shopify Payments works in your country.
+not_for:
+  - "Your store is already live on Shopify: use Shopify's own help pages for the change you want to make."
+  - "You plan to sell on another platform, such as WooCommerce or Wix: use that platform's own setup guide."
+  - "You want exact plan prices or card rates today: read Shopify's pricing page, because this plan only gives rough guidance."
 
 you_give:
   - The country where your business is registered
@@ -36,6 +40,28 @@ how_to_use:
   - Add your brand name ideas so it can test them as domains.
   - Check the plan and card rates on Shopify's own pricing page before you pay.
   - Follow the build order, and use a launch checker before you remove the password.
+output_sample:
+  input:
+    - The country where your business is registered
+    - How many staff need access
+    - The countries you will sell in
+    - Your catalogue size and what you have ready
+    - Brand name ideas (optional)
+  output:
+    - name: PREP LIST
+      contains: A checklist of what to have ready before you open Shopify, such as logo, colours, photos and product list.
+    - name: PLAN
+      contains: The plan to start on, why, and when to upgrade, with a reminder to check prices.
+    - name: PAYMENTS
+      contains: The payment gateways likely to work in your country, plus PayPal.
+    - name: ACCOUNT
+      contains: Which email should own the store and how much access staff should get.
+    - name: DOMAIN SHORTLIST
+      contains: Each name with a pass or fail on the name tests and whether the .com needs checking.
+    - name: CONNECT
+      contains: Whether to buy through Shopify or connect a domain you own, with the steps and DNS records.
+    - name: BUILD ORDER
+      contains: The ten steps in order, from settings to test and launch, plus anything MISSING.
 
 how_it_works:
   - title: Lists what to prepare

@@ -1,6 +1,6 @@
 new_slug: competitor-revenue-estimator
 name: "Competitor revenue estimator"
-summary: "Give a rival's visits and price. Get low, mid and high monthly revenue, a score and a verdict."
+summary: "Estimate a rival store's monthly revenue from its visits and price. Get a low, mid and high case, a score and a clear verdict."
 job: find-products
 thinking: low
 thinking_why: "It is one formula with set inputs, so a fast model is enough if it shows its sums."
@@ -17,6 +17,10 @@ when:
   - You found a store selling your product and want to know if the market is big enough to chase.
   - You are choosing between two products and one has a rival with strong traffic.
   - You want to check that a viral product turns into real sales before you pay for stock.
+not_for:
+  - "You want revenue for a TikTok Shop product: use the TikTok Shop breakout finder, since it uses a different band."
+  - "The rival has no visible traffic, such as a very small or new store: use a store revenue tracker or ask the owner."
+  - "You want profit, not revenue: work out costs for stock, ads, returns and fees in a spreadsheet."
 
 you_give:
   - The rival's store link and its monthly visits from a free traffic tool
@@ -35,6 +39,27 @@ how_to_use:
   - Open their page as a shopper and paste the price, the bundles and the upsells you saw.
   - Say whether you want the default bar of $300,000 a month, or give your own.
   - Read the range, not only the mid case. Plan with the low case if cash is tight.
+output_sample:
+  input:
+    - The rival's store link
+    - The rival's monthly visits from a free traffic tool, with the tool name and date
+    - The price on their page, plus any bundles and upsells you saw
+    - Your revenue bar (optional)
+  output:
+    - name: Inputs
+      contains: Visits, low, mid and high conversion rates, order values, and which inputs are known and which are guesses.
+    - name: Cases
+      contains: Orders and revenue per month for the low, mid and high case, with each sum shown.
+    - name: Bar and score
+      contains: Your revenue bar and a score out of 100 found by dividing the mid case by the bar.
+    - name: Verdict
+      contains: Strong pass, pass or fail, with one line on why.
+    - name: Funnel seen
+      contains: The rival's page type, price, bundle and upsell as a shopper sees them.
+    - name: Checks missed
+      contains: Any check that failed and what is needed to fix it, or none.
+    - name: Missing
+      contains: Any input you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: Uses one formula

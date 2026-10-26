@@ -1,38 +1,32 @@
 slug: job-application-evidence-review-assistant
 name: Job application evidence review assistant
-summary: A tailored application draft, unsupported claim list and submission checklist.
+summary: "Tailor your resume and answers to a job using only what your record proves. See every claim it can't support, plus a submission checklist."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: source_text
-    required: false
-  - type: copy_draft
-    required: false
-  - type: brand_brain
-    required: false
 outputs:
   - type: document
-  - type: copy_draft
-  - type: feedback_notes
+  - type: audit_report
 uses:
   - tailor-a-job-application-to-real-evidence
   - proofreader
 steps:
   - uses: tailor-a-job-application-to-real-evidence
-    note: "Run when: A new role is supplied or the resume draft changes."
+    note: "Run when a new role is supplied or the draft changes. It matches the role to your real experience, makes the wording plain, and links every claim to a line in your record. It hands step 2 the tailored draft and its evidence notes."
   - uses: proofreader
-    note: Run the application workflow. If an assertion lacks support, ask for the actual evidence or remove it; use proofreader for at most two revision passes, then list any remaining issues. Never submit the application from this review alone.
+    note: "Run for at most two passes on the tailored draft and evidence notes from step 1, which it takes as the text to proofread. It checks names, dates and the requested format, then lists what is still open. A claim with no proof comes out. Nothing is submitted."
 schedule: For each new role or material application revision.
 asks_before:
   - Sending or submitting any message or form
   - Changing a live account, calendar, task, permission or published document
   - Spending money, releasing a payment or signing a contract
   - Starting or changing any recurring schedule
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

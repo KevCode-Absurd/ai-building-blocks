@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a calendar, then writes posts.
 new_slug: social-post-planner
 name: Social post planner
-summary: Name your platforms. Get a content calendar and ready posts for
-  LinkedIn, X, Instagram and TikTok.
+summary: Plan a month of social media posts. Name your platforms and get a content calendar plus drafts for LinkedIn, X, Instagram, TikTok and Facebook.
 job: grow-social
 headline: Social post planner
-subhead: A content calendar and ready-to-post drafts for LinkedIn, X, Instagram,
-  TikTok and Facebook. You name your platforms, and the skill plans what to post
-  and writes it.
+subhead: A content calendar and ready-to-post drafts for LinkedIn, X, Instagram, TikTok and Facebook. You name your platforms, and the skill plans what to post and writes it.
 explain: |
   A content calendar and ready-to-post drafts for LinkedIn, X, Instagram, TikTok and Facebook. You name your platforms, and the skill plans what to post and writes it.
 
@@ -18,6 +15,10 @@ when:
   - You need a month of ideas across several platforms.
   - You have one idea and want it rewritten for each site.
   - Comments are piling up and you need a way to sort them.
+not_for:
+  - "You want paid ad copy: write it with an ad tool or a short brief for your ad platform, since this plans free posts only."
+  - "You need a full content plan for blogs, email and search: build that strategy first, then bring one idea here to turn into posts."
+  - "You want press coverage or news mentions: pitch reporters yourself or hire a PR person, since this does not write pitches."
 you_give:
   - Your platforms
   - Your audience and goal
@@ -29,7 +30,34 @@ you_get:
   - A topic mix
   - A reply and comment triage routine
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI which platforms you use, who you want to reach and what you want people to do.
+  - Share your story, your offers and a few topics. Say how often you can post (optional).
+  - Ask for a content calendar first. Check that the mix of topics fits you.
+  - Ask for drafts for each platform. Edit them so they sound like you before you post.
+  - For listening, check each site's terms first. Some tools need a paid plan or a key, so check before you start.
+output_sample:
+  input:
+    - Your platforms, such as LinkedIn, X, Instagram, TikTok or Facebook
+    - Your audience and your goal
+    - Your story, offers and topics to cover
+    - How often you can post (optional)
+    - Any topics or words to avoid (optional)
+  prerequisites:
+    - Any chat AI. No code needed.
+    - Social listening may need web access. Check each site's rules before you use it.
+  output:
+    - name: Content pillars
+      contains: The few themes your posts will return to, drawn from your story and your audience.
+    - name: Content calendar
+      contains: A weekly plan that lays out what to post, on which day, on each platform.
+    - name: Drafted posts
+      contains: Ready-to-post text for each platform, with hooks that fit its length and tone.
+    - name: Repurposed versions
+      contains: One idea rewritten for each platform, such as a blog post turned into short posts.
+    - name: Short-form video scripts
+      contains: Hooks and scene-by-scene outlines for TikTok, Reels and Shorts.
+    - name: Scheduling advice
+      contains: When to schedule ahead, when to post live, and how to keep a queue.
+    - name: Engagement routine
+      contains: A short daily routine for replying to comments and sorting what needs an answer.

@@ -1,6 +1,6 @@
 new_slug: role-task-breakdown-for-ai-help
 name: "Role task breakdown for AI help"
-summary: "Describe a job and who does it. Get the tasks that drain or endanger people and where AI can help."
+summary: "Break a job into tasks and find which ones drain or endanger people. See where AI can take the load in a role breakdown, with a person in charge."
 job: set-up-ai
 thinking: medium
 thinking_why: "It sorts tasks and flags risks with fixed questions, which takes care but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You want AI to help a team and are not sure which tasks to start with.
   - People in a role are overloaded and you suspect much of it is routine.
   - You need to show that a plan to use AI protects people and their judgment.
+not_for:
+  - "You have one task you can just do yourself: do it, or ask your AI for help with that one task."
+  - "You want to turn chosen tasks into steps: use the Repeat chore automation planner."
+  - "You need a plan for a whole company or sector: use a broader strategy planner, or talk to a senior person who knows the business."
 
 you_give:
   - The role, who does it and a typical week
@@ -34,6 +38,26 @@ how_to_use:
   - Check the task list with people who do the job before you trust the picks.
   - Read the risks list. Fix any gaps in who checks the AI.
   - Run the small test it sets with a few of the people before you roll it out.
+output_sample:
+  input:
+    - The role, who does it and what a typical week holds
+    - Where people lose time, get tired or face risk (optional)
+    - The data and tools the role uses (optional)
+  output:
+    - name: The role
+      contains: The job, who does it and what a typical week looks like.
+    - name: Tasks
+      contains: A table of ten to twenty tasks, with how often, the drain, tiredness or risk mark, and the AI choice.
+    - name: What AI takes on
+      contains: Each task AI handles, what it does, and the person who owns the decision.
+    - name: What stays with people
+      contains: The tasks left to people and the reason for each.
+    - name: Risks to check
+      contains: Who builds the AI, who checks it, who could be harmed, and privacy and bias risks.
+    - name: How to test with the people who do the job
+      contains: Who reviews the list, one small task to try, what to measure and what counts as success.
+    - name: Missing and checks missed
+      contains: Gaps marked MISSING, plus any checks the skill could not pass.
 
 how_it_works:
   - title: Breaks the role into tasks

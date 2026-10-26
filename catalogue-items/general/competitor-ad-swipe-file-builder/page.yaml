@@ -1,6 +1,6 @@
 name: Competitor ad swipe file builder
 new_slug: competitor-ad-swipe-file-builder
-summary: Paste ads from Meta's Ad Library. Get them sorted into 9 types, with what to study in each.
+summary: Build a competitor ad swipe file from Meta Ad Library ads. Get them sorted into 9 types, with three examples each and what to study.
 job: study-competitors
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You've saved dozens of competitor ads and want them organised before planning your own.
   - You want three good examples of one kind of ad (a customer quote ad, a comparison) before you make one.
   - You're new to a category and want a quick picture of what other brands run and keep running.
+not_for:
+  - "You haven't collected any ads yet: browse the Meta Ad Library by hand first and save each ad's ID, start date and a screenshot."
+  - "You want ideas that competitors all miss: use the Competitor ad gap finder."
+  - "You want a review of your own ads: ask a person who knows your account, or check them against your own results."
 you_give:
   - The ads, each with its library ID, advertiser, start date, text and a screenshot (attach the screenshots; your AI can see pictures)
   - What you sell, who to, and which competitors matter (recommended)
@@ -29,6 +33,25 @@ how_to_use:
   - For each ad you keep, copy the library ID and the "started running" date, and take a screenshot.
   - Paste them in with a line on what you sell and who your competitors are.
   - Read the "what to study" column, then open those ads and look at their structure, not their wording.
+output_sample:
+  input:
+    - Competitor ads from the Meta Ad Library, each with its library ID, advertiser, start date and text
+    - A screenshot of each ad
+    - What you sell, who to, and which competitors matter (recommended)
+    - Which types to fill, if not all nine (optional)
+  prerequisites:
+    - An AI that can read images, so it can look at each screenshot
+  output:
+    - name: BOARD
+      contains: A table of up to three ads per type with advertiser, library ID, start date, tier, live status and what to study.
+    - name: NOTES
+      contains: One line per buyer question on the pattern across its ads and the main look of those ads.
+    - name: GAPS
+      contains: Types with fewer than three ads or only one advertiser, and why.
+    - name: NOT LOOKED AT
+      contains: Ads it could not see, each with the reason.
+    - name: CHECKS MISSED
+      contains: Any of its own checks the board still fails, one line each, or none.
 how_it_works:
   - title: Removes your own ads
     text: The board is for learning from other advertisers, so anything of yours comes out first.

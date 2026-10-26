@@ -1,0 +1,372 @@
+# Reviewed catalog metadata, separate from source instructions and item format.
+# Primary use cases replace overly broad filing. Secondary use cases let one
+# item appear in several relevant searches without duplicating the item.
+topics:
+  value investing:
+    - warren-buffett
+    - charlie-munger
+    - benjamin-graham
+  business valuation:
+    - aswath-damodaran
+    - warren-buffett
+    - benjamin-graham
+  mental models and decision making:
+    - charlie-munger
+    - daniel-kahneman
+    - annie-duke
+  personal budgeting:
+    - ramit-sethi
+    - tiffany-aliche
+    - michelle-singletary
+  productivity and weekly planning:
+    - david-allen
+    - cal-newport
+  product discovery:
+    - marty-cagan
+    - eric-ries
+    - rob-fitzpatrick
+  negotiation:
+    - chris-voss
+    - roger-fisher
+  copywriting:
+    - david-ogilvy
+    - claude-hopkins
+    - eugene-schwartz
+    - joanna-wiebe
+  user experience design:
+    - don-norman
+    - jakob-nielsen
+  data visualization:
+    - edward-tufte
+    - hans-rosling
+  cybersecurity and account safety:
+    - troy-hunt
+  learning and study methods:
+    - barbara-oakley
+    - john-dunlosky
+    - pooja-agarwal
+  leadership and team management:
+    - peter-drucker
+    - kim-scott
+    - amy-edmondson
+  customer service:
+    - tony-hsieh
+    - matthew-dixon
+primary:
+  manage-accounting:
+    - account-reconciler
+    - accrual-schedule-drafter
+    - audit-readiness-checker
+    - balance-roll-forward-builder
+    - bank-and-ledger-matcher
+    - bank-fee-reconciliation-checker
+    - book-value-per-share-rollforward
+    - cogs-line-sorter
+    - control-testing-workpaper
+    - crypto-asset-bookkeeper
+    - expense-sorter
+    - financial-statement-builder
+    - financial-statement-preparer
+    - fixed-asset-register-keeper
+    - group-accounts-combiner
+    - intercompany-balance-matcher
+    - invoice-checker
+    - invoice-totals-checker
+    - journal-entry-drafter
+    - journal-entry-preparer
+    - lease-accounting-calculator
+    - ledger-to-subledger-reconciler
+    - month-end-close-day-planner
+    - month-end-close-planner
+    - p-l-and-balance-sheet-writer
+    - reconciliation-break-tracer
+    - revenue-recognition-checker
+    - agency-accounts-payable-agent
+    - agency-finance-bookkeeper-controller
+    - close-the-month-and-explain-every-line-that-moved
+    - code-vendor-bills-flag-odd-ones-and-find-supplier-savings
+    - prepare-expenses-for-your-bookkeeper
+    - check-supplier-invoices-before-approval
+    - recurring-invoice-exception-review-assistant
+    - reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l
+    - clinic-claims-collections-bridge
+    - contract-asset-billing-cash-bridge
+    - contract-liability-release-bridge
+    - gross-to-net-revenue-bridge
+    - inventory-charge-margin-bridge
+    - lifo-reserve-earnings-bridge
+    - oci-reclassification-bridge
+    - receivables-allowance-movement-bridge
+    - segment-profit-elimination-bridge
+    - stock-split-eps-restatement
+    - weighted-average-share-schedule
+    - rights-issue-eps-adjustment
+    - reconcile-contract-balances-and-customer-cash
+    - reconcile-revenue-presentation-and-perimeter
+    - explain-inventory-accounting-margin-effects
+    - inventory-accounting-comparability-review-assistant
+    - issuer-revenue-comparability-review-assistant
+    - issuer-eps-reconciliation-review-assistant
+    - reconcile-basic-and-diluted-issuer-eps
+    - reconcile-alternative-eps-and-comprehensive-income
+    - restate-eps-after-splits-and-rights
+  plan-budgets-and-cash:
+    - bad-year-plan-stress-tester
+    - bad-year-break-even-tester
+    - budget-and-forecast-builder
+    - cash-forecast-builder
+    - cash-lever-ranker
+    - cash-tied-up-finder
+    - cash-and-currency-risk-planner
+    - cash-pool-interest-allocator
+    - channel-cost-and-roi-comparer
+    - completion-funding-gap-checker
+    - construction-funding-draw-planner
+    - daily-contribution-margin-tracker
+    - department-budget-planner
+    - financial-model-builder
+    - financial-model-refresher
+    - linked-financial-model-builder
+    - financial-statement-analyst
+    - forecast-your-startup-runway-and-prepare-a-finance-pack
+    - grant-restrictions-cash-reconciler
+    - landed-cost-allocator
+    - marketing-budget-scenarios
+    - manufacturing-yield-cost-bridge
+    - noncash-working-capital-bridge
+    - nonprofit-operating-budget-planner
+    - per-order-profit-calculator
+    - prepare-a-seasonal-cash-buffer
+    - product-margin-checker
+    - product-mix-capacity-checker
+    - production-cost-variance
+    - project-cost-progress-tracker
+    - restaurant-portion-cost-builder
+    - restricted-cash-availability-checker
+    - service-utilization-margin-builder
+    - settlement-liquidity-ladder-builder
+    - shared-service-activity-cost-allocator
+    - software-spend-auditor
+    - spend-savings-finder
+    - startup-finance-advisor
+    - startup-financial-model-builder
+    - startup-runway-forecaster
+    - store-financial-model-builder
+    - store-pl-builder
+    - store-revenue-forecast-builder
+    - treasury-forecast-backtest-checker
+    - agency-chief-financial-officer
+    - agency-finance-financial-analyst
+    - agency-finance-fpa-analyst
+    - agency-support-finance-tracker
+    - monthly-profit-close
+    - build-a-monthly-p-and-l-and-know-your-real-margin
+    - weekly-invoice-and-cash-chaser
+    - treasury-settlement-evidence-reviewer
+    - utility-restricted-cash-evidence-reviewer
+    - production-contribution-evidence-reviewer
+    - operating-cash-financing-review-assistant
+    - construction-funding-evidence-reviewer
+    - project-debt-cash-evidence-reviewer
+    - project-reserve-evidence-reviewer
+    - reconcile-treasury-settlement-liquidity
+    - reconcile-cash-pool-interest-and-fees
+    - reconcile-restricted-utility-program-cash
+    - reconcile-service-capacity-and-shared-cost
+    - reconcile-hotel-room-and-food-contribution
+    - connect-production-yield-to-mix-contribution
+    - separate-financing-effects-from-operating-cash
+    - reconcile-clinic-remittances-to-settlement-cash
+    - compare-transport-cash-and-fleet-replacement
+    - fleet-replacement-cash-comparer
+    - freight-trip-contribution-builder
+    - hotel-channel-revenue-reconciler
+    - retail-markdown-stock-reconciler
+    - water-utility-collections-reconciler
+  manage-tax:
+    - current-tax-cash-payment-bridge
+    - deferred-tax-calculator
+    - agency-finance-tax-strategist
+    - reconcile-working-capital-and-tax-cash
+  raise-funding:
+    - cap-and-discount-conversion-checker
+    - convertible-note-interest-checker
+    - post-money-safe-ownership-checker
+    - weighted-average-antidilution-checker
+    - option-pool-top-up-checker
+    - funding-round-multiple-analyst
+    - venture-loan-terms-reviewer
+    - check-a-convertible-note-conversion
+    - check-a-safe-into-priced-financing
+    - review-a-down-round-rights-change
+    - note-conversion-revision-assistant
+    - safe-financing-revision-assistant
+    - debt-maturity-funding-ladder
+    - maturity-funding-evidence-reviewer
+    - review-maturity-funding-and-credit-limits
+    - deal-funding-gap-checker
+    - debt-restructuring-plan-drafter
+    - agency-loan-officer-assistant
+  manage-personal-finances:
+    - big-purchase-pause-check
+    - debt-payoff-planner
+    - get-your-personal-money-in-order-with-room-for-error
+    - net-worth-calculator
+    - personal-budget-builder
+    - plan-a-purchase-around-your-real-budget
+    - retirement-savings-projector
+    - spending-story-reviewer
+  analyse-data:
+    - a-b-test-verdict-maker
+    - analysis-checker
+    - analysis-lessons-review-writer
+    - analysis-plan-builder
+    - analysis-request-scoper
+    - bayesian-model-builder
+    - dashboard-builder
+    - data-analyst
+    - data-chart-drawer
+    - data-quality-scorecard-maker
+    - data-question-answerer
+    - data-skill-builder
+    - dataset-profiler
+    - diagnose-a-slow-power-bi-report
+    - experiment-result-analyst
+    - insight-brief-writer
+    - new-dataset-explorer
+    - plain-words-sql-writer
+    - prediction-driver-explainer
+    - quick-time-series-forecaster
+    - regression-and-forecast-modeller
+    - review-a-power-bi-data-model
+    - sample-size-planner
+    - turn-a-raw-dataset-into-a-checked-brief-of-top-insights
+    - agency-academic-statistician
+    - agency-data-consolidation-agent
+    - agency-engineering-ai-data-remediation-engineer
+    - agency-engineering-data-visualization-engineer
+    - agency-support-analytics-reporter
+  manage-projects:
+    - team-capacity-planner
+    - project-time-and-expense-plan
+    - software-project-manager
+    - delivery-team-sprint-runner
+    - spec-to-task-planner
+    - project-kickoff-brief-writer
+    - project-risk-portfolio
+    - prepare-a-clear-client-project-kickoff
+    - prepare-a-client-scope-change-brief
+    - check-capacity-before-promising-a-delivery-date
+    - trace-why-work-keeps-missing-deadlines
+    - weekly-project-delay-evidence-assistant
+    - client-scope-decision-review-assistant
+    - agency-project-management-project-shepherd
+    - agency-project-management-studio-producer
+    - agency-project-manager-senior
+    - agency-product-sprint-prioritizer
+  manage-it:
+    - small-team-it-fixer
+    - agency-engineering-it-service-manager
+    - build-a-backup-recovery-rehearsal
+    - recovery-rehearsal-evidence-assistant
+  plan-supply-chain:
+    - hormuz-shipping-status-reader
+  engineer-systems:
+    - antenna-designer
+    - antenna-matching-helper
+    - circuit-design-verification-planner
+    - custom-pcb-shape-builder
+    - large-antenna-analyzer
+    - pcb-circuit-combiner
+    - pcb-coupler-designer
+    - pcb-gerber-exporter
+    - pcb-layout-file-reader
+    - pcb-material-setup-helper
+    - pcb-passive-part-designer
+    - pcb-power-network-checker
+    - pcb-rf-filter-designer
+    - pcb-signal-loss-analyzer
+    - pcb-trace-designer
+    - rf-system-modeler
+secondary:
+  study-and-practice:
+    - barbara-oakley
+    - john-dunlosky
+    - peter-c-brown
+    - benedict-carey
+    - anders-ericsson
+    - scott-young
+    - sal-khan
+  teach-and-train:
+    - pooja-agarwal
+    - daniel-willingham
+    - paulo-freire
+    - sugata-mitra
+    - sal-khan
+    - john-wooden
+  organise-work:
+    - ray-kroc
+    - taiichi-ohno
+    - david-allen
+    - peter-drucker
+  plan-supply-chain:
+    - taiichi-ohno
+    - michael-dell
+  help-customers:
+    - tony-hsieh
+    - matthew-dixon
+  manage-it:
+    - brendan-gregg
+    - margaret-hamilton
+  engineer-systems:
+    - soichiro-honda
+    - nikola-tesla
+  money-and-investing:
+    - warren-buffett
+    - charlie-munger
+    - benjamin-graham
+    - aswath-damodaran
+    - ray-dalio
+    - morgan-housel
+    - john-c-bogle
+    - burton-malkiel
+    - william-bernstein
+  manage-personal-finances:
+    - ramit-sethi
+    - vicki-robin
+    - jl-collins
+    - carl-richards
+    - beth-kobliner
+    - helaine-olen
+    - tiffany-aliche
+    - michelle-singletary
+    - joe-dominguez
+    - elizabeth-warren
+    - amelia-warren-tyagi
+  hire-people:
+    - patty-mccord
+    - kim-scott
+    - amy-edmondson
+  build-product:
+    - marty-cagan
+    - eric-ries
+    - rob-fitzpatrick
+    - don-norman
+    - jakob-nielsen
+  analyse-data:
+    - edward-tufte
+    - hans-rosling
+    - david-spiegelhalter
+    - tim-harford
+  secure-code:
+    - troy-hunt
+  manage-accounting:
+    - monthly-profit-close
+    - store-pl-builder
+    - build-a-monthly-p-and-l-and-know-your-real-margin
+    - agency-chief-financial-officer
+  plan-budgets-and-cash:
+    - agency-finance-bookkeeper-controller
+    - agency-finance-tax-strategist
+  manage-projects:
+    - project-cost-progress-tracker

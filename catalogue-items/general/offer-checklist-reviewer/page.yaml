@@ -1,6 +1,6 @@
 new_slug: offer-checklist-reviewer
 name: "Offer checklist reviewer"
-summary: "Paste your offer, price and guarantee. Get a checklist review, a score and three changes to test first."
+summary: "Check your offer, price and guarantee against a short checklist. Get a score out of 100 and the three offer changes to split-test first."
 job: make-offer
 thinking: medium
 thinking_why: "It judges an offer against fixed checks, then ranks changes by likely value and cost to test."
@@ -17,6 +17,10 @@ when:
   - Your offer is a plain price and a button and you think it could do more.
   - You run ads and want to test the offer, not only the headline.
   - You offer a deal, a bonus or a guarantee and aren't sure it is worded well.
+not_for:
+  - "You have no offer yet and want to build one around buyer doubts: use the Offer builder that answers buyer doubts."
+  - "You want a bonus package for an offer you already have: use the Bonus stack builder."
+  - "You want to check the page that carries the offer: use the Claim and proof matcher."
 
 you_give:
   - Your offer, price and guarantee
@@ -34,6 +38,26 @@ how_to_use:
   - "Say what you can really offer: bonus, deluxe option, longer guarantee, repeat plan."
   - Pick the changes you can run in the next two weeks.
   - Split-test each change against your current offer.
+output_sample:
+  input:
+    - Your offer, price and guarantee
+    - Your angle library, or the reasons people buy
+    - Your costs, margin and limits (optional)
+  output:
+    - name: The offer in one line
+      contains: What the buyer gets, for how much and with what guarantee, and whether it sells one thing.
+    - name: Score
+      contains: "A number out of 100 with the working: checks passed divided by checks counted."
+    - name: Checklist
+      contains: A pass, fail or note for strength, reason for the deal, deluxe version, discount framing, guarantee, repeat option, bonus and limits.
+    - name: Revised offer
+      contains: The offer rewritten using only terms you said you can give.
+    - name: Three changes to test first
+      contains: Each change with an A against B test, a measure and the reason it comes first.
+    - name: MISSING
+      contains: The terms or facts it needed and did not get, such as costs or refund data.
+    - name: Checks missed
+      contains: One line for each check still missed and why, or none.
 
 how_it_works:
   - title: Writes the offer in one line

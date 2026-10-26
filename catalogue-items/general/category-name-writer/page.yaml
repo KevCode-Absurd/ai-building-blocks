@@ -1,6 +1,6 @@
 new_slug: category-name-writer
 name: "Category name writer"
-summary: "Paste your chosen category. Get a plain name for it, brand names that can become its word and a category pitch."
+summary: "Name your new product category in plain words. Get ten brand name options scored on seven tests and a category pitch for buyers."
 job: plan-strategy
 thinking: medium
 thinking_why: "It writes and scores name options against fixed tests, which needs some creativity but a clear checklist."
@@ -18,6 +18,10 @@ when:
   - Your brand name is tied to an older category and won't fit the new one.
   - Buyers don't know why anyone would want this kind of product.
   - You want the name to spread without paying for ads.
+not_for:
+  - "You have not chosen a category to lead yet: use the First-in-category finder first."
+  - "You only need a brand name and have no new category to lead: ask a friend to test a short list of names by phone."
+  - "You need to know if a name is free to use: search a trademark register or ask a trademark lawyer."
 
 you_give:
   - The category you chose, as a ranked list or one line
@@ -36,6 +40,30 @@ how_to_use:
   - Say aloud the top three names to a friend over the phone. They should be able to spell them.
   - Search the top name in your trademark register and in a normal search before you commit.
   - Take the plan into "Publicity-first launch planner".
+output_sample:
+  input:
+    - The category you chose, as one line or a ranked list
+    - Your product facts (optional)
+    - Your brand facts, including any name you must keep (optional)
+    - Rival names buyers know (optional)
+  prerequisites:
+    - An AI chat tool. No code, files or paid tools needed.
+    - The category list from the First-in-category finder, if you have one
+  output:
+    - name: The category in plain words
+      contains: A "a ___ for ___" phrase a buyer would say aloud, and how they would ask for it in a shop or search.
+    - name: Ten names and scores
+      contains: Ten brand names in three kinds, each scored out of seven on short, say it, spell it, generic, memorable, fresh and clear.
+    - name: The top three
+      contains: The three best names, with what each wins and what each loses.
+    - name: The category pitch
+      contains: A line, a sentence and a short paragraph that sell the kind of product before the brand.
+    - name: Who repeats the word
+      contains: Reviewers, shops, early buyers and partners, what you give each, and what they would say.
+    - name: Legal reminder
+      contains: A note that no legal check was done and that you must search a trademark register.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts that would change the pick, and one line for each check the skill could not pass.
 
 how_it_works:
   - title: Writes the category plainly

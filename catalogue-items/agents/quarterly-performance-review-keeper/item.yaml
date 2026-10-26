@@ -11,16 +11,15 @@ inputs:
   - {type: meeting_notes, required: false}
   - {type: performance_sheet, required: false}
 outputs:
-  - {type: document}
   - {type: plan}
-  - {type: copy_draft}
+  - {type: feedback_notes}
 uses: [okr-goal-writer, feedback-conversation-planner, hard-feedback-message-writer, recognition-plan-designer, hr-partner]
 steps:
-  - {uses: hr-partner, note: "Once, and when the company changes: the review format, the questions and what counsel says must and must not be written down."}
-  - {uses: feedback-conversation-planner, note: "Every quarter, for each person: the review conversation, what to praise, what to say and how, from the quarter's evidence."}
-  - {uses: hard-feedback-message-writer, note: "Only for a person whose results missed and whose notes show a repeated problem: the written message that changes the behaviour and keeps the person."}
-  - {uses: recognition-plan-designer, note: "Once a year, or when the team grows past about eight: the reward plan where anyone who reaches the level wins."}
-  - {uses: okr-goal-writer, note: "Every quarter, last, per person: next quarter's objectives and dated key results, drafted from this quarter's results."}
+  - {uses: hr-partner, note: "Once, and when the company changes: the review format, the questions and what counsel says must and must not be written down. Hands the format to step 2."}
+  - {uses: feedback-conversation-planner, note: "Every quarter, for each person: the review conversation, what to praise, what to say and how. Uses the format from step 1 and the person's evidence from the quarter; hands the conversation plan to step 3."}
+  - {uses: hard-feedback-message-writer, note: "Only for a person whose results missed and whose notes show a repeated problem: the written message that changes the behaviour and keeps the person. Uses your notes on what happened and what was said before, with step 2's plan for tone; hands the message back for your yes."}
+  - {uses: okr-goal-writer, note: "Every quarter, per person: next quarter's objectives and dated key results, drafted from this quarter's results. Uses your results and what the business needs next, not step 3's message; hands the goals to step 5."}
+  - {uses: recognition-plan-designer, note: "Once a year, or when the team grows past about eight: the reward plan where anyone who reaches the level wins. Takes step 4's goals as the levels to reward, and your team, budget and last year's winners; hands the plan back for approval."}
 schedule: "In the last two weeks of each quarter, before review meetings are booked"
 asks_before: [sending or sharing any review, changing pay, title, role or employment, recording anything in an HR system, booking a review meeting, sharing a person's notes with anyone, telling anyone they are at risk]
 minds: [kim-scott, patty-mccord]

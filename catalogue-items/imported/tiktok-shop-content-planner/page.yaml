@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans content from trends and set formats.
 new_slug: tiktok-shop-content-planner
 name: TikTok Shop content planner
-summary: Tell it your products. Get video formats, hooks, hashtags and a content
-  calendar.
+summary: Plan your TikTok Shop content in one go. Give it your products and get video formats, hooks, hashtags and a 30 day content calendar.
 job: grow-social
 headline: TikTok Shop content planner
-subhead: Share your products and brand. Get a TikTok Shop content plan with
-  video formats, opening hooks, hashtags and a posting calendar. It matches
-  ideas to your products and suggests tests when views fail to turn into sales.
+subhead: Share your products and brand. Get a TikTok Shop content plan with video formats, opening hooks, hashtags and a posting calendar. It matches ideas to your products and suggests tests when views fail to turn into sales.
 explain: |
   A month of TikTok Shop videos planned before you open the camera: formats, opening lines, hashtags and a calendar that mixes product demos, trends and proof from customers.
 
@@ -18,6 +15,10 @@ when:
   - Your videos get views and nobody buys.
   - You need 30 days of ideas for a new product line.
   - You want hooks that fit your product, not generic trends.
+not_for:
+  - You have no product yet or no TikTok Shop account. Set those up first, then come back.
+  - You want paid ads on TikTok. Use a paid ads tool or your ad platform, not this planner.
+  - You need a written brief for a creator to follow. Write that brief by hand or with a creator brief tool.
 you_give:
   - Your products
   - Brand tone
@@ -30,7 +31,34 @@ you_get:
   - A 30 day calendar
   - Tests to improve sales
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code or paid tool is needed.
+  - List your products with prices. Add your brand tone and how many videos you can post each week.
+  - Add your last 30 days of video results if you have them (optional). Say if you get views but no sales.
+  - Ask for a 30 day content calendar with hooks and hashtags.
+  - Check the targets in the result against your own TikTok analytics. Treat them as starting guesses.
+  - Film your first week of videos, then test one hook change at a time.
+output_sample:
+  input:
+    - Your products, with prices
+    - Your brand tone, in a few words
+    - How many videos you can post each week
+    - Your last 30 days of video results (optional)
+  output:
+    - name: Content Pillars & Strategy
+      contains: A table of content pillars with share of posts, how often to post, purpose and example topics.
+    - name: Viral Content Format Strategy
+      contains: Hook styles for the first 3 seconds and a table rating each format for sales, reach and effort.
+    - name: Content Calendar Structure
+      contains: A weekly schedule with content type, format, hook style and call to action for each day.
+    - name: Hashtag Strategy Framework
+      contains: A mix of branded, category, trending and long-tail hashtags for each post.
+    - name: Hook Development Templates
+      contains: Fill-in-the-blank video scripts for problem and solution, curiosity and trend videos.
+    - name: Content Production Guidelines
+      contains: Video size, length and visual tips for filming product videos.
+    - name: Performance Tracking & KPIs
+      contains: Metrics to watch each week, with starting targets to check against your own TikTok data.
+    - name: Content Testing & Iteration
+      contains: A six week plan to test hooks, formats and calls to action.
+    - name: Next Actions
+      contains: A checklist of what to do first to start posting.

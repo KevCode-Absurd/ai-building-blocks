@@ -21,11 +21,11 @@ uses:
   - recall-first-study-tutor
 steps:
   - uses: source-note-summariser
-    note: Extract claims, evidence, gaps and source locations relevant to the supplied question, separating the source from your interpretation.
+    note: Extract claims, evidence, gaps and source locations relevant to the supplied question, separating the source from your interpretation. Hands step 2 the notes for every source.
   - uses: notes-wiki-builder
-    note: Prepare linked note files or use an explicitly approved local notes folder. Connect genuine overlaps without erasing disagreements and do not silently persist private memory.
+    note: Prepare linked note files or use an explicitly approved local notes folder. Connect genuine overlaps without erasing disagreements and do not silently persist private memory. Hands step 3 the linked notes and the index.
   - uses: recall-first-study-tutor
-    note: Prepare recall prompts and require actual learner attempts and confidence before assessing understanding. Leave the check unrun when the learner has not answered.
+    note: Prepare recall prompts and require actual learner attempts and confidence before assessing understanding. Leave the check unrun when the learner has not answered. Uses your question as the topic and step 2's notes to compare your recall against.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

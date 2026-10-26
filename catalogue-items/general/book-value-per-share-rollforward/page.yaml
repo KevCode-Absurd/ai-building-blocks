@@ -1,7 +1,7 @@
 new_slug: book-value-per-share-rollforward
 name: Book value per share roll-forward
 headline: Book value per share roll-forward
-summary: Reconcile retained earnings, capital movements and closing shares to book value per share.
+summary: Roll opening common equity to closing equity and get book value per share, with each movement tied to a source. Works from public filings.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a common-equity movement table and book-value-per-share bridge.
   - You work on public equity and share counts and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need earnings per share: use weighted average shares and a simple EPS calculation, because this item uses closing shares only."
+  - "You have a private company or a tax or legal-basis question: ask an accountant for a full accounts or tax review."
+  - "You want a market value or a buy or sell view: use a valuation model or ask a licensed adviser, because book value is only an accounting measure."
 you_give:
   - Opening common equity, ordinary profit, common dividends, issuance cash, repurchase cash, OCI and opening/closing share counts.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,31 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Opening common equity, ordinary profit, common dividends, issuance cash and repurchase cash
+    - Other comprehensive income (OCI) for the period
+    - Opening and closing share counts
+    - Reporting date, currency, scale and accounting basis
+    - Your filings or statements as the source (optional but best)
+  prerequisites:
+    - An AI that can read your files and build a spreadsheet, to get the workbook
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Common-equity movement table
+      contains: Opening equity plus profit, OCI and issuance, less dividends and repurchases, tied to closing equity.
+    - name: Book-value-per-share bridge
+      contains: Closing equity divided by closing shares, split into the equity effect and the share-count effect.
+    - name: Scope and dated sources
+      contains: The sources used, with their dates, currency and scale.
+    - name: Inputs and assumptions
+      contains: Each input and assumption, kept apart from reported facts.
+    - name: Model calculations and reconciliations
+      contains: The workings and each tie-out to the balance sheet, with no unexplained plug.
+    - name: Actual file verification
+      contains: Which workbook checks ran, such as recalculation and reopening the saved file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not supplied and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Extract parent common equity rather than total equity including minority or preference interests; reconcile profit and OCI attributable to the same owners
     text: Extract parent common equity rather than total equity including minority or preference interests; reconcile profit and OCI attributable to the same owners.

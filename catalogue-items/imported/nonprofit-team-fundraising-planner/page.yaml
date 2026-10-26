@@ -1,12 +1,16 @@
 new_slug: nonprofit-team-fundraising-planner
 name: Plan a team fundraising campaign
-summary: Plan a team fundraiser. Give captains useful tools and track how many people raise funds after they sign up.
+summary: "Plan a team fundraising campaign: set a goal, equip captains, and draft messages that turn sign-ups into people who ask for donations."
 job: plan-strategy
 headline: Plan a team fundraising campaign
 subhead: Bring the goal, dates and past results. Build captain tools and message drafts, then model active fundraisers and the amount each raises.
 explain: Bring the goal, dates and past results. Build captain tools and message drafts, then model active fundraisers and the amount each raises.
 when:
   - You want to plan a team fundraising campaign.
+not_for:
+  - "You want to sell sponsorships for the event: use the Corporate sponsorships skill, or ask a sponsor lead to make the calls."
+  - "You need venue and event day logistics: use an event checklist or ask your event lead."
+  - "You want one letter sent from your charity to all donors: write a standard appeal letter, not a team campaign."
 you_give:
   - Campaign goal, dates, historical participants and fundraising totals
   - Approved impact statements, captain capacity and incentive budget
@@ -17,6 +21,26 @@ how_to_use:
   - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
   - Provide the inputs listed here and ask your AI to follow the skill.
   - Review the result and any missing facts before using it.
+output_sample:
+  input:
+    - Your campaign goal and key dates
+    - "Past results: sign-ups, share who raised money, average raised"
+    - Your approved impact statements, such as what a set gift pays for
+    - Your list of team captains (optional)
+    - Your budget for prizes and recognition (optional)
+  output:
+    - name: Campaign timeline
+      contains: Dates for sign-ups, captain deadline, kickoff, midpoint push, final sprint, event day and thank-you window.
+    - name: Team captain toolkit
+      contains: Invite email for teammates, team goal worksheet, message schedule, sample social posts and captain recognition tiers.
+    - name: Participant coaching emails
+      contains: A nudge to personalize the page, plus launch, midpoint and final-week ask templates and a donor thank-you.
+    - name: Leaderboard and incentive plan
+      contains: Prize or recognition tiers for people and teams, with the cost set against the extra money expected.
+    - name: Revenue target model
+      contains: Total raised worked out from sign-ups, share who fundraise and average raised, with your assumptions shown.
+    - name: Post-campaign report
+      contains: Total raised, sign-ups, share who became active fundraisers, average per fundraiser, average per team and change from last year.
 how_it_works:
   - title: Model the target
     text: Calculate revenue from participants, active-fundraiser share and average raised per active fundraiser, keeping assumptions visible.

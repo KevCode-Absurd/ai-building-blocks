@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It follows double entry rules.
 new_slug: journal-entry-drafter
 name: Journal entry drafter
-summary: Describe the transaction. Get a balanced journal entry with debits,
-  credits and support notes.
+summary: Describe a transaction and get a balanced journal entry with debits, credits, support notes and a review checklist, ready for sign-off.
 job: track-numbers
 headline: Journal entry drafter
-subhead: "A balanced journal entry you can post once it has been reviewed.
-  Describe the transaction. The skill sorts out the event: what happened, which
-  period it belongs to, whether it is an accrual, deferral, depreciation,
-  correction or reclass, and whether it reverses next month."
+subhead: "A balanced journal entry you can post once it has been reviewed. Describe the transaction. The skill sorts out the event: what happened, which period it belongs to, whether it is an accrual, deferral, depreciation, correction or reclass, and whether it reverses next month."
 explain: |
   A balanced journal entry you can post once it has been reviewed. Describe the transaction. The skill sorts out the event: what happened, which period it belongs to, whether it is an accrual, deferral, depreciation, correction or reclass, and whether it reverses next month.
 
@@ -19,6 +15,10 @@ when:
   - You found a posting error and must correct it properly.
   - You are closing the month and have a list of adjustments.
   - You are not sure which accounts to debit and credit.
+not_for:
+  - "You need to file taxes or run payroll: use your payroll provider or an accountant, since this only drafts the entry."
+  - "The event is unusual or the accounts are unclear: ask a reviewer or your accountant before you post."
+  - "You want to match bank or ledger lines: do that reconciliation first, then bring the items here."
 you_give:
   - A description of the transaction
   - The accounting period
@@ -30,7 +30,26 @@ you_get:
   - Support notes
   - Approval needs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather the period end date, the invoice or contract, and who must approve entries of this size.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Describe the transaction in plain words. Add the amounts, and your chart of accounts if you have one.
+  - Check that debits equal credits, the period is right, and every account is one you really use.
+  - Attach the source documents, get approval, then post the entry in your accounting system.
+output_sample:
+  input:
+    - A short description of what happened
+    - The accounting period
+    - Amounts and source documents, such as an invoice or contract
+    - Your chart of accounts (optional)
+    - Who must approve entries of this size (optional)
+  prerequisites:
+    - An AI that can run code, if you want the calculation script used (optional)
+  output:
+    - name: Entry Header
+      contains: Date, period, entity, currency, whether it reverses next period, and the type of entry.
+    - name: Entry Lines
+      contains: Each account with its name, debit, credit, line memo and cost center.
+    - name: Support Summary
+      contains: How the amount was worked out, the source documents, and any assumptions made.
+    - name: Review Checklist
+      contains: Checks that the entry balances, has the right period and accounts, has support, and is approved.

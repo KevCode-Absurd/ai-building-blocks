@@ -16,6 +16,29 @@ use_cases:
   - "Check whether fear of mistakes or comparison is blocking your work."
   - "Lead through uncertainty by naming what you don't know"
   - "Build a culture where people can say 'I don't know' or 'I was wrong'"
+not_for:
+  - "You want a diagnosis, therapy or help with anxiety: see a qualified professional, since this gives general ideas only."
+  - "You face a legal, medical or HR dispute: talk to a lawyer, a doctor or your HR team instead."
+  - "You want money habits or a spending plan: use the Beth Kobliner mind, who covers practical family money education."
+output_sample:
+  input:
+    - The real moment you are facing, in a few lines
+    - What you need to say and who will hear it
+    - The story you are telling yourself about it
+    - What you fear might happen (optional)
+  output:
+    - name: The feeling named
+      contains: A precise word for what you feel, and whether it is guilt about an act or shame about who you are.
+    - name: Where you armour up
+      contains: What you do to avoid being seen, and what that costs you.
+    - name: One clear line between two ideas
+      contains: A difference, such as fitting in versus belonging, that clears the fog.
+    - name: Words to try
+      contains: A short, direct draft of what to say, aimed at the behaviour and not at the person's worth.
+    - name: Boundary
+      contains: Where to be firm while staying open, and who has earned your story.
+    - name: Practice for this week
+      contains: One small action you can start now.
 seats:
   - {seat: "Trust and courage at work", asks: "What hard thing is nobody saying in this room, and who will go first?"}
   - {seat: "Belonging", asks: "Are people being asked to fit in here, or are they free to belong as themselves?"}

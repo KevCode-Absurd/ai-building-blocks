@@ -1,6 +1,6 @@
 new_slug: roe-margin-check
 name: "Return on equity and margin checker"
-summary: "Paste several years of a company's accounts. Get return on equity, margins and a one-dollar test, each marked pass or fail."
+summary: "Check a company's return on equity and margins over four or five years. See if debt props it up and get pass or fail on each test."
 job: money-and-investing
 thinking: high
 thinking_why: "It cleans accounts, runs several sums and compares them with rivals. Mistakes in the cleaning change the answer, so give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You are checking whether a business earns good money on the capital in it.
   - A company shows rising profit per share and you want to know if that means anything.
   - You are comparing two businesses and one shows a higher return that may come from debt.
+not_for:
+  - "You are judging a bank or insurer, where equity and debt work differently: use a sector analyst or the firm's own regulatory ratios instead."
+  - "The company is private and has no market value, so the one-dollar test cannot run: ask an accountant for a valuation, or use the other two tests only."
+  - "You want a buy or sell call or personal advice: speak to a licensed financial adviser, as this only checks the business."
 
 you_give:
   - Four or five years of operating profit, equity, debt, sales, dividends and buybacks
@@ -36,6 +40,27 @@ how_to_use:
   - Add rival figures if you have them, and the company's market value at the start and end.
   - Read the return on total capital next to the return on equity.
   - Take the calls to "Business tenet scorecard writer".
+output_sample:
+  input:
+    - Four or five years of operating profit, equity, debt, sales, dividends and buybacks
+    - The company's market value at the start and end of the period
+    - Figures for two or three rivals (optional)
+    - Earlier findings on the business (optional)
+  output:
+    - name: Year table
+      contains: One row per year with each figure, and a missing marker for every gap.
+    - name: Cleaned profit and equity
+      contains: What was taken out or restated, such as one-off gains, and securities held at cost.
+    - name: Return on equity
+      contains: Return by year and on average, beside debt to equity and return on total capital.
+    - name: Rivals and margins
+      contains: Return and margins marked ahead, level or behind, plus a note on cost habits.
+    - name: One-dollar test
+      contains: Profit kept, the rise in market value, and a pass or fail.
+    - name: Calls
+      contains: Pass, fail or unknown for return, margins and the one-dollar test, each with a reason.
+    - name: Missing and checks missed
+      contains: Every gap in the figures, and one line for each check still missed, or none.
 
 how_it_works:
   - title: Lines up the years

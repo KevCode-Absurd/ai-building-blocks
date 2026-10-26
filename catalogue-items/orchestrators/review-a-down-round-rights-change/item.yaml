@@ -1,15 +1,13 @@
 slug: review-a-down-round-rights-change
 name: Review a down-round rights change
-summary: Check a qualifying price reset and the separately negotiated reserve expansion.
+summary: Check a down round's new conversion price and the extra option pool it needs. Get both results, kept apart, with gaps and checks listed.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -40,3 +38,4 @@ credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+needs_mode: manual

@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: watercolor-image-ad-maker
 name: "Watercolor image ad maker"
-summary: "Paste your idea, attach photos. Get a watercolor image prompt, a layout and the ad words."
+summary: "Plan a watercolor image ad from your selling idea and product photos. You get an image prompt, the words for the ad and a layout."
 job: make-image-ads
 
 headline: "Watercolor image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your product sells on what's inside it, a scent or a mood, and a product photo looks flat.
   - You run a watercolor video and want a still that matches it.
   - You want a calm image ad that people new to you can read in a glance.
+not_for:
+  - "Your product needs proof or real texture to sell: use a plain product photo instead."
+  - "You want a moving ad: use the watercolor ad script skill, which plans a video."
+  - "You need food that looks tasty or a believable human face: use a real photo shoot or a photographer."
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea
@@ -34,6 +38,31 @@ how_to_use:
   - Read the moment plan. If the implied sentence isn't something you can say, ask for another show job.
   - Make the image from the prompt, then lay the real label and the words on it in your editor.
   - Show it to someone for 2 seconds. If they can't say what it's for, ask for a simpler moment.
+output_sample:
+  input:
+    - Why someone buys, what your buyer already knows and your selling idea in one sentence
+    - Your brand file with label words, ingredients, approved claims and offer
+    - Photos of your product from the front, side and top (optional, needed if it appears)
+  prerequisites:
+    - An AI that can make images, if you want the picture made in the chat. Claude cannot draw unless an image tool is connected.
+    - Your brand brain and buyer brief make the result better, but they are not required.
+  output:
+    - name: Moment plan
+      contains: The moment, the show job, the paint technique, the sentence the picture implies and the claim that backs it.
+    - name: Layout
+      contains: The size, 4:5 or 1:1, and a top to bottom map of picture, quiet area and product spot.
+    - name: Words on the image
+      contains: A headline of 7 words or fewer and up to 3 more things to read, each with its source.
+    - name: Image prompt
+      contains: A prompt in a set order, ending with the label lines, plus a list of plain nouns to avoid.
+    - name: Post words
+      contains: The primary text, the headline field and the button label for the ad.
+    - name: Edit step
+      contains: How to lay your real label over the painted one, place the words and check contrast.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
+    - name: MISSING lines
+      contains: Any facts the skill needed and did not have, marked instead of guessed.
 
 how_it_works:
   - title: Checks the fit

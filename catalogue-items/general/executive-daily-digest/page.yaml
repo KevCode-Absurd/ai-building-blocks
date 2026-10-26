@@ -1,6 +1,6 @@
 new_slug: executive-daily-digest
 name: Executive daily briefing writer
-summary: Share your calendar, action list and updates. Get a dated brief of priorities, decisions, conflicts and work waiting on others.
+summary: "Turn your calendar, action list and updates into a daily briefing for executives: top priorities, clashes, decisions and work waiting on others."
 job: organise-work
 headline: Executive daily briefing writer
 thinking: high
@@ -13,20 +13,45 @@ explain: |-
 when:
   - You want the result described above from the files and facts you already have.
   - You need a repeatable process and a clear next action.
+not_for:
+  - "You need a weekly plan: use a calendar tool or a project tracker."
+  - "You need to book times for many people: use a calendar tool with shared scheduling."
+  - "You want your AI to send the brief or change your calendar: it only drafts, so send or edit it yourself."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your calendar for the day, as an export or a pasted agenda
+  - Your action list, as a table with a task, an owner and a due date
+  - Recent updates with their dates, pasted as text
+  - Yesterday's brief (optional)
 you_get:
   - "daily-brief.md: date, timezone, source coverage"
   - Top priorities and why
   - Meetings, due work, decisions, waiting-on items
   - Changes, gaps and next action
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Copy your calendar for the day. Paste it as text, or add an export file.
+  - Copy your action list into a table with task, owner and due date. Paste it in.
+  - Paste any recent updates, with dates. Add yesterday's brief if you have it.
+  - Ask your AI to write today's executive daily briefing and to mark any missing facts.
+  - Check the clashes, owners and dates against your own records. Then send or act on anything yourself.
+output_sample:
+  input:
+    - Your calendar for the day, as an export or a pasted agenda
+    - Your action list, with owner and due date for each task
+    - Recent updates, with dates
+    - Yesterday's brief (optional)
+  prerequisites:
+    - An AI chat where you can paste text or add files
+  output:
+    - name: daily-brief.md header
+      contains: The date, your timezone and which sources were checked, so you know how complete the brief is.
+    - name: Top priorities and why
+      contains: Up to three priorities, picked from due dates, goals and the cost of delay, with the trade-offs.
+    - name: Meetings, due work, decisions, waiting-on items
+      contains: Your meetings, tasks due or overdue, decisions you must make, and work waiting on other people.
+    - name: Changes, gaps and next action
+      contains: What changed since the last brief, calendar clashes, missing owners or dates, and one next step.
+    - name: Source coverage and proposed actions
+      contains: What was checked, which facts are missing, and any message or change you must approve.
 how_it_works:
   - title: Read the sources
     text: Identify the current request, time window and facts you can verify.

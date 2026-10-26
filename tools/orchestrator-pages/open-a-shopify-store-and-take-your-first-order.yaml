@@ -1,6 +1,6 @@
 new_slug: open-a-shopify-store-and-take-your-first-order
 name: Open a Shopify store and take your first order
-summary: Give it your country, team and products. Get a build plan, product sheets, menus, shipping, tax and a go-live score.
+summary: Open a Shopify store and take your first order. Give it your country and products. Get a build plan, shipping, tax and a go-live score.
 job: set-up-store
 thinking: medium
 thinking_why: Six skills run in a row, but each one is a plan to follow. A mid-size model is enough. Use your strongest for tax and shipping in many countries.
@@ -14,6 +14,10 @@ when:
   - You are building a new Shopify store and want it ready for a real order without launch-day surprises.
   - You have a product list but have not decided plan, payments, shipping or tax.
   - You are about to switch the password off and want a final check before the public sees the store.
+not_for:
+  - "Your Shopify store is already live: use Shopify's own help pages, or ask the person who built it to fix the one setting."
+  - "You sell on another platform such as WooCommerce or Etsy: use that platform's own setup guide."
+  - "You only want a rate table or a tax setup for one country: run the single step you need with your own AI chat."
 you_give:
   - The country where your business is registered, and who needs staff access
   - Your markets and number of products
@@ -32,6 +36,32 @@ how_to_use:
   - Have your product list, weights and carrier costs ready. Steps 2 to 5 reuse them.
   - When it pauses after step 1, open admin and do the base settings from the plan before you continue.
   - Check tax rates and Shopify fees on official pages. The plan gives the setup, not the rates.
+output_sample:
+  input:
+    - Your country and who needs staff access
+    - Your product list with options, prices, stock, weight and packed box size
+    - Your real carrier costs per country and your average order value
+    - Your markets and number of products
+    - Your logo, colours and photos (optional)
+  prerequisites:
+    - An AI that can read a folder of files, such as Claude Code or a Claude Project
+    - A Shopify account, since you do the base settings in admin after step 1
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Store setup plan"
+      contains: What to prepare, plan and account, payments for your country, domain name tests and the order to build in.
+    - name: "Step 2: Product and variant sheets"
+      contains: One fill-in sheet per product with a variant table, price and stock rules, and what is still missing.
+    - name: "Step 3: Collections and menu"
+      contains: Type and tag spelling, collections and rules, filters, a short menu and search options.
+    - name: "Step 4: Shipping plan"
+      contains: Shipping zones, rates, a free-shipping line, package settings, checkout wording and test carts.
+    - name: "Step 5: Tax plan"
+      contains: Display and price settings, tax classes, rate rows, shipping tax and test addresses.
+    - name: "Step 6: Go-live check"
+      contains: A score out of 100, blockers first, a test-order plan and a safe way to switch to live.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the store setup
     text: Lists what to prepare, which plan to start on, likely payment options for your country, the domain name tests and the order to build in.

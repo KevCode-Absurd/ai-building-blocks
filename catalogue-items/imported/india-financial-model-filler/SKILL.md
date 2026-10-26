@@ -5,6 +5,18 @@ description: Complete, populate and fill out 3-statement financial model templat
 
 # 3-Statement Financial Model Template Completion
 
+## Before you start (read this first)
+
+**You need two things.** (1) A model template file (.xlsx) with the three statements. (2) The company's source numbers: annual report, results filing from NSE or BSE, or figures the user pastes. If either is missing, ask once. Never invent a historical figure. Mark a cell you cannot fill as `MISSING` and list it in the gap list.
+
+**Tools.** Every build step uses the `officecli` command-line tool. If it is not installed, say so and stop before you touch the file. Install it first (see its own page), or ask the user to run the steps in Excel using the same formulas. Your AI needs to run commands and read and write files.
+
+**Files this skill names.** `india-market-conventions`, `india-market-data`, `xlsx-author`, `officecli-xlsx` and `NOT-ADAPTABLE.md` are not included in this folder. If you cannot load them, use the two rules in the India section below, and fall back to the template's own layout for formatting. Say which guides were missing in your final message.
+
+**US rules in the references.** `references/sec-filings.md` and the 80% NOL limit in Section 6c are US rules. For an Indian company, skip them. Use the company's own filings and say that tax loss rules for India were not checked unless the user gives you the rule.
+
+**What you hand back.** (1) The filled workbook, saved as a new file next to the original. (2) A change list by tab. (3) The balance check and cash tie-out for every period. (4) A gap list of cells you could not fill and why. (5) One line on what to do next: review the Checks tab, then use the model for valuation.
+
 ## India
 
 This skill operates on **Indian markets**. Load **`india-market-conventions`**
@@ -15,8 +27,8 @@ most Indian errors:
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
   Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format shows
+  **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —

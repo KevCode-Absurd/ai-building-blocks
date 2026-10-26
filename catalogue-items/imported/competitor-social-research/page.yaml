@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It compares accounts and draws a plan from the gaps.
 new_slug: competitor-social-research
 name: Competitor social strategy researcher
-summary: Name your competitors. Get what content works for them, the gaps, and a
-  short social plan. Collects data from websites.
+summary: "Name your rivals and get a competitor social media research brief: what content works for them, the gaps, and tests to try. Needs a ScrapeCreators key."
 job: study-competitors
 headline: Competitor social strategy researcher
-subhead: A view of what content works for your competitors on social media,
-  where they are weak, and a short plan for what you could post.
+subhead: A view of what content works for your competitors on social media, where they are weak, and a short plan for what you could post.
 explain: |
   A view of what content works for your competitors on social media, where they are weak, and a short plan for what you could post. It judges each account against its own normal results, so a small brand is not compared with a giant on raw views.
 
@@ -17,6 +15,10 @@ when:
   - You want to see how often rivals post and in what format.
   - Your content feels repetitive and you need new angles.
   - A manager asked for a social plan based on evidence.
+not_for:
+  - "You want to check one post or one ad: read it yourself, or ask your AI to review the single post by pasting it in."
+  - "The accounts are private or you have no ScrapeCreators key: use a person to review the accounts by hand, since the skill reads public data only."
+  - "You plan to pull data at large scale: check each platform's terms first, because scraping rules differ by site."
 you_give:
   - Competitor accounts or company names
   - The platforms to cover
@@ -29,8 +31,33 @@ you_get:
   - A list of gaps
   - A short social plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - Get a ScrapeCreators account and API key. It is a paid service. Save the key as SCRAPECREATORS_API_KEY.
+  - Open an AI that can run code and use the web, and add this skill.
+  - List your competitors, the platforms and your niche. Add a time window if you want one.
+  - If you give only company names, check the profiles your AI picks. Names can match more than one brand.
+  - Read the brief. Its notes on rivals are inferred from public posts, so treat them as signs, not facts.
+  - Pick one or two tests from Recommended Content Tests and run them.
+output_sample:
+  input:
+    - Your competitors' handles, links or company names
+    - The platforms to cover, such as TikTok or Instagram
+    - Your niche or product
+    - The time window to look at (optional)
+  prerequisites:
+    - A paid ScrapeCreators account and API key, saved as SCRAPECREATORS_API_KEY
+    - An AI that can run code and reach the web
+  output:
+    - name: Executive Summary
+      contains: The biggest opportunity, the closest competitor to study and the content format to test first.
+    - name: Competitor Snapshot
+      contains: A table with each rival's platforms, audience size, posting rhythm, best format and notes.
+    - name: What Is Working
+      contains: For each competitor, their content themes, outlier posts, hooks and formats.
+    - name: Cross-Competitor Patterns
+      contains: A numbered list of what the rivals have in common.
+    - name: Gaps and Opportunities
+      contains: A table of each opportunity, the evidence behind it and a test to run.
+    - name: Recommended Content Tests
+      contains: A short numbered list of posts or formats to try first.
+    - name: Sources
+      contains: Links to the profiles and posts the brief draws on.

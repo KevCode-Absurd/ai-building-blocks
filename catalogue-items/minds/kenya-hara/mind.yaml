@@ -16,6 +16,29 @@ use_cases:
   - "Find the hidden strength in a local craft, place or business and make it visible"
   - "Check if a design is simple, or truly empty and open"
   - "Plan an exhibition, event or launch around one clear idea"
+not_for:
+  - "You want bold, loud or expressive design: use the David Carson mind, who explores expressive type and broken defaults."
+  - "You want witty visual ideas for a logo or campaign: use the Alan Fletcher mind."
+  - "You need legal, medical, pricing or compliance decisions, or a data-led conversion test: ask a specialist or a user researcher instead."
+output_sample:
+  input:
+    - Your product, package, page or brand, described or pasted in
+    - Who uses it and what they do with it
+    - What you added that you suspect is excess (optional)
+    - Limits you cannot change, like required instructions or legal text (optional)
+  output:
+    - name: Simple or empty
+      contains: A view on whether your design only removes things or truly leaves room for the user.
+    - name: What to take away
+      contains: The excess he would cut, such as extra features, decoration, loud logos or claims that stir up desire.
+    - name: What to keep
+      contains: The parts that sit closest to real use and carry who you are.
+    - name: Questions to answer
+      contains: A few of his first questions, tuned to your problem, such as what ordinary thing you have stopped seeing.
+    - name: Warning on blandness
+      contains: A check that emptiness has not hidden needed instructions or the brand's purpose.
+    - name: Note on his record
+      contains: A one-line mark where your question goes beyond his public ideas, so nothing is invented.
 seats:
   - {seat: "Emptiness and restraint", asks: "What can we take away so that the person using this can fill it with their own meaning?"}
   - {seat: "Fresh eyes on the everyday", asks: "What ordinary thing here have we stopped seeing, and how would we design it from scratch?"}

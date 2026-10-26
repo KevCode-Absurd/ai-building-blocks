@@ -2,17 +2,53 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-mcp-implementation-security-review
 name: MCP handler security reviewer
-summary: Share your MCP code. Get risks traced through tool handlers, with
-  evidence and fixes.
+summary: Review your MCP server code for security gaps. Get a report of risks in each tool handler, with file and line evidence and fixes.
 job: set-up-ai
 headline: MCP handler security reviewer
-subhead: Share your MCP code. Get risks traced through tool handlers, with
-  evidence and fixes. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: Share your MCP server code and a few setup details. Your AI checks it against a security baseline and the OWASP MCP Top 10. You get a report that points to the exact files and lines, with a fix for each risk.
+not_for:
+  - "You want to check a server you did not write and cannot read the code for: ask its maker for a security report, since this review needs the source files."
+  - "You need a live attack test of a running server: hire a security tester, because this review reads code and does not run it."
+  - "You only want a style or bug check on your code: use a normal code review step with your AI or a teammate."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Gather your repo path or key files, your SDK and protocol version, your transport setup and any lock files.
+  - Open Claude, ChatGPT or Gemini. Use one that can read uploaded code files.
+  - Paste the skill text, then upload your files and add the version and transport details.
+  - Ask your AI to review the code for security with this skill.
+  - Read the report. Check each fail and each NEEDS INVESTIGATION item against the file and line it names.
+  - Fix the risks, assign the manual follow-ups, then run the review again on the changed code.
+output_sample:
+  input:
+    - Your MCP server or client code (the repo folder or the key files)
+    - The MCP SDK and protocol version you use
+    - Your transport setup, stdio or HTTP
+    - Your dependency lock files (optional)
+  prerequisites:
+    - An AI that can read your code files
+  output:
+    - name: Target summary
+      contains: Whether the code is a server or client, its transport, protocol version, and whether it uses sessions.
+    - name: Control summary
+      contains: A status for each baseline control, MCP-01 to MCP-05, with file and line evidence for every call.
+    - name: RCE summary
+      contains: Findings on remote code execution risks such as command injection, unsafe deserialization, path traversal, SSTI, dependency hijacking and SSRF.
+    - name: OWASP summary
+      contains: How the code fares against the OWASP MCP Top 10, with file and line evidence.
+    - name: Manual follow-ups
+      contains: Checks you must do by hand, plus items marked NEEDS INVESTIGATION that name the missing file or detail.
+when:
+  - You are about to release an MCP server and want a security check first.
+  - You added a new tool handler that reads files, runs commands or calls web addresses.
+  - Your server is open on a network and you need to check login, sessions and rate limits.
+  - Someone asks, is my MCP server secure?
+you_give:
+  - Your MCP code, as a repo folder or the key files
+  - The MCP SDK name and version, and the protocol version
+  - "Your transport setup: stdio or HTTP"
+  - Your dependency lock files (optional)
+you_get:
+  - "A summary of what you shared: server or client, transport and protocol version"
+  - A pass, fail or needs-investigation status for each baseline control, with file and line evidence
+  - A check of remote code execution risks in your tool handlers
+  - A check against the OWASP MCP Top 10
+  - A list of manual follow-ups, with a fix for each risk

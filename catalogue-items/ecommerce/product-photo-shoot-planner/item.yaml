@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: brand_brain
     required: true
+  - type: truth_sheet
+    required: false
 outputs:
   - type: photo_set
     required: true

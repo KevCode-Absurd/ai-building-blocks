@@ -15,9 +15,9 @@ outputs:
   - {type: copy_draft}
 uses: [best-and-worst-customer-profiler, loyalty-and-vip-program-designer, top-customer-touch-planner]
 steps:
-  - {uses: best-and-worst-customer-profiler, note: "Shows what your best customers have in common."}
-  - {uses: loyalty-and-vip-program-designer, note: "Designs the tiers and perks for the group the profile described."}
-  - {uses: top-customer-touch-planner, note: "Plans the personal touches for the VIPs, using how they responded to the program."}
+  - {uses: best-and-worst-customer-profiler, note: "Ranks your customers by profit and shows what the best have in common. Hands step 2 a report with the top group's share of profit; you then export the customer list for the VIP rule."}
+  - {uses: loyalty-and-vip-program-designer, note: "Uses the profile's top-group shares from step 1 and your customer export (spend and orders), not step 1's files alone. Hands step 3 a VIP plan with tiers, perks and the club invite."}
+  - {uses: top-customer-touch-planner, note: "Uses your fresh customer export from a month after the invite, and step 2's top tier to choose who gets the biggest touch. Hands you the touches, scripts and a control group."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-a-vip-program-for-your-best-customers/skeleton.yaml

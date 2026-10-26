@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Hard bugs need a loop of guessing, testing and ruling out.
 new_slug: bug-diagnoser
 name: Bug diagnoser
-summary: Describe what is broken or slow. Get the cause found step by step and
-  the fix checked.
+summary: Find the cause of a hard bug or a slowdown, step by step. Your AI builds a repeatable test, checks the fix and cleans up after itself.
 job: test-and-fix-code
 headline: Bug diagnoser
-subhead: A step-by-step method for the bugs that resist quick fixes, whether
-  something is broken or just slow. It ends with a cause found and a fix that
-  was checked.
+subhead: A step-by-step method for the bugs that resist quick fixes, whether something is broken or just slow. It ends with a cause found and a fix that was checked.
 explain: |
   A step-by-step method for the bugs that resist quick fixes, whether something is broken or just slow. It ends with a cause found and a fix that was checked.
 
@@ -18,6 +15,10 @@ when:
   - Something got slower and you do not know what changed.
   - You tried several fixes and none worked.
   - You need a repeatable test that proves a bug is fixed.
+not_for:
+  - "You have a typo or a known one-line fix: make the change and write a direct test for it."
+  - "You want a review of code that already works: ask a person or a code review step to read it."
+  - "Your AI cannot run code or read your project files: it cannot build the repeatable test, so ask a developer to pair with you."
 you_give:
   - A description of what is broken or slow
   - Any error output or logs
@@ -29,8 +30,30 @@ you_get:
   - A tested fix
   - Notes with secrets removed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste in the skill, or upload the skill folder. Use an AI that can run code and read your project files.
+  - Describe what is broken or slow. Paste any error text or logs. Take out passwords and keys first.
+  - Wait for the repeatable test. Check that it fails in the same way you see the bug. If it does not, say so.
+  - Read the ranked list of possible causes. Tell your AI if you know one is wrong or likely.
+  - Let it test one cause at a time, then apply the fix and the test that guards it.
+  - "Check the cleanup list at the end: the bug is gone, the test passes and the debug logs are removed."
+output_sample:
+  input:
+    - A description of what is broken or slow
+    - Any error output or logs
+    - Steps or data that trigger the bug (optional)
+    - Access to your code
+  prerequisites:
+    - An AI that can run code and read your project files
+  output:
+    - name: Feedback loop
+      contains: One command that fails on this exact bug, with its redacted output, run at least once and fast enough to repeat.
+    - name: Minimal repro
+      contains: The smallest scenario that still fails, with every remaining part needed to trigger the bug.
+    - name: Ranked hypotheses
+      contains: Three to five possible causes, each with a prediction of what changes if it is the cause.
+    - name: Instrumentation
+      contains: Tagged debug logs or a debugger check, or a timing baseline for slowdowns, each tied to one hypothesis.
+    - name: Fix and regression test
+      contains: A test that fails before the fix and passes after it, or a note that no good place for one exists.
+    - name: Cleanup check
+      contains: Confirmation the original bug is gone, debug logs are removed and the true cause is named for the commit message.

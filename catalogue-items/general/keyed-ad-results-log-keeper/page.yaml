@@ -1,54 +1,77 @@
 new_slug: keyed-ad-results-log-keeper
-name: Keyed ad results log keeper
-summary: Paste what an ad did. Get a log entry that records its key, conditions and results, and what to try next.
+name: "Keyed ad results log keeper"
+summary: "Turn one ad's results into a log entry with its key, conditions, what it shows and the next test. Build your own record of what works."
 job: read-ad-results
 thinking: low
-thinking_why: It fills in a fixed log template from the numbers you give it.
-headline: Keyed ad results log keeper
-subhead: Give it the results of an ad and its details. It writes a log entry with the ad's key, conditions, counts and cost, says what the result shows and what it does not, and names the next thing to try. You get a log you can keep adding to.
-explain: |-
-  Ads that are not recorded teach nothing. Without a record you repeat mistakes, forget what worked, and argue about taste instead of results.
+thinking_why: "It fills in a fixed log template from the numbers you give it."
 
-  This skill writes a log entry for each ad: the key that traces replies, the offer, the headline, where it ran and under what conditions, and what it brought. It states what the result shows and what it does not, counts only large gaps as real, and records failures as well as wins. Over time the log becomes your own book of what works for your buyers.
+headline: "Keyed ad results log keeper"
+subhead: "Give it the results of one ad, plus the ad, the offer and the dates it ran. It writes a log entry with the ad's key, conditions and results. It says what the result shows and what it does not, and names one thing to try next."
+
+explain: |
+  An ad that is not recorded teaches nothing. Without an ad results log you repeat mistakes, forget what worked, and argue about taste instead of results. This skill helps you keep a log of ad results, one entry per ad.
+
+  Each entry holds the ad's key, which is the code that traces a reply back to the ad. It also holds the offer, the headline, where it ran, the conditions that week and what it brought. It then says what the result shows and what it does not.
+
+  It only counts a gap against an older ad as real when it is large, and it records failures as well as wins. Over time the log becomes your own book of what works for your buyers.
+
 when:
   - You run ads and cannot say which one worked best last year.
-  - Your team debates ads on taste.
-  - You change too much between ads to learn anything.
+  - Your team argues about ads by taste, and nobody has the numbers.
+  - An ad just finished and you want its result saved before you move on.
+  - You changed several things between two ads and need to record what was different.
+
+not_for:
+  - "You only have raw totals for two periods. Use the ad results report writer first, then bring its report here."
+  - "You want a keep, rerun or stop call on two live versions. Use the split-run result reader."
+  - "You want many ads ranked against each other. Use the winners and losers ad comparer."
+  - "Nothing has run yet, so there are no results to log. Plan the test first with the keyed headline test planner."
+
 you_give:
-  - The results report for the ad or test
-  - The ad and offer (optional)
-  - "Conditions: dates, place, size, season, anything unusual"
+  - The results for one ad (replies, qualified leads, sales and cost), from your ad platform or the ad results report writer
+  - The ad's key, such as the code on its form, link or coupon (optional)
+  - The ad's headline and offer (optional)
+  - The dates, place, size and anything unusual that week
+  - An older log entry or control ad to compare with (optional)
 you_get:
-  - A log entry with a fixed set of fields
+  - A log entry with a fixed set of fields, ready to paste into your sheet
   - A plain reading of what the result shows and what it does not
-  - A note on whether the gap is large enough to count
-  - The next thing to try, and the idea to keep running
+  - A call on whether the gap against the older ad is big enough to count
+  - The idea to keep running and one change to try next
+
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the results and the ad details.
-  - Add the entry to your log.
-  - Read the log before you write the next ad.
+  - Paste the results first. Then add the ad, the offer, the key and the dates it ran.
+  - Add an older entry or a control ad if you have one. Without it, the entry has no gap to judge.
+  - Check that every number matches your report. Fix any line marked MISSING by finding the figure.
+  - Paste the entry into your log. Read the log before you write the next ad.
+
 how_it_works:
-  - title: Fixed fields
-    text: Key, version, date, where, size, cost, offer, headline.
-  - title: Conditions
-    text: Season, news, weather and anything else unusual.
-  - title: Results
-    text: Replies, qualified leads, sales and cost per sale.
-  - title: Reading
-    text: What the result shows, what it does not, and whether the gap is big enough to count.
-  - title: Next step
-    text: The next change to test and the idea to keep running.
-output_shape: |-
+  - title: Gives the ad a key
+    text: Uses the code on its form or link, or proposes one for next time.
+  - title: Fills the fixed fields
+    text: Version, dates, place, size, cost, offer and headline.
+  - title: Records the conditions
+    text: Season, news, weather and any change of list or position.
+  - title: Records the results
+    text: Replies, qualified leads, sales and cost per sale, from your report only.
+  - title: Compares and judges the gap
+    text: Works out the gap against the older ad and counts it only above your line.
+  - title: Reads the result
+    text: Says what it shows, what it does not, and what is now ruled out.
+  - title: Names the next change
+    text: Keeps the idea that works and picks one change to test.
+
+output_shape: |
   LOG ENTRY
   Key: <code> | Version: <name> | Date: <dates>
-  Where: <medium, position> | Size or format: <> | Cost: <>
-  Offer: <> | Headline: <>
+  Where: <medium, position> | Size or format: <size> | Cost: <amount>
+  Offer: <offer> | Headline: <headline>
   Conditions: <season, news, weather, other>
-  Results: replies <> | qualified <> | sales <> | cost per sale <>
+  Results: replies <number> | qualified <number> | sales <number> | cost per sale <amount>
   Compared with: <older entry or control> | gap: <percent> | counts: <yes or no>
-  Shows: <>
-  Does not show: <>
+  Shows: <what the result shows>
+  Does not show: <what it cannot tell you>
   Keep running: <idea>
   Try next: <one change>
 
@@ -57,33 +80,70 @@ output_shape: |-
 
   CHECKS MISSED
   <one line each, or none>
+
+output_sample:
+  input:
+    - "The results for one ad: replies, qualified leads, sales and cost"
+    - "The ad's key, headline and offer (optional)"
+    - "Dates, place, size and anything unusual that week"
+    - "An older entry or control ad to compare with (optional)"
+  prerequisites:
+    - "A results report from the ad results report writer, if you need the sums done first (optional)"
+  output:
+    - name: "LOG ENTRY"
+      contains: "Key, version, dates, where it ran, size, cost, offer and headline in fixed fields."
+    - name: "Conditions"
+      contains: "Season, news, weather and any change of list or position that week."
+    - name: "Results"
+      contains: "Replies, qualified leads, sales and cost per sale, from your report only."
+    - name: "Compared with"
+      contains: "The older entry used, the percent gap and whether it is big enough to count."
+    - name: "Shows and Does not show"
+      contains: "What the result proves, and what it cannot tell you."
+    - name: "Keep running and Try next"
+      contains: "The idea to keep, and one change to test next."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Numbers you still need to supply, and any check it could not pass."
+
 tweaks:
   - what: Gap size
-    how: Set your own line for a gap that counts. The default is a difference of more than 15 percent.
+    how: Set your own line for a gap that counts. The default is more than 15 percent. When counts are small, a bigger gap can still be luck, so raise the line.
   - what: Log place
     how: Say where you keep the log, such as a sheet, so the entry fits its columns.
+
 judge:
   - Every field is filled or marked MISSING.
   - The reading says what the result does not show.
   - A gap under the line is not called a win.
   - One next change is named.
+
 test:
   - Read an old entry and see if you can tell why that ad worked.
   - Check the gap sum by hand.
   - Look for entries that record failures as well as wins.
+
 improve:
   - Add a column for the buyer or list used.
   - Tag entries by idea, so you can see which ideas win most.
   - Review the log every quarter.
+
+before: [ad-results-report-writer]
+next: [creative-brief-writer, reply-getting-fix-writer]
+
 works_best_with:
   tools:
     - name: Any good chat AI
       why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+    - name: A spreadsheet
+      why: Holds the log, one row per entry, so you can filter by idea and see what keeps winning.
   inputs:
     - The results report from the Ad results report writer
     - Your past log entries, to compare
+
 terms:
   - term: Key
     meaning: A code on an ad or form that shows which version a reply came from.
+  - term: Control
+    meaning: The older or standard ad you compare a new one against.
   - term: Negative knowledge
     meaning: What you learn does not work, which is worth recording as much as what does.

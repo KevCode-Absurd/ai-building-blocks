@@ -2,17 +2,50 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-email-drafter
 name: Personal email style drafter
-summary: Share your email goal and style samples. Get a professional draft and a
-  check against your usual voice.
+summary: Draft an email that sounds like you. Give your goal and past emails, get a draft and a note on the tone, greeting and sign-off used.
 job: organise-work
 headline: Personal email style drafter
-subhead: Share your email goal and style samples. Get a professional draft and a
-  check against your usual voice. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI the person, the reason and your key points. It studies how you write to them and drafts the email in your voice. It never sends anything.
+not_for:
+  - "You want to send mass or template mail to a list: use your email tool's mail merge instead."
+  - "You want an email sent for you: this only writes a draft. You must read it and send it yourself."
+  - "You need a legal or contract message checked: ask a lawyer or a trusted colleague to review it."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI tool and paste the skill text. For tone matching from your past emails, you need WorkIQ with Microsoft 365 connected.
+  - "Say who the email is for, what it is about and your key points. Example: Draft a follow-up to Sarah about the migration timeline."
+  - If WorkIQ is not connected, paste 3 to 5 past emails to that person. Otherwise your AI uses professional defaults and says so.
+  - Read the draft and the tone note. Ask for changes until it sounds like you.
+  - Save the final draft, then copy it into your email and send it yourself.
+output_sample:
+  input:
+    - Who the email is for
+    - What the email is about
+    - The key points to cover
+    - 3 to 5 emails you sent before to the same person (optional)
+  prerequisites:
+    - WorkIQ with Microsoft 365 or Outlook, to read your past emails (optional, without it your AI uses professional defaults)
+    - An AI that can save files, to keep the final draft
+  output:
+    - name: Draft email
+      contains: A greeting, short body and sign-off that match your usual style, ready for you to review.
+    - name: Tone note
+      contains: A brief line on the greeting, structure, sign-off and formality your AI used, or a note that defaults were used.
+    - name: Revised draft
+      contains: The email after your edits, repeated until you are happy with it.
+    - name: Saved file
+      contains: The final draft saved as a markdown file in an outputs folder, named by date and topic.
+when:
+  - You need to follow up with a customer and want it to sound like you.
+  - You must reply to a message and want the right tone fast.
+  - You are writing a proposal email with several points.
+  - You want to see what your usual email tone is with one person.
+you_give:
+  - Who the email is for
+  - What the email is about
+  - The key points to cover
+  - 3 to 5 past emails to the same person (optional)
+you_get:
+  - A draft email with greeting, body and sign-off
+  - A short note on the tone and style your AI used
+  - Edits made as you ask, until the draft is right
+  - A saved draft file you can copy and send yourself

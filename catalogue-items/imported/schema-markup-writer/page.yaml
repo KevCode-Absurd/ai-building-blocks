@@ -2,34 +2,98 @@ thinking: low
 thinking_why: The markup follows fixed formats.
 new_slug: schema-markup-writer
 name: Schema markup writer
-summary: Name the page type. Get checked JSON-LD markup ready to paste for
-  search results.
+summary: Get schema markup (JSON-LD) for a product, article, FAQ or how-to page, checked for missing fields and ready to paste into your site.
 job: get-found-in-search
 headline: Schema markup writer
-subhead: Structured data for your page that search engines can read, checked and
-  ready to paste into your site. Name the page type and give the details to get
-  JSON-LD markup that can make your listing eligible for rich results.
+subhead: Tell it what kind of page you have and give it the details that show on that page. It writes schema markup (JSON-LD), checks for missing or badly formatted fields, and gives you code to paste into your page.
 explain: |
-  Structured data for your page that search engines can read, checked and ready to paste into your site. Name the page type and give the details to get JSON-LD markup that can make your listing eligible for rich results.
+  Schema markup is a block of code that tells Google what your page is about: a product with a price, an article with an author, a list of questions and answers. Search engines can read it, and it can make your page eligible for extras in search results, like a price or a list of steps. Nothing is promised. Google decides what to show.
 
-  You fill in a short form: page type such as blog post, product page, FAQ or how-to, the URL, title, description, dates, author, brand and logo. Product pages take price, currency, stock and SKU. Ratings, reviews, FAQs and steps can be added. It picks schema types that fit, builds the JSON-LD and checks it for missing or badly formatted fields. It reminds you to keep markup honest and matched to what is visible.
+  This schema markup writer starts from your page type. It picks the types that fit, fills a ready-made template with your details, and checks each field Google expects. If something is missing, such as an image or a price currency, it tells you and does not guess.
+
+  It will not make up reviews, ratings or prices. Markup must match what visitors can see on the page, so it only uses details you give it.
 when:
-  - You publish a product page and want star ratings and price in search results.
-  - Your FAQ page has questions that should be marked up.
-  - You write articles and want author and date markup.
-  - You want to check existing markup for errors.
+  - You publish a product page and want your price and stock status to be readable by Google.
+  - Your FAQ page has real questions and answers that you want marked up.
+  - You write blog posts and want author and date markup on each one.
+  - A plugin or developer added markup and you want it checked for missing fields.
+not_for:
+  - You only need the title and description Google shows. Use the title and meta tag writer.
+  - You want a full check of what is wrong across your site. Use the technical SEO auditor.
+  - Your page has no real reviews or ratings. Leave those out. This skill will not write them for you.
 you_give:
-  - Page type and URL
-  - Title, description and dates
-  - Product, review, FAQ or how-to details
-  - Brand name and logo link
+  - Your page type, such as blog post, product page, FAQ page or how-to page
+  - The full page link (URL), title and a short description
+  - Publish date, last edit date and author name (for articles)
+  - Product name, image link, price, currency and stock status (for products)
+  - Your FAQ questions and answers, or your how-to steps (optional)
 you_get:
-  - JSON-LD markup ready to paste
-  - The right schema types for the page
-  - A check for missing fields
-  - Notes on rich result eligibility
+  - One JSON-LD block for each schema type that fits your page
+  - A table showing which types pass and which have missing fields
+  - A list of issues, each with the exact fix
+  - Steps to paste the code and test it in Google's Rich Results Test
+  - A final checklist to run before you publish
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. Add the template files from the skill folder if your AI lets you attach files.
+  - Say what your page is, for example "a product page" or "a blog post". Paste the page link, title, description and the details that apply.
+  - For products, add the real price, currency and stock status shown on the page. For FAQs, paste the exact questions and answers shown on the page.
+  - Read the validation table first. Fix anything marked missing, then ask your AI to rerun the markup.
+  - Paste each script block inside the head of your page. In Shopify, WordPress or similar tools, ask your developer or use a custom code area.
+  - Test the live page in Google's Rich Results Test and the Schema.org validator. Fix anything they flag.
+how_it_works:
+  - title: Choose the types
+    text: It reads your page type and picks the schema types that fit, such as Article, Product, FAQPage, HowTo and BreadcrumbList.
+  - title: Fill the templates
+    text: It loads a ready-made template for each type from the references folder and puts your details in the right fields.
+  - title: Check required fields
+    text: It checks each field Google asks for against its rules. Missing ones are flagged as issues, not guessed.
+  - title: Check the formats
+    text: It checks that links are full URLs, dates use year-month-day, prices are plain numbers and currencies are three-letter codes.
+  - title: Write the code and instructions
+    text: It writes one script block per type, then the paste steps and a testing checklist.
+output_shape: |
+  # Schema Markup Output
+  Page: <title>
+  URL: <url>
+  Schema types generated: <list>
+  ## Validation Summary
+  <table: type, required fields complete, rich result eligible, issues>
+  ## Issues Found
+  <issue, type, severity, exact fix>
+  ## JSON-LD Output
+  <one script block per type>
+  ## Implementation Instructions
+  ## Testing Checklist
+output_sample:
+  input:
+    - Your page type, for example product page or blog post
+    - The page link, title and description
+    - Dates and author for articles, or price, currency and stock for products
+    - Your FAQ questions and answers or how-to steps (optional)
+  prerequisites:
+    - The details must match what visitors see on the page
+    - A way to add code to your page head, or a developer who can
+  output:
+    - name: Validation Summary
+      contains: A table of each schema type, whether its required fields are complete, and how many issues it has.
+    - name: Issues Found
+      contains: Each missing or wrong field, how serious it is, and the exact fix.
+    - name: JSON-LD Output
+      contains: One ready-to-paste script block for each schema type that fits your page.
+    - name: Implementation Instructions
+      contains: Where to paste the code and how to test it in Google's tools.
+    - name: Testing Checklist
+      contains: A short tick list to run before you publish, such as full URLs and no placeholder text.
+works_best_with:
+  tools:
+    - {name: "Any chat AI", why: "No code needs to run. Attach the template files from the skill folder if your tool accepts files."}
+  inputs:
+    - "The page text you already wrote, so the markup matches what visitors read"
+    - "Your real review count and rating, only if they show on the page (optional)"
+terms:
+  - term: Schema markup
+    meaning: Code that labels the parts of your page, like price or author, so search engines can read them.
+  - term: JSON-LD
+    meaning: The format Google prefers for schema markup. It sits in a script block in your page head.
+  - term: Rich result
+    meaning: An extra in a search listing, such as a price, stars or a list of steps.

@@ -1,6 +1,6 @@
 new_slug: advertorial-readiness-checker
 name: "Advertorial readiness checker"
-summary: "Give it your live ads. Get a go or no-go, a score out of 100 and page length."
+summary: "Check if your live ads are ready for an advertorial. Get a go or no-go, a score out of 100, the page length and the style to use."
 job: audit-landing-page
 thinking: medium
 thinking_why: "It compares ads against a short set of rules, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You have a winning ad and want to know whether a long article-style page is worth building.
   - You are about to brief a writer or an AI and need to know how long the page should be.
   - An advertorial is live but converts below your product page, and you suspect the ad and page don't match.
+not_for:
+  - "You have no ad spend or results yet: test the message on a plain product page first, then come back."
+  - "You want to score one ad and its page as a pair: use the Ad and page match checker."
+  - "You need the advertorial written now: use the Store advertorial writer once this check says go."
 
 you_give:
   - Your current ads (text or screenshots), with spend and whether each breaks even
@@ -35,6 +39,32 @@ how_to_use:
   - Say whether the product improves on something known or is a new gadget.
   - If you have a draft page, paste it in too.
   - If the answer is no-go, test the message on a plain product page first, then come back.
+output_sample:
+  input:
+    - Your live ads, as text or screenshots
+    - Spend for each ad
+    - Whether each ad breaks even or better
+    - "Product type: an improvement or a new gadget (optional)"
+    - Your draft or planned advertorial (optional)
+  prerequisites:
+    - An AI that can read images, if you attach ad screenshots
+  output:
+    - name: VERDICT
+      contains: A go, go with fixes first, or no-go, with one line of reason.
+    - name: SCORE
+      contains: A score out of 100, worth 25 points for each proven variable on your best ad.
+    - name: AD blocks
+      contains: "For each ad: spend, break-even status, the four variables, how much it sells, page length and style."
+    - name: AWARENESS
+      contains: Whether your traffic suits an advertorial or a plain product page.
+    - name: MISMATCHES
+      contains: Places where the person, promise or tone changes between ad, headline and first image.
+    - name: DRAFT CHECKS
+      contains: "If you gave a draft: whether the product appears too early and whether it contradicts the ad."
+    - name: LABEL
+      contains: A reminder to label the page as an ad where the platform or law requires.
+    - name: CHECKS MISSED
+      contains: Any check that did not run, or none.
 
 how_it_works:
   - title: Finds four variables

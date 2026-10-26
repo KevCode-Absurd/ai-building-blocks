@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It is a standard set of questions to adapt.
 new_slug: reference-check-question-writer
 name: Reference check question writer
-summary: Give it a role. Get fair reference questions, a call script and a sheet
-  to record answers. Check local rules first.
+summary: Write fair reference check questions for any role. Get a call script and a sheet to record answers, so every candidate gets the same questions.
 job: hire-people
 headline: Reference check question writer
-subhead: "A fair, consistent reference check for a role: a question set, a call
-  script, and a sheet to record answers. Every candidate gets the same
-  questions, so you can compare references on the same footing."
+subhead: "A fair, consistent reference check for a role: a question set, a call script, and a sheet to record answers. Every candidate gets the same questions, so you can compare references on the same footing."
 explain: |
   A fair, consistent reference check for a role: a question set, a call script, and a sheet to record answers. Every candidate gets the same questions, so you can compare references on the same footing.
 
@@ -18,6 +15,10 @@ when:
   - Reference calls feel random and you want a standard script.
   - A reference will only confirm dates and nothing more.
   - You need records of what was asked and answered.
+not_for:
+  - "You need to know what you may legally ask or share in your country: ask an employment-law adviser, because this gives no legal advice."
+  - "You are moving someone inside your own company: talk to their current manager, not a formal reference check."
+  - "You want to test a candidate's skills: use a work task or a structured interview, because references only show past work."
 you_give:
   - Role and level
   - Candidate's claims to verify (optional)
@@ -28,7 +29,27 @@ you_get:
   - Answer recording sheet
   - Guide to guarded and mixed references
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Type the role and level. Add the candidate's claims and your country if you have them.
+  - Ask for the question set first. Check that the questions fit the role and are the same for every candidate.
+  - Ask for the call script, then the answer recording sheet.
+  - Read the guide for guarded references before you call.
+  - Check your local rules on what you may ask or share before the first call.
+output_sample:
+  input:
+    - The role and level you are hiring for
+    - Claims from the candidate you want to check (optional)
+    - Your country or region (optional)
+  output:
+    - name: Reference question set
+      contains: Questions on performance, teamwork and areas to develop, written for the role and level.
+    - name: Which references to ask for
+      contains: Advice on who to request, such as a manager, a peer and someone who reported to them.
+    - name: Candidate preparation note
+      contains: A short note that tells the candidate how your reference process works.
+    - name: Call script
+      contains: An opening and closing to use on the call, with follow-up questions for vague answers.
+    - name: Answer recording sheet
+      contains: A simple template to note each answer the same way for every reference.
+    - name: Guarded reference guide
+      contains: Ways to get useful signal from references who only confirm dates or sound lukewarm.

@@ -1,53 +1,118 @@
 new_slug: investment-property-nav-bridge
 name: Investment property NAV bridge
 headline: Investment property NAV bridge
-summary: Bridge supplied property valuations to equity NAV and a clearly defined market discount.
+summary: Turn property valuations into net asset value per share, and see if the share price is a discount or a premium. Debt and tax are counted once.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A property-to-equity NAV schedule with liability-perimeter checks. Share property valuations and dates, other net assets, debt, separate tax adjustments, ordinary shares and price.
+subhead: Give it your property valuations, other net assets, debt, a tax adjustment, the closing share count and the share price. It builds the bridge from property value to equity value. You get net asset value per share and the discount or premium of the price to it.
 explain: |-
-  A property-to-equity NAV schedule with liability-perimeter checks.
+  A property company owns buildings, but you own its shares. Net asset value, or NAV, is what is left for shareholders once you count the properties and other assets and take off the debt and the tax. This investment property NAV bridge lays that out as a short table, so you can see each step from property value to value per share.
 
-  Public equity valuation. Illustrative figures.1,200+100-500-50=750 NAV or7.50 per share. Price6 is a20% discount. Property1,000 gives NAV5.50 and a9.0909% premium, shown as negative discount.
+  The risk is counting something twice. Other net assets often already have some liabilities taken off. Debt and tax come off once, and only once. Appraised property values and book values stay in separate lines, with the valuation date next to each. NAV is then divided by the closing share count, not an average.
+
+  The discount is one minus the share price divided by NAV per share. A positive answer means the price is below NAV. A negative answer is a premium. It only works when NAV is above zero. Practice numbers: 1,200 of property plus 100 of other net assets, less 500 of debt and 50 of tax, is a NAV of 750. On 100 shares that is 7.50 each. A price of 6 is a 20% discount. If the property is 1,000, NAV per share is 5.50 and a price of 6 is a 9.09% premium.
 when:
-  - You need a property-to-equity NAV schedule with liability-perimeter checks.
-  - You work on public equity valuation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You hold shares in a property company and want to know if the price is above or below the value of its buildings.
+  - A company reports property valuations and you want to turn them into NAV per share yourself.
+  - You are comparing two property companies and need NAV per share on the same basis for both.
+  - A new valuation comes in and you want to see how it moves NAV and the discount.
+not_for:
+  - "You want to check a fund statement your manager sent: use the Investor statement NAV checker."
+  - "The company mostly holds listed shares in other companies: use the Listed holding look-through NAV."
+  - You want to value the buildings yourself from rents. This skill uses valuations you supply and does not estimate them.
+  - "You want to reconcile book value to NAV across a whole period: use the Reconcile property NAV and book value workflow."
 you_give:
-  - Property valuations and dates, other net assets, debt, separate tax adjustments, ordinary shares and price.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The valuation of each property, with its date and who prepared it (from the annual report or valuer's letter)
+  - Other net assets, meaning cash and other items less the liabilities already netted in them (from the balance sheet)
+  - Debt (from the balance sheet or loan notes)
+  - A tax adjustment, if the company reports one (optional)
+  - The closing number of shares and the share price, with the date
+  - The currency and units, such as USD millions
 you_get:
-  - A property-to-equity NAV schedule with liability-perimeter checks.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A bridge from property value to equity NAV, line by line
+  - NAV per share
+  - The discount or premium of the share price to NAV
+  - A check that debt, tax and other net assets are each counted once
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste the figures from the balance sheet and valuation note. Add the share count, the share price, the dates, the currency and the units."
+  - Tell it what your other net assets figure already includes, so no liability is taken off twice.
+  - Check the arithmetic once. NAV is property plus other net assets, less debt, less tax. NAV per share is NAV divided by shares.
+  - Read MISSING and CHECKS MISSED before you use any figure.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Identify appraisal scope, tenancy assumptions and ownership; preserve appraised and book values separately
-    text: Identify appraisal scope, tenancy assumptions and ownership; preserve appraised and book values separately.
-  - title: 2. Add other net assets and deduct financing and evidenced tax adjustments without deducting liabilities already netted in other assets
-    text: Add other net assets and deduct financing and evidenced tax adjustments without deducting liabilities already netted in other assets.
-  - title: 3. Divide by closing shares; define market discount as one minus price divided by positive NAV per share
-    text: Divide by closing shares; define market discount as one minus price divided by positive NAV per share.
+  - title: Sets the scope
+    text: Notes what each valuation covers, the lease assumptions behind it, who owns the property and the date. Appraised and book values stay apart.
+  - title: Builds the bridge
+    text: Adds other net assets to property value, then takes off debt and any tax adjustment you can show.
+  - title: Avoids double counting
+    text: Checks that a liability already netted in other net assets is not taken off again.
+  - title: Divides by closing shares
+    text: Divides NAV by the closing share count to get NAV per share.
+  - title: Finds the discount
+    text: Works out one minus price over NAV per share, and shows a premium as a negative discount. It refuses when NAV is not positive.
+  - title: Marks the gaps
+    text: Writes MISSING for any number you did not give and lists any check it could not run. It never fills a gap with zero.
 output_shape: |-
-  A property-to-equity NAV schedule with liability-perimeter checks.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  NAV <amount> | NAV per share <amount> | Price <amount> | Discount or premium <percent>
+
+  NAV BRIDGE
+  <property value + other net assets - debt - tax = NAV, one line each>
+
+  SCOPE AND SOURCES
+  <valuation dates, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <valuations, other net assets and what they include, debt, tax adjustment, closing shares, price>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, and the check that debt, tax and other net assets are each counted once>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Property valuations with their dates
+    - Other net assets, debt and any tax adjustment
+    - The closing share count and the share price
+    - The valuer's letter or report note (optional)
+  prerequisites:
+    - The company's latest balance sheet and valuation note
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: NAV, NAV per share, the share price and the discount or premium to NAV.
+    - name: NAV BRIDGE
+      contains: Property value, other net assets, debt and tax, one line each, ending in NAV.
+    - name: SCOPE AND SOURCES
+      contains: The valuation dates, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that nothing is counted twice.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Debt, tax and other net assets are each included once.
+  - what: A new valuation
+    how: Change the property value. NAV, NAV per share and the discount all move with it.
+  - what: A different share price
+    how: Change the price only. NAV stays the same and the discount or premium changes.
+  - what: A tax adjustment
+    how: Add the figure and its source. If you have none, it stays MISSING rather than zero.
 judge:
   - Debt, tax and other net assets are each included once.
   - Discount denominator is positive NAV with valuation dates disclosed.
@@ -62,15 +127,24 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The annual report balance sheet and the property valuation note
+    - The valuer's report, if you have it
+    - A named reviewer and the date you want NAV measured at
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: NAV
+    meaning: Net asset value. What is left for shareholders after debt and other claims are taken off.
+  - term: Discount to NAV
+    meaning: How far below NAV the share price sits. A negative number is a premium.
+  - term: Appraised value
+    meaning: A valuer's estimate of what a property is worth on a set date.
+  - term: Book value
+    meaning: The figure for the property in the company's accounts.
+  - term: Other net assets
+    meaning: Cash and other items, less liabilities, apart from the debt and tax you take off in the bridge.

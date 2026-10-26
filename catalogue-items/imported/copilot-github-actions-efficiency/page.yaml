@@ -2,17 +2,48 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-github-actions-efficiency
 name: GitHub build cost reviewer
-summary: Share your Actions workflows. Get wasted build minutes, slow jobs and
-  ways to cut repeat work.
+summary: Find wasted build minutes in your GitHub Actions workflows. Get the top 3 fixes to cut repeat work, slow jobs and CI cost.
 job: ship-and-host
 headline: GitHub build cost reviewer
-subhead: Share your Actions workflows. Get wasted build minutes, slow jobs and
-  ways to cut repeat work. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Share your GitHub Actions workflow files. Your AI looks for wasted build minutes and slow jobs. You get up to 3 safe fixes, ranked by minutes saved per day.
+not_for:
+  - "Your repo has no workflows and you have no build cost questions: use your GitHub billing page or a cost report instead."
+  - "You want a new build set up from scratch: ask a developer, or start with GitHub's own starter workflows."
+  - "You need to change org-wide or account billing settings: ask your GitHub org owner, since this only reviews repo files."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your workflow files. Add your recent run list if you have it.
+  - If your AI can run code and the gh tool, let it run the checks. If not, it reviews your pasted files only and says so.
+  - Read the top 3 fixes and check each one still keeps your required tests.
+  - Take the top fix into a pull request. Run gh run list a week later to compare real savings.
+output_sample:
+  input:
+    - Your .github/workflows files
+    - Your recent run list from gh run list (optional)
+    - Your goal, such as lower cost or faster builds (optional)
+  prerequisites:
+    - An AI that can run shell commands and the gh tool, for a live check (optional)
+    - Without that, paste your workflow files and run list into the chat
+  output:
+    - name: Waste sources
+      contains: The biggest cost or delay drivers found in your workflows, such as missing caches or triggers that run too often.
+    - name: Proposed fixes
+      contains: Up to 3 fixes, each backed by what the audit found and checked against safety rules.
+    - name: Validation
+      contains: What was tested live, what was only checked in the files, and any risk that remains.
+    - name: Impact
+      contains: Expected savings compared with measured savings, with wait time and total runner time kept apart.
+when:
+  - Your GitHub bill for build minutes keeps rising.
+  - Pull requests wait too long for checks to pass.
+  - The same build runs twice or runs on changes that do not need it.
+  - You want to know where to start before you change any workflow.
+you_give:
+  - Your workflow files from the .github/workflows folder
+  - The output of gh run list --limit 10 (optional)
+  - Your goal, such as lower cost or faster checks (optional)
+you_get:
+  - A list of the top causes of wasted minutes and slow builds
+  - Up to 3 fixes, ranked by estimated minutes saved per day
+  - A note on what was tested live and what was not
+  - Expected savings, split into wait time and total runner time

@@ -106,3 +106,23 @@ terms:
     meaning: A short gap in the day that can be used for reading.
   - term: Hit
     meaning: A day when you reached your daily count.
+
+not_for:
+  - "You only want one day's writing plan: use the Daily writing session planner."
+  - "You want to build any other habit, not a writing one: use the Habit plan builder."
+  - "You already have a draft and want help finishing the book: use the Book writing project coach."
+output_sample:
+  input:
+    - What you write and the length you are aiming for
+    - The days and minutes you can write, on a normal day and your worst day
+    - A normal week, so it can find gaps for reading
+    - Your log of date, start time and words, after two weeks
+  output:
+    - name: Start and restart
+      contains: A first step small enough for your worst day, a fixed cue and a restart rule.
+    - name: Daily word quota
+      contains: Your daily count, days needed, finish date, closed-door routine and a two-week table.
+    - name: Reading plan
+      contains: Pages and minutes a day, a weekly schedule, the mix of books and what to cut.
+    - name: Log review
+      contains: Days hit, pace, finish date, the pattern in missed days, a score out of 100 and one change.

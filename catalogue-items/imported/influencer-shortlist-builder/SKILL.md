@@ -15,6 +15,14 @@ Discover and analyze influencers across multiple platforms using Apify Actors.
 - The task is to evaluate authenticity, engagement, niche fit, or audience signals across social platforms.
 - You need Apify-based extraction plus a shortlist or summary of suitable influencer candidates.
 
+## Before you run it
+
+- This skill collects public data from social platforms by running third-party Apify Actors. Apify is a paid service with an account and a token. Tell the user to check Apify's current pricing and free allowance, and never state a price yourself.
+- Scraping must follow each platform's terms of service and the user's local privacy law. The data names real people. Collect only public profile metrics, keep the list for outreach planning, and do not collect private data or contact details beyond what each creator publishes.
+- Never ask the user to paste their Apify token into the chat. It belongs in a local `.env` file.
+- If the user cannot run code or has no Apify account, use the no-tools route: ask them to paste the public numbers for each creator (followers, average likes and comments on recent posts, niche, link). Then do Step 5 on those numbers. Say clearly that the data is theirs, not collected by you.
+- Ask once for the niche, the target platforms and what a good fit looks like. Mark any answer you do not get as MISSING. Do not guess.
+
 ## Prerequisites
 (No need to check it upfront)
 
@@ -115,6 +123,18 @@ After completion, report:
 - File location and name
 - Key metrics available (followers, engagement rate, etc.)
 - Suggested next steps (filtering, outreach, deeper analysis)
+
+Then rank the creators. Use only fields that came back from the data:
+
+- **Engagement rate** = average likes plus comments on recent posts, divided by followers. Show the sums so the user can check. If a field is missing, write MISSING.
+- **Authenticity flags** are warnings, not verdicts. Flag a creator when likes are very low next to followers, when comments are mostly short or repeated, or when followers jump with no matching engagement. Say "worth checking by hand" and never say "fake".
+- **Fit** = how closely the creator's bio, hashtags and recent posts match the niche and the fit description the user gave.
+
+Return a table, ranked best first, then a short note on the top three:
+
+| Rank | Creator | Platform | Followers | Engagement rate | Flags | Fit note | Link |
+
+You cannot see a creator's real audience (country, age, buyers). Say so, and suggest asking each creator for their own audience stats before any deal.
 
 ## Error Handling
 

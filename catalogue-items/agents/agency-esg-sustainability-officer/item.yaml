@@ -1,0 +1,44 @@
+slug: agency-esg-sustainability-officer
+name: ESG & Sustainability Officer agent
+summary: "Plan your ESG and sustainability reporting with material topics, framework fit, data gaps and claims that need proof. Not audit or legal advice."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/esg-sustainability-officer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/esg-sustainability-officer.md
+  licence: MIT
+  original_name: ESG & Sustainability Officer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: a8feee4c7b9687ee89ec5ea0879ff98b4cc4451431052369bf00f90d9382b7dd
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - ESG & Sustainability Officer
+  - Agency Agents
+  - Specialized
+credits:
+  - title: ESG & Sustainability Officer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/esg-sustainability-officer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,6 +1,6 @@
 new_slug: defensive-stock-screen
 name: Screen stocks with a defensive investor's seven tests
-summary: Paste company figures. Get each company passed or failed on seven tests, with the price sums shown, and a short list.
+summary: Screen stocks with a defensive investor's seven tests. Paste company figures and get each name passed or failed, price sums shown, and a short list.
 job: money-and-investing
 thinking: high
 thinking_why: It runs five skills in a row and every one works on pasted figures. Give it your strongest model, and check the sums.
@@ -14,6 +14,10 @@ when:
   - You want a list of sound companies to hold for years with little fuss.
   - Someone gave you a stock tip and you want to test it against plain rules.
   - You have a long list and need a repeatable way to cut it.
+not_for:
+  - "You want to trade in and out within days or weeks: this is a hold-for-years method, so use a trading plan or talk to a licensed adviser."
+  - "You cannot find ten years of figures: buy a broad index fund instead, since the tests need that record and unknown years stop a pass."
+  - "You are screening banks or insurers: the tests do not fit them, so set them aside or ask a licensed adviser. Utilities need the debt tweak."
 you_give:
   - Ten years of figures for each company, with profit and dividends per share
   - The latest balance sheet and the share price
@@ -29,6 +33,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the figures. Mark any year you cannot find, since a gap is marked unknown, not guessed.
   - Read the cuts first. Most companies fail at least one test.
+output_sample:
+  input:
+    - Ten years of profit per share and dividends per share for each company
+    - The latest balance sheet for each company
+    - The current share price and book value per share
+    - What safe bonds pay now (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: Step 1 quality screen
+      contains: A pass, fail or unknown on size, strength, profit record, dividends and growth for each company, with the figure.
+    - name: Step 2 earnings check
+      contains: Reported and restated earnings per share, with a call of clean, adjusted or avoid.
+    - name: Step 3 price test
+      contains: Price to three-year earnings, price to book, their product and earnings yield, with every sum shown.
+    - name: Step 4 spread list
+      contains: The names that passed everything, how many to hold, caps per name and industry, and a review date.
+    - name: Step 5 holding rules
+      contains: Facts that must stay true, reasons that do not count, and the only reasons to act.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Tests the company
     text: Checks size, strength, a profit in each of ten years, a long dividend record and growth measured with three-year averages.

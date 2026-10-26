@@ -1,7 +1,7 @@
 new_slug: transaction-fee-offset-checker
 name: Transaction fee offset checker
 headline: Transaction fee offset checker
-summary: Reconcile eligible portfolio fees, carryforward offsets and the management fee still due.
+summary: Check your private fund transaction fee offset. Give it the gross fee and eligible fees. You get the offset used, net fee due and carryforward.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -11,9 +11,14 @@ explain: |-
 
   Private fund fees. Illustrative figures only. Fees6 plus prior credit2 offset8 of10 due. Eligible fees12 plus2 offset10 and leave4 credit.
 when:
-  - You need offset used, net management fee and carryforward roll-forward.
-  - You work on private fund fees and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You need the offset used, the net management fee and the carryforward for one fund and one period.
+  - A reviewer wants to trace the fee result back to the LPA terms and your inputs.
+  - You hold transaction fees from portfolio companies and need to know how much of the management fee they cover.
+  - Do not use this for several funds, refunds, expiring credits or tax gross-ups. Ask your fund accountant instead.
+not_for:
+  - "You need to split fees across several funds or apply a tax gross-up: ask your fund accountant or counsel, because this checks one fund and one period only."
+  - "You need refunds or expiring credits handled: ask your fund administrator, because this only covers carryforward that the LPA allows."
+  - "You want to know if a fee is allowed under your LPA: ask your lawyer, because this checks the arithmetic and does not read the contract for legal meaning."
 you_give:
   - Gross management fee, eligible received transaction fees, contractual offset percentage and verified beginning offset carryforward.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +32,29 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your gross management fee for the period
+    - Your eligible transaction fees received, with the LPA fee terms
+    - Your offset percentage from the LPA
+    - Your verified beginning carryforward credit
+    - Your reporting date, currency and scale
+  prerequisites:
+    - An AI that can create and open spreadsheet files
+    - Node.js 20 or later, if you want to run the bundled calculation (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The sources used, their dates, and what the work covers.
+    - name: Inputs and assumptions
+      contains: Each input with its source, currency, scale and period, plus the assumptions made.
+    - name: Model calculations and reconciliations
+      contains: Offset used, net management fee and ending carryforward, with a check that the roll-forward ties.
+    - name: Editable workbook
+      contains: A native spreadsheet with inputs, calculations and checks you can change and recalculate.
+    - name: Actual file verification
+      contains: What was recalculated, inspected, rendered and reopened in the workbook.
+    - name: "MISSING: and CHECKS MISSED"
+      contains: Inputs that were not supplied and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Map every received fee to the LPA eligible categories and fund allocation; separate prohibited or excluded interest and broken-deal costs
     text: Map every received fee to the LPA eligible categories and fund allocation; separate prohibited or excluded interest and broken-deal costs.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks questions and writes the answers down.
 new_slug: workflow-spec-interviewer
 name: Workflow spec interviewer
-summary: Tell it the workflows you want to build. Get grilled with questions
-  until each one is clear.
+summary: Turn your repeated tasks into clear workflow specs. This workflow spec interviewer asks rounds of questions until a builder needs nothing more.
 job: make-skills
 headline: Workflow spec interviewer
-subhead: A clear written spec for each workflow you want to build, drawn out of
-  you by questions. It keeps going until a builder could implement it without
-  asking anything more.
+subhead: A clear written spec for each workflow you want to build, drawn out of you by questions. It keeps going until a builder could implement it without asking anything more.
 explain: |
   A clear written spec for each workflow you want to build, drawn out of you by questions. It keeps going until a builder could implement it without asking anything more.
 
@@ -18,6 +15,10 @@ when:
   - You can describe a process but not write it down.
   - An agent or developer needs a spec to build from.
   - You do not know which routine to automate first.
+not_for:
+  - "You have a one-off task with no repeat pattern: use a plain prompt in your AI instead."
+  - "You only need a simple checklist of steps: write a short process doc by hand."
+  - "You want the workflow built and running now: hand the finished spec to a developer or an AI agent."
 you_give:
   - Workflows you want to build, or none and it will find them
   - Tools and channels you use
@@ -29,7 +30,24 @@ you_get:
   - Notes file on your tools and terms
   - List of open questions until done
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
+  - Tell it the workflows you want to build. Or say you have none and ask it to help you find them.
+  - Answer each round of questions. It gives a suggested answer with each one, so you can accept or change it.
+  - If it asks about your tools and terms, answer fully. It keeps these in NOTES.md.
+  - Keep going until no open questions are left. Then save each spec, or ask your AI to print them.
+  - Hand the finished specs to a developer or an AI agent to build. Read the open questions list first.
+output_sample:
+  input:
+    - The workflows you want to build, or nothing and it will help you find them
+    - The tools and channels you use
+    - Your own names for things (optional)
+  prerequisites:
+    - An AI chat where you can answer several rounds of questions
+    - A workspace with a workflows folder and a NOTES.md file, if your AI can edit files (optional)
+  output:
+    - name: workflows/<workflow>.md
+      contains: "One spec per workflow: what starts each run, the steps, where you check, and what the brief shows."
+    - name: NOTES.md
+      contains: "Raw notes on your world: your tools, the channels you process, and your own terms made clear."
+    - name: Open questions
+      contains: Anything still unclear in a spec. A spec is done only when this list is empty.

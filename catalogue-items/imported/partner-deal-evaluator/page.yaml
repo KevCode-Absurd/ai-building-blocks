@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs reach, cost and risk across partner types.
 new_slug: partner-deal-evaluator
 name: Partner deal evaluator
-summary: Describe a partner who approached you. Get a sign or pass call, the
-  right tier and terms to ask for.
+summary: Check a partner deal before you sign. Describe who approached you and get a sign or pass call, the right tier, a 90-day plan and a revenue share range.
 job: sell-and-negotiate
 headline: Partner deal evaluator
-subhead: A sign or pass decision on a partner who approached you, with the right
-  tier, a 90-day plan and a revenue share range. It tells you if they are a real
-  partner or after better terms.
+subhead: A sign or pass decision on a partner who approached you, with the right tier, a 90-day plan and a revenue share range. It tells you if they are a real partner or after better terms.
 explain: |
   A sign or pass decision on a partner who approached you, with the right tier, a 90-day plan and a revenue share range. It tells you if they are a real partner or after better terms.
 
@@ -18,6 +15,10 @@ when:
   - A big name wants a strategic tie and you need to test it.
   - A consulting firm wants a share of your product revenue.
   - An existing partner underperforms and you must decide what to do.
+not_for:
+  - "You want to check cost and return on a partner you already signed: work it out with your own sales and cost numbers, as this tool is for the sign decision."
+  - "You need a demo or technical trial for a deal already in progress: ask a sales engineer or your product lead."
+  - "You want to buy the other company, not partner with it: talk to a lawyer or M&A adviser about an acquisition."
 you_give:
   - Who the partner is and what they ask for
   - Your product, price and margin
@@ -29,8 +30,27 @@ you_get:
   - 90-day joint plan
   - Revenue share band with stop criteria
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. For the scripts, use an AI that can run Python code and read files.
+  - Tell your AI who the partner is, what they ask for, and what they bring. Add your product, price and margin.
+  - Answer its questions one at a time. It first checks whether the partner has their own customers.
+  - Read the tier call, the 90-day plan and the revenue share range. Check them against your own numbers.
+  - Put the stop criteria into the contract before you sign. You make the final call.
+output_sample:
+  input:
+    - Who the partner is and what they ask for
+    - Your product, price and margin
+    - Proof they bring their own customers, such as named accounts and sales team size
+    - Your current partner terms (optional)
+  prerequisites:
+    - An AI that can run Python code, if you want the three scripts to run. Without code, your AI can still follow the steps in a chat.
+  output:
+    - name: Intake
+      contains: The partner's type, proof of their own demand, strategic value and the commitments they have offered.
+    - name: Tier call
+      contains: "Which tier fits: referral, reseller, OEM, services or strategic, with the reasons and the stop criteria."
+    - name: 90-day joint plan
+      contains: Steps before launch, the launch plan, a mid-quarter check and the tests of success at day 90.
+    - name: Revenue share band
+      contains: Margin per deal direct and through the partner, a suggested share range and the break-even point.
+    - name: Kill criteria
+      contains: The signs that mean you should restructure or end the deal, to write into the contract.

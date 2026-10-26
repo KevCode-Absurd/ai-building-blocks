@@ -1,6 +1,6 @@
 new_slug: sale-offer-ladder-planner
 name: "Sale offer ladder planner"
-summary: "Give it stock, margin, subscribers and a sale goal. Get a main offer, backups and a subscriber plan."
+summary: "Plan a Black Friday or big sale offer ladder: a main offer, ordered backups, switch triggers and a subscriber plan, from your stock and margin."
 job: make-offer
 thinking: high
 thinking_why: "It weighs a goal, stock, margin and two kinds of buyer against each other, so a stronger model reasons through the trade-offs better."
@@ -17,6 +17,10 @@ when:
   - You are planning a Black Friday, end-of-season or other big sale.
   - You need to clear slow stock without hurting profit on your best sellers.
   - You sell subscriptions and do not want a sale to make subscribers cancel.
+not_for:
+  - "You only want to know if one discount still makes money: use the Discount impact checker."
+  - "You want a long-term plan for subscription pricing and perks: use the Subscription offer designer."
+  - "Your team cannot change offers mid-sale: pick one fixed offer and run it, or ask a person who runs your ads."
 
 you_give:
   - Products with margin and stock depth (A, B or C grade)
@@ -37,6 +41,30 @@ how_to_use:
   - Paste your dates, your planned discount and your subscriber details if you have them.
   - Build every page and ad on the ladder before the sale starts.
   - Switch steps only when a trigger on the plan is hit.
+output_sample:
+  input:
+    - Your products with margin and stock depth, graded A, B or C
+    - "Your sale goal: make the most profit or clear stock"
+    - Your sale dates and planned sitewide discount
+    - Your subscriber count and current subscribe discount (optional)
+    - Your daily revenue targets from a pacing sheet (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tool is needed to get the plan.
+  output:
+    - name: Offer ladder
+      contains: A main offer, then ordered backups, each with a stock limit, a switch trigger, a page and ads.
+    - name: Deepest sale limit
+      contains: The deepest discount your margin can carry, by product.
+    - name: Preload list
+      contains: The pages and ads to build before the sale so each switch is a toggle.
+    - name: Low-cost window plan
+      contains: An offer for the cheaper ad days after Christmas, if you want one.
+    - name: Subscribers
+      contains: Whether you mind cancels, a subscriber-only offer, a stacked headline and where it appears.
+    - name: Checks missed
+      contains: Any check the plan failed, or none.
+    - name: Missing
+      contains: Anything you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: States the goal

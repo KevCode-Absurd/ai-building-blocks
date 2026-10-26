@@ -6,6 +6,33 @@ metadata:
   author: typeui.sh
 ---
 
+## How to run this skill
+
+AI Blocks added these notes. The original skill below is unchanged. Where a note here disagrees with it, follow the note.
+
+### What you need
+- A short description of the product, and who will use it.
+- Optional: brand colours and fonts to keep, and the platforms (web, phone) it is for.
+
+### If something is missing
+- Ask once for the product and the users. If you still do not have them, write `MISSING: <what>` at the top and go on with clearly marked assumptions.
+- Never invent facts about the product, its customers or its claims.
+
+### Make the defaults fit the product
+- The fonts and colours under Style Foundations (Montserrat, Poppins, `#3B82F6`) are the original author's starting point, not your product's. Replace them with the person's brand colours and fonts when given. If none are given, say the defaults are placeholders.
+- The Brand line describes the look in general. Write the design idea for this product, in your own words.
+- Write down how round, how raised and how thick each shape is, so the clay look is a rule and not a mood.
+
+### Check contrast before you hand it back
+- For every text and background pair, work out the contrast ratio and write it next to the pair. Normal text needs 4.5 to 1. Large text and parts of the interface need 3 to 1.
+- With the original colours, white text on the blue `#3B82F6` is about 3.7 to 1, which fails for normal text. The dark blue text colour `#1C398E` on white is about 10.4 to 1. Darken the blue for any button with white text, or use dark text on it, and say what you changed.
+- If you change a colour, work the ratio out again. Do not guess.
+
+### What you hand back
+- Open with the one-line design idea, then follow the Required Output Structure below.
+- Finish with `CHECKS MISSED:` and list any check you could not do, or write "none".
+- Say that the guide is rules only. A designer or developer builds the screens from it.
+
 <!-- TYPEUI_SH_MANAGED_START -->
 # claymorphism Design System Skill (Universal)
 

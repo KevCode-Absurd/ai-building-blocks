@@ -1,6 +1,6 @@
 new_slug: email-layout-brief-writer
 name: Email layout brief writer
-summary: Turn email copy and a goal into a designer’s brief. Get ordered sections, buttons, image needs, live text and a build-and-test plan.
+summary: "Turn your email copy and goal into an email layout brief a designer can build: ordered sections, buttons, image needs, live text and a test plan."
 job: write-emails
 thinking: medium
 thinking_why: It follows fixed layout rules and a known build order, so a mid-level model is enough.
@@ -17,6 +17,10 @@ when:
   - You have the copy for a campaign email and need a designer or your own design tool to build it.
   - Your emails get opens but few clicks, and the first button sits far down the page.
   - You like a competitor's email layout and want your own version with your own words.
+not_for:
+  - "You need the copy itself: write it with the campaign email writer, then come back for the layout."
+  - "You want to score a finished email design: use the email design checker."
+  - "You are sending a receipt, password reset or other system email: use your email tool's built-in template."
 you_give:
   - Your email goal and offer, plus the copy if you have it
   - The hero image or product to feature
@@ -34,6 +38,30 @@ how_to_use:
   - Check the top block first. A reader should see the headline, the point and a button without scrolling.
   - Send the layout table to your designer as it is. The order is part of the brief.
   - After the build, inspect approved test emails in representative clients on phone and computer. Check links, live text, fallback fonts, dynamic blocks and images-off content.
+output_sample:
+  input:
+    - Your email goal and offer
+    - Your email copy, or enough to write it
+    - Your hero image or product
+    - Your brand colours and fonts (optional)
+    - A screenshot of an email layout you like (optional)
+  prerequisites:
+    - An AI chat that can read an attached image, if you share a reference email
+  output:
+    - name: Layout table
+      contains: One row per block, in order, with what it holds, the copy, the button text and the image.
+    - name: Design flow
+      contains: Notes on background gradient, accent colour and button style so sections blend.
+    - name: Build plan
+      contains: Design at 600 pixels, a slice list with one link each, export and compress steps, and what stays live.
+    - name: Alt text and live text
+      contains: Alt text for each image and the lines kept as real text.
+    - name: Test plan
+      contains: Clients, devices, links, images-off and dynamic block checks to run before you send.
+    - name: Render status
+      contains: Which checks have run and which are not yet tested.
+    - name: Checks missed and missing
+      contains: Any rule the brief could not meet and any input you did not give.
 how_it_works:
   - title: Sets one message
     text: One goal, one or two calls to action, one clear offer. It cuts anything that belongs in a different email.

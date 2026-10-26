@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It applies strict matching rules and must flag every unclear lead.
 new_slug: lead-to-ad-matcher
 name: Lead to ad matcher
-summary: Give it your CRM lead export. Get each lead linked to the paid channel
-  and ad that brought it in.
+summary: Match CRM leads to the paid channel and ad that brought them in. Give it your lead export and get one row per lead, with unmatched leads kept.
 job: track-numbers
 headline: Lead to ad matcher
-subhead: "A table with one row per lead showing which paid channel and ad
-  brought it in. Give it a CRM lead export. The skill reads click IDs and UTM
-  tags in a set order: current click, current UTM, first-touch click, then
-  first-touch UTM."
+subhead: "A table with one row per lead showing which paid channel and ad brought it in. Give it a CRM lead export. The skill reads click IDs and UTM tags in a set order: current click, current UTM, first-touch click, then first-touch UTM."
 explain: |
   A table with one row per lead showing which paid channel and ad brought it in. Give it a CRM lead export. The skill reads click IDs and UTM tags in a set order: current click, current UTM, first-touch click, then first-touch UTM. A current tag always beats an older one.
 
@@ -19,6 +15,10 @@ when:
   - Your CRM has UTM fields but nobody joins them to ad data.
   - Reports disagree about channel counts and you need one classification.
   - You are preparing lead data to join with GA4 or ad spend.
+not_for:
+  - "You want to prove ad spend, extra sales or revenue: use a GA4 or ad platform report, because this only links leads to channels and ads."
+  - "You have no UTM tags or click IDs in your CRM: add them to your links first, or leads will come back unmatched."
+  - "You only need a quick count of leads by channel: use a pivot table in your spreadsheet or CRM report."
 you_give:
   - A CRM lead export with created dates
   - UTM and click ID fields
@@ -30,9 +30,32 @@ you_get:
   - Standard channel names
   - Reference SQL for BigQuery
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Node code, or SQL on your own BigQuery
-    data.
+  - Export your leads from your CRM as a spreadsheet or CSV. Check it has a lead ID, a source name, a created date with a time zone, and UTM and click ID columns.
+  - Open your AI in a chat that can run code and take file uploads. Paste the skill text from this page.
+  - Upload the export. Add your channel naming rules, and your ad data if you have it (optional).
+  - Ask your AI to match each lead to a channel and ad, and to keep every lead, even unmatched ones.
+  - Check the unmatched and unclear rows first. Fix missing tags in your CRM, then run it again.
+  - To repeat this on your own data, ask for the BigQuery SQL. You need a BigQuery account to run it.
+output_sample:
+  input:
+    - Your CRM lead export, one row per lead
+    - A lead ID and source identity for each lead
+    - A created date with a time zone offset, or blank
+    - UTM and click ID fields, current and first touch
+    - Your channel naming rules and ad data (optional)
+  prerequisites:
+    - An AI that can run Node code, to run the checks
+    - Your own BigQuery data, only if you want to run the reference SQL
+  output:
+    - name: Lead table
+      contains: One row per lead, including leads that could not be matched, so no lead is dropped.
+    - name: Channel
+      contains: A standard paid channel name for each lead, worked out from its click ID or UTM tags.
+    - name: Ad match
+      contains: The ad that brought the lead in, or a list of possible ads when the match is unclear.
+    - name: Confidence and evidence
+      contains: Which tag was used, in set order, and how sure the match is.
+    - name: Attribution-primary flag
+      contains: Marks one lead per click for counting, so a repeat click is not counted twice.
+    - name: Reference SQL
+      contains: Runnable BigQuery code that repeats the same matching on your own data.

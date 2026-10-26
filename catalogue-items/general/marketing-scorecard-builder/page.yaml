@@ -1,6 +1,6 @@
 new_slug: marketing-scorecard-builder
 name: "Marketing scorecard builder"
-summary: "Paste the numbers you track. Get a scorecard of short-term and long-term measures and what each tells you."
+summary: "Build a marketing scorecard that puts slow brand measures next to clicks and sales, each with the question it answers and its time lag."
 job: read-ad-results
 thinking: medium
 thinking_why: "It sorts and pairs measures with fixed rules, so mistakes are easy to spot."
@@ -17,6 +17,10 @@ when:
   - Your reports show only clicks and sales, and nothing about the brand.
   - You are asked to defend brand spend and have no measure for it.
   - You keep judging slow measures after one bad week.
+not_for:
+  - "You want to judge one campaign's return: use the Campaign keep-or-change checker."
+  - "You want to split money between brand and sales: use the Brand and sales budget splitter."
+  - "You spend nothing on brand work and track only sales: a simple sales report is enough."
 
 you_give:
   - The numbers you track now, with the period (a performance sheet or a list)
@@ -32,6 +36,25 @@ how_to_use:
   - Paste the metrics you track and a recent set of values. A list of names also works.
   - Read the warnings first, then the long-term section.
   - Put the review rhythm in your calendar and use it.
+output_sample:
+  input:
+    - The numbers you track now, with names and recent values
+    - The period those numbers cover
+    - How long customers take to buy (optional)
+    - Your brand file (optional)
+  output:
+    - name: Scorecard
+      contains: Measures from long-term results at the top to short-term response at the base, each with question, lag, value and source.
+    - name: What misleads alone
+      contains: Measures that give a false picture on their own, why, and what to read each one with.
+    - name: Review rhythm
+      contains: How often each measure is reviewed and the time window it is judged over.
+    - name: Data we do not have
+      contains: Each missing measure with one low-cost way to start tracking it.
+    - name: Missing
+      contains: Anything you did not give, marked so no value is invented.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 
 how_it_works:
   - title: Lists what you track

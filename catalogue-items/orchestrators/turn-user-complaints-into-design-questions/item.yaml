@@ -11,6 +11,8 @@ inputs:
   - type: brief
     required: true
   - type: voc_reviews
+    required: true
+  - type: feedback_notes
     required: false
 outputs:
   - type: audit_report
@@ -23,11 +25,11 @@ uses:
   - interview-and-research-planner
 steps:
   - uses: feedback-theme-finder
-    note: Group the complaints by user task and preserve sources and conflicting accounts.
+    note: Group the complaints by user task and preserve sources and conflicting accounts. Hands step 2 the themes, with counts, quotes and sources.
   - uses: hypothesis-first-design-planner
-    note: Turn the strongest themes into testable explanations and small design options.
+    note: Turn the strongest themes into testable explanations and small design options. Uses step 1's themes as the design problem. Hands step 3 the ranked questions and the explanation each one tests.
   - uses: interview-and-research-planner
-    note: Choose research tasks that distinguish those explanations before a redesign is approved.
+    note: Choose research tasks that distinguish those explanations before a redesign is approved. Uses step 2's questions as the research question, and hands back the research plan.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

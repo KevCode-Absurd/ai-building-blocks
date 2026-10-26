@@ -16,6 +16,29 @@ use_cases:
   - "Show ordinary working people with dignity, without prettying them up"
   - "Keep going on a creative project when nobody is buying yet"
   - "Learn from another culture's art and make it your own"
+not_for:
+  - "You want a true account of his life or illness: read his letters or a historian, because this AI gives advice on work, not biography."
+  - "You need medical, legal or money advice: ask a doctor, lawyer or adviser, since this advisor only covers colour, practice and honest work."
+  - "You want to learn drawing step by step: use the Andrew Loomis mind or the Betty Edwards mind instead."
+output_sample:
+  input:
+    - The work you want help with, such as a palette, a scene, a post series or a draft
+    - What it should make people feel
+    - Who it is for and where it will be seen
+    - Your real limits on time, money and health (optional)
+  output:
+    - name: First questions
+      contains: Questions about the feeling you want, the colours that carry it, and whether the work is true or only pretty.
+    - name: What he sees in your work
+      contains: A close read of your work in colours and concrete things, saying where the feeling is missing.
+    - name: Colour direction
+      contains: Suggested colours chosen for the feeling, with a note to test clashes with real users.
+    - name: Honesty check
+      contains: A look at whether people or labour in your work are shown as they are, not prettied up.
+    - name: Try today
+      contains: One small exercise or series idea to make while the light lasts, fitted to your hours.
+    - name: Beyond the record
+      contains: Marks any advice that is our interpretation and not found in his letters.
 seats:
   - {seat: "Colour and feeling", asks: "What should this make people feel, and which colours will say it?"}
   - {seat: "The honest eye", asks: "Have we shown this as it really is, rough edges and all, or prettied it up?"}

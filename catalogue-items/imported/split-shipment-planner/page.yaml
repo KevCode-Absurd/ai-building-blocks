@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Splits cannot be undone, so it checks stock first.
 new_slug: split-shipment-planner
 name: Split shipment planner
-summary: Say which items ship from where. Get one order split into separate
-  shipments. Changes a live order and cannot be undone.
+summary: Split one Shopify order into separate shipments, each with its own tracking number. Preview the groups first. A confirmed split cannot be undone.
 job: run-your-store
 headline: Split shipment planner
-subhead: One Shopify order split into separate shipments, each with its own
-  tracking number. You say which items ship together, for example from different
-  locations, dates or carriers.
+subhead: Give it your store, one open order and which items ship together. It checks the order and shows a preview of the shipments. After you say yes, it splits the order.
 explain: |
   One Shopify order split into separate shipments, each with its own tracking number. You say which items ship together, for example from different locations, dates or carriers.
 
@@ -16,21 +13,46 @@ explain: |
 when:
   - One order has items stored in two warehouses.
   - Part of an order is ready now and the rest ships next week.
-  - Items need different carriers.
-  - You want to preview the groups before changing a live order.
+  - Items in one order need different carriers.
+  - You want to preview the groups before you change a live order.
+not_for:
+  - "Your order ships together in one parcel: leave it as it is, no split is needed."
+  - "Your order is already fulfilled or cancelled: use the manual split in Shopify Admin, or contact Shopify support."
+  - "You need to move shipments to another warehouse after splitting: change the location by hand in Shopify Admin, as this skill does not do it."
 you_give:
   - Your store domain
   - The fulfilment order ID
   - Which items and quantities go in each shipment
   - Shopify permission to read orders and write fulfilments
 you_get:
-  - A dry-run preview of the shipment groups
-  - Separate fulfilment orders after you confirm
-  - A summary of what changed
+  - A preview of the shipment groups before anything changes
+  - Separate fulfilment orders after you confirm, each ready for its own tracking number
+  - A short summary of what changed and any errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - This needs an AI that can run commands on your computer, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot do it.
+  - Sign in to your store with the Shopify command line. Give it permission to read orders and write fulfilments.
+  - Paste the skill into your AI. Add your store domain, the fulfilment order ID and the items in each group.
+  - Read the dry-run preview. Check every item and quantity is in the right group.
+  - Tell your AI to run it for real only if the preview is right. A split cannot be undone.
+  - Check the new shipments in the order's fulfilment tab in Shopify Admin.
+output_sample:
+  input:
+    - Your store domain
+    - The fulfilment order ID
+    - Which items and quantities go in each shipment group
+    - Shopify permission to read orders and write fulfilments
+  prerequisites:
+    - An AI that can run the Shopify command line on your computer
+    - A signed-in Shopify session for your store
+    - The fulfilment order must be open
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step showing what was checked or changed and the result. Dry run steps are marked.
+    - name: Dry-run preview
+      contains: The shipment groups it would create, with no change made to your order.
+    - name: Outcome summary
+      contains: The original fulfilment order, how many shipments it became, the error count and the items in each shipment.
+    - name: JSON summary (optional)
+      contains: The same outcome in a machine-readable form, if you ask for the json format.

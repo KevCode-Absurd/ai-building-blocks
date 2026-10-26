@@ -1,6 +1,6 @@
 new_slug: paper-cutout-video-prompts
 name: "Paper cutout explainer video clip prompt writer"
-summary: "Paste your cutout script and attach product photos. Get timed clip prompts and an edit list."
+summary: "Turn a one-point script and your product photos into timed paper cutout explainer video prompts, plus an edit list for the words and numbers."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have a one-point explainer script and want to make it with AI image and video tools.
   - Earlier attempts came out as flat digital graphics or with garbled text.
   - Your product looked slightly different in every scene.
+not_for:
+  - "You want a live-action or talking-head ad: film it, or ask a video editor. This skill only makes paper cutout clips."
+  - "You don't have a script yet: write one first with the Paper cutout explainer video ad script writer, then come back."
+  - "You want finished video with no paid tools: this writes prompts only. You still need an image and video tool to make the clips."
 
 you_give:
   - The script, ideally with a proof picture, key word and move for each line, and its cast note
@@ -31,11 +35,38 @@ you_get:
   - Any check the prompts still missed, one line each, or none
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your script, ideally from "Paper cutout explainer video ad script writer", then attach your product photos.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It writes prompts only, so you need an image and video tool to make the clips.
+  - Paste your script, ideally from the Paper cutout explainer video ad script writer, then attach your product photos.
   - Approve the avatar card for your product cutout, then make the test cutouts and pick one.
-  - Make and approve the sheets and lock lines, then the storyboard frames.
-  - Record the narration, make each clip from its approved frame, then add the words, numbers and charts in your editor from the edit list.
+  - Approve the sheets and lock lines, then approve the storyboard frames.
+  - Record the narration, then make each clip from its approved frame. Higgsfield credits and Google or OpenAI keys bill per clip or picture.
+  - Add the words, numbers and charts in your editor, using the edit list.
+output_sample:
+  input:
+    - Your cutout explainer script, one point per line
+    - "Your product photos: front, side, top and out of the pack"
+    - How the product works, and any figures with their sources
+    - Your colours, typefaces and approved claims (optional)
+  prerequisites:
+    - An image tool and a video tool to turn the prompts into clips, such as Nano Banana and Veo (paid plans or credits may apply)
+    - Your voice-over recording, or time to make one, before you make the clips
+  output:
+    - name: Parts list
+      contains: Every paper piece and photo the ad needs, each marked have, make or missing.
+    - name: Avatar card
+      contains: How your product cutout is made and what must never change, for your approval.
+    - name: Test cutout prompts
+      contains: Three or four versions of the product cutout, so you can pick the edge and shadow.
+    - name: Sheet prompts and lock lines
+      contains: Product, pieces and empty ground prompts, plus the paper and product lines repeated in every prompt.
+    - name: Storyboard
+      contains: One frame per line as paper layers, with each move rigged from a start to an end.
+    - name: Clip prompts
+      contains: Motion only, timed to land on each key word, ending with a short hold.
+    - name: Edit list
+      contains: Every word and number with its source, plus captions, end card and safe zones.
+    - name: Checks missed
+      contains: One line for each check the prompts still fail, or none.
 
 how_it_works:
   - title: Lists every piece

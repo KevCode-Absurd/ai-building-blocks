@@ -59,12 +59,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Pick the buyer and the angle.** Use the skill `ad-angle-planner`. Start from the idea and write the brief that fixes who the ad is for and what it argues.
 2. **Write the phone-style script.** Use the skill `selfie-style-ad-script`. Give it the brief from the steps before. Write the creator script from the brief, with picture notes and a shot list.
 3. **Check every line.** Use the skill `video-ad-script-line-checker`. Give it the script from the steps before. Check the script line by line and list the weak lines with fixes.
-4. **Fix lines nobody would say.** Use the skill `ad-script-read-aloud-editor`. Give it the script from the steps before. Read the script aloud and fix the lines that sound written, changing no claim or number.
-5. **Write the filming brief.** Use the skill `creator-filming-brief-writer`. Give it the script from the steps before. Turn the final script into a brief a creator can film from.
+4. **Fix lines nobody would say.** Use the skill `ad-script-read-aloud-editor`. Give it the script from the steps before, with the fixes from step 3 applied. Fixes the lines that sound written, changing no claim or number, and hands back the final script.
+5. **Write the filming brief.** Use the skill `creator-filming-brief-writer`. Give it the script from the steps before. Turns the final script from step 4 into a brief a creator can film from. The creator films to it and the clips come back for step 6.
 
 Pause here: Send the brief to the creator and get the footage back.
 
-6. **Plan the edit.** Use the skill `video-ad-edit-planner`. Give it the script from the steps before. Use the footage and the final script to write a timed cut list.
+6. **Plan the edit.** Use the skill `video-ad-edit-planner`. Give it the script and the brief from the steps before, and the footage the creator filmed. Uses the final script from step 4 and step 5's shoot order and file names to write a timed cut list.
 7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

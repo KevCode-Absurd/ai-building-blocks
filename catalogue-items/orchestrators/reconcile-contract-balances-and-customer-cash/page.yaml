@@ -1,53 +1,68 @@
 new_slug: reconcile-contract-balances-and-customer-cash
-name: Reconcile contract balances and customer cash
-headline: Reconcile contract balances and customer cash
-summary: Link deferred revenue, unbilled assets, receivables and allowance movements before judging customer cash conversion.
+name: Contract revenue and cash checker
+headline: Contract revenue and cash checker
+summary: Share contract balances, invoices, receipts and loss records. Get a linked workbook showing revenue, billing, cash received and unexplained gaps.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked revenue-to-billing-to-cash workbook with contract and credit-loss reconciliations. Share contract liability/asset notes, billings, receivable balances, collections, credit-loss allowance movements and noncash adjustments.
+subhead: Share contract balance notes, invoices, receivable balances, cash collected and credit loss records. Your AI follows customer advances and unbilled work into invoices, then into cash. It keeps write-offs and other noncash changes apart from collections. You get each movement with its source, and every unexplained gap stays open.
 explain: |-
-  A linked revenue-to-billing-to-cash workbook with contract and credit-loss reconciliations.
+  Revenue, an invoice and cash are three different events. A customer pays in advance, so cash comes first. You deliver work before you bill, so revenue comes first. A write-off or a currency change moves a balance without any cash. When these blur, reported revenue and cash look wrong, and nobody knows why.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow follows the money through three roll-forwards. The first covers customer advances: how much was added and how much was released to revenue. The second covers unbilled work: how it became invoices and then collections. The third covers the credit loss allowance, so write-offs and recoveries do not pass for cash.
+
+  Each roll-forward must tie to the source note. Revenue released from one balance is never counted again in another. What cannot be explained stays visible as a gap. Nothing is forced to tie with a plug.
 when:
-  - You need a linked revenue-to-billing-to-cash workbook with contract and credit-loss reconciliations.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Cash collected looks different from what revenue and invoices suggest.
+  - You have contract liability and contract asset notes and want to see how they link to cash.
+  - A reviewer asks you to explain a jump in deferred revenue or unbilled revenue.
+  - You want to know what part of the receivables movement was a write-off and not a payment.
+not_for:
+  - "You want to explain why reported revenue changed through price, scope or extra weeks: use the Comparable revenue growth checker."
+  - "You want balance-sheet-to-cash gaps for the whole business: use the Working capital and cash tax checker."
+  - "You only want the credit loss reserve: use the Customer credit loss allowance checker."
+  - You want a cash forecast. This explains past periods and does not predict future ones.
 you_give:
-  - Contract liability/asset notes, billings, receivable balances, collections, credit-loss allowance movements and noncash adjustments.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Contract liability and contract asset notes with opening and closing balances, from the financial statements
+  - Billings and invoices for the period, from your billing system
+  - Receivable balances and cash collected, from the ledger or bank
+  - "Credit loss allowance movement: charges, write-offs and recoveries"
+  - Noncash adjustments, such as currency effects and credit notes (optional)
 you_get:
-  - A linked revenue-to-billing-to-cash workbook with contract and credit-loss reconciliations.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A customer advance roll-forward showing additions, releases to revenue and closing balance
+  - An unbilled work roll-forward tied to invoices and collections
+  - An allowance roll-forward with write-offs and recoveries kept apart from cash
+  - A cash bridge from revenue to billing to cash received, with each line sourced
+  - Unexplained gaps, left open, and a list of checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the contract balance notes, billing and collection records and the allowance note. Say the period, currency and scale.
+  - Tell your AI to follow the pack and save each step's file. A linked spreadsheet works best, since the three roll-forwards feed one bridge.
+  - After step 1, check that opening balance plus additions minus releases equals the closing balance in the note.
+  - After step 3, check that no write-off or currency change sits in collections. Treat any gap marked unexplained as a question for the finance team.
 how_it_works:
-  - title: Contract-liability release bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile aggregate customer advance liability additions and releases; distinguish new deferred billings from actual cash and isolate releases from opening balances.
-  - title: Contract asset billing cash bridge
-    text: Use the same revenue/perimeter to reconcile unbilled revenue transfers, direct invoices and receivable collections. Prevent revenue releases from being counted twice across contract categories.
-  - title: Receivables allowance roll-forward
-    text: Reconcile write-offs and credited recoveries separately and carry the actual gross-receivable adjustments into the collection bridge; validate all other noncash movements before accepting implied cash.
+  - title: Customer advance revenue tracker
+    text: "Uses your sourced schedules in one linked workbook. Practice figures inside the skill are not your numbers. Rolls customer advances forward, separating new deferred billings from cash and releases from opening balances. Hands step 2 the release amounts. Check before moving on: the closing balance matches the note."
+  - title: Unbilled work to cash tracker
+    text: "Uses the same revenue scope. Traces transfers from unbilled work into invoices and then receivable collections, so releases are not counted twice across contract categories. Hands step 3 the gross receivable movement. Check before moving on: invoices tie to the receivable roll-forward."
+  - title: Customer credit loss allowance checker
+    text: "Rolls the allowance forward, treating write-offs and credited recoveries separately. Carries the gross receivable adjustments into the collection bridge and checks other noncash movements before accepting implied cash. Check before you use the bridge: no write-off or currency change is in collections."
 output_shape: |-
-  A linked revenue-to-billing-to-cash workbook with contract and credit-loss reconciliations.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <files, dates, currency, scale, period>
+  CUSTOMER ADVANCES       <opening | additions | released to revenue | closing>
+  UNBILLED WORK           <opening | transferred to invoices | closing>
+  RECEIVABLES AND CASH    <opening | invoices | collections | write-offs | other noncash | closing>
+  ALLOWANCE               <opening | charge | write-offs | recoveries | closing>
+  UNEXPLAINED GAPS        <line | amount | what is needed>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Contract and receivable roll-forwards tie to source notes; revenue, invoices and collections remain distinct; allowance write-offs/FX do not become collections and all unexplained residuals remain visible.
+  - what: Revenue scope
+    how: Say which revenue lines are in scope. All three steps use the same scope.
+  - what: Currency
+    how: If you bill in more than one currency, give the rates used. Currency changes are kept out of collections.
+  - what: Level of detail
+    how: Give totals by contract type for a quick check. Give customer-level data for a closer one.
 judge:
   - Contract and receivable roll-forwards tie to source notes; revenue, invoices and collections remain distinct; allowance write-offs/FX do not become collections and all unexplained residuals remain visible.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -62,13 +77,36 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads files and builds spreadsheets
+      why: Three roll-forwards feed one bridge. A linked workbook shows where each number goes. In a plain chat they come back as tables.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The prior period's notes, to check opening balances (optional).
+    - A list of large customer disputes or credit notes (optional).
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Contract liability
+    meaning: Money a customer paid, or owes, before you did the work. Also called deferred revenue.
+  - term: Contract asset
+    meaning: Work you did but have not yet billed. Also called unbilled revenue.
+  - term: Credit loss allowance
+    meaning: A reserve for amounts customers may not pay.
+  - term: Roll-forward
+    meaning: Opening balance, plus and minus the movements, equals the closing balance.
+output_sample:
+  input:
+    - Contract liability and contract asset notes with opening and closing balances
+    - Billings, receivable balances and cash collected
+    - The credit loss allowance movement
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook (optional)
+  output:
+    - name: outputs/step-1-contract-liability-release-bridge.md
+      contains: Customer advances rolled forward, with releases to revenue and new deferred billings.
+    - name: outputs/step-2-contract-asset-billing-cash-bridge.md
+      contains: Unbilled work traced into invoices and collections on the same revenue scope.
+    - name: outputs/step-3-receivables-allowance-movement-bridge.md
+      contains: Allowance roll-forward, with write-offs and recoveries kept out of cash.
+    - name: Unexplained gaps
+      contains: Each difference that no source explains, and what is needed to close it.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.

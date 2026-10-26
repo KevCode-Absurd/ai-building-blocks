@@ -1,6 +1,6 @@
 new_slug: platform-native-content-planner
 name: Platform-native content planner
-summary: Paste your business and the platform. Get a month of content made for that place and a daily habit.
+summary: Plan a month of social media content made for one platform, with first lines and a posting rhythm you can keep. Give it your business and platform.
 job: grow-social
 thinking: medium
 thinking_why: It matches content to how a platform works, which needs judgement.
@@ -14,6 +14,10 @@ when:
   - You are starting on a new platform and do not want to copy your other channels.
   - Your posts get little response and feel like ads.
   - You post in bursts and need a rhythm you can keep.
+not_for:
+  - "You need a direct sale this month: use paid ads, or the Give before ask sequence planner to plan one clear ask."
+  - "Your buyer does not spend time on the platform: pick the place they do use, or ask a few customers where they look."
+  - "You want ad copy, not a posting plan: use the Ad first line writer and scorer."
 you_give:
   - Your business and your brand file (what you do, who you serve, voice)
   - The one platform you want to grow on
@@ -30,6 +34,29 @@ how_to_use:
   - Add your buyer and any past results.
   - Post the first three pieces this week, before the plan feels complete.
   - At the end of the month, bring your numbers and run it again.
+output_sample:
+  input:
+    - Your business and brand file (what you do, who you serve, your voice)
+    - The one platform you want to grow on
+    - A short buyer description (optional)
+    - Your last month of results (optional)
+  output:
+    - name: Platform
+      contains: The platform you chose and why it fits your buyer.
+    - name: How people post there
+      contains: The usual format, length, sound and tone on that platform, with guesses marked for you to check.
+    - name: What your audience cares about
+      contains: A list of 8 to 12 topics your buyers already talk about, outside your product.
+    - name: The month
+      contains: One piece idea per posting day, each with format, topic and first line, and selling kept to a few.
+    - name: Rhythm
+      contains: How many posts per week, which days, and how long each one takes.
+    - name: First three to post now
+      contains: Three pieces to publish this week and which numbers to note for each.
+    - name: Monthly review
+      contains: A rule to keep what beat the median, change what fell under it, and test one new piece type.
+    - name: Missing and checks missed
+      contains: Facts it could not find, and any of its own checks that failed.
 how_it_works:
   - title: Picks the platform
     text: Confirms one platform where attention is cheap for your buyer now.

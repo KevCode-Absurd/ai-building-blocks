@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Gemini draws the picture; the skill picks the model and checks cost.
 new_slug: gemini-image-and-video-maker
 name: Gemini image and video maker
-summary: Give it a picture idea and reference images. Get images or short video
-  drawn by Google Gemini.
+summary: Make images or short videos with Google Gemini from a plain description. Add reference images for on-brand results. You approve each cost first.
 job: make-images
 headline: Gemini image and video maker
-subhead: Images and short videos from Google Gemini, started by a plain
-  description. Hand over a picture idea and, if you have them, reference images
-  such as a logo, a face or a product shot.
+subhead: Images and short videos from Google Gemini, started by a plain description. Hand over a picture idea and, if you have them, reference images such as a logo, a face or a product shot.
 explain: |
   Images and short videos from Google Gemini, started by a plain description. Hand over a picture idea and, if you have them, reference images such as a logo, a face or a product shot. It picks the right model for the job: a fast draft, a standard image, a high quality image, or video.
 
@@ -18,6 +15,10 @@ when:
   - You want to animate a still product photo into a short clip.
   - You have reference images and want new pictures in the same style.
   - You want a quick draft first, then a better version of the one you like.
+not_for:
+  - "You want free or offline image tools: use a free image maker, since every Gemini call here is billed by Google."
+  - "You have no Gemini API key or no budget for per-call billing: get a key and set a budget first, or use a design tool you already pay for."
+  - "You need the exact same image again: this skill cannot promise it, so keep the saved file and its log instead."
 you_give:
   - A description of the image or video
   - Reference images (optional)
@@ -29,8 +30,30 @@ you_get:
   - A saved log of each run
   - Reusable reference sets for later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Gemini API key.
+  - Get a Gemini API key from Google AI Studio. Billing must be on, because every image and video costs money.
+  - Use an AI that can run code and save files, such as Claude Code or Gemini in a coding tool. Chat-only windows will not work.
+  - Give your AI this skill. Let it install the google-genai package if it is missing, and set GEMINI_API_KEY in a .env file.
+  - Describe the image or video. Name your reference images or reference set if you want an on-brand look.
+  - Read the price your AI quotes and approve it. Each run needs its own approval.
+  - Check the saved image or video and its .json log in the generations folder. Ask for changes to one thing at a time.
+output_sample:
+  input:
+    - Your description of the image or video
+    - Reference images such as a logo, a face or a product shot (optional)
+    - A saved reference set for on-brand work (optional)
+    - Your Gemini API key
+  prerequisites:
+    - An AI that can run code and files on your computer
+    - A Google Gemini API key from Google AI Studio, with billing on
+    - The google-genai Python package, installed with your OK
+  output:
+    - name: Model choice
+      contains: "The model picked for your job: fast draft, standard image, high quality image, or video."
+    - name: Price quote and approval
+      contains: The current price for the chosen model, which you must approve before each single call.
+    - name: Generated image or video
+      contains: The new file, saved in the generations folder of your project.
+    - name: JSON log file
+      contains: A small file next to the result with the exact prompt, model, references, cost and time.
+    - name: Reference sets
+      contains: Folders of your logos and photos, copied or linked, that you can reuse for on-brand results.

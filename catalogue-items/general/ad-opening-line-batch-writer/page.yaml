@@ -1,6 +1,6 @@
 new_slug: ad-opening-line-batch-writer
 name: Ad opening line batch writer
-summary: Paste your buyer and proof. Get ten ad opening lines, each with the line that follows it.
+summary: Write ten ad opening lines that stop the right buyer. Paste your buyer and proof. Each line comes with the line that follows it.
 job: write-ad-copy
 thinking: medium
 thinking_why: It has to pick moves that fit your buyer and keep every line inside your proof.
@@ -14,6 +14,10 @@ when:
   - You are about to brief a video or image ad and need openings to choose from.
   - A good ad has stopped working and you want fresh openings on the same offer.
   - You have proof but no idea how to lead with it.
+not_for:
+  - "You want to score ad lines you already wrote: use the Ad first line writer and scorer."
+  - "You have no proof, numbers or offer to lean on: gather your facts first, or ask a customer for a review line."
+  - "You want a full ad with body text and a call to action: use the Fact-based ad copy writer."
 you_give:
   - "Who the ad is for: one moment or object, what they know, a few of their words"
   - "The proof you may use: numbers, review lines, offer terms"
@@ -27,6 +31,27 @@ how_to_use:
   - Under the prompt, write a few lines about the buyer, then paste your proof.
   - Read the FLAG line first. If it is not how your buyer would say it, fix it and run it again.
   - Pick the top three, put each in a separate ad, and keep the rest for the next round.
+output_sample:
+  input:
+    - "Who the ad is for: one moment or object they own, what they already know, a few of their own words"
+    - "The proof you may use: numbers, review lines and offer terms"
+    - "Where it runs: feed, video or both (optional)"
+    - Your buyer brief (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini. No code, files or paid tools needed.
+  output:
+    - name: FLAG
+      contains: The moment or object that makes the right buyer think the ad is about them.
+    - name: Numbered opening lines
+      contains: Ten lines, each 12 words or fewer, with the move used and your fact word for word.
+    - name: Next
+      contains: The line that follows each opening and answers any tease.
+    - name: On screen
+      contains: A short version of each line, 7 words or fewer, for text on video or image.
+    - name: TEST FIRST
+      contains: The three lines to test first and what a win would tell you.
+    - name: MISSING
+      contains: Facts the AI needed and did not get.
 how_it_works:
   - title: Finds the flag
     text: Names a moment or object your buyer owns, in their words.

@@ -8,8 +8,8 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: codebase
-    required: true
+  - type: tool_connection
+    required: false
 outputs:
   - type: security_report
 uses: []

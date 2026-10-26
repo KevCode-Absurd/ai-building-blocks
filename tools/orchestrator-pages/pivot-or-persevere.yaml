@@ -1,6 +1,6 @@
 new_slug: pivot-or-persevere
 name: Measure real progress and decide to pivot or persevere
-summary: Paste your plan and your numbers. Get honest progress measures by customer group and a dated pivot or persevere call.
+summary: Check if your changes really moved your numbers, then get a dated pivot or persevere call. Paste your plan and results by join month.
 job: plan-strategy
 thinking: high
 thinking_why: It compares groups, weighs cause against coincidence and makes a costly call. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have run a first test or launched, and your totals are rising but you cannot say why.
   - You made many changes and no rate moved.
   - Your team is split between one more try and a change of direction.
+not_for:
+  - "You have one quiet period and have run no test yet: keep a simple spreadsheet of your totals until you have something to compare."
+  - "You only want to know why sales dropped in a set of ads: use the Ad sales drop analyst."
+  - "You want to check a test is big enough to trust: use the A/B test traffic checker."
 you_give:
   - Your plan, with the figures you hope for
   - "After a test, results by join week or month for each step of the customer path"
@@ -30,6 +34,28 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Start with the plan. It sets the milestones first, then tells you when to run the test and bring back results.
   - Hold the review on the date it gives, with the people it lists.
+output_sample:
+  input:
+    - Your plan, with the figures you hope for
+    - Results by join week or month for each step of the customer path
+    - Dates of each change you released (optional)
+    - Notes from customers who left (optional)
+  prerequisites:
+    - An AI that can work with files, such as Claude with a project or Claude Code
+    - A first test or launch already run, with results for set dates
+  output:
+    - name: "Step 1 file: the engine"
+      contains: Your growth engine, the one rate that drives it, and a sum with your figures showing where you stand.
+    - name: "Step 2 file: milestones"
+      contains: Hoped-for rates, starting rates to measure, and three dated milestones with predictions.
+    - name: "Step 3 file: rates, not totals"
+      contains: Which numbers are vanity totals, and the per-group rates to use instead.
+    - name: "Step 4 file: reading the groups"
+      contains: A table by customer group showing which changes moved which rates, and how far each rate is from target.
+    - name: "Step 5 file: the call"
+      contains: Stuck signs, test cycles left, a persevere or pivot call, the kind of pivot, and a dated review.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Picks the growth engine
     text: Decides whether growth comes from keeping, referral or paid customers, does the sum with your figures and names the one rate to watch.

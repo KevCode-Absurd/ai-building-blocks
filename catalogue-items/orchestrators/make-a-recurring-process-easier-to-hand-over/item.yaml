@@ -19,9 +19,9 @@ uses:
   - handover-note-writer
 steps:
   - uses: process-and-sop-writer
-    note: Write the procedure with inputs, checks, exceptions and the final definition of done.
+    note: "Write the procedure with inputs, checks, exceptions and the final definition of done. Hands the written procedure to step 2."
   - uses: handover-note-writer
-    note: Prepare the current-state handover and list the practice tasks the replacement should complete.
+    note: "Takes the procedure from step 1 and your own brain dump of the work, and prepares the current-state handover. Lists the practice tasks the replacement should complete."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

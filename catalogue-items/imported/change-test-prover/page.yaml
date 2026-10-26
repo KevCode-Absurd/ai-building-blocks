@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It loops between mutating code and writing tests until they bite.
 new_slug: change-test-prover
 name: Change test prover
-summary: Give it a Python change. Get tests that fail whenever that change is
-  broken, proven by code mutations.
+summary: Check that your Python change is really tested. Give it your fix and get tests that fail when the change breaks, proven by mutation testing.
 job: test-and-fix-code
 headline: Change test prover
-subhead: Tests that fail whenever your Python change is broken, proven by
-  deliberately breaking the code. Give it a change and the skill checks it is
-  actually tested, not just passing.
+subhead: Tests that fail whenever your Python change is broken, proven by deliberately breaking the code. Give it a change and the skill checks it is actually tested, not just passing.
 explain: |
   Tests that fail whenever your Python change is broken, proven by deliberately breaking the code. Give it a change and the skill checks it is actually tested, not just passing.
 
@@ -18,6 +15,10 @@ when:
   - Coverage looks high but you do not trust the tests.
   - A reviewer asks if your change is covered.
   - You want to know which new tests would have failed before the fix.
+not_for:
+  - "You want to review a whole test suite for gaps, flaky tests and slow tests: use the Agentic test audit."
+  - "Your project is not Python, or it does not use pytest: use a mutation testing tool made for your language."
+  - "You want to know if the code is correct. Killed mutants only show the tests notice a change: ask a person to review the logic."
 you_give:
   - A Python project with pytest
   - The change, as uncommitted work or a branch
@@ -29,8 +30,33 @@ you_get:
   - Tests that fail on the old code
   - Evidence the change is safe to trust
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in a place where it can run code and read your Python project. A chat window with no file access will not work.
+  - "Paste the skill text. Say which change to check: your uncommitted work, or a branch to compare with main."
+  - Let it write the check first, then run the mutation check. It fetches a runner from GitHub, so review that runner before first use.
+  - Read the verdict. If it says gaps, let your AI add tests for each surviving mutant. It stops after three rounds.
+  - Check the final report. Look at which new tests fail on the old code, and read any mutants it left for you to judge.
+output_sample:
+  input:
+    - Your Python project that uses pytest
+    - Your change, as uncommitted work or a branch
+    - The base revision to compare with (optional)
+    - A time limit in minutes for the check (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Python 3.12 or newer, git, and pytest-cov in your project
+    - pytest-randomly, to check that test order does not matter
+  output:
+    - name: Verdict
+      contains: One of verified, gaps, incomplete or no change, with a short reason.
+    - name: Success criteria
+      contains: One to three lines on what must be true, and which tests check each one.
+    - name: Mutant results
+      contains: How many mutants were killed out of those run on the changed lines, and which changed lines no test runs.
+    - name: New tests
+      contains: Tests added to catch surviving mutants, each confirmed to fail on a broken copy of your code.
+    - name: Base check
+      contains: The tests that pass on your change and fail on the old code.
+    - name: What is left
+      contains: Surviving mutants with a reason, anything not assessed, and the fast check command.
+    - name: report.md
+      contains: The full run report, saved in the .test-suite-audit folder of your project.

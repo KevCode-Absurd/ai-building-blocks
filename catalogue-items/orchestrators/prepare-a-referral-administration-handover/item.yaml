@@ -1,6 +1,6 @@
 slug: prepare-a-referral-administration-handover
 name: Prepare a referral administration handover
-summary: Share the source files. Get a referral status handover, missing confirmations and follow up drafts.
+summary: Hand over clinic referral paperwork. Get what was sent, received and booked, the missing confirmations and draft follow-ups, with no clinical detail.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -19,9 +19,9 @@ uses:
   - handover-note-writer
 steps:
   - uses: source-note-summariser
-    note: Extract only the administrative status and confirmation evidence needed for the handover, minimizing patient identifiers and retaining record references.
+    note: "Extract only the administrative status and confirmation evidence needed for the handover, minimizing patient identifiers and retaining record references. Hands step 2 one line per referral with its state and record reference."
   - uses: handover-note-writer
-    note: Prepare the administrator handover with pending confirmations, authorized contacts, deadline evidence and clinician escalation points; never reprioritize clinical care.
+    note: "Prepare the administrator handover with pending confirmations, authorized contacts, deadline evidence and clinician escalation points; never reprioritize clinical care. Uses step 1's referral lines with your brief of who takes over."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It follows a clear process but depends on local rules.
 new_slug: offboarding-plan-builder
 name: Offboarding plan builder
-summary: Give it a role and leave date. Get a checklist, exit interview
-  questions and handover plan. Not legal advice; check local rules.
+summary: Build an offboarding checklist for a leaving employee. Get tasks by owner, a handover plan and exit interview questions. Not legal advice.
 job: hire-people
 headline: Offboarding plan builder
-subhead: "A full exit plan for someone leaving, from notice day to their last
-  hour, so nothing gets missed. You give a role and a leave date and get a
-  checklist split by who does what: HR, the manager and IT."
+subhead: "A full exit plan for someone leaving, from notice day to their last hour, so nothing gets missed. You give a role and a leave date and get a checklist split by who does what: HR, the manager and IT."
 explain: |
   A full exit plan for someone leaving, from notice day to their last hour, so nothing gets missed. You give a role and a leave date and get a checklist split by who does what: HR, the manager and IT.
 
   The plan covers voluntary and involuntary exits, remote staff, and different roles such as manager, individual contributor or contractor. It adds a handover template so knowledge leaves with a plan, exit interview questions that dig for the real reasons, and wording for telling the team. It can also suggest how to track completion and keep in touch with former staff. This is not legal advice, so check local employment rules before acting.
 when:
   - Someone just gave notice and you need a checklist for their last four weeks.
-  - A senior person is leaving and you need a handover document for what only
-    they know.
+  - A senior person is leaving and you need a handover document for what only they know.
   - You want exit interview questions that get honest answers.
   - You must tell the team about a departure and want calm, clear wording.
+not_for:
+  - "You need legal advice on a dismissal or redundancy: ask an employment lawyer, as this gives a plan and not legal advice."
+  - "You want to write a job ad or plan a new hire: use a hiring or onboarding tool instead, as this only covers people leaving."
+  - "You need a signed separation agreement: ask a lawyer or your HR adviser to draft it, as this skill only gives a template outline."
 you_give:
   - The role and level of the person leaving
   - Their last day or notice period
@@ -30,7 +30,25 @@ you_get:
   - Exit interview questions
   - A script for telling the team
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI the role, the level and the last day. Say if the exit is voluntary or involuntary.
+  - Add your country if you want local rules in mind (optional).
+  - Ask for the checklist first. Then ask for the handover template, exit interview questions and team message.
+  - Check the result against your local employment rules before you act on it.
+output_sample:
+  input:
+    - The role and level of the person leaving
+    - Their last day or notice period
+    - Whether the exit is voluntary or involuntary
+    - Your country or location (optional)
+  output:
+    - name: Offboarding checklist
+      contains: "Tasks in time order from notice day to last day, each with an owner: HR, the manager or IT."
+    - name: Knowledge transfer template
+      contains: A form for the leaver to record what only they know, so the work can pass to others.
+    - name: Exit interview questions
+      contains: Questions that look for the real reasons someone is leaving, plus follow-ups for sensitive topics.
+    - name: Team announcement wording
+      contains: Calm, clear words for telling the team about the departure.
+    - name: Tracking and alumni tips
+      contains: Ways to track which tasks are done and to stay in touch with former staff.

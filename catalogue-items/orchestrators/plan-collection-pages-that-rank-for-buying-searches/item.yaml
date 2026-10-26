@@ -16,9 +16,9 @@ outputs:
   - {type: pdp_copy}
 uses: [store-keyword-validator, collection-page-planner, collection-page-seo-builder]
 steps:
-  - {uses: store-keyword-validator, note: "Tests your keyword ideas for buying intent, volume and difficulty, and names the page type and owner page for each keeper."}
-  - {uses: collection-page-planner, note: "Turns the chosen keywords into a build order for collection pages, with handles and links. Reads the keyword sheet you saved after the last step."}
-  - {uses: collection-page-seo-builder, note: "Writes the page text and search listing for that collection, using the keyword and products you chose from the plan."}
+  - {uses: store-keyword-validator, note: "Tests your keyword ideas for buying intent, volume and difficulty, and names the page type and owner page for each keeper. Hands the validated keyword report to the planner and the page writer."}
+  - {uses: collection-page-planner, note: "Turns the chosen keywords into a build order for collection pages, with handles and links. Reads the validated keyword report from step 1 and the keyword sheet and products you saved at the pause. Hands the collection plan to the page writer."}
+  - {uses: collection-page-seo-builder, note: "Writes the page text and search listing for that collection, using the collection, keyword and products you chose from the plan in step 2, and your review lines. Supporting keywords come from step 1's report."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/plan-collection-pages-that-rank-for-buying-searches/skeleton.yaml

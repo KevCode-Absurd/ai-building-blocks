@@ -1,6 +1,6 @@
 slug: tiktok-ads-account-auditor
 name: TikTok ads account auditor
-summary: Give it your TikTok Ads exports. Get a checked audit of your pixel, creative, audiences, Smart+ and Shop campaigns, bids and budgets.
+summary: "Find where your TikTok ad money leaks. Give it your TikTok Ads exports and get an audit of tracking, creative, bids and budgets, with proof."
 category: general
 boards: []
 type: skill
@@ -11,6 +11,8 @@ inputs:
   - type: performance_sheet
     required: true
   - type: brief
+    required: false
+  - type: audit_report
     required: false
 outputs:
   - type: audit_report

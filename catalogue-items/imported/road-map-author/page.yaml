@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds many linked road parts from a clear layout.
 new_slug: road-map-author
 name: Road map author
-summary: Describe the road layout. Get lanes, junctions, signs and signals built
-  as a RoadRunner HD map.
+summary: Describe your road layout and get a RoadRunner HD map built in MATLAB, with lanes, junctions, signs and signals for testing driving software.
 job: build-software
 headline: Road map author
-subhead: A road network built from your description as a RoadRunner HD map file,
-  with lanes, boundaries, markings, junctions, signs, signals, barriers and
-  parking. You get a scene that can be used to test automated driving.
+subhead: A road network built from your description as a RoadRunner HD map file, with lanes, boundaries, markings, junctions, signs, signals, barriers and parking. You get a scene that can be used to test automated driving.
 explain: |
   A road network built from your description as a RoadRunner HD map file, with lanes, boundaries, markings, junctions, signs, signals, barriers and parking. You get a scene that can be used to test automated driving.
 
@@ -18,19 +15,46 @@ when:
   - You are assembling a map from converted data and need the building pieces.
   - An existing map file throws errors from wrong property names.
   - You want a junction, signs and signals added to a road.
+not_for:
+  - "You need a map from a source file format only, such as Lanelet2 or OpenDRIVE: use a converter for that format, then use this skill to build the pieces."
+  - "You have no MATLAB or RoadRunner: ask a simulation engineer to build the road, or use a free road editor."
+  - "You want to draw a road by hand with a mouse: use the RoadRunner editor directly."
 you_give:
-  - A description of the road layout
-  - Source map data (optional)
-  - Which signs, signals or barriers to add (optional)
-  - MATLAB with RoadRunner access
+  - "Your road layout in plain words: lane count, lane width, road length and speed limit"
+  - Where roads meet and what each junction looks like
+  - Which signs, signals, barriers or parking to add (optional)
+  - Source map file and its coordinate system (optional)
 you_get:
   - A RoadRunner HD map (.rrhd) file
   - Lanes, boundaries and markings
   - Junctions, signs and signals
   - MATLAB scripts that built it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with RoadRunner.
+  - Check you have MATLAB with RoadRunner. Your AI must be able to run code, or you must run the scripts yourself.
+  - Paste the skill into your AI, or add its folder if your AI takes files.
+  - "Describe your road: lanes, widths, length, junctions, signs and signals. Add any source map file."
+  - Ask your AI to write the MATLAB scripts and run the checks before it writes the map file.
+  - Open the .rrhd file in RoadRunner and look at lanes, junctions and signs before you use it in a test.
+output_sample:
+  input:
+    - Your road layout in plain words, such as lanes, width and length
+    - Source map data (optional)
+    - Signs, signals or barriers to add (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the RoadRunner HD Map tools installed
+  output:
+    - name: Map build scripts (.m files)
+      contains: MATLAB code that builds each road part with the roadrunnerHDMap tools, in the order they must be built.
+    - name: Lanes and boundaries
+      contains: Lanes with correct direction, shared boundaries between lanes and centre lines with enough points.
+    - name: Markings
+      contains: Lane line markings placed with standard marking assets.
+    - name: Junctions
+      contains: Junction areas shaped from the roads that meet, with road ends snapped together.
+    - name: Signs, signals, barriers and parking
+      contains: The extra road items you asked for, placed on the map.
+    - name: Enforcement checks
+      contains: Checks on alignment, spatial fit and sizes that must pass before the map file is written.
+    - name: RoadRunner HD map (.rrhd)
+      contains: The finished map file you can open in RoadRunner and use in driving tests.

@@ -37,10 +37,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Outline the question.** Use the skill `research-question-outliner`. The sub-questions, what evidence would answer each, and what kind of source counts for this reader.
-2. **Find the sources.** Use the skill `scholarly-database-searcher`. Give it the outline. Searches of scholarly and public databases for each sub-question, with a shortlist of sources and a note on what each one shows and how strong it is.
-3. **Write the cited report.** Use the skill `cited-research-report-writer`. Give it the outline and the shortlisted sources. The report, answering each sub-question in turn, with a citation on every claim in a format the reader can follow back.
-4. **Check every claim.** Use the skill `unsupported-claim-spotter`. Give it the report and the sources. Every claim read against its cited source. Claims the source does not support are flagged and then fixed, softened or cut.
+1. **Outline the question.** Use the skill `research-question-outliner`. Turns your question into sub-questions, what evidence would answer each, and what kind of source counts for this reader. It hands over that outline.
+2. **Find the sources.** Use the skill `scholarly-database-searcher`. Give it the outline. Searches scholarly and public databases for each sub-question in the outline from step 1. It hands over a shortlist of sources, with a note on what each one shows and how strong it is.
+3. **Write the cited report.** Use the skill `cited-research-report-writer`. Give it the outline and the shortlisted sources. Writes from your question, with the outline's sub-questions as its angles and the shortlist from step 2 as its first sources. It hands over the report, answering each sub-question in turn, with a citation on every claim.
+4. **Check every claim.** Use the skill `unsupported-claim-spotter`. Give it the report and the sources. Reads every claim in the report from step 3 against its cited source. Claims the source does not support are flagged, then fixed, softened or cut. It hands over the claim check and the corrected report.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

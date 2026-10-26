@@ -2,34 +2,114 @@ thinking: medium
 thinking_why: It reads your code, then wraps it the way Apify expects.
 new_slug: apify-actor-converter
 name: Apify Actor converter
-summary: Give it an existing script or project. Get it ready to run as an Apify Actor.
+summary: Turn your existing script or scraper into an Apify Actor that runs in the cloud, with an input form, saved results and push steps.
 job: build-software
 headline: Apify Actor converter
-subhead: Give it an existing script or project. Get it ready to run as an Apify
-  Actor. Bring your existing code or project folder. Use the result to plan your
-  next step.
+subhead: Give it a script, command line tool or Crawlee project you already have. It adds the Apify setup files and code, tests it on your computer, then you push it to Apify. You get an Actor that runs in the cloud from an input form.
 explain: |
-  Your existing script or project, made ready to run as an Apify Actor so it can run in the cloud, take input from a form and give back structured results. You need an Apify account.
+  If your scraper or tool already works on your laptop, this converts it into an Apify Actor. An Actor is a small program that runs on Apify's cloud, takes its settings from a form and saves its results in a table. You keep your code. The skill adds the wrapper around it.
 
-  The skill follows an eight step list. It studies your project to find the language, entry point, inputs and outputs. It runs the Apify init command to create the Actor folders, then wraps your code with the Apify SDK start and finish steps in your language. It writes an input schema, an output schema if useful, and the metadata file. Then it tests locally with a sample input and pushes the Actor to Apify. It works for scripts, command line tools and Crawlee projects.
+  It first reads your project to find the language, the starting file, what goes in and what comes out. Then it runs the Apify setup command, adds the Apify start and finish lines in your language, and writes the input form file, the results file and the Actor settings file. It tests with a sample input before it pushes anything. It uses the Apify command line tool for the test run, because plain npm or Python runs skip Apify's storage setup.
+
+  Apify is a paid service, so check its current plans on apify.com before you push. This skill converts code you already have. To start a new Actor from an idea, use the Apify Actor builder.
 when:
-  - You have a scraper on your laptop and want it in the cloud.
-  - You want a command line tool to be usable by non-coders through a form.
+  - You have a scraper on your laptop and want it to run on a schedule in the cloud.
+  - A teammate who does not code needs to run your command line tool from a form.
   - You are moving a Crawlee project onto Apify.
-  - You want to publish your tool for others to run.
+  - You want to publish your tool in the Apify Store so others can run it.
+not_for:
+  - "You have only an idea for a scraper and no code yet: use the Apify Actor builder."
+  - "Your Actor already exists and you only need its results file described: use the Apify output schema writer."
+  - "The code must stay on your own servers: run it there directly. This skill is only for Apify's cloud."
+  - "You cannot run commands on your computer: ask a developer to do the steps with you."
 you_give:
-  - Your existing code or project folder
-  - What inputs it takes
-  - What it should output
-  - Apify account and token
+  - Your existing script or project folder
+  - What your code reads in, such as web links, file paths or settings
+  - What your code produces, such as rows, files or messages
+  - Your Apify account and a token you create in the Apify Console
+  - A small test input you know should work (optional)
 you_get:
-  - Your project wrapped as an Actor
-  - Input and output schema files
-  - Updated Actor settings file
-  - Local test and push steps
+  - Your project wrapped as an Apify Actor
+  - An input form file that lists every setting
+  - An output file that says where results are saved (when it helps)
+  - An Actor settings file with your name and description
+  - A local test run and the command to push it to Apify
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use the Apify command line tool.
+  - Make an Apify account and check the current plan and price. Install the Apify command line tool with npm or brew. A plain chat window cannot do this for you.
+  - Create a token in the Apify Console under Settings, then Integrations. Save it on your computer as APIFY_TOKEN. Do not paste it into the chat.
+  - Open an AI that can read your project folder and run commands, such as Claude Code. Paste this skill, then point it at your project.
+  - Tell it what your code takes in and gives back. Say if you want the results saved as rows or as files.
+  - Read the input form file before it tests. Check that each setting has a clear label and a safe default.
+  - Ask it to test with apify run and a small sample input. Check the saved results. Push with apify push when you are happy.
+how_it_works:
+  - title: Study the project
+    text: It finds the language, the starting file, the inputs, the outputs and whether the code keeps state between runs.
+  - title: Create the Actor folders
+    text: It runs the Apify setup command, which adds the .actor folder and a Dockerfile if there is none.
+  - title: Wrap your code
+    text: It adds the Apify start and finish lines for JavaScript, TypeScript or Python. For other languages it uses a small wrapper script.
+  - title: Write the schemas
+    text: It writes the input form, the output file if useful, and the Actor settings, then checks them against Apify's schemas.
+  - title: Test with the Apify tool
+    text: It runs apify run with a sample input and checks the results.
+  - title: Push to Apify
+    text: It runs apify push to upload and build the Actor. Pay-per-result pricing is optional and set up later in the Apify Console.
+output_shape: |
+  Project check
+    Language: <language>   Starting file: <file>
+    Takes in: <inputs>   Gives back: <outputs>
+  Files added or changed
+    .actor/actor.json: <name and description>
+    .actor/input_schema.json: <list of settings>
+    .actor/output_schema.json: <where results are saved> (if used)
+    Dockerfile: <added or already there>
+    <starting file>: <what changed>
+  Local test
+    Command: apify run --input '<sample input>'
+    Result: <rows or files saved, pass or fail>
+  Before you push
+    <checklist items still open>
+output_sample:
+  input:
+    - Your script, command line tool or Crawlee project folder
+    - What your code reads in and what it gives back
+    - Your Apify account and token
+    - A small sample input for the test run (optional)
+  prerequisites:
+    - An AI that can read your folder and run commands
+    - The Apify command line tool, installed and signed in
+    - An Apify account, which is a paid service
+  output:
+    - name: .actor/actor.json
+      contains: The Actor name, description and settings, plus a note on which AI tool made the change.
+    - name: .actor/input_schema.json
+      contains: Every setting your code accepts, with labels and defaults, shown as a form in the Apify Console.
+    - name: .actor/output_schema.json
+      contains: Where results are saved and how they are shown. Added only when it helps.
+    - name: Dockerfile
+      contains: How Apify builds and runs your Actor. Added when your project has none.
+    - name: Your starting file
+      contains: Your original code, wrapped with Apify start and finish lines and reading its input from Apify.
+    - name: Local test result
+      contains: What apify run produced from your sample input, and whether the results look right.
+    - name: Pre-push checklist
+      contains: Which files, schemas and tests are ready, and which still need attention before apify push.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your whole project and run the Apify command line tool for you.
+    - name: Any AI that runs code and files
+      why: The skill needs to run apify run and apify push, which a plain chat window cannot do.
+  inputs:
+    - A short note on who will run the Actor and what settings they should see
+    - A list of sites or limits your scraper must respect
+    - Any existing tests for your code
+terms:
+  - term: Actor
+    meaning: A small program packaged to run on Apify's cloud.
+  - term: Crawlee
+    meaning: A free toolkit for building scrapers in JavaScript and TypeScript.
+  - term: Input schema
+    meaning: A file that turns your settings into a form people fill in.
+  - term: Dataset
+    meaning: Apify's table of saved results, one row per item.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a fixed setup.
 new_slug: pre-commit-hook-setter
 name: Pre-commit hook setter
-summary: Point it at your repo. Get checks for formatting, types and tests that
-  run before every commit.
+summary: Set up pre-commit hooks in your Node repo. Staged files get formatted, then types and tests run before every commit.
 job: test-and-fix-code
 headline: Pre-commit hook setter
-subhead: Checks that run on their own before every commit, so broken or messy
-  code never reaches your repo. You point the skill at your project and it wires
-  everything up.
+subhead: Checks that run on their own before every commit, so broken or messy code never reaches your repo. You point the skill at your project and it wires everything up.
 explain: |
   Checks that run on their own before every commit, so broken or messy code never reaches your repo. You point the skill at your project and it wires everything up.
 
@@ -18,6 +15,10 @@ when:
   - Type errors reach the main branch.
   - You want tests to run before anything is saved to history.
   - You just started a Node project and want good habits early.
+not_for:
+  - "Your project is not a Node project with a package.json: set up your language's own hook tool, or ask a developer."
+  - "Your repo already runs Husky or lint-staged: edit the files you have instead of running this setup again."
+  - "You want a check that runs on the server after a push: set up a CI step with your code host instead."
 you_give:
   - A Node project folder
   - Preferred package manager (optional)
@@ -28,8 +29,30 @@ you_get:
   - Typecheck and test scripts
   - Short notes on how to use it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your project in an AI tool that can run commands and read your files, such as Claude Code. A plain chat window cannot do this.
+  - Paste the skill into the chat and ask your AI to set up pre-commit hooks.
+  - Tell it your package manager and your typecheck and test commands, if you know them.
+  - If your project has no typecheck or test script, the AI leaves that line out and tells you. Add the script, then add the line.
+  - Check the list of staged files before the AI makes the setup commit.
+  - Watch the first commit run the hooks. If it passes, the setup works.
+output_sample:
+  input:
+    - Your Node project folder, inside a git repo
+    - Your package manager, if you know it (optional)
+    - Your typecheck and test script names (optional)
+  prerequisites:
+    - An AI that can run commands and read your project files
+    - A project with a package.json and git set up
+  output:
+    - name: .husky/pre-commit
+      contains: The hook that runs lint-staged, then your typecheck script, then your test script before each commit.
+    - name: .lintstagedrc
+      contains: A rule that runs Prettier on every staged file and skips files it cannot read.
+    - name: .prettierrc
+      contains: Default format rules, made only if your project has no Prettier config.
+    - name: package.json changes
+      contains: New dev tools for Husky, lint-staged and Prettier, plus a prepare script that sets up Husky.
+    - name: Check list
+      contains: A tick list showing the hook, config files and prepare script exist, and that lint-staged runs.
+    - name: Setup commit
+      contains: One commit of the new files, which also acts as the first test of the hook.

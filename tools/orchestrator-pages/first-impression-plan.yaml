@@ -1,6 +1,6 @@
 new_slug: first-impression-plan
 name: Make a strong first impression and build the relationship
-summary: Name who you are about to meet. Get a brief, a meeting plan, a memory card and an honest thank-you note.
+summary: Plan a first meeting with someone new and keep the relationship going. Get a brief, a meeting plan, a memory card and a thank-you note.
 job: speak-and-persuade
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to meet a senior person, a new contact or a buyer.
   - You go to events and forget most of the people you meet.
   - You owe someone a follow-up and want it to be about them.
+not_for:
+  - "You are messaging a cold list of strangers with no reason to contact them: send a plain intro message instead."
+  - "You only want to learn about one person before a call: use the Meeting brief writer."
+  - "You need to ask for a sale or a decision: use a sales next-step plan, since this workflow keeps any ask out of the note."
 you_give:
   - The person's name and role, and why you are meeting
   - Anything public about them, such as a site, talk or post (optional)
@@ -29,6 +33,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give the person's name and why you are meeting. It plans the meeting and saves the result.
   - Have the meeting. Write your notes within an hour, then bring them back to make the card and the note.
+output_sample:
+  input:
+    - The person's name and role, and why you are meeting
+    - Anything public about them, such as a site, talk or post (optional)
+    - Where and how long you will meet
+    - Your rough notes after the meeting, with the name as spelled and anything you promised
+  prerequisites:
+    - An AI that can keep files, such as Claude Code or a Claude Project, to follow HANDOFF.md
+  output:
+    - name: "Step 1: The brief"
+      contains: What they care about, the people around them, two honest admirations, the one question only they can answer and the size of your ask.
+    - name: "Step 2: The meeting plan"
+      contains: The first ten seconds, questions in three layers, listening rules, two true appreciations and the close.
+    - name: "Step 3: The memory card"
+      contains: The name as spelled, what they shared, promises with dates, the next touch and dates for your calendar.
+    - name: "Step 4: The thank-you note"
+      contains: A short note with one specific true appreciation, the detail used and any ask moved to a later message.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and every MISSING line in one list.
 how_it_works:
   - title: Learns what they care about
     text: Gathers public facts with their sources, ranks what they treasure, notes the people around them and picks two honest admirations.

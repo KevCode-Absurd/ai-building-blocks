@@ -1,0 +1,168 @@
+name: Ad creative strategist agent for Google and Meta ads
+summary: Get Google search ad headlines, Meta ad text and a test plan from your offer and buyer. Draft ads for Google, Meta and Performance Max to review.
+headline: Ad creative strategist agent for Google and Meta ads
+subhead: Paste your offer, buyer and any past ad results. It drafts responsive search ad headlines, Meta ad text and Performance Max text, then plans the tests that show which wins. You review every line before it runs.
+job: write-ad-copy
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  When the platform picks your bids, budget and audience, the ad itself is the
+  one thing you still control. This ad creative strategist agent treats every
+  headline and description as a test, not a guess. It writes ad copy for Google
+  search, Meta and Performance Max, and it plans how to tell which version
+  works.
+
+  It starts from what you know. If you share past results, it reads them first
+  to see what works and what is wearing out. If you do not, it says so and
+  writes from your offer and buyer alone. For Google search it builds a full
+  set of 15 headlines across five jobs: brand, benefit, feature, call to action
+  and proof. It checks that any headline can sit next to any description and
+  still read well, and that each fits the character limit. For Meta it writes
+  the text, headline and description, plus a hook, body and call to action for
+  video.
+
+  It writes drafts only. It cannot see your account unless you paste exports or
+  connect a tool, and it will not publish or change a live ad. The profile
+  lists targets, such as click rate lifts. They are goals from its author, not
+  results from AI Blocks.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide.
+when:
+  - You launch a new Google search campaign and need a full set of responsive search ad headlines and descriptions.
+  - Your Meta ads are getting tired and you need fresh text and hooks to test against them.
+  - You are building a Performance Max asset group and need the text assets.
+  - You have one offer and need it adapted for Google, Meta and Performance Max.
+not_for:
+  - You only want Facebook and Instagram ad text and video scripts. Use the Meta ad copywriter.
+  - You want your results checked for waste first. Use the Paid Media Auditor agent.
+  - You want to plan the campaign structure, bids and budget. Use the PPC Campaign Strategist agent or the Paid Social Strategist agent.
+  - You want ad lines built only on facts and reviews. Use the Fact-based ad copy writer.
+  - You want one clean A/B test between two ads. Use the Two-version ad test planner.
+you_give:
+  - Your product or service, the offer and the price or terms
+  - Who you sell to and what they worry about
+  - The platforms, such as Google search, Meta or Performance Max
+  - Past ad copy and results, as an export or pasted rows (optional)
+  - Claims you can prove, and rules for your field, such as health or finance (optional)
+  - Competitor ads or your landing page text (optional)
+you_get:
+  - Three to five ad angles, each tied to a buyer worry
+  - A Google search headline set in five jobs, with descriptions and character counts
+  - Meta text, headlines, descriptions and video hooks
+  - Performance Max text assets (if you chose it)
+  - A test plan with one idea per test, what wins and how long to run
+  - A list of claims to prove and rules to check before you publish
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your offer, buyer and platforms. Add past ads and results if you have them.
+  - Type "Write a full responsive search ad set and a Meta text set for this offer".
+  - Check every headline against the character limit and every claim against your proof. Fix any claim you cannot back up.
+  - Paste the ads into the platform yourself. Ask it for a test plan before you launch.
+how_it_works:
+  - title: Read what works now
+    text: It reads any results you share to see which ads win and which are fading.
+  - title: Pick the angles
+    text: It matches each angle to a buyer worry and the stage the buyer is at.
+  - title: Write the Google set
+    text: It builds 15 headlines across brand, benefit, feature, call to action and proof, plus descriptions that fit any pairing.
+  - title: Write the Meta and Performance Max set
+    text: It writes Meta text, headline and description, video hooks and Performance Max text assets.
+  - title: Plan the tests
+    text: It sets one idea per test, a win rule and a run length, and says when results are too thin to call.
+  - title: Check claims and rules
+    text: It flags claims you must prove and rules for your field, and checks the ad against the landing page.
+output_shape: |-
+  AD ANGLES
+    <angle> | <buyer worry it answers> | <proof needed>
+
+  GOOGLE SEARCH SET
+    Headlines (30 characters or fewer)
+      Brand: <headline> (<count>)
+      Benefit: <headline> (<count>)
+      Feature: <headline> (<count>)
+      Call to action: <headline> (<count>)
+      Proof: <headline> (<count>)
+    Descriptions (90 characters or fewer)
+      <description> (<count>)
+
+  META SET
+    <angle> | Primary text: <text> | Headline: <text> | Description: <text>
+    Video: Hook <line> | Body <line> | Call to action <line>
+
+  PERFORMANCE MAX TEXT
+    <asset type> | <text>
+
+  TEST PLAN
+    <idea tested> | <versions> | <win rule> | <run length>
+
+  CLAIMS AND RULES TO CHECK
+    <claim or rule> | <proof or source needed>
+
+  OPEN QUESTIONS
+    <question> | <what changes the answer>
+output_sample:
+  input:
+    - Your product or service, offer and terms
+    - Who you sell to and what worries them
+    - Your platforms, such as Google, Meta or Performance Max
+    - Past ads and results (optional)
+    - Claims you can prove and rules for your field (optional)
+  prerequisites:
+    - Claude, ChatGPT or Gemini
+    - Your own login to Google Ads or Meta Ads Manager to publish the ads
+  output:
+    - name: Ad angles
+      contains: Three to five angles, each matched to a buyer worry and the proof it needs.
+    - name: Google search set
+      contains: Fifteen headlines across five jobs and descriptions, each with its character count.
+    - name: Meta set
+      contains: Primary text, headline and description for each angle, plus video hooks.
+    - name: Performance Max text
+      contains: Text assets for your asset group, if you picked Performance Max.
+    - name: Test plan
+      contains: One idea per test, the win rule and the run length.
+    - name: Claims and rules to check
+      contains: Claims to prove and field rules to check before you publish.
+    - name: Open questions
+      contains: Facts it lacked, such as price or proof, that change the ads.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A long chat keeps your offer, buyer and past results in view while it writes each set.
+    - name: A chat with your ad export attached
+      why: A CSV of ad-level results lets it see which ads are fading before it writes new ones.
+  inputs:
+    - Ad-level results for the last 30 to 90 days, with ad text.
+    - Your top three buyer objections in their own words.
+    - The landing page text, so each ad matches the page it leads to.
+terms:
+  - term: Responsive search ad
+    meaning: A Google ad where you give many headlines and descriptions and Google mixes them.
+  - term: Performance Max
+    meaning: A Google campaign type that shows your ads across Google using the assets you give it.
+  - term: Asset group
+    meaning: The set of text, pictures and videos that a Performance Max campaign uses.
+  - term: Hook
+    meaning: The first line or second of a video ad, meant to stop the scroll.
+  - term: Creative fatigue
+    meaning: When an ad stops working because the same people have seen it too often.
+  - term: Message match
+    meaning: When the ad and the page it leads to say the same thing.
+tweaks:
+  - what: Platform
+    how: Name one platform to get only that set, such as Google search only.
+  - what: Volume
+    how: Ask for 20 or more variations when you need a batch to test.
+  - what: Field rules
+    how: Name your field, such as health, finance, education or legal, so it flags what those platforms restrict.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It matches checks to specific skills.
 new_slug: history-thinking-quiz-designer
 name: History thinking quiz designer
-summary: Say which history skills you teach. Get short checks that show how your
-  learners source, read, place and compare evidence.
+summary: Design a history thinking quiz that shows how your students source, read, place and compare evidence. Give your skills and topic. Get short tasks.
 job: teach-and-train
 headline: History thinking quiz designer
-subhead: "Short tasks that show how your learners actually think about
-  historical evidence, not just what facts they remember. Pick the skills you
-  teach: checking who wrote a source, reading its language, placing it in its
-  time, or comparing it with other accounts."
+subhead: "Short tasks that show how your learners actually think about historical evidence, not just what facts they remember. Pick the skills you teach: checking who wrote a source, reading its language, placing it in its time, or comparing it with other accounts."
 explain: |
   Short tasks that show how your learners actually think about historical evidence, not just what facts they remember. Pick the skills you teach: checking who wrote a source, reading its language, placing it in its time, or comparing it with other accounts.
 
@@ -19,6 +15,10 @@ when:
   - You need a quick check after a unit on sources.
   - Students pass fact tests but struggle to argue from evidence.
   - You want an assessment that does not just reward memory.
+not_for:
+  - "You only want to test recall of dates and facts: write a simple fact quiz yourself, or use a standard quiz tool."
+  - "Your learners have not met source analysis yet: teach sourcing first, then come back to check it."
+  - "You want a full lesson, not a check: plan the lesson yourself, then use this to test what stuck."
 you_give:
   - The skills you teach
   - Topic and age group
@@ -30,7 +30,24 @@ you_get:
   - What each answer tells you to teach
   - Notes on fairness and validity
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - "Tell your AI which skills to check: sourcing, close reading, contextualisation, corroboration, or all four."
+  - Add your students' age group and level, and what you want to learn from the check.
+  - Add your topic, format and time limit if you have them (optional).
+  - Read each task and its answer guide. Check that the artefact suits your class before you use it.
+  - Use the weak, partial and strong answer notes to plan what to teach next.
+output_sample:
+  input:
+    - The history skills you want to check, such as sourcing or contextualisation
+    - Your students' age group and level
+    - What you want to learn from the check
+    - Your topic, format and time available (optional)
+  output:
+    - name: Task 1
+      contains: A short task built on a real artefact, with a prompt that shows how the student thinks.
+    - name: Task 2
+      contains: A second task aimed at another chosen skill, with its own artefact and prompt.
+    - name: Diagnostic Value
+      contains: What weak, partial and strong answers look like, and what each tells you to teach next.
+    - name: Validity Notes
+      contains: Warnings about where a task may measure reading level or background knowledge instead of historical thinking.

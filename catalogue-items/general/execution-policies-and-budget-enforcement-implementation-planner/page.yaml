@@ -1,38 +1,124 @@
 new_slug: execution-policies-and-budget-enforcement-implementation-planner
 name: Agent spending cap builder
-summary: Build budget reservation rules, hard stops and cost tracking code.
+summary: Plan hard spending caps for your AI agents. Hold cost before each call, stop at the limit and report real spend. Draft code only.
 job: build-software
 headline: Agent spending cap builder
-subhead: Share action policy matrix, daily caps, reserved spend and recorded costs. Get budget reservation rules, hard stops and cost tracking code.
+subhead: Give it your agents, their daily and monthly caps and the time zone your day starts in. It reads a starter budget module and report queries, lists what they get wrong and plans the fix. You get a policy table, reserve and stop rules, reports and tests. Nothing is run.
 explain: |-
-  Share action policy matrix, daily caps, reserved spend and recorded costs. Get budget reservation rules, hard stops and cost tracking code.
+  An AI agent that loops can spend a month's budget in an afternoon. A simple check of spend so far does not stop it. Two calls at the same moment can both pass, because neither has been counted yet. A budget tool with no cap set can also allow everything, so a missing row means no limit.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill plans an agent spending cap that closes those gaps. Before each paid call it holds the most the call could cost against the agent's cap, in one step. After the call it swaps the held amount for the real cost. At the warning level it tells a named person. At the cap it denies new calls, pauses the agent and keeps an incident record. Only a person restarts it.
+
+  It starts from a starter budget module and a set of report queries, and it does not trust them. It finds the mismatches. The day is defined three different ways. Table names do not match. One report column name may break in Postgres. Then it plans the fixes. It does not call a model or touch your database. To record each call's tokens and cost, use the Agent AI call cost tracker builder.
 when:
-  - You need budget reservation rules, hard stops and cost tracking code.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - You run several AI agents and want a hard daily and monthly limit for each one.
+  - An agent got stuck in a loop, or you fear one will, and you want it stopped automatically.
+  - You want a report of spend by agent, by job and by client that you can check against the invoice.
+  - You have a starter budget module and need to know what it is missing before you rely on it.
+not_for:
+  - You want to record the tokens and cost of every AI call. Use the Agent AI call cost tracker builder. This skill sets the limits.
+  - You want to plan who must approve an action, such as a refund or an email send. Use the Agent action approval builder.
+  - You have one script and one provider. Use the provider's own billing alert and budget cap instead.
+  - You want it to create tables or pause agents for you. It drafts the code and rules. You run them on a copy first.
 you_give:
-  - Action policy matrix, daily caps, reserved spend and recorded costs
+  - Your agents, and what each one pays for, such as model calls or paid tools
+  - A daily and a monthly cap for each agent and one for the whole system, in one currency
+  - The time zone in which your day starts, so the daily cap resets at the right moment
+  - The provider's current prices, taken from its price page
+  - Who may raise a cap or restart a stopped agent
+  - Your current database tables for calls and limits (optional)
 you_get:
-  - Budget reservation rules, hard stops and cost tracking code
-  - A failure checklist and synthetic test cases
+  - A list of gaps in the starter files, each with a fix
+  - A policy table with the cap, warning level and hard stop for each agent
+  - Reserve-and-settle steps and the error each refusal returns
+  - Warning and hard-stop rules with an incident record
+  - Report views for spend by agent, job, client and model
+  - Test cases, including two calls at the same moment
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in an AI that can read your code, such as Claude Code or Codex. A chat AI works if you paste the files in.
+  - Paste your agent list, caps, time zone and who may restart an agent. Get prices from each provider's price page. Never paste an API key.
+  - Read GAPS IN THE STARTERS first. Mark each one as a problem for you or not.
+  - Check the POLICY MATRIX against what you want. Check who can raise each cap and what happens at the limit.
+  - Run the draft code and the test cases on a copy of your database. This skill never runs anything.
+  - Compare one real day of report totals with the provider's invoice before you trust them.
 how_it_works:
-  - title: Step 1
-    text: Read the action policy before execution.
-  - title: Step 2
-    text: Reserve the worst allowed cost atomically before a call.
-  - title: Step 3
-    text: Deny missing or exceeded caps.
-  - title: Step 4
-    text: Reconcile the reservation with actual cost.
-  - title: Step 5
-    text: Record the operation tag.
-  - title: Step 6
-    text: Pause new work on a hard stop while preserving incident evidence.
+  - title: Finds the gaps in the starters
+    text: Checks the pre-call test, the missing-cap rule, how a day is defined and the table names in the reports.
+  - title: Writes the policy matrix
+    text: Sets the cap, warning level, hard stop and raise-the-cap rule for each agent and action.
+  - title: Reserves before each call
+    text: Holds the worst cost the call may reach against the cap in one step, so two calls cannot both pass.
+  - title: Settles after the call
+    text: Replaces the held amount with the real cost, and marks a failed call UNKNOWN until the invoice confirms.
+  - title: Warns, then stops
+    text: Tells a named person at the warning level. At the cap it denies new calls, pauses the agent and records the incident.
+  - title: Plans reports and tests
+    text: Adapts five spend views with one definition of a day, and writes test cases on made-up amounts.
+output_shape: |-
+  BASIS
+  <what was read; nothing was run>
+  MISSING: <inputs and what each stops>
+
+  GAPS IN THE STARTERS
+  <#> | <what it does> | <why it matters> | <fix>
+
+  POLICY MATRIX
+  <agent> | <action> | <daily cap> | <monthly cap> | <warn at> | <hard stop> | <who can raise> | <approval needed>
+
+  RESERVE AND SETTLE
+  <step> | <what happens> | <where in your code> | <error returned>
+
+  WARNINGS AND HARD STOP
+  <event> | <what is recorded> | <who is told> | <what is blocked> | <who restarts>
+
+  REPORTS
+  <view> | <question it answers> | <window used>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your agents, and what each one pays for
+    - A daily and a monthly cap for each agent, and the time zone your day starts in
+    - The provider's current prices, and who may raise a cap or restart an agent
+  prerequisites:
+    - An AI that can read your code files, or code pasted into the chat
+    - A database that stores AI calls, or the starter layout to build one
+  output:
+    - name: Gaps in the starters
+      contains: What the starter budget code and report queries get wrong, why it matters and the fix for each.
+    - name: Policy matrix
+      contains: For each agent and action, the caps, the warning level, the hard stop and who can raise it.
+    - name: Reserve and settle
+      contains: The steps of one paid call, from holding the cost to settling the real one, with the error each returns.
+    - name: Warnings and hard stop
+      contains: What is recorded, who is told and what is blocked at each level, and who restarts the agent.
+    - name: Reports
+      contains: Five spend views, what each answers and the one meaning of a day they all use.
+    - name: Test cases
+      contains: Cases such as a call just over the cap, two calls at once and an agent with no cap.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your wrapper, the starter module and your tables together and proposes exact edits.
+    - name: Supabase
+      why: The report queries are written for Postgres, which Supabase uses.
+  inputs:
+    - A day of real call logs, so the estimates come from your own use
+    - The provider's invoice for one day, to check the report totals
+terms:
+  - term: Cap
+    meaning: The most an agent may spend in a day or a month.
+  - term: Reserve
+    meaning: Setting aside the most a call could cost before it runs, so the cap cannot be passed.
+  - term: Hard stop
+    meaning: At the cap, new calls are denied and the agent is paused until a person restarts it.
+  - term: Settle
+    meaning: Replace the held amount with the real cost after the call finishes.
+  - term: Incident record
+    meaning: A saved note of a stop, with the amount seen, the limit, the time and who restarted the agent.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

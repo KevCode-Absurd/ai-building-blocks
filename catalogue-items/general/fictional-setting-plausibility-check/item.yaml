@@ -1,0 +1,61 @@
+slug: fictional-setting-plausibility-check
+name: Fictional setting plausibility check
+summary: Share your setting and its rules. Find weak links between land,
+  resources, trade and daily life.
+category: general
+boards: []
+type: prompt
+role: check
+job: copy
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: academic/academic-anthropologist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-anthropologist.md
+  licence: MIT
+  original_name: Anthropologist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 2668602164abf574cb4e432a0cd40727a943de0b59864abb5b73956a0eb26146
+  adapter: AI Blocks selective task adaptation
+  derived_from: &a1
+    - agency-academic-anthropologist
+    - agency-academic-geographer
+    - agency-academic-historian
+credits:
+  - title: Anthropologist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-anthropologist.md
+    used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
+      profile retained only as provenance/background.
+  - title: Geographer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-geographer.md
+    used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
+      profile retained only as provenance/background.
+  - title: Historian
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-historian.md
+    used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
+      profile retained only as provenance/background.
+package_files: all
+version: 1.0.0
+example_pending: true
+agency_curated:
+  candidate: fictional-world-plausibility-review
+  review: reports/2026-10-25-agency-curation-specialist.json
+  formatReason: A bounded one-pass review of a supplied setting sheet is suited to
+    a pasteable prompt. Three source profiles contribute complementary checks to
+    one outcome; three separate clones or a long staged workflow would add
+    friction.
+  sourceProfiles: *a1

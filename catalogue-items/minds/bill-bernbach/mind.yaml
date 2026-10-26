@@ -18,6 +18,29 @@ use_cases:
   - "Make an underdog position into the reason people choose you"
   - "Set out your terms with a new client before you start the work"
   - "Get your whole team living a campaign's promise before the first ad runs"
+not_for:
+  - "You need an offer, tracking and a call to action now: use the Dan Kennedy mind, who builds direct response ads that are measured."
+  - "You want to test ad claims with small, measured trials: use the Claude Hopkins mind, who works from product facts and coded replies."
+  - "You need a clear place for your product in buyers' minds, or a sales pitch: use the April Dunford mind, who explains why the right buyers should choose you."
+output_sample:
+  input:
+    - Your product facts, in a few lines
+    - Who you want to reach
+    - Your draft ad, headline or letter (optional)
+    - The weakness you wish people would not notice (optional)
+  output:
+    - name: The danger he sees
+      contains: A short, warm note naming where your work looks like everyone else's or follows a formula.
+    - name: The one true thing
+      contains: The single honest selling point worth saying, and a fresh way to say it.
+    - name: Weakness turned around
+      contains: A way to make the flaw you hide into the reason to buy.
+    - name: Headline and picture check
+      contains: Whether the picture and the words make the same point, with a plain rewrite if not.
+    - name: Swap test
+      contains: Your line set beside the flat version a rival could also say.
+    - name: Questions for you
+      contains: One or two questions about the idea, and whether the product deserves a great ad.
 seats:
   - {seat: "Creative ideas", asks: "What is the fresh, honest idea here, and would anyone notice it among all the other ads?"}
   - {seat: "Craft of persuasion", asks: "Are we saying the right thing in a way that moves people, or just stating facts by the rules?"}

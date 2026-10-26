@@ -1,6 +1,6 @@
 new_slug: factory-shortlist-vetter
 name: "Supplier shortlist vetter"
-summary: "Give it your spec and factory answers. Get each scored out of 100, red flags and a pick."
+summary: "Vet a factory shortlist before you pay a deposit. Give it your spec and each factory's answers. You get scores out of 100, red flags and a pick."
 job: plan-supply-chain
 thinking: high
 thinking_why: "It weighs many small signals and spots gaps in what factories say, so a stronger model catches more red flags."
@@ -17,6 +17,10 @@ when:
   - You need a first factory for a new product and have a list of listings to sort.
   - Your current factory is slow, raises prices, or you rely on it for most of your volume.
   - You are signing a supply deal and want terms that protect you.
+not_for:
+  - "You have no factory contacts yet and only one product idea: find a few listings first, then come back to vet them."
+  - "You make a regulated product, such as food or cosmetics: have a compliance specialist lead, and use this to compare factories only."
+  - "You already have a sample and want to judge its quality: use the sample approval gatekeeper."
 
 you_give:
   - Your tech pack or product spec
@@ -33,9 +37,33 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your spec and the list of factories with everything they have said so far. Say your order size and budget.
-  - Send the outreach message, hold the video calls, and paste the answers back.
-  - Read the scores and red flags. Ask finalists for samples, and score those with the sample approval gatekeeper.
-  - If one supplier carries most of your volume, run the dependency check and start on the backup plan.
+  - Send the outreach message, hold the video calls, and paste the answers back. No code or paid tool is needed.
+  - Read the scores and red flags. Ask finalists for samples, then check them with the sample approval gatekeeper.
+  - If one supplier carries most of your volume, add your share of volume per supplier and start on the backup plan.
+output_sample:
+  input:
+    - Your tech pack or product spec
+    - The factories you found, with links, their answers and any certificates
+    - Your target order size and budget
+    - Your products by supplier and each supplier's share of volume (optional)
+    - Contract terms such as price, capacity and payment terms (optional)
+  output:
+    - name: SHORTLIST
+      contains: The factories to contact, each with a link and the reason it made the list, plus the message to send.
+    - name: VIDEO CALL QUESTIONS
+      contains: What to ask each finalist on a call or site walk-through.
+    - name: RED FLAGS
+      contains: Warning signs to watch for in answers, documents and calls.
+    - name: SCORES
+      contains: Each factory scored out of 100 on four parts of 25 points, with a one-line reason.
+    - name: PICK and BACKUP
+      contains: The factory to move forward with, the next step, and a second supplier to keep warm.
+    - name: DEPENDENCY MAP
+      contains: Each product by supplier and share of volume, with a low, medium or high risk rating.
+    - name: TERMS TO ASK FOR
+      contains: Contract terms to request, such as continued supply on a sale and first right to open inventory.
+    - name: CHECKS MISSED and MISSING
+      contains: Checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Builds the shortlist

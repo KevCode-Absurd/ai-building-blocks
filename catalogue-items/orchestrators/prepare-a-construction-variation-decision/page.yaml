@@ -1,52 +1,88 @@
 new_slug: prepare-a-construction-variation-decision
 name: Prepare a construction variation decision
 headline: Prepare a construction variation decision
-summary: Share the source files. Get a variation comparison, arithmetic review and decision brief.
+summary: Check a construction variation against the signed contract and prices. Get a clause map, a recomputed cost check and a decision brief.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A variation comparison, arithmetic review and decision brief. Share the actual variation request, signed contract, priced scope, schedule impact evidence and delegated approval rules. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the variation request, the signed contract and the priced scope. It maps the contract's change clauses, recomputes the cost and drafts a decision brief. Signed scope stays apart from the proposed change, and nothing is approved for you.
 explain: |-
-  A variation comparison, arithmetic review and decision brief.
+  A contractor sends a variation with a price and a time claim. The risk is treating the request as an approval. Work starts, and later nobody can show who agreed to what, or for how much. This workflow helps you prepare a construction variation decision before anyone replies.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Proposed scope is separate from signed scope; cost and time claims trace to evidence and no variation is approved. Missing tools or evidence stay visible in the final summary.
+  It runs three skills in order. The Plain-words contract summary finds the contract's change, notice, approval and price clauses, with clause numbers. The Invoice totals checker recomputes the quantities and rates in the request and lists excluded charges. The Stakeholder update writer turns both into a decision brief.
+
+  Signed scope and proposed scope stay in separate lines. Each cost and time claim names its source or is marked unproven. The AI does not approve, price or give legal advice. A person with authority decides.
 when:
-  - You need a variation comparison, arithmetic review and decision brief.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A subcontractor sends a priced variation and you must decide before you reply.
+  - A site manager says "we need to do some extra work" and no one has checked it against the contract.
+  - The owner asks why a variation is on hold, and you need the evidence on one page.
+  - You must brief the person who can approve it, in a short page.
+not_for:
+  - "You want to track one variation through revised versions and record each approval as it arrives: use the Construction variation cost and approval tracker."
+  - "The work is a client service project, not building work: use Prepare a client scope change brief."
+  - You want a lawyer's or quantity surveyor's view of what the clauses mean. This finds the clauses and lists questions. A professional reads them.
+  - There is no signed contract or priced scope yet. Get those first, because there is nothing to compare against.
 you_give:
-  - The actual variation request, signed contract, priced scope, schedule impact evidence and delegated approval rules.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The variation request, with its date and version (from the contractor)
+  - The signed contract, or its clauses on changes, notice, approval and pricing
+  - The priced scope, such as a bill of quantities or rate schedule
+  - Evidence for any time claim, such as a program or delay notice (optional)
+  - Who may approve what amount in your organisation (optional)
 you_get:
-  - A variation comparison, arithmetic review and decision brief.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A clause map: where the contract covers changes, notice, approval and pricing, with clause numbers"
+  - "A cost check: each quantity and rate recomputed, with excluded charges and unmatched units listed"
+  - A decision brief that puts signed scope beside the proposed change
+  - Each cost and time claim marked proven or unproven, with its source
+  - Gaps, open questions and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste or attach the variation request, the contract and the priced scope. Say who will read the brief and by when.
+  - Read the clause map first. Check each clause number against your contract.
+  - Check the cost table. Each stated figure should sit beside the recomputed one.
+  - Read the unproven lines before the brief goes to the person who decides. Nothing here is approved, so get a written approval before work starts.
 how_it_works:
   - title: Plain-words contract summary
-    text: Locate the contract change procedure, notice, approval and pricing provisions with clause references; leave interpretation to the responsible professional.
+    text: Finds the change, notice, approval and pricing clauses, each with its clause number. Marks anything vague as unclear. Hands step 2 the clause map. Check before moving on, every clause shown has a number.
   - title: Invoice totals checker
-    text: Recompute the supplied variation quantities and rates against the priced request; expose excluded charges and unmatched units.
+    text: Recomputes each quantity times its rate, and the totals, in the request. Lists excluded charges and units that do not match the priced scope. Hands step 3 the cost table. Check before moving on, every difference shows both figures.
   - title: Stakeholder update writer
-    text: Draft a decision brief showing baseline versus proposed change, approval status, cost and schedule evidence, and unresolved questions.
+    text: "Drafts the decision brief: signed scope against the proposed change, cost and time evidence, approval status and open questions."
+  - title: Check and hand back
+    text: Joins the three files, names who may decide, and lists every gap and every check that did not run.
 output_shape: |-
-  Scope and source coverage
-  A variation comparison, arithmetic review and decision brief.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCES <what was reviewed, with the version and date of each source>
+  CLAUSE MAP <topic | clause number | plain-words line | UNCLEAR>
+  COST CHECK <item | quantity | rate | stated total | recomputed total | difference>
+  EXCLUDED CHARGES AND UNMATCHED UNITS <each one, with its source>
+  DECISION BRIEF <decision needed | signed scope | proposed change | cost and time evidence | approval status | open questions>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - Your variation request, with its date and version
+    - Your signed contract
+    - Your priced scope, such as a bill of quantities
+    - Evidence for any time claim (optional)
+    - Your approval limits (optional)
+  prerequisites:
+    - An AI that can read files or long pasted text
+    - The three component skills, which come in the pack
+  output:
+    - name: Clause map
+      contains: The contract's change, notice, approval and pricing clauses, each with its number and a plain-words line.
+    - name: Cost check
+      contains: Each quantity and rate recomputed beside the stated figure, with excluded charges and unmatched units.
+    - name: Decision brief
+      contains: Signed scope against the proposed change, cost and time evidence, approval status and open questions.
+    - name: Hand-back summary
+      contains: The files saved, steps run or skipped, missing items and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Proposed scope is separate from signed scope; cost and time claims trace to evidence and no variation is approved.
+  - what: One variation
+    how: Run one variation at a time. Add a second only if it touches the same clauses.
+  - what: Approval limits
+    how: Add who can approve what amount. The brief then says who must decide at this price.
+  - what: Reader
+    how: Say who reads the brief, such as the owner or a lender. The brief is cut to what they need.
 judge:
   - Proposed scope is separate from signed scope; cost and time claims trace to evidence and no variation is approved.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +95,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the signed contract and your approval limits with the pack so every run uses the same rules.
+  - When a revised variation arrives, run the pack again with the new version and keep both briefs.
+  - Ask a quantity surveyor or lawyer to read the clause map once, and keep their corrections with your notes.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads the contract, the request and the price list together. Claude takes the longest contracts.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A bill of quantities or rate schedule, ideally as a spreadsheet.
+    - Your approval limits, written down.
 terms:
+  - term: Variation
+    meaning: A change to the work after the contract is signed, such as extra work or a different material.
+  - term: Signed scope
+    meaning: The work and price the contract already covers.
+  - term: Bill of quantities
+    meaning: A priced list of the work items and amounts in the contract.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

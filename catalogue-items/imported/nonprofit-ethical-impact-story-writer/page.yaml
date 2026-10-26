@@ -1,12 +1,19 @@
 new_slug: nonprofit-ethical-impact-story-writer
 name: Write an ethical nonprofit impact story
-summary: Write impact stories that respect each person. Use checked facts, clear consent and a path to review or withdraw.
+summary: Write an ethical nonprofit impact story from true interview notes. Get a draft that respects the person, plus a consent and review checklist.
 job: write-and-tell-stories
 headline: Write an ethical nonprofit impact story
 subhead: Bring true interview notes and the person’s consent terms. Draft a story with them, check their agency and route it for their review.
 explain: Bring true interview notes and the person’s consent terms. Draft a story with them, check their agency and route it for their review.
 when:
-  - You want to write an ethical nonprofit impact story.
+  - You are writing a client or beneficiary story for a gala, newsletter, grant or web page.
+  - A draft feels like the charity is the hero and you want to fix it.
+  - You need a consent and review process before you publish a story about a real person.
+  - You are training staff or volunteers to talk about clients in public.
+not_for:
+  - "You need a donation page that converts: use a donation page copywriter, not this story writer."
+  - "You need to lay out an annual report: write the story here, then pass it to an annual report tool or your designer."
+  - "You need brand voice or key messages for the whole charity: use a brand messaging guide first, then come back to write the story."
 you_give:
   - Placement, purpose and verified interview notes
   - Participant consent scope, review preferences and approved details
@@ -14,9 +21,34 @@ you_get:
   - A dignity-centered narrative draft
   - Consent, subject-review and withdrawal checklist
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Paste the skill into Claude, ChatGPT or Gemini, or upload the skill file. No code or web access is needed.
+  - Say where the story will run and what it is for.
+  - Paste your true interview notes and what the person agreed to. Mark any missing facts instead of guessing.
+  - Read the draft and the savior framing check. Fix anything the person did not approve.
+  - Send the draft to the person for review before it goes anywhere. Log where it is used.
+output_sample:
+  input:
+    - Where the story will run, such as a gala script, newsletter, grant or web page
+    - What the story is for
+    - Your true interview notes, in the person's own words
+    - "What the person agreed to: channels, how long, and how they want to review"
+    - Details the person has approved (optional)
+  prerequisites:
+    - A real person who has been told what the story is for and is willing to take part
+    - A named contact for takedown requests
+  output:
+    - name: Story draft
+      contains: A story that opens with who the person is, names the cause of the need, and ends on their own goals.
+    - name: Savior framing check
+      contains: A list of lines that make the charity the hero or use suffering for shock, with a fairer rewrite of each.
+    - name: Story consent protocol
+      contains: A one-page plan covering named uses, right of review, fair interviewing, thank-you practice and a withdrawal path.
+    - name: Subject review step
+      contains: What to send the person to approve, including photos, and how to record the approved uses.
+    - name: Withdrawal and tracking log
+      contains: A simple record of where the story and photos appear, so a takedown can be done.
+    - name: Handoff note
+      contains: Where to pass the approved story next, such as an annual report, grant or appeal.
 how_it_works:
   - title: Confirm consent
     text: Name the channels, duration, review rights and withdrawal contact before gathering a story; confirm guardian consent and assent when needed.

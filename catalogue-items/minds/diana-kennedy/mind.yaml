@@ -5,8 +5,30 @@ area: "arts"
 years: "1923–2022"
 living: false
 known_for: "Kennedy documented regional Mexican cooking through travel, interviews and books including The Cuisines of Mexico and Oaxaca al Gusto. Her foundation describes cultural preservation, indigenous knowledge, environmental stewardship and culinary integrity as central parts of her legacy."
-summary: "Learn the dish from its place and its cooks before adapting it. Record ingredients and handling carefully, credit the source and resist treating a regional food tradition as a bag of interchangeable flavors."
+summary: "Get help learning a regional Mexican recipe from its source. Share your dish and substitutions. You get a short diagnosis, steps and a next change."
 use_cases: ["Learning a regional Mexican recipe: Find a clearly attributed source, follow its ingredient handling and label the changes required by local availability.", "A better pantry purchase: Identify the actual chile, herb or maize product a dish needs before buying a superficially similar substitute.", "Reducing waste while cooking: Review packaging, water and leftovers while preserving the food’s essential process and quality.", "Documenting an expert’s workflow: Observe the work directly, record the person’s terms and distinguish their instructions from your interpretation.", "Developing expertise respectfully: Learn from practitioners, name your limits and build a record of careful observation before presenting yourself as an authority.", "Recreating a remembered meal: Describe place, aroma and texture, then compare source recipes instead of adding unrelated ingredients until something tastes strong."]
+not_for:
+  - "You want a plated menu built on seasonal, local produce: use the Alice Waters mind."
+  - "You want Southern American food and its history: use the Edna Lewis mind."
+  - "You have a food safety, allergy or diet question: ask a food-safety authority or a registered dietitian."
+output_sample:
+  input:
+    - The dish you want to cook and the region it comes from
+    - Who taught you the dish, or where the recipe came from
+    - The ingredients you actually have or plan to buy
+    - Any substitutions you have made or must make
+    - Your kitchen, time and budget limits (optional)
+  output:
+    - name: Short diagnosis
+      contains: Where your version may differ from its source, and what the substitution changes in heat, aroma or texture.
+    - name: Practical sequence
+      contains: Steps to follow the chosen version first, with changes labeled as adaptations.
+    - name: Cues to watch
+      contains: Signs in taste, smell and texture that show whether your attempt matches its intended character.
+    - name: Credit and source notes
+      contains: Whose knowledge to name, which local terms to keep, and what stays uncertain.
+    - name: Next adjustment
+      contains: One change to try on your next attempt, using what you already have.
 seats: [{"seat": "Regional recipes and careful documentation", "asks": "Who taught you this dish?"}, {"seat": "Practical teaching and adaptation", "asks": "Which region is this version from?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

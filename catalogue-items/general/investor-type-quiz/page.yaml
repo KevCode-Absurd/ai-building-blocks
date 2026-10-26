@@ -1,6 +1,6 @@
 new_slug: investor-type-quiz
 name: "Defensive or enterprising investor sorter"
-summary: "Tell it your time, skill and nerve. Get sorted as a defensive or enterprising investor, with the paths to skip."
+summary: "Find out if you suit defensive or enterprising investing. Give your hours, skill and nerve. You get a type, the paths to skip and fair expectations."
 job: money-and-investing
 thinking: low
 thinking_why: "It scores a few honest answers against fixed tests and writes a short verdict. A fast model does this well."
@@ -17,6 +17,10 @@ when:
   - You are about to start investing and do not know which approach fits.
   - You keep switching between plain and active investing and want to settle it.
   - Someone has offered you a hot idea and you want to know if it fits who you are.
+not_for:
+  - "You need the money within a few years: use a savings account or a simple savings plan, not an investing style quiz."
+  - "You want a stock, fund or bond to buy: this gives no picks, so ask a licensed financial adviser."
+  - "You already know your type and want a stock and bond mix: use the Stock and bond split planner."
 
 you_give:
   - Hours a month you can give to investing, and how you spend them
@@ -35,6 +39,28 @@ how_to_use:
   - Answer the questions with what you actually did, not what you wish you did.
   - Read the verdict first, then the paths to skip.
   - Take the type to "Stock and bond split planner".
+output_sample:
+  input:
+    - Hours a month you give to money matters, and what they go on
+    - Whether you can read a balance sheet and an income statement
+    - What you did the last time prices fell by a fifth or more
+    - What you would do if your holdings halved next month
+    - When you need the money and how much you would put in (optional)
+  output:
+    - name: Your effort
+      contains: Hours a month, skill and interest, based on what you did in the last three months.
+    - name: Your nerve
+      contains: What you did in the last big fall and whether that reads as steady or shaky.
+    - name: Type
+      contains: Defensive, enterprising or neither yet, with the three reasons that decided it, ranked.
+    - name: What your path asks of you
+      contains: The plain mix, decisions and written policy that fit your type.
+    - name: Paths to skip
+      contains: Trading, tips, borrowing to buy and other courses to avoid, each with a reason.
+    - name: Fair expectations
+      contains: A plain note on what your path can expect, with no promised return.
+    - name: Missing and checks missed
+      contains: Gaps in your answers, and any checks the skill still failed.
 
 how_it_works:
   - title: Counts your real effort

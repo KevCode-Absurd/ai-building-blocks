@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Bad counts hurt sales, so it confirms each change.
 new_slug: stock-count-updater
 name: Stock count updater
-summary: Give it counts by product and location. Get live stock levels
-  corrected. Wrong numbers can cause overselling.
+summary: Fix your Shopify stock count after a cycle count or return. Give it product codes, locations and changes. Preview each one before it goes live.
 job: run-your-store
 headline: Stock count updater
-subhead: Counts from your shelf, entered straight into your Shopify store. You
-  list each product code, the location and the change, and the skill corrects
-  live stock levels to match, logging a reason such as cycle count or damaged.
+subhead: Counts from your shelf, entered straight into your Shopify store. You list each product code, the location and the change, and the skill corrects live stock levels to match, logging a reason such as cycle count or damaged.
 explain: |
   Counts from your shelf, entered straight into your Shopify store. You list each product code, the location and the change, and the skill corrects live stock levels to match, logging a reason such as cycle count or damaged.
 
@@ -18,6 +15,10 @@ when:
   - A box of returns arrived back at your warehouse.
   - Damaged items must be removed from available stock.
   - A sync mix-up left several products with the wrong quantity.
+not_for:
+  - "You have one small edit to make: change it by hand in the Shopify admin."
+  - "Stock changed because of normal sales or orders: Shopify updates those on its own, so leave them alone."
+  - "You only want to find where counts differ: check the numbers by hand first, then come back here to fix them."
 you_give:
   - Your Shopify store link and access
   - A list of product codes with location and change
@@ -29,9 +30,30 @@ you_get:
   - A reason logged for each adjustment
   - A list of codes that were not found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Collect your counts as a list. Each row needs a product code, a location and a change, such as +5 or -3.
+  - Pick a reason, such as cycle count, damaged or received. Add a link to your count sheet or return paperwork if you have one (optional).
+  - This skill needs an AI that can run commands. Log in to your store first with shopify auth login --store your-store.myshopify.com. Your access needs the read_products and write_inventory scopes.
+  - Ask your AI to run the skill in preview mode first (dry run). Nothing changes in your store yet.
+  - Check the preview. Confirm each product code, location and new quantity. Fix any code that was not found.
+  - Run it again without preview to apply the changes. If one is wrong, run the skill again with the opposite change, for example +3 to undo a -3, and use the same reason so the history is clear.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - A list of product codes (SKUs), each with a location and a change (plus or minus)
+    - A reason, such as cycle count or damaged (optional)
+    - A link to a purchase order, return or count sheet (optional)
+  prerequisites:
+    - An AI that can run commands and reach your Shopify store
+    - Logged in to your store with the shopify auth login command
+    - Access to read products and write inventory (read_products and write_inventory)
+  output:
+    - name: Preview (dry run)
+      contains: Each product code with its current quantity and the change, shown before anything is written to your store.
+    - name: Progress notes
+      contains: A short line after each step saying what was asked and what came back.
+    - name: Outcome summary
+      contains: How many products were changed, units added, units removed and errors found.
+    - name: inventory-adjustments-<date>.csv
+      contains: "One row per change: sku, product title, location, quantity before, change, quantity after and reason."
+    - name: Not found list
+      contains: Any product code that was not found in your store, which stops the run until you fix it.

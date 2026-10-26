@@ -1,50 +1,88 @@
 new_slug: define-a-customer-support-escalation-agreement
 name: Define a customer support escalation agreement
 headline: Define a customer support escalation agreement
-summary: Share the source files. Get an escalation procedure, ownership gaps and communication drafts.
+summary: Write down who handles a stuck customer issue and when it moves up. Get an escalation procedure, a gap list and update drafts.
 job: help-customers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An escalation procedure, ownership gaps and communication drafts. Share the actual support tiers, approved service commitments, ownership rules, supported channels, failure examples and customer communication policy. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share your support tiers, the service promises you have made, who owns what and examples where a case got stuck. Your AI writes the escalation steps and draft messages. It marks every promise or deadline it cannot find in your records.
 explain: |-
-  An escalation procedure, ownership gaps and communication drafts.
+  Cases get stuck when nobody knows who owns the next move. A customer support escalation procedure says what triggers a handoff, who receives it and what they must see first.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Response and resolution commitments stay distinct; no unsupported deadline or escalation authority is invented. Missing tools or evidence stay visible in the final summary.
+  Step one writes the procedure from your approved process: triggers, evidence to attach, the receiving role, how the handoff is accepted, what happens if no one answers and how a case closes. Step two drafts update messages for your team and for customers, keeping confirmed facts apart from estimates.
+
+  Reply time and fix time are different promises, and the draft keeps them apart. If your records give no deadline, the draft shows a blank, not a guess.
 when:
-  - You need an escalation procedure, ownership gaps and communication drafts.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A customer waited three days because two teams each thought the other had the case.
+  - You are adding a second support tier and need the handoff written down.
+  - A big client asks what happens if their case is not fixed in time.
+  - A new support lead asks 'who do I escalate to?' and gets four answers.
+not_for:
+  - You need to answer one upset customer now. Use the Angry customer reply writer.
+  - You are in the middle of an outage. Use Prepare a service outage communication pack.
+  - You want to clear a backlog of tickets. Use Clear your support inbox and turn fixes into help pages.
+  - You want legal service levels for a contract. A lawyer must agree those. This writes your internal process.
 you_give:
-  - The actual support tiers, approved service commitments, ownership rules, supported channels, failure examples and customer communication policy.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your support tiers and who sits in each (from your help desk or org chart)
+  - Service promises already made, such as reply times (from contracts or your help page)
+  - Who owns which kind of issue
+  - The channels you support, such as email, chat or phone
+  - Two or three real cases that got stuck, with customer names removed (optional)
+  - Your rules on what you tell customers (optional)
 you_get:
-  - An escalation procedure, ownership gaps and communication drafts.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "An escalation procedure: triggers, evidence, receiving role, acceptance, fallback and closure"
+  - A list of gaps, such as roles with no owner or promises with no deadline
+  - Draft updates for your team and for customers
+  - A summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini.
+  - Paste your tiers, promises and ownership rules. Add the stuck cases if you have them.
+  - "Say: follow the workflow file, keep unknown deadlines blank and stop if a check fails."
+  - Read the gap list first. Fill each blank with a real decision from your team.
+  - Walk one stuck case through the procedure to see if it would have moved faster.
+  - Share the final procedure with each tier lead before anyone uses it.
+output_sample:
+  input:
+    - Your support tiers and owners
+    - Service promises already made
+    - Channels you support
+    - Real stuck cases (optional)
+  prerequisites:
+    - An approved support process, even a rough one
+  output:
+    - name: step-01-process-and-sop-writer.md
+      contains: "The escalation procedure: triggers, evidence, receiving role, acceptance, fallback and closure, with gaps shown."
+    - name: step-02-stakeholder-update-writer.md
+      contains: Update drafts for your team and for customers, with confirmed facts kept apart from estimates.
+    - name: Hand-back summary
+      contains: Files saved, deadlines still blank, checks not run and one next step.
 how_it_works:
   - title: Process and SOP writer
-    text: Document triggers, evidence required, receiving roles, handoff acceptance, fallback and closure from the approved support process. Keep unknown service targets visible.
+    text: Writes the escalation steps from your approved process, with owners and gaps. Hands step 2 the triggers, roles and promises so the messages quote them.
   - title: Stakeholder update writer
-    text: Draft internal and customer update structures using actual service promises and disclosure rules, separating confirmed facts from estimates.
+    text: Drafts team and customer updates from the procedure and your real promises. Hands back messages that keep confirmed facts apart from estimates.
 output_shape: |-
-  Scope and source coverage
-  An escalation procedure, ownership gaps and communication drafts.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  TIERS <list>, PROMISES USED <list>
+
+  ESCALATION PROCEDURE
+    Trigger      <what moves a case up>
+    Evidence     <what must be attached>
+    Receiver     <role that takes it>
+    Accepted by  <how the receiver confirms>
+    No answer    <fallback after <time or MISSING>>
+    Closure      <who closes and how the customer is told>
+  UPDATE DRAFTS  <audience>: <message>
+
+  GAPS           <role, promise or deadline not found>
+  CHECKS MISSED  <one line each, or none>
+  NEXT STEP      <one action>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Response and resolution commitments stay distinct; no unsupported deadline or escalation authority is invented.
+  - what: Number of tiers
+    how: Say if you have two tiers or four. The handoffs and owners change with each extra layer.
+  - what: Promises by customer type
+    how: Add different reply times for key accounts. The procedure shows each path.
+  - what: Stuck cases
+    how: Paste two real cases without names. The AI tests the procedure against them and shows where each stalls.
 judge:
   - Response and resolution commitments stay distinct; no unsupported deadline or escalation authority is invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +95,19 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - After each escalation, note where the case waited. Add that point to the procedure.
+  - Review the gap list each quarter and fill blanks with real decisions.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Any good chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It needs your tiers, promises and cases in one run.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your help desk's list of ticket categories
+    - Past customer emails about delays, with names removed
+    - Your on-call or rota schedule
+    - Any service terms you sent to customers
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Escalation
+    meaning: Passing a case to someone with more skill or authority.
+  - term: Handoff acceptance
+    meaning: The receiver confirms they own the case.

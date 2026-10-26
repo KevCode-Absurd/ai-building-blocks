@@ -1,6 +1,6 @@
 new_slug: pre-launch-ad-checker
 name: Pre-launch ad checker
-summary: Share your ad, audience and approved facts. Get located issues, fixes, human checks and a custom score before launch.
+summary: Check your finished ad before launch. Get the problems by location, the smallest fixes, a readiness score and what to check on a real phone.
 job: check-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You're about to approve an ad or a batch from a designer, an editor or an AI tool.
   - An ad looks fine on your laptop and you haven't seen it on a phone yet.
   - You have a storyboard, or a few versions of one ad, and want to know they hold up.
+not_for:
+  - "You want a policy check for Facebook or Instagram: use the Meta ads compliance checker, which is a separate review."
+  - "Your ad is not finished yet, or you only have an idea: write the copy or script first, then come back to check it."
+  - "You want to judge organic posts or read live ad results: ask a person on your team, or wait until the ad has run."
 you_give:
   - The finished ad, attached, as the image at full size, the video's key frames with its script, or a storyboard (your AI can see pictures)
   - Its main text, headline, button and where it will run
@@ -27,9 +31,36 @@ you_get:
   - A scoped verdict and observed/eligible coverage
   - An internal editing score, with any post-fix score marked provisional
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open your AI. Use Claude, ChatGPT or Gemini, one that can read pictures.
+  - Paste this skill. Attach your finished ad at full size, or the video's key frames and script.
+  - Add the main text, headline, button and where the ad will run. Add your offer, claims and proof if you have them.
+  - Name who the ad is for, and add your logo, font and product photos if you can.
+  - Read the stop-ship list first. Fix those, then look at the rest.
+  - Check the "for a person" items on a real phone before you launch.
+output_sample:
+  input:
+    - "Your finished ad: the image, or the video's key frames with its script"
+    - The main text, headline, button and where the ad will run
+    - Your live offer, approved claims and proof (recommended)
+    - Your logo, font and real product photos (recommended)
+    - Who the ad is for (optional)
+  prerequisites:
+    - An AI that can see pictures, so it can read the words in your image
+  output:
+    - name: Ad
+      contains: The ad's name, shape, where it runs, who it is for and its one message.
+    - name: Stop-ship
+      contains: Mistakes that should stop a launch, each with its spot, why it fails and the smallest fix.
+    - name: Worth a look
+      contains: Weaker points with the quote or number behind them, the five buyer links and a fix for each.
+    - name: For a person
+      contains: What to check on a real phone, and anything the AI could not confirm.
+    - name: Readiness score
+      contains: A score out of 100 with checks covered, and a provisional score once fixes are made.
+    - name: Verdict
+      contains: Fix, remake or ready within what was reviewed, with a note on variety for a batch.
+    - name: Next action
+      contains: The one thing to do now, and who should do it.
 how_it_works:
   - title: Checks the file fits
     text: Checks the intended shape, size and safe regions against an inspected preview or dated specification. Missing placement evidence stays NOT CHECKED.

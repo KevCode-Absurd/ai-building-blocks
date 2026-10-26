@@ -1,53 +1,108 @@
 new_slug: factoring-cashflow-timing-bridge
 name: Factoring cash-flow timing bridge
 headline: Factoring cash-flow timing bridge
-summary: Reconcile reported operating cash with receivable-sale advances and customer receipts received by a factor.
+summary: Show how much of reported operating cash came early from selling invoices to a factor. Get an adjusted cash figure next to the reported one.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An analytical look-through cash-timing bridge alongside reported CFO. Share reported CFO, factored cash advances included in CFO, actual customer collections retained by the factor and fee/perimeter records.
+subhead: Give it reported operating cash flow, the advances from a factor that sit inside it, and the customer payments the factor collected on the same invoices. It swaps the advances for those receipts. You get an analytical cash figure beside the reported one, with fees kept as real costs.
 explain: |-
-  An analytical look-through cash-timing bridge alongside reported CFO.
+  Factoring means selling your customer invoices, or borrowing against them, to a finance company called a factor. You get most of the cash now. The customer pays the factor later. If the advance is counted in operating cash flow, that cash looks like it came from trading, when it really arrived early.
 
-  Issuer revenue and cash-flow reconciliation. Illustrative figures.80 factor advances replace50 matched customer receipts, accelerating30 cash;100 reported CFO minus30 gives70 analytical CFO. Receipts70 reduce acceleration to10 and give90 analytical CFO. Real financing fees remain costs.
+  This skill builds a look-through view. It takes out the advances from the factor and puts in the customer payments the factor actually collected in the same period on the same invoices. The difference is the cash that was pulled forward. Fees you paid to the factor are real costs, so they stay in.
+
+  The result is labelled as analysis. It sits next to the reported figure and does not change the company's accounting. It needs matched cash records for the same pool of invoices, because the face value of invoices sold is not enough.
 when:
-  - You need an analytical look-through cash-timing bridge alongside reported CFO.
-  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are reading a company's cash flow and think factoring made operating cash look better.
+  - A lender or investor asks what operating cash would be without early advances.
+  - A company sold invoices near period end and you need to size the timing effect.
+  - You want a clear bridge from reported operating cash to an analytical figure for a note or a model.
+not_for:
+  - You only know the face value of the invoices sold. You need cash records for the same period and the same pool of invoices.
+  - You need to decide if the deal is a true sale or a loan, or any legal view. That needs an accounting review of the contract. This view sits beside reported cash flow and does not restate it.
+  - "You are looking at finance offered to suppliers: use the Supplier financing debt scenario checker."
+  - "You want the closing bad debt reserve: use the Customer credit loss allowance checker."
 you_give:
-  - Reported CFO, factored cash advances included in CFO, actual customer collections retained by the factor and fee/perimeter records.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Reported cash flow from operations for the period
+  - Cash advances from the factor that are included in that figure
+  - Customer payments the factor collected in the period on the same invoices
+  - The factoring terms, fees, reserves and which invoices are in the pool
+  - The period, currency and scale
 you_get:
-  - An analytical look-through cash-timing bridge alongside reported CFO.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The cash pulled forward, as advances less matched customer receipts
+  - An analytical operating cash figure beside the reported one
+  - Fees shown as real costs, not removed
+  - Sources, assumptions and a list of anything missing
+  - An editable workbook, if your AI can make spreadsheet files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open Claude, ChatGPT or Gemini and add the skill, or paste SKILL.md into a new chat.
+  - Paste the reported operating cash flow and the factor advances inside it. Add the customer receipts the factor collected on the same invoices.
+  - Attach the factoring terms and the notes on how the company reports these cash flows, if you have them.
+  - Ask for the bridge. If matched receipts are missing, the AI stops and marks it MISSING.
+  - Read the result as analysis next to the reported figure, then check MISSING and CHECKS MISSED.
+output_sample:
+  input:
+    - Reported cash flow from operations for the period
+    - Factor advances included in that figure
+    - Customer receipts the factor collected on the same invoices
+    - Factoring terms, fees and pool records, with period, currency and scale
+  prerequisites:
+    - An AI that can create and reopen spreadsheet files (only if you want a workbook)
+    - Node.js 20 or later (only to run the bundled calculation script)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, scale and the dated source for every figure.
+    - name: Inputs and assumptions
+      contains: Each figure with its sign and source, and any assumption made.
+    - name: Cash timing bridge
+      contains: Reported cash, factor advances out, matched customer receipts in, and the cash pulled forward.
+    - name: Analytical operating cash
+      contains: The look-through figure beside the reported one, labelled as analysis, with fees kept as costs.
+    - name: Editable workbook
+      contains: The bridge as a spreadsheet with inputs, formulas and checks, if you ask for one.
+    - name: Actual file verification
+      contains: What was recalculated, rendered and reopened in the saved file, and what could not run.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs you did not give and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Read the receivables-transfer terms and reported derecognition/cash-flow policies; distinguish a receivable sale from secured financing
-    text: Read the receivables-transfer terms and reported derecognition/cash-flow policies; distinguish a receivable sale from secured financing.
-  - title: 2. Identify actual factor proceeds already included in CFO and actual customer receipts paid to the factor that replaced company collections, matching period and pool
-    text: Identify actual factor proceeds already included in CFO and actual customer receipts paid to the factor that replaced company collections, matching period and pool.
-  - title: 3. Replace factor advance proceeds with those customer receipts for the analytical timing view; retain real fees and reconcile reserves, settlements, recourse and noncash differences
-    text: Replace factor advance proceeds with those customer receipts for the analytical timing view; retain real fees and reconcile reserves, settlements, recourse and noncash differences.
+  - title: Reads the deal terms
+    text: Notes whether the company reports a sale or a secured loan, without deciding that for you.
+  - title: Finds the two cash flows
+    text: Factor advances already inside operating cash, and customer receipts the factor collected on the same invoices.
+  - title: Swaps one for the other
+    text: Advances come out and matched receipts go in. Real fees stay as costs.
+  - title: Reconciles the rest
+    text: Reserves, settlements, recourse and noncash differences are listed, and any gap left over stays open.
 output_shape: |-
-  An analytical look-through cash-timing bridge alongside reported CFO.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  FACTORING CASH-TIMING BRIDGE (<currency>, <scale>, <period>)
+  Reported cash flow from operations: <amount>
+  - Factor advances included: <amount>
+  + Customer receipts collected by the factor: <amount>
+  = Analytical operating cash: <amount>
+  Cash pulled forward (advances - receipts): <amount>
+  Fees kept as costs: <amount>
+
+  TERMS AND POLICY
+  <sale or secured financing as the company reports it; pool; recourse>
+
+  RECONCILING ITEMS
+  <reserves | settlements | recourse | noncash>
+
+  SOURCES AND ASSUMPTIONS
+  <figure | source | date | assumption>
+
+  MISSING:
+  <each missing input>
+
+  CHECKS MISSED:
+  <each check that failed or could not run, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Receipts or remittances already inside CFO are not added again.
+  - what: Matching
+    how: Give receipts for the same invoices and the same period as the advances. A mismatch is the most common error.
+  - what: Fees
+    how: Give the fees and reserve terms. They stay in the analytical figure as real costs.
+  - what: Scope
+    how: State which companies in the group and which invoice pool the figures cover.
 judge:
   - Receipts or remittances already inside CFO are not added again.
   - The analytical view is labeled separately and does not rewrite the reported accounting classification.
@@ -67,10 +122,15 @@ works_best_with:
     - name: Node.js 20 or later
       why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The factoring or invoice-sale agreement
+    - The factor's statements of advances and collections
+    - The company's accounting policy note on these cash flows
 terms:
+  - term: Factor
+    meaning: A finance company that buys or lends against a business's customer invoices.
+  - term: Operating cash flow
+    meaning: Cash from running the business, shown in the cash flow statement.
+  - term: Recourse
+    meaning: The company must repay the factor if a customer does not pay.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not real data.

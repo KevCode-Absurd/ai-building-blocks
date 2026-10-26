@@ -2,22 +2,23 @@ thinking: high
 thinking_why: It balances price, limits and risk across suppliers.
 new_slug: supplier-order-splitter
 name: Supplier order splitter
-summary: Give it quotes, limits and demand. Get how much to order from each
-  supplier for the lowest total cost.
+summary: Split a big order across suppliers at the lowest total cost. Give it quotes, limits and demand. Get order sizes per supplier.
 job: plan-supply-chain
 headline: Supplier order splitter
-subhead: How much to buy from each supplier to get the lowest total cost, within
-  their limits and your demand. It replaces guessing with a worked allocation.
+subhead: How much to buy from each supplier to get the lowest total cost, within their limits and your demand. It replaces guessing with a worked allocation.
 explain: |
   How much to buy from each supplier to get the lowest total cost, within their limits and your demand. It replaces guessing with a worked allocation.
 
   Give it quotes, capacity limits and the quantity you need. The skill covers order sizing with economic order quantity, including price breaks at higher volumes, and splits orders across suppliers with an optimisation model. It handles harder cases too, such as ordering several items together, planning lot sizes over several periods, and balancing risk with a dual-sourcing split. Python code does the maths, and the supply risk measures keep you from relying on one source.
 when:
-  - Two suppliers offer different prices and limits and you must split a big
-    order.
+  - Two suppliers offer different prices and limits and you must split a big order.
   - A volume discount makes it unclear how much to order at once.
   - You order many items from the same supplier and want to combine them.
   - You want a second source without paying too much for it.
+not_for:
+  - "You buy from one supplier with no price breaks or limits: just order the quantity you need, or ask the supplier for a better price."
+  - "You have not chosen suppliers yet: use a supplier selection step first, then come back to split the order."
+  - "You want to see where your money goes: use a spend review of your past purchases instead."
 you_give:
   - Supplier quotes and price breaks
   - Supplier capacity limits
@@ -30,8 +31,34 @@ you_get:
   - A dual-sourcing split
   - The Python code used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open a chat with an AI that can run Python code, such as Claude or ChatGPT.
+  - Paste the skill text, or upload the skill file.
+  - Add your supplier quotes, price breaks, limits and demand. Say if you have holding and ordering costs.
+  - Answer any questions your AI asks. It will not invent missing numbers.
+  - Check that each supplier stays within its limit and the total meets your demand.
+  - If you run the code yourself, install numpy, pandas, pulp and scipy first. Then use supplier selection and spend review steps to act on the result.
+output_sample:
+  input:
+    - Supplier quotes and price breaks
+    - Supplier capacity limits and minimum order sizes
+    - How much you need and when
+    - Holding and ordering costs (optional)
+    - Quality, lead time or risk scores for each supplier (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python packages numpy, pandas, pulp and scipy
+  output:
+    - name: Executive Summary
+      contains: The order plan you should follow, the total cost, the saving and what changes from today.
+    - name: Optimal Order Allocation
+      contains: One row per supplier with quantity, share of demand, unit cost, total cost, quality, lead time and risk, plus a total row.
+    - name: Cost Breakdown
+      contains: Your current cost next to the improved cost for price, transport, ordering and holding.
+    - name: Order Schedule
+      contains: What to order from each supplier and when over the coming year.
+    - name: Risk Assessment
+      contains: How reliant you are on one supplier, and how spread out your sources are.
+    - name: Recommendations
+      contains: Next actions, such as the split to move to and contract points to raise.
+    - name: Implementation Plan
+      contains: A month by month plan to sign contracts, place first orders and check results.

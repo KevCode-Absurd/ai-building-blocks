@@ -1,0 +1,144 @@
+name: Search Query Analyst agent
+summary: Find the wasted spend in your Google Ads search terms. Get a waste list, negative keywords by level and new keywords from converting searches.
+headline: Search Query Analyst agent
+subhead: Paste a search terms report with your conversion results and target cost. It groups queries by what the searcher wants and marks the ones that waste money. You get a waste list, a layered negative keyword plan, keyword ideas from searches that convert and checks to run before you add anything.
+job: run-google-ads
+thinking: high
+thinking_why: It judges what each searcher meant and must not block a query that could sell. Use a model that reasons well, and one that can read a long table.
+explain: |-
+  A search terms review (also called search query analysis or a negative keyword audit) shows what people typed before they saw your ad. Often, the words you bid on and the words that trigger your ads drift apart. Broad matching and Performance Max make this worse. Money goes to searches that never sell, and it is easy to miss.
+
+  This agent starts from the report, not from guesses. It groups the queries by shared words and by intent. A searcher may be learning, comparing, looking for a brand, or ready to buy. It weighs each group by the money it took and the sales it brought. A group that spent a lot and sold nothing is waste. A group that sold well with little spend is an opportunity.
+
+  Then it builds the negative keywords in layers. Some words are wrong for the whole account, some for one campaign and some for one ad group. It also checks that a negative will not block a keyword you want, and that two campaigns are not bidding on the same search against each other. For the searches that convert, it suggests new keywords and where they should live.
+
+  It works only from the report you give it. It does not look inside your account. It marks queries it is unsure about as "review", and a person decides what to add.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have not read your search terms report in a month and want to know where the money leaked.
+  - Cost per sale crept up and you suspect broad match or Performance Max is showing your ads on the wrong searches.
+  - You want a negative keyword list built in layers, not one long list for everything.
+  - Some searches sell well and you want them turned into keywords with their own control.
+not_for:
+  - You want one quick sort of a single report into winners and junk. Use the Search term sorter.
+  - You need a plan for your whole account structure and budget. Use the PPC Campaign Strategist agent.
+  - You think your sales tracking is wrong. Use the Tracking & Measurement Specialist agent first.
+  - You want display or social ads reviewed. This agent covers search terms only.
+you_give:
+  - A search terms report from Google Ads, pasted or attached as CSV, with spend, clicks and conversions for each term
+  - Your target cost per sale or lead, or what a sale is worth
+  - The date range of the report and your total spend in it
+  - Your current keyword list and negative keyword lists (optional)
+  - A note on which campaigns are brand and which are not (optional)
+you_get:
+  - Queries grouped by shared words and by what the searcher wants
+  - A waste list showing the money spent on queries that did not sell
+  - Negative keywords sorted by level (account, campaign or ad group), with the match type for each
+  - A list of conflicts, where a negative could block a keyword you want
+  - New keyword ideas from searches that converted, with where each should go
+  - Queries marked "review" because the data is too thin to decide
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Export the search terms report from Google Ads, with at least 30 days of data if you can. Paste it in or attach the file.
+  - Add your target cost per sale, the date range and which campaigns are brand. Add your current negative lists if you have them. No code or Google Ads connection is needed.
+  - Type "Review these search terms. Show the spend and sales behind every decision. Mark thin data as review."
+  - Read the waste list first, then check the negatives it proposes against your keyword list. Skip any that could block a sale.
+  - Add the negatives in Google Ads yourself. Run the report again in two to four weeks to see what changed.
+how_it_works:
+  - title: Check the data
+    text: It confirms the date range, spend, conversions and target cost. Missing parts are asked once, then marked MISSING.
+  - title: Group the queries
+    text: It groups searches by repeated words and by intent, such as learning, comparing, brand or ready to buy.
+  - title: Find the waste
+    text: It adds up the spend on groups with no sales and ranks them by money lost. Small samples are marked review.
+  - title: Build layered negatives
+    text: It places each negative at account, campaign or ad group level and picks a match type, so it blocks only what it should.
+  - title: Check for clashes
+    text: It tests each negative against your keywords, and looks for campaigns that compete for the same search.
+  - title: Mine the winners
+    text: It lists converting searches that are not keywords yet, with where each should go.
+output_shape: |-
+  REPORT BASIS
+    Date range <dates> | Spend in report <amount> | Conversions <number> | Target cost per sale <amount or MISSING> | Brand campaigns <list or MISSING>
+
+  QUERY GROUPS
+    <group by words or intent> | <spend> | <clicks> | <sales> | <what searchers want> | <verdict: keep, waste or review>
+
+  WASTE LIST
+    <query or group> | <spend> | <sales> | <why it is waste> | <share of total spend>
+
+  NEGATIVE KEYWORDS
+    <term> | <match type> | <level: account, campaign or ad group> | <campaign or group> | <reason>
+
+  CLASHES AND OVERLAP
+    <negative or search> | <keyword or campaign it affects> | <what to do>
+
+  KEYWORD IDEAS FROM WINNERS
+    <search> | <sales and cost> | <keyword and match type> | <where it should go>
+
+  REVIEW LIST
+    <query> | <why the data is too thin> | <what to watch>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <item>
+output_sample:
+  input:
+    - A search terms report with spend, clicks and conversions
+    - Your target cost per sale or what a sale is worth
+    - The date range and total spend in the report
+    - Your current keywords and negative lists (optional)
+  prerequisites:
+    - A Google Ads account that has run for long enough to collect search terms
+  output:
+    - name: Query groups
+      contains: Searches grouped by shared words and intent, with spend, sales and a verdict for each group.
+    - name: Waste list
+      contains: Queries and groups that took money without sales, ranked by spend, with the reason.
+    - name: Negative keywords
+      contains: Each negative with its match type, its level and the campaign or group it belongs to.
+    - name: Clashes and overlap
+      contains: Negatives that could block wanted keywords, and campaigns that compete for one search.
+    - name: Keyword ideas from winners
+      contains: Converting searches to add as keywords, with match type and where each should go.
+    - name: Review list
+      contains: Queries with too little data to judge, with what to watch.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a large search terms export and sum spend by group without you building a table. Check the sums on a few rows yourself.
+  inputs:
+    - A 30 to 90 day report. A longer window shows more converting searches.
+    - Your margin per sale, so waste is judged on profit as well as cost per sale.
+    - The landing page for each campaign, to check the search matches the page.
+terms:
+  - term: Search term
+    meaning: The words a person actually typed before they saw your ad. It can differ from the keyword you bid on.
+  - term: Negative keyword
+    meaning: A word or phrase that stops your ad from showing on searches that contain it.
+  - term: Match type
+    meaning: A setting that controls how closely a search must match your keyword. Broad, phrase and exact are the three types.
+  - term: Query intent
+    meaning: What the searcher wants, such as to learn, to compare or to buy.
+  - term: Close variant
+    meaning: A search that Google treats as the same as your keyword, such as a plural or a misspelling.
+tweaks:
+  - what: Report window
+    how: Use at least 30 days. Short windows leave many queries too thin to judge.
+  - what: Strictness
+    how: Tell it how many clicks without a sale count as waste. A high-priced product needs a higher number.
+  - what: Brand
+    how: Say which campaigns are brand so brand searches are not blocked in other campaigns by accident.
+improve:
+  - Keep each review and the negatives you added. Compare the next report to see if waste fell.
+  - Add your negative list to the pack so every run checks against it.
+  - Run it on a regular schedule, such as monthly, and track the share of spend on waste.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

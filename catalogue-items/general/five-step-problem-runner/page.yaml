@@ -1,6 +1,6 @@
 new_slug: five-step-problem-runner
 name: "Five-step problem runner"
-summary: "Paste a problem that keeps coming back. Get it run through goal, problem, cause, design and doing."
+summary: "Run a problem that keeps coming back through five fixed steps: goal, problem, root cause, fix and action plan, with owners and dates."
 job: think-and-decide
 thinking: medium
 thinking_why: "The diagnosis step has to reason past the first answer and separate cause from blame."
@@ -17,6 +17,10 @@ when:
   - "The same problem is on the agenda for the third month."
   - "A fix was tried and the problem came back."
   - "You want to hand a problem to someone with a method, not a mood."
+not_for:
+  - "You face a one-off choice with no repeat: use the Decision counterargument writer to test the plan."
+  - "You want to try an idea cheaply before you commit: use the Minimum experiment planner."
+  - "You need a feature request judged, not a process problem fixed: use the Feature request screener."
 
 you_give:
   - "The problem with two or three dated examples"
@@ -34,6 +38,29 @@ how_to_use:
   - "Give dated examples. The diagnosis is only as good as they are."
   - "Read 3 DIAGNOSIS. If it is a guess you know is wrong, say so and run again."
   - "Put the DOING steps in your task tool and the PRINCIPLE in your team's rules."
+output_sample:
+  input:
+    - The problem, with two or three dated examples
+    - The goal it blocks
+    - What has been tried so far (advised)
+    - Who is involved, as roles (optional)
+  output:
+    - name: 1 GOAL
+      contains: The goal in one line, measurable if your input allows.
+    - name: 2 PROBLEM
+      contains: The problem as a repeated gap between goal and reality, with your examples and dates.
+    - name: 3 DIAGNOSIS
+      contains: The root cause, its type, the roles involved, and any guesses marked.
+    - name: 4 DESIGN
+      contains: The change that removes the cause, its owner, the rule that would have prevented it, and what past fixes missed.
+    - name: 5 DOING
+      contains: Steps with a person, a date and a done sign, then a check for when the problem has stopped.
+    - name: PRINCIPLE
+      contains: One sentence you can reuse on the next problem like this.
+    - name: MISSING
+      contains: Facts you did not give, so nothing is invented.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or none.
 
 how_it_works:
   - title: "Fixes the goal"

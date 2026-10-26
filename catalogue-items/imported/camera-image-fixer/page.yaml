@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It reads camera settings before changing them.
 new_slug: camera-image-fixer
 name: Camera image fixer
-summary: Say what looks wrong in your camera picture. Get the cause, camera
-  settings and processing steps.
+summary: Fix a dark, blurry or washed-out camera image. Get the likely cause, camera settings to change first, and processing steps in order.
 job: build-software
 headline: Camera image fixer
-subhead: Say what looks wrong in your camera image, such as dark, blurry or
-  washed out, and name the camera if you know it. It measures the image and
-  finds the likely cause, fixing the camera before the pixels. You get a
-  diagnosis, camera settings to change first, processing steps in order and a
-  before and after check.
+subhead: Say what looks wrong in your camera image, such as dark, blurry or washed out, and name the camera if you know it. It measures the image and finds the likely cause, fixing the camera before the pixels. You get a diagnosis, camera settings to change first, processing steps in order and a before and after check.
 explain: |
   A dark, blurry or washed-out camera picture gets better, starting with the camera and ending with software. Tell it what looks wrong and it checks the image, works out the likely cause, and gives you camera settings and processing steps to fix it.
 
@@ -20,6 +15,10 @@ when:
   - A subject standing in front of a window turns into a silhouette.
   - Pictures from a lab or factory camera look noisy or out of focus.
   - You want to enhance a captured image without making it look fake.
+not_for:
+  - Your picture did not come from a camera, such as a saved photo file. Use the Image Processing Toolbox in MATLAB directly.
+  - You want to build a full image capture setup from scratch. Use the Image Acquisition Toolbox help pages.
+  - You want to correct lens distortion or measure camera geometry. Use the Camera Calibrator app in MATLAB.
 you_give:
   - The camera image or a description of the problem
   - The camera type and model if known
@@ -30,8 +29,34 @@ you_get:
   - Image processing steps in the right order
   - A before and after check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and reach a camera.
+  - Check you have MATLAB with the Image Acquisition Toolbox and Image Processing Toolbox. MATLAB is a paid product.
+  - Connect your camera to the computer.
+  - Open an AI that can run MATLAB code and paste in this skill.
+  - Say what looks wrong, and name your camera if you know it.
+  - Read the diagnosis, then try the camera settings it suggests before any processing.
+  - Keep the .m function it writes for later captures.
+output_sample:
+  input:
+    - What looks wrong, such as too dark, blurry, noisy or washed out
+    - The camera type and model, if you know it (optional)
+    - A camera connected to the computer, or a captured image
+  prerequisites:
+    - MATLAB, which is a paid product
+    - Image Acquisition Toolbox and Image Processing Toolbox
+    - A camera connected to your computer
+    - An AI that can run MATLAB code
+  output:
+    - name: Camera capabilities
+      contains: The settings your camera lets you change, found when the skill connects to it.
+    - name: Baseline image
+      contains: A first capture, used to compare against the result.
+    - name: Diagnosis
+      contains: Measures of brightness, contrast, sharpness, noise, color balance and backlight, with what each says is wrong.
+    - name: Hardware adjustments
+      contains: Camera settings to change first, picked for your camera, and how the image changed.
+    - name: Post-processing steps
+      contains: Image enhancement steps in a sensible order, kept only if they measurably helped.
+    - name: Before and after report
+      contains: The problem, what you changed, and the measures from before and after.
+    - name: Reusable MATLAB function
+      contains: A .m file with your tuned settings and steps, so you can capture again without the AI.

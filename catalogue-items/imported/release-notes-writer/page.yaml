@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It reads commit messages and applies fixed rules.
 new_slug: release-notes-writer
 name: Release notes writer
-summary: Point it at your commits. Get tidy release notes and the right version
-  bump from Conventional Commits.
+summary: Turn your git commits into clear release notes and find the right version bump. Works as a release notes writer for Conventional Commits.
 job: build-software
 headline: Release notes writer
-subhead: Release notes written from your commit history, with the right version
-  bump worked out for you. Raw git messages turn into a changelog that people
-  can actually read.
+subhead: Release notes written from your commit history, with the right version bump worked out for you. Raw git messages turn into a changelog that people can actually read.
 explain: |
   Release notes written from your commit history, with the right version bump worked out for you. Raw git messages turn into a changelog that people can actually read.
 
@@ -18,6 +15,10 @@ when:
   - Your commit history is a mess and you want it as a tidy changelog.
   - You need to know whether this release is a patch, minor or major.
   - You want pull requests blocked when commit messages break the format.
+not_for:
+  - Your commits do not follow the Conventional Commits style. Clean up the commit style first, or write the notes by hand.
+  - You need notes for customers who never see code. Ask a teammate to write the wording, then use this only for the first draft.
+  - You need to handle a live outage. Follow your own incident steps first, then use this to write the patch notes.
 you_give:
   - Git range or tags to compare
   - Next version number (optional)
@@ -29,8 +30,30 @@ you_get:
   - Commit format check results
   - Output ready for a changelog file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your git history.
+  - "Check you have what you need: a git repo with tags, Python 3, and the two tags to compare. Or have your commit list ready to paste."
+  - Open an AI that can run code and read files. Paste in the skill text.
+  - Tell it your old tag and new tag. Add the next version if you already know it.
+  - Ask it to check your commit messages first. Fix any that break the format.
+  - Ask for the release notes and the version bump. Read the notes and change any wording that is unclear to customers.
+  - Tag the release only after you are happy with the notes.
+output_sample:
+  input:
+    - The tag or range of commits to compare, such as the last release and now
+    - The next version number (optional)
+    - Commits pasted in directly, if you have no git access (optional)
+    - The output format, such as Markdown or JSON (optional)
+  prerequisites:
+    - A git repo with tags, or a pasted list of commits
+    - Python 3, if you run the scripts yourself
+    - An AI that can run code and read your git history, for the full flow
+  output:
+    - name: Changelog entry
+      contains: Release notes grouped under headings like Added, Changed, Fixed and Security. Empty sections are left out.
+    - name: Version bump
+      contains: The bump type (major, minor, patch or none) and the recommended next version.
+    - name: Tag commands
+      contains: The exact git tag commands for the new version, when you ask for them.
+    - name: Commit lint results
+      contains: A list of commit messages that break the format. Strict mode fails the check.
+    - name: CHANGELOG.md update
+      contains: The new entry added at the top of your changelog file, with older sections left alone.

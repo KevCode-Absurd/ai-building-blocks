@@ -1,7 +1,7 @@
 slug: meta-ads-compliance-checker
 renamed_from: keep-facebook-from-blocking-your-ads
 name: "Meta ads compliance checker"
-summary: "Paste your ad and image. Get a compliance score out of 100, every problem and a fixed ad."
+summary: "Check your Facebook or Instagram ad against Meta's ad rules before launch. Get a score out of 100, each problem with its fix and the ad rewritten."
 category: general
 boards: [ecommerce]
 type: skill
@@ -12,9 +12,12 @@ inputs:
   - {type: ad_copy, required: false}
   - {type: script, required: false}
   - {type: static_ads, required: false}
+  - {type: image_prompt, required: false}
   - {type: landing_page, required: false}
 outputs:
   - {type: audit_report}
+  - {type: ad_copy, required: false}
+  - {type: script, required: false}
 uses: []
 origin: own
 source_ids: [CES-001]

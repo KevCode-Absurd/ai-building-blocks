@@ -1,6 +1,6 @@
 new_slug: build-a-talk-around-one-real-case
 name: Build a talk around one real case
-summary: Give it your topic and notes. Get one case, a pitch story and an order with stakes first.
+summary: Build a talk or pitch around one real case. Give it your topic and notes. You get a story, a vision and an order with the stakes first.
 job: speak-and-persuade
 thinking: medium
 thinking_why: Three text skills in a row. A mid-size model works. Use your strongest one for a high-stakes talk.
@@ -14,6 +14,10 @@ when:
   - You must pitch an idea to people who do not see it yet.
   - You have a pile of notes and no clear way into the talk.
   - Your talk is accurate but dull, and the point comes too late.
+not_for:
+  - "You only need a short update or a talk with no decision to ask for: write a plain outline yourself."
+  - "You want a customer case study to publish, not a talk: use the Case study story planner."
+  - "You need to plan the ask for a next step in a sales call: use the Sales next-step planner."
 you_give:
   - Your topic and your notes, facts, quotes, names, dates
   - Who is in the room and how long you have
@@ -24,10 +28,30 @@ you_get:
   - A story under two minutes, a vision of life after the change and small ways to test the idea
   - A new running order with the stakes in the first minute, one real clock and the explaining slides marked
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste real notes with names and dates. A case needs a real person or event.
-  - Tell it who is in the room. The news it moves to the front depends on them.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the three skill files this workflow uses.
+  - Unzip it and give the folder to Claude, in Claude Code or as files in a Claude Project. It needs an AI that can read files.
+  - Say "Follow HANDOFF.md" and paste your topic and notes, with real names and dates.
+  - Tell it who is in the room, how long you have and what you want them to decide.
+  - Check the first-minute line in step 3. If the stakes are not clear there, ask it to move them up.
+  - Fill in every MISSING line with a real fact before you use the plan.
+output_sample:
+  input:
+    - Your topic and your notes, facts, quotes, names and dates
+    - Who is in the room and how long you have
+    - What you want them to decide or do at the end
+    - Customer or interview words on the topic (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: The case"
+      contains: The one case that holds your idea, what people assume, the case that cuts the other way, and an outline.
+    - name: "Step 2: The pitch"
+      contains: Your idea and ask, how people react at each stage, a story under two minutes, a vision of life after, and small measures.
+    - name: "Step 3: The order"
+      contains: The news the room cares about most, the first minute, one true clock, and a new running order with times.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find the one case
     text: Picks one person or event that holds the whole idea, tests what people assume, and finds the strongest case that does not fit. It ends with an outline from a small scene to the idea.

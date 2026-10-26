@@ -2,15 +2,10 @@ thinking: low
 thinking_why: It applies accrual rules to listed items.
 new_slug: accrual-schedule-drafter
 name: Accrual schedule drafter
-summary: Give it the period's expenses and accrual policy. Get a schedule with
-  each entry, its support and a draft journal entry.
+summary: "Draft your month-end accrual schedule: each amount worked out, its support cited, and a draft journal entry for your controller to approve."
 job: money-and-investing
 headline: Accrual schedule drafter
-subhead: Give it your accrual policy list, the period's expenses and open
-  orders, and the contracts or estimates behind them. It works through each
-  accrual, calculates the amount for the period and cites the source. You get a
-  schedule with amounts, the support for each entry, draft journal entries and
-  period totals. A controller approves before posting.
+subhead: Give it your accrual policy list, the period's expenses and open orders, and the contracts or estimates behind them. It works through each accrual, calculates the amount for the period and cites the source. You get a schedule with amounts, the support for each entry, draft journal entries and period totals. A controller approves before posting.
 explain: |
   Month-end accruals land in one schedule where every entry is calculated, backed by its source, and turned into a draft journal entry. It is a draft only. A controller approves it before anything is posted.
 
@@ -20,6 +15,10 @@ when:
   - You need the support for each accrual in one place for your auditor.
   - A new team member needs a consistent way to build the schedule.
   - You want draft entries ready for your controller to review.
+not_for:
+  - "You already have the invoice: book it through accounts payable, not as an accrual."
+  - "You need tax or payroll accruals: use this only if your accrual policy list covers them, or ask your accountant."
+  - "You want entries posted to your books: this only drafts them, so a controller must review and post by hand."
 you_give:
   - Your accrual policy list
   - The period's expenses and open orders
@@ -31,7 +30,21 @@ you_get:
   - Draft journal entries
   - Period totals for review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - Your accrual policy list
+    - The period's expenses and open orders
+    - Contracts or estimates that back each amount
+    - Last month's schedule (optional)
+  prerequisites:
+    - The entity name and the period you are closing
+    - Amounts typed or pasted into the chat if your AI cannot read invoice files
+  output:
+    - name: Accrual schedule
+      contains: One row per accrual with its basis, period portion, amount already booked, this-period amount and support reference.
+    - name: Draft journal entries
+      contains: A debit to the expense account and a credit to the accrued liability for each row with an amount.
+    - name: Reversal notes
+      contains: A memo line on entries that reverse on day 1 of next period, where your policy says so.

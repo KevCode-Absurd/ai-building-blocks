@@ -1,6 +1,6 @@
 new_slug: why-first-message-writer
 name: "Why-first message writer"
-summary: "Give your product or cause and who you want to reach. Get a short message: belief first, then how, then what."
+summary: "Turn a pitch that opens with your product into a why-first message. Give your cause and audience, and get belief, how, then what."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It has to judge whether a stated purpose is a real belief or just a money goal."
@@ -17,6 +17,10 @@ when:
   - "Your about page or pitch lists what you do and people still ask \"so why you?\"."
   - "You are starting a cause, club or business and need a first message that people want to repeat."
   - "You have good facts but your intro opens with the product and loses people in the first line."
+not_for:
+  - "You need a full story with your customer as the hero: use the Customer-hero message writer."
+  - "You have no facts about why you started and want the AI to invent a belief: talk to your team or founder first, then come back."
+  - "You need a long sales page or a product spec sheet: write that with a person who knows the product, not a short message."
 
 you_give:
   - "Your product, service or cause, in a few lines"
@@ -36,6 +40,30 @@ how_to_use:
   - "Say who you most want to reach, and what they care about."
   - "Paste any true story, such as a customer who said something that stuck."
   - "Read both versions aloud to someone, then ask them to say back what you believe."
+output_sample:
+  input:
+    - Your product, service or cause, in a few lines
+    - Who you want to reach
+    - Your brand file (optional)
+    - A buyer or audience profile (optional)
+    - A true story that shows the belief (optional)
+  output:
+    - name: BASELINE
+      contains: Your usual pitch in three sentences, product first, kept so you can compare it with the new version.
+    - name: THE BELIEF
+      contains: One "We believe" sentence, two or three real things you do to live it, and who shares it.
+    - name: THE MESSAGE
+      contains: "Four to six sentences in order: belief, how you act on it, then what you make."
+    - name: STORY
+      contains: Two or three true sentences that show the belief, or a marked gap if none was given.
+    - name: CHANGED
+      contains: Each feature that was cut or recast for a doubtful reader, with the reason.
+    - name: USE THIS ONE
+      contains: Which version to use, baseline or new, and why.
+    - name: MISSING
+      contains: Any facts the skill needed but did not have.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed and why, or none.
 
 how_it_works:
   - title: "Writes the baseline"

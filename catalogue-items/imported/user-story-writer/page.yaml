@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a set story format.
 new_slug: user-story-writer
 name: User story writer
-summary: Give it a feature idea. Get user stories with acceptance criteria and a
-  sprint plan.
+summary: Turn a feature idea into user stories with acceptance criteria and a sprint plan your team can build from. Free user story writer for Scrum teams.
 job: build-product
 headline: User story writer
-subhead: A feature idea becomes stories your team can build, each with clear
-  checks for done, and a sprint plan that fits the time you have.
+subhead: A feature idea becomes stories your team can build, each with clear checks for done, and a sprint plan that fits the time you have.
 explain: |
   A feature idea becomes stories your team can build, each with clear checks for done, and a sprint plan that fits the time you have. Nobody has to guess what a vague ticket means.
 
@@ -17,6 +15,10 @@ when:
   - A story keeps growing and you need to cut it into smaller ones.
   - Planning is tomorrow and you do not know how much fits in the sprint.
   - Your backlog has no order and every item is called high priority.
+not_for:
+  - "You run Kanban only, with no sprints: use a simple board with work-in-progress limits instead."
+  - "You plan with waterfall phases or need general task lists: use a project plan or a to-do tool instead."
+  - "You use SAFe or LeSS: ask your agile coach to adapt the stories first, since this skill follows Scrum."
 you_give:
   - The feature or epic idea
   - Who the users are
@@ -28,8 +30,31 @@ you_get:
   - An epic split into smaller pieces
   - A sprint plan matched to capacity
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Describe your feature idea and who will use it.
+  - Add your team's past sprint points and who is away (optional), so the plan fits real capacity.
+  - Paste your current backlog (optional) if you want it put in order.
+  - Read each story and its checks. Cut or reword any that your team could not test.
+  - Running the story generator script needs an AI that can run code. Without that, the AI writes the stories in the chat.
+output_sample:
+  input:
+    - Your feature or epic idea
+    - Who the users are
+    - Your team's past speed per sprint (optional)
+    - Who is away during the sprint (optional)
+    - Your current backlog (optional)
+  prerequisites:
+    - An AI that can run code, only if you want the story generator script to run
+  output:
+    - name: User stories
+      contains: Each story in the As a, I want, So that form, with a type, priority and point estimate.
+    - name: Acceptance criteria
+      contains: Given, When, Then checks for each story, with more checks for bigger stories.
+    - name: INVEST checklist
+      contains: "A pass or fail check on each story: independent, negotiable, valuable, estimable, small and testable."
+    - name: Epic breakdown
+      contains: A large epic split into stories of 8 points or less, with dependencies and order.
+    - name: Backlog priority
+      contains: Each item ranked by value, user impact, risk and effort.
+    - name: Sprint plan
+      contains: Capacity from past speed and availability, with committed stories and a smaller stretch list.

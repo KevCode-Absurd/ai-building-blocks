@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs one tool and returns the text.
 new_slug: web-page-to-clean-text-converter
 name: Web page to clean text converter
-summary: Give it a web page link. Get the article as clean text without clutter.
-  Collects data from websites.
+summary: Turn any web page link into clean article text. Menus, ads and clutter are removed, so you can read it, save it or hand it to your AI.
 job: work-with-files
 headline: Web page to clean text converter
-subhead: The article from a web page as clean text, with menus, ads and clutter
-  removed. It is ready to read, summarise or hand to an AI without wasting space
-  on junk.
+subhead: The article from a web page as clean text, with menus, ads and clutter removed. It is ready to read, summarise or hand to an AI without wasting space on junk.
 explain: |
   The article from a web page as clean text, with menus, ads and clutter removed. It is ready to read, summarise or hand to an AI without wasting space on junk.
 
@@ -18,6 +15,10 @@ when:
   - You need clean page text to feed into another AI step.
   - You save docs pages as notes.
   - The raw page is full of menus and cookie banners.
+not_for:
+  - "The page needs a login or a paid account: copy and paste the text into your chat yourself."
+  - "The page loads its text only after you click or scroll: copy the text by hand or use a page-fetch tool your AI already has."
+  - "You need data from many pages at once: check each site's terms first, and use a tool built for bulk collection."
 you_give:
   - A link to the page
   - Whether to save to a file (optional)
@@ -28,8 +29,25 @@ you_get:
   - Page title and details (optional)
   - Text without menus and ads
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands.
+  - Use an AI that can run commands, such as Claude Code. A plain chat window cannot run it.
+  - Ask your AI to check that the Defuddle command line tool is installed. If it is not, it must ask your approval before installing it.
+  - Paste the page link and say if you want a saved file or only one detail, such as the title.
+  - Read the result. If a table or code block looks missing, open the original page to check.
+  - Next, ask your AI to summarise the text or save it as a note.
+output_sample:
+  input:
+    - A link to a public web page
+    - A file name to save to (optional)
+    - One detail you want, such as the title (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - The Defuddle command line tool, already installed or approved for install
+  output:
+    - name: Markdown text
+      contains: The main content of the page as plain text with headings and links, without menus, ads or banners.
+    - name: content.md
+      contains: The same text saved to a file, only if you ask for one and pick where it goes.
+    - name: Page details
+      contains: A single field such as the title, description or domain, if you ask for it.
+    - name: Missing content note
+      contains: A line saying if a table, code block or other part could not be read.

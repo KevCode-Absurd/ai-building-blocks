@@ -11,6 +11,16 @@ metadata:
 
 This skill enables an AI agent to perform rigorous statistical analysis on structured datasets. The agent loads data, computes descriptive and inferential statistics, identifies trends and correlations, tests hypotheses, and produces actionable insights. It supports CSV, Excel, Parquet, and JSON inputs and leverages pandas, scipy, and statsmodels for analysis.
 
+## What you need first
+
+- A dataset file (CSV, Excel, Parquet or JSON) the AI can open.
+- One clear question. If the person has no question yet, stop and suggest the New dataset explorer (exploratory-data-analysis) first.
+- An AI that can run Python with pandas, scipy, statsmodels and numpy. If it cannot run code, say so, explain which tests you would run, and do not report any number you did not compute.
+
+## If something is missing
+
+Ask once. If the question, the file or the key columns are still missing, write `MISSING: <what>` and stop. Never invent rows, columns or results. Report every number from the person's own file only.
+
 ## Workflow
 
 1. **Load and profile the data.** Read the dataset into a pandas DataFrame and inspect its shape, column types, and memory usage. Display the first and last rows to confirm the data loaded correctly. Check for obvious structural issues such as shifted columns or encoding problems.
@@ -25,6 +35,19 @@ This skill enables an AI agent to perform rigorous statistical analysis on struc
 
 6. **Synthesize findings into a report.** Summarize the key insights in plain language, supported by specific numbers. Rank findings by business impact or statistical significance. Include limitations and caveats such as sample size constraints or confounding variables.
 
+## What you hand back
+
+A findings note with these parts, in this order:
+
+1. **Question and data**: the question in one line, the file used, row and column counts, and anything dropped or fixed.
+2. **Answer**: one or two plain sentences that answer the question, and how sure you are.
+3. **Key numbers**: a small table of the figures behind the answer (summary statistics, trend, correlation, test result with p-value, effect size and confidence interval).
+4. **Findings, ranked**: each one with its number, what it means for a decision, and its caveat.
+5. **Outliers and data problems**: what you found, what you did about it.
+6. **Limits and next step**: sample size, confounders, the test you would run next, and what the person should do with the note.
+
+Correlation is not cause. Say so whenever you report one.
+
 ## Supported Technologies
 
 - **pandas** — data loading, manipulation, and aggregation
@@ -38,38 +61,30 @@ Provide the agent with a file path to the dataset and a description of the analy
 
 ## Examples
 
+These two code sketches are illustrations. The file names and column names are placeholders. The numbers they print come from the person's own file, never from this skill.
+
 ### Example 1: Sales CSV analysis with pandas
 
 ```python
 import pandas as pd
 from scipy import stats
 
-# Load the dataset
-df = pd.read_csv("sales_2024.csv", parse_dates=["order_date"])
+# Load the dataset (placeholder file and column names)
+df = pd.read_csv("sales.csv", parse_dates=["order_date"])
 
 # Descriptive statistics
 print(df[["revenue", "units_sold", "discount"]].describe())
-#          revenue  units_sold  discount
-# count   8450.00     8450.00   8450.00
-# mean     312.45       4.12      0.08
-# std      189.73       2.87      0.05
-# min       12.00       1.00      0.00
-# max     2450.00      47.00      0.35
 
 # Correlation analysis
 corr = df[["revenue", "units_sold", "discount"]].corr(method="pearson")
 print(corr)
-#             revenue  units_sold  discount
-# revenue       1.000       0.847    -0.213
-# units_sold    0.847       1.000    -0.089
-# discount     -0.213      -0.089     1.000
 
-# Hypothesis test: do discounted orders produce higher revenue?
+# Hypothesis test: do discounted orders differ in revenue per order?
 discounted = df[df["discount"] > 0]["revenue"]
 full_price = df[df["discount"] == 0]["revenue"]
 t_stat, p_value = stats.ttest_ind(discounted, full_price)
 print(f"t={t_stat:.3f}, p={p_value:.4f}")
-# t=-3.217, p=0.0013 — discounted orders have significantly lower revenue per order
+# Read the sign of t and the size of the gap before you write a conclusion.
 ```
 
 ### Example 2: Time-series analysis with seasonal decomposition
@@ -78,31 +93,16 @@ print(f"t={t_stat:.3f}, p={p_value:.4f}")
 import pandas as pd
 from statsmodels.tsa.seasonal import seasonal_decompose
 
-# Load monthly revenue data
+# Load monthly data (placeholder file and column names)
 df = pd.read_csv("monthly_revenue.csv", parse_dates=["month"], index_col="month")
 
-# Decompose into trend, seasonal, and residual components
+# Needs at least two full seasonal cycles (24 months for period=12)
 result = seasonal_decompose(df["revenue"], model="additive", period=12)
 
-print("Trend (last 6 months):")
 print(result.trend.dropna().tail(6))
-# 2024-07    48230.12
-# 2024-08    49012.45
-# 2024-09    49780.33
-# 2024-10    50234.10
-# 2024-11    51002.88
-# 2024-12    51890.67
-
-print("\nSeasonal peaks:")
 seasonal = result.seasonal.groupby(result.seasonal.index.month).mean()
 print(seasonal.nlargest(3))
-# month
-# 11    8923.40   (November — holiday pre-orders)
-# 12    7654.20   (December — holiday sales)
-# 3     3210.15   (March — spring promotions)
-
-# The upward trend of ~$600/month suggests 14.5% annualized growth.
-# Strong Q4 seasonality accounts for roughly 18% of total annual revenue.
+# Describe the trend and the seasonal peaks from these printed values only.
 ```
 
 ## Best Practices

@@ -1,39 +1,50 @@
 new_slug: voice-over-stripping-test
 name: "Voice-over stripping test"
-summary: "Paste a script with narration. Get a verdict on each line: does the story work without it?"
+summary: "Find which voice-over lines your video script can cut. Get each line sorted as telling or counterpoint, plus a shorter script."
 job: make-video-ads
 thinking: medium
 thinking_why: "Each line needs a judgment call, but the sort is simple: telling or counterpoint."
 
 headline: "Voice-over stripping test"
-subhead: "Paste a script with narration. It strips all narration, judges whether the picture still tells the story, sorts each line as telling or counterpoint, cuts the telling lines and keeps only the ones that add meaning the picture cannot."
+subhead: "Paste a video script with narration marked. It takes all the narration out and checks if the picture still tells the story. Then it sorts each line as telling or counterpoint. You get a verdict on every line and a shorter revised script."
 
 explain: |
-  Narration often explains what the viewer is already looking at. A voice says "he was nervous" over a shot of a man gripping a chair. The line steals the moment from the picture and makes the viewer a listener, not a watcher.
+  Narration often explains what the viewer can already see. A voice says "he was nervous" over a shot of a man gripping a chair. The line steals the moment from the picture. The viewer stops watching and starts listening.
 
-  This skill runs a stripping test. It splits the script into narration and scene, names the feeling each scene should leave, removes all the narration and reads what is left. If the story still works, most narration was not needed. It sorts each line as telling (it replaces the picture) or counterpoint (it adds something the picture cannot). It cuts or turns telling lines into action, keeps only counterpoint, and rereads the result cold. It also keeps ambiguity that is there on purpose.
+  This skill runs a stripping test on your video script. It splits the script into narration and scenes, then names the feeling each scene should leave. It removes all the narration and reads what is left. If the story still works, most of the narration was not needed.
+
+  Then it sorts each narration line. A telling line repeats the picture. A counterpoint line adds what the picture cannot. It cuts the telling lines or turns them into something seen or done. It keeps only counterpoint, and it keeps any open meaning you left there on purpose.
 
 when:
 - "Your video script has a voice that feels like it is explaining everything."
 - "A video ad runs long and you need to cut words, not pictures."
 - "You are not sure whether the narration helps."
+- "A client says the voice-over feels like it talks down to the viewer."
+
+not_for:
+- "Your script has no narration. There is nothing to strip. Use the Video ad script line checker to check the lines you have."
+- "Spoken lines that must stay, such as price, terms or legal wording. Mark them as must-keep, and the test will not cut them."
+- "You want the spoken words to sound natural when read out loud. Use the Ad script read-aloud editor."
+- "You have no script yet. Use the Video ad script writer from customer quotes first, then come back."
 
 you_give:
-- "The full script with narration marked (voice-over or VO)"
+- "The full script with narration marked as voice-over or VO, scene by scene, from your script document"
 - "What each scene should make the viewer feel (optional)"
-- "The length limit (optional)"
+- "What is seen in each shot, from your shot list or storyboard (optional)"
+- "The length limit in seconds (optional)"
 you_get:
-- "A verdict on every narration line: telling or counterpoint"
-- "A stripped version of the script"
-- "A reason for each cut or kept line"
-- "A final cold read verdict"
+- "A verdict on the story with the narration stripped out"
+- "Every narration line sorted as telling or counterpoint, with a reason"
+- "A revised script with the cuts and the replacement actions"
+- "A note on any open meaning kept on purpose"
+- "Any gaps and any check the revised script still misses"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Paste the script with narration clearly marked."
-- "Write the feeling you want for each scene, if you know it."
-- "Review each verdict and say which cuts you reject."
-- "Use the stripped script as your next draft."
+- "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It needs no tools or files."
+- "Paste the script with narration clearly marked. If a scene has no picture note, add one line saying what is seen."
+- "Write the feeling you want for each scene, if you know it. Mark any line that must stay."
+- "Read STRIPPED READ first. Then go through each line and say which cuts you reject."
+- "Use REVISED SCRIPT as your next draft. Then run it through the Ad script read-aloud editor."
 
 how_it_works:
   - title: "Split narration from scene"
@@ -71,6 +82,26 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your video script with the narration marked as voice-over or VO"
+    - "What each scene should make the viewer feel (optional)"
+    - "A picture note for each scene, such as a shot list (optional)"
+    - "A length limit, and any line that must stay (optional)"
+  output:
+    - name: "STRIPPED READ"
+      contains: "Whether the story still works with no narration, and which scenes lost their meaning."
+    - name: "NARRATION LINES"
+      contains: "Every line sorted as telling or counterpoint, with a reason and what happened to it."
+    - name: "REVISED SCRIPT"
+      contains: "Your script with the telling lines cut or turned into action, and only counterpoint kept."
+    - name: "AMBIGUITY KEPT"
+      contains: "Where it left the meaning open on purpose, and why."
+    - name: "MISSING"
+      contains: "Picture notes or facts it needed and did not get."
+    - name: "CHECKS MISSED"
+      contains: "One line for each check the revised script still fails, or none."
 
 tweaks:
   - what: "Scene feeling"

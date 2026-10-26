@@ -62,10 +62,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Find the facts rivals never state.** Use the skill `process-fact-finder`. Starts from your maker, supplier and test notes.
-2. **Write headlines from the claims.** Use the skill `typed-headline-batch-writer`. Give it the angle library from the steps before. Writes twenty or more headlines from the claims in the step before.
-3. **Pick the three best by cover test.** Use the skill `headline-cover-test-ranker`. Give it the hooks from the steps before. Reads the headline list and keeps three that can teach you something.
-4. **Plan the image ad around the anchor fact.** Use the skill `single-image-ad-planner`. Give it the angle library from the steps before. Reads the claims from step 1. Paste the top headline from step 3 as the line it should keep.
+1. **Find the facts rivals never state.** Use the skill `process-fact-finder`. Starts from your own maker, supplier and test notes, not from a step before. Hands step 2 a ranked list of claims no rival states.
+2. **Write headlines from the claims.** Use the skill `typed-headline-batch-writer`. Give it the angle library from the steps before. Writes twenty or more headlines from the claims in step 1. Hands step 3 the headline list.
+3. **Pick the three best by cover test.** Use the skill `headline-cover-test-ranker`. Give it the hooks from the steps before. Reads the headline list from step 2 and keeps three that can teach you something. Hands step 4 the shortlist, with the top headline first.
+4. **Plan the image ad around the anchor fact.** Use the skill `single-image-ad-planner`. Give it the angle library and the shortlist from the steps before. Reads the claims from step 1 and the product facts you give it, and takes the top headline from step 3's shortlist as the line on the image. Hands you the ad copy and image prompt.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

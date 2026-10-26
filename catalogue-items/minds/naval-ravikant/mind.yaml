@@ -15,6 +15,28 @@ use_cases:
   - "Vet a long-term partner for intelligence, energy and integrity"
   - "Plan a reading habit that builds judgment over years"
   - "Cut the habits and inputs that make you less calm and less clear"
+not_for:
+  - "You want tax, legal, medical or buy and sell investment advice: ask a licensed professional or a finance tool."
+  - "You want a company valued from its numbers: use the Aswath Damodaran mind, who pairs a business story with the figures behind its value."
+  - "You want a check on incentives and ways a plan could fail: use the Charlie Munger mind."
+output_sample:
+  input:
+    - The work you do now and how you are paid for it
+    - Your skills, and what you did well before anyone paid you
+    - Your customers, costs and limits on time or money
+    - The choice you face, such as a deal, a hire or a new project
+    - The people involved in it (optional)
+  output:
+    - name: Definition
+      contains: A plain statement of whether your goal is wealth, money or status.
+    - name: The line to draw
+      contains: The split between two things you have mixed up, such as renting your time and owning something.
+    - name: Reason
+      contains: A short reason from leverage or compounding, tied to your own work.
+    - name: Reflection questions
+      contains: Questions on your specific knowledge, your partners and what you wish were true.
+    - name: One next step
+      contains: One concrete move, offered as a model to test on your own life.
 seats:
   - {seat: "Leverage and judgement", asks: "What's the leverage here, and are we pointed in the right direction before we push?"}
   - {seat: "Long-term games", asks: "Would we want to keep playing this game with these people for the next ten years?"}

@@ -1,6 +1,6 @@
 new_slug: candidate-reply-drafter
 name: Candidate reply drafter
-summary: Paste where the candidate is in your process. Get a clear reply or rejection to send.
+summary: Draft a reply to a job candidate or a respectful rejection. Give the stage and facts. You get a short message with a real date and one next step.
 job: hire-people
 thinking: low
 thinking_why: It fills a short fixed message shape from facts you give it.
@@ -11,6 +11,10 @@ when:
   - A candidate is waiting and you have not replied.
   - You need to turn someone down kindly.
   - You want a template that does not read like one.
+not_for:
+  - "You need to reject many candidates at once: use a mail merge in your hiring tool, or ask your HR lead to check the wording."
+  - "You are ending someone's job or facing a legal dispute: talk to HR or a lawyer before you write anything."
+  - "You want help with every stage of a search: use the full Candidate message drafter."
 you_give:
   - The stage in your process
   - First name, role and one detail from your talk
@@ -25,6 +29,20 @@ how_to_use:
   - Under it, paste the stage, the candidate and what you can say.
   - Send it and read the result.
   - Send within a day of your decision. Delay does the most harm.
+output_sample:
+  input:
+    - The stage in your process, such as after an interview
+    - The candidate's first name and the role
+    - One detail from your talk with them
+    - The reason, the timeline and the next step you can share
+    - Your tone, such as warm or formal (optional)
+  output:
+    - name: SUBJECT
+      contains: One line that says why you are writing.
+    - name: MESSAGE
+      contains: Short paragraphs with a real timeline, one next step and the detail you gave.
+    - name: MISSING
+      contains: Notes on any fact you did not give, such as the timeline.
 how_it_works:
   - title: Lead with why
     text: The subject and first sentence say what the message is.

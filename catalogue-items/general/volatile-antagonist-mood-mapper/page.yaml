@@ -1,6 +1,6 @@
 new_slug: volatile-antagonist-mood-mapper
 name: "Volatile antagonist mood mapper"
-summary: "Paste your setting plan and the person in power. Get a mood scale with warning signs, triggers and costs."
+summary: "Build a villain mood scale from calm to dangerous. Paste your setting plan and the person in power. Get warning signs, triggers and costs."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It builds a scale from set steps, but it needs judgement to make each mood believable and each sign small."
@@ -17,6 +17,10 @@ when:
   - Your antagonist is scary in big scenes but dull in quiet ones.
   - Your trapped character has nothing to react to between big events.
   - You want warm scenes that still carry a threat.
+not_for:
+  - "Your villain has no power over the trapped character: write a plain rival or foe scene yourself, since a mood scale needs someone who can make the other pay."
+  - "You already have the mood scale and want the stakes to grow scene by scene: use the Rising cost ladder builder."
+  - "You have no setting yet: use the Closed setting planner first, then come back here."
 
 you_give:
   - A setting plan from "Closed setting planner", or a short description of the place
@@ -34,6 +38,26 @@ how_to_use:
   - Paste your setting plan and describe the person who holds the power.
   - Say how they speak, what they love and what they cannot stand.
   - Use the mood scale to decide the mood each scene starts in. Next, use "Rising cost ladder builder".
+output_sample:
+  input:
+    - Your setting plan, or a short description of the place and who is trapped
+    - Who holds the power, what they want and how they talk
+    - A few lines of their dialogue (optional)
+  output:
+    - name: The person
+      contains: Four lines on what they want, what they fear losing, what they believe about themselves and how they speak when calm.
+    - name: The scale
+      contains: Three or four moods in order, each with a sign, what the person does and what it costs the other.
+    - name: Triggers
+      contains: Five to eight small, ordinary things that tip one mood into the next, with which ones the reader sees first.
+    - name: Their reason
+      contains: Two or three sentences in the person's own voice on why they think they are right.
+    - name: What the trapped person learns to read
+      contains: The three signs the trapped person learns first, in the order they learn them.
+    - name: Missing
+      contains: Facts you still need to give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each self-check that failed and why, or none.
 
 how_it_works:
   - title: Sets the scale

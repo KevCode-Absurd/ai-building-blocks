@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It designs tools, a server and a widget that must work together.
 new_slug: chatgpt-app-builder
 name: ChatGPT app builder
-summary: Describe the tool you want inside ChatGPT. Get a working Apps SDK
-  project with its server and screen.
+summary: Build a ChatGPT app with the Apps SDK. Describe your tool and get a server, an on-screen panel and setup steps to test it in ChatGPT.
 job: connect-tools
 headline: ChatGPT app builder
-subhead: A working starter project for a tool that runs inside ChatGPT, with its
-  server and its on-screen panel. You describe what the app should do, and you
-  get code that follows the current Apps SDK instead of guesses from old
-  examples.
+subhead: A working starter project for a tool that runs inside ChatGPT, with its server and its on-screen panel. You describe what the app should do, and you get code that follows the current Apps SDK instead of guesses from old examples.
 explain: |
   A working starter project for a tool that runs inside ChatGPT, with its server and its on-screen panel. You describe what the app should do, and you get code that follows the current Apps SDK instead of guesses from old examples.
 
@@ -19,6 +15,10 @@ when:
   - You are not sure which of the official examples to start from.
   - You need a tool plan with clear names and inputs before coding.
   - You want to test the app locally and then submit it.
+not_for:
+  - "You only need a plain API with no ChatGPT screen: build a normal web service, or ask a developer."
+  - "Your team does not use Node: the starter code is Node, so ask a developer to port it."
+  - "You want to chat with your own data inside ChatGPT without code: use a custom GPT in ChatGPT instead."
 you_give:
   - What your app should do
   - The data or service it connects to
@@ -31,8 +31,37 @@ you_get:
   - Setup steps for local testing
   - A validation report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open an AI that can run code and read web pages, such as Codex or Claude Code. Paste the skill or load its folder.
+  - Describe your app in plain words. Say what it does, what data it uses and whether it needs a panel.
+  - Let your AI read the current Apps SDK docs first. Then check the app type and tool plan it proposes.
+  - Approve the plan. Your AI writes the server and the panel, then checks them against the minimum working list.
+  - Run the app on your computer. Start an HTTPS tunnel such as ngrok so ChatGPT can reach it.
+  - In ChatGPT, turn on Developer Mode, add your tunnel link as an app and try your tools.
+output_sample:
+  input:
+    - What your app should do
+    - The data or service it connects to
+    - Whether it needs a visual panel
+    - Your hosting plan (optional)
+  prerequisites:
+    - An AI that can run code and read the OpenAI docs
+    - Node installed on your computer
+    - An HTTPS tunnel such as ngrok for local testing
+    - ChatGPT Developer Mode access
+  output:
+    - name: App type and repo shape
+      contains: The kind of app you are building and whether the server and panel sit together or apart.
+    - name: Tool plan
+      contains: Each tool with its name, inputs, outputs and notes, planned before any code.
+    - name: Starting point
+      contains: The official example to adapt, or a small fallback project, and why it was chosen.
+    - name: Docs used
+      contains: The OpenAI docs pages the design is based on.
+    - name: File tree and code
+      contains: The server that registers your tools and the panel that shows results in ChatGPT.
+    - name: Validation report
+      contains: A check of the project against a minimum working checklist.
+    - name: Local test steps
+      contains: How to run the app, open a tunnel and add it in ChatGPT Developer Mode.
+    - name: Risks and follow-ups
+      contains: Gaps left to fix, plus hosting and submission notes if you asked for them.

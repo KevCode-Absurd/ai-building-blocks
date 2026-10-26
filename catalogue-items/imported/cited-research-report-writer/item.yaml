@@ -10,6 +10,10 @@ level: advanced
 inputs:
   - type: question
     required: true
+  - type: plan
+    required: false
+  - type: shortlist
+    required: false
 outputs:
   - type: document
 uses: []

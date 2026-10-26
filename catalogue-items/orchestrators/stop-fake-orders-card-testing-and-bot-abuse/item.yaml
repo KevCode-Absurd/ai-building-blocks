@@ -15,7 +15,7 @@ outputs:
 uses: [fraud-rules-setter, bot-and-ai-agent-access-planner]
 steps:
   - {uses: fraud-rules-setter, note: "Starts the flow. Sets the rules for orders that look risky and a review routine for held ones."}
-  - {uses: bot-and-ai-agent-access-planner, note: "Uses the results of the fraud rules to separate people, bots and AI agents and set what each may do."}
+  - {uses: bot-and-ai-agent-access-planner, note: "Uses step 1's rules as the rules already in place, and the export you pull after running them for two to four weeks (blocked, held and disputed orders, failed sign-ins), to separate people, bots and AI agents and set what each may do."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/stop-fake-orders-card-testing-and-bot-abuse/skeleton.yaml

@@ -1,6 +1,6 @@
 new_slug: check-a-small-business-before-you-buy-it
 name: Check a small business before you buy it
-summary: Give it the listing and the books. Get a checklist, seller questions, owner earnings and a value range.
+summary: "Check a small business before you buy it: give it the listing and the books. Get a checklist, seller questions, owner earnings and a value range."
 job: money-and-investing
 thinking: high
 thinking_why: It judges a business from its books and sets a price range you will act on. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A broker sent you a listing and you are tempted.
   - You are buying from a retiring owner who keeps the books in their head.
   - You have bought before and found the surprises after closing.
+not_for:
+  - "You are buying only the assets, like equipment or stock: ask your accountant or a valuation specialist instead."
+  - "You want to know what a business is worth without a deal in front of you: use the Business asset value estimator."
+  - "You need a legal review of the contract or lease: hire a lawyer, since this workflow only prepares the questions."
 you_give:
   - The listing and what the seller claims
   - The financial statements, two or three years if you can
@@ -30,6 +34,28 @@ how_to_use:
   - Paste the listing and the statements. It builds the checklist and the meeting questions.
   - Meet the seller. Paste what they said and any new documents.
   - Read the statement analysis, the owner earnings and the value range before you make any offer.
+output_sample:
+  input:
+    - The listing and what the seller claims
+    - The financial statements, two or three years if you can
+    - What you know of the industry and the location
+    - The seller's answers after your meetings (optional)
+  prerequisites:
+    - An AI that can keep each step's result as a file, such as Claude with files
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: "Step 1: Due diligence checklist"
+      contains: What to ask for, how to verify it, the red flags and the order to work in.
+    - name: "Step 2: Seller meeting prep"
+      contains: Questions for the seller, the answers to listen for and what to ask to see.
+    - name: "Step 3: Statement read"
+      contains: Trends, margins, oddities and gaps in the statements, each tied to a line.
+    - name: "Step 4: Owner earnings"
+      contains: Reported earnings plus non-cash charges, minus must-spend costs and a fair wage for the owner's work.
+    - name: "Step 5: Value range"
+      contains: A low to high range with the method shown, the walk-away price and what is still to verify.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the checklist
     text: Builds the diligence checklist for this kind of business, with red flags and the order to work in.
@@ -38,7 +64,7 @@ how_it_works:
   - title: Meet the seller
     text: A pause. Meet the seller and collect the documents on the checklist. Paste the answers and any new files.
   - title: Read the statements
-    text: Reads the statements for trends, margins, oddities and gaps, each tied to a line.
+    text: Reads your books and the seller's answers for trends, margins, oddities and gaps, each tied to a line. Hands the owner earnings step the statement read.
   - title: Work out owner earnings
     text: Works out owner earnings in Buffett's definition, with the owner's unpaid work priced at a fair wage.
   - title: Set the value range

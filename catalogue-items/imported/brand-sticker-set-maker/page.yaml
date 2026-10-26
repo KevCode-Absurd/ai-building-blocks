@@ -2,35 +2,60 @@ thinking: medium
 thinking_why: It builds a cast first, then draws each sticker.
 new_slug: brand-sticker-set-maker
 name: Brand sticker set maker
-summary: Give it your logo. Get a set of playful die-cut character stickers on
-  clear backgrounds.
+summary: "Turn your logo into a brand sticker set: playful characters with white die-cut edges, each saved as a clear-background image."
 job: make-images
 headline: Brand sticker set maker
-subhead: A set of playful character stickers made from your logo, with thin
-  white die-cut edges and clear backgrounds. They suit a website, a launch or
-  merchandise while staying true to the brand.
+subhead: Give your AI your logo and what your product does. It builds a small cast of characters from the logo, then draws each one as a sticker. Each sticker has a thin white edge and a clear background.
 explain: |
   A set of playful character stickers made from your logo, with thin white die-cut edges and clear backgrounds. They suit a website, a launch or merchandise while staying true to the brand.
 
   The skill studies your real logo first and picks three anchors: its shape, its colour pairing and a verb the product performs. It then turns shapes into a cast, or product behaviour into a character's useful, slightly troublesome ability. Each character keeps the brand's palette and gets something surprising to do. Your latest visual feedback overrides any older brief. Use a logo design process if you do not yet have a logo.
 when:
   - You want stickers for a product launch.
-  - Your site needs transparent illustrations that feel on-brand.
-  - An existing mascot needs new poses without changing its look.
-  - You want merchandise that people actually keep.
+  - Your website needs clear-background art that feels on brand.
+  - Your mascot needs new poses without a new look.
+  - You want merchandise that people keep.
+not_for:
+  - "You have no logo yet: get a logo made first with a designer or a logo design process, then come back."
+  - "You want one flat product photo or ad image: ask your AI for a single image instead of a full sticker set."
+  - "Your AI cannot make images or save clear backgrounds: you will only get prompts, so use an AI image tool first."
 you_give:
   - Your logo file
-  - Brand colours and any mascot (optional)
-  - What your product does
-  - Feedback on early drafts (optional)
+  - Your brand colours and any existing mascot (optional)
+  - A line on what your product does
+  - Your feedback on early drafts (optional)
 you_get:
-  - A cast of characters drawn from your logo
-  - A sticker set with white die-cut edges
-  - Clear background images
+  - A small cast of characters drawn from your logo
   - A short note on why the idea fits your brand
+  - One sentence of story for each sticker
+  - Each sticker as its own clear-background image with a white die-cut edge
+  - The prompts used to make the images
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can draw images.
+  - Check that your AI can make images from a reference picture and save clear-background PNG files. This may need a paid plan.
+  - Open a chat with your AI and paste the skill text.
+  - Upload your logo and add your colours, any mascot and what your product does.
+  - Ask for the full set. Your AI makes one sticker first, then matches the rest to it.
+  - "Check each sticker: is your brand easy to spot, and is the white edge whole? Ask for a redo of any weak one."
+  - Next, place the PNG files on your site or in a print mock-up. If your AI cannot make images, you get prompts to use in an image tool.
+output_sample:
+  input:
+    - Your logo file
+    - Brand colours and any existing mascot (optional)
+    - What your product does
+    - Your feedback on early drafts (optional)
+  prerequisites:
+    - An AI image tool that accepts reference images and saves clear-background PNG files. Your AI may need a paid plan for this.
+    - A logo you already have
+  output:
+    - name: Brand read
+      contains: "The three things it takes from your logo: its shape, its colour pairing and a verb your product does."
+    - name: Character cast
+      contains: The characters drawn from your logo, with a note on why the idea fits your brand.
+    - name: Scene lines
+      contains: One sentence per sticker saying who does what, what goes wrong and how they react.
+    - name: Sticker images
+      contains: Each sticker saved as its own clear-background file with a thin white die-cut border.
+    - name: Prompt set
+      contains: The exact prompts used for each image, and how the images were made.
+    - name: Contact sheet (optional)
+      contains: One page showing the whole set together so you can check it.

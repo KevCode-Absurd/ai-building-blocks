@@ -1,0 +1,139 @@
+name: Test Automation Engineer agent
+summary: Get stable Playwright or Cypress browser tests, a CI setup and a fix for each flaky test, so failures mean real bugs and not bad timing.
+headline: Test Automation Engineer agent
+subhead: Name the flows that must never break, and paste your tests and a failing run if you have them. The agent picks which flows need browser tests, writes steady Playwright or Cypress code and sets up CI. You get a root cause and a fix for each flaky test.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A test that fails one run in twenty is worse than no test. The team learns to re-run until it goes green, and then a real bug slips through. This end-to-end test agent treats a flaky test as a bug with a cause, and fixes the cause.
+
+  It begins with scope. It asks which flows would hurt most if they broke, such as sign-up and checkout, and tests those in a real browser. Anything a faster unit or API test can prove goes lower down. Then it builds the base before the tests: data created through your API, a login that happens once per worker, and a way to pick buttons by name and role, not by fragile CSS paths.
+
+  Its main rule is no hard waits. A test waits for something to happen, such as an element, a reply or a page change, not for a set number of seconds. Each test owns its data, so tests can run side by side. Retries only measure flakiness. They do not count as a pass. A failed run in CI keeps a trace, a screenshot and a video, so you can debug it without re-running.
+
+  A chat AI writes the code. It cannot run the suite or confirm that a test passed ten times. You run it, or let Claude Code or Codex run it, and paste the output back. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience and success numbers are role language, not results measured by AI Blocks.
+when:
+  - Your browser tests fail at random, and your team re-runs them until they go green.
+  - You have no end-to-end tests for sign-up or checkout and want a first set that you can trust.
+  - Your test suite takes too long in CI and you want it split across machines.
+  - You are moving from Cypress to Playwright, or the other way, and want the tests moved with care.
+not_for:
+  - "You have a finished test run and want it sorted by cause and risk: use the Test Results Analyzer agent."
+  - "You want a page-by-page check with screenshots and no code: use the Evidence Collector agent."
+  - "You only need to test an API, not a browser: use the API Tester agent."
+  - "You want an accessibility audit: use the Accessibility Auditor agent."
+  - "You do not use Playwright or Cypress, such as Selenium or a mobile app test tool: this agent may not fit."
+you_give:
+  - The flows that must never break, in plain words, such as "a customer adds a product and pays".
+  - The tool you use or want, Playwright or Cypress, and your language, such as TypeScript.
+  - Your existing test files and CI config, pasted or uploaded (optional).
+  - The failing or flaky tests, with the error text, the CI log or a trace (optional).
+  - How test data is made today, such as an API, a seed script or by hand (optional).
+you_get:
+  - A short list of flows worth a browser test, and which checks to move to unit or API tests.
+  - Test code with role-based selectors, data set up through the API and no hard waits.
+  - The base files, such as a login fixture, data helpers and a Playwright config that keeps traces.
+  - A CI file that splits tests across machines and keeps traces when a test fails.
+  - A flake table with the cause and the fix for each flaky test you shared.
+  - A checklist to run each new test ten times before you merge it.
+how_to_use:
+  - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Say which tool and language you use, and list the flows that matter. For flaky tests, paste the test, the error text and the CI log.
+  - "Ask for the plan first: List the flows that need browser tests and what moves to unit or API tests. Do not write code yet."
+  - Approve the list. Then ask for the base files first (data helpers, login fixture, config) and the tests second.
+  - "Run the tests yourself. For each new test, run it ten times, for example with npx playwright test --repeat-each=10. Claude Code or Codex can run it for you if you allow it."
+  - Paste any failure and its trace back and ask for the cause. Do not merge a test that needs a retry to pass.
+how_it_works:
+  - title: Map the key flows
+    text: It lists the flows whose failure would hurt most, and moves anything a unit or API test can prove out of the browser.
+  - title: Build the base
+    text: It sets up data helpers that call your API, a login once per worker, selector rules and a config that keeps traces.
+  - title: Write steady tests
+    text: It picks elements by role and name, waits on conditions and replies, and gives each test its own data.
+  - title: Wire up CI
+    text: It splits tests across machines, keeps traces, screenshots and videos for failures, and blocks the merge on the stable suite.
+  - title: Triage flakes
+    text: It matches each flaky test to a likely cause, such as shared data or a slow wait, and gives the fix, not a workaround.
+  - title: Prove it
+    text: It asks for ten clean runs per new test and tracks pass rate, run time and flake rate over time.
+output_shape: |-
+  SCOPE
+    Flow <name> | Browser test or lower level | Why <reason>
+
+  SETUP FILES
+    <data helpers, login fixture, config> | <code>
+
+  TESTS
+    <test file name> | <what it proves> | <code>
+
+  CI
+    <workflow file> | Shards <number> | Artifacts kept <trace, screenshot, video>
+
+  FLAKE TRIAGE
+    <test> | Symptom <what fails> | Cause <likely cause> | Fix <change>
+
+  RUN CHECKLIST
+    Command <command> | Runs <10> | Result <you fill in> | NOT RUN <list>
+output_sample:
+  input:
+    - The flows that must never break, in plain words
+    - Your tool and language (Playwright or Cypress)
+    - Your test files and CI config (optional)
+    - Failing or flaky tests with error text or logs (optional)
+  prerequisites:
+    - A project with Playwright or Cypress installed, or permission to add it
+    - A way to run the tests yourself, or Claude Code or Codex to run them
+  output:
+    - name: Scope
+      contains: The flows that deserve a browser test and the checks that move to unit or API tests.
+    - name: Setup files
+      contains: Data helpers, a once-per-worker login and a config that keeps traces for failures.
+    - name: Tests
+      contains: Test code per flow with role-based selectors, owned data and no hard waits.
+    - name: CI
+      contains: A workflow file that splits tests, keeps failure files and blocks a merge on a failure.
+    - name: Flake triage
+      contains: Each flaky test with its symptom, likely cause and fix.
+    - name: Run checklist
+      contains: The commands to repeat each test ten times and a list of what has not been run.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Tool
+    how: Say Playwright or Cypress, and the language, so the code matches your project.
+  - what: Scope
+    how: Ask for one flow at a time, such as "checkout only", to keep the answer short.
+  - what: CI
+    how: Name your CI, such as GitHub Actions or GitLab, and how many machines you can run at once.
+improve:
+  - Keep a list of flaky tests with their causes. Paste it into the next chat so the agent spots repeat patterns.
+terms:
+  - term: End-to-end test
+    meaning: A test that uses the app in a real browser, from the first click to the final result.
+  - term: Flaky test
+    meaning: A test that passes on some runs and fails on others, with no change to the code.
+  - term: Hard wait
+    meaning: A fixed pause, such as 3 seconds. It fails when the app is slower and wastes time when it is faster.
+  - term: Selector
+    meaning: The way a test finds a button or field on the page.
+  - term: CI
+    meaning: A service that runs your tests on every change, such as GitHub Actions.
+  - term: Trace
+    meaning: A recording of a test run that you can replay step by step to see why it failed.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can read your repo, write the test files, run the suite and repeat each test ten times.
+    - name: Claude, ChatGPT or Gemini
+      why: In a plain chat they can write and review test code from what you paste, but they cannot run it.
+  inputs:
+    - The trace or CI log of a failed run.
+    - Your app's API docs, so the data helpers use the real calls.

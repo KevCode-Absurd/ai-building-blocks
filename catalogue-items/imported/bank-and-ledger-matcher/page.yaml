@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches by rule, then judges the close calls.
 new_slug: bank-and-ledger-matcher
 name: Bank and ledger matcher
-summary: Give it a bank statement and your ledger. Get matched items, near
-  matches and a list of what is left over.
+summary: Match your bank statement to your ledger and see what is left over. Get exact matches, near matches and a bank reconciliation report.
 job: track-numbers
 headline: Bank and ledger matcher
-subhead: Give it a bank statement and your ledger. Get matched items, near
-  matches and a list of what is left over. Bring a bank statement file. Use the
-  result to plan your next step.
+subhead: Give it a bank statement and your ledger. Get matched items, near matches and a list of what is left over. Bring a bank statement file. Use the result to plan your next step.
 explain: |
   Bank transactions matched to ledger entries at scale, with the leftovers clearly listed. Give it a bank statement and a ledger export and say how you define a match: same reference and amount, or similar name, same amount and a date within a couple of days.
 
@@ -18,6 +15,10 @@ when:
   - Vendor names differ between your bank and your books.
   - One payment covers many invoices and nothing lines up.
   - Your month-end bank rec takes days of manual work.
+not_for:
+  - "You have only a few dozen lines: match them by hand in a spreadsheet, or use your accounting package's built-in bank feed matching."
+  - "You need payroll or card-level matching with no bank reference: use your accounting package's bank feed matching, or ask your bookkeeper."
+  - "You need to check the cash balance on your balance sheet: ask your accountant, or use a financial statement prep step."
 you_give:
   - A bank statement file
   - A ledger export
@@ -29,8 +30,26 @@ you_get:
   - Unmatched items on each side
   - A reconciliation report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Remove account numbers and personal names from your bank file and your ledger export.
+  - Open an AI that can run code and read files. Small files can be pasted into a chat instead.
+  - Upload both files. Say how you define a match, such as same amount and a date within two days.
+  - Ask your AI to follow the Automated Reconciliation skill.
+  - Check the near matches and the unmatched items before you post any journal entry.
+output_sample:
+  input:
+    - Your bank statement file (CSV or PDF)
+    - Your ledger export from your accounting software
+    - Your match rules, such as amount tolerance and date window
+    - Shared IDs, such as reference or check numbers (optional)
+  prerequisites:
+    - An AI that can run Python code and read your files, for large files
+    - Account numbers and personal names removed from your files
+  output:
+    - name: The Results
+      contains: The share of lines matched automatically and the total value that was reconciled.
+    - name: The Exceptions
+      contains: Unmatched items from the bank and the ledger, plus close calls with confidence scores for your sign-off.
+    - name: Journal Entry Suggestions
+      contains: Ready-to-copy entries for bank fees or interest found on the statement but missing from the ledger.
+    - name: Reconciliation statement
+      contains: A bank rec statement with detail on outstanding items, built from the template.

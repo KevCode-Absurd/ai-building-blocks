@@ -22,7 +22,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Get a digest of what you missed.** Use the skill `activity-digest-writer`. Starts from your connected tools. Makes a short digest of mentions, decisions and action items.
-2. **Run the weekly review.** Use the skill `weekly-review-guide`. Give it the brief from the steps before. Uses the action items and decisions from the digest as the loops to close.
+2. **Run the weekly review.** Use the skill `weekly-review-guide`. Give it the brief from the steps before. Uses the action items and decisions from the digest as the loops to close. Hands step 3 a plan for next week.
 3. **Plan one protected day.** Use the skill `deep-work-day-planner`. Give it the brief from the steps before. Takes the tasks from the digest and the top items from the weekly plan, and puts the important ones first.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

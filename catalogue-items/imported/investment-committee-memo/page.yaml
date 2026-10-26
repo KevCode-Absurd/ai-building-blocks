@@ -2,36 +2,88 @@ thinking: medium
 thinking_why: It organises many findings into a formal memo.
 new_slug: investment-committee-memo
 name: Investment committee memo drafter
-summary: Give it diligence findings and deal terms. Get a structured committee
-  memo with facts, risks and open questions.
+summary: Turn your diligence notes and deal terms into an investment committee memo for an Indian deal, with a recommendation, risks and open questions.
 job: money-and-investing
 headline: Investment committee memo drafter
-subhead: "A committee memo that puts the facts, the risks and the open questions
-  on one page flow. Give it what you know: the company, market, three to five
-  years of financials, deal terms, diligence findings and the returns cases."
+subhead: Give it the company, the market, three to five years of financials, deal terms, diligence findings and your returns cases. You get a nine-part committee memo with the recommendation first, and a list of open questions.
 explain: |
-  A committee memo that puts the facts, the risks and the open questions on one page flow. Give it what you know: the company, market, three to five years of financials, deal terms, diligence findings and the returns cases. The skill organizes them into the standard structure: executive summary, business and market, financials, management, deal terms, risks, value creation plan and returns.
+  This is an investment committee memo template that your AI fills from your own notes. Scattered diligence findings turn into one memo in the layout a committee expects, so people read the argument and not the formatting.
 
-  It writes the recommendation up front with headline returns, and lists risks with ways to reduce each. This version is built for Indian deals: it uses the April to March fiscal year and lakh and crore units, and avoids the spreadsheet format that makes figures a hundred times off.
+  It writes the recommendation and headline returns up front. Then it covers the company, the market, the numbers, the thesis, the deal terms, returns, risks, and a clear call: proceed, pass or conditional proceed. Each risk gets a way to reduce it, and deal-breakers are named.
+
+  It is set up for Indian deals. Years run April to March and read like FY25. Amounts are in crore, made by a live formula and not a number format that is off by 10 times. It writes only what you give it. A missing figure is marked MISSING and goes to the open questions, never guessed.
 when:
-  - You are presenting a deal to an investment committee next week.
-  - You have scattered diligence notes and need one structured memo.
-  - You want base, upside and downside returns shown side by side.
-  - You invest in India and need fiscal year and crore labels right.
+  - You present a deal to an investment committee next week and have notes in five places.
+  - You want base, upside and downside returns shown side by side in one memo.
+  - A partner asks for the bear case and the risks, ranked.
+  - You invest in India and need FY labels and crore units right.
+not_for:
+  - You only need a first screen of a teaser or CIM. Use the Deal screening memo writer.
+  - You need a lender's view of a loan. Use the Borrower credit memo writer.
+  - You still need to do the diligence. Use the Due diligence checklist builder first, then come back.
+  - You want returns worked out from scratch. Use the Deal returns sensitivity builder, then paste its tables here.
 you_give:
-  - Company description and market context
-  - Historical financials
-  - Deal terms and financing
-  - Diligence findings
-  - Returns cases and value creation plan (optional)
+  - A description of the company and the market it sells into
+  - Three to five years of financials, in crore (₹ Cr)
+  - Deal terms, such as price, structure and financing
+  - Diligence findings on commercial, financial, legal and operations
+  - Returns cases and a value creation plan (optional)
+  - Your firm's memo template (optional)
 you_get:
-  - A structured committee memo
-  - An executive summary with a recommendation
-  - A risk list with mitigations
-  - A returns section
+  - A memo in nine parts, from executive summary to recommendation
+  - A recommendation with headline returns at the top
+  - Risks ranked by severity, each with a way to reduce it
+  - Tables for financials and returns
   - A list of open questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your notes in one place. Put them in the order of the list above.
+  - Open the skill in your AI and paste your notes. Add your firm's template if you have one.
+  - Check the AI's list of missing items. Answer what you can. Anything left stays marked MISSING.
+  - Read the draft. Check that the tables add up: the EBITDA bridge, sources and uses, and the returns math.
+  - Edit the recommendation and risks yourself. They carry your judgement, not the AI's.
+  - Take the memo to the committee once the open questions are closed or flagged.
+output_sample:
+  input:
+    - Company description and market context
+    - Three to five years of financials in crore
+    - Deal terms and financing
+    - Diligence findings
+    - Returns cases and value creation plan (optional)
+  prerequisites:
+    - Your own diligence notes. This skill does no research
+  output:
+    - name: I. Executive summary
+      contains: The company, deal rationale, key terms, the recommendation, headline returns and top 3 risks.
+    - name: II to IV. Company, market and financials
+      contains: What the business does, how big the market is, and the numbers for 3 to 5 years.
+    - name: V. Investment thesis
+      contains: Three to five reasons to invest, the levers to create value and the first 100 days.
+    - name: VI. Deal terms and structure
+      contains: Enterprise value, sources and uses, debt levels and key legal terms.
+    - name: VII. Returns analysis
+      contains: Base, upside and downside cases with IRR and MOIC, and what drives them.
+    - name: VIII. Risk factors
+      contains: Risks ranked by severity and likelihood, each with a mitigant, and any deal-breakers.
+    - name: IX. Recommendation
+      contains: Proceed, pass or conditional proceed, with the conditions and next steps.
+    - name: Open questions
+      contains: One line for each missing or weak item, so the committee sees the gaps.
+works_best_with:
+  tools:
+    - name: Claude
+      why: Handles long notes well and can write a Word file if file creation is on.
+    - name: ChatGPT
+      why: Can draft the memo from pasted notes and make a Word file with its file tools.
+  inputs:
+    - Your firm's standard memo template
+    - The returns model as a table
+    - Customer or management reference call notes
+terms:
+  - term: IC memo
+    meaning: A document that asks the investment committee to approve a deal.
+  - term: IRR and MOIC
+    meaning: Two ways to show returns. IRR is a yearly rate. MOIC is how many times you get your money back.
+  - term: Sources and uses
+    meaning: A table of where the money comes from and where it goes.
+  - term: Crore
+    meaning: An Indian unit. One crore is 10,000,000.

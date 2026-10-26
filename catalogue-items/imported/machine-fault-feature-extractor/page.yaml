@@ -2,36 +2,59 @@ thinking: medium
 thinking_why: It picks features suited to each fault type.
 new_slug: machine-fault-feature-extractor
 name: Machine fault feature extractor
-summary: Give it vibration or sensor signals from a motor or pump. Get features
-  ready for fault detection.
+summary: Find the signal features that show early faults in a motor, pump or gear. Give it sensor data, get a feature table and a health score in MATLAB.
 job: build-software
 headline: Machine fault feature extractor
-subhead: Give it vibration or sensor signals from a motor or pump. Get features
-  ready for fault detection. Bring evenly sampled sensor data. Use the result to
-  plan your next step.
+subhead: Give it vibration or sensor recordings from a motor, pump, fan, gear or bearing. It builds a table of features and picks the ones that best show a fault. You also get a single health score and the MATLAB code.
 explain: |
   A set of useful numbers pulled from the vibration or sensor signals of a motor, pump or other rotating machine, ready for spotting faults early. It runs in MATLAB.
 
   It follows five steps. First it cleans and prepares your signals. Then it extracts features, such as statistics and frequency measures, which also shrink huge vibration files into compact ones. Next it ranks the features and keeps the ones that best separate healthy from faulty. After that it builds a health indicator from them and finally helps you deploy the monitoring. It fits evenly sampled time data. For sorting several fault types or building anomaly detectors, it points you to other tools.
 when:
-  - You have vibration data from a motor and want to detect wear.
-  - Your raw sensor files are too large to use directly.
-  - You need to pick which signal features actually predict failure.
-  - You want a single health score for a machine over time.
+  - You have vibration data from a motor and want to spot wear early.
+  - Your raw sensor files are too big to use as they are.
+  - You need to know which signal features actually track failure.
+  - You want one health score for a machine over time.
+not_for:
+  - "You want to sort several fault types from each other: use MATLAB's Classification Learner app instead."
+  - "You want a model that flags odd behaviour without fault labels: use MATLAB's Time Series Anomaly Detector instead."
+  - "Your data is images, video, a plain table with no time order, or very slow readings: ask an engineer for a simpler check."
 you_give:
-  - Evenly sampled sensor data
-  - The machine type and sample rate
+  - Your sensor recordings, sampled at an even rate
+  - The machine type and the sample rate
+  - Shaft speeds or a tachometer signal (optional)
+  - Bearing or gear details (optional)
   - Healthy and faulty recordings (optional)
-  - Where you will deploy the monitor (optional)
 you_get:
-  - Extracted signal features
-  - A ranked, trimmed feature list
-  - A health indicator
-  - MATLAB code for the workflow
+  - A table of signal features, one row per recording
+  - A ranked list of the features that matter most
+  - A health indicator that tracks condition over time
+  - A MATLAB script for the whole workflow
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Predictive Maintenance
-    Toolbox.
+  - Check you have MATLAB and the Predictive Maintenance Toolbox. Both are paid, and your AI must be able to run MATLAB code.
+  - Open your AI tool and add the skill file, or paste its text into the chat.
+  - Share your sensor files and say the machine type and sample rate.
+  - Answer its questions about shaft speeds, bearing or gear details and tachometer position. It will not guess these.
+  - Check the feature ranking and the health indicator against what you know about the machine.
+  - Ask for the full MATLAB script, and for remaining-life or embedded code if you need them.
+output_sample:
+  input:
+    - Your sensor recordings, sampled at an even rate (vibration, motor current or similar)
+    - The machine type and the sample rate
+    - Shaft speeds, or a tachometer signal that shows rotation (optional)
+    - Bearing or gear details, if you have them (optional)
+    - Recordings from healthy and faulty states, or run-to-failure files (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the Predictive Maintenance Toolbox, which are paid tools
+  output:
+    - name: Prepared signals
+      contains: Your signals cleaned for analysis, using rotation-synchronised averaging or envelope steps when your data allows them.
+    - name: Feature table
+      contains: One row per recording, with named columns for time-domain, frequency and bearing or gear fault-band features.
+    - name: Feature ranking
+      contains: Scores showing which features best track wear or separate healthy from faulty, with repeated features dropped.
+    - name: Health indicator
+      contains: One score per recording that combines the chosen features to show machine condition over time.
+    - name: MATLAB script
+      contains: Code that runs the whole workflow, plus remaining-life or embedded-code versions if you ask.

@@ -1,6 +1,6 @@
 new_slug: wordless-video-ad-opening-writer
 name: Wordless video ad opening writer
-summary: Describe your product and its real motion. Get two or three wordless opening ideas, frame plans and prompts for making clips.
+summary: Write wordless video ad openings from your product's real motion. Get 2 or 3 ideas, frame plans and clip prompts to put in front of your ad.
 job: make-video-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - Your ad holds people once they're in, but too many scroll past the first second.
   - Your product has a satisfying moment (a pour, a scoop, a click, a peel) that you've never shown up front.
   - You want to test new openings on an ad you already run, without filming a new ad.
+not_for:
+  - "You want someone talking to camera at the start: pair your ad with a skill that writes talking openings, or ask a person to film it."
+  - "Your product only turns on a stand in its sealed pack: that is a pack shot, so shoot a simple product photo or short clip instead."
+  - "You need the finished video file: this writes the plans and prompts, so use a video tool such as Veo or Kling to make the clip."
 you_give:
   - Your product photos by what they show (pack front, out of the pack, in hand, close-up of the surface)
   - How it opens, pours or is used, its real motions and sounds, and what it's made of
@@ -31,6 +35,31 @@ how_to_use:
   - Attach a still of the first frame of the ad it goes in front of.
   - Approve the line-up, the product card, the sheets and the storyboard, in that order.
   - Make one clip, check it, then the rest. Test each opening on the same ad as separate ads.
+output_sample:
+  input:
+    - Your product photos, labelled by what they show
+    - How your product opens, pours or is used, with its real sounds
+    - A still of the first frame of the ad this goes in front of
+    - Your brand's places, light and what never to show (optional)
+    - Your video tool's shortest clip length (optional)
+  prerequisites:
+    - An AI chat tool that can read images
+    - A video tool such as Veo or Kling to make the clips (optional)
+  output:
+    - name: Stage 0 Line-up
+      contains: Two or three openings, each with its own finish, camera, sound, last frame and a reason someone would wait.
+    - name: Stage 1 Product card
+      contains: A fixed description of your product, its variant and photos by job, which does not change.
+    - name: Stage 2 Reference images
+      contains: Image prompts for one to four reference pictures, and which ones to pick for each opening.
+    - name: Stage 3 Sheets and lock lines
+      contains: A product sheet, a set sheet matching your ad, and lines that spell out how the material moves.
+    - name: Stage 4 Storyboard
+      contains: A start frame, an end frame and a shot card with timed motion for each opening you approve.
+    - name: Stage 5 Clip prompt
+      contains: A clip prompt in real speed with the sound named, a short overlay or none, and a delivery list.
+    - name: Missing and checks missed
+      contains: Details you did not give and any checks the result failed, one line each.
 how_it_works:
   - title: Picks by finish
     text: Level, fit, release, smooth or order, taken from how your product really moves. A motion nobody described is marked inferred.

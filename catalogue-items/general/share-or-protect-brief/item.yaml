@@ -1,7 +1,7 @@
 slug: share-or-protect-brief
 renamed_from: share-or-protect-decision-brief-writer
 name: "Share or protect decision brief writer"
-summary: "Describe something you made. Get a one-page choice between keeping it, licensing it or giving it away, with who gains and pays."
+summary: Decide whether to keep, license or give away what you made. Get a one-page brief with who gains, who pays and what you will share.
 category: general
 type: skill
 role: make
@@ -16,3 +16,5 @@ version: 1.0.0
 minds: [marie-curie]
 credits:
   - {title: "Pierre Curie, with the Autobiographical Notes of Marie Curie", by: "Marie Curie", used: "Weighing who gains from a discovery being open against what protecting it would fund, and publishing the method in full"}
+needs_mode: manual
+next: [ruin-risk-stress-tester, case-against-writer, disagree-and-commit-note-writer]

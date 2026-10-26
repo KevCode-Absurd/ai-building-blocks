@@ -1,27 +1,59 @@
 new_slug: buyer-trigger-and-proof-mapper
 name: Buyer trigger and proof mapper
-summary: Map what starts a buyer's search, how they feel, what proof they need and what outcome they want.
+summary: Find what makes a buyer start looking, how they feel, what proof they need and what result they want. Get a buyer trigger and proof map.
 job: understand-customers
 headline: Buyer trigger and proof mapper
-subhead: Share customer words, product facts and existing ads. Get a buyer trigger, emotion, evidence and payoff map.
+subhead: Paste your customer words, product facts and any current ads. Your AI maps what starts the search, the feeling, the proof and the result the buyer wants. It also shows which step each ad is missing.
 explain: |-
   Map what starts a buyer's search, how they feel, what proof they need and what outcome they want.
 
   Share customer words, product facts and existing ads. Get a buyer trigger, emotion, evidence and payoff map.
 when:
-  - You need a buyer trigger, emotion, evidence and payoff map.
-  - You need buyer trigger and proof mapper for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are about to brief a new ad and need to know who you are talking to.
+  - Your ads get clicks but few sales, and you want to see which step is missing.
+  - You have a pile of reviews and want to turn them into a clear buyer picture.
+  - You need to choose between ad ideas and want a reason to pick one.
+not_for:
+  - "You have no customer words or reviews yet: talk to a few buyers first, or read your competitors' public reviews."
+  - "You want new ad copy now: write the ad with your usual copywriter or AI, then come back to check it."
+  - "You need numbers on ad results: use your ad account reports, since this map has no performance data."
 you_give:
-  - Customer words
-  - Product facts and existing ads
+  - Customer words, like reviews, support emails or ad comments
+  - Your product facts, like what it is, who it is for and what it does
+  - Your current ad copy or links to your ads (optional)
+  - The buyer group you want to map
 you_get:
-  - A buyer trigger, emotion, evidence and payoff map
-  - The sources used, missing inputs and assumptions
+  - A map of triggers, emotions, proof needed and expected payoff for your buyer
+  - Each current ad checked for which of the four steps it has and which it lacks
+  - Your ad ideas ranked by how many steps they cover
+  - Advice on what to lead with for new buyers and for return visitors
+  - A list of missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Paste your customer words, product facts and the buyer group you want to map.
+  - Add your current ads if you have them. Say so if you have none.
+  - Ask for the buyer map and the ranked ad ideas.
+  - Check each point against your own facts and customer words. Remove anything that is not backed up.
+  - Build the top ranked ad first, and cover any missing step before you publish.
+output_sample:
+  input:
+    - Customer words, like reviews, support emails or ad comments
+    - Your product facts, like what it is, who it is for and what it does
+    - Your current ad copy or links to your ads (optional)
+    - The buyer group you want to map
+  output:
+    - name: Triggers
+      contains: The specific moments or events that make this buyer notice the problem.
+    - name: Emotions
+      contains: The main and second feeling the buyer has when that trigger hits.
+    - name: Evidence Required
+      contains: The kinds of proof this buyer needs before they believe the product works.
+    - name: Payoff Expected
+      contains: The result the buyer expects after they buy.
+    - name: Ad Concepts Ranked by TEEP Coverage
+      contains: Your ad ideas ranked by how many of the four steps each one covers, with the missing ones named.
+    - name: Recommendations
+      contains: Which step to lead with for new buyers and for people who already visited, and which step never to skip.
 how_it_works:
   - title: Check the inputs
     text: Confirm customer words, product facts and existing ads. Mark facts that are missing.

@@ -1,30 +1,26 @@
 new_slug: traction-offline-ads
 name: Offline ads experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan an offline ads test for your product. Paste your link and get one small test with costs, measures and a clear keep, change or stop rule.
 job: plan-strategy
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Offline ads experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused offline ads plan for your product. It reads the buyer and offer,
-  checks why this channel might work and writes a small test. The default is
-  SaaS; you can ask for general-business mode.
+  A focused offline ads plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Request a dated quote for one small relevant placement or mail batch and
-  prepare a measurable offer before booking inventory.
+  Request a dated quote for one small relevant placement or mail batch and prepare a measurable offer before booking inventory.
 
 
-  A unique URL gives partial attribution, not proof of incremental demand.
-  Leftover inventory is useful only when its audience fits.
+  A unique URL gives partial attribution, not proof of incremental demand. Leftover inventory is useful only when its audience fits.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare all 19 growth channels: use the Traction workflow instead."
+  - "You need proof that ads work at national scale: a small test cannot show that, so talk to a media buyer."
+  - "You already have results to judge: send them to a person who knows your numbers, as this plans a test and does not score one."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -38,17 +34,42 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and time limits (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can open web pages gives the best result. Without it, paste your page text.
+  output:
+    - name: Recommendation
+      contains: Whether to test now, later or skip, with the reason.
+    - name: Evidence
+      contains: Each fact used, with its source link and the date it was read.
+    - name: Buyer and useful action
+      contains: Who buys and the first useful thing they do in your product.
+    - name: Channel mechanism
+      contains: How a buyer goes from seeing the ad to getting value.
+    - name: Pilot
+      contains: The test idea, audience, offer, what you make and who owns it.
+    - name: Limits
+      contains: Cash, hours and dates, marked as proposed or approved.
+    - name: Measurement
+      contains: What you count, how you link sign-ups to the ad, and what the counts are measured against.
+    - name: Decision
+      contains: The rule to continue, change or stop.
+    - name: Risks and next action
+      contains: The main ways it could fail and what to do next.
+    - name: MISSING
+      contains: Facts the plan could not confirm.
 how_it_works:
   - title: Check 1
-    text: Compare relevant trade print, direct mail, radio and local outdoor
-      placements by buyer concentration, context and minimum purchase.
+    text: Compare relevant trade print, direct mail, radio and local outdoor placements by buyer concentration, context and minimum purchase.
   - title: Check 2
-    text: Choose one offer and a dedicated short URL or response code. Plan a
-      question at sign-up about where the buyer first heard of the product.
+    text: Choose one offer and a dedicated short URL or response code. Plan a question at sign-up about where the buyer first heard of the product.
   - title: Check 3
-    text: Include design, printing, distribution, media, sales follow-up and
-      response delay. Where feasible, select a comparable unexposed region or
-      account group.
+    text: Include design, printing, distribution, media, sales follow-up and response delay. Where feasible, select a comparable unexposed region or account group.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -62,21 +83,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - A cheap national placement reaches few target buyers. Reject the low unit
-    price as sufficient evidence of fit.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - A cheap national placement reaches few target buyers. Reject the low unit price as sufficient evidence of fit.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

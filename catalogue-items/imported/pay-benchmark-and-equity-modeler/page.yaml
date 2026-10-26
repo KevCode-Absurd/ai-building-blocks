@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Pay numbers need careful math and honest caveats.
 new_slug: pay-benchmark-and-equity-modeler
 name: Pay benchmark and equity modeler
-summary: Give it a role or pay data. Get market ranges, outliers and equity
-  grant models. Not pay or tax advice.
+summary: Check what to pay for a role, find pay outliers in your sheet, or model a stock grant. Get market pay ranges and notes on assumptions.
 job: hire-people
 headline: Pay benchmark and equity modeler
-subhead: A market pay check for a role, a scan of your pay data for outliers and
-  a model of stock grants. It helps you set offers and plan raises.
+subhead: A market pay check for a role, a scan of your pay data for outliers and a model of stock grants. It helps you set offers and plan raises.
 explain: |
   A market pay check for a role, a scan of your pay data for outliers and a model of stock grants. It helps you set offers and plan raises. It is not pay or tax advice.
 
@@ -17,6 +15,10 @@ when:
   - You want to find people paid far off their band.
   - A retention grant needs a vesting model.
   - You are planning next year's raises.
+not_for:
+  - "You face a legal pay-equity dispute or need tax planning: ask a qualified adviser or lawyer."
+  - "You need audited market data to defend a pay decision: buy a pay survey from a compensation survey provider."
+  - "You want to write the job post or screen candidates: do that as a separate step, since this only covers pay."
 you_give:
   - Role, level and city, or your pay sheet
   - Equity details such as shares, price and vesting (optional)
@@ -27,8 +29,26 @@ you_get:
   - Equity value schedule by year
   - Notes on assumptions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read a pay file you upload.
+  - Gather the role, level and city. If you have a pay sheet, have the file ready.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions.
+  - "Pick one option: ask what to pay a role, upload your pay bands, or ask for an equity grant model."
+  - Add your details. For a pay file, use an AI that can read uploads.
+  - Check every figure against a named source before you act. Ask your AI to name the source for each range.
+  - Take the result to your hiring manager or pay committee as a starting point, not a final answer.
+output_sample:
+  input:
+    - Role, level and city, or your pay bands as a CSV
+    - Equity details such as shares, stock price and vesting years (optional)
+    - Market pay data you trust (optional)
+  prerequisites:
+    - An AI that can read an uploaded file, if you share a pay sheet
+    - A paid pay-data or HR system connection is optional; without it, your AI uses web research and what you provide
+  output:
+    - name: Market Benchmarks
+      contains: A table of 25th, 50th, 75th and 90th percentile base, equity and total pay for the role.
+    - name: Sources
+      contains: Where the figures came from, with notes on how fresh they are and their limits.
+    - name: Band Analysis
+      contains: Each person's current base next to band minimum, middle and maximum, marked below, at or above band.
+    - name: Recommendations
+      contains: Specific pay advice, equity points to weigh and retention risks if your data shows them.

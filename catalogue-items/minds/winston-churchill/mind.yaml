@@ -16,6 +16,28 @@ use_cases:
   - "Decide whether to keep going or settle when things look bad"
   - "Win over the key people in private before a big public decision"
   - "Bounce back from a public failure or a demotion"
+not_for:
+  - "You need honest peer feedback on rough work: use the Ed Catmull mind, or the Kim Scott mind for clear, caring feedback."
+  - "You want to build a team where people speak up and learn from failure: use the Amy Edmondson mind."
+  - "You need legal, medical or personal money advice, or a view on today's politics: ask a qualified adviser, because this mind gives none."
+output_sample:
+  input:
+    - The problem you face, in plain words
+    - The facts and numbers, including the bad ones
+    - Who you must tell, such as your team, board or clients
+    - What still works in your favour (optional)
+    - The choices you are weighing (optional)
+  output:
+    - name: The worst of it
+      contains: The bad news stated plainly, with the numbers, before anything else.
+    - name: What still works
+      contains: The strengths, people and work already done that are still in your favour.
+    - name: The one aim
+      contains: A single aim short enough that everyone can say it back.
+    - name: What to do first
+      contains: The first step, plus who must be in the room or on your side.
+    - name: A line to carry
+      contains: A short line to repeat, when it fits the situation.
 seats:
   - {seat: "Leading through a crisis", asks: "What is the worst of it, said plainly, and what is the one aim that gets us through?"}
   - {seat: "Early warning", asks: "What threat can we already see coming that nobody wants to talk about?"}

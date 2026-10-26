@@ -1,46 +1,58 @@
 new_slug: check-staged-follow-on-commitments
 name: Check staged follow-on commitments
 headline: Check staged follow-on commitments
-summary: Reconcile participation plans, two-company reserves and one milestone-limited draw.
+summary: Check how much to invest in two companies' next rounds, whether your reserve covers it, and what a milestone lets you draw.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Participation budget, reserve gap and evidence-backed draw reconciliation. Share side letters and outside allocations for two companies, inclusive round confirmations, approved reserve, signed staged commitment and actual milestone approval evidence for one company.
+subhead: Give it your side letters, the round confirmations and one staged commitment. Your AI works out your share of each round, compares the total with your reserve, and checks the draw against the signed commitment and milestone proof.
 explain: |-
-  Participation budget, reserve gap and evidence-backed draw reconciliation.
+  A fund that holds pro rata rights in two companies may face two rounds at once. One of them may be a staged deal, where cash is released only after a milestone is met. Funds then need three numbers that people confuse: the amount planned, the amount approved and the cash actually drawn. This workflow keeps them apart.
 
-  Venture portfolio reserves. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 works out your share of each round, using each company's own eligible stake. Step 2 compares both needs with the reserve the fund has set aside. Step 3 applies only to the staged company. It compares the request with the signed undrawn commitment and the milestone-approved ceiling.
+
+  Nothing is assumed about a milestone or a financing that has not been evidenced. Sample company figures are never used as real ones.
 when:
-  - You need participation budget, reserve gap and evidence-backed draw reconciliation.
-  - You work on venture portfolio reserves and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Two portfolio companies are raising at the same time and you hold pro rata rights in both.
+  - An investment committee asks if your reserve covers both follow-on rounds.
+  - A staged commitment has a milestone signed off and you want to know what can be drawn.
+  - You are setting the follow-on reserve for the next year.
+not_for:
+  - "You hold rights in one company only: use the Pro rata allocation checker."
+  - "You first need to find your stake after a SAFE converts: use the Check a SAFE into priced financing workflow."
+  - "You only need to compare reserve with rounds already known: use the Follow-on reserve planner."
 you_give:
-  - Side letters and outside allocations for two companies, inclusive round confirmations, approved reserve, signed staged commitment and actual milestone approval evidence for one company.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Side letters and outside-only allocations for both companies (from the signed agreements)
+  - Round confirmations that show the full round including your cash, for each company
+  - The fund's approved follow-on reserve (from the investment committee minutes)
+  - The signed staged commitment for one company, with the cash already drawn
+  - The milestone approval evidence for that company
 you_get:
-  - Participation budget, reserve gap and evidence-backed draw reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Your pro rata cash for each company's round
+  - The total need against your reserve, with any gap
+  - The most you can draw on the staged commitment, with the evidence for it
+  - Planned, approved and funded cash shown as three separate lines
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the side letters, round confirmations, reserve approval and staged commitment. Say which company is staged, plus the currency and scale.
+  - Ask your AI to follow the pack and save each step's file.
+  - After step 1, check each company's stake and round size against its own documents. After step 2, check the reserve matches the committee approval.
+  - After step 3, check the milestone evidence is signed. Finish every MISSING line before you commit cash.
 how_it_works:
   - title: Pro rata allocation checker
-    text: Apply the outside-only allocation method separately to each company with its own eligible stake. Save each inclusive round and participation need as a distinct record.
+    text: Applies the outside-only method to each company with its own eligible stake. Saves each full round and each participation need as its own record. Hands step 2 the two cash needs.
   - title: Follow-on reserve planner
-    text: Use the reconciled inclusive rounds and documented targets to compare both cash requirements with the actual available fund reserve. Never substitute the sample company figures.
+    text: Compares both needs with the reserve the fund has set aside, using the checked rounds and documented targets. Shows the gap. Hands step 3 the planned amount for the staged company.
   - title: Milestone tranche funding checker
-    text: For the staged company only, compare requested participation with its signed undrawn commitment and actual milestone-approved ceiling. Keep the unsupported planned reserve separate from authorized draw cash.
+    text: For the staged company only, compares the request with its signed undrawn commitment and the milestone-approved ceiling. Keeps the unsupported planned reserve apart from cash that is authorized to draw.
 output_shape: |-
-  Participation budget, reserve gap and evidence-backed draw reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <side letters, round confirmations, reserve approval, commitment, dates>
+  PRO RATA PER COMPANY    <eligible stake | full round | your cash> for each company
+  RESERVE                 <reserve | total need | gap>
+  STAGED DRAW             <request | undrawn commitment | milestone ceiling | authorized draw | unsupported>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,13 +74,40 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A spreadsheet tool and an AI that reads files
+      why: Two companies and three steps means many linked figures. The AI should recalculate and keep each source traceable.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The investment committee minutes that set the reserve.
+    - The company's milestone sign-off or board consent.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Pro rata right
+    meaning: Your right to invest in a later round to keep your percentage.
+  - term: Follow-on reserve
+    meaning: Cash a fund sets aside for later rounds in companies it already owns.
+  - term: Staged commitment
+    meaning: A promise to invest in parts, each released when a milestone is met.
+  - term: Undrawn commitment
+    meaning: The part of a staged commitment not yet paid in.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A comparison that explains any difference between two sets of figures that should match.
+output_sample:
+  input:
+    - Side letters and round confirmations for two companies
+    - The fund's approved follow-on reserve
+    - The staged commitment and milestone evidence for one company
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-1-pro-rata-allocation-checker.md
+      contains: Your cash for each company's round, each with its own eligible stake.
+    - name: outputs/step-2-follow-on-reserve-planner.md
+      contains: Total cash need against the reserve, with any gap.
+    - name: outputs/step-3-milestone-tranche-funding-checker.md
+      contains: The authorized draw on the staged commitment, and the part with no evidence.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines, checks missed and one suggested next step.
+next:
+  - check-a-safe-into-priced-financing
+  - check-secondary-purchase-cash-exposure
+  - review-a-down-round-rights-change
+before: []

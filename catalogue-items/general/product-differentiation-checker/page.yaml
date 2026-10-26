@@ -1,6 +1,6 @@
 new_slug: product-differentiation-checker
 name: "Product differentiation checker"
-summary: "Paste your product facts and won and lost deals. Get a verdict: truly the same as rivals, or only described badly."
+summary: "Check if your product is truly the same as rivals or just described badly. Paste your product facts and won and lost deals to get a plain verdict."
 job: plan-strategy
 thinking: high
 thinking_why: "It weighs conflicting evidence from many people and decides whether the product or the story is the problem."
@@ -17,6 +17,10 @@ when:
   - Your team says "we have no real difference" and you suspect that is not the full story.
   - Sales keeps losing to the same rival and the pitch sounds like theirs.
   - You are about to rewrite your website or deck and want to know if the problem is the words or the product.
+not_for:
+  - "You have no sales history yet: ask a few likely buyers what else they would use, or run a simple market-sizing check first."
+  - "You only want better wording for a page you already know is different: ask a copywriter or write a brief with the Marketing brief writer."
+  - "You want to price or budget for your product: use a spreadsheet or talk to your accountant."
 
 you_give:
   - Facts about your product or service and what it does (required)
@@ -35,6 +39,29 @@ how_to_use:
   - Add the rivals buyers named and a few customer quotes, if you have them.
   - Read the verdict first, then the evidence. Check the facts marked MISSING with someone who talks to customers.
   - Run it again after you gather the missing facts.
+output_sample:
+  input:
+    - Facts about your product or service
+    - Notes on deals you won and lost, with reasons (optional)
+    - Customer words from reviews, calls or surveys (optional)
+    - The rivals buyers compare you with (optional)
+  output:
+    - name: Verdict
+      contains: "One of three calls: differentiated but badly described, differentiated for a narrow group, or undifferentiated, with the reason in two lines."
+    - name: Real alternatives
+      contains: Every option buyers weighed, including doing nothing, each with the deal, review or quote where it came up.
+    - name: What you do that they do not
+      contains: For each alternative, a real difference and why it matters to one named customer type.
+    - name: Four causes test
+      contains: A finding on thin research, partial product knowledge, fixation on lost deals and a segment drawn too wide.
+    - name: Why good fits chose you
+      contains: The reasons your best customers picked you, in their words where possible.
+    - name: Best-fit accounts
+      contains: The customer types that value your mix of strengths most, and the trait that marks them.
+    - name: Next steps
+      contains: Three steps, each with the evidence you still need.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts that would sharpen the verdict, and any of its own checks that failed.
 
 how_it_works:
   - title: Real shortlists only

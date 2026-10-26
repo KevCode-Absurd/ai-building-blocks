@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It trims steps by set rules.
 new_slug: signup-flow-improver
 name: Signup flow improver
-summary: Describe your signup steps. Get fewer fields, clearer copy and a plan
-  to cut drop-off.
+summary: Improve your signup flow by cutting extra fields, fixing button and error wording, and getting a ranked plan to reduce drop-off. Paste your steps.
 job: build-product
 headline: Signup flow improver
-subhead: A shorter signup flow with clearer words and a plan to cut drop-off, so
-  more visitors become users. Every extra field costs you signups, and this
-  finds which ones to cut.
+subhead: A shorter signup flow with clearer words and a plan to cut drop-off, so more visitors become users. Every extra field costs you signups, and this finds which ones to cut.
 explain: |
   A shorter signup flow with clearer words and a plan to cut drop-off, so more visitors become users. Every extra field costs you signups, and this finds which ones to cut.
 
@@ -18,18 +15,44 @@ when:
   - Your form asks for company, role and phone on page one.
   - Trial users sign up but never reach their first useful step.
   - You are redesigning registration and want a checklist.
+not_for:
+  - "You want to fix what happens after people sign up: ask a person on your team to map the first-use steps, since no sibling item covers it yet."
+  - "You need a lead capture or contact form, not account creation: use a simple form review or ask a conversion specialist."
+  - "You want to run the A/B test itself: use your testing tool, as this gives test ideas only and does not run them."
 you_give:
-  - Your signup steps and fields
-  - Where people drop off, if known
-  - Business needs that force certain fields
-  - Product context (optional)
+  - Your current signup fields, listed step by step
+  - The number of steps or screens
+  - Your completion or drop-off numbers, if you know them (optional)
+  - Any legal or business rules that force a field
+  - What your product does (optional)
 you_get:
   - A list of fields to cut or delay
   - Clearer copy for buttons and errors
   - A ranked set of changes
   - Test ideas for your signup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
+  - Paste your signup fields, step by step. Add your drop-off numbers and any rules that force a field.
+  - Answer any question your AI asks about your flow type, such as free trial or paid account.
+  - Read the field verdicts first. Each field is marked keep, defer or cut.
+  - Make the quick wins, then pick one or two test ideas to try.
+  - This needs no code, files or paid tools. If you want company data added at signup, that needs a paid data provider, so skip it for now.
+output_sample:
+  input:
+    - Your signup steps and the fields on each one
+    - Your completion or drop-off numbers (optional)
+    - Any rules that force a field, such as legal or sales needs
+    - What your product does (optional)
+  output:
+    - name: Audit findings
+      contains: Each problem found, why it matters, the fix, and a High, Medium or Low priority.
+    - name: Field verdicts
+      contains: Each field marked keep, defer or cut, with a short reason.
+    - name: Quick wins
+      contains: Changes you can make the same day, such as clearer button text or error messages.
+    - name: High-impact changes
+      contains: Larger changes that take about a week, such as splitting steps or adding social login.
+    - name: Test ideas
+      contains: Changes worth an A/B test, like one step against many or different button words.
+    - name: Form redesign (if you ask)
+      contains: A suggested field set and order, with copy for labels, buttons and errors.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a set command line tool.
 new_slug: ui-component-adder
 name: UI component adder
-summary: Say which components you need. Get them added to your project with the
-  right setup and usage.
+summary: Add buttons, forms, tables and sidebars to your project with the UI component adder. It sets up each part and shows you how to use it.
 job: build-websites
 headline: UI component adder
-subhead: Interface parts such as buttons, forms, tables and sidebars added to
-  your project the right way, with setup done and example usage included. You
-  build screens from parts that already exist instead of hand-coding them.
+subhead: Interface parts such as buttons, forms, tables and sidebars added to your project the right way, with setup done and example usage included. You build screens from parts that already exist instead of hand-coding them.
 explain: |
   Interface parts such as buttons, forms, tables and sidebars added to your project the right way, with setup done and example usage included. You build screens from parts that already exist instead of hand-coding them.
 
@@ -18,6 +15,10 @@ when:
   - You are starting a new project and want to set up shadcn/ui.
   - Your components look inconsistent and need tidy styling rules.
   - You want to find a community component before building your own.
+not_for:
+  - "Your project does not use shadcn/ui and you do not want to: use the docs for the component library you already have."
+  - "You want a whole site or page designed from scratch: ask your AI for a design first, or hire a designer."
+  - "You have no code project or package manager: start with a simple page builder instead."
 you_give:
   - A project using or ready for shadcn/ui
   - The components or screens you need
@@ -29,8 +30,30 @@ you_get:
   - Usage examples
   - Styling that follows the rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in a place where it can run commands and read your project files.
+  - Paste in the skill text, or add the skill folder.
+  - Tell your AI which components or screens you need, and which package manager you use.
+  - Let it read your project setup, then search for ready-made components before it builds anything.
+  - Review the added files and usage code, then run your project to see the result.
+output_sample:
+  input:
+    - The components or screens you need
+    - Your project files, or the project setup details
+    - Your package manager (npm, pnpm or bun)
+    - Design preferences (optional)
+  prerequisites:
+    - An AI that can run commands and read your project files
+    - A JavaScript project with a package manager
+  output:
+    - name: Project context
+      contains: Your project setup and the components you already have, read before anything is added.
+    - name: Registry search results
+      contains: Ready-made components found in shadcn/ui and community registries before anything custom is written.
+    - name: Added component files
+      contains: Source files for each component, placed in your project so you own and can edit them.
+    - name: Component docs and examples
+      contains: Links and notes on how each added component is used.
+    - name: Usage code
+      contains: Example code that puts the components together, such as tabs plus cards plus form controls.
+    - name: Styling check
+      contains: A check that the code uses built-in variants, semantic colours, gap spacing and layout-only className.

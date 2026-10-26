@@ -1,0 +1,141 @@
+name: Mobile Release Engineer agent
+summary: Plan your iOS or Android app release. Get a signing check, a go or no-go list, a staged rollout and a recovery plan before you submit to the store.
+headline: Mobile Release Engineer agent
+subhead: Describe your app and the version you want to ship. It checks your signing setup, store paperwork and test build, then plans a staged rollout. You get a go or no-go list and a plan for a bad build.
+job: ship-and-host
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A mobile app release plan has to cover things a website never does. You cannot pull a bad app version back from people's phones. You can only ship a fix, and the fix waits in the store's review line. A lost signing key can mean you can never update the app again. So the plan has to be right before you press submit.
+
+  This agent works through the release the way a release engineer would. It asks who holds your signing keys and when they expire. It checks that version numbers only go up, that privacy forms match the app, and that crash reports will have the files they need. It looks for the usual reasons a store rejects an app. Then it plans a staged rollout: test users first, then a small share of real users, then more, with a rule for when to pause.
+
+  It keeps what you told it apart from what it assumes, and it will not call a release safe without proof. It writes a plan and a checklist. It cannot log in to App Store Connect or Google Play Console, and it submits nothing.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to send your first app version to the App Store or Google Play and want the steps in the right order.
+  - The store rejected your last build and you need a fix plan before you try again.
+  - A signing certificate is close to expiring, or one person holds all the keys.
+  - You ship each update by hand and want a plan that makes every release the same.
+not_for:
+  - You release a website or a back-end service, not an app. Use the Safe release planner, or the DevOps Automator agent for a build and deploy pipeline.
+  - A bad version is live right now. Use the Incident Response Commander agent, and ask someone with store access to pause the rollout first.
+  - You build with Expo and want builds made and sent for you. Use the Mobile app release shipper.
+you_give:
+  - The app name, whether it is iOS, Android or both, and what changed in this version
+  - How you sign and ship today, and who holds the keys (never paste passwords or key files)
+  - Your target release date and who can approve it
+  - A store rejection message, if you have one (optional)
+  - Your version history and the tool that collects crash reports (optional)
+you_get:
+  - A signing check that lists each key or certificate, who holds it and when it expires
+  - A go or no-go list marked Pass, Fail or Not supplied
+  - A list of likely store rejection risks, each with a fix
+  - A staged rollout plan with the share of users at each stage and when to pause
+  - A recovery plan for shipping a fix fast
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the release in plain words. Say the app, the platforms, what changed and the date you want.
+  - Add how you sign and ship now, and any rejection message. Do not paste passwords, private keys or key files. Say who holds them instead. No code running or web access is needed.
+  - Type "Plan this release. Mark anything you cannot check as MISSING, and do not call it safe without proof."
+  - Read the go or no-go list first. Fix every Fail or Not supplied line, then ask for the plan again.
+  - Give the rollout and recovery plans to the person who has store access. The AI cannot submit or log in for you.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the app, the platforms, the version and the date. Anything missing is asked once, then marked MISSING.
+  - title: Check signing
+    text: It lists each certificate, profile and key, who holds it and when it ends. It flags any key that lives on one laptop.
+  - title: Run the go or no-go list
+    text: It checks version and build numbers, privacy forms, crash-report files, store text and the test build. Each line is marked Pass, Fail or Not supplied.
+  - title: Look for review trouble
+    text: It matches your app and any rejection text to the common reasons stores say no, and suggests a fix for each.
+  - title: Plan the rollout
+    text: It sets stages from test users to everyone, what to watch at each stage and the signs that mean pause.
+  - title: Plan the recovery
+    text: It writes how you would ship a fix, who is on call and what to tell users.
+output_shape: |-
+  RELEASE SCOPE
+    App <name> | Platforms <iOS, Android> | Version <number> | Target date <date>
+
+  SIGNING CHECK
+    <key or certificate> | <who holds it> | <ends on> | <risk and fix>
+
+  GO OR NO-GO LIST
+    <check> | <Pass, Fail or Not supplied> | <evidence or gap>
+
+  STORE REVIEW RISKS
+    <likely reason for rejection> | <why it fits this app> | <fix before submitting>
+
+  ROLLOUT PLAN
+    <stage> | <share of users> | <what to watch> | <pause if>
+
+  RECOVERY PLAN
+    <step> | <who> | <how long it takes>
+
+  ASSUMPTIONS AND CHECKS MISSED
+    <assumption> | <check that could not run>
+output_sample:
+  input:
+    - The app, the platforms and what changed in this version
+    - How you sign and ship now, and who holds the keys
+    - Your target release date and who can approve it
+    - A store rejection message (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Someone with store access to carry out the plan
+  output:
+    - name: Release scope
+      contains: The app, platforms, version and date the plan covers.
+    - name: Signing check
+      contains: Each certificate or key, who holds it, when it ends and the risk.
+    - name: Go or no-go list
+      contains: Version numbers, privacy forms, crash files, store text and test build, each marked Pass, Fail or Not supplied.
+    - name: Store review risks
+      contains: The likely reasons for rejection that fit your app, each with a fix.
+    - name: Rollout plan
+      contains: Stages from test users to everyone, what to watch and when to pause.
+    - name: Recovery plan
+      contains: How to ship a fix, who is on call and what to tell users.
+    - name: Assumptions and checks missed
+      contains: What the AI assumed and what it could not check.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your build settings, release notes and a pasted rejection email next to your description.
+  inputs:
+    - The name of your crash-report tool, such as Crashlytics, if you use one.
+    - Your last three version and build numbers.
+    - The full text of any store rejection.
+terms:
+  - term: Signing
+    meaning: A digital stamp that proves an app build came from you. Stores refuse builds without it.
+  - term: Provisioning profile
+    meaning: An Apple file that links your app, your signing certificate and what the app may do.
+  - term: Staged rollout
+    meaning: Sending a new version to a small share of users first, then more if it looks healthy.
+  - term: Crash-free rate
+    meaning: The share of app sessions that end without a crash. A drop is a reason to pause.
+  - term: Store review
+    meaning: The check Apple or Google runs on your app before users can download it.
+tweaks:
+  - what: Platforms
+    how: Name iOS, Android or both. One platform gives a tighter plan.
+  - what: Rollout stages
+    how: Give your own stages and pause numbers if you have them. Otherwise it proposes some for you to confirm.
+  - what: Team size
+    how: Say if one person does every step. It will then plan more checks and fewer hand-offs.
+improve:
+  - Keep each release plan with your build notes, so the next release starts from the last one.
+  - Add your real signing list and pause numbers to the pack, so you do not retype them.
+  - Pair it with the App Store release notes writer once the plan is ready, for the store text.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

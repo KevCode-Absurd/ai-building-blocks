@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It measures first, then changes one thing at a time.
 new_slug: slow-code-fixer
 name: Slow code fixer
-summary: Describe what feels slow. Get the bottleneck found, fixed, and proven
-  faster with before and after numbers.
+summary: Find why your page, API or database query is slow. Get the slowest part fixed and checked with before and after times.
 job: test-and-fix-code
 headline: Slow code fixer
-subhead: A slow page, API or database call, fixed and proven faster with
-  numbers. You describe what feels slow, and the skill measures first, so it
-  never guesses.
+subhead: A slow page, API or database call, fixed and proven faster with numbers. You describe what feels slow, and the skill measures first, so it never guesses.
 explain: |
   A slow page, API or database call, fixed and proven faster with numbers. You describe what feels slow, and the skill measures first, so it never guesses.
 
@@ -18,6 +15,10 @@ when:
   - An API call is slow and you do not know why.
   - A database query that used to be fast now drags.
   - You need proof that your fix made a real difference.
+not_for:
+  - Your app is already fast enough. Leave it alone, because small speed gains cost you code that is harder to read.
+  - You have not measured anything yet and only have a feeling. Time the slow step first, then come back with the numbers.
+  - You want a code review or a bug hunt, not a speed fix. Ask a person on your team or a code review tool instead.
 you_give:
   - A description of what feels slow
   - The code or query involved
@@ -29,8 +30,28 @@ you_get:
   - Before and after timings
   - A short note on what changed and why
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in Claude, ChatGPT or Gemini and paste in this skill.
+  - Describe what feels slow. Paste the code or query, and how long it takes now if you know.
+  - If your AI can run code, let it time the operation. If not, time it yourself and paste the numbers back.
+  - Check the bottleneck it names. Then apply one change at a time.
+  - Time it again after each change. Keep only the changes that made it faster.
+output_sample:
+  input:
+    - What feels slow, in your own words
+    - The code or query involved
+    - How slow it is now, if you know (optional)
+  prerequisites:
+    - An AI that can run code and read your project files, if you want it to measure for you. In a plain chat, you time the code and paste the numbers.
+  output:
+    - name: Bottleneck
+      contains: The slowest part, found by timing the real operation or by a profiler or query plan.
+    - name: Change made
+      contains: The fix aimed at that part, such as an index, one joined query, caching or a smaller payload.
+    - name: Before time
+      contains: How long the operation took before the change.
+    - name: After time
+      contains: How long it took after the change, measured the same way.
+    - name: Kept or rejected
+      contains: Which changes helped and stayed, and which did not help and were dropped.
+    - name: Checklist
+      contains: A last check that the code still works and no new bugs came in.

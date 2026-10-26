@@ -1,6 +1,6 @@
 new_slug: sms-send-planner
 name: "SMS send planner"
-summary: "Give it your launches, sales and list size. Get a month of texts and a frequency test."
+summary: "Plan a month of SMS marketing texts: pick which events earn a text, set dates and send times, and test how often to text. Give it your events and list size."
 job: write-emails
 thinking: medium
 thinking_why: "It builds a calendar from fixed patterns, but it must weigh two sources that disagree."
@@ -17,6 +17,10 @@ when:
   - You are planning next month's launches and sales and need to decide which ones get a text.
   - You text every week out of habit and your costs or unsubscribes are rising.
   - You want to know whether sending more texts would earn more, without guessing.
+not_for:
+  - "You have no list of people who clearly opted in to texts: first collect consent, or use email instead."
+  - "You have one small sale that an email can carry: use the Email campaign calendar planner."
+  - "You want the wording of each text or a check of a finished text: write it with the text message writer skill and review it with the SMS send checker."
 
 you_give:
   - Your launches, sales and restocks for the month, with dates
@@ -37,6 +41,25 @@ how_to_use:
   - Say how you collected consent, and in which countries your subscribers live.
   - Check each planned text is urgent news. Move the rest to email.
   - Run the hold-out test for a month and let your own results set the cadence.
+output_sample:
+  input:
+    - Your launches, sales and restocks for the month, with dates
+    - Your SMS list size and cost per text
+    - How subscribers opted in, and which countries they live in
+    - Your current texts per month and unsubscribe rate (optional)
+  output:
+    - name: SMS send plan
+      contains: A date-by-date table with event, text purpose, send time, audience and the email paired with each text.
+    - name: Exclusions
+      contains: The rule for leaving out people who got 15 or more texts and never clicked, cleaned each month.
+    - name: Cost
+      contains: Texts times list size times cost per text, shown as a sum.
+    - name: Moved to email
+      contains: Items that were not urgent enough for a text.
+    - name: Frequency test
+      contains: A hold-out split of normal, none and double cadence, with how many weeks to wait before reading it.
+    - name: Checks missed and missing
+      contains: Any check that failed and any input you did not give.
 
 how_it_works:
   - title: Checks consent first

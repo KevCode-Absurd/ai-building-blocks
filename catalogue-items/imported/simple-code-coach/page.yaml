@@ -2,34 +2,57 @@ thinking: medium
 thinking_why: It keeps code changes small and checks each one.
 new_slug: simple-code-coach
 name: Simple code coach
-summary: Write code with it. Get assumptions stated, the smallest change made
-  and only what you asked for.
+summary: "Get a simple code coach for your AI: it states its guesses, makes the smallest change and checks your diff for extra edits before you commit."
 job: build-software
 headline: Simple code coach
-subhead: "Code changes that are small, tied to your request and checked against
-  clear goals, instead of large rewrites you did not ask for. It targets the
-  usual AI coding habits: silent guesses, bloat and drive-by edits."
+subhead: "Give your AI a coding task or a diff. It states its guesses, keeps the change small and checks the result against four rules. You get fewer surprise rewrites."
 explain: |
   Code changes that are small, tied to your request and checked against clear goals, instead of large rewrites you did not ask for. It targets the usual AI coding habits: silent guesses, bloat and drive-by edits.
 
   It works on four rules. First, think before coding: state assumptions, list other readings of the request and ask when unclear. Second, keep it simple: no extras, no one-use abstractions. Third, make surgical changes that touch only what the task needs. Fourth, turn the task into a goal with a test that proves it. It also ships Python tools that scan a change for breaches of these rules.
 when:
-  - The AI keeps rewriting files when you wanted one fix.
-  - You want assumptions stated before it starts coding.
-  - You review a diff and suspect it added more than needed.
-  - You want a clear pass or fail test for a task.
+  - Your AI rewrites whole files when you wanted one fix.
+  - You want its assumptions written down before it starts to code.
+  - You are reading a diff and suspect it changed more than you asked.
+  - You want a clear pass or fail test for a task before you begin.
+not_for:
+  - "You need a typo fix or an obvious one-liner: just make the change yourself, the full review is too much."
+  - "You want a broad code review of style, security or design: ask a person or a general code reviewer instead."
+  - "You have no code or diff yet and only an idea: write a short plan with your AI first, then come back."
 you_give:
   - The coding task
   - Your code or a diff
-  - Python available to run the checker tools (optional)
+  - Your test results (optional)
 you_get:
-  - Stated assumptions and questions
-  - The smallest working change
-  - A success test for the task
-  - A check of the diff against the four rules
+  - The assumptions your AI is making, and questions where the task is unclear
+  - The smallest change that does the job
+  - A test or check that shows the task is done
+  - A pass or flag report on your diff against the four rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - In Claude Code, install the plugin. In ChatGPT or Gemini, paste the four rules from the skill into the chat. Then add your task.
+  - Paste your task and your code or diff. Ask your AI to state its assumptions and questions before it writes anything.
+  - Answer its questions. Ask for a plan where each step has a check that proves it worked.
+  - Before you commit, run /karpathy-check in Claude Code. In other tools, ask your AI to review the diff against the four rules.
+  - Read the report. Remove any line that does not trace to your request. The Python checkers need an AI that can run code.
+  - For a broader review, run the code-reviewer skill. To score your finished work, run self-eval. Skip the full review for typo fixes and obvious one-liners.
+output_sample:
+  input:
+    - Your coding task, in a sentence or two
+    - Your code or a diff
+    - Your test results (optional)
+  prerequisites:
+    - An AI that can run code and read your project files, if you want the Python checker tools to run
+    - Python installed, only for the checker tools (optional)
+  output:
+    - name: Think before coding
+      contains: Your AI's stated assumptions, other ways to read the task, and any questions it needs answered first.
+    - name: Simplicity check
+      contains: A note on extras, one-use abstractions and code that could be shorter, from complexity_checker.py.
+    - name: Surgical changes check
+      contains: Lines in the diff that do not trace back to your request, from diff_surgeon.py.
+    - name: Assumption check
+      contains: Hidden guesses and unasked features found in the plan, from assumption_linter.py.
+    - name: Goal-driven plan
+      contains: Your task as short steps, each with a check that shows it worked, reviewed by goal_verifier.py.
+    - name: Review report
+      contains: A pass or flag result for each of the four rules on your staged changes, from /karpathy-check.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It checks each zone against one simple rule.
 new_slug: shipping-rate-gap-finder
 name: Shipping rate gap finder
-summary: Point it at your store. Get a list of shipping zones with no rate or
-  only manual rates.
+summary: Find shipping zones in your Shopify store with no rate or only manual rates, before customers hit a dead end at checkout. Read-only.
 job: run-your-store
 headline: Shipping rate gap finder
-subhead: A list of shipping zones in your store that have no rate, or only
-  hand-typed flat rates. A zone with no rate quietly stops customers from
-  checking out.
+subhead: A list of shipping zones in your store that have no rate, or only hand-typed flat rates. A zone with no rate quietly stops customers from checking out.
 explain: |
   A list of shipping zones in your store that have no rate, or only hand-typed flat rates. A zone with no rate quietly stops customers from checking out.
 
@@ -18,6 +15,10 @@ when:
   - You added a new market and are not sure shipping covers it.
   - A shipping setup was done years ago and nobody has reviewed it.
   - You suspect a flat rate is set far too high or too low.
+not_for:
+  - "Your store sells flat-rate shipping on purpose: run it with the manual-rate flag turned off, or skip it."
+  - "You want to know how much money a missing zone costs you: pull a customer export from Shopify and sort it by country."
+  - "You want to change or add shipping rates: do that in your Shopify shipping settings, since this only reads them."
 you_give:
   - Your Shopify store address
   - A delivery profile name to focus on (optional)
@@ -29,8 +30,28 @@ you_get:
   - Profiles missing sales regions
   - A readable or JSON report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run Shopify CLI commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot run it.
+  - Sign in with the Shopify CLI for your store, and allow it to read shipping settings.
+  - Paste this skill into your AI and give it your store address.
+  - Add a profile name or a price limit if you want to narrow the check (optional).
+  - Read the list of zones with no rate first. Fix those in Shopify before anything else.
+  - Open the CSV to review zones with only manual rates, and decide which are on purpose.
+output_sample:
+  input:
+    - Your Shopify store address
+    - A delivery profile name to check on its own (optional)
+    - A price limit to flag rates that look like typos (optional)
+    - Whether to flag zones with only manual rates (optional, on by default)
+    - "Report style: readable or JSON (optional)"
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - A Shopify CLI sign-in with permission to read shipping
+  output:
+    - name: Run summary
+      contains: Counts of profiles checked, zones checked, zones with no rates, manual-only zones and rates above your limit.
+    - name: Critical issues list
+      contains: Each profile and zone that has no shipping rate, with the countries it covers.
+    - name: shipping_rate_audit_<date>.csv
+      contains: One row per zone with rate counts, manual and carrier counts, lowest and highest rate, currency and a flag.
+    - name: JSON report
+      contains: The same counts and issue list in JSON form, when you ask for that format.

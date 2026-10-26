@@ -1,6 +1,6 @@
 new_slug: store-hero-section-writer
 name: "Store hero section writer"
-summary: "Give it your offer and proof. Get five headlines, a subhead, button, proof and a test plan."
+summary: "Write the top screen of your store page: five headline options, a subhead, proof, a button and a test plan, all built from your offer and ad."
 job: write-landing-page
 thinking: medium
 thinking_why: "It writes a short section by formula and plans tests by simple rules, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Your product page gets clicks but few buyers, and you suspect the first screen.
   - You are launching a page for a new ad and want the top screen to match it.
   - You have a list of things to test and want a plan for the top of the page first.
+not_for:
+  - "You need the whole landing page, not just the top screen: use the Conversion page writer."
+  - "You want to place reviews and proof further down the page: use the Store social proof placer."
+  - "Your page has almost no visits yet: talk to a few buyers first, since split tests need traffic."
 
 you_give:
   - Your offer, price and guarantee
@@ -37,6 +41,29 @@ how_to_use:
   - Add your real proof, such as ratings with counts, press quotes and numbers sold.
   - Give your weekly visits so the test calendar fits.
   - Build the top screen, then test one change at a time.
+output_sample:
+  input:
+    - Your offer, price and guarantee
+    - The buyer and the main thing they want
+    - Your real proof, such as ratings with counts and press quotes (optional)
+    - The ad that sends traffic, and your weekly visits (optional)
+  output:
+    - name: Headline options
+      contains: Five ways to state the main benefit, with one pick, the reason, and the so-that chain behind it.
+    - name: Subhead
+      contains: A short line naming the pain to stop and two or three reasons your way works.
+    - name: Top-screen proof
+      contains: Two kinds of real proof for the first screen, each with its source.
+    - name: Button and doubt-reducers
+      contains: A benefit-led button label and the guarantee, returns, shipping and price lines placed under it.
+    - name: Image or video brief
+      contains: What the main visual shows, who is in it, and whether it is real or stock.
+    - name: Value equation
+      contains: A table scoring outcome, likelihood, time and effort from 1 to 10, with a fix for each.
+    - name: Layout notes
+      contains: Size ratio, nav removal for ad traffic, pinned mobile button and review placement.
+    - name: Test calendar
+      contains: A week-by-week plan of changes and variants, sized to your weekly visits.
 
 how_it_works:
   - title: Finds the headline

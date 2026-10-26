@@ -15,6 +15,29 @@ use_cases:
   - "Read a salary chart before planning a career move"
   - "Test whether a dashboard answers its readers' questions"
   - "Explain why a group average does not describe every person"
+not_for:
+  - "You want to learn chart choice and storytelling for a talk: hire Cole Nussbaumer Knaflic instead."
+  - "You need statistical modelling, or legal, medical or personal money advice: ask a qualified specialist."
+  - "You want a logo, brand look or product design: hire Dieter Rams for clear product thinking."
+output_sample:
+  input:
+    - The chart, screenshot or claim you want to check
+    - Where the numbers came from, with any definitions (optional)
+    - The raw numbers behind the chart (optional)
+    - Who will read it and what they need to decide
+  output:
+    - name: Interpretation memo
+      contains: The audience question, the source and definitions, what the chart literally shows, and which conclusions it does not support.
+    - name: Missing comparison
+      contains: The time window, denominator, group or baseline that could change the message, and why it matters to your reader.
+    - name: Annotated redraw or table
+      contains: A sketch or small table with clear units, a fairer headline and a comparison that answers the reader's question.
+    - name: Caption with uncertainty
+      contains: A short caption that states scope, units and what any range or band means, so it survives a screenshot.
+    - name: Reader test note
+      contains: One observed misunderstanding from a real reader and the change made to fix it, if testing is possible.
+    - name: Open questions
+      contains: Any conclusion still unverified, and what to check before you share the chart.
 seats:
   - {seat: "Read and design honest charts", asks: "What does this chart support, and what are we adding to it?"}
   - {seat: "Visual explanation review", asks: "Can a reader explain the comparison and its limits?"}

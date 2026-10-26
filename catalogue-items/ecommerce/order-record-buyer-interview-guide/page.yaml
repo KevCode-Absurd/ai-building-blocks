@@ -1,6 +1,6 @@
 new_slug: order-record-buyer-interview-guide
 name: "Order-record buyer interview guide"
-summary: "Paste recent orders. Get a pre-filled interview sheet per buyer, gap questions and a timeline pattern note."
+summary: "Turn recent orders into interview sheets for buyer calls. Get order facts to read out, gap questions and a pattern note for your buyer interviews."
 job: understand-customers
 thinking: medium
 thinking_why: "It fills a fixed sheet from order facts and writes questions for the gaps. A mid-range model does this well."
@@ -17,11 +17,15 @@ when:
   - You want to know why people bought, and the reviews you have are short.
   - You have a list of recent buyers and time for five to eight 20 to 30 minute calls.
   - You want to go into each call with the facts in front of you, and not ask the same plain questions every time.
+not_for:
+  - "You have no buyers who agreed to a call: ask a few for a short call first, or read your reviews instead."
+  - "You want to ask buyers what features to add: this guide never asks that, so use a short survey instead."
+  - "You have no order records, only a story to tell: use the Buying story interview guide, which starts from memory and not from order data."
 
 you_give:
-  - A list of recent buyers who agreed to a call, with a buyer code, order date, time, device, items and order value (no names, emails or phone numbers in this sheet)
+  - A list of buyers who agreed to a call, each with a buyer code, order date, time, device, items and order value
   - Your product and what it replaced
-  - Your reward, such as a small gift card (optional)
+  - Your reward for the call, such as a small gift card (optional)
 you_get:
   - A pre-filled interview sheet per buyer, with the order facts to read out and gap questions
   - A timeline template per buyer to fill in during the call
@@ -29,11 +33,34 @@ you_get:
   - A short consent line to read at the start of each call
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Ask buyers first. Only buyers who agreed to a call go on your list. Keep names and contact details in your own mail, not in this chat.
-  - Paste the order list using a buyer code for each, such as B1 and B2. Say what the product replaced.
-  - Run the calls within a few weeks of the purchase. Fill in the timeline as you talk.
+  - Ask recent buyers if they will do a 20 to 30 minute call. Only those who say yes go on your list.
+  - Open your AI chat and add this skill, or paste it in.
+  - Paste your order list. Give each buyer a code like B1, with no names, emails or phone numbers. Say what your product replaced.
+  - Check each sheet. Read the order facts out at the start of each call and fill in the timeline as you talk.
   - After five to eight calls, paste your timelines back and ask for the pattern note.
+  - Next, use the Switch story mapper to map each call, and the Job-based avatar builder to turn the groups into buyer cards.
+output_sample:
+  input:
+    - A list of buyers who agreed to a call, with a buyer code, order date, time, device, items and order value
+    - Your product
+    - What your product replaced
+    - Your reward for the call (optional)
+  prerequisites:
+    - Buyers who agreed to a 20 to 30 minute call
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+  output:
+    - name: Consent line
+      contains: "A short script to read first: the call length, notes only, skip any question, and your name stays private."
+    - name: Buyer sheet
+      contains: One sheet per buyer with the order facts to read out, a timeline to fill in and notes space.
+    - name: Gap questions
+      contains: Questions only where the order facts leave a gap, such as where the buyer was when they decided.
+    - name: Old product and rivals
+      contains: Lines for how long the old product worked, when it failed and what the buyer tried instead.
+    - name: Pattern note
+      contains: After five to eight calls, stories grouped by similar struggle, with repeats, long waits and worries that held buyers back.
+    - name: MISSING line
+      contains: Flags any order fact, product or replaced item you did not give, so nothing is made up.
 
 how_it_works:
   - title: Picks fresh buyers

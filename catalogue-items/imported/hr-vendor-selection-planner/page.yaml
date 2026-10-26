@@ -2,34 +2,79 @@ thinking: medium
 thinking_why: It follows a set method but depends on your needs.
 new_slug: hr-vendor-selection-planner
 name: HR vendor selection planner
-summary: Give it a tool or service you need. Get an RFP outline, a scorecard and
-  a contract negotiation checklist.
+summary: Pick an HR vendor fairly, such as payroll or recruiting software. Get weighted criteria, an RFP outline, a scorecard and a contract checklist.
 job: hire-people
 headline: HR vendor selection planner
-subhead: A fair, documented way to pick an HR vendor and sign a good contract.
-  Say what tool or service you need and get an outline for a request for
-  proposals, a scoring sheet and a checklist for negotiation.
+subhead: "Say what HR tool or service you need, which vendors you are weighing, your budget and what staff data the vendor will see. It sets weighted criteria, then writes a request for proposals outline, a blank scorecard, security questions and a contract negotiation checklist."
 explain: |
-  A fair, documented way to pick an HR vendor and sign a good contract. Say what tool or service you need and get an outline for a request for proposals, a scoring sheet and a checklist for negotiation.
+  A fair, written way to choose an HR vendor and sign a good contract, for payroll, recruiting software, benefits or a staffing agency.
 
-  It sets your criteria first, then builds a scorecard so you can compare vendors on cost, features, support and implementation record. It lists security and data privacy questions to ask before a vendor sees staff records. For the contract, it highlights terms and service levels to push for, plus exit and data-return clauses. It also helps you check prices against market rates, plan a move between providers, manage vendors after signing and cut overlap in a crowded tool stack.
+  It sets your criteria first and gives each a weight, so the team agrees what matters before anyone sees a demo. Then it writes the request for proposals outline and a scorecard. The scores stay blank. It does not know vendors' real features or prices, so it never fills them in from memory. You score from the vendors' own answers.
+
+  It adds the questions to ask before a vendor sees staff records, and a list of contract points, such as exit terms and data return. A lawyer or privacy lead should read the final contract.
 when:
   - You need to replace your payroll, recruiting or benefits provider.
   - Three vendors have sent proposals and you need a fair way to compare them.
   - A contract renewal is near and you want better terms.
-  - You have too many overlapping HR tools and want to cut some.
+  - You have many overlapping HR tools and want to cut some.
+not_for:
+  - "You already signed with a vendor and want to plan the rollout: use the HR project plan builder."
+  - "You are buying an AI tool for hiring: use the HR AI tool vendor checker, which adds bias and pilot checks."
+  - "You want to compare vendor proposals in detail and pick one: use the Vendor comparison writer after you have their answers."
+  - "You are buying something that is not HR, such as ad software: use a general procurement checklist."
 you_give:
-  - The tool or service you need
-  - Vendors you are considering
+  - The HR tool or service you need
+  - Vendors you are considering (optional)
   - Budget and timing
-  - Data the vendor will access (optional)
+  - The staff or candidate data the vendor will see
+  - Vendor answers or price sheets you have received (optional)
 you_get:
+  - Weighted criteria you can change
   - A request for proposals outline
-  - A vendor scorecard
-  - Security and privacy questions
+  - A blank vendor scorecard, or one scored only from answers you paste
+  - Security and privacy questions to ask
   - A contract negotiation checklist
+  - The order of work, from criteria to contract
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text. Then say what you need, your budget, timing and what data the vendor will see.
+  - Change the weights so they match what your team cares about. Agree them before you see any demos.
+  - Send the RFP outline to each vendor. Paste their answers back in, and ask it to score only from those answers.
+  - Ask your privacy lead to read the vendor answers to the security questions.
+  - Have a lawyer read the contract before you sign. Use the checklist to guide the talk.
+output_sample:
+  input:
+    - The HR tool or service you need
+    - Budget, timing and the staff data the vendor will see
+    - Vendor names, answers or price sheets (optional)
+  output:
+    - name: Criteria and weights
+      contains: Six to eight criteria with weights that add up to 100, marked as a proposal.
+    - name: RFP outline
+      contains: Background, needs, questions by criterion, pricing format, timeline and how you will score.
+    - name: Scorecard
+      contains: One row per criterion and one column per vendor. Scores are blank unless taken from answers you pasted.
+    - name: Security and privacy questions
+      contains: Where data lives, who sees it, how it is protected and how it is returned on exit.
+    - name: Contract negotiation checklist
+      contains: Service levels, price caps, notice and exit terms, data return and ownership.
+    - name: Order of work
+      contains: Steps from criteria to contract, with owners and timing.
+how_it_works:
+  - title: Collect the need
+    text: It asks for the tool, budget, timing and data, and marks missing items TO DECIDE.
+  - title: Set weighted criteria
+    text: It proposes criteria and weights for your team to change.
+  - title: Write the RFP and scorecard
+    text: It writes the outline and a blank scorecard, and scores only from answers you paste.
+  - title: Check security
+    text: It lists questions to ask before a vendor sees staff records.
+  - title: Prepare the contract
+    text: It lists the terms to push for and who should review them.
+terms:
+  - term: RFP
+    meaning: A request for proposals. A set of questions you send to vendors so you can compare their answers.
+  - term: SLA
+    meaning: A service level agreement. A promise on things like uptime and reply times.
+  - term: Data return
+    meaning: How you get your records back, and how they are deleted, when you leave a vendor.

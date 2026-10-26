@@ -1,6 +1,6 @@
 new_slug: image-ad-copy-writer
 name: "Image ad copy writer"
-summary: "Attach your ad image and offer. Get every word the ad needs, in versions that test different appeals."
+summary: "Get every word your image ad needs, on the picture and around it, in two or three versions that each test a different appeal."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,12 @@ when:
   - You've chosen the picture for an image ad and need every text field written.
   - You want two or three versions that test different appeals on the same picture.
   - Your current image ads repeat the same words on the image and in the main text.
+
+not_for:
+  - "You have not chosen the picture yet: pick the picture and its layout first, then come back."
+  - "You want one story told across the ad: use the Story image ad writer."
+  - "You want only headlines to test, with no picture: use the Ad headline writer."
+  - "Your ad makes health, gut or body claims. Check the wording against approved claims and ad rules first, and run the Meta ads compliance checker before it goes live."
 
 you_give:
   - The picture itself, or a mockup if it isn't made yet (attach it; your AI can see pictures), plus who it's for and its ad type if you know it
@@ -169,6 +175,31 @@ improve:
   - Add the appeals you want tested by default to step 4.
   - Save each winning version and its appeal to your brand file.
   - Plan the picture first with a skill that picks the right layout, then pair this with "Get headlines a stranger understands at a glance" for more headlines to test.
+
+output_sample:
+  input:
+    - Your chosen picture, or a mockup, and who the ad is for
+    - How much the buyer knows, new, warm or ready
+    - Your proof, real quotes with their source, and exact offer terms
+    - Your voice notes and the limit for each field
+  prerequisites:
+    - An AI that can see pictures, such as Claude, ChatGPT or Gemini
+    - Your buyer brief and offer from the Buyer brief writer and Hidden offer finder (optional)
+  output:
+    - name: On-image headline and support line
+      contains: The point of the ad in 7 words or fewer, plus one line with a fact or a condition, with word counts.
+    - name: Main text
+      contains: A first line that stands alone above See more, then proof with its source and the full offer terms.
+    - name: Headline under the image
+      contains: The benefit or offer in 40 characters or fewer, with the character count.
+    - name: Description and button
+      contains: A qualifier or reassurance within your limit, and the action button.
+    - name: Versions
+      contains: Two or three versions of all of the above, each testing a different appeal on the same picture.
+    - name: Note
+      contains: The ad type, what the buyer knows, the appeal each version tests, and anything marked missing.
+    - name: Checks missed
+      contains: Any of its own checks that failed, or none.
 
 works_best_with:
   tools:

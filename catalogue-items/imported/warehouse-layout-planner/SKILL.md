@@ -7,6 +7,20 @@ description: When the user wants to design a warehouse, optimize warehouse layou
 
 You are an expert in warehouse design and facility planning. Your goal is to help design efficient, cost-effective warehouse facilities that optimize space utilization, material flow, labor productivity, and operational efficiency.
 
+## How to run this (read first)
+
+This skill works in a plain chat. You do not need to run code. The Python blocks below show the arithmetic, so your AI can work it out step by step, or run it if it can run code.
+
+1. **Collect the inputs** in "Initial Assessment". Ask once, in one message, for anything missing. If the person cannot answer, write **ASSUMED** next to the figure and say what you assumed and why. Never invent a product count, volume or building size.
+2. **Treat every figure in this file as a placeholder.** Square feet per pallet position, dock door rates, area per dock, picks per hour, equipment and automation costs, and the zone percentages are rough planning numbers with no source. Use the person's own numbers, or a supplier quote, when they have them. If you use a placeholder, label it **PLACEHOLDER** in the report. Never present it as an industry fact.
+3. **Work in this order:** size the storage, set the zones, choose the storage type, size docks and equipment, then check the layout against the site limits (column spacing, clear height, floor load). Change an earlier step when a later one breaks it.
+4. **Finish with the report** in "Output Format". Fill each line with a figure from the inputs, a calculated figure, or the word MISSING. Use `<angle brackets>` for anything you could not work out.
+5. **Stop and say so** when the answer depends on a site, a quote or a code check you cannot see (fire code, floor loading, racking engineer sign-off). Name who should check it. This design is a concept for discussion, not an engineering drawing.
+
+Out of scope: choosing where to build (see **facility-location-problem**, listed on this site as Warehouse location planner), and re-slotting a warehouse you already run (see **warehouse-slotting-optimization**, listed as Warehouse slot assigner).
+
+---
+
 ## Initial Assessment
 
 Before designing a warehouse, understand:
@@ -96,24 +110,26 @@ def calculate_storage_space(sku_data, peak_factor=1.5, utilization_target=0.85):
     - Required pallet positions
     """
 
-    # Calculate peak inventory
+    # 'pallet_positions' is the positions each SKU needs at AVERAGE inventory.
+    # Scale it by the peak factor to get positions needed at peak.
     sku_data = sku_data.copy()
-    sku_data['peak_inventory'] = sku_data['avg_inventory'] * peak_factor
+    sku_data['peak_positions'] = sku_data['pallet_positions'] * peak_factor
 
-    # Total pallet positions needed
-    total_positions = sku_data['pallet_positions'].sum()
+    avg_positions = sku_data['pallet_positions'].sum()
+    peak_positions = sku_data['peak_positions'].sum()
 
-    # Adjust for utilization target (need more positions than peak to maintain flow)
-    required_positions = total_positions / utilization_target
+    # Adjust for utilization target (need more positions than peak to keep goods moving)
+    required_positions = peak_positions / utilization_target
 
     return {
-        'avg_pallet_positions': sku_data['pallet_positions'].sum(),
-        'peak_pallet_positions': total_positions,
+        'avg_pallet_positions': round(avg_positions, 0),
+        'peak_pallet_positions': round(peak_positions, 0),
         'required_positions': round(required_positions, 0),
         'utilization_target': utilization_target
     }
 
-# Example
+# DEMO ONLY: random numbers to show the shape of the table.
+# Replace with the person's own SKU table. Never report demo output as a result.
 sku_data = pd.DataFrame({
     'sku': [f'SKU_{i}' for i in range(1, 101)],
     'avg_inventory': np.random.randint(10, 500, 100),
@@ -136,7 +152,8 @@ def warehouse_sizing(storage_positions, storage_type='selective',
     storage_type: 'selective', 'drive-in', 'push-back', 'pallet-flow'
     """
 
-    # Square feet per pallet position by storage type
+    # PLACEHOLDER planning figures, not sourced. Replace with the rack supplier's
+    # layout numbers for the real building. Square feet per pallet position by type:
     sq_ft_per_position = {
         'selective': 30,      # Single-deep racking, most accessible
         'double-deep': 22,    # Double-deep, less accessible
@@ -148,10 +165,10 @@ def warehouse_sizing(storage_positions, storage_type='selective',
 
     storage_sq_ft = storage_positions * sq_ft_per_position.get(storage_type, 30)
 
-    # Receiving area (assume 2000 sq ft per dock door)
+    # Receiving area (PLACEHOLDER: 2000 sq ft per dock door)
     receiving_sq_ft = receiving_docks * 2000
 
-    # Shipping area (assume 1500 sq ft per dock door)
+    # Shipping area (PLACEHOLDER: 1500 sq ft per dock door)
     shipping_sq_ft = shipping_docks * 1500
 
     # Aisles and circulation (20-30% of storage)
@@ -199,17 +216,22 @@ print(f"\nTotal warehouse size: {sizing['Total']:,.0f} sq ft")
 ### Throughput Capacity Analysis
 
 ```python
-def throughput_capacity(storage_positions, picks_per_day, orders_per_day,
-                       lines_per_order=5, pick_rate_per_hour=100):
+def throughput_capacity(orders_per_day, lines_per_order=5, pick_rate_per_hour=100,
+                       hours_per_day=16, pallets_per_dock_day=80,
+                       orders_per_dock_day=100):
     """
     Analyze warehouse throughput capacity
 
     Parameters:
-    - storage_positions: Total pallet positions
-    - picks_per_day: Daily pick volume (lines)
-    - orders_per_day: Daily order volume
+    - orders_per_day: Daily order volume (use the PEAK day, not the average)
     - lines_per_order: Average lines per order
-    - pick_rate_per_hour: Picks per person per hour
+    - pick_rate_per_hour: Picks per person per hour (PLACEHOLDER: use the site's own rate)
+    - hours_per_day: Hours worked per day (16 = two shifts)
+    - pallets_per_dock_day: Pallets one receiving door handles per day (PLACEHOLDER)
+    - orders_per_dock_day: Orders one shipping door handles per day (PLACEHOLDER)
+
+    Storage size does not change pick labour, so it is sized separately
+    (see calculate_storage_space).
 
     Returns:
     - Capacity analysis and labor requirements
@@ -217,16 +239,7 @@ def throughput_capacity(storage_positions, picks_per_day, orders_per_day,
 
     # Labor calculations
     picks_per_day = orders_per_day * lines_per_order
-    hours_per_day = 16  # Assume 2-shift operation
     pickers_needed = picks_per_day / (pick_rate_per_hour * hours_per_day)
-
-    # Receiving capacity (pallets per dock per day)
-    pallets_per_dock_day = 80  # Industry average
-    receiving_capacity = pallets_per_dock_day  # per dock
-
-    # Shipping capacity (orders per dock per day)
-    orders_per_dock_day = 100  # Depends on order size
-    shipping_capacity = orders_per_dock_day  # per dock
 
     return {
         'picks_per_day': picks_per_day,
@@ -236,9 +249,8 @@ def throughput_capacity(storage_positions, picks_per_day, orders_per_day,
     }
 
 # Example
+# DEMO ONLY: replace every value with the person's own figures.
 capacity = throughput_capacity(
-    storage_positions=5000,
-    picks_per_day=0,  # Will calculate
     orders_per_day=2000,
     lines_per_order=5,
     pick_rate_per_hour=100
@@ -996,63 +1008,58 @@ for metric, value in kpis.items():
 
 ### Warehouse Design Report
 
-**Executive Summary:**
+Use these headings in this order. Every value comes from the inputs, a calculation shown in the report, or the word MISSING. Mark any placeholder figure as PLACEHOLDER. Do not copy example values from anywhere else.
+
+**1. Executive Summary**
 - Warehouse size and configuration
 - Storage capacity (pallet positions)
 - Throughput capacity (units/day, orders/day)
-- Capital investment required
-- Operating cost estimates
+- Capital and operating cost: a range only if the person gave prices or quotes. Otherwise write "to be quoted"
 
-**Facility Specifications:**
+**2. Facility Specifications**
 
 | Specification | Value |
 |---------------|-------|
-| Total Square Footage | 250,000 sq ft |
-| Clear Height | 32 ft |
-| Storage Square Footage | 150,000 sq ft |
-| Pallet Positions | 6,500 |
-| Receiving Dock Doors | 12 |
-| Shipping Dock Doors | 18 |
-| Storage System | Selective Racking (80%), Push-Back (20%) |
-| Material Handling | Reach Trucks (6), Counterbalance (4) |
+| Total Square Footage | `<value>` |
+| Clear Height | `<value>` |
+| Storage Square Footage | `<value>` |
+| Pallet Positions | `<value>` |
+| Receiving Dock Doors | `<value>` |
+| Shipping Dock Doors | `<value>` |
+| Storage System | `<type and share of positions>` |
+| Material Handling | `<equipment and count>` |
 
-**Layout Diagram:**
-- Floor plan with functional zones
-- Material flow diagram
+**3. Layout Diagram (described in words or a simple text sketch)**
+- Functional zones and where each sits
+- Material flow from receiving to shipping
 - Racking layout and aisle configuration
 
-**Capacity Analysis:**
+**4. Capacity Analysis**
 
-| Metric | Design Capacity | Peak Capacity (1.2x) |
-|--------|----------------|----------------------|
-| Storage Positions | 6,500 | 7,800 (w/ floor stack) |
-| Daily Throughput | 100,000 units | 120,000 units |
-| Orders per Day | 3,000 | 3,600 |
-| Receiving (pallets/day) | 800 | 960 |
-| Shipping (trucks/day) | 90 | 108 |
+| Metric | Design Capacity | Peak Capacity |
+|--------|----------------|---------------|
+| Storage Positions | `<value>` | `<value>` |
+| Daily Throughput | `<value>` | `<value>` |
+| Orders per Day | `<value>` | `<value>` |
+| Receiving (pallets/day) | `<value>` | `<value>` |
+| Shipping (trucks/day) | `<value>` | `<value>` |
 
-**Investment Summary:**
-
-| Category | Cost |
-|----------|------|
-| Building (if new) | $12M |
-| Racking Systems | $2.5M |
-| Material Handling Equipment | $800K |
-| Conveyor/Sortation | $1.5M |
-| IT Systems (WMS, etc.) | $500K |
-| **Total Capital** | **$17.3M** |
-
-**Operating Costs (Annual):**
+**5. Cost Summary (only with the person's own prices or quotes)**
 
 | Category | Cost |
 |----------|------|
-| Labor | $4.5M |
-| Lease/Depreciation | $2.0M |
-| Utilities | $400K |
-| Maintenance | $300K |
-| **Total Annual** | **$7.2M** |
+| Building (if new) | `<quote or MISSING>` |
+| Racking Systems | `<quote or MISSING>` |
+| Material Handling Equipment | `<quote or MISSING>` |
+| Conveyor/Sortation | `<quote or MISSING>` |
+| IT Systems (WMS, etc.) | `<quote or MISSING>` |
 
-**Cost per Unit:** $0.72 per unit shipped
+Annual operating cost lines: labour, lease or depreciation, utilities, maintenance. Same rule: a quote, an input, or MISSING.
+
+**6. Assumptions and open questions**
+- Every ASSUMED or PLACEHOLDER figure, with the reason
+- What the landlord, racking supplier, fire engineer or contractor must confirm
+- Next steps: share the report with them, then run this skill again with their numbers
 
 ---
 

@@ -1,6 +1,6 @@
 new_slug: fear-setting-planner
 name: "Fear-setting planner"
-summary: "Paste a decision you keep putting off. Get the worst case, how to repair it and what waiting costs."
+summary: "Paste the decision you keep putting off. Get a fear-setting plan: worst cases rated, repairs for each, and what waiting costs over 10 years."
 job: think-and-decide
 thinking: medium
 thinking_why: "It rates and repairs each fear and prices the cost of waiting. The steps are fixed and the judgement is light."
@@ -17,6 +17,10 @@ when:
   - You have been meaning to make a change for months and keep finding reasons to wait.
   - A decision feels risky but you cannot say exactly what could go wrong.
   - You want to see the cost of staying put next to the cost of acting.
+not_for:
+  - "Your decision turns on a legal, medical or investment question: talk to a lawyer, doctor or licensed adviser first."
+  - "You need to pick between several options: use a simple pros and cons list, or ask a person you trust."
+  - "You are in distress or in danger now: speak to someone you trust or a local support service."
 
 you_give:
   - The move you are putting off, in one or two sentences
@@ -35,6 +39,27 @@ how_to_use:
   - Add the limits that are real, such as money you need or people who rely on you.
   - Read the harm and odds ratings and correct any that seem off.
   - Do the first step within a day.
+output_sample:
+  input:
+    - The move you keep putting off, in one or two sentences
+    - What you are afraid will happen (optional)
+    - What would change if it went well (optional)
+    - Limits that matter, such as savings or people who rely on you (optional)
+  output:
+    - name: The move
+      contains: The action you are putting off, written as one line with a time frame.
+    - name: Worst cases
+      contains: Three to five realistic bad outcomes, each with a harm rating, odds and repair steps.
+    - name: Gains
+      contains: What a partial win and a full win would give you.
+    - name: Cost of doing nothing
+      contains: What staying put costs you at one, five and ten years.
+    - name: First step
+      contains: One step that takes under a day, with a day and time.
+    - name: Missing
+      contains: Facts it did not have that could change the ratings.
+    - name: Checks missed
+      contains: One line for each self-check it still missed, or none.
 
 how_it_works:
   - title: Names the move

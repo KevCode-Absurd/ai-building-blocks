@@ -45,3 +45,25 @@ Only use `flushSync` when:
 - Sequential UI steps have distinct visible states (progress wizard, multi-step flow)
 
 In most cases, the fix is a **refactor** - restructuring the code to not read `this.state` after `await`. Read `references/batching-categories.md` for the correct approach per category.
+
+
+## Inputs, guard rails and what to return
+
+Added by AI Blocks. The method above is unchanged.
+
+**You need:** at least one class component file. Also useful: the React versions before and after, and any failing test or bug description.
+
+**If something is missing:**
+- No code pasted: ask once for the class file. Do not write example code from memory.
+- A method calls a function in another file that you cannot see: mark the case "NEEDS CHECK" and say which file you need. Do not guess what it sets in state.
+- The `references/` folder is not available: use the tables and rules above. Tell the user the full before and after code was not available. Do not invent patterns.
+- The component has no async methods: say so and stop.
+
+**Return in this order:**
+1. **Method list**: each async method, its category (A, B or C) and the reason.
+2. **Fixes**: before and after code for each method that changes.
+3. **flushSync used**: each call and why the user must see that state, or "none needed".
+4. **Test changes**: tests that assert intermediate state, rewritten (prefer `waitFor`).
+5. **Check by hand**: cases marked NEEDS CHECK.
+
+You cannot run the tests from a chat window. Tell the user to run them in their own project.

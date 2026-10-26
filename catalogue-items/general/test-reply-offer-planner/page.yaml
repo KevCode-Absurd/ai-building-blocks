@@ -1,39 +1,51 @@
 new_slug: test-reply-offer-planner
 name: "Test reply offer planner"
-summary: "Paste your test plan and product. Get one reply offer, the same in both versions, that brings enough replies to count."
+summary: "Pick one reply offer for your ad test that brings enough replies from real buyers. Get the offer lines and a boost plan."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It weighs a trade-off between enough replies and real buyers, but follows fixed steps."
 
-headline: "A reply offer for your test that brings enough replies from real buyers"
-subhead: Give it your test plan and what you sell. It picks a small free or low-cost item to reply to, decides whether to show it or hide it, and screens out people who only want a freebie. You get the offer lines and a plan to raise the count if it falls short.
+headline: "Test reply offer planner"
+subhead: Give it your test plan and what you sell. It picks a small free or low-cost item for people to reply to, decides whether to show it or hide it, and screens out people who only want a freebie. You get the offer lines, the expected replies against your target and a plan to raise the count if it falls short.
 
 explain: |
   A test needs replies to count. If the thing people reply to is weak, you get ten replies a version and the result is luck. If it is too good, you get a crowd who wanted the free item and a winner that never sells.
 
-  This skill picks the reply offer on purpose. It starts from what a reply should predict, lists at least four small items you could give, and chooses the one that is closest to what you really sell. It decides whether to show the offer or tuck it into the last paragraph, adds a light screen when free draws the wrong people, and compares the expected replies with your target. If the count looks low, it raises it in a set order, from making it free to showing it more clearly. The offer stays identical in both versions.
+  This skill picks the reply offer on purpose. It starts from what a reply should predict, lists at least four small items you could give, and chooses the one closest to what you really sell. It decides whether to show the offer or tuck it into the last paragraph, and adds a light screen when free draws the wrong people.
+
+  Then it compares the expected replies with your target. If the count looks low, it plans boosts in a set order, from making the item free to showing it more clearly. You settle the boosts before launch, so the offer never changes mid-test. The offer stays identical in both versions, and any free claim carries its conditions in the same line.
 
 when:
   - You are setting up a test of two ads or emails and do not know what to ask readers to do.
   - Your last test gave too few replies to read.
   - Free offers bring replies from people who never buy.
+  - You want to know in advance if your audience is big enough to reach the reply target.
+
+not_for:
+  - "You still need to design the test, split the audience and set the winner rule: use the Split-run test planner first."
+  - "You want to check your real prices and deals for clashes: use the Hidden offer finder."
+  - "You have one ad and no second version to compare: skip the test and use a plain survey."
+  - "The versions must run in different places: plan the swap with the Cross-over copy test planner."
 
 you_give:
   - Your test plan, or the two versions, audience size and reply target
   - Your real offer and price (optional)
-  - What you could give away, such as a guide, sample or trial (optional)
+  - What you could give away, such as a guide, sample or trial, and what each costs you (optional)
+  - Your budget per reply (optional)
 you_get:
   - A chosen reply offer and a back-up, with the cost per piece
   - A decision on shown or hidden, and a screen if one is needed
   - Expected replies against your target, and the order of boosts if short
-  - The offer lines and a note on matching replies to buyers later
+  - The offer lines, with the condition next to any "free"
+  - A note on how to match replies to buyers later
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the test plan and say what you sell.
-  - List anything you already have that could be the reply item.
+  - Paste the test plan from the Split-run test planner, or the two versions, audience size and reply target. Say what you sell.
+  - List anything you already have that could be the reply item, and what it costs you.
   - Put the same offer lines in both versions, in the same place and size.
-  - Keep a note of which repliers go on to buy.
+  - Settle any boosts before launch. Once the test runs, do not change the offer.
+  - Keep a note of which repliers go on to buy. Read the test with the Split-run result reader.
 
 how_it_works:
   - title: States what a reply must predict
@@ -44,8 +56,12 @@ how_it_works:
     text: Chooses the item most like what you sell, so repliers look like buyers.
   - title: Decides shown or hidden
     text: Shown for many replies, hidden to learn if anyone read the copy or to avoid freebie hunters.
+  - title: Adds a screen if needed
+    text: A small charge, one question or a phone check, so people who only want a freebie drop out.
   - title: Compares with the target
-    text: Raises a low count in a set order and trims a high one, without changing the offer mid-test.
+    text: Raises a low count in a set order and trims a high one. If you gave no reply rate, it shows a labelled range.
+  - title: Writes the offer lines
+    text: The ad line, the reply form line and the thank-you line, with any condition beside "free".
 
 output_shape: |
   AIM
@@ -71,6 +87,21 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your test plan, or the two versions with the audience size and reply target"
+    - "Your real offer and price (optional)"
+    - "What you could give away and what each costs you (optional)"
+  prerequisites:
+    - "A test plan, such as the one from the Split-run test planner"
+  output:
+    - {name: "Aim", contains: "One line saying what a reply shows and what it predicts about buying."}
+    - {name: "The offer", contains: "The chosen reply item and a back-up with cost per piece, shown or hidden, and any screen."}
+    - {name: "Expected against target", contains: "Expected replies per version against your target, and the order of boosts if short."}
+    - {name: "Offer lines", contains: "The ad line, the reply form line and the thank-you line, with conditions beside any free claim."}
+    - {name: "Matching later", contains: "How each reply is tied to a key and later to a buyer."}
+    - {name: "MISSING and CHECKS MISSED", contains: "Facts you did not give, and any check that failed or could not run."}
 
 tweaks:
   - what: What you can give
@@ -103,7 +134,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Listing options and weighing them is text work any strong chat AI handles with this skill."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Listing options and weighing them is text work any strong chat AI handles with this skill."}
     - {name: "A spreadsheet", why: "Tracks replies, buyers and cost per piece for each item."}
   inputs:
     - "The plan from Split-run test planner"
@@ -117,3 +148,5 @@ terms:
     meaning: An offer placed in the last paragraph with no button or box, so only people who read the copy find it.
   - term: Screen
     meaning: A small step that filters out people who only want something free.
+  - term: Boost
+    meaning: A change that raises the reply count, such as making the item free. You plan boosts before launch.

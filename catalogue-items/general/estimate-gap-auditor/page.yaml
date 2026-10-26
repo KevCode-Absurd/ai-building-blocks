@@ -1,6 +1,6 @@
 new_slug: estimate-gap-auditor
 name: "Estimate gap auditor"
-summary: "Paste two teams' odds for the same thing. Get the gap, what each side bases it on and a quick sanity estimate."
+summary: "Check two different odds for the same event. See the gap, what each side based it on, and a rough estimate to sanity check both."
 job: think-and-decide
 thinking: high
 thinking_why: "It compares two estimates and tests them against a rough one of its own, which needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - "Two teams give very different forecasts, risk scores or timelines."
   - "A report says a risk is tiny while the people doing the work say it is not."
   - "You have a number and want a sanity check on how it was made."
+not_for:
+  - "You have only one estimate and no second side to compare: do a plain risk review, or ask a colleague to check the number."
+  - "You want to turn what went wrong into a lasting rule: use the Mistake-to-principle writer."
+  - "You need one final number to act on right now: ask the people who made each estimate, since this audit shows the gap and does not settle it."
 
 you_give:
   - "Each side's number for the same event, with their names or roles"
@@ -35,6 +39,29 @@ how_to_use:
   - "Add how each side got its number, as best you know."
   - "Add past cases and counts, even rough ones."
   - "Take the closing questions to both sides before you decide."
+output_sample:
+  input:
+    - Each side's number for the same event, with who gave it
+    - How each side says it got the number
+    - Past cases or counts of events and near misses (optional)
+    - The decision that depends on the number (optional)
+  output:
+    - name: The event
+      contains: One line naming the event and the units both numbers use.
+    - name: The two numbers
+      contains: Each side's number, who gave it, what it is based on, and the gap as a ratio.
+    - name: Against the record
+      contains: How each number fits past cases, and whether both got the same test.
+    - name: Rough estimate
+      contains: A sanity estimate built from rounded figures, with every step shown and a range.
+    - name: Warning signs called margins
+      contains: Signs of trouble that were counted as safety margin, with what each one shows.
+    - name: Next
+      contains: Who to ask next and what test or data would settle the question.
+    - name: Missing
+      contains: Facts that would make the audit sharper.
+    - name: Checks missed
+      contains: One line for each check it failed, or none.
 
 how_it_works:
   - title: "Put the numbers side by side"

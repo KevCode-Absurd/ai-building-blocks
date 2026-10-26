@@ -1,33 +1,26 @@
 slug: operating-cash-financing-review-assistant
 name: Operating cash financing review assistant
-summary: Review factoring and supplier-finance evidence before interpreting changes in cash generation and leverage.
+summary: Separate factoring and supplier finance from operating cash flow, so cash generation and debt are read fairly. Redone when new filings arrive.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - separate-financing-effects-from-operating-cash
   - current-tax-cash-payment-bridge
 steps:
   - uses: separate-financing-effects-from-operating-cash
-    note: Run the governing workflow when When the user supplies new cash-flow, receivable-transfer or supplier-finance records, compare cash timing and financing classifications with the accepted model.
+    note: Run the governing workflow when new cash-flow, receivable-transfer or supplier-finance records arrive. Compare cash timing and financing classifications with the accepted model. It hands back the three bridges and the exception table.
   - uses: current-tax-cash-payment-bridge
-    note: If a cash-conversion residual is attributable to current taxes, reconcile tax payable movements to cash payments separately. Unmatched factor proceeds/collections or missing supplier terms stop the affected analytical recast.
+    note: If a cash-conversion gap comes from current taxes, tie tax payable movements to cash payments as a separate check. Unmatched factor proceeds or missing supplier terms stop the affected recast.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It gives no accounting ruling and moves no money.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

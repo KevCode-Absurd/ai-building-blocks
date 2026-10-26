@@ -11,6 +11,38 @@ author: Leonxlnx
 tags: [frontend, design, minimalism, ui]
 tools: [claude, cursor, codex, antigravity]
 ---
+
+## When not to use (added by AI Blocks)
+
+- The screen is dense with data, such as a trading table or an admin grid. Flat greys can hide what matters most, so check hierarchy first.
+- The product already has a brand system or component library. Follow that instead of replacing it.
+- The brand needs bold colour, heavy illustration or playful motion. This look is deliberately quiet.
+
+## What to ask for first (added by AI Blocks)
+
+Ask once for anything missing. Never invent it.
+
+1. What the screen or product is, and who uses it.
+2. The real content: headings, labels and body text. If there is none, write plain placeholder text and mark every line as a placeholder to replace.
+3. For a review, the existing screen as code, a screenshot or a description.
+4. The framework (plain HTML, React, Vue, Tailwind). If not given, use plain HTML and CSS.
+
+## Rules that conflict (added by AI Blocks)
+
+Section 2 bans gradients, but Section 6 and Section 7 suggest radial gradients for backgrounds. Follow Section 2 and skip those gradient options. For section depth, use a flat tint from the palette, a very low-opacity photo or a thin line pattern instead of a gradient. Where a brand system already sets fonts or colours, the brand wins over Section 3 and Section 4.
+
+## Output (added by AI Blocks)
+
+Return these parts, in this order. Skip a part only if the request does not call for it.
+
+1. **Design direction.** Fonts and their roles, the colour list with hex values, the spacing scale, and the border and radius rules, in a short list.
+2. **Code.** The screen or components in the framework asked for, using that direction.
+3. **Fix list (review requests only).** Problems found, ranked by impact. Each has what is wrong, why it matters and the exact change.
+4. **Banned-elements check.** One line per ban in Section 2, marked "clear" or "found and fixed".
+5. **Checks to run yourself.** Contrast on real text, keyboard use, and a screen reader pass. Say these were not run if you could not run them.
+
+After the output, suggest one next step, such as building the next screen or checking contrast with real content.
+
 # Protocol: Premium Utilitarian Minimalism UI Architect
 
 ## When to Use

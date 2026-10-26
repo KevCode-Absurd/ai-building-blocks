@@ -10,6 +10,8 @@ inputs:
   - {type: performance_sheet, required: true}
   - {type: audit_report, required: false}
   - {type: ad_copy, required: false}
+  - type: plan
+    required: false
 outputs:
   - {type: lessons_register}
 origin: rebuilt

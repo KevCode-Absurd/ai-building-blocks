@@ -21,23 +21,23 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Product photo retoucher.** Use the skill `product-photo-retoucher`. Starts the chain: a cleaner flat-lay photo.
+1. **Product photo retoucher.** Use the skill `product-photo-retoucher`. Starts the chain from your phone photo and hands a cleaner flat-lay photo to step 2.
 
 Pause here: Pick the retouched photo that looks most like your real garment and save it.
 
-2. **Ghost mannequin photo maker.** Use the skill `ghost-mannequin-photo-maker`. Reads the retouched photo you chose and shapes it as if worn.
+2. **Ghost mannequin photo maker.** Use the skill `ghost-mannequin-photo-maker`. Reads the retouched photo from step 1 that you chose, shapes it as if worn, and hands that worn-shape photo to step 3.
 
 Pause here: Save the worn-shape photo you like best. The next step zooms into it.
 
-3. **Fabric close-up maker.** Use the skill `fabric-close-up-maker`. Zooms into the fabric of the worn-shape photo you saved.
+3. **Fabric close-up maker.** Use the skill `fabric-close-up-maker`. Zooms into the fabric of the worn-shape photo from step 2 and hands the close-ups on with the other photos.
 
 Pause here: Put the retouched photo, the worn-shape photo and the close-ups you plan to use in one folder.
 
-4. **AI product photo inspector.** Use the skill `ai-product-photo-inspector`. Looks over the pictures you gathered for AI faults.
+4. **AI product photo inspector.** Use the skill `ai-product-photo-inspector`. Looks over the pictures from steps 1 to 3 for AI faults and hands a list of which ones to keep to step 5.
 
 Pause here: Redo or retouch any picture the inspector flagged, then save the final set.
 
-5. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. Checks the pictures that passed the last step against marketplace rules.
+5. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. Uses the pictures that passed step 4's check, with step 4's report, and checks them against marketplace rules.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

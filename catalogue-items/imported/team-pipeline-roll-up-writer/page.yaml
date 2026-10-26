@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It rolls up many deals and picks what needs help.
 new_slug: team-pipeline-roll-up-writer
 name: Team pipeline roll-up writer
-summary: Ask for your team's pipeline. Get a view by rep and stage, at-risk
-  deals and coaching points.
+summary: Get a team pipeline roll-up by rep and stage, with at-risk deals marked and one coaching question per rep, ready for a forecast call.
 job: lead-people
 headline: Team pipeline roll-up writer
-subhead: One view of your team's sales pipeline by rep and stage, with at-risk
-  deals marked and a short list of where to spend coaching time.
+subhead: One view of your team's sales pipeline by rep and stage, with at-risk deals marked and a short list of where to spend coaching time.
 explain: |
   One view of your team's sales pipeline by rep and stage, with at-risk deals marked and a short list of where to spend coaching time. It is ready for a forecast call or a 1:1.
 
@@ -18,19 +16,46 @@ when:
   - You prep 1:1s and need a coaching point for each rep.
   - A rep's pipeline looks big but thin and you want proof.
   - You need a quick team view without opening twenty CRM reports.
+not_for:
+  - "You want to review one deal or one rep's full list: use the pipeline review skill, or ask your AI to open that rep's deals in your CRM."
+  - "You need a company-wide forecast: this skill stays on your team and asks which team you mean."
+  - "You want to change deal fields or log activity: update the records in your CRM, since this skill only reads."
 you_give:
-  - Your team or the reps to include
-  - The period (default is this quarter)
-  - CRM access or an exported pipeline file
-  - Chat access for flagged deals (optional)
+  - Your team, or the names of the reps to include
+  - The period (this quarter if you do not say)
+  - Your CRM access, or an exported team pipeline file if you have no connection
+  - Each rep's quota, if your CRM does not show it (optional)
+  - Access to your team chat channel (optional)
 you_get:
   - Pipeline by rep and by stage
   - At-risk and stalled deals
   - Closed won against target
   - Coaching points per rep
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM.
+  - Open Claude, ChatGPT or Gemini. Paste this skill into the chat.
+  - Connect your CRM if your AI can. If not, upload your exported team pipeline file.
+  - Say which team or reps you want, and the period. Add quotas if asked.
+  - Read the scoreboard first. Then check the deals that decide the quarter and the Monday questions.
+  - Use the questions in your 1:1s. Make any deal changes in your CRM yourself.
+output_sample:
+  input:
+    - Your team, or the names of the reps to include
+    - The period (this quarter if you do not say)
+    - Your CRM link, or an exported team pipeline file
+    - Each rep's quota, if your CRM does not show it
+    - Your team chat channel (optional)
+  prerequisites:
+    - Either a CRM your AI can read, or an exported pipeline file you can upload
+  output:
+    - name: Header
+      contains: The team target, what is closed so far and how many days are left in the period.
+    - name: Scoreboard
+      contains: One row per rep with closed, commit, weighted amount, gap to quota and a call of Ahead, On-track or Behind, plus a team total.
+    - name: Deals that decide the quarter
+      contains: Three to five big late-stage deals, each with why it matters, the risk and one action for you.
+    - name: Risk flags
+      contains: Deals with pushed dates, no activity for 14 days or more, or a close date already past.
+    - name: Monday questions
+      contains: One natural question for each Behind or at-risk rep, using what they already posted in chat.
+    - name: Dig-deeper pointers
+      contains: Where to look next for one rep's detail or the full at-risk list.

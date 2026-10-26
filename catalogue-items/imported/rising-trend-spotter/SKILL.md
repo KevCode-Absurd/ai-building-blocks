@@ -10,6 +10,17 @@ date_added: "2026-09-04"
 
 Discover and track emerging trends using Apify Actors to extract data from multiple platforms.
 
+## Before you start (added by AI Blocks)
+
+- **What you need from the user.** A topic or niche and the platforms to scan. If either is missing, ask once. Do not guess a topic. If the user names no platform, suggest Google Trends plus one social site and ask them to confirm.
+- **This needs code running.** The steps below run a Node.js script and the `mcpc` tool, and read `APIFY_TOKEN` from a `.env` file. If you cannot run code, say so. Offer a no-tools fallback: ask the user to open Google Trends themselves, compare the topic over the last 12 months, and paste the numbers or a screenshot description. Then summarise only what they paste.
+- **Cost.** Apify runs can use paid credits. Before step 4, tell the user which Actor you will run and ask for a small result count for the first run. Never raise the count without asking.
+- **Platform rules.** Scraping Instagram, Facebook, TikTok and YouTube may go against those sites' terms of service. This skill reads public pages only. Remind the user once to check the terms before they use the data. Never ask for a login or a private account.
+- **Never ask the user to paste the Apify token into the chat.** It lives in the `.env` file.
+- **Do not invent trends.** A trend needs a change over time. Report only what the returned data shows. If a run returns one snapshot with no earlier period to compare, say "this shows what is popular now, not what is rising" and suggest a second run next month. Quote counts exactly as returned. If a run fails or returns nothing, say so and stop.
+- **Why the front matter says `risk: critical`.** The skill uses an API token, can spend money on Apify, and reads other sites' data. Take care with each of those.
+
+
 ## Prerequisites
 (No need to check it upfront)
 
@@ -115,6 +126,24 @@ After completion, report:
 - Key trend insights
 - Suggested next steps (deeper analysis, content opportunities)
 
+### Output format
+
+Give the final answer in this shape:
+
+```
+Trend scan: <topic>, <date>
+Sites scanned: <list>   Results found: <number>   File: <name and location, or "chat only">
+
+Rising on <site>
+- <hashtag, search, sound or video>: <what the data shows>
+
+Not clear yet
+- <anything the data was too thin to call>
+
+Next steps
+- <a content or product angle to test, and a tool or skill that pairs with it>
+```
+
 
 ## Error Handling
 
@@ -126,7 +155,7 @@ After completion, report:
 
 
 ## When to Use
-Use this skill when tackling tasks related to its primary domain or functionality as described above.
+Use this skill when the user wants to know what is rising in a topic on Google Trends, Instagram, Facebook, YouTube or TikTok. Do not use it for live breaking news, private account data, or a forecast of the user's own sales.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

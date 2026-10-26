@@ -1,6 +1,6 @@
 new_slug: problem-root-cause-tracer
 name: "Problem root cause tracer"
-summary: "Paste the problems found in your work. Get each traced to a likely cause, plus notes that may name the wrong spot."
+summary: "Find the root cause behind problem notes on your work. Paste the notes. You get likely causes ranked, plus notes that may point at the wrong spot."
 job: lead-people
 thinking: high
 thinking_why: "It has to reason about what sits upstream of each problem and test whether a fix would hold. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - A group told you something is wrong and the obvious fix did not help.
   - Several people say it feels off but disagree on why.
   - You want to fix the cause once instead of patching three places.
+not_for:
+  - "You have one obvious bug with a known cause: fix it directly, no tracing needed."
+  - 'Your notes are vague, like "it feels off": first sharpen them with the Good note sharpener.'
+  - "You already know the cause and want a new plan: use the Revision headline planner."
 
 you_give:
   - The problem notes, ideally from "Good note sharpener"
@@ -32,6 +36,25 @@ how_to_use:
   - Paste the notes. Add the work as well so the causes can point at real parts.
   - Run the first check for the top cause before you rewrite anything.
   - Bring the result to "Revision headline planner".
+output_sample:
+  input:
+    - Your problem notes, ideally from the Good note sharpener
+    - The work the notes are about (optional, but causes are guesses without it)
+    - What changed just before the problem began (optional)
+    - Your own guess at the cause (optional)
+  output:
+    - name: Problems table
+      contains: Each numbered problem with whether the spot holds up when read on its own.
+    - name: Causes, ranked
+      contains: Causes found earlier in the work, grouped, with the problems each explains and a hold-test answer.
+    - name: Possible wrong symptom
+      contains: Notes where the group may have pointed at the wrong spot, and what else to look at.
+    - name: First check
+      contains: One quick test for each top cause, and the result that would show it is real.
+    - name: Missing
+      contains: Facts you did not give that would settle a cause.
+    - name: Checks missed
+      contains: One line for each check the AI still missed, or none.
 
 how_it_works:
   - title: Reads the spot alone

@@ -1,15 +1,13 @@
 slug: explain-observed-shareholder-return
 name: Explain an observed shareholder return
-summary: Reconcile share-price changes and dividend reinvestment using consistent corporate-action-adjusted evidence.
+summary: "Explain why a share price moved and what reinvested dividends added, using split-adjusted EPS, P/E changes and real reinvestment prices."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - stock-split-eps-restatement
   - eps-multiple-return-bridge

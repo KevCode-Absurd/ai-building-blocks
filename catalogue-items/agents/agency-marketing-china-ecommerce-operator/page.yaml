@@ -1,0 +1,133 @@
+name: China E-Commerce Operator agent
+summary: Get a China ecommerce plan for Taobao, Tmall, JD, Pinduoduo or Douyin Shop, with margin checks, ad plans and a 618 or Double 11 countdown.
+headline: China E-Commerce Operator agent
+subhead: Tell it what you sell, which China platforms you use and what each product costs. It checks your margin, then plans listings, ads, live selling and sale-day prep for each platform. You get a China ecommerce plan and a list of the numbers it still needs.
+job: run-your-store
+thinking: high
+thinking_why: It weighs margin, ad spend and platform rules at once, and it must not guess numbers. Use a model that reasons well and says when it is unsure.
+explain: |-
+  A plan that works on Taobao often fails on Pinduoduo or JD. Each platform ranks products in its own way, and each has its own buyers and rules. A China ecommerce operating plan has to be built platform by platform. The same plan pasted onto all of them wastes ad money.
+
+  This agent starts with your numbers, not with sales goals. For each product it works out what is left after the platform fee, ads, shipping and returns. If a product loses money, it says so before it plans any ads. Then it builds a plan for each platform you named: titles, the five main image slots, the detail page and the ad plan. It adds a live selling plan when live fits your products. It ends with a dated countdown for your next big sale, such as 618 or Double 11, starting about 60 days out.
+
+  It keeps your facts apart from its assumptions. The profile's sales targets, such as an ad return of 3 to 1, are goals from the original author. They are not benchmarks for your store, and the agent says so. Platform fees and rules change, so it tells you what to check on each platform's own seller pages.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You sell on Taobao, Tmall, JD, Pinduoduo or Douyin Shop and want one plan that fits each of them.
+  - You are getting ready for 618 or Double 11 and want to know what to do 60, 30 and 7 days before.
+  - A product sells well on one platform and you want to know how to price and pack it for another.
+  - Your China store gets visits but few orders, and you want the fixes in order.
+not_for:
+  - You want to sell from China to other countries. Use the Cross-Border E-Commerce Specialist agent.
+  - You need your brand and message rewritten for Chinese buyers. Use the China Market Localization Strategist agent.
+  - You only want a plan to bring buyers into a WeChat group and sell to them again. Use the Private Domain Operator agent.
+  - You want it to change your store, prices or ads for you. It drafts the plan. You make each change yourself.
+you_give:
+  - The platforms you sell on, or want to sell on, such as Tmall, JD or Douyin Shop.
+  - Your product list with the price, what each one costs you and how many you have in stock.
+  - Your last month of sales and ad spend for each platform (optional)
+  - Your goal and limits, such as a sales target, an ad budget, a date and the size of your team.
+  - The sale you are planning for and its date, such as Double 11 (optional)
+you_get:
+  - A margin check for each product, after platform fees, ads, shipping and returns
+  - A plan for each platform with listing fixes, image slots, pricing and an ad plan
+  - A dated sale countdown from about 60 days before to a week after
+  - A live selling plan, or a clear reason to skip live for now
+  - A list of missing numbers and rules you must check before you spend money
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste your platforms, products, prices, costs and goal. Add last month's sales for each platform if you have them. No code or web access is needed.
+  - Type "Build my China ecommerce plan. Do the margin check first. Mark anything you are guessing and do not invent numbers."
+  - Read the margin check first. Fix any cost it got wrong, then ask it to run the plan again.
+  - Check each platform rule and fee it names on that platform's own seller pages. They change often.
+  - Make the store, price and ad changes yourself. Use the countdown as your task list.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms your platforms, products, goal and limits. Anything missing is asked once, then marked MISSING.
+  - title: Check the margin
+    text: For each product it subtracts platform fee, ads, shipping and returns from the price. It flags any product that loses money.
+  - title: Plan each platform
+    text: It writes a separate plan for each platform you named, because ranking, buyers and rules differ.
+  - title: Plan live selling
+    text: It suggests host, product order and run of show when live suits your products. If not, it says why.
+  - title: Build the sale countdown
+    text: It works back from your sale date with steps for 60 days out, 30 days out, 7 days out, sale day and the week after.
+  - title: Hand back the checks
+    text: It separates facts from assumptions, lists missing numbers and names the rules you must confirm.
+output_shape: |-
+  SCOPE
+    Platforms <list> | Products <list> | Goal <target and date> | Limits <budget, team, tools>
+
+  MARGIN CHECK
+    <product> | <price> | <cost> | <platform fee> | <ads> | <shipping and returns> | <left per unit>
+
+  PLATFORM PLANS (one block per platform)
+    <platform>: Listing fixes <title, 5 images, detail page> | Price and bundle <plan> | Ads <plan and budget split>
+
+  LIVE SELLING PLAN
+    <host and schedule> | <product order> | <or why to skip live for now>
+
+  SALE COUNTDOWN
+    60 days out <steps> | 30 days out <steps> | 7 days out <steps> | Sale day <steps> | After <steps>
+
+  GAPS AND CHECKS
+    <missing number or rule> | <why it matters> | <where to check>
+output_sample:
+  input:
+    - The platforms you sell on or want to sell on
+    - Your products with price, cost and stock
+    - Your goal, ad budget and team size
+    - Your last month of sales by platform (optional)
+  prerequisites:
+    - An AI that can read files, if you attach a sales export or price sheet
+  output:
+    - name: Scope
+      contains: The platforms, products, goal and limits the plan was built from.
+    - name: Margin check
+      contains: What is left on each product after platform fee, ads, shipping and returns, from your numbers.
+    - name: Platform plans
+      contains: For each platform, listing fixes, image slots, pricing and bundles, and an ad plan.
+    - name: Live selling plan
+      contains: Host, schedule and product order, or why live is not worth it yet.
+    - name: Sale countdown
+      contains: Dated steps from 60 days before your sale to a week after it.
+    - name: Gaps and checks
+      contains: Missing numbers, assumptions and the platform rules to confirm before you act.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads a sales export or price sheet and builds the margin check from your real numbers.
+  inputs:
+    - Your last 12 months of sales for each platform, so it can see your busy and slow months.
+    - Results from your last 618 or Double 11, if you ran one.
+    - Your supplier cost sheet and your shipping cost per order.
+terms:
+  - term: Taobao, Tmall, JD, Pinduoduo, Douyin Shop
+    meaning: The five big China online shops. Tmall is for brands, Pinduoduo is known for low prices, and Douyin Shop sits inside the Douyin video app.
+  - term: 618 and Double 11
+    meaning: China's two biggest sale days, on 18 June and 11 November. Shops start preparing about two months ahead.
+  - term: Live commerce
+    meaning: Selling to viewers during a live video, where a host shows products and buyers order on the spot.
+  - term: Ad return (ROAS)
+    meaning: Sales you get for each yuan you spend on ads. An ad return of 3 means 3 yuan of sales for 1 yuan of ads.
+  - term: GMV
+    meaning: The total value of orders placed, before returns and costs are taken off.
+tweaks:
+  - what: Platforms
+    how: Start with the one or two that make most of your sales. A plan for five platforms at once stays thin.
+  - what: Sale date
+    how: Give the real date and your stock on hand. The countdown then shows what you can still do in time.
+  - what: Costs
+    how: Give the real platform fee rate you pay and your shipping cost. Without them the margin check is marked MISSING.
+improve:
+  - Keep each plan with your sales sheet, so the next run starts from your own results.
+  - After your sale, paste the results back and ask what to change for the next one.
+  - Pair it with the Livestream Commerce Coach agent when live selling becomes a main channel.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

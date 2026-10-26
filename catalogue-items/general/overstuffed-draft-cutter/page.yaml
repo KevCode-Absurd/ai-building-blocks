@@ -1,6 +1,6 @@
 new_slug: overstuffed-draft-cutter
 name: "Overstuffed draft cutter"
-summary: "Paste your draft. Get the one main idea named, what fights it cut, and a list of every cut with its reason."
+summary: "Paste a draft that feels too full. Get the one main idea named, what competes with it cut, and every cut listed with its reason."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It judges which ideas compete, but the scoring and the cut rules are fixed."
@@ -17,6 +17,10 @@ when:
   - "A draft has grown and you cannot say what it is really about."
   - "Readers say it is good but long, or good but hard to follow."
   - "You are over the length limit and need to know what to lose first."
+not_for:
+  - "Your draft is only puffy and you want a set share trimmed: use the Ten percent cutter."
+  - "Your draft has no single point yet: cutting will not fix that, so decide the main idea first, or ask a person you trust what they took from it."
+  - "You want your lines reworded or polished: use an editor or a plain rewrite prompt, since this skill only cuts."
 
 you_give:
   - "The draft"
@@ -34,6 +38,29 @@ how_to_use:
   - "Paste the draft. Say the main idea if you know it, and name anything that must stay."
   - "Read the cut list. If you disagree with a cut, use the put-back order at the end."
   - "Send the cut draft on for a test with real readers."
+output_sample:
+  input:
+    - Your draft, pasted in full
+    - Your brief or main idea (optional)
+    - Your target length (optional)
+    - Any part you will not cut (optional)
+  output:
+    - name: Main idea
+      contains: The one point the reader should carry away, in a single sentence.
+    - name: Inventory
+      contains: "A numbered list of every idea, with word count and a score: serves, supports, competes or unrelated."
+    - name: Cut draft
+      contains: The shorter draft, with the best moment moved to the end and only joining words added.
+    - name: Numbers
+      contains: Word counts before and after, and the share cut.
+    - name: Cuts
+      contains: Each item removed, with the reason it was removed.
+    - name: Parking list
+      contains: Good ideas cut here that may fit another piece.
+    - name: Put back first
+      contains: The cuts you are most likely to want back, in order.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: "Counts the ideas"

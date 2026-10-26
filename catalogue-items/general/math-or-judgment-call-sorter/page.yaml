@@ -1,6 +1,6 @@
 new_slug: math-or-judgment-call-sorter
 name: Math or judgment call sorter
-summary: Paste a decision and your numbers. Get it sorted as math or judgment call, with the next step.
+summary: Sort a stuck decision into math or judgment call. Paste your options and numbers to see if your own data can settle it, and what to do next.
 job: think-and-decide
 thinking: high
 thinking_why: It has to judge whether the numbers can really settle a choice, and what they cannot see.
@@ -14,6 +14,10 @@ when:
   - A team argues about a choice and nobody agrees on what would settle it.
   - The numbers say one thing and your instinct says another, for example on price.
   - You are about to build a model for a decision that no model can settle.
+not_for:
+  - "You need to know how much evidence to gather first: use the Decision evidence bar setter."
+  - "You want to test a small idea with real people: use the Smallest test picker."
+  - "You already have years of your own data on every input and just need a forecast: use a spreadsheet or ask your finance person."
 you_give:
   - The decision and the options
   - The numbers and history you have, with the period they cover
@@ -29,6 +33,28 @@ how_to_use:
   - Say how far ahead the outcome matters.
   - Read the three-test result. If you disagree, say which test and why.
   - Follow the next step. Put the review date in your calendar.
+output_sample:
+  input:
+    - Your decision and all the options, including doing nothing
+    - The numbers and history you have, with the period they cover
+    - The outcome you care about and how far ahead it matters (optional)
+  output:
+    - name: Decision
+      contains: The options, the outcome you care about and the time horizon.
+    - name: Three tests
+      contains: A yes or no with a reason for history, speed of effect and agreement on one answer.
+    - name: Sorted as
+      contains: "The call: math if all three are yes, judgment if any is no."
+    - name: Model and flip point
+      contains: "For a math call: the inputs, formula, result and the one input that would change the answer."
+    - name: Judgment, math against it and what math cannot see
+      contains: "For a judgment call: your written judgment, the short-term math that argues against it and the effects over years."
+    - name: Safe experiment
+      contains: A small test that does not commit you to the decision, or none.
+    - name: Review
+      contains: A date, one signal, the action if the signal is bad and who decides.
+    - name: Missing and checks missed
+      contains: Gaps in your input and any checks the result still fails.
 how_it_works:
   - title: States the decision
     text: Options, the outcome you care about and the time that matters.

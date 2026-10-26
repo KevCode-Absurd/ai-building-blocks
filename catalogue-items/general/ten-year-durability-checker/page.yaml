@@ -1,6 +1,6 @@
 new_slug: ten-year-durability-checker
 name: "Ten-year durability checker"
-summary: "Paste your business and its edge. Get how much value sits past year five and what could end the edge."
+summary: "Check if your business edge will last ten years. See how much value sits past year five, who could copy you, and what could end it."
 job: test-an-idea
 thinking: high
 thinking_why: "It must reason about rivals, outside change and ten years of value, which takes careful judgement."
@@ -17,6 +17,10 @@ when:
   - "Your growth is good but you can't say why a rival would not catch up."
   - "You are about to put years or money into one position."
   - "A buyer or backer asks how you stay ahead."
+not_for:
+  - "Your business has no sales yet: test the idea with a few real buyers first, or ask a person who knows your market."
+  - "You want to size a market or count buyers: use a market-size check or a simple search of public data instead."
+  - "You need a tax, loan or valuation figure: ask an accountant, because these sums are rough and not for filings."
 
 you_give:
   - "Your business and why buyers pick you"
@@ -33,6 +37,28 @@ how_to_use:
   - "Paste your business and what makes buyers pick you. Add your yearly numbers if you have them."
   - "List the rivals and suppliers you worry about, even if you think they are small."
   - "Take the first-sign list from the answer and add those signs to what you watch."
+output_sample:
+  input:
+    - Your business and why buyers pick you
+    - Your profit or cash by year, and the growth you expect (optional)
+    - Your rivals and suppliers, and what you depend on (optional)
+  output:
+    - name: The ten-year position
+      contains: One sentence on the position you hope to hold in ten years.
+    - name: Where the value sits
+      contains: Discounted profit for a flat case and a growth case, and the share that falls in years 6 to 10.
+    - name: Copiers
+      contains: The three likeliest copiers, with months to match you and cost to them, or MISSING.
+    - name: What gets harder to copy
+      contains: Yes or no, with a reason, for technology, network, scale and brand.
+    - name: What could end the edge
+      contains: Outside changes that could shrink your edge, how likely each is, and the first sign.
+    - name: The call
+      contains: Lasting, fading or unknown, with the reason and the one fact that would change it.
+    - name: Missing
+      contains: Facts that would firm up the answer.
+    - name: Checks missed
+      contains: One line per check the answer still fails, or none.
 
 how_it_works:
   - title: "Writes the ten-year position"

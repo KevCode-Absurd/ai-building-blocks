@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fetches set figures and reports them.
 new_slug: hormuz-shipping-status-reader
 name: Hormuz shipping status reader
-summary: Ask about the Strait of Hormuz. Get open or closed status, ship counts
-  and oil price impact. Collects data from websites.
+summary: Check if the Strait of Hormuz is open. Get ship counts, oil price moves and war-risk insurance from a live public dashboard, in plain words.
 job: money-and-investing
 headline: Hormuz shipping status reader
-subhead: "A quick, readable status check on the Strait of Hormuz: open,
-  restricted or closed, and what that means for shipping and oil. Ask in plain
-  words."
+subhead: "A quick, readable status check on the Strait of Hormuz: open, restricted or closed, and what that means for shipping and oil. Ask in plain words."
 explain: |
   A quick, readable status check on the Strait of Hormuz: open, restricted or closed, and what that means for shipping and oil. Ask in plain words. The skill pulls live figures from a public dashboard called the Hormuz Strait Monitor and reads them back to you.
 
@@ -18,6 +15,10 @@ when:
   - You are tracking shipping delays that could affect your supply chain.
   - You want to understand a jump in oil prices.
   - You need a short briefing on Gulf tanker traffic for a report.
+not_for:
+  - "You want advice on what to buy or sell: talk to a licensed financial adviser, and check other sources too."
+  - "The dashboard is down: check hormuzstraitmonitor.com yourself, or read a trusted news site for the latest."
+  - "You need to plan around a late delivery: ask your shipper or freight agent for the status of your own cargo."
 you_give:
   - Your question about the strait
   - Which part you care about, such as ships, oil price or insurance (optional)
@@ -28,8 +29,32 @@ you_get:
   - Oil price and insurance impact
   - A short risk assessment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web or run commands.
+  - Paste the skill text into the chat.
+  - "Ask your question, such as: is Hormuz open today? Name a topic like ships or insurance if you only want that part."
+  - Check the time stamp in the answer to see how fresh the data is.
+  - If the dashboard is down, the AI will say so. Visit hormuzstraitmonitor.com yourself.
+  - Treat the result as a read of a third-party dashboard, not financial advice.
+output_sample:
+  input:
+    - "A question about the strait, such as: is Hormuz open today?"
+    - The part you care about, such as ships, oil price or insurance (optional)
+  prerequisites:
+    - An AI that can run a web request, or fetch pages from the internet
+  output:
+    - name: Strait status
+      contains: Whether the strait is open, restricted or closed, how long it has been that way, and a short description.
+    - name: Ship traffic
+      contains: Current crossings, the last 24 hours, and how that compares with normal.
+    - name: Oil price
+      contains: The Brent price, its 24 hour change, and whether the trend is rising, falling or steady.
+    - name: Stranded vessels
+      contains: How many ships are stuck, split by tankers, bulk carriers and others, with today's change.
+    - name: Insurance risk
+      contains: The risk level, the war-risk rate, and how many times higher it is than normal.
+    - name: Cargo, diplomacy and trade impact
+      contains: Cargo volume against average, the diplomatic situation, and the share of world oil at risk.
+    - name: Tanker freight rates
+      contains: The current rate on the main route against the rate before the crisis, with the trend.
+    - name: Risk assessment
+      contains: A short read of the risk, plus data freshness and a note that the data may lag.

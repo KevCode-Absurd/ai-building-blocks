@@ -48,11 +48,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Search term sorter.** Use the skill `search-term-sorter`. Sorts the terms that already convert from the waste, ready to build on.
+1. **Search term sorter.** Use the skill `search-term-sorter`. Sorts the terms that already convert from the waste. Hands step 2 the winners list with match types, and the negatives to add.
 
 Pause here: Add the negatives in Google Ads and save the winning terms in a sheet with your products and offer.
 
-2. **Non-brand Search campaign builder.** Use the skill `non-brand-search-campaign-builder`. Builds Search campaigns from the winning terms and writes the ads.
+2. **Non-brand Search campaign builder.** Use the skill `non-brand-search-campaign-builder`. Builds Search campaigns from step 1's winning terms and your products, and writes the ads. Hands step 3 the ad copy.
 3. **Page type and layout planner.** Use the skill `page-type-and-layout-planner`. Give it the ad copy from the steps before. Takes the ad copy and plans the page each ad group should land on, so the promise matches.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

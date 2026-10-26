@@ -1,53 +1,97 @@
 new_slug: prepare-a-seasonal-cash-buffer
 name: Prepare a seasonal cash buffer
 headline: Prepare a seasonal cash buffer
-summary: Share the source files. Get a dated cash forecast, downside case and actions for review.
+summary: Plan how much cash to hold through a slow season. You get a dated cash forecast, a downside case and actions for you to review.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A dated cash forecast, downside case and actions for review. Share cash balance, dated inflows and bills, seasonal patterns and a minimum buffer chosen by the owner. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it today's cash balance, the money you expect in and the bills due, with last year's busy and slow months if you have them. It builds a dated forecast and a harder downside case, and shows when cash dips below the buffer you chose. You get both cases and a list of actions to review.
 explain: |-
-  A dated cash forecast, downside case and actions for review.
+  A seasonal business has quiet months with the same bills as busy ones. The question is not just how much cash you have, but on which date it runs low. This workflow builds a seasonal cash buffer plan: a dated cash forecast that shows when the balance falls under the minimum you set.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Opening cash plus flows reconciles to closing cash; uncertain receipts remain assumptions. Missing tools or evidence stay visible in the final summary.
+  Every future receipt is marked confirmed or assumed, so you can see how much of the plan rests on money not yet in hand. Opening cash plus all flows must equal closing cash. The downside case shows what happens if the assumed receipts come late or fall short. It does not claim a statistical range.
+
+  Then it lists actions, and separates the ones that only move a payment later from the ones that cut a real cost. You choose which to take. It does not move money or give tax or investment advice.
 when:
-  - You need a dated cash forecast, downside case and actions for review.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your slow months are coming and you want to know if cash will last.
+  - You are deciding when to order stock or hire before a busy season.
+  - A lender or partner asks how you will cover the quiet months.
+  - Last year's slow season caught you short and you do not want a repeat.
+not_for:
+  - You need tax, filing or investment advice. Ask your accountant.
+  - You face one unexpected bill and want a quick look. Check your bank balance and the due date.
+  - You want a quick 30, 60 and 90 day forecast from your ledger. Use the Cash forecast builder.
+  - You are weighing a big purchase. Use the Plan a purchase around your real budget workflow.
 you_give:
-  - Cash balance, dated inflows and bills, seasonal patterns and a minimum buffer chosen by the owner.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: Python and a spreadsheet engine; A compatible spreadsheet engine."
+  - Your cash in the bank today
+  - Money you expect in, with dates, marked confirmed or expected
+  - Bills, loan payments and other costs, with dates
+  - The minimum cash balance you want to keep (the owner's buffer)
+  - Last year's sales or cash by month, to show the season (optional)
+  - How far ahead to plan, such as the next 6 months (optional)
 you_get:
-  - A dated cash forecast, downside case and actions for review.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A dated cash forecast with a running balance and each receipt marked confirmed or assumed
+  - The date cash first falls below your buffer, if it does
+  - A downside case with its assumptions
+  - "A reconciliation: opening cash plus flows equals closing cash"
+  - Actions to review, with timing changes kept apart from real cost cuts
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach your balance, expected receipts and bills. Mark each receipt confirmed or expected. State your buffer.
+  - Read the forecast first. Check the opening balance and every date against your bank and your calendar.
+  - Look at the downside case and the first date you fall below the buffer. Pick the actions you will take.
 how_it_works:
   - title: Budget and forecast builder
-    text: Use its cash timing and scenario methods to map dated receipts and payments. Label base and downside assumptions and show opening cash plus flows without claiming a statistical confidence band.
+    text: Maps dated receipts and payments into a forecast. Labels base and downside assumptions and shows opening cash plus flows. Hands the forecast file to the next step.
   - title: Spreadsheet checker
-    text: Reconcile forecast cash to opening cash and dated flows, check scenario formulas and state which future receipts remain assumptions.
+    text: Checks that forecast cash reconciles to opening cash and the dated flows. Checks the scenario formulas and lists which receipts are still assumptions.
   - title: Department budget planner
-    text: Draft budget responses aligned to the cash forecast and owner limits, distinguishing payment timing from true cost reductions.
+    text: Drafts budget responses that fit the forecast and your limits. Separates a later payment from a true cost cut.
 output_shape: |-
-  Scope and source coverage
-  A dated cash forecast, downside case and actions for review.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CASH FORECAST
+    Date | <Item> | <In> | <Out> | <Confirmed or assumed> | <Running cash>
+    Buffer: <your minimum> | First date below buffer: <date or none>
+
+  DOWNSIDE CASE
+    <What changes> | <Lowest cash> | <Date of lowest cash>
+
+  RECONCILIATION   <opening cash> + <flows> = <closing cash>
+
+  ACTIONS TO REVIEW
+    Action | <Timing change or true cost cut> | <Effect on cash> | <Date> | <Your decision>
+
+  MISSING
+  CHECKS MISSED
+  HAND-BACK SUMMARY
+output_sample:
+  input:
+    - Your cash in the bank today
+    - Dated money in and dated bills, with each receipt marked confirmed or expected
+    - The minimum cash balance you want to keep
+    - Last year's sales or cash by month (optional)
+  prerequisites:
+    - An AI that can open spreadsheet and CSV files
+  output:
+    - name: Cash forecast
+      contains: A dated list of money in and out with a running balance and each receipt marked confirmed or assumed.
+    - name: Downside case
+      contains: The same forecast with late or lower receipts, its assumptions and the lowest cash point.
+    - name: Reconciliation
+      contains: Opening cash plus all flows compared with closing cash.
+    - name: Actions to review
+      contains: Each action, whether it only delays a payment or cuts a cost, and its effect on cash.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks missed and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Opening cash plus flows reconciles to closing cash; uncertain receipts remain assumptions.
+  - what: Buffer
+    how: State the minimum cash you want to keep. If you give none, the AI shows the lowest point and does not pick a buffer.
+  - what: Receipts
+    how: Mark each one confirmed or expected. Expected ones carry the risk, so the downside case changes them first.
+  - what: Horizon
+    how: Cover your full slow season plus a month. A short window hides the low point.
+  - what: Season
+    how: Give last year's monthly sales or cash so the forecast follows your real busy and quiet months.
 judge:
   - Opening cash plus flows reconciles to closing cash; uncertain receipts remain assumptions.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,18 +104,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Update the forecast each month with real numbers, then attach it next time to see how close it was.
+  - Add the real date each expected receipt arrived, so the downside case uses your own delays.
+  - Finish any check that needs a person or a spreadsheet tool before you act on the result.
 works_best_with:
   tools:
     - name: Python and a spreadsheet engine
-      why: Run the bundled calculation methods and verify the cash scenarios in a supported workbook.
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+      why: The calculation steps can run in code and the scenario workbook can be checked and recalculated.
+    - name: A spreadsheet tool such as Excel or Google Sheets
+      why: Lets you open the forecast and re-check a total. Without one, the AI cannot recalculate the workbook.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Last year's monthly sales or cash.
+    - Your bank statement for the opening balance.
 terms:
+  - term: Cash buffer
+    meaning: The minimum bank balance you want to keep at all times.
+  - term: Downside case
+    meaning: The forecast with worse timing or lower receipts, to see how low cash could go.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

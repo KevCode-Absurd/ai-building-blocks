@@ -1,0 +1,154 @@
+name: Blender Add-on Engineer agent
+summary: Turn a repeated Blender chore into a Blender add-on plan and starter Python code. Check asset names, scale and materials before export.
+headline: Blender Add-on Engineer agent
+subhead: Describe the chore your artists repeat in Blender, your Blender version and where assets go next. It plans the smallest useful add-on, writes starter Python code for it, and gives you a safe way to test it on a copy of your scene.
+job: build-software
+thinking: high
+thinking_why: It writes Blender Python code and has to keep it safe on real scenes. Use a model that can write careful code and say what it could not check.
+explain: >-
+  A lot of Blender work is the same few steps again and again. Check names. Fix
+  scale. Assign materials. Export to a game engine. When someone forgets one,
+  the problem shows up later, in the engine. This Blender add-on engineer agent
+  turns that routine into a small add-on with a panel and buttons, so the checks
+  run the same way every time.
+
+
+  It starts with the smallest tool that removes a real error, such as a checker
+  that lists problems before export. It uses Blender's data API where it can,
+  reports problems before it fixes anything, and never renames, deletes or
+  applies changes without a dry run or your yes. The report names each object,
+  the rule it broke and a suggested fix.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It writes
+  starter code, but a chat AI cannot run Blender. You must install and test the
+  add-on yourself, on a copy of your file. Time-saved targets in the original
+  are goals, not results from AI Blocks.
+when:
+  - Your artists fix the same naming, scale or material mistakes before every export.
+  - An asset reached Unity, Unreal or glTF with a wrong scale or a missing material.
+  - You want one button that checks a scene and then exports it with fixed settings.
+  - You want a panel that shows rules your team agreed, so no one has to remember them.
+not_for:
+  - You want to learn to model, sculpt or texture. Use Blender's own manual and tutorials.
+  - You need an editor tool for Unity instead. Use the Unity Editor Tool Developer agent.
+  - You need materials and effects set up inside Unreal. Use the Unreal Technical Artist agent.
+  - You want a finished add-on you can trust without testing. Any add-on must be tested by you in Blender, on a copy of your scene first.
+  - You want a paid or commercial add-on checked for licence terms. Ask a lawyer.
+you_give:
+  - The chore, step by step, as an artist does it by hand today
+  - Your Blender version, such as 4.2, and where the assets go next, such as Unity, Unreal or glTF
+  - Your naming rules and the mistakes you see most often
+  - An existing add-on file or script (optional)
+  - A sample of an asset that breaks the rules, described or as a list of its object names (optional)
+you_get:
+  - A plan for the smallest useful tool, and what it will check or fix
+  - Starter Python code for the add-on, in files you can copy, with a panel and operators
+  - A list of the rules the tool enforces, and which are check-only and which can auto-fix
+  - A sample validation report layout, with object, rule, details and suggested fix
+  - Steps to install the add-on and test it on a copy of a scene
+  - A short list of things to check before you give it to your team
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Include your Blender version, the chore step by step, the destination such as Unity or glTF, and your naming rules.
+  - Your AI asks once for anything missing. Anything still unknown is marked as an assumption you can change.
+  - Read the plan before the code. Check the rules are the ones your team really uses, and that nothing is changed without a dry run or your yes.
+  - Make a copy of a messy scene. Install the add-on from a file in Blender's preferences, run the checker and read the report.
+  - Paste any error from Blender's system console back into the chat and ask for a fix. Only give it to your team once it works on real scenes.
+how_it_works:
+  - title: Map the manual work
+    text: It lists each step of the chore and the mistakes that keep happening, such as bad names, unapplied scale or no material.
+  - title: Choose the smallest tool
+    text: It picks a checker, an export button, a cleanup or a panel, and says what is check-only and what may auto-fix.
+  - title: Set the rules
+    text: It writes each rule so it is clear and always gives the same answer, with naming, scale and material slots checked one at a time.
+  - title: Write the add-on
+    text: It writes property settings, operators and a panel in the Blender category your artists use, with clear error messages.
+  - title: Add a safe test
+    text: It adds a report layout and a dry-run step, and tells you how to install and try the add-on on a copy of a scene.
+  - title: Hand off the checks
+    text: It lists what you must test in Blender, on a dirty scene, before the team uses the tool.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <chore> | Blender version <x> | destination <Unity, Unreal, glTF or other> | ASSUMED: <list> | MISSING: <list>
+
+  TOOL PLAN
+    smallest useful tool <checker, exporter, cleanup or panel> | rules enforced <list> | check-only <list> | may auto-fix <list, each needing a dry run or a yes>
+
+  FILES
+    <file name> | what it holds <settings, operators, panel, export>
+    <code, one block per file, marked NOT TESTED>
+
+  VALIDATION REPORT LAYOUT
+    <object> | <rule> | <details> | <suggested fix> | severity <error or warning>
+
+  INSTALL AND TEST STEPS
+    <numbered steps in Blender> | test on a copy of a messy scene | what a pass looks like
+
+  CHECKS BEFORE THE TEAM USES IT
+    <item> | <how to check>
+
+  CHECKS NOT RUN
+    <each thing the AI could not run, such as running the add-on in Blender>
+output_sample:
+  input:
+    - The chore your artists repeat, step by step
+    - Your Blender version and the engine or format the assets go to
+    - Your naming rules and the mistakes you see most often
+    - An existing add-on or script (optional)
+  prerequisites:
+    - An AI that can write Python, such as Claude, ChatGPT or Gemini
+    - Blender installed, and a copy of a scene to test on
+  output:
+    - name: Tool plan
+      contains: The smallest useful add-on, the rules it checks, and what is check-only or may auto-fix.
+    - name: Add-on code files
+      contains: Starter Python for settings, operators and a panel, marked as not tested.
+    - name: Validation report layout
+      contains: A table of object, rule, details and suggested fix for each problem found.
+    - name: Install and test steps
+      contains: How to add the file in Blender and try it on a copy of a messy scene.
+    - name: Checks before the team uses it
+      contains: What to confirm on real scenes before others rely on the add-on.
+    - name: Checks not run
+      contains: What the AI could not do, such as running the code in Blender.
+works_best_with:
+  tools:
+    - name: Blender
+      why: The add-on runs inside Blender. You install it from a file and read errors in the system console.
+    - name: Claude Code or another AI that can read and save files
+      why: It can write the add-on files straight to a folder. In a plain chat you copy each file yourself.
+  inputs:
+    - A list of the object names in a scene that fails your export.
+    - The export settings your engine or tool expects.
+    - Screenshots of the errors that show up in the engine.
+terms:
+  - term: Add-on
+    meaning: A small program that adds buttons and panels to Blender.
+  - term: bpy
+    meaning: Blender's Python code library. Add-ons use it to read and change a scene.
+  - term: Operator
+    meaning: A single action in Blender, such as a button that runs a check.
+  - term: Panel
+    meaning: A box of buttons and settings in Blender's side bar.
+  - term: Validator
+    meaning: A check that finds problems, such as wrong names, and reports them before anything is changed.
+  - term: Dry run
+    meaning: Showing what would change without changing it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scope
+    how: Ask for a checker only, or a checker with an export button. Start small, and add the export when the checks work.
+  - what: Destination
+    how: Name the engine or format, such as Unity, Unreal or glTF. Export and scale rules differ for each.
+  - what: Auto-fix level
+    how: Say which fixes are safe to run on their own and which must always ask first. The default is check only.
+improve:
+  - Paste real Blender errors and your test results back in, and ask for the fix. Repeat until it works on your messy scenes.
+  - Add each new mistake you find to the rule list so the checker catches it next time.

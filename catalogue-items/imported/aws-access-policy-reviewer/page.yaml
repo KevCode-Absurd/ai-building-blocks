@@ -2,34 +2,102 @@ thinking: medium
 thinking_why: It reviews rules against least access.
 new_slug: aws-access-policy-reviewer
 name: AWS access policy reviewer
-summary: Give it your IAM policies. Get risky permissions found and tighter
-  versions that grant only what is needed.
+summary: Find risky permissions in your AWS IAM policies and get tighter replacements that grant only what each person or service needs.
 job: secure-code
 headline: AWS access policy reviewer
-subhead: Give it your IAM policies. Get risky permissions found and tighter
-  versions that grant only what is needed. Bring iAM policies as JSON, or
-  account access. Use the result to plan your next step.
+subhead: Paste your AWS IAM policies, or give your AI read-only access to your account. It finds wildcard permissions, users without MFA, old access keys and risky trust settings. You get a findings table, tighter replacement policies and a hardening checklist.
 explain: |
-  Your AWS permission policies checked for risks and rewritten to allow only what each user or service needs. Paste IAM policies or point the AI at an account, and it flags wildcard permissions, users without multi-factor login, old access keys, unused roles and risky trust settings.
+  An AWS IAM policy is the rule that says who can do what in your account. Over time these rules grow too wide. A policy that says "all actions on all resources" is easy to write and hard to remember. This AWS access policy reviewer checks your IAM policies for that kind of risk and shows a tighter version.
 
-  For each finding, you get a tighter version. It includes ready-made patterns: access to a single S3 bucket, policies that require MFA, access limited by time and access limited by IP address. It ends with a hardening checklist and shows how to automate the checks. Reviewing a live account needs the AWS command line and read access to IAM.
+  It looks for wildcard permissions, users with a console password and no MFA, access keys older than 90 days, roles nobody uses and roles that trust other accounts. For each problem it writes a replacement that allows only the task. It also gives patterns you can copy: one S3 bucket only, MFA required, access that ends on a date, and access from set IP addresses.
+
+  It only reads and suggests. It never changes your account. Each replacement needs a test in a non-production account first. If your AI cannot run commands, paste the policy JSON and it reviews by reading.
 when:
-  - A policy has Action star and Resource star and nobody remembers why.
+  - A policy says Action star and Resource star and nobody remembers why.
   - You are tidying an AWS account before a security review.
-  - A developer needs access to one bucket and nothing else.
-  - You want to enforce MFA for everyone who logs in.
+  - A developer needs access to one S3 bucket and nothing else.
+  - You want everyone who signs in to use MFA.
+not_for:
+  - "You want a check of the whole account, including network, storage and logging: use the AWS security checker."
+  - "You want to design a new AWS setup from scratch: use the AWS architecture designer."
+  - You need a formal audit or a sign-off for a compliance badge. This helps you prepare, but it does not replace a security professional.
 you_give:
-  - IAM policies as JSON, or account access
-  - What each user or role must do
+  - Your IAM policies as JSON, or read-only AWS access for your AI
+  - What each user or role must be able to do
   - Compliance rules you follow (optional)
 you_get:
-  - A list of risky permissions
-  - Least-privilege replacement policies
-  - MFA and key rotation checks
-  - A hardening checklist
+  - A findings table with what is wrong, where, and how serious it is
+  - A tighter replacement policy for each major finding
+  - A list of users without MFA and keys older than 90 days
+  - Steps to test each change before you use it
+  - A hardening checklist marked done, not done or not checked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Choose how to share your policies. Easiest is to paste the policy JSON into the chat. For a full account review, your AI needs the AWS command line and read-only access. Never paste access keys into chat.
+  - Paste this skill into Claude, ChatGPT or Gemini, then add your policies. Say what each user or role must do, in plain words.
+  - Check the scope line first. It lists any checks the AI could not run. Do not read a missing finding as a clean result.
+  - Test each replacement policy in the IAM Policy Simulator, or in a test account, before you attach it. Keep the old policy version so you can undo it.
+  - Rotate old keys yourself, step by step. The skill gives the order and a way back.
+how_it_works:
+  - title: Collect the policies
+    text: It reads your pasted JSON, or runs read-only commands to list policies, users, keys and roles.
+  - title: Flag risks
+    text: It marks wildcard actions, missing MFA, old keys, inline policies, unused roles and outside trust.
+  - title: Rank each finding
+    text: Each one gets High, Medium or Low with a line of reasoning.
+  - title: Write tighter policies
+    text: It drafts a replacement that grants only the stated task, and marks guesses as DRAFT.
+  - title: Give test steps and a checklist
+    text: It adds how to test each change, a hardening checklist and the next three actions.
+output_shape: |
+  Scope: <what was reviewed and which checks were skipped>
+
+  Findings
+  | # | Finding | Where | Risk | Severity | Fix |
+
+  Replacement policies
+  <old statement> -> <tighter JSON policy> (DRAFT if it rests on a guess)
+
+  How to test: <steps per replacement>
+  Hardening checklist: <items marked done, not done or not checked>
+  Next steps: <3 actions>
+output_sample:
+  input:
+    - Your IAM policies as JSON, or read-only AWS access
+    - What each user or role must do
+    - Compliance rules to follow (optional)
+  prerequisites:
+    - For a live account review, the AWS command line and read-only IAM access
+    - The jq tool, for the policy checks
+  output:
+    - name: Scope
+      contains: What was reviewed and any check the AI could not run.
+    - name: Findings table
+      contains: Each finding with where it is, the risk and a High, Medium or Low rating.
+    - name: Replacement policies
+      contains: Tighter JSON for each major finding, marked DRAFT when it rests on a guess.
+    - name: How to test
+      contains: Policy Simulator and test account steps, plus how to keep the old version for rollback.
+    - name: Hardening checklist
+      contains: User, policy, role and monitoring items marked done, not done or not checked.
+    - name: Next steps
+      contains: The three actions to take first and what to re-check afterwards.
+works_best_with:
+  tools:
+    - name: AWS IAM Policy Simulator
+      why: Lets you test a replacement policy before you attach it.
+    - name: AWS IAM Access Analyzer
+      why: Confirms what outside access your policies give.
+    - name: Any good chat AI
+      why: Reviews pasted policy JSON without any setup.
+  inputs:
+    - A list of who works on what, so each policy fits a real task
+    - The date of your last access review
+terms:
+  - term: IAM
+    meaning: The AWS system that controls who can do what.
+  - term: Least privilege
+    meaning: Giving each person or service only the access the job needs.
+  - term: MFA
+    meaning: A second sign-in step, like a code from your phone.
+  - term: Access key
+    meaning: A long-lived login that code and tools use to reach AWS.

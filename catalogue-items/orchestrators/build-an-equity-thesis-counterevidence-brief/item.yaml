@@ -1,6 +1,6 @@
 slug: build-an-equity-thesis-counterevidence-brief
 name: Build an equity thesis counterevidence brief
-summary: Share the source files. Get a thesis claim ledger, contradictory evidence and open research questions.
+summary: "Test an equity research thesis against its own filings. Get a claim ledger, the evidence that cuts against it and open questions."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,16 +8,15 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: copy_draft
-    required: false
+    required: true
   - type: source_text
-    required: false
+    required: true
 outputs:
   - type: audit_report
   - type: document
   - type: slide_deck
+needs_mode: manual
 uses:
   - unsupported-claim-spotter
   - source-note-summariser

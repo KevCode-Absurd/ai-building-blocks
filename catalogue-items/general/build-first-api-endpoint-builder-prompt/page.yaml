@@ -1,33 +1,109 @@
 new_slug: build-first-api-endpoint-builder-prompt
-name: First API Endpoint coding prompt
-summary: Get a coding brief for your first API endpoint, with request checks, error responses and a focused test plan.
+name: First API endpoint prompt for Next.js
+summary: "Build your first API endpoint. Paste one prompt into Claude Code to make two small Next.js routes and learn how a server works."
 job: build-software
-headline: First API Endpoint coding prompt
-subhead: Get a coding brief for your first API endpoint, with request checks, error responses and a focused test plan.
+headline: First API endpoint prompt for Next.js
+subhead: "Paste one prompt into Claude Code. It builds two small API routes in your Next.js project, a GET ping and a POST echo, then explains each step in plain English. A second prompt briefs your own first endpoint before any code is written."
 explain: |-
-  Share your project and the required feature. Get a coding brief for first api endpoint, with setup and test steps.
+  An API endpoint is a web address that does a job and sends back data instead of a page. Almost every app, tool and AI agent talks to others this way. If you have never built one, the words around it make it hard to start.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This prompt is a short practice run for your first API endpoint in Next.js. It asks your coding AI to build a ping route that says the server is alive, and an echo route that sends back what you send it. The echo route also replies with a clear error when the data is not valid. The AI then explains, in plain English, what happens when each one is called.
+
+  The second prompt is for your own first endpoint. It makes the AI write a brief first: the request checks, the error replies and the tests. You read it and approve it before any code is written.
 when:
-  - You need a coding brief for first api endpoint.
-  - You need build first api endpoint prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You use Claude Code or Cursor and want to see what an API endpoint really is.
+  - A developer or tool asks you for "an endpoint" and you want to know what that means.
+  - You plan to build a small tool for your store and want one working route to learn from.
+  - You are about to ask an AI for a real endpoint and want to practise the steps first.
+not_for:
+  - "You want to test endpoints you already have: use the API test suite builder."
+  - "Your app is a mobile app that needs a server: use the Expo API route builder."
+  - "You want a Slack bot, not a web route: use the First Slack Bot coding prompt."
+  - "You do not have a Next.js project with an app folder and Node.js installed: set those up first, or ask your AI which steps change for your stack."
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - A Next.js project that uses the App Router, open in your coding AI
+  - Node.js and npm installed on your computer
+  - Claude Code or a similar coding AI that can edit your project files
+  - What your own first endpoint should do, in one or two sentences (optional)
 you_get:
-  - A coding brief for first api endpoint
-  - Required files, setup gaps and test cases
+  - A GET ping route that returns the time and a status message
+  - A POST echo route that sends your data back and replies with clear errors for bad input
+  - A plain-English explanation of what happens when each route is called
+  - A list of every file the AI created or changed
+  - Test steps for Mac, Linux and Windows
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your Next.js project in Claude Code. Check that it has an app folder and that Node.js is installed.
+  - Copy the Part 1 prompt from the skill and paste it into Claude Code. Claude Code needs a paid Claude plan or an Anthropic API account.
+  - Read the explanation, then run npm run dev in your terminal. This starts the project on your own computer.
+  - Open localhost:3000/api/ping in your browser. Then test the echo route with the command in Part 2.
+  - Send the echo route text that is not valid JSON, and check you get the 400 error.
+  - When ready, paste the Part 3 prompt with your own endpoint idea. Read the brief and fix it before you say OK.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project
+    text: "Checks that your project uses the Next.js App Router and stops with a clear message if it does not."
+  - title: Builds the ping route
+    text: "Adds a GET route that returns a status, the current time and a short message."
+  - title: Builds the echo route
+    text: "Adds a POST route that reads your JSON, sends it back, and replies 400 for bad input and 413 for a body that is too large."
+  - title: Explains it in plain English
+    text: "Walks through what happens on each call, what localhost and 3000 mean, and why the files sit in the app/api folder."
+  - title: Lists what changed
+    text: "Names every file created or changed, with no new packages and nothing deployed."
+  - title: Briefs your own endpoint
+    text: "On the optional step, writes the request checks, error replies, needs and tests, then waits for your OK."
+output_shape: |-
+  Check: <App Router found at app/ or src/app | not found, with what it saw>
+
+  Files created: app/api/ping/route.ts, app/api/echo/route.ts
+  Other files changed: <list, or none>
+
+  Plain-English explanation:
+  1. What happens when you open /api/ping
+  2. What happens when something posts to /api/echo
+  3. What localhost and 3000 mean
+  4. Why the files live in app/api
+  5. What the 400 and 413 replies are for
+
+  How to test: <commands for your system>
+
+  Optional brief for your own endpoint:
+  Purpose | Request and checks | Success reply | Error replies | What it needs | Tests
+output_sample:
+  input:
+    - A Next.js project that uses the App Router
+    - Node.js and npm installed
+    - Claude Code or a similar coding AI
+    - A sentence on what your own first endpoint should do (optional)
+  prerequisites:
+    - A paid Claude plan or an Anthropic API account for Claude Code
+  output:
+    - name: ping route
+      contains: A GET route at app/api/ping that returns a status, the current time and a short message.
+    - name: echo route
+      contains: A POST route at app/api/echo that returns your data, with 400 and 413 replies for bad input.
+    - name: Plain-English explanation
+      contains: What happens on each call, what localhost and 3000 mean, and why the files sit where they do.
+    - name: File list
+      contains: Every file created or changed. No packages are installed and nothing is deployed.
+    - name: Own-endpoint brief
+      contains: The request checks, error replies, needs and tests for your own endpoint, ready for you to approve.
+tweaks:
+  - what: Your project type
+    how: If it uses the older pages/api folder, say so before you paste. The AI will change the file paths and tell you.
+  - what: Your system
+    how: Use the Windows PowerShell test command if you are on Windows. The curl command is for Mac and Linux.
+  - what: Your own endpoint idea
+    how: Write it as one or two plain sentences. The brief is only as clear as the idea you give it.
+terms:
+  - term: API endpoint
+    meaning: A web address that does a job and sends back data instead of a page.
+  - term: GET and POST
+    meaning: GET asks for something. POST sends something for the server to use.
+  - term: localhost
+    meaning: Your own computer, used as a test server. 3000 is the door number it listens on.
+  - term: JSON
+    meaning: A plain text format for data, such as {"name":"Sam"}.
+  - term: App Router
+    meaning: The newer way Next.js organises a project, with an app folder.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

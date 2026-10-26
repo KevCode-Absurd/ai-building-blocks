@@ -1,6 +1,6 @@
 new_slug: get-a-stuck-learner-moving-again
 name: Get a stuck learner moving again
-summary: Give it the learner's work. Get a diagnosis, one-step hints, a task ladder and a study plan.
+summary: "Get a stuck learner moving again: give it their work and see where they get stuck. You get hints, a task ladder and a study plan."
 job: teach-and-train
 thinking: high
 thinking_why: It must find the real cause of a learner's trouble, not the visible symptom. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A student has had three explanations and still cannot do it.
   - A new team member keeps failing the same kind of task.
   - You are tutoring and want to stop giving away the answer.
+not_for:
+  - "The learner lacks the basic skill the task builds on: teach that skill first, then come back."
+  - "Several learners share the same gap: use the Build a lesson from explanation to practice and a quiz workflow."
+  - "You want a plan for mixed practice across many topics: use the Mixed practice unit planner."
 you_give:
   - The learner's attempts, as they wrote them
   - What the task asks and where they say they get stuck
@@ -30,6 +34,23 @@ how_to_use:
   - Paste the learner's attempts and the task. It diagnoses the sticking point.
   - Use the hints one at a time in your next session. Stop as soon as the learner moves.
   - Give them the task ladder and the study plan. Check the reviews each week.
+output_sample:
+  input:
+    - The learner's attempts, pasted as they wrote them
+    - The task and where the learner says they get stuck
+    - What the learner can already do
+    - Minutes they can practise each week
+  output:
+    - name: Diagnosis
+      contains: The real sticking point, the earlier step the learner is missing, and quotes from their own attempts as proof.
+    - name: Hints
+      contains: Hints in order, each showing one step, so the learner does the work and the answer is never given.
+    - name: Task ladder
+      contains: Tasks from what the learner can do now up to the hard problem, each with a sign of success.
+    - name: Study plan
+      contains: Short sessions, each with a goal from the ladder, a review question and a fix if it fails.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Diagnose the sticking point
     text: Finds where the learner's thinking breaks, with evidence from their attempts, and the earlier step they are missing.

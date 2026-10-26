@@ -2,35 +2,108 @@ thinking: medium
 thinking_why: It follows the Bolt setup but needs design choices.
 new_slug: slack-bot-builder
 name: Slack bot builder
-summary: Say what the bot should do. Get a Slack app with commands, events and
-  rich messages.
+summary: Build a Slack bot that answers slash commands, button clicks and events. Get the app code, Slack settings and a test checklist.
 job: build-software
 headline: Slack bot builder
-subhead: A working Slack app that responds to commands, events and button
-  clicks, built on Slack's Bolt framework in Python, JavaScript or Java. You say
-  what the bot should do, and the skill sets up the pieces to do it.
+subhead: Say what your Slack bot should do and which language you use. Your AI writes the app on Slack's Bolt framework, with commands, events and button messages. You also get the Slack settings to switch on and a test checklist.
 explain: |
-  A working Slack app that responds to commands, events and button clicks, built on Slack's Bolt framework in Python, JavaScript or Java. You say what the bot should do, and the skill sets up the pieces to do it.
+  A Slack bot is a small program that listens to your workspace. It can answer a slash command like /standup, post a message with buttons, or react when something happens, such as a new channel. Building one means a Slack app, the right permissions, and code that answers fast enough. This skill walks through all three.
 
-  It covers slash commands, event listeners, Block Kit layouts for rich messages, interactive buttons and menus, the sign-in flow that lets other workspaces install your app, and links into Slack's Workflow Builder. The skill reads a detailed guide first and treats its safety and setup rules as required. You need a Slack workspace where you can create apps, plus your own tokens, which you should keep out of shared code.
+  It builds on Bolt, Slack's own framework, in Python, JavaScript or Java. Messages are laid out with Block Kit. Every handler answers Slack within 3 seconds before doing slow work, since Slack otherwise shows an error. It also keeps tokens in environment variables and asks for the fewest permissions the bot needs.
+
+  If other workspaces should be able to install your bot, it adds Slack's sign-in flow too. You need a Slack workspace where you can create apps. The skill never asks you to paste a token into the chat.
 when:
   - You want a bot that answers a slash command like /standup.
-  - Your team needs a message with buttons that trigger an action.
-  - You want an app other workspaces can install through a sign-in flow.
-  - You need to react to events, such as a new channel being created.
+  - Your team needs a message with buttons that start an action.
+  - You want an app that other workspaces can install.
+  - You need the bot to react to events, such as a new channel being created.
+not_for:
+  - "You only need to post a message into one channel: use a Slack incoming webhook, which needs no app."
+  - "A no-code flow is enough: use Slack's Workflow Builder."
+  - "You want to control which AI agent answers which Slack message: use the Scoped Slack agent router builder."
+  - "You only want a first test that replies Pong to ping: use the First Slack Bot coding prompt."
 you_give:
-  - What the bot should do
-  - "Your language: Python, JavaScript or Java"
+  - What the bot should do, in one or two sentences
+  - Your language: Python, JavaScript or Java
+  - Whether only your workspace or other workspaces will use it
   - A Slack workspace where you can create apps
-  - Your Slack app tokens (kept private)
 you_get:
-  - A Bolt app with commands and event handlers
-  - Block Kit message layouts
-  - Interactive button and menu handling
-  - Setup notes for installation and sign-in
+  - A plan of the commands, events and buttons, with the permissions each needs
+  - The app code, a dependency file and a short README
+  - The Slack app settings to switch on
+  - The command that runs the bot on your computer
+  - A test checklist for each command and button
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Write one or two sentences on what the bot should do. Pick your language. Decide if other workspaces need to install it.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. If you can attach files, add the references folder too. Then paste your description.
+  - Read the plan first. Check that every command and button is something you want, and cut any you do not.
+  - Create your Slack app at api.slack.com/apps and switch on the settings it lists. Put your tokens in a file named .env on your computer. Never paste a token into the chat.
+  - Save the code files and run the one command it gives you. A chat AI cannot run the bot for you, but Claude Code or Codex can.
+  - Go through the test checklist in your own Slack workspace. Report any step that fails and ask your AI to fix it.
+how_it_works:
+  - title: Plan the bot
+    text: It lists each command, event and button, and picks the fewest permissions that cover them.
+  - title: Set up the app
+    text: It tells you what to switch on in your Slack app settings and where to keep the tokens.
+  - title: Write the handlers
+    text: It writes Bolt code that answers Slack within 3 seconds, then does the slow work.
+  - title: Lay out the messages
+    text: It builds Block Kit messages, buttons and menus, and keeps them inside Slack's size limits.
+  - title: Add sign-in if needed
+    text: For bots other workspaces install, it adds the sign-in flow with a safety check and encrypted token storage.
+  - title: Hand over a test list
+    text: It writes a checklist of what to type or click, and what should happen.
+output_shape: |
+  Plan:
+  - <command or event or button>: <what it does> (permission: <scope>)
+  Files:
+  - <file name>: <what it holds>
+  Slack app settings: <commands, events, interactivity, scopes to switch on>
+  Run: <one command>
+  Test checklist:
+  - <what to type or click> -> <what should happen>
+  Not covered: <hosting, token storage, workspace approval>
+output_sample:
+  input:
+    - What the bot should do
+    - "Your language: Python, JavaScript or Java"
+    - Whether other workspaces will install it
+  prerequisites:
+    - A Slack workspace where you can create apps
+    - Your Slack tokens, kept in a private file and never pasted into the chat
+  output:
+    - name: Plan
+      contains: Each command, event and button, with the permission it needs.
+    - name: App code
+      contains: Bolt handlers for your commands, events and button clicks, in your language.
+    - name: Message layouts
+      contains: Block Kit messages with buttons or menus where your bot needs them.
+    - name: Slack app settings
+      contains: The commands, events, interactivity and scopes to switch on for the bot.
+    - name: Run command
+      contains: The one command that starts the bot on your computer.
+    - name: Test checklist
+      contains: What to type or click for each feature, and what should happen.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can write the files, install Bolt and run the bot on your computer.
+    - name: Any good chat AI
+      why: It writes the code and the settings list. You copy the files and run them yourself.
+    - name: Slack
+      why: It is where you test the bot. You need permission to create apps in that workspace.
+  inputs:
+    - A sample of the message you want the bot to post
+    - The channel names or users it should work with
+    - Where you plan to host it once it works
+terms:
+  - term: Bolt
+    meaning: Slack's own framework for building apps. It handles checks and routing for you.
+  - term: Block Kit
+    meaning: Slack's way to lay out a message with text, buttons and menus.
+  - term: Slash command
+    meaning: A command you type in Slack that starts with a slash, such as /standup.
+  - term: Scope
+    meaning: A permission your app asks for, such as reading messages or posting in a channel.
+  - term: Socket Mode
+    meaning: A way to run your bot while you build it, with no public web address needed.

@@ -61,14 +61,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Find the idea and how it works.** Use the skill `big-idea-and-mechanism-builder`. Starts from your product facts and buyer words.
-2. **Write the cutaway ad.** Use the skill `3d-cutaway-image-ad-maker`. Give it the brief from the steps before. Takes the mechanism from the brief and draws it as one frozen moment.
-3. **Keep the real product in the picture.** Use the skill `accurate-product-image-ad-maker`. Give it the brief and the ad copy from the steps before. Reads the brief and the ad words from the step before and rewrites the prompt so the product looks like yours.
-4. **Check the ad before you make it.** Use the skill `pre-launch-ad-checker`. Give it the ad copy and the image prompt from the steps before. Reads the words and the prompt together and flags any claim that shows more than your proof.
+1. **Find the idea and how it works.** Use the skill `big-idea-and-mechanism-builder`. Starts from your product facts and buyer words. Hands a brief with the big idea and the mechanism to step 2.
+2. **Write the cutaway ad.** Use the skill `3d-cutaway-image-ad-maker`. Takes the mechanism from the brief and draws it as one frozen moment. Hands the image prompt and the ad words to step 3.
+3. **Keep the real product in the picture.** Use the skill `accurate-product-image-ad-maker`. Reads the brief and the ad words from the step before and rewrites the prompt so the product looks like yours. Hands the new prompt to step 4.
+4. **Check the ad before you make it.** Use the skill `pre-launch-ad-checker`. Reads the words and the prompt together and flags any claim that shows more than your proof. Hands a fix list; fix it before you make the image.
 
 Pause here: Make the image in your image tool, compare it with your product photos and approve one.
 
-5. **Get the picked image to full size.** Use the skill `image-upscale-checker`. Takes the image you approved after the pause.
+5. **Get the picked image to full size.** Use the skill `image-upscale-checker`. Uses the image you made and approved after the pause, not step 4's report. Hands back the enlarged image with a fidelity check.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

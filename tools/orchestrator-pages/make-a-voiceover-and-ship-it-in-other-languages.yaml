@@ -14,6 +14,10 @@ when:
   - You have a script for a video, lesson or ad and need more than one language.
   - You want one voice across languages.
   - You need subtitles that match the final audio exactly.
+not_for:
+  - "You only have notes, not a final script: write the script first (the Read-aloud speech shaper helps with a speech), then come back."
+  - "You only want captions on a finished video: use the Video caption maker in your brand font."
+  - "You have no native speaker for a language: skip that language, since this needs a person to check each dub before subtitles."
 you_give:
   - Your script, exactly as it should be spoken
   - The voice and delivery style you want
@@ -30,6 +34,27 @@ how_to_use:
   - Paste the final script. Change it now, not after dubbing.
   - Stop after step 2 and send each language to a native speaker.
   - Give back their fixes, then run step 3 for the subtitles.
+output_sample:
+  input:
+    - Your final script, exactly as it should be spoken
+    - The voice and delivery style you want
+    - The languages you need
+    - A native speaker for each language, to check the dub
+  prerequisites:
+    - An OpenAI API key for the voiceover
+    - An ElevenLabs API key for dubbing and subtitles
+    - An AI that can read files and run commands, to run the handoff pack
+  output:
+    - name: "Step 1: Voiceover"
+      contains: The spoken file, the text used, the voice and style, and the clarity, pace and pronunciation checks.
+    - name: "Step 2: Dubbed versions"
+      contains: One audio file per language, a transcript per language and a list of lines to refine.
+    - name: Pause for native speakers
+      contains: Each speaker marks wrong words, names or tone, and you regenerate the flagged lines.
+    - name: "Step 3: Subtitles"
+      contains: A subtitle file with timing for each corrected language, made from the final audio.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Make the voiceover
     text: Takes your exact text, voice and style, generates the spoken file, and checks clarity, pace and pronunciation before it saves the final.

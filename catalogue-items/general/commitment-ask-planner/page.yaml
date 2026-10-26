@@ -1,6 +1,6 @@
 new_slug: commitment-ask-planner
 name: "Commitment ask planner"
-summary: "Say where you are and what people said. Get the next step to ask for and which leads are real."
+summary: "Plan the commitment to ask for after a meeting, and sort what people said into real leads, stalls and polite no's. Say your stage and what they said."
 job: test-an-idea
 thinking: medium
 thinking_why: "It weighs what each person gave up, but the framework is fixed."
@@ -17,6 +17,10 @@ when:
   - You finish meetings with praise and no clear next step.
   - People say "I'd definitely buy that" and then go quiet.
   - You have a list of leads and can't tell which are real.
+not_for:
+  - "You need to sort raw interview notes first: use the Customer conversation notes sorter, then bring the notes here."
+  - "You want to count commitments across many talks: use the Idea evidence review."
+  - "You want to pitch hard and win a yes: this plan asks for a clear yes or no, so a plain sales script suits you better."
 
 you_give:
   - What you have today, such as an idea, a prototype or a product
@@ -35,6 +39,29 @@ how_to_use:
   - Paste what each person said at the end, word for word if you can.
   - Use the ask it writes in your next meeting, before you leave the room.
   - Record the answer, yes or no, and bring it back to update the verdict.
+output_sample:
+  input:
+    - What you have today, such as an idea, a prototype or a product
+    - What each person said or did at the end of the meeting
+    - What you want to happen next (optional)
+    - Notes from the Customer conversation notes sorter (optional)
+  output:
+    - name: Your stage
+      contains: What you have today and what that lets you honestly ask for.
+    - name: The ask
+      contains: The currency (time, reputation or money), the exact words, a line for brush-offs and a smaller fallback.
+    - name: What was said
+      contains: Each reply sorted as compliment, stall, fuzzy promise or real commitment, with what they gave up and a question to make it specific.
+    - name: Each lead
+      contains: A verdict of real, stalled or dead, with the reason and one question that settles it.
+    - name: Zombies and false positives
+      contains: Friendly leads and signals that look like demand but are not, and why.
+    - name: Next steps to know before you walk in
+      contains: Your own next step for each outcome, so you are never left saying you will get back to them.
+    - name: Missing
+      contains: What would sharpen the verdicts, marked MISSING where an input was not given.
+    - name: Checks missed
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Checks the plan

@@ -2,12 +2,10 @@ thinking: high
 thinking_why: A strong paper needs a clear argument and checked claims.
 new_slug: ai-research-paper-writer
 name: AI research paper writer
-summary: Give it your research code and results. Get a paper draft for a top AI
-  conference, with citations checked.
+summary: Turn your research code and results into an AI research paper draft for NeurIPS, ICML, ICLR or ACL, with every citation checked.
 job: research-topics
 headline: AI research paper writer
-subhead: A full first draft of a machine learning paper, written from your code,
-  results and notes, and aimed at venues such as NeurIPS, ICML, ICLR and ACL.
+subhead: A full first draft of a machine learning paper, written from your code, results and notes, and aimed at venues such as NeurIPS, ICML, ICLR and ACL.
 explain: |
   A full first draft of a machine learning paper, written from your code, results and notes, and aimed at venues such as NeurIPS, ICML, ICLR and ACL. You get a draft to edit, not a blank page.
 
@@ -17,6 +15,10 @@ when:
   - You have results in a repo but no clear story for the abstract.
   - You want a reference list you can trust.
   - You are rewriting a rejected paper for a different venue.
+not_for:
+  - "You are writing for a systems venue such as OSDI, NSDI, ASPLOS or SOSP: use the systems-paper-writing skill instead."
+  - "Your experiments are not final yet: finish the runs first, because the draft is built on your real results."
+  - "You only need a quick summary of a paper you read: ask your AI for a plain summary instead."
 you_give:
   - Your research repo, code and results
   - Notes on the main claim
@@ -28,8 +30,31 @@ you_get:
   - A list of unverified references
   - Feedback on the weak sections
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code, read your files and search the web.
+  - Use an AI that can read your files, run code and search the web. Without web search, citations stay as placeholders for you to check.
+  - Put your repo, results and notes where your AI can read them. Upload the folder or point your AI to it.
+  - "Paste the skill and say: Write a first draft for my target conference. Give your main claim in one or two sentences."
+  - "Optional: connect a paper search tool such as Exa MCP. The skill can also search with its own lookup tools."
+  - Read the draft and the list of unverified citations. Check each placeholder reference yourself before you submit.
+  - Send your edits back and ask for another round on the weak sections.
+output_sample:
+  input:
+    - Your research repo with code, results and notes
+    - One or two sentences on your main claim
+    - The conference you are aiming for
+    - Related papers you already know (optional)
+  prerequisites:
+    - An AI that can read your files, run code and search the web
+    - A LaTeX setup or an Overleaf account to compile the draft
+  output:
+    - name: Paper draft
+      contains: A full first draft in the target conference template, built from your repo, results and main claim.
+    - name: Abstract and introduction
+      contains: The story of your contribution, written so a reviewer sees the main claim early.
+    - name: Method, experiments and results
+      contains: Sections drawn from your code and result files, with tables and figures from your own data.
+    - name: Related work
+      contains: Papers found by search, with each one checked before it is cited.
+    - name: references.bib
+      contains: Real BibTeX entries pulled from search sources, not written from memory.
+    - name: Unverified citations list
+      contains: Any reference the AI could not confirm, marked as a placeholder for you to check.

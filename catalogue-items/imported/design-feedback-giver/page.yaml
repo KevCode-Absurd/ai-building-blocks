@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It judges a design from what it sees.
 new_slug: design-feedback-giver
 name: Design feedback giver
-summary: Share a mockup or Figma link. Get feedback on usability, hierarchy and
-  consistency, with fixes.
+summary: Get design feedback on a mockup, Figma link or screenshot. You get usability, hierarchy and consistency notes, plus fixes ranked by impact.
 job: design-work
 headline: Design feedback giver
-subhead: Share a mockup or Figma link. Get feedback on usability, hierarchy and
-  consistency, with fixes. Bring figma link, screenshot or description. Use the
-  result to plan your next step.
+subhead: Share a mockup or Figma link. Get feedback on usability, hierarchy and consistency, with fixes. Bring figma link, screenshot or description. Use the result to plan your next step.
 explain: |
   Straight feedback on a design, in the order a user would meet it. Share a Figma link, screenshot or description and you get a critique that covers first impression, usability, hierarchy and consistency, each with a specific fix.
 
@@ -18,6 +15,10 @@ when:
   - Your team debates a layout and needs a neutral opinion.
   - You want to test a flow on mobile before building it.
   - A stakeholder says it feels off and you need to name why.
+not_for:
+  - "You need proof that real people can use it: run a usability test with real users."
+  - "You need a formal accessibility audit: hire an accessibility specialist. This only gives a quick check of contrast, touch size and text."
+  - "You only have a rough idea and no design yet: sketch it first, then share the sketch."
 you_give:
   - Figma link, screenshot or description
   - What it is and who it is for
@@ -29,8 +30,32 @@ you_get:
   - Hierarchy and consistency notes
   - Fixes ranked by importance
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open images or Figma links.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Share your design. Add a screenshot, a Figma link or a short written description.
+  - Say what the design is, who it is for and what stage it is at. Add a focus area if you have one.
+  - Read the Priority Recommendations first. Then check the Usability table for critical issues.
+  - If your AI cannot open Figma links, paste a screenshot instead. Fix the top three items, then ask for a second round.
+output_sample:
+  input:
+    - Your Figma link, screenshot or a written description of the design
+    - What the design is and who it is for
+    - "The stage: exploring, refining or final"
+    - A focus area, like mobile or one flow (optional)
+  prerequisites:
+    - An AI that can open images (for screenshots)
+    - Figma access for your AI if you share a Figma link (optional, you can paste a screenshot or description instead)
+  output:
+    - name: Overall Impression
+      contains: "A one or two sentence first reaction: what works and the biggest chance to improve."
+    - name: Usability
+      contains: A table of issues, each marked critical, moderate or minor, with a fix.
+    - name: Visual Hierarchy
+      contains: What the eye hits first, how it moves through the layout, and whether the right things stand out.
+    - name: Consistency
+      contains: A table of type, spacing and color mismatches, each with a fix.
+    - name: Accessibility
+      contains: A quick read on color contrast, touch target size and text readability.
+    - name: What Works Well
+      contains: The parts of the design to keep.
+    - name: Priority Recommendations
+      contains: The top three changes in order, with why and how for each.

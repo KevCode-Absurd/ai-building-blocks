@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Telling update from replace needs judgment across several data sets.
 new_slug: content-gap-and-decay-finder
 name: Content gap and decay finder
-summary: Connect Ahrefs. Get missing topics, thin pages, outdated posts and
-  decaying pages, sorted into update or replace.
+summary: Find content gaps and decaying pages on your site. Connect Ahrefs and get a ranked list of what to create, update, merge or remove.
 job: get-found-in-search
 headline: Content gap and decay finder
-subhead: Connect Ahrefs. Get missing topics, thin pages, outdated posts and
-  decaying pages, sorted into update or replace. Bring your site and content
-  scope. Use the result to plan your next step.
+subhead: Connect Ahrefs. Get missing topics, thin pages, outdated posts and decaying pages, sorted into update or replace. Bring your site and content scope. Use the result to plan your next step.
 explain: |
   A to-do list for your content library: topics you have not covered, pages that are thin, and posts losing traffic, each marked as create, update, merge or remove. It shows where your next content hours will pay off.
 
@@ -18,6 +15,10 @@ when:
   - Organic traffic is flat despite regular publishing.
   - You want to catch decaying pages before they lose more traffic.
   - A site redesign is coming and you need to know what to keep.
+not_for:
+  - "You only want new keyword ideas: use the seo-keyword skill, or a plain keyword tool."
+  - "You want to compare your keywords with rivals: use the seo-keyword-gap-audit skill."
+  - "You have no site yet and no content: plan from scratch with a content strategy first, or ask a content writer."
 you_give:
   - Your site and content scope
   - Three to five competitors
@@ -29,8 +30,38 @@ you_get:
   - Decaying pages
   - A roadmap of create, update, merge and prune actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to Ahrefs.
+  - Check you have a paid Ahrefs plan with MCP access. Ahrefs is the main data source. Similarweb and Semrush are optional extras.
+  - Open Claude, ChatGPT or Gemini with Ahrefs connected, and paste in the skill text.
+  - Add your site, your three to five rivals, and your content list. Include URL, topic, publish date and organic clicks for each page.
+  - Ask for the full audit. Tell it the time window to check, such as the last 12 months.
+  - Check the Decaying content section first. Compare year over year, so seasonal dips are not mistaken for decay.
+  - If Ahrefs data is missing, expect the result to say what is missing. It will not guess numbers.
+output_sample:
+  input:
+    - Your site and the part of it to check
+    - Three to five rival sites with similar content
+    - Your content list with URLs, topics, publish dates and organic clicks
+    - Your target topics (optional)
+  prerequisites:
+    - An Ahrefs account with an active paid plan
+    - Ahrefs connected to your AI through MCP access
+    - Similarweb or Semrush data (optional extras)
+  output:
+    - name: Executive summary
+      contains: The top three themes, a verdict on content health and a suggested split of effort across the quarter.
+    - name: Content inventory snapshot
+      contains: A count of your pages sorted into healthy, thin, outdated, decaying or off-topic.
+    - name: Missing topics
+      contains: Topics rivals rank for that you have no page for, grouped into clusters with a traffic forecast.
+    - name: Thin coverage
+      contains: Pages that are too shallow, with a note on how to deepen each one.
+    - name: Outdated content
+      contains: Pages to refresh, with what needs updating on each.
+    - name: Decaying content
+      contains: Pages losing traffic, with a guess at why and the next step for each.
+    - name: Cannibalization findings
+      contains: Pairs of your pages that compete on the same topic and should be merged.
+    - name: Action roadmap
+      contains: Create, update, merge and remove actions by quarter, with effort and forecast.
+    - name: Methodology
+      contains: The data sources used, how pages were sorted, and any data that was missing.

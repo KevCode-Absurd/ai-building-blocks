@@ -2,36 +2,62 @@ thinking: low
 thinking_why: It summarizes known activity into a fixed layout.
 new_slug: weekly-sales-wrap-up-writer
 name: Weekly sales wrap-up writer
-summary: Ask for your week. Get what closed, moved and slipped, plus Monday's
-  plan and an optional team post draft.
+summary: "Get a weekly sales wrap-up from your CRM: what closed, moved and slipped, plus Monday's plan and an optional team post draft."
 job: organise-work
 headline: Weekly sales wrap-up writer
-subhead: Monday's plan and last week's story, written for you from your
-  pipeline. You see what closed, what moved and what slipped, without opening
-  six reports.
+subhead: Give it your pipeline for the week. It writes what closed, what moved and what slipped. It also lists Monday's meetings and deals due to close.
 explain: |
   Monday's plan and last week's story, written for you from your pipeline. You see what closed, what moved and what slipped, without opening six reports.
 
   The skill reads your CRM for deals closed, advanced and newly created this week, then adds meeting counts from your calendar and customer thread counts from email if those are connected. It uses your own stage names, quotes values exactly as stored and says plainly when a source was missing. Pick personal scope or a team rollup with a section per rep. It drafts a post for your team channel and only sends it when you ask.
 when:
-  - It is Friday and you need a pipeline summary for your manager.
-  - You lead a team and want a one-page rollup by rep.
+  - It is Friday and your manager wants a pipeline summary.
+  - You lead a team and want a one-page rollup with a section per rep.
   - You want Monday's priorities ready before the week starts.
-  - You need a short update to post in the team chat.
+  - You need a short update to post in your team chat.
+not_for:
+  - "You need a monthly or quarterly review: use a pipeline forecast built from your CRM instead."
+  - "You have no CRM access and no export: pull a deals export first, or ask your sales ops person for one."
+  - "You want to change deal records in your CRM: make those edits in the CRM itself."
 you_give:
-  - Your CRM access or last two weeks of exports
-  - "Scope: your week or your team"
-  - Calendar and email access (optional)
-  - Whether to draft a team post
+  - Your CRM access, or this week's and last week's deal exports
+  - "Your scope: just your week, or your whole team"
+  - Calendar access (optional)
+  - Email access (optional)
+  - A yes or no on drafting a team chat post (optional)
 you_get:
-  - Closed, moved and slipped deals
-  - New pipeline created
-  - Meeting and thread counts
-  - Monday plan
-  - Draft team channel post
+  - The deals you closed, won and lost, with amounts
+  - Deals that moved a stage or slipped, with new dates
+  - New deals created this week
+  - Counts of outside meetings and customer threads
+  - A Monday list of meetings, closing deals and next steps
+  - A draft post for your team channel
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Connect your CRM, or upload this week's and last week's deal exports. Connecting needs an AI tool that supports it.
+  - Say if you want your own week or a team rollup. Add calendar and email if you can.
+  - Say if you want a team chat post drafted.
+  - Check the Closed and Moved sections against your CRM before you share them.
+  - If a source was missing, the wrap says so at the top. Read that note first.
+output_sample:
+  input:
+    - Your CRM access, or this week's and last week's deal exports
+    - "Your scope: just your week, or your whole team"
+    - Calendar and email access (optional)
+    - Whether you want a team chat post drafted (optional)
+  prerequisites:
+    - An AI that can read your CRM, or deal exports you can upload
+    - Calendar and email connections for meeting and thread counts (optional)
+  output:
+    - name: Closed
+      contains: Deals won and lost this week with amounts, loss reasons if recorded, and the net total.
+    - name: Moved
+      contains: Deals that advanced a stage or slipped, with their new dates.
+    - name: New
+      contains: Deals created this week, with amount and stage.
+    - name: Activity
+      contains: The count of outside meetings and customer email threads this week.
+    - name: Monday
+      contains: Next week's meetings, deals due to close, and next steps with dates.
+    - name: Team chat post
+      contains: A draft of the wrap formatted for your team channel, posted only if you ask.

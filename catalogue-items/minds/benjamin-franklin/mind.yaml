@@ -16,6 +16,28 @@ use_cases:
   - "Teach yourself to write better by copying and checking a model"
   - "Write short, memorable sayings that make advice stick"
   - "Design a matching offer that gets more people to give or join"
+not_for:
+  - "You need legal, medical or personal investment advice: ask a qualified adviser, since the money advice here is general principle only."
+  - "You want to judge a bet by decision quality, not by outcome: use the Annie Duke mind."
+  - "You want a clear view of trade, markets or how competition works: use the Adam Smith mind."
+output_sample:
+  input:
+    - The choice you can't settle, the habit you keep dropping or the project that needs other people
+    - The reasons you have so far on each side (optional)
+    - Who else might join in, and what small cost you may be paying without noticing (optional)
+  output:
+    - name: Pro and Con sheet
+      contains: Two columns of reasons to fill in over several days, then weigh by striking out equal pairs.
+    - name: Habit chart
+      contains: One habit to track for a week, with a daily mark for each slip and two evening questions.
+    - name: Small trial plan
+      contains: A small first test of your idea, with a way to track whether it is working.
+    - name: Pitch in a modest voice
+      contains: A way to offer your idea as a group suggestion, grant the other side's point and share the credit.
+    - name: First questions
+      contains: A few questions he would ask you, such as what small daily cost you pay without noticing.
+    - name: Caveat on fair starts
+      contains: A note that thrift and method do not fix problems of power or injustice. New sayings are marked as new.
 seats:
   - {seat: "Practical improvement", asks: "What is one small, useful change we can try this week, and how will we know it worked?"}
   - {seat: "Pros and cons (moral algebra)", asks: "Have we written down every reason on both sides and weighed them, or are we deciding on whichever came to mind last?"}

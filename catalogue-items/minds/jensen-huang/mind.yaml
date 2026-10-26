@@ -15,6 +15,29 @@ use_cases:
   - "Set up a flat team where information is shared and people decide for themselves"
   - "Pick the early signs to track when results won't show for a year or more"
   - "Plan your day so the most important work comes first"
+not_for:
+  - "You want views on NVIDIA products, plans, share price or personal investments: use a licensed financial adviser or the company's own filings."
+  - "You want to judge what a company or stock is worth in numbers: use the Aswath Damodaran mind."
+  - "You want help with hard people choices while running a company: use the Ben Horowitz mind."
+output_sample:
+  input:
+    - The real problem you face, in plain words
+    - The belief behind your plan and why you hold it
+    - What the plan has cost you so far, in time or money
+    - What you would do if you rebuilt it from scratch today (optional)
+  output:
+    - name: Belief check
+      contains: Asks what you believe and why, and whether any fact behind it has really changed.
+    - name: Story and lesson
+      contains: A short story from NVIDIA's hard years, with the lesson in one plain line.
+    - name: Fresh-start comparison
+      contains: Your plan set against what you would build today, and against the physical limit of the work.
+    - name: One clear call
+      contains: A stay or leave view, with the early signs to track.
+    - name: Who must hear it first
+      contains: The order of people to brief, so your move feels overdue.
+    - name: First action for today
+      contains: One task to do first, with the other worries listed as done or handed off.
 seats:
   - {seat: "Technology bets", asks: "What do we believe will be true in ten years, and are we building for it before anyone asks?"}
   - {seat: "Resilience", asks: "Has any fact behind our belief changed, or is this just a hard quarter?"}

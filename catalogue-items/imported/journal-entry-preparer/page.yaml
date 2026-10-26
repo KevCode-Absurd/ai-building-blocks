@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Entries must balance and follow accounting rules.
 new_slug: journal-entry-preparer
 name: Journal entry preparer
-summary: Name an accrual or adjustment. Get the debits, credits and support
-  ready for review. An accountant should check it.
+summary: Prepare a journal entry for month-end accruals, prepaids, payroll, depreciation or revenue. Get balanced debits and credits with support to review.
 job: track-numbers
 headline: Journal entry preparer
-subhead: Name an accrual or adjustment. Get the debits, credits and support
-  ready for review. An accountant should check it. Bring entry type, such as
-  accrual, prepaid or payroll. Use the result to plan your next step.
+subhead: Name an accrual or adjustment. Get the debits, credits and support ready for review. An accountant should check it. Bring entry type, such as accrual, prepaid or payroll. Use the result to plan your next step.
 explain: |
   Month-end adjustment entries with the numbers, the support and the review notes. Pick the type: accounts payable accruals, fixed asset depreciation, prepaid amortization, payroll accruals or revenue recognition, and give the period. If your accounting system is connected, it pulls the trial balance, subledger detail and last period's entries. If not, it asks for the data.
 
@@ -18,6 +15,10 @@ when:
   - Depreciation or prepaid amounts must be booked for the quarter.
   - You want your support schedules to look the same each month.
   - A reviewer asks how you got an adjustment number.
+not_for:
+  - "You need a tax provision or a consolidation: use your accountant or your accounting system's close process."
+  - "The entry needs a policy decision, such as a new revenue rule: ask your accountant before you book anything."
+  - "You want to post the entry without review: have a qualified accountant check every entry first."
 you_give:
   - Entry type, such as accrual, prepaid or payroll
   - The accounting period
@@ -29,7 +30,30 @@ you_get:
   - Notes for the reviewer
   - A comparison with last period
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat and paste in this skill.
+  - Say which entry type you need and the period, such as an AP accrual for 2024-12.
+  - Paste your trial balance and supporting schedules, or upload a spreadsheet. Add last period's entries if you have them.
+  - Check that debits equal credits and that each amount matches your schedule.
+  - Ask an accountant to review the entry before you post it.
+output_sample:
+  input:
+    - "The entry type: AP accrual, fixed assets, prepaid, payroll or revenue"
+    - The accounting period, such as a month or quarter
+    - Your trial balance or account balances for the accounts involved
+    - Your supporting schedules, such as an asset register or prepaid list
+    - Last period's entries of the same type (optional)
+  prerequisites:
+    - Your numbers pasted in or uploaded as a spreadsheet, unless your AI is connected to your accounting system
+  output:
+    - name: Journal entry
+      contains: A table of lines with account code, account name, debit, credit, department and memo, with totals.
+    - name: Supporting detail
+      contains: The basis and assumptions for each amount, with a reference to the schedule behind it.
+    - name: Reversal flag
+      contains: Whether the entry reverses, and the reversal date if it does.
+    - name: Review checklist
+      contains: Checks that debits equal credits, the period is right, account codes are valid and amounts fit the pattern.
+    - name: Comparison to last period
+      contains: How this entry differs from the last one of the same type, if you gave one.
+    - name: Flags and posting notes
+      contains: Items to follow up, plus steps to post the entry by hand or by upload.

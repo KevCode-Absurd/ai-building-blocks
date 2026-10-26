@@ -1,52 +1,64 @@
 new_slug: tree-to-web-knowledge-mapper
 name: "Tree to web knowledge mapper"
-summary: "Describe how your team stores what it knows. Get a map of things and links, and a plan to link them."
+summary: "Stop losing what your team knows. Get a map of your documents, people and tools, how they link, and a plan to link them."
 job: plan-strategy
 thinking: medium
 thinking_why: "It maps your things and links and plans a rollout. The structure is fixed, but it has to judge what belongs in more than one place."
 
 headline: "Tree to web knowledge mapper"
-subhead: "Describe the folders, tools and people that hold what your team knows. It lists the things people need, draws the links between them with a named type for each, and finds items that do not fit one folder. You get a map and a plan to link what you already have."
+subhead: "Describe the folders, tools and people that hold what your team knows, and one time something important was lost. It lists the things people need to find and links them with a named type for each link. You get a knowledge map and a plan to link what you already have."
 
 explain: |
-  Teams lose what they know when people leave or move on. The usual fix is a tidier folder tree. But a tree gives every item one home, and real information belongs in several places at once: a design note is part of a project, depends on a tool, and was written by a person who has since left.
+  Teams lose what they know when people leave or move on. The usual fix is a tidier folder tree. But a tree gives every item one home, and real knowledge belongs in several places at once. A design note is part of a project, depends on a tool, and was written by a person who has since left.
 
-  This skill works from a web instead. It lists the things people need to find, then the links between them, and gives each link a name such as "depends on" or "written by". It finds the items a tree forces into one place. It plans views of your existing tools before replacing any, keeps private notes apart from shared ones, and starts plain so it is useful on day one.
+  This skill builds a team knowledge map instead. It lists the things people need to find, then the links between them, and gives each link a name such as "depends on" or "written by". It finds the items a folder tree would force into one place.
+
+  The plan comes next. It links your existing tools with read-only views before replacing any, keeps private notes apart from shared ones, and starts plain so it is useful on day one. The method comes from Tim Berners-Lee's 1989 proposal at CERN. It does not choose a software product for you.
 
 when:
   - People keep asking "who knows about this?" or "where is that written down?"
   - Your folders and wikis grew by accident and nobody trusts them.
   - Someone key is leaving and you want their knowledge to stay findable.
+  - A new hire cannot find answers without asking three people.
+
+not_for:
+  - "You only need to find one known file: use your tool's own search. It is faster."
+  - "Your team is a few people who sit together and already know where things are: a shared notes page is enough."
+  - "You want a wiki or handbook set up from scratch: use the Company wiki planner."
+  - "You want to write down how each job is done: use the Operations manual writer."
 
 you_give:
-  - "How your team stores what it knows now: folders, wikis, chat, tools, people"
-  - What knowledge gets lost, and when it happened last
-  - The kinds of things people need to look up (optional)
-  - Tools you cannot change (optional)
+  - "How your team stores what it knows now: folders, wikis, chat, tools and people"
+  - "One time something important was lost, and what it cost"
+  - "The questions people ask most (optional)"
+  - "Tools you cannot change (optional)"
+  - "Hours a week your team can spend on linking (optional)"
+
 you_get:
-  - A list of things (people, documents, modules, tools) and what each is
-  - A map of links with a named type for each relation
-  - A list of items a folder tree would force into a single home
-  - A plan that links your existing systems first, and keeps private and shared notes apart
+  - "A list of things (people, documents, modules, tools) and what each is"
+  - "A map of links, each with a named type such as depends on"
+  - "A list of items a folder tree would force into a single home"
+  - "A plan that links your existing tools first, with dates and owners"
+  - "A private layer for personal notes, kept apart from the shared one"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe where knowledge lives today, and one time something important was lost.
-  - Name the tools you must keep, such as a shared drive or a ticket system.
-  - Read the map and the single-home list, and correct any link that is wrong.
-  - Start with the first view in the plan, using data you already have.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "Describe where knowledge lives today, and one time something important was lost."
+  - "Name the tools you must keep, such as a shared drive or a ticket system. If you give none, it plans a day-one inventory first."
+  - "Read the map and the single-home list, and correct any link that is wrong."
+  - "Start with the first view in the plan, using data you already have. Check in a week that people use it."
 
 how_it_works:
   - title: Names the loss
-    text: Writes down what knowledge gets lost, and when, so the map has a purpose.
+    text: Writes down what knowledge gets lost, when, and what it cost, so the map has a purpose.
   - title: Lists the things
-    text: Lists people, documents, modules and tools that people need to find.
+    text: Lists people, documents, modules and tools that people need to find, with where each lives now.
   - title: Draws the links
-    text: Writes circles for things and arrows for relations, with a named type on each arrow.
+    text: Writes one line per link, with a named type on each, in plain verbs.
   - title: Finds forced homes
     text: Finds items that a folder tree would put in one place though they belong in several.
   - title: Plans read-only views
-    text: Plans views of the systems you already have before anything is replaced.
+    text: Plans views of the systems you already have before anything is replaced. With none given, step one is a day-one inventory.
   - title: Layers private on shared
     text: Allows private notes on top of shared information.
   - title: Starts plain
@@ -77,6 +89,26 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "How your team stores what it knows now"
+    - "One time something important was lost, and what it cost"
+    - "The questions people ask most (optional)"
+    - "Tools you cannot change (optional)"
+  output:
+    - name: "What gets lost"
+      contains: "The knowledge that goes missing, when it last happened and what it cost."
+    - name: "Things"
+      contains: "People, documents, modules and tools, each with a line on what it is and where it lives."
+    - name: "Links"
+      contains: "One line per link between two things, with a named type such as depends on, and a list of types used."
+    - name: "Items that belong in more than one place"
+      contains: "Items a folder tree would force into one home, with the folders each would belong in."
+    - name: "The plan"
+      contains: "Read-only views of your existing tools, in order, with dates and owners, plus the private and shared layers."
+    - name: "Missing and Checks missed"
+      contains: "Facts needed to finish the map, and any check the skill could not pass."
 
 tweaks:
   - what: A real loss
@@ -109,7 +141,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Listing things and naming relations from a description is text work."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Listing things and naming relations from a description is text work. No files, web access or paid tools needed."}
     - {name: "A note tool with links between pages", why: "Pages that link to each other let you build the web without special software."}
   inputs:
     - "A list of your folders and tools with owners"
@@ -121,3 +153,5 @@ terms:
     meaning: The name on a link between two things, such as "depends on" or "is part of".
   - term: Read-only view
     meaning: A page that shows what an existing tool holds without changing or replacing it.
+  - term: Single home
+    meaning: A folder tree puts each item in one folder, even when it belongs in several.

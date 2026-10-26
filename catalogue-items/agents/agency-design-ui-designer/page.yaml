@@ -1,0 +1,142 @@
+name: UI Designer agent
+summary: Get a UI design system for your product, with colours, type, spacing, buttons and forms in every state, dark mode and accessibility checks.
+headline: UI Designer agent
+subhead: Tell it about your product, your users and your brand. The agent writes a UI design system. You get rules for colour, type and spacing, the parts you need with every state, and notes for your developer. Contrast checks to WCAG AA are built in.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A UI design system is a shared set of rules and parts. With one, every screen looks like it came from the same product. Without one, a team ends up with five blues and three button styles. This agent builds the system first and the screens after.
+
+  It starts with tokens. A token is a named value for colour, type, spacing, shadow or motion. Then it designs the base parts, such as buttons, form fields, cards and menus, each with hover, focus, disabled, loading and error states. Then it sets how they change on a phone, tablet and desktop. Accessibility is part of the base, not added later. That means text contrast of at least 4.5 to 1, a visible focus ring, touch targets of 44 pixels and respect for reduced motion.
+
+  It writes the design as text and sample code, such as CSS variables. It does not draw screens or make image files. It can only judge contrast on the colours you give it. The sample colours in its source profile are examples, so it uses your brand or marks its own picks as proposed.
+when:
+  - You are starting a product and have no shared colours, type or button styles yet.
+  - Your screens look uneven, with different spacing and buttons on each page.
+  - A developer asks for exact sizes, colours and states before building.
+  - You want dark mode, or a second brand theme, without redoing every screen.
+not_for:
+  - You want a logo or brand identity. Use the Logo and brand kit designer.
+  - You already have a built screen and want a go or no-go before release. Use the UI Finish-Gate Reviewer agent.
+  - You want the page structure and CSS base for one new site. Use the UX Architect agent.
+you_give:
+  - What the product is, who uses it and whether it is a web app, mobile app or site
+  - Your brand colours, fonts and logo, or "none yet" (optional)
+  - The platforms and screen sizes you must support
+  - The screens or flows that matter most, as a list or screenshots (optional)
+  - Rules you must meet, such as your accessibility target or a design library you already use (optional)
+you_get:
+  - A set of colour, type, spacing and shadow values, with names developers can use
+  - The core parts, such as buttons, form fields, cards and menus, each with its states
+  - Light and dark versions, if you ask for them
+  - Rules for how the layout changes on phone, tablet and desktop
+  - An accessibility check list for contrast, keyboard use, focus and touch size
+  - Handoff notes for developers, and a list of what is still unchecked
+how_to_use:
+  - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe your product, users and platforms. Add brand colours, fonts or screenshots if you have them.
+  - Say which parts you need first, such as buttons, forms and a table. Ask for the rest in later rounds.
+  - Open the colour section and read the contrast pairs. Test your final shades with the Colour contrast checker, because chat math on colours can slip.
+  - Give the tokens and the parts list to your developer.
+  - Ask for what you skipped, such as dark mode or tables, one piece at a time.
+how_it_works:
+  - title: Read the brief
+    text: It confirms the product, users, platforms, brand and rules. Missing facts are asked once, then marked MISSING.
+  - title: Set the foundations
+    text: It writes tokens for colour, type, spacing, shadow and motion, with semantic names such as error and success.
+  - title: Design the base parts
+    text: It specifies buttons, inputs, cards, navigation and feedback, each with every state.
+  - title: Set responsive rules
+    text: It plans phone-first layouts and says how each part changes at wider screens.
+  - title: Add accessibility
+    text: It checks contrast pairs, keyboard use, focus, touch size and reduced motion.
+  - title: Write the handoff
+    text: It lists token names, part notes and what a developer must test.
+output_shape: |-
+  UI DESIGN SYSTEM <product>
+
+  FOUNDATIONS
+    Colour <primary, secondary, status, neutral> with names and values | Pairs checked <text and background, ratio>
+    Type <fonts, size scale, weights, line heights>
+    Spacing <base unit and scale> | Shadow and motion <levels and speeds>
+
+  COMPONENTS
+    <part> | variants <list> | states <default, hover, focus, disabled, loading, error> | use when <rule>
+
+  RESPONSIVE
+    <screen width> | <layout change>
+
+  ACCESSIBILITY
+    Contrast <result> | Keyboard <result> | Focus <rule> | Touch size <rule> | Motion <rule>
+
+  DEVELOPER HANDOFF
+    <token names> | <notes for each part>
+
+  OPEN CHECKS
+    <what you still need to test>
+output_sample:
+  input:
+    - What your product is and who uses it
+    - Your brand colours and fonts (optional)
+    - The platforms and screen sizes to support
+    - Rules you must meet, such as your accessibility target (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A developer to build it, and a contrast checker for your final colours
+  output:
+    - name: Design tokens
+      contains: Named values for colour, type, spacing, shadow and motion, in light and dark if asked.
+    - name: Component library
+      contains: Buttons, form fields, cards, menus and feedback, each with variants and a use-when rule.
+    - name: Component states
+      contains: Hover, focus, disabled, loading, error and empty states for each part.
+    - name: Responsive rules
+      contains: How the layout and each part change from phone to desktop.
+    - name: Accessibility checklist
+      contains: Contrast pairs, keyboard use, focus rules, touch size and reduced motion.
+    - name: Handoff notes
+      contains: Token names and build notes a developer can follow.
+    - name: Open checks
+      contains: What was not tested and how to test it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Brand inputs
+    how: Paste your real colours and fonts. Otherwise it proposes some and marks them as proposed.
+  - what: Scope
+    how: Name the five parts you need first. A full library in one run gets thin.
+  - what: Platforms
+    how: Say if it is web, iOS, Android or all three. Touch rules and spacing change by platform.
+  - what: Themes
+    how: Ask for dark mode up front if you need it, so the colours are chosen in pairs.
+improve:
+  - Save the tokens as a file in your project and ask the agent to extend it, not start over, on the next run.
+  - Add your own rules, such as "no more than two button styles on a screen", to the brief.
+  - Pair it with the Design token builder for the file format, and the Developer handoff spec writer once screens exist.
+terms:
+  - term: Design token
+    meaning: A named value, such as a colour or a space, that every screen reuses.
+  - term: Component
+    meaning: A reusable part of a screen, such as a button or a form field.
+  - term: WCAG AA
+    meaning: A common accessibility standard. It sets how clear text and controls must be.
+  - term: Contrast ratio
+    meaning: How far text stands out from its background. A higher number is easier to read.
+  - term: Breakpoint
+    meaning: A screen width where the layout changes.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good for the system plan and the written rules. Attach screenshots if the AI can read images.
+    - name: A contrast checker
+      why: Chat math on colours can slip, so test your final pairs in a tool built for it.
+  inputs:
+    - Screenshots of your current product.
+    - Your brand file or style guide, if you have one.
+    - A list of the five screens you build most often.

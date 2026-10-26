@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: question
     required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: document
     required: true

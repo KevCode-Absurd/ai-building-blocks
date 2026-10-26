@@ -1,6 +1,6 @@
 new_slug: store-team-role-planner
 name: "Store team role planner"
-summary: "Describe your store and revenue. Get who to hire next, what to outsource and who decides what."
+summary: "Plan your online store team. Give your revenue and who works for you. You get your next hire, what to outsource and who decides what."
 job: hire-people
 thinking: medium
 thinking_why: "It matches your size and pain to roles and fills a grid, which a mid-range model handles well."
@@ -17,6 +17,10 @@ when:
   - You are making your first or second hire and want it to be the right one.
   - People step on each other, or nobody owns refunds, reorders or ad budget.
   - You want to know what to hand to freelancers before you hire full time.
+not_for:
+  - You have no revenue yet and no team. Start with a simple plan of your own and cover each job yourself.
+  - You need a full company org design. Use a business plan or an HR adviser, not this planner.
+  - You need legal or pay advice on contracts or contractors. Ask a qualified local adviser.
 
 you_give:
   - Monthly revenue and gross margin
@@ -35,6 +39,27 @@ how_to_use:
   - List five or more decisions that come up often.
   - Tell it your biggest pain, such as late orders or slow support.
   - Fill any blank in the chart with your team, then send the job brief to your job post writer.
+output_sample:
+  input:
+    - Your monthly revenue and gross margin
+    - Your current people and freelancers, with their hours
+    - The decisions that come up again and again (optional)
+    - Your biggest pain right now (optional)
+  output:
+    - name: STAGE
+      contains: Your revenue and team today, with a rough guide to which stage of growth you are in.
+    - name: ROLE MAP
+      contains: Who covers administration, customer service, fulfilment, marketing, and developers and designers, plus planning.
+    - name: NEXT HIRE
+      contains: The one role to add next, why now, and what to outsource with weekly hours.
+    - name: WHO DECIDES WHAT
+      contains: A chart of your decisions and people showing who starts, approves, supports or is told.
+    - name: BALANCE
+      contains: Optional note on which kind of team contributor is missing and who might cover it.
+    - name: JOB BRIEF
+      contains: The area, decisions held, work they must have done and the 90-day outcome.
+    - name: CHECKS MISSED
+      contains: Any check that could not be run, or none.
 
 how_it_works:
   - title: Covers five areas

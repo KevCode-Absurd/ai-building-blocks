@@ -1,6 +1,6 @@
 new_slug: hard-questions-faq-writer
 name: Hard questions FAQ writer
-summary: Paste your press release. Get the hard questions customers and your team will ask, answered and graded.
+summary: Find the hard questions about your product before launch. Paste your press release and get an FAQ with each answer graded and the gaps ranked.
 job: understand-customers
 thinking: high
 thinking_why: It has to think of the questions people would ask and judge which answers are weak.
@@ -14,6 +14,10 @@ when:
   - You have a press release and want to find what it hides.
   - Your team keeps raising worries one at a time and you want them all on one page.
   - You want to know which gaps could change the plan before you build.
+not_for:
+  - You have a live page and real customer questions to check. Use the Unanswered customer question finder.
+  - You need the written plan or memo itself. Use the Six-page narrative memo writer after this.
+  - You have no press release or product description yet. Write a one-paragraph description first, then come back.
 you_give:
   - Your press release or one-page description
   - The need statement (optional)
@@ -30,6 +34,24 @@ how_to_use:
   - Add facts on cost, timing and delivery if you have them.
   - Read the gap list first. Pick the one that could change the plan most.
   - Take the FAQ and release to "Six-page narrative memo writer".
+output_sample:
+  input:
+    - Your press release or one-page description
+    - The need statement (optional)
+    - Facts you already have on cost, timing and delivery (optional)
+  output:
+    - name: CUSTOMER QUESTIONS
+      contains: Eight to twelve hard questions a sceptical customer would ask, each with a short answer marked known, guess or gap.
+    - name: TEAM QUESTIONS
+      contains: Eight to twelve questions from finance, operations, support and the sceptic in the room, answered and graded the same way.
+    - name: GAPS, RANKED
+      contains: Every gap and guess that could change the plan, ordered by impact, with what would close each.
+    - name: RELEASE CHANGES
+      contains: Each release claim the answers show to be weak, with a rewrite or a cut.
+    - name: MISSING
+      contains: The facts that would close the gaps, marked where you did not supply them.
+    - name: CHECKS MISSED
+      contains: One line for each self-check the skill still failed, or none.
 how_it_works:
   - title: Asks as a sceptical customer
     text: Questions on price, trust, switching and what happens if it fails.

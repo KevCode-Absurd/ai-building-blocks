@@ -2,35 +2,59 @@ thinking: medium
 thinking_why: It matches tone and detail to the reader.
 new_slug: executive-update-drafter
 name: Executive update drafter
-summary: Give it the news and who reads it. Get a status update, exec review or
-  bad-news note pitched to that audience.
+summary: Draft a stakeholder update, exec review or bad-news note that leads with the point and ends with a clear ask, pitched to your reader.
 job: lead-people
 headline: Executive update drafter
-subhead: Give it the news and who reads it. Get a status update, exec review or
-  bad-news note pitched to that audience. Bring who the message is for. Use the
-  result to plan your next step.
+subhead: Tell it who will read your message and what is happening. It asks what the reader cares about and what you want from them. You get a short draft with the point first and a clear ask.
 explain: |
   A message pitched at the right level for the person reading it, whether it is a weekly status, an executive review, a technical choice explained to non-technical people, or bad news about a delay.
 
   Before writing, it asks five questions: who reads this, what they care about, what you want from them, what they already know and what they must do next. Then it shapes the update to fit, with the point up front and the ask clear. It handles delays, misses and quality problems without hiding them. It can also set a regular update rhythm for a project, matched to how each group wants to hear things.
 when:
-  - You must tell leadership a project is late and want to do it well.
-  - You write weekly status notes that nobody reads.
-  - You need to explain a technical decision to people outside the team.
-  - You want to ask a sponsor for resources or a decision.
+  - You must tell leadership a project is late and want to say it well.
+  - Your weekly status notes go unread.
+  - You need to explain a technical choice to people outside the team.
+  - You want to ask a sponsor for money, people or a decision.
+not_for:
+  - "You need a message to customers or the press: ask a support or marketing writer, since this tool is for internal stakeholders."
+  - "An incident is happening right now: use your team's incident process and send short live updates instead."
+  - "You want slide design or email tone polish: use a design tool or an editor, as this only shapes content and order."
 you_give:
-  - Who the message is for
-  - "Purpose: inform, ask, escalate or decide"
+  - Who the message is for, and what they care about
+  - "Why you are writing: inform, decide, escalate, ask or celebrate"
   - What is actually happening
-  - Format, such as email, doc or slide
-  - Deadline (optional)
+  - Where it will go, such as email, doc, chat or slide
+  - When they need it (optional)
 you_get:
-  - Draft update in the right tone
-  - Clear ask or decision request
-  - Bad-news framing when needed
-  - Suggested update schedule
+  - A draft update with the main point in the first line
+  - A clear ask or decision request, with your recommendation
+  - Bad news stated plainly, with impact, actions and next update date
+  - Cuts to remove filler and activity with no outcome
+  - A suggested update schedule for your project (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full text of SKILL.md into the chat, then say "Follow this skill to draft my update."
+  - Tell it who will read the message, why you are writing, what is happening and the format.
+  - Answer any questions it asks about what the reader knows and what you want from them.
+  - Check that the first line is the main point and that the ask and date are clear.
+  - Ask it to cut the draft if it runs long, then send it and follow up on any ask.
+output_sample:
+  input:
+    - Who the message is for, and what they care about
+    - "Why you are writing: inform, decide, escalate, ask or celebrate"
+    - What is actually happening
+    - Where it will go, such as email, doc, chat or slide
+    - When they need it (optional)
+  output:
+    - name: Headline
+      contains: One plain sentence with the takeaway, placed first, with bad news stated directly.
+    - name: So what and request
+      contains: A short paragraph on why it matters and what you want from the reader.
+    - name: Status or progress
+      contains: The body of the update, with outcomes first and activity as support.
+    - name: Risks and asks
+      contains: What could go wrong, what you are doing about it, and what you need.
+    - name: Detail
+      contains: Extra facts for curious readers, placed last so it can be cut.
+    - name: Update schedule (optional)
+      contains: How often each group should hear from you, plus templates and escalation paths.

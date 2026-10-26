@@ -1,29 +1,57 @@
 new_slug: trigger-to-payoff-ad-structure-planner
 name: Trigger-to-payoff ad structure planner
-summary: Build an ad around trigger, emotion, evidence and payoff. Place each part in a video timeline or image layout.
+summary: Plan an ad structure around trigger, emotion, evidence and payoff. Get a video timeline or static layout brief for your product and buyer.
 job: plan-ad-tests
 headline: Trigger-to-payoff ad structure planner
-subhead: Share buyer trigger, product facts, approved proof, format and length. Get a four-part ad structure with timing or layout notes.
+subhead: Give it your product, your buyer and where the ad sits in the funnel. It works out the trigger, emotion, evidence and payoff. You get an ad brief with a video timeline or a static layout.
 explain: |-
   Build an ad around trigger, emotion, evidence and payoff. Place each part in a video timeline or image layout.
 
   Share buyer trigger, product facts, approved proof, format and length. Get a four-part ad structure with timing or layout notes.
 when:
-  - You need a four-part ad structure with timing or layout notes.
-  - You need trigger-to-payoff ad structure planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are planning a new video, static or carousel ad and need a clear structure.
+  - You have a product and buyer but do not know what the ad should open with.
+  - A current ad is not working and you want to check which of the four parts is weak.
+  - You need a brief to hand to an editor or designer.
+not_for:
+  - "You want brand awareness with no proof to show: the planner flags weak evidence as a brand problem, so fix the proof first or talk to your client."
+  - "You need a finished script or final copy: ask your AI to write it from the brief once you have approved it."
+  - "You need a media buying or budget plan: use a person or tool that handles ad spend, because this brief has no budget or targeting."
 you_give:
-  - Buyer trigger
-  - Product facts
-  - Approved proof
-  - Format and length
+  - Your product and a one-sentence description
+  - Your audience
+  - "Funnel position: prospecting, mid or retargeting"
+  - Your existing ad (optional)
 you_get:
-  - A four-part ad structure with timing or layout notes
-  - The sources used, missing inputs and assumptions
+  - A named trigger, emotion, evidence and payoff for your ad
+  - A video timeline, static layout or carousel layout that places each part
+  - A list of the proof you have and the proof that is missing
+  - Production notes for whoever makes the ad
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill into the chat. No code, files or paid tools are needed.
+  - Paste your product, audience and funnel position. Add your current ad if you have one.
+  - Say whether you want a video, a static ad or a carousel.
+  - Read the Evidence section first. If it lists missing proof, add approved proof before you make the ad.
+  - Check every claim in the brief against your own facts, then hand it to your editor or designer.
+output_sample:
+  input:
+    - Your product and a one-sentence description
+    - Your audience
+    - "Where the ad sits in the funnel: prospecting, mid or retargeting"
+    - Your existing ad (optional)
+  output:
+    - name: Trigger
+      contains: The specific moment or event the ad opens with, picked from one to three triggers.
+    - name: Emotion
+      contains: The main feeling the ad creates, picked from one or two emotions.
+    - name: Evidence
+      contains: The proof the buyer needs, what you have, what is missing, and where it appears in the ad.
+    - name: Payoff
+      contains: The main outcome the buyer expects, with one or two smaller ones, and where it is stated.
+    - name: Structure Timeline or Layout
+      contains: A video timeline from hook to call to action, or a static or carousel layout, step by step.
+    - name: Production Notes
+      contains: What you need to make the ad. Cost lines need your own quotes.
 how_it_works:
   - title: Check the inputs
     text: Confirm buyer trigger, product facts, approved proof, format and length. Mark facts that are missing.

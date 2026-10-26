@@ -1,6 +1,6 @@
 new_slug: find-where-your-page-loses-buyers-and-prove-the-fix
 name: Find where your page loses buyers and prove the fix
-summary: Give it page captures and your funnel numbers. Get a ranked test list and a clear verdict on the first fix.
+summary: Find why visitors leave your page and prove the fix. Give it heatmaps and funnel numbers. You get a ranked test list and a ship or stop call.
 job: audit-landing-page
 thinking: high
 thinking_why: Five steps carry findings forward, and the last two do the sums that decide whether to ship. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your store has steady traffic but few orders, and you want evidence before you change the page.
   - You ran a test and want to know whether you can trust the result.
   - Someone on the team wants to redesign a page and you want a ranked reason to change one thing first.
+not_for:
+  - Your store gets only a few orders a week, so a test cannot finish. Make the obvious fixes and watch your numbers instead.
+  - "You only want to check whether a finished test had enough traffic: use the A/B test traffic checker."
+  - "Your sales dropped and you need to know why: use the Ad sales drop analyst."
 you_give:
   - Heatmap, scroll map and recording notes for the page, or screenshots of them
   - Your funnel numbers, from visits, add to cart, checkout and orders, with traffic sources if you have them
@@ -31,6 +35,28 @@ how_to_use:
   - Give it the heatmaps, recording notes and funnel numbers for one key page.
   - Make the obvious fixes it lists before you test anything.
   - Run the top test until the traffic check says it has enough orders, export the results and give them back.
+output_sample:
+  input:
+    - Heatmaps, scroll maps and recording notes for one page, or screenshots of them
+    - "Your funnel numbers: visits, add to cart, checkout and orders"
+    - Customer reviews or survey comments (optional)
+    - The exported results of the test you ran, after the pause
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - A way to run a split test on live traffic, for the pause after step 3
+  output:
+    - name: Friction list
+      contains: Friction ranked by page and money at stake, with a test idea for each and a friction score out of 100.
+    - name: Sorted issues
+      contains: Every issue with its proof, sorted into tracking faults, obvious fixes, causes to investigate and test ideas.
+    - name: Test ranking
+      contains: A ranked list of tests, the one or two to run first, and parked ideas with what would move them up.
+    - name: Traffic check
+      contains: Revenue per visitor by source, visitors needed, days at your traffic and a test readiness score out of 100.
+    - name: Test verdict
+      contains: A ship, do not ship, re-test or inconclusive call, a trust score, a result as a money range and a log entry.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read the heatmaps
     text: Reads clicks, scroll depth and recordings, weights friction by money and not raw clicks, and writes a friction list with a score out of 100.

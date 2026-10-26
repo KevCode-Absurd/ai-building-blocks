@@ -1,6 +1,6 @@
 new_slug: ad-first-line-writer-and-scorer
 name: "Ad first line writer and scorer"
-summary: "Paste your buyer and proof. Get ten first lines, or yours scored out of 100 with fixes."
+summary: "Write ten ad first lines for your buyer, or score the hooks you have out of 100. Each line gets a fix, a next line and a screen version."
 job: write-ad-copy
 thinking: high
 thinking_why: "It judges work against many checks, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You need new openings for a video, image ad or post, aimed at the right buyer.
   - Your hooks all start the same way, and you want a test that teaches you something.
   - You have a list of hooks and want to know which to keep before you spend money testing them.
+not_for:
+  - "You want the full ad body, not just the opening: use the Fact-based ad copy writer."
+  - "You need to check an ad against Meta's rules before it runs: use the Meta ads compliance checker."
+  - "You have no checkable fact about your offer yet: gather one real proof point first, or the hooks will be skipped."
 
 you_give:
   - A brief on your buyer, with their moment, what they own, their doubts and their own words
@@ -38,6 +42,26 @@ how_to_use:
   - Paste the rest of the ad, so every hook gets paid off.
   - Read the SKIPPED list. Add the missing fact, or leave that move out.
   - In score mode, fix the hooks under 3 first. Drop any that fail the gate.
+output_sample:
+  input:
+    - "Your buyer brief: their moment, what they own, their doubts and their own words"
+    - How much your buyer already knows, and the proof you may claim
+    - Who speaks in the ad
+    - Write or score, with your hooks pasted if you score
+    - The line after the hook (optional)
+  output:
+    - name: FLAG
+      contains: The moment or object that tells the right buyer the ad is for them.
+    - name: Hooks
+      contains: About ten lines, each with its move, what backs it, its next line, a screen version and what a win would tell you.
+    - name: SKIPPED
+      contains: Each move or form left out, and the fact it needed.
+    - name: Score card
+      contains: In score mode, four checks per hook, the honesty gate result and a one-line fix for any under 3.
+    - name: MISSED
+      contains: Buyers or moments that none of your hooks flag, in score mode.
+    - name: SET SCORE
+      contains: Points won across all hooks as a score out of 100, with the sum shown.
 
 how_it_works:
   - title: Flags the buyer

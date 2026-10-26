@@ -2,10 +2,11 @@ import { spaceKey, spaces } from "./lib/space";
 import FeaturedTools from "./tools/FeaturedTools";
 import { HomeMinds, HomeWorkflows, HomeAgents } from "./HomeSections";
 import { useLibrarySearch } from "./lib/library-search";
+import { rankLibraryResults } from "./lib/library-rank";
 import { syncPageMetadata } from "./lib/page-metadata";
 import { Suspense, createContext, lazy, useCallback, useContext, useDeferredValue, useEffect, useLayoutEffect, useMemo, useState, type ComponentType } from "react";
 import { ArrowIcon, BlockCard, Drawer, SearchIcon, Select, Toast } from "./ui";
-import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogueState, workflowEntries } from "./lib/data";
+import { type Block, type Catalogue, type Kind, AREAS, areasOf, availableTasks, availableFunctions, classificationText, QUICK_JOB_IDS, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, taskIdsOf, functionsOf, kindOf, loadPage, pathOf, useCatalogueState, workflowEntries } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { SaveHint, usePersistence } from "./AccountPersistence";
 import { reviewedTask } from "./lib/task-discovery";
@@ -20,7 +21,9 @@ import { STARTER_PATHS, isAudienceStarter, starterFor, starterTemplate } from ".
 import { infoPage } from "./lib/site-info.mjs";
 import SiteFooter from "./SiteFooter";
 import PageRecovery from "./PageRecovery";
+import { initialPageHtml } from "./lib/public-opening";
 import { useCommunityStars } from "./CommunityStars";
+import { isTested } from "./lib/verification";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads only when someone scrolls near it
 const Globe = lazy(() => import("./Globe")); // drawn behind the hero, so the text never waits for it
@@ -99,6 +102,8 @@ const IntakePage = startupPage(PAGES.intake);
 const ComposePage = startupPage(PAGES.compose);
 const InfoPage = startupPage(PAGES.info);
 const AccountPage = startupPage(PAGES.account);
+// Pages folded into another page. The old address still works: it sends you to the new one. (The same two are 301s in public/_redirects.)
+const LEGACY_PATHS: Record<string, string> = { "/traction": "/tools/growth-channel-planner", "/apps/starter-pack": "/apps#starter-pack" };
 /** Finish an anchor landing once. Any user scroll cancels the correction. */
 function useHashLanding() {
   useEffect(() => {
@@ -159,23 +164,23 @@ const startRank = (slug: string) => { const index = START_HERE.indexOf(slug); re
 const PAGE = 16;
 const KIND_PATHS: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [k.path, k.id]));
 
-type Filters = { q: string; audience: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string; starred: string };
-const QUICK_JOB_IDS = ["coding", "marketing", "design", "writing", "business"];
-const NONE: Filters = { q: "", audience: "", area: "", fn: "", task: "", kind: "all", level: "", starred: "" };
+// scope "" is the default view: everything, tested blocks first. "tested" shows only blocks whose test passed.
+type Filters = { q: string; audience: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string; starred: string; scope: "" | "tested" };
+const NONE: Filters = { q: "", audience: "", area: "", fn: "", task: "", kind: "all", level: "", starred: "", scope: "" };
 const LIBRARY_FORMATS: { id: Kind | "all"; name: string; line: string }[] = [
   { id: "all", name: "All", line: "Explore the library" },
   { id: "prompt", name: "Prompts", line: "Paste into a chat" },
-  { id: "skill", name: "Skills", line: "Reuse a proven method" },
+  { id: "skill", name: "Skills", line: "Run the same steps every time" },
   { id: "workflow", name: "Workflows", line: "Connect several steps" },
   { id: "agent", name: "Agents", line: "Delegate a repeatable job" },
   { id: "mind", name: "Minds", line: "Borrow an expert's thinking" },
 ];
-const librarySearchContext = (b: Block) => `${taskOf(b).name} ${functionsOf(b).map(x => x.name).join(" ")}`;
+const librarySearchContext = classificationText;
 function libraryFilters(search: URLSearchParams): Filters {
   const task = TASKS.some(t => t.id === search.get("job")) ? search.get("job")! : "";
   const fnId = FUNCTION_MOVED[search.get("fn") ?? ""] ?? search.get("fn");
-  const fn = FUNCTIONS.find(x => x.id === fnId)?.id ?? (task ? FUNCTIONS.find(x => x.tasks.includes(task))?.id ?? "" : "");
-  return { ...NONE, q: search.get("q") ?? "", starred: search.get("starred") === "1" ? "1" : "", audience: starterFor(search.get("audience") ?? "")?.id ?? "", area: AREAS.some(a => a.id === search.get("area")) ? search.get("area")! : "", fn, task, kind: KINDS.some(k => k.id === search.get("kind")) ? search.get("kind") as Kind : "all" };
+  const fn = FUNCTIONS.find(x => x.id === fnId)?.id ?? "";
+  return { ...NONE, q: search.get("q") ?? "", starred: search.get("starred") === "1" ? "1" : "", scope: search.get("scope") === "tested" ? "tested" : "", audience: starterFor(search.get("audience") ?? "")?.id ?? "", area: AREAS.some(a => a.id === search.get("area")) ? search.get("area")! : "", fn, task, kind: KINDS.some(k => k.id === search.get("kind")) ? search.get("kind") as Kind : "all" };
 }
 
 function Library({ c }: { c: Catalogue }) {
@@ -195,12 +200,12 @@ function Library({ c }: { c: Catalogue }) {
     return () => { window.removeEventListener("popstate", syncNavigation); window.removeEventListener("abb:navigate", syncNavigation); };
   }, []);
   const applyFilters = (next: Filters) => {
-    setSearch({ q: next.q, audience: next.audience, area: next.area, fn: next.fn, job: next.task, kind: next.kind === "all" ? "" : next.kind, level: "", by: "", starred: next.starred });
+    setSearch({ q: next.q, audience: next.audience, area: next.area, fn: next.fn, job: next.task, kind: next.kind === "all" ? "" : next.kind, level: "", by: "", starred: next.starred, scope: next.scope });
     setF(next);
   };
   const set = (patch: Partial<Filters>) => applyFilters({ ...f, ...patch });
   const [limit, setLimit] = useState(PAGE);
-  const [moreFilters, setMoreFilters] = useState(() => !!(f.audience || f.fn || f.area && !QUICK_JOB_IDS.includes(f.area)));
+  const [moreFilters, setMoreFilters] = useState(() => !!(f.audience || f.fn));
   // Press / anywhere to jump to the search box.
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
@@ -222,17 +227,18 @@ function Library({ c }: { c: Catalogue }) {
   const searchState = useLibrarySearch(c, df.q, { extraText: librarySearchContext });
   const hasQuery = !!df.q.trim();
   // Each block's areas, groups and kind, worked out once, so a few thousand blocks still count fast.
-  const facts = useMemo(() => new Map(c.blocks.map((b) => [b.slug, { areas: new Set(areasOf(b)), fns: new Set(functionsOf(b).map((x) => x.id)), kind: kindOf(b) }])), [c]);
+  const facts = useMemo(() => new Map(c.blocks.map((b) => [b.slug, { areas: new Set(areasOf(b)), fns: new Set(functionsOf(b).map((x) => x.id)), tasks: new Set(taskIdsOf(b)), kind: kindOf(b) }])), [c]);
   const fact = (b: Block) => facts.get(b.slug)!;
   const tests: Record<keyof Filters, (b: Block, v: string) => boolean> = {
     q: (b) => !hasQuery || b.slug === suggestion?.slug || searchState.hits.has(b.slug),
     audience: (b, v) => isAudienceStarter(b.slug, v),
     area: (b, v) => !v || fact(b).areas.has(v),
     fn: (b, v) => !v || fact(b).fns.has(v),
-    task: (b, v) => !v || b.task === v,
+    task: (b, v) => !v || fact(b).tasks.has(v),
     kind: (b, v) => v === "all" || fact(b).kind === v,
     level: (b, v) => !v || b.level === v,
     starred: (b, v) => !v || starred.has(`catalogue:${b.slug}`),
+    scope: (b, v) => v !== "tested" || isTested(b),
   };
   const keys = Object.keys(tests) as (keyof Filters)[];
   // Counts are worked out once per settled search, not on every redraw.
@@ -245,18 +251,20 @@ function Library({ c }: { c: Catalogue }) {
     if (!counted.has(key)) { const g = { ...df, ...over }; counted.set(key, matched.filter((b) => facets.every((k) => tests[k](b, g[k] as string))).length); }
     return counted.get(key)!;
   };
-  const order = (a: Block, b: Block) => Number(b.slug === suggestion?.slug) - Number(a.slug === suggestion?.slug) || (hasQuery ? (searchState.hits.get(b.slug)?.score ?? 0) - (searchState.hits.get(a.slug)?.score ?? 0) : (popularity.get(`catalogue:${a.slug}`) ?? ranked.length) - (popularity.get(`catalogue:${b.slug}`) ?? ranked.length)) || startRank(a.slug) - startRank(b.slug) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === fact(a).kind) - KINDS.findIndex((k) => k.id === fact(b).kind) || byName.compare(a.name, b.name);
-  const results = useMemo(() => c.blocks.filter((b) => keys.every((k) => tests[k](b, df[k] as string))).sort(order), [c, df, searchState.hits, popularity, starred]); // eslint-disable-line react-hooks/exhaustive-deps
-  const clear = () => applyFilters({ ...NONE, q: f.q });
+  const order = (a: Block, b: Block) => { const tested = Number(isTested(b)) - Number(isTested(a)); return (hasQuery ? (searchState.hits.get(b.slug)?.score ?? 0) - (searchState.hits.get(a.slug)?.score ?? 0) : tested || (popularity.get(`catalogue:${a.slug}`) ?? ranked.length) - (popularity.get(`catalogue:${b.slug}`) ?? ranked.length)) || tested || Number(b.slug === suggestion?.slug) - Number(a.slug === suggestion?.slug) || startRank(a.slug) - startRank(b.slug) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === fact(a).kind) - KINDS.findIndex((k) => k.id === fact(b).kind) || byName.compare(a.name, b.name); };
+  // A search is ordered by lib/library-rank.ts (measured offline by scripts/evaluate-recommendations.mjs).
+  const results = useMemo(() => { const shown = c.blocks.filter((b) => keys.every((k) => tests[k](b, df[k] as string))); return hasQuery ? rankLibraryResults(shown, searchState.hits, df.q, { isTested, suggestion: suggestion?.slug }) : shown.sort(order); }, [c, df, searchState.hits, popularity, starred]); // eslint-disable-line react-hooks/exhaustive-deps
+  const clear = () => applyFilters({ ...NONE, q: f.q, scope: f.scope });
+  // With "Tested only" on, say how many untested blocks are left out, and let people bring them back.
+  const hidden = df.scope === "tested" ? count({ scope: "" }) - count({ scope: "tested" }) : 0;
   const fn = FUNCTIONS.find((x) => x.id === f.fn);
   const activeTask = TASKS.find((t) => t.id === f.task);
   const area = AREAS.find((a) => a.id === f.area);
   const audience = starterFor(f.audience);
-  // An area shows its own groups; areas that so far hold only minds show the minds group.
-  const fnsShown = area ? FUNCTIONS.filter((x) => area.fns.includes(x.id) || x.id === f.fn || (x.id === "minds" && count({ area: area.id, fn: "minds", task: "" }) > 0)) : FUNCTIONS;
+  const fnsShown = useMemo(() => availableFunctions(c.blocks, f.area), [c, f.area]);
 
-  const extraFilters = [f.audience, f.fn, f.area && !QUICK_JOB_IDS.includes(f.area) ? f.area : ""].filter(Boolean).length;
-  const useCases = TASKS.filter(task => (!area || area.fns.some(id => FUNCTIONS.find(fn => fn.id === id)?.tasks.includes(task.id))) && (!fn || fn.tasks.includes(task.id)));
+  const extraFilters = [f.audience, f.fn].filter(Boolean).length;
+  const useCases = useMemo(() => availableTasks(c.blocks, { area: f.area, fn: f.fn }), [c, f.area, f.fn]);
   const quickJobs = [{ id: "", name: "All work" }, ...QUICK_JOB_IDS.map(id => AREAS.find(area => area.id === id)!)];
   const shownResults = results.slice(0, limit);
   const hasFilters = f.kind !== "all" || !!f.starred || !!(f.audience || f.area || f.fn || f.task);
@@ -280,11 +288,14 @@ function Library({ c }: { c: Catalogue }) {
       <div className="search big library-search-field"><SearchIcon /><label className="visually-hidden" htmlFor="task-search">What do you want to get done?</label><input id="task-search" value={f.q} onChange={e => set({ q: e.target.value })} placeholder="What do you want to get done?" title="Try SEO, AEO, meeting notes or a product launch" data-testid="library-search" />{f.q ? <button type="button" className="library-search-clear" aria-label="Clear search" onClick={() => { set({ q: "" }); document.getElementById("task-search")?.focus(); }}><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m5 5 8 8M13 5l-8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg></button> : <kbd className="kbd" aria-hidden="true">/</kbd>}</div>
       <fieldset className="library-job-functions"><legend>Job function</legend><div className="library-job-options" role="group" aria-label="Common job functions">{quickJobs.map(job => <button type="button" key={job.id} aria-pressed={f.area === job.id} onClick={() => set({ area: job.id, fn: "", task: "" })} data-testid={`job-${job.id || "all"}`}>{job.name}</button>)}</div></fieldset>
       <div className="library-use-case">
+        <Select label="Job function" value={f.area} onChange={value => set({ area: value, fn: "", task: "" })} testId="filter-domain" options={[{ value: "", label: "All job functions" }, ...AREAS.map(area => ({ value: area.id, label: area.name, count: count({ area: area.id, fn: "", task: "" }) }))]} />
         <Select label="Use case" value={f.task} onChange={value => set({ task: value })} testId="filter-task" options={[{ value: "", label: "All use cases" }, ...useCases.map(task => ({ value: task.id, label: task.name, count: count({ task: task.id }) }))]} />
       </div>
       <div className="library-toolbar">
         <button type="button" className="library-star-filter" aria-pressed={!!f.starred} onClick={() => set({ starred: f.starred ? "" : "1" })}><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill={f.starred ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.7"><path d="m12 3 2.8 5.7 6.3.9-4.5 4.4 1 6.2-5.6-3-5.6 3 1-6.2L3 9.6l6.2-.9Z" /></svg>Starred</button>
         <button type="button" className="more-filters-btn" aria-expanded={moreFilters} aria-controls="library-more-filters" onClick={() => setMoreFilters((v) => !v)} data-testid="more-filters">More filters{extraFilters > 0 && <span className="badge">{extraFilters}</span>} <span aria-hidden="true">{moreFilters ? "−" : "+"}</span></button>
+        <button type="button" className="library-star-filter library-scope-toggle" aria-pressed={f.scope === "tested"} onClick={() => set({ scope: f.scope === "tested" ? "" : "tested" })} data-testid="scope-toggle">Tested only</button>
+        <Link to="/minds" className="btn btn-ghost btn-sm" data-testid="library-minds-link">Minds and advisory council <span aria-hidden="true">→</span></Link>
         <Link to="/how-it-works" className="btn btn-ghost btn-sm">How it works <span aria-hidden="true">→</span></Link>
       </div>
       {audience && <div className="audience-guide small" data-testid="audience-guide">
@@ -294,7 +305,6 @@ function Library({ c }: { c: Catalogue }) {
         {audience.id === "enterprise" && <p>These packs support your work in your chosen AI tool. Team access controls, company system connections and audit storage need your own implementation.</p>}
       </div>}
       {moreFilters && <div className="library-more-filters" id="library-more-filters" role="group" aria-label="More filters">
-        <Select label="Job function" value={f.area} onChange={value => set({ area: value, fn: "", task: "" })} testId="filter-domain" options={[{ value: "", label: "All functions" }, ...AREAS.map(area => ({ value: area.id, label: area.name }))]} />
         <Select label="Start with" value={f.audience} onChange={(v) => set({ audience: v })} testId="filter-audience" options={[{ value: "", label: "Full library" }, ...STARTER_PATHS.map(a => ({ value: a.id, label: a.name }))]} />
         <Select label="Specialty" value={f.fn} onChange={(v) => set({ fn: v, task: "" })} testId="filter-work"
           options={[{ value: "", label: "All work", count: count({ fn: "", task: "" }) }, ...fnsShown.map((x) => ({ value: x.id, label: x.name, count: count({ fn: x.id, task: "" }) }))]} />
@@ -304,6 +314,7 @@ function Library({ c }: { c: Catalogue }) {
         <span data-testid="result-count" role="status" aria-atomic="true">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : area ? ` in ${area.name}` : ""}</span>
         {hasFilters && <button type="button" className="btn btn-ghost btn-sm" onClick={clear}>Clear filters</button>}
       </div>
+      {hidden > 0 && <p className="small library-scope-note" data-testid="scope-note">Showing tested blocks only. {hidden.toLocaleString("en-US")} block{hidden === 1 ? " hasn't" : "s haven't"} been tested yet. <button type="button" className="link-btn" onClick={() => set({ scope: "" })} data-testid="scope-show-all">Show all</button></p>}
       {hasQuery && searchState.loading && <p className="small" role="status">Searching full instructions…</p>}
       {hasQuery && searchState.error && <p className="small" role="alert">Full instructions could not be searched. These results use titles and descriptions. <button type="button" className="link-btn" onClick={searchState.retry}>Try full search again</button></p>}
       {f.starred && account.state !== "signed-in" ? <div className="empty"><h3 className="h3">Your starred library</h3><p>Sign in to keep useful skills and workflows close, across devices.</p><button className="btn btn-dark" onClick={() => void account.signIn()}>Sign in to see your stars</button></div> : f.starred && loadError ? <div className="empty"><h3 className="h3">Your stars could not be loaded</h3><p>Please try again to see your saved stars.</p><button className="btn btn-dark" onClick={reload}>Try again</button></div> : f.starred && starsLoading ? <p role="status">Loading your stars...</p> : results.length ? (
@@ -312,7 +323,7 @@ function Library({ c }: { c: Catalogue }) {
           {results.length > limit && <div className="more library-more"><button type="button" className="btn btn-dark" onClick={() => setLimit(n => n + PAGE)} data-testid="show-more">Show {Math.min(PAGE, results.length - limit)} more</button></div>}
         </>
       ) : f.starred && starred.size === 0 ? <div className="empty"><h3 className="h3">Keep your next good find</h3><p>Open a skill or workflow and select Star. It will appear here.</p><button className="btn btn-dark" onClick={() => set({ starred: "" })}>Explore the library</button></div> : !searchState.loading && (
-        <div className="empty"><h3 className="h3">We couldn't find that task</h3><p>Your search is still here. Try the job name, such as “meeting notes” or “email reply”.</p>{hasFilters && <p><button className="link-btn" onClick={clear}>Search again without filters</button></p>}<button className="btn btn-dark" onClick={() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()}>Edit my search</button></div>
+        <div className="empty"><h3 className="h3">We couldn't find that task</h3><p>Your search is still here. Try the job name, such as “meeting notes” or “email reply”.</p>{hidden > 0 && <p><button className="link-btn" onClick={() => set({ scope: "" })}>Include {hidden.toLocaleString("en-US")} block{hidden === 1 ? "" : "s"} not tested yet</button></p>}{hasFilters && <p><button className="link-btn" onClick={clear}>Search again without filters</button></p>}<button className="btn btn-dark" onClick={() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()}>Edit my search</button></div>
       )}
       </div>
     </section>
@@ -426,13 +437,27 @@ function Home({ c, toast, error, retry, complete }: { c: Catalogue | null; toast
           <h2 className="h2" id="build-h">Connect skills into a workflow you can run</h2>
           <p className="lede">Choose skills or start from a ready workflow. Review the steps, download one folder and give it to your AI to work through.</p>
         </div>
-        <p className="builder-app-link"><Link className="btn btn-dark btn-sm" to="/apps/starter-pack">Turn your workflow into an app <ArrowIcon size={12} /></Link><Link className="btn btn-ghost btn-sm" to="/apps">See an example →</Link></p>
-        {c && complete && <Suspense fallback={<div className="builder" role="status">Opening the steps…</div>}><Builder c={c} toast={toast} /></Suspense>}
+        <p className="builder-app-link"><Link className="btn btn-dark btn-sm" to="/apps#starter-pack">Turn your workflow into an app <ArrowIcon size={12} /></Link><Link className="btn btn-ghost btn-sm" to="/apps">See an example →</Link><Link className="btn btn-ghost btn-sm" to="/from-a-source" data-testid="build-from-source">Start from a link or document →</Link></p>
+        {c && complete && <Suspense fallback={<div className="builder" role="status">Opening the steps…</div>}><FullBuilder toast={toast} /></Suspense>}
       </section>}</HomeWorkflows>}
       {c && complete && <HomeAgents c={c} />}
       <FeaturedTools />
     </main>
   );
+}
+
+/** While a block page's catalogue loads, keep the server's readable page under the loading cover, so a slow
+ * load can still show the content (index.html reveals it instead of an error). */
+function BlockPending({ path }: { path: string }) {
+  const html = initialPageHtml(path);
+  return html ? <div data-testid="public-opening" dangerouslySetInnerHTML={{ __html: html }} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>;
+}
+
+/** The home list uses the small catalogue index; the builder reads ports and steps, so it opens on the full catalogue. */
+function FullBuilder({ toast }: { toast: (m: string) => void }) {
+  const { catalogue, error, retry } = useCatalogueState(true);
+  if (catalogue) return <Builder c={catalogue} toast={toast} />;
+  return <div className="builder" role="status">{error ? <>{error} <button type="button" className="link-btn" onClick={retry}>Try again</button></> : "Opening the steps…"}</div>;
 }
 
 /** Runs only when the home screen or a resolved route has actually committed. */
@@ -450,7 +475,8 @@ export default function App() {
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
   const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html"].some((p) => path === p || path.startsWith(`${p}/`));
-  const catalogueState = useCatalogueState(needsCatalogue || kitsOpen, { starterFirst: path === "/" && !search.has("block") && !search.has("workflow") });
+  // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
+  const catalogueState = useCatalogueState(needsCatalogue || kitsOpen, { starterFirst: path === "/" && !search.has("block") && !search.has("workflow"), tier: path === "/" ? "index" : "full" });
   const c = catalogueState.catalogue;
   const [bizOpen, setBizOpen] = useState(false);
   const closeBiz = useCallback(() => setBizOpen(false), []);
@@ -469,7 +495,7 @@ export default function App() {
   const now = (s: string | null) => (c && s ? c.bySlug[s] ?? c.bySlug[c.renamed?.[s] ?? ""] : undefined);
   const old = now(search.get("block"));
   const here = now(pageSlug);
-  const redirectTo = path === "/traction" ? "/tools/growth-channel-planner" : old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null;
+  const redirectTo = LEGACY_PATHS[path] ?? (old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null);
   // Optional library data must not delay the home hero or the space form.
   const waitingForCatalogue = !c && !catalogueState.error && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)
     || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
@@ -520,7 +546,7 @@ export default function App() {
           ) : path === "/how-it-works" ? (
             <HowItWorks toast={setToast} />
           ) : pageSlug ? (
-            c ? <BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+            c ? <BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /> : <BlockPending path={path} />
           ) : path === "/" ? (
             <Home c={c ?? catalogueState.starterCatalogue} complete={catalogueState.complete} toast={setToast} error={catalogueState.error} retry={catalogueState.retry} />
           ) : (

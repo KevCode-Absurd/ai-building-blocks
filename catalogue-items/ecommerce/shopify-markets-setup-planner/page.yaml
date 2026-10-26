@@ -1,6 +1,6 @@
 new_slug: shopify-markets-setup-planner
 name: "Shopify Markets setup planner"
-summary: "Give it your countries and gateway. Get market groups, currency rules, catalogs, languages and tax settings."
+summary: "Plan your Shopify Markets setup: give your countries and payment gateway, get market groups, currency, rounding, catalogs, languages and tax notes."
 job: set-up-store
 thinking: high
 thinking_why: "Tax, currency and plan limits interact, so a stronger model keeps the rules straight and flags what needs a professional."
@@ -17,6 +17,10 @@ when:
   - You want to sell to shoppers outside your home country on one Shopify store.
   - You turned on a market and prices or checkout look wrong.
   - You are not sure whether you need Shopify Payments to show local currency.
+not_for:
+  - "You only want to know which countries to open first: use the overseas market planner, then come back here."
+  - "You need tax or duty rates, or a ruling on where you must charge tax: ask an accountant or tax adviser."
+  - "You do not sell on Shopify: use your own platform's help pages for multi-country selling."
 
 you_give:
   - The countries you want to sell to
@@ -36,6 +40,34 @@ how_to_use:
   - Say your Shopify plan, because theme changes per market need a plan above Basic.
   - Check each group with Shopify's current country and plan list before you set it up.
   - Take the tax questions to an accountant or tax adviser.
+output_sample:
+  input:
+    - The countries you want to sell to
+    - The country where your business is registered
+    - Your payment gateway
+    - Your warehouses by country (optional)
+    - Your Shopify plan (optional)
+  output:
+    - name: Market groups
+      contains: Countries put together by shared tax rules and shipping, with the reason for each group.
+    - name: Currency
+      contains: Your base currency and a yes or no on local currency at checkout, with the reason.
+    - name: Rounding
+      contains: One rule for how converted prices end, so they look natural.
+    - name: Catalogs
+      contains: Products removed or price changes per market, with a compare-at price where needed.
+    - name: Theme
+      contains: Banner, holiday and shipping message per market, noting it needs a plan above Basic.
+    - name: Languages
+      contains: Which language goes to which market, and the key text to fix by hand.
+    - name: Tax
+      contains: Tax-inclusive or added for each market, with questions for your adviser.
+    - name: Shipping
+      contains: Which warehouse serves which markets, and a rate for each country.
+    - name: Duties
+      contains: A plain-words note for your page about duties buyers may pay on arrival.
+    - name: Verify
+      contains: Plan and country availability to check, plus any checks missed and anything missing.
 
 how_it_works:
   - title: Groups the countries

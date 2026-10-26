@@ -106,3 +106,24 @@ improve:
 warnings:
   - Requires tools for the requested native file format. Checks requiring an
     unavailable native application must remain marked not run.
+not_for:
+  - "You only need the entry form and nobody else will take it over: use the Excel input form builder."
+  - "You already have a workbook and only need a guide for its next owner: use the Excel workbook handover writer."
+  - "You want to fix broken formulas or compare two versions of a workbook: use the Excel workbook change reviewer."
+output_sample:
+  input:
+    - "Your field list: names, data types and allowed values"
+    - Which fields are required, and the record key
+    - The Excel version you will use
+    - Who takes over the workbook and how well they know Excel
+  prerequisites:
+    - An AI that can create and save Excel files
+  output:
+    - name: input-form.xlsx
+      contains: An empty Excel table with dropdowns, entry cells and checks for missing or duplicate records.
+    - name: field-rules.md
+      contains: The rules for every field, plus a separate test copy with made-up records.
+    - name: workbook-handover.md
+      contains: A guide for the next owner with a sheet map, inputs, update steps and checks.
+    - name: Run register and open items
+      contains: What passed, what could not be checked, and which facts are still missing.

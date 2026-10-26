@@ -1,6 +1,6 @@
 new_slug: competitor-ad-gap-finder
 name: "Competitor ad gap finder"
-summary: "Paste competitor ads from the Ad Library. Get the gaps, briefs and a score out of 100."
+summary: "Find the gaps in your competitors' Meta ads. Paste ads from the Ad Library and get crowded and open ad types, briefs for each gap, and a score."
 job: study-competitors
 thinking: high
 thinking_why: "It studies ads or pages closely and works out why they work."
@@ -17,6 +17,10 @@ when:
   - You're planning a new batch of ads and want to know what your category already runs before you brief anyone.
   - Every competitor ad seems to say the same thing and you want to know what that thing is, word for word.
   - You suspect there's a gap in your market, such as a doubt nobody answers, and want evidence for it.
+not_for:
+  - "You only want to save and sort a few competitor ads: use the Competitor ad swipe file builder."
+  - "You can't collect ads by hand from the Meta Ad Library, for example ads on other sites: ask a person on your team to collect them first."
+  - "You want proof that a competitor ad made sales: the Ad Library shows no spend or results, so ask your own buyers or check your own ad results."
 
 you_give:
   - What the work is for, such as everything you sell, one product or a sale, plus who it targets and the country
@@ -36,6 +40,31 @@ how_to_use:
   - In facebook.com/ads/library, search each competitor by name. Take their 5 longest-running and 5 newest active ads, with the library ID, start date and a screenshot of each.
   - Paste them in with your own facts, claims list, reviews and current ads.
   - Read the gaps and briefs first, then the map and cards behind them.
+output_sample:
+  input:
+    - What the work is for, who it targets and the country
+    - Competitor ads from the Meta Ad Library, with ID, start date, text and a screenshot
+    - Your facts, claims you may make, and reviews
+    - Your own ads and how they did (optional)
+    - Your list of 3 to 6 competitors (optional)
+  prerequisites:
+    - An AI that can read screenshots
+    - Access to facebook.com/ads/library to collect the ads by hand
+  output:
+    - name: Summary
+      contains: Three sentences on what the study found, with the top three gaps.
+    - name: Sample
+      contains: Each competitor, how many ads were kept, their run time tiers, and any ads skipped with the reason.
+    - name: Category map
+      contains: Each ad type, how many advertisers use it, and whether it is crowded, thin or open.
+    - name: Ad cards
+      contains: One card per ad with its type, main claim word for word, proof, offer and logo check.
+    - name: Cliches and buyers
+      contains: Claims many competitors repeat, and what reviewers say most, with which ads speak to it.
+    - name: Gaps and briefs
+      contains: A brief for each gap with headline, proof, how to read it and what to avoid.
+    - name: Limits and score
+      contains: What was not seen, a score out of 100, and each check that was missed.
 
 how_it_works:
   - title: Confirms the competitors

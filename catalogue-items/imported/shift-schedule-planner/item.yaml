@@ -1,6 +1,6 @@
 slug: shift-schedule-planner
 name: Shift schedule planner
-summary: Give it your demand and staff. Get a shift pattern, a weekly schedule and a fair rotation for nights and weekends.
+summary: "Plan a fair shift pattern, a weekly schedule and a rotation for nights and weekends, with a swap policy and staff notice. Not legal advice."
 category: general
 boards: []
 type: skill
@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: spreadsheet
     required: true

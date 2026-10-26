@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It pulls text from order fields.
 new_slug: gift-message-collector
 name: Gift message collector
-summary: Run it on recent orders. Get gift messages, recipients and gift flags
-  in one list for packing slips.
+summary: Find every gift message on your open Shopify orders. Get a gift message list with recipients and gift flags, ready for packing slips.
 job: run-your-store
 headline: Gift message collector
-subhead: Every gift note for your open orders on one sheet, ready for the
-  packing table. It scans recent unfulfilled Shopify orders and pulls out gift
-  messages, recipient names and gift flags from custom fields and order notes.
+subhead: Every gift note for your open orders on one sheet, ready for the packing table. It scans recent unfulfilled Shopify orders and pulls out gift messages, recipient names and gift flags from custom fields and order notes.
 explain: |
   Every gift note for your open orders on one sheet, ready for the packing table. It scans recent unfulfilled Shopify orders and pulls out gift messages, recipient names and gift flags from custom fields and order notes.
 
@@ -18,6 +15,10 @@ when:
   - You print notes on slips and keep missing some.
   - Customers put their gift note in the order comments instead of the form.
   - You want to see which orders are gifts before shipping.
+not_for:
+  - "You need gift messages on orders already packed or shipped: use your store's own order export instead."
+  - "You run B2B or wholesale orders with no gift notes: use your store's own order export."
+  - "You want to change or add gift notes in orders: edit them in Shopify admin, as this only reads."
 you_give:
   - Store domain
   - How many days back to look
@@ -29,8 +30,31 @@ you_get:
   - Gift flags per order
   - A file ready for packing slips
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Sign in to Shopify for your store with permission to read orders. Your AI needs to run commands for this.
+  - Open your AI tool and paste in this skill.
+  - Give it your store domain. Add how many days back to look if you want more than 7.
+  - Add your own gift field names if your theme uses different ones.
+  - Check the summary counts, then open the CSV file and look over a few rows.
+  - Print the messages for the packing team, or share the file with them. Keep it private, as it holds customer details.
+output_sample:
+  input:
+    - Your store domain
+    - How many days back to look (optional)
+    - "Which orders to check: unfulfilled, partial or any (optional)"
+    - Your own gift field names (optional)
+  prerequisites:
+    - An AI that can run Shopify commands and save files
+    - A signed-in Shopify session that can read orders
+  output:
+    - name: gift_messages CSV file
+      contains: One row per gift order, with the message, recipient, ship-to details, items to wrap and customer email.
+    - name: order_name and created_at columns
+      contains: The order number and the date it was placed.
+    - name: is_gift, gift_recipient and gift_message columns
+      contains: Whether the order is a gift, who it is for and the note text.
+    - name: note_hint column
+      contains: Gift-like text found in the free-text order note.
+    - name: line_items_summary column
+      contains: Quantity and item name for each product, so packers know what to wrap.
+    - name: Summary count
+      contains: Orders scanned, gift orders, and how many had a message, a recipient or a flag only.

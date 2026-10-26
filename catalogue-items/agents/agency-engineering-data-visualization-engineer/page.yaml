@@ -1,0 +1,154 @@
+name: Honest chart design agent
+summary: Pick the right chart for your data and check it does not mislead. Get a plan with axes, colours and a pass or fail check.
+headline: Honest chart design agent
+subhead: Tell the agent the question your chart must answer and describe your data, or share a chart you already made. It picks the chart type, sets the axes and colours, and checks the chart for tricks that mislead. You get a chart plan you can build in any tool.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Most bad charts start with the wrong question. Someone picks a donut because
+  it looks nice, then the numbers hide inside it. This honest chart design agent
+  starts with what the chart must answer, such as comparing groups, showing a
+  trend or showing how two things relate. The question picks the chart. It also
+  helps you choose a chart type that your readers will read correctly.
+
+
+  It follows how the eye works. People judge length and position well, and
+  angles and areas badly. So it prefers sorted bars to a pie with many slices.
+  It keeps bar charts starting at zero, avoids two vertical axes that let you
+  slide the scales, and picks colours that still work for colour-blind readers
+  and in black and white. It adds a title that states the takeaway, not "Chart
+  1".
+
+
+  In a chat, it plans and reviews charts. It does not draw them unless you ask
+  for code, and then you run that code yourself. It cannot test how fast a chart
+  loads on your data. This is a role profile from Agency Agents, shared under
+  MIT. The download includes the original profile, its licence and a setup
+  guide. The profile's experience claims and success targets are examples, not
+  results measured by AI Blocks.
+when:
+  - You have a table and a question, and you do not know whether to use bars, lines or something else.
+  - A chart for your board pack, report or slide looks cluttered or hard to read.
+  - A chart you made may be misleading, such as a bar chart that does not start at zero.
+  - Your chart must work for colour-blind readers, on a screen reader or in a black and white print.
+not_for:
+  - "You want the chart drawn from your data now: use the Data chart drawer or the Chart maker."
+  - "You want a dashboard file people can open offline: use the Offline dashboard builder."
+  - "You want an existing PowerPoint chart rebuilt so you can edit it: use the PowerPoint editable chart rebuilder."
+  - "You want a report that explains what your numbers say in words: use the Analytics Reporter agent."
+you_give:
+  - The question the chart must answer, in one sentence
+  - A list of your columns, what each holds, and how many rows you have
+  - Where the chart will appear, such as a slide, a web page or a printed report
+  - An existing chart to review, as an image or a description (optional)
+  - The tool you will use, such as Excel, Google Sheets, Tableau, Power BI or Python (optional)
+  - Who reads it and how much time they have (optional)
+you_get:
+  - The chart type to use, and why it fits your question
+  - A setup for each axis and mark, such as what goes on the x axis, the baseline and the sort order
+  - A colour plan that works for colour-blind readers and in black and white
+  - A title that states the takeaway, plus labels and units
+  - An honesty check with pass or fail for baseline, axes, size, colour and clutter
+  - Accessibility notes and a build note for your tool
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Write your question in one sentence. List your columns, what each holds and the number of rows. If you have a chart already, attach its image.
+  - Say where the chart will be used and which tool you will build it in.
+  - Read the honesty check first. Fix any failed line before you polish anything else.
+  - Build the chart in your tool from the plan. If you want code, ask for D3, Vega-Lite, Plotly or Python code, and run it yourself.
+  - Show the chart to someone new for three seconds. If they cannot say the takeaway, ask the agent for a simpler version.
+how_it_works:
+  - title: Start from the question
+    text: It asks what decision the chart serves, and whether the answer is a comparison, trend, spread, link between two things or parts of a whole.
+  - title: Read the data shape
+    text: It looks at your column types, how many categories you have and how many rows, which rules some charts out.
+  - title: Pick the chart
+    text: It chooses the chart type that the eye reads most accurately for that question, and says what to avoid.
+  - title: Set axes and colour
+    text: It sets baselines, sort order and a colour scale that suits the data, and never lets colour alone carry meaning.
+  - title: Run the honesty check
+    text: It checks baseline, dual axes, shape of the frame, averages that hide spread, labels and clutter.
+  - title: Plan for the real data size
+    text: It says when the chart will slow down or blur, and when to group or sample the data first.
+output_shape: |-
+  CHART PLAN
+    Question <one sentence>
+    Chart type <type> | Why <reason> | Avoid <trap>
+    Setup <x axis> | <y axis> | <sort order> | <baseline> | <what size or colour shows, if used>
+    Colour <scale type> | <colours or palette> | <extra cue besides colour>
+    Title and labels <takeaway title> | <axis labels with units>
+
+  HONESTY CHECK
+    Baseline <pass or fail and note>
+    Dual axes <pass or fail and note>
+    Frame shape <pass or fail and note>
+    Averages hiding spread <pass or fail and note>
+    Labels and units <pass or fail and note>
+    Clutter <pass or fail and note>
+
+  ACCESSIBILITY
+    <colour-blind check> | <text summary for screen readers> | <data table fallback>
+
+  BUILD NOTE
+    <tool> | <how to set it up> | <size warning if rows are many>
+
+  OPEN CHECKS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - The question your chart must answer, in one sentence
+    - Your columns and what each holds, plus the row count
+    - Where the chart will appear, such as a slide or web page
+    - A chart you already made (optional)
+  prerequisites:
+    - An AI that can read an image, if you want it to review a chart you already made
+    - The tool you will build the chart in, such as Excel, Power BI or Python
+  output:
+    - name: Chart plan
+      contains: The chart type, the axis setup, the colour plan and a title that states the takeaway.
+    - name: Honesty check
+      contains: Pass or fail for baseline, dual axes, frame shape, hidden spread, labels and clutter.
+    - name: Accessibility
+      contains: A colour-blind check, a text summary for screen readers and a data table fallback.
+    - name: Build note
+      contains: How to set the chart up in your tool, and a warning if your row count will slow it down.
+    - name: Open checks
+      contains: What to test with a real reader or your real data before you share the chart.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They can read a screenshot of a chart you already made and mark what misleads.
+    - name: Excel, Google Sheets, Tableau, Power BI or Python
+      why: You build the chart there from the plan. The agent does not run your tools.
+  inputs:
+    - A screenshot of the chart you want reviewed.
+    - Your brand colours, so the palette keeps them where they pass the colour-blind check.
+    - The one number or fact your reader must remember.
+terms:
+  - term: Baseline
+    meaning: The value where an axis starts. Bars must start at zero, or small gaps look huge.
+  - term: Dual axis
+    meaning: A chart with two vertical scales. It lets you slide the scales until two lines seem to match.
+  - term: Colour-blind safe
+    meaning: Colours that stay different for people who cannot tell red from green.
+  - term: Small multiples
+    meaning: A grid of small charts that share one scale, so you can compare groups at a glance.
+  - term: Chartjunk
+    meaning: Decoration that adds no information, such as 3D effects or heavy grid lines.
+tweaks:
+  - what: Audience
+    how: Say who reads the chart and how long they have, so the plan trims detail to fit.
+  - what: Tool
+    how: Name your tool so the build note gives steps for it, such as Excel or Power BI.
+  - what: Review only
+    how: Share a finished chart and ask for the honesty check alone, with no new plan.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

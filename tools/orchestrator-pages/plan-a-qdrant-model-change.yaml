@@ -13,6 +13,10 @@ explain: |-
 when:
   - You want the result described above from the files and facts you already have.
   - You need a repeatable process and a clear next action.
+not_for:
+  - "Your Qdrant search is slow, not wrong or changing models: use Diagnose slow Qdrant search or the Qdrant search speed tuner."
+  - "You only need to pick where to host Qdrant: use the Qdrant hosting option adviser."
+  - "You are upgrading Qdrant itself and keeping your model: use the Qdrant version upgrade planner."
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits
@@ -21,6 +25,23 @@ you_get:
   - Embedding migration plan
   - Search relevance checks
   - Monitoring and rollback gates
+output_sample:
+  input:
+    - Your current embedding model and the new one, with vector sizes
+    - How many points your collection holds and whether search must stay online
+    - Three to ten searches that return weak results, with the result you expected
+    - Where Qdrant runs and its version
+  prerequisites:
+    - Access to your Qdrant settings, to read them (the plan is not run for you)
+  output:
+    - name: Embedding migration plan
+      contains: The strategy you chose with the reason, numbered phases, checks before the swap and the rollback steps.
+    - name: Search relevance checks
+      contains: Likely causes ranked, one test for each, fixes in order and a before and after measure on your own searches.
+    - name: Monitoring and rollback gates
+      contains: Metrics, health checks and alerts to watch after the switch, and the point where you go back.
+    - name: Missing facts and next action
+      contains: Every MISSING line in one list, then the first step to take.
 how_to_use:
   - Add the complete skill pack to your AI.
   - Share your goal and the files listed above.
@@ -28,11 +49,11 @@ how_to_use:
   - Review the result before approving external actions.
 how_it_works:
   - title: Qdrant embedding migration planner
-    text: Share your current and new models. Get a search migration plan with validation and rollback steps.
+    text: Share your current and new models. Get a search migration plan with validation and rollback steps. It hands the plan and the new model to the next two steps.
   - title: Qdrant search relevance investigator
-    text: Share queries and weak results. Get likely relevance problems and tests to compare proposed fixes.
+    text: Share queries and weak results. Get likely relevance problems and tests to compare proposed fixes. It starts from your own failing searches and checks them against the new model in the plan.
   - title: Qdrant health monitoring planner
-    text: Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search.
+    text: Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search. It starts from your own setup and builds the alerts and rollback gates around the plan and the tests.
 output_shape: |-
   Embedding migration plan
   Search relevance checks

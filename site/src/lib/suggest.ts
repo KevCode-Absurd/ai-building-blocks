@@ -1,5 +1,6 @@
 // What to add next to a workflow. Shared by the builder and the "Add to a workflow" pop-up.
 import { type Block, type Catalogue, portLabel } from "./data";
+import { nextSteps } from "./next-steps.mjs";
 
 export type Suggestion = { b: Block; why: string };
 
@@ -16,16 +17,11 @@ export function suggestNext(c: Catalogue, anchor: string | null, inFlow: Set<str
       .map(({ b }) => ({ b, why: firsts.has(b.slug) ? "Where ready workflows start" : "A good first step" }));
   }
   const a = c.bySlug[anchor];
-  const outs = new Set(a.outputs.map((p) => p.type));
-  const follows = new Map<string, number>();
-  for (const f of flowsList) f.steps.forEach((s, i) => { if (s.uses === anchor && f.steps[i + 1]) follows.set(f.steps[i + 1].uses, (follows.get(f.steps[i + 1].uses) ?? 0) + 1); });
-  return pool
-    .map((b) => {
-      const used = b.inputs.filter((p) => outs.has(p.type));
-      const score = (follows.get(b.slug) ?? 0) * 6 + (used.length ? 3 + (used.some((p) => p.required) ? 1 : 0) : 0) + (b.task === a.task ? 1 : 0) + b.usedIn * 0.1;
-      const why = follows.has(b.slug) ? "Comes next in a ready workflow" : used.length ? `Uses its ${portLabel(used[0].type).toLowerCase()}` : "Same job";
-      return { b, score, why };
-    })
-    .filter((x) => x.score >= 3).sort((x, y) => y.score - x.score).slice(0, limit)
-    .map(({ b, why }) => ({ b, why }));
+  // The same evidence as "After this" on block pages (next-steps.mjs): what follows it in reviewed workflows,
+  // what takes a specific thing it makes, then the same job and subject. Agents and ready workflows stay out of the canvas pool.
+  return nextSteps(a, c.blocks, { max: limit, perTask: 3, exclude: (b: Block) => b.type === "agent" || inFlow.has(b.slug) })
+    .map(({ x, follows, takes }: { x: Block; follows: number; takes: string[] }) => ({
+      b: x,
+      why: follows ? "Comes next in a ready workflow" : takes.length ? `Uses its ${portLabel(takes[0]).toLowerCase()}` : "Same job",
+    }));
 }

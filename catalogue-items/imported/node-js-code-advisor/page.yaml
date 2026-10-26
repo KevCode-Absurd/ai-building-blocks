@@ -2,34 +2,106 @@ thinking: medium
 thinking_why: It weighs choices against what your project needs.
 new_slug: node-js-code-advisor
 name: Node.js code advisor
-summary: Describe your Node.js project. Get picks for framework, async style and
-  structure, with the reasons.
+summary: Pick the right Node.js framework, async style and folder structure for your project, with a reason for each choice and a security checklist.
 job: build-software
 headline: Node.js code advisor
-subhead: Choices for your Node.js project that fit your situation, with the
-  reasons, instead of one default for everyone. It teaches how to think about
-  the choice, so you can make the next one yourself.
+subhead: Describe what you are building, where it will run and what your team knows. It picks a framework such as Hono, Fastify, NestJS or Express, and says why. You also get a folder layout, async and error advice, and a security checklist.
 explain: |
-  Choices for your Node.js project that fit your situation, with the reasons, instead of one default for everyone. It teaches how to think about the choice, so you can make the next one yourself.
+  Most Node.js advice gives one default for everyone. This skill is a Node.js framework advisor that asks about your project first, then picks to fit. It teaches how to weigh the choice, so you can make the next one yourself.
 
-  The skill asks what you are building and where it will run. A decision tree then points to Hono for edge and serverless, Fastify for fast APIs, NestJS for larger teams, Express for stable older projects and Next.js routes when the front end is included. It compares cold start, library support and TypeScript support. It also covers runtime points such as native TypeScript, async patterns, project structure, security and deployment. When your answer is unclear, it asks before choosing.
+  It asks what you are building, where it will run, how much cold start time matters and what your team already knows. A decision tree then points to a framework: Hono for edge and serverless, Fastify for fast APIs, NestJS for bigger teams, Express for older or stable projects, and Next.js routes when the front end is included.
+
+  It then covers a layered folder structure, error handling, async patterns, input checks, security and tests. If your answers are unclear, it asks before it picks. It gives principles, not a code project.
 when:
-  - You are starting an API and cannot pick a framework.
-  - Your team knows Express and you wonder if you should move.
-  - You deploy to serverless and cold starts matter.
-  - You want a sensible folder structure and security checklist.
+  - You are starting an API and cannot choose between Express, Fastify, Hono and NestJS.
+  - Your team knows Express and you wonder whether to move to something newer.
+  - You deploy to serverless or the edge, and cold start time matters.
+  - You want a sensible folder layout and a security checklist before you write code.
+not_for:
+  - You are building only the browser side of an app. This skill is for the Node.js server.
+  - You need to choose a database or a host. This covers the Node.js side only.
+  - You want a full API design with routes and data shapes. Use the REST API designer.
+  - You want the whole backend built for you. Use the backend builder.
 you_give:
-  - What you are building
-  - Where it will run
-  - Your team's experience
-  - Existing code to keep (optional)
+  - What you are building, in a few lines
+  - Where it will run, such as a server, serverless or the edge
+  - What your team already knows
+  - Existing code you must keep (optional)
 you_get:
-  - A framework pick with reasons
-  - Async and structure advice
-  - A comparison on speed and library support
-  - Security and deployment points
+  - One framework pick and a runner-up, each with reasons
+  - A folder layout that fits the size of your project
+  - Advice on async patterns and error handling
+  - A security and deployment checklist
+  - The first step to take
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Describe your project in a few lines. Say where it will run and what your team knows well.
+  - If your AI asks a question, answer it. It asks when your answers leave the choice unclear.
+  - Read the reasons, not just the pick. Check that each one matches your situation.
+  - Check any version or flag it names against the Node.js docs, since they change.
+  - Pair the pick with the REST API designer to plan routes, then the backend builder to write code.
+how_it_works:
+  - title: Ask about the project
+    text: It asks what you build, where it runs, whether cold start matters and what your team knows.
+  - title: Pick a framework
+    text: A decision tree compares Hono, Fastify, NestJS, Express and Next.js routes on your answers.
+  - title: Set the structure
+    text: It picks layers, such as routes, services and data access, or says a single file is enough.
+  - title: Plan errors and async
+    text: It picks async patterns and one place to handle errors, with safe messages to clients.
+  - title: Check validation and security
+    text: It lists where to check inputs and which security items apply.
+  - title: Check before building
+    text: A short checklist makes sure the choice fits your project, not just the usual default.
+output_shape: |
+  ## Your project
+  <what, where it runs, team, MISSING items>
+
+  ## Recommended framework
+  <pick and runner-up, with reasons>
+
+  ## Structure
+  <folder layout and layers>
+
+  ## Async and error handling
+  <patterns and where to handle errors>
+
+  ## Security and deployment checklist
+  - [ ] <items that apply>
+
+  ## Next step
+  <what to build or decide first>
+output_sample:
+  input:
+    - What you are building, in a few lines
+    - Where it will run, such as a server, serverless or the edge
+    - What your team already knows
+    - Existing code you must keep (optional)
+  output:
+    - name: Your project
+      contains: Your answers in one place, with anything missing marked.
+    - name: Recommended framework
+      contains: One pick and a runner-up, with a reason for each factor.
+    - name: Structure
+      contains: A folder layout and layers sized to your project.
+    - name: Async and error handling
+      contains: Which async patterns fit, and where errors are caught and shaped.
+    - name: Security and deployment checklist
+      contains: Only the items that apply, such as input checks, password hashing and rate limits.
+    - name: Next step
+      contains: The first thing to build or decide.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is advice in text. No code or files are needed.
+  inputs:
+    - Your team's main skills
+    - The hosting you plan to use
+    - Your package.json, if you have existing code
+terms:
+  - term: Cold start
+    meaning: The delay when a serverless function starts after sitting idle.
+  - term: Serverless
+    meaning: Code that runs only when called, on a host that handles the server for you.
+  - term: Edge
+    meaning: Servers close to your users, such as Cloudflare Workers.

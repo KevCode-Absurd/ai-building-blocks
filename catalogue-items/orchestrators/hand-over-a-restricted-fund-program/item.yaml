@@ -1,6 +1,6 @@
 slug: hand-over-a-restricted-fund-program
 name: Hand over a restricted fund program
-summary: Share the source files. Get a restricted fund handover, obligations index and unresolved decisions.
+summary: "Hand over a restricted fund to a new program owner. Share the fund agreement and records. Get a handover brief, rules index and open decisions."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -19,7 +19,7 @@ uses:
   - handover-note-writer
 steps:
   - uses: source-note-summariser
-    note: Extract the fund purpose, restrictions, reporting requirements and evidence gaps with agreement section references.
+    note: Extract the fund purpose, restrictions, reporting requirements and evidence gaps with agreement section references. Hands step 2 the rules index, the gaps and the open questions.
   - uses: handover-note-writer
     note: Prepare the incoming program owner brief with current activity status, deadlines, source access locations and decisions requiring fund owner review.
 origin: rebuilt

@@ -1,0 +1,143 @@
+name: Social Media Strategist agent
+summary: "Get a B2B social media plan for LinkedIn and X: goals, platform roles, content themes, a 4-week calendar and the numbers to track."
+headline: Social Media Strategist agent
+subhead: Give it your business, your buyer and your goal. It decides what LinkedIn and X should each do for you, sets a few content themes and plans four weeks of posts. You get a social media strategy plan, with a way to measure it.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A company often posts on LinkedIn and X with no link between them. The same text goes everywhere, nobody owns the goal and nobody can say if it worked. This social media strategist agent plans the whole thing first: the goal, the platforms, the themes and how one idea becomes several posts.
+
+  It was written for business-to-business work on LinkedIn, X and similar professional networks. It starts with one business goal, such as leads or hiring, and the buyer you want to reach. It gives each platform its own job. Then it sets three or four themes and a content cascade, where one main piece, such as a LinkedIn article, becomes shorter posts on each platform. It plans four weeks, or a launch or event campaign, and can add a plan for staff and executives who post.
+
+  It plans and doesn't write finished posts. For ready-to-post text, use the writer items it points to. It can't see your analytics or your competitors' accounts, so the measures it picks are things for you to read. The profile's targets, such as 3 percent engagement or 3x ad return, are the author's goals, not results from AI Blocks.
+when:
+  - You sell to businesses and want one plan for LinkedIn and X.
+  - You have a product launch or conference coming and need a campaign plan.
+  - A founder or sales team wants to post, and you need a simple plan to follow.
+  - Your social posts take time but nobody can say what they bring in.
+not_for:
+  - You want ready-to-post text for a week. Use the Social post planner.
+  - You sell to consumers on Instagram or TikTok. Use the Instagram Curator agent or the TikTok Strategist agent.
+  - You want to buy LinkedIn ads. Use the LinkedIn ads account auditor.
+  - You want to read last month's numbers. Use the Social media results analyst.
+  - You need a legal or crisis review of a sensitive post. Ask your lawyer or your communications lead.
+you_give:
+  - What your business sells and who buys it, by job title
+  - Your main goal for social media, such as leads, hiring or authority
+  - The platforms you use now and who runs each one
+  - A launch, event or campaign date, if you have one (optional)
+  - Your last month's numbers from LinkedIn and X (optional)
+  - Names of two or three competitors or accounts you admire (optional)
+you_get:
+  - One clear goal and a measure for it
+  - A job for each platform, and what not to post there
+  - Three or four content themes, each tied to your buyer
+  - A content cascade that turns one main piece into posts for each platform
+  - A four-week calendar, or a launch or event campaign plan
+  - A plan for staff and executives who post, if you ask for it
+  - A review plan with the numbers to read each week
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste what you sell, who buys it, your goal and which platforms you run. Add a launch date if you have one.
+  - Paste your last month's numbers from LinkedIn and X if you have them. Your AI can't see them.
+  - "Say: \"Make my social media plan for the next four weeks. Don't invent numbers. Mark anything you can't check as a check for me.\""
+  - Read the platform jobs and the themes first. Change any that don't match how you sell.
+  - Give the calendar to your writer or use the Social post planner to write each post. Bring your numbers back after four weeks.
+how_it_works:
+  - title: Confirm goal and buyer
+    text: It confirms the business, the buyer, one goal and who runs each account. Missing items are asked for once, then marked MISSING.
+  - title: Give each platform a job
+    text: It sets what LinkedIn and X each do for the goal, and what stays off each one.
+  - title: Set the themes
+    text: It picks three or four themes tied to the buyer's problems and what you can prove.
+  - title: Build the cascade
+    text: It plans how one main piece becomes a shorter post for each platform, without pasting the same text twice.
+  - title: Plan the calendar or campaign
+    text: It plans four weeks, or a launch or event campaign, with owners and dates.
+  - title: Plan the team and review
+    text: It adds a staff and executive posting plan if asked, and the numbers to read each week.
+output_shape: |-
+  ASSUMPTIONS AND MISSING
+    ASSUMED: <list> | MISSING: <list>
+
+  GOAL AND BUYER
+    goal <one line> | measure <number to read> | buyer <title and problem>
+
+  PLATFORM JOBS
+    <platform> | <job for the goal> | <post types> | <not for this platform> | <owner>
+
+  CONTENT THEMES
+    <theme> | <buyer problem it answers> | <proof you have>
+
+  CONTENT CASCADE
+    main piece <type and topic> | LinkedIn version <shape> | X version <shape> | other <shape>
+
+  FOUR-WEEK CALENDAR (or CAMPAIGN PLAN)
+    <week> | <day> | <platform> | <theme> | <post shape> | <owner>
+
+  TEAM PLAN (if asked)
+    <who posts> | <what they post> | <how often> | <what they must not post>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+output_sample:
+  input:
+    - What your business sells, who buys it and your main goal
+    - The platforms you use and who runs each
+    - A launch or event date (optional)
+    - Last month's numbers from LinkedIn and X (optional)
+  prerequisites:
+    - A LinkedIn page or profile and an X account you can post from
+    - A writer, or the Social post planner, to turn the plan into posts
+  output:
+    - name: Goal and buyer
+      contains: One goal, the number that shows progress and the buyer you want to reach.
+    - name: Platform jobs
+      contains: What each platform does for the goal, which posts fit and who owns it.
+    - name: Content themes
+      contains: Three or four themes, each with the buyer problem it answers and your proof.
+    - name: Content cascade
+      contains: How one main piece becomes a post shaped for each platform.
+    - name: Four-week calendar
+      contains: Posts by week, platform, theme and owner, or a launch or event plan.
+    - name: Team plan
+      contains: Who posts, what they post and how often, if you ask for it.
+    - name: Review plan
+      contains: The numbers to read each week and what to change if they are low.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Platforms
+    how: Name only the platforms you can really keep up, such as LinkedIn alone, so the plan stays small.
+  - what: Campaign
+    how: Give a launch or event date and ask for a campaign plan instead of a general calendar.
+  - what: Team
+    how: Ask for the staff and executive posting plan only if more than one person will post.
+improve:
+  - After four weeks, paste your numbers and ask which theme and platform to keep, change or drop.
+  - Save the platform jobs as a one-page guide for anyone who posts for you.
+terms:
+  - term: Content cascade
+    meaning: One main piece, such as an article, cut into shorter posts for each platform.
+  - term: Content theme
+    meaning: A subject you post about again and again so people link you with it.
+  - term: B2B
+    meaning: Selling to other businesses, not to consumers.
+  - term: Employee advocacy
+    meaning: Staff posting about the company in their own words, with the company's support.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three can read screenshots of your analytics and turn them into a plan.
+    - name: LinkedIn and X analytics
+      why: You read your own post numbers there. Your AI can't see them.
+  inputs:
+    - Screenshots of your top five posts on each platform from the last 90 days.
+    - A list of your last three launches or events and what you posted.
+    - Your sales team's notes on what buyers ask before they buy.

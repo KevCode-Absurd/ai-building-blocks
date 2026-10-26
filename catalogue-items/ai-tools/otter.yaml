@@ -2,31 +2,32 @@ slug: otter
 name: Otter
 maker: Otter.ai
 url: https://otter.ai
-promise: "Turn meetings into live transcripts, summaries and action lists you can review."
+promise: "Get a live transcript, a summary and action items from every meeting."
 use_cases: [meeting-notes]
 categories: [productivity, voice]
 what_it_does:
-  - Transcribes calls live and tells speakers apart.
-  - Writes a summary with decisions and action items after each meeting.
-  - Answers questions about your meetings through a chat.
-  - Gives a short briefing before a call from past conversations.
-  - Joins Zoom, Google Meet and Teams from your calendar, or records without a bot.
+  - "Writes a live transcript in several languages and tells speakers apart (checked 26 Oct 2026)."
+  - "Writes a summary with decisions, action items and next steps after each meeting (checked 26 Oct 2026)."
+  - "Answers questions about your meetings in a chat, and can draft follow-ups (checked 26 Oct 2026)."
+  - "Gives a briefing before a meeting and live prompts during calls (checked 26 Oct 2026)."
+  - "Joins Zoom, Google Meet and Teams through your calendar, or records from your Mac or Windows desktop without a bot (checked 26 Oct 2026)."
 benefits:
   - "Get draft notes and tasks to review after the meeting."
-  - Look up a decision from last month without replaying the recording.
-  - Send call insights to your CRM without typing them.
-  - Try it free on a few meetings before you pay.
+  - "Look up a decision from last month without replaying the recording."
+  - "Send call details to HubSpot or Salesforce on a paid plan."
+  - "Try it free before you pay."
 best_for:
   - Managers and sales teams with many back-to-back calls.
   - Students and researchers who record lectures and interviews.
   - Anyone who needs a transcript they can search and share.
 not_for:
-  - Long recordings on the free plan, which caps each conversation at 30 minutes.
-  - Teams that need many file imports on the free plan.
+  - "Calls where not everyone has agreed to be recorded. Tell everyone before you record, and check your local recording laws, especially for interviews and lectures."
+  - "Long conversations on the free plan, which stops each one at 30 minutes. Pro allows 90 minutes."
+  - "Rough notes you type yourself while you talk. Try Granola."
 pricing:
   model: freemium
-  from: US$8.33 per month
-  note: Basic is free with 300 minutes a month. Pro is US$8.33 per user billed yearly, or US$16.99 billed monthly. Business and Enterprise cost more. Promotional prices may show lower.
+  from: US$8.33 per user per month (Pro, billed yearly; Basic is free; checked 26 Oct 2026)
+  note: "Basic is free: 300 minutes a month, 30 minutes per conversation, 3 file imports in total and 20 AI chat questions a month. Pro is US$8.33 per user a month billed yearly, or US$16.99 billed monthly, with 1,200 minutes, 90 minutes per conversation and 10 imports a month. Business is US$19.99 per user a month billed yearly (US$30 monthly list price), with unlimited meeting minutes and 4 hours per conversation. Enterprise: contact sales. Salesforce, HubSpot and Zapier links come with Pro and above. Checked 26 Oct 2026 on otter.ai/pricing. Some prices show a lower promotional figure, and one footnote ties a discount to an India-issued card, so use the standard price above."
 works_with:
   - Zoom
   - Google Meet
@@ -39,7 +40,29 @@ blocks:
   - meeting-coaching-analyst
   - interview-transcript-trimmer
 alternatives: [fireflies, granola, notion-ai, whisper]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to otter.ai and choose Start for free. The Basic plan is free (checked 26 Oct 2026)."
+  - "Tell everyone in the meeting that you are recording and that Otter will write it up."
+  - "Choose how to capture it: the desktop app, the Chrome extension, the phone app, or invite the notetaker. You can also connect Google Calendar so it joins your scheduled meetings (checked 26 Oct 2026)."
+  - "Try it on one low-risk meeting first."
+  - "Open the summary and action items afterwards. Check names, owners and dates against what was said, then share the notes."
+needs:
+  - "An Otter account. Basic is free."
+  - "Permission from everyone you will record, given before the call starts."
+  - "Your calendar (optional), so it joins meetings by itself."
+  - "A Zoom, Google Meet or Teams call, or the desktop app, Chrome extension or phone app to record in person."
+  - "Pro or above if your calls run longer than 30 minutes."
+example:
+  task: "Record a 20-minute team call and get the action items."
+  cost: "A 20-minute call fits the free plan's 30-minute cap per conversation. Basic's 300 minutes a month covers about 15 calls of that length (300 divided by 20). A call over 30 minutes needs Pro or above."
+  reply: "A live transcript with speakers marked, then a summary with decisions, action items and next steps. The notes are a draft, so check each name, owner and date before you send them."
+not_verified:
+  - "The law on recording in your country or state. Otter's pages do not cover consent, so ask a lawyer if the call is sensitive."
+  - "How accurate the transcript is with accents, noise or several people talking at once. We did not test it."
+  - "Whether the bot-free desktop recording is clear to the people on the call. Tell them anyway."
+  - "Features marked Coming Soon on the pricing page, such as AI Chat with Gmail and Notion."
 sources:
-  - https://otter.ai
   - https://otter.ai/pricing
+  - https://otter.ai

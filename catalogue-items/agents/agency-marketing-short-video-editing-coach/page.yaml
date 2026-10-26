@@ -1,0 +1,158 @@
+name: Short-Video Editing Coach agent
+summary: Share your clips, platform and editing app. Get a second-by-second edit plan, caption and sound checks, export settings and fixes ranked by impact.
+headline: Short-Video Editing Coach agent
+subhead: List your clips with their lengths, say where the video will run, and name your editing app. It plans the cut second by second, checks captions and sound, suggests colour and export settings, and ranks what to fix first. It coaches. You do the editing.
+job: make-video-ads
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A short video can have good footage and still lose people in the first
+  seconds. Common causes are a slow opening, captions that are hard to read,
+  music louder than the voice and an export the platform squashes. This
+  short-video editing coach agent reviews your plan or your rough cut and tells
+  you what to fix first, in order of impact. It explains each fix in plain
+  words so you learn the move, not only the result.
+
+
+  It covers the whole edit. That means the cut and pacing, text and captions,
+  voice and music levels, colour, and export. It knows CapCut, Premiere Pro,
+  DaVinci Resolve and Final Cut Pro. If you name yours, it says which tool does
+  what. Menus change between versions, so it describes the move and tells you
+  what to look for.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Many of its size,
+  loudness and platform numbers are the author's rules of thumb and target
+  Chinese platforms first. Check each platform's current guide before you
+  export. The profile's results, such as a 1.5 times completion rate, are goals,
+  not measured results.
+when:
+  - Your first cut feels slow and you cannot see why people drop off.
+  - Your captions are hard to read on a phone, or they sit under the platform's buttons.
+  - The voice is quiet or the music drowns it, and you want a clear fix list.
+  - You make videos every week and want a repeatable edit process and templates.
+not_for:
+  - You want a timed cut list for one social post and a cover idea. Use the Social video edit planner.
+  - You are cutting a paid video ad and need caption windows and a sound plan. Use the Video ad edit planner.
+  - You need captions made in your brand font, with a subtitle file. Use the Video caption maker in your brand font.
+  - You need your ad checked against Meta's rules before it runs. Use the Meta ads compliance checker.
+  - You want the video cut for you. A chat AI cannot open your project or edit your file. You make the edits in your app.
+you_give:
+  - Where the video will run, its goal and the length you want.
+  - Your clips as a list, with each length and what it shows.
+  - Your voice-over or script, and your music choice (optional).
+  - Your editing app, such as CapCut, Premiere Pro, DaVinci Resolve or Final Cut Pro (optional).
+  - A rough cut, if your AI can watch video, or a timed description of it (optional).
+  - Your caption rules, such as font and colour (optional).
+you_get:
+  - A cut plan by second, with the hook, the key moments and the ending.
+  - A caption and text check, with a list of problems.
+  - A sound check for voice, music and effects levels.
+  - Colour and export settings for each place you will publish.
+  - A list of fixes ranked by impact, with how to do each in your app.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Say which job you want. For example, "Plan my cut", "Review my rough cut" or "How do I fix quiet voice in CapCut?"
+  - Paste your clip list with lengths, the platform, your goal and your app. Attach the rough cut if your AI takes video.
+  - Read the fix list from the top. Do the first two fixes, then export a test and play it on a phone.
+  - Check music rights and font licences yourself before you publish.
+  - Save your best settings as a template in your app for the next video.
+how_it_works:
+  - title: Set the goal
+    text: It confirms the platform, the goal, the length and your clips, and marks anything missing.
+  - title: Plan the cut
+    text: It lays out the video by second, with a hook in the first three seconds, as the profile advises, and cuts any shot that adds nothing.
+  - title: Check text and captions
+    text: It checks size, timing, contrast and placement away from the platform's buttons.
+  - title: Check sound
+    text: It checks that voice is clear and louder than music, and notes noise and peaks to watch for.
+  - title: Set colour and export
+    text: It suggests a colour fix order and export settings per platform, and tells you to confirm each platform's current specs.
+  - title: Rank the fixes
+    text: It orders every fix by impact and says how to do each in your app.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    platform <name> | goal <text> | target length <seconds> | app <name> | what I could see <clip list, rough cut or description> | MISSING: <list>
+
+  CUT PLAN BY SECOND
+    <start to end> | <shot or beat> | <why it is there> | <text on screen> | <sound>
+
+  CAPTION AND TEXT CHECK
+    <issue> | where <time> | fix
+
+  SOUND CHECK
+    <issue> | where <time> | fix
+
+  COLOUR AND EXPORT
+    colour steps in order <list> | export per platform <size, frame rate, format> | confirm on the platform's own page: <list>
+
+  FIXES RANKED BY IMPACT
+    1. <fix> | why it matters | how in <app>
+
+  CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Where the video will run, its goal and its length
+    - Your clip list, with each length and what it shows
+    - Your editing app and your script (optional)
+    - A rough cut or a timed description of it (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - An editing app, such as CapCut, Premiere Pro, DaVinci Resolve or Final Cut Pro
+    - Rights to your music, fonts and clips (check yourself)
+  output:
+    - name: Cut plan by second
+      contains: Each shot or beat with its start and end, why it is there, any text and the sound.
+    - name: Caption and text check
+      contains: Problems with size, timing, contrast or placement, each with a time and a fix.
+    - name: Sound check
+      contains: Problems with voice, music or effects levels, with where they happen and a fix.
+    - name: Colour and export
+      contains: A fix order for colour, and export settings per platform to confirm on each platform's own page.
+    - name: Fixes ranked by impact
+      contains: Every fix in order of impact, with how to do it in your app.
+    - name: Checks still needed
+      contains: What it could not see or confirm, and what you must check yourself.
+works_best_with:
+  tools:
+    - name: CapCut, Premiere Pro, DaVinci Resolve or Final Cut Pro
+      why: The profile knows all four. Name yours and the fixes say which tool does what.
+    - name: Claude, ChatGPT or Gemini with video upload
+      why: If your AI can watch a rough cut, the review can point to real moments.
+  inputs:
+    - A screen recording of your timeline, or a list of cuts with times.
+    - A caption export or your script text.
+    - Your usual brand font and caption colours.
+terms:
+  - term: Hook
+    meaning: The opening seconds meant to make a viewer keep watching.
+  - term: B-roll
+    meaning: Extra footage that covers a cut or adds context to the main shot.
+  - term: LUT
+    meaning: A preset that maps colours. It is a starting point you adjust, not a finished look.
+  - term: Safe zone
+    meaning: The part of the screen clear of the platform's buttons and text.
+  - term: Export
+    meaning: Saving the finished video as a file at a chosen size, speed and quality.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Job
+    how: Say if you want a plan before you edit, a review of a rough cut, or one how-to answer. The layout changes with each.
+  - what: Your app
+    how: Name your editing app so the fixes tell you which feature to use. Without it they stay general.
+  - what: Platform
+    how: Name each place you will publish. Sizes, length and safe zones differ, and the agent tells you to check each one.
+improve:
+  - Save the export settings and caption style that worked as a template in your editing app, and paste a note about them at the start of each run.
+  - Keep a list of fixes that came up more than once and ask for a short pre-export checklist built from it.

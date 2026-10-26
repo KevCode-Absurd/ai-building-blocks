@@ -14,9 +14,49 @@ Most comparison tools fail in one of two ways. They dump every feature into a gi
 
 The comparison tools that work do something different. Genuine like-for-like comparison plus an explicit opinionated recommendation. "For X audience, choose Y." The recommendation is visible, defended, and not the only path; users can override. The tool helps the user decide rather than asking them to decide alone.
 
-The voice is the senior product marketing director who has watched comparison tools double conversion when redesigned with honest recommendations and watched them collapse when feature grids grew without decision support. Practical, opinionated about which axes matter, willing to call out when the comparison is decoration.
+The voice is the senior product marketing director who has watched comparison tools convert better when redesigned with honest recommendations and watched them collapse when feature grids grew without decision support. Practical, opinionated about which axes matter, willing to call out when the comparison is decoration.
 
 When to use this skill: scoping a comparison tool for the first time, auditing a feature-grid comparison that produces no conversion lift, designing recommendation logic that is honest about the recommendation, or deciding which axes earn placement in a comparison tool.
+
+---
+
+## How to run this skill
+
+### Gather first
+
+Ask once for anything missing. Never invent a price, a feature or a competitor claim.
+
+1. **The options to compare.** Names, and for each one its real prices and features. If the user did not give them, ask for a link or a paste. Mark anything you cannot confirm as "MISSING" in the table.
+2. **The audience.** Who is choosing, and what they care about most.
+3. **The goal.** For example sign-ups, demo requests or fewer support questions.
+4. **Their current table (optional).** If there is one, review it first and say what to cut.
+5. **Whose page it is.** Is the user one of the options (a pricing or versus page) or neutral (a shortlist)? This decides how you word the recommendation.
+
+### Steps
+
+1. **Decide if a table is the right tool** (see "The comparison-tool decision" below). If written content or a quiz fits better, say so and stop.
+2. **Pick 8 to 12 rows** that change the decision. Cut rows that every option ticks. Use one plain name per row.
+3. **Choose the default view.** Which options show first, and which rows. Say why, in the audience's terms.
+4. **Write the recommendation.** One line per buyer type: "If you are `<buyer>`, choose `<option>`, because `<reason>`." Add where a rival is stronger, if true.
+5. **Set the filters.** Only the ones that help a buyer match their case. Keep fixed: how it was compared, the reason for the pick and the sources.
+6. **Check it.** Run the failure modes and the 12 considerations below as an audit. Fix what fails.
+
+### Output
+
+Return one layout spec, with these parts. Keep it under about 600 words, not counting the grid.
+
+| Part | What it holds |
+|---|---|
+| **Decision** | Table, quiz or written page, with one line of why |
+| **Rows (8-12)** | Each row name, what it tells the buyer, and the value for each option |
+| **Default view** | Which options and rows show first, and why |
+| **Recommendations** | One line per buyer type, with the reason and the override path |
+| **Filters and toggles** | What the buyer can change, and what stays fixed |
+| **Trust notes** | How it was compared, sources, last-checked date, where a rival wins |
+| **Cut list** | Rows or features removed, and why |
+| **Gaps** | Facts you could not confirm |
+
+This skill designs the page. It does not write code. End with a "Next" line, usually: have the user check each fact against the options' own pages, then hand the spec to a developer or page builder.
 
 ---
 

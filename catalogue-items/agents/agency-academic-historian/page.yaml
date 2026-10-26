@@ -1,0 +1,152 @@
+name: Historian agent for period accuracy
+summary: Check a story, game or script for anachronisms and myths. Get a period report with confidence levels and what daily life really looked like.
+headline: Historian agent for period accuracy
+subhead: Tell it the time and place of your setting and paste the scene, setting notes or claims to check. The agent flags anachronisms and common myths, then fills in food, clothes, work and power for that period. Each point carries a confidence level and the kind of source behind it.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Historical fiction often fails in small ways. A character eats a food that
+  had not reached the continent. A town has a middle class a century too early.
+  A rule about marriage fits modern ideas, not the period. This historian agent
+  for period accuracy looks for those slips, and for the bigger ones, such as
+  attitudes and economic systems that did not exist yet.
+
+
+  It works from the economy up. Before it comments on politics or war, it asks
+  what people ate, how they traded and what tools they had. Then it adds
+  social structure and belief. Every claim gets a confidence level: well
+  documented, scholarly agreement, debated or guesswork. Where historians
+  disagree, it names the debate and the main views.
+
+
+  It does not default to Europe. It brings in China, West Africa, the Islamic
+  world and other regions, and it treats myths as evidence of what a society
+  valued. It works from general knowledge and cannot look up a book or check a
+  page. It gives kinds of source and well-known works to check, not citations
+  to copy.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its examples
+  and success targets describe the intended work. They are not measured
+  results from AI Blocks.
+when:
+  - You write historical fiction, a script or a game and want anachronisms caught before readers or players do.
+  - You set a story in "the Middle Ages" or a similar loose label and need to pin it to a time and place.
+  - A scene needs the feel of daily life, such as food, clothes, work, sounds and smells.
+  - You heard a historical fact and want to know if it is true, partly true or a myth.
+not_for:
+  - You need citations for an essay or a published book. This agent names kinds of source and known works, but cannot confirm a page or a quote. Use the Cited research assistant and check in a library.
+  - You want to teach history with sources learners can question. Use the Teach history with sources learners can question workflow.
+  - You want to check land, climate and trade routes in a fictional world. Use the Geographer agent for worldbuilding.
+  - You want the family rules and beliefs of a culture. Use the Anthropologist agent for worldbuilding.
+you_give:
+  - The time and place of your setting, as exact as you can, because "medieval" is not a date
+  - The scene, setting notes or list of claims you want checked
+  - What is made up on purpose, such as an invented kingdom or a changed event
+  - What you want, such as check for mistakes, add daily-life detail or test one claim
+  - Sources you trust and want it to follow (optional)
+you_get:
+  - A period report with food, clothes, buildings, tools, money, power, class, belief and law
+  - A list of anachronisms, each with why it is wrong and what would be right
+  - Common myths about the period, with the correction and a confidence level
+  - A verdict on each claim you gave, from accurate or partly accurate to anachronistic or myth
+  - Details of daily life you can use in a scene
+  - Named debates among historians and kinds of source to check
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Give the time and place, then paste the scene or notes. Say what is made up on purpose.
+  - Type "Check this scene for anachronisms and myths", "Give me daily-life detail for this place and year" or "Is this claim accurate?"
+  - Read the anachronism list first, then the confidence levels. Treat anything marked debated or guesswork as open.
+  - Check key facts in a book or library before you publish. The AI works from general knowledge and can be wrong, and it cannot look anything up.
+how_it_works:
+  - title: Pin down the setting
+    text: It fixes the time and place and asks if either is too loose to check, such as a whole era or a whole continent.
+  - title: Check the economic base
+    text: It reviews food, farming, trade and tools first, because they limit everything else.
+  - title: Layer society
+    text: It adds power, class, gender roles, belief and law, with local variation noted.
+  - title: Test each claim
+    text: It rates each claim as accurate, partly accurate, anachronistic or a myth, with the reason and a confidence level.
+  - title: Add period detail
+    text: It adds everyday detail you can use, such as meals, clothes, sounds and work, marked with how well it is documented.
+  - title: Name the limits
+    text: It names where historians disagree, which parts are guesswork and what to check in a real source.
+output_shape: |-
+  PERIOD REPORT: <time and place>
+    Confidence: <well documented, scholarly agreement, debated or guesswork>
+    Material culture: <food> | <clothing> | <buildings> | <tools and technology> | <money and trade>
+    Society: <who holds power and why> | <class and movement between classes> | <gender roles and local variation> | <belief and practice> | <law, formal and customary>
+    Daily life: <sounds, smells, rhythms of the day>
+
+  ANACHRONISMS
+    <item> | <why it is wrong> | <what would be accurate> | <confidence>
+
+  MYTHS
+    <myth> | <what the evidence shows> | <kind of source> | <confidence>
+
+  CLAIM CHECK
+    <claim> | <accurate, partly accurate, anachronistic or myth> | <evidence> | <confidence and why>
+
+  WHERE HISTORIANS DISAGREE
+    <question> | <main views>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <what to check and where>
+output_sample:
+  input:
+    - The time and place of your setting
+    - A scene, setting notes or claims to check
+    - What is made up on purpose
+    - Sources you trust (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Period report
+      contains: Food, clothes, buildings, tools, money, power, class, belief, law and daily life for your time and place.
+    - name: Anachronisms
+      contains: Each slip in your text, why it is wrong, and what would be accurate.
+    - name: Myths
+      contains: Common false beliefs about the period, with the correction and a confidence level.
+    - name: Claim check
+      contains: A verdict on each claim you gave, with the evidence and how sure the AI is.
+    - name: Where historians disagree
+      contains: Open questions, with the main views, so you know what is not settled.
+    - name: Open questions and checks
+      contains: Facts to confirm in a book or library, and what to look for.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A long chat lets it track your timeline and flag a new detail that clashes with an earlier one.
+  inputs:
+    - A year range and a region, such as a city and a decade, not a whole era.
+    - The scenes or chapters you have written, pasted in full.
+    - The books you already use for research, so it can point out where they differ.
+terms:
+  - term: Anachronism
+    meaning: Something placed in the wrong time, such as a food, tool or idea that did not exist yet.
+  - term: Material culture
+    meaning: The things people made and used, such as food, clothes, buildings and tools.
+  - term: Primary source
+    meaning: A record from the time, such as a letter, a law or an account book.
+  - term: Scholarly consensus
+    meaning: A view most historians who study the topic agree on.
+  - term: Presentism
+    meaning: Judging people of the past only by today's standards.
+tweaks:
+  - what: Task
+    how: Ask for one thing at a time, such as only the myths, or only the daily-life detail.
+  - what: Region
+    how: Name the region first. Add "include non-European views" if your setting sits in Europe and you want contrast.
+  - what: Strictness
+    how: Say if you want a strict check or a loose one for a fantasy world inspired by history.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

@@ -28,11 +28,11 @@ how_to_use:
   - Review the result before approving external actions.
 how_it_works:
   - title: Azure least access role picker
-    text: Describe what an identity must do. Get the narrow Azure role that fits, with reasons.
+    text: Describe what an identity must do. Get the narrow Azure role that fits, with reasons. Hands the preflight step the chosen role.
   - title: Bicep deployment preflight checker
-    text: Share your Bicep deployment. Get syntax, permission and proposed-change checks before it goes live.
+    text: Share your Bicep deployment. Checks its permissions against the role from step 1. Get syntax, permission and proposed-change checks before it goes live. Hands the rollout step the checks and proposed changes.
   - title: Service rollout and rollback planner
-    text: Share a release or infrastructure change. Get preflight checks, rollout stages, health signals and a rollback plan.
+    text: Share a release or infrastructure change. Uses the role and the preflight results from steps 1 and 2. Get preflight checks, rollout stages, health signals and a rollback plan.
 output_shape: |-
   Role recommendations
   Preflight findings
@@ -55,3 +55,26 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - The access you need is an Entra ID directory role, such as managing users or groups. Those are not Azure roles, so this workflow will not fit.
+  - You want an Azure cost or price estimate. Use the Azure resource cost reviewer or the Azure price estimate researcher.
+  - Your deployment already failed and you need to know why. Use the Azure service health investigator.
+output_sample:
+  input:
+    - What the person, group or app must be able to do, in plain words
+    - Where the access should apply, such as one resource group
+    - Your Bicep files and the target subscription
+    - Your release window and rollback needs
+  prerequisites:
+    - An AI that can read your Bicep files
+    - The Azure CLI and Bicep CLI installed, for the live checks (without them the checks are marked not run)
+    - Azure documentation tools connected to your AI, or Microsoft's role list to check by hand
+  output:
+    - name: Role recommendations
+      contains: The narrowest role, why it fits, the scope, a CLI command and a Bicep snippet. You run the command.
+    - name: Preflight findings
+      contains: Syntax errors, permission problems and a preview of what the deployment would change, in preflight-report.md.
+    - name: Rollout and rollback plan
+      contains: Preflight checks, rollout stages, health signals and the rollback steps.
+    - name: Final summary
+      contains: Unresolved findings, missing facts and one next action.

@@ -20,14 +20,14 @@ outputs:
   - {type: plan}
 uses: [winning-hook-rubric-builder, video-ad-script-type-picker, quote-video-ad-script, selfie-style-ad-script, podcast-style-ad-script, founder-video-ad-script-writer, video-ad-script-line-checker, video-ad-shot-list-maker, pre-launch-ad-checker]
 steps:
-  - {uses: winning-hook-rubric-builder, note: "Only when six or more of your own videos have results and their words are on file: what the winners' openings do, and a grade for this week's draft openings."}
-  - {uses: video-ad-script-type-picker, note: "Every week: picks three or four script types that differ, from the buyer, the proof and the length."}
-  - {uses: quote-video-ad-script, note: "Only when the type is built on real customer words: a sourced script with checked openings."}
-  - {uses: selfie-style-ad-script, note: "Only when the type is a creator talking to camera about a doubt."}
-  - {uses: podcast-style-ad-script, note: "Only when the type is a two-person talk that answers a doubt."}
-  - {uses: founder-video-ad-script-writer, note: "Only when the founder's own words are on file."}
-  - {uses: video-ad-script-line-checker, note: "For each script: weak lines and a score out of 100. Fixed and checked again until it passes, three rounds at most."}
-  - {uses: video-ad-shot-list-maker, note: "For each script that passes: timed clips, one prompt per clip and an edit list."}
+  - {uses: winning-hook-rubric-builder, note: "Only when six or more of your own videos have results and their words are on file: what the winners' openings do, and a grade for this week's draft openings. Hands the rubric to the script steps, which grade each draft opening with it."}
+  - {uses: video-ad-script-type-picker, note: "Every week: picks three or four script types that differ, from the buyer, the proof and the length. Uses your buyer, proof and length, not step 1's rubric; hands the script types and the length to steps 3 to 6."}
+  - {uses: quote-video-ad-script, note: "Only when the type is built on real customer words: a sourced script with checked openings. Uses the reviews and the type from step 2; hands back a script for step 7."}
+  - {uses: selfie-style-ad-script, note: "Only when the type is a creator talking to camera about a doubt. Uses your brief and reviews and the type from step 2, not step 3's script; hands back a script for step 7."}
+  - {uses: podcast-style-ad-script, note: "Only when the type is a two-person talk that answers a doubt. Uses your brief and reviews and the type from step 2, not step 4's script; hands back a script for step 7."}
+  - {uses: founder-video-ad-script-writer, note: "Only when the founder's own words are on file. Uses your brief, brand brain and the founder's own words, not step 5's script; hands back a script for step 7."}
+  - {uses: video-ad-script-line-checker, note: "For each script: weak lines and a score out of 100. Fixed and checked again until it passes, three rounds at most. Hands back the weak lines and fixes; the fixed script that passes goes to step 8."}
+  - {uses: video-ad-shot-list-maker, note: "For each script that passes: timed clips, one prompt per clip and an edit list. Works from the fixed scripts that passed step 7, not the report itself; hands the shot list and clip prompts to step 9."}
   - {uses: pre-launch-ad-checker, note: "For each script and shot list before hand-back: stop-ship items are fixed and checked again, two rounds at most."}
 schedule: "Every Monday, after last week's video results are in"
 asks_before: [making clips with a video tool that bills credits, uploading or publishing any ad, changing a live ad account, spending any ad budget, using a customer's words or a founder's name when no source is on file]

@@ -1,6 +1,6 @@
 new_slug: cover-an-earnings-release-from-preview-to-written-update
 name: Cover an earnings release from preview to written update
-summary: Give it the company and the release. Get a preview, a tone read, a recap and an update.
+summary: Write an earnings preview, tone read, recap and written update for a listed company. Give it the company, then the release and call transcript.
 job: money-and-investing
 thinking: high
 thinking_why: It reads financial statements and management's words and separates fact from spin. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You write a newsletter or internal note on companies you follow.
   - You hold a stock and want a disciplined read of each quarter.
   - Your past write-ups repeated the headline and missed the shift in tone.
+not_for:
+  - "You follow a private company or have no release and transcript: write notes by hand or ask your AI for a plain summary of what you do have."
+  - "You only want a note before the release: run the earnings-preview-writer skill by itself."
+  - "You want the real earning power in an annual report: use the Debt and preferred dividend coverage checker, or a person who reads accounts."
 you_give:
   - The company and what you already think matters
   - "After the release: the release and the call transcript"
@@ -29,6 +33,26 @@ how_to_use:
   - Paste the company and what you think matters. It writes the preview before the release.
   - After the call, paste the release and the transcript. It reads the tone and writes the recap.
   - Read the update, check every number against the release, and publish or file it.
+output_sample:
+  input:
+    - The company and what you already think matters
+    - The earnings release, pasted after it comes out
+    - The call transcript, pasted after the call
+    - Your past notes on the company (optional)
+  prerequisites:
+    - An AI that can read long pasted text
+    - A pause after step 1, until the release and call are out
+  output:
+    - name: Preview
+      contains: What matters this quarter, the numbers to watch, what would count as a surprise and questions you hope are asked.
+    - name: Tone read
+      contains: Where management was confident, hedged or dodged questions, and how the tone compares with last quarter.
+    - name: Recap
+      contains: The quarter against the preview, with every number sourced to the release.
+    - name: Written update
+      contains: What changed, what did not and what to watch next quarter, with no buy or sell advice.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Write the preview
     text: Writes what matters this quarter, the numbers to watch and what would count as a surprise.

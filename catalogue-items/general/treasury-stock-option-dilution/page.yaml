@@ -1,7 +1,7 @@
 new_slug: treasury-stock-option-dilution
 name: Treasury-stock option dilution
 headline: Treasury-stock option dilution
-summary: Use option terms and average share prices to reconcile incremental diluted shares.
+summary: Work out treasury stock method dilution from your option terms and average share price. You get incremental shares and a diluted EPS check.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -11,9 +11,13 @@ explain: |-
 
   Public equity and share counts. Illustrative figures. Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million incremental shares produce 208 / 104 = $2 EPS. At $10 exercise price there is no incremental dilution.
 when:
-  - You need a treasury-stock-method option schedule with out-of-money and diluted-EPS checks.
-  - You work on public equity and share counts and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You need to find the extra shares that stock options add to a diluted share count.
+  - You must show a reviewer how diluted EPS was reached, from the option terms to the result.
+  - You want to test whether options at a given exercise price dilute at all at the average share price.
+not_for:
+  - "You have several option classes, restricted units or tax-affected awards: this schedule covers one option class, so use a full diluted-EPS model built by your accountant."
+  - "You need a legal reading of the option contract or a view on whether to invest: ask a qualified adviser, because this only does the arithmetic."
+  - "You only need basic EPS with no options or other dilutive items: divide earnings by basic weighted shares in a simple spreadsheet."
 you_give:
   - Weighted options, exercise proceeds including applicable assumed proceeds, average market price, basic weighted shares and continuing ordinary earnings.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,31 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Number of options (weighted) and their exercise price
+    - Average market price for the period
+    - Basic weighted shares
+    - Continuing ordinary earnings
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Treasury-stock-method option schedule
+      contains: Assumed proceeds, hypothetical share buyback and incremental shares, with out-of-money options counted as zero.
+    - name: Diluted-EPS checks
+      contains: Candidate diluted EPS against basic EPS, with anti-dilution and time-weighting checks before the shares are included.
+    - name: Scope and dated sources
+      contains: The sources used, with their dates, currency and scale.
+    - name: Inputs and assumptions
+      contains: Each input and assumption, kept apart from reported facts.
+    - name: Model calculations and reconciliations
+      contains: The workings and the independent comparisons that explain any differences.
+    - name: Actual file verification
+      contains: Which workbook checks ran, such as recalculation, a changed input and reopening the saved file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and checks that failed or could not run, or the word none.
 how_it_works:
   - title: 1. Read the option terms and identify instruments eligible for the treasury-stock method; determine all assumed proceeds required by the applicable standard
     text: Read the option terms and identify instruments eligible for the treasury-stock method; determine all assumed proceeds required by the applicable standard.

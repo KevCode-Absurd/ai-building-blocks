@@ -1,6 +1,6 @@
 new_slug: process-waste-walk-planner
 name: "Process waste walk planner"
-summary: "Paste a process step by step. Get every kind of waste in it named, with the first one to remove."
+summary: "Find the waste in your process. Paste the steps and get each kind of waste named, plus the first one to remove and a number to watch."
 job: organise-work
 thinking: medium
 thinking_why: "It judges every step against one question and reasons through a cause chain."
@@ -17,6 +17,10 @@ when:
   - "A job that should take a day takes a week and nobody can say why."
   - "The same mistake keeps coming back after you fixed it."
   - "You are about to hire to handle volume and suspect the process is the problem."
+not_for:
+  - "You do only one task once, or have not written the steps down yet: list the steps first, then come back."
+  - "You want to write down a process that already works: use the Repeat task how-to writer."
+  - "You want a new idea or plan, not a review of an existing process: ask a person on your team to talk it through with you."
 
 you_give:
   - "The steps in order, with who and how long, including waits"
@@ -34,6 +38,27 @@ how_to_use:
   - "Add who the customer is and the step people dread."
   - "Read THE STEPS. If a label is wrong, say why and run again."
   - "Make the REMOVE FIRST change and watch its number for two weeks."
+output_sample:
+  input:
+    - Your process, step by step, with who does each step and how long it takes
+    - Who the customer is and what they want at the end
+    - What goes wrong, such as rework or complaints (advised)
+    - Volume per week and error rate (optional)
+  output:
+    - name: THE STEPS
+      contains: Each step with who does it, working time, waiting time, and a label of value, needed waste or waste.
+    - name: TOTALS
+      contains: Total working time, total waiting time, and how many steps add value.
+    - name: WASTE FOUND
+      contains: Each waste step with its kind of waste and the evidence for it.
+    - name: WHERE MISTAKES TRAVEL
+      contains: Where an error first appears, where it is caught, and where a check should go.
+    - name: FIVE WHYS
+      contains: A chain of why questions on the biggest waste, with guesses marked.
+    - name: REMOVE FIRST
+      contains: The waste to remove first, the new process, who changes what, and the number to watch.
+    - name: MISSING
+      contains: Times, owners or facts you did not give.
 
 how_it_works:
   - title: "Lays out the steps"

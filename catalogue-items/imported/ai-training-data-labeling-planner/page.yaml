@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: ai-training-data-labeling-planner
 name: AI training data labeling planner
-summary: Share examples and the task. Get label rules, reviewer guidance, quality checks, and a sampling plan.
+summary: Plan how to label data for your AI. Give it the task and sample records. You get label rules, reviewer guidance, quality checks and a sampling plan.
 job: teach-and-train
 headline: AI training data labeling planner
 subhead: Share the task your AI will learn, example records, and labeling limits. It defines labels, edge cases, reviewer guidance, and a fair way to sample records. You get a labeling plan and quality checks that preserve uncertainty and disagreements instead of forcing agreement.
+not_for:
+  - "You need statistical power or sample size maths: ask a data scientist or a stats tool."
+  - "You want to train or test a model: use your machine-learning engineer or a training tool."
+  - "You need to store data or build a data pipeline: ask a data engineer."
 you_give:
   - The downstream task, example items, population, rights and access limits, budget, and reviewers.
 you_get:
@@ -28,3 +32,22 @@ how_to_use:
   - Give the task, example records, rights limits, reviewers, budget, and what a useful label means.
   - Ask for label rules, reviewer guidance, sampling, and quality checks. Keep proposed roles and unresolved rights clear.
   - The source also names separate jobs for statistics, data storage, model training, and interface design. Those optional specialist skills are not required for labeling and are not included.
+output_sample:
+  input:
+    - The task your AI will learn
+    - A few example records
+    - Where the data comes from and what rights you have
+    - Your budget and who will review (optional)
+  prerequisites:
+    - An AI that can read the downloaded folder of reference files and templates
+  output:
+    - name: Annotation plan
+      contains: The task, the label unit, the sampling mix, the held-out check sample, and when to stop.
+    - name: Annotation guide
+      contains: Label choices with good and bad examples, edge case rules, an unsure option, and when to escalate.
+    - name: Provenance and rights record
+      contains: Where data came from, license or consent, sensitive fields, access, how long you keep it, and version.
+    - name: Reviewer training and calibration
+      contains: How reviewers are qualified, trained on sample items, and rechecked blind over time.
+    - name: Quality report
+      contains: Agreement by label and slice, disagreements kept visible, how they were settled, and guide fixes.

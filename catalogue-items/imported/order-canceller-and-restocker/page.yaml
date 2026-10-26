@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a short, checked set of steps.
 new_slug: order-canceller-and-restocker
 name: Order canceller and restocker
-summary: Name the order. Get it cancelled, stock put back and the customer told,
-  as you choose. Cancels a live order.
+summary: Cancel a Shopify order, put the stock back and tell the customer, as you choose. Preview first, since a cancelled order can't be reopened.
 job: run-your-store
 headline: Order canceller and restocker
-subhead: Name the order. Get it cancelled, stock put back and the customer told,
-  as you choose. Cancels a live order. Bring store domain. Use the result to
-  plan your next step.
+subhead: Name the order. Get it cancelled, stock put back and the customer told, as you choose. Cancels a live order. Bring store domain. Use the result to plan your next step.
 explain: |
   Cancel a Shopify order, put the items back in stock, refund the money and email the customer, all in one step and in the way you choose. It saves the trip through several admin screens.
 
@@ -18,6 +15,10 @@ when:
   - A fraud check failed before the order shipped.
   - A customer asks to cancel before dispatch.
   - You want to confirm an order can be cancelled before doing it.
+not_for:
+  - "The order has shipped in full: cancelling won't work, so refund the customer in your Shopify admin or ask your support person."
+  - "The warehouse has started picking or packing: ask the warehouse to stop first, then cancel once they confirm."
+  - "You only want to look up an order or find its ID: search for it in your Shopify admin orders list."
 you_give:
   - Store domain
   - Order ID
@@ -30,8 +31,30 @@ you_get:
   - Stock restored and refund issued as chosen
   - A summary of what changed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Open your AI tool and paste in the skill. It needs to run commands, so use one that can, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Sign in to your store with the Shopify CLI first, using an account that can read and change orders.
+  - Give your AI the store domain, the order ID, the reason and your restock, refund and email choices.
+  - Ask for a dry run first. Check the order name and what would change.
+  - If it looks right, tell your AI to run it for real. Cancelling can't be undone.
+  - Read the summary at the end and check the order in your Shopify admin.
+output_sample:
+  input:
+    - Your store domain
+    - The order ID
+    - "A cancel reason: customer, fraud, inventory, declined, staff or other"
+    - Your choices to restock, refund and email the customer
+    - An internal note (optional)
+  prerequisites:
+    - An AI that can run commands, with a signed-in Shopify CLI session
+    - Order read and write access on your store
+  output:
+    - name: Order check
+      contains: The order name, fulfilment and payment status, and whether it can still be cancelled.
+    - name: Dry run preview
+      contains: What would change if you went ahead, shown before anything is cancelled.
+    - name: Cancellation
+      contains: The live order is cancelled with your reason, and refund, restock and email applied as chosen.
+    - name: Outcome summary
+      contains: Order name, reason, and whether stock was restored, a refund was issued and the customer was told.
+    - name: Restocked items
+      contains: The SKUs and quantities put back in stock, when restock is on.

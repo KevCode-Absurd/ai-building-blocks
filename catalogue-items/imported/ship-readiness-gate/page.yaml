@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs a checklist and judges the results.
 new_slug: ship-readiness-gate
 name: Ship readiness gate
-summary: Before you release. Get a go or no-go from set checks, with the
-  blockers listed.
+summary: Run a ship readiness check on your code before you go live. Get a go or no-go verdict and a list of blockers to fix first.
 job: ship-and-host
 headline: Ship readiness gate
-subhead: A clear go or no-go before you push code live, with the blockers listed
-  so you know what to fix first. It catches the problems that usually show up
-  after launch.
+subhead: A clear go or no-go before you push code live, with the blockers listed so you know what to fix first. It catches the problems that usually show up after launch.
 explain: |
   A clear go or no-go before you push code live, with the blockers listed so you know what to fix first. It catches the problems that usually show up after launch.
 
@@ -18,18 +15,45 @@ when:
   - You built something quickly and are unsure what you missed.
   - Your team needs a repeatable pre-launch checklist that works on any stack.
   - You want a hard stop if someone says "ship it" before checks pass.
+not_for:
+  - "You need to set up CI/CD or build servers: use your host's own setup guide or a developer, since this gate only checks code."
+  - "You want the problems fixed for you: the gate only reports them, so ask your AI to fix each blocker in a new chat."
+  - "Your app is already live: this gate runs before release only, so use your error monitoring tool after launch."
 you_give:
   - Your code project folder
   - The stack, if it is unusual (optional)
   - What counts as critical for you (optional)
 you_get:
-  - A pass, fail or manual result for each check
-  - A list of blockers to fix before release
+  - A pass, fail, skip or manual result for each check
+  - A list of blockers with file locations
   - A go or no-go verdict
   - A prompt to re-scan after changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini with a tool that can read your project folder and run code.
+  - Paste the skill instructions, or upload the skill folder.
+  - Say "Run the ship gate" and share your project folder. Add your stack or what counts as critical if you want.
+  - Read the stack your AI detected and fix it if it is wrong.
+  - Answer the manual checks, then read the verdict and the critical items first.
+  - Fix the blockers, then ask your AI to run the gate again.
+output_sample:
+  input:
+    - Your code project folder
+    - The stack, if it is unusual (optional)
+    - What counts as critical for you (optional)
+  prerequisites:
+    - An AI that can read your project files and run code
+  output:
+    - name: Detected stack
+      contains: The framework, database, host, sign-in tool and AI services found in your project, before any checks run.
+    - name: Category progress lines
+      contains: A pass, fail and skip count for each of the eight areas as they finish.
+    - name: Manual checklist
+      contains: Checks that cannot be scanned, such as a tested backup or a rollback plan, for you to confirm.
+    - name: Critical items
+      contains: Blockers you must fix before release, each with its check code and file location.
+    - name: High items
+      contains: Problems you should fix before release, such as stray debug logs or missing rate limits.
+    - name: Advisory items
+      contains: Nice-to-have fixes that do not block release, such as social preview tags.
+    - name: Verdict
+      contains: Do not ship, ship with caution, or clear to ship, with a prompt to re-run after fixes.

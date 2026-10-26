@@ -1,52 +1,87 @@
 new_slug: prepare-your-first-freelance-project-quote
 name: Prepare your first freelance project quote
 headline: Prepare your first freelance project quote
-summary: Share the source files. Get a scoped proposal draft, price assumptions and a contract review list.
+summary: Turn a website project brief into a freelance quote with a clear scope, price assumptions and a list of contract risks to check before you send it.
 job: set-prices
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A scoped proposal draft, price assumptions and a contract review list. Share website project scope, deliverables, revision limits, estimated effort, costs and your payment terms. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI what the client asked for, your hours, your costs and your payment terms. It sets the scope, drafts the freelance quote with your price assumptions, then lists the contract terms that need a second look.
 explain: |-
-  A scoped proposal draft, price assumptions and a contract review list.
+  A first freelance quote often fails in the same way. The scope is loose, so the client expects more than you priced. Then the contract says nothing clear about revisions, ownership or when you get paid.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Deliverables and exclusions are explicit; taxes and legal terms remain for qualified review. Missing tools or evidence stay visible in the final summary.
+  This workflow fixes the order. First it turns the request into a short list of things you will deliver, things you will not, and how the client accepts the work. Only then does it draft the quote from that scope and the hours, rates and costs you give it. It never picks a rate for you. Last, it reads the draft the way a client's lawyer might and lists unclear terms about acceptance, payment, ownership and revisions.
+
+  It prepares a draft and a checklist. It does not give legal or tax advice, and it does not send anything to your client. If you have a lawyer or a contract template, show them the contract review list.
 when:
-  - You need a scoped proposal draft, price assumptions and a contract review list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A client has asked for a website and you need to send your first quote.
+  - You priced a project by gut and want to see what the quote would look like with the hours and costs written down.
+  - A client sent a short brief and you need to turn it into deliverables and exclusions before you name a price.
+  - You want to know which contract terms to fix before you sign a freelance agreement.
+not_for:
+  - You and the client already signed a price. If the client now wants more, use the Prepare a client scope change brief workflow.
+  - You want to compare your rate to the market or choose between pricing models. Use the Three-tier price ladder drafter.
+  - You need a legal opinion or tax advice. A lawyer or accountant has to give that. This workflow only lists what to ask them.
+  - The project is not a website, such as a retainer or an app. The scope step assumes a website.
 you_give:
-  - Website project scope, deliverables, revision limits, estimated effort, costs and your payment terms.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - What the client asked for, as an email, a call note or a short brief
+  - Pages or features you plan to build, and how many rounds of revisions you will allow
+  - Your estimated hours per task, your hourly or day rate, and costs such as hosting, stock photos or plugins
+  - Your payment terms, such as deposit, due dates and late fees
+  - The client's country and yours, so the contract review names the right rules (optional)
 you_get:
-  - A scoped proposal draft, price assumptions and a contract review list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A scope list with what you will deliver, what you will not, and how the client accepts the work
+  - A quote draft built from that scope, with each price line and its assumption
+  - A list of price assumptions to confirm with the client, such as content supplied late
+  - A contract review list of unclear terms on acceptance, payment, ownership and revisions
+  - A hand-back summary that names every gap and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini. Add the three skills it names.
+  - Paste the client's request, then your hours, rate, costs and payment terms. Say where you are based and where the client is.
+  - Read the scope list first. Fix anything the client has not agreed to, because the quote and the contract review both build on it.
+  - Check each price line against your own hours and rate. Fill every MISSING line before you send anything.
+  - Show the contract review list to a lawyer or a contract template you trust. Send the quote only when you are happy with it. Nothing here sends it for you.
 how_it_works:
   - title: Web project scoper
-    text: Turn the request into bounded deliverables, dependencies, exclusions and acceptance criteria.
+    text: "Turns the client's request into a list of deliverables, what is not included, what the work depends on, and how the client accepts it. Hands step 2 the scope. Check before moving on: every deliverable has a clear finish line."
   - title: Contract and proposal drafter
-    text: Draft a proposal from the agreed scope and supplied price assumptions without inventing commitments.
+    text: "Writes the quote from the scope and the hours, rates and costs you supplied, with each assumption stated. It does not invent a rate, a discount or a promise. Hands step 3 the draft."
   - title: Contract risk reviewer
-    text: Flag unclear acceptance, payment, ownership and revision terms for the appropriate reviewer.
+    text: "Reads the draft for unclear acceptance, payment, ownership and revision terms. Lists each one with why it matters and what to ask a qualified reviewer."
 output_shape: |-
-  Scope and source coverage
-  A scoped proposal draft, price assumptions and a contract review list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE            <deliverables | not included | dependencies | how the client accepts>
+  QUOTE DRAFT      <line | hours | rate | cost | assumption>, total <n>, payment terms <as given>
+  PRICE ASSUMPTIONS <each assumption the price depends on, to confirm with the client>
+  CONTRACT REVIEW  <term | what is unclear | why it matters | question for your reviewer>
+  MISSING          <each gap and the line it stops>
+  CHECKS MISSED    <one line each, or none>
+  NEXT STEP        <one step>
+output_sample:
+  input:
+    - The client's request, as an email, a call note or a short brief
+    - Your hours, rate and costs for the website
+    - Your payment terms and revision limit
+    - Your country and the client's (optional)
+  prerequisites:
+    - An AI that can read what you paste or attach, such as Claude, ChatGPT or Gemini
+    - The pack with its three component skills
+  output:
+    - name: Scope list
+      contains: What you will deliver, what you will not, what it depends on, and how the client accepts the work.
+    - name: Quote draft
+      contains: Each price line with its hours, rate and cost, the total, and your payment terms as you gave them.
+    - name: Price assumptions
+      contains: The things the price depends on, written so you can confirm each with the client.
+    - name: Contract review list
+      contains: Unclear terms on acceptance, payment, ownership and revisions, each with a question for a qualified reviewer.
+    - name: Hand-back summary
+      contains: Each saved file, every MISSING line, the checks that did not run and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Deliverables and exclusions are explicit; taxes and legal terms remain for qualified review.
+  - what: Project size
+    how: Say if it is a one-page site or a larger build. The scope list gets shorter or longer to match.
+  - what: Pricing style
+    how: Say if you want a fixed price, hourly or a deposit plus milestones. The quote lines follow that style.
+  - what: Revisions
+    how: State how many rounds you allow. The scope and the contract review both use that number.
 judge:
   - Deliverables and exclusions are explicit; taxes and legal terms remain for qualified review.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -64,11 +99,17 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read your brief and write the quote. Pick one that can open files if you want to attach the client's email.
+    - name: A lawyer or a contract template you trust
+      why: The contract review list says what to ask. A qualified person decides what to change.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A past quote or a template you like, so the draft follows your layout.
+    - A named person who will check the contract terms.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Scope
+    meaning: The exact list of what you will build and what you will not.
+  - term: Acceptance
+    meaning: How the client confirms a piece of work is done, such as a sign-off by email.
+  - term: Exclusion
+    meaning: Work that is not in the price, such as writing the site's text.

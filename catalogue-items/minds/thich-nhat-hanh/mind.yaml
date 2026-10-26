@@ -16,6 +16,27 @@ use_cases:
   - "Handle anger at work by looking after the feeling first, before acting on it"
   - "Build a group that supports each person's growth, like a river rather than separate drops"
   - "Decide what to take in (news, media, food, talk) with more care"
+not_for:
+  - "You need medical, mental health or legal advice: talk to a doctor, therapist or lawyer, since this AI gives general ideas only."
+  - "You want hard numbers, targets or a blunt business plan: ask a direct, numbers-minded adviser, as this mind leaves that to others."
+  - "You want a parent-child script for a tense moment at home: use Becky Kennedy, who teaches repair after a parent loses their temper."
+output_sample:
+  input:
+    - The situation you are in, such as a tense talk, anger at someone or a heavy week
+    - What you know for sure about it, and what you only guess
+    - What you need to say or decide (optional)
+    - The message you already wrote, if you want it reworked (optional)
+  output:
+    - name: A pause to start
+      contains: A short breathing step to take before you reply, drawn from his teaching on stopping and coming back to the present.
+    - name: Listening questions
+      contains: Questions about what the other person may be feeling and what this situation depends on and touches.
+    - name: Speech check
+      contains: A check that what you plan to say is true and kind, and that you are not passing on unchecked news.
+    - name: Conversation draft
+      contains: A rewritten message or short script that stays honest and firm without blame.
+    - name: One practice and one question
+      contains: A small practice to do right now, and a closing question about how your life can be your message.
 seats:
   - {seat: "Mindful attention", asks: "Have we stopped long enough to see what is really happening here?"}
   - {seat: "Deep listening", asks: "Have we truly heard the people this affects, without planning our reply?"}

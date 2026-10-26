@@ -1,6 +1,6 @@
 new_slug: win-back-flow-builder
 name: "Win-back flow builder"
-summary: "Give it your order gaps and discount room. Get a win-back flow timed to how your buyers actually reorder."
+summary: "Build a win-back email flow timed to how often your customers reorder. Give it your order gaps and discount room. Get a trigger day and emails."
 job: write-emails
 thinking: medium
 thinking_why: "It turns order data into a trigger day and a short flow. A mid-size model is enough, but it should show its working on the numbers."
@@ -17,6 +17,10 @@ when:
   - You send a win-back email at 90 days because that is what the tool suggested.
   - Many past buyers have gone quiet and you want a flow to bring some back.
   - You run a subscription and want a plan for people who cancelled.
+not_for:
+  - "You have fewer than a few hundred past buyers: the order gaps will not be stable, so send regular campaigns to your list instead."
+  - "Many lapsed customers had a support ticket, a return or a bad review: fix that cause first, then run this flow."
+  - "You want to split buyers by how recently, how often and how much they spend: use a segment tool or ask a person who does email marketing."
 
 you_give:
   - The average and median days between orders, from your email tool or order data
@@ -37,6 +41,30 @@ how_to_use:
   - Check your lapsed list for tickets, returns and 1-star reviews before you build.
   - Build the three-email flow first. Add the longer version only if the first one earns.
   - Compare reactivated buyers with your own history, not with the benchmarks.
+output_sample:
+  input:
+    - The average and median days between your customers' orders
+    - Your discount policy and margin
+    - Your best sellers and recent launches
+    - Support, return and review data for lapsed customers (optional)
+    - Whether you run a subscription and record cancel reasons (optional)
+  output:
+    - name: List check
+      contains: The share of lapsed customers with a ticket, return or 1-star review, and whether to fix that first.
+    - name: Trigger day and exit
+      contains: The day a buyer counts as lapsed, with the sum shown, and a rule that removes anyone who orders.
+    - name: Emails
+      contains: Three to six outlines with timing, purpose and offer, from a no-discount reminder to a last call.
+    - name: Offer ladder
+      contains: Offers that grow in steps, with a margin floor that no step goes below.
+    - name: Segment
+      contains: A definition of recent but quiet buyers for extra campaigns, to adjust to your buying cycle.
+    - name: SMS
+      contains: "Two texts for buyers who agreed to get them: a flash offer and a last call."
+    - name: Subscriber cancel branch
+      contains: Short emails for people who cancelled, split by reason, if you run a subscription.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any facts you did not give.
 
 how_it_works:
   - title: Checks the list first

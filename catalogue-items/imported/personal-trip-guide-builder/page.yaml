@@ -2,14 +2,26 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: personal-trip-guide-builder
 name: Personal trip guide builder
-summary: Share your trip dates, needs, and budget. Get a sourced plan with daily stops, breaks, and alternatives.
+summary: Build a personal trip guide from your dates, group, budget and needs. You get a sourced day-by-day plan with breaks and backup options.
 job: organise-work
 headline: Personal trip guide builder
-subhead: Share your destination, dates, travel group, budget, and needs. It checks current travel facts and builds a plan that fits your pace. You get a sourced trip guide, with optional printable or web versions. PDF output needs a browser or document renderer.
+subhead: Give your AI your destination, dates, group, budget and needs. It checks current travel facts and builds a plan that fits your pace. You get a sourced trip guide, as a PDF or a web page if you ask.
+not_for:
+  - "You want to book flights, hotels or tickets: use the booking site or a travel agent, since this skill only plans."
+  - "You need visa, health or legal advice: check the government site or ask a qualified person."
+  - "You only want a general summary of a place with no set trip: a normal chat question or a guidebook is enough."
 you_give:
-  - Destination, dates, travelers, budget, mobility or food needs, and the audience for the guide.
+  - Your destination or route.
+  - Your travel dates, or the season.
+  - Who is travelling, and any mobility, food, language or booking needs.
+  - Your budget and currency (optional).
+  - "Who the guide is for: you, your group, or wider sharing."
 you_get:
-  - A sourced itinerary and trip brief, with private or shareable editions when requested.
+  - A trip theme and a short note on why the trip fits your group.
+  - A few anchor experiences, each with timing, cost and what could go wrong.
+  - A day-by-day plan with a meal, a walk, a rest and a backup for each day.
+  - A list of sources with the date each was checked.
+  - A shareable copy with private details removed, if you ask.
 how_it_works:
   - title: Define the trip
     text: Confirm the route, dates, people, pace, limits, and how the plan will be shared.
@@ -26,5 +38,42 @@ works_best_with:
   inputs:
     - The redaction helper handles named fields. Manually check free text, photos, and links before sharing.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Use an AI that can search the web. A chat alone is fine for a short plan. A PDF or web page needs an AI that can run files and Python scripts.
+  - Paste the skill's instructions into a new chat, or upload the skill folder if your AI accepts files.
+  - Tell your AI your destination, dates, group, budget, needs and who the guide is for.
+  - Answer the few questions it asks. They only cover things that change the plan.
+  - Check the sources and any cost or opening hour marked as uncertain before you rely on them.
+  - For a PDF, open the page in a browser that can print to PDF and look at every page. If you plan to share it, ask for the shareable copy and read it for private details.
+output_sample:
+  input:
+    - Your destination or route
+    - Your travel dates, or the season
+    - Who is travelling, and any mobility, food or language needs
+    - Your budget and currency (optional)
+    - "Who the guide is for: just you, your group, or wider sharing"
+  prerequisites:
+    - An AI that can search the web for current travel facts
+    - A browser or document tool that can make a PDF (only if you want a PDF)
+    - Python 3.8 or newer, if your AI runs the bundled check and layout scripts
+  output:
+    - name: Cover
+      contains: The destination, a one-line trip theme, the length or route, and an image credit.
+    - name: The brief
+      contains: Why this trip fits these travellers, in a short note.
+    - name: Anchors
+      contains: A few top experiences, each with why it fits, best timing, cost, and what could go wrong.
+    - name: Day architecture
+      contains: Each day built around one anchor, a meal, a walk, a rest stop and a backup plan.
+    - name: Make it special
+      contains: Specific touches that a plain web search would not give you.
+    - name: Practical field notes
+      contains: Transport, bookings, local manners, costs and cautions.
+    - name: Skip this
+      contains: Well-known options that are a poor fit for you, where they exist.
+    - name: Sources and freshness
+      contains: Links, the date each was checked, and what is still unknown.
+when:
+  - You have a trip coming up and want a plan built around your group, not a generic list.
+  - Someone in your group has a mobility or food need that shapes each day.
+  - You want a printable guide or a web page to share with your travel companions.
+  - You want a private version for yourself and a cleaner version to share.

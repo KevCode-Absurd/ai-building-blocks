@@ -2,37 +2,62 @@ slug: guru
 name: Guru
 maker: Guru
 url: https://www.getguru.com
-promise: "Find cited answers in company knowledge that your team’s experts can check and update."
+promise: "Give staff expert-checked answers from company knowledge, inside Slack and Teams."
 use_cases: [organise-work, research]
 categories: [productivity, sales-and-support]
 what_it_does:
-  - Gathers company knowledge from the apps your team uses.
-  - Answers questions in chat with citations.
-  - Lets experts verify cards so answers stay current.
-  - Sends answers to Slack, Teams and the browser.
-  - Shows which knowledge is out of date.
+  - "Gathers company knowledge from more than 100 tools, including Slack, Microsoft Teams, Salesforce, Zendesk, Confluence and SharePoint (checked 26 Oct 2026)."
+  - "Answers questions with AI search and Knowledge Agents (checked 26 Oct 2026)."
+  - "Runs verification workflows, so experts can check what the AI draws on (checked 26 Oct 2026)."
+  - "Automates knowledge quality, to help keep content current (checked 26 Oct 2026)."
+  - "Sends knowledge to other AI tools through MCP (checked 26 Oct 2026)."
 benefits:
-  - "Give staff answers with links they can check."
+  - Give staff one place to ask, instead of pinging the same expert.
   - Cut repeat questions to your experts.
-  - Find out which help pages have gone stale.
-  - Show where each answer came from.
+  - Keep a check by a named person on the content behind answers.
+  - "Control who sees what. It lists permission-aware answers, SSO and audit logs (checked 26 Oct 2026)."
 best_for:
   - "Support and sales teams that need shared company knowledge."
   - Companies where policies and product facts change often.
-  - Teams that want answers inside Slack or the browser.
+  - "Teams with security rules to meet. It lists SOC 2 Type II, HIPAA and GxP (checked 26 Oct 2026)."
 not_for:
-  - Solo owners, since it is sold to companies through a sales call.
-  - Teams with no one to look after the knowledge.
+  - "Solo owners, since it is sold to companies through a sales call. Try Notion AI or ChatGPT with your own files."
+  - "Teams with no one to look after the knowledge. Experts have to verify content."
+  - "Customer-facing chat on your site. Intercom Fin is built for that."
 pricing:
   model: enterprise
   from: Check the maker's site
-  note: No public prices. The maker sets a package after a first conversation with its team. Reduced pricing exists for eligible non-profits.
+  note: "No public prices (checked 26 Oct 2026). The page says pricing is custom, based on your scale, how complex your knowledge is and your AI maturity. The package covers the platform, a Guru strategy team and governance. The first conversation is a working session with its sales team. A free trial and self-serve sign-up are not stated. The Guru for Good programme offers reduced cost to eligible 501(c)(3) non-profits."
 works_with:
   - Slack
   - Microsoft Teams
+  - Salesforce
+  - Zendesk
+  - Confluence
+  - SharePoint
 runs_in: [web, browser-extension, slack]
 blocks: []
 alternatives: [glean, notion-ai, intercom-fin, zendesk-ai]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Book a call through the Talk to sales link at getguru.com. Self-serve sign-up is not stated."
+  - "Bring a list of the tools your team keeps answers in, who answers repeat questions today, and your security rules."
+  - "Agree with Guru which apps to connect first. Start with one team and one set of questions."
+  - "Name an expert for each topic. They check the content the AI draws on."
+  - "Ask five real questions your staff ask often. Compare each answer with what the expert would say."
+needs:
+  - "A company plan agreed with Guru's sales team."
+  - "Admin access to the apps you connect, such as Slack, SharePoint or Confluence."
+  - "Named experts who will verify content."
+example:
+  task: "A new support hire asks in Slack: what is our refund window for damaged items?"
+  cost: "No public price. It is set after a call with Guru."
+  reply: "Not shown on the pages we read. We expect a short answer with a link to the source page and an expert check. We did not confirm this. Ask Guru to show it on your own content in the demo."
+not_verified:
+  - "That answers show citations, and what they look like. The pricing page does not say."
+  - "That it flags out-of-date content, beyond the knowledge quality automation it lists."
+  - "Browser delivery. Slack and Teams are listed. The browser extension is not on the page we read."
+  - "The size of the non-profit discount."
 sources:
   - https://www.getguru.com/pricing

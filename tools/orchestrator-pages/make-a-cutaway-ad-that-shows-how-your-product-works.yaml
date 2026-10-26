@@ -1,6 +1,6 @@
 new_slug: make-a-cutaway-ad-that-shows-how-your-product-works
 name: Make a cutaway ad that shows how your product works
-summary: Give it your product and buyer words. Get a cutaway image prompt that shows how it works.
+summary: Make a cutaway ad that shows how your product works. Give it your product facts and buyer words. Get one cutaway image prompt with a short headline.
 job: make-image-ads
 thinking: high
 thinking_why: It builds a claim chain and checks each link against your proof. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your product has a hidden reason it works that buyers cannot see on the shelf.
   - Your ads say "better" and "advanced" and buyers shrug.
   - You want a how-it-works picture without claims you cannot back.
+not_for:
+  - "Your product's benefit shows on the shelf or in a photo: use the Product image ad prompt writer."
+  - "You only want the cutaway prompt and already know how your product works: use the 3D cutaway image ad maker."
+  - "You want a story with many panels or slides: use the Carousel ad writer."
 you_give:
   - Your product facts, such as parts, materials and what each does
   - Buyer words from reviews, calls or surveys
@@ -33,6 +37,29 @@ how_to_use:
   - Attach your product photos and paste your facts and buyer words.
   - Mark which claims you can prove. It will not draw a link you cannot back.
   - When it pauses, make the image in your image tool, compare it with your photos and approve one.
+output_sample:
+  input:
+    - Your product facts, such as parts, materials and what each does
+    - Buyer words from reviews, calls or surveys
+    - Photos of your real product
+    - Proof you hold, such as test results (optional)
+    - Your brand brain files (optional)
+  prerequisites:
+    - An image tool to make the picture, such as ChatGPT or Gemini, because the workflow pauses for you to make it
+    - A way to approve one image before the last step
+  output:
+    - name: "Step 1: Idea and mechanism"
+      contains: The big idea, the root cause, the named way your product works, and claims that need proof.
+    - name: "Step 2: Cutaway ad"
+      contains: The chain of links, the frozen moment, a headline of seven words or fewer, labels, image prompt and feed copy.
+    - name: "Step 3: True-to-product prompt"
+      contains: A job for each photo, lock lines for details, and the prompt rewritten so the product matches yours.
+    - name: "Step 4: Check"
+      contains: Each claim and number checked against your proof, with findings and a verdict.
+    - name: "Step 5: Upscale"
+      contains: Settings for a faithful full-size image and a check that no word or part changed.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find the idea and how it works
     text: Lists what only your product has, asks why for every part, ranks the buyer pains and names the way it works in a few words.

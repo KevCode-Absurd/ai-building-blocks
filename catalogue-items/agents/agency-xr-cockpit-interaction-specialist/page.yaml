@@ -1,0 +1,125 @@
+name: XR Cockpit Interaction Specialist agent
+summary: "Plan the controls and layout of a seated XR cockpit: reach zones, input methods, feedback and comfort checks, from your task list."
+headline: XR Cockpit Interaction Specialist agent
+subhead: Give it the vehicle or station, your headset and the tasks the user must do. It plans where each control sits, how hands, voice or gaze work it and what feedback each gives. You get a control list, a layout plan and a test plan.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A cockpit in virtual or mixed reality has one job. It should make the user feel seated and in control, without feeling sick. This agent plans for a fixed seat. Controls sit within easy reach, the view stays put and nothing floats free.
+
+  It lists every control the task needs: a yoke, lever, throttle, switch, gauge or screen. For each one it picks how the user works it, with hands, voice, gaze or a physical prop. It writes the feedback too, such as a click, a light, a sound or a needle move. Then it places controls by how often they are used and how far they are to reach.
+
+  It follows the XR Cockpit Interaction Specialist profile from Agency Agents. That profile is short and gives no measured distances or sickness limits. The agent will not make any up. It points you to your headset maker's comfort guidance and gives test tasks for real users. It can sketch a simple A-Frame or Three.js layout. You test it.
+when:
+  - You are building a flight, driving, space or control-room trainer for a headset.
+  - Testers reach for controls that are too far away or hidden behind others.
+  - You want a yoke or lever to feel physical, not like a menu button.
+  - Testers feel dizzy and you suspect the view or the controls.
+not_for:
+  - You need menus, HUDs or panels for a general XR app. Use the XR Interface Architect agent.
+  - You need the WebXR app built and rendered. Use the XR Immersive Developer agent.
+  - You are building for Apple Vision Pro. Use the visionOS Spatial Engineer agent.
+  - You need help choosing a headset. This agent plans controls for the headset you name.
+you_give:
+  - The vehicle or station, such as a plane cockpit or a control room, and the tasks the user does in it
+  - "Your headset and how users act: controllers, hand tracking, voice, gaze or physical props"
+  - Seated or standing, and the play space you have
+  - The controls you think you need, as a list (optional)
+  - Your tools, such as A-Frame, Three.js or Unity (optional)
+you_get:
+  - A control list with type, input method, feedback and movement limits for each
+  - A layout plan that groups controls into reach zones by how often they are used
+  - A feedback guide for light, sound and motion on each control
+  - A comfort check list for a seated view
+  - A usability test plan with tasks to try and what to measure
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md, then references/source-agent.md, then your brief into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste the vehicle or station, the user's tasks and your headset first. Say if users sit or stand.
+  - Say "Plan the cockpit. Mark any distance or comfort figure you cannot source." Answer its one round of questions.
+  - Read the control list and layout plan. Move any control you use often into the nearest zone.
+  - Build a rough version in your tool. Ask the AI for an A-Frame or Three.js sketch if you want one, and test it yourself.
+  - Run the test plan with real users on the headset. Paste their results back for a revised layout.
+how_it_works:
+  - title: Fix the brief
+    text: It confirms the station, the tasks, the headset, the inputs and seated or standing. Gaps are asked once, then marked MISSING.
+  - title: List the controls
+    text: Each control gets a type, an input method and a limit on how it moves, so nothing floats free.
+  - title: Place the controls
+    text: It groups them by how often they are used, and keeps the seat and view as a fixed anchor.
+  - title: Write the feedback
+    text: Each control gets a visual cue, a sound and a moment when it fires.
+  - title: Check comfort
+    text: It runs a seated comfort check list on the plan and marks each item Pass, Risk or Can't tell.
+  - title: Plan the tests
+    text: It lists tasks for real users, what to measure and what counts as trouble.
+output_shape: |-
+  COCKPIT BRIEF
+    Station <> | User tasks <> | Headset <> | Inputs <> | Seated or standing <>
+  CONTROL LIST
+    <control> | <type: yoke, lever, switch, gauge or screen> | <how it is used: hand, voice, gaze or prop> | <movement limit> | <feedback>
+  LAYOUT PLAN
+    Primary zone <controls used often> | Secondary zone <> | Hard to reach <> | View anchor <>
+  FEEDBACK GUIDE
+    <control> | <visual> | <sound> | <when it fires>
+  COMFORT CHECKS
+    <check> | <Pass, Risk or Can't tell> | <why>
+  PROTOTYPE NOTES (optional, untested sketch)
+  USABILITY TEST PLAN
+    <task> | <what to measure> | <what counts as trouble>
+  OPEN QUESTIONS AND CHECKS NOT RUN
+output_sample:
+  input:
+    - The vehicle or station and the tasks the user does in it
+    - Your headset and input methods
+    - Seated or standing, and your play space
+    - A list of controls you expect to need (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A headset and a build tool to test the plan with real users (the AI does not do this)
+  output:
+    - name: Control list
+      contains: Each control with its type, how the user works it, movement limit and feedback.
+    - name: Layout plan
+      contains: Reach zones by how often each control is used, and the fixed view anchor.
+    - name: Feedback guide
+      contains: A light, sound and moment of firing for every control.
+    - name: Comfort checks
+      contains: Seated comfort items marked Pass, Risk or Can't tell, with the reason.
+    - name: Usability test plan
+      contains: Tasks for real users, what to measure and what counts as trouble.
+    - name: Prototype notes
+      contains: An optional A-Frame or Three.js layout sketch, marked untested.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Input focus
+    how: Say if hands, voice or gaze should lead, and the others become backups.
+  - what: Task order
+    how: List tasks in the order users do them, so frequent controls land in the nearest zone.
+improve:
+  - After a test with real users, paste their misses and comfort notes back and ask for a revised layout.
+terms:
+  - term: XR
+    meaning: Extended reality. A short name for virtual, augmented and mixed reality.
+  - term: Cockpit
+    meaning: A fixed seat with controls in front of the user, such as a plane or a spaceship.
+  - term: Reach zone
+    meaning: The area the user's hands can reach from the seat without leaning.
+  - term: Hand tracking
+    meaning: The headset sees your hands with no controllers.
+  - term: Motion sickness
+    meaning: Dizziness when what you see does not match what your body feels.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can write the control list and layout. Pick one that can read photos of a real cockpit you want to copy.
+  inputs:
+    - Photos or a diagram of the real cockpit
+    - Your headset maker's comfort guidance
+    - A written list of the tasks in order

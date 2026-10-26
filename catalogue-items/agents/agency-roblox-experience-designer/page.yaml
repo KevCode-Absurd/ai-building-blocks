@@ -1,0 +1,164 @@
+name: Roblox Experience Designer agent
+summary: Get a Roblox experience design plan. See the first-minute flow, a return loop, fair Game Pass ideas and the player numbers to watch.
+headline: Roblox Experience Designer agent
+subhead: Tell it your Roblox game idea, genre and who plays it. It plans the first five minutes, the loop that brings players back, saved progress, fair Game Pass and product ideas, and the numbers to watch after launch.
+job: build-product
+thinking: high
+thinking_why: It links player feelings to saved data, purchases and return visits, and checks each idea for fairness to young players. Use a model that can weigh design against platform rules.
+explain: >-
+  A Roblox experience lives or dies in its first minutes and its second visit.
+  Players decide fast, and most never come back. This Roblox experience
+  designer agent plans both. It starts from the one thing a player does and
+  enjoys, then builds the path from first success to a reason to return.
+
+
+  It covers four parts. First is onboarding, with a timed path for the first
+  minute, five minutes and fifteen minutes. Next is a return loop with daily and
+  weekly hooks. Then comes saved progress, with rules for storing player data
+  safely, and last, ideas for Game Passes and Developer Products that do not
+  make free play worse. Its monetisation rules rule out pay-to-win, countdown
+  pressure on children, and mixing paid and earned items in the shop.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It plans the
+  design. It can sketch Luau code if you ask, but cannot test it for you. Check
+  current Roblox policies, price rules and tools on Roblox's own creator pages.
+  The retention targets in the original are goals, not results from AI Blocks.
+when:
+  - You are planning a new Roblox game and want a written design before you build.
+  - Players join, then leave within the first few minutes.
+  - You want to add a shop, a daily reward or Game Passes without upsetting players.
+  - You want to improve the title, description and thumbnail so more people click.
+not_for:
+  - You need the systems built in Luau, such as the shop, saves and server rules. Use the Roblox Systems Scripter agent.
+  - You want to design the avatar items and UGC. Use the Roblox Avatar Creator agent.
+  - You only need currencies, prices and drop rates balanced. Use the Game economy designer agent.
+  - You are designing a game for another platform. Use the Game Designer agent.
+  - You need legal or child-safety advice. Ask a qualified person and read Roblox's own rules.
+you_give:
+  - Your game idea in a few lines, and the Roblox genre, such as simulator, obby or roleplay
+  - The age range you expect, and whether you want group or solo play
+  - What the player does most, and what you hope they say to a friend about it
+  - What you already have, such as a prototype, a shop or save data (optional)
+  - Current numbers from your Creator Dashboard, such as day-one return (optional)
+you_get:
+  - A core fantasy and the one action the game is built around
+  - A first-minute, five-minute and fifteen-minute onboarding path
+  - A return loop with daily and weekly hooks, and a progression curve with guess values to test
+  - Rules for saving player progress safely
+  - Game Pass and Developer Product ideas with a fairness check
+  - A discovery plan for the title, description and thumbnail
+  - Playtest questions and the numbers to watch after launch
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Say the game idea, genre, expected age range and what you have built so far.
+  - Your AI asks once for anything missing. Anything still unknown is marked as an assumption you can change.
+  - Read the onboarding path and the fairness check first. Cut any idea that makes free play worse or pushes young players to spend.
+  - Check platform facts, such as price tiers and rules, on Roblox's creator pages before you use them. Roblox changes them.
+  - Playtest with real players, then bring their notes and your Creator Dashboard numbers back to refine the plan.
+how_it_works:
+  - title: Write the experience brief
+    text: It names the core fantasy, the age range, the genre and the three things a player would tell a friend.
+  - title: Design the onboarding
+    text: It plans the first minute, five minutes and fifteen minutes, with a guaranteed first success and a first reward.
+  - title: Build the return loop
+    text: It maps first session, daily return and weekly hooks, and names what the player owns that they will not want to lose.
+  - title: Plan saved progress
+    text: It sets rules for storing progress, such as retrying failed saves and never overwriting data silently. It writes the plan in words first.
+  - title: Check monetisation
+    text: It lists Game Pass and Developer Product ideas and checks each for pay-to-win, pressure on young players and unclear paid items.
+  - title: Plan discovery and tracking
+    text: It drafts the title, description and thumbnail brief, and lists the player numbers to watch and what to test.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <game idea> | genre <x> | age range <x> | play style <solo or group> | ASSUMED: <list> | MISSING: <list>
+
+  CORE FANTASY
+    <what the player does and feels> | three things a player tells a friend: <list>
+
+  ONBOARDING PATH
+    First minute: <steps> | first success guaranteed <yes or no>
+    First five minutes: <core loop done once> | reward <x> | new feature opened <x>
+    First fifteen minutes: <first level up> | personal choice <x> | preview of a locked feature <x>
+
+  RETURN LOOP
+    daily <hook> | weekly <hook> | what the player does not want to lose <x> | progression curve <step, guess value, PLACEHOLDER>
+
+  SAVED PROGRESS RULES
+    <what is saved> | <failure case and what happens> | <how updates avoid wiping data>
+
+  MONETISATION AND FAIRNESS CHECK
+    <Game Pass or product idea> | benefit <x> | free path stays complete <yes or no> | pressure risk <none or note> | fix <x>
+
+  DISCOVERY
+    title <ideas> | description <draft> | thumbnail brief <x>
+
+  PLAYTEST AND NUMBERS TO WATCH
+    <number> | where to find it <Creator Dashboard or your own log> | your target <set by you> | question for players <x>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your game idea, genre and expected age range
+    - What the player does most, and solo or group play
+    - What you have built so far (optional)
+    - Numbers from your Creator Dashboard (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Roblox Studio and your Creator Dashboard, if you want to test the plan
+  output:
+    - name: Core fantasy
+      contains: What the player does and feels, and the three things they would tell a friend.
+    - name: Onboarding path
+      contains: A timed first minute, five minutes and fifteen minutes, with the first success and first reward.
+    - name: Return loop
+      contains: Daily and weekly hooks, what the player owns, and a progression curve with guess values.
+    - name: Saved progress rules
+      contains: What to save, what happens when a save fails, and how updates avoid wiping data.
+    - name: Monetisation and fairness check
+      contains: Each Game Pass or product idea checked for pay-to-win and pressure on young players.
+    - name: Discovery plan
+      contains: Title ideas, a description draft and a thumbnail brief.
+    - name: Playtest plan and numbers to watch
+      contains: What to ask players and which numbers to read in your dashboard.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: It can hold the full design and revise it as you bring playtest notes back.
+    - name: Roblox Studio and the Creator Dashboard
+      why: Studio is where you build and test. The Dashboard shows the player numbers the plan tells you to watch.
+  inputs:
+    - Your current day-one and day-seven return numbers, if the game is live.
+    - Notes from watching five new players try the first five minutes.
+    - A link to games you want yours to feel like.
+terms:
+  - term: Core loop
+    meaning: The short cycle of action, reward and progress that players repeat.
+  - term: Game Pass
+    meaning: A one-time Robux purchase that gives a player a permanent benefit in your experience.
+  - term: Developer Product
+    meaning: A Robux purchase a player can buy many times, such as a bundle of coins.
+  - term: DataStore
+    meaning: Roblox's way to save player progress between visits.
+  - term: Retention
+    meaning: How many players come back after day one, day seven or day thirty.
+  - term: Pay-to-win
+    meaning: A design where paying players get a big edge and free play becomes frustrating.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Genre
+    how: Name the genre, such as simulator, obby or roleplay. It changes the loop, the social hooks and the shop ideas.
+  - what: Age range
+    how: Give the age range you expect. Younger players need simpler purchase screens and more care with prompts.
+  - what: Scope
+    how: Ask for onboarding only, or shop and fairness only, if you want a short answer.
+improve:
+  - After a playtest, give it what players did and said, and ask which part of the onboarding to change first.
+  - Keep your Creator Dashboard numbers by week and bring them to the next run.

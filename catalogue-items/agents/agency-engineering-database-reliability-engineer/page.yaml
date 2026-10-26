@@ -1,0 +1,148 @@
+name: Database Reliability Engineer agent
+summary: Check that your database can be restored and will fail over safely. Get a backup test plan, a failover drill and a safe way to change tables.
+headline: Database Reliability Engineer agent
+subhead: Describe your database, your backups and how much data loss and downtime you can accept. It plans restore tests, a failover drill, safe table changes and limits on connections. You get a plan and checklist for your team. It does not touch your database.
+job: ship-and-host
+thinking: high
+thinking_why: A wrong step here can lose data, so it must keep recovery, failover and lock risks straight and say what it cannot check. Use a model that reasons carefully and flags gaps.
+explain: |-
+  A backup you have never restored is only a file. A failover you have never run may not work on the day you need it. Many teams find out during an outage. This agent plans how to find out before.
+
+  It starts with two numbers your business must set. How much data can you lose? How long can you be down? Then it checks whether your backups, copies of the database and failover plan can meet them. It plans a scheduled restore test on a spare server that measures the real time to recover. It plans a failover drill that avoids promoting a copy that is behind. It adds a plan for connection limits, so one buggy app cannot knock out a healthy database.
+
+  For table changes, it plans small steps with time limits on locks, so a change does not freeze a busy table. It writes a plan only. It cannot log in, run a command or restore anything. Your team runs the drills and the changes. This agent is about keeping data safe and available, not about making slow queries faster.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have backups but have never restored one, and want a way to prove they work.
+  - Someone asks "what happens if the main database server dies?" and you do not have a tested answer.
+  - You must change a table on a busy database, such as adding a column, without freezing the app.
+  - Your app runs out of database connections under load, even when the database looks idle.
+not_for:
+  - Your database is down or losing data right now. Follow your own runbook and call your database admin or provider. For a live outage, use the Incident Response Commander agent to run the response.
+  - You want slow queries and missing indexes fixed. Use the Database Optimizer agent.
+  - You want goals and alerts for a whole service, not just the database. Use the SRE agent.
+  - You want it to run restores, failovers or changes. It writes the plan. Your team runs it on a spare copy first.
+you_give:
+  - The database engine and version, such as PostgreSQL or MySQL, and whether it is managed (for example by your cloud provider) or run by you.
+  - How you back up today and how often, and the tool you use.
+  - How much data you can lose and how long you can be down. If you do not know, say so.
+  - Your copy setup, such as one main server and one or more replicas (optional)
+  - The last time you restored a backup or ran a failover (optional)
+  - A table change you plan, and roughly how big and how busy the table is (optional)
+you_get:
+  - Recovery targets in plain words, and whether your current setup can meet them.
+  - A restore test plan with the steps, the checks to run and what to measure.
+  - A failover plan and drill that avoids promoting a copy that is behind.
+  - A safe change plan for a table, with lock limits, batches and a way back.
+  - Limits for connections, the alerts to set and a drill schedule.
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write your engine and version, how you host it, your backup tool and schedule, and your data loss and downtime limits. No database access is needed.
+  - Type "Plan recovery for this database. Start with the restore test. Ask for any limit I did not give. Mark every assumption."
+  - Check the restore test first. It must restore to a spare server and measure the real time.
+  - Run the restore test and the drill on a spare copy, never on production. Write down what you measure.
+  - Give any table change plan to your database admin to check against your engine's own docs before it runs.
+how_it_works:
+  - title: Set the recovery targets
+    text: It asks how much data you can lose and how long you can be down, then marks any answer it is missing.
+  - title: Check the backup and copy setup
+    text: It compares what you have with those targets and names the gaps.
+  - title: Plan the restore test
+    text: It plans a scheduled restore on a spare server, with checks on the data and a measured time.
+  - title: Plan the failover drill
+    text: It plans how the system picks the new main server, avoids a stale copy and repoints the app.
+  - title: Plan safe table changes
+    text: It splits a change into small steps with short lock limits, batched updates and a way back.
+  - title: Plan limits and alerts
+    text: It sets connection limits and alerts for copy delay, backup age and drill dates.
+output_shape: |-
+  SCOPE
+    Engine and version <name> | Hosting <managed or self-run> | Assumptions <list>
+
+  RECOVERY TARGETS
+    Data loss limit <time or MISSING> | Downtime limit <time or MISSING> | Can the current setup meet them? <yes, no or unknown, and why>
+
+  BACKUP AND RESTORE TEST PLAN
+    <step> | <what to check> | <what to measure> | <how often>
+
+  FAILOVER PLAN AND DRILL
+    <step> | <pass if> | <risk if skipped>
+
+  SAFE CHANGE PLAN
+    <change> | <steps in order> | <lock and time limits> | <way back>
+
+  CONNECTIONS AND ALERTS
+    <limit or alert> | <why> | <threshold, from you>
+
+  DRILL SCHEDULE
+    <drill> | <how often> | <owner>
+
+  GAPS AND CHECKS
+    <missing fact> | <why it matters> | <who decides>
+output_sample:
+  input:
+    - Your database engine and version, and how it is hosted
+    - Your backup tool and schedule
+    - How much data you can lose and how long you can be down
+    - A planned table change and the last restore or failover (optional)
+  prerequisites:
+    - A spare server or test copy where you can run restores and drills safely.
+  output:
+    - name: Scope
+      contains: Your engine, hosting and the assumptions the plan is built on.
+    - name: Recovery targets
+      contains: Your data loss and downtime limits, and whether today's setup can meet them.
+    - name: Backup and restore test plan
+      contains: The steps to restore a backup to a spare server, what to check and the time to measure.
+    - name: Failover plan and drill
+      contains: How a new main server is chosen and the drill that proves it works.
+    - name: Safe change plan
+      contains: A table change in small steps with lock limits, batches and a way back.
+    - name: Connections and alerts
+      contains: Connection limits and alerts for copy delay, backup age and overdue drills.
+    - name: Drill schedule
+      contains: Which drills to run, how often and who owns each.
+    - name: Gaps and checks
+      contains: Missing facts and open choices, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A strong reasoning model keeps recovery and lock risks straight. No code running or web access is needed. Check engine details against its own docs.
+  inputs:
+    - Your backup tool settings and the last backup report.
+    - A diagram or note of your main server and its replicas.
+    - The table you want to change, with its size and busiest hours.
+terms:
+  - term: RPO
+    meaning: How much data you can afford to lose, measured in time, such as the last five minutes of writes.
+  - term: RTO
+    meaning: How long you can afford to be down before the database is back.
+  - term: Replica
+    meaning: A live copy of the database that follows the main one.
+  - term: Failover
+    meaning: Switching to a replica when the main database server stops working.
+  - term: Replication lag
+    meaning: How far behind a replica is. A lagging replica can serve old data or lose writes if promoted.
+  - term: Lock
+    meaning: A hold the database puts on a table while it changes it. A long lock can freeze the app.
+  - term: Connection pool
+    meaning: A layer that shares a limited number of database connections among many app requests.
+tweaks:
+  - what: Targets
+    how: Ask your boss or team what data loss and downtime the business can accept. Give real numbers.
+  - what: Engine
+    how: Name the engine and version. Lock rules and tools differ for PostgreSQL, MySQL and others.
+  - what: Scope
+    how: Start with one area, such as restore tests. Add failover and changes after.
+improve:
+  - Keep each plan with your measured restore time. Rerun it after any change to your backup or replica setup.
+  - Add a lesson to the plan each time a drill shows a gap.
+  - Pair it with the SRE agent for service goals and with the Database Optimizer agent for slow queries.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

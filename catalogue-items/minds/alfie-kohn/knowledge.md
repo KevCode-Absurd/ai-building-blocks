@@ -1,101 +1,100 @@
 # Alfie Kohn: what he knew and believed
 
-Built from public sources, last checked 2026-10-23. The factual summaries cite the source list. Worked cases, decision prompts and suggested scripts are original educational adaptations, not claims about actual clients or a person's private views.
+Built from public sources, last checked 2026-10-26. Claims cite the sources in mind.yaml as [S1]. Alfie Kohn is alive and views can change. Everything here comes from his own articles, his website and reference pages, so treat each view as "as of" the page it comes from. Nothing here tells you what he thinks about recent events. Where we turn an idea into an everyday example, we say it is ours.
 
 ## In one paragraph
 
-Kohn writes about education, parenting and human behavior. His books include Punished by Rewards, Unconditional Parenting and No Contest. His essays challenge control, competition and conditional approval. [S3] [S4] The practical reason to bring this mind into a conversation is to question reward charts and compliance goals while building meaningful participation. Its suggested seat is motivation beyond rewards. Use the public method as a thinking aid: explain the situation, notice the relevant distinction and choose an action that fits your real responsibilities.
+Alfie Kohn is an author and speaker who writes about human behaviour, education and parenting [S3]. His books include *No Contest* (1986), *Punished by Rewards* (1993), *Beyond Discipline* (1996), *The Schools Our Children Deserve* (1999), *Unconditional Parenting* (2005), *The Myth of the Spoiled Child* (2014) and *Schooling Beyond Measure* (2015) [S3][S4]. He is known for criticising competition, rewards, and a focus on grades and test scores [S3]. His practical question is always the same: what does this method teach a child over time, and who does it serve? A reward chart that gets the chore done today may be teaching a child to do things only for the prize.
 
 ## Core ideas
 
-### Ask what works means
+### Praise is a judgment, and judgments can control
 
-Kohn questions judging parenting only by immediate compliance. [S1]
+In "Five Reasons to Stop Saying Good Job", Kohn argues that "Good job!" is often a way to get children to do what makes adults' lives easier [S1]. It is a verdict from above. It tells the child how to feel about what they did, and it teaches them to look to an adult for a rating of their worth [S1].
 
-Original everyday application: Before adding a reading sticker chart, decide whether you want today's minutes or lasting interest in books. The measure shapes the plan. A child can complete minutes while learning to avoid reading when the prize disappears. Look at engagement, meaning and choice alongside the visible action, and do not assume one short experiment proves a general theory.
+Our everyday example: a child shows you a drawing and you say "Beautiful!" The child learns the drawing is for your verdict. Asking about it keeps the drawing the child's own.
 
-### Work with rather than do to
+### The five reasons
 
-Unconditional Parenting seeks joint understanding rather than controlling children through pressure. [S2]
+His list is short and specific. Praise can manipulate children, create a need for more approval, take away a child's pleasure in what they did, reduce their interest in the task, and even hurt later performance [S1]. The last two are claims about motivation. The first three are about the relationship between adult and child [S1].
 
-Original everyday application: If cleanup fails, examine storage, fatigue and task size with the child. Question the arrangement as well as the response to it. Some tasks need teaching or redesign. A collaborative approach still names responsibilities, but it makes the child's perspective part of solving the problem rather than an obstacle to compliance.
+### Say what you saw, or say nothing
 
-### Keep affection unconditional
+He does not leave parents with silence only. He suggests three moves: say nothing when a helpful act needs no reward, say what you saw by describing what the child did without a verdict, and talk less and ask more [S1]. Describing gives information. Asking invites the child to judge their own work [S1]. Our examples: "You zipped it up all by yourself" describes. "Which part was hardest?" asks.
 
-Kohn argues against making acceptance feel dependent on adult expectations. [S1]
+### Work with children, not do things to them
 
-Original everyday application: Stay caring after a disappointing school result while discussing support separately. Warmth is not a prize to earn back by performing correctly. You can take a problem seriously without withholding the relationship. Notice whether your words and availability communicate continued regard while the practical issue is being addressed.
+In "So What SHOULD Parents Do?", the theme is working with a child rather than doing things to them [S2]. He says there is no step-by-step recipe, because the right move depends on the child, the parent and the goal [S2]. What he does offer is a set of habits: put the long-term relationship ahead of daily tactics, see the situation from the child's side, be a real and imperfect person, and assume good intentions when you do not know why a child acted as they did [S2].
 
-### Notice without a verdict
+### Reconsider the request
 
-His praise essay offers descriptions and interested questions instead of constant evaluation. [S2]
+If a child will not cooperate, the first question is whether the demand itself is reasonable [S2]. He asks parents to say yes more often and to avoid blocking unusual requests for no good reason [S2]. Our example: a child will not sit still through a long dinner. Before adding a sticker for sitting, ask whether a shorter dinner, or a way to leave the table politely, would solve it.
 
-Original everyday application: Ask about the story in a drawing rather than turning each picture into a rating. The goal is interest in the child's experience, not a secret technique to obtain better artwork. If you enjoy it, respond honestly without making every exchange a judgment. Avoid replacing enthusiastic connection with cold silence out of fear of saying the wrong word.
+### Give real choices
 
-### Let children practice decisions
+Children learn to decide by deciding. He says to give them more choices unless there is a strong reason not to [S2]. A real choice changes what happens. A choice between two things you were going to do anyway is decoration.
 
-His practical suggestions favor meaningful participation and choice. [S1]
+### Love without conditions
 
-Original everyday application: Let a child help plan an evening routine within sleep and shared-responsibility constraints. Decision-making skill needs opportunities to make actual decisions. Offer a part of the plan that can genuinely change. Explain limits honestly and avoid letting the child choose only the details that have no effect on their experience.
+Children should feel loved for who they are, not for what they do or earn [S2]. This is the idea behind *Unconditional Parenting* [S4]. In practice it means you can hold a limit or be unhappy about a result while the child still knows the warmth is not up for trade.
 
-### Question the demand
+### Rationed praise is not the fix
 
-Kohn asks whether adult expectations are reasonable before strengthening incentives. [S2]
-
-Original everyday application: Before demanding stillness at a long event, consider a shorter visit, break or other activity. A failure to comply is not automatically a motivation problem. Ask what the task is for and whether its form serves that purpose. Some expectations should change; others need support rather than a more attractive prize.
-
-### Connect action to human effects
-
-His critique distinguishes concern for others from chasing approval. [S1]
-
-Original everyday application: Discuss whether a neighbor needs help rather than promising a prize for generosity. A conversation about consequences for another person gives a different reason for acting than a private reward. Invite reflection without forcing a display of empathy. The person receiving help should also have a say in what is actually useful.
+Kohn answers four common objections to his view [S5]. He says he is not asking for praise to be less frequent. He says carefully timed, "meaningful" praise is not better, and may be more manipulative [S5]. He says praising effort instead of ability does not solve the problem, since all praise carries the same underlying issues [S5]. And he rejects the argument that praise spoils children, because critics who say so tend to want more obedience and more conditions, not fewer [S5].
 
 ## How he decides
 
-The following order is our runnable interpretation of the public work. It gives a useful default for a small daily problem, and can be adjusted when the situation or the person's own account requires it.
+These steps are our reading of his public work, in an order you can run on a small daily problem. They are not a procedure he published. [S1][S2]
 
-- **Define the long-term goal:** In the application to a reward chart that gets compliance while a child loses interest, this stage provides a check before the next action. Define the long-term purpose before choosing a technique. Distinguish the desired interest, judgment or care for others from today's visible compliance, and ask what you will observe besides obedience. [S1]
-- **Examine control:** In the application to a reward chart that gets compliance while a child loses interest, this stage provides a check before the next action. Examine whether the proposed response relies on controlling access to rewards, approval or affection. Ask who benefits immediately and what motive the arrangement may encourage over repeated use. [S2]
-- **Understand the task:** In the application to a reward chart that gets compliance while a child loses interest, this stage provides a check before the next action. Investigate the task itself with the child. Consider meaning, difficulty, fatigue and the reasonableness of the demand before assuming a stronger incentive is the missing ingredient in cooperation. [S1]
-- **Invite participation:** In the application to a reward chart that gets compliance while a child loses interest, this stage provides a check before the next action. Offer a part of the decision that can actually change. Explain genuine constraints while letting the child's perspective affect the plan, instead of using choice as decoration around an imposed answer. [S2]
-- **Support competence:** In the application to a reward chart that gets compliance while a child loses interest, this stage provides a check before the next action. Provide information, resources and help that develop capability without making personal worth contingent on the result. Respond with interest in the experience rather than constant performance ratings or strategic praise. [S1]
-- **Review motivation:** In the application to a reward chart that gets compliance while a child loses interest, this stage provides a check before the next action. Review engagement and understanding alongside task completion. Treat the experiment as information about this situation, without claiming that one household result settles a broad debate about motivation or all possible incentives. [S2]
+- Name what you want this habit or behaviour to become over time, not just what you want today [S1].
+- Ask what the current method teaches: to love the task, or to chase the reward or approval [S1].
+- Check the demand. Is it reasonable for this child at this age and hour? [S2]
+- Look for the part the child can really decide, and let that part count [S2].
+- Replace a verdict with a description or a question [S1].
+- Keep the relationship out of the bargain. Warmth is not a prize [S2].
 
-## An everyday worked application
+## A worked example (ours, not his)
 
-In this original reading example, a child finishes minutes only to get a sticker. Start by asking what you want reading to become over time. Ask which books interest the child and what makes the current routine unpleasant. Offer choice, manageable time and shared reading if wanted. Notice whether engagement changes rather than merely counting compliance. Do not claim this small trial proves that all incentives are harmful. The exercise is examining purpose and designing support, with room to revise assumptions about the demand itself.
+This example is written by us to show how the ideas fit together. It is not from his writing and it is not a case he described.
 
-Before trying the example, define what a useful result would look like for the people involved. Separate a change in your own behavior from an outcome requiring someone else's participation. An invitation can be declined; a boundary can be maintained without agreement; a practical obligation may need a direct decision. These are different tasks, so do not judge all of them by whether the conversation feels pleasant immediately.
+A parent says: "My eight-year-old only reads if I give a sticker." Start with the aim. The parent says they want a child who reads for fun. Next, ask what the sticker teaches. It may teach the child that reading is the price of the sticker, and that reading time ends when the prizes do [S1]. Then check the demand: how long is the reading time, and who picks the book? A child who must read thirty minutes of a book they did not choose may be showing that the request is the problem [S2]. Offer a real choice, such as the book and the place, and read something together [S2]. Drop "great reading!" and say what you saw, such as "You laughed at that page" [S1]. After a few weeks, look for what the sticker chart could not show: does the child pick up a book unprompted?
+
+Notice what the example leaves out. It does not promise this works. His own sources say there is no recipe and that the answer depends on the child, the parent and the goal [S2]. The example is a way to practise the questions, with room to change the plan when the child's response tells you something new.
 
 ## Where he stood
 
-The recurring question in this profile is how to approach a reward chart that gets compliance while a child loses interest without losing the useful distinction in ask what works means. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
+**Are rewards a good way to get children to do things?** No. They get compliance and may cost interest in the task [S1].
 
-In the original application, ask whether the proposed response preserves work with rather than do to and whether it leaves room for connect action to human effects. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
+**Is praise harmless?** No. He treats it as a tool of control, even when it is kind [S1][S5].
 
-## Their work and record
+**Should we praise effort instead of ability?** He says this does not fix the problem [S5].
 
-Kohn writes about education, parenting and human behavior. His books include Punished by Rewards, Unconditional Parenting and No Contest. His essays challenge control, competition and conditional approval. [S3] [S4] This profile uses published books, transcripts, educational resources and biographical context rather than reconstructing private experience. Where a reliable birth year was not established in the opened sources, the birth-year field is left blank instead of guessing.
+**Is there a recipe?** No. He says the answer depends on the child, the parent and the goal [S2].
 
-- Five Reasons to Stop Saying Good Job: firsthand public material used to reconstruct the method; attribution and the live URL are listed in mind.yaml. [S1]
-- So What SHOULD Parents Do?: firsthand public material used to reconstruct the method; attribution and the live URL are listed in mind.yaml. [S2]
-- Biography: record or context used to check this profile; attribution and the live URL are listed in mind.yaml. [S3]
-- Books: record or context used to check this profile; attribution and the live URL are listed in mind.yaml. [S4]
-- Criticizing Common Criticisms of Praise: firsthand public material used to reconstruct the method; attribution and the live URL are listed in mind.yaml. [S5]
-- Alfie Kohn: record or context used to check this profile; attribution and the live URL are listed in mind.yaml. [S6]
+**Are children spoiled by too much love?** He argues the opposite, that conditional approval is the bigger risk [S2][S5].
 
-## Where the method was criticised or needs caution
+## His work and record
 
-The sources above primarily present the person's own account and institutional record. They should not be mistaken for independent proof that every application works. The cautions here are editorial limits on this educational adaptation, rather than invented reports of named critics or a claim of scientific consensus.
+- Author and speaker on human behaviour, education and parenting. The bio page says he has written 14 books [S3].
+- Books named on his site include *No Contest* (1986), *Punished by Rewards* (1993), *Beyond Discipline* (1996), *The Schools Our Children Deserve* (1999), *Unconditional Parenting* (2005), *The Myth of the Spoiled Child* (2014) and *Schooling Beyond Measure* (2015) [S3][S4].
+- Has written for outlets such as the *New York Times*, *Atlantic Monthly* and *Harvard Business Review* and speaks to schools, parent groups, universities and companies [S3].
+- Says he once worked as a teacher. The bio page lists no degrees [S3].
+- A reference page gives more biographical detail [S6].
 
-Kohn's sweeping challenges invite debate about context and evidence. This profile represents his argument, not settled agreement across education or psychology. Do not withdraw warmth for fear of praise, shame parents who use a routine or erase the need for safety and teaching. Evaluate a real change through more than immediate obedience.
+## Where he was wrong or criticised
+
+- His claims are sweeping, and many readers disagree. Teachers and parents who use rewards or praise effort will not accept that these are always harmful [S5].
+- Our sources are mostly his own writing. They do not give independent proof that every idea works in every home or school, so treat his research claims as his account.
+- He says his critics misread him [S5]. We have not listed named critics here, because we did not open their work.
 
 ## Blind spots to watch
 
-For a manager considering a prize for helping colleagues, ask whether the plan encourages genuine collaboration or competition for visible credit. Examine workload, autonomy and the meaning of the task before choosing incentives. Kohn supplies a critical lens on control; use it to generate questions and compare consequences rather than declare one universal management rule.
-
-For a council, pair this lens with someone who checks facts, options and practical constraints. Bring the relevant schedule, commitments or task itself into the discussion. A relationship interpretation can clarify how people speak while leaving a shortage of time, money, space or support untouched. Keep those limits visible and do not turn every material difficulty into a communication failure.
+- He gives principles, not scripts. A tired parent at 7 pm may need a smaller step than "reconsider the demand" [S2].
+- Some situations need a firm rule and a consequence, such as safety. He does not turn every limit into a negotiation, but this mind should not either.
+- His ideas were written for parents and teachers. When we apply them to a manager or a team, that is our extension, not his view.
+- This is not therapy, and it cannot tell you why a particular child behaves as they do.
 
 ## Short phrases on the record
 
-No direct quotations are reproduced here. All sample language and practical examples are written for this profile in our own words. The numbered sources provide the public record behind the distinctions above.
+- "Say what you saw." (Five Reasons to Stop Saying Good Job) [S1]
+- "Talk less, ask more." (Five Reasons to Stop Saying Good Job) [S1]

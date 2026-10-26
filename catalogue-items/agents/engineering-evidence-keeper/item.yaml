@@ -22,11 +22,11 @@ uses:
   - copilot-bug-receipt
 steps:
   - uses: copilot-test-gap-audit
-    note: Run only when the saved state and decision rules require it.
+    note: "Run only when the saved state and decision rules require it. Reads your codebase change and the saved state. Hands the test gaps and their finding IDs to the saved state, where the next branches read them."
   - uses: copilot-docs-sync-audit
-    note: Run only when the saved state and decision rules require it.
+    note: "Run only when the saved state and decision rules require it. Reads your codebase change, not step 1's test report. Hands the outdated docs and their finding IDs to the saved state."
   - uses: copilot-bug-receipt
-    note: Run only when the saved state and decision rules require it.
+    note: "Run only when a defect was repaired and the saved state and decision rules require it. Reads the fix in your codebase and the checks run, including the test report from the earlier steps. Hands back the dated receipt marked VERIFIED, PARTIAL or BLOCKED."
 origin: rebuilt
 version: 1.0.0
 credits:

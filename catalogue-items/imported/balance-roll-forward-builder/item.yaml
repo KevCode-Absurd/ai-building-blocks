@@ -1,6 +1,6 @@
 slug: balance-roll-forward-builder
 name: Balance roll-forward builder
-summary: Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger.
+summary: "Build a balance sheet roll-forward from opening to closing balance, with each line tied to your ledger and any gap shown, not plugged."
 category: general
 boards: []
 type: skill

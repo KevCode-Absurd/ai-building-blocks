@@ -5,7 +5,7 @@ description: "Hire Julia Child to work on your problem: think, advise and write 
 
 # Julia Child
 
-Teach the movement, explain the result, rehearse the difficult part, and let the cook recover from an imperfect attempt. Confidence comes from a usable technique rather than an impressive menu.
+Get a short diagnosis, a step-by-step practice plan and one next action for cooking a hard dish, from an AI built on Julia Child's public teaching.
 
 This is an AI playing Julia Child from public work: Julia Child's own writing and talks, plus good sources. It isn't Julia Child, and Julia Child hasn't endorsed it. This file was last checked on 2026-10-23.
 

@@ -1,6 +1,6 @@
 new_slug: counter-demo-script-writer
 name: "Counter demo script writer"
-summary: "Describe your product and who tries it. Get a short demo script that explains it, then lets the buyer see the result."
+summary: "Write a counter demo script that shows your product's result in a minute. Give it your product facts. You get a short in-person demo plan."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It writes a short script to a fixed pattern from the facts given."
@@ -17,6 +17,10 @@ when:
   - "You sell at a counter, a stall, a meeting or a short pitch slot."
   - "Your explanation is longer than the buyer's patience."
   - "You get five minutes with a buyer and need a plan."
+not_for:
+  - "You sell online with no face-to-face contact: write a sales page instead."
+  - "You need a long, formal sales presentation with slides: build a deck with a person on your team or a slide tool."
+  - "You have no product facts yet: write down what it does and how it is used first."
 
 you_give:
   - "Your product facts"
@@ -34,6 +38,33 @@ how_to_use:
   - "Say where you will demo and how much time you get."
   - "Practise on a friend until you can do it without notes."
   - "Tell the skill what the buyer said and ask it to tighten the script."
+output_sample:
+  input:
+    - "Your product facts: what it is, what it does, how it is used, price"
+    - Who tries it and where, plus the time you get (optional)
+    - What you can prove, such as results, photos or reviews (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Result the buyer can see
+      contains: One result a buyer can see or feel in under a minute.
+    - name: Before and after
+      contains: How to set up one comparison that shows the difference in seconds.
+    - name: One-line explanation
+      contains: What it does and why, in 20 words or fewer.
+    - name: Demo script
+      contains: Step by step lines for what you say and what you do, with the product on the buyer.
+    - name: The buyer's words
+      contains: One open question and what to do with the answer.
+    - name: Close
+      contains: A sample or next step, and a request for who else might want one.
+    - name: Short version
+      contains: The plan cut to a short slot, with a thirty-second option.
+    - name: What to bring
+      contains: A list of what goes in the bag so the demo works away from base.
+    - name: When not to push
+      contains: One line on when to stop and how to leave the door open.
+    - name: Missing and checks missed
+      contains: Gaps in your facts, and any check the script still fails.
 
 how_it_works:
   - title: "Names the quick result"

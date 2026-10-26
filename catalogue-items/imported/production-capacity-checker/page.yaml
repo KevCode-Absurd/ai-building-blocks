@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It compares demand with limits step by step.
 new_slug: production-capacity-checker
 name: Production capacity checker
-summary: Give it demand and what you can make. Get your bottlenecks and a plan
-  to close the gap.
+summary: Check if your plant, warehouse or team can meet demand. Give it forecasts and capacity. You get your bottleneck and options to close the gap.
 job: plan-supply-chain
 headline: Production capacity checker
-subhead: Know whether your plant, warehouse or team can handle next quarter's
-  demand before you promise it. You get a clear view of where the squeeze is,
-  which resource limits everything else, and what it would cost to close the
-  gap.
+subhead: Know whether your plant, warehouse or team can handle next quarter's demand before you promise it. You get a clear view of where the squeeze is, which resource limits everything else, and what it would cost to close the gap.
 explain: |
   Know whether your plant, warehouse or team can handle next quarter's demand before you promise it. You get a clear view of where the squeeze is, which resource limits everything else, and what it would cost to close the gap.
 
@@ -17,9 +13,12 @@ explain: |
 when:
   - Demand is growing and you are not sure your equipment or staff can keep up.
   - A big order is on the table and you need to know if you can deliver it.
-  - One work station always seems to hold up the rest and you want proof of
-    which one.
+  - One work station always seems to hold up the rest and you want proof of which one.
   - You are deciding whether to buy a new machine or add a shift.
+not_for:
+  - "You need a daily or weekly work schedule for each machine: use a production scheduling tool or your planner, not this page."
+  - "You are choosing where to put new plants or warehouses across a region: use a network design study with a supply chain analyst."
+  - "You only have a demand forecast and no capacity figures: build your forecast first, then come back with your limits."
 you_give:
   - Demand forecast with seasonal swings
   - Current capacity by machine, shift or team
@@ -32,7 +31,31 @@ you_get:
   - Gap between demand and capacity
   - Options to close the gap, compared by cost and timing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Say what kind of capacity you plan: machines, space, labour or trucks. Add your time frame."
+  - Paste your demand forecast, your current capacity, your budget and your lead times.
+  - Add your known bottlenecks and service level if you have them. Your AI asks for anything missing.
+  - Check the utilization table and the named bottleneck against what you see on the floor.
+  - Compare the options by cost and timing, then pick one to plan in detail.
+output_sample:
+  input:
+    - Your demand forecast by month or quarter, with busy and quiet periods
+    - Your current capacity by machine, line, shift, space or team
+    - Your budget and lead times for adding capacity
+    - Known bottlenecks and current output rates (optional)
+    - The service level you must hit (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code needs to run.
+  output:
+    - name: Executive summary
+      contains: Current capacity and use, the demand gaps, the advised plan, and the cost and timing.
+    - name: Current state analysis
+      contains: A table by resource with available capacity, utilization, effective capacity and OEE (how well a machine is used).
+    - name: Capacity requirements forecast
+      contains: A table by period showing demand, capacity needed, capacity you have, the gap and utilization.
+    - name: Bottleneck analysis
+      contains: The named resource that limits output, what it limits, how long it lasts and the advised action.
+    - name: Capacity strategy recommendation
+      contains: Options such as expanding now, using flexible capacity or waiting, compared on cost, timing and risk.
+    - name: Implementation plan
+      contains: A month-by-month plan from design and buying through to full capacity.

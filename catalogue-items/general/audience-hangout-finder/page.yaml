@@ -1,6 +1,6 @@
 new_slug: audience-hangout-finder
 name: "Audience hangout finder"
-summary: "Describe your buyer group. Get a map of the sites, shows, accounts and communities they use, and where to show up first."
+summary: "Find where your buyers read, watch and follow, and pick the first places to show up. Use this audience hangout finder to get a ranked map."
 job: understand-customers
 thinking: medium
 thinking_why: "It weighs which places matter most, and some picks need judgement."
@@ -17,6 +17,10 @@ when:
   - "You are planning where to spend your marketing time and have no data on where your buyers are."
   - "Your site traffic is falling and you want to know if your audience moved."
   - "You are choosing between starting a podcast, a newsletter or guesting on someone else's."
+not_for:
+  - "You have no buyer data and no customers yet: talk to five likely buyers first, or use the Customer discovery interview planner."
+  - "You need the words to post in each place: use the Story image ad writer, or write the post yourself once you pick the place."
+  - "You want to test one channel with a budget: set up a small paid test, not a full audience map."
 
 you_give:
   - "Who your buyers are and what they do"
@@ -34,6 +38,28 @@ how_to_use:
   - "Paste any customer words, survey answers or data about where they read, watch or follow."
   - "Check the places it marks \"to check\" using the method it names."
   - "Start with the top place and note your baseline before you post."
+output_sample:
+  input:
+    - Your buyers, described by what they do
+    - Customer words that mention where they read or ask for advice (optional)
+    - Traffic, survey or follower data (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: Audience in actions
+      contains: Three to five actions that mark your buyer, such as what they buy, read or follow.
+    - name: The map
+      contains: Each place with its type, evidence, whether your audience uses it more than average, and whether it keeps people on the page.
+    - name: Early topics
+      contains: Topics your audience discusses now, where you saw them, and whether people search for them yet.
+    - name: Start here
+      contains: Three to five ranked places, what to publish in each, and the baseline and sign of lift.
+    - name: Search-only warning
+      contains: A flag if your plan relies only on places that send people to search.
+    - name: Re-run
+      contains: A date to run the map again and the tools or data used.
+    - name: Missing and checks missed
+      contains: Gaps in your input, and any check the skill could not pass.
 
 how_it_works:
   - title: "Defines the audience"

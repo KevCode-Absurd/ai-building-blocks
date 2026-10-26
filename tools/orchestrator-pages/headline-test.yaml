@@ -1,6 +1,6 @@
 new_slug: headline-test
 name: "Write headlines and pick the winner with a small test"
-summary: "Give it your brief and product facts. Get checked headlines and a small keyed test that picks the winner."
+summary: "Write headlines, check each one names its reader and promises a reward, then plan a small keyed test that picks the winning headline."
 job: plan-ad-tests
 thinking: high
 thinking_why: "It writes, checks and then designs a fair test. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You need a headline for an ad, email or page and have several ideas but no way to choose.
   - Your headlines get clicks but the wrong people, or the right people but not enough of them.
   - You are about to spend on an ad and want a small, fair test before you do.
+not_for:
+  - "You need one obvious headline and have no choice to make: write it yourself, or use the Ad headline writer on its own."
+  - "You have no offer yet, so there is nothing to promise: use the Hidden offer finder first."
+  - "You want the first line of an ad, not a headline: use the Ad opening writer and reviewer."
 
 you_give:
   - Your brief (who it is for and the ideas to work from)
@@ -35,6 +39,23 @@ how_to_use:
   - Give it your brief, product facts and offer.
   - It works step by step and saves each result. Read the checked headlines before you read the test plan.
   - Run the small test and note replies and cost per reply for each version.
+output_sample:
+  input:
+    - "Your brief: who it is for and the ideas to work from"
+    - "Your product facts: price, how it is used, what it is made of"
+    - Your offer, with price, terms and any deadline
+  prerequisites:
+    - An AI that can read files and save results as files, such as Claude Code or a Claude Project
+    - Your brand brain, buyer brief and offer from earlier items (optional)
+  output:
+    - name: outputs/step-01-ad-headline-writer.md
+      contains: Headlines for each idea in the brief, what they are allowed to say, and the one to test first.
+    - name: outputs/step-02-headline-promise-checker.md
+      contains: A check of each headline for reader and reward, with stronger versions of the weak ones.
+    - name: outputs/step-03-keyed-headline-test-planner.md
+      contains: Headlines sorted by appeal, a code for each version, a small first test and a rule for picking the winner.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Write the headlines

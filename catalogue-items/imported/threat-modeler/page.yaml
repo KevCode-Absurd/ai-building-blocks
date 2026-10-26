@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Missed threats are costly, so it works through every part.
 new_slug: threat-modeler
 name: Threat modeler
-summary: Describe your system. Get threats found with STRIDE, rated by risk,
-  each with a way to reduce it.
+summary: Find what could go wrong in your system design with a threat modeler. Get STRIDE threats, risk ratings and a fix for each one.
 job: secure-code
 headline: Threat modeler
-subhead: Describe a system and get a list of what could go wrong, ranked by
-  risk, each with a fix. It suits the design stage, when changing a plan costs
-  far less than changing shipped code.
+subhead: Describe a system and get a list of what could go wrong, ranked by risk, each with a fix. It suits the design stage, when changing a plan costs far less than changing shipped code.
 explain: |
   Describe a system and get a list of what could go wrong, ranked by risk, each with a fix. It suits the design stage, when changing a plan costs far less than changing shipped code.
 
@@ -18,6 +15,10 @@ when:
   - You are adding a third-party service and want to know the risk.
   - A compliance review is coming and you need documented threats.
   - A past incident showed gaps and you want to find the rest.
+not_for:
+  - "You want to test a live system for weak spots: hire a penetration tester or run an authorized penetration test."
+  - "You are fixing one known bug: fix it in the code and have a teammate review the change."
+  - "You need a legal or compliance sign-off: ask your security lead or auditor, then use this to prepare."
 you_give:
   - A description or diagram of your system
   - The kind of data it holds
@@ -29,7 +30,29 @@ you_get:
   - Suggested controls for each threat
   - A short summary for reviewers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste this skill. It runs in a normal chat and needs no code.
+  - Paste your system description or diagram notes. Say which parts handle data and where users log in.
+  - List the kinds of data you hold, such as personal, health or payment data. List the outside services you use.
+  - Ask your AI to go through each part of the system one at a time using STRIDE and fill in the worksheet.
+  - Check the risk ratings with someone who knows the system. Fix any that look wrong.
+  - Ask for the short reviewer summary, then share it with your team.
+output_sample:
+  input:
+    - A description or diagram of your system
+    - The kind of data it holds, such as personal, health or payment data
+    - Outside services it connects to
+    - Security controls you already have (optional)
+  prerequisites:
+    - Your system notes or design diagram
+    - Someone who knows how the system is built, to check the result
+  output:
+    - name: STRIDE worksheet
+      contains: One entry per part of your system, listing spoofing, tampering, repudiation, disclosure, denial of service and privilege threats.
+    - name: Data flow diagram
+      contains: A text map of the parts of your system, the data between them and where trust changes.
+    - name: Risk scoring
+      contains: A likelihood and impact rating for each threat, combined into one risk level.
+    - name: Controls and risk decisions
+      contains: A suggested fix for each threat and whether to reduce, accept, move or avoid the risk.
+    - name: Reviewer summary
+      contains: A short note on the top risks and what to do first.

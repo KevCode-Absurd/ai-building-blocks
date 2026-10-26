@@ -1,6 +1,6 @@
 new_slug: story-structure-reorderer
 name: "Story structure reorderer"
-summary: "Paste your draft. Get a new order of scenes that puts the reader in the character's seat, with the check."
+summary: "Reorder the scenes in your story draft so the reader sees events through one character's eyes. You also get a logic check on the new order."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It has to hold the true timeline and a new order in mind at once and keep them consistent."
@@ -17,6 +17,10 @@ when:
   - "Your story or talk has good scenes but the middle drags or the ending lands flat."
   - "You want the reader to share a character's confusion or discovery."
   - "Your case study tells everything in date order and loses people."
+not_for:
+  - "Your draft is finished and only needs polish: use a line editor, or a friend who reads closely."
+  - "You want to check one scene or the whole draft for a single effect: use the Single-effect draft checker."
+  - "You need new scenes or a new plot: write them first, then come back to reorder."
 
 you_give:
   - "Your draft, story, talk or outline"
@@ -35,6 +39,29 @@ how_to_use:
   - "Say who the reader should feel closest to."
   - "Say any scenes that cannot move."
   - "Read the new order aloud once, then read the true order. Compare what you feel."
+output_sample:
+  input:
+    - Your draft, story, talk or outline
+    - What you want the reader to feel or understand (optional)
+    - Scenes that cannot move (optional)
+    - Length or form (optional)
+  output:
+    - name: Original order
+      contains: Every scene numbered in the order written, with what happens, who is there and what is learned.
+    - name: True order
+      contains: "The same scenes, earliest first, with MISSING: when marked where the draft gives no timing."
+    - name: Point of view
+      contains: The person whose seat the reader takes, what they do not know and when they find out.
+    - name: New order
+      contains: A numbered list of scenes, each with one line on why it sits there.
+    - name: Strands
+      contains: Two or three threads of the story, how each builds, and where they meet.
+    - name: Logic check
+      contains: The new order put back in time order, with every break where an effect comes before its cause.
+    - name: Steps of each change
+      contains: The scenes that show each change step by step, or a note on a missing step.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "Lists the scenes"

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads reviews and sites for patterns and turns them into choices.
 new_slug: store-product-edge-finder
 name: Store product edge finder
-summary: Give it rival stores and reviews. Get their gaps, your unique value,
-  and a ranked list of what to change.
+summary: Find your product's edge over rival Shopify stores. Give it competitor sites and reviews. You get their gaps, your unique value and a ranked to-do list.
 job: run-your-store
 headline: Store product edge finder
-subhead: Find the gap between your shop and the rivals, and what to change
-  first. You give competitor stores and, if you have them, their customer
-  reviews and yours.
+subhead: Find the gap between your shop and the rivals, and what to change first. You give competitor stores and, if you have them, their customer reviews and yours.
 explain: |
   Find the gap between your shop and the rivals, and what to change first. You give competitor stores and, if you have them, their customer reviews and yours. You get a side-by-side comparison, a list of what buyers complain about, what makes you different and a ranked action list.
 
@@ -18,6 +15,10 @@ when:
   - You want to turn rivals' bad reviews into your selling points.
   - You are rewriting your homepage message and need a clear angle.
   - You must decide which improvements to make first.
+not_for:
+  - You have few or no reviews to read. Ask a few customers directly with a short survey instead.
+  - You want to fix your product page copy only. Rewrite it by hand or with a plain writing prompt in your AI.
+  - You need exact sales or traffic numbers for rivals. Use a paid store research tool, since this skill only reads what you give it.
 you_give:
   - Your store and product
   - Two to five competitor stores
@@ -30,7 +31,27 @@ you_get:
   - A positioning statement
   - A ranked list of changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. You do not need to run any code.
+  - Paste your store link, your category and two to five competitor store links.
+  - Paste competitor reviews if you have them, one review per line with the star rating and date. Add your own reviews the same way.
+  - Ask your AI to build the comparison, pain points, unique value and action plan.
+  - Check the result against the rival sites yourself. Treat any impact figure as a rough guess, not a promise.
+  - Take the top action on the list and test it on your homepage first.
+output_sample:
+  input:
+    - Your store link and product category
+    - Two to five competitor store links
+    - Competitor customer reviews (optional)
+    - Your own customer reviews (optional)
+    - Ad or social media examples (optional)
+  prerequisites:
+    - An AI chat that can read pasted text. Running the script is optional and needs code running.
+  output:
+    - name: Competitor comparison
+      contains: A side-by-side table of you and each rival on price, brand story, social proof, shipping and subscriptions.
+    - name: Top pain points
+      contains: The most common complaints in competitor reviews, ranked by how often they come up.
+    - name: Differentiation opportunities
+      contains: Gaps where you can stand apart, such as shipping terms, brand story, service or guarantees.
+    - name: Action plan
+      contains: A ranked list of changes with high, medium or low priority and the expected impact.

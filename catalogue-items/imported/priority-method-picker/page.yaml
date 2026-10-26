@@ -2,34 +2,97 @@ thinking: low
 thinking_why: It matches your case to a short list of known methods.
 new_slug: priority-method-picker
 name: Priority method picker
-summary: Describe your backlog and team. Get the best way to rank it from nine
-  methods, with the steps to use it.
+summary: Pick the best way to prioritize your backlog (RICE, ICE or Opportunity Score) and get a scoring table for your own list, with the steps to use it.
 job: build-product
 headline: Priority method picker
-subhead: Pick the right way to rank your backlog from nine proven methods, then
-  get the steps to use it. Describe your list and team and the skill matches a
-  method to your situation.
+subhead: Give it your list of items, your team size and the data you have. It picks one of nine ranking methods, explains why, and sets up a scoring table for your list. It leaves cells empty where you gave no number.
 explain: |
-  Pick the right way to rank your backlog from nine proven methods, then get the steps to use it. Describe your list and team and the skill matches a method to your situation.
+  Teams often argue about what to build first because each person ranks the list a different way. A prioritization framework gives everyone the same rule. The hard part is choosing which one. RICE needs reach numbers. Opportunity Score needs survey answers. ICE works with opinions and little time.
 
-  It covers Opportunity Score, ICE, RICE and others with their formulas. Opportunity Score uses survey data on importance and satisfaction to rank customer problems. ICE and RICE score ideas on impact, confidence, reach and effort. The key rule is to rank problems, not features, and never let customers design solutions. You get the method, a scoring template and an example of how to read the results.
+  This skill matches your situation to one of nine methods: Opportunity Score, ICE, RICE, Impact vs Effort, Risk vs Reward, Weighted Decision Matrix, MoSCoW, Kano and the Eisenhower Matrix. It gives you the formula, what each score means, and a table with one row per item.
+
+  It follows one rule from the original author: rank customer problems, not features, and never let customers design the solution. It never makes up scores. If you did not give a number, the cell says MISSING.
 when:
-  - Your backlog has 60 items and everyone ranks them differently.
-  - You need a fair way to say no to requests.
-  - You have survey results on customer needs.
-  - Your team debates features without any scoring system.
+  - Your backlog has dozens of items and everyone ranks them differently.
+  - You need a fair way to say no to feature requests.
+  - You have survey results on how much customers need something and how well it works today.
+  - Your team debates features and has no scoring rule.
+not_for:
+  - "You already have a feature list and capacity and want RICE scores plus a requirements template: use the Feature priority scorer."
+  - "You are choosing between a few big strategic bets with no customer data: use the Strategy trade-off planner."
+  - "You want to turn a roadmap of features into goals: use the Feature roadmap to outcomes rewriter."
 you_give:
-  - List of items to rank
-  - Team size and context
-  - Customer survey data (optional)
-  - Time and data available
+  - The list of items to rank, written as customer problems or ideas
+  - Your team size and who decides
+  - The data you have, such as survey answers, usage counts or reach estimates (optional)
+  - How much time you have to score
 you_get:
-  - Recommended method
-  - Formula and scoring steps
-  - Scoring template
-  - Ranked list guide
+  - One recommended method and a runner-up, with the reason for each
+  - The formula and the meaning of each score
+  - A scoring table with one row for each of your items
+  - A guide to reading the ranking and checking it
+  - A list of the numbers you still have to collect
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - List the items you want to rank. If you have more than 20, start with the 20 you argue about most.
+  - Note what data you have. Survey answers, reach counts and plain opinions all lead to different methods.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions, then your list. No code or paid tool is needed.
+  - Read the recommended method and the reason. If the reason does not match your situation, tell your AI and ask for the runner-up.
+  - Fill the empty cells of the scoring table with your team. Ask your AI to re-sort once you paste the numbers back.
+  - Check that the top three match your gut. If one does not, find which number is off before you commit.
+output_shape: |
+  Recommended method: <name> and <why it fits>. Runner-up: <name> and <why second>.
+  How to score: <formula>, <scale for each input>, <who fills each column>
+  Scoring table:
+    <item> | <input 1> | <input 2> | <input 3> | <score>
+  How to read the ranking: <sort order, close scores, one sanity check>
+  Next step: <what to do with the top 3>
+  Missing: <numbers still to collect>
+output_sample:
+  input:
+    - Your list of items to rank
+    - Your team size and who decides
+    - What data you have (survey, usage counts or only opinions)
+    - How much time you have to score
+  output:
+    - name: Recommended method
+      contains: The method that fits your data and team, why, and a runner-up with the reason it ranks second.
+    - name: How to score
+      contains: The formula, the scale for each input and who fills in each column.
+    - name: Scoring table
+      contains: One row per item with a column for each input. Cells you gave no number for say MISSING.
+    - name: How to read the ranking
+      contains: How to sort, how to treat close scores and one check against your gut.
+    - name: Next step
+      contains: What to do with the top three items.
+    - name: Missing
+      contains: Numbers you still have to collect and how that limits the ranking.
+how_it_works:
+  - title: Check your data
+    text: It asks what data you have, such as survey answers, reach counts or only opinions. That decides which methods are possible.
+  - title: Match a method
+    text: It compares your case to nine methods and picks one, with a runner-up.
+  - title: Set the scale
+    text: It states the formula and what each score means, so everyone scores the same way.
+  - title: Build the table
+    text: It makes one row per item and fills in only the numbers you gave.
+  - title: Help you read it
+    text: It tells you how to sort, how to treat ties and how to check the result against your gut.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can pick the method and build the table. Sheets or Excel are useful for scoring with your team.
+    - name: Google Sheets or Excel
+      why: Paste the table in, fill the empty cells together and let the sheet sort the scores.
+  inputs:
+    - Survey answers on how important each need is and how satisfied customers are today
+    - Counts of how many customers each item affects
+    - Rough effort for each item, in person-months
+terms:
+  - term: Opportunity Score
+    meaning: How important a need is, times how unsatisfied customers are with it today.
+  - term: ICE
+    meaning: Impact times Confidence times Ease. A quick score for ideas.
+  - term: RICE
+    meaning: Reach times Impact times Confidence, divided by Effort.
+  - term: Backlog
+    meaning: The list of things you could build or fix.

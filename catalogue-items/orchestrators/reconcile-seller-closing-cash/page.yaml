@@ -1,53 +1,87 @@
 new_slug: reconcile-seller-closing-cash
 name: Reconcile seller closing cash
-headline: Reconcile seller closing cash
-summary: Connect seller proceeds, working-capital settlement and escrow balances without double counting.
+headline: "Work out seller cash paid, held back and still owed"
+
+summary: Paste closing price, working capital and escrow figures. Get what the seller has received, what is held and what is still due.
+
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A seller proceeds-to-paid-and-retained cash reconciliation with unresolved items. Share signed closing price bridge, same-cutoff balances, estimated and final contractual working capital, approved escrow account and unique claim ledger.
-explain: |-
-  A seller proceeds-to-paid-and-retained cash reconciliation with unresolved items.
+subhead: Give it the signed closing price bridge, the estimated and final working capital, and the escrow account with its claims. It builds the seller's equity proceeds, settles the working-capital difference once, and splits the escrow into paid out, held for claims and ready to release. You get one picture of seller cash, a note of who pays what, and a list of what is still unproven.
 
-  Acquisition closing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  After a sale closes, the seller's money arrives in three separate streams. There is the cash paid at closing. There is a working-capital true-up months later, which can go either way. And there is an escrow account that pays out in pieces as claims are settled. People often add these up from three spreadsheets, and the same dollars end up in two of them.
+
+  This workflow keeps them apart on purpose. Step 1 builds equity proceeds from enterprise value, cash, debt, debt-like items and seller expenses, and leaves working capital and escrow out. Step 2 settles only the gap between the final and the estimated working capital, because the estimate was already paid at close. Step 3 treats an escrow release as held money coming back, not as new price. Each step hands its result to the next with its sign and who pays.
+
+  It works from the contract numbers you give it. It does not read the purchase agreement for you, settle a dispute, handle tax or an earnout, or approve a payment. A person who knows the agreement checks the definitions and signs off.
+
 when:
-  - You need a seller proceeds-to-paid-and-retained cash reconciliation with unresolved items.
-  - You work on acquisition closing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - The closing statement is signed and you want one page showing what the seller got, what is held and what is still due.
+  - The final working-capital number came in below the estimate and nobody is sure who pays whom.
+  - An escrow release request arrived and you need to know how much is free after the claims already paid and the ones pending.
+  - Two schedules both include the working-capital adjustment and you suspect the seller's total is overstated.
+
 you_give:
-  - Signed closing price bridge, same-cutoff balances, estimated and final contractual working capital, approved escrow account and unique claim ledger.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed closing price bridge: enterprise value, cash, debt, debt-like items and seller expenses at the closing cutoff (from the closing statement)
+  - Working capital for the peg, the estimate paid at close and the final figure, all under the same contract definition (from the purchase agreement and the final statement)
+  - The escrow account: the amount deposited, what has been paid out, and the pending claims with their IDs and amounts (from the escrow agent and the claim ledger)
+  - The agreement's rule on who pays a negative settlement, and whether it is netted from the escrow (optional, but it changes the payer line)
+  - The closing date, the currency and the scale, such as thousands
+
 you_get:
-  - A seller proceeds-to-paid-and-retained cash reconciliation with unresolved items.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Equity proceeds at closing, built line by line from enterprise value
+  - The working-capital settlement, as final less estimate, with its sign and who pays
+  - The escrow split: deposited, paid out, held for pending claims, ready to release and any claims above the balance
+  - One seller cash picture: paid at closing, still held, owed back and total expected, each counted once
+  - Every MISSING item, and any check that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can create spreadsheets.
+  - Attach the signed closing statement, the working-capital calculations and the escrow ledger. Paste the agreement's definitions of cash, debt, working capital and who pays a settlement. State the closing date once at the top.
+  - After step 1, check that equity proceeds match the closing statement. A gap usually means a debt-like item was counted twice or missed.
+  - After step 2, check that the estimate, peg and final use the same definition. Read the sign and the payer line aloud against the agreement.
+  - After step 3, check that every escrow claim appears once and that release plus held equals the remaining balance.
+  - Fill every MISSING line before anyone acts on a figure. Nothing here moves money. A person who knows the agreement signs off.
+
 how_it_works:
   - title: Closing equity proceeds checker
-    text: Build enterprise-to-equity proceeds from actual cash, debt, debt-like items and seller expenses. Keep working-capital adjustments and escrow allocations outside this initial subtotal.
+    text: Starts at enterprise value, adds cash, and takes off debt, debt-like items and seller expenses once each. Leaves working capital and escrow out. Hands step 2 the equity figure and the cutoff date. Check before moving on, the total ties to the draft closing statement.
   - title: Working capital true-up checker
-    text: Use the identical contractual working-capital definition for peg, estimate and final. Add only the final-less-estimate settlement to amounts already paid, never the full peg adjustment again.
+    text: Puts the peg, the estimate and the final on one definition. Works out the closing adjustment (estimate less peg) and the final adjustment (final less peg), then settles only the difference, final less estimate. Hands step 3 the settlement amount, its sign and who pays. Check before moving on, the same accounts and cutoff are used in all three.
   - title: Escrow release checker
-    text: Reconcile actual deposits, prior disbursements and pending reserves independently. Show available release as retained proceeds becoming payable, not new consideration added to equity value.
-output_shape: |-
-  A seller proceeds-to-paid-and-retained cash reconciliation with unresolved items.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Takes the deposit, subtracts what was actually paid out, holds the lesser of pending claims and what remains, and shows the rest as ready to release. Shows any claims above the balance. Check before moving on, each claim has one ID and appears once.
+
+output_shape: |
+  CLOSING DATE <date>, <currency>, <scale>
+
+  1 EQUITY PROCEEDS  EV <n> + cash <n> - debt <n> - debt-like <n>
+                     - seller expenses <n> = <n>
+  2 WORKING CAPITAL  peg <n>, estimate <n>, final <n>
+                     closing adjustment <n>, final adjustment <n>
+                     settlement <n>, <who pays whom>
+  3 ESCROW           deposited <n> - paid out <n> = remaining <n>
+                     held for pending claims <n>, ready to release <n>
+                     claims above the balance <n or none>
+
+  SELLER CASH        agreed at closing <n> (= 1 + closing adjustment)
+                     into escrow <n>, paid at closing <n>
+                     owed back <n>, still held <n>, total expected <n>
+
+  SOURCES            <each input, its source, date and unit>
+  MISSING            <each gap, and the line it stops>
+  CHECKS MISSED      <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Working-capital amounts already paid and actual escrow disbursements appear once; final settlement signs and payer are explicit.
+  - what: A bigger final number
+    how: Make the final working capital higher than the estimate. The settlement flips sign and the buyer pays the seller.
+  - what: Claims above the balance
+    how: Raise a pending claim above what remains. The page shows the excess as a separate unsecured line, not as a negative release.
+  - what: A netted payment
+    how: Tell it the agreement nets a negative settlement from the escrow release. The payer line and the release amount both change.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Working-capital amounts already paid and actual escrow disbursements appear once; final settlement signs and payer are explicit.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +92,59 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep one sheet with the agreement's definitions of cash, debt, working capital and the settlement payer, and paste it in every time.
+  - Keep the escrow claim ledger as a running list with IDs, so each new run sees what was already paid.
+  - Pair it with the locked-box closing price workflow when the deal fixed its price at an earlier date instead of using a working-capital peg.
+  - After a release is approved, record the date and amount in your ledger so the next run starts from the true balance.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text.
+    - name: The escrow agent's statement
+      why: Gives the actual deposit and payments, which are facts, not estimates.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed closing statement, not a draft, so the first step ties to something final.
+    - The agreement's wording on working capital and on who pays a negative settlement.
+    - A claim ledger with one ID per claim.
+
 terms:
+  - term: Enterprise value
+    meaning: The price for the whole business before adding cash and taking off debt.
+  - term: Equity proceeds
+    meaning: What is left for the sellers after cash is added and debt, debt-like items and seller expenses come off.
+  - term: Debt-like item
+    meaning: A bill that acts like debt but isn't a loan, such as unpaid bonuses or deferred payments the agreement treats as debt.
+  - term: Working capital peg
+    meaning: The agreed normal level of working capital. The price moves up or down from it at closing.
+  - term: True-up
+    meaning: The later payment that corrects the estimate paid at closing to the final number.
+  - term: Escrow
+    meaning: Money held by a third party after closing, to pay the buyer's claims or be released to the seller.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the calculation works, with no claim about a real deal.
+
+not_for:
+  - The price bridge is not signed yet. Use the closing equity proceeds checker on a draft and treat it as a draft.
+  - You only need the equity bridge, or only the escrow balance. Use the closing equity proceeds checker or the escrow release checker on its own.
+  - The deal used a locked-box price with no working-capital peg. Use the locked-box closing price workflow.
+  - There is a dispute, a tax question, an earnout or a collar. This covers a plain dollar-for-dollar adjustment only.
+
+output_sample:
+  input:
+    - "The signed closing price bridge: enterprise value, cash, debt, debt-like items and seller expenses"
+    - "Working capital for the peg, the estimate paid at close and the final figure"
+    - "The escrow account: amount deposited, amount paid out and pending claims"
+    - "The agreement's rule on who pays a negative settlement (optional)"
+    - "The closing date, currency and scale"
+  output:
+    - name: "1 EQUITY PROCEEDS"
+      contains: "Enterprise value plus cash, less debt, debt-like items and seller expenses."
+    - name: "2 WORKING CAPITAL"
+      contains: "Peg, estimate and final figures, the settlement, and who pays whom."
+    - name: "3 ESCROW"
+      contains: "Deposited less paid out, what is held for pending claims and what is ready to release."
+    - name: "SELLER CASH"
+      contains: "Paid at closing, still held, owed back and total expected, each counted once."
+    - name: "SOURCES AND GAPS"
+      contains: "Each input's source, each gap and the line it stops, and any check that could not run."

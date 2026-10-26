@@ -16,6 +16,32 @@ use_cases:
   - "Write a big, clear long-term goal that a whole team can rally behind"
   - "Face a hard truth about a project while keeping faith that you will get through"
   - "Map the flywheel of a small business: which step feeds the next"
+not_for:
+  - "You need a team to speak up and admit mistakes: use the Amy Edmondson mind."
+  - "You want to know why a simpler rival is beating you: use the Clayton Christensen mind."
+  - "You need legal, tax or personal money advice, or a view on companies in today's news: ask a lawyer, an accountant or an adviser."
+output_sample:
+  input:
+    - The problem or choice you face, in your own words
+    - Your list of growth ideas or options
+    - "Your team: who is in it and what seats they hold"
+    - Your key numbers, such as revenue or sign-ups (optional)
+    - Your current plan (optional)
+  output:
+    - name: Facts first
+      contains: A plain look at what is true today, including the parts you would rather not face.
+    - name: People check
+      contains: Questions on whether the right people are in the right seats before you pick a plan.
+    - name: Three circles
+      contains: What you care about, what you could be best at and what drives your money, plus what you cannot be best at.
+    - name: Stop-doing list
+      contains: The ideas to cut because they fall outside what you can be best at.
+    - name: Steady push and small tests
+      contains: A repeatable yearly target and low-risk tests to run before any big bet.
+    - name: Questions to answer
+      contains: Written questions for you, such as a seat chart or a target for the year.
+    - name: Limits of the research
+      contains: A note that his samples are large public companies and show links, not proven causes.
 seats:
   - {seat: "Good to great", asks: "What can we be the best in the world at, and what should we stop doing because we can't?"}
   - {seat: "Discipline and people", asks: "Do we have the right people in the right seats before we decide where to go?"}

@@ -1,6 +1,6 @@
 slug: poster-designer
 name: Poster designer
-summary: Describe the poster or artwork. Get a finished PNG or PDF design with its own clear look.
+summary: "Get a finished PNG or PDF poster with its own art style, from a short brief. Your AI plans the look first, then draws it with code."
 category: general
 boards: []
 type: skill
@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: design_direction
+    required: false
 outputs:
   - type: image
   - type: document

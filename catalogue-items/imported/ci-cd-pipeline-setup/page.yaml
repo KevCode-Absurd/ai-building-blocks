@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows known pipeline patterns for your stack.
 new_slug: ci-cd-pipeline-setup
 name: Build and release pipeline setter
-summary: Describe your project. Get a CI/CD pipeline that builds, tests and
-  ships across environments.
+summary: Set up a CI/CD pipeline that tests, builds and ships your code on every push. Describe your stack and get ready-to-use config files.
 job: ship-and-host
 headline: Build and release pipeline setter
-subhead: A build, test and release pipeline for your project, so code goes from
-  push to live without manual steps. You describe your language, host and
-  target, and you get ready-to-use config files.
+subhead: A build, test and release pipeline for your project, so code goes from push to live without manual steps. You describe your language, host and target, and you get ready-to-use config files.
 explain: |
   A build, test and release pipeline for your project, so code goes from push to live without manual steps. You describe your language, host and target, and you get ready-to-use config files.
 
@@ -18,6 +15,10 @@ when:
   - You need tests to run on every pull request.
   - You want staging on one branch and production on another.
   - Your pipeline is slow and you want it faster.
+not_for:
+  - "You have no Git host, or only a one-off script: run it by hand, or use your hosting platform's built-in deploy setup."
+  - "Your host already deploys on push and you only want that: use the built-in deploy setup from your hosting platform."
+  - "You need someone to run your servers or fix a broken live site: ask a developer or your host's support team."
 you_give:
   - Your language and framework
   - Where your code lives
@@ -31,8 +32,33 @@ you_get:
   - Caching to speed runs up
   - Failure alerts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Say which language, framework, Git host and deploy target you use. Add your test tools and release style if you have them.
+  - Check the platform it picks and the stages it lists.
+  - Copy each config file into your repo on a new branch. Set the secrets it names in your platform's settings.
+  - Push the branch and watch the first run. Fix any failing step, then merge.
+  - Your AI only writes the files. It does not need to run code, but you must add them to your repo yourself.
+output_sample:
+  input:
+    - Your language and framework
+    - Where your code lives, such as GitHub or GitLab
+    - Where it should be deployed
+    - Test tools and release style (optional)
+  prerequisites:
+    - Access to your code repository
+    - A login for your container registry, if you ship Docker images
+    - A deploy role or key for your cloud host
+    - A Slack webhook, if you want chat alerts (optional)
+  output:
+    - name: Platform choice
+      contains: The CI/CD platform that fits your project, with a short reason for the pick.
+    - name: Pipeline config file
+      contains: One file, such as .github/workflows/ci.yml on GitHub Actions, with lint, test, build and deploy stages in order.
+    - name: Secrets and environment variables
+      contains: Which keys and passwords to store in the platform's secret storage, and which environment each one belongs to.
+    - name: Caching and test matrix
+      contains: Dependency caching and parallel runs across language versions or systems to cut run time.
+    - name: Deployment strategy
+      contains: A rolling, blue/green or canary release setup, with staging before production and a rollback plan.
+    - name: Failure alerts
+      contains: Notification steps that post to Slack, Teams, email or a webhook when a run fails.

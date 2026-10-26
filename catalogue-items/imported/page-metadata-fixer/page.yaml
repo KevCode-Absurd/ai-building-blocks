@@ -2,34 +2,98 @@ thinking: low
 thinking_why: It checks a fixed list of tags and repairs them.
 new_slug: page-metadata-fixer
 name: Page metadata fixer
-summary: Point it at your pages. Get missing titles, share cards, canonical
-  links and page data found and fixed.
+summary: Fix missing page titles, descriptions, canonical links and share cards across your site. Get an audit and the exact tags to paste in.
 job: build-websites
 headline: Page metadata fixer
-subhead: Pages that show the right title, description and preview card when
-  shared or found in search. It scans your pages for missing, duplicated or
-  clashing metadata and fixes it in small changes that touch nothing else.
+subhead: Give it your site code or the head section of your pages. It finds missing, duplicated or clashing titles, descriptions, canonical links, share cards, icons and page data. You get the smallest fix for each, and nothing else in your code is touched.
 explain: |
-  Pages that show the right title, description and preview card when shared or found in search. It scans your pages for missing, duplicated or clashing metadata and fixes it in small changes that touch nothing else.
+  Page metadata is the hidden text in a page's head. Search engines and chat apps read it to show your title, your description and your preview card. When it is missing or clashing, Google may show an odd title, two pages may compete for the same ranking, and a shared link may look bare.
 
-  It checks in priority order. First duplicates and indexing mistakes, then titles and descriptions, canonical links, share cards for social sites, icons, and structured page data. It makes sure title, description, canonical link and share address all agree. It also checks that share cards work on a live address rather than your own computer. It leaves unrelated code alone.
+  This page metadata fixer checks in priority order. First come duplicates and indexing mistakes, because they do the most harm. Then titles and descriptions, canonical links, share cards for social sites, icons, and structured page data. It makes sure the title, description, canonical link and share address all agree.
+
+  It keeps changes small. It follows the pattern your project already uses, and it does not invent ratings, reviews or prices for structured data. It tells you what it could not check, such as how a card looks on a live address.
 when:
-  - Your link looks bare or wrong when you paste it into chat or social media.
-  - Search results show a missing or odd title.
-  - You are launching new pages and want the head tags right.
-  - Duplicate pages are splitting your search ranking.
+  - A link looks bare or wrong when you paste it into chat or social media.
+  - Search results show a missing or odd title for one of your pages.
+  - You are launching new pages and want the head tags right before they go live.
+  - Duplicate or staging pages seem to be splitting your search ranking.
+not_for:
+  - "You want new title and description wording that gets more clicks: use the Title and meta tag writer, then bring the result back here to place it."
+  - "Only your link preview is wrong: use the Link preview fixer, which goes deeper on share images and each platform."
+  - "You want a full review of content, speed and links: use the SEO auditor or the Technical SEO auditor."
 you_give:
-  - Your site code or page addresses
-  - Page titles and descriptions you want (optional)
-  - Your live domain
+  - Your site code, or the head section of your pages
+  - Your live domain, such as example.com
+  - The titles and descriptions you want to keep or use (optional)
+  - Your framework, such as Next.js or plain HTML (optional)
 you_get:
-  - Audit of missing and broken metadata
-  - Fixes with small, scoped code changes
-  - Share card and canonical settings
-  - Icon and page data additions
+  - An audit table of missing, duplicated and clashing tags
+  - The smallest fix for each problem, as the exact tag or line
+  - A check that title, description, canonical and share address agree
+  - A list of what could not be checked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude Code, or paste this skill into Claude, ChatGPT or Gemini. Claude Code can read your whole project.
+  - Give it your site code, or paste the head section of two or three key pages. Add your live domain.
+  - Read the audit table first. The first rows are the ones that matter most.
+  - Apply the fixes. Check that your AI changed only metadata and not other code.
+  - Publish. Then paste your live link into each platform's preview checker to see the share card.
+output_sample:
+  input:
+    - Your site code, or the head section of your pages
+    - Your live domain
+    - The titles and descriptions you want (optional)
+    - Your framework (optional)
+  prerequisites:
+    - An AI that can read your project files, or the page HTML pasted in
+  output:
+    - name: Audit table
+      contains: Each page and tag marked found, missing, duplicated or clashing, with its priority.
+    - name: Fixes
+      contains: The exact tags or lines to add or change, grouped by file, touching metadata only.
+    - name: Agreement check
+      contains: Whether title, description, canonical address and share address match on each page.
+    - name: Not checked
+      contains: Anything the AI could not verify, such as how a share card shows on a live address.
+how_it_works:
+  - title: Find the problem pages
+    text: Reads your pages and lists which titles, descriptions, canonical and share tags are missing or wrong.
+  - title: Fix the worst first
+    text: Handles duplicates and indexing mistakes before titles, canonical links and share cards.
+  - title: Make tags agree
+    text: Checks that the title, description, canonical link and share address say the same thing.
+  - title: Add icons and page data
+    text: Adds a favicon and a valid structured data block only where it matches real page content.
+  - title: Keep changes small
+    text: Follows your existing setup and changes metadata only, with no framework or library swaps.
+  - title: Report what is unchecked
+    text: Lists anything it could not test, such as a card on a live address.
+output_shape: |-
+  AUDIT TABLE
+    <page> | <tag> | <found | missing | duplicated | clashing> | priority <1 to 8>
+
+  FIXES
+    <file>
+      <exact tag or line to add or change>
+
+  AGREEMENT CHECK
+    <page>: title <ok | differs> | description <ok | differs> | canonical <ok | differs> | og:url <ok | differs>
+
+  NOT CHECKED
+    <item and why>
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your whole project and makes small, scoped edits to the right files.
+    - name: Any good chat AI
+      why: Works well if you paste in the head section of a few pages.
+  inputs:
+    - A list of your most important pages
+    - The share image you want shown, as a public link
+    - Your site map, if you have one
+terms:
+  - term: Canonical link
+    meaning: A tag that tells search engines which address is the main one for a page.
+  - term: Share card
+    meaning: The title, picture and text shown when someone shares your link. Also called Open Graph.
+  - term: Structured data
+    meaning: Code that describes a page, such as a product, so search engines can read it.

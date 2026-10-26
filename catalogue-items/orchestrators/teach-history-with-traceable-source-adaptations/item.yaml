@@ -20,11 +20,11 @@ uses:
   - history-thinking-quiz-designer
 steps:
   - uses: history-source-simplifier
-    note: Use originals, learner level and target skills. Preserve attribution, meaningful author language and evidence tensions. Mark cuts and changes; supply a definition-only word bank. Hand both versions and change log to lesson planning.
+    note: Use originals, learner level and target skills. Preserve attribution, meaningful author language and evidence tensions. Mark cuts and changes; supply a definition-only word bank. Hand both versions and change log (the adapted source_text) to lesson planning as its document set.
   - uses: primary-source-lesson
-    note: Use source pairs and central question for background, investigation, discussion and evidence-based writing. Pass target thinking skills, source features and observation opportunities to assessment design.
+    note: Use source pairs and central question for background, investigation, discussion and evidence-based writing. Uses step 1's adapted sources as the document set, with your central question and learner level as the brief. Pass target thinking skills, source features and observation opportunities (the lesson plan) to assessment design.
   - uses: history-thinking-quiz-designer
-    note: Create source-based diagnostics and scoring guide tied to the target skill. Use a supplied fresh source for transfer; otherwise flag familiarity limits. Allow verbal explanation where writing could hide understanding.
+    note: Uses step 2's lesson plan for the skills taught and what learners have seen. Create source-based diagnostics and scoring guide tied to the target skill. Use a supplied fresh source for transfer; otherwise flag familiarity limits. Allow verbal explanation where writing could hide understanding.
 execution: coordinator
 package_files: all
 origin: own

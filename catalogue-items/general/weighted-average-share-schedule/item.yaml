@@ -1,15 +1,13 @@
 slug: weighted-average-share-schedule
 name: Weighted-average share schedule
-summary: Turn dated share changes into a checked EPS denominator and a timing sensitivity.
+summary: Work out weighted-average shares and basic EPS from your share issues and buybacks, with a timing check and a tie-out to the filing.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -17,8 +15,6 @@ outputs:
   - type: spreadsheet
     required: true
   - type: audit_report
-    required: true
-  - type: document
     required: true
 uses: []
 origin: own
@@ -33,3 +29,6 @@ credits:
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
 package_files: all
+before: []
+next: [treasury-stock-option-dilution, convertible-eps-inclusion-test, rights-issue-eps-adjustment, stock-split-eps-restatement]
+needs_mode: manual

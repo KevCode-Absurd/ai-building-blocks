@@ -1,6 +1,6 @@
 new_slug: win-win-deal
 name: Reach a deal both sides will back
-summary: Describe the deal or dispute. Get your stance, a plan to listen first, a third option and a written agreement.
+summary: Plan a win-win deal or settle a dispute. Get your stance, a listen-first plan, a third option and a written agreement both sides can back.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It runs five skills in a row and reads two sides from thin evidence. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You must settle terms with a client, partner, boss or supplier you will deal with again.
   - A family or business dispute keeps going in circles.
   - You tend to give in or push too hard and want a plan that does neither.
+not_for:
+  - "You are buying once and will never deal with this person again: a simple price check or a plain quote comparison is enough."
+  - "You need to calm one tense moment, not settle terms: use the Difficult conversation repair planner."
+  - "You need to win over a team on a proposal, not strike a deal: use the Proposal discussion planner."
 you_give:
   - The deal or dispute, with who, what each wants and what is at stake
   - What you would do if there were no deal
@@ -25,11 +29,32 @@ you_get:
   - A plan for listening first and for stating your side after
   - A third option beyond both plans, and a written agreement with review and consequences
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the five skill files this workflow uses.
+  - Gather a short paragraph on the deal and what you would do if there were no deal.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Describe the deal in a paragraph and say honestly what you do if you walk away.
-  - Make the two deposits and have the conversation. Write both sides' concerns in two columns.
-  - Bring the notes back for the last two steps and go through the agreement with the other side.
+  - Make the two trust deposits, then hold the conversation. Write both sides' concerns in two columns.
+  - Bring the notes back for the last two steps. Read the agreement through with the other side.
+output_sample:
+  input:
+    - "The deal or dispute: who is involved, what each side wants and what is at stake"
+    - What you would do if there were no deal
+    - Anything the other side has said, word for word (optional)
+    - Your notes from the real conversation, once you reach the pause
+  prerequisites:
+    - An AI that can read the handoff pack files (Claude Code, or files in a Claude Project)
+  output:
+    - name: Win-win stance planner
+      contains: Your stance, what a win means for each side, and the point where you walk away.
+    - name: Trust deposit planner
+      contains: Where trust stands, two small deposits to make before the talk, and one habit to stop.
+    - name: Listen-first talk planner
+      contains: What to ask, how to restate what you hear, and when to speak.
+    - name: Third option finder
+      contains: Both sides' needs, at least three options beyond both plans, and a small first step.
+    - name: Results agreement writer
+      contains: Results, limits, help, review dates, consequences and an exit clause, ready for both sides to read.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Win-win stance planner
     text: Names the stance each side is likely to take, rates your courage and consideration and sets your no-deal line.

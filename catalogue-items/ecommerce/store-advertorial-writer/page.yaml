@@ -1,6 +1,6 @@
 new_slug: store-advertorial-writer
 name: "Store advertorial writer"
-summary: "Give it your angle, mechanism, product facts and ad. Get a full advertorial, labelled as an ad."
+summary: "Write a story-led advertorial for your store that continues your ad and is labelled as an ad. Give it your angle, facts and buyer doubts."
 job: write-landing-page
 thinking: high
 thinking_why: "A long story-led page has to stay true to the ad, the facts and the proof across ten to twelve sections, and a stronger model holds that together."
@@ -17,6 +17,10 @@ when:
   - An ad already breaks even and you need the page it should send people to.
   - Your product page converts cold traffic poorly and the buyer needs a story before an offer.
   - You have a winning advertorial from another source and want to rebuild its structure for your own product, in your own words.
+not_for:
+  - "You have no ad that already works yet: run the Advertorial readiness checker first, and fix the ad before you write a long page."
+  - "You sell impulse or fashion products, or your buyers are young: write a short product page instead, since this long story form suits problem-solving products."
+  - "You only want to tighten a draft you already have: use the Advertorial draft editor, or place reviews with the Store social proof placer."
 
 you_give:
   - The avatar, one specific customer, and the angle, root cause and mechanism
@@ -37,6 +41,33 @@ how_to_use:
   - Paste your avatar, mechanism, facts, real reviews, objections and the ad.
   - Ask for the page in sections or halves, then ask for ten headline options.
   - Fill every MISSING gap with something real, check every claim, then add the page to your store in a custom HTML block.
+output_sample:
+  input:
+    - "Your avatar: one specific customer, with age, gender and how long they have had the problem"
+    - Your angle, root cause and mechanism
+    - Product facts, price, compare price, offer, guarantee and real reviews
+    - Your five biggest buyer objections
+    - The ad that sends traffic to the page (optional)
+  prerequisites:
+    - Your ad already breaks even or better, checked with the Advertorial readiness checker
+    - Real customer reviews you have permission to use
+  output:
+    - name: Ad label and headline
+      contains: The wording and top placement of the ad label, the headline, and ten alternative headlines.
+    - name: Avatar, promise, pains and desires
+      contains: The named person, the promise, three to five pains and desires, and where each one repeats.
+    - name: Page, sections 1 to 12
+      contains: The full copy in order, from hook and trust to a two-option close, plus an honest author line.
+    - name: Button plan
+      contains: The text and position of about four buttons.
+    - name: Testimonial to objection table
+      contains: Each buyer objection matched to one real quote and its source.
+    - name: Image list
+      contains: Six to ten images, each tied to the paragraph it sits beside.
+    - name: Claims to check
+      contains: Each claim with its proof, and which health, body, money or legal claims need a qualified person.
+    - name: Checks missed
+      contains: Any check that failed, or the word none, plus any MISSING gaps to fill.
 
 how_it_works:
   - title: Writes for one person

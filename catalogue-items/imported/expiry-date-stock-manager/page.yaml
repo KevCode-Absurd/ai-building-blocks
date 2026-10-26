@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts stock by expiry date and plans markdowns.
 new_slug: expiry-date-stock-manager
 name: Expiry date stock manager
-summary: Give it items with expiry dates. Get a sell-first list, markdown timing
-  and a way to cut waste.
+summary: "Plan your expiry date stock management: give it your items and date codes, and get a sell-first list, markdown timing and a way to cut waste."
 job: run-your-store
 headline: Expiry date stock manager
-subhead: Give it items with expiry dates. Get a sell-first list, markdown timing
-  and a way to cut waste. Bring products with shelf life and date codes. Use the
-  result to plan your next step.
+subhead: Give it items with expiry dates. Get a sell-first list, markdown timing and a way to cut waste. Bring products with shelf life and date codes. Use the result to plan your next step.
 explain: |
   A sell-first list ordered by expiry date, markdown timing and a rotation routine that cuts the stock you throw away.
 
@@ -18,6 +15,10 @@ when:
   - Customers complain about stale products.
   - You want to know when to mark down items nearing their date.
   - You are setting up date tracking in a warehouse or shop.
+not_for:
+  - You handle regulated pharma batches that need recall and batch rules. Use a pharmaceutical supply chain specialist or your quality team.
+  - You need food safety rules for a plant or a full supply chain. Ask your food safety adviser or your regulator.
+  - You only need to know what to reorder. Use a simple reorder check in your sales system or a spreadsheet.
 you_give:
   - Products with shelf life and date codes
   - Current waste rate and rotation method
@@ -31,7 +32,27 @@ you_get:
   - Order quantity advice
   - Waste reduction targets
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. It needs no code, files or paid tools.
+  - List your products with shelf life, date codes and storage needs. Add your waste rate and how you rotate stock.
+  - Add delivery times and any rules that apply, if you have them.
+  - Ask for your sell-first list, markdown timing and a rotation routine.
+  - Check the result against your real stock counts. Replace any sample figures in the code or tables with your own sales and stock data.
+  - Pass the markdown timing to your pricing or ordering step.
+output_sample:
+  input:
+    - Your products, with shelf life and date codes
+    - Your current waste rate and how you rotate stock
+    - Storage needs, such as ambient, chilled or frozen
+    - Delivery lead times (optional)
+    - Rules that apply, such as food or pharma (optional)
+  output:
+    - name: Executive summary
+      contains: Your stock total, waste rate, waste cost, average remaining shelf life at sale, and whether any expired stock was sold.
+    - name: Expiration summary
+      contains: Your stock split into zones by remaining shelf life, with the action each zone needs.
+    - name: Expiring in next 30 days
+      contains: A sell-first list with item, location, quantity, expiry date, days left and the action to take.
+    - name: Waste analysis
+      contains: Your waste grouped by cause, such as overstock, forecast error, long lead time or poor rotation.
+    - name: Recommendations
+      contains: Numbered steps to cut waste, such as earlier markdowns, smaller orders and a donation plan.

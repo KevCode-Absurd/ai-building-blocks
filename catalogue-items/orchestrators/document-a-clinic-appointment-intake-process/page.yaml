@@ -1,50 +1,64 @@
 new_slug: document-a-clinic-appointment-intake-process
 name: Document a clinic appointment intake process
 headline: Document a clinic appointment intake process
-summary: Share the source files. Get an administrative intake procedure and unresolved process questions.
+summary: Write a clear clinic appointment intake procedure for front desk staff. Share your approved process. Get plain steps and a list of open questions.
 job: document-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An administrative intake procedure and unresolved process questions. Share the clinic approved administrative intake procedure, minimum necessary fields, appointment types, access rules and escalation contacts. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share your clinic's approved intake process, the details you collect, your appointment types, access rules and escalation contacts. Your AI writes a step-by-step intake procedure for front desk staff, edits it into plain words and lists what still needs an answer.
 explain: |-
-  An administrative intake procedure and unresolved process questions.
+  In many clinics the booking steps live in one person's head. Who checks identity? Which details are required? What happens when a caller needs more than the front desk can give? This workflow turns your approved process into a written appointment intake procedure that a new team member can follow.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The procedure preserves clinician owned escalation rules; no symptom interpretation, triage or treatment advice is generated. Missing tools or evidence stay visible in the final summary.
+  Two skills run in order. The first writes the procedure: purpose, scope, who does each step, the steps themselves and the exceptions. The second edits it into plain words, so each step says what the staff member does. Every step comes from what you supplied. Anything your sources do not say becomes an open question, not a guess.
+
+  This is administrative work only. It does not read symptoms, rank who is most urgent or give treatment advice. Escalation steps copy your clinic's own rules and name who decides. Your practice manager or privacy lead should approve the result before staff use it.
 when:
-  - You need an administrative intake procedure and unresolved process questions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A new receptionist starts and you have no written booking steps.
+  - Staff book, check identity and collect details in different ways, and patients notice.
+  - Someone asks to see your written intake steps and you only have notes.
+  - You are changing booking software and want the current steps on paper first.
+not_for:
+  - "You need triage, symptom questions or urgency rules: those belong to your clinicians. This writes administrative steps only."
+  - "You have no approved process yet: agree one with your practice manager first, then run this."
+  - "You already have a procedure and want it checked: use the SOP and runbook checker."
+  - "You need advice on patient consent or privacy law: ask your privacy officer or a lawyer."
 you_give:
-  - The clinic approved administrative intake procedure, minimum necessary fields, appointment types, access rules and escalation contacts.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your clinic's approved intake process, as a document or notes
+  - The details you collect when someone books, and which are required
+  - Your appointment types and any access rules, such as who may book which type
+  - Your escalation contacts and who decides each case
+  - How you check identity and record consent, if you do (optional)
 you_get:
-  - An administrative intake procedure and unresolved process questions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A written intake procedure with purpose, scope, who does each step, the steps and exceptions
+  - The same procedure edited into plain words staff can follow
+  - Clear marks showing where a clinician owns the decision
+  - A list of open questions your sources did not answer
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach your approved process and paste your field list, appointment types, access rules and escalation contacts. Leave out patient names and records.
+  - Tell your AI to follow the pack and save each step's file.
+  - After step 1, check every escalation step against your own rules. Nothing should read like triage or advice.
+  - After step 2, check the plain version still says who decides each case. Then ask your practice manager or privacy lead to approve it.
 how_it_works:
   - title: Process and SOP writer
-    text: Document administrative booking, identity checks, consent handling, approved information collection and escalation using only the clinic supplied process. Exclude diagnosis and clinical prioritization.
+    text: Writes the procedure from your sources, covering booking, identity checks, consent, the details you collect and escalation. Leaves out diagnosis and clinical priority. Hands step 2 the full procedure and the open questions. Check before moving on, every step traces to what you supplied.
   - title: Plain English editor
-    text: Edit the actual administrative procedure produced in the prior step for clear staff actions while preserving approved clinical boundaries and privacy instructions.
+    text: Edits the procedure into short, clear staff actions and lists each change. Keeps your clinical limits and privacy lines as they were. Check before you use it, each case still names who decides.
 output_shape: |-
-  Scope and source coverage
-  An administrative intake procedure and unresolved process questions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCES      <what you supplied, with dates>
+  INTAKE PROCEDURE       <purpose | scope | who does each step | steps | exceptions>
+  PLAIN VERSION          <same steps in plain words, with a list of changes>
+  CLINICIAN DECISIONS    <each case where a clinician decides, and who>
+  OPEN QUESTIONS         <each gap, why it matters, who can answer>
+  CHECKS MISSED          <one line each, or none>
+  NEXT STEP              <one suggestion>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The procedure preserves clinician owned escalation rules; no symptom interpretation, triage or treatment advice is generated.
+  - what: One appointment type
+    how: Start with your most common type, such as a new patient visit. Add the others once the first reads right.
+  - what: Reader
+    how: Say who will use it, such as a part-time receptionist or a call centre. The plain version is written for that person.
+  - what: Length
+    how: Ask for a one-page checklist version beside the full procedure, for use at the desk.
 judge:
   - The procedure preserves clinician owned escalation rules; no symptom interpretation, triage or treatment advice is generated.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +71,40 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the approved procedure and its date, and paste it in the next time something changes.
+  - Add a review date, so someone checks the steps against how the desk really works.
+  - Record each open question once answered, so the next run starts with the answer.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It can read your process document and field list together. In plain chat you paste the text.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your blank booking form or field list, with no patient details.
+    - Your consent wording, exactly as approved.
 terms:
+  - term: Intake
+    meaning: The steps from a patient's first contact to a confirmed booking, before they see anyone.
+  - term: Escalation
+    meaning: Passing a case to a named person, such as a clinician, because the front desk should not decide it.
+  - term: Triage
+    meaning: Deciding who needs care first. This workflow does not do it.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.
+output_sample:
+  input:
+    - Your clinic's approved intake process
+    - The details you collect, your appointment types and access rules
+    - Your escalation contacts and who decides
+    - How you check identity and record consent (optional)
+  prerequisites:
+    - An AI that can read files
+    - Someone at the clinic who can approve the result
+  output:
+    - name: outputs/step-01-process-and-sop-writer.md
+      contains: Purpose, scope, who does each step, booking, identity, consent, details collected, escalation and exceptions.
+    - name: outputs/step-02-plain-english-editor.md
+      contains: The same procedure in plain words, with each change listed and clinical limits kept.
+    - name: Open questions
+      contains: Facts your sources did not give, each marked MISSING with who can answer.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, checks missed and one suggested next step.

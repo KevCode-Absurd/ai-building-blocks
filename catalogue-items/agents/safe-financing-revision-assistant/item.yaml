@@ -1,33 +1,26 @@
 slug: safe-financing-revision-assistant
 name: SAFE financing revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: See what a SAFE owns after your next priced round, with the option pool top-up and pro rata cash. Redone when terms change.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
-  - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
   - type: document
     required: true
+  - type: spreadsheet
+    required: true
+outputs: []
+needs_mode: manual
 uses:
   - check-a-safe-into-priced-financing
   - weighted-average-antidilution-checker
 steps:
   - uses: check-a-safe-into-priced-financing
-    note: Run the governing workflow when A new funded SAFE, signed round term, pool target or approved participation right is supplied.
+    note: Run the governing workflow when a new funded SAFE, a signed round term, a pool target or an approved participation right is supplied. It hands back the SAFE stake, the pool top-up and the pro rata cash.
   - uses: weighted-average-antidilution-checker
-    note: If a qualifying down round changes protected conversion ratios, run the actual charter reset check and require an approved revised capitalization denominator before rerunning affected SAFE, pool or allocation work. Otherwise skip the antidilution branch. Never infer multiple-class ownership from the single-SAFE example.
+    note: If a qualifying down round changes protected conversion ratios, run the charter's price reset check and require an approved new share count before rerunning the SAFE, pool or allocation work. Otherwise skip it. Never infer multi-class ownership from the single-SAFE example.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It gives no legal advice and files nothing. It covers one cap-only post-money SAFE at a time.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

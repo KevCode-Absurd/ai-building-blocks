@@ -1,6 +1,6 @@
 new_slug: numbers-drop-explainer
 name: "Numbers drop explainer"
-summary: "Paste the numbers before and after a drop. Get the likely causes ranked by evidence, and what to check."
+summary: "Find out why your numbers dropped. Paste the before and after figures and what changed. You get causes ranked by evidence and one check to run."
 job: track-numbers
 thinking: high
 thinking_why: "It reasons about timing, parts of a metric and competing causes, and must not pick the convenient story."
@@ -17,6 +17,10 @@ when:
   - "A weekly number fell and you have to explain it on Monday."
   - "Two people on the team are sure of two different causes."
   - "You suspect the drop is inside normal variation and want to say so with evidence."
+not_for:
+  - "You have only one period of data, or fewer than about four data points: review your dashboard first to get a longer run of numbers."
+  - "Your metric has no parts you can split out, such as visits, orders and refunds: gather those numbers first, or the drop cannot be located."
+  - "You want to judge a planned test of two versions: use a person who knows your test setup, since this prompt only explains a drop that already happened."
 
 you_give:
   - "The metric by day or week, before and after"
@@ -34,6 +38,32 @@ how_to_use:
   - "List every change in the window with its date, including the ones you think are irrelevant."
   - "Read CAUSES RANKED. If a LIKELY cause started after the drop, something in your dates is wrong."
   - "Run THE ONE CHECK before you send the explanation."
+output_sample:
+  input:
+    - The metric that fell, by day or week, before and after the drop
+    - The numbers that feed it, such as visits, orders, price, refunds or spend
+    - Everything that changed in the window, with dates
+    - Who the explanation is for (advised)
+    - How much the number usually moves week to week (optional)
+  prerequisites:
+    - Your results from your store, Meta Ads Manager or Google Ads, for set dates
+  output:
+    - name: THE DROP
+      contains: From what to what, over what period, in plain and percent terms, set against the usual swing.
+    - name: WHERE IT SITS
+      contains: Which part of the metric moved and which stayed flat, before and after.
+    - name: TIMELINE
+      contains: Each change with its date, marked as before or after the drop began.
+    - name: CAUSES RANKED
+      contains: Each cause with evidence for and against, rated likely, possible or unlikely.
+    - name: VANITY NUMBERS
+      contains: Numbers that look fine but do not answer the question.
+    - name: THE ONE CHECK
+      contains: The single check that would confirm or kill the top cause, who does it and by when.
+    - name: EXPLANATION
+      contains: Six to ten lines for your audience, with what is still unknown and no blame.
+    - name: MISSING
+      contains: Numbers or changes you did not give, so you know what to add.
 
 how_it_works:
   - title: "Sizes the drop"

@@ -7,14 +7,15 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
-  - {type: tool_connection}
+  - {type: plan}
+needs_mode: manual
 uses: [n8n-workflow-designer, n8n-failure-handler, n8n-sub-workflow-builder]
 steps:
-  - {uses: n8n-workflow-designer, note: "Lays out the automation from your task description."}
-  - {uses: n8n-failure-handler, note: "Takes the workflow from the step before and makes its failures visible and recoverable."}
-  - {uses: n8n-sub-workflow-builder, note: "Splits the hardened workflow into parts that carry their own error handling and can be called by other workflows."}
+  - {uses: n8n-workflow-designer, note: "Lays out the automation from your task description. Hands step 2 the full workflow: pattern, trigger, nodes in order and data checks."}
+  - {uses: n8n-failure-handler, note: "Takes the workflow from step 1 and makes its failures visible and recoverable. Hands step 3 the hardened workflow with retries, error paths and the catch-all alert."}
+  - {uses: n8n-sub-workflow-builder, note: "Takes the hardened workflow from step 2 and splits it into parts that carry their own error handling and can be called by other workflows. Hands you the sub-workflows and their typed inputs."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-an-n8n-automation-that-reports-failures-and-can-be-reused/skeleton.yaml

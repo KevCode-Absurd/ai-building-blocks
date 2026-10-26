@@ -1,6 +1,6 @@
 slug: dcf-model-builder-for-india
 name: DCF model builder for India
-summary: Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
+summary: "Build a discounted cash flow valuation in Excel for a listed Indian company, with WACC, bear, base and bull cases and sensitivity tables."
 category: general
 boards: []
 type: skill
@@ -18,6 +18,7 @@ uses: []
 origin: imported
 warnings:
   - scrapes
+  - paid:Daloopa
 source:
   by: nighomni123
   repo: nighomni123/fsi-skills-india

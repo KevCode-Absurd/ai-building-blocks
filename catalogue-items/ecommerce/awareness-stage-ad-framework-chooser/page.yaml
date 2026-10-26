@@ -1,6 +1,6 @@
 new_slug: awareness-stage-ad-framework-chooser
 name: Awareness-stage ad framework chooser
-summary: Choose a copy structure for what buyers already know. Write an ad and flag stage mismatches.
+summary: Pick the right ad copy structure for what your buyer already knows. Get a headline, body and CTA, plus a warning if the stage is wrong.
 job: write-ad-copy
 headline: Awareness-stage ad framework chooser
 subhead: Share product, buyer awareness stage, offer and proof. Get a stage-matched framework and ad copy.
@@ -9,20 +9,52 @@ explain: |-
 
   Share product, buyer awareness stage, offer and proof. Get a stage-matched framework and ad copy.
 when:
-  - You need a stage-matched framework and ad copy.
-  - You need awareness-stage ad framework chooser for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are about to write an ad and are not sure what your buyer already knows.
+  - An ad is not working and you think it speaks to the wrong stage.
+  - You need one ad per stage for a new campaign.
+  - You want to see which stages your current copy would fail.
+not_for:
+  - "Your buyer's stage is still unknown after you check: ask a few customers, or read your reviews first, then come back."
+  - "Your audience mixes several stages: write one ad per stage, or split the audience first."
+  - "You need market research on who your buyers are: do that first with a person or a survey, not this."
 you_give:
-  - Product
-  - Buyer awareness stage
-  - Offer and proof
+  - Your product and what it does
+  - Your buyer's awareness stage (optional)
+  - Your offer and price terms
+  - Your real proof, such as reviews or results (optional)
 you_get:
-  - A stage-matched framework and ad copy
-  - The sources used, missing inputs and assumptions
+  - A stage and a matching copy framework
+  - A headline, subheadline, body and CTA
+  - A warning on which other stages the copy would fail
+  - A list of missing facts and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tools are needed.
+  - Paste your product facts, price and offer, and any real proof such as reviews. Say which stage your buyer is in, if you know.
+  - If any item is missing, ask your AI to mark it as missing and not make it up.
+  - Read the stage and framework first. Change the stage if it is wrong.
+  - Check every claim in the ad copy against your facts before you publish.
+  - If the cross-stage warning says the ad fails for some buyers, run it again for that stage.
+output_sample:
+  input:
+    - Your product and what it does
+    - Your buyer's awareness stage (optional if you are unsure)
+    - Your offer and price terms
+    - Your real proof, such as reviews or results
+  output:
+    - name: Stage
+      contains: The awareness stage chosen for your buyer, with a note if it was a default guess.
+    - name: Framework
+      contains: The copy structure that fits that stage, with its structure and tone.
+    - name: Headline
+      contains: A short headline of four to six words.
+    - name: Subheadline
+      contains: A line of six to twelve words that supports the headline.
+    - name: Body
+      contains: Ad text sized for the stage, built only on the facts you gave.
+    - name: CTA
+      contains: A two to four word call to action that matches the stage.
+    - name: Cross-stage warning
+      contains: Which nearby stages the copy would suit, and which two-stage-away buyers it would fail.
 how_it_works:
   - title: Check the inputs
     text: Confirm product, buyer awareness stage, offer and proof. Mark facts that are missing.

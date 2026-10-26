@@ -2,17 +2,57 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-brag-sheet
 name: Work impact evidence collector
-summary: Share your work notes. Get evidence-backed impact statements for a
-  review, promotion or weekly update.
+summary: Turn your git commits, pull requests and work notes into impact statements for a performance review, promotion case or weekly update.
 job: organise-work
 headline: Work impact evidence collector
-subhead: Share your work notes. Get evidence-backed impact statements for a
-  review, promotion or weekly update. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Tell your AI what period you want to cover. It looks through your commits, pull requests and notes, or asks you questions. You get short impact statements, each with proof, ready to paste into a review.
+not_for:
+  - "You need to plan sprints, track time or make tickets: use your project tracker, such as Jira or Linear."
+  - "You want to announce a feature to your team: write a short launch post yourself, since this makes review entries, not announcements."
+  - "Your work leaves no notes, commits or documents and you can't recall details: talk it through with your manager or a peer first."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Say the time range and what it is for, such as a self-review or a weekly update.
+  - To scan git, GitHub pull requests or Copilot logs, use an AI that can run commands on your computer. Otherwise say you want the interview.
+  - Answer its questions about who benefited and what proof you have. Give real numbers only.
+  - Check each draft entry. Fix anything that overstates your work, then fill in the places marked evidence needed.
+  - Copy the final markdown into your review document.
+output_sample:
+  input:
+    - The time range you want to cover, such as the last 2 weeks or this half
+    - Your git commits or merged pull requests (optional)
+    - Your Copilot CLI session history (optional)
+    - Any numbers, links or outcomes you can share for each piece of work
+  prerequisites:
+    - An AI that can run commands, if you want it to read git, GitHub pull requests or Copilot session logs
+    - Without that, your AI can interview you and work from what you tell it
+  output:
+    - name: Impact entries
+      contains: "One line per piece of work: what you did, the result, and the proof, or a mark that proof is needed."
+    - name: Category tags
+      contains: Each entry is filed under a group such as pull request, bug fix, infrastructure, on-call or documentation.
+    - name: Weekly backfill
+      contains: Entries grouped by week so you can rebuild a forgotten stretch of work in one paste.
+    - name: Review pack
+      contains: Your top 3 to 5 items, grouped by theme, each with what you did, why it mattered and proof.
+    - name: STAR narratives
+      contains: Longer write-ups in situation, task, action and result form for review or promotion forms.
+    - name: Evidence gaps
+      contains: Entries marked evidence needed, with questions about metrics, people helped or pull request numbers.
+when:
+  - Your review is due and you can't remember what you did in the last six months.
+  - You need a weekly update and want it based on real work.
+  - You are building a promotion case and need your best wins with proof.
+  - You finished something big and want to log it while it is fresh.
+you_give:
+  - The time range to cover, such as the last 2 weeks or this half
+  - The repo or pull requests to scan (optional)
+  - Your git author email (optional)
+  - Whether you have Copilot session logs (optional)
+  - Any numbers, links or outcomes for your work (optional)
+you_get:
+  - Impact entries that link what you did to the result and the proof
+  - Entries grouped by week or by theme, as you ask
+  - A short list of your top items for a review or promotion packet
+  - Clear marks where proof is missing, with questions to fill the gaps
+  - Plain markdown you can paste into a review document

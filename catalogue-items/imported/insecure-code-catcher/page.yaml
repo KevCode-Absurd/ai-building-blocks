@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It matches code against a fixed list of risky patterns.
 new_slug: insecure-code-catcher
 name: Insecure code catcher
-summary: Turn it on. Get a warning when your AI writes risky code, like
-  injection, XSS or unsafe commands.
+summary: Catch risky code before your AI writes it. This insecure code catcher warns on injection, XSS and unsafe commands in Claude Code.
 job: secure-code
 headline: Insecure code catcher
-subhead: "A warning right before your AI writes risky code, so common security
-  holes are caught at the moment they would be added. It is a hook, not a
-  command: once installed, it runs on its own before every edit or write."
+subhead: "A warning right before your AI writes risky code, so common security holes are caught at the moment they would be added. It is a hook, not a command: once installed, it runs on its own before every edit or write."
 explain: |
   A warning right before your AI writes risky code, so common security holes are caught at the moment they would be added. It is a hook, not a command: once installed, it runs on its own before every edit or write.
 
@@ -19,6 +16,10 @@ when:
   - You edit workflow files and fear unsafe expressions.
   - You want a warning before risky functions land in your repo.
   - You are teaching a team which patterns are dangerous.
+not_for:
+  - "You want a full scan of code that already exists: run a code scanner such as semgrep or CodeQL in your build checks."
+  - "You use a chat AI or an editor other than Claude Code: this hook only runs inside Claude Code, so ask a teammate to review the code."
+  - "You need proof that code is safe: this only flags text patterns, so ask a security person for a review."
 you_give:
   - Claude Code with hooks enabled
   - The hook installed in your project settings
@@ -28,8 +29,26 @@ you_get:
   - The name and risk of the pattern found
   - A pause so you can choose a safer option
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run hooks in Claude Code.
+  - Open Claude Code. This hook does not work in a chat window, and it needs no API key or paid service.
+  - "Add the plugin with these two commands: /plugin marketplace add alirezarezvani/claude-skills, then /plugin install security-guidance@claude-code-skills."
+  - Ask your AI to edit code as you normally do. The hook runs on its own before every edit or write.
+  - When a warning blocks a write, read the risk note. Ask your AI for the safer option, such as setting text instead of using innerHTML.
+  - If a risky call is truly needed, add a SAFETY comment in the file that says why. The same warning will not repeat in that session.
+  - Next, pair the hook with a code scanner like semgrep or CodeQL in your build checks, because the hook only matches text patterns.
+output_sample:
+  input:
+    - Your edit or write request in Claude Code
+    - The file path and the text your AI is about to write
+  prerequisites:
+    - Claude Code with hooks enabled
+    - The plugin installed in Claude Code with the install commands
+    - Python available on your computer to run the hook
+  output:
+    - name: Warning message
+      contains: The name of the risky pattern found and a short note on why it is unsafe.
+    - name: Blocked write
+      contains: The edit or write stops with exit code 2 so your AI can pick a safer way.
+    - name: Session warning record
+      contains: A small file that remembers which file and rule were already warned, so you are not warned twice.
+    - name: Debug log
+      contains: A text file that records hook errors, such as failed reads or saves.

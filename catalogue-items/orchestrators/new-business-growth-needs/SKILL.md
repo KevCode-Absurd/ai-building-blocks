@@ -34,11 +34,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Big decisions first sorter.** Use the skill `big-decisions-first-sorter`. The few big choices that are already decided by the goal
-2. **Target size back-solver.** Use the skill `target-size-back-solver`. Give it the plan from the steps before. The sum that links the goal to buyers, volume, share and profit. Reads the big choices
-3. **Buying habit stack designer.** Use the skill `buying-habit-stack-designer`. Give it the plan from the steps before. How the product becomes a repeat habit, using many forces at once. Reads the sized plan
-4. **Incentive checker.** Use the skill `incentive-checker`. Give it the plan from the steps before. Who you depend on and whether the deal pulls them the right way. Reads the plan
-5. **Failure-first plan check.** Use the skill `failure-first-plan-check`. Give it the plan from the steps before. What to avoid, such as losing the name, a sudden big product change or earning envy
+1. **Big decisions first sorter.** Use the skill `big-decisions-first-sorter`. The few big choices that are already decided by the goal. Hands the big choices to the size sum
+2. **Target size back-solver.** Use the skill `target-size-back-solver`. Give it the plan from the steps before. The sum that links the goal to buyers, volume, share and profit. Reads the big choices. Hands the sized plan to the habit design
+3. **Buying habit stack designer.** Use the skill `buying-habit-stack-designer`. Give it the plan from the steps before. How the product becomes a repeat habit, using many forces at once. Reads the sized plan. Hands the habit plan to the incentive check
+4. **Incentive checker.** Use the skill `incentive-checker`. Give it the plan from the steps before. Who you depend on and whether the deal pulls them the right way. Reads the plan from step 3. Hands the findings on who you depend on to the failure check
+5. **Failure-first plan check.** Use the skill `failure-first-plan-check`. Give it the plan from step 3 and the findings from step 4. What to avoid, such as losing the name, a sudden big product change or earning envy. Hands back the failure list and the changes to the plan
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -14,30 +14,39 @@ description: >
 
 # yfinance Data Skill
 
-If your host has not already executed the shell probes below (for example, in Codex), run the commands inside the `!` wrappers with its shell tool before choosing a setup path. Use the actual output; if shell access is unavailable, report that limitation.
-
 Fetches financial and market data from Yahoo Finance using the [yfinance](https://github.com/ranaroussi/yfinance) Python library.
 
-**Important**: yfinance is not affiliated with Yahoo, Inc. Data is for research and educational purposes.
+**Important**: yfinance is not affiliated with Yahoo, Inc. It collects data from Yahoo Finance's public pages and endpoints, which Yahoo may limit, change or block, and Yahoo's own terms may restrict how you use the data. Use it for research and learning only. Do not use the results for live trading or for official filings. Say this in the first reply.
+
+## What you need
+
+- One or more ticker symbols (for example AAPL, MSFT). For stocks outside the US, ask for the Yahoo suffix (for example `RELIANCE.NS`). If the ticker is missing or unclear, ask once. Do not guess one.
+- The kind of data wanted (prices, statements, options, dividends, estimates, holdings, news). If it is not clear, ask once, or default to a one-year daily price table plus the key quote fields, and say so.
+- Optional: a date range or period.
+- A way to run Python. If your AI cannot run code, say so and stop. Do not make up figures from memory. Offer to write the code for the user to run.
 
 ---
 
 ## Step 1: Ensure yfinance Is Available
 
-**Current environment status:**
+Check whether yfinance is installed by running:
 
-```
-!`python3 -c "exec('try:\n import yfinance\n print(\'yfinance \' + yfinance.__version__ + \' installed\')\nexcept Exception:\n print(\'YFINANCE_NOT_INSTALLED\')')"`
+```python
+try:
+    import yfinance
+    print("yfinance", yfinance.__version__, "installed")
+except ImportError:
+    print("YFINANCE_NOT_INSTALLED")
 ```
 
-If `YFINANCE_NOT_INSTALLED`, install it before running any code:
+If it prints `YFINANCE_NOT_INSTALLED`, **ask the user before installing anything**. Say you will run `pip install yfinance` (a package from PyPI) and wait for a yes. Then run:
 
 ```python
 import subprocess, sys
 subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "yfinance"])
 ```
 
-If yfinance is already installed, skip the install step and proceed directly.
+If the user says no, stop and offer the code for them to run themselves. If yfinance is already installed, skip the install step and proceed directly.
 
 ---
 
@@ -100,7 +109,18 @@ ticker = yf.Ticker("AAPL")
 
 ## Step 4: Present the Data
 
-Answer with the numbers the user asked for first, then the supporting table (markdown, or a trimmed DataFrame with the key columns). Call out anything notable in the data — an earnings beat or miss, unusual volume, a dividend change — and add context such as sector averages, historical ranges, or analyst consensus where it changes how the numbers read. If the user wants a chart, pair the data with a visualization.
+Hand back these parts, in this order:
+
+1. **What was fetched.** Ticker, data type, period and interval, and the date and time of the pull.
+2. **The answer first.** The numbers the user asked for, in one or two lines.
+3. **The table.** Markdown, or a trimmed DataFrame with the key columns. Offer a CSV the user can open in a spreadsheet.
+4. **Notable points.** Anything unusual, such as an earnings beat or miss, unusual volume or a dividend change, with context only where it changes how the numbers read.
+5. **Gaps.** Any ticker or field that came back empty or failed, and why (bad symbol, rate limit, no data for that period). Never fill a gap from memory.
+6. **Caveats.** Data comes from an unofficial source, may be delayed or wrong, and is for research only.
+
+If the user wants a chart, pair the data with a visualization.
+
+Next steps to suggest: paste the table into a spreadsheet, hand it to a charting or analysis step, or use the Stock trading cost checker for liquidity. For figures you will rely on, check them against the company's own filings or a licensed data vendor.
 
 ---
 

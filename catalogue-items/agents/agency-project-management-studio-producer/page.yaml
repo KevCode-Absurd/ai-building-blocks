@@ -1,0 +1,129 @@
+name: Studio Producer agent
+summary: Plan several creative projects at once. Get a portfolio plan with tiers, budget and team time, risks, and what to delay or drop.
+headline: Studio Producer agent
+subhead: Give it your list of creative projects, your team and your budget. It ranks the projects, splits people and money across them, and plans for what could go wrong. You get a portfolio plan you can take to your team or your boss.
+job: organise-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A creative studio portfolio plan answers one question. With the people and money you have, which projects do you run, in what order, and which do you say no to? Most plans cover one project at a time. This agent looks at all your projects together, so you can see what each one costs the others.
+
+  It sorts projects into tiers: the ones that matter most to the business, the growth projects, and small experiments. For each tier it sets the budget, the team time, any outside help and the risk. Then it plans for what could go wrong, such as a late client or a key person leaving.
+
+  It is a view from the top, not a week-by-week schedule. For the plan of one job, use the Project delivery agent. The original profile lists success targets, such as a return rate and an on-time rate. They are the author's targets, not results, and this agent will not promise them.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You run a creative studio, agency or in-house team and have more projects than people.
+  - You are planning next quarter and must choose which projects get budget.
+  - A client or boss asks "what can your team take on?" and you need a plan with reasons.
+  - A new project lands and you want to see what it pushes out.
+not_for:
+  - You need the week-by-week plan for one project. Use the Project delivery agent.
+  - You want to set up your studio's daily processes, tools and roles. Use the Studio Operations agent.
+  - You need a signed budget, a contract or a legal check. Take those to your finance lead or a lawyer.
+you_give:
+  - Your list of projects, each with its goal, a rough budget and a due date
+  - Your team, what each person does and about how many hours they have
+  - Your business goals for the period, such as win a client, launch a product or grow sales
+  - Freelancers or vendors you can use, and what they cost (optional)
+  - Past projects that ran late or over budget, and why (optional)
+you_get:
+  - Your projects in tiers, with a reason for each one's place
+  - A split of budget and team time across the tiers, with any gap shown
+  - A risk list with a backup plan for each big risk
+  - A list of projects to delay, shrink or drop, and the cost of each choice
+  - The facts still missing and the checks to run before you share it
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - List your projects with a goal, a rough budget and a due date. Add your team and their hours. No code or web access is needed.
+  - Name one period, such as next quarter. Say the choice you need help with, such as "Pick what we run in Q1 with a team of six."
+  - Read the "Facts still missing" list first. Add what you know and ask it to run the plan again.
+  - Check the budget and hours against your own books. Share the plan only after your finance lead or boss has seen it.
+how_it_works:
+  - title: Set the scope
+    text: It confirms the period, your goals, the projects, the team and the budget. Anything missing is asked once, then marked MISSING.
+  - title: Sort into tiers
+    text: It ranks projects by how much they help your goals. Top priority goes first, then growth projects, then small experiments.
+  - title: Match people and money
+    text: It adds up the hours and budget each tier needs and compares them with what you have. The gap is shown, not hidden.
+  - title: Check the risks
+    text: It lists what could slip, such as a late client, a key person or a vendor. Each big risk gets a backup plan.
+  - title: Show the trade-offs
+    text: It names what to delay, shrink or drop to fit your capacity, and what each choice costs.
+  - title: Hand back the plan
+    text: It separates your facts from its assumptions and lists the checks still needed.
+output_shape: |-
+  PORTFOLIO PLAN
+    Period <dates> | Goals <list> | Projects <count> | Team hours <total>
+
+  PROJECT TIERS
+    Tier 1 <project> | <budget> | <hours> | <due> | <why it ranks here>
+    Tier 2 <project> | <budget> | <hours> | <due> | <why>
+    Experiments <project> | <what you will learn> | <cap on time and cost>
+
+  RESOURCE SPLIT
+    <tier> | <budget share> | <hours needed vs hours free> | <gap> | <outside help>
+
+  RISKS AND BACKUPS
+    <risk> | <how likely> | <how bad> | <backup plan>
+
+  TRADE-OFFS
+    <project to delay, shrink or drop> | <what you gain> | <what you lose>
+
+  FACTS STILL MISSING AND CHECKS
+    <fact> | <what it limits> | <how to get it>
+output_sample:
+  input:
+    - Your list of projects, with a goal, a rough budget and a due date for each
+    - Your team and how many hours each person has
+    - Your business goals for the period
+    - Freelancer or vendor costs (optional)
+  output:
+    - name: Portfolio plan
+      contains: The period, your goals, how many projects you have and the total team hours.
+    - name: Project tiers
+      contains: Each project in a tier, with budget, hours, due date and why it ranks there.
+    - name: Resource split
+      contains: Budget and hours by tier, set against what you have free, with the gap shown.
+    - name: Risks and backups
+      contains: What could slip, how likely and how bad it is, and the backup plan for each.
+    - name: Trade-offs
+      contains: Projects to delay, shrink or drop, with what you gain and lose by each.
+    - name: Facts still missing and checks
+      contains: Gaps that limit the plan and how to close them before you share it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a project spreadsheet or a timesheet export next to your notes, so hours and budgets come from your files.
+  inputs:
+    - Last quarter's projects with planned and actual hours.
+    - Which clients or goals matter most this period.
+    - Rates for freelancers and vendors you use.
+terms:
+  - term: Portfolio
+    meaning: All your projects seen together, so you can weigh one against another.
+  - term: Tier
+    meaning: A group of projects of about the same importance, such as top priority or small experiments.
+  - term: Capacity
+    meaning: The hours your team can really work in the period, after leave and other duties.
+  - term: Backup plan
+    meaning: What you will do if a risk happens, written before it does.
+tweaks:
+  - what: Period
+    how: Plan one period at a time, such as next quarter. A whole year at once gives vague answers.
+  - what: Number of projects
+    how: List 3 to 12 projects. If you have more, group the small ones into one line.
+  - what: Goals
+    how: Say which goal beats the others when they clash, such as a client win over a new product.
+improve:
+  - Keep each plan. At the end of the period, add the real hours and dates and ask it to compare them with the plan.
+  - Save your team hours and vendor rates in the pack so you do not retype them.
+  - Pair it with the Project delivery agent once a tier-one project is chosen, to plan its weeks.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

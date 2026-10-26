@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It applies strict design rules and safety choices.
 new_slug: industrial-dashboard-builder
 name: Industrial dashboard builder
-summary: Describe your plant data. Get a control-room dashboard with alarms,
-  trends and safe controls.
+summary: Build an industrial dashboard in MATLAB from your plant data script. You get alarms, live trends and setpoint changes that need a confirm step.
 job: build-software
 headline: Industrial dashboard builder
-subhead: Describe your plant data. Get a control-room dashboard with alarms,
-  trends and safe controls. Bring the script or data source (OPC UA, Modbus,
-  MQTT, PI). Use the result to plan your next step.
+subhead: Give your AI your plant data script, your tags and your alarm limits. It builds an operator dashboard in MATLAB with ranked alarms, live trends and safe setpoint changes.
 explain: |
   A plant-floor dashboard in MATLAB App Designer that an operator can read at a glance, with alarms that stand out, live trends and setpoint changes that need confirmation. It turns a data script into a proper screen.
 
@@ -19,6 +16,10 @@ when:
   - Operators must change setpoints safely.
   - Your current screen uses bright gauges and lamps everywhere.
   - You are building overview and detail screens for a process area.
+not_for:
+  - "You want a phone or consumer app: build it in App Designer by hand, or ask your AI for a plain MATLAB app."
+  - "You need to find the OPC UA servers on your network: use a network scan or the OPC UA Explorer app in MATLAB."
+  - "You want to change a live plant without testing first: test on a simulated node, and ask a controls engineer to review it."
 you_give:
   - The script or data source (OPC UA, Modbus, MQTT, PI)
   - The tags and alarm limits
@@ -31,8 +32,31 @@ you_get:
   - Confirmed setpoint writes
   - Grey-field screen styling
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open an AI that can run MATLAB code, and paste in this skill.
+  - Paste your data script, your tag names, your alarm limits and the values operators may change.
+  - Ask your AI to build the dashboard. It saves a real .mlapp file if the matlab-build-app skill is available. If not, it makes a plain .m app and tells you.
+  - "Check the result: alarms stand out, trends show your limits, and each setpoint change asks for a confirm."
+  - MATLAB, App Designer and the Industrial Communication Toolbox are licensed products. Test the app on a simulated node before any write goes to a live plant.
+  - Next, pair it with matlab-build-app to save the .mlapp file.
+output_sample:
+  input:
+    - Your MATLAB script that reads plant data (OPC UA, Modbus, MQTT or PI)
+    - Your tag names and alarm limits
+    - Which values operators may change
+    - The screen layout you have in mind (optional)
+  prerequisites:
+    - MATLAB with App Designer
+    - An AI that can run MATLAB code (best results)
+    - The matlab-build-app skill, to save a real .mlapp file (optional)
+    - The toolbox for your protocol, such as the Industrial Communication Toolbox
+  output:
+    - name: Dashboard app
+      contains: A MATLAB App Designer app in a grey screen style, with overview, area and detail views.
+    - name: Alarm banner and indicators
+      contains: Alarms shown at the data source, ranked by priority, with colour kept for problems only.
+    - name: Live trends
+      contains: Trend plots with fixed ranges and lines at your alarm limits.
+    - name: Setpoint controls
+      contains: Writes to the plant that need a confirm step before they are sent.
+    - name: Fallback .m app
+      contains: A plain script app, used when the app builder skill is missing. It runs the same but won't open in App Designer.

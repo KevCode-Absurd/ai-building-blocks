@@ -13,14 +13,14 @@ inputs:
 outputs:
   - {type: audit_report}
   - {type: plan}
-uses: [break-even-roas-and-cpa-calculator, search-term-sorter, shopping-campaign-tuner, performance-max-routine-keeper, google-ads-dip-investigator, google-ads-scale-gate-checker]
+uses: [break-even-roas-and-cpa-calculator, google-ads-dip-investigator, search-term-sorter, shopping-campaign-tuner, performance-max-routine-keeper, google-ads-scale-gate-checker]
 steps:
-  - {uses: break-even-roas-and-cpa-calculator, note: "Once, then reused: the break-even ROAS and CPA every later call is measured against."}
-  - {uses: search-term-sorter, note: "Every week: winners to promote and negatives to add, from the search terms reports."}
-  - {uses: shopping-campaign-tuner, note: "Every week, if Shopping runs: products to cut, fix in the feed, bid up or fund."}
-  - {uses: performance-max-routine-keeper, note: "Every week, if Performance Max runs: the weekly checks, exclusions and one budget move."}
-  - {uses: google-ads-dip-investigator, note: "Only when sales or ROAS fell sharply against last week: the likely cause and a fix-or-wait call, before any other change."}
-  - {uses: google-ads-scale-gate-checker, note: "Only when nothing is broken: pass or fail on the gates before any budget goes up."}
+  - {uses: break-even-roas-and-cpa-calculator, note: "Once, then reused: the break-even ROAS and CPA every later call is measured against. Hands that break-even to the checks after it."}
+  - {uses: google-ads-dip-investigator, note: "Only when sales or ROAS fell sharply against last week: the likely cause and a fix-or-wait call, before any other change. Uses your exports and change log, not the break-even sheet, and hands the cause and the call to the clean-up steps."}
+  - {uses: search-term-sorter, note: "Every week: winners to promote and negatives to add, from the search terms reports, judged against step 1's break-even CPA. Hands its negatives and winners to the Shopping check."}
+  - {uses: shopping-campaign-tuner, note: "Every week, if Shopping runs: products to cut, fix in the feed, bid up or fund, aimed at step 1's break-even ROAS and clear of the terms already negated."}
+  - {uses: performance-max-routine-keeper, note: "Every week, if Performance Max runs: the weekly checks, exclusions and one budget move, measured against step 1's break-even. Hands its checks to the scale gate."}
+  - {uses: google-ads-scale-gate-checker, note: "Only when nothing is broken: pass or fail on the gates before any budget goes up. Takes the break-even numbers and this week's checks."}
 schedule: "Every Monday morning, after last week's data is in"
 asks_before: [changing budgets, adding or removing keywords, pausing campaigns or products, changing bids or targets]
 origin: own

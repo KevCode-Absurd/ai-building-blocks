@@ -2,18 +2,104 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-partnership-architecture
 name: Revenue partnership program planner
-summary: Share your product and potential partners. Get partner types,
-  incentives and a plan to test shared revenue.
+summary: Plan a partner program that earns revenue. Test if a deal is real, sort partners into tiers and pilot each one in three phases.
 job: plan-strategy
 headline: Revenue partnership program planner
-subhead: Share your product and potential partners. Get partner types,
-  incentives and a plan to test shared revenue. Share your goal and the files
-  you already have. The skill file sets out the steps and the tools needed for
-  this job.
+subhead: Tell it what you sell and which partners you are weighing. It checks whether each deal is a real partnership, sorts partners into tiers and sets a three-phase pilot with go or no-go points. You get a partner program plan and a one-page charter both sides can sign.
+explain: |
+  Many partnerships are only a logo swap or a joint webinar. Nobody risks anything, so nothing happens. This planner starts with one test: what does each side lose if the deal fails? If the answer is "nothing", it is not a partnership yet.
+
+  Next it rates your pull. A partner who needs you to keep a certification is worth far more effort than one who only likes a joint post. It then helps you decide whether to build a feature or partner for it, and how much help each partner tier gets.
+
+  Last, it runs each deal as a pilot: a small first test, a wider rollout, then full launch. Each phase has a go or no-go line, so a weak deal ends early and cheaply. This is a revenue partnership program planner, not a list of partner ideas.
+when:
+  - A company wants to "partner" with you and you are not sure it is worth your time.
+  - You are deciding whether to build a feature yourself or team up with someone who has it.
+  - You have a few partners and want to sort them into tiers so each gets the right help.
+  - You plan a joint launch and need a checklist for both teams.
+not_for:
+  - You want a plan for outside coders who build on your API or app. Use the Developer adoption program planner.
+  - You are working one large deal with one buyer. Use the Enterprise account deal planner.
+  - You only need a joint campaign with a partner you already have. Use the Partner campaign planner.
+you_give:
+  - What your product does and who buys it
+  - The partners, or kinds of partner, you are weighing
+  - What you and each partner would put in, such as money, people or time
+  - Your goal for the program, such as revenue or reach
+  - Rules from a partner's own program page (optional)
+you_get:
+  - A real-or-not check on each partner deal
+  - A build-or-partner call, with the reason
+  - A tier plan that says who gets what help
+  - A three-phase pilot with go or no-go lines
+  - A one-page partner charter and a launch checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
+  - Say what you sell, who buys it and which partners you are weighing. Add what each side would put in.
+  - Ask for the real-partnership test first. Read the answer to "what does each side lose if this fails?"
+  - Ask for the tier plan, the three-phase pilot and the charter. Fill in any line marked MISSING before you use it.
+  - Treat the 20% and 70% pilot lines as starting points from the author. Agree your own numbers with the partner.
+  - Send the charter to the partner. Ask both sides to sign it before the pilot starts. This needs no code and no paid tools.
+how_it_works:
+  - title: Test the deal
+    text: It asks what each side puts in and what each loses if the deal fails. No loss on either side means a handshake, not a partnership.
+  - title: Rate your pull
+    text: It ranks your pull as requirement, economic, competitive, customer or co-marketing. Co-marketing alone is weak.
+  - title: Choose build or partner
+    text: It walks the decision tree. Core to your product means build. Slow to build, and a partner who needs you too, means partner.
+  - title: Set the tiers
+    text: It places each partner in a self-serve, joint-development or strategic tier. It keeps tiers to two or three.
+  - title: Plan crawl, walk, run
+    text: It sets a small pilot, a wider rollout and a full launch. Each has a go or no-go check.
+  - title: Write the charter
+    text: It drafts goals, what each side gives, dates, measures, who decides and when the deal ends.
+  - title: Plan the launch
+    text: It builds a before, launch-week and after checklist for co-marketing.
+output_shape: |
+  PARTNER PROGRAM PLAN: <your product>
+  1. Real partnership test: <what each side puts in, what each loses if it fails, verdict>
+  2. Pull: <type, with the evidence for it>
+  3. Build or partner: <call and reason>
+  4. Tiers: <partner, tier, what you give, what they give>
+  5. Pilot: <crawl, walk, run with dates, measure and go or no-go line>
+  6. Charter: <goals, value swap, timeline, measures, governance, exit rule>
+  7. Launch checklist: <before, launch week, after>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - What your product does and who buys it
+    - The partners, or kinds of partner, you are weighing
+    - What each side would put in, such as money, people or time
+    - Your goal for the program
+  output:
+    - name: Partnership test
+      contains: What each side puts in, what each loses if the deal fails, and a verdict.
+    - name: Pull rating
+      contains: Whether your pull is a requirement, economics, competition, customers or only co-marketing.
+    - name: Build or partner call
+      contains: A clear pick with the reason, based on the decision tree.
+    - name: Tier plan
+      contains: Each partner placed in a tier, with what you give and what they give.
+    - name: Crawl, walk, run plan
+      contains: Three pilot phases with dates, measures and go or no-go lines.
+    - name: Partner charter
+      contains: Goals, value swap, timeline, measures, who decides and when to stop.
+    - name: Co-marketing checklist
+      contains: Tasks before launch, in launch week and in the weeks after.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can run this. It only reasons over the facts you paste.
+  inputs:
+    - The partner's own program or marketplace rules, pasted as text
+    - Your best guess at the money each side would spend
+    - Any notes from calls with the partner
+terms:
+  - term: Pull
+    meaning: Why the partner needs you, not only the other way round.
+  - term: Tier
+    meaning: A level of partner, with more help at each step up.
+  - term: Charter
+    meaning: A short written agreement on goals, give and get, and when to stop.
+  - term: Go or no-go
+    meaning: A number you agree on before a phase, used to decide whether to continue.

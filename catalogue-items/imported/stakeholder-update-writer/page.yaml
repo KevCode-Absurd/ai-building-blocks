@@ -2,33 +2,104 @@ thinking: low
 thinking_why: It rewrites known facts for an audience.
 new_slug: stakeholder-update-writer
 name: Stakeholder update writer
-summary: Give it your progress. Get an update for leaders, engineers or
-  customers at the right depth and cadence.
+summary: Turn your rough progress notes into a weekly, monthly or launch update for leaders, engineers, partners or customers, sized to the reader.
 job: organise-work
 headline: Stakeholder update writer
-subhead: A progress update written for the right reader at the right depth. Say
-  whether it is weekly, monthly, a launch or a one-off, and who will read it.
-explain: |
-  A progress update written for the right reader at the right depth. Say whether it is weekly, monthly, a launch or a one-off, and who will read it. The skill then shapes the content to that audience.
+subhead: Paste your notes and say who will read the update. It writes a weekly, monthly, launch or one-off update at the right depth for that reader. You get a draft with status, risks, decisions needed and next steps.
+explain: |-
+  A weekly update for leaders, a launch note for customers and a status for engineers are three different documents. This stakeholder update writer shapes the same facts for each reader, so you don't send one long message and hope people find their part.
 
-  Leaders get a short, outcome-first view. Engineers get technical detail and decisions needed. Partners get shared goals and dependencies. Customers get benefits and dates without internal jargon. The board gets metrics and risk, kept brief. If your tracker, chat or meeting notes are connected, it pulls what finished, what is blocked and what was decided. You can also paste your notes.
+  You say the type of update and who reads it. Leaders get a short note that starts with the main point and a status colour. Engineers get what shipped, who owns what is in progress, and what is blocked. Partners get what is coming and what you need from them. Customers get benefits and dates, with no internal words.
+
+  It works only from your notes. It marks missing facts instead of filling them in, gives each risk a plan or an owner, and asks for a recommendation on every decision. If your AI is connected to your tracker or chat, it can read those too, and you check what it finds.
 when:
-  - Your weekly update is due and you have rough notes.
-  - You must tell leaders about a risk or blocker.
-  - You need one set of progress in versions for several audiences.
-  - A launch needs a customer-facing announcement.
+  - Your weekly status update is due and you only have rough notes.
+  - You need to tell leaders about a risk or a blocker before it becomes a surprise.
+  - You have one set of progress and need versions for leaders, engineers and customers.
+  - A launch is coming and you need the customer announcement.
+not_for:
+  - "You want one project status report with a health rating and a risk table: use the Status report writer."
+  - "You need to work out who cares about your project and how much: use the Stakeholder map builder."
+  - You are writing up an outage review or a contract dispute. Use the review or legal process your company already has.
 you_give:
-  - What happened since the last update
-  - The type of update
-  - The audience
-  - Links to your tracker or chat (optional)
+  - Your notes on what finished since the last update
+  - What is blocked, at risk or waiting on someone
+  - Decisions you made, and decisions you need from the reader
+  - "The type of update: weekly, monthly, launch or one-off"
+  - "Who will read it: leaders, engineers, partners, customers or the board"
+  - Links to your tracker or chat notes (optional)
 you_get:
-  - An update matched to the audience
-  - Progress, risks and blockers sorted out
-  - Decisions needed from the reader
-  - Versions for other audiences (optional)
+  - A draft update sized to your reader, ready to paste
+  - A status colour with a one-line reason
+  - Each risk with a plan or an owner
+  - Each decision with options and a recommendation
+  - A list of facts you still need to add
+  - A version for a second reader (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your notes: what finished, what is blocked, what you decided and what is next. Rough is fine."
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code or paid tools are needed.
+  - Say the type of update and who reads it, for example "weekly update for leadership". Paste your notes.
+  - Check the draft. Every number and date must be yours. Each risk needs a plan. Each decision needs a recommendation.
+  - Fill any line marked MISSING. For leaders and the board, check it stays under 200 words.
+  - Ask for a chat or email cut, or a version for a second reader.
+how_it_works:
+  - title: Confirm type and reader
+    text: It asks what kind of update this is and who reads it, only if you have not said.
+  - title: Collect the facts
+    text: It lists what finished, what is in progress or blocked, what was decided and what is next, from your notes or a connected tool.
+  - title: Pick the layout
+    text: "It uses the layout for that reader: leaders, board, engineers, partners, customers or a launch."
+  - title: Write the draft
+    text: It leads with the main point. Each risk gets a plan or owner and each decision gets options and a recommendation.
+  - title: Check it
+    text: It compares every number and date with your notes, counts words for leaders, and marks gaps as MISSING.
+  - title: Offer next versions
+    text: It offers a chat or email cut and a version for another reader.
+output_shape: |-
+  Status: <Green / Yellow / Red> (<one-line reason>)
+  TL;DR: <the one thing the reader must know>
+  Progress:
+  - <outcome, tied to a goal>
+  Risks:
+  - <risk>: <plan or owner>. <the ask, if any>
+  Decisions needed:
+  - <decision>: <options>. Recommendation: <pick>. Need by <date>.
+  Next milestones:
+  - <milestone>, <date>
+  Missing: <facts you still need to add>
+output_sample:
+  input:
+    - Your notes on what finished, what is blocked, what you decided and what is next
+    - "The type of update: weekly, monthly, launch or one-off"
+    - Who will read it
+    - Your own view of status, Green, Yellow or Red (optional)
+  prerequisites:
+    - Links to your tracker, chat or meeting notes, if your AI is connected to them (optional)
+  output:
+    - name: Status line
+      contains: A Green, Yellow or Red rating with a one-line reason.
+    - name: TL;DR
+      contains: The single most important thing for this reader to know.
+    - name: Progress
+      contains: What finished, tied to a goal and written in the reader's terms.
+    - name: Risks
+      contains: Each risk with its impact, a plan or owner, and any ask.
+    - name: Decisions needed
+      contains: Each decision with options, a recommendation and a date.
+    - name: Next milestones
+      contains: The next dated steps.
+    - name: Missing facts
+      contains: A short list of facts you need to add before you send it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It only needs your notes pasted in. A tracker connection is a bonus, not a need.
+  inputs:
+    - Your last update, so this one shows what changed
+    - Your goals or targets, so progress ties to something
+    - A past update your readers liked, to match the tone
+terms:
+  - term: Status colour
+    meaning: Green means on track, Yellow means at risk, Red means off track and you need help.
+  - term: Blocker
+    meaning: Something that stops work until someone acts.

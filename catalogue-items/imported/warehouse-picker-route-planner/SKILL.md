@@ -7,6 +7,23 @@ description: When the user wants to optimize picker routes, minimize travel dist
 
 You are an expert in warehouse picker routing and travel path optimization. Your goal is to help design optimal pick routes that minimize travel distance, reduce pick time, improve picker productivity, and maximize warehouse efficiency.
 
+## How to run this (read first)
+
+This skill works in a plain chat. Python is optional: the code blocks show the method, and your AI can run them only if it can run code. Without code, work the route by hand from the layout the person gives you and say it is an estimate.
+
+1. **Get the inputs** in "Initial Assessment". The minimum is: aisles with their lengths, where cross-aisles are, which way each aisle can be walked (one-way or two-way), where the depot or pack station is, and the pick list (order or batch ID, SKU, aisle, position). Ask once for anything missing. If it is still missing, write **MISSING** and say what it blocks. Never invent aisle lengths, directions or picks.
+2. **Check the layout first.** Build the graph from the "Repaired legal-path routing rules" at the end of this file. If any aisle is a dead end with no way back, stop and report it as infeasible.
+3. **Pick a method** from "Routing Strategies" that fits the layout and list size. Say why.
+4. **Sort each pick list** into walking order. Show the route as a numbered table.
+5. **Compare distances** only with figures you calculated from the person's layout. Say each route is an estimate, and not "optimal", unless an exact solver proved it.
+6. **Hand back** the report in "Output Format" and the rules the team can follow.
+
+The random-number code in this file is demo data. Never show its output as a result. The percentages beside each method are rough rules of thumb with no source. Do not quote them to the person as facts.
+
+Out of scope: grouping orders into batches (use the Picking batch planner), and moving products to better slots (use the Warehouse slot assigner).
+
+---
+
 ## Initial Assessment
 
 Before optimizing picker routing, understand:
@@ -50,15 +67,15 @@ Before optimizing picker routing, understand:
 - Exit at far end, skip to next aisle with picks
 - **Pros**: Simple, no backtracking within aisles
 - **Cons**: May traverse empty portions of aisles
-- **Efficiency**: Moderate (60-70% of optimal)
+- **Efficiency**: Moderate (rule of thumb only; measure it on the real layout)
 
 **2. Return Routing**
 - Enter aisle, pick items, return to same end
 - Move to next aisle
 - **Pros**: Very simple, predictable
 - **Cons**: High backtracking, longest distance
-- **Efficiency**: Poor (40-50% of optimal)
-- **Use**: Narrow aisles, one-way traffic only
+- **Efficiency**: Usually the longest walk (rule of thumb only; measure it)
+- **Use**: Dead-end or narrow aisles where the picker must leave the way they came in, and only when a legal path out exists
 
 **3. Midpoint Routing**
 - If picks in front half, use return from front
@@ -66,21 +83,21 @@ Before optimizing picker routing, understand:
 - Requires cross-aisle in middle
 - **Pros**: Better than pure S-shape or return
 - **Cons**: Requires cross-aisle infrastructure
-- **Efficiency**: Good (70-80% of optimal)
+- **Efficiency**: Often better than S-shape when a mid cross-aisle exists (measure it)
 
 **4. Largest Gap Routing**
 - Identify largest gap between picks in aisle
 - Enter/exit to avoid traversing largest gap
 - **Pros**: Adapts to pick distribution
 - **Cons**: More complex, requires calculation
-- **Efficiency**: Very good (80-90% of optimal)
+- **Efficiency**: Often the best of the simple rules (measure it)
 
 **5. Optimal Routing (TSP-based)**
 - Solve as Traveling Salesman Problem
 - Find shortest path visiting all picks
 - **Pros**: Best possible route
 - **Cons**: Complex computation (NP-hard)
-- **Efficiency**: Optimal (100%)
+- **Efficiency**: Shortest route when solved exactly; only for small lists or with a solver
 
 ### Routing Objectives
 
@@ -265,7 +282,8 @@ def s_shape_routing(picks, aisles, cross_aisle_locations):
     }
 
 
-# Example usage
+# DEMO ONLY: random picks to show the shape of the input table.
+# Replace with the real pick list. Never report this output as a result.
 picks = pd.DataFrame({
     'pick_id': [f'P{i:03d}' for i in range(1, 21)],
     'aisle': np.random.randint(1, 11, 20),  # 10 aisles
@@ -527,7 +545,7 @@ def tsp_optimal_routing(picks, warehouse_graph):
     return {'route': pd.DataFrame(), 'total_distance': 0, 'optimal': False}
 
 
-# Example with coordinates
+# DEMO ONLY: random coordinates. Not a real pick list.
 picks_with_coords = pd.DataFrame({
     'pick_id': [f'P{i:03d}' for i in range(1, 21)],
     'x': np.random.uniform(0, 100, 20),  # x coordinate (across aisles)
@@ -768,7 +786,7 @@ import matplotlib.patches as patches
 - Must return from entry point
 
 **Solutions:**
-- Use return routing as baseline
+- Model each aisle direction in the graph. Use return routing only where a legal path out exists
 - Optimize entry/exit points (front vs back)
 - Use midpoint if cross-aisle available
 - Consider widening key aisles for two-way traffic
@@ -836,62 +854,42 @@ import matplotlib.patches as patches
 
 ### Picker Routing Report
 
-**Route Optimization Analysis - Order #12345**
+Fill every value from the person's layout and pick list, or write MISSING. Do not copy example values from anywhere else. Label every route an estimate.
 
-**Pick List Summary:**
-- Total Picks: 42 lines
-- Aisles Involved: 8 aisles (2, 4, 5, 7, 9, 11, 13, 15)
-- Warehouse Zones: A (18 picks), B (15 picks), C (9 picks)
+**1. Layout check**
+- Aisles, cross-aisles, depot, one-way or two-way flags: `<as given>`
+- Dead ends or blocked edges found: `<none, or list and mark infeasible>`
 
-**Routing Comparison:**
+**2. Pick List Summary** (one block per order or batch)
+- Order or batch ID: `<id>`
+- Total picks: `<number>` lines
+- Aisles involved: `<list>`
+- Zones: `<zone and pick count>`
 
-| Method | Distance (ft) | Est. Time (min) | Improvement |
-|--------|---------------|-----------------|-------------|
-| Return Routing | 1,845 | 28.5 | Baseline |
-| S-Shape Routing | 1,124 | 17.4 | 39% |
-| Largest Gap | 892 | 13.8 | 52% |
-| TSP Optimal | 834 | 12.9 | 55% |
+**3. Routing Comparison**
 
-**Recommended Route (Largest Gap):**
+| Method | Distance (ft or m) | Est. time | Change vs current |
+|--------|--------------------|-----------|-------------------|
+| Current method | `<value>` | `<value>` | baseline |
+| `<method tried>` | `<value>` | `<value>` | `<value>` |
 
-```
-Sequence | Pick ID | SKU | Aisle | Position | Side | Qty |
----------|---------|-----|-------|----------|------|-----|
-1 | P001 | SKU_A | 2 | 15.3 | L | 2 |
-2 | P002 | SKU_B | 2 | 28.7 | R | 1 |
-3 | P003 | SKU_C | 2 | 45.2 | L | 3 |
-4 | [Cross to Aisle 4]
-5 | P008 | SKU_H | 4 | 82.1 | R | 1 |
-6 | P009 | SKU_I | 4 | 67.3 | L | 2 |
-...
-```
+Time needs a walking speed and a seconds-per-pick figure. Use the person's own. If they gave none, show distance only.
 
-**Route Visualization:**
+**4. Recommended Route** (numbered, in walking order)
 
-```
-Depot (Start)
-  ↓
-Aisle 2 [Enter Front → Pick 3 items → Exit Front]
-  ↓
-Cross-Aisle Travel (2 → 4)
-  ↓
-Aisle 4 [Enter Back → Pick 5 items → Exit Front]
-  ↓
-Cross-Aisle Travel (4 → 5)
-  ↓
-Aisle 5 [Enter Front → Pick 4 items → Exit Front]
-...
-  ↓
-Return to Depot (End)
+| Seq | Pick ID | SKU | Aisle | Position | Side | Qty |
+|-----|---------|-----|-------|----------|------|-----|
+| 1 | `<id>` | `<sku>` | `<aisle>` | `<position>` | `<L/R>` | `<qty>` |
+| 2 | `[Cross to aisle <n>]` | | | | | |
 
-Total Distance: 892 ft
-Estimated Time: 13.8 minutes (assuming 100 ft/min walk + 10 sec/pick)
-```
+Show the path in words: depot, aisles in order with entry and exit end, cross-aisle moves, return to depot, total distance.
 
-**Performance Metrics:**
-- Distance per Pick: 21.2 ft/pick
-- Estimated Picks per Hour: 182 (vs. 145 with return routing)
-- Productivity Improvement: +26%
+**5. Rules the team can follow**
+- 3 to 5 plain rules, such as which end to enter each aisle from and when to skip an aisle
+
+**6. Assumptions and next steps**
+- Every assumed figure, and what to measure on the floor to confirm it
+- Next steps: walk one route, time it, and compare with the estimate before changing the whole floor
 
 ---
 

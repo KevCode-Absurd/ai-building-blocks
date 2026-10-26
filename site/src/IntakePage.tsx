@@ -67,6 +67,7 @@ function ScopedIntakePage({ c, toast, draftKey }: Props & { draftKey: string }) 
   };
   return (
     <main className="wrap bp-hero intake" data-testid="intake-page">
+      <Link to="/compose" className="back"><span aria-hidden="true">←</span> Build a workflow</Link>
       <p className="bp-kicker"><span className="kind">From content</span><Link to="/skills/long-source-to-workflow">Read the full method</Link></p>
       <h1 className="bp-h1">Turn a long article, video or book into a workflow you can run</h1>
       <p className="bp-sub">Paste the full text. You get a pack with your source, the steps to follow and the library's skills. Give it to your AI and it finds the method, checks the order with you, writes a skill for every step, then the workflow that runs them in order.</p>

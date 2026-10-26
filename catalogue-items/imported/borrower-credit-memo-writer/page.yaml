@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs many signs of repayment risk.
 new_slug: borrower-credit-memo-writer
 name: Borrower credit memo writer
-summary: Give it a borrower's accounts. Get a credit memo on repayment ability,
-  debt capacity and covenant room.
+summary: Write a credit memo from a borrower's accounts. See if they can repay, how much debt they can carry, and how much covenant room they have.
 job: money-and-investing
 headline: Borrower credit memo writer
-subhead: Give it a borrower's accounts. Get a credit memo on repayment ability,
-  debt capacity and covenant room. Bring three or more years of financial
-  statements. Use the result to plan your next step.
+subhead: Give it three or more years of a borrower's accounts and the loan details. It works out the key ratios, stresses them, and checks covenant room. You get a credit memo that ends in a clear recommendation.
 explain: |
   A credit memo that answers one question with evidence: can this borrower pay the money back through a bad year, and what protects the lender if not. It is written from the borrower's own accounts.
 
@@ -16,20 +13,47 @@ explain: |
 when:
   - You must write a credit memo for a loan request.
   - You need to know how much debt a company can carry.
-  - A covenant package needs headroom checked.
-  - You want a stress test on sales, margin and rates.
+  - A covenant package needs its headroom checked.
+  - You want to see if debt payments hold up when sales fall or rates rise.
+not_for:
+  - "You need to rule on a small loan or a consumer loan: use your lender's own scorecard or ask a credit officer, as this memo needs three years of company accounts."
+  - "The answer to can they repay is no: work out a restructuring plan with a debt adviser first, then come back for a memo on the new terms."
+  - "You want to value a company for a sale or an investment: use a valuation method, not a lending memo."
 you_give:
-  - Three or more years of financial statements
-  - Facility type, amount and term
+  - Three or more years of the borrower's financial statements
+  - Loan type, amount, term, security and what the money is for
+  - Existing debt list with its covenants
   - Projections (optional)
-  - Existing debt details and covenants
+  - Bank statements and receivables aging reports (optional)
 you_get:
-  - Ratio analysis with trends
-  - Stress test results
-  - Covenant headroom analysis
-  - A written credit recommendation
+  - A ratio table with trends over the years
+  - Stress test results for lower sales, lower margins and higher rates
+  - Covenant headroom check, including how terms like EBITDA are defined
+  - A written credit recommendation with ranked risks and protections
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Pick one that can run code, so the ratios are worked out by a script.
+  - Paste the skill text, then add the borrower's financial statements and the loan details.
+  - Add the existing debt list and covenants. Add projections if you have them.
+  - Ask for the credit memo. If something is missing, your AI should ask for it and not guess.
+  - "Check the ratio table against the accounts. DSCR is debt service coverage: cash left after costs, divided by interest plus principal due."
+  - Compare the rules of thumb (such as debt under 3.0 times EBITDA) with your own lender's credit policy before you use the memo.
+output_sample:
+  input:
+    - Three or more years of the borrower's financial statements
+    - Loan type, amount, term, security and what the money is for
+    - Existing debt list with its covenants
+    - Projections (optional)
+    - Bank statements and receivables aging reports (optional)
+  prerequisites:
+    - An AI that can run code, so the ratios are worked out by a script and not by eye
+  output:
+    - name: Recommendation
+      contains: Approve, decline or restructure, with amount, term, pricing guidance and conditions to meet before funding.
+    - name: Borrower Analysis
+      contains: The business, its management, its industry and the evidence behind each of the 5 Cs of credit.
+    - name: Financial Analysis
+      contains: A ratio table for past, projected and stressed years, with the math checked by code.
+    - name: Risks & Mitigants
+      contains: Ranked risks, each paired with a real protection for the lender.
+    - name: Security & Documentation
+      contains: The collateral, the proposed covenants and why each has the headroom it has.

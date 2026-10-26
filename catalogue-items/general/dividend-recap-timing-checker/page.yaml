@@ -1,53 +1,83 @@
 new_slug: dividend-recap-timing-checker
 name: Dividend recap timing checker
 headline: Dividend recap timing checker
-summary: Reconcile two annual equity receipts to show the timing effect of an interim distribution.
+summary: Check how an early dividend changes a two-year equity return. Get the annual IRR, money multiple and net cash gain, with gaps marked.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Periodic equity IRR, gross money multiple and net cash received. Share actual entry equity outflow, approved first-anniversary net distribution, second-anniversary exit equity receipt and funding evidence for the distribution.
+subhead: Give it the equity you put in, the dividend paid after year one and what you received at exit after year two. It treats the dividend as its own cash flow in year one. You get the yearly return (IRR), the money multiple and the net cash gain.
 explain: |-
-  Periodic equity IRR, gross money multiple and net cash received.
+  In a dividend recap, a company borrows to pay its owners a dividend before the exit. The owner gets some cash back early. That changes the return, because money received sooner counts for more than the same money received later. This dividend recap timing checker works out that effect for a simple two-year hold.
 
-  Private equity distributions. Illustrative figures only. 10/1.1+110/1.1^2=100, so IRR10%. Changed20 and120 solve20% and1.4x.
+  It places three cash flows in order: the equity paid in at the start, the dividend after year one and the exit proceeds after year two. It keeps the dividend in year one and never adds it to the exit. It then works out the yearly return (IRR), divides total cash received by the equity paid in (the money multiple) and takes the two apart to give the net cash gain.
+
+  To see the timing effect, run it twice. Once with the dividend, and once with the same total paid at exit. The money multiple stays the same, and the IRR changes. The skill also asks where the dividend was funded from. A dividend paid from new debt must be listed as debt, not treated as value created.
 when:
-  - You need periodic equity IRR, gross money multiple and net cash received.
-  - You work on private equity distributions and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A sponsor proposes a dividend recap and you want to see what it does to the equity return.
+  - An investor asks how much of the return came from the early cash and how much from the exit.
+  - You are checking the IRR in a deal summary against the cash flows behind it.
+  - The exit price moves and you want to see the new IRR and multiple.
 you_give:
-  - Actual entry equity outflow, approved first-anniversary net distribution, second-anniversary exit equity receipt and funding evidence for the distribution.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The equity you paid in at the start (from the closing statement or fund records)
+  - The dividend you received after year one, after fees and taxes that fall on you (from the distribution notice)
+  - What you received at exit after year two, after fees (from the sale statement)
+  - How the dividend was funded, such as new debt or company cash (from the board paper or loan agreement)
+  - The currency and units, such as USD in millions
+  - Your own deal spreadsheet (optional)
 you_get:
-  - Periodic equity IRR, gross money multiple and net cash received.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The yearly return (IRR) on the three cash flows
+  - "The money multiple: total cash received divided by equity paid in"
+  - The net cash gain in your currency
+  - A note on how the dividend was funded, kept apart from the return
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste the three amounts: equity paid in, dividend after year one and exit proceeds after year two. Say where each came from, and give the currency and units."
+  - Say how the dividend was funded, and whether the dates are exactly one and two years after the start. If not, the skill will tell you to use a dated-return function.
+  - "Check one line yourself: money multiple is total received divided by equity paid in. For 10 plus 110 over 100, that is 1.2."
+  - To see the timing effect, ask for a second run with the same total paid at exit and no dividend. Compare the two IRRs. Read MISSING and CHECKS MISSED before you share anything.
 how_it_works:
-  - title: 1. Verify both receipt dates are exact annual periods and use cash net of financing, leakage and fees relevant to the holder
-    text: Verify both receipt dates are exact annual periods and use cash net of financing, leakage and fees relevant to the holder.
-  - title: 2. Preserve the intermediate dividend as a first-period inflow rather than adding it to terminal proceeds
-    text: Preserve the intermediate dividend as a first-period inflow rather than adding it to terminal proceeds.
-  - title: 3. Calculate conventional periodic IRR on entry, year-one dividend and year-two exit; compare total receipts with initial equity and disclose any recap debt separately
-    text: Calculate conventional periodic IRR on entry, year-one dividend and year-two exit; compare total receipts with initial equity and disclose any recap debt separately.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. Reported facts are kept apart from assumptions.
+  - title: Checks the dates
+    text: Confirms the dividend falls one year after the start and the exit two years after. If not, it stops and says why.
+  - title: Lays out the cash flows
+    text: Puts the equity paid in as a negative at the start, the dividend in year one and the exit in year two.
+  - title: Works out the yearly return
+    text: Finds the single rate that makes the three cash flows add up to zero.
+  - title: Works out the multiple and the gain
+    text: Total received divided by equity in gives the multiple. Total received less equity in gives the net cash gain.
+  - title: Keeps the debt apart
+    text: Notes how the dividend was funded and shows any new debt on its own line, so a debt-funded dividend is not read as value created.
 output_shape: |-
-  Periodic equity IRR, gross money multiple and net cash received.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Yearly return (IRR) <percent> | Money multiple <x> | Net cash gain <amount>
+
+  SCOPE AND SOURCES
+  <currency, units; source and date for each input; the dates behind year one and year two>
+
+  INPUTS AND ASSUMPTIONS
+  <equity paid in, year-one dividend, year-two exit; how the dividend was funded>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <the three cash flows in order; the IRR; total received; multiple; net cash gain; the check that the IRR solves to zero>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Distribution must have actual source and approval evidence; it is not automatically value creation.
+  - what: Net of costs
+    how: Give the dividend and exit as cash you actually receive, after fees and any tax that falls on you. Say if they are before costs.
+  - what: Comparison run
+    how: Ask for a second run with the same total paid at exit and no dividend, to see only the timing effect.
+  - what: Funding
+    how: Say if the dividend came from new borrowing. The skill shows that debt on its own line and does not change the return.
 judge:
   - Distribution must have actual source and approval evidence; it is not automatically value creation.
   - One initial outflow followed by nonnegative inflows is required for the supported unique IRR.
@@ -62,15 +92,57 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The closing statement or fund record for the equity paid in
+    - The distribution notice for the dividend
+    - The sale statement for the exit proceeds
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Dividend recap
+    meaning: A company takes on new debt and uses the cash to pay a dividend to its owners.
+  - term: IRR
+    meaning: The yearly rate of return that makes a set of cash flows add up to zero.
+  - term: Money multiple
+    meaning: Total cash received divided by the money paid in.
+  - term: Net cash gain
+    meaning: Total cash received less the money paid in.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+not_for:
+  - Your cash flows fall on uneven dates. Use a spreadsheet function for dated returns, such as XIRR in Excel or Google Sheets.
+  - You want to know if the company can afford the new debt. This is not a lender's test. Use the Debt service covenant headroom checker.
+  - You want to split fund payouts between investors and the sponsor. Use the No-catchup waterfall checker.
+  - You have more than two years, or several dividends. This version covers one dividend and one exit.
+output_sample:
+  input:
+    - The equity you paid in at the start
+    - The dividend you received after year one
+    - What you received at exit after year two
+    - How the dividend was funded
+  prerequisites:
+    - The dates, so the dividend is one year and the exit two years after the start
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The yearly return (IRR), the money multiple and the net cash gain.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, the dates of each cash flow, and the source of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: The three amounts you gave it, and how the dividend was funded, kept apart from facts.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: The three cash flows in order, total received, and a check that the IRR solves to zero.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
+next:
+  - no-catchup-waterfall-checker
+  - long-hold-return-calculator

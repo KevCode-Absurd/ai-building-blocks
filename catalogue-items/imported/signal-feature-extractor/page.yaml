@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies set extractors.
 new_slug: signal-feature-extractor
 name: Signal feature extractor
-summary: Give it signals. Get time and frequency features ready for analysis or
-  machine learning.
+summary: Extract signal features per frame in MATLAB. Give it a 1D signal and get a time, frequency or time-frequency feature table for analysis or a classifier.
 job: build-software
 headline: Signal feature extractor
-subhead: A table of time and frequency features for each frame of your signal,
-  ready for analysis or a machine learning model. You get the right feature tool
-  set up with real parameters only.
+subhead: A table of time and frequency features for each frame of your signal, ready for analysis or a machine learning model. You get the right feature tool set up with real parameters only.
 explain: |
   A table of time and frequency features for each frame of your signal, ready for analysis or a machine learning model. You get the right feature tool set up with real parameters only.
 
@@ -18,6 +15,10 @@ when:
   - You need RMS, crest factor or spectral values for every window.
   - You want a feature table to feed into a model.
   - You are unsure which feature extractor suits your signal.
+not_for:
+  - "You want audio features like MFCC or mel-spectrogram: use audioFeatureExtractor in MATLAB's Audio Toolbox."
+  - "You need to filter or clean the signal first: do that step on its own, then bring the result here."
+  - "You have images or many files to run as a batch: use MATLAB's signalDatastore to build the pipeline, and run this on one file at a time."
 you_give:
   - A one-dimensional signal
   - Sample rate and frame size
@@ -29,8 +30,32 @@ you_get:
   - MATLAB code you can rerun
   - An optional GPU version
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Signal Processing Toolbox.
+  - Open a chat with an AI that can run MATLAB code. You need MATLAB with the Signal Processing Toolbox.
+  - Paste the text of the skill's SKILL.md file into the chat.
+  - Add your signal, its sample rate and your frame size. Name the features you want, if you know them.
+  - Ask your AI to check if the frequency content shifts over time, then pick and set up the extractor.
+  - Run the code it gives you in MATLAB and check the feature table.
+  - For the GPU version, you also need the Parallel Computing Toolbox and a supported GPU.
+output_sample:
+  input:
+    - Your 1D signal, such as vibration, biosignal, radar or sensor data
+    - Your sample rate
+    - Your frame size and frame rate or overlap
+    - The features you want (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the Signal Processing Toolbox
+    - Parallel Computing Toolbox, only for the optional GPU version
+  output:
+    - name: Stationarity check
+      contains: A quick look at whether the frequency content of your signal shifts over time, used to pick the extractor.
+    - name: Configured extractor
+      contains: The time, frequency or time-frequency extractor set up with your sample rate, frame size and chosen features.
+    - name: Feature table
+      contains: One row per frame, with one column for each feature you asked for.
+    - name: MATLAB code
+      contains: A script you can rerun on new signals with the same settings.
+    - name: GPU version
+      contains: An optional code path that runs the extraction on a GPU when one is available.
+    - name: Aggregation and reproducibility notes
+      contains: How to average per-frame results if your model needs it, and how to get the same results each run.

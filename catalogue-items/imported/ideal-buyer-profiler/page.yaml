@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It turns a few facts into one clear person.
 new_slug: ideal-buyer-profiler
 name: Ideal buyer profiler
-summary: Describe who you sell to. Get one specific buyer with pains, goals,
-  failed attempts and what drives their choices.
+summary: Build an ideal buyer profile from a few facts. Get one specific person with pains, goals, failed attempts and the fears behind their choices.
 job: understand-customers
 headline: Ideal buyer profiler
-subhead: One specific buyer, not a crowd. Describe who you sell to and get a
-  profile of a real-feeling person, with their daily frustrations, what they
-  want, what they already tried and why it failed.
+subhead: One specific buyer, not a crowd. Describe who you sell to and get a profile of a real-feeling person, with their daily frustrations, what they want, what they already tried and why it failed.
 explain: |
   One specific buyer, not a crowd. Describe who you sell to and get a profile of a real-feeling person, with their daily frustrations, what they want, what they already tried and why it failed.
 
@@ -18,6 +15,10 @@ when:
   - You are about to write an offer and need to know who it is for.
   - You want to understand why past solutions let your buyers down.
   - A new team member needs a clear picture of your customer.
+not_for:
+  - "You have no customers yet and no one to ask: talk to five likely buyers first, then come back with their words."
+  - "You need the exact words buyers use: read your reviews and sales call notes yourself, then paste them in."
+  - "You want a profile you can trust as fact: treat this as a guess and check it against real calls, reviews or survey answers."
 you_give:
   - What you sell
   - Who you think buys it
@@ -29,7 +30,28 @@ you_get:
   - Past failed solutions
   - Emotional and hidden drivers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into a new chat.
+  - Write what you sell and who you think buys it. Add reviews or sales call notes if you have them (optional).
+  - Read the profile. Mark anything that is a guess.
+  - Check the guesses against real calls, reviews or survey answers before you use the profile.
+  - Use the profile as the base for your next task, such as writing three ad hooks for this buyer.
+output_sample:
+  input:
+    - What you sell
+    - Who you think buys it
+    - Customer reviews or feedback (optional)
+    - Notes from sales calls (optional)
+  output:
+    - name: Description
+      contains: A short picture of one specific person, with their life, job and stage.
+    - name: Current Situation
+      contains: What this buyer is doing and facing right now.
+    - name: Pain Points
+      contains: The daily frustrations that keep getting in their way.
+    - name: Desired Outcome
+      contains: What this buyer wants to achieve.
+    - name: Failed Attempts
+      contains: What they already tried, and why it fell short.
+    - name: Emotional Drivers
+      contains: Their fears, frustrations and desires, plus quieter drivers like status, control or relief.

@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It lists recent work in a fixed layout.
 new_slug: standup-update-writer
 name: Standup update writer
-summary: Ask for your standup. Get yesterday, today and blockers from your
-  commits, PRs and tickets.
+summary: Write your daily standup from rough notes, commits or tickets. You get yesterday, today and blockers in a short update your team reads fast.
 job: organise-work
 headline: Standup update writer
-subhead: "Your daily standup written in under a minute: yesterday, today and
-  blockers. If your source control, tracker or chat is connected, it pulls
-  recent commits, pull requests, ticket changes and build status, then sorts
-  them into a short update."
+subhead: "Give it rough notes, or let it read your commits and tickets. It sorts your work into yesterday, today and blockers. You get a short update you can paste into chat or email."
 explain: |
   Your daily standup written in under a minute: yesterday, today and blockers. If your source control, tracker or chat is connected, it pulls recent commits, pull requests, ticket changes and build status, then sorts them into a short update.
 
@@ -18,18 +14,39 @@ when:
   - Standup starts in five minutes and you cannot recall yesterday.
   - You have rough notes and need them in a shareable format.
   - You want your commits and tickets summed up for you.
-  - You want to flag a blocker clearly.
+  - You need to flag a blocker clearly and name who can help.
+not_for:
+  - "You need a weekly report: write it by hand or ask a person on your team, since this only covers one day."
+  - "You are planning a sprint: use your tracker's sprint view, which shows the whole backlog."
+  - "You have no notes and no connected tools: write down what you did first, or it has nothing to work from."
 you_give:
-  - Rough notes on your work (optional)
-  - Access to your commits and tickets (optional)
+  - Rough notes on what you worked on (optional)
+  - Your commits, pull requests and tickets, if your AI can read them (optional)
   - "Which part you want: yesterday, today or blockers (optional)"
 you_get:
-  - A short standup update
-  - Yesterday and today sections
-  - A clear blockers list
+  - A short standup update with yesterday, today and blockers
+  - Ticket references next to items when they are known
+  - A blockers list with context and who can help
+  - The update in a format for Slack, email or your standup tool, if you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your code host and ticket tool.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - "Type your rough notes, for example: worked on the auth migration, reviewed 3 PRs, blocked on API rate limits."
+  - Or connect your code host and ticket tool first, if your AI supports it, and ask for your standup.
+  - Ask for one part only, such as blockers, if that is all you need.
+  - Check the update for anything missing, add detail on blockers, then paste it where your team reads it.
+output_sample:
+  input:
+    - Rough notes on what you worked on (optional)
+    - Your commits, pull requests and tickets, if your AI can read them (optional)
+    - "Which part you want: yesterday, today or blockers (optional)"
+  prerequisites:
+    - Your code host, ticket tool or chat connected to your AI, only if you want it to pull your work for you
+  output:
+    - name: Standup header
+      contains: The title of the update with today's date.
+    - name: Yesterday
+      contains: What you finished, with a ticket reference when there is one.
+    - name: Today
+      contains: What you plan to work on next, with a ticket reference when there is one.
+    - name: Blockers
+      contains: What is stopping you, with context and who can help.

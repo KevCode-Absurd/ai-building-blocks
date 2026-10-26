@@ -1,0 +1,41 @@
+slug: agency-testing-reality-checker
+name: Reality Checker agent
+summary: "Get a launch readiness review of a finished build. It checks earlier QA claims against proof and returns FAILED, NEEDS WORK or READY."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: testing/testing-reality-checker.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-reality-checker.md
+  licence: MIT
+  original_name: Reality Checker
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 6d32fcdb114233e13902ec6372d50293b120e85d490b5e81d372c29808f988a1
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Reality Checker
+  - Agency Agents
+  - Testing
+credits:
+  - title: Reality Checker
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-reality-checker.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

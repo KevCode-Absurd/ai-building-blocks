@@ -2,34 +2,97 @@ thinking: high
 thinking_why: It needs judgment about how your team and product fit the method.
 new_slug: product-team-discovery-coach
 name: Product team discovery coach
-summary: Describe your product team. Get a plan for finding what to build,
-  testing ideas first and working with empowered teams.
+summary: Score how your product team works, then get a 90-day plan to move from a feature roadmap to testing ideas with customers before you build them.
 job: build-product
 headline: Product team discovery coach
-subhead: A plan to move your product team from building a roadmap of features to
-  finding what customers actually want. It helps teams own problems rather than
-  just ship a list.
+subhead: Describe your product team and how its roadmap is made. It scores your way of working from 0 to 7, shows which checks you fail, and gives you a 90-day plan and first tests to run before engineers build anything.
 explain: |
-  A plan to move your product team from building a roadmap of features to finding what customers actually want. It helps teams own problems rather than just ship a list.
+  Many product teams are feature factories. Leaders hand over a dated list of features, the team builds them, and nobody finds out if customers wanted them. This skill follows Marty Cagan's product discovery approach to help a team change that.
 
-  Claude uses the empowered product team model. Teams get objectives, not features, and run discovery and delivery side by side. The plan covers how to test ideas before building them, how to check value, usability, feasibility and viability, how to write a product vision, and how leaders can support teams without controlling them. It also names signs you are a feature factory and how to change.
+  It scores your team on seven plain questions, such as "Do you test ideas with real users before building?" and "Does the team own results, not output?" A score of 6 or 7 means discovery runs steadily. A score of 3 or less means a feature factory. It names each failed question so you know exactly what to fix.
+
+  Then it plans 90 days: how to test ideas for value, usability, feasibility and business fit, how to involve engineers, what to say when a stakeholder hands you a solution, and how to write a vision the team can act on. The test counts it mentions are the author's rules of thumb, not research.
 when:
-  - Your roadmap is just a list of features from stakeholders.
-  - You want to test ideas before engineering builds them.
-  - You are restructuring teams to own outcomes.
-  - You need a clear product vision for the team.
+  - Your roadmap is a list of features that stakeholders handed over.
+  - You want to test ideas with customers before engineers build them.
+  - You are changing how teams are set up so they own results, not output.
+  - You need a product vision your team can use to make choices.
+not_for:
+  - "You need to plan or run customer interviews: use the Customer interview question writer or the Customer discovery interview planner."
+  - "You want a weekly routine that links customer needs to ideas: use the Opportunity solution tree builder."
+  - "You only need to rank a backlog: use the Priority method picker."
 you_give:
-  - A description of your team and how it works now
-  - Your current roadmap process
-  - Problems you face with stakeholders (optional)
-  - Your product vision draft (optional)
+  - Who is on your team and what each person does
+  - How your roadmap is made now and who decides what goes on it
+  - The top 3 customer problems the team can name from direct contact
+  - Problems you have with stakeholders handing over solutions (optional)
+  - A draft of your product vision (optional)
 you_get:
-  - A diagnosis of your current way of working
-  - A discovery and delivery plan
-  - Ways to test ideas early
-  - Steps to move to empowered teams
+  - A score from 0 to 7 for how your team works, with each failed check named
+  - What in your answers led to each failed check
+  - A 90-day plan in three steps, each with an owner and a sign it worked
+  - Two or three first tests to run on your current ideas
+  - A short script for when a stakeholder hands you a solution
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write a short note on your team, your roadmap process and the three customer problems you can name from direct contact. Say if you cannot name them.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. If your AI takes files, add the reference files too. No code or paid tool is needed.
+  - Paste your note. Answer any question your AI asks. Skipped inputs are marked MISSING, not guessed.
+  - Check the score against your own view. If a failed check seems unfair, give your AI more detail and ask it to score again.
+  - Start with step one of the 90-day plan and run one of the first tests within two weeks.
+  - Pair it with the Customer interview question writer for the tests, and the Priority method picker once ideas are validated.
+output_shape: |
+  Score: <0 to 7>, band: <feature factory / inconsistent discovery / steady discovery>
+  Failed checks: <each failed check and what in your answers led to it>
+  90-day plan: <step 1, step 2, step 3, each with owner and sign it worked>
+  First tests: <2 or 3, each with the risk tested, who to test with, what result would change the plan>
+  Stakeholder script: <2 or 3 lines>
+  Missing: <inputs not given>
+output_sample:
+  input:
+    - Who is on your team and what each person does
+    - How your roadmap is made and who decides
+    - The top 3 customer problems your team can name from direct contact
+    - Stakeholder problems and a vision draft (optional)
+  output:
+    - name: Score
+      contains: A number from 0 to 7, the band it falls in, and each failed check named.
+    - name: What the evidence says
+      contains: For each failed check, the part of your answers that led to it.
+    - name: 90-day plan
+      contains: Three steps of about 30 days, each with the change, an owner and a sign it worked.
+    - name: First discovery experiments
+      contains: Two or three tests, each with the risk it tests, who to test with and what would change the plan.
+    - name: Stakeholder script
+      contains: Two or three lines a product manager can say when a stakeholder hands over a solution.
+    - name: Missing
+      contains: Inputs you did not give and how that limits the plan.
+how_it_works:
+  - title: Collect the facts
+    text: It asks about your team, your roadmap process and your direct customer contact, and marks gaps.
+  - title: Score seven checks
+    text: It gives one point for each check you pass, from testing ideas to shipping small changes often.
+  - title: Name the failed checks
+    text: Each failed check is tied to something you said, not a guess.
+  - title: Plan the 90 days
+    text: It sets three steps with an owner and a sign that each one worked.
+  - title: Design first tests
+    text: It tests your current ideas against four risks, which are value, usability, feasibility and business fit.
+  - title: Prepare the stakeholder talk
+    text: It writes short lines for turning a handed-over solution into a problem to assess.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT
+      why: Either can score your answers and write the plan. Files and code are not needed.
+    - name: Your roadmap and OKR documents
+      why: Paste them in so the score rests on what the team really works from.
+  inputs:
+    - Your current roadmap
+    - Notes from your last five customer conversations
+    - Your team's goals or OKRs for this quarter
+terms:
+  - term: Feature factory
+    meaning: A team that builds a handed-over list of features and does not check if they work.
+  - term: Discovery
+    meaning: Testing ideas with customers and engineers before committing to build them.
+  - term: Four risks
+    meaning: Will customers use it, can they work it out, can we build it, and does it work for the business.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Compose files follow a clear, known structure.
 new_slug: docker-compose-setter
 name: Docker Compose setter
-summary: Describe your app services. Get a Docker Compose setup with networks,
-  volumes and settings.
+summary: Describe your app and get a Docker Compose setup with networks, saved data, health checks and dev and production files. Fits multi-service apps.
 job: ship-and-host
 headline: Docker Compose setter
-subhead: Describe your app services. Get a Docker Compose setup with networks,
-  volumes and settings. Bring the services your app needs. Use the result to
-  plan your next step.
+subhead: Describe your app services. Get a Docker Compose setup with networks, volumes and settings. Bring the services your app needs. Use the result to plan your next step.
 explain: |
   A Docker Compose setup for your multi-service app, with networks, saved data and health checks, so everything starts together in the right order.
 
@@ -18,6 +15,10 @@ when:
   - Services start before the database is ready and crash.
   - You want development and production settings kept apart.
   - You need your database data to survive a container restart.
+not_for:
+  - "You run one container only: use a plain docker run command or a single Dockerfile instead."
+  - "You deploy to Kubernetes: use a Kubernetes manifest or a Helm chart instead."
+  - "You need a Dockerfile for your app itself: ask a person on your team or write the Dockerfile first, then come back."
 you_give:
   - The services your app needs
   - Your language and framework
@@ -30,8 +31,28 @@ you_get:
   - An override file per environment
   - A short run guide
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste this skill, or attach the file.
+  - "Describe your app: language, database, cache, proxy or queue, and whether it is for development or production."
+  - Read the files your AI writes. Check that the health checks work with the images you chose, and that any config files or certificates it mentions exist.
+  - Save the files in your project. Put passwords in a .env file and keep that file out of version control.
+  - Run docker compose config to check the file. Then run docker compose up. This step needs Docker on your computer, not your AI.
+output_sample:
+  input:
+    - The services your app needs, such as a database, cache or proxy
+    - Your language and framework
+    - Ports and data you need to keep
+    - Dev or production target (optional)
+  prerequisites:
+    - Docker with Compose V2 installed on your computer to run the result
+    - A Dockerfile for your own app, if the app is built locally
+  output:
+    - name: docker-compose.yml
+      contains: The shared setup for every service, with images, ports, networks, named volumes, health checks and start order.
+    - name: docker-compose.override.yml
+      contains: Development settings, such as bind mounts for live reload, debug ports and verbose logging. Docker loads it automatically.
+    - name: docker-compose.prod.yml
+      contains: Production settings, such as resource limits, restart rules and log limits. You add it with the -f flag.
+    - name: Run commands
+      contains: The commands to start the stack in development and in production.
+    - name: Best practice notes
+      contains: Short reminders on pinned image versions, secrets in a .env file and port or permission clashes.

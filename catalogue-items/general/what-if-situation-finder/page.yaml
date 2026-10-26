@@ -1,6 +1,6 @@
 new_slug: what-if-situation-finder
 name: "What-if situation finder"
-summary: "Paste your story idea. Get one what-if question, the people stuck in it and the unknowns to leave open."
+summary: "Turn a rough story idea into one what-if question, the people stuck in it and the unknowns to leave open. Find a story situation you can start writing."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It compares three versions of an idea and picks one, but the tests are fixed."
@@ -17,6 +17,10 @@ when:
   - "You have a topic or a mood but no first scene."
   - "Your idea needs an outline before it makes sense, and that is stopping you starting."
   - "You have three ideas and cannot tell which to write."
+not_for:
+  - "You already have a situation and want a plot or outline: use a plain three-act outline template, or write the first scene and see what happens."
+  - "You have a finished draft and want it edited: use a human editor or a beta reader."
+  - "You want ready-made story ideas from nothing: brainstorm in a notebook first, then bring one rough idea here."
 
 you_give:
   - "Your rough idea, in as many sentences as you have"
@@ -35,6 +39,29 @@ how_to_use:
   - "If you know what two things collided, say so. If not, it will help you find them."
   - "Read the pick. If it does not scare or move you a little, ask for a fourth version."
   - "Take the brief to the next step. Do not write an outline."
+output_sample:
+  input:
+    - Your rough story idea, even one sentence
+    - The two things it grew from (optional)
+    - The kind of piece and its length (optional)
+    - Jobs, places or hobbies you know well (optional)
+  output:
+    - name: The two things
+      contains: The two separate things your idea grew from, one line each.
+    - name: The what-if
+      contains: One question with an ordinary person, a pressure and a reason they cannot leave.
+    - name: Three versions
+      contains: A smaller, an obvious and a darkest version, each marked yes or no on three tests.
+    - name: The pick
+      contains: The version with the most passes, and why it is worth writing.
+    - name: The people
+      contains: Up to three people, each with a job, a want right now and one habit or object.
+    - name: Leave open
+      contains: Up to five unknowns the writing will answer, left unanswered.
+    - name: Where to start
+      contains: The place and moment where the situation closes on the people.
+    - name: Checks missed
+      contains: One line for each check the brief failed, or none.
 
 how_it_works:
   - title: "Finds the collision"

@@ -2,34 +2,101 @@ thinking: medium
 thinking_why: It builds levels and talk guides from your roles.
 new_slug: career-ladder-plan
 name: Career ladder and growth plan writer
-summary: Name a job family. Get career levels, growth plans and a manager guide
-  for career talks.
+summary: Build a career ladder for one job family. You get level definitions, promotion criteria, a growth plan template and a manager talk guide.
 job: hire-people
 headline: Career ladder and growth plan writer
-subhead: Name a job family and get clear career levels, growth plans and a guide
-  for managers on career talks. People can see what each level expects and what
-  to do to reach the next one.
+subhead: Name a job family, such as customer support or design. Your AI writes the levels from entry to senior, what each level expects and what to show for the next one. You also get a growth plan template and a guide for manager career talks.
 explain: |
-  Name a job family and get clear career levels, growth plans and a guide for managers on career talks. People can see what each level expects and what to do to reach the next one.
+  People ask "what do I need to do to get promoted?" and managers have no written answer. This career ladder builder writes one for a single job family, so each level has a clear scope and clear signs of readiness for the next.
 
-  The skill builds a ladder from entry to senior leadership with level definitions and progression criteria. It can set up two tracks, one for specialists and one for managers, or a lattice with sideways moves. It writes individual development plans, 90-day plans and self-assessment questions. It also gives managers prompts for career conversations and sets ways to measure whether the programme works, such as promotion rates and retention.
+  You can run one track for specialists and one for managers, or a lattice that also allows sideways moves. Each person gets a growth plan with goals, skill gaps and actions. Managers get a guide for career talks, including how to say "not yet" and what to offer instead.
+
+  The skill writes from your inputs. It does not invent your company's levels, pay or promotion rules, and it leaves a clear gap where you need to decide.
 when:
-  - People keep asking what they need to do to get promoted.
+  - People keep asking what they must do to get promoted.
   - You are creating levels for a team that never had them.
   - Managers avoid career talks because they do not know what to say.
-  - You want a development plan template for each person.
+  - You want a growth plan template for each person on the team.
+not_for:
+  - "You need pay ranges for each level: use the Pay band builder."
+  - "You want the skills for each role with interview questions: use the Role skills framework builder."
+  - "You want to pair juniors with mentors: use the Mentoring program builder."
+  - "You want to plan who covers a key role if someone leaves: use the Succession plan builder."
 you_give:
-  - The job family or function
-  - Current titles and levels (optional)
-  - The skills that matter in the role
+  - The job family, such as sales or engineering
+  - Your current titles and levels, if you have any (optional)
+  - The skills that matter in this work
+  - Two or three real roles, so the levels fit your team
   - Company size and goals (optional)
 you_get:
-  - Level definitions and promotion criteria
-  - A specialist and manager track
-  - An individual development plan template
-  - A guide for manager career conversations
+  - A level table with scope, expectations and signs of readiness for the level above
+  - A specialist and manager track, or a lattice of sideways moves
+  - A growth plan template and a 90-day plan for a new promotion
+  - Self-assessment questions for each level
+  - A guide for manager career talks
+  - A few measures to check the program works
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill.
+  - Under it, write your job family, the skills that matter, and two or three real roles with what each person does.
+  - Say how many levels you want, or ask your AI to suggest 3 to 5.
+  - Read the level table first. Fix any level that does not match the real work, then ask for the growth plan and manager guide.
+  - Share the draft with a few managers before you tell your team. Pay and promotion decisions stay yours.
+how_it_works:
+  - title: Gather your roles
+    text: It asks for the job family, the skills that matter and real role examples, and marks anything you leave out.
+  - title: Build the levels
+    text: It writes a ladder from entry to senior with scope, expectations and what to show for the level above.
+  - title: Set the tracks
+    text: It adds a specialist track and a manager track, or a lattice with sideways moves.
+  - title: Write the growth plan
+    text: It makes a plan template with goals, skill gaps, actions, support and check-in dates.
+  - title: Guide the career talk
+    text: It gives managers questions to ask, how to discuss readiness, and how to say not yet.
+  - title: Choose measures
+    text: It suggests simple measures, such as promotion rate and how long people stay.
+output_shape: |
+  ## Levels for <job family>
+  | Level | Scope | What is expected | Shows readiness for the level above |
+  ## Tracks
+  <specialist track> / <manager track> / <sideways moves>
+  ## Growth plan template
+  Goal / Skill gap / Actions / Support needed / Check-in dates
+  ## 90-day plan after a promotion
+  ## Self-assessment questions
+  ## Manager career talk guide
+  ## How to measure the program
+output_sample:
+  input:
+    - The job family, such as customer support or design
+    - The skills that matter in this work
+    - Two or three real roles in your team
+    - Your current titles and levels (optional)
+  output:
+    - name: Level table
+      contains: Each level with its scope, what is expected and signs a person is ready for the next one.
+    - name: Tracks
+      contains: A specialist track and a manager track, or a lattice that also shows sideways moves.
+    - name: Growth plan template
+      contains: Goals, skill gaps, actions, support needed and check-in dates for one person.
+    - name: 90-day plan
+      contains: A plan for someone who has just been promoted.
+    - name: Self-assessment questions
+      contains: Questions a person can answer to see where they stand against their level.
+    - name: Manager career talk guide
+      contains: Opening questions, how to discuss readiness and a way to say not yet.
+    - name: Program measures
+      contains: Simple ways to check the program works, such as promotion rate and how long people stay.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a writing and thinking job. Claude, ChatGPT or Gemini all do it well.
+  inputs:
+    - A current job description for each level
+    - Examples of work that earned a recent promotion
+terms:
+  - term: Job family
+    meaning: A group of jobs with similar skills, such as sales or engineering.
+  - term: Career lattice
+    meaning: A career map that allows sideways moves, not only steps up.
+  - term: Growth plan
+    meaning: A short written plan with goals and actions for one person. Also called an individual development plan.

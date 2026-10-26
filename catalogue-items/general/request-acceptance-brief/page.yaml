@@ -1,51 +1,141 @@
-{
-  "headline": "Request acceptance brief",
-  "subhead": "Turn any concrete request into a scope, input list, named deliverables and acceptance checks.",
-  "job": "set-up-ai",
-  "thinking": "medium",
-  "thinking_why": "Requires following the supplied scope and checking evidence; domain expertise is not assumed.",
-  "explain": "Turn any concrete request into a scope, input list, named deliverables and acceptance checks. This is a general method for tasks without a reliable specialist match. Planning is deterministic; executing these instructions requires your own compatible AI runner.",
-  "when": [
-    "You have a concrete deliverable without a matching specialist workflow."
-  ],
-  "you_give": [
-    "The original request, constraints and available evidence."
-  ],
-  "you_get": [
-    "Editable named files, requirements and honest check status."
-  ],
-  "how_to_use": [
-    "Include the full request and complete required inputs.",
-    "Run the workflow in a compatible AI runner.",
-    "Review unresolved checks before using the result."
-  ],
-  "how_it_works": [
-    {
-      "title": "Follow the brief",
-      "text": "Read the complete request and constraints. Create request-brief.md with: outcome, audience, exact deliverables and file formats, quantities, deadline, explicit exclusions, available evidence and acceptance criteria. Assign stable requirement IDs R1, R2, etc. Keep original wording beside each interpretation. Do not infer personal facts, budgets, dates, access or authorization. Record missing inputs and ask only questions whose answers change a deliverable or a required execution dependency, at most three at once. Use placeholders for optional details. Preserve negative constraints and every requested language, count and platform. For an unsupported domain state that this is a general method and identify the specialist review it still needs. Save the requirements as the plan for the next step. No external actions are authorized by this brief."
-    }
-  ],
-  "output_shape": "Requirement ID | Artifact path | Evidence | Status | Missing input",
-  "tweaks": [
-    {
-      "what": "Domain",
-      "how": "Supply your own standards and review rubric."
-    }
-  ],
-  "judge": [
-    "Every requested result is covered or explicitly unresolved.",
-    "No unsupported execution or specialist-validation claim."
-  ],
-  "test": [
-    "Try missing inputs and verify that no facts are invented."
-  ],
-  "improve": [
-    "Replace a general stage with a suitable specialist skill."
-  ],
-  "terms": [
-    {
-      "term": "Not run",
-      "meaning": "A check could not be executed with the available tools."
-    }
-  ]
-}
+new_slug: request-acceptance-brief
+name: Request acceptance brief
+summary: Turn a request into a brief with numbered requirements, exact files and checks. Get request-brief.md before any work starts.
+job: set-up-ai
+thinking: medium
+thinking_why: Requires following the supplied scope and checking evidence; domain expertise is not assumed.
+headline: Request acceptance brief
+subhead: Paste your request, with every limit. It splits the request into numbered requirements, names each file you expect and writes a check for each one. You get request-brief.md and up to three questions, only where the answer changes the work.
+explain: |-
+  A loose request gets loose work. A request brief builder turns what you asked for into a list that a person or an AI can follow and check. It names the outcome, the files, how many, the formats and languages, the deadline and what must stay out.
+
+  Each requirement gets a number, such as R1 and R2. Your own words sit beside how the skill read them, so a wrong reading is easy to spot. Each one also gets a check you can do by opening the file.
+
+  It asks at most three questions, and only where the answer changes a file. It does not guess your budget, dates, access or permissions. It is a general method with no specialist knowledge. For law, tax, medical or safety work it names the review a qualified person still needs to do.
+when:
+  - You are about to ask an AI or a teammate for several files and want the ask pinned down first.
+  - Your request has counts, languages or formats that are easy to miss, such as "10 posts in 3 languages".
+  - Work you asked for has skipped part of the request before, and you want it to stop happening.
+  - You want numbered requirements you can hand to a checker later.
+not_for:
+  - "You already have a brief and want the files made: use the Editable deliverable file writer."
+  - "You have finished files and want them checked: use the Deliverable requirements checker."
+  - The job has its own specialist skill, such as ad copy or a finance bridge. Use that skill, because this one is a general method.
+you_give:
+  - "Your request, in your own words, with every limit: counts, languages, formats, platforms and deadline"
+  - What must not appear or happen
+  - Files or facts the work should use, such as notes or data (optional)
+  - Who the result is for (optional)
+you_get:
+  - request-brief.md with the outcome, audience, files, formats and counts
+  - Numbered requirements, with your words beside how they were read
+  - A check for each requirement that anyone can do by opening the file
+  - Up to three questions, and a list of what is missing
+  - A note on any specialist review the job still needs
+how_to_use:
+  - Open Claude, ChatGPT or Gemini and add the skill, or paste SKILL.md into a new chat.
+  - "Paste your request as you would send it. Add every limit: numbers, languages, file types, deadline and anything to leave out."
+  - Attach any files the work should use, such as notes or data.
+  - Answer its questions, up to three. Fix any requirement where its reading of your words is wrong.
+  - Save request-brief.md. Give it to whoever makes the files, then bring it to the Deliverable requirements checker.
+output_sample:
+  input:
+    - Your request, in your own words, with every limit
+    - What must not appear or happen
+    - Files or facts the work should use (optional)
+    - Who the result is for (optional)
+  output:
+    - name: Outcome and audience
+      contains: What the finished work is for and who it is for, in two lines.
+    - name: Deliverables
+      contains: Each file by name, with its format, quantity, language or platform.
+    - name: Exclusions
+      contains: What must not appear or happen, kept as you said it.
+    - name: Requirements
+      contains: R1, R2 and so on, each with your words, the reading, a check and any missing input.
+    - name: Questions
+      contains: Up to three, only where the answer changes a file.
+    - name: Specialist review needed
+      contains: Any law, tax, medical or safety review the job still needs, or none.
+    - name: Missing and checks missed
+      contains: Inputs you did not give, and any of its own checks that failed, or none.
+how_it_works:
+  - title: Reads the whole request
+    text: It takes your words and limits as given. It adds no facts about you, your budget or your dates.
+  - title: Numbers each requirement
+    text: One thing per line, with your wording kept beside the reading.
+  - title: Names the files
+    text: Each deliverable gets a format, a count and a planned file.
+  - title: Writes a check for each
+    text: A check anyone can do by opening the file, such as a count, a language or a total.
+  - title: Asks only what matters
+    text: At most three questions. Other gaps become placeholders marked MISSING.
+  - title: Flags specialist work
+    text: It states this is a general method and names any review a specialist job needs.
+output_shape: |-
+  request-brief.md
+
+  OUTCOME
+  <what the finished work is>
+
+  AUDIENCE
+  <who it is for>
+
+  DELIVERABLES
+  <file name | format | quantity | language or platform>
+
+  DEADLINE
+  <date, or MISSING>
+
+  EXCLUSIONS
+  <what must not appear, in your words>
+
+  EVIDENCE AVAILABLE
+  <files and facts you gave>
+
+  REQUIREMENTS
+  Requirement ID | Original words | Reading | Planned file | Acceptance check | Status | Missing input
+  R1 | "<your words>" | <reading> | <file> | <check> | open or blocked | <none or what>
+
+  QUESTIONS (at most 3)
+  <question | why the answer changes a file>
+
+  SPECIALIST REVIEW NEEDED
+  <which review, or none>
+
+  MISSING
+  <each missing input>
+
+  CHECKS MISSED
+  <one line per check still failing, or none>
+tweaks:
+  - what: Counts and formats
+    how: Give exact numbers and file types. "A few short posts" gives a weak check. "5 posts under 100 words" gives a strong one.
+  - what: Exclusions
+    how: List what must stay out. Each one becomes its own requirement with its own check.
+  - what: Your own standards
+    how: Paste a house style or review rubric. It becomes extra requirements with checks.
+judge:
+  - Every requested result is covered or explicitly unresolved.
+  - No unsupported execution or specialist-validation claim.
+test:
+  - Try missing inputs and verify that no facts are invented.
+improve:
+  - Add your own standards or review rubric as extra requirements, so every brief carries them.
+  - Keep each brief with the files it led to, so the next request starts from a good one.
+  - Replace a general brief with a specialist skill when one fits your field.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Reading a request and writing a brief is text work. Attach source files if the work should use them.
+  inputs:
+    - Your original message or email, word for word
+    - Any house style or review rubric
+    - A list of what must not appear
+terms:
+  - term: Requirement ID
+    meaning: A short label, such as R3, for one thing the request asked for, so each can be checked on its own.
+  - term: Acceptance check
+    meaning: A test anyone can do by opening the file, such as a count, a language or a total.
+  - term: Deliverable
+    meaning: A file or section the request asks for.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds the question, milestones and criteria to fit together.
 new_slug: project-based-unit-brief-writer
 name: Project-based unit brief writer
-summary: Give it a topic. Get a project brief with a driving question,
-  milestones and marking criteria.
+summary: Plan a project-based learning unit. Give your topic and year group. You get a driving question, milestones and marking criteria.
 job: teach-and-train
 headline: Project-based unit brief writer
-subhead: A student-ready project brief for a unit of work, built around one
-  driving question that gives the whole project a purpose. Teachers get a plan
-  they can hand out and mark against.
+subhead: A student-ready project brief for a unit of work, built around one driving question that gives the whole project a purpose. Teachers get a plan they can hand out and mark against.
 explain: |
   A student-ready project brief for a unit of work, built around one driving question that gives the whole project a purpose. Teachers get a plan they can hand out and mark against.
 
@@ -18,6 +15,10 @@ when:
   - You want students to produce something real, not just answer worksheets.
   - You need clear marking criteria before the project starts.
   - You want milestones so students do not leave the work until the last week.
+not_for:
+  - "You only need one lesson or a recall quiz: use a worksheet or a short quiz instead."
+  - "You need a full marking rubric for finished work: use the criterion-referenced-rubric-generator after the brief."
+  - "You want to plan the whole unit from the end goal back: use the backwards-design-unit-planner first."
 you_give:
   - Topic the project covers
   - Learning goals
@@ -31,7 +32,33 @@ you_get:
   - Marking criteria
   - Teacher guide and support notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Add your topic, learning goals, year group and project length.
+  - Add your subject, a real-world link, class details or resources if you have them (optional).
+  - Read the driving question and scenario first. Change them if they do not fit your class.
+  - Check the Known Design Choices section and edit any choice you disagree with.
+  - Next, run the criterion-referenced-rubric-generator, then the differentiation-adapter to adapt the brief for your learners.
+output_sample:
+  input:
+    - Your project topic
+    - Your learning goals for students
+    - Your year group
+    - How long the project runs
+    - Your subject, real-world link, class details or resources (optional)
+  output:
+    - name: Driving question
+      contains: One open question that gives the whole project a purpose.
+    - name: The Scenario
+      contains: A real-world situation that sets up the question and who the work is for.
+    - name: What You Will Produce
+      contains: The product or products students make by the end of the project.
+    - name: Milestones
+      contains: Checkpoints through the project so students do not leave the work to the last week.
+    - name: Assessment Criteria
+      contains: What good work looks like, so you can mark against it.
+    - name: Explicit Instruction Map (Teacher Guide)
+      contains: What you should teach directly, and when in the project.
+    - name: Differentiation Notes
+      contains: Ways to support different learners in the same project.
+    - name: Known Design Choices
+      contains: The choices the skill made, so you can see them and change them.

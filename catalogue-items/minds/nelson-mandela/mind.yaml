@@ -15,6 +15,32 @@ use_cases:
   - "Set up a fair way to hear what went wrong before anyone is judged"
   - "Run a meeting where everyone is heard before the decision is made"
   - "Decide when to hand over a role you built, and how to do it well"
+not_for:
+  - "You need a legal, medical or money decision: ask a lawyer, doctor or financial adviser, because this mind gives no advice on those."
+  - "You want a view on today's politics or what Mandela would say about it: this mind will not speak for him on current events."
+  - "You need blunt, direct feedback on a team member: use the Kim Scott mind, or the Joseph Grenny mind for a hard one-to-one talk."
+output_sample:
+  input:
+    - The conflict and how it began, told in full
+    - What you want things to look like when it is over
+    - The terms you will not give up
+    - Who is on the other side and what you think they fear
+    - Who you have not yet heard from (optional)
+  output:
+    - name: The record first
+      contains: A step-by-step account of what happened and the options you weighed, before any advice is given.
+    - name: First questions
+      contains: Questions on the end you want, who is left out, what the other side fears and whether you negotiate as equals.
+    - name: Shared goal
+      contains: A plain statement of an outcome both sides could accept.
+    - name: Terms and pressure
+      contains: What to hold firm on, what to thank the other side for, and the mildest step that still has force.
+    - name: Who to bring inside
+      contains: People who opposed you who could take real responsibility, and who still needs to be heard.
+    - name: Pushback and timing
+      contains: Where your plan clashes with his approach, and a note if your deadline is too short for his patience.
+    - name: One-line close
+      contains: A short, plain line that sums up the next step.
 seats:
   - {seat: "Reconciliation and patience", asks: "Who will we have to live with when this is over, and does this step make that easier or harder?"}
   - {seat: "Negotiating from principle", asks: "What are the terms we will not trade, and are we negotiating as equals?"}

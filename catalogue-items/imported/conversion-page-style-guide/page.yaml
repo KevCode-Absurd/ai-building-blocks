@@ -2,35 +2,106 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: conversion-page-style-guide
 name: Conversion page style guide writer
-summary: Describe the action you want. Get a style guide for a page that removes
-  friction and builds trust.
+summary: Get a conversion page style guide that cuts friction and builds trust, with rules for forms, buttons and proof your team can check.
 job: design-work
 headline: Conversion page style guide writer
-subhead: A style guide for pages that push people toward one action by cutting
-  friction and building trust. Designers and developers can follow it without
-  guessing, and your pages end up consistent.
+subhead: Tell your AI the one action you want visitors to take, who they are and how your brand sounds. It writes a style guide for pages that cut friction and build trust, with rules for forms, buttons, proof and errors.
 explain: |
-  A style guide for pages that push people toward one action by cutting friction and building trust. Designers and developers can follow it without guessing, and your pages end up consistent.
+  Pages built one at a time drift. Each gets its own button, its own form length and its own tone. Visitors drop out where a page asks too much or feels hard to trust. This skill writes the page rules once, so every page that follows has the same ones.
 
-  You describe the action you want, such as buying or booking. The skill writes the mission, brand notes, style foundations, accessibility rules and writing tone. Then it lists do and don't rules, component by component, and quality gates a page must pass before launch. It also gives sample rule wording so the guide stays checkable, for example how many clicks a task may take. The result is a document your team can reuse across pages.
+  It starts from your one action, such as buy, book or sign up. Your AI sets colours, type and spacing, then writes rules for the parts that move people: forms, buttons, proof and error messages, each with every state. Each rule carries a number or an example, such as the most fields a form may have or the most clicks a task may take. The numbers come from you. If you give none, it marks its own as "suggested".
+
+  It also checks contrast. The default purple is only about 4.2 to 1 on white, under the 4.5 to 1 normal text needs, so the guide says where to darken it. This is a rules document for a whole site. It does not plan one page.
 when:
   - Each page on your site looks and reads differently.
-  - You are hiring a designer and need to explain what you expect.
-  - Visitors drop out at forms and you suspect friction.
-  - You want accessibility and trust rules written down once.
+  - You are hiring a designer and need to say what you expect.
+  - Visitors drop out at your form and you suspect friction.
+  - You want your trust and accessibility rules written down once.
+not_for:
+  - "You need one landing page planned, with its order and copy: use the Conversion landing page designer."
+  - "Your page tells a story before it asks for anything: use the Story-led page style guide writer."
+  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "You want a calm look with no sales push: use the Minimal style guide writer."
 you_give:
-  - The action you want visitors to take
-  - Your brand voice and colours
-  - Your audience
-  - Existing pages for reference (optional)
+  - The one action you want visitors to take, such as buy, book or sign up
+  - Who your visitors are
+  - Your brand voice and colours (optional)
+  - Limits you already have, such as the most form fields or clicks (optional)
+  - Screenshots of pages you have now (optional)
 you_get:
-  - Style guide document
-  - Do and don't rules
-  - Component rules
-  - Accessibility and tone rules
-  - Launch checklist
+  - Colours, type and spacing as named values, with a contrast ratio for each colour pair
+  - Rules for forms, buttons, proof and errors, each with a number or an example
+  - Rules for each part with every state
+  - Do and don't rules, accessibility rules and tone examples
+  - A launch checklist your team can run before a page goes live
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill into a new chat, or add it to your AI first.
+  - State the one action you want, who your visitors are and how your brand sounds. Add colours or fonts you must keep.
+  - Answer the one round of questions it asks, or say "use the defaults". Anything you leave out is marked MISSING.
+  - Check the numbers it set, such as form fields and clicks. Change any marked "suggested" to fit your own data.
+  - Hand the guide to your designer or developer, or paste it into your coding AI's project instructions.
+how_it_works:
+  - title: State the goal
+    text: It writes one sentence on the action you want and how the pages should feel, before it sets any rules.
+  - title: Set the foundations
+    text: It sets colours as named tokens, fonts, type sizes and spacing steps, using your brand when you give it.
+  - title: Check the contrast
+    text: It tests each text and background pair and flags any under 4.5 to 1 for normal text.
+  - title: Write conversion rules
+    text: It sets checkable rules for forms, buttons, proof, speed, clicks and errors, each with a number or an example.
+  - title: Write part rules
+    text: For each part it covers anatomy, states and how it works by keyboard, mouse and touch.
+  - title: End with a checklist
+    text: It adds tone examples and things to avoid, then a list your team can run before launch.
+output_shape: |-
+  1. Context and goals: <the one action, who the visitors are, how the pages should feel>
+  2. Design tokens
+     | Token | Value | Use | Contrast on surface |
+     | <primary> | <hex> | <where it goes> | <ratio, pass or fail> |
+     Fonts: <display>, <body>, <code>   Type steps: <name = size>   Spacing: <steps>
+  3. Parts and conversion rules: <form, button, proof, error> with states, and <rule with a number or example>
+  4. Accessibility rules: <rule> and <how to test it>
+  5. Tone: <voice words>, then <before> and <after> examples
+  6. What not to do: <rule> and <example to avoid>
+  7. Launch checklist: - [ ] <check>
+  Next step: <who gets the guide>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - The one action you want visitors to take
+    - Who your visitors are
+    - Your brand voice and colours (optional)
+    - Limits you already have, such as form fields or clicks (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the action you want and how the pages should feel.
+    - name: Design tokens and foundations
+      contains: Colours, fonts, type sizes and spacing, with a contrast ratio for each pair.
+    - name: Component and conversion rules
+      contains: Forms, buttons, proof and errors with every state, and rules that carry a number or example.
+    - name: Accessibility requirements
+      contains: Testable rules for focus, contrast, keyboard use and touch size.
+    - name: Content and tone standards
+      contains: Voice words with before and after examples.
+    - name: Anti-patterns
+      contains: What not to build, each paired with an example.
+    - name: QA checklist
+      contains: A list your team can run before a page goes live.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your current sign-up or checkout form, as a screenshot
+    - Where visitors drop out, if your analytics show it
+    - Your logo colours as hex codes
+    - Two pages you like, in a few words each
+terms:
+  - term: Conversion
+    meaning: A visitor doing the thing you want, such as buying, booking or signing up.
+  - term: Friction
+    meaning: Anything that makes the action harder, such as extra form fields or unclear buttons.
+  - term: Token
+    meaning: A named value, such as primary colour, used in place of a raw colour code.
+  - term: Contrast ratio
+    meaning: How far apart two colours are in brightness. Normal text needs at least 4.5 to 1.

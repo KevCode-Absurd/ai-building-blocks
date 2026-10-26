@@ -1,6 +1,6 @@
 new_slug: beat-bigger-rival
 name: "Beat a bigger rival with a model it cannot copy"
-summary: "Paste your rivals. Get gaps, a model the leader would lose by copying, and what to build while the window is open."
+summary: "Find a better business model than your bigger rival, one it would lose money by copying. Paste your rivals to get gaps, a model and a build plan."
 job: plan-strategy
 thinking: high
 thinking_why: "It builds a loss-and-gain sum for a rival from limited facts and then judges how long the window stays open. Give it your strongest model."
@@ -19,6 +19,10 @@ when:
   - A larger rival dominates your market and being a little better has not worked.
   - You are choosing a price model, a sales route or a product design and want one the leader would find costly to match.
   - You have a new model and want to know if the leader will copy it the moment it works.
+not_for:
+  - "You face a pure price fight, or no rival dominates your market: use a standard competitor comparison, or the Competitive advantage tester."
+  - "You want to know which strengths your business already holds: use the Competitive advantage tester."
+  - "You want to check a single guess about how your business makes money: use the Business model assumption tester."
 
 you_give:
   - Your rivals, with what each offers and charges
@@ -35,6 +39,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your rivals and anything you know about how the leader earns. It works step by step and saves each result.
   - Check the leader's figures in the copy sum against its price lists and annual reports before you act.
+output_sample:
+  input:
+    - Your rivals, with what each offers and charges
+    - Customer reviews or quotes about the rivals (optional)
+    - Your idea for doing the job differently (optional)
+    - The leader's price list, sales routes or revenue split (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - An AI that can read the files you give it, such as Claude
+  output:
+    - name: "Step 1: where the leader is weak"
+      contains: The gaps nobody covers well and where the leader's own model holds it back.
+    - name: "Step 2: the model"
+      contains: How the leader earns, your model, who it suits better, and the copy sum with a call.
+    - name: "Step 3: ten years out"
+      contains: How long the window stays open, who else could copy you and what could end the edge.
+    - name: "Step 4: build while the window is open"
+      contains: Your market stage, a second power to build, a first test, a pass line and a check-in date.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and every MISSING line in one list.
 
 how_it_works:
   - title: Finds where the leader is weak

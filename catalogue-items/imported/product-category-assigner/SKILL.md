@@ -15,6 +15,42 @@ audit_signals:
   - catalog-intent-alignment
 ---
 
+## When not to use (added by AI Blocks)
+
+- You want to rewrite product titles or descriptions. Use the Product title cleaner or the Product description enricher.
+- Your categories were set by hand and each one was chosen on purpose. Review a few by eye first; run this only on products with no category.
+- Your products are very niche or one of a kind, and no standard category fits. It will put them on a "needs review" list rather than guess.
+- You do not use Shopify. The category list and the live updates are built for Shopify only.
+
+## Before you run it (added by AI Blocks)
+
+Ask once for anything missing. Never guess.
+
+1. The store domain, such as mystore.myshopify.com. If it is missing, stop and ask.
+2. Which products to check: the whole catalog, one collection or one tag.
+3. Whether to review products that already have a category. Default: only products with none (`only_missing: true`).
+
+**No Shopify access.** If the person cannot give an authenticated Shopify CLI session, ask for a product export (CSV) instead. Propose a category for each product from its title, type and tags, label every row "not checked against the live category list", and write nothing to a store.
+
+## Approval rule (added by AI Blocks)
+
+This overrides any default below: `dry_run` is **true** unless the person has said, after seeing the list, to apply it.
+
+1. Run steps 1 to 3 only. Show the proposed table: product, current category, proposed category, confidence.
+2. Show the "needs review" list (below the confidence floor) separately. Never write those.
+3. Stop. Ask: "Apply these N changes to your live store?" Wait for a clear yes.
+4. Only then run step 4, for the approved rows, and report any `userErrors`.
+
+## Output (added by AI Blocks)
+
+Return these parts, in this order:
+
+1. **Proposed categories.** A table with `product, old_category, new_category, confidence`, also saved as a CSV.
+2. **Needs review.** Products below the confidence floor, with the closest category you found and why you did not apply it.
+3. **Applied changes.** After approval only: how many products were updated, and any errors.
+
+Then give a next step: spot-check five updated products in the Shopify admin, and re-run the AI shopping readiness checker to see whether the category score improved.
+
 ## Purpose
 AI shopping agents resolve a query ("running shoes", "office chair", "sustainable sneakers") to a taxonomy node, then retrieve products in that node. Products with no Standard Product Taxonomy category are invisible to that mapping — they only surface on exact keyword luck. This skill finds uncategorized (or mis-categorized) products and assigns the correct Shopify standard taxonomy category, inferred from title/type/tags and confirmed against the live taxonomy tree. Fixes `category-taxonomy-api` and lifts `catalog-intent-alignment`.
 
@@ -29,7 +65,7 @@ All skills accept these universal parameters:
 |-----------|--------|----------|---------|-------------|
 | store     | string | yes      | —       | Store domain (e.g., mystore.myshopify.com) |
 | format    | string | no       | human   | Output format: `human` (default) or `json` |
-| dry_run   | bool   | no       | false   | Preview mutations without executing |
+| dry_run   | bool   | no       | true    | Preview mutations without executing. Set to false only after the person approves the proposed list |
 
 Skill-specific parameters:
 
@@ -42,7 +78,7 @@ Skill-specific parameters:
 
 ## Safety
 
-> ⚠️ Step 4 (`productUpdate`) sets the `category` on live products, which affects storefront facets, marketplaces, and tax. A wrong category mis-files a product everywhere. Run `dry_run: true`, review the proposed `product → category` mapping, and only auto-assign matches above `confidence_floor`; queue the rest for human review.
+> ⚠️ Step 4 (`productUpdate`) sets the `category` on live products, which affects storefront facets, marketplaces, and tax. A wrong category mis-files a product everywhere. Run `dry_run: true`, review the proposed `product → category` mapping, and only assign matches above `confidence_floor` that the person has approved; queue the rest for human review.
 
 ## Workflow Steps
 
@@ -56,7 +92,9 @@ Skill-specific parameters:
 
 3. **COMPUTE (no API):** score each product against candidate nodes; pick the best ≥ `confidence_floor`. Emit the proposed mapping.
 
-4. **OPERATION:** `productUpdate` — mutation
+3b. **APPROVAL (no API):** show the proposed mapping and the needs-review list. Stop and wait for the person to approve before any write.
+
+4. **OPERATION:** `productUpdate` — mutation (approved rows only)
    **Inputs:** `{ id, category: <taxonomyCategoryId> }` per confident match.
    **Expected output:** Updated product category; collect `userErrors`.
 

@@ -1,6 +1,6 @@
 new_slug: sales-call-plan
 name: Plan a sales conversation from first line to close
-summary: Give it your product and buyer. Get the lead argument, a ten-second opener, answers to doubts and a close.
+summary: Plan a sales conversation before you walk in. Give it your product and buyer. Get a lead argument, an opener, answers to doubts and a close.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It plans a live conversation and has to stay honest about proof. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell face to face or on calls and want the conversation planned before you walk in.
   - Buyers listen at the start and then say "I'll think about it", and you want closing questions that move them on.
   - You keep hearing the same doubts and want an answer ready for each, with proof.
+not_for:
+  - You sell online only, with no live talk. Write a page or email instead, or ask a person to review your sales page.
+  - You need a full pitch deck or a written proposal. Use a document tool or write it yourself, then use this for the talk.
+  - You have no product facts or offer yet. Write down your price, terms and options first, then come back.
 you_give:
   - Your product or service facts, and your offer, price and options
   - The buyer types you meet (optional)
@@ -23,7 +27,7 @@ you_give:
   - Where buyers stall and your current closing lines (optional)
 you_get:
   - Every true argument you have, a lead argument and backup for each buyer type, and a first question for each
-  - A ten-word opener with two spares and a short plan to test them
+  - A ten-second opener of about ten words, with two spares and a short plan to test them
   - An answer sheet for every doubt, with a yes-question, an honest agreement and proof, and a list of doubts with no proof yet
   - Closing questions that offer two ways to say yes, the order to ask them in and the buying signals to listen for
 how_to_use:
@@ -32,13 +36,34 @@ how_to_use:
   - Describe your product, your offer and the buyers you meet. It plans the lead arguments and the opener.
   - Give it your real doubts, in the buyers' words if you can. It writes the answer sheet and the close.
   - Try the openers on real buyers and keep the one that gets you in.
+output_sample:
+  input:
+    - Your product or service facts, and your offer, price and options
+    - The buyer types you meet (optional)
+    - The doubts buyers raise, or reviews and messages to find them in (optional)
+    - Proof you have, such as results and testimonials (optional)
+  prerequisites:
+    - An AI that can read files (the steps are saved as files)
+    - Your brand brain from the Website brand brain builder (optional)
+    - Your offer from the Hidden offer finder (optional)
+  output:
+    - name: "Step 1: lead arguments"
+      contains: Every true argument, a lead and backup for each buyer type, and a first question to ask each.
+    - name: "Step 2: opener"
+      contains: A ten-second opener of about ten words, two spare openers and a short plan to test them.
+    - name: "Step 3: answers to doubts"
+      contains: Each doubt as a yes-question, with an honest agreement, proof, and doubts that still have no proof.
+    - name: "Step 4: close"
+      contains: Closing questions with two ways to say yes, the order to ask them, and buying signals.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Match argument to buyer
     text: Lists every true argument you have and picks which one leads for each kind of buyer, with a first question to ask.
   - title: Write the opener
-    text: Takes the lead arguments from the step before and writes a ten-word opener as a short honest question, with two spares.
+    text: Takes the angle library from step 1 and writes a ten-word opener as a short honest question, with two spares.
   - title: Answer the doubts
-    text: Takes the lead arguments and lists each doubt. It agrees where the buyer is right, restates it as a yes-question and brings proof.
+    text: Takes the angle library from step 1 and your own doubts and lists each one. It agrees where the buyer is right, restates it as a yes-question and brings proof.
   - title: Plan the close
     text: Takes your offer and the answers to doubts and turns each yes or no ask into a which or when question, with signals to listen for.
 output_shape: |-

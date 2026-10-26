@@ -1,6 +1,6 @@
 new_slug: review-lists-sorter
 name: "Review lists sorter"
-summary: "Paste everyone's do-again and never-again lists. Get themes, who raised them and what your numbers show."
+summary: "Sort a team's do-again and never-again lists into themes, with who raised each and what your numbers show. Built for a project review."
 job: lead-people
 thinking: medium
 thinking_why: "It groups and counts by clear rules, but it has to judge which themes matter and challenge weak conclusions."
@@ -17,6 +17,10 @@ when:
   - You collected lists after a project and need to see what they add up to.
   - You are about to run a review and want the main themes ready.
   - You suspect the team is reading the result into every comment.
+not_for:
+  - "You want to plan what to ask before the lists exist: use the Project review prep planner."
+  - "You want the meeting agenda once you have themes: use the Blame-free review agenda writer."
+  - "You have one person's notes, or no written lists: hold a one-to-one chat instead."
 
 you_give:
   - Each person's do-again and never-again lists
@@ -34,6 +38,31 @@ how_to_use:
   - Paste the lists as they were written. Add the numbers and what each one means.
   - Read the contested themes first. Bring the top five to the review.
   - Take the result to "Blame-free review agenda writer".
+output_sample:
+  input:
+    - Each person's do-again and never-again lists
+    - Your project numbers, with what each one means (optional)
+    - Your review prep plan (optional)
+    - How the project ended, in one line (optional)
+  output:
+    - name: Who answered
+      contains: How many people were asked, how many sent lists, and which roles stayed silent.
+    - name: Themes
+      contains: Five to eight themes in the team's words, with counts of people on each list.
+    - name: Contested
+      contains: Themes on both lists, with the two views side by side and no winner.
+    - name: Themes and numbers
+      contains: Each theme beside a figure, written as a question for the room.
+    - name: First conclusions to challenge
+      contains: Quick verdicts on the result, with questions about what in the process supports them.
+    - name: What cannot be seen
+      contains: Three gaps the lists and numbers cannot show, with MISSING lines where a fact would help.
+    - name: Old hurts, in neutral words
+      contains: Personal frustrations rewritten without names, kept apart from the themes.
+    - name: Top five for the room
+      contains: The five top themes, each with two questions to ask in the review.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: Makes one sheet

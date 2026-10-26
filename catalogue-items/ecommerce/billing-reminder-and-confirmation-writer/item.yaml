@@ -10,6 +10,7 @@ inputs:
   - {type: product_data, required: true}
   - {type: brand_brain, required: false}
   - {type: email_flow, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: email_flow}
 uses: []

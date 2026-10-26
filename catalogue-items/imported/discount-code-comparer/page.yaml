@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares codes and judges what the gap means.
 new_slug: discount-code-comparer
 name: Discount code comparer
-summary: Name two or more discount codes. Get redemption and revenue side by
-  side, so you know which one earned more.
+summary: Compare two or more Shopify discount codes side by side. See uses and revenue per code, so you know which discount code earned more.
 job: run-your-store
 headline: Discount code comparer
-subhead: A side-by-side look at two or more Shopify discount codes, showing how
-  often each was used and how much revenue each brought in. You find out which
-  offer really earned its place.
+subhead: A side-by-side look at two or more Shopify discount codes, showing how often each was used and how much revenue each brought in. You find out which offer really earned its place.
 explain: |
   A side-by-side look at two or more Shopify discount codes, showing how often each was used and how much revenue each brought in. You find out which offer really earned its place.
 
@@ -18,6 +15,10 @@ when:
   - You are choosing which promotion to repeat next month.
   - A partner code needs to be compared with your own.
   - You want numbers to settle an argument about a discount.
+not_for:
+  - "You want to know which code made more profit: this shows order totals only, so check your product costs and margins in a spreadsheet."
+  - "You have only one code to check: use your Shopify admin discount report, since this needs at least two codes."
+  - "You want to create or change a discount: do it in your Shopify admin, because this only reads data."
 you_give:
   - Your Shopify store domain
   - Two or more discount codes
@@ -30,8 +31,30 @@ you_get:
   - A side-by-side comparison
   - A note on which code performed best
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Check that the Shopify CLI is installed and signed in to your store. It needs permission to read discounts and orders.
+  - Open your AI tool. It must be able to run commands on your computer, such as Claude Code. A plain chat window cannot do this.
+  - Paste the skill, then give your store domain, two or more codes, and a start and end date.
+  - Say if you want a table or JSON. A table is the default.
+  - Read the table. Revenue per use is the fairest way to compare codes that were used a different number of times.
+  - Check profit separately before you pick a winner, because the revenue shown is order totals, not profit.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - Two or more discount codes to compare
+    - A start date and an end date
+    - "Output format: table or JSON (optional)"
+  prerequisites:
+    - An AI that can run the Shopify CLI on your computer
+    - A Shopify CLI session signed in to your store
+    - Permission to read discounts and orders
+  output:
+    - name: Session start banner
+      contains: The skill name, your store domain and the time the run began.
+    - name: Step log
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Comparison table
+      contains: One row per code with lifetime uses, orders in range, total revenue, average order value and revenue per use.
+    - name: JSON results (if you ask for JSON)
+      contains: The same numbers as the table, with one object for each code.
+    - name: Outcome summary
+      contains: How many codes were checked, the date range and the error count.

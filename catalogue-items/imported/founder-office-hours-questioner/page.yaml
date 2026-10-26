@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks set questions and reacts to each answer.
 new_slug: founder-office-hours-questioner
 name: Founder office hours questioner
-summary: Share a fuzzy idea. Answer six sharp questions on customer, reach and
-  defence before you get advice.
+summary: Test your business idea with six hard founder questions on customer, reach and defence. Answer in writing and get a clear green, yellow or red verdict.
 job: test-an-idea
 headline: Founder office hours questioner
-subhead: Six hard questions you must answer in writing before any advice is
-  given. They test whether your idea has a real problem, a named buyer and a way
-  to reach them.
+subhead: Six hard questions you must answer in writing before any advice is given. They test whether your idea has a real problem, a named buyer and a way to reach them.
 explain: |
   Six hard questions you must answer in writing before any advice is given. They test whether your idea has a real problem, a named buyer and a way to reach them.
 
@@ -18,6 +15,10 @@ when:
   - You are about to raise money or start a major project.
   - You are considering a pivot and want clarity first.
   - The answer seems obvious and you want to check it is not wrong.
+not_for:
+  - "You already made the decision and just need to plan the work: write a simple task list or ask a colleague to review it."
+  - "You have a clear fix for an everyday problem, like a slow invoice process: fix it directly, no idea test needed."
+  - "You want a full strategy brief or advice from several roles: this only asks questions and scores your answers, so ask a business adviser."
 you_give:
   - The idea or decision in a few lines
   - Written answers to six questions
@@ -29,7 +30,32 @@ you_get:
   - Gaps you must close
   - Short verdict once all six are done
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Type your idea or decision in a few lines, in plain words.
+  - Answer all six questions in writing, one at a time. Use real customer words and a real name.
+  - If an answer is vague, like "we will do marketing later", expect pushback. Rewrite it with a real channel.
+  - Read the verdict. Green means move on. Yellow means fix the weak answer. Red means rethink the idea.
+  - This needs no code, files or paid tools. The /cs:brief and /cs:boardroom commands only exist in the source Claude Code setup, so skip them in a normal chat.
+output_sample:
+  input:
+    - Your idea or decision, in a few lines
+    - Your written answers to the six questions
+    - Customer quotes or notes (optional)
+    - Cost and payback estimates (optional)
+  prerequisites:
+    - "An AI chat where you can paste the skill text. The /cs: commands only work in the source Claude Code setup, so type the topic in plain words instead."
+  output:
+    - name: Problem
+      contains: Your answer on whose problem this is, in their own words, kept word for word.
+    - name: Customer
+      contains: Your answer naming one real person, company and role who would buy today.
+    - name: Distribution
+      contains: Your answer on how a customer first hears your name.
+    - name: Defensibility
+      contains: Your answer on what stops a competitor copying you in six months.
+    - name: Capital
+      contains: Your answer on cost, payback time and the other use for the money.
+    - name: Founder Fit
+      contains: Your answer on why you are the right person and why it matters to you.
+    - name: Assessment
+      contains: "One verdict: green to go ahead, yellow to sharpen one answer, or red to drop or redefine the idea."

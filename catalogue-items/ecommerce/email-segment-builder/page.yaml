@@ -1,6 +1,6 @@
 new_slug: email-segment-builder
 name: Email audience segment and exclusion planner
-summary: Define store email audiences with explicit AND/OR rules. Get engaged, buyer and exclusion groups, send order and a reviewed cleanup plan.
+summary: "Build an email segment plan for your store: engaged, buyer and exclusion groups with exact AND/OR rules, a send order and a list cleanup plan."
 job: write-emails
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You send campaigns to your whole list and your open rate is falling.
   - You want to know who counts as engaged and who to stop sending to.
   - You want VIP, first-time buyer and high-intent groups without cutting your list into tiny pieces.
+not_for:
+  - "You run a B2B list: use your sales team's own contact rules, since this plan is built around store orders and shopper activity."
+  - "Your store cannot pull lifetime order history: use a plain engaged-or-not split first, because buyer and quietness rules need that history."
+  - "You want the plan carried out for you: ask a person with access to your email tool, since this only writes a proposal and sends nothing."
 you_give:
   - Your email tool and how many people are on your list
   - How many campaigns you send a month
@@ -31,6 +35,34 @@ how_to_use:
   - Review the engaged group and exclusion groups first. Send only to eligible recipients, and exclude every suppression group.
   - Add buyer and high-intent groups once the engaged group works.
   - Clone a segment instead of rebuilding it when you need another window.
+output_sample:
+  input:
+    - Your email tool and how many people are on your list
+    - How many campaigns you send a month
+    - Your region, US or EU
+    - Your average order value and your VIP rule
+    - Your current open and click rates (optional)
+  prerequisites:
+    - Lifetime order history from your store, to build buyer groups and protect known buyers
+  output:
+    - name: SEGMENTS
+      contains: A header with your store, email tool, list size and region.
+    - name: SEND ELIGIBLE
+      contains: Each send group with its activity rule, current marketing permission and delivery checks, marked AND or OR.
+    - name: EXCLUSION/AUDIT
+      contains: Complaints, opt-outs, delivery blocks and quiet contacts to review. You never send to these groups.
+    - name: QUIETNESS CANDIDATES
+      contains: Quiet non-buyers to review for removal, with the history, activity and send-count checks.
+    - name: KNOWN BUYERS
+      contains: A note that buyers are not removed only for being quiet, though complaints and blocks still apply.
+    - name: SPECIALTY
+      contains: Rules for first-time buyers, returning buyers, non-buyers, VIPs and high-potential visitors.
+    - name: SEND ORDER
+      contains: Which eligible group gets which campaign, how often, and what each send leaves out.
+    - name: CLEANUP REVIEW
+      contains: The cleanup policy, gaps in your history and the approval needed before any change.
+    - name: CHECKS MISSED and MISSING
+      contains: Any checks that failed and any facts you did not give.
 how_it_works:
   - title: Separates sends from audits
     text: Send groups include permission and delivery eligibility. Exclusion and cleanup audits may include ineligible profiles. A purchase does not establish consent.

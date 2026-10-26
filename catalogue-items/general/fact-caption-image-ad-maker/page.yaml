@@ -1,6 +1,6 @@
 new_slug: fact-caption-image-ad-maker
 name: "Fact caption image ad maker"
-summary: "Paste your story ad and sourced fact. Get the caption, source line and image prompt."
+summary: "Turn one sourced fact from your story ad into a fact caption image ad: a checked caption, a source line and a phone photo prompt."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your story's turn rests on one fact you can source.
   - Your buyers doubt the kind of product, and a tested result answers that doubt.
   - You want a picture with words that people read and believe.
+not_for:
+  - "You have no source for the fact: first find the source, or use the Problem moment image ad maker."
+  - "Your story warns people off a kind of product: use the Dont buy warning image ad maker."
+  - "You want a finished picture with exact text and no editing: use the Multi-provider image maker, then add the strip in Canva."
 
 you_give:
   - Your approved story ad, with the fact its turn rests on
@@ -35,6 +39,33 @@ how_to_use:
   - Make the photo from the prompt, then add the strip in your phone editor or a design tool.
   - Check the number in the finished picture digit by digit against the source.
   - Have a person check the fact before the ad runs, and make sure the page shows the full source.
+output_sample:
+  input:
+    - Your approved story ad
+    - The one fact the story turns on, as its source states it
+    - Who measured it, how, and the year
+    - The scene the fact belongs over (optional)
+  prerequisites:
+    - A chat AI. It can make the picture only if it has an image tool, otherwise you make the photo from the prompt.
+  output:
+    - name: The fact and its source
+      contains: The fact as the source states it, with who measured it, how and the year.
+    - name: Source check
+      contains: A pass or fail on the number, the wording, what was measured and the year.
+    - name: Scene and where and when
+      contains: One sentence on what a scroller would see, plus place, time, light and camera spot.
+    - name: Words on the image
+      contains: The caption and the source line, exactly as they will appear.
+    - name: The strip and blank version
+      contains: Where the strip sits, its colour, opacity and typeface, and the photo with no strip.
+    - name: Line under the image
+      contains: The bold line under the picture, about 27 characters, never the product name.
+    - name: Flags
+      contains: A reminder that a person checks the fact against its source before the ad runs.
+    - name: Image prompt
+      contains: A 60 to 120 word brief for the photo.
+    - name: Checks missed
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: Sets the house rules

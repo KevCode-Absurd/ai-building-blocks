@@ -1,53 +1,111 @@
 new_slug: deal-ticking-fee-checker
 name: Deal ticking fee checker
 headline: Deal ticking fee checker
-summary: Check additional consideration from confirmed eligible delay days and a signed daily amount.
+summary: Check a deal ticking fee. Get the extra price that builds up from each eligible day of delay, and the new total once it is added.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Accrued ticking amount and revised consideration. Share base consideration, fixed daily ticking amount, counsel-confirmed eligible day count and actual accrual start/stop rules.
+subhead: Give it the agreed price, the fixed amount charged per day of delay, and the number of eligible days your lawyer has confirmed. It multiplies the two and adds the result to the price. You get the ticking fee and the new total, with the day count traced to the contract.
 explain: |-
-  Accrued ticking amount and revised consideration.
+  When a deal takes longer to close than planned, some contracts add a ticking fee. The buyer pays a set extra amount for each day of delay past an agreed date. The word "ticking" is because the fee builds up like a clock. The sum is simple. The hard part is the day count, because the contract decides which days count.
 
-  Acquisition timing. Illustrative figures only. 0.1 for30 eligible days adds3 to100;60 eligible days add6.
+  This deal ticking fee checker does the sum and keeps the day count honest. It uses only the eligible days you give it, confirmed from the contract, and never a plain count of days between two dates. It multiplies those days by the daily amount, adds the result to the base price, and checks that the fee was not already included in the price or paid in advance.
+
+  It does not decide whether a delay triggers the fee or whether a payment is owed. That is for your lawyer. It also does not compound the fee. If the daily amount changes partway through, each rate is worked out as its own line.
 when:
-  - You need accrued ticking amount and revised consideration.
-  - You work on acquisition timing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A deal has slipped past the date in the contract and you need the extra amount the buyer now owes.
+  - Your lawyer has confirmed the eligible days and you want the sum checked and written down.
+  - You are updating the closing price in a model and need the fee traced to the contract.
+  - The seller and buyer disagree on the new total and you need each step of the sum shown.
+not_for:
+  - You want to know whether the delay triggers a fee or whether a breach happened. Take that to your lawyer.
+  - The fee compounds or steps up automatically. This handles one fixed daily amount per line, so run each rate as its own line.
+  - You want to see how much cash is needed at closing. Use the Deal funding gap checker.
+  - The payment depends on a metric, not on days. Use the Earnout payout checker.
 you_give:
-  - Base consideration, fixed daily ticking amount, counsel-confirmed eligible day count and actual accrual start/stop rules.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The base consideration, which is the agreed price (from the signed agreement)
+  - The fixed ticking amount per eligible day (from the agreement)
+  - The number of eligible days, as confirmed by your lawyer (from their note)
+  - The rules for when the fee starts and stops (from the agreement)
+  - The currency and the units, such as USD in millions
+  - Your own deal spreadsheet (optional)
 you_get:
-  - Accrued ticking amount and revised consideration.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The accrued ticking fee, shown as eligible days times the daily amount
+  - The revised consideration, which is the base price plus the fee
+  - A check that the fee was not already in the price or prepaid
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the base price, the daily amount and the eligible day count. Say where each came from, and give the currency and units.
+  - Paste the clause that says when the fee starts and stops, or attach the page. If you do not have the day count from your lawyer, the result is marked MISSING.
+  - "Check one line yourself: the fee is eligible days times the daily amount. For 0.1 a day over 30 days that is 3."
+  - Read MISSING and CHECKS MISSED before you use any figure. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Identify contractual trigger, calendar or business-day basis, exceptions and stop events; obtain the supported eligible count
-    text: Identify contractual trigger, calendar or business-day basis, exceptions and stop events; obtain the supported eligible count.
-  - title: 2. Multiply only eligible days by the signed daily amount; isolate any tier changes separately
-    text: Multiply only eligible days by the signed daily amount; isolate any tier changes separately.
-  - title: 3. Add accrued ticking amount to base and check it was not already included or prepaid
-    text: Add accrued ticking amount to base and check it was not already included or prepaid.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units, and keeps the contract terms apart from your assumptions.
+  - title: Reads the day count
+    text: Takes the eligible days you give it, with the start, stop and exclusion rules. It does not count days between two dates itself.
+  - title: Works out the fee
+    text: Multiplies the eligible days by the fixed daily amount. A rate that changes is worked out as a separate line.
+  - title: Adds it to the price
+    text: Adds the fee to the base consideration to give the revised consideration.
+  - title: Checks for double counting
+    text: Asks whether the fee is already inside the price or was paid earlier, and notes the answer.
+  - title: Marks the gaps
+    text: Writes MISSING for any fact it was not given and lists checks it could not run. It never fills a gap with zero.
 output_shape: |-
-  Accrued ticking amount and revised consideration.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Eligible days <days> | Ticking fee <amount> | Revised consideration <amount>
+
+  SCOPE AND SOURCES
+  <currency, units; source and date for each input; the clause that sets the start, stop and exclusions>
+
+  INPUTS AND ASSUMPTIONS
+  <base consideration, daily amount, eligible days>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <each sum with its figures; revised consideration ties to base plus fee; note on prepaid or included amounts>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The agreed base price
+    - The fixed ticking amount per eligible day
+    - The eligible day count your lawyer confirmed
+    - The clause that sets when the fee starts and stops
+  prerequisites:
+    - The signed agreement, or the page that sets the daily amount
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Eligible days, the ticking fee and the revised consideration.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, with the source and date of each input and the clause behind the day count.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each figure you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum shown, the tie from base price to revised price, and the check for amounts already paid.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Approved eligible count is not a generic calendar date difference.
+    how: Use the same currency and units for the price and the daily amount. Say them once at the start.
+  - what: Business days
+    how: Say whether the contract counts calendar days or business days, so the day count is read the right way.
+  - what: Changing rates
+    how: If the daily amount rises after a set date, give each rate and its own day count, and ask for one line per rate.
 judge:
   - Approved eligible count is not a generic calendar date difference.
   - Daily amount and base consideration use identical currency scale.
@@ -62,15 +120,24 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the agreement that sets the daily amount and the start and stop rules
+    - Your lawyer's note on the eligible days
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Ticking fee
+    meaning: An extra amount a buyer pays for each day a deal closes late, as set by the contract.
+  - term: Consideration
+    meaning: The price paid in the deal.
+  - term: Eligible days
+    meaning: The days that count toward the fee under the contract, after any exclusions.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+  - term: Illustrative figures
+    meaning: Practice numbers that show how the sums work. They are not a real deal.

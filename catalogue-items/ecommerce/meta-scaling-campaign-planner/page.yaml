@@ -1,6 +1,6 @@
 new_slug: meta-scaling-campaign-planner
 name: "Meta scaling campaign planner"
-summary: "Give your winning ads, margins and cash. Get a break-even ROAS, spend ladder and scaling campaign plan."
+summary: "Plan how to scale winning Meta ads without losing money. Give your costs and results. You get a break-even ROAS, a spend ladder and stop rules."
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: "It is mostly arithmetic and rules, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Some ads are winning and you want to spend more without losing money.
   - Your ROAS fell as you raised spend and you can't tell if that is fine or a problem.
   - Someone says you need a scaling campaign and you want to know if it is worth it yet.
+not_for:
+  - "Your store has too few daily sales to read a result: fix your ads and your product page first, then come back."
+  - "You want a new ad written: use the Story image ad writer."
+  - "You need to plan where a fixed budget goes next: use the Next-dollar budget allocator."
 
 you_give:
   - Winning ad sets or post IDs with daily spend and ROAS or CPA
@@ -35,6 +39,27 @@ how_to_use:
   - Add blended revenue, total ad spend, daily sales and the cash you can fund ads with.
   - Run the ladder one step at a time and write down the 30-day cash after each step.
   - Come back each month with new numbers to re-run the review checklist.
+output_sample:
+  input:
+    - Your winning ad sets or post IDs, with daily spend and ROAS or cost per sale
+    - Your order value, product cost, shipping, fees and returns rate
+    - Your total store revenue and total ad spend for the same dates
+    - Your daily sales and the cash you can put into ads
+  output:
+    - name: BREAK-EVEN
+      contains: Your order value, what is left after costs, your break-even ROAS and the most you can pay to win a customer.
+    - name: SCALE OR HOLD
+      contains: A clear call, with the blended ROAS and the 30-day cash it rests on.
+    - name: SPEND LADDER
+      contains: One row per ad set with current spend, step size, days to hold and a stop rule.
+    - name: SCALING CAMPAIGN
+      contains: Whether a second scaling campaign is worth it now, with the reason, and its design if it is.
+    - name: ABO OR CBO
+      contains: Which budget setup fits your risk and order volume, and why.
+    - name: MONTHLY REVIEW
+      contains: A checklist for about 3 hours a month, to run with fresh numbers.
+    - name: CHECKS MISSED
+      contains: Only the checks that failed, or none.
 
 how_it_works:
   - title: Finds break-even ROAS

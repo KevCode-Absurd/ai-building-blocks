@@ -2,17 +2,112 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-qdrant-scaling
 name: Qdrant cluster capacity planner
-summary: Share your data size and traffic. Get a scaling plan and the evidence
-  needed before adding nodes.
+summary: "Get a Qdrant scaling plan: how much RAM or how many nodes you need, in what order to add them, and what to measure first."
 job: ship-and-host
 headline: Qdrant cluster capacity planner
-subhead: Share your data size and traffic. Get a scaling plan and the evidence
-  needed before adding nodes. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Tell it your data size and your traffic. It works out whether you need more memory on one machine, more machines, or only different settings. You get a step-by-step scaling plan and the numbers to check before you pay for more.
+explain: |
+  Qdrant is a database that stores data so apps can search by meaning. When it gets too big or too busy, the easy answer is to add more servers. That adds cost and work, and it does not always help.
+
+  This planner first asks what you are scaling for. The goal can be more data, more searches at once, faster single searches or fewer results per query. These goals pull in different directions, so it picks one before it picks a method. For data growth it tries a bigger machine before more machines. It also checks special cases, such as many customers sharing one database, or data that only matters for a few months.
+
+  You get a plan with the reasoning, a rough memory estimate if you gave your data size, and the numbers that show the plan worked.
+when:
+  - Your data no longer fits on one Qdrant machine.
+  - You need more searches per second and one machine is at its limit.
+  - A few slow searches hurt your users even though the average looks fine.
+  - You serve many customers from one Qdrant setup and it is getting slow.
+not_for:
+  - "You only want to speed up search on the machine you have: use the Qdrant search speed tuner first, because settings are cheaper than servers."
+  - "You are not sure what is wrong yet: use the Qdrant health monitoring planner to find out."
+  - "You need to move to a new embedding model: use the Qdrant embedding migration planner."
+you_give:
+  - What you need to scale, such as more data, more searches per second or faster searches
+  - How many records you store and how big each one is
+  - Your traffic, such as searches per second, and your speed target
+  - Your current machines, such as RAM, CPU and where Qdrant runs
+  - How many customers or tenants share the data (optional)
+you_get:
+  - The bottleneck, named, with the numbers that show it
+  - A scaling order, such as a bigger machine first and more machines later
+  - A rough memory estimate from your data size, marked as an estimate
+  - Node and copy counts to start with, if more machines are needed
+  - The first test to run and what result to look for
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder so your AI can open the linked files for data volume, throughput and latency. Or paste the main file plus the one you need.
+  - Say what you are scaling for. Add your record count, vector size, searches per second and current machine size. Pick one goal if you can.
+  - Read the bottleneck first and check it against your own graphs. Ask for a different plan if it does not match what you see.
+  - Treat the memory estimate as a starting point. Run the load test it suggests before you buy anything or scale down.
+  - If you run Qdrant Cloud, resizing is done in the Cloud console. Self-hosted means resizing the machine or container yourself.
+  - If your AI can open web links, it can read the linked Qdrant docs. If not, it says so and uses the skill file only.
+how_it_works:
+  - title: Name the goal
+    text: It asks whether you are scaling for data volume, searches per second, single-search speed or results per query.
+  - title: Find the limit
+    text: It looks at memory, CPU and disk use to find which one is the bottleneck.
+  - title: Choose the method
+    text: For data, it tries a bigger machine and smaller data formats first, then more machines.
+  - title: Check special cases
+    text: It checks for many customers sharing data, or data that only matters for a recent time window.
+  - title: Size the plan
+    text: It gives a memory estimate from your data size, and a starting node and copy count for a cluster.
+  - title: Set the proof
+    text: It lists the numbers to measure, and warns against changes that cause long slowdowns, such as shrinking memory untested.
+output_shape: |
+  SCALING GOAL: <data, searches per second, latency or results per query>
+  YOUR NUMBERS: <records, vector size, traffic, machines or MISSING>
+
+  BOTTLENECK: <what is limiting you> : <number that shows it>
+
+  PLAN, IN ORDER
+  1. <step> : <why now>
+
+  ESTIMATE
+  - Memory: <rough figure, labelled estimate> or MISSING
+
+  IF MORE MACHINES
+  - Nodes: <count> | Copies of each shard: <count> | Shards: <count>
+
+  FIRST TEST: <what to run> : <result to look for>
+  AVOID: <changes that backfire for your goal>
+output_sample:
+  input:
+    - What you need to scale for
+    - Your record count and vector size
+    - Your traffic and speed target
+    - Your current machine size
+  prerequisites:
+    - Access to your Qdrant setup and graphs, or someone who has it
+    - An AI that can open web links (optional, for the Qdrant docs)
+  output:
+    - name: Bottleneck
+      contains: What is limiting you now, with the number that shows it.
+    - name: Scaling plan
+      contains: The steps in order, bigger machine first and more machines later, with why.
+    - name: Memory estimate
+      contains: A rough RAM figure from your data size, labelled as an estimate.
+    - name: Cluster starting point
+      contains: Node, shard and copy counts if one machine is not enough.
+    - name: First test
+      contains: What to run before you buy, and the result to look for.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with web access
+      why: They can open the linked Qdrant docs for sizing rules.
+    - name: Grafana or Prometheus
+      why: They show the memory, CPU and disk numbers that name the bottleneck.
+  inputs:
+    - Memory, CPU and disk graphs from the last week
+    - Your busiest hour of traffic
+    - How fast your data grows each month
+terms:
+  - term: Qdrant
+    meaning: A database that stores data so apps can search by meaning.
+  - term: Vertical scaling
+    meaning: Giving one machine more RAM, CPU or disk.
+  - term: Horizontal scaling
+    meaning: Adding more machines and splitting the data across them.
+  - term: Shard
+    meaning: One piece of your data. Shards are spread across machines.
+  - term: Tenant
+    meaning: One customer whose data shares a database with others.

@@ -1,6 +1,6 @@
 slug: ai-fit-problem-checker
 name: "AI-fit problem checker"
-summary: "Describe a problem. Get a three-test verdict on whether AI suits it, and the data you would need."
+summary: "Check if AI fits your problem. Get a verdict from three tests, plus a data plan, an outside test and a first small proof."
 category: general
 type: skill
 role: check
@@ -10,8 +10,10 @@ inputs:
   - {type: question, required: true}
 outputs:
   - {type: audit_report, required: true}
+  - {type: plan, required: false}
 origin: rebuilt
 version: 1.0.0
 minds: [demis-hassabis]
 credits:
   - {title: "Accelerating Scientific Discovery with AI (Cambridge talk, March 2025)", by: "Demis Hassabis", used: "The three tests of a huge search space, learnable structure and a clear score, plus the role of data, simulators and outside benchmarks"}
+next: [one-change-experiment-planner, mvp-experiment-planner]

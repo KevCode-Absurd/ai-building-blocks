@@ -1,40 +1,143 @@
 new_slug: agent-delegation-builder
-name: Agent delegation and dependency planner
-summary: Plan which agent owns each task, what it may do and which inputs it must wait for. Get handoff and failure rules.
+name: "Agent delegation and dependency planner"
+summary: "Plan which AI agent owns each task, who may hand work to whom and what must finish first. Get a delegation plan and failure test cases."
 job: build-software
-headline: Agent delegation and dependency planner
-subhead: Plan which agent owns each task, what it may do and which inputs it must wait for. Get handoff and failure rules.
-explain: |-
-  Share agent registry, authority rules, issue tree and blocked dependencies. Get a scoped delegation plan with authority and dependency checks.
+headline: "Agent delegation and dependency planner"
+subhead: "Share your list of agents, who may hand work to whom, the task tree and what each task waits for. This skill plans each handoff: who owns it, what that agent may do and what must finish before it wakes. You get a delegation plan, a failure checklist and test cases."
+explain: |
+  When AI agents hand work to each other, things go wrong quietly. An agent passes work to one it has no right to ask. Tasks nest deeper and deeper. A task wakes up before the work it needs has finished.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This agent delegation planner goes through each handoff in order. It confirms whose work this is, picks the specialist for the topic, and checks that the sender may hand work to that agent and that the chain is not too deep. It records what the new task waits for before anything wakes, sends risky or human-only work to a person, then creates one child task and logs it. Blocked work is never woken.
+
+  The pack includes a TypeScript starter and a SQL table for an audit log. They are starting points, not a finished service. In the starter, the code that records blockers and writes the log is only a placeholder, and a refused handoff is never logged. The plan points out gaps like these and says what to add.
+
 when:
-  - You need a scoped delegation plan with authority and dependency checks.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - "You run several AI agents and need to decide who may hand work to whom."
+  - "One agent's result feeds another agent, and the second must not start too early."
+  - "Work is being handed down chain after chain, and you want a limit on depth."
+  - "You want a record of every handoff, including refused ones, to see which agents pass work to which."
+
+not_for:
+  - "You want to plan the whole agent team and how a big task is split. Use the Multi-agent workflow planner or the Multi-agent system planner."
+  - "You want the rules for how an agent claims a task so two agents do not do it twice. Use the Agent task ownership workflow builder."
+  - "You want agents to alert each other and recover lost claims. Use the Agent wakeup and claim recovery builder."
+  - "You want it to create tasks or wake agents in a live system. This skill plans only. You review it and run any change yourself."
+
 you_give:
-  - Agent registry, authority rules, issue tree and blocked dependencies
+  - "Your agents: each name and the topic it is responsible for"
+  - "Who may hand work to whom, and your depth limit if you have one"
+  - "The task tree: the parent task and the child tasks you want"
+  - "What each task waits for before it may start"
+  - "Which work only a person can do, and who that person is (optional)"
+  - "Your project's code, so the starter can be adapted to it (optional)"
 you_get:
-  - A scoped delegation plan with authority and dependency checks
-  - A failure checklist and synthetic test cases
+  - "A delegation plan: for each handoff, who gets it, why, what they may do and what it waits for"
+  - "An authority and depth check, listing any handoff that would be refused"
+  - "What is logged for each handoff and each refusal"
+  - "A failure checklist"
+  - "Test cases using made-up agents and tasks"
+  - "A list of missing inputs and checks that did not run"
+
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Add the skill to your AI, or open the pack and give your AI SKILL.md and the files in its references folder. An AI that can read your project folder, such as Claude Code, works best. A chat AI works if you paste them."
+  - "Paste your agent list, who may hand work to whom and the task tree. Say which tasks wait for which."
+  - "Add your code only if you want the starter adapted to it. Never paste keys or passwords."
+  - "Read the refused handoffs and the failure checklist first. Check that nothing wakes before its blockers are done."
+  - "Treat the test cases as a checklist to run yourself in a test copy. The skill does not run them."
+
 how_it_works:
-  - title: Step 1
-    text: Confirm client scope.
-  - title: Step 2
-    text: Select the specialist by domain.
-  - title: Step 3
-    text: Check delegation authority and parent depth.
-  - title: Step 4
-    text: Record blocked dependencies before wakeup.
-  - title: Step 5
-    text: Route risky work through its approval policy.
-  - title: Step 6
-    text: Create one child issue, then record its wakeup and audit entry.
-  - title: Step 7
-    text: Never wake blocked work.
-thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+  - title: "Confirms scope"
+    text: "States whose work the handoff belongs to, such as which client or project, and what is out of scope."
+  - title: "Picks the specialist"
+    text: "Matches each task to the agent whose topic it is. If two fit, it says so and asks."
+  - title: "Checks authority and depth"
+    text: "Checks the sender may hand work to that agent, and that the chain stays under the depth limit. The starter's default limit is 3."
+  - title: "Records what blocks it"
+    text: "Lists what each new task waits for, and records that before any wakeup is sent."
+  - title: "Routes risky work"
+    text: "Sends risky work, and work only a person can do, through approval. In the starter, human work becomes a task for the coordinator, who passes it on."
+  - title: "Creates one child task"
+    text: "Creates a single child task for the receiving agent, then records its wakeup and its audit entry."
+  - title: "Never wakes blocked work"
+    text: "A task with open blockers stays asleep until every blocker is done."
+
+output_shape: |
+  DELEGATION PLAN FOR <client or project>
+  SCOPE: <whose work this is, what is out of scope>
+
+  AGENTS
+  <agent> | topic: <...> | may hand work to: <...> | may not: <...>
+
+  HANDOFFS
+  <task> | from: <agent> | to: <agent> | why this agent: <...> | depth: <n of limit> | result: <allowed | refused, why>
+
+  BLOCKED WORK
+  <task> | waits for: <tasks> | wakes when: <rule>
+
+  WORK FOR A PERSON
+  <task> | why an agent cannot do it | goes to: <who>
+
+  WHAT IS LOGGED
+  <event> | recorded: <fields>
+
+  FAILURE CHECKLIST
+  <failure> | what should happen | how to check
+
+  TEST CASES (made-up agents and tasks)
+  <case> | setup | expected result
+
+  CODE CHANGES (only if code was given)
+  <file> | change | status: <proposed | done>
+
+  MISSING
+  <inputs that would change the plan>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+
+output_sample:
+  input:
+    - "Your agents and the topic each one covers"
+    - "Who may hand work to whom, and your depth limit"
+    - "The task tree and what each task waits for"
+    - "Your project's code (optional)"
+  prerequisites:
+    - "An AI that can read your files, or the files pasted in"
+  output:
+    - name: "SCOPE and AGENTS"
+      contains: "Whose work this is, and for each agent its topic and who it may hand work to."
+    - name: "HANDOFFS"
+      contains: "Each handoff with sender, receiver, reason, depth and whether it is allowed or refused."
+    - name: "BLOCKED WORK"
+      contains: "Each waiting task, what it waits for and the rule for waking it."
+    - name: "WORK FOR A PERSON"
+      contains: "Tasks no agent may do, and who receives them."
+    - name: "WHAT IS LOGGED"
+      contains: "The events recorded for handoffs and refusals, and the fields kept."
+    - name: "FAILURE CHECKLIST"
+      contains: "Each way it can fail, what should happen and how to check it."
+    - name: "TEST CASES"
+      contains: "Made-up cases with setup and expected result, to run in a test copy."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Inputs it lacked and checks it could not run."
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "It can read your project folder and the starter files, so the plan fits the code you already have."}
+    - {name: "Any good chat AI", why: "Works if you paste your agent list and task tree. It cannot see your code, so it marks anything it has to guess."}
+  inputs:
+    - "A written list of which agent may hand work to which"
+    - "Your current task or issue table"
+    - "A few real handoffs from your system, with names changed"
+
+terms:
+  - term: "Agent"
+    meaning: "An AI worker that takes a task, does it and can pass work on."
+  - term: "Delegation"
+    meaning: "One agent handing a task to another."
+  - term: "Dependency"
+    meaning: "A task that must finish before another may start."
+  - term: "Depth"
+    meaning: "How many handoffs deep a task sits in a chain."
+  - term: "Audit log"
+    meaning: "A record of who handed what to whom, and whether it worked."

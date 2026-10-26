@@ -24,11 +24,11 @@ uses:
   - proofreader
 steps:
   - uses: source-note-summariser
-    note: Extract what the actual project record shows about decisions, outcomes and changes; retain locations and distinguish the learner interpretation.
+    note: Extract what the actual project record shows about decisions, outcomes and changes; retain locations and distinguish the learner interpretation. Hands step 2 the evidence notes, each with its location.
   - uses: written-feedback-checker
-    note: Review the supplied teacher or peer feedback and rewrite it into task, process and self-regulation prompts grounded in the rubric and real evidence.
+    note: Review the supplied teacher or peer feedback and rewrite it into task, process and self-regulation prompts grounded in the rubric and real evidence. Uses step 1's evidence notes. Hands you the revision prompts, each tied to a rubric line.
   - uses: proofreader
-    note: Check the learner own reflection draft for clarity and consistency without writing experiences the learner has not supplied.
+    note: Check the learner own reflection draft for clarity and consistency without writing experiences the learner has not supplied. Uses the student's own reflection draft, not step 2's prompts. Hands you the clean draft with a list of changes.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -2,17 +2,53 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-agent-owasp-compliance
 name: Agent OWASP risk checker
-summary: Share your agent code. Get findings against the OWASP agent risks, with
-  evidence and fixes.
+summary: Check your AI agent code against the OWASP agent security risks. Get a pass or fail for each of 10 risks, with evidence and fixes.
 job: set-up-ai
 headline: Agent OWASP risk checker
-subhead: Share your agent code. Get findings against the OWASP agent risks, with
-  evidence and fixes. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: Give it your agent code and a list of its tools. It checks the code against the 10 OWASP agent security risks. You get a pass or fail for each risk, with evidence and fixes.
+not_for:
+  - "You need a formal certification or legal audit: ask a human security reviewer, because this is a self-check."
+  - "You want to approve an agent for production on this report alone: have a security person verify every pass first."
+  - "Your agent is not code, such as a plain chat prompt with no tools: this check has little to look at, so skip it."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI tool. Use one that can read files, such as Claude or ChatGPT with file upload.
+  - Paste the skill text, then add your agent code folder or key files.
+  - Add the framework name, your tool list with what each tool may do, and any config files.
+  - Ask it to check all 10 risks and write the report.
+  - Read each pass yourself. A keyword scan can miss things or be fooled, so confirm the code does what the report says.
+  - Fix the gaps, then run the check again. Ask a human security reviewer before production.
+output_sample:
+  input:
+    - Your agent code folder
+    - The framework your agent uses
+    - A list of the tools your agent can call and what each may do
+    - Your deployment or config files (optional)
+  prerequisites:
+    - An AI that can read your code files
+    - A person to check each pass by hand, since keyword scans only give a starting point
+  output:
+    - name: Summary
+      contains: A count of how many of the 10 risks look covered.
+    - name: Risk table
+      contains: One row per risk, ASI-01 to ASI-10, with a pass or fail and a short finding.
+    - name: Evidence
+      contains: The files and code patterns that led to each pass or fail.
+    - name: Critical Gaps
+      contains: The failed risks, each with a plain fix to make.
+    - name: Recommendation
+      contains: What to build or add next to close the gaps.
+when:
+  - You are about to put an AI agent into real use and want a first security check.
+  - A security reviewer asks how your agent handles the OWASP agent risks.
+  - You want to see which controls your agent has and which it lacks.
+  - You are comparing agent frameworks on security features.
+you_give:
+  - Your agent code folder
+  - The framework your agent uses
+  - A list of the tools your agent can call and what each may do
+  - Your deployment or config files (optional)
+you_get:
+  - A count of how many of the 10 risks look covered
+  - A pass or fail for each risk with the code that shows why
+  - A short list of the biggest gaps
+  - A fix to try for each gap

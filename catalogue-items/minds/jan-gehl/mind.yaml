@@ -15,6 +15,30 @@ use_cases:
   - "Plan a small public-space trial and an honest follow-up"
   - "Improve a workplace arrival or waiting area"
   - "Choose a home that supports the daily life you want"
+not_for:
+  - "You need a safety, legal or accessibility sign-off: ask a qualified specialist, because this review is only a description of daily use."
+  - "You want the layout of a building or the look of a product: use the Charles and Ray Eames, who work from practical limits, making and clear explanation."
+  - "You want to understand how to make a form or tool easier to use: use Don Norman, who is the better fit than a review of public space."
+output_sample:
+  input:
+    - The place or route you want to improve, with a sketch or short description
+    - Who should be able to use it, and when
+    - A few things you have seen at different hours (optional)
+    - Weather, noise or access problems you already know about (optional)
+    - Who would look after any change, such as moving or repairing seats
+  output:
+    - name: People and visits
+      contains: Who the place is for, what an ordinary comfortable visit looks like, and which times matter.
+    - name: Observed journey
+      contains: The walk through arriving, moving, pausing and leaving, seen at eye level with different access needs.
+    - name: Movement and staying evidence
+      contains: Counts of people passing at a set line, a separate snapshot of who stays, and the conditions of each session.
+    - name: Strongest barrier
+      contains: The one problem to fix first, described under protection, comfort or enjoyment and tied to an activity.
+    - name: Two invitations to test
+      contains: Two small changes, such as a seat or clearer arrival, with who looks after them and what route stays clear.
+    - name: What to observe next
+      contains: How to check the trial at comparable times, and what the evidence so far cannot show.
 seats:
   - {seat: "Life between buildings", asks: "What can a person comfortably do here at eye level?"}
   - {seat: "Public-life observation", asks: "Who chooses to stay, and what makes that possible?"}

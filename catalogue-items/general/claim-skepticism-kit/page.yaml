@@ -1,6 +1,6 @@
 new_slug: claim-skepticism-kit
 name: "Claim skepticism kit"
-summary: "Paste a claim you were told. Get the questions to ask, the weak links, and what evidence would be enough."
+summary: "Check a claim you were told. Paste it and get the questions to ask, the weak links and the evidence that would be enough to believe it."
 job: think-and-decide
 thinking: high
 thinking_why: "It must weigh evidence and keep its own bias in check."
@@ -10,13 +10,17 @@ subhead: "Paste a claim you were told, with any figures that came with it. It as
 
 explain: |
   A claim that is repeated often feels true. Vendors, studies and viral numbers all come dressed in labels, case studies and profit measures that make the sums hard to see.
-  
+
   This skill states the claim exactly, asks for independent confirmation and compares at least two other explanations. It tries to knock down your favourite, names the result that would prove the claim wrong and restates the claim with no labels. It checks a company's label against how it earns money and looks for invented profit measures. It then sets how much evidence a claim this surprising needs and points each red flag at a line in the source.
 
 when:
   - "A vendor says their tool will double your results."
   - "A study or number is going around and you want to know if it holds."
   - "A founder's pitch uses a profit measure you do not recognise."
+not_for:
+  - "You can settle the claim by checking the original record yourself, such as a contract, a filing or a price list: read that record instead."
+  - "You need a legal, medical or tax ruling on the claim: ask a qualified person."
+  - "You want to plan a marketing offer, not test a claim: use the Loyalty claim checker."
 
 you_give:
   - "The claim as it was made, with its source"
@@ -34,6 +38,32 @@ how_to_use:
   - "Add the numbers or deck that came with it."
   - "Read the explanations and add any you can think of."
   - "Ask the source for the evidence the report says is missing."
+output_sample:
+  input:
+    - The claim as it was made, with its source and date
+    - Any figures, study or deck that came with it (optional)
+    - The decision the claim affects (optional)
+  output:
+    - name: CLAIM
+      contains: The claim quoted as made, who made it and what they gain if you believe it.
+    - name: CONFIRMATION
+      contains: Who else has confirmed it, marked independent, tied or none.
+    - name: OTHER EXPLANATIONS
+      contains: Two or more other explanations that fit the same facts, and what we would see if each were true.
+    - name: KNOCK-DOWN TEST
+      contains: Three reasons your favourite explanation could be wrong.
+    - name: WOULD PROVE IT WRONG
+      contains: The result that would show the claim is false, or a note that none could.
+    - name: PLAIN WORDS
+      contains: The claim restated with no labels or jargon.
+    - name: LABEL AND PROFIT CHECK
+      contains: The label compared with how the company earns money, and any invented profit measure.
+    - name: EVIDENCE BAR
+      contains: How surprising the claim is and what evidence would be enough.
+    - name: RED FLAGS
+      contains: Each red flag tied to a line or number in the source.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in the evidence, and any checks the skill could not finish.
 
 how_it_works:
   - title: "State the claim exactly"
@@ -58,34 +88,34 @@ how_it_works:
 output_shape: |
   CLAIM
   <as made> | Source | Gains if believed: <...>
-  
+
   CONFIRMATION
   <who> | independent / tied / none
-  
+
   OTHER EXPLANATIONS
   <explanation> | If true we would see <...>
-  
+
   KNOCK-DOWN TEST
   <my favourite> could be wrong because <3 reasons>
-  
+
   WOULD PROVE IT WRONG
   <result> or: no result could, so <...>
-  
+
   PLAIN WORDS
   <restated claim>
-  
+
   LABEL AND PROFIT CHECK
   <label> vs <economics> | Invented measure: <...> leaves out <...>
-  
+
   EVIDENCE BAR
   <how surprising> -> <what would be enough>
-  
+
   RED FLAGS
   <flag> -> <line or number>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: technical-interview-practice
 name: Technical interview practice
-summary: Choose a topic and pressure level. Practice interview answers, then get
-  scores and focused next steps.
+summary: Run a mock technical interview on coding or system design. Get scored on four areas and told what to practice next. Good for interview practice.
 job: find-a-job
 headline: Technical interview practice
-subhead: Share your interview topic, current level and time limit. It runs a
-  warm-up, core questions and follow-ups before giving feedback. You get scores
-  for your answers, clear gaps and a focused practice plan.
-explain: Share your interview topic, current level and time limit. It runs a
-  warm-up, core questions and follow-ups before giving feedback. You get scores
-  for your answers, clear gaps and a focused practice plan.
+subhead: Share your interview topic, current level and time limit. It runs a warm-up, core questions and follow-ups before giving feedback. You get scores for your answers, clear gaps and a focused practice plan.
+not_for:
+  - "You do not know the basics of the topic yet: learn the topic first with a tutor, a course or a teaching prompt in your AI."
+  - "You want a relaxed chat or a first look at the topic: ask your AI to explain it step by step instead."
+  - "You want to practice coding and system design in one sitting: run two separate sessions, one for each."
+explain: Share your interview topic, current level and time limit. It runs a warm-up, core questions and follow-ups before giving feedback. You get scores for your answers, clear gaps and a focused practice plan.
 you_give:
   - Your interview topic and type, such as coding or system design.
   - Your current level, time limit and areas you want to test.
@@ -27,9 +26,28 @@ how_it_works:
   - title: Step 3
     text: End the interview, score four areas and suggest practice for weak answers.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI the interview type, topic, your level, your time setting and any weak areas.
+  - Answer as you would in a real interview. Explain your thinking out loud. Your AI will not correct you until the end.
+  - Say when you are done. Your AI then gives your four scores, your gaps and what to practice next.
+  - Practice the weak spot it names, then run a new interview on the same topic.
+output_sample:
+  input:
+    - "Your interview type: coding, system design, or behavioral plus technical"
+    - Your target topic
+    - Your level and how confident you feel
+    - "Your time setting: relaxed, timed or strict"
+    - Areas you know are weak (optional)
+  output:
+    - name: Setup
+      contains: The interview type, topic, time pressure, length, number of questions and whether hints are allowed.
+    - name: Warm-up question
+      contains: One easier question to build confidence and show how you explain your thinking.
+    - name: Core questions and follow-ups
+      contains: One or two questions at your target level, each with two or three probes on edge cases and tradeoffs.
+    - name: Debrief scores
+      contains: A score from one to five for Correctness, Communication, Tradeoff Awareness and Edge Case Coverage, with evidence from your answers.
+    - name: Gaps and corrective actions
+      contains: For each score below four, the specific gap and what to do about it.
+    - name: Next step
+      contains: Your top one or two weak spots and a follow-up skill to work on them.

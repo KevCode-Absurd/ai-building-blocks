@@ -1,6 +1,6 @@
 new_slug: sku-ad-money-planner
 name: "SKU ad money planner"
-summary: "Give it sales, stock days and costs per SKU. Get each one's grade, ad target and clearance plan."
+summary: "Plan ad money by SKU. Give it stock days, costs and ad spend. Get a grade, ROAS target and clearance plan for each product."
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: "The work is sorting and sums on your product list, so a mid-level model is enough. Check the grades of two products by hand."
@@ -17,6 +17,10 @@ when:
   - You have stock that is not moving and cash is tight.
   - One product keeps eating the ad budget but another earns more per sale.
   - A bestseller is close to selling out and your ads still run at full speed.
+not_for:
+  - "You sell 1 to 3 products: skip the grading and set one ROAS target by hand from your break-even."
+  - "You want the cash view of your stock only: use the Inventory cash planner."
+  - "You want to test a flat discount before you run it: use the Discount impact checker."
 
 you_give:
   - Stock by SKU and days of stock at current sales
@@ -36,6 +40,32 @@ how_to_use:
   - Give your target ROAS and your break-even ROAS. Say how you want to set the grade cut-offs, or let it use its starting rule.
   - Read the scarce-stock list first, then the clearance plan. Check the offer is a real price.
   - Hold the weekly agenda with whoever buys stock, watches cash and runs the ads.
+output_sample:
+  input:
+    - Stock by SKU and days of stock at current sales
+    - Re-order lead time and unit cost for each SKU
+    - Price, units sold, revenue and ad spend for each SKU
+    - Your target ROAS and break-even ROAS
+    - Your own grade cut-offs (optional)
+  output:
+    - name: GRADES
+      contains: Each SKU with its stock, days of stock, lead time, grade A to D and a flag if stock runs out first.
+    - name: TARGETS
+      contains: A ROAS target for each grade, with the break-even ROAS beside it.
+    - name: PER SALE
+      contains: Price, cost, delivery, ad cost per customer and what is left per sale for each product.
+    - name: ROLES
+      contains: Each SKU as champion, hidden gem, growth driver or underperformer, with an action and its spend share against volume share.
+    - name: SCARCE STOCK
+      contains: SKUs to slow or pause, with days left set against lead time.
+    - name: CLEARANCE FUNNEL
+      contains: Page, real offer price, existing customers left out, target ROAS and stop rule for slow stock.
+    - name: CAMPAIGN SPLIT
+      contains: Ad groups split by product economics.
+    - name: WEEKLY AGENDA
+      contains: Days of stock, spend by SKU, what runs out next and clearance progress.
+    - name: Cash effect
+      contains: Cash freed against margin given up, to check with your accountant.
 
 how_it_works:
   - title: Grades the stock

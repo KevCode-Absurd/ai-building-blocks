@@ -17,11 +17,11 @@ outputs:
   - {type: page_layout_spec}
 uses: [email-topic-bank-builder, email-campaign-calendar-planner, campaign-email-writer, email-draft-reviewer, email-layout-brief-writer]
 steps:
-  - {uses: email-topic-bank-builder, note: "Builds the bank of reasons to email that are not a discount."}
-  - {uses: email-campaign-calendar-planner, note: "Places the best topics from the bank on a month calendar."}
-  - {uses: campaign-email-writer, note: "Writes the full email from the brief for that slot."}
-  - {uses: email-draft-reviewer, note: "Reviews the draft against the brand voice before anyone designs it."}
-  - {uses: email-layout-brief-writer, note: "Turns the reviewed draft into a layout brief for the designer."}
+  - {uses: email-topic-bank-builder, note: "Builds the bank of reasons to email that are not a discount. Hands the bank to the calendar."}
+  - {uses: email-campaign-calendar-planner, note: "Takes the best topics from the bank in step 1 and places them on a month calendar. Hands each slot (goal, audience, angle, date) to the writer."}
+  - {uses: campaign-email-writer, note: "Takes one slot from the step 2 calendar and your brief. Writes the full email for that slot."}
+  - {uses: email-draft-reviewer, note: "Reviews the draft from step 3 against the brand voice before anyone designs it. Hands back cuts and subject fixes to apply."}
+  - {uses: email-layout-brief-writer, note: "Takes the step 3 draft with the step 4 cuts and subject fixes applied. Turns it into a layout brief for the designer."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/plan-a-month-of-campaign-emails-that-sell-without-discounts/skeleton.yaml

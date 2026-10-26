@@ -2,40 +2,107 @@ thinking: high
 thinking_why: It weighs many settings at once and says where data is missing.
 new_slug: microsoft-ads-account-auditor
 name: Microsoft ads account auditor
-summary: Give it your Microsoft Ads exports. Get a checked audit of tracking,
-  keywords, Google imports, audiences, bids and budgets.
+summary: Audit your Microsoft Ads (Bing Ads) account from your exports. Get checked findings on UET tracking, Google imports, keywords, bids and budgets.
 job: read-ad-results
 headline: Microsoft ads account auditor
-subhead: A checked audit of your Microsoft Ads account that separates what it
-  saw from what it thinks, and never changes your account. Give it your exports
-  and it reports on tracking, imports, keywords, audiences, bids and budgets.
+subhead: "Give it your Microsoft Ads exports or screenshots, your goal and what counts as a conversion. It checks your UET tag and conversions first, then Google imports, syndication, structure, keywords, bids and budgets. Each finding names the number it came from, and your account is never changed."
 explain: |
-  A checked audit of your Microsoft Ads account that separates what it saw from what it thinks, and never changes your account. Give it your exports and it reports on tracking, imports, keywords, audiences, bids and budgets.
+  A Microsoft Ads audit, also called a Bing Ads audit, often turns up the same two problems: a UET tag that does not track, and a Google import that did not carry everything over. This Microsoft ads account auditor reads your exports and checks both first. It never edits your account.
 
-  It starts with your goal, what counts as a conversion, the account age, dates, currency and spend. It looks at the UET tag and conversions first, then imports from Google, syndication, structure and settings. Findings are labelled as observation, diagnosis, recommendation or suggested change, with doubt marked. Benchmarks are used only when your goal, region and sample size match. Optional or unavailable features are not scored, and no universal bid or budget rules are given.
+  Each finding is labelled as something it saw, a likely cause, advice, or a draft change you can approve. Where your data cannot settle a point, it says unknown. It uses a benchmark only when your goal, region and sample size match, and it gives no fixed bid or budget rules. It also skips optional or unavailable features rather than marking them as failures.
+
+  You end with a ranked list of fixes, each with the evidence, a first step and how to check it worked.
 when:
-  - You moved campaigns over from Google and want to know what broke.
-  - Conversions in Microsoft Ads look low and you suspect the tag.
+  - You copied campaigns over from Google Ads and want to know what did not carry across.
+  - Conversions in Microsoft Ads look too low and you suspect the UET tag.
   - You inherited an account and need a clear starting review.
-  - You want an audit that says what is a fact and what is a guess.
+  - You want an audit that separates facts from guesses.
+not_for:
+  - "You want to make changes in the account, such as bids or budgets. This audit is read-only, and every change stays a draft."
+  - "Your account has no conversion tracking and you want to set it up. Fix the UET tag first, then run the audit."
+  - "You run ads on several platforms and want one report: use the Twelve-platform ad account auditor."
+  - "You only run Google Ads: use the Google Ads account auditor."
 you_give:
-  - Account exports, screenshots or API results
-  - Your goal and conversion definition
-  - Date range, currency and spend
-  - Targets (optional)
+  - Microsoft Ads exports or screenshots, such as campaigns, keywords, search terms and conversions
+  - Your goal and what counts as a conversion
+  - Date range, currency, countries and spend
+  - Whether you imported from Google Ads, and when (optional)
+  - Your target cost per lead or return on ad spend (optional)
 you_get:
-  - Findings by area
-  - Each point marked fact, diagnosis or advice
-  - Draft changes held for your approval
-  - A report built from checked results
+  - A UET tag and conversion check, first
+  - A check of what a Google import did and did not bring across
+  - Findings by area, each marked as fact, likely cause or advice
+  - Ranked recommendations and draft changes held for your approval
+  - A list of what it could not check, and what to send next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your ad exports, and optionally read
-    your Microsoft Ads account with your own read-only access. Changes stay as
-    drafts for your approval.
-  - Where the skill points to ads/references/, use the
-    ads/references/microsoft-audit.md folder inside it. We copied it in so the
-    skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. If your AI can open files, give it the whole folder, so it can read the ads/references file inside.
+  - In Microsoft Ads, download reports for campaigns, keywords, search terms and conversion goals. Screenshots work too.
+  - Tell your AI your goal, what counts as a conversion, the date range, currency, countries, and whether you imported from Google.
+  - Read the evidence coverage list first. It shows what was checked and what is unknown.
+  - Send the extra reports it asks for, then ask it to run the unknown areas again.
+  - Make one draft change at a time, and check the result after the measurement window it names.
+how_it_works:
+  - title: Collect the basics
+    text: It asks for your goal, conversion definition, dates, spend, targets and whether you imported from Google.
+  - title: Open the control list
+    text: It reads the Microsoft controls in ads/references, each with an ID such as MS01.
+  - title: Record sources
+    text: Each number is tied to the export or screenshot it came from.
+  - title: Check the areas
+    text: It runs UET and conversions first, then imports, syndication, structure, keywords, audiences, creative, bids and budgets.
+  - title: Label each finding
+    text: It separates what the data shows, the likely cause, the advice and the draft change, and marks doubt.
+  - title: Write the report
+    text: It returns evidence coverage, findings, ranked recommendations, draft changes and unknowns.
+output_shape: |
+  Account and evidence: <goal, conversion, dates, import status, data given>
+  Evidence coverage: <areas checked, partly checked, unknown>
+  Measurement and import findings: <UET and import results>
+  Findings by area: <control ID, label, evidence and source, confidence>
+  Prioritised recommendations: <evidence, baseline, step, measurement window, rollback>
+  Draft changes (not applied): <each edit for approval>
+  Contradictions and unknowns: <conflicts, what to send next>
+output_sample:
+  input:
+    - Microsoft Ads exports or screenshots
+    - Your goal and what counts as a conversion
+    - Date range, currency, countries and spend
+    - Whether you imported from Google Ads (optional)
+  prerequisites:
+    - An AI that can open files, if you want it to read the ads/references folder
+    - Read-only access to the live account, only if you want your AI to read it directly
+  output:
+    - name: Evidence coverage
+      contains: Which areas were checked, which were partly checked, and which are unknown.
+    - name: Measurement and import findings
+      contains: Whether the UET tag and conversion goals work, and what a Google import missed.
+    - name: Findings by area
+      contains: Each finding with its control ID, label, source number and confidence.
+    - name: Prioritised recommendations
+      contains: Ranked advice with the evidence, a first step, a measurement window and a rollback.
+    - name: Draft changes
+      contains: Account edits written as drafts, not applied.
+    - name: Contradictions and unknowns
+      contains: Facts that conflict, and the reports to send next.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It handles long exports and can read the reference file in the folder.
+    - name: ChatGPT
+      why: It reads pasted tables and uploaded spreadsheets well.
+    - name: Gemini
+      why: It can take several screenshots of Microsoft Ads screens in one go.
+  inputs:
+    - The same conversions from your own sales or CRM record
+    - A Google Ads export of the same date range, for comparison
+    - Your UET tag status screen
+    - A note on what you changed after the import
+terms:
+  - term: UET tag
+    meaning: Microsoft's Universal Event Tracking code, which records conversions on your site.
+  - term: Syndication
+    meaning: Showing your ads on partner sites outside Microsoft's own search results.
+  - term: Google import
+    meaning: Copying campaigns from Google Ads into Microsoft Ads, with some settings left behind.
+  - term: Read-only access
+    meaning: Access that lets a tool look at your account but not change it.

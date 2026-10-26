@@ -1,6 +1,6 @@
 slug: referral-administration-evidence-review-assistant
 name: Referral administration evidence review assistant
-summary: A referral status handover, missing confirmations and follow up drafts.
+summary: "Build a referral status handover for the next administrator. See what was sent, received and booked, what is unconfirmed, and draft the follow-ups."
 category: agent
 type: agent
 role: orchestrate
@@ -21,9 +21,9 @@ uses:
   - executive-action-register
 steps:
   - uses: prepare-a-referral-administration-handover
-    note: "Run when: A new referral receipt, booking or administrative follow-up confirmation is supplied."
+    note: "Run when: A new referral receipt, booking or administrative follow-up confirmation is supplied. Hands the status handover, with its missing confirmations and drafted follow-ups, to step 2."
   - uses: executive-action-register
-    note: Run prepare-a-referral-administration-handover for changed evidence or a due review. If an administrative follow-up is explicitly accepted, record its owner and date. Missing clinical urgency always goes to the qualified clinic contact.
+    note: "If an administrative follow-up is explicitly accepted, record its owner and date. Takes the follow-ups listed in step 1's handover and the owners and dates you accepted; hands back the follow-up register. Missing clinical urgency always goes to the qualified clinic contact."
 schedule: On request when referral administration records change. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

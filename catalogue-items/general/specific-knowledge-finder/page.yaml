@@ -1,6 +1,6 @@
 new_slug: specific-knowledge-finder
 name: "Specific knowledge finder"
-summary: "Say what came easily to you and what people ask you for. Get your specific knowledge, with a cheap test for each."
+summary: "Find your specific knowledge: tell it what came easily and what people ask you for. You get one or two picks and a cheap test for each."
 job: think-and-decide
 thinking: medium
 thinking_why: "It sorts what the person says into teachable and not teachable, which takes judgment."
@@ -17,6 +17,10 @@ when:
   - "You are choosing a direction and everything you can do feels common."
   - "You want to sell a service and need to know what makes you different."
   - "People keep asking you for the same help and you do not see why."
+not_for:
+  - You have already chosen a job or path and need a plan. Talk to a career coach or a trusted mentor.
+  - You want a list of your job skills for a CV. Use a simple skills audit or ask a colleague what you do well.
+  - You want a promise of income or a business plan. This gives a small test only, so use an adviser for money questions.
 
 you_give:
   - "What came easily to you as a child or teenager, and what others noticed"
@@ -35,6 +39,26 @@ how_to_use:
   - "Ask a friend or family member what you were like at ten, and paste what they say."
   - "Read which items it marked as trainable. Those are skills, not your edge."
   - "Run the test on your top pick before the date it gives you."
+output_sample:
+  input:
+    - What came easily to you as a child or teenager, and what others noticed
+    - What people ask you for and what you are curious about
+    - Your current work (optional)
+  output:
+    - name: What you told me
+      contains: "Your items, each tagged by where it came from: childhood, asked for, curiosity or play."
+    - name: Sorted
+      contains: Each item marked trainable or specific, with a short reason.
+    - name: The edge of the field
+      contains: For each specific item, the field it sits in and how few people have gone deep.
+    - name: Your picks
+      contains: One or two picks, why each, and the basics you still need first.
+    - name: Cheap tests
+      contains: A low-cost test for each pick, with a date and a good sign.
+    - name: Missing
+      contains: What you could add to sharpen the list.
+    - name: Checks missed
+      contains: One line per check the skill failed, or none.
 
 how_it_works:
   - title: "List what came easily"

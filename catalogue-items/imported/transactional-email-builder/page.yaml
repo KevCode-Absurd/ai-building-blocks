@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds from set parts and checks each in the preview.
 new_slug: transactional-email-builder
 name: Transactional email builder
-summary: Say which emails your app sends. Get coded templates, a sending setup,
-  preview and dark mode.
+summary: Build your app's welcome, verify, password reset and invoice emails as real code. Get a transactional email builder with preview and dark mode.
 job: build-software
 headline: Transactional email builder
-subhead: The emails your app sends, such as welcome, verify, password reset and
-  invoice, built as real code you can ship. They look right in dark mode, in
-  different languages and in major email apps.
+subhead: The emails your app sends, such as welcome, verify, password reset and invoice, built as real code you can ship. They look right in dark mode, in different languages and in major email apps.
 explain: |
   The emails your app sends, such as welcome, verify, password reset and invoice, built as real code you can ship. They look right in dark mode, in different languages and in major email apps.
 
@@ -18,6 +15,10 @@ when:
   - Your old email system is hard to change and you want to replace it.
   - Your emails land in spam or look broken in some apps.
   - You need the same emails in several languages.
+not_for:
+  - "You want to send marketing newsletters or campaigns: use your existing email campaign tool instead."
+  - "You do not have a code project or Node set up: ask a developer to set it up first, or use your email provider's built-in template editor."
+  - "You only need to fix the wording of one email: edit the text in your current template by hand."
 you_give:
   - The list of emails your app sends
   - Your email provider choice
@@ -29,8 +30,33 @@ you_get:
   - A local preview server
   - A spam and dark mode checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Gather your list of emails and your email provider's API key.
+  - Open your AI in a tool that can write files and run code. Paste in the skill and your list.
+  - Ask for the layout and one template first. Check it, then ask for the rest.
+  - Run the preview server. Check each email in light and dark mode.
+  - Send a test email to yourself. Then work through the spam checklist and test with Mail-Tester before your first real send.
+output_sample:
+  input:
+    - The list of emails your app sends
+    - Your email provider choice (Resend, Postmark, SendGrid or AWS SES)
+    - Your brand colours and logo
+    - Languages you support (optional)
+  prerequisites:
+    - An AI that can write files and run code
+    - A code project with Node installed
+    - An account with one email provider
+  output:
+    - name: Email layout and button
+      contains: A shared layout with brand header and footer, and a button part used by every template.
+    - name: Email templates
+      contains: Code for welcome, verify email, password reset, invoice, notification and weekly digest emails.
+    - name: Unified send function
+      contains: One send function that works with Resend, Postmark, SendGrid or AWS SES, so you can switch provider.
+    - name: Preview server
+      contains: A local page that shows each email and reloads when you change the code.
+    - name: i18n files
+      contains: Translated text for each language, with typed keys so a missing line is caught.
+    - name: Tracking helper
+      contains: Code that adds UTM tags to the links in your emails.
+    - name: Spam score checklist
+      contains: A list of checks to run before your first send so mail reaches the inbox.

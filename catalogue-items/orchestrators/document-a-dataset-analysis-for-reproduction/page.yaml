@@ -1,53 +1,94 @@
 new_slug: document-a-dataset-analysis-for-reproduction
 name: Document a dataset analysis for reproduction
 headline: Document a dataset analysis for reproduction
-summary: Share the source files. Get an analysis inventory, repeatable methods procedure and unsupported claims list.
+summary: Write down how a dataset analysis was done so someone else can repeat it. Get a data inventory, a method procedure and a list of unsupported claims.
 job: work-with-files
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An analysis inventory, repeatable methods procedure and unsupported claims list. Share the dataset, data dictionary, actual analysis commands or workbook, environment versions, generated outputs and an existing draft methods note. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your dataset, the data dictionary, the commands or workbook you used and your draft methods note. It inventories the data, writes the steps another person can follow and flags statements the files do not back up.
 explain: |-
-  An analysis inventory, repeatable methods procedure and unsupported claims list.
+  Analysis you did last quarter is hard to repeat when the steps live in your head. A reviewer asks "how did you get this number?" and you cannot show it. This workflow documents a dataset analysis for reproduction, so another person can run the same steps and get the same result.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Only commands and outputs actually observed are described as run; data exclusions and recalculation gaps stay visible. Missing tools or evidence stay visible in the final summary.
+  Step 1 inspects the dataset and any workbook for what one row means, units, missing values, duplicates and totals that reconcile. Step 2 writes the procedure from your real analysis: the inputs, the software and versions, the steps in order, the settings, where each output goes and what to check if a step fails. Step 3 reads your draft methods note against the files and flags claims the files do not support, such as "we removed duplicates" with no sign of it, or a cause stated where the data only shows a link.
+
+  It describes only commands and outputs it can see. Anything it cannot see or run is listed as a gap, and data exclusions stay visible. Your original data is never changed.
 when:
-  - You need an analysis inventory, repeatable methods procedure and unsupported claims list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A colleague, reviewer or auditor asks how you got a number and you cannot show the steps.
+  - You are handing an analysis to someone else to repeat next month or next year.
+  - Your methods note says "we checked for duplicates" and you want to know if the files prove it.
+  - You want to rerun last year's analysis on new data without guessing what you did.
+not_for:
+  - You want formula errors checked before you share a workbook. Use the Check a spreadsheet before sharing the results workflow.
+  - You want the top insights from a dataset. Use Turn a raw dataset into a checked brief of top insights.
+  - You have not done the analysis yet. This documents one that is finished.
+  - You need to compare the methods of two research papers. Use Compare conflicting research findings.
 you_give:
-  - The dataset, data dictionary, actual analysis commands or workbook, environment versions, generated outputs and an existing draft methods note.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - The dataset file or files, and a data dictionary that says what each column means
+  - The commands, script or workbook you used for the analysis
+  - The software and its versions, such as Excel, R or Python
+  - The tables and charts the analysis produced
+  - Your draft methods note or report text (optional)
 you_get:
-  - An analysis inventory, repeatable methods procedure and unsupported claims list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "An analysis inventory: what one row means, units, missing values, duplicates and exclusions"
+  - "A repeatable procedure: inputs, steps in order, settings, output files and what to do if a step fails"
+  - A list of claims in your draft that the files do not support
+  - "A list of gaps: what it could not see or run"
+  - A hand-back summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the data, the dictionary, your commands or workbook and your draft note. List your software versions.
+  - Read the inventory first. Correct any column the AI read wrongly.
+  - Try the procedure on a copy, or ask a colleague to. Note every step that does not work as written.
+  - Fix or cut each unsupported claim in your methods note before you share it.
 how_it_works:
   - title: Spreadsheet checker
-    text: Inspect the dataset and any actual workbook for grain, units, missing values, duplicates and reconciled totals. Limit coverage to supported file types and tools.
+    text: Inspects the data and any workbook for what a row means, units, missing values, duplicates and totals that reconcile. Covers only the file types and tools it can use. Hands the inventory to step 2.
   - title: Process and SOP writer
-    text: Document the supplied real analysis sequence, environment, inputs, output paths, parameters and failure checks as a reproducibility procedure; preserve original data.
+    text: "Uses your own commands, workbook and software list, not step 1's file, and takes units and exclusions from the step 1 inventory. Writes the analysis as a procedure: inputs, software, order of steps, settings, output paths and failure checks. Original data stays untouched. Hands the procedure to step 3."
   - title: Unsupported claim spotter
-    text: Check the existing methods draft and procedure for claimed checks or causal findings absent from the actual files and run evidence.
+    text: Reads your methods draft (your own text) and step 2's procedure for claimed checks or cause-and-effect statements that the files and run evidence do not show.
 output_shape: |-
-  Scope and source coverage
-  An analysis inventory, repeatable methods procedure and unsupported claims list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ANALYSIS INVENTORY
+    Data file | What one row means | Units | Missing values | Duplicates | Exclusions
+
+  REPRODUCTION PROCEDURE
+    Purpose | Inputs | Software and versions | Steps in order | Settings | Output files | If a step fails
+
+  UNSUPPORTED CLAIMS
+    Quote from your draft | What the files show | What would back it up | Safer wording
+
+  GAPS
+    What could not be seen or run
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | Checks not done | One next step
+output_sample:
+  input:
+    - Your dataset and its data dictionary
+    - The commands, script or workbook you used
+    - Your software and its versions
+    - Your draft methods note (optional)
+  prerequisites:
+    - The analysis is finished and its outputs exist
+  output:
+    - name: Analysis inventory
+      contains: What each row means, units, missing values, duplicates and any rows left out.
+    - name: Reproduction procedure
+      contains: Inputs, software, steps in order, settings, output files and what to check if a step fails.
+    - name: Unsupported claims list
+      contains: Statements in your draft the files do not back up, with a safer wording for each.
+    - name: Gaps list
+      contains: What the AI could not see or run, so nobody assumes it was checked.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks that could not run and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Document one analysis at a time, from one dataset version.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Give the real commands or workbook and the real outputs, not a description from memory.
   - what: Acceptance
-    how: Only commands and outputs actually observed are described as run; data exclusions and recalculation gaps stay visible.
+    how: Only steps and outputs it can see are described as run. Exclusions and recalculation gaps stay visible.
 judge:
   - Only commands and outputs actually observed are described as run; data exclusions and recalculation gaps stay visible.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,16 +101,23 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the procedure with the data, and update it each time you change the analysis.
+  - Ask a colleague to follow it once without your help. Their questions show what is missing.
+  - Add your naming rules for files and versions so the next run uses them.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet engine or a code runner the AI can use
+      why: To recalculate a workbook or rerun a script, the AI needs the real tool. Without it, it reads and describes, and marks reruns as not done.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A copy of the earlier report that used this analysis.
+    - A named reviewer who will try to repeat it.
+next:
+  - process-and-sop-writer
+  - check-a-spreadsheet-before-sharing-the-results
 terms:
+  - term: Reproduce
+    meaning: Run the same steps on the same data and get the same result.
+  - term: Data dictionary
+    meaning: A list of every column, what it means and its unit.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

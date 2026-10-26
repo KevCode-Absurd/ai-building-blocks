@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It splits one broad goal into testable parts.
 new_slug: success-criteria-writer
 name: Standard to success criteria writer
-summary: Paste a broad standard. Get clear, checkable success criteria and the
-  small skills inside it.
+summary: Turn a broad curriculum standard into clear success criteria. Paste the standard and year level. You get checkable criteria and the small skills inside.
 job: teach-and-train
 headline: Standard to success criteria writer
-subhead: A broad standard turned into criteria a student can check themselves
-  against. Instead of 'analyses language', you get the small skills inside it
-  and what each looks like in work.
+subhead: A broad standard turned into criteria a student can check themselves against. Instead of 'analyses language', you get the small skills inside it and what each looks like in work.
 explain: |
   A broad standard turned into criteria a student can check themselves against. Instead of 'analyses language', you get the small skills inside it and what each looks like in work.
 
@@ -18,6 +15,10 @@ when:
   - Students do not know what good work looks like.
   - You plan a unit and need to see the skills hidden inside one outcome.
   - You want criteria to share with students before they start.
+not_for:
+  - "You want a whole unit planned, not one standard unpacked: use a backwards design unit planner or plan it with your team."
+  - "You want a marking rubric with grades: write one from the criteria this gives you, or ask a colleague for your school's template."
+  - "Your standard is already broken into small, checkable parts: skip this and write the lesson goals straight from it."
 you_give:
   - The standard or competency descriptor
   - Year level and subject
@@ -30,7 +31,28 @@ you_get:
   - Success criteria in student language
   - Teaching implications
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your standard exactly as the curriculum words it. Add the year level and subject.
+  - Add the curriculum framework or what the criteria are for, if you know them.
+  - Read the observable indicators first. Check each one is something you could really see in student work.
+  - Edit the success criteria so the wording suits your class. Share them with students before they start the task.
+output_sample:
+  input:
+    - The standard or competency descriptor, pasted as written
+    - Year level or age group
+    - Subject (optional)
+    - Your curriculum framework (optional)
+    - What the criteria are for, such as planning or a task (optional)
+  output:
+    - name: Competency Unpacked
+      contains: A short title that names the standard you pasted.
+    - name: Observable Indicators
+      contains: Specific things you can see a student do when they have the skill.
+    - name: Prerequisite Knowledge and Skills
+      contains: What students must already know or do before they try this.
+    - name: Common Misconceptions
+      contains: Typical misunderstandings that stop students showing the skill.
+    - name: Success Criteria
+      contains: "Student-friendly statements at four levels: beginning, developing, secure and extending."
+    - name: Implications for Teaching
+      contains: What the breakdown means for how you plan and teach.

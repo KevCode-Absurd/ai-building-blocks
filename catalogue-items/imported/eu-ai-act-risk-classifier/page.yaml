@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Legal tiers need careful reading of each article.
 new_slug: eu-ai-act-risk-classifier
 name: EU AI Act risk classifier
-summary: Describe your AI system. Get its risk tier under the EU AI Act and the
-  duties that follow.
+summary: Find your AI system's risk tier under the EU AI Act, the paperwork it needs, and the duties for your role. Not legal advice.
 job: secure-code
 headline: EU AI Act risk classifier
-subhead: The risk tier of your AI system under the EU AI Act, with the duties
-  that come with it. You learn whether it is banned, high-risk, needs a
-  transparency notice, or is minimal.
+subhead: The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned, high-risk, needs a transparency notice, or is minimal.
 explain: |
   The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned, high-risk, needs a transparency notice, or is minimal.
 
@@ -18,18 +15,43 @@ when:
   - You are not sure if your system counts as high-risk.
   - You need to know which duties fall on you as provider versus user.
   - You must plan the paperwork for a high-risk system.
+not_for:
+  - "You need a decision on whether to ship the AI feature at all: use the chief-ai-officer-advisor, which weighs business risk."
+  - "You need a legal opinion on a new or unclear case, such as whether fine-tuning counts as a major change: ask a qualified lawyer."
+  - "You only need to check personal data rules under GDPR: use the gdpr-dsgvo-expert or a data protection officer."
 you_give:
-  - Description of the AI system and its purpose
-  - Who it affects and where
+  - A description of your AI system and what it is for
+  - Who the system affects and where it is used
   - Your role in the supply chain
-  - Python to run the included scripts (optional)
+  - Your own Python setup to run the included scripts (optional)
 you_get:
   - Risk tier with the reason
   - Conformity route for high-risk systems
   - Documentation checklist
   - Duties by role
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - "Describe your system: its purpose, who uses it, who it affects, what data it uses and where it runs."
+  - "Say your role: provider, deployer, importer, distributor or authorized representative."
+  - Read the tier and the Article it cites. Check that the reason matches your system.
+  - For a high-risk system, ask for the conformity route and the documentation checklist.
+  - Take the memo to your compliance lead or lawyer. Unclear cases need their call. The scripts only run if your AI can run Python.
+output_sample:
+  input:
+    - A description of your AI system and what it is for
+    - Who the system affects and where it is used
+    - "Your role: provider, deployer, importer, distributor or authorized representative"
+    - Details on data, how much it acts alone and where it runs (optional)
+  prerequisites:
+    - An AI that can run Python scripts, if you want the three included scripts to run (optional)
+  output:
+    - name: Risk tier
+      contains: Whether the system is banned, high-risk, limited-risk with a transparency duty, or minimal-risk, with the Article that decides it.
+    - name: Conformity route
+      contains: "For high-risk systems, which assessment route under Article 43 applies: internal control or a full quality system with a notified body."
+    - name: Annex IV documentation checklist
+      contains: The technical documents a high-risk system needs, listed so you can gather each one.
+    - name: Obligations by role
+      contains: The duties and deadlines that fall on you as provider, deployer, importer, distributor or authorized representative.
+    - name: Decision memo
+      contains: A short memo with a bottom line, Article citations, the evidence, three next steps and the call left for your lawyer.

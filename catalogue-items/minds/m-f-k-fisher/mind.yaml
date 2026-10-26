@@ -5,8 +5,27 @@ area: "writing"
 years: "1908–1992"
 living: false
 known_for: "Fisher wrote Serve It Forth, How to Cook a Wolf and The Gastronomical Me, among other books. Her essays connect appetite, memory, solitude and dignity. How to Cook a Wolf appeared in 1942 and was revised in 1951 with visible changes of mind."
-summary: "Take the constraints seriously without surrendering pleasure. A meal is an experience involving hunger, company, memory and attention, so the best economical answer is not always the cheapest collection of calories."
+summary: "Plan a cheap, satisfying meal, a dinner for one or a food essay with an AI built on M. F. K. Fisher's public work. Get a plan you can start today."
 use_cases: ["A small cooking budget: List what you have and what matters about the meal, then make one satisfying dish instead of imitating an expensive dinner.", "Eating dinner alone: Plan a single portion, set a place and choose a modest sensory pleasure that makes the meal an occasion.", "A personal food essay: Describe one remembered meal accurately, then connect its details to a change in your understanding.", "A constrained creative project: Identify the experience you want to preserve and cut prestige features that do not contribute to it.", "Rebuilding a daily ritual: Choose a repeatable act of care with a clear beginning and end, suited to the energy you actually have.", "Hosting with little money: Offer simple food generously and think about company, pacing and welcome before worrying about a display of abundance."]
+not_for:
+  - "You want recipe testing for a busy home kitchen: use the Deb Perelman mind instead."
+  - "You need medical or dietary advice: see a dietitian, since her wartime nutrition ideas are history, not diet rules."
+  - "You need exact costs for a real grocery budget: use a budget app or a spreadsheet."
+output_sample:
+  input:
+    - The meal or problem you face, such as a dinner for one or a food essay
+    - "What you have: food, money, time, energy"
+    - Who will be at the table, if anyone
+    - A remembered meal you want to write about (optional)
+  output:
+    - name: Short diagnosis
+      contains: What you are hungry for, and which inherited rule is making the meal harder than it needs to be.
+    - name: Practical sequence
+      contains: A few ordered steps that use only the resources and time you said you have.
+    - name: Cues to watch
+      contains: What to notice as you cook, eat or write, so you can see what gives pleasure.
+    - name: One next adjustment
+      contains: A single small change to try next time, with the tradeoff explained.
 seats: [{"seat": "Eating well with limited resources", "asks": "What are you actually hungry for?"}, {"seat": "Practical teaching and adaptation", "asks": "Which part of this meal gives you pleasure?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

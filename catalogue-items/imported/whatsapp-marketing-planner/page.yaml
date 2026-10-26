@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans message flows from a set method and your customer habits.
 new_slug: whatsapp-marketing-planner
 name: WhatsApp marketing planner
-summary: Describe your business. Get a WhatsApp setup with broadcasts, automatic
-  replies and support flows.
+summary: "Get a WhatsApp marketing plan for your business: setup, opt-in, broadcasts, automatic replies and support flows, matched to your brand voice."
 job: help-customers
 headline: WhatsApp marketing planner
-subhead: A working WhatsApp channel plan that covers sales messages, automatic
-  replies and support, matched to your brand voice. It is built for the most
-  personal channel a customer has, where one spammy message gets you blocked.
+subhead: A working WhatsApp channel plan that covers sales messages, automatic replies and support, matched to your brand voice. It is built for the most personal channel a customer has, where one spammy message gets you blocked.
 explain: |
   A working WhatsApp channel plan that covers sales messages, automatic replies and support, matched to your brand voice. It is built for the most personal channel a customer has, where one spammy message gets you blocked.
 
@@ -18,6 +15,10 @@ when:
   - You need automatic answers for common support questions.
   - You must pick between the free app and the paid API.
   - Your broadcasts get blocked or ignored.
+not_for:
+  - "You want to message people who have not opted in: collect opt-ins first, or use email or SMS, because WhatsApp can ban your number."
+  - "Your contacts do not use WhatsApp: use email or SMS, or a plain mailing list tool."
+  - "You only want one broadcast message written: ask your AI to draft it directly, with no full plan."
 you_give:
   - Your business and products
   - Number of customers
@@ -31,7 +32,31 @@ you_get:
   - Automatic reply and support flows
   - Sending rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI about your business, products, number of customers, country and goal.
+  - Add your brand voice notes and budget if you have them (optional).
+  - Read the setup pick first. Check it fits your list size.
+  - Treat all benchmarks and tool prices as rough estimates. Check them with the tool maker before you buy.
+  - Copy the welcome flow and opt-in wording into your WhatsApp tool. No code or files are needed.
+output_sample:
+  input:
+    - Your business and products
+    - How many customers you have
+    - Your market or country
+    - "Your main goal: sales, support or keeping customers"
+    - Your brand voice notes and budget (optional)
+  output:
+    - name: 01 Setup and compliance
+      contains: Your profile setup, the app or API choice, opt-in methods, opt-in wording and how to handle opt-outs.
+    - name: 02 Message templates
+      contains: The template types WhatsApp requires for the API, and tips for writing short ones with one call to action.
+    - name: 03 Campaign types and flows
+      contains: Broadcast ideas plus welcome, post-purchase, abandoned cart and win-back message flows.
+    - name: 04 Conversational commerce
+      contains: Your catalog setup, a chat sales flow, and when a bot hands over to a person.
+    - name: 05 Content strategy
+      contains: What to send, what to avoid, how often, and how to use images, video and voice notes.
+    - name: 06 WhatsApp metrics
+      contains: The numbers to track each week, with rough benchmarks and what a spike in unsubscribes means.
+    - name: 07 Platform recommendations by scale
+      contains: Which tool suits your list size, with approximate monthly costs you should check yourself.

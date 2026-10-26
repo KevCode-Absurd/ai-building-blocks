@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Team structure is tied to your product and needs careful trade-offs.
 new_slug: team-layout-planner
 name: Team layout planner
-summary: Describe your teams. Get a team structure for fast work, with clear
-  owners and how teams hand off. Uses Team Topologies.
+summary: Plan your team structure for fast work. Give it your teams and pain points. You get team types, how teams work together, and a score out of ten.
 job: lead-people
 headline: Team layout planner
-subhead: A team structure designed for fast delivery, with clear owners and a
-  set way for teams to work together. You find out where teams are overloaded,
-  where work bounces between groups and what to change, scored out of ten.
+subhead: A team structure designed for fast delivery, with clear owners and a set way for teams to work together. You find out where teams are overloaded, where work bounces between groups and what to change, scored out of ten.
 explain: |
   A team structure designed for fast delivery, with clear owners and a set way for teams to work together. You find out where teams are overloaded, where work bounces between groups and what to change, scored out of ten.
 
@@ -19,6 +16,10 @@ when:
   - You are planning a reorganisation and want a sound basis.
   - Your architecture mirrors an org chart you dislike.
   - A platform team exists but other teams avoid using it.
+not_for:
+  - "You have one small team or a one-off process question: talk it through with your team lead, no structure plan needed."
+  - "You need to split software into parts, not teams: use a domain-driven design guide for that question."
+  - "You want to fix how code depends on other code: use a clean architecture guide, not a team plan."
 you_give:
   - Your current teams and what each owns
   - The product or system they work on
@@ -30,7 +31,26 @@ you_get:
   - Overload and boundary problems
   - A score and steps to improve it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - List each team, what it owns and its size if you know it (optional).
+  - Describe the product and your main pain points, such as slow sign offs or work bouncing between teams.
+  - Ask your AI to review your teams with this skill and score the design.
+  - Read the overload flags first. Check they match what your teams feel.
+  - Use the ordered changes as a draft plan, and talk it through with your team leads before you act.
+output_sample:
+  input:
+    - A list of your current teams and what each one owns
+    - The product or system the teams work on
+    - Pain points such as delays, handoffs or overloaded teams
+    - Team sizes (optional)
+  output:
+    - name: Team types
+      contains: Each team labelled as stream-aligned, platform, enabling or complicated subsystem, with a short reason.
+    - name: Interaction modes
+      contains: For each pair of teams that work together, whether they collaborate, use a service or get coaching.
+    - name: Overload and boundary problems
+      contains: Teams carrying too much, and places where work bounces between groups.
+    - name: Score out of ten
+      contains: A rating of your current design against the Team Topologies principles.
+    - name: Ordered changes
+      contains: The changes needed to reach ten, in a suggested order for the reorganisation.

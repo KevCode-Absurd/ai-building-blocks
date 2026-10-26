@@ -1,0 +1,146 @@
+name: Embedded Firmware Engineer agent
+summary: "Plan embedded firmware for ESP32, STM32 or Nordic chips: tasks, pin map, memory limits and failure handling. Bring your chip and goal."
+headline: Embedded Firmware Engineer agent
+subhead: "Name your chip, what the device must do and its limits on memory and power. It plans the firmware: the tasks, the pins and buses, the timing, the memory and what happens when something fails. You get a design and a list of checks to run on your own hardware."
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Firmware that works on a dev board often fails in the field. A stack runs out, a bus call waits forever, or a reset corrupts saved data. This agent plans for those failures first. Every driver gets error handling and a time limit, and nothing is allowed to wait with no end.
+
+  It works from your chip's own limits. It sizes task stacks by measuring, not guessing, keeps interrupt code short, avoids memory allocation after startup and pins library versions. It covers ESP32, STM32 and Nordic chips, PlatformIO, and real-time systems such as FreeRTOS and Zephyr.
+
+  It cannot compile, flash or test anything. Treat its code as a draft. Your datasheet and reference manual decide, and the checks it lists must run on your board. This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are starting a new device and need the task and pin plan before you write code.
+  - Your firmware resets, hangs or runs out of memory, and you need a list of likely causes to test.
+  - You are moving from a dev board to a product and need error handling and a watchdog plan.
+  - You want one driver, such as an SPI or Bluetooth routine, reviewed against safe-firmware rules.
+not_for:
+  - You need circuit board layout, a schematic or radio and safety certification. That takes a hardware engineer and a test lab.
+  - You are updating many devices already in the field. Use the IoT fleet rollout planner.
+  - You are building the phone or web app that talks to the device. Use the Mobile app builder or the Full stack developer.
+you_give:
+  - Your chip or board, such as ESP32-S3, STM32F4 or nRF52840, and your toolchain, such as ESP-IDF, PlatformIO or Zephyr
+  - What the device must do, in plain words, and what it connects to (sensors, radio, screen)
+  - "Your limits: RAM, flash, power source, battery life target and any timing needs"
+  - Existing code or your platformio.ini (optional)
+  - Crash logs, reset reasons or watchdog messages (optional)
+you_get:
+  - "A task plan: each task with its priority, a starting stack size and how tasks pass data"
+  - A pin and bus map with speeds, time limits and error handling for each part
+  - A memory and power budget with room to grow
+  - A list of failure cases and how the device recovers from each
+  - Short code drafts for the parts you ask for
+  - A list of checks to run on your hardware, and the assumptions made
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your chip, toolchain, what the device must do and your limits. Add your code or platformio.ini if you have them.
+  - Add any crash log or reset reason. It points the plan at the real problem.
+  - Say "Plan the firmware. Ask once if anything is missing. Do not say anything was tested."
+  - Read the failure list first. For each failure, check that the recovery matches what your device must do.
+  - Compile the code drafts yourself, then measure stack use and timing on your board. Your AI cannot run your hardware.
+how_it_works:
+  - title: Read the hardware
+    text: It notes your chip family, peripherals, memory and power limits, and marks anything missing.
+  - title: Plan the tasks
+    text: It sets each task, its priority, stack size and how tasks pass data, with interrupts kept short.
+  - title: Plan each driver
+    text: It gives every peripheral a time limit, a check on every return value and a clear failure path.
+  - title: Check timing and memory
+    text: It lists timing needs, what to measure and a memory budget with headroom.
+  - title: Plan failure and recovery
+    text: It covers watchdog resets, bus errors, low power and, if needed, safe updates with rollback.
+  - title: Write drafts
+    text: It writes short code for the parts you ask for and marks it untested.
+  - title: List hardware checks
+    text: It lists what you must measure on your board before you trust the design.
+output_shape: |-
+  TARGET AND LIMITS
+    <chip and board> | <toolchain> | RAM <size> | Flash <size> | Power <source> | MISSING: <list>
+
+  TASK PLAN
+    <task> | Priority <n> | Stack <bytes, to be measured> | Talks to <queue or event> | Runs every <time>
+
+  PIN AND BUS MAP
+    <peripheral> | <pins> | <speed> | Time limit <ms> | On failure <action>
+
+  MEMORY AND POWER BUDGET
+    RAM <used and spare> | Flash <used and spare> | Sleep plan <modes and wake sources>
+
+  FAILURE CASES
+    <what fails> | <how it is detected> | <how the device recovers>
+
+  CODE DRAFTS (untested)
+    <file or function> | <what it does>
+
+  CHECKS TO RUN ON YOUR HARDWARE
+    <check> | <tool or method> | <pass means>
+
+  ASSUMPTIONS
+    <item> | <why it was assumed>
+output_sample:
+  input:
+    - Your chip or board and your toolchain
+    - What the device must do and what it connects to
+    - Your limits on memory, power and timing
+    - Existing code or crash logs (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Your datasheet and reference manual, to confirm every pin and register
+    - Your own board for the checks
+  output:
+    - name: Target and limits
+      contains: Your chip, toolchain and limits, with anything missing marked MISSING.
+    - name: Task plan
+      contains: Each task with priority, starting stack size, how it talks to others and how often it runs.
+    - name: Pin and bus map
+      contains: Each peripheral with pins, speed, time limit and what happens on failure.
+    - name: Memory and power budget
+      contains: RAM and flash use with spare room, and the sleep plan.
+    - name: Failure cases
+      contains: What can fail, how it is detected and how the device recovers.
+    - name: Code drafts
+      contains: Short untested code for the parts you asked for.
+    - name: Checks to run on your hardware
+      contains: Each check, the tool to use and what a pass looks like.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Chip family
+    how: Name the exact chip and toolchain. Advice for ESP32, STM32 and Nordic differs.
+  - what: Power
+    how: Give a battery life target if you have one, so the plan covers sleep modes.
+  - what: Scope
+    how: Ask for one driver or one task first, and review the rest after.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Firmware
+    meaning: The software that runs inside a device, close to its hardware.
+  - term: RTOS
+    meaning: A small operating system, such as FreeRTOS or Zephyr, that runs several tasks on time.
+  - term: Stack
+    meaning: The memory a task uses for its working data. If it runs out, the device crashes.
+  - term: Interrupt
+    meaning: A signal from hardware that pauses normal code. The code that answers it must be short.
+  - term: Watchdog
+    meaning: A timer that resets the device if the code stops responding.
+  - term: Peripheral
+    meaning: A hardware part on the chip, such as an SPI, I2C or UART port.
+  - term: Datasheet and reference manual
+    meaning: The chip maker's documents. They are the final word on pins and registers.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your code and datasheet pages together.
+    - name: A coding tool such as Claude Code
+      why: It can edit your project files, though it still cannot flash or run your board.
+  inputs:
+    - The relevant pages of your chip's reference manual.
+    - Logic analyzer or serial log captures if timing is the problem.

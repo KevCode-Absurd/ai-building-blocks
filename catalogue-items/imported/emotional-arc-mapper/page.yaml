@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a path of feelings, then checks the flow.
 new_slug: emotional-arc-mapper
 name: Emotional arc mapper
-summary: Give it a story, page or campaign. Get the feeling you want at each
-  step, from attention to action.
+summary: Map the feeling you want at each step of a landing page, ad, email series or pitch, from first attention to action. Get an emotional arc to write against.
 job: write-and-tell-stories
 headline: Emotional arc mapper
-subhead: A step-by-step map of the feeling you want at each point of a page, ad,
-  story or campaign, from first attention to action. Give it the piece and the
-  reader, and you get an arc to write against.
+subhead: A step-by-step map of the feeling you want at each point of a page, ad, story or campaign, from first attention to action. Give it the piece and the reader, and you get an arc to write against.
 explain: |
   A step-by-step map of the feeling you want at each point of a page, ad, story or campaign, from first attention to action. Give it the piece and the reader, and you get an arc to write against.
 
@@ -18,6 +15,10 @@ when:
   - You are outlining a pitch and want the right order.
   - You want an email series to feel like a story.
   - You want to check an ad for emotional gaps.
+not_for:
+  - "You need plain product specs or a claims list: write a simple claims-and-proof brief with a teammate or your AI instead."
+  - "You are writing legal or medical copy: ask a qualified professional, and keep the wording factual."
+  - "Your reader would find emotional framing out of place, such as a safety notice: state the facts plainly."
 you_give:
   - The content or campaign
   - Reader's starting and ending feeling
@@ -29,7 +30,28 @@ you_get:
   - Pacing advice
   - Where to place the ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your page, ad, email series or pitch.
+  - Say how your reader feels on arrival, how they should feel at the end, and what action you want.
+  - Add your channel, length and brand voice if you have them. If the feelings are unclear, your AI will ask.
+  - Read the arc and check that each feeling fits its section. Treat the effects as ideas to test.
+  - Rewrite your piece against the arc, then check that the ask comes after the trust.
+output_sample:
+  input:
+    - Your page, ad, email series or pitch
+    - How your reader feels when they arrive, and how they should feel at the end
+    - The action you want them to take
+    - Channel, length and brand voice (optional)
+  output:
+    - name: Entry and exit emotion
+      contains: The feeling your reader arrives with and the feeling they need in order to act.
+    - name: Transition path
+      contains: The smallest believable steps that move the reader from the first feeling to the last.
+    - name: Emotional arc
+      contains: Each stage of the piece with the feeling you want at that point.
+    - name: Peak moment
+      contains: The spot where the key insight, proof or offer should land with the most weight.
+    - name: Exit state and ask
+      contains: The closing emotion that supports the next click, reply or signup, and where the ask sits.
+    - name: Hypotheses to test
+      contains: Notes that mark expected emotional effects as ideas to check with real readers, not facts.

@@ -1,25 +1,21 @@
 slug: dividend-recap-timing-checker
 name: Dividend recap timing checker
-summary: Reconcile two annual equity receipts to show the timing effect of an interim distribution.
+summary: "Check a two-year equity return that includes an early dividend: annual IRR, money multiple and net cash gain."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
 origin: own
 version: 1.0.0

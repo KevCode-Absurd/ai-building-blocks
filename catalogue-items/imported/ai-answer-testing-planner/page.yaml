@@ -2,36 +2,84 @@ thinking: medium
 thinking_why: It is a playbook of methods you pick from.
 new_slug: ai-answer-testing-planner
 name: AI answer testing planner
-summary: Describe your AI feature. Get a test plan with scores, human review and
-  A/B checks to catch weak answers.
+summary: "Plan how to test your AI feature's answers: quick scores, human review, an AI judge and a baseline that flags drops after each prompt or model change."
 job: test-and-fix-code
 headline: AI answer testing planner
-subhead: A plan to test whether your AI feature gives good answers, and to catch
-  drops in quality before users do. It mixes quick computed scores, human review
-  and live A/B tests, so no single method has to carry everything.
+subhead: Describe the AI feature you built and what a good answer looks like. Your AI picks scores that fit the job, plans human review and an AI judge, sets a baseline and lays out a check to run after every prompt or model change.
 explain: |
-  A plan to test whether your AI feature gives good answers, and to catch drops in quality before users do. It mixes quick computed scores, human review and live A/B tests, so no single method has to carry everything.
+  This AI answer testing planner helps when your feature seems fine in a demo, but users say the answers are weak. It gives you a plan to test LLM answers in a repeatable way, so you catch a drop in quality before your users do. LLM here means a large language model, the kind of AI behind chatbots.
 
-  The plan picks measures that match the job. Translation and summaries use text-overlap scores. Classifiers use accuracy, precision and recall. Search-based answers use ranking measures such as how often the right document is in the top results. For quality that numbers miss, people rate accuracy, flow, relevance and safety, and an AI judge scales that up. You set a baseline, re-run the tests on each prompt or model change, and flag any drop.
+  No single test is enough. The plan mixes three. Computed scores are quick and cheap, such as text-overlap scores for summaries and accuracy for classifiers. People rate what numbers miss, such as accuracy, flow, relevance and safety. An AI judge repeats that rating at scale. It picks the scores that match your job, not every score there is.
+
+  You then record a baseline, which is how the feature scores today. After each prompt or model change you run the same tests, and flag any drop beyond a limit you set. Live A/B tests come last, and only if you have real traffic.
 when:
-  - You changed a prompt and need to know if answers got worse.
+  - You changed a prompt and need to know if the answers got worse.
   - You are choosing between two AI models for the same feature.
-  - You want a regression check to run before each release.
-  - Your answers are fine in demos but users complain.
+  - You want a check to run before each release of your AI feature.
+  - Your answers look fine in demos but users complain.
+not_for:
+  - You only want to compare an old prompt with a new one on the same cases. Use the Prompt change tester.
+  - Your feature is a Python app and you want test cases and a repeatable pass or fail run. Use the AI app evaluation planner.
+  - You will show the feature once, or it does not write text answers. Read a few outputs yourself instead of building a test plan.
 you_give:
-  - A description of your AI feature
-  - Example inputs and good answers (optional)
-  - "What matters most: accuracy, tone, speed or safety"
-  - Models or prompts to compare (optional)
+  - A description of your AI feature and who uses it
+  - 5 to 20 example inputs with good answers (optional)
+  - What matters most, such as accuracy, tone, speed or safety
+  - The models or prompts you want to compare (optional)
 you_get:
-  - A list of measures for your feature
+  - The scores that fit your feature, with the reason for each
   - A human review plan
-  - An AI judge set-up
-  - A baseline and regression check
+  - An AI judge set-up, with a prompt to start from
+  - A baseline and a rule that flags a drop
   - A plan for live A/B tests
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill.
+  - Describe your feature in a few lines. Add 5 to 20 example inputs with the answers you would call good, if you have them.
+  - Say what matters most. Pick one or two of accuracy, tone, speed and safety, so the plan stays short.
+  - Read the list of scores. Cut any you cannot explain to a teammate. Fewer, clearer scores beat a long list.
+  - Run the plan on your own data. This skill writes the plan and sample code. It does not run tests, and the code needs changes before it works for you.
+  - Note the costs. The AI judge and some scores need a paid API key or a large model download. Say your budget up front.
+output_sample:
+  input:
+    - A description of your AI feature
+    - What matters most, such as accuracy or safety
+    - 5 to 20 example inputs with good answers (optional)
+    - The models or prompts to compare (optional)
+  prerequisites:
+    - An AI you can paste a description into, such as Claude, ChatGPT or Gemini
+    - Someone to write or collect example answers, to run the plan
+    - A paid API key for the judge model, and Python to run the sample code (optional)
+  output:
+    - name: Scores to use
+      contains: The computed scores that fit your task, such as accuracy for classifiers or overlap scores for summaries.
+    - name: Human review plan
+      contains: Who rates which answers, on which scales, and how to check that raters agree.
+    - name: AI judge set-up
+      contains: A judge prompt, a scoring scale and a step to check it against human ratings.
+    - name: Baseline and drop rule
+      contains: How to record today's scores and flag a drop when you change a prompt or model.
+    - name: A/B test plan
+      contains: How to compare two versions on live traffic and when a difference is big enough to trust.
+    - name: Costs and keys
+      contains: Which steps need a paid key or a model download, so you can budget before you start.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A plain chat is enough to get the plan. Code steps need Python on your side.
+    - name: Claude Code or another AI that can run code
+      why: It can run the sample scoring code on your examples.
+  inputs:
+    - Real questions from your users, with the answers you would be happy with.
+    - Your current prompt and the name of the model you use.
+    - Your budget for judge calls.
+terms:
+  - term: LLM
+    meaning: A large language model, the kind of AI that writes text answers.
+  - term: Baseline
+    meaning: Your scores today, kept so you can see if a change makes things better or worse.
+  - term: AI judge
+    meaning: A stronger AI that rates another AI's answers, like a teacher marking work.
+  - term: A/B test
+    meaning: Showing two versions to different users at the same time to see which does better.
+  - term: Regression
+    meaning: A drop in quality after a change that was meant to improve things.

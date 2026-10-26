@@ -9,6 +9,8 @@ job: research
 level: beginner
 inputs:
   - {type: source_text, required: true}
+  - {type: audit_report, required: false}
+  - {type: document, required: false}
 outputs:
   - {type: document}
 uses: []

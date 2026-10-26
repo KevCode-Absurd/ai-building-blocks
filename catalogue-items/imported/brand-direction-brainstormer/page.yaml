@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It makes many ideas, then narrows them.
 new_slug: brand-direction-brainstormer
 name: Brand direction brainstormer
-summary: Describe your idea. Get name options, positioning angles, mood
-  directions and a story, narrowed to one direction.
+summary: "Turn a rough brand idea into one clear direction: positioning, name finalists, mood directions and a story, ready to brief a designer."
 job: brand-file
 headline: Brand direction brainstormer
-subhead: Narrow a fuzzy brand idea down to one direction you can brief a
-  designer on. You finish with a positioning, a short list of name finalists,
-  mood directions and a story shape.
+subhead: Narrow a fuzzy brand idea down to one direction you can brief a designer on. You finish with a positioning, a short list of name finalists, mood directions and a story shape.
 explain: |
   Narrow a fuzzy brand idea down to one direction you can brief a designer on. You finish with a positioning, a short list of name finalists, mood directions and a story shape.
 
@@ -18,6 +15,10 @@ when:
   - You want several brand directions to compare.
   - You need name options that survive a quality check.
   - A designer needs a clear mood to work from.
+not_for:
+  - "Your brand direction is already set and you need a logo or visual system: use a designer or a brand identity step, not this brainstorm."
+  - "You need to write down rules for an existing brand: use a style guide, not new ideas."
+  - "You do not yet know who your buyers are: talk to a few real customers first, then come back."
 you_give:
   - Your product or category
   - Your rough audience
@@ -30,7 +31,30 @@ you_get:
   - Two to four mood directions
   - Two to three story shapes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Tell your AI your product, your rough audience, why the brand exists and any limits.
+  - Review the positioning territories and pick one or two.
+  - Read the name finalists. Check domain, social handles and trademark yourself, or use an AI with web search. Without search, your AI should mark availability as unchecked.
+  - Pick a mood direction and a story shape, then save the brief to share with your designer.
+output_sample:
+  input:
+    - Your product or category
+    - Your rough audience
+    - Why the brand exists
+    - Limits, such as a parent brand or rules (optional)
+    - How many directions you want (optional)
+  prerequisites:
+    - An AI that can search the web, if you want real domain and trademark checks. Without search, names are marked as unchecked.
+  output:
+    - name: Positioning territory
+      contains: The chosen strategic space in one sentence, with the proof point, what it rejects and its main risk.
+    - name: Naming finalists
+      contains: Eight to twelve names that passed the six checks, with a short note on each.
+    - name: Mood directions
+      contains: Two to four looks, each with mood words, color and type feel, imagery, reference brands and what it rejects.
+    - name: Narrative shape
+      contains: The chosen story type with its opening line, proof points and who the audience sees as the hero.
+    - name: Open questions
+      contains: Decisions and checks still needed before any identity work starts.
+    - name: naming-explorations.md (optional)
+      contains: The full list of 30 to 50 name ideas, kept in case the finalists fail later checks.

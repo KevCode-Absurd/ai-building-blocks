@@ -1,6 +1,6 @@
 new_slug: reddit-answer-planner
 name: "Reddit answer planner"
-summary: "Give it your category and cited Reddit threads. Get which to answer and what to say."
+summary: "Plan honest Reddit answers for your store. Give it your category and the Reddit threads AI tools cite. Get which to answer and what to say."
 job: get-found-in-search
 thinking: low
 thinking_why: "It sorts a short list and drafts an answer template, so a quick model is enough."
@@ -17,6 +17,10 @@ when:
   - AI answers on your category cite Reddit and you want to know what to do about it.
   - You want a person on your team to answer questions honestly, with a clear routine.
   - Someone told you to "do Reddit" and you want a plan that won't get your brand banned.
+not_for:
+  - "Your category is never cited on Reddit in AI answers: run your buyer questions in AI tools first, or use the AI citation source finder to find where AI looks."
+  - "You want fake accounts, hidden brand posts or the same comment in many threads: this plan will not do that, and those posts get banned."
+  - "You need fast results: Reddit is a slow signal, so work on your own site pages and the best-of page writer first."
 
 you_give:
   - Your buyer questions and the Reddit links AI tools cited for them
@@ -35,6 +39,31 @@ how_to_use:
   - Say who will post (a real team member using their own account) and their weekly hours.
   - Read each subreddit's rules before you post anything.
   - Post a real, useful answer in your own words, using the template as a guide.
+output_sample:
+  input:
+    - Your buyer questions and the Reddit links AI tools cited for them
+    - Facts about your product and what you can say about rivals
+    - Who will post, and their hours a week
+    - Subreddits you already know (optional)
+  prerequisites:
+    - A list of the Reddit links that AI tools gave as sources for your questions
+  output:
+    - name: Threads AI cites
+      contains: Each cited thread with its subreddit, whether it is open, locked or very old, and a yes or no on answering it.
+    - name: Communities
+      contains: 5 to 10 subreddits, why each fits, and whether brand mentions are allowed there.
+    - name: Answer template
+      contains: Who the poster is and where they work, a useful answer, honest limits, and a product mention only if rules allow.
+    - name: Honest comparison template
+      contains: A fair comparison with a chosen rival, showing where you work together and where the rival is better.
+    - name: Alerts
+      contains: Keywords for your category and brand so you can reply in the first hours.
+    - name: Weekly routine
+      contains: What the poster does each week and how long it takes.
+    - name: Expectations
+      contains: How long results take and what Reddit can and cannot change.
+    - name: Do not list
+      contains: Things to avoid, such as fake accounts and copied comments.
 
 how_it_works:
   - title: Lists the cited threads

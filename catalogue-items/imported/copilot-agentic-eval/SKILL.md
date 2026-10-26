@@ -30,6 +30,51 @@ Generate → Evaluate → Critique → Refine → Output
 - **Tasks with clear evaluation criteria**: Defined success metrics exist
 - **Content requiring specific standards**: Style guides, compliance, formatting
 
+## When Not to Use
+
+- A one-off answer you will read yourself: just ask for a fix.
+- No clear way to say what "good" means: write that first, then come back.
+- You want to improve the agent's prompts and skills over many runs: use the Agent self-improvement loop builder.
+- You want a test plan with pass marks before you ship an agent: use the Agent system tester.
+
+## What You Give It
+
+Ask once for any that are missing. If one is still missing, write MISSING and say what it changes. Never invent criteria or sample outputs.
+
+1. The task the agent does, in the exact words it is given today.
+2. What a good answer must do (the success criteria), in plain sentences.
+3. One good example answer and one bad one (optional, but they sharpen the rubric).
+4. How the person will run it: pasting into a chat by hand, or in code (and the language) (optional).
+
+## Steps
+
+1. **Turn the criteria into a rubric.** Keep 3 to 5 dimensions. Give each a weight and a clear pass line a person could check.
+2. **Pick the pattern.** Basic reflection for one answer, evaluator and optimizer when judging should be separate, code reflection when tests can run, LLM-as-judge when comparing two answers.
+3. **Write the critique prompt.** It must return one line per rubric item: PASS or FAIL, plus one sentence of feedback.
+4. **Write the refine prompt.** It must fix only the failed items and keep everything that passed.
+5. **Set the stop rules.** Maximum 3 rounds (up to 5 at most), stop when everything passes, and stop early if a round does not improve the score.
+6. **Rewrite the agent's task prompt** so the rubric is part of it from the start.
+7. **Say how to run it.** In a chat: paste the task, then the critique prompt, then the refine prompt, and repeat. In code: use the matching pattern below.
+
+## Output
+
+Return these in order.
+
+1. **Rewritten task prompt**: the agent's task with the success criteria built in.
+2. **Rubric table**: `<dimension>` | `<weight>` | `<pass line>` | `<feedback field>`.
+3. **Critique prompt**: ready to paste.
+4. **Refine prompt**: ready to paste.
+5. **Stop rules**: maximum rounds, pass threshold, and the no-progress rule.
+6. **How to run it**: chat steps, or the code pattern chosen with its placeholders explained.
+7. **Gaps and next steps**: every MISSING input, and a reminder to try the loop on three real tasks and read the results before you trust it.
+
+## Notes on the Code
+
+- `llm(...)` stands for whatever function sends a prompt to your AI and returns text. You supply it. `run_tests(...)` stands for your own test runner. The patterns will not run until you supply both.
+- Models sometimes return text that is not valid JSON. Wrap `json.loads` in a try block. If parsing fails, ask once more for JSON only, then stop and show the raw reply instead of guessing.
+- A model grading its own work tends to be easy on itself. For important work, have a person or a second model check a sample.
+- Each round adds at least two AI calls, one to judge and one to fix, so a loop costs more than a single answer.
+
 ---
 
 ## Pattern 1: Basic Reflection
@@ -37,6 +82,8 @@ Generate → Evaluate → Critique → Refine → Output
 Agent evaluates and improves its own output through self-critique.
 
 ```python
+import json
+
 def reflect_and_refine(task: str, criteria: list[str], max_iterations: int = 3) -> str:
     """Generate with reflection loop."""
     output = llm(f"Complete this task:\n{task}")

@@ -80,3 +80,15 @@
 }
 .at-sk-h1 { display: block; width: min(12em, 100%); height: clamp(34px, 4.6vw, 62px); margin-top: 6px; }
 .at-sk-btn { display: block; width: 180px; height: 44px; border-radius: 999px; }
+/* Optional guide fields: first result, example and what is not yet confirmed. */
+.at-h3 { font: 500 12.5px var(--mono); color: var(--faint); margin: 1rem 0 .5rem; }
+.at-steps { margin: 0; padding-left: 1.3rem; }
+.at-steps li { padding: 6px 0; font-size: 15.5px; line-height: 1.55; color: var(--text-2); }
+.at-example { margin: 0; }
+.at-example > div { padding: 9px 0; border-top: 1px solid var(--line); }
+.at-example > div:last-child { border-bottom: 1px solid var(--line); }
+.at-example dt { font: 500 12.5px var(--mono); color: var(--faint); margin-bottom: 4px; }
+.at-example dd { margin: 0; font-size: 15.5px; line-height: 1.55; color: var(--text-2); }
+.at-notverified { margin-top: 44px; padding: 14px 18px; border: 1px dashed var(--line-2); border-radius: 8px; font-size: 14px; color: var(--muted); }
+.at-nv-h { font: 500 12.5px var(--mono); color: var(--faint); margin: 0 0 8px; }
+.at-notverified ul { margin: 0; padding-left: 1.1rem; line-height: 1.55; }

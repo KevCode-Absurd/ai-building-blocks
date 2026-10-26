@@ -1,6 +1,6 @@
 new_slug: shopify-landing-page-builder
 name: "Shopify landing page builder"
-summary: "Paste your page copy and theme. Get Shopify files with your copy loaded in, and install steps."
+summary: "Turn your finished landing page copy into a Shopify landing page: a section file, a page template with your words in, and install steps."
 job: write-landing-page
 thinking: high
 thinking_why: "It writes code that has to work the first time."
@@ -17,6 +17,10 @@ when:
   - You have finished copy for an article-style, reasons-to-buy or product landing page and want it in your Shopify store.
   - You want to edit the words yourself in the theme editor afterwards, without touching code.
   - You've been burned by a page with a typed-in price that went out of date.
+not_for:
+  - "You sell many products on one page or use a store that is not Shopify: ask a developer, or use your platform's own page builder."
+  - "You have no page copy yet: write it first with the Landing page design planner, then come back here."
+  - "You need to change checkout or payment steps: Shopify theme code cannot do that, so ask a Shopify developer."
 
 you_give:
   - The finished page copy, with sections, headings, body, questions, offer rows, button text and risk lines
@@ -35,6 +39,29 @@ how_to_use:
   - Add your product's handle (the last part of its web address), the template name you want and your theme's name.
   - Say which apps handle reviews and subscriptions, so it uses their blocks instead of rebuilding them.
   - Follow the six install steps on a copy of your theme first, then place a test order before sending traffic.
+output_sample:
+  input:
+    - Your finished landing page copy, with headings, body, questions, button text and risk lines
+    - Your product's handle, the page name and template name you want, and your theme
+    - Your colours, fonts and spacing (optional)
+    - The apps you use for reviews and subscriptions (optional)
+  prerequisites:
+    - A Shopify store where you can add theme files
+    - A copy of your theme to test on first
+    - An AI that can write code, such as Claude, ChatGPT or Gemini
+  output:
+    - name: sections/<page-name>.liquid
+      contains: The page layout, with settings and blocks you can edit in the theme editor, and a product picker.
+    - name: templates/page.<suffix>.json
+      contains: A page template that loads the section with your real copy already in place.
+    - name: Image list
+      contains: Each image slot, what it must show, and a suggested size.
+    - name: Install steps
+      contains: Six short steps from uploading the files to previewing the page on a phone.
+    - name: MISSING list
+      contains: Each fact left empty because your store does not hold it.
+    - name: CHECKS MISSED
+      contains: One line for each check the files still miss, or none.
 
 how_it_works:
   - title: Plans the files

@@ -1,6 +1,6 @@
 new_slug: reasons-to-switch-page
 name: "Get a reasons-to-switch page that answers doubts"
-summary: "Give it a buyer's doubt and your costs. Get an offer, a reasons-to-switch page and the doubts it still leaves open."
+summary: "Build a reasons-to-switch page for buyers who use a rival today. Give it their doubt and your costs. You get an offer, the page and the open doubts."
 job: write-landing-page
 
 headline: "A page that gives buyers reasons to switch and answers their doubts"
@@ -15,6 +15,10 @@ when:
   - Your buyers already use a rival or an old habit and your page doesn't say why they should move.
   - Buyers keep asking the same question before they buy and your page doesn't answer it.
   - You want an offer and a page made together, so the page carries an offer that answers the doubt.
+not_for:
+  - "Your buyers have no rival or old habit to leave: use the Article-style landing page writer to tell the story instead."
+  - "You already have a page and only want it reviewed: use the Landing page conversion reviewer on its own."
+  - "You only want customer questions turned into answers: use the Customer FAQ writer."
 
 you_give:
   - The buyer and their biggest doubt, in their words
@@ -34,6 +38,26 @@ how_to_use:
   - Have your inputs ready. Your buyer's doubt, your product facts, your costs, and real customer questions if you have them.
   - It works step by step and saves each result. Check the offer first, including the profit check. The page carries it from then on.
   - Add the answers from step 3 to the page, then work through the fixes from step 4.
+output_sample:
+  input:
+    - Your buyer and their biggest doubt, in their words
+    - Your product facts and what the offer costs you
+    - Customer questions or reviews, copied as written
+    - Your brand brain files (optional)
+  prerequisites:
+    - Claude in Claude Code, or a Claude Project that can read files
+    - A brand brain from the Website brand brain builder (optional)
+  output:
+    - name: outputs/step-01-offer-builder.md
+      contains: An offer that answers the buyer's doubt, with its wording and a profit check.
+    - name: outputs/step-02-reasons-to-switch-page-writer.md
+      contains: The page with three headline options, 3 to 7 reasons with proof, the offer once and a questions section.
+    - name: outputs/step-03-customer-question-finder.md
+      contains: Each customer doubt the page still leaves open, with the answer to add and where.
+    - name: outputs/step-04-landing-page-auditor.md
+      contains: The audit report with a score out of 100 and fixes ranked, quick wins first.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Builds the offer
@@ -43,7 +67,7 @@ how_it_works:
   - title: Finds open doubts
     text: Uses the unanswered question skill to check each customer doubt against the page and say where each missing answer goes.
   - title: Audits the page
-    text: Uses the landing page auditor to read the page as a glance, a skim and a doubt, check phone basics and rank the fixes.
+    text: Uses the landing page auditor to read the page as a glance, a skim and a doubt, check phone basics, count the open doubts from the step before as findings and rank the fixes.
 
 output_shape: |
   OFFER
@@ -74,14 +98,14 @@ example:
   output: |
     OFFER
     Doubt: price jump | Offer: first box $29.99, renewal price shown before checkout | Profit check: margin stays above your floor
-    
+
     PAGE
     Reason 1: you see the renewal price before you pay | Proof: the cost block
     Reason 2: cancel from your account | Proof: MISSING, the cancel steps
-    
+
     OPEN DOUBTS
     "How do I cancel?" (5 reviews) | Missing: steps | Add at: before the last button
-    
+
     AUDIT
     Score: 71/100 | Quick win: add the renewal price to the first screen
 

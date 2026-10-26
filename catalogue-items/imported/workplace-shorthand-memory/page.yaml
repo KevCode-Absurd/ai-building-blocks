@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It decides what to remember and where.
 new_slug: workplace-shorthand-memory
 name: Workplace shorthand memory builder
-summary: Share your nicknames and codes. Get a memory so Claude knows who and
-  what you mean in short requests.
+summary: Teach your AI your nicknames, acronyms and project codes. Get a workplace shorthand memory so short requests like "ask todd for the PSR" make sense.
 job: set-up-ai
 headline: Workplace shorthand memory builder
-subhead: Share your nicknames and codes. Get a memory so Claude knows who and
-  what you mean in short requests. Bring your nicknames, names and acronyms. Use
-  the result to plan your next step.
+subhead: Share your nicknames and codes. Get a memory so Claude knows who and what you mean in short requests. Bring your nicknames, names and acronyms. Use the result to plan your next step.
 explain: |
   A memory file that teaches Claude your nicknames, acronyms and project codes, so a short request like "ask todd to do the PSR for oracle" is understood as written.
 
@@ -18,6 +15,10 @@ when:
   - You use many internal acronyms and codes.
   - A new teammate or AI needs your company vocabulary.
   - Names in your projects are ambiguous, like two Oracles.
+not_for:
+  - You make a one-off request. Just spell out the names in your message.
+  - You would store private HR or personal facts about people. Keep only work roles, and use a plain shared glossary doc for the rest.
+  - Your team only needs a shared word list for people. Use a plain shared glossary doc in Google Docs or Notion.
 you_give:
   - Your nicknames, names and acronyms
   - Project and deal names
@@ -29,8 +30,31 @@ you_get:
   - People and project profiles
   - Rule for decoding short requests
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write files.
+  - Open a project folder in an AI that can read and write files, such as Claude Code. A plain chat can't save the files.
+  - Paste the skill into the chat, or save it in your project. Then say "Set up my workplace memory."
+  - Give it your nicknames, acronyms, project codes and key people. Share only work roles, not private details.
+  - Check that CLAUDE.md is saved in your project folder and the memory/ folder sits next to it.
+  - "Optional: if you have the Claude Code productivity plugin, run /productivity:start. It scans your chat, calendar, email and documents, so check which accounts you connect first."
+  - Try a short request like "ask todd to do the PSR". Fix any wrong entry, and the AI will remember it.
+output_sample:
+  input:
+    - Your nicknames, names and acronyms
+    - Your project and deal names
+    - Roles and contact preferences for people you work with (optional)
+    - Your company tools and teams (optional)
+  prerequisites:
+    - An AI that can read and write files, such as Claude Code or Claude with a project folder
+    - The Claude Code productivity plugin, only if you want /productivity:start to scan your chat, calendar, email and documents
+  output:
+    - name: CLAUDE.md
+      contains: A short hot cache with you, your top people, common terms, active projects and your preferences.
+    - name: memory/glossary.md
+      contains: The full decoder list of acronyms, internal terms, nicknames and project codenames.
+    - name: memory/people/
+      contains: One profile per person with nicknames, role, team, how they like to be contacted and useful context.
+    - name: memory/projects/
+      contains: One file per project with codename, other names, status, key people and context.
+    - name: memory/context/company.md
+      contains: Your tools, teams and processes, with any internal names for them.
+    - name: Lookup rule
+      contains: Check CLAUDE.md first, then the glossary, then the detail files, and ask you only if nothing matches.

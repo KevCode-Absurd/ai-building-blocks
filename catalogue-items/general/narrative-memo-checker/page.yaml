@@ -1,6 +1,6 @@
 new_slug: narrative-memo-checker
 name: Narrative memo checker
-summary: Paste your memo. Get a score out of 100, the weak spots and the three fixes that matter.
+summary: Check your narrative memo before the meeting. Get a score out of 100, each weak spot and the three fixes that add the most points.
 job: speak-and-persuade
 thinking: medium
 thinking_why: It judges clarity and proof against a fixed list of checks.
@@ -14,6 +14,10 @@ when:
   - Your memo is due and you want a cold read before the meeting.
   - A memo keeps getting questions the writer thought were answered.
   - You want to teach your team what a clear memo looks like.
+not_for:
+  - "You have no memo yet, only a press release and questions: use the Six-page narrative memo writer."
+  - "You want the whole memo rewritten: use the Six-page narrative memo writer, then check the result here."
+  - "You want feedback on style or taste: ask a trusted colleague, as this only scores six set checks."
 you_give:
   - The memo, as full text
   - The meeting and the decision (optional)
@@ -30,6 +34,26 @@ how_to_use:
   - Say who decides and by when, if it is not in the memo.
   - Read the cold ask first. If it is wrong, the memo is unclear.
   - Make the three fixes and run it again.
+output_sample:
+  input:
+    - Your full memo text
+    - The decision and who makes it (optional)
+    - Your page limit (optional, six if you skip it)
+  output:
+    - name: Cold ask
+      contains: The ask in one sentence as a new reader sees it, or a note that it could not tell.
+    - name: Score
+      contains: A total out of 100 with the points for each of the six checks shown.
+    - name: Weak spots
+      contains: Each problem with the line from your memo it comes from and what is wrong.
+    - name: Three fixes
+      contains: The three changes that add the most points, each with about how many points it adds.
+    - name: Score after fixes
+      contains: A second score that counts only the fixes that were actually made.
+    - name: Missing
+      contains: Lines for anything you left out that would help, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check still missed and why, or none.
 how_it_works:
   - title: Reads it cold
     text: States the ask in one sentence, as a new reader would.

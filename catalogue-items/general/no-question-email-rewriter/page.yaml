@@ -1,6 +1,6 @@
 new_slug: no-question-email-rewriter
 name: "No-oriented question email rewriter"
-summary: "Paste an email that pushes for yes. Get it rewritten so a 'no' moves things forward."
+summary: "Rewrite a follow-up email that pushes for yes into one question the reader can say no to. Get a short email, a subject line and two spare questions."
 job: write-emails
 thinking: low
 thinking_why: "It rewrites one short email around a single question."
@@ -17,6 +17,10 @@ when:
   - "A prospect went quiet after a good first call."
   - "A colleague has not answered three polite nudges."
   - "You are about to send 'just checking in' for the second time."
+not_for:
+  - "You are writing a first email to someone who does not know you: write a short plain introduction yourself, since there is no silence to break yet."
+  - "The reader has told you to stop: do not send another email, and respect it."
+  - "You are in a legal or payment dispute: ask a lawyer or your finance team to word it."
 
 you_give:
   - "The draft email or the thread so far"
@@ -32,6 +36,26 @@ how_to_use:
   - "Say what you want to happen and who the reader is."
   - "Pick the question that fits the relationship. The marked one is the AI's pick, not yours."
   - "Send it, and when the no arrives, use the IF THEY SAY NO line."
+output_sample:
+  input:
+    - The draft email or the thread so far
+    - What you want to happen next
+    - Who the reader is and how long since they replied (optional)
+  output:
+    - name: THE PUSH
+      contains: The lines in your draft that press for a yes, each with a reason it gets ignored.
+    - name: SUBJECT
+      contains: A subject line under seven words, as a plain question or plain fact.
+    - name: EMAIL
+      contains: A label line, one or two lines of context and one no-oriented question, under 80 words.
+    - name: OTHER QUESTIONS
+      contains: Two more no-oriented questions to choose from.
+    - name: IF THEY SAY NO
+      contains: One line on what to reply when the no comes back.
+    - name: MISSING
+      contains: Facts you did not give, such as the outcome you want.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Names the push"

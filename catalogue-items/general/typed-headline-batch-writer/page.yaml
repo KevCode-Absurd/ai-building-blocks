@@ -1,6 +1,6 @@
 new_slug: typed-headline-batch-writer
 name: "Typed headline batch writer"
-summary: "Paste your top buying reasons. Get twenty or more headlines labelled self-interest, news or curiosity, each with a believable detail."
+summary: "Turn your buying reasons into twenty or more headlines, each labelled self-interest, news or curiosity, with a real detail from your facts."
 job: write-ad-copy
 thinking: low
 thinking_why: "It follows fixed shapes and labels. Judgement comes later, in the ranking step."
@@ -17,6 +17,10 @@ when:
   - You need a headline for an ad, email, page or mailing and have only one or two ideas.
   - Your headlines read as clever but nobody can say what they offer.
   - You want a sorted list to cross out and test, not a single line to take on trust.
+not_for:
+  - "You want one fixed set of plain lines with character counts: use the Ad headline writer."
+  - "You already have a list and want it ranked: use the Headline cover test ranker."
+  - "You have no buying reasons yet: run the What you really sell finder first, or ask five customers why they bought."
 
 you_give:
   - Your top buying reasons, ideally from "What you really sell finder"
@@ -34,6 +38,23 @@ how_to_use:
   - Add anything that is new, with its date, so the news lines can run.
   - Read the list with the copy hidden. Cross out any line you cannot explain to a stranger.
   - Take the rest to "Headline cover test ranker".
+output_sample:
+  input:
+    - Your top buying reasons, one is enough and three is better
+    - Your product facts, with figures, times, counts and dates (optional)
+    - Your offer, price and deadline (optional)
+    - Anything new, with its date (optional)
+  output:
+    - name: Headlines
+      contains: At least twenty numbered lines, each with its type, the buying reason it serves and the detail it uses.
+    - name: Count by type
+      contains: How many lines are self-interest, news and curiosity.
+    - name: Cut
+      contains: The lines removed, with a one-line reason for each.
+    - name: Missing
+      contains: News, figures or proof you did not supply, so the skill left them out.
+    - name: Checks missed
+      contains: One line for each check the list still fails, or none.
 
 how_it_works:
   - title: Pulls the details

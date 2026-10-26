@@ -16,6 +16,29 @@ use_cases:
   - "Turn a plain customer quote into a story or a headline"
   - "Check a draft against the small 'yeses' a reader must give before they buy"
   - "Write a fundraising letter that makes the giver feel the gift"
+not_for:
+  - "You want a plain, clear brand voice for everyday writing: use the Ann Handley mind."
+  - "You want tested, offer-first direct response ads that track every reply: use the Dan Kennedy mind."
+  - "You need legal, medical or financial claims cleared, or real testimonials and results: ask a compliance reviewer or the product owner."
+output_sample:
+  input:
+    - Your draft sales page or letter, or the product facts if you have no draft
+    - Who your reader is and what you know about their worries
+    - Your offer and guarantee (optional)
+    - What the piece must achieve for you, such as profit or breaking even (optional)
+  output:
+    - name: Dominant emotion read
+      contains: A short read on the strongest feeling your reader has and why that one.
+    - name: Page outline
+      contains: The order of the whole page, with the eight yeses marked on each part.
+    - name: Weak spots
+      contains: Claims that need proof, features that need drilling down, and openings that talk about you.
+    - name: Headline options
+      contains: "A pile of headline ideas sorted by lead type: big benefit, dominant emotion or news story."
+    - name: Test list
+      contains: A plain list of what to test first, starting with the headline and opening.
+    - name: Top fix
+      contains: The one change he would expect to move results most.
 seats:
   - {seat: "Emotion in long copy", asks: "What keeps this reader awake at night, and where in the copy do we touch it?"}
   - {seat: "Proof and credibility", asks: "Which claim here would a doubter question first, and what proof do we have for it?"}

@@ -2,16 +2,31 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-earned-income-planner
 name: Nonprofit earned income planner
-summary: Share your funding mix and income ideas. Get risk checks, break-even math, and a small pilot plan.
+summary: Plan nonprofit earned income with a funding risk check, break-even math and a small pilot plan, with US tax questions flagged for your accountant.
 job: plan-strategy
 headline: Nonprofit earned income planner
 subhead: Share your funding mix, costs, and ideas for fees, sales, rentals, or other income. It checks demand, mission fit, and break-even needs. You get a business case and pilot plan, with US tax questions flagged for an accountant before a board decision.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - Most of your income comes from one funder or contract, and you want other sources.
+  - Your board asks if a fee, product sale or space rental could pay for itself.
+  - You have an earned income idea and need to know if the numbers work.
+  - You need a clear business case before the board votes on a small pilot.
+not_for:
+  - "You want grant, major gift or annual appeal tactics: ask a fundraising specialist, as this plans earned income and your overall funding mix."
+  - "You already run the income stream and need a yearly budget or cash plan: use your finance lead or a simple budget sheet."
+  - "You are weighing a merger or fiscal sponsorship: talk to an adviser who handles those, as this does not cover them."
 you_give:
-  - Revenue by source, income idea, demand evidence, full costs, available capital, and mission limits.
+  - Your income by source, such as grants, gifts, contracts and fees
+  - The earned income ideas you are weighing
+  - Proof that people would pay, such as surveys, waitlists or past sales (optional)
+  - Your full costs, including a fair share of overhead
+  - Your mission limits and the startup money you have (optional)
 you_get:
-  - A funding-risk review, idea screen, break-even model, expert-review questions, and board pilot brief.
+  - A check of how much your income depends on one funder or type
+  - A scorecard that ranks your income ideas
+  - A break-even model for each idea
+  - A list of tax questions for your accountant or lawyer
+  - A board brief with a small pilot plan and clear go or no-go checks
 how_it_works:
   - title: Check funding dependence
     text: Show how much income depends on single funders or types, then decide which risk a new income stream should address.
@@ -26,5 +41,32 @@ works_best_with:
   inputs:
     - Earned-income and social-enterprise models raise unrelated business income tax questions.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini. No code, web access or paid tool is needed.
+  - Paste in this skill's text, then add your income by source, your ideas and your costs.
+  - Say which idea you favor, and what your mission will not allow.
+  - Read the funding risk check first. Ask your AI to explain any figure you do not follow.
+  - Check the break-even model for full costs, including overhead.
+  - Send the tax questions to your accountant or lawyer before the board sees the plan.
+output_sample:
+  input:
+    - Your income by source, such as grants, gifts, contracts and fees
+    - The earned income ideas you are weighing
+    - Any proof people would pay, such as surveys, waitlists or past sales
+    - Your full costs, including a fair share of overhead
+    - Your mission limits and available startup money (optional)
+  prerequisites:
+    - An AI chat that can read pasted text or files
+    - An accountant or lawyer to review the tax questions before a board vote
+  output:
+    - name: Revenue concentration check
+      contains: Shows how much income comes from your biggest funder, biggest income type and government sources, with risks flagged.
+    - name: Idea scorecard
+      contains: Scores each idea on demand, mission fit, startup cost, time to break-even and skills you lack.
+    - name: Break-even model
+      contains: Sets price, cost per unit and fixed costs, then works out the sales needed to cover costs.
+    - name: Unrelated income tax memo
+      contains: Lists the tax questions for each idea so your accountant or lawyer can review them early.
+    - name: Structure advice
+      contains: Compares running the venture inside your nonprofit with a separate company, and says which fits.
+    - name: Board business case and pilot plan
+      contains: Sets the funding ask, pilot length, decision dates, and money and mission checks for a go or no-go.

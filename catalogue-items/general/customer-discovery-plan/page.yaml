@@ -1,6 +1,6 @@
 new_slug: customer-discovery-plan
 name: "Customer discovery interview planner"
-summary: "Paste your business idea. Get your guesses, who to talk to and questions that test them outside the building."
+summary: "Plan customer discovery interviews for your business idea. Get ranked guesses, who to talk to, and questions about what people do now."
 job: understand-customers
 thinking: medium
 thinking_why: "It ranks guesses and plans talks, but the structure is fixed."
@@ -17,6 +17,10 @@ when:
   - "You have a plan and have not yet talked to customers."
   - "You talked to a few people and are unsure what to change."
   - "You are about to hire someone to do the first talks."
+not_for:
+  - "Your product already has paying customers and you want to improve it: talk to those customers yourself, or look at what they buy and why they stay."
+  - "You only need better wording for interview questions: use the Customer interview question writer."
+  - "You want to test a guess that talking cannot settle, like whether people will pay: run a small test with a real offer instead."
 
 you_give:
   - "Your plan or idea"
@@ -33,6 +37,26 @@ how_to_use:
   - "Paste your plan and the decision you want to make."
   - "Book the first five talks yourself."
   - "After five talks, bring back your record sheet and apply the rule."
+output_sample:
+  input:
+    - Your plan or idea
+    - The decision you want the research to help with
+    - People or places you can reach (optional)
+  output:
+    - name: Guesses
+      contains: Your plan written as guesses, each with its evidence or a MISSING note, and a risk score.
+    - name: Talk plan
+      contains: For each top guess, the type of person to see, where to find them and how many.
+    - name: Questions
+      contains: Three to five questions per guess about what people do now, with none that name your product.
+    - name: Who talks
+      contains: Which founder does each talk and why.
+    - name: Record sheet
+      contains: One row per talk with date, person, guess, what they did, what they said, a quote and a verdict.
+    - name: Model rule
+      contains: When a guess counts as confirmed or rejected, and which guess to test next.
+    - name: Missing and checks missed
+      contains: Gaps in what you gave, and any checks the plan still fails.
 
 how_it_works:
   - title: "Writes guesses"

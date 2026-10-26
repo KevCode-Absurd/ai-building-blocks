@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set design patterns but weighs cost and scale trade-offs.
 new_slug: google-cloud-architect
 name: Google Cloud architect
-summary: Describe your app. Get a Google Cloud design with services, cost
-  estimate and deploy steps.
+summary: Plan your Google Cloud setup. Describe your app and get a Google Cloud architecture with services, a cost estimate, code and deploy steps.
 job: ship-and-host
 headline: Google Cloud architect
-subhead: A Google Cloud design you can build from, with services chosen, costs
-  estimated and deploy steps laid out. Describe your app, such as a web app,
-  mobile backend, data pipeline or SaaS, and your limits.
+subhead: A Google Cloud design you can build from, with services chosen, costs estimated and deploy steps laid out. Describe your app, such as a web app, mobile backend, data pipeline or SaaS, and your limits.
 explain: |
   A Google Cloud design you can build from, with services chosen, costs estimated and deploy steps laid out. Describe your app, such as a web app, mobile backend, data pipeline or SaaS, and your limits.
 
@@ -18,6 +15,10 @@ when:
   - Your cloud bill is high and you need to cut it.
   - You must choose between Cloud Run and GKE.
   - You need a design that meets HIPAA or GDPR rules.
+not_for:
+  - "Your app is already on AWS or Azure: use an AWS or Azure architect skill, since this one only covers Google Cloud."
+  - "You only need one static site: host it on a simple static host instead of a full cloud design."
+  - "You want exact prices: use the Google Cloud Pricing Calculator, because the costs here are rough samples."
 you_give:
   - App type and description
   - Expected users and traffic
@@ -29,7 +30,32 @@ you_get:
   - A monthly cost estimate
   - Infrastructure code and deploy steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down your app type, expected users, monthly budget, team skill and any compliance or uptime needs.
+  - Paste these into your AI and ask it to design a Google Cloud setup using this skill.
+  - Check that the chosen pattern fits your team's skill and your compliance needs before going further.
+  - Treat all costs as samples. Check them in the Google Cloud Pricing Calculator for your region and usage.
+  - Ask for the Terraform code, deploy commands and Cloud Build file. Running the included scripts needs an AI that can run Python.
+  - Only allow public access to a service if it is meant to be public. Otherwise keep access limited with IAM roles.
+output_sample:
+  input:
+    - Your app type, such as web app, mobile backend, data pipeline or SaaS
+    - Expected users and requests per second
+    - Your monthly budget
+    - Your team size and Google Cloud experience
+    - Compliance and uptime needs (optional)
+  prerequisites:
+    - An AI that can run Python scripts, if you want to use the included scripts
+    - A Google Cloud account and the gcloud tool, to deploy the result
+  output:
+    - name: Architecture design
+      contains: The recommended pattern, the services in it, why they fit, and the trade-offs.
+    - name: Cost estimate
+      contains: A monthly cost breakdown by service, with sample savings ideas like right-sizing and committed use discounts.
+    - name: Terraform code
+      contains: Infrastructure code for the chosen pattern, such as Cloud Run with Firestore.
+    - name: gcloud deploy commands
+      contains: Scripted commands to deploy the service and create its database.
+    - name: Cloud Build file
+      contains: A CI/CD pipeline file that builds, pushes and deploys your app on each code change.
+    - name: Security review
+      contains: A checklist of access, secrets, encryption and logging checks, plus fixes for common deploy failures.

@@ -25,9 +25,9 @@ steps:
   - uses: source-note-summariser
     note: Read the supplied paper in full, including relevant appendices, with the source-note method. Record its claims, table/figure pointers, offered evidence and gaps. Map those notes to the attached result tables without assuming independent truth verification. Hand the approved source-bound claim list and exact evidence references to figure preparation.
   - uses: journal-ready-figure-maker
-    note: Use source tables and claim list to choose readable, faithful plots. Preserve uncertainty, exclusions and missing observations. Hand figures, captions and data references to slide production.
+    note: "Use your attached result tables and step 1's claim list to choose readable, faithful plots. The tables come from you, not from step 1; the claim list only decides which to plot. Preserve uncertainty, exclusions and missing observations. Hand figures, captions and data references to slide production."
   - uses: conference-talk-slide-maker
-    note: Use compiled paper, evidence list, figures, audience and duration to build the outline, supported slide formats and notes. Render only with available tools; return timing estimates and required rehearsal checks.
+    note: "Use your compiled paper with step 1's evidence list and step 2's figures, plus the audience and duration, to build the outline, supported slide formats and notes. Render only with available tools; return timing estimates and required rehearsal checks."
 execution: coordinator
 package_files: all
 origin: own

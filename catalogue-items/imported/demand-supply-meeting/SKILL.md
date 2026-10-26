@@ -7,6 +7,35 @@ description: When the user wants to implement S&OP process, integrate demand and
 
 You are an expert in Sales & Operations Planning (S&OP) and Integrated Business Planning (IBP). Your goal is to help organizations implement effective S&OP processes that align demand, supply, finance, and strategy to drive better business decisions.
 
+## How to run this in a chat (added by AI Blocks)
+
+**Who this is for.** A team that plans several products or product families each month and needs sales, operations and finance to agree on one plan. For one product or a one-off decision, use a lighter skill (see the related skills at the end).
+
+**Gather first.** Ask the user once, in one message, for:
+1. The demand forecast by product family and month (a pasted table or file).
+2. Capacity and current inventory by product family and month.
+3. Who attends the meeting and how often you meet (sales, operations, finance, leaders).
+4. Current pain points (optional).
+5. Last month's actuals, if they want forecast accuracy (optional).
+
+If an input is missing, write MISSING in its place and carry on with the rest. Do not invent a forecast, a capacity number or a cost.
+
+**Treat every figure here as a placeholder.** The cost multipliers, overtime limits, scenario weights, sample forecasts and dashboard numbers in the code and tables below are examples to show the method. They are not benchmarks. Replace each with the user's own numbers, or leave the cell as MISSING. Say so in the answer wherever a figure is an assumption.
+
+**If you cannot run code,** do the arithmetic by hand or in a table: gap equals demand minus capacity for each family and month. Show the working.
+
+**Run order.**
+1. Check the inputs and note what is missing.
+2. Build the demand and supply gap list: family, month, demand, capacity, gap.
+3. For each gap, list the options (overtime, build ahead, outsource, limit demand, do nothing) with cost as a user-supplied figure or MISSING.
+4. Write the meeting agenda for the five-step cycle, using the real attendees. Give each agenda item a time.
+5. List the decisions the meeting must make, each with a named owner and a date, or "owner to decide".
+6. Suggest the measures to track next month.
+
+**Output.** Give the answer in this order: one-line summary, agenda, gap list, decisions with owners, options table, measures to track, and a list of what is MISSING. Keep to one page per section.
+
+---
+
 ## Initial Assessment
 
 Before implementing or improving S&OP, understand:
@@ -516,20 +545,20 @@ class SupplyReview:
                 'period': period,
                 'scenario': 'Do Nothing',
                 'additional_supply': 0,
-                'cost': shortage * 100,  # Lost sales cost
+                'cost': shortage * 100,  # PLACEHOLDER: replace 100 with your own lost-sales cost per unit
                 'risk': 'High',
                 'feasibility': 'Certain'
             })
 
             # Scenario 2: Overtime
-            overtime_capacity = row['available_capacity'] * 0.15  # 15% OT
+            overtime_capacity = row['available_capacity'] * 0.15  # PLACEHOLDER: use your real overtime limit
             overtime_supply = min(shortage, overtime_capacity)
             scenarios.append({
                 'product_family': product,
                 'period': period,
                 'scenario': 'Overtime',
                 'additional_supply': overtime_supply,
-                'cost': overtime_supply * 15,  # Premium cost
+                'cost': overtime_supply * 15,  # PLACEHOLDER: replace 15 with your own overtime premium per unit
                 'risk': 'Medium',
                 'feasibility': 'High'
             })
@@ -540,7 +569,7 @@ class SupplyReview:
                 'period': period,
                 'scenario': 'Outsource',
                 'additional_supply': shortage,
-                'cost': shortage * 20,  # Outsource premium
+                'cost': shortage * 20,  # PLACEHOLDER: replace 20 with your own outsource premium per unit
                 'risk': 'Medium',
                 'feasibility': 'Medium'
             })
@@ -552,7 +581,7 @@ class SupplyReview:
                 'period': period,
                 'scenario': 'Build Ahead',
                 'additional_supply': shortage,
-                'cost': shortage * 5,  # Inventory holding cost
+                'cost': shortage * 5,  # PLACEHOLDER: replace 5 with your own holding cost per unit
                 'risk': 'Low',
                 'feasibility': 'High'
             })
@@ -723,7 +752,7 @@ class PreSopMeeting:
 
         comparison = pd.DataFrame(scenarios_list)
 
-        # Rank scenarios
+        # Rank scenarios (the 0.4 / 0.3 / 0.3 weights are placeholders: set your own)
         comparison['total_score'] = (
             comparison['service_level'] * 0.4 +
             (100 - comparison['cost_impact_pct']) * 0.3 +
@@ -1494,6 +1523,8 @@ Still widely used for S&OP in mid-size companies:
 ## Output Format
 
 ### S&OP Report Structure
+
+All numbers in the example tables below are illustrative. Never copy them. Fill each table from the user's own data. Where the user gave no data, write MISSING.
 
 **Executive Dashboard (1 page):**
 

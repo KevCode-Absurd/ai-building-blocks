@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Ranking insights needs judgment about impact and certainty.
 new_slug: insight-brief-writer
 name: Insight brief writer
-summary: Give it your findings and goals. Get the top insights ranked by impact
-  and confidence, each with an action.
+summary: "Turn your analysis findings into an insight brief: the top 3 to 5 findings ranked by impact and confidence, each with a clear action."
 job: track-numbers
 headline: Insight brief writer
-subhead: A one-page brief of the three to five findings that matter most, each
-  ranked and paired with an action. It turns a heap of statistics into a clear
-  answer to the question "so what do we do?"
+subhead: A one-page brief of the three to five findings that matter most, each ranked and paired with an action. It turns a heap of statistics into a clear answer to the question "so what do we do?"
 explain: |
   A one-page brief of the three to five findings that matter most, each ranked and paired with an action. It turns a heap of statistics into a clear answer to the question "so what do we do?"
 
@@ -19,6 +16,10 @@ when:
   - You need to combine several analyses into one set of actions.
   - Your team cannot agree which finding to act on first.
   - You must brief a busy team in five minutes.
+not_for:
+  - "You need a full statistical review of your data: ask a data analyst, or run the full analysis first."
+  - "You have one metric question, like last week's sales: check your dashboard or spreadsheet instead."
+  - "You have no findings yet and only raw data: run your analysis first, then bring the results here."
 you_give:
   - Your analysis findings, charts or outputs
   - Current goals and priorities
@@ -30,7 +31,28 @@ you_get:
   - Notes on conflicting findings
   - A short brief
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions from this page. No code or paid tool is needed.
+  - Paste your findings, charts or results. Add your goals and priorities.
+  - Say who will read the brief and what limits you have, such as budget or time.
+  - Check the impact sizes. Each one should be marked as an estimate and say where it came from.
+  - Take the top insight into a decision or a small test, and share the brief with your team.
+output_sample:
+  input:
+    - Your analysis findings, charts or model results
+    - Your current goals and priorities
+    - Who will act on the brief, and what they can decide (optional)
+    - How sure you are of each finding (optional)
+    - Limits on action, like budget or time (optional)
+  prerequisites:
+    - Analysis results to work from, such as statistics, charts or notes
+  output:
+    - name: Insight brief
+      contains: The top 3 to 5 insights in priority order, each with the finding, impact, explanation, action and confidence.
+    - name: So What, Why, Now What
+      contains: "For each finding: why it matters, the most likely cause, and the specific action that should follow."
+    - name: Business impact estimate
+      contains: A size for each insight, using rough estimates when exact data is missing.
+    - name: Priority scores
+      contains: Each insight scored from 1 to 3 on impact, confidence and ease of action.
+    - name: Conflicts and open questions
+      contains: Findings that point in opposite directions, and the extra data that would settle them.

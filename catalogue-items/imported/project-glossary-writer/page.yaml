@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks about terms and writes them down.
 new_slug: project-glossary-writer
 name: Project glossary writer
-summary: Talk through your project's terms. Get a glossary and decision records
-  so everyone uses the same words.
+summary: Build a project glossary by talking through your terms. Your AI flags clashing words and writes down the agreed ones, plus short decision records.
 job: build-software
 headline: Project glossary writer
-subhead: One shared set of words for your project, written down as you talk, so
-  people stop meaning different things by the same term. It also keeps short
-  records of why you made key decisions.
+subhead: One shared set of words for your project, written down as you talk, so people stop meaning different things by the same term. It also keeps short records of why you made key decisions.
 explain: |
   One shared set of words for your project, written down as you talk, so people stop meaning different things by the same term. It also keeps short records of why you made key decisions.
 
@@ -17,8 +14,11 @@ when:
   - Your team uses one word for three different things.
   - A new person joins and keeps asking what terms mean.
   - You made a big technical choice and want to record why.
-  - You are about to change how the project works and want the words straight
-    first.
+  - You are about to change how the project works and want the words straight first.
+not_for:
+  - "You need a one-off doc or your project is tiny with no shared terms: write a plain README instead."
+  - "You want a full spec of how the code works: write that in your own design doc, because a glossary holds word meanings only."
+  - "You only want your AI to read an existing glossary for vocabulary: just paste the glossary into your chat."
 you_give:
   - A talk-through of how your project works
   - Existing glossary or notes (optional)
@@ -29,7 +29,26 @@ you_get:
   - Short decision records
   - Glossary map for projects with several areas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat with your AI. Paste in the skill instructions. If your AI can work with files, give it your project folder.
+  - Describe how your project works in your own words. Say which terms your team uses.
+  - Answer the questions your AI asks when a word clashes or is vague. Pick one meaning for each.
+  - Check each glossary entry as it is written. Cut anything that describes how the code is built.
+  - Say yes to a decision record only when the choice is hard to undo and had real alternatives.
+  - Save the files in your project. Link GLOSSARY.md from your team onboarding doc and reuse the terms in future prompts and code reviews.
+output_sample:
+  input:
+    - Your talk-through of how your project works
+    - Your existing glossary or notes (optional)
+    - Decisions you made and the options you turned down (optional)
+    - Your code, if your AI can read it (optional)
+  prerequisites:
+    - An AI that can read and write files, if you want the files saved in your project. In a plain chat, it gives you the text to paste.
+  output:
+    - name: GLOSSARY.md
+      contains: The agreed terms for your project, each with a short plain meaning and no technical build details.
+    - name: Term clashes and fuzzy words
+      contains: Questions your AI asks in the chat when a word clashes with the glossary or could mean two things.
+    - name: docs/adr/ decision records
+      contains: "One short dated note per big decision: what you chose, the options you rejected and why. Only made for hard choices."
+    - name: GLOSSARY-MAP.md
+      contains: A map that points to each area's own glossary and decision notes. Only made for projects with several areas.

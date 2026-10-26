@@ -2,35 +2,106 @@ thinking: low
 thinking_why: It fills fields from known sources.
 new_slug: crm-record-filler
 name: CRM record filler
-summary: Give it your CRM records. Get missing company and contact details
-  filled in to help routing and outreach.
+summary: "Fill the blanks in your CRM company and contact records. Get a before and after table with a source and confidence for each value."
 job: sell-and-negotiate
 headline: CRM record filler
-subhead: Give it your CRM records. Get missing company and contact details
-  filled in to help routing and outreach. Bring the company or contact records
-  to enrich. Use the result to plan your next step.
+subhead: "Give it the CRM records you want filled in and the fields that matter. It looks up missing company details such as size, industry and tech stack, marks how sure it is, and shows every change before anything is saved."
 explain: |
-  Thin company and contact records hurt routing, scoring and outreach. This fills the gaps: revenue, headcount, industry, tech stack, job titles and contact details.
+  Thin CRM records break routing and outreach. A lead with only a name and an email has no industry or company size, so it goes to the wrong rep, or to none. CRM data enrichment means filling those gaps from public sources. This skill does it record by record and shows its work.
 
-  It starts by listing which fields are empty or old, then sources each missing value from places like company sites, job posts, press releases and public filings. It matches new data to records by domain or email first, then by fuzzy name match, and merges duplicates while keeping the fullest record. Each value gets a confidence mark, and anything from a single source is flagged low. Only checked values are written back, and it respects fields you do not want touched.
+  It first lists which fields are empty or old. Then it looks for each value in places such as the company's own site, job posts, press releases and public filings. It matches each find to a record by domain or email first, then by name. For every value it gives the source and a confidence level. Anything it is not sure about goes in a review list instead of your CRM.
+
+  It does not write to your CRM on its own. You get a table of changes to review. It handles company details first, and personal details only when you have a good reason to hold them.
 when:
   - New leads arrive with only a name and an email.
   - Your lead routing fails because industry or company size is blank.
   - You found duplicate accounts after an import.
   - Job titles in your CRM are years out of date.
+not_for:
+  - "You want to find new leads from scratch: use a prospecting tool. This fills in records you already have."
+  - "The people on your list have not agreed to be contacted, or the law where they live needs consent: leave their personal details out and fill company details only."
+  - "Your CRM already offers its own enrichment and its terms bar outside data: use that built-in tool instead."
+  - "You want to clean records you already trust, such as spelling and formats: fix those in a spreadsheet first."
 you_give:
-  - The company or contact records to enrich
-  - Which fields matter most to you
+  - The company or contact records to fill in, as a pasted table or exported file
+  - Which fields matter most, such as industry, company size or job title
   - Fields that must never be overwritten (optional)
-  - CRM access or an exported file
+  - Your CRM name, such as HubSpot or Salesforce (optional)
 you_get:
-  - Filled company and contact fields
-  - A confidence mark on each value
-  - Merged duplicate records
-  - A change log showing old and new values
+  - A before and after table for each record
+  - A source and a confidence level for every new value
+  - A review list of values it was not sure about
+  - Possible duplicates flagged for you to merge
+  - A change log you can use to update your CRM
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini. Pick one that can search the web. Without web search it can only use what you paste.
+  - Paste the skill text into the chat.
+  - "Under it, paste 5 to 10 records to start, and say which fields you want. Remove any personal details you do not need filled."
+  - Read the review list first. Check any value marked Low before you use it.
+  - Copy the confirmed changes into your CRM yourself, or import them from the table. Nothing is saved for you.
+  - If a source needs a login or a paid data service, the AI will say so. It does not guess those values.
+output_sample:
+  input:
+    - Your CRM records, with the empty fields left empty
+    - Which fields you want filled
+    - Fields that must not change (optional)
+  prerequisites:
+    - An AI that can search the web
+    - A paid data service and its key, if you want data from one (optional)
+  output:
+    - name: Gap list
+      contains: Which fields are empty or old on each record, in order of what matters to you.
+    - name: Before and after table
+      contains: Each record with new values, the source of each, and a confidence level.
+    - name: Review list
+      contains: Values rated Low, or found in one source only, for a person to check.
+    - name: Duplicate flags
+      contains: Records that look like the same company, listed for you to decide on.
+    - name: Change log
+      contains: Every field changed, with old value, new value, source and date.
+how_it_works:
+  - title: Find the gaps
+    text: It lists missing or old fields on each record and puts the ones that drive your routing first.
+  - title: Look for each value
+    text: It checks the company's own site, job posts, press releases and public filings. A second source is used to check it where it can.
+  - title: Match to the record
+    text: It matches by domain or email first, then by name and location. A name match alone is never enough.
+  - title: Rate confidence
+    text: High means two sources agree. Medium means one reliable source. Low means unsure, and it goes to the review list.
+  - title: Show the changes
+    text: It gives a table with old and new values. It leaves fields you marked as protected alone.
+  - title: Flag duplicates
+    text: If two records look like one company, it flags them for you to merge. It does not merge them itself.
+output_shape: |
+  RECORD: <company or contact>
+  | Field | Old value | New value | Source | Confidence |
+  |---|---|---|---|---|
+  | <field> | <blank or old> | <new> | <where it came from> | High, Medium or Low |
+
+  REVIEW LIST
+  - <field>: <why it needs a person>
+
+  DUPLICATES
+  - <record A> and <record B>: <why they look the same>
+
+  CHANGE LOG
+  <field> | <old> | <new> | <source> | <date>
+
+  MISSING
+  - <fields it could not find>
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search on
+      why: Filling fields means looking things up. Without web search it can only tidy what you paste.
+  inputs:
+    - A short list of the fields your routing depends on
+    - A data service key, if you have one and the terms allow it
+terms:
+  - term: Enrichment
+    meaning: Filling in missing details on a record from other sources.
+  - term: Confidence
+    meaning: How sure the AI is about a value. Low values need a person to check.
+  - term: Firmographic
+    meaning: Facts about a company, such as industry, size and location.
+  - term: Tech stack
+    meaning: The software and tools a company uses.

@@ -2,41 +2,53 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: clay-scene-image-ad-maker
 name: "Clay scene image ad maker"
-summary: "Paste your selling idea. Get a clay before-and-after image prompt, the words and feed copy."
+summary: "Turn one selling idea into a clay before-and-after image ad: an image prompt, a headline of 7 words or fewer, and feed copy."
+
 job: make-image-ads
 
 headline: "Clay scene image ad maker"
-subhead: Give it your selling idea, product facts and photos. It picks one clay object that stands for the problem and builds a handmade set around it, showing the before and after in one frame. You get the image prompt, the words, the feed copy and any check it missed.
+subhead: "Give it your selling idea, product facts and photos. It picks one clay object that shows the problem, and builds a small handmade set around it with the before and after in one frame. You get the image prompt, the words, the feed copy and any check it missed."
 
 explain: |
-  A clay scene stops the thumb because it looks handmade and small, unlike every product photo around it. It goes wrong when there's nothing to read in it: a cute clay mascot beside the pack, a set crowded with moments, or a label sculpted into wobbly clay letters.
+  A clay scene image ad stops the thumb because it looks handmade and small, unlike the product photos around it. It goes wrong when nothing in it can be read: a cute clay mascot beside the pack, a set crowded with moments, or a label sculpted in wobbly clay letters.
 
-  This skill builds the picture around one clay object that stands for the problem, such as a leaning tower of tubs or a knot of cables. A still can't show clay moving, so it shows one state, or the same set split in two: the problem greyed on the left, the change in your colours on the right. The set follows the same plan as the clay video, with one finish and model-maker stand-ins. Your product keeps its real label, and the words pass image-ad rules: a headline of 7 words or fewer and type that reads on a phone.
+  This skill builds the picture around one clay object that stands for the problem, such as a leaning tower of tubs or a knot of cables. A still can't show clay moving, so it shows one state, or the same set split in two: the problem greyed on the left, the change in your colours on the right.
+
+  Your product keeps its real label, and the picture shows only what your approved claims say. The headline is 7 words or fewer, and every word is big enough to read on a phone. It uses the same set plan as the clay video, so your stills and your clips match.
 
 when:
-  - Your product's benefit is real but hard to photograph, and plain product shots get scrolled past.
-  - You can name one everyday thing that gets simpler, neater or easier with your product.
-  - You made the clay video and want a still on the same set.
+  - "Your benefit is real but hard to photograph, and plain product shots get scrolled past in the feed."
+  - "You can name one everyday thing that gets simpler, neater or easier with your product, such as a pile of tubs that becomes one pack."
+  - "You made the Claymation video ad script and want a still on the same set."
+  - "A designer says the ad needs a handmade look, and you need the brief to give them."
+
+not_for:
+  - "Your point rests on a real face, such as a review or a founder. Use the Image ad maker from customer quotes or the Review quote ad card planner."
+  - "Your offer is only a price or a discount. Clay shows a change, so use the Single image ad planner."
+  - "You want a whole crowd of people sharing one hassle, not one changing object. Use the Clay town image ad maker."
+  - "You want a moving clay clip. Use the Claymation video ad script writer, then the Claymation video clip prompt writer."
 
 you_give:
-  - Your selling idea
-  - Your product facts, approved claims and claims you must never make
-  - Who the buyer is and the moment the problem hits them
-  - Your colours, typefaces, label lines and offer
-  - Product photos with a sharp label, attached (optional at first, needed before you make the image)
+  - "Your selling idea, in one or two lines"
+  - "Your product facts: how it is used, approved claims, and claims you must never make"
+  - "Who the buyer is and the moment the problem hits them"
+  - "Your colours, typefaces, label lines and offer"
+  - "Product photos with a sharp label (optional at first, needed before you make the image)"
+
 you_get:
-  - The changing object with its three states, and the frame (one state or a split set)
-  - The set plan, the character sentence and how the product appears
-  - The layout, the words on the image checked for size and contrast, and an image prompt
-  - Feed copy with a first line, headline and button
-  - Any of the skill's five checks it couldn't meet, one line each
+  - "One clay object with its before, changing and after states, and the frame (one state or a split set)"
+  - "A set plan with finish, stand-ins and two colour palettes, plus one clay character or none"
+  - "A 4:5 or 1:1 layout with the words on the image, checked for size and contrast"
+  - "An image prompt ready to paste into an image tool"
+  - "Feed copy with a first line, headline and button, and a line for each check it missed"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts, claims, label lines and colours underneath.
-  - Describe the buyer and the moment the problem bites, in one or two sentences.
-  - Make the image from the prompt with your product photo attached, then set the words in a design tool.
-  - Shrink it to phone size. If the set and the one change don't read before the headline, ask for a simpler set.
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start a chat with it. If not, copy it and paste it in."
+  - "Paste your selling idea, product facts, claims, label lines and colours. Describe the buyer and the moment the problem bites in one or two sentences."
+  - "Attach a product photo with a sharp label. Without one, you still get the plan and the prompt, marked MISSING: product photo."
+  - "Read the object first. If you can't say what changed and what changed it in one sentence, ask for a simpler object."
+  - "Claude writes the prompt but can't draw. Paste the prompt into ChatGPT (GPT Image) or Gemini (Nano Banana) with your photo attached. Set the words on top in Canva or Figma."
+  - "Shrink the finished picture to phone size. If the change doesn't read before the headline, ask for a simpler set."
 
 how_it_works:
   - title: Checks clay fits
@@ -67,6 +79,32 @@ output_shape: |
   FEED COPY  <first line, primary text, headline, button>
   NOTES      <claims used and sources, MISSING>
   CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - "Your selling idea"
+    - "Your product facts, approved claims and label lines"
+    - "The buyer and the moment the problem bites"
+    - "Your colours, typefaces and offer"
+    - "Product photos with a sharp label (optional at first)"
+  prerequisites:
+    - "An image tool such as ChatGPT (GPT Image) or Gemini (Nano Banana) to make the picture"
+    - "Your brand brain from the Brand profile builder (optional)"
+  output:
+    - name: "Fit"
+      contains: "Why clay suits this idea, or what to use instead."
+    - name: "Object and frame"
+      contains: "The one clay object with before, changing and after states, shown as one state or a split set."
+    - name: "Set, character and product"
+      contains: "The pieces, finish, stand-ins, two palettes, one clay character or none, and how your product appears."
+    - name: "Layout and words"
+      contains: "A 4:5 or 1:1 zone map, a headline of 7 words or fewer, and each word's size and contrast."
+    - name: "Image prompt"
+      contains: "A paste-ready prompt for a photographed clay set, with no text in the image."
+    - name: "Feed copy"
+      contains: "A first line, primary text with the offer terms, a headline and a button."
+    - name: "Notes and CHECKS MISSED"
+      contains: "Each claim used with its source, anything MISSING, and one line per check still missed."
 
 example:
   business: sprout

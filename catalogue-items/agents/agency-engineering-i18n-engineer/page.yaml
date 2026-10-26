@@ -1,0 +1,140 @@
+name: Internationalization Engineer agent
+summary: "Find what stops your app working in other languages: hardcoded text, plurals, dates and right-to-left layout. Get ranked fixes."
+headline: Internationalization Engineer agent
+subhead: Share your app's text files or code and the languages you want to add. It finds text that cannot be translated cleanly, plural and date mistakes, and layouts that will break in right-to-left or long languages. You get a ranked fix list and a test plan.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Translating an app is more than swapping words. Word order changes between languages. English has two plural forms and Arabic has six. Dates, numbers and money are written in different ways. A sentence built from pieces cannot be translated at all. This agent finds those problems before translators start, so you avoid rounds of rework. The work is called internationalization, or i18n.
+
+  It looks for text typed straight into code, sentences glued together from parts, hand-made date and money formats, and layouts that assume English. It rewrites messages in ICU MessageFormat, a standard way to write plurals and choices. It also checks layouts for right-to-left scripts and for text that runs much longer, since German often runs about a third longer than English.
+
+  It reviews and plans. It does not translate your content, and machine-translated text still needs a native speaker. This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You plan to launch your app in a second or third language and have never checked that it is ready.
+  - Translators keep asking what a word means because the strings carry no context.
+  - Dates, prices or plurals look wrong in a test language.
+  - You need to support Arabic or Hebrew, which read right to left.
+not_for:
+  - You want your text translated. Use a human translator or a translation tool, then bring the files back for this review.
+  - Your site runs on WordPress or Drupal. Use the WordPress and Drupal developer.
+  - You only need a new screen built. Use the Frontend developer.
+you_give:
+  - Your text files, such as locale or message files, or a pasted list of the strings people see
+  - The languages and regions you want to add, and whether any read right to left
+  - The tools you use, such as React, i18next, FormatJS, gettext, Android or iOS
+  - Code that shows dates, numbers or money, and your main layout styles (optional)
+  - Screenshots of your busiest screens (optional)
+you_get:
+  - A ranked list of problems, with the files or strings affected
+  - Rewrites of broken messages, with plurals and named placeholders
+  - Fixes for dates, numbers and money
+  - A layout check for long text and right-to-left
+  - Notes for translators on unclear strings
+  - A test plan with a fake test language and one right-to-left language
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your message files or a list of your strings. Say which languages you plan to add and which tools you use.
+  - Add code that formats dates, numbers or money, and a few key screens or styles, if you have them.
+  - Say "Review this for translation readiness. Ask once if anything is missing."
+  - Fix the top group in the ranked list first. Each rewritten message must still say what the original said.
+  - Before launch, have a native speaker check each language. Plural and gender rules in the rewrites are drafts to confirm.
+how_it_works:
+  - title: Take stock
+    text: It finds strings typed into code, glued sentences, hand-made formats and direction-specific styles, and ranks them by effect on users.
+  - title: Check the messages
+    text: It rewrites each message as one full sentence with named placeholders and the plural forms each language needs.
+  - title: Check formats
+    text: It moves dates, numbers, money and lists onto the platform's locale tools instead of hand-made patterns.
+  - title: Check layout
+    text: It checks for fixed widths, left and right styles, and room for longer text and right-to-left scripts.
+  - title: Check text handling
+    text: It looks at how names and text are sorted, cut and changed in case, since the wrong method corrupts some scripts.
+  - title: Plan tests and translator notes
+    text: It writes context notes for translators and a test plan with a fake language and one right-to-left language.
+output_shape: |-
+  SCOPE
+    <languages and regions> | <tools> | <right-to-left needed: yes or no> | MISSING: <list>
+
+  RANKED PROBLEMS
+    <rank> | <problem> | <where it is> | <effect on users> | <fix>
+
+  MESSAGE REWRITES
+    <key> | Now: <current text> | Better: <full message with placeholders and plural forms> | Translator note: <context>
+
+  FORMAT FIXES
+    <date, number, money or list> | <current method> | <locale tool to use>
+
+  LAYOUT CHECK
+    <screen or component> | <risk: long text, right-to-left or fixed width> | <fix>
+
+  TEST PLAN
+    <test> | <how to run it> | <pass means>
+
+  CHECKS STILL NEEDED
+    <item> | <who should check it>
+output_sample:
+  input:
+    - Your message files or a list of your strings
+    - The languages and regions you plan to add
+    - The tools you use for text and layout
+    - Code or screenshots of key screens (optional)
+  prerequisites:
+    - An AI that can read files
+    - A native speaker for each launch language, to review the final text
+  output:
+    - name: Scope
+      contains: The languages, tools and right-to-left needs it assumed, with gaps marked MISSING.
+    - name: Ranked problems
+      contains: Each problem with where it is, how it affects users and the fix.
+    - name: Message rewrites
+      contains: Broken messages rewritten as full sentences with placeholders, plurals and translator notes.
+    - name: Format fixes
+      contains: Dates, numbers, money and lists moved to locale tools.
+    - name: Layout check
+      contains: Screens at risk from long text, right-to-left or fixed widths, with fixes.
+    - name: Test plan
+      contains: A fake test language and one right-to-left language, with how to run each test.
+    - name: Checks still needed
+      contains: What a native speaker or developer must confirm.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Languages
+    how: Name your launch languages. Plural rules and layout needs differ a lot between them.
+  - what: Scope
+    how: Give one feature's strings first, so the review stays focused.
+  - what: Tools
+    how: Name your text library. The rewrites then match its message format.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Internationalization (i18n)
+    meaning: Building an app so it can work in many languages and regions.
+  - term: Locale
+    meaning: A language plus a region, such as pt-BR for Portuguese in Brazil.
+  - term: ICU MessageFormat
+    meaning: A standard way to write messages that change with a number, a choice or a name.
+  - term: Plural forms
+    meaning: Languages use different numbers of word forms for counts. English has two, Arabic has six.
+  - term: Right-to-left (RTL)
+    meaning: Languages such as Arabic and Hebrew that read from right to left.
+  - term: Pseudo-localization
+    meaning: A fake test language made from your own text, with accents and extra length, to expose layout and text bugs.
+  - term: Hardcoded string
+    meaning: Text typed directly into code instead of a message file.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a whole message file and return rewrites you can paste back.
+    - name: A coding tool such as Claude Code
+      why: It can search your project for hardcoded text and apply the fixes.
+  inputs:
+    - A glossary of brand and product names that must not be translated.
+    - Screenshots of the screens with the most text, such as checkout or settings.

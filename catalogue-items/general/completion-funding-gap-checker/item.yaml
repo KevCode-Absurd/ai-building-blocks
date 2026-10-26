@@ -1,15 +1,13 @@
 slug: completion-funding-gap-checker
 name: Completion funding gap checker
-summary: A completion cost and committed funding gap bridge
+summary: "Find out if a half-built project has enough money to finish: remaining cost plus contingency against committed debt, equity and cash."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - construction-funding-draw-planner
+  - construction-interest-schedule-builder
+  - reconcile-construction-draws-and-completion-funding
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -1,6 +1,6 @@
 new_slug: phone-style-video-ad
 name: "Get a phone-style video ad from idea to cut list"
-summary: "Give it your product and buyer. Get a creator script, a filming brief, and after filming a timed cut list."
+summary: "Write a phone-style video ad script, a filming brief for your creator, and a timed cut list for the edit once footage is back."
 job: make-video-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You will have a creator or a customer film the ad on a phone.
   - Your last creator videos came back unusable or off message.
   - You want the edit planned from the footage, not guessed.
+not_for:
+  - "You want a cartoon or animated ad: use the Animated film video ad script writer."
+  - "You want a still image ad: brief a designer or an image tool instead, since this makes video scripts and edit plans only."
+  - "You want a polished studio ad with a presenter, not a phone video: hire a video producer and use this only for the script."
 
 you_give:
   - Your product facts and who the ad is for
@@ -30,11 +34,36 @@ you_get:
   - After filming, a timed cut list with captions, sound and exports
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Your product facts, your reviews, your brand file, and a line on who the ad is for.
-  - Send the filming brief to your creator. When the footage comes back, give it to the same run for the last step.
-  - Check the script and the line fixes before you send anything to the creator.
+  - Download the handoff pack. It is a zip with a HANDOFF.md file and every skill file this workflow uses.
+  - Add the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
+  - Paste your product facts, your reviews, your brand file and a line on who the ad is for.
+  - Read the script, the line fixes and the filming brief. Fix anything that does not sound like your brand.
+  - Send the filming brief to your creator. The run pauses here.
+  - When the footage is back, give the clips to the same run to get the timed cut list.
+output_sample:
+  input:
+    - Your product facts and who the ad is for
+    - Your customer reviews (optional)
+    - Your brand file (optional)
+    - The raw clips from your creator, for the last step
+  prerequisites:
+    - An AI that can read files, such as Claude with a Project or Claude Code
+    - A creator or customer who can film on a phone
+  output:
+    - name: Brief
+      contains: Who the ad is for, their main doubt and the one argument the ad makes.
+    - name: Script
+      contains: A spoken script in five beats with picture notes, on-screen text, a shot list and two other openings.
+    - name: Line check
+      contains: Each weak line quoted with the check it failed and a fix.
+    - name: Read-aloud fixes and final script
+      contains: Lines that sound written are reworded, with no claim changed, and the full final script follows.
+    - name: Filming brief
+      contains: The idea in a few sentences, the shots in run order, and a must-have and maybe list.
+    - name: Cut list
+      contains: Timed cuts sorted by job, caption windows, a sound plan and export settings.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 
 how_it_works:
   - title: Picks the buyer and the angle

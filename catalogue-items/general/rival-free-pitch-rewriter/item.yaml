@@ -1,6 +1,6 @@
 slug: rival-free-pitch-rewriter
 name: "Rival-free pitch rewriter"
-summary: "Paste your pitch. Get it rewritten around what only you do, with no rival, no cheaper and no fight in it."
+summary: "Rewrite your pitch so it stands without a rival. Get one-line, three-sentence and 30-second versions built on what only you do."
 category: general
 type: skill
 role: make
@@ -16,3 +16,5 @@ version: 1.0.0
 minds: [peter-thiel]
 credits:
   - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Why describing yourself by a rival or as a disruptor shapes you into a copy, the habit of watching rivals more than the customer, and building a pitch around what you make instead"}
+next: [pitch-deck-checker-10-20-30, hardest-objections-answer-writer, positioning-statement-writer, ten-times-better-checker]
+needs_mode: manual

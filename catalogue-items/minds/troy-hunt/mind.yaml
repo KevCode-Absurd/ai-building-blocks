@@ -14,6 +14,27 @@ use_cases:
   - Write a factual security incident note for the right support team
   - Review what personal data a mailing list actually needs
   - Understand the limits of a negative breach search
+not_for:
+  - "You need a live forensic answer or a decision about your own account: contact the provider's official support or an authorized security team."
+  - "You want to learn how a computer system fails under load or find a slow spot: hire Brendan Gregg."
+  - "You want to understand how a system works by debugging it step by step: hire Julia Evans."
+output_sample:
+  input:
+    - The wording of a breach notice or suspicious message, with private details removed
+    - Which service it names and how you checked the source
+    - What you did and when, without the passwords or codes you typed
+    - What you have already done through official channels (optional)
+  output:
+    - name: Notice summary
+      contains: The service, the stated incident period, the data it says was exposed, and what is confirmed.
+    - name: Known and unknown scope
+      contains: Confirmed facts, observed events and open uncertainties, kept on separate lines.
+    - name: Verification plan
+      contains: A trusted route to check the message through the provider's own account or support pages.
+    - name: Incident timeline
+      contains: Messages received, pages visited, information types entered and notices seen, with your guesses kept apart.
+    - name: Support question list
+      contains: Precise questions for the provider or your organization's security team about what remains to confirm.
 seats:
   - seat: Account exposure and clear next steps
     asks: What information was exposed, what is verified, and which account needs attention?

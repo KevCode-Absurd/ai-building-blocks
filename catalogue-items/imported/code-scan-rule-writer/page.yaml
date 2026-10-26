@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Good rules need careful pattern design and testing.
 new_slug: code-scan-rule-writer
 name: Code scan rule writer
-summary: Describe a bug pattern. Get a tested Semgrep rule that finds it across
-  your code.
+summary: Write a Semgrep rule that finds a bug pattern across your code. Tested on bad and safe code so it flags the right lines. Describe the bug to start.
 job: secure-code
 headline: Code scan rule writer
-subhead: Describe a bug pattern once and get a Semgrep rule that finds it
-  everywhere in your code. The rule is tested, so it catches the bad cases and
-  leaves safe code alone.
+subhead: Describe a bug pattern once and get a Semgrep rule that finds it everywhere in your code. The rule is tested, so it catches the bad cases and leaves safe code alone.
 explain: |
   Describe a bug pattern once and get a Semgrep rule that finds it everywhere in your code. The rule is tested, so it catches the bad cases and leaves safe code alone.
 
@@ -18,6 +15,10 @@ when:
   - You want to enforce a coding rule across a big codebase.
   - You need to catch user input reaching a dangerous call.
   - Your current scan rules raise too many false alarms.
+not_for:
+  - "You only want to run existing Semgrep rulesets on your code: run Semgrep with those rulesets, no new rule needed."
+  - "You want a general code review with no custom rule: ask a security reviewer or use your AI for a plain review."
+  - "Your language has no Semgrep support, or you can't install Semgrep: use the scanner your team already has."
 you_give:
   - A description of the bug or pattern
   - An example of bad code
@@ -29,8 +30,26 @@ you_get:
   - Test results
   - Notes on false positives
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open an AI that can run commands and read files, such as Claude Code. Check that Semgrep is installed.
+  - Paste the skill into the chat and tell your AI to follow it.
+  - Describe the bug. Add a sample of bad code, a sample of safe code (optional) and the language.
+  - Let your AI read the Semgrep docs first. This needs web access.
+  - Check the test file. It should have both bad cases and safe cases, and all tests should pass.
+  - Next, run the rule in your CI (the automatic checks on each code change) across your codebase. To run existing rulesets instead, use the static-analysis skill.
+output_sample:
+  input:
+    - A description of the bug or pattern
+    - An example of bad code
+    - An example of safe code (optional)
+    - The language your code uses
+  prerequisites:
+    - Semgrep installed on your computer
+    - An AI that can run commands and read and write files
+    - Web access, so your AI can read the Semgrep docs first
+  output:
+    - name: <rule-id>.yaml
+      contains: One Semgrep rule, using taint mode when data flows from user input to a risky call, or plain pattern matching.
+    - name: <rule-id>.<ext>
+      contains: A test file in your language with lines marked as should match (ruleid) and should not match (ok).
+    - name: Test results
+      contains: The result of the Semgrep test command, which must pass fully before the rule is done.

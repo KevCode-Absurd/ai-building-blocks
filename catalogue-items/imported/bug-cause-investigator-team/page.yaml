@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It splits the search, then compares what each helper found.
 new_slug: bug-cause-investigator-team
 name: Bug cause investigator team
-summary: Give it a crash or odd behaviour. Get several parallel read-only
-  investigations and one ranked list of likely causes.
+summary: Find the root cause of a bug, crash or regression. Give it the symptom and get four read-only checks and one ranked list of likely causes.
 job: test-and-fix-code
 headline: Bug cause investigator team
-subhead: Give it a crash or odd behaviour. Get several parallel read-only
-  investigations and one ranked list of likely causes. Bring what you see and
-  what you expected. Use the result to plan your next step.
+subhead: Give it a crash or odd behaviour. Get several parallel read-only investigations and one ranked list of likely causes. Bring what you see and what you expected. Use the result to plan your next step.
 explain: |
   Four read-only investigators look into your bug at the same time, and you get one ranked list of likely causes and the fastest way to prove each. No code is changed.
 
@@ -18,6 +15,10 @@ when:
   - A crash happens now and then and you cannot repeat it.
   - You have a stack trace but the cause is not near it.
   - You want a diagnosis first, with no edits yet.
+not_for:
+  - "You already know the fix or it is a one-line typo: edit the file yourself or run one test."
+  - "You want the bug fixed now: ask your AI to make the smallest fix once you know the cause, because this skill never edits files."
+  - "Your AI cannot read your project files: describe the bug to a developer, or paste the code and logs into a normal chat."
 you_give:
   - What you see and what you expected
   - Steps to repeat, if known (optional)
@@ -29,9 +30,28 @@ you_get:
   - A ranked list of likely causes
   - The fastest test to confirm each cause
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run several helper agents and read your
-    project files.
+  - Open your AI tool with access to your project files, such as Claude Code or Codex. It needs to read your code.
+  - Paste the skill into the chat, or add the skill folder as your tool asks.
+  - Describe what you see and what you expected. Add steps, logs and recent changes if you have them.
+  - Ask your AI to investigate and rank the likely causes, and tell it not to edit files.
+  - Read the ranked list. Run the fastest proof step for the top cause before you change any code.
+output_sample:
+  input:
+    - What you see and what you expected
+    - Steps to repeat the bug (optional)
+    - Logs, stack traces or failing tests (optional)
+    - Recent changes or the code area involved (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - An AI that can run several helper agents at once, or it will check the four angles one by one
+  output:
+    - name: Bug packet
+      contains: The symptom, expected and actual behaviour, steps to repeat, who is hit, and the evidence you gave.
+    - name: Investigation brief
+      contains: What looks broken, what is not yet proven, where to look, and what would count as proof.
+    - name: Four investigator findings
+      contains: Each helper's idea, its evidence, what is missing, the smallest proof step and its confidence.
+    - name: Ranked causes
+      contains: Likely causes in order, with duplicates merged, weak guesses dropped and alternate theories kept only if plausible.
+    - name: Diagnosis path
+      contains: Most likely cause, other causes, fastest proof step, suggested fix path and open questions.

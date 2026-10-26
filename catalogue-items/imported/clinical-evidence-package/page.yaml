@@ -2,36 +2,66 @@ thinking: high
 thinking_why: Health work needs care, caution and clear limits on claims.
 new_slug: clinical-evidence-package
 name: Clinical research evidence packager
-summary: Give it study data that is safe to share. Get evidence profiles, cohort
-  and survival summaries and privacy notes.
+summary: "Build a clinical research evidence package from grouped study data: evidence profiles, cohort table shells, survival plans and privacy notes."
 job: research-topics
 headline: Clinical research evidence packager
-subhead: Give it study data that is safe to share. Get evidence profiles, cohort
-  and survival summaries and privacy notes. Bring aggregate study data with
-  small cells hidden. Use the result to plan your next step.
+subhead: Give it grouped study data with small counts hidden, plus your research question. It drafts evidence checklists, cohort tables, a survival plan review and privacy notes. All of it is for research only, and a qualified person must approve it.
 explain: |
   Research documents for a clinical study, built from data that is safe to share. You get evidence profiles, cohort tables, survival analysis plans and privacy notes, all marked as research use only.
 
   It works only on grouped numbers with small counts hidden, and never on a single patient. It will not diagnose, advise treatment, work out doses or support live care. Within that line it writes statements of intended use and limits, table shells for cohorts, plans for survival analysis, summaries of how well a model or biomarker performs, and checklists to rate the strength of evidence. It also adds notes on privacy and governance. Local scripts check the files for structure. Python is needed, and no network access.
 when:
-  - You are writing a study protocol and need clear cohort table shells.
-  - You want to rate the strength of evidence for a research question.
-  - You need a plan for survival analysis before touching data.
+  - You are writing a study protocol and need cohort table shells.
+  - You want to check how strong the evidence is for a research question.
+  - You need a survival analysis plan reviewed before you touch the data.
   - You must record privacy and governance notes for a study.
+not_for:
+  - You need to diagnose, triage, pick a treatment or work out a dose for a patient. Ask a licensed healthcare professional and a validated clinical system.
+  - You have patient rows or records. Do not paste them. Get a person who owns the data to make a grouped version with small counts hidden first.
+  - You need a legal, FDA or HIPAA compliance sign-off. Ask a regulatory or privacy expert.
 you_give:
-  - Aggregate study data with small cells hidden
-  - The research question
-  - Study design details
-  - Existing protocol notes (optional)
+  - Grouped count tables with small counts hidden
+  - The smallest count you allow to be shown
+  - Your research question
+  - Your study design details
+  - The date your data was cut
+  - Your existing protocol notes (optional)
 you_get:
-  - Evidence profile checklist
-  - Cohort table shells
-  - A survival analysis plan review
-  - Model performance summary
+  - A header that marks every file as research use only
+  - An evidence profile checklist with a place for each judgment
+  - Cohort table shells with small-count rules
+  - A review of your survival analysis plan
+  - A summary of model or biomarker performance
   - Privacy and governance notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on local files.
+  - Ask a named person to confirm the data is grouped or synthetic. Have them write that down.
+  - Open an AI that can run Python on local files. Add the skill folder. No internet is needed.
+  - Paste your research question, study design, count tables and smallest allowed count.
+  - Ask for the file you need, such as cohort table shells or a survival plan review.
+  - Check each file. A qualified person must fill in the evidence ratings and approve the drafts.
+  - If the AI cannot run code, you still get the drafts, but the file checks will not run.
+output_sample:
+  input:
+    - Your grouped count tables, with small counts hidden
+    - Your research question
+    - Your study design details
+    - The smallest count you allow to be shown
+    - The date your data was cut (optional)
+  prerequisites:
+    - An AI that can run Python 3.11 or later on local files
+    - A named person who confirms the data is synthetic or grouped
+  output:
+    - name: Artifact header
+      contains: States the research-only intended use, the limits, and that a qualified person must approve the draft.
+    - name: GRADE evidence profile checklist
+      contains: One row per outcome for bias, inconsistency, indirectness, imprecision, source IDs and the final rating a human panel fills in.
+    - name: Cohort table shells
+      contains: Grouped cohort tables with rules for hiding small counts.
+    - name: Survival analysis plan review
+      contains: A check of your survival plan, written before you touch any data.
+    - name: Model or biomarker performance summary
+      contains: Grouped results on how well a model or biomarker performs, with uncertainty and subgroup notes.
+    - name: Privacy and de-identification checklist
+      contains: Steps to confirm the data is safe to share, plus governance and audit notes.
+    - name: Reporting guideline pick
+      contains: The reporting guideline that fits your study type, such as STROBE or TRIPOD+AI.

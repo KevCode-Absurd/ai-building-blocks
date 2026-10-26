@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It links deal terms to pro forma results.
 new_slug: merger-effect-modeler
 name: Merger effect modeler
-summary: Give it two companies and deal terms. Get the effect on earnings per
-  share, cost savings cases and price split.
+summary: Model the effect of buying a company on your earnings per share. Give it both companies and deal terms, and get a merger model with cost savings cases.
 job: money-and-investing
 headline: Merger effect modeler
-subhead: A model that shows whether buying a company adds to or cuts your
-  earnings per share, and by how much. Give it both companies and the deal
-  terms, and you get the price paid, how it is funded, and what happens after
-  cost savings.
+subhead: A model that shows whether buying a company adds to or cuts your earnings per share, and by how much. Give it both companies and the deal terms, and you get the price paid, how it is funded, and what happens after cost savings.
 explain: |
   A model that shows whether buying a company adds to or cuts your earnings per share, and by how much. Give it both companies and the deal terms, and you get the price paid, how it is funded, and what happens after cost savings.
 
@@ -19,6 +15,10 @@ when:
   - You want to compare paying in cash versus shares.
   - You need to test how many cost savings make the deal break even.
   - You are building an Indian deal model and want the units right.
+not_for:
+  - "You want to value one company on its own: use a discounted cash flow model or a peer comparison, not this."
+  - "The target is private and has no earnings: use a simple valuation by revenue or assets first, then come back."
+  - "You need a full legal or tax review of the deal: ask a deal lawyer or a chartered accountant."
 you_give:
   - "Buyer details: share price, share count, earnings, debt and cash"
   - "Target details: price, shares and earnings"
@@ -30,7 +30,33 @@ you_get:
   - Earnings per share before and after the deal
   - Savings cases and a break-even view
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat with an AI that can make Excel files. Paste in this skill.
+  - Add the buyer and target details, the offer price and the cash and stock mix.
+  - Add your expected savings, fees and close date. If you skip something, your AI should ask or mark it missing.
+  - Check that all amounts are in rupees, in lakh or crore, and that years run April to March.
+  - Read the year one result and the breakeven savings first. Then look at the sensitivity tables.
+  - Use the one-page summary in your pitch book or deal discussion.
+output_sample:
+  input:
+    - "Buyer details: share price, share count, earnings, debt and cash"
+    - "Target details: share price, share count and earnings or net income"
+    - Offer price and the mix of cash and stock
+    - Expected savings, fees and close date
+  prerequisites:
+    - An AI that can build and share an Excel file (otherwise you get the tables in the chat)
+    - The India market conventions and market data skills, which this skill asks your AI to load first
+  output:
+    - name: Purchase price analysis
+      contains: Offer price, premium, equity value, net debt, enterprise value and the implied multiples.
+    - name: Sources and uses
+      contains: Where the money comes from, and what it pays for, including fees.
+    - name: Pro forma EPS
+      contains: Earnings per share for years one to three, before and after the deal, with accretion or dilution.
+    - name: Sensitivity tables
+      contains: How the result changes with cost savings, offer premium and the cash and stock mix.
+    - name: Breakeven savings
+      contains: The least cost savings needed for the deal to leave year one earnings per share unchanged.
+    - name: Excel workbook
+      contains: Assumptions, sources and uses, pro forma income statement, summary, sensitivities and breakeven on separate tabs.
+    - name: One-page summary
+      contains: A short merger consequences page you can put in a pitch book.

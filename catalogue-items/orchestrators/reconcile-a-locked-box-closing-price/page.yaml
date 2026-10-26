@@ -1,44 +1,80 @@
 new_slug: reconcile-a-locked-box-closing-price
 name: Reconcile a locked-box closing price
 headline: Reconcile a locked-box closing price
-summary: Combine unrecovered leakage and a separately documented ticking amount.
+summary: Work out a locked-box deal price after seller leakage and the daily delay fee. Get one bridge from the signed price, transfer ledger and ticking clause.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A fixed-price adjustment bridge showing leakage and ticking compensation separately. Share signed locked-box price, dated transfer ledger, permitted items, repayment evidence, daily ticking clause and counsel-confirmed eligible days.
+subhead: Give it the signed locked-box price, the seller transfers since the locked-box date, the permitted items and any repayments. It works out the leakage not recovered, then the ticking (delay) fee for the days your lawyer confirms. You get one price bridge with each adjustment on its own line.
 explain: |-
-  A fixed-price adjustment bridge showing leakage and ticking compensation separately.
+  In a locked-box deal the price is fixed at an earlier balance sheet date. The seller promises not to take value out of the company after that date, except for items the contract allows. Money that leaks out anyway comes off the price. If closing is delayed, many contracts add a fixed daily fee, called a ticking fee, to pay the seller for the wait.
 
-  Acquisition closing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow keeps those two apart. Step 1 adds up transfers to the seller after the locked-box date, takes off what the contract permits and what was repaid, and leaves disputed items on their own line. Step 2 multiplies the eligible days by the daily fee. If the contract does not say whether the fee applies to the original or the adjusted price, it shows both bridges.
+
+  It works from the contract terms you give it. It does not read the agreement for you, settle a dispute or approve a payment. A lawyer confirms the permitted items and the day count.
 when:
-  - You need a fixed-price adjustment bridge showing leakage and ticking compensation separately.
-  - You work on acquisition closing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Closing is near and you need the final price after leakage and the delay fee.
+  - The seller's ledger shows payments since the locked-box date and you need to know which ones count as leakage.
+  - A repayment came in after a transfer and you are not sure it should reduce the leakage.
+  - Closing slipped and you need to add the daily fee for the right number of days.
+not_for:
+  - "The deal uses a working capital peg and a true-up after closing: use the Seller closing proceeds and retained cash checker."
+  - "You only need the leakage, or only the delay fee: use the Locked-box seller transfer checker or the Deal delay fee calculator on its own."
+  - There is a dispute, a tax gross-up or a liability cap. This covers plain leakage and a fixed daily fee only.
 you_give:
-  - Signed locked-box price, dated transfer ledger, permitted items, repayment evidence, daily ticking clause and counsel-confirmed eligible days.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed locked-box price and the locked-box date, from the sale agreement
+  - The ledger of transfers to or for the seller since that date, with dates and amounts
+  - The permitted items from the agreement, and proof of any repayment
+  - "The ticking clause: the daily amount, when it starts and stops, and calendar or business days"
+  - The number of eligible days, confirmed by your lawyer
+  - Currency, scale and closing date
 you_get:
-  - A fixed-price adjustment bridge showing leakage and ticking compensation separately.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Gross seller transfers, less permitted items and confirmed repayments, giving unrecovered leakage
+  - The price after the leakage deduction
+  - "The ticking fee: eligible days times the daily amount"
+  - One bridge with leakage and ticking on separate lines
+  - A list of disputed items and gaps
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the workflow pack to Claude, ChatGPT or Gemini. Use an AI that can read files, and make spreadsheets if you want a workbook.
+  - Attach the signed agreement pages and the transfer ledger. Paste your lawyer's day count. Say the currency and scale once.
+  - After step 1, check that no item is both permitted and repaid, and that each transfer appears once. Disputed items should sit on their own line.
+  - After step 2, check that the day count is your lawyer's number and not two dates subtracted, and that the daily amount and the price share one currency.
+  - Read the bridge against the agreement and fill every MISSING line before anyone acts on a figure. Nothing here moves money.
 how_it_works:
   - title: Locked-box leakage checker
-    text: Calculate only unrecovered, nonpermitted transfers from the actual period and ledger. Save disputed classifications instead of treating all seller payments as prohibited.
+    text: Tags each transfer to the seller in the locked-box period. Takes off permitted items and confirmed repayments, sets disputed items apart, and deducts only the unrecovered amount from the fixed price. Hands step 2 the leakage and the price it reduces.
   - title: Deal ticking fee checker
-    text: Use the actual eligible-day count and fixed daily amount. Reconcile ticking compensation alongside the verified leakage deduction; if the contract base differs, preserve the original base and show a separate bridge.
+    text: Multiplies your lawyer's eligible days by the daily amount, as a separate line for each rate if the rate changes. Shows the price with leakage and ticking side by side, and a second bridge when the contract's base price differs.
 output_shape: |-
-  A fixed-price adjustment bridge showing leakage and ticking compensation separately.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  LOCKED-BOX BRIDGE  <currency>, <scale>, closing date <date>
+
+  1 LEAKAGE       gross transfers <n> - permitted <n> - repaid <n> = unrecovered <n>
+                  disputed (not deducted) <n>
+  2 TICKING FEE   eligible days <n> x daily amount <n> = <n>
+  BRIDGE          fixed price <n> - leakage <n> + ticking fee <n> = <n>
+                  base used for ticking: <original or adjusted price, per the contract>
+
+  SOURCES         <each input, its source and date>
+  MISSING         <each gap and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - The signed locked-box price and locked-box date
+    - The seller transfer ledger, permitted items and proof of repayments
+    - The ticking clause and your lawyer's eligible day count
+    - Currency, scale and closing date
+  prerequisites:
+    - Your lawyer's confirmation of permitted items and eligible days
+  output:
+    - name: Leakage
+      contains: Transfers less permitted items and repayments, with disputed items on their own line.
+    - name: Ticking fee
+      contains: Eligible days times the daily amount, one line for each rate.
+    - name: Price bridge
+      contains: Fixed price less leakage plus ticking fee, with the base used for the fee.
+    - name: Sources and gaps
+      contains: Each input's source, each gap and any check that could not run.
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -58,15 +94,24 @@ test:
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat you get the same tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed agreement, not a draft
+    - A transfer ledger with one line for each payment and a date
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Locked box
+    meaning: A deal where the price is fixed at an earlier balance sheet date, with no adjustment at closing.
+  - term: Leakage
+    meaning: Value that leaves the company for the seller after the locked-box date, without the buyer's agreement.
+  - term: Permitted leakage
+    meaning: A payment to the seller that the agreement allows, so it does not reduce the price.
+  - term: Ticking fee
+    meaning: A daily amount added to the price when closing runs past an agreed date.
+  - term: Eligible days
+    meaning: The days that count for the ticking fee under the contract, confirmed by a lawyer.
+next:
+  - deal-funding-gap-checker

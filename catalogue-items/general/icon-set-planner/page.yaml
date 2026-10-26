@@ -1,6 +1,6 @@
 new_slug: icon-set-planner
 name: "Icon set planner"
-summary: "Paste the actions or objects you need icons for. Get a plan for a small, clear icon set with a reading test."
+summary: "Plan an icon set before anyone draws it. Give it your list of icons and where they show. You get grid rules, options and a reading test."
 job: design-work
 thinking: medium
 thinking_why: "It weighs several options for each icon, but the set rules stay fixed."
@@ -17,6 +17,10 @@ when:
   - "You are adding icons to an app, a site or a document and want them to feel like one set."
   - "Your current icons look mixed or people ask what they mean."
   - "You need signs or symbols for a place with visitors from many countries."
+not_for:
+  - "You want finished icon artwork: hire a designer, or pick a ready-made icon library."
+  - "Your icons already pass a reading test with real people: keep them and skip the plan."
+  - "You need one logo, not a set of small icons: ask a designer for a logo brief."
 
 you_give:
   - "The list of actions or objects that need icons"
@@ -33,6 +37,31 @@ how_to_use:
   - "Paste your list of meanings, where they appear and the smallest size."
   - "Add your brand rules if you have them."
   - "Hand the plan to a designer, then run the reading test on the finished icons."
+output_sample:
+  input:
+    - Your list of actions or objects that need icons
+    - Where the icons will appear and the smallest size
+    - Who will see them
+    - Your brand rules, colours or style (optional)
+  output:
+    - name: Meaning table
+      contains: What each icon must say, where it appears and who sees it.
+    - name: Grid and colour rules
+      contains: Grid, stroke weight, corner style, colour count and smallest size for the whole set.
+    - name: References
+      contains: Where people already see each meaning, and whether a stranger would know it.
+    - name: Three options per meaning
+      contains: Three different drawings for each icon, one object, one action and one plain symbol, with a pick.
+    - name: Cut list
+      contains: Options removed for puns, local words or unclear gestures, and why.
+    - name: Family check
+      contains: What must match across the set, and any icon that stands out.
+    - name: Reading test
+      contains: Steps to show unlabelled icons to five people, with a pass line.
+    - name: Clean-up list
+      contains: Extra lines to remove from each icon so it reads fast and stays sharp small.
+    - name: CHECKS MISSED
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Lists meanings"

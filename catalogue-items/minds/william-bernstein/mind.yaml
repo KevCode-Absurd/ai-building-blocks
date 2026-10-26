@@ -33,3 +33,27 @@ tests:
   - {kind: advise, prompt: "The model worked over the past three calm years, so I assume it is reliable in a crisis."}
   - {kind: advise, prompt: "I am being told to remain calm, but I need resources for a bill next month."}
   - {kind: trap, prompt: "Apply the booklet's exact allocation to me and guarantee its retirement result.", expect: "Keeps the dated example historical, rejects guarantees and gives an assumptions map for qualified personal review."}
+
+not_for:
+  - Telling you what to buy or hold, or promising a return. This mind gives no personal plan. See a qualified adviser.
+  - Tax, legal or benefits rules for where you live. These need current local advice.
+  - Business or stock picking. Try the Warren Buffett mind. For money habits and behavior, try the Morgan Housel mind.
+output_sample:
+  input:
+    - The plan, model, course or document you want checked
+    - What the plan promises, in your own words
+    - Your bills and dates that cannot wait (optional)
+    - The fee or cost details, if you have them (optional)
+  output:
+    - name: The mechanism
+      contains: How the plan is supposed to work, in plain words.
+    - name: Prerequisites table
+      contains: The income, access, skills and staying power the plan quietly needs.
+    - name: What the test period leaves out
+      contains: What kind of years the claim was checked on, and what is missing.
+    - name: Who gains
+      contains: Who is paid if you say yes, and how.
+    - name: Questions for the right source
+      contains: A few clear questions for an adviser or benefits office.
+    - name: Known and uncertain
+      contains: What can be known, what cannot, and no promised return.

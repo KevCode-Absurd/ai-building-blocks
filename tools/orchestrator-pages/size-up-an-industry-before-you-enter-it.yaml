@@ -1,6 +1,6 @@
 new_slug: size-up-an-industry-before-you-enter-it
 name: Size up an industry before you enter it
-summary: Give it the industry. Get a five forces read, a counter-position, a first market and a call.
+summary: "Size up an industry before you enter it: get a five forces read, a counter-position, a first market and a go or no-go call."
 job: plan-strategy
 thinking: high
 thinking_why: It judges an industry's structure and makes a go or no-go call with money behind it. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are weighing a move into a new industry or category.
   - The market is big and you suspect that is why everyone is in it.
   - You want a plan that names the first customers and the power you would hold.
+not_for:
+  - "You only want a quick test of a product idea: use the Seven-question startup scorer first."
+  - "You already sell in this market and want to know which edge you hold: use the Competitive advantage tester."
+  - "You need a rollout plan for markets you have picked: use the Market expansion roadmap planner."
 you_give:
   - The industry and what you would offer
   - What you know about the rivals, the buyers and the suppliers
@@ -30,6 +34,27 @@ how_to_use:
   - Paste the industry, your offer and what you know. It reads the forces and tests the powers.
   - Read the counter-position. If there is none, take the finding seriously.
   - Read the call. If it is go, start with the first market it names.
+output_sample:
+  input:
+    - The industry and what you would offer
+    - What you know about the rivals, buyers and suppliers
+    - Your strengths, money and time
+    - A list of competitors (optional)
+  prerequisites:
+    - An AI that can follow a folder of skill files, such as Claude in Claude Code or a Claude Project
+  output:
+    - name: Step 1 five forces read
+      contains: Buyer power, supplier power, ease of entry, substitutes and rivalry, each scored with evidence, and where the profit sits.
+    - name: Step 2 powers test
+      contains: Which of Helmer's seven powers you could build, which you could not, and the one to aim for first.
+    - name: Step 3 counter-position
+      contains: A way to operate that incumbents cannot copy without hurting themselves, or the finding that there is none.
+    - name: Step 4 first market
+      contains: A small first market to win, why those buyers feel the problem most, and the markets after it.
+    - name: Step 5 call
+      contains: Go or no go, the three facts it rests on, the weak joints and what would change it.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read the five forces
     text: Scores buyer power, supplier power, ease of entry, substitutes and rivalry, and says where the profit sits.

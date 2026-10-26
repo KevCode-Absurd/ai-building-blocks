@@ -1,6 +1,6 @@
 name: "Video caption maker in your brand font"
 new_slug: branded-video-captions
-summary: "Attach clips, script and font. Get timed brand-font captions, a subtitle file and a fault list."
+summary: "Add captions in your brand font to finished video ads. Get timed caption groups, a fault list and a subtitle file you can check on a phone."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your clips are made and approved, and they need captions before they go live.
   - Your editor keeps using the wrong font, or captions land under the app's buttons.
   - You trimmed clips and the captions fell out of time.
+not_for:
+  - "Your clips are not finished yet: finish and approve the cut first, then caption it, because a trim moves the caption times."
+  - "Your ad has no spoken words and only needs text on screen: use the On-screen text planner for video ads."
+  - "You need the script itself fixed or reworded: use the Video ad script writer from customer quotes, then caption the approved script."
 
 you_give:
   - The finished clips, with their real lengths (attach them, or screenshots of each clip if your AI can't open video)
@@ -36,6 +40,33 @@ how_to_use:
   - Attach your font files and logo file.
   - Read the stopped steps first. Anything marked MISSING blocks that part until you add it.
   - Watch the captioned video on your own phone with the sound off before you post it.
+output_sample:
+  input:
+    - Your finished clips, with each real length
+    - Your approved script or a word-for-word transcript
+    - Your font file for each text role (.ttf or .otf)
+    - Your brand colours and logo file (logo only if there is an end card)
+    - Where the ad runs, such as Reels or TikTok (optional)
+  prerequisites:
+    - An AI that can open video files, or screenshots of each clip's first, middle and last frames
+    - An editing tool or Claude Code with FFmpeg, if you want the exported videos and subtitle file
+  output:
+    - name: Stopped steps
+      contains: Anything marked MISSING, such as a font file or clip length, and which checks it blocks.
+    - name: Caption groups
+      contains: The script split word for word into short caption lines for each clip, with character counts.
+    - name: Style
+      contains: Your font file, letter and outline colours, contrast ratio and where captions sit on screen.
+    - name: Timing table
+      contains: Each caption's start, end and reading speed for every clip, with real and final clip lengths.
+    - name: Checklist
+      contains: A pass or fail for each caption on wording, fit, phone readability, font and clear space.
+    - name: Faults
+      contains: Each problem by clip, caption and part of the frame, with the smallest fix.
+    - name: Clean video, captioned video and .srt file
+      contains: Exports with and without burned-in captions, plus a matching subtitle file, when run in an editing tool.
+    - name: Checks missed
+      contains: One line for each check that failed or could not be done, or none.
 
 how_it_works:
   - title: Locks the words

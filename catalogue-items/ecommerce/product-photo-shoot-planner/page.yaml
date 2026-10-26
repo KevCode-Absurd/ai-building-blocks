@@ -1,6 +1,6 @@
 new_slug: product-photo-shoot-planner
 name: Product photo shoot planner
-summary: Attach your product photos and colours. Get a style sheet and 9 matching photo prompts.
+summary: Plan a product photo shoot where every picture matches. Give it your product photos and colours. You get a style sheet and a prompt for each frame.
 job: product-photos
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You need a set of product photos for a launch, a product page or social, and they must look like one shoot.
   - Your current photos all look different and your grid looks messy.
   - You want a short loop clip of the set for a story or reel.
+not_for:
+  - You have no true photo of the exact product variant. Take one first, or run the Product image spec writer to write down how the product looks.
+  - You want one image ad with a headline and offer. Use the Three-way offer image ad planner.
+  - You need a real shoot with a photographer, props and a studio. Hire a photographer, and use this only to plan the shot list.
 you_give:
   - Real photos of the exact product and variant
   - Your brand colours as hex codes, your photo style, places and what you never show
@@ -32,6 +36,29 @@ how_to_use:
   - Say where the photos go and in which size, and whether you want the loop clip.
   - Read the style sheet and frame list, change anything you don't want, then say "go ahead".
   - Approve frame 01 (the product alone) before anything else is made.
+output_sample:
+  input:
+    - Photos of your exact product and variant
+    - Your brand colours as hex codes, photo style and what you never show
+    - Where the photos go and in which size
+    - Who uses it, where and when (optional)
+    - Whether you want a loop clip, and music rights (optional)
+  prerequisites:
+    - An AI that can read your attached photos
+    - An image tool to make the pictures, such as ChatGPT or Gemini (optional, you can take the prompts elsewhere)
+  output:
+    - name: Style sheet
+      contains: "Six lines that stay the same for the whole set: colour plan, light, lens, surfaces, props and finish."
+    - name: Frame list
+      contains: Each frame with its job, distance, angle and what it shows, plus any job left out and why.
+    - name: Prompts
+      contains: One short prompt per frame, with image roles and the style sheet's light and finish lines copied word for word.
+    - name: Set check
+      contains: A side-by-side check that the product, light and finish match and no two frames are alike.
+    - name: Loop clip plan
+      contains: A frame order for a 6 to 8 second loop, only if you ask for it.
+    - name: Checks missed
+      contains: One line for each check the set still fails, or none. Missing facts such as a pack size are marked MISSING.
 how_it_works:
   - title: Writes down the product
     text: Records exactly how your product looks from its photos. With no true photo of the exact variant, there's no shoot.

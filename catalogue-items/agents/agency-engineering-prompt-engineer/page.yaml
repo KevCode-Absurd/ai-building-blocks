@@ -1,0 +1,152 @@
+name: Prompt Engineer agent
+summary: Describe the task and the answer format you need. Get a prompt spec, a first prompt draft and test cases to run before you rely on the prompt.
+headline: Prompt Engineer agent
+subhead: Tell it what the AI should do, what a good answer looks like and three real inputs. It writes a short spec, then a prompt with a role, limits and examples, plus test cases for the normal case, the odd case and the case it should refuse.
+job: make-skills
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A prompt is a spec. When an AI answer is wrong, the cause is usually a gap in
+  the instructions, such as "be brief" with no length, or an output format left
+  to chance. This prompt engineer agent writes the spec first. It pins down the
+  answer format, the three most common inputs and what the AI must refuse or
+  hand back. Only then does it write the prompt.
+
+
+  You get the prompt in four parts, which are role, limits, reasoning and
+  examples, plus at least three test cases. One covers the normal case, one an
+  odd case and one a case the prompt must fail safely, such as an empty message
+  or a request to ignore the rules. You run the tests, note what surprised you,
+  and bring the results back for one fix at a time.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. In a chat it
+  cannot run your prompt on your own model or setting, so the tests are for you
+  to run. The pass rates and error figures in the profile are the author's
+  examples, not results.
+when:
+  - You need an AI to do the same job each time, such as sort support emails, and the answers keep changing.
+  - You are building a customer-facing chatbot and need its rules, tone and limits written down.
+  - A prompt works on your test and then fails on real inputs.
+  - You are moving a prompt from one AI to another and need it checked and adapted.
+not_for:
+  - You want to tidy one rough prompt for everyday chat. Use the Rough prompt rebuilder.
+  - Your prompt is already in use and you want it tested and fixed in rounds. Use the Prompt and skill tuner.
+  - You want to turn a job you repeat into a reusable skill file. Use the Repeat job skill drafter.
+  - You want to check a prompt for safety and bias risk. Use the Prompt safety and bias reviewer.
+  - You need a prompt tuned on a live system with its real model and settings. Test it there, with an engineer.
+you_give:
+  - The task in one or two sentences, and who or what reads the answer, such as a person or a program.
+  - The exact answer format you need, such as a table, a short email or fields in JSON.
+  - Three real inputs the AI will see most often (paste them with private details removed).
+  - What the AI must refuse, hand off or say when it does not know.
+  - The AI and setting it will run on, and a prompt you already have (optional).
+you_get:
+  - A one-page spec of the task, answer format and limits.
+  - A prompt draft in four parts, role, limits, reasoning and examples.
+  - At least three test cases, with the normal case, an odd case and a refusal case.
+  - A version note and a list of known limits.
+  - A list of gaps and checks to run before you rely on it.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe the task, the answer format and your three real inputs. Say where the prompt will run.
+  - Answer the questions it asks once. Anything you cannot answer is marked MISSING in the spec.
+  - Run each test case on the AI and setting you will really use. Paste back what it answered.
+  - Fix one thing at a time. After each change, run all the test cases again.
+  - Keep the final prompt, its version note and its limits together, and store them where your team can find them.
+how_it_works:
+  - title: Write the spec
+    text: It sets the answer format, the three common inputs and the refusal rules before it writes any prompt.
+  - title: Draft the prompt
+    text: It writes role, limits, reasoning and examples, with each vague word like "short" turned into a number.
+  - title: Write the tests
+    text: It writes at least three cases, covering a normal input, an odd one and one that must fail safely.
+  - title: Mark what it cannot test
+    text: It says it has not run your prompt on your model, and names what you must test yourself.
+  - title: Fix one thing at a time
+    text: When you paste results back, it changes one part of the prompt, then asks you to run every test again.
+  - title: Hand off
+    text: It gives the final prompt, a version note, the settings tested and the known limits.
+output_shape: |-
+  SPEC
+    task <text> | answer format <exact format> | reader <person or program> | three common inputs <list> | must refuse or hand off <list> | MISSING: <list>
+
+  PROMPT DRAFT (v1)
+    ROLE <text>
+    LIMITS <format, length in numbers, tone, scope, what to say when out of scope>
+    REASONING <how it should work before answering>
+    EXAMPLES <two or more input and answer pairs>
+
+  TEST CASES
+    <input> | expected behaviour | type <normal, odd or refusal>
+
+  WHAT I COULD NOT TEST
+    <item> | how you can test it
+
+  VERSION NOTE
+    v1 | date | what it is | settings to test on
+
+  KNOWN LIMITS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - The task, and who or what reads the answer
+    - The exact answer format you need
+    - Three real inputs the AI will see most often
+    - What it must refuse or hand off
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Access to the AI and setting the prompt will run on, to test it
+  output:
+    - name: Spec
+      contains: The task, answer format, reader, common inputs and refusal rules, with gaps marked.
+    - name: Prompt draft
+      contains: A role, limits with numbers, reasoning steps and example inputs with answers.
+    - name: Test cases
+      contains: At least three cases, covering a normal input, an odd input and one that must be refused.
+    - name: What I could not test
+      contains: The parts only you can check on your own AI and setting.
+    - name: Version note
+      contains: The version, the date and the settings the prompt should be tested on.
+    - name: Known limits and checks
+      contains: Where the prompt may fail and the steps to check before use.
+works_best_with:
+  tools:
+    - name: The AI the prompt will run on
+      why: Run the test cases there, since the same prompt can behave differently on another AI or setting.
+    - name: A shared document or a code repository
+      why: Store each prompt version with its note and test cases so changes can be traced.
+  inputs:
+    - Ten real examples of the inputs, including messy ones.
+    - Two or three answers you would call good, as examples.
+    - Past wrong answers, with a note on what was wrong.
+terms:
+  - term: System prompt
+    meaning: The standing instructions an AI reads before each user message, such as its role and rules.
+  - term: Few-shot example
+    meaning: A sample input with the answer you want, placed in the prompt to show the AI what good looks like.
+  - term: Test case
+    meaning: One input with a note on what a good answer must do.
+  - term: Prompt injection
+    meaning: Text in an input that tries to make the AI ignore its instructions.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Answer format
+    how: Give the exact format, such as a table with named columns. A vague format is the top cause of changing answers.
+  - what: Real inputs
+    how: Paste three real inputs, with one messy. They become the examples and the tests.
+  - what: Refusal rules
+    how: Say what the AI must refuse and the exact words to use. It writes a test for each rule.
+improve:
+  - After each run, paste back the answers that surprised you. Each becomes a new test case.
+  - Keep the prompt, its tests and its version note in one place, and rerun the tests whenever you change the AI or setting.

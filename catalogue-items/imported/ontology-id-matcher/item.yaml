@@ -11,6 +11,8 @@ level: advanced
 inputs:
   - type: source_text
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: spreadsheet
 uses: []

@@ -32,4 +32,4 @@ credits:
   - title: tdd skill
     by: Matt Pocock
     url: https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Adapted under the MIT licence. We gave it a plain name and added steps, a report format, and what to do when something is missing.

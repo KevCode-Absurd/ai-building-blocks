@@ -1,33 +1,26 @@
 slug: common-equity-residual-income-review-assistant
 name: Common equity residual-income review assistant
-summary: Review common-equity changes that affect residual income and stable price-to-book assumptions.
+summary: "See how a new filing changes book equity, residual income and your price-to-book case. Get a change log and a workbook tied to sources."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
 uses:
   - build-a-clean-surplus-residual-income-model
   - oci-reclassification-bridge
 steps:
   - uses: build-a-clean-surplus-residual-income-model
-    note: Run the governing workflow when On new common-equity, comprehensive-income or capital-return evidence supplied by the user, compare beginning-book balances and clean-surplus assumptions with the accepted model.
+    note: "Run when new evidence on common equity, comprehensive income or capital returns arrives. It logs each change against your threshold, rolls book equity forward, charges each period on its beginning book, and builds a separate stable price-to-book scenario."
   - uses: oci-reclassification-bridge
-    note: If profit/OCI recycling changed, reconcile the permitted after-tax reclassification before updating residual income. Dirty-surplus changes stay separately identified; they are never forced through ordinary earnings to make book value tie.
+    note: "Run only if profit and OCI recycling changed. It reconciles the permitted after-tax amount before residual income is updated. Dirty-surplus changes stay separate and are never forced through earnings."
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews supplied evidence and gives no investment advice. A person who knows the accounting basis must check the source figures before anyone relies on the result.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

@@ -17,6 +17,21 @@ Frameworks for both sides of M&A: acquiring companies and being acquired.
 ## Keywords
 M&A, mergers and acquisitions, due diligence, acquisition, acqui-hire, integration, deal structure, valuation, LOI, term sheet, earnout
 
+## What to ask for first, and what to hand back
+
+**Ask for:** a description of the deal and the parties, which side the person is on (buying or being bought), their reason for the deal, their timeline, and, optionally, any financial figures they have. If the side, reason or timeline is missing, ask once. If it is still missing, write `MISSING: <what>`. Never invent figures, multiples, comparable deals or facts about the target. Any number in the framework below is the author's illustration, not data.
+
+**Hand back, in this order:**
+
+1. **Why this deal**: the buy-versus-build test and what is really being bought, in a few sentences.
+2. **Due diligence checklist**: by area (financial, technical, legal, people, market, customers), with the questions to ask and what the person must collect.
+3. **Valuation checks**: the methods to cross-check the price, and what the person must verify with current comparables.
+4. **Red flags**: the ones that fit this deal, with the evidence from what the person told you.
+5. **Integration plan** (buyer) or **preparation plan and negotiation points** (seller).
+6. **Pre-signing list**: the checks below, each marked done, open or not applicable.
+
+If the person is being acquired, replace sections 2 and 3 with readiness signs and a data room list. End with the limits stated at the bottom of this file.
+
 ## Quick Start
 
 **Acquiring:** Start with strategic rationale → target screening → due diligence → valuation → negotiation → integration.
@@ -89,13 +104,17 @@ See `references/integration-playbook.md` for the 100-day integration plan.
 
 ## Verification Loop (before any LOI or signature)
 
-This skill frames the deal; two sibling skills verify it. Hand off — don't duplicate:
+This skill frames the deal. The original skill pointed to scripts from sibling skills (a term sheet analyzer, a contract risk scanner, a training-data audit and a data-asset valuator). Those scripts are not in this folder, so do not run or pretend to run them. They are optional extras from the original author's collection. Use these plain checks instead, and mark each one done, open or not applicable:
 
-1. **Legal terms** → `general-counsel-advisor`: run the LOI/term sheet through `../general-counsel-advisor/scripts/term_sheet_analyzer.py` (12-dimension 0-100 score) and the definitive docs through `../general-counsel-advisor/scripts/contract_risk_scanner.py` (12 founder-killer patterns: earnout traps, uncapped indemnity, vague IP, etc.). Any 🔴 finding goes to outside counsel before signing.
-2. **Data diligence** → `chief-data-officer-advisor`: run `../chief-data-officer-advisor/scripts/ai_training_data_audit.py` (training-data rights, GDPR Art. 6 basis) and `../chief-data-officer-advisor/scripts/data_asset_valuator.py` (data-asset value, M&A multiplier with carve-out penalties) on the target's data estate. Undocumented consent provenance is a price-reduction or walk-away item.
-3. **Valuation math** → `cfo-advisor` tools for the quantitative model; this playbook stays qualitative.
+1. **Legal terms.** Read the letter of intent or term sheet for earnout traps (targets that cannot be reached), uncapped indemnity, vague IP ownership and unclear lockups. Any item that looks wrong goes to the person's lawyer before signing.
+2. **Data and consent.** If the target holds personal data or trains AI on data, ask where the data came from, what consent covers it, and who owns it. Undocumented consent is a reason to reduce the price or walk away. Ask a privacy lawyer to confirm.
+3. **Valuation math.** This playbook stays qualitative. Ask for the target's actual financial statements and a model from the person's accountant or finance lead. Never present a valuation number as fact.
 
 Loop the findings back into the negotiation-points table above before the next counter.
+
+## Limits
+
+This is a planning checklist, not legal, tax or financial advice, and not a formal valuation. Use a lawyer, an accountant and, where needed, an M&A advisor before any letter of intent or signature. For asset-only sales, public companies or regulated industries, specialist advice is needed on top of this.
 
 ## Integration with C-Suite Roles
 
@@ -113,5 +132,5 @@ Loop the findings back into the negotiation-points table above before the next c
 ## Resources
 - `references/integration-playbook.md` — 100-day post-acquisition integration plan
 - `references/due-diligence-checklist.md` — comprehensive DD checklist by domain
-- `../general-counsel-advisor/SKILL.md` — term sheet analyzer + contract risk scanner
-- `../chief-data-officer-advisor/SKILL.md` — data diligence + data-asset valuation
+- Optional, not included here: the general-counsel-advisor skill (term sheet analyzer and contract risk scanner) from the original collection
+- Optional, not included here: the chief-data-officer-advisor skill (data diligence and data-asset valuation) from the original collection

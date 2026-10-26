@@ -2,35 +2,101 @@ thinking: medium
 thinking_why: It follows a set pattern but must fit your code.
 new_slug: safe-shutdown-code-writer
 name: Safe shutdown code writer
-summary: Point it at your server or worker. Get code that finishes live work and
-  exits cleanly when stopped.
+summary: Stop dropping requests on deploy. Get graceful shutdown code that finishes live work, closes connections and exits cleanly.
 job: build-software
 headline: Safe shutdown code writer
-subhead: Code that lets your server or worker stop without dropping live
-  requests or losing half-done jobs. Point it at your service and get a shutdown
-  routine for when it receives a stop signal.
+subhead: Share your server or worker code and where it runs. Your AI writes a shutdown routine for it. The app stops taking new work, finishes what is running, closes its connections and exits. You also get health check endpoints and a test.
 explain: |
-  Code that lets your server or worker stop without dropping live requests or losing half-done jobs. Point it at your service and get a shutdown routine for when it receives a stop signal.
+  When a host restarts your app, it sends a stop signal first. Without code that listens for it, the app dies mid-request. Users see errors and background jobs are lost. Graceful shutdown means the app finishes its current work first. This skill writes that code for your server or worker.
 
-  The pattern runs in order. Catch the stop signals early and set a flag, ignoring repeats. Stop taking new connections or queue jobs right away. Let current work finish within a time limit. Close database connections and other resources. Then exit with the right code. It also adds health check endpoints so a load balancer stops sending traffic first, and notes for Kubernetes and Docker, which send the signal before they kill. Examples are given in TypeScript, and the same steps apply to other languages.
+  The order is fixed. It catches the stop signal and ignores repeats. It tells the load balancer to stop sending traffic, stops accepting new connections, and waits for running work up to a time limit. Then it closes the database and other resources and exits. A hard timeout makes sure the app never hangs forever.
+
+  The main examples are Node with TypeScript, Express and a queue worker. A FastAPI example shows how Uvicorn does the draining for you. The same steps apply to other languages.
 when:
   - Deploys drop active requests and users see errors.
-  - A background worker loses jobs when the container restarts.
+  - A background worker loses jobs when its container restarts.
   - You run on Kubernetes or Docker and need to handle the stop signal.
-  - You need health check endpoints for readiness.
+  - Your host asks for health check endpoints, such as /healthz and /readyz.
+not_for:
+  - "Your code is a short script or a serverless function: there is no long-running process to drain, so use your platform's own shutdown notes."
+  - "You want to design autoscaling or Kubernetes rollouts: this only covers how your own app stops, so ask a DevOps engineer or your host's docs."
+  - "You want retries for failed outbound calls: this only covers stopping your own app."
 you_give:
-  - Your server or worker code
-  - Language and framework
-  - How long a request or job can take
-  - Where you deploy
+  - Your server or worker code, or the file where it starts
+  - Your language and framework
+  - The longest time a request or job can take
+  - Where you deploy, such as Kubernetes, Docker or Heroku (optional)
 you_get:
-  - Signal handler code
-  - A drain and cleanup routine
-  - Health check endpoints
-  - A time limit with a forced exit
+  - A signal handler that starts the shutdown once
+  - A drain step with a time limit and a forced exit
+  - Health check endpoints that tell the load balancer to stop traffic first
+  - Settings to change on your host
+  - A test that checks no request is dropped
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and edit your project files.
+  - Find the file where your server or worker starts, and note how long your longest request or job takes.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. Then paste that file, and say your language, framework and where you deploy.
+  - Read the shutdown plan first. It lists the order in which your app will stop things. Ask your AI to explain any step.
+  - Add the code to your project. Change only the lines it marks. A chat AI cannot edit your files, but Claude Code or Codex can.
+  - Set the host's stop time a little above your drain time. For example, Kubernetes terminationGracePeriodSeconds should be larger than the drain limit.
+  - Run the test it gives you. Send a stop signal while a slow request is running, and check the request still finishes.
+how_it_works:
+  - title: Catch the stop signal
+    text: It listens for SIGTERM and SIGINT at startup and ignores a second signal.
+  - title: Stop new work
+    text: It closes the listener, or stops polling the queue, and flips readiness to 503.
+  - title: Drain with a deadline
+    text: It waits for running requests or jobs, and forces an exit if the time limit is reached.
+  - title: Close resources
+    text: It flushes logs and closes database connections before it exits.
+  - title: Add health checks
+    text: It adds /healthz for liveness and /readyz for readiness, so traffic stops before the app does.
+  - title: Check the host settings
+    text: It sets the drain time shorter than the host's stop time, and tells you where to change it.
+output_shape: |
+  Shutdown plan: <4 to 6 lines, in order>
+  Code: <file name>
+  <signal handler, stop new work, drain with deadline, close resources>
+  Health endpoints: <paths and what each returns>
+  Host settings: <setting, current value, new value>
+  Test: <how to send the signal and what to check>
+  Not covered: <WebSocket, clustered workers, other gaps>
+output_sample:
+  input:
+    - Your server or worker code
+    - Your language and framework
+    - The longest time a request or job can take
+    - Where you deploy (optional)
+  prerequisites:
+    - A way to run the app locally and send it a stop signal
+  output:
+    - name: Shutdown plan
+      contains: The order your app stops things, in a few plain lines.
+    - name: Shutdown code
+      contains: The signal handler, stop-new-work step, drain with a deadline and cleanup, fitted to your code.
+    - name: Health endpoints
+      contains: The /healthz and /readyz routes, with what each returns during a stop.
+    - name: Host settings
+      contains: The grace period and drain time to set, so the drain ends before the host kills the app.
+    - name: Test
+      contains: How to send a stop signal and check that no live request is dropped.
+    - name: Not covered
+      contains: Gaps such as WebSocket connections or clustered workers that need extra care.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can read your project and edit the files, so the code goes in the right place.
+    - name: Any good chat AI
+      why: It works for a single file you paste in. You add the code yourself.
+  inputs:
+    - Your Kubernetes or Docker settings file
+    - A list of what your app opens on start, such as databases and queues
+    - Your longest request time, from logs
+terms:
+  - term: SIGTERM
+    meaning: The stop signal a host sends to ask your app to shut down.
+  - term: Drain
+    meaning: Letting running requests or jobs finish before the app exits.
+  - term: Readiness check
+    meaning: An address the load balancer asks, to learn if your app should get traffic.
+  - term: Liveness check
+    meaning: An address the host asks, to learn if your app is alive or needs a restart.

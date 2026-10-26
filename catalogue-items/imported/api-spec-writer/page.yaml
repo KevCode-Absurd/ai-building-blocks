@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks a few questions, then fills a strict format.
 new_slug: api-spec-writer
 name: API spec writer
-summary: Describe your API or paste its code. Get a complete OpenAPI or Swagger
-  spec ready for docs and SDKs.
+summary: Describe your API or paste your route code. You get a complete OpenAPI or Swagger spec file, ready for docs, SDKs and partners.
 job: build-software
 headline: API spec writer
-subhead: A full, valid OpenAPI or Swagger file for your API, ready to feed your
-  docs and client libraries. Describe the API in words, or paste your route
-  code, and the file is written for you with no placeholders left.
+subhead: A full, valid OpenAPI or Swagger file for your API, ready to feed your docs and client libraries. Describe the API in words, or paste your route code, and the file is written for you with no placeholders left.
 explain: |
   A full, valid OpenAPI or Swagger file for your API, ready to feed your docs and client libraries. Describe the API in words, or paste your route code, and the file is written for you with no placeholders left.
 
@@ -18,6 +15,10 @@ when:
   - You need a spec so tools can generate client libraries.
   - A partner asks for your API in OpenAPI format.
   - Your old Swagger 2 file needs to move to version 3.
+not_for:
+  - "Your framework can already build a spec from code on its own: use that built-in generator instead, so the file stays in step with your code."
+  - "Your API is internal and nobody reads or calls it: skip the spec and keep a short note for your team."
+  - "You only need a plain-language guide for people, not a machine-readable file: ask a technical writer or write a short README."
 you_give:
   - A description of the API, or your route code
   - Output format and spec version
@@ -29,7 +30,27 @@ you_get:
   - Security setup
   - Reusable data schemas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Describe your API in plain words, or paste your route code. Express, FastAPI, Django, Spring and Rails code all work.
+  - "Answer the few questions it asks: spec version, file format, sign-in type and main data shapes. It skips what you already told it."
+  - Check the endpoint table at the end against your real API. Fix any wrong path or field name.
+  - Save the spec as a .yaml or .json file. This skill needs no code running. To check the file, paste it into a validator such as Spectral.
+output_sample:
+  input:
+    - A plain description of your API, or your route code
+    - OpenAPI 3 or Swagger 2, and YAML or JSON
+    - The sign-in type your API uses
+    - A partial spec to extend (optional)
+  output:
+    - name: API spec file
+      contains: The full OpenAPI or Swagger file in YAML or JSON, with info, servers, tags, paths and no placeholder comments.
+    - name: Paths and parameters
+      contains: Each endpoint with its path, query and header inputs, request body and a unique operation name.
+    - name: Responses
+      contains: Success and error replies for each endpoint, with shared error replies reused instead of repeated.
+    - name: Schemas
+      contains: Reusable data shapes with required fields, formats and an example on each one.
+    - name: Security schemes
+      contains: Your sign-in method defined once and applied to every endpoint that needs it.
+    - name: Summary table
+      contains: A short table listing every endpoint the spec now covers.

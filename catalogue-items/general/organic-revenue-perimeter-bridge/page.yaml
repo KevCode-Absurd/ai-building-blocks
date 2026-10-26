@@ -1,32 +1,64 @@
 new_slug: organic-revenue-perimeter-bridge
 name: Organic revenue perimeter bridge
 headline: Organic revenue perimeter bridge
-summary: Separate acquisition, disposal and currency effects from a comparable revenue growth calculation.
+summary: Work out organic revenue growth by taking acquisitions, disposals and currency effects out of reported revenue, with a bridge you can check.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A reported-to-organic revenue bridge with clearly defined comparable bases. Share reported revenues, current acquired revenue, disposed prior-period revenue, signed currency effect and documented comparable perimeter.
+subhead: Give it your reported revenue, the acquired and disposed revenue, and the currency effect. It removes them to find organic growth. You get a bridge you can trace back to each input.
 explain: |-
   A reported-to-organic revenue bridge with clearly defined comparable bases.
 
   Issuer revenue and cash-flow reconciliation. Illustrative figures. Prior comparable revenue100-10=90; current comparable130-20-5=105. Growth105/90-1=16.666667%. Acquired revenue15 gives110/90-1=22.222222%.
 when:
-  - You need a reported-to-organic revenue bridge with clearly defined comparable bases.
-  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You report growth to a board or lender and need to show it without deals and currency swings.
+  - You bought or sold a business and need comparable revenue for both periods.
+  - A reviewer wants to trace each step of the growth figure back to its source.
+  - Currency moves made reported growth look better or worse than trading really was.
+not_for:
+  - "You only need reported revenue growth from the accounts: compare the two reported figures in a plain spreadsheet."
+  - "You cannot document which businesses sit in both periods: ask your finance lead to define the comparable group first."
+  - "You need an audit opinion or a legal view on the accounting: use a qualified accountant."
 you_give:
-  - Reported revenues, current acquired revenue, disposed prior-period revenue, signed currency effect and documented comparable perimeter.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Reported revenue for the current and prior period.
+  - Revenue from acquired businesses in the current period, with dates.
+  - Revenue from disposed businesses in the prior period, with dates.
+  - The currency effect, with its sign.
+  - The list of businesses in the comparable group.
+  - Reporting currency, scale and accounting basis.
 you_get:
-  - A reported-to-organic revenue bridge with clearly defined comparable bases.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A bridge from reported revenue to organic revenue growth.
+  - An editable workbook with an input list and test cases.
+  - Reconciliation of each bridge part.
+  - A list of missing inputs and checks that did not run.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and open it in an AI that can create spreadsheet files.
+  - Paste or attach your revenue figures, deal dates, currency effect and comparable business list.
+  - Ask your AI to follow SKILL.md and to say what is missing instead of guessing.
+  - Check the assumptions and reconciliations in the result.
+  - Read CHECKS MISSED before you use the growth figure.
+  - Pass the bridge and reconciliation to your reviewer, with your source files.
+output_sample:
+  input:
+    - Reported revenue for the current and prior period
+    - Revenue from acquired businesses and the dates they joined
+    - Revenue from disposed businesses in the prior period
+    - Currency effect with its sign (plus or minus)
+    - List of businesses in the comparable group
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Scope and dated sources
+      contains: Which businesses, dates, currencies and source files the bridge covers.
+    - name: Inputs and assumptions
+      contains: Every figure used, with its source, date, currency, scale and sign.
+    - name: Model calculations and reconciliations
+      contains: The bridge from reported to organic revenue and a check that each part adds up.
+    - name: Actual file verification
+      contains: "What was checked in the workbook: formulas, errors, a changed input, and a reopened file."
+    - name: "MISSING: and CHECKS MISSED"
+      contains: Inputs not supplied and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Document exactly which businesses, dates and currencies belong in both comparable periods; remove divested or acquired contributions symmetrically where present
     text: Document exactly which businesses, dates and currencies belong in both comparable periods; remove divested or acquired contributions symmetrically where present.

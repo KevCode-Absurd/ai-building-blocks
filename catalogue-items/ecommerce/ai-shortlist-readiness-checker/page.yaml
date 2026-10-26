@@ -1,6 +1,6 @@
 new_slug: ai-shortlist-readiness-checker
 name: "AI shortlist readiness checker"
-summary: "Give it your product pages. Get found, matched and chosen checks, fixes and a score out of 100."
+summary: "Check why AI assistants skip your store. Give it your product pages. You get fixes for found, matched and chosen, plus a score out of 100."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It checks many items on live pages and ranks the fixes. A mid-level model is enough if it can browse. Use a stronger one for a large store."
@@ -19,6 +19,10 @@ when:
   - You want to know why AI assistants name your rivals and not you.
   - You edited robots.txt, changed your theme or added a CDN and want to be sure AI search bots can still reach you.
   - You are about to rewrite product pages and want to know which facts to fix first.
+not_for:
+  - "You need a Shopify admin audit of your catalogue data: use the AI shopping readiness checker, which connects to your store admin."
+  - "You want to see how many visits come from AI chat: set up AI traffic tracking, because this check cannot measure visits."
+  - "You want the product pages rewritten for you: use the AI-ready product page editor after this check."
 
 you_give:
   - Your store address and three to five key product pages
@@ -39,6 +43,30 @@ how_to_use:
   - Turn JavaScript off in your browser, reload one product page and tell the skill what disappeared.
   - Fix the Stop items first. Back up your theme before any change to robots.txt or the theme.
   - Run it again after the fixes to see the new score.
+output_sample:
+  input:
+    - Your store address
+    - Three to five key product pages
+    - Your product titles, descriptions and metafields (optional)
+    - Your robots.txt text, if your AI cannot browse (optional)
+    - Where your reviews live outside your store (optional)
+  prerequisites:
+    - An AI that can browse the web, or your robots.txt and page text to paste in
+  output:
+    - name: Found
+      contains: Pass, fix or not run for each check on bot access, readable pages, indexing, product data and speed, out of 40.
+    - name: Matched
+      contains: Checks on hard facts, narrow collections and titles, with a rewritten fact line for each weak page, out of 30.
+    - name: Chosen
+      contains: Checks on outside proof, page types that get cited and reviews, with sites to build proof on, out of 30.
+    - name: Robots.txt lines
+      contains: Lines that block or allow training bots, and keep search and citation bots allowed.
+    - name: 404 redirects
+      contains: Old landing pages that return 404, each paired with the closest real page.
+    - name: Score
+      contains: Points earned over points available, scaled to 100, with the sum shown.
+    - name: Not run
+      contains: Checks it could not do, what each needs, and anything missing from your input.
 
 how_it_works:
   - title: Checks if AI can reach you

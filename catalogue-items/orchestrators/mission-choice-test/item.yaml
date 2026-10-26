@@ -12,8 +12,8 @@ outputs:
   - {type: audit_report}
 uses: [eulogy-values-finder, roles-and-goals-mapper, personal-mission-statement, mission-choice-tester]
 steps:
-  - {uses: eulogy-values-finder, note: "Five ranked values and contributions, drawn from what you would want said about you."}
-  - {uses: roles-and-goals-mapper, note: "Your roles, what you are about in each, and one or two long-term results per role."}
+  - {uses: eulogy-values-finder, note: "Five ranked values and contributions, drawn from what you would want said about you. Hands step 2 the ranked values."}
+  - {uses: roles-and-goals-mapper, note: "Your roles, what you are about in each, and one or two long-term results per role. Uses the ranked values from step 1 to see which role each one belongs to."}
   - {uses: personal-mission-statement, note: "A short statement you could say from memory, with a one-line version."}
   - {uses: mission-choice-tester, note: "Which choices the statement settles, which it leaves open, and the fixes."}
 origin: rebuilt

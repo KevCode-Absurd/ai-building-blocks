@@ -2,17 +2,56 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-sql-object-impact-analysis
 name: SQL change impact investigator
-summary: Name the SQL object you plan to change. Get its callers and downstream
-  dependencies before editing.
+summary: Find what breaks before you change a SQL table, column, view or stored procedure. Get a report of every caller and downstream use.
 job: build-software
 headline: SQL change impact investigator
-subhead: Name the SQL object you plan to change. Get its callers and downstream
-  dependencies before editing. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Name the SQL object you plan to change and point your AI at your code. It searches your SQL files and app code for every place that uses it. You get a report that marks each finding as Direct, Indirect or Uncertain.
+not_for:
+  - "You want to speed up a slow query: use a SQL tuning step or ask a database admin to review the query plan."
+  - "You want to check which personal data a table exposes: use a privacy review, not this trace."
+  - "You want a full map of the whole codebase: write architecture notes by hand or scope a smaller module first."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can search and read your repo files, such as Claude with file access. A plain chat only works if you paste the code in.
+  - Paste the skill into the chat, or add it to your AI tool.
+  - Give it the exact object name and schema, your database type and your code folder.
+  - Ask it to run the impact analysis and say which languages are in the repo.
+  - Read the Indirect and Uncertain rows first. Check each by hand.
+  - Run the suggested checks on a test copy before you change the live object.
+output_sample:
+  input:
+    - The exact name of the table, column, view, procedure or trigger (with schema)
+    - Your code folder and SQL scripts folder
+    - Your database type, such as SQL Server or MySQL
+    - The languages used in your app code, such as C# or TypeScript
+  prerequisites:
+    - An AI that can search and read the files in your repo
+    - Read access to your .sql files and application code
+  output:
+    - name: Target Object
+      contains: The exact name, type and schema of the object you plan to change.
+    - name: Direct SQL Dependents
+      contains: Procedures, views, triggers and functions that name the object, grouped by type.
+    - name: Application Code Dependents
+      contains: Files, classes and methods that use the object, grouped by data access, API and frontend, with file paths.
+    - name: Indirect / Dynamic References
+      contains: Links found through dynamic SQL, synonyms or call chains, marked as needing a manual check.
+    - name: Risk Summary
+      contains: One paragraph on whether use is narrow or wide, with any scheduled jobs, integrations or reports called out.
+    - name: Suggested Verification Steps
+      contains: Concrete checks to run before you make the change.
+when:
+  - You plan to rename or drop a column in an old codebase.
+  - You are about to edit a stored procedure and don't know who calls it.
+  - A teammate asks if it is safe to change a table.
+  - You inherited a project with raw SQL and no ORM.
+you_give:
+  - The exact name of the table, column, view, procedure or trigger, with its schema
+  - The path to your repo or SQL scripts folder
+  - Your database type, such as SQL Server or MySQL
+  - The languages in your app code, such as C# or TypeScript
+you_get:
+  - A list of SQL objects that use your target, grouped by type
+  - A list of app files and methods that use it, with paths
+  - A separate list of links that could not be fully traced
+  - A short risk summary that flags jobs, integrations and reports
+  - Next checks to run before you change anything

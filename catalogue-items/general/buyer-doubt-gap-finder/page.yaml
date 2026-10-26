@@ -1,6 +1,6 @@
 new_slug: buyer-doubt-gap-finder
 name: "Buyer doubt gap finder"
-summary: "Paste customer questions and your page text. Get each doubt matched to the page, plus a score out of 100."
+summary: "Find the buyer doubts your page leaves unanswered. Paste customer questions and your page text to see what is hidden or missing, with a score out of 100."
 job: audit-landing-page
 thinking: medium
 thinking_why: "It matches many customer words to page text, which takes some judgement."
@@ -17,6 +17,10 @@ when:
   - "Reviews and tickets keep asking the same thing."
   - "A page gets visits but few orders."
   - "You are about to rewrite a page and want to know what to add."
+not_for:
+  - "You have only a few customer quotes: gather more reviews or tickets first, or the ranking is only a guess."
+  - "You want a full audit with every check: use the Unanswered customer question finder."
+  - "You want to rewrite the page copy itself: write it yourself or ask your AI, using the top five fixes as a brief."
 
 you_give:
   - "Reviews, questions or return reasons, each with a source"
@@ -33,6 +37,20 @@ how_to_use:
   - "Paste your page text, including the FAQ."
   - "Add any facts the answers can use."
   - "Start with the top five fixes."
+output_sample:
+  input:
+    - Customer reviews, questions or return reasons, each with its source
+    - The full text of your page, including the FAQ and buy area
+    - Policies and facts you can stand behind (optional)
+  output:
+    - name: Doubt table
+      contains: One row per doubt with quote, source, where the page answers it, status, fact needed and the answer to add.
+    - name: Top 5 fixes
+      contains: Five one-line changes to make first, in order.
+    - name: Facts to collect
+      contains: The facts you still need before some answers can be written.
+    - name: Score
+      contains: Points divided by doubts counted, times 100, with the sum shown.
 
 how_it_works:
   - title: "List the doubts"

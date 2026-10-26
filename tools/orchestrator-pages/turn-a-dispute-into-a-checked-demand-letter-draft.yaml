@@ -1,6 +1,6 @@
 new_slug: turn-a-dispute-into-a-checked-demand-letter-draft
 name: Turn a dispute into a checked demand letter draft
-summary: Answer questions about a dispute. Get a fact sheet, a dated timeline and a demand letter draft for a lawyer.
+summary: Turn a dispute into a demand letter draft you can check. Answer questions, get a fact sheet, a dated timeline and a letter for a lawyer to read.
 job: check-contracts
 thinking: high
 thinking_why: A demand letter can hurt you if a fact or quote is wrong, so every step needs your strongest model.
@@ -14,6 +14,10 @@ when:
   - A customer, supplier or partner owes you money and has not paid.
   - Someone broke an agreement and you want to put it on record.
   - You need a clear, calm first letter before a lawyer gets involved.
+not_for:
+  - "You have a large claim or a lawyer already on the case: go to your lawyer first, and bring the fact sheet and timeline."
+  - "You only need to chase one late invoice politely: send a short reminder email yourself."
+  - "You want a ready-to-send letter with no review: this gives a first draft, so ask a qualified lawyer to read it."
 you_give:
   - Answers about the dispute, such as who, what was agreed and what went wrong
   - What you want and what you would accept
@@ -25,11 +29,30 @@ you_get:
   - A demand letter draft with anything unverified flagged
   - A checklist for what to do after the letter is sent
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Answer its questions in full. Then add your emails and documents when it asks for them.
-  - Read every item it flags as "verify" before you do anything else.
-  - Have a qualified lawyer read the letter before it is sent.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md". It needs a tool that can read files.
+  - Answer its questions in full. Add your emails, contracts and invoices when it asks.
+  - Check the timeline. Every date and amount in the letter should match a record in it.
+  - Read every item marked verify before you do anything else.
+  - Ask a qualified lawyer to read the letter before it is sent.
+output_sample:
+  input:
+    - Your answers about the dispute, such as who, what was agreed and what went wrong
+    - What you want and what you would accept
+    - Your emails, contracts and invoices about it
+    - The tone you want and who will sign
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - A qualified lawyer to read the letter before it is sent
+  output:
+    - name: Fact sheet
+      contains: The demand type, tone, parties, what was agreed, what went wrong, what you want and what you will do if ignored.
+    - name: Timeline
+      contains: Dated events from your records with sources, key events marked, and a list of gaps and unclear dates.
+    - name: Demand letter draft
+      contains: The letter itself, plus a list of items to verify and a checklist for after sending.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Gather the facts of the dispute
     text: Asks what kind of demand it is, the tone, the reply window and the signer, then records the parties, what was agreed, what went wrong, what you want and what you will do if ignored.

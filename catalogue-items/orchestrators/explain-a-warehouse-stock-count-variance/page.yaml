@@ -1,51 +1,81 @@
 new_slug: explain-a-warehouse-stock-count-variance
 name: Explain a warehouse stock count variance
 headline: Explain a warehouse stock count variance
-summary: Share the source files. Get a reconciled stock variance table, evidence gaps and review brief.
+summary: Explain why a warehouse stock count differs from the system. Get a variance table that keeps timing, units and count errors apart, plus an owner brief.
 job: plan-supply-chain
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A reconciled stock variance table, evidence gaps and review brief. Share actual count sheets, inventory snapshot time, recorded movements, item units, count scope and existing discrepancy explanations. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your count sheets, the system stock snapshot and the stock movements since the snapshot. Your AI works out the expected quantity for each item, then shows which gaps are explained and which are not. You also get a short review brief for the warehouse owner.
 explain: |-
-  A reconciled stock variance table, evidence gaps and review brief.
+  When a stock count does not match the system, the quick answer is "shrinkage". That answer is usually wrong or unproven. Often the gap is timing: a delivery came in after the snapshot. Or it is units: one list counts cases and the other counts pieces. Or the same location was counted twice.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Timing movements, unit differences and count errors stay separate; no loss, fraud or write off is inferred. Missing tools or evidence stay visible in the final summary.
+  Step 1 works out what each count should have been: the snapshot, plus receipts, minus issues, between the snapshot time and the count time. It puts each gap into one class: timing, unit, duplicate, count error or unexplained. An unexplained gap stays unexplained. Step 2 writes a brief for the warehouse owner with what is verified, other possible explanations, and what evidence is missing.
+
+  It never says loss, theft or fraud, and it makes no stock adjustment.
 when:
-  - You need a reconciled stock variance table, evidence gaps and review brief.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your cycle count shows 40 items off and you need to know which gaps are real.
+  - A count was done a day after the system snapshot and deliveries came in between.
+  - Counts are in cases but the system tracks pieces, or the other way round.
+  - Your warehouse owner asks for evidence before any stock adjustment is made.
+not_for:
+  - "You want to change stock levels in Shopify: use the Stock count updater, after the owner signs off."
+  - "You want to plan counts for next month: use the Stock count program planner."
+  - "You suspect theft and want an investigation: this workflow does not infer loss. Ask your owner or an auditor."
 you_give:
-  - Actual count sheets, inventory snapshot time, recorded movements, item units, count scope and existing discrepancy explanations.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - Count sheets with item ID, location, unit and counted quantity (spreadsheet or CSV)
+  - The system stock snapshot, with the exact date and time it was taken
+  - Stock movements between the snapshot and the count, with times (receipts, issues, transfers)
+  - Pack sizes where units differ, such as pieces per case (optional)
+  - Explanations already given for gaps (optional)
 you_get:
-  - A reconciled stock variance table, evidence gaps and review brief.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A variance table: snapshot, movements, expected, counted and variance for each item"
+  - "Each gap in a class: timing, unit, duplicate, count error or unexplained"
+  - A list of duplicate locations, duplicate item IDs and unit mismatches
+  - A review brief for the warehouse owner with missing evidence and decisions needed
+  - A note that no stock adjustment was made
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Export your count sheets, the snapshot and the movement list as spreadsheets. Note the snapshot time.
+  - Give the pack to Claude, ChatGPT or Gemini. Attach the files. Use an AI that can make a spreadsheet if you want a workbook.
+  - Ask your AI to follow SKILL.md. Tell it who the warehouse owner is.
+  - Check the variance table. Pick three items and confirm the expected number by hand.
+  - Send the brief to the owner. They sign off each verified gap and ask for a recount of unit mismatches. Adjust stock yourself after that.
 how_it_works:
   - title: Spreadsheet checker
-    text: Reconcile count quantities to the snapshot and supplied intervening movements; inspect duplicate locations, item IDs and unit mismatches. Preserve original counts.
+    text: Works out expected quantity for each item from the snapshot and the movements. Finds duplicate locations, duplicate item IDs and unit mismatches. Puts each gap in a class. Keeps your originals and saves a new file. Hands step 2 the table and the evidence gaps.
   - title: Stakeholder update writer
-    text: Draft a warehouse owner review brief of verified variances, alternative explanations and missing evidence; no inventory adjustment is performed.
+    text: "Writes a short brief for the warehouse owner: what is verified, other possible explanations, what evidence is missing and what decisions are needed. States that no adjustment was made. Check first: every line matches the variance table."
 output_shape: |-
-  Scope and source coverage
-  A reconciled stock variance table, evidence gaps and review brief.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  VARIANCE TABLE
+    item ID | location | unit | snapshot | movements | expected | counted | variance | cause class | evidence reference
+  FLAGS             <duplicate locations, duplicate item IDs, unit mismatches>
+  REVIEW BRIEF      <verified variances | other possible explanations | missing evidence | decisions for the owner>
+  FILES SAVED       <each file and the step that made it>
+  MISSING           <each gap, and what it stops>
+  CHECKS MISSED     <one line each, or none>
+output_sample:
+  input:
+    - Count sheets with item ID, location, unit and quantity
+    - The system stock snapshot and its time
+    - Stock movements since the snapshot
+    - Pack sizes where units differ (optional)
+  prerequisites:
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: Variance table
+      contains: Snapshot, movements, expected, counted and variance for each item, with a cause class and evidence.
+    - name: Flags
+      contains: Duplicate locations, duplicate item IDs and unit mismatches found in the count.
+    - name: Review brief
+      contains: "For the warehouse owner: verified gaps, other explanations, missing evidence and decisions needed."
+    - name: Missing and checks missed
+      contains: Facts nobody supplied and checks that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Timing movements, unit differences and count errors stay separate; no loss, fraud or write off is inferred.
+  - what: Count scope
+    how: State which areas and items were counted. Items outside the scope are left out of the table.
+  - what: Cut-off
+    how: Give the exact snapshot time and count time. Movements outside that window are ignored.
+  - what: Reader
+    how: Say who gets the brief, such as the warehouse owner or a finance lead. The detail changes to fit.
 judge:
   - Timing movements, unit differences and count errors stay separate; no loss, fraud or write off is inferred.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,16 +88,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Recount the unit mismatches and duplicate locations, then run the workflow again with the new sheets.
+  - Record receipts and issues with times, so the next count has clean movement data.
+  - Keep each brief with its date, so you can see if the same items keep drifting.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet-capable AI
+      why: Formulas are only recalculated if your AI has a spreadsheet engine. In plain chat, it does the sums in text and says so.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Receipts and issues with exact times.
+    - Pack sizes, so case and piece counts can be compared.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Snapshot
+    meaning: The system stock levels recorded at one exact moment.
+  - term: Variance
+    meaning: The gap between what was counted and what the records say should be there.
+  - term: Cycle count
+    meaning: A count of part of the stock, done on a set schedule instead of all at once.
+next:
+  - stock-count-program-planner

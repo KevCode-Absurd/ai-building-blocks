@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It chooses metrics for a purpose.
 new_slug: kpi-dashboard-designer
 name: KPI dashboard designer
-summary: Say who reads it and what they decide. Get the right metrics and a
-  dashboard layout that fits.
+summary: Plan a KPI dashboard your team will use. Say who reads it and what they decide, and get the right metrics and a layout that fits.
 job: read-ad-results
 headline: KPI dashboard designer
-subhead: A dashboard plan where every number earns its place, because each one
-  ties to a decision the reader has to make. Start by saying who will look at it
-  and what they act on.
+subhead: A dashboard plan where every number earns its place, because each one ties to a decision the reader has to make. Start by saying who will look at it and what they act on.
 explain: |
   A dashboard plan where every number earns its place, because each one ties to a decision the reader has to make. Start by saying who will look at it and what they act on. The skill sorts metrics into three levels: strategic for leaders, tactical for managers, and operational for day-to-day teams. Each level gets its own refresh pace.
 
@@ -16,10 +13,12 @@ explain: |
 when:
   - Your leadership team wants one page that shows how the business is doing.
   - Your current dashboard has forty charts and nobody knows which ones matter.
-  - You are building a view for sales, marketing or operations and need to pick
-    the right metrics.
-  - Two teams report different numbers for the same metric and you need one
-    agreed definition.
+  - You are building a view for sales, marketing or operations and need to pick the right metrics.
+  - Two teams report different numbers for the same metric and you need one agreed definition.
+not_for:
+  - "You need a live alert feed for one system, such as server health: use your monitoring tool's own alerts."
+  - "You want to read ad results or fix a campaign: use your ad platform's reports, not a dashboard plan."
+  - "You already have the metrics and only need charts built: use a chart tool such as Google Sheets or Looker Studio."
 you_give:
   - Who reads the dashboard
   - The decisions they make from it
@@ -31,7 +30,28 @@ you_get:
   - Refresh pace and alert rules per level
   - A plan for who owns each metric
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Tell your AI who will read the dashboard and what decisions they make from it.
+  - List the data sources you have. Add your current dashboard or metric list if you have one (optional).
+  - Check the KPI list first. Cut any metric that does not lead to a decision.
+  - Treat the layout sketches as shapes only. Any numbers in them are placeholders, so swap in your own.
+  - Next, get each metric's owner to agree its definition, then connect your data sources.
+output_sample:
+  input:
+    - Who will read the dashboard
+    - The decisions they make from it
+    - The data sources you have
+    - Your current dashboard or metric list (optional)
+  output:
+    - name: KPI level choice
+      contains: Each metric placed at the strategic, tactical or operational level, with how often it should refresh.
+    - name: KPI list
+      contains: A short list of metrics that pass the five SMART checks, each with a clear definition.
+    - name: Executive summary page
+      contains: A one-page layout with four to six headline numbers, trend markers and key alerts.
+    - name: Department views
+      contains: Layouts for sales, marketing, product or finance, using the metrics that fit each team.
+    - name: Layout sketches
+      contains: Text mock-ups with placeholders instead of real numbers, so you can adjust them to your data.
+    - name: Metric rules
+      contains: Who owns each definition, how it is calculated, and when an alert should fire.

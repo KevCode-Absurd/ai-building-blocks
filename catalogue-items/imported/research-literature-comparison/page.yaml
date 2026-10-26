@@ -2,20 +2,60 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: research-literature-comparison
 name: Research literature comparison
-summary: Share papers on one topic. Get a map of shared findings, conflicting
-  claims and open questions with source references.
+summary: Compare several research papers on one topic. Get a literature map of shared findings, conflicts and open questions, with sources.
 job: study-and-practice
 headline: Research literature comparison
-subhead: Supply several papers and a research question. Get their relationships,
-  disagreements and limits in one comparison. New reading suggestions need
-  source verification; this does not replace your own reading or academic
-  attribution.
+subhead: Give your AI several papers and your research question. It shows how the papers relate, where they agree, and where they clash. It points to the section or table behind each claim.
 when:
-  - You need to compare several papers rather than summarize them one by one.
+  - You have five papers on one topic and want to see how they fit together.
+  - You need to know which paper to read first.
+  - A new paper came out and you want to know how it connects to ones you have read.
+  - You are writing a literature review and need the points of conflict.
+not_for:
+  - "You need a close breakdown of one paper: read it with your AI one section at a time, or ask a person who knows the field."
+  - "You want a deep critique of a single paper's methods: ask your AI to check that paper alone, then bring the result here."
+  - "You want a plan for learning a new topic from scratch: start with a simple reading list from your teacher or a librarian."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the supplied papers and verify any extra
-    readings through search.
+  - Gather your papers as PDFs or text. Write your research question and today's date.
+  - Open Claude, ChatGPT or Gemini. Use one that can read file uploads.
+  - Paste the skill text, then add your papers, question and date.
+  - If you give only a topic, turn on web search. Your AI will pick papers and tell you why.
+  - Check the claims table against the papers. Look up any reading marked unverified before you trust it.
+output_sample:
+  input:
+    - Your papers, as PDFs or pasted text (4 to 10 is best)
+    - Your research question or topic
+    - Today's date
+    - Notes on papers you have already read (optional)
+  prerequisites:
+    - An AI that can read your papers
+    - A web search tool, only if you name a topic and give no papers
+  output:
+    - name: Lineage
+      contains: Which paper built on or answered which, with the year and what changed.
+    - name: Claims
+      contains: A table of each main claim and whether every paper supports it, contradicts it or does not test it.
+    - name: Comparability
+      contains: Which results can be compared directly, which cannot, and why.
+    - name: Consensus
+      contains: Points the papers agree on, with the evidence.
+    - name: Contested
+      contains: Where papers disagree, what each side offers as proof, and what would settle it.
+    - name: Open problems
+      contains: Questions and settings that none of the papers cover.
+    - name: Reading order
+      contains: The order to read the papers in, with a reason for each.
+    - name: Connections to lock in
+      contains: Short links from papers you know to the new ones.
+you_give:
+  - Your papers, as PDFs or pasted text (4 to 10 is best)
+  - Your research question or topic
+  - Today's date
+  - Notes on papers you have already read (optional)
+you_get:
+  - A map of which paper built on which
+  - A table of claims, with where each paper stands
+  - A note on which results can and cannot be compared
+  - Points of agreement and disagreement, with sources
+  - Open questions no paper answers
+  - A suggested reading order

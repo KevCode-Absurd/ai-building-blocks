@@ -1,50 +1,91 @@
 new_slug: prepare-a-hotel-group-booking-handover
 name: Prepare a hotel group booking handover
 headline: Prepare a hotel group booking handover
-summary: Share the source files. Get a booking handover, payment arithmetic check and outstanding requests.
+summary: Hand over a confirmed hotel group booking. Get a deposit and rate check, accepted and open requests, and key dates for the next person.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A booking handover, payment arithmetic check and outstanding requests. Share the confirmed group booking, rooming list with minimized personal data, payment schedule, approved requests, contacts and handover window. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the confirmed booking, the rooming list, the payment schedule and the special requests. It checks the room-night and deposit sums, then writes a handover for the next person. A request counts as accepted only if the hotel agreed in writing.
 explain: |-
-  A booking handover, payment arithmetic check and outstanding requests.
+  A group booking often changes hands in the middle of a deal. The new person needs to know what is paid, what is due, and which requests the hotel really agreed to. This hotel group booking handover answers those three things.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Room counts, dates and deposits agree with the booking; special requests remain unconfirmed until accepted. Missing tools or evidence stay visible in the final summary.
+  First, the Invoice totals checker recomputes room nights times rate, fees and deposits against the booking, in the stated currency. Then the Handover note writer puts dates and payments first, then accepted requests, open requests, contacts and where the files live.
+
+  A request stays open until the hotel accepted it in writing. The pack does not guess tax rules or cut-off dates. It keeps guest details to names and room types, and it contacts no one.
 when:
-  - You need a booking handover, payment arithmetic check and outstanding requests.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are going on leave and a colleague must pick up a group booking.
+  - A group booking moves from sales to the reservations or events team.
+  - The rooming list and the booking may not match, and you want to know before you hand over.
+  - The hotel said "that's fine" about a request, and you need to know what is really in writing.
+not_for:
+  - "You want to see what each booking site paid you after commission: use the Hotel channel revenue reconciler."
+  - "You want to set room prices: use the Hotel room pricing planner."
+  - "You are handing over general work, not a booking: use the Handover note writer."
+  - You want the AI to confirm, change or chase the booking with the hotel. It contacts no one.
 you_give:
-  - The confirmed group booking, rooming list with minimized personal data, payment schedule, approved requests, contacts and handover window.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The confirmed booking or contract, with room types, nights, dates, rates and fees
+  - The payment schedule, and what has been paid
+  - The rooming list, names and room types only
+  - Special requests, and the hotel's written replies to them
+  - Hotel and group contacts, and who is taking over
+  - The hotel's cut-off and cancellation dates from the contract (optional)
 you_get:
-  - A booking handover, payment arithmetic check and outstanding requests.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A payment check: room nights, rates, fees, deposits due and balance"
+  - "A room check: counts on the booking against the rooming list"
+  - Dates and payments that cost money if missed, listed first
+  - Accepted requests with proof, and open requests kept apart
+  - Contacts, where the files live, and a list of gaps
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste or attach the booking, payment schedule, rooming list and request list. Say who takes over and from when.
+  - Check the payment table. Each stated figure sits beside the recomputed one.
+  - Read the open requests. Move one to accepted only if you can see the hotel's written yes.
+  - Send the note to the incoming person yourself. Nothing is sent for you.
 how_it_works:
   - title: Invoice totals checker
-    text: Check the actual room-night counts, quoted rates, approved fees and deposits using the stated currency and dates. Do not infer local tax rules.
+    text: Recomputes room nights times rate, approved fees, deposits and balance in the stated currency. Shows each stated figure beside the recomputed one and assumes no tax rules. Hands step 2 the payment table.
   - title: Handover note writer
-    text: Prepare the incoming reservations or operations team handover with deadlines, accepted requests, open questions and authorized source locations, excluding credentials.
+    text: Writes the handover from step 1's payment table, with dates and payments first, then accepted requests, open requests, contacts and where things live. Check before moving on, every accepted request cites written acceptance.
+  - title: Check and hand back
+    text: Joins both files, checks room counts against the rooming list, and lists every gap and every check that did not run.
 output_shape: |-
-  Scope and source coverage
-  A booking handover, payment arithmetic check and outstanding requests.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  IF YOU READ NOTHING ELSE <date | what | source>
+  PAYMENT CHECK <line | stated | recomputed | difference>; DEPOSITS DUE AND PAID; BALANCE
+  ROOMS <room type | nights | count per booking | count per rooming list | match>
+  ACCEPTED REQUESTS <request | accepted by | date | source>
+  OPEN REQUESTS <request | asked on | still needs>
+  CONTACTS <name | role | for what>
+  WHERE THINGS LIVE <file or system | what is in it | how access is granted>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - Your confirmed booking or contract
+    - Your payment schedule and what has been paid
+    - Your rooming list (names and room types only)
+    - Your special requests and the hotel's written replies
+    - The contacts and who takes over
+  prerequisites:
+    - An AI that can read files or long pasted text
+    - The two component skills, which come in the pack
+  output:
+    - name: Payment check
+      contains: Room nights, rates, fees, deposits due and balance, each stated figure beside the recomputed one.
+    - name: Room check
+      contains: Room counts on the booking against the rooming list, with any mismatch shown.
+    - name: Handover note
+      contains: Dates and payments first, then contacts, where the files live and what to leave alone.
+    - name: Accepted and open requests
+      contains: A request is accepted only with the hotel's written yes. The rest stay open.
+    - name: Hand-back summary
+      contains: The files saved, steps run or skipped, missing items and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Room counts, dates and deposits agree with the booking; special requests remain unconfirmed until accepted.
+  - what: One booking
+    how: Run one group booking at a time so the payment sums stay clear.
+  - what: Guest data
+    how: Keep the rooming list to names and room types. Leave out passport, card and health details.
+  - what: Handover window
+    how: Say when the new person starts. Dates in that window go to the top of the note.
 judge:
   - Room counts, dates and deposits agree with the booking; special requests remain unconfirmed until accepted.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +98,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the hotel's written replies in one folder so acceptance is easy to prove.
+  - Add the cut-off and cancellation dates from the contract, so they never rest on memory.
+  - Run the pack again when the hotel answers an open request, and keep the earlier note.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads the booking, the emails and the rooming list together.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The hotel's emails that accept requests.
+    - The contract's cut-off and cancellation dates.
 terms:
+  - term: Rooming list
+    meaning: The list of which guest has which room, for which nights.
+  - term: Deposit
+    meaning: Money paid in advance to hold the rooms.
+  - term: Cut-off date
+    meaning: The last day the group can change room numbers without a penalty. Take it from your contract.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

@@ -1,6 +1,6 @@
 new_slug: audit-your-sites-seo-and-fix-titles-tags-and-markup-first
 name: Audit your site's SEO and fix what matters first
-summary: Give it your site. Get a ranked audit, on-page fixes, new titles and tags, and schema markup.
+summary: "Run an SEO audit on your site and fix what matters first: ranked problems, page fixes, new titles and meta descriptions, and schema markup."
 job: get-found-in-search
 thinking: high
 thinking_why: It judges a whole site and must rank the fixes by what pays. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your pages rank on page three for searches you should own.
   - You never set titles and descriptions and they show as "Home" and "Product".
   - An agency sent you a hundred-row audit and you do not know where to start.
+not_for:
+  - "You only want a title and description for one page: use the Title and meta tag writer on its own."
+  - "Your traffic comes from paid ads: use the Ad sales drop analyst to find out why results fell."
+  - "Your search traffic fell after a change and you want the cause: use the Ad sales drop analyst, or ask the person who runs your site."
 you_give:
   - Your site address
   - The pages that matter most and the searches you want them to rank for
@@ -30,6 +34,29 @@ how_to_use:
   - Paste your site address and the pages that matter. It audits the site and the technical side.
   - Read the ranked fixes. Give the technical ones to whoever runs the site.
   - Approve the titles, descriptions and markup, then publish them.
+output_sample:
+  input:
+    - Your site address
+    - The pages that matter most and the searches you want them to rank for
+    - Your brand voice, or two titles you like (optional)
+    - Your search console export (optional)
+    - A crawl of your site (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Someone who can publish titles, descriptions and markup on your site
+  output:
+    - name: "Step 1: Site audit"
+      contains: Problems ranked by how much they block ranking, with what is indexed, what is duplicated and what ranks today.
+    - name: "Step 2: Technical audit"
+      contains: Speed, crawl errors, mobile, redirects, sitemaps and robots rules, with each fix in the order that pays.
+    - name: "Step 3: On-page fixes"
+      contains: For each key page, fixes to headings, content, images and links, based on the search it should win.
+    - name: "Step 4: Titles and descriptions"
+      contains: A title and meta description for each key page, in your voice, with character counts.
+    - name: "Step 5: Schema markup"
+      contains: Code to paste for your main page types, with a line on what each piece tells search engines.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Audit the site
     text: "Audits the whole site: structure, indexing, duplicates, what ranks, with problems ranked by impact."

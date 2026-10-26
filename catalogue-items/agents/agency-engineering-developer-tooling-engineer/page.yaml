@@ -1,0 +1,148 @@
+name: Developer Tooling Engineer agent
+summary: "Design a command-line tool your team will like: clear commands, helpful errors, fast startup and safe updates. Bring your scripts and goal."
+headline: Developer Tooling Engineer agent
+subhead: "Tell it what your team does by hand today and share any scripts you have. It plans a command-line tool: the commands, the error messages, the speed target and how people install it. You get a plan you can build from or hand to a developer."
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A command-line tool is a program you run by typing a command, like git or npm. Team scripts often grow into one. They work, but they fail with a wall of text, take a second to start, and break when someone renames an option. This agent plans the tool before anyone builds it, or fixes the plan for one you already have.
+
+  It judges the tool the way a tired engineer would at 6pm. Can I guess the command? Does the error say what to do next? Does it work inside a script, not only on screen? It treats options, output and exit codes as a promise to every script that calls the tool, so any change comes with a warning and a way to move over.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A script your team runs every day has grown into a tool, and nobody likes using it.
+  - People paste the same error into chat because the message never says what to do.
+  - You are about to build an internal command-line tool and want the commands settled first.
+  - A tool works on your laptop but breaks in your automated build, because its output or exit codes keep changing.
+not_for:
+  - You want to change a live build or release pipeline. Use the Deployment pipeline designer, and have a named engineer approve each change.
+  - You want a whole app built, not a command-line tool. Use the Full stack developer.
+  - You want shared templates and service rules for many teams. Use the Developer platform designer.
+you_give:
+  - What the tool should do, in a few lines, and who will use it (your team or the public)
+  - Your current scripts or the tool's --help text (optional)
+  - Two or three real error messages or failure logs that people complain about (optional)
+  - Your language and systems, such as Python on Mac and Linux, and how people install tools today
+  - How often the tool runs, and any speed limit, such as "runs on every file save" (optional)
+you_get:
+  - "A command map: each command, its options and what it does"
+  - Rules for output on screen and in scripts, with a table of exit codes
+  - Rewritten error messages that say what happened and what to do next
+  - A startup speed target and the likeliest fixes to reach it
+  - A plan to install and update the tool, and rules for changing it without breaking scripts
+  - A list of assumptions and checks still needed
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste what the tool should do, who uses it, and your language and systems. Add your scripts or --help text if you have them.
+  - Paste two or three real error messages. This is where the plan gets most useful.
+  - Say "Plan this tool. Ask once if anything is missing." Your AI asks once, then marks any gap as MISSING.
+  - Read the command map first. If you would not guess the commands, send it back and say what confuses you.
+  - Build a small version and time it. A chat AI cannot time your tool, so treat every speed number as an estimate until you measure.
+how_it_works:
+  - title: Learn the real job
+    text: It reads how people do the task today and where it goes wrong. The tool should remove those problems, not add a layer.
+  - title: Design the commands
+    text: It writes a verb and noun command list, with options that mean the same thing in every command, and the --help text for each.
+  - title: Design the output
+    text: It plans colour and tables for people, plain or JSON output for scripts, and a table of exit codes.
+  - title: Rewrite the errors
+    text: It rewrites your worst error messages so each says what happened, why and the next step.
+  - title: Set the speed target
+    text: It names a startup time to aim for, the usual causes of slow starts and a way to time them.
+  - title: Plan install and change rules
+    text: It plans how people install and update the tool, and how to rename or remove options with warnings first.
+  - title: List what is unchecked
+    text: It lists every assumption and every check you still need to run.
+output_shape: |-
+  GOAL AND USERS
+    <what the tool does> | <who uses it> | <language and systems>
+
+  COMMAND MAP
+    <tool> <verb> <noun> | <what it does> | <options> | <example>
+
+  OUTPUT AND EXIT CODES
+    On screen: <what people see>
+    In scripts: <plain or JSON output, quiet mode>
+    Exit codes: <0 = success> | <code> = <meaning>
+
+  ERROR REWRITES
+    Now: <current message>
+    Better: <what happened> | <why> | <next step>
+
+  SPEED
+    Target: <startup time> | Likely causes: <list> | How to time it: <method>
+
+  INSTALL AND UPDATE
+    <how people get it> | <how they upgrade> | <how they check the version>
+
+  CHANGE RULES
+    <what counts as a breaking change> | <warning and removal steps>
+
+  SAFETY
+    <commands that change things> | <confirm or dry run>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <item> | <how to check it>
+output_sample:
+  input:
+    - A few lines on what the tool should do and who uses it
+    - Your current scripts or --help text (optional)
+    - Real error messages or failure logs (optional)
+    - Your language, systems and install method
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Command map
+      contains: Each command with its options, what it does and one example, written as verb and noun.
+    - name: Output and exit codes
+      contains: What people see on screen, what scripts get, and a table of exit codes.
+    - name: Error rewrites
+      contains: Your worst messages rewritten to say what happened, why and the next step.
+    - name: Speed
+      contains: A startup time target, the likely causes of slow starts and how to time them.
+    - name: Install and update
+      contains: How people get the tool, upgrade it and check the version.
+    - name: Change rules
+      contains: What counts as a breaking change and the warning steps before removing anything.
+    - name: Assumptions and checks still needed
+      contains: What the AI guessed and the checks you must run yourself.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Who uses it
+    how: Say whether teammates or strangers will use the tool. Strangers need better help text and a simpler install.
+  - what: Speed limit
+    how: Give your own startup limit if you have one. Otherwise the plan names a target and says it is a guess.
+  - what: Scope
+    how: Name the one command people run most. The plan then starts with that command.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Command-line tool
+    meaning: A program you run by typing a command in a terminal.
+  - term: Option (flag)
+    meaning: An extra word after a command, such as --verbose, that changes what it does.
+  - term: Exit code
+    meaning: A number a command returns when it ends. 0 means success. Scripts read it.
+  - term: Startup time
+    meaning: How long the tool takes to begin work after you press enter.
+  - term: Breaking change
+    meaning: A change that makes someone else's script stop working.
+  - term: Dry run
+    meaning: A mode that shows what the tool would do without doing it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your scripts and logs together and plan from them.
+    - name: A coding tool such as Claude Code
+      why: It can run your tool and time its start, so the speed numbers are measured.
+  inputs:
+    - A list of the five commands people run most.
+    - The chat messages where people complained about the tool.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Network effects depend on your market, so the plan needs careful reasoning.
 new_slug: network-launch-planner
 name: Network launch planner
-summary: Describe your product that needs many users to work. Get a plan to win
-  the first small group and grow from there.
+summary: Plan a network launch for a marketplace or app that needs many users. Pick your first small group, win the hard side, and get a plan score out of 10.
 job: test-an-idea
 headline: Network launch planner
-subhead: A launch plan for a product that is useless until other people join,
-  such as a marketplace, a chat app or a team tool. The plan shows how to get
-  the first small group to stay and use it.
+subhead: A launch plan for a product that is useless until other people join, such as a marketplace, a chat app or a team tool. The plan shows how to get the first small group to stay and use it.
 explain: |
   A launch plan for a product that is useless until other people join, such as a marketplace, a chat app or a team tool. The plan shows how to get the first small group to stay and use it.
 
@@ -18,6 +15,10 @@ when:
   - Your app has signups but people leave because no one else is there.
   - You want to choose which small group to win first.
   - You need to explain your growth plan to investors.
+not_for:
+  - Your product works fine for one person alone. Use a standard growth plan instead, since there is no network to start.
+  - You want people to share your product by word of mouth. Use the contagious skill instead.
+  - You want to build habits that bring users back each day. Use the hooked-ux skill instead.
 you_give:
   - A description of your product and who uses it
   - The two sides, if it has them
@@ -30,7 +31,27 @@ you_get:
   - Steps to move to the next group
   - A score for your plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the SKILL.md text into the chat. If the skill folder has a references folder, attach those files too, for the deeper playbooks.
+  - Describe your product, who uses it and the two sides, if it has them. Add your user numbers and current plan if you have them.
+  - Ask your AI to score your launch plan and give you the plan.
+  - Check that the first small network is small enough to win. Then pick one step to start this week.
+output_sample:
+  input:
+    - A description of your product and who uses it
+    - The two sides of your product, if it has them
+    - Your current user numbers (optional)
+    - Your current launch plan (optional)
+  output:
+    - name: Score
+      contains: A rating of your plan from 0 to 10, with the changes needed to reach 10.
+    - name: Atomic network
+      contains: The smallest group that can work on its own, and why you should launch there first.
+    - name: Hard side
+      contains: Which side of your product is harder to win, and how to win it first.
+    - name: Density metrics
+      contains: What to measure inside the small network, instead of counting total signups.
+    - name: Tipping plan
+      contains: The repeatable steps to move from one small network to the next.
+    - name: Ceiling and moat
+      contains: What may slow your growth later, and how to protect your lead.

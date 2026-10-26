@@ -15,10 +15,10 @@ outputs:
   - {type: plan}
 uses: [new-leader-first-message-writer, listen-first-talk-planner, wartime-or-peacetime-check, results-agreement-writer]
 steps:
-  - {uses: new-leader-first-message-writer, note: "Who you are, how you work, what you will not change yet and when the team will hear more, in the manner of Satya Nadella's first-day email."}
-  - {uses: listen-first-talk-planner, note: "A one-to-one with each person that hears them first: what works, what is broken, what they would change, what they need from you."}
-  - {uses: wartime-or-peacetime-check, note: "Whether the team is in peacetime or wartime in Ben Horowitz's terms, the evidence for the call, and what it changes about how you lead this quarter."}
-  - {uses: results-agreement-writer, note: "A results agreement per person in Stephen Covey's manner: the result, the guidelines, the resources, how it is measured and what follows, written with them."}
+  - {uses: new-leader-first-message-writer, note: "Who you are, how you work, what you will not change yet and when the team will hear more, in the manner of Satya Nadella's first-day email. Hands the team a message to send. Step 2 does not read it: the listening tour starts from your own team list and brief."}
+  - {uses: listen-first-talk-planner, note: "A one-to-one with each person that hears them first: what works, what is broken, what they would change, what they need from you. Uses your team list and brief, not step 1's message. Hands you the listening plan; you hold the talks and write down what each person said."}
+  - {uses: wartime-or-peacetime-check, note: "Whether the team is in peacetime or wartime in Ben Horowitz's terms, the evidence for the call, and what it changes about how you lead this quarter. Uses the listening notes you wrote and your numbers, not step 2's plan. Hands step 4 the situation read."}
+  - {uses: results-agreement-writer, note: "A results agreement per person in Stephen Covey's manner: the result, the guidelines, the resources, how it is measured and what follows, written with them. Uses step 3's situation read and each person's notes."}
 origin: own
 version: 1.0.0
 minds: [satya-nadella, mary-barra, stephen-covey, ben-horowitz]

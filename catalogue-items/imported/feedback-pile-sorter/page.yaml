@@ -2,33 +2,98 @@ thinking: medium
 thinking_why: It groups many notes and weighs them, not just counts them.
 new_slug: feedback-pile-sorter
 name: Feedback pile sorter
-summary: Give it feedback from tickets, NPS and calls. Get one ranked signal of
-  what customers need, not just the loudest voice.
+summary: Sort customer feedback from tickets, surveys and calls into one ranked list of themes, so the loudest voice does not set your plan.
 job: understand-customers
 headline: Feedback pile sorter
-subhead: Give it feedback from tickets, NPS and calls. Get one ranked signal of
-  what customers need, not just the loudest voice. Bring feedback exports from
-  tickets, surveys or calls. Use the result to plan your next step.
+subhead: Give it feedback from several places, such as support tickets, survey comments and call notes, and the decision you face. It groups the notes into themes and ranks them for that decision. You get counts by source, a short action list and the weak channels.
 explain: |
-  One ranked picture of what customers need, built from tickets, surveys, calls and reviews, so the loudest person does not decide your roadmap.
+  Customer feedback sorting goes wrong in two ways. The loudest customer wins, or every note counts the same, so a trial user's offhand comment weighs as much as a key account's repeat complaint. Either way the team feels heard and nothing changes.
 
-  The skill treats each channel differently, because support tickets show friction, sales calls show missing features, and surveys show broad mood. It weighs a signal by source quality, how often it appears and how relevant it is to the decision. That avoids two traps: giving the loudest voice the win, and averaging everything equally. You get themes with counts, which segment raised each one, and a short list of what to act on. It also helps audit a feedback process that makes volume but no decisions.
+  This skill treats each channel on its own terms. Support tickets show friction. Sales calls show gaps in what you offer. Surveys show broad mood. It weighs each theme by where it came from, how often it appears and how much it matters to your decision. A theme seen in two channels counts for more than one seen in one.
+
+  The result is a ranked list of themes, with counts, the segments behind them and a short list of what to act on. It also tells you which channels give you noise.
 when:
-  - Feedback comes from five places and nobody reads all of it.
-  - A big customer keeps pushing for one feature.
-  - You want to prove a theme is common, not one angry email.
-  - Your team collects feedback but never acts on it.
+  - Feedback comes in from five places and nobody has read all of it.
+  - One big customer keeps asking for the same feature, and you need to know if others do too.
+  - You want to show that a problem is common, not one angry email.
+  - Your team collects feedback every week but never acts on it.
+not_for:
+  - "You have one set of survey scores and comments: use the Feedback theme finder, which also gives NPS and CSAT numbers."
+  - "You have one batch of interviews to study: use the Customer interview synthesizer."
+  - "You only have reviews of your product: use the Review insight finder."
 you_give:
-  - Feedback exports from tickets, surveys or calls
-  - Customer segment or plan for each item (optional)
-  - The decision you are making (optional)
+  - Feedback from tickets, surveys, calls or other channels, pasted or uploaded
+  - Which channel each file came from
+  - The decision you are making, such as what to build next (optional)
+  - The customer segment or plan for each item (optional)
 you_get:
-  - Themes ranked by weighted signal
-  - Counts by source and segment
-  - A short list of actions
-  - Notes on weak or noisy channels
+  - Themes ranked for your decision, each with a reason
+  - Counts by channel and by segment
+  - An example quote for each theme
+  - A short list of actions tied to themes
+  - A note on which channels are weak or noisy
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. The skill is long, so add it to your AI as a skill, or upload the folder if a paste is too big.
+  - Upload or paste your feedback. Name the channel for each file.
+  - Say the decision you are making, for example "what to fix first this quarter".
+  - Read the Sources table first. Check the item counts match your files.
+  - Check one theme by hand. Count its items in your files and see if the number is right.
+  - Take the action list to your next planning meeting. Treat a result from under 20 items as a first read.
+how_it_works:
+  - title: List the channels
+    text: It counts the items from each channel and notes what each channel tends to over or under show.
+  - title: Tag each item
+    text: It tags feature area, issue type and channel, using tags that come from your feedback.
+  - title: Group into themes
+    text: It groups tagged items and counts them by channel and segment.
+  - title: Weight for your decision
+    text: It rates each theme High, Medium or Low for your decision, from source, frequency and strength of feeling.
+  - title: Rank and recommend
+    text: It ranks the themes, marks the ones seen in more than one channel and lists actions.
+  - title: Flag weak channels
+    text: It names channels where the signal is thin or noisy, and what it could not tell.
+output_shape: |
+  # Feedback ranked for: <decision>
+  ## Sources
+  Table of <channel>, <items>, <main bias>
+  ## Ranked themes
+  Table of <rank>, <theme>, <weight and why>, <items>, <channels>, <segments>, <example quote>
+  ## What to act on
+  <action> tied to <theme> and <decision>
+  ## Weak or noisy channels
+  ## Missing
+output_sample:
+  input:
+    - Feedback from tickets, surveys, calls or other channels
+    - The channel each file came from
+    - The decision you are making (optional)
+    - The segment or plan for each item (optional)
+  prerequisites:
+    - Feedback exported as text or files from your own tools
+  output:
+    - name: Sources
+      contains: Each channel with its item count and the main bias to keep in mind.
+    - name: Ranked themes
+      contains: Themes in order, with a High, Medium or Low weight, reason, counts, segments and a quote.
+    - name: What to act on
+      contains: Three to five actions, each tied to a theme and the decision it feeds.
+    - name: Weak or noisy channels
+      contains: Channels whose signal is thin, and why.
+    - name: Missing
+      contains: Anything you did not give, such as segments, marked as missing, not guessed.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can read pasted exports and group them into themes.
+  inputs:
+    - A ticket export with the date and customer plan
+    - Survey comments with the score next to each one
+    - Sales call notes that name the account
+    - Last quarter's ranked list, to see what moved
+terms:
+  - term: Theme
+    meaning: A group of feedback notes that say the same thing in different words.
+  - term: Channel
+    meaning: A place feedback comes from, such as tickets, surveys or calls.
+  - term: Weighted
+    meaning: Counted for more or less, depending on where it came from and the decision you face.

@@ -2,35 +2,50 @@ thinking: medium
 thinking_why: Each question depends on your last answer.
 new_slug: intent-interviewer
 name: Intent interviewer
-summary: Give it a vague request. Get asked one question at a time until what
-  you really want is clear.
+summary: Turn a vague request into a clear goal. This intent interviewer asks one question at a time until what you really want is plain.
 job: think-and-decide
 headline: Intent interviewer
-subhead: A clear statement of what you really want, reached by being asked one
-  question at a time before any plan or code exists. People ask for "a
-  dashboard" because that is what one asks for, when what they need is something
-  else.
+subhead: Give it a rough request. Your AI asks one question at a time, each with a best guess, until it can say what you really want. You confirm it before any plan or code starts.
 explain: |
   A clear statement of what you really want, reached by being asked one question at a time before any plan or code exists. People ask for "a dashboard" because that is what one asks for, when what they need is something else.
 
   The skill looks for what is missing: who it is for, why, what success looks like, and the main limit. It also catches cases where two good goals pull apart, like simple against flexible. Each question comes alone, with a reason and, where possible, choices. It stops when the picture is clear and sums it up for you to confirm. Skip it for simple, exact tasks like renaming a file, or when you want speed over checking.
 when:
   - You have a vague idea and cannot yet say what you want built.
-  - A request sounds standard but you suspect it hides a real need.
+  - A request sounds standard, like a dashboard, but you suspect the real need is something else.
   - You are about to start a big task and want to avoid wasted work.
-  - Two goals conflict and you have not chosen between them.
-  - You want your thinking pressure-tested before you commit.
+  - Two goals pull against each other, like simple against flexible, and you have not chosen.
+not_for:
+  - "You want a plan or spec written from an idea you already understand: use a spec-writing step instead, or just ask your AI directly."
+  - "The task is small and exact, like renaming a file or fixing a typo: just ask your AI to do it."
+  - "You only want facts or an explanation of how something works: ask your AI the question directly."
 you_give:
-  - Your rough request
+  - Your rough request, in your own words
   - Honest answers to each question
   - Any limits on time, budget or tools (optional)
 you_get:
-  - A sharper statement of the real goal
-  - Surfaced assumptions
-  - Success measures
-  - A summary to confirm before work starts
+  - A clear statement of what you really want, in your own words
+  - The hidden assumptions your request relied on
+  - What success looks like and the main limit
+  - A summary you confirm before any work starts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full text of SKILL.md into the chat.
+  - Type your rough request on the next line, such as the thing you want built.
+  - Answer each question as it comes. Correct the AI's guess when it is wrong.
+  - Read the restated intent at the end. Say yes, or tell it what to change.
+  - Copy the confirmed intent and use it to start your plan or spec.
+output_sample:
+  input:
+    - Your rough request, even if it is vague
+    - Honest answers to each question, one at a time
+    - Any limits on time, budget or tools (optional)
+  output:
+    - name: Questions, one at a time
+      contains: Each question comes alone with a best guess attached, so you can answer yes, no or fix it.
+    - name: Restated intent
+      contains: Your goal written back in your own words, covering who it is for, why, what success looks like and the main limit.
+    - name: Confirmation
+      contains: A clear yes from you that the restated intent is right, before any plan or code starts.
+    - name: Saved intent file (optional)
+      contains: A note saved to docs/intent with your confirmed goal, only if you ask for it.

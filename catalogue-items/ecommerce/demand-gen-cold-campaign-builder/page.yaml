@@ -1,6 +1,6 @@
 new_slug: demand-gen-cold-campaign-builder
 name: "Demand Gen cold traffic builder"
-summary: "Give it your winning videos, page and budget. Get Demand Gen settings, ad groups and a creative brief."
+summary: "Build a Demand Gen campaign for cold traffic on Google. Give it your winning videos, page and budget. Get settings, ad groups and a creative brief."
 job: run-google-ads
 thinking: high
 thinking_why: "It weighs two sources that disagree and must keep ad claims inside policy, so a stronger model is safer."
@@ -17,6 +17,10 @@ when:
   - Your Search, Shopping and remarketing are stable and you want new customers from a colder audience.
   - You already have video ads that work on Meta or TikTok and want to try them on Google.
   - You have budget and a steady supply of new creative.
+not_for:
+  - "You have no purchase tracking or a very small daily budget: fix tracking first, or run remarketing and Search first, since Demand Gen needs data to learn."
+  - "You want to win back past visitors: use the Google remarketing campaign builder, which is made for that."
+  - "You have no video ads that already work: make or test them on Meta or TikTok first, then come back."
 
 you_give:
   - Winning video ads with length and format
@@ -35,6 +39,34 @@ how_to_use:
   - Say how many conversions the account has, and whether Search, Shopping and remarketing are stable.
   - Pick one of the two setups it gives you and test that one first.
   - Run it for at least 30 days before changing the settings, and add new creative on a schedule.
+output_sample:
+  input:
+    - Your winning video ads, with length and format
+    - Your landing page (product page, advertorial, listicle, quiz or sales letter)
+    - Your daily budget and average order value
+    - How many sales your account has so far (optional)
+  prerequisites:
+    - Purchase tracking set up in Google Ads
+    - Search, Shopping and remarketing already running and stable
+  output:
+    - name: TIMING
+      contains: Whether your store is ready for Demand Gen now, or what to wait for first.
+    - name: SETUP
+      contains: Two setups from two sources, a hands-off one and a guided one, with advice to test one first.
+    - name: CAMPAIGN
+      contains: Goal, bidding, devices, placements, targeting and language settings.
+    - name: AD GROUPS
+      contains: A testing group for new ideas and a winning group for proven ads, up to 5 videos each.
+    - name: VIDEO FORMAT
+      contains: Video length and shape, and which placements each one fits.
+    - name: CREATIVE BRIEF
+      contains: A hook for the first 5 seconds, then problem, demo, proof and one call to action.
+    - name: TEXT
+      contains: Headline, long headline and description limits, plus the call to action button.
+    - name: FINAL URL, REVIEW and SCALE ORDER
+      contains: The page to send people to, when to review, and the order to scale in.
+    - name: CHECKS MISSED and MISSING
+      contains: Any checks that failed and any facts you did not give.
 
 how_it_works:
   - title: Checks timing

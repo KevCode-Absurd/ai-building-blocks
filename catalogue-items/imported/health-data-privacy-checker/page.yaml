@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies set rules to your data flows.
 new_slug: health-data-privacy-checker
 name: Health data privacy checker
-summary: Describe your health data use or app. Get HIPAA gaps, safeguards to add
-  and draft notices or agreements.
+summary: Check your health app or clinic against HIPAA. Get a list of gaps, safeguards to add and draft notices or agreements. A first-pass HIPAA check.
 job: check-contracts
 headline: Health data privacy checker
-subhead: A first check of whether your handling of patient information meets
-  HIPAA, with gaps listed and fixes drafted. Say how your app, clinic or process
-  uses health data.
+subhead: A first check of whether your handling of patient information meets HIPAA, with gaps listed and fixes drafted. Say how your app, clinic or process uses health data.
 explain: |
   A first check of whether your handling of patient information meets HIPAA, with gaps listed and fixes drafted. Say how your app, clinic or process uses health data. The skill works out whether you are a covered entity or a business associate, then checks the privacy rule, the security rule and breach notification.
 
@@ -18,6 +15,10 @@ when:
   - A client asks if you are HIPAA compliant and you are not sure.
   - You need to draft a business associate agreement.
   - You want to prepare for a security risk assessment.
+not_for:
+  - "You need a formal risk analysis or a legal ruling on compliance: use a HIPAA attorney or an accredited assessor."
+  - "You need to test your system for technical flaws: use a security scanning tool or a penetration tester."
+  - "Your data has no link to health care or patients: use a general privacy policy template or ask a privacy lawyer."
 you_give:
   - A description of your health data use or system
   - Existing policies, notices or architecture notes
@@ -29,7 +30,28 @@ you_get:
   - Draft notices, agreements or policies
   - Plain explanations of the rules that apply
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Describe your app, clinic or process. Say your role and who handles the health data.
+  - Paste any policies, notices or architecture notes you have (optional).
+  - Read the gap table first. Fix the high risk items before the rest.
+  - Ask for any drafts you need, such as a business associate agreement or privacy notice.
+  - Have a HIPAA attorney check the result before you rely on it.
+output_sample:
+  input:
+    - A short description of your app, clinic or process and how it uses health data
+    - Your role, such as provider, vendor or developer
+    - Existing policies, notices or architecture notes (optional)
+    - Who handles the data (optional)
+  output:
+    - name: HIPAA Compliance Review
+      contains: Your scope, the rules that apply, what is done well, and a table of issues with rule, risk level and fix.
+    - name: HIPAA Technical Assessment
+      contains: For software, the data in scope and a checklist of administrative, physical and technical safeguards with notes for your setup.
+    - name: Action items
+      contains: A prioritized list of fixes to make first.
+    - name: Draft documents
+      contains: On request, a privacy notice, business associate agreement, policy, risk assessment template or breach letter with placeholders to fill.
+    - name: Plain-language explanation
+      contains: On request, a short explanation of any HIPAA rule that applies to you.
+    - name: Disclaimer
+      contains: A reminder that this is information, not legal advice, and a HIPAA attorney should confirm.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It lays out screens and notes how each part behaves.
 new_slug: wireframe-drafter
 name: Wireframe drafter
-summary: Describe the screens. Get text wireframes at three detail levels, with
-  parts, behavior and screen sizes.
+summary: Describe your screen and get a text wireframe at three detail levels, with parts, behavior and phone, tablet and desktop layouts.
 job: design-work
 headline: Wireframe drafter
-subhead: Screen layouts you can read, share and build from, at three levels of
-  detail. You see where everything goes before anyone spends time on visual
-  design.
+subhead: Screen layouts you can read, share and build from, at three levels of detail. You see where everything goes before anyone spends time on visual design.
 explain: |
   Screen layouts you can read, share and build from, at three levels of detail. You see where everything goes before anyone spends time on visual design.
 
@@ -18,6 +15,10 @@ when:
   - A developer asks what the form should look like.
   - You want to compare two layouts quickly.
   - You need to plan how a page behaves on a phone.
+not_for:
+  - "You need final visual design, brand work or pixel-perfect mockups: use a design tool such as Figma."
+  - "You need a full map of how users move between many screens: sketch the user flow first, then wireframe each screen."
+  - "You need a clickable prototype to test with users: build it in a design tool, then use this wireframe as the plan."
 you_give:
   - Screen name and purpose
   - Main user action
@@ -30,7 +31,29 @@ you_get:
   - High-fidelity specifications
   - Responsive behaviour notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code running or paid tool is needed.
+  - Tell your AI the screen name, what it is for, the main user action and the platform.
+  - "Say which level of detail you want: low, mid or high. Start with low if the layout is not decided."
+  - Paste your design tokens if you have them (optional).
+  - Check the parts list and the empty and error states first, then fix anything missing before you share it.
+  - Send the wireframe to a developer, or use it as the plan in your design tool.
+output_sample:
+  input:
+    - Your screen name and what it is for
+    - The main action a user should take on it
+    - "Where it will be used: web, tablet or mobile"
+    - "How much detail you want: low, mid or high"
+    - Your design tokens or component library (optional)
+  output:
+    - name: Component inventory
+      contains: Every part the screen needs, with its content and what happens when a user clicks or taps it.
+    - name: Low-fidelity layout
+      contains: A text block layout showing where each zone sits and what the user sees first.
+    - name: Mid-fidelity layout
+      contains: The same layout with real labels, specific controls, column counts and key spacing.
+    - name: High-fidelity specification
+      contains: Exact sizes, spacing, type, colors and notes for hover, focus, click and error behavior.
+    - name: Responsive behavior
+      contains: What stacks, collapses, hides or reflows on mobile, tablet and desktop, plus touch target sizes.
+    - name: Empty, loading and error states
+      contains: What the user sees with no data, while data loads and when something fails.

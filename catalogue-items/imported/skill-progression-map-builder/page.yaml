@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It orders steps by what each one depends on.
 new_slug: skill-progression-map-builder
 name: Skill progression map builder
-summary: Name a skill. Get the steps from first prerequisite to mastery, with
-  checks to find where a student is stuck.
+summary: Name a skill and a year group. Get a skill progression map from first prerequisite to mastery, with checks to find where a student is stuck.
 job: teach-and-train
 headline: Skill progression map builder
-subhead: A map of steps from first prerequisite to mastery of a skill, with
-  checks to find where a student is stuck. You can teach in the right order and
-  fill gaps early.
+subhead: A map of steps from first prerequisite to mastery of a skill, with checks to find where a student is stuck. You can teach in the right order and fill gaps early.
 explain: |
   A map of steps from first prerequisite to mastery of a skill, with checks to find where a student is stuck. You can teach in the right order and fill gaps early.
 
@@ -18,6 +15,10 @@ when:
   - A student fails a task and you need to find the missing step.
   - You want a short diagnostic that locates a gap.
   - You are building a curriculum for a new skill.
+not_for:
+  - "You need a plan for one lesson: write the lesson plan yourself or ask your AI for a simple lesson outline."
+  - "You need a full year plan or whole curriculum: use a scope and sequence designer. It is not in this library yet."
+  - "You want to grade a student's finished work: use your own marking guide or a rubric."
 you_give:
   - The target skill
   - Student year group or level
@@ -29,7 +30,25 @@ you_get:
   - Checks for each stage
   - Notes on common stuck points
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill's instructions. No code, files or paid tools are needed.
+  - Type the skill you want students to reach, and their year group. Add the subject if you like.
+  - Add what students know when they start, and any class data or standards you have (optional).
+  - Read the map. Check that the order of stages makes sense for your students.
+  - Try one diagnostic task with a real student before you use the map for the whole class.
+  - Use the stuck points and teaching notes to plan your next lessons.
+output_sample:
+  input:
+    - The skill students should reach by the end
+    - The year group or age range
+    - Where students usually start (optional)
+    - The subject (optional)
+    - Class data or curriculum standards (optional)
+  output:
+    - name: Progression Map
+      contains: Ordered stages from novice to the target skill, with signs you can see in a student's work at each stage.
+    - name: Prerequisite Diagram
+      contains: Which stages depend on which, so you can see what must be learned first.
+    - name: Common Stuck Points
+      contains: Where students often stall at each stage, and why.
+    - name: Teaching Implications
+      contains: What to do in class based on the map, including how to use the diagnostic tasks.

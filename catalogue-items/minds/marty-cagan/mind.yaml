@@ -16,6 +16,29 @@ use_cases:
   - "Decide who on a small team owns value, design and delivery"
   - "Spot where a role is just coordination dressed up with a bigger title"
   - "Run a first round of conversations and prototype tests with real users"
+not_for:
+  - "You need help with pricing, contracts or legal choices: ask a specialist, such as a pricing adviser or a lawyer, because this mind only covers product risks."
+  - "You want to tune one marketing tweak, like a headline or button: use a marketing specialist, since this mind says he writes mostly about software."
+  - "You want to judge the money case for buying a company or stock: use the Aswath Damodaran mind, which pairs a business story with the numbers behind its value."
+output_sample:
+  input:
+    - Your product idea, roadmap or team problem in plain words
+    - Who the customer is and what problem you think it solves
+    - Any evidence you have so far, such as user chats or tests (optional)
+    - Your team size and who does which role (optional)
+  output:
+    - name: Common problem
+      contains: A short, firm note naming the problem he sees most often and the root cause in how you work.
+    - name: Four risks table
+      contains: Value, usability, feasibility and viability, each with an owner and the cheapest test.
+    - name: What strong teams do instead
+      contains: A plain contrast between feature teams and teams given a problem and an outcome to own.
+    - name: What would change the plan
+      contains: The test result that would make you stop, change or carry on.
+    - name: Next-week action
+      contains: One cheap test you can run this week.
+    - name: Beyond the record note
+      contains: A one-line flag when your question goes past his articles, then the four-risks test as the closest guide.
 seats:
   - {seat: "Product discovery", asks: "What is the cheapest, fastest way to learn if this will work before we build it?"}
   - {seat: "Outcomes over output", asks: "What result are we trying to change, and how will we know if we did?"}

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Shape and gradient bugs need careful step by step reasoning.
 new_slug: model-math-debugger
 name: Model math debugger
-summary: Give it the PyTensor code that errors or runs slow. Get it fixed, with
-  checks that the numbers still match.
+summary: Fix PyTensor code that errors or runs slow. Get a corrected file, the cause in plain words, and checks that values and gradients still match.
 job: test-and-fix-code
 headline: Model math debugger
-subhead: Your PyTensor code fixed, with proof that the numbers still come out
-  the same. Errors with shapes, slow compile times and wrong gradients get
-  traced to their cause, not patched over.
+subhead: Your PyTensor code fixed, with proof that the numbers still come out the same. Errors with shapes, slow compile times and wrong gradients get traced to their cause, not patched over.
 explain: |
   Your PyTensor code fixed, with proof that the numbers still come out the same. Errors with shapes, slow compile times and wrong gradients get traced to their cause, not patched over.
 
@@ -18,6 +15,10 @@ when:
   - Compiling the graph takes minutes and you need to find out why.
   - Random draws repeat when they should differ.
   - You wrote a custom operation and need to check its gradient.
+not_for:
+  - "You need help with model design, priors or sampling checks: ask a statistician or a modelling expert to review the model itself."
+  - "Your code runs fine but the model needs a new design: rework the model first, then bring the code back here if it breaks."
+  - "Your code is not PyTensor, such as plain NumPy or PyTorch: use the docs for that library or ask a developer."
 you_give:
   - The PyTensor code that fails or runs slow
   - The error message or timing
@@ -29,8 +30,29 @@ you_get:
   - A reference check for values and gradients
   - Profiling notes if it was slow
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run Python code, and paste in this skill's instructions.
+  - Paste your PyTensor code, the full error message or timing, and your PyTensor version.
+  - Say what the result should be, if you know it (optional).
+  - Read the cause note first. Then check that the value and gradient checks pass.
+  - Once the checks pass, rerun your own tests and sampling. Note the PyTensor version and backends that were tested.
+output_sample:
+  input:
+    - Your PyTensor code that fails or runs slow
+    - The error message or timing you see
+    - What the result should be (optional)
+    - Your installed PyTensor and backend versions
+  prerequisites:
+    - An AI that can run Python code, with your PyTensor setup available
+  output:
+    - name: Contract
+      contains: "What each input and output should look like: shape, type, axis meaning and any random state."
+    - name: Fixed code
+      contains: Your code corrected at the cause, using the simplest built-in operation that fits.
+    - name: Reference check
+      contains: An independent check that compares values, shapes and dtypes of the fixed code against a plain reference.
+    - name: Gradient check
+      contains: A check of the gradients against an independent reference, with any non-differentiable inputs explained.
+    - name: State check
+      contains: A test that random draws move forward as intended and repeat when restarted from the same state.
+    - name: Profiling notes
+      contains: Compile time and run time measured apart, with the mode and backend named, if the code was slow.

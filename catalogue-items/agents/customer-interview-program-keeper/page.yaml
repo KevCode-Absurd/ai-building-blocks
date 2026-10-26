@@ -1,6 +1,6 @@
 new_slug: customer-interview-program-keeper
 name: Customer interview program keeper
-summary: Give it each round of interview notes. Get buyer patterns, the next questions and a call on when to stop.
+summary: Run customer interviews in rounds. Give it your notes each time and get buyer patterns, the next questions and a clear call on when to stop.
 job: understand-customers
 thinking: high
 thinking_why: It judges the quality of notes, tracks patterns across rounds and decides whether to keep interviewing. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are talking to buyers every few weeks and want the learning to add up.
   - Your interviews keep giving compliments and no clear reasons for buying.
   - You want to know when you have heard enough.
+not_for:
+  - "You buy on price alone, with no struggle or doubt: read your buyers' words by hand instead."
+  - "You can reach fewer than five buyers: read their words by hand, as there is not enough to map."
+  - "You only have reviews: read them yourself, since review text is thinner than an interview."
 you_give:
   - What you want to learn, in one line
   - Notes from each person in your latest round, with an ID and a date
@@ -31,6 +35,31 @@ how_to_use:
   - Paste each person's notes with an ID and a date, and remove names and contact details.
   - Read the patterns and the call. Run the next round it plans, or make the change it suggests.
   - Run it again after each round. It keeps the record in an interviews folder.
+output_sample:
+  input:
+    - What you want to learn, in one line
+    - Notes from each person in your latest round, with an ID and a date
+    - What you sell and who buys it (optional)
+    - Who you can reach for the next round (optional)
+  prerequisites:
+    - An AI that can keep files in an interviews folder, such as Claude Code, to hold the record between rounds
+  output:
+    - name: ROUND
+      contains: People so far, new people this round and the share of notes that were facts.
+    - name: PATTERNS
+      contains: Each pattern with the number of separate people, its status and the strongest quote.
+    - name: ONE-OFFS AND SURPRISES
+      contains: Single stories that fit no pattern, with what to ask about them.
+    - name: BUYER CARDS
+      contains: One card per real pattern, with quotes and a confidence level.
+    - name: WHAT HOLDS BUYERS BACK
+      contains: Ranked forces and one change to test, with a number to measure.
+    - name: THE CALL
+      contains: Keep interviewing or stop and act, and the rule that decided it.
+    - name: NEXT ROUND
+      contains: The interview guide, who to talk to and what to find out.
+    - name: FILES AND MISSING
+      contains: Each step's file and every line marked MISSING.
 how_it_works:
   - title: Read the folder
     text: Loads your question, people, patterns and round log. With an empty folder it plans round one and stops.

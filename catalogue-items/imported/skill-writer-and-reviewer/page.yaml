@@ -2,33 +2,83 @@ thinking: medium
 thinking_why: It applies a set of authoring rules.
 new_slug: skill-writer-and-reviewer
 name: Skill writer and reviewer
-summary: Describe a skill or paste one. Get a well-built version with clear
-  triggers and safety notes.
+summary: "Write an AI skill from a job description, or review one you have. Get a clear trigger line, safety notes and a cleaner SKILL.md."
 job: make-skills
 headline: Skill writer and reviewer
-subhead: A skill file that is easy to trigger, easy to trust and light to load.
-  You describe the job or paste a skill you already have, and you get back a
-  cleaner version plus notes on what changed.
+subhead: Describe the job, or paste a skill file you already have. Your AI checks the trigger line, the structure and the safety notes, then returns a cleaner SKILL.md and test prompts. You see what changed and why.
 explain: |
-  A skill file that is easy to trigger, easy to trust and light to load. You describe the job or paste a skill you already have, and you get back a cleaner version plus notes on what changed.
+  A skill is a folder with a SKILL.md file that tells your AI how to do one job. A good one fires at the right time, stays short, and is safe to run. This skill is a writer and reviewer for SKILL.md files, based on David Ondrej's guide to how skills work.
 
-  The method comes from a guide on how skills work. It checks that the description says when the skill should run, that detail is split into optional reference files instead of one huge page, and that examples, limits and safety notes are present. It also explains why skills beat pasting long prompts each session. Use it when writing a skill from scratch or reviewing one before you share it with a team.
+  In write mode, you describe the job and your AI drafts the file. In review mode, you paste a skill and your AI checks it. Either way it looks at three things. First, does the trigger line say what the skill does, when to use it and how it differs from nearby skills? Second, is the file lean, with long detail moved into separate reference files? Third, does it say what it needs, what it returns, what to do when something is missing, and what could be risky?
+
+  You get the new file, a short list of what changed, and test prompts so you can try it in your own AI tool.
 when:
-  - You are writing your first skill and do not know the file layout.
-  - A colleague sent you a skill and you want a quality review.
-  - Your skill file has grown too long and loads slowly.
-  - You need to add safety notes before sharing a skill.
+  - You are writing your first skill and do not know how the file should look.
+  - A colleague sent you a skill and you want a quality review before you use it.
+  - Your skill file has grown long and your AI loads it slowly or misses parts.
+  - You need safety notes before you share a skill with a team.
+not_for:
+  - "You want to turn a task you repeat into a skill, step by step with tests: use the skill writer."
+  - "You want a score and a fix list on one file: use the skill file validator."
+  - "You want to know why your skills never fire, across all of them: use the skill trigger auditor."
+  - "You only need a one-off prompt that you will never reuse."
 you_give:
-  - A description of what the skill should do
-  - A skill file to review (optional)
-  - Who will use it (optional)
+  - A description of what the skill should do, or a skill file to review
+  - Who will use it and which AI tool runs it (optional)
+  - Any past problems, such as it never fires (optional)
 you_get:
-  - A well-structured skill file
-  - A clear trigger description
-  - Examples and limits written in
-  - A short list of review notes
+  - A trigger line that says what, when and how it differs
+  - Structure notes on length and what to move out
+  - Safety notes on code, web access and file changes
+  - A rewritten SKILL.md
+  - Three test prompts that should fire it and two that should not
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. No code or paid tools are needed.
+  - Say whether you want to write a new skill or review one. Then describe the job, or paste the full skill file.
+  - Read the trigger check first. Make sure the new description says what, when and how it differs, with no steps in it.
+  - Read the safety notes. Do not run any skill that does something you did not expect.
+  - Save the new file as SKILL.md in a folder with the same name as the skill. Try the test prompts in your own AI tool. A chat window cannot tell you if a skill fires on its own.
+how_it_works:
+  - title: Choose a mode
+    text: It writes a new skill from your description, or reviews the file you paste.
+  - title: Check the trigger line
+    text: It checks the description says what the skill does, when to use it, and how it differs from related skills.
+  - title: Check the structure
+    text: It looks at length, order and what to move into separate reference files.
+  - title: Check safety
+    text: It flags code running, web access, file changes and anything that needs your approval.
+  - title: Rewrite and test
+    text: It returns a full SKILL.md and test prompts, and says what could not be tested in a chat.
+output_sample:
+  input:
+    - A description of the job, or a skill file to review
+    - Who will use it and which AI tool runs it (optional)
+    - Any past problems with the skill (optional)
+  output:
+    - name: Trigger check
+      contains: Your current description if you gave one, and a better one that says what, when and how it differs.
+    - name: Structure notes
+      contains: What to shorten, reorder or move into reference files, with a reason for each change.
+    - name: Safety notes
+      contains: What the skill runs, reaches or changes, and what to tell users before they run it.
+    - name: Rewritten SKILL.md
+      contains: The full file, with front matter, a defined output and a rule for missing inputs.
+    - name: Test prompts
+      contains: Three requests that should fire the skill and two that should not.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can all write and review a SKILL.md as text.
+    - name: Claude Code
+      why: It reads skill folders directly, so you can test that the skill fires on its own.
+  inputs:
+    - Two or three real tasks the skill should handle
+    - A skill that already works well, to match its style
+    - The tools or files the skill needs
+terms:
+  - term: SKILL.md
+    meaning: The main file of a skill. It holds the name, a short description, and the steps your AI follows.
+  - term: trigger line
+    meaning: The short description your AI reads to decide whether to open the skill.
+  - term: reference file
+    meaning: A separate file with extra detail that your AI opens only when it needs it.

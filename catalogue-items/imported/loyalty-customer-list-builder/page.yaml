@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It ranks customers by spend and order count.
 new_slug: loyalty-customer-list-builder
 name: Loyalty customer list builder
-summary: Get your top-spending customers tagged and exported, ready for a
-  loyalty program. Adds tags to live customer records.
+summary: Find your top-spending Shopify customers, tag them, and export a loyalty customer list for a VIP offer. Preview first, then tag.
 job: run-your-store
 headline: Loyalty customer list builder
-subhead: A list of your best customers, tagged inside Shopify and exported,
-  ready to invite into a loyalty program or a VIP campaign. It changes live
-  customer records, so run it in preview first.
+subhead: A list of your best customers, tagged inside Shopify and exported, ready to invite into a loyalty program or a VIP campaign. It changes live customer records, so run it in preview first.
 explain: |
   A list of your best customers, tagged inside Shopify and exported, ready to invite into a loyalty program or a VIP campaign. It changes live customer records, so run it in preview first.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a VIP offer and need the audience list.
   - You want customers tagged so your email tool can target them.
   - You want to test your thresholds before changing any records.
+not_for:
+  - "You want to give out reward points or run a loyalty program: use a loyalty app, because this only builds the list."
+  - "You want to send VIP emails: use your email tool, and import the exported list there."
+  - "You can't sign in to the Shopify CLI for your store: ask whoever manages your store to run it, or export customers from Shopify admin by hand."
 you_give:
   - Your store domain
   - Minimum orders and spend
@@ -29,9 +30,29 @@ you_get:
   - A count of who qualified
   - A preview of changes when dry run is on
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Open an AI that can run commands on your computer, such as Claude Code, and sign in to the Shopify CLI for your store.
+  - Give it this skill and your store domain.
+  - Set your minimum orders and minimum spend. Turn dry run on first.
+  - Check the count and the list. Change the numbers if the group looks too big or too small.
+  - Run it again with dry run off to add the tag to live customer records.
+  - Import the CSV into your email tool or loyalty app.
+output_sample:
+  input:
+    - Your store domain
+    - Minimum number of orders (the default is 3)
+    - Minimum lifetime spend in your store currency (the default is 200)
+    - The tag name (optional)
+    - Dry run or live run
+  prerequisites:
+    - An AI that can run commands on your computer
+    - A signed-in Shopify CLI session for your store
+    - Permission to read and change customers in your store
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step updates
+      contains: One line per step showing what was asked and how many customers came back or were tagged.
+    - name: Outcome summary
+      contains: How many VIP customers were found, how many were tagged, and how many errors came up.
+    - name: loyalty_segment_<date>.csv
+      contains: One row per customer with id, email, first and last name, order count, total spent, currency and the tag applied.

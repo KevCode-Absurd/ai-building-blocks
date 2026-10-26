@@ -1,6 +1,6 @@
 new_slug: debate-then-decide-meeting-planner
 name: "Debate then decide meeting planner"
-summary: "Paste a decision your team keeps circling. Get a one-meeting plan that argues it out and closes it."
+summary: "Plan one meeting that settles a decision your team keeps circling. Get the question, roles, timed debate and close, so everyone backs the call."
 job: organise-work
 thinking: medium
 thinking_why: "It has to structure roles, options and a close from a messy history."
@@ -17,6 +17,10 @@ when:
   - "The same decision has been on three agendas and is still open."
   - "You own a call and the team is split, and you want them behind it afterwards."
   - "The person with the facts is junior and never gets heard."
+not_for:
+  - The decision has no clear owner. Name one person first, or the meeting will end the same way.
+  - The choice is a purely technical one with a known right answer. Ask the person who knows, or hold a standard project review.
+  - You only need to tell people a call already made. Send a short note instead of holding a meeting.
 
 you_give:
   - "The decision and the options"
@@ -34,6 +38,29 @@ how_to_use:
   - "Name the owner and the people who know."
   - "Send the PRE-READ two days before, with the MISSING facts asked for."
   - "Run the meeting to the plan, and send the note within a day."
+output_sample:
+  input:
+    - The decision and the options on the table
+    - Who owns the call
+    - Who has the facts or the front-line view
+    - What has happened so far and what is at stake (optional)
+  output:
+    - name: THE QUESTION
+      contains: One line with a deadline, and two to four concrete options, including do nothing.
+    - name: ROLES
+      contains: The owner, the people who know, who is missing, and who only needs to hear the outcome.
+    - name: PRE-READ
+      contains: The sections, who writes it, when it goes out, and the missing facts it must ask for.
+    - name: DEBATE
+      contains: Timed plan with a champion per option, three rules, and what the owner does.
+    - name: CLOSE
+      contains: The owner's four sentences and the two things each person may say.
+    - name: FOLLOW-THROUGH
+      contains: A one-paragraph note, who sends it, by when, and the review date.
+    - name: MISSING
+      contains: Facts you did not give, marked so you can find them.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Writes the question"

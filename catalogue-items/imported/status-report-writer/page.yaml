@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It summarizes updates in a fixed layout.
 new_slug: status-report-writer
 name: Status report writer
-summary: Give it your project updates. Get a weekly or monthly report with
-  status, risks and decisions needed.
+summary: Turn your rough project notes into a status report for leaders. Get a rating, risks and the decisions you need, ready to send.
 job: document-work
 headline: Status report writer
-subhead: Give it your project updates. Get a weekly or monthly report with
-  status, risks and decisions needed. Bring notes on what happened this period.
-  Use the result to plan your next step.
+subhead: Give it your project updates. Get a weekly or monthly report with status, risks and decisions needed. Bring notes on what happened this period. Use the result to plan your next step.
 explain: |
   A status report you can send to leadership today, built from the rough updates you already have. It opens with a short summary, an overall green, amber or red rating, and then lays out what is done, what is in progress, what could go wrong and what you need someone to decide.
 
@@ -18,6 +15,10 @@ when:
   - A project is slipping and you need to flag it without sounding alarmed.
   - You need a monthly report for stakeholders who skim.
   - You want to ask for decisions and get clear answers back.
+not_for:
+  - "You need a daily standup note: write three short lines by hand, or use your task tracker's own export."
+  - "You are writing up an outage or incident: use an incident review with a timeline and a root cause, not a status report."
+  - "You have no updates yet: gather your notes and numbers first, because this report does not invent facts."
 you_give:
   - Notes on what happened this period
   - Targets and actual results
@@ -31,8 +32,34 @@ you_get:
   - A table of decisions needed
   - A list of next priorities
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project tracker or chat.
+  - Gather your notes on what happened, plus your targets and actual results.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Say if the report is weekly, monthly or quarterly, and name the project or team. Paste your notes and numbers.
+  - Read the result. Check that every risk and every decision has the right owner and a deadline.
+  - Fix anything that is wrong, then send it. If your AI is linked to your tracker or chat, it can pull updates for you. This is optional.
+output_sample:
+  input:
+    - Your notes on what happened this period
+    - Your targets and actual results
+    - Known risks and blockers (optional)
+    - Decisions you need from others (optional)
+    - Weekly, monthly or quarterly, and the project or team
+  prerequisites:
+    - "Optional: a project tracker, chat or calendar connected to your AI, so it can pull updates itself"
+  output:
+    - name: Executive Summary
+      contains: A short overview of what is on track, what needs attention and the key wins.
+    - name: Overall Status
+      contains: "One rating: green for on track, yellow for at risk, or red for off track."
+    - name: Key Metrics
+      contains: A table of each metric with target, actual, trend and a status color.
+    - name: Accomplishments This Period
+      contains: A list of the wins from this period.
+    - name: In Progress
+      contains: A table of open items with owner, status, due date and notes.
+    - name: Risks and Issues
+      contains: A table of each risk with its impact, what is being done and the owner.
+    - name: Decisions Needed
+      contains: A table of each decision with why it matters, the deadline and your recommended answer.
+    - name: Next Period Priorities
+      contains: A numbered list of what comes next.

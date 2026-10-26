@@ -2,34 +2,116 @@ thinking: high
 thinking_why: Windows, counting rules and duplicates all change what the numbers mean.
 new_slug: conversion-reconciliation
 name: Cross-platform conversion reconciler
-summary: Give it your Meta and Google conversion reports. Get why the numbers
-  differ and a plan to make them match.
+summary: See why Meta, Google and GA4 report different conversions. Get a side-by-side table, the reason for each gap and a fix plan.
 job: track-numbers
 headline: Cross-platform conversion reconciler
-subhead: An explanation of why your Meta, Google and analytics conversion
-  numbers disagree, and a plan to bring them to a form you can compare. It stops
-  you from adding numbers that should never be added.
+subhead: Paste your Meta, Google and analytics conversion reports with the date range and time zone. Your AI lists how each source counts, shows them side by side and explains each gap. It will not add numbers that should not be added.
 explain: |
-  An explanation of why your Meta, Google and analytics conversion numbers disagree, and a plan to bring them to a form you can compare. It stops you from adding numbers that should never be added.
+  Meta says 120 sales, Google says 90 and your store says 100. Both ad platforms are probably right by their own rules. This conversion reconciliation skill shows why they differ, so you can trust the numbers or fix the tracking.
 
-  First it fixes what counts as one conversion, its value, the date range, time zone and currency. It then lists every source: browser tags, server events, ad platforms, analytics, app measurement and offline uploads, with how each counts and removes duplicates. It refuses to total reports that use different windows, such as seven days against thirty, and shows them side by side with their definitions. It ends with gaps, confidence and steps to improve measurement.
+  First it fixes what counts as one conversion, its value, the date range, the time zone and the currency. It then lists every source and how each one counts and removes duplicates: browser tags, server events, ad platforms, analytics, app measurement and offline uploads. It refuses to total reports that use different windows, such as seven days against thirty. It shows them side by side with their definitions instead.
+
+  It ends with the reason for each gap, a confidence rating, what evidence is missing and a numbered plan to improve measurement. Reasons it cannot tie to your reports are labelled "possible, not confirmed".
 when:
-  - Meta says 120 sales and Google says 90 and your store says 100.
-  - You want to total conversions across ad platforms.
-  - You are reviewing tracking after a privacy or consent change.
-  - A client asks which report to trust.
+  - Meta says 120 sales, Google says 90 and your store says 100, and a client wants to know which is right.
+  - You want to total conversions across ad platforms and are not sure you can.
+  - You are checking your tracking after a privacy or consent change.
+  - Your ad platform and GA4 show different conversion counts for the same week.
+not_for:
+  - You only need one platform's own report read. Use that platform's own reporting, or the Meta ads daily checker.
+  - You want to know which channel earns the credit. Use the Attribution model chooser or the Campaign attribution analyst.
+  - Your reports already use the same window and definitions. Compare them directly.
+  - You want your Meta tracking set up or fixed. Use the Meta pixel and server events fixer or the Meta server tracking checker.
 you_give:
-  - Conversion reports from each platform
-  - Your definition of a conversion
-  - Date range and time zone
-  - Analytics or store totals (optional)
+  - A conversion report from each platform, such as Meta, Google Ads and GA4
+  - What counts as one conversion for your business, and its value
+  - The date range, time zone and currency
+  - Each platform's attribution window and click or view setting (optional)
+  - Your store or CRM total for the same dates (optional)
 you_get:
-  - Side by side comparison with definitions
-  - Reasons for each gap
-  - Confidence rating
-  - Measurement fix plan
+  - A side-by-side table with each source's definition
+  - The reason for each gap, marked confirmed or possible
+  - A confidence rating and what would raise it
+  - A list of evidence that is missing
+  - A numbered plan to fix your measurement
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Export a conversion report from each platform for the same dates. Note the time zone and attribution window in each one.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text as your first message.
+  - Paste the reports. Say what counts as a conversion for you and the date range. If you do not know a setting, say so.
+  - Read the side-by-side table first. If it says "No total computed", the sources use different rules, and that is the answer to read.
+  - Check each gap marked "possible, not confirmed" in the platform settings before you act on it.
+  - Work through the fix plan from the top. Run the reconciler again after one change to see if the gap shrinks.
+how_it_works:
+  - title: Fixes the definition
+    text: States the conversion, value, window, time zone and currency all sources must share.
+  - title: Lists every source
+    text: Records how each source counts, removes duplicates and handles consent.
+  - title: Applies the comparability gate
+    text: Refuses to total reports that use different windows or rules, and shows them side by side.
+  - title: Explains each gap
+    text: Ties each difference to a setting or a number, and labels guesses as not confirmed.
+  - title: Rates confidence
+    text: Gives high, medium or low, and lists the evidence that is missing.
+  - title: Plans the fix
+    text: Orders the changes that would make your measurement more reliable.
+output_shape: |
+  CONVERSION AND SCOPE
+  <conversion, value, window, time zone, currency, decision>
+
+  SOURCE INVENTORY
+  <source | what it counts | window | click or view | counting | dedup | time zone | currency | modeled>
+
+  SIDE BY SIDE
+  <source | conversions | value | definition>
+  Comparable? <yes / no>. <No total computed, and which definitions differ>
+
+  WHY THE NUMBERS DIFFER
+  <gap between sources | reason | confirmed or possible | evidence>
+
+  CONFIDENCE
+  <high / medium / low> - <reason, what would raise it>
+
+  MISSING EVIDENCE
+  <list>
+
+  MEASUREMENT FIX PLAN
+  1. <change, where, what it fixes>
+output_sample:
+  input:
+    - A conversion report from each platform
+    - What counts as one conversion for you
+    - The date range, time zone and currency
+    - Settings for each source, such as the attribution window (optional)
+    - Your store or CRM total for the same dates (optional)
+  output:
+    - name: Conversion and scope
+      contains: The conversion, value, date range, time zone and currency every source is held to.
+    - name: Source inventory
+      contains: One row per source on how it counts, removes duplicates and treats consent.
+    - name: Side by side
+      contains: Each source's numbers next to its definition, and a note when they cannot be totalled.
+    - name: Why the numbers differ
+      contains: One entry per gap, with the reason and whether the evidence confirms it.
+    - name: Confidence
+      contains: A high, medium or low rating and what would raise it.
+    - name: Missing evidence
+      contains: Settings, dates or exports it needed and did not have.
+    - name: Measurement fix plan
+      contains: Numbered changes, most useful first, each with where to make it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It reads pasted tables and exports, so Claude, ChatGPT and Gemini all work.
+  inputs:
+    - The attribution window shown in each ad platform
+    - A server-event export or event match report
+    - Notes on any consent banner or privacy change and its date
+terms:
+  - term: Attribution window
+    meaning: How many days after a click or view a platform still counts a sale as its own.
+  - term: View-through
+    meaning: A sale counted after someone saw an ad but did not click it.
+  - term: Modeled data
+    meaning: Conversions a platform estimates when it cannot see them, for example because of consent.
+  - term: Deduplication
+    meaning: Counting one sale once when it was reported by two sources.

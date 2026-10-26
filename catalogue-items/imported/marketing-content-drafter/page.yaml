@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It writes a draft in a known format.
 new_slug: marketing-content-drafter
 name: Marketing content drafter
-summary: Say what you need. Get a blog post, social post, newsletter, page or
-  press release with headline options.
+summary: Write a first draft of a blog post, social post, newsletter, landing page or press release. Marketing content drafter gives headline options too.
 job: grow-social
 headline: Marketing content drafter
-subhead: Tell it the content type, topic, audience and two to four key messages.
-  It writes a first draft in your voice, formatted for the channel, and applies
-  your brand voice notes if you have them. You get the full draft, headline
-  options and a note on the voice it used.
+subhead: Tell it the content type, topic, audience and two to four key messages. It writes a first draft in your voice, formatted for the channel, and applies your brand voice notes if you have them. You get the full draft, headline options and a note on the voice it used.
 explain: |
   A first draft of a blog post, social post, newsletter, landing page, press release or case study, with headline options, ready to edit. It writes for a named audience in your voice.
 
@@ -19,6 +15,10 @@ when:
   - You must write a LinkedIn post and a newsletter from the same idea.
   - You are announcing news and need a press release.
   - You want several headline options to pick from.
+not_for:
+  - "You need ad copy that must pass platform policy checks: ask a copywriter or run a compliance review."
+  - "You make legal or medical claims: have a lawyer or qualified expert check the text first."
+  - "You need real customer results or figures: add your own data, because this tool leaves placeholders for them."
 you_give:
   - The content type
   - The topic and key messages
@@ -31,7 +31,27 @@ you_get:
   - Platform-fitted formatting
   - Notes on voice used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Say what you want to write, for example a LinkedIn post or a press release.
+  - Add your topic, your audience and 2 to 4 key messages. Add tone and length if you have them.
+  - Paste your brand voice notes into the chat if you have them. If not, you get a plain professional tone.
+  - Read the draft and the headline options. Add your own facts, quotes and figures where it leaves placeholders.
+  - Ask for changes, or for a version for another channel.
+output_sample:
+  input:
+    - The content type, such as a blog post or LinkedIn post
+    - Your topic and 2 to 4 key messages
+    - Your audience
+    - Tone and length (optional)
+    - Your brand voice notes (optional)
+  output:
+    - name: Draft
+      contains: The full piece, shaped for the content type and channel, with a hook, clear sections and a call to action.
+    - name: Headline or subject line options
+      contains: Two or three choices for the headline, or the email subject line, so you can pick one.
+    - name: SEO suggestions
+      contains: "For web content: a main keyword, where to place it, link ideas and a meta description under 160 characters."
+    - name: Voice note
+      contains: A short line on which brand voice and tone the draft used.
+    - name: Next steps
+      contains: Ideas such as reviewing with your team, adding customer quotes or pairing the piece with a visual.

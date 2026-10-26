@@ -45,6 +45,23 @@ Skip when:
 
 ---
 
+## Output Format
+
+Reply with these sections, in order:
+
+1. **Repo summary**: the tool found (Turborepo, Nx, pnpm, Lerna), the workspaces, and the package list.
+2. **Affected packages**: for the planned change, each package that depends on it, direct first, then indirect.
+3. **Commands**: the exact filter or affected command for the user's tool, to run only those packages' builds and tests.
+4. **Dependency diagram**: a Mermaid diagram of the packages involved.
+5. **Caching and CI notes**: what to change, and what each change needs.
+6. **Next step**: run the scoped command locally, then use it in CI.
+
+If the package list or the change is missing, ask once, then mark it MISSING. Never invent package names or dependencies: read them from the package files or from `scripts/monorepo_analyzer.py` output. If you cannot run code, ask the user to run the script and paste the result.
+
+Requirements and costs: the script needs Python 3. Remote caching with Turborepo needs TURBO_TOKEN and TURBO_TEAM, which normally come from a Vercel account (check their current plans and pricing), or a self-hosted cache server. Nx remote caching also needs its own account or setup. Local caching needs none of this.
+
+---
+
 ## Tool Selection
 
 | Tool | Best For | Key Feature |

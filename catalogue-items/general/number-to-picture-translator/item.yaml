@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: performance_sheet, required: true}
   - {type: question, required: true}
+  - {type: document, required: false}
 outputs:
   - {type: copy_draft}
 origin: rebuilt

@@ -1,53 +1,98 @@
 new_slug: make-a-readable-event-poster
 name: Make a readable event poster
 headline: Make a readable event poster
-summary: Share the source files. Get a poster layout, checked text and final export checklist.
+summary: Make an event poster whose date, place and price can be read from a distance. You get the design, a text check against your facts and a contrast check.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A poster layout, checked text and final export checklist. Share confirmed event details, audience, format, brand references and required accessibility information. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your confirmed event details, where the poster will hang and your brand colors. Your AI plans what people read first, builds the poster, then checks the words against your facts and the colors for contrast. You get a poster file or layout, a text check and an export checklist.
 explain: |-
-  A poster layout, checked text and final export checklist.
+  An event poster fails when people walk past it. The name is small, the date is hidden in a corner, or pale text sits on a busy picture. This event poster workflow starts with what a person can read in a few seconds, then builds the design around it.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The date, location, price and action are legible at the intended size and agree with the source. Missing tools or evidence stay visible in the final summary.
+  It runs three steps. First it picks the one or two words that carry the point and sets a reading order: the event name, the details people need, then the next action. Then it builds the poster from that order and your confirmed facts. Last it checks every piece of text against your facts, and every text and background color pair for contrast.
+
+  It can only build a file if your AI can run code and use fonts. Otherwise you get a written layout with sizes and colors, and it says no file was made. It never fills in a missing date, price or place.
 when:
-  - You need a poster layout, checked text and final export checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your venue or club needs a poster for an event in two weeks and you have facts but no design.
+  - A design came back from a freelancer and you cannot tell if the date reads from across a room.
+  - You are printing one poster and need a contrast check before the print run.
+  - A poster must follow your brand and also meet an access need, such as high contrast.
+not_for:
+  - You only want the words and type plan, with no finished file. Use the Type-led poster planner.
+  - You want poster art with no event facts to check. Use the Poster designer on its own.
+  - You only need to check colors on an existing design. Use the Colour contrast checker.
+  - The date, place or price may still change. Wait until they are confirmed. This workflow marks them MISSING and stops.
 you_give:
-  - Confirmed event details, audience, format, brand references and required accessibility information.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: Python image/PDF tools and fonts; Node.js and the bundled contrast checker."
+  - The event name, date, time, place, price and how to book or attend
+  - Where the poster will be seen, its size and whether it is printed or on a screen
+  - Your brand colors, fonts and logo (optional)
+  - The mood, in one or two words (optional)
+  - Access needs, such as large print or high contrast (optional)
 you_get:
-  - A poster layout, checked text and final export checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A reading order that puts the event name first, then the details, then the action
+  - The poster as a PNG or PDF, or a written layout with sizes and colors if your AI cannot make files
+  - A text check that matches every fact on the poster to your source
+  - A contrast result for each text and background pair, with a fix for any that fail
+  - An export checklist for size, file type and fonts
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini. To get a finished PNG or PDF, use one that can run Python and use fonts.
+  - Paste your event facts exactly as they must appear. Say where the poster hangs and how far away people stand.
+  - After step 1, check the reading order. If the date is not in the top three things read, ask for a change.
+  - After step 3, check the contrast table. Fix every failing pair before printing.
+  - Read every word on the poster against your facts. Then print or view it at the real size and read it from the stated distance.
 how_it_works:
   - title: Type-led poster planner
-    text: Set a clear reading order for the event name, essential details and next action.
+    text: Picks the one or two words that carry the point and sets the reading order, size and type feel. Hands step 2 the reading order and the exact event facts. Check before moving on, the date, place and price are in the plan exactly as supplied.
   - title: Poster designer
-    text: Build the poster from that hierarchy and the confirmed event facts.
+    text: Builds the poster from that reading order and the confirmed facts, as a PNG or PDF when code can run. Keeps the text large and uncluttered. Hands step 3 the file and its colors. Check before moving on, no text overlaps or runs off the page.
   - title: Colour contrast checker
-    text: Extract actual text and background colors into temporary CSS tokens and explicit pair data for the supplied checker. Check those pairs, then visually inspect image, gradient and opacity areas; mark any color or rendering evidence that is unavailable.
+    text: Takes the real text and background colors from the design and checks each pair for contrast with the supplied checker. Looks by eye at pictures, gradients and faded text it cannot measure. Hands back the contrast table. Check before moving on, every pair passes or has a fix.
 output_shape: |-
-  Scope and source coverage
-  A poster layout, checked text and final export checklist.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  EVENT         <name>, <date and time>, <place>, <price>, <how to book>
+  POSTER        <size>, <print or screen>, <viewing distance>
+
+  READING ORDER 1 <event name> 2 <date, time, place> 3 <price and action> 4 <small print>
+
+  POSTER FILE   <file name and type, or "layout only: no file was made">
+
+  TEXT CHECK    <fact> | <on the poster> | <matches source: yes or no>
+
+  CONTRAST      <text color> on <background> | <ratio> | <pass or fail> | <fix>
+
+  EXPORT        <size, file type, fonts, notes for the printer>
+
+  MISSING       <each gap, and the line it stops>
+  CHECKS MISSED <one line each, or none>
+  NEXT STEP     <one action for you>
+output_sample:
+  input:
+    - Your event name, date, time, place, price and how to book
+    - Where the poster hangs, its size and how far away people stand
+    - Your brand colors, fonts and logo (optional)
+    - Access needs (optional)
+  prerequisites:
+    - An AI that can run Python and use fonts, to make a PNG or PDF file
+    - Node.js, to run the contrast checker
+  output:
+    - name: Reading order
+      contains: What people read first, second and third, with the words chosen to carry the point.
+    - name: Poster file
+      contains: The finished poster as a PNG or PDF, or a written layout if no file could be made.
+    - name: Text check
+      contains: Each fact on the poster matched to your source, with any difference marked.
+    - name: Contrast table
+      contains: Each text and background pair with its ratio, a pass or fail, and a fix for failures.
+    - name: Export checklist
+      contains: Size, file type, fonts and what to tell your printer, with open questions marked.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The date, location, price and action are legible at the intended size and agree with the source.
+  - what: Viewing distance
+    how: Say how far away people stand, such as across a street. The main words and the date get larger to suit it.
+  - what: High contrast
+    how: Name the stricter bar you need, such as 7 to 1. Step 3 checks every pair against it and lists the pairs that fall short.
+  - what: A screen poster
+    how: Say it shows on a screen, not paper. The export checklist covers screen size and file type, not print notes.
+  - what: Fixed brand colors
+    how: Attach your brand colors. The design uses only those, and step 3 reports any pair that fails.
 judge:
   - The date, location, price and action are legible at the intended size and agree with the source.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -73,5 +118,11 @@ works_best_with:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
 terms:
+  - term: Reading order
+    meaning: The order people read a poster, from the biggest words to the small print.
+  - term: Contrast
+    meaning: How well text stands out from its background. Higher is easier to read.
+  - term: Export
+    meaning: Saving the finished design as a file your printer or screen can use.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result and file passed from one step to the next.

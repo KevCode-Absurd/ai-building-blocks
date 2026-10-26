@@ -14,28 +14,38 @@ explain: |
   This prompt follows what the model makers' own guides advise. It sorts the brief into what to keep, what to turn into things a camera can see, and what to drop. It gives every photo one role and fixes the few lock lines that describe your product. It plans the light, a real camera position, which hand holds what, and the words. The prompt runs in five blocks with the most important first and ends with one line saying what must not change. Then you make one image, check it against your photos on six lines, and fix one thing at a time.
 
 when:
-  - You have an approved ad and need the prompt for your image tool or an automated pipeline.
-  - Your AI images keep getting the product slightly wrong, and you're paying to redo them.
-  - Your prompts have grown long and the images keep picking up old or rejected ideas.
+  - Your designer or client has signed off one ad, and you now need the prompt for GPT Image, Nano Banana or FLUX.
+  - Your last three AI images had the wrong green, a hand over the name or a pack that opened in the wrong place, and each redo costs money.
+  - Your brief has grown to a page of notes and rejected versions, and the images keep picking up an idea you dropped.
+  - A product photo shows the pack one way, your words describe it another, and the tool keeps following the words.
+
+not_for:
+  - You have no approved ad yet, only a product and a vague idea. Write the words first with the fact-based ad copy writer, then come back.
+  - You want six different ad ideas from one product photo. Use the six image ad prompt builder.
+  - You want a moving clip. Approve a still here first, then use it as the start frame in a video prompt writer.
+  - You have no photos of the product and no lock lines. It still writes a prompt, but marks the photo match as still to do and shows the product closed, so expect a rough first image.
 
 you_give:
-  - The approved scene, layout and image shape (not the rejected ideas)
-  - Your product facts, ideally the lock lines from your truth sheet
-  - Product photos, each with what it's for
+  - The approved scene, layout and image shape, from your ad brief or the designer's sign-off (rejected versions can stay in the paste)
+  - Your product facts, ideally the lock lines from your truth sheet, and how the product opens and is held
+  - Product photos, attached as pictures, each with what it's for (front as sold, out of the pack, in a hand)
   - The approved words, with where they sit and which is biggest (optional)
-  - Which image tool you use, its limits, and your mistakes list (optional)
+  - Which image tool you use, its image limit and length limit (optional)
+  - Your mistakes list from past image jobs (optional)
 you_get:
   - One prompt in five blocks plus a keep line, with its character count
+  - A subject block that says which hand holds what, which hand tears or pours, and how they move
   - A one-line role for every attached photo
-  - A six-line check for the first image, with failure notes for your mistakes list
+  - A six-line pass-or-fail check for the first image, with failure notes for your mistakes list
   - A list of what was left out or added, and a MISSING line for any fact it needed
 
 how_to_use:
-  - Start a chat with the prompt. Open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the prompt. Open it if you added it to your AI, or copy it and paste it in. Claude writes the prompt but can't draw the picture, so plan to paste the prompt into GPT Image (ChatGPT), Nano Banana (Gemini) or FLUX. In ChatGPT or Gemini you can run the whole skill there.
   - Paste the approved ad, the exact words and the product facts. Rejected versions can stay in; they'll be dropped.
-  - Attach your product photos (the photos themselves, not a description) and say what each one is for.
+  - Attach your product photos as pictures, not a description, and say what each one is for.
   - Say which image tool you use, the image shape and any length limit, such as "GPT Image, 4:5, 1,000 characters".
-  - Make one image only. Run the six checks on it, then ask for one fix at a time until it passes.
+  - Read the prompt before you make anything. Check the lock lines match your photos, the words are spelt right, and the hands make sense: which hand holds the pack, which one tears.
+  - Make one image only, put your photos beside it and run the six checks. Ask for one fix at a time until it passes.
 
 how_it_works:
   - title: Sorts the brief
@@ -45,7 +55,7 @@ how_it_works:
   - title: Fixes the lock lines
     text: Three to five short phrases for the details a model gets wrong first, repeated word for word in every prompt.
   - title: Plans what's visible
-    text: Only actions your facts allow, light that matches the scene, a real camera position, which hand holds what, and approved words only.
+    text: Only actions your facts allow, light that matches the scene, a real camera position, and approved words only. Each hand is named left or right, with its grip and how it moves from tear to pour.
   - title: Writes five blocks
     text: Use and shape, the subject with your lock lines, place and layout, camera and light, the exact words in quotes, then a keep line.
   - title: Fits the model
@@ -202,3 +212,27 @@ terms:
     meaning: Stand-in text in a layout sketch, such as "HEADLINE HERE", that marks where real words will go.
   - term: Upscale
     meaning: Making a finished image bigger and sharper without changing what's in it.
+
+output_sample:
+  input:
+    - "The approved ad scene, layout and image shape"
+    - "Your product facts, ideally the lock lines from your truth sheet"
+    - "Product photos, each with what it is for"
+    - "The approved words (optional)"
+    - "Your image tool and its limits (optional)"
+  prerequisites:
+    - "An AI that can read attached photos"
+    - "An image tool to draw the picture, such as Nano Banana or ChatGPT"
+  output:
+    - name: "PROMPT"
+      contains: "One image prompt in five blocks (use, subject, place, camera and light, words) plus a keep line, with its character count."
+    - name: "IMAGES"
+      contains: "A one-line role for each photo you attached."
+    - name: "LEFT OUT"
+      contains: "What was dropped from the brief, and any detail it added that you did not give."
+    - name: "CHECK THE FIRST IMAGE"
+      contains: "Six pass-or-fail lines to run on the first picture, with a failure note for each miss."
+    - name: "MISSING"
+      contains: "Any photo, product fact, approved words or price it needed and did not have."
+    - name: "CHECKS MISSED"
+      contains: "One line for each check it could not run, or none."

@@ -1,0 +1,145 @@
+name: Korean Business Navigator agent
+summary: "Prepare for business in Korea: a meeting plan, KakaoTalk and email drafts at the right formality and a read on what your contact's replies may mean."
+headline: Korean Business Navigator agent
+subhead: "Say who you are meeting in Korea, how you were introduced and what you want. You get a meeting plan, message drafts at the right formality, a read on what their replies may mean and the timing to expect. Have a Korean speaker check every message before you send it."
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Deals in Korea often follow rules that no one explains to a foreign professional. A "yes" may not mean agreement. Silence may mean the team is discussing your offer. The real decision may happen after the meeting, in an internal approval process called 품의. This agent helps you prepare for that. It maps where your deal sits, plans the meeting and drafts messages at the right level of formality.
+
+  You give it the people, the type of company and what has happened so far. It places the relationship, such as introduced or cold, first meeting or repeat contact. It plans the meeting: who attends, how to address each person by title, what to ask and what to hold back, such as a price or a deadline in the first meeting. It drafts KakaoTalk or email messages. When you paste their replies, it explains what a phrase may mean and what to do next.
+
+  This is general guidance from the profile, not a replacement for a Korean colleague or adviser. Customs differ by company, industry and age group, and the agent says when it is unsure. Treat its phrase guide as a guide, not a rule. Take contract, legal and tax questions to a qualified adviser in Korea.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have a first meeting with a Korean company and want to know what to do and what to avoid.
+  - A Korean contact said they will "review it" and you cannot tell whether that means yes or no.
+  - You are about to message a contact on KakaoTalk and are unsure how formal to be.
+  - You were invited to a company dinner (회식) and want to know what is expected.
+not_for:
+  - You need contract terms checked, or legal, tax or regulatory advice for Korea. Use a qualified Korean-speaking adviser or lawyer.
+  - You need a negotiation plan that is not about Korea. Use the Negotiation prep coach.
+  - You need a live interpreter or a certified translation. This agent drafts Korean, but a native speaker must check it before you send.
+  - You want a plan to find new buyers. Use the Outbound Strategist agent, and look for an introduction first.
+you_give:
+  - Who you are meeting: name, job title, company and the type of company, such as a large group, a mid-size firm, a small firm or a startup.
+  - How you were introduced, and who introduced you.
+  - What you want from the next meeting or message, and your deadline.
+  - Messages or emails from them, pasted word for word (optional)
+  - Who will attend from your side, and whether a dinner is likely (optional)
+  - Whether you speak Korean, and how well (optional)
+you_get:
+  - A read on where your relationship and deal stand
+  - A meeting plan covering who attends, how to address people, what to ask and what to hold back
+  - Message drafts for KakaoTalk or email at the right formality, in Korean with the English meaning beside it
+  - A guide to what their phrases may mean, with a next step for each
+  - The timing to expect for approval and when to follow up
+  - A list of risks and points a Korean speaker should check
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write down who you are meeting, the company type, how you were introduced and what you want. Paste any messages from them as they are, in Korean or English. No code or web access is needed.
+  - Type "Plan my next step with this contact. Say when you are unsure. Do not guess names or titles."
+  - Read the relationship read and the timing first. Correct anything you know is wrong, then ask again.
+  - Have a Korean speaker read each message draft before you send it.
+  - Send the message yourself. After they reply, paste the reply and ask what it may mean.
+how_it_works:
+  - title: Place the relationship
+    text: It works out how you were introduced, how many times you have met and how you talk to them now.
+  - title: Read the company and the people
+    text: It sorts the company type and each person's title and seniority, and says how to address them.
+  - title: Plan the meeting
+    text: It covers who attends, card exchange, what to ask, what to hold back and what to expect at a dinner.
+  - title: Draft the messages
+    text: It writes KakaoTalk or email text at the formality that fits the stage, in Korean with the English beside it.
+  - title: Read their replies
+    text: It explains what a phrase may mean and what to do next. It says when a phrase has more than one meaning.
+  - title: Set the timing
+    text: It gives a rough time for internal approval for that type of company and when to follow up.
+  - title: Hand over the checks
+    text: It lists risks and points a Korean speaker or adviser should confirm.
+output_shape: |-
+  RELATIONSHIP READ
+    Stage <introduced, first meeting, repeat, trusted> | Contact <name, title> | Company type <type> | Unknown <what was not given>
+
+  MEETING PLAN
+    Goal <what to leave with> | Who attends <names and titles> | Address by <title plus nim> | Ask <questions> | Hold back <topics for later>
+
+  MESSAGE DRAFTS
+    <channel> | <formality> | <Korean text> | <English meaning> | <when to send>
+
+  WHAT THEIR WORDS MAY MEAN
+    <phrase> | <literal meaning> | <what it may mean here> | <your next step>
+
+  TIMING
+    <stage of approval> | <rough time> | <when to follow up>
+
+  RISKS
+    <risk> | <why> | <how to avoid it>
+
+  POINTS FOR A KOREAN SPEAKER OR ADVISER
+    <point> | <what to confirm>
+output_sample:
+  input:
+    - Who you are meeting, their job title and the type of company
+    - How you were introduced and what you want from the next step
+    - Messages from them, pasted word for word (optional)
+    - Whether a dinner is likely (optional)
+  prerequisites:
+    - An AI that can read and write Korean. A Korean speaker to check every message before you send it.
+  output:
+    - name: Relationship read
+      contains: Where the relationship stands and what the AI could not tell from what you gave.
+    - name: Meeting plan
+      contains: Your goal, who attends, how to address each person, what to ask and what to hold back.
+    - name: Message drafts
+      contains: KakaoTalk or email text in Korean, with the English meaning and when to send.
+    - name: What their words may mean
+      contains: Phrases from their replies, what they may mean and your next step.
+    - name: Timing
+      contains: A rough time for approval at that type of company and when to follow up.
+    - name: Risks
+      contains: Things that could hurt the relationship and how to avoid them.
+    - name: Points for a Korean speaker or adviser
+      contains: What to confirm before you act.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three can read and write Korean. Pick one you can ask follow-up questions in, and have a native speaker check the result.
+  inputs:
+    - The whole chat or email thread with your contact, so it can read tone and timing.
+    - A note on who introduced you and how well they know your contact.
+    - The agenda or invitation for the meeting.
+terms:
+  - term: 품의
+    meaning: The internal approval process. A request is written up and passes through each level of managers before a decision.
+  - term: Nunchi (눈치)
+    meaning: Reading the mood and the unspoken signals in a room.
+  - term: KakaoTalk
+    meaning: Korea's main chat app. It is also used for business.
+  - term: 존댓말
+    meaning: Polite, formal speech. It is the safe choice until the other person changes it.
+  - term: 회식
+    meaning: A company dinner, often with drinks, that builds relationships among colleagues and partners.
+tweaks:
+  - what: Formality
+    how: Say how well you know the contact. The drafts shift from formal to relaxed as the relationship grows.
+  - what: Company type
+    how: Name the type, such as large group or startup. Approval time and hierarchy differ a lot.
+  - what: Dinner
+    how: If you cannot or do not want to drink, say so and ask for polite ways to decline.
+improve:
+  - Keep a log of each contact: dates, what was said and what you sent. Paste it next time.
+  - After each meeting, write down what happened and ask the agent to update your read.
+  - Ask a Korean colleague to confirm the phrase guide for your contact's company.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

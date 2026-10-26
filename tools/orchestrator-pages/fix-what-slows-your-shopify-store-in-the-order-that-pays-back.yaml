@@ -1,6 +1,6 @@
 new_slug: fix-what-slows-your-shopify-store-in-the-order-that-pays-back
 name: "Fix what slows your Shopify store, biggest wins first"
-summary: Give it your PageSpeed report and theme. Get speed fixes ranked by orders gained per hour, then applied.
+summary: Fix the slow parts of your Shopify store speed in the right order. Give it your PageSpeed report, apps and theme. Get ranked fixes and code changes.
 job: speed-up-store
 thinking: high
 thinking_why: It reads reports, prices fixes in orders and edits theme code across six skills. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your mobile PageSpeed report is failing and you do not know which fix to do first.
   - You have installed many apps over the years and suspect some slow the store for little return.
   - Your developer or agency has a long to-do list and you need to choose what to pay for.
+not_for:
+  - Your mobile PageSpeed report already passes on real-user data. Leave the store as it is and check it again each quarter.
+  - You already know one app is slow. Remove it yourself, or ask your developer, rather than run all six steps.
+  - Your store is not on Shopify. Ask your developer or agency for a speed review of your own platform.
 you_give:
   - Your PageSpeed Insights results for the homepage, a collection page and a product page
   - Monthly visits, conversion rate and average order value
@@ -31,6 +35,31 @@ how_to_use:
   - Paste your PageSpeed results and your monthly visits, conversion rate and order value. Say how many hours you or your developer have.
   - When it pauses, remove the apps it marked for removal and copy your theme. Then give it the theme files.
   - Test each code change on the copy of your theme and run PageSpeed again before you publish it.
+output_sample:
+  input:
+    - Your PageSpeed Insights results for mobile (homepage, a collection page and a product page)
+    - Your monthly visits, conversion rate and average order value
+    - A screenshot or list of your installed apps
+    - A copy of your theme files
+    - The first-screen image file (optional)
+  prerequisites:
+    - An AI that can read uploaded files, such as Claude with the handoff pack
+    - A copy of your theme, so no change touches the live store
+  output:
+    - name: Speed report read
+      contains: Pass or fail on real-user data for each page, the cause of what is slow, and the first three fixes.
+    - name: Ranked fixes
+      contains: Each fix as a low and high range of extra orders, with effort, risk and a this week, next month or parked label.
+    - name: App verdicts
+      contains: A keep, remove or delay call for each app, and the list of apps to uninstall.
+    - name: Leftover code
+      contains: Lines in your theme that removed apps left behind, and whether each is safe to delete.
+    - name: First-screen image fix
+      contains: The code change that loads the top image sooner, plus image size targets and test steps.
+    - name: Layout shift fix
+      contains: The element that makes the page jump, the code change that reserves its space, and a retest date.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read the speed report
     text: Splits the report into real-user and test data, judges pass or fail on the real-user data, and names what is slow on each page. Ends with the first three fixes.

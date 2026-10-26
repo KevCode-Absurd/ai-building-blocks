@@ -1,6 +1,6 @@
 new_slug: make-every-touchpoint-say-the-same-thing
 name: Make every touchpoint say the same thing
-summary: Give it your store link and reviews. Get a ranked list of where your touchpoints disagree and a brand guide.
+summary: Check your site, emails and packaging for brand drift. Give it your store link and screenshots. You get ranked fixes and a brand guide.
 job: brand-file
 thinking: high
 thinking_why: Four skills run in a row and the audit judges screenshots. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your site, emails and packaging feel like different companies.
   - A new writer, designer or agency keeps getting the voice wrong.
   - You are about to redesign or relaunch and want to know what is off first.
+not_for:
+  - "Your brand has no live site or reviews yet: start with the Brand profile builder alone, then come back."
+  - "You only need a short voice summary for writers: use the Brand voice one-pager writer."
+  - "You only want a guide from a brand file you already have: use the Brand guide builder."
 you_give:
   - Your store address, plus any pasted pages if it can't be read
   - Customer reviews or survey answers (optional)
@@ -31,6 +35,26 @@ how_to_use:
   - Paste your store link and attach screenshots. The AI can read images, so do not describe them in words.
   - Answer its short check-in question about anything the site can't say.
   - Check the ranked fix list before you act on it. The audit measures fit, not whether copy sells.
+output_sample:
+  input:
+    - Your store link
+    - Screenshots of your homepage, a product page, your pack and a promo email
+    - Customer reviews or survey answers (optional)
+    - A sample of your current ad or email copy (optional)
+    - Your logo rules and colour codes (optional)
+  prerequisites:
+    - An AI that can read files and images, such as Claude with the handoff folder attached
+  output:
+    - name: "Step 1: Brand file"
+      contains: Eight plain files on facts, offers, buyers, claims, voice and look, with each fact tagged by its source.
+    - name: "Step 2: Touchpoint audit"
+      contains: A scan of each asset, a touchpoint list, price fit, a score out of 100 and fixes ranked by visibility.
+    - name: "Step 3: Voice edit"
+      contains: A line-by-line voice check, the rewritten weak lines and a voice score out of 100.
+    - name: "Step 4: Brand guide"
+      contains: A quick sheet, checked colour pairs, type, voice, do and don't, and a tokens file.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build your brand file
     text: Reads the site and your reviews, tags every fact by source and status, and writes eight plain files on offers, buyers, claims, voice and look.

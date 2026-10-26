@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs stock formulas and explains the results.
 new_slug: stock-and-reorder-planner
 name: Stock and reorder planner
-summary: Give it your stock and sales numbers. Get safety stock, reorder points,
-  an ABC ranking and fulfillment cost checks.
+summary: Plan your stock with safety stock, reorder points and an ABC ranking, plus a check on your fulfillment costs. Give it your sales and stock numbers.
 job: run-your-store
 headline: Stock and reorder planner
-subhead: Give it your stock and sales numbers. Get safety stock, reorder points,
-  an ABC ranking and fulfillment cost checks. Bring product list with sales per
-  month. Use the result to plan your next step.
+subhead: Give it your stock and sales numbers. Get safety stock, reorder points, an ABC ranking and fulfillment cost checks. Bring product list with sales per month. Use the result to plan your next step.
 explain: |
   Warehouse numbers you can act on: how much safety stock to hold, when to reorder, which items deserve the most attention, and whether your fulfilment costs are in line. No account or key is needed.
 
@@ -18,6 +15,10 @@ when:
   - Amazon warned you about excess inventory or storage limits.
   - Your 3PL bill feels high and you want a benchmark.
   - You must decide which products to send to FBA and which to ship yourself.
+not_for:
+  - "You have under 8 to 12 weeks of sales history: get a supplier forecast or wait for more sales data first."
+  - "You need live stock counts from your store or warehouse system: use your own inventory tool, as this only works from numbers you paste in."
+  - "You want exact Amazon fees: check Amazon's current fee page, because the cost ranges here are rough planning guides."
 you_give:
   - Product list with sales per month
   - Lead times from suppliers
@@ -31,7 +32,29 @@ you_get:
   - A list of items to cut or shift
   - Negotiation points for your 3PL
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI how you fulfill orders, how many products you have, and how many orders you ship a month.
+  - Paste your product list with monthly sales, supplier lead times and current stock. Add your costs if you have them.
+  - Check the ABC ranking and the reorder points. Fix any number that looks wrong, such as a lead time.
+  - Take the Critical rows to whoever does your buying, and act on them first.
+  - Run it again each month with fresh sales and stock numbers. Check the cost ranges against your own quotes and Amazon's current fees.
+output_sample:
+  input:
+    - Your fulfillment model, such as self-fulfill, Amazon FBA, FBM, Walmart, 3PL or dropshipping
+    - Your product list with sales per month
+    - Your supplier lead times
+    - Your current stock levels
+    - Your monthly storage and fulfillment costs (optional)
+  output:
+    - name: Current State Summary
+      contains: Your orders, SKU count, turnover, days of stock, stockout rate and cost per order, each marked against a benchmark.
+    - name: ABC Analysis
+      contains: Your products sorted into A, B and C groups by how much revenue they bring in.
+    - name: Inventory Optimization
+      contains: Safety stock and reorder point for each item, plus lists of overstocked items and items at risk of running out.
+    - name: Cost Analysis
+      contains: A breakdown of storage, pick and pack, and shipping costs, with places you could save.
+    - name: Recommendations
+      contains: Actions sorted into Critical, Important and Optimization, each with its impact and expected result.
+    - name: Expected Results
+      contains: Where each measure is now, a target, and a rough timeline.

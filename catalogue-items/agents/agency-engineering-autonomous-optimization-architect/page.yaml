@@ -1,0 +1,146 @@
+name: Autonomous Optimization Architect agent
+summary: Plan which AI model handles each task in your app, with a spend cap, a backup model and a safe trial before any switch. Bring your setup.
+headline: Autonomous Optimization Architect agent
+subhead: List the tasks your app sends to AI models, what you pay now and the most you will spend per run. It plans which model does which task, with a cap, a backup and a trial for cheaper models. You get a plan your developer can build. It does not call any model.
+job: set-up-ai
+thinking: high
+thinking_why: It weighs cost against quality, sets scoring rules and plans for failure. Use a model that reasons well and says when a price or fact is missing.
+explain: |-
+  If your app calls AI models, the bill and the risk grow with every call. One loop that retries forever, or one bot hitting an expensive endpoint, can burn real money in an hour. A cheaper model may do the same job, but you will not know until you test it on your own work.
+
+  This agent plans AI model routing. For each task it picks a main model, a cheaper backup, a timeout, a retry limit and a spend cap. It will not accept a vague "the cheaper one seems fine". It asks you to fix the scoring rules first, such as points for valid format, speed and a penalty for a wrong claim. Then it plans a shadow test, where a small share of real traffic also goes to the new model in the background, and the user never sees that answer.
+
+  It also writes the circuit breaker rules. A circuit breaker is a switch that stops calls to a model that keeps failing or costs too much, sends work to the backup and alerts a person. It writes a plan only. The profile's numbers, such as cost cuts and uptime, are the author's goals, not results.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your app calls AI models and the monthly bill keeps rising, and you want rules that cap it.
+  - A new, cheaper model came out and you want to test it on your own tasks without risking users.
+  - A model provider had an outage and you want a backup route ready before the next one.
+  - A bot or a bug could run up your API bill, and you want a hard stop planned.
+not_for:
+  - Your app makes no paid AI or API calls. There is nothing to route. Use the Backend Architect agent to design the app.
+  - You are adding your first AI feature. Use the AI Engineer agent, then come back to tune cost.
+  - You want to cut your cloud bill for servers and storage. Use the FinOps Engineer agent.
+  - You want a monthly check on cloud and AI bills. Use the Monthly cloud and AI bill keeper.
+  - You want it to run the tests or switch models for you. It writes the plan. Your developer builds and runs it.
+you_give:
+  - The tasks your app sends to AI models, such as "pull fields from invoices" or "answer support chats".
+  - The model each task uses now, and the price per 1 million tokens from your provider's price page.
+  - The most you will spend per run, and the slowest answer you can accept.
+  - Roughly how many calls each task gets a day (optional)
+  - What a bad answer costs you, such as a wrong invoice field or a lost sale (optional)
+you_get:
+  - A routing table with a main model, a backup, a timeout, a retry limit and a spend cap for each task.
+  - A cost estimate for the main and backup route, from the prices you gave.
+  - Scoring rules with points, fixed before any trial.
+  - A shadow test plan for a cheaper model, with its own budget and a pass mark.
+  - Circuit breaker rules that say what stops a route, where work goes and who is alerted.
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - List each task, the model it uses now, the price per 1 million tokens and your spend cap per run. No code access is needed.
+  - Type "Plan model routing for these tasks. Ask for any price I left out. Mark every assumption."
+  - Check the routing table first. Every task needs a backup, a timeout, a retry limit and a cap.
+  - Check the scoring rules. You must be able to count the points. Change any rule you disagree with before a trial.
+  - Give the plan to your developer. They build the router and the trial. The AI calls no model and touches no live system.
+how_it_works:
+  - title: Set limits first
+    text: It asks for the most you will spend per run and the slowest answer you accept. Without a cap and a timeout, it will not plan a route.
+  - title: Map a backup for each task
+    text: For each costly model it names a cheaper backup that can take over when the main one fails or runs too long.
+  - title: Fix the scoring rules
+    text: It sets points for each quality check, such as valid format or a wrong claim, before any new model is tried.
+  - title: Plan the shadow test
+    text: It sends a small share of real work to the new model in the background, with its own budget, and compares scores.
+  - title: Write the breaker rules
+    text: It sets what trips a stop, such as a sudden jump in traffic or repeated payment and rate-limit errors, then names who gets alerted.
+  - title: List the go and no-go checks
+    text: It ends with pass and fail checks and everything still missing, so a person decides before any switch.
+output_shape: |-
+  SCOPE
+    Tasks <list> | Current models <list> | Limits <cap per run, slowest answer> | Assumptions <list>
+
+  ROUTING TABLE
+    <task> | <main model> | <backup model> | <timeout> | <retry limit> | <spend cap per run>
+
+  COST ESTIMATE
+    <route> | <price per 1M tokens, from you> | <estimated cost per run> (MISSING if no price given)
+
+  SCORING RULES
+    <check> | <points> | <how it is counted>
+
+  SHADOW TEST PLAN
+    <new model> | <share of traffic> | <separate budget> | <how long> | <pass mark>
+
+  CIRCUIT BREAKER RULES
+    <what trips it> | <where work goes> | <who is alerted>
+
+  GO AND NO-GO CHECKS
+    <check> | <pass if> | <fail if>
+
+  GAPS AND CHECKS
+    <missing fact> | <why it matters> | <who decides>
+output_sample:
+  input:
+    - The tasks your app sends to AI models
+    - The model each task uses now and its price per 1 million tokens
+    - Your spend cap per run and your slowest acceptable answer
+    - Calls per day and the cost of a bad answer (optional)
+  prerequisites:
+    - A developer who can build the router and the trial. This agent only plans.
+  output:
+    - name: Scope
+      contains: The tasks, current models, limits and assumptions the plan is built on.
+    - name: Routing table
+      contains: For each task, a main model, a backup, a timeout, a retry limit and a spend cap.
+    - name: Cost estimate
+      contains: Estimated cost per run for the main and backup routes, using your prices.
+    - name: Scoring rules
+      contains: The points for each quality check, fixed before any trial.
+    - name: Shadow test plan
+      contains: How a cheaper model is tried on live work in the background, with a budget and pass mark.
+    - name: Circuit breaker rules
+      contains: What stops a route, where work goes instead and who is alerted.
+    - name: Go and no-go checks
+      contains: Pass and fail checks to clear before any model switch.
+    - name: Gaps and checks
+      contains: Missing facts and open choices, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A strong reasoning model gives sharper scoring rules and failure cases. No code running or web access is needed. You supply current prices.
+  inputs:
+    - Your provider's price page for each model you use.
+    - A bill or usage export that shows cost per task.
+    - Ten to twenty real examples of each task, so the scoring rules fit your work.
+terms:
+  - term: Model routing
+    meaning: Choosing which AI model handles each task.
+  - term: Fallback
+    meaning: A cheaper or simpler route that takes over when the main one fails.
+  - term: Circuit breaker
+    meaning: A switch that stops calls to a model that keeps failing or costs too much.
+  - term: Shadow test
+    meaning: Sending a copy of real work to a new model in the background so you can score it without users seeing it.
+  - term: Token
+    meaning: A small piece of text. AI providers price their models per token.
+  - term: Timeout
+    meaning: The longest you wait for an answer before giving up.
+tweaks:
+  - what: Cost cap
+    how: Give a cap per run and a cap per day. A run cap stops one bad call. A day cap stops a slow leak.
+  - what: Strictness
+    how: Say how bad a wrong answer is. High stakes means a tougher pass mark and a slower switch.
+  - what: Task list
+    how: Start with the one or two tasks that cost the most. Add the rest after the first plan works.
+improve:
+  - Keep each plan with the scores from your trial. Rerun it when a new model is released or prices change.
+  - Add a scoring rule each time a bad answer gets through.
+  - Pair it with the Code Reviewer agent to check the router code once your developer writes it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

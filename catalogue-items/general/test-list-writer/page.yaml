@@ -1,6 +1,6 @@
 new_slug: test-list-writer
 name: "Test list writer"
-summary: "Paste the change you want to make. Get cases to test, smallest first, before any code."
+summary: "Write a test list before you change software, a form or a process. Get cases to check, smallest first, with the first one marked."
 job: build-software
 thinking: medium
 thinking_why: "It lists and orders cases with a few rules, which takes care but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You are about to change something that works and you are afraid of breaking it.
   - A task feels huge and you do not know where to start.
   - You are about to ask an AI to write code and want to tell it exactly what must be true.
+not_for:
+  - "You need to split a messy change into safe steps: use the Structure and behaviour change splitter."
+  - "You are fixing one known bug or making a one-off data edit: a plain checklist or a note to yourself is enough."
+  - "You want finished code or a design: ask your AI to build it after you have the list, or hire a developer."
 
 you_give:
   - The change you want to make, in your own words
@@ -34,6 +38,26 @@ how_to_use:
   - Add any known odd cases, such as old bugs or special customers.
   - Take the first case on the list and turn it into a real test or check.
   - Come back to add new cases and cross off the ones that pass.
+output_sample:
+  input:
+    - The change you want to make, in your own words
+    - What it does today, with any code or notes (optional)
+    - Cases you already know about, such as past bugs (optional)
+  output:
+    - name: The change
+      contains: One line saying what behaves differently after the change, and what happened before.
+    - name: Cases, in order
+      contains: Each case in given, when, then form, with its group and size, smallest first.
+    - name: Start with
+      contains: The first case to turn into a real test now, why it is the best start, and what the check looks like.
+    - name: Decisions for later
+      contains: Design questions that came up, kept off the list so cases stay about behaviour.
+    - name: How to keep the list
+      contains: The rule for adding new cases at the end and crossing off cases that pass.
+    - name: MISSING
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each quality check the list still fails, or none.
 
 how_it_works:
   - title: States the change

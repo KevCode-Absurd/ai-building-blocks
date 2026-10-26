@@ -1,33 +1,108 @@
 new_slug: build-the-cross-channel-analyzer-meta-google-builder-prompt
 name: Meta and Google comparison coding prompt
-summary: Get a coding brief to compare Meta and Google results. Match dates and money units, and keep sales claims separate.
+summary: "Build a read-only Meta and Google Ads comparison in your code. Get a prompt for spend balance, double-counted sales and a channel score."
 job: build-software
 headline: Meta and Google comparison coding prompt
-subhead: Get a coding brief to compare Meta and Google results. Match dates and money units, and keep sales claims separate.
+subhead: "Paste one prompt into a coding AI such as Claude Code. It builds a read-only module that compares your Meta and Google Ads results on matched dates. It checks spend balance, double-counted sales and mixed messages, and scores the channel mix only on what it could check."
 explain: |-
-  Share your project and the required feature. Get a coding brief for the cross-channel analyzer (meta + google), with setup and test steps.
+  Meta and Google each report their own sales. Add the two together and the total is often higher than what your store really sold, because both claim the same buyer. A developer who builds a Meta and Google comparison tool needs to know exactly which checks to run and how to treat missing data.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This prompt briefs your coding AI on one function that takes Meta and Google results, and optionally your store sales, and returns findings. The checks are channel balance, double counting, audience overlap, missing lift tests and mixed messages. Every threshold is a setting you review, not a fact.
+
+  The score counts only the checks that had data. It shows points earned out of points possible, so a missing input never looks like a pass. The module only reads and recommends. It never changes a budget or an account.
 when:
-  - You need a coding brief for the cross-channel analyzer (meta + google).
-  - You need build the cross-channel analyzer (meta + google) prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are building your own reporting or agent tool and want one function that compares Meta and Google spend and sales.
+  - Meta and Google add up to more sales than your store shows, and you want a check for that in code.
+  - A developer needs a clear brief for a cross-channel module, including what to do when data is missing.
+  - You want tests written for each check before any live account is touched.
+not_for:
+  - "You only want the comparison done on your own numbers, not built into software: use the Meta and Google budget comparison reviewer."
+  - "You are not a developer and have no coding AI set up: use the Google Ads store account auditor or the Meta Ads 30-check account auditor."
+  - "You have no way to read your Meta or Google results yet: set up access first, starting with the Google Ads token and access check planner."
+  - "You want a full Google Ads audit module, not a comparison: use the Google Ads audit engine builder."
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - A code project and a coding AI, such as Claude Code, that can edit it
+  - Google campaign results and Meta ad set results for the same dates, currency and time zone
+  - Your store sales for the same dates (optional)
+  - Your target blended ROAS (optional)
+  - Your top ad text from each platform (optional)
 you_get:
-  - A coding brief for the cross-channel analyzer (meta + google)
-  - Required files, setup gaps and test cases
+  - A prompt that builds one read-only comparison function with typed input and output
+  - Five checks for balance, double counting, audience overlap, lift tests and mixed messages
+  - A channel-mix score shown as points earned out of points possible, with a grade only when enough was checked
+  - A list of every threshold and assumption for you to review
+  - Tests on sample rows, with no real account used
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Decide where your data comes from. If you have code that fetches Meta and Google results, tell the AI where it is. If not, the prompt builds the function to take typed rows.
+  - Copy the prompt from the skill and fill in the angle brackets. Paste it into your coding AI with your project open.
+  - Read what the AI says about your project first. If it lists missing pieces, decide whether to add them or build without them.
+  - Review the thresholds it lists. Change any that do not suit your store before you trust a finding.
+  - Run the tests on the sample rows. Run it on a live account only when you decide to, read-only.
+  - Ask the AI to propose a weekly schedule if you want one, and approve it yourself.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project
+    text: "Finds your language, test setup and any existing fetch code or result type, and reports what is missing."
+  - title: Checks inputs match
+    text: "Stops if the two platforms use different dates, time zones or currencies."
+  - title: Runs five checks
+    text: "Spend balance, double counting against store sales, audience overlap, missing lift tests and mixed messages. A check with no data is listed as not evaluated."
+  - title: Works out blended ROAS two ways
+    text: "Platform-reported and store-based, shown as separate numbers and never mixed."
+  - title: Scores what it could check
+    text: "Gives points earned out of points possible, and a grade only if at least 60 of 100 points were checkable."
+  - title: Tests on sample rows
+    text: "Writes tests for each check, the score edges and the mismatch stop, with no live account."
+output_shape: |-
+  Function: analyzeCrossChannel(input) -> DiagnosticOutput
+  Findings: <checkId | severity | evidence | recommendation | impact or "not calculable">
+  Summary:
+    platforms: meta and google spend, conversions, value, ROAS
+    blendedRoas: platform-reported and store-based
+    storeAttributionRatio: <reported / store sales, if given>
+    channelMixScore: <earned> of <possible>, grade <A-F or not graded>
+    topRecommendations: <up to five>
+    notEvaluated: <check and reason>
+  Thresholds and assumptions to review: <list>
+  Tests: <results, or "not run">
+output_sample:
+  input:
+    - Your code project, open in a coding AI
+    - Google campaign results and Meta ad set results for matched dates and currency
+    - Your store sales for the same dates (optional)
+    - Your target blended ROAS and top ad text (optional)
+  prerequisites:
+    - Read-only access to your Meta and Google Ads data, or typed sample rows to start with
+    - A coding AI that can read and edit your project
+  output:
+    - name: analyzeCrossChannel function
+      contains: One read-only function with typed input and output, in your project's language and style.
+    - name: Findings
+      contains: Balance, double counting, audience overlap, lift tests and mixed messages, each with evidence and a recommendation.
+    - name: Blended ROAS
+      contains: A platform-reported figure and a store-based figure, labelled and kept apart.
+    - name: Channel-mix score
+      contains: Points earned out of points possible, with a grade only when enough was checked.
+    - name: Not evaluated list
+      contains: Each check that lacked data, with the reason, so a missing input never looks like a pass.
+    - name: Tests and assumptions
+      contains: Tests on sample rows and the thresholds you need to review.
+tweaks:
+  - what: Your store sales
+    how: Add them for the same dates. Without them the double-count check cannot run.
+  - what: Thresholds
+    how: The 70 percent spend share and 30 percent gap are starting values. Change them to suit your account size.
+  - what: A prior period
+    how: Add the period before. The audience overlap check needs it to see a trend.
+  - what: Your target ROAS
+    how: Give a target worked out from your margin. Without it the ROAS part of the score is skipped.
+terms:
+  - term: Blended ROAS
+    meaning: Sales divided by ad spend across both platforms together.
+  - term: Double counting
+    meaning: Meta and Google both claim the same sale, so their totals add up to more than the store sold.
+  - term: Lift test
+    meaning: A test that shows how many sales ads caused, by comparing a group that saw the ads with one that did not.
+  - term: Read-only
+    meaning: The code can look at data but cannot change budgets, bids or accounts.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

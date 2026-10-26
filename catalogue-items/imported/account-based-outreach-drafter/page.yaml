@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It picks the best hooks from the data and writes three versions.
 new_slug: account-based-outreach-drafter
 name: Account-based outreach drafter
-summary: Name a company or contact. Get an email, call script and LinkedIn
-  message built from real signals.
+summary: Draft account-based outreach for one named company or contact. Get an email, call script and LinkedIn note built on real signals.
 job: write-emails
 headline: Account-based outreach drafter
-subhead: Name a company or contact and say why you are reaching out. It looks
-  them up in your Common Room data, pulls activity, posts, hiring and funding
-  signals, and searches the web if the data is thin. You get a personal email, a
-  call script and a LinkedIn message, with the signals behind each. You send
-  them.
+subhead: Name a company or contact and say why you are reaching out. It looks them up in your Common Room data, pulls activity, posts, hiring and funding signals, and searches the web if the data is thin. You get a personal email, a call script and a LinkedIn message, with the signals behind each. You send them.
 explain: |
   One target, three ready messages: an email, a call script and a LinkedIn note. Each is based on what that company or person has actually been doing. You review and send them yourself.
 
@@ -20,6 +15,10 @@ when:
   - You need an email, a call opener and a LinkedIn note in one go.
   - A prospect has been active in your community and you want to follow up.
   - You do not know who at a company to contact first.
+not_for:
+  - You have a cold list with no named target. Use a simple email template and fill in each name by hand.
+  - You have no Common Room data and no recent news to cite. Ask a person on your team for context first, then write the note yourself.
+  - You want to send messages in bulk. This writes drafts for one target at a time, and you send them yourself.
 you_give:
   - A company name or a contact
   - Your offer or reason for reaching out
@@ -32,8 +31,26 @@ you_get:
   - The signals each message is based on
   - A suggested contact, if you gave only a company
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can connect to your Common Room account.
+output_sample:
+  input:
+    - A company name or a contact name
+    - Your offer or reason for reaching out
+    - Your product and positioning, if your AI has no company notes (optional)
+    - Tone preferences (optional)
+  prerequisites:
+    - A Common Room account connected to your AI
+    - Web search, for when Common Room has little on the target
+  output:
+    - name: Email
+      contains: A subject line and a short body of 3 to 5 sentences built on the strongest signal.
+    - name: Call Script
+      contains: An opening line, a value bridge tied to a signal, and one low-friction ask.
+    - name: LinkedIn Message
+      contains: A warm, personal note under 300 characters with no pitch.
+    - name: Signal Notes
+      contains: Which signals were used and why, any assumptions made, and other angles to try.
+    - name: Limited Data note
+      contains: "Shown instead of drafts when signals are thin: what was found and what more you need to share."

@@ -1,0 +1,147 @@
+name: Infrastructure Maintainer agent
+summary: Check your servers and cloud setup for gaps. Get alerts to set, backup and restore checks, patch and access fixes and a ranked to-do list.
+headline: Infrastructure Maintainer agent
+subhead: Describe the servers, cloud accounts and tools your business runs on. It checks monitoring, backups, updates, access and cost. You get a maintenance plan with a to-do list ranked by risk and a list of what it could not check.
+job: ship-and-host
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Most small infrastructure problems start the same way. A disk fills up and nobody was told. A backup has run for a year and nobody has ever restored from it. An old staff account still has full access. This agent is a server upkeep checklist (also called an infrastructure health check or IT maintenance plan) that asks about each of these in turn.
+
+  It works in the order the source role uses. First, can you see what is happening? It lists the alerts a small setup needs, such as a server down, a disk filling, memory or CPU running high. Then backups, and whether you have tested a restore. Then updates and patches, who has access, and what you spend. Each gap goes on a list with a size and an order.
+
+  It differs from the SRE agent, which sets reliability goals from what users feel. This one is the upkeep side: what keeps the machines healthy, safe and affordable. It never assumes your numbers. If you did not give a figure, the plan says MISSING. It writes a plan. It does not log in to anything or change a system.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You run your own servers or cloud account and no one owns the upkeep.
+  - You have backups but have never tried to restore one.
+  - An audit, a customer or an insurer asks how you keep your systems patched and who can get in.
+  - Your hosting bill is rising and you do not know why.
+not_for:
+  - Your system is down right now. Use the Incident Response Commander agent.
+  - You want reliability goals and an error budget for a service. Use the SRE (Site Reliability Engineer) agent.
+  - You only want to cut your cloud bill. Use the FinOps Engineer agent, or the Cloud bill waste finder.
+  - You want the code that builds your servers. Use the Terraform setup builder.
+you_give:
+  - A list of what you run, such as servers, cloud services, databases and the tools around them
+  - Where each one is hosted, and who looks after it today
+  - How backups work now, and the date of the last restore test, if any
+  - How people get access, and how you update software
+  - Your last hosting or cloud bill, and any alerts you have (optional)
+you_get:
+  - A health check that marks each area Seen, Not seen or Not supplied
+  - A list of alerts to set, with a plain reason for each
+  - A backup and restore check with the gaps named
+  - Update and access fixes, ranked by risk
+  - A to-do list for this week, this month and this quarter
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - List what you run, in plain words. One line each is enough. Say where it lives and who looks after it.
+  - Say how backups and updates work today. Add your last bill and any alert list if you have them. Do not paste passwords, keys or tokens. No code running or web access is needed.
+  - Type "Make the maintenance plan. Mark anything I did not tell you as MISSING. Do not call anything secure or backed up without proof."
+  - Read the backup and access sections first. Fill in what you can, then ask it to run again.
+  - Hand the to-do list to whoever has access to your systems. The AI cannot log in or make changes.
+how_it_works:
+  - title: Fix the scope
+    text: It lists what is in scope and which parts the business cannot work without. Anything missing is asked once, then marked MISSING.
+  - title: Check what you can see
+    text: It checks you would hear about a server down, a full disk, high memory or high CPU, and lists the alerts to add.
+  - title: Check backups and restores
+    text: It asks what is backed up, how often, where the copy lives and when you last restored from it.
+  - title: Check updates and access
+    text: It checks how patches are applied, who has access, whether two-step login is on and whether old accounts are removed.
+  - title: Review cost
+    text: It looks for waste only in the bill you gave it. It never guesses at savings.
+  - title: Rank the fixes
+    text: It sorts every gap into this week, this month or this quarter, with a size and an owner.
+output_shape: |-
+  SCOPE
+    <system> | <where it runs> | <who looks after it> | <what breaks if it fails>
+
+  HEALTH CHECK
+    <area> | <Seen, Not seen or Not supplied> | <what the evidence shows>
+
+  ALERTS TO SET
+    <alert> | <why it matters> | <who is told>
+
+  BACKUPS AND RESTORES
+    <system> | <what is backed up> | <how often> | <last restore test> | <gap>
+
+  UPDATES AND ACCESS
+    <area> | <current state> | <risk> | <fix>
+
+  COST NOTES
+    <item from your bill> | <why it may be waste> | <how to confirm>
+
+  TO-DO LIST
+    <this week, this month or this quarter> | <action> | <size> | <owner>
+
+  ASSUMPTIONS AND CHECKS MISSED
+    <assumption> | <check that could not run>
+output_sample:
+  input:
+    - A list of what you run and where it is hosted
+    - How backups and updates work today
+    - How people get access to your systems
+    - Your last hosting bill and your current alerts (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Someone with access to your systems to carry out the plan
+  output:
+    - name: Scope
+      contains: Each system, where it runs, who looks after it and what breaks if it fails.
+    - name: Health check
+      contains: Each area marked Seen, Not seen or Not supplied, with the evidence.
+    - name: Alerts to set
+      contains: The alerts a small setup needs, with a reason and who is told.
+    - name: Backups and restores
+      contains: What is backed up, how often, the last restore test and the gaps.
+    - name: Updates and access
+      contains: How patches and logins work today, the risks and the fixes.
+    - name: Cost notes
+      contains: Possible waste found in the bill you gave, and how to confirm it.
+    - name: To-do list
+      contains: Actions for this week, month and quarter, each with a size and an owner.
+    - name: Assumptions and checks missed
+      contains: What the AI assumed and what it could not check.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a bill export, an alert list or a short notes file next to your description.
+  inputs:
+    - An export or screenshot of your last cloud or hosting bill.
+    - The date of your last restore test and who ran it.
+    - A list of everyone with admin access.
+terms:
+  - term: Restore test
+    meaning: A real attempt to bring back data from a backup, to prove the backup works.
+  - term: Patch
+    meaning: A software update that fixes a security hole or a bug.
+  - term: Two-step login
+    meaning: A login that needs a code from your phone as well as a password. Also called multi-factor sign-in.
+  - term: Least access
+    meaning: Giving each person only the access their job needs, and nothing more.
+  - term: Alert
+    meaning: A message sent when something crosses a limit, such as a disk that is 85% full.
+tweaks:
+  - what: Scope
+    how: Start with the systems that would hurt most if they failed, such as the store, the database and email.
+  - what: Rules you must follow
+    how: Say if a customer or law asks for a standard such as SOC 2. It will then list what proof to keep.
+  - what: Skill level
+    how: Say if no one on the team is technical. It will then write the to-do list in plain steps and name who to hire for each.
+improve:
+  - Keep each plan and rerun it every quarter. Compare the gaps to see what moved.
+  - Add your real system list to the pack so you do not retype it.
+  - Pair it with the Runbook writer, to turn each fix into steps someone can follow.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

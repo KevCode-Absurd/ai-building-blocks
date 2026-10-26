@@ -2,15 +2,10 @@ thinking: high
 thinking_why: It joins many parts into one plan.
 new_slug: marketing-plan-writer
 name: Marketing plan writer
-summary: Describe your business. Get a full marketing plan by funnel stage with
-  a 90-day or 12-month roadmap.
+summary: Write a marketing plan for your business, sorted by funnel stage, with a 90-day roadmap and a 12-month outlook you can share with your team.
 job: plan-strategy
 headline: Marketing plan writer
-subhead: Describe your business, audience, offer, budget and team size. It
-  researches, asks questions, then walks you through 13 sections one at a time,
-  from strategy to referrals. You get the full plan, a 90-day roadmap with
-  owners, a 12-month outlook, tactics marked Now, Later or Skip, and a
-  measurement plan.
+subhead: Describe your business, audience, offer, budget and team. Your AI researches, asks you questions, then writes the plan one section at a time. You get a full marketing plan, a 90-day roadmap with owners and a 12-month outlook.
 explain: |
   A written marketing plan for your business with a 90-day roadmap and a 12-month outlook, laid out by funnel stage so every move has a place and an owner.
 
@@ -18,21 +13,54 @@ explain: |
 when:
   - You are starting a new year and have no written marketing plan.
   - You need a plan to show an investor, partner or board.
-  - Your team keeps trying tactics with no order or owner.
+  - Your team tries tactics with no order and no owner.
   - You have a small budget and need to pick what to do first.
+not_for:
+  - "You only need to know how big your market is: ask your AI for a simple market size check, or use a short research task instead of a full plan."
+  - "You need one stage fixed, like emails or pricing: work on that stage alone, or ask a marketing consultant to look at it."
+  - "You want a one-page plan for this week: write a short to-do list by hand, since this plan is long and takes many rounds of questions."
 you_give:
   - A description of your business
-  - Your audience and offer
-  - Current budget and team size
+  - Your audience and your offer
+  - Your current budget and team size
   - What you have already tried (optional)
+  - Links to tools like Ahrefs, GA4 or Stripe, if you have them (optional)
 you_get:
-  - A 13-section marketing plan
-  - A 90-day roadmap with owners
+  - A 13-section marketing plan, laid out by funnel stage
+  - A 90-day roadmap with an owner for each item
   - A 12-month outlook
-  - A list of tactics marked Now, Later or Skip
-  - A measurement plan with open decisions
+  - Tactics marked Now, Later or Skip
+  - A measurement plan with the open decisions listed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Or upload the skill folder if your AI takes files.
+  - Tell your AI about your business, audience, offer, budget and team size. Add what you have tried.
+  - Answer its questions. It may search the web, so use an AI that can browse if you want market research.
+  - Read each of the 13 sections as it appears. Fix anything that is wrong before you move on.
+  - Ask for the joined plan at the end. Save it as final_plan.md if your AI can make files, or copy it into Notion.
+  - Connected tools like Ahrefs, GA4 and Stripe are optional. Some need a paid account or an API key. Without them, your AI works from what you tell it.
+output_sample:
+  input:
+    - A description of your business
+    - Your audience and your offer
+    - Your budget and team size
+    - What you have already tried (optional)
+    - Notes from past audits or research (optional)
+  prerequisites:
+    - An AI that can save files, to get the final plan as a markdown file
+    - The product-marketing and marketing-ideas skills, if you want the plan to use them (optional)
+    - Accounts for tools like Ahrefs, GA4 or Stripe, only if you want your AI to pull real numbers (optional)
+  output:
+    - name: Executive summary
+      contains: "The plan in brief: the goal, the main bets and the key decisions still waiting on you."
+    - name: Strategy and current state
+      contains: Your position, your audience and an honest look at what is working now.
+    - name: Funnel stage sections
+      contains: Plans for getting noticed, signing up, staying, referring and paying, each with tactics marked Now, Later or Skip.
+    - name: 90-day roadmap
+      contains: Four blocks of work, from clearing blockers to building speed, with an owner for each item.
+    - name: 12-month outlook
+      contains: What comes after the first 90 days, matched to your budget, team and growth stage.
+    - name: Measurement plan
+      contains: The one number to track, how to read it, and the open decisions.
+    - name: final_plan.md
+      contains: All 13 sections joined into one document that you can paste into Notion.

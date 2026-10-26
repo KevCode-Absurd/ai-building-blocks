@@ -1,6 +1,6 @@
 slug: product-name-brainstormer
 name: Product name brainstormer
-summary: Describe your product and buyers. Get five memorable name ideas, each with the reason it fits.
+summary: Get five product name ideas for a launch or a rename, each with why it fits your buyers, and a reminder to check trademarks and domains yourself.
 category: general
 boards: []
 type: skill
@@ -29,4 +29,4 @@ credits:
   - title: product-name skill
     by: Pawel Huryn
     url: https://github.com/phuryn/pm-skills/tree/main/pm-marketing-growth/skills/product-name
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied as it is under the MIT licence, with an AI Blocks note added at the end. We gave it a plain name.

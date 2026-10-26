@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set steps but needs judgement about people.
 new_slug: customer-job-mapper
 name: Customer job mapper
-summary: Describe your product and buyer. Get the functional, emotional and
-  social jobs they hire it for.
+summary: Find the job your customers hire your product to do. Give it your product and buyer. You get a customer jobs-to-be-done map.
 job: understand-customers
 headline: Customer job mapper
-subhead: "People do not buy a product, they hire it to make progress. Describe
-  your product and buyer and you get a jobs-to-be-done map showing what job they
-  are hiring it for: the practical, the emotional and the social."
+subhead: "People do not buy a product, they hire it to make progress. Describe your product and buyer and you get a jobs-to-be-done map showing what job they are hiring it for: the practical, the emotional and the social."
 explain: |
   People do not buy a product, they hire it to make progress. Describe your product and buyer and you get a jobs-to-be-done map showing what job they are hiring it for: the practical, the emotional and the social.
 
@@ -18,6 +15,10 @@ when:
   - Your messaging lists features and nobody reacts.
   - You want to understand why people switch or leave.
   - You are building onboarding around the first win.
+not_for:
+  - "You have no product or no real buyer yet: talk to five likely buyers first, then come back with what they said."
+  - "You need a full profile of who your buyer is: build a customer psychographic profile first, then use this map."
+  - "You want ad copy or a landing page: use this map as the input, then write the copy as a separate step."
 you_give:
   - Your product or service
   - Who the buyer is
@@ -29,7 +30,31 @@ you_get:
   - A list of alternatives
   - Success criteria in the buyer's terms
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Describe your product and who buys it. Say what progress you think they want.
+  - Add the rivals and workarounds you know of (optional). Include doing nothing.
+  - Read the map. Check that each job is written in your buyer's words, not as a feature list.
+  - If the AI says your input is too thin, add more detail about a real buyer and run it again.
+output_sample:
+  input:
+    - Your product or service
+    - Who the buyer is
+    - What progress they want
+    - Competitors and workarounds you know of (optional)
+  prerequisites:
+    - A buyer profile, if you have one (optional, it makes the map sharper)
+  output:
+    - name: Progress state
+      contains: The buyer's before and after, in plain words, as the change they want in work, life or identity.
+    - name: Functional job
+      contains: The practical task the buyer wants done.
+    - name: Emotional job
+      contains: How the buyer wants to feel, such as relief, calm or confidence.
+    - name: Social job
+      contains: How the buyer wants others to see them.
+    - name: Hiring trigger
+      contains: The moment the buyer starts looking for help.
+    - name: Competing alternatives
+      contains: Rival products, workarounds, spreadsheets and doing nothing, as the buyer sees them.
+    - name: Success criteria
+      contains: What success looks like in the buyer's own words, including relief and how others react.

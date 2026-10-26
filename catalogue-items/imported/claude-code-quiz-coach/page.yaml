@@ -1,0 +1,80 @@
+name: Claude Code quiz coach
+headline: Claude Code quiz coach
+summary: Take a scored Claude Code quiz on one lesson. You get feedback on each answer and a list of what to review. Ten questions per lesson.
+job: study-and-practice
+thinking: medium
+thinking_why: It must keep question choices, scoring and review advice consistent with the supplied answers and source lessons.
+subhead: Pick one of ten Claude Code topics. Your AI asks ten questions from the bundled bank, tracks your answers and explains what to review.
+explain: >-
+  This coach tests one Claude Code lesson at a time using a bundled bank of 100 questions. It shuffles the answer choices while keeping the scoring key, gives feedback after each round and points missed answers back to the lesson.
+
+
+  You can use it before, during or after studying. If you stop early, it reports only the questions you actually answered. The score describes this quiz and does not certify professional ability.
+when:
+  - You want to check one Claude Code lesson.
+  - You want feedback before, during or after studying.
+not_for:
+  - "You want a whole-topic self-assessment and a learning path: use a learning coach skill instead, as no sibling item fits."
+  - "You need a certificate or proof of skill: this quiz scores one lesson only and does not certify anyone."
+  - "You want to learn the lesson from scratch: read the lesson text first, or ask a colleague who knows Claude Code."
+you_give:
+  - One lesson number or topic, such as memory, hooks or commands.
+  - Whether you are taking the quiz before, during or after studying.
+  - Your answers to the quiz questions.
+you_get:
+  - A scored lesson quiz with the denominator shown.
+  - Feedback for each answered question.
+  - A review list linked to the bundled lesson text.
+how_to_use:
+  - Download the complete folder and keep the references beside SKILL.md.
+  - Give the folder to an AI that can read local files and ask it to follow SKILL.md.
+  - Choose the assessment mode or lesson and answer the questions.
+  - Review the score, unanswered areas and suggested practice.
+output_sample:
+  input:
+    - The lesson you want to be quizzed on, by number or name
+    - Whether you are taking the quiz before, during or after the lesson
+    - Your answers to the questions
+  prerequisites:
+    - The complete downloaded folder, with the references kept beside SKILL.md
+    - An AI that can read local files
+  output:
+    - name: Lesson quiz
+      contains: Ten questions from the bundled bank, asked in five rounds of two, with shuffled answer choices.
+    - name: Round feedback
+      contains: Your result after each round, with a short explanation for each answered question.
+    - name: Score
+      contains: Your points out of the questions you answered, plus a learning label if you finished all ten.
+    - name: Per-question table
+      contains: Each question, your answer, the correct choice and whether you got it right.
+    - name: Missed-answer explanations
+      contains: Why each missed answer was wrong, with the matching lesson section.
+    - name: Review pointers
+      contains: Local lesson sections to read next, and options to retry, pick another lesson or stop.
+how_it_works:
+  - title: Choose the scope
+    text: Pick one lesson and say whether this is before, during or after studying.
+  - title: Answer the questions
+    text: Your AI uses the bundled source material and records your actual answers.
+  - title: Check the result
+    text: The AI shows the counted items, unanswered areas and any version-sensitive limits.
+  - title: Plan the next step
+    text: Use the local lesson pointers to practise or review a topic you choose.
+output_shape: A lesson quiz report with score, denominator, per-question feedback and local review pointers.
+judge:
+  - Each question comes from the selected lesson’s bundled bank.
+  - Shuffled choices are scored against a recorded mapping.
+  - The score and denominator match the actual answered, scorable questions.
+  - Unanswered questions and unresolved version disputes are stated rather than graded.
+test:
+  - Answer a known question after its choices are shuffled and verify the key still matches.
+  - Stop after a partial round and check that the denominator includes only answered questions.
+improve:
+  - Correct a scoring or lesson-reference error before reusing the result.
+tweaks:
+  - what: Timing
+    how: Choose a pre-test, progress check or after-lesson review to frame the result.
+works_best_with:
+  tools:
+    - name: An AI that can read local files
+      why: Reads the selected lesson and question references from the complete folder.

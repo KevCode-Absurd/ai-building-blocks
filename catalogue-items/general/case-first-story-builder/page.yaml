@@ -1,6 +1,6 @@
 new_slug: case-first-story-builder
 name: "Case-first story builder"
-summary: "Give it your topic and notes. Get the one case to build on, the surprise underneath and an outline."
+summary: "Turn your topic and notes into a case-first story outline. Find the one real case to build on, test the obvious view and close on a person."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It must question the obvious explanation, argue the other side and keep claims no bigger than one case allows."
@@ -14,27 +14,54 @@ explain: |
   This skill finds that case. It lists what everyone assumes about the topic and asks what happens if that is backwards. It asks whether the cause sits in the person or in the setting and the timing. It marks the point where interviews or research usually stop and pushes one step further. It writes the case from each side, names the strongest case that cuts against you, and builds an outline that opens on a small scene and ends on the person, not on a rule.
 
 when:
-- "You have a topic and a pile of facts but no way in."
-- "Your piece states a rule and you cannot make it feel real."
-- "You are preparing a talk, article or case study and want one story to carry it."
+  - "You have a topic and a pile of facts but no way in."
+  - "Your piece states a rule and you cannot make it feel real."
+  - "You are preparing a talk, article or case study and want one story to carry it."
+not_for:
+  - You have no named person or event in your notes. Do a few interviews first, then come back with what you learn.
+  - Your piece rests on numbers alone. Write a short data summary first, then pick one case that shows what the numbers mean.
+  - You need a full draft, not an outline. Use this to plan, then write the draft in your own chat with the outline pasted in.
 
 you_give:
-- "Your topic and what you think is true about it"
-- "Your notes, facts and any quotes"
-- "Customer words or reviews (optional)"
-- "Who will read or hear it (optional)"
+  - "Your topic and what you think is true about it"
+  - "Your notes, facts and any quotes"
+  - "Customer words or reviews (optional)"
+  - "Who will read or hear it (optional)"
 you_get:
-- "The one case, with why it holds the idea"
-- "The obvious explanation and the question that flips it"
-- "The strongest case against you"
-- "An outline that opens on a scene and ends on a person"
+  - "The one case, with why it holds the idea"
+  - "The obvious explanation and the question that flips it"
+  - "The strongest case against you"
+  - "An outline that opens on a scene and ends on a person"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Give the topic and paste your notes, even rough."
-- "Say who the reader is and how long the piece will be."
-- "Check the chosen case. If it feels wrong, ask for the next best."
-- "Fill the outline's gaps with your own facts and ask it to tighten the draft."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Give the topic and paste your notes, even rough."
+  - "Say who the reader is and how long the piece will be."
+  - "Check the chosen case. If it feels wrong, ask for the next best."
+  - "Fill the outline's gaps with your own facts and ask it to tighten the draft."
+output_sample:
+  input:
+    - Your topic and what you think is true about it
+    - Your notes, facts and any quotes
+    - Who will read or hear it, and how long it will be
+    - Customer words or reviews (optional)
+  output:
+    - name: The case
+      contains: The one named person or event that holds the idea, why it fits, and two other cases considered.
+    - name: What everyone assumes
+      contains: Two or three common beliefs about the topic, and what follows if each one is backwards.
+    - name: Person or setting
+      contains: The evidence for each side and which one the facts favour, or that they do not decide it.
+    - name: One step past the usual stop
+      contains: Where research on this topic normally ends, and the extra question or fact to look for.
+    - name: The case from each side
+      contains: Two or three lines each from the person at the centre, someone on the other side and an outsider.
+    - name: The case that cuts the other way
+      contains: The strongest case that does not fit your idea, and what it shows.
+    - name: Outline
+      contains: Six parts, from a small opening scene to a close on the person.
+    - name: Missing and checks missed
+      contains: Gaps in your notes, plus one line for each quality check the result still fails.
 
 how_it_works:
   - title: "Find the one case"
@@ -94,23 +121,23 @@ tweaks:
     how: "Say who reads it. The opening scene is built for them."
 
 judge:
-- "You can name the one case in a sentence."
-- "The obvious explanation is written down and questioned."
-- "A case against your idea is in the outline."
-- "The conclusion is smaller than the idea you started with."
-- "No fact is missing a source in your notes."
+  - "You can name the one case in a sentence."
+  - "The obvious explanation is written down and questioned."
+  - "A case against your idea is in the outline."
+  - "The conclusion is smaller than the idea you started with."
+  - "No fact is missing a source in your notes."
 
 test:
-- "Run it on a topic where you already know the answer. Check that the case is the one you expected."
-- "Check every fact in the outline against your notes."
-- "Read the opening scene to someone and ask what they think the piece is about."
-- "Run it twice. The chosen case should stay close."
+  - "Run it on a topic where you already know the answer. Check that the case is the one you expected."
+  - "Check every fact in the outline against your notes."
+  - "Read the opening scene to someone and ask what they think the piece is about."
+  - "Run it twice. The chosen case should stay close."
 
 improve:
-- "Add your own list of facts about people in your field."
-- "Add a rule that every case needs a date and a place."
-- "Save the cases you did not use for later pieces."
-- "Pair it with \"Interview transcript trimmer\" to pull the best lines for the scene."
+  - "Add your own list of facts about people in your field."
+  - "Add a rule that every case needs a date and a place."
+  - "Save the cases you did not use for later pieces."
+  - "Pair it with \"Interview transcript trimmer\" to pull the best lines for the scene."
 
 works_best_with:
   tools:

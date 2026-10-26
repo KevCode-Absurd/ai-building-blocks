@@ -1,53 +1,93 @@
 new_slug: review-sponsor-debt-cash-demands
 name: Review sponsor debt cash demands
 headline: Review sponsor debt cash demands
-summary: Connect one-period cash and PIK charges to a bounded sweep and ending leverage test.
+summary: Work out cash interest, PIK interest added, the cash sweep owed and the ending net debt to earnings test for one year of sponsor-backed debt.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Cash interest, capitalized debt, sweep limits and ending net leverage evidence. Share actual opening debt, fixed cash and PIK terms, year fraction, cash before interest, certified ECF, minimum cash, sweep clause and ending covenant definitions.
-explain: |-
-  Cash interest, capitalized debt, sweep limits and ending net leverage evidence.
+subhead: Give it the loan terms, your cash figures and the covenant wording. It splits cash interest from PIK interest, sizes the cash sweep, then tests net debt to earnings after the sweep. You get one year of figures, each tied to its source, with every gap marked.
+explain: |
+  A sponsor-backed loan can ask for cash in three ways. Part of the interest is paid in cash. Part is PIK interest, which is added to the loan instead of paid. Then a cash sweep sends a share of spare cash to repay the loan early. The same money often gets counted twice. PIK is added to the balance twice, or excess cash flow is added to cash that already holds it.
 
-  Private credit interest. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow runs three checks in order and passes each result forward. Step 1 splits one period of interest into cash and PIK. Step 2 takes your cash after cash interest and works out the sweep. The repayment is the smallest of what the loan asks for, the cash above the minimum, and the debt that can be repaid. Step 3 tests net debt to earnings on the debt and cash left after the sweep.
+
+  A repayment that has been made and one that is only proposed stay in separate cases. A covenant is never marked as met because of a payment that has not happened. It does the sums on the figures you give it. It does not read the loan agreement for you or say whether a default has happened.
 when:
-  - You need cash interest, capitalized debt, sweep limits and ending net leverage evidence.
-  - You work on private credit interest and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - The loan pays part of its interest in cash and adds part to the balance, and you need the cash cost for the year.
+  - The lender's compliance certificate shows excess cash flow and you need to know how much must repay debt.
+  - You want to know if the net debt to earnings test still passes after interest and the sweep.
+  - A reviewer asks you to trace every figure back to the loan agreement.
+not_for:
+  - The loan has no PIK interest and no cash sweep. Use the covenant checker for net debt to earnings on its own.
+  - You want to cure a breach with an EBITDA addback or an equity cure. Use the workflow for covenant headroom and cure.
+  - You want a multi-year debt schedule or buyout returns. This covers one year of one loan.
+  - The borrower can choose cash or PIK each period. Step 1 stops on that case, so a person who knows the loan has to set the split.
 you_give:
-  - Actual opening debt, fixed cash and PIK terms, year fraction, cash before interest, certified ECF, minimum cash, sweep clause and ending covenant definitions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The loan balance at the start of the year, the yearly cash and PIK rates, and the date PIK is added (from the loan agreement)
+  - The share of the year the interest covers, or the start and end dates and the day count
+  - Your cash before interest, the minimum cash the loan lets you hold, and the debt that can be repaid early (from your accounts and the agreement)
+  - The certified excess cash flow and the sweep clause (from the compliance certificate and the agreement)
+  - "The covenant wording: included debt, the cash cap, EBITDA and the maximum ratio, plus the currency, scale and test date"
 you_get:
-  - Cash interest, capitalized debt, sweep limits and ending net leverage evidence.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Cash interest, PIK interest added, the new loan balance and total interest
+  - Sweep owed, repayment made, the limit that set it and any sweep left unpaid
+  - Ending net debt to earnings and signed headroom against the maximum
+  - A made payment and a proposed payment, shown as separate cases
+  - Missing facts and the checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Pick one that can make spreadsheets if you want a workbook.
+  - Attach the loan agreement pages on interest, the sweep and the covenant, plus the latest compliance certificate. Paste your cash figures. Say the currency, the scale and the test date.
+  - After step 1, check that cash interest plus PIK interest equals total interest, and that the new balance is the old balance plus PIK only.
+  - After step 2, check the repayment is the smallest of the three limits and the AI names which one. Any shortfall must show as unpaid, not waived.
+  - After step 3, check the made and proposed cases are apart. Then fill every MISSING line before anyone relies on the result. Nothing here pays, sends or files anything.
 how_it_works:
   - title: Cash and PIK interest checker
-    text: Calculate actual simultaneous coupons on opening principal for the supported simple period; identify cash paid versus period-end PIK capitalization.
+    text: Applies the cash rate and the PIK rate to the opening balance for the same slice of the year. Only the PIK part is added to the balance. Hands step 2 the cash interest and the ending principal.
   - title: Debt cash sweep checker
-    text: Derive cashBeforeSweep from actual cash evidence after cash interest and other observed flows. Use capitalized ending principal as eligible debt only when the sweep clause includes it; retain certified ECF as a distinct measure.
+    text: Takes your cash after cash interest and the certified excess cash flow. Sweep owed is excess cash flow times the sweep share. Repayment is the smallest of sweep owed, cash above the minimum and eligible debt. Hands step 3 the ending cash and debt.
   - title: Net leverage covenant checker
-    text: Use debt after actual or clearly proposed sweep and cash eligible at the same end date. Present actual and proposed cases separately; do not mark a covenant satisfied by an unexecuted prepayment.
+    text: Takes the debt after the sweep and the cash that counts at the same date. It nets only the lesser of eligible cash and the cash cap, then compares net debt with the maximum ratio times EBITDA. A proposed repayment is shown as its own case.
 output_shape: |-
-  Cash interest, capitalized debt, sweep limits and ending net leverage evidence.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  PERIOD AND SOURCES   <period>, <currency>, <scale>, <test date>
+
+  1 CASH AND PIK INTEREST   cash <n> | PIK added <n> | ending principal <n> | total interest <n>
+
+  2 CASH SWEEP   owed <n> | repaid <n>, set by <limit> | ending cash <n> | ending debt <n> | unpaid <n>
+
+  3 NET LEVERAGE   net debt <n> | leverage <x> | maximum <x> | headroom <n, signed>
+                   actual case and proposed case, shown apart
+
+  MISSING   <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - The loan balance, cash and PIK rates, and the share of the year
+    - Your cash figures and the certified excess cash flow
+    - The sweep clause and the covenant wording
+    - The currency, scale and test date
+  prerequisites:
+    - The loan agreement pages and the latest compliance certificate
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: Step 1 cash and PIK interest
+      contains: Cash interest, PIK interest added, the new loan balance and total interest, tied back to the inputs.
+    - name: Step 2 cash sweep
+      contains: Sweep owed, repayment and the limit that set it, ending cash and debt, and any unpaid sweep.
+    - name: Step 3 net debt to earnings
+      contains: Net debt, the ratio against the maximum and signed headroom, with made and proposed cases apart.
+    - name: Sources and assumptions
+      contains: Each input with its source, date, currency and scale.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Ending PIK is added once, cash interest is paid once and ECF is never added again to cash already generated.
+  - what: A different sweep share
+    how: Change the sweep percentage or the minimum cash. Repayment, ending cash and unpaid sweep all move.
+  - what: Less cash on hand
+    how: Lower your cash. Repayment falls to the cash above the minimum, and the rest shows as unpaid.
+  - what: A half-year period
+    how: Use a half-year fraction. Cash interest and PIK interest both halve.
+  - what: A repayment not yet made
+    how: Add it as a proposed payment. Step 3 shows it as its own case and never counts it as made.
 judge:
   - Ending PIK is added once, cash interest is paid once and ECF is never added again to cash already generated.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +98,33 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the interest, sweep and covenant clauses in one note and paste it into every run, so each year uses the same rules.
+  - Save each year's certified excess cash flow and ending leverage, so next year starts from the last result.
+  - If headroom comes back negative, run Review leverage headroom and cure next.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: Your compliance certificate
+      why: It holds the lender-confirmed excess cash flow, which the AI must use as given and never rebuild.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The loan agreement's interest, sweep and covenant clauses, not a summary of them.
+    - Your own loan spreadsheet, so the AI can keep your layout.
+    - A named reviewer who knows the loan.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: PIK interest
+    meaning: Interest that is added to the loan balance instead of paid in cash. PIK is short for paid in kind.
+  - term: Cash sweep
+    meaning: A loan rule that sends a share of spare cash to repay the debt early.
+  - term: Excess cash flow
+    meaning: A cash figure the loan agreement defines and the borrower certifies. The sweep is a share of it.
+  - term: Net leverage
+    meaning: Debt minus the cash the loan allows you to net, divided by earnings (EBITDA). The lender sets a maximum.
+  - term: Headroom
+    meaning: How far the ratio sits from the limit. A negative number means the limit is passed.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+before: []
+next:
+  - review-leverage-headroom-and-cure
+  - review-contractual-debt-service-cash-tests

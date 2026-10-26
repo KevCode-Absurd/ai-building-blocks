@@ -1,6 +1,6 @@
 new_slug: buyer-research-plan-with-survey
 name: "Buyer research plan with survey"
-summary: "Give it your customer list and reward budget. Get a call plan, recruiting email and objection survey."
+summary: "Plan buyer research for your store: about 20 buyer calls, a recruiting email and a survey for buyers and non-buyers, with the reward costed."
 job: understand-customers
 thinking: medium
 thinking_why: "It writes a plan, an email and survey questions from a few facts. A mid-size model does this well, and you review before you send."
@@ -17,6 +17,10 @@ when:
   - You have a customer list and want to know why people buy, and why others on your list do not.
   - You are choosing ad angles, offers or the next product, and want the buyer's own reasons first.
   - Your repeat rate or reviews dropped and you want to hear from people who left.
+not_for:
+  - "Your store has no buyers or email list yet: read public forums and reviews first, or talk to a few people who fit your buyer."
+  - "Your list is very small: run the calls only and skip the survey, because a small survey gives noise."
+  - "You want to test a new business idea before you sell anything: use the Customer discovery interview planner."
 
 you_give:
   - Your customer list size, split into buyers, lapsed buyers and non-buyers
@@ -35,6 +39,27 @@ how_to_use:
   - Read the plan and edit the email so it sounds like you. Check that you will ask permission before recording a call.
   - Send the calls first. Once you have heard a few, send the survey to buyers and non-buyers as two lists.
   - Paste the answers back and ask it to sort them with the reading template.
+output_sample:
+  input:
+    - Your customer list size, split into buyers, lapsed buyers and non-buyers
+    - What you sell and who buys it
+    - What you can spend on rewards
+    - Your brand voice or offer limits (optional)
+  output:
+    - name: WHO TO ASK
+      contains: Counts of buyers, lapsed buyers and non-buyers to ask, kept as separate groups.
+    - name: CALL PLAN
+      contains: About 20 calls of 30 minutes over two weeks, or five for a small list, with a call guide.
+    - name: RECRUITING EMAIL
+      contains: A subject and body that say the call is to learn, give the length and name the reward.
+    - name: REWARD AND COST
+      contains: The reward, the number of people and the total cost, with any giveaway and credit.
+    - name: SURVEY
+      contains: Four or five open written questions for buyers, and a reworded set for non-buyers.
+    - name: READING TEMPLATE
+      contains: Piles for reasons they bought, reasons they did not and product requests, grouped by job to be done.
+    - name: TOOLS, RULES and NEXT
+      contains: Example audience tools, a consent and prize rules check, one next step and any checks missed.
 
 how_it_works:
   - title: Picks who to ask

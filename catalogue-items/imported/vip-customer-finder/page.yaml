@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It ranks customers by a simple measure.
 new_slug: vip-customer-finder
 name: VIP customer finder
-summary: Get your top customers by lifetime spend as a VIP list. It tags them in
-  Shopify only if you ask.
+summary: Find your VIP customers in Shopify by lifetime spend or order count. Get a ranked CSV, with tags added only if you ask.
 job: run-your-store
 headline: VIP customer finder
-subhead: A list of your best Shopify customers, ranked by what they have spent
-  over time. You can use it to build a loyalty group, give them faster support
-  or offer early access to new products.
+subhead: A list of your best Shopify customers, ranked by what they have spent over time. You can use it to build a loyalty group, give them faster support or offer early access to new products.
 explain: |
   A list of your best Shopify customers, ranked by what they have spent over time. You can use it to build a loyalty group, give them faster support or offer early access to new products.
 
@@ -18,6 +15,10 @@ when:
   - You need a segment for an early-access launch or a loyalty email.
   - Your support team wants to know which customers deserve a fast reply.
   - You want a CSV of high-value buyers without a separate CRM.
+not_for:
+  - "Your store has only a few dozen customers: the top 5 percent is too small to act on, so thank your best buyers by hand."
+  - "You want to win back buyers who stopped ordering: use the customer win-back skill instead."
+  - "You sell to business accounts: rank them in your own account list, since this ranks single buyers by spend."
 you_give:
   - Your Shopify store address
   - "How to rank: spend, orders or both"
@@ -30,9 +31,27 @@ you_get:
   - A preview before any change is made
   - VIP tags in Shopify, only if you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Use an AI tool that can run commands and save files, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Install the Shopify CLI and log in to your store with read access to customers and orders.
+  - Paste in this skill and give your store address, how to rank and the size of the top group.
+  - Run the preview first. Nothing changes in your store at this stage.
+  - Check the cutoff spend and the top 10 names. Change the top group or minimums if they look wrong.
+  - To add VIP tags, ask for it clearly and turn the preview off. Tags stay until you remove them.
+output_sample:
+  input:
+    - Your Shopify store address
+    - "How to rank: spend, orders or both"
+    - The size of the top group, such as 5 percent
+    - Minimum orders or minimum spend (optional)
+    - A tag name if you want VIPs tagged (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands and save files
+    - A Shopify login with permission to read customers and orders
+    - Permission to edit customers, only if you want VIP tags added
+  output:
+    - name: Preview
+      contains: A summary of customers scanned, how many qualify, the cutoff spend and orders, and your top 10 VIPs.
+    - name: vip_customers CSV
+      contains: One row per VIP with name, email, lifetime spend, order count, last order date, score and rank.
+    - name: Tag result
+      contains: How many customers got the VIP tag, or a note that tagging was skipped.

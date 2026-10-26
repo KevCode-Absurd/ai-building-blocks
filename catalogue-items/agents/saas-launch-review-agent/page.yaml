@@ -1,6 +1,6 @@
 new_slug: saas-launch-review-agent
 name: SaaS launch decision agent
-summary: Share your product, launch plan and new results. Get a dated decision on what to test, revise or keep.
+summary: Check your SaaS launch results and get a dated decision log that says what to test, revise or keep next, with gaps marked.
 job: plan-strategy
 headline: SaaS launch decision agent
 thinking: high
@@ -13,6 +13,10 @@ explain: |-
 when:
   - You want the result described above from the files and facts you already have.
   - You need a repeatable process and a clear next action.
+not_for:
+  - "You have no product or buyer yet: write down who the buyer is and what problem you solve first, or talk to five likely buyers."
+  - "You only want to review one number, such as signups: check it in your analytics tool or a spreadsheet."
+  - "You want messages sent, spending approved or accounts changed for you: do those yourself after you review the draft."
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits
@@ -22,10 +26,30 @@ you_get:
   - Updated state and result files
   - Missing facts and next action
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Open Claude, ChatGPT or Gemini and add the full skill pack. Use an AI that can read and save files.
+  - Share your product description, launch plan and any new results. Add your saved state file if you have one.
+  - Tell it your cash and time limits, and the date window to look at.
+  - Ask it to follow the steps and mark any missing facts instead of guessing.
+  - Read the decision log. Approve any send, spend or account change yourself before it happens.
+output_sample:
+  input:
+    - Your product description and who you think the buyer is
+    - Your launch plan, with any caps on cash and time
+    - Your latest launch results, such as signups, activations and paid customers (optional)
+    - Your saved state file from the last run (optional)
+  prerequisites:
+    - An AI that can read your files and save files to a folder you choose
+  output:
+    - name: agent-state.json
+      contains: Product revision, buyer evidence, selected test, cash and time caps, cohort window, results seen and decision date.
+    - name: decision-log.md
+      contains: The dated decision, the evidence behind it, the gaps that remain and one next action.
+    - name: Dated state
+      contains: "One label for this run: new, changed, unchanged, pending or blocked."
+    - name: Branch selected and reason
+      contains: Which path was chosen (positioning, first customers or growth) and why.
+    - name: Missing facts and approvals
+      contains: Facts still needed, actions waiting for your approval and the single next step.
 how_it_works:
   - title: Compare saved state
     text: Check which sources, dates or results changed since the last run.

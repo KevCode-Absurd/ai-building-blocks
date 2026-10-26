@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It summarises changes in a set format.
 new_slug: pull-request-writer
 name: Pull request writer
-summary: Give it your changes. Get a clear pull request description a reviewer
-  can follow.
+summary: Turn your code changes into a pull request description with a picture, proof it works, and a merge risk note that reviewers can scan fast.
 job: build-software
 headline: Pull request writer
-subhead: "A pull request body built for fast review: one picture of the change,
-  proof it works, and a plain warning about how risky the merge is."
+subhead: "A pull request body built for fast review: one picture of the change, proof it works, and a plain warning about how risky the merge is."
 explain: |
   A pull request body built for fast review: one picture of the change, proof it works, and a plain warning about how risky the merge is. Reviewers get the point in seconds.
 
@@ -17,6 +15,10 @@ when:
   - You want to prove a fix works with before and after output.
   - The change is hard to undo and reviewers should know it.
   - You prefer a diagram to three paragraphs of text.
+not_for:
+  - "You are fixing a typo or a tiny change: a one-line note in the pull request is enough."
+  - "You work alone and nobody reviews your code: write a short commit message instead."
+  - "You need release notes for customers: ask a person on your team to write them in plain words."
 you_give:
   - Your changes or diff
   - Before and after evidence
@@ -28,7 +30,23 @@ you_get:
   - Before and after evidence section
   - Merge risk rating
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste your diff or a list of what changed.
+  - Add your before and after proof, such as a test run or screenshots. Say if the change can be undone.
+  - Paste your project glossary if you have one (optional). Your AI will use your own terms.
+  - Check the Summary picture and the Merge Danger note, then paste the result into your pull request and attach the test run.
+output_sample:
+  input:
+    - Your code changes or diff
+    - Before and after evidence, such as test runs or screenshots
+    - Your project glossary (optional)
+    - Whether the change can be undone
+  output:
+    - name: Summary
+      contains: "The smallest picture that shows the change: pseudocode, call tree, component tree, file tree, diagram or diff."
+    - name: Evidence
+      contains: A before and after, such as a failing then passing test, console output or screenshots.
+    - name: Merge Danger
+      contains: Whether the merge is a one-way or two-way door, with a short note on why.
+    - name: Blast Radius
+      contains: A one-word label for how far the change could reach, plus optional notes on what could break.

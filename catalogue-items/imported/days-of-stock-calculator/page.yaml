@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It divides stock by sales speed.
 new_slug: days-of-stock-calculator
 name: Days of stock calculator
-summary: Get how many days each product stock will last and how fast it sells,
-  by location.
+summary: Find how many days of stock you have left for each product and location. Get a flagged reorder list from your Shopify sales and stock.
 job: run-your-store
 headline: Days of stock calculator
-subhead: Get how many days each product stock will last and how fast it sells,
-  by location. Bring your store address. Use the result to plan your next step.
+subhead: Get how many days each product stock will last and how fast it sells, by location. Bring your store address. Use the result to plan your next step.
 explain: |
   Per product and per location, you see how many days of stock remain at the current selling pace, and how much of what you received has sold. That tells you what to reorder and when.
 
@@ -17,6 +15,10 @@ when:
   - A bestseller may run out before restock arrives.
   - You want to compare stock health across locations.
   - You manage one supplier's products and want to check only those.
+not_for:
+  - "You need a live stock count: use a manual count or your POS report."
+  - "You want totals across several stores: this reads one store at a time, so run it once per store and add the results yourself."
+  - "You want to clear slow stock: this flags it, but you decide the markdown yourself."
 you_give:
   - Your store address
   - Sales window in days (optional)
@@ -28,8 +30,29 @@ you_get:
   - Flagged low stock items
   - Reorder planning list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code and use the Shopify CLI, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - "Sign in to your store first. Run the Shopify CLI command: shopify store auth --store your-store.myshopify.com --scopes read_products,read_orders,read_inventory"
+  - Paste in the skill and give your store address. Add the sales window, alert level or supplier if you want them.
+  - Wait for the run. It only reads your store and changes nothing.
+  - Check the critical list first. Then open the CSV and compare low items with your supplier lead times.
+  - Use a 90-day window for slow or seasonal products. The default is 30 days.
+output_sample:
+  input:
+    - Your Shopify store address
+    - Sales window in days (optional)
+    - Alert level in days (optional)
+    - One supplier to focus on (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - Read access to products, orders and inventory in your Shopify store
+  output:
+    - name: Start banner
+      contains: The skill name, your store address and the start time.
+    - name: Step log
+      contains: One line per step showing what was read and how many results came back.
+    - name: Summary
+      contains: How many products were checked, and how many are critical, healthy or have no sales.
+    - name: Critical list
+      contains: Each product under your alert level, with its SKU, days of stock left and daily sales.
+    - name: velocity_<date>.csv
+      contains: One row per variant with stock, units sold, daily sales, days of stock, sell-through percent and an alert flag.

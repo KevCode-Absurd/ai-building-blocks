@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It applies a five step standard to varied contracts.
 new_slug: revenue-recognition-checker
 name: Revenue recognition checker
-summary: Give it a customer contract. Get its promises, price split and timing
-  of revenue under IFRS 15 or ASC 606.
+summary: Check a customer contract for revenue recognition under IFRS 15 or ASC 606. Get its promises, price split and when to book revenue.
 job: money-and-investing
 headline: Revenue recognition checker
-subhead: Give it a customer contract. Get its promises, price split and timing
-  of revenue under IFRS 15 or ASC 606. Bring the customer contract or its key
-  terms. Use the result to plan your next step.
+subhead: Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606. Bring the customer contract or its key terms. Use the result to plan your next step.
 explain: |
   A memo showing what a customer contract promises, how the price is split between those promises, and when you can count each part as revenue. It follows the IFRS 15 and ASC 606 five-step model.
 
@@ -18,6 +15,10 @@ when:
   - You need to explain deferred revenue to an auditor.
   - A contract has discounts or bonuses that change the price.
   - You are building a monthly revenue release schedule.
+not_for:
+  - You need final revenue figures to file or report. Have a qualified accountant prepare them, and review this memo first.
+  - Your contract falls outside IFRS 15 or ASC 606, such as a lease or an insurance contract. Use the standard that applies, or ask your accountant.
+  - You only need to know if a contract is legally valid. Ask a lawyer, since this checks accounting treatment.
 you_give:
   - The customer contract or its key terms
   - Prices of each item sold alone (optional)
@@ -30,7 +31,21 @@ you_get:
   - Journal entries for the start, deferral and monthly release
   - Timing of revenue
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your contract, or list its key terms, prices, payment dates and any discounts or bonuses.
+  - Add the price of each item sold alone if you have it. If not, say so, and your AI will flag it as a judgment call.
+  - Read the memo. Check the list of promises and the price split against your contract.
+  - Have a qualified accountant review the memo before it goes to an auditor. Price estimates for each item need their sign-off.
+output_sample:
+  input:
+    - Your customer contract or its key terms
+    - Prices of each item sold on its own (optional)
+    - Payment terms and dates
+    - Any discounts, rebates or bonuses (optional)
+  output:
+    - name: The Contract
+      contains: The separate promises found in the contract and how the transaction price was set.
+    - name: Allocation Table
+      contains: How the total price is shared across the promises, based on what each would sell for alone.
+    - name: Journal Entries
+      contains: Entries for the start of the contract, deferred revenue, and the monthly release of revenue.

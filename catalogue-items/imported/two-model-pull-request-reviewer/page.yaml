@@ -2,35 +2,103 @@ thinking: high
 thinking_why: Two models must challenge each other over many rounds.
 new_slug: two-model-pull-request-reviewer
 name: Two-model pull request reviewer
-summary: Give it a pull request. Get a review where two AI models argue over the
-  code and agree on what to fix.
+summary: Get a pull request review where a second AI model challenges the first one's findings, so weak comments drop out before your team sees them.
 job: test-and-fix-code
 headline: Two-model pull request reviewer
-subhead: A code review where two AI models argue before anything reaches your
-  team, so you get fewer false alarms and fewer missed bugs. One review lands on
-  the pull request or merge request as inline comments.
+subhead: Give it a pull request, merge request or local changes. One AI model reviews the code, a second tries to knock down each finding, and the first makes the final call. You get a short list of findings that survived.
 explain: |
-  A code review where two AI models argue before anything reaches your team, so you get fewer false alarms and fewer missed bugs. One review lands on the pull request or merge request as inline comments.
+  A single AI code review often sends weak comments to your team. This two-model pull request reviewer adds a challenge step. The main reviewer finds issues in the diff. A second reviewer tries to refute each one and checks for gaps. The main reviewer then decides which findings stand.
 
-  A main reviewer finds issues in the diff. A second reviewer tries to knock them down and can add its own. The main reviewer then makes the final call. It works with GitHub, GitLab and Azure DevOps, or on a local working tree before a PR exists. It posts from your own signed-in account as a comment only. It never approves and never requests changes. You need Node, Git and your platform's command line tool.
+  Each finding has a file and lines, the input that triggers it, the wrong result, and a suggested fix. You also get a ship or no-ship summary. It never approves a pull request and never asks for changes. People decide.
+
+  There are two ways to run it. A script can run both models and post to GitHub, GitLab or Azure DevOps. That script is not in this folder, and it needs two AI tools plus command line setup. Or you can run the same steps by hand in two chat windows with the prompts included here. Both models see your code, and a run can cost money.
 when:
-  - You want a deep review before merging a pull request.
-  - You want to review local changes before you open a PR.
-  - Single-model reviews give you too many weak comments.
-  - Your team needs inline comments with fewer false positives.
+  - You want a careful review before you merge a pull request.
+  - You want your local changes checked before you open a pull request.
+  - Your single-model reviews give too many weak comments.
+  - A change touches login, payments or data, and you want a second look.
+not_for:
+  - The change is a typo or a version bump. One quick read is enough.
+  - You want a quick bug and security check with one model. Use the Bug and security code reviewer.
+  - You want a review against your own standards and spec side by side. Use the Code change reviewer.
+  - Your code cannot be sent to an outside AI service. Both models see the diff.
 you_give:
-  - A pull request, merge request or local branch
-  - Which platform it is on
-  - The base branch to compare against (optional)
-  - Whether to print or post the review
+  - The pull request link, or your local changes (the diff)
+  - The pull request title and description
+  - The spec or issue it should meet (optional)
+  - Your coding rules file, such as CONTRIBUTING (optional)
+  - Two AI chats or accounts, ideally from different makers
 you_get:
-  - Reviewer findings tested by a second model
-  - One review with inline comments
-  - A final decision on each issue
-  - A printed report if you prefer not to post
+  - Findings with file, lines, the trigger, the wrong result and a fix
+  - A verdict on each finding from the second reviewer
+  - The final call on each, marked agreed, contested or withdrawn
+  - A ship or no-ship summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your repo and call a second AI model.
+  - Get the diff and the pull request title and description. Add the spec if you have one.
+  - Open two separate AI chats. If you can, use two different AI products so they do not share blind spots.
+  - In chat 1, paste the main reviewer prompt from this skill's assets folder with your diff. Copy its list of findings.
+  - In chat 2, paste the debate reviewer prompt, your diff and chat 1's findings. Copy its verdicts.
+  - Back in chat 1, paste the final call prompt with both lists. Read the final list yourself.
+  - Post only the findings you agree with, and never a withdrawn one. To run it automatically, you need the upstream script and command line setup, which is not in this folder.
+how_it_works:
+  - title: Main review
+    text: The first model reads the diff in three passes and reports only findings it can trace to a trigger and a wrong result.
+  - title: Challenge
+    text: The second model confirms, refutes or downgrades each finding, with evidence, and looks for gaps.
+  - title: Final call
+    text: The first model re-reads the code and marks each finding agreed, contested or withdrawn.
+  - title: Levels
+    text: When the script posts, security blockers are P0, other blockers P1, and the rest P2.
+  - title: Comment only
+    text: Nothing is approved or blocked. The review is a comment, and a person decides.
+output_shape: |
+  Summary
+  <ship or no-ship read after the debate>
+
+  Finding <id> (<level>, <agreed or contested>)
+  File and lines: <path:start-end>
+  Claim: <what is wrong>
+  Evidence: <trigger and wrong result>
+  Suggested fix: <change>
+  Note: <what the challenge said and why the finding stands>
+
+  Withdrawn
+  <findings dropped, one line each>
+output_sample:
+  input:
+    - The pull request link or your local diff
+    - The pull request title and description
+    - The spec or issue (optional)
+    - Your coding rules file (optional)
+  prerequisites:
+    - Two AI chats or accounts, ideally from different makers
+    - For the automatic way, the upstream script, Node, Git and a signed-in GitHub, GitLab or Azure command line tool
+  output:
+    - name: Findings
+      contains: Each issue with file and lines, severity, trigger, wrong result and suggested fix.
+    - name: Challenge verdicts
+      contains: The second model's confirm, refute or downgrade on each finding, with evidence.
+    - name: Final list
+      contains: Each finding marked agreed, contested or withdrawn, with a one line note.
+    - name: Summary
+      contains: A ship or no-ship read that names what still blocks the merge.
+    - name: Posted review (script only)
+      contains: One comment review with inline comments, marked P0, P1 or P2.
+works_best_with:
+  tools:
+    - name: Claude
+      why: A strong main reviewer. Pair it with a model from a different maker as the second reviewer.
+    - name: ChatGPT
+      why: A good second reviewer in a separate chat, since it does not share the first model's habits.
+    - name: GitHub CLI
+      why: Needed only for the automatic way, to read and post on pull requests.
+  inputs:
+    - The issue or spec the change should meet
+    - Your CONTRIBUTING or coding rules file
+terms:
+  - term: Pull request
+    meaning: A proposed code change that others review before it joins the main code.
+  - term: Diff
+    meaning: The lines added and removed in a change.
+  - term: Inline comment
+    meaning: A review note attached to one line of code.

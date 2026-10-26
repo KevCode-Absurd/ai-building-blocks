@@ -13,8 +13,8 @@ outputs:
   - {type: document}
 uses: [month-end-close-planner, expense-sorter, accrual-schedule-drafter, financial-statement-preparer, variance-commentary]
 steps:
-  - {uses: month-end-close-planner, note: "Sets the order for the whole close. Accruals wait for sub-ledgers, statements wait for accruals, and commentary comes last."}
-  - {uses: expense-sorter, note: "Works on the transactions the plan calls for, and gives you clean totals by cost type."}
+  - {uses: month-end-close-planner, note: "Sets the order for the whole close: accruals wait for sub-ledgers, statements wait for accruals, and commentary comes last. Hands the dated task order to the later steps."}
+  - {uses: expense-sorter, note: "Uses your transactions export, not step 1's plan itself. Step 1's plan tells you which accounts to work on first. Gives you clean totals by cost type."}
   - {uses: accrual-schedule-drafter, note: "Uses the sorted costs to see what is already booked, and drafts entries for what is missing."}
   - {uses: financial-statement-preparer, note: "Builds the statements from the trial balance that now includes the accruals you posted."}
   - {uses: variance-commentary, note: "Compares the new statements with last month and explains every line past your limit."}

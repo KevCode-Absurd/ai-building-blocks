@@ -35,3 +35,29 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - "You want a term-long cycle for children aged 5 to 12 with set stages. Use the Local nature inquiry cycle planner."
+  - "Your goal is a calmer classroom with plants and light. Use the Classroom nature layout planner."
+  - "You want a project that keeps going after your class moves on. Use the Plan a nature project that can continue workflow."
+output_sample:
+  input:
+    - The local place, such as a pond, a hedge, a tree or a garden bed
+    - The curriculum goal you must teach
+    - Year group (optional)
+    - How long you have (optional)
+    - Outdoor space and local experts who could help (optional)
+  output:
+    - name: Driving question
+      contains: One question from the place that also meets your curriculum goal.
+    - name: Why this place
+      contains: What this place can teach that a textbook cannot.
+    - name: Inquiry design
+      contains: Four phases, which are meeting the place, investigating, understanding and giving back.
+    - name: Investigation Activities
+      contains: What pupils do, what they record and which tools they use.
+    - name: Curriculum Connections
+      contains: How each goal is met through what pupils find in the place.
+    - name: Ecological Literacy Outcomes
+      contains: What pupils learn about how living systems work.
+    - name: Stewardship Plan
+      contains: Actions pupils take to care for the place, based on what they found.

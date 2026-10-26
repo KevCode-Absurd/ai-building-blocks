@@ -21,13 +21,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **API security checker.** Use the skill `api-security-checker`. Finds the gaps in your API routes and writes a fix for each one.
-2. **Test gap finder.** Use the skill `test-gap-finder`. Give it the code change from the steps before. Reads the fixes from the step before and lists the ones no test would catch, with the tests to add.
+1. **API security checker.** Use the skill `api-security-checker`. Finds the gaps in your API routes and writes a fix for each one. It hands the fixes (the code change) to step 2, and the security report to step 4 as the story.
+2. **Test gap finder.** Use the skill `test-gap-finder`. Give it the fixes from step 1 and your tests. Lists the fixes no test would catch, with the tests to add. You add them and run your suite before step 3.
 
 Pause here: Add the tests it proposes, run your whole test suite and fix any failure before you go on.
 
-3. **Pull request risk reviewer.** Use the skill `pull-request-risk-reviewer`. Give it the code change from the steps before. Reviews the finished change, fixes plus tests, for harm the fixes could cause.
-4. **Pull request writer.** Use the skill `pull-request-writer`. Give it the code change from the steps before. Turns the fixes into a pull request a reviewer can follow, with the security gaps as the story.
+3. **Pull request risk reviewer.** Use the skill `pull-request-risk-reviewer`. Give it the fixes from step 1 plus the tests you added, not step 2's report itself. Reviews that finished change, fixes plus tests, for harm the fixes could cause, and hands the review notes to step 4.
+4. **Pull request writer.** Use the skill `pull-request-writer`. Give it the fixes and tests from the change, the security report from step 1 and the review notes from step 3. Turns the fixes into a pull request a reviewer can follow, with the security gaps as the story.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

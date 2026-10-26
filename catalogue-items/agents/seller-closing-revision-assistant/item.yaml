@@ -1,33 +1,32 @@
 slug: seller-closing-revision-assistant
 name: Seller closing revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: Recheck seller closing cash when a statement, working capital figure, escrow claim or fee changes. See what is paid, held and owed, each counted once.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: source_text
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - reconcile-seller-closing-cash
   - adviser-fee-tier-checker
 steps:
   - uses: reconcile-seller-closing-cash
-    note: Run the governing workflow when A revised closing statement, final working-capital determination, paid claim or signed fee amendment arrives.
+    note: Run this when a revised closing statement, a final working-capital figure, a paid or new escrow claim or a signed fee amendment arrives. Rerun only the steps the change touches and carry the rest over from the last review. Hands the updated seller cash workbook and report to the fee check.
   - uses: adviser-fee-tier-checker
-    note: If the adviser fee changed, recompute only the supported marginal tier schedule and update unpaid seller expenses using the net remaining invoice. Preserve paid retainers and prior settlement records to prevent duplicate deductions. Otherwise leave the fee branch unrun.
+    note: If the adviser fee changed, recompute only the supported marginal tier schedule and update unpaid seller expenses using the net remaining invoice. Preserve paid retainers and prior settlement records to prevent duplicate deductions. Otherwise leave the fee branch unrun. Takes your signed fee amendment and retainer record, plus the cash workbook from step 1, which it never recounts.
 origin: own
 version: 1.0.0
 added: 2026-10-22

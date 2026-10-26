@@ -1,6 +1,6 @@
 new_slug: satisfying-motion-ad-script
 name: "Satisfying motion video ad script writer"
-summary: "Paste how your product is used. Get a satisfying-motion opening, a demo script and a cast note."
+summary: "Write a satisfying motion video ad script: a wordless 4 to 6 second opening, a short demo and a cast note, all built from how your product is used."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your product makes a motion worth watching when it's used (it pours, peels, clicks or fits).
   - You need an opening for people who already know they want something like this.
   - You want an ad with no presenter and no face to film.
+not_for:
+  - Your product has no motion worth watching, like a capsule taken with water. Build the opening from the old way it replaces, or use a plain product demo with a person talking.
+  - Your buyer only knows the problem, not the kind of product. Ask to put the old way in focus, or start with a script that explains the problem first.
+  - You have no approved claim to prove. Get one signed off by your brand owner first, or the fact line will read MISSING.
 
 you_give:
   - A photo of your product and pack (attach it; your AI can see pictures), and how it's used, step by step
@@ -37,6 +41,29 @@ how_to_use:
   - Say the length, for example "15 seconds".
   - Check the opening's visual note. It should name the motion already under way and what "done" looks like.
   - Film it for real with the shot list skill. For AI video, the storyboard skill builds the product sheet and storyboard, then the shot list skill makes the clips.
+output_sample:
+  input:
+    - A photo of your product and pack
+    - How your product is used, step by step
+    - The one fact you want to prove, and your offer
+    - The length you want, for example 15 seconds
+    - Your approved claims, word for word (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: FIT, IN FOCUS and FINISH
+      contains: Three lines on why this works for your product, what the camera shows, and which kind of finish it uses.
+    - name: OPENING
+      contains: A wordless one-shot opening of 4 to 6 seconds with a short overlay and an exact visual note.
+    - name: DEMO
+      contains: Rows of spoken words, on-screen text and visual notes, with one approved fact and a close on your offer.
+    - name: CAST NOTE
+      contains: Makes the product the avatar and names the hand, place and light, for the video skills.
+    - name: Inferred and MISSING
+      contains: Lists any motions or sounds the skill guessed, and any facts you still need to supply.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or the word none.
 
 how_it_works:
   - title: Checks it fits

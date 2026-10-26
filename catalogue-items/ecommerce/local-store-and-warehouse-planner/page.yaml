@@ -1,6 +1,6 @@
 new_slug: local-store-and-warehouse-planner
 name: "Local store and warehouse planner"
-summary: "Give it sales by country. Get the order to open local stores and warehouses, with triggers."
+summary: "Plan when to open a local store or warehouse abroad. Give it sales by country. You get a market order, sales triggers and a rollback plan."
 job: plan-strategy
 thinking: high
 thinking_why: "It weighs cost, volume and risk across countries and must keep one founder's numbers separate from yours, so a stronger model is safer."
@@ -17,6 +17,10 @@ when:
   - Overseas orders are growing and you wonder when a local store or warehouse pays off.
   - You want to avoid launching in many countries at once.
   - You pay high fees on international orders and want to compare the alternatives.
+not_for:
+  - "Your range is bulky or seasonal with many sizes: the sample order does not fit, so ask a freight or fulfilment firm for quotes first."
+  - "Your home market sales are still unstable: fix that first, then come back to this plan."
+  - "You only want to know which country to enter first: use a general overseas market ranking step, not a store and warehouse plan."
 
 you_give:
   - Sales and traffic by country from your analytics
@@ -36,6 +40,31 @@ how_to_use:
   - Add your shipping costs, payment fees and product size.
   - Compare the founder's trigger numbers with your own country data, then pick one market.
   - Run the test plan on real orders before any ads go live.
+output_sample:
+  input:
+    - Your sales and traffic by country for the last 12 months
+    - The number of products, and whether they ship small and light
+    - Your payment processing and shipping costs by country
+    - Your shipping and duties setup, support hours and languages (optional)
+  output:
+    - name: YOUR DATA
+      contains: Your sales, orders, shipping cost and payment fee for each country, as you gave them.
+    - name: MARKET ORDER
+      contains: One line per market with your trigger, the founder's number beside it, and why.
+    - name: COST COMPARISON
+      contains: A local store or warehouse set against one global store on payment, shipping and duties.
+    - name: WAREHOUSE OPTIONS
+      contains: Local partners from your US warehouse, or an international fulfilment firm.
+    - name: LOCALISATION
+      contains: Site, ads, local actors and support language changes needed before ads start.
+    - name: TEST PLAN
+      contains: Real orders sent through the shipping partner before any ads go live.
+    - name: ROLLBACK
+      contains: How to switch a launch off and go back to how things were.
+    - name: SKIPPED FOR NOW
+      contains: Markets to leave alone for now, and why.
+    - name: VERIFY
+      contains: Duty-free limits, tariff rules and tax points to check with a qualified person.
 
 how_it_works:
   - title: Ranks the markets

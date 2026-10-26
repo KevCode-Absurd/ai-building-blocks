@@ -36,7 +36,8 @@ export default function BuilderPalette({ c, anchor, inFlow, goal, onGoalChange, 
     return c.blocks.filter(b => b.category !== "orchestrator" && b.type !== "agent" && (tab !== "kits" || kitSlugs.has(b.slug)) && words.every(w => hays.get(b.slug)?.includes(w)));
   }, [c, dq, tab, kits, hays]);
   const groups = useMemo(() => TASKS.map(t => ({ t, items: list.filter(b => taskOf(b).id === t.id) })).filter(g => g.items.length), [list]);
-  const templates = useMemo(() => c.blocks.filter(b => b.category === "orchestrator"), [c]);
+  // A workflow that runs as one pack (no separate steps) would open as an empty canvas, so it isn't offered here.
+  const templates = useMemo(() => c.blocks.filter(b => b.category === "orchestrator" && b.steps.length > 0), [c]);
   const first = useMemo(() => firstSkillSuggestions(c, deferredGoal, inFlow), [c, deferredGoal, inFlow]);
   const before = useMemo(() => anchor ? chainSuggestions(c, anchor.slug, inFlow, deferredGoal, "before") : [], [c, anchor, inFlow, deferredGoal]);
   const after = useMemo(() => anchor ? chainSuggestions(c, anchor.slug, inFlow, deferredGoal, "after") : [], [c, anchor, inFlow, deferredGoal]);

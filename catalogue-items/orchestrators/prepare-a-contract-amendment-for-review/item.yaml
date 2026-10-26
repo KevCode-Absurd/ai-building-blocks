@@ -1,6 +1,6 @@
 slug: prepare-a-contract-amendment-for-review
 name: Prepare a contract amendment for review
-summary: Share the source files. Get a change trace, issue list and plain summary for your legal reviewer.
+summary: "Prepare a contract amendment for review: get a clause-by-clause change trace, an issue list and a plain summary for your legal reviewer."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,9 +8,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: document
+    required: true
+  - type: brief
     required: false
 outputs:
   - type: audit_report
@@ -20,9 +20,9 @@ uses:
   - plain-words-contract-summary
 steps:
   - uses: contract-risk-reviewer
-    note: Review the base and proposed wording separately, pair changed clauses by source and version, and assess their obligations, dates, payment, liability and dependencies. Proposed wording never becomes the controlling agreement.
+    note: "Review the base and proposed wording separately, pair changed clauses by source and version, and assess their obligations, dates, payment, liability and dependencies. Proposed wording never becomes the controlling agreement. Hands step 2 the changed-clause pairs, their risk ratings and the open approval questions."
   - uses: plain-words-contract-summary
-    note: Summarize each version with its party duties and source sections, then explain the proposed differences and unresolved approval questions.
+    note: "Summarize each version with its party duties and source sections, then explain the proposed differences and unresolved approval questions. Uses the contract documents themselves, not only step 1's report, and adds step 1's open questions."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

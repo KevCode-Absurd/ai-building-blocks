@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It chooses a diagram type, then lays it out with set rules.
 new_slug: diagram-maker
 name: Diagram maker
-summary: Describe a system, process or idea. Get a clean dark-themed SVG diagram
-  you can open and reuse.
+summary: Describe a system or process and get a dark-themed SVG diagram you can open, edit and reuse. This diagram maker picks the type that fits.
 job: design-work
 headline: Diagram maker
-subhead: A clean SVG diagram in a dark theme, saved as one file you can open in
-  any browser, drop into slides or edit later. Fonts and styles are built in, so
-  it looks the same everywhere.
+subhead: Describe a system, process or idea in words. Your AI picks a diagram type and draws it as one SVG file. Open it in any browser, drop it into slides or edit it later.
 explain: |
   A clean SVG diagram in a dark theme, saved as one file you can open in any browser, drop into slides or edit later. Fonts and styles are built in, so it looks the same everywhere.
 
@@ -16,8 +13,12 @@ explain: |
 when:
   - You need an architecture picture for a document and have no design tool open.
   - You want a flowchart of a process your team follows.
-  - A sequence of messages between services is hard to explain in text.
-  - You need a mind map or timeline that looks tidy without manual drawing.
+  - Messages between services are hard to explain in text, so you want a sequence diagram.
+  - You need a mind map or timeline that looks tidy without drawing by hand.
+not_for:
+  - "You need a chart of numbers or a spreadsheet view: use a chart tool or Google Sheets instead."
+  - "You want a light, print-ready or brand-styled diagram: draw it by hand or in a design tool, since this skill only makes a dark theme."
+  - "You need a photo, logo or detailed illustration: ask a designer or use an image tool instead."
 you_give:
   - A description of the system, process or idea
   - The diagram type you want (optional)
@@ -29,8 +30,24 @@ you_get:
   - Colour-coded boxes, arrows and labels
   - A file you can edit or embed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open your AI tool. Use one that can run code and save files. A plain chat can write the SVG text, but cannot make the PNG.
+  - Paste the skill, or upload its folder if your AI takes files.
+  - Describe your system, process or idea. List the parts to include. Name a diagram type if you have a preference.
+  - 'Example: say "A shop site calls an API, which reads orders from a database and sends emails through a queue." Your AI picks an architecture diagram and saves a .svg file plus a matching @2x .png.'
+  - Open the SVG in a browser. Check that no text spills out of a box and no arrows cross labels. Ask for fixes.
+  - "Know the limits: the SVG loads the JetBrains Mono font from Google Fonts, so it needs internet to show that font. The PNG step needs bun or npx installed."
+output_sample:
+  input:
+    - A plain description of your system, process or idea
+    - The names of the parts to include
+    - The diagram type you want (optional)
+    - Labels or groupings you care about (optional)
+  prerequisites:
+    - An AI that can run code and save files, to write the SVG and PNG
+    - Bun or npx installed, to make the PNG
+    - Internet access to load the JetBrains Mono font when you view the SVG
+  output:
+    - name: Diagram SVG
+      contains: One standalone dark-themed diagram with colour-coded boxes, arrows, labels, a legend and a title block.
+    - name: Diagram PNG at 2x
+      contains: A sharper picture version of the same diagram, saved next to the SVG, ready for slides or documents.

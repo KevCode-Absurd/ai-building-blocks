@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It runs checks then judges what matters most.
 new_slug: matlab-code-reviewer
 name: MATLAB code reviewer
-summary: Give it MATLAB code. Get a review of style, speed and upkeep, checked
-  against MathWorks standards.
+summary: Check your MATLAB code review against MathWorks standards. Give it your files. You get findings by severity, exact lines and fixes.
 job: test-and-fix-code
 headline: MATLAB code reviewer
-subhead: "Give it your MATLAB files and any style rules your team uses. It runs
-  the built-in code analyser, then checks against MathWorks coding standards:
-  naming, argument blocks, function length, nesting, vectorisation and
-  preallocation. You get findings sorted by severity, the exact lines, suggested
-  fixes and a quality summary."
+subhead: "Give it your MATLAB files and any style rules your team uses. It runs the built-in code analyser, then checks against MathWorks coding standards: naming, argument blocks, function length, nesting, vectorisation and preallocation. You get findings sorted by severity, the exact lines, suggested fixes and a quality summary."
 explain: |
   A written review of your MATLAB code that sorts problems by how much they matter: errors first, then warnings, then suggestions. It checks against MathWorks coding standards, not personal taste.
 
@@ -20,6 +15,10 @@ when:
   - You wrote code years ago and want it brought up to date.
   - Your loops run slowly and you suspect missing preallocation.
   - You want code that follows one standard across your team.
+not_for:
+  - "You have a runtime error to fix: use the matlab-debug-code skill, which is not yet in this library."
+  - "You want tests written for your code: use the matlab-write-tests skill, which is not yet in this library."
+  - "You want your code made faster by measuring it: use the MATLAB profiler, or a teammate who knows it well."
 you_give:
   - The MATLAB files to review
   - Any style rules your team has (optional)
@@ -30,8 +29,27 @@ you_get:
   - Suggested fixes
   - A short summary of overall quality
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open an AI that can run MATLAB and has the MathWorks tools connected. Paste in the skill text.
+  - Add the MATLAB files or the folder you want reviewed.
+  - Add your team's style rules and your MATLAB release if you have them.
+  - Ask for a code review. Your AI runs the code analyser first, then checks the rest by reading the code.
+  - Read the errors first, then the warnings. Apply the fixes you agree with. The review does not change your code.
+output_sample:
+  input:
+    - Your MATLAB files or a folder of them
+    - Your team's style rules (optional)
+    - Your MATLAB release (optional)
+  prerequisites:
+    - An AI that can run MATLAB with the MathWorks tools connected
+    - The check_matlab_code tool and the matlab_coding_guidelines resource
+  output:
+    - name: Static analysis
+      contains: The count of errors and warnings the built-in MATLAB code analyser found in each file.
+    - name: Naming
+      contains: A checklist for function, class, variable and file names against MathWorks conventions.
+    - name: Structure
+      contains: Checks for arguments blocks, function length and nesting depth, with line numbers for problems.
+    - name: Patterns
+      contains: Flags for old commands like subplot or datenum, missing preallocation and loops that could be vectorised.
+    - name: Suggestions
+      contains: A numbered list of fixes, ordered from errors to warnings to nice-to-haves.

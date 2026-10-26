@@ -1,6 +1,6 @@
 new_slug: teach-a-class-to-check-ai-answers-and-set-fair-ai-rules
 name: Teach students to check AI answers and set fair rules
-summary: Give it the subject and age group. Get lessons on AI reliability, a spot-the-mistake activity and assignment rules.
+summary: Plan lessons that teach students to check AI answers, with a spot-the-mistake activity and clear, fair AI rules for your assignment.
 job: teach-and-train
 thinking: high
 thinking_why: It must get the subject right and judge what counts as fair use. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your students hand in AI answers with confident errors in them.
   - Your school asked for an AI policy and nobody knows what to write.
   - You want students to use AI as a tool and still learn the subject.
+not_for:
+  - "You need one lesson and have no assignment to check: use a plain worksheet and write the lesson yourself."
+  - "You only need a school-wide AI policy: ask your head of department or use your school's policy template."
+  - "You want to grade student work: use the Mark student work against a rubric and sharpen your feedback workflow."
 you_give:
   - The subject, the age group and what they already know
   - An assignment you set, with its current AI rules if any
@@ -25,11 +29,30 @@ you_get:
   - A lesson where students critique an AI answer against a rubric
   - Your assignment's AI rules checked and rewritten to be clear and fair
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste the subject, the age group and the assignment. It plans the lessons and builds the activity.
-  - Check the planted mistakes yourself. Teach the lessons.
-  - Read the rewritten AI rules and put them on the assignment.
+  - Download the handoff pack. It is a zip with a HANDOFF.md file and the skill files this workflow uses.
+  - Open Claude, ChatGPT or Gemini and add the files from the zip. Say "Follow HANDOFF.md". Claude Code or a Claude Project handles files best.
+  - Paste the subject, the age group, your assignment and how many lessons you have.
+  - Read the answer key for the mistake hunt. Check each mistake yourself before you teach it.
+  - Read the rewritten AI rules. Fix anything that does not fit your school, then add them to the assignment.
+output_sample:
+  input:
+    - The subject, the age group and what students already know
+    - An assignment you set, with its current AI rules if any
+    - A real AI answer on the subject (optional)
+    - How many lessons you can give to this
+  prerequisites:
+    - A chat AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: "Step 1: Reliability lessons"
+      contains: Lessons on where AI answers go wrong, with an example from your subject, how to check, and a question to test understanding.
+    - name: "Step 2: Mistake hunt"
+      contains: A real AI answer, a student worksheet, and an answer key listing each mistake and how to check it.
+    - name: "Step 3: Critique lesson"
+      contains: A rubric, a task where students grade an AI answer, a task to write the better version, and discussion questions.
+    - name: "Step 4: Assignment rules"
+      contains: What was vague or unfair, what is allowed, what is not allowed, and how students show their own work.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the reliability lessons
     text: Plans lessons on where AI answers go wrong and how to check them, with examples from the subject.

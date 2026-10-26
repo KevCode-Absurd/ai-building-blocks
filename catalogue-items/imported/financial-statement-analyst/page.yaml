@@ -33,3 +33,26 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - You run an online store and want a 36-month model from ad spend and costs. Use the Store financial model builder.
+  - You want a monthly budget against actuals by team. Use the Monthly budget versus actual keeper.
+  - You are weighing a private equity deal in India and want IRR tables. Use the Deal returns sensitivity builder.
+output_sample:
+  input:
+    - Your income statement, balance sheet and cash flow statement
+    - Budget figures to compare with actuals (optional)
+    - Peer or industry benchmarks (optional)
+    - Your forecast assumptions (optional)
+  prerequisites:
+    - An AI that can run Python, to use the bundled calculators
+  output:
+    - name: Ratio analysis
+      contains: Profitability, liquidity, debt, efficiency and valuation ratios, with how to read each trend.
+    - name: DCF valuation
+      contains: A value estimate from cash flows, with a table that varies the discount and growth rates.
+    - name: Budget variance report
+      contains: Each gap marked favorable or unfavorable, with the large ones explained.
+    - name: Rolling forecast
+      contains: A driver-based forecast with a 13-week cash view and base, bull and bear cases.
+    - name: Executive summary
+      contains: The findings that matter most, in plain words.

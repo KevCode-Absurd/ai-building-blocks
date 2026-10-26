@@ -2,17 +2,111 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-qdrant-search-quality
 name: Qdrant search relevance investigator
-summary: Share queries and weak results. Get likely relevance problems and tests
-  to compare proposed fixes.
+summary: "Find why Qdrant search returns wrong or missing results. Get ranked causes, one test for each and the fixes to try in order."
 job: ship-and-host
 headline: Qdrant search relevance investigator
-subhead: Share queries and weak results. Get likely relevance problems and tests
-  to compare proposed fixes. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Give it a few searches that return poor results, and what you expected instead. It finds out whether the cause is your data, your embedding model, your Qdrant settings or your search method. You get ranked causes, a test for each and fixes in order.
+explain: |
+  Qdrant is a database that stores data so apps can search by meaning. When its results are poor, people often tune Qdrant first. Most of the time the cause is the data, how it was cut into pieces, or the model that turns text into numbers.
+
+  This investigator works from the cheapest check to the costliest. It first looks at how your data was split into chunks. Then it runs an exact search to see whether Qdrant's fast approximate search is losing results. If exact search is also poor, the model is the problem, not Qdrant. Only then does it suggest tuning, or search methods such as mixing keyword and meaning search, reranking and diversity.
+
+  You get a short list of likely causes, each with one test, and a baseline so you can tell if a fix helped or made things worse.
+when:
+  - Search returns results that look close but are not what people want.
+  - Results you know exist never show up.
+  - Quality dropped after you turned on compression (quantization) or switched models.
+  - Search works for meaning but misses exact names, codes or product numbers.
+not_for:
+  - "Search is slow, not wrong: use the Qdrant search speed tuner."
+  - "You are moving to a new embedding model on purpose: use the Qdrant embedding migration planner."
+  - "You have no example searches yet: collect 10 to 20 real searches with the right answers first, so there is something to measure."
+you_give:
+  - A few searches that went wrong, with the results you expected
+  - The results Qdrant returned, with scores if you have them
+  - The name of your embedding model, and how you split documents into chunks
+  - Your collection settings and Qdrant version (optional)
+  - Whether you use filters on results (optional)
+you_get:
+  - A ranked list of likely causes for your case
+  - One test per cause, with what each result would mean
+  - Fixes in the order to try them
+  - A plan to measure quality before and after each change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder so your AI can open the diagnosis and search strategy files. Or paste the main file plus the one you need.
+  - Paste three to ten failed searches. For each, add what you expected and what came back. Add your model name and how you cut your documents into chunks.
+  - Run the first test it gives you, usually an exact search compared with your normal search. Tell your AI what you see.
+  - Try one fix at a time. Re-run your failed searches after each, and keep a note of which ones got better.
+  - Without example searches, ask it to help you write a small test set first. Do not tune Qdrant without one.
+  - If your AI can open web links, it can read the linked Qdrant docs. If not, it says so and uses the skill file only.
+how_it_works:
+  - title: Check the data first
+    text: It looks at how documents were cut into chunks, because bad cuts hurt results before any setting does.
+  - title: Compare exact and approximate
+    text: It asks you to run an exact search next to your normal one, to see whether Qdrant's shortcut is losing results.
+  - title: Judge the model
+    text: If exact search is also poor, it treats the embedding model as the cause and suggests how to compare other models.
+  - title: Check compression and filters
+    text: It checks whether compression or filters are hiding good matches, and suggests tests with and without each.
+  - title: Pick a search method
+    text: Only then does it pick advanced methods, such as mixing keyword and meaning search, reranking or diversity.
+  - title: Set a baseline
+    text: It sets a quality measure before any change, so a regression shows up as soon as it happens.
+output_shape: |
+  YOUR CASE: <model, chunking, Qdrant version, filters or MISSING>
+
+  FAILED SEARCHES
+  - <search> : expected <result> : got <result>
+
+  LIKELY CAUSES, RANKED
+  1. <cause> : <why it fits> : TEST: <one test> : MEANS: <what each result tells you>
+
+  FIXES, IN ORDER
+  1. <fix> : <what it costs>
+
+  QUALITY CHECK
+  - <measure, before and after, on which searches>
+
+  AVOID: <changes that backfire in your case>
+  NEXT: <first test to run>
+output_sample:
+  input:
+    - Searches that went wrong, with the results you expected
+    - What Qdrant returned for each
+    - Your embedding model and how documents are split into chunks
+    - Your collection settings (optional)
+  prerequisites:
+    - Access to run searches against your own Qdrant data, or someone who has it
+    - An AI that can open web links (optional, for the Qdrant docs)
+  output:
+    - name: Likely causes
+      contains: Ranked causes for your case, each with the reason it fits.
+    - name: Tests
+      contains: One test per cause, and what each possible result would tell you.
+    - name: Fixes in order
+      contains: What to change first, with what each change costs.
+    - name: Quality check
+      contains: A before and after measure on your own failed searches.
+    - name: Next step
+      contains: The first test to run today.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with web access
+      why: They can open the linked Qdrant docs for exact search settings.
+    - name: A short test set in a spreadsheet
+      why: A list of searches with the right answers lets you measure each fix.
+  inputs:
+    - A sample of how your documents were cut into chunks
+    - Ten real searches with the answers you want
+    - Your embedding model name and its size
+terms:
+  - term: Qdrant
+    meaning: A database that stores data so apps can search by meaning.
+  - term: Embedding model
+    meaning: The AI that turns text into numbers so the database can compare meaning.
+  - term: Recall
+    meaning: The share of the right results that your search actually finds.
+  - term: Reranking
+    meaning: A second pass that puts the best of the top results in a better order.
+  - term: Chunk
+    meaning: One piece of a longer document, stored and searched as its own item.

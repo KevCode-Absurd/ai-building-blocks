@@ -14,10 +14,10 @@ outputs:
   - {type: copy_draft}
 uses: [other-person-view-mapper, weak-position-negotiation, negotiation-call-prep-planner, disagreement-calming-line-writer]
 steps:
-  - {uses: other-person-view-mapper, note: "Their side only: what they want, why they act as they do, what they fear losing and how they would describe this deal to their boss."}
-  - {uses: weak-position-negotiation, note: "Your terms, your walk-away point, the two or three things you will not give, and what you can give freely, planned for the side with less power."}
-  - {uses: negotiation-call-prep-planner, note: "The opening, the feeling labels to use, the calibrated how and what questions, and the question that tests whether the deal is real."}
-  - {uses: disagreement-calming-line-writer, note: "Short lines for each point of dispute that lower the heat without giving ground, in the manner of Dale Carnegie and Benjamin Franklin."}
+  - {uses: other-person-view-mapper, note: "Their side only: what they want, why they act as they do, what they fear losing and how they would describe this deal to their boss. Hands their view to steps 2 and 3."}
+  - {uses: weak-position-negotiation, note: "Your terms, your walk-away point, the two or three things you will not give, and what you can give freely, planned for the side with less power. Uses the deal you describe and step 1's view of their side. Hands your terms to the call plan."}
+  - {uses: negotiation-call-prep-planner, note: "The opening, the feeling labels to use, the calibrated how and what questions, and the question that tests whether the deal is real. Uses step 1's view of their side and step 2's terms. Hands the call plan to the calming lines."}
+  - {uses: disagreement-calming-line-writer, note: "Short lines for each point of dispute that lower the heat without giving ground, in the manner of Dale Carnegie and Benjamin Franklin. Uses the call plan from step 3 and the points you expect them to dispute. Hands back lines to use on the call."}
 origin: own
 version: 1.0.0
 minds: [dale-carnegie, nelson-mandela, chris-voss, benjamin-franklin]

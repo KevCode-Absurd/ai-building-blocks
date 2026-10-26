@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It defines a data shape and checks replies.
 new_slug: structured-data-extractor
 name: Structured data extractor
-summary: Say what fields you need. Get code that pulls them from AI replies as
-  checked data, retrying on errors.
+summary: Pull names, dates and amounts out of AI replies as checked data. Get Python code that retries when a field is missing or wrong.
 job: build-software
 headline: Structured data extractor
-subhead: Code that turns an AI's free-text reply into clean, checked data your
-  program can use. You say which fields you want, such as name, date and amount,
-  and get a short Python setup with the Instructor library.
+subhead: Code that turns an AI's free-text reply into clean, checked data your program can use. You say which fields you want, such as name, date and amount, and get a short Python setup with the Instructor library.
 explain: |
   Code that turns an AI's free-text reply into clean, checked data your program can use. You say which fields you want, such as name, date and amount, and get a short Python setup with the Instructor library.
 
@@ -18,6 +15,10 @@ when:
   - You need to pull names, dates and amounts from many documents.
   - You want wrong values caught automatically before they reach your database.
   - You may change AI provider later and want the same code to work.
+not_for:
+  - "You need to pull data from one or two texts by hand: use a plain prompt in your chat AI and copy the result."
+  - "You don't work in Python: use a no-code tool that reads documents into a spreadsheet."
+  - "You want free-form text such as a summary or an email: ask your AI directly, no data shape needed."
 you_give:
   - The fields you want to extract
   - Example text to read from
@@ -30,8 +31,32 @@ you_get:
   - Example runs on your text
   - Optional streaming code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and call an AI model.
+  - Open Claude, ChatGPT or Gemini and paste this skill into the chat.
+  - List the fields you want, with a type for each, such as text, number or date.
+  - Paste a sample of the text you want to read. Say which AI provider you use.
+  - Add rules for valid values if you have any, such as an age range or a fixed list of choices.
+  - Copy the code it writes. You need Python and an API key to run it. Run the pip install line first.
+  - Test it on 10 to 20 sample documents, then load the checked results into your database or spreadsheet.
+output_sample:
+  input:
+    - The fields you want, such as name, date and amount
+    - A sample of the text to read from
+    - Your AI provider and API key
+    - Rules for valid values (optional)
+  prerequisites:
+    - An AI that can run Python code, or your own computer with Python
+    - The Instructor and Pydantic packages installed
+    - An API key for Claude, OpenAI or another AI provider
+  output:
+    - name: Installation
+      contains: The pip command for Instructor and the extra package for your AI provider.
+    - name: Response model
+      contains: A Pydantic class listing your fields, their types, and any nested, list or optional fields.
+    - name: Validation rules
+      contains: Checks on values, such as allowed ranges, fixed choices and rules that compare fields.
+    - name: Extraction code
+      contains: A short script that sends your text to the AI and returns checked data.
+    - name: Retry settings
+      contains: How many times the AI is asked again, with the error sent back, when a field fails.
+    - name: Streaming code (optional)
+      contains: Code that shows partial results or list items as the AI writes them.

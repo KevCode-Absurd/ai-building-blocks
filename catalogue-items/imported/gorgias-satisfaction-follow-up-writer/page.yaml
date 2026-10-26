@@ -2,17 +2,25 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-satisfaction-follow-up-writer
 name: Gorgias satisfaction follow-up writer
-summary: Choose resolved tickets. Get personal follow-up emails to review before sending through Gmail.
+summary: Write personal CSAT follow-up emails for your recently closed Gorgias tickets. Review every draft, then send only the ones you approve in Gmail.
 job: help-customers
 headline: Gorgias satisfaction follow-up writer
 subhead: Connect Gorgias and Gmail and choose recently closed tickets. It reads how each issue was solved and writes a short rating request. You get personal follow-up emails to review, with sending available after approval.
 when:
-  - You use this tool for customer support and need help with this task.
+  - A batch of support tickets was closed in the last day or two and you want to ask how it went.
+  - You want each follow-up to name the customer's real issue, not a generic survey line.
+  - You want to review every email before anything goes out.
+not_for:
+  - "You need to reply to a customer whose issue is still open: write a manual reply instead, since this only covers resolved tickets."
+  - "You want to contact people who have not bought yet or who are not support contacts: use your normal sales or marketing emails."
+  - "You want survey results gathered and scored for you: this only sends the request, so read the replies yourself or in your help desk."
 you_give:
   - Recently closed Gorgias tickets with customer and resolution details.
   - Gmail access only if you want approved emails sent.
 you_get:
-  - Show all drafts first. Send only the emails you approve and report the result for each.
+  - A short, personal email draft for each closed ticket.
+  - A table where you review all drafts before sending.
+  - A send result for each email you approved.
 how_it_works:
   - title: Read closed tickets
     text: Find recently resolved tickets and collect the customer, issue, and resolution.
@@ -25,8 +33,26 @@ works_best_with:
     - name: Gorgias and Gmail
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias satisfaction follow-up writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Recently closed Gorgias tickets with customer and resolution details.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run commands in a terminal, and install the Composio CLI first.
+  - Connect your Gorgias account. Connect Gmail too if you want your AI to send the emails.
+  - Ask for the Gorgias satisfaction follow-up writer by name, or ask your AI to read SKILL.md and follow it.
+  - Ask for tickets closed in the last 24 to 48 hours. Your AI reads each ticket for the customer, issue and fix.
+  - Read the table of drafts. Edit any email, then choose to send all or only some.
+  - Check the delivery report. Nothing is sent until you approve.
+output_sample:
+  input:
+    - Your recently closed Gorgias tickets (the last 24 to 48 hours)
+    - Your team name for the email sign-off (optional)
+  prerequisites:
+    - An AI that can run commands with the Composio CLI
+    - Gorgias connected to Composio
+    - Gmail connected to Composio, only if you want to send
+  output:
+    - name: CSAT Follow-Ups Ready
+      contains: A table of every draft with the customer, ticket number, subject and the first line of the email.
+    - name: Follow-up email drafts
+      contains: A short email per ticket that thanks the customer, names their issue, asks for a 1 to 5 rating and offers a reopen.
+    - name: Send choice
+      contains: A prompt to send all drafts, send only some, or edit first.
+    - name: Delivery report
+      contains: The send result for each email you approved.

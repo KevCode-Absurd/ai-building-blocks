@@ -1,6 +1,6 @@
 slug: google-ads-operator-agent-builder-prompt
 name: Google Ads Operator Agent coding prompt
-summary: Get a coding brief for a Google Ads agent with scoped access, review steps, cost limits and checks.
+summary: "Get a coding brief that plans a read-only Google Ads agent for your project, with a module map, safety rules and tests. No account changes."
 category: general
 type: prompt
 role: make

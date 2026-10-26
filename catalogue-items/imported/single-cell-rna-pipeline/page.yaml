@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows the standard steps and checks each before moving on.
 new_slug: single-cell-rna-pipeline
 name: Single-cell RNA analysis pipeline
-summary: Give it single-cell counts. Get cleaned data, cell clusters, marker
-  genes and plots from start to finish.
+summary: Run a single-cell RNA analysis pipeline in Scanpy. Give it raw counts. You get cleaned data, cell clusters, marker genes and plots.
 job: research-topics
 headline: Single-cell RNA analysis pipeline
-subhead: Cleaned single-cell data, cell clusters, marker genes and plots, from
-  raw counts to a finished analysis. You run one chain instead of stitching
-  steps together.
+subhead: Cleaned single-cell data, cell clusters, marker genes and plots, from raw counts to a finished analysis. You run one chain instead of stitching steps together.
 explain: |
   Cleaned single-cell data, cell clusters, marker genes and plots, from raw counts to a finished analysis. You run one chain instead of stitching steps together.
 
@@ -18,6 +15,10 @@ when:
   - You need a standard QC and normalisation run you can repeat.
   - You want UMAP plots to share with your lab.
   - You are preparing data for sample-level differential expression.
+not_for:
+  - "You have bulk RNA-seq data: use a bulk RNA-seq tool, since this pipeline expects one row per cell."
+  - "Your data has no raw counts, only scaled values: get the raw counts first, or ask whoever made the file."
+  - "You need a complex model to merge many batches: use a scvi-tools or Seurat workflow instead."
 you_give:
   - Single-cell raw counts in h5ad or similar
   - Python 3.12 or newer with Scanpy
@@ -29,8 +30,29 @@ you_get:
   - Marker gene lists
   - Data prepared for condition comparison
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run code and has Python 3.12 or newer with Scanpy installed.
+  - Paste this skill into the chat, or upload its folder.
+  - Add your counts file. Say which samples and conditions you have, if you know them.
+  - Ask your AI to run the whole pipeline in one go, or one step at a time so you can check each.
+  - Open the marker gene tables. Choose cell type names and ask your AI to add them to the data.
+  - If your data is a Seurat or SingleCellExperiment file, ask your AI to convert it to h5ad first.
+output_sample:
+  input:
+    - Your single-cell raw counts as an h5ad file, a 10X folder or a CSV
+    - Sample or condition labels (optional)
+    - Species and tissue notes (optional)
+  prerequisites:
+    - An AI that can run code
+    - Python 3.12 or newer with Scanpy installed
+    - R installed, only if your data is a Seurat or SingleCellExperiment file that needs converting
+  output:
+    - name: Clustered object
+      contains: Your cleaned and normalised data with cell clusters, saved as an h5ad file you can reopen.
+    - name: Figures
+      contains: Plots from the run, such as quality control charts and UMAP maps coloured by cluster.
+    - name: results/markers/*.csv
+      contains: One marker gene table per cluster, ranked as an exploratory first look.
+    - name: Annotated object
+      contains: Your data with cell type names added, once you write a cluster-to-label mapping file.
+    - name: Pseudobulk data
+      contains: Counts summed per sample, ready for comparing conditions.

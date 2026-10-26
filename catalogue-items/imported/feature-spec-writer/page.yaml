@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It turns a loose idea into a structured spec.
 new_slug: feature-spec-writer
 name: Feature spec writer
-summary: Describe a feature idea. Get a spec with goals, non-goals, success
-  measures and acceptance checks.
+summary: Turn a feature idea into a feature spec. Get goals, non-goals, ranked requirements, success measures and acceptance checks engineers can build from.
 job: build-product
 headline: Feature spec writer
-subhead: A product requirements document for one feature, with the problem,
-  goals, non-goals, success measures and checks for each requirement. It is
-  written so engineers can build from it.
+subhead: A product requirements document for one feature, with the problem, goals, non-goals, success measures and checks for each requirement. It is written so engineers can build from it.
 explain: |
   A product requirements document for one feature, with the problem, goals, non-goals, success measures and checks for each requirement. It is written so engineers can build from it.
 
   You can start with a feature name, a problem, a customer request or a vague idea. The skill asks the most important questions first: who has the problem, how you will know it worked, and what limits apply. If your tracker or knowledge base is connected, it pulls related tickets and research. The spec lists user stories, requirements ranked by priority, acceptance criteria, edge cases, open questions and a rollout idea. It marks what is out of scope so the project does not grow.
 when:
   - Sales keeps asking for single sign-on and you need to define it.
-  - An idea exists but nothing is written down yet.
+  - You have an idea but nothing is written down yet.
   - Engineering asks for acceptance criteria before starting.
-  - You want to separate must-haves from nice-to-haves.
+  - You want to split must-haves from nice-to-haves.
+not_for:
+  - "You have a quick one-line feature request: write a short ticket or a one-paragraph brief instead."
+  - "You need to fix or edit a spec that already exists: edit the document by hand, or ask your AI for specific changes."
+  - "You want a plan for a whole product, not one feature: write a product strategy or roadmap first, then spec each feature."
 you_give:
   - A feature name, problem or request
   - Target users
@@ -31,7 +32,35 @@ you_get:
   - Success metrics
   - A list of open questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Type your feature idea, problem or customer request.
+  - Answer the questions your AI asks. It starts with who has the problem and how you will measure success.
+  - Read the spec. Check that the goals, non-goals and must-haves match what you want.
+  - Ask for changes to any section, or ask for a ticket breakdown or a design brief.
+  - Connected tools are optional. If your AI is linked to a tracker or notes app, it can pull related tickets and research. If not, it uses what you type.
+output_sample:
+  input:
+    - A feature name, a problem, a customer request or a vague idea
+    - Who the feature is for
+    - How you will know it worked
+    - Limits such as deadlines or rules (optional)
+    - Links to related tickets or research (optional)
+  prerequisites:
+    - A connected project tracker, knowledge base or design tool is optional. Without them, your AI works from what you type.
+  output:
+    - name: Problem Statement
+      contains: The user problem, who has it, and the cost of not solving it, in two or three sentences.
+    - name: Goals
+      contains: Three to five measurable outcomes, each answering how you will know it worked.
+    - name: Non-Goals
+      contains: Three to five things left out of this version, each with a short reason.
+    - name: User Stories
+      contains: Short stories in the form who, what and why, grouped by type of user and ordered by priority.
+    - name: Requirements
+      contains: Must-have, nice-to-have and future items, each with acceptance criteria and notes on limits or dependencies.
+    - name: Success Metrics
+      contains: Early signs and longer-term results, with targets, how to measure them and when to check.
+    - name: Open Questions
+      contains: Unsettled questions, each tagged with who should answer and whether it blocks the start.
+    - name: Timeline Considerations
+      contains: Hard deadlines, dependencies on other teams, and a suggested split into phases.

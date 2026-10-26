@@ -1,6 +1,6 @@
 new_slug: price-a-course-or-ebook-and-write-its-launch-emails
 name: Price a course or ebook and write its launch emails
-summary: Give it your course or ebook. Get a price, honest discount wording and the launch email sequence.
+summary: Price your course or ebook, word the launch discount honestly, and get a launch email sequence with a real end date, built from your product facts.
 job: set-prices
 thinking: high
 thinking_why: It sets a price and writes emails that make an offer to real people. Give it your strongest model.
@@ -14,9 +14,14 @@ when:
   - Your course or ebook is finished and you have not decided what to charge.
   - You priced it once, nobody bought, and you do not know whether the price or the launch was wrong.
   - You want a launch discount that does not look like a trick.
+not_for:
+  - "You only need a price: use the Digital product pricer on its own, without the emails."
+  - "Your course or ebook is not finished, or it is a free lead magnet: finish it first, or just write a plain sign-up page."
+  - "You want ideas for bundles, bonuses or gifts around the product: use the Offer bonus planner."
 you_give:
   - What you made, who it is for and what it does for them
-  - What it took to make and any comparable products you know of
+  - Your brand brain from the Brand profile builder (needed to run the workflow)
+  - What it took to make and any similar products you know of
   - Your list size and how often you email them
   - Customer words from pilots or early readers (optional)
 you_get:
@@ -29,6 +34,26 @@ how_to_use:
   - Paste what you made, who it is for and your list size. It sets the price and the discount wording.
   - Read the email sequence. Check every claim against what the product really does.
   - Load the emails into your email tool and send the first one when you are ready.
+output_sample:
+  input:
+    - "Your product's facts: what it is, who it is for, what it does for them, and how it is used"
+    - Your brand brain, made by the Brand profile builder (needed to run the workflow)
+    - Customer words from reviews, tickets, surveys or calls, with source and date (optional)
+    - Your list size and how often you email them
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain folder from the Brand profile builder
+  output:
+    - name: "Step 1: Price"
+      contains: The price, its labels, the reason for it, and the launch discount with how long it lasts.
+    - name: "Step 2: Digits"
+      contains: Whether the price should be round, just-below or exact, with the reason for the pick.
+    - name: "Step 3: Discount wording"
+      contains: The discount as percent or amount, how the sale price shows, the banner line and a real end date.
+    - name: "Step 4: Launch emails"
+      contains: The trigger, the timing, and each email with its offer, reason why, proof and ask.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Set the price
     text: Sets the price and the launch discount from what the product does for the buyer and what similar products cost.

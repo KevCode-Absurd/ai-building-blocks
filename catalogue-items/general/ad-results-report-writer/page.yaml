@@ -14,15 +14,24 @@ explain: |
   This skill writes only what someone needs in order to decide. It first recalculates each number from the raw totals: cost per sale, return on spend, click rate. Then it keeps three things apart: what changed, the explanation the data supports, and what to do about it. The answer comes first, in one line, so a busy reader can act on it alone. It never says an action was done unless you show a record of it, marks any budget or pause action as needing your approval, and never invents wins to fill the page.
 
 when:
-  - You need a monthly or weekly ad report for a boss, client or co-founder, and it has to fit on one page.
-  - Your current report is a wall of numbers and nobody acts on it.
-  - You ran a diagnosis and want the findings turned into a short brief with owners.
+  - It's the first Monday of the month, your co-founder wants the ad numbers on one page, and the last report was a chart nobody answered.
+  - A client asks "so what should we do?" and your export only says what happened.
+  - You ran a diagnosis on one ad and now need the account-level page that puts its findings next to the totals.
+  - You spent more this month and want to know, with the sums done right, whether it paid off.
+
+not_for:
+  - Your sales just fell and you need to know why. Use the ad sales drop analyst first, then bring its findings here.
+  - You need to decide whether to keep, fix or replace one ad. Use the campaign keep-or-change checker.
+  - You have only one period of totals and no earlier one. It still writes the page, but there is no change column, so it can only describe.
+  - You want a forecast or a budget plan. This reports what happened and proposes three actions; it doesn't predict.
 
 you_give:
-  - This period's totals (spend, impressions, clicks, purchases, revenue) with dates and currency
-  - The same totals for the period before
+  - This period's totals from your ad platform export (Meta Ads Manager or Google Ads: spend, impressions, clicks, purchases, revenue), with the dates, the currency and what each column counts
+  - The same columns for the period before, of the same length, so the two compare fairly
+  - Your own orders and revenue for both periods, from your store (optional, but it is what makes the overall return trustworthy)
   - Your targets for cost per sale or return (optional)
-  - Findings from a diagnosis, and a log of what was changed (optional)
+  - Findings from a diagnosis, and a log of what was changed last period (optional)
+  - Who reads the report and where, such as "a co-founder on a phone" (optional)
 you_get:
   - A coverage line saying what the report includes and what's missing
   - The answer in one line, at the top
@@ -35,7 +44,8 @@ how_to_use:
   - Paste the totals for this period and the one before, in the same columns.
   - Say the dates, the currency and the attribution window if you know it.
   - Add your targets if you want each number judged against them.
-  - Fill in the owner of each action before you send the report.
+  - Recalculate one number yourself before you trust it: total spend divided by total purchases is your cost per sale. Check one share or percentage the same way.
+  - Fill in the owner of each action, and make each "done when" something a person can look at, before you send the report. Nothing in it has been done until you have a record that it was.
 
 how_it_works:
   - title: Calculates before writing
@@ -199,3 +209,26 @@ terms:
     meaning: How long after someone clicks or sees an ad a sale still gets credited to it, for example 7 days.
   - term: Platform-reported revenue
     meaning: The sales the ad platform says its ads caused. Different platforms can claim the same sale.
+
+output_sample:
+  input:
+    - "This period's totals from your ad platform export, with dates and currency"
+    - "The same columns for the period before, of the same length"
+    - "Your store's orders and revenue for both periods (optional)"
+    - "Your targets for cost per sale or return (optional)"
+    - "Who reads the report and where (optional)"
+  output:
+    - name: "THE ANSWER"
+      contains: "One line someone can act on if they read nothing else."
+    - name: "PERIOD AND COVERAGE"
+      contains: "The dates, currency, attribution window, and anything you did not give."
+    - name: "NUMBERS"
+      contains: "A table of each metric this period and last, the change and your target."
+    - name: "MAIN CHANGES"
+      contains: "Two to four changes, each with its numbers."
+    - name: "ONE UNRESOLVED WORRY"
+      contains: "The one thing still unexplained, marked as unconfirmed."
+    - name: "THREE NEXT ACTIONS"
+      contains: "Three actions, each with an owner and how you check it is done."
+    - name: "CHECKS MISSED"
+      contains: "One line for each check it could not run, or none."

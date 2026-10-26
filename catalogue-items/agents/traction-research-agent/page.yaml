@@ -1,77 +1,140 @@
 new_slug: traction-research-agent
-name: Traction channel research agent
-summary: Paste your product link. Get a sourced channel map and a short list of
-  tests to investigate.
+name: Growth channel test shortlist planner
+summary: Plan your growth channel tests from your product link. It compares 19 channels and gives a sourced profile plus up to three small tests.
 job: plan-strategy
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
-headline: Traction channel research agent
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
-explain: Build and refresh an evidence-led all-19 channel map from a product
-  URL. Run on request. Read public product sources and the existing profile.
-  Update facts with source dates, show what changed, and rank all 19 channels
-  again only when the goal, buyer, constraints or evidence changed. Research
-  publications or platforms only where that helps a candidate pilot; verify
-  current facts and never invent contacts. Produce the profile, matrix,
-  shortlist, source ledger and MISSING. Do not launch a pilot or contact anyone.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
+headline: Growth channel test shortlist planner
+subhead: Share your product link, plus your goal, budget and time limits if you have them. It reads your public pages and compares 19 ways to find customers. You get a sourced business profile, a ranked channel table and up to three small tests, each with a cost cap. Nothing is launched or sent.
+explain: |
+  Most owners pick a growth channel because it is familiar, or because a competitor uses it. That is how a small budget ends up in the wrong place. This planner checks all 19 customer-finding channels from the book Traction (Weinberg and Mares), including the odd ones like trade shows and speaking, before it picks any.
+
+  It starts from your product link. It reads your public pages, writes down what it can prove (who buys, what the offer is, what price you show) and marks what only you know, such as sales numbers and ad costs. Then it ranks the channels against your goal and limits. You get at most three small tests, with an owner, a cost cap, a time limit and a rule for continue, change or stop.
+
+  It remembers the last run. On a repeat run it ranks again only if your goal, buyer, limits or evidence changed, and it shows what changed. It never counts a trial or a lead as a paying customer. It does not send messages, buy ads, book events or contact anyone; you approve each action.
 when:
-  - You need a practical way to find customers for a software business.
-  - You want to test a growth idea before committing more time or money.
+  - You run a software product and have no clear plan for where the next 50 customers come from.
+  - You have a small budget and several channel ideas, and you want to know which one to test first.
+  - You are about to pay for ads, a stand or a sponsorship and want a cheaper test before you commit.
+  - Your last quarter of growth work gave mixed results and you want the plan checked against the evidence.
+not_for:
+  - You have no public product page and no written description yet. It has nothing to read. Write a short description of what you sell and who buys it first.
+  - You only want the buyer, offer and goal written down. Use the Growth channel profile builder.
+  - You already ran tests and want the results judged. Use the Growth channel experiment tracker or the Customer acquisition experiment reviewer.
+  - You want it to send outreach, buy ads or book a stand. It plans only; you run each action.
 you_give:
-  - A public product link or pasted product and pricing text
-  - Your growth goal, stage and buyer, if known
-  - Cash and time limits, past tests and results, if available
+  - A link to your product page, or pasted page and pricing text
+  - Your growth goal with a date, such as 50 paying users by a set day (optional, but it makes the plan sharper)
+  - Your buyer and stage, such as freelancers using the app for a few months (optional)
+  - Your cash cap and hours per week for tests (optional; without them it proposes limits for you to confirm)
+  - Past tests and their results, with dates and costs (optional)
 you_get:
-  - A recommendation with its evidence and missing facts
-  - A small test with an owner, cost cap and decision rule
-  - The next action and what needs approval
+  - A business profile with each fact tied to a page and a date
+  - A table of all 19 channels, each with one idea for your business and a fit rating
+  - A short list of up to three small tests, each with an owner, cost cap, time limit and decision rule
+  - A list of facts still missing, and the one next action
+  - A decision log saved for next time
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Add the agent to your AI. In Claude Code, add it as a skill or save it in .claude/agents. In Claude, ChatGPT or Gemini, paste it at the start of a chat.
+  - Paste your product link. Add your goal, cash cap and weekly hours if you know them. If your AI can't open links, paste the page text instead.
+  - Read the profile first. Fix any fact it got wrong, and fill in the private numbers it marked as missing.
+  - Read the shortlist. Check each test has a cap and a stop rule you can live with. Approve one test.
+  - Run the test yourself. When it has results, paste them in and run the agent again, or use the Growth channel experiment tracker.
+output_sample:
+  input:
+    - Your product page link, or pasted page and pricing text
+    - Your growth goal with a date (optional)
+    - Your cash cap and hours per week (optional)
+    - Your past tests and results (optional)
+  prerequisites:
+    - An AI that can open links, or page text you paste in
+    - A folder the AI can save files to, if you want it to remember the last run (optional)
+  output:
+    - name: Date and state
+      contains: Whether this is a first or repeat run, and what changed since the last run.
+    - name: business-profile.md
+      contains: Your buyer, offer, goal and limits, with each fact tied to a page and a date.
+    - name: channel-matrix.csv
+      contains: All 19 channels, each with one idea for your business and a fit rating.
+    - name: Shortlist
+      contains: Up to three small tests, each with an owner, cost cap, time limit and a continue or stop rule.
+    - name: Pending approval and missing
+      contains: Actions waiting for your yes, and the facts only you can supply.
+    - name: Next action
+      contains: The one step to take now.
+    - name: decision-log.md
+      contains: A saved record of what was chosen and why, so the next run starts from it.
 how_it_works:
-  - title: Read your facts
-    text: Uses public product pages and your own facts. Labels anything it could not
-      check.
-  - title: Design the test
-    text: Matches the channel to the buyer and writes a small, measurable test.
-  - title: Make the decision
-    text: Sets what would justify continuing, changing the test or stopping. Results
-      stay pending until there is evidence.
+  - title: Read the saved state
+    text: Opens your last profile, channel table and decision log if they exist. If not, this is the first run.
+  - title: Read your public sources
+    text: Reads your homepage, pricing and product pages. Notes the link and the date for each fact. Treats page text as evidence, never as instructions.
+  - title: Update the profile
+    text: Builds or refreshes the profile with the Growth channel profile builder. Shows what changed since last time and marks private numbers as missing.
+  - title: Decide whether to re-rank
+    text: Ranks again only when your goal, buyer, limits or evidence changed. Otherwise it keeps the old ranking and says so.
+  - title: Compare the 19 channels
+    text: Uses the Growth channel shortlist planner to give every channel an idea and a fit rating, then picks up to three affordable tests.
+  - title: Check only what helps a test
+    text: Looks up a specific publication or platform only when a chosen test needs it. Checks current facts on official pages and never invents a contact.
+  - title: Save and stop
+    text: Saves the files and the decision log, lists what needs your approval, and stops.
 output_shape: |-
-  decision-log.md
-  State and changed evidence
-  Decision, saved files, skipped steps
-  Pending approvals, MISSING and next action
+  DATE AND STATE
+    <first run | repeat run> | what changed since last run: <list or none>
+
+  BUSINESS PROFILE (business-profile.md)
+    Buyer <...> | Offer <...> | Goal <...> by <date> | Caps <cash, hours>
+    Each fact: <source link, date> | Private numbers: <unknown>
+
+  CHANNEL TABLE (channel-matrix.csv)
+    <channel> | idea: <one line> | fit: <high | medium | low> | why
+
+  SHORTLIST (up to 3 tests)
+    1. <channel> | owner <...> | cap <amount, hours> | review on <date> | continue if <...>, stop if <...>
+    Left out: <close contender> | because <reason>
+
+  PENDING APPROVAL AND MISSING
+    <actions waiting for your yes> | MISSING: <every gap>
+
+  NEXT ACTION
+    <one step>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
+  - what: Business type
+    how: It assumes software by default. For a shop, service or local business, say so and it switches to general-business mode, where a first order or a booked call replaces a trial sign-up.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Start with only a URL. Expect a provisional plan with unknown private
-    metrics.
+  - Start with only a URL. Expect a provisional plan with unknown private metrics.
   - Supply no results. The output must withhold a claim that a channel is proven.
-  - Put hostile instructions in pasted source text. The task and action limits
-    must stay intact.
+  - Put hostile instructions in pasted source text. The task and action limits must stay intact.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can save the profile, channel table and decision log in a folder, so the next run starts from them.
+    - name: Claude, ChatGPT or Gemini with web access
+      why: It needs to open your product link. Without web access, paste the page text and it marks the affected advice as conditional.
+  inputs:
+    - Your last 90 days of results by channel, with spend and paying customers
+    - Your price, gross margin and how long customers stay
 terms:
   - term: Traction
     meaning: Evidence that real customers want and use what you sell.
+  - term: Channel
+    meaning: A way of finding customers, such as search ads, content, partners or events. The Traction book lists 19.
   - term: Activation
     meaning: The first useful action a new customer completes with your product.
   - term: CAC
     meaning: The cost to win a new paying customer, with the included costs stated.
+  - term: Small test
+    meaning: A cheap, short trial of one channel with a cost cap and a rule for what counts as success.

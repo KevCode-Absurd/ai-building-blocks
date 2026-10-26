@@ -16,12 +16,12 @@ outputs:
   - {type: plan}
 uses: [subscription-offer-designer, subscription-payback-checker, subscription-cancel-flow-builder, billing-reminder-and-confirmation-writer, subscription-churn-audit, subscriber-retention-calendar]
 steps:
-  - {uses: subscription-offer-designer, note: "Designs the subscription offer from your products and order data."}
-  - {uses: subscription-payback-checker, note: "Tests the designed offer against cost and payback before launch."}
-  - {uses: subscription-cancel-flow-builder, note: "Builds the cancel flow around the offer, with save offers that keep the payback true."}
-  - {uses: billing-reminder-and-confirmation-writer, note: "Writes the billing and reminder emails to sit beside the cancel flow."}
-  - {uses: subscription-churn-audit, note: "Finds where in the subscriber life people leave."}
-  - {uses: subscriber-retention-calendar, note: "Schedules the touches that land before each of those lapse points."}
+  - {uses: subscription-offer-designer, note: "Designs the subscription offer from your products and order data. Hands the offer to steps 2 and 3."}
+  - {uses: subscription-payback-checker, note: "Tests the designed offer against cost and payback before launch. Hands step 3 the most discount a save offer can give and still pay back."}
+  - {uses: subscription-cancel-flow-builder, note: "Builds the cancel flow from your own cancel reasons and the offer from step 1, with save offers kept inside step 2's payback limit. Hands the cancel flow to step 4."}
+  - {uses: billing-reminder-and-confirmation-writer, note: "Writes the billing and reminder emails to sit beside the cancel flow. Hands the emails to step 5, which checks what each send did to cancels."}
+  - {uses: subscription-churn-audit, note: "Uses your own subscriber and cancel export after about 60 days live, with step 4's emails to see what each send did. Hands the lapse points to step 6."}
+  - {uses: subscriber-retention-calendar, note: "Schedules the touches that land before each lapse point from step 5, using your churn by month."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/launch-a-subscription-and-keep-your-subscribers/skeleton.yaml

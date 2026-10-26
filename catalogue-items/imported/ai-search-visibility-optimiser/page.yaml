@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set rules and picks edits per page.
 new_slug: ai-search-visibility-optimiser
 name: AI search visibility optimiser
-summary: Give it a page or topic. Get edits that help ChatGPT, Perplexity and
-  Google AI answers cite you.
+summary: Check how ChatGPT, Perplexity and Google AI answers treat your page, then get edits so they cite you. Built for AI search visibility.
 job: get-found-in-search
 headline: AI search visibility optimiser
-subhead: Edits to a page or topic that make AI search tools more likely to pull
-  it into answers and name you as the source. The target is Google AI Overviews,
-  ChatGPT, Perplexity and similar tools.
+subhead: Edits to a page or topic that make AI search tools more likely to pull it into answers and name you as the source. The target is Google AI Overviews, ChatGPT, Perplexity and similar tools.
 explain: |
   Edits to a page or topic that make AI search tools more likely to pull it into answers and name you as the source. The target is Google AI Overviews, ChatGPT, Perplexity and similar tools.
 
@@ -18,6 +15,10 @@ when:
   - AI describes your price or features wrongly.
   - You want existing blog posts rewritten so an answer can be lifted from them.
   - You need a way to track AI mentions over time.
+not_for:
+  - "You need a technical or on-page SEO audit for Google search: use seo-audit instead, as it is not a sibling item on this site."
+  - "You only need schema markup added to a page: use a schema tool or a developer, since this skill only suggests markup."
+  - "The page does not affect sales or leads: skip it, because the edits take time and will not pay back."
 you_give:
   - A page address or a topic
   - Your key customer questions
@@ -29,8 +30,32 @@ you_get:
   - Schema markup suggestions
   - A tracking list of prompts to monitor
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can browse the web.
+  - Open your AI. Use one that can browse the web, such as ChatGPT, Claude or Gemini.
+  - Paste the skill text from this page into the chat.
+  - Add your page address or topic, and your key customer questions.
+  - Add your competitors and brand background if you have them.
+  - Read the audit first. Then apply the page edits one at a time.
+  - Re-check the same questions in a few weeks to see what changed.
+output_sample:
+  input:
+    - A page address or a topic
+    - Your key customer questions
+    - Your competitors (optional)
+    - Your product or brand background (optional)
+  prerequisites:
+    - An AI that can browse the web, so it can check live AI answers
+  output:
+    - name: AI visibility audit
+      contains: What AI tools answer today for your key questions, and which sites they cite.
+    - name: Citation patterns
+      contains: Who gets named in those answers and what kind of content they use.
+    - name: Extractability check
+      contains: A pass or fail list showing if answers can be lifted cleanly from your page.
+    - name: AI bot access check
+      contains: Whether AI crawlers can reach your page or are blocked.
+    - name: Page edits
+      contains: A numbered list of changes to structure, sources and wording so your content is easy to quote.
+    - name: Schema markup
+      contains: Suggested structured data to add to your page.
+    - name: Monitoring list
+      contains: The questions to re-check over time to see if AI mentions you more.

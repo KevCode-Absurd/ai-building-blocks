@@ -1,6 +1,6 @@
 new_slug: taster-event-planner
 name: "Taster event planner"
-summary: "Give it your product versions and buyer. Get a one-day tasting plan, taster card and decision rule."
+summary: "Plan a one-day product tasting event for your food or drink. Get a cost line, a taster card and a pass rule set before the day."
 job: find-products
 thinking: medium
 thinking_why: "It builds a plan, a card and a rule from a few facts. A mid-size model does this well, and you check the costs and local rules yourself."
@@ -17,6 +17,10 @@ when:
   - You have several versions of a food, drink or similar product and need to know which to launch.
   - You want real buyer reactions and also footage to use in ads and content.
   - Online comments ask for a product and you want to check demand before a large order.
+not_for:
+  - "You can't sample the product, like software or large items: use a short buyer survey or customer calls instead."
+  - "You have no budget for an event: ask your own team to taste first, but treat their votes as a first filter only."
+  - "You want to compare what people say with what they buy: use the Say-do gap checker."
 
 you_give:
   - The versions to test and what each one is
@@ -35,6 +39,28 @@ how_to_use:
   - Read the cost first. If it is too high, ask for the small version that uses your own team.
   - Check the decision rule and change the numbers to what you would act on. Do it before the day.
   - Print the taster cards, collect the permits and release forms, and run the event. Bring the cards back to count.
+output_sample:
+  input:
+    - The versions you want to test and what each one is
+    - Who should taste them, in a line or two
+    - Your budget and your city
+    - How you will film, and who films (optional)
+    - Your brand brain, if you have one (optional)
+  output:
+    - name: COST
+      contains: A line for venue, permits, product, staff, filming, insurance and clean-up, with a total.
+    - name: ONE-DAY PLAN
+      contains: What to do before the day, the setup, the screening question, the sampling script and an hour-by-hour timeline.
+    - name: SHOT LIST
+      contains: Each shot with when to film it, who films it, and whether it needs consent.
+    - name: TASTER CARD
+      contains: A like score, a would-you-buy answer, the price they expect, and their favourite version.
+    - name: DECISION RULE
+      contains: The pass rule set before the event, plus what to do on a tie or a fail, and who counts.
+    - name: SAFETY AND LEGAL
+      contains: Food safety, allergens, permits and filming consent, with a note to check local rules.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or the word none.
 
 how_it_works:
   - title: Costs the day

@@ -1,15 +1,13 @@
 slug: cash-pool-interest-allocator
 name: Cash pool interest allocator
-summary: An entity interest schedule with a pool residual
+summary: "Work out cash pool interest for one period: what depositors earn, what borrowers pay and what the pool center keeps. Gaps are flagged."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,12 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - bank-fee-reconciliation-checker
+  - reconcile-cash-pool-interest-and-fees
 origin: own
 version: 1.0.0
 added: 2026-10-22

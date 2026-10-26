@@ -1,6 +1,6 @@
 new_slug: press-release-memo
 name: "Write the press release and six-page memo before you build"
-summary: "Paste your idea. Get a future press release, the hard questions, a six-page memo and a check of that memo."
+summary: "Test your product idea on paper before you build. Get a future press release, hard questions, a six-page memo and a score for that memo."
 job: build-product
 thinking: high
 thinking_why: "It tests a need, writes for a customer and builds a long argument. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You have an idea for a product or project and want to know if it holds up before you spend on it.
   - Your team debates features but cannot say why a customer would care.
   - You need a decision from others and want them to read the same facts before they talk.
+not_for:
+  - "You already have live customers and want to learn from their data: review your reviews and sales numbers first, or ask a person who knows the account."
+  - "You want the money side checked: use the Bad-year break-even tester after this, not this workflow."
+  - "You need a short sales page or ad for a product that already exists: use the Buyer brief writer or the Ad headline writer."
 
 you_give:
   - Your idea in a sentence, and who you think it is for
@@ -37,6 +41,28 @@ how_to_use:
   - Paste your idea and who it is for. It works step by step and saves each result.
   - It stops after the memo draft. Share it with two or three colleagues, set it aside for two days, then edit it.
   - Bring the edited memo back and say "carry on from step 5".
+output_sample:
+  input:
+    - Your idea in one sentence, and who it is for
+    - Customer reviews, emails or call notes (optional)
+    - Your price and the numbers you can back (optional)
+    - Your memo, after you share it and edit it (for step 5)
+  prerequisites:
+    - An AI chat that can hold a long task, such as Claude, ChatGPT or Gemini
+    - Two or three colleagues to read the memo draft, and two days before the final edit
+  output:
+    - name: Customer need
+      contains: The customer, the need written as a result, a ten-year test and the skills gap.
+    - name: Future press release
+      contains: One page for the customer, written as if the product launched today.
+    - name: Hard questions and answers
+      contains: Questions a sceptical customer and your team would ask, each answer graded known, guess or gap.
+    - name: Six-page memo
+      contains: The ask on page one, then the case in full sentences, with a writing schedule.
+    - name: Memo check
+      contains: A score out of 100, the one-sentence ask read cold, and the three fixes that matter most.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 
 how_it_works:
   - title: Find the customer need that will last

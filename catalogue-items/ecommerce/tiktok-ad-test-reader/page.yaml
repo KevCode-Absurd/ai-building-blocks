@@ -1,6 +1,6 @@
 new_slug: tiktok-ad-test-reader
 name: "TikTok ad test reader"
-summary: "Paste TikTok test numbers. Get keep, fix or kill for each ad, and a score out of 100."
+summary: "Paste your TikTok ad test numbers. Get a keep, fix or kill call for each ad, the likely cause, and a score out of 100 for each ad and the test."
 job: read-ad-results
 thinking: low
 thinking_why: "It compares numbers to set lines and applies fixed rules, so a fast model works."
@@ -17,6 +17,10 @@ when:
   - Your TikTok test ads have run for a day or three and you don't know which to cut.
   - An ad has views but no sales, and you can't tell if the hook, audience or page is the cause.
   - You want to plan your next batch of creative from what this one showed.
+not_for:
+  - "You have no TikTok data yet and need a test layout: use the TikTok starter campaign builder."
+  - "You want to pick organic posts that won on their own to boost: use the TikTok Spark ad picker."
+  - "Your ads run on Meta or Google: the cost lines here are TikTok numbers, so ask a media buyer or use the Campaign keep-or-change checker."
 
 you_give:
   - "Per ad: spend, impressions, CTR, watch time, CPM, CPC, cost per add to cart and cost per purchase"
@@ -34,6 +38,27 @@ how_to_use:
   - Paste each ad's numbers and say how long it has run. Wait for $50 of spend or 1,000 views.
   - Add your break-even cost per sale so it can reset the cost lines to your store.
   - "Do what it says after day 3: cut the bottom half, move the budget and launch the next variations."
+output_sample:
+  input:
+    - "Each ad's numbers: spend, impressions, CTR, watch time, CPM, CPC, cost per add to cart and cost per purchase"
+    - How long each ad has run
+    - The audience each ad group used
+    - Your break-even cost per sale (optional)
+  prerequisites:
+    - A TikTok Ads Manager report with ad-level numbers
+  output:
+    - name: Ad block
+      contains: "One block per ad with each line marked pass or fail, the cause, and the call: keep, fix hook, fix audience, kill or too early."
+    - name: Score per ad
+      contains: A score out of 100, made of creative out of 60 and audience out of 40, with any lines not yet measured.
+    - name: Test score
+      contains: The average score of all ads in the test.
+    - name: After day 3
+      contains: Which ads to kill, which ads get the budget, and the new variations to make.
+    - name: Retest on warm
+      contains: Ads that failed cold but may win with people who already know you.
+    - name: Missing
+      contains: Anything you did not give, such as break-even, day 3 numbers or audience.
 
 how_it_works:
   - title: Checks the data is enough

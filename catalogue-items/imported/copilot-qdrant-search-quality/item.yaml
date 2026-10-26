@@ -1,6 +1,6 @@
 slug: copilot-qdrant-search-quality
 name: Qdrant search relevance investigator
-summary: Share queries and weak results. Get likely relevance problems and tests to compare proposed fixes.
+summary: "Find why Qdrant search returns wrong or missing results. Get ranked causes, one test for each and the fixes to try in order."
 category: general
 boards: []
 type: skill
@@ -8,8 +8,12 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: brief
     required: true
+  - type: codebase
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: plan
 uses: []

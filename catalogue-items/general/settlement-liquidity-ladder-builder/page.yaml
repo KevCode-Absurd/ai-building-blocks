@@ -1,55 +1,111 @@
 new_slug: settlement-liquidity-ladder-builder
 name: Settlement liquidity ladder builder
 headline: Settlement liquidity ladder builder
-summary: An ordered settlement ladder and peak funding gap
+summary: Line up three settlement times in order and see your lowest cash balance. Get the closing balance after each one and any gap below your minimum.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An ordered settlement ladder and peak funding gap. Share opening accessible cash, three ordered settlement buckets with confirmed receipts and debits, settlement times and a minimum balance.
+subhead: Give it your opening cash, the confirmed receipts and payments for three settlement times, in order, and your minimum balance. It rolls each closing balance into the next. You get the lowest balance and the funding gap, if any.
 explain: |-
-  An ordered settlement ladder and peak funding gap.
+  Money does not arrive and leave all at once. Receipts and payments settle at set times in the day, and cash can dip below your minimum in between. This settlement liquidity ladder builder lays the times out in order and shows where the balance is lowest.
 
-  Treasury settlement. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  It starts with the cash you can reach now. For each of three settlement times it adds the confirmed receipts and takes off the confirmed payments. Each closing balance becomes the next opening balance. It then picks the lowest balance across the day and compares it with the minimum you set.
+
+  It checks the balance at the end of each time slot, not payment by payment. If two big payments land in the same slot, the real dip could be deeper than the ladder shows. The skill says so. It also keeps different accounts and currencies apart and never nets them.
 when:
-  - You need an ordered settlement ladder and peak funding gap.
-  - You work on treasury settlement and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A big payment and a big receipt are due on the same day and you want to know if cash dips below your minimum.
+  - Your bank or a payment system settles at set cut-off times and you want to plan around them.
+  - You need to show a lender or treasurer the order of cash movements for one day.
+  - A receipt slips to a later time and you want to see the new low point.
+not_for:
+  - You need the order of payments inside one time slot. This checks balances at the end of each slot only.
+  - You want to know how much of your bank balance is restricted. Use the Restricted cash availability checker.
+  - You want to check cash against debt maturities over months or years. Use the Debt maturity funding ladder.
+  - You want a longer cash forecast. This covers three settlement times, not weeks.
 you_give:
-  - Opening accessible cash, three ordered settlement buckets with confirmed receipts and debits, settlement times and a minimum balance.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Opening cash you can reach (from the bank balance at the start of the day)
+  - Confirmed receipts for each of three settlement times (from bank or payment system notices)
+  - Confirmed payments for each of the three times (from your payment run or bank file)
+  - The time each bucket settles, in order
+  - The minimum balance you have approved
+  - The date, currency and units
+  - Your own cash spreadsheet (optional)
 you_get:
-  - An ordered settlement ladder and peak funding gap.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The closing balance after each of the three settlement times
+  - The lowest balance across the day, including the opening balance
+  - "The funding gap: how far the lowest balance is below your minimum, or zero"
+  - A note on what the ladder cannot show inside one time slot
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the opening cash, then the receipts and payments for each time, in order. Say where each came from, and give the date, currency and units.
+  - Say which receipts and payments are confirmed. Leave out anything that is only hoped for.
+  - "Check one line yourself: a closing balance is the opening balance plus receipts less payments. For 100, 20 and 80, that is 40."
+  - Read the lowest balance and the gap, then MISSING and CHECKS MISSED. Plan funding before the low point, not after.
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Group confirmed receipts and payments by actual settlement cutoff; do not net flows from different accounts or currencies
-    text: Group confirmed receipts and payments by actual settlement cutoff; do not net flows from different accounts or currencies.
-  - title: 3. Roll each bucket closing balance into the next opening balance and identify the lowest balance across the day
-    text: Roll each bucket closing balance into the next opening balance and identify the lowest balance across the day.
-  - title: 4. Compare the minimum balance with the approved floor and disclose that within-bucket sequencing remains unmodeled
-    text: Compare the minimum balance with the approved floor and disclose that within-bucket sequencing remains unmodeled.
+  - title: Lists the sources
+    text: Writes each balance and flow with its date, account, currency and units. Stops any line that has no evidence.
+  - title: Groups flows by time
+    text: Puts confirmed receipts and payments into three buckets by settlement time. Different accounts and currencies are not netted.
+  - title: Rolls the balance forward
+    text: Closing balance of each bucket becomes the opening balance of the next.
+  - title: Finds the low point
+    text: Picks the lowest balance across the opening and the three closings.
+  - title: Compares with the minimum
+    text: Shows the funding gap below your minimum, and says what happens inside a bucket is not modelled.
 output_shape: |-
-  An ordered settlement ladder and peak funding gap.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Closing balance 1 <amount> | 2 <amount> | 3 <amount> | Lowest balance <amount> | Funding gap <amount or zero>
+
+  SCOPE AND SOURCES
+  <currency, units, date; source and date for each balance and flow>
+
+  INPUTS AND ASSUMPTIONS
+  <opening cash, receipts and payments for each bucket, settlement times, minimum balance>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <net flow and closing balance per bucket; lowest balance; gap; check that opening plus receipts less payments equals the final balance>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Your opening cash
+    - Confirmed receipts and payments for three settlement times
+    - The order and time of each settlement
+    - Your minimum balance
+  prerequisites:
+    - Bank or payment system notices for the day
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The closing balance after each time, the lowest balance and any funding gap.
+    - name: SCOPE AND SOURCES
+      contains: The date, currency and units, with a source for each balance and flow.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Your opening cash, the flows in each bucket and your minimum balance.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Net flow and closing balance per bucket, and a tie from opening cash to the final balance.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every material input has a source location, date, unit, sign and approval status.
+  - what: Late receipt
+    how: Move a receipt to a later bucket and ask for a second run to see how the low point changes.
+  - what: Minimum balance
+    how: Say who approved the minimum and when. The gap is only as good as that number.
+  - what: Separate accounts
+    how: Run each account or currency on its own. The skill will not net them together.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
@@ -64,15 +120,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Bank statements and payment system notices
+    - Your payment run for the day
+    - The minimum balance policy
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Settlement bucket
+    meaning: A set time in the day when a group of receipts and payments clears.
+  - term: Ladder
+    meaning: The balance after each step in order, so you can see the low point.
+  - term: Funding gap
+    meaning: How far the lowest balance falls below your minimum.
+  - term: Minimum balance
+    meaning: The least cash you have approved to hold.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+next:
+  - restricted-cash-availability-checker
+  - debt-maturity-funding-ladder

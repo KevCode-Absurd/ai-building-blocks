@@ -1,50 +1,66 @@
 new_slug: standardize-repair-work-order-intake
 name: Standardize repair work order intake
 headline: Standardize repair work order intake
-summary: Share the source files. Get an intake procedure, missing-field checks and unresolved work register.
+summary: Standardize how your shop takes in repair jobs. Share sample work orders. Get an intake procedure, missing-field checks and a list of unresolved jobs.
 job: document-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An intake procedure, missing-field checks and unresolved work register. Share actual work order samples, approved diagnostic boundaries, customer authorization rules, required fields and existing intake steps. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share a few sample work orders, your required fields, your rules on customer authorization and your current intake steps. Your AI writes one intake procedure, checks each sample for missing fields, and lists every open job that still waits on a customer decision or authorization.
 explain: |-
-  An intake procedure, missing-field checks and unresolved work register.
+  In a repair shop, the work order is the record that everything else depends on. When the serial number is missing, the problem is written three ways, or nobody can show that the customer agreed to a quote, the trouble starts later at the counter. This workflow standardizes repair work order intake so every job starts with the same facts.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Reported symptoms remain customer reports; no diagnosis, repair consent or safety clearance is inferred. Missing tools or evidence stay visible in the final summary.
+  Two skills run in order. The first writes the intake procedure from your existing process: identifying the item, recording what the customer reports, getting authorization, quote acceptance and when to pass a job to a technician. Then it checks your sample work orders against the required fields and lists what each one lacks. The second builds a register of open jobs, with each missing authorization or customer decision left as unresolved.
+
+  A reported symptom stays a customer report. The workflow never diagnoses a fault, never decides a customer has agreed to a repair, and never says an item is safe. Those stay with your qualified staff and the customer.
 when:
-  - You need an intake procedure, missing-field checks and unresolved work register.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Work orders come in with missing serial numbers, contact details or authorization.
+  - Different staff take in the same kind of job in different ways.
+  - A customer disputes what they agreed to, and your records are thin.
+  - You are adding a second counter or new staff and need the intake steps written down.
+not_for:
+  - "You need a fault diagnosed or a repair judged safe: that stays with your qualified technicians."
+  - "You want to decide whether a customer agreed to a repair: only their own authorization counts. This lists where it is missing."
+  - "You want a procedure for some other process: use the Process and SOP writer."
+  - "You already have an intake procedure and want it checked: use the SOP and runbook checker."
 you_give:
-  - Actual work order samples, approved diagnostic boundaries, customer authorization rules, required fields and existing intake steps.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - A few real work orders, with customer names and contact details removed
+  - Your required intake fields, if you have a list (optional)
+  - Your rules on what the customer must agree to before diagnosis, quote and repair
+  - What front desk staff may and may not judge about a fault, and who decides
+  - Your current intake steps, written or described
+  - Open jobs waiting on something, for the register (optional)
 you_get:
-  - An intake procedure, missing-field checks and unresolved work register.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - An intake procedure covering item identification, reported problem, authorization, quote acceptance and handoff to a technician
+  - A missing-field check for each sample work order
+  - A register of open jobs with every unresolved authorization or customer decision
+  - Questions for anyone who must confirm a rule
+  - A list of facts still MISSING
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach your sample work orders with personal details removed, and paste your required fields, authorization rules and current steps.
+  - Tell your AI to follow the pack and save each step's file.
+  - After step 1, check the procedure against how your shop works. Fix any step that sounds like a diagnosis or a repair decision.
+  - After step 2, work through the unresolved list. Do not start a repair that still shows missing authorization.
 how_it_works:
   - title: Process and SOP writer
-    text: Document intake, authorization evidence, asset identification, quote acceptance and escalation steps from the existing repair process; technical assessment stays with qualified staff.
+    text: Writes the intake procedure from your existing process, covering item identification, authorization evidence, quote acceptance and escalation. Then checks each sample work order against your required fields. Hands step 2 the field list and the gaps found. Check before moving on, no step diagnoses a fault or assumes consent.
   - title: Executive action register keeper
-    text: Build the follow-up register from actual open work orders and explicit commitments, leaving missing authorization or customer decisions unresolved.
+    text: Builds the register of open work orders from your records and explicit commitments. Missing authorization and customer decisions stay unresolved, each with an owner and a source. Check before you act, every open item names what is missing and who can supply it.
 output_shape: |-
-  Scope and source coverage
-  An intake procedure, missing-field checks and unresolved work register.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCES      <samples, rules and steps you supplied, with dates>
+  INTAKE PROCEDURE       <purpose | who does each step | steps | when to pass to a technician | exceptions>
+  FIELD CHECK            <work order | field | present or missing | note>
+  UNRESOLVED REGISTER    <work order | item | what is unresolved | owner | due | source>
+  QUESTIONS              <rule to confirm | who can answer>
+  MISSING                <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Reported symptoms remain customer reports; no diagnosis, repair consent or safety clearance is inferred.
+  - what: Required fields
+    how: Paste your list. If you have none, the AI proposes a starting list and marks it as a proposal, not your rule.
+  - what: Job type
+    how: Say whether you take in phones, bikes, appliances or something else. The identification step uses the right details for the item.
+  - what: Authorization levels
+    how: Say what needs a separate yes, such as a diagnostic fee, a quote or an added repair. Each becomes its own check.
 judge:
   - Reported symptoms remain customer reports; no diagnosis, repair consent or safety clearance is inferred.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +73,38 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the required field list and the procedure with a date, and paste them into every run.
+  - Add new sample work orders when a job goes wrong, so the field check learns from it.
+  - Run the unresolved register weekly, so jobs do not wait unseen.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files and images
+      why: It can read work order photos or exports. In plain chat, paste the text of each sample.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your blank work order form.
+    - Your terms of service or repair authorization wording.
 terms:
+  - term: Work order
+    meaning: The record of a repair job, from when the item arrives to when it goes back.
+  - term: Intake
+    meaning: The steps taken when an item and its problem first reach you.
+  - term: Authorization
+    meaning: The customer's own agreement to a stated step, such as a diagnosis, a quote or a repair.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.
+output_sample:
+  input:
+    - A few sample work orders with personal details removed
+    - Your required fields, authorization rules and current intake steps
+    - Open jobs waiting on a customer decision (optional)
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-01-process-and-sop-writer.md
+      contains: The intake procedure, plus a field-by-field check of each sample work order.
+    - name: outputs/step-02-executive-action-register.md
+      contains: The register of open jobs, with each unresolved authorization or customer decision, owner and source.
+    - name: Questions
+      contains: Each rule that needs confirming, and who can answer it.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.

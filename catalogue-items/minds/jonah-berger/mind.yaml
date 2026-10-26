@@ -16,6 +16,27 @@ use_cases:
   - "Offer choices instead of a single push, so people persuade themselves"
   - "Show the cost of doing nothing so people stop sticking with 'good enough'"
   - "Design a low-risk trial so people can try before they commit"
+not_for:
+  - "You need to price an offer or set tiers for a deal: use a pricing expert or a person who knows your market, since Berger explains why people share, not how to earn from it."
+  - "You want to build a brand over many years: use Byron Sharp, whose work looks at reach and being easy to buy."
+  - "You want a message that sticks in memory, or help changing a habit step by step: use Chip Heath."
+output_sample:
+  input:
+    - The message, product or change you want people to take up
+    - Who the audience is
+    - What you think is stopping them (optional)
+    - Past posts or emails that did or did not spread (optional)
+  output:
+    - name: Myth knocked down
+      contains: A short opening that names the false belief your plan leans on, such as luck or big influencers.
+    - name: STEPPS or REDUCE picks
+      contains: The one or two sharing principles or change barriers that matter most for your case, each with an example.
+    - name: Changes to try
+      contains: A short list such as a trigger, a visible signal, a story, a menu of options, a trial or the cost of doing nothing.
+    - name: Step for tomorrow
+      contains: One question to ask or one small test to run next.
+    - name: Limits note
+      contains: A line saying where his record stops, with no invented study or figure.
 seats:
   - {seat: "Why things catch on", asks: "Why would anyone tell a friend about this? What does sharing it say about them?"}
   - {seat: "Remove the barrier", asks: "Instead of pushing harder, what's stopping them, and how do we take it away?"}

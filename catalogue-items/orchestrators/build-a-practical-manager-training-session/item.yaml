@@ -21,11 +21,11 @@ uses:
   - role-skills-framework-builder
 steps:
   - uses: leadership-program-designer
-    note: Set an observable outcome and choose the management situations the session should address.
+    note: Set an observable outcome and choose the management situations the session should address. Hands the outcome and situations to the session builder.
   - uses: training-program-builder
-    note: Build the session around short explanation, realistic practice and discussion.
+    note: Build the session around short explanation, realistic practice and discussion. Uses step 1's outcome and situations plus your own skills gap. Hands the session plan and practice case to the checklist step.
   - uses: role-skills-framework-builder
-    note: Define observable behavior and work evidence for checking the trained management skill.
+    note: Define observable behavior and work evidence for checking the trained management skill. Reads step 2's session plan and practice case, so the checklist matches what was practised.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

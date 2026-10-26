@@ -2,34 +2,54 @@ thinking: low
 thinking_why: It maps page content to set markup types.
 new_slug: structured-data-writer
 name: Structured data writer
-summary: Give it a page. Get working JSON-LD markup for rich results, tested and
-  ready to paste.
+summary: Write JSON-LD structured data for a page, with a checklist to test it in Google's Rich Results Test before you publish.
 job: build-websites
 headline: Structured data writer
-subhead: Search-engine markup for your page, written as JSON-LD you can paste in
-  and test. It helps search engines understand what a page is, so it can qualify
-  for rich results like star ratings, prices, FAQ answers or event dates.
+subhead: Give your AI a page and it writes JSON-LD, a block of code that tells search engines what the page is. It uses only facts shown on the page. You then test it in Google's Rich Results Test before you publish.
 explain: |
   Search-engine markup for your page, written as JSON-LD you can paste in and test. It helps search engines understand what a page is, so it can qualify for rich results like star ratings, prices, FAQ answers or event dates.
 
   It first checks the page type, any markup that already exists and which rich results you want. Then it writes schema.org markup that matches only what is truly on the page, since markup for content that is not there can get you penalised. It sticks to types Google supports, and lists what to validate with Google's Rich Results Test and what to watch in Search Console. It can fix errors in markup you already have.
 when:
   - Your product pages show no price or rating in Google.
-  - You added an FAQ and want it to appear as a rich result.
   - Search Console reports errors in your structured data.
   - You publish articles, recipes or events and want them marked up.
+  - You have an FAQ and want it described in markup, knowing Google no longer shows FAQ rich results.
+not_for:
+  - "You want a full SEO review of titles, speed and links: use an SEO audit, since this only writes markup."
+  - "You want Google FAQ or HowTo rich results: Google no longer shows them, so plan around other ways to get seen."
+  - "Your page has little real content to mark up: write the page first, then come back."
 you_give:
-  - The page address or its content
-  - The page type
-  - Existing markup (optional)
+  - Your page address or the page text
+  - The page type, such as product, article or event
+  - Markup already on the page (optional)
   - The rich result you want (optional)
+  - Your site setup, such as WordPress or Next.js (optional)
 you_get:
-  - JSON-LD markup ready to paste
-  - Placement advice for your page
-  - A validation checklist
-  - Fixes for current errors
+  - JSON-LD markup to paste into your page
+  - Advice on where to place it
+  - A checklist to test it in the Schema.org Validator and Google's Rich Results Test
+  - Fixes for errors in markup you already have
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
+  - Paste your page text or address, and say the page type. Add any existing markup.
+  - Say which rich result you want. Your AI will check that Google still supports it.
+  - Copy the JSON-LD into your page head or body, or into your CMS or plugin.
+  - Test it in the Schema.org Validator, then in Google's Rich Results Test.
+  - Check that every detail in the markup matches what visitors see on the page.
+output_sample:
+  input:
+    - Your page address or the page text
+    - The page type, such as product, article or event
+    - Markup already on the page (optional)
+    - The rich result you want (optional)
+    - Your site setup, such as WordPress or Next.js (optional)
+  output:
+    - name: Schema Implementation
+      contains: The full JSON-LD code block, using only facts that are visible on your page.
+    - name: Placement advice
+      contains: Where to put the code in your page head or body, based on your site setup.
+    - name: Testing Checklist
+      contains: Steps to check the markup in the Schema.org Validator and Google's Rich Results Test.
+    - name: Fixes for existing markup
+      contains: Errors found in markup you already have, with the corrected version.

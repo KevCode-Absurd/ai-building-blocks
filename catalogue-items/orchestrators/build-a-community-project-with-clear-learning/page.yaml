@@ -1,52 +1,105 @@
 new_slug: build-a-community-project-with-clear-learning
 name: Build a community project with clear learning
 headline: Build a community project with clear learning
-summary: Share the source files. Get a project brief, learning sequence and evidence collection plan.
+summary: Plan a student project around a real local need. Get a project brief, a week-by-week sequence tied to the curriculum, and a plan to record learning.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A project brief, learning sequence and evidence collection plan. Share a local problem, learner age, community constraints, permissions and the curriculum goal. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI a local need, your curriculum goal, the learners' age and any limits. It plans the partner's role and the project steps, writes the student brief and milestones, and plans how to record what students learn.
 explain: |-
-  A project brief, learning sequence and evidence collection plan.
+  A community project can teach a lot, or it can become a nice day out with little learning. This workflow builds a community project with clear learning: each task in the project is tied to a curriculum skill, so students learn through the work and not only beside it.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Community contact and field work remain subject to teacher approval; learning and public impact are assessed separately. Missing tools or evidence stay visible in the final summary.
+  First it frames a local need as the partner states it, and the curriculum skills the project should build. Then it writes the student brief: a driving question, what students will make, milestones and marking criteria. Last, it plans how you will record what students decide and say, so you can see their learning as well as their product.
+
+  Learning and public impact are marked separately. A good report to a partner is not the same as a student learning the skill. Any contact with the community or any trip waits for your approval. The workflow writes it down as a task to approve and does not act on it.
 when:
-  - You need a project brief, learning sequence and evidence collection plan.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A local group or place has a real need and you want students to help while meeting a curriculum goal
+  - You are planning a term project and want it to teach, not only to do good
+  - You need a brief with milestones so students do not leave it all to the last week
+  - You want to record what students think, not only what they make
+not_for:
+  - You need a single lesson. Use Build a lesson from explanation to practice and a quiz, or the Local place lesson planner.
+  - You have no real partner or need. Use the Project-based unit brief writer on its own.
+  - You want to mark the finished projects. Use Mark student work against a rubric and sharpen your feedback.
+  - You are planning a volunteer programme for adults. Use the Nonprofit volunteer program planner.
 you_give:
-  - A local problem, learner age, community constraints, permissions and the curriculum goal.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The local need, in the words of the partner who stated it
+  - The curriculum goal or skill the project should cover
+  - The learners' age or year, and the length of the project
+  - Limits in your community, such as travel, time, cost or safety
+  - The approvals you already have, such as school consent (optional)
+  - The name of the community partner (optional)
 you_get:
-  - A project brief, learning sequence and evidence collection plan.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A project plan: the partner's role, the tasks week by week and the curriculum skill each task builds"
+  - "A student brief: a driving question, what students make, milestones and marking criteria"
+  - A teacher guide with support notes for different learners
+  - "A plan to record learning: what to watch for, how to capture it, and how to share it with families"
+  - A list of approvals needed before any community contact or field work
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the local need, the curriculum goal, the learners' age, the project length and your limits.
+  - Read the project plan first. Cut any task that is not safe or not approved. Say what you cut before the brief is written.
+  - Approve each contact or trip yourself. The AI contacts no one. Then use the brief and the recording plan with your class.
 how_it_works:
   - title: Community project unit planner
-    text: Frame an appropriate local problem and the learning students should demonstrate.
+    text: Frames the local need and the curriculum skills the project should build. It lays out partner role, tasks and reflection questions, and hands the plan on.
   - title: Project-based unit brief writer
-    text: Define deliverables, roles, milestones and realistic assessment criteria.
+    text: "Writes the student brief from the plan: a driving question, what students make, milestones, marking criteria and a teacher guide. It hands the brief on."
   - title: Learning documentation planner
-    text: Plan observations of learner decisions for teacher planning. Keep this documentation distinct from the separate curriculum assessment.
+    text: Plans what to observe, how to record student decisions and how to share them. It keeps this record apart from the curriculum assessment.
 output_shape: |-
-  Scope and source coverage
-  A project brief, learning sequence and evidence collection plan.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  PROJECT PLAN
+    Partner role | Week | Task | Curriculum skill it builds | Needs approval (yes or no)
+    Reflection questions: before | during | after
+
+  STUDENT BRIEF
+    Driving question | Scenario | What students make | Milestones | Marking criteria
+    Teacher guide | Support notes for different learners
+
+  LEARNING RECORD PLAN
+    What to watch for | How to record | How to share
+
+  APPROVALS NEEDED
+    Action | Who must approve
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - The local need, in the partner's words
+    - The curriculum goal and the learners' age
+    - The project length and your community limits
+    - The approvals you already have (optional)
+  prerequisites:
+    - A named teacher who approves any contact with the community or any field work
+  output:
+    - name: Project plan
+      contains: The partner's role, tasks week by week and the curriculum skill each task builds.
+    - name: Student brief
+      contains: A driving question, what students make, milestones and marking criteria.
+    - name: Teacher guide
+      contains: What to teach directly, and support notes for different learners.
+    - name: Learning record plan
+      contains: What to observe, how to record student decisions and how to share them with families.
+    - name: Approvals needed
+      contains: Each contact or trip that must be approved, and by whom, before it happens.
+    - name: Hand-back summary
+      contains: Files saved, facts that were missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read the pasted text or files and keep each step's result as a file. None of them can run a lesson, a class or a check for you.
+  inputs:
+    - The partner's own words about the need, ideally in writing.
+    - Your school's rules on trips and contact with outside groups.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Pick one need and one curriculum goal. A project that tries to cover everything teaches little.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Use the partner's real request, not a guess at what they need. Ask them first if you can.
   - what: Acceptance
-    how: Community contact and field work remain subject to teacher approval; learning and public impact are assessed separately.
+    how: Say how long each milestone may take. The brief will fit its tasks inside that.
 judge:
   - Community contact and field work remain subject to teacher approval; learning and public impact are assessed separately.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +112,16 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - Halfway through, bring back what you observed and ask for the brief to be adjusted.
+  - Ask for the marking criteria in student-friendly words.
+  - At the end, ask for a short note to the partner on what students produced, kept apart from what they learned.
+next:
+  - mark-student-work-against-a-rubric-and-sharpen-your-feedback
+  - check-a-lesson-before-teaching-it
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Driving question
+    meaning: One open question that gives a project its purpose, such as how could we help the local garden grow more food.
+  - term: Curriculum skill
+    meaning: A skill the course says students should learn. Each project task should build one.
+  - term: Learning record
+    meaning: Notes, photos and quotes that show what students decided and understood while they worked.

@@ -52,6 +52,21 @@ excludes applications or sections substantially developed by AI. Preserve applic
 ownership of substantive science and writing; review or disclosure alone does not
 make substantial AI authorship compliant. Apply other agencies' current rules too.
 
+## What to ask for, and what to hand back
+
+Ask once for anything missing: funder, call name or number, due date, the person's idea in a few sentences, any draft sections, any reviewer comments, team and budget limits. If the funder or call is missing, stop and ask for it. Never guess the rules of a call, and never invent a limit, citation, preliminary result or partner.
+
+Hand back, in this order:
+
+1. **Call facts**: what you confirmed, from where and when. List unresolved rules as "check with the funder".
+2. **Compliance checklist**: each requirement, where it comes from, where it sits in the draft, and any gap.
+3. **Specific aims or objectives outline**: drafted from the person's own idea, with a note on what they must supply (data, citations).
+4. **Budget outline**: line items to cost, with a reason for each. Leave figures blank unless the person gave them.
+5. **Critique** of any draft against that funder's review criteria, strongest points first, then gaps.
+6. **Resubmission plan**, only if reviewer comments were given: each comment, the response, and the change.
+
+If the call cannot be checked online, say the review is a bounded draft from what was supplied. Rules and limits in the funder notes below came from the original author's review and may be out of date. Verify each one against the live call before relying on it.
+
 ## Visual Enhancement (Optional)
 
 Strong proposals often include 1–3 figures (timelines, workflow diagrams, preliminary data). Figures support review but are not a substitute for clear aims and methods.
@@ -65,10 +80,10 @@ Strong proposals often include 1–3 figures (timelines, workflow diagrams, prel
 - NSTC CM03 research architecture diagrams when they clarify the proposed methods
 
 **How to create figures:**
-- **Preferred:** Use the **scientific-schematics** skill (`--doc-type grant`) for AI-generated diagrams from a natural-language description
-- **Alternative:** Build figures in your usual tools (matplotlib, Illustrator, PowerPoint, etc.)
+- **Default:** Build figures in your usual tools (matplotlib, Illustrator, PowerPoint, etc.). Describe the figure to the person and let them draw it.
+- **Optional, outside this folder:** the separate **scientific-schematics** skill can make diagrams from a text description. It is not included here, so its script path below will not exist unless the person has installed that skill. It needs an `OPENROUTER_API_KEY` (a paid third-party service). Never run it without the person's say-so.
 
-Illustrative optional integration (CLI options checked; no paid generation tested in this refresh). Run from the repository root, with `OPENROUTER_API_KEY` set:
+Illustrative optional integration from the original skill (CLI options checked; no paid generation tested). Run from the repository root of that other skill, with `OPENROUTER_API_KEY` set:
 
 ```bash
 python skills/scientific-schematics/scripts/generate_schematic.py "project timeline with Year 1-3 milestones" -o figures/timeline.png --doc-type grant

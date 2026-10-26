@@ -11,6 +11,16 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 ---
 
 # Expo UI Guidelines
+
+## How to run this skill (added by AI Blocks)
+
+1. Ask once for what is missing: a description of each screen and how people move between them, whether there is an Expo project already (and its SDK version), the look wanted (optional), and data to keep on the phone (optional). If something is still missing, write `MISSING: <what>`. Never invent screens, brand colors or data.
+2. Open only the reference notes that the screens need.
+3. Hand back: the file tree, the full contents of each file, the theme file, the packages to install with the command, and the steps to try it (`npx expo start`, then Expo Go). End with `OPEN QUESTIONS` for anything marked MISSING.
+4. Several features are iOS first (SF Symbols, liquid glass, zoom transitions, form sheets, link previews). Say which of the screens use them and that they need a check on a real phone and, for some, a newer iOS.
+5. Example code in the notes that calls handlers such as `handleSharePress` or `handleBlockPress` is a pattern. Define every handler you use, or replace it with a real action.
+6. Not for: web-only apps, apps not built with Expo, server routes (use the Expo API route builder), SDK upgrades (use the Expo upgrade helper) or data fetching (use the Mobile data fetching coder).
+
 ## When to Use
 
 Use this skill when you need complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.
@@ -30,7 +40,7 @@ references/
   media.md               Camera, audio, video, and file saving
   route-structure.md     Route conventions, dynamic routes, groups, folder organization
   search.md              Search bar with headers, useSearch hook, filtering patterns
-  storage.md             SQLite, AsyncStorage, SecureStore
+  storage.md             localStorage polyfill, SQLite, SecureStore (never AsyncStorage)
   tabs.md                NativeTabs, migration from JS tabs, iOS 26 features
   toolbar-and-headers.md Stack headers and toolbar buttons, menus, search (iOS only)
   visual-effects.md      Blur (expo-blur) and liquid glass (expo-glass-effect)

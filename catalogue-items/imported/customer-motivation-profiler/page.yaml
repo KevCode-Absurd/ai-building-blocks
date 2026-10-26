@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads what you know and infers the deeper drivers.
 new_slug: customer-motivation-profiler
 name: Customer motivation profiler
-summary: Describe your buyer. Get a profile of their wants, fears, identity and
-  trust doubts to use in copy and offers.
+summary: Build a customer motivation profile from your buyer description. You get their wants, fears, self-image and trust doubts to use in copy.
 job: understand-customers
 headline: Customer motivation profiler
-subhead: Age and income rarely explain why someone buys. Describe your buyer and
-  you get a profile of their wants, fears, self-image and trust doubts that you
-  can use in copy, offers and funnels.
+subhead: Age and income rarely explain why someone buys. Describe your buyer and you get a profile of their wants, fears, self-image and trust doubts that you can use in copy, offers and funnels.
 explain: |
   Age and income rarely explain why someone buys. Describe your buyer and you get a profile of their wants, fears, self-image and trust doubts that you can use in copy, offers and funnels.
 
@@ -18,6 +15,10 @@ when:
   - Your funnel loses people at the same step and you do not know why.
   - You want to know what your buyer fears about buying.
   - You need one profile your whole team can write from.
+not_for:
+  - "You have a brand-new product and have never talked to a buyer: run a few customer interviews first, then come back with what you heard."
+  - "You need a clinical or medical read on a person: ask a qualified professional, since this is for marketing planning only."
+  - "You want facts and figures about a market: use a research source or survey, since this profile is built from what you supply."
 you_give:
   - A description of your target buyer
   - What they are trying to achieve or avoid
@@ -29,7 +30,28 @@ you_get:
   - Identity cues and language
   - Notes for copy, offers and funnel design
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini in a new chat. No code, files or paid tools are needed.
+  - Paste the instructions from this skill into the chat.
+  - Below them, describe your buyer, what they want to achieve or avoid, and any limits. Add reviews or interview notes if you have them.
+  - Answer any questions the AI asks. It will ask if something key is missing.
+  - Check that facts and guesses are kept apart. Mark any guess you know is wrong.
+  - Test the profile against real buyer feedback before you use any of it in public claims.
+output_sample:
+  input:
+    - A description of your target buyer
+    - What they are trying to achieve or avoid
+    - Reviews, interview notes or other research (optional)
+    - Brand or ethical limits (optional)
+  output:
+    - name: Surface signals
+      contains: The plain facts you gave, kept apart from anything the AI infers.
+    - name: Dominant need state
+      contains: The main need driving this buyer, such as security, competence, autonomy, belonging or status.
+    - name: Identity commitments
+      contains: What the buyer wants to be seen as and what they refuse to be seen as.
+    - name: Fears and friction
+      contains: Concrete fears, status losses and trust barriers, with reasonable doubts split from emotional threats.
+    - name: Psychographic profile
+      contains: Worldview, values, aspirations, anxieties, motivators, language cues and buying triggers in one compact profile.
+    - name: Unknowns and follow-up questions
+      contains: Gaps in what you supplied and questions to ask real buyers before you rely on the profile.

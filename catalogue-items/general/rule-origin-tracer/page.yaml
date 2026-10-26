@@ -1,6 +1,6 @@
 new_slug: rule-origin-tracer
 name: "Rule origin tracer"
-summary: "Paste a rule or habit your team follows. Get where it came from, who it served and if it earns its place."
+summary: "Trace where a rule your team follows came from, who it helps and who it costs. You get a keep, change or drop call and a small test."
 job: think-and-decide
 thinking: medium
 thinking_why: "It needs reasoning about motives and viewpoints, but the steps are fixed and the call is small."
@@ -17,6 +17,10 @@ when:
   - A rule or habit gets defended with "that is just how we do it".
   - A new person asks why you do something and nobody has an answer.
   - You are reviewing policies, pricing rules or ways of working.
+not_for:
+  - "The rule is a legal, safety or regulatory duty: ask the authority that sets it, or a specialist such as a lawyer."
+  - "You need to choose between two live options, not question an old rule: use the Yes, no or too-hard call writer."
+  - "The rule is tied to pay or targets and you want to check the incentive: use the Incentive checker."
 
 you_give:
   - The rule, as people say it
@@ -34,6 +38,29 @@ how_to_use:
   - Add what you know of its start. Say "unknown" where you do not know.
   - Ask a long-time member to read the origin story and correct it.
   - Run the small test before changing the rule for everyone.
+output_sample:
+  input:
+    - The rule, in the words your team uses
+    - What you know of its history (optional)
+    - Who follows it and who it affects (optional)
+    - How much change you can make, such as trial only (optional)
+  output:
+    - name: The rule
+      contains: The rule quoted exactly as people say it, with no tidy-up.
+    - name: Where it came from
+      contains: Who first needed the rule and what they feared or wanted, with unknowns marked.
+    - name: What it grew from
+      contains: Whether it came from a clear aim or from fear, a grudge or convenience, with a reason.
+    - name: Other points of view
+      contains: How a newcomer and a rival see the rule, plus a third view if one fits.
+    - name: Who gains and who pays now
+      contains: Two lists, by name or role, of who benefits today and who bears the cost.
+    - name: The call
+      contains: Keep, change or drop with one line of reason, and a small test with its deciding result.
+    - name: Missing
+      contains: Anything unknown, such as the origin, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line per check the AI could not meet, or none.
 
 how_it_works:
   - title: Quotes the rule

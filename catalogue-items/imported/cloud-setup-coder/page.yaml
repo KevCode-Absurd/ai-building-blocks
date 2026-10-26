@@ -2,36 +2,105 @@ thinking: medium
 thinking_why: It writes declarative code, with care for safe changes.
 new_slug: cloud-setup-coder
 name: Cloud setup coder
-summary: Describe the cloud setup you need. Get Terraform, Pulumi or
-  CloudFormation code that builds it the same way every time.
+summary: Turn a plain description of your servers, networks and databases into Terraform, Pulumi or CloudFormation code you can rebuild any time.
 job: ship-and-host
 headline: Cloud setup coder
-subhead: Describe the servers, networks and databases you want, and get code
-  that builds them the same way every time. Nobody has to click through a
-  console and hope they remember each step.
+subhead: Describe the cloud setup you want, with your provider, sizes and security rules. Your AI writes infrastructure as code in small modules, with one settings file per environment. You also get a plan for storing state and a preview to review before anything is built.
 explain: |
-  Describe the servers, networks and databases you want, and get code that builds them the same way every time. Nobody has to click through a console and hope they remember each step.
+  If your cloud setup was clicked together by hand, nobody can rebuild it the same way. This skill writes it down as code, so a Terraform or Pulumi project can build the same network, servers and database every time.
 
-  It asks for your cloud, the resources, sizes, security needs and environments such as dev and production. Then it picks Terraform, Pulumi or CloudFormation to match your team. The code is split into small reusable modules for network, compute and data, with settings you can change per environment. It also covers where to keep state, how to preview changes before applying them, and how to spot drift when someone edits things by hand.
+  It first asks for your cloud, the resources, the sizes, the security rules and the environments, such as dev and production. Then it picks Terraform, Pulumi or CloudFormation to match your team. The code is split into small parts for network, compute and data, with settings you change per environment.
+
+  It also sets out where to keep state, how to preview changes before you apply them, and how to catch drift when someone edits a server by hand. Passwords and keys stay as blanks for you to fill in.
 when:
   - You built your cloud setup by hand and cannot rebuild it.
-  - You need identical dev, staging and production environments.
-  - You want infrastructure changes reviewed like any other code change.
-  - Someone changed a server by hand and you need to catch the drift.
+  - You need dev, staging and production to match.
+  - You want a change to your servers reviewed like any other change to code.
+  - Someone edited a server in the console and you need to catch the difference.
+not_for:
+  - You need one small resource that a person can click together safely. Code is more work than it saves.
+  - You want to host a finished site from a folder. Use the Cloudflare publisher.
+  - You want to find risks in a setup that already exists. Use the Cloud misconfiguration finder.
+  - You want to see what your Google Cloud setup should look like before coding it. Use the Google Cloud architect.
 you_give:
-  - Your cloud provider
-  - The resources you need
-  - Sizing and security rules
-  - Environments to create (optional)
-  - Your preferred tool (optional)
+  - Your cloud provider, such as AWS, Google Cloud or Azure
+  - The resources you need, such as a network, a server and a database
+  - Sizes and security rules, such as who may reach the database
+  - The environments to create, such as dev and production (optional)
+  - The tool you prefer, such as Terraform or Pulumi (optional)
 you_get:
-  - Infrastructure code in modules
-  - Settings per environment
-  - A plan for storing state
-  - Steps to preview and apply changes
+  - Infrastructure code split into network, compute and data modules
+  - One settings file for each environment
+  - A list of the secrets you must fill in yourself
+  - A plan for storing and locking state
+  - A plain summary of what the preview will create, change and remove
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Pick a chat AI that can write files, such as Claude Code, or ask for each file in the chat. To run the preview you also need the tool installed and a cloud login on your own machine.
+  - Paste the skill. Then say your provider, the resources, the sizes, the security rules and the environments.
+  - Check the list of secrets and blanks first. Fill them in on your machine, not in the chat.
+  - Run the preview command yourself, such as terraform plan, and paste the result back. Ask your AI to read it in plain words. Look for anything it says will be destroyed.
+  - Ask for changes until the preview matches what you meant. Only then apply.
+  - Put the code in a pull request, so a second person reviews each future change before it is applied.
+how_it_works:
+  - title: Gather requirements
+    text: It asks for the provider, resources, sizes, security rules and environments, and works out which resource must exist before which.
+  - title: Pick the tool
+    text: It recommends Terraform, Pulumi, CloudFormation or CDK to match your team and cloud.
+  - title: Write modules
+    text: It builds separate network, compute and data modules with inputs you can change for each environment.
+  - title: Set up state
+    text: It stores state remotely with locking and encryption, and keeps state files out of version control.
+  - title: Preview, then apply
+    text: It shows the preview and waits for your yes before it applies anything.
+  - title: Catch drift
+    text: It reruns the preview later to find edits made by hand, then fixes the code or imports the change.
+output_shape: |
+  Tool choice: <tool> | <why it fits your team>
+  Files: main.tf | variables.tf | outputs.tf | modules/<network, compute, data> | environments/<dev, production>
+  Secrets list: <value to supply> | <where to keep it>
+  State plan: <backend> | <locking> | <who can read it>
+  Plan summary: <to create> | <to change> | <to destroy> (or "not run")
+  Next step: <review in a pull request before apply>
+output_sample:
+  input:
+    - Your cloud provider
+    - The resources you need, with sizes
+    - Your security rules
+    - The environments to create (optional)
+    - Your preferred tool (optional)
+  prerequisites:
+    - An AI that can write files, or a way to copy each file out of the chat
+    - Terraform, Pulumi or your chosen tool installed, to run the preview
+    - A cloud login on your own machine, kept out of the chat
+  output:
+    - name: Tool choice
+      contains: The tool picked for your team and cloud, with a short reason.
+    - name: Infrastructure code
+      contains: main.tf, variables.tf, outputs.tf and modules for network, compute and data.
+    - name: Environment settings
+      contains: One settings file per environment, so dev and production use the same code.
+    - name: Secrets list
+      contains: Each password, key or address range you must supply, left blank in the code.
+    - name: State plan
+      contains: Where state is stored, how it is locked and encrypted, and who can read it.
+    - name: Plan summary
+      contains: What the preview will create, change and destroy, in plain words, or "not run".
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It writes the files into your project and can run the preview command when you say so.
+    - name: Any good chat AI
+      why: Fine for writing the code. You copy the files out and run the commands yourself.
+  inputs:
+    - A diagram or list of what your setup looks like today
+    - Your company rules on regions, tags and who may reach what
+    - A rough monthly budget, so sizes stay sensible
+terms:
+  - term: Infrastructure as code
+    meaning: Servers, networks and databases written down as files, so they can be rebuilt the same way each time.
+  - term: State
+    meaning: The tool's record of what it has built. It can hold secrets, so it is stored apart from your code.
+  - term: Drift
+    meaning: A difference between your code and the real setup, usually from an edit made by hand.
+  - term: Module
+    meaning: A reusable block of code, such as one for the network.

@@ -1,53 +1,115 @@
 new_slug: justified-price-book-scenario
 name: Justified price-to-book scenario
 headline: Justified price-to-book scenario
-summary: Link a stable price-to-book scenario to forward ROE, retention and required equity return.
+summary: Work out the price-to-book ratio a steady company can justify from its return on equity, growth and required return, in one clear scenario.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A stable-state P/B scenario with an internally consistent retention rate. Share next-year earnings per beginning book equity, sustainable book growth, required return and clean-surplus assumptions.
+subhead: Give it next year's return on equity, how fast book value grows and the return you need from the shares. It works out how much of earnings must be kept to fund that growth. You get the price-to-book ratio the company can justify, and a check that the numbers fit together.
 explain: |-
-  A stable-state P/B scenario with an internally consistent retention rate.
+  Price-to-book, or P/B, compares a share price with the book value behind each share. A company that earns more than investors require deserves a P/B above 1. A company that earns exactly what they require deserves a P/B of 1. This justified price-to-book scenario shows what P/B a steady company can defend from three numbers.
 
-  Public equity valuation. Illustrative figures.3/15=20% retention. P/B=(.15-.03)/(.10-.03)=1.714286. Forward ROE10% gives P/B1. Inputs are constrained to preserve a positive spread in the fixture.
+  The three numbers are next year's return on equity (ROE), the steady growth rate of book value, and your required return on equity. Growth has to be paid for. The share of earnings kept to fund it is growth divided by ROE. If that comes out above 100% or below 0%, the scenario cannot hold and the skill rejects it.
+
+  The ratio is ROE minus growth, divided by required return minus growth. Required return must sit above growth, or the sum breaks. Practice numbers: ROE 15%, growth 3% and required return 10%. Retention is 3 over 15, or 20%. P/B is 12% over 7%, or 1.71. If ROE falls to 10%, equal to the required return, P/B is exactly 1. This is one scenario, not a forecast.
 when:
-  - You need a stable-state P/B scenario with an internally consistent retention rate.
-  - You work on public equity valuation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want to know what P/B a steady company earning a given ROE can justify.
+  - A share trades at 3 times book and you want to test what ROE and growth would support that.
+  - You are comparing two companies and want to see how much growth and ROE each moves P/B.
+  - A reviewer asks how your target P/B ties back to ROE, growth and required return.
+not_for:
+  - "You want a full valuation with cash flows by year: use the Build a clean surplus residual income model workflow."
+  - "You want to measure one period's earnings above the required return: use the One-period residual income bridge."
+  - The company is a bank or insurer that needs capital rules, or its book value is negative. This formula does not fit them.
+  - "You want to check ROE and margins from several years of accounts first: use the ROE and margin check."
 you_give:
-  - Next-year earnings per beginning book equity, sustainable book growth, required return and clean-surplus assumptions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Next year's earnings divided by today's book equity, which is forward ROE (from your forecast or analyst estimates)
+  - The steady growth rate of book value (your assumption)
+  - The return you require on the shares (your assumption, with its source and date)
+  - A note that book value is positive and growth comes only from kept earnings
+  - The currency, units and valuation date
 you_get:
-  - A stable-state P/B scenario with an internally consistent retention rate.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The share of earnings kept to fund your growth, shown as a percent
+  - The justified price-to-book ratio
+  - A check that retention sits between 0% and 100%
+  - A check that required return is above growth
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste your forward ROE, growth rate and required return as percentages. Say where each came from and the valuation date."
+  - Say if book value is positive and if growth comes only from earnings the company keeps. If not, the skill will say it does not fit.
+  - Check the result once. Justified P/B is ROE minus growth, divided by required return minus growth.
+  - Read MISSING and CHECKS MISSED before you use any figure.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Define forward ROE as next-period earnings divided by current book and confirm positive book value and clean surplus
-    text: Define forward ROE as next-period earnings divided by current book and confirm positive book value and clean surplus.
-  - title: 2. Set retention equal to sustainable book growth divided by forward ROE; reject an infeasible zero-to-one retention assumption
-    text: Set retention equal to sustainable book growth divided by forward ROE; reject an infeasible zero-to-one retention assumption.
-  - title: 3. Compute current P/B as (forward ROE minus growth)/(required equity return minus growth); test the case where ROE equals required return
-    text: Compute current P/B as (forward ROE minus growth)/(required equity return minus growth); test the case where ROE equals required return.
+  - title: Fixes the meaning of ROE
+    text: Treats ROE as next period's earnings over today's book equity. It checks book value is positive and that growth comes only from kept earnings.
+  - title: Works out retention
+    text: Divides growth by forward ROE. It rejects a result below 0% or above 100%.
+  - title: Computes the ratio
+    text: Divides ROE minus growth by required return minus growth. It refuses if required return is not above growth.
+  - title: Tests the break-even case
+    text: Shows what happens when ROE equals required return, where P/B is 1.
+  - title: Marks the gaps
+    text: Writes MISSING for any number you did not give and lists any check it could not run. It never fills a gap with zero.
 output_shape: |-
-  A stable-state P/B scenario with an internally consistent retention rate.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Retention <percent> | Justified P/B <number>
+
+  SCENARIO
+  <forward ROE | growth | required return, with source and date for each>
+
+  SCOPE AND SOURCES
+  <valuation date, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <ROE, growth, required return, positive book value, growth from kept earnings only>
+
+  CALCULATIONS AND TIES
+  <retention = growth / ROE; P/B = (ROE - growth) / (required return - growth); the ROE = required return test>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Next year's ROE (earnings over today's book equity)
+    - Steady growth rate of book value
+    - The return you require on the shares
+    - The accounts or forecast the ROE comes from (optional)
+  prerequisites:
+    - A positive book value for the company
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The share of earnings kept for growth and the justified price-to-book ratio.
+    - name: SCENARIO
+      contains: Your forward ROE, growth and required return, each with its source and date.
+    - name: SCOPE AND SOURCES
+      contains: The valuation date, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: The retention and P/B sums with their figures, and the test where ROE equals required return.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Growth is below required return and retention is feasible.
+  - what: Higher growth
+    how: Raise the growth rate. Retention rises too, so check it stays at or under 100%.
+  - what: A higher required return
+    how: Change it alone. The justified P/B falls as the bar for investors goes up.
+  - what: ROE equal to required return
+    how: Set both to the same figure. P/B is 1, because growth then adds no value.
 judge:
   - Growth is below required return and retention is feasible.
   - Already-forward ROE is not multiplied by another one-plus-growth factor.
@@ -62,15 +124,24 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The company's latest balance sheet, for book equity
+    - Your earnings forecast for next year
+    - A named reviewer and the valuation date
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Price-to-book (P/B)
+    meaning: Share price divided by book value per share.
+  - term: ROE
+    meaning: Return on equity. Earnings divided by book equity.
+  - term: Required return
+    meaning: The return you need from the shares to make owning them worth it.
+  - term: Retention
+    meaning: The share of earnings the company keeps instead of paying out.
+  - term: Clean surplus
+    meaning: Book value changes only through earnings kept and money paid in or out to owners.

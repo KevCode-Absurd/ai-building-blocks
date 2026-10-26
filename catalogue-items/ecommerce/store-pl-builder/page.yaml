@@ -1,6 +1,6 @@
 new_slug: store-pl-builder
 name: "Store P&L builder"
-summary: "Give it your sales and costs. Get a four-bucket P&L with targets and the line to fix first."
+summary: "Build a monthly store P&L in four buckets. Give it your sales and costs. You get targets and the line to fix first."
 job: track-numbers
 thinking: high
 thinking_why: "It bridges revenue, sorts many costs into buckets and traces a miss up the page, so a stronger model keeps the sums and the logic straight. Check the totals against your accounts."
@@ -17,6 +17,10 @@ when:
   - You want one monthly P&L that shows where the money goes, in the same layout every month.
   - Sales are up but profit is flat and you need to find which bucket moved.
   - You want to know what contribution margin your store needs to hit a net profit target.
+not_for:
+  - "You need a tax filing or statutory accounts: use your bookkeeper or accounting tool."
+  - "You have under about 100 orders a month: per-order figures swing too much, so use a simple monthly profit sheet instead."
+  - "You want a cash forecast or supplier payment plan: use the Supplier terms and float planner."
 
 you_give:
   - Your monthly P&L or an accounting export
@@ -36,6 +40,30 @@ how_to_use:
   - Pick one layout for cost of delivery and one rule for marketing, then keep them every month.
   - Say your net profit target.
   - Read the line it ranks first and fix that one before the others.
+output_sample:
+  input:
+    - Your monthly P&L or accounting export
+    - Shopify gross sales, discounts, refunds and shipping charged
+    - "Cost lines: product, freight, duties, fulfilment, payment fees"
+    - Marketing spend by channel, operating expenses and loan interest
+    - Your new-customer order counts and net profit target (optional)
+  output:
+    - name: Revenue bridge
+      contains: Gross revenue, less discounts, refunds and chargebacks, plus shipping collected, down to net revenue.
+    - name: P&L table
+      contains: Net revenue, cost of delivery, marketing, contribution margin, operating expenses, operating profit, interest and net profit.
+    - name: Percent and per order
+      contains: Every line shown in dollars, as a percent of revenue and per order.
+    - name: CAC
+      contains: Marketing spend on new-customer orders compared with contribution margin per order.
+    - name: Target
+      contains: The contribution margin you need to reach your net profit target, next to where you are now.
+    - name: What moved
+      contains: Which lines moved, and by how many points since the last month.
+    - name: Fix first
+      contains: The bucket to fix first, with the reason taken from the lines above it.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Bridges gross to net revenue

@@ -1,6 +1,6 @@
 new_slug: offer-image-ads
 name: "Get three offer image ads ready to launch"
-summary: "Give it your website and prices. Get new offers to try, three image ads built on one, and an ad rules check."
+summary: "Find offers worth testing and get three offer image ads for the one you pick, checked against Meta ad rules before you launch."
 job: make-image-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You are running a sale or a bundle and want image ads that show it clearly.
   - You have more than one offer live and suspect they confuse shoppers.
   - You want new offers to test, each with ads ready to go.
+not_for:
+  - "You have one price and no offer to test: use the Single image ad planner for one plain ad."
+  - "You have no ad copy yet and want words first: use the Fact-based ad copy writer, then come back."
+  - "You already have finished ads and only want a rules check: use the Meta ad policy checker."
 
 you_give:
   - Your website, as a link or saved pages
@@ -36,6 +40,28 @@ how_to_use:
   - Have your inputs ready. Your website link, your prices and deals as they stand, and your product photos.
   - Answer the one check-in on the brand file, then pick the offer you want ads for.
   - Make the pictures with your image tool, and fix anything the ad rules check marks "Fix first".
+output_sample:
+  input:
+    - Your website, as a link or saved pages
+    - Your current prices, deals, bundles and stock
+    - Real photos of your product
+    - Your target countries, for the ad rules check (optional)
+  prerequisites:
+    - An AI that can read files and follow HANDOFF.md, such as Claude
+    - Your handoff pack folder with every skill file
+  output:
+    - name: Brand file
+      contains: Your offers, prices, terms and claims, each tagged with where it came from on your site.
+    - name: Offer finder result
+      contains: Your live offers, clashes between them, new offers from your stock, and three picked to try first.
+    - name: Offer block
+      contains: One short set of offer facts that every ad repeats the same way.
+    - name: Three offer image ads
+      contains: Three ads on one offer, each with its own look and a layout for each of two sizes.
+    - name: Ad rules check
+      contains: A verdict, each finding with a rating and fix, and a rewrite of the ads with fixes in.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Builds your brand file

@@ -54,13 +54,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the set.** Use the skill `repeated-image-campaign-planner`. Starts from your one photo and your brand file.
-2. **Write the exact-text prompts.** Use the skill `image-ad-maker-with-exact-text`. Give it the image plan from the steps before. Turns each piece in the plan into a prompt with every word spelled out.
-3. **Check the ads before you make them.** Use the skill `pre-launch-ad-checker`. Give it the image prompt from the steps before. Reads the prompts from the step before and names anything to fix before you spend on images.
+1. **Plan the set.** Use the skill `repeated-image-campaign-planner`. Starts from your one photo and your brand file. It hands over a plan with the colour list and steps.
+2. **Write the exact-text prompts.** Use the skill `image-ad-maker-with-exact-text`. Give it the image plan from the steps before. Turns each piece in the plan into a prompt with every word spelled out. It hands over the prompts.
+3. **Check the ads before you make them.** Use the skill `pre-launch-ad-checker`. Give it the image prompt from the steps before. Reads the prompts from the step before and names anything to fix before you spend on images. It hands over a fix list.
 
 Pause here: Make the images in your image tool with the settings from step 2. Pick the ones you approve.
 
-4. **Get the picked images to full size.** Use the skill `image-upscale-checker`. Takes the images you approved after the pause.
+4. **Get the picked images to full size.** Use the skill `image-upscale-checker`. Uses the images you approve after the pause, not the fix list from step 3. It hands over the enlarged images with a change check.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

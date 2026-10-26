@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: community-workshop-guide-builder
 name: Community workshop guide builder
-summary: Share a community goal and local facts. Get practical activities, worksheets, and clear notes for the host.
+summary: Turn a community goal and local facts into a community workshop guide with activities, worksheets and host notes that someone else can run.
 job: teach-and-train
 headline: Community workshop guide builder
 subhead: Share the community, shared goal, time available, and local facts. It turns the need into hands-on activities with useful results. You get editable handouts, host notes, and review steps. Roles and local facts stay marked when they still need to be checked.
+not_for:
+  - "You want a travel guide or visitor plan for a place: use a travel writer or a local tourism office."
+  - "You only need a document formatted or turned into a PDF: use your word processor or a simple formatting step."
+  - "A real emergency is happening now: call local emergency services. This tool does not direct live incidents."
 you_give:
   - Community and goal, local evidence, available time, participation needs, and any existing guide.
 you_get:
@@ -28,3 +32,24 @@ how_to_use:
   - Give the community, shared goal, time available, local facts, and access needs.
   - For one short session, ask for only a brief participant worksheet and separate host notes. Set a length limit if needed.
   - Check that section names, timings, and worksheet fields agree. Keep roles proposed until someone accepts them; review drafts before use.
+output_sample:
+  input:
+    - Your community and the goal you share
+    - Local facts you already have, like surveys or notes from residents
+    - How much time you have and how you will meet
+    - Access needs, like paper copies or other languages
+    - An existing guide to adapt or revise (optional)
+  prerequisites:
+    - An AI that can read the skill folder and its reference files
+    - Python 3.10 or newer, only if you want the optional plan checker to run
+  output:
+    - name: Community brief
+      contains: Who the guide serves, the goal, local setting, time, medium, owner, and which voices are still missing.
+    - name: Participant worksheet
+      contains: Short fields that turn each activity into a decision, map, plan or other usable result.
+    - name: Facilitator notes
+      contains: Timings, preparation, supplies, instructions, debrief questions, completion checks and fallbacks for each activity.
+    - name: Sources and adaptation notes
+      contains: Where local facts came from, what was changed for this community, and what still needs checking.
+    - name: Maintenance record
+      contains: Who owns the guide, when to review it, and how feedback leads to changes.

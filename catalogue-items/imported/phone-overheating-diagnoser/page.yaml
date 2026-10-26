@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads device data and reasons about causes.
 new_slug: phone-overheating-diagnoser
 name: Phone overheating diagnoser
-summary: Describe the heat or battery drain. Get safe, read-only checks run and
-  the likely cause named.
+summary: Find why your Android phone overheats or drains fast. Get read-only checks run over a USB link and the likely cause named, with how sure it is.
 job: think-and-decide
 headline: Phone overheating diagnoser
-subhead: Find why an Android phone runs hot or drains fast, with checks that
-  only read and never change anything. You get the likely cause named, plus what
-  the evidence shows and what is only a guess.
+subhead: Find why an Android phone runs hot or drains fast, with checks that only read and never change anything. You get the likely cause named, plus what the evidence shows and what is only a guess.
 explain: |
   Find why an Android phone runs hot or drains fast, with checks that only read and never change anything. You get the likely cause named, plus what the evidence shows and what is only a guess.
 
@@ -18,6 +15,10 @@ when:
   - The battery drops fast and you suspect one app.
   - Heat shows up only on charging or weak signal.
   - A past debloat attempt may have changed power settings.
+not_for:
+  - "You build an Android app and want to profile its energy use: use an app-performance skill, or ask your developer."
+  - "Your phone is swollen, smoking or smells sharp: stop, power it off and take it to the maker or a qualified repair shop."
+  - "You use an iPhone or have no computer and USB cable: this needs a computer, so ask a repair shop to check the phone."
 you_give:
   - A description of when it gets hot
   - The phone connected with debugging on
@@ -29,8 +30,38 @@ you_get:
   - Evidence kept apart from inference
   - One small reversible fix to approve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands on your phone link.
+  - Turn on USB debugging on your phone, then connect it to a computer that has ADB installed.
+  - Open an AI that can run commands on your computer, such as Claude Code, and paste in this skill.
+  - Say when the phone gets hot, and add any recent app or update changes.
+  - Let it run the read-only checks, then read the cause and how sure it is.
+  - Approve a change only if you want it. Each change comes with a way to undo it.
+  - Afterwards, share the redacted report with a repair service, or run the same comparison again after the change.
+output_sample:
+  input:
+    - A description of when your phone gets hot, such as charging, weak signal, navigation or idle
+    - Your Android phone connected to a computer, with USB debugging on
+    - Recent changes, new apps or updates (optional)
+    - Notes on your charger, cable and battery condition
+  prerequisites:
+    - An AI that can run commands on your computer and read the results
+    - A computer with ADB installed and a USB cable
+    - Permission to inspect the phone, meaning it is yours or you are allowed to check it
+  output:
+    - name: Symptom and context
+      contains: What you described, when the heat happens, and the phone model and Android version.
+    - name: Safety status
+      contains: Whether any sign of danger, such as swelling or smoke, means you should stop and seek repair.
+    - name: Evidence collected
+      contains: The read-only battery, thermal, processor and activity results, with gaps noted where the phone gave nothing.
+    - name: Controlled comparison
+      contains: The one side-by-side test used, such as charging versus unplugged, and what it showed.
+    - name: Most likely cause
+      contains: One main cause from a fixed list, with other possible contributors listed apart.
+    - name: Confidence
+      contains: One of confirmed, strongly supported, possible or unknown, matched to the evidence.
+    - name: Proposed next test or smallest fix
+      contains: One small change that can be undone, with the approval it needs.
+    - name: Rollback
+      contains: The original value and the exact step to put the setting back.
+    - name: Remaining uncertainty
+      contains: What the checks could not show and what to do next if the heat stays.

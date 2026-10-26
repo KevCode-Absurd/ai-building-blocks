@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Wrapping code for the cloud is routine but needs testing.
 new_slug: cloud-gpu-job-runner
 name: Cloud GPU job runner
-summary: Give it your Python code. Get it running on rented GPUs, or live as a
-  web API, with no server to manage.
+summary: Run your Python code on rented GPUs or put it online as a web API, with no server to manage. Pay by the second and scale to zero.
 job: ship-and-host
 headline: Cloud GPU job runner
-subhead: Your Python code runs on rented GPUs, or goes live as a web endpoint,
-  and you do not manage a server. You pay by the second, and everything shuts
-  down to zero when idle.
+subhead: Your Python code runs on rented GPUs, or goes live as a web endpoint, and you do not manage a server. You pay by the second, and everything shuts down to zero when idle.
 explain: |
   Your Python code runs on rented GPUs, or goes live as a web endpoint, and you do not manage a server. You pay by the second, and everything shuts down to zero when idle.
 
@@ -18,6 +15,10 @@ when:
   - You want to serve a model as an API without a server.
   - You have thousands of items to process in parallel.
   - You need a job to run on a schedule on a GPU.
+not_for:
+  - "You need a machine that stays on with saved state: use RunPod, or rent a long-running virtual machine."
+  - "You want reserved GPU machines for weeks of training: use Lambda Labs."
+  - "You run many connected services, or want to compare prices across clouds: use Kubernetes or SkyPilot."
 you_give:
   - Your Python code or model
   - The GPU size you need
@@ -30,8 +31,33 @@ you_get:
   - Caching for model files
   - Notes on cost
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and use a Modal account (paid).
+  - Create a Modal account and add a payment method. Install it with pip install modal, then run modal setup to sign in.
+  - Open Claude, ChatGPT or Gemini. Paste this skill, then paste your Python code or describe your model.
+  - Say if it is a one-off job, a batch, a schedule or a web API. Name the GPU size if you know it.
+  - Read the Modal app file your AI writes. Check the GPU, timeout and package list before you run it.
+  - Run it with modal run for a test, or modal deploy to go live. Your AI needs to run commands to do this for you. Otherwise, run them yourself.
+  - Check how it went with modal app logs and your Modal dashboard. Look at costs after your first runs.
+output_sample:
+  input:
+    - Your Python code or model
+    - The GPU size you need (or say small, medium or large)
+    - Whether it is a one-off job, a schedule, a batch or a web API
+    - Your Hugging Face token or other keys (optional)
+  prerequisites:
+    - A Modal account (paid, billed by the second)
+    - Python on your computer, with the Modal tool installed using pip install modal
+    - A one-time sign-in with modal setup
+    - An AI that can run commands, if you want it to deploy for you
+  output:
+    - name: Modal app file
+      contains: Your Python code wrapped in a Modal app with the function, class or web endpoint set up.
+    - name: GPU and container settings
+      contains: The GPU type, memory, timeout, and the container image with the packages your code needs.
+    - name: Model caching and storage
+      contains: A saved volume so model files load fast, plus secrets set up for any keys.
+    - name: Run or deploy command
+      contains: "The command to start it: modal run for a one-off job, or modal deploy to go live."
+    - name: Web endpoint or schedule
+      contains: A web address for your API, or a cron or timed schedule for repeat jobs.
+    - name: Cost and troubleshooting notes
+      contains: How to keep costs down, plus fixes for slow starts, out-of-memory errors and timeouts.

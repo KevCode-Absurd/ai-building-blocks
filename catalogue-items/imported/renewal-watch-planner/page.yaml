@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs risk signs against dates and value.
 new_slug: renewal-watch-planner
 name: Renewal watch planner
-summary: Ask what is renewing. Get upcoming renewals with timing, risk and room
-  to raise the price.
+summary: See which renewals are coming up, which look risky, and where you can raise the price. Works as a renewal tracker from your CRM or a contract file.
 job: sell-and-negotiate
 headline: Renewal watch planner
-subhead: A list of renewals coming up, sorted by timing and risk, with a read on
-  how much room you have to raise the price. A renewal you plan at ninety days
-  out is a conversation.
+subhead: A list of renewals coming up, sorted by timing and risk, with a read on how much room you have to raise the price. A renewal you plan at ninety days out is a conversation.
 explain: |
   A list of renewals coming up, sorted by timing and risk, with a read on how much room you have to raise the price. A renewal you plan at ninety days out is a conversation. One you notice at two weeks is a discount.
 
@@ -18,6 +15,10 @@ when:
   - You want early warning on renewals that look shaky.
   - You are deciding whether to raise prices at renewal.
   - You only have a spreadsheet of contracts, not a CRM.
+not_for:
+  - "You want to review new deals or open pipeline: use a deal health check, since this skill only covers accounts that already have a renewal date."
+  - "You have an account with no renewal date or contract end date: add the date first, or ask a person on the account team."
+  - "You want a full plan to grow one account: use the expansion-whitespace skill, which this one only hands off to."
 you_give:
   - Your book, one account or the team
   - Time window to look at
@@ -29,8 +30,28 @@ you_get:
   - Price uplift estimates
   - Prep actions for each renewal
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat.
+  - "Say which accounts to cover: your book, one account or the team. Say the window, such as the next 120 days."
+  - Connect your CRM if your AI can. If not, upload a renewals or contracts file.
+  - Read the radar table first. Then check the at-risk block and the evidence behind each flag.
+  - Ask for a prep brief on any one account, or ask for the fixes as a checklist you apply yourself.
+output_sample:
+  input:
+    - Your book, one account or the whole team
+    - The time window to look at, such as the next 120 days
+    - A renewals or contracts file, or CRM access
+    - Email or chat access for risk signals (optional)
+  prerequisites:
+    - A CRM your AI can read, or an uploaded renewals or contracts export
+    - Write access to your CRM only if you want record fixes made for you (optional)
+  output:
+    - name: Radar table
+      contains: Each renewal with account, renewal date, amount, status, risk driver and next step.
+    - name: At-risk block
+      contains: The renewals to act on this week, with the specific risk and the play to use.
+    - name: Uplift candidates
+      contains: Accounts with an expansion signal and the proposed move, ready to hand to the expansion-whitespace skill.
+    - name: Hygiene list
+      contains: Renewals with no record yet, missing amounts, or close dates after the contract end date.
+    - name: Renewal prep brief
+      contains: "For one named account: history, current mood, price recommendation and a paperwork timeline worked back from the end date."

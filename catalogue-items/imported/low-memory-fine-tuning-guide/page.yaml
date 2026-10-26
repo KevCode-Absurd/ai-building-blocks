@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Fitting a large model into limited memory needs careful trade-offs.
 new_slug: low-memory-fine-tuning-guide
 name: Low-memory fine-tuning guide
-summary: Give it a big model and your GPU size. Get a fine-tune that trains
-  under 1 percent of the model and fits.
+summary: Give it a big model and your GPU size. Get a low-memory fine-tuning setup in Python that trains under 1% of the model and fits your card.
 job: build-software
 headline: Low-memory fine-tuning guide
-subhead: A fine-tuning setup that trains less than one percent of a large model,
-  so it fits on a single GPU. It uses small add-on layers called adapters, which
-  can be around 6 MB instead of a 14 GB full copy.
+subhead: A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
 explain: |
   A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
 
@@ -18,19 +15,47 @@ when:
   - Full fine-tuning runs out of memory on your card.
   - You need several task-specific versions of one base model.
   - You are deciding between LoRA, QLoRA and full training.
+not_for:
+  - "You want the AI to run the training for you: this gives code and settings only, so run it on a GPU machine or a cloud notebook."
+  - "Your model is under 1B parameters, or you need top quality and have the compute: use full fine-tuning."
+  - "You have no GPU and no coding help: ask a developer or use a hosted fine-tuning service."
 you_give:
-  - The base model
-  - Your GPU and memory
-  - Your training dataset
+  - The base model, for example a 7B to 70B model
+  - Your GPU model and how much memory it has
+  - Your training data, with an instruction and a response for each example (JSON or CSV)
+  - Your Hugging Face access token, if the model needs one (optional)
   - Your quality target (optional)
 you_get:
-  - A LoRA or QLoRA choice with reasons
-  - Training code
-  - Settings tuned to your memory
-  - Steps to save and swap adapters
+  - A LoRA or QLoRA choice with the reasons
+  - A Python training script that matches your model
+  - Settings such as rank and alpha, set for your memory
+  - Steps to save, load, merge and swap adapters
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Tell it your base model, your GPU and its memory, and what your training data looks like.
+  - Check the method it picks. For example, a 8B model on a 24 GB card with 2,000 support tickets suits LoRA with rank 16 and alpha 32. That adapter is only a few MB to tens of MB.
+  - Copy the script to a computer with a GPU, or a cloud notebook, and run it. Your AI does not run the training itself.
+  - If memory runs out, ask your AI for the fixes in this skill. Memory use for 70B QLoRA changes with your setup, so test it first.
+  - Save the adapter. Keep one per task if you need more than one.
+output_sample:
+  input:
+    - The base model you want to tune
+    - Your GPU model and how much memory it has
+    - Your training data, with an instruction and a response for each example
+    - Your Hugging Face access token, if the model needs one (optional)
+  prerequisites:
+    - A computer with a GPU, or a cloud notebook, to run the Python code
+    - Python with the peft, transformers, bitsandbytes and datasets libraries installed
+  output:
+    - name: Method choice
+      contains: LoRA or QLoRA for your model and memory, with the reason, and when full fine-tuning is the better pick.
+    - name: LoRA or QLoRA config
+      contains: Settings such as rank, alpha, dropout and which model layers to train, matched to your model type.
+    - name: Training script
+      contains: Python code that loads the model, formats your data, applies the adapter and trains.
+    - name: Save and load steps
+      contains: Code to save the small adapter, load it again, and merge it into the base model.
+    - name: Multi-adapter steps
+      contains: How to keep several task adapters on one base model and switch between them.
+    - name: Fixes for common problems
+      contains: What to change if memory runs out, the adapter does not apply, or quality drops.

@@ -1,8 +1,12 @@
 # AI Blocks (useaiblocks.com)
 
+**Agency Agents (25 Oct):** 283 source agent profiles across 18 divisions, packaged as agents with skill adapters, setup guides, MIT licences and pinned source hashes. Originals stay unchanged in each download. Intake and package checks: `reports/2026-10-25-agency-agents-import.json` and `reports/2026-10-25-agency-agents-checks.json`. These entries have not had model behavior tests.
+
+**Minds (23 Oct):** 505 ready minds, including 200 new profiles for everyday tasks across cooking, home, learning, relationships, work, money, wellbeing, communities, technology and creative practice. Search by task or name, use a mind on its own, or seat an advisory council. Portrait motion plays once per visit and then rests. Source review: `reports/2026-10-23-minds-editorial-audit.json`.
+
 **Apps (19 Oct):** `/apps` shows example apps as click-through tours (one client app with every detail replaced by Sprout, and Mercatura's three standalone apps plus the combined one), and the **app starter pack** in `app-starter/` turns skills and workflows into an app with sign-in and teams. PRD: `docs/APPS-PRD.md`. `node tools/check-masking.mjs` keeps the client app anonymous and runs with every build.
 
-A **free, evergreen library** of tested AI building blocks for any business. It isn't only skills: it has prompts, skills, routines, workflows, applications, and people's own agents and bots. Each comes ready-made and with a plain how-to guide for setting it up yourself. Every listing comes with:
+A **free, evergreen library** of AI building blocks for any business. Blocks that have passed a recorded test are marked Tested; imported ones say "Imported, not yet tested". It isn't only skills: it has prompts, skills, routines, workflows, applications, and people's own agents and bots. Each comes ready-made and with a plain how-to guide for setting it up yourself. Every listing comes with:
 - a plain-words explanation and a real before and after
 - the right model for the job, with its cost
 - downloads that run in Claude, ChatGPT, Codex or any AI
@@ -14,7 +18,7 @@ A **free, evergreen library** of tested AI building blocks for any business. It 
 
 **Free first.** There's no paywall and no selling at the start. Money comes later, one stream at a time: affiliates, advertising (site and YouTube), consulting and implementation, memberships, premium workflows, and a creator marketplace (70/30).
 
-> **Status (2026-10-18): building v0 (Kevin approved building on 18 Oct).** The PRD is `docs/PRD.md`. `catalogue-items/` holds 166 renamed and tightened blocks (152 general, 14 ecommerce) plus 7 ready-made workflows; none is marked tested yet. `site/` is the first version of the website: homepage, library, block pages, kits, the drag-and-drop canvas and the handoff pack download. "AI Building Blocks" is a working name.
+> **Status (2026-10-26): live at useaiblocks.com since 22 Oct 2026.** The PRD is `docs/PRD.md`. `site/public/data/blocks.json` lists 5,298 items: 3,597 skills, 559 workflows, 445 agents, 192 prompts and 505 minds. 133 are tested so far (124 skills, 7 prompts, 2 workflows); testing of the rest is under way. `site/` is the website: homepage, library, block pages, kits, the drag-and-drop canvas and the handoff pack download. "AI Building Blocks" is a working name.
 
 ## Start here
 

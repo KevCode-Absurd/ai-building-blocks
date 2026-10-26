@@ -1,33 +1,26 @@
 slug: issuer-pension-evidence-review-assistant
 name: Issuer pension evidence review assistant
-summary: Review pension funded status, recognized costs and cash contributions as separate measures.
+summary: Check a company's pension plan balances, costs and cash paid in. Spot new assumptions, gaps and any proposed move from OCI to profit.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - separate-pension-cost-funding-and-remeasurement
   - oci-reclassification-bridge
 steps:
   - uses: separate-pension-cost-funding-and-remeasurement
-    note: Run the governing workflow when When the user provides new pension plan notes, actuarial disclosures or contribution records, compare the plan perimeter and assumptions with the last accepted reconciliation.
+    note: Run this when new pension plan notes, actuarial disclosures or contribution records arrive. Compare the plan list and assumptions with the last accepted review, then split the change into cost, cash funding and remeasurement. It hands step 2 a reconciled opening and closing balance for each plan.
   - uses: oci-reclassification-bridge
-    note: If a proposed earnings adjustment treats pension OCI as recycled profit, verify eligibility first; do not run a fictional recycling entry for a non-recyclable remeasurement. Use the conservation bridge only for an independently permitted reclassification.
+    note: Run this only when someone proposes moving a pension OCI amount into profit. Check from the filing whether that amount may be moved at all. If the filing says it stays in OCI, stop and say so; never build a recycling entry for it.
 origin: own
 version: 1.0.0
 added: 2026-10-22

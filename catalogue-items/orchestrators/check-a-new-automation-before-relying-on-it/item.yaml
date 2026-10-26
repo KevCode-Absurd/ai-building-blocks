@@ -1,6 +1,6 @@
 slug: check-a-new-automation-before-relying-on-it
 name: Check a new automation before relying on it
-summary: Share the source files. Get a process map, failure checks and a reviewable operating procedure.
+summary: Find where a new automation can fail, such as double runs or no approval step. Get a written procedure with a test checklist and recovery steps.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - process-and-sop-writer
 steps:
   - uses: repeatable-ai-loop-designer
-    note: Use Audit or LoopDoctor mode on the supplied automation. Check trigger, scope, inputs, exceptions, state, duplicate protection, retries, approval points and stopping rules without live catalogue search.
+    note: Use Audit or LoopDoctor mode on the supplied automation. Check trigger, scope, inputs, exceptions, state, duplicate protection, retries, approval points and stopping rules without live catalogue search. Hands step 2 the repaired design.
   - uses: process-and-sop-writer
-    note: Write the operating procedure, test checklist and recovery steps for the agreed design.
+    note: Uses the repaired design from step 1. Writes the operating procedure, test checklist and recovery steps for the agreed design.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

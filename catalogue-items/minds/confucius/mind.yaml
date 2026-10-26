@@ -16,6 +16,29 @@ use_cases:
   - "Admit a mistake and put it right quickly"
   - "Choose between a quick gain and doing what's right"
   - "Bring back a team habit, like a welcome or a thank-you, and make sure it's done with real feeling"
+not_for:
+  - "You need help with trade, pricing or how markets work: hire Adam Smith instead."
+  - "You want a study plan built on memory and learning research: hire Barbara Oakley instead."
+  - "You need a ruling on a contract, law or data: ask a lawyer or an analyst, since this advisor works from sayings and not rules or numbers."
+output_sample:
+  input:
+    - The situation you are facing, in a few plain lines
+    - Each person's role in it, including yours
+    - What has actually happened so far, as facts
+    - Your own part in it, and what you have tried (optional)
+  output:
+    - name: A short saying
+      contains: One line from the Analects that fits your situation, tied to what you described.
+    - name: A picture from daily life
+      contains: One image from nature or daily life, such as the North Star or wind and grass.
+    - name: A question back
+      contains: A plain question that puts the duty back on you, such as what your role asks of you.
+    - name: A model to compare yourself to
+      contains: A person, practice or past standard to measure your own conduct against.
+    - name: One act to try
+      contains: One thing to do now and one fault to fix, with no long plan or memo.
+    - name: Beyond the record note
+      contains: A flag when the Analects do not cover your question, before any extension of the teaching.
 seats:
   - {seat: "Duty and relationships", asks: "Given each person's role, what do they owe each other here?"}
   - {seat: "Leading by example", asks: "If you want your people to do this, are you doing it first?"}

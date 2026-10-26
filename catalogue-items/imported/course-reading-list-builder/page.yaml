@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It groups topics, searches papers and only lists what it found.
 new_slug: course-reading-list-builder
 name: Course reading list builder
-summary: Give it a course syllabus. Get a Word reading list of recent
-  peer-reviewed papers for each section. Needs a paid Consensus account.
+summary: Turn your course syllabus into a Word reading list of recent peer-reviewed papers, with plain summaries and discussion questions. Needs Consensus.
 job: teach-and-train
 headline: Course reading list builder
-subhead: A Word document of recent, peer-reviewed papers for each section of
-  your course, each with a short summary and discussion questions. You get
-  reading that is current and matches your students' level.
+subhead: A Word document of recent, peer-reviewed papers for each section of your course, each with a short summary and discussion questions. You get reading that is current and matches your students' level.
 explain: |
   A Word document of recent, peer-reviewed papers for each section of your course, each with a short summary and discussion questions. You get reading that is current and matches your students' level.
 
@@ -18,6 +15,10 @@ when:
   - You teach a new course and need supplementary reading fast.
   - Students ask for sources beyond the textbook.
   - You want discussion questions tied to each reading.
+not_for:
+  - Your course already has a full reading list. Keep it, or ask a colleague to review it.
+  - You need older, foundational books or classic papers. Use your library catalogue search instead.
+  - You have no paid Consensus account or way to run code. Ask your librarian for a database search instead.
 you_give:
   - The course syllabus
   - Course audience and level
@@ -29,8 +30,33 @@ you_get:
   - Discussion questions
   - Confirmed topic grouping
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and connect Consensus.
+  - Check your setup first. You need a paid Consensus account connected to your AI, an AI that can run code, and Node.js. Pasting the instructions into a plain chat is not enough.
+  - Open your AI and load this skill. Say you want a reading list from your syllabus.
+  - Give your syllabus as a file, pasted text or a photo. Then pick your course level and how recent the papers should be.
+  - Check the proposed sections. Ask to merge, split, add or remove any, then confirm. Searching starts only after you confirm.
+  - Read the finished Word file. Check each summary and question against your learning goals.
+  - Note any section marked as limited results. Fill it by hand or with a library search.
+output_sample:
+  input:
+    - Your course syllabus (PDF, Word file, pasted text or a photo)
+    - Your course level, from intro undergraduate to doctoral or mixed
+    - "How recent the papers should be: last 1, 2 or 5 years"
+  prerequisites:
+    - A paid Consensus account connected to your AI
+    - An AI that can run code and read files
+    - Node.js installed, so the Word file can be built
+  output:
+    - name: Proposed sections
+      contains: Your syllabus topics grouped into 6 to 12 sections, for you to confirm, merge, split, add or remove before any search.
+    - name: Learning outcomes
+      contains: The goals from your syllabus, or 3 to 5 inferred ones marked as inferred.
+    - name: Papers by section
+      contains: One to three recent papers per section, each with authors, journal, year and a link to Consensus.
+    - name: Plain-language summaries
+      contains: Two or three sentences per paper, pitched at your chosen course level.
+    - name: Discussion questions
+      contains: One question per paper that asks students to apply, analyse or judge, tied to a learning outcome.
+    - name: Audit log
+      contains: Counts of searches sent, papers received and papers cited, plus notes on sections with thin results.
+    - name: Reading list Word file
+      contains: A formatted .docx with a title page, intro, outcomes box and every section above.

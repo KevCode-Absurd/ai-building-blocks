@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It has to pick the few points a busy reader needs.
 new_slug: contract-plain-summary
 name: Contract plain-words summary writer
-summary: Give it a reviewed contract. Get a two-minute summary of what to know
-  before signing. A first check, not legal advice.
+summary: Turn a reviewed contract into a plain-words summary a busy person can read in two minutes before signing. A first check, not legal advice.
 job: check-contracts
 headline: Contract plain-words summary writer
-subhead: A two-minute summary of a contract, written so a busy person knows what
-  matters before signing. It gives the pages the same attention a careful friend
-  would, in words you use every day.
+subhead: A two-minute summary of a contract, written so a busy person knows what matters before signing. It gives the pages the same attention a careful friend would, in words you use every day.
 explain: |
   A two-minute summary of a contract, written so a busy person knows what matters before signing. It gives the pages the same attention a careful friend would, in words you use every day.
 
@@ -18,6 +15,10 @@ when:
   - You need to brief a manager on a long agreement in a few minutes.
   - A client asks what they are agreeing to and you want a short answer.
   - You want to prepare questions before talking to your lawyer.
+not_for:
+  - "You have not had the contract reviewed yet: get a full review first, or ask a lawyer to read it, then come back with the review notes."
+  - "The summary will go to a counterparty, a vendor or a public channel: remove the legal-only notes first, or ask your lawyer to check what is safe to share."
+  - "You need advice on whether to sign or how to negotiate: talk to a lawyer, because this only shortens a review that already exists."
 you_give:
   - The contract text
   - Notes from a prior review (optional)
@@ -29,10 +30,31 @@ you_get:
   - Key dates, costs and duties
   - Questions to ask a lawyer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /commercial-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste in the finished review of your contract. This is required. The skill reads the review and does not review the contract again.
+  - Paste the contract text too, so quotes can be checked against it. Say which side you are on and who will read the summary.
+  - Check the result. It should be under 200 words, not counting the escalation status, and every quoted clause should keep its full condition.
+  - If the summary says a renewal is tracked, check that you really set up that reminder. If not, add it to your calendar yourself.
+  - Ignore any mention of plugin commands or config files. This page does not include them, so your AI will ask you for the details instead.
+output_sample:
+  input:
+    - The completed contract review notes, pasted in
+    - The contract text, for checking quotes
+    - "Which side you are on: buying or selling"
+    - Who will read the summary, such as procurement or a department head
+  prerequisites:
+    - A finished review of the contract, written by you, your lawyer or another AI chat
+    - A note of whether the review was for the buying side or the selling side
+  output:
+    - name: Headline
+      contains: "The counterparty, the type of agreement and a verdict: ready to sign, needs changes, or blocked."
+    - name: What this is
+      contains: One paragraph saying what the agreement does in everyday business terms.
+    - name: The catch
+      contains: One paragraph on the thing that would surprise the reader later, or a clear note that nothing stands out.
+    - name: Escalation status
+      contains: A count of the people the review said should see it, and which of them have not been told yet.
+    - name: What you need to do
+      contains: A checklist of at most three actions for the reader.
+    - name: Approval
+      contains: One line on who approves and when.

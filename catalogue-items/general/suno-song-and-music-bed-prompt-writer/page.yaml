@@ -1,32 +1,127 @@
 new_slug: suno-song-and-music-bed-prompt-writer
 name: Suno song and music bed prompt writer
-summary: Describe the music you need. Get a compact Suno style prompt with tempo, instruments, structure and mix.
+summary: Write a Suno prompt for a song, background music or a voice-over bed. Get genre, tempo, instruments, structure and mix in one short block to paste in.
 job: work-with-audio
 headline: Suno song and music bed prompt writer
-subhead: Describe the music you need. Get a compact Suno style prompt with tempo, instruments, structure and mix. Bring the brief and any files you want it to use.
+subhead: Tell it what the music is for, how long it runs and the mood. It picks a song, an instrumental or a bed that sits under a voice. You get a short Suno style prompt with a tempo, instruments, structure and mix, and lyrics if you ask for them.
 explain: |-
-  Use this when you need compact music style prompts and optional lyric structure. Choose song, instrumental, score or voice-over bed from the request. Identify intended mood, length and visual/audio role before selecting an arrangement.
+  A Suno prompt works best when it is short and specific. "Make a sad song" gives you a lottery. "Slow piano ballad, 68 BPM, sparse, close and warm" gives you a direction. Most people know the feeling they want but not the words Suno responds to, such as tempo, instrument and mix terms.
 
-  Use one primary genre and one secondary genre, with an explicit BPM. These are creative starting points, not facts about permitted tool settings.
+  This skill turns your plain description into those words. It first decides what you need: a song with singing, an instrumental, a film-style score or a bed to sit under narration. It picks one main genre and one second genre, sets a tempo, and names four to six instruments for each part. For a narration bed it leaves room for speech and avoids a lead melody that competes with the voice.
+
+  It writes the style prompt in a fixed order and counts its length, so it fits the tool's limit. If you want lyrics, it writes them as a separate block with labeled parts. It does not make the music. It writes the prompt you paste into Suno, and you listen and ask for one change at a time.
+
 when:
-  - You need compact music style prompts and optional lyric structure.
-  - You want a clear draft and checks from the material you already have.
+  - You need music for a video ad, a tutorial or a podcast intro, and you have the idea but not the Suno words.
+  - A voice-over needs a quiet bed under it, with space left for the speaker.
+  - You want a song with lyrics for a brand, a launch or a gift, and you want the style prompt and the lyrics kept apart.
+  - A Suno track came out wrong and you want to change only one thing, such as the tempo or the instruments.
+
+not_for:
+  - "You need spoken words or a voice-over script. Use the ElevenLabs spoken script writer."
+  - "You need the sound of a voice, not music. Use the ElevenLabs voice description writer."
+  - "You need a licensed track for commercial use with a clear license. Use a stock music library or a composer. A prompt does not give you rights."
+  - "You want the song written as a short rhymed video ad with a picture for each line. Use the Jingle video ad script writer."
+
 you_give:
-  - brief
-  - "Optional: script"
+  - "What the music is for, such as a 30-second tutorial or a product launch video"
+  - "The type: a song with singing, an instrumental, a score or a bed under a voice"
+  - "The mood and the setting you can picture"
+  - "The length, and the tempo if you know it"
+  - "Your voice-over script, so it can leave room for speech (optional)"
+  - "A topic or message for the lyrics, if you want lyrics (optional)"
+
 you_get:
-  - document
-  - Missing inputs and steps that still need to run
+  - "A Suno style prompt in a fixed order: genre and tempo, vocals, instruments, structure, mix, mood and notes"
+  - "A character count for the style prompt"
+  - "Lyrics with labeled parts, as a separate block, if you asked for them"
+  - "A short list of what it could not check, such as hearing the track"
+
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open Claude, ChatGPT or Gemini and paste the skill instructions. No code or paid tool is needed to write the prompt."
+  - "Describe the music in a few lines: what it is for, the mood, the length and whether it has singing. Paste your voice-over script if there is one."
+  - "Read the style prompt. Check the tempo, the genres and the instruments against what you pictured."
+  - "Paste the style block into Suno, and the lyrics into the lyrics box if you asked for them. Make one track."
+  - "Listen. Tell your AI what to change, one thing at a time, and ask for a new prompt."
+  - "Check the license terms of your Suno plan before you use a track in a paid ad or a product."
+
 how_it_works:
-  - title: Read the brief
-    text: Choose song, instrumental, score or voice-over bed from the request. Identify intended mood, length and visual/audio role before selecting an arrangement.
-  - title: Build the result
-    text: "Write Style fields in order: GENRE, VOCALS, INSTRUMENTATION, STRUCTURE, MIX, MOOD/ATMOSPHERE, STYLE NOTES, optional effects."
-  - title: Check and hand off
-    text: Iteration changes only the requested musical dimension and necessary dependencies. Do not claim a track exists, guarantees timing or has licensed commercial rights without the relevant service evidence.
+  - title: Chooses the kind of music
+    text: Decides between a song, an instrumental, a score and a bed under a voice, and notes the mood, length and role.
+  - title: Sets genre and tempo
+    text: Picks one main genre, one second genre and a clear tempo in beats per minute.
+  - title: Names the vocals and instruments
+    text: Describes the voice or asks for no singing, then lists four to six instruments for each part.
+  - title: Sets structure, mix and mood
+    text: Uses arrows for the shape of the track and a concrete scene for the feeling. Leaves room for speech on a bed.
+  - title: Counts the length
+    text: Keeps the style prompt under about 1,000 characters unless your plan allows more, and counts it.
+  - title: Changes one thing at a time
+    text: When you ask for a revision, it changes that one part and what depends on it. It never claims a track exists.
+
+output_shape: |-
+  STYLE
+  [GENRE: <main> x <second> (<BPM> BPM)]
+  [VOCALS: <voice type and delivery, or instrumental only>]
+  [INSTRUMENTATION: <four to six instruments, each with an adjective>]
+  [STRUCTURE: <intro> > <section> > <section> > <end>]
+  [MIX: <how it should sound and sit in the speakers>]
+  [MOOD/ATMOSPHERE: <a scene and a feeling>]
+  [STYLE NOTES: <one line on the purpose>]
+
+  CHARACTERS
+  <style prompt length>
+
+  LYRICS (only if you asked)
+  [Verse]
+  <lines>
+  [Chorus]
+  <lines>
+
+  NOT RUN
+  <what it could not check, such as generating or hearing the track>
+
+output_sample:
+  input:
+    - "What the music is for, the mood and the length"
+    - "The type: song, instrumental, score or bed under a voice"
+    - "Your voice-over script, if there is one (optional)"
+    - "A topic for the lyrics, if you want lyrics (optional)"
+  prerequisites:
+    - "A Suno account to turn the prompt into a track, if you want to hear it"
+  output:
+    - name: "STYLE"
+      contains: "Seven short fields in order: genre and tempo, vocals, instruments, structure, mix, mood and notes."
+    - name: "CHARACTERS"
+      contains: "The length of the style prompt, counted against the limit."
+    - name: "LYRICS"
+      contains: "Words with labeled parts such as verse and chorus. Only written if you ask."
+    - name: "NOT RUN"
+      contains: "The checks that still need you, such as making a track and listening to it."
+
+next: [elevenlabs-spoken-script-writer, jingle-video-ad-script-writer, sound-off-commercial-checker]
+
+works_best_with:
+  tools:
+    - name: Suno
+      why: Turns the prompt into a track. Check your plan's limits and license terms before use.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can write the prompt. No code or files are needed.
+  inputs:
+    - A voice-over script, so it can leave room for speech.
+    - Two or three words for the mood, and a scene you can picture.
+
+terms:
+  - term: BPM
+    meaning: Beats per minute. A higher number is a faster track.
+  - term: Music bed
+    meaning: Quiet music that plays under a voice, so the voice stays clear.
+  - term: Instrumental
+    meaning: Music with no singing.
+  - term: Score
+    meaning: Music written to go with a film, a game or a scene.
+  - term: Mix
+    meaning: How the sounds are balanced, such as how loud the bass is and how wide the track feels.
+
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It pulls several sources together and picks what matters.
 new_slug: account-catch-up-brief-writer
 name: Account catch-up brief writer
-summary: Name a customer. Get a one-page brief from your CRM, email, docs and
-  calls, each fact linked.
+summary: "Get an account catch-up brief for any customer: open deals, recent emails, calls and gaps from your CRM and inbox, with a link to each fact."
 job: sell-and-negotiate
 headline: Account catch-up brief writer
-subhead: Name a customer and connect your CRM, email and docs. It reads the
-  recent records, call notes and threads, and cites each fact with a link so you
-  can check it. You get a one-page brief with open deals, recent contacts, blank
-  fields named as blank and next steps to approve.
+subhead: Name a customer and connect your CRM, email and docs. It reads the recent records, call notes and threads, and cites each fact with a link so you can check it. You get a one-page brief with open deals, recent contacts, blank fields named as blank and next steps to approve.
 explain: |
   Five tools worth of customer news fits in one brief that pulls together your CRM, email, shared docs and call notes.
 
@@ -19,6 +15,10 @@ when:
   - You took over an account and need the history fast.
   - You want to know what was last promised to a customer.
   - You want one view of deals, emails and notes in a single place.
+not_for:
+  - "You want to research a prospect who is not a customer yet: use a prospect research step or ask your AI to look up the company's public site."
+  - "You need to change a CRM record or log a call: do that in your CRM, since this brief only reads and suggests."
+  - "You have no CRM, email or notes to share: paste a few notes or upload a spreadsheet of accounts, or the brief will be thin."
 you_give:
   - A customer or account name
   - Connected CRM, email and docs
@@ -31,8 +31,31 @@ you_get:
   - Gaps where data was blank
   - Suggested next steps for you to approve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini. Connect your CRM, email and docs in your AI's settings if it offers connectors.
+  - Paste the skill into the chat, then type the customer name.
+  - If nothing is connected, upload a spreadsheet of your accounts or paste your recent notes and emails.
+  - Read the brief. Click the links to check each fact, and look at the gaps and flags.
+  - Approve or drop the suggested next steps. Make any record changes yourself in your CRM.
+output_sample:
+  input:
+    - The customer or account name
+    - Your connected CRM, email, docs, call notes and chat (any you have)
+    - How far back to look (optional)
+    - A spreadsheet of accounts or pasted notes, if nothing is connected (optional)
+  prerequisites:
+    - An AI that can connect to your CRM and email, or files and notes you can upload or paste
+  output:
+    - name: Current state
+      contains: Two or three sentences on where the account stands right now.
+    - name: CRM section
+      contains: Owner, account profile, open and recent closed deals with stage, amount, close date and next step, plus last activity.
+    - name: Key contacts
+      contains: A table of names, titles, last contact date and notes.
+    - name: Recent correspondence
+      contains: The five latest email threads with date, people, subject and where each one ended.
+    - name: Documents and call notes
+      contains: Account plans, proposals and contracts with last edit date, plus the latest call and its key point.
+    - name: Internal chatter
+      contains: Team chat threads about the account from the last 60 days, linked.
+    - name: Gaps and flags
+      contains: Blank fields, missing sources and warning signs, such as no activity on a large deal.

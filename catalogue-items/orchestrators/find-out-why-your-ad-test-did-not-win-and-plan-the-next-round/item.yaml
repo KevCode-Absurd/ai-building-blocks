@@ -13,11 +13,11 @@ outputs:
   - {type: plan}
 uses: [winning-ad-dna-mapper, ad-sameness-checker, creative-test-reader, meta-test-campaign-planner, next-dollar-budget-allocator]
 steps:
-  - {uses: winning-ad-dna-mapper, note: "Breaks each ad in the test into message and look so the results can be read by idea."}
-  - {uses: ad-sameness-checker, note: "Reads the breakdowns and shows whether the round tested one idea many times."}
-  - {uses: creative-test-reader, note: "Reads the results with the breakdowns, so verdicts are by concept."}
-  - {uses: meta-test-campaign-planner, note: "Turns the brief from the test read into the next round's layout."}
-  - {uses: next-dollar-budget-allocator, note: "Uses the next-round plan to decide what budget the winners get."}
+  - {uses: winning-ad-dna-mapper, note: "Breaks each ad in the test into message and look so the results can be read by idea. Hands the breakdowns to steps 2 and 3."}
+  - {uses: ad-sameness-checker, note: "Reads the breakdowns and shows whether the round tested one idea many times. Hands the sameness report to step 3."}
+  - {uses: creative-test-reader, note: "Reads the results with the breakdowns and the sameness report, so verdicts are by concept. Hands the next-round brief to step 4."}
+  - {uses: meta-test-campaign-planner, note: "Turns the brief from the test read into the next round's layout. Hands the plan to step 5."}
+  - {uses: next-dollar-budget-allocator, note: "Uses the next-round plan, with your spend and returns, to decide what budget the winners get."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/find-out-why-your-ad-test-did-not-win-and-plan-the-next-round/skeleton.yaml

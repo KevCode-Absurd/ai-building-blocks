@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It splits one goal into roles and tasks.
 new_slug: agent-team-builder
 name: Agent team builder
-summary: Describe the jobs your agents do. Get a team of AI agents with roles,
-  tasks and shared memory.
+summary: Plan an AI agent team with roles, tasks and shared memory, built with CrewAI. Give it your jobs. You get code and config files to run.
 job: build-software
 headline: Agent team builder
-subhead: A team of AI agents, each with a role, a task and shared memory, ready
-  to run as a group. One agent might research, another might write, and a third
-  might check the draft.
+subhead: A team of AI agents, each with a role, a task and shared memory, ready to run as a group. One agent might research, another might write, and a third might check the draft.
 explain: |
   A team of AI agents, each with a role, a task and shared memory, ready to run as a group. One agent might research, another might write, and a third might check the draft.
 
   The skill sets up each agent with a role, a goal and a short backstory. It writes the tasks and sets what each task hands to the next. You choose how the team runs: in a fixed order, or with a manager agent who assigns the work. It adds memory so agents remember short-term context, long-term lessons and the people or things involved. This uses the CrewAI Python package, which you install first. It does not need LangChain.
 when:
-  - One AI prompt is not enough and you want specialists passing work to each
-    other.
+  - One AI prompt is not enough and you want specialists passing work to each other.
   - You want a researcher, writer and reviewer working in a chain.
   - You need a manager agent to hand tasks to the right specialist.
   - You want agents that remember earlier runs.
+not_for:
+  - "You only need one prompt or a simple chain of steps: use LangChain, or just write one prompt in your AI chat."
+  - "Your flow loops back or keeps complex state: use LangGraph instead."
+  - "You cannot run Python code or pay for AI model calls: ask a person to set it up, or do the job as separate chat prompts."
 you_give:
   - The jobs the team must do
   - The roles you picture
@@ -30,8 +30,30 @@ you_get:
   - A run set-up in code
   - Memory settings for the team
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and call an AI model.
+  - Pick an AI that can run Python code, such as Claude with code tools. Install CrewAI with pip install crewai first.
+  - Paste this skill into your AI. Then list the jobs your team must do and the roles you picture.
+  - Add your AI model key as a setting on your computer. Never paste keys into the chat.
+  - Say if you want a fixed order or a manager agent. Say which tools the agents may use.
+  - Check the agents.yaml and tasks.yaml files before you run. Make sure each role is distinct and each task hands work on.
+  - Run the team with crewai run. Watch the cost of model calls, and set limits on steps and requests per minute.
+output_sample:
+  input:
+    - The jobs your agent team must do
+    - The roles you picture, such as researcher, writer and reviewer
+    - Tools the agents may use, such as web search (optional)
+    - "Run order: fixed or managed by a manager agent (optional)"
+  prerequisites:
+    - An AI that can run Python code, and Python with the CrewAI package installed
+    - An AI model key, such as an OpenAI or Anthropic key. Model calls cost money.
+    - A Serper search key if your agents search the web (optional). Tool calls can cost money too.
+  output:
+    - name: agents.yaml
+      contains: Each agent's role, goal and short backstory, written in plain settings.
+    - name: tasks.yaml
+      contains: Each task's description, expected result and the agent who does it, with handoffs between tasks.
+    - name: crew.py
+      contains: The code that joins agents and tasks, picks fixed or manager order, and turns on memory.
+    - name: main.py
+      contains: The entry point that sets your inputs and starts the team.
+    - name: Run result
+      contains: The final text from the team, each task's output, and how many tokens the run used.

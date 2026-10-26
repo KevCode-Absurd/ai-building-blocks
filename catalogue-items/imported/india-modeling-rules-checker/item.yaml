@@ -1,6 +1,6 @@
 slug: india-modeling-rules-checker
 name: India modeling rules checker
-summary: Give it an Indian company model. Get April to March years, crore units, Ind AS and listing rules checked.
+summary: "Check an Indian company model for wrong crore units, April to March year labels, Ind AS and listing mistakes. You get a fault list with the fix for each."
 category: general
 boards: []
 type: skill

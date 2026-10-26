@@ -1,11 +1,11 @@
 new_slug: sales-funnel-drop-off-finder
 name: Sales funnel drop-off finder
-summary: Paste step numbers and screenshots. Get the worst drop-off step, fixes and a score out of 100.
+summary: Find the step where most visitors drop out before they buy. Get fixes sized from your own numbers and a page score out of 100.
 job: audit-landing-page
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
 headline: Sales funnel drop-off finder
-subhead: Paste your step numbers, from visits to orders, and attach phone screenshots of the page and its ads. It finds the step where most buyers drop out, then reviews the page behind it. You get sized fixes, what to ship or test, and a page score out of 100.
+subhead: Paste your step numbers, from visits to orders, and attach phone screenshots of the page and its ads. It finds the step where most visitors drop out of your sales funnel, then reviews the page behind it. You get fixes sized in money, what to ship or test, and a page score out of 100.
 explain: |
   Most page reviews start with button colours and end with 40 tips. But buyers don't leave evenly. Most drop out at one step: they land and bounce, they look at the product and don't add it, or they reach the cart and stop. Fixing the wrong step wastes a month.
 
@@ -14,6 +14,12 @@ when:
   - Your ads get clicks but few sales, and you need to know where people give up.
   - You're about to spend on a redesign and want to know which step to fix first.
   - You have step-by-step data and want fixes sized in money, not just a list.
+  - A phone buyer converts far worse than a desktop buyer and you don't know why.
+not_for:
+  - "You want a review of one page with no numbers at all: use the Landing page conversion review, or the Landing page 30-point checker for a quick yes-or-no list."
+  - "You want to know if you have enough traffic to run a test: use the A/B test traffic checker."
+  - "You run an app or software product and want to find where new sign-ups leave: use the New user drop-off finder."
+  - "Your sales fell and you want to know why: use the Ad sales drop analyst."
 you_give:
   - The page, as its text plus phone screenshots of the first screen, the full scroll and the buying area (attach them; your AI can see pictures)
   - The ads or links that send people there, with their words and offer, and each ad's image attached (recommended)
@@ -144,6 +150,24 @@ example:
     The FAQ gives a clear delivery promise ("ship within 24 hours ...
     3-5 days later"). The testing section names what was tested and when.
     Survey numbers say "of surveyed users". The paid athlete is disclosed.
+output_sample:
+  input:
+    - "The page text and phone screenshots of the first screen, the full scroll and the buying area"
+    - "The ads or links that send people there, with their words and images"
+    - "Step counts for one date range, from visits to orders, split by phone and desktop (optional)"
+    - "Your policies, allowed claims and any rating you hold (optional)"
+  prerequisites:
+    - "An AI that reads images"
+    - "Your analytics or funnel report, if you want money figures"
+  output:
+    - {name: "Mode and sources", contains: "Whether it ran with numbers or page only, the date range, the ads checked and when the pages were captured."}
+    - {name: "Step table", contains: "Each step's count and the share who go on, split by phone, desktop and source."}
+    - {name: "Leakiest step", contains: "The step and group losing the most buyers, and the page that owns it."}
+    - {name: "Findings", contains: "Each problem with a quote or screenshot, the step it should move, the change, what to keep and how sure it is."}
+    - {name: "Sized fixes", contains: "Extra orders and revenue for each fix, worked from your own rates and labelled as a model."}
+    - {name: "Ship now and test", contains: "Plain mistakes to fix today, and tests your traffic can finish in about four weeks."}
+    - {name: "Needs from you and already working", contains: "Facts the page is missing, and the sections that already work."}
+    - {name: "Page score", contains: "A score out of 100 now and after the ship-now fixes, with both sums shown."}
 tweaks:
   - what: Step counts
     how: Add product views, adds to cart and checkouts for the same dates. The audit can then name the exact step that leaks, not just "somewhere between click and order".

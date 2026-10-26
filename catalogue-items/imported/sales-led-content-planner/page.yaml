@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads sales patterns and turns them into priorities.
 new_slug: sales-led-content-planner
 name: Sales-led content planner
-summary: Give it your sales data. Get a 30 day plan of what to push, what offers
-  to run and what to hold.
+summary: Turn your sales data into a 30 day content plan. See what to push, which offers to run and what to hold, based on your real sales.
 job: grow-social
 headline: Sales-led content planner
-subhead: A thirty-day plan of what to promote, which offers to run and what to
-  hold back, built from your real sales. It is a strategy brief, with no
-  calendar and no finished posts.
+subhead: A thirty-day plan of what to promote, which offers to run and what to hold back, built from your real sales. It is a strategy brief, with no calendar and no finished posts.
 explain: |
   A thirty-day plan of what to promote, which offers to run and what to hold back, built from your real sales. It is a strategy brief, with no calendar and no finished posts.
 
@@ -18,6 +15,10 @@ when:
   - Some products sit unsold and you want to know whether to push or pause them.
   - A busy season is near and you want offers ready.
   - You want content choices backed by sales numbers.
+not_for:
+  - "You need a posting calendar or finished posts: use the Social content engine, which turns an approved brief into posts."
+  - "You have no sales history at all: write a simple list of what sold and when, or ask your bookkeeper for an export first."
+  - "You want to know if last month's marketing worked: use the Growth pulse instead."
 you_give:
   - Access to QuickBooks, PayPal or Square
   - Your industry
@@ -29,10 +30,32 @@ you_get:
   - A ranked list of what to push or hold
   - Offer ideas for the next thirty days
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Connect QuickBooks, PayPal or Square if your AI supports it. If not, export your last 90 days of sales as a CSV and upload it.
+  - "Answer the questions: your industry, how you rank top performers, and any seasonal patterns you know."
+  - Read the brief. Industry seasonality is an estimate, so check it against what you know before you act.
+  - Tell your AI what to change. Once you approve it, take the brief to the Social content engine to make posts.
+output_sample:
+  input:
+    - Your sales history from QuickBooks, PayPal or Square, or an export file (CSV or Excel)
+    - Your industry
+    - "How you rank top performers: revenue, margin or sales speed"
+    - Seasonal patterns you already know (optional)
+  prerequisites:
+    - Your last 90 days of sales, as a connected account or an uploaded export
+    - A connected QuickBooks, PayPal or Square account is optional, since an export works too
+  output:
+    - name: Executive summary
+      contains: One or two sentences naming your best sellers and any seasonal shift that is starting.
+    - name: Push hard
+      contains: The top two or three products, each with a suggested content angle.
+    - name: Hold steady
+      contains: Middle performers that keep their visibility without extra effort.
+    - name: Reposition or pause
+      contains: Slow movers, with ideas such as discounting, bundling or pausing.
+    - name: Seasonal opportunities
+      contains: What is coming next month that you should get ready for now.
+    - name: Recommended offers
+      contains: Bundle, discount or free trial ideas based on your sales data.
+    - name: Structured brief
+      contains: The approved brief in a format other tools can read.

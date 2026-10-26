@@ -11,6 +11,37 @@ license_source: https://github.com/ibelick/ui-skills/blob/main/LICENSE
 ---
 
 
+## When not to use (added by AI Blocks)
+
+- You want new title and description wording that wins clicks. Use the Title and meta tag writer, then come back here to place the tags.
+- You want a full SEO review of page content, speed and links. Use the SEO auditor or the Technical SEO auditor.
+- Your pages have no public web address yet. Social and search checks need a live address, so put them online first.
+
+## Before you run it (added by AI Blocks)
+
+Ask once for anything missing. Never invent it.
+
+1. The pages to check: the site code, the page's HTML, or the page addresses. If you only have addresses and cannot open them, ask for the HTML of the head section.
+2. The live domain, for absolute addresses in canonical and share-card tags. If it is missing, write `<DOMAIN>` in the fix and say so.
+3. Wording the person wants for titles and descriptions (optional). If none, keep the existing wording and flag weak or missing ones rather than writing new claims.
+
+Do not invent ratings, reviews, prices or organisation details in structured data. Mark anything you could not check as "not checked".
+
+## Output (added by AI Blocks)
+
+Return these parts, in this order:
+
+1. **Audit table.** One row per page and tag: found, missing, duplicated or clashing, with the priority from the rules below.
+2. **Fixes.** The smallest code change for each problem, shown as the exact tag or line, grouped by file. Touch metadata only.
+3. **Agreement check.** Whether the title, description, canonical address and og:url match for each page.
+4. **Not checked.** Anything you could not verify, such as how a share card renders on a live address.
+
+Then give a next step: publish, paste the live address into each social platform's preview checker, and request a re-index in Google Search Console if the canonical changed.
+
+## Licence note (added by AI Blocks)
+
+The upstream skill by ibelick lists MIT. This copy came through the sickn33 collection, which licenses written content under CC BY 4.0 (see LICENSE-CONTENT). Credit both authors when you share it.
+
 ## When to Use
 
 Use this skill when you need audit and fix HTML metadata including page titles, meta descriptions, canonical URLs, Open Graph tags, Twitter cards, favicons, JSON-LD structured data, and robots directives. Use when adding SEO metadata, fixing social share previews, reviewing Open Graph tags, setting up canonical...

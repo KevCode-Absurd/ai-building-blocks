@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads carefully but follows a set checklist.
 new_slug: bug-and-security-code-reviewer
 name: Bug and security code reviewer
-summary: Give it a file or pull request. Get a review of bugs, security gaps,
-  speed issues and style.
+summary: Check your code for bugs and security holes before it ships. Give it a file or pull request. You get a code review with fixes tied to each line.
 job: test-and-fix-code
 headline: Bug and security code reviewer
-subhead: Give it a file or pull request. Get a review of bugs, security gaps,
-  speed issues and style. Bring a file, folder or pull request diff. Use the
-  result to plan your next step.
+subhead: Give it a file or pull request. Get a review of bugs, security gaps, speed issues and style. Bring a file, folder or pull request diff. Use the result to plan your next step.
 explain: |
   A written code review that catches bugs and security holes, each tied to a specific line, before the code ships.
 
@@ -18,6 +15,10 @@ when:
   - You wrote code alone and have nobody to review it.
   - You want a security check on a login or payment change.
   - A file has grown messy and you want a list of issues to fix.
+not_for:
+  - "You only want a style or formatting check: run a linter, which is faster and more exact."
+  - "Your code is generated or from a vendor folder: skip it, since the review leaves those files out by default."
+  - "You need proof the code works: write and run tests, because a review reads the code but never runs it."
 you_give:
   - A file, folder or pull request diff
   - Your linter or style rules (optional)
@@ -29,8 +30,28 @@ you_get:
   - Speed and readability notes
   - Suggested fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat.
+  - Paste your code, or your pull request diff, under it. Add a link if your AI can open web pages.
+  - Say what the change should do. Add your style rules or a focus area such as security (optional).
+  - Read the Critical findings first. Fix those before you merge.
+  - Paste the updated code back in and ask for a second review. Add tests for any new logic it flags.
+output_sample:
+  input:
+    - A file, a folder, a pull request link or pasted diff text
+    - Your linter or style rules (optional)
+    - A focus area such as security or speed (optional)
+  prerequisites:
+    - A pull request link only works if your AI can open web pages. Otherwise paste the diff.
+  output:
+    - name: Change summary
+      contains: One sentence on what the change is meant to do, so the review judges the code against that goal.
+    - name: Bugs and error handling
+      contains: Null errors, off-by-one mistakes, race conditions, leaks and unhandled errors, each tied to a line.
+    - name: Security findings
+      contains: Injection, exposed secrets, weak encryption, missing access checks and risky new dependencies.
+    - name: Performance notes
+      contains: Slow loops, repeated database queries and blocking calls that may hurt under load.
+    - name: Readability and testing notes
+      contains: Unclear names, long functions, copied code, missing docs and new logic that has no tests.
+    - name: Severity and fixes
+      contains: Each finding is marked Critical, Warning or Info, with a code fix and a short summary count.

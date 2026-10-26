@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores passages against a clear rubric.
 new_slug: ai-citation-scorer
 name: AI citation scorer
-summary: Give it a page. Get each passage scored on how easily AI tools can
-  quote it, with rewrites to try.
+summary: Check how easily AI tools can quote your page. Get each passage scored with rewrites to try. Scores are a guide, not proof.
 job: get-found-in-search
 headline: AI citation scorer
-subhead: Every passage on your page scored for how easily an AI tool can lift it
-  into an answer, with rewrites to try. Research found that AI picks passages
-  that stand alone, answer a question up front and carry real facts.
+subhead: Every passage on your page scored for how easily an AI tool can lift it into an answer, with rewrites to try. Research found that AI picks passages that stand alone, answer a question up front and carry real facts.
 explain: |
   Every passage on your page scored for how easily an AI tool can lift it into an answer, with rewrites to try. Research found that AI picks passages that stand alone, answer a question up front and carry real facts.
 
@@ -16,9 +13,12 @@ explain: |
 when:
   - You want AI assistants to quote your page in their answers.
   - Your article ranks but AI tools ignore it.
-  - You are rewriting product or help pages and need to know which parts to fix
-    first.
+  - You are rewriting product or help pages and need to know which parts to fix first.
   - You want a score to compare pages.
+not_for:
+  - "You have not written the page yet: use a plain editing pass once you have a draft, then score it."
+  - "You want to know why a page ranks low in Google: use a person who knows SEO or a site audit tool."
+  - "You need proof that AI tools quote your page: check the AI tools yourself, since these scores are a guide only."
 you_give:
   - The page address or its text
   - The question the page should answer
@@ -29,8 +29,27 @@ you_get:
   - Reasons each block scored high or low
   - Rewrite suggestions you can paste in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open web pages.
+  - Open a chat in Claude, ChatGPT or Gemini.
+  - Paste the full SKILL.md text into the chat.
+  - Paste your page text below it, or give the page address if your AI can open web pages.
+  - Add the question the page should answer (optional).
+  - Read the weakest blocks first. Paste in the rewrites you like.
+  - Score the page again after you edit it. Treat all lift figures as estimates.
+output_sample:
+  input:
+    - Your page address or the page text
+    - The question the page should answer (optional)
+    - Pages from rivals to compare (optional)
+  prerequisites:
+    - An AI that can open web pages, or paste in your page text instead
+  output:
+    - name: Score Summary
+      contains: Your overall citability score and the scores for each of the five parts of the rubric.
+    - name: Strongest Content Blocks
+      contains: The passages most ready to be quoted, with a score and the reason each one works.
+    - name: Weakest Content Blocks (Rewrite Priority)
+      contains: The passages that score lowest, why they score low, and a rewrite you can copy.
+    - name: Quick Win Reformatting Recommendations
+      contains: Five changes to make first, each with an estimated lift in score.
+    - name: Per-Section Scores
+      contains: A score for every section of the page, in page order.

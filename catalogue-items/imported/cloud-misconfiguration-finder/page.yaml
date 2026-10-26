@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must reason about access paths an attacker could use.
 new_slug: cloud-misconfiguration-finder
 name: Cloud misconfiguration finder
-summary: Point it at your cloud setup files. Get open buckets, loose access
-  rules and gaps ranked with fixes.
+summary: Find open storage buckets, loose access rules and open ports in your cloud setup, ranked by risk with a fix for each. A cloud misconfiguration finder.
 job: secure-code
 headline: Cloud misconfiguration finder
-subhead: A ranked list of cloud settings that put you at risk, each with a fix.
-  Point it at your infrastructure files or exported configs, and it finds open
-  storage buckets, loose permissions and overly wide network rules.
+subhead: A ranked list of cloud settings that put you at risk, each with a fix. Point it at your infrastructure files or exported configs, and it finds open storage buckets, loose permissions and overly wide network rules.
 explain: |
   A ranked list of cloud settings that put you at risk, each with a fix. Point it at your infrastructure files or exported configs, and it finds open storage buckets, loose permissions and overly wide network rules.
 
@@ -18,6 +15,10 @@ when:
   - You inherited an account and no one knows what permissions exist.
   - You want to review Terraform files before they go live.
   - A security audit is coming and you need a list of gaps.
+not_for:
+  - "You think an attacker is already inside your cloud account: use a person on your security team or your cloud provider's support, because this only checks setup."
+  - "You want to test your app for bugs like injection or broken login: use an app security testing tool or a penetration tester."
+  - "You want to watch cloud logs for odd behavior over time: use a log monitoring tool, because this checks settings once."
 you_give:
   - Infrastructure code or exported configs
   - Which cloud provider you use
@@ -30,8 +31,33 @@ you_get:
   - Open network rules
   - Fixes for each issue
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Export your cloud settings as JSON files. Use read-only access. For Terraform, run terraform show -json on your plan.
+  - Open an AI that can run Python code and add the skill folder or paste its instructions.
+  - Give it your files. Say which cloud you use. Say if the system faces the internet or holds regulated data.
+  - Ask it to run the permission, storage and firewall checks. For a storage bucket, add its access list (ACL) to the bucket file or check each file on its own.
+  - Read the ranked findings. Fix the critical and high ones first, then run the check again.
+output_sample:
+  input:
+    - Your access policy exported as JSON
+    - Your storage bucket settings exported as JSON
+    - Your firewall (security group) rules exported as JSON
+    - Your Terraform plan as JSON (optional)
+    - Whether the system faces the internet or holds regulated data (optional)
+  prerequisites:
+    - An AI that can run Python code and read files
+    - Read-only access to your cloud account, such as the AWS command line tool, to export the files
+    - jq and Python 3 installed on your computer
+    - Full checks cover AWS only. Azure and GCP are partly covered.
+  output:
+    - name: IAM findings
+      contains: Permission paths that let a user raise their own access, each with a severity level.
+    - name: S3 exposure findings
+      contains: Storage bucket settings that leave data open to the public, each with a severity level.
+    - name: Security group findings
+      contains: Firewall rules that open admin or database ports to the whole internet, each with a severity level.
+    - name: IaC findings
+      contains: Risky settings found in your Terraform plan before you deploy it.
+    - name: Fix recommendations
+      contains: A plain change to make for each finding, such as tighter permissions.
+    - name: Exit code
+      contains: A number that tells a script whether the check found critical or high risks.

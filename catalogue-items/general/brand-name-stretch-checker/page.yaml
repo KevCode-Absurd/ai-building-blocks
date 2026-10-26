@@ -1,6 +1,6 @@
 new_slug: brand-name-stretch-checker
 name: "Brand name stretch checker"
-summary: "Paste your brand and the new product. Get a stretch score out of 100 and a call on the name."
+summary: "Check if your brand name can cover a new product. Paste your brand and the product. Get a stretch score out of 100 and a call on the name."
 job: plan-strategy
 thinking: high
 thinking_why: "It weighs what a name means to buyers against a new product and must make a call with real costs either way."
@@ -17,6 +17,10 @@ when:
   - You want to add a product that is different from what your brand is known for.
   - Someone suggests putting the brand name on a new range to save on marketing.
   - Sales of your core product have flattened since you added extra lines.
+not_for:
+  - "Your brand has no clear meaning yet: write a positioning statement first, or ask a few customers what they think you stand for."
+  - "You already know you need a new name and want ideas: work with a naming person or run your own naming brief."
+  - "You want to know if the new product will sell at all: test it with real buyers before you think about the name."
 
 you_give:
   - Your brand file, or a few lines on what the brand stands for
@@ -33,6 +37,28 @@ how_to_use:
   - Paste your brand file or describe what the brand stands for, then describe the new product.
   - Name the specialist rivals in the new area, if you know any.
   - Read the call and the limit. Bring the plan back if you choose to stretch.
+output_sample:
+  input:
+    - Your brand file, or a few lines on what the brand stands for
+    - The new product and what it is
+    - Your current plan and rivals in the new area (optional)
+  output:
+    - name: What the name means now
+      contains: One word or line for what buyers think your brand name stands for.
+    - name: The new product on its own
+      contains: What the product would mean with no brand around it, and what is the same or different.
+    - name: Stretch score
+      contains: A score out of 100 with fit, market splitting and cost to the core, each with a note.
+    - name: Rival specialists
+      contains: Narrow rivals in the new area and the one word each stands for.
+    - name: The call
+      contains: "One choice: use the name, make a new name, or skip, with the reason."
+    - name: The limit or new-name brief
+      contains: How far the name may go, or the meaning a new name must carry.
+    - name: If the stretch fails
+      contains: What the core product stands to lose.
+    - name: Missing and checks missed
+      contains: Facts that would sharpen the call, and any checks the skill could not pass.
 
 how_it_works:
   - title: Names the meaning

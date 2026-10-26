@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 name: "Offer builder that answers buyer doubts"
 new_slug: offer-builder
-summary: "Paste your buyer's doubt and costs. Get an offer that answers it, its wording and a profit check."
+summary: "Build an offer that answers your buyer's main doubt and still makes a profit. Give it one buyer, your prices and costs. Get up to three offers."
 job: make-offer
 
 headline: "Offer builder that answers buyer doubts"
@@ -17,6 +17,10 @@ when:
   - You're about to run a discount and want to check there isn't a better offer.
   - You know what stops people buying (price, trust, "will it work for me") and want an offer that answers it.
   - You want different offers for new buyers and returning buyers.
+not_for:
+  - "You have many delivery options and need them cut and grouped: use the Offer trim and stack builder."
+  - "You want a quick list of offers from what you already have: use a plain brainstorm with your AI, then come back here to build the best one."
+  - "You want a discount for a one-off sale with no repeat buyers: set the price yourself and check your costs in a spreadsheet."
 
 you_give:
   - One buyer and their main doubt, in their own words
@@ -37,6 +41,28 @@ how_to_use:
   - Paste your prices, unit costs, delivery costs and guarantee exactly as written.
   - Add recent order data if you have it. It's what lets the profit check give numbers instead of formulas.
   - Pick one offer and test it on its own page beside your current offer. Keep the current one until the new one beats it.
+output_sample:
+  input:
+    - One buyer, first-time or returning, and their main doubt in their own words
+    - What you sell, the price, your cost per unit and delivery cost
+    - Your guarantee and terms, copied exactly
+    - Recent order values and past discounts (optional)
+    - Your brand brain or voice notes (optional)
+  output:
+    - name: Offer (up to three)
+      contains: A short name, the buyer and doubt, the lever, the tools used and what the buyer pays and gets.
+    - name: Page line and said-aloud line
+      contains: One line for your page and one line a person would say out loud.
+    - name: Terms
+      contains: One or two sentences on the price now, what it becomes after, and how to stop.
+    - name: Profit check
+      contains: What one order keeps after costs, or the formula with MISSING marked where a cost is unknown.
+    - name: Must arrange
+      contains: What your business needs in place before the offer can run.
+    - name: Five checks and checks missed
+      contains: Whether the offer fits, is true, pays, is clear and lasts, plus any check it still misses.
+    - name: Test plan
+      contains: How to run the offer beside your current one and which two questions to ask new buyers.
 
 how_it_works:
   - title: Starts from the buyer

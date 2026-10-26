@@ -1,0 +1,148 @@
+name: Privacy Engineer agent
+summary: Get a privacy design for your product with a map of where personal data lives, deletion that reaches every system and consent that is enforced.
+headline: Privacy Engineer agent
+subhead: Describe the systems that hold your users' personal data, such as your database, logs, analytics and vendors. It maps where each piece lives, finds gaps, and plans deletion, consent and retention checks. You get a design your developers can build and test.
+job: secure-code
+thinking: high
+thinking_why: It follows personal data through many systems and must not call anything anonymous or deleted without proof. Use a model that reasons well and says when it is unsure.
+explain: |-
+  A privacy policy is a promise. The code decides whether you keep it. The usual gap looks like this: the policy says "we delete your data when you ask", but that data sits in your database, a search index, an analytics tool, a log file and last month's backup, and your delete button clears one of them. A privacy engineering review closes that gap.
+
+  This agent starts by finding the data. It builds a data map of every field, where it is stored, why you hold it, how long you keep it and how it is deleted. It looks first in the places people forget, such as logs, error reports, caches and analytics events. Then it checks what you collect and drops what has no purpose. After that it plans the controls: consent that is checked at the moment data is written, deletion that reaches every system and leaves proof, retention that expires on its own, and a test of any "anonymous" data before you call it that.
+
+  It writes a design and, if you ask, sample code. It does not scan your systems, run deletions or give legal advice. The profile's success targets are goals from the original author, not results for your product.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You promise customers they can delete their data and you are not sure your product really removes it everywhere.
+  - You are about to ship a feature that collects new personal data and want the privacy design done before launch.
+  - You share data with an analytics or ad tool and want consent to actually stop the data when a user says no.
+  - You want to call a dataset anonymous before sharing it and need to know if people could still be picked out.
+not_for:
+  - You want to know which privacy laws and duties apply to you. Use the Data Privacy Officer agent.
+  - You want your code checked for privacy risks against GDPR. Use the GDPR privacy checker.
+  - You have a new app idea and want privacy built in from the start. Use the Privacy-first app designer.
+  - You want it to scan your systems or run deletions. It writes the plan. Your developers build and run it.
+you_give:
+  - A list of the places your product keeps personal data, such as the main database, logs, analytics tools and vendors.
+  - The kinds of personal data you collect, such as email, address or device ID, and why you collect each one.
+  - How a customer asks for deletion or a copy of their data today (optional)
+  - How consent is collected and where it is used in your code (optional)
+  - Where your users live, and how long you keep each kind of data (optional)
+you_get:
+  - A data map of each field, where it is stored, why, for how long and how it is deleted
+  - A list of problems already likely to exist, such as personal data in logs or no purpose for a field
+  - A consent plan that shows where the check must sit in your code
+  - A deletion plan that reaches each system and ends with proof
+  - A retention plan, a test for anonymous data and a fix list in order
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - List your systems and the personal data in each. Add how deletion and consent work now. Paste code only if it holds no real personal data or keys.
+  - Type "Build the data map first, then the deletion and consent plan. Mark every system you are guessing about and do not call anything deleted or anonymous without proof."
+  - Read the data map and the gaps first. Fill in what you know, then ask it to run the plan again.
+  - Give the plan to your developers. Take any legal question to a privacy lawyer. Check each rule it quotes against the law's own text.
+  - Build it, then test deletion by running a real test request and checking each system yourself.
+how_it_works:
+  - title: Map the data
+    text: It lists each field with its store, purpose, basis, retention and delete path. It looks at logs, caches and vendors too.
+  - title: Find the gaps already there
+    text: It flags personal data in logs, fields with no purpose, flows to vendors with no record and data kept too long.
+  - title: Cut what you collect
+    text: It asks the purpose for each field and suggests dropping or shrinking those without one.
+  - title: Plan consent and purpose checks
+    text: It marks where in your code a consent check must block the write, not just record the choice.
+  - title: Plan deletion and retention
+    text: It plans a delete that reaches every system, a check that nothing remains, and expiry jobs that run on their own.
+  - title: Test anonymous claims
+    text: It checks whether remaining fields could still point to a person, and names a safer method.
+output_shape: |-
+  SCOPE
+    Product <what> | Systems <list> | Where users live <places>
+
+  DATA MAP
+    <field> | <store> | <purpose> | <basis you gave> | <keep for> | <delete path>
+
+  GAPS ALREADY LIKELY
+    <problem> | <where> | <risk> | <fix>
+
+  CONSENT AND PURPOSE PLAN
+    <purpose> | <where the check must sit> | <what it blocks>
+
+  DELETION PLAN
+    <system> | <how deleted> | <how you prove it> | <what is kept by law and why>
+
+  RETENTION PLAN
+    <data> | <keep for> | <how it expires>
+
+  ANONYMOUS CHECK
+    <dataset> | <fields that could point to a person> | <safer method>
+
+  FIX LIST (in order)
+    <action> | <why now> | <small, medium or large>
+
+  QUESTIONS FOR YOUR PRIVACY LAWYER
+    <point> | <what to confirm>
+output_sample:
+  input:
+    - The places your product keeps personal data
+    - The kinds of personal data you collect and why
+    - How deletion and consent work today (optional)
+    - Where your users live and how long you keep data (optional)
+  prerequisites:
+    - An AI that can read files, if you attach a data list or schema
+  output:
+    - name: Scope
+      contains: The product, the systems reviewed and where your users live.
+    - name: Data map
+      contains: Each field with its store, purpose, basis, keep time and delete path.
+    - name: Gaps already likely
+      contains: Problems such as personal data in logs, each with where, the risk and the fix.
+    - name: Consent and purpose plan
+      contains: Where in your code each consent check must sit and what it blocks.
+    - name: Deletion plan
+      contains: How each system is cleared, how you prove it, and what you must keep and why.
+    - name: Retention plan
+      contains: How long each kind of data is kept and how it expires automatically.
+    - name: Anonymous check
+      contains: Fields that could still point to a person and a safer way to share the data.
+    - name: Fix list
+      contains: Actions in order, each marked small, medium or large.
+    - name: Questions for your privacy lawyer
+      contains: Points the AI cannot settle, with what the lawyer should confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads a database schema, event list or vendor list next to your description and ties each field to a store.
+  inputs:
+    - Your database schema or field list, with no real user data in it.
+    - Your list of vendors and the countries where each stores data.
+    - A list of the events your analytics tool collects.
+terms:
+  - term: Personal data
+    meaning: Any detail that points to a real person, such as a name, email address or device ID.
+  - term: Data map
+    meaning: A table that shows each piece of personal data, where it is kept, why, for how long and how to delete it.
+  - term: Pseudonymization
+    meaning: Swapping a name or ID for a code. It is still personal data if you keep the key that links back.
+  - term: Retention
+    meaning: How long you keep a piece of data before it must be deleted.
+  - term: DSAR
+    meaning: A data subject access request. A person asks to see, fix or delete the data you hold about them.
+tweaks:
+  - what: Scope
+    how: Review one product area at a time, such as sign-up or analytics. A whole company in one go stays vague.
+  - what: Systems
+    how: List logs, caches, backups and vendors as well as your main database. Gaps hide there.
+  - what: Sensitive data
+    how: Say if you hold health, children's, location or payment data. It tightens several checks.
+improve:
+  - Keep the data map with your code and update it when you add a field or a vendor.
+  - After a real deletion test, paste what you found back and ask it to fix the plan.
+  - Pair it with the Data Privacy Officer agent to check the legal duties behind each control.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

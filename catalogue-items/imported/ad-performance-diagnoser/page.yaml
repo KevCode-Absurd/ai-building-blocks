@@ -2,35 +2,100 @@ thinking: medium
 thinking_why: It checks five set areas in order.
 new_slug: ad-performance-diagnoser
 name: Ad performance diagnoser
-summary: Give it a campaign that is underperforming. Get the main bottleneck,
-  the root cause and the fix to try first.
+summary: Find why your ads are not working. Paste your campaign results and get the one weak link, the root cause and the fix to try first, in five checks.
 job: read-ad-results
 headline: Ad performance diagnoser
-subhead: "Give it your campaign results, the offer and audience, the ads and
-  landing page, and how you follow up sales. It checks five places in order:
-  offer, audience, creative, funnel and sales. You get the first weak link, a
-  check of all five areas, a root cause statement and the one fix to try first."
+subhead: "Give it your campaign results, your target, and a short note on your offer, audience, ads, landing page and sales follow-up. It checks five places in order: offer, audience, creative, funnel and sales. You get the first weak link, a table of all five checks, a root cause and one fix to try."
 explain: |
-  Before you change five things at once and learn nothing, find the main reason your campaign is underperforming and the fix to try first.
+  When ads stop working, most people change five things at once and learn nothing. This ad performance diagnoser helps you find why your campaign is underperforming before you touch anything. It suits problems like a cost per lead that keeps rising, or ads that get clicks and no sales.
 
-  The skill checks five places in order: the offer, the audience, the creative, the funnel and the sales follow-up. At each step it asks whether that part could explain the poor results, using your numbers. It finds the bottleneck, which is the first weak link, then names it as the root cause and gives the fix. The rule is to diagnose before changing anything and to avoid guessing. It suits problems such as high cost per lead or ads that get clicks but no sales.
+  It checks five places in the order a customer meets them: the offer, the audience, the creative, the funnel and the sales follow-up. For each one it compares your numbers with your own target, an earlier period, or your best ad. It does not use made-up industry averages. The first weak area is the bottleneck, because a problem early on hides the ones after it.
+
+  It also checks that your tracking matches your own count first, and tells you to wait when the data is too thin. You end with one root cause and one fix, so the next test can be read.
 when:
   - Your cost per lead keeps rising and you do not know why.
-  - Ads get clicks but few buy.
-  - You are about to change everything and want to find the real issue.
+  - Ads get clicks and leads, but few turn into sales.
+  - You are about to rebuild the whole campaign and want to find the real problem first.
   - A client asks for a clear reason behind bad results.
+not_for:
+  - "You want to know what changed since last month, with a ranked cause and score: use the Six-pattern ad performance diagnoser."
+  - "You want a full check of one ad account for waste and set-up errors: use the Google Ads account auditor, the Microsoft Ads account auditor or the Twelve-platform ad account auditor."
+  - "Your campaign is brand new or still in the platform's learning period. Wait until it has enough results to compare."
+  - "Your Meta ads stall in delivery, with frequency and cost per thousand views rising: use the Meta delivery troubleshooter."
 you_give:
-  - Campaign results, such as spend, clicks, leads and sales
-  - Your offer and audience
-  - The ads and landing page
-  - Your sales follow-up process (optional)
+  - Campaign results for one period, such as spend, clicks, leads and sales
+  - Your target, such as the cost per lead or cost per sale you can afford
+  - Your offer, audience, ads and landing page
+  - An earlier period or your best ad to compare against (optional)
+  - How you follow up leads, and how many become sales (optional)
 you_get:
-  - The main bottleneck
-  - A check of all five areas
-  - A root cause statement
-  - A fix to try first
+  - The one bottleneck, named as offer, audience, creative, funnel or sales
+  - A table of all five checks, each marked OK, weak or unknown
+  - A root cause in one sentence, tied to your numbers
+  - One fix to try first, and the number to watch
+  - A list of what to leave alone and what to collect next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your results as a table or an export. Give one period, and per ad or per audience if you can.
+  - Add your target, a short line on your offer and audience, and your ad text and landing page.
+  - Answer the questions your AI asks once. Where you do not know something, say so and it will mark that check unknown.
+  - Check that each claim in the root cause points to one of your numbers. Ask for the number if one is missing.
+  - Make the one fix, run it until you have enough data, then paste the new results and ask for a second diagnosis.
+how_it_works:
+  - title: Collect and confirm
+    text: It asks once for results, target, offer, audience, ads, page and follow-up. It checks your tracking matches your own count.
+  - title: Check the offer
+    text: It asks whether every ad and audience does poorly in the same way, and whether the cost per result is too high.
+  - title: Check the audience
+    text: It compares click rate, cost, frequency and lead fit across your audiences.
+  - title: Check the creative
+    text: It compares click rate and cost per click by ad against your best ad or an earlier period.
+  - title: Check the funnel and sales
+    text: It looks at clicks to leads, then leads to replies, calls and sales.
+  - title: Name the bottleneck
+    text: The first weak area is the bottleneck. It writes the root cause and one fix, with how to measure it.
+output_shape: |
+  Bottleneck: <offer, audience, creative, funnel or sales>
+  Five-area check: <area, numbers used, OK, WEAK or UNKNOWN>
+  Root cause: <because numbers, cause>
+  Fix to try first: <one change>
+  How to measure it: <number to watch, direction, how much data>
+  Leave alone for now: <what not to change>
+  What to collect next: <each missing item, and where to find it>
+output_sample:
+  input:
+    - Campaign results for one period, per ad or audience if possible
+    - Your target cost per lead or cost per sale
+    - Your offer, audience, ads and landing page
+    - An earlier period to compare against (optional)
+  output:
+    - name: Bottleneck
+      contains: The first weak area, named as offer, audience, creative, funnel or sales.
+    - name: Five-area check
+      contains: A table with the numbers used for each area and a mark of OK, weak or unknown.
+    - name: Root cause
+      contains: One sentence that ties the cause to your numbers.
+    - name: Fix to try first
+      contains: One change to make, and nothing else.
+    - name: How to measure it
+      contains: The number to watch, which way it should move, and how much data to wait for.
+    - name: What to collect next
+      contains: Each missing item, and where to find it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is a reading and reasoning job with no code. Claude, ChatGPT and Gemini all handle it.
+  inputs:
+    - A platform export with results per ad and per audience
+    - The same numbers from your own sales or CRM record
+    - A screenshot or the text of your landing page
+    - Notes from the sales calls on why leads said no
+terms:
+  - term: Bottleneck
+    meaning: The one step that holds back the results of every step after it.
+  - term: Funnel
+    meaning: The path from seeing an ad to buying, such as ad, page, form, call, sale.
+  - term: Creative
+    meaning: The ad itself, meaning the image or video and the words.
+  - term: Frequency
+    meaning: How many times one person saw your ad on average.

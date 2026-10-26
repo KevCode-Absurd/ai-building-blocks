@@ -15,10 +15,10 @@ outputs:
   - {type: audit_report}
 uses: [rating-gap-product-finder, pain-point-niche-finder, crowded-category-white-space-finder, winning-product-scorer]
 steps:
-  - {uses: rating-gap-product-finder, note: "Starts the chain: ranked complaints and the review lines behind them."}
-  - {uses: pain-point-niche-finder, note: "Uses the complaints from the step before to pick the best five problems and the brands already selling to them."}
-  - {uses: crowded-category-white-space-finder, note: "Reads the rival brands and review lines from the steps before and finds the one gap to own."}
-  - {uses: winning-product-scorer, note: "Scores the product you chose for the gap, using your costs."}
+  - {uses: rating-gap-product-finder, note: "Starts the chain: ranked complaints and the review lines behind them. Hands both to step 2."}
+  - {uses: pain-point-niche-finder, note: "Uses the complaints from the step before to pick the best five problems and the brands already selling to them. Hands the rival brands to step 3."}
+  - {uses: crowded-category-white-space-finder, note: "Reads the rival brands and review lines from the steps before and finds the one gap to own. Hands the ranked gaps to step 4."}
+  - {uses: winning-product-scorer, note: "Scores the product you chose for the gap, using your costs. The gap from step 3 is the problem it must solve; the score is the end result."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/find-a-product-idea-in-buyer-complaints-and-score-it/skeleton.yaml

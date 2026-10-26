@@ -1,6 +1,6 @@
 new_slug: serial-story-planner
 name: "Serial story planner"
-summary: "Tell it your story or content idea. Get a plan in parts, each with a job and a hook."
+summary: "Plan a story told in parts, such as a series or email run: get the ending, the turns and a job and closing hook for every part."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It has to fix a whole shape and then make each part do its own job."
@@ -17,6 +17,10 @@ when:
   - "You are planning a newsletter story, podcast season or video series that runs over weeks."
   - "You are writing a serial or long piece and lose track of where it is going."
   - "You want a customer story told in parts that people come back to read."
+not_for:
+  - "You are writing one story or talk, not a series. Use the Ending-first story planner."
+  - "You want to test whether an idea is worth writing. Use the Story premise tester."
+  - "You have written parts already and want to check a plan for escapes or cheats. Use the Fair escape checker."
 
 you_give:
   - "Your story or content idea and the audience"
@@ -53,6 +57,26 @@ how_it_works:
     text: "When to share it aloud and what to ask."
   - title: "Checks the whole"
     text: "No two parts alike, then names any check it missed."
+
+output_sample:
+  input:
+    - "Your story or series idea and who it is for"
+    - "How many parts and how long each is (optional)"
+    - "The ending, if you know it (optional)"
+    - "Your brand file, if the series is for a business (optional)"
+  output:
+    - name: "Ending and turns"
+      contains: The last scene in two sentences and three or four turns in order.
+    - name: "Parts"
+      contains: For each part, its job, size, key beats and the closing hook with its cost.
+    - name: "The change, in steps"
+      contains: How the main person changes, one step at a time, each with a moment and a cost.
+    - name: "Plants and payoffs"
+      contains: Early details and the later part where each one returns changed.
+    - name: "Listening point"
+      contains: A part about two-thirds in to share with readers, two questions to ask and what to change.
+    - name: "Checks missed"
+      contains: One line for each of the skill's own checks the plan failed, or none.
 
 output_shape: |
   ENDING

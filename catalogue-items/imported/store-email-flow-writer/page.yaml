@@ -2,36 +2,62 @@ thinking: medium
 thinking_why: It follows a fixed set of flows and writes copy for each.
 new_slug: store-email-flow-writer
 name: Store email flow writer
-summary: Describe your store. Get ten email flows with full copy, who gets each
-  one, and a year of campaigns.
+summary: Write your store's email flows in one go. Give it your shop details. You get ten flows with full copy, segments and a year of campaigns.
 job: write-emails
 headline: Store email flow writer
-subhead: Describe your store. Get ten email flows with full copy, who gets each
-  one, and a year of campaigns. Bring what you sell and your price range. Use
-  the result to plan your next step.
+subhead: "Tell your AI about your store: what you sell, your prices and your email tool. It writes ten automated email flows, with every email ready to paste. You also get customer segments and a year of campaign ideas."
 explain: |
   A full email system for your online shop, written out and ready to paste into your email tool. It builds ten automated flows, including welcome, cart reminder, browse reminder, post-purchase, review request and win-back, with every email written.
 
   Each email has a subject line, preview text, body and button text, plus three to five subject line variants to test. You also get setup steps for your email platform, such as Klaviyo or Omnisend, with triggers, delays and splits, and flow diagrams. It adds eight customer segments with exact filters, a year of seasonal campaigns for your product type and list growth ideas. If you have no email tool yet, it suggests one.
 when:
   - You are launching a shop and have no automated emails yet.
-  - You have subscribers but only send the occasional newsletter.
+  - You have subscribers but only send the odd newsletter.
   - Your cart reminder emails are weak and you want better copy.
-  - You want a yearly plan for holiday and seasonal campaigns.
+  - You want a plan for holiday and seasonal campaigns for the year.
+not_for:
+  - "You run a service or B2B business with no product checkout: ask a marketing person to plan a lead nurture sequence instead."
+  - "You have no email list or email tool yet: follow your email tool's own setup guide first, then come back."
+  - "You need one single email or a one-off newsletter: write it directly in a chat or in your email tool."
 you_give:
   - What you sell and your price range
-  - Brand name and voice
-  - Your sales platform
+  - Your brand name and voice
+  - Your sales platform, such as Shopify, WooCommerce or Etsy
   - Your email tool and list size
   - Your best sellers (optional)
 you_get:
-  - Ten automated flows with full copy
-  - Subject line variants for testing
+  - Ten automated email flows with every email written
+  - Subject line variants to test
   - Setup steps for your email tool
-  - Eight customer segments with filters
-  - A seasonal campaign calendar
+  - Eight customer segments with exact filters
+  - A month-by-month campaign calendar and list growth ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text. No code, files or paid tools are needed.
+  - "Describe your store: what you sell, your price range, your sales platform, your email tool and list size."
+  - Read the overview and the first flow. Ask for changes to the voice before you go on.
+  - Add your own numbers and real customer proof where the copy needs them. Do not use made-up counts or quotes.
+  - Load the flows into your email tool. Test one flow first, such as the welcome series, before you turn on the rest.
+output_sample:
+  input:
+    - What you sell and your price range
+    - Your brand name and voice
+    - Your sales platform, such as Shopify or Etsy
+    - Your email tool and list size
+    - Your best sellers (optional)
+  prerequisites:
+    - An email tool such as Klaviyo, Omnisend or Mailchimp, or let the skill suggest one
+  output:
+    - name: Overview
+      contains: A short summary of your email system, the ten flows and how they fit your store.
+    - name: Flows 1 to 10
+      contains: Welcome, cart, browse, post-purchase, review, cross-sell, win-back, VIP, replenishment and sunset flows, each with a diagram and every email written.
+    - name: Email copy
+      contains: "For each email: subject line, preview text, body, button text and three to five subject line variants to test."
+    - name: ESP Setup
+      contains: Triggers, delays, splits and send timing for your email tool, flow by flow.
+    - name: Segmentation Strategy
+      contains: Eight customer segments, each with exact filters you can build in your email tool.
+    - name: Annual Campaign Calendar
+      contains: A month-by-month plan of seasonal and holiday campaigns that fit your product type.
+    - name: List Growth Plan
+      contains: Ideas to collect more email sign-ups, including for marketplaces where buyer emails are restricted.

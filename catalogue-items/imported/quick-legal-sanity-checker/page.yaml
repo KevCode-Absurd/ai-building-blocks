@@ -2,36 +2,57 @@ thinking: low
 thinking_why: It matches your question to a short list of patterns.
 new_slug: quick-legal-sanity-checker
 name: Quick legal sanity checker
-summary: Ask a quick question, like using customer logos. Get fine, needs a look
-  or hold, with a reason. Not legal advice.
+summary: Get a fast legal sanity check on a quick question, like using customer logos. You get fine, needs a look or hold, with one reason. Not legal advice.
 job: check-contracts
 headline: Quick legal sanity checker
-subhead: "A one-minute answer to a quick legal question: fine, needs a look, or
-  hold. You get one sentence of reasoning and, if it is not fine, the next
-  step."
+subhead: "Give it a quick legal question and your risk table. It matches the question to your table and answers fine, needs a look, or hold. You get one sentence of reasoning and a next step if it is not fine."
 explain: |
   A one-minute answer to a quick legal question: fine, needs a look, or hold. You get one sentence of reasoning and, if it is not fine, the next step. It is not legal advice, and it does not replace your lawyer.
 
   It checks your question against a risk table your legal team has already set, covering what is usually just for information, what usually needs real work, and what usually blocks. Questions like using customer logos on a pricing page match quickly. If the question matches nothing, it says so instead of guessing. It also asks where the answer is going, so privileged advice does not leak into a wide channel.
 when:
-  - A teammate asks if they can use a customer logo on the website.
-  - You need a fast call before sending a message that touches legal risk.
+  - A teammate asks if they can use a customer logo on the pricing page.
+  - A product manager needs a same-day answer on a small change.
   - You want to know if a request needs a full legal review.
-  - A product manager needs an answer before end of day.
+  - You need a quick call before sending a message that touches legal risk.
+not_for:
+  - "You need a full review of a product plan or feature: ask your lawyer for a proper review, since this tool only gives a fast first call."
+  - "The question has many issues or covers a new area: book time with your lawyer instead of relying on a one-line answer."
+  - "You need a legal opinion you can rely on or act on in court: use a licensed lawyer, because this tool does not give legal advice."
 you_give:
-  - The question in one or two lines
-  - Your risk table from the legal setup
+  - Your question in one or two lines
+  - "Your risk table: what is usually fine, what usually needs work, and what usually blocks, with a timeline for each"
   - Where the answer will be shared (optional)
 you_get:
-  - Fine, needs a look, or hold
-  - One sentence of reasoning
-  - Named next step when needed
+  - "A call: fine, needs a look, or hold"
+  - One sentence on why
+  - One catch question when the request may hide a trap
+  - A named next step and timeline when it is not fine
+  - A warning if your answer is going to a wide channel
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved product legal setup notes.
-  - Where the skill points to /product-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - "Write your risk table first. Three or four rows is enough, like: customer logo on website, needs a look, check the contract for publicity terms."
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill instructions, then paste your risk table under them.
+  - Paste your question and say where the answer will go, for example a private message to a product manager.
+  - Read the call and the reason. If it asks a catch question, answer it and run it again.
+  - If the call is needs a look or hold, send the question to your lawyer or privacy lead. This tool does not replace them.
+  - It runs in a plain chat with no code or paid tools. Any links to other commands in the skill file need setup, so route those questions to your own legal or privacy lead.
+output_sample:
+  input:
+    - Your quick legal question in one or two lines
+    - Your risk table, with what is usually fine, what needs work and what blocks
+    - Where the answer will be shared (optional)
+  prerequisites:
+    - Your legal team's risk table, set up before you start. Without one, the skill can only say it needs a human look.
+  output:
+    - name: The call
+      contains: "One of three answers: fine, needs a look, or hold."
+    - name: The reason
+      contains: One sentence on why, matched to a pattern in your risk table.
+    - name: Trap question
+      contains: One short question when the request looks fine but may hide a catch, such as what the contract says.
+    - name: Next step
+      contains: The work needed, who to talk to and how long it usually takes, shown when the call is not fine.
+    - name: Destination warning
+      contains: A flag if the answer is going to a wide channel, with a legal-only version and a shareable version.
+    - name: Next-steps choices
+      contains: A short list of options to pick from, such as draft the next piece, escalate or get more facts.

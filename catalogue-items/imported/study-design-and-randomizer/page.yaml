@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Choosing a design that answers the question is hard to reverse.
 new_slug: study-design-and-randomizer
 name: Study design and randomizer
-summary: Describe your study. Get a design, random group assignment and run
-  order that avoid confounded results.
+summary: Plan an experiment before you collect data. Get a study design, random group assignment and run order so your results are not confounded.
 job: research-topics
 headline: Study design and randomizer
-subhead: Plan an experiment so the results mean something. You leave with a
-  design, a random assignment and a run order that stops hidden factors from
-  muddying the answer.
+subhead: Plan an experiment so the results mean something. You leave with a design, a random assignment and a run order that stops hidden factors from muddying the answer.
 explain: |
   Plan an experiment so the results mean something. You leave with a design, a random assignment and a run order that stops hidden factors from muddying the answer.
 
@@ -18,6 +15,10 @@ when:
   - You want to test several factors without running every combination.
   - You worry the order of runs will bias your results.
   - A reviewer asked how you randomised.
+not_for:
+  - "You need to know how many people or samples to test: use statistical-power."
+  - "You already have data and want to analyse it: use statistical-analysis."
+  - "You want a quick A/B test of two email subject lines: split your list at random in your email tool, no Python needed."
 you_give:
   - The question you want to test
   - The units, such as people or samples, and how many
@@ -30,8 +31,28 @@ you_get:
   - A table of treatment combinations
   - A list of design pitfalls to avoid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open a chat with an AI that can run Python code, like Claude or ChatGPT with code tools turned on.
+  - Paste in the skill instructions, or upload the skill folder if your AI accepts files.
+  - Describe your question, your units, your factors and their ranges. Add a grouping variable if you have one.
+  - Check the design it suggests and the reason it gives before you accept it.
+  - Save the schedule and run order files, and run your study in that order.
+output_sample:
+  input:
+    - The question you want to test
+    - The units you have, such as people or samples, and how many
+    - The factors and their low and high values
+    - A grouping variable to balance, like age (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python with numpy, pandas and pydoe installed
+  output:
+    - name: Recommended design
+      contains: The design that fits your question, with a short reason for the choice.
+    - name: allocation_schedule.csv
+      contains: A random assignment of each unit to a group, using permuted blocks, strata or whole clusters.
+    - name: experimental_runs.csv
+      contains: The treatment combinations in real units, with a randomized run order.
+    - name: Treatment combinations table
+      contains: Each mix of factor levels for full factorial, screening or response-surface layouts.
+    - name: Pitfall check
+      contains: Common mistakes such as confounded groups, unbalanced blocks and pseudoreplication, checked against your plan.

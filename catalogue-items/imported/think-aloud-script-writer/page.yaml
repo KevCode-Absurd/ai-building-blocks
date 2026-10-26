@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes the hidden thinking steps in plain speech.
 new_slug: think-aloud-script-writer
 name: Think-aloud script writer
-summary: Give it a task. Get a script of what you say out loud to show students
-  how an expert thinks it through.
+summary: "Write a think-aloud script for teaching: say your thinking out loud while you model a task, so students hear how an expert solves it."
 job: teach-and-train
 headline: Think-aloud script writer
-subhead: A script of what a teacher says out loud while solving a problem, so
-  students hear the thinking an expert does silently. Seeing the steps, doubts
-  and checks makes hidden skills teachable.
+subhead: A script of what a teacher says out loud while solving a problem, so students hear the thinking an expert does silently. Seeing the steps, doubts and checks makes hidden skills teachable.
 explain: |
   A script of what a teacher says out loud while solving a problem, so students hear the thinking an expert does silently. Seeing the steps, doubts and checks makes hidden skills teachable.
 
@@ -18,6 +15,10 @@ when:
   - Students copy your answer but not your reasoning.
   - You want to head off a common mistake before it happens.
   - You are a new teacher and unsure how to explain your thinking aloud.
+not_for:
+  - You only need students to recall facts. There is no reasoning to show, so use a short quiz or a worked example instead.
+  - You want a full lesson plan with timings. Ask your AI for a lesson plan, then add the script to it.
+  - You have no task in mind yet. Pick one task you want to model first, then come back.
 you_give:
   - The task you will model
   - Year group and subject
@@ -29,7 +30,24 @@ you_get:
   - Pause points with questions for students
   - Lines that address common errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page. No code or paid tools are needed.
+  - Type the task you will model, your students' year group and the subject.
+  - Add the mistakes students often make (optional), and how many minutes you want (optional).
+  - Read the script before class. Check that the pause points and wrong-turn moments sound like you.
+  - Say the script in class. Stop at each pause point and ask students the question.
+output_sample:
+  input:
+    - The task you will model
+    - Year group and level of your students
+    - Subject
+    - Common student errors (optional)
+    - Target length in minutes (optional)
+  output:
+    - name: The Script
+      contains: What you say out loud in the first person, with decision points, doubts and checks of your own work.
+    - name: Visible Strategies
+      contains: A list of the expert moves your script makes clear to students.
+    - name: Pause Points
+      contains: Moments to stop and check that students are following, with questions to ask.
+    - name: Delivery Notes
+      contains: Tips on how to say the script so it sounds like real thinking.

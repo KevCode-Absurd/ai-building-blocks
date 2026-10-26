@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads the code and explains it in order.
 new_slug: new-teammate-guide-writer
 name: New teammate guide writer
-summary: Point it at a codebase. Get an onboarding guide for new engineers,
-  leads or contractors.
+summary: Write a codebase onboarding guide for a new engineer, tech lead or contractor. Point it at your repo and get setup steps and key files.
 job: build-software
 headline: New teammate guide writer
-subhead: A written guide that gets a new engineer, tech lead or contractor
-  working in your codebase without a week of questions. You point it at a
-  repository and it writes the guide from what the code shows.
+subhead: A written guide that gets a new engineer, tech lead or contractor working in your codebase without a week of questions. You point it at a repository and it writes the guide from what the code shows.
 explain: |
   A written guide that gets a new engineer, tech lead or contractor working in your codebase without a week of questions. You point it at a repository and it writes the guide from what the code shows.
 
@@ -18,19 +15,44 @@ when:
   - A big refactor made your README wrong.
   - You want the same onboarding pack for every service.
   - A new tech lead needs the architecture fast.
+not_for:
+  - "You only need to fix one line in the README: edit the README by hand."
+  - "Your repository is private or unreadable to your AI: ask a current teammate to write the guide."
+  - "You need a deep design review of the code: ask a senior engineer to review it."
 you_give:
   - The path to your repository
-  - Who the guide is for
+  - "Who the guide is for: a junior, a senior, a tech lead or a contractor"
   - Any setup quirks you know (optional)
-  - Python on your computer
 you_get:
   - A scan of languages, files and structure
   - A guide filled in from the template
   - Setup and common task steps
   - A debugging and contribution checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open an AI that can run code and read files. Python must be installed on your computer.
+  - Give it this skill and the path to your repository.
+  - "Say who the guide is for: a junior, a senior, a tech lead or a contractor."
+  - Let it scan the project, then read the guide it writes from the template.
+  - Ask a new hire to run the setup steps on a clean machine and fix anything that fails.
+  - Send the guide to your tech lead for review before you share it.
+output_sample:
+  input:
+    - The path to your repository
+    - "Who the guide is for: a junior, a senior, a tech lead or a contractor"
+    - Any setup quirks you know (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Python installed on your computer
+  output:
+    - name: Codebase scan
+      contains: File counts, detected languages, config files and the top-level folder layout of your repository.
+    - name: Stack and key files
+      contains: The tools the project uses and the files a new person should read first.
+    - name: Local setup
+      contains: Steps to get the project running on a new machine.
+    - name: Common tasks
+      contains: Steps for the jobs a new teammate will do most often.
+    - name: Debugging tips
+      contains: Troubleshooting and ways to check that your setup works.
+    - name: Contribution checklist
+      contains: What to check before sending your first change.

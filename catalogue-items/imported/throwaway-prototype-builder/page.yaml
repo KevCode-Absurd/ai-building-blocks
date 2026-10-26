@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It picks a branch, then builds a small demo.
 new_slug: throwaway-prototype-builder
 name: Throwaway prototype builder
-summary: Ask a design question. Get a quick prototype of the logic or the screen
-  that answers it.
+summary: Build a throwaway prototype to answer one design question. Click through a logic demo or compare screen layouts before you write real code.
 job: build-software
 headline: Throwaway prototype builder
-subhead: Build a rough prototype to answer one question, then delete it. Instead
-  of debating whether a design idea works, you can click through it in minutes.
+subhead: Build a rough prototype to answer one question, then delete it. Instead of debating whether a design idea works, you can click through it in minutes.
 explain: |
   Build a rough prototype to answer one question, then delete it. Instead of debating whether a design idea works, you can click through it in minutes.
 
   The skill first sorts your question into one of two kinds. If you are asking whether logic or a state model feels right, it makes a single HTML file with buttons and guided walkthroughs that push the logic through its paces and show the full state after each step. If you are asking what a screen should look like, it builds several very different versions on one page that you flip between with a small bar. Both stay in memory, skip polish, and are clearly marked as throwaway.
 when:
-  - Your team argues about how a workflow should behave and nobody can picture
-    it.
+  - Your team argues about how a workflow should behave and nobody can picture it.
   - You need three different layouts to compare before building one.
-  - You want to test a rule such as order status changes without touching the
-    real database.
+  - You want to test a rule such as order status changes without touching the real database.
   - You want a quick demo for a stakeholder before committing time.
+not_for:
+  - "You need a real feature for customers: build it in your project with a developer, since a prototype skips tests and error handling."
+  - "You want final visual design or brand polish: ask a designer for a design review instead."
+  - "You want to keep the prototype as live code: this skill marks it as throwaway, so rebuild the validated idea properly."
 you_give:
   - The question you want answered
   - Your project, so the prototype sits near the real code
@@ -29,8 +29,30 @@ you_get:
   - A one-command way to run it
   - A note of what you learned
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open your AI tool in your project. Use one that can run code and write files, such as Claude Code.
+  - Paste the skill text into the chat, then state your design question in one sentence.
+  - Say whether it is about how something behaves or how a screen looks. If you skip this, your AI picks from your code and tells you its guess.
+  - Run the prototype with the command your AI gives you. Logic demos are one HTML file you open in your browser.
+  - Click through the cases and watch the state after each step.
+  - Write down the answer. Keep the prototype on a throwaway branch and move only the decision into your real code.
+output_sample:
+  input:
+    - The design question you want answered
+    - Your project or the module or page it relates to
+    - Any rules or states already decided (optional)
+  prerequisites:
+    - An AI that can run code and write files in your project
+    - A browser to open the result
+  output:
+    - name: Branch choice
+      contains: A short note saying whether your question is about logic or about how a screen looks, and any assumption made.
+    - name: Logic demo (single HTML file)
+      contains: Buttons you can click freely, plus guided walkthroughs that push the state through hard cases.
+    - name: UI variations
+      contains: Several very different versions of one screen, switched by a link setting and a small bottom bar.
+    - name: State display
+      contains: The full current state shown after every action or every switch between versions.
+    - name: Run command
+      contains: One command, or one double-click, that starts the prototype with no setup thinking.
+    - name: Capture note
+      contains: The verdict and the question it settled, with the prototype kept on a throwaway branch, out of main.

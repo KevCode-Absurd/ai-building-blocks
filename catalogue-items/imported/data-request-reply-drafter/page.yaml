@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Deadlines and exemptions differ by law.
 new_slug: data-request-reply-drafter
 name: Data request reply drafter
-summary: Paste a request for someone's data. Get steps to find it and a draft
-  reply. First check, not legal advice.
+summary: Paste a data access or deletion request. Get a search plan for your systems and a draft reply. A first check, not legal advice.
 job: check-contracts
 headline: Data request reply drafter
-subhead: When someone asks for a copy of their data or asks you to delete it,
-  you get a step by step plan and a draft reply.
+subhead: When someone asks for a copy of their data or asks you to delete it, you get a step by step plan and a draft reply.
 explain: |
   When someone asks for a copy of their data or asks you to delete it, you get a step by step plan and a draft reply. It is a first check, not legal advice, and a person reviews before anything is sent.
 
@@ -17,6 +15,10 @@ when:
   - Someone demands you delete their account and records.
   - You need a reply drafted inside the legal deadline.
   - You are unsure which of your systems hold a person's data.
+not_for:
+  - "A lawyer or regulator already has the request: give the draft to your lawyer and let them lead the reply."
+  - "You process the data for another company (a B2B case): forward the request to that company, who decides the reply."
+  - "You need a legal ruling on a tricky exemption or a claim: ask a privacy lawyer, since this tool only gives a first check."
 you_give:
   - The request text
   - Your list of systems holding data
@@ -28,11 +30,33 @@ you_get:
   - Exemption review
   - Draft acknowledgement and reply
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved privacy setup notes.
-  - Where the skill points to /privacy-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Remove what you do not need from the request first, such as ID scans and unrelated email threads. Do not put the person's name in file names.
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions from the download.
+  - Paste your systems list, your reply deadline rules and how you check identity. If your AI cannot read your saved privacy setup notes, paste these into the chat.
+  - Paste the request text and ask your AI to follow the skill.
+  - Read the request type and risk flags first. If a flag says to see a lawyer, stop and do that.
+  - Check the letters and the system list with a person. Send nothing until they approve. The skill never sends anything.
+output_sample:
+  input:
+    - The request text, pasted from the email
+    - Your list of systems that hold personal data
+    - How you check who is asking (optional)
+    - Your reply deadline rules (optional)
+  prerequisites:
+    - Your saved privacy setup notes, or your systems list, deadline and identity check method pasted into the chat
+    - Redacted request text, with ID scans and unrelated emails removed
+  output:
+    - name: Request type and risk flags
+      contains: Whether it is an access, deletion, correction or portability request, and any signs that a lawyer should look first.
+    - name: Identity check
+      contains: The steps to confirm the person is who they say they are.
+    - name: System by system search checklist
+      contains: Each system on your list, with what to look for and who should check it.
+    - name: Exemption review
+      contains: Data you may be allowed to withhold or keep, with the reason for each.
+    - name: Acknowledgment letter
+      contains: A short note that confirms receipt, restates the request and gives the target reply date.
+    - name: Substantive response letter
+      contains: A full reply for an access or deletion request, listing what was found, sent, deleted or kept.
+    - name: Log entry
+      contains: A record of the request and what was done, for your own files.

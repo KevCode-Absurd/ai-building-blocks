@@ -1,19 +1,15 @@
 slug: procurement-evidence-gap-review-assistant
 name: Procurement evidence gap review assistant
-summary: A vendor evidence comparison, checklist result and decision trace.
+summary: "Compare vendor proposals against your approval checklist and see which mandatory checks still lack proof. Get a dated trail of how you decided."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: question
-    required: false
-  - type: plan
-    required: false
-  - type: source_text
+  - type: spreadsheet
     required: false
 outputs:
   - type: audit_report
@@ -23,15 +19,16 @@ uses:
   - source-note-summariser
 steps:
   - uses: preserve-a-procurement-decision-audit-trail
-    note: "Run when: A vendor supplies new evidence or a mandatory procurement check becomes due."
+    note: "Run when a vendor sends new evidence or a mandatory check is due. It compares the proposals on your fixed criteria, then runs your checklist in order. Unknown mandatory checks stay failed. Hands its checklist report, with the still-unproven checks, to step 2."
   - uses: source-note-summariser
-    note: Run preserve-a-procurement-decision-audit-trail for changed evidence or a due review. If a previously unknown mandatory item gets evidence, extract its actual scope and date, then rerun the existing checklist from the earliest affected stop rule.
+    note: "Run when an unknown mandatory item gets proof. It pulls the proof's real scope and date, then the checklist reruns from the earliest stop rule that proof touches. Uses the proof you attach and step 1's report."
 schedule: At a user-requested procurement checkpoint. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form
   - Changing a live account, calendar, task, permission or published document
   - Spending money, releasing a payment or signing a contract
   - Starting or changing any recurring schedule
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

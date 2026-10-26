@@ -2,34 +2,115 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: soft-clay-style-guide-writer
 name: Soft clay style guide writer
-summary: Describe your product. Get a style guide for a puffy, rounded look,
-  with shapes, colour and states.
+summary: Get a soft clay style guide for your app, with puffy rounded shapes, colour and type values, and states that stay readable.
 job: design-work
 headline: Soft clay style guide writer
-subhead: A style guide for a puffy, rounded, clay-like interface that your
-  designers and developers can use directly. You describe your product, and the
-  skill writes the rules for shapes, colour, type and states.
+subhead: Describe your product and your users. Your AI writes a style guide for a puffy, rounded, clay-like interface. You get colour, type and spacing values, rules for buttons, cards and forms in each state, and a checklist your team can review against.
 explain: |
-  A style guide for a puffy, rounded, clay-like interface that your designers and developers can use directly. You describe your product, and the skill writes the rules for shapes, colour, type and states.
+  A soft clay style guide is a set of written rules for an app that feels moulded from clay: round shapes, thick soft edges and bright, friendly colours. This skill writes those rules so your designers and developers stop guessing. Buttons, cards and inputs then match from one screen to the next.
 
-  The look is soft, three-dimensional and playful, with colourful surfaces that seem moulded. The guide sets a type scale, colour tokens for primary, neutral and status colours, and a spacing scale built on 4 and 8 pixel steps. It covers how each component looks when hovered, focused or disabled, and sets accessibility rules for contrast and keyboard use. It also lists do and don't rules, such as using tokens over raw values and not mixing styles.
+  Your AI starts with one sentence for the design idea, then sets named values for colour, type and spacing. It then describes each part and how it looks when hovered, focused, pressed, disabled, loading or in error. The look leans on shapes, so the guide says how round, how raised and how thick each part is, and where to stop.
+
+  It also checks the colours it picks. Bright blue with white text looks friendly but is hard to read at small sizes, so your AI works out the contrast and darkens any colour that fails. Keyboard and focus rules are written in too, so the soft look never hides which part is selected.
 when:
-  - You want an app to feel friendly and tactile.
-  - You need a style guide before building a new product.
-  - Your team keeps making inconsistent buttons and cards.
-  - You are designing for kids or a playful brand.
+  - You are building an app for kids, families or a friendly consumer brand and want it to feel tactile.
+  - You need a style guide before the first screen is built.
+  - Buttons and cards in your app all look a little different.
+  - You want a puffy, rounded look but worry that text will be hard to read.
+not_for:
+  - "You want a flat surface with soft inner and outer shadows on one colour: use the Soft shadow style guide writer."
+  - "You want see-through panels and blur: use the Frosted glass style guide writer."
+  - "You already have a design system with its own tokens: use that, or the Brand style guide writer to write it down."
 you_give:
-  - A description of your product
-  - Brand colours and fonts (optional)
-  - Your audience
-  - Platforms you build for (optional)
+  - A short description of your product, in a sentence or two
+  - Who will use it
+  - Brand colours and fonts to keep (optional)
+  - The platforms you build for, such as web or phone (optional)
 you_get:
-  - A written style guide for the clay look
-  - Colour, type and spacing tokens
-  - Rules for component states
-  - Accessibility and do and don't rules
+  - A one-line design idea for the clay look
+  - Colour, type and spacing values with names
+  - Rules for each part, with hover, focus, pressed, disabled and error states
+  - Accessibility rules with contrast checked
+  - Do and don't lists with a review checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or paste the skill text into a new chat.
+  - Paste your product description and who will use it. Add brand colours or fonts if you have them.
+  - Read the design idea first. Fix it if it does not sound like your product.
+  - Check the colour list. Ask your AI for the contrast ratio of every text and background pair, and change any pair under 4.5 to 1.
+  - Ask for any part the guide left out, such as a menu or a toggle.
+  - Hand the guide to your designer or developer. It writes rules only. It does not draw screens.
+how_it_works:
+  - title: States the design idea
+    text: Writes one sentence for the clay look as it fits your product.
+  - title: Sets the foundations
+    text: Names the colours, fonts, type sizes and spacing steps, using your brand values where you gave them.
+  - title: Checks contrast
+    text: Works out the ratio for each text and background pair and darkens any colour that fails.
+  - title: Writes the part rules
+    text: Describes each part and its states, and how it works by keyboard, mouse and touch.
+  - title: Adds the edge cases
+    text: Covers long labels, empty views and overflow, and what to do with an old, inconsistent screen.
+  - title: Ends with a checklist
+    text: Lists what a reviewer should tick before the design ships.
+output_shape: |
+  DESIGN IDEA
+  <one sentence>
+
+  CONTEXT AND GOALS
+  <product, users, what the look must do>
+
+  FOUNDATIONS
+  Colours: <names and values, with contrast ratios>
+  Type: <fonts and size steps>   Spacing: <steps>
+  Shape: <how round, how raised, how thick>
+
+  COMPONENT RULES
+  <part>: pieces, versions, states, small-screen behaviour
+
+  ACCESSIBILITY
+  <rules you can test>
+
+  TONE
+  <examples of the voice>
+
+  AVOID
+  <things that break the look>
+
+  QA CHECKLIST
+  <items a reviewer can tick>
+output_sample:
+  input:
+    - A short description of your product
+    - Who will use it
+    - Brand colours and fonts to keep (optional)
+    - The platforms you build for (optional)
+  prerequisites:
+    - An AI chat you can paste the skill into
+  output:
+    - name: Design idea
+      contains: One sentence that says how the clay look fits your product.
+    - name: Foundations
+      contains: Colour, type and spacing values with names, and how round and raised each shape is.
+    - name: Contrast check
+      contains: The ratio for each text and background pair, with any failing colour changed.
+    - name: Component rules
+      contains: Pieces, versions and states for each part, including hover, focus, pressed, disabled and error.
+    - name: Accessibility, tone and avoid list
+      contains: Testable rules, example wording and a list of things that break the look.
+    - name: QA checklist
+      contains: A short list a reviewer can tick before the design ships.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your logo and brand colours, so the clay colours fit your brand
+    - A screenshot of your current app, so the guide can say what to change
+    - A list of the screens you plan to build
+terms:
+  - term: Claymorphism
+    meaning: A design style with soft, rounded, puffy shapes that look moulded from clay.
+  - term: Token
+    meaning: A named value, such as a colour or a spacing step, that is used the same way everywhere.
+  - term: Contrast ratio
+    meaning: A number that says how easy text is to read on its background. WCAG AA asks for at least 4.5 to 1 for normal text.

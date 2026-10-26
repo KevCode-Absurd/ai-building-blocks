@@ -14,6 +14,10 @@ when:
   - You are planning next year's team and have no written hiring plan.
   - Finance asks for a people budget and you only have a list of roles.
   - You want to know how many hires you need just to stand still.
+not_for:
+  - "You have one role to fill, not a year of hiring: use the Job post writer or the Hiring pipeline runner."
+  - "You only want to track a plan you already have against actual spend: use the Monthly budget versus actual keeper."
+  - "You want to keep a hiring plan up to date every quarter: use the Quarterly headcount plan keeper."
 you_give:
   - Your headcount history, with hires and exits by month if you have them (optional)
   - Your growth goals for the year
@@ -30,13 +34,30 @@ how_to_use:
   - Paste your past headcount and your goals. A spreadsheet export works.
   - Read the forecast first. If the exit numbers look wrong, correct them before the plan is built.
   - Check the budget totals by hand against your pay figures before you share them.
+output_sample:
+  input:
+    - Your headcount history, with hires and exits by month (optional)
+    - Your growth goals for the year
+    - Pay by role, and any budget limit
+    - Your starting headcount by team
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+  output:
+    - name: "Step 1: Headcount forecast"
+      contains: Method, headcount by month with low, mid and high cases, expected exits, hires needed and a back-test.
+    - name: "Step 2: Hiring plan"
+      contains: Named roles in priority order, why each one, the start month and a monthly report for leaders.
+    - name: "Step 3: People-cost budget"
+      contains: Cost by team and month, assumptions with sources, and a note for finance on gaps and risks.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Forecast hires and exits
     text: Projects the hires you need and the people likely to leave, month by month, and states the method and how far off it could be.
   - title: Build the hiring plan
     text: Turns your goals and the forecast into named roles, puts them in priority order and sets a monthly report for leaders.
   - title: Price the plan
-    text: Prices each role, builds the budget by team and by month, and adds notes that explain the gaps to finance.
+    text: Takes the hiring plan and the forecast, adds the pay and cost rates you give it, prices each role, builds the budget by team and by month, and adds notes that explain the gaps to finance.
 output_shape: |-
   STEP 1: FORECAST
     Hires needed by month | likely exits by month | method | range of error

@@ -1,0 +1,41 @@
+slug: agency-gis-qa-engineer
+name: GIS QA Engineer agent
+summary: "Check a map dataset before release. Get a pass or fail verdict, each problem with its location and likely cause, and checks to run in QGIS."
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: gis/gis-qa-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-qa-engineer.md
+  licence: MIT
+  original_name: GIS QA Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: f7247c7df478d963db720562af361394454c20b6af3fc78a02791ec6624bfc38
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - GIS QA Engineer
+  - Agency Agents
+  - GIS
+credits:
+  - title: GIS QA Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-qa-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

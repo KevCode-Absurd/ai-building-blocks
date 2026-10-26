@@ -2,21 +2,23 @@ thinking: medium
 thinking_why: Queries must be correct for your dialect.
 new_slug: plain-words-sql-writer
 name: Plain-words SQL writer
-summary: Describe the data you need. Get a working SQL query for your database
-  type, with a note on how it runs.
+summary: Turn a plain-words request into a working SQL query for your database type, with a short note on how it runs and where it could be slow.
 job: track-numbers
 headline: Plain-words SQL writer
-subhead: Describe the data you want in plain words and get a working SQL query
-  for your database, with a short note on how it runs.
+subhead: Describe the data you want in plain words and get a working SQL query for your database, with a short note on how it runs.
 explain: |
   Describe the data you want in plain words and get a working SQL query for your database, with a short note on how it runs. It saves you from remembering each system's quirks.
 
   The skill pulls out the columns, filters, totals, joins, order and limits from your description. If it does not know your database, it asks: Postgres, Snowflake, BigQuery, Redshift, Databricks, MySQL, SQL Server, DuckDB, SQLite or another. If a warehouse is connected, it looks up tables, columns and partitions first. It then writes the query in your dialect and explains the logic and any speed concerns.
 when:
-  - You know what you want but not the SQL for it.
-  - You switched from one database to another.
-  - You need a top-ten or time-range report query.
+  - You know what data you want but not the SQL to get it.
+  - You moved from one database to another and the syntax is different.
+  - You need a top-ten or time-range report from a large table.
   - You want a query that does not scan the whole table.
+not_for:
+  - "You need to change table structure or write to production tables: ask a database admin, or run the change through your team's review steps."
+  - "Your data lives in a spreadsheet and not in a database: use the spreadsheet's own filters and pivot tables."
+  - "You want charts and dashboards, not a query: use a BI tool, then bring the query here if it needs one."
 you_give:
   - A description of the data you need
   - Your database type
@@ -27,8 +29,26 @@ you_get:
   - Speed tips such as partition use
   - Assumptions listed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to your database.
+  - Open Claude, ChatGPT or Gemini and paste the full SKILL.md text into the chat.
+  - Say which database you use, such as Postgres, Snowflake or BigQuery.
+  - Paste your description of the data you need. Add table and column names if you know them.
+  - Read the explanation and performance notes, then copy the query into your database tool.
+  - If your AI is connected to your warehouse, ask it to run the query and check the results. Without that link, it cannot run the query for you.
+  - The file mentions a sql-queries skill and a CONNECTORS.md file. You do not need either. The dialect rules still work without them.
+output_sample:
+  input:
+    - A plain description of the data you need
+    - Your database type, such as Postgres, Snowflake or BigQuery
+    - Table and column names (optional)
+    - Your date range, filters or top-N limit (optional)
+  prerequisites:
+    - A connected data warehouse is optional. Without it, your AI cannot look up your tables, so name them yourself.
+  output:
+    - name: SQL query
+      contains: The full query in your database's syntax, laid out in clear steps with comments on any tricky logic.
+    - name: Explanation
+      contains: A short note on what each step or section of the query does.
+    - name: Performance notes
+      contains: Tips on date filters, partitions and joins that could make the query slow or costly.
+    - name: Modification suggestions
+      contains: Ways to change the query for another time range, level of detail or extra filter.

@@ -11,7 +11,7 @@ Mode: SaaS. Accept a product URL alone; optional inputs are a buyer brief, tract
 
 1. Use `traction-business-profiler` and save business-profile.md. Set a dated traction goal and the current bottleneck. If a URL cannot be read, mark that limitation and ask for pasted facts.
 2. Use `traction-channel-ranker`. Brainstorm and rank all 19 channels. Save channel-matrix.csv and shortlist.md. Select up to three cheap pilots, or fewer when combined limits demand it.
-3. Read and run only the selected channel skills listed below. Save experiments/<channel>.md. Record every unselected channel as skipped. The pack contains every specialist so selection can change without downloading again.
+3. Read and run only the selected channel skills listed below. Each one works from business-profile.md and shortlist.md, not from another channel's plan. Save experiments/<channel>.md. Record every unselected channel as skipped. The pack contains every specialist so selection can change without downloading again.
 4. Hand back the plans and approval-needed actions. Stop before sending, spending, booking, publishing or modifying live systems. Do not fabricate test execution.
 5. Once results are supplied, use `traction-experiment-reviewer` to check customer quality, cost and plausible scale. Focus on one supported channel, or revise, stop or wait. Keep a dated decision log.
 

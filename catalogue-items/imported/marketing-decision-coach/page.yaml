@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It weighs your numbers and rivals before it gives a verdict.
 new_slug: marketing-decision-coach
 name: Marketing decision coach
-summary: Ask whether a marketing move will work. Get a straight verdict with the
-  reasons, including "not worth doing".
+summary: "Get a straight verdict on a marketing move: will it work, what test volume you need, and when to stop. Your marketing decision coach."
 job: plan-strategy
 headline: Marketing decision coach
-subhead: Describe your product, offer, audience, budget and the marketing move
-  you are weighing. It judges whether the move will trade for something real,
-  such as money or clear prospects. You get a straight verdict, the reasoning,
-  the volume a test needs and a next step or a stop.
+subhead: Describe your product, offer, audience, budget and the marketing move you are weighing. It judges whether the move will trade for something real, such as money or clear prospects. You get a straight verdict, the reasoning, the volume a test needs and a next step or a stop.
 explain: |
   A straight verdict on a marketing move, with the reasoning, including "not worth doing" when that is true. It gives a decision, not a list of tactics.
 
@@ -19,6 +15,10 @@ when:
   - You ran a test and need to know if the result means anything.
   - You are deciding whether to stop a channel or fix it.
   - You want an honest opinion on a marketing plan, not a yes.
+not_for:
+  - You want a list of marketing tactics or channel ideas. Ask your AI for a plain brainstorm instead, then bring the best idea here for a verdict.
+  - You want fake reviews, made-up case studies or testimonials. It will refuse. Collect real quotes from your customers instead.
+  - You need to grow from 10 to 100 or more clients. This covers only your first client and your first ten. Ask a marketer or agency for scale plans.
 you_give:
   - Your product and offer
   - Your audience and budget
@@ -30,7 +30,25 @@ you_get:
   - The volume a test needs
   - A next step or a stop recommendation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. It needs no code, files or paid tools.
+  - Tell your AI about your product, offer, audience and budget.
+  - Say how many paying clients you have today and where they came from.
+  - Add any test results, such as sends, replies, visitors or ad spend (optional).
+  - "Ask your question, for example: should I stop this channel? Check the verdict and the test volume it names."
+  - Run the next step it gives you. Come back with the new numbers once you hit the volume.
+output_sample:
+  input:
+    - Your product and what you offer
+    - Who you sell to and your budget
+    - How many paying clients you have and where they came from
+    - Test results or channel numbers (optional)
+    - The decision you are weighing
+  output:
+    - name: Verdict
+      contains: "A clear call: run it, change one thing and rerun, or stop and do something else."
+    - name: Reasons
+      contains: Why it reached that call, based on your offer, audience, budget and what your rivals do now.
+    - name: Test volume needed
+      contains: How many sends, visitors or ad spend you need before the result means anything.
+    - name: Next step or Stop
+      contains: The one thing to do next, or a plain call to end a channel that cannot pay back.

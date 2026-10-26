@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It lays out stages and drafts copy.
 new_slug: product-launch-planner
 name: Product launch planner
-summary: Describe what you are launching. Get a launch plan with timing,
-  channels and announcement copy.
+summary: Plan a product launch with dated phases, channels and announcement drafts. Give it your product, audience and date, and get a plan you can run.
 job: build-product
 headline: Product launch planner
-subhead: A launch plan with dates, channels and announcement copy, so a new
-  product or feature gets noticed instead of slipping out quietly. Launches are
-  treated as repeating events, not one big day.
+subhead: A launch plan with dates, channels and announcement copy, so a new product or feature gets noticed instead of slipping out quietly. Launches are treated as repeating events, not one big day.
 explain: |
   A launch plan with dates, channels and announcement copy, so a new product or feature gets noticed instead of slipping out quietly. Launches are treated as repeating events, not one big day.
 
@@ -18,6 +15,10 @@ when:
   - A feature release deserves more than a changelog line.
   - You want to run a Product Hunt or beta launch.
   - You need an announcement email or post written.
+not_for:
+  - "You ship a small fix or a bug release: write a short changelog entry or release note instead."
+  - "You want ongoing marketing after the launch is over: use the Marketing ideas skill, or ask a teammate to plan a content calendar."
+  - "You need the offer itself designed, such as bonuses, guarantees or pricing: work that out first, then come back to plan the launch."
 you_give:
   - What you are launching and its main benefit
   - Your target audience
@@ -29,7 +30,28 @@ you_get:
   - Announcement copy drafts
   - A pre-launch checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Say what you are launching and the main benefit. Add your audience, your target date and the channels you can use.
+  - Paste your product context file too, if you have one (optional). The AI then asks only for what is missing.
+  - Answer any questions the AI asks. If you do not know something, say so and ask it to mark that part as missing.
+  - Read the readiness check first. Fix any gaps before you follow the timeline or send the announcement drafts.
+  - Edit the drafts so they sound like you. Check every date and claim before you publish.
+output_sample:
+  input:
+    - What you are launching and its main benefit
+    - Your target audience
+    - Your target date and the channels you can use
+    - Your product context file (optional)
+  output:
+    - name: Readiness check
+      contains: A short gate that shows whether your product, page and team are ready before you announce.
+    - name: Channel plan
+      contains: Owned, rented and borrowed channels picked for your audience, with a reason for each.
+    - name: Phased launch timeline
+      contains: Steps from internal launch through alpha, beta, early access and full launch, laid out by phase.
+    - name: Product Hunt plan
+      contains: Advice on whether to launch there and how to prepare, if it fits your product.
+    - name: Announcement drafts
+      contains: Written messages for your chosen channels, such as an email or a social post.
+    - name: Launch checklist
+      contains: Tasks to finish before launch, on launch day and after launch.

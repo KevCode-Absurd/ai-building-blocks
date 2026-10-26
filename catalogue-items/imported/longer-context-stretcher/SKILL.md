@@ -10,6 +10,18 @@ dependencies: [transformers, torch, flash-attn]
 
 # Long Context: Extending Transformer Context Windows
 
+## How to run this skill (added by AI Blocks)
+
+1. Ask once for what is missing: the model name, the context length needed, the GPU and its memory, whether the user can fine-tune and on what long documents (optional), and the installed `transformers` version. If something is still missing, write `MISSING: <what>`. Never invent a model's current window, a config value or a result.
+2. Pick the method with the comparison table below. Fine-tuning-free methods do not work well beyond what the model was trained on. YaRN and position interpolation need a short fine-tune. ALiBi needs training from scratch, so it does not fit an existing RoPE model.
+3. Set `rope_scaling` on the config before the model loads, not after. The key names (`type` or `rope_type`) depend on the `transformers` version, so check the docs for the installed version and say which one you used.
+4. The code below is a starting point. State plainly which parts you ran and which you did not. For YaRN fine-tuning, use the training script in the YaRN repository and follow its README, because its flags can change.
+5. Figures such as speed-ups and step counts below come from the papers, in their setups. Never promise them. Give the paper link with any figure you repeat.
+6. Hand back: the method and why, the config values, the loading code with file names, the fine-tune plan with stages, the checks (a short prompt test, then a long test with the answer at the start, middle and end), the sources, and `OPEN QUESTIONS`.
+7. Not for: hosted API models, answering questions about one long document (use the RAG pipeline designer), shrinking a model (use the Model size reducer), or task fine-tuning (use the LLM fine-tuning guide).
+8. Next step: run the checks, then fine-tune in stages if the long test fails.
+
+
 ## When to Use This Skill
 
 Use Long Context techniques when you need to:
@@ -43,8 +55,10 @@ pip install flash-attn --no-build-isolation
 ### RoPE (Rotary Position Embeddings)
 
 ```python
+import math
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 class RotaryEmbedding(nn.Module):
     """Rotary Position Embeddings (RoPE)."""
@@ -110,16 +124,16 @@ def get_alibi_slopes(num_heads):
 
 def create_alibi_bias(seq_len, num_heads):
     """Create ALiBi attention bias."""
-    # Distance matrix
+    # Distance matrix: -|i - j|, so the bias is always zero or negative
     context_position = torch.arange(seq_len)
     memory_position = torch.arange(seq_len)
-    relative_position = memory_position[None, :] - context_position[:, None]
+    distance = (context_position[:, None] - memory_position[None, :]).abs()
 
     # Get slopes
     slopes = torch.tensor(get_alibi_slopes(num_heads))
 
-    # Apply slopes to distances
-    alibi = slopes[:, None, None] * relative_position[None, :, :]
+    # Apply slopes to distances: farther tokens get a bigger penalty
+    alibi = -slopes[:, None, None] * distance[None, :, :]
     return alibi  # (num_heads, seq_len, seq_len)
 
 # Usage in attention
@@ -129,6 +143,7 @@ alibi_bias = create_alibi_bias(seq_len, num_heads).to('cuda')
 
 # Add bias to attention scores
 # attn_scores shape: (batch, num_heads, seq_len, seq_len)
+# For a causal model, also mask future positions with -inf before the softmax.
 attn_scores = attn_scores + alibi_bias
 attn_weights = torch.softmax(attn_scores, dim=-1)
 ```
@@ -136,26 +151,24 @@ attn_weights = torch.softmax(attn_scores, dim=-1)
 ### Position Interpolation for LLaMA
 
 ```python
-from transformers import LlamaForCausalLM, LlamaTokenizer
+from transformers import AutoConfig, LlamaForCausalLM
 
-# Original context: 2048 tokens
-model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
+# Original context: 4096 tokens for Llama 2 (check your model's own config)
+config = AutoConfig.from_pretrained("meta-llama/Llama-2-7b-hf")
 
-# Extend to 32k with position interpolation
-# Modify RoPE base frequency
-model.config.rope_scaling = {
-    "type": "linear",
-    "factor": 16.0  # 2048 * 16 = 32768
+# Set the scaling on the CONFIG, before the model loads.
+# Extend with position interpolation: new length = original length * factor
+config.rope_scaling = {
+    "type": "linear",   # some versions call this key "rope_type"
+    "factor": 8.0       # 4096 * 8 = 32768
 }
 
 # Or use dynamic scaling
-model.config.rope_scaling = {
-    "type": "dynamic",
-    "factor": 16.0
-}
+# config.rope_scaling = {"type": "dynamic", "factor": 8.0}
 
-# Fine-tune with long documents (minimal steps needed)
-# Position interpolation works out-of-the-box after this config change
+model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", config=config)
+
+# Fine-tune with long documents. Without it, quality on long inputs is usually poor.
 ```
 
 ## Core Concepts
@@ -185,7 +198,7 @@ where θ_j = base^(-2j/d) for j ∈ [0, d/2)
 **Key innovation:**
 - NTK-aware interpolation (Neural Tangent Kernel)
 - Attention temperature scaling
-- Efficient context extension (10× less tokens vs baselines)
+- Efficient context extension (the YaRN paper reports needing far fewer tokens than earlier methods)
 
 **Parameters:**
 ```python
@@ -201,9 +214,9 @@ yarn_config = {
 ```
 
 **Performance:**
-- Extends LLaMA to 128k tokens
-- 2.5× less training steps than baselines
-- State-of-the-art context window extension
+- The paper reports extending Llama 2 to 128k tokens
+- The paper reports fewer training steps than earlier methods
+- Check the paper for the exact setup and results
 
 ### 3. ALiBi (Attention with Linear Biases)
 
@@ -220,9 +233,8 @@ where m = slope for each attention head
 ```
 
 **Advantages:**
-- 11% faster training vs sinusoidal embeddings
-- 11% less memory usage
-- Strong length extrapolation (train 1k, test 2k+)
+- The ALiBi paper reports faster training and lower memory than sinusoidal embeddings in its setup
+- Length extrapolation: train short, test longer (the paper trains on 1k and tests on 2k and more)
 - Inductive bias towards recency
 
 ### 4. Position Interpolation
@@ -243,17 +255,17 @@ scaled_position[i] = i / extension_factor
 
 **Results:**
 - LLaMA 7B-65B extended to 32k tokens
-- 1000 fine-tuning steps sufficient
-- 600× better stability than extrapolation
+- The paper reports good results after about 1000 fine-tuning steps in its setup
+- The paper's analysis says interpolation is far more stable than extrapolation
 
 ## Method Comparison
 
 | Method | Max Context | Training Needed | Memory | Extrapolation | Best For |
 |--------|-------------|-----------------|--------|---------------|----------|
 | **RoPE** | 8k-32k | Full pre-training | Moderate | Good | New models |
-| **YaRN** | 32k-128k | Minimal (10× efficient) | Moderate | Excellent | Extending existing models |
-| **ALiBi** | Unlimited | Full pre-training | Low (-11%) | Excellent | Training from scratch |
-| **Position Interpolation** | 32k+ | Minimal (1k steps) | Moderate | Poor (by design) | Quick extension |
+| **YaRN** | 32k-128k | Short fine-tune | Moderate | Excellent | Extending existing models |
+| **ALiBi** | No fixed limit, but quality falls far beyond the trained length | Full pre-training | Lower than sinusoidal in the paper's setup | Good, tested in the paper | Training from scratch |
+| **Position Interpolation** | 32k+ | Short fine-tune (about 1k steps in the paper) | Moderate | Poor (by design) | Quick extension |
 
 ## Implementation Patterns
 
@@ -262,7 +274,8 @@ scaled_position[i] = i / extension_factor
 ```python
 from transformers import AutoModelForCausalLM, AutoConfig
 
-# RoPE with YaRN scaling
+# RoPE with YaRN scaling. Set the config BEFORE loading the model.
+# Check the key names against your transformers version.
 config = AutoConfig.from_pretrained("mistralai/Mistral-7B-v0.1")
 config.rope_scaling = {
     "type": "yarn",
@@ -271,7 +284,7 @@ config.rope_scaling = {
     "attention_factor": 1.0
 }
 
-model = AutoModelForCausalLM.from_config(config)
+model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1", config=config)  # from_config would start with random weights
 
 # Position interpolation (simpler)
 config.rope_scaling = {
@@ -344,9 +357,10 @@ class LongContextAttention(nn.Module):
 ```python
 from transformers import Trainer, TrainingArguments
 
-# Extend model config
-model.config.max_position_embeddings = 32768
-model.config.rope_scaling = {"type": "linear", "factor": 16.0}
+# Extend the config BEFORE loading the model, then load with config=config
+# config.max_position_embeddings = 32768
+# config.rope_scaling = {"type": "linear", "factor": 8.0}
+# model = AutoModelForCausalLM.from_pretrained(model_name, config=config)
 
 # Training args (minimal steps needed)
 training_args = TrainingArguments(
@@ -374,20 +388,14 @@ trainer.train()
 ### YaRN Fine-tuning
 
 ```bash
-# Clone YaRN implementation
+# Clone the YaRN implementation
 git clone https://github.com/jquesnelle/yarn
 cd yarn
 
-# Fine-tune LLaMA with YaRN
-python scripts/train.py \
-    --model meta-llama/Llama-2-7b-hf \
-    --scale 16 \
-    --rope_theta 10000 \
-    --max_length 32768 \
-    --batch_size 1 \
-    --gradient_accumulation 16 \
-    --steps 400 \
-    --learning_rate 2e-5
+# Then follow the training instructions in that repository's README.
+# Script names and flags change between versions, so do not copy a command from here.
+# Settings to plan for: a scale factor, the target max length, a small batch size
+# with gradient accumulation, a few hundred steps and a low learning rate.
 ```
 
 ## Best Practices
@@ -396,10 +404,10 @@ python scripts/train.py \
 
 ```python
 # For NEW models (training from scratch)
-use_method = "ALiBi"  # Best extrapolation, lowest memory
+use_method = "ALiBi"  # Built for extrapolation, but it must be trained in from the start
 
 # For EXTENDING existing RoPE models
-use_method = "YaRN"  # Most efficient extension (10× less data)
+use_method = "YaRN"  # Reported as data-efficient in the YaRN paper
 
 # For QUICK extension with minimal compute
 use_method = "Position Interpolation"  # 1000 steps
@@ -421,8 +429,8 @@ scaling_factor = 4.0  # 8k → 32k
 scaling_factor = 8.0  # 8k → 64k
 scaling_factor = 16.0  # 8k → 128k
 
-# Rule: Larger factors need more fine-tuning steps
-steps_needed = 100 * scaling_factor  # Rough estimate
+# Rule of thumb: larger factors need more fine-tuning steps.
+# There is no fixed formula. Watch the long-document test and stop when it passes.
 ```
 
 ### 3. Fine-tuning Data

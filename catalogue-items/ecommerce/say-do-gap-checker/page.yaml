@@ -1,6 +1,6 @@
 new_slug: say-do-gap-checker
 name: "Say-do gap checker"
-summary: "Paste survey answers. Get a trust score out of 100 and a behaviour test to run first."
+summary: "Check a survey before you act on it. Paste your answers to get a trust score out of 100 and a cheap test of real buying behaviour."
 job: understand-customers
 thinking: high
 thinking_why: "It judges how each answer was collected and spots small flaws in the wording and the sample. A stronger model catches more of them."
@@ -17,6 +17,10 @@ when:
   - You ran a poll or survey and are about to launch, rename or reprice from it.
   - People said they love an idea, but sales or clicks do not match.
   - You are choosing between two names, packs or flavours and want to know what to test.
+not_for:
+  - "You can test the idea directly in a day: run the test instead of checking a survey."
+  - "Your store gets under about 1,000 visits a month: a click test is weak, so try pre-orders from 20 real buyers or talk to buyers directly."
+  - "You want to judge whether the idea is good: the score only says how far you can trust the answers, not if it will sell."
 
 you_give:
   - The survey, poll or interview answers
@@ -35,6 +39,27 @@ how_to_use:
   - Tell it the decision you want to make, in one line.
   - Add any clicks, pre-orders or sales you have for the same idea, with the dates.
   - Read the score and the flagged answers, then run the test it picks before you spend on stock or ads.
+output_sample:
+  input:
+    - Your survey, poll or interview answers
+    - "How they were collected: who was asked, how many, and the exact questions"
+    - The decision you plan to make
+    - Clicks, add-to-carts, pre-orders or orders you already have (optional)
+  output:
+    - name: Say or do
+      contains: A count of stated opinions against real actions, with a weighted view of what each group says.
+    - name: Likely polite, flattering or untrue
+      contains: Each flagged answer, with the reason it was flagged.
+    - name: Trust score
+      contains: A score out of 100 with every deduction shown, and the checks that did not apply.
+    - name: Behaviour test to run first
+      contains: A pre-order page, split-test ad or small run, with setup, a pass line set now, and an honesty note.
+    - name: Decision now
+      contains: What to do today based on these answers.
+    - name: What would change it
+      contains: The test result that would flip the call.
+    - name: Checks missed
+      contains: Any checks that failed, or none.
 
 how_it_works:
   - title: Sorts said and did

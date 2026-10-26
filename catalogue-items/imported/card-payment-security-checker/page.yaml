@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It sorts your setup, then applies set rules.
 new_slug: card-payment-security-checker
 name: Card payment security checker
-summary: Describe how you take card payments. Get your PCI level, the right
-  self-check form and gaps to fix.
+summary: Check your card payment setup against PCI DSS. Get your merchant level, the right self-assessment form (SAQ), and a list of gaps to fix.
 job: check-contracts
 headline: Card payment security checker
-subhead: Your card payment setup is checked against the PCI standard so you know
-  your level, the right self-assessment form, and the gaps to fix. Describe how
-  you take cards, such as online checkout, in person or by phone, and you get a
-  clear route.
+subhead: Your card payment setup is checked against the PCI standard so you know your level, the right self-assessment form, and the gaps to fix. Describe how you take cards, such as online checkout, in person or by phone, and you get a clear route.
 explain: |
   Your card payment setup is checked against the PCI standard so you know your level, the right self-assessment form, and the gaps to fix. Describe how you take cards, such as online checkout, in person or by phone, and you get a clear route.
 
@@ -19,6 +15,10 @@ when:
   - Your bank or processor asked for proof of compliance.
   - You want to shrink the systems that touch card data.
   - An audit is coming and you need a list of gaps.
+not_for:
+  - "You need a formal audit or a Report on Compliance: ask your acquirer first, then hire a Qualified Security Assessor (QSA)."
+  - "You need proof your bank will accept: this is advice only, so ask your bank or card processor what they require."
+  - "You want a legal review of a contract with your payment provider: ask a lawyer who knows payment contracts."
 you_give:
   - How you accept cards and which provider you use
   - Systems that store or pass card data
@@ -31,7 +31,28 @@ you_get:
   - A scope of in-scope systems
   - A fix plan with owners and dates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of the skill, or upload the skill folder if your AI accepts files.
+  - "Say which task you want: gap check, form choice, scope map, fix plan or policy draft."
+  - Describe how you take cards, which provider you use, and which systems touch card data. Add your yearly card volume if you know it.
+  - Say which PCI DSS version you use. If you skip this, the skill assumes version 4.0.1, the current one.
+  - Read the result and check each gap against your real setup. Then ask your bank or a QSA to confirm before you act on it.
+output_sample:
+  input:
+    - "How you take card payments: online checkout, in person or by phone"
+    - Which payment provider or processor you use
+    - Which systems store, send or touch card data
+    - Your yearly card volume (optional)
+    - Your current security controls (optional)
+  output:
+    - name: Gap assessment table
+      contains: Each requirement number with its control, status, gap, evidence needed and priority.
+    - name: SAQ selection
+      contains: A decision path to the form that fits your setup, with the reason for the pick.
+    - name: CDE scope
+      contains: A plain description of the systems that touch card data, and a list of those systems.
+    - name: Remediation roadmap
+      contains: A ranked list of fixes, each with the requirement number, action, owner and timeline.
+    - name: Control guidance
+      contains: "For one requirement: what to put in place, what proof to keep and tips for the audit."
+    - name: Policy draft
+      contains: A structured policy document that cites the PCI DSS controls it supports.

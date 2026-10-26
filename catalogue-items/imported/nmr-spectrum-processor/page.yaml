@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set processing steps with checks on the axis.
 new_slug: nmr-spectrum-processor
 name: NMR spectrum processor
-summary: Give it raw 1D NMR data. Get a phased spectrum, peak candidates and
-  integration regions.
+summary: Process raw 1D NMR data into a phased ppm spectrum, peak candidates and integrals, with a report of every setting so others can repeat it.
 job: research-topics
 headline: NMR spectrum processor
-subhead: Give it raw 1D NMR data. Get a phased spectrum, peak candidates and
-  integration regions. Bring the raw FID file (NumPy or NMRPipe). Use the result
-  to plan your next step.
+subhead: Give it raw 1D NMR data. Get a phased spectrum, peak candidates and integration regions. Bring the raw FID file (NumPy or NMRPipe). Use the result to plan your next step.
 explain: |
   A raw 1D NMR signal turned into a calibrated spectrum with peaks and integration regions, plus a report of every processing choice so someone else can repeat it.
 
@@ -18,6 +15,10 @@ when:
   - You want integrals you can repeat and defend.
   - A collaborator asks exactly how you processed the data.
   - You want a list of peak candidates before assigning them by hand.
+not_for:
+  - "You have 2D or 3D NMR data, or nonuniform sampling: process it in the vendor software or in NMRPipe, since this skill covers 1D only."
+  - "You need compound names or peak assignments: assign peaks by hand with a reference, or ask a chemist, because this skill does not identify compounds."
+  - "You have Bruker, Varian or JEOL files and no converted FID: convert and check them first in your lab software, since those imports are not tested here."
 you_give:
   - The raw FID file (NumPy or NMRPipe)
   - Spectral width, frequency and carrier values
@@ -29,8 +30,29 @@ you_get:
   - Region integrals
   - A processing report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Save your raw FID as a NumPy .npz file with one complex array named fid, or as a 1D NMRPipe file.
+  - Copy the settings file from the skill and replace the example values with your measured width, frequency, carrier and sign convention.
+  - Ask your AI to follow this skill and run the helper on your FID. It needs a chat that can run Python code and install packages.
+  - Look at the real and imaginary spectra. If peaks look skewed, change the phase angles and run again into a new output folder.
+  - Check peak positions against a known reference peak before you trust the integrals.
+  - Add signal-free baseline regions only if you want a linear baseline fit, then read the report and keep it with your results.
+output_sample:
+  input:
+    - Your raw 1D FID file, as a NumPy .npz or an NMRPipe file
+    - Spectral width, observation frequency and carrier position, from your acquisition
+    - The sign convention from your acquisition
+    - Your processing choices, such as line broadening and phase angles (optional)
+    - Signal-free ppm regions for a baseline fit (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python 3.12 or newer with nmrglue, NumPy and SciPy installed
+    - Network access for the first install; processing itself runs locally with no account or credentials
+  output:
+    - name: spectrum.csv
+      contains: The ppm axis from high to low, the real signal after baseline correction, the phased imaginary signal and the fitted baseline.
+    - name: report.json
+      contains: File checksums, package versions, every setting used, acquired duration, zero-filled spacing, positive peak candidates and signed region areas.
+    - name: Peak candidates
+      contains: Positive peaks found in the real spectrum, listed in the report for you to check against references.
+    - name: Region integrals
+      contains: Signed areas for the ppm regions you chose, kept negative when phase or baseline is off.

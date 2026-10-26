@@ -1,0 +1,159 @@
+name: API Platform Engineer agent
+summary: "Get a plan for a public or partner API with contract rules, a breaking-change list, a versioning policy, rate limits and an SDK plan."
+headline: API Platform Engineer agent
+subhead: "Describe the API that outside developers will use, or paste your spec. It drafts the rules, flags changes that break existing users, and plans versions, limits, errors and SDKs. You get a written plan."
+job: build-software
+thinking: high
+thinking_why: It compares each change against what existing users depend on, and works through versioning and deprecation steps. Use a model that can follow rules exactly and say when it is unsure.
+explain: >-
+  Once partners build on your API, its shape belongs to their code. A renamed
+  field or a new required parameter can break their product overnight. This API
+  platform engineer agent designs for that. It writes the contract first, then
+  asks one question of every change: can an existing user keep working?
+
+
+  It sorts changes into safe and breaking. Adding an optional field is safe.
+  Renaming one is not. For breaking changes it plans a new version, a migration
+  guide and a sunset date with warning signals. It also sets the rules that
+  make an API easy to use. That means one error shape, one naming style, clear
+  rate limit headers and safe retries.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The method is
+  the original author's. AI Blocks adds an intake, a fixed answer layout and
+  review rules. In a chat it drafts and reviews contracts. It does not run your
+  gateway or generate SDKs itself.
+when:
+  - You are about to open an API to partners or customers and want the contract right before the first user.
+  - Your team wants to rename a field and needs to know if it breaks anyone.
+  - You need a policy for versions, deprecation and sunset dates that you can publish.
+  - Partners complain about vague errors, surprise limits or inconsistent field names.
+not_for:
+  - You are designing a simple REST API for your own app only. Use the REST API designer.
+  - You have code and only need an OpenAPI file written from it. Use the API spec writer.
+  - You want one planned change checked before you ship it. Use the Breaking change reviewer.
+  - You need the database and services behind the API. Use the Backend Architect agent.
+  - You need live debugging of a failing API or production changes. Ask an engineer with access to your systems.
+you_give:
+  - What the API does, who will call it and whether it is public, partner or internal.
+  - Your current spec or a list of endpoints, if you have one (optional).
+  - The changes you are considering, such as a rename, a new field or a removal (optional).
+  - How many outside developers use it and how they integrate, if known (optional).
+  - The languages your developers use, so the SDK plan targets them.
+  - Your sign-in method and any limits you already enforce.
+you_get:
+  - A resource list and one set of rules for naming, dates, IDs, paging and errors.
+  - A draft contract outline, or a review of yours with inconsistencies marked.
+  - A safe and breaking list for every change you gave it.
+  - A versioning and deprecation plan with steps, signals and a sunset rule.
+  - A rate limit and quota design, with the headers to send and the 429 response.
+  - An SDK, docs and quickstart plan, with checks to run on every spec change.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your spec or endpoint list. If you have none, describe the resources the API handles and who calls it.
+  - Add the changes you are weighing. Say "Review these changes for breaking impact" or "Draft the contract rules."
+  - Your AI asks once for anything missing. Unknowns such as user counts stay marked as unknown.
+  - Read the breaking-change list first. Any change marked breaking needs the version plan before it ships.
+  - Have an engineer check the draft with an OpenAPI validator and a spec-diff tool. The agent does not run them.
+how_it_works:
+  - title: Model the resources
+    text: It lists the things the API handles, how they relate and how they change over time, before it names any endpoint.
+  - title: Fix the shared rules
+    text: It sets one style for names, dates, IDs, paging, errors, retries and sign-in, and checks every endpoint against it.
+  - title: Sort each change
+    text: It marks every change safe or breaking, using the rules in the profile, and says why.
+  - title: Plan versions and deprecation
+    text: Breaking changes get a new major version, a migration guide, warning headers, a usage watch and a sunset date.
+  - title: Design the gateway rules
+    text: It plans sign-in, rate limits, quotas and error replies, including the headers clients need.
+  - title: Plan SDKs, docs and quickstart
+    text: It plans typed SDKs and docs made from the spec, and a short path to a first successful call.
+  - title: List the checks
+    text: It lists automatic checks for CI that catch breaking changes before release.
+output_shape: |-
+  RESOURCES AND CONVENTIONS
+    <resource> | <relations> | <naming, date, ID, paging and error rules>
+
+  CONTRACT DRAFT OR REVIEW
+    <endpoint> | <method> | <request> | <response> | <issue found, if reviewing>
+
+  COMPATIBILITY LIST
+    <change> | <safe or breaking> | <why> | <what to do>
+
+  VERSIONING AND DEPRECATION PLAN
+    <version rule> | <announce, signal, runway, monitor, sunset steps with dates marked ASSUMED if unknown>
+
+  GATEWAY RULES
+    <sign-in> | <rate limits and quotas> | <headers> | <error reply>
+
+  SDK, DOCS AND QUICKSTART
+    <language> | <how it is made from the spec> | <first-call path>
+
+  CHECKS FOR CI
+    <check> | <what it blocks>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What the API does, who calls it and whether it is public, partner or internal
+    - Your current spec or endpoint list (optional)
+    - The changes you are considering (optional)
+    - The languages your developers use
+  prerequisites:
+    - An AI you can paste a long spec into, such as Claude, ChatGPT or Gemini
+    - An OpenAPI validator and a spec-diff tool, which your engineer runs, because the agent only reads and writes text
+  output:
+    - name: Resources and conventions
+      contains: Each resource and the single set of rules for names, dates, IDs, paging and errors.
+    - name: Contract draft or review
+      contains: An endpoint outline, or your spec with each inconsistency marked.
+    - name: Compatibility list
+      contains: Each proposed change marked safe or breaking, with the reason and next step.
+    - name: Versioning and deprecation plan
+      contains: The version rule and the steps from announcement to sunset, with signals and a usage watch.
+    - name: Gateway rules
+      contains: Sign-in, rate limits, quotas, the headers to send and the reply when a limit is hit.
+    - name: SDK, docs and quickstart
+      contains: How SDKs and docs are made from the spec, and the path to a first successful call.
+    - name: Checks for CI
+      contains: Automatic checks that block breaking changes without a new version.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach a full OpenAPI file and get a line-by-line review.
+    - name: An OpenAPI validator
+      why: It catches errors in a spec that reading cannot, such as a missing reference.
+  inputs:
+    - Your existing OpenAPI file.
+    - Usage logs showing which developers call which endpoints.
+    - Past support tickets about errors and limits.
+terms:
+  - term: Contract-first
+    meaning: You write and agree the API spec before you write the code behind it.
+  - term: Breaking change
+    meaning: A change that can make a working integration fail, such as removing a field.
+  - term: Deprecation and sunset
+    meaning: Deprecation is the warning that something will go. Sunset is the date it is removed.
+  - term: Idempotency key
+    meaning: A value sent with a request so that a retry does not create a second copy.
+  - term: Rate limit and quota
+    meaning: A rate limit caps requests per short time. A quota caps total use over a longer period.
+  - term: OpenAPI
+    meaning: A standard file format for describing a web API.
+  - term: SDK
+    meaning: A code library that makes calling the API easier in one language.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: API type
+    how: Say if the API is public, partner or internal. Public APIs get longer deprecation runways.
+  - what: Naming style
+    how: Pick snake_case or camelCase once. The agent then holds every endpoint to it.
+improve:
+  - Keep the conventions the agent drafted as your API style guide, and paste it back at the start of the next run.

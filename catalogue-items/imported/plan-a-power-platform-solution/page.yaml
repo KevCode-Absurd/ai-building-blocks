@@ -1,20 +1,54 @@
 new_slug: plan-a-power-platform-solution
 name: Plan a Power Platform solution
-summary: Turn a business process into a Power Platform plan. Map the people, tools and data flow.
+summary: Plan a Power Platform solution from your process notes. Get the right apps, flows and data tools, how data moves, and gaps to check.
 job: build-software
 headline: Plan a Power Platform solution
 subhead: Share process notes, user roles and rules. Map each need to a Power Platform tool. Get a plan with gaps to check.
 explain: Share process notes, user roles and rules. Map each need to a Power Platform tool. Get a plan with gaps to check.
 when:
-  - You want to plan a Power Platform solution.
+  - You have a process or use case and need to know which Power Platform tools to use.
+  - You have a transcript from a discovery meeting and want a build plan from it.
+  - You need to explain a proposed solution to a team before work starts.
+  - You want a diagram of how an app, flow and data store would connect.
+not_for:
+  - "You only need a single spreadsheet or a simple form: build it directly in Excel or Microsoft Forms."
+  - "You want a plain picture of how work happens today: ask a colleague to sketch a simple process map first."
+  - "You want the finished app built: this gives a plan only, so hand it to a Power Platform developer."
 you_give:
-  - Your process description or discovery notes, users, systems, access rules and constraints.
+  - Your process description, use case or meeting transcript.
+  - The user groups and what each one needs to do.
+  - The systems and data sources involved.
+  - Access rules and known exceptions (optional).
+  - Limits such as budget, licences or deadlines (optional).
 you_get:
-  - A proposed component architecture with each component’s role, process flow, assumptions and optional diagram.
+  - A list of Power Platform components, each with its role and why it fits.
+  - A description of how people and data move through the solution.
+  - A list of assumptions and open licensing or integration checks.
+  - Follow-up questions for any facts that are missing.
+  - A diagram you can paste into a Mermaid viewer (optional).
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code running or paid tool is needed.
+  - Paste your process notes, user groups, systems and access rules in one message.
+  - Answer any follow-up questions the AI asks about missing facts.
+  - Read the component list and flow. Check each assumption and licensing note.
+  - Ask for the diagram if you want one, then paste it into a Mermaid viewer.
+output_sample:
+  input:
+    - Your process notes, meeting transcript or use case description
+    - The people or user groups who will use it
+    - The systems and data sources involved
+    - Access rules and known limits (optional)
+  output:
+    - name: Requirements analysis
+      contains: The users, data sources, triggers, pain points and unclear exceptions pulled from your notes.
+    - name: Follow-up questions
+      contains: Questions about facts that are missing, so you can fill gaps before you build.
+    - name: Component recommendation
+      contains: Which Power Platform tools fit each need, and why each one was chosen.
+    - name: Architecture recommendation
+      contains: How the parts connect, how data flows, where approvals happen, and open licensing or integration checks.
+    - name: Architecture diagram (optional)
+      contains: A Mermaid diagram of the solution that you can paste into a diagram viewer.
 how_it_works:
   - title: Extract the process
     text: Identify users, sources, manual friction, triggers, access needs and unresolved exceptions.

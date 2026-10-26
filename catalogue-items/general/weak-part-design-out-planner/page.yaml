@@ -1,55 +1,68 @@
 new_slug: weak-part-design-out-planner
 name: "Weak part design-out planner"
-summary: "Describe what keeps breaking. Get the part causing most trouble and ways to design it out."
+summary: "Find the part behind most of your repeat faults, returns or delays. Get ways to design it out, each with its trade-off and a first test."
 job: build-product
 thinking: medium
 thinking_why: "It weighs evidence and compares options, but the steps are fixed."
 
 headline: "Weak part design-out planner"
-subhead: Give it a product, process or system that keeps failing, with any fault or cost records you have. It finds the part behind most of the trouble, asks why that part must exist, and hands back options that remove it, with the trade-off and a first test.
+subhead: "Tell it what keeps going wrong in a product, process or system, and paste any fault, return or cost records. It finds the part behind most of the trouble and asks why that part must exist. You get options that remove the part, the trade-off of each and a first test."
 
 explain: |
-  When something keeps breaking, the usual move is to patch the weak part again. A part that causes most of the faults is often a part the design needs for no good reason. Patching it costs you every month, for as long as you keep it.
+  When something keeps breaking, the usual move is to patch the weak part again. But the part that causes most of the faults is often a part the design only needs because of an earlier choice. Patching it costs you again every month, for as long as you keep it.
 
-  This skill lists the parts and where faults, delays and costs come from, then picks the worst one from the numbers, not from a hunch. It asks why that part has to exist and looks for a design that gets the same result without it. Then it states what the new design costs, checks that the rest of the system still works, and names what to test first.
+  This weak part planner splits your product, process or system into parts and ranks them by where faults, delays and costs come from. It picks the worst one from your numbers and says so plainly when it is only a guess. Then it asks what job the part does, and whether that job needs doing at all.
+
+  The options it gives remove the part or make its job unnecessary. They do not just make the part stronger. Each option states what it gives up, the neighbouring parts are checked, and you get one cheap test that could fail.
 
 when:
-  - Returns, complaints or repairs keep tracing back to the same area.
-  - A process has one step that always stalls or needs a person to rescue it.
-  - You are about to fix the same part for the third time.
+  - "Returns, complaints or repairs keep tracing back to the same area."
+  - "A process has one step that always stalls or needs a person to rescue it."
+  - "You are about to fix the same part for the third time."
+  - "A supplier part causes most of your faults and you wonder if the design needs it."
+
+not_for:
+  - "You want to know why a problem keeps coming back, not to redesign the thing. Use the Root cause finder."
+  - "You are reviewing one failure that happened once. Use the Failure postmortem writer."
+  - "You have already chosen a code or product change and want it checked before release. Use the Breaking change reviewer."
+  - "You have no records and no idea which part fails. It will mark its pick as a guess. Gather return or repair notes tagged by part first."
 
 you_give:
-  - The product, process or system, and what keeps going wrong
-  - Any records of faults, costs, returns or delays, by part or step (optional)
-  - What the thing must achieve, and any limits on budget, time or rules (optional)
+  - "The product, process or system, and what keeps going wrong"
+  - "Records of faults, returns, repairs, costs or delays, by part or step (optional, but they make the pick solid)"
+  - "What the thing must still achieve (optional)"
+  - "Limits on budget, time, rules or suppliers (optional)"
 you_get:
-  - A table of parts with their share of faults and costs
-  - The one part chosen as the main trouble, with the evidence
-  - Two or three ways to design it out, with the trade-off in one line each
-  - A system check and the first thing to test
+  - "A table of parts with their share of faults, costs or delays"
+  - "The one part chosen as the main trouble, with the numbers behind it, or marked as a guess"
+  - "What job that part does, and whether the job is needed"
+  - "Two or three options that remove the part, each with its trade-off in one line"
+  - "A check of the neighbouring parts and one first test that could fail"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the thing and what keeps going wrong. Paste any fault, return or cost records as they are.
-  - Say what the thing must still do, so the options do not drop the main result.
-  - Read the chosen part and its evidence first. Argue with it if the numbers look wrong.
-  - Run the first test it names before you commit to a redesign.
+  - "Copy the skill and paste it into Claude, ChatGPT or Gemini, or open it if you added it to your AI. It needs no files or paid tools."
+  - "Describe the thing and what keeps going wrong. Paste any fault, return or cost records as they are, or a list of parts with their costs."
+  - "Say what the thing must still do, so no option drops the main result. Add any limits."
+  - "Read the chosen part and its evidence first. Argue with it if the numbers look wrong."
+  - "Run the first test it names on a small scale before you commit to a redesign."
 
 how_it_works:
-  - title: Lists the parts
-    text: Splits the thing into parts or steps and notes where faults and costs come from, with numbers where you gave them.
-  - title: Picks the worst part
-    text: Chooses the part with the largest share of trouble, from the evidence and not from a guess.
-  - title: Asks why it exists
-    text: States the job that part does, and asks if that job needs doing at all.
-  - title: Finds a way without it
-    text: Looks for a design that gets the same result with the part removed, not mended.
-  - title: Names the trade-off
-    text: Says in one line what the new design costs or gives up.
-  - title: Checks the whole system
-    text: Looks at the parts around it to see that the change does not move the fault elsewhere.
-  - title: Writes the plan
-    text: Hands back the design-out, the first test and what result would stop the plan.
+  - title: "Asks for the problem first"
+    text: "If you have not said what the thing is and what keeps going wrong, it asks one question and waits. It does not return an empty plan."
+  - title: "Lists the parts"
+    text: "Splits the thing into five to fifteen parts or steps, with the number from your records beside each. A missing number is marked, not made up."
+  - title: "Picks the worst part"
+    text: "Ranks by share of faults, then cost, then delay. If the records are thin, it says the pick is a guess and names the record that would settle it."
+  - title: "Asks why it exists"
+    text: "Writes the one job the part does, and whether the result you need depends on that job."
+  - title: "Finds a way without it"
+    text: "Writes at least two options that remove the part or make its job unnecessary. A third that only strengthens it is marked as the fallback."
+  - title: "States the trade-off"
+    text: "Says in one line what each option costs or gives up, in numbers where it can."
+  - title: "Checks the whole system"
+    text: "Goes through each neighbouring part, supplier or team to see if the fault moves there."
+  - title: "Names the first test"
+    text: "Picks one option and a cheap test that could fail, plus what a pass and a fail would mean."
 
 output_shape: |
   THE THING AND ITS JOB
@@ -59,7 +72,7 @@ output_shape: |
   <part> | faults or cost: <number or MISSING> | share: <percent>
 
   THE MAIN TROUBLE PART
-  <part> | evidence: <numbers or records>
+  <part> | evidence: <numbers or records, or "a guess">
 
   WHY IT EXISTS
   <the job it does, and whether that job is needed>
@@ -69,7 +82,7 @@ output_shape: |
   2. ...
 
   SYSTEM CHECK
-  <each neighbouring part: still works or changes>
+  <each neighbouring part: still works, changes or MISSING>
 
   FIRST TEST
   <what to try, what result keeps the plan, what result stops it>
@@ -79,6 +92,30 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "The product, process or system, and what keeps going wrong"
+    - "Records of faults, returns, repairs, costs or delays by part (optional)"
+    - "What the thing must still achieve (optional)"
+    - "Limits on budget, time, rules or suppliers (optional)"
+  output:
+    - name: "THE THING AND ITS JOB"
+      contains: "What the thing is and the result it must keep."
+    - name: "WHERE THE TROUBLE COMES FROM"
+      contains: "Each part with its faults or cost and its share of the whole."
+    - name: "THE MAIN TROUBLE PART"
+      contains: "The part causing most trouble, with its numbers or a note that it is a guess."
+    - name: "WHY IT EXISTS"
+      contains: "The one job the part does and whether that job is really needed."
+    - name: "OPTIONS THAT REMOVE IT"
+      contains: "Two or three designs that remove the part, each with what it gives up."
+    - name: "SYSTEM CHECK"
+      contains: "How each neighbouring part is affected by the change."
+    - name: "FIRST TEST"
+      contains: "A cheap test that could fail, and what a pass and a fail would mean."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts that would sharpen the choice and any check it could not finish."
 
 tweaks:
   - what: Records by part
@@ -123,3 +160,5 @@ terms:
     meaning: Change the design so a part is no longer needed, instead of fixing the part.
   - term: Trade-off
     meaning: What you give up or pay in return for the gain.
+  - term: System check
+    meaning: A look at the parts around the change, to see that the fault does not move to one of them.

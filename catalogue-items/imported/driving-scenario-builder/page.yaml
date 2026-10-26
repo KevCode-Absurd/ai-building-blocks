@@ -2,22 +2,23 @@ thinking: high
 thinking_why: It joins several sensor sources into one scene.
 new_slug: driving-scenario-builder
 name: Driving scenario builder
-summary: Give it recorded sensor data. Get a virtual driving scene with roads,
-  vehicles and paths built from it.
+summary: Turn recorded GPS, camera and lidar drive data into a driving scenario you can replay in RoadRunner. Built in MATLAB with Scenario Builder.
 job: build-software
 headline: Driving scenario builder
-subhead: A simulation-ready driving scene, built from real drives instead of
-  drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and
-  you get roads, other vehicles and their paths that a simulator can replay.
+subhead: A simulation-ready driving scene, built from real drives instead of drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and you get roads, other vehicles and their paths that a simulator can replay.
 explain: |
   A simulation-ready driving scene, built from real drives instead of drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and you get roads, other vehicles and their paths that a simulator can replay.
 
   The skill works inside MATLAB with the Scenario Builder support package. It first checks that the package is installed. Then it cleans and aligns the sensor streams, tracks the other vehicles, places the car on a map using lane lines, and builds the scene. RoadRunner is the default export. It can also write OpenSCENARIO, OpenDRIVE or a road surface file, add signs and trees, and pull out events such as cut-ins and hard brakes.
 when:
   - You have a recorded drive and want to replay it in a simulator.
-  - You need real-world cut-ins and near-misses turned into test scenarios.
+  - You need real cut-ins and near-misses turned into test scenarios.
   - You must show scenario coverage from real data for a safety standard.
   - You want a road surface file from lidar for vehicle testing.
+not_for:
+  - "Your data still needs importing, syncing or timestamp fixes: run the matlab-import-driving-data skill first, then come back."
+  - "You have no recorded drive and want to make up a path: use MATLAB's waypointTrajectory to draw one by hand."
+  - "You do not have MATLAB with the Scenario Builder support package: ask an engineer who does, or pick a simpler tool."
 you_give:
   - Recorded GPS, camera or lidar data
   - Tracks of other vehicles (optional)
@@ -29,8 +30,35 @@ you_get:
   - Extracted critical events from the drive
   - Road surface or map additions (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Scenario Builder.
+  - Check you have MATLAB with the Scenario Builder support package. It is a paid MathWorks product. Add RoadRunner if you want that export.
+  - Open an AI that can write and run MATLAB code, and paste in the skill.
+  - Give it your sensor files and say which format you want, such as RoadRunner or OpenSCENARIO.
+  - Check the data format table it shows first. Fix any timestamp or axis problem it flags.
+  - Tell it the paths to RoadRunner when it asks, and check the plots at each step.
+  - Open the exported files in your simulator and replay the drive.
+output_sample:
+  input:
+    - Your recorded GPS data, with timestamps
+    - Your camera or lidar data (optional)
+    - Tracks of other vehicles (optional)
+    - The format you want, such as RoadRunner, OpenSCENARIO, OpenDRIVE or OpenCRG
+  prerequisites:
+    - MATLAB with the Scenario Builder support package for Automated Driving Toolbox (paid, from MathWorks)
+    - RoadRunner installed, if you export to RoadRunner
+    - An AI that can write and run MATLAB scripts
+    - Data already imported and synced, using the matlab-import-driving-data skill if not
+  output:
+    - name: Format table
+      contains: A check of your data against what Scenario Builder expects, with timestamp scale and any flips or fixes needed.
+    - name: Ego and actor trajectories
+      contains: Smoothed paths for your car and the other vehicles, built from GPS and tracks.
+    - name: Road or scene
+      contains: A road built from a map or from lane lines, with optional signs, trees and buildings.
+    - name: Exported scenario files
+      contains: The scene and scenario in your chosen format, ready to replay in a simulator.
+    - name: Scenario events
+      contains: Moments pulled from the drive, such as cut-ins, hard brakes and near-misses (optional).
+    - name: Road surface file
+      contains: An OpenCRG road surface made from lidar, for vehicle testing (optional).
+    - name: Progress table
+      contains: A list of the steps taken, shown as the work runs, with plots to check each one.

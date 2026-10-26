@@ -14,6 +14,30 @@ use_cases:
   - Find material for a story when you feel empty
   - Fit a serious creative practice around an ordinary job
   - Cut attractive ideas that weaken a finished piece
+not_for:
+  - "You have a finished piece that only needs editing: ask a copy editor or a friend with a fresh eye, because this mind helps you make the piece, not polish it."
+  - "You want a famous director's view on shots and story order: use the Christopher Nolan or the Alfred Hitchcock mind."
+  - "You want ideas on sharing your work and borrowing from others: use the Austin Kleon mind."
+output_sample:
+  input:
+    - The piece you want to make and who will use it
+    - The material you have gathered so far
+    - When your next working session can happen
+    - What first made you start the project
+    - Any cuts you already fear making (optional)
+  output:
+    - name: Provisional spine
+      contains: One plain sentence stating the central idea, which every part of the piece is tested against.
+    - name: Revised running order
+      contains: Your sections in a new sequence, each with a clear job in the piece.
+    - name: Cut list with reasons
+      contains: Parts to remove or save for another piece, with a short reason for each.
+    - name: Collection plan
+      contains: A simple home for your material, with a note on what each item carries.
+    - name: Session plan
+      contains: One working session with a task, who attends and what to bring.
+    - name: Next working decision
+      contains: The one choice you can make under your real conditions to move the piece forward.
 seats:
   - {seat: Creative work through preparation, asks: What will happen in the working session you have actually scheduled?}
   - {seat: The central idea of a project, asks: Which choices belong to the spine of this piece?}

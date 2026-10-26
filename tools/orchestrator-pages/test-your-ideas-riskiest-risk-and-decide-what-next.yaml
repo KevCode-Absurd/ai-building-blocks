@@ -1,6 +1,6 @@
 new_slug: test-your-ideas-riskiest-risk-and-decide-what-next
 name: Test your idea's riskiest risk and decide what next
-summary: Give it your idea. Get its worst risk found, one small test to run, and a keep or change call.
+summary: "Test your product idea cheaply: find its riskiest risk, run one small test, then get a clear keep going or change course call. Takes your idea."
 job: test-an-idea
 thinking: high
 thinking_why: The last step weighs real results against a fail line set first. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a product idea and a bad feeling about one part of it.
   - You are about to build and want one cheap test first.
   - You ran a test before but never agreed what a pass or a fail meant.
+not_for:
+  - "You already have real sales for this idea and know it works: just grow it, or use the Seven-question startup scorer to check the whole business."
+  - "Your main question is about money or pricing: use the Bad-year break-even tester first, then come back to test the risk."
+  - "You want to find out what customers say about a problem before you have an idea: use the Buyer problem list builder."
 you_give:
   - Your product idea and what you already know about it
   - Customer words, reviews or messages (optional)
@@ -30,6 +34,25 @@ how_to_use:
   - Paste your idea and anything real you have, such as sales, messages or customer words. Say what you have not proved yet.
   - Run the test with five to twenty people. Write down what they did, including who said no.
   - Come back with those notes. The last step judges them against the fail line.
+output_sample:
+  input:
+    - Your product idea in one paragraph, and what you already know about it
+    - Sales, sign-ups, messages or customer words you already have (optional)
+    - The people you can reach this week (optional)
+    - After the test, a note of what each person did and said
+  prerequisites:
+    - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Four risks"
+      contains: Value, ease of use, feasibility and viability each scored by how strong the proof is, with the riskiest named.
+    - name: "Step 2: Smallest test"
+      contains: The action that counts as a yes, who to try it on, what to cut, the ask and a fail line.
+    - name: "Step 3: Keep or change"
+      contains: Your results set against the fail line, signs you are stuck, the kind of change and a new guess.
+    - name: Review date
+      contains: A date to look at the new guess again, with the next test to run.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Score the four risks
     text: Writes the problem and the customer in plain words, scores value, ease of use, feasibility and viability by how strong the proof is, and names the weakest.

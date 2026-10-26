@@ -1,0 +1,41 @@
+slug: agency-corporate-training-designer
+name: Corporate Training Designer agent
+summary: "Plan staff training from a real work problem. Get measurable goals, a module outline, practice exercises and a way to check behavior changed."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/corporate-training-designer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/corporate-training-designer.md
+  licence: MIT
+  original_name: Corporate Training Designer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: e70733229e87dde01bd404f502d2f5b491821f681d7230b314b18d98111b898c
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Corporate Training Designer
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Corporate Training Designer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/corporate-training-designer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

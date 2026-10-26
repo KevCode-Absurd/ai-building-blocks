@@ -1,6 +1,6 @@
 new_slug: blog-post-publish-check-loop
 name: Blog post publish check loop
-summary: Give it a finished draft. Get every claim matched to proof, the words made plain and the page fixed until it passes.
+summary: Check a blog post before you publish it. Get claims matched to proof, plain edits in your voice, the answer first and a quotable score.
 job: write-and-tell-stories
 thinking: high
 thinking_why: It must tell a claim from a fact, edit without changing meaning and judge its own rounds. Give it your strongest model.
@@ -11,9 +11,14 @@ explain: |
 
   This agent runs the same checks on every draft. It writes the one sentence the piece is trying to say and asks if the writer agrees. It lists every claim without proof and leaves those to the writer. It edits the words plain in the writer's own voice, puts the answer first in guides, and scores how easily an AI assistant could quote each passage. A low score sends it back to the editor, up to three times. Then it formats the piece and hands it back. It never publishes or changes a fact.
 when:
-  - You publish articles or guides and want the same checks run on every one before it goes live.
-  - A piece went out with a wrong number once and you do not want that again.
-  - Your guides bury the answer and nobody quotes them.
+  - You publish articles or guides and want the same checks on every one before it goes live.
+  - A piece once went out with a wrong number and you want to stop that happening again.
+  - Your guides bury the answer under setup and nobody quotes them.
+  - A draft is done and you want one last read for clutter and off-brand lines.
+not_for:
+  - "You want the piece published or scheduled for you: this agent never does that, so use your own site or CMS."
+  - "Your draft has no clear point yet: write the one sentence first with a person you trust, then run the check."
+  - "You want a quick spelling and grammar pass only: use your word processor's checker, as this loop is too heavy for that."
 you_give:
   - The finished draft with its title, links and sources
   - Your brand brain, for the voice check and the claims register (advised)
@@ -27,11 +32,35 @@ you_get:
   - A quotable score per round and whether the loop passed
   - The one thing your drafts keep needing, from the log
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to check a draft.
-  - Paste the draft, or point it at the file. Attach your brand brain if you have one.
-  - Say what kind of piece it is and, in one line, what it is trying to say.
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents. In ChatGPT or Gemini, paste the agent text first.
+  - Paste the draft, or point the agent at the file. Attach your brand brain if you have one.
+  - Say what kind of piece it is and, in one line, what it should say.
   - Read the claims list first and fix those yourself. Then read the piece.
-  - Publish it yourself. Run the agent again on the next draft; it keeps a log of what your drafts need.
+  - Publish it yourself. Run the agent again on the next draft.
+output_sample:
+  input:
+    - Your finished draft with its title, links and sources
+    - Your brand brain, for the voice check and claims (advised)
+    - The product's real facts, if the piece names one (optional)
+    - The kind of piece, and the one sentence it should say (advised)
+  prerequisites:
+    - An AI that can read your draft and, for the log, keep files between pieces (Claude Code does this)
+    - Your brand brain from the Brand profile builder (advised, not required)
+  output:
+    - name: One sentence
+      contains: What the piece says in one line, and whether it matches the sentence you gave.
+    - name: Claims for the writer
+      contains: Every claim without proof, the line it sits in, and what would prove it. Nothing is fixed for you.
+    - name: What changed
+      contains: The main cuts and voice fixes, each with its reason.
+    - name: Scores
+      contains: The quotable score for each round, and whether the loop passed or stopped at three.
+    - name: The piece
+      contains: The final title, summary and formatted body, ready to paste.
+    - name: Pattern
+      contains: The one thing your drafts keep needing, read from the log.
+    - name: Files and missing
+      contains: Each round's file and every MISSING line.
 how_it_works:
   - title: Read the piece once
     text: Writes the one sentence the piece says and stops to ask if it differs from yours.

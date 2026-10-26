@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: Access judgments depend on each role.
 new_slug: staff-access-reviewer
 name: Staff access reviewer
-summary: Get staff accounts with old logins, inactive status or too much access,
-  so your store stays safe.
+summary: Check your Shopify staff accounts for old logins, inactive status and too much access. Get a staff access review that changes nothing.
 job: secure-code
 headline: Staff access reviewer
-subhead: A report on which Shopify staff accounts are a risk to your store. It
-  lists accounts with no login for a set number of days (90 by default),
-  accounts marked inactive but still set up, and accounts with full or
-  owner-level access.
+subhead: A report on which Shopify staff accounts are a risk to your store. It lists accounts with no login for a set number of days (90 by default), accounts marked inactive but still set up, and accounts with full or owner-level access.
 explain: |
   A report on which Shopify staff accounts are a risk to your store. It lists accounts with no login for a set number of days (90 by default), accounts marked inactive but still set up, and accounts with full or owner-level access.
 
@@ -19,6 +15,10 @@ when:
   - You want a regular check on who can get into your store.
   - Too many people have full admin access.
   - You need a list before a security review.
+not_for:
+  - "You want to remove or turn off access: do that in your Shopify admin after the account holder's manager agrees."
+  - "You are not the store owner and lack staff permissions: ask the owner to run it or share the list."
+  - "You need to check app or API access: review that in your Shopify admin, as this only covers staff accounts."
 you_give:
   - Your store domain
   - How many days without login counts as stale (optional)
@@ -29,8 +29,27 @@ you_get:
   - Accounts with full access
   - A readable or JSON report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run the Shopify command line, such as Claude Code. A plain chat window cannot read your store.
+  - Sign in to your store with read access to staff users. You must be the owner or have staff permissions.
+  - Paste the skill and give your store domain. Add your stale days number if you want one other than 90.
+  - Read the summary first. Then open the CSV and sort by days since last login, longest first.
+  - Check each flagged account with the person's manager. Remove access yourself in your Shopify admin.
+output_sample:
+  input:
+    - Your store domain
+    - Days without login that count as stale (optional)
+    - Whether to include inactive accounts and the owner (optional)
+    - "Report style: readable list or JSON (optional)"
+  prerequisites:
+    - An AI that can run the Shopify command line
+    - A signed-in Shopify session with read access to staff
+    - Shop owner or staff-management permission
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the time the review began.
+    - name: Step log
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Audit summary
+      contains: Counts of total, active, inactive, stale and high-privilege accounts, plus the top flagged accounts.
+    - name: staff_audit CSV file
+      contains: One row per staff member with last login, days since login and flags for stale, inactive and high access.

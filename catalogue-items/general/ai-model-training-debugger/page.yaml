@@ -1,6 +1,6 @@
 new_slug: ai-model-training-debugger
 name: "AI model training debugger"
-summary: "Describe your model, data and what goes wrong. Get a check order that finds silent bugs before tuning."
+summary: "Find silent bugs in your AI model training before you tune. Give it your model, data and symptoms. You get a fixed order of checks."
 job: set-up-ai
 thinking: high
 thinking_why: "It must reason about why a model could fail silently, across data, code and settings."
@@ -17,6 +17,10 @@ when:
   - Your model trains without errors and still gives poor results.
   - You are about to tune settings and are not sure the pipeline is right.
   - A model that worked before has stopped improving.
+not_for:
+  - "You want to watch a live model for drift or errors: use a monitoring tool built for production, not this one."
+  - "Your data is messy and has no model yet: clean it first with a simple pass in a spreadsheet or a data tool."
+  - "You need a score for how good a finished model is: use an evaluation tool or a test set, not a debugging order."
 
 you_give:
   - The model, the task and the data, with sizes
@@ -34,6 +38,29 @@ how_to_use:
   - Do the first check it gives and send back what you saw.
   - Make only one change per run and write down the result.
   - Move to tuning only when all the checks pass.
+output_sample:
+  input:
+    - Your model, the task and what goes wrong
+    - Your data, with size, label types and how it was collected
+    - Your loss curve or scores (optional)
+    - Your training code or settings (optional)
+  prerequisites:
+    - A notebook or training setup where you can run small checks and report back
+  output:
+    - name: The setup
+      contains: Your model, task, data, size and the symptom, written in one place.
+    - name: Check order
+      contains: Seven checks from data by hand to tuning, each with the expected result and what you found.
+    - name: What each fail points to
+      contains: For each failed check, a list of likely causes in order.
+    - name: Change log
+      contains: One line per run with the single change, the expected result and the real result.
+    - name: Stop point
+      contains: Where checking ends and tuning starts.
+    - name: MISSING lines
+      contains: Any fact the skill needed and did not get, marked instead of guessed.
+    - name: Checks missed
+      contains: One line for each check still missed and why, or none.
 
 how_it_works:
   - title: Inspects the data

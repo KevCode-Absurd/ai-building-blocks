@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores a listing against set rules, then rewrites it.
 new_slug: app-store-listing-optimiser
 name: App store listing optimiser
-summary: Give it your app listing. Get a scored audit and a rewritten title,
-  keywords, description and screenshots plan.
+summary: Check your App Store or Google Play listing with a scored audit. Get a rewritten title, keywords and screenshot plan to win more installs.
 job: audit-landing-page
 headline: App store listing optimiser
-subhead: A scored audit of your App Store or Google Play page, plus rewritten
-  text that helps more people find it and install it. Share the link and it does
-  the checking.
+subhead: A scored audit of your App Store or Google Play page, plus rewritten text that helps more people find it and install it. Share the link and it does the checking.
 explain: |
   A scored audit of your App Store or Google Play page, plus rewritten text that helps more people find it and install it. Share the link and it does the checking.
 
@@ -18,6 +15,10 @@ when:
   - You want to rank for a keyword you aren't using.
   - You are launching and want the page right the first time.
   - You want to see how your page compares with a rival's.
+not_for:
+  - Your app has no live listing yet. Wait until it is published, or ask a person on your team to draft the title and description first.
+  - You want to improve a web landing page. Use a landing page audit or a conversion review instead, as this works only on store pages.
+  - You need search volume or exact rankings. Use a paid app store keyword tool, because this audit cannot see those numbers.
 you_give:
   - Your App Store or Google Play link
   - Competitor apps (optional)
@@ -29,8 +30,30 @@ you_get:
   - Keyword suggestions
   - A screenshot plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can browse the web.
+  - Open Claude, ChatGPT or Gemini in a chat that can browse the web.
+  - Paste the skill text, then paste your App Store or Google Play link.
+  - Add competitor links, target countries or keywords if you have them (optional).
+  - Read the score card and the top 3 quick wins first.
+  - Check each rewritten title and subtitle against the character count before you save it in the store.
+  - Remember the audit reads public store pages, so check the store terms before you check many apps in bulk.
+output_sample:
+  input:
+    - Your App Store or Google Play link
+    - Competitor app links (optional)
+    - Target countries and keywords (optional)
+    - Notes on your product (optional)
+  prerequisites:
+    - An AI that can open web pages
+  output:
+    - name: Score card
+      contains: A table with a score and grade for each of the 6 areas of your listing.
+    - name: Top 3 quick wins
+      contains: The three changes that take under an hour and should help most.
+    - name: Detailed findings
+      contains: Each area broken down, with the exact problems found and how to fix them.
+    - name: Keyword suggestions
+      contains: Keywords drawn from your title, description and competitor gaps, each with a reason it matters.
+    - name: Visual asset recommendations
+      contains: Specific fixes for your screenshots and preview video.
+    - name: Priority action plan
+      contains: Every change in order, ranked by impact and effort, with character counts for new text.

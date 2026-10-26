@@ -1,6 +1,6 @@
 new_slug: capability-pitch-letter-writer
 name: "Capability pitch letter writer"
-summary: "Paste what you can do and who you are writing to. Get a numbered offer letter ending in a proof to run."
+summary: "Write a pitch letter that lists what you can do for a buyer's main need, with a trial offer for hard claims. Checks you can show every line."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It picks and orders concrete items and keeps claims honest, with a fixed letter shape."
@@ -17,6 +17,10 @@ when:
   - "You are writing to offer your skills to a person or company."
   - "Your pitch emails get no answer."
   - "You want a proposal that is concrete and easy to check."
+not_for:
+  - "You want to cold-email people who have not asked about your field: send a short, plain intro email instead."
+  - "You need to plan the talk after they reply: use the Negotiation call prep planner."
+  - "You have no past work or proof to show yet: build one small sample project first, then write the letter."
 
 you_give:
   - "What you can do and past work"
@@ -34,6 +38,23 @@ how_to_use:
   - "Describe the reader and their main need."
   - "Read the check table and cut or fix anything marked CANNOT SHOW."
   - "Send the letter and note the response."
+output_sample:
+  input:
+    - What you can do, with your past work
+    - Who you are writing to
+    - Their main need
+    - Your brand brain or voice notes (optional)
+  output:
+    - name: Letter
+      contains: A ready-to-send letter with a numbered list of concrete offers, main need first, a trial offer and a polite close.
+    - name: Check table
+      contains: Each item marked CAN SHOW or CANNOT SHOW, with the proof it is based on.
+    - name: Items cut
+      contains: Any item removed because you cannot show it, with the reason.
+    - name: MISSING
+      contains: Lines for facts the letter needed but did not have.
+    - name: Checks missed
+      contains: One line per check the letter still fails, or none.
 
 how_it_works:
   - title: "Names usual suppliers"

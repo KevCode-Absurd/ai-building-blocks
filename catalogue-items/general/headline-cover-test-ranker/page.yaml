@@ -1,6 +1,6 @@
 new_slug: headline-cover-test-ranker
 name: "Headline cover test ranker"
-summary: "Paste your headline list. Get each one read alone, scored on five rules and cut to the best three."
+summary: "Cut a long list of headlines to the best three. Each one is read alone, scored on five rules, and picked so your test can tell them apart."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It judges each line against fixed rules, so it needs care but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You have a long list of headlines or subject lines and need to narrow it.
   - A group is arguing over a favourite and nobody can say why.
   - You suspect your best-liked headline says nothing to a stranger.
+not_for:
+  - "You need new headlines written: use the Typed headline batch writer."
+  - "You want to check the promise in one headline: use the Headline promise checker."
+  - "You want to plan a test of your three picks: use the Keyed headline test planner."
 
 you_give:
   - Your list of headlines, subject lines or hooks
@@ -34,6 +38,24 @@ how_to_use:
   - Say who the reader is in one line.
   - Show the three picks to people who do not know your product, ask which they would read on, and keep their ticks private from each other.
   - Take the three to "Keyed headline test planner".
+output_sample:
+  input:
+    - Your list of headlines, subject lines or hooks
+    - Who the reader is, in one line (optional)
+    - What a few outsiders said about the list (optional)
+  output:
+    - name: READ ALONE
+      contains: Each headline with the sentence a stranger would think, its five rule scores, its total and any outright fail.
+    - name: THE THREE
+      contains: Three picks from different types or buying reasons, each with one line on why it was kept.
+    - name: CUT
+      contains: Lines dropped outright, each with the rule it broke.
+    - name: OUTSIDE READ
+      contains: What strangers said about the list, or how to run a read with three people.
+    - name: MISSING
+      contains: Anything the ranking could not judge, such as an unnamed reader.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed and why, or none.
 
 how_it_works:
   - title: Covers everything

@@ -2,30 +2,33 @@ slug: figma-ai
 name: Figma AI
 maker: Figma
 url: https://www.figma.com
-promise: "Draft screens and working prototypes from written prompts inside Figma."
+promise: "Turn a written prompt into a clickable prototype or web app in Figma."
 use_cases: [design, build-apps]
 categories: [design, coding]
 what_it_does:
-  - Makes a first draft of a screen from a written prompt.
-  - Turns a prompt into a working prototype or web app with Figma Make.
-  - Publishes the app and adds a backend through Supabase.
-  - Edits images and removes backgrounds on the canvas.
-  - Helps tidy layers and find designs faster.
+  - "Turns a written prompt into a working prototype or web app with Figma Make (checked 26 Oct 2026)."
+  - "Starts from nothing, or from your code and design assets. You can attach designs, images, video, audio, text files and PDFs to guide it (checked 26 Oct 2026)."
+  - "Builds code you can edit as code or on the canvas (checked 26 Oct 2026)."
+  - "Adds a backend. Supabase gives sign-in, secret storage, compute and a database, and you need your own Supabase account (checked 26 Oct 2026)."
+  - "Makes a first draft of a screen from a prompt in Figma Design. Not checked on 26 Oct 2026."
+  - "Edits images, removes backgrounds and tidies layers on the canvas. Not checked on 26 Oct 2026."
 benefits:
   - Show a clickable version of an idea before a developer starts.
   - Get past the blank page when you start a new screen.
   - Keep designs, prototypes and handoff in one file.
+  - Switch between code and canvas without leaving the file.
 best_for:
   - Product teams and designers who already work in Figma.
   - Founders testing an app idea with a prototype.
   - Teams that hand designs to developers.
 not_for:
-  - "Simple social posts that do not need an app-design workspace."
-  - Heavy AI use on a plan with a small monthly credit cap.
+  - "Simple social posts that do not need an app-design workspace. Canva is a lighter choice."
+  - "Heavy AI use on a small credit cap. Starter gives 150 AI credits a day, up to 500 a month."
+  - "People who want a finished app with no design step. Lovable or Bolt start from a prompt alone."
 pricing:
   model: freemium
   from: US$16 per month
-  note: Price is per Full seat on Professional. Starter is free with 150 AI credits a day, up to 500 a month. A Professional Full seat gets 3,000 AI credits a month, and Figma Make is not on Dev or Collab seats.
+  note: "Checked 26 Oct 2026. Per seat. Starter is free with 150 AI credits a day, up to 500 a month. Professional is US$16 for a Full seat (3,000 credits a month), US$12 for a Dev seat and US$3 for a Collab seat (500 credits each). Organization is US$55 for a Full seat, billed yearly (3,500 credits). Enterprise is US$90 for a Full seat, billed yearly (4,250 credits). Figma Make needs a Full seat. Supabase is a separate account, and the page does not give its cost."
 works_with:
   - claude
   - cursor
@@ -45,6 +48,28 @@ blocks:
   - page-grid-and-type-planner
   - competitor-landing-layout
 alternatives: [canva, lovable, v0, bolt]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Sign up at figma.com. Starter is free. Figma Make needs a Full seat, which Starter includes."
+  - "Open Figma Make from figma.com/make and start from scratch, or attach a design and files to your first prompt."
+  - "Write what the screen or app should do and who uses it. Name the first screen and the one action a person takes on it."
+  - "Click through the result. Ask for changes in the chat, then edit the code or the canvas by hand."
+  - "To add sign-in or saved data, ask for it in the chat. Make offers to connect Supabase, and you sign in or create a Supabase account."
+needs:
+  - "A Figma account with a Full seat. Dev and Collab seats do not include Figma Make."
+  - "A written prompt, and optional designs, images or files to guide it."
+  - "A Supabase account, only if you want sign-in or stored data."
+  - "AI credits. Starter gets 150 a day, up to 500 a month, and Professional Full gets 3,000 a month."
+example:
+  task: "A prompt describing one screen or a small app, with a design file attached (optional)."
+  reply: "A working prototype or web app you can click through and edit as code or on the canvas. Figma's pages show no sample run, so judge the first result against your own design before you share it."
+not_verified:
+  - "Publishing. The Figma Make page we read says running Make locally is coming soon, and gives no publish steps. Third-party summaries say Professional can publish a site, which we did not confirm."
+  - "Which plans can add a Supabase backend. Figma's help article names Organization and Professional teams, and other sources name Organization and Enterprise."
+  - "What Supabase costs. Figma's article does not say."
+  - "Prompt-to-screen drafts in Figma Design, image editing, background removal and layer tidying. We did not recheck these on 26 Oct 2026."
 sources:
   - https://www.figma.com/pricing/
+  - https://www.figma.com/make/
+  - https://help.figma.com/hc/en-us/articles/32640822050199

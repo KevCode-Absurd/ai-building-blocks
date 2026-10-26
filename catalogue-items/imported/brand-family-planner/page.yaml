@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs trade-offs between brand structures before choosing one.
 new_slug: brand-family-planner
 name: Brand family planner
-summary: List your brands and products. Get a clear structure for how they
-  relate and what each one is called.
+summary: Plan your brand family structure. Give it your brands and products. You get a hierarchy map, naming rules and a launch checklist.
 job: brand-file
 headline: Brand family planner
-subhead: A clear structure for how your brands, sub-brands and products relate,
-  with a name rule for each, so customers are never confused. It picks the model
-  that fits your goals and then applies it to your real list.
+subhead: A clear structure for how your brands, sub-brands and products relate, with a name rule for each, so customers are never confused. It picks the model that fits your goals and then applies it to your real list.
 explain: |
   A clear structure for how your brands, sub-brands and products relate, with a name rule for each, so customers are never confused. It picks the model that fits your goals and then applies it to your real list.
 
@@ -18,6 +15,10 @@ when:
   - You are adding a new product and don't know where it fits.
   - Two brands you own overlap and confuse buyers.
   - You plan to enter a new market with a new audience.
+not_for:
+  - You have one product and no plans to add more. You do not need a structure yet, so just pick one clear name.
+  - You only need a name for one new product. Use a naming session with your team or a simple shortlist, not a full structure.
+  - You want logos, colors or fonts made for each brand. This plan sets the rules, but a designer makes the visuals.
 you_give:
   - Your parent brand and category
   - A list of products and services
@@ -29,7 +30,28 @@ you_get:
   - Naming rules for new products
   - Risks to watch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code or paid tool is needed.
+  - Paste your parent brand name, category and positioning. If you have a brand file, paste that too.
+  - "Add your product list, planned additions and your goal: grow the parent or let each product stand alone."
+  - Read the recommended model and the hierarchy map first. Check that every product on your list is placed.
+  - Fix any wrong audience or positioning notes, then ask your AI to redo the naming rules.
+output_sample:
+  input:
+    - Your parent brand name, category and positioning
+    - A list of your current products and services
+    - Products or markets you plan to add (optional)
+    - Whether the parent brand or each product should lead
+    - How your main competitors set up their brands (optional)
+  output:
+    - name: Portfolio audit
+      contains: Each brand or product with its audience, positioning, current relationship to the parent and how strong its name is.
+    - name: Architecture recommendation
+      contains: The model that fits you, why it fits, and what it means for your real list.
+    - name: Brand hierarchy map
+      contains: A tree of the parent and each product, with naming, visual and message links.
+    - name: Naming system
+      contains: The formula and rules for new names, plus a short decision tree for launches.
+    - name: Visual identity system
+      contains: How logo, color, type and tone carry across your brands under the chosen model.
+    - name: Governance rules
+      contains: Who approves new names, a launch checklist and how often to review the structure.

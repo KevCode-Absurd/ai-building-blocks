@@ -2,35 +2,98 @@ thinking: medium
 thinking_why: It weighs each product end of life option.
 new_slug: reuse-and-returns-planner
 name: Reuse and returns planner
-summary: Tell it your products. Get a plan to reuse, refurbish or recycle them
-  and take back returns.
+summary: Turn your product list into a ranked plan to reuse, repair, refurbish or recycle what you sell, plus a take-back and returns process.
 job: plan-supply-chain
 headline: Reuse and returns planner
-subhead: Tell it your products. Get a plan to reuse, refurbish or recycle them
-  and take back returns. Bring your products and their materials. Use the result
-  to plan your next step.
+subhead: Give it your products, what they are made of and what happens to them after sale. It maps where value is lost, ranks reuse, repair, refurbish and recycle options by effort and payoff, and plans a take-back process with goals to track.
 explain: |
-  A plan to keep your products and materials in use longer, through reuse, repair, refurbishing or recycling, plus a way to take products back from customers. It shows where your waste goes now and where value is being thrown away.
+  Most products have a second life that nobody plans. Returns pile up in a corner, used goods go to landfill, and parts that could be resold are thrown out. This reuse and returns planner shows where that value goes and what to do about it.
 
-  You describe what you sell, what it is made of and how it is used and discarded. The skill follows the Ellen MacArthur principles: design out waste, keep things in use, and return materials to nature where possible. It checks how repairable and recyclable each product is, what return and sorting setup you have, and where used goods could be resold. You get options ranked by effort and payoff, with goals to track.
+  You describe what you sell, what it is made of, and how it is used and discarded. The skill follows the Ellen MacArthur principles: design out waste, keep things in use, and return materials to nature where possible. It checks how repairable and recyclable each product is, how you handle returns today, and where used goods could be resold.
+
+  You get options ranked by effort and payoff, a take-back and grading process, and measures to track. The money figures come from your own data. With none, the plan ranks options by effort only and marks the savings as unknown.
 when:
-  - You are asked to take back or recycle what you sell.
-  - You want to cut waste and cost from end-of-life products.
-  - You are thinking about a refurbished or second-hand line.
-  - New rules require you to handle product take-back.
+  - A customer, retailer or new rule asks you to take back or recycle what you sell.
+  - You want to cut waste and cost from returned or end-of-life products.
+  - You are weighing a refurbished or second-hand line.
+  - Returned items sit in a stockroom and nobody decides what happens to them.
+not_for:
+  - You want to count carbon emissions. Use the supply chain carbon tracker.
+  - You want to set prices and the layout for a second-hand store. Use the resale store pricing and layout planner.
+  - You need legal advice on take-back rules. This plan flags rules to check, but a local advisor must confirm them.
 you_give:
-  - Your products and their materials
+  - Your products and what they are made of
   - How they are used and thrown away today
-  - Your current returns process
+  - Your current returns process and return rate, from your returns report
   - Rules or customer demands you face (optional)
-  - Repair or refurbish facilities you have (optional)
+  - Repair or refurbish space and staff you have (optional)
 you_get:
   - A map of waste and lost value
-  - Reuse, repair, refurbish and recycle options
-  - A take-back and returns plan
+  - Reuse, repair, refurbish and recycle options, ranked by effort and payoff
+  - A take-back and returns process with grading rules
   - Goals and measures to track
+  - A list of numbers you still need to find
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Paste your product list with materials, weights if you know them, and what happens to returns today.
+  - Add your return rate and any resale prices or refurbish quotes you have. Leave out what you do not know.
+  - Answer its questions. It marks missing numbers instead of guessing them.
+  - Check the ranked options against your own sense of what is easy. Ask it to explain any ranking that surprises you.
+  - Get a local advisor to check any take-back rule it names before you rely on it.
+how_it_works:
+  - title: Map your products
+    text: It lists what you sell, the materials in each product, and where each one ends up today.
+  - title: Check repair and recycle fit
+    text: It scores how easy each product is to repair, take apart and recycle.
+  - title: Rank the options
+    text: It lists reuse, repair, refurbish, remanufacture and recycle, ranked by effort and payoff.
+  - title: Plan take-back
+    text: It sets collection points, grading rules for returned goods and where each grade goes.
+  - title: Set goals
+    text: It lists the measures to track, with today's value and a target for each.
+output_shape: |
+  Circular Economy Assessment
+  Summary: <where products end up>, <waste and lost value>, <first moves>
+  Waste map: <product>, <materials>, <fate today>, <repairable>, <recyclable>
+  Ranked options: <option>, <strategy>, <effort>, <payoff>, <money figure or MISSING>
+  Take-back process: <collection>, <grading>, <routing>, <who>
+  Goals: <measure>, <today>, <target>
+  Rules to check: <rule>, <who confirms>
+output_sample:
+  input:
+    - Your products and their materials
+    - How products are used and thrown away today
+    - Your returns process and return rate
+    - Rules or customer demands (optional)
+  prerequisites:
+    - An AI that can run Python, if you want the value calculators run (optional)
+  output:
+    - name: Executive summary
+      contains: Where products end up today, the waste found and the first moves to make.
+    - name: Waste map
+      contains: For each product, its materials, its fate today, and how repairable and recyclable it is.
+    - name: Ranked options
+      contains: Reuse, repair, refurbish and recycle options with effort, payoff and any money figure.
+    - name: Take-back and returns process
+      contains: Collection points, grading rules and where each grade goes.
+    - name: Goals and measures
+      contains: Each measure with today's value, a target and how it is counted.
+    - name: Rules to check
+      contains: Take-back or recycled-content rules that may apply, flagged for an advisor.
+works_best_with:
+  tools:
+    - name: ChatGPT with data analysis, or Claude with code execution
+      why: They can run the value and capacity calculators on your return data.
+    - name: Any good chat AI
+      why: Fine for the waste map, ranked options and take-back plan.
+  inputs:
+    - Your returns log with reason and condition for each item
+    - Resale prices you have seen for used or refurbished goods
+    - Quotes from repair or recycling partners
+terms:
+  - term: Refurbish
+    meaning: Clean and fix a used product so it can be sold again.
+  - term: Remanufacture
+    meaning: Take a product apart and rebuild it to like-new standard.
+  - term: Take-back
+    meaning: A program where customers return used products to you.

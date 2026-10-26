@@ -2,17 +2,28 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-support-queue-action-planner
 name: Gorgias support queue action planner
-summary: Connect Gorgias. Get one suggested next action for each waiting ticket, with reply drafts where useful.
+summary: Plan the next step for every open ticket in your Gorgias support queue. Get a reply draft or a clear action for each one, oldest first.
 job: help-customers
 headline: Gorgias support queue action planner
-subhead: Connect Gorgias and ask for help with the waiting queue. It reads tickets in small batches and picks a next action for each. You get reply drafts and suggestions to assign, defer, close, or pass an issue to another team.
+subhead: Connect your Gorgias account and ask your AI to work through the waiting queue. It reads open tickets ten at a time and picks one next step for each. You get a list to review, with reply drafts, and nothing changes until you approve it.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Your Gorgias queue has many open tickets and you want a fast first pass.
+  - You start the day and need to know which tickets can be cleared quickly.
+  - You want draft replies for simple questions without writing each one.
+  - You need to sort tickets into reply, close, assign or pass to another team.
+not_for:
+  - "You have one ticket to answer: read it and write the reply yourself, or ask your AI to draft it from the pasted text."
+  - "A ticket needs a refund, policy or exception decision: pass it to a person on your team who can make the call."
+  - "You do not use Gorgias: use your own help desk's export and ask your AI to sort it by hand."
 you_give:
-  - Open Gorgias tickets needing attention.
-  - The latest messages and the teams available to handle them.
+  - Your Gorgias account, connected through Composio.
+  - The filter for which tickets to read, such as open status, age or team (optional).
+  - The names of your teams, so tickets can be assigned (optional).
 you_get:
-  - Show the proposed actions and drafts. Carry out only the actions you approve.
+  - A table of waiting tickets, oldest first, with one suggested action each.
+  - Short reply drafts for simple questions.
+  - Info requests for tickets that lack details.
+  - A count of tickets to reply to, close, assign, pass on or follow up later.
 how_it_works:
   - title: Read waiting tickets
     text: Fetch unhandled tickets from oldest to newest and read them in batches of ten.
@@ -25,8 +36,29 @@ works_best_with:
     - name: Gorgias
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias support queue action planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Open Gorgias tickets needing attention.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run commands, such as Claude Code. You need the Composio command line tool installed.
+  - Add the downloaded folder to your AI so it can read SKILL.md.
+  - Link your account by running composio link gorgias if your AI asks you to.
+  - Ask your AI to run the Gorgias support queue action planner and say which tickets to include.
+  - Read the action table and check every draft against the ticket before you send it.
+  - Approve actions one at a time. Nothing is sent or changed until you say yes.
+output_sample:
+  input:
+    - Your open Gorgias tickets, read through a connected Gorgias account
+    - The latest message on each ticket
+    - Your team names for assigning tickets (optional)
+  prerequisites:
+    - A Gorgias account with open tickets
+    - An AI that can run the Composio command line tool
+    - Your Gorgias account linked to Composio
+  output:
+    - name: Inbox Zero Queue
+      contains: A table of waiting tickets with number, customer, age, suggested action and a short preview of the reply.
+    - name: Quick reply drafts
+      contains: One or two sentence answers for simple questions with an obvious answer.
+    - name: Needs info messages
+      contains: Short requests asking the customer for the details you need to solve the issue.
+    - name: Escalate, close, assign and defer notes
+      contains: A short reason for each ticket to pass on, close, hand to a team or follow up later.
+    - name: Quick Stats
+      contains: Counts of quick replies, info requests, escalations, closeable and deferred tickets.

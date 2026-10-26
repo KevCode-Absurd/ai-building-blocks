@@ -9,6 +9,7 @@ level: advanced
 inputs:
   - {type: performance_sheet, required: true}
   - {type: plan, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
 uses: []

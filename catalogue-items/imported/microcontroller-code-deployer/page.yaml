@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Memory limits and hardware tests call for planning.
 new_slug: microcontroller-code-deployer
 name: Microcontroller code deployer
-summary: Give it MATLAB code and a chip. Get embedded code set up and tested on
-  that hardware.
+summary: Set up MATLAB code for a microcontroller and check it matches MATLAB. Give it your function and board. You get C code settings and a test plan.
 job: ship-and-host
 headline: Microcontroller code deployer
-subhead: MATLAB code turned into C or C++ for your chip, with a test that proves
-  the generated code gives the same answers. Name the board and the code and the
-  setup is built for you.
+subhead: MATLAB code turned into C or C++ for your chip, with a test that proves the generated code gives the same answers. Name the board and the code and the setup is built for you.
 explain: |
   MATLAB code turned into C or C++ for your chip, with a test that proves the generated code gives the same answers. Name the board and the code and the setup is built for you.
 
@@ -18,6 +15,10 @@ when:
   - You need code with no dynamic memory allocation.
   - You want proof the C code matches the MATLAB result.
   - You are deploying an AI model entry-point function to an embedded device.
+not_for:
+  - "You want a MEX file or desktop library: use the standard MATLAB codegen steps, not this skill."
+  - "You build in Simulink: use Simulink Coder and Embedded Coder directly."
+  - "You need code for an Nvidia GPU: use GPU Coder, which is a separate MathWorks product."
 you_give:
   - The MATLAB function to deploy
   - The target board or processor
@@ -28,8 +29,33 @@ you_get:
   - Generated C or C++ code
   - A processor-in-the-loop test setup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Embedded Coder.
+  - Open an AI chat that can run MATLAB. You need MATLAB with Embedded Coder, which is a paid add-on.
+  - Paste the skill text, then paste your MATLAB function and name your board.
+  - Tell it any memory limits, such as no heap use or a stack size.
+  - Run the settings it gives you. Test on your computer first (SIL), then on the board (PIL).
+  - Check the test results match MATLAB before you flash the code.
+  - For a Raspberry Pi, keep the password out of the script. Type it in when asked.
+output_sample:
+  input:
+    - The MATLAB function you want to run on the chip
+    - The board or processor, such as an STM32 or Raspberry Pi
+    - Memory limits or a no-heap rule (optional)
+    - A sample input for each function argument, used for testing
+  prerequisites:
+    - An AI that can run MATLAB
+    - MATLAB Coder and Embedded Coder, which are paid MathWorks products with separate licences
+    - A hardware support package for your board, if one exists
+    - Your board connected by serial cable or network
+  output:
+    - name: Code generation configuration
+      contains: A MATLAB script that sets up an Embedded Coder library build with no operating system needed.
+    - name: Hardware settings
+      contains: Board choice from a support package, or word sizes set by hand for an ARM Cortex-M.
+    - name: Memory settings
+      contains: Dynamic memory switched off, a stack limit, and no outside deep learning libraries for bare-metal targets.
+    - name: Performance settings
+      contains: SIMD, code replacement library and OpenMP choices that fit Cortex-A or Cortex-M.
+    - name: Generated C or C++ code
+      contains: The source files made by the codegen command for your function.
+    - name: SIL and PIL test setup
+      contains: Settings to compare the generated code with MATLAB on your computer first, then on the board.

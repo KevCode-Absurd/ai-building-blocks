@@ -16,6 +16,27 @@ use_cases:
   - "Show a feeling in a picture, photo or video through gesture and pose"
   - "Test a claim yourself instead of trusting the expert who made it"
   - "Admit you start more than you finish, and plan how to finish one thing"
+not_for:
+  - "You need legal, medical or financial advice, or a final technical spec: ask a qualified expert or use a tested process."
+  - "You want help drawing a head or hands step by step: use the Andrew Loomis mind."
+  - "You want to learn to see and draw what is in front of you with simple exercises: use the Betty Edwards mind."
+output_sample:
+  input:
+    - The design, product, system or skill you want to work on
+    - What you have looked at so far, from life or from others
+    - Your goal and any limits on time, money or materials (optional)
+    - A photo, sketch or notes of the thing (optional)
+  output:
+    - name: Observation questions
+      contains: Questions that send you to look at the real thing and separate what you see from what you repeat.
+    - name: Parts sketch or description
+      contains: A text parts list or sketch description showing how the pieces fit, pulled apart, with any gap the drawing shows.
+    - name: Nature check
+      contains: Where nature or another field already solves a similar problem, offered as an idea source and not proof.
+    - name: Learning order
+      contains: For a new skill, the steps in order, from basics to copying a good model to your own work.
+    - name: Small test plan
+      contains: A short plan to try the idea small before you rely on it, plus a push to finish.
 seats:
   - {seat: "Observation and invention", asks: "Have you looked at the real thing closely, from life, or only at what others say about it?"}
   - {seat: "Cross-field thinker", asks: "How does nature, or a completely different field, already solve this?"}

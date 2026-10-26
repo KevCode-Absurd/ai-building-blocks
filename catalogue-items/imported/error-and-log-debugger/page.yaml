@@ -2,11 +2,10 @@ thinking: high
 thinking_why: Finding root causes takes careful, step by step reasoning.
 new_slug: error-and-log-debugger
 name: Error and log debugger
-summary: Give it an error, log or stack trace. Get the cause found and a fix that works.
+summary: Paste an error, log or stack trace into this error and log debugger. You get the root cause, a small fix, a test and steps to confirm it.
 job: test-and-fix-code
 headline: Error and log debugger
-subhead: Paste an error, a log or a stack trace and get back the real cause of
-  the bug, plus the smallest fix that solves it.
+subhead: Paste an error, a log or a stack trace and get back the real cause of the bug, plus the smallest fix that solves it.
 explain: |
   Paste an error, a log or a stack trace and get back the real cause of the bug, plus the smallest fix that solves it. No guessing at changes until something works.
 
@@ -16,6 +15,10 @@ when:
   - A bug only appears under load or at random and you cannot pin it down.
   - You have fixed a bug before and it came back.
   - You want a test written that proves a fix works.
+not_for:
+  - "You want to build a new feature: ask your AI to plan and write it as a normal coding task."
+  - "You only want to make code faster and nothing is failing: use a profiler or an app monitoring tool."
+  - "You have no error, log or clear description of the problem: first write down what you expected and what happened."
 you_give:
   - Full error message or stack trace
   - Code file or snippet involved
@@ -28,8 +31,28 @@ you_get:
   - Test that covers the failing case
   - Steps to confirm the fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code and read your project files.
+output_sample:
+  input:
+    - The full error message or stack trace
+    - The code file or snippet involved
+    - What you expected and what happened
+    - Steps that trigger the bug (optional)
+    - Log output from before and during the failure (optional)
+  prerequisites:
+    - An AI that can run code and read your project files gives the best result, but you can also paste code into a chat.
+  output:
+    - name: Reproduction
+      contains: The exact steps or input that make the bug show up, and how often it happens.
+    - name: Fault location
+      contains: The part of the code where the first bad value appears, traced from the stack trace.
+    - name: Root cause
+      contains: A plain explanation of why the code fails, kept apart from the symptom you saw.
+    - name: Code fix
+      contains: The smallest change that solves the cause, with a check that other callers still work.
+    - name: Regression test
+      contains: A test that fails before the fix and passes after it.
+    - name: Verification steps
+      contains: How to re-run the failing case and confirm the fix and existing tests still pass.

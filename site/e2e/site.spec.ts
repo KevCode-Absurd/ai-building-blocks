@@ -96,6 +96,9 @@ test("the library leads with six formats and keeps domains in a filter", async (
 test("an agent's page shows what it runs, how to add it, and what it asks before", async ({ page }) => {
   await page.goto("/agents/google-ads-weekly-account-keeper");
   await expect(page.locator("h1")).toHaveText("Weekly Google Ads review");
+  // Steps and the file sit under Details, which opens when you ask for it.
+  await expect(page.getByTestId("bp-details")).not.toHaveAttribute("open", "");
+  await page.getByTestId("bp-details").locator("summary").first().click();
   const runs = page.locator("#steps");
   await expect(runs).toContainText("What it runs");
   await expect(runs.locator(".flow-steps > li")).toHaveCount(6);
@@ -173,19 +176,22 @@ test("a card opens the block's own page, with the outcome, the shape of what you
   // How much thinking it needs, as a dial, with no model names.
   await expect(bp.getByTestId("thinking")).toContainText("Thinking it needs");
   await expect(bp.getByTestId("thinking")).not.toContainText(/Opus|Sonnet|Haiku|GPT/);
-  // The shape of what you get comes first: what makes it better, the output with <gaps>, then what you could do next.
+  // Three parts first: what you get (the output with <gaps>), fill it in, run it. Everything else sits under one Details.
   // No sample run made for the test brand.
   const get = bp.getByTestId("what-you-get");
-  await expect(get).toContainText("Better with");
   await expect(get.locator(".code")).toHaveCount(1);
   await expect(get.locator(".code")).toContainText("<");
   await expect(bp.locator("#example")).toHaveCount(0);
   await expect(bp.locator(".bp-main")).not.toContainText("A real run on Sprout");
-  for (const id of ["get", "what", "io", "use", "most", "test", "improve", "file"]) await expect(bp.locator(`#${id}`)).toBeVisible();
-  const order = await bp.locator(".bp-main > section[id]").evaluateAll((els) => els.map((e) => e.id));
-  // "Before you start" (what to have ready, and the steps before this one) sits between what goes in and adding it.
-  expect(order.slice(0, 5)).toEqual(["get", "what", "io", "before", "install"]);
-  expect(await bp.locator(".bp-toc a").evaluateAll((els) => els.map((e) => e.getAttribute("href")))).toEqual([...order.map((id) => `#${id}`), "#comments"]);
+  const order = await bp.locator(".bp-flow > section[id]").evaluateAll((els) => els.map((e) => e.id));
+  expect(order.slice(0, 3)).toEqual(["get", "task-start", "run"]);
+  // The reference topics stay in the page but behind Details until you open it.
+  const details = bp.getByTestId("bp-details");
+  await expect(details).not.toHaveAttribute("open", "");
+  for (const id of ["what", "io", "use", "most", "test", "improve", "file"]) await expect(bp.locator(`#${id}`)).toBeAttached();
+  await details.locator("summary").first().click();
+  for (const id of ["what", "io", "use", "most", "test", "improve", "file"]) await expect(bp.locator(`#${id}`)).toBeVisible();
+  await expect(details.getByTestId("toc-comments")).toBeVisible();
   await expect(bp.getByText("Extra steps for online stores")).toHaveCount(0);
   await expect(bp.locator(".prose").first()).not.toContainText("name: ");
   await page.getByRole("link", { name: /Library/ }).first().click();

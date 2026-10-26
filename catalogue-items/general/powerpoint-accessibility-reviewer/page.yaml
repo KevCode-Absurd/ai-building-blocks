@@ -1,79 +1,76 @@
 new_slug: powerpoint-accessibility-reviewer
 name: PowerPoint accessibility reviewer
-summary: Share your deck. Get specific fixes for reading order, titles,
-  alternative text and readable slides.
+summary: "Check your PowerPoint accessibility: get fixes for slide titles, reading order, alt text and hard-to-read slides, plus a record of each check."
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
 headline: PowerPoint accessibility reviewer
-subhead: Share your deck. Get specific fixes for slide titles, reading order,
-  alternative text and readable visual content. Work on a copy of your file. Get
-  a clear record of what passed and what still needs checking.
+subhead: Share your deck. Get specific fixes for slide titles, reading order, alternative text and readable visual content. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share your deck. Get specific fixes for slide titles, reading order,
-  alternative text and readable visual content.
+  Share your deck. Get specific fixes for slide titles, reading order, alternative text and readable visual content.
 
 
-  It works with the actual PowerPoint files and follows a specific method for
-  this task. Your source files stay intact. The method starts by checking what
-  your AI already knows and which files it can read. It asks only for missing
-  facts that change the work.
+  It works with the actual PowerPoint files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
 
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share your deck. Get specific fixes for slide titles, reading order,
-    alternative text and readable visual content.
-  - Actual PPTX, audience needs, intended presentation app and available source
-    images or chart data.
+  - Share your deck. Get specific fixes for slide titles, reading order, alternative text and readable visual content.
+  - Actual PPTX, audience needs, intended presentation app and available source images or chart data.
   - You need a checked copy while keeping your original files intact.
+not_for:
+  - "You need a legal or compliance certificate: ask an accessibility specialist, because this review never certifies a deck."
+  - "Your file is a PDF, Word or Excel file: use a checker built for that file type."
+  - "Your PowerPoint has no Reading Order pane: use PowerPoint's own Accessibility Checker and a manual checklist instead."
 you_give:
-  - Actual PPTX, audience needs, intended presentation app and available source
-    images or chart data.
+  - Actual PPTX, audience needs, intended presentation app and available source images or chart data.
   - The app and file tools your AI can use for the requested work
 you_get:
-  - accessibility-review.md and a remediated PPTX copy when editing is requested
-    and supported.
+  - accessibility-review.md and a remediated PPTX copy when editing is requested and supported.
   - A record of source files, changes and check results
   - Missing facts and any checks that could not run
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Save a copy of your deck as a .pptx file. The AI works on the copy.
+  - Open a chat in an AI that can read and edit files. Paste the skill or add it to your AI.
+  - Upload the deck. Say your PowerPoint version, who will use the deck, and whether you want edits or a report only.
+  - Add source images or chart data if you have them (optional).
+  - Read accessibility-review.md first. Check the passed, failed and not run marks before you share the deck.
+  - Open the copy in PowerPoint. Run its Accessibility Checker and test the Reading Order pane for any check marked not run.
+output_sample:
+  input:
+    - Your deck as a .pptx file
+    - The PowerPoint version you will present or share in
+    - Who will use the deck and any access needs they have
+    - Source images or chart data (optional)
+  prerequisites:
+    - An AI that can open and edit .pptx files
+    - A saved copy of your deck, so the original stays untouched
+  output:
+    - name: accessibility-review.md
+      contains: The findings for titles, reading order, alt text, contrast and color use, with what passed and what needs a fix.
+    - name: Remediated PPTX copy
+      contains: A renamed copy of your deck with the fixes applied, made only when you ask for edits and the tool supports it.
+    - name: Source map
+      contains: Which file, version and slide each finding or fix comes from.
+    - name: Checks
+      contains: Each check marked passed, failed or not run, with the evidence.
+    - name: Open items
+      contains: Missing facts and checks your AI could not run, each with a next step.
 how_it_works:
   - title: Step 1
-    text: 1. Inspect actual slide titles, native object order, text sizes, color
-      use, images, tables and charts. Record the target PowerPoint version and
-      which checks the tool can perform.
+    text: 1. Inspect actual slide titles, native object order, text sizes, color use, images, tables and charts. Record the target PowerPoint version and which checks the tool can perform.
   - title: Step 2
-    text: 2. Give slides useful titles and verify logical reading order in
-      PowerPoint’s Reading Order pane when available. Mark purely decorative
-      objects appropriately instead of treating visual position as proof of
-      reading order.
+    text: 2. Give slides useful titles and verify logical reading order in PowerPoint’s Reading Order pane when available. Mark purely decorative objects appropriately instead of treating visual position as proof of reading order.
   - title: Step 3
-    text: 3. Write concise alternative text from the image or chart’s actual purpose
-      and evidence. Preserve meaningful labels and table headers, and avoid
-      unsupported interpretations of a visual.
+    text: 3. Write concise alternative text from the image or chart’s actual purpose and evidence. Preserve meaningful labels and table headers, and avoid unsupported interpretations of a visual.
   - title: Step 4
-    text: 4. Check contrast, text legibility, information conveyed only by color,
-      link labels and animation-dependent meaning. Inspect rendered slides as
-      well as document structure.
+    text: 4. Check contrast, text legibility, information conveyed only by color, link labels and animation-dependent meaning. Inspect rendered slides as well as document structure.
   - title: Step 5
-    text: 5. Run the intended application’s accessibility checker and a relevant
-      keyboard or screen-reader spot check when available. State unrun checks
-      and unresolved findings; never equate an XML scan with full accessibility
-      compliance.
+    text: 5. Run the intended application’s accessibility checker and a relevant keyboard or screen-reader spot check when available. State unrun checks and unresolved findings; never equate an XML scan with full accessibility compliance.
 output_shape: >-
   FILES
 
-  accessibility-review.md and a remediated PPTX copy when editing is requested
-  and supported.
+  accessibility-review.md and a remediated PPTX copy when editing is requested and supported.
 
 
   SOURCE MAP
@@ -91,41 +88,28 @@ output_shape: >-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: Actual PPTX, audience needs, intended presentation app and available source
-      images or chart data.
+    how: Actual PPTX, audience needs, intended presentation app and available source images or chart data.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - Structural and visual checks are recorded separately.
   - Reading order is not inferred from coordinates alone.
   - No unsupported compliance certification.
   - The result names its sources and keeps unrun checks visible.
 test:
-  - "Try this case: The first object in reading order is a decorative
-    background. Check that it does this: Inspect the actual accessibility order
-    and mark the decoration appropriately."
-  - "Try this case: The chart only distinguishes series by red and green. Check
-    that it does this: Require an additional readable distinction such as labels
-    or patterns."
-  - Reopen the saved result and compare it with the source. Keep any failed or
-    unrun check in the report.
+  - "Try this case: The first object in reading order is a decorative background. Check that it does this: Inspect the actual accessibility order and mark the decoration appropriately."
+  - "Try this case: The chart only distinguishes series by red and green. Check that it does this: Require an additional readable distinction such as labels or patterns."
+  - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Add your confirmed field names, file rules and target app version to the required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same meanings and checks.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:
   - input: The first object in reading order is a decorative background
-    expected: Inspect the actual accessibility order and mark the decoration
-      appropriately.
+    expected: Inspect the actual accessibility order and mark the decoration appropriately.
   - input: The chart only distinguishes series by red and green
     expected: Require an additional readable distinction such as labels or patterns.

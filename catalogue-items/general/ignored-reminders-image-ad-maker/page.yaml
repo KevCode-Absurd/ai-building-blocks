@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 name: "Ignored reminders image ad maker"
 new_slug: ignored-reminders-image-ad-maker
-summary: "Paste your story ad. Get a lock screen of ignored reminders and how to build it."
+summary: "Turn your story ad into a phone lock screen of ignored reminders. Get the reminder text, times and a plain way to build the image."
 job: make-image-ads
 
 headline: "Ignored reminders image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your story is about a routine the narrator can't keep, or a chore that keeps coming back.
   - The narrator has tried to fix it with reminders or alarms.
   - Your buyer's problem has a time of day, like the school run or bedtime.
+not_for:
+  - "Your ad has no routine the narrator keeps missing: use the Problem moment image ad maker, or ask a designer for a simple scene."
+  - "You want words off the image: use the Problem moment image ad maker instead."
+  - "You sell something bought once with no repeating chore: use the Sticky note image ad maker or the Tried before image ad."
 
 you_give:
   - Your approved story ad, with the routine the narrator sets reminders for
@@ -30,11 +34,39 @@ you_get:
   - Any of the skill's six checks it still missed, one line each, or none
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad underneath. If it quotes the reminders, they'll be used word for word.
-  - Build the lock screen in a design tool from the brief, with each reminder and time typed in as real text.
-  - If you use the image prompt instead, check every time and number in the result.
-  - Show it to someone who fits your buyer and ask "is this your phone?"
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill, or add it to your AI.
+  - Paste your story ad underneath. If it quotes the reminders, the AI uses them word for word.
+  - Read the checks at the end. Ask the AI to fix any it missed.
+  - Build the screen in Canva or Figma. Type each reminder and time as real text so no digit changes.
+  - If you use an image tool instead, check every time and number in the picture. ChatGPT and Gemini can make images. Claude needs an image tool connected.
+  - Show it to someone who fits your buyer and ask, is this your phone?
+output_sample:
+  input:
+    - Your approved story ad, with the routine the narrator sets reminders for
+    - When in the day the routine slips (optional)
+    - Whether words on the image are on or off (optional, on by default)
+  prerequisites:
+    - An AI that can read your pasted story ad
+    - A design tool like Canva or Figma, or an AI that can make images
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: How they pile up
+      contains: Whether reminders repeat, get sharper or spread over days, and why.
+    - name: The screen
+      contains: The lock screen or list, the wallpaper and the clock or date.
+    - name: Words on the image
+      contains: Each reminder with its time, newest first, one to four of them.
+    - name: Blank version
+      contains: The same screen with no reminders, so you can change words later.
+    - name: Line under the image
+      contains: A short caption of about 27 characters that never names the product.
+    - name: Flags
+      contains: Which words were lifted or written new, and anything the AI guessed.
+    - name: How to make it
+      contains: A design-tool build, or an image prompt of 60 to 120 words.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Sets the house rules

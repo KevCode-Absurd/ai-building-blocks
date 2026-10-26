@@ -42,12 +42,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Sale break-even and CAC allowance modeler.** Use the skill `sale-break-even-and-cac-allowance-modeler`. Starts with what the discount leaves, so every later choice stays inside a CAC limit.
+1. **Sale break-even and CAC allowance modeler.** Use the skill `sale-break-even-and-cac-allowance-modeler`. Starts with what the discount leaves. Hands the break-even ROAS and CAC limit to the next two steps, so every later choice stays inside it.
 
 Pause here: Agree the discount depth and the sale CAC limit with whoever signs off the budget.
 
-2. **Sale offer ladder planner.** Use the skill `sale-offer-ladder-planner`. With the discount and CAC limit agreed, plans the main offer, the backups and when to switch.
-3. **Sale season pacing sheet builder.** Use the skill `sale-season-pacing-sheet-builder`. Give it the plan from the steps before. Reads the offer ladder to set spend by day, with scale, hold and cut rules.
+2. **Sale offer ladder planner.** Use the skill `sale-offer-ladder-planner`. Give it the audit report from the steps before. Takes the break-even and CAC limit from step 1 and only discounts what that limit can carry. Plans the main offer, the backups and when to switch, and hands that plan to step 3.
+3. **Sale season pacing sheet builder.** Use the skill `sale-season-pacing-sheet-builder`. Give it the plan and the report from the steps before. Reads the offer ladder from step 2 and the CAC limit from step 1 to set spend by day, with scale, hold and cut rules.
 
 Pause here: Run the first days of the sale, then export spend, sales, emails and discounts for the week.
 

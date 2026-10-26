@@ -1,6 +1,7 @@
 slug: prepare-private-bug-evidence-for-developers
 name: Private bug evidence assistant
-summary: Give a redacted screenshot and rough notes. Get a developer-ready draft issue, privacy review checklist and evidence manifest.
+summary: Give a redacted screenshot and rough notes. Get a developer-ready draft
+  issue, privacy review checklist and evidence manifest.
 category: agent
 type: agent
 role: orchestrate
@@ -22,11 +23,21 @@ uses:
   - technical-doc-proofreader
 steps:
   - uses: screenshot-privacy-masker
-    note: Process originals locally against declared sensitivity. Detect candidate regions, mask a separate copy and inspect output pixels. Pass only reviewed copies and an abstract redaction log to issue drafting.
+    note: Process originals locally against declared sensitivity. Detect candidate
+      regions, mask a separate copy and inspect output pixels. Pass only
+      reviewed copies and an abstract redaction log to issue drafting.
   - uses: bug-report-writer
-    note: Use safe evidence and bug notes for environment, steps, expected/actual behavior, impact and reproducibility limits. Separate reported from reproduced actions. Remove personal or secret data from quoted logs.
+    note: Uses your rough bug notes plus step 1's reviewed masked copy and abstract
+      redaction log. Writes environment, steps, expected and actual behaviour,
+      impact and reproducibility limits. Separates reported from reproduced
+      actions and removes personal or secret data from quoted logs. Hands step 3
+      the draft issue.
   - uses: technical-doc-proofreader
-    note: Proofread the English issue draft for spelling, grammar, terminology, filenames, numbered steps and jargon. Return an Original -> Suggestion -> Reason checklist. Flag factual uncertainty [verify] rather than silently changing it. The coordinator returns the existing draft issue, checklist and unresolved privacy/reproduction checks.
+    note: Proofread the English issue draft for spelling, grammar, terminology,
+      filenames, numbered steps and jargon. Return an Original -> Suggestion ->
+      Reason checklist. Flag factual uncertainty [verify] rather than silently
+      changing it. The coordinator returns the existing draft issue, checklist
+      and unresolved privacy/reproduction checks.
 execution: coordinator
 package_files: all
 origin: own

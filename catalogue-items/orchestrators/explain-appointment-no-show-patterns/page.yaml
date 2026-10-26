@@ -1,51 +1,91 @@
 new_slug: explain-appointment-no-show-patterns
 name: Explain appointment no show patterns
 headline: Explain appointment no show patterns
-summary: Share the source files. Get a reconciled attendance table, pattern summary and evidence gaps.
+summary: See when and where appointments get missed. You get a clean attendance table, a plain-words pattern summary and a list of what the records can't tell you.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A reconciled attendance table, pattern summary and evidence gaps. Share deidentified appointment records, booking and cancellation status definitions, reporting period and actual reminder records. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it appointment records with names removed, your own definition of a no show and the period. It cleans the counts, then shows which days, times or services miss more often. You get an attendance table, a short pattern summary and a list of gaps in the evidence.
 explain: |-
-  A reconciled attendance table, pattern summary and evidence gaps.
+  A missed appointment costs a slot someone else could have used. Before you change reminders or booking rules, you need to know where no shows really happen. This workflow explains appointment no show patterns from your own records, using your definition of a no show.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Cancellations and reschedules are separate from no shows; reminder correlation does not prove causation. Missing tools or evidence stay visible in the final summary.
+  First it reconciles the records: appointment IDs, statuses, dates and duplicate bookings. A cancellation and a reschedule are counted apart from a no show. It states the number it divides by, so a rate cannot hide a different base. Then it writes the patterns in plain words, by the groups you give it, such as day of the week or service.
+
+  It shows patterns, not reasons. If you have reminder records, it shows how they line up with attendance, but that does not prove reminders cause a change. It never profiles people or guesses why someone did not come.
 when:
-  - You need a reconciled attendance table, pattern summary and evidence gaps.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your calendar has gaps and you want to know which slots go empty most.
+  - You plan to change reminders and want a starting number to compare with.
+  - A manager asks whether Mondays or mornings are worse.
+  - Your booking system's no-show count and your own count do not match.
+not_for:
+  - You want to judge or contact one person about a missed visit. Use your own records and your practice rules.
+  - You want proof that reminders cut no shows. This shows patterns only and cannot prove cause.
+  - Your records still have names and contact details. Remove them first. This workflow expects records with names removed.
+  - You only need to check a spreadsheet's totals. Use the Spreadsheet checker.
 you_give:
-  - Deidentified appointment records, booking and cancellation status definitions, reporting period and actual reminder records.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - Appointment records with names and contact details removed
+  - Your meaning of booked, attended, no show, cancelled and rescheduled
+  - The reporting period, such as the last 6 months
+  - Reminder records, if you send them (optional)
+  - The groups you want to compare, such as day, time or service (optional)
 you_get:
-  - A reconciled attendance table, pattern summary and evidence gaps.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A reconciled attendance table with the number each rate divides by
+  - A summary of 3 to 5 patterns in plain words, each with its numbers
+  - A note on how reminders line up with attendance, if you gave reminder records
+  - A list of gaps the records cannot answer
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Remove names, phone numbers and emails from the records. Keep one ID per appointment. Then attach them with your definitions.
+  - Read the attendance table first. Check the counts against what you know from your booking system.
+  - Use the patterns to choose one change to test, such as a reminder for the worst slot. Run it for a few weeks and compare.
 how_it_works:
   - title: Spreadsheet checker
-    text: Reconcile appointment IDs, statuses, dates, denominators and duplicate bookings; apply only the supplied no-show definition.
+    text: Matches appointment IDs, statuses, dates and duplicate bookings. Applies only your definition of a no show and states each denominator. Hands the clean attendance table to the next step.
   - title: Figures to plain pictures writer
-    text: Explain verified attendance patterns by supplied grouping without sensitive profiling or invented reasons for absence.
+    text: Turns the checked table into plain words by the groups you gave. Shows what the numbers say without guessing why people missed visits or profiling anyone.
 output_shape: |-
-  Scope and source coverage
-  A reconciled attendance table, pattern summary and evidence gaps.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ATTENDANCE TABLE
+    Group | <Booked> | <Attended> | <No show> | <Cancelled> | <Rescheduled> | <No-show rate> | <Rate divides by>
+
+  PATTERN SUMMARY
+    <3 to 5 patterns, each with its numbers and group size>
+
+  REMINDER NOTE   <how reminders line up with attendance; not proof of cause>
+
+  EVIDENCE GAPS
+  MISSING
+  CHECKS MISSED
+  HAND-BACK SUMMARY
+output_sample:
+  input:
+    - Appointment records with names removed
+    - Your definitions of no show, cancelled and rescheduled
+    - The reporting period
+    - Reminder records and the groups to compare (optional)
+  prerequisites:
+    - An AI that can open spreadsheet and CSV files
+  output:
+    - name: Attendance table
+      contains: Counts by group for booked, attended, no show, cancelled and rescheduled, with the base of each rate.
+    - name: Pattern summary
+      contains: Three to five patterns in plain words, each with its numbers and group size.
+    - name: Reminder note
+      contains: How reminder records line up with attendance, stated as correlation and not cause.
+    - name: Evidence gaps
+      contains: What the records cannot show, such as why people missed a visit.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks missed and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Cancellations and reschedules are separate from no shows; reminder correlation does not prove causation.
+  - what: No-show definition
+    how: Write it in one line, such as did not arrive and did not cancel. The AI applies only your wording.
+  - what: Groups
+    how: Pick two or three, such as day, time of day and service. Too many groups leave very small counts.
+  - what: Period
+    how: Use at least a few months so each group has enough appointments to mean something.
+  - what: Privacy
+    how: Keep only an appointment ID, date, time, service and status. Leave out names and any health details.
 judge:
   - Cancellations and reschedules are separate from no shows; reminder correlation does not prove causation.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,16 +98,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep this table and run the workflow again after you change reminders, then compare the two tables.
+  - Add the booking lead time (days from booking to visit) as a group in your next run.
+  - Finish any check that needs a person or a spreadsheet tool before you share the result.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet tool such as Excel or Google Sheets
+      why: Lets you open the attendance table and re-check a count. The AI cannot recalculate a workbook without one.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Reminder send dates for each appointment.
+    - The status list from your booking system.
 terms:
+  - term: No show
+    meaning: A booked appointment where the person did not arrive and did not cancel. Use your own definition.
+  - term: Denominator
+    meaning: The number a rate divides by, such as all booked appointments.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

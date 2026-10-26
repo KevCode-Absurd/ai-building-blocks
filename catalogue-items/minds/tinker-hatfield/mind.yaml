@@ -16,6 +16,29 @@ use_cases:
   - "Rescue a relationship with an unhappy client by listening and redesigning"
   - "Know when a design is good enough to ship, so you can move on"
   - "Plan how a new feature can show its workings instead of hiding them"
+not_for:
+  - "You want a real statement or fresh opinion from Tinker Hatfield: his words are only in public records, so read his interviews or ask a human designer."
+  - "You need to make a legal, medical, safety or pricing call: use a qualified person, not a design mind."
+  - "You want to explain data with clear charts: use Cole Nussbaumer Knaflic, who teaches audience, chart choices and what numbers mean."
+output_sample:
+  input:
+    - Your product, feature or stalled launch, in a few lines
+    - Who it is for and how they use it
+    - What limits you have, such as budget, team or time
+    - What your boss or team thinks of the idea (optional)
+  output:
+    - name: The real problem
+      contains: A plain statement of the problem behind your brief, framed around the user.
+    - name: Questions for the user
+      contains: What to ask the people who use it, and how to watch how they move.
+    - name: Story and visible part
+      contains: The story the product could tell and which hidden feature to show off.
+    - name: Ideas from outside your field
+      contains: Places such as buildings, hobbies or travel where someone solved a similar problem.
+    - name: Sketch directions
+      contains: A few design options to draw, weighing function, looks, brand and story.
+    - name: Ship test
+      contains: A check on whether the idea is good enough to ship, and how to defend a bold choice.
 seats:
   - {seat: "Product with a story", asks: "What story does this product tell, and can people see it from across the room?"}
   - {seat: "The user's voice", asks: "Have we asked the person who will use this what they need, and how they move?"}

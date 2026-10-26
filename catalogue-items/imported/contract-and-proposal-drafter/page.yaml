@@ -2,34 +2,66 @@ thinking: medium
 thinking_why: It picks clauses for the place and deal, then writes them out.
 new_slug: contract-and-proposal-drafter
 name: Contract and proposal drafter
-summary: Say the deal and where you work. Get a contract, proposal, SOW or NDA
-  draft with the right clauses.
+summary: Draft a freelance contract, proposal, SOW or NDA in minutes. Say the deal and where you work, and get clauses that fit your country.
 job: check-contracts
 headline: Contract and proposal drafter
-subhead: Say the deal and where you work. Get a contract, proposal, SOW or NDA
-  draft with the right clauses. Bring the deal and what is being delivered. Use
-  the result to plan your next step.
+subhead: Tell your AI the deal, the price, the parties and where you work. It picks a template and fills in the clauses. You get a first draft to take to a lawyer.
 explain: |
   A first draft of a freelance contract, proposal, scope of work, NDA or master services agreement, with the clauses that fit your deal and your country. It saves you starting from a blank page or a template that does not match.
 
   You tell it the work, the price, the parties and where you operate. It picks a template, fills in payment terms, ownership of the work, confidentiality, warranties, liability limits and how either side can end the deal. Jurisdiction notes cover Delaware, EU data rules, the UK and German-speaking countries. Output is plain Markdown with steps to convert it to Word. It is a starting point, so have a lawyer read it before you sign.
 when:
   - A new client wants a contract and you have nothing ready.
-  - You need a scope of work for a fixed price project.
-  - A partner asks you to sign an NDA and you want your own version.
-  - You work across borders and need terms that fit local law.
+  - You need a scope of work for a fixed-price project.
+  - A partner asks you to sign an NDA and you want to send your own version.
+  - You work across borders and want terms that fit local law.
+not_for:
+  - "You need an employment contract or a deal in a regulated field: ask a lawyer to draft it."
+  - "You are signing a high-value or high-risk deal: have a lawyer write or review the terms, not just a draft."
+  - "You want to check a contract someone else sent you: ask a lawyer to read it, as this tool writes new drafts."
 you_give:
-  - The deal and what is being delivered
-  - Price and payment schedule
-  - Both parties' names
-  - Your country or the client's
+  - "The type of document: contract, proposal, SOW, NDA or MSA"
+  - "Where you work: US (Delaware), EU, UK, or Germany, Austria and Switzerland"
+  - A short summary of the work
+  - The price or hourly rate
+  - Both parties' names and addresses
+  - Start and end dates (optional)
 you_get:
-  - Draft contract, proposal, SOW or NDA
-  - Clauses matched to your location
-  - Notes on terms to negotiate
-  - Steps to turn it into a Word file
+  - A draft contract, proposal, SOW, NDA or MSA in plain Markdown
+  - Clauses for payment, ownership, confidentiality, warranty, liability and ending the deal
+  - Local notes for your country, with a data protection addendum for EU deals
+  - Gaps marked REQUIRED where you left out details
+  - Steps to turn the draft into a Word file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Say what you need: the document type, your country, and the deal in one or two sentences."
+  - Give the price, both parties' names and addresses, and the dates. Your AI asks for anything missing.
+  - Read the draft and fill every spot marked REQUIRED. Check who owns the work, since US work-for-hire often does not cover freelancers, so make sure there is a clear transfer of rights.
+  - "Optional: install Pandoc on your computer and run the Word steps at the end of the result."
+  - Have a lawyer read the draft before anyone signs.
+output_sample:
+  input:
+    - "The type of document: contract, proposal, SOW, NDA or MSA"
+    - "Where you work: US (Delaware), EU, UK, or Germany, Austria and Switzerland"
+    - A short summary of the work, and the price or hourly rate
+    - Both parties' names and addresses
+    - Start and end dates (optional)
+  prerequisites:
+    - Pandoc on your computer, only if you want a Word file
+  output:
+    - name: Template pick
+      contains: The template that fits your document type and deal, such as fixed-price, retainer, partnership, NDA or SOW.
+    - name: Services and deliverables
+      contains: What is being built or provided, with a due date for each deliverable.
+    - name: Payment
+      contains: The fee, milestone split, late payment interest and how long the client has to accept work.
+    - name: Intellectual property
+      contains: Who owns the finished work, what you keep, and the wording that fits your location.
+    - name: Confidentiality, warranties and liability
+      contains: How long secrets stay protected, what you fix after delivery, and the cap on what you could owe.
+    - name: Termination and disputes
+      contains: How either side can end the deal, and how arguments are settled under your local rules.
+    - name: Data processing addendum
+      contains: Extra data protection terms for EU and German-speaking deals that involve personal data.
+    - name: Word file steps
+      contains: Pandoc commands to turn the Markdown draft into a Word document.

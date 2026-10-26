@@ -13,6 +13,8 @@ inputs:
     required: false
   - type: persona
     required: false
+  - type: hooks
+    required: false
 outputs:
   - type: audit_report
 origin: rebuilt

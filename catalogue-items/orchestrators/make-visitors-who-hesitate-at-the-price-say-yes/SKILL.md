@@ -52,8 +52,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Value equation scorer.** Use the skill `value-equation-scorer`. Scores the offer on what the buyer gets against what it asks of them, and finds the weak part.
 2. **Price against value checker.** Use the skill `price-against-value-checker`. Give it the audit report from the steps before. Compares the price with that value score and says whether to change the price or the story.
 3. **Guarantee designer.** Use the skill `guarantee-designer`. Give it the plan from the steps before. Designs a guarantee aimed at the weak part the checks found.
-4. **Honest scarcity and urgency planner.** Use the skill `honest-urgency-planner`. Give it the offer from the steps before. Plans a true reason to act now that fits the offer and the guarantee.
-5. **Call-to-action writer.** Use the skill `call-to-action-writer`. Give it the offer from the steps before. Writes the closing line that states the offer, the guarantee and the deadline together.
+4. **Honest scarcity and urgency planner.** Use the skill `honest-urgency-planner`. Give it the offer, now with the guarantee, from step 3. Plans a true reason to act now that fits the offer and the guarantee.
+5. **Call-to-action writer.** Use the skill `call-to-action-writer`. Give it your ad draft, the offer from step 3 and the limits and dates from step 4. Writes the closing line that states the offer, the guarantee and the deadline together.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

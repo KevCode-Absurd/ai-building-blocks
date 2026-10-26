@@ -22,11 +22,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Winning ad DNA mapper.** Use the skill `winning-ad-dna-mapper`. Breaks each ad in the test into message and look so the results can be read by idea.
-2. **Ad sameness checker.** Use the skill `ad-sameness-checker`. Give it the ad breakdowns from the steps before. Reads the breakdowns and shows whether the round tested one idea many times.
-3. **Creative test reader.** Use the skill `creative-test-reader`. Give it the ad breakdowns from the steps before. Reads the results with the breakdowns, so verdicts are by concept.
-4. **Meta test campaign planner.** Use the skill `meta-test-campaign-planner`. Give it the brief from the steps before. Turns the brief from the test read into the next round's layout.
-5. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the plan from the steps before. Uses the next-round plan to decide what budget the winners get.
+1. **Winning ad DNA mapper.** Use the skill `winning-ad-dna-mapper`. Breaks each ad in the test into message and look so the results can be read by idea. Hands the breakdowns to steps 2 and 3.
+2. **Ad sameness checker.** Use the skill `ad-sameness-checker`. Give it the ad breakdowns from the steps before. Reads the breakdowns and shows whether the round tested one idea many times. Hands the sameness report to step 3.
+3. **Creative test reader.** Use the skill `creative-test-reader`. Give it the ad breakdowns from the steps before. Reads the results with the breakdowns and the sameness report, so verdicts are by concept. Hands the next-round brief to step 4.
+4. **Meta test campaign planner.** Use the skill `meta-test-campaign-planner`. Give it the brief from the steps before. Turns the brief from the test read into the next round's layout. Hands the plan to step 5.
+5. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the plan from the steps before. Uses the next-round plan, with your spend and returns, to decide what budget the winners get.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

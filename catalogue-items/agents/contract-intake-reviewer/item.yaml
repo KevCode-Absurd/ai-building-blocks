@@ -14,14 +14,14 @@ outputs:
   - {type: copy_draft}
 uses: [nda-quick-checker, saas-terms-check, dpa-review, ai-vendor-terms-checker, contract-risk-reviewer, ip-clause-checker, contract-change-tracer, contract-plain-summary]
 steps:
-  - {uses: nda-quick-checker, note: "Only when the document is an NDA: a green, yellow or red rating and the odd clauses."}
-  - {uses: saas-terms-check, note: "Only when it is a software subscription: renewal traps, price rises, uptime and data terms."}
-  - {uses: dpa-review, note: "Only when it is, or includes, a data processing agreement: each term checked with edits to ask for."}
-  - {uses: ai-vendor-terms-checker, note: "Only when the vendor is an AI tool: data-training, liability and model-change risks."}
-  - {uses: contract-risk-reviewer, note: "When none of the types above fits: key clauses, duties and risks rated by severity."}
-  - {uses: ip-clause-checker, note: "Only when the work, data or product involves ownership, assignment, licences or indemnity: those clauses checked and flagged."}
-  - {uses: contract-change-tracer, note: "Only when the contract is an amendment or a new version of one already in the register: what changed and the latest wording."}
-  - {uses: contract-plain-summary, note: "Last, for any contract rated yellow or red or that you plan to sign: a two-minute summary to read before the lawyer does."}
+  - {uses: nda-quick-checker, note: "Only when the document is an NDA: a green, yellow or red rating and the odd clauses. Reads your contract itself. Hands its flagged clauses to the rating and the summary."}
+  - {uses: saas-terms-check, note: "Only when it is a software subscription: renewal traps, price rises, uptime and data terms. Reads your contract itself, not step 1's report. Hands its flagged clauses to the rating and the summary."}
+  - {uses: dpa-review, note: "Only when it is, or includes, a data processing agreement: each term checked with edits to ask for. Reads your contract itself, not step 2's report. Hands its flagged clauses to the rating and the summary."}
+  - {uses: ai-vendor-terms-checker, note: "Only when the vendor is an AI tool: data-training, liability and model-change risks. Reads your contract itself, not step 3's report. Hands its flagged clauses to the rating and the summary."}
+  - {uses: contract-risk-reviewer, note: "When none of the types above fits: key clauses, duties and risks rated by severity. Reads your contract itself, not step 4's report. Hands its flagged clauses to the rating and the summary."}
+  - {uses: ip-clause-checker, note: "Only when the work, data or product involves ownership, assignment, licences or indemnity: those clauses checked and flagged. Reads your contract itself and adds to the flags from the first check. Hands its flagged clauses to the rating and the summary."}
+  - {uses: contract-change-tracer, note: "Only when the contract is an amendment or a new version of one already in the register: what changed and the latest wording. Reads the old and new text from your register and files, not step 6's report. Hands the changed clauses to the rating and the summary."}
+  - {uses: contract-plain-summary, note: "Last, for any contract rated yellow or red or that you plan to sign: takes the flagged clauses and rating from the checks above and writes a two-minute summary to read before the lawyer does."}
 schedule: "Whenever a new contract or amendment arrives"
 asks_before: [signing or accepting any contract, sending questions or edits to the other side, sharing the contract with anyone outside your team, deleting or changing the register without being told]
 origin: own

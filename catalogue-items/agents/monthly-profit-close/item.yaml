@@ -15,15 +15,15 @@ outputs:
   - {type: audit_report}
 uses: [build-a-monthly-p-and-l-and-know-your-real-margin, landed-cost-allocator, cogs-line-sorter, store-pl-builder, variance-commentary, store-sales-drop-splitter, product-margin-checker, new-and-returning-pl-splitter, cash-lever-ranker]
 steps:
-  - {uses: build-a-monthly-p-and-l-and-know-your-real-margin, note: "Once, in the first month: sets the unit costs, the COGS rule and the P&L layout that every later month reuses."}
-  - {uses: landed-cost-allocator, note: "Only when new supplier, freight or duty invoices arrived this month: refreshes the true cost per unit."}
-  - {uses: cogs-line-sorter, note: "Only when a cost line appears that last month's rule does not cover."}
-  - {uses: store-pl-builder, note: "Every month: the P&L in the saved layout, in dollars, percent of revenue and per order."}
-  - {uses: variance-commentary, note: "Every month, once last month's P&L is on file: a written reason for each line that moved past the limit."}
-  - {uses: store-sales-drop-splitter, note: "Only when net revenue fell more than a tenth against last month: the drop split into sessions, conversion and order value."}
-  - {uses: product-margin-checker, note: "Only when gross margin fell by two points or more: re-checks the products that carry most of the revenue."}
-  - {uses: new-and-returning-pl-splitter, note: "Every month if there are a few hundred orders or more and the order tags are reliable: whether new customers pay for themselves."}
-  - {uses: cash-lever-ranker, note: "Only when net profit is below target or negative: six cash levers ranked by cash freed."}
+  - {uses: build-a-monthly-p-and-l-and-know-your-real-margin, note: "Once, in the first month: sets the unit costs, the COGS rule and the P&L layout that every later month reuses. Uses your invoices and sales. Passes on the saved rules."}
+  - {uses: landed-cost-allocator, note: "Only when new supplier, freight or duty invoices arrived this month: refreshes the true cost per unit. Uses the new invoices. Passes on the updated unit costs."}
+  - {uses: cogs-line-sorter, note: "Only when a cost line appears that last month's rule does not cover. Uses that one cost line. Passes on the answer for the saved rule."}
+  - {uses: store-pl-builder, note: "Every month: the P&L in the saved layout, in dollars, percent of revenue and per order. Uses this month's costs and sales with the saved rules. Passes on the P&L for the commentary."}
+  - {uses: variance-commentary, note: "Every month, once last month's P&L is on file: a written reason for each line that moved past the limit. Passes on the reasons, which decide what to look into next."}
+  - {uses: store-sales-drop-splitter, note: "Only when net revenue fell more than a tenth against last month: the drop split into sessions, conversion and order value. Uses your sales and traffic numbers, not the commentary. Passes on the cause of the drop."}
+  - {uses: product-margin-checker, note: "Only when gross margin fell by two points or more: re-checks the products that carry most of the revenue. Uses your product costs and sales, not the sales drop report. Passes on the products that pulled margin down."}
+  - {uses: new-and-returning-pl-splitter, note: "Every month if there are a few hundred orders or more and the order tags are reliable: whether new customers pay for themselves. Uses the order export with first-time and returning tags, not the margin report. Passes on the new versus returning result."}
+  - {uses: cash-lever-ranker, note: "Only when net profit is below target or negative: six cash levers ranked by cash freed. Uses the month's P&L and sales numbers, not the customer split. Passes on the ranked levers for the fix list."}
 schedule: "On the 5th of each month, once the books and ad statements are in"
 asks_before: [changing any price, budget or supplier order, moving or posting any entry in your accounts, sending the numbers to anyone]
 origin: own

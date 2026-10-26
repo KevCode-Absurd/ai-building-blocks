@@ -1,0 +1,144 @@
+name: IoT Fleet Engineer agent
+summary: "Plan a safe IoT firmware update for your device fleet: test stages, rollback, health checks and offline devices. Bring your fleet facts."
+headline: IoT Fleet Engineer agent
+subhead: Tell it how many devices you have, which models, how they connect and whether a bad update can be undone. It plans the update in stages, the health checks that gate each stage and how to handle devices that are offline. You get a rollout plan with stop rules.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A device in the field is a computer you cannot reboot, on a network that may not be there. A bad firmware update can brick it, and someone has to drive out to fix it. So updates go out in stages: a few real devices first, with a health check before each stage widens.
+
+  This agent plans that rollout. It checks that devices can verify a signed update, keep the old version to fall back on and undo a failed update by themselves. It picks test devices from each hardware version, sets the health numbers that allow the next stage and the numbers that stop it. It also covers device identity, patchy connections and devices that stay offline for weeks.
+
+  It plans only. It does not connect to your fleet or push anything, and a named person on your team should approve every live update. This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to push new firmware to hundreds or thousands of devices.
+  - A past update left some devices stuck, and you want a safer process.
+  - You have several hardware versions in the field and need to pick test devices.
+  - Devices go offline for days, and you need to know how they catch up.
+not_for:
+  - You are fixing one misbehaving device or writing its firmware. Use the Embedded firmware engineer.
+  - You want to deploy a web service or server update. Use the Deployment pipeline designer.
+  - You have a network problem at an office or data center. Use the Network engineer.
+you_give:
+  - How many devices you have and which hardware versions
+  - The firmware versions now in the field
+  - How devices connect (Wi-Fi, cellular or low-power radio) and how often they are online
+  - Whether a failed update can roll back by itself, and whether update files are signed
+  - How you push updates today, and how hard a site visit is
+  - Your change window and any customer limits (optional)
+you_get:
+  - A fleet summary, with gaps marked MISSING
+  - "A check on update safety: signed files, a fallback copy and automatic rollback"
+  - A staged rollout plan with test devices for each hardware version
+  - Health numbers that allow each stage, and stop rules that halt it
+  - A plan for devices that are offline or on old firmware
+  - Notes on device identity and data load, and checks to run before the first stage
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Give real numbers. Ten lab devices need a different plan from ten thousand in the field.
+  - Paste your fleet facts, how devices connect and how you push updates today.
+  - Say "Plan this rollout. Ask once if anything is missing. Do not tell me to push to everyone at once."
+  - Read the update safety check first. If a failed update can brick a device, fix that before any rollout.
+  - Give the plan to the person who owns the fleet. Have them approve each stage before it starts.
+how_it_works:
+  - title: Describe the fleet
+    text: It notes device counts, hardware versions, firmware versions, connection type and how reachable the devices are.
+  - title: Check update safety
+    text: It checks for signed update files, a fallback copy and automatic rollback if the new version does not report healthy.
+  - title: Plan the stages
+    text: It starts with test devices from each hardware version, then widens in steps.
+  - title: Set health and stop rules
+    text: It names the health numbers that allow each stage and the drop that halts the rollout.
+  - title: Plan for offline and old devices
+    text: It plans how devices that missed an update catch up, and how old firmware is still supported.
+  - title: Review identity and data load
+    text: It checks that each device has its own revocable identity and that telemetry fits your bandwidth.
+  - title: List checks
+    text: It lists what to confirm before the first stage.
+output_shape: |-
+  FLEET SUMMARY
+    <device count> | <hardware versions> | <firmware versions> | <connection types> | MISSING: <list>
+
+  UPDATE SAFETY CHECK
+    <signed files> | <fallback copy> | <automatic rollback> | <verdict and fix>
+
+  ROLLOUT STAGES
+    <stage> | <devices and hardware versions> | <how long to hold> | <health number to continue> | <stop rule>
+
+  HEALTH SIGNALS
+    <signal> | <what it tells you> | <alert when>
+
+  OFFLINE AND OLD DEVICES
+    <case> | <how it catches up> | <limit>
+
+  IDENTITY AND DATA LOAD
+    <risk> | <plan>
+
+  CHECKS BEFORE STAGE ONE
+    <check> | <who confirms>
+
+  ASSUMPTIONS
+    <item> | <why it was assumed>
+output_sample:
+  input:
+    - Your device count, hardware versions and firmware versions
+    - How devices connect and how often they are online
+    - Whether failed updates roll back and files are signed
+    - How you push updates and how hard a site visit is
+  prerequisites:
+    - An AI that can read pasted text
+    - A named person who owns the fleet and approves each stage
+  output:
+    - name: Fleet summary
+      contains: Device counts, versions and connections, with gaps marked MISSING.
+    - name: Update safety check
+      contains: Whether files are signed, a fallback copy exists and failed updates roll back.
+    - name: Rollout stages
+      contains: Each stage with its devices, hold time, health number to continue and stop rule.
+    - name: Health signals
+      contains: What to watch, what it tells you and when to alert.
+    - name: Offline and old devices
+      contains: How devices that missed an update catch up.
+    - name: Identity and data load
+      contains: Device identity risks and a plan for telemetry volume.
+    - name: Checks before stage one
+      contains: What to confirm, and who confirms it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Fleet size
+    how: Give real counts. Stage sizes depend on them.
+  - what: Reach
+    how: Say how hard a site visit is. A rooftop sensor needs more caution than a desk device.
+  - what: Risk
+    how: Say how bad a failed update is for your customers, so the stop rules are strict enough.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Firmware update (OTA)
+    meaning: A new version of a device's software sent over the air.
+  - term: Canary stage
+    meaning: A first small group of real devices that gets an update before everyone else.
+  - term: Rollback
+    meaning: Going back to the last working version after a failed update.
+  - term: Signed update
+    meaning: An update file with a proof it came from you. Devices refuse files without it.
+  - term: Brick
+    meaning: A device that no longer starts and needs a physical fix.
+  - term: Telemetry
+    meaning: Health and usage data that devices send back to you.
+  - term: Hardware revision
+    meaning: A version of the device's circuit board. Each can react differently to an update.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: It plans from facts you paste, so no access to your fleet is needed.
+  inputs:
+    - A table of your fleet by hardware and firmware version.
+    - The last update's results, including any device that failed.

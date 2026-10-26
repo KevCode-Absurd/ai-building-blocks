@@ -1,41 +1,53 @@
 new_slug: theme-script-and-style-loader
 name: "Theme script and style loader"
-summary: "Give it your theme.liquid, apps and fonts. Get scripts delayed or deferred, styles unblocked and fonts set safely."
+summary: "Speed up your Shopify theme. Get exact code to delay scripts, unblock styles and fix fonts, with a test for every change."
 job: speed-up-store
 thinking: high
 thinking_why: "It edits theme code where one wrong change can break the cart or tracking. A stronger model is more careful with the edge cases."
 
 headline: "Theme script and style loader"
-subhead: "Give it your theme.liquid, your app list and your fonts. It decides which scripts can wait, then writes the edited tags, the delay code, the stylesheet and font rules, and a test list for each change. Run it only on a duplicate of your theme."
+subhead: "Give it your theme.liquid, your app list and your fonts. It decides which scripts can wait. It writes the edited tags, the delay code, the style and font rules, and a test for each change. Use it only on a copy of your theme."
 
 explain: |
-  Scripts and styles that load before the page is drawn make shoppers stare at a blank screen. Apps are a common cause: chat, reviews, loyalty and cookie tools all load their code on every page, even though few people see them in the first screen.
+  Scripts and styles that load before the page is drawn make shoppers stare at a blank screen. Apps are a common cause. Chat, reviews, loyalty and cookie tools all load their code on every page, even though few people see them in the first screen.
 
-  This skill sorts your scripts into three groups: must load early (tracking tags and anything in the first screen), can wait (chat, lower-page widgets, loyalty), and can load later with a defer or async tag. It writes the code to hold chosen scripts until the first scroll, tap or key press, unblocks non-critical stylesheets, moves libraries onto your own store files, and sets font rules so text shows at once. Every change comes with a test, and nothing is applied to your live theme. Gains in demos were large, but those stores had many heavy apps, so a lean store gains less.
+  This theme script and style loader sorts your scripts into three groups. Some must load early, such as tracking tags and anything in the first screen. Some can wait, such as chat and lower-page widgets. The rest can load later with a defer or async tag. It writes the code that holds chosen scripts until the first scroll, tap or key press. It unblocks styles that are not needed at first, moves libraries onto your own store files, and sets font rules so text shows at once.
+
+  Every change comes as a find and replace block with its own test and a way to undo it. Nothing touches your live theme. Gains in demos were large, but those stores had many heavy apps, so a lean store gains less.
 
 when:
   - "Blocking time is your biggest problem on mobile."
-  - "PageSpeed lists render-blocking scripts or styles, or a custom font makes text invisible or jump."
-  - "You need to keep apps that aren't needed in the first screen."
+  - "PageSpeed lists render-blocking scripts or styles."
+  - "A custom font makes your text invisible for a moment, or makes it jump."
+  - "You decided to keep some apps and want them out of the way of the first screen."
+
+not_for:
+  - "You still need to decide which apps to keep: run the app script auditor first."
+  - "A slow hero image is the problem: use the hero image loading fixer."
+  - "The page jumps as it loads: use the layout shift fixer."
+  - "You don't use Shopify, or nobody on your team can edit theme code: ask a developer, or use the app script auditor to remove apps instead."
 
 you_give:
-  - "Your theme.liquid and the theme editor's app embeds list"
+  - "Your theme.liquid file and the theme editor's app embeds list"
   - "The PageSpeed blocking time, unused JavaScript and render-blocking sections"
-  - "Which apps are visible in the first screen, and which are tracking tags"
+  - "Which apps show in the first screen, and which are tracking tags"
   - "Your list of custom fonts (optional)"
 
 you_get:
-  - "Theme code that holds chosen scripts back until the first visit action"
-  - "Edited tags for each script and stylesheet, with the reason"
+  - "Code that holds chosen scripts back until the first scroll, tap or key press"
+  - "An edited tag for each script and stylesheet, with the reason"
   - "Font rules with swap and a close fallback"
-  - "A list of what was delayed, what was left alone and why, plus a test list for every change"
+  - "Reserved space for widgets that load late"
+  - "A list of what was delayed, what was left alone and why"
+  - "A test for every change, and how to undo it"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Open the skill in your AI. Claude, ChatGPT and Gemini all work. Add it to your AI, or copy it and paste it into a new chat."
   - "Duplicate your theme first: Online Store, Themes, the three dots, Duplicate. Edit only the copy."
-  - "Paste theme.liquid and the PageSpeed sections, and mark which apps appear in the first screen."
-  - "Make one change at a time on the copy. After each, refresh with the console open, move the mouse, and test the cart, variant picker, search, reviews and checkout."
-  - "Run PageSpeed three times and average, then publish the copy only when everything works."
+  - "Paste theme.liquid and the PageSpeed sections, and mark which apps show in the first screen."
+  - "Make one change at a time on the copy. After each, refresh with the browser console open, then test the cart, variant picker, search, reviews and checkout."
+  - "If any test fails, undo that change before you go on. Run PageSpeed three times and average, then publish the copy only when everything works."
+  - "If you don't write code, hand the find and replace blocks to a developer."
 
 how_it_works:
   - title: Sorts the scripts
@@ -53,7 +65,7 @@ how_it_works:
   - title: Sets font rules
     text: Adds font-display swap, keeps fonts to three variants or fewer, and matches the fallback font's size.
   - title: Writes the tests
-    text: A test list for every app and every change, plus space reserved for delayed widgets that show on screen.
+    text: A test for every change, a way to undo each one, and space reserved for delayed widgets that show on screen.
 
 output_shape: |
   LOAD PLAN  <store>, theme <name> (duplicate)
@@ -63,14 +75,11 @@ output_shape: |
   <script> | <app or tag> | <early | deferred | async | on first interaction> | <reason>
 
   LEFT ALONE
-  <tracking tags, first-screen items, anything that broke>
+  <tracking tags, first-screen items, consent tools, anything that broke>
 
-  CODE CHANGES (one block per change)
+  CODE CHANGES (one block per change, including app embeds, styles and fonts)
   File: <file> | Find: <the original line> | Replace with: <new code>
-  Why: <reason> | Test: <what to check>
-
-  STYLES AND FONTS
-  <stylesheet and font-face edits, fallback match>
+  Why: <reason> | Test: <what to check> | Undo: <how to put it back>
 
   SPACE TO RESERVE
   <delayed widget> | height <px> | width <px>
@@ -80,6 +89,24 @@ output_shape: |
 
   CHECKS MISSED: <none or list>
   MISSING: <what>
+
+output_sample:
+  input:
+    - "Your theme.liquid file"
+    - "The theme editor's App embeds list"
+    - "The blocking time and render-blocking sections of your PageSpeed report"
+    - "Which apps show in the first screen, and which are tracking tags"
+    - "Your custom fonts (optional)"
+  prerequisites:
+    - "A duplicate of your live theme to edit and test"
+    - "Someone who can paste code into the theme, or a developer"
+  output:
+    - {name: "Load plan", contains: "Each script marked early, deferred, async or loaded on first interaction, with the reason."}
+    - {name: "Left alone", contains: "Tracking tags, first-screen items and consent tools that stay as they are."}
+    - {name: "Code changes", contains: "One find and replace block per change, each with its own test and undo step."}
+    - {name: "Space to reserve", contains: "A height and width for each delayed widget that shows on screen."}
+    - {name: "Test list", contains: "What to check after every change, from cart to checkout."}
+    - {name: "Checks missed", contains: "Any check it could not run, or none, plus what is missing."}
 
 tweaks:
   - what: First-screen apps
@@ -131,3 +158,5 @@ terms:
     meaning: A script or style the browser must finish before it can draw the page.
   - term: Critical CSS
     meaning: The small set of styles the first screen needs, placed straight in the page so it draws at once.
+  - term: Duplicate theme
+    meaning: A copy of your live theme that you edit and test before you publish it.

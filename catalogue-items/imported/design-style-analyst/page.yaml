@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It reads many visual cues and fits them to a fixed profile.
 new_slug: design-style-analyst
 name: Design style analyst
-summary: Share screenshots or links of designs you like. Get their colors, type,
-  feel and effects as a profile you can reuse.
+summary: Share screenshots or links of designs you like. Get a design style profile with colors, type, feel and effects that you can reuse on new pages.
 job: design-work
 headline: Design style analyst
-subhead: A reusable profile of a look you like. Share screenshots or links to
-  designs you admire and you get a structured file with the colours, type,
-  spacing, overall feel and any special effects, which you can then use to guide
-  new designs.
+subhead: A reusable profile of a look you like. Share screenshots or links to designs you admire and you get a structured file with the colours, type, spacing, overall feel and any special effects, which you can then use to guide new designs.
 explain: |
   A reusable profile of a look you like. Share screenshots or links to designs you admire and you get a structured file with the colours, type, spacing, overall feel and any special effects, which you can then use to guide new designs.
 
@@ -19,6 +15,10 @@ when:
   - You need to brief a designer using real examples.
   - You want new pages to match a style from several references.
   - You have a saved style file and want a page made from it.
+not_for:
+  - "You want to copy a competitor's exact layout or assets: hire a designer, or make your own version from the profile."
+  - "You already have a brand guide: use the brand guide, because it holds your own rules."
+  - "You only want a quick opinion on a design: ask your AI to describe it in chat, with no profile."
 you_give:
   - Screenshots or links of reference designs
   - Your content for the new page (optional)
@@ -30,7 +30,30 @@ you_get:
   - Structured style file
   - Design made from the profile (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool and paste the skill text from this page. Use an AI that can run code if you want exact colors.
+  - Add your screenshots or links. Say you want a style profile.
+  - Read the profile. Fix any value that looks wrong, then ask for changes.
+  - To make a page, paste your content and the profile, and ask for a design.
+  - Check that any images the AI fetched are licensed for your use before you reuse them.
+output_sample:
+  input:
+    - Screenshots or links of designs you like
+    - Your content for a new page (optional)
+    - A style profile you saved before (optional)
+  prerequisites:
+    - Node.js on your computer, only if you want exact color measurement from screenshot files
+    - An AI that can run code and read files, for the color measurement step
+    - Rights to reuse any images or assets the AI fetches from a link
+  output:
+    - name: design_system
+      contains: Measured values for color, type, spacing, layout, shape, shadows, motion and components.
+    - name: design_style
+      contains: The mood, visual language, composition, imagery, interaction feel and brand voice of the look.
+    - name: visual_effects
+      contains: Notes on canvas, 3D, particles, shaders and scroll effects, with each effect marked on or off.
+    - name: Design DNA JSON
+      contains: One structured file with all three parts filled in, ready to reuse.
+    - name: Generated design
+      contains: A self-contained web page built from your profile and your content, if you ask for one.
+    - name: Color check report
+      contains: A pass or fail score of the new design's colors against the measured colors.

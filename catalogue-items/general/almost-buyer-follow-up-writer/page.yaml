@@ -1,6 +1,6 @@
 new_slug: almost-buyer-follow-up-writer
 name: "Almost-buyer follow-up writer"
-summary: "Paste your offer and where leads stopped. Get a follow-up email series with a new reason each time."
+summary: "Turn people who nearly bought into sales. Give it your offer and where leads stopped, and get a follow-up email series with a new reason each time."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It matches a reason to each stage of drop-off, which takes some judgement, but the structure is fixed."
@@ -17,6 +17,10 @@ when:
   - People start to buy, read or sign up and then go quiet.
   - You send one reminder and stop, or send the same reminder repeatedly.
   - You cannot tell which follow-up message led to a sale.
+not_for:
+  - "You want to reach people who never engaged with your offer: write a first-contact email sequence by hand, or ask a person who knows your market."
+  - "You want to check an email flow you already send: use the Email sequence auditor."
+  - "You want to check consent before you email a list: use the Permission email audit."
 
 you_give:
   - Your offer, with its price, terms and any real deadline
@@ -35,6 +39,27 @@ how_to_use:
   - Add any doubts you have heard, word for word, and any real deadline.
   - Load the emails into your email tool and set the schedule it gives you.
   - Use the link or code plan so each sale is tied to a message.
+output_sample:
+  input:
+    - Your offer, with its price, terms and any real deadline
+    - What people did before they stopped, and how far they got
+    - Who they are, in a few lines (optional)
+    - Reviews, replies or questions that show their doubts (optional)
+  output:
+    - name: Groups
+      contains: People who did not buy, sorted by how far they got, with the number in each group.
+    - name: The offer in one line
+      contains: Your offer in a single line and the real reason to act now, or a note that none is on file.
+    - name: Messages
+      contains: Each email with its send day, group, new reason, subject, body, one next step and tracking link or code.
+    - name: Schedule and stop
+      contains: Days between sends and the point where a person gets no more messages.
+    - name: If they stay silent
+      contains: What happens to people who answer nothing, so you do not send forever.
+    - name: Missing
+      contains: Facts a message needs that you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each self-check that still fails, or none.
 
 how_it_works:
   - title: Sorts the drop-offs

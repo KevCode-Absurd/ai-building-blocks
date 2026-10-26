@@ -1,6 +1,6 @@
 new_slug: talk-tension-planner
 name: "Talk tension planner"
-summary: "Paste your talk or pitch outline. Get it reordered so the room knows the stakes early, with one saved twist."
+summary: "Reorder your talk or pitch outline so the room knows the stakes in the first minute. Get a true clock, picture swaps and one real twist."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It reorders an outline by what the audience cares about and judges each slide, but the rules are few."
@@ -17,6 +17,10 @@ when:
   - You have a pitch or talk where your strongest point arrives in the last third.
   - Your slides explain a lot and the room looks bored by slide five.
   - You want people to follow a talk with no briefing before it.
+not_for:
+  - "You only need to show data with no decision to make: send a plain summary or a simple chart instead."
+  - "You want a final check on slide count and text size: use the Pitch deck 10/20/30 checker."
+  - "You have no outline yet: write a rough list of your points first, then come back."
 
 you_give:
   - Your talk or pitch outline, slide by slide or in bullets
@@ -34,6 +38,28 @@ how_to_use:
   - Say what you want them to do or decide.
   - Read the first-minute line out loud and change any word you would not say.
   - Rehearse the new order once and time it.
+output_sample:
+  input:
+    - Your talk or pitch outline, slide by slide or in bullets
+    - Who is in the room and what they care about
+    - The one thing you want them to do after (optional)
+  output:
+    - name: The news
+      contains: One plain sentence on the fact or choice the room will care about most.
+    - name: First-minute opening
+      contains: Three or four sentences that state the news and the stakes before any background.
+    - name: Clock
+      contains: A true date, number or deadline from your material, with its source, or a MISSING line.
+    - name: New order
+      contains: Each beat in its new place, with a reason and the time it takes.
+    - name: Slides to swap and cut
+      contains: Explaining slides, each with one picture idea or a note to cut it.
+    - name: The twist
+      contains: A real turn to save for the end, or none with advice on how to end.
+    - name: MISSING lines
+      contains: Facts that would sharpen the plan, such as a deadline you did not give.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Finds the news

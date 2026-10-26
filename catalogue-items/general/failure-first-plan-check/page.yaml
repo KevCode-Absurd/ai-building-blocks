@@ -1,6 +1,6 @@
 new_slug: failure-first-plan-check
 name: "Failure-first plan check"
-summary: "Paste a plan. Get a list of the ways it could fail, and the changes that avoid them."
+summary: "Find the ways your plan could fail before you commit. Paste your plan and goal, and get ranked failure risks with a fix for each."
 job: plan-strategy
 thinking: high
 thinking_why: "It must find failure modes specific to this plan and judge which threaten survival, which takes careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You have a plan written and want to find holes before you commit money or time.
   - A team is excited about a plan and nobody is arguing against it.
   - You are choosing between two paths and want to see what the other one would look like.
+not_for:
+  - "Your plan is already running and no choices are left: review what happened after it ends, or ask a trusted colleague for a quick look."
+  - "You have a small personal habit with no money or time at stake: a short list of what could go wrong on paper is enough."
+  - "You only want to test one big risk that could wipe you out: use a ruin risk check, or ask an adviser to review your cash and debt."
 
 you_give:
   - The plan, in as much detail as you have
@@ -34,6 +38,29 @@ how_to_use:
   - Read the survival risks first and fix those before anything else.
   - Pick one or two people to argue against the plan, and give them the attack list.
   - Update the plan with the changes, then paste it back to re-check.
+output_sample:
+  input:
+    - Your plan, in as much detail as you have
+    - The goal it serves, and the deadline
+    - What the plan depends on, such as cash, debt, one customer or one tool (optional)
+    - Your field of work (optional)
+  output:
+    - name: GOAL
+      contains: The goal stated in one line, as a result with a date.
+    - name: WHAT WOULD GUARANTEE FAILURE
+      contains: A list of things that, if true, would make the goal impossible.
+    - name: SURVIVAL RISKS
+      contains: Risks that could end the project, each with where it shows in the plan and a change.
+    - name: OTHER WAYS IT FAILS
+      contains: Common failures in your field, marked exposed, partly or covered, each with a change.
+    - name: THE BET
+      contains: What the plan is wagering on, and who is pushing for it.
+    - name: ATTACKS TO RUN
+      contains: Attacks on market, timing, team and the other path, plus who should make them.
+    - name: MISSING
+      contains: Facts the plan did not give, so you know what to find out.
+    - name: CHECKS MISSED
+      contains: One line for each quality check the result still fails, or none.
 
 how_it_works:
   - title: States the goal

@@ -1,6 +1,6 @@
 new_slug: feed-only-performance-max-builder
 name: "Feed-only Performance Max builder"
-summary: "Give it your Shopping setup. Get feed-only Performance Max settings that retarget shoppers without wasted spend."
+summary: "Build a feed-only Performance Max campaign that runs on your product feed. Get setup steps, priority settings, brand exclusion and kill rules."
 job: run-google-ads
 thinking: medium
 thinking_why: "It follows a fixed setup but must pick one role among conflicting views, so a mid-size model works if you check the role it picks."
@@ -17,6 +17,10 @@ when:
   - You run Shopping, have steady sales, and want a retargeting layer without paying for display and video.
   - Your Performance Max spends on YouTube or Display and you want to pull it back to Shopping.
   - You want to test a lean Performance Max with no creative work.
+not_for:
+  - "Your store has fewer than 15 live products or about 30 sales a month: stay on Shopping and wait until sales build up."
+  - "You have no Shopping campaign yet: build one first in Google Ads, then come back to this."
+  - "You want ads with your own text, images or video: set up a standard Performance Max campaign with assets instead."
 
 you_give:
   - Your existing Shopping campaigns and their priority
@@ -35,6 +39,33 @@ how_to_use:
   - Give your brand negative list and say whether Merchant Center is linked.
   - Follow the settings in order, and check the form against your live account since Google changes its screens.
   - Read the campaign at 2 weeks and 4 weeks with the kill rules it gives.
+output_sample:
+  input:
+    - Your Shopping campaigns, with their names and priority
+    - Your conversions and ROAS for the last 30 days
+    - Your brand negative keyword list
+    - Whether Merchant Center is linked
+    - Your live product count and feed health (optional)
+  prerequisites:
+    - A Google Ads account with Shopping sales coming in
+    - A Merchant Center feed linked to Google Ads
+  output:
+    - name: READINESS
+      contains: Whether you are ready, with your monthly sales, live product count and feed health.
+    - name: ROLE
+      contains: The one role chosen for this campaign, remarketing layer or main engine, and the reason.
+    - name: SETUP
+      contains: "Six steps in order: campaign, bidding, automatic assets off, blank asset group, blank audience signals and brand exclusion."
+    - name: PRIORITY
+      contains: How Shopping and the feed-only campaign split the traffic.
+    - name: REVIEW
+      contains: What to read at 2 weeks and 4 weeks, and what to expect.
+    - name: KILL RULES
+      contains: The signs that mean you should pause the campaign.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none.
+    - name: MISSING
+      contains: Any input you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: Checks readiness

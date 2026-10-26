@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set method but makes many small design choices.
 new_slug: generative-art-maker
 name: Generative art maker
-summary: Describe the look you want. Get an interactive generative art piece you
-  can tweak and repeat.
+summary: Describe a mood and get generative art you can open in a browser, tweak with sliders and repeat with a seed. Made with p5.js code.
 job: make-images
 headline: Generative art maker
-subhead: A piece of generative art you can open in a browser, change and
-  reproduce. Describe the mood or look you want, and the skill first writes a
-  short manifesto for an art movement that fits it.
+subhead: A piece of generative art you can open in a browser, change and reproduce. Describe the mood or look you want, and the skill first writes a short manifesto for an art movement that fits it.
 explain: |
   A piece of generative art you can open in a browser, change and reproduce. Describe the mood or look you want, and the skill first writes a short manifesto for an art movement that fits it. Then it turns that idea into code.
 
@@ -18,6 +15,10 @@ when:
   - You like a certain mood and want art that expresses it with code.
   - You want a piece you can tweak with sliders and seeds.
   - You need unique art that changes each time it loads.
+not_for:
+  - "You need a data chart or graph: use a spreadsheet or a chart tool, since this makes abstract art, not accurate figures."
+  - "You need an exact brand logo or a copy of a named artist's style: use a design tool or a designer."
+  - "You want a photo or a painted scene from a text prompt: use an AI image tool, since this skill writes code, not photos."
 you_give:
   - A description of the mood or look
   - Colours or themes to use (optional)
@@ -29,8 +30,27 @@ you_get:
   - A p5.js sketch file
   - Seeds to repeat any result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. Better still, upload the skill folder if your AI accepts files.
+  - Describe the mood or look you want. Add colours, a seed or a size if you care about them.
+  - Your AI first writes a short art philosophy, then the viewer and the sketch code.
+  - Open the HTML file in your browser. If your AI shows previews, you can view it there. Use the sliders and try new seeds.
+  - Note the seed you like. The same seed gives the same piece again.
+  - Save the image from the viewer to use in a site header or a print.
+output_sample:
+  input:
+    - A description of the mood or look you want
+    - Colours or themes to use (optional)
+    - A seed or number of variations (optional)
+    - Output size (optional)
+  prerequisites:
+    - An AI that can write files, or one that shows HTML in a preview
+    - A web browser to open the viewer
+  output:
+    - name: Algorithmic philosophy
+      contains: A short manifesto for an art movement that fits your mood, with a one or two word name.
+    - name: Interactive HTML viewer
+      contains: One page with the art, a seed control, parameter sliders and buttons, built from the template.
+    - name: p5.js sketch (.js file)
+      contains: The code that draws the piece using noise, particles, flows and forces, with seeded randomness.
+    - name: Seed and parameters
+      contains: The seed and a few sliders, so the same seed gives the same piece and you can step through variations.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes short frames and grades them by difficulty.
 new_slug: ell-sentence-frames
 name: Sentence frame writer for language learners
-summary: Give it a classroom task. Get sentence starters at several English
-  levels so every student can join in.
+summary: Write sentence frames for English learners at several levels. Give it a classroom task and get starters every student can use to speak or write.
 job: teach-and-train
 headline: Sentence frame writer for language learners
-subhead: Sentence starters matched to the thinking a task asks for, at several
-  English levels, so every student can take part. Name the task, such as
-  comparing two poems or explaining a process, and you get frames to hand out.
+subhead: Sentence starters matched to the thinking a task asks for, at several English levels, so every student can take part. Name the task, such as comparing two poems or explaining a process, and you get frames to hand out.
 explain: |
   Sentence starters matched to the thinking a task asks for, at several English levels, so every student can take part. Name the task, such as comparing two poems or explaining a process, and you get frames to hand out.
 
@@ -18,6 +15,10 @@ when:
   - You need starters for a science explanation.
   - You teach a class with mixed English levels.
   - You want oral frames as well as writing frames.
+not_for:
+  - Your whole class already shares a high level of English, so teach the task as normal and skip the frames.
+  - You need a list of subject words to teach, so ask your AI for a vocabulary list instead.
+  - You need a full lesson plan, so plan the lesson first and use this only for the language support.
 you_give:
   - The task type
   - Subject
@@ -29,7 +30,27 @@ you_get:
   - Frames for writing and speaking
   - Notes on how to use them
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Tell your AI the task type, such as comparing two poems or explaining a process.
+  - Add your subject and year group.
+  - Add your students' English level and your topic if you know them (optional).
+  - Say if students will write, speak or both.
+  - Read the frames and check they fit your topic before you hand them out.
+output_sample:
+  input:
+    - Your task type, such as comparing, explaining or evaluating
+    - Your subject
+    - Your year group
+    - Your students' English level (optional)
+    - Your topic and whether students will write, speak or both (optional)
+  output:
+    - name: Sentence Frames
+      contains: Sentence starters for your task, graded from heavily supported to nearly independent, and fitted to your topic.
+    - name: Frames by Proficiency Level
+      contains: Frames grouped by English level so each student gets a starter that fits.
+    - name: Discourse Markers
+      contains: Linking and transition words that suit this kind of task.
+    - name: Usage Guide
+      contains: How to introduce the frames to students and use them in class.
+    - name: "Progression: From Frames to Independence"
+      contains: Steps for taking the support away over time until students work without frames.

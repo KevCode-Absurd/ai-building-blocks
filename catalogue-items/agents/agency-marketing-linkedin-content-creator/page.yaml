@@ -1,0 +1,142 @@
+name: LinkedIn Content Creator agent
+summary: Get a LinkedIn voice profile, three content pillars, a 30-day calendar and post drafts with three hook options each. Bring your goal and stories.
+headline: LinkedIn Content Creator agent
+subhead: Tell it your goal on LinkedIn, who you want to reach and a few real stories or lessons from your work. It sets your voice and three to five topics, then plans a 30-day calendar. You get post drafts, each with three first lines to choose from.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Most LinkedIn posts fail in the first line. The reader sees two lines, then scrolls on. Posts also sound alike, because they are written to be safe. This LinkedIn content creator agent starts with a point of view and a real reader, then writes the first line before the rest.
+
+  It begins with your goal, such as a job, leads or authority, and one specific reader. It sets three to five content pillars, which are the topics you will keep coming back to. It writes a short voice profile with lines that sound like you and lines that don't. Then it plans a 30-day calendar and drafts posts in four shapes: story, expertise, opinion and data. Each draft has three first-line options. It can also script a carousel and rewrite your headline and About section.
+
+  It only uses stories and numbers you give it. A made-up story on LinkedIn damages your name, so it leaves a gap for you to fill. The profile's views on the LinkedIn feed, such as hiding links or posting times, are the author's rules of thumb, not checked facts. Test them on your own posts. Its targets are goals, not results from AI Blocks.
+when:
+  - You want recruiters, clients or partners to find you through your posts.
+  - You have expertise but your posts get no comments.
+  - You are changing careers and want your posts to back up the move.
+  - A founder or manager needs a month of posts in a steady voice.
+not_for:
+  - You have one story and want one post. Use the LinkedIn post writer.
+  - You only want pillars and a posting rhythm. Use the LinkedIn content strategy planner.
+  - You only want your profile rewritten. Use the LinkedIn profile rewriter.
+  - You want to buy LinkedIn ads. Use the LinkedIn ads account auditor.
+  - You post for a company page and a team, not one person. Use the Social Media Strategist agent.
+you_give:
+  - Your goal on LinkedIn, such as a new job, clients or authority
+  - Who you want to reach, as a job title and the problem they have
+  - Your work, your field and what you know that others get wrong
+  - Two or three real stories, lessons or numbers from your work
+  - Posts you have written before, so it can match your voice (optional)
+  - Your current headline and About section (optional)
+you_get:
+  - A voice profile with lines that sound like you and lines that don't
+  - Three to five content pillars, each tied to your goal and your reader
+  - A 30-day calendar that mixes story, expertise, opinion and data posts
+  - Post drafts, each with three first-line options and a closing question
+  - A carousel script, if you ask for one
+  - A new headline and About section, if you ask for them
+  - A comment routine and the numbers to review after a month
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your goal, your reader, your field and two or three real stories or lessons. Paste past posts if you have them.
+  - "Say: \"Build my LinkedIn voice profile and pillars, then plan 30 days and draft the first five posts. Leave a gap where you need a real story or number.\""
+  - Pick one first line for each draft. Read it aloud. If you wouldn't say it, change it.
+  - Fill every gap with a real detail, and remove any claim you can't back up. Post each draft yourself.
+  - After a month, paste your post numbers and the comments you got. Ask what to keep and what to drop.
+how_it_works:
+  - title: Confirm goal and reader
+    text: It confirms your goal, one specific reader and the stories you can use. Missing items are asked for once, then marked MISSING.
+  - title: Set voice and pillars
+    text: It writes three to five pillars and a voice profile with lines that sound like you and lines that don't.
+  - title: Plan 30 days
+    text: It spreads story, expertise, opinion and data posts over a month, tied to the pillars.
+  - title: Write the first lines
+    text: Each post gets three first-line options, such as a curiosity gap, a bold claim and a specific moment.
+  - title: Draft the posts
+    text: It builds each post in its shape, keeps paragraphs short and ends with a question that invites a reply.
+  - title: Plan comments and review
+    text: It plans comments on other people's posts and the numbers to read after a month.
+output_shape: |-
+  ASSUMPTIONS AND MISSING
+    ASSUMED: <list> | MISSING: <list, such as a story or number only you can give>
+
+  READER AND PILLARS
+    goal <one line> | reader <title and problem> | pillars <3 to 5, each with why it fits>
+
+  VOICE PROFILE
+    tone <3 words> | sounds like you <3 lines> | does not sound like you <3 lines>
+
+  30-DAY CALENDAR
+    <week> | <day> | <post type: story, expertise, opinion, data, carousel> | <pillar> | <topic>
+
+  POST DRAFTS
+    <post type> | first line 1 <curiosity> | first line 2 <bold claim> | first line 3 <specific moment> | body <draft> | closing question <text> | GAP: <real detail you must add>
+
+  CAROUSEL SCRIPT (if asked)
+    slide 1 <first line> | slides 2 to 7 <one idea each> | last slide <call to action>
+
+  PROFILE REWRITE (if asked)
+    headline <draft> | About <draft>
+
+  COMMENT ROUTINE AND REVIEW
+    <who to comment on, how often> | <metric> | <starting number or MISSING>
+output_sample:
+  input:
+    - Your goal on LinkedIn and the reader you want to reach
+    - Your field and two or three real stories or lessons
+    - Posts you wrote before (optional)
+    - Your current headline and About section (optional)
+  prerequisites:
+    - A LinkedIn profile you can post from
+  output:
+    - name: Reader and pillars
+      contains: Your goal, one specific reader and three to five topics you will return to.
+    - name: Voice profile
+      contains: Three tone words, plus lines that sound like you and lines that don't.
+    - name: 30-day calendar
+      contains: A post type, pillar and topic for each posting day across four weeks.
+    - name: Post drafts
+      contains: Each post with three first-line options, a body, a closing question and any gap you must fill.
+    - name: Carousel script
+      contains: A slide-by-slide script with one idea per slide and a call to action.
+    - name: Profile rewrite
+      contains: A new headline and About section built on your reader and your proof.
+    - name: Comment routine and review
+      contains: Who to comment on and the numbers to read after a month.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Length
+    how: Ask for 14 days and three drafts if you can only post twice a week.
+  - what: Goal
+    how: Name one goal, such as job offers or client leads, so every post pulls the same way.
+  - what: Extras
+    how: Ask for the carousel script or the profile rewrite only when you need them, so the result stays short.
+improve:
+  - Keep the first lines that got comments and add them to your voice profile.
+  - Save your best stories in a note, so each new month starts with real material.
+terms:
+  - term: Content pillar
+    meaning: A topic you post about again and again, so people link you with it.
+  - term: First line
+    meaning: The opening line a reader sees before the See more button. It decides if they read on.
+  - term: Carousel
+    meaning: A post made from a document with slides that a reader swipes through.
+  - term: Voice profile
+    meaning: A short guide that shows how you write, with examples of lines that sound like you and lines that don't.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three can match your voice if you paste real posts, and they can turn a rough story into a draft.
+    - name: LinkedIn analytics
+      why: You read your own post numbers there. Your AI can't see them.
+  inputs:
+    - Five of your own posts or emails, so it can pick up your voice.
+    - Two stories from your work, with the real numbers.
+    - Three people you want to reach, by job title.

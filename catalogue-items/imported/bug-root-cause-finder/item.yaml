@@ -12,6 +12,10 @@ inputs:
     required: true
   - type: brief
     required: true
+  - type: test_report
+    required: false
+  - type: code_change
+    required: false
 outputs:
   - type: code_change
 uses: []

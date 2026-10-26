@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Costs are estimates built from several sources.
 new_slug: return-cost-calculator
 name: Return cost calculator
-summary: "Get the true cost of returns by reason and product: refunds, shipping
-  lost and written-off stock."
+summary: "Find the true cost of returns by reason and product, with refunds, lost shipping and written-off stock, from your Shopify store data."
 job: run-your-store
 headline: Return cost calculator
-subhead: "The real cost of your returns, not only the refund amount. You see
-  what each return reason and each product costs you in refunds, lost shipping
-  income, written-off stock and handling time."
+subhead: "The real cost of your returns, not only the refund amount. You see what each return reason and each product costs you in refunds, lost shipping income, written-off stock and handling time."
 explain: |
   The real cost of your returns, not only the refund amount. You see what each return reason and each product costs you in refunds, lost shipping income, written-off stock and handling time.
 
@@ -18,6 +15,10 @@ when:
   - You want to know if a size guide or better packaging would pay off.
   - Refunds look small but your margin keeps shrinking.
   - You need figures to argue for a listing or supplier fix.
+not_for:
+  - Your store is not on Shopify. Use a spreadsheet of your refunds and add stock and shipping costs by hand.
+  - You have very few returns. Groups with fewer than 3 returns are left out, so a quick look at each return works better.
+  - You need exact figures for your accounts. Handling cost is a flat guess, so ask your accountant for final numbers.
 you_give:
   - Your Shopify store address
   - How many days back to look
@@ -30,8 +31,29 @@ you_get:
   - Refund, shipping and stock loss totals
   - A ranked list of what to fix first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot read your store.
+  - "Log in to your store with read access to orders, returns and inventory. The command is: shopify store auth --store your-store.myshopify.com --scopes read_orders,read_returns,read_inventory"
+  - Add this skill to your AI tool, then ask it to run the return cost calculator.
+  - Give it your store address, how many days to look back, and how to group the results.
+  - Set your handling cost per return if $5 is wrong for you. Check that your products have unit costs in Shopify.
+  - Open the CSV and start with the top rows. Treat the figures as estimates.
+output_sample:
+  input:
+    - Your Shopify store address
+    - How many days back to look (optional, 90 by default)
+    - "How to group results: by reason, product, SKU or reason and product"
+    - Return reasons that count as written off (optional)
+    - Your average handling cost per return (optional)
+  prerequisites:
+    - An AI tool that can run commands and connect to Shopify, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify login with read access to orders, returns and inventory
+    - Unit costs saved on your products in Shopify
+  output:
+    - name: Run summary
+      contains: Number of returns checked, total return cost, and the share from refunds, shipping, written-off stock and handling.
+    - name: Top cost drivers
+      contains: The groups that cost most, with return count, total cost, average cost and the most common reason.
+    - name: return_cost_<date>.csv
+      contains: One row per group with refunds, lost shipping, written-off stock, handling, total cost and average cost per return.
+    - name: JSON summary (optional)
+      contains: The same totals and groups in a format other tools can read, if you ask for JSON.

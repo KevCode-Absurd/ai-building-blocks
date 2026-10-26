@@ -1,6 +1,6 @@
 new_slug: roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time
 name: "Roll out your welcome, cart and browse emails"
-summary: Give it your email setup and offer. Get a setup score, three flows and what is still missing.
+summary: Set up your welcome, cart and browse email flows in order. Get a sending setup score, three flow plans and a ranked list of missing flows.
 job: write-emails
 thinking: high
 thinking_why: It runs five skills in a row, and the later flows must match the offer and voice of the first. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are setting up email for a new store and want the three flows that earn the most live first.
   - Your flows are thin, or your cart flow is one email, and you want to fix the basics before adding extras.
   - You see spam placement or odd revenue numbers in your email tool and need to know where the setup is wrong.
+not_for:
+  - "You have no sending domain yet: set up your domain and DNS records with your email tool or a developer first, then come back."
+  - "You only want one flow: use the Cart and checkout email planner or the Browse abandonment email flow builder on its own."
+  - "You want a single email for a launch or sale: use the Campaign email writer."
 you_give:
   - Your sending domain, its DNS records and your DMARC record
   - Your email tool settings, such as smart sending, attribution and tracking (screenshots or notes)
@@ -33,6 +37,30 @@ how_to_use:
   - Paste your email settings and DNS records. Never paste a password or an API key.
   - Fix the red items from the setup check, then build the welcome flow in your email tool and switch it on.
   - Come back for the cart flow and build it the same way. Then do the browse flow, and let it check the full set.
+output_sample:
+  input:
+    - Your sending domain, DNS records and DMARC record
+    - Your email tool settings, such as smart sending and tracking
+    - Your brand file and your welcome offer
+    - Your best sellers, reviews, shipping and returns facts
+    - Revenue per flow for the last 90 days (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with a Project
+    - A brand brain from the Website brand brain builder (optional)
+    - Your offer from the Hidden offer finder (optional)
+  output:
+    - name: Setup check
+      contains: A score for your sending setup, each failed check with its fix, and the DMARC record to add.
+    - name: Welcome flow
+      contains: The trigger, filters, timing and an outline of each email, with an offer and margin check.
+    - name: Cart recovery
+      contains: Two flows, one for added to cart and one for checkout started, with email outlines and a code rule.
+    - name: Browse flow
+      contains: A site abandon email, a viewed-product sequence and the rule that stops it clashing with cart emails.
+    - name: Flow gap check
+      contains: A score for your flows, the missing flows ranked, trigger errors and a build order.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the sending setup
     text: Scores your sending domain, DMARC, smart sending, attribution, tracking and opt-in settings. It lists each fix before any flow goes out.

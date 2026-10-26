@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It reads many files and must cite every cell.
 new_slug: contract-review-grid
 name: Contract batch review grid builder
-summary: Give it contracts and points to find. Get one cited spreadsheet row per
-  contract. Verify before relying on it.
+summary: "Build a contract review grid: one spreadsheet row per contract, one column per point, each answer cited to the contract text. Check it before you rely on it."
 job: check-contracts
 headline: Contract batch review grid builder
-subhead: A spreadsheet with one row per contract and one column per point you
-  want to find, each answer backed by a citation to the contract text.
+subhead: A spreadsheet with one row per contract and one column per point you want to find, each answer backed by a citation to the contract text.
 explain: |
   A spreadsheet with one row per contract and one column per point you want to find, each answer backed by a citation to the contract text. It turns a stack of agreements into something you can sort and filter.
 
@@ -17,6 +15,10 @@ when:
   - A buyer asks for a list of change of control clauses across your deals.
   - You are cleaning up a contract archive before an audit.
   - You want to compare how different customers negotiated the same term.
+not_for:
+  - "You only need issues spotted in a few contracts: read them yourself or ask your AI to review them one by one."
+  - "No person will check the cells afterward: do not rely on this grid, because every cell is a lead, not a finding."
+  - "You need legal advice on what a clause means: ask a lawyer, since this grid finds and quotes text only."
 you_give:
   - The set of contracts
   - The points to find in each
@@ -28,12 +30,30 @@ you_get:
   - Flags for absent, unfound or unclear
   - Short summary of patterns
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read a folder of files and build a
-    spreadsheet.
-  - Where the skill points to /corporate-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Put your contracts in one folder. Open your AI tool and give it the folder and the skill.
+  - Say which points to find, such as renewal date, notice period or liability cap. Say if you want Excel, Google Sheets or CSV.
+  - Check the column list your AI proposes. Then check the sample run on a few contracts and fix any column that looks wrong.
+  - Let it run the full set. If it cannot read many files at once or reach Excel or Sheets, paste a few contracts at a time and ask for a table in chat.
+  - Read the summary first. Then check the yellow and gray cells, and the key rows, against the quotes before you rely on them.
+output_sample:
+  input:
+    - A folder of your contracts
+    - The points to find in each one, such as renewal date or change of control
+    - Where the results should go, and which format you want (Excel, Google Sheets or CSV)
+    - Date or amount formats you prefer (optional)
+  prerequisites:
+    - An AI that can read a folder of files and write a spreadsheet
+    - Excel or Google Sheets connectors, if you want a spreadsheet made for you (optional)
+  output:
+    - name: .review-schema.yaml
+      contains: The list of columns and their types, which you confirm before the full run.
+    - name: Markdown table
+      contains: The full grid in the chat, so you can read it right away.
+    - name: CSV file
+      contains: One row per contract with the answer for each point, in a clean file.
+    - name: _sources.csv
+      contains: The exact quote and location in the contract behind each answer.
+    - name: Excel or Google Sheets workbook
+      contains: The grid with source quotes, color by state, a Verified column and a _schema sheet.
+    - name: Summary
+      contains: Counts of absent, unclear and needs-review cells per column, flagged columns, file locations and a reminder to verify.

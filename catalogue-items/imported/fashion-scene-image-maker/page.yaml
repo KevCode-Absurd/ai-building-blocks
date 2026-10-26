@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It turns one description into a prompt with ready-made templates.
 new_slug: fashion-scene-image-maker
 name: Fashion scene image maker
-summary: Describe a scene, with or without a reference photo. Get an image or a
-  new pose. Your image model draws it.
+summary: Turn one sentence into a fashion scene image prompt, or change the pose, model or outfit of a photo you already have. Your image tool draws it.
 job: make-images
 headline: Fashion scene image maker
-subhead: A fashion image from one sentence, or a changed version of a photo you
-  already have. Claude writes the prompt, and your image model such as ChatGPT
-  or Gemini draws it.
+subhead: A fashion image from one sentence, or a changed version of a photo you already have. Claude writes the prompt, and your image model such as ChatGPT or Gemini draws it.
 explain: |
   A fashion image from one sentence, or a changed version of a photo you already have. Claude writes the prompt, and your image model such as ChatGPT or Gemini draws it.
 
@@ -18,6 +15,10 @@ when:
   - You want the same model in a different pose.
   - You want to try a new outfit on an existing photo.
   - You want a cafe, street or home scene for a product page.
+not_for:
+  - "You need a real product photo for a store listing: book a real product shoot, since an AI image can mislead buyers."
+  - "You want a picture of a real, named person: this skill does not make those, so hire a model or use your own photo."
+  - "You only want to read and edit a prompt, with no image tool or credits: write the five slots by hand in any chat."
 you_give:
   - A short description of the person, clothes and setting
   - Camera view and framing, such as waist-up
@@ -30,9 +31,28 @@ you_get:
   - Edit lines for model, pose or outfit changes
   - A prompt ready to paste into your image tool
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Open Claude, ChatGPT or Gemini and paste this skill. Its word list is in Chinese, so ask your AI to reply in English.
+  - Describe the person, clothes, setting, camera view and mood. Write the clothes in English, with colour, fabric, cut and neckline, so details stay steady.
+  - Add a reference photo only if you want to change a pose, model or outfit. Ask your AI to list what must stay the same.
+  - To make the image, you need code running and a dLazy account with credits and an API key. Each image costs credits, so run the --dry-run check first to see the price.
+  - Start with four small drafts, pick one, then ask for the larger final image.
+  - Check framing, hands and clothing details. Ask for one change at a time and reuse the last image as the new reference.
+output_sample:
+  input:
+    - A short description of the person, clothes and setting
+    - Camera view, framing and mood (optional, the skill fills gaps)
+    - A reference photo to change (optional)
+  prerequisites:
+    - A dLazy account with credits and an API key, or another image tool that can draw from a prompt
+    - An AI that can run commands, if you want the image made for you
+  output:
+    - name: Five-slot prompt
+      contains: Your description split into person, clothes, setting, camera view and mood, joined into one prompt.
+    - name: Run command
+      contains: A ready command with aspect ratio, image size and save path for the banana-pro image model.
+    - name: Edit lines
+      contains: Copy-ready sentences to change the model, pose or outfit, each ending with a line to keep the rest the same.
+    - name: Fix-up lines
+      contains: Extra sentences to add when the framing is wrong, hands look off, or the image looks like an illustration.
+    - name: Draft and final images
+      contains: Four small drafts to pick from, then a larger final image of the one you choose.

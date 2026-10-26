@@ -1,6 +1,6 @@
 new_slug: skin-realism-image-prompt-checker
 name: Skin realism image prompt checker
-summary: Share a portrait or prompt. Get focused fixes for skin, hands and contact while keeping identity and light.
+summary: Check a portrait or image prompt for fake-looking skin, hands and contact. Get one fix that keeps the face and light.
 job: make-images
 headline: Skin realism image prompt checker
 subhead: Share a portrait or prompt. Get focused fixes for skin, hands and contact while keeping identity and light. Bring the brief and any files you want it to use.
@@ -11,18 +11,44 @@ explain: |-
 when:
   - You need a focused skin, hand and contact realism review.
   - You want a clear draft and checks from the material you already have.
+not_for:
+  - "You want a stylized, cartoon or painted look: skip the skin check, since it only suits photorealistic work."
+  - "You want the image made: run the revised prompt in your image tool, because this only reviews and rewrites the prompt."
+  - "You want proof a beauty product works: ask a person with real before and after photos, since this never claims product results."
 you_give:
-  - brief
-  - "Optional: approved image"
-  - "Optional: reference set"
+  - Your image prompt or portrait, as text, a file or a link
+  - Whether the image is a still or part of a video
+  - The face, age and skin tone you want to keep
+  - Approved reference images (optional)
 you_get:
-  - audit report
-  - image prompt
-  - Missing inputs and steps that still need to run
+  - A note on whether the AI saw a real image or only your prompt
+  - A short list of the biggest skin, hand and contact faults, ranked by impact
+  - One revised prompt or edit instruction with a list of what to keep
+  - A list of checks that did not run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your AI and paste the skill, or upload the pack and ask it to follow the skill.
+  - Add your prompt or portrait. Say if it is a still or a video.
+  - Tell it the face, age and skin tone to keep. Add reference images if you have them.
+  - Read the faults list and check it against your image.
+  - Run the revised prompt in your image tool. Compare the same face zones and the hands.
+  - If faults remain, run the checker again on the new result.
+output_sample:
+  input:
+    - Your image prompt or portrait (a file or link works too)
+    - Whether it is a still or a video
+    - The face, age and skin tone to keep
+    - Approved reference images (optional)
+  prerequisites:
+    - An AI that can view images, if you want it to check a real picture and not just a prompt
+  output:
+    - name: Observed or prompt-only
+      contains: Says whether the AI looked at a real image or only read your prompt.
+    - name: Top faults
+      contains: A short list of the biggest problems, each with the face zone, the evidence and the likely cause.
+    - name: Revised prompt
+      contains: One prompt or edit instruction with a single focused change and a list of what to keep.
+    - name: Checks not run
+      contains: Names any image or video check the AI could not do.
 how_it_works:
   - title: Read the brief
     text: Use this for photorealistic adult faces/hands, beauty/UGC stills or portrait-to-video consistency. A stylized brief does not need photoreal skin correction.

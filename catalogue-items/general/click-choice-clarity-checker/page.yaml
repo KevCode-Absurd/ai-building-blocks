@@ -1,6 +1,6 @@
 new_slug: click-choice-clarity-checker
 name: "Click choice clarity checker"
-summary: "Paste your menu and labels. Get a score out of 100, each choice rated and rewritten."
+summary: "Check your menu and button labels for clarity. Get each choice rated, a score out of 100, and plain rewrites for weak labels."
 job: audit-landing-page
 thinking: medium
 thinking_why: "It rates each choice by judgement and rewrites labels, but the scale is fixed."
@@ -17,12 +17,16 @@ when:
   - "Your menu has labels that overlap, like \"Services\", \"Solutions\" and \"Products\"."
   - "Visitors reach the page but do not click the thing you want."
   - "You are redesigning navigation and want a clear test for each label."
+not_for:
+  - "You want a full review of the whole site or app: use the Usability heuristic reviewer."
+  - "You need to know if real people can finish the task: run a small test with five visitors instead."
+  - "Your page has no menu, buttons or links to choose from: ask a friend to read it and tell you what they would do next."
 
 you_give:
-  - "The page or its menu, buttons and labels (attach it; your AI can see pictures)"
-  - "What the visitor is trying to do"
-  - "A review of the page, from a reviewer skill"
-  - "The layout plan (optional)"
+  - The page, or its menu, buttons and labels (attach a screenshot or paste the text)
+  - What the visitor is trying to do
+  - A review of the page or a list of known trouble spots
+  - Your layout plan (optional)
 you_get:
   - "Every choice listed and rated: clear or needs thought"
   - "A score out of 100 with the working"
@@ -36,6 +40,29 @@ how_to_use:
   - "Add the review if you have it."
   - "Swap in the rewrites and test them on someone who has not seen the page."
   - "Run it again on the new labels to see the score change."
+output_sample:
+  input:
+    - Your page, or a screenshot of its menu, buttons and labels
+    - What a first-time visitor is trying to do
+    - A review of the page or a list of known trouble spots
+    - Your layout plan (optional)
+  prerequisites:
+    - An AI that can read pictures, if you attach screenshots
+  output:
+    - name: Goal
+      contains: What the first-time visitor is trying to do.
+    - name: Choices on the path
+      contains: Each choice with its rating, whether the label says where it leads, any overlap and a plain rewrite.
+    - name: Hard choices moved
+      contains: Which hard choices now sit behind a simpler first choice.
+    - name: Help to add
+      contains: Where short help is needed, how short it should be and why.
+    - name: Score
+      contains: A score out of 100 with the working, and the score if the rewrites are used.
+    - name: Missing
+      contains: What facts you left out that would change a rating.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: "Lists every choice"

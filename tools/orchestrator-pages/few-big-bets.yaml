@@ -1,6 +1,6 @@
 new_slug: few-big-bets
 name: Pick a few big bets and sit still
-summary: List your bets. Get which have the odds in your favour, how big each should be and rules for holding.
+summary: List the bets you are weighing. Get a call on which have the odds on your side, how big each should be, and rules for sitting still.
 job: money-and-investing
 thinking: high
 thinking_why: It turns prices into odds, sizes bets against a survival limit and runs sums on your figures. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have more ideas than you can back and no clear way to choose.
   - You tend to spread thin, check often and change your mind with every move.
   - Someone is selling you an idea with a big commission and a thick pack of paper.
+not_for:
+  - "You want a buy or sell call on a named stock or fund: ask a licensed financial adviser, as this gives no such calls."
+  - "You only want to know if you have real skill in one area: use the Circle of competence sorter first."
+  - "You want to check whether a single plan survives a bad year: use the Bad-year break-even tester."
 you_give:
   - The bets you are weighing, with what goes in, what each pays and what you lose if it fails
   - The price or odds for each one, if there are any
@@ -30,6 +34,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - List your bets, with what each costs and pays. Give a low, middle and high chance for each.
   - It works step by step and saves each result. Print the last page and put it where you look at your picks.
+output_sample:
+  input:
+    - The bets you are weighing, with what each costs, pays and loses if it fails
+    - The price or odds for each bet, if there are any
+    - A low, middle and high chance for each bet, with the reason for it
+    - Your pot, what must stay safe, your fees and tax rate (optional)
+  prerequisites:
+    - An AI that can read the zip folder and save files, such as Claude Code or a Claude Project
+  output:
+    - name: Mispriced bet tester
+      contains: Each bet called near cinch, fair bet or no bet, from the payoff sum at your low, middle and high estimates.
+    - name: Twenty-punch bet ranker
+      contains: A scored list, one to three sized picks, and a written reason for every bet you drop.
+    - name: Incentive checker
+      contains: Who is paid to steer you, how they are paid, and where that pulls the wrong way.
+    - name: Room for error plan checker
+      contains: The point of ruin, a bad-year test result, a score out of 100 and fixes.
+    - name: Sit-still rule writer
+      contains: Facts to watch, fixed review dates, the cost of acting and the only reasons to change course.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Tests the odds after the price
     text: Turns each price into the chance the crowd gives, runs chance times payoff at three estimates and calls each bet near cinch, fair bet or no bet.

@@ -1,0 +1,146 @@
+name: Unity Editor Tool Developer agent
+summary: Plan a custom Unity Editor tool, such as an asset checker, inspector drawer or import rule, with Undo support and a build check.
+headline: Unity Editor Tool Developer agent
+subhead: Tell it which job your team does by hand in Unity again and again. It picks the right kind of tool, sets the rules it must follow and plans how to test it with the people who will use it. You get a tool spec, a test list and an outline of the code.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Teams lose hours to checks that a machine could do. Someone opens every new
+  texture to see if it is too big. Someone fixes the same import setting by hand.
+  A broken asset reaches testing, and no one knows why. This agent plans a
+  Unity Editor tool that does that work for you, so the mistake is caught when
+  the file is imported or the build starts.
+
+  Unity has several kinds of editor tool, and the right pick matters. An editor
+  window shows project state. A property drawer changes how a field looks in the
+  Inspector. An asset postprocessor runs on every import. A build validator
+  stops a bad build. The agent picks one for your job, using the Unity Editor
+  Tool Developer profile by Agency Agents.
+
+  It also sets the rules that stop editor tools from hurting people: editor-only
+  code, Undo on every change and progress bars on slow work. Your AI cannot run
+  Unity, so any C# it writes is an outline for you to test. Time saved is for
+  you to measure. It will not promise a figure.
+when:
+  - Your artists fix the same import settings by hand on every new texture or model.
+  - Broken assets, such as oversized textures or wrong names, reach testing before anyone notices.
+  - Your designers struggle to edit a field in the Inspector, and a custom drawer would help.
+  - You want the build to stop automatically when a project rule is broken.
+not_for:
+  - You want code that runs inside the game for players. Use the Unity Architect agent.
+  - You want a shader or look for materials. Use the Unity Shader Graph Artist agent.
+  - You want a general developer tool outside Unity. Use the Developer Tooling Engineer agent.
+  - Your team only needs a written checklist. Tooling costs more than a list does.
+you_give:
+  - The job people do by hand, and how often
+  - Who will use the tool, such as an artist, a designer or a build engineer
+  - Your Unity version
+  - The rules to enforce, such as naming, texture size or required components (optional)
+  - Existing editor scripts, if any (optional)
+you_get:
+  - The kind of tool to build and why that kind fits
+  - A spec for what it checks or does, and what the user sees
+  - The rules it must follow, such as Undo and editor-only code
+  - A C# outline of the main tool
+  - A test list and a way to try it with the real user first
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe the manual job, who does it and how often. Add your Unity version. Say MISSING for anything you do not know.
+  - Say "Pick the right tool kind, then give me the spec." Ask for the code outline only after you agree on the spec.
+  - Read the tool choice first. If it picks a window but you wanted an automatic rule, say so and ask again.
+  - Build the first version in Unity. Let the real user try it before you polish it. Write down where they get confused.
+  - Paste what you learned back and ask for the next version.
+how_it_works:
+  - title: Find the job
+    text: It names the repeated manual job and who does it, because the tool is judged by that person.
+  - title: Pick the tool kind
+    text: It chooses between an editor window, a drawer, an import rule, a menu item or a build check, and says why.
+  - title: Write the spec
+    text: It says what the tool checks or changes, what the user sees and what message appears when it acts.
+  - title: Apply the rules
+    text: It adds editor-only code, Undo, progress bars on slow work and warnings when a rule changes a setting.
+  - title: Outline the code
+    text: It sketches the main class and the Unity calls it needs, marked untested.
+  - title: Plan the trial
+    text: It plans a first version, a try-out with the real user and a build check wired in last.
+output_shape: |-
+  THE JOB
+    <manual job> | <who does it> | <how often> | <what goes wrong today>
+
+  TOOL CHOICE
+    <window, drawer, import rule, menu item or build check> | <why this kind>
+
+  SPEC
+    <what it checks or does> | <what the user sees> | <message when it acts>
+
+  RULES IT MUST FOLLOW
+    <editor-only code> | <Undo> | <progress bar> | <safe to run twice>
+
+  CODE OUTLINE
+    <main class and key Unity calls, marked untested>
+
+  TEST LIST
+    <test> | <expected result>
+
+  TRIAL PLAN
+    <first version> | <who tries it> | <what to record>
+
+  OPEN QUESTIONS
+    <what is missing or must be checked in the Unity docs>
+output_sample:
+  input:
+    - The job your team does by hand and how often
+    - Who will use the tool
+    - Your Unity version
+    - The rules to enforce (optional)
+  prerequisites:
+    - A Unity project you can edit, to build and test the tool
+  output:
+    - name: The job
+      contains: The manual task, who does it, how often, and what goes wrong today.
+    - name: Tool choice
+      contains: Which kind of editor tool fits, and why the others do not.
+    - name: Spec
+      contains: What the tool checks or changes, what the user sees and the message when it acts.
+    - name: Rules it must follow
+      contains: Editor-only code, Undo, progress bars and settings that are safe to apply twice.
+    - name: Code outline
+      contains: The main class and key Unity calls, marked untested.
+    - name: Test list
+      contains: Tests to run in Unity, each with an expected result.
+    - name: Trial plan
+      contains: A first version, who tries it and what to write down.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Editor tool
+    meaning: A tool that runs inside the Unity editor to help your team. Players never see it.
+  - term: EditorWindow
+    meaning: A custom panel inside Unity, like the Project or Console panel.
+  - term: PropertyDrawer
+    meaning: Code that changes how one field looks in the Inspector.
+  - term: AssetPostprocessor
+    meaning: Code that runs each time an asset is imported, so it can fix or check settings.
+  - term: Undo
+    meaning: The Ctrl+Z history. Good tools record their changes so people can step back.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can plan the tool and outline the C#. One that can browse can check the current Unity docs.
+  inputs:
+    - A screenshot of the manual job or the Unity panel involved.
+    - The rules your team follows today, such as a naming guide.

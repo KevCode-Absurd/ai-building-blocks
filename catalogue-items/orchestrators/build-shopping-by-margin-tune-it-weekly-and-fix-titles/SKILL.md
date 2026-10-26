@@ -42,15 +42,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Margin tier Shopping builder.** Use the skill `margin-tier-shopping-builder`. Sets up the tiers and targets the rest of the work tunes.
+1. **Margin tier Shopping builder.** Use the skill `margin-tier-shopping-builder`. Sets up the tiers and targets the rest of the work tunes. Hands step 2 the tier plan with a target for each tier.
 
 Pause here: Build the tiers in Google Ads and run them for two weeks. Then export the weekly Shopping report with search terms.
 
-2. **Shopping campaign tuner.** Use the skill `shopping-campaign-tuner`. Reads the first two weeks and says which products to cut, feed, bid up or fund.
+2. **Shopping campaign tuner.** Use the skill `shopping-campaign-tuner`. Give it the plan from the steps before. Uses the weekly Shopping report you export after two weeks (your performance sheet), and step 1's tier targets to judge each product. Hands step 3 a review that marks which products to cut, feed, bid up or fund.
 
 Pause here: Export the converting search terms for the products it said to feed, and list those products with their current titles.
 
-3. **Shopping feed title writer.** Use the skill `shopping-feed-title-writer`. Fixes the weak titles the weekly read pointed to.
+3. **Shopping feed title writer.** Use the skill `shopping-feed-title-writer`. Give it the audit report from the steps before. Uses the products step 2 marked to feed, plus your product list and converting search terms (your own export). Hands you new titles and a rollout in small batches.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

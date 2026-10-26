@@ -1,6 +1,6 @@
 new_slug: customer-interview-questions
 name: "Customer interview question writer"
-summary: "Paste your idea and draft questions. Get fixed questions about their life, your top three and a plan for the scary one."
+summary: "Write customer interview questions about their real life, not your idea. Get fixed drafts, your top three questions and a plan for the scary one."
 job: test-an-idea
 thinking: medium
 thinking_why: "It judges each question and picks what matters, but the rules are fixed."
@@ -17,6 +17,10 @@ when:
   - You're about to talk to customers and your questions start with "would you".
   - You have a long list of questions and don't know which ones matter.
   - You keep avoiding one question because the answer might hurt.
+not_for:
+  - "You want to test pricing with a survey: use the Smallest test picker, which suggests the smallest real test."
+  - "You don't know who to talk to yet: use the First customer group picker to choose a group first."
+  - "You need the message that gets someone to agree to a talk: use the Customer conversation request writer."
 
 you_give:
   - Your idea in a sentence, and the type of person you'll talk to
@@ -35,6 +39,29 @@ how_to_use:
   - Say what you are most afraid someone will tell you.
   - Take the top three into your next conversation. Keep the recovery lines on a card.
   - After the talk, bring your notes to "Customer conversation notes sorter".
+output_sample:
+  input:
+    - Your idea in one sentence
+    - The type of person you will talk to
+    - Your draft questions, good or bad (optional)
+    - What you already know and what you are unsure of (optional)
+  output:
+    - name: Who and what
+      contains: The person you will talk to and the stage you are at.
+    - name: The big three
+      contains: The three most important questions for this person, each with what its answer could change.
+    - name: The scary one
+      contains: The question you fear, how to ask it, and what each answer would mean.
+    - name: Opening
+      contains: A three-line opening you can say or send, with no mention of your idea.
+    - name: Your questions, fixed
+      contains: Each draft shown with what was wrong and a rewritten version.
+    - name: More questions about their life
+      contains: Extra questions on the last time it happened, how they cope, cost and what else they tried.
+    - name: If the talk drifts
+      contains: Short lines for praise, vague claims, feature requests and slipping into a pitch.
+    - name: Missing and checks missed
+      contains: What would sharpen the questions, and any of its own checks that still fail.
 
 how_it_works:
   - title: Steers back to their life

@@ -1,51 +1,94 @@
 new_slug: bridge-availability-payments-into-project-cash
 name: Bridge availability payments into project cash
 headline: Bridge availability payments into project cash
-summary: A contract payment and project cash eligibility bridge
+summary: Turn a certified availability payment into project cash available for debt service, with deductions, caps and receipt timing checked.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: "A contract payment and project cash eligibility bridge. Share certified availability payment, approved deductions/caps, invoice/receipt timing, operating costs and financing CFADS definition with taxes/capital/working capital. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter."
-explain: |-
-  A contract payment and project cash eligibility bridge.
+subhead: Give it the certified payment, the approved deductions and their cap, the dates cash arrived, your operating costs and the lender's cash definition. It checks the payment first, then builds the cash left for debt service. You get a bridge from certified payment to project cash, and a list of gaps.
+explain: |
+  An availability payment is a fixed sum a public body pays for keeping a road, school or hospital available. It is certified on one date, cut by deductions when service falls short, and paid on another. Lenders count only cash that arrived. Teams often treat the certified amount as cash, or take working capital off twice.
 
-  Infrastructure contracted cash. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow keeps the two apart. Step 1 checks the certified payment against its deduction cap and keeps net certified payment separate from the bank receipt. Step 2 builds cash available for debt service from the receipts, taking each cost and financing adjustment off once. It states whether your figures are accrual or actual cash, and never mixes the two routes.
+
+  It works from the figures you give it. It does not read the contract for you, settle a dispute or test debt cover. A person who knows the contract signs off the definitions.
 when:
-  - You need a contract payment and project cash eligibility bridge.
-  - You work on infrastructure contracted cash and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A public body has certified this period's availability payment and you need the cash a lender would count.
+  - Deductions for poor performance were applied and you are not sure the cap was kept.
+  - An invoice went out in one quarter and the bank receipt landed in the next.
+  - Your cash available for debt service looks too high and you suspect working capital was counted twice.
+not_for:
+  - The project is paid by traffic or demand, not a fixed payment. Use the Connect toll operating cash to debt repayment workflow.
+  - You already have project cash and want to size repayments and cover. Use the Build a project debt service cash pack workflow.
+  - You only need to check one payment against its cap. Use the Availability payment deduction checker.
+  - You want the contract read, or a dispute settled. A person who knows the contract has to do that.
 you_give:
-  - "Certified availability payment, approved deductions/caps, invoice/receipt timing, operating costs and financing CFADS definition with taxes/capital/working capital. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter."
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The certified availability payment for the period (from the payment certificate)
+  - The approved deductions and the cap that limits them (from the payment clause of the contract)
+  - The dates each invoice went out and each payment arrived (from invoices and bank statements)
+  - Operating costs for the period, and whether your figures are accrual or actual cash (from your accounts)
+  - The lender's definition of cash available for debt service, with taxes, capital spending and working capital (from the financing agreement)
+  - The reporting date, currency and scale, such as USD thousands
 you_get:
-  - A contract payment and project cash eligibility bridge.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The deduction applied after the cap, and any amount above it
+  - Net certified payment, kept apart from cash actually received
+  - Cash available for debt service, with each cost taken off once
+  - Unreceived and disputed amounts, listed as gaps
+  - The basis used, accrual or actual cash, stated plainly
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach the payment certificate, the payment and deduction clauses, your bank statements and your operating cost schedule. Paste the lender's cash definition. Say whether your operating figures are accrual or actual cash.
+  - After step 1, check that net payment equals gross less the capped deduction. Then check that the received amount comes from the bank, not from the certificate.
+  - After step 2, check that each cost comes off once and the basis matches your figures. A cash figure must not get a second working capital deduction.
+  - Fill every MISSING line before anyone relies on the result. Nothing here pays, sends or files anything. A person who knows the agreement checks it before anyone acts.
 how_it_works:
   - title: Availability payment deduction checker
-    text: Reconcile the certified gross payment and approved capped deductions. Pass net certified payment and actual bank-received timing separately; do not transfer the example operating-cash subtotal as new gross receipts.
+    text: "Checks the certified gross payment against the approved deductions and their cap. Hands step 2 the net certified payment and the bank-received timing as two separate figures. Check before moving on: gross less the capped deduction ties to net."
   - title: Project cash available bridge
-    text: Build CFADS from actual eligible payment receipts, deducting operating payments and financing-definition adjustments once. Tie the opening payment bridge to receipts and list unreceived amounts or contractual disputes as gaps. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
-output_shape: |-
-  A contract payment and project cash eligibility bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Starts from cash actually received, takes off operating payments and the lender's adjustments once each, and lists unreceived or disputed amounts as gaps. States the basis. Cash sources get no second working capital deduction. Accrual sources use the signed working capital bridge.
+output_shape: |
+  PERIOD AND BASIS  <period>, <currency>, <scale>, <accrual or actual cash>
+
+  1 PAYMENT CHECK   gross <n> - applied deduction <n> = net certified <n>
+                    deduction above cap <n or none>
+    RECEIPT TIMING  received in period <n>, certified not yet received <n>, disputed <n>
+
+  2 CASH AVAILABLE  receipts <n> - operating payments <n> - taxes and capital <n>
+                    +/- working capital <n, or 'not applied: cash basis'> = <n>
+
+  SOURCES           <each input, its source, date and unit>
+  MISSING           <each gap, and the line it stops>
+  CHECKS MISSED     <one line each, or none>
+output_sample:
+  input:
+    - The certified availability payment, the approved deductions and their cap
+    - Invoice dates and bank receipt dates
+    - Operating costs, and whether they are accrual or actual cash
+    - The lender's definition of cash available for debt service
+  prerequisites:
+    - The payment certificate and the payment clause of the contract
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: 1 PAYMENT CHECK
+      contains: Gross payment, the deduction applied after the cap, any excess above it, and net certified payment.
+    - name: RECEIPT TIMING
+      contains: What arrived in the period, what is certified but not yet received, and what is disputed.
+    - name: 2 CASH AVAILABLE
+      contains: Receipts less operating payments and adjustments, each taken off once, ending in cash available for debt service.
+    - name: SOURCES
+      contains: Each input with its source, date, currency and scale, and the accounting basis used.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: A certified net payment is not assumed received; operating costs are deducted once; source cash and financing exclusions reconcile. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+  - what: A deduction above the cap
+    how: Raise the deduction above the cap. The page shows the excess as an exception and applies only the capped amount.
+  - what: A late receipt
+    how: Move a bank receipt into the next period. Cash available falls and the amount shows as certified but not yet received.
+  - what: A different basis
+    how: Switch your operating figures from accrual to actual cash. The working capital line changes to 'not applied' and the page says why.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - A certified net payment is not assumed received; operating costs are deducted once; source cash and financing exclusions reconcile. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +99,31 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the lender's cash definition in one note and paste it in every run, so each period uses the same rules.
+  - Keep a running log of each period's certificate, deduction and bank receipt, so the next run starts from the true position.
+  - Run the Build a project debt service cash pack workflow after this one, to size repayments and cover from the cash you found.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: Your bank statements
+      why: They give the actual receipt dates and amounts, which are facts, not estimates.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed contract's payment and deduction clauses, not a summary of them.
+    - The financing agreement's wording on cash available for debt service.
+    - A named reviewer who knows the contract.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Availability payment
+    meaning: A fixed payment from a public body for keeping an asset ready to use, such as a road or hospital.
+  - term: Deduction cap
+    meaning: The most the payer may take off the payment for poor performance in one period.
+  - term: Cash available for debt service
+    meaning: Cash left after operating costs, taxes and capital spending that can go to lenders. Often shortened to CFADS.
+  - term: Working capital
+    meaning: Money tied up in unpaid bills and invoices. When it grows, cash falls.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two matching records.
+before: []
+next:
+  - build-a-project-debt-service-cash-pack
+  - review-contractual-debt-service-cash-tests

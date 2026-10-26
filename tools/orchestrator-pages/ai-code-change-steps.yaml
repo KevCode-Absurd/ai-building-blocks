@@ -1,6 +1,6 @@
 new_slug: ai-code-change-steps
 name: Make a code change in small tested steps with AI
-summary: Describe the change you want. Get a test list, a change split into small steps and rules for your AI coding helper.
+summary: Plan a code change in small tested steps. Describe the change and get a test list, split-up edits and rules for your AI coding helper.
 job: build-software
 thinking: high
 thinking_why: It has to split real code edits correctly and write rules an AI agent will follow. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are changing code, with or without an AI helper, and want every step small and safe.
   - You have a large messy change and need to split it into pieces someone can review one at a time.
   - Your AI coding helper keeps adding things you did not ask for, and you want rules that hold it to one test at a time.
+not_for:
+  - "You are making a one-line fix or a throwaway prototype: write a plain test, or just make the edit and check it by hand."
+  - "You want your AI helper to start coding the first test right now: take the plan file from this workflow and give it to your coding helper."
+  - "You need a review of code that is already merged: ask a teammate to read the commits, since this workflow plans changes before they are made."
 you_give:
   - The change you want to make, in your own words
   - What the code does today, and any code or notes (optional)
@@ -31,6 +35,27 @@ how_to_use:
   - Describe the change you want. It writes the test list first.
   - Put the plan file and rules in your project, then start your AI helper with the one-word command.
   - Check the commit history as you go. The rules are written so you can tell if they were followed.
+output_sample:
+  input:
+    - The change you want to make, in your own words
+    - What the code does today, and any code or notes (optional)
+    - Cases you already know about, such as past bugs (optional)
+    - The change as a diff or list of edits (optional)
+    - Your team's commit and check rules (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - An AI coding helper for the plan file, if you want to build the change with one
+  output:
+    - name: Test list
+      contains: The change in one line, cases to test from smallest to largest, and the one case to turn into a real test now.
+    - name: Small steps
+      contains: Each edit labelled as structure or behaviour, grouped into tidy-up steps and new-behaviour steps, with when to run your tests.
+    - name: Plan file
+      contains: The ordered tests, a one-word command for your helper and the order to work in.
+    - name: Standing rules
+      contains: Rules that keep your helper on one test at a time, with warning signs to watch for.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: List the test cases
     text: Writes the change in one line, lists the cases it must handle, including old behaviour that must stay, and puts the smallest first.

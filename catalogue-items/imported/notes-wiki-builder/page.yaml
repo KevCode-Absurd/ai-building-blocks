@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It decides what is worth keeping and where each fact goes.
 new_slug: notes-wiki-builder
 name: Notes wiki builder
-summary: Give it what you learned. Get small linked notes and an index, so your
-  AI remembers it next time.
+summary: Turn what you learned into small linked notes and an index, so your AI can find it next time. A notes wiki builder for lasting facts.
 job: organise-work
 headline: Notes wiki builder
-subhead: Your AI remembers what it learned. Instead of one giant notes file that
-  rots, you get small linked files and an index, so the next session finds the
-  fact without redoing the work.
+subhead: Your AI remembers what it learned. Instead of one giant notes file that rots, you get small linked files and an index, so the next session finds the fact without redoing the work.
 explain: |
   Your AI remembers what it learned. Instead of one giant notes file that rots, you get small linked files and an index, so the next session finds the fact without redoing the work.
 
@@ -18,6 +15,10 @@ when:
   - Your AI keeps re-learning the same hard-won fact.
   - You say "save this" and want it done in a consistent way.
   - Your single notes file is too long to be useful.
+not_for:
+  - "You did routine work like a restart or a one-line fix: write nothing, since filler makes recall worse."
+  - "You want to turn a repeatable process into a reusable skill: write that as a skill, not a note."
+  - "You need the facts checked first: have a person verify them, because this only files what you give it."
 you_give:
   - What you learned or found
   - Where notes are stored (memory folder or wiki)
@@ -28,8 +29,27 @@ you_get:
   - An updated index
   - Fewer duplicates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and save files.
+  - "Pick where notes live: your AI's memory folder, or a shared wiki folder for your team."
+  - Paste this skill into your AI chat, or add it to your AI tool as a skill.
+  - Paste what you learned, or say "save this" at the end of a task. Share your existing notes if you have them.
+  - Check that your AI searched for a similar note first, and updated it instead of making a copy.
+  - Read the new file and the index line. Make sure the one-line description uses words you would search for.
+  - This works best when your AI can read and save files. In a plain chat, copy the files it writes into your folder yourself.
+output_sample:
+  input:
+    - What you learned or found, in plain words
+    - "Where notes live: a memory folder or a shared wiki folder"
+    - Existing notes to check for the same fact (optional)
+  prerequisites:
+    - An AI that can read and save files in a notes folder
+  output:
+    - name: Fact file
+      contains: One lasting fact in its own file, with a short name, a one-line description and links to related notes.
+    - name: Frontmatter
+      contains: The note's name, a one-line description, and optional recheck date, replaced note, confidence and source.
+    - name: Index line
+      contains: One short line in the index with the title, the file name and a hook, under about 200 characters.
+    - name: Updated existing file
+      contains: If a note already covers the fact, it is changed instead of copied.
+    - name: Skip decision
+      contains: A plain call that nothing lasting came out of the task, so nothing is written.

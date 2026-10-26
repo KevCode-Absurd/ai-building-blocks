@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It tries, checks and compares many versions before it stops.
 new_slug: detail-polisher
 name: Detail polisher
-summary: Name one UI detail or slow function. Get several checked attempts, with
-  the best version kept inside a set budget.
+summary: Polish one UI detail or speed up one slow function. Your AI tries several versions, checks each, and keeps the best one within a set limit.
 job: build-software
 headline: Detail polisher
-subhead: One small thing, made as good as it can be, with proof that the final
-  version is better than the first. Think of a toggle that feels slightly off,
-  or one function that runs too slowly.
+subhead: Give it one small target and a goal, such as a toggle that feels off or a function that runs too slowly. Your AI makes several attempts and checks each one. You get the best checked version and a short report.
 explain: |
   One small thing, made as good as it can be, with proof that the final version is better than the first. Think of a toggle that feels slightly off, or one function that runs too slowly.
 
@@ -16,21 +13,44 @@ explain: |
 when:
   - A button or toggle transition feels clumsy and you cannot say why.
   - One layout breaks at a certain screen width and you want it fixed properly.
-  - A single function is too slow and its output must stay exactly the same.
-  - You want a small piece of work tested several ways, not guessed once.
+  - A single function is too slow and its results must stay the same.
+  - You want one small piece of work tested several ways, not guessed once.
+not_for:
+  - "You want a full page or app redesign: ask your AI for a design plan, or hire a designer."
+  - "You want a general code cleanup across many files: ask your AI for a normal refactor in small steps."
+  - "You only have a rough feeling and no way to check it, such as no browser or timer: expect one unchecked suggestion, not a tested result."
 you_give:
   - One target, such as a component, file or function
-  - The goal in your own words
+  - Your goal in plain words
   - A browser or screenshot tool for UI checks (optional)
-  - A limit on how many attempts to allow (optional)
+  - A limit on attempts or minutes (optional)
 you_get:
   - The best checked version of your target
   - A short note on each attempt and how it was tested
   - Before and after evidence
   - A clear statement of whether the goal was met
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Use an AI that can edit your files and run code, such as Claude Code. Add this skill to it.
+  - "Type the command with your goal, for example: /obsess over this toggle and make the transition smooth."
+  - Name one target only. If your AI asks which one you mean, answer in one line.
+  - Let it run. It stops when the goal is met or the attempt limit is reached.
+  - Read the report and review the changes to your files before you keep them. For a speed problem, measure with a profiler first so you know the real slow spot.
+  - If you have no browser or screenshot tool, expect one unchecked suggestion and no testing. Treat it as a draft.
+output_sample:
+  input:
+    - One target, such as a toggle, a button or a single function
+    - Your goal in plain words, such as a smoother transition or a faster run
+    - A browser or screenshot tool for UI checks (optional)
+    - A limit on attempts or minutes (optional)
+  prerequisites:
+    - An AI that can edit your files and run code, such as Claude Code
+    - A browser or screenshot tool, to check how a UI looks and moves
+  output:
+    - name: Run note
+      contains: The target, the goal, the starting state and the checks chosen before any edit.
+    - name: Attempt records
+      contains: One entry per attempt with the weakness seen, the change made, how it was checked and what was learned.
+    - name: Best version
+      contains: The changed files for the best checked attempt, or the original files if nothing beat them.
+    - name: Brief report
+      contains: What changed, what was checked, before and after evidence, and why the run stopped.

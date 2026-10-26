@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It must avoid guessing at what others feel.
 new_slug: perspective-taking-activity
 name: Perspective-taking activity builder
-summary: Give it a topic in history, social science or literature. Get an
-  activity that builds real understanding of other views.
+summary: Plan a perspective-taking activity for history, social science or literature. Students reason from evidence, not guess feelings. Includes grading criteria.
 job: teach-and-train
 headline: Perspective-taking activity builder
-subhead: A classroom activity where students work out how people actually saw
-  their world, instead of imagining what they would feel. That difference builds
-  sound reasoning and keeps the lesson safe and honest.
+subhead: A classroom activity where students work out how people actually saw their world, instead of imagining what they would feel. That difference builds sound reasoning and keeps the lesson safe and honest.
 explain: |
   A classroom activity where students work out how people actually saw their world, instead of imagining what they would feel. That difference builds sound reasoning and keeps the lesson safe and honest.
 
   Given a topic in history, social science or literature, the skill designs the activity around evidence: what the person knew, valued and faced. It follows research on perspective-taking as a skill that can be learned, in steps from noticing views differ to checking your guess. Assessment looks at the quality of reasoning, use of evidence and honest uncertainty, not how emotional a student sounds. It suits teachers.
 when:
-  - You teach a historical event and want students to understand each side's
-    reasons.
+  - You teach a historical event and want students to understand each side's reasons.
   - A novel unit needs work on character motives.
   - You are running a stakeholder activity in social science.
   - You want to grade reasoning, not displays of empathy.
+not_for:
+  - "You want a quick recall quiz: write the questions yourself, since this builds a multi-step activity."
+  - "Your topic has no documented sources: use a plain class discussion with clear ground rules instead."
+  - "You need to teach pupils to talk through ideas in class: pair this with the dialogic-teaching-move-generator, or ask a colleague for a discussion protocol."
 you_give:
   - The topic and the people involved
   - Student age or level
@@ -30,7 +30,26 @@ you_get:
   - Guards against projection
   - An assessment guide focused on reasoning
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from the skill file.
+  - Type your subject and topic, and what you want students to learn from it.
+  - Add student age, class sensitivities and what students already know, if you have them.
+  - Read the Safety Check first. Change the plan if it flags a concern for your class.
+  - Run the four phases with your students. Use the Assessment Criteria to grade their reasoning.
+output_sample:
+  input:
+    - Your subject and topic, such as a history unit or a community debate
+    - What students should learn from taking other views
+    - Student age range (optional)
+    - Sensitivities in your class or community (optional)
+    - What students already know about the topic (optional)
+  output:
+    - name: Safety Check
+      contains: Flags topics or class situations that need care before you run the activity.
+    - name: Developmental Calibration
+      contains: Adjusts the difficulty and wording of the activity to the age of your students.
+    - name: Activity Sequence
+      contains: "Four phases: build context, identify perspectives, explore each perspective, then pull the views together."
+    - name: Anti-Projection Guardrails
+      contains: Topic-specific safeguards that stop students from projecting today's values or their own experience onto others.
+    - name: Assessment Criteria
+      contains: Ways to grade the quality of reasoning, use of evidence and honest uncertainty, not how emotional a student sounds.

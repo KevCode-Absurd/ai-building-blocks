@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts a case into a few clear outcomes.
 new_slug: new-data-use-screener
 name: New data use screener
-summary: Describe a new use of customer data. Get a quick call on whether it
-  needs full privacy review. Not legal advice.
+summary: "Describe a new use of customer data and get a clear call: go ahead, run a privacy assessment, or stop. A new data use screener, not legal advice."
 job: check-contracts
 headline: New data use screener
-subhead: "A fast answer to the question: can we do this with customer data, or
-  does it need a full privacy review? You describe the new use, and the skill
-  sorts it into one of four outcomes."
+subhead: "A fast answer to the question: can we do this with customer data, or does it need a full privacy review? You describe the new use, and the skill sorts it into one of four outcomes."
 explain: |
   A fast answer to the question: can we do this with customer data, or does it need a full privacy review? You describe the new use, and the skill sorts it into one of four outcomes.
 
@@ -18,6 +15,10 @@ when:
   - Marketing asks to share customer emails with a new tool.
   - You need to decide quickly if an idea can go ahead.
   - You want a record of why a project did or did not need a review.
+not_for:
+  - "You need a final legal sign-off: take the result to your privacy counsel or data protection officer, who must decide on any assessment."
+  - "You have not set up your privacy practice notes yet: finish that setup first, because the skill stops without them."
+  - "You want to review a contract or vendor terms: ask your lawyer, or read the contract clause by clause yourself."
 you_give:
   - A description of the new data use
   - Your privacy practice setup
@@ -29,11 +30,29 @@ you_get:
   - Conditions to meet
   - A handoff into a full assessment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read your saved privacy setup notes.
-  - Where the skill points to /privacy-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Where the skill points to /privacy-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+output_sample:
+  input:
+    - A short description of the new data use or feature
+    - Your privacy practice setup file, made before you start
+    - What data is involved and whose (optional)
+    - Where your customers live (optional)
+  prerequisites:
+    - An AI that can read your saved privacy practice setup file
+    - The privacy practice setup done first
+  output:
+    - name: Classification
+      contains: "One call: proceed, privacy impact assessment required, mandatory data protection impact assessment, or stop."
+    - name: Reasoning
+      contains: Why the activity landed in that group, based on your own review triggers and the legal tests.
+    - name: Privacy policy conflict check
+      contains: Any clash between the plan and what your published privacy policy tells customers.
+    - name: Conditions table
+      contains: The conditions to meet before the work goes ahead, shown only when conditions apply.
+    - name: Bottom line
+      contains: A short plain summary of the call and what to do next.
+    - name: Handoffs and next steps
+      contains: Pointers to other teams or skills, and an offer to start the full assessment.

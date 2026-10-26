@@ -1,7 +1,7 @@
 new_slug: toll-revenue-ramp-model-builder
 name: Toll revenue ramp model builder
 headline: Toll revenue ramp model builder
-summary: A three-year toll receipts and operating cash schedule
+summary: Build a three-year toll revenue model from your traffic forecasts, toll rate and collection share. You get receipts, operating cash and checks.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a three-year toll receipts and operating cash schedule.
   - You work on infrastructure traffic revenue and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need a traffic forecast or a concession valuation: ask a traffic study firm or a valuation adviser, because this model only does the arithmetic."
+  - "You need debt service or capital spending in the cash result: add those in your own project finance model after this step."
+  - "Your passage counts are already cash-paid: reconcile that basis first, because this model would cut them for collection loss a second time."
 you_give:
   - Three annual chargeable-passage forecasts before collection losses, applicable toll per billable passage, cash collection share and operating cash costs, with independent traffic study sources.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,27 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Three yearly counts of chargeable passages before collection loss
+    - Toll per billable passage
+    - Share of tolls collected in cash
+    - Operating cash costs for each year
+    - Reporting date, currency, scale and accounting basis
+  prerequisites:
+    - An AI that can create and recheck spreadsheet files
+    - Node.js 20 or later, to run the bundled calculation (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The sources you gave, their dates, period boundaries and any evidence gaps still open.
+    - name: Inputs and assumptions
+      contains: Each input with its source, currency, scale and period, kept apart from assumptions.
+    - name: Model calculations and reconciliations
+      contains: Yearly billed receipts, cash collected, operating costs and operating cash, with checks that totals tie.
+    - name: Actual file verification
+      contains: What was recalculated, tested with a changed input, rendered and reopened in the workbook.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and any checks that failed or could not run.
 how_it_works:
   - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
     text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.

@@ -2,35 +2,111 @@ thinking: high
 thinking_why: Spend must be counted once, which takes careful reconciling.
 new_slug: cost-per-funnel-stage-reporter
 name: Cost per funnel stage reporter
-summary: Give it your CRM stages and ad spend. Get a trusted funnel with the
-  true cost of each stage.
+summary: Get a funnel you can trust and the true cost of each stage from your CRM leads and ad spend. Spend is matched by campaign key and counted once.
 job: track-numbers
 headline: Cost per funnel stage reporter
-subhead: A funnel you can trust and the true cost of each stage, built from your
-  CRM snapshot and ad spend. It stops late edits and double counted spend from
-  distorting your cost per lead or per win.
+subhead: Give it a CRM snapshot, your ad spend and the key that links your CRM campaigns to your ad campaigns. It builds one row per lead and stage, matches spend by campaign, and returns the cost of each stage. It can also plan which report days to refresh.
 explain: |
-  A funnel you can trust and the true cost of each stage, built from your CRM snapshot and ad spend. It stops late edits and double counted spend from distorting your cost per lead or per win.
+  A cost per funnel stage report goes wrong in two ways. Someone edits the CRM and last month's numbers change. Or the same ad spend is added again at every stage, so cost per lead or per win looks too low or too high. This skill fixes both.
 
-  The skill first sets stage truth from a complete snapshot as of a given date, with one row per lead and stage. A later loss does not erase an earlier win, and unknown stays unknown, not false. Spend is matched to CRM records only through an exact campaign key, then bucketed as matched, ambiguous, unmatched, unattributed or spend only. It never adds repeated stage spend. It also plans a safe refresh of changed partitions. Needs SQL data with clear source keys.
+  It starts with a full CRM snapshot as of one date. Each lead gets one row for each stage you set. A later loss does not erase an earlier win. If the data cannot prove a stage, it stays "unknown" and is never counted as "no".
+
+  Then it matches spend to leads. It joins on an exact campaign key only, never on campaign names. Every row lands in one of five groups: matched, ambiguous, unmatched, unattributed or spend only. Spend is added once, then shown beside each stage, never summed across stages. Last, it can plan a safe refresh of only the report days that changed.
+
+  This skill comes from wizard7558's attribution skills, shared under MIT. It is written for BigQuery SQL. The download includes the SQL files and the rules for each step.
 when:
-  - Cost per qualified lead changes each time the CRM is edited.
-  - Ad spend and CRM campaigns do not match by name.
-  - You need to refresh a report without rebuilding everything.
-  - You are unsure if some leads are missing from the funnel.
+  - Your cost per qualified lead changes every time someone edits the CRM.
+  - Your ad campaign names do not match your CRM campaign names, so spend lands in the wrong place.
+  - A deal was lost after an earlier win, and your win count or cost per win moved.
+  - You want to refresh yesterday's report without rebuilding the whole history.
+not_for:
+  - You only have a short export and no full CRM snapshot. Use the Conversion funnel analyst to see where people leave.
+  - You want to split sale credit across many ad touches. Use the Multi-touch credit calculator.
+  - You are choosing between attribution models. Use the Attribution model chooser.
+  - You do not use BigQuery or SQL. Use the Ad spend analyst on your ad exports for a simpler read.
 you_give:
-  - CRM snapshot with stages and dates
-  - Ad spend by campaign
-  - Stage order and time zone
-  - The key linking CRM to ads
+  - A full CRM snapshot with one row per lead, plus the won and lost deals and any stage events
+  - Ad spend by day and campaign, with the campaign key and currency
+  - The list that links each CRM source to each ad account (the "binding")
+  - Your stage order, report time zone and report dates
+  - The old and new snapshot, if you want a refresh plan (optional)
 you_get:
-  - Stage ledger per lead
-  - Spend matched by bucket
-  - Cost per stage
-  - Partition refresh plan
+  - A stage ledger with one row per lead and stage, marked achieved, not achieved or unknown
+  - A cost report for each stage, split into matched, ambiguous, unmatched, unattributed and spend only
+  - The spend lines and stage values behind every number
+  - A refresh plan listing the report days to replace and the next checkpoint (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run SQL on your own BigQuery data.
+  - Download the skill folder from this page. Keep the references and scripts folders with SKILL.md. The three contract files in references say what each input table looks like.
+  - Open the folder in an AI that can run SQL on BigQuery, such as Claude Code with the bq tool signed in. Live runs bill your own BigQuery project. The test scripts cap each job at 1 GiB.
+  - Tell it your CRM source, stage order, time zone, report dates and as-of time. Then give it your CRM snapshot, spend table and campaign bindings.
+  - Ask for the stage ledger first. Check the lead count and the unknown stages before you go on.
+  - Ask for the cost report next. Read the five groups first, then the cost for each stage. Cost appears only for matched groups. Spend repeats beside each stage on purpose, so never add the stage rows together.
+  - Treat the costs as a report on your own data. They show what was spent beside what was won. They do not prove the ads caused the leads.
+  - Ask for the refresh plan only when you keep a stored report. It plans the change and never writes to your data.
+how_it_works:
+  - title: Set the stage truth
+    text: It checks your source, stage order, time zone and snapshot are complete. It builds one ledger row per lead and stage.
+  - title: Keep wins and unknowns honest
+    text: A later loss never erases a win. A stage that cannot be proven stays unknown, and unknown money stays blank, not zero.
+  - title: Match spend by key
+    text: It joins CRM leads to ad campaigns only through the exact six-field binding. Names are never used.
+  - title: Sort into five groups
+    text: Each row is matched, ambiguous, unmatched, unattributed or spend only. Nothing is dropped.
+  - title: Count spend once
+    text: It adds spend one time, then shows it beside each stage. It never sums that repeated spend.
+  - title: Plan the refresh
+    text: It compares the old and new snapshot, picks the report days that changed and proposes a checkpoint. It falls back to a full rebuild when it cannot prove coverage.
+output_shape: |-
+  STAGE LEDGER (one row per lead and stage)
+    <lead> | <stage> | <achieved, not achieved or unknown> | <date entered> | <value and currency or unknown>
+
+  COST REPORT (by date, stage, channel and campaign)
+    <group: matched, ambiguous, unmatched, unattributed or spend only>
+    <leads> | <stage count> | <spend> | <cost per stage> | <spend status>
+
+  EVIDENCE
+    <spend lines> | <stage values> | <diagnostic counts>
+
+  REFRESH PLAN (optional)
+    <incremental or full> | <reasons> | <target report days> | <proposed watermark>
+output_sample:
+  input:
+    - Your CRM snapshot, with leads, deals and stage events
+    - Your ad spend by day and campaign
+    - The list that links your CRM campaigns to your ad campaigns
+    - Your stage order, time zone and report dates
+  prerequisites:
+    - A BigQuery project and an AI that can run SQL, such as Claude Code with the bq tool
+    - The references folder from the skill download
+  output:
+    - name: Stage ledger
+      contains: One row per lead and stage, marked achieved, not achieved or unknown, with date and value.
+    - name: Cost report
+      contains: Lead counts, stage counts and spend for each stage, in five groups, with cost per stage for matched groups.
+    - name: Spend and stage evidence
+      contains: The spend lines and stage values behind each number, so you can check spend was counted once.
+    - name: Diagnostics
+      contains: Counts of leads left out, leads with no date, and the reason for any fallback.
+    - name: Refresh plan
+      contains: Whether to refresh part or all of the report, which days to replace, and the next checkpoint.
+works_best_with:
+  tools:
+    - name: Claude Code with the bq command line tool
+      why: It can run the three SQL scripts on your BigQuery data and keep the evidence.
+    - name: Any chat AI
+      why: Good for reading the contract files and drafting your input tables. A chat cannot run the SQL.
+  inputs:
+    - A list of the stage names and their order, agreed with your sales team
+    - The campaign key your ad platform uses, copied from a spend export
+    - The currency of each ad account
+terms:
+  - term: CRM snapshot
+    meaning: A full copy of your CRM records taken at one moment, so the numbers do not shift as people edit.
+  - term: Stage ledger
+    meaning: A table with one row for every lead and every stage, saying if the lead reached it.
+  - term: Binding
+    meaning: A list that says which CRM source may be joined to which ad account, by exact keys.
+  - term: Partition
+    meaning: One day of a report that can be replaced on its own.
+  - term: Watermark
+    meaning: The time up to which changes have been handled, so the next refresh starts there.

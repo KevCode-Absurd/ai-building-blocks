@@ -25,6 +25,23 @@ The workflow preserves the original file and generates separate presentation, na
 - `source_repo: 70v-Yoyo/md2video-audio-skill`
 - `source_type: community`
 
+## Before you run this
+
+**Source and credit.** The skill is by 70v-Yoyo (70v-Yoyo/md2video-audio-skill, Apache-2.0 in the original repo), shared in the sickn33/agentic-awesome-skills collection (content under CC BY 4.0). Keep the credit with any copy you share.
+
+**The video scripts are not in this folder.** Steps 5 and 6 call `ai-2md2marp2av.py`, `md2marp2av.py` and `md2video.py`. Get them from the original repo above before you run those steps. Do not write or guess a script of your own and present it as the original.
+
+**Two ways to run it.**
+
+1. **Full run** needs a computer where your AI can run code and save files, with Python, Marp (the slide tool), a video tool such as ffmpeg, and the Edge-TTS speech package, plus the three scripts. Check each is installed before you start, and ask before installing anything.
+2. **Slides and script only** works in any chat AI. Do Steps 2 to 4 and stop. You get the cleaned Markdown, the slide Markdown and the narration Markdown. The person can then render the slides with Marp and read the narration with any speech tool.
+
+**Privacy.** Edge-TTS sends the narration text over the internet to an online speech service. Do not use the full run on confidential documents. Offer the slides-and-script route, or a speech tool that runs offline, instead.
+
+**What to ask for first.** The Markdown document, and optionally a Marp style. If the document is missing, ask once and stop. Never invent content that is not in the document.
+
+**What to hand back.** In this order: the cleaned Markdown (new file), the presentation Markdown (new file), the narration Markdown (new file, same slide count as the presentation), then the MP4 if you ran the full workflow. Say which files you made and which step you stopped at. Keep the original file unchanged.
+
 ## When to Use This Skill
 
 - Use when converting Markdown tutorials, reports, or presentations into narrated videos.

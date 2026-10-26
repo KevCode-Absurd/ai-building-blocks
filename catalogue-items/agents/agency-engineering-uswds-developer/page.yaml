@@ -1,0 +1,149 @@
+name: USWDS Developer agent
+summary: "Plan a government website on the U.S. Web Design System (USWDS): theme settings, official components, required .gov elements and access checks."
+headline: USWDS Developer agent
+subhead: Describe the page or site, your agency brand and your CMS. The agent plans USWDS design tokens, official components, the required .gov banner and Identifier, and accessibility checks. You get a build plan and a checklist.
+job: build-websites
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Government sites should look and work the same way and be usable by everyone. The common mistake is to override the U.S. Web Design System with custom styles. They drift on the next release and can break accessibility. This agent plans a USWDS website build that sets theme values and uses the official components.
+
+  Its rules: set the Sass theme settings, not override classes. Use the maintained component before you build one. Never fork a component. Keep the .gov banner and the Identifier. Pin the USWDS version. It ties each choice to Section 508, WCAG 2.1 AA and the 21st Century IDEA Act.
+
+  This is not a legal or accessibility sign-off. It lists what to test and what to confirm with your agency's accessibility team. It marks USWDS version details for you to check on the USWDS site. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's targets are its own goals, not results measured by AI Blocks.
+when:
+  - You are building or redesigning a federal or other public-sector site on USWDS.
+  - You need to turn your agency brand into USWDS theme settings.
+  - You are deciding whether to use an official component or build your own.
+  - You are adding USWDS to a Drupal or WordPress theme.
+not_for:
+  - "Your site is not on USWDS and is not government: use the Frontend Developer agent."
+  - "You need an accessibility audit or sign-off: use the Section 508 Accessibility Specialist agent or the Accessibility Auditor agent."
+  - "You want a quick check of one page you already built: use the Federal accessibility checker."
+  - "You want a general WordPress or Drupal build: use the CMS Developer agent."
+you_give:
+  - What the page or site is for and who uses it
+  - Your agency name, domain, brand colors and fonts
+  - The USWDS version, if you already use it (optional)
+  - Your CMS, such as Drupal or WordPress (optional)
+  - Your current page or code (optional)
+  - Forms or flows you need, such as a multi-step application (optional)
+you_get:
+  - A theme plan that turns your brand into USWDS color, spacing and type settings
+  - An official component for each need, with a reason if you must build your own
+  - "A checklist of required federal elements: the .gov banner and the Identifier"
+  - A mobile-first layout and form plan
+  - A CMS plan for Drupal or WordPress, if you use one
+  - Accessibility and compliance checks to run
+  - Open questions
+how_to_use:
+  - Download the pack and add it as a skill in your AI. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - "Write your brief: what the site is for, your agency brand, your USWDS version and your CMS. Paste your theme settings file if you have one."
+  - Say 'Plan this on USWDS. Mark anything that depends on the version.' Your AI asks once for what is missing.
+  - Read the theme plan and the component list first. Check them against your brand rules.
+  - Build on a test copy of your site. Test with a keyboard and a screen reader, and check color contrast yourself.
+  - Confirm the final result with your agency's accessibility and compliance team. This plan is not a sign-off.
+how_it_works:
+  - title: Collect the brief
+    text: It confirms the site purpose, brand, USWDS version, build method and CMS. It asks once for anything missing, then marks it MISSING.
+  - title: Set the foundation
+    text: It plans the install, the theme settings file, the build step and the required federal elements.
+  - title: Theme through tokens
+    text: It maps your brand onto USWDS color, spacing and type tokens and checks contrast, with no magic numbers.
+  - title: Choose components
+    text: It picks the official component for each need and uses its documented markup.
+  - title: Plan the CMS link
+    text: For Drupal or WordPress it plans assets, templates and form theming that keep the USWDS markup.
+  - title: Plan the checks
+    text: It lists keyboard, screen reader, contrast, reflow and compliance checks, and what is unknown.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Site <purpose> | Agency <name> | USWDS <version> | CMS <name>
+    Assumed: <list> | MISSING: <list>
+
+  THEME SETTINGS
+    <brand item> | <USWDS token or setting> | <contrast note>
+
+  COMPONENTS
+    <need> | <official component> | <markup and script note> | <reason if custom>
+
+  REQUIRED FEDERAL ELEMENTS
+    [ ] .gov banner | [ ] Identifier and its links | [ ] HTTPS | [ ] <item>
+
+  LAYOUT AND FORMS
+    <page area> | <grid and breakpoint> | <form pattern and error state>
+
+  CMS INTEGRATION
+    <asset or template> | <how it is added> | <upgrade-safe note>
+
+  ACCESSIBILITY AND COMPLIANCE CHECKS
+    <number> | <check> | <what a pass looks like>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - What the page or site is for and who uses it
+    - Your agency name, domain, brand colors and fonts
+    - Your USWDS version and CMS (optional)
+    - Your current page or code (optional)
+  prerequisites:
+    - A test copy of your site to try the plan on
+    - An AI that takes a pasted profile, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brief and assumptions
+      contains: The site, brand, USWDS version and CMS as understood, with assumptions and MISSING items.
+    - name: Theme settings
+      contains: Each brand item mapped to a USWDS token or setting, with a contrast note.
+    - name: Components
+      contains: The official component for each need, or why a custom one is needed.
+    - name: Required federal elements
+      contains: A checklist for the .gov banner, the Identifier and its links, and HTTPS.
+    - name: Layout and forms
+      contains: Grid, breakpoints, form patterns and error states, planned for phones first.
+    - name: CMS integration
+      contains: How USWDS assets and templates fit Drupal or WordPress without editing vendor files.
+    - name: Accessibility and compliance checks
+      contains: Numbered checks for keyboard, screen reader, contrast and reflow, with what a pass looks like.
+    - name: Open questions
+      contains: What is unknown and what each answer changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: USWDS version
+    how: Give the version you use, so version-specific steps are flagged for it.
+  - what: Scope
+    how: Ask for the theme plan only, or one component, for a smaller first pass.
+  - what: CMS
+    how: Say Drupal or WordPress, with the theme type, so the integration plan is specific.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: USWDS
+    meaning: The U.S. Web Design System. Shared code and design rules for federal sites, run by GSA.
+  - term: Design token
+    meaning: A named value for a color, space or font size that the whole site uses.
+  - term: Sass
+    meaning: A way of writing CSS with settings and variables.
+  - term: .gov banner
+    meaning: The strip at the top that says it is an official U.S. government website.
+  - term: Identifier
+    meaning: A block near the footer that names the agency and links to required pages.
+  - term: Section 508
+    meaning: The U.S. rule that federal technology must be accessible.
+  - term: 21st Century IDEA
+    meaning: "A U.S. law on federal website quality: accessible, consistent, mobile-friendly and secure."
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The profile is long, and these tools take it pasted or attached.
+    - name: Claude Code
+      why: It can read your theme settings file and templates, so the plan fits your code.
+  inputs:
+    - Your theme settings file, usually named _uswds-theme.scss.
+    - Your agency's brand guide and its required footer links.

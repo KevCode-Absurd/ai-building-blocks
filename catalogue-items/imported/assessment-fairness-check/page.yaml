@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It tests the assessment against its goals and marking.
 new_slug: assessment-fairness-check
 name: Assessment fit and fairness checker
-summary: Paste a quiz or task and its goals. Get a check that it tests the right
-  things and marks fairly.
+summary: Check your assessment fit and fairness before students sit it. Paste the task, marking and goals. You get problems found and ranked fixes.
 job: teach-and-train
 headline: Assessment fit and fairness checker
-subhead: Paste a quiz or task and its goals. Get a check that it tests the right
-  things and marks fairly. Bring the assessment and how it is marked. Use the
-  result to plan your next step.
+subhead: Paste a quiz or task, how it is marked, and what students should have learned. Your AI checks whether the task tests those goals and whether marking is fair. You get the problems found and fixes in order.
 explain: |
   A review of a quiz, essay task or test that tells you whether it measures what you meant it to measure and whether two markers would give the same grade. Paste the task, how it is marked and what students should have learned.
 
@@ -17,19 +14,47 @@ when:
   - You wrote a new end-of-unit test and want a second opinion.
   - Two teachers marked the same essay and gave very different grades.
   - Students who know the topic still score poorly on one task.
-  - You must show a department that an assessment lines up with the curriculum.
+  - You must show a department that a task lines up with the curriculum.
+not_for:
+  - "You need to grade live exams or settle a marking dispute: use a qualified assessor or your exam board's moderation process."
+  - "You have scores from a large test and want number-based analysis: use a trained assessment analyst, not this check."
+  - "You need a new marking guide written from scratch: ask your AI to draft a rubric first, then run this check on it."
 you_give:
-  - The assessment and how it is marked
+  - Your assessment task, as students will see it
+  - How it is marked, such as a rubric or mark scheme
   - The learning goals it should test
   - Year group or level
-  - Purpose and stakes (optional)
+  - Purpose and stakes, such as practice or final grade (optional)
 you_get:
-  - A fit check against the learning goals
-  - Marking consistency problems
-  - Unfair or distracting features found
-  - Ranked fixes and a verdict
+  - A check of the task against your learning goals
+  - Places where marking could differ between markers
+  - Features that are unfair or get in the way of the goal
+  - Fixes ranked by importance
+  - A short verdict on whether to use the task
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text, then paste your task, mark scheme, learning goals and year group.
+  - Add the purpose and stakes if you know them.
+  - Read the verdict first. Then read the problems and the ranked fixes.
+  - Fix the top problems in your task, then run the check again on the new version.
+  - If marking is the weak spot, write a clearer rubric next, then check it here.
+output_sample:
+  input:
+    - Your assessment task, as students will see it
+    - How it is marked, such as a rubric or mark scheme
+    - What the task claims to test
+    - Year group or level
+    - Purpose and stakes of the task (optional)
+  output:
+    - name: Validity Analysis
+      contains: Whether the task tests the learning goal, covers the content, and avoids skills that are not the goal.
+    - name: Reliability Analysis
+      contains: Whether two markers would give the same score, and where the marking is too vague.
+    - name: Consequential Validity
+      contains: What the task may do to students who score low, and to how the topic is taught.
+    - name: Threats Identified
+      contains: Each specific problem found, with a reason it matters.
+    - name: Recommendations
+      contains: Changes to the task or marking that fix each problem, in order of importance.
+    - name: Overall Verdict
+      contains: A short judgement on whether the task is ready to use as it stands.

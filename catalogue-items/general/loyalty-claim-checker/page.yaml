@@ -1,6 +1,6 @@
 new_slug: loyalty-claim-checker
 name: "Loyalty claim checker"
-summary: "Paste a loyalty plan or claim with its numbers. Get the sums tested against what it costs and who it reaches."
+summary: "Test a loyalty scheme claim before you pay for it. Paste the plan and its numbers. You get the sums checked, the costs added and a plain verdict."
 job: think-and-decide
 thinking: high
 thinking_why: "It checks arithmetic and weighs evidence, and a slip changes the verdict."
@@ -10,13 +10,17 @@ subhead: "Paste a loyalty plan or claim with its numbers. It traces the promised
 
 explain: |
   Loyalty plans often count sales that would have happened anyway and leave out the cost of rewards. Heavy buyers usually buy most of what they need from you already, so there is little to win from them.
-  
+
   This skill writes down the claim and the gain, then traces where the gain comes from in the sums. It adds the costs, checks how much room your heaviest buyers have, and asks what evidence supports the claim. Then it spends the same money on reaching more buyers, using your figures, and shows the two side by side. You get a plain verdict and a list of the data you still need.
 
 when:
   - "A vendor pitched you a loyalty scheme or a points app."
   - "Your team wants to focus on retention instead of new buyers."
   - "You need to defend or kill a plan with numbers."
+not_for:
+  - "You sell something people buy once or very rarely and have no repeat data: use a plain budget check with your own cost per new buyer instead."
+  - "You want to split a budget between brand and sales work: use the Brand and sales budget splitter."
+  - "You want to test a vendor claim that has nothing to do with loyalty or retention: use the Claim skepticism kit."
 
 you_give:
   - "The claim or plan, with its cost and promised gain"
@@ -34,6 +38,28 @@ how_to_use:
   - "Add your numbers for buyers, spend and cost per new buyer."
   - "Read the side-by-side and challenge any assumption."
   - "Ask for the data it lists before you commit."
+output_sample:
+  input:
+    - The loyalty plan or claim, with its cost and the gain it promises
+    - "Your numbers: buyers, repeat rate, spend per buyer, cost to reach a new buyer (optional)"
+    - Where the claim came from, such as a vendor deck or case study (optional)
+  output:
+    - name: Claim
+      contains: The claim in one sentence and the gain it promises as a number.
+    - name: Where the gain comes from
+      contains: Each part of the gain, the sum behind it, and any part that rests on a guess.
+    - name: Costs
+      contains: Rewards, discounts, systems and staff time, and the net once costs come off the gain.
+    - name: Room to buy more
+      contains: How much your heaviest buyers already buy from you, compared with light buyers.
+    - name: Evidence
+      contains: Each source marked as independent, from the seller or from another type of business, and what it shows.
+    - name: Side by side
+      contains: Loyalty against reaching more buyers, with the same money and the same time frame.
+    - name: Verdict
+      contains: Go, test small or do not do it, with the main reason.
+    - name: Data to ask for
+      contains: Each missing item and who could supply it, plus any checks the AI missed.
 
 how_it_works:
   - title: "Write the claim and the gain"
@@ -56,32 +82,32 @@ how_it_works:
 output_shape: |
   CLAIM
   <sentence> | Gain promised: <number>
-  
+
   WHERE THE GAIN COMES FROM
   <part> | Sum | Assumption without a figure
-  
+
   COSTS
   <item>: <amount>
   Net: <gain minus cost>
-  
+
   ROOM TO BUY MORE
   <heavy buyers' share, light buyers' share, verdict>
-  
+
   EVIDENCE
   <source> | independent / seller / other type of business | shows <...> | does not show <...>
-  
+
   SIDE BY SIDE
   Loyalty: <result> | Reach: <result> | Same money, same period
-  
+
   VERDICT
   <go / test small / do not do> because <reason>
-  
+
   DATA TO ASK FOR
   <item> from <who>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

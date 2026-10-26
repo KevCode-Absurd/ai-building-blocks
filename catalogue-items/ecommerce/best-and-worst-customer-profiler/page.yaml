@@ -1,6 +1,6 @@
 new_slug: best-and-worst-customer-profiler
 name: "Best and worst customer profiler"
-summary: "Give it order and discount data. Get your best and worst buyers' traits, the ads behind them and a score."
+summary: "Find your best and worst customers from order data. See which ads and offers brought each group in, and get a fit score out of 100."
 job: understand-customers
 thinking: medium
 thinking_why: "It sorts a lot of rows and has to separate real patterns from noise, so a mid-size model is enough if you show the sums."
@@ -17,6 +17,10 @@ when:
   - Your ads show a strong ROAS but repeat orders and profit are weak.
   - You run big sales and want to know if those buyers ever come back.
   - You are about to move ad budget and want the buyers you want more of to guide it.
+not_for:
+  - "You only want your top buyers: use the Best customer finder, which ranks the best group only."
+  - "You have fewer than a few hundred customers or no order export: ask buyers directly with a short survey, then come back."
+  - "You want new ad ideas or ad copy: use a skill that turns winning angles into ads, after this one."
 
 you_give:
   - "Your order export: customer, order date, order value, discount code, refund or return flag, cost of goods"
@@ -34,6 +38,30 @@ how_to_use:
   - Export your orders for a window that is at least 90 days old, and attach the file.
   - Add your first-order source or ad angle for each customer, even if it is rough, and say which discount codes you ran.
   - Read the data limits first, then the two groups. Test any change with a small ad test before you move big spend.
+output_sample:
+  input:
+    - Your order export with customer, date, order value, discount code, refund flag and cost of goods
+    - Where each customer first came from, or the ad angle (optional)
+    - Post-purchase survey answers (optional)
+    - Support ticket reasons (optional)
+  prerequisites:
+    - An AI chat that can read a spreadsheet file
+    - At least 90 days of order history
+  output:
+    - name: DATA CHECK
+      contains: How many customers and days of history it found, and what is missing or too thin to trust.
+    - name: TOP 20 PERCENT
+      contains: Who your most profitable buyers are, the angle and first offer they came in on, and their repeat rate.
+    - name: BOTTOM 20 PERCENT
+      contains: Who your least profitable buyers are, what brought them in, and their refund rate.
+    - name: DISCOUNT COHORTS
+      contains: Repeat rate and 90-day profit per customer for full-price first orders against each discount code.
+    - name: ANGLE FIT
+      contains: Ads that promise a benefit your product does not deliver, and the page promise that does not match.
+    - name: DO NEXT
+      contains: Angles and offers to scale, ones to stop, and page promises to fix.
+    - name: SCORE
+      contains: A fit score out of 100 for your new customers, with the sum shown, or not scored and why.
 
 how_it_works:
   - title: Checks the data fits

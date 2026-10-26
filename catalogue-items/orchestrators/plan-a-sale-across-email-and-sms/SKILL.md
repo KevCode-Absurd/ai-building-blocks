@@ -50,17 +50,17 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **SMS send planner.** Use the skill `sms-send-planner`. Plans how many texts the sale can bear and when each goes out.
-2. **Email campaign calendar planner.** Use the skill `email-campaign-calendar-planner`. Give it the plan from the steps before. Places the emails around the text plan so the two channels do not repeat each other.
+1. **SMS send planner.** Use the skill `sms-send-planner`. Plans how many texts the sale can bear and when each goes out. Hands the text plan to the email calendar and to the text checker.
+2. **Email campaign calendar planner.** Use the skill `email-campaign-calendar-planner`. Give it the plan from the steps before. Places the emails around the text plan so the two channels do not repeat each other. Hands the calendar slot for the sale email to the email writer, and the calendar to the text checker.
 
 Pause here: Write the one-paragraph brief for the sale email: the offer, the deadline and the audience.
 
-3. **Campaign email writer.** Use the skill `campaign-email-writer`. Writes the sale email from the brief.
-4. **SMS send checker.** Use the skill `sms-send-checker`. Give it the copy draft and the plan from the steps before. Checks the text copy and timing against the email draft and the plan.
+3. **Campaign email writer.** Use the skill `campaign-email-writer`. Give it the plan from the steps before. Takes the sale email's slot from step 2's calendar (goal, audience, angle, date) and the brief you write at the pause, plus your brand brain and reviews. Writes the sale email and hands the draft to the text checker.
+4. **SMS send checker.** Use the skill `sms-send-checker`. Give it the copy draft and the plan from the steps before. Checks the text you plan to send against the plan from steps 1 and 2 and pairs its timing with the email from step 3. You write or bring the text itself. Hands back a readiness score and a fix list.
 
 Pause here: Send the emails and texts, then export the results for the sale window.
 
-5. **Email and SMS performance reader.** Use the skill `email-and-sms-performance-reader`. Reads the sale results by channel against the plan.
+5. **Email and SMS performance reader.** Use the skill `email-and-sms-performance-reader`. Uses the sale results you export after sending, not step 4's pre-send check. Reads them by channel and ranks what to repeat; set them beside the plan from steps 1 and 2.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

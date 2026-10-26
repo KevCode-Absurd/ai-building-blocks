@@ -16,6 +16,32 @@ use_cases:
   - "Find the old idea you need to let go of before a new one can make sense"
   - "Think about what you would do with more time and money once the basic needs are met"
   - "Write an argument that persuades the public, not only the experts"
+not_for:
+  - "You want a plan to build your own habits or stay with a long goal: use the Angela Duckworth mind instead."
+  - "You want to judge a choice by how well you decided, not how it turned out: use the Annie Duke mind."
+  - "You want ideas on trade, specialist work or competition between firms: use the Adam Smith mind."
+output_sample:
+  input:
+    - The problem you face, such as slow sales, a forecast, a sour deal or a quiet team
+    - The people affected and what each one wants
+    - Your cash flows or key numbers, as far as you know them
+    - What you are assuming about the future
+    - Any plan you are already thinking of (optional)
+  output:
+    - name: The big picture
+      contains: What is happening to total spending in your market, town or business, before any single line is looked at.
+    - name: Where the demand comes from
+      contains: Who will spend the money that is no longer being spent, and how one person's spending becomes another's income.
+    - name: The numbers
+      contains: A few figures with a range on each, including what the other side can actually pay or how a move ripples through rounds of spending.
+    - name: The convention to test
+      contains: What your plan assumes about tomorrow, and what happens if that assumption breaks.
+    - name: Who pays while you wait
+      contains: The human cost of waiting for things to sort themselves out, set against the cost of acting now.
+    - name: A remedy and the old idea in the way
+      contains: A concrete move, plus the old habit of thought that is blocking you.
+    - name: How it shrinks to your size
+      contains: A note on where economy-wide ideas may not fit a small firm, and what a numbers person should check.
 seats:
   - {seat: "The big economic picture", asks: "If everyone does what we're planning at the same time, where does the demand come from?"}
   - {seat: "Uncertainty check", asks: "Do we actually know these odds, or are we just assuming tomorrow will look like today?"}

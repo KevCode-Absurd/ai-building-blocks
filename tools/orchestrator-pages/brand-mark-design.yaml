@@ -1,6 +1,6 @@
 new_slug: brand-mark-design
 name: Design a brand mark and test that it holds up
-summary: Describe the design job. Get a tight brief, a mark plan and a strength test for your finished ideas.
+summary: Get a logo brief with firm limits, a brand mark plan, and a keep, fix or drop score for each finished logo idea you make.
 job: design-work
 thinking: high
 thinking_why: It scores finished marks on seven tests and gives calls you will act on. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You need a logo or mark and want a clear brief to hand a designer or an AI tool.
   - You have three logo ideas and can't tell which one is best without a fight.
   - You are thinking of redesigning your mark and want to know if the fault is real or only a wish for change.
+not_for:
+  - "You need a full brand identity with colours, fonts and voice: use the Visual system rules writer, or hire a designer with the brief this makes."
+  - "Your logo is already in production: ask your designer to check the files instead, since this works best before sketching."
+  - "You only want a wordmark, a logo made from the brand name in type: use the Wordmark sketch planner."
 you_give:
   - A few lines on the job, such as what it is for, when and where
   - Who it is for, and what they should do or see differently
@@ -33,6 +37,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the job. It writes the brief and the mark plan, then stops.
   - Sketch the ideas on paper and make a few finished options. Attach the images, tell it the smallest size, and say "carry on".
+output_sample:
+  input:
+    - "A few lines on the design job: what it is for, when and where"
+    - Who it is for, and what they should do or see differently
+    - Limits you already know, such as budget or size (optional)
+    - Your brand file (optional)
+    - Your finished logo options as images, and the smallest size you will use
+  prerequisites:
+    - An AI that can read attached files and images
+    - A day or more to sketch ideas and finish a few options
+  output:
+    - name: Design brief
+      contains: Core facts, the one idea the work must carry, three to five limits, and what is left free.
+    - name: Brand mark plan
+      contains: The answer already in the brief, the obvious options tried, one surprising move, and ideas to sketch first.
+    - name: Logo strength test
+      contains: Each finished option scored out of 100 on seven tests, plus a one-colour and small-size check.
+    - name: Keep, fix or drop call
+      contains: A clear call for each option with one reason, and for a redesign a note on whether the fault is real.
+    - name: Hand-back summary
+      contains: Each step's file, and every missing item listed in one place.
 how_it_works:
   - title: Writes the brief
     text: Pulls out the core facts, picks the one idea the work must carry and sets three to five limits, with what is left free.

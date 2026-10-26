@@ -32,7 +32,7 @@ How to start:
 
 ## Steps
 
-1. **Start with the place.** Describe the climate, land, rock, wood and water in six to eight lines. If the person gave a place, use it. If they gave none, ask or choose one that fits the idea and say why.
+1. **Start with the place.** Describe the climate, land, rock, wood and water in six to eight lines. If the person gave a place, use it. If they gave none, choose one that fits the idea, label it ASSUMED and say why. If they gave no world idea at all, ask for one in a single short question. If they then say to go ahead anyway, choose a place, label it ASSUMED and build the whole plan from it.
 2. **Work out food, building and trade.** From the place, list what people eat, what they build with and what they trade. For each item name where it comes from. Reject any item the place cannot provide, or add a trade route to explain it.
 3. **Detail one home.** Describe one typical home: floor plan with each room and its use, the roof and walls, where heat, water and animals are kept, and who sleeps where. Every material must come from step 2.
 4. **Work out quarrels.** Decide how this society settles quarrels: who hears them, what is owed, who pays when the settlement fails. Write one example quarrel and its outcome.
@@ -62,7 +62,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> for <part>`. When the idea gives no place, ask. Never copy a real culture's customs as a shortcut. Build from the place.
+Write `MISSING: <what> for <part>`. When the idea gives no place, choose one and label it ASSUMED. Do not mark every section MISSING. Never copy a real culture's customs as a shortcut. Build from the place.
 
 ## Avoid
 

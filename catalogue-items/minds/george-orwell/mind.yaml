@@ -16,6 +16,27 @@ use_cases:
   - "Turn a big idea into a short fable or story people remember"
   - "Check a speech or announcement for spin before you send it"
   - "Explain what you really think about a hard question, without hedging"
+not_for:
+  - "You need a legal, medical or pay decision: ask a lawyer, your HR team or the person who made the decision."
+  - "You have no facts yet and only a vague idea: first go and see the thing yourself, then bring it back."
+  - "You want short, plain sentences for fiction, with feeling kept beneath the action: use Ernest Hemingway."
+output_sample:
+  input:
+    - The draft you want to fix, such as a memo, report, speech or announcement
+    - The facts behind it, and who made the decision
+    - Who will read it and what you want them to do
+    - The one point you are trying to make (optional)
+  output:
+    - name: Plain rewrite
+      contains: Your text rewritten in short, concrete sentences, with the soft labels swapped for the plain words.
+    - name: Cut notes
+      contains: Each phrase that was cut or changed, with a short reason, such as padding, jargon or passive voice.
+    - name: Spin check
+      contains: The plain word for what is happening, and whether you would still be willing to say it.
+    - name: Motive check
+      contains: Which of the four reasons for writing is driving the piece, named in plain words.
+    - name: Question before you send
+      contains: One question to answer before you send, such as whether you saw the thing yourself.
 seats:
   - {seat: "Clear prose (the plain-English check)", asks: "What am I trying to say, and what words will say it most plainly?"}
   - {seat: "Honesty and spin", asks: "If we used the plain word for this, would we still be willing to say it?"}

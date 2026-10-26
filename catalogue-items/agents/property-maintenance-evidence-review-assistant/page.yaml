@@ -1,55 +1,114 @@
 new_slug: property-maintenance-evidence-review-assistant
 name: Property maintenance evidence review assistant
 headline: Property maintenance evidence review assistant
-summary: A maintenance handover, access constraints and overdue decisions.
+summary: Turn open repair tickets and access notes into a property maintenance handover with overdue decisions and closure checks.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A maintenance handover, access constraints and overdue decisions. Share open maintenance tickets, access permissions, appointment windows, responsible contractors and approved emergency escalation rules. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your open repair tickets, who approved entry, visit dates and contractors. It writes a property maintenance handover for the next lead, lists overdue decisions and shows what changed. A repair counts as done only when a record says so.
 explain: |-
-  A maintenance handover, access constraints and overdue decisions.
+  A property lead goes on leave. The ticket list says three repairs are complete, one visit is booked, and a tenant said yes to entry sometime last week. The next person has to guess which of those facts still hold. This agent replaces the guessing with a dated handover.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Tenant details are minimized; no entry permission, repair completion or safety clearance is inferred. Missing tools or evidence stay visible in the final summary.
+  Each review it compares your tickets with the short record from the last one. It sorts every ticket as new, changed, unchanged or missing from the export. It checks access ticket by ticket: who approved entry, for which window, and whether that window has passed. A ticket marked complete stays open until a contractor report, sign-off or similar record shows who did the work and when.
+
+  It prepares paper only. It does not book a contractor, message a tenant or grant entry. Tenant details stay minimal: a ticket ID and a short location, with no names, phone numbers or door codes. Danger to a person or the building goes to your emergency rule first.
 when:
-  - You need a maintenance handover, access constraints and overdue decisions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A property manager goes on leave and a colleague takes over the open repairs.
+  - The ticket system says "complete" but nothing shows the contractor finished.
+  - A contractor visit needs tenant access that was agreed for a window that has now moved.
+  - It is review day and you want to know what changed since the last review.
+not_for:
+  - A gas smell, fire, flooding, exposed wiring or anyone at risk right now. Follow your approved emergency rule and call the emergency contact in it. Use this agent afterwards to write it up.
+  - You want one quick note for the next person and no tracking. Use the Handover note writer.
+  - You want the agreed actions from a meeting turned into a list. Use the Executive action register keeper.
+  - You need to know who covers a team while people are away. Use the Weekly team coverage review assistant.
 you_give:
-  - Open maintenance tickets, access permissions, appointment windows, responsible contractors and approved emergency escalation rules. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - Open maintenance tickets, each with an ID, a short location, a status and a date (from your ticket tool or a spreadsheet export)
+  - Access approvals and appointment windows (from tenant messages, contractor bookings or your calendar)
+  - The contractor and the owner for each ticket
+  - Your approved emergency escalation rule, with contact roles (from your handbook or lease pack)
+  - The name of the incoming property lead and the review date
+  - Closure records for tickets marked complete, such as a contractor report or sign-off (optional)
+  - Last review's record (optional, from the second run on)
 you_get:
-  - A maintenance handover, access constraints and overdue decisions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A maintenance handover for the incoming lead, with overdue and time-critical tickets first
+  - "Access limits for each ticket: the approved window, who approved it and what is still unconfirmed"
+  - A list of overdue decisions, each with what must be decided and who decides
+  - "A closure check for every ticket marked complete: closed with proof, or still open"
+  - MISSING lines for anything your sources do not say, and a short record to start the next review from
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent to Claude, ChatGPT or Gemini with its helpers, the Prepare a property maintenance handover workflow and the Source note summariser. Or download the pack and attach it.
+  - Paste your ticket list and access notes. Say the review date and who is taking over. From the second review, paste last review's record too.
+  - Read the first section. Check that no ticket is marked done without a closure record, and that no entry is shown as allowed without a named approval.
+  - Fill in each MISSING line yourself, or ask the person who knows.
+  - Send any message and book any visit yourself. The agent only drafts.
+  - In a chat-only tool, copy the record it gives you and paste it in at the next review. With file access, it saves the record for you. Installing sets up no schedule, so you start each run.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep ticket ID, minimal location, approved window, accepted owner and closure reference. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A maintenance status, accepted appointment or access approval changes.
-  - title: Choose the next step
-    text: Run prepare-a-property-maintenance-handover for changed evidence or a due review. If completion is claimed, check the actual ticket closure evidence before marking it complete. Missing access or safety approval remains a blocker for the responsible professional.
-  - title: Check and save evidence
-    text: Tenant details are minimized; no entry permission, repair completion or safety clearance is inferred. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last review
+    text: "Loads the saved record if it belongs to this property group. On a first run it builds a baseline with you: the review date, who takes over and which emergency rule applies."
+  - title: Look for danger first
+    text: Scans tickets and notes for danger to a person or the building. If it finds any, the first line of the handover points to your emergency rule. It does not judge how serious the problem is.
+  - title: Sort the tickets
+    text: Marks each ticket new, changed, unchanged, closed with proof or missing from the export. A ticket missing from the export is unknown, not closed.
+  - title: Check access and closure
+    text: Lists the approved entry window and approver for each visit. For tickets marked complete, the Source note summariser reads the contractor report or sign-off and says what it proves.
+  - title: Write the handover
+    text: The Prepare a property maintenance handover workflow runs the Handover note writer, then the Executive action register keeper. Overdue decisions go first.
+  - title: Check and save
+    text: Checks that no entry permission, repair or safety clearance is invented. Saves the files, a run log and the new record, and keeps the old record.
 output_shape: |-
-  Scope and source coverage
-  A maintenance handover, access constraints and overdue decisions.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  HANDOVER <review date>, for <incoming lead>
+  URGENT: <danger reported, and the step in your emergency rule, or none reported>
+  FIRST: <overdue and time-critical tickets>
+
+  TICKETS
+  <ID> | <short location> | <issue> | <status> | owner <name or MISSING>
+    access: <approved window and approver, or MISSING>
+    closure: <record that proves it, or not evidenced>
+
+  OVERDUE DECISIONS
+  <ID> | decide: <what> | who decides: <role from your rules, or MISSING> | open since <date>
+
+  CHANGES SINCE LAST REVIEW  <new | changed | closed with proof | missing from export>
+  MISSING  <each gap and the ticket it affects>
+  CHECKS MISSED  <one line each, or none>
+  RECORD FOR NEXT REVIEW  <ticket ID | short location | approved window | owner | closure reference>
+output_sample:
+  input:
+    - Your open maintenance tickets, with ID, short location, status, dates, contractor and owner
+    - Access approvals and appointment windows
+    - Your approved emergency escalation rule
+    - The incoming property lead and the review date
+    - Closure records for tickets marked complete (optional)
+    - Last review's record (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - The helper skills added, or the pack attached
+    - Your emergency escalation rule written down, with who to call
+  output:
+    - name: Handover
+      contains: The note for the incoming lead. Urgent items and overdue tickets come first, then every open ticket with its status and owner.
+    - name: Access limits
+      contains: For each visit, the approved window, who approved it and what is not yet confirmed. No entry is shown as allowed without a named approval.
+    - name: Overdue decisions
+      contains: Each decision that was due, what must be decided, who decides and how long it has been open.
+    - name: Closure checks
+      contains: For each ticket marked complete, what the contractor report or sign-off proves. Tickets without proof stay open.
+    - name: Changes since the last review
+      contains: New tickets, changed tickets, tickets closed with proof and tickets missing from the export.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Every fact the sources did not give, and every check that could not run.
+    - name: Record for the next review
+      contains: Ticket ID, short location, approved window, owner and closure reference. Nothing else personal is kept.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Tenant details are minimized; no entry permission, repair completion or safety clearance is inferred.
+  - what: Emergency rule
+    how: Paste your real rule and the contact roles. Without it, the first line says MISSING and the agent will not judge a danger ticket.
+  - what: What overdue means
+    how: Say what counts as overdue, such as a missed visit date or a set number of days open. The agent will not pick a number for you.
+  - what: What counts as proof
+    how: List the proof for each kind of job, such as a contractor report for a repair. The closure check uses your list.
+  - what: How much location to keep
+    how: Choose the level, such as flat and room. The less you keep, the safer the record.
 judge:
   - Tenant details are minimized; no entry permission, repair completion or safety clearance is inferred.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +121,26 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep one record file per property group, with ticket IDs that never change, so a renamed ticket is not read as a new one.
+  - Write down who may approve entry for each kind of visit, so the access line stops coming out as MISSING.
+  - Save your list of what counts as closure proof for each type of job, and paste it in every run.
+  - Record checks that need a person, such as a contractor sign-off, and finish them before you rely on the handover.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Keeps the record between reviews. In a plain chat tool you paste the record in each time.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your ticket tool export, as a spreadsheet or pasted list.
+    - Contractor reports and sign-offs for finished work.
+    - Your access rules, saying who may approve entry.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Handover
+    meaning: The note one person gives the next, so they know what is open and what is urgent.
+  - term: Closure record
+    meaning: "Proof a repair is finished: who did it, when, and a report or sign-off."
+  - term: Access window
+    meaning: The dates and times someone is allowed to enter.
+  - term: Overdue decision
+    meaning: A choice that was due and still has no answer.
+  - term: Baseline
+    meaning: The first review. Later reviews are compared with it.

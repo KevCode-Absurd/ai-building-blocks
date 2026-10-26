@@ -15,10 +15,10 @@ outputs:
   - {type: audit_report}
 uses: [subscription-offer-designer, subscription-payback-checker, subscription-cancel-flow-builder, subscription-page-take-rate-checker]
 steps:
-  - {uses: subscription-offer-designer, note: "Designs the subscription offer: discount, cadence and first-order deal."}
-  - {uses: subscription-payback-checker, note: "Tests the designed offer for payback time and the most you can pay to win a subscriber."}
-  - {uses: subscription-cancel-flow-builder, note: "Builds the cancel and pause steps for the same offer, so churn does not undo the payback."}
-  - {uses: subscription-page-take-rate-checker, note: "Checks the live page shows the offer clearly and that enough first orders choose it."}
+  - {uses: subscription-offer-designer, note: "Designs the subscription offer: discount, cadence and first-order deal. Hands the offer to steps 2, 3 and 4."}
+  - {uses: subscription-payback-checker, note: "Tests the designed offer for payback time and the most you can pay to win a subscriber. Hands step 3 the most discount a save offer can give and still pay back."}
+  - {uses: subscription-cancel-flow-builder, note: "Builds the cancel and pause steps from your own cancel reasons and the offer from step 1, kept inside step 2's payback limit so churn does not undo it. You put it live, and step 4 does not read it."}
+  - {uses: subscription-page-take-rate-checker, note: "Uses a capture of your live page after a few weeks of sign-ups, not step 3's cancel flow, and the offer from step 1 to check the page shows it clearly and that enough first orders choose it."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/launch-a-subscription-offer-you-can-afford-to-fund/skeleton.yaml

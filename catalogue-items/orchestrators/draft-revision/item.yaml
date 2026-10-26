@@ -1,24 +1,26 @@
 slug: draft-revision
 name: "Revise a draft with the door open"
-summary: "Paste a rested draft. Get its holes marked, its meaning found, a cut of 10%, plain wording and a reader plan."
+summary: "Revise a story or book draft in seven steps. Paste a rested draft; get holes marked, a 10% cut, plain words and a reader plan."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: copy_draft, required: true}
+  - {type: document, required: true}
+  - {type: feedback_notes, required: false}
 outputs:
   - {type: plan}
+  - {type: document}
 uses: [cold-reread-marker, hidden-theme-finder, ten-percent-cutter, plain-english-editor, dialogue-ear-checker, first-reader-question-writer, reader-feedback-sorter]
 steps:
-  - {uses: cold-reread-marker, note: "A page-by-page list of what is wrong, large and small."}
-  - {uses: hidden-theme-finder, note: "A one-line meaning and the scenes to add, sharpen or drop for it."}
-  - {uses: ten-percent-cutter, note: "The draft at 90% of its length, with a log of what went."}
-  - {uses: plain-english-editor, note: "Plain words in place of timid ones."}
-  - {uses: dialogue-ear-checker, note: "Dialogue that rings true, with a score and each fix shown."}
-  - {uses: first-reader-question-writer, note: "A short question sheet to send with the draft."}
-  - {uses: reader-feedback-sorter, note: "A ranked rewrite list from many readers' notes."}
+  - {uses: cold-reread-marker, note: "A page-by-page list of what is wrong, large and small. Hands the list of what recurs to step 2."}
+  - {uses: hidden-theme-finder, note: "A one-line meaning and the scenes to add, sharpen or drop for it. Hands the theme plan to step 3."}
+  - {uses: ten-percent-cutter, note: "The draft at 90% of its length, with a log of what went. Hands the cut draft to step 4."}
+  - {uses: plain-english-editor, note: "Plain words in place of timid ones. Hands the edited draft to step 5."}
+  - {uses: dialogue-ear-checker, note: "Dialogue that rings true, with a score and each fix shown. Skipped if the draft has no dialogue."}
+  - {uses: first-reader-question-writer, note: "A short question sheet to send with the draft. The run pauses here for your readers."}
+  - {uses: reader-feedback-sorter, note: "Uses your readers' notes, which come back after the pause in step 6, not step 6's question sheet. Hands you a ranked rewrite list."}
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-king, william-zinsser]

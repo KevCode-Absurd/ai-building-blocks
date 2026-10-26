@@ -1,6 +1,6 @@
 new_slug: creative-test-reader
 name: "Creative test reader"
-summary: "Paste ad results by ad set. Get keep, leave or replace calls, false winners and a score."
+summary: "Paste your ad test results by ad set. Get keep, leave or replace calls for each ad, false winners flagged and a score for how safe the read is."
 job: read-ad-results
 thinking: high
 thinking_why: "It weighs conflicting rules and spots false winners in the numbers, so a stronger model reads the data better."
@@ -17,6 +17,10 @@ when:
   - A test batch has run for a week or two and you need to know which ads to keep, leave or replace.
   - One ad is eating most of the spend and you can't tell if it is a winner or just first in line.
   - Your click-through rate looks great but sales are flat.
+not_for:
+  - "You want to decide how much to spend or how to bid: that is a budget call, so use your own break-even numbers or ask a media buyer."
+  - "Your ads have only a few hundred views each: wait for more spend before you read them, because the skill will not give a verdict."
+  - "Your sales dropped across the whole store: check tracking, stock and your site first, because this reads ad creative only."
 
 you_give:
   - An ad export with one row per ad and its ad set (spend, impressions, purchases, ROAS or CPA, CPC, CTR)
@@ -36,6 +40,32 @@ how_to_use:
   - Say which attribution window the export uses and whether existing customers are excluded.
   - Do the leave-alone calls first. Then switch off or replace only what the skill marks, in sets that miss target.
   - Run it again each week, not each day, and change one thing between runs.
+output_sample:
+  input:
+    - Your ad export from Ads Manager, one row per ad with its ad set, spend, views, purchases and ROAS or CPA
+    - Your target ROAS or CPA
+    - Click, add to cart and checkout numbers (optional)
+    - Your attribution window and whether existing customers are excluded (optional)
+    - One line on each ad's angle, format and hook (optional)
+  output:
+    - name: AD SET VERDICTS
+      contains: Each ad set against your target, marked leave alone or change, with a one-line reason.
+    - name: AD TABLE
+      contains: Every ad with its numbers and a keep, leave, replace or retest call, plus the reason.
+    - name: TOP SPENDER CALL
+      contains: Whether the biggest spender is a true winner or just first in line, and why.
+    - name: FALSE WINNERS
+      contains: Ads that got clicks but few sales, with what to check next.
+    - name: PATH READ
+      contains: What happened at the stop, the click and after the click.
+    - name: INCREMENTAL NOTE
+      contains: How far the reported return may be from real extra sales, or a note that it was not given.
+    - name: CONCEPT STATUS
+      contains: Whether each concept is alive, dead or has too few ads to judge.
+    - name: NEXT BRIEF
+      contains: "What to make next: more formats, new bodies, what to drop and one change to retest."
+    - name: READ SCORE
+      contains: A score out of 100 for how safe the read is to act on, with the sum shown.
 
 how_it_works:
   - title: Fixes the frame

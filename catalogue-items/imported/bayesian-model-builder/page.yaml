@@ -2,35 +2,119 @@ thinking: high
 thinking_why: Picking the right model for your data takes careful judgement.
 new_slug: bayesian-model-builder
 name: Bayesian model builder
-summary: Give it your data and the question. Get a Python model that estimates
-  what drove your results, with ranges, not guesses.
+summary: Build a Bayesian model in Python from your data and one question. Get estimates with ranges, fit checks and a plain-words answer.
 job: track-numbers
 headline: Bayesian model builder
-subhead: Give it your data and the question. Get a Python model that estimates
-  what drove your results, with ranges, not guesses. Bring your data. Use the
-  result to plan your next step.
+subhead: Give your AI a spreadsheet and one question, such as how much a campaign lifted sales. It writes and fits a Bayesian model in Python with PyMC. You get the model file, fit checks, estimates with likely ranges and a plain answer with its limits.
 explain: |
-  A Python model that estimates what drove your results and shows the range of likely answers, not a single guess. You bring the data and the question, and the AI chooses a starting point: a simple scaffold, an established model from your field, or a smaller piece of a bigger one.
+  A single number can hide how unsure you are. A Bayesian model gives a range of likely answers, like "sales rose by 4 to 9 percent", and shows how much the data supports each one. This skill builds that model for you in Python with PyMC, a free modelling tool.
 
-  It builds the model in PyMC, checks that your assumptions are plausible before fitting, fits it, then diagnoses the fit with ArviZ and evaluates how well it predicts. It uses supported algorithms from the pymc-extras package instead of custom code, and only loads the reference material the task needs. You expand or simplify the model as checks suggest. You need a Python environment with these packages.
+  Your AI picks a starting point: a simple model, an established model from your field, or a small piece of a bigger one. It checks that the model's guesses are plausible before it sees your data, fits it, and tests the fit. It then checks whether the model can recreate your real data. If a check fails, it changes the model, not the story.
+
+  It needs a Python setup that can run code. It uses supported tools from the pymc-extras package, not custom code. It will say if a result cannot be trusted, and it will not call a pattern in your data a proven cause.
 when:
   - You want to know how much a campaign lifted sales, with an honest range.
-  - A simple regression ignores groups in your data and misleads you.
-  - You need priors that make sense before you fit anything.
-  - An existing model fit looks odd and needs diagnosing.
+  - A simple regression ignores groups in your data, such as stores or regions, and misleads you.
+  - You need to set sensible starting assumptions before you fit anything.
+  - A model you already fitted looks odd and needs diagnosing.
+not_for:
+  - You want a quick trend or average from a sheet. Use the Data analyst.
+  - You want a simple regression or a forecast with plain-words output. Use the Regression and forecast modeller.
+  - You already have a fitted Bayesian model and only want it checked. Use the Statistical model checker.
+  - You cannot run Python. Your AI can write the model code, but nothing will be fitted.
 you_give:
-  - Your data
-  - The question you want answered
-  - Prior knowledge, if any (optional)
-  - An existing model (optional)
+  - Your data as a spreadsheet or CSV
+  - The question you want answered, in one sentence
+  - What each column means
+  - What you already know that should shape the model (optional)
+  - A model you already built (optional)
 you_get:
-  - A PyMC model in Python
-  - Prior plausibility checks
-  - Fit diagnostics
-  - Estimates with uncertainty ranges
+  - A Python file with the model
+  - A check of what the model predicts before it sees your data
+  - Fit checks with a plain verdict on whether to trust them
+  - Estimates with likely ranges
+  - A plain answer to your question, with its limits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and read your data files.
+  - Get a Python setup first. You need pymc, arviz and pymc-extras installed. nutpie is optional and speeds up the run. A chat window alone cannot do this.
+  - Open an AI tool that can run Python and read your files, such as Claude Code. Add this skill.
+  - Give it your data file and your question in one sentence. Say what each column means.
+  - Read its plan first. Check the model fits your situation, then let it fit.
+  - Read the fit checks before the estimates. If they say do not trust, ask it to change the model, not to hide the warning.
+  - Use the ranges in your plan, not just the middle number. Keep the limits section with the answer.
+how_it_works:
+  - title: Frames the question
+    text: States what it estimates, what each row is, and whether the claim is a prediction, an effect or a cause.
+  - title: Builds the model
+    text: Picks a likelihood and starting assumptions that match your data, in PyMC.
+  - title: Checks the assumptions
+    text: Simulates data from the model before fitting, to see if the guesses are plausible.
+  - title: Fits it
+    text: Runs the sampler, with a short test fit first and a full fit for results you report.
+  - title: Diagnoses the fit
+    text: Looks at divergences, R-hat and effective sample size, and explains each problem it finds.
+  - title: Checks and answers
+    text: Compares simulated data to your real data, then states the answer with ranges and limits.
+output_shape: |
+  QUESTION AND MODEL
+  <question, model choice, what was assumed>
+
+  MODEL FILE
+  <model.py with the seed set>
+
+  PRIOR CHECK
+  <what the model predicts before seeing data, and whether it is plausible>
+
+  FIT CHECKS
+  <parameter | divergences | R-hat | effective sample size | verdict>
+
+  ESTIMATES
+  <parameter | interval (probability and type) | meaning in plain words>
+
+  PREDICTIVE CHECK
+  <where simulated data matches or misses the real data>
+
+  ANSWER AND LIMITS
+  <answer with its range, what the model cannot say, next change to try>
+output_sample:
+  input:
+    - Your data as a spreadsheet or CSV
+    - Your question in one sentence
+    - What each column means
+    - What you already know about the topic (optional)
+  prerequisites:
+    - An AI tool that can run Python and read your files
+    - Python with pymc (version 6 or newer), arviz and pymc-extras installed
+  output:
+    - name: Model file
+      contains: The model as Python code you can rerun, with a fixed random seed.
+    - name: Prior check
+      contains: What the model predicts before it sees your data, and whether that is plausible.
+    - name: Fit checks
+      contains: Divergences, R-hat and sample size per parameter, with a verdict on trust.
+    - name: Estimates
+      contains: Each main parameter with its interval, such as 89 percent, and what it means.
+    - name: Predictive check
+      contains: How closely data simulated from the model matches your real data.
+    - name: Answer and limits
+      contains: The answer with its range, what the model cannot say and what to try next.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run Python, install packages and read your data files.
+    - name: A Jupyter notebook
+      why: You can rerun the model file and view the plots yourself.
+  inputs:
+    - Data grouped by store, region, week or customer, with the group in a column
+    - A rough range for what you expect, such as a typical lift
+    - The decision the answer will feed
+terms:
+  - term: Bayesian model
+    meaning: A model that gives a range of likely answers and updates it as it sees data.
+  - term: PyMC
+    meaning: A free Python tool for building Bayesian models.
+  - term: Prior
+    meaning: What the model assumes before it sees your data.
+  - term: R-hat
+    meaning: A fit check. Values near 1 mean the runs agree. Higher values mean do not trust the result.
+  - term: Interval
+    meaning: The range where the true value likely sits, such as 89 percent likely.

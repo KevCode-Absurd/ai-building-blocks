@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It moves orders by set rules.
 new_slug: fulfillment-location-rerouter
 name: Fulfillment location rerouter
-summary: Name the orders and the new location. Get fulfillment moved between
-  warehouses. Changes live orders.
+summary: Move open Shopify orders from one warehouse to another. Preview first, then confirm. Use it to reroute fulfillment when a location is full or closing.
 job: run-your-store
 headline: Fulfillment location rerouter
-subhead: Open Shopify orders are moved from one warehouse to another, for
-  example when a location is full or a region needs different routing. This
-  changes live orders, so it previews first.
+subhead: Give it your store, the location to move orders from and the location to move them to. It finds the open orders and shows what would move. Nothing changes until you confirm.
 explain: |
   Open Shopify orders are moved from one warehouse to another, for example when a location is full or a region needs different routing. This changes live orders, so it previews first.
 
@@ -16,22 +13,44 @@ explain: |
 when:
   - One warehouse is overloaded and another has room.
   - A location is closing and its open orders need a new home.
-  - You want to send orders from one region to a closer site.
-  - You want to see what will move before changing anything.
+  - You want to send orders to a site closer to the buyer.
+  - You want to see which orders would move before you change anything.
+not_for:
+  - "You need to move stock between locations: this does not move inventory, so transfer stock in Shopify Admin first."
+  - "You want to check stock levels at the new location: use the multi-location inventory audit before you move orders."
+  - "You need to move just one or two orders: change the location by hand in Shopify Admin."
 you_give:
-  - Store address
-  - Source location
-  - Destination location
+  - Your store address, like mystore.myshopify.com
+  - The ID of the location to move orders from
+  - The ID of the location to move orders to
   - Specific order numbers (optional)
-  - Shopify login with fulfilment write access
 you_get:
-  - Preview of orders to move
-  - Confirmation step before changes
-  - Moved fulfilment orders
-  - Summary of what changed
+  - A preview of the orders that would move
+  - A confirm step before any change
+  - Open orders moved to the new location
+  - A summary on screen and a CSV log of every order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Use an AI that can run commands, such as Claude Code, Codex or Gemini CLI. A plain chat window cannot change your store.
+  - Sign in to your store with the Shopify CLI. Allow read_orders and write_fulfillments access.
+  - Paste the skill and give your store address, the source location ID and the destination location ID. Add order numbers if you want only some orders moved.
+  - Run the preview first. Check the list of orders and the destination.
+  - Check that the destination has stock for every item. This skill does not check or move stock.
+  - Tell your AI to go ahead. Then open the CSV log and check for errors.
+output_sample:
+  input:
+    - Your store address
+    - The location to move orders from
+    - The location to move orders to
+    - Specific order numbers (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - A Shopify login with read_orders and write_fulfillments access
+  output:
+    - name: Preview list
+      contains: The open orders at the source location that would move, shown before anything changes. Preview is on by default.
+    - name: Move step
+      contains: Each confirmed order is reassigned to the new location, and any order that fails is skipped and noted.
+    - name: Outcome summary
+      contains: Counts of orders at the source, orders moved and errors, shown on screen when the run ends.
+    - name: routing_log CSV
+      contains: One row per order with order name, fulfillment order ID, source, destination and status.

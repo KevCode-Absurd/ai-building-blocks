@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches by rule and drafts entries.
 new_slug: intercompany-balance-matcher
 name: Intercompany balance matcher
-summary: Give it each entity's balances. Get mismatches found, settlement netted
-  and elimination entries drafted.
+summary: Match intercompany balances across your group entities. Find each mismatch, net settlements and draft elimination entries for month end.
 job: money-and-investing
 headline: Intercompany balance matcher
-subhead: Your group's internal balances matched across entities, with each
-  mismatch traced, settlements netted and elimination entries drafted. That
-  clears the way for a clean consolidation at month end.
+subhead: Your group's internal balances matched across entities, with each mismatch traced, settlements netted and elimination entries drafted. That clears the way for a clean consolidation at month end.
 explain: |
   Your group's internal balances matched across entities, with each mismatch traced, settlements netted and elimination entries drafted. That clears the way for a clean consolidation at month end.
 
@@ -19,6 +16,10 @@ when:
   - You want to net many internal payments into fewer cash moves.
   - A new internal service needs a pricing and booking setup.
   - Old internal balances keep piling up unsettled.
+not_for:
+  - "You have one company ledger or a single payment with no group partner: use a standard bank or AR/AP reconciliation instead."
+  - "You need final tax or transfer pricing advice: ask a local tax adviser, since this only drafts notes and entries."
+  - "You want the full consolidated accounts: use your consolidation tool or your accountant, and bring these elimination entries to it."
 you_give:
   - Each entity's intercompany balances
   - The entity map and transaction types
@@ -30,7 +31,28 @@ you_get:
   - Draft elimination entries
   - Notes on pricing and agreements
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste each entity's internal balances, your entity map and the exchange rates used. Add your tolerance policy if you have one.
+  - Ask your AI to match the balances and list every difference with its likely cause.
+  - Check the Difference Resolution Log. Small differences below your tolerance are written off to the buyer's profit and loss, so make sure each is listed and approved by a named owner before posting.
+  - Review the draft elimination entries with your accountant. Have a local tax adviser check any tax rules and rates.
+  - The matching grid is best run with code. If your AI cannot run code, it will work the numbers by hand, so check the totals.
+output_sample:
+  input:
+    - Each entity's intercompany balances, due-from and due-to, by partner
+    - The entity map and the types of internal deals, such as goods, services, loans and royalties
+    - The exchange rates each entity used
+    - Your matching tolerance policy (optional)
+    - Your inventory held from internal purchases (optional)
+  prerequisites:
+    - An AI that can run code, if you want the matching grid calculated by script
+    - A named owner to approve any small-difference write-offs before you post them
+  output:
+    - name: Matching Matrix
+      contains: Each pair of entities with their due-from and due-to balances, the difference, and how old it is.
+    - name: Difference Resolution Log
+      contains: Each mismatch with its cause (timing, exchange rate, missing entry or price dispute), an owner, a fix and a deadline.
+    - name: Elimination Entries
+      contains: The full set of draft entries for balances, income and cost, unrealized profit and internal dividends, with deferred tax effects.
+    - name: Compliance Notes
+      contains: Status of agreements and pricing papers, how long balances have sat unsettled, and room left under the interest cap.

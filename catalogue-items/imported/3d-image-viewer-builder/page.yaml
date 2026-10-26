@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It uses a few set viewer functions.
 new_slug: 3d-image-viewer-builder
 name: 3D image viewer builder
-summary: Give it a 3D scan or mesh. Get MATLAB viewer code with slices, overlays
-  and marked regions.
+summary: Build a 3D image viewer in MATLAB. Give it a scan or mesh and get code to scroll slices, overlay masks and draw marked regions.
 job: build-software
 headline: 3D image viewer builder
-subhead: Give it a 3D scan, volume file or surface mesh, plus any mask to lay on
-  top. It picks the right MATLAB display call for your data and writes the
-  viewer code. You get slice scrolling, overlay display, drawn regions with
-  notes and a starter app layout if you want one.
+subhead: Give it a 3D scan, volume file or surface mesh, plus any mask to lay on top. It picks the right MATLAB display call for your data and writes the viewer code. You get slice scrolling, overlay display, drawn regions with notes and a starter app layout if you want one.
 explain: |
   You get MATLAB code that opens a 3D scan or surface mesh in an interactive viewer. You can scroll through slices, lay a colour mask on top, and draw marked regions and notes right on the volume.
 
@@ -19,11 +15,15 @@ when:
   - You need to lay a segmentation mask over the original scan.
   - You want users to draw regions of interest on a volume.
   - You are building a small app around a 3D data viewer.
+not_for:
+  - "You do not have the Image Processing Toolbox: the skill falls back to older isosurface and patch calls, which are slower, so get the toolbox first."
+  - "You only need a quick still picture of a slice: use MATLAB's imshow on one slice, no viewer needed."
+  - "You do not use MATLAB: ask a developer for a viewer in your own tool, because this writes MATLAB code only."
 you_give:
-  - A 3D volume, scan file or mesh
+  - Your 3D volume, scan file or surface mesh
   - A mask or label volume to overlay (optional)
-  - Which shapes or regions you want to mark
-  - MATLAB with the Image Processing Toolbox
+  - The shapes or regions you want to mark
+  - Whether you want a plain viewer or a small app (optional)
 you_get:
   - MATLAB code for the viewer
   - Overlay and mask display
@@ -31,8 +31,30 @@ you_get:
   - Slice scrolling controls
   - A starter app layout (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Image Processing Toolbox.
+  - Open your AI chat and paste in the skill text from this page.
+  - Paste in the file type of your scan (DICOM, NIfTI or mesh) and say what you want to see, such as slices, a mask overlay or drawn regions.
+  - Say if you want a small app around the viewer.
+  - Run the code it gives you in MATLAB. You need the Image Processing Toolbox. DICOM and NIfTI files also need the Medical Imaging Toolbox.
+  - Check the scan opens with the right size and units. Ask your AI to fix anything that looks off.
+output_sample:
+  input:
+    - Your 3D volume, scan file (DICOM, NIfTI or NRRD) or surface mesh
+    - A mask or label volume to lay on top (optional)
+    - The shapes or regions you want to draw and mark
+    - "What you want to build: a plain viewer or a small app"
+  prerequisites:
+    - MATLAB with the Image Processing Toolbox
+    - The Medical Imaging Toolbox, if you load DICOM, NIfTI or NRRD files
+  output:
+    - name: Viewer setup
+      contains: Code that creates the 3D viewer and shows your volume with volshow, set to the right units and spacing.
+    - name: Surface mesh display
+      contains: Code that shows a surface mesh in the viewer using a Surface object, not the older isosurface call.
+    - name: Overlay display
+      contains: Code that lays your mask or label volume over the scan in colour.
+    - name: Annotations
+      contains: Code that lets users draw shapes on the volume, with a callback that runs when a shape moves.
+    - name: Rendering style and streaming
+      contains: Code to change how the volume looks and to feed in new volume data over time.
+    - name: App layout
+      contains: A starter app that holds the viewer, with an optional colorbar and linked viewers.

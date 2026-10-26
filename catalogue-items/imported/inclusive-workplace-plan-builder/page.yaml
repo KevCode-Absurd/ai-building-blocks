@@ -2,36 +2,96 @@ thinking: medium
 thinking_why: It builds a plan from your goals and team size.
 new_slug: inclusive-workplace-plan-builder
 name: Inclusive workplace plan builder
-summary: Describe your team. Get an inclusion plan, fair hiring steps, group
-  ideas and measures to track.
+summary: Describe your team and goals. Get an inclusion plan with a roadmap, fair hiring steps, mentoring ideas and a scorecard to track progress.
 job: hire-people
 headline: Inclusive workplace plan builder
-subhead: A practical plan to make your workplace fairer, with hiring steps,
-  group ideas and numbers to track so you can see what changes. You describe
-  your team and get a plan sized to it, not a generic policy.
+subhead: Tell it your team size, how you hire and what you want in one or three years. It writes an inclusion plan sized to your team. You get a roadmap, fair hiring steps, a scorecard and answers for leaders who push back.
 explain: |
-  A practical plan to make your workplace fairer, with hiring steps, group ideas and numbers to track so you can see what changes. You describe your team and get a plan sized to it, not a generic policy.
+  An inclusion plan turns "we should do better" into dated steps with an owner and a measure. This skill builds a workplace inclusion plan from your own team size, hiring habits and goals, so it does not read like a generic policy.
 
-  The skill starts from your goals and size, then builds a one-year or three-year roadmap with milestones. It covers fair recruiting steps, bias training for managers, mentoring that spreads access, employee resource groups, and pay review. It also sets up surveys and a scorecard so progress is measured, and gives answers for leaders who push back. It works through prompts you can reuse for each area.
+  It starts with where you are now and what you do not know. Then it sets a few goals and a roadmap. It covers fair hiring steps, bias training for managers, mentoring, employee resource groups and a pay review step. It adds a scorecard and a survey plan so you can see what changes.
+
+  It is a plan for the whole workplace. For one fair job post, use the Inclusive job post writer. For survey questions only, use the Employee survey designer.
 when:
   - Leadership asks for an inclusion plan and you have nothing written.
-  - You want fairer hiring steps for a growing team.
+  - You want fairer hiring steps for a team that is growing.
   - You are starting an employee resource group.
-  - You need a way to measure whether inclusion is improving.
+  - You need a way to show whether inclusion is getting better.
   - Senior leaders are doubtful and you need your case ready.
+not_for:
+  - "You need a legal review, compliance check or pay audit: ask an employment lawyer or a specialist adviser. You can plan one with the HR compliance audit planner."
+  - "You only want a fair job post: use the Inclusive job post writer."
+  - "You only want survey questions: use the Employee survey designer."
 you_give:
-  - Your team size and industry
-  - Your current hiring and people practices
-  - Your goals for the next one to three years
-  - Survey data (optional)
+  - Your team size, industry and country
+  - How you hire, promote and set pay today
+  - Your goals for the next one or three years
+  - Who must approve the plan, and who may push back
+  - Survey results or team data you already have (optional)
 you_get:
-  - An inclusion roadmap with milestones
-  - Fair hiring steps
-  - Ideas for groups and mentoring
-  - A scorecard of measures
-  - Talking points for leaders
+  - A one-year or three-year roadmap with milestones
+  - Fair hiring steps you can follow
+  - Ideas for bias training, mentoring and groups
+  - A scorecard with measures and targets
+  - Talking points for doubtful leaders
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload the skill folder if your tool allows it.
+  - Paste your team size, industry, country and how you hire and set pay today.
+  - Say whether you want a one-year or three-year plan, and add your goals.
+  - Add any survey data you already have. Do not make up numbers you lack. The AI marks them MISSING.
+  - Read the scorecard first. Fill in the starting values from your own records.
+  - Share the plan with one leader and one employee. Ask a lawyer to check anything about pay or data you collect.
+how_it_works:
+  - title: Find the starting point
+    text: It sums up where you are now and says what it does not know.
+  - title: Set the goals
+    text: It writes three to five goals sized to your team.
+  - title: Build the roadmap
+    text: It adds milestones with an owner role and a measure for each.
+  - title: Write fair hiring steps
+    text: It covers how roles are written, screened and interviewed, and how choices are recorded.
+  - title: Add people practices
+    text: It adds manager bias training, mentoring, resource groups and a pay review step.
+  - title: Set measures and answers
+    text: It builds the scorecard and survey plan, then answers the pushback you expect.
+output_shape: |-
+  Starting point: <short paragraph, with what is unknown>
+  Goals: <3 to 5>
+  Roadmap: <when | milestone | owner | measure>
+  Fair hiring steps: <numbered list>
+  People practices: <bias training, mentoring, groups, pay review>
+  Scorecard: <measure | how to collect | starting value | target>
+  Survey plan: <who, when, what to ask>
+  Talking points for leaders: <question | answer>
+output_sample:
+  input:
+    - Your team size, industry and country
+    - How you hire, promote and set pay today
+    - Your goals for one or three years
+    - Survey results or team data (optional)
+  output:
+    - name: Starting point
+      contains: Where you are now, and what you do not yet know.
+    - name: Roadmap
+      contains: Milestones by quarter or year, each with an owner role and a measure.
+    - name: Fair hiring steps
+      contains: A numbered list from writing the role to recording the hiring choice.
+    - name: People practices
+      contains: Bias training, mentoring, resource groups and a pay review step.
+    - name: Scorecard
+      contains: Measures, how to collect each, starting value and target.
+    - name: Talking points for leaders
+      contains: Likely objections with a short, honest answer to each.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can draft the plan from your answers. A person with HR or legal skill should review it.
+  inputs:
+    - Your last staff survey results
+    - Headcount by team and level
+    - Your current hiring steps written down
+terms:
+  - term: Employee resource group
+    meaning: A staff-run group built around a shared background or interest.
+  - term: Scorecard
+    meaning: A short table of measures you check each quarter.

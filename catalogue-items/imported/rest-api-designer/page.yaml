@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies design rules but weighs trade-offs for your case.
 new_slug: rest-api-designer
 name: REST API designer
-summary: Describe what your service does. Get a clean REST API plan with routes,
-  status codes, paging and docs.
+summary: Plan a REST API before you build it. Describe your service and get routes, status codes, paging and OpenAPI docs.
 job: build-software
 headline: REST API designer
-subhead: "A complete plan for a REST API before anyone writes code: the routes,
-  the methods, the status codes and the docs. Mistakes caught here cost
-  minutes."
+subhead: "A complete plan for a REST API before anyone writes code: the routes, the methods, the status codes and the docs. Mistakes caught here cost minutes."
 explain: |
   A complete plan for a REST API before anyone writes code: the routes, the methods, the status codes and the docs. Mistakes caught here cost minutes. Caught after launch, they cost your users.
 
@@ -18,6 +15,10 @@ when:
   - Your existing API has inconsistent names and error messages.
   - A mobile team needs an API contract before the server exists.
   - You need paging and filtering on a list that keeps growing.
+not_for:
+  - You build a GraphQL or RPC-style service. This skill plans resource-based REST routes, so use a design method made for that style.
+  - You only need to fix one existing endpoint. Ask your AI to review that endpoint, or ask a developer on your team.
+  - You want working server code. This plan gives routes and docs, so hand it to a developer or a coding AI to build.
 you_give:
   - A plain description of what your service does
   - The main things it stores (users, orders, tasks)
@@ -31,7 +32,28 @@ you_get:
   - A paging, filtering and versioning plan
   - OpenAPI documentation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the skill text into the chat.
+  - Describe your service, what it stores and who will call the API. Add existing routes and naming style if you have them.
+  - Check the route map first. Look for odd names or missing things, and ask your AI to change them.
+  - Ask for the OpenAPI file last. Save it as a .yaml file to load into a docs viewer or mock server.
+output_sample:
+  input:
+    - A plain description of what your service does
+    - The main things it stores, such as users or tasks
+    - What your users need to do with them
+    - Existing endpoints to keep (optional)
+    - Naming style, snake_case or camelCase (optional)
+  output:
+    - name: Resources and relationships
+      contains: The things your service stores, and which ones sit inside others, like comments under tasks.
+    - name: Endpoints and HTTP methods
+      contains: Each route with the right method for reading, creating, replacing, updating and deleting.
+    - name: Request and response schemas
+      contains: The fields, types and required rules for each route, plus one shared error format.
+    - name: Pagination, filtering and sorting
+      contains: How long lists are split into pages, filtered and sorted, with paging details in each response.
+    - name: Versioning plan
+      contains: The version style chosen, with the version in the path as the simple default.
+    - name: OpenAPI documentation
+      contains: An OpenAPI 3.0 file with paths, schemas, examples and rate limit headers.

@@ -1,6 +1,6 @@
 slug: long-term-principles-writer
 name: Long-term principles writer
-summary: Describe your business and its hard trade-offs. Get a short list of plain promises on how you will choose.
+summary: Turn your hardest trade-offs into up to eight plain promises, each with its cost named, so your team and owners know how you will choose.
 category: general
 type: skill
 role: make
@@ -16,13 +16,12 @@ version: 1.0.0
 minds:
   - jeff-bezos
 credits:
-  - title: 1997 letter to shareholders
+  - title: 1997 letter to shareholders, section 'It's all about the long term'
     by: Jeff Bezos
-    url: https://ir.aboutamazon.com/files/doc_financials/annual/2015-Letter-to-Shareholders.PDF
-    used: A list of plain commitments on how decisions will be made when the short and long term pull apart, with a note that the approach is theirs, not the only right one
-  - title: 2003 letter to shareholders
-    by: Jeff Bezos
-    used: Long-term thinking as a mark of ownership, with real choices that cost sales today
-  - title: 2005 letter to shareholders
-    by: Jeff Bezos
-    used: Keeping the founding list as the base for later decisions
+    url: https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders
+    used: "The shape of the list: plain commitments on how decisions are made when the short and long term pull apart, ending with a note that the approach is theirs, not the only right one. The cost line, the seven-area check and the bad-year test are ours."
+next:
+  - annual-letter-writer
+  - input-metric-picker
+  - mistake-to-principle-writer
+needs_mode: manual

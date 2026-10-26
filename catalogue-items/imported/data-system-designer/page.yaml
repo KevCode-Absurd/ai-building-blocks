@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Data trade-offs are subtle and depend on your load and failure needs.
 new_slug: data-system-designer
 name: Data system designer
-summary: Describe what your app stores and serves. Get picks for storage,
-  copies, splitting data and consistency, with trade-offs.
+summary: Describe what your app stores and how it is used. Get a data system design review with picks for storage, copies, splitting and consistency.
 job: build-software
 headline: Data system designer
-subhead: A reasoned set of choices for how your app stores, copies, splits and
-  protects its data, with the trade-off behind each. It is based on the ideas in
-  the book Designing Data-Intensive Applications.
+subhead: A reasoned set of choices for how your app stores, copies, splits and protects its data, with the trade-off behind each. It is based on the ideas in the book Designing Data-Intensive Applications.
 explain: |
   A reasoned set of choices for how your app stores, copies, splits and protects its data, with the trade-off behind each. It is based on the ideas in the book Designing Data-Intensive Applications.
 
@@ -18,6 +15,10 @@ when:
   - You worry about replication lag or hot spots in your database.
   - You want a review of a data design before it ships.
   - You need to explain data trade-offs to teammates.
+not_for:
+  - "You run one small app on one database with no scaling or consistency questions: keep your current database and skip the review."
+  - "You need the overall app layout, not the data layer: ask a system design skill or a senior engineer instead."
+  - "You want to make your services survive outages: use a resilience review, not this data design skill."
 you_give:
   - What your app stores
   - Read and write patterns
@@ -29,7 +30,27 @@ you_get:
   - Score out of 10 with failed checks
   - Fix list to improve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Describe what your app stores, how it is read and written, and what must never go wrong.
+  - Add your current design if you have one, and your uptime needs.
+  - Read the score and the failed checks first.
+  - Work through the fix list, starting with the checks that failed.
+output_sample:
+  input:
+    - What your app stores, in plain words
+    - How often you read and write it
+    - What must never go wrong, and your uptime needs
+    - Your current design (optional)
+  output:
+    - name: Storage and replication
+      contains: The data model and storage engine that fit your reads and writes, and how to copy data across servers.
+    - name: Partitioning
+      contains: How to split data across machines, and how to avoid hot keys.
+    - name: Isolation and consistency
+      contains: The transaction isolation level and consistency choices that suit your needs, with the trade-off for each.
+    - name: Score out of 10
+      contains: A score from seven yes or no checks on data model, storage, copies, splitting, isolation, derived data and failures.
+    - name: Failed checks
+      contains: Which checks failed, such as an unknown isolation level or an untested failover.
+    - name: Fix list
+      contains: The changes needed to reach 10 out of 10.

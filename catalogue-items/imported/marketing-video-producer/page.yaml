@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a method and plans shots.
 new_slug: marketing-video-producer
 name: Marketing video producer
-summary: Say the video you need. Get the right tool, a script and a shot plan.
+summary: Plan your marketing video. Give it your goal, audience and budget. You get the best way to make it, a script and a shot plan.
 job: make-video-ads
 headline: Marketing video producer
-subhead: "Tell it the video's goal, audience, where it will play and your
-  budget. It sorts the job into one of three routes: AI clips, a talking avatar
-  or video coded from templates. You get the route and tool pick, a script, a
-  shot plan and prompts to paste."
+subhead: "Tell it the video's goal, audience, where it will play and your budget. It sorts the job into one of three routes: AI clips, a talking avatar or video coded from templates. You get the route and tool pick, a script, a shot plan and prompts to paste."
 explain: |
   Say what video you need and get the right way to make it, plus a script and a shot plan. It sorts the job into three routes: AI generated clips, talking avatars, or video coded from text and templates.
 
@@ -18,6 +15,10 @@ when:
   - You want a batch of personalised videos for outreach.
   - You are choosing between an avatar, AI clips and stock footage.
   - Your AI video clips look different from shot to shot.
+not_for:
+  - You need a live-action brand film or a real customer testimonial. Hire a videographer or film it yourself, then edit it.
+  - You only want to know what to post or how often. Ask your AI for a social content plan instead.
+  - You want paid ad copy and ad ideas, not a video plan. Use an ad writing step first, then come back here for the video.
 you_give:
   - The video goal and audience
   - Where it will play
@@ -30,8 +31,29 @@ you_get:
   - Video prompts ready to paste
   - Length and format settings
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can call a video tool.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell it your video goal, who it is for, where it will play and your budget.
+  - Add your logo, screenshots or footage if you have them (optional).
+  - Check the route it picks. AI clip and avatar tools need a paid account. Coded video needs an AI that can run code.
+  - Read the script and shot plan, then fix anything that is off before you make the video.
+  - Paste the prompts into your video tool one shot at a time.
+output_sample:
+  input:
+    - Your video goal, such as a product demo, explainer or social clip
+    - Where the video will play, such as YouTube, TikTok or your website
+    - Your budget and which video tools you can use
+    - Logos, screenshots or footage you already have (optional)
+  prerequisites:
+    - A paid account or API key for any AI video or avatar tool you want to use
+    - An AI that can run code, only if you pick the coded video route
+  output:
+    - name: Production route and tool pick
+      contains: "Which of the three routes fits your job: coded video, AI clips or a talking avatar, and which tool to use."
+    - name: Script
+      contains: The words for the video, written for your audience and the length you chose.
+    - name: Shot plan
+      contains: Each scene in order, with what is on screen and how long it runs.
+    - name: Video prompts
+      contains: Text you can paste into your chosen video tool, written the way that tool likes.
+    - name: Length and format settings
+      contains: The video length and screen shape that suit the place it will play.

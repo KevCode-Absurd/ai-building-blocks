@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a framework, then writes variants.
 new_slug: copywriting-framework-writer
 name: Copywriting framework writer
-summary: Describe your offer. Get copy in AIDA, PAS or BAB form, with tone
-  options and A/B variants.
+summary: Write marketing copy in AIDA, PAS or BAB form from your offer. Get tone options, A/B variants and clearer calls to action to test.
 job: write-ad-copy
 headline: Copywriting framework writer
-subhead: Marketing copy written in a proven structure, AIDA, PAS or BAB, in the
-  tone you pick, with A/B variants and stronger calls to action. You see the
-  same offer in different shapes and choose the best.
+subhead: Marketing copy written in a proven structure, AIDA, PAS or BAB, in the tone you pick, with A/B variants and stronger calls to action. You see the same offer in different shapes and choose the best.
 explain: |
   Marketing copy written in a proven structure, AIDA, PAS or BAB, in the tone you pick, with A/B variants and stronger calls to action. You see the same offer in different shapes and choose the best.
 
@@ -18,6 +15,10 @@ when:
   - You are writing an email sequence and want a clear structure.
   - Your ad copy sounds flat and you want a different angle.
   - You can't decide which style fits your offer.
+not_for:
+  - "You need ad or health, money or legal copy to publish as is: have a person with that expertise review it first."
+  - "Your offer is still unclear: write down what you sell, who it is for and the goal first, then come back."
+  - "You need a full brand voice guide: write one by hand or ask a copywriter."
 you_give:
   - Your offer and price
   - Your audience
@@ -29,7 +30,27 @@ you_get:
   - A/B variants
   - Call to action options
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Describe your offer, your audience, your goal and where the copy will run.
+  - Add your tone, and any limits such as character counts or required phrases (optional).
+  - Read the framework your AI picked. Ask for a different one if it does not fit.
+  - Check every claim and number in the copy. Replace any placeholder with a real fact before you publish.
+  - Test the A/B variants against each other and keep the one that works.
+output_sample:
+  input:
+    - Your product or service, and the price if you have it
+    - Your goal, such as signups, sales or traffic
+    - Your audience and their main pain or wish
+    - Where the copy will run, such as a landing page, email or ad
+    - Your brand voice or limits like word counts (optional)
+  output:
+    - name: Chosen framework
+      contains: The framework picked (AIDA, PAS, BAB or 4Ps) and a short reason it fits your goal and audience.
+    - name: Copy draft
+      contains: The copy written in that framework's order, in your tone, for the channel you named.
+    - name: Call to action
+      contains: A specific, benefit-led call to action matched to how much you are asking the reader to commit.
+    - name: A/B variants
+      contains: At least two different versions of the headline, subheadline and call to action.
+    - name: Variant hypothesis
+      contains: A note on what each variant tests, so you know what to compare.

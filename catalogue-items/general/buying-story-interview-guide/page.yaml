@@ -1,6 +1,6 @@
 new_slug: buying-story-interview-guide
 name: Buying story interview guide
-summary: "Name what you sell. Get a timeline interview script for five to eight recent buyers, from first thought to first use."
+summary: "Plan a buying story interview for five to eight recent buyers. You get a timeline script, probes and questions to avoid."
 job: understand-customers
 thinking: medium
 thinking_why: It follows a fixed interview order and writes questions to suit your product. A mid-range model does this well.
@@ -14,6 +14,10 @@ when:
   - You know people bought, but not what happened before they did.
   - Your last round of interviews gave you praise and feature requests.
   - Many people look at your product and never switch.
+not_for:
+  - "You want a first look at your market: watch buyers where they buy with the Customer job interview planner, or run a short survey."
+  - "You have no recent buyers yet: talk to people with a problem first, using the Customer discovery interview planner."
+  - "You need ad copy now: use the Story image ad writer once you have the buyer stories."
 you_give:
   - What you sell and the purchase you want to understand
   - A list of recent buyers, or a way to find them
@@ -31,6 +35,31 @@ how_to_use:
   - Book five to eight interviews and use the request note.
   - Run them. Write the exact words with an ID and date.
   - Bring the notes to "Switch story mapper".
+output_sample:
+  input:
+    - What you sell and the purchase you want to understand
+    - A list of recent buyers, or a way to find them
+    - Your draft interview questions (optional)
+    - Reviews and support emails from buyers (optional)
+  output:
+    - name: Aim
+      contains: One line on what you want to understand, plus the belief you must hold back.
+    - name: Who
+      contains: Five to eight recent buyers to talk to, and a short request note.
+    - name: Opening
+      contains: Plain words to start the interview and set the frame.
+    - name: Timeline questions
+      contains: Seven stops from the day they bought to use since, with questions for each.
+    - name: Probes
+      contains: Five short follow-ups and a rule to wait before the next question.
+    - name: What was dropped
+      contains: Three questions on what they used before and stopped after.
+    - name: Do not ask
+      contains: Questions to avoid, with three of your drafts rewritten.
+    - name: Record
+      contains: How to capture exact words, what to log and when to write up.
+    - name: Checks missed
+      contains: One line for each check the guide failed, or none.
 how_it_works:
   - title: Sets the aim
     text: One line on what you want to understand, plus the belief you must hold back.

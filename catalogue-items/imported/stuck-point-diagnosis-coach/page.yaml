@@ -2,35 +2,56 @@ thinking: medium
 thinking_why: It must find the real gap behind an error.
 new_slug: stuck-point-diagnosis-coach
 name: Stuck-point diagnosis coach
-summary: When you are stuck or wrong, work out why first. Then get help aimed at
-  the real gap.
+summary: Stuck on a mistake? This stuck-point diagnosis coach asks you to name why first, then gives a hint that fits the real gap, not just the error.
 job: teach-and-train
 headline: Stuck-point diagnosis coach
-subhead: A coach that makes you name why you are stuck before it helps, so the
-  help lands on the real gap and not just the surface error.
+subhead: A coach that makes you name why you are stuck before it helps, so the help lands on the real gap and not just the surface error.
 explain: |
   A coach that makes you name why you are stuck before it helps, so the help lands on the real gap and not just the surface error. Answers handed over too early often fix the wrong thing.
 
   You share the mistake or the point where you froze, plus what you tried. The coach then asks you to say what you think went wrong. It checks that against what you wrote, separates a slip from a missing idea, and only then gives a hint pitched at the right level. The aim is a learner who can spot their own breakdown next time. It adjusts wording to the learner's age band and keeps the full exchange as a short transcript.
 when:
-  - A student gets the same type of question wrong and keeps asking for the
-    answer.
-  - You are learning something yourself and want to know why you keep failing at
-    one step.
+  - A student gets the same type of question wrong and keeps asking for the answer.
+  - You are learning something yourself and want to know why you keep failing at one step.
   - You tutor and want help that goes to the cause of an error.
   - A learner says 'I don't get it' and you need a way in.
+not_for:
+  - "You made a typo or a simple arithmetic slip: just fix it directly, which is faster than a coaching chat."
+  - "You want the answer or a worked solution right now: ask your AI to solve it, or ask a teacher or tutor."
+  - "You need a full lesson on a topic you have not met yet: use a course, a textbook or a tutor to learn it first."
 you_give:
   - The mistake or the place you got stuck
   - The task or topic around it
   - What you already tried (optional)
   - The learner's age or level (optional)
 you_get:
-  - A guided diagnosis step before any help
-  - The likely gap behind the error
+  - A short diagnosis step before any help
+  - The likely gap behind your error
   - A hint matched to that gap
-  - A way to catch the same problem next time
+  - A summary of the error type, how well you diagnosed it, and a self-check question
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the system prompt from the skill's SKILL.md into the chat.
+  - Send the mistake or stuck point, the task around it, and anything you already tried.
+  - Answer the coach's question about why you think you went wrong. Do this before you ask for a hint.
+  - Use the hint, then try the task again yourself.
+  - Read the end summary and keep the self-check question for next time.
+output_sample:
+  input:
+    - The mistake you made, or the point where you got stuck
+    - The task or topic you were working on
+    - What you already tried (optional)
+    - The learner's age or level (optional)
+  output:
+    - name: Diagnosis question
+      contains: The coach asks you to say what you think went wrong before it offers any help.
+    - name: Check of your diagnosis
+      contains: The coach compares your answer with your work and tells you if it was accurate, partial or wrong.
+    - name: Error type
+      contains: A call on whether the gap is a slip or a missing idea, with the kind of error named.
+    - name: Targeted hint
+      contains: A hint pitched at the real gap and worded for the learner's age or level.
+    - name: Self-check question
+      contains: A question that helps you spot the same breakdown yourself next time.
+    - name: End-of-session summary
+      contains: The error type, how accurate your diagnosis was, whether you corrected yourself, and the self-check question asked.

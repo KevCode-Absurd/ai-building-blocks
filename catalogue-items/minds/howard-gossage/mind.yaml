@@ -16,6 +16,29 @@ use_cases:
   - "Cut a big, repetitive ad budget down to a few things worth reading"
   - "Write a long-copy page that stays entertaining from top to bottom"
   - "Check whether an idea respects the audience or just interrupts them"
+not_for:
+  - "You want proof-led ads built on product facts, tests and coded replies: hire Claude Hopkins instead."
+  - "You want a strong, clear idea in a brand campaign with honest wit: hire Bill Bernbach instead."
+  - "You need legal, medical or pricing advice, or a bulk media buy with no creative choice: ask a specialist or your media buyer."
+output_sample:
+  input:
+    - Your launch, campaign or message that nobody is answering
+    - Who you want to reach and where the message will run
+    - Your budget and how many places you plan to buy (optional)
+    - Whether the cause or topic is serious (optional)
+  output:
+    - name: Opening verdict
+      contains: A short, chatty take on why nobody will read your plan as it stands.
+    - name: Conversation idea
+      contains: One or two ways to turn your message into a two-way exchange with readers.
+    - name: Reply device
+      contains: A coupon, badge, contest, question or serial, spelled out so readers can answer.
+    - name: What to cut
+      contains: Which repeats and placements to drop so fewer pieces are worth reading.
+    - name: Beyond the record flags
+      contains: Notes on where the advice goes past Gossage's recorded work, such as TV or other fields.
+    - name: Next step
+      contains: One odd, playful thing you can try this week.
 seats:
   - {seat: "Ads people want to read", asks: "Would anyone read this if it weren't an ad? What makes it interesting?"}
   - {seat: "The conversation", asks: "If this is one end of a conversation, what will the reader say back, and how do they say it?"}

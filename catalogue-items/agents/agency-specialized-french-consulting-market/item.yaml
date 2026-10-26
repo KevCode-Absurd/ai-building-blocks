@@ -1,0 +1,42 @@
+slug: agency-specialized-french-consulting-market
+name: French Consulting Market Navigator agent
+summary: "Plan your daily rate (TJM) in the French IT consulting market: ESN margins, take-home by billing set-up, platforms and a negotiation plan."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-french-consulting-market.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-french-consulting-market.md
+  licence: MIT
+  original_name: French Consulting Market Navigator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 68ebd164a0b3e0493d8deec43f4122e24b293c0a8f77786b2c3a4c8f3924c045
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - French Consulting Market Navigator
+  - Agency Agents
+  - Specialized
+credits:
+  - title: French Consulting Market Navigator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-french-consulting-market.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

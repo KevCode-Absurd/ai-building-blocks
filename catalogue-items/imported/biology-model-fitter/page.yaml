@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Fitting choices and statistics need careful judgment.
 new_slug: biology-model-fitter
 name: Biology model fitter
-summary: Give it a model and measured data. Get parameters fitted, patients
-  simulated and drug levels computed.
+summary: Fit a SimBiology model to your lab data. Get fitted parameters, virtual patients and AUC, Cmax and half-life, using MATLAB with SimBiology.
 job: build-software
 headline: Biology model fitter
-subhead: Hand over a SimBiology model and measured data, and get back fitted
-  parameters you can trust, along with simulated patients and drug exposure
-  numbers. It saves you from the usual trial and error with fitting calls.
+subhead: Hand over a SimBiology model and measured data, and get back fitted parameters you can trust, along with simulated patients and drug exposure numbers. It saves you from the usual trial and error with fitting calls.
 explain: |
   Hand over a SimBiology model and measured data, and get back fitted parameters you can trust, along with simulated patients and drug exposure numbers. It saves you from the usual trial and error with fitting calls.
 
@@ -18,6 +15,10 @@ when:
   - You are building a population PK or PD model with variation between people.
   - You need virtual patients that match an observed group.
   - You want AUC, Cmax and half-life from concentration data.
+not_for:
+  - "You need to build or draw the model first: use a SimBiology model builder step or a modeller, then come back with the model."
+  - "You only want to simulate a model without fitting it to data: run the simulation in MATLAB SimBiology directly."
+  - "You do not have MATLAB and a SimBiology licence: this skill cannot run, so ask a pharmacometrics colleague or use free tools such as R."
 you_give:
   - A SimBiology model
   - Measured data with a group and time column
@@ -29,8 +30,29 @@ you_get:
   - A set of virtual patients
   - Exposure numbers such as AUC and Cmax
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with SimBiology.
+  - Check you have MATLAB with the SimBiology toolbox. Both are paid licensed products, and the skill cannot run without them.
+  - Open an AI that can write and run MATLAB code, and add the skill's instructions.
+  - Give it your model, your data and the parameters to estimate with bounds. Add dosing details if you have them.
+  - Ask it to fit the model. Check the fit plots before you trust the estimates.
+  - Ask for virtual patients or AUC, Cmax and half-life if you need them.
+  - Keep the code your AI wrote so you can rerun the fit later.
+output_sample:
+  input:
+    - Your SimBiology model
+    - Your measured data, with a group (subject) column, a time column and a response column
+    - The parameters to estimate, with a low and high bound for each
+    - Dosing details (optional)
+  prerequisites:
+    - MATLAB with the SimBiology toolbox, both paid licensed products
+    - An AI that can write and run MATLAB code
+  output:
+    - name: Fitted parameter estimates
+      contains: The estimated value of each parameter you chose, from a single fit or a population mixed-effects fit.
+    - name: Fit quality checks and plots
+      contains: Plots and checks that show how well the fitted model matches your measured data.
+    - name: Confidence intervals
+      contains: The range around each estimate, from the fast default method or the slower profile likelihood method.
+    - name: Virtual patients
+      contains: A set of simulated patients sampled from assumed ranges or from your population fit.
+    - name: NCA metrics
+      contains: "Non-compartmental analysis results: AUC, Cmax, Tmax, half-life and clearance."

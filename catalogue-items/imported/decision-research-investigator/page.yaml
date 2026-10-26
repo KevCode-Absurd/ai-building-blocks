@@ -2,15 +2,10 @@ thinking: high
 thinking_why: It runs many searches and weighs conflicting sources.
 new_slug: decision-research-investigator
 name: Decision research investigator
-summary: Ask a high-stakes question. Get a sourced report, scored sources and
-  the counter-arguments.
+summary: Run a deep research report on a high-stakes decision. You get scored sources, counter-arguments and a citation check you can reopen later.
 job: think-and-decide
 headline: Decision research investigator
-subhead: Ask the question, say what decision hangs on it and how deep to go. It
-  restates the question as hypotheses that could be proven wrong, searches many
-  channels and rates every source for credibility, recency and bias. You get a
-  report with counter-arguments, scored source files, a citation check and a
-  refresh list.
+subhead: Ask the question, say what decision hangs on it and how deep to go. It restates the question as hypotheses that could be proven wrong, searches many channels and rates every source for credibility, recency and bias. You get a report with counter-arguments, scored source files, a citation check and a refresh list.
 explain: |
   For questions where a wrong answer costs more than the extra hours. You get a research folder you can reopen next month: a plan, scored sources, a report, and a list of what to refresh.
 
@@ -20,6 +15,10 @@ when:
   - A one-shot AI answer is not enough and you need sources you can check.
   - You must defend a recommendation to a skeptical board.
   - You want research you can update later without starting over.
+not_for:
+  - "You need a quick fact-check: ask your AI the question directly and check one good source yourself."
+  - "You want a fast overview where a wrong answer costs little: use a plain AI search or a short research brief instead."
+  - "You want to score competitors on a fixed grid: use a competitor comparison tool instead, since this one tests hypotheses."
 you_give:
   - The question and the decision behind it
   - "Depth: shallow, medium or deep"
@@ -32,8 +31,31 @@ you_get:
   - Citation check
   - Refresh list for later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and run helper agents.
+  - Open an AI that can search the web and save files. Paste in this skill.
+  - "Type your question and the decision behind it. Pick a depth: shallow, medium or deep."
+  - Add the source types you trust or want to skip, and any deadline (optional).
+  - Let it run. It can take a while and uses many searches. Check the plan it writes first.
+  - Read the report. Open the source files behind any claim that matters, and check the counter-arguments.
+  - Later, ask it to update the research. It uses the refresh list instead of starting over.
+output_sample:
+  input:
+    - Your question and the decision that hangs on it
+    - "How deep to go: shallow, medium or deep"
+    - Source types you trust or want to exclude (optional)
+    - A deadline or length limit (optional)
+  prerequisites:
+    - An AI that can search the web and save files
+    - Optional search keys or paid search tools, if you want more channels. The skill checks what it has first.
+  output:
+    - name: plan.md
+      contains: Scope, report layout, search plan, opposing queries, risks, when to stop, and a change log.
+    - name: sources.csv
+      contains: An index of every source with its scores for credibility, recency and bias.
+    - name: sources/NN_slug.md
+      contains: One file per source, with its details, word-for-word quotes and scores.
+    - name: findings/FN.md
+      contains: Short reusable findings, one per file, for bigger investigations.
+    - name: Final report (YYYY-MM-DD_genre.md)
+      contains: The answer, each hypothesis marked proven, refuted or unclear, and the best arguments against it.
+    - name: refresh_targets.md
+      contains: Names, numbers and hypotheses to re-check when you update the research later (medium and deep).

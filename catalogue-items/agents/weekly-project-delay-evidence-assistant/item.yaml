@@ -1,6 +1,6 @@
 slug: weekly-project-delay-evidence-assistant
 name: Weekly project delay evidence assistant
-summary: A delay trend brief and a recommendation to keep, revise or stop the current experiment.
+summary: "Find where work waits and why deadlines slip. Get a weekly delay trend brief and a keep, revise or stop call on your current fix."
 category: agent
 type: agent
 role: orchestrate
@@ -11,7 +11,7 @@ inputs:
     required: true
   - type: plan
     required: false
-  - type: lessons_register
+  - type: source_text
     required: false
 outputs:
   - type: audit_report

@@ -1,6 +1,6 @@
 new_slug: turn-an-idea-into-a-spec-tickets-and-tested-code
 name: Turn an idea into a spec, tickets and tested code
-summary: Give it a feature idea. Get a spec, small tickets, built code, test gaps and a pull request.
+summary: Turn a feature idea into a spec, small tickets, built code, a list of missing tests and a pull request, with a check before each step.
 job: build-software
 thinking: high
 thinking_why: It builds real code across many files and reviews its own work. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a feature in your head and no written spec yet.
   - Past AI builds came back too big to review.
   - You want tests and a pull request that a teammate can read in ten minutes.
+not_for:
+  - "You want a one-line change or a small fix: ask your AI for the change directly."
+  - "You have no project code to build in: write the spec alone, or ask a developer to set up the project first."
+  - "You only want to review code that already exists: ask your AI to review the pull request, or ask a teammate."
 you_give:
   - A feature idea, in a few sentences, and who it is for
   - Access to your project code
@@ -31,6 +35,28 @@ how_to_use:
   - Describe the feature, then answer its questions about the tests and the ticket sizes.
   - After the missing-test step, add the tests it proposes and run your suite before you go on.
   - Read the pull request text and fix anything that does not match what you wanted.
+output_sample:
+  input:
+    - Your feature idea, in a few sentences, and who it is for
+    - Your project code, in a folder your AI can open
+    - Your issue tracker, if you use one (optional)
+    - Your written coding standards (optional)
+  prerequisites:
+    - An AI that can open your project folder and run code, such as Claude Code
+    - Access to your issue tracker, if you want the spec and tickets posted there
+  output:
+    - name: Spec
+      contains: The problem, the solution, user stories, the decisions made and how the feature will be tested.
+    - name: Tickets
+      contains: Thin tickets in build order, each saying what blocks it and what it delivers.
+    - name: Build
+      contains: The feature on one branch, what each ticket changed and the fixes from the review.
+    - name: Missing tests
+      contains: Each new behaviour marked covered or not covered, plus proposed tests with the riskiest first.
+    - name: Pull request
+      contains: A short summary, before and after proof from your tests, and how hard the change is to undo.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the spec
     text: Turns your idea into a spec with the problem, user stories, what to build and how it will be tested, then posts it to your tracker.

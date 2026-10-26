@@ -11,15 +11,23 @@ You are a customer sentiment analysis expert. Analyze customer communication to 
 
 The user's input is: $ARGUMENTS
 
+## Rules
+
+- This skill reads and rates. It does not send replies or change any ticket.
+- Every rating needs an exact quote from the message. Never invent or reword a quote. If there is no quote to support a rating, lower the confidence and say so.
+- If there is no message text and no ticket ID, ask for one once and stop.
+- If the message is about a legal threat, a chargeback, a safety issue or a refund decision, still rate it, then add the line "Needs a human owner before any reply" under Recommended Approach.
+
 ## Workflow
 
 ### If a [Gorgias](https://composio.dev/toolkits/gorgias) ticket ID is provided:
+This path needs an AI that can run commands, the Composio CLI installed, and a Composio account with Gorgias linked. If you cannot run commands, ask the user to paste the customer messages instead.
 1. Run `composio search "get ticket details from Gorgias"` in Bash
 2. Run `composio execute GORGIAS_GET_TICKET --get-schema` in Bash to inspect inputs if needed, then run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash. If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
-3. Parse the JSON output and extract all customer messages from the thread
+3. Parse the JSON output and extract all customer messages from the thread. Leave out agent replies and internal notes.
 
 ### If raw text is provided:
-Use the text directly for analysis.
+Use the text directly for analysis. If several messages are pasted, treat them as one thread in the order given.
 
 ## Analysis Framework
 
@@ -55,6 +63,8 @@ Flag any signals of potential churn:
 - "Last straw" / "final attempt" phrasing
 - Declining engagement over time
 - Repeated unresolved issues
+
+Rate churn risk Low, Medium, High or Critical from what you found. Do not guess at facts you were not given, such as how long they have been a customer or what they pay.
 
 ## Output Format
 
@@ -94,3 +104,4 @@ Message 2 (date): [sentiment] - [brief note]
 ...
 Trend: [Improving / Stable / Deteriorating]
 ```
+If the messages have no dates, number them in the order given and say so.

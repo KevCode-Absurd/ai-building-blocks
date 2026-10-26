@@ -1,6 +1,6 @@
 new_slug: negotiation-call-prep-planner
 name: "Negotiation call prep planner"
-summary: "Describe the deal and the other side. Get opening lines, questions to ask and what to listen for."
+summary: "Plan a hard negotiation call with an opening, feeling labels, how and what questions and the facts to learn before you give anything away."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It has to guess what the other side fears and judge which lines fit, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "You have a price, raise or contract talk this week and want an opening that lowers the heat."
   - "A client or supplier keeps saying yes and nothing changes."
   - "You tend to split the difference to get out of an awkward talk."
+not_for:
+  - "You want to plan a cold outreach call to a stranger: use the Prospecting block planner."
+  - "You need someone to want your idea, not just accept a term: use the Buy-in conversation planner."
+  - "The decision is already final and you only need to share it: send a plain summary instead."
 
 you_give:
   - "The deal and what you want from it"
@@ -34,6 +38,32 @@ how_to_use:
   - "Add anything they have said before, word for word if you can."
   - "Take the plan with you. Use it as a running order, not a script."
   - "After the talk, add what you learned and run it again before the next one."
+output_sample:
+  input:
+    - The deal and what you want from it
+    - What you know about the other side (optional)
+    - Your limits and what you could give (optional)
+  output:
+    - name: The talk
+      contains: One line on who you meet, what you want and your deadline.
+    - name: What they may assume about you
+      contains: Three to five fears in their voice, each marked KNOWN or GUESS.
+    - name: Opening
+      contains: Two or three calm sentences that say their fears out loud before you ask.
+    - name: Feeling labels
+      contains: Short statements that name a feeling you expect, each followed by a note to wait.
+    - name: How and what questions
+      contains: Four to six questions that ask them to help solve your problem.
+    - name: Safe-no question
+      contains: A question where no is easy, with what a no and a yes each tell you.
+    - name: If they agree fast
+      contains: A follow-up that asks how and who before you count the yes.
+    - name: Facts to find
+      contains: A ranked list of things to learn before you give anything.
+    - name: Run of play
+      contains: The order of the call, plus what to do if it turns angry.
+    - name: Missing and checks missed
+      contains: Gaps that would sharpen the plan, and any checks the plan failed.
 
 how_it_works:
   - title: "Names their fears first"

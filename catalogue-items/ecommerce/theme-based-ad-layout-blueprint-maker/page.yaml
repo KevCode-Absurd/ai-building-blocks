@@ -1,45 +1,118 @@
 new_slug: theme-based-ad-layout-blueprint-maker
 name: Theme-based ad layout blueprint maker
-summary: Plan an ad layout by theme and shape. Get text zones, product placement, a simple diagram and layout options.
+summary: "Plan the layout of an image ad by theme and shape. Get zone shares, text rules, a diagram and three or four layout options."
 job: make-image-ads
 headline: Theme-based ad layout blueprint maker
-subhead: Share ad theme, buyer stage, aspect ratio, copy and product photos. Get a zone diagram, hierarchy rules and three to four layout options.
+subhead: "Tell it your ad theme and picture shape. It plans the layout of your image ad: how much room the headline, product, proof and button each get. You get a text diagram, word limits and three or four versions that show what each one gives up."
 explain: |-
-  Plan an ad layout by theme and shape. Get text zones, product placement, a simple diagram and layout options.
+  A designer, a freelancer or an image tool needs to know where things go before they start. Without a plan, the headline crowds the product, the button hides and every ad in the set looks different.
 
-  Share ad theme, buyer stage, aspect ratio, copy and product photos. Get a zone diagram, hierarchy rules and three to four layout options.
+  This maker plans the structure of an image ad for nine themes, such as urgency, social proof, problem and solution, and features and benefits. For your theme and shape it sets how much of the canvas each part gets, the text rules and the button rules. It checks the theme against where your buyer is on the path to buying.
+
+  You also get a reversed, a minimal and sometimes a text-heavy version, each with what it gives up. The shares are starting points from ad practice, not platform rules. It plans the layout only. It does not draw the ad or write its words.
 when:
-  - You need a zone diagram, hierarchy rules and three to four layout options.
-  - You need theme-based ad layout blueprint maker for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - A designer or freelancer asks "where should things go?" for a new ad.
+  - You are briefing an image tool and want the layout fixed before you write the prompt.
+  - Your ads in one theme look different from each other and you want one structure to repeat.
+  - You are moving an ad from square to a tall phone shape and need the zones changed.
+not_for:
+  - "You want the look first, such as mood, colour and lighting: use the Eight-lever ad visual planner."
+  - "You want the ad words and a picture prompt as well as the layout: use the Single image ad planner."
+  - "You have no customer proof yet but want a social proof ad: the layout needs a real quote first, so collect one, or choose another theme."
+  - "You want to pick a photo style: use the Ad photography style chooser."
 you_give:
-  - Ad theme
-  - Buyer stage
-  - Aspect ratio
-  - Copy and product photos
+  - Your ad theme, such as urgency, lifestyle, social proof or features and benefits
+  - Your picture shape, square, tall or wide
+  - Your product type
+  - Where your buyer is on the path to buying, top, middle or bottom (optional)
+  - Your headline, quote or offer, and a product photo (optional)
 you_get:
-  - A zone diagram, hierarchy rules and three to four layout options
-  - The sources used, missing inputs and assumptions
+  - A text diagram of the layout with the share of the canvas for each zone
+  - Word limits and weight rules for each piece of text
+  - Button position, size and contrast rules
+  - Three or four versions, each with when to use it and what it gives up
+  - Three do and three do not for your theme
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Pick one theme and one picture shape. Write your product type next to them.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your theme, shape and product type. Add your real copy and a product photo if you have them.
+  - Check the stage warning, if any, then read the diagram and the word limits.
+  - Pick one version to design first. Give the spec to your designer or to the Ad image generation and edit planner.
+  - Replace every placeholder in angle brackets with true material before the ad goes live.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm ad theme, buyer stage, aspect ratio, copy and product photos. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: Generate Layout Blueprint
-    text: Follow the generate layout blueprint section in the full method and keep its required fields and decision rules.
-  - title: Generate Variations
-    text: Follow the generate variations section in the full method and keep its required fields and decision rules.
-  - title: Deliver Layout Spec
-    text: Follow the deliver layout spec section in the full method and keep its required fields and decision rules.
-  - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a zone diagram, hierarchy rules and three to four layout options. Check facts, math and the decisions before any action.
+  - title: Checks theme against stage
+    text: "Compares your theme with the buyer stage and warns you if they do not match."
+  - title: Picks the starting layout
+    text: "Takes the zone shares and layout idea for your theme from a table of nine themes."
+  - title: Fits the picture shape
+    text: "Changes the zones for square, tall or wide, and keeps key text clear of the app buttons on tall ads."
+  - title: Sets text and button rules
+    text: "Gives word limits, weight and case for each text zone, and contrast for the button."
+  - title: Builds the versions
+    text: "Writes a standard, a reversed, a minimal and sometimes a text-heavy layout, with what each gives up."
+  - title: Guards the proof
+    text: "Keeps quotes, counts and offers as placeholders until you give true material."
+output_shape: |-
+  ## Layout spec: <theme> | <shape> | <stage>
+  Stage check: <fits | warning>
+
+  ### Primary layout
+  <text diagram with zone shares>
+  | Zone | Share | Job |
+
+  ### Text rules
+  | Element | Weight | Case | Max words |
+
+  ### Button
+  Position, size and contrast
+
+  ### Versions
+  1. Standard
+  2. Reversed
+  3. Minimal
+  4. Text-heavy (if the theme allows)
+
+  ### Do and do not
+  MISSING: <input, or none>
+  CHECKS MISSED: <check, or none>
+output_sample:
+  input:
+    - Your ad theme and picture shape
+    - Your product type
+    - Your buyer stage (optional)
+    - Your real headline, quote or offer, and a product photo (optional)
+  output:
+    - name: Stage check
+      contains: Whether your theme fits where the buyer is, or a warning if it does not.
+    - name: Primary layout
+      contains: A text diagram and a table of zones with the share of the canvas each gets.
+    - name: Text rules
+      contains: Weight, case and a word limit for each piece of text.
+    - name: Button
+      contains: Where the button sits, how big it is and the contrast it needs.
+    - name: Versions
+      contains: Standard, reversed, minimal and sometimes text-heavy layouts, each with when to use it and what it gives up.
+    - name: Do and do not
+      contains: Three things to do and three to avoid for your theme.
+    - name: Missing and not checked
+      contains: Any input you left out and any check that was skipped.
+tweaks:
+  - what: Your theme
+    how: Each theme has its own zones. Pick the one the ad must do, not the one that sounds nicest.
+  - what: Your picture shape
+    how: Tall ads need headline and button kept away from the top and bottom edges.
+  - what: Real proof
+    how: For social proof, give a real quote you may use. Without it the layout shows a placeholder.
+  - what: Your buyer stage
+    how: Add it if you know it. It lets the maker warn you when the theme and stage clash.
+terms:
+  - term: Zone
+    meaning: One block of the ad, such as the headline, the product or the button.
+  - term: Share of the canvas
+    meaning: The part of the picture area that block takes up, as a percent.
+  - term: Buyer stage
+    meaning: Top means just met you. Middle means weighing options. Bottom means ready to buy.
+  - term: Contrast
+    meaning: How much one colour stands out from the colour behind it.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

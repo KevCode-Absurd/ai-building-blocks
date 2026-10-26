@@ -32,3 +32,26 @@ how_to_use:
   - Give the complete folder to your AI. Start with START_HERE.txt, then provide the named inputs in the coordinator skill.
   - Follow its checkpoints and check the evidence before using any output. Agent packs run one requested cycle; they do not create a schedule.
 thinking: high
+not_for:
+  - "Your data is single-cell RNA: use the Single-cell RNA analysis pipeline."
+  - "You only need the counts table built from reads or Salmon output: use the RNA-seq comparison preparer."
+  - "You already have a results table and only need a chart: use the Journal-ready figure maker."
+output_sample:
+  input:
+    - Raw gene counts, or quantification files, with tool versions and reference build
+    - A sample sheet with sample IDs, condition, batch and other covariates
+    - The comparison you want, with reference levels, design and error-rate threshold
+    - The local environment and output folder you may use
+  prerequisites:
+    - An AI that can run code on your files
+  output:
+    - name: Validated counts and metadata
+      contains: A genes-by-samples counts table, sample sheet, quality checks and a list of exclusions.
+    - name: Design and contrast record
+      contains: The design formula, reference levels and the exact comparison that was tested.
+    - name: Result tables and diagnostics
+      contains: Full tables with corrected p-values, effect sizes, warnings and missing values kept in.
+    - name: Figures and captions
+      contains: Labelled plots with uncertainty, plotting code and the source data behind each one.
+    - name: Version and parameter manifest
+      contains: Tool versions, settings, which code ran, and the quality issues still open.

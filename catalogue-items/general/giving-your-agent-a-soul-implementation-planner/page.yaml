@@ -1,36 +1,125 @@
 new_slug: giving-your-agent-a-soul-implementation-planner
 name: Agent role file loader builder
-summary: Build a role loader with validated metadata and bounded context.
+summary: Plan a safer loader for your AI agent's role files, with checked fields, trimming that keeps the rules, clear failures and tests. Draft code only.
 job: build-software
 headline: Agent role file loader builder
-subhead: Share role files, section priorities and token budget. Get a role loader with validated metadata and bounded context.
+subhead: Give it your agent's role files, the sections that must never be cut and your size limit. It reviews your loader, or the starter that comes with it. You get the gaps, checks for each file, a safe trimming order, draft code and tests. Nothing is run.
 explain: |-
-  Share role files, section priorities and token budget. Get a role loader with validated metadata and bounded context.
+  An AI agent role file loader reads a file that says who the agent is and what it must never do. It puts that text at the front of every AI call. If the loader is careless, the agent can lose its rules. A long file gets trimmed and the boundaries go first. A broken file loads as a nameless default. A bad agent ID can open a file outside the role folder.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill reviews the loader against five rules. Read the settings apart from the text. Check every field. Trim in a safe order. Fail in the open. Treat the related-agents list as notes. It starts from a starter loader and a role file template that come with it. It lists each gap in the starter, then plans the fixes and the tests.
+
+  It writes a plan and draft code only. It does not run the code. You check the draft in your own project. To build the agent that uses the role file, use the Scoped base agent builder. To log what each AI call costs, use the Agent AI call cost tracker builder.
 when:
-  - You need a role loader with validated metadata and bounded context.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - You are adding role files to an agent system and need a loader you can trust.
+  - Your agent ignored its own rules after a long role file was trimmed.
+  - You want to compare your loader with a checked starter before you ship.
+  - A broken role file loaded as a default agent and nobody noticed.
+not_for:
+  - You want help writing the role file itself, such as its voice or expertise. Write it in any AI chat. This skill loads and protects the file.
+  - You have no agent code yet. Start with the Scoped base agent builder, then come back here.
+  - Your agent uses one fixed prompt and has no role files. You don't need a loader.
+  - You want to track the cost of each call. Use the Agent AI call cost tracker builder.
 you_give:
-  - Role files, section priorities and token budget
+  - One or two real role files, or the template filled in
+  - Your size limit, in tokens, for the role file in one call
+  - The sections that must never be cut (the skill assumes Boundaries, Epistemic Rules and Escalation Rules if you don't say)
+  - Your current loader code (optional)
+  - Whether each client has its own role files (optional)
 you_get:
-  - A role loader with validated metadata and bounded context
-  - A failure checklist and synthetic test cases
+  - A list of gaps in the loader, each with a proposed fix
+  - A validation spec for each role file field and section
+  - A trim order that never cuts the rules
+  - Draft code changes and the tests to write
+  - A list of what is still missing before you can trust it
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in your AI. A chat AI works if you paste the code in. Claude Code or Codex can read your files.
+  - Paste one or two role files and your loader code. If you have no loader, say so and it reviews the starter.
+  - Name the sections that must never be cut, and your size limit. Say if the limit is for the answer or the whole call.
+  - Read the gaps table first. Check that each problem is real in your project.
+  - Copy the code changes into your project yourself and write the tests. The skill reads code but does not run it.
+  - Before you turn it on, fill each item under MISSING.
 how_it_works:
-  - title: Step 1
-    text: Parse frontmatter separately from role text.
-  - title: Step 2
-    text: Validate the role identifier, sections and budget.
-  - title: Step 3
-    text: Keep critical boundaries before optional personality text when trimming.
-  - title: Step 4
-    text: Fail clearly on malformed or missing files.
-  - title: Step 5
-    text: Do not treat related role names as permission to contact agents.
+  - title: Reads the settings apart from the text
+    text: Plans a real settings parser and the same line endings, so one bad character doesn't break the file.
+  - title: Checks every field
+    text: Limits what an agent ID can contain, keeps file paths inside the role folder, and checks the size limit and section names.
+  - title: Sets a safe trim order
+    text: Cuts optional text first and personality next. Rules are never cut. If they alone are too long, it stops with an error.
+  - title: Makes failures clear
+    text: Returns an error code for a missing or broken file. A failure is not saved, so a fixed file loads next time.
+  - title: Keeps related agents as notes
+    text: Checks the IDs are well formed. They are never used to send or route work.
+  - title: Lists gaps and writes tests
+    text: Compares the starter line by line, writes draft code, and lists the tests to run in your project.
+output_shape: |-
+  STATUS
+  <plan and draft code only; nothing run; what was read>
+
+  EVIDENCE USED
+  <role files, loader code, starter, notes>
+  MISSING: <each missing input and what it stops>
+
+  GAPS IN THE LOADER
+  <#> | <what the loader does> | <why it is a problem> | <proposed fix>
+
+  VALIDATION SPEC
+  <required and optional fields, section rules, error codes>
+
+  TRIM ORDER
+  <cut first to last, never cut, what happens when the rules alone are too big>
+
+  CODE CHANGES (draft, untested)
+  <changed functions or a diff>
+
+  TESTS TO WRITE
+  <number> | <case> | <expected result>
+
+  ASSUMPTIONS
+  <starting values and what to check them against>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - One or two real role files, or the template filled in
+    - Your size limit in tokens, and the sections that must never be cut
+    - Your current loader code (optional)
+  prerequisites:
+    - A project with role files and a loader, or a plan to build one
+    - An AI that can read your code, or code pasted into the chat
+  output:
+    - name: Status
+      contains: A plain note that this is a plan and draft code, nothing was run, and what was read.
+    - name: Gaps in the loader
+      contains: A table of each problem in the loader, why it matters and the fix.
+    - name: Validation spec
+      contains: Required and optional fields, section rules and the error codes a failed load returns.
+    - name: Trim order
+      contains: What is cut first to last, what is never cut, and what happens if the rules alone are too big.
+    - name: Code changes
+      contains: Draft changes to the loader, marked as untested.
+    - name: Tests to write
+      contains: Cases such as a bad agent ID, a missing section, a bad size limit and a file with Windows line endings.
+    - name: Assumptions and next step
+      contains: Starting values to check, and the one smallest step to take first.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your loader and role files side by side and proposes exact edits.
+    - name: Codex
+      why: Edits files in your repository and shows each change for review.
+  inputs:
+    - A role file that once caused a bad answer, to turn into a test
+    - The name and token limit of the AI model you call
+terms:
+  - term: Role file
+    meaning: A text file that tells an agent who it is, what it knows, how it talks and what it must not do.
+  - term: Loader
+    meaning: The code that reads the role file and puts it at the front of each AI call.
+  - term: Token
+    meaning: A small piece of text an AI counts. A token is roughly four characters.
+  - term: Protected section
+    meaning: A section, such as Boundaries, that is never cut when the file is trimmed to fit.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

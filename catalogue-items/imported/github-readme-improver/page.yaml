@@ -2,34 +2,100 @@ thinking: medium
 thinking_why: It follows a known structure but tunes the words.
 new_slug: github-readme-improver
 name: GitHub README improver
-summary: Give it your repo or profile. Get a stronger README, profile and topics
-  so developers try your project.
+summary: Rewrite your GitHub README so a first-time visitor sees what your project does in seconds. Get a clear one-liner, topics and profile advice.
 job: grow-social
 headline: GitHub README improver
-subhead: A project page that makes a developer want to try it within seconds.
-  Give it your repo or profile and it audits what a first-time visitor sees,
-  then rewrites the weak parts.
+subhead: Paste your README and say who the project is for. It audits what a first-time visitor sees, then rewrites the weak parts. You also get a one-line summary, topics to add and tips for your GitHub profile.
 explain: |
-  A project page that makes a developer want to try it within seconds. Give it your repo or profile and it audits what a first-time visitor sees, then rewrites the weak parts.
+  Developers judge a project on GitHub before they install it. If the README opens with setup steps instead of what the project does, visitors leave. This GitHub README improver audits your README the way a first-time visitor would read it, and rewrites it so the promise comes first.
 
-  For the README it checks for a one-line promise, a hero example, badges that add trust, and install steps that work. For your profile it improves the intro and the pinned repos. It also sets topics and plans where to get listed so people can find the project. Developers judge a project on GitHub before they install it, so the first screen matters most.
+  It checks for a one-line summary, a hero example, badges that add trust, and install steps that work. It writes the README section by section from the facts you give it. Where a fact is missing, it leaves a fill-in marker instead of guessing.
+
+  It also suggests topics and a repo description so people can find the project in GitHub search. Add your profile README if you want that improved too.
 when:
   - Your repo gets visits but few stars or installs.
   - Your README starts with setup steps instead of what the project does.
   - You want your GitHub profile to show your best work.
   - You are launching an open source tool and need people to find it.
+not_for:
+  - You want a launch plan for your project, with issues, a schedule and follow-up. Use the open source promoter.
+  - You need full API docs or a docs site. A README is the front page only. Write the docs separately.
+  - Your repo is private and only your team uses it. A README rewrite will not bring visitors.
 you_give:
-  - Your repo or profile link
-  - Who the project is for
-  - What makes it different
-  - Current README text (optional)
+  - Your current README text, pasted in
+  - Who the project is for and what makes it different
+  - Your repo link (optional)
+  - Your profile README text, if you want it improved (optional)
 you_get:
-  - A rewritten README structure
-  - A one-line project summary
-  - Profile and pinned repo advice
-  - Topic tags and listing ideas
+  - An audit of what is weak, in order of impact
+  - A one-line summary of the project
+  - A rewritten README with fill-in markers for missing facts
+  - Topics (up to 20) and a repo description
+  - Profile and pinned repo advice (if you asked)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat.
+  - Paste your current README. Say who the project is for and what makes it different from other options.
+  - Add your profile README too if you want that improved. Your AI cannot open GitHub for you here, so paste text in.
+  - Read the audit first, then the one-liner. Ask for a different one-liner if it does not sound like your project.
+  - Replace every fill-in marker with a real fact or link. Test each install command yourself before you publish.
+  - Paste the README into GitHub. Add the suggested topics under your repo settings. Check the page on your phone.
+how_it_works:
+  - title: Collect the facts
+    text: It uses the audience, the README text and what makes the project different. It marks anything missing.
+  - title: Audit the README
+    text: It checks the one-liner, hero example, badges, install steps and links against a checklist.
+  - title: Rewrite the README
+    text: It rewrites each section so the promise comes first and the quick start gets people running fast.
+  - title: Improve the profile
+    text: If you asked, it rewrites your profile README and suggests which repos to pin.
+  - title: Set topics and description
+    text: It picks up to 20 topics and writes a repo description for GitHub search.
+  - title: Suggest listings
+    text: It names awesome lists worth checking and reminds you each list has its own rules.
+output_shape: |
+  ## Audit
+  <what is weak, in order of impact>
+  ## One-liner
+  <one sentence>
+  ## Rewritten README
+  <full text, with <fill in> where a fact is missing>
+  ## Profile and pinned repos
+  <advice, only if asked>
+  ## Topics and description
+  <up to 20 topics, description of 350 characters or fewer>
+  ## Listing ideas
+  <awesome lists to check>
+output_sample:
+  input:
+    - Your current README text
+    - Who the project is for and what makes it different
+    - Your profile README (optional)
+    - Your repo link (optional)
+  output:
+    - name: Audit
+      contains: What a first-time visitor would find weak in your README, ranked by impact.
+    - name: One-liner
+      contains: One sentence saying what the project does and for whom.
+    - name: Rewritten README
+      contains: Your README rewritten section by section, with fill-in markers where facts are missing.
+    - name: Topics and description
+      contains: Up to 20 topics and a repo description for GitHub search.
+    - name: Profile and pinned repos
+      contains: Edits to your profile README and which repos to pin, if you asked.
+    - name: Listing ideas
+      contains: Awesome lists to check, and why each one fits.
+works_best_with:
+  tools:
+    - {name: "Claude, ChatGPT or Gemini", why: "Any chat AI works. Paste your README in. No file access is needed."}
+  inputs:
+    - "A screenshot or short description of what your project looks like when it runs"
+    - "Your GitHub traffic page numbers, to see where visitors come from (optional)"
+terms:
+  - term: README
+    meaning: The front page of a GitHub project, shown under the file list.
+  - term: Badge
+    meaning: A small status image, such as build passing or latest version, that shows trust at a glance.
+  - term: Topics
+    meaning: Labels you add to a repo so people can find it in GitHub search.
+  - term: Awesome list
+    meaning: A curated list of good projects on one subject, kept on GitHub.

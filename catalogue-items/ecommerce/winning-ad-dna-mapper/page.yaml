@@ -1,6 +1,6 @@
 new_slug: winning-ad-dna-mapper
 name: "Winning ad DNA mapper"
-summary: "Paste winning ads, yours or rivals'. Get each split into message and look, plus one-part swaps to test."
+summary: "Find why your winning ads work. Paste your ads or a rival's and get each split into message and look, plus one-part swaps to test."
 job: study-competitors
 thinking: medium
 thinking_why: "It breaks ads into parts and compares them, which a mid-size model does well. Use a stronger one for 20 or more ads."
@@ -17,6 +17,10 @@ when:
   - You have a few ads that sell and want to know what is common to them before you brief more.
   - A rival's ads keep running for months and you want the idea behind them, not a copy.
   - You make ads with AI and need a clear set of parts to vary, instead of random new versions.
+not_for:
+  - "You have fewer than 10 ads and want patterns: the skill can split them, but you need 10 or more to compare. Gather more ads first."
+  - "You want to copy a rival's ad word for word: this skill never reuses a rival's words or images. Write from your own product facts and proof."
+  - "You need to check an ad against Meta's rules before you publish: use the Meta ads compliance checker, or read Meta's own ad policies."
 
 you_give:
   - The ads, as images, screenshots, links or transcripts (10 or more for patterns)
@@ -35,6 +39,30 @@ how_to_use:
   - Paste your product facts and proof.
   - Pick two or three swaps and make them as separate ads, changing only the one part named.
   - Run the test with the creative test reader.
+output_sample:
+  input:
+    - Your winning ads, or a rival's, as images, screenshots, links or transcripts
+    - Results for your own ads, such as spend and ROAS or CPA (optional)
+    - Your product facts and proof
+    - Customer reviews and ad comments (optional)
+  prerequisites:
+    - An AI chat that can read images, if you attach screenshots
+    - A transcript for each video ad
+  output:
+    - name: Ad breakdown
+      contains: "One block per ad: message parts, copy blocks marked present, weak or missing, hook, format, look and the idea in one sentence."
+    - name: Patterns
+      contains: Which parts repeat in winners and in losers, and whether this comes from your results or from how long ads ran.
+    - name: Gaps
+      contains: Formats, styles or buyer groups you are missing, each with the evidence.
+    - name: Contrast map
+      contains: What the top rivals all do, the true opposite, and whether it fits your product.
+    - name: Swaps
+      contains: Test ideas that keep one part and change one other part.
+    - name: Three new ads
+      contains: Three ads built from the ideas, using your product and proof, with the new part named.
+    - name: Checks missed and missing
+      contains: Any checks that failed and what extra input would sharpen the result.
 
 how_it_works:
   - title: Splits each ad

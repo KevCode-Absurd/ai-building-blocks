@@ -1,0 +1,42 @@
+slug: agency-marketing-agentic-search-optimizer
+name: AI browsing agent readiness checker
+summary: "Check if an AI browsing agent can book, buy or sign up on your site. Get a task scorecard, the steps where it gets stuck and fixes."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-agentic-search-optimizer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-agentic-search-optimizer.md
+  licence: MIT
+  original_name: Agentic Search Optimizer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: de143d3db98f6532dcd9d21ae363d1c2fb508dc806c1f7325bba59e8fbd24184
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Agentic Search Optimizer
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Agentic Search Optimizer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-agentic-search-optimizer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

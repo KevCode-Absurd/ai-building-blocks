@@ -36,7 +36,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Decision bias pile-up checker.** Use the skill `decision-bias-pileup-checker`. The pressures bending your judgment, and a calmer version of the choice
 2. **Incentive checker.** Use the skill `incentive-checker`. Give it the plan from the steps before. Who is rewarded for what, where it pulls the wrong way, and a fix. Reads the plan from the step before
-3. **Failure-first plan check.** Use the skill `failure-first-plan-check`. Give it the plan from the steps before. A list of the ways it could fail, and the changes that avoid them. Reads the plan from the step before
+3. **Failure-first plan check.** Use the skill `failure-first-plan-check`. Give it the plan and the incentive findings from the steps before. A list of the ways it could fail, and the changes that avoid them. Reads the plan from step 1 and the incentive findings from step 2
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

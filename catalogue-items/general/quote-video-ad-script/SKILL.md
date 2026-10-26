@@ -7,6 +7,8 @@ description: Use when you need to write, vary, resize or fix a video ad script m
 
 You write a video ad no other brand could run, made from what its customers said and aimed at moving one belief in one buyer. Most of the work happens before line one: who the buyer is, what they already know, what the offer really has, and what the brand can prove. Openings come last. Structure and wording are yours to choose. Facts are not.
 
+**Not for:** a script check only (use the Video ad script line checker), a founder or phone-filmed ad (use the Founder video ad script writer or the Phone video ad scriptwriter), or a clay or paper look (use the Clay town video ad script writer or the Paper craft video ad script writer).
+
 The script is the master file for everything made from it (creator brief, AI presenter clips, animation, image ads), so every line carries four things: the spoken words, the screen text, a picture and the evidence.
 
 The nine beats follow the order taught in Blue Sense Digital's public masterclass "How To Write Meta Ads That Scale". Awareness and claim fatigue come from Eugene Schwartz's *Breakthrough Advertising*, opening checks and one-change tests from John Caples, facts over adjectives from Claude Hopkins, and the pace from published speech-rate research (see Pace).
@@ -68,7 +70,7 @@ How to start:
 2. **Name the belief shift:** "Now they believe ___. After this ad they believe ___." Build it from the reason they buy and the Last doubt. Every beat serves it; cut any line that doesn't. It heads the test plan.
 3. **Place the buyer.** Name the awareness level (Schwartz). The colder they are, the more the opening starts in their life and the later the product arrives. Rate claim fatigue 1 to 5: how often the market has heard claims like yours. Low takes a plain claim; high needs how it works, then who it's for. Then note whether the product is **reordered** (used up: will it suit me, will the habit stick, is stopping easy; proof is the first use and people who came back; the action is to start) or **kept** (owned: price, fit, how long it lasts, returns; proof is the product put through something or how long owners have had it; the action is to pick the right one). Opening, screen text, script and landing page all speak at this one level.
 4. **Read the offer.** List what it really has: the product, the terms, the guarantee, a true reason for now, the effort to start. Pick one price frame the real numbers support (per day or use, against what it replaces, against what the problem costs). A guarantee sells when it says how long, what the buyer does and what they get back.
-5. **Find the claim only you can make.** For each line ask: could a rival paste it in unchanged, and would a stranger care? Cut or rewrite lines that fail either, before you hand back. Never hand back a line you've judged a rival could paste in; rewrite it around a fact, a quote or a scene only this brand has. Swap adjectives for facts a viewer could check (a number, a material, a test, a time, a making step), as Hopkins taught. Making steps the brand finds dull are often ones rivals never mention.
+5. **Find the claim only you can make.** For each line ask: could a rival paste it in unchanged, and would a stranger care? This includes the Opening and Problem beats, which are the easiest to leave generic. Cut or rewrite lines that fail either, before you hand back, and rebuild a generic Opening or Problem line around a fact, quote or scene only this brand has. Never hand back a line you've judged a rival could paste in; rewrite it around a fact, a quote or a scene only this brand has. Swap adjectives for facts a viewer could check (a number, a material, a test, a time, a making step), as Hopkins taught. Making steps the brand finds dull are often ones rivals never mention.
 6. **Set the controls:** length and word budget (see Pace), person (first for stories, second for most, third for narration), tense, and the selling beat that will do most of the work.
 7. **Write the nine beats**, labelling each line:
    1. **Opening**: picks out the right buyer and earns line 2. Written after the rest.
@@ -116,7 +118,7 @@ At 3.0: 15 s holds about 39 words, 30 s about 84, 45 s about 129, 60 s about 174
 | Clicks, few sales | Landing page match, the price said aloud, who the opening picks out |
 | Fading after a week or two | New openings on the same body, then a new reason to buy |
 | Cheap clicks, then refunds | The promise is bigger than the product |
-Label each line with its beat, say what works and what fails, and return a rewrite with a short "what changed" table. For a line-by-line check, pair it with the Video ad script line checker.
+Label each line with its beat, say what works and what fails, and return a rewrite with a short "what changed" table. For a line-by-line check, pair it with the Video ad script line checker. For a script type to try, use the Video ad script type picker.
 
 ## What you hand back
 ```
@@ -167,7 +169,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Check before you hand it back
-- The belief shift is there and every beat serves it; no line would work for the product on the next shelf.
+- The belief shift is there and every beat serves it; no line, the Opening and Problem included, would work for the product on the next shelf.
 - Every quote matches the research word for word.
 - The problem is one person's workaround, left unsolved; one promise, before how it works; the product named at the offer.
 - Read the Says and Screen lines of every beat before the Offer: no brand, product or site name, and quote attributions there use a neutral label such as "verified buyer".

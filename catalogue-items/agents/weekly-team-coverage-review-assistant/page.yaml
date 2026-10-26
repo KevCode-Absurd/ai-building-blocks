@@ -1,55 +1,114 @@
 new_slug: weekly-team-coverage-review-assistant
 name: Weekly team coverage review assistant
 headline: Weekly team coverage review assistant
-summary: A coverage change brief, uncovered commitments and draft handovers.
+summary: Spot critical work left without cover during absences. Get a team coverage brief, a list of uncovered commitments and draft handovers.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A coverage change brief, uncovered commitments and draft handovers. Share upcoming absences, critical commitments, approved cover and the last coverage review. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it upcoming absence dates, your critical commitments with the hours each needs, and the cover people have agreed to. It builds a weekly team coverage brief of what changed. It lists commitments with no accepted cover and drafts task-level handovers. Cover counts only once the person accepts.
 explain: |-
-  A coverage change brief, uncovered commitments and draft handovers.
+  Teams plan cover in chat threads and calendars. A person is "covering" until the day they say they cannot. By the time the absence starts, a delivery has no owner and nobody noticed.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Owners and available hours use current evidence; proposed cover is never described as accepted. Missing tools or evidence stay visible in the final summary.
+  This agent keeps one row for each critical commitment: its ID, the absence window, the cover owner and whether they accepted. Each week it compares your updates with last week's record and flags what changed. Cover counts only when the owner has accepted, so a proposal stays a proposal. When the hours your cover owners have fall below the hours a commitment needs, it runs the Team capacity planner and sets out three options for the manager: defer, reduce or add cover.
+
+  It prepares paper only. It records dates, never the reason for an absence, and it keeps passwords and access details out of every handover. The manager decides. The agent assigns no work and messages no one.
 when:
-  - You need a coverage change brief, uncovered commitments and draft handovers.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - Two people on the same team are away in the same week.
+  - A delivery date moved earlier and the planned cover no longer fits.
+  - A cover person's hours were cut, or they said they cannot do it.
+  - Each week you want to know which critical commitments have no accepted cover.
+not_for:
+  - A one-off cover request for a single task. Use the Handover note writer.
+  - You want a longer plan for hiring or workload. Use the Team capacity planner.
+  - You want to follow up on staff survey answers. Use the Employee feedback action review assistant.
+  - You need an end-of-shift note for a restaurant. Use the Restaurant shift exception review assistant.
 you_give:
-  - Upcoming absences, critical commitments, approved cover and the last coverage review.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - Upcoming absence dates for each person, dates only (from your leave calendar)
+  - Critical commitments, each with an ID, a due date, an owner and the hours it needs (from your project or task list)
+  - Cover that people have offered or accepted, with each person's available hours
+  - The manager who decides on cover
+  - Last week's coverage record (optional, from the second week on)
 you_get:
-  - A coverage change brief, uncovered commitments and draft handovers.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - "A coverage change brief: what changed since last week, commitment by commitment"
+  - "A list of uncovered commitments: no accepted cover, or not enough hours"
+  - "Options for the manager when hours fall short: defer, reduce or add cover"
+  - A draft handover for each commitment that changes hands, with its current state and next action
+  - MISSING lines for gaps, and a record for next week
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent to Claude, ChatGPT or Gemini with its helpers, the Prepare a team absence handover workflow and the Team capacity planner. Or download the pack and attach it.
+  - Paste your absence dates, critical commitments with hours, and cover offers. Name the manager. From week two, paste last week's record.
+  - Read the uncovered list first. Check that every cover owner is marked accepted, not only proposed.
+  - Choose between defer, reduce and add cover yourself. Ask the people involved to confirm.
+  - Send each handover yourself. The agent only drafts.
+  - In a chat-only tool, copy the record it gives you and paste it in next week. Installing sets up no schedule, so you start each run.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep commitment ID, absence window, cover owner, acceptance state, next review and source date. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: An absence, delivery date or available cover changes for a critical commitment.
-  - title: Choose the next step
-    text: Run the coverage workflow for the changed window. If capacity is short, run team-capacity-planner and present defer, reduce or add-cover options for the manager.
-  - title: Check and save evidence
-    text: Owners and available hours use current evidence; proposed cover is never described as accepted. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read last week's record
+    text: Loads each commitment's ID, absence window, cover owner, whether they accepted, the next review and the source date. A first run builds a baseline with you.
+  - title: Find what changed
+    text: Flags any absence, delivery date or offer of cover that is new or different since the last record.
+  - title: Check every commitment
+    text: For each critical commitment, shows its owner as present or away, whether cover is accepted, and whether the cover owner's hours cover the hours needed.
+  - title: Weigh the gaps
+    text: When hours fall short, runs the Team capacity planner and lays out defer, reduce and add-cover options for the manager. It does not choose.
+  - title: Write handovers and actions
+    text: The Prepare a team absence handover workflow runs the Team capacity planner, the Handover note writer and the Executive action register keeper. Each handover has a source link, the current state and the next action.
+  - title: Check and save
+    text: Checks that no proposed cover is called accepted and that no access detail is written down. Saves the files, a run log and the new record, and keeps the old record.
 output_shape: |-
-  Scope and source coverage
-  A coverage change brief, uncovered commitments and draft handovers.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  COVERAGE REVIEW <date>, window <dates>
+  <first baseline, or compared with <last review date>>
+  DECIDES: <manager, or MISSING>
+
+  CHANGES SINCE LAST REVIEW
+  <commitment ID> | <what changed: absence, delivery date or cover>
+
+  COMMITMENTS
+  <ID> | due <date> | needs <hours> | owner <name> <present or away> | cover <name> <accepted | proposed | declined | none> | cover hours <n> | status <covered | short | uncovered>
+
+  UNCOVERED OR SHORT
+  <ID> | gap <hours or owner> | options for <manager>: defer | reduce | add cover
+
+  DRAFT HANDOVERS (not sent)
+  <ID> | to <cover owner> | state <where it stands> | next action <what> | source <link or reference>
+
+  MISSING  <each gap>
+  CHECKS MISSED  <one line each, or none>
+  RECORD FOR NEXT REVIEW  <commitment ID | absence window | cover owner | accepted or not | next review | source date>
+output_sample:
+  input:
+    - Upcoming absence dates, dates only
+    - Critical commitments, with ID, due date, owner and hours needed
+    - Cover offered or accepted, with each person's available hours
+    - The manager who decides
+    - Last week's coverage record (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - The helper skills added, or the pack attached
+    - A list of which commitments count as critical
+  output:
+    - name: Changes since last review
+      contains: Each commitment where an absence, a delivery date or an offer of cover changed.
+    - name: Commitments table
+      contains: "One row per critical commitment: owner, whether they are away, the cover person, whether cover is accepted, hours and status."
+    - name: Uncovered or short
+      contains: Commitments with no accepted cover or too few hours, with defer, reduce and add-cover options for the manager.
+    - name: Draft handovers
+      contains: "A task-level handover for each commitment that changes hands: current state, next action and a source reference."
+    - name: Action list
+      contains: Coverage actions with owners, dates, dependencies and acceptance still open.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Missing hours, owners or dates, and every check that could not run.
+    - name: Record for next week
+      contains: Commitment ID, absence window, cover owner, accepted or not, next review and source date.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Owners and available hours use current evidence; proposed cover is never described as accepted.
+  - what: What is critical
+    how: List which commitments count as critical. The agent reviews only those, so the brief stays short.
+  - what: Hours needed
+    how: Give hours for each commitment. Without hours the agent cannot say if cover is enough.
+  - what: What accepted means
+    how: Say how cover is accepted, such as a reply or a calendar entry. The agent counts nothing else.
+  - what: Review day
+    how: Pick one day each week and send updates before it, so every run covers the same window.
 judge:
   - Owners and available hours use current evidence; proposed cover is never described as accepted.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +121,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Give each commitment a fixed ID, so a renamed commitment is not read as a new one.
+  - Keep one record per team and paste it in each week.
+  - Write down who may approve cover, so the manager line stops coming out as MISSING.
+  - Record checks that need a person, such as a cover owner saying yes, and finish them before you rely on the brief.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Keeps the record between weeks. In a plain chat tool you paste the record in each time.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - An export of your leave calendar, dates only.
+    - Your task or project list with owners and due dates.
+    - A note on each person's usual available hours.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Commitment
+    meaning: Work promised to someone by a date, such as a delivery.
+  - term: Cover owner
+    meaning: The person who does a commitment while its owner is away.
+  - term: Accepted cover
+    meaning: Cover that the person has agreed to. An offer or a guess is not enough.
+  - term: Capacity
+    meaning: The hours a person has free for the work.

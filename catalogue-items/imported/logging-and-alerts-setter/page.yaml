@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks the right signals, then follows known patterns.
 new_slug: logging-and-alerts-setter
 name: Logging and alerts setter
-summary: Say what must work in production. Get logs, metrics and alerts added so
-  problems show up fast.
+summary: Add logs, metrics and alerts to your code so you can see what happened in production. Get a logging and alerts setup with a runbook for each alert.
 job: build-software
 headline: Logging and alerts setter
-subhead: Code that tells you what it is doing in production, so when something
-  breaks you can see what happened. Say what must work and get logs, metrics and
-  alerts added to match.
+subhead: Code that tells you what it is doing in production, so when something breaks you can see what happened. Say what must work and get logs, metrics and alerts added to match.
 explain: |
   Code that tells you what it is doing in production, so when something breaks you can see what happened. Say what must work and get logs, metrics and alerts added to match.
 
@@ -18,6 +15,10 @@ when:
   - A user reported a bug and your logs say nothing.
   - Your alerts fire so often that the team ignores them.
   - You need a runbook for a key page or endpoint.
+not_for:
+  - "You need to find the cause of a failure happening right now: use your logs and a debugging session first, then come back to add what was missing."
+  - "Your code is slow and you want it faster: use a profiling tool or ask a developer to measure it, since this page adds visibility and does not tune speed."
+  - "You need a launch day checklist or a rollback plan: write that with your team, because this skill only covers the logs, metrics and alerts that feed it."
 you_give:
   - The feature or code to instrument
   - What counts as working
@@ -30,8 +31,33 @@ you_get:
   - Alert rules with thresholds
   - A short runbook for each alert
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste the skill, or upload the skill folder. Pick an AI that can read your project files.
+  - Paste or attach the feature code. Say in plain words what working means for it.
+  - Add your logging and monitoring tools if you have them (optional). Add notes on past incidents (optional).
+  - Read the on-call questions first and fix any that are wrong. Every log, metric and alert follows from them.
+  - Run the code in a test setup. Force an error and check that it shows up in the logs.
+  - Fire each new alert once and check that it reaches the right place and the runbook link works.
+output_sample:
+  input:
+    - The feature or code path to instrument
+    - Your definition of working, in plain words
+    - Your logging and metrics tools (optional)
+    - Notes on past incidents (optional)
+  prerequisites:
+    - An AI that can read your project files, so it can edit the code
+    - A way to run your code in a test setup, to check the logs and alerts
+  output:
+    - name: On-call questions
+      contains: Two to four questions someone on call would ask about this feature, so every signal has a reason.
+    - name: Structured logs
+      contains: Log events with stable names, fields and a request ID on every line, with no secrets.
+    - name: Metrics
+      contains: Rate, error and duration measures for each endpoint and outside service, with small fixed label sets.
+    - name: Trace points
+      contains: Tracing setup and a few named spans around key steps, so one request can be followed across services.
+    - name: Alert rules
+      contains: Alerts on what users feel, each with a threshold and a time window.
+    - name: Runbooks
+      contains: "One short file per alert: what it means, the first check to run and who to call."
+    - name: Telemetry check
+      contains: Steps to force an error, find it in the logs and fire each alert once.

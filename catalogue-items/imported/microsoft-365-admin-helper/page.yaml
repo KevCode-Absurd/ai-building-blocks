@@ -2,34 +2,101 @@ thinking: medium
 thinking_why: It follows admin steps but must match your setup.
 new_slug: microsoft-365-admin-helper
 name: Microsoft 365 admin helper
-summary: Say what your company needs. Get Microsoft 365 setup scripts for users,
-  mail, Teams and security.
+summary: Get PowerShell scripts to set up Microsoft 365 users, licences and security, with passwords saved and policies in report-only mode first.
 job: connect-tools
 headline: Microsoft 365 admin helper
-subhead: "PowerShell scripts for setting up and running your Microsoft 365
-  tenant: users, mail, Teams and security. Say what your company needs and get
-  scripts to run, instead of clicking through the admin centre."
+subhead: "Tell your AI what your company needs in Microsoft 365: new users, licences, offboarding or tighter security. You get PowerShell scripts to run in your tenant, with a check before each change. You need Global Administrator rights and a test tenant."
 explain: |
-  PowerShell scripts for setting up and running your Microsoft 365 tenant: users, mail, Teams and security. Say what your company needs and get scripts to run, instead of clicking through the admin centre.
+  Setting up Microsoft 365 by hand means a lot of clicking in the admin centre. This Microsoft 365 admin helper writes the PowerShell scripts instead, for the jobs an admin repeats: a security audit, bulk new users from a CSV, licence changes, a multi-factor sign-in policy for admins, and clean offboarding.
 
-  Examples include a security audit that lists licences and sign-in rules, bulk user creation from a CSV with random one-time passwords, and a conditional access policy that requires MFA for admins. New policies start in report-only mode, so you see the effect before anyone is locked out. It covers the full life of an account from joining to leaving. You need Global Administrator rights and the Microsoft Graph PowerShell module to run it.
+  It is built to avoid the common lockout. New sign-in policies start in report-only mode, so you see who would be affected before anyone is blocked. Policies that cover everyone leave out two break-glass admin accounts. New-user scripts save each temporary password to a file you control, so people can sign in.
+
+  It does not run anything on its own. It asks first, shows each script, and waits for your yes before a change.
 when:
-  - You have 40 new hires starting Monday and need accounts and licences.
-  - You want to know how locked down your tenant is.
-  - You need MFA for admin accounts without risking a lockout.
-  - Someone is leaving and you need their access closed cleanly.
+  - You have 40 new hires starting Monday and need accounts and licences set up from a list.
+  - You want to know how locked down your Microsoft 365 tenant is before an audit.
+  - You need multi-factor sign-in for admin accounts without risking a lockout.
+  - Someone is leaving and you need their sign-in, licences and mailbox handled in the right order.
+not_for:
+  - "Your company still runs on-premises Active Directory: these scripts assume cloud-only accounts, so plan the hybrid steps with your IT partner first."
+  - "You are not a Global Administrator: ask your admin, as most of these commands will fail without that role."
+  - "You run Google Workspace, not Microsoft: use the Google Workspace command-line operator."
+  - "You want a one-time change to one person: do it in the admin centre, as it is quicker than setting up scripts."
 you_give:
-  - What your company needs set up
-  - A CSV of users and licences (optional)
-  - Admin access to your tenant
+  - What your company needs set up or changed
+  - A CSV of new users with name, address, department and licence (optional)
+  - Your tenant's domain name
+  - Two break-glass admin accounts for sign-in policies (optional, ask if unsure)
+  - A test tenant or a small test group to try the scripts first
 you_get:
-  - Ready-to-run PowerShell scripts
-  - A security audit script
-  - Bulk user creation steps
-  - Safe, report-only security policies
+  - PowerShell scripts for the job, each with a note on what it changes
+  - A read-only security audit that lists licences, sign-in policies and who lacks multi-factor sign-in
+  - New-user scripts that save temporary passwords to a file
+  - Sign-in policies in report-only mode, with break-glass accounts left out
+  - An offboarding script, with a preview before anything is removed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your admin account.
+  - Use an AI that can run PowerShell, or run the scripts yourself. Install the Microsoft Graph, Exchange Online and Teams PowerShell modules first.
+  - Start in a test tenant or with a small test group. Do not run a new script on all staff first.
+  - Say what you need. For new users, give your AI the CSV. Name your two break-glass admin accounts, or say you have none.
+  - Run the security audit first, since it only reads. Read the list of findings before you change anything.
+  - Before each change, check the script, the count of accounts it touches and what it does. Say yes only when it matches.
+  - Keep new sign-in policies in report-only for about 48 hours. Check the sign-in logs, then ask your AI to switch them on. Hand over temporary passwords safely, then delete the passwords file.
+how_it_works:
+  - title: Ask what is missing
+    text: It asks for your domain, the user list and the break-glass accounts, and does not invent them.
+  - title: Audit first
+    text: It runs read-only checks on licences, sign-in policies and multi-factor sign-in.
+  - title: Write the script
+    text: It writes PowerShell for the job, using the Microsoft Graph module and the bundled generators.
+  - title: Protect against lockout
+    text: It starts policies in report-only mode and leaves break-glass accounts out.
+  - title: Confirm, then change
+    text: It shows each change and the number of accounts, and waits for your yes.
+output_shape: |
+  Job: <what you asked for>
+  Checked first: <domain, cloud-only or hybrid, break-glass accounts, test tenant>
+  Scripts: <one named .ps1 per task, with a one-line note on what it changes>
+  Accounts or policies touched: <count>
+  Passwords file: <where it is saved, hand over safely, then delete>
+  Check after running: <what to look at in the admin portal or sign-in logs>
+  Next step: <one suggestion>
+output_sample:
+  input:
+    - What your company needs set up or changed in Microsoft 365
+    - A CSV of users with name, address, department and licence (optional)
+    - Your tenant domain and two break-glass admin accounts
+  prerequisites:
+    - Global Administrator rights
+    - The Microsoft Graph PowerShell module installed
+    - A test tenant or test group to try the scripts first
+  output:
+    - name: Security audit script
+      contains: Read-only checks that list licences, sign-in policies and users without multi-factor sign-in, saved as CSV files.
+    - name: New-user script
+      contains: Creates accounts and licences from your CSV and saves each temporary password to a local file.
+    - name: Sign-in policy script
+      contains: Creates multi-factor and legacy-sign-in policies in report-only mode, with break-glass accounts left out.
+    - name: Offboarding script
+      contains: Blocks sign-in, ends sessions, removes licences and groups, and makes the mailbox shared, after a preview.
+    - name: Check list
+      contains: What to review in the admin portal and sign-in logs before and after you run each script.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can run PowerShell on your machine and show the output, while you approve each step.
+    - name: Chat AI without commands
+      why: It can write the scripts for you to run yourself and read back any error you paste.
+  inputs:
+    - The CSV of new users, cleaned so every row has a name, address and licence.
+    - Your licence plan, so it picks the right licence code for each person.
+terms:
+  - term: Tenant
+    meaning: Your company's own Microsoft 365 space, with its users, mail and settings.
+  - term: Conditional Access
+    meaning: Rules that decide who can sign in, from where and with what proof.
+  - term: Report-only mode
+    meaning: A policy that logs who it would affect, without blocking anyone.
+  - term: Break-glass account
+    meaning: A spare admin account kept out of sign-in rules, for use if others are locked out.
+  - term: MFA
+    meaning: A second proof at sign-in, such as a code on your phone.

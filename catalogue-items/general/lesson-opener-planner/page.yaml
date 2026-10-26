@@ -1,51 +1,61 @@
 new_slug: lesson-opener-planner
 name: "Lesson opener planner"
-summary: "Paste today's topic and last lesson. Get a five-minute opener that brings back what learners know."
+summary: "Plan a five-minute lesson opener from today's topic and last lesson. Get a task, what to say, how to read answers and the next move for each."
 job: teach-and-train
 thinking: low
 thinking_why: "It builds a short activity in a fixed shape from two facts you give."
 
 headline: "Lesson opener planner"
-subhead: "Paste today's topic and last lesson. Your AI plans a five-minute opener that brings back what learners know, with what to say and what to do next."
+subhead: "Paste today's topic and what you taught last lesson. Your AI picks the one idea that links them and plans a five-minute opener around it. You get the task, the words to say, what ready and stuck answers sound like, and your next move for each."
 
 explain: |
-  A lesson that starts with new content loses the learners who forgot the last one. A short opener that brings back the right idea gets everyone ready, and shows you who is not.
+  A lesson that starts with new content loses the learners who forgot the last one. A short opener that brings back the right idea gets everyone ready, and shows you who is not. This lesson opener planner builds that opener from two facts: today's topic and last lesson.
 
-  This prompt picks the one idea today's topic needs and builds a five-minute task around it. You get the words to say, what to listen for, and the next move for ready and stuck learners.
+  It picks the single idea from last lesson that today's topic needs. Then it plans a five-minute task around that idea, something learners do, such as a question, a sorting job or a quick write. It uses only what is in the room.
+
+  You also get two or three plain sentences to start it, and what a ready answer and a stuck answer each sound like. For each, it tells you what to do next: move on, or spend two more minutes on the link.
 
 when:
-  - "You plan tomorrow's lesson and need a start."
-  - "Learners walk in cold each time."
-  - "You want to see who remembers last lesson."
+  - "You plan tomorrow's lesson and need a start that is not 'open your books'."
+  - "Learners walk in cold each time and last week's idea is gone."
+  - "You want to see who remembers last lesson before you build on it."
+  - "A new topic leans on one idea from last lesson, such as equivalent fractions before adding fractions."
+
+not_for:
+  - "You want several recall questions with answers and a bridge sentence: use the Lesson starter writer."
+  - "You need a quiz after the lesson: use the Recall quiz writer."
+  - "You need questions to check understanding during the lesson: use the Check-for-understanding question writer."
+  - "You need a whole lesson or unit plan: use the Backwards unit planner."
 
 you_give:
   - "Today's topic"
   - "What you taught last lesson"
-  - "Learners (optional)"
-
+  - "Your learners, such as age, level and class size (optional)"
+  - "A mistake from last lesson to listen for (optional)"
 you_get:
-  - "The idea linking the two lessons"
-  - "A five-minute opener task"
-  - "What to say"
-  - "What ready and stuck answers sound like, and the next move"
+  - "The one idea that links last lesson to today"
+  - "A five-minute opener task that every learner does"
+  - "Two or three sentences to say to start it"
+  - "What ready and stuck answers sound like, and your next move for each"
 
 how_to_use:
-  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
-  - "Paste your details under it, in the slots under What you need."
-  - "Send it and read the answer against the checks on this page."
+  - "Copy the prompt (the card on this page) and paste it into Claude, ChatGPT or Gemini, or open it if you added it to your AI. It needs no files or paid tools."
+  - "Under it, paste today's topic and what you taught last lesson. Add your learners if you can."
+  - "Send it and read the answer against the checks on this page. Look for a task every learner has."
+  - "Run the opener, listen for the stuck answers, and follow the next move for the group you hear."
   - "Reply with what to change, and keep the version that works."
 
 how_it_works:
   - title: "Find the link"
-    text: "The one idea carried over."
+    text: "Picks the one idea from last lesson that today's topic builds on."
   - title: "Build the task"
-    text: "Five minutes, learners do something."
+    text: "Writes a five-minute task learners do, not a talk, using only what is in the room."
   - title: "Write the words"
-    text: "Two or three sentences."
+    text: "Gives two or three plain sentences to start it."
   - title: "Listen for answers"
-    text: "Ready versus stuck."
+    text: "Says what a ready answer and a stuck answer each sound like."
   - title: "Plan the next move"
-    text: "For each."
+    text: "Says what to do for each: move on, or spend two more minutes on the link."
 
 output_shape: |
   LINK
@@ -61,6 +71,25 @@ output_shape: |
   <for each>
   MISSING
   <lines>
+
+output_sample:
+  input:
+    - "Today's topic"
+    - "What you taught last lesson"
+    - "Your learners: age, level, class size (optional)"
+  output:
+    - name: "LINK"
+      contains: "The one idea from last lesson that today's topic builds on."
+    - name: "OPENER"
+      contains: "A five-minute task every learner does, with the time for each part."
+    - name: "WHAT TO SAY"
+      contains: "Two or three plain sentences to start the task."
+    - name: "READY OR STUCK"
+      contains: "What a ready answer sounds like, and what a stuck answer sounds like."
+    - name: "NEXT MOVE"
+      contains: "What to do for each group: move on, or spend two more minutes on the link."
+    - name: "MISSING"
+      contains: "Anything it needed and did not have, such as your class level."
 
 tweaks:
   - what: "Format"

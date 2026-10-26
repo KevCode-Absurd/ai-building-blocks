@@ -1,0 +1,152 @@
+name: Chief of Staff agent
+summary: Turn your task list and notes into a one-page state of play. Get what needs you now, the decisions waiting, the open hand-offs and one top priority.
+headline: Chief of Staff agent
+subhead: Paste your tasks, notes and deadlines, and say which job you want, such as a weekly closeout or a decision. It sorts what must reach you from what can wait, lays out each decision with a recommendation, and lists who owes what.
+job: lead-people
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Founders and leaders lose time to noise. Small fixes, half-made decisions and
+  missed hand-offs all land on one desk. This chief of staff agent sits between
+  you and the mess. It sorts what needs you now from what can be handled or
+  parked, and it keeps your plans in step when something changes.
+
+
+  It works in six jobs: a daily check-in, a weekly closeout, a decision, meeting
+  prep, a hand-off between people or tools, and a document update after a
+  change. For each one you get a short, fixed layout. A decision comes with its
+  options, the cost of waiting a week and a recommendation. You still decide.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. In a chat it
+  cannot remember earlier chats, watch your inbox or file documents for you. It
+  gives you the list, and you make the changes. The targets in the profile, such
+  as decisions in under 48 hours, are the author's goals, not results.
+when:
+  - Your task list is long and you cannot tell what must reach you and what someone else can handle.
+  - A date or price changed, and you need to know which plans, pages and emails still say the old one.
+  - You are about to launch or raise money and want a short daily check-in.
+  - A decision is stuck and you want the options, the cost of waiting and a recommendation on one page.
+not_for:
+  - You want to sort a week of tasks and loose notes and close the open loops. Use the Weekly review keeper.
+  - You only need three priorities from a task list and your real hours. Use the Week priority picker.
+  - You need meeting notes turned into minutes and next actions. Use the Weekly meeting actions keeper.
+  - You want one choice written up for the record, with the options you passed on. Use the Decision record writer.
+  - You want it to send messages, move files or edit your documents. A chat AI cannot do that. It lists what to change.
+you_give:
+  - Which job you want, such as daily check-in, weekly closeout, decision, meeting prep, hand-off or document update.
+  - Your current work as a list or loose notes, with deadlines and who owns each item.
+  - For a decision, the choice, the options and what depends on it.
+  - For a document update, what changed and the names of the documents that may be affected (optional).
+  - How you like things laid out, and whether you want one next step at a time (optional).
+you_get:
+  - A state of play, with where things stand and today's or this week's one priority.
+  - Every item sorted into three groups, which are tell me now, handle and brief later, and park.
+  - Each waiting decision with options, the cost of waiting a week, a recommendation and a decide-by date.
+  - Open hand-offs with an owner and a date.
+  - A list of documents to update after a change, taken only from the names you gave.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Say which job you want. For example, "Weekly closeout" or "Help me decide this."
+  - Paste your tasks, notes and deadlines. Add who owns each item if you know.
+  - Read the "tell me now" group first. Move anything you disagree with to another group and say why. It learns your line for the rest of the chat.
+  - Make the changes it lists yourself, or ask for a draft message first. It will not send anything.
+  - Save the result as your state of play note and paste it back next week.
+how_it_works:
+  - title: Pick the job
+    text: It confirms which of the six jobs you want and what you gave it. Missing facts are marked, not guessed.
+  - title: Sort the noise
+    text: Each item goes into one of three groups, which are tell me now, handle and brief later, and park, with a reason.
+  - title: Lay out decisions
+    text: For each decision it asks if it can be reversed, what waiting a week costs and who is affected, then gives a recommendation.
+  - title: Trace the knock-on
+    text: When something changed, it lists the plans, pages and messages that mention it, from the names you gave.
+  - title: Name the owners
+    text: Each open item gets an owner and a date. Items with neither are flagged.
+  - title: Close out
+    text: It lists what is still unchecked and what you must do yourself.
+output_shape: |-
+  JOB AND ASSUMPTIONS
+    <job> | ASSUMED: <list> | MISSING: <list>
+
+  STATE OF PLAY
+    where we are <one sentence> | top priority <one thing> | blockers needing you <list or none>
+
+  SORTED ITEMS
+    TELL ME NOW: <item> | why it cannot wait
+    HANDLE AND BRIEF LATER: <item> | who handles it
+    PARK: <item> | when to look again
+
+  DECISIONS WAITING
+    <decision> | options <list> | reversible <yes or no> | cost of waiting a week <text> | recommendation <text> | decide by <date>
+
+  OPEN HAND-OFFS
+    <item> | owner <role> | due <date> | depends on <item>
+
+  DOCUMENTS TO UPDATE (after a change)
+    <document you named> | what to change | status <done or to do>
+
+  CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - The job you want, such as a weekly closeout or a decision
+    - Your tasks and notes, with deadlines and owners
+    - The choice and its options, if it is a decision
+    - What changed and which documents it touches (optional)
+  prerequisites:
+    - An AI you can paste a long list into, such as Claude, ChatGPT or Gemini
+    - Last week's state of play note, if you have one (optional)
+  output:
+    - name: State of play
+      contains: One line on where things stand, the single top priority, and any blockers that need you.
+    - name: Sorted items
+      contains: Every item in tell me now, handle and brief later, or park, with a reason.
+    - name: Decisions waiting
+      contains: Each decision with options, whether it can be undone, the cost of waiting, a recommendation and a date.
+    - name: Open hand-offs
+      contains: What each person or tool owes next, with a date, and what it depends on.
+    - name: Documents to update
+      contains: The documents you named that a change affects, and what to change in each.
+    - name: Checks still needed
+      contains: Facts it could not confirm and the steps only you can do.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your task export, notes and the documents a change might touch.
+    - name: Your task tool or calendar, such as Notion, Trello or Google Calendar
+      why: Copy the list out and paste it in. The agent cannot read these tools in a plain chat.
+  inputs:
+    - Last week's state of play note.
+    - A list of your key documents and which decisions they depend on.
+    - A line on what you always want to see first, and what you never want to be asked.
+terms:
+  - term: Chief of staff
+    meaning: The person who sits between a leader and the rest of the team, filters what reaches the leader and keeps work from dropping.
+  - term: State of play
+    meaning: A one-page picture of where work stands, what is next and what is stuck.
+  - term: Hand-off
+    meaning: The moment work passes from one person or tool to another.
+  - term: Reversible decision
+    meaning: A choice you can undo later at a low cost, so you can make it faster.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Job
+    how: Name one job. Daily check-in, weekly closeout, decision, meeting prep, hand-off or document update each use a different layout.
+  - what: Where the line sits
+    how: Say which kinds of items you always want to hear about and which you never do. It sorts by your rule.
+  - what: One at a time
+    how: Ask for one next step at a time if long lists stress you. It will give the top item and wait.
+improve:
+  - Keep your sorting rules and layout notes in a short file and paste it at the start of each run.
+  - Save each state of play note so the next one can show what changed since last time.

@@ -1,6 +1,6 @@
 new_slug: performance-max-routine-keeper
 name: Performance Max routine keeper
-summary: Share Performance Max exports. Get daily, weekly and monthly findings, proposed changes and a checked view of flagged spend.
+summary: Check your Performance Max account with a daily, weekly and monthly routine. Get changes to review, a budget call and a spend score.
 job: run-google-ads
 thinking: medium
 thinking_why: It applies a fixed routine to exports and weighs a budget move, so a mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - You run Performance Max and want a weekly routine that fits into an hour.
   - Performance Max ROAS looks great but your store revenue does not match.
   - Spend jumped and you need to know where it went.
+not_for:
+  - "Your account has no Performance Max campaign: use the standard reports in Google Ads, or plan a new campaign with the Performance Max launch planner."
+  - "You have no store revenue or attribution numbers: the reality check cannot run, so use Google Ads reports for a first look at spend."
+  - "You want to pick a bid target: use the Google bid strategy chooser, then come back here for the weekly routine."
 you_give:
   - Performance Max search term insights
   - Product-level spend and conversions
@@ -30,6 +34,29 @@ how_to_use:
   - Add your break-even CPA and ROAS, and your blended MER and new-customer CPA.
   - Review the proposed changes and their evidence. Any account edit, upload or budget change needs separate approval and result checks.
   - Choose a review window that considers volume and conversion lag; the source’s two-to-four weeks is a starting example.
+output_sample:
+  input:
+    - Your Performance Max search term insights
+    - Your product-level spend and conversions
+    - Your asset, landing page and placement reports (optional)
+    - Your break-even CPA and ROAS (optional)
+    - Your blended MER and new-customer CPA from your attribution tool (optional)
+  prerequisites:
+    - An AI chat that can read pasted exports
+    - Access to Google Ads to export the reports
+  output:
+    - name: THIS WEEK'S FINDINGS
+      contains: Daily, weekly and monthly checks, with proposed term exclusions, weak products and assets, and whether a customer list refresh is due.
+    - name: EXCLUDE OR REPLACE
+      contains: A list of products, pages, terms and assets with their spend, conversions and the action to review.
+    - name: REALITY CHECK
+      contains: Performance Max ROAS beside blended MER and new-customer CPA, with dates, gaps and any shift in channel mix.
+    - name: BUDGET MOVE
+      contains: A raise, hold or cut with the rule behind it, and how long to wait before the next change.
+    - name: CUSTOM DESCRIPTIVE SCORE
+      contains: A score out of 100 from flagged spend counted once, or a note that it cannot be worked out.
+    - name: MISSING
+      contains: Any report or number you did not give, so you know what limits the result.
 how_it_works:
   - title: Runs the daily check
     text: Reviews observed queries and branded conversions, then proposes supported exclusions.

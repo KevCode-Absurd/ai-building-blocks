@@ -1,6 +1,6 @@
 new_slug: price-your-software-in-tiers-people-pick-then-test-it
 name: Price your software in tiers people pick, then test it
-summary: Give it your product and customers. Get a revenue model, tiers, a price page and a safe test.
+summary: "Set prices for your software: get a revenue model, three tiers, a price page layout and a price test you can undo, from your product and customers."
 job: set-prices
 thinking: high
 thinking_why: It makes money decisions from your numbers and designs a test you can undo. Give it your strongest model.
@@ -14,6 +14,11 @@ when:
   - You have one plan and your biggest customers pay the same as your smallest.
   - You are about to launch and have no idea what to charge.
   - You want to raise prices but fear losing customers, and have no way to test it.
+not_for:
+  - You sell a product once, with no plans or renewals. Use Price a product so it pays after every cost.
+  - You want to ask buyers what they would pay before you pick tiers. Use Set your price from what buyers say, then test it.
+  - Visitors like the product but hesitate at the price. Use Make visitors who hesitate at the price say yes.
+  - You want to change prices for current customers today. The test here runs on new sign-ups only, and you decide when it goes live.
 you_give:
   - What the product does and who pays for it
   - Your current plans and prices, if any
@@ -57,6 +62,25 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+output_sample:
+  input:
+    - What the product does and who pays for it
+    - Your current plans and prices (optional)
+    - Sign-ups, upgrades and churn by plan for a set period (optional)
+    - Cost per customer and usage limits (optional)
+  prerequisites:
+    - Access to your billing tool, to run the test later (optional)
+  output:
+    - name: Step 1 revenue model
+      contains: Three to five ways to earn from the product, the risk of each, and the one to build on.
+    - name: Step 2 value metric and tiers
+      contains: What you charge for, and good, better, best tiers with a starting price and who each is for.
+    - name: Step 3 price page
+      contains: The anchor, the order of the tiers and the plain words under each price, with no tricks.
+    - name: Step 4 price test
+      contains: One change to test on new sign-ups, three outcome cases, the deciding number and the rollback.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 example:
   business: sprout
   input: |
@@ -110,3 +134,7 @@ terms:
     meaning: The unit you charge for, chosen so the bill grows as the customer gets more value (seats, scans, orders).
   - term: Anchor
     meaning: The price a reader sees first, which makes the others look cheaper or dearer by comparison.
+before: []
+next:
+  - set-your-price-from-what-buyers-say-then-test-it-safely
+  - make-visitors-who-hesitate-at-the-price-say-yes

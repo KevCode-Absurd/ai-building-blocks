@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It reads license terms and compares them.
 new_slug: open-source-license-checker
 name: Open-source license checker
-summary: Give it your project dependencies. Get license clashes, duties and
-  risks flagged.
+summary: Check your open-source licenses before you ship. Give it your dependency file and get license clashes, required notices and risk flags.
 job: secure-code
 headline: Open-source license checker
-subhead: A report on the licenses in your project's dependencies, showing which
-  ones clash, what each requires of you, and where the risk sits. It helps you
-  avoid a surprise when you publish or sell your software.
+subhead: A report on the licenses in your project's dependencies, showing which ones clash, what each requires of you, and where the risk sits. It helps you avoid a surprise when you publish or sell your software.
 explain: |
   A report on the licenses in your project's dependencies, showing which ones clash, what each requires of you, and where the risk sits. It helps you avoid a surprise when you publish or sell your software.
 
   The skill reads your dependency file and follows the chain to every package underneath. It finds each license, then checks how they fit together given how you share your software: as a service, a download, a library or an internal tool. It flags strong copyleft licenses such as GPL and AGPL and weaker ones such as LGPL and MPL. The report lists notices you must include and suggests fixes. It is not legal advice.
 when:
-  - You are about to publish your project and want to know if a dependency's
-    license blocks it.
+  - You are about to publish your project and want to know if a dependency's license blocks it.
   - A customer asks for a list of third-party licenses.
   - You added a GPL package and are not sure what that means.
   - You want to know which attribution notices you must ship.
+not_for:
+  - "You need a legal decision or a signed-off license choice: ask a qualified lawyer, because this report only spots issues."
+  - "You want to check code you wrote yourself or copied from a site: review the source and its terms by hand."
+  - "You need to scan fonts, images or other non-code files: read each asset's own license, or ask the person who supplied it."
 you_give:
   - Your dependency file, such as package.json
   - Your project's own license
@@ -30,8 +30,27 @@ you_get:
   - Copyleft risk flags with severity
   - Required notices and suggested fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Paste your dependency file, such as package.json.
+  - "Say what license your project uses and how you share it: as a service, a download, a library or an internal tool."
+  - Read the risk flags first. Treat clashes as likely problems and check them with a lawyer before you act.
+  - If your AI cannot read your whole project, paste the lock file too so it can see packages underneath.
+output_sample:
+  input:
+    - Your dependency file, such as package.json, requirements.txt or go.mod
+    - Your project's own license
+    - "How you share your software: as a service, a download, a library or an internal tool"
+    - Package versions (optional)
+  output:
+    - name: License inventory
+      contains: A table of every package with its license, its type (permissive or copyleft) and a risk level.
+    - name: Compatibility analysis
+      contains: How the licenses fit together given your project's license and how you share it.
+    - name: Copyleft risk flags
+      contains: Each GPL, AGPL, LGPL or MPL package, how you use it, and a severity rating.
+    - name: Required attributions and notices
+      contains: The license texts and credits you must include when you ship.
+    - name: Recommendations
+      contains: Steps to fix each clash, such as swapping a package or asking for a commercial license.
+    - name: Bill of materials
+      contains: A list of all packages and licenses you can add to your docs or hand to a lawyer.

@@ -1,16 +1,17 @@
 slug: mental-model-checklist-runner
 name: Many-field model checklist runner
-summary: Paste a plan or problem. Get it checked through maths, engineering, biology, psychology and economics in turn.
+summary: "Run a plan through many fields. Get a mental models checklist answer from each, where they stack or clash, and the facts you still need."
 category: general
 type: skill
 role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: plan, required: true}
-  - {type: question, required: false}
+  - {type: question, required: true}
+  - {type: plan, required: false}
 outputs:
   - {type: audit_report, required: true}
+  - {type: question}
 origin: rebuilt
 version: 1.0.0
 minds:
@@ -22,3 +23,4 @@ credits:
   - title: A Lesson on Elementary Worldly Wisdom (talks at USC and Stanford)
     by: Charles T. Munger
     used: "The list of core models: odds and compounding, accounting limits, backups and breakpoints, scale, competitive destruction, opportunity cost, and the two-track check of reasons and mind tricks"
+next: [decision-bias-pileup-checker, incentive-checker]

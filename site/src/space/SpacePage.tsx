@@ -353,7 +353,7 @@ function People({ c, toast }: { c: Catalogue | null; toast: Toast }) {
       <header className="wrap bp-hero">
         <p className="bp-kicker"><span className="kind">From people</span>Shared in the open</p>
         <h1 className="bp-h1">Skills and workflows other people made public</h1>
-        <p className="bp-sub">Anyone with a space can make an item public. These aren't checked or tested by us yet, so read one before you rely on it. Our own blocks, tested on a real business, are in the library.</p>
+        <p className="bp-sub">Anyone with a space can make an item public. These aren't checked or tested by us, so read one before you rely on it. In our library, only blocks marked Tested have passed a test.</p>
         <div className="bp-actions"><Link to="/space" className="btn btn-primary btn-sm">Share yours from your space <ArrowIcon size={12} /></Link><Link to="/#library" className="btn btn-dark btn-sm">See the library</Link></div>
       </header>
       <div className="wrap ap-body">

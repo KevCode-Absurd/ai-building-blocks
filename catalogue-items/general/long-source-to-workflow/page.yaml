@@ -1,6 +1,6 @@
 new_slug: long-source-to-workflow
 name: "Workflow builder from a long source"
-summary: "Paste a long article, transcript or book notes. Get the method as a workflow, with a skill for every step."
+summary: "Turn a long article, transcript or book notes into a workflow. Get the steps in order, with one skill for each step your AI can run."
 job: set-up-ai
 thinking: high
 thinking_why: "It has to find the method inside a long source and keep its order. Use your strongest model."
@@ -17,6 +17,10 @@ when:
   - You read or watched something that teaches a method, and you want to run it again without rereading it.
   - You have a long transcript from a talk or a course and want the steps as skills your AI can follow.
   - You want to see how a method breaks into parts before you decide which parts to use.
+not_for:
+  - "You have a short source or one tip: ask your AI for a plain summary, or keep the source's own notes."
+  - "You want a single skill, not a set of steps: write one skill by hand, or ask your AI to draft it from a short description."
+  - "You want a summary of the source: ask your AI for a summary instead, since this makes skills and a workflow."
 
 you_give:
   - The full text of the source, with its title, who made it and a link
@@ -34,6 +38,25 @@ how_to_use:
   - Read the skeleton it shows you. Add, drop or reorder steps, then say go ahead.
   - Save each file it gives you in its own folder, then add the folders to your AI as skills.
   - Run the workflow on a real job, and fix any step that didn't work the way the source meant.
+output_sample:
+  input:
+    - The full text of a long article, transcript or book notes, with its title, maker and link
+    - A few lines on your work, or your brand file (optional)
+    - The names of skills you already have (optional)
+  prerequisites:
+    - A source you have the right to paste and reuse
+    - An AI that can hold a long text in one chat
+  output:
+    - name: Skeleton
+      contains: A numbered list of steps in the source's order, each with where it came from, what it reads and what it makes.
+    - name: Skill files
+      contains: One SKILL.md per step, in your own words, with inputs, steps, a hand-back and checks.
+    - name: Workflow file
+      contains: A SKILL.md that runs the skills in order, shows what each step takes from the one before, and marks pauses.
+    - name: MISSING
+      contains: The steps or facts the source left vague, marked so nothing is guessed.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: Reads it all first

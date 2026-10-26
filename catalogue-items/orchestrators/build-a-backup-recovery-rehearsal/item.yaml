@@ -1,6 +1,6 @@
 slug: build-a-backup-recovery-rehearsal
 name: Build a backup recovery rehearsal
-summary: Share the source files. Get a recovery plan, rehearsal checklist and evidence log template.
+summary: Plan a safe restore test of your backups. Get a recovery plan, a rehearsal checklist and an evidence log to fill in as you test.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,9 +8,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
-  - type: codebase
+  - type: document
     required: false
   - type: meeting_notes
     required: false
@@ -23,11 +23,12 @@ uses:
   - executive-action-register
 steps:
   - uses: backup-and-recovery-planner
-    note: Map what must be restored, dependencies, responsible people and the stated recovery targets.
+    note: Ranks each system by how fast it must return and sets recovery targets from your numbers. Hands the ranked list and targets to the runbook step.
   - uses: incident-runbook-writer
-    note: Write a safe restore rehearsal with prerequisites, stop points and rollback steps.
+    note: Writes the restore rehearsal for each system, with prerequisites, stop points, rollback steps and a row for time, data checked and pass or fail. Hands the checklist to the register.
   - uses: executive-action-register
-    note: Track the rehearsal tasks, evidence to collect, owners and unresolved recovery gaps.
+    note: Turns the rehearsal tasks, evidence to collect and recovery gaps into one action list with owners and dates. Reads the checklist from step 2 and the plan from step 1, plus your meeting notes if you have them. Hands you the action list.
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

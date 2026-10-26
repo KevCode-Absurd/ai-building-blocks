@@ -23,6 +23,8 @@ inputs:
     required: false
   - type: brand_brain
     required: false
+  - type: ad_copy
+    required: false
 outputs:
   - {type: ad_copy}
   - {type: image_prompt}

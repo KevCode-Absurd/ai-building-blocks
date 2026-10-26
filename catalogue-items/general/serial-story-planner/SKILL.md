@@ -40,7 +40,7 @@ How to start:
 
 ## Steps
 1. **Fix the ending and the main turns.** Write the last scene in two sentences. Then write three or four turns, the points where the situation changes, in order. If the ending is not decided, offer two options with what each would cost the main person, and ask the person to choose.
-2. **Split into parts and give each a job.** Choose the number of parts that fits the form. For each, write one line saying the job (introduce, complicate, raise cost, turn, resolve) and a size. Check that someone who reads only that part gets something whole.
+2. **Split into parts and give each a job.** Choose the number of parts that fits the form. For each, write one line saying the job (introduce, complicate, raise cost, turn, resolve) and a size. Check that someone who reads only that part gets something whole. Every part gets a different job. If there are more parts than the five standard jobs, name a specific job for each (for example "the first betrayal"), and never repeat one such as "raise cost" twice.
 3. **Plan part one.** Open with a plain fact and a small wink of tone. Then bring in a person and a place with one detail each that sticks, such as a name, a habit or a phrase. State what the person wants by the end of part one.
 4. **End each part on a question or a shock.** For every part except the last, write the closing beat. It must cost the main person something: money, trust, time or a chance. A cliffhanger with no cost is not allowed.
 5. **Put the change in steps.** If the main person changes, list the steps. Each step is a moment, a cost, and what it shows. No jump from one state to another in one part.
@@ -67,7 +67,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No two parts do the same job.
 
 ## If something is missing
-Write `MISSING: <what> for <part>`. With no ending given, offer two options before planning the parts. Never invent facts about a real person or business.
+If no story or series idea is given, ask for it in one short question and stop. Do not hand back an empty plan. Otherwise write `MISSING: <what> for <part>`. With no ending given, offer two options before planning the parts. Never invent facts about a real person or business.
 
 ## Avoid
 - A part that only sets up the next one.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies your written routing rules.
 new_slug: lead-owner-router
 name: Lead owner router
-summary: Give it a new lead. Get who should own it by your rules, a routing card
-  to accept and a handoff note.
+summary: Route a new lead to the right owner by your own rules. You get a routing card to accept or override, plus a handoff note for the rep.
 job: sell-and-negotiate
 headline: Lead owner router
-subhead: Give it a new lead. Get who should own it by your rules, a routing card
-  to accept and a handoff note. Bring the lead or the unrouted queue. Use the
-  result to plan your next step.
+subhead: Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note. Bring the lead or the unrouted queue. Use the result to plan your next step.
 explain: |
   For each new lead, a named owner chosen by your own routing rules, plus a card you can accept or override. The skill reads your CRM, checks which rep already owns the account or open deals, and applies your territory and assignment rules the same way every time. You stay the decider. Every override feeds back into the rules.
 
@@ -18,6 +15,10 @@ when:
   - A lead came from a company that already has an owner.
   - You want routing that does not depend on who is online.
   - You need a short handoff note that tells the rep what they are getting.
+not_for:
+  - "The lead already has an owner in your CRM and you only want to change it: edit the owner in your CRM yourself."
+  - "You need to know if the lead is good before you assign it: score it first with lead-triage, then come back here."
+  - "You have no written routing rules yet: agree on territories and who covers them with your sales lead first, then use this."
 you_give:
   - The lead or the unrouted queue
   - Your routing and territory rules
@@ -29,8 +30,30 @@ you_get:
   - A handoff note for the new owner
   - An info request draft for thin records
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder.
+  - Paste your routing rules. Include territories, company size bands, industries and named accounts.
+  - Paste the new lead, or the list of unrouted leads. If your AI can read your CRM, let it pull the queue.
+  - Read each routing card. Accept it, or override it and give a one-line reason.
+  - Apply the accepted owners in your CRM, or work from the checklist it gives you. Send the handoff note when you are ready.
+output_sample:
+  input:
+    - The new lead, or your list of unrouted leads
+    - "Your routing rules: territories, company size bands, industries, named accounts"
+    - Access to your CRM, or an exported list of leads and accounts
+    - Your lead score or qualification result (optional)
+  prerequisites:
+    - Your routing rules written down, or ready to type into the chat
+    - A CRM your AI can read, or a file export of your leads and accounts
+  output:
+    - name: Recommended owner
+      contains: The rep who should own the lead, with the exact rule used, such as a matched account or a region.
+    - name: Qualification verdict
+      contains: Whether to convert the lead, its priority, and the reason if it should be disqualified.
+    - name: Handoff note draft
+      contains: A short note for the new owner with the lead's background and the evidence behind the verdict.
+    - name: Info-request draft
+      contains: An email asking for the missing details, only when the record is too thin to route.
+    - name: Routing card board
+      contains: One card per lead when you route a whole queue, each ready to accept or override.
+    - name: Ownership change list
+      contains: The before and after owner for each routing you accepted, as CRM updates or a checklist.

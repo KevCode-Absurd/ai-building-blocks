@@ -1,6 +1,6 @@
 new_slug: plain-page-type-checker
 name: "Plain page type checker"
-summary: "Paste your page text and where it is read. Get type and spacing fixes, a readability check and a score."
+summary: "Check your page for tired readers. Paste the text and say where it is read. You get type, spacing and contrast fixes with reasons, plus a score."
 job: design-work
 thinking: medium
 thinking_why: "It checks many separate details and gives a reason for each fix, but the checks are fixed."
@@ -17,6 +17,10 @@ when:
   - You have a page, handout, slide or screen and want to know why it is tiring to read.
   - You are choosing type and spacing and want reasons, not rules of thumb.
   - You want to check that your page works for readers with poor eyesight or little time.
+not_for:
+  - "You need a final check of a print run you cannot share as a file: ask your printer for a print proof."
+  - "You want a full rethink of the page layout: use a designer, or redraw the page by hand before you check it."
+  - "You want the words rewritten for clarity: ask your AI to edit the text first, then run this check."
 
 you_give:
   - The page text, or a screenshot or PDF
@@ -35,6 +39,30 @@ how_to_use:
   - Say where it is read, on what device and by whom.
   - Fix the highest-impact problems first, then run it again.
   - Do the practice exercise on your next page.
+output_sample:
+  input:
+    - Your page text, or a screenshot or PDF of it
+    - Where and by whom it is read
+    - Your fonts, sizes and colours (optional)
+  prerequisites:
+    - An AI that can read images, if you attach a screenshot or PDF
+  output:
+    - name: Message
+      contains: What the page says, in one plain sentence.
+    - name: What the type says
+      contains: What the typeface says about the message, and whether that fits the reader.
+    - name: Checks
+      contains: Size, line length, spacing, contrast, and order and grid, each with a value, a verdict and a reason.
+    - name: Who is left out
+      contains: Readers the page fails, each with one way to include them.
+    - name: Fixes
+      contains: Changes in order of effect, each with the new value and why it helps.
+    - name: Practice
+      contains: One small exercise so you can make the same fix on your next page.
+    - name: Score
+      contains: A score out of 100 with the points for each part.
+    - name: Missing and checks missed
+      contains: What could not be checked, and why.
 
 how_it_works:
   - title: Writes the message

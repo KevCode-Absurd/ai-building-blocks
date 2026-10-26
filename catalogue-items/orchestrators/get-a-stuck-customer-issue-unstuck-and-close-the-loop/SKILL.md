@@ -37,8 +37,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Find what is already known.** Use the skill `customer-question-researcher`. What your docs, past tickets and chats say about this issue, each source named, and the question nobody has answered yet.
-2. **Write the escalation brief.** Use the skill `escalation-brief-writer`. Give it the facts and the open question. A brief for engineering, operations or leadership: the customer's impact, what was tried, what you need from them and by when.
+1. **Find what is already known.** Use the skill `customer-question-researcher`. What your docs, past tickets and chats say about this issue, each source named, and the question nobody has answered yet. Hands the brief writer the facts and the open question.
+2. **Write the escalation brief.** Use the skill `escalation-brief-writer`. Give it the facts and the open question. A brief for engineering, operations or leadership: the customer's impact, what was tried, what you need from them and by when. Hands the reply drafter the impact and what was tried.
 
 Pause here: Send the brief to the owner and wait for their answer or a date. Paste it back.
 

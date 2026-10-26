@@ -24,8 +24,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Noisy audio cleaner.** Use the skill `noisy-audio-cleaner`. Gives you clean speech to work from.
 2. **Subtitle and transcript maker.** Use the skill `subtitle-and-transcript-maker`. Give it the audio from the steps before. Writes a timed transcript of the clean audio. Reads the audio from the step before.
 3. **Dead air and retake cutter.** Use the skill `dead-air-and-retake-cutter`. Give it the transcript from the steps before. Lists every cut with timecodes. Reads the timed transcript from the step before.
-4. **YouTube chapter writer.** Use the skill `youtube-chapter-writer`. Give it the transcript from the steps before. Writes the chapter list from the same transcript.
-5. **Shorts clip finder.** Use the skill `shorts-clip-finder`. Give it the transcript from the steps before. Picks five clips from the transcript and rewrites each opening.
+4. **YouTube chapter writer.** Use the skill `youtube-chapter-writer`. Give it the transcript from step 2 and the cut list from step 3. Writes the chapter list from the transcript; if you publish the cut version, it moves each chapter time by the cuts.
+5. **Shorts clip finder.** Use the skill `shorts-clip-finder`. Give it the transcript from step 2 and the cut list from step 3. Picks five clips from the transcript, checks their times against the cuts, and rewrites each opening.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

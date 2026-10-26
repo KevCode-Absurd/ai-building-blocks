@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It pulls from several sources and picks what matters most.
 new_slug: business-snapshot-writer
 name: Business snapshot writer
-summary: Connect your tools. Get a one-page view of cash, sales and open leads,
-  plus today's one priority.
+summary: Get a one-page business snapshot of cash, sales, overdue invoices and open leads, plus the one thing to deal with first today.
 job: plan-strategy
 headline: Business snapshot writer
-subhead: Connect the tools you already use, such as accounting, payments and ad
-  spend. It reads them all at once and lines the numbers up on one page. You get
-  cash, sales and money owed at a glance, a watch list of failed payments and
-  disputes, and today's one priority.
+subhead: Connect the tools you already use, such as accounting, payments and ad spend. It reads them all at once and lines the numbers up on one page. You get cash, sales and money owed at a glance, a watch list of failed payments and disputes, and today's one priority.
 explain: |
   One page tells you how the business stands today: cash in the bank, sales this month, money owed to you, and open leads. At the top sits the single thing most worth your attention now.
 
@@ -19,20 +15,48 @@ when:
   - You check three or four apps each morning just to see how things stand.
   - A client or partner asks how the month is going and you need numbers fast.
   - You want to be told the one thing to deal with first.
+not_for:
+  - "You only need to chase one overdue invoice: use invoice-chase, which is built for that."
+  - "You have no connected tools and only a file export: use cash-flow-snapshot or report-builder, which both take a CSV."
+  - "You want to know if your marketing is working: use growth-pulse, which looks at that question alone."
 you_give:
-  - Connections to the tools you use, such as accounting or payments
+  - Connections to the tools you use, such as accounting, payments, calendar or email, with read-only access
   - Which tools matter most (optional)
   - Any goals or cash floors to compare against (optional)
+  - A few numbers typed in by hand, if nothing is connected (optional)
 you_get:
   - A one-page business brief
   - Cash, sales and receivables at a glance
   - A watch list of failed payments and disputes
   - One named priority for today
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open your AI tool and connect the business tools you use, such as your accounting, payments, calendar or email. Read-only access is enough.
+  - Add the skill to a chat, or paste its instructions in.
+  - 'Ask: "How is the business doing?" You can say "just cash" or "quick snapshot before a call" for a shorter page.'
+  - If no tool is connected, answer the short questions about cash, overdue bills, sales and worries. The page then says the numbers came from you.
+  - Check the top priority and the watch list first. Any tool that failed to load is noted at the bottom.
+  - Say yes if you want a saved copy or a Slack post. It asks once.
+output_sample:
+  input:
+    - Your connected tools, such as accounting, payments, calendar, email or ad accounts
+    - Which tools matter most (optional)
+    - Your goals or cash floors to compare against (optional)
+    - A few numbers typed in by hand, if no tool is connected (optional)
+  prerequisites:
+    - An AI that can connect to your business tools, with read-only access to each one
+    - At least one connected tool, or a few numbers you can type in
+  output:
+    - name: Number one priority
+      contains: The single thing most worth your attention today, linking signals from different tools where they connect.
+    - name: Cash and finance
+      contains: Cash balance, revenue so far this month, receivables and overdue invoices, each with a change from the last period.
+    - name: Sales trend
+      contains: Recent sales from your payment tools, with the change from the period before.
+    - name: Pipeline
+      contains: Open deals by stage, deals that moved or closed, and deals that have gone cold.
+    - name: This week
+      contains: Key meetings, deadlines and commitments from your calendar, including payroll timing if connected.
+    - name: Watch list
+      contains: Named risks such as failed payments, new disputes, overdue invoices and urgent messages, each with a next step.
+    - name: Appendix
+      contains: A short note on which tools were unavailable, so the page never shows errors mid-report.

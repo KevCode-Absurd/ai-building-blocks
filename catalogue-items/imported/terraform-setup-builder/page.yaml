@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows known infrastructure patterns.
 new_slug: terraform-setup-builder
 name: Terraform setup builder
-summary: Describe your cloud. Get Terraform modules with safe state, security
-  checks and clean structure.
+summary: Turn messy Terraform into clean modules with safe remote state and a security check. Give it your cloud setup or .tf files and get code you can review.
 job: ship-and-host
 headline: Terraform setup builder
-subhead: Terraform modules for your cloud, laid out cleanly, with safe state
-  storage and security checks built in. Your infrastructure stays predictable
-  and does not drift or break at 3 AM.
+subhead: Terraform modules for your cloud, laid out cleanly, with safe state storage and security checks built in. Your infrastructure stays predictable and does not drift or break at 3 AM.
 explain: |
   Terraform modules for your cloud, laid out cleanly, with safe state storage and security checks built in. Your infrastructure stays predictable and does not drift or break at 3 AM.
 
@@ -19,6 +16,10 @@ when:
   - You want a security review of your infrastructure code.
   - You are building the same stack in two regions.
   - You need a reusable module other teams can adopt.
+not_for:
+  - You need to change a live production stack you cannot back up or plan first. Run a plan with a person who knows the stack, and review it before anything is applied.
+  - You want to learn Terraform from scratch. Use the official Terraform tutorials, as this skill makes firm choices and does not teach.
+  - You want cost estimates with no setup. Ask a teammate to run Infracost, which needs an API key and may need a paid plan.
 you_give:
   - A description of your cloud setup or existing Terraform
   - Cloud provider
@@ -30,8 +31,32 @@ you_get:
   - A security findings list
   - Refactor suggestions for existing code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste in this skill. Use Claude, ChatGPT or Gemini.
+  - Paste your .tf files, or describe your cloud setup and name your provider.
+  - "Pick a job: ask for a review, a module design or a security audit."
+  - Read the results and the new code. Run a plan and check it before anything is applied.
+  - The two analysis scripts need python3 and an AI that can run code. Skip them in a plain chat.
+  - Set your CI to need a manual approval before apply.
+output_sample:
+  input:
+    - Your .tf files, or a plain description of your cloud setup
+    - Your cloud provider
+    - The state backend you want (optional)
+    - Security rules you must meet (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - An AI that can run code, plus python3, to use the two analysis scripts (optional)
+    - An Infracost API key, and maybe a paid plan, only if you want cost checks (optional)
+  output:
+    - name: Code review
+      contains: A list of anti-patterns, naming problems and structure issues found in your .tf files, with fixes.
+    - name: Module design
+      contains: A module layout with clear inputs, outputs and composition, flat or nested to fit your project size.
+    - name: Security audit
+      contains: Findings on secrets in code, open network rules and broad IAM roles, with a fix for each.
+    - name: Remote state setup
+      contains: A backend block with locking and encryption, plus pinned provider and module versions.
+    - name: Multi-region layout
+      contains: Provider aliases and a structure for running the same stack in more than one region.
+    - name: CI plan and apply workflow
+      contains: An example pipeline that plans on each change, with a manual approval step before apply.

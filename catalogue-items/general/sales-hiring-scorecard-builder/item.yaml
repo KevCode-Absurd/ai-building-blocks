@@ -1,6 +1,6 @@
 slug: sales-hiring-scorecard-builder
 name: "Sales hiring scorecard builder"
-summary: "Describe your sale and past hires. Get a 1 to 10 scorecard with a test for each trait."
+summary: "Hire salespeople on traits that fit how you sell. Get a 1 to 10 scorecard with a test for each trait and a re-check date."
 category: general
 type: skill
 role: make
@@ -8,7 +8,6 @@ job: ops
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: lessons_register, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt
@@ -16,3 +15,5 @@ version: 1.0.0
 minds: [mark-roberge]
 credits:
   - {title: "The Sales Acceleration Formula, Chapter 1", by: "Mark Roberge", used: "Describing your sales context first, defining each trait with a 1 to 10 score, one test per trait, one scorecard per candidate, and comparing scorecards with real results"}
+next: [sales-pay-plan-checker, interview-scorecard-builder]
+needs_mode: manual

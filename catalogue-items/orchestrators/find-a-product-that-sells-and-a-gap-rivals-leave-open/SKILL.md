@@ -43,13 +43,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Proven product scout.** Use the skill `proven-product-scout`. Starts the flow. Finds products that already sell and the sellers behind them.
-2. **Crowded category white space finder.** Use the skill `crowded-category-white-space-finder`. Give it the competitor set from the steps before. Takes the rivals from the scout and finds the gap one of them leaves open.
+1. **Proven product scout.** Use the skill `proven-product-scout`. Starts the flow. Finds products that already sell and the sellers behind them. Hands the rival sellers to step 2.
+2. **Crowded category white space finder.** Use the skill `crowded-category-white-space-finder`. Give it the competitor set from the steps before. Takes the rivals from the scout and finds the gap one of them leaves open. Hands the gap plan and ranked gaps on.
 
 Pause here: Pick one product from the shortlist. Get a supplier quote, work out its landed cost per unit and decide the price you would charge.
 
-3. **Winning product scorer.** Use the skill `winning-product-scorer`. Scores your pick and its real costs. The gap you chose in the step before is the problem it must solve.
-4. **MVP experiment planner.** Use the skill `mvp-experiment-planner`. Give it the plan from the steps before. Turns the gap plan and the score's first fix into a small test with a pass number set before it runs.
+3. **Winning product scorer.** Use the skill `winning-product-scorer`. Give it the ranked gaps from the steps before, plus your pick and its costs. Scores your pick and its real costs. The gap from step 2 is the problem it must solve. Hands the score report, with its first fix, to step 4.
+4. **MVP experiment planner.** Use the skill `mvp-experiment-planner`. Give it the plan and the score report from the steps before. Turns the gap plan from step 2 and the score's first fix from step 3 into a small test with a pass number set before it runs.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

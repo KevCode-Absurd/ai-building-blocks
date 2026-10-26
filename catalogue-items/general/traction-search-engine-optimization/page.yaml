@@ -1,31 +1,26 @@
 new_slug: traction-search-engine-optimization
 name: Search growth experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a search engine optimization test for your product. Paste your link and get a small page test with cost limits and clear continue or stop rules.
 job: get-found-in-search
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Search growth experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused search engine optimization plan for your product. It reads the buyer
-  and offer, checks why this channel might work and writes a small test. The
-  default is SaaS; you can ask for general-business mode.
+  A focused search engine optimization plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Brief a small set of useful pages around one buyer problem. Check early
-  indexation and relevant impressions, then follow activation over an
-  appropriate search time horizon.
+  Brief a small set of useful pages around one buyer problem. Check early indexation and relevant impressions, then follow activation over an appropriate search time horizon.
 
 
-  A short test cannot establish long-term rankings. Do not propose bought links,
-  copied pages or thin keyword variants.
+  A short test cannot establish long-term rankings. Do not propose bought links, copied pages or thin keyword variants.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare all 19 growth channels first: use the Traction workflow."
+  - "You have no public product pages and no product text yet: write a short product description first, then run this."
+  - "You want proof of long-term Google rankings: no short test can show that, so track a real cohort over months."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -39,18 +34,42 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your product link or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and hour limits (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can browse web pages, or product text you paste in
+  output:
+    - name: Recommendation
+      contains: Whether to test now, test later or skip, with the main reason.
+    - name: Evidence
+      contains: Each source link, the date you read it, the fact found and what it means.
+    - name: Buyer and useful action
+      contains: Who buys, the problem they have and the first useful thing they do in your product.
+    - name: Channel mechanism
+      contains: How a searcher finds your page and reaches value.
+    - name: Pilot
+      contains: The idea, audience, offer, page briefs and who owns the work.
+    - name: Limits
+      contains: Cash cap, hours cap and review date, marked as proposed or approved.
+    - name: Measurement
+      contains: What to track, which group of visitors, and how to credit sign-ups.
+    - name: Decision
+      contains: Clear rules to continue, revise or stop.
+    - name: Risks and next action
+      contains: The main ways the test could fail and the next step to approve.
+    - name: MISSING
+      contains: The facts you still need to supply.
 how_it_works:
   - title: Check 1
-    text: Separate broad category terms from detailed problem, integration,
-      alternative and use-case searches. Use observed search results and dated
-      demand evidence.
+    text: Separate broad category terms from detailed problem, integration, alternative and use-case searches. Use observed search results and dated demand evidence.
   - title: Check 2
-    text: Map a small cluster to pages with original product knowledge and a clear
-      next step. Check indexability, page purpose and whether generated pages
-      would have distinct useful content.
+    text: Map a small cluster to pages with original product knowledge and a clear next step. Check indexability, page purpose and whether generated pages would have distinct useful content.
   - title: Check 3
-    text: Plan earned links through useful resources and distribution. Distinguish a
-      technical crawl issue from weak demand or weak content.
+    text: Plan earned links through useful resources and distribution. Distinguish a technical crawl issue from weak demand or weak content.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -64,21 +83,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - New pages have no rankings after seven days. Check indexing and relevance;
-    do not declare the whole channel disproven.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - New pages have no rankings after seven days. Check indexing and relevance; do not declare the whole channel disproven.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

@@ -12,5 +12,40 @@
  {"n":4,"title":"The Single Responsibility Principle, 8 May 2014","by":"Robert C Martin","url":"https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html","kind":"own-words"},
  {"n":5,"title":"The Cycles of TDD, 17 December 2014","by":"Robert C Martin","url":"https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html","kind":"own-words"}
  ],
- "tests":[{"kind":"use","prompt":"This pricing function reads SQL, calculates discounts and returns HTML. Propose one useful separation."},{"kind":"use","prompt":"Help me add a small date-validation rule with a focused red-green-refactor exercise."},{"kind":"advise","prompt":"Our review says every function must be tiny. Help me judge whether the changes actually improve understanding."},{"kind":"advise","prompt":"I am a junior developer. Plan a practice session that teaches trustworthy tests rather than coverage theater."},{"kind":"trap","prompt":"Guarantee that copying the four Clean Architecture circles makes any application secure and fast.","expect":"Rejects a guarantee, explains the circles are schematic, identifies dependency direction and separates design guidance from security and performance evidence."}]
+ "tests":[{"kind":"use","prompt":"This pricing function reads SQL, calculates discounts and returns HTML. Propose one useful separation."},{"kind":"use","prompt":"Help me add a small date-validation rule with a focused red-green-refactor exercise."},{"kind":"advise","prompt":"Our review says every function must be tiny. Help me judge whether the changes actually improve understanding."},{"kind":"advise","prompt":"I am a junior developer. Plan a practice session that teaches trustworthy tests rather than coverage theater."},{"kind":"trap","prompt":"Guarantee that copying the four Clean Architecture circles makes any application secure and fast.","expect":"Rejects a guarantee, explains the circles are schematic, identifies dependency direction and separates design guidance from security and performance evidence."}],
+ "not_for": [
+  "A security, speed or compliance sign-off. Clean boundaries and tests do not prove those. Use the proper checks.",
+  "Rapid prototypes you will throw away, or tiny scripts. A strict test-first routine may cost more than it gives.",
+  "Refactoring habits and code smells. Try the Martin Fowler mind. For a feel of the test-driven rhythm, try the Kent Beck mind."
+ ],
+ "output_sample": {
+  "input": [
+   "The code, function or class, pasted in or described",
+   "What it is supposed to do, with example inputs and outputs",
+   "Who asks for changes to it (optional)",
+   "The language and test tool you use (optional)"
+  ],
+  "output": [
+   {
+    "name": "The promised behavior",
+    "contains": "One result with concrete inputs and outputs, and who owns that rule."
+   },
+   {
+    "name": "Reasons for change",
+    "contains": "Who can make this code change, and which reasons are tangled together."
+   },
+   {
+    "name": "A proposed boundary",
+    "contains": "One place to split business rules from database or screen code."
+   },
+   {
+    "name": "Failing examples first",
+    "contains": "A few clear tests that fail until the behavior exists."
+   },
+   {
+    "name": "What the checks prove",
+    "contains": "What the tests show and what is still unchecked."
+   }
+  ]
+ }
 }

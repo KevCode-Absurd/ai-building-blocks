@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares slides and judges the writing.
 new_slug: finance-deck-quality-checker
 name: Finance deck quality checker
-summary: Give it a client deck. Get number mismatches, weak wording and format
-  slips found slide by slide.
+summary: Check a client deck for number mismatches, weak wording and format slips, slide by slide, before you send it. Read only, no edits.
 job: work-with-files
 headline: Finance deck quality checker
-subhead: A slide-by-slide check of a client presentation that finds numbers that
-  do not match, loose wording and formatting slips before the client sees them.
-  It only reads, and changes nothing.
+subhead: A slide-by-slide check of a client presentation that finds numbers that do not match, loose wording and formatting slips before the client sees them. It only reads, and changes nothing.
 explain: |
   A slide-by-slide check of a client presentation that finds numbers that do not match, loose wording and formatting slips before the client sees them. It only reads, and changes nothing.
 
@@ -18,6 +15,10 @@ when:
   - You edited numbers on one slide and fear you missed another.
   - Different team members wrote different sections of one deck.
   - You want a second reviewer for a board presentation.
+not_for:
+  - "You need sign-off on audited filings or legal documents: use a human finance reviewer."
+  - "Your deck has almost no numbers to check: ask a colleague for a quick read instead."
+  - "You want your AI to fix the slides for you: this checker only reports, so make the edits yourself."
 you_give:
   - The slide deck as a PowerPoint file, or open in the add-in
   - The audience (optional)
@@ -28,7 +29,25 @@ you_get:
   - Formatting inconsistencies
   - A priority order for fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Paste the skill into your AI. Use Claude or another AI that can read files and run code.
+  - Upload your deck as a PowerPoint file. Or open it in the PowerPoint add-in.
+  - Say who the deck is for and list any key figures that must match (optional).
+  - Read the critical findings first. Fix those slides in your own file.
+  - Run the check again after your edits to confirm the mismatches are gone.
+output_sample:
+  input:
+    - Your client deck as a PowerPoint file, or open in the PowerPoint add-in
+    - Who the deck is for (optional)
+    - Key figures that must match across slides (optional)
+  prerequisites:
+    - An AI that can read a PowerPoint file, or the PowerPoint add-in
+    - An AI that can run code, to run the number-checking script
+  output:
+    - name: Critical findings
+      contains: Number mismatches, factual errors and claims the data does not support, each with the slide numbers and the conflicting values.
+    - name: Important findings
+      contains: Language slips, missing chart sources and terms used in different ways for the same thing.
+    - name: Minor findings
+      contains: Font sizes, spacing, number format drift and date format drift to polish.
+    - name: Fix order
+      contains: A short list that puts criticals first, so you know what to fix before the client sees the deck.

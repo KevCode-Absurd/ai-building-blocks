@@ -14,6 +14,10 @@ when:
   - You have a sale, a drop or a launch coming and want email and text to support each other.
   - Your texts cost more each month and you are not sure they pay back.
   - You ran a sale last month and cannot tell which channel did the work.
+not_for:
+  - "You only need one sale email written: use the Campaign email writer."
+  - "You only want a month of emails with no texts: use the Monthly email campaign calendar planner."
+  - "Your list has not clearly agreed to get texts: fix that first, because the plan will not include texts without consent."
 you_give:
   - Your offer, with dates and terms
   - Your product facts (optional)
@@ -34,17 +38,39 @@ how_to_use:
   - Start with your offer, your dates and how people opted in to texts. It will not plan texts without clear consent.
   - When it pauses, write the one-paragraph brief for the sale email.
   - Send the emails and texts, then export results for the sale window and give them to the last step.
+output_sample:
+  input:
+    - Your offer, with dates and terms
+    - How people on your list agreed to get texts
+    - Your cost per text and list size (optional)
+    - A one-paragraph brief for the sale email, asked for when it pauses
+    - An export of email and text results, after the sale
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+  output:
+    - name: "Step 1: Text plan"
+      contains: Consent line, quiet hours, dated texts with the email each pairs with, exclusions, month cost and a hold-out test.
+    - name: "Step 2: Email calendar"
+      contains: Pace, dated sends with angle, a mix check across email types and a production schedule.
+    - name: "Step 3: Sale email"
+      contains: Subject and preview options, email blocks, a plain-text version, two A/B variants and a claims check.
+    - name: "Step 4: Text check"
+      contains: Characters and billed parts, cost, image break-even, rule flags, urgent or not and a score out of 100.
+    - name: "Step 5: Results read"
+      contains: Ranked causes, then list growth, campaigns, flows, deliverability and texts, with a channel health score.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Plan the texts
     text: SMS send planner decides which launches, sales and restocks deserve a text, sets dates and send windows, pairs each with an email and prices the month. It also sets up a hold-out test for how often to text.
   - title: Place the emails
     text: Email campaign calendar planner builds the email calendar around the text plan. Fixed dates go first, and the mix of email types is checked so the two channels do not repeat each other.
   - title: Write the sale email
-    text: Campaign email writer takes your brief and writes the email block by block. You get subject and preview options, a plain-text version and two A/B variants, with every claim checked against your facts.
+    text: Campaign email writer takes the sale email's slot from the calendar and the brief you write, and writes the email block by block. You get subject and preview options, a plain-text version and two A/B variants, with every claim checked against your facts.
   - title: Check the texts
-    text: SMS send checker counts characters and billed parts, prices the send, tests whether an image pays for itself and asks if the news is urgent. It flags opt-in, send-hour and flow-rule problems and scores readiness out of 100.
+    text: SMS send checker takes the text you plan to send, checks it against the plan and the email timing, counts characters and billed parts, prices the send, tests whether an image pays for itself and asks if the news is urgent. It flags opt-in, send-hour and flow-rule problems and scores readiness out of 100.
   - title: Read the results
-    text: Email and SMS performance reader checks nothing is broken, then reads list growth, campaigns, flows, deliverability and SMS. It ranks causes and scores channel health out of 100.
+    text: Email and SMS performance reader starts from the results you export after the sale, not from the pre-send check. It checks nothing is broken, then reads list growth, campaigns, flows, deliverability and SMS. It ranks causes and scores channel health out of 100.
 output_shape: |-
   STEP 1: TEXT PLAN
     Consent and quiet hours | dated sends with purpose and email pairing | exclusions | cost | frequency test

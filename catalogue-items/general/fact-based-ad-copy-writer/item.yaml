@@ -10,6 +10,7 @@ level: intermediate
 inputs:
   - {type: brief, required: true}
   - {type: product_data, required: true}
+  - {type: hooks, required: false}
 outputs:
   - {type: ad_copy}
 uses: []

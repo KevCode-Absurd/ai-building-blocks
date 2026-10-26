@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Tool contracts and permissions need careful design.
 new_slug: mcp-tool-server-builder
 name: MCP tool server builder
-summary: Say what tools your AI should reach. Get a safe MCP server with clear
-  tool rules and tests.
+summary: Plan and build a safe MCP server for your AI. Name the tools it may use, set limits for each, and get code and tests to check them.
 job: connect-tools
 headline: MCP tool server builder
-subhead: A safe MCP server that lets your AI reach the tools and data you
-  choose, with clear rules for each tool and tests to match.
+subhead: A safe MCP server that lets your AI reach the tools and data you choose, with clear rules for each tool and tests to match.
 explain: |
   A safe MCP server that lets your AI reach the tools and data you choose, with clear rules for each tool and tests to match. Say what the AI should be able to do, and get the design and code to make it so.
 
@@ -17,6 +15,10 @@ when:
   - You need an MCP server where each tool has clear limits.
   - A security team wants tool rules written down before launch.
   - You are not sure which actions your AI should be blocked from.
+not_for:
+  - "You only want a read-only dashboard: use a normal reporting tool or your app's own export."
+  - "The app already has a hosted MCP server: use the vendor's own server instead of building one."
+  - "You want to give your AI full open access to a database or shell: ask a security lead first, as this skill avoids broad access."
 you_give:
   - What the AI should be able to do
   - Systems and data it will reach
@@ -29,8 +31,34 @@ you_get:
   - Unit and access tests
   - Deployment and rollback steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe what your AI should be able to do, the systems it will reach, and who will use it.
+  - Answer any questions about sign-in, data types and which actions can change or delete things.
+  - Review the tool list first. Cut any tool that is too broad before you accept the code.
+  - Run the tests. This needs an AI that can run code and read your files, or run them yourself.
+  - Do not deploy or create keys until the system owner approves.
+output_sample:
+  input:
+    - What your AI should be able to do
+    - The apps, data or files it will reach
+    - Who will use it and how they sign in
+    - Your language or tools (optional)
+    - Any existing schemas or tests (optional)
+  prerequisites:
+    - An AI that can run code and read your project files, if you want built code and test results
+    - Approval from the owner of each system before you deploy or create keys
+  output:
+    - name: Server design
+      contains: Scope, trust boundaries, how the server connects, how users are identified, and what it will not do.
+    - name: Tool catalog
+      contains: Each tool with its name, description, input and output shapes, error codes, effects, data types and authorization mode.
+    - name: Implementation or build plan
+      contains: Server code, or a file-by-file plan, depending on what you ask for.
+    - name: Tests
+      contains: Unit, integration, access and protocol checks, including cases that must be refused.
+    - name: Verification evidence
+      contains: Commands that were run, what they showed, and anything that was not checked.
+    - name: Deployment and recovery guidance
+      contains: Release steps, monitoring, rollback, and how to cut off or replace keys.
+    - name: Residual risks
+      contains: Open risks and decisions that still need a named owner.

@@ -1,6 +1,6 @@
 new_slug: new-hire-onboarding-keeper
 name: New hire onboarding keeper
-summary: Give it a name, role and start date. Get the plan, then a weekly check on progress and what to fix.
+summary: Plan a new hire's first 90 days, then check progress each Friday. Get an on track, behind or blocked call and up to three actions.
 job: lead-people
 thinking: medium
 thinking_why: It reads short weekly notes against a plan and picks one of three paths. A mid-size model does this well. Use your strongest one if a note mentions a complaint.
@@ -14,6 +14,10 @@ when:
   - Someone is starting soon and you want the first 90 days planned and followed.
   - You are a manager who wants a short, steady check each week instead of a plan that sits in a folder.
   - You want to catch missing access or unclear asks while they are still easy to fix.
+not_for:
+  - "You need a one-day orientation or a plan for a short contractor gig: use a simple checklist and a quick call with the person."
+  - "You want to judge a hire's performance or decide on probation: talk to your own HR adviser, because this agent never judges the person."
+  - "You have a safety, health or discrimination complaint: go to HR or a qualified person now, not to this agent."
 you_give:
   - The new hire's role, team, start date, manager and buddy
   - The three to five things the role should do well by day 90
@@ -31,6 +35,32 @@ how_to_use:
   - Each Friday, write a few lines on how the week went and give them to the agent.
   - Read the hand-back and do the actions yourself. Say yes to any single action you want the agent to take.
   - Run it again next Friday. It reads the log and says if the same cause came up again.
+output_sample:
+  input:
+    - The new hire's role, team, start date, manager and buddy
+    - The three to five things the role should do well by day 90
+    - Your check-in notes each Friday
+    - The new hire's answers to the weekly questions
+  prerequisites:
+    - An AI chat where you can paste notes each week
+    - A saved copy of the plan and log (an AI that can keep files helps)
+  output:
+    - name: plan.md
+      contains: The pre-start list, day one, week one, and goals for days 30, 60 and 90.
+    - name: checkin-questions.md
+      contains: Five short questions you ask the new hire each week.
+    - name: This week
+      contains: Week number, path (on track, behind or blocked) and the share of planned items done.
+    - name: Why this path
+      contains: Items done, late and blocked, and the words in your notes that decided it.
+    - name: Do this week
+      contains: Up to three actions, each with an owner and a day.
+    - name: Fix on our side
+      contains: Missing access, docs, buddy time or unclear priorities found in your notes.
+    - name: Draft check-in message
+      contains: A message for you to send yourself. The agent never sends it.
+    - name: log.md
+      contains: One line per week, so the agent can spot a cause that repeats.
 how_it_works:
   - title: Build the plan once
     text: Makes the pre-start list, day one and week one, then the goals for days 30, 60 and 90. You approve it first.

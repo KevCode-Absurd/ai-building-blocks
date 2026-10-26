@@ -1,6 +1,6 @@
 slug: team-experiment-week-planner
 name: "Team experiment week planner"
-summary: "Paste your team size and work. Get a protected experiment week, a change of setting and a way to share results."
+summary: "Give a flat team a protected week to try new things. Get dates clear of client work, a new setting and rules for each experiment."
 category: general
 type: skill
 role: make
@@ -18,3 +18,5 @@ credits:
   - {title: "Sagmeister answers", by: "Stefan Sagmeister", url: "https://sagmeister.com/answers/", used: "Time away from client work for experiments, and a change of setting as part of it"}
   - {title: "Forward Festival interview", by: "Stefan Sagmeister", used: "How the time off fed later paid work"}
   - {title: "Creating Self-Initiated Projects", by: "Jessica Walsh", used: "Giving self-set projects rules and a way back into the business"}
+next: [process-and-meeting-cull-planner, internal-update-writer]
+needs_mode: manual

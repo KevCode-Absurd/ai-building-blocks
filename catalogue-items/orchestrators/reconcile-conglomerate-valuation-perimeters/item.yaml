@@ -1,14 +1,12 @@
 slug: reconcile-conglomerate-valuation-perimeters
-name: Reconcile conglomerate valuation perimeters
-summary: Align segment earnings, consolidated minority interests and separately held equity stakes before valuation.
+name: Group company valuation checker
+summary: Share segment accounts, ownership records and dated holding values. Get a linked scope ledger for earnings, enterprise value and separate investments.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: source_text
     required: true
   - type: spreadsheet
@@ -18,8 +16,9 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+next:
+  - reconcile-revenue-presentation-and-perimeter
+  - reconcile-property-nav-and-book-value
 uses:
   - segment-profit-elimination-bridge
   - minority-interest-multiple-reconciliation

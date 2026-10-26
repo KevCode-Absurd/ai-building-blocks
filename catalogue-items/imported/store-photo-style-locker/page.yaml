@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills in a fixed style file from your answers.
 new_slug: store-photo-style-locker
 name: Store photo style locker
-summary: Describe your store look once. Get a style file that keeps models,
-  light and layout the same across every product photo.
+summary: "Lock your store photo style once: same model, light and background. You get a style file that keeps every product photo matching."
 job: brand-file
 headline: Store photo style locker
-subhead: "One style file that makes the 200th product photo look like the first.
-  You describe your shop's look once: the model's face and body, the light, the
-  colour tone, the background and the mood."
+subhead: "One style file that makes the 200th product photo look like the first. You describe your shop's look once: the model's face and body, the light, the colour tone, the background and the mood."
 explain: |
   One style file that makes the 200th product photo look like the first. You describe your shop's look once: the model's face and body, the light, the colour tone, the background and the mood. After that, every photo prompt picks up the same rules.
 
@@ -18,6 +15,10 @@ when:
   - Colours and backgrounds change from shot to shot.
   - You are about to generate a full catalogue of images with AI.
   - You want to change your shop's look without rewriting every prompt.
+not_for:
+  - "You need one single image: write a plain prompt in your AI instead."
+  - "You have no way to run code or use an image model key: describe your look in each prompt by hand."
+  - "You want to edit photos you already shot: use a photo editor, since this file only guides new AI images."
 you_give:
   - A description of your shop's look and mood
   - A reference photo of your model (optional)
@@ -29,9 +30,34 @@ you_get:
   - Lighting, tone and background rules
   - A way to add the style to any photo prompt
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Check that Node is installed and that you have an image model key (OpenAI, Gemini, fal or Replicate). Photos cost whatever your provider charges.
+  - Download the skill folder and open it in an AI that can run code.
+  - "Tell your AI your shop's look: model, light, colour tone, background and what to avoid."
+  - Add your own model photo path in the file. The sample path does not ship in the folder, so replace it.
+  - Test one product with and without the style file, and check the look is right.
+  - Run the whole batch with the style file on, so every photo matches.
+output_sample:
+  input:
+    - Your shop's look and mood in words
+    - A clear front-facing photo of your model (optional)
+    - Your lighting and background choices
+    - Anything you want to avoid in photos
+  prerequisites:
+    - Node installed on your computer
+    - An AI that can run code
+    - Your own image model key (OpenAI, Gemini, fal or Replicate) to make photos
+  output:
+    - name: brand.yaml
+      contains: Your style file with the model, photo, layout and banned items, read by every image job.
+    - name: brand section
+      contains: Shop name and a short tone line, such as quiet, warm or minimal.
+    - name: model section
+      contains: The face reference photo path, a written model description and body details.
+    - name: photography section
+      contains: Background, lighting, camera view, colour tone and how the shot is framed.
+    - name: layout section
+      contains: Empty margin size and the type style for any text on the image.
+    - name: forbid list
+      contains: Things that must never appear, such as text, watermarks or harsh colours.
+    - name: Style add-on text
+      contains: The matching lines added to each photo prompt when you run a job with the style file.

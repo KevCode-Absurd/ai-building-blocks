@@ -80,3 +80,26 @@ improve:
   - If the cause is rejected twice, give it a fresh log or a smaller reproduction before the next try.
   - Keep the cause and the lesson in your project notes so the same mistake is caught earlier.
   - Not worth the full run for a typo or a one-line change.
+
+not_for:
+  - "You only have a vague report and no code access yet: use Turn a bug report into proof."
+  - "A build in your CI is failing: use the CI failure fixer."
+  - "You only want an error message explained: use the Error and log debugger."
+output_sample:
+  input:
+    - What is broken, how to trigger it and the exact error
+    - Access to your project code
+    - Your coding standards or the original issue (optional)
+  prerequisites:
+    - An AI that can read your code and run your tests, such as Claude Code
+  output:
+    - name: Cause and fix
+      contains: The reproduction, where it goes wrong, the proven cause for your yes, the smallest fix and the rerun.
+    - name: Missing tests
+      contains: A table of what the fix changes, which parts no test covers, and the tests to add.
+    - name: Review
+      contains: Findings against your standards and the issue, with a verdict.
+    - name: Pull request
+      contains: A summary with the failing run before and the passing run after, plus what could go wrong on merge.
+    - name: Hand-back summary
+      contains: Each step's file and one list of everything marked MISSING.

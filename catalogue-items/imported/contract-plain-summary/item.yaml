@@ -11,6 +11,8 @@ level: beginner
 inputs:
   - type: document
     required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: document
 uses: []

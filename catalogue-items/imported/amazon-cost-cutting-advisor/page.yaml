@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It diagnoses a business from a chat.
 new_slug: amazon-cost-cutting-advisor
 name: Amazon cost cutting advisor
-summary: Tell it how you source and ship. Get the biggest cost bottlenecks and
-  ways to cut them.
+summary: Find the biggest cost leaks in how you source and ship Amazon stock. Describe your setup and get ranked fixes for your Amazon supply chain costs.
 job: run-your-store
 headline: Amazon cost cutting advisor
-subhead: Find the biggest cost leaks in how you source and ship Amazon stock,
-  and get ways to cut them. You just describe your situation in a sentence or
-  two, and no account links or data feeds are needed.
+subhead: Find the biggest cost leaks in how you source and ship Amazon stock, and get ways to cut them. You just describe your situation in a sentence or two, and no account links or data feeds are needed.
 explain: |
   Find the biggest cost leaks in how you source and ship Amazon stock, and get ways to cut them. You just describe your situation in a sentence or two, and no account links or data feeds are needed.
 
@@ -18,6 +15,10 @@ when:
   - You source overseas and want a health check of the whole chain.
   - You are choosing between sea and air freight to FBA.
   - You want ranked cost fixes, not a general lecture.
+not_for:
+  - "You sell on Walmart, Shopify or eBay: use your own channel's fee tools, since this checks Amazon FBA costs only."
+  - "You do not source overseas or hold stock: ask a freight forwarder or a bookkeeper instead."
+  - "You need legal, customs or tax advice: ask a licensed customs broker or an accountant."
 you_give:
   - Your product category and number of products
   - Monthly sales size
@@ -29,7 +30,31 @@ you_get:
   - Cost reduction ideas for each
   - Suggested next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. If you want the cost math run as code, use an AI that can run Python and upload the skill folder, including the scripts folder.
+  - Say "Analyze my supply chain". Then describe your setup in a sentence or two.
+  - Check the profile your AI repeats back. Fix anything that is wrong.
+  - Reply with rough numbers for sourcing, shipping, fees, ads and inventory days. Estimates are fine.
+  - Read the ranked bottlenecks and the fixes. Pick one fix to test first.
+  - Ask for a web report or a document if you need to share the result. The benchmark limits are default guides, so check them against your own category.
+output_sample:
+  input:
+    - Your product category and number of products
+    - Your monthly sales size
+    - Where you source and how you ship to FBA
+    - Rough costs per unit, such as product cost, shipping, FBA fee and storage fee
+    - Your inventory days and ad spend share (optional)
+  prerequisites:
+    - An AI that can run Python code, to do the cost math. Without it, your AI can work the numbers by hand in chat.
+  output:
+    - name: Business profile
+      contains: Your category, product count, sales size, supplier location, shipping method and main pain points, repeated back to confirm.
+    - name: Key metrics table
+      contains: Gross margin, shipping share, net margin, inventory days and cash cycle, each marked healthy, warning or danger.
+    - name: Cost structure breakdown
+      contains: Where each dollar of the selling price goes, from product cost to fees and ads.
+    - name: Top 3 bottlenecks
+      contains: The three biggest cost problems, ranked by how much they hurt your margin.
+    - name: Cost reduction strategies
+      contains: "For each bottleneck: the problem, its impact, specific fixes and an action checklist."
+    - name: Output format choice
+      contains: An offer to view the result as text, a web chart report or a shareable document.

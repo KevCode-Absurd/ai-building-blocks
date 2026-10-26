@@ -2,35 +2,90 @@ thinking: low
 thinking_why: It maps each product to a fixed category list.
 new_slug: product-category-assigner
 name: Product category assigner
-summary: Give it your catalog. Get every product matched to a standard Shopify
-  category, so AI can place it. Updates live products.
+summary: Assign a Shopify standard category to every product that has none. You see the list and approve it before any live product changes.
 job: build-websites
 headline: Product category assigner
-subhead: Every product in your Shopify catalog matched to the right standard
-  category. AI shopping tools turn a request like "office chair" into a
-  category, then pull products from it.
+subhead: Give it your Shopify store. It finds products with no standard category, picks the best fit from the live Shopify category list, and shows you the table. Nothing changes on your live store until you say yes.
 explain: |
-  Every product in your Shopify catalog matched to the right standard category. AI shopping tools turn a request like "office chair" into a category, then pull products from it. A product with no category only turns up by keyword luck.
+  Shopify has a standard list of product categories. Filters, marketplaces and shopping tools use it to group products. A product with no category can be left out of those groups, so it gets found only by luck.
 
-  Claude finds products with no category or a wrong one. It infers the best fit from the title, type and tags, then checks that choice against the live Shopify category tree before suggesting it. You see the list first, then approve. Updates change live products, so you need an authenticated Shopify CLI session with product write access.
+  This category assigner finds those products. It reads each product's title, type and tags, searches the live Shopify category list, and picks the most specific category it is confident about. Products it is unsure about go on a separate "needs review" list. It never guesses on those.
+
+  You approve first. It shows the full table of old and new categories, then waits for your yes. Only then does it write to your live products, and it reports any errors. A wrong category affects filters, marketplaces and tax, so a person should review the list.
 when:
   - Many of your products have no standard category set.
   - You imported a catalog and the categories are a mess.
-  - You want AI shopping tools to place your products correctly.
-  - A product sits in the wrong category and loses search traffic.
+  - You want your products to appear in category filters and shopping tools.
+  - A product sits in the wrong category and gets missed in search.
+not_for:
+  - "You want to rewrite product titles: use the Product title cleaner. For longer product text, use the Product description enricher."
+  - "Your categories were chosen by hand, one by one: review a few by eye first, and run this only on products with no category."
+  - "Your products are one of a kind or very niche: expect a long needs-review list, and plan to set those categories yourself."
 you_give:
-  - Your store domain
-  - Which products to check, or the whole catalog
-  - Approval before changes are written
-  - Any categories you want to avoid (optional)
+  - Your store domain, such as mystore.myshopify.com
+  - A Shopify CLI login with permission to read and write products
+  - Which products to check, such as all, one collection or one tag
+  - Categories you want to avoid (optional)
 you_get:
-  - A list of uncategorised or mis-categorised products
-  - A proposed category for each
-  - Changes applied after your approval
-  - A summary of what was updated
+  - A table of each product with its old and proposed category and a confidence score
+  - A CSV of that table
+  - A separate needs-review list of products it was unsure about
+  - A count of products updated and any errors, after you approve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Open Claude Code, or another AI that can run the Shopify CLI. Paste in this skill. This needs a store login you control.
+  - Give it your store domain and say which products to check. Log in to your store when it asks.
+  - Read the proposed table and the needs-review list. Remove any row you do not trust.
+  - Say yes to apply the rows you approve. It updates only those.
+  - Spot-check five updated products in your Shopify admin. No Shopify login? Give it a product CSV export instead. It proposes categories only and writes nothing.
+output_sample:
+  input:
+    - Your store domain
+    - A Shopify CLI login with product read and write access
+    - Which products to check, such as all, one collection or one tag
+    - Categories to avoid (optional)
+  prerequisites:
+    - An AI that can run the Shopify CLI, such as Claude Code
+  output:
+    - name: Proposed categories
+      contains: Each product with its old category, proposed category and confidence score, also saved as a CSV.
+    - name: Needs review
+      contains: Products below the confidence cut-off, with the closest match found. Never written to your store.
+    - name: Applied changes
+      contains: After your yes only. How many products were updated, and any errors.
+how_it_works:
+  - title: List the products
+    text: Reads your products with their title, type, tags and current category, a page at a time.
+  - title: Search the category list
+    text: Looks up candidate categories in the live Shopify category tree for each product.
+  - title: Score each match
+    text: Picks the most specific category above the confidence cut-off, set at 0.7 unless you change it.
+  - title: Ask for approval
+    text: Shows the proposed table and the needs-review list, then stops and waits for your yes.
+  - title: Update the approved rows
+    text: Sets the category on each approved product and logs any errors it gets back.
+  - title: Report
+    text: Gives the count updated, the CSV and the needs-review list.
+output_shape: |-
+  PROPOSED CATEGORIES (CSV)
+    product | old_category | new_category | confidence
+
+  NEEDS REVIEW
+    <product> | closest match: <category> | why not applied: <reason>
+
+  APPLIED CHANGES (after approval)
+    updated: <n> | errors: <n> | <error detail>
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Can run the Shopify CLI and keep your approval step between reading and writing.
+  inputs:
+    - A product export (CSV), if you cannot give store access
+    - Your collection names, so categories match your storefront
+    - A list of products you never want changed
+terms:
+  - term: Standard category
+    meaning: Shopify's built-in product category list, such as "Furniture > Chairs".
+  - term: Confidence score
+    meaning: How sure the AI is about a match, from 0 to 1. Low scores go to review.
+  - term: Shopify CLI
+    meaning: A command line tool for working with your store from your computer.

@@ -1,12 +1,12 @@
 new_slug: mispriced-bet-tester
 name: "Mispriced bet tester"
-summary: "List your bets and prices. Get each called near cinch, fair bet or no bet, with the odds."
+summary: "Test your bets against their price. Give each bet a cost and payoff and get a call of near cinch, fair bet or no bet, with the odds."
 job: money-and-investing
 thinking: high
 thinking_why: "It turns prices into odds, runs sums at three estimates and checks you are not fooling yourself about your edge. That takes careful judgement."
 
 headline: "Mispriced bet tester"
-subhead: "List your bets and what each costs and pays. It turns the price into odds the crowd gives, asks for your low, middle and high estimate, and runs the payoff sum at all three. Each bet comes back near cinch, fair bet or no bet. Analysis, not personal financial advice."
+subhead: "List your bets and what each costs and pays. Your AI turns each price into the odds the crowd gives, then asks for your low, middle and high estimate. It runs the payoff sum at all three and calls each bet near cinch (a clear win even at your low estimate), fair bet or no bet. This is analysis, not personal financial advice."
 
 explain: |
   A favourite at the track wins most often and is still a poor bet, because the crowd has already priced it. Businesses, deals and plans work the same way. Being likely to win is not enough. The odds must be better than the price says.
@@ -17,6 +17,10 @@ when:
   - You have several ideas and no clear way to tell which is worth backing.
   - A bet feels very likely but you cannot say why the price is wrong.
   - You keep acting on small edges and want a stricter bar.
+not_for:
+  - "You want a buy or sell call on a named stock or fund: this gives no such calls, so ask a licensed financial adviser."
+  - "You need to know if your business survives a bad year: use the Bad-year break-even tester."
+  - "Nothing is at stake, no money, time or effort: just decide, there is no price to test."
 
 you_give:
   - The bets you are weighing, with cost and payoff
@@ -29,11 +33,34 @@ you_get:
   - Each bet called near cinch, fair bet or no bet, with what would change it
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - List each bet with what goes in, what it pays and what you lose if it fails.
-  - Give the price if you have one. If not, say what the crowd seems to believe.
-  - Give a low, middle and high chance for your own view.
-  - Read the calls, then move your near cinches to the "Twenty-punch bet ranker".
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tool is needed.
+  - "List each bet on one line: what goes in, what it pays, what you lose if it fails. For example: put in 1, get 1.25 back if it wins, lose the 1 if it fails."
+  - Add the price if you have one. If not, say what the crowd seems to believe.
+  - Give a low, middle and high chance for your own view, such as 70%, 80% and 90%.
+  - Read the calls. Check that few bets are called near cinch.
+  - Move any near cinch to the Twenty-punch bet ranker if you have it.
+output_sample:
+  input:
+    - The bets you are weighing, each with cost, payoff and loss
+    - The price or odds for each bet (optional)
+    - Why you think you know better than the crowd (optional)
+  output:
+    - name: Bets
+      contains: One line per bet with what goes in, what it pays if right and what you lose if wrong.
+    - name: What the price says
+      contains: The chance of winning that the crowd's price already gives.
+    - name: Your range
+      contains: Your low, middle and high chance, with the facts behind each.
+    - name: The payoff sum
+      contains: Chance times payoff at your low, middle and high estimate.
+    - name: Your edge
+      contains: The reason you know better than the crowd, or a note that you have none.
+    - name: The call
+      contains: Near cinch, fair bet or no bet for each bet.
+    - name: Would change if
+      contains: One fact per bet that would move the call up or down.
+    - name: Missing and checks missed
+      contains: Gaps that would sharpen the sums, and any checks the skill failed.
 
 how_it_works:
   - title: One line per bet

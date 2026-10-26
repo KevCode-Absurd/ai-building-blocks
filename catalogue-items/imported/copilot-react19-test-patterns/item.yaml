@@ -1,6 +1,6 @@
 slug: copilot-react19-test-patterns
 name: React 19 test migration helper
-summary: Share your React tests. Get updates for React 19 test APIs and render behavior.
+summary: Fix React tests that break on React 19, including act imports, removed Simulate and test-utils calls, and StrictMode call counts.
 category: general
 boards: []
 type: skill
@@ -11,7 +11,7 @@ inputs:
   - type: codebase
     required: true
 outputs:
-  - type: test_report
+  - type: code_change
 uses: []
 origin: imported
 source:

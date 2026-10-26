@@ -1,6 +1,6 @@
 slug: document-a-dataset-analysis-for-reproduction
 name: Document a dataset analysis for reproduction
-summary: Share the source files. Get an analysis inventory, repeatable methods procedure and unsupported claims list.
+summary: Write down how a dataset analysis was done so someone else can repeat it. Get a data inventory, a method procedure and a list of unsupported claims.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,16 +8,11 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: spreadsheet
-    required: false
-  - type: question
-    required: false
-  - type: copy_draft
+    required: true
+  - type: document
     required: false
 outputs:
-  - type: spreadsheet
   - type: document
   - type: audit_report
 uses:
@@ -26,11 +21,11 @@ uses:
   - unsupported-claim-spotter
 steps:
   - uses: spreadsheet-checker
-    note: Inspect the dataset and any actual workbook for grain, units, missing values, duplicates and reconciled totals. Limit coverage to supported file types and tools.
+    note: Inspects the data and any workbook for what a row means, units, missing values, duplicates and totals that reconcile. Covers only the file types and tools it can use. Hands the inventory to step 2.
   - uses: process-and-sop-writer
-    note: Document the supplied real analysis sequence, environment, inputs, output paths, parameters and failure checks as a reproducibility procedure; preserve original data.
+    note: "Uses your own commands, workbook and software list, not step 1's file, and takes units and exclusions from the step 1 inventory. Writes the analysis as a procedure: inputs, software, order of steps, settings, output paths and failure checks. Original data stays untouched. Hands the procedure to step 3."
   - uses: unsupported-claim-spotter
-    note: Check the existing methods draft and procedure for claimed checks or causal findings absent from the actual files and run evidence.
+    note: Reads your methods draft (your own text) and step 2's procedure for claimed checks or cause-and-effect statements that the files and run evidence do not show.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

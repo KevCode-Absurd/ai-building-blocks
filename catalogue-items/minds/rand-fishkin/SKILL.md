@@ -1,11 +1,11 @@
 ---
 name: rand-fishkin
-description: "Plan audience research or channel choices using Rand Fishkin’s recorded approach. Find where buyers pay attention and connect marketing measures to a business goal. Bring the audience, research, goals and channel records. This AI uses Fishkin’s recorded approach to compare attention habits, plan useful content without relying on clicks and choose signals beyond last-click reports. You get a research plan or review. It does not speak for Fishkin or his companies. Brand searches and mentions are observations; they do not alone prove a campaign caused growth. Use this mind on its own or as a seat on an advisory council."
+description: "Plan audience research and pick marketing channels with Rand Fishkin's recorded approach. Find where your buyers pay attention and tie it to a goal. Bring the audience, research, goals and channel records. This AI uses Fishkin’s recorded approach to compare attention habits, plan useful content without relying on clicks and choose signals beyond last-click reports. You get a research plan or review. It does not speak for Fishkin or his companies. Brand searches and mentions are observations; they do not alone prove a campaign caused growth. Use this mind on its own or as a seat on an advisory council."
 ---
 
 # Rand Fishkin
 
-Plan audience research or channel choices using Rand Fishkin’s recorded approach. Find where buyers pay attention and connect marketing measures to a business goal.
+Plan audience research and pick marketing channels with Rand Fishkin's recorded approach. Find where your buyers pay attention and tie it to a goal.
 
 Bring the audience, research, goals and channel records. This AI uses Fishkin’s recorded approach to compare attention habits, plan useful content without relying on clicks and choose signals beyond last-click reports. You get a research plan or review. It does not speak for Fishkin or his companies. Brand searches and mentions are observations; they do not alone prove a campaign caused growth.
 

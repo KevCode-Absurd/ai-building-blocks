@@ -1,6 +1,6 @@
 new_slug: local-production-scanner
 name: "Local production opportunity scanner"
-summary: "List what your market buys from outside. Get the best thing to make locally, what to build around it and a buffer."
+summary: "Find what to make locally in a market that imports most of it. Get a ranked pick, what to build, a first plant size and a buffer."
 job: test-an-idea
 thinking: high
 thinking_why: "It weighs sourced numbers across costs, risk and sizing, and must not invent figures."
@@ -17,6 +17,10 @@ when:
   - "You are deciding what to make in a market that imports most of it."
   - "You think a local plant could win but have not costed power, roads or storage."
   - "Investors ask what happens if costs run over or rules change."
+not_for:
+  - Your market has no import or price data at all. Collect customs or trade body figures first, or ask a local trade body.
+  - You run a service business and local making is not the question. Talk it over with an adviser or a peer in your trade.
+  - You only want to test if people will buy. Run a small paid trial with a few real buyers before you build anything.
 
 you_give:
   - "Your market and what you can invest"
@@ -33,6 +37,31 @@ how_to_use:
   - "Paste your import data with sources and your investment limits."
   - "Fill the `MISSING:` lines with real quotes before relying on the plan."
   - "Review the policy watch list every quarter."
+output_sample:
+  input:
+    - Your market and what you can invest
+    - Import or price data with sources
+    - Known costs for power, transport and storage (optional)
+    - Your fallback business and time horizon (optional)
+  output:
+    - name: Imports
+      contains: Each item the market buys from outside, with its volume or value and the source of that figure.
+    - name: Top three
+      contains: The three items where local making keeps the most jobs and value, with one reason each.
+    - name: Pick
+      contains: The one item to make locally.
+    - name: To build
+      contains: The power, water, roads, ports and storage needed, whether each exists, and a cost range or a MISSING line.
+    - name: Plant size
+      contains: The first plant volume that could shift the market, and the logic behind it.
+    - name: Funding and fallback
+      contains: How the first phase is paid for and the fallback business that earns meanwhile.
+    - name: Buffer
+      contains: A cost and time overrun buffer, marked as given by you or proposed.
+    - name: Policy risks
+      contains: Rule changes that could hurt, one signal to watch for each, and what you would do.
+    - name: Missing and checks missed
+      contains: Gaps in your data, and any checks the plan still fails.
 
 how_it_works:
   - title: "Lists imports"

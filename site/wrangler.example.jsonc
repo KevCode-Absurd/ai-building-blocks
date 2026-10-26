@@ -8,44 +8,152 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
-    "run_worker_first": ["/api", "/api/*"]
+    "run_worker_first": [
+      "/api",
+      "/api/*",
+      "/mcp",
+      "/mcp/*",
+      "/oauth/*",
+      "/.well-known/*",
+      "/connect-mcp",
+      "/connect-mcp.html"
+    ]
   },
   "compatibility_date": "2026-10-21",
-  "compatibility_flags": ["assets_navigation_has_no_effect"],
+  "compatibility_flags": [
+    "assets_navigation_has_no_effect"
+  ],
   "vars": {
     "CLERK_PUBLISHABLE_KEY": "",
     "API_ALLOWED_HOSTS": "useaiblocks.com,www.useaiblocks.com",
     "TURNSTILE_SITE_KEY": "",
     "WORKFLOW_COMPOSER_ENABLED": "false",
-    "WORKFLOW_DAILY_CAP_USD": "2"
+    "WORKFLOW_DAILY_CAP_USD": "10",
+    "WORKFLOW_DAILY_ATTEMPT_LIMIT": "5",
+    "PUBLIC_API_ENABLED": "false",
+    "MCP_OAUTH_ENABLED": "false",
+    "COMMUNITY_REVIEWER_IDS": "",
+    "COMMUNITY_SHOW_STAR_COUNTS": "false"
   },
   "ratelimits": [
-    { "name": "API_READ_LIMITER", "namespace_id": "6102201", "simple": { "limit": 120, "period": 60 } },
-    { "name": "API_WRITE_LIMITER", "namespace_id": "6102202", "simple": { "limit": 30, "period": 60 } },
-    { "name": "AI_LIMITER", "namespace_id": "6102203", "simple": { "limit": 3, "period": 60 } }
+    {
+      "name": "API_READ_LIMITER",
+      "namespace_id": "6102201",
+      "simple": {
+        "limit": 120,
+        "period": 60
+      }
+    },
+    {
+      "name": "API_WRITE_LIMITER",
+      "namespace_id": "6102202",
+      "simple": {
+        "limit": 30,
+        "period": 60
+      }
+    },
+    {
+      "name": "AI_LIMITER",
+      "namespace_id": "6102203",
+      "simple": {
+        "limit": 3,
+        "period": 60
+      }
+    }
   ],
   "d1_databases": [
-    { "binding": "COMMENTS", "database_name": "ai-blocks", "database_id": "REPLACE_WITH_D1_DATABASE_ID", "migrations_dir": "migrations" },
-    { "binding": "SPACES", "database_name": "ai-blocks", "database_id": "REPLACE_WITH_D1_DATABASE_ID", "migrations_dir": "migrations" },
-    { "binding": "COMPOSER", "database_name": "ai-blocks", "database_id": "REPLACE_WITH_D1_DATABASE_ID", "migrations_dir": "migrations" }
+    {
+      "binding": "COMMENTS",
+      "database_name": "ai-blocks",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    },
+    {
+      "binding": "SPACES",
+      "database_name": "ai-blocks",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    },
+    {
+      "binding": "COMPOSER",
+      "database_name": "ai-blocks",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
   ],
   "env": {
     "staging": {
       "name": "ai-building-blocks-staging",
       "workers_dev": true,
       "preview_urls": false,
-      "assets": { "directory": "./dist", "binding": "ASSETS", "html_handling": "auto-trailing-slash", "run_worker_first": true },
-      "vars": { "CLERK_PUBLISHABLE_KEY": "", "PREVIEW_PROTECTED": "true", "API_ALLOWED_HOSTS": "ai-building-blocks-staging.kevinmark7498.workers.dev", "TURNSTILE_SITE_KEY": "", "WORKFLOW_COMPOSER_ENABLED": "false", "WORKFLOW_DAILY_CAP_USD": "2" },
+      "assets": {
+        "directory": "./dist",
+        "binding": "ASSETS",
+        "html_handling": "auto-trailing-slash",
+        "run_worker_first": true
+      },
+      "vars": {
+        "CLERK_PUBLISHABLE_KEY": "",
+        "PREVIEW_PROTECTED": "true",
+        "API_ALLOWED_HOSTS": "ai-building-blocks-staging.kevinmark7498.workers.dev",
+        "TURNSTILE_SITE_KEY": "",
+        "WORKFLOW_COMPOSER_ENABLED": "false",
+        "WORKFLOW_DAILY_CAP_USD": "2",
+        "WORKFLOW_DAILY_ATTEMPT_LIMIT": "5",
+        "PUBLIC_API_ENABLED": "false",
+        "MCP_OAUTH_ENABLED": "false",
+        "COMMUNITY_REVIEWER_IDS": "",
+        "COMMUNITY_SHOW_STAR_COUNTS": "false"
+      },
       "ratelimits": [
-        { "name": "API_READ_LIMITER", "namespace_id": "6102211", "simple": { "limit": 120, "period": 60 } },
-        { "name": "API_WRITE_LIMITER", "namespace_id": "6102212", "simple": { "limit": 30, "period": 60 } },
-        { "name": "AI_LIMITER", "namespace_id": "6102213", "simple": { "limit": 3, "period": 60 } }
+        {
+          "name": "API_READ_LIMITER",
+          "namespace_id": "6102211",
+          "simple": {
+            "limit": 120,
+            "period": 60
+          }
+        },
+        {
+          "name": "API_WRITE_LIMITER",
+          "namespace_id": "6102212",
+          "simple": {
+            "limit": 30,
+            "period": 60
+          }
+        },
+        {
+          "name": "AI_LIMITER",
+          "namespace_id": "6102213",
+          "simple": {
+            "limit": 3,
+            "period": 60
+          }
+        }
       ],
       "d1_databases": [
-        { "binding": "COMMENTS", "database_name": "ai-blocks-staging", "database_id": "REPLACE_WITH_STAGING_D1_DATABASE_ID", "migrations_dir": "migrations" },
-        { "binding": "SPACES", "database_name": "ai-blocks-staging", "database_id": "REPLACE_WITH_STAGING_D1_DATABASE_ID", "migrations_dir": "migrations" },
-        { "binding": "COMPOSER", "database_name": "ai-blocks-staging", "database_id": "REPLACE_WITH_STAGING_D1_DATABASE_ID", "migrations_dir": "migrations" }
+        {
+          "binding": "COMMENTS",
+          "database_name": "ai-blocks-staging",
+          "database_id": "REPLACE_WITH_STAGING_D1_DATABASE_ID",
+          "migrations_dir": "migrations"
+        },
+        {
+          "binding": "SPACES",
+          "database_name": "ai-blocks-staging",
+          "database_id": "REPLACE_WITH_STAGING_D1_DATABASE_ID",
+          "migrations_dir": "migrations"
+        },
+        {
+          "binding": "COMPOSER",
+          "database_name": "ai-blocks-staging",
+          "database_id": "REPLACE_WITH_STAGING_D1_DATABASE_ID",
+          "migrations_dir": "migrations"
+        }
       ]
     }
+  },
+  "limits": {
+    "cpu_ms": 1000
   }
 }

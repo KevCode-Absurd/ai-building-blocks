@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Finding real causes takes honest reflection.
 new_slug: analysis-lessons-review-writer
 name: Analysis lessons review writer
-summary: Tell it how a data project went. Get what worked, what slipped, the
-  causes and actions for next time.
+summary: Write a data analysis retrospective in one sitting. Compare the plan to what happened, find root causes, and set actions with owners.
 job: track-numbers
 headline: Analysis lessons review writer
-subhead: A short written review after a data project that records what worked,
-  what slipped and why, and who does what next time. Do it within a week, while
-  the details are fresh.
+subhead: A short written review after a data project that records what worked, what slipped and why, and who does what next time. Do it within a week, while the details are fresh.
 explain: |
   A short written review after a data project that records what worked, what slipped and why, and who does what next time. Do it within a week, while the details are fresh.
 
@@ -18,6 +15,10 @@ when:
   - A project ran late or missed the mark and you need to know why.
   - Your team keeps repeating the same mistakes.
   - You want to turn lessons into templates and checklists.
+not_for:
+  - "Your project is still running: finish it first, then run the review within a week."
+  - "You need to explain one data error that reached a client: write a short incident note with a person who saw it, not a full review."
+  - "You only want to record one lesson: add a line to your team notes instead."
 you_give:
   - The project name, scope and timeline
   - The original plan or brief
@@ -29,7 +30,22 @@ you_get:
   - Action items with owners and dates
   - Entries for a learnings log
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
+  - Paste your project name, scope, timeline and original plan.
+  - Say who took part. Add what went wrong, if you know.
+  - Ask your AI to run the review. Set 30 minutes for one person or 60 for a team.
+  - Check each root cause. It should explain the problem, not just repeat it.
+  - Give every action an owner and a date. Save the lessons you will reuse in your log.
+output_sample:
+  input:
+    - Your project name, scope and timeline
+    - Your original plan or brief
+    - Who took part, alone or as a team
+    - What went wrong or slowed you down (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+  output:
+    - name: retrospective_template.md
+      contains: What went well, what went wrong, the root cause of each problem, and action items with owners and due dates.
+    - name: learnings_log_template.md
+      contains: Short entries for lessons worth reusing, each marked for a template, checklist, reference page or team norm.

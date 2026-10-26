@@ -1,70 +1,63 @@
 new_slug: powerpoint-deck-change-reviewer
 name: PowerPoint deck change reviewer
-summary: Share old and new decks. Get changes to slides, charts, notes and links
-  explained.
+summary: "Compare an old and a new PowerPoint deck. Get every changed message, chart number, note, link and slide move in one list."
 job: work-with-files
 thinking: high
 thinking_why: Native file features, source meaning and check evidence must
   survive the workflow.
 headline: PowerPoint deck change reviewer
-subhead: Share old and revised decks. Get a review of changed messages, charts,
-  notes, links and slide order. Work on a copy of your file. Get a clear record
-  of what passed and what still needs checking.
-explain: >-
-  Share old and revised decks. Get a review of changed messages, charts, notes,
-  links and slide order.
+subhead: Give it the old deck and the revised deck. It matches the slides, even when they moved, and compares the text, chart data, speaker notes, hidden slides and links. You get a change register that says what changed, where, and whether it looks intended.
 
+explain: |
+  When someone edits your deck, the risky changes are the quiet ones. A number moves a little. A title changes the claim. A speaker note now holds something private. Looking slide by slide misses these. This deck change reviewer compares the two files and lists what changed, and it keeps a moved slide apart from an edited one.
 
-  It works with the actual PowerPoint files and follows a specific method for
-  this task. Your source files stay intact. The method starts by checking what
-  your AI already knows and which files it can read. It asks only for missing
-  facts that change the work.
+  It matches slides by their stable identity and their content, and says how sure it is when the deck was rebuilt. It then reads the visible text, chart and table data, speaker notes, comments, hidden slides and outside links. It also draws the changed slides so you can compare them. It never deletes notes, comments or hidden slides.
 
+  It needs an AI that can open .pptx files. If yours cannot, paste the text of each slide and its notes. You still get a text review, and the checks it could not run, such as chart data, hidden slides, links and layout, are marked not run.
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
 when:
-  - Share old and revised decks. Get a review of changed messages, charts,
-    notes, links and slide order.
-  - Baseline and revised PPTX files, intended changes and source evidence for
-    revised facts.
-  - You need a checked copy while keeping your original files intact.
+  - A colleague, client or agency sent your deck back and you need to know what they changed.
+  - A new version is about to go to a board or customer and you want to compare it with the last approved one.
+  - A number in a chart changed and you want to know whether the slide's message changed with it.
+  - You must be sure no private notes, comments or hidden slides slipped into a deck you will share.
+
+not_for:
+  - "You want to check slide figures against an Excel workbook: use the Excel to PowerPoint number checker."
+  - "You are comparing two Excel files: use the Excel workbook change reviewer."
+  - "You have one deck and want it checked for reading order and alternative text: use the PowerPoint accessibility reviewer."
+  - "You want a clean copy for an audience with private material removed: use the PowerPoint audience handout builder."
+
 you_give:
-  - Baseline and revised PPTX files, intended changes and source evidence for
-    revised facts.
-  - The app and file tools your AI can use for the requested work
+  - The old deck as a .pptx file, the one you trust
+  - The revised deck as a .pptx file
+  - What the changes were meant to be (optional)
+  - Where any revised facts come from, such as a report or sheet (optional)
 you_get:
-  - deck-change-register.md, comparison previews and unresolved issues.
-  - A record of source files, changes and check results
-  - Missing facts and any checks that could not run
+  - A change register (deck-change-register.md) with each change, its slide, the before and after, and how sure the match is
+  - Moved, added and deleted slides, kept apart from edited ones
+  - Changes in text, chart and table data, speaker notes, comments, hidden slides and links
+  - Before and after pictures of changed slides, when your AI can draw slides
+  - A list of checks that passed, failed or did not run, and what is still open
+
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Open the skill in Claude, ChatGPT or Gemini with file tools on, or in a coding assistant that can read files. Attach both decks.
+  - Say which deck is the old one and which is the new one. Add what the changes were meant to be.
+  - If your AI cannot open files, paste the text of each slide and its notes. You get a text-only review, and chart data, hidden slides, links and layout are marked not run.
+  - Read the unexplained changes first, then the moves and the notes, comments and hidden slides.
+  - Fix or question what is flagged. Nothing in your decks is changed or deleted.
+
 how_it_works:
-  - title: Step 1
-    text: 1. Preserve and inventory both decks, including slide IDs, titles,
-      dimensions, notes, comments, hidden slides, links and embedded data.
-  - title: Step 2
-    text: 2. Match slides by stable identity and content evidence, with explicit
-      confidence for rebuilt decks. Distinguish slide moves from additions,
-      deletions and meaningful revisions.
-  - title: Step 3
-    text: 3. Compare visible text, native chart/table data and source labels. Review
-      whether a changed title alters the claim or an apparent style edit hides a
-      changed number.
-  - title: Step 4
-    text: 4. Inspect speaker notes, comments, hidden slides and external links for
-      unintended changes or sensitive content. Do not delete these objects
-      without permission.
-  - title: Step 5
-    text: 5. Render changed slides and examine visual differences. Return
-      before/after evidence and exact locations, separating automated findings
-      from manual or unrun native checks.
+  - title: Lists both decks
+    text: Records each deck's slide IDs, titles, size, notes, comments, hidden slides, links and embedded data.
+  - title: Matches the slides
+    text: Pairs slides by stable identity and content, with a confidence level for rebuilt decks. It tells moves from additions, deletions and real edits.
+  - title: Compares what shows
+    text: Compares visible text and native chart and table data. It checks whether a new title changes the claim, and whether a style edit hides a changed number.
+  - title: Looks behind the slides
+    text: Reads speaker notes, comments, hidden slides and outside links for changes nobody meant, or private content. Nothing is deleted.
+  - title: Draws the changes
+    text: Renders changed slides and compares them. It returns before and after evidence with exact places, and separates what it checked from what it could not run.
+
 output_shape: |-
   FILES
   deck-change-register.md, comparison previews and unresolved issues.
@@ -77,6 +70,28 @@ output_shape: |-
 
   OPEN ITEMS
   <missing fact or unsupported check> | <next action>
+
+output_sample:
+  input:
+    - The old deck as a .pptx file
+    - The revised deck as a .pptx file
+    - What the changes were meant to be (optional)
+    - Where revised facts come from (optional)
+  prerequisites:
+    - An AI that can open .pptx files, such as Claude with file tools or a coding assistant
+    - Or the pasted text of each slide and its notes, for a text-only review
+  output:
+    - name: deck-change-register.md
+      contains: Each change with its slide, type, before, after, whether it matches your stated intent, and match confidence.
+    - name: Comparison previews
+      contains: Before and after pictures of the slides that changed, when slides can be drawn.
+    - name: Source map
+      contains: Which file and slide each finding comes from, in the old and the new deck.
+    - name: Checks
+      contains: Each check marked passed, failed or not run, such as notes, hidden slides and links, with evidence.
+    - name: Open items
+      contains: Missing facts or checks that could not run, each with the next action.
+
 tweaks:
   - what: Your source files
     how: Baseline and revised PPTX files, intended changes and source evidence for
@@ -87,6 +102,23 @@ tweaks:
   - what: The app used to check it
     how: Say which Excel or PowerPoint version you will use. Your AI must name any
       check it cannot run.
+
+works_best_with:
+  tools:
+    - name: Claude with file tools, or a coding assistant
+      why: It can open both .pptx files, read notes and hidden slides, and draw changed slides.
+  inputs:
+    - A short list of the edits you asked for, so intended changes can be told from surprises
+    - The report or sheet behind any revised numbers
+
+terms:
+  - term: Hidden slide
+    meaning: A slide that stays in the file but does not show when you present.
+  - term: Speaker notes
+    meaning: The text under each slide that only the presenter sees.
+  - term: Slide move
+    meaning: The same slide in a new position, with no change to what it says.
+
 judge:
   - Reordered slides are matched correctly.
   - Notes and hidden content are included in the review scope.

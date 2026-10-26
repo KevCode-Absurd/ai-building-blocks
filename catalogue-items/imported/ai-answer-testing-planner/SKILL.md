@@ -15,12 +15,36 @@ Master comprehensive evaluation strategies for LLM applications, from automated 
 - The task is unrelated to llm evaluation
 - You need a different domain or tool outside this scope
 
+## What to ask for first
+
+1. What the AI feature does and who uses it (required).
+2. What matters most: accuracy, tone, speed or safety (required; ask once if missing).
+3. Example inputs with good answers (optional; if none, plan how to collect 5 to 20 and do not invent any).
+4. Models or prompts to compare, and the budget for paid judge calls (optional; if no budget is given, mark judge steps as "needs a paid key").
+
+If an input is missing after one question, write MISSING and carry on. Never make up test data, scores or results.
+
 ## Instructions
 
 - Clarify goals, constraints, and required inputs.
 - Apply relevant best practices and validate outcomes.
 - Provide actionable steps and verification.
 - Use the examples below; no separate implementation playbook is bundled.
+
+## Output
+
+Return a test plan in this order. Keep it short. Choose only the scores that fit the task.
+
+1. **Scores to use**: the metric family for the task, and one line on why each fits.
+2. **Test set**: how to collect 5 to 20 sample inputs with good answers, and what to leave out.
+3. **Human review plan**: scales, who rates, how many answers, and the agreement check.
+4. **AI judge set-up**: the judge prompt, the scale, and the step to check it against human ratings.
+5. **Baseline and drop rule**: record today's scores, then flag a drop larger than a limit the user picks.
+6. **A/B test plan**: only if the feature has live traffic.
+7. **Costs and keys**: every step that needs a paid API key, a model download or Python.
+8. **Next step**: run the baseline first, then change one thing at a time.
+
+The code below shows patterns. It is not run for you in a chat, and it must be adapted before use.
 
 ## Use this skill when
 
@@ -191,8 +215,8 @@ def calculate_toxicity(text):
 
 def calculate_factuality(claim, knowledge_base):
     """Verify factual claims against knowledge base."""
-    # Implementation depends on your knowledge base
-    # Could use retrieval + NLI, or fact-checking API
+    # Not built. Depends on your knowledge base: retrieval plus NLI, or a fact-checking API.
+    # Until you build it, skip this metric and rely on human review for factual accuracy.
     raise NotImplementedError("A verified fact-checking adapter is required")
 ```
 
@@ -201,7 +225,7 @@ def calculate_factuality(claim, knowledge_base):
 ### Single Output Evaluation
 ```python
 def llm_judge_quality(response, question):
-    """Use GPT-5 to judge response quality."""
+    """Use a stronger model to judge response quality. Needs a paid key."""
     prompt = f"""Rate the following response on a scale of 1-10 for:
 1. Accuracy (factually correct)
 2. Helpfulness (answers the question)
@@ -219,13 +243,11 @@ Provide ratings in JSON format:
 }}
 """
 
-    result = openai.ChatCompletion.create(
-        model="gpt-5",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0
-    )
+    # call_judge_model is yours to write: one call to the judge model you chose,
+    # using your provider's current SDK, with temperature 0. Needs a paid API key.
+    reply = call_judge_model(prompt)
 
-    return json.loads(result.choices[0].message.content)
+    return json.loads(reply)
 ```
 
 ### Pairwise Comparison
@@ -250,13 +272,11 @@ Answer with JSON:
 }}
 """
 
-    result = openai.ChatCompletion.create(
-        model="gpt-5",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0
-    )
+    # call_judge_model is yours to write: one call to the judge model you chose,
+    # using your provider's current SDK, with temperature 0. Needs a paid API key.
+    reply = call_judge_model(prompt)
 
-    return json.loads(result.choices[0].message.content)
+    return json.loads(reply)
 ```
 
 ## Human Evaluation Frameworks

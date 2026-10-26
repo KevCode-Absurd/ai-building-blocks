@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows each redirect to its end.
 new_slug: redirect-chain-finder
 name: Redirect chain finder
-summary: Get redirects that chain from one to another or share a target, so
-  shoppers and search get there fast.
+summary: Find redirect chains and shared targets in your Shopify store. Give it your store domain. You get a CSV report, and nothing is changed.
 job: audit-landing-page
 headline: Redirect chain finder
-subhead: Get redirects that chain from one to another or share a target, so
-  shoppers and search get there fast. Bring store domain. Use the result to plan
-  your next step.
+subhead: Get redirects that chain from one to another or share a target, so shoppers and search get there fast. Bring store domain. Use the result to plan your next step.
 explain: |
   A list of redirects in your Shopify store that point through other redirects or share the same target, so shoppers and search engines reach the page faster. Nothing in the store is changed.
 
@@ -18,18 +15,41 @@ when:
   - Page speed is slow after a store migration.
   - You want to clean up redirects before an SEO audit.
   - Search tools report redirect chains on your site.
+not_for:
+  - You have not changed any URLs lately. The check will likely find nothing, so skip it.
+  - You want to find broken links on live pages. Use a live site crawler instead.
+  - You want the redirects fixed for you. This only reads and reports, so edit them yourself in Shopify Admin under Navigation, URL Redirects.
 you_give:
   - Store domain
   - Shopify CLI sign-in with content read access
   - "Output format: readable or JSON (optional)"
 you_get:
-  - List of redirect chains
-  - Groups sharing one target
-  - Suggested direct targets
-  - Report in readable or JSON form
+  - A summary of how many redirects, chains and shared targets your store has.
+  - A list of each chain, such as one page that leads to a second page that leads to a third.
+  - A list of redirects that all point to the same page.
+  - A CSV file named redirect_audit_<date>.csv with the issue type and chain path for each row.
+  - The summary in readable or JSON form, your choice.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code and use the Shopify CLI, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot read your store.
+  - "Sign in to your store with the read_content scope: shopify store auth --store your-store.myshopify.com --scopes read_content."
+  - Paste the skill into your AI and give it your store domain. Say if you want readable or JSON output.
+  - Let it read all your redirects, 250 at a time. It changes nothing in your store.
+  - Open the summary and the CSV. Check each chain and shared target.
+  - Fix them yourself in Shopify Admin under Navigation, URL Redirects. Point each old path straight to the final page.
+output_sample:
+  input:
+    - Your store domain
+    - Your Shopify sign-in with read access to content
+    - "Output style: readable or JSON (optional)"
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A Shopify CLI sign-in with the read_content scope
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Summary
+      contains: Total redirects, number of chains, number of shared targets, and a list of each chain and each group.
+    - name: redirect_audit_<date>.csv
+      contains: One row per flagged redirect with its ID, from path, target, issue type and chain path.

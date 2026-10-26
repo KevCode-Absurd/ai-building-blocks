@@ -17,6 +17,27 @@ use_cases:
   - "Give your team the credit, and the chance to present their own work"
   - "Edit a report by reading it aloud and fixing every place you stumble"
   - "Plan for a new idea to take years to catch on, without losing heart"
+not_for:
+  - "You need legal, medical or personal money advice: ask a qualified professional, since this AI advisor only covers how work is designed and explained."
+  - "You have no current process to watch yet: write down how the work is done today first, or ask a colleague who does it."
+  - "You want to test what a machine can really do, or how to check it: use Alan Turing, who writes about testing machines."
+output_sample:
+  input:
+    - The task, tool or process you want to improve
+    - The words your users or staff use for it today
+    - Who does the work by hand, and how often
+    - Who must say yes to a change (optional)
+  output:
+    - name: What she'd watch first
+      contains: Who actually uses the tool or does the job, and what to observe before you change anything.
+    - name: The dull job to automate
+      contains: Work your people do by hand more than once, and a template, script or tool to take it over.
+    - name: The words to use
+      contains: Plain labels and steps, using the words your users already say out loud.
+    - name: Allies and the pitch
+      contains: Who to bring on side first, and why each decision maker needs this.
+    - name: Next steps, one per week
+      contains: A short list of small changes, with who should present each result.
 seats:
   - {seat: "Making tech usable", asks: "Who has to use this, and can they use it in their own words?"}
   - {seat: "Common sense", asks: "What's the plain, practical way to get this done, and why aren't we doing it?"}

@@ -1,6 +1,6 @@
 new_slug: monthly-store-seo-planner
 name: "Monthly store SEO planner"
-summary: "Give it your store and monthly hours. Get a first 30 days plan and a monthly SEO cycle."
+summary: "Plan your first 30 days of store SEO, week by week, then repeat a monthly SEO plan that fits the hours you really have."
 job: get-found-in-search
 thinking: low
 thinking_why: "It turns a fixed method into a plan for your hours, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You have never done SEO and need a plan that fits a few hours a month.
   - You do SEO now but randomly, and want one routine you can repeat.
   - You hired no one and want to know what a first month should include.
+not_for:
+  - "You want to know if SEO is worth the cost first: use the SEO worth-it checker."
+  - "You need the 10 to 15 keywords picked for you: use the store keyword map builder."
+  - "You have less than a few hours a month, or no way to see organic sales: set up Search Console and GA4 first, then come back."
 
 you_give:
   - Your store address and your top collections
@@ -35,6 +39,30 @@ how_to_use:
   - Say if Search Console and analytics are set up. If not, week 1 covers it.
   - Follow the plan for 30 days. Paste your Search Console numbers at the end of the month.
   - Run the skill again each month and ask for the monthly review.
+output_sample:
+  input:
+    - Your store address and your top collections
+    - The hours you can spend each month, and who does the work
+    - Whether you have Search Console and analytics set up
+    - Your link budget (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Search Console and GA4 access, or a plan to set them up in week 1
+  output:
+    - name: Your hours
+      contains: The hours per month and who does the work, which size the whole plan.
+    - name: First 30 days
+      contains: "Four weeks: foundation, one money page, one supporting piece, then promote and check."
+    - name: Each month (repeat)
+      contains: "The four monthly jobs: research keywords, update pages, add fresh content, earn links."
+    - name: Monthly review
+      contains: Questions to ask each month and the numbers to paste in.
+    - name: Early signs
+      contains: What to look for, such as rising impressions and new queries.
+    - name: Change course if
+      contains: A simple rule for when to review your keywords and pages.
+    - name: Checks missed and Missing
+      contains: Any checks that failed and any facts you did not give.
 
 how_it_works:
   - title: Sets the cycle

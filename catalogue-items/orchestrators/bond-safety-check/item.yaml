@@ -1,6 +1,6 @@
 slug: bond-safety-check
 name: "Check if a bond or loan is safe to hold"
-summary: "Paste the debt terms and the borrower's statements. Get coverage and cushion tests and a safe, speculative or reject call."
+summary: "Get a safe, speculative or reject call on a bond or loan. Paste the debt terms and the borrower's accounts; it tests cover and cushion."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,14 +8,14 @@ job: analysis
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: source_text, required: true}
+  - {type: document, required: true}
 outputs:
   - {type: audit_report}
 uses: [investment-or-speculation-sorter, average-earnings-coverage-tester, equity-cushion-ratio-tester, lender-safety-verdict-writer]
 steps:
-  - {uses: investment-or-speculation-sorter, note: "A first label, so the rest of the run knows whether it is testing for safety or for a gamble."}
-  - {uses: average-earnings-coverage-tester, note: "Takes the label, then tests earnings against the full pile of charges, not only the borrower's own claim."}
-  - {uses: equity-cushion-ratio-tester, note: "Adds a second, independent test: is the business worth far more than it owes?"}
+  - {uses: investment-or-speculation-sorter, note: "A first label, so the rest of the run knows whether it is testing for safety or for a gamble. Hands the label to step 2."}
+  - {uses: average-earnings-coverage-tester, note: "Tests average earnings against the full pile of charges, not only the borrower's own claim. Hands the cover result to step 3."}
+  - {uses: equity-cushion-ratio-tester, note: "Adds a second, independent test: is the business worth far more than it owes? Hands both test results to step 4."}
   - {uses: lender-safety-verdict-writer, note: "Turns both tests into one call with reasons, using rules that exclude rather than rules that persuade."}
 origin: rebuilt
 version: 1.0.0

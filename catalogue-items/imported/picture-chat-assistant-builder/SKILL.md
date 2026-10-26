@@ -22,17 +22,33 @@ Open-source vision-language model for conversational image understanding.
 - Visual instruction following
 - Document understanding with images
 
-**Metrics**:
-- **23,000+ GitHub stars**
-- GPT-4V level capabilities (targeted)
-- Apache 2.0 License
-- Multiple model sizes (7B-34B params)
+**Facts to know**:
+- Open-source, runs on your own GPU
+- Multiple model sizes (7B to 34B parameters)
+- Licences: this skill is MIT (Orchestra Research). The LLaVA code and each model's weights have their own licences. Read them on the GitHub and Hugging Face pages before any commercial use
+
+**Do not use when**:
+- You have no GPU: a hosted vision service is simpler than running this yourself
+- You need exact text from a scan or document: use an OCR tool, since small text is a known weak spot
+- You need exact counts or locations of objects: answers here are approximate
 
 **Use alternatives instead**:
 - **GPT-4V**: Highest quality, API-based
 - **CLIP**: Simple zero-shot classification
 - **BLIP-2**: Better for captioning only
 - **Flamingo**: Research, not open-source
+
+## Output Format
+
+Walk the user through, then give:
+
+1. **Setup check**: GPU and VRAM found or MISSING, Python version, chosen model size and why.
+2. **Commands**: clone, install, and the first run (the CLI command with one image and one question).
+3. **Answers**: one text answer per question. For multi-turn chats, the full conversation log in order.
+4. **Notes**: anything the model may have got wrong, such as invented details, small text or counts.
+5. **Next steps**: save captions to a spreadsheet, add a chat front end such as the Gradio app below, or try a larger model.
+
+If images, questions or GPU details are missing, ask once, then mark them MISSING. Never invent model answers. You cannot see the user's images unless they are attached, and answers only come from running the model on their machine. Code here is a starting point: run it, then report errors back.
 
 ## Quick start
 
@@ -139,6 +155,8 @@ python -m llava.serve.gradio_web_server \
 
 ## Multi-turn conversations
 
+Note: `generate` and `ask` in the snippets below are helper functions you write by wrapping the code from Basic usage. They are not part of the LLaVA package.
+
 ```python
 # Initialize conversation
 conv = conv_templates["llava_v1"].copy()
@@ -200,6 +218,8 @@ response = ask(model, document_image, question)
 
 ## Training custom model
 
+These scripts live in the LLaVA repository you clone, not in this skill's folder. Training needs large datasets and several GPUs: only start it when plain use is not enough.
+
 ```bash
 # Stage 1: Feature alignment (558K image-caption pairs)
 bash scripts/v1_5/pretrain.sh
@@ -236,6 +256,8 @@ load_8bit=True  # Reduces VRAM ~2×
 
 ## Performance
 
+Rough figures from the original skill, not measured by us. Your speed and memory will differ. Check the model cards.
+
 | Model | VRAM (FP16) | VRAM (4-bit) | Speed (tokens/s) |
 |-------|-------------|--------------|------------------|
 | 7B | ~14 GB | ~4 GB | ~20 |
@@ -246,11 +268,7 @@ load_8bit=True  # Reduces VRAM ~2×
 
 ## Benchmarks
 
-LLaVA achieves competitive scores on:
-- **VQAv2**: 78.5%
-- **GQA**: 62.0%
-- **MM-Vet**: 35.4%
-- **MMBench**: 64.3%
+For scores on VQAv2, GQA, MM-Vet and MMBench, see the LLaVA paper and each model card on Hugging Face. They differ by model size and version.
 
 ## Limitations
 
@@ -295,10 +313,10 @@ demo.launch()
 
 ## Resources
 
-- **GitHub**: https://github.com/haotian-liu/LLaVA ⭐ 23,000+
+- **GitHub**: https://github.com/haotian-liu/LLaVA
 - **Paper**: https://arxiv.org/abs/2304.08485
 - **Demo**: https://llava.hliu.cc
 - **Models**: https://huggingface.co/liuhaotian
-- **License**: Apache 2.0
+- **Licence**: check the repository and each model card
 
 

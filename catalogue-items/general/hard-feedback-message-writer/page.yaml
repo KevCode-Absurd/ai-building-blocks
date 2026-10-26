@@ -1,6 +1,6 @@
 new_slug: hard-feedback-message-writer
 name: "Hard feedback message writer"
-summary: "Paste what went wrong and who needs to hear it. Get a message that changes the behaviour without making an enemy."
+summary: "Write hard feedback that gets action. Give it what went wrong and who needs to hear it. You get a short, kind message that names one change."
 job: lead-people
 thinking: medium
 thinking_why: "It needs judgement about tone and which praise is true, but the message shape is fixed."
@@ -17,6 +17,10 @@ when:
   - Someone keeps missing a standard and you have put off saying so.
   - You must correct a senior person, a peer or someone who is easily hurt.
   - You have doubts about someone's plan and want them to see the gaps themselves.
+not_for:
+  - "You face a formal warning or disciplinary process: talk to HR or follow your written policy instead."
+  - "You are handling a one-off slip that needs no change: a quick, friendly word in person is enough."
+  - "You need to hand out orders or set rules for a whole team: write a clear policy or team brief yourself."
 
 you_give:
   - What went wrong, with one or two real examples
@@ -35,6 +39,27 @@ how_to_use:
   - Add anything you honestly value in the person. If you have nothing, say so.
   - Read the draft aloud. Change any line you would not say.
   - Send or say it soon after the event, in the setting you chose.
+output_sample:
+  input:
+    - What went wrong, with one or two real examples
+    - Who needs to hear it and how they usually react
+    - The result you want to see instead
+    - Notes on what they do well (optional)
+  output:
+    - name: The behaviour and the result
+      contains: One line on what the person did or did not do, and one line on the result you want.
+    - name: The draft message
+      contains: Opening praise joined to the change with "and", a plain statement, and a way out.
+    - name: Questions
+      contains: Numbered questions on cost, certainty, value and risk, only if you doubt a plan.
+    - name: What you own
+      contains: Your own part in the problem, or a note that you share none.
+    - name: How they can save face
+      contains: A line that lets the person fix the problem without losing standing.
+    - name: MISSING
+      contains: Anything you did not give, such as true praise, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each self-check the draft still fails, or the word none.
 
 how_it_works:
   - title: Names the behaviour

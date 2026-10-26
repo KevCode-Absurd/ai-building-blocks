@@ -2,13 +2,10 @@ thinking: low
 thinking_why: A tool does the testing and the AI reports one result.
 new_slug: web-page-control-tester
 name: Web page control tester
-summary: Point it at a page you just built. Get a report of buttons and controls
-  that do not work.
+summary: Test the buttons and controls on a web page you just built. Get a one-line result that shows what a web page control tester flagged.
 job: test-and-fix-code
 headline: Web page control tester
-subhead: A short report on which buttons, links and inputs on a page you just
-  built do not work. It catches the broken things you would only find by
-  clicking everything yourself.
+subhead: A short report on which buttons, links and inputs on a page you just built do not work. It catches the broken things you would only find by clicking everything yourself.
 explain: |
   A short report on which buttons, links and inputs on a page you just built do not work. It catches the broken things you would only find by clicking everything yourself.
 
@@ -18,18 +15,39 @@ when:
   - You changed a script or style file and worry something broke.
   - You want a smoke test before you share a page.
   - You have no tests and no time to write them.
+not_for:
+  - "You want to know if the numbers on screen are real: use the @mock-hunter skill, which checks a live page for mock data and broken endpoints."
+  - "You care about accessibility, not whether controls work: use the @accesslint-diff skill, which compares accessibility problems against a baseline."
+  - "You need to test a live production site: ask a developer to set up a safe test copy, because assay clicks every control and can trigger a real backend."
 you_give:
   - The page file or local address
   - Confirmation that edits are finished
   - Permission to install the tool once
 you_get:
-  - A one-line pass or fail result
-  - A list of controls that failed
-  - What each control should have done
-  - A clear rerun after your fix
+  - A one-line result that says if anything was flagged
+  - A short list of the controls that behaved oddly, when there are any
+  - The exact error message, if the check could not run
+  - A clear rerun after you fix the page
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Finish all your edits first. Run the check once at the end, on each page you changed.
+  - Open an AI that can run code and use a browser, and give it this skill.
+  - Tell it the page to check. Use the built page, such as dist/index.html, not a source file.
+  - Let it install assay once. This needs Python 3.10 or newer and a one-time pip install.
+  - Read the one line it prints. A flagged item is a place to look, not a proven bug.
+  - Fix the page yourself or ask your AI to fix it. Then rerun the check after each fix.
+output_sample:
+  input:
+    - The page file or folder you changed, such as a built index.html
+    - Confirmation that your edits are finished
+    - Permission to install the assay tool once
+  prerequisites:
+    - An AI that can run code and open a browser
+    - Python 3.10 or newer
+    - A one-time pip install of assay-ui
+  output:
+    - name: One-line result
+      contains: The page checked, how many checks ran, and whether anything was flagged, printed word for word as assay wrote it.
+    - name: Flagged list
+      contains: A short list of places to look, each saying what happened after a control was pressed. Only shown when something is flagged.
+    - name: Error message
+      contains: If assay could not run, the page name and the exact message the shell printed. Never reported as a pass.

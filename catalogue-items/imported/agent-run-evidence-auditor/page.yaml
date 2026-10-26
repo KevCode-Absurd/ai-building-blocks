@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs many records and must not trust the agent's own summary.
 new_slug: agent-run-evidence-auditor
 name: Agent run evidence auditor
-summary: Give it logs from an AI agent run. Get each success claim checked
-  against real proof, with gaps marked.
+summary: Check an AI agent run for proof. Give it the logs and goal. You get each success claim checked, with gaps and conflicts marked.
 job: test-and-fix-code
 headline: Agent run evidence auditor
-subhead: A claim-by-claim check of whether an AI agent really did what it says
-  it did. A confident "all done" is not proof, so each success claim is matched
-  to records.
+subhead: A claim-by-claim check of whether an AI agent really did what it says it did. A confident "all done" is not proof, so each success claim is matched to records.
 explain: |
   A claim-by-claim check of whether an AI agent really did what it says it did. A confident "all done" is not proof, so each success claim is matched to records.
 
@@ -16,9 +13,12 @@ explain: |
 when:
   - An agent says a job is finished and you want proof before you trust it.
   - A run stopped halfway and you need to know what really happened.
-  - You must show a reviewer which steps were done by the agent and which by a
-    person.
+  - You must show a reviewer which steps were done by the agent and which by a person.
   - You suspect an agent skipped a check or retried more than it should.
+not_for:
+  - "You want to plan what to record before a future run: ask an engineer to add logging first, since this only reads records that already exist."
+  - "You need the missing steps done, such as a rerun, an approval or a deploy: ask the person who owns that system, because this audit never changes anything."
+  - "You have no logs, traces or records at all: collect them first, because without records every claim comes back not proven."
 you_give:
   - Logs, traces or records from the run
   - The goal the agent was given
@@ -30,7 +30,27 @@ you_get:
   - A list of gaps and missing evidence
   - Conflicts between what was claimed and what was logged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code needs to run.
+  - Paste or attach the logs, traces and records from one run. Add the goal and what counted as success.
+  - Say which records are missing, if you know. Add approval or deploy records if you have them.
+  - Read the claim ledger first. Check every claim marked contradicted or not proven.
+  - Read the overall verdict and the blocking claim IDs. Collect the missing records, then run the audit again.
+output_sample:
+  input:
+    - Logs, traces or records from one agent run
+    - The goal the agent was given
+    - What counted as success
+    - Approval or deploy records (optional)
+  prerequisites:
+    - The run records saved as text or files your AI can read
+  output:
+    - name: Scope and evidence inventory
+      contains: The run, the success rules, the records checked and any integrity problems found in them.
+    - name: Claim ledger
+      contains: One row per small claim with its proof, any conflicting record, coverage, a verdict and the gap.
+    - name: Reconstructed timeline
+      contains: "Only the key events: state changes, faults, retries, checkpoints, approvals and deploys."
+    - name: Gaps and counterevidence
+      contains: Which claims are affected and whether the missing proof can still be collected.
+    - name: Overall verdict
+      contains: One sentence on the run, plus the claim IDs that block a full pass.

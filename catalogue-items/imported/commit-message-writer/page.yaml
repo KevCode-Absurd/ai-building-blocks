@@ -2,11 +2,10 @@ thinking: low
 thinking_why: It reads a diff and fills a short fixed format.
 new_slug: commit-message-writer
 name: Commit message writer
-summary: Stage your changes. Get a short commit message that says what changed and why.
+summary: Write a git commit message from your staged changes. You get a typed subject and a short why-focused body, ready to paste.
 job: build-software
 headline: Commit message writer
-subhead: Stage your changes. Get a short commit message that says what changed
-  and why. Bring staged changes in git. Use the result to plan your next step.
+subhead: Stage your changes. Get a short commit message that says what changed and why. Bring staged changes in git. Use the result to plan your next step.
 explain: |
   A short commit message built from your actual staged changes, so a reader knows what changed and why without opening the diff.
 
@@ -16,6 +15,10 @@ when:
   - Your commits all say "fix bug" or "update code".
   - A commit mixes a fix and a feature and should be split.
   - You want your team's history to be easy to scan.
+not_for:
+  - "Your team has its own commit style, like Gitmoji or Jira prefixes: follow that style, since this skill defers to it."
+  - "Nothing is staged and you have no diff to share: stage your changes with git add first, or paste the diff."
+  - "You want your AI to stage, split or run the commit for you: do those steps yourself, because this skill only writes the message."
 you_give:
   - Staged changes in git
   - A note on why you made the change (optional)
@@ -26,8 +29,27 @@ you_get:
   - A split suggestion if types are mixed
   - A message ready to paste
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run git commands.
+  - Stage your changes in git with git add.
+  - Open Claude, ChatGPT or Gemini and paste the skill text.
+  - If your AI can run git commands, ask it to write the message. If not, paste the output of git diff --cached.
+  - Add a line on why you made the change, and your team's commit style if you have one.
+  - Check the subject says what changed. Then paste the message into git commit.
+output_sample:
+  input:
+    - Your staged changes in git, or a pasted diff
+    - A note on why you made the change (optional)
+    - Your team's commit style (optional)
+  prerequisites:
+    - Your changes staged with git add
+    - An AI that can run git commands, or a diff you can paste into a chat
+  output:
+    - name: Type prefix
+      contains: One of feat, fix, docs, refactor, test or chore, chosen from your changes.
+    - name: Subject line
+      contains: A verb-first phrase of 50 characters or fewer, with no empty wording like update code.
+    - name: Body
+      contains: One to three lines on why you made the change, with trigger conditions for bug fixes.
+    - name: Split suggestion
+      contains: A request to split the commit when your changes mix types, such as a feature and a refactor.
+    - name: Commit command
+      contains: A safely quoted git commit command, or a message file for multiline text.

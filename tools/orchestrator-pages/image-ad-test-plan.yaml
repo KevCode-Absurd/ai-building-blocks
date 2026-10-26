@@ -1,6 +1,6 @@
 new_slug: image-ad-test-plan
 name: Plan image ad tests from the ads you already run
-summary: Give it your running image ads. Get the gaps in them, a test brief, image ad copy and scored opening lines.
+summary: Plan image ad tests from the ads you already run. Get a gap grid, a test brief, ad copy and opening lines scored out of 4.
 job: plan-ad-tests
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run image ads and every new one looks like the last.
   - You have a designer waiting for a brief.
   - You want each test to teach you something even if it loses.
+not_for:
+  - "You have no image ads running yet: use the Single image ad planner to plan your first ad."
+  - "You only need the test brief: use the Ad test brief writer."
+  - "You want to check ads against Meta rules before launch: use the Meta ad policy checker."
 you_give:
   - Your running image ads, as pictures with their text
   - Your brand file
@@ -26,9 +30,31 @@ you_get:
   - Image ad copy for every version
   - Opening lines with a score out of 4 and a fix for weak ones
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. It works step by step and saves each result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Open Claude Code, or a Claude Project where you can add files. Add the unzipped folder.
+  - Add your image ads as pictures, and your brand file. Add results and reviews if you have them.
+  - Say "Follow HANDOFF.md". It runs four steps in order and saves each result as a file.
+  - Check the ad copy before you use it. Any health claim must match your brand file's approved claims. If it does not, the line is held back and marked for your review.
+output_sample:
+  input:
+    - Your running image ads, as pictures with their text
+    - Your brand file, with facts, offers, claims and voice
+    - Your ad results (optional)
+    - Customer reviews (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack folder, which holds HANDOFF.md and the skill files
+  output:
+    - name: Gap grid
+      contains: A grid of ad types and styles you already cover, the question buyers still have, and up to three new tests.
+    - name: Test brief
+      contains: The evidence grade, a plan, and three ideas, each with the buyer doubt, the answer and three versions.
+    - name: Ad copy
+      contains: A headline and text for each version in the brief, with one appeal each.
+    - name: Opening lines
+      contains: About ten opening lines, each scored out of 4, with a fix for weak ones.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Finds the gaps
     text: Uses the image ad gap finder to code each ad and fill a grid of types and styles, then pick new cells.

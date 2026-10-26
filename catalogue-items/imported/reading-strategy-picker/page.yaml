@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches strategies to what makes the text hard.
 new_slug: reading-strategy-picker
 name: Reading strategy picker for a text
-summary: Paste a text. Get the reading strategies that fit its hard parts, in a
-  teaching order.
+summary: Find the right reading strategies for a hard text. Paste it and your students' level to get 2 or 3 strategies and how to teach them.
 job: teach-and-train
 headline: Reading strategy picker for a text
-subhead: For a given text, you get the reading strategies that fit its hard
-  parts, in the order to teach them. This helps students who stall on a passage
-  and need support aimed at the real barrier.
+subhead: For a given text, you get the reading strategies that fit its hard parts, in the order to teach them. This helps students who stall on a passage and need support aimed at the real barrier.
 explain: |
   For a given text, you get the reading strategies that fit its hard parts, in the order to teach them. This helps students who stall on a passage and need support aimed at the real barrier.
 
@@ -18,17 +15,41 @@ when:
   - You need to plan a lesson on a new text type.
   - A group of students read the words but miss the meaning.
   - You want to teach a strategy that matches the text, not a random one.
+not_for:
+  - Your students still struggle to sound out words. Teach decoding first, with a phonics program or your reading specialist, then come back.
+  - You want to know how hard a text is. Use the text-complexity-analyser to check that first.
+  - You need a full lesson plan or a worksheet. Use this for the strategy choice, then build the lesson yourself or with your AI.
 you_give:
-  - Description or sample of the text
-  - Reader age or level
-  - What students find hard (optional)
+  - "A short description of the text: genre, topic, length and what is hard in it"
+  - What students find hard about this text
+  - Your students' age or year group and reading level
+  - A short extract from the text (optional)
+  - Why students are reading it (optional)
 you_get:
-  - Strategies matched to the text
-  - Teaching order
-  - Modelling and practice steps
-  - Signs students are ready to go alone
+  - Two or three strategies chosen for this text, with a reason for each
+  - A guide to teach each one before, during and after reading
+  - A script for modelling the strategy out loud
+  - Common mistakes to avoid when teaching them
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - "Describe the text: genre, topic, length. Paste a short extract if you can."
+  - Say what students find hard, and give their year group and reading level.
+  - Add why they are reading it, if you like.
+  - Check the result has the strategies, the before, during and after guide, and the modelling script.
+  - Next, use the text-complexity-analyser, think-aloud-script-generator, vocabulary-tiering-tool or scaffolded-task-modifier to go further.
+output_sample:
+  input:
+    - "A short description of the text: genre, topic, length and what is hard in it"
+    - What students find hard about this text
+    - Your students' age or year group and reading level
+    - A short extract from the text (optional)
+    - Why students are reading it (optional)
+  output:
+    - name: Recommended Strategies
+      contains: Two or three reading strategies chosen for this text and these readers, each with a reason.
+    - name: Implementation Guide
+      contains: Steps for teaching each strategy before, during and after reading, with this text.
+    - name: Teacher Modelling Script
+      contains: Words you can say aloud to show students how a strategy works on the text.
+    - name: Strategy Pitfalls
+      contains: Common mistakes when teaching these strategies and how to avoid them.

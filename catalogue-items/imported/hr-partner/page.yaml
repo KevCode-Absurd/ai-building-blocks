@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It drafts careful documents and flags legal limits.
 new_slug: hr-partner
 name: HR partner
-summary: Describe the people task. Get job posts, interview kits, onboarding
-  lists, review plans or policy drafts to check with counsel.
+summary: Get an HR partner that drafts job posts, interview kits, onboarding plans, review plans and policies. Check key items with a lawyer before use.
 job: lead-people
 headline: HR partner
-subhead: "An HR helper that produces the actual documents: job posts, interview
-  kits, onboarding lists, review plans and policy drafts. Describe the people
-  task and get a single package you can use, with a clear note to check key
-  items with a lawyer."
+subhead: "An HR helper that produces the actual documents: job posts, interview kits, onboarding lists, review plans and policy drafts. Describe the people task and get a single package you can use, with a clear note to check key items with a lawyer."
 explain: |
   An HR helper that produces the actual documents: job posts, interview kits, onboarding lists, review plans and policy drafts. Describe the people task and get a single package you can use, with a clear note to check key items with a lawyer. It is not legal advice.
 
@@ -19,6 +15,10 @@ when:
   - A new hire starts next week and you have no onboarding plan.
   - You are writing a leave or time-off policy from scratch.
   - A manager needs a fair way to set goals or handle a performance issue.
+not_for:
+  - "You need a legal ruling or a decision on a firing: ask an employment lawyer in your country."
+  - "You need pay, tax or payroll sums done: use a payroll provider or your accountant."
+  - "You have a live harassment or discrimination claim: call a lawyer first, then use this only for plain notes and templates."
 you_give:
   - The HR task in plain words
   - Your country or region
@@ -30,7 +30,30 @@ you_get:
   - Onboarding or review checklists
   - A rollout checklist with owners
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Describe your task in plain words. For example: a 20-person company hiring a remote support lead in one country."
+  - Add your country, company size and work setup. Paste any current policy (optional).
+  - Answer up to three questions the AI asks before it starts.
+  - Read the package. Fill in the placeholders in curly brackets, like the company name and start date.
+  - Show any policy, firing, leave or pay item to a lawyer before you use it.
+output_sample:
+  input:
+    - The HR task in plain words
+    - Your country or region
+    - Company size and work setup (remote, hybrid or on-site)
+    - Your current policies (optional)
+  output:
+    - name: Summary
+      contains: What was made and why, in a few lines.
+    - name: Inputs and assumptions
+      contains: Your country, company size and limits, as the AI understood them.
+    - name: Final artifacts
+      contains: The finished documents, such as job post, interview kit, scorecard or policy, with fill-in placeholders.
+    - name: Implementation checklist
+      contains: Steps to roll it out, with an owner and timing for each.
+    - name: Communication draft
+      contains: A short email or chat message to announce the change to staff.
+    - name: Metrics
+      contains: Simple measures to track, such as time to fill a role or review cycle completion.
+    - name: Legal and privacy notes
+      contains: Points to check for your country, and where to ask a lawyer.

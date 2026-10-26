@@ -40,7 +40,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Say or send it. Then watch for the first small improvement.
 
-4. **Praise the progress.** Use the skill `small-win-praise-planner`. Give it the feedback notes from the steps before. A plan to notice and praise each step in the right direction, in specific words.
+4. **Praise the progress.** Use the skill `small-win-praise-planner`. Give it the feedback notes from step 1 and what you saw after the talk. A plan to notice and praise each step in the right direction, in specific words. It does not use the message draft.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

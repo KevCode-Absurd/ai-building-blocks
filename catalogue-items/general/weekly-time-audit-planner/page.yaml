@@ -1,40 +1,50 @@
 new_slug: weekly-time-audit-planner
 name: "Weekly time audit planner"
-summary: "Paste last week's calendar. Get a count of what you chose and what was taken, and one hour won back."
+summary: "Find where your week went. Paste last week's calendar and get your hours sorted into chosen, taken and habit, plus one protected hour a day."
 job: think-and-decide
 thinking: medium
 thinking_why: "It sorts and adds up your hours, then makes a few judgement calls about who gains. The steps are fixed."
 
 headline: "Weekly time audit planner"
-subhead: "Give it last week's calendar or a list of what you did. It marks each block as chosen by you or taken by someone or something else, adds up the hours and names your three biggest takers. You get a count and one protected hour."
+subhead: "Give it last week's calendar, or a list of what you did each day, and the work you most want to move. It tags every block as chosen by you, taken by someone else, or taken by habit, and adds up the hours. You get the count, your three biggest time takers and one protected hour a day."
 
 explain: |
-  Most people can say what they spent last month in money to the pound, but not where last Tuesday went. Hours leave in small pieces: a meeting that was not needed, an inbox check, a favour you could not refuse. Nobody sends a bill, so nobody notices.
+  A weekly time audit starts from a simple fact. Most people can say what they spent last month in money, but not where last Tuesday went. Hours leave in small pieces: a meeting nobody needed, an inbox check, a favour you could not refuse. Nobody sends a bill, so nobody notices.
 
-  This skill borrows the idea of an account book. It lists every block of the week and marks it as chosen by you, taken by another person, or taken by habit. It adds up each pile and asks who gains from the biggest takers. Then it picks one hour a day that is yours, ties it to a real work item, and swaps every "later" for a dated first step.
+  This skill keeps an account book for your week. It lists every block, including gaps, travel and scrolling. It tags each one as chosen by you, taken by another person, or taken by habit, and adds up each pile. Then it asks who gains from the three biggest takers. That question is what sets it apart from a plain list of meetings.
+
+  It ends with action, not a chart. It picks one hour a day that is hard for others to take, ties it to a real piece of work, and turns every "later" into a dated first step.
 
 when:
   - You end most weeks sure you were busy, but not sure what you got done.
   - Your calendar is full of things other people put there.
-  - You keep saying you will start the important thing when you have time.
+  - You keep saying you will start the big piece of work when you have time.
+  - You are about to plan next week and want the facts about last week first.
+
+not_for:
+  - "You have no record of last week and cannot recall it. Keep a rough log for three days, then run this."
+  - "You want a plan for next week from a task list. Use the Week plan maker from a task list."
+  - "You already know your takers and want rules to stop them. Use the Not-to-do list builder."
 
 you_give:
-  - Last week's calendar, or a plain list of what you did each day
-  - The work you most want to make progress on
-  - Fixed commitments you cannot move, such as a school run or a shift (optional)
-  - Your usual working hours (optional)
+  - "Last week's calendar (an export or a readable screenshot), or a plain list of what you did each day"
+  - "The one piece of work you most want to move, such as a report, a course or a product"
+  - "Fixed commitments you cannot move, such as a school run or a shift (optional)"
+  - "Your usual working hours (optional)"
 you_get:
-  - Every block sorted into chosen, taken by others, or taken by habit
-  - Hours added up in each pile
-  - Your three biggest takers, with what each costs you and who gains
-  - One protected hour a day, tied to a named piece of work, and dated first steps
+  - "Every block of last week, tagged as chosen, taken by others or taken by habit"
+  - "Hours added up in each pile, with each pile's share of the week"
+  - "Your three biggest takers, with what each cost you and who gains"
+  - "One protected hour a day, tied to a named piece of work"
+  - "Each old 'later' turned into a first step with a day and a time"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste last week's calendar or write out your days, even roughly. Add the one piece of work you most want to move.
-  - Answer any question it asks about a block it cannot sort.
-  - Put the protected hour in your calendar before you close the chat.
-  - Run it again in a week and compare the piles.
+  - "Open the skill in your AI if you added it, or copy it and paste it into a new chat in Claude, ChatGPT or Gemini."
+  - "Paste last week's calendar, or write out your days, even roughly. Add the one piece of work you most want to move. It needs both, and asks for any you leave out."
+  - "Answer its questions about blocks it cannot sort, such as a block called busy."
+  - "Check the count first. The three piles plus any hours not accounted for should add up to the hours you gave it."
+  - "Put the protected hour in your calendar before you close the chat."
+  - "Run it again in a week and compare the piles. Use the Not-to-do list builder if the same takers come back."
 
 how_it_works:
   - title: Lists the blocks
@@ -50,7 +60,7 @@ how_it_works:
   - title: Dates the promises
     text: Turns every "later" and "someday" into a first step with a day and a time.
   - title: Checks itself
-    text: Runs its own checks and names any it missed.
+    text: Runs its own checks and names only the ones that failed.
 
 output_shape: |
   THE WEEK IN BLOCKS
@@ -78,7 +88,33 @@ output_shape: |
   <facts that would change the count>
 
   CHECKS MISSED
-  <one line per check still missed, or none>
+  <one line per failed check, or none>
+
+output_sample:
+  input:
+    - "Last week's calendar, or a list of what you did each day"
+    - "The one piece of work you most want to move"
+    - "Fixed commitments you cannot move (optional)"
+    - "Your usual working hours (optional)"
+  prerequisites:
+    - "A calendar you can export or screenshot, or a day-by-day list written from memory"
+  output:
+    - name: "THE WEEK IN BLOCKS"
+      contains: "Every block of the week with its day, time, hours and a tag: chosen, taken by others or taken by habit."
+    - name: "THE COUNT"
+      contains: "Hours and share of the week in each pile, plus any hours it could not account for."
+    - name: "THREE BIGGEST TAKERS"
+      contains: "The three sources that took the most hours, with what each cost you and who gained."
+    - name: "THE PROTECTED HOUR"
+      contains: "One hour a day tied to a named piece of work, with the reason that hour was picked."
+    - name: "DATED FIRST STEPS"
+      contains: "Each old 'later' promise turned into a first step with a day and a time."
+    - name: "MISSING"
+      contains: "Facts it needed and did not have, such as what a block called busy really was."
+    - name: "CHECKS MISSED"
+      contains: "Only the checks that failed, or none."
+
+next: [not-to-do-list-builder, week-plan-from-task-list-maker, digital-tool-audit-planner]
 
 tweaks:
   - what: How detailed your calendar is
@@ -123,3 +159,5 @@ terms:
     meaning: A person, task or habit that takes your hours without you having chosen to give them.
   - term: Protected hour
     meaning: A block in your day that only you may use, tied to one named piece of work.
+  - term: Time audit
+    meaning: A count of where your hours went, sorted into piles, like an account book for time.

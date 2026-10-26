@@ -1,6 +1,6 @@
 new_slug: email-flow-gap-checker
 name: Email automation gaps and trigger reviewer
-summary: Review a store’s email flows, triggers and timing. Get missing steps, possible rule conflicts and a house score based only on what was shown.
+summary: Check your email flows for missing steps and wrong triggers. Give it your flow list. You get a score out of 100 and a build order.
 job: write-emails
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You set up your flows a while ago and have never had them reviewed.
   - Your flows earn much less of your email revenue than your campaigns.
   - You moved to a new email tool and want to know nothing was missed.
+not_for:
+  - "You have no live flows yet: start by building a welcome flow in your email tool, then come back to check it."
+  - "You want to judge one email's wording or design: ask a copywriter, or ask your AI to review that single email."
+  - "You want to check bounce rates, sender setup or list health: use the email setup health checker, or your email tool's own reports."
 you_give:
   - Your live flows, each with trigger, filters, delay and number of emails
   - Revenue per flow for the last 90 days (optional)
@@ -30,6 +34,25 @@ how_to_use:
   - Add revenue per flow for the last 90 days, if you have it.
   - Fix the trigger faults first. They stop whole flows from firing for the right people.
   - Run the check again when you have changed a flow.
+output_sample:
+  input:
+    - Your live flows, each with trigger, filters, delay and number of emails
+    - Revenue per flow for the last 90 days (optional)
+    - Whether Added to Cart is tracked in your store (optional)
+    - Your discount rules (optional)
+  output:
+    - name: FLOW GAP SCORE
+      contains: A score out of 100 with points per area, and a list of checks that could not be seen.
+    - name: MISSING FLOWS
+      contains: Core flows you lack, why each matters and what to build first, ranked by likely revenue.
+    - name: TRIGGER AND FILTER ERRORS
+      contains: Each flow with a wrong trigger or exit rule, what was found and how to fix it.
+    - name: TIMING AND LENGTH
+      contains: Each flow's delays and email count next to a target range.
+    - name: REVENUE SPLIT
+      contains: Share of email revenue from flows and from campaigns, with a plain reading of it.
+    - name: BUILD ORDER
+      contains: The order to build or rework flows, plus a list of anything missing from your input.
 how_it_works:
   - title: Checks the core flows
     text: Welcome, site abandonment, browse abandonment, cart abandonment, checkout abandonment, post-purchase, win-back and sunset. Back-in-stock or replenishment are added if your product suits.

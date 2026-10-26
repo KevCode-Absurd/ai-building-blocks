@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It needs a web page plus the Photopea scripting rules.
 new_slug: photopea-editor-embedder
 name: Photopea editor embedder
-summary: Say what image editing your app needs. Get Photopea embedded and
-  scripted to open, edit and export files.
+summary: Embed the Photopea image editor in your web page and script it to open, edit and export files. Built for a Photopea editor embed in your own app.
 job: build-websites
 headline: Photopea editor embedder
-subhead: A working image editor inside your web page, controlled by your own
-  code. Photopea runs in a frame, and your page can open files, run edits and
-  export results without the user leaving your app.
+subhead: A working image editor inside your web page, controlled by your own code. Photopea runs in a frame, and your page can open files, run edits and export results without the user leaving your app.
 explain: |
   A working image editor inside your web page, controlled by your own code. Photopea runs in a frame, and your page can open files, run edits and export results without the user leaving your app.
 
@@ -18,6 +15,10 @@ when:
   - You need to export every layer of a design as a separate file.
   - A web tool must open a template and swap in text.
   - You want to automate repeat edits from a host page.
+not_for:
+  - "You need server-side batch edits with no browser: use a server image library instead."
+  - "You only want to edit one image by hand: open Photopea in your browser and skip the embed."
+  - "You have no web developer on hand: ask a developer to set it up, as it needs JavaScript."
 you_give:
   - What edits your app needs
   - The page or app to embed it in
@@ -29,8 +30,33 @@ you_get:
   - Open, edit and export flow
   - Checks that the editor responds
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open a chat with your AI and paste this skill. If your AI can read files, upload the skill folder instead.
+  - Tell it what edits your app needs, such as swapping text or exporting layers.
+  - Share the page or app where the editor will sit, and a sample file to open.
+  - Ask your AI for the embed code and one script per edit.
+  - Add the code to your page and test it in a browser. This step needs a browser, and code running if you want your AI to test it.
+  - Check Photopea's terms before you ship your app.
+output_sample:
+  input:
+    - What image edits your app needs
+    - The web page or app to embed the editor in
+    - Sample files to open in the editor
+    - Export format, such as PNG (optional)
+  prerequisites:
+    - Web development skills and a page you can edit
+    - An AI that can run code and open a browser, to test the result
+  output:
+    - name: Embed code
+      contains: A web page snippet that loads the Photopea frame and the photopea.js wrapper.
+    - name: Rename text layers script
+      contains: A script that renames each text layer from its own contents.
+    - name: Export each layer script
+      contains: A script that saves every layer as its own PNG file.
+    - name: Find and replace text script
+      contains: A script that swaps one piece of text for another across all text layers.
+    - name: Grid of duplicate layers script
+      contains: A script that copies a layer into rows and columns with set spacing.
+    - name: Watermark script
+      contains: A script that adds a logo from a web link, resizes it and places it in a corner.
+    - name: Layer info script
+      contains: A script that returns every layer's name, type, visibility and text details as JSON.

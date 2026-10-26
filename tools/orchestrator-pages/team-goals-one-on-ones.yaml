@@ -1,6 +1,6 @@
 new_slug: team-goals-one-on-ones
 name: "Set team goals, run one-on-ones and settle decisions"
-summary: "Describe your team and the quarter. Get goals with dated key results, a one-on-one plan and a way to settle disputes."
+summary: "Set team goals with dated key results, plan one-on-one meetings and settle stuck decisions. Describe your team and period to get all three plans."
 job: lead-people
 thinking: high
 thinking_why: "It builds three linked plans for how a team runs. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You manage a team and each person is working on something different, with no shared goal to pull it together.
   - Your one-on-ones are dull, rushed or skipped, and you suspect they should do more.
   - Two people disagree on a decision and it has been stuck for days.
+not_for:
+  - "You work alone with no team: write your own goals with the Objectives and key results writer, or use a simple to-do list."
+  - "You need one quick decision with no ongoing team: ask a trusted colleague to argue against it, then pick a date and decide."
+  - "You only want better one-on-ones and already have goals: use the One-on-one meeting planner by itself."
 
 you_give:
   - Your team, meaning who is on it, what they do and how experienced they are
@@ -30,11 +34,29 @@ you_get:
   - A decision plan with one named owner, who to hear from, the strongest case against, a date and what everyone does after the call
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Open Claude Code, or a Claude Project with the files added, and say "Follow HANDOFF.md". With only a chat window, paste each skill in order and carry each result to the next.
   - Describe your team and the period. Add the stuck decision if you have one.
-  - It works step by step and saves each result. Check the key results first, since the other two steps use them.
-  - Share the goals with the team before you run the first one-on-one.
+  - Check the key results first, since the other two steps use them.
+  - Share the goals with your team before your first one-on-one.
+output_sample:
+  input:
+    - "Your team: who is on it, what they do and how experienced they are"
+    - What you want to get done this quarter or month
+    - Your current plan or priorities (optional)
+    - The decision that is stuck (optional)
+  prerequisites:
+    - Claude Code, or a Claude Project that can hold files, to run the handoff pack step by step
+    - "A chat window works too: paste each skill in turn and carry each result into the next"
+  output:
+    - name: step-01-okr-goal-writer.md
+      contains: A few goals for the period, each with key results that have a number and a date.
+    - name: step-02-one-on-one-meeting-planner.md
+      contains: How often to meet each person, how long, the agenda they write and how to follow up.
+    - name: step-03-informed-captain-decisions.md
+      contains: One named owner, who to hear from, the strongest case against, a decision date and next actions.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Write goals and key results

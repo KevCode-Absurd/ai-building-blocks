@@ -16,17 +16,17 @@ outputs:
   - {type: feedback_notes}
 uses: [reader-feedback-sorter, cold-reread-marker, story-rules-checker, hidden-theme-finder, pre-publish-content-checker, ten-percent-cutter, scene-want-and-tactic-rewriter, show-dont-tell-scene-rewriter, dialogue-ear-checker, plain-english-editor, first-reader-question-writer]
 steps:
-  - {uses: reader-feedback-sorter, note: "Only when readers' notes are on file: a ranked rewrite list that sets what this round fixes first."}
-  - {uses: cold-reread-marker, note: "Only for a story or narrative piece: pages to change, big holes and a score out of 100. Run at the start and after each round."}
-  - {uses: story-rules-checker, note: "Only for a story: pass or fail on 18 plain rules and a score out of 100. Run at the start and after each round."}
-  - {uses: hidden-theme-finder, note: "Once, only for a story: what the draft is really about, so cuts and fixes serve it."}
-  - {uses: pre-publish-content-checker, note: "Only for an article, guide or post: brief, voice, facts, structure and AI-sound checks. Run at the start and after each round."}
-  - {uses: ten-percent-cutter, note: "Round 1 only, and only if the draft is puffy: cuts to 90% of its length with a log. Never run again."}
-  - {uses: scene-want-and-tactic-rewriter, note: "Only when scenes just explain: rebuilds them so each person wants something."}
-  - {uses: show-dont-tell-scene-rewriter, note: "Only when passages name the feeling: rewrites them so things carry it."}
-  - {uses: dialogue-ear-checker, note: "Only when talk is flagged: tests each line of dialogue and fixes the worst."}
-  - {uses: plain-english-editor, note: "Final round: plain words in place of stiff or padded ones, on the changed parts."}
-  - {uses: first-reader-question-writer, note: "Once, when the draft passes: a question sheet to send to first readers."}
+  - {uses: reader-feedback-sorter, note: "Only when readers' notes are on file. Uses their notes and your draft. Hands a ranked rewrite list to the fix rounds, which set what this round fixes first."}
+  - {uses: cold-reread-marker, note: "Only for a story or narrative piece: pages to change, big holes and a score out of 100. Uses your draft, not the list from step 1. Run at the start and after each round. Hands its list of recurring elements to step 4."}
+  - {uses: story-rules-checker, note: "Only for a story: pass or fail on 18 plain rules and a score out of 100. Uses your draft, not step 2's report. Run at the start and after each round."}
+  - {uses: hidden-theme-finder, note: "Once, only for a story: what the draft is really about, using the recurring list from step 2, so cuts and fixes serve it. Hands the theme plan to step 6."}
+  - {uses: pre-publish-content-checker, note: "Only for an article, guide or post, instead of steps 2 to 4: brief, voice, facts, structure and AI-sound checks. Uses your draft and brief, not the story checks. Run at the start and after each round."}
+  - {uses: ten-percent-cutter, note: "Round 1 only, and only if the draft is puffy: cuts to 90% of its length with a log. Uses your draft, plus the theme plan from step 4 for a story. Hands the shorter draft to the fixes after it. Never run again."}
+  - {uses: scene-want-and-tactic-rewriter, note: "Only when scenes just explain: rebuilds them so each person wants something. Takes the draft from the last round. Hands the changed scenes on."}
+  - {uses: show-dont-tell-scene-rewriter, note: "Only when passages name the feeling: rewrites them so things carry it. Takes the draft from the last round. Hands the changed passages on."}
+  - {uses: dialogue-ear-checker, note: "Only when talk is flagged: tests each line of dialogue and fixes the worst. Takes the draft from the last round. Hands the fixed draft on."}
+  - {uses: plain-english-editor, note: "Final round: plain words in place of stiff or padded ones, on the changed parts. Takes the draft from the last round and any flagged lines from the checks."}
+  - {uses: first-reader-question-writer, note: "Once, when the draft passes: a question sheet to send to first readers. Uses the final draft."}
 asks_before: [overwriting the original draft, changing the plot, who does what, a fact, a quote or a name, cutting a whole scene or section, changing the writer's voice, sending or publishing the draft]
 origin: own
 version: 1.0.0

@@ -1,6 +1,6 @@
 new_slug: find-what-buyers-want-and-where-they-gather-online
 name: Find what buyers want and where they gather online
-summary: Give it a topic. Get ranked buying reasons in buyers' words, a buyer profile and where to reach them.
+summary: Find what buyers want online without interviews. Give it a topic and get ranked buying reasons, a buyer profile and places to reach them.
 job: understand-customers
 thinking: medium
 thinking_why: It runs four skills in a row on a table of posts. A mid-size model is enough. Check the quotes yourself.
@@ -14,6 +14,10 @@ when:
   - You are starting out and have no customers, reviews or survey answers to read.
   - You want to learn what buyers of a rival or a category say before you write your message.
   - You need to know where to show up first, not just who the buyer is.
+not_for:
+  - "You already have reviews, survey answers or interviews: read those first, or use the Customer interview coach to test the top reason in a real talk."
+  - "You want to plan or run a live customer conversation: use the Customer discovery interview planner."
+  - "You need the result in minutes with no account: this needs an Apify account to collect posts, so ask a person who knows the market instead."
 you_give:
   - A topic, a rival or a product category, and who you think buys it
   - An Apify account, free for small runs (Reddit collection runs there)
@@ -29,6 +33,26 @@ how_to_use:
   - Give your topic. Check the search terms and the cost it shows in step 1 before it runs.
   - Look at the table. If it holds mostly off-topic posts, change the terms and run step 1 again.
   - Read the ranked reasons and the profile, then use the hangout list for your first week of posting.
+output_sample:
+  input:
+    - Your topic, a rival or a product category
+    - Who you think buys it
+    - Your Apify account, to collect the posts
+    - Your product facts or brand brain (optional)
+  prerequisites:
+    - An Apify account, free for small runs, because Reddit collection runs there
+    - An AI that can read files, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Post table"
+      contains: Your search terms, the settings and cost, and posts and comments with dates and sources.
+    - name: "Step 2: Buying reasons"
+      contains: Reasons ranked by score, with exact quotes and sources, tagged by what pushes, pulls or holds people back.
+    - name: "Step 3: Buyer profile"
+      contains: The buyer's goals, frustrations, triggers, their own words, who the product is not for, and what it means for your message.
+    - name: "Step 4: Where they gather"
+      contains: Sites, shows, accounts and groups by type, with the three to five best places to start.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Collect public posts
     text: Turns your topic into short search terms, shows the settings and the cost, then saves posts and comments to a table.

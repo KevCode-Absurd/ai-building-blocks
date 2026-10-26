@@ -2,17 +2,60 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-protobuf-grpc-api-review
 name: Protobuf compatibility reviewer
-summary: Share your schema change. Get wire compatibility risks, rollout hazards
-  and safe field changes.
+summary: Check your protobuf schema change for compatibility risks. Get a verdict, findings by severity and a safe rollout order for your gRPC API.
 job: build-software
 headline: Protobuf compatibility reviewer
-subhead: Share your schema change. Get wire compatibility risks, rollout hazards
-  and safe field changes. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: "Share your old and new .proto files and say how the data is encoded. It checks the change for breaks that older or newer services would hit, gives a verdict, lists each risk with the smallest safe fix and sets out a safe rollout order."
+explain: |
+  A schema change can look harmless in review and still break a service that runs an older version. This protobuf compatibility reviewer compares the old and new files and asks what happens in each mix of old and new readers and writers.
+
+  It checks binary and JSON encoding, source compatibility and behavior. The verdict is one label: Compatible, Rollout-dependent, Breaking or Insufficient context. Each finding gives the failing scenario and the smallest safe fix.
+
+  It only says a check passed if it actually ran it. Running protoc or Buf needs an AI that can run code on your project.
+when:
+  - "You are renaming, removing or renumbering a field."
+  - "You are adding a new service method and want to know if old clients are safe."
+  - "You have a rollout plan and want to check the order."
+  - "A release failed between two versions of a service."
+not_for:
+  - "You have a runtime bug with no schema change: debug it with your logs and a teammate who knows the service."
+  - "You have a first-version contract with no old schema or release history: ask your AI to help design it, then use this on the first change."
+  - "You want a style or naming review only: use your team's lint rules or Buf lint instead."
+you_give:
+  - "Your old .proto file and your new .proto file"
+  - "The encoding in use: binary, ProtoJSON or both"
+  - "Known consumers outside your repository (optional)"
+  - "Your planned deployment and rollback order (optional)"
+you_get:
+  - "One verdict: Compatible, Rollout-dependent, Breaking or Insufficient context"
+  - "Each risk with severity, location, failing scenario and the smallest safe fix"
+  - "A table of each changed symbol against binary, JSON, source and behavior"
+  - "The order to deploy readers and writers, and when the old field can go"
+  - "Tests that would prove anything the review could not check"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Paste the skill into your AI chat, or upload the skill folder if your AI accepts files.
+  - Add your old .proto file and your new .proto file.
+  - Say which encoding you use (binary, ProtoJSON, or both), and name any consumers outside your repo.
+  - Add your planned deployment and rollback order. If you skip it, the review lowers its confidence.
+  - Read the verdict first, then fix the blocker and high findings before you merge.
+  - Your AI only claims a check passed if it ran it. Running protoc or Buf needs an AI that can run code on your project.
+output_sample:
+  input:
+    - Your old .proto file and your new .proto file
+    - "The encoding in use: binary, ProtoJSON, or both"
+    - Known consumers outside your repository (optional)
+    - Your planned deployment and rollback order (optional)
+  prerequisites:
+    - An AI that can read your files
+    - Your project's protoc or Buf setup, if you want checks run (optional)
+  output:
+    - name: Verdict
+      contains: "One label: Compatible, Rollout-dependent, Breaking, or Insufficient context."
+    - name: Findings
+      contains: Each risk with severity, location, the dimension hit, the change, the failing scenario and the smallest safe fix.
+    - name: Compatibility matrix
+      contains: A compact table of each changed symbol against binary, JSON or text, source and behavior.
+    - name: Rollout and rollback sequence
+      contains: The order to deploy readers and writers, and when the old field or method can go, if a migration is needed.
+    - name: Targeted tests
+      contains: Tests that would prove the assumptions the review could not check.

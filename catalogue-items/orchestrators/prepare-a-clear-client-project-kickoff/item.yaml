@@ -1,6 +1,6 @@
 slug: prepare-a-clear-client-project-kickoff
 name: Prepare a clear client project kickoff
-summary: Share the source files. Get a kickoff brief, meeting agenda and action register.
+summary: "Prepare a client project kickoff: a one-page brief, an agenda only if a meeting is worth holding, and an action list with owners."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -12,7 +12,6 @@ inputs:
     required: true
 outputs:
   - type: brief
-  - type: meeting_notes
   - type: plan
   - type: document
 uses:
@@ -21,11 +20,11 @@ uses:
   - executive-action-register
 steps:
   - uses: project-kickoff-brief-writer
-    note: Summarize scope, outcomes, responsibilities, milestones and unresolved assumptions.
+    note: "Write the kickoff brief from the approved scope: goal, audience, tone, scope in and out, limits and milestones, with open questions listed. Hand step 2 the people and the decision to be made."
   - uses: meeting-agenda-and-cost-planner
-    note: Run its ASYNC, NOT-READY or MEET gate. Use supplied attendee, duration and cost assumptions; only a MEET result gets an agenda with the required action recap.
+    note: "Run the gate: ASYNC, NOT-READY or MEET, priced from your attendees, length and pay rates. Only MEET gets a timed agenda with a closing action recap. Hand step 3 the agenda or the note to send."
   - uses: executive-action-register
-    note: Convert confirmed commitments into a sourced action list; keep proposed owners unconfirmed.
+    note: Turn confirmed commitments into an action list with owners, dates and sources. Keep proposed owners marked unconfirmed.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

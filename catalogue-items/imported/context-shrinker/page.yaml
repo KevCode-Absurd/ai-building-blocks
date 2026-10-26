@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It trades detail for length and must keep what matters.
 new_slug: context-shrinker
 name: Context shrinker
-summary: Give it long material and a size limit. Get a shorter version that
-  keeps decisions, facts and open questions.
+summary: Shrink long text to fit your size limit. Keep the decisions, facts and open questions, and get a note on what was cut.
 job: think-and-decide
 headline: Context shrinker
-subhead: A shorter version of long material that still holds the decisions,
-  facts, limits and open questions you need. You set the size, and it fits the
-  text into it without dropping what matters.
+subhead: A shorter version of long material that still holds the decisions, facts, limits and open questions you need. You set the size, and it fits the text into it without dropping what matters.
 explain: |
   A shorter version of long material that still holds the decisions, facts, limits and open questions you need. You set the size, and it fits the text into it without dropping what matters.
 
@@ -18,6 +15,10 @@ when:
   - You need a 50 page report squeezed into a question and answer setup.
   - You must keep exact wording for legal or code text but shorten the rest.
   - Your prompt cost is too high because of pasted background.
+not_for:
+  - Your text already fits the size limit. Paste it as it is, because any cut loses some detail.
+  - You still need to pick, deduplicate or order material from many sources. Use context-optimization first, then shrink the result.
+  - Your text holds safety warnings, legal terms or dosages that must stay whole. Keep those parts word for word or ask a person to review the cut.
 you_give:
   - The long text or conversation
   - Your target size in tokens
@@ -29,7 +30,27 @@ you_get:
   - List of what was cut
   - Retention check against the original
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. This skill is a plain instruction file, so you can paste it into any chat. It needs no code, files or paid tools.
+  - Paste the skill text, then paste your long text or chat history below it.
+  - Say what size you need in tokens and what the shortened text is for. Add any names or terms that must stay.
+  - Read the retention check first. Make sure your key names, numbers and decisions are still there.
+  - If a key fact is missing, ask your AI to put it back and run the check again.
+  - Paste the shortened text in place of the raw text in your next prompt.
+output_sample:
+  input:
+    - Your long text or chat history
+    - Your target size in tokens
+    - The task the text will be used for
+    - Words or names that must stay (optional)
+    - The method you prefer (optional)
+  output:
+    - name: Compressed context
+      contains: The shorter text that fits your size limit and keeps decisions, names, numbers and open questions.
+    - name: Summary note
+      contains: A short line telling your AI the text was shortened, so it can be careful about missing detail.
+    - name: Method used
+      contains: "Which way of shortening was chosen: keep key sentences, rewrite shorter, pull key points, or cut filler."
+    - name: What was cut
+      contains: A list of the kinds of content that were removed to reach your size.
+    - name: Retention check
+      contains: A comparison with the original showing whether key names, numbers and conclusions are still there.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Tone and timing can change what happens next.
 new_slug: cease-and-desist-letter-helper
 name: Cease-and-desist letter helper
-summary: Describe an infringement or paste a letter you got. Get a draft demand
-  or options. Have a lawyer review.
+summary: Draft a cease-and-desist letter to stop someone copying your work, or get an options memo for a letter you received. A lawyer should review it.
 job: check-contracts
 headline: Cease-and-desist letter helper
-subhead: Either a draft demand letter for someone copying your work, or a plain
-  options memo for a letter you received. Describe the infringement or paste the
-  letter, and you get a first version a lawyer can review and finish.
+subhead: Either a draft demand letter for someone copying your work, or a plain options memo for a letter you received. Describe the infringement or paste the letter, and you get a first version a lawyer can review and finish.
 explain: |
   Either a draft demand letter for someone copying your work, or a plain options memo for a letter you received. Describe the infringement or paste the letter, and you get a first version a lawyer can review and finish.
 
@@ -18,6 +15,10 @@ when:
   - You received a threatening letter and do not know your options.
   - You need a draft to bring to your lawyer rather than starting blank.
   - You want to decide between ignoring, negotiating or fighting a claim.
+not_for:
+  - "You want to push back on a customer or partner without a manager or lawyer signing off first: talk to your lawyer before any letter goes out."
+  - "The copying happens only on a marketplace or platform: use that platform's takedown form first, as it is faster than a letter."
+  - "You need legal advice you can rely on or a letter ready to send: hire a licensed lawyer to review and sign it."
 you_give:
   - A description of the infringement, or the letter you received
   - Who the other party is and your history with them
@@ -29,10 +30,32 @@ you_get:
   - A recommended response
   - A checklist before sending or replying
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /ip-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Do the setup interview first. It saves your enforcement approach and who must approve letters. The skill stops without it.
+  - Open your AI tool that can read files and make Word documents. Add the skill and say whether you are sending a letter or got one.
+  - Describe what happened, or paste the letter you received. Add who the other party is and what you want.
+  - Read the draft in the chat. Fix anything marked VERIFY or CITE.
+  - Look up court and trademark records yourself. Some need an account.
+  - Give the draft to your lawyer. Do not send it unreviewed.
+output_sample:
+  input:
+    - A description of what the other party did, or the letter you received
+    - Who the other party is and your history with them
+    - What you want them to do (send mode)
+    - Your enforcement approach, set up once in the setup interview
+  prerequisites:
+    - An AI that can read your files and save a Word document
+    - The setup interview done first, so your enforcement approach and approval steps are saved
+    - Manual lookups for court records and trademark records, which may need accounts
+  output:
+    - name: Draft letter (send mode)
+      contains: A cease-and-desist letter in letter format, firm to the level your enforcement approach calls for.
+    - name: Counterparty diligence
+      contains: A check on who the other party is and whether they are the right target.
+    - name: Pre-delivery gate
+      contains: Checks and approvals to clear before the letter goes out, including who must sign off.
+    - name: C&D Received triage memo (receive mode)
+      contains: The claim, how strong it looks, your exposure, and options from complying to fighting, with a recommendation.
+    - name: Deadlines and immediate actions
+      contains: Dates to calendar and the first steps to take after reading the letter.
+    - name: checklist.md
+      contains: "A post-send list: cites verified, approver signed, delivery proof kept, compliance date set."

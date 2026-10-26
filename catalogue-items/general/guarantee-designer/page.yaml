@@ -1,6 +1,6 @@
 new_slug: guarantee-designer
 name: Guarantee designer
-summary: Share your offer, costs and refund history. Get a guarantee draft, refund scenarios and the checks needed before you use it.
+summary: Design a money-back guarantee for your offer. Give it your price, costs and refunds. You get a draft, refund sums and the checks to run first.
 job: make-offer
 thinking: high
 thinking_why: It must compare several guarantee types against your costs and run the sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Buyers say they are not sure it will work for them.
   - You offer a generic 30-day refund and it does little.
   - You want a guarantee but fear refunds.
+not_for:
+  - "You are not sure risk is the real doubt and want the whole offer rebuilt: use the Offer builder that answers buyer doubts."
+  - "You already have a guarantee and only want it reviewed: use the Offer checklist reviewer."
+  - "You need a legal ruling on what you may promise in your market: ask a qualified adviser, because this skill gives no legal advice."
 you_give:
   - Your offer, price and what it costs you to deliver
   - Your refund rate and current sales (optional)
@@ -30,6 +34,31 @@ how_to_use:
   - Paste the offer, price and cost to deliver.
   - List the actions a buyer must take for the result to happen.
   - Check the costs, cash limits and applicable rules before approving any use. A test needs agreed measures and loss limits.
+output_sample:
+  input:
+    - "Your offer: what is in it, the price and how you deliver it"
+    - What it costs you to deliver to one buyer, in time and cash
+    - The actions a buyer must take to get the result
+    - Your refund history and current sales (optional)
+  output:
+    - name: Buyer fears
+      contains: The top three things a buyer worries about when they pay, ranked.
+    - name: Type and why
+      contains: Which kind of guarantee fits your price and delivery cost, and the reason.
+    - name: The guarantee
+      contains: One written promise with an if, a time and an or what.
+    - name: Options for the remedy
+      contains: Three to five choices for what you give the buyer if the result does not come.
+    - name: Refund sums
+      contains: Your costs and refund rates run through profit per sale, with the sales lift needed or an unresolved note.
+    - name: Names
+      contains: Three honest name ideas for the guarantee.
+    - name: Limits and rules
+      contains: What to check in your market before you use the draft.
+    - name: Missing
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 how_it_works:
   - title: Finds the fear
     text: Ranks what buyers worry about when they pay.

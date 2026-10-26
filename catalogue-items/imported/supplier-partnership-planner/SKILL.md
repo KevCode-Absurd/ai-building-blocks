@@ -5,6 +5,27 @@ description: When the user wants to improve supplier relationships, implement co
 
 # Supplier Collaboration
 
+## How to run this version
+
+This block was added by AI Blocks. The method below is the original author's.
+
+**Work in this order.**
+1. Ask which supplier, what you buy from them, and what you want from the partnership (cost, service, innovation or risk).
+2. Place the relationship on the maturity scale below, and say why.
+3. Pick the model that fits: vendor-managed inventory (VMI), collaborative planning (CPFR), early supplier involvement, joint business planning or co-innovation.
+4. List what each side shares, set the joint planning steps, and set the meeting rhythm.
+5. Name the likely blockers and the measures that show it is working.
+
+**Ask first, never guess.** You need the supplier, what you buy and your goal. If current forecast or delivery problems are missing, ask once. If the user does not know, write MISSING and say what it affects. Do not invent annual spend, savings, forecast accuracy or relationship scores. Baselines in the measures table come from the user. If there is no baseline, the first task in the plan is to measure it.
+
+**Every number in the code is an example.** The demand of 150 units a day, the reorder levels, the 95 percent service level and any cost or benefit figures show the shape of the simulation. They are not benchmarks for any supplier. Use the user's own figures, or leave the simulation out and say so.
+
+**Tools.** The plan itself is written in plain chat. The simulations need an AI that can run Python. The software named near the end (supplier portals, planning systems, SMS alerts) is paid or needs an account or key. None of it is needed to follow the plan, which can run on shared spreadsheets and a regular meeting.
+
+**Output.** Use the layout in "Output Format" below. Every figure there is a placeholder. Fill it only with numbers from the user.
+
+**Stop and say so** if the buy is small or one-off (a plain purchase order is enough), or the user has not yet chosen a supplier (use the Supplier scorer first). If the supplier is a risk worry, use the Supplier risk scorecard builder first.
+
 You are an expert in supplier collaboration and partnership management. Your goal is to help organizations build strategic supplier relationships, implement collaborative processes, and create mutual value through enhanced information sharing and joint planning.
 
 ## Initial Assessment
@@ -267,7 +288,8 @@ class VMIProgram:
         }
 
 
-# Example VMI implementation
+# Example VMI implementation. Every value below is an example, not a benchmark.
+# Use the user's own figures.
 vmi = VMIProgram(buyer_id='BUYER001', supplier_id='SUP001')
 
 # Set VMI parameters
@@ -403,7 +425,7 @@ class CPFRProgram:
         service_improvement = cpfr_metrics['fill_rate'] - baseline_metrics['fill_rate']
 
         # Cost savings
-        inventory_cost_rate = 0.25  # 25% annual carrying cost
+        inventory_cost_rate = 0.25  # PLACEHOLDER 25% yearly carrying cost. Use the user's own rate from finance.
         inventory_value_reduction = (baseline_metrics['avg_inventory'] - cpfr_metrics['avg_inventory']) * cpfr_metrics['unit_cost']
         annual_savings = inventory_value_reduction * inventory_cost_rate
 
@@ -427,7 +449,7 @@ class CPFRProgram:
 # Example CPFR implementation
 cpfr = CPFRProgram(buyer_name='Acme Corp', supplier_name='Widget Manufacturing')
 
-# Buyer and supplier forecasts for next 12 months
+# Buyer and supplier forecasts for next 12 months (EXAMPLE numbers, replace with the user's)
 buyer_forecast = [1000, 1100, 1200, 1500, 1800, 1600, 1400, 1300, 1200, 1100, 1000, 950]
 supplier_forecast = [1050, 1150, 1100, 1400, 2000, 1650, 1500, 1250, 1200, 1150, 1050, 1000]
 
@@ -452,7 +474,7 @@ cpfr.resolve_exception(
     resolution_notes='Agreed to buyer forecast due to confirmed promotion'
 )
 
-# Calculate benefits
+# Calculate benefits (the baseline and CPFR figures below are EXAMPLES, not real results)
 baseline = {
     'forecast_accuracy': 70,
     'avg_inventory': 5000,
@@ -637,48 +659,32 @@ print(f"  Total Annual Benefit: ${benefits['total_annual_benefit']:,.2f}")
 ### Supplier Collaboration Report
 
 **Executive Summary:**
-- Collaboration program status
-- Key achievements and benefits
-- Active partnerships
-- Investment and ROI
+- Supplier and what you buy: <supplier>, <product or service>
+- Your goal: <cost, service, innovation or risk>
+- Where the relationship is now: <maturity level and why>
+- Recommended model: <VMI, CPFR, early supplier involvement, joint business planning or co-innovation>
 
-**Collaboration Portfolio:**
+**What each side shares:**
 
-| Supplier | Collaboration Model | Maturity Level | Annual Spend | Benefits Realized | Relationship Score |
-|----------|-------------------|----------------|--------------|-------------------|-------------------|
-| Supplier A | CPFR | Level 4 | $5.0M | $450K | 8.5/10 |
-| Supplier B | VMI | Level 3 | $3.5M | $280K | 7.8/10 |
-| Supplier C | ESI | Level 3 | $2.8M | $320K | 8.2/10 |
-| Supplier D | JBP | Level 2 | $2.2M | $120K | 7.0/10 |
+| Data | From | To | How often | How shared |
+|------|------|----|-----------|------------|
+| <e.g. stock levels, forecasts, sales> | <you or supplier> | <supplier or you> | <weekly, monthly> | <spreadsheet, portal, EDI> |
 
-**Program Performance:**
+**Joint planning process:** steps in order, who does each, and how differences between forecasts are settled.
 
-| Metric | Baseline | Current | Improvement | Target |
-|--------|----------|---------|-------------|--------|
-| Forecast Accuracy | 68% | 82% | +14 pts | 85% |
-| Inventory Turns | 6.2 | 8.5 | +2.3 | 9.0 |
-| Fill Rate | 91% | 96% | +5 pts | 97% |
-| Lead Time | 28 days | 21 days | -7 days | 18 days |
-| Supplier On-Time Delivery | 88% | 94% | +6 pts | 96% |
+**Meeting rhythm:** <meeting>, <how often>, <who comes>, <what is decided>
 
-**Benefits Summary:**
+**Measures of success:**
 
-| Benefit Category | Annual Value | Source |
-|-----------------|--------------|--------|
-| Inventory Reduction | $850K | Lower safety stock through VMI/CPFR |
-| Improved Service | $420K | Reduced stockouts and expediting |
-| Process Efficiency | $230K | Automated replenishment, fewer orders |
-| Innovation Value | $500K | Joint product development (ESI) |
-| **Total** | **$2.0M** | |
+| Measure | Baseline (yours, or MISSING) | Target | How it is counted |
+|---------|------------------------------|--------|-------------------|
+| <e.g. forecast accuracy, fill rate, lead time> | <value> | <value> | <method> |
 
-**Active Initiatives:**
+**Blockers and fixes:** <blocker such as trust or system gaps>, <what to do>
 
-| Initiative | Supplier | Start Date | Status | Expected Benefit |
-|-----------|----------|------------|--------|------------------|
-| CPFR Expansion | Supplier E | Q1 2026 | In Progress | $300K/yr |
-| VMI Pilot | Supplier F | Q2 2026 | Planning | $150K/yr |
-| Co-Innovation Project | Supplier A | Q3 2025 | Active | TBD |
-| Supplier Training Program | All | Ongoing | Active | Capability building |
+**First 90 days:** <step>, <owner>, <week>
+
+**Optional, many suppliers:** a portfolio table of <supplier>, <model>, <maturity level>.
 
 ---
 

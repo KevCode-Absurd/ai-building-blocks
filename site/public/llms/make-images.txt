@@ -1,23 +1,30 @@
 # Make images and art: AI Blocks
 
-> 19 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 26 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [App screenshot maker](https://useaiblocks.com/skills/app-screenshot-maker): Point it at your running app. Get sharp, high-resolution screenshots ready for Product Hunt, social or your site.
-- [Article cover maker](https://useaiblocks.com/skills/article-cover-maker): Give it an article. Get a cover image with a type, colours and mood that fit the piece.
-- [Article illustrator](https://useaiblocks.com/skills/article-illustrator): Give it an article. Get a plan for where pictures belong and a matching set of illustrations.
+- [Article cover maker](https://useaiblocks.com/skills/article-cover-maker): Share an article and image preferences. Get a cover prompt and, with an available image tool, a matching cover image.
+- [Article illustrator](https://useaiblocks.com/skills/article-illustrator): Share an article. Get an illustration plan, saved prompts and, with an image tool, a matching set of pictures.
 - [Brand sticker set maker](https://useaiblocks.com/skills/brand-sticker-set-maker): Give it your logo. Get a set of playful die-cut character stickers on clear backgrounds.
-- [Fashion scene image maker](https://useaiblocks.com/skills/fashion-scene-image-maker): Describe a scene, with or without a reference photo. Get an image or a new pose. Your image model draws it.
-- [Gemini image and video maker](https://useaiblocks.com/skills/gemini-image-and-video-maker): Give it a picture idea and reference images. Get images or short video drawn by Google Gemini.
-- [Generative art maker](https://useaiblocks.com/skills/generative-art-maker): Describe the look you want. Get an interactive generative art piece you can tweak and repeat.
-- [Image compressor](https://useaiblocks.com/skills/image-compressor): Give it images. Get smaller WebP or PNG files that look the same and load faster.
-- [Image maker and editor](https://useaiblocks.com/skills/image-maker-and-editor): Describe a picture or give one to change. Get new images, variants or transparent cutouts.
-- [Infographic maker](https://useaiblocks.com/skills/infographic-maker): Give it your content. Get an infographic with a layout and style picked to fit the message.
-- [Knowledge comic maker](https://useaiblocks.com/skills/knowledge-comic-maker): Give it a topic or story. Get a finished comic with panel layouts, a chosen art style and drawn pages.
-- [Make a marketing image and shrink it for the web](https://useaiblocks.com/workflows/make-a-marketing-image-and-shrink-it-for-the-web): Say what the image is for. Get a prompt, the picture and a smaller file.
-- [Make generative art and export sharp, small images](https://useaiblocks.com/workflows/make-generative-art-and-export-sharp-small-images): Describe the look. Get a coded art piece, sharp stills of it and smaller files.
-- [Marketing image maker](https://useaiblocks.com/skills/marketing-image-maker): Say what the image is for. Get a prompt to paste, exact size and a file plan.
-- [Marketing image prompt writer](https://useaiblocks.com/prompts/marketing-image-prompt-writer): Paste what the image is for. Get one prompt, a size and a file name to paste into an image maker.
-- [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker): Give it a prompt. Get an image from the image service you choose, in the size you pick.
-- [Product demo video maker](https://useaiblocks.com/skills/product-demo-video-maker): Give it screenshots or a page. Get a short demo video or GIF that walks through the product.
-- [Science diagram drafter](https://useaiblocks.com/skills/science-diagram-drafter): Describe a diagram. Get a draft of a network, pathway or flowchart, reviewed and refined once or twice.
-- [Slack GIF maker](https://useaiblocks.com/skills/slack-gif-maker): Describe the animation. Get a GIF sized and checked to work in Slack.
+- [Cinematic still-image shot planner](https://useaiblocks.com/skills/cinematic-image-shot-variation-planner): Turn one visual idea into four cinematic still-image prompts, each with its own camera spot, lens feel, light and moment.
+- [CRT image prompt writer](https://useaiblocks.com/skills/industrial-crt-image-direction): Bring a subject and image use. Get an old-screen image prompt that keeps key details clear.
+- [Fashion scene image maker](https://useaiblocks.com/skills/fashion-scene-image-maker): Describe a scene or share a reference image. Get an image prompt; a paid image model can render a draft.
+- [Gemini image and video maker](https://useaiblocks.com/skills/gemini-image-and-video-maker): Describe an image or video and add reference images. Get media from Google Gemini after a price and approval check.
+- [Generative art maker](https://useaiblocks.com/skills/generative-art-maker): Describe a mood and get generative art you can open in a browser, tweak with sliders and repeat with a seed. Made with p5.js code.
+- [Image and video prompt director](https://useaiblocks.com/skills/visual-prompt-director): Turn a rough idea or a bad result into an image or video prompt you can paste today. Get gaps flagged and one change to try next.
+- [Image compressor](https://useaiblocks.com/skills/image-compressor): Compress images to smaller WebP or PNG files that look the same. Point it at one file or a folder and get faster-loading images.
+- [Image maker and editor](https://useaiblocks.com/skills/image-maker-and-editor): Describe an image or provide one to edit. Get a prompt and a new image from an available tool.
+- [Image prompt engineer agent](https://useaiblocks.com/agents/agency-design-image-prompt-engineer): Describe the photo you want. Get an image prompt that sets subject, light, camera and style, plus a leave-out list, for Midjourney, DALL-E or Flux.
+- [Inclusive image brief planner](https://useaiblocks.com/agents/agency-design-inclusive-visuals-specialist): Describe the people and the story. Get image or video prompts built to avoid stereotypes, cloned faces and fake cultural symbols, plus a review checklist.
+- [Infographic generator](https://useaiblocks.com/skills/infographic-maker): Share your content. Get a clear layout and style, then an infographic after you approve the plan.
+- [Knowledge comic maker](https://useaiblocks.com/skills/knowledge-comic-maker): Turn a topic or story into a knowledge comic with a script, panel layouts and drawn pages in the art style and tone you pick.
+- [Marketing image maker](https://useaiblocks.com/skills/marketing-image-maker): Share the image goal, brand assets and size. Get a production approach, prompts and image files when tools are available.
+- [Marketing image prompt writer](https://useaiblocks.com/prompts/marketing-image-prompt-writer): Describe the image you need and where it will appear. Get an image prompt, suggested size, file name and two variations.
+- [Midjourney image prompt writer](https://useaiblocks.com/skills/midjourney-four-direction-prompt-writer): Turn one image idea or reference into four different Midjourney prompts, each a new treatment, plus four directions to try next.
+- [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker): Share a prompt, reference images and output needs. Generate images through a supported service with the required account or native tool.
+- [Nano Banana image and edit prompt planner](https://useaiblocks.com/skills/nano-banana-image-prompt-planner): Turn your idea for an image or edit into matching plain-language and JSON prompts for Nano Banana, with a clear role for each reference image.
+- [Product demo video maker](https://useaiblocks.com/skills/product-demo-video-maker): Turn screenshots or scene notes into a short product demo video or GIF, with a scene plan and narration script you can use even without video tools.
+- [Science diagram drafter](https://useaiblocks.com/skills/science-diagram-drafter): Describe the parts and links. It drafts a diagram prompt, generates an image with an available model and supports review and limited refinement.
+- [Skin realism image prompt checker](https://useaiblocks.com/skills/skin-realism-image-prompt-checker): Check a portrait or image prompt for fake-looking skin, hands and contact. Get one fix that keeps the face and light.
+- [Slack GIF maker](https://useaiblocks.com/skills/slack-gif-maker): Describe a Slack animation. Get an optimized GIF with dimension and file checks.
+- [Uncanny anime image prompt writer](https://useaiblocks.com/skills/uncanny-anime-image-prompt-writer): Turn a strange scene idea into an uncanny anime image prompt with a clear visual hook, camera angle and mood, ready to paste into an image tool.
+- [Web marketing image producer](https://useaiblocks.com/workflows/make-a-marketing-image-and-shrink-it-for-the-web): Describe the image, placement and brand rules. Get a prompt, image creation where tools allow and a checked smaller file where possible.

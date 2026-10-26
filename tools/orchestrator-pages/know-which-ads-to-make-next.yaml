@@ -1,6 +1,6 @@
 new_slug: know-which-ads-to-make-next
 name: "Know which ads to keep, cut and make next"
-summary: "Give it your ad results and brand details. You get what to keep and cut, plus briefs for three new ideas."
+summary: "Find which ads to keep, cut and make next. Give it your ad results and brand file. You get ranked actions, a gap map and briefs for three new ads."
 job: read-ad-results
 
 headline: "Know which ads to keep, cut and make next"
@@ -15,6 +15,10 @@ when:
   - A month or a campaign has ended and you need to decide what to make next.
   - Your results are flat and every new ad looks like the last one.
   - You're handing work to a designer or video maker and need a brief they can follow without questions.
+not_for:
+  - "You have a new product with no ad history: use a simple launch brief from your own offer and buyer notes instead."
+  - "You only want to know why sales dropped: use the Ad sales drop analyst."
+  - "You only want a report on your numbers: use the Ad results report writer."
 
 you_give:
   - Your ad results export, one row per ad with spend, clicks, sales and revenue
@@ -31,6 +35,26 @@ how_to_use:
   - Have your inputs ready. Export your results with one row per ad (spend, impressions, clicks, purchases, revenue, days live and each ad's opening line), plus your brand file. Add the previous period and your targets if you have them.
   - It works step by step and saves each result. Read the report's three actions first, then check the gap map before you use the brief.
   - Give the brief and the scored opening lines to whoever makes your ads.
+output_sample:
+  input:
+    - Your ad results export, one row per ad with spend, impressions, clicks, purchases, revenue, days live and opening line
+    - Your brand file with your buyers, products, offers and the claims you can make
+    - The export for the period before (optional)
+    - Your target cost per sale or return on ad spend (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff folder
+    - A brand file, which the Brand profile builder can make from your website
+  output:
+    - name: Ad results report
+      contains: Numbers worked out from the totals for each ad, what changed, one open worry and three ranked actions.
+    - name: Gap map
+      contains: Every past ad placed by moment, value, buyer knowledge, opening and format, with the five biggest gaps ranked.
+    - name: Brief
+      contains: Three ideas aimed at different buyer doubts, each with three versions that open on different first frames.
+    - name: Opening lines
+      contains: Opening lines for the new ads, each scored out of 4 with a fix if it is weak.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Works out the numbers

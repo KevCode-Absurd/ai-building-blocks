@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must design scoring that maps cleanly to useful results.
 new_slug: quiz-and-recommender-designer
 name: Quiz and recommender designer
-summary: Describe who you want to sort. Get quiz questions, scoring, result
-  groups and matching recommendations that can capture leads.
+summary: Design a quiz that sorts people into groups and points each to the right product. You get questions, scoring, results and an email ask.
 job: make-offer
 headline: Quiz and recommender designer
-subhead: A quiz that sorts people into useful groups and points each group to
-  the right product, plus a way to capture their email. It is built to produce
-  leads, not just clicks.
+subhead: A quiz that sorts people into useful groups and points each group to the right product, plus a way to capture their email. It is built to produce leads, not just clicks.
 explain: |
   A quiz that sorts people into useful groups and points each group to the right product, plus a way to capture their email. It is built to produce leads, not just clicks.
 
@@ -18,6 +15,10 @@ when:
   - Your current quiz gets plays but no leads.
   - You need to split your list into groups by need or level.
   - You are planning a lead magnet and want to compare formats.
+not_for:
+  - "You have only two plans to choose between: use a simple comparison table instead."
+  - "Your buyers are enterprise teams who see quizzes as gimmicks: use a short call or a one-page guide instead."
+  - "You want a long survey to study your market: use a survey tool, since this skill keeps quizzes short."
 you_give:
   - Who you want to sort and why
   - Your products or offers
@@ -28,7 +29,23 @@ you_get:
   - Result groups with matched recommendations
   - Email capture placement
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - Who you want to sort and why
+    - Your products or offers
+    - Your current quiz (optional)
+  output:
+    - name: Quiz decision
+      contains: A check on whether a quiz fits your audience and goal, or whether another format would serve better.
+    - name: Question set
+      contains: Five to twelve questions, each one built to separate people into your result groups.
+    - name: Scoring method
+      contains: How answers turn into a result group, with the reason for the method chosen.
+    - name: Result groups
+      contains: Four to eight named groups, each clearly different from the others.
+    - name: Matched recommendations
+      contains: One next step for each group, so no two groups get the same advice.
+    - name: Email capture placement
+      contains: Where to ask for the email and why that spot suits your audience.

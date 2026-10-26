@@ -1,6 +1,6 @@
 new_slug: mystery-plot-planner
 name: "Mystery plot planner"
-summary: "Tell it the crime or puzzle. Get a clue map, a timeline and a reveal that plays fair."
+summary: "Plan a mystery plot that plays fair. Give it your crime or puzzle. You get a clue map, a timeline and a final explanation built from the answer."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It must keep many facts consistent across scenes so the solution is fair."
@@ -17,6 +17,10 @@ when:
   - "You are plotting a mystery, thriller or short story and the twist keeps falling flat."
   - "You are building a murder-mystery party, escape room or puzzle hunt that must be fair."
   - "You need a reveal at the end of a presentation or campaign that people feel they could have seen coming."
+not_for:
+  - "You are writing non-fiction, or a true story: use a plain outline, or a person who knows the facts."
+  - "The answer is already fixed by someone else, such as a published puzzle: ask your AI to check it, since this skill builds new plans."
+  - "You only want a scene written out in full: ask your AI to draft it, then bring the clue list back here."
 
 you_give:
   - "The crime or puzzle"
@@ -35,6 +39,29 @@ how_to_use:
   - "Say whether you already know the answer. If not, say you want options."
   - "List any characters or places you want to keep."
   - "Read the clue map as a solver would, scene by scene, and mark anything you would have caught."
+output_sample:
+  input:
+    - The crime or puzzle you want to plan
+    - Setting and cast, if you have them (optional)
+    - Length and form, such as short story or game (optional)
+    - Your draft clues or ideas (optional)
+  output:
+    - name: Solution
+      contains: Who did it, how, why and when, in four short lines.
+    - name: Setting and cast
+      contains: A closed place and up to eight people, each with a want and a secret.
+    - name: Clue map
+      contains: Each clue marked real or planted, what it seems to mean, what it really means, and its scene.
+    - name: Viewpoint
+      contains: The trusted person the reader follows, what they misread, and when they are corrected.
+    - name: Timeline
+      contains: What each person did and felt, hour by hour on the key day.
+    - name: The explanation
+      contains: The solution in order, each step tied to a clue and the scene it came from.
+    - name: Cut and Missing
+      contains: People removed from the cast and why, plus any gaps marked MISSING.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 
 how_it_works:
   - title: "Fixes the solution"

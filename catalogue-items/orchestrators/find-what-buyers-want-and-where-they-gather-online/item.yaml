@@ -13,10 +13,10 @@ outputs:
   - {type: plan}
 uses: [reddit-thread-collector, customer-buying-reasons-finder, ideal-customer-profile-writer, audience-hangout-finder]
 steps:
-  - {uses: reddit-thread-collector, note: "Starts the chain: collects what people say about your topic into a table of their own words."}
-  - {uses: customer-buying-reasons-finder, note: "Reads the collected posts and ranks why people buy, in their exact words."}
-  - {uses: ideal-customer-profile-writer, note: "Builds a buyer profile from the same posts, with the reasons found in the step before."}
-  - {uses: audience-hangout-finder, note: "Takes the buyer profile and the posts and ranks the places to show up first."}
+  - {uses: reddit-thread-collector, note: "Starts the chain: collects what people say about your topic into a table of their own words. Hands the posts to steps 2, 3 and 4."}
+  - {uses: customer-buying-reasons-finder, note: "Reads the collected posts and ranks why people buy, in their exact words. Hands the ranked reasons to step 3."}
+  - {uses: ideal-customer-profile-writer, note: "Builds a buyer profile from the posts in step 1 and the buying reasons from step 2. Hands the profile to step 4."}
+  - {uses: audience-hangout-finder, note: "Takes the buyer profile from step 3 and the posts from step 1 and ranks the places to show up first."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/find-what-buyers-want-and-where-they-gather-online/skeleton.yaml

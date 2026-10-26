@@ -1,6 +1,6 @@
 slug: set-up-a-capstone-team-agreement
 name: Set up a capstone team agreement
-summary: Share the source files. Get a team working agreement, task register and handover rules.
+summary: "Set up a capstone team agreement: get working rules, a task register with owners and due dates, and handover rules your team can sign off."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,21 +10,23 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: question
+  - type: document
     required: false
   - type: meeting_notes
     required: false
+  - type: question
+    required: false
 outputs:
   - type: document
-  - type: plan
+  - type: spreadsheet
 uses:
   - process-and-sop-writer
   - executive-action-register
 steps:
   - uses: process-and-sop-writer
-    note: Document how the team will version files, review contributions, resolve blockers and hand over work, using the actual assignment constraints.
+    note: "Write the agreement from the rubric and each person's real hours: roles, file rules, review rules, blocker rule and handover rules. Pass the roles and the deliverables with dates to step 2."
   - uses: executive-action-register
-    note: Extract accepted commitments from the team decisions, distinguish suggested owners from agreed owners and mark missing dates.
+    note: "Turn your meeting notes and the agreement from step 1 into a task register. Name an owner only where the notes show agreement, mark others as suggested and mark missing dates MISSING."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

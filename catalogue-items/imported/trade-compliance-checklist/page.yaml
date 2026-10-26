@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches your business to the right rules.
 new_slug: trade-compliance-checklist
 name: Trade compliance checklist builder
-summary: Give it what you make, import and export. Get a checklist of the rules
-  that apply and who owns each.
+summary: Build a trade compliance checklist from what you make, import and export. See which rules apply, who owns each one, and where the gaps are.
 job: check-contracts
 headline: Trade compliance checklist builder
-subhead: A checklist of the import, export and product rules that apply to you,
-  each with an owner and a due check. You can hand it to your team and see at a
-  glance what is covered and what is not.
+subhead: A checklist of the import, export and product rules that apply to you, each with an owner and a due check. You can hand it to your team and see at a glance what is covered and what is not.
 explain: |
   A checklist of the import, export and product rules that apply to you, each with an owner and a due check. You can hand it to your team and see at a glance what is covered and what is not.
 
@@ -18,6 +15,10 @@ when:
   - An audit or customer asks for proof of trade compliance.
   - You have new suppliers in several countries and no clear process.
   - Nobody on your team owns the compliance tasks.
+not_for:
+  - "You need legal advice on a customs ruling or a fine: ask a licensed customs broker or trade lawyer."
+  - "You want to check sustainability or social standards in your suppliers: use a sourcing review, not this checklist."
+  - "You need an official HS code or duty rate: check your country's tariff database, because this list is a guide only."
 you_give:
   - What you make or sell
   - Countries you import from and export to
@@ -30,7 +31,28 @@ you_get:
   - A list of gaps and risks
   - Suggested next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Answer its questions about what you make, where you sell, and how many suppliers and countries you use.
+  - Add your current compliance steps and any past issues if you have them.
+  - Read the report. Check each rule, HS code and duty rate against official government sources before you act.
+  - Give each action item to a named person and set the review dates.
+output_sample:
+  input:
+    - What you make or sell
+    - The countries you import from and export to
+    - Your suppliers and product types
+    - Your current compliance steps (optional)
+    - Past issues or fines (optional)
+  output:
+    - name: Executive Summary
+      contains: Your overall compliance status, the biggest gaps, rule changes that affect you, and the actions needed with timing.
+    - name: Regulatory Compliance Status
+      contains: A table of each rule with its region, category, status, last review, next review and gaps.
+    - name: Product Compliance
+      contains: A table of each product with its markets, rules, status, certificates and gaps.
+    - name: Supplier Compliance
+      contains: A table of each supplier with country, certificates, last and next audit, score and status.
+    - name: Certification Tracker
+      contains: A table of each certificate with its number, dates, days to expiry and the action needed.
+    - name: Action Items
+      contains: A table of fixes ranked by priority, each with an owner, due date and status.

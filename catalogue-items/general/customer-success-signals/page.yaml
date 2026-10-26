@@ -1,6 +1,6 @@
 new_slug: customer-success-signals
 name: "Customer success leading-sign definer"
-summary: "Paste what customers do after they buy. Get one early sign of success: a percent, an action and a time limit."
+summary: "Find an early sign that new customers will stay. Paste what customers did and who left. You get one action, a percent and a time limit."
 job: test-an-idea
 thinking: high
 thinking_why: "It compares groups of customers and must warn when the data is too thin to trust."
@@ -17,6 +17,10 @@ when:
   - You grow sales but customers leave and you cannot say why.
   - You need an early number to tell you in weeks whether a new customer is on track.
   - You are about to hire more salespeople and want to know if customers get value first.
+not_for:
+  - "You have no customers yet, or fewer than about 20: run a short survey of people who might buy instead."
+  - "You want to know why sales are slow: look at your sales calls and offer first, since this tool only studies customers who already bought."
+  - "You have no record of who stayed and who left: write that list first, because the tool stops without it."
 
 you_give:
   - What customers did after they bought, with dates
@@ -35,6 +39,27 @@ how_to_use:
   - Add any reviews or call notes and a past audit if you have one.
   - Pick the sign it proposes and put it on a weekly report.
   - Check it again after one or two cohorts and keep or change it.
+output_sample:
+  input:
+    - What customers did after they bought, with dates
+    - Which customers stayed and which left
+    - Customer reviews or call notes (optional)
+    - Your cost to win a customer and what a customer pays over time (optional)
+  output:
+    - name: Do customers stay?
+      contains: The count of customers who stayed and left in your period, with a warning if either group is small.
+    - name: What stayers did early
+      contains: Each early action with the percent of stayers and leavers who did it, ranked by the gap.
+    - name: The sign
+      contains: One action written as P percent of customers do it within T days, with the working shown.
+    - name: How to measure
+      contains: How to count one cohort and the first date to check it.
+    - name: Message fit or product fit
+      contains: A line on whether leavers never used the product or used it and still left.
+    - name: Economics
+      contains: Lifetime value against cost to win, as a ratio, when you gave cost figures.
+    - name: Missing and checks missed
+      contains: What you did not provide and any checks the result failed, or none.
 
 how_it_works:
   - title: Starts with staying

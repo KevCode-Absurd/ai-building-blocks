@@ -16,6 +16,29 @@ use_cases:
   - "Market yourself for a job or a client the way you'd market a product"
   - "Rework an offer so it changes the value, not just the words"
   - "Review a campaign against a long checklist before it goes out"
+not_for:
+  - "You need long-term brand building, not sales and response: use the Byron Sharp mind, or the Al Ries mind for positioning."
+  - "You want to work out why the right buyers should pick your product: use the April Dunford mind."
+  - "You want an ad that wins on one big idea and honest wit: use the Bill Bernbach mind."
+output_sample:
+  input:
+    - Your offer, and who it is for
+    - Your draft letter, email, brief or plan
+    - Your current results, if you have any (optional)
+    - What you want people to do after reading it
+  output:
+    - name: Questions first
+      contains: A short list of questions on how you will count results, who you speak to and what you want said.
+    - name: Rewritten brief
+      contains: A one-page brief stating what to say, to whom and what action you want.
+    - name: Offer review
+      contains: A view on whether the offer is worth having, and how to change what you give.
+    - name: Test plan
+      contains: One change to test against your old version, and how to count the answer.
+    - name: Follow-up outline
+      contains: What to send after the first message gets no reply.
+    - name: Next step
+      contains: One action you can take tomorrow, told in a dry and practical note.
 seats:
   - {seat: "Direct marketing basics", asks: "How will we count what this brings in, and what will we test first?"}
   - {seat: "The brief", asks: "What exactly are we trying to say, to whom, and what do we want them to do?"}

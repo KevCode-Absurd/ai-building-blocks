@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It weighs evidence across many possible causes.
 new_slug: slow-system-investigator
 name: Slow system investigator
-summary: Describe a slow or failing system. Get a checked list of causes and a
-  clear incident report.
+summary: Find why a server, container or app is slow. Get a checked list of causes and an incident report that shows the evidence for each one.
 job: test-and-fix-code
 headline: Slow system investigator
-subhead: A short list of checked causes and a clear incident report when a
-  server, container or app is slow or failing. Instead of running whatever
-  commands come to mind, the skill follows a fixed method from performance
-  expert Brendan Gregg.
+subhead: A short list of checked causes and a clear incident report when a server, container or app is slow or failing. Instead of running whatever commands come to mind, the skill follows a fixed method from performance expert Brendan Gregg.
 explain: |
   A short list of checked causes and a clear incident report when a server, container or app is slow or failing. Instead of running whatever commands come to mind, the skill follows a fixed method from performance expert Brendan Gregg.
 
@@ -19,6 +15,10 @@ when:
   - Latency jumped after a deploy or a config change.
   - Threads pile up and your app hangs.
   - You must write a postmortem and need the evidence in order.
+not_for:
+  - You have a bug in your app logic and nothing is slow. Read the code and debug it with a developer instead.
+  - Your host is not Linux. Check the tool list first, or ask a systems engineer for the matching tools on your system.
+  - You need a fix applied for you. This skill only reads at first, so ask your ops team to make changes after you approve them.
 you_give:
   - A description of the slow or failing system
   - Access to run checks, or pasted command output
@@ -29,8 +29,32 @@ you_get:
   - The most likely root cause
   - A written incident or postmortem report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands on your machine.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat.
+  - "Describe the problem: what is slow, since when, and what changed."
+  - Run the commands the AI lists on your server and paste the output back. If your AI can run commands itself, let it, but only for read-only checks.
+  - Check the causes it ruled out and the evidence for each one.
+  - Approve any fix yourself before it is applied, then ask it to re-measure.
+  - "Ask for the report you need: a triage note, root cause report or postmortem."
+output_sample:
+  input:
+    - A short description of the slow or failing system
+    - Output from commands run on the machine, or access for your AI to run them
+    - What changed recently, such as a deploy or config change (optional)
+  prerequisites:
+    - An AI that can run commands on the machine, or you paste the command output yourself
+    - Some checks need root access, perf access or the sysstat tools
+  output:
+    - name: Problem statement
+      contains: What is wrong, since when, who is affected, and what changed recently.
+    - name: 60-second triage
+      contains: Results of ten quick Linux checks, with errors and saturation read first and cleared resources listed.
+    - name: USE sweep
+      contains: Use, saturation and errors for each resource such as CPU, memory, disk and network, plus limits like cgroups.
+    - name: TSA sweep
+      contains: "Where each thread spends its time: running, waiting to run, paging, sleeping, locked or idle."
+    - name: Root cause
+      contains: A chain from trigger to symptom, with each link backed by a command and its output.
+    - name: Fix and verify
+      contains: The cheapest effective fix and a before and after measure using the same tools.
+    - name: Report
+      contains: A triage note, root cause report or postmortem with impact, evidence table, resolution and prevention actions.

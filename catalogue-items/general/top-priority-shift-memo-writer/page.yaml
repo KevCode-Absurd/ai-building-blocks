@@ -1,41 +1,53 @@
 new_slug: top-priority-shift-memo-writer
 name: "Top-priority shift memo writer"
-summary: "Describe a change that breaks your plan. Get a one-page memo that resets the top priority and each person's next step."
+summary: "Write a one-page memo that resets your team's top priority after a market change, with a stop and a start for each area."
 job: lead-people
 thinking: medium
 thinking_why: "It organises facts and writes a clear memo, with some judgment about what to change, but the shape is fixed."
 
 headline: "Top-priority shift memo writer"
-subhead: Describe a change in your market or work that breaks the plan. It writes a one-page memo that says what changed, how your view moved, what rivals do well, the new top priority, what each area does differently and when the plan will be revised.
+subhead: "Tell it what changed, how your view moved and which teams you run. It writes a one-page memo to your leaders: the new top priority first, then what each area stops and starts, and the date the plan is revised."
 
 explain: |
-  When something big changes, leaders often send a vague note: "we need to be more agile." The team nods and carries on with the old plan, because no one said what to stop or what to do next.
+  When the market shifts, leaders often send a vague note like "we need to be more agile". The team nods and carries on with the old plan, because no one said what to stop or what to do first.
 
-  This skill writes the memo that does. It states what changed and how your own view moved, compares it to an earlier shift you lived through and names the rivals who do parts of it well. It sets the new top priority in one line, lists the changes area by area, asks each leader to try the new thing and study rivals' versions, and sets a date to revise the plan.
+  This shift memo writer fixes that. It puts one new top priority in the first line. Then it says what changed, and how your own view moved, which is the part readers believe most. It sets that change next to an earlier shift you lived through. It names rivals who do parts of it well. For each area it writes one thing to stop and one to start, with an owner and a date. It ends with a revision date.
+
+  The method comes from Bill Gates's 1995 internet memo, rebuilt here for any change: a new rival, a new rule, a new tool or a change in how customers buy. It is for announcing a change of direction to your leaders. It does not ask for a decision on a proposal.
 
 when:
-  - A change in your market makes the current plan wrong.
-  - Your team keeps working on last quarter's priority.
-  - You need every leader to change direction in the same week.
+  - "A rival cuts prices or launches a new product, and last quarter's priority no longer fits."
+  - "A new rule, tool or sales channel changes how your market works, and you must tell your leaders this week."
+  - "Your teams keep working on the old priority, and each leader reads the change differently."
+  - "You changed your own mind about where the business should go, and you want to say so before the next planning meeting."
+
+not_for:
+  - "You need a yes or no on a proposal. Use the six-page narrative memo writer."
+  - "You are sharing bad news with customers or staff, not changing direction. Use the bad news update writer."
+  - "You want a routine status update or a fix for one team. A short plain email does that job."
+  - "You want to describe your team's culture and how it works. Use the team culture memo writer."
 
 you_give:
-  - "What changed, in your own words"
-  - "How your view of it has moved"
-  - "Your areas or teams and what each does now"
-  - "Rivals or others who are handling it (optional)"
+  - "What changed, in your own words, and when you first saw it"
+  - "What you believed before, and what changed your mind"
+  - "Your teams or areas, and what each works on now"
+  - "A past shift you lived through, such as a new channel or rule (optional)"
+  - "Rivals or partners who handle this well (optional)"
 
 you_get:
-  - "A one-page memo with the new priority in the first lines"
-  - "A change for each area, in concrete terms"
-  - "A request to each leader to use the new thing and study rivals"
-  - "A date when the plan will be revised"
+  - "A one-page memo of about 450 words with the new top priority in the first lines"
+  - "A stop, a start, an owner and a date for each area"
+  - "A request to each leader to try the new thing and report one lesson"
+  - "A date when the plan is revised, and what would bring it forward"
+  - "MISSING lines for anything you did not tell it, so nothing is made up"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe what changed and how you used to see it."
-  - "List your teams and what each is working on now."
-  - "Name rivals you admire on this point."
-  - "Read the draft aloud, change anything that does not sound like you and send it."
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start a chat with it. If not, copy it and paste it in."
+  - "Write three things: what changed, what you used to believe, and what changed your mind. Plain notes are fine."
+  - "List your teams and what each is working on now. A team you leave out gets no change."
+  - "Add a past shift and one or two rivals if you have them. Skip them if you don't, and it will say so."
+  - "Read the memo aloud. Fix any line that does not sound like you, then check that every area has a different stop and start."
+  - "Send it to your leaders. Then use the Executive action register keeper to track each owner's date."
 
 how_it_works:
   - title: States what changed
@@ -64,7 +76,7 @@ output_shape: |
   <three to five sentences, including how your view moved>
 
   AN EARLIER SHIFT
-  <one short comparison>
+  <two sentences: what it taught, and how this one differs>
 
   WHO IS DOING IT WELL
   <rival or other> | <what they do well>
@@ -76,13 +88,37 @@ output_shape: |
   <the ask, with dates>
 
   WHEN THE PLAN IS REVISED
-  <date>
+  <date, who joins, what brings it forward>
 
   MISSING
   <what you did not tell me>
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "What changed in your market, and when you saw it"
+    - "What you used to believe, and what changed your mind"
+    - "Your teams, and what each works on now"
+    - "A past shift and one or two rivals (optional)"
+  output:
+    - name: "The new top priority"
+      contains: "One line, in the first lines of the memo, that a team can use to say no to a good idea."
+    - name: "What changed"
+      contains: "Three to five sentences on what happened and how your own view moved."
+    - name: "An earlier shift"
+      contains: "Two sentences on a past change you lived through and how this one differs."
+    - name: "Who is doing it well"
+      contains: "One to three rivals or partners and what each does well, said plainly."
+    - name: "What changes in each area"
+      contains: "One line per area: what stops, what starts, who owns it and by when."
+    - name: "What I ask of each leader"
+      contains: "A dated request to use the new thing and report one lesson in a sentence."
+    - name: "When the plan is revised"
+      contains: "The review date, who joins it, and what would bring it forward."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Gaps you must fill in, and any quality check the memo still fails."
 
 tweaks:
   - what: How your view moved

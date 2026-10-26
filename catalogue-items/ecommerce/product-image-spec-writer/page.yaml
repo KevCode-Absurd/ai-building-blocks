@@ -2,7 +2,7 @@ thinking: low
 thinking_why: "It reshapes what you give it, with few judgement calls."
 new_slug: product-image-spec-writer
 name: "Product image spec writer"
-summary: "Attach your product photos. Get a sourced truth sheet, lock lines and the next photo to take."
+summary: "Check your product photos and write a product image spec: a sourced truth sheet, lock lines for every prompt and the next photo to take."
 job: product-photos
 
 headline: "Product image spec writer"
@@ -17,6 +17,10 @@ when:
   - You're about to make product photos, ads or product page images with AI and want the product right in every one.
   - Your AI pictures keep showing a slightly wrong product (the wrong lid, a redrawn label, a lookalike).
   - You want to know which product photo to take next, and why.
+not_for:
+  - You have no real photos of the product yet. Take one phone photo first, because without photos every line says MISSING.
+  - You want a plan for a full set of photos. Use the Product photo shoot planner, which starts from this sheet.
+  - You sell many products and want one sheet for all. Run this once per exact variant, or use a spreadsheet to track them.
 
 you_give:
   - The product and exact variant (size, colour, flavour or finish)
@@ -35,6 +39,28 @@ how_to_use:
   - Paste any facts you have underneath, such as how to use it and what's in the box.
   - Read the blocked shots and the photo to take next. One phone photo often unblocks several shots.
   - Keep the sheet, and paste the lock lines into every image prompt you write.
+output_sample:
+  input:
+    - The product and its exact variant (size, colour, flavour or finish)
+    - Every real photo you have of that variant
+    - How it is used and what is in one order (optional)
+    - What your brand never shows (optional)
+  prerequisites:
+    - An AI that can read attached photos at full size
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Photo check
+      contains: Each photo marked kept or out, with the question it failed if it is out.
+    - name: Truth sheet
+      contains: "Seven parts: identity, body, marks, build, use, never show and evidence, each line with a source or MISSING."
+    - name: Lock lines
+      contains: Three to five short phrases for the details a model gets wrong first, repeated word for word in every prompt.
+    - name: Blocked shots
+      contains: Each gap in the sheet, with the shots it stops you making.
+    - name: Next photo
+      contains: The one photo that unblocks the most shots, with the angle and background to use.
+    - name: Checks missed
+      contains: One line for each check the sheet still failed, or none.
 
 how_it_works:
   - title: Checks every photo

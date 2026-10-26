@@ -1,44 +1,76 @@
 new_slug: review-equity-valuation-sensitivity-assumptions
 name: Review equity valuation sensitivity assumptions
 headline: Review equity valuation sensitivity assumptions
-summary: Share the source files. Get a checked valuation scenario report and assumption challenge list.
+summary: Build a dated stock valuation report with scenario ranges, then flag claims with no source. Get a report and a list of assumptions to challenge.
 job: money-and-investing
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A checked valuation scenario report and assumption challenge list. Share actual company filings, dated market data, exchange, currency, as-of date, the existing valuation model and explicit scenario assumptions. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the company, exchange, currency, research date, filings and a dated share price. It builds a research report with valuation scenarios, runs the pack's checks, then lists claims in the commentary that no source supports.
 explain: |-
-  A checked valuation scenario report and assumption challenge list.
+  A valuation report can look neat and still rest on one soft assumption. A small change in growth or the discount rate can move the value a lot. This workflow shows the range, then checks the words around it for claims that go too far.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Scenarios use dated evidence and explicit inputs; model validity is separate from investment merit. Missing tools or evidence stay visible in the final summary.
+  Step 1 uses the Equity research and valuation report builder. It runs a valuation engine and a strict validator on scenario inputs and arithmetic, and keeps a source ledger. Step 2 uses the Unsupported claim spotter on the thesis and commentary. It ranks each claim by risk and names the kind of source that would settle it.
+
+  Scenarios are ranges under stated assumptions, not price forecasts. A validator pass checks structure, not whether your sources are true. The pack has no live market data, so you supply a dated price. It gives no advice on what to buy or sell.
 when:
-  - You need a checked valuation scenario report and assumption challenge list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You wrote a stock research note and want its scenarios checked before a reader sees it.
+  - A reviewer asks what happens to value if growth or the discount rate changes.
+  - You inherit someone's valuation and need to see which claims lack a source.
+  - You must show where each number in a report came from.
+not_for:
+  - "You want a quick fair value for one ticker: use the Company fair value modeler."
+  - "You want to compare a DCF, peer multiples and past deals: use the Valuation method comparer."
+  - "You need a buy or sell call, or advice on your own money: ask a licensed adviser. This gives a research draft only."
+  - "You only want to fact-check a draft: use the Unsupported claim spotter on its own."
 you_give:
-  - Actual company filings, dated market data, exchange, currency, as-of date, the existing valuation model and explicit scenario assumptions.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: The bundled valuation engine and report renderer."
+  - The company name, stock exchange and reporting currency
+  - Your research date and time horizon
+  - Company filings and data you are allowed to use
+  - A share price with its date
+  - Your existing valuation model or scenario assumptions (optional)
+  - A draft thesis or commentary to check (optional)
 you_get:
-  - A checked valuation scenario report and assumption challenge list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A research report with the thesis, counter-evidence, risks and what to monitor
+  - Valuation scenarios, with the inputs for each case shown
+  - A source ledger that separates reported facts, estimates and assumptions
+  - A ranked list of unsupported claims and the source each one needs
+  - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to an AI that can read files and run Python 3.9 or later.
+  - Give the company, exchange, currency, research date and horizon. Attach the filings and the dated share price.
+  - Ask your AI to follow the pack, save a file for each step and stop a step when a check fails.
+  - Read the validator result. A pass checks structure only. It does not prove your sources or conclusion.
+  - Check each figure against the cited filing, then work through the list of unsupported claims before you share the report.
 how_it_works:
   - title: Equity research and valuation report builder
-    text: Use the real valuation engine and matching strict validator to check scenario inputs and arithmetic. Retain the source ledger and inspect the actual rendered report. Treat sensitivities as scenarios, never price predictions.
+    text: Runs the valuation engine and the matching strict validator on scenario inputs and arithmetic. Keeps the source ledger and checks the rendered report. Treats sensitivities as scenarios, never price predictions. Hands step 2 the report, scenarios and sources.
   - title: Unsupported claim spotter
-    text: Check thesis and valuation commentary against the filings, dated prices and actual scenario results. Flag implied certainty and missing counter-evidence; give no personalized investment recommendation.
+    text: Checks the thesis and valuation commentary against the filings, the dated price and the scenario results. Flags claims that sound certain and any missing counter-evidence. Gives no advice on what to buy or sell.
 output_shape: |-
-  Scope and source coverage
-  A checked valuation scenario report and assumption challenge list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCE COVERAGE <company, exchange, currency, research date, sources used>
+  VALUATION SCENARIOS       <case | key assumptions | value range>
+  VALIDATOR RESULT          <passed or failed, and what it covers>
+  CLAIMS TO CHALLENGE       <claim | risk | kind of source needed>
+  MISSING                   <inputs not given>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - The company, exchange and currency
+    - Your research date and time horizon
+    - Filings and a dated share price
+    - Your own scenario assumptions or draft commentary (optional)
+  prerequisites:
+    - An AI that can read files and run Python 3.9 or later
+    - Filings or sources you are allowed to use and can check
+  output:
+    - name: outputs/step-01-equity-research-valuation-report-builder.md
+      contains: The research report, valuation scenarios, source ledger and validator result.
+    - name: outputs/step-02-unsupported-claim-spotter.md
+      contains: Claims ranked by risk, each with the kind of source that would settle it.
+    - name: Assumption challenge list
+      contains: The scenario assumptions a reader should test, such as growth and discount rate.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.
 tweaks:
   - what: Scope
     how: Choose one project, team, period or decision so the sources are comparable.
@@ -63,11 +95,23 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: The bundled valuation engine and report renderer
-      why: Run the matching strict validator and inspect the actual report; this pack contains no live market-data feed.
+    - name: An AI that can run Python and read files
+      why: The valuation engine and strict validator are scripts in the pack. Without Python you get a plan, not a checked report.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Filings for at least the last three years.
+    - A named reviewer who will check the sources.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Valuation scenario
+    meaning: A value range worked out from one set of assumptions, such as growth and discount rate.
+  - term: DCF
+    meaning: "Discounted cash flow: a value built from forecast cash flows, scaled back to today."
+  - term: Source ledger
+    meaning: A list of every fact in the report and where it came from.
+  - term: Validator
+    meaning: A script that checks the report's structure, arithmetic and source labels.
+before: []
+next:
+  - valuation-method-comparer
+  - company-fair-value-modeler
+  - challenge-terminal-value-with-excess-returns
+  - claim-fact-checker

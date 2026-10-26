@@ -55,3 +55,22 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+
+not_for:
+  - "Your build is failing right now: use the CI failure fixer or the Failed workflow diagnoser."
+  - "You only want a security check of your workflows: use the GitHub Actions permission reviewer."
+  - "You do not use GitHub Actions. These steps read GitHub workflow files only."
+output_sample:
+  input:
+    - Your workflow files from the .github/workflows folder
+    - Your goal, such as fewer build minutes
+    - Recent run history from gh run list (optional)
+  prerequisites:
+    - An AI that can read your files, or workflow text you can paste
+  output:
+    - name: Build cost review
+      contains: Where build minutes are wasted, and the top fixes ranked by minutes saved.
+    - name: Security findings
+      contains: Risky permissions, unsafe inputs and loose action versions, each with a fix.
+    - name: Proposed runtime changes and validation
+      contains: Supported action versions to move to, and how to check the build still behaves the same.

@@ -4,6 +4,30 @@ description: "Brainstorm product positioning ideas differentiated from competito
 ---
 # Positioning Ideas
 
+## Working in a chat (added by AI Blocks)
+
+The prompt and steps below are the original author's and are unchanged. This section tells you how to run them in a chat.
+
+**What you need.** Ask once, in one message, for anything you do not have:
+- What the product does and what makes it different.
+- Who the person wants to reach, and what that audience cares about.
+- The market or category.
+- Competitors (optional but best), the current positioning (optional), and any competitor wording the person can paste.
+
+If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent product features, customer quotes or results. Never give positioning claims the product cannot back up. If no features were given, stop and ask.
+
+**Competitors.** If the person names competitors, use those. If not, pick the five most likely from the category and say they were picked from general knowledge. Competitor details from memory may be out of date. Mark each competitor row "from memory, check" unless the person pasted the wording or the AI checked a live source. Do not state a rival's prices or claims as fact without a source.
+
+**What you hand back**, in this order:
+1. Competitor snapshot: five rows with angle, audience, what they stress and the gap they leave.
+2. Five positioning ideas, each clearly different from the others and from the rivals.
+3. For each idea: the positioning statement (one sentence), the strategic rationale, two or three supporting messages, and the competitive advantage that makes the claim true.
+4. `MISSING:` list.
+
+End with one question: which idea or blend to develop next.
+
+**Rules.** These are ideas to test, not decisions. Say which claims need proof (a feature, a number or a customer) before they go on a website.
+
 Brainstorm product positioning ideas differentiated from competitors. Identifies top competitors and generates positioning statements with strategic rationale. Use when developing product positioning, differentiating from competitors, or crafting brand positioning strategy.
 
 ## When to Use

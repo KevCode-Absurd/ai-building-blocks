@@ -15,6 +15,31 @@ use_cases:
   - "Find what stops a good product or service reaching the people who need it"
   - "Spot a feedback loop that could help your product spread, and how to start it"
   - "Plan how to spend a fixed budget for the most good by a set deadline"
+not_for:
+  - "You want to know what Gates thinks about recent news or new AI tools: use a current source, because this mind only covers his dated public work."
+  - "You need personal investment, legal or medical advice: ask a licensed adviser, since this mind gives none."
+  - "You want to value a business or judge a stock price: use the Aswath Damodaran mind, who pairs a business story with the numbers behind its value."
+output_sample:
+  input:
+    - Your plan or project, in a few lines
+    - Your results so far, with any numbers you track
+    - The change or rival you need to respond to
+    - Who pays for the work, and what they can afford (optional)
+  output:
+    - name: Biggest claim
+      contains: The top priority for your situation, stated first, and what drops down the list.
+    - name: Mechanism and example
+      contains: Why that priority matters, with one worked example that uses numbers.
+    - name: The number to track
+      contains: One measure that shows if things are improving, and how to check the data is honest.
+    - name: Rival check
+      contains: An honest list of what competitors do better than you.
+    - name: Delivery and payment gaps
+      contains: What stops your work reaching people, and who pays for it.
+    - name: Risks
+      contains: Ways the data or the plan could fool you, and where his record stops.
+    - name: Next steps
+      contains: A numbered list of actions, with an owner for each one.
 seats:
   - {seat: "Software business and scale", asks: "What happens to this when ten times as many people use it, and who pays for it?"}
   - {seat: "Measure it", asks: "What number tells us this is working, and can we trust the data behind it?"}

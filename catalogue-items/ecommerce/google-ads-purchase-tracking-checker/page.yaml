@@ -1,6 +1,6 @@
 new_slug: google-ads-purchase-tracking-checker
 name: "Google Ads purchase tracking checker"
-summary: "Paste your conversion actions. Get a pass or fail on double counting, a score out of 100 and the fix for each."
+summary: "Check your Google Ads purchase tracking for double counting. Paste your conversion actions and get pass or fail on three rules, a score out of 100 and fixes."
 job: run-google-ads
 thinking: low
 thinking_why: "It applies three clear rules to a list, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - Google shows more revenue than your store does.
   - You linked GA4 to Google Ads and want to be sure nothing is double counted.
   - You are about to scale spend and want to trust the numbers first.
+not_for:
+  - "Your store has no sales yet: place one real test order first, then run this check."
+  - "You need to build the tracking from scratch: use the Shopify Google tracking builder."
+  - "You want to judge ad copy or campaign results: this only checks how purchases are counted, so ask a person who runs your ads."
 
 you_give:
   - Your conversion actions, with source, goal, primary or secondary and counted value
@@ -35,6 +39,27 @@ how_to_use:
   - Say your platform and your monthly ad spend.
   - Add Google purchases and store orders for the same dates, counted by conversion time, if you can.
   - Do the fixes in the order given, then run the check again.
+output_sample:
+  input:
+    - Your list of Google Ads conversion actions, as text or a screenshot
+    - Your store platform, such as Shopify or WooCommerce
+    - Your monthly ad spend
+    - Google purchases and store orders for the same dates (optional)
+  output:
+    - name: Rule 1
+      contains: Pass or fail on having only one primary purchase action, with the actions found.
+    - name: Rule 2
+      contains: Pass or fail on whether a GA4 import is set as the primary purchase.
+    - name: Rule 3
+      contains: Pass or fail on whether add to cart, begin checkout and page view are secondary.
+    - name: Reconcile
+      contains: Google purchases and revenue next to store orders and revenue, with the gap and a verdict.
+    - name: Primary should be
+      contains: The one action that should be your only primary purchase.
+    - name: Fix steps
+      contains: One change per step, in order, starting with the worst error.
+    - name: Score
+      contains: A score out of 100 with the sum shown and any checks not run.
 
 how_it_works:
   - title: Counts primary purchases

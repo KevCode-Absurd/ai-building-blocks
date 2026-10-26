@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds questions around a specific media piece.
 new_slug: media-literacy-lesson-builder
 name: Media literacy lesson builder
-summary: Give it an ad, news item or post. Get a lesson that helps learners see
-  persuasion, bias and who is shown.
+summary: Build a media literacy lesson for any ad, news story or post. You get questions on persuasion, bias and who is shown, plus a teacher script.
 job: teach-and-train
 headline: Media literacy lesson builder
-subhead: A lesson that teaches learners to take apart an ad, news story, post or
-  video and ask why it was made that way. You pick the media type, what to
-  notice and the year group, and you get a ready-to-teach protocol.
+subhead: A lesson that teaches learners to take apart an ad, news story, post or video and ask why it was made that way. You pick the media type, what to notice and the year group, and you get a ready-to-teach protocol.
 explain: |
   A lesson that teaches learners to take apart an ad, news story, post or video and ask why it was made that way. You pick the media type, what to notice and the year group, and you get a ready-to-teach protocol.
 
@@ -18,6 +15,10 @@ when:
   - You are teaching how a news article frames an issue as one-sided.
   - You need a lesson on who is shown and who is missing in a campaign poster.
   - You want a reusable question set for any media text.
+not_for:
+  - "You want a quick quiz on one fact: write the questions yourself, or ask your AI for a short quiz."
+  - "You need to check if a source is trustworthy: use a source-credibility check, not this lesson."
+  - "You want to make a full unit with marking: plan the unit first, then use this for one lesson."
 you_give:
   - The type of media text
   - What learners should notice
@@ -30,7 +31,24 @@ you_get:
   - Prompts about what is left out
   - A modelling script for the teacher
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Pick one ad, news item or post. Note the media type, what you want learners to notice and the year group.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then add those details. Paste the text or describe it if you have it.
+  - Read the protocol and the teacher script. Check the questions fit your class and the media type.
+  - If you gave no text, the example is a made-up teaching text, not a real post. Say so to learners.
+  - Edit anything that is too hard or too easy, then teach the lesson.
+output_sample:
+  input:
+    - The type of media text, such as an ad, news article or social post
+    - What learners should notice, such as persuasion, bias or who is left out
+    - The year group
+    - The text itself or a short description of it (optional)
+    - Your learning objectives (optional)
+  output:
+    - name: The Protocol
+      contains: Questions grouped by who made it, techniques, how people and ideas are shown, and who it is aimed at.
+    - name: Teacher Modelling Script
+      contains: A script showing how you think aloud while you take the text apart in front of the class.
+    - name: Student Activity
+      contains: A task where learners work through the protocol questions on the text.
+    - name: Extension Questions
+      contains: Harder questions, including what is left out and whose voice is missing.

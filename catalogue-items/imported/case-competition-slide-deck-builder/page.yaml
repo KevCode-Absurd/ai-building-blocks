@@ -2,22 +2,103 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: case-competition-slide-deck-builder
 name: Case competition slide deck builder
-summary: Share your case, judging rules and analysis. Get a recommendation deck
-  with source notes, financials and backup slides for questions.
+summary: Build a case competition deck that leads with your answer. Get an editable PowerPoint with charts, financials and backup slides for judges' questions.
 job: work-with-files
 headline: Case competition slide deck builder
-subhead: Bring the case brief, judging rubric, time limit and your analysis. Get
-  a recommendation deck with source notes, financials and backup answers. The
-  included compatibility helper builds editable charts with Python and
-  python-pptx; render the slides to check the final layout.
+subhead: Bring the case brief, judging rubric, time limit and your analysis. It builds a recommendation deck that opens with the answer, with a chart on each analysis slide, a financial bridge, a rollout plan and backup slides. You get an editable PowerPoint file.
+explain: |
+  A case competition deck is judged on how fast the panel can follow your answer. Many teams bury it on slide nine. This skill puts the recommendation, the reasons and the impact on the slide right after the title.
+
+  Every title is a full sentence that states the takeaway, so reading only the titles tells the whole story. Each analysis slide holds one chart that proves one point. The deck then covers the financials, a rollout plan with stop rules, the risks and an appendix with a backup slide for each tough question.
+
+  The method comes from a consulting-style deck guide by Calvinkub. We added a helper that builds real, editable charts in PowerPoint. It needs Python. Without it you get a slide-by-slide outline to build by hand. The included sample uses made-up figures. Replace them with your own.
 when:
-  - You need a case competition or strategy recommendation presentation.
+  - You are preparing for a business or strategy case competition.
+  - You have your analysis done and need to turn it into judge-ready slides.
+  - You need a strategy recommendation deck with a clear financial case.
+  - You want backup slides ready for the Q&A round.
+not_for:
+  - "You have no case brief or no analysis yet: start with a plan or a framework, then come back to build the deck."
+  - "You need a board update with this quarter's numbers: use the Board deck builder."
+  - "You are turning a finished paper into talk slides: use the Conference talk slide maker."
+you_give:
+  - The case brief
+  - The judging rubric and the time limit
+  - Your analysis and numbers, each with its source
+  - Team name and date (optional)
+  - Python with python-pptx installed, to build the PowerPoint file (optional)
+you_get:
+  - An editable PowerPoint deck with native charts
+  - An executive summary slide with the answer, reasons and impact
+  - Financials, a rollout plan with stop rules, and risks
+  - Backup slides for likely judge questions
+  - A list of the slide titles, an assumptions list and the likely questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Start with launch-tools/USAGE.md and the included chart builder; the
-    retained upstream renderer produces placeholders.
-  - It works best when your AI can run Python with python-pptx for editable
-    PowerPoint output, or prepare the supplied HTML template.
+  - "Open an AI that can run Python, such as Claude Code, and add the skill folder. In Claude, ChatGPT or Gemini without code, paste the skill text and you get an outline instead."
+  - Give it the case brief, the rubric, the time limit and your analysis with sources.
+  - Read the slide titles only, top to bottom. They should tell your whole story. Ask for rewrites if they read like labels.
+  - Check every number against your own work. Anything marked assumption must be one you agree with.
+  - Open the PowerPoint file. Look at every slide for text that spills over, wrong units and missing source notes.
+  - Practise the Q&A with the backup slides. Add your own for any question it missed.
+how_it_works:
+  - title: Read the case
+    text: It writes the decision in one sentence and checks the rubric and time limit.
+  - title: Build the answer
+    text: It picks one recommendation, two or three reasons that do not overlap, and the evidence for each.
+  - title: Write the slides
+    text: It lays out the standard deck, with a full-sentence title on each slide.
+  - title: Run the titles test
+    text: It reads the titles alone to see if they tell the story, and rewrites weak ones.
+  - title: Check the numbers
+    text: It checks totals, units and sources, and marks every assumption.
+  - title: Build the file
+    text: It makes the PowerPoint with editable charts, then renders each slide to inspect it.
+output_shape: |
+  Deck slide order
+  1. Title
+  2. Executive summary: <recommendation>, <reasons>, <impact>
+  3. Context: <the decision>
+  4. Analysis slides, one chart each
+  5. Financials
+  6. Roadmap with rollout gates
+  7. Risks
+  8. Appendix divider
+  9. Backup slides for likely questions
+  Also: list of titles, assumptions, likely questions
+output_sample:
+  input:
+    - The case brief
+    - The judging rubric and time limit
+    - Your analysis and numbers with their sources
+    - Team name and date (optional)
+  prerequisites:
+    - Python with python-pptx, to build the PowerPoint file
+    - Or any chat AI, for a slide-by-slide outline instead
+  output:
+    - name: Deck file (case.pptx)
+      contains: An editable PowerPoint deck, with native charts on the analysis and financial slides.
+    - name: Executive summary slide
+      contains: Your recommendation, two or three reasons and the quantified impact, right after the title.
+    - name: Financials and rollout slides
+      contains: The financial bridge, a rollout plan with stop rules, and the risks.
+    - name: Backup slides
+      contains: An appendix with one slide for each tough question the judges may ask.
+    - name: Titles, assumptions and likely questions
+      contains: A list of slide titles to test, the assumptions to confirm and the questions to rehearse.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run Python to build the PowerPoint file with real charts.
+    - name: PowerPoint or Google Slides
+      why: You edit and rehearse the final deck there.
+  inputs:
+    - Your model or spreadsheet with the numbers
+    - Past winning decks from the same competition, for style
+    - A teammate to ask the Q&A questions
+terms:
+  - term: Action title
+    meaning: A slide title written as a full sentence that states the takeaway.
+  - term: Titles test
+    meaning: Reading only the slide titles to see if they tell the whole story.
+  - term: python-pptx
+    meaning: A free Python add-on that writes PowerPoint files.

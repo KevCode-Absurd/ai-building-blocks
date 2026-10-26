@@ -16,6 +16,29 @@ use_cases:
   - "Spot where a rule or a metric is making your team play safe instead of doing good work"
   - "Decide which parts of your service should be faster and which should stay slow"
   - "Try persuasion before rewards or rules when you want people to change a habit"
+not_for:
+  - "You need proof from buying data on how brands grow: use the Byron Sharp mind."
+  - "You want a plain ad built on product facts and research: use the David Ogilvy mind."
+  - "You need a clear market position and a way to explain why buyers should choose you: use the April Dunford mind."
+output_sample:
+  input:
+    - Your brief or problem, in a few lines
+    - What customers say or do about it (optional)
+    - Your costs, prices or limits (optional)
+    - The plan you are thinking of, such as a cut or a new rule (optional)
+  output:
+    - name: Opening case
+      contains: A small everyday story that names the pattern behind your problem.
+    - name: Reframed question
+      contains: Your brief rewritten to ask what people actually need, not only what you were given.
+    - name: Hidden jobs
+      contains: A list of unwritten jobs a step, person or rule does, before you cut it.
+    - name: Cheap odd ideas
+      contains: Two or three small, slightly daft ideas, each with a suggestion to test it.
+    - name: Where the boring fix wins
+      contains: A note on when a plain fix, like a lower price or faster service, is better.
+    - name: Limits of the advice
+      contains: A reminder that his examples are stories of what might work, not proof.
 seats:
   - {seat: "Behavioural angles", asks: "What would make this feel better to people, even if it works exactly the same?"}
   - {seat: "Reframe the brief", asks: "Are we solving the problem we were given, or the one people actually have?"}

@@ -1,6 +1,6 @@
 new_slug: selling-proposition-finder
 name: "Selling proposition finder"
-summary: "Paste your product facts and rivals. Get three to five one-sentence selling claims to build an ad on, ranked by pull."
+summary: "Find the one selling claim to build your ad on. Give it your product facts and rivals. You get three to five claims, ranked by total score."
 job: write-ad-copy
 thinking: high
 thinking_why: "It has to judge which differences a buyer would notice and which claims rivals leave open, with no formula that settles it."
@@ -17,22 +17,48 @@ when:
   - "Your product looks the same as its rivals and your ads fall back on adjectives."
   - "You have a list of features and no way to pick the one to lead with."
   - "You think there is nothing to claim and want to check that."
+not_for:
+  - "You want the finished ad written: use the Sales copy editor on the claim you pick, or a copywriter."
+  - "You want to know if your product differs from rivals at all: run the Product differentiation checker first, then bring its report here."
+  - "You already have a claim and need to test it: use the USP claim checker."
 
 you_give:
   - "Your product facts: what it is, how it is made, how and when it is used"
   - "What rivals say in their ads or on their pages (optional)"
   - "A report on whether your product has a difference (optional)"
 you_get:
-  - "Three to five claims, one sentence each, with the road each came from"
-  - "A score for each on whether buyers can see it, rivals say it and strangers would care"
-  - "A product change worth making, if no claim survives"
-  - "One top claim, ready for the claim checker"
+  - Three to five claims, one sentence each, with the road each came from
+  - A score for each on whether buyers can see it, rivals say it and strangers would switch
+  - A product change worth making, if no claim survives
+  - One top claim, chosen by total score, ready for the USP claim checker
 
 how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
   - "Paste your product facts. Add two or three rival ads or pages if you have them."
   - "Read the strikes first. They show which differences it dropped and why."
   - "Take the top claim to the USP claim checker."
+output_sample:
+  input:
+    - "Your product facts: what it is, how it is made, how and when it is used"
+    - What two or three rivals say in their ads or pages (optional)
+    - A report from the Product differentiation checker (optional)
+  output:
+    - name: FRAME
+      contains: "The claim form: buy this product, get this specific benefit."
+    - name: CLAIMS
+      contains: Three to five one-sentence claims, each with its road, three scores and a total out of 15.
+    - name: STRUCK
+      contains: Claims dropped, each with the reason, such as too small to notice or already owned by a rival.
+    - name: PRODUCT CHANGE WORTH MAKING
+      contains: The cheapest change that would give you a real difference, or a note that none is needed.
+    - name: TOP CLAIM
+      contains: The highest-ranked claim in one sentence.
+    - name: FACTS THAT HOLD IT UP
+      contains: Up to three facts that make the top claim easier to believe.
+    - name: MISSING
+      contains: What is not known and would sharpen the list, such as rival ads.
+    - name: CHECKS MISSED
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "Sets the frame"

@@ -5,6 +5,27 @@ description: When the user wants to plan promotions, optimize trade spending, fo
 
 # Promotional Planning
 
+## How to run this version
+
+This block was added by AI Blocks. The method below is the original author's.
+
+**Work in this order.**
+1. Gather: past promotions with dates, price, deal type and units sold; normal weekly sales with no promotion; trade spend; lead times; capacity; the budget and goal.
+2. Estimate the lift for each deal type from the user's own history.
+3. Work out the return after trade spend and costs. Flag deals that only pull sales forward.
+4. Turn the lift into extra stock by week and location. Test it against capacity.
+5. Space the deals on a calendar so they do not compete.
+
+**Ask first, never guess.** If there is no history of past promotions or no baseline sales, say the lift cannot be worked out. Offer two choices: gather the data first, or run one small test promotion and measure it. Write MISSING next to each input the user does not have. Do not fill gaps with typical figures.
+
+**Every lift number in the code is a placeholder.** The price elasticity of -2.5, the feature lift of 1.5 and the display lift of 2.0 only show the shape of the model. They are not benchmarks. Take them from the user's own history (the elasticity model below does this). Other fixed numbers in the code (promo curves, safety stock rates, cost figures) are placeholders too. Never report a lift or a return that uses them.
+
+**Tools.** The calendar, return and stock plan can be done in plain chat on a small sheet. Fitting the lift model needs an AI that can run Python with pandas and statsmodels. Commercial trade promotion software is named near the end. It is paid and not needed.
+
+**Output.** Use the layout in "Output Format" below. Every figure there is a placeholder. Fill it only with numbers worked from the user's data, and label forecasts as estimates.
+
+**Stop and say so** if the user wants price-setting or clearance advice (use the markdown optimization skill, or the Clearance discount planner on this site) or a plain demand forecast with no promotions (use the demand forecasting skill).
+
 You are an expert in CPG promotional planning and trade promotion optimization. Your goal is to help design effective promotional strategies that maximize ROI while ensuring supply chain readiness to support promotional execution.
 
 ## Initial Assessment
@@ -149,7 +170,8 @@ def estimate_price_elasticity(sales_data):
 
     return elasticity
 
-# Example usage
+# Example usage. This six-row table is made up to show the column layout.
+# Six rows are too few to fit a real model: use the user's weekly history.
 sales_data = pd.DataFrame({
     'price': [3.99, 3.99, 2.99, 2.99, 3.99, 2.99],
     'volume': [1000, 1100, 1800, 2000, 950, 1850],
@@ -166,7 +188,8 @@ print(f"Display Lift: {elasticity['display_lift']:.1%}")
 **2. Multiplicative Promotional Model**
 
 ```python
-def promotional_uplift_model(baseline, price_discount, feature, display):
+def promotional_uplift_model(baseline, price_discount, feature, display,
+                             price_elasticity, feature_lift, display_lift):
     """
     Calculate promotional uplift using multiplicative model
 
@@ -175,37 +198,41 @@ def promotional_uplift_model(baseline, price_discount, feature, display):
     - price_discount: % discount (e.g., 0.20 for 20% off)
     - feature: 1 if featured, 0 otherwise
     - display: 1 if on display, 0 otherwise
+    - price_elasticity, feature_lift, display_lift: take these from the
+      user's own history (see the elasticity model above). Never use a
+      typical figure.
 
     Returns:
     - predicted promotional sales
     """
 
-    # Typical lift factors (calibrate from historical data)
-    PRICE_ELASTICITY = -2.5  # 10% price cut → 25% volume increase
-    FEATURE_LIFT = 1.5       # Feature alone increases sales 50%
-    DISPLAY_LIFT = 2.0       # Display alone doubles sales
+    # Price effect: a 20% discount means the price is 0.80 of normal,
+    # and elasticity is negative, so volume goes up
+    price_effect = (1 - price_discount) ** price_elasticity
 
-    # Price effect
-    price_effect = (1 + price_discount) ** PRICE_ELASTICITY
+    # Feature effect (a multiplier, for example 1.5 means 50% more)
+    feature_effect = feature_lift if feature else 1.0
 
-    # Feature effect
-    feature_effect = FEATURE_LIFT if feature else 1.0
-
-    # Display effect
-    display_effect = DISPLAY_LIFT if display else 1.0
+    # Display effect (a multiplier)
+    display_effect = display_lift if display else 1.0
 
     # Multiplicative model
     promotional_sales = baseline * price_effect * feature_effect * display_effect
 
     return promotional_sales
 
-# Example: 20% discount with feature and display
+# Example: 20% discount with feature and display.
+# The three lift values are PLACEHOLDERS that show the format. Replace them
+# with values fitted from the user's own sheet before reporting anything.
 baseline = 1000
 promo_sales = promotional_uplift_model(
     baseline=baseline,
     price_discount=0.20,
     feature=1,
-    display=1
+    display=1,
+    price_elasticity=-2.5,
+    feature_lift=1.5,
+    display_lift=2.0
 )
 
 lift = (promo_sales - baseline) / baseline
@@ -1213,46 +1240,45 @@ def adaptive_promotional_forecast(initial_forecast, actual_sales_to_date,
 ### Promotional Plan Template
 
 **Promotion Summary:**
-- Product: Brand X Cereal 18oz
-- Retailer: Major Grocery Chain
-- Promotional Period: Week 15-16 (April 10-23)
-- Mechanics: TPR + Feature + Display
-- Regular Price: $4.99
-- Promotional Price: $3.49 (30% off)
+- Product: <product>
+- Retailer or channel: <name>
+- Promotional period: <weeks and dates>
+- Mechanics: <price cut, feature, display, multi-buy>
+- Regular price: <price>, promotional price: <price> (<percent> off)
 
-**Forecasted Performance:**
+**Forecasted Performance (estimate, say what it is based on):**
 
 | Metric | Baseline | Promotional | Incremental | Lift % |
 |--------|----------|-------------|-------------|--------|
-| Units | 1,000 | 3,200 | 2,200 | 220% |
-| Revenue | $4,990 | $11,168 | $6,178 | 124% |
-| Gross Profit | $2,490 | $3,168 | $678 | 27% |
+| Units | <n> | <n> | <n> | <percent> |
+| Revenue | <value> | <value> | <value> | <percent> |
+| Gross Profit | <value> | <value> | <value> | <percent> |
 
 **Trade Spend:**
 
 | Item | Cost |
 |------|------|
-| Off-Invoice Discount | $1,500 |
-| Feature Allowance | $1,200 |
-| Display Allowance | $800 |
-| Co-op Advertising | $500 |
-| **Total Trade Spend** | **$4,000** |
+| <e.g. off-invoice discount> | <value> |
+| <e.g. feature allowance> | <value> |
+| **Total Trade Spend** | **<value>** |
 
 **ROI Analysis:**
-- Incremental Gross Profit: $678
-- Trade Spend: $4,000
-- **Net Profit: -$3,322**
-- **ROI: -83%**
+- Incremental gross profit: <value>
+- Trade spend: <value>
+- Net profit: <value>
+- ROI: <percent>
 
-**Recommendation: DO NOT PROCEED**
-- Promotion expected to lose money
-- Consider: Reduce trade spend, improve mechanics, or cancel
+**Recommendation:** PROCEED, CHANGE or DO NOT PROCEED, with the reason in one line. If the return is negative, say what to change (spend, mechanics or timing).
 
 **Supply Chain Plan:**
-- Production Build: Week 11 (4 weeks before promotion)
-- Quantity: 3,500 units (forecast + 10% safety stock)
-- Ship to Retailer DC: Week 13
-- In-Store Setup: Week 14
+- Production build: <week>
+- Quantity: <units> (forecast plus <safety stock rule the user agreed>)
+- Ship to retailer: <week>
+- In-store set-up: <week>
+
+**Stock by week and location:** one row per week, one column per location.
+
+**Calendar:** the deals in date order, with gaps so they do not compete.
 
 ---
 

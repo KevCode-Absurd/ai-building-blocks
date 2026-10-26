@@ -1,6 +1,6 @@
 name: "Winning image ad style finder"
 new_slug: winning-image-ad-style-finder
-summary: "Attach ads with results. Get the style your winners share and new ad plans that test one change."
+summary: "Find the image ad style your best ads share. Attach six or more ads with results. Get a style list and new ad plans that each test one change."
 job: make-image-ads
 thinking: high
 thinking_why: "It studies ads or pages closely and works out why they work."
@@ -17,6 +17,10 @@ when:
   - You have a handful of ads that beat your account's usual and want more like them.
   - Your new ads drift off-brand, or copy the winner so closely they test nothing.
   - You're adding a new product or buyer and want to reuse a style that already works.
+not_for:
+  - "You have fewer than six ads with about 20 sales each: treat your best ad as one example, and wait for more results before you look for a style."
+  - "You only want ad words for a product: use the Fact-based ad copy writer."
+  - "You want finished image ads made from a plan: use the Accurate product image ad maker."
 
 you_give:
   - Six or more of your own ads, with the images attached (your AI can see pictures), dates, spend and results
@@ -32,10 +36,35 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach the images of your measured ads, with spend, results and dates. A results file alone gives only the words half of the style.
-  - Say which result you judge on, such as cost per sale.
-  - Name the product you want new ads for, and paste its facts and a clean product photo.
+  - Attach the images of your ads, with spend, results and dates. A results file alone gives only the words half of the style.
+  - Say which result you judge on, such as cost per sale. Only ads with about 20 sales count, or 100 link clicks if you judge on click rate.
+  - Name the product you want new ads for. Paste its facts and a clean product photo.
   - At the first stop, correct the style. At the second, edit the plans before anything is made.
+output_sample:
+  input:
+    - Six or more of your own ads, as images, with dates, spend and results
+    - The result you judge on, such as cost per sale
+    - The product to sell, with its facts and a clean photo
+    - Your brand file (optional)
+    - How many new ads you want (optional)
+  prerequisites:
+    - An AI that can look at ad images
+    - Your results exported from your ad account
+  output:
+    - name: WORKING FROM
+      contains: The product, the ads, the dates and the result you judge on, so a stale fact is caught early.
+    - name: RANKING
+      contains: Each measured ad with its result, placed in the top, middle or bottom group.
+    - name: STYLE
+      contains: Each trait with its count among winners and losers, kept or dropped, plus a do-not-carry list.
+    - name: NEW ADS
+      contains: Each plan lists what it keeps, the one thing it changes, a draft headline and the fact it rests on.
+    - name: MISSING
+      contains: Images, reasons or small print the AI needed but did not have.
+    - name: CHECKS MISSED
+      contains: Any check the AI could not fix, or the word none.
+    - name: STOP 1
+      contains: What you should correct in the style before anything is made.
 
 how_it_works:
   - title: Says what it's using

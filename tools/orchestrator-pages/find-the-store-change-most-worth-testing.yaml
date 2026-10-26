@@ -1,6 +1,6 @@
 new_slug: find-the-store-change-most-worth-testing
 name: Find the store change most worth testing
-summary: Give it your store numbers and what shoppers do on key pages. Get a profit baseline and a ranked list of tests.
+summary: Find the store change most worth testing. Give it your store numbers and what shoppers do. You get a profit baseline and a ranked test list.
 job: test-store-changes
 thinking: high
 thinking_why: The ranking weighs evidence against profit across three steps. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have traffic but no clear idea what to test on your store next.
   - Your team keeps suggesting changes and you need a fair way to choose.
   - Your conversion rate moved and you want to know whether it affected profit.
+not_for:
+  - Your store gets only a few orders a week. Fix the obvious problems first, such as slow pages or unclear shipping costs, instead of running tests.
+  - You already have a test running and want to know if it worked. Use the A/B test traffic checker to see if you have enough visitors.
+  - Your sales dropped and you want to know why. Use the Ad sales drop analyst to find the cause first.
 you_give:
   - A store report with orders, sessions, revenue, tax, shipping and costs for a date range
   - After the pause, heatmap and scroll map screenshots, notes from about 20 recordings each on the product page and cart, and any survey answers
@@ -29,6 +33,24 @@ how_to_use:
   - Give it a store report for a recent range, with sessions, orders, tax and shipping.
   - When it pauses, watch about 20 recordings each on the product page and cart. Save heatmap screenshots and write down what you saw.
   - Make the repairs list first. Run only the tests it names, one at a time.
+output_sample:
+  input:
+    - "Your store report for a date range: sessions, orders, revenue, tax, shipping and costs"
+    - Heatmap and scroll map screenshots of your product page and cart, saved after the pause
+    - Notes from about 20 recordings each on the product page and cart
+    - Customer reviews or survey answers (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff folder
+    - About an hour to watch recordings and save heatmaps when the workflow pauses
+  output:
+    - name: "Step 1 file: Profit baseline"
+      contains: Your numbers fixed for tax, shipping and bots, revenue and gross profit per visitor, and a trust score.
+    - name: "Step 2 file: Friction list"
+      contains: Friction ranked by page and money at stake, with evidence, a test idea for each and a friction score.
+    - name: "Step 3 file: Test ranking"
+      contains: A fix list, a leaderboard of test ideas, the one or two to run first and the ideas parked.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Set the profit baseline
     text: Fixes the dashboard numbers for tax, shipping and bots, works out revenue and gross profit per visitor, and shows how cold traffic pulls blended conversion down. It scores how far to trust the numbers.

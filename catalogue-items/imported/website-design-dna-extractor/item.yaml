@@ -1,0 +1,43 @@
+slug: website-design-dna-extractor
+name: Website design analyst
+summary: Share a public website link. Get its colours, fonts and layout rules,
+  plus the reasons behind those choices.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+  - type: tool_connection
+    required: true
+outputs:
+  - type: design_direction
+  - type: document
+uses: []
+origin: imported
+package_files: all
+source:
+  by: Sen Lin
+  repo: senlindesign/taste-skill
+  path: .
+  url: https://github.com/senlindesign/taste-skill/tree/6dce223f2f5665d3636ca9a44ec3a7aa1322a9b8
+  licence: MIT
+  licence_file: README.md
+  licence_evidence: "README.md ends with: MIT © 2025 Sen Lin. Upstream has no
+    standalone LICENSE file; see packaged LICENSE notice."
+  commit: 6dce223f2f5665d3636ca9a44ec3a7aa1322a9b8
+  original_name: taste
+  author: Senlin
+  imported: 2026-10-25
+  sha256: 57c17f418cbbcf1f68ff5a3915cdf259cec69695b4db54e14f7a439c0bdcb97e
+version: 1.1.0
+example_pending: true
+credits:
+  - title: Taste skill
+    by: Sen Lin
+    url: https://github.com/senlindesign/taste-skill/tree/6dce223f2f5665d3636ca9a44ec3a7aa1322a9b8
+    used: Original instructions and six reference files copied without changes. AI
+      Blocks added display metadata, provenance and usage notes.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It combines many checks into one scored report.
 new_slug: ai-search-audit
 name: AI search audit
-summary: Give it a website. Get a score for how likely AI search is to cite it,
-  plus fixes. Collects data from websites.
+summary: Run an AI search audit on your website. You get a score out of 100 for how likely AI tools are to cite it, plus fixes ranked by urgency.
 job: get-found-in-search
 headline: AI search audit
-subhead: A score out of 100 for how likely ChatGPT, Perplexity, Claude and
-  Google AI to cite your site, with fixes sorted by urgency. Pages built for AI
-  answers can earn far more mentions, so this shows where you stand.
+subhead: A score out of 100 for how likely ChatGPT, Perplexity, Claude and Google AI to cite your site, with fixes sorted by urgency. Pages built for AI answers can earn far more mentions, so this shows where you stand.
 explain: |
   A score out of 100 for how likely ChatGPT, Perplexity, Claude and Google AI to cite your site, with fixes sorted by urgency. Pages built for AI answers can earn far more mentions, so this shows where you stand.
 
@@ -18,6 +15,10 @@ when:
   - You have good content but get no AI citations.
   - You need a clear to-do list ranked by urgency.
   - You are comparing your site against a rival's.
+not_for:
+  - "You want to rewrite the copy on one page: use your AI chat and paste that page in, this audit does not edit text."
+  - "You need a guarantee of AI mentions: scores are rough guides, and no tool can promise that ChatGPT or Perplexity will cite you."
+  - "Your AI cannot open web pages: it cannot read your site, so ask a web developer or SEO freelancer to check it by hand."
 you_give:
   - Your website address
   - Your main topic or industry (optional)
@@ -28,8 +29,33 @@ you_get:
   - Issues ranked critical to low
   - A 30 day action plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open web pages.
+  - Use an AI that can open web pages, such as Claude, ChatGPT or Gemini with browsing turned on.
+  - Paste the skill into the chat, or upload the skill folder if your AI accepts files.
+  - Add your website address. Add your topic and a rival's site if you have them (optional).
+  - Ask your AI to run the audit and save the result as GEO-AUDIT-REPORT.md.
+  - Read the critical and high issues first, then do the quick wins this week.
+  - Remember the audit only reads your site. It does not change anything on it.
+output_sample:
+  input:
+    - Your website address
+    - Your main topic or industry (optional)
+    - A rival's site to compare against (optional)
+  prerequisites:
+    - An AI that can open web pages
+    - "The five checking skills this audit hands work to: AI citability, platform optimizer, technical, content and schema"
+    - Pandoc and headless Chrome, only if you want a PDF copy of the report
+  output:
+    - name: Executive Summary
+      contains: Your overall score out of 100, a rating, and a short note on your biggest strengths and gaps.
+    - name: Score Breakdown
+      contains: A table of the six area scores, each with its weight and weighted score.
+    - name: Critical, High, Medium and Low issues
+      contains: Four lists of problems found, each with the page it was found on and a fix.
+    - name: Category Deep Dives
+      contains: Detailed notes for each of the six areas, with weak passages and rewrite ideas.
+    - name: Quick Wins
+      contains: Five fixes you can make this week.
+    - name: 30-Day Action Plan
+      contains: A week-by-week checklist of tasks to improve your score.
+    - name: "Appendix: Pages Analyzed"
+      contains: Each page checked, with its title and how many issues it has.

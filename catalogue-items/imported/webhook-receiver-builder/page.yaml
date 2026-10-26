@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a known safe pattern with a few choices.
 new_slug: webhook-receiver-builder
 name: Webhook receiver builder
-summary: Say which events to catch. Get a webhook receiver that checks
-  signatures and handles repeats safely.
+summary: Build a webhook receiver that checks signatures, skips repeat events and queues slow work. Works for Stripe, GitHub and Shopify.
 job: connect-tools
 headline: Webhook receiver builder
-subhead: A webhook receiver that checks each message really came from the
-  sender, handles repeats safely and does not lose events. It is the piece that
-  lets Stripe, GitHub or Shopify tell your app that something happened.
+subhead: A webhook receiver that checks each message really came from the sender, handles repeats safely and does not lose events. It is the piece that lets Stripe, GitHub or Shopify tell your app that something happened.
 explain: |
   A webhook receiver that checks each message really came from the sender, handles repeats safely and does not lose events. It is the piece that lets Stripe, GitHub or Shopify tell your app that something happened.
 
@@ -18,6 +15,10 @@ when:
   - Duplicate events caused double emails or double records.
   - You want to verify webhook signatures properly.
   - Events are being lost when your server is slow or down.
+not_for:
+  - "The provider has no webhooks and only offers an API you must check often: set up a scheduled sync that pulls new data instead."
+  - "You only need to send webhooks out to other apps: this skill builds the side that receives them, so use the provider's own sending tools."
+  - "You want a no-code link between two apps: use the apps' built-in connectors or a plain automation tool instead of writing code."
 you_give:
   - The provider, such as Stripe or GitHub
   - The events to handle
@@ -30,8 +31,32 @@ you_get:
   - Queue and failed-event handling
   - Setup steps for the provider
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Say which provider you use, which events to catch and which server framework you have.
+  - Add where you store data, if you want repeat events tracked in your own database (optional).
+  - Read the code your AI writes. Check that an event is marked done only after its handler works.
+  - Copy the code into your project. This needs a place to run code and a public HTTPS address.
+  - Register the URL and signing secret with your provider, then send a test event.
+output_sample:
+  input:
+    - The provider, such as Stripe or GitHub
+    - The events you want to handle
+    - Your server framework
+    - Where you store data (optional)
+  prerequisites:
+    - An AI that can write code, and ideally read your project files
+    - The signing secret from your provider's dashboard
+    - A public HTTPS address for your server
+  output:
+    - name: Webhook endpoint
+      contains: A hidden POST route that checks the signature on the raw body and replies quickly with the right status code.
+    - name: Event handlers
+      contains: One handler per event type, with unknown event types logged and acknowledged so the provider stops retrying.
+    - name: Duplicate protection
+      contains: A store of processed event IDs so a retried event is not handled twice.
+    - name: Queue and dead letter queue
+      contains: A job queue for slow work and a holding area for events that keep failing.
+    - name: Provider setup steps
+      contains: How to register your URL, set the signing secret and choose which events to send.
+    - name: Testing steps
+      contains: How to send test events to your receiver on your own computer.

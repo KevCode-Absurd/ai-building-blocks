@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must judge which differences matter and explain them.
 new_slug: books-reconciliation-pl
 name: Books reconciler and P&L narrator
-summary: Give it your ledger and payment reports. Get mismatches, duplicates and
-  missing receipts flagged, plus a plain P&L story.
+summary: Match your books to payment reports for the month. Flag mismatches, duplicate entries and missing receipts, then get a plain P&L story.
 job: track-numbers
 headline: Books reconciler and P&L narrator
-subhead: Close the month with fewer surprises. The skill compares your
-  bookkeeping ledger to your payment reports, flags mismatches, duplicates and
-  missing receipts, and then tells the profit and loss story in plain words.
+subhead: Close the month with fewer surprises. The skill compares your bookkeeping ledger to your payment reports, flags mismatches, duplicates and missing receipts, and then tells the profit and loss story in plain words.
 explain: |
   Close the month with fewer surprises. The skill compares your bookkeeping ledger to your payment reports, flags mismatches, duplicates and missing receipts, and then tells the profit and loss story in plain words.
 
@@ -18,6 +15,10 @@ when:
   - You suspect duplicate entries in your ledger.
   - Receipts are missing and you need a list of which ones.
   - You want your P&L explained without accounting jargon.
+not_for:
+  - "You need to check pay for each employee: use payroll-prep, which handles per-employee pay."
+  - "The month is already filed with your tax office: ask your accountant to amend it, since this skill is built for open months."
+  - "You only want a forecast or to send the packet to others: run the full close-month command instead."
 you_give:
   - Your connected ledger or a CSV export
   - Payment processor reports
@@ -29,10 +30,30 @@ you_get:
   - A plain-language P&L summary
   - A step-by-step close checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions, or upload the skill folder if your AI accepts files.
+  - Connect your ledger and at least one payment processor. If you cannot, export CSV files and paste or upload them.
+  - "Optional: connect PayPal, Shopify, Square or Stripe, and give access to your receipts folder on desktop. Without these, the skill asks for exports."
+  - Say "let's close the month" and name the month. It defaults to last month if you do not.
+  - Answer each question as it pauses. It stops at each step and waits for you before moving on.
+  - Check the flagged items and the P&L story before you share the packet. Exporting the packet needs an AI that can make files.
+output_sample:
+  input:
+    - Your ledger, connected or as a CSV export (QuickBooks, Xero, Zoho Books, MYOB or NetSuite)
+    - Your payment reports from PayPal, Shopify, Square or Stripe
+    - The month you want to close
+    - Your receipts folder (optional)
+  prerequisites:
+    - An AI that can read your accounting and payment data, or CSV exports you can paste in
+  output:
+    - name: Needs attention list
+      contains: Ledger entries that do not match your payment settlements, so you can check each one.
+    - name: Suspicious duplicates
+      contains: Entries that look like they were recorded twice, with the reason each was flagged.
+    - name: Receipts check
+      contains: Transactions that have no receipt on file.
+    - name: Payroll cross-check
+      contains: A check of payroll totals against the ledger.
+    - name: P&L narrative
+      contains: A plain-English story of revenue, costs and profit for the month.
+    - name: Close packet
+      contains: An xlsx file and a one-page PDF with the results of the close.

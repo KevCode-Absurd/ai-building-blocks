@@ -1,20 +1,56 @@
 new_slug: set-product-decision-rights
 name: Set product decision rights
-summary: Set who decides product questions. Agree what facts they need and where to take disputes.
+summary: "Set product decision rights: name who decides each product choice, what proof they need, and where disputes go. Get a clear map and review plan."
 job: build-product
 headline: Set product decision rights
-subhead: Share your team roles, product scope and rules. Map each choice to an owner. Get review steps, evidence needs and a path for disputes.
+subhead: Tell your AI about your team, your product and your rules. It maps each product choice to one owner. You get a review plan, the proof each choice needs and a way to settle disputes.
 explain: Share your team roles, product scope and rules. Map each choice to an owner. Get review steps, evidence needs and a path for disputes.
 when:
-  - You want to set product decision rights.
+  - Two people both think a product call is theirs, and work stalls.
+  - A launch or roadmap choice keeps being argued again.
+  - You are adding review meetings and need to say who decides.
+  - An audit or client asks how product choices are made and recorded.
+not_for:
+  - "You need to decide company-level money, hiring or org structure: ask your leadership team or a chief of staff to run that, not this skill."
+  - "You need rules for when code can ship, such as release checks or approvals: use your engineering lead and your release process."
+  - "You want one org chart that fits every team: this skill maps decisions to your own roles and does not impose a structure."
 you_give:
-  - Your product scope, decision types, roles, existing authority, review routines and assurance needs.
+  - Your product scope, and what is out of scope
+  - The decision types you want covered, such as roadmap or launch
+  - Your team roles and who has authority today
+  - Your current review meetings (optional)
+  - Any rules or audits you must meet (optional)
 you_get:
-  - A decision-rights map, review cadence and evidence requirements with exception and escalation records.
+  - A map of who owns each product decision
+  - A review schedule with what goes in and what comes out
+  - The minimum proof needed for each type of decision
+  - Templates to log exceptions and disputes
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or web access is needed.
+  - Paste your product scope, decision types, team roles and current meetings. Add any rules you must meet.
+  - Ask your AI to set the decision rights. If it asks which setup fits, pick light or high-assurance.
+  - Check that every decision has one owner and a clear path for disputes.
+  - Fix anything marked missing, then share the map with your team.
+output_sample:
+  input:
+    - Your product scope and what is in or out
+    - The types of decisions you want to cover
+    - Your team roles and who has authority today
+    - Your current review meetings (optional)
+    - Any rules or audits you must meet (optional)
+  output:
+    - name: Operating mode
+      contains: A choice between a light or high-assurance setup, based on your rules and team.
+    - name: Decision rights
+      contains: For each decision type, the owner, who is consulted, the proof needed and the path if it is disputed.
+    - name: Review cadences
+      contains: Intake, portfolio, roadmap, experiment, launch and lifecycle reviews, each with inputs, outputs and an owner.
+    - name: Evidence standards
+      contains: The minimum proof each type of decision needs before it can pass.
+    - name: Exception record
+      contains: A template for logging a waived rule, with the reason and when to look at it again.
+    - name: Escalation record
+      contains: A template for logging a contested decision, who settled it and what would reopen it.
 how_it_works:
   - title: Choose an operating mode
     text: Adapt lightweight or high-assurance governance to actual obligations and team context.

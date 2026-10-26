@@ -8,6 +8,8 @@ job: strategy
 level: intermediate
 inputs:
   - {type: plan, required: true}
+  - {type: audit_report, required: false}
+  - {type: council_brief, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

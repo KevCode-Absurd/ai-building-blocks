@@ -2,35 +2,60 @@ thinking: medium
 thinking_why: It must pick a format that gives real value and still leads to your offer.
 new_slug: free-giveaway-designer
 name: Free giveaway designer
-summary: Tell it your audience and what you sell next. Get a free guide or
-  checklist idea worth an email address.
+summary: Plan a free guide, checklist or template people will trade an email for. Give it your audience and next offer. Get a giveaway idea and outline.
 job: make-offer
 headline: Free giveaway designer
-subhead: One free guide, checklist or template idea that is good enough to trade
-  for an email address, plus a plan to make it. It avoids thin PDFs that people
-  regret downloading.
+subhead: Give it your audience and what you sell next. It picks one giveaway that is worth an email address. You get the format, an outline, form questions and a plan for the follow-up.
 explain: |
   One free guide, checklist or template idea that is good enough to trade for an email address, plus a plan to make it. It avoids thin PDFs that people regret downloading.
 
   First it asks whether a giveaway is the right move for your audience and sales cycle. Then it picks a format that fits, such as a checklist, template, swipe file or mini course, and makes sure it solves one specific problem a reader would pay to fix. It also designs the form so the right people sign up, and it links the giveaway to the next email and product you sell. Warning signs of weak bait are listed.
 when:
   - Your site gets visitors but few email signups.
-  - Your current free download gets signups from people who never buy.
-  - You need a giveaway idea that matches what you sell next.
-  - You are choosing between a checklist, template or course.
+  - Your free download brings signups from people who never buy.
+  - You need a giveaway idea that fits what you sell next.
+  - You are choosing between a checklist, a template and a course.
+not_for:
+  - "You want people to book a sales call or start a free trial: use a simple call-booking page or a trial signup page instead."
+  - "You want a quiz or calculator built: those need a web tool, so ask a developer or a no-code tool builder."
+  - "You already have a giveaway and only need the follow-up emails: write the emails with your email tool's own sequence editor."
 you_give:
-  - Your audience
-  - What you sell next
+  - Who your audience is
+  - What you plan to sell next
   - Topics your audience asks about
-  - Existing giveaways and their results (optional)
+  - Your current giveaways and how they did (optional)
 you_get:
-  - Giveaway idea with format
-  - Outline of what goes inside
-  - Signup form questions
-  - Follow-up email link to your offer
-  - Checks for weak or bait-like ideas
+  - A check on whether a giveaway fits your audience
+  - One giveaway idea with its format and the reason it fits
+  - An outline of what goes inside
+  - Questions for your signup form
+  - A plan for the follow-up emails that lead to your offer
+  - Warning signs of a weak giveaway
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Describe your audience and what you sell next in a few lines.
+  - Add the topics your audience asks about. Add your old giveaways and results if you have them.
+  - Answer any questions it asks about your audience and how people buy.
+  - Read the format choice and the one-problem promise first. Ask for a change if either feels too broad.
+  - Use the outline to make the giveaway. Then set up the form questions and follow-up emails.
+output_sample:
+  input:
+    - Who your audience is
+    - What you plan to sell next
+    - Topics your audience asks about
+    - Your current giveaways and how they did (optional)
+  output:
+    - name: Decision check
+      contains: Whether a giveaway fits your audience and sales cycle, and what to do if it does not.
+    - name: Format choice
+      contains: The best fit among checklist, template, swipe file, mini-course, free tool or ebook, with the reason.
+    - name: One-problem promise
+      contains: The single problem the giveaway solves, and the title that says so.
+    - name: Outline
+      contains: What goes inside the giveaway, in order, so each part gives value on its own.
+    - name: Signup form questions
+      contains: The fields to ask so the right people sign up.
+    - name: Follow-up plan
+      contains: How the first emails lead from the giveaway to your next offer.
+    - name: Weak-bait checks
+      contains: Warning signs that the idea is thin, too broad or likely to attract people who never buy.

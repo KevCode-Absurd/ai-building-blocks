@@ -1,6 +1,6 @@
 new_slug: motion-graphics-ad-script
 name: "Motion graphics video ad script writer"
-summary: "Paste your facts and offer. Get a motion-graphics video script and a sourced fact sheet."
+summary: "Write a motion graphics video ad script from your product facts. Get a look card, a sourced fact sheet, a shot table and a cast note."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your buyers already know the problem and want facts, contents or the offer.
   - You have real figures (a study, a count, a spec) and want them shown clearly.
   - You want a graphic video ad in your exact brand colours and fonts, built so no number comes out wrong.
+not_for:
+  - "You want a still ad: use the Single image ad planner, which plans one designed image from the same facts."
+  - "Your buyer must first feel the problem, or your proof is a person's story: use a filmed ad or a plain written script instead."
+  - "You have no product photo, no real facts or no sources for your figures: gather those first, or the script will leave gaps marked MISSING."
 
 you_give:
   - The selling idea, or a script you already have
@@ -37,6 +41,28 @@ how_to_use:
   - Say the length, such as "20 seconds", and who the ad is for.
   - Check the fact sheet first. Every number on screen should be on it.
   - Take the script and cast note to "Motion graphics video build planner". It takes it from there, with the product sheet, storyboard and the build in code.
+output_sample:
+  input:
+    - Your selling idea, or a script you already have
+    - Your product facts, offer terms and approved claims
+    - Your colours, fonts and a clean product photo
+    - Who the ad is for and what stops them buying
+    - Length and shape, such as 20 seconds and tall (optional)
+  output:
+    - name: Fit
+      contains: One line on whether a graphic ad suits this buyer.
+    - name: Look card
+      contains: The frame, colour jobs, type, product cutout and motion rules every shot follows.
+    - name: Fact sheet
+      contains: Every number, ingredient, step and price term the ad may show, each with its source.
+    - name: Shot table
+      contains: One row per shot with narration, picture and move, on-screen text, hold time and build note.
+    - name: Notes
+      contains: What was inferred, which facts were left out and why, and any MISSING items.
+    - name: Cast note
+      contains: Your product as the avatar, the views needed, the narrator's voice and what never changes.
+    - name: Checks missed
+      contains: One line for each of its own checks the script still missed, or none.
 
 how_it_works:
   - title: Checks it fits

@@ -1,6 +1,6 @@
 new_slug: desire-section-writer
 name: "Desire section writer"
-summary: "Paste your buyer brief and product facts. Get copy that sharpens the want, using only moves your facts can back."
+summary: "Write the desire section of your sales page. Give it your buyer brief and product facts. You get short copy blocks that make the want clearer, in order."
 job: write-ad-copy
 thinking: high
 thinking_why: "It chooses which moves fit, writes several blocks and keeps them from repeating each other. Use your strongest model."
@@ -17,6 +17,10 @@ when:
   - Your headline gets clicks but the page does not convert.
   - Your copy lists features and says little about what life looks like after.
   - Buyers say they like it but object to the price.
+not_for:
+  - "You only need a headline: write it with your buyer brief, then come back here for the copy below it."
+  - "You need proof, quotes or a guarantee section: use the Belief ladder builder, which builds belief step by step."
+  - "You want to polish finished copy for tone or flow: use the Sales copy editor."
 
 you_give:
   - A buyer brief, with the one want and where your buyers sit on awareness
@@ -34,6 +38,24 @@ how_to_use:
   - Paste the brief and your product facts. Be exact about results and time.
   - Read which moves were dropped and why. Add the missing fact if you have it.
   - Pass the draft to "Belief ladder builder" if any block is marked for preparation.
+output_sample:
+  input:
+    - Your buyer brief, with the one want and how much your buyers already know
+    - "Your product facts: what it does step by step, results with numbers, time, guarantee"
+    - Your headline (optional)
+  output:
+    - name: The want
+      contains: The one want your buyers have and the one thing the product does for it.
+    - name: Moves
+      contains: Which ways of sharpening the want were kept or dropped, each with the fact behind it.
+    - name: The section
+      contains: One labelled block of 40 to 80 words per move, in an order that builds the want, strongest last.
+    - name: Needs preparation
+      contains: Blocks that ask the reader to believe more than the earlier blocks earned.
+    - name: Missing
+      contains: Facts you did not give, each with the move it would allow.
+    - name: Checks missed
+      contains: One line for each check the draft still fails, or none.
 
 how_it_works:
   - title: Fixes the want

@@ -1,0 +1,133 @@
+name: Cross-Border E-Commerce Specialist agent
+summary: Get a cross-border ecommerce plan for Amazon, Shopee, Temu or TikTok Shop with margin per product, compliance to-dos and a launch order.
+headline: Cross-Border E-Commerce Specialist agent
+subhead: Tell it what you sell, where you make it and which countries you want to reach. It checks the margin on each product, lists the rules and papers each market asks for, and picks the order to launch. You get a plan and a list of points to confirm with a tax or customs adviser.
+job: run-your-store
+thinking: high
+thinking_why: It weighs cost, shipping, tax and rules across several countries and must not guess any of them. Use a model that reasons well and says when it is unsure.
+explain: |-
+  Selling abroad is not "list your best seller in a new country". Each marketplace sends traffic in its own way, each country has its own product rules and taxes, and shipping can eat the profit. A cross-border ecommerce plan has to answer three questions for every product. Can you legally sell it there? What is left after every cost? Which market should come first?
+
+  This agent works in that order. It starts with a full cost line for each product: buying or making it, shipping to the market, storage, the marketplace fee, ads, returns and currency swings. Then it lists what each target market needs before you list, such as safety marks, tax registration, packaging rules and brand checks. Only then does it plan the listing language, ads and launch order. It treats machine-translated listings as a risk and asks for a native-speaker review.
+
+  It keeps your facts apart from its assumptions. The profile's margin ranges and ad targets are goals from the original author, not results for your business. Tax, customs and product rules change by country, so the agent names each one for you to confirm with a qualified adviser. It never files anything.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You make or source a product at home and want to sell it on Amazon, Shopee, Lazada, Temu or TikTok Shop in other countries.
+  - You are choosing between two or three countries and want to know which to launch in first.
+  - A buyer in another country asks for your product and you do not know what rules or papers you need.
+  - You sell in one country and want a cost line per product before you ship stock overseas.
+not_for:
+  - You want to file VAT, sales tax or customs forms. Ask a customs broker or tax adviser. The Store tax setup planner helps with tax settings in your own store.
+  - You already know the product and market, and only want the Amazon landed cost or fees worked out. Use the Landed cost calculator or the Amazon fee and margin checker.
+  - You want to sell inside China. Use the China E-Commerce Operator agent.
+  - You want the Amazon title and bullets written. Use the Amazon listing writer.
+you_give:
+  - What you sell, with the price you plan to charge and what each unit costs you to make or buy.
+  - Where it is made and where you ship from.
+  - The countries or marketplaces you want to reach, such as Amazon US, Shopee or TikTok Shop.
+  - Your size and weight per unit, and how you plan to ship (optional)
+  - Your budget, your team size and the date you want to launch (optional)
+you_get:
+  - A cost line for each product, from your cost to profit per unit in each market
+  - A list of rules and papers each market needs before you list, with what to confirm and with whom
+  - A ranked choice of which market to try first, and why
+  - A launch plan for listings, ads and stock for the first 90 days
+  - A list of missing numbers and facts to check before you ship
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste your products with price and cost, where they are made, and the countries you are thinking about. No code or web access is needed.
+  - Type "Build my cross-border plan. Cost line first, then compliance, then market order. Mark anything you are guessing and do not invent rates."
+  - Read the cost line first. Fix any cost it got wrong and ask it to run the plan again.
+  - Take the compliance list to a customs broker or tax adviser. Check each rule, fee and tax rate on the official source for that country before you ship.
+  - Start with the one market it ranks first and one product. Keep the rest of the plan for later.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms your products, where they are made, your target countries and your limits. Anything missing is asked once, then marked MISSING.
+  - title: Build the cost line
+    text: For each product and market it adds buying cost, shipping, storage, marketplace fee, ads, returns and currency risk. You supply the rates.
+  - title: List what each market needs
+    text: It names safety marks, tax registration, packaging rules, brand checks and banned items to confirm, one market at a time.
+  - title: Rank the markets
+    text: It compares markets on profit left, effort to comply, shipping time and how the marketplace sends buyers.
+  - title: Plan the launch
+    text: It plans listing language with native review, ads by stage, and stock for the first 90 days.
+  - title: Hand back the checks
+    text: It separates facts from assumptions, lists missing numbers and says what needs a qualified adviser.
+output_shape: |-
+  SCOPE
+    Products <list> | Made in <place> | Target markets <list> | Limits <budget, team, date>
+
+  COST LINE
+    <product> | <market> | <price> | <product cost> | <shipping and storage> | <marketplace fee> | <ads and returns> | <left per unit>
+
+  COMPLIANCE LIST
+    <market> | <rule or paper> | <why it applies> | <who to confirm with> | <status: Seen, Not seen or Not supplied>
+
+  MARKET ORDER
+    <rank> | <market> | <reason> | <main risk>
+
+  90-DAY LAUNCH PLAN
+    Days 0 to 30 <steps> | Days 30 to 60 <steps> | Days 60 to 90 <steps>
+
+  GAPS AND CHECKS
+    <missing number or rule> | <why it matters> | <where to check>
+output_sample:
+  input:
+    - What you sell, with your price and unit cost
+    - Where it is made and the countries you want to reach
+    - Size, weight and how you plan to ship (optional)
+    - Your budget, team size and launch date (optional)
+  prerequisites:
+    - An AI that can read files, if you attach a price sheet
+  output:
+    - name: Scope
+      contains: The products, markets and limits the plan was built from.
+    - name: Cost line
+      contains: Profit left per unit in each market after shipping, fees, ads, returns and currency risk.
+    - name: Compliance list
+      contains: Each rule or paper a market needs, who to confirm it with, and whether you showed proof.
+    - name: Market order
+      contains: Markets ranked for a first launch, each with the reason and the main risk.
+    - name: 90-day launch plan
+      contains: Listing, ad and stock steps for days 0 to 30, 30 to 60 and 60 to 90.
+    - name: Gaps and checks
+      contains: Missing numbers, assumptions and what needs an adviser before you ship.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads your price sheet or supplier quote and builds the cost line from your real figures.
+  inputs:
+    - Your supplier quote and the shipping quote from your freight company.
+    - The marketplace fee table for each market, copied from the marketplace's own seller pages.
+    - Any safety or quality certificates you already hold.
+terms:
+  - term: Cross-border ecommerce
+    meaning: Selling products to buyers in another country, usually through an online marketplace.
+  - term: FBA
+    meaning: Fulfilment by Amazon. You send stock to Amazon, and Amazon stores it, ships it and handles returns.
+  - term: VAT and sales tax
+    meaning: Taxes added to a sale. The rules depend on where the buyer is. Ask a tax adviser which apply to you.
+  - term: Certification mark
+    meaning: A safety label some products need before sale, such as CE in Europe or FCC in the United States.
+  - term: Landed cost
+    meaning: What a product costs by the time it reaches the market, with shipping and duties added.
+tweaks:
+  - what: Markets
+    how: Name two or three countries at most. A plan for ten markets stays thin and hard to check.
+  - what: Products
+    how: Start with one product. Add others once the first one shows a profit in the cost line.
+  - what: Rates
+    how: Paste real fee tables and quotes. The agent never fills a missing rate with a guess.
+improve:
+  - Keep the cost line with your supplier quotes, and update it when a rate or exchange rate changes.
+  - After your first month on a marketplace, paste your results back and ask what to change.
+  - Pair it with the Amazon listing writer once you pick your first market.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

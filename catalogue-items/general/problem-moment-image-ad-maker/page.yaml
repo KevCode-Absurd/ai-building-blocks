@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: problem-moment-image-ad-maker
 name: "Problem moment image ad maker"
-summary: "Paste your story ad. Get a phone-photo image prompt of the problem moment and a caption line."
+summary: "Paste your story ad. Get a problem moment image ad: a phone-photo prompt of the instant the problem bites, plus a short line for under the image."
 job: make-image-ads
 
 headline: "Problem moment image ad maker"
@@ -17,6 +17,10 @@ when:
   - You have a story ad and need its first picture, and you don't know which type to try.
   - Another picture type can't be made honestly from your story (no note, no review, no sourced fact).
   - Your current image ads show the product on a clean background and people scroll past them.
+not_for:
+  - "Your problem shows mainly on the body: use the visible-symptom-image-ad-maker, which is built for that."
+  - "Nobody would photograph the moment: use the hand-drawn-story-image-ad-maker instead."
+  - "You have no story ad yet: write one first, or describe the problem in plain words and let this skill start from that."
 
 you_give:
   - Your approved story ad
@@ -34,6 +38,32 @@ how_to_use:
   - Add one line on who the buyer is and when the problem hits, if the story doesn't say.
   - Paste the image prompt into your image tool and make one square picture.
   - Put the picture next to your story's first line. If the person is posing or smiling, make it again.
+output_sample:
+  input:
+    - Your approved story ad
+    - Who the buyer is and when the problem hits them (optional)
+    - Your brand's places, light and anything you never show (optional)
+  prerequisites:
+    - An image tool to turn the prompt into a picture, such as ChatGPT, Gemini or Higgsfield. Free plans have daily limits and some tools are paid.
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: Where and when
+      contains: The place, the time of day and what is within reach.
+    - name: The instant
+      contains: The one action the picture catches, in the present tense.
+    - name: Who held the phone
+      contains: Whether the buyer or someone in the room took the photo, and the angle that follows.
+    - name: The person
+      contains: "A made-up adult: age, clothes, what the hands hold and how much face shows."
+    - name: Line under the image
+      contains: A short plain caption of about 27 characters.
+    - name: Flags
+      contains: Anything the AI guessed and what stays out of the frame.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt, ready to paste into your image tool.
+    - name: Checks missed
+      contains: One line for each check the prompt still fails, or none.
 
 how_it_works:
   - title: Sets the house rules

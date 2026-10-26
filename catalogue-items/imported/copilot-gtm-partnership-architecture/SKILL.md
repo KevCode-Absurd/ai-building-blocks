@@ -9,6 +9,33 @@ metadata:
 
 # Partnership Architecture
 
+## Working in a chat (added by AI Blocks)
+
+The frameworks below are the original author's and are unchanged. This section tells you how to run them in a chat.
+
+**What you need.** Ask once, in one message, for anything you do not have:
+- What the product does and who buys it.
+- The partners, or kinds of partner, being weighed.
+- What each side would put in (money, people, time) and what each would lose if the deal failed.
+- The goal for the program, such as revenue or reach.
+
+If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent a partner, a commitment, a customer or a number. If there is no information on what each side puts in, stop after the "skin in the game" test and ask.
+
+**What you hand back**, in this order:
+1. Real partnership test for each deal: what each side puts in, what each loses if it fails, and a verdict (partnership or handshake).
+2. Leverage type (requirement, economic, competitive, customer or co-marketing) with the evidence given. Say "no evidence given" if there is none.
+3. Build or partner call, with the decision tree path.
+4. Tier for each partner (1 to 3), with what you give and what they give.
+5. Crawl, walk, run plan with dates, one measure per phase and a go or no-go line.
+6. Partner charter (goals, value exchange, timeline, measures, governance, exit rule).
+7. Co-marketing checklist: before launch, launch week, after launch.
+8. `MISSING:` list.
+
+**Rules.**
+- The figures in this skill (20% improvement, 70% adoption, "3x faster", "8-figure ARR", price and support multiples) come from the author's own experience. They are not benchmarks. Offer them as starting points, label them that way, and ask the person for their own go or no-go lines.
+- Do not claim that a partner's program rules say something unless the person pasted those rules.
+- This skill needs no code, files or paid tools.
+
 Build and scale partner ecosystems that drive revenue and platform adoption. These aren't theory — they're patterns from building partner programs that drove 8-figure ARR and observing partnerships with real economic commitment.
 
 ## When to Use

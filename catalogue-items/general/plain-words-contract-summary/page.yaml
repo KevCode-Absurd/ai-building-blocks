@@ -1,6 +1,6 @@
 new_slug: plain-words-contract-summary
 name: Plain-words contract summary
-summary: Paste a contract. Get a two-minute summary of what you owe, what they owe and the risky clauses.
+summary: "Paste a contract and get a plain-words contract summary: what you owe, what they owe, how to leave, and the clauses that could cost you."
 job: check-contracts
 thinking: medium
 thinking_why: It has to read clauses closely and flag the ones that could cost you.
@@ -11,6 +11,10 @@ when:
   - You have a contract to sign and no time to read every line.
   - You want to know what to ask before you call a lawyer.
   - You want a quick map of a contract you already signed.
+not_for:
+  - "You are in a dispute or have court papers: see a lawyer, because a summary cannot judge your case."
+  - "You are signing a large or high-risk deal: have a qualified lawyer read it, and use this only to prepare your questions."
+  - "You need every check, amendments included: use the Contract plain-words summary writer."
 you_give:
   - The full contract text
   - Which party you are
@@ -25,6 +29,28 @@ how_to_use:
   - Under it, paste the contract text and which party you are.
   - Send it and read the result.
   - Check each flagged clause in the original before you act.
+output_sample:
+  input:
+    - The full contract text
+    - Which party you are
+    - What matters most to you, such as price or exit (optional)
+  output:
+    - name: WHAT IT IS
+      contains: One line on the kind of deal, who the parties are and the dates it runs.
+    - name: YOUR DUTIES
+      contains: What you must do, as short bullets with section numbers.
+    - name: THEIR DUTIES
+      contains: What the other side must do, as short bullets with section numbers.
+    - name: MONEY AND DATES
+      contains: What is paid, by whom, and when each payment or deadline falls.
+    - name: HOW IT ENDS
+      contains: How either side can leave, the notice needed and what happens at renewal.
+    - name: WATCH THESE CLAUSES
+      contains: Clauses that could cost you, with section number, a few quoted words and the plain meaning.
+    - name: VAGUE OR MISSING
+      contains: Anything unclear, undefined or left to be agreed later.
+    - name: QUESTIONS TO ASK
+      contains: Questions to put to the other side or a lawyer before you sign.
 how_it_works:
   - title: Map it
     text: What it is, who owes what, and the dates.

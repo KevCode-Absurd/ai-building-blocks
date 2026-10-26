@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Designing fair measures needs careful reasoning.
 new_slug: agent-system-tester
 name: Agent system tester
-summary: Describe your AI agent. Get a way to measure how well it works and
-  compare changes.
+summary: "Build an AI agent testing plan: a scoring rubric, test tasks and pass marks, so you can tell if a change made your agent better or worse."
 job: test-and-fix-code
 headline: Agent system tester
-subhead: A way to measure how well your AI agent works, so you can tell if a
-  change made it better or worse. Agents answer differently each run and can
-  reach a goal by several paths, so one pass or fail test is not enough.
+subhead: A way to measure how well your AI agent works, so you can tell if a change made it better or worse. Agents answer differently each run and can reach a goal by several paths, so one pass or fail test is not enough.
 explain: |
   A way to measure how well your AI agent works, so you can tell if a change made it better or worse. Agents answer differently each run and can reach a goal by several paths, so one pass or fail test is not enough.
 
@@ -18,6 +15,10 @@ when:
   - You want to catch regressions before you ship an update.
   - You are comparing two set-ups of the same agent.
   - You need a pass mark an agent must hit before release.
+not_for:
+  - "You only need to check one answer or a single-answer task: read it yourself or run a quick spot-check instead."
+  - "You want to fix bugs in ordinary code: use a normal unit test or ask your AI to review the code directly."
+  - "You want live monitoring with alerts and dashboards: use your own monitoring tool, since this gives you a plan, not a running service."
 you_give:
   - A description of what your agent does
   - Example tasks and good answers (optional)
@@ -29,7 +30,31 @@ you_get:
   - A judging plan using AI and human review
   - Pass marks to use as a release gate
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Describe what your agent does. Add example tasks and good answers if you have them (optional).
+  - Say which changes you want to compare, and your token or cost limits (optional).
+  - Read the rubric and test tasks it gives you. Change any part that does not fit your agent.
+  - Run your agent on the test tasks, before and after your change. Paste the results back so your AI can score them.
+  - Check the tricky cases yourself, then compare the scores to the pass marks. The skill only writes the plan. Automating the tests needs code running and an AI judge, which you set up yourself.
+output_sample:
+  input:
+    - A description of what your agent does
+    - Example tasks and good answers (optional)
+    - The changes you want to compare
+    - Your token or cost limits (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Code running and an AI judge key only if you want to automate the tests (optional)
+  output:
+    - name: Scoring rubric
+      contains: Quality parts such as accuracy, completeness, source quality and tool efficiency, each with level descriptions and a weight.
+    - name: Test tasks
+      contains: A set of tasks from simple to very complex, with expected answers where you gave them.
+    - name: Judging plan
+      contains: How an AI judge scores the results and which tricky cases a person should check.
+    - name: Token budget
+      contains: A realistic token limit to test with, since token use drives much of an agent's results.
+    - name: Pass marks
+      contains: The overall score an agent must reach before release, based on your use case.
+    - name: Test report layout
+      contains: A table of tasks by rubric part with scores, pass or fail against the gate, and tokens used.

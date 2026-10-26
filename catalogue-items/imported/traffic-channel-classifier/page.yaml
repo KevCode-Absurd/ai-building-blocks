@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows fixed rules, but odd source data needs judgement.
 new_slug: traffic-channel-classifier
 name: Traffic channel classifier
-summary: Give it your visits and orders. Get every one sorted into the same 11
-  channels, whatever tool it came from.
+summary: Sort your visits and orders into the same 11 traffic channels, whatever tool they came from. Use it as a traffic channel classifier.
 job: track-numbers
 headline: Traffic channel classifier
-subhead: Give it your visits and orders. Get every one sorted into the same 11
-  channels, whatever tool it came from. Bring visit or order rows with source,
-  medium, referrer and click ID fields. Use the result to plan your next step.
+subhead: Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from. Bring visit or order rows with source, medium, referrer and click ID fields. Use the result to plan your next step.
 explain: |
   Every visit and order gets one of the same 11 channel labels, whether it came from GA4, a tracking pixel, Shopify or an ad network. Your reports stop disagreeing about what counts as paid social or email.
 
@@ -18,6 +15,10 @@ when:
   - You are joining data from several sources and need one label set.
   - You want a BigQuery function that sorts sessions into channels.
   - You need to explain why a visit was labelled paid or organic.
+not_for:
+  - "You want to prove ad spend or return on ad spend: use your ad platform's own reports, because a click ID does not prove money was spent."
+  - "You only need a quick one-off label for a few rows and have no code tools: sort them by hand in a spreadsheet."
+  - "You need to know which ad caused a sale: use your ad platform's reports or ask your analyst, since channel labels do not show cause."
 you_give:
   - Visit or order rows with source, medium, referrer and click ID fields
   - The source system, such as GA4 or Shopify
@@ -29,9 +30,31 @@ you_get:
   - A BigQuery function
   - Test cases to check the setup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Node code, or SQL on your own BigQuery
-    data.
+  - Download the skill folder, or paste the skill text into a chat with your AI.
+  - Check you have what you need. The script needs Node. The BigQuery function needs your own BigQuery data and may cost money.
+  - Paste or upload your rows. Say which system they came from, such as GA4 or Shopify.
+  - Ask your AI to follow the skill and label each row. Ask it to keep the rule and raw signals next to each label.
+  - Check any rows labelled Other. Add native labels or landing page URLs if you have them, then run again.
+  - Run the test cases after any change to make sure the labels still match.
+output_sample:
+  input:
+    - Visit or order rows with source, medium, referrer and click ID fields
+    - The source system, such as GA4 or Shopify
+    - Native channel labels already in your data (optional)
+    - Landing page URLs (optional)
+  prerequisites:
+    - An AI that can run Node code, to use the classifier script
+    - A BigQuery project, only if you want to use the BigQuery function (BigQuery may cost money)
+  output:
+    - name: Channel label
+      contains: "One of 11 channels for each row: Paid Search, Paid Social, Paid Other, Organic Search, Organic Social, Email, SMS, Direct, Referral, Affiliate or Other."
+    - name: rule_id
+      contains: The rule that chose each label, so you can explain why a visit was called paid or organic.
+    - name: taxonomy_version
+      contains: The version of the label set used, so results stay comparable over time.
+    - name: Raw signals
+      contains: Your original source, medium, referrer and click ID values, kept next to the label.
+    - name: classify_channels.sql
+      contains: A BigQuery function that takes one JSON string and returns the channel label.
+    - name: Test cases
+      contains: Fixed sample cases and a check script to confirm the setup still gives the same labels.

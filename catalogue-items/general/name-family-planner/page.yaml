@@ -1,6 +1,6 @@
 new_slug: name-family-planner
 name: "Name family planner"
-summary: "Describe your world, brand or product range. Get names from one root, each with a meaning and history."
+summary: "Plan a set of names that sound like one family. Give your world or product range and get names built from one root, each with a meaning."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It must keep sound rules consistent across many names and judge how they read aloud."
@@ -17,6 +17,10 @@ when:
   - "You are naming characters, places or a fictional world and want them to feel connected."
   - "You are naming a product range or a set of plans and want them to sound like one family."
   - "Your current names clash in sound or came from different places."
+not_for:
+  - "You need a final brand name that is free to use: run a trademark and domain search, or ask a naming agency, because this skill cannot say a name is available."
+  - "You need one name only: ask your AI for a handful of ideas, since a root and sound rules are too much work for one name."
+  - "You need real word meanings from a real language: check a dictionary or ask a speaker, because older forms and histories here are invented unless you give a real source."
 
 you_give:
   - "The world, brand or range in a few sentences, and its tone"
@@ -36,6 +40,30 @@ how_to_use:
   - "Say how many names you need and what each is for."
   - "Read the names aloud and mark any you dislike."
   - "Ask it to rebuild only the ones you marked, from the same roots."
+output_sample:
+  input:
+    - Your world, brand or product range, and its tone
+    - How many names you need and what each one names
+    - A language or region you like (optional)
+    - Your brand file (optional)
+    - Names you already have (optional)
+  output:
+    - name: ROOT
+      contains: The one source language or sound style chosen, with a line on why it fits.
+    - name: SOUND RULES
+      contains: Up to six short rules on the sounds this source likes and avoids.
+    - name: WORD LIST
+      contains: Ten to twenty root words, each with a plain meaning.
+    - name: NAMES
+      contains: Each name with what it names, its roots, meaning, older form and a line of history.
+    - name: DROPPED
+      contains: Names removed because they clashed, were hard to say or carried an unwanted meaning, and why.
+    - name: LEFT HALF-EXPLAINED
+      contains: A few names whose history is left unsaid on purpose.
+    - name: MISSING
+      contains: Gaps where you gave no information, so nothing was invented.
+    - name: CHECKS MISSED
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "Choose one root"

@@ -1,52 +1,92 @@
 new_slug: make-onboarding-instructions-match-the-product
 name: Make onboarding instructions match the product
 headline: Make onboarding instructions match the product
-summary: Share the source files. Get a corrected first-use flow, revised labels and a walkthrough checklist.
+summary: Fix first-use instructions that name buttons that moved or are gone. You get a corrected first-use path, new labels and a screen-by-screen checklist.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A corrected first-use flow, revised labels and a walkthrough checklist. Share the current onboarding screens, help text, supported setup path and common questions. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your current onboarding screens, help text and the first result a new user should reach. Your AI checks each instruction against the real screens, picks the shortest path to that first result, and rewrites labels in words your users already know. You get a corrected first-use flow and a walkthrough checklist.
 explain: |-
-  A corrected first-use flow, revised labels and a walkthrough checklist.
+  Onboarding goes out of date faster than the product. A tooltip says click Projects, but the menu now says Workspaces. A welcome email says connect your account in Settings, but the button moved. New users get stuck on the first day, and they blame themselves.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Each instruction refers to a real control and the user can reach a meaningful first result. Missing tools or evidence stay visible in the final summary.
+  This workflow checks each instruction against the screens you give it. First it picks the smallest path to the first useful result and marks any step that points to a control it cannot find. Then it rewrites the labels and prompts in the words your users already use. Last it plans optional help for the revised path, with skip, resume and finish rules.
+
+  It compares text and screens. It cannot open your live product, so the walkthrough checklist is for a person to run. It does not invent user research. Where it has no evidence about your users, it says so before it suggests a change.
 when:
-  - You need a corrected first-use flow, revised labels and a walkthrough checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You renamed or moved a menu and the welcome tour, emails and help pages still use the old names.
+  - New users ask support the same first-week question, and the answer is already in your help text.
+  - A new designer or product manager joins and finds three versions of the setup path.
+  - You are about to ship a redesign and want the first-use text checked against the new screens.
+not_for:
+  - Your product has no screens yet to compare with. Use the First-use onboarding designer on its own to plan the path.
+  - You only want a tour built for a path you already trust. Use the In-app tour designer.
+  - You want emails for new customers, not in-product text. Use the New customer onboarding sequence writer.
+  - You want to rewrite help articles, not first-use screens. Use the Plain words interface rewriter.
 you_give:
-  - The current onboarding screens, help text, supported setup path and common questions.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your current onboarding screens, as screenshots, a recording transcript or a list of screens in order
+  - Your help text, tooltips and welcome emails that give setup instructions
+  - The first result a new user should reach, such as sent a first invoice
+  - Questions new users ask most, from support or reviews (optional)
+  - Who your new users are and what they call things (optional)
 you_get:
-  - A corrected first-use flow, revised labels and a walkthrough checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A corrected first-use path, one step per line, ending at the first useful result
+  - A table of instructions with the control each one points to, and which ones do not match
+  - New labels and prompts in your users' words, beside the old ones
+  - A plan for optional in-app help, with skip, resume and finish rules
+  - A walkthrough checklist a person can run on the live product
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Attach the onboarding screens and help text in the order a new user meets them. Say the first result they should reach.
+  - After step 1, check the path against your product. The AI marks any step it cannot match to a screen as MISSING. Do not accept a step it could not find.
+  - After step 2, read the old and new labels side by side and keep the ones your users would say aloud.
+  - Run the walkthrough checklist on the live product with a fresh account before you ship the new text.
 how_it_works:
   - title: First-use onboarding designer
-    text: Use supplied user tasks, the first useful result and ethical constraints to choose the smallest onboarding path. Mark missing audience evidence before proposing behavioral changes.
+    text: Uses your user tasks and the first useful result to choose the smallest path. Checks each step against the supplied screens and marks any control it cannot find. Marks missing audience evidence before it suggests a change. Hands step 2 the path and the screens it touches. Check before moving on, every step names a control found on a screen.
   - title: Plain words interface rewriter
-    text: Rewrite the selected screens and prompts using the product vocabulary people already understand.
+    text: Rewrites the labels and prompts on the selected screens in the words your users already use. Keeps the product's own names for real controls. Hands step 3 the new labels. Check before moving on, each new label still points to the same control.
   - title: In-app tour designer
-    text: Plan optional guidance for the revised flow, with skip, resume and completion behavior.
+    text: Plans optional guidance for the revised path, with skip, resume and finish behavior, and words each tip with step 2's labels. Keeps it to the moments where users get stuck. Hands back the tour plan and the walkthrough checklist. Check before moving on, the tour never blocks the product and can be skipped at every step.
 output_shape: |-
-  Scope and source coverage
-  A corrected first-use flow, revised labels and a walkthrough checklist.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  FIRST RESULT    <what a new user should reach>, <audience evidence or MISSING>
+
+  FIRST-USE PATH  <step> | <instruction> | <control it points to> | <found on screen: yes or no>
+
+  LABELS          <screen> | <old label> | <new label> | <why>
+
+  TOUR PLAN       <moment> | <what the help says> | <skip, resume and finish rule>
+
+  WALKTHROUGH     <screen> | <what the instruction says> | <what you should see> | <pass or fail>
+
+  MISSING         <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+  NEXT STEP       <one action for you>
+output_sample:
+  input:
+    - Your current onboarding screens or a list of them in order
+    - Your help text, tooltips and setup emails
+    - The first result a new user should reach
+    - Common new-user questions (optional)
+  output:
+    - name: First-use path
+      contains: The shortest steps to the first result, each tied to a control found on a screen.
+    - name: Instruction match table
+      contains: Every instruction beside the control it names, with mismatches marked.
+    - name: Label table
+      contains: Old and new labels and prompts for each screen, written in your users' words.
+    - name: Tour plan
+      contains: Optional in-app help at each point where users stall, with skip, resume and finish rules.
+    - name: Walkthrough checklist
+      contains: A screen-by-screen list for a person to run on the live product with a fresh account.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Each instruction refers to a real control and the user can reach a meaningful first result.
+  - what: One path
+    how: Name the one user type to cover, such as a first-time admin. The path and labels follow that person only.
+  - what: A word list
+    how: Paste what your users call things. Step 2 uses their words and keeps your control names where they differ.
+  - what: No tour
+    how: Say you do not want in-app help. Step 3 is skipped and the walkthrough checklist covers the path alone.
+  - what: Support questions
+    how: Attach your top support questions. Step 1 makes sure the path answers each one, or marks it as not covered.
 judge:
   - Each instruction refers to a real control and the user can reach a meaningful first result.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -70,5 +110,11 @@ works_best_with:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
 terms:
+  - term: Onboarding
+    meaning: The first steps a new user takes to reach a first useful result.
+  - term: First result
+    meaning: The first thing a new user gets done that shows the product works for them.
+  - term: Control
+    meaning: A button, menu item, field or switch a person can use on a screen.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result and file passed from one step to the next.

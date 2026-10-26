@@ -29,3 +29,31 @@ how_it_works:
     text: Inspect a pilot, make the set and retain every prompt, anchor and revision in a replay manifest.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - You want to find which of your ads win and why. Use the Winning ad DNA mapper first.
+  - You have one product photo and want it repeated in new colours as ads. Use Repeat one product photo in new colours as ads.
+  - You want ads built from a rival's layouts or reference ads. Use the Swipe library ad builder.
+output_sample:
+  input:
+    - At least three of your own ad images, with results if you have them
+    - Your product, clear photos of it, and the claims and offer you can use
+    - How many new ads you want, in which sizes
+    - Your brand brain files (optional)
+  prerequisites:
+    - An AI that can look at images
+    - An image tool for the final pictures (the plan works without one)
+  output:
+    - name: visual-dna.md
+      contains: Your ads' type, colours, layouts, photo style, copy habits and devices, each with a count and examples.
+    - name: Archetype map
+      contains: The layout types found in your ads and how each one will be made.
+    - name: Concepts
+      contains: One new ad idea per slot, with buyer problem, message, layout and what is new.
+    - name: New ads
+      contains: Images made in your look from your real product photos, in each size.
+    - name: Per-ad prompts and anchors
+      contains: The prompt, real photos and method used for each ad.
+    - name: QA log
+      contains: Checks of each full-size image for product, label, spelling and claims, with failures listed.
+    - name: Replay manifest
+      contains: A record of every prompt and revision so one ad can be changed later.

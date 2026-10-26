@@ -2,35 +2,68 @@ thinking: medium
 thinking_why: It compares options against your traffic and tools.
 new_slug: image-and-video-pipeline-planner
 name: Image and video pipeline planner
-summary: Tell it your site's media. Get a plan for formats, responsive images,
-  video hosting and a tidy brand asset library.
+summary: "Plan your image and video pipeline: formats, sizes, video hosting and a tidy asset library, so your site loads fast and stays organized."
 job: build-websites
 headline: Image and video pipeline planner
-subhead: A plan for how your site stores, shrinks, organizes and serves images,
-  video and downloads. Tell it what media you have and get a setup that loads
-  fast and stays tidy as it grows.
+subhead: Tell your AI what images, video and files your site has. You get a plan to shrink, store, organize and serve them. Your pages load faster and your files stay easy to find.
 explain: |
   A plan for how your site stores, shrinks, organizes and serves images, video and downloads. Tell it what media you have and get a setup that loads fast and stays tidy as it grows. It works with any tech stack.
 
   The plan covers four stages: source, process, store and deliver. For each it picks formats, sizes for different screens, and where video should live. It helps you choose between an image service and a CDN with the monthly cost in mind, and sets up a shared library for brand assets with clear upload steps for designers and writers. It starts by asking where assets live now, how many there are, who uploads them and how fast pages load.
 when:
   - Your site is slow because images are huge.
-  - You are choosing where to host videos for a site.
+  - You are choosing where to host videos.
   - Your brand files are scattered across drives and chat threads.
   - You are moving media from one platform to another.
+not_for:
+  - "You want to speed up your whole site, not only images and video: run a site speed check, or ask a developer to run Lighthouse and fix what it flags."
+  - "You want a new brand look or photo style: work with a designer or photographer first, then plan the pipeline."
+  - "You have one slow image on one page: resize it and save it as WebP in a free image tool. You do not need a plan."
 you_give:
-  - A list of where media lives now
-  - Volume of files and traffic
+  - Where your images, video and downloads live now
+  - How many files you have and how much traffic you get
   - Who creates and uploads media
-  - Budget for hosted tools
+  - Your monthly budget for hosted tools
+  - Page weight from a Lighthouse run (optional)
 you_get:
-  - A format and size plan
+  - A plan for image formats and sizes
   - A video hosting recommendation
-  - A media library structure
-  - An upload workflow for your team
+  - A structure for your shared asset library
+  - Upload steps for each person on your team
+  - A list of changes to make, in order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can look at your site's files.
+  - "Gather your facts first: how many images and videos you have, where they live now, and your monthly budget."
+  - Run Lighthouse on two or three key pages and note the image weight. Lighthouse is free in Chrome. Skip this if you can't.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code running is needed.
+  - "Paste your facts and say: Plan my image and video pipeline using this skill. Mark anything you can't verify as a gap."
+  - Check the plan against your budget. Then hand it to whoever builds your site, and ask them to make the first change on the roadmap.
+  - Run Lighthouse again on the same pages to confirm the image weight dropped.
+output_sample:
+  input:
+    - Where your images, video and downloads live now
+    - How many files you have and how much traffic you get
+    - Who creates and uploads media
+    - Your monthly budget for hosted tools
+    - Page weight from a Lighthouse run (optional)
+  prerequisites:
+    - Any AI chat tool. It does not need to run code.
+    - Access to your site's files helps, but is not required.
+  output:
+    - name: Inventory
+      contains: Your current asset count, formats and storage, with any missing data clearly marked as a gap.
+    - name: Pipeline diagram
+      contains: The path from source to process to deliver to manage, with the tool used at each stage.
+    - name: Format and size standards
+      contains: Which formats and widths to make, and when to use each one.
+    - name: Naming and metadata conventions
+      contains: How to name files and which details, like alt text and credits, each file needs.
+    - name: Workflows by source type
+      contains: Upload steps for designers, writers, photographers and users.
+    - name: Performance baseline and targets
+      contains: Where image weight stands now and the targets to aim for.
+    - name: Asset library
+      contains: The tool, tags, search and rights tracking for your shared library.
+    - name: Monitoring
+      contains: "What to watch: page speed, storage and delivery costs, and broken images."
+    - name: Roadmap
+      contains: The changes to make over the next one to two quarters, in order.

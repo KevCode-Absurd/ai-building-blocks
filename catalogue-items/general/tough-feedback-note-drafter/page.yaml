@@ -1,6 +1,6 @@
 new_slug: tough-feedback-note-drafter
 name: Tough feedback note drafter
-summary: Paste what went wrong and who needs to hear it. Get a note that changes the behaviour.
+summary: Write a tough feedback note that gets change. Give it what went wrong and who needs to hear it. You get a short note with one clear request.
 job: lead-people
 thinking: medium
 thinking_why: It weighs true praise against the problem and needs some judgement on tone.
@@ -11,6 +11,10 @@ when:
   - Someone keeps missing the same thing and you have to say it.
   - You have put it off because you do not want a fight.
   - You want a note you can send today, not a long plan.
+not_for:
+  - "You face misconduct, a safety issue or a formal performance process: talk to HR or follow your manager's process."
+  - "You want every check and a fuller review of the message: use the Hard feedback message writer."
+  - "You need to settle a plan or a decision, not give feedback to one person: talk it through with the person first, then write the note."
 you_give:
   - What went wrong, with one or two examples
   - Who the person is and how they react
@@ -21,10 +25,26 @@ you_get:
   - A short note of under 150 words
   - Any gap, such as missing true praise, marked clearly
 how_to_use:
-  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Open Claude, ChatGPT or Gemini and paste the prompt.
   - Under it, paste what went wrong, who needs to hear it and the change you want.
-  - Send it and read the result.
+  - Add what they do well if you can. If you leave it out, the AI will ask for it.
   - Read the note out loud once. Change any line you would not say to their face.
+  - Send the note, or say it in person using the same lines.
+output_sample:
+  input:
+    - What went wrong, with one or two examples
+    - Who the person is and how they usually react
+    - The change you want
+    - What they do well (optional)
+  output:
+    - name: THE BEHAVIOUR
+      contains: One line on what the person did, in words that anyone could watch.
+    - name: THE CHANGE
+      contains: One line on what you want to see instead.
+    - name: THE NOTE
+      contains: A note under 150 words with true praise, one request with a date, and a way to save face.
+    - name: MISSING
+      contains: Any gap, such as true praise you did not give, marked so you can fill it.
 how_it_works:
   - title: Start with the behaviour
     text: One line on what they did that anyone could watch, and one line on the change.

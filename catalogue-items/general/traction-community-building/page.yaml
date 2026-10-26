@@ -1,30 +1,26 @@
 new_slug: traction-community-building
 name: Community growth experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a small community building test for your product. Give it your link. You get a founding-group pilot, cost cap, measures and a stop rule.
 job: keep-customers
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Community growth experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused community building plan for your product. It reads the buyer and
-  offer, checks why this channel might work and writes a small test. The default
-  is SaaS; you can ask for general-business mode.
+  A focused community building plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Prepare a small founding-group activity and test whether members return and
-  help each other before opening a large forum.
+  Prepare a small founding-group activity and test whether members return and help each other before opening a large forum.
 
 
-  Member count can grow while the community is inactive. A customer support
-  inbox or announcement channel alone is not peer community.
+  Member count can grow while the community is inactive. A customer support inbox or announcement channel alone is not peer community.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare all 19 growth channels: use the Traction workflow."
+  - "Your product has no reason for customers to help each other: run a support or announcement test, or ask five customers what they need."
+  - "You want to run a large public forum on day one: start with a small founding group instead."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -38,18 +34,42 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and time limits (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can browse the web, or pasted page text if it cannot
+  output:
+    - name: Recommendation
+      contains: Whether to test now, later or skip, with the reason.
+    - name: Evidence
+      contains: Each fact used, with its source link, access date and what it means.
+    - name: Buyer and useful action
+      contains: Who the buyer is and the first useful thing they do in your product.
+    - name: Channel mechanism
+      contains: How a buyer reaches value through a community.
+    - name: Pilot
+      contains: The test idea, audience, offer, deliverable and owner.
+    - name: Limits
+      contains: Cash, hours and date, marked as proposed or approved.
+    - name: Measurement
+      contains: Events to count, the group you track, and how you credit results.
+    - name: Decision
+      contains: The rule for when to continue, revise or stop.
+    - name: Risks and next action
+      contains: What could fail and the one step to take next.
+    - name: MISSING
+      contains: Facts the AI could not find and you need to supply.
 how_it_works:
   - title: Check 1
-    text: Define the shared problem, member promise and first useful
-      member-to-member interaction. Identify a small founding group with a real
-      reason to participate.
+    text: Define the shared problem, member promise and first useful member-to-member interaction. Identify a small founding group with a real reason to participate.
   - title: Check 2
-    text: Design a repeatable activity, moderation standards, roles and support
-      boundaries. Explain how members can contribute and how abuse will be
-      handled.
+    text: Design a repeatable activity, moderation standards, roles and support boundaries. Explain how members can contribute and how abuse will be handled.
   - title: Check 3
-    text: Plan useful product feedback and a voluntary activation path while keeping
-      member value ahead of promotion. Budget ongoing facilitation.
+    text: Plan useful product feedback and a voluntary activation path while keeping member value ahead of promotion. Budget ongoing facilitation.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -63,21 +83,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Membership doubles but peer replies and returning members fall. Report
-    weaker community health despite the larger member count.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - Membership doubles but peer replies and returning members fall. Report weaker community health despite the larger member count.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

@@ -1,6 +1,6 @@
 slug: real-feeling-checker
 name: "Real feeling checker"
-summary: "Paste a story or ad. Get a score out of 100, the fakes it uses and a fix."
+summary: "Check if your story, ad or talk makes people feel what you meant. Get a score out of 100, the fakes it uses and a plainer rewrite."
 category: general
 type: skill
 role: check
@@ -8,11 +8,11 @@ job: analysis
 level: intermediate
 inputs:
   - {type: copy_draft, required: true}
-  - {type: brief, required: false}
 outputs:
   - {type: audit_report, required: true}
 minds: [leo-tolstoy]
 origin: rebuilt
 version: 1.0.0
+needs_mode: manual
 credits:
   - {title: "What Is Art?", by: "Leo Tolstoy, translated by Aylmer Maude", url: "https://www.gutenberg.org/ebooks/64908", used: "Work succeeds when its feeling passes to others; the three conditions of individual, clear and sincere; and four fakes that stand in for feeling"}

@@ -2,36 +2,111 @@ thinking: high
 thinking_why: Credit rules need exact settings and a careful reading of results.
 new_slug: multi-touch-credit-calculator
 name: Multi-touch credit calculator
-summary: Give it your touches and sales. Get credit split by first, last, linear
-  or decay rules, plus cost per sale.
+summary: Split credit for each sale across the ads and visits before it, using five rules. Get cost per sale by channel from your own touch data in BigQuery.
 job: track-numbers
 headline: Multi-touch credit calculator
-subhead: Credit for each sale split across the ads and visits that came before
-  it, using first-touch, last-touch, linear, position-based or time-decay rules.
-  Then you see cost per sale by channel.
+subhead: Give it your touch history, your sales and your ad spend in BigQuery. It splits each sale across the touches before it under five credit rules, shows how many sales had no touch, and gives cost per sale by channel for the rule you pick.
 explain: |
-  Credit for each sale split across the ads and visits that came before it, using first-touch, last-touch, linear, position-based or time-decay rules. Then you see cost per sale by channel.
+  Last-click credit gives one channel the whole sale, even if three other ads and visits came first. Multi-touch attribution spreads credit across the path. This multi-touch credit calculator lets you compare five ways of doing it on the same data.
 
-  The skill writes BigQuery SQL. You declare the keys that link touches to buyers, the currency, time zone, date range and how far back to look. One query builds a ledger that shows every conversion under all five models. It also reports coverage, so sales with no matching touch are not hidden. A second step adds spend and works out cost per sale. It states that these are rules for splitting credit, not proof of what caused the sale.
+  The five rules are first touch, last touch, linear, position based and time decay. You declare how touches link to buyers, the currency, the time zone, the date range and how far back to look. One query builds a ledger that shows every sale under all five rules. A coverage report shows sales with no matching touch. They are never hidden or given a made-up "Direct" touch.
+
+  A second step picks one rule, adds your ad spend and works out cost per sale by channel and day. Money is split exactly, and unknown or mixed currencies stay blank.
+
+  These are rules for splitting credit. They do not prove what caused a sale. This skill comes from wizard7558's attribution skills, shared under MIT, and is written for BigQuery SQL.
 when:
   - Last-click gives all credit to one channel and you doubt it.
-  - You want to compare five credit rules on the same data.
+  - You want to compare five credit rules on the same sales.
   - You need cost per sale by channel for a budget meeting.
   - Some sales have no tracked touch and you need to see how many.
+not_for:
+  - You have no tracked touches, or no BigQuery. Use the Attribution model chooser for a simpler comparison.
+  - You want to match CRM stages to ad spend. Use the Cost per funnel stage reporter.
+  - You want a quick read of channel results from exports. Use the Campaign attribution analyst.
+  - You need proof that ads caused sales. Use the Incrementality test planner to design a test.
 you_give:
-  - Touch history, such as ad clicks and visits
+  - Touch history, such as ad clicks and visits, with exact keys
   - Sales or conversion records
-  - Ad spend by channel
-  - Time zone, date range and lookback days
-  - A BigQuery project
+  - The list that links touches to the buyer who made the sale
+  - Ad spend by channel and day, with currency
+  - Time zone, date range and how many days to look back
+  - A BigQuery project to run in
 you_get:
-  - A credit ledger for five models
-  - A coverage report
-  - Cost per sale by channel
+  - A credit ledger with every sale under five rules
+  - A coverage report showing sales with no usable touch
+  - Cost per sale by channel and day, for the rule you pick
   - A note on what the numbers can and cannot say
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run SQL on your own BigQuery data.
+  - Download the skill folder from this page. Keep the references and scripts folders with SKILL.md. The contract files in references say how each input table must look.
+  - Use an AI that can run SQL on BigQuery, such as Claude Code with the bq tool signed in. Live runs use billed BigQuery jobs in your own project. The test scripts cap each job at 1 GiB. You need permission to run query jobs.
+  - Tell your AI your time zone, date range, lookback days and the credit rule you want for the cost report. Add your touches, sales, spend and the buyer link list.
+  - Ask for the credit ledger first. Check the coverage report before you go on. A high share of sales with no touch means the rest is a partial picture.
+  - Ask for the cost report on one rule. Read the null reasons beside any blank cost.
+  - Compare two rules side by side before you move budget. Treat the gap between them as the range of doubt.
+how_it_works:
+  - title: Set the rules
+    text: You declare keys, buyer links, currency, time zone, date range and lookback. Touches are sorted into channels.
+  - title: Build the ledger
+    text: One query gives every sale its credit under first touch, last touch, linear, position based and time decay.
+  - title: Report coverage
+    text: Each sale is credited, has no buyer match, has no eligible touch, or is a repeat buyer left out of an acquisition run.
+  - title: Pick one rule
+    text: The cost step uses one rule and one set of spend sources, so credit is added once.
+  - title: Join spend
+    text: Spend is totalled first, then joined by channel and day. Money is split exactly.
+  - title: Work out the ratios
+    text: Cost per sale appears when the data supports it. CAC and ROAS appear only when their conditions hold.
+output_shape: |-
+  CREDIT LEDGER (one row per sale, touch and rule)
+    <sale> | <touch> | <channel> | <rule> | <credit share> | <allocated value or unknown>
+
+  COVERAGE
+    <credited> | <no buyer match> | <no eligible touch> | <repeat buyer left out>
+
+  COST REPORT (one rule, by channel and day)
+    <channel> | <day> | <credited sales> | <allocated value> | <spend> | <cost per sale> | <reason if blank>
+
+  NOTES
+    <rule, population and window used> | <credit is a split rule, not proof of cause>
+output_sample:
+  input:
+    - Your touch history, such as ad clicks and visits
+    - Your sales or conversion records
+    - The list that links touches to buyers
+    - Your ad spend by channel and day
+    - Your time zone, date range and lookback days
+  prerequisites:
+    - A BigQuery project and an AI that can run SQL
+    - The references folder from the skill download
+  output:
+    - name: Credit ledger
+      contains: Every sale split across its touches under five rules, with credit share and allocated value.
+    - name: Coverage report
+      contains: How many sales were credited, had no buyer match or touch, or were repeat buyers.
+    - name: Cost report
+      contains: Cost per sale by channel and day for one rule, with a reason wherever a figure is blank.
+    - name: Notes
+      contains: The rule, population and window used, and what the numbers cannot prove.
+works_best_with:
+  tools:
+    - name: Claude Code with the bq command line tool
+      why: It can run the SQL on your BigQuery data and keep the evidence.
+    - name: Any chat AI
+      why: Good for reading the contract files and drafting input tables. A chat cannot run the SQL.
+  inputs:
+    - A list of how each source identifies a buyer
+    - Your usual days from first click to sale, to pick the lookback
+    - Spend exports from each ad platform, with currency
+terms:
+  - term: Touch
+    meaning: One ad click or visit that came before a sale.
+  - term: Linear
+    meaning: A rule that gives every touch the same share of credit.
+  - term: Position based
+    meaning: A rule that gives most credit to the first and last touch and a small share to the middle ones.
+  - term: Time decay
+    meaning: A rule that gives more credit to touches closer to the sale.
+  - term: Lookback
+    meaning: How many days before a sale a touch can still earn credit.
+  - term: CAC
+    meaning: What it costs to win one new customer.

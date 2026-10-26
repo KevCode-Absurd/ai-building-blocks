@@ -1,0 +1,143 @@
+name: Finance Tracker agent
+summary: "Get a cash and expense review from your bank and card exports, with a cash forecast, the assumptions behind it and the weeks cash runs low."
+headline: Finance Tracker agent
+subhead: "Paste your bank balance and your recent bank and card transactions. Add the bills and income you know are coming. You get your cash position, spending by category, a forecast with its assumptions shown and the dates your cash could run low."
+job: money-and-investing
+thinking: high
+thinking_why: It sorts many lines, does sums and builds a forecast from stated assumptions. Use a model that does arithmetic carefully and shows its working.
+explain: |-
+  A cash and expense review shows where your money is, where it went and whether it will last. Many owners watch profit and get surprised by cash. A business can be profitable and still run short in the week the rent, payroll and a supplier bill all land together.
+
+  This agent starts from your bank balance and your actual transactions. It sorts spending into categories you can act on, finds items that repeat, items that look new and items that look doubled. Then it builds a forecast from your own history plus the bills and income you already know about. Every assumption sits in a table, so you can change one and see the effect.
+
+  It marks the weeks your cash falls below the minimum you set, and lists the costs you could trim or delay and the money you could collect sooner. It uses only your numbers. The forecast is a reasoned guess with ranges, not a promise, and the review is not tax, audit or investment advice.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You want to know how much cash you will have in 13 weeks, and when it dips.
+  - Your bank balance is lower than you expected and you want to see where it went.
+  - A big bill is due soon and you want to know if you can pay it without a squeeze.
+  - You want a quick list of costs you could trim, from three months of bank and card lines.
+not_for:
+  - You want to sort every transaction into tax and department categories. Use the Expense sorter.
+  - You want to know how many months of cash a startup has. Use the Startup runway forecaster.
+  - You want a first budget built. Use the Budget and forecast builder.
+  - You need tax filing, an audit or investment advice. Hand those to a qualified accountant or adviser.
+you_give:
+  - Your bank balance today, from your latest statement.
+  - Three to twelve months of bank and card transactions, as a CSV, a PDF or a pasted list.
+  - The forecast period you want, such as the next 13 weeks or 12 months.
+  - Bills and income you know are coming, with dates and amounts, such as rent, payroll, tax payments and large invoices
+  - The lowest cash balance you can accept (optional)
+you_get:
+  - Your cash position today, and what changed over the period
+  - Spending by category, with the largest items and any that repeat or look doubled
+  - A forecast table with the assumption behind each line
+  - The weeks cash falls below your minimum, and the amount short
+  - A list of costs to trim or delay and money to collect sooner, with open checks
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste your balance and your transactions. Name the forecast period and the lowest cash balance you can accept. Remove account numbers first.
+  - List the bills and income you know are coming, with dates and amounts. No code is needed. If your AI cannot run code, it will do the sums in the reply, so check the totals.
+  - Type "Review my cash and spending. Show each assumption. Do not guess a bill or a payment I did not give you."
+  - Read the assumptions table first. Change any that are wrong and ask for the forecast again.
+  - Act on the low-cash weeks first. Then check the trim list against contracts before you cancel anything.
+how_it_works:
+  - title: Set the frame
+    text: It confirms the balance date, the period of transactions and the forecast span. Anything missing is asked once, then marked MISSING.
+  - title: Sort the spending
+    text: It groups transactions into categories you can act on, and flags repeats, new items and likely doubles.
+  - title: Find the pattern
+    text: It works out your usual monthly receipts and payments from history, and notes any seasonal swings in the data.
+  - title: Build the forecast
+    text: It adds your known bills and income to the pattern and shows each assumption in a table.
+  - title: Mark the pinch points
+    text: It shows the weeks cash drops below your minimum, the amount short and which items drive it.
+  - title: List the moves
+    text: It lists costs to trim or delay and money to collect sooner, with the checks you need to make first.
+output_shape: |-
+  FRAME
+    Balance date <date> | Transactions from <start> to <end> | Forecast <period> | Minimum cash <amount or MISSING>
+
+  CASH POSITION
+    Balance today <amount> | Change over the period <amount> | Average monthly receipts <amount> | Average monthly payments <amount>
+
+  SPENDING BY CATEGORY
+    <category> | <total> | <share of spend> | <repeats, new or possible double>
+
+  FORECAST
+    <week or month> | Receipts <amount> | Payments <amount> | Net <amount> | Closing cash <amount>
+
+  ASSUMPTIONS
+    <assumption> | <value> | <source: your data, you or estimate> | <effect if wrong>
+
+  LOW-CASH WEEKS
+    <week or month> | Closing cash <amount> | Short of minimum by <amount> | Main drivers <items>
+
+  MOVES TO CONSIDER
+    <trim, delay or collect sooner> | <amount> | <check before acting>
+
+  OPEN CHECKS
+    <check> | <why it matters>
+output_sample:
+  input:
+    - Your bank balance today
+    - Three to twelve months of bank and card transactions
+    - The forecast period, and the lowest cash balance you can accept
+    - Known bills and income to come, with dates and amounts
+  prerequisites:
+    - Account numbers removed from anything you paste
+  output:
+    - name: Frame
+      contains: The balance date, the transaction period, the forecast span and your minimum cash.
+    - name: Cash position
+      contains: Balance today, change over the period and average monthly receipts and payments.
+    - name: Spending by category
+      contains: Each category with its total and share, and items that repeat, are new or look doubled.
+    - name: Forecast
+      contains: Each week or month with receipts, payments, net and closing cash.
+    - name: Assumptions
+      contains: Each assumption, its source and the effect if it is wrong.
+    - name: Low-cash weeks
+      contains: The weeks cash falls below your minimum, the amount short and the main drivers.
+    - name: Moves to consider
+      contains: Costs to trim or delay and money to collect sooner, with the check before acting.
+    - name: Open checks
+      contains: Things to verify before you rely on the forecast, with why each matters.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload and code
+      why: It reads your bank CSV as a file and runs the sums in code, which is faster and less error-prone than by hand.
+  inputs:
+    - Your unpaid customer invoices with due dates, so receipts are timed from real bills.
+    - A list of your subscriptions and contracts with renewal dates.
+    - Last year's bank lines for the same months, if you have seasonal swings.
+terms:
+  - term: Cash position
+    meaning: How much money you hold today, in the bank and on hand.
+  - term: Forecast
+    meaning: A reasoned guess at your cash in the weeks or months ahead.
+  - term: Runway
+    meaning: How many months your cash lasts at your current spending.
+  - term: Category
+    meaning: A group of spending of the same kind, such as rent or ads.
+  - term: Seasonality
+    meaning: A yearly pattern, such as a slow summer or a busy December.
+tweaks:
+  - what: Period
+    how: Use 13 weeks for tight cash and 12 months for planning. A short forecast is easier to trust.
+  - what: Minimum cash
+    how: Set the lowest balance you can accept, such as two weeks of payroll. It marks that line instead of zero.
+  - what: Categories
+    how: Give your own list, such as rent, payroll, ads and software. It then groups spending your way.
+improve:
+  - Keep each review and add the next month's actuals. Compare them to the forecast to see which assumption missed.
+  - Add your usual bills and their dates to the pack, so you do not retype them.
+  - Pair it with the Software spend auditor to find duplicate tools, and the Cash tied-up finder for money stuck in invoices and stock.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

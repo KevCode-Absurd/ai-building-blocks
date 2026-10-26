@@ -9,6 +9,8 @@ level: beginner
 inputs:
   - {type: performance_sheet, required: true}
   - {type: question, required: false}
+  - {type: plan, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

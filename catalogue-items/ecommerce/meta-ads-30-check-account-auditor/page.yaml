@@ -1,44 +1,130 @@
 new_slug: meta-ads-30-check-account-auditor
 name: Meta Ads 30-check account auditor
-summary: Review thirty Meta Ads checks across tracking, creative, structure and audiences. Get weighted scores, data gaps and ranked fixes.
+summary: "Check your Meta Ads account with 30 tests. Get a score out of 100 for tracking, creative, structure and audiences, plus ranked fixes."
 job: check-ads
 headline: Meta Ads 30-check account auditor
-subhead: Share dated meta exports, tracking evidence, account settings and target economics. Get a thirty-check report with weighted scores and a tiered action plan.
+subhead: "Paste your Meta Ads Manager export and a screenshot of your tracking checks. It runs 30 tests on tracking, ads, account setup and audiences. You get a score out of 100 for each area, a list of what it could not judge, and fixes in order."
 explain: |-
-  Review thirty Meta Ads checks across tracking, creative, structure and audiences. Get weighted scores, data gaps and ranked fixes.
+  A Meta Ads audit is easy to start and hard to finish. The numbers sit in three places: your ad export, Events Manager and your account settings. Most reviews skip one of them and still give a verdict. This Meta Ads account audit never does. If a check has no evidence, it says so, and that check does not count against you.
 
-  Share dated meta exports, tracking evidence, account settings and target economics. Get a thirty-check report with weighted scores and a tiered action plan.
+  It runs 30 fixed checks in four areas: tracking (8), creative (10), account structure (8) and audiences (4). Each check is marked pass, warning, fail, not enough data or not applicable. Critical checks, such as whether purchases are tracked, count more than minor ones such as naming. You get a score for each area and a coverage figure that shows how much of the account the audit could see.
+
+  The pass and fail levels are starting values, not Meta rules. The score is a way to compare your account with itself over time. It does not predict your return on ad spend. Meta changes its tools often, so confirm any fix in your own Ads Manager before you act.
 when:
-  - You need a thirty-check report with weighted scores and a tiered action plan.
-  - You need meta ads 30-check account auditor for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You took over a Meta Ads account and want to know what state it is in before you change anything.
+  - Results have gone flat and you want a full check of tracking, ads, setup and audiences.
+  - An agency or freelancer runs your ads and you want a second opinion on their work.
+  - You want a baseline score now, to compare with in three months.
+not_for:
+  - "You have no purchase tracking set up: fix tracking first. Use the Meta server tracking checker."
+  - "You want to know why ads stopped getting delivered this week: use the Meta delivery troubleshooter."
+  - "You want each ad marked keep, watch or pause from your own numbers: use the Daily Meta ad review planner."
+  - "You only want to know if one ad will be rejected: use the Meta ads compliance checker."
+  - "Your account is under three weeks old or spends very little. The audit runs, but its scores are weak evidence."
 you_give:
-  - Dated Meta exports
-  - Tracking evidence
-  - Account settings and target economics
+  - Your Meta Ads Manager results for the last 30 days, broken down by ad (CSV or pasted table)
+  - A screenshot or copy of Events Manager that shows pixel status, server events, event match quality, deduplication and domain verification
+  - Your campaign, ad set, budget, bid strategy and conversion event settings
+  - Your time zone, currency and attribution window, shown in your export settings
+  - Your target cost per sale and daily budget (optional)
+  - Audience details such as exclusions and lookalike sources (optional)
 you_get:
-  - A thirty-check report with weighted scores and a tiered action plan
-  - The sources used, missing inputs and assumptions
+  - 30 checks, each marked pass, warning, fail, not enough data or not applicable, with the evidence
+  - A score out of 100 for tracking, creative, structure and audiences, and an overall score
+  - A coverage figure that shows how much of the account the audit could see
+  - A fix list in three tiers (critical, material, minor), each fix with an owner and how to confirm it worked
+  - A record of what was missing, so your next audit can compare like with like
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - In Meta Ads Manager, set the date range to the last 30 days, break the table down by ad and export it. Add weekly click rate by ad if you can, so it can check for tired ads.
+  - In Events Manager, take a screenshot of the overview and the diagnostics for your Purchase event. Attach it or paste its text.
+  - Paste your campaign and ad set settings, your target cost per sale and your daily budget. Say what you cannot find, instead of leaving it out.
+  - Read the coverage figure and the "not enough data" list first. Check every critical fix in Ads Manager yourself before you act.
+  - Fix in tier order, note the date, and run the audit again in a few weeks with fresh exports.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm dated meta exports, tracking evidence, account settings and target economics. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Data Collection
-    text: Follow the data collection section in the full method and keep its required fields and decision rules.
-  - title: Run The 30 Checks
-    text: Follow the run the 30 checks section in the full method and keep its required fields and decision rules.
-  - title: Calculate The Score
-    text: Follow the calculate the score section in the full method and keep its required fields and decision rules.
-  - title: Deliver The Audit Report
-    text: Follow the deliver the audit report section in the full method and keep its required fields and decision rules.
-  - title: IMPORTANT RULES
-    text: Follow the important rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a thirty-check report with weighted scores and a tiered action plan. Check facts, math and the decisions before any action.
+  - title: Set up the audit
+    text: It records the account, dates, time zone, currency and attribution window, and checks which of the 30 tests apply to your account.
+  - title: Run the 30 checks
+    text: It tests tracking, creative, account structure and audiences in turn. Each test is marked pass, warning, fail, not enough data or not applicable, with a reason.
+  - title: Score each area
+    text: Critical checks weigh most and minor ones least. Only checks that could be judged count. A warning earns half the points and a fail earns none.
+  - title: Show the coverage
+    text: It reports how many applicable checks it could judge. A high score on low coverage is flagged as weak evidence.
+  - title: Combine the scores
+    text: The overall score uses only the areas that were scored. Any area left out is listed, and never counted as zero or 100.
+  - title: Rank the fixes
+    text: Fixes come in three tiers with the check ID, the evidence, an owner and how to confirm each one worked. It proposes only. It never changes your account.
+output_shape: |-
+  AUDIT BASICS  account <name> | dates <from to> | time zone <tz> | currency <cur> | attribution <window> | data fresh to <date>
+  SCORES  tracking <n>/100 | creative <n>/100 | structure <n>/100 | audiences <n>/100 | overall <n>/100 | coverage <x of y checks> | left out <areas or none>
+  CHECK RESULTS
+  <ID> | <check> | PASS, WARNING, FAIL, INSUFFICIENT_DATA or NOT_APPLICABLE | <evidence>
+  CRITICAL AND MATERIAL FINDINGS  <finding> | <check ID> | <evidence>
+  SUPPORTED STRENGTHS  <what is working, with evidence>
+  ACTION PLAN  tier <1 to 3> | <fix> | <check ID> | owner <name or MISSING> | confirmed by <how>
+  MISSING EVIDENCE AND ASSUMPTIONS  <list>
+  NEXT AUDIT BASELINE  <scores and check version to compare with>
+  NOT RUN  <check, why>
+output_sample:
+  input:
+    - Your Meta Ads Manager export for the last 30 days, broken down by ad
+    - A screenshot or copy of your Events Manager overview and diagnostics
+    - Your campaign, ad set, budget and bid strategy settings
+    - Your target cost per sale and daily budget (optional)
+  prerequisites:
+    - A Meta Ads account with at least a few weeks of results
+    - A Meta pixel on your site
+  output:
+    - name: Audit basics and scores
+      contains: The dates, time zone and attribution it used, a score for each of four areas, an overall score and coverage.
+    - name: Check results
+      contains: All 30 checks marked pass, warning, fail, not enough data or not applicable, each with its evidence.
+    - name: Critical and material findings
+      contains: The problems that matter most, such as untracked purchases or one ad taking most of the spend.
+    - name: Supported strengths
+      contains: What is working, backed by the evidence you gave.
+    - name: Action plan
+      contains: Fixes in three tiers, each with a check ID, an owner and how to confirm it worked.
+    - name: Missing evidence
+      contains: What you did not give, so you know which checks to redo later.
+    - name: Next audit baseline
+      contains: Today's scores and check version, so the next audit compares like with like.
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It compares supplied evidence against a fixed set of checks and has to keep the scoring rules straight.
+works_best_with:
+  tools:
+    - name: Meta Ads Manager and Events Manager
+      why: These are the sources of your export and your tracking screenshots. Export at ad level, and use the same attribution window throughout.
+    - name: Any good chat AI
+      why: It reads pasted tables and screenshots. It needs no connection to your ad account.
+  inputs:
+    - Weekly click rate by ad, so the tired-ad check has a baseline.
+    - The results of Meta's audience overlap tool, if you use it.
+    - Notes on any changes made to the account in the last month.
+terms:
+  - term: Pixel
+    meaning: A small piece of code on your site that tells Meta when someone buys or takes another action.
+  - term: Server events
+    meaning: Events your site or shop sends to Meta directly, not through the visitor's browser.
+  - term: Event match quality
+    meaning: A score in Events Manager for how well Meta can match your events to real people.
+  - term: Deduplication
+    meaning: Counting one sale once when both the browser and the server report it.
+  - term: Creative fatigue
+    meaning: An ad's click rate falls because people have seen it too often.
+  - term: Coverage
+    meaning: How many of the checks that apply to your account the audit could judge with the evidence you gave.
+tweaks:
+  - what: Evidence you add
+    how: More evidence gives higher coverage. Add the Events Manager screenshot and weekly click rate by ad first. They unlock the most checks.
+  - what: Pass and fail levels
+    how: The levels in the skill are starting values. Edit them in SKILL.md if your account is very small or very large, and keep the same levels each time you audit.
+  - what: Attribution window
+    how: Use the same window for every export. A different window changes results and makes scores hard to compare.
+  - what: Scope
+    how: Ask for one area only, such as tracking, if you want a short run.
+improve:
+  - Keep the baseline from each audit in one file and paste it in at the start of the next, so changes are easy to see.
+  - Edit the levels in SKILL.md so they match what is normal for your business, and note the change in your file.
+  - Add your own checks to a category, for example one for your offer on the landing page, and keep the same severity scale.
+  - Pair it with the Daily Meta ad review planner for the ad-by-ad calls after the audit.

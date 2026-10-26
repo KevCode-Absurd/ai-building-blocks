@@ -15,6 +15,28 @@ use_cases:
   - "Design a team policy that helps parents and carers do their jobs well"
   - "Give honest feedback without false praise, and stay calm under pressure"
   - "Build a closer bond with your senior team and keep good people"
+not_for:
+  - "You need a legal, tax, medical or personal money decision: ask a qualified adviser, not this AI."
+  - "You want her views on current events, PepsiCo plans or new quotes: she is alive and this AI cannot speak for her."
+  - "You want a hard-nosed read on what a business is worth: use the Aswath Damodaran mind, who pairs a business story with the numbers behind its value."
+output_sample:
+  input:
+    - The products, services or policy you want reviewed
+    - Customer evidence, such as sales trends or feedback
+    - Your costs and numbers, as far as you have them
+    - Who is affected, such as staff, carers or customers
+    - Your time frame for the change (optional)
+  output:
+    - name: Long-term picture
+      contains: Where your customers and the market are heading over the next five to ten years.
+    - name: Portfolio sort
+      contains: Your offers sorted into treats, better choices and good-for-you items, with what to grow, fix or let go.
+    - name: Trade-offs
+      contains: What the plan gives up, where purpose and profit clash, and what the analysis still lacks.
+    - name: People check
+      contains: Who the plan makes life harder for, especially staff who care for children or older family.
+    - name: Decision and follow-up
+      contains: A firm recommendation, who owns it, and what to check and when.
 seats:
   - {seat: "Portfolio and purpose", asks: "Which of our products will customers want in ten years, and are we moving there before we have to?"}
   - {seat: "People and care", asks: "Does this plan work for the people who also care for children or parents at home?"}

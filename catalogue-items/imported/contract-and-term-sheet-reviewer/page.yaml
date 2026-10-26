@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Legal terms need careful reading. It is not legal advice.
 new_slug: contract-and-term-sheet-reviewer
 name: Contract and term sheet reviewer
-summary: Paste a contract or term sheet. Get the risky terms flagged,
-  plain-English meaning and when to call a lawyer.
+summary: Check a contract or term sheet before you sign. Get risky clauses flagged, explained in plain words, with a clear line on when to call a lawyer.
 job: check-contracts
 headline: Contract and term sheet reviewer
-subhead: Paste a contract or term sheet. Get the risky terms flagged,
-  plain-English meaning and when to call a lawyer. Bring the contract or term
-  sheet text. Use the result to plan your next step.
+subhead: Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer. Bring the contract or term sheet text. Use the result to plan your next step.
 explain: |
   A read of your contract or investment term sheet with risky terms flagged, each explained in plain English, and a clear signal for when you should pay a lawyer. You know what you are agreeing to before you sign.
 
@@ -18,6 +15,10 @@ when:
   - A customer's contract landed in your inbox and you need to know what's risky.
   - You are unsure whether your IP assignments are in order.
   - You need to decide if a deal is worth an outside lawyer's fee.
+not_for:
+  - "You already signed and have a dispute or a court case: go straight to a licensed lawyer."
+  - "You need advice you can rely on to sign a binding deal: use this to prepare questions, then hire a lawyer."
+  - "You need exact legal limits for your country or deal size: ask a local lawyer, since the usual figures here are only starting points."
 you_give:
   - The contract or term sheet text
   - Your company stage and business
@@ -29,7 +30,30 @@ you_get:
   - Term sheet breakdown
   - When to call a lawyer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your contract or term sheet as plain text. Add your company stage, your side of the deal, and your country (optional).
+  - Ask your AI to review it. It needs no code for a normal review.
+  - Read the Bottom Line and The Risks first. Pick the worst three clauses to push back on.
+  - Bring the counter-proposals and lawyer action items to a licensed lawyer before you sign.
+  - "Optional: the 0 to 100 term sheet score and the clause scanner come from two Python scripts. They need an AI that can run code, or Python 3 on your own computer."
+output_sample:
+  input:
+    - Your contract or term sheet, pasted as plain text
+    - Your company stage and what your business does
+    - Which side of the deal you are on
+    - Your country and industry (optional)
+  prerequisites:
+    - "Optional: an AI that can run Python 3 code, only if you want to use the two bundled scripts"
+  output:
+    - name: Bottom Line
+      contains: "One call on the deal: sign, negotiate, or do not sign."
+    - name: The Risks
+      contains: The three most serious problems in the document, each explained in plain words.
+    - name: Counter-Proposals
+      contains: Specific wording you can send back to ask for fairer terms.
+    - name: Outside Counsel Action Items
+      contains: The questions and points to bring to a lawyer.
+    - name: Your Decision
+      contains: The choice only you can make as the founder.
+    - name: Founder-friendliness score
+      contains: For term sheets, a score from 0 to 100 with flags on each clause (needs the script).

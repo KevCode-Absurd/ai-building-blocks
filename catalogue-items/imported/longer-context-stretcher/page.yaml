@@ -2,35 +2,113 @@ thinking: high
 thinking_why: Changing how a model reads position is delicate.
 new_slug: longer-context-stretcher
 name: Longer context stretcher
-summary: Name your model. Get a method and code to make it read much longer
-  documents than it was trained for.
+summary: Name your open model and the length you need. Get the method to make it read longer documents, with config, code and a fine-tune plan.
 job: build-software
 headline: Longer context stretcher
-subhead: A method, with working code, for making a language model read documents
-  far longer than it was trained on. This is for people training or running
-  models, and it needs Python and a GPU.
+subhead: Tell it which open language model you run and how many tokens you need it to read, such as 32k or 128k. It picks a method, shows the config and code to switch it on, and plans the short fine-tune most methods need. This is for people who train or run models, and it needs Python and a GPU.
 explain: |
-  A method, with working code, for making a language model read documents far longer than it was trained on. This is for people training or running models, and it needs Python and a GPU.
+  Every language model has a limit on how much text it can read at once, called its context window. This longer context stretcher helps you push that limit on an open model you run yourself, such as Llama or Mistral, without training a new model from scratch.
 
-  You name your model and the target length, such as 32k, 64k or 128k tokens. The skill covers four techniques for encoding word position: rotary embeddings, YaRN, ALiBi and position interpolation. It shows how to switch each on in the common Hugging Face tools, and when a short fine-tune is enough instead of full retraining. It points to the original papers, so you can check the maths. It also notes how to use FlashAttention to keep memory use down at long lengths.
+  It covers four ways to tell the model where each word sits: rotary embeddings (RoPE), YaRN, ALiBi and position interpolation. It says which suits your case. In short, YaRN or position interpolation suit an existing model, and ALiBi only suits a model trained with it from the start. It shows how to switch each on in Hugging Face Transformers.
+
+  What sets it apart is the honesty about training. Changing the setting alone usually gives poor results. Most methods need a short fine-tune on long documents, and the skill plans it, with a step up in stages for big jumps. It points to the original papers, so you can check the claims.
+
+  It needs Python, a GPU and a model you can run yourself. It does not apply to hosted models such as ChatGPT or Claude.
 when:
   - Your model fails on documents longer than its trained limit.
   - You want to extend a Llama or Mistral model to a longer window cheaply.
   - You are choosing between YaRN, ALiBi and position interpolation.
   - You need to run a model on long inputs without running out of memory.
+not_for:
+  - You use a hosted model through an API. You cannot change its window, so split your document or pick a model with a longer one.
+  - You only need to answer questions about a long document. Use the RAG pipeline designer to search it in pieces.
+  - You want to shrink a model to fit your GPU. Use the Model size reducer.
+  - You want to fine-tune a model for a task, not for length. Use the LLM fine-tuning guide.
 you_give:
-  - The model name
-  - The context length you need
+  - The model name, such as a Llama or Mistral model
+  - The context length you need, such as 32k or 128k tokens
   - Your GPU and memory limits
-  - Whether you can fine-tune (optional)
+  - Long documents to fine-tune on, if you can fine-tune (optional)
+  - How long the model's current window is, if you know it (optional)
 you_get:
-  - A recommended technique and why
-  - Code to apply it
-  - Fine-tuning steps if needed
-  - Paper references to check against
+  - The method that fits your model and why
+  - The config values to switch it on
+  - Code for loading the model with the new setting
+  - A fine-tune plan, if your method needs one
+  - Links to the papers behind each method
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Open an AI that can run Python on a computer with a GPU, such as Claude Code, and paste in this skill. Add the whole folder so it can read the notes on each method.
+  - Tell it your model, your target length and your GPU. Say whether you can fine-tune. If you can, say what long text you have.
+  - Read the method it picks. Ask it to check the config key names against the Transformers version you have installed.
+  - Run the config and code on a small test. Check that the model still answers short prompts well.
+  - Fine-tune if the plan says so. Then test on a long document that has the answer near the start, in the middle and near the end.
+how_it_works:
+  - title: Finds your starting point
+    text: Checks the model's current window, its position method and the length you want.
+  - title: Picks a method
+    text: Chooses between YaRN, position interpolation, RoPE scaling and ALiBi using the comparison table in the skill.
+  - title: Sets the config
+    text: Gives the scaling values and says to set them before the model loads.
+  - title: Writes the code
+    text: Shows how to load the model with the new setting in Hugging Face Transformers, plus FlashAttention to save memory.
+  - title: Plans the fine-tune
+    text: Sets steps, batch size and data, and suggests growing the length in stages for large jumps.
+  - title: Lists the sources
+    text: Links the papers and repositories for each method so you can check the claims.
+output_shape: |
+  METHOD
+  <YaRN / position interpolation / linear scaling / ALiBi> because <reason for your model and length>
+  CONFIG
+  <setting>: <value> (set before loading the model)
+  CODE
+  <file name>: <what it does>
+  FINE-TUNE PLAN
+  Data: <long documents> | Steps: <plan> | Stages: <8k > 16k > 32k>
+  CHECKS
+  <short prompt test> | <long document test: start, middle, end>
+  SOURCES
+  <paper or repository>: <what it backs>
+  OPEN QUESTIONS
+  <anything you did not give>
+output_sample:
+  input:
+    - The model you run
+    - The context length you need
+    - Your GPU and memory limits
+    - Long documents to fine-tune on (optional)
+  prerequisites:
+    - Python with torch and transformers installed
+    - A GPU with enough memory for your model and target length
+    - An AI that can run code
+  output:
+    - name: Method choice
+      contains: Which technique fits your model and length, with the reason and the limits.
+    - name: Config values
+      contains: The rope scaling settings for your model, to set before you load it.
+    - name: Loading code
+      contains: Python that loads the model with the new setting and optional FlashAttention.
+    - name: Fine-tune plan
+      contains: Data, steps and length stages for the short training most methods need.
+    - name: Check list
+      contains: Short and long prompt tests, including answers placed at the start, middle and end.
+    - name: Source list
+      contains: The papers and repositories behind each method, so you can check them.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run Python on your GPU machine and read the Transformers version you have.
+    - name: Hugging Face Transformers
+      why: It has built-in rope scaling settings for the common open models.
+  inputs:
+    - The exact model name and the Transformers version
+    - A sample of the long documents you need it to read
+    - Your GPU memory in gigabytes
+terms:
+  - term: Context window
+    meaning: The most text a model can read at once, counted in tokens.
+  - term: Token
+    meaning: A piece of a word. About four letters of English text is one token.
+  - term: RoPE
+    meaning: Rotary position embeddings, a common way for a model to know where each word sits.
+  - term: Fine-tune
+    meaning: A short extra training run that adapts a model you already have.

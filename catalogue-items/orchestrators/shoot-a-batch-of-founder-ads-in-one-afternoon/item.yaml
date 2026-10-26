@@ -16,10 +16,10 @@ outputs:
   - {type: plan}
 uses: [ad-concept-matrix-builder, founder-ad-script-builder, video-hook-scorer, video-ad-bridge-checker, founder-ad-shoot-planner]
 steps:
-  - {uses: ad-concept-matrix-builder, note: "Picks the problems and angles the founder will talk about."}
-  - {uses: founder-ad-script-builder, note: "Writes founder scripts for the top angles from the matrix."}
-  - {uses: video-hook-scorer, note: "Scores the hooks from the scripts and picks which to film."}
-  - {uses: video-ad-bridge-checker, note: "Checks each script holds from the hook to the offer before anyone films it."}
+  - {uses: ad-concept-matrix-builder, note: "Picks the problems and angles the founder will talk about. Hands the angle library to step 2."}
+  - {uses: founder-ad-script-builder, note: "Writes founder scripts for the top angles from the matrix. Hands the scripts and hooks to steps 3 to 5."}
+  - {uses: video-hook-scorer, note: "Scores the hooks from the scripts and picks which to film. Hands the chosen hooks to step 4."}
+  - {uses: video-ad-bridge-checker, note: "Checks each script holds from the chosen hook to the offer before anyone films it, using the scripts from step 2 and the hooks picked in step 3. Hands the fixed scripts to step 5."}
   - {uses: founder-ad-shoot-planner, note: "Turns the approved scripts and hooks into one shoot list for the afternoon."}
 origin: rebuilt
 version: 1.0.0

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts the product, then lists set duties.
 new_slug: iot-security-check
 name: Connected product security checker
-summary: Describe your product with software. Get its EU risk class, security
-  duties, parts list needs and reporting steps.
+summary: Check what the EU Cyber Resilience Act means for your connected product. Get its risk class, CE marking route, security duties and reporting steps.
 job: secure-code
 headline: Connected product security checker
-subhead: A plain answer to what the EU Cyber Resilience Act means for your
-  connected product. Describe what it is, whether it is hardware, software or an
-  app, and who sells it.
+subhead: A plain answer to what the EU Cyber Resilience Act means for your connected product. Describe what it is, whether it is hardware, software or an app, and who sells it.
 explain: |
   A plain answer to what the EU Cyber Resilience Act means for your connected product. Describe what it is, whether it is hardware, software or an app, and who sells it. The skill decides if it counts as a product with digital elements, sorts it into default, important or critical class, and names the route to CE marking.
 
@@ -18,6 +15,10 @@ when:
   - You need to know if your product needs outside testing or self-assessment.
   - A customer asks for a software parts list and you have none.
   - You must know how and when to report a security flaw.
+not_for:
+  - Your product is a medical device, car part, aircraft part or military item. Other EU rules cover these, so ask a qualified assessor.
+  - You need legal advice or a formal conformity check. Hire a lawyer or a notified body, since this gives guidance only.
+  - You sell only outside the EU. The Act covers products sold in the EU, so check the rules where you sell.
 you_give:
   - A description of your product and how it connects
   - "Your role: maker, importer or distributor"
@@ -30,7 +31,27 @@ you_get:
   - What a software parts list needs
   - Reporting steps and deadlines
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full SKILL.md text into the chat.
+  - "Describe your product, how it connects, where you sell it and your role: maker, importer or distributor."
+  - Read the answer. It gives your scope, class, route and a summary of duties, in that order.
+  - Check any dates against the ENISA and European Commission links in the skill before you act on them.
+output_sample:
+  input:
+    - A description of your product and how it connects
+    - "Your role: maker, importer or distributor"
+    - Where the product is sold
+    - What data it handles (optional)
+  output:
+    - name: Scope Determination
+      contains: Says whether your product is in scope of the Act, or excluded and why.
+    - name: Product Class
+      contains: Places your product in the default, Class I or Class II group.
+    - name: Applicable Annex
+      contains: Names the Annex III or Annex IV item that fits your product, if any.
+    - name: Organisation Role
+      contains: Confirms if you count as maker, importer or distributor.
+    - name: Conformity Assessment Route
+      contains: Says if you can self-assess or need a third-party notified body.
+    - name: Key Obligations Summary
+      contains: Lists your security duties, software parts list needs, support period and reporting steps.

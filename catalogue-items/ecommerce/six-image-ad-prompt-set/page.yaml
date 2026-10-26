@@ -1,31 +1,127 @@
 new_slug: six-image-ad-prompt-set
 name: Six image ad prompt builder
-summary: Turn one real product photo into six complete ad prompts, with a shared brand fingerprint and clear scene or overlay directions.
+summary: Turn one product photo into six ready-to-paste image ad prompts that share the same brand details, copy and layout rules.
 job: make-image-ads
 headline: Six image ad prompt builder
-subhead: A compact prompt pack for six deliberate variations from one supplied product photograph.
-explain: Creates copy-paste prompts rather than claiming finished images. Choose scene transformations or graphic overlays and keep the product identity and approved copy consistent.
+subhead: Give it one real photo of your product and your brand details. It writes six image ad prompts, each with its own job, exact ad text and layout. You paste each one into an image AI to make the ad.
+explain: |
+  Six ads from one photo often come out as six near copies. Or the product changes shape or colour from one picture to the next. This builder fixes both. It starts with a brand fingerprint: a short block of the facts that must not change, such as the product line, colours, type style, tone and the claims you can back up.
+
+  Then each ad gets its own job. One shows what the product is. One shows a real difference. One shows size or material. One shows everyday use. One fits a gift or an occasion. One shows a real offer, but only if you have one. Every prompt repeats the whole fingerprint, so any one of them works on its own in ChatGPT, Gemini or another image AI.
+
+  You pick a mode. Scene mode keeps the product and changes the setting. Overlay mode keeps your real photo and adds text and shapes on top. It writes prompts only. Your image AI draws the pictures.
 when:
-  - You want six ready-to-use image prompts from one product photo.
-  - You need a portable brand block reused consistently across variations.
+  - You have one clean product photo and want six different ad images from it.
+  - Your image AI keeps changing the colour or shape of your product.
+  - You want the same brand look and exact wording in every ad in a set.
+  - A teammate says "make six variations" and each one needs a clear job.
+not_for:
+  - "You need one image prompt, not six. Use the Brand-to-image prompt compiler."
+  - "You want ads chosen by buyer stage and proof, with full copy and layout briefs. Use the Twelve-pattern static ad brief maker."
+  - "You already made images and want to edit them. Use the Ad image generation and edit planner."
+  - "You want finished pictures from Claude. It writes prompts and cannot draw. ChatGPT, Gemini or another image tool makes the pictures."
 you_give:
-  - The exact product photograph and brand name.
-  - Colour, type, tone and product facts, plus the real offer if any.
-  - Scene transformation or graphic overlay preference and target size.
+  - One clear photo of the exact product you sell, front on
+  - Your brand name, colours (hex codes if you have them), type style and tone
+  - Product facts and claims you can back up
+  - Your real offer, with its dates and terms (optional)
+  - Scene or overlay, and the size you need, such as square or 4:5 (optional, it asks if you skip them)
 you_get:
-  - A confirmed brand fingerprint.
-  - Six distinct copy-and-layout concepts and complete prompts.
-  - A correction guide for product, spelling and layout drift.
+  - A brand fingerprint to check before anything is made
+  - Six ads with different jobs, each with a headline, a support line and one action
+  - Six full prompts that each work on their own
+  - A fix guide for wrong spelling, a changed product, drifting colour and crowded layouts
+  - A MISSING list for any fact you left out
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code or web access.
+  - Attach your product photo. Paste your brand details, facts and offer. Say "scene" or "overlay" and the size.
+  - Read the fingerprint first. Fix any wrong colour, claim or product line before you go on.
+  - Paste one prompt at a time into an image AI such as ChatGPT or Gemini, with your product photo attached. Claude writes the prompts and cannot draw.
+  - Check each picture at full size next to your photo. If something is wrong, use the matching line in the fix guide.
 how_it_works:
-  - title: Record the fingerprint
-    text: Read the supplied product and brand rules, separating visible facts from missing information.
-  - title: Choose a mode
-    text: Use scene transformations or graphic overlays, with a different communication job per variation.
-  - title: Write six complete prompts
-    text: Include the same identity block, exact copy, layout, size and checks in every prompt.
+  - title: Read the photo and facts
+    text: It notes shape, colour, material and the words on the pack. Anything it cannot see is marked unknown.
+  - title: Write the fingerprint
+    text: One block holds the product line, colours, type, tone, allowed claims, offer and what to leave out. A clash between your brand file and your photo is flagged first.
+  - title: Pick scene or overlay
+    text: Scene keeps the product and changes the setting. Overlay keeps your photo and adds live text and shapes.
+  - title: Give each ad a job
+    text: Six different jobs, not six colour swaps. If your facts support fewer claims, it varies the scene and layout and adds no new claims.
+  - title: Write the copy first
+    text: Each ad gets a headline, a support line and one action. Every number, review and deadline must come from your facts.
+  - title: Write six full prompts
+    text: Each prompt repeats the whole fingerprint, the camera and light line, the exact text, the layout and the checks. Nothing says "same as before".
+  - title: Add the fix guide
+    text: One specific fix for each common mistake, so a bad picture gets a changed instruction and not the same prompt again.
+output_shape: |
+  FINGERPRINT
+  Brand: <name> | Logo: <supplied or not>
+  Product line: <one exact phrase>; not <lookalike>
+  Source photo: <file name or ID>
+  Palette: <colour name and hex>, <...>
+  Type style: <...> | Tone: <...>
+  Allowed claims: <...> | Offer: <real offer and terms, or none>
+  Never show: <...>
+  Conflicts or unknowns: <...>
+
+  SIX ADS
+  V1 <job> | headline <...> | support <...> | action <...>
+  V2 ... V6
+
+  PROMPT V1 (and V2 to V6, each one whole)
+  Purpose: <...>
+  Fingerprint: <the full block, pasted>
+  Product anchor: <what the photo fixes>
+  Scene or background: <...>
+  Camera and light: <...>
+  Exact text, added as live type: <...>
+  Placement and hierarchy: <...>
+  Frame size and product scale: <...>
+  Protected details: <...> | Exclusions: <...>
+  Checks: <...>
+
+  FIX GUIDE
+  Spelling | Product | Colour | Product too small | Crowded layout
+
+  MISSING: <facts you did not give>
+output_sample:
+  input:
+    - Your product photo, the exact product you sell
+    - Your brand name, colours, type style and tone
+    - Product facts and claims you can back up
+    - Your real offer, with terms (optional)
+    - Scene or overlay, and the picture size
+  prerequisites:
+    - An image AI that can draw, such as ChatGPT or Gemini, to turn each prompt into a picture
+  output:
+    - name: Brand fingerprint
+      contains: One block with the product line, colours, type style, tone, allowed claims, offer and what never to show.
+    - name: Six ads
+      contains: Six different jobs, each with a headline, a support line and one action.
+    - name: Prompts V1 to V6
+      contains: Six full prompts. Each repeats the fingerprint, camera and light, exact text, layout and checks.
+    - name: Fix guide
+      contains: One fix each for wrong spelling, a changed product, drifting colour, a small product and a crowded layout.
+    - name: Missing list
+      contains: Facts you did not give, marked so nothing is guessed.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  tools:
+    - name: ChatGPT
+      why: Draws the picture from a prompt, with your product photo attached. Free plans have tight daily limits.
+    - name: Gemini
+      why: Draws from a prompt and a photo too. A good second try when the first picture changes the product.
+  inputs:
+    - Your brand file, so the fingerprint starts with real colours, type and tone
+    - A second photo of the label up close, if the pack has small print
+    - Past ads you liked, so you can say what to keep
+terms:
+  - term: Brand fingerprint
+    meaning: A short block of facts that must stay the same in every ad, such as product, colours, type and claims.
+  - term: Live type
+    meaning: Text you add on top of the picture as real letters, so the spelling stays exact.
+  - term: Overlay
+    meaning: Your real photo with text and shapes placed on top.
+  - term: Product anchor
+    meaning: The real photo the AI must copy the product from.

@@ -1,57 +1,68 @@
 new_slug: lesson-talk-writer
 name: "Lesson talk writer"
-summary: "Paste your stories and their lessons. Get a short talk that builds each lesson on a story, ending on a next step."
+summary: "Turn your own stories and lessons into a short talk, like a graduation speech. Get two or three repeatable lessons, a joke, a script and one next step."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It matches stories to lessons and shapes a talk, with fixed steps."
 
 headline: "Lesson talk writer"
-subhead: Give it the true stories you could tell and the lessons you trust. It picks two or three, ties each lesson to one story from a low point, writes each as a sentence people can repeat, and ends on one next step. You get a short talk script.
+subhead: "Give it the true stories you could tell, the lessons you believe, your audience and your time. It picks two or three lessons and ties each to one story from a low point of your own. You get a short talk script with an opening joke and a close that names one next step."
 
 explain: |
-  Talks full of advice slide off the audience, because advice with no story behind it is easy to forget. A story with no lesson is only entertainment. The two together make something people repeat on the way home.
+  Advice with no story behind it slides off an audience. A story with no lesson is only entertainment. Together they give people something to repeat on the way home. That is the idea behind this talk writer for a graduation, commencement or team speech.
 
-  This skill chooses two or three lessons you trust and ties each to one true story from your own low point. It writes each lesson as a single short sentence a listener can repeat, backs it with an outside voice or idea, and speaks straight to the listener with a question they can answer. It opens with a joke at your own expense about why you are the one speaking, and closes on a next step, not a summary.
+  The skill chooses the two or three lessons you trust most. It ties each to one true story from your own low point and writes the lesson as one short sentence a listener can say back. Each lesson gets an outside voice to back it, marked for you to check, and a question the audience can answer silently.
+
+  It opens with a joke at your own expense about why you are the one speaking. It closes on one thing the listener can do this week, not a summary. It never makes up a story, a quote or a figure.
 
 when:
-  - You are asked to give a graduation, commencement, team or community talk.
-  - You have many stories and many pieces of advice and no order.
-  - You want a talk that ends with something the audience will do.
+  - "You are asked to give a graduation, commencement, team or community talk."
+  - "You have many stories and a pile of advice and no order."
+  - "You want the talk to end with something the audience will do."
+  - "You were asked to say a few words about what you have learned, and you do not want to ramble."
+
+not_for:
+  - "You are launching a product or pitching an offer: use the Launch talk writer."
+  - "You want a funny speech for a wedding, a toast or a roast: use the Funny speech planner."
+  - "The room disagrees with you and you must win them over: use the Tough audience speech planner."
+  - "You have no true stories yet. Collect two or three first. This skill will not invent them."
 
 you_give:
-  - The true stories you could tell, with what happened
-  - The lessons you believe, in any wording
-  - Who the audience is and how long you have
+  - "The true stories you could tell, with what happened (from your own memory or notes)"
+  - "The lessons you believe, in any wording"
+  - "Who the audience is and how many minutes you have"
+  - "Quotes or ideas you want to use, with their sources (optional)"
+  - "Topics or people you do not want to mention (optional)"
 you_get:
-  - Two or three lessons, each tied to one true story
-  - Each lesson as one repeatable sentence
-  - A script with an opening joke, a question and a close with a next step
-  - A list of claims to check before you speak
+  - "Two or three lessons, each tied to one true story"
+  - "Each lesson as one repeatable sentence"
+  - "A script with an opening joke, a question for the audience and a close with a next step"
+  - "A list of claims and quotes to check before you speak"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - List your stories and lessons in any order, with true details.
-  - Say who the audience is and how long you have.
-  - Read each lesson sentence aloud. Change any you would not say to a friend.
-  - Check each fact and quote before you speak.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "List your stories and lessons in any order, with true details. Say who the audience is and how long you have."
+  - "Read each lesson sentence aloud. Change any you would not say to a friend."
+  - "Check every fact and quote in the claims list before you speak."
+  - "Time the talk aloud and trim to your slot."
 
 how_it_works:
-  - title: Picks the lessons
-    text: Chooses the two or three you trust most and drops the rest.
-  - title: Pairs each with a story
-    text: Matches each lesson with a true story from a low point of your own.
-  - title: Says it in one sentence
-    text: Writes each lesson as one short sentence a listener can repeat.
-  - title: Adds an outside voice
-    text: Brings in one outside idea or voice to back each lesson, marked for checking.
-  - title: Speaks to the listener
-    text: Adds a question the audience can answer silently.
-  - title: Opens with a self joke
-    text: Writes a joke at your expense about why you are the one speaking.
-  - title: Makes time visible
-    text: Adds one hard fact about time that the audience can picture.
-  - title: Ends on a next step
-    text: Closes with one thing the listener can do, and checks the set.
+  - title: "Picks the lessons"
+    text: "Chooses the two or three you trust most for this audience, and lists the rest as left out."
+  - title: "Pairs each with a story"
+    text: "Matches each lesson to a true story from a low point of your own. No story means a marked gap."
+  - title: "Says it in one sentence"
+    text: "Writes each lesson short enough to say in one breath and repeat tomorrow."
+  - title: "Adds an outside voice"
+    text: "Brings in one idea or quote to back each lesson, only from what you gave. It goes on the check list."
+  - title: "Speaks to the listener"
+    text: "Adds a question the audience can answer silently."
+  - title: "Opens with a self joke"
+    text: "Writes two or three lines at your own expense about why you are the one speaking."
+  - title: "Makes time visible"
+    text: "Adds one hard fact about time that the audience can picture, if you gave one."
+  - title: "Ends on a next step"
+    text: "Closes with one thing the listener can do this week, then checks the set."
 
 output_shape: |
   LESSONS
@@ -78,34 +89,56 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "The true stories you could tell, with what happened"
+    - "The lessons you believe, in any wording"
+    - "Who the audience is and how long you have"
+    - "Quotes or ideas you want to use, with sources (optional)"
+  output:
+    - name: "LESSONS"
+      contains: "Two or three lessons, each as one repeatable sentence and tied to one true story."
+    - name: "OPENING"
+      contains: "Two or three lines of joke at your own expense about why you are the one speaking."
+    - name: "TALK"
+      contains: "The script lesson by lesson: story, lesson sentence, outside voice and a question for the room."
+    - name: "PICTURE ABOUT TIME"
+      contains: "One hard fact about time the audience can picture, or a marked gap."
+    - name: "THE CLOSE"
+      contains: "One next step the listener can take this week, in one line."
+    - name: "CLAIMS TO CHECK"
+      contains: "Every quote or fact to verify against its source before you speak."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check the draft still fails."
+
 tweaks:
-  - what: How low the story is
-    how: The lesson lands harder when the story shows a real low point. Give the honest version.
-  - what: Audience
-    how: Name their age, work and stage of life. The question and the time fact change.
-  - what: Length
-    how: Say the minutes. Two lessons suit five minutes, and three suit ten.
-  - what: Outside voices
-    how: Give a quote or idea you trust. It is used as given and marked for checking.
+  - what: "How low the story is"
+    how: "The lesson lands harder when the story shows a real low point. Give the honest version."
+  - what: "Audience"
+    how: "Name their age, work and stage of life. The question and the time fact change."
+  - what: "Length"
+    how: "Say the minutes. Two lessons suit five minutes, and three suit ten."
+  - what: "Outside voices"
+    how: "Give a quote or idea you trust. It is used as given and marked for checking."
 
 judge:
-  - Each lesson is tied to one true story.
-  - Each lesson is one sentence people can repeat.
-  - The close names one next step.
-  - No lesson is a claim you cannot back.
-  - The opening joke is at your own expense, not the audience's.
+  - "Each lesson is tied to one true story."
+  - "Each lesson is one sentence people can repeat."
+  - "The close names one next step."
+  - "No lesson is a claim you cannot back."
+  - "The opening joke is at your own expense, not the audience's."
 
 test:
-  - Say the lesson sentences to a friend and ask them to repeat one tomorrow.
-  - Check every outside quote or fact against its source.
-  - Run it twice. The chosen lessons should stay close.
-  - Time the talk aloud and trim to the slot.
+  - "Say the lesson sentences to a friend and ask them to repeat one tomorrow."
+  - "Check every outside quote or fact against its source."
+  - "Run it twice. The chosen lessons should stay close."
+  - "Time the talk aloud and trim to the slot."
 
 improve:
-  - Add a bank of your own stories with true details, and paste it in each time.
-  - Add topics and people you do not want to mention.
-  - Add your brand file if the talk is for work, so tone and claims stay on message.
-  - Pair it with "Read-aloud speech shaper" to add breath marks and a refrain.
+  - "Add a bank of your own stories with true details, and paste it in each time."
+  - "Add topics and people you do not want to mention."
+  - "Add your brand file if the talk is for work, so tone and claims stay on message."
+  - "Pair it with \"Read-aloud speech editor\" to add breath marks and a refrain."
 
 works_best_with:
   tools:
@@ -117,7 +150,7 @@ works_best_with:
     - "Facts about the audience"
 
 terms:
-  - term: Lesson sentence
-    meaning: One short sentence that states a lesson so a listener can repeat it.
-  - term: Low point
-    meaning: A real time when things went badly, used as the story behind a lesson.
+  - term: "Lesson sentence"
+    meaning: "One short sentence that states a lesson so a listener can repeat it."
+  - term: "Low point"
+    meaning: "A real time when things went badly, used as the story behind a lesson."

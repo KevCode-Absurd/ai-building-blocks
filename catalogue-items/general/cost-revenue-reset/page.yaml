@@ -1,6 +1,6 @@
 new_slug: cost-revenue-reset
 name: "Cost versus revenue reset planner"
-summary: "Paste last year's costs and revenue. Get one clear reset decision, who is affected and a staff note that owns the mistake."
+summary: "Find out if your costs have outgrown your sales. Paste your figures. Get one reset decision, who it affects and a staff note that owns the mistake."
 job: lead-people
 thinking: high
 thinking_why: "It weighs a decision that affects people, so it should check the numbers and the wording with care."
@@ -17,6 +17,10 @@ when:
   - Costs have grown faster than revenue and you must decide what to do about it.
   - You need to tell staff about a reduction and want the note to be honest and specific.
   - You are tempted to cut a bit each quarter and want to test whether one decision is better.
+not_for:
+  - "You only need a small budget tweak: do a regular budget review with your finance lead or in a spreadsheet."
+  - "Costs and revenue have grown at about the same pace: keep your normal budget review and skip a reset."
+  - "You need to give legal notice or pay terms: ask an employment adviser, then use this for the plan and note."
 
 you_give:
   - Costs and revenue by period for the last one or two years (spreadsheet or pasted figures)
@@ -35,6 +39,29 @@ how_to_use:
   - List the big bets, who approved them and what each cost.
   - Say what support you can honestly offer. Leave a gap rather than guess.
   - Read the note aloud. The person who signs it should be willing to say every line.
+output_sample:
+  input:
+    - Your costs and revenue for at least two comparable periods
+    - Your big spending decisions and who approved them
+    - Who would be affected and the support you can offer
+    - Your goal for the next few years (optional)
+  output:
+    - name: Cost against revenue
+      contains: The change in costs beside the change in revenue for each period, and the gap in plain numbers.
+    - name: The bets that ran ahead
+      contains: Each spending decision that added cost before revenue could pay for it, with its amount and the role that decided.
+    - name: The decision
+      contains: One clear move with its size and date, and why smaller trims will or will not be enough.
+    - name: Who is affected
+      contains: Each group, how many people, and the support with terms, amounts and dates.
+    - name: The goal that stays
+      contains: The aim that stays large after the reset, and what you keep investing in.
+    - name: Draft note to staff
+      contains: A note that opens with the decision, gives the reason, owns the mistake and lists the support.
+    - name: Missing
+      contains: Each fact you did not give, marked so nothing is guessed.
+    - name: Checks missed
+      contains: One line per check the plan still fails, or none.
 
 how_it_works:
   - title: Compares growth

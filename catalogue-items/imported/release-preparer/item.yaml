@@ -13,6 +13,7 @@ inputs:
 outputs:
   - type: code_change
   - type: document
+  - type: codebase
 uses: []
 origin: imported
 source:

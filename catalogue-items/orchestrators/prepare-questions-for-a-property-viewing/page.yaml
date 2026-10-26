@@ -1,50 +1,88 @@
 new_slug: prepare-questions-for-a-property-viewing
 name: Prepare questions for a property viewing
 headline: Prepare questions for a property viewing
-summary: Share the source files. Get a source-linked viewing brief and questions to verify in person.
+summary: Prepare for a property viewing. Get a brief that separates listing claims from facts, plus questions to ask and checks to make in person.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A source-linked viewing brief and questions to verify in person. Share the listing, actual lease or sale information supplied, viewing goals, accessibility requirements and questions already answered. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the listing, any lease or sale details, and what you want from the viewing. It separates what the listing states from what it only claims. It finds missing measurements and unsupported promises, then turns them into questions and checks for the visit.
 explain: |-
-  A source-linked viewing brief and questions to verify in person.
+  A listing is written to sell. It mixes facts, such as the price, with claims, such as "quiet street" or "newly renovated". This workflow helps you prepare questions for a property viewing so you ask about the claims that matter, not just the ones you thought of.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Listing claims remain attributed; no ownership, legal status, condition or financial return is certified. Missing tools or evidence stay visible in the final summary.
+  The Source note summariser pulls out the price, area, access, condition statements and terms, each with its source and date, and separates stated facts from listing claims. The Unsupported claim spotter then finds promises with no proof, missing measurements and claims that need an official or qualified check. A last step turns each one into a question or a check, grouped by who can answer.
+
+  The pack certifies nothing about ownership, legal status, condition or returns. It tells you who can check each one, such as the council, a surveyor or a solicitor.
 when:
-  - You need a source-linked viewing brief and questions to verify in person.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are viewing a flat or house to rent and want to ask better questions than the listing answers.
+  - You are buying and want to know which claims to check before you make an offer.
+  - You have accessibility needs and want them turned into checks you can make on the day.
+  - You have several viewings and want the same clear list for each.
+not_for:
+  - "You want a lease read in plain words: use the Plain-words contract summary."
+  - "You want a lawyer's check of a contract: use the Contract and term sheet reviewer first, then see a solicitor."
+  - "You want lease accounting figures: use the Lease accounting calculator."
+  - You want to know if the property is a good buy. This gives questions and checks, not a valuation or investment advice.
 you_give:
-  - The listing, actual lease or sale information supplied, viewing goals, accessibility requirements and questions already answered.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The listing text, pasted or attached, with its link and date
+  - Any lease terms or sale details you were sent (optional)
+  - "What you want from this viewing: must-haves and deal-breakers"
+  - Your accessibility needs (optional)
+  - Questions the agent or owner already answered (optional)
 you_get:
-  - A source-linked viewing brief and questions to verify in person.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A viewing brief of what the listing states, each item with its source
+  - A list of claims to verify, ranked by risk, with what would settle each one
+  - The information the listing leaves out
+  - Questions to ask, grouped by who can answer
+  - Checks to make on the day, including your own needs
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste the listing and any terms you were sent. Say what you must have and what you cannot accept.
+  - Read the claims to verify. Pick the three that matter most to you.
+  - Take the questions and checks to the viewing, on your phone or on paper.
+  - After the viewing, run the pack again with your notes to see which claims held up.
 how_it_works:
   - title: Source note summariser
-    text: Extract actual supplied price, area, access, condition statements and terms with their source and date; separate facts from listing assertions.
+    text: Pulls out price, area, access, condition statements and terms, each with its source and date. Separates stated facts from listing claims. Hands step 2 the list. Check before moving on, no claim is shown as fact.
   - title: Unsupported claim spotter
-    text: Check listing assertions and the existing viewing notes for unsupported guarantees, missing measurements and claims needing official or qualified evidence.
+    text: Finds promises with no proof, missing measurements and claims that need official or qualified evidence. Ranks them by risk and says what kind of source would settle each.
+  - title: Check and hand back
+    text: Turns each gap and risky claim into a question or a check, grouped by who can answer, and puts your must-haves and access needs first. Lists every gap and every check that did not run.
 output_shape: |-
-  Scope and source coverage
-  A source-linked viewing brief and questions to verify in person.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  VIEWING BRIEF <item | value | source | date>
+  CLAIMS TO VERIFY <claim | why it matters | what would settle it | risk>
+  MISSING INFORMATION <what the listing leaves out that you need>
+  QUESTIONS TO ASK <question | ask who | why>
+  CHECKS TO MAKE ON THE DAY <what to look at or measure | why | your need it serves>
+  BEFORE YOU COMMIT <what a surveyor, solicitor or council check would cover>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - The listing text, with its link and date
+    - Any lease terms or sale details you were sent (optional)
+    - Your must-haves and deal-breakers
+    - Your accessibility needs (optional)
+  prerequisites:
+    - An AI that can read files or long pasted text
+    - The two component skills, which come in the pack
+  output:
+    - name: Viewing brief
+      contains: The price, area, access, condition statements and terms the listing gives, each with its source.
+    - name: Claims to verify
+      contains: Listing promises with no proof, ranked by risk, with what would settle each.
+    - name: Questions to ask
+      contains: Each question, who can answer it and why it matters to you.
+    - name: Checks on the day
+      contains: What to look at or measure in person, including your accessibility needs.
+    - name: Before you commit
+      contains: What a surveyor, solicitor or council check would need to cover.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Listing claims remain attributed; no ownership, legal status, condition or financial return is certified.
+  - what: One property
+    how: Run one property at a time. Keep the briefs so you can compare them side by side.
+  - what: Your needs
+    how: List must-haves and accessibility needs. They go to the top of the questions and checks.
+  - what: Rent or buy
+    how: Say which. Questions on terms, fees and condition change a lot between the two.
 judge:
   - Listing claims remain attributed; no ownership, legal status, condition or financial return is certified.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +95,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep your must-haves in one note and paste them each time, so every property gets the same test.
+  - After each viewing, add the answers you got. Next time the pack can mark which claims were confirmed.
+  - Save the briefs for each property so you can compare what each listing left out.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads a long listing and a lease together. Photos of floor plans are best pasted as text.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The floor plan or a list of measurements, if the listing has one.
+    - Your budget limits.
 terms:
+  - term: Listing claim
+    meaning: A statement in the advert that the advert does not prove, such as quiet street.
+  - term: Unsupported claim
+    meaning: A promise with no measurement, document or source behind it.
+  - term: Surveyor
+    meaning: A qualified person who inspects a property's condition.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

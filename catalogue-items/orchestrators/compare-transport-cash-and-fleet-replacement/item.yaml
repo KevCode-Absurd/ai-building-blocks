@@ -1,15 +1,13 @@
 slug: compare-transport-cash-and-fleet-replacement
 name: Compare transport cash and fleet replacement
-summary: A trip contribution baseline and incremental replacement cash comparison
+summary: "Find what a loaded trip earns in cash, then compare keeping a truck with replacing it, using your trip, fuel and sale figures."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - freight-trip-contribution-builder
   - fleet-replacement-cash-comparer

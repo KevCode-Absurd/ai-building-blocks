@@ -15,9 +15,9 @@ outputs:
   - { type: audit_report }
 uses: [ new-user-drop-off-finder, small-usability-test-planner, product-metrics-review-writer ]
 steps:
-  - { uses: new-user-drop-off-finder, note: "Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers." }
-  - { uses: small-usability-test-planner, note: "Plans a one-morning test of the leak the finder named. Reads the audit report from the step before." }
-  - { uses: product-metrics-review-writer, note: "Checks whether the fix moved the numbers. Reads the fresh export from after the wait." }
+  - { uses: new-user-drop-off-finder, note: "Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers and hands the leak report to step 2." }
+  - { uses: small-usability-test-planner, note: "Plans a one-morning test of the leak the finder named. Reads the audit report from the step before and hands the test plan, with its pass number, to step 3." }
+  - { uses: product-metrics-review-writer, note: "Checks whether the fix moved the numbers. Reads the fresh export from after the wait, and uses the pass number and targets from step 2's plan." }
 origin: rebuilt
 version: 1.0.1
 generated_from: intake/find-where-new-users-leave-and-prove-the-fix-works/skeleton.yaml

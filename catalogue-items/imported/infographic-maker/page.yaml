@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It analyses the content, suggests layouts and styles, then draws one.
 new_slug: infographic-maker
 name: Infographic maker
-summary: Give it your content. Get an infographic with a layout and style picked
-  to fit the message.
+summary: Turn your report or key points into an infographic. Your AI picks a layout and style to fit, then draws and saves the image.
 job: make-images
 headline: Infographic maker
-subhead: An infographic where the layout and look match the message, built from
-  your own content. You pick how the information is arranged and the visual
-  style separately, and any layout can pair with any style.
+subhead: An infographic where the layout and look match the message, built from your own content. You pick how the information is arranged and the visual style separately, and any layout can pair with any style.
 explain: |
   An infographic where the layout and look match the message, built from your own content. You pick how the information is arranged and the visual style separately, and any layout can pair with any style.
 
@@ -19,6 +16,10 @@ when:
   - You need a timeline or steps diagram for a post.
   - You are unsure which layout suits your content.
   - You want infographics that match across a series.
+not_for:
+  - "You need exact charts or data-heavy tables: use a chart tool such as Google Sheets or Excel."
+  - "Your AI cannot make images and you have no image tool: ask a designer, or use a tool like Canva."
+  - "You only want a short written summary: ask your AI for a plain summary instead."
 you_give:
   - Your content or key points
   - A layout or style preference (optional)
@@ -30,8 +31,29 @@ you_get:
   - Options to change either one
   - A saved file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can draw images with an image tool.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Or upload the skill folder if your AI accepts files.
+  - Paste your content or key points. Say the layout, style, size or image tool you want, if you have a view.
+  - Check the layout and style your AI suggests. Answer its short questions or pick another option.
+  - Your AI writes the drawing instructions, then makes the image. This step needs an image tool. Some need an account, login, API key or payment.
+  - Look at the image. Ask for a different layout or style if it does not fit, then save the file.
+output_sample:
+  input:
+    - Your content or key points, pasted or as a file
+    - A layout or style you like (optional)
+    - Image size or platform (optional)
+    - An image tool you prefer (optional)
+  prerequisites:
+    - An AI that can make images, or a way to run an image tool. Some image tools need an account, login, API key or payment. Check which one you have before you start.
+  output:
+    - name: source file
+      contains: A saved copy of the content you gave it.
+    - name: analysis.md
+      contains: What your content is about and which layouts and styles could suit it.
+    - name: structured-content.md
+      contains: Your content cut into clear sections, ready to place in the layout.
+    - name: prompts/infographic.md
+      contains: The final drawing instructions sent to the image tool, with your chosen layout and style.
+    - name: infographic.png
+      contains: The finished infographic image.
+    - name: Output summary
+      contains: Topic, layout, style, size, language, image tool used, and where the files are saved.

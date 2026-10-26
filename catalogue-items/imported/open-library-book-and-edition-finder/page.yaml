@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: open-library-book-and-edition-finder
 name: Open Library book and edition finder
-summary: Share a title, author, or ISBN. Get book records, editions, author details, and available cover links.
+summary: Find a book, its editions, author details and cover links from a title, author or ISBN. Uses the free Open Library catalog. No account needed.
 job: research-topics
 headline: Open Library book and edition finder
 subhead: Share a book title, author, ISBN, or Open Library record number. It looks up the public catalog and follows links between books, editions, and authors. You get matching records and source details. Live lookups need Python, its requests package, and internet access.
+not_for:
+  - You run a library system, such as Koha, MARC batch work or patron records. Ask your library system vendor or admin team instead.
+  - You need paid book data feeds, such as ISBNdb or Google Books. Use that provider's own service.
+  - You want to manage your own Open Library reading lists or account. Do that by signing in on the Open Library site.
 you_give:
   - A title, author, ISBN, or Open Library identifier, plus desired language or result limit.
 you_get:
@@ -26,3 +30,24 @@ how_to_use:
   - The bundled helper needs Python 3.8 or later, the requests package, and internet access for live catalog lookups.
   - Give a title, author, ISBN, or record number. Say whether you want a work, one edition, all editions, or author details.
   - Ask for source record links and missing details. An offline plan does not mean a lookup has run.
+output_sample:
+  input:
+    - A book title, author name or ISBN
+    - An Open Library record number (optional)
+    - Your language or result limit (optional)
+  prerequisites:
+    - An AI that can run code, with Python 3.8 or later and the requests package
+    - Internet access for live lookups
+  output:
+    - name: Book search results
+      contains: Matching books with title, authors, first year published, edition count and the work key.
+    - name: Author details
+      contains: Bio, dates and photo link for an author, or a list of name matches.
+    - name: Work record
+      contains: Description, subjects and cover link for one book across all its editions.
+    - name: ISBN match
+      contains: The edition your ISBN points to, with its work and author keys and cover link.
+    - name: Edition list
+      contains: Publisher, date and ISBN for each edition of a work, with a way to page through more.
+    - name: Ratings
+      contains: Average rating, star counts and how many people want to read, are reading or have read it.

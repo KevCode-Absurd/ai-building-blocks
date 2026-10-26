@@ -1,6 +1,6 @@
 new_slug: persona-script-multiplier
 name: "Persona script multiplier"
-summary: "Give it one winning video script. Get a version and a page brief for each buyer group."
+summary: "Turn one winning video ad script into a script for each buyer group, with a matching page brief and claim notes. Test new buyers, not new ideas."
 job: write-ad-copy
 thinking: high
 thinking_why: "It must rewrite one script many ways while keeping every claim inside what you can prove, which needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - One of your video ads is winning and you want to test it with other kinds of buyers.
   - You sell a product with several ingredients or features that matter to different people.
   - You want each buyer group to land on a page that matches its script.
+not_for:
+  - Your product has one main benefit. Skip this and test a new hook on the same buyer with a person or your usual ad tool.
+  - You want to write a fresh ad from scratch. Start with the Fact-based ad copy writer instead.
+  - You want a final ruling on whether a claim is allowed. Ask a qualified reviewer or your ad platform's rules, not this tool.
 
 you_give:
   - Your winning script
@@ -35,6 +39,27 @@ how_to_use:
   - List each buyer group with their top problem and their own words, from reviews if you can.
   - List the claims you may make and the proof you have.
   - Have a qualified person read every script before it runs, then test one new script at a time against the original.
+output_sample:
+  input:
+    - Your winning video ad script
+    - Your product ingredients or features, with doses or specs
+    - Your buyer groups, each with their top problem and own words
+    - Your offer, guarantee and proof (optional)
+    - The claims you are allowed to make (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini
+    - Doses and specs taken from your label or supplier
+  output:
+    - name: Fixed and changed line
+      contains: Shows the angle, offer and proof kept the same, and says only the persona changed.
+    - name: Script for each group
+      contains: A hook, cause reframe, day-by-day timeline, outcome scene, mechanism, proof, offer, guarantee and true scarcity.
+    - name: Page brief for each group
+      contains: The headline promise, what the first screen shows, and the proof near the top.
+    - name: Claim review
+      contains: Each health, result or comparison line, whether your facts back it, and what to check.
+    - name: Missing and checks missed
+      contains: Gaps in your inputs, and any check the result failed, or none.
 
 how_it_works:
   - title: Fixes angle and offer

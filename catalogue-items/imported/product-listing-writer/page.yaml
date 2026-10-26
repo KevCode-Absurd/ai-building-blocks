@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It follows a set copy method and fits each site's limits.
 new_slug: product-listing-writer
 name: Product listing writer
-summary: Give it your product facts. Get a title, bullets and description built
-  for the marketplace you sell on.
+summary: Write a product listing for eBay, Etsy, Walmart, Shopify or TikTok Shop. Give it your product facts. You get a title, bullets and description.
 job: write-landing-page
 headline: Product listing writer
-subhead: Give it your product facts. Get a title, bullets and description built
-  for the marketplace you sell on. Bring product specs and features. Use the
-  result to plan your next step.
+subhead: Give it your product facts and the marketplace you sell on. It reads competitor listings, picks the best keywords and writes your title, bullets and description. If you have a listing already, it shows the keywords you are missing.
 explain: |
   A marketplace-ready listing: title, bullet points, description and hidden search keywords, written for the platform you sell on. It avoids guessing by scoring keywords and checking what competitors do.
 
   It has two modes. In Create mode, you give product specs and it builds a new listing. In Optimize mode, you paste an existing listing and it finds keyword gaps. Copy follows the FABE pattern: feature, advantage, benefit, evidence. It supports Amazon, eBay and other major platforms and needs no API key. For Amazon, a separate dedicated skill is recommended.
 when:
-  - You are listing a new product on a marketplace.
-  - An existing listing gets few views and you want better keywords.
-  - You need bullets that match one platform's rules.
-  - You want to compare your listing against competitors.
+  - You are listing a new product on eBay, Etsy, Walmart, Shopify or TikTok Shop.
+  - A listing gets few views and you think the keywords are weak.
+  - You want to see what top competitors use in their titles and bullets.
+  - You sell on more than one site and need copy that fits each one's limits.
+not_for:
+  - "You sell on Amazon: use the Amazon listing optimization skill from Nexscope, made for Amazon's rules."
+  - "You have no specs or proof for your claims: gather real facts first, or the listing will have gaps marked to confirm."
+  - "You want a full landing page for your own website: ask a copywriter, or write the page by hand and use this only for the product text."
 you_give:
   - Product specs and features
   - The platform you sell on
@@ -30,8 +31,35 @@ you_get:
   - Backend search keywords
   - A keyword gap report when optimising
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open web pages.
+  - Open Claude, ChatGPT or Gemini. Pick one that can browse the web, or paste competitor text yourself.
+  - Paste the skill text into the chat.
+  - Tell it the platform, your product name, brand, features and specs. Add the tone you want.
+  - Add competitor links, or your current listing if you want it improved (optional).
+  - Read the result. Check every number and claim against your real product. Fix any line marked [confirm].
+  - Copy the title, bullets, description and tags into your listing.
+output_sample:
+  input:
+    - Your product name, key features and specs
+    - The platform you sell on
+    - Your brand name
+    - Links to 1 to 3 competitor listings (optional)
+    - Your current listing to improve (optional)
+  prerequisites:
+    - An AI that can open web pages, to read competitor listings and search for keywords
+  output:
+    - name: Title
+      contains: A keyword-aware title that fits the length limit of your platform, ready to copy in.
+    - name: Bullets / Features
+      contains: Benefit-led points with a short header, each built on feature, advantage, benefit and evidence.
+    - name: Description
+      contains: The full product description, written in the tone you pick and shaped for your platform.
+    - name: Tags / Keywords
+      contains: Search keywords or tags, formatted to the rules of your platform.
+    - name: Keyword Priority Table
+      contains: Each keyword with its score, its tier and where it was placed in the listing.
+    - name: Keyword Coverage Map
+      contains: Which keywords appear in the title, bullets, description and tags, with a coverage percentage.
+    - name: Excluded Competitor Brands
+      contains: Competitor brand names found in their copy that were left out of your listing.
+    - name: Keyword Gap Analysis
+      contains: "When optimizing: keywords you have, keywords you miss, and before and after copy."

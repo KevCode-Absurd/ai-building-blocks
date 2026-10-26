@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a fixed file format with formatting rules.
 new_slug: live-script-writer
 name: Live script writer
-summary: Describe the analysis or lesson. Get a MATLAB live script with text,
-  equations and figures you can run.
+summary: Describe your analysis or lesson. Get a MATLAB live script with text, equations and figures, ready to open and run in R2025a or later.
 job: build-software
 headline: Live script writer
-subhead: A MATLAB live script, as plain text you can open and run, with
-  explanations, equations and figures built in. Describe the analysis or lesson
-  and get a runnable notebook.
+subhead: A MATLAB live script, as plain text you can open and run, with explanations, equations and figures built in. Describe the analysis or lesson and get a runnable notebook.
 explain: |
   A MATLAB live script, as plain text you can open and run, with explanations, equations and figures built in. Describe the analysis or lesson and get a runnable notebook.
 
@@ -18,11 +15,17 @@ when:
   - You are turning an analysis into a report with equations.
   - You have an old binary live script to convert.
   - You need a notebook for a colleague to review.
+not_for:
+  - "You work in Python or Jupyter notebooks: use a notebook tool built for those, as this skill only writes MATLAB files."
+  - "You only need a plain MATLAB script or a function file: write it directly, without live script formatting."
+  - "You use MATLAB older than R2025a: update MATLAB first, or share the work as a plain script."
 you_give:
-  - The topic or analysis
+  - The topic or analysis you want to cover
+  - Who will read it, such as students, a colleague or a report reader
+  - Your MATLAB version (R2025a or later is needed)
   - Data or code you already have (optional)
   - Equations to show (optional)
-  - MATLAB, if you want it run (optional)
+  - An old binary .mlx file to convert (optional)
 you_get:
   - A live script file
   - Sections with text and equations
@@ -30,8 +33,34 @@ you_get:
   - An HTML export (optional)
   - A run-checked version (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB R2025a or later.
+  - Open a chat with your AI and paste in the skill text.
+  - Say what the analysis or lesson is, who it is for, and which MATLAB version you have.
+  - Add any data, code or equations you want included.
+  - Your AI writes the live script as a .m file. If it can run MATLAB, it also runs the code, saves the outputs and checks an HTML copy.
+  - Open the .m file in MATLAB R2025a or later and select Run All to check it.
+  - Share the .m file for review, or export it to HTML from MATLAB.
+output_sample:
+  input:
+    - The topic or analysis you want to cover
+    - Who will read it, such as students, a colleague or a report reader
+    - Your MATLAB version (R2025a or later is needed)
+    - Data, code or equations you already have (optional)
+    - An old binary .mlx file to convert (optional)
+  prerequisites:
+    - MATLAB R2025a or later to open and run the result
+    - A MATLAB session your AI can reach, only if you want it to run the code and export HTML (optional)
+  output:
+    - name: Live script .m file
+      contains: A plain-text MATLAB file with a title, setup code, analysis sections and a summary.
+    - name: Text and section breaks
+      contains: Each section has a heading and short explanations that sit above the code it describes.
+    - name: Equations
+      contains: Inline and centered LaTeX equations that show cleanly in the Live Editor.
+    - name: Inline figures
+      contains: One plot per section, or tiled plots when side-by-side comparison helps.
+    - name: Required appendix
+      contains: The closing block that keeps the file valid and sets the inline layout.
+    - name: Saved outputs
+      contains: Plots and values stored next to each section, made only if MATLAB is attached.
+    - name: HTML check copy
+      contains: A temporary web version used to check how the page looks, then deleted.

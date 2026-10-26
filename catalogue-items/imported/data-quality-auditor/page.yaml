@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It profiles data and judges what looks wrong.
 new_slug: data-quality-auditor
 name: Data quality auditor
-summary: Give it a dataset. Get a report on gaps, duplicates, odd values and the
-  rules that would catch them.
+summary: Check your dataset for gaps, duplicates and odd values. You get a quality score and a ranked list of fixes in a data quality audit report.
 job: work-with-files
 headline: Data quality auditor
-subhead: A health check on any dataset that tells you what is broken, how bad it
-  is, and what to fix first. You end with a single quality score and a ranked
-  repair plan.
+subhead: A health check on any dataset that tells you what is broken, how bad it is, and what to fix first. You end with a single quality score and a ranked repair plan.
 explain: |
   A health check on any dataset that tells you what is broken, how bad it is, and what to fix first. You end with a single quality score and a ranked repair plan.
 
@@ -18,18 +15,48 @@ when:
   - You are about to use a new dataset and want to trust it first.
   - You need ongoing checks on a live feed.
   - Your team needs a ranked list of data fixes.
+not_for:
+  - "You need to design or fix a database layout: ask a database engineer, or use a schema design tool."
+  - "You need to build the pipeline that moves your data: use an engineering tool or ask a developer."
+  - "Your file is a finished financial model and you want the maths checked: ask an accountant or a finance analyst."
 you_give:
-  - The dataset
+  - Your dataset, as a CSV or spreadsheet file
+  - What each column means (optional)
+  - Where the data came from (optional)
   - What looks wrong, if anything (optional)
-  - Key columns to protect (optional)
+  - A good older copy to compare against (optional)
 you_get:
   - Data quality score
   - Missing value and outlier findings
   - Ranked repair plan
   - Monitoring checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run Python code and read files.
+  - Paste the skill text into the chat. Then upload your CSV or spreadsheet.
+  - Tell your AI what each column means, where the data came from, and what looks wrong.
+  - Ask for a full audit. For one problem column, ask for a targeted scan instead.
+  - If your AI cannot run code, paste a sample of your rows. The checks will be less exact.
+  - Read the Bottom Line first. Then fix the top items in How to Act.
+output_sample:
+  input:
+    - Your dataset, as a CSV or spreadsheet file
+    - What looks wrong, if anything (optional)
+    - The key columns you must protect (optional)
+    - A good older copy of the data to compare against (optional)
+  prerequisites:
+    - An AI that can run Python code and read your files, or a sample of your rows pasted into the chat
+  output:
+    - name: Bottom Line
+      contains: Your data quality score out of 100 and a one-sentence verdict on whether the data is ready.
+    - name: What
+      contains: The issues found, ranked by how severe they are and how many rows they touch.
+    - name: Why It Matters
+      contains: What each issue could do to your reports, dashboards or models.
+    - name: How to Act
+      contains: Ordered repair steps for each issue, with a confidence tag on every finding.
+    - name: Missing value findings
+      contains: Which columns have gaps, whether the gaps look random, and how to fill or drop them.
+    - name: Outlier findings
+      contains: Values that sit far from the rest, and whether they look like errors or real extremes.
+    - name: Monitoring checklist
+      contains: Limits and alerts for five to eight key columns, if you ask for ongoing checks.

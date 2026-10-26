@@ -1,71 +1,70 @@
 new_slug: powerpoint-template-populator
 name: PowerPoint template populator
-summary: Share your template and approved content. Get an editable PowerPoint
-  deck that follows its layouts.
+summary: Fill your PowerPoint template with approved text and data. Get an editable deck that keeps its layouts, plus a source map and checks.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
 headline: PowerPoint template populator
-subhead: Share your PowerPoint template and approved content. Get an editable
-  deck that follows its layouts and placeholder rules. Work on a copy of your
-  file. Get a clear record of what passed and what still needs checking.
+subhead: Share your PowerPoint template and approved content. Get an editable deck that follows its layouts and placeholder rules. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share your PowerPoint template and approved content. Get an editable deck that
-  follows its layouts and placeholder rules.
+  Share your PowerPoint template and approved content. Get an editable deck that follows its layouts and placeholder rules.
 
 
-  It works with the actual PowerPoint files and follows a specific method for
-  this task. Your source files stay intact. The method starts by checking what
-  your AI already knows and which files it can read. It asks only for missing
-  facts that change the work.
+  It works with the actual PowerPoint files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
 
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share your PowerPoint template and approved content. Get an editable deck
-    that follows its layouts and placeholder rules.
-  - Actual PPTX template, approved text and data, slide outline, required
-    layouts, dimensions and licensed assets.
+  - Share your PowerPoint template and approved content. Get an editable deck that follows its layouts and placeholder rules.
+  - Actual PPTX template, approved text and data, slide outline, required layouts, dimensions and licensed assets.
   - You need a checked copy while keeping your original files intact.
+not_for:
+  - "You only need to edit one chart: change it by hand in PowerPoint, or fix the chart data in your own file."
+  - "Your file is not a PPTX, such as a PDF, Google Slides link or Keynote file: save or export it as PPTX first."
+  - "You have no template yet: build the slides by hand in PowerPoint, or ask your AI for an outline only."
 you_give:
-  - Actual PPTX template, approved text and data, slide outline, required
-    layouts, dimensions and licensed assets.
+  - Actual PPTX template, approved text and data, slide outline, required layouts, dimensions and licensed assets.
   - The app and file tools your AI can use for the requested work
 you_get:
   - populated-template.pptx, a source map and rendered slide previews.
   - A record of source files, changes and check results
   - Missing facts and any checks that could not run
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing context before asking for missing information.
   - Review the native output and its real check evidence before sharing it.
+output_sample:
+  input:
+    - Your PowerPoint template (PPTX file)
+    - Your approved text and data
+    - Your slide outline
+    - The layouts and slide size you need (optional)
+    - Licensed images or logos to use (optional)
+  prerequisites:
+    - An AI that can read and write PPTX files and run code
+    - An app or tool that can show slide previews, or the check stays marked not run
+  output:
+    - name: populated-template.pptx
+      contains: A new editable deck built on your template layouts, with your original file left untouched.
+    - name: Source map
+      contains: A table that links each slide item to the file, sheet, cell or slide it came from.
+    - name: Rendered slide previews
+      contains: Images of every slide so you can see layout, fonts and overflow before sharing.
+    - name: Checks
+      contains: Each check marked passed, failed or not run, with the evidence for it.
+    - name: Open items
+      contains: Missing facts and checks that could not run, each with a next action.
 how_it_works:
   - title: Step 1
-    text: 1. Inspect the real template’s masters, layouts, placeholders, theme
-      fonts, slide dimensions, footers and any existing content that must
-      remain.
+    text: 1. Inspect the real template’s masters, layouts, placeholders, theme fonts, slide dimensions, footers and any existing content that must remain.
   - title: Step 2
-    text: 2. Map each outline section to a suitable existing layout and placeholder.
-      Reuse the template’s typography, hierarchy and alignment instead of
-      overlaying a different design.
+    text: 2. Map each outline section to a suitable existing layout and placeholder. Reuse the template’s typography, hierarchy and alignment instead of overlaying a different design.
   - title: Step 3
-    text: 3. Populate native editable text, tables and charts from approved sources.
-      Keep source numbers, units and categories intact; do not flatten required
-      evidence into slide images.
+    text: 3. Populate native editable text, tables and charts from approved sources. Keep source numbers, units and categories intact; do not flatten required evidence into slide images.
   - title: Step 4
-    text: 4. Handle overflow by shortening approved wording or using an appropriate
-      additional layout within the requested slide count. Never crop text or
-      shrink it until unreadable.
+    text: 4. Handle overflow by shortening approved wording or using an appropriate additional layout within the requested slide count. Never crop text or shrink it until unreadable.
   - title: Step 5
-    text: 5. Save a separate PPTX, inspect all rendered slides and compare
-      representative outputs to the template. Check that placeholders, fonts and
-      editable objects survive reopening.
+    text: 5. Save a separate PPTX, inspect all rendered slides and compare representative outputs to the template. Check that placeholders, fonts and editable objects survive reopening.
 output_shape: |-
   FILES
   populated-template.pptx, a source map and rendered slide previews.
@@ -80,38 +79,26 @@ output_shape: |-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: Actual PPTX template, approved text and data, slide outline, required
-      layouts, dimensions and licensed assets.
+    how: Actual PPTX template, approved text and data, slide outline, required layouts, dimensions and licensed assets.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - A real template is inspected before reuse.
   - No unresolved placeholders remain.
   - Required evidence stays editable.
   - The result names its sources and keeps unrun checks visible.
 test:
-  - "Try this case: A template has title/content and section layouts with a
-    fixed 16:9 size. Check that it does this: Map the outline to those layouts
-    and retain dimensions."
-  - "Try this case: Approved text overflows a placeholder. Check that it does
-    this: Revise within scope or ask about the slide limit; do not silently cut
-    text."
-  - Reopen the saved result and compare it with the source. Keep any failed or
-    unrun check in the report.
+  - "Try this case: A template has title/content and section layouts with a fixed 16:9 size. Check that it does this: Map the outline to those layouts and retain dimensions."
+  - "Try this case: Approved text overflows a placeholder. Check that it does this: Revise within scope or ask about the slide limit; do not silently cut text."
+  - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Add your confirmed field names, file rules and target app version to the required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same meanings and checks.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:
   - input: A template has title/content and section layouts with a fixed 16:9 size
     expected: Map the outline to those layouts and retain dimensions.

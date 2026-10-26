@@ -1,6 +1,6 @@
 new_slug: write-a-post-that-beats-the-pages-ranking-today
 name: Write a post that beats the pages ranking today
-summary: Give it a keyword and the pages that rank. Get a brief, a full post and fixes for its page.
+summary: "Write a blog post that ranks: give it your keyword and the pages that rank today. You get a brief, a full post and a list of fixes for the page."
 job: get-found-in-search
 thinking: low
 thinking_why: Each step is a clear, bounded job. A small model can run them. Put your own effort into the edit between steps 2 and 3.
@@ -14,6 +14,10 @@ when:
   - You want one post to rank for a search and need to know what it must include.
   - Your last post went nowhere and you suspect it missed what searchers wanted.
   - You write for a site or a client and need a repeatable way to start from the search results, not a blank page.
+not_for:
+  - "You have no pages to compare because nobody ranks for the topic yet: write a short post yourself, then check it later."
+  - "You cannot publish a draft page first: the last step needs a live link, so run only the brief and the post."
+  - "You only want to fix a page that already exists: use the On-page SEO tuner on its own."
 you_give:
   - The keyword or question the post should rank for
   - Three to five links to the pages that rank for it, copied from a search
@@ -30,6 +34,25 @@ how_to_use:
   - Give the keyword and the links to the top pages. If it cannot open them, paste each page's title and headings.
   - Edit the post before you publish. Add your own facts and cut anything you cannot stand behind.
   - Publish it as a draft page, give the link back to step 3, and apply the fixes.
+output_sample:
+  input:
+    - The keyword or question the post should rank for
+    - Three to five links to the pages that rank for it
+    - What your site is and who the post is for
+    - Your own facts, examples and numbers (optional)
+    - The link to your published draft, for the last step
+  prerequisites:
+    - An AI that can open web links, or page titles and headings you paste in by hand
+    - A site where you can publish a draft page
+  output:
+    - name: "Step 1: Brief"
+      contains: The search intent with evidence, a coverage table, gaps to fill, an outline, questions and a meta description.
+    - name: "Step 2: Post"
+      contains: An answer-first introduction, the sections, an FAQ, internal link slots and a call to action.
+    - name: "Step 3: Page fixes"
+      contains: Scores for eight areas of your published draft, with fixes ranked critical, important or nice to have.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read what ranks and write the brief
     text: Records each top page's title, headings, length and format, names the search intent with evidence, and lists the topics every page covers and the gaps none of them fill.

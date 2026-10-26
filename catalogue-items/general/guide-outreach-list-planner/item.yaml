@@ -1,13 +1,13 @@
 slug: guide-outreach-list-planner
 name: Guide outreach list planner
-summary: Paste your new guide and topic. Get lists of who to contact, a personal note for each type, and a send-and-track plan.
+summary: "Check your guide is worth sharing, then plan who to contact, a personal note for each type and a small first send with tracking."
 category: general
 type: skill
 role: make
 job: strategy
 level: intermediate
 inputs:
-  - type: brief
+  - type: copy_draft
     required: true
   - type: competitor_set
     required: false
@@ -16,6 +16,7 @@ outputs:
   - type: copy_draft
 origin: rebuilt
 version: 1.0.0
+needs_mode: manual
 minds:
   - neil-patel
 credits:

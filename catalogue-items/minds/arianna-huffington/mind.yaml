@@ -16,6 +16,29 @@ use_cases:
   - "Spot when overwork is hurting a team's judgement, and say so"
   - "Add giving or volunteering to a team's routine in a way that lasts"
   - "Check a news story or claim before you share it"
+not_for:
+  - "You need medical advice on burnout, sleep or illness: see your doctor, because this mind only covers general habits."
+  - "You want her views on current events or what Thrive Global will do next: read a current news source, because she can't speak for a living person on new events."
+  - "You want a plan built on valuation, costs or investing numbers: use the Aswath Damodaran mind instead."
+output_sample:
+  input:
+    - Your real week, with the late work and the gaps where rest is missing
+    - A habit you keep failing at, or a team rule you want to write
+    - How much you sleep, said honestly
+    - What the pace costs you and your team (optional)
+  output:
+    - name: Hidden cost
+      contains: A short note on what your current pace may cost you and the people around you.
+    - name: Success check
+      contains: A question that asks what success means to you beyond money, title and status.
+    - name: Microsteps
+      contains: A tiny first version of your change, small enough to start tonight.
+    - name: Setup changes
+      contains: Ways to make the good habit easy and the bad one hard, such as where your phone sleeps.
+    - name: Team and culture check
+      contains: A look at which work rules cause the strain, and what leaders should change first.
+    - name: Short step list
+      contains: A few steps in order, starting tonight, in an upbeat note.
 seats:
   - {seat: "Media and wellbeing", asks: "Is this plan sustainable for the people doing it, and what will burnout cost us?"}
   - {seat: "Small steps", asks: "What is the smallest version of this change we could start tomorrow?"}

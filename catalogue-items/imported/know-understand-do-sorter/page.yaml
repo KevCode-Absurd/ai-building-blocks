@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts content by type before it picks how to test.
 new_slug: know-understand-do-sorter
 name: Know, understand, do sorter
-summary: Paste your unit content. Get it sorted into what students know,
-  understand and do, with the matching test types.
+summary: Sort your unit into what students know, understand and do, then match each part to a test type. Paste your unit to get a know, understand, do chart.
 job: teach-and-train
 headline: Know, understand, do sorter
-subhead: "A teaching unit sorted into three clear columns: what students will
-  know, understand and be able to do. Paste your unit description, project brief
-  or competencies and give the learner stage."
+subhead: "A teaching unit sorted into three clear columns: what students will know, understand and be able to do. Paste your unit description, project brief or competencies and give the learner stage."
 explain: |
   A teaching unit sorted into three clear columns: what students will know, understand and be able to do. Paste your unit description, project brief or competencies and give the learner stage. Every item in the chart is labelled by type of knowledge, such as facts that build step by step or ideas that stand in separate areas.
 
@@ -18,6 +15,10 @@ when:
   - Your tests do not match what you taught.
   - You need to explain your unit to colleagues in one chart.
   - A unit mixes facts, big ideas and skills and you need to separate them.
+not_for:
+  - "You plan a single lesson: write the lesson aims by hand, or ask your AI for a simple lesson plan."
+  - "Your content has no clear split between facts, ideas and skills: talk it through with a colleague first, then come back."
+  - "You need marking rubrics or full tests: use this chart first, then build the rubric or test as a separate step."
 you_give:
   - A unit description or project brief
   - The learner stage or age range
@@ -29,7 +30,32 @@ you_get:
   - Matching assessment types
   - Notes on keeping assessment low-pressure
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions from this page into the chat.
+  - Paste your unit description and the learner stage. Add your learning targets or competency list if you have them.
+  - Read the chart. Check that each item sits in the right column and that each test type fits.
+  - Fix any item that looks misplaced, then ask your AI to redo that part.
+  - "Use the Do items next: build a rubric for skills, and design a dispositional assessment for dispositions."
+output_sample:
+  input:
+    - Your unit description, project brief or competency
+    - The learner stage or age range
+    - Your existing learning targets (optional)
+    - Your school's competency framework (optional)
+  output:
+    - name: Know
+      contains: Facts and steps that build on each other, each labelled by knowledge type.
+    - name: Understand
+      contains: Big ideas that sit in separate areas, each labelled by knowledge type.
+    - name: "Do: Skills"
+      contains: What students can perform, with the skill type named.
+    - name: "Do: Dispositions"
+      contains: Habits and attitudes students build, with low-pressure ways to notice them.
+    - name: Assessment Routing Plan
+      contains: The test type that fits each item, such as recall, explanation or performance.
+    - name: Sequencing Notes
+      contains: Which items to teach first and which depend on others.
+    - name: Gap Analysis
+      contains: What your unit or targets leave out or do not match.
+    - name: Design Flags
+      contains: Warnings about items that are hard to test fairly.

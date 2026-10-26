@@ -1,6 +1,6 @@
 new_slug: domain-redirect-layout-planner
 name: "Domain and redirect layout planner"
-summary: "Paste your domains and what each is for. Get the main address, redirects and a plan for names you do not use."
+summary: "Paste your domains and what each is for. Get a domain redirect plan: the main address, where each other name points, and what to do with spares."
 job: ship-and-host
 thinking: medium
 thinking_why: "It weighs several linked choices and their effects on search and email."
@@ -17,6 +17,10 @@ when:
   - "You own several domains and no plan for them."
   - "You are launching a new site and want the address settled first."
   - "You are merging two sites into one."
+not_for:
+  - "You need to set up DNS records or hosting: use the Domain and DNS planner."
+  - "You want to buy or pick a new domain name: ask a registrar or use a name search tool."
+  - "You need to fix a site that is already down: call your host or registrar support."
 
 you_give:
   - "Your domains and what each is for"
@@ -34,6 +38,25 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - Your domains and what each is for
+    - "Their status: live, parked or unused"
+    - Services that depend on them, such as email (optional)
+    - Where each domain is registered (optional)
+  output:
+    - name: MAIN ADDRESSES
+      contains: The main address for each site, with or without www, and a one-line reason.
+    - name: NEW SECTIONS
+      contains: For each new blog, shop or product, whether it goes in a folder, a subdomain or a separate domain.
+    - name: REDIRECT TABLE
+      contains: Every other domain and old address, where it should send visitors, and that the redirect is permanent.
+    - name: SAFETY TO TURN ON
+      contains: Settings to turn on for each domain, such as registrar lock, two-step sign-in, auto-renew and privacy.
+    - name: UNUSED NAMES
+      contains: For each unused domain, whether to keep, park or let go, with a reason.
+    - name: CHECK FIRST
+      contains: Email or other services that a change may affect, so you can check them before you act.
 
 how_it_works:
   - title: "Choose the main address"
@@ -94,8 +117,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "A list of every service on each domain"
-  - "Renewal dates"
+    - "A list of every service on each domain"
+    - "Renewal dates"
 
 terms:
   - term: "Redirect"

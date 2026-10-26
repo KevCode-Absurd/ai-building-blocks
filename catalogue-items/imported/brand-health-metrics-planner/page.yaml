@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks measures to fit your goals and size.
 new_slug: brand-health-metrics-planner
 name: Brand health metrics planner
-summary: Say what your brand should achieve. Get the numbers to track, how to
-  collect them and how to read them.
+summary: Plan how to track your brand health. Say your goals and get the metrics to follow, how to collect each one and how to read them.
 job: track-numbers
 headline: Brand health metrics planner
-subhead: A measurement plan that tracks your brand against its own goals, not
-  generic numbers. You get the metrics to follow, how to collect each one and
-  how to read the results.
+subhead: A measurement plan that tracks your brand against its own goals, not generic numbers. You get the metrics to follow, how to collect each one and how to read the results.
 explain: |
   A measurement plan that tracks your brand against its own goals, not generic numbers. You get the metrics to follow, how to collect each one and how to read the results.
 
@@ -18,6 +15,10 @@ when:
   - You have no baseline for a newly launched brand.
   - You want to track sentiment but have no survey budget.
   - You are unsure which brand numbers matter for your goal.
+not_for:
+  - "You want results for one campaign: use your ad platform's reports or a campaign analytics step, not this plan."
+  - "You want a review of how your brand looks and sounds today: ask a brand audit skill, then come back here to track progress."
+  - "You want to set brand goals or positioning first: do that step before this one, since this plan tracks goals you already have."
 you_give:
   - What your brand should achieve
   - Whether it is new or established
@@ -29,7 +30,33 @@ you_get:
   - How to collect each one
   - Guidance on reading the numbers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI what your brand should achieve and whether it is new or established.
+  - Add the tools and research budget you have, and who will read the results.
+  - Check that the one headline metric fits your goal and that each metric has a way to collect it you can afford.
+  - Ask for free options if a tool in the plan is paid, such as manual sampling or Google Alerts.
+  - Fill any cost-link formula only from your own tracked data, and leave it blank until you have some.
+output_sample:
+  input:
+    - What your brand should achieve, such as awareness, preference, loyalty or higher prices
+    - Whether your brand is new or already has data
+    - The tools and research budget you have
+    - Who needs to see the results, and what they ask
+    - Your brand context file (optional)
+  output:
+    - name: Measurement philosophy
+      contains: How to think about measuring your brand, the key questions to answer and one North Star metric.
+    - name: The brand funnel metrics
+      contains: Measures for awareness, consideration, preference and loyalty, each with how it is asked or counted.
+    - name: Brand perception metrics
+      contains: How to track sentiment, brand words and trust across social posts, review sites and surveys.
+    - name: Brand equity scorecard
+      contains: A 1 to 5 score for each brand dimension, how to measure it and how often.
+    - name: Channel-specific metrics
+      contains: Brand signals to watch in search, social media, email and content.
+    - name: Brand ROI framework
+      contains: Short, medium and long-term results that link brand work to business outcomes for stakeholders.
+    - name: Measurement calendar
+      contains: A table of each metric with its tool, owner and how often to check.
+    - name: Brand health report template
+      contains: Seven parts for a quarterly report to leaders, from health score to what to fix.

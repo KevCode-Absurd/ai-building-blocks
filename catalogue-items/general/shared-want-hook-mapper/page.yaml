@@ -1,40 +1,51 @@
 new_slug: shared-want-hook-mapper
 name: "Shared want hook mapper"
-summary: "Describe your product and its buyers. Get the one want they share, its smaller parts and a hook for each."
+summary: "Find the one want your buyers already share, split it into smaller wants and get a hook for each, in running order, with a test plan."
 job: understand-customers
 thinking: high
 thinking_why: "It must find a shared want from evidence and split it into parts that hold up as separate hooks."
 
 headline: "Shared want hook mapper"
-subhead: Give it your product, your angle library and any buyer words. It names the one want your buyers already share, splits it into smaller wants, and writes a hook for each with its proof and the feeling behind it. You get a ranked hook map and a test plan.
+subhead: Give it your product facts, your reasons people buy and any customer words. It finds the one want your buyers already share and splits it into smaller wants. You get an ad hook for each, a running order and a test plan.
 
 explain: |
-  Copy does not create desire. It finds a want people already have and points it at your product. Most ads aim at the whole group with one line, so they fit nobody exactly.
+  Copy does not create desire. It finds a want people already have and points it at your product. One message for everyone fits nobody exactly, because each buyer feels the same want in a different way.
 
-  This skill names the want that already exists in your market and describes the group as people who share one private want. It splits that want into smaller wants, such as separate symptoms or situations, and writes a hook for each plus a line that lets every part of the group in. Each hook is paired with how it works, proof and the feeling behind it, ordered so each earns the reading of the next. It plans tests for hooks that differ in appeal, not just in wording.
+  This shared want hook mapper starts from the want your market already has and writes it in your buyers' words. It splits that want into three to six smaller wants, such as a symptom, a situation or a fear. It then writes one hook for each, with how the product delivers, the proof you hold and the feeling the line should leave.
+
+  The usual way is to write ten hooks and test the wording. This skill checks that the hooks speak to different smaller wants, so a test shows you which appeal wins.
 
 when:
   - You have one message for everyone and it fits nobody exactly.
-  - You have an angle library or a pile of reviews and want to turn it into a set of hooks.
-  - You need a test plan where the hooks truly differ.
+  - You have a pile of reviews, or a list of reasons people buy, and need hooks built from it.
+  - Two of your ads say the same thing in different words, and the test taught you nothing.
+  - You are briefing a writer or designer and want several hooks that truly differ.
+
+not_for:
+  - "You write for one buyer you already know well and want plain headlines: use the Ad headline writer."
+  - "You have no product facts or buyer words yet: build them first with the Product vocabulary sheet builder or the Customer discovery interview planner."
+  - "You need to pick which group to sell to: use the Hungry audience ranker."
+  - "You want the single strongest feeling behind a purchase, not a set of hooks: use the Dominant emotion finder."
 
 you_give:
-  - Your product facts
-  - An angle library, or the output of "Product vocabulary sheet builder"
-  - A persona or description of the group (optional)
-  - Customer reviews or buyer words (optional)
+  - Your product facts, with what it does, your proof and its limits
+  - Your reasons people buy, or an angle library (optional)
+  - Customer reviews or support messages in buyers' own words (optional, but they make the shared want real)
+  - A short description of the group you sell to (optional)
 you_get:
-  - The shared want, in the buyers' words
-  - The smaller wants inside it
-  - A hook for each, with its mechanism, proof and feeling
-  - A running order and a test plan
+  - The shared want, with a short buyer quote, or marked as a guess if you gave no buyer words
+  - Three to six smaller wants, each with one hook
+  - For each hook, how the product delivers, the proof you hold and the feeling it should leave
+  - One line that lets the whole group in, and a running order for the hooks
+  - A test plan for two to four hooks, plus a list of what is missing
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts and angle library. Add reviews and a persona if you have them.
-  - Check that the shared want sounds like what buyers say, not what you wish they said.
-  - Pick two hooks that differ most in appeal and test them.
-  - Keep the others for later rounds.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat.
+  - Paste your product facts. Add reviews, support messages and a short description of your buyers if you have them.
+  - Read the shared want first. It should sound like what buyers say to you. If it does not, add real quotes and run it again.
+  - Check each proof line. Anything marked MISSING needs a real fact before that hook goes anywhere.
+  - Pick the two hooks that differ most and test them. Keep the rest for later rounds.
+  - It needs no code, files or paid tools. Everything is pasted into the chat.
 
 how_it_works:
   - title: Names the existing want
@@ -113,6 +124,32 @@ improve:
   - Save winning hooks to your angle library with the want they served.
   - Pair it with "Product vocabulary sheet builder" for phrases to use in each hook.
 
+output_sample:
+  input:
+    - Your product facts
+    - Your reasons people buy, or an angle library (optional)
+    - Customer reviews or support messages (optional)
+    - A short description of your buyers (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: The shared want
+      contains: The one want your buyers already have, in their words, with a short quote or a note that it is a guess.
+    - name: The group
+      contains: Who they are, written as "you", as people who share one private want.
+    - name: Smaller wants and hooks
+      contains: Three to six smaller wants, each with a hook, how the product delivers, your proof and the feeling it leaves.
+    - name: Line for everyone
+      contains: One line that lets every part of the group in when you cannot split your audience.
+    - name: Running order
+      contains: The order to use the lines in, and why each one earns the reading of the next.
+    - name: Test plan
+      contains: Two to four hooks that differ in appeal, what to compare and what to measure.
+    - name: Missing
+      contains: The proof or buyer words you still need to supply.
+    - name: Checks missed
+      contains: Any of its own checks it could not pass, or none.
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Grouping wants and writing hooks is text work any strong chat AI does well with this skill."}

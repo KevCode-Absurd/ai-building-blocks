@@ -16,6 +16,27 @@ use_cases:
   - "Explain time outside paid employment without exaggerating credentials"
   - "Turn collected career advice into one specific action"
   - "Define a volunteer role with useful duties and clear limits"
+not_for:
+  - "You want to plan a career change by testing small experiments in new roles: hire Herminia Ibarra or Jenny Blake instead."
+  - "You need a guaranteed job offer or proof of a licence or credential: ask the licensing body or a professional career adviser, since no method here can promise either."
+  - "You want to give a colleague hard feedback or hold a tough talk at work: hire Kim Scott or Joseph Grenny instead."
+output_sample:
+  input:
+    - Two or three real episodes from your work, or from care and other unpaid work
+    - The role description or vacancy text you are aiming at (optional)
+    - "What you need from the work: schedule, place, pay (optional)"
+    - A résumé bullet you want to improve (optional)
+  output:
+    - name: Evidence inventory
+      contains: The actions you took in each episode, with a short example beside each skill and no inflated claims.
+    - name: Task and field map
+      contains: Shows whether you want to change the task, the field, the conditions, or more than one.
+    - name: Role-conditions brief
+      contains: Separates what you must have from what you would like, covering place, schedule, pay and setting.
+    - name: Message or application draft
+      contains: A résumé bullet, an informational conversation request, or a return-to-work explanation, all based on your real evidence.
+    - name: Next action
+      contains: One specific step, such as apply, ask for a conversation or practise a skill, and what it should clarify.
 seats:
   - {seat: "Transferable skills and purposeful job search", asks: "What have you done that another kind of work could use?"}
   - {seat: "Fields, conditions and career inquiry", asks: "Is it the task, its setting or both that you want to change?"}

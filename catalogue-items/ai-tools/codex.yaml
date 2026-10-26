@@ -2,31 +2,32 @@ slug: codex
 name: Codex
 maker: OpenAI
 url: https://openai.com/codex
-promise: "Write, test and review project code with an agent connected to your ChatGPT account."
+promise: "Give an agent a coding task. It writes the change and runs the tests."
 use_cases: [code, build-apps]
 categories: [coding]
 what_it_does:
-  - Takes a coding task, writes the change and runs the tests.
-  - Works in the command line, your code editor, the web and GitHub.
-  - Reviews code on GitHub and takes tasks from Slack.
-  - Runs several tasks at the same time.
-  - Can bill by API usage if you use your own API key.
+  - "Takes a coding task, writes the change and runs the tests."
+  - "Runs in the command line, in code editors such as VS Code, Cursor and Windsurf, and in the cloud (OpenAI docs, checked 26 Oct 2026)."
+  - "Reviews pull requests on GitHub when you comment @codex review, or automatically if you turn that on in settings (checked 26 Oct 2026)."
+  - "Takes tasks from Slack when you tag @Codex in a channel or thread (from OpenAI's October 2025 launch post; not rechecked)."
+  - "Bills by API usage if you sign in with an API key instead of ChatGPT. Cloud features such as GitHub review and Slack are not available that way (checked 26 Oct 2026)."
 benefits:
-  - Start coding help with the ChatGPT plan you may already pay for.
-  - Hand off several small tasks and review the results later.
-  - "Request a review of a pull request before it is merged."
-  - Pick pay-as-you-go through the API if a plan does not fit.
+  - "Start coding help with the ChatGPT plan you may already pay for."
+  - "Hand off several small tasks and review the results later."
+  - "Ask for a review of a pull request before it is merged."
+  - "Pick pay-as-you-go through the API if a plan does not fit."
 best_for:
   - Developers who already use ChatGPT.
   - Teams that want coding help in GitHub and Slack.
   - People who want to hand off tasks and come back to review them.
 not_for:
-  - Anyone who wants an app built with no code on screen.
-  - People who need to predict cost, since plans use credits and usage varies.
+  - "Anyone who wants an app built with no code on screen. Use Bolt for that."
+  - "People who must know the cost in advance. Plans share a usage allowance and API use is pay as you go. Compare GitHub Copilot's plan terms (not checked here) or Cursor."
+  - "Code you are not allowed to share with OpenAI. Check your company's rules and OpenAI's terms first."
 pricing:
   model: freemium
   from: US$8 per month
-  note: Included with ChatGPT plans, from Free to Go (US$8), Plus (US$20) and Pro (from US$100) per month. Business is US$20 per user billed yearly. API-key use is billed by API pricing.
+  note: "Codex is included in ChatGPT plans and shares usage with them (checked 26 Oct 2026). Free: US$0, quick coding tasks. Go: US$8 a month. Plus: US$20 a month. Pro: from US$100 a month, with tiers at US$100, US$200 and US$500. Business: US$20 per user a month billed yearly, or US$25 billed monthly, for 2 or more users. Enterprise and Edu: contact sales. Plus and Business show estimated message ranges per 5 hours. Pro shows no 5-hour limit. Weekly limits may apply. Free and Go limits were not listed. API-key use is billed at API prices."
 works_with:
   - chatgpt
   - GitHub
@@ -41,7 +42,35 @@ blocks:
   - ai-written-code-reviewer
   - generated-code-reviewer
 alternatives: [claude-code, cursor, github-copilot, windsurf]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  editor-or-cli:
+    - "Install the Codex command line tool or the Codex extension for your editor. OpenAI's docs list VS Code, Cursor and Windsurf (checked 26 Oct 2026)."
+    - "Sign in with your ChatGPT account for plan access, or with an API key for pay-as-you-go. The cloud features need the ChatGPT sign-in."
+    - "Open a project you can afford to change. Give Codex one small task, such as 'add a test for the date formatter'."
+    - "Read the change and the test result before you accept it. Run the tests yourself."
+  github:
+    - "Connect your GitHub repo in Codex settings. The exact menu names were not checked here."
+    - "Open a pull request and comment @codex review (checked 26 Oct 2026)."
+    - "Read the review. It flags only the highest-priority issues (P0 and P1), so it is not a full audit."
+needs:
+  - "A ChatGPT plan (Free works for quick tasks) or an OpenAI API key."
+  - "A code project on your computer, or a GitHub repo for cloud tasks and reviews."
+  - "A task written clearly enough to check: what to change, and how you will know it works."
+  - "A Slack workspace admin, if you want to use it from Slack."
+example:
+  task: "Add a test for a date-formatting function and fix the bug it exposes."
+  cost: "On a ChatGPT plan this uses your shared Codex allowance, shown as an estimated message range on Plus and Business. With an API key it is billed at API rates. We did not measure what one task costs."
+  reply: "A proposed change to your files, the test run, and a summary of what it did. For a pull request review you get comments on the code. A person must still read the change and run the tests before merging."
+not_verified:
+  - "Usage limits on the Free and Go plans. The page did not list them."
+  - "The exact setup menus in GitHub and Slack. The Slack details come from a 2025 launch post."
+  - "How it compares with Claude Code or Cursor on real tasks. We did not test it."
+  - "Which models you get on each plan beyond the Plus list."
 sources:
   - https://learn.chatgpt.com/docs/pricing
   - https://developers.openai.com/codex/pricing
+  - https://developers.openai.com/codex/auth
+  - https://developers.openai.com/codex/integrations/github
+  - https://openai.com/index/codex-now-generally-available/

@@ -16,6 +16,31 @@ use_cases:
   - "Spot the people using your product in ways you didn't plan, and serve them"
   - "Write a talk opening tailored to one audience"
   - "Plan how to keep improving a product after a rough first release"
+not_for:
+  - "You need to value a company or read financial statements: use the Aswath Damodaran mind, or an accountant for tax and legal questions."
+  - "You need a hard call on a failing company, such as layoffs or cash running out: use the Ben Horowitz mind."
+  - "You want stock picks, legal advice or medical advice: ask a licensed professional, because this mind gives principles only."
+output_sample:
+  input:
+    - Your idea, product or draft pitch, in a few lines
+    - Who the audience is (customers, investors, your team or a boss)
+    - Your current mission statement or deck outline (optional)
+    - What worries you about launch or what customers do with it (optional)
+  output:
+    - name: Meaning check
+      contains: A question on how your idea makes people's lives better, before money or features.
+    - name: Mantra options
+      contains: Three options of two to four words that say why you exist.
+    - name: Curve check
+      contains: A call on whether you improve the old way or jump to a new one.
+    - name: DICEE check
+      contains: Your product marked on deep, intelligent, complete, empowering and elegant, with the weakest one named.
+    - name: Pre-mortem
+      contains: A list of reasons the launch could fail, each with a fix to make first.
+    - name: Ten-slide pitch outline
+      contains: One job per slide, twenty minutes long, with a custom opening for your audience.
+    - name: Ship plan
+      contains: The flaws you can live with, a ship date and a plan for version 1.1.
 seats:
   - {seat: "Pitching and evangelism", asks: "Can you say why this exists in three words, and pitch it in ten slides?"}
   - {seat: "Make meaning", asks: "How does this make people's lives better, beyond making us money?"}

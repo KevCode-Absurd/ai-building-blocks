@@ -1,6 +1,6 @@
 new_slug: message-stickiness-rewriter
 name: "Message stickiness rewriter"
-summary: "Paste a tagline, pitch line or short paragraph. Get three versions that people will remember."
+summary: "Paste a tagline or pitch line and get three rewrites people will remember, plus a pick. Fix a message nobody remembers in minutes."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It rewrites a short message using six simple tests."
@@ -17,6 +17,10 @@ when:
   - "Nobody remembers your tagline."
   - "Your pitch gets nods and no follow-up."
   - "Your message is full of words your buyer does not use."
+not_for:
+  - You need a long sales page or a full email. Write it in sections, or ask a human editor.
+  - You need legal, safety or compliance wording. Ask a lawyer or a human editor, since a punchy rewrite can change the meaning.
+  - You want every memory check run on a message. Use the Memorable message writer.
 
 you_give:
   - "The message"
@@ -32,6 +36,21 @@ how_to_use:
   - "Paste your message under the prompt, with who hears it."
   - "Add the one thing they should remember."
   - "Say each version aloud. Keep the one you can say in one breath."
+output_sample:
+  input:
+    - Your tagline, pitch line or short paragraph
+    - Who hears it and what they already know
+    - The one thing you want them to remember (advised)
+    - A real detail or number you can back up (optional)
+  output:
+    - name: CORE
+      contains: The one thing people should remember, written in one plain sentence.
+    - name: VERSIONS
+      contains: Three rewrites, each noting which test it leans on, such as concrete or surprising.
+    - name: PICK
+      contains: The version to use and the reason it works best.
+    - name: MISSING
+      contains: "Any proof it needed but did not get, shown as MISSING: proof."
 
 how_it_works:
   - title: "Find the core"

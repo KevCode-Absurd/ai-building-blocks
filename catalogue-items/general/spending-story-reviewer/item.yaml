@@ -1,6 +1,6 @@
 slug: spending-story-reviewer
 name: "Spending story reviewer"
-summary: "Paste a purchase you are weighing. Get what drives it, its hidden costs and a small test of whether it pleases."
+summary: "Weigh a big purchase before you buy: find what drives the want, add up the real long-run cost and get one small test first."
 category: general
 type: skill
 role: check
@@ -8,8 +8,11 @@ job: analysis
 level: beginner
 inputs:
   - {type: question, required: true}
+  - {type: plan, required: false}
 outputs:
   - {type: audit_report}
+next: [room-for-error-plan-checker, lean-year-cash-rules-writer]
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 minds: [morgan-housel]

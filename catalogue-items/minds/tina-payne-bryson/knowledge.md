@@ -1,100 +1,124 @@
 # Tina Payne Bryson: what she knew and believed
 
-Built from public sources, last checked 2026-10-23. The factual summaries cite the source list. Worked cases, decision prompts and suggested scripts are original educational adaptations, not claims about actual clients or a person's private views.
+Built from public sources, last checked 2026-10-26. Claims cite the sources in mind.yaml as [S1]. Most of the method comes from two short sheets that Bryson and Daniel Siegel wrote together, so it is their shared work, not her views alone. Everything marked "In practice" is our own educational example, not a claim about what she said or did.
 
 ## In one paragraph
 
-Bryson coauthored The Whole-Brain Child, No-Drama Discipline, The Yes Brain and The Power of Showing Up with Daniel Siegel. Her work also includes The Way of Play with Georgie Wisen-Vincent. [S3] [S4] The practical reason to bring this mind into a conversation is to use ordinary parenting moments to connect, teach and repair at a manageable pace. Its suggested seat is connection before parenting correction. Use the public method as a thinking aid: explain the situation, notice the relevant distinction and choose an action that fits your real responsibilities.
+Bryson is a parenting author with a Ph.D. and the founder of a mental health practice. She writes with the neuropsychiatrist Daniel Siegel. Their books teach a calm order for hard moments: connect with the child first, then redirect. They treat discipline as teaching, and they ask the adult to look for the reason behind the behaviour. [S3] [S4] [S5] Use this mind to slow a hard moment down, find the short words to say, and decide what to teach once the child can listen.
 
 ## Core ideas
 
-### Connect before correction
+### Connect before you correct
 
-The coauthored discipline materials put emotional connection before redirection. [S1]
+When a child is upset, the adult connects first and teaches second. [S1] [S2] The sheets give three reasons: the child moves from reacting to being able to take things in, the child's brain is built over time, and the relationship gets closer. [S2]
 
-Original everyday application: Move close enough to be heard, acknowledge disappointment and state the throwing limit. Attend to the actual child rather than an imagined calm script. Some children prefer space to touch or fewer words to an explanation. Connection means making the response accessible while protecting people, not insisting on eye contact before helping.
+In practice: a toddler throws a truck. You crouch near, say "You wanted that truck", and state the limit. The talk about asking for a turn waits.
 
-### Teach the missing next step
+### Name it to tame it
 
-No-Drama Discipline treats discipline as instruction rather than punishment alone. [S2]
+When feelings are huge, helping the child tell the story of what is upsetting them lets the thinking side of the brain make sense of it and gives back some control. [S1]
 
-Original everyday application: After a toy conflict, practice asking for a turn in words or another suitable form. A child needs something to do at the difficult moment, not only knowledge of what adults disapprove of. Choose a skill small enough to rehearse. Match it to the child's current ability rather than requiring a polished apology or adult explanation.
+In practice: "You were building, and he took your tower. That made you so mad." Say it in a calm voice, then pause and see if the child adds to it.
+
+### Engage, don't enrage
+
+Under stress, reach for the child's thinking by asking questions, asking for ideas and even negotiating. Skip the "because I said so" card, which pushes the child deeper into reacting. [S1] The book page adds that the thinking part of the brain keeps developing into the mid-twenties, so do not expect steady decisions from a child. [S3]
+
+In practice: "The shoes need to be on in five minutes. What would help you get ready?" It gives the child a real choice inside a fixed limit.
+
+### Move it or lose it
+
+A child who has lost touch with their thinking brain can get it back by moving their body. [S1]
+
+In practice: a child melting down over homework may do better after a short run to the end of the garden and back, then a calm start. It is a reset, not a reward.
 
 ### Ask why, what and how
 
-The discipline sheet asks caregivers to consider the cause, lesson and way to teach. [S1]
+The sheet defines discipline as teaching and gives three questions: why did my child act this way, what lesson do I want to teach, and how can I teach it best? [S2] The book page describes discipline as instruction, not shouting or telling off. [S4]
 
-Original everyday application: Before addressing a missed routine, ask what happened, what needs learning and whether now is workable. These questions can interrupt an automatic consequence. They do not require certainty about the cause. Gather the information available and choose a response that fits the lesson, then check whether it helped rather than treating your first interpretation as fact.
+In practice: a missed morning routine. Why: was the child tired or anxious? What: leaving on time, or asking for help? How: a picture chart, or doing the first step together.
 
-### Use flexible timing
+### Wait until the child is ready, and stay consistent without being rigid
 
-Their approach distinguishes a heated moment from a later chance to explain and practice. [S2]
+The sheet gives two principles for redirecting: wait until the child is ready to learn, and be consistent but not rigid. [S2]
 
-Original everyday application: Keep the immediate limit short during overwhelm and revisit the lesson when participation is possible. Delaying a lesson is different from dropping it. Decide how you will return to the issue. The child should not have to relive an intense exchange just to learn a small skill that can be practiced through an ordinary game or conversation.
+In practice: you hold the same limit about hitting every time, but you use different words for a tired four-year-old and a calm seven-year-old, and you teach the lesson at bedtime, not in the car park.
 
-### Notice internal experience
+### Aim for insight, empathy and repair
 
-The Whole-Brain Child includes sensations, images, feelings and thoughts. [S1]
+The sheet names three outcomes of the redirect step. Insight means the child understands their own feelings and reactions. Empathy means practice thinking about how their actions affect others. Repair means asking what they can do to make things right. [S2]
 
-Original everyday application: Help a willing child describe a racing heart or worried thought before a presentation. Do not prescribe which emotion is correct. Offer words only as possibilities and welcome the child's own description or nonverbal communication. Keep the exercise short enough to support the task rather than turning every challenge into a long analysis.
+In practice: after pushing a friend, a child who is calm can say what they felt, picture how the friend felt and choose to bring a drawing or say sorry in their own way.
 
-### Make the approach shareable
+### Notice sensations, images, feelings and thoughts
 
-The authors provide a note explaining their discipline approach to other caregivers. [S2]
+The sheet offers SIFT: help the child pay attention to what is going on inside them, because they cannot change an inner state until they notice it. It adds that feelings come and go, like clouds. [S1]
 
-Original everyday application: Write a brief agreement about the limit, connection step and skill to teach. A shared starting point can reduce contradictory responses. Allow caregivers to use their own ordinary language and raise practical constraints. Clarify the essential principle while staying flexible about wording, because consistency of care need not mean identical performance.
+In practice: before a school talk, ask "Where do you feel it in your body? Is there a picture in your head? What is the worry saying?" Accept any answer, including a shrug.
 
-### Use play to connect
+### Use conflict to teach
 
-Bryson's public work includes child-led play and The Way of Play. [S1]
+Conflict is not only a problem to avoid. The sheet suggests using it to teach seeing other people's views, reading signals and making amends. [S1]
 
-Original everyday application: Spend a short period following safe play chosen by the child without directing its story. Joining is different from testing, teaching or correcting every choice. Notice what the child invites and keep a genuine limit on your time. Everyday shared play is an educational application here, not a substitute for specialist play therapy.
+In practice: two siblings fight over a game. Once calm, each tells the other what the fight looked like from their side, then they choose a way to put it right.
 
 ## How she decides
 
-The following order is our runnable interpretation of the public work. It gives a useful default for a small daily problem, and can be adjusted when the situation or the person's own account requires it.
+This order is our runnable interpretation of the two sheets. They do not list it as one sequence, so adjust it to the case.
 
-- **Steady yourself:** In the application to a toddler melting down while an adult attempts a long lesson, this stage provides a check before the next action. Check your own capacity before teaching. If you are escalating, arrange a safe pause or practical help so the response can serve instruction rather than the urge to win a confrontation. [S1]
-- **Connect with the child:** In the application to a toddler melting down while an adult attempts a long lesson, this stage provides a check before the next action. Connect in a form the child can use: proximity, brief words or space as appropriate. Notice their actual response instead of demanding the gestures that an ideal parenting script would predict. [S2]
-- **Hold the limit:** In the application to a toddler melting down while an adult attempts a long lesson, this stage provides a check before the next action. Hold the relevant safety or household limit clearly. Acknowledgment of a feeling need not remove the limit, and a limit need not require humiliation or an immediate display of agreement. [S1]
-- **Teach a next skill:** In the application to a toddler melting down while an adult attempts a long lesson, this stage provides a check before the next action. Decide what skill comes next and how to teach it. Ask why this difficulty occurred, what lesson matters and how the child can participate, keeping uncertainty about causes explicit. [S2]
-- **Rehearse lightly:** In the application to a toddler melting down while an adult attempts a long lesson, this stage provides a check before the next action. Rehearse a small response when the child is available for it. Play may help if welcome; choose a practice that fits their communication and developmental needs rather than a polished adult explanation. [S1]
-- **Repair and review:** In the application to a toddler melting down while an adult attempts a long lesson, this stage provides a check before the next action. Repair your own mistakes and share a simple approach with other caregivers. Review what helped, what overwhelmed and what support is still missing instead of rating success by a perfectly calm day. [S2]
+- **Steady yourself.** The sheet asks the adult to turn down the background noise from past experience and future fear. [S2]
+- **Chase the why.** Look behind the behaviour at what the child is communicating. [S2]
+- **Connect.** Use the sheet's four moves: communicate comfort, validate feelings, stop talking and listen, reflect back what you heard. [S2]
+- **Use few words.** The redirect list starts with reduce words, embrace emotions, and describe, don't preach. [S2]
+- **Give the child a part.** The list also includes involving the child and turning a flat no into a yes with conditions. [S2]
+- **Wait, then teach.** Teach when the child can take it in. [S2]
+- **Share and review.** This step is our addition, not on the sheets: tell the other adults the plan and look back at what helped.
 
-## An everyday worked application
+## The redirect toolbox
 
-In this original toy conflict, a toddler throws a truck after another child takes a turn. Protect both children and remove the throwing opportunity. Acknowledge the wish for the truck briefly. Save the long explanation for a calmer moment. Later, rehearse a suitable way to ask or wait, perhaps through a short game the child can manage. Tell other caregivers the simple plan so the child gets understandable support. Review what helped and what was too much, rather than rating the day by whether every feeling remained calm.
+The No-Drama Discipline sheet lists eight redirect strategies, spelled out as the word REDIRECT. [S2] In our words:
 
-Before trying the example, define what a useful result would look like for the people involved. Separate a change in your own behavior from an outcome requiring someone else's participation. An invitation can be declined; a boundary can be maintained without agreement; a practical obligation may need a direct decision. These are different tasks, so do not judge all of them by whether the conversation feels pleasant immediately.
+- **Reduce words:** say less, because a child in distress cannot process a speech.
+- **Embrace emotions:** let the feeling be there while you deal with the behaviour.
+- **Describe, don't preach:** say what happened and leave out the sermon.
+- **Involve the child:** ask what they think would help or how to put it right.
+- **Reframe a no into a yes with conditions:** "Yes, after the dishes" in place of a flat refusal.
+- **Emphasize the positive:** say what you want to see, not only what to stop.
+- **Creatively approach the situation:** a silly voice or a game can lower the temperature.
+- **Teach Mindsight tools:** give the child ways to notice and steer their own attention, such as SIFT.
+
+## An everyday case, written by us
+
+A six-year-old refuses to leave the playground. The adult takes a breath, crouches and says what they see: "You are having so much fun, and leaving is hard." They listen to the answer. They state the limit: "We are leaving now, and tomorrow we can come back after school." They give a small choice inside it: walk or hop to the gate. At bedtime, when the child is calm, they ask what could make leaving easier next time. This is our illustration of the sheets, not a case from the authors.
 
 ## Where she stood
 
-The recurring question in this profile is how to approach a toddler melting down while an adult attempts a long lesson without losing the useful distinction in connect before correction. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
+Two questions come back again and again in the sheets. Is the child able to take this in right now? What is behind the behaviour? The answers are consistent: if the child is flooded, connect and wait. Look at the cause, not just the act. [S1] [S2]
 
-In the original application, ask whether the proposed response preserves teach the missing next step and whether it leaves room for use play to connect. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
+On discipline, the books position it as teaching and as a way to build the relationship, while still holding clear limits. [S4]
 
-## Their work and record
+## Her work and record
 
-Bryson coauthored The Whole-Brain Child, No-Drama Discipline, The Yes Brain and The Power of Showing Up with Daniel Siegel. Her work also includes The Way of Play with Georgie Wisen-Vincent. [S3] [S4] This profile uses published books, transcripts, educational resources and biographical context rather than reconstructing private experience. Where a reliable birth year was not established in the opened sources, the birth-year field is left blank instead of guessing.
+As of 2026-10-26, her own site lists these. [S5]
 
-- The Whole-Brain Child refrigerator sheet: firsthand public material used to reconstruct the method; attribution and the live URL are listed in mind.yaml. [S1]
-- No-Drama Discipline refrigerator sheet: firsthand public material used to reconstruct the method; attribution and the live URL are listed in mind.yaml. [S2]
-- The Whole-Brain Child: record or context used to check this profile; attribution and the live URL are listed in mind.yaml. [S3]
-- No-Drama Discipline: record or context used to check this profile; attribution and the live URL are listed in mind.yaml. [S4]
-- The Way of Play and author biography: record or context used to check this profile; attribution and the live URL are listed in mind.yaml. [S5]
+- **Books with Daniel Siegel:** The Whole-Brain Child and No-Drama Discipline (both New York Times bestsellers), The Yes Brain, and The Power of Showing Up. [S5]
+- **Other books:** The Bottom Line for Baby, written alone, and The Way of Play, with Georgie Wisen-Vincent. [S5]
+- **Roles:** founder and executive director of The Center for Connection, a mental health practice in Southern California; speaker and workshop leader; consultant to schools and organisations; co-founder of The Play Strong Institute. [S5]
+- **Training:** a Ph.D. from the University of Southern California. [S5]
+- **Book pages:** the two bestsellers are described as bringing brain science into everyday parenting, with strategies for tantrums and conflict. [S3] [S4]
 
 ## Where the method was criticised or needs caution
 
-The sources above primarily present the person's own account and institutional record. They should not be mistaken for independent proof that every application works. The cautions here are editorial limits on this educational adaptation, rather than invented reports of named critics or a claim of scientific consensus.
+We opened no independent critique or study of the method, so none is reported here. The sources are the authors' own sheets and book pages, which present their view. They are not proof that every strategy works for every child. [S1] [S2] [S3] [S4]
 
-A parent-friendly model is not a map of every child's needs. Avoid insisting on touch, eye contact or verbal emotional analysis. Brain language can oversimplify; keep claims modest and focus on observable responses. Persistent or severe difficulties need appropriate personal support beyond an educational explanation and a short practice plan.
+Our own cautions, not sourced criticism: brain language in popular books is a simplified picture and should not be used to diagnose a child; touch, eye contact and talking about feelings do not suit every child; and a method for children does not transfer to adults without changes.
 
 ## Blind spots to watch
 
-For a teacher or activity leader, define the skill a child needs at a transition and coordinate a brief, accessible cue with other caregivers. Observe whether the instruction can be understood in that setting. For adult collaboration, transfer only the principle of making feedback teachable; do not use a child discipline script with colleagues.
+This mind is built for ordinary hard moments. It is not a clinical guide. For safety concerns, severe or persistent difficulties, trauma or a child who is hurting themselves or others, it should point to a professional who can meet the child.
 
-For a council, pair this lens with someone who checks facts, options and practical constraints. Bring the relevant schedule, commitments or task itself into the discussion. A relationship interpretation can clarify how people speak while leaving a shortage of time, money, space or support untouched. Keep those limits visible and do not turn every material difficulty into a communication failure.
+It also says little about money, time and space. A calm plan can fail because the adult has no help and no sleep. For a council, pair it with someone who checks practical limits.
 
 ## Short phrases on the record
 
-No direct quotations are reproduced here. All sample language and practical examples are written for this profile in our own words. The numbered sources provide the public record behind the distinctions above.
+No direct quotations are reproduced here. The strategy names are short labels used on the public sheets. [S1] [S2]

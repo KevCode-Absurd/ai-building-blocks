@@ -1,22 +1,56 @@
 new_slug: nonprofit-capital-campaign-planner
 name: Plan a nonprofit capital campaign
-summary: Test a large fundraising goal. Build a gift table and a phased plan based on real prospects.
+summary: "Plan a nonprofit capital campaign: test your goal, build a gift range table from real prospects, and set a gate before you go public."
 job: plan-strategy
 headline: Plan a nonprofit capital campaign
-subhead: Bring the project cost, donor pipeline and interview findings. Test the goal, assign campaign roles and set a gate for the public launch.
+subhead: Give it your project cost, your donor list and your interview notes. It tests whether your goal is real and builds a gift table from the prospects you have. It also sets leadership roles and a gate for going public.
 explain: Bring the project cost, donor pipeline and interview findings. Test the goal, assign campaign roles and set a gate for the public launch.
 when:
-  - You want to plan a nonprofit capital campaign.
+  - Your board wants a big building or endowment campaign and asks if the goal is realistic.
+  - You need a gift table to show the board before anyone asks for a gift.
+  - You are picking a campaign chair and committee and need to know what each role does.
+  - You must decide when to go public and how to avoid clashing with your yearly appeal.
+not_for:
+  - "You want to plan your yearly donor mailings or email asks: use your annual appeal plan, not a campaign plan."
+  - "You need the wording and ask amount for one major donor: plan that single ask on its own, after the gift table names the prospect."
+  - "You have no donor list and no interview notes yet: run the feasibility interviews first, then come back."
 you_give:
-  - Proposed project, preliminary goal and available campaign capacity
-  - Documented prospect pipeline and feasibility interview findings
+  - The project, its cost and your first goal
+  - Your list of prospects and what each could give
+  - Notes from your donor interviews (optional)
+  - Board giving records (optional)
+  - How many staff and volunteers can run the campaign (optional)
 you_get:
-  - Gift range table reconciled to the campaign goal
-  - Feasibility gaps, leadership roles and phase gates
+  - A gift range table matched to your goal, with gaps marked
+  - A view of how ready you are, and where your goal looks weak
+  - Leadership roles for the chair, the committee and staff
+  - A phased timeline with a gate for the public launch
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini. No code, web access or paid tool is needed.
+  - Paste the skill text, or upload the skill folder if your AI takes files.
+  - Paste your project cost, goal, prospect list and interview notes. Say what is missing.
+  - Ask for the feasibility findings, then the gift table, then the phases and roles.
+  - Check each tier. If the top tiers have no named prospect, the goal is not yet real.
+  - Take the table to your board before any donor is asked.
+output_sample:
+  input:
+    - The project, its cost and your first goal
+    - Your list of prospects, with how much each could give
+    - Notes from your donor interviews (optional)
+    - Board giving records and your staff and volunteer capacity (optional)
+  output:
+    - name: Feasibility findings
+      contains: A recommended goal, leaders who could serve, fixes to the case for support, and whether your team can run the campaign.
+    - name: Gift range table
+      contains: Gift tiers worked back from the goal, with the prospects you have at each tier and the gaps.
+    - name: Campaign phases and timeline
+      contains: The planning, quiet, public and closing phases, with named milestones.
+    - name: Leadership roles
+      contains: What the chair, the steering committee and the staff campaign director each do.
+    - name: Public launch gate
+      contains: The share of the goal that must be committed before you announce the campaign.
+    - name: Progress dashboard
+      contains: Money committed against the goal, by phase and by tier, for board updates.
 how_it_works:
   - title: Test readiness
     text: Plan confidential feasibility interviews and distinguish documented donor interest from aspirations.

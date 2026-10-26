@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows one current API.
 new_slug: audio-streamer-code-writer
 name: Audio streamer code writer
-summary: Say what to play or record. Get modern MATLAB audio code, not the old methods.
+summary: Tell your AI what to play or record. Get MATLAB audio code that uses audiostreamer, so you skip the old audioDeviceWriter style.
 job: build-software
 headline: Audio streamer code writer
-subhead: MATLAB code for playing and recording sound that uses the newer
-  audiostreamer object instead of the older device writer and reader classes.
-  Without this guidance, AI tends to write the old style, which has fewer
-  features.
+subhead: MATLAB code for playing and recording sound that uses the newer audiostreamer object instead of the older device writer and reader classes. Without this guidance, AI tends to write the old style, which has fewer features.
 explain: |
   MATLAB code for playing and recording sound that uses the newer audiostreamer object instead of the older device writer and reader classes. Without this guidance, AI tends to write the old style, which has fewer features.
 
@@ -18,6 +15,10 @@ when:
   - You need to record from an audio interface while playing a test tone.
   - Your AI keeps writing old audioDeviceWriter code.
   - You have to list the audio devices on a machine and pick one.
+not_for:
+  - "You only need to play one short clip: use MATLAB's built-in sound or soundsc command."
+  - "You need code generation or a Simulink model: use the older audio I/O blocks and classes, since audiostreamer does not support them yet."
+  - "You only read or write audio files: use audioread and audiowrite. You can also use DAQ Toolbox for data acquisition hardware."
 you_give:
   - What to play or record
   - Your device or interface (optional)
@@ -29,8 +30,28 @@ you_get:
   - Playback, recording or full-duplex setup
   - Notes on when to use older tools
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB R2025a or later with Audio Toolbox.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page, or upload the skill file.
+  - Say what you want to play or record. Add your sample rate, channel count and device name if you know them.
+  - Give your MATLAB release. The skill needs R2025a or later with Audio Toolbox.
+  - Copy the code into MATLAB and run it. Your AI cannot test it unless it can run MATLAB.
+  - If you hear dropouts, ask your AI to check the underrun count and adjust the buffer settings.
+output_sample:
+  input:
+    - What you want to play or record
+    - Your sound card or audio interface (optional)
+    - Sample rate and number of channels
+    - Your MATLAB release
+  prerequisites:
+    - MATLAB R2025a or later with Audio Toolbox
+    - MATLAB R2026a or later for the write and start methods
+  output:
+    - name: Device setup
+      contains: Code that lists your audio devices, picks one, and sets the settings that must be fixed before streaming starts.
+    - name: Playback or recording code
+      contains: Calls that play sound, record sound, or do both at once for loopback and measurement tests.
+    - name: Callbacks and transport control
+      contains: Optional code that handles audio as it streams, plus pause, stop and release steps.
+    - name: Teardown
+      contains: Lines that release the device cleanly when the run ends.
+    - name: Notes on older tools
+      contains: A short note on when to use sound, audioplayer or audioDeviceWriter instead.

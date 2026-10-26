@@ -1,6 +1,6 @@
 new_slug: watercolor-ad-script
 name: "Watercolor video ad script writer"
-summary: "Paste your idea and product facts. Get a timed watercolor video script and a cast note."
+summary: "Write a watercolor video ad script of 15 to 40 seconds from your selling idea and approved claims, with a cast note for who carries the ad."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -19,6 +19,10 @@ when:
   - Your product sells on what's inside it, a scent or a mood, and plain footage looks flat.
   - You want a calm ad for people who haven't met you yet.
   - You want a script ready to hand to an AI video process, with the cast already chosen.
+not_for:
+  - "You need proof, urgency or food that must look tasty: film it with real footage instead."
+  - "You want one painted still, not a video: use the Watercolor image ad maker."
+  - "You have no approved claims or product facts yet: write those down first, or ask a person who knows the product."
 
 you_give:
   - The reason someone buys, what the buyer knows, the selling idea and the length
@@ -38,6 +42,25 @@ how_to_use:
   - Write the selling idea in one sentence ("a whole shelf of greens in one small pack" or "a full tool kit that fits in a glovebox") and the length.
   - Read the show plan first. If the implied sentence isn't something you can say, ask for another show job.
   - Take the script and cast note to the skill that turns a watercolor script into shots. It runs the video process from there.
+output_sample:
+  input:
+    - Your selling idea in one sentence, the reason people buy and the ad length
+    - A photo of your product and its biggest label lines
+    - Your approved claims, banned claims and offer
+    - Your brand brain or buyer brief (optional)
+  output:
+    - name: Show plan
+      contains: The selling idea, the show job, the paint technique, what changes, and the sentence that change implies with its source.
+    - name: Script
+      contains: One row per line with narration, picture, what moves, the marked turn, word count, seconds and clip split.
+    - name: Claims painted
+      contains: Each painted change with the claim or fact behind it, plus changes it rejected and why.
+    - name: Cast note
+      contains: "Who carries the ad: one painted figure, hands only, or the product alone, with the reason."
+    - name: MISSING
+      contains: Any facts the skill needed and did not get, one line each.
+    - name: CHECKS MISSED
+      contains: One line for each of its own checks the script still fails, or none.
 
 how_it_works:
   - title: Checks the fit

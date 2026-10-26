@@ -1,6 +1,6 @@
 new_slug: fast-first-draft
 name: Write a first draft fast with the door closed
-summary: Tell it your idea. Get a what-if situation, a daily word plan, scene details and a first draft written without an outline.
+summary: "Write a first draft fast: give it your story idea and writing days. Get a what-if, a daily word plan, scene details and pages with no outline."
 job: write-and-tell-stories
 thinking: high
 thinking_why: It plans, then writes real prose day after day without an outline, which needs close control of the people and the facts. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You have an idea for a story or book and keep putting off the first page.
   - You start drafts and then rewrite the opening until you give up.
   - You want a whole draft in about three months.
+not_for:
+  - "You want to plot or outline the story first: this workflow skips outlines, so plan on paper or with a trusted editor instead."
+  - "You already have a finished draft to improve: use the Long-form draft editor."
+  - "You are writing nonfiction, such as a guide or report: use a plain outline and write it section by section."
 
 you_give:
   - Your idea, even if it is only a topic or a mood
@@ -36,6 +40,25 @@ how_to_use:
   - Give it your idea, your length and your writing days. It works step by step and saves each result.
   - Run the last step again each day with the facts sheet and the last paragraph until the draft is done.
   - Keep the door shut. Show the draft to nobody until the last word is down.
+output_sample:
+  input:
+    - Your story idea, even if it is only a topic or a mood
+    - The length you want and the days and minutes you can write
+    - Places you know well (optional)
+    - A page of your own writing, for voice (optional)
+  prerequisites:
+    - An AI that can read the handoff folder, such as Claude with files or Claude Code
+  output:
+    - name: "Step 1: The situation"
+      contains: One what-if question, three versions with the pick, the people stuck in it, what to leave open and where to start.
+    - name: "Step 2: The daily word quota"
+      contains: Your daily word count, days needed, finish date, closed-door routine and a two-week table.
+    - name: "Step 3: Scene details"
+      contains: For each place, four first-to-mind details, a fresh comparison and a skip list.
+    - name: "Step 4: Day pages"
+      contains: The day's pages in order, a facts sheet, where it stopped and tomorrow's first question.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and every MISSING line in one list.
 
 how_it_works:
   - title: Find the situation

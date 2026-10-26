@@ -16,6 +16,30 @@ use_cases:
   - "Set up your space so the good choice is the easy one"
   - "Get back on track after missing a few days"
   - "Plan steady 1% improvements for a skill, a process or a small business"
+not_for:
+  - "You want to protect long blocks of focused work, not build a routine: use the Cal Newport mind."
+  - "You need medical, legal or money advice, or the problem needs a different job or more money: see a doctor, lawyer, financial adviser or other specialist."
+  - "You want to change your mind about a belief or choice, not a habit: use the Adam Grant mind."
+output_sample:
+  input:
+    - The habit you want to build or break
+    - What you do now on a normal day
+    - What gets in the way or makes you quit
+    - Who you want to become (optional)
+    - What you did last week (optional)
+  output:
+    - name: The real cause
+      contains: A short read on which part of your system breaks, rather than a note about your willpower.
+    - name: Two-minute version
+      contains: The smallest form of the habit that you can do tomorrow.
+    - name: Habit stack
+      contains: One habit you already do, used as the cue for the new one.
+    - name: Four laws changes
+      contains: Ways to make the cue obvious, the habit easy and satisfying, or to turn each one around for a bad habit.
+    - name: Environment changes
+      contains: Small changes to your desk, phone or space so the good choice is easier.
+    - name: Missed-day plan
+      contains: What to do to get straight back on track, plus a note where a habit cannot fix the problem.
 seats:
   - {seat: "Habits and small gains", asks: "What is the smallest version of this we could do every day, starting tomorrow?"}
   - {seat: "Systems over goals", asks: "Forget the target for a moment. What does the daily process look like, and is it built to win?"}

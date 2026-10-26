@@ -1,6 +1,6 @@
 new_slug: believability-weighted-decisions
 name: "Believability-weighted decision helper"
-summary: "Paste a decision and the views on it. Get each view weighed by track record on this topic, and a clear call."
+summary: "Weigh a team decision by who has earned trust on this topic, not by rank. Get a clear call and a decision record with a review date."
 job: lead-people
 thinking: high
 thinking_why: "It must weigh people's views against evidence without bias, and flag where the record is thin."
@@ -17,6 +17,10 @@ when:
   - Your team is split on a decision and the senior person keeps winning by default.
   - You must choose between experts who disagree and cannot tell who to trust.
   - You want to record why you decided something so you can check it later.
+not_for:
+  - "The answer is clear from data you already have: check the numbers or run a small test instead."
+  - "One person owns the decision and does not need the group: ask a trusted expert for a direct review."
+  - "You need a shared note after a call is made: use the Disagree-and-commit note writer."
 
 you_give:
   - The decision and the goal in a sentence
@@ -35,6 +39,29 @@ how_to_use:
   - List each view and who holds it, with what they have done on this topic.
   - Read the weights and the strongest dissent. Correct any facts the skill got wrong.
   - Save the decision record and open it on the review date.
+output_sample:
+  input:
+    - The decision and the goal, in one sentence each
+    - The views people hold, and who holds each
+    - What each person has done on this topic, with results if known
+    - How your group settles disagreements (optional)
+  output:
+    - name: The decision
+      contains: The decision and the goal, written in one line.
+    - name: The views
+      contains: Each view with who holds it, a believability rating of low, medium, high or unknown, and the reason.
+    - name: The strongest dissent
+      contains: The best case from the most believable person who disagrees, written fairly.
+    - name: Weighed result
+      contains: How the weights point, in words, and whether they settle the question.
+    - name: The call
+      contains: The decision that follows, and what evidence would change it.
+    - name: How disagreement ends
+      contains: The agreed way to settle what is left, or a suggested one.
+    - name: Record
+      contains: The reasons, a review date, and the result to compare against later.
+    - name: Missing and checks missed
+      contains: Facts you did not give, and any quality checks the answer failed.
 
 how_it_works:
   - title: States the decision

@@ -1,6 +1,6 @@
 new_slug: brand-playbook-fit-checker
 name: "Brand playbook fit checker"
-summary: "Name a big brand and its tactic. Get a fit score out of 100, a verdict per tactic and a small test."
+summary: "Check if a big brand's ad tactic will work for your store. Get a fit score out of 100, a yes, adapt or skip verdict per tactic, and one small test."
 job: study-competitors
 thinking: high
 thinking_why: "It judges what is hidden behind public data and must separate fact from guess, so a stronger model reasons more carefully."
@@ -17,6 +17,10 @@ when:
   - You saw a big brand's ad library and want to copy what it does.
   - A founder or agency says "do what that brand does" and you want to know if it will work for you.
   - A public company quotes a strong number and you want to know how much of it is observed.
+not_for:
+  - The brand runs no public ads or pages. Study a competitor's own site and reviews by hand instead.
+  - You have no budget for even a small test. Save the result and wait until you can fund one.
+  - You only want a count of a brand's ads by format. Do an ad library teardown by hand first, then come back.
 
 you_give:
   - The brand and the tactic you want to copy
@@ -36,6 +40,31 @@ how_to_use:
   - Attach screenshots of its ads and pages, or paste links.
   - Tell it your price, cash, team and how well known you are.
   - Read the verdicts, then run the small test before you copy anything.
+output_sample:
+  input:
+    - The brand and the one tactic you want to copy
+    - Screenshots or links of its ads and landing pages
+    - Public financials, if the company is listed (optional)
+    - Your own price, cash, team size and how well known your brand is
+  prerequisites:
+    - An AI chat that can read images, if you attach screenshots
+  output:
+    - name: VERDICT
+      contains: Good, partial or poor fit for your store, with one reason.
+    - name: WHAT SITS OUTSIDE THE AD ACCOUNT
+      contains: Things like celebrities, shops, press, brand search, loyalty or funding, each marked seen or inferred.
+    - name: COLD START TEST
+      contains: Whether the ads would work with no awareness, and the share aimed at people who already know the brand.
+    - name: WHAT YOU CANNOT SEE
+      contains: Hidden facts such as spend per ad, margin and funding, marked unknown.
+    - name: OBSERVED OR MODELLED
+      contains: For listed companies, whether each quoted number was counted or forecast, with its time span and cohort age.
+    - name: TACTICS
+      contains: Each tactic marked depends, travels or adapt, with a yes, adapt or skip verdict and what to change.
+    - name: SCORE
+      contains: A fit score out of 100, with the sum shown and any unknown tactics left out.
+    - name: SMALL TEST
+      contains: One test with its cost, time frame and go rule, plus a claim risk note and anything missing.
 
 how_it_works:
   - title: Splits account from surroundings

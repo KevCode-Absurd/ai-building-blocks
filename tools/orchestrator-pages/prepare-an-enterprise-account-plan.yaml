@@ -28,9 +28,9 @@ how_to_use:
   - Review the result before approving external actions.
 how_it_works:
   - title: Enterprise account deal planner
-    text: Share an account and deal context. Get buyer roles, deal risks and next steps for a complex sale.
+    text: Share an account and deal context. Get buyer roles, deal risks and next steps for a complex sale. Hands step 2 the buyer roles, success goals and risks.
   - title: Enterprise customer onboarding planner
-    text: Share a signed customer and success goals. Get onboarding stages, owners and checks for reaching first value.
+    text: Share a signed customer and success goals. Uses step 1's plan with your signed-customer brief. Get onboarding stages, owners and checks for reaching first value.
 output_shape: |-
   Account map
   Deal actions and risks
@@ -53,3 +53,22 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - "You only need to plan one live deal: use the Enterprise account deal planner."
+  - "The customer has already signed and you only need the first 90 days: use the Enterprise customer onboarding planner."
+  - "You want help with a single sales call: use the Sales call prep assistant."
+output_sample:
+  input:
+    - The target account and the product you sell
+    - Notes on who you have met and where the deal stands
+    - Your goal and deadline
+    - Success goals for the customer (optional)
+  output:
+    - name: Account map
+      contains: The buyer roles at the account, who you have met, and who you still need to reach.
+    - name: Deal actions and risks
+      contains: Deal health checks, a mutual action plan, and the next step for each risk.
+    - name: Onboarding success plan
+      contains: Onboarding stages, owners and checks for reaching first value after signing.
+    - name: Source coverage and missing facts
+      contains: What the plan rests on, what is still unknown, and one next action.

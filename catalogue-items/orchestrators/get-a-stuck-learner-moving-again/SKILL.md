@@ -43,9 +43,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Diagnose the sticking point.** Use the skill `stuck-point-diagnosis-coach`. Where the learner's thinking breaks, with the evidence from their own attempts, and the earlier step they are missing.
-2. **Write one-step hints.** Use the skill `step-by-step-hint-writer`. Give it the diagnosis and the task. Hints in order, each revealing one step, so the learner does the work and the last hint still does not give the answer.
-3. **Build the task ladder.** Use the skill `confidence-building-task-ladder`. Give it the diagnosis and what they can do. Tasks from where the learner can succeed today up to the hard problem, each one step harder, with what success looks like.
+1. **Diagnose the sticking point.** Use the skill `stuck-point-diagnosis-coach`. Where the learner's thinking breaks, with the evidence from their own attempts, and the earlier step they are missing. Hands the hint writer the diagnosis.
+2. **Write one-step hints.** Use the skill `step-by-step-hint-writer`. Give it the diagnosis and the task. Hints in order, each revealing one step, so the learner does the work and the last hint still does not give the answer. Hands the ladder the hard problem to climb toward.
+3. **Build the task ladder.** Use the skill `confidence-building-task-ladder`. Give it the diagnosis, the hints and what they can do. Tasks from where the learner can succeed today up to the hard problem, each one step harder, with what success looks like. Hands the planner the ladder.
 4. **Plan the sessions.** Use the skill `study-session-planner-and-review`. Give it the ladder and their weekly time. Short sessions across the week, each with a goal from the ladder and a review at the end, and what to do if a session fails.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

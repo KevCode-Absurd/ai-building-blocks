@@ -31,12 +31,20 @@ most Indian errors:
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
   Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format shows
+  **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
 never substitute a proxy and present it as the real thing.
+
+## Before you start
+
+- **Data sources.** The steps below prefer paid institutional sources (S&P Kensho, FactSet, Daloopa, Bloomberg). Those are paid services and you may not have them. If you do not, use the company's own results filings on NSE or BSE, and say so in the notes. Free sites such as Screener.in or yfinance can fill gaps, but they scrape or reuse data under their own terms and they use different units. Screener.in shows rupees crore and yfinance shows raw rupees, which differ by 10,000,000. Convert in a formula and label every column. Mark each figure from such a site `unverified`.
+- **Files this skill names.** `india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`, `xlsx-author`, `officecli-xlsx` and `examples/comps_example.xlsx` are not included in this folder. Without them, use the two India rules below and the layout in Section 8. Say which were missing.
+- **Tools.** The build uses the `officecli` command-line tool. If your AI cannot run commands or officecli is not installed, give the user the table as Markdown with each formula written in text, for them to paste into Excel.
+- **If inputs are missing.** No target company: ask once. No peers: suggest 5 to 8 listed Indian companies with the same business and a similar size, and say the user must confirm them. Never put a figure in a cell that you did not get from a source. Write `n/a: <reason>`.
+- **Not advice.** The table shows how a stock is priced against peers. It is not a recommendation to buy or sell.
 
 ## ⚠️ CRITICAL: Data Source Priority (READ FIRST)
 
@@ -56,7 +64,7 @@ This skill builds institutional-grade comparable company analyses that combine o
 
 **Reference Material & Contextualization:**
 
-An example comparable company analysis is provided in `examples/comps_example.xlsx`. When using this or other example files in this skill directory, use them intelligently:
+The original skill pointed to an example workbook, `examples/comps_example.xlsx`. It is not included here, so use the layout in Section 8. If the user gives you an example file, use it intelligently:
 
 **DO use examples for:**
 - Understanding structural hierarchy (how sections flow)
@@ -506,21 +514,22 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
 
 ## Section 8: Example Template Layout
 
-**Simple Version (Start here):**
+**Simple Version (Start here).** Layout only. Every value is a placeholder: take real figures from your sources.
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ TECHNOLOGY - COMPARABLE COMPANY ANALYSIS                    │
-│ Microsoft • Alphabet • Amazon                               │
-│ As of Q4 2024 | All figures in USD Millions                │
+│ <SECTOR> - COMPARABLE COMPANY ANALYSIS                    │
+│ <Target> • <Peer 1> • <Peer 2>                               │
+│ As of <period> | All figures in ₹ Cr                │
 ├─────────────────────────────────────────────────────────────┤
 │ OPERATING METRICS                                           │
 ├──────────┬─────────┬─────────┬──────────┬──────────────────┤
 │ Company  │ Revenue │ Growth  │ Gross    │ EBITDA  │ EBITDA │
 │          │ (LTM)   │ (YoY)   │ Margin   │ (LTM)   │ Margin │
 ├──────────┼─────────┼─────────┼──────────┼─────────┼────────┤
-│ MSFT     │ 261,400 │ 12.3%   │ 68.7%    │ 205,100 │ 78.4%  │
-│ GOOGL    │ 349,800 │ 11.8%   │ 57.9%    │ 239,300 │ 68.4%  │
-│ AMZN     │ 638,100 │ 10.5%   │ 47.3%    │ 152,600 │ 23.9%  │
+│ <peer>   │ <value> │ <value> │ <value>  │ <value> │ <value>│
+│ <peer>   │ <value> │ <value> │ <value>  │ <value> │ <value>│
+│ <peer>   │ <value> │ <value> │ <value>  │ <value> │ <value>│
 │          │         │         │          │         │        │ [blank row]
 │ Median   │ =MEDIAN │ =MEDIAN │ =MEDIAN  │ =MEDIAN │=MEDIAN │
 │ 75th %   │ =QUART  │ =QUART  │ =QUART   │ =QUART  │=QUART  │
@@ -530,9 +539,9 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
 ├──────────┬──────────┬──────────┬──────────┬────────────────┤
 │ Company  │ Mkt Cap  │ EV       │ EV/Rev   │ EV/EBITDA │ P/E│
 ├──────────┼──────────┼──────────┼──────────┼───────────┼────┤
-│ MSFT     │3,550,000 │3,530,000 │ 13.5x    │ 17.2x     │36.0│
-│ GOOGL    │2,030,000 │1,960,000 │  5.6x    │  8.2x     │24.5│
-│ AMZN     │2,226,000 │2,320,000 │  3.6x    │ 15.2x     │58.3│
+│ <peer>   │ <value> │ <value> │ <value>  │ <value> │ <value>│
+│ <peer>   │ <value> │ <value> │ <value>  │ <value> │ <value>│
+│ <peer>   │ <value> │ <value> │ <value>  │ <value> │ <value>│
 │          │          │          │          │           │    │ [blank row]
 │ Median   │ =MEDIAN  │ =MEDIAN  │ =MEDIAN  │ =MEDIAN   │=MED│
 │ 75th %   │ =QUART   │ =QUART   │ =QUART   │ =QUART    │=QRT│
@@ -662,6 +671,13 @@ Before delivering a comp analysis, verify:
 - [ ] Formula auditing shows no errors (#DIV/0!, #REF!, #N/A)
 
 ---
+
+## What you hand back
+
+1. The comps workbook (or the Markdown table if you cannot write files).
+2. A notes block listing each source and its date, and each figure marked `unverified` or `n/a`.
+3. One line naming the outliers against the 25th and 75th percentiles.
+4. One line on the next step: check the outliers and the `unverified` figures against the company filings, then write up your valuation view. This table alone is not a valuation.
 
 ## Continuous Improvement
 

@@ -1,53 +1,91 @@
 new_slug: reconcile-working-capital-and-tax-cash
 name: Reconcile working capital and tax cash
 headline: Reconcile working capital and tax cash
-summary: Explain balance-sheet-to-cash differences through noncash operating movements and current tax payables.
+summary: Explain the gap between balance sheet changes and cash flow, from operating working capital, currency moves, acquisitions and current tax paid.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked operating working-capital and current-tax cash reconciliation workbook. Share opening/closing operating balances, acquisition/FX movements, current tax notes and reported cash-flow lines.
+subhead: Give it opening and closing operating balances, acquisition and currency movements, the current tax notes and the reported cash flow lines. It strips out the noncash movements, splits revenue and balance sheet currency effects, then ties tax to cash paid. You get a working capital bridge and a tax cash bridge that agree with operating cash flow.
 explain: |-
-  A linked operating working-capital and current-tax cash reconciliation workbook.
+  The change in a balance sheet is not the cash that moved. Part of it came from an acquisition, a currency move or a write-off. Tax adds another trap. Current tax payable is part of the balance sheet, but it is not working capital. When both are counted, operating cash is overstated or understated.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow works in order. Step 1 maps operating balances, leaves out tax and financing items, and removes acquisitions, currency translation and other noncash movements to get the true cash effect. Step 2 uses the issuer's currency buckets to tell revenue translation from balance sheet translation. It never reuses the average revenue rate for the balance sheet. Step 3 reconciles current tax payables to cash taxes, then connects both schedules to operating cash flow without counting current tax twice.
+
+  It works from your figures. Any residual stays visible. It does not file taxes or advise on them.
 when:
-  - You need a linked operating working-capital and current-tax cash reconciliation workbook.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Operating cash flow looks weak and the balance sheet does not explain why.
+  - An acquisition or a currency swing makes the balance sheet change misleading.
+  - Cash taxes paid differ from the tax expense in the income statement.
+  - A reviewer asks whether current tax was counted inside working capital as well.
+not_for:
+  - You only need the working capital effect. Use the Noncash working-capital bridge on its own.
+  - You only need constant-currency revenue. Use the Constant-currency revenue bridge on its own.
+  - You only need tax paid. Use the Current tax cash-payment bridge on its own.
+  - Factoring or supplier finance may be inside operating cash. Use the Separate financing effects from operating cash workflow first.
 you_give:
-  - Opening/closing operating balances, acquisition/FX movements, current tax notes and reported cash-flow lines.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Opening and closing balances for receivables, inventory, payables and other operating items (from the balance sheet)
+  - Acquisition, translation and other noncash movements (from the notes)
+  - The issuer's currency buckets and revenue translation effect (from the currency disclosure)
+  - Current tax expense, payables and tax paid (from the tax note)
+  - Reported cash flow lines, plus the currency and scale
 you_get:
-  - A linked operating working-capital and current-tax cash reconciliation workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A noncash working capital bridge giving the real cash effect
+  - A split of revenue translation from balance sheet translation
+  - A current tax cash payment bridge
+  - A link of both bridges to reported operating cash flow, with current tax counted once
+  - Every residual, MISSING input and check that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can build spreadsheets.
+  - Attach the balance sheets, cash flow statement and notes. Say the periods, currency and scale once at the top.
+  - After step 1, check tax and financing items are left out and each noncash movement has a source.
+  - After step 2, check the revenue rate and the balance sheet rate are kept apart.
+  - After step 3, check tax is not in working capital as well. Fill every MISSING line before quoting a figure.
 how_it_works:
   - title: Noncash working-capital bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Map operating balances while excluding tax and financing items; remove sourced acquisitions, translation and other noncash movements before deriving the indirect cash effect.
+    text: Maps operating balances and leaves out tax and financing items. Removes acquisitions, translation and other noncash movements, then works out the indirect cash effect. Hands step 2 the balance sheet translation amounts. Check before moving on, each noncash movement has a source.
   - title: Constant-currency revenue bridge
-    text: Use the issuer currency buckets to distinguish revenue translation from balance-sheet translation; never reuse average revenue rates as a substitute for the working-capital FX note.
+    text: Uses the issuer's currency buckets to separate revenue translation from balance sheet translation. Never uses the average revenue rate in place of the balance sheet note. Check before moving on, the two conventions are labelled.
   - title: Current tax cash-payment bridge
-    text: Reconcile separately excluded current-tax payables to cash taxes, then connect the two schedules to CFO without counting current tax in operating working capital as well.
+    text: Reconciles the current tax payables left out in step 1 to cash taxes. Connects the two schedules to operating cash flow without counting current tax in working capital too. Check before you rely on it, every residual is shown.
 output_shape: |-
-  A linked operating working-capital and current-tax cash reconciliation workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  PERIOD <dates>, <currency>, <scale>
+
+  1 WORKING CAPITAL  change in balances <n> - acquisitions <n> - translation <n>
+                     - other noncash <n> = cash effect <n>
+  2 CURRENCY         revenue translation <n> (rate basis <list>)
+                     balance sheet translation <n> (rate basis <list>)
+  3 TAX CASH         tax expense <n> +/- change in payable <n> = cash tax <n>
+  LINK TO CFO        working capital <n> + tax <n> + other <n> = operating cash flow <n>
+                     residual <n>
+
+  SOURCES            <each input, its source, date and unit>
+  MISSING            <each gap and the line it stops>
+  CHECKS MISSED      <one line each, or none>
+output_sample:
+  input:
+    - Opening and closing operating balances
+    - Acquisition, currency and other noncash movements
+    - Current tax notes and tax paid
+    - The reported cash flow lines
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook
+  output:
+    - name: outputs/step-1-noncash-working-capital-bridge.md
+      contains: The real cash effect of working capital, after acquisitions, translation and other noncash movements.
+    - name: outputs/step-2-constant-currency-revenue-bridge.md
+      contains: Revenue translation and balance sheet translation, each on its own rate basis.
+    - name: outputs/step-3-current-tax-cash-payment-bridge.md
+      contains: Current tax expense and payables taken to cash taxes paid.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, the link to operating cash flow, MISSING lines and checks missed.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Operating cash investment and cash taxes reconcile to their independent source notes; FX conventions are explicit; tax/financing balances are excluded from working capital and every residual is retained.
+  - what: A bigger acquisition
+    how: Raise acquired balances. The balance sheet change grows, but the cash effect barely moves.
+  - what: Late tax payment
+    how: Move a tax payment to next period. Cash tax falls and the payable rises by the same amount.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and lists what it could not verify.
 judge:
   - Operating cash investment and cash taxes reconcile to their independent source notes; FX conventions are explicit; tax/financing balances are excluded from working capital and every residual is retained.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +96,25 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a map of which balance sheet lines are operating, tax or financing, and paste it in every time.
+  - Record the currency rates used for revenue and for balances, with their source.
+  - Save last period's bridge so each residual can be followed over time.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The tax note and the currency note, not a summary.
+    - Both balance sheets for the periods compared.
+    - The cash flow statement with its line labels.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Working capital
+    meaning: Money tied up in day-to-day operations, such as receivables, inventory and payables.
+  - term: Noncash movement
+    meaning: A balance change that did not involve cash, such as an acquisition or a currency move.
+  - term: Translation
+    meaning: Converting a foreign business's figures into the reporting currency.
+  - term: Current tax
+    meaning: Tax owed on this period's profit, due soon.
+  - term: Residual
+    meaning: The part of a gap that no source explains. It stays visible.

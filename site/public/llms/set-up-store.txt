@@ -1,22 +1,24 @@
 # Set up your online store: AI Blocks
 
-> 18 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 20 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [AI store build planner](https://useaiblocks.com/skills/ai-store-build-planner): Give it your products and sections you like. Get a Claude Code kickoff prompt and safe build plan.
-- [Collections and menu planner](https://useaiblocks.com/skills/collections-and-menu-planner): Give it your products. Get collections, filters, a menu and search settings so shoppers find things fast.
-- [Open a Shopify store and take your first order](https://useaiblocks.com/workflows/open-a-shopify-store-and-take-your-first-order): Give it your country, team and products. Get a build plan, product sheets, menus, shipping, tax and a go-live score.
-- [Payments and checkout settings checker](https://useaiblocks.com/skills/payments-and-checkout-settings-checker): Give it your payment and checkout settings. Get a score out of 100, ranked risks and fixes.
-- [Plan store pages and get a safe AI build plan](https://useaiblocks.com/workflows/plan-your-store-pages-and-get-a-safe-ai-build-plan): Give it your products. Get variant tables, menus, page sections and a Claude Code build prompt.
-- [Pre-launch store checker](https://useaiblocks.com/agents/pre-launch-store-checker): Tell it your store setup. It checks go-live, re-checks after each fix, and stops at a clear go or a no-go.
-- [Product and variant setup planner](https://useaiblocks.com/skills/product-and-variant-setup-planner): List what you sell. Get each product type, a variant table and a fill-in checklist.
+- [Collections and menu planner](https://useaiblocks.com/skills/collections-and-menu-planner): Plan your store collections and menu: give it your product list and get tags, collections, filters, a short menu and search settings.
+- [Drupal Commerce developer](https://useaiblocks.com/agents/agency-engineering-drupal-shopping-cart): Plan or review a Drupal Commerce store, from products and checkout to payments, tax and orders, with a test list to clear before go-live.
+- [Payments and checkout settings checker](https://useaiblocks.com/skills/payments-and-checkout-settings-checker): Share your store’s payment and checkout settings. Get a custom checklist score, ranked concerns and proposed changes.
+- [Product and variant setup planner](https://useaiblocks.com/skills/product-and-variant-setup-planner): Plan your product variants before you enter them. List what you sell and get a product type, a variant table and a fill-in sheet for each.
 - [Product page answer planner](https://useaiblocks.com/prompts/product-page-doubt-mapper): Share product facts and customer concerns. Get page sections that answer each concern using evidence you have.
-- [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner): Give it your product and buyers' doubts. Get the page sections and settings that answer them.
-- [Shipping rate planner](https://useaiblocks.com/skills/shipping-rate-planner): Give it your parcels, costs and countries. Get shipping zones, rates and a free-shipping line to enter.
-- [Shipping zone and rate drafter](https://useaiblocks.com/prompts/shipping-zone-and-rate-drafter): Paste where you ship and real carrier costs. Get zones, rates, a free-shipping line and test carts.
-- [Shopify Markets setup planner](https://useaiblocks.com/skills/shopify-markets-setup-planner): Give it your countries and gateway. Get market groups, currency rules, catalogs, languages and tax settings.
-- [Shopify store setup planner](https://useaiblocks.com/skills/shopify-store-setup-planner): Tell it your country, team and catalogue. Get your plan, payments, domain and a build order.
-- [Shopify theme picker](https://useaiblocks.com/skills/shopify-theme-picker): Describe your store. Get a theme shortlist, each scored out of 100 on your must-haves.
-- [Store app stack picker](https://useaiblocks.com/skills/store-app-stack-picker): List your apps. Get keep, swap or cut for each, a vetting list and a score.
+- [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner): Plan your product page sections from buyer doubts. Give it your product and price. You get ordered sections, Shopify settings and proof to collect.
+- [Shipping rate planner](https://useaiblocks.com/skills/shipping-rate-planner): Plan your shipping rates before you enter them. Give it parcels, costs and countries. Get zones, rates and a free-shipping line to set up.
+- [Shipping zone and rate drafter](https://useaiblocks.com/prompts/shipping-zone-and-rate-drafter): Share destinations, parcel details and carrier costs. Get proposed shipping zones, rates, margin checks and checkout test cases.
+- [Shopify Markets setup planner](https://useaiblocks.com/skills/shopify-markets-setup-planner): Plan your Shopify Markets setup: give your countries and payment gateway, get market groups, currency, rounding, catalogs, languages and tax notes.
+- [Shopify product, menu and build planner](https://useaiblocks.com/workflows/plan-your-store-pages-and-get-a-safe-ai-build-plan): Share product facts and buyer questions. Get variant tables, collections, menus, page sections and an AI coding brief.
+- [Shopify store setup planner](https://useaiblocks.com/skills/shopify-store-setup-planner): Plan your Shopify store setup: which plan to start on, payments for your country, domain checks and the order to build in.
+- [Shopify store setup reviewer](https://useaiblocks.com/workflows/open-a-shopify-store-and-take-your-first-order): Share country, team and product details. Get setup plans, menus, shipping and tax questions, launch blockers and a test-order checklist.
+- [Shopify theme build planner](https://useaiblocks.com/skills/ai-store-build-planner): Share a Shopify store, products and design references. Get an asset checklist, Claude Code kickoff prompt and theme build plan with review points.
+- [Shopify theme picker](https://useaiblocks.com/skills/shopify-theme-picker): Describe your store and must-haves. Get a theme shortlist, feature checks, fit scores and a trial plan.
+- [Store app stack picker](https://useaiblocks.com/skills/store-app-stack-picker): Check your Shopify app stack. List each app and get keep, swap or cut, a vetting list for new apps, and a score out of 100.
 - [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker): Give it your store setup. Get a score out of 100, the blockers and a test-order plan.
-- [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner): Say where and what you sell. Get tax settings, rate rows to enter and a test plan.
-- [WooCommerce store setup planner](https://useaiblocks.com/skills/woocommerce-store-setup-planner): Give it your products and country. Get a WooCommerce build plan from hosting to first test order.
+- [Store launch readiness reviewer](https://useaiblocks.com/agents/pre-launch-store-checker): Review store setup before opening. Track blockers, recheck fixes and confirm which test orders still need real results.
+- [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner): Plan your store tax setup: price settings, rate rows with priority, product classes and test addresses. Not tax advice, so check with an accountant.
+- [WooCommerce checkout engineer](https://useaiblocks.com/agents/agency-engineering-wordpress-shopping-cart): Plan or fix a WooCommerce store on WordPress, covering checkout, payments, tax, coupons and orders, built update-safe with a test list.
+- [WooCommerce store setup planner](https://useaiblocks.com/skills/woocommerce-store-setup-planner): Plan your WooCommerce store setup from hosting to first test order. Give it your products and country. You get ordered steps and a settings sheet.

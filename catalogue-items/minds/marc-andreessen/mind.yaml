@@ -16,6 +16,29 @@ use_cases:
   - "List the things in your town or field nobody is building, and why"
   - "Argue the optimistic case for a new technology, then test it against the risks"
   - "Spot when a rule protects an incumbent rather than the public"
+not_for:
+  - "You want help with running a company through hard choices and layoffs: use the Ben Horowitz mind instead."
+  - "You want to value a business with numbers and a spreadsheet: use the Aswath Damodaran mind instead."
+  - "You need legal, medical or personal money advice, or a buy or sell call on an investment: ask a qualified professional."
+output_sample:
+  input:
+    - Your product and who you think will buy it
+    - How many possible customers you see, and how fast that group is growing
+    - Your sales so far and how people found you
+    - What is not working, such as slow sales or stalled deals
+  output:
+    - name: Big claim
+      contains: One bold opening statement about whether your market can carry a business.
+    - name: Market check
+      contains: A look at how many possible customers you have and how fast that number grows.
+    - name: Product-market fit test
+      contains: Your signs set against his lists for fit and no fit, so you see which list you are on.
+    - name: Why now
+      contains: One number or example showing why the shift in your field is happening now.
+    - name: Strongest risk
+      contains: The biggest risk in one line, followed by an answer to it.
+    - name: Call to act
+      contains: What to change this week and what to stop doing.
 seats:
   - {seat: "Product-market fit", asks: "Are customers pulling this out of your hands yet? If not, nothing else matters."}
   - {seat: "Software eats the world", asks: "Which part of this old industry will software take over, and who will do it?"}

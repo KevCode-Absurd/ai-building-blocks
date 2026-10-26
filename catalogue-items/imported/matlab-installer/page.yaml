@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a fixed install script.
 new_slug: matlab-installer
 name: MATLAB installer
-summary: Name the MathWorks products. Get them installed from the command line,
-  the same way each time.
+summary: Install MATLAB, Simulink and toolboxes from the command line with the MATLAB installer. Name the products and get the same setup every time.
 job: set-up-ai
 headline: MATLAB installer
-subhead: Name the MathWorks products. Get them installed from the command line,
-  the same way each time. Bring operating system. Use the result to plan your
-  next step.
+subhead: Tell your AI your operating system, MATLAB release, install folder and product list. It shows a plan, waits for your yes, then runs the install. You need a valid MathWorks licence or account first.
 explain: |
   MathWorks products installed from the command line in exactly the same way each time, so a setup that works once keeps working on any machine or server. You name the products and it handles the commands.
 
@@ -18,19 +15,47 @@ when:
   - Your team needs the same install on every computer.
   - An install script fails on Windows with strange quote errors.
   - You want to add a toolbox to an existing MATLAB folder.
+not_for:
+  - "You want the graphical installer: download it from the MathWorks website instead."
+  - "You have a licence or activation problem: ask MathWorks support or your licence admin."
+  - "You need the MATLAB Engine API for Python, Java or C++: follow the MathWorks steps for that API."
 you_give:
-  - Operating system
-  - MATLAB release
-  - Install folder
-  - List of products and toolboxes
+  - Your operating system
+  - The MATLAB release you want
+  - The folder to install into
+  - The list of products, toolboxes or support packages
 you_get:
-  - A confirmed install plan
-  - Safe install scripts
-  - Install commands to run
-  - A check that the products are there
+  - An install plan for you to confirm before anything runs
+  - Install scripts written as files, so Windows quotes do not break them
+  - A list of installed products with their install path
+  - A check result from prodcontents.json for each product
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB installer commands.
+  - Use an AI that can run commands on your computer. A plain chat window cannot do the install.
+  - Open the skill in your AI tool, or paste its text into the chat.
+  - Tell it your operating system, MATLAB release, install folder and products.
+  - Read the plan it shows. Say yes only if it is right.
+  - On Windows, run it with admin rights. The scripts run with ExecutionPolicy Bypass.
+  - When it finishes, check the list of installed products and the install path.
+output_sample:
+  input:
+    - Your operating system (Windows, Linux or macOS)
+    - The MATLAB release you want
+    - The folder to install into
+    - The list of products, toolboxes or support packages
+  prerequisites:
+    - An AI that can run commands on your computer
+    - A valid MathWorks licence or account
+    - Admin rights on Windows
+  output:
+    - name: Install plan
+      contains: The operating system, release, folder and product list, shown for you to confirm before anything runs.
+    - name: mpm download
+      contains: The MATLAB package manager, saved to a fixed path on your machine.
+    - name: Release input file
+      contains: The install settings file for your release, edited with your folder and products.
+    - name: Install command
+      contains: The command that installs your products, run the same way each time.
+    - name: Verification
+      contains: A list of installed products with their install path and the prodcontents.json check result.
+    - name: Release notes link
+      contains: A link to the release notes for the version you installed.

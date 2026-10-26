@@ -1,6 +1,6 @@
 new_slug: tried-before-image-ad
 name: "Tried-before products image ad maker"
-summary: "Paste your story ad. Get an image prompt of what your buyer gave up on, and its caption."
+summary: "Paste your story ad. Get an image prompt and caption for a plain photo of what your buyer tried before and gave up on. Made for image ads."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your story says what the buyer tried before and gave up on.
   - Your buyers tend to try several things before they find one that sticks.
   - You want a photo with no person and no product that still tells the story.
+not_for:
+  - "You want to point at one flaw in a product: use the circled flaw image ad maker."
+  - "You want to show what the problem leaves behind each day: use the leftover mess image ad maker."
+  - "Your story names nothing the buyer tried before: use the problem moment image ad maker."
 
 you_give:
   - Your approved story ad, with what the narrator tried
@@ -34,6 +38,35 @@ how_to_use:
   - Paste the prompt into your image tool, or photograph a real cupboard with the labels turned away.
   - Zoom in on the result. If any label is readable, ask for it turned away or out of focus.
   - Show it to a customer. "That's my cupboard" means it's working.
+output_sample:
+  input:
+    - Your approved story ad, with what the narrator tried
+    - What your buyers tried before, how long it lasted and why they stopped (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - Ad copy for your story ad, for example from the Fact-based ad copy writer
+    - An image tool or a phone camera, to make the picture from the prompt
+  output:
+    - name: SCENE
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: WHERE AND WHEN
+      contains: The place, time, light and camera spot.
+    - name: HOW GIVEN UP
+      contains: Worn out, left half full or hidden away, and why.
+    - name: THE OBJECTS
+      contains: Each kind of old product, how much use shows, and where it sits.
+    - name: AROUND IT
+      contains: The ordinary things nearby that make it look like a real cupboard.
+    - name: WORDS ON IMAGE
+      contains: None, or the narrator's own mark taken from the story.
+    - name: LINE UNDER IMAGE
+      contains: A short caption of about 27 characters, never the product name.
+    - name: FLAGS
+      contains: Details it had to guess and anything that could look like a rival's product.
+    - name: IMAGE PROMPT
+      contains: A 60 to 120 word prompt, ready to paste into an image tool.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Sets the house rules

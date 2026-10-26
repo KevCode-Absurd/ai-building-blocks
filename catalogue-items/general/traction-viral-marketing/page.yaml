@@ -1,32 +1,26 @@
 new_slug: traction-viral-marketing
 name: Viral growth experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a viral growth experiment for your product. Give a link and goals. You get a small invite test with limits, measures and stop rules.
 job: keep-customers
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Viral growth experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused viral marketing plan for your product. It reads the buyer and offer,
-  checks why this channel might work and writes a small test. The default is
-  SaaS; you can ask for general-business mode.
+  A focused viral marketing plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Prototype one voluntary invite or share moment for a small eligible cohort,
-  alongside the current experience. Measure recipient activation before building
-  rewards.
+  Prototype one voluntary invite or share moment for a small eligible cohort, alongside the current experience. Measure recipient activation before building rewards.
 
 
-  An invitation within an existing customer account is not a new acquired
-  customer. A coefficient above one alone does not prove sustainable growth when
-  retention is weak.
+  An invitation within an existing customer account is not a new acquired customer. A coefficient above one alone does not prove sustainable growth when retention is weak.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "Your product is for one person and has no natural moment to invite others: pick a different channel from the Traction workflow."
+  - "You sell through sales calls and invites do not create buying accounts: use the Traction workflow to compare all 19 channels."
+  - "You want a ready campaign sent or published for you: this plan sends, spends and publishes nothing, so ask a person or run it yourself."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -36,23 +30,47 @@ you_get:
   - A small test with an owner, cost cap and decision rule
   - The next action and what needs approval
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Open your AI and add this skill. If it has web access, say so, so it can read your product pages.
+  - Paste your product link. Add your goal, buyer, cash and hour limits if you know them.
+  - Ask it to plan a viral growth test and to cite what it can verify.
+  - Check the Evidence and MISSING sections first. Fill in any gaps and ask it to update the plan.
+  - Approve any spending or publishing yourself. The plan does none of it.
+output_sample:
+  input:
+    - Your public product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and hour limits (optional)
+    - Past growth tests and their results (optional)
+  prerequisites:
+    - An AI that can read web pages is best. Without it, paste your page text.
+  output:
+    - name: Recommendation
+      contains: Whether to test now, later, or treat this channel as a weak fit, with the reason.
+    - name: Evidence
+      contains: Each fact used, with its source link, access date and what it means for the test.
+    - name: Buyer and useful action
+      contains: Who the buyer is and the first useful thing they do in your product.
+    - name: Channel mechanism
+      contains: How an invite or share moment helps the buyer reach value.
+    - name: Pilot
+      contains: The idea to test, who is in it, the offer, what is built and who owns it.
+    - name: Limits
+      contains: Cash, hours and end date, marked as proposed or approved.
+    - name: Measurement
+      contains: Events to track, the group measured, the counts used as denominators and how credit is given.
+    - name: Decision
+      contains: The rule for when to continue, revise or stop.
+    - name: Risks and next action
+      contains: What could go wrong and the one next step, including what needs your approval.
+    - name: MISSING
+      contains: The facts still unknown that you need to fill in.
 how_it_works:
   - title: Check 1
-    text: Map the trigger, invitation, recipient value, activation event and next
-      invitation. Compare collaboration, shared outputs, embedded attribution
-      and rewarded referrals.
+    text: Map the trigger, invitation, recipient value, activation event and next invitation. Compare collaboration, shared outputs, embedded attribution and rewarded referrals.
   - title: Check 2
-    text: Separate team invitations inside one paying account from new buying
-      accounts. Find where a user naturally needs another person to finish a
-      useful job.
+    text: Separate team invitations inside one paying account from new buying accounts. Find where a user naturally needs another person to finish a useful job.
   - title: Check 3
-    text: Estimate invites per eligible active user, invitation-to-activation rate
-      and cycle time for the same cohort. Use their product as the loop, without
-      copying another company's creative.
+    text: Estimate invites per eligible active user, invitation-to-activation rate and cycle time for the same cohort. Use their product as the loop, without copying another company's creative.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -66,21 +84,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Ten users each send two invites; five recipients activate. The coefficient
-    is 0.5, not two or five. New paying accounts are still unknown.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - Ten users each send two invites; five recipients activate. The coefficient is 0.5, not two or five. New paying accounts are still unknown.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

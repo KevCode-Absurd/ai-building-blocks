@@ -1,0 +1,12 @@
+# Plan personal spending and savings: AI Blocks
+
+> 8 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Big purchase reviewer](https://useaiblocks.com/prompts/big-purchase-pause-check): Check a big purchase before you buy. Paste what you want and why. You get the full cost over the years, where the pull comes from and a small test.
+- [Debt payoff planner](https://useaiblocks.com/skills/debt-payoff-planner): Use this debt payoff planner to compare snowball and avalanche. Give it your debts and extra cash. You get timelines, total interest and a debt-free date.
+- [Net worth calculator](https://useaiblocks.com/skills/net-worth-calculator): List what you own and what you owe. Get your net worth, how it splits between cash and investments, and a monthly view you can repeat.
+- [Personal budget and savings planner](https://useaiblocks.com/workflows/get-your-personal-money-in-order-with-room-for-error): Build a budget and debt plan, test a bad-month case and project savings using assumptions you can change.
+- [Personal budget builder](https://useaiblocks.com/skills/personal-budget-builder): Build a personal budget from your income and spending. Get a 50/30/20 or zero-based plan and see where your money leaks each month.
+- [Purchase decision cost reviewer](https://useaiblocks.com/skills/spending-story-reviewer): Weigh a big purchase before you buy: find what drives the want, add up the real long-run cost and get one small test first.
+- [Purchase total-cost comparison analyst](https://useaiblocks.com/workflows/plan-a-purchase-around-your-real-budget): Share your budget, quotes, ongoing costs and decision rules. Get a total-cost table and a purchase brief checked against your limits.
+- [Retirement savings projector](https://useaiblocks.com/skills/retirement-savings-projector): Give it your age, savings and goals. Get a projected nest egg and the gap to your target.

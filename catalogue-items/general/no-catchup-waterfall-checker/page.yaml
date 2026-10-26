@@ -1,7 +1,7 @@
 new_slug: no-catchup-waterfall-checker
 name: No-catchup waterfall checker
 headline: No-catchup waterfall checker
-summary: Allocate one distribution through capital, accrued preference and residual carry without a GP catch-up.
+summary: Check how one fund payout splits across capital, preference and carry with no GP catch-up. You get LP cash, GP carry and any unpaid shortfall.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
   - You work on private fund distributions and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need a GP catch-up, deal-by-deal carry or a tax-distribution waterfall: ask your fund lawyer or fund administrator, because this tool does not model them."
+  - "You want to know what your LPA clause means: ask a fund lawyer, because this tool only does the arithmetic."
+  - "You want to check an investor statement against its records: use the Investor statement NAV checker."
 you_give:
   - Available distributable cash, eligible unreturned LP capital, separately verified accrued preference and residual GP carry fraction under a no-catchup LPA.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,29 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Cash available to distribute
+    - Unreturned LP capital
+    - Accrued preference, checked against your LPA
+    - Share of leftover cash that goes to the GP as carry
+    - Reporting date, currency and scale
+  prerequisites:
+    - A spreadsheet tool and an AI that can create files, if you want the workbook
+    - Node.js 20 or later, only if you want to run the included calculation script
+  output:
+    - name: Capital returned
+      contains: The part of the cash paid back to LPs as unreturned capital, up to what is owed.
+    - name: Preference paid
+      contains: The part of the remaining cash that covers accrued preference, and nothing more than is owed.
+    - name: GP carry and LP cash
+      contains: How the cash left after both first tiers splits between the GP and the LPs.
+    - name: Remaining first-tier shortfall
+      contains: Any capital or preference still unpaid when cash runs out, with carry at zero.
+    - name: Editable workbook and reconciliations
+      contains: A native workbook, input schema and checks that LP plus GP cash equals the distribution.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs you did not supply and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Confirm whole-fund return-of-capital priority and explicitly no GP catch-up or GP co-investment in this schedule
     text: Confirm whole-fund return-of-capital priority and explicitly no GP catch-up or GP co-investment in this schedule.

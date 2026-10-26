@@ -1,0 +1,164 @@
+name: China Supply Chain Strategist agent
+summary: Plan how to buy from Chinese factories. Get a sourcing plan with supplier checks, total cost, an order split and a risk register with backups.
+headline: China Supply Chain Strategist agent
+subhead: Tell it what you buy, from whom and what could go wrong. It places each item in a buying strategy, sets how to qualify new suppliers, compares total cost and splits orders across a backup. You get a sourcing plan, a risk register and a short action list.
+job: plan-supply-chain
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Most buyers choose a supplier by unit price, then pay for it in late orders,
+  defects and a single factory that cannot be replaced. This China supply chain
+  strategist agent plans sourcing the other way round. It starts from what a
+  part or product is worth to you and how hard it is to replace, then sets the
+  buying approach to match.
+
+
+  It sorts each item into one of four groups, using the Kraljic matrix: a
+  strategic item, a volume item, a bottleneck item or a routine item. Each
+  group gets its own approach. A part with one possible factory needs a backup
+  plan and a close relationship. A routine part needs a fast, cheap process.
+  It then compares suppliers on total cost, which adds inspection, defects,
+  holding stock, late delivery and the cost of switching to the price.
+
+
+  The profile covers buying in China's factory regions, including online
+  marketplaces such as 1688 and Alibaba, trade fairs, and checking a company
+  through public business records. It cannot find real suppliers for you or
+  confirm that a factory exists. You check every name it suggests.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its savings
+  ranges and success targets are rules of thumb, not measured results from AI
+  Blocks. In a plain chat it does sums by hand, so check the numbers.
+when:
+  - You buy parts or products from Chinese factories and one supplier would hurt you badly if it stopped.
+  - A supplier is late or its defect rate is rising and you need a backup plan.
+  - You compare suppliers by price alone and want to see the full cost of each.
+  - You want a monthly or quarterly supply chain report in one fixed layout.
+not_for:
+  - You already hold quotes or factory answers and want them compared or scored. Use the Supplier quote comparer or the Supplier shortlist vetter.
+  - You need the message that asks factories for quotes. Use the Supplier quote request writer.
+  - You need to know how much to order and the cash it takes. Use the Inventory cash planner.
+  - You need a ruling on customs, tax, contracts or product certification. Ask a customs broker or a lawyer.
+you_give:
+  - What you buy, with the specification and your yearly volume
+  - Your current suppliers, spend, and their late-delivery and defect record (optional)
+  - Your limits on cost, quality standard and lead time
+  - Where you buy now, such as China only or other countries too
+  - Quotes or factory answers you want weighed against each other (optional)
+  - Your last period's numbers if you want a report, such as spend, on-time rate and stock (optional)
+you_get:
+  - Each item placed in a buying group, with the approach that suits it
+  - A step-by-step way to qualify a new supplier and the questions to ask each candidate
+  - A total cost comparison of your options, with hidden costs shown
+  - An order split across a main supplier and backups, with the reasons
+  - A risk register, with a response for each risk and a continuity check
+  - A savings plan in short, middle and long term steps, and an action list
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Cover what you buy, your volume, your current suppliers and what worries you most. Paste a spreadsheet of suppliers and spend if you have one.
+  - Type "Make a sourcing plan", "Compare total cost for these options" or "Write this period's supply chain report", and paste the numbers.
+  - Check the risk register first. Then check each sum against your own sheet. In a plain chat the AI does the arithmetic by hand and cannot run code.
+  - Verify every supplier you pick through a business record check, a sample order and a factory audit. The AI contacts no one and signs nothing.
+how_it_works:
+  - title: Diagnose the position
+    text: It reviews your suppliers, spend, stock and weak points, and marks anything it needs but was not given.
+  - title: Group each item
+    text: It places each item by size of spend and difficulty of replacing it, then sets a buying approach for each group.
+  - title: Plan supplier qualification
+    text: It lays out the path from a company check, to an audit, a trial order and full supply, with what to ask at each step.
+  - title: Compare total cost
+    text: It adds direct, indirect and hidden costs to price, using your numbers and clear assumptions.
+  - title: Split the orders
+    text: It sets a main supplier, a backup and a small development supplier, so no key item depends on one factory.
+  - title: Map the risks
+    text: It lists supply, quality, price, delivery and compliance risks, with a response and an owner for each.
+  - title: Set the savings and actions
+    text: It sorts savings ideas by how soon they pay, then lists urgent, 30-day and long-term actions.
+output_shape: |-
+  DIAGNOSIS
+    <suppliers, spend, stock, weak points> | <MISSING data>
+
+  BUYING GROUPS
+    <item> | <group: strategic, volume, bottleneck or routine> | <approach>
+
+  SUPPLIER QUALIFICATION PLAN
+    <step> | <what to check> | <evidence to ask for> | <pass test>
+
+  TOTAL COST COMPARISON
+    <option> | <price> | <inspection> | <defects> | <stock holding> | <switching> | <total>
+
+  ORDER SPLIT
+    <item> | <main share> | <backup share> | <development share> | <reason>
+
+  RISK REGISTER
+    <risk> | <likelihood> | <impact> | <response> | <continuity check>
+
+  SAVINGS PLAN
+    <idea> | <time to pay> | <how to measure>
+
+  ACTIONS
+    Urgent: <action> | 30 days: <action> | Long term: <action>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to confirm>
+output_sample:
+  input:
+    - What you buy, the spec and your yearly volume
+    - Your current suppliers, spend and delivery record (optional)
+    - Your limits on cost, quality and lead time
+    - Quotes or factory answers to compare (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - A spreadsheet if you want sums checked, because a plain chat does arithmetic by hand
+  output:
+    - name: Diagnosis
+      contains: Where your supply stands today, the weak points, and any data it needed but was not given.
+    - name: Buying groups
+      contains: Each item placed as strategic, volume, bottleneck or routine, with the buying approach for it.
+    - name: Supplier qualification plan
+      contains: The checks, evidence and pass tests for a new supplier, from company check to full supply.
+    - name: Total cost comparison
+      contains: Price plus inspection, defects, stock holding and switching cost for each option, as a table.
+    - name: Order split
+      contains: How much goes to a main, backup and development supplier for each item, with reasons.
+    - name: Risk register
+      contains: Each risk with likelihood, impact, response and a continuity check.
+    - name: Savings plan and actions
+      contains: Savings ideas by time to pay, plus urgent, 30-day and long-term actions.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your supplier list and purchase history instead of retyping them.
+    - name: A spreadsheet such as Google Sheets or Excel
+      why: You can rebuild the total cost table with formulas and test one change at a time.
+  inputs:
+    - A list of every supplier with spend, late orders and rejected units for the last 12 months.
+    - The part drawings or specification you give to factories.
+    - Any contract terms on price, quality and delivery penalties.
+terms:
+  - term: Total cost of ownership
+    meaning: The full cost of a part, including inspection, defects, stock, late delivery and switching, not only the price.
+  - term: Kraljic matrix
+    meaning: A way to sort what you buy by spend and by how hard it is to replace the supplier. Some books call the volume group by another name.
+  - term: Single source
+    meaning: One supplier is the only source for an item, so a failure there stops you.
+  - term: Qualification
+    meaning: The checks a supplier passes before you place real orders, such as papers, an audit and a trial run.
+tweaks:
+  - what: Task
+    how: Ask for one thing at a time, such as only the risk register, or only the total cost table.
+  - what: Buying groups
+    how: Tell it how many items you buy. For a short list it groups them all, and for a long list it groups the top ones by spend.
+  - what: Currency and units
+    how: State your currency, the yuan exchange rate you use and your units, so the sums are consistent.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

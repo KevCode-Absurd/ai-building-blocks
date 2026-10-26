@@ -1,6 +1,6 @@
 new_slug: tracker-chart-image-ad-maker
 name: "Tracker chart image ad maker"
-summary: "Paste your story ad and claims. Get a tracker-photo image prompt, one mark and the line under it."
+summary: "Make a tracker chart image ad: give it your story ad and backed claims. You get a phone-photo prompt, one mark and the line under it."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your story mentions something the buyer measures or counts, like sleep, a streak or a test strip.
   - You have claims with sources that cover what the story says about that reading.
   - You want a picture that sorts trackers from everyone else at a glance.
+not_for:
+  - "Your idea needs a clinic scan, a doctor's file or a reading only a clinic can take: use a person who can check the claims, or pick a different picture idea."
+  - "Your buyer does not check this reading at home: use the empty-room-image-ad-maker or the problem-moment-image-ad-maker."
+  - "The problem shows on the body itself: use the visible-symptom-image-ad-maker."
 
 you_give:
   - Your approved story ad and the reading it mentions
@@ -31,10 +35,42 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad and your claims list. Without a source for what the story says about the reading, it asks once, then hands back only the gate and what's missing.
-  - If you can, build the real chart yourself from the story's numbers and photograph it on a second phone.
-  - Otherwise make the photo from the prompt, then draw the mark in your phone's photo editor.
-  - Have a person check the claims behind the reading before the ad runs.
+  - Know that Claude can't draw images. To get the picture, paste the image prompt into ChatGPT or Gemini later.
+  - Paste your story ad and your claims list. If a claim has no source, it asks once, then hands back only the gate and what is missing.
+  - Use an everyday reading such as a sleep chart, habit calendar or test strip. Skip blood pressure, glucose or other medical readings.
+  - If you can, build the real chart from the story's numbers and photograph it on a second phone. Otherwise make the photo from the prompt and draw the mark in your phone's photo editor.
+  - Have a person check the claims, the numbers and the mark before the ad runs.
+output_sample:
+  input:
+    - Your approved story ad and the reading it mentions
+    - The claims you can back about that reading, with sources
+    - Any real numbers the story states (optional)
+  prerequisites:
+    - An AI that can make images, or a way to paste the prompt into one (optional, the prompt works on its own)
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: GATE
+      contains: Three answers showing whether the buyer takes this reading, the brand can back it, and it can stay ordinary.
+    - name: SCENE
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: WHERE AND WHEN
+      contains: The place, the time, what is around the reading and where the camera sits.
+    - name: THE READING
+      contains: What the reading is, what it is on, and the one part that tells the story.
+    - name: THE MARK
+      contains: Circle or arrow, the colour and why, and where it goes.
+    - name: NUMBERS IN VIEW
+      contains: Each readable number with its source, or a note that none can be read.
+    - name: LINE UNDER IMAGE
+      contains: A short caption of about 27 characters, with the line type and character count.
+    - name: FLAGS
+      contains: The claims behind the reading, with sources, for a person to check before the ad runs.
+    - name: IMAGE PROMPT
+      contains: A 60 to 120 word prompt for the photo alone, ready to paste.
+    - name: MARK STEP
+      contains: How to draw the mark by hand, or one fallback prompt line.
+    - name: CHECKS MISSED
+      contains: One line for each check the brief still fails, or none.
 
 how_it_works:
   - title: Sets the house rules

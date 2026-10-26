@@ -1,0 +1,159 @@
+name: Desktop App Engineer agent
+summary: "Get a plan for an Electron or Tauri desktop app with the runtime to pick, safe setup rules, code signing, auto-updates and size limits."
+headline: Desktop App Engineer agent
+subhead: "Describe your desktop app and the systems it must run on. It picks Electron or Tauri, sets safe rules for your web screens, and plans signing, updates and a step-by-step release."
+job: build-software
+thinking: high
+thinking_why: It weighs two runtimes against your needs, and checks security and release steps that are easy to get wrong. Use a model that can compare options and flag what it cannot verify.
+explain: >-
+  A desktop app built with web tools has two hard parts. The first is the line
+  between web content and the computer, where one loose door can expose the
+  user's files. The second is the update system. A bad update can strand every
+  user. This Desktop App Engineer agent plans both before any feature work.
+
+
+  It starts by choosing between Electron and Tauri in writing, using your size
+  and memory needs, your team's skills and how much the screens must look the
+  same everywhere. It then lists the few actions the web side may ask the
+  computer to do, each one narrow and checked. Signing, notarization and a
+  staged update come before the first feature, not after.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The method is
+  the original author's. AI Blocks adds an intake, a fixed answer layout and
+  review rules. Budgets and rollout numbers in the profile are examples. Your
+  own limits replace them.
+when:
+  - You are starting a desktop app built with web tools and must pick Electron or Tauri.
+  - Your app is ready to ship and you need signing for Windows and macOS and an update plan.
+  - You want to check that your web screens cannot reach files or system tools they should not.
+  - Your installer or memory use has grown and you want limits that fail a build.
+not_for:
+  - You have an Electron app and want it tested by clicking and typing. Use the Desktop app tester.
+  - You are building a phone or tablet app. Use the Mobile App Builder agent.
+  - You are building a web app that runs in the browser. Use the Frontend Developer agent.
+  - You want a full security audit of finished code. Use the Application Security Engineer agent.
+  - You would paste certificate files or private keys into a chat. Never do that. Keep them in your own secure store.
+you_give:
+  - What the app does and who uses it.
+  - Which systems it must run on, such as Windows, macOS and Linux.
+  - Your team's skills, such as web only or also Rust (optional).
+  - What the app must do with the computer, such as read files, show tray icons or open from links.
+  - Your current setup, such as framework, build tool and how you ship it now (optional).
+  - Size, memory and start-up limits you care about (optional).
+you_get:
+  - A written choice of Electron or Tauri, with the reasons and what would change it.
+  - A security setup, with a short list of narrow actions the web side may request.
+  - A release plan covering signing, macOS notarization, the update feed and a way back.
+  - A staged rollout plan with the numbers that pause it.
+  - A list of per-system behaviour for tray, shortcuts, links and notifications.
+  - Size, memory and start-up limits, and a test plan across the systems.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe the app, the systems you target and what it must do on the computer. Say what you use today if the app exists.
+  - Say "Plan this desktop app" for a new one, or "Review my setup" if you paste your window settings and release steps.
+  - Your AI asks once for anything missing. Unknowns stay marked as assumptions.
+  - Read the runtime choice and the security setup first. Check that each allowed action is as narrow as it can be.
+  - Give the plan to the engineer. Code in it is an example to adapt. Never paste signing certificates, keys or passwords into the chat.
+how_it_works:
+  - title: Choose the runtime
+    text: It compares Electron and Tauri on installer size, memory, screen consistency, team skills and tool maturity, then records the choice.
+  - title: Draw the security line
+    text: The web side is treated as untrusted. It lists the exact verbs the web side may call, each checked on the trusted side.
+  - title: Plan signing and updates
+    text: It plans signing on Windows, signing and notarization on macOS, a signed update feed and a tested way back.
+  - title: Plan the staged rollout
+    text: It plans a small first release to a few users, the crash and update numbers that gate each step, and a pause rule.
+  - title: Spec each system
+    text: It writes separate rules for each operating system's menus, shortcuts, tray and installer, so none is an afterthought.
+  - title: Set limits and tests
+    text: It sets limits for start-up, memory and size, and a test matrix with fresh installs and upgrades on real machines.
+  - title: Plan the live app
+    text: It plans crash reports, update tracking and a yearly rollback drill.
+output_shape: |-
+  NEEDS AND ASSUMPTIONS
+    <app and users> | <target systems> | <team skills> | <must-do-on-the-computer list> | <assumptions marked ASSUMED>
+
+  RUNTIME CHOICE
+    <Electron or Tauri> | <why> | <what would change it>
+
+  SECURITY SETUP
+    <window settings> | <allowed web-to-computer actions, each narrow and checked> | <rules for remote content>
+
+  RELEASE PIPELINE
+    <system> | <signing step> | <notarization if macOS> | <update feed> | <rollback>
+
+  STAGED ROLLOUT
+    <step> | <share of users> | <numbers to watch> | <pause rule>
+
+  PER-SYSTEM BEHAVIOUR
+    <feature> | <Windows> | <macOS> | <Linux>
+
+  LIMITS AND TESTS
+    <start-up, memory, size> | <how measured> | <test matrix>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What the app does and which systems it must run on
+    - What the app must do on the computer, such as read files or show a tray icon
+    - Your team's skills and your current setup (optional)
+    - Your size, memory and start-up limits (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Developer accounts and signing certificates for each system, which your engineer sets up. Check each vendor's current rules.
+  output:
+    - name: Needs and assumptions
+      contains: The app, systems and must-do list restated, with every guess marked.
+    - name: Runtime choice
+      contains: Electron or Tauri, the reasons and what would change the choice.
+    - name: Security setup
+      contains: Window settings, the short list of allowed web-to-computer actions and rules for remote content.
+    - name: Release pipeline
+      contains: Signing, notarization, the update feed and the way back, for each system.
+    - name: Staged rollout
+      contains: Release steps by share of users, the numbers to watch and when to pause.
+    - name: Per-system behaviour
+      contains: How tray, shortcuts, links and notifications should work on each system.
+    - name: Limits and tests
+      contains: Start-up, memory and size limits, how to measure them and the test matrix.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your window settings, build config and release scripts, with secrets removed.
+    - name: A machine or virtual machine for each target system
+      why: Signing, updates and tray behaviour must be tested on the real systems.
+  inputs:
+    - Your current main-window and bridge settings.
+    - Your release script or build config, with secrets removed.
+    - The oldest and slowest computer you support.
+terms:
+  - term: Electron
+    meaning: A way to build desktop apps with web tools that bundles its own browser, so screens look the same everywhere.
+  - term: Tauri
+    meaning: A way to build desktop apps with web tools that uses the system's built-in web view. Apps are smaller.
+  - term: IPC
+    meaning: The messages the web side sends to the trusted side of the app to ask it to do something.
+  - term: Code signing
+    meaning: Marking an app with a certificate so the system can tell who made it and that it was not changed.
+  - term: Notarization
+    meaning: Apple's check of a signed Mac app. Without it, macOS shows scary warnings.
+  - term: Staged rollout
+    meaning: Sending an update to a small share of users first, then more if the numbers look good.
+  - term: Web view
+    meaning: The browser part inside a desktop app that shows its screens.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Runtime
+    how: Say if you have already chosen Electron or Tauri. It then reviews your choice instead of making one.
+  - what: Systems
+    how: Name the systems you support. Dropping Linux, for example, removes a large part of the test plan.
+improve:
+  - Keep the runtime choice and the list of allowed actions in your repo, and paste them back in the next run.

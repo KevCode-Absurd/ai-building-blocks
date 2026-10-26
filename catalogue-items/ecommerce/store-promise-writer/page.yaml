@@ -1,6 +1,6 @@
 new_slug: store-promise-writer
 name: "Store promise writer"
-summary: "Give it your product and best customers. Get a three-line promise and a not-for-you list."
+summary: "Write your store promise: give it what you sell and your best customers. You get a three-line promise and a list of who your store is not for."
 job: brand-file
 thinking: medium
 thinking_why: "It turns your customers' words into a short promise and sorts who it is not for. A mid-size model does this well."
@@ -17,6 +17,10 @@ when:
   - You are launching a store and need one clear sentence about who it is for.
   - Your homepage tries to talk to everyone and reads like every other store.
   - You are choosing between customer groups and need to pick the smallest one worth serving.
+not_for:
+  - You have no customers yet. Talk to five likely buyers first, then bring your notes.
+  - You sell staples to everyone. Narrow to one use or one moment first, such as first-time home cooks.
+  - You want to place your promise against rivals. Use the Positioning grid builder.
 
 you_give:
   - What you sell and the change it makes for the buyer
@@ -36,6 +40,27 @@ how_to_use:
   - Say how many customers you have. With none yet, talk to five people first and bring the notes.
   - Read the promise out loud. If it sounds like a spec, ask for a feeling or status version.
   - Ask three customers for advice on it, not a verdict, and bring their answers back.
+output_sample:
+  input:
+    - What you sell and the change it makes for the buyer
+    - Notes on your best 10 customers, with their own words
+    - Reasons for lost sales (optional)
+    - Average yearly spend per customer (optional)
+  output:
+    - name: The change
+      contains: One sentence about the buyer's life after buying, not about features.
+    - name: Smallest viable market
+      contains: The beliefs, wants, dreams and words of the smallest group worth serving, shown as an idea to test.
+    - name: Promise
+      contains: "Three lines: who it is for by belief, who you focus on by want, and what they get."
+    - name: Feeling check
+      contains: Which feeling the promise sells, and why it is not a spec.
+    - name: Not-for-you list
+      contains: Five groups who should pass, each with the reason a rival is right for them.
+    - name: Size sum
+      contains: Buyers times yearly spend, set against the revenue the store needs.
+    - name: Homepage block
+      contains: A short for-you and not-for-you block, plus the line a customer would tell a friend.
 
 how_it_works:
   - title: Writes the change

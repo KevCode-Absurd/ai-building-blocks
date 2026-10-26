@@ -9,6 +9,8 @@ level: advanced
 inputs:
   - {type: brief, required: true}
   - {type: audit_report, required: true}
+  - {type: plan, required: false}
+  - {type: lessons_register, required: false}
 outputs:
   - {type: audit_report}
 uses: [customer-interview-notes]

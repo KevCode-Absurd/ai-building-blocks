@@ -1,6 +1,6 @@
 new_slug: pre-launch-ad-check-and-fix-loop
 name: Pre-launch ad check and fix loop
-summary: Give it a finished ad. It checks, fixes and re-checks until it passes, then hands you a version ready to upload.
+summary: Check your ad before launch. Give it a finished ad and your facts. It fixes and re-checks up to three rounds, then hands back a version ready to upload.
 job: check-ads
 thinking: medium
 thinking_why: Each round is a check and a small fix, but it decides what is fixable and when to stop. A strong model keeps it from inventing claims.
@@ -14,6 +14,10 @@ when:
   - You have a finished ad and want it cleared before you spend on it.
   - An ad was rejected or flagged and you want it fixed and checked again.
   - You make many ads and keep hitting the same mistakes.
+not_for:
+  - "You have a throwaway test ad: run one pass of the Pre-launch ad checker instead, because a loop is not worth the time."
+  - "You only want the platform rules read: use the Meta ad policy checker, which checks the ad copy against Meta's rules."
+  - "The picture or video itself must change: remake it first, because this agent cannot redraw a picture or reshoot a video."
 you_give:
   - The finished ad, with its copy and the picture or the video frames or script
   - Where it will run and who it is for
@@ -31,6 +35,31 @@ how_to_use:
   - Give it your facts file, or paste the offer and the proof for each claim.
   - Answer any question it hands back, then run it again. Each answer starts a new round.
   - Upload the cleared version yourself. It never publishes.
+output_sample:
+  input:
+    - "Your finished ad: the copy, plus the picture or the video frames or script"
+    - Where it will run and who it is for
+    - "Your facts: live price, offer, approved claims and the proof for each"
+    - Your landing page (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI that can keep files between rounds, such as Claude Code
+    - The linked check skills, which it can read from the AI Blocks site if they are not installed
+  output:
+    - name: Result
+      contains: "One line: cleared, not cleared yet, or remake, with the number of rounds used out of three."
+    - name: The cleared ad
+      contains: Every field of the latest version, with each changed line marked.
+    - name: What was fixed
+      contains: Each fix, the check that named it and the round it was made in.
+    - name: Open items
+      contains: Each question only you can settle, with the exact fact, proof or decision it needs.
+    - name: Scores
+      contains: The readiness score and the compliance score, first round against last round, with sums shown.
+    - name: For a person
+      contains: What to check by eye on a phone, such as colours, safe zones and the real logo.
+    - name: Repeat flaws and files
+      contains: Mistakes that keep coming up, each round's file and every MISSING line.
 how_it_works:
   - title: Read the repeat list
     text: Looks at the mistakes that came up in your earlier ads and checks those first.

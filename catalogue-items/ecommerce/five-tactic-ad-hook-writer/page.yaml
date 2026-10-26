@@ -1,6 +1,6 @@
 new_slug: five-tactic-ad-hook-writer
 name: Five-tactic ad hook writer
-summary: Write short ad hooks using five tactics. Rank them by buyer fit and proof, then give production notes.
+summary: Write short ad hooks for your product with five tactics. Get 10 to 15 hooks, ranked, with the first ones to test and notes for filming.
 job: write-ad-copy
 headline: Five-tactic ad hook writer
 subhead: Share product facts, angle, buyer and approved claims. Get ten to fifteen hooks grouped by tactic, with first test picks.
@@ -12,6 +12,10 @@ when:
   - You need ten to fifteen hooks grouped by tactic, with first test picks.
   - You need five-tactic ad hook writer for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "You have no approved claims or checked numbers yet: get them from your team or product owner first, then come back."
+  - "You need full ad copy, not just the first line: write the body copy with your AI in a normal chat, using the best hook as the opener."
+  - "You want a longer script or a long headline: this tool keeps each hook to 3 to 7 words."
 you_give:
   - Product facts
   - Angle
@@ -23,6 +27,22 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - Your product name and what it does
+    - The main pain or promise for your buyer
+    - Your target buyer, described in a specific way
+    - Tone and format, such as video opener, static headline or UGC opener
+    - How aware the buyer is of the problem (optional)
+  output:
+    - name: Hook list
+      contains: Ten to fifteen hooks with a tactic label, exact text, format fit, stop-power rating and a one-line reason.
+    - name: Ranking
+      contains: Hooks ordered best first, scored on how specific they sound, how natural they feel and how well they stop the scroll.
+    - name: Production notes
+      contains: For each top hook, the visual to pair with it, how to say it and how fast to cut.
+    - name: Evidence and gaps
+      contains: The facts used, any missing inputs and the assumptions made.
 how_it_works:
   - title: Check the inputs
     text: Confirm product facts, angle, buyer and approved claims. Mark facts that are missing.

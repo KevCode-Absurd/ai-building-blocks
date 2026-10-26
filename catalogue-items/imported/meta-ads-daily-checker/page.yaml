@@ -2,37 +2,106 @@ thinking: medium
 thinking_why: It reads a few numbers and flags patterns, and you make the call.
 new_slug: meta-ads-daily-checker
 name: Meta ads daily checker
-summary: Connect your Meta ad account read-only. Get a daily check of spend,
-  winners, money wasters and tired ads.
+summary: Check your Meta (Facebook and Instagram) ads in five minutes a day. Get spend pacing, winners, money wasters and tired ads from your own numbers.
 job: read-ad-results
 headline: Meta ads daily checker
-subhead: "A short daily read on your Meta ad account, so you stop digging
-  through Ads Manager. Connect it read-only and you see what matters: spend
-  trend, winners, ads wasting money, and creatives that are tiring out."
+subhead: "Paste your Ads Manager numbers each day, or connect read-only. It answers five questions: am I on track, what is running, how did the last 7 days go, who is winning and losing, and is anything tiring out. You get a short plain report and suggested next steps. It never changes your ads."
 explain: |
-  A short daily read on your Meta ad account, so you stop digging through Ads Manager. Connect it read-only and you see what matters: spend trend, winners, ads wasting money, and creatives that are tiring out.
+  Most daily Meta ads management is spotting patterns: spend creeping up, click rate sliding, one ad eating budget. This Meta ads daily checker does that reading for you, so you stop clicking through Ads Manager every morning. It works for Facebook and Instagram ads.
 
-  It runs a shell kit that pulls account data, and it can run in mock mode first to test the setup. It looks for patterns: spend moving up or down, click rate falling as people tire of an ad, cost per sale spiking when the audience runs dry. It compares results to the target cost or return you store in your brand files, and logs what it learns so repeat problems stand out. You make the calls. It needs an access token.
+  Each day it answers five questions and backs each answer with your numbers. It flags ads that spend without results, ads worth scaling, and signs of creative fatigue, such as click rate falling while frequency climbs. It compares your results to your target cost per sale if you give one, and it can note patterns that came up before.
+
+  You make the calls. It only reads, and it gives drafts of what it would change. You can run it from pasted exports in any chat. Connecting your account read-only is optional and needs an access token.
 when:
   - You want a five-minute check on your ads each morning.
-  - You suspect an ad set is burning budget with no sales.
+  - You think one ad set is burning budget with no sales.
   - Click rate has been sliding and you want to know which ads are tired.
-  - You want to see if a problem happened last month too.
+  - You want to know if a problem happened last month too.
+not_for:
+  - "You want to build new ads or campaigns: use Ads Manager. This skill only reads and suggests."
+  - "A campaign is brand new and has little data. Wait until it has a few days of results, or the checks will say too little data."
+  - "You want to know why ads stall in delivery, with a set path to fix them: use the Meta delivery troubleshooter."
+  - "You want to catch tired ads and get a brief for each replacement: use the Ad fatigue watcher."
 you_give:
-  - Meta ad account ID and access token
-  - Target cost per sale or return (optional)
-  - Brand files for context (optional)
+  - Your campaign and ad results for the last 7 days, exported from Ads Manager
+  - Today's spend and your daily budgets
+  - A daily breakdown by ad, to check for tiring ads (optional)
+  - Your target cost per sale or return on ad spend (optional)
+  - Read-only access with your own token, instead of pasting numbers (optional)
 you_get:
-  - A daily spend and results summary
-  - Winning ads listed
-  - Money-wasting ads flagged
-  - Signs of creative fatigue
-  - Saved notes on repeat patterns
+  - Spend against your budget and target
+  - A list of what is running
+  - Seven-day results by campaign
+  - Your top 3 winners and bottom 3 losers, with numbers
+  - Signs of creative fatigue, with the numbers behind them
+  - Lines to add to your own learnings file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands with the official Meta Ads
-    command line tool and your own read-only access token. It only drafts
-    changes for your approval.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. For the paste route you need no code, files or paid tools.
+  - In Ads Manager, export your campaigns and ads for the last 7 days. Add a daily breakdown if you can. Paste them in.
+  - Add today's spend, your daily budgets, and your target cost per sale if you have one.
+  - Read the five answers. Check each claim against your own numbers, and ask for the number if one is missing.
+  - Decide what to do yourself. Make any change in Ads Manager, one at a time.
+  - To connect read-only instead, install Meta's official Ads command line tool and create a read-only token. Follow Meta's own current steps. Never paste the token into a chat. Your AI must be able to run commands.
+how_it_works:
+  - title: Get the numbers
+    text: It asks for the last 7 days by campaign and ad, today's spend and your targets, and marks gaps as missing.
+  - title: Check pacing
+    text: It compares today's spend rate with each daily budget.
+  - title: List what is running
+    text: It shows active campaigns and flags any that should be off.
+  - title: Rank the ads
+    text: It sorts ads by results and picks the top 3 winners and bottom 3 losers.
+  - title: Look for fatigue
+    text: It checks frequency, click rate day by day and cost per click for signs of a tiring ad.
+  - title: Report and suggest
+    text: It writes the report, suggests next steps as drafts, and gives you lines for your learnings file.
+output_shape: |
+  Spend vs target: <today's spend, daily budget, pacing>
+  Running campaigns: <name, status, budget>
+  Last 7 days by campaign: <table, change vs earlier 7 days>
+  Winners and losers: <top 3 and bottom 3 ads, numbers, reason>
+  Fatigue signals: <the numbers behind each signal>
+  Suggested next steps: <recommendations, not actions>
+  For your learnings file: <2 to 4 lines>
+  MISSING: <numbers not given, where to find them>
+output_sample:
+  input:
+    - Campaign and ad results for the last 7 days
+    - Today's spend and your daily budgets
+    - A daily breakdown by ad (optional)
+    - Your target cost per sale or return on ad spend (optional)
+  prerequisites:
+    - Read-only access with your own token, and an AI that can run commands, only if you skip pasting
+  output:
+    - name: Spend vs target
+      contains: Today's spend, your daily budget and whether pacing is high or low.
+    - name: Running campaigns
+      contains: Each active campaign with its status and budget.
+    - name: Last 7 days by campaign
+      contains: A table of results, with the change from the 7 days before.
+    - name: Winners and losers
+      contains: Your top 3 and bottom 3 ads, with their numbers and the reason.
+    - name: Fatigue signals
+      contains: Frequency, click rate and cost per click trends for tiring ads.
+    - name: For your learnings file
+      contains: Two to four lines to save so repeat problems stand out.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The paste route is reading and arithmetic only. Claude, ChatGPT and Gemini all handle it.
+    - name: Meta Ads command line tool
+      why: It lets an AI that can run commands read your account read-only, with your own token.
+  inputs:
+    - A daily breakdown by ad, so fatigue shows up as a trend
+    - Your target cost per sale or return on ad spend
+    - Last week's report, to compare
+    - Notes on any change you made in the last 7 days
+terms:
+  - term: Bleeder
+    meaning: An ad that spends a lot and gets poor results.
+  - term: Creative fatigue
+    meaning: An ad that stops working because the same people have seen it too often.
+  - term: Frequency
+    meaning: How many times one person saw your ad on average.
+  - term: Read-only access
+    meaning: Access that lets a tool look at your account but not change it.

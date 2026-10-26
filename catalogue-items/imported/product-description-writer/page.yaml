@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks claims and units, then writes with set rules.
 new_slug: product-description-writer
 name: Product description writer
-summary: Give it your product facts. Get a description with the right number of
-  claims, units and tone to lift sales.
+summary: Write a product description that picks the best three claims and the right units. Give it your product facts and benefits.
 job: run-your-store
 headline: Product description writer
-subhead: "A product description built on the choices that change buying
-  decisions: how many claims to make, which units to use, and what tone fits.
-  The rules matter more than clever adjectives."
+subhead: "A product description built on the choices that change buying decisions: how many claims to make, which units to use, and what tone fits. The rules matter more than clever adjectives."
 explain: |
   A product description built on the choices that change buying decisions: how many claims to make, which units to use, and what tone fits. The rules matter more than clever adjectives.
 
@@ -18,6 +15,10 @@ when:
   - You are unsure how many benefits to list.
   - You cannot decide between units, such as grams or servings.
   - You need to name a color or variant in a way that sells.
+not_for:
+  - "You want a full page audit: use the Product page auditor, or ask a person to review the page."
+  - "You need photo or video direction: brief a photographer or ask your AI for a shot list."
+  - "You need discount or promotion wording: write the offer text on its own, apart from the product copy."
 you_give:
   - "Product facts: materials, quantity, specs"
   - All candidate benefits
@@ -29,7 +30,21 @@ you_get:
   - Unit and wording choices explained
   - Title and hero line options
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. It needs no code, files or paid tools.
+  - Paste your product facts and your full list of benefits.
+  - Say who buys it, how technical they are, and the length limit.
+  - Read the rules table. Check each choice fits your product.
+  - Move the cut claims to your spec table or another page, then publish the copy.
+output_sample:
+  input:
+    - "Your product facts: materials, quantity, specs, ingredients"
+    - Your full list of benefits
+    - Your audience and how technical they are
+    - Where the copy will appear and its length limit
+  output:
+    - name: Headline and body
+      contains: The finished product copy, written to fit your length limit.
+    - name: Rules table
+      contains: Each rule your AI applied, such as three claims or units, and where it shows in the copy.
+    - name: Cut list
+      contains: The benefits left out, and where each one can go, such as a spec table.

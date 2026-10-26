@@ -15,6 +15,31 @@ use_cases:
   - "Review rules that unintentionally discourage ordinary visitors"
   - "Make a workplace break area easier to use"
   - "Choose a regular place to meet people or work outside home"
+not_for:
+  - "You need legal, safeguarding or fire-safety sign-off on a space: ask the specialist or the space owner, because an observation study cannot settle those."
+  - "You want a whole building or object designed with its tools and making in mind: use the Charles and Ray Eames mind."
+  - "You want to shape how people think about a place, a rule or a choice, not where they sit: use the Daniel Kahneman mind."
+output_sample:
+  input:
+    - Your claim about why people avoid or struggle with the place
+    - A sketch or plan of the space, with entrances and seats
+    - Where you stood when you watched it, and when
+    - The rules, incidents or limits that apply (optional)
+  output:
+    - name: Prediction
+      contains: The one claim about what people do and why, written so an observation could prove it wrong.
+    - name: Observation map
+      contains: Where people sit, pause, enter and pass through, with the definitions used for each.
+    - name: Session notes
+      contains: Timed notes on what happened, plus weather, events and your blind spots.
+    - name: Surprising behaviours
+      contains: Moved chairs, improvised seats and paths that differ from the planned ones.
+    - name: Strongest explanation and correction
+      contains: The best-supported reason and one focused change to access, seating, information or management.
+    - name: Operating plan and review questions
+      contains: Who maintains the change, which uses must stay possible, and what to ask the responsible authority.
+    - name: Repeat test
+      contains: How to watch again with the same definitions and what the result would rule out.
 seats:
   - {seat: "Observed public-space behaviour", asks: "What did people actually do?"}
   - {seat: "Seating and street connections", asks: "Can people enter, pause and choose a place?"}

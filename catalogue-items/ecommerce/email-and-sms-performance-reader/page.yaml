@@ -1,6 +1,6 @@
 new_slug: email-and-sms-performance-reader
 name: Email and SMS performance reader
-summary: Review email and SMS results against your own history. Get possible causes, tests to try and a house score with missing checks shown.
+summary: Read your email and SMS results against your own history. Get possible causes, tests to run and a score that shows what was not checked.
 job: write-emails
 thinking: high
 thinking_why: It reads several tables and weighs rules of thumb against thin data, so a stronger model reasons better.
@@ -14,6 +14,10 @@ when:
   - It is the start of the month and you want to know what your email and SMS did.
   - Your revenue from email dropped and you do not know whether to blame the list, the emails or the site.
   - You suspect a deliverability problem because clicks keep falling.
+not_for:
+  - "You want to check your email set-up, such as sender records: use the email setup health checker."
+  - "You need the next tests planned and ordered: use the email test planner."
+  - "You have ad results, not email or SMS figures: read them with the Campaign keep-or-change checker."
 you_give:
   - Campaign list for the last 30 days or more, with revenue, clicks and placed orders
   - Flow revenue, with the number of recipients and skips
@@ -31,6 +35,34 @@ how_to_use:
   - Add list growth, deliverability and SMS figures, and say how your site traffic changed.
   - Read the evidence and possible causes first, then review the test order.
   - Test each change before you roll it out, and run the skill again next month.
+output_sample:
+  input:
+    - Your campaign list for 30 days or more, with revenue, clicks and placed orders
+    - Your flow revenue, with recipients and skips
+    - Your list growth, pop-up views and sign-ups (optional)
+    - Your deliverability and SMS figures (optional)
+    - Your site traffic change (optional)
+  prerequisites:
+    - An AI that can read an exported file or pasted tables
+  output:
+    - name: FINDINGS
+      contains: Observed faults and possible causes kept apart, each with evidence, other causes, confidence and one test.
+    - name: FAULT CHECKS
+      contains: Pop-up, flows sending and opt-ins, each marked verified working, observed problem or not checked.
+    - name: LIST GROWTH
+      contains: New and lost subscribers by source, and pop-up views times submit rate.
+    - name: CAMPAIGNS
+      contains: Campaign types to repeat or rework, and any with high clicks but low revenue.
+    - name: FLOWS
+      contains: Revenue change set against traffic change, and whether late emails earn anything.
+    - name: DELIVERABILITY and SMS
+      contains: Your rates, rough comparisons and any concern the supplied figures support.
+    - name: TESTS TO RUN FIRST
+      contains: Tests ordered by where recipient volume is highest.
+    - name: SCORE
+      contains: Points earned out of points judged, or NOT SCORED, with the areas not judged.
+    - name: MISSING
+      contains: The data and live checks you did not give.
 how_it_works:
   - title: Checks evidence of faults
     text: Marks pop-up, flow and opt-in checks as verified working, observed problem or not checked. An export alone cannot verify a live feature.

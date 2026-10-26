@@ -8,6 +8,33 @@ tags: "[audio, transcription, whisper, meeting-minutes, speech-to-text]"
 date_added: "2026-02-27"
 ---
 
+## Run it: what you need, what you get
+
+**What you need.** Ask once for anything missing. Never invent it.
+
+- **A recording**: an audio or video file on the same computer. Common formats are MP3, WAV, M4A, OGG, FLAC and WEBM.
+- **Consent.** Before you transcribe, ask the user to confirm that everyone on the recording agreed to be recorded, and that the notes may be shared with the people who need them.
+- **Tools on the computer**: Python 3, then Faster-Whisper or Whisper (free, run locally) and, if possible, ffmpeg. Run `scripts/install-requirements.sh` to install them. It needs internet the first time to download the speech model. No paid service or API key is needed for the transcript.
+- **For the meeting notes step**: the Claude CLI or GitHub Copilot CLI, signed in. Without one, only the transcript is saved. The transcript text is sent to that service to write the notes, so say so before you send it.
+- **The language** (optional): it is detected automatically.
+
+**What it makes.** Running `python3 scripts/transcribe.py <file>` saves up to two Markdown files in the output folder:
+
+- `transcript-<timestamp>.md`: the file name, language, date and every spoken segment with start and end times.
+- `ata-<timestamp>.md`: the meeting notes (called "ata", the Portuguese word for minutes). Topics, decisions and action items, written by the AI from the transcript. The built-in notes prompt is written in Portuguese. For English notes, pass your own prompt with `--prompt`, such as "Write meeting notes in English: summary, decisions, action items with owners."
+
+The script does not label who is speaking and does not write subtitle files (SRT or VTT). Names in the notes are the AI's guess from the text, so tell the user to check them. Timestamps in the transcript can be used to make subtitles later.
+
+**No way to run code?** If the user already has a transcript, paste it instead and write the notes from it using the template in `references/detailed-guide.md` (Step 3). Say clearly that you did not hear the audio.
+
+**Check before you hand over.**
+
+1. The file name and language in the transcript match the recording.
+2. Every action item in the notes appears in the transcript. Remove any that does not.
+3. Names, numbers and dates are copied from the transcript, not guessed. Mark unclear audio as `[unclear]`.
+
+**Examples below** show the style of the terminal messages. The durations, counts and times in them are made up to show the layout. They are not benchmarks.
+
 ## Detailed Guide
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
@@ -17,8 +44,8 @@ Invoke this skill when:
 
 - User needs to transcribe audio/video files to text
 - User wants meeting minutes automatically generated from recordings
-- User requires speaker identification (diarization) in conversations
-- User needs subtitles/captions (SRT, VTT formats)
+- User asks who said what. The included script does not label speakers; say so and offer to guess from context, marked as a guess
+- User needs subtitles. The included script does not write SRT or VTT files; the timestamps in the transcript can be used to make them
 - User wants executive summaries of long audio content
 - User asks variations of "transcribe this audio", "convert audio to text", "generate meeting notes from recording"
 - User has audio files in common formats (MP3, WAV, M4A, OGG, FLAC, WEBM)
@@ -128,7 +155,7 @@ Continue? [Y/n]:
 ```
 
 
-This skill is **platform-agnostic** and works in any terminal context where GitHub Copilot CLI is available. It does not depend on specific project configurations or external APIs, following the zero-configuration philosophy.
+Transcription runs on the user’s own computer and needs no API key. The meeting notes step needs the Claude CLI or GitHub Copilot CLI, and sends the transcript text to that service. Without one, you get the transcript only.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

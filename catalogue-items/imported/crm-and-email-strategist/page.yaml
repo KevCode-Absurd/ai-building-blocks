@@ -2,36 +2,67 @@ thinking: high
 thinking_why: Good advice depends on your list, your tools and how you measure.
 new_slug: crm-and-email-strategist
 name: CRM and email strategist
-summary: Ask any email or CRM question. Get expert advice on audits,
-  deliverability, flows, tests and measuring what email earns.
+summary: Ask an email or CRM question and get an audit, a flow plan or a test plan grounded in practitioner notes. Covers deliverability and measurement.
 job: write-emails
 headline: CRM and email strategist
-subhead: "Expert answers to email and CRM questions: how to audit a program, fix
-  deliverability, design flows, run tests and measure what email earns. You get
-  advice grounded in a knowledge wiki, not guesses."
+subhead: Ask about your email program, such as why mail lands in spam, how to build a welcome flow, or how to prove email earns money. You get a direct answer, a ranked action list or a plan, built on a public email marketing wiki.
 explain: |
-  Expert answers to email and CRM questions: how to audit a program, fix deliverability, design flows, run tests and measure what email earns. You get advice grounded in a knowledge wiki, not guesses.
+  Email advice online is mostly generic. This email marketing strategist works from a set of firm opinions: a small engaged list beats a big cold one, open rates are only a rough guide, and every flow needs a goal before you build it.
 
-  You ask your question. The skill routes it to the right pages of the knowledge base and pulls several together when a task needs them. It applies principles on how to think about email, such as who should get what and when, and it returns a set format for each kind of deliverable. A local fallback of core knowledge covers moments when the wiki cannot be reached. It suits marketers who run lists, flows and campaigns.
+  You ask a question. It picks the right pages from an open email and CRM knowledge wiki and reads them together. For an audit, it checks foundations, list health, lifecycle flows, measurement and compliance, and ties every finding to something you told it.
+
+  If your emails land in spam, it checks in a fixed order, cheapest first: scope, login checks, reputation, list quality, then content. It does not lead with "avoid spam words". If it cannot reach the wiki, it uses short notes bundled in the skill. It gives marketing advice, not legal advice.
 when:
-  - Your emails land in spam and you don't know why.
-  - You need to design a welcome flow for new subscribers.
-  - You are unsure whether email drives revenue or only opens.
-  - You want an audit of your current email program.
+  - Your emails land in spam or the Promotions tab and you don't know why.
+  - You need a plan for a welcome flow or an abandoned cart flow in Klaviyo, Mailchimp or another tool.
+  - You can't tell whether email earns revenue or only opens.
+  - You want a full audit of your email program with a ranked fix list.
+not_for:
+  - "A legal ruling on GDPR or CAN-SPAM: ask a lawyer. It gives a plain overview only."
+  - "You want the emails themselves written: use the email sequence writer or the campaign email writer."
+  - "You want a quick check of your setup: use the email setup health checker."
+  - "You want one cold email for sales: use the cold email writer."
+  - You have no sending domain data or bounce messages. It can still advise, but it cannot find the cause of a spam problem.
 you_give:
-  - Your question or goal
-  - Your email platform
-  - Recent metrics (optional)
-  - Current flows (optional)
+  - Your question or goal, in plain words
+  - Your email platform, such as Klaviyo or Mailchimp
+  - Your list size and how people join (optional)
+  - Recent results, such as open, click and spam complaint rates (optional)
+  - Your current flows, and your sending domain checks if you know them (optional)
 you_get:
-  - Direct expert answer
-  - Audit or flow plan
-  - Test ideas
-  - Measurement approach
+  - A direct answer to your question
+  - For an audit, a short summary of the biggest gaps, then findings with a severity, then up to 8 actions
+  - For a flow, a table with timing, the job of each email, a subject line and a call to action
+  - For a test, the idea, the metric, the sample size you need and how long it will take
+  - A plan to measure what email earns, with a control group where it can
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open web pages, so it can read the linked
-    wiki. It also works offline from the notes inside.
+  - Open Claude, ChatGPT or Gemini. Choose a mode that can open web pages if you can.
+  - Paste this skill, then your question. Add your platform and any numbers you have.
+  - Say what you want back, such as an audit, a flow table or a spam diagnosis.
+  - Check each finding against what you know. Ask it to mark guesses where it lacked data.
+  - Do the top action first. Hand copy tasks to a writer item.
+output_sample:
+  input:
+    - Your question or goal
+    - Your email platform
+    - Recent metrics and current flows (optional)
+    - Sending domain checks, such as SPF, DKIM and DMARC results (optional)
+  prerequisites:
+    - Web access helps, so it can read the wiki. Without it, bundled notes are used.
+  output:
+    - name: Executive summary
+      contains: The 3 to 5 biggest gaps in your email program, in plain words.
+    - name: Findings by area
+      contains: What is in place and what is missing across deliverability, list, flows, tests and compliance, with severity.
+    - name: Action list
+      contains: Up to 8 ranked actions, with quick wins marked.
+    - name: Flow or campaign brief
+      contains: Goal, audience, trigger, one job per email, offer, success measure and exit rules.
+    - name: Test plan
+      contains: Hypothesis, metric, sample size per group and how long to run it.
+works_best_with: Claude or ChatGPT with web access, so it can read the wiki. Paste your platform's reports for audits. Google Postmaster Tools data helps spam problems.
+terms:
+  - Deliverability: Whether your emails reach the inbox instead of spam.
+  - SPF, DKIM, DMARC: Three checks that prove an email really came from your domain.
+  - Holdout: A group you leave out of an email, to see what it truly earns.
+  - Lifecycle flow: Automatic emails sent as a person moves from new to loyal customer.

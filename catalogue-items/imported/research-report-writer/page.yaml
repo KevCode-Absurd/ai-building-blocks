@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It plans, checks sources against each other, then writes.
 new_slug: research-report-writer
 name: Research report writer
-summary: Give it a question. Get a conclusion-first report with sources ranked
-  and cross-checked.
+summary: Give it a research question. You get a conclusion-first research report with ranked sources, dates and a clear list of what is still unknown.
 job: think-and-decide
 headline: Research report writer
-subhead: A research report that opens with the conclusion, ranks every source by
-  trust, and states what remains unknown. Readers can see how you got there and
-  how sure you are.
+subhead: A research report that opens with the conclusion, ranks every source by trust, and states what remains unknown. Readers can see how you got there and how sure you are.
 explain: |
   A research report that opens with the conclusion, ranks every source by trust, and states what remains unknown. Readers can see how you got there and how sure you are.
 
@@ -18,6 +15,10 @@ when:
   - You are comparing competitors and want facts, not marketing.
   - Search results disagree and you need to sort them out.
   - You want a report that admits what it does not know.
+not_for:
+  - "You need a quick fact or a single-source check: use a plain web search instead."
+  - "You want an opinion with no sources: just ask your AI directly, since this skill will insist on evidence."
+  - "Your AI cannot search the web: ask a person to gather sources first, or expect every outside fact to be marked unverified."
 you_give:
   - The question to answer
   - Sub-questions (optional)
@@ -29,8 +30,27 @@ you_get:
   - Conclusion-first report
   - List of unknowns and uncertainty
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open a chat in Claude, ChatGPT or Gemini, and turn on web search. The skill needs it to check sources.
+  - Paste the skill text, then write your question in one sentence.
+  - Add any sub-questions, sources you already trust, and who will read the report (optional).
+  - Check the sources list first. Make sure no core claim rests on a forum or social post.
+  - Read the uncertainty section before you share the report. Fix or cut any number that has no source.
+output_sample:
+  input:
+    - Your research question, in one sentence
+    - Up to 3 sub-questions (optional)
+    - Sources you already have (optional)
+    - Who will read it and what they must decide (optional)
+  prerequisites:
+    - An AI that can search the web or open links
+  output:
+    - name: Question and scope
+      contains: The one-sentence question and up to three sub-questions the report will answer.
+    - name: Source tiers
+      contains: Each source sorted as primary, secondary or tertiary, with tertiary ones kept as leads only.
+    - name: Core conclusions
+      contains: Three to five lines at the top that state the answer.
+    - name: Sub-question sections
+      contains: One section per sub-question, in the order conclusion, evidence, sources, with dates on key facts.
+    - name: Uncertainty statement
+      contains: What was not found, which claims rest on one source, and what would change the conclusions.

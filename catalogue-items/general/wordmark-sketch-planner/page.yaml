@@ -1,6 +1,6 @@
 new_slug: wordmark-sketch-planner
 name: "Wordmark sketch planner"
-summary: "Paste a name and its meaning. Get five letter-shape ideas that act it out, with a pick."
+summary: "Plan a wordmark sketch from a name and its meaning. Get five or more letter-shape ideas you can draw, plus a pick and what it costs in reading."
 job: design-work
 thinking: medium
 thinking_why: "It generates and judges shape ideas, which needs taste, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "You have a name and a blank page where the logo should go."
   - "Your current mark is a symbol plus plain text and nothing connects them."
   - "You want a mark that works with no icon, for tiny sizes or print."
+not_for:
+  - "Your logo must work as an icon alone, or a symbol is already fixed: keep the symbol and ask a designer to set the name beside it."
+  - "You have finished logo designs to score: use the Logo strength tester."
+  - "You need a final font file or drawn artwork: take the pick to a designer or a type tool."
 
 you_give:
   - "The name, spelled exactly as it should appear"
@@ -36,6 +40,27 @@ how_to_use:
   - "Paste any limits, such as one colour or a name that must stay lower case."
   - "Draw the pick and two others on paper. Show them to a stranger and ask what the name means."
   - "Take the pick to a designer or a type tool."
+output_sample:
+  input:
+    - The name, spelled exactly as it should appear
+    - What the name means and what it should make people feel
+    - Where the mark will be used (optional)
+    - Your brand file for tone and colour limits (optional)
+  output:
+    - name: Name and meaning
+      contains: The name, its meaning in one line and the feeling it should give.
+    - name: Sketch ideas
+      contains: Five or more ideas, each with a shape move, typeface shape, spacing and what it costs in reading.
+    - name: The pick
+      contains: The idea chosen, why it works with no picture, and what was cut.
+    - name: Small size
+      contains: Whether the pick still reads at thumbnail size, and which letters might merge.
+    - name: Image plan
+      contains: What to sketch first on paper.
+    - name: Missing
+      contains: Facts that would change the pick.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "Reads the meaning"

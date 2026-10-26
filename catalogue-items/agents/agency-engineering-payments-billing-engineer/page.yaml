@@ -1,0 +1,170 @@
+name: Payments & Billing Engineer agent
+summary: "Plan a Stripe, Adyen, Braintree or PayPal build with no double charges, safe webhooks, a small card-data footprint and daily reconciliation."
+headline: Payments & Billing Engineer agent
+subhead: Describe your checkout, your payment provider and what you sell. It maps where money can go wrong and plans the fix. You get payment states, a webhook plan, keys that make retries safe, a failure test list and a daily check that your books match your payouts.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Payment code fails in ways that cost real money. A retry charges a customer
+  twice. A webhook arrives late, or twice, and an order ships twice or never.
+  A payout doesn't match your books and nobody knows why. This agent plans a
+  payments or subscription build that expects those failures. It treats each
+  payment as something that can be retried, repeated and delivered out of order.
+
+
+  It follows the Payments & Billing Engineer profile. Money is stored as whole
+  minor units, such as cents, with a currency code. Orders are fulfilled from
+  the processor's webhook, not from the page the customer lands on. Every
+  action that moves money carries a key that makes a retry safe. Card numbers
+  never touch your servers. Daily, your ledger is checked against the
+  processor's payout report.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its example
+  code and targets describe the intended work. They are not measured results
+  from AI Blocks. Your AI writes the plan and sample code. It can't touch your
+  payment account. A payments expert should review the design before it goes
+  live.
+when:
+  - You are adding Stripe, Adyen, Braintree or PayPal checkout and never want to charge twice.
+  - Orders ship twice or not at all because payment webhooks arrive late or twice.
+  - You sell subscriptions and need rules for trials, upgrades, failed payments and cancels.
+  - Your payout from the processor doesn't match your orders and you can't see why.
+not_for:
+  - You want your store's checkout settings checked, such as Shopify payments. Use the Payments and checkout settings checker.
+  - You want to learn why subscribers cancel. Use the Subscription churn audit.
+  - You need to change live payments, issue refunds or answer a dispute. Do that in your processor's dashboard, with a qualified person for PCI sign-off.
+you_give:
+  - Your payment provider, what you sell, and the currencies you take
+  - Your checkout flow and what happens after payment, including refunds
+  - Your stack, such as language, database and queue
+  - A sample webhook payload, with names, emails and keys removed (optional)
+  - A payout report and your order list for the same dates, if the problem is a mismatch (optional)
+you_get:
+  - A map of the money flow from checkout to payout, with each place it can fail
+  - Payment and subscription states, with every change and what must happen
+  - A webhook plan covering verify, store, dedupe and process
+  - The idempotency key to use for each money action
+  - Card-data scope advice and a failure test list
+  - A daily reconciliation check, and the questions still open
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe your provider, products, currencies and flow. Paste a sample webhook with all personal data and keys removed.
+  - Never paste card numbers, secret API keys or webhook signing secrets into any chat.
+  - Read "Money flow" and "State tables" first. Check them against how your business really works.
+  - Run the failure test list in your provider's test mode before you go live.
+  - Ask a payments or security expert to review the design before it touches real money.
+how_it_works:
+  - title: Map the money flow
+    text: It lists who pays, in which currencies, one-time or recurring, the refund rules and where the payout lands, before any code.
+  - title: Choose the provider surface
+    text: It prefers hosted or tokenized checkout, so card numbers never reach your servers, and explains why if anything heavier is needed.
+  - title: Design the states
+    text: It writes every payment and subscription state with its trigger and side effect. The unhappy paths get the same care as the happy one.
+  - title: Build the webhook backbone
+    text: It checks the signature, saves the verified event, skips repeats by event ID, and only then replies. Handlers can run twice safely.
+  - title: Add idempotency everywhere
+    text: Each charge, refund and plan change gets a key built from the business action, so a retry can't repeat it.
+  - title: Test failures and reconcile
+    text: It lists declines, 3-D Secure, replays and out-of-order events to test, and a daily check of payouts against your ledger.
+output_shape: |-
+  MONEY FLOW
+    <who pays> | <currencies> | <one-time or recurring> | <refund rule> | <payout path>
+    Where it can fail: <step> | <what goes wrong>
+
+  STATE TABLES
+    <state> -> <state> | <trigger> | <what your system must do>
+
+  IDEMPOTENCY KEYS
+    <money action> | <key built from> | <retry behaviour>
+
+  WEBHOOK HANDLING
+    Verify signature | Save event | Skip repeats by event ID | Process | Mark complete | <what happens on a crash>
+
+  CARD DATA SCOPE
+    <integration style> | <PCI validation level> | <why>
+
+  FAILURE TESTS
+    <case, such as decline, 3-D Secure, replay, out of order> | <expected result>
+
+  RECONCILIATION
+    <ledger total> against <processor payout> | <drift rule> | <alert>
+
+  RUNBOOK
+    Refunds | Disputes | Retry schedule | Provider outage
+
+  OPEN QUESTIONS
+    MISSING: <what> | <why it matters>
+output_sample:
+  input:
+    - Your payment provider, what you sell and your currencies
+    - Your checkout flow and what happens after payment
+    - Your stack, such as language, database and queue
+    - A sample webhook payload with personal data removed (optional)
+    - A payout report and order list for the same dates (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - A test mode on your payment provider, to run the failure tests (optional)
+  output:
+    - name: Money flow
+      contains: Each step from checkout to payout, and where it can fail.
+    - name: State tables
+      contains: Every payment and subscription state, what triggers each change and what must happen.
+    - name: Idempotency keys
+      contains: The key for each money action, so a retry can't repeat it.
+    - name: Webhook handling
+      contains: How events are verified, saved, repeated safely and marked complete, including a crash case.
+    - name: Card data scope
+      contains: Which integration style keeps card numbers off your servers, and the PCI level that brings.
+    - name: Failure tests
+      contains: Declines, 3-D Secure, replays and out-of-order events to try in test mode.
+    - name: Reconciliation
+      contains: A daily check of your ledger against the processor's payouts, with the drift rule and alert.
+    - name: Runbook and open questions
+      contains: Refund, dispute and retry steps, and what is still missing.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Provider and region
+    how: Name the provider and the countries you sell in. Strong customer checks and local payment methods differ.
+  - what: Subscription rules
+    how: Give your trial length, retry count and grace period. They set the state table.
+  - what: Evidence of the problem
+    how: Paste a redacted webhook and a payout row. It then starts from facts, not general advice.
+improve:
+  - Keep your approved state tables and key rules, and paste them in when you add a new payment method.
+  - Save each reconciliation break you solve with its cause, so the next check looks for it.
+  - Pair it with the Subscription churn audit to see why paying customers leave.
+terms:
+  - term: Webhook
+    meaning: A message your payment provider sends to your server when something happens, such as a payment succeeding.
+  - term: Idempotency key
+    meaning: A label that lets the provider recognise a repeat request and not do the action twice.
+  - term: Reconciliation
+    meaning: Checking that your records match what the provider paid out.
+  - term: PCI scope
+    meaning: How much of your system must meet card-security rules. Keeping card numbers off your servers keeps it small.
+  - term: 3-D Secure
+    meaning: An extra check, such as a bank app approval, that some card payments need.
+  - term: Dunning
+    meaning: Retrying a failed subscription payment and asking the customer to update their card.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read your webhook samples and payout files alongside your brief.
+    - name: Your provider's test mode
+      why: It lets you try declines, 3-D Secure and replays with no real money.
+  inputs:
+    - A list of the webhook events you receive today.
+    - Your refund and cancellation policy.
+    - Your finance team's month-end process.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Power checks need careful setup per net.
 new_slug: pcb-power-network-checker
 name: PCB power network checker
-summary: Give it a PCB layout. Get voltage drop, current density and rule checks
-  on its power nets.
+summary: Check your PCB power rails for voltage drop, hot spots and via current limits before you build. Pass or fail per rail against your own rules.
 job: build-software
 headline: PCB power network checker
-subhead: Voltage drop and hot spots on your power rails, found before the board
-  is built. Load a layout and see where copper is too thin, where a via carries
-  too much current and which rails miss their voltage margin.
+subhead: Voltage drop and hot spots on your power rails, found before the board is built. Load a layout and see where copper is too thin, where a via carries too much current and which rails miss their voltage margin.
 explain: |
   Voltage drop and hot spots on your power rails, found before the board is built. Load a layout and see where copper is too thin, where a via carries too much current and which rails miss their voltage margin.
 
@@ -18,6 +15,10 @@ when:
   - A reviewer asks for proof that via currents stay under the limit.
   - You have a board with many rails and need all of them checked in one run.
   - You need to find which power nets are on an imported layout.
+not_for:
+  - "You need to import Gerber, ODB++ or Allegro files first: use the matlab-read-pcb-layout skill, then come back here."
+  - "You want S-parameters or EM field results: use the matlab-analyze-em skill."
+  - "You want crosstalk between signal traces: use the matlab-design-pcb-transmission-line skill."
 you_give:
   - An imported PCB layout
   - The power net names or voltages (optional)
@@ -29,8 +30,33 @@ you_get:
   - Current density and via current results
   - Pass or fail against your rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Check your tools first. This skill needs MATLAB with the RF PCB Toolbox, and both are paid licences. Your AI must be able to run MATLAB code.
+  - Import your board first with the matlab-read-pcb-layout skill. A .brd file also needs Cadence extracta installed.
+  - Collect the load current for each rail from a datasheet or your power budget. Do this before the run, because the checks depend on it.
+  - Give your AI this skill, then tell it your source and load locations and your limits for drop, current density and via current.
+  - Ask it to list the power nets first. Confirm the rails and voltages are right, then run one rail or all rails in a batch.
+  - Read the pass or fail table. Fix failing rails in your CAD tool, import the board again and rerun.
+output_sample:
+  input:
+    - Your PCB layout, already imported into MATLAB
+    - Power net names or voltages (optional)
+    - Source, load and sense locations
+    - Your limits for voltage margin, current density and via current
+    - Load current for each rail, from a datasheet or power budget
+  prerequisites:
+    - MATLAB with the RF PCB Toolbox, both paid licences
+    - A PCB layout imported with the matlab-read-pcb-layout skill
+    - Cadence extracta installed, if your file is a .brd file
+  output:
+    - name: Power net list
+      contains: The power rails found on the board by net name, with a guessed nominal voltage for each.
+    - name: Network setup
+      contains: The source, load and sense points you set for each rail, so you can check them before the run.
+    - name: Voltage distribution
+      contains: The DC voltage across each rail and the worst voltage drop.
+    - name: Current distribution
+      contains: Current density in the copper and current through each via.
+    - name: Design rule results
+      contains: Pass or fail for each rail against your limits for current density, voltage margin and via current.
+    - name: Batch summary
+      contains: One row per rail with nominal voltage, minimum and maximum voltage, worst drop, peak current density, maximum via current and pass or fail.

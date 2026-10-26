@@ -2,14 +2,10 @@ thinking: high
 thinking_why: The cost of a mistake is high and rules vary by place.
 new_slug: termination-risk-checker
 name: Termination risk checker
-summary: Describe a planned firing. Get risk flags, severance and release
-  points, and final pay timing. A first check, not legal advice.
+summary: Check a planned firing before you act. Get risk flags, final pay timing, and severance and release points. A first check, not legal advice.
 job: hire-people
 headline: Termination risk checker
-subhead: A pre-decision check on a planned firing that catches the risky cases
-  before the decision is final. You get risk flags, severance and release
-  points, and when final pay is due, so you know whether to proceed or stop and
-  ask for sign-off.
+subhead: Describe a firing you plan to do. Your AI checks it for high-risk flags, such as a recent complaint, leave or age. You get final pay timing, severance and release points, and a clear call on whether to stop and get sign-off.
 explain: |
   A pre-decision check on a planned firing that catches the risky cases before the decision is final. You get risk flags, severance and release points, and when final pay is due, so you know whether to proceed or stop and ask for sign-off.
 
@@ -20,6 +16,10 @@ when:
   - You need to know when final pay is due in their state or country.
   - You are offering severance and want the release points covered.
   - You must decide whether this needs a lawyer before you act.
+not_for:
+  - "You are laying off a group of people: bring in an employment lawyer before any step."
+  - "The employee has already sued, sent a demand letter or filed a claim: hand it to an employment lawyer now."
+  - "You need legal advice you can rely on: ask a licensed employment lawyer, as this is a first check only."
 you_give:
   - Facts about the employee and the reason
   - Location of the employee
@@ -31,11 +31,34 @@ you_get:
   - Final pay timing
   - Severance and release points
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web for current local rules.
-  - Where the skill points to /employment-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open your AI tool. Use one that can search the web, so it can look up current local rules.
+  - Add the skill. Paste the skill text into the chat, or upload the skill folder.
+  - Set up your practice file first if you can. Use the setup-interview folder inside the skill to fill in CLAUDE.md. Without it, the skill works only from what you type.
+  - Describe the firing. Give the role, the reason, the work location, and any recent complaints, leave or reviews. Add planned severance if you have it.
+  - Read the flags and the Go / No-go line first. If a flag fired, do not go ahead without sign-off.
+  - Check every cite in the memo yourself, or have a lawyer check it. Final pay timing is the first thing to confirm.
+output_sample:
+  input:
+    - A description of the planned firing and the reason
+    - The employee's role and work location (state or country)
+    - Recent complaints, leave or reviews
+    - Planned severance (optional)
+    - Any documents on the case (optional)
+  prerequisites:
+    - The setup file named CLAUDE.md, filled in through the setup-interview folder. Without it, the skill works from what you type.
+    - An AI that can search the web, so it can look up local rules. A legal research tool such as Westlaw is paid and optional.
+  output:
+    - name: Bottom line
+      contains: A short answer on whether to proceed, pause or get sign-off before the decision is final.
+    - name: High-risk flags
+      contains: Each risk flag checked one by one, with whether it fired and the facts behind it.
+    - name: Jurisdiction requirements
+      contains: Final pay timing and other local rules for the employee's state, with cites to check.
+    - name: Severance and release
+      contains: Severance points and what a release needs, including any review period the local rules require.
+    - name: Documentation
+      contains: A check of the records that back up the reason for the firing, and what is missing.
+    - name: Go / No-go
+      contains: The escalation call, including a stop line if a flag fired and sign-off is needed.
+    - name: Checklist for term day
+      contains: Steps to follow on the day of the meeting.

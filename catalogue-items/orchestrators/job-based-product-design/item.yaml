@@ -1,28 +1,45 @@
 slug: job-based-product-design
-name: "Design the experience, name and measures around your customer's job"
-summary: "Give it your job spec. Get the key moments, features to keep, a name for the job and measures of progress."
+name: Design the experience, name and measures around your customer's job
+summary: Turn your customer's job into a plan. Get the moments to fix, features to keep or cut, a name for the job and progress measures.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: strategy
 level: advanced
 inputs:
-  - {type: brief, required: true}
-  - {type: question, required: true}
-  - {type: audit_report, required: false}
-  - {type: voc_reviews, required: false}
-  - {type: product_data, required: false}
+  - type: brief
+    required: true
+  - type: question
+    required: true
+  - type: voc_reviews
+    required: false
+  - type: product_data
+    required: false
+  - type: performance_sheet
+    required: false
 outputs:
-  - {type: plan}
-uses: [job-experience-mapper, feature-cutting-planner, job-name-picker, customer-progress-measure-picker]
+  - type: plan
+uses:
+  - job-experience-mapper
+  - feature-cutting-planner
+  - job-name-picker
+  - customer-progress-measure-picker
 steps:
-  - {uses: job-experience-mapper, note: "A moment-by-moment list of obstacles and the experience that clears each one."}
-  - {uses: feature-cutting-planner, note: "Uses the job as the filter for a long list of customer requests."}
-  - {uses: job-name-picker, note: "Names that tell the customer what to hire."}
-  - {uses: customer-progress-measure-picker, note: "Replaces easy numbers with a few that show the job is getting done."}
+  - uses: job-experience-mapper
+    note: A moment-by-moment list of worries and the experience that clears each one, with today's rating from evidence and one owner per moment. Hands the moments file to steps 2, 3 and 4.
+  - uses: feature-cutting-planner
+    note: Uses the job as the filter for the feature wish list, with the moments file from step 1 as extra weight. Hands the keep, cut and merge list to step 3.
+  - uses: job-name-picker
+    note: Names that tell the customer what to hire, tested three ways, with a hire-it-when and a not-for line. Takes the job spec and the moments file. Step 4 does not read the names unless a name changes what a measure should say.
+  - uses: customer-progress-measure-picker
+    note: Replaces easy numbers with a few that show the job is getting done. Uses your own tracked numbers, the job spec and step 1's moments file, not step 3's names. Hands back the final measures.
 origin: rebuilt
 version: 1.0.0
-minds: [clayton-christensen]
+minds:
+  - clayton-christensen
 credits:
-  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan", used: "The order of the steps: map the moments and remove the obstacles, cut features that do not serve the job, name the product after the job, pick the measures that show progress"}
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan
+    used: "The order of the steps: map the moments and remove the obstacles, cut features that do not serve the job, name the product after the job, pick the measures that show progress"
 generated_from: intake/jobs-to-be-done-experience/skeleton.yaml
+needs_mode: manual

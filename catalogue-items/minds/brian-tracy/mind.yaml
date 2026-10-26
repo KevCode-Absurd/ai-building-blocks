@@ -16,6 +16,29 @@ use_cases:
   - "Audit a week of your time to see where it really goes"
   - "Prepare a team for rejection so a 'no' doesn't stop them"
   - "Batch similar tasks so your day has fewer interruptions"
+not_for:
+  - "You need a method for asking buyers about their problems in a set order: use the Neil Rackham mind."
+  - "You need tested one-line sales wording or a short pitch to try on real buyers: use the Elmer Wheeler mind."
+  - "You want to handle a tense negotiation by listening and calm questions: use the Chris Voss mind."
+output_sample:
+  input:
+    - Your goal, written in one line if you have it
+    - Your task list or the work you keep putting off
+    - Your real limits on time, such as meetings or family duties
+    - The sales situation you want help with (optional)
+  output:
+    - name: Goal in one line
+      contains: Your goal restated as a clear written decision, so the rest of the plan hangs off it.
+    - name: Ranked list A to E
+      contains: Your tasks sorted by consequences, with what to do, what to delegate and what to drop.
+    - name: The frog
+      contains: The one important task you are most likely to put off, marked to do first.
+    - name: Early deadline
+      contains: A finish date set a day or more before the real one.
+    - name: Sales call questions
+      contains: Questions to ask a buyer about their biggest problem before you recommend anything, when your job is selling.
+    - name: Tomorrow morning and a month of practice
+      contains: What to do first tomorrow, and a daily routine to repeat until it becomes a habit.
 seats:
   - {seat: "Sales process and goals", asks: "Is the goal written down, and what is the one most important task that moves it today?"}
   - {seat: "Priorities and time", asks: "Is this an A task, or are we doing a C because it's easier?"}

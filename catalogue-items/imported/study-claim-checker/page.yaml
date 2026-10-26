@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It must spot subtle flaws and weigh how strong the evidence is.
 new_slug: study-claim-checker
 name: Study claim checker
-summary: Give it a study or claim. Get its biases, flaws, weak statistics and
-  evidence grade, explained in plain words.
+summary: Check a study claim before you trust it. Give it a paper or claim. You get its biases, weak statistics and an evidence grade in plain words.
 job: research-topics
 headline: Study claim checker
-subhead: A clear verdict on how far to trust a study or a scientific claim, in
-  plain words. You learn what the evidence can and cannot show.
+subhead: A clear verdict on how far to trust a study or a scientific claim, in plain words. You learn what the evidence can and cannot show.
 explain: |
   A clear verdict on how far to trust a study or a scientific claim, in plain words. You learn what the evidence can and cannot show.
 
@@ -17,6 +15,10 @@ when:
   - You are reading a paper for work and need to judge its weak spots.
   - You teach students to question evidence.
   - Someone sends you a health claim with one study behind it.
+not_for:
+  - "You need to write a formal peer review of a paper: use the peer-review skill, or ask a subject expert."
+  - "You want a medical or policy decision: ask a doctor or a qualified expert, since this only grades the evidence."
+  - "You have no study or claim to check, only a topic to explore: start with a plain web search or a librarian."
 you_give:
   - The study, abstract or claim
   - The question you want answered
@@ -28,7 +30,27 @@ you_get:
   - A plain-language verdict
   - Questions to ask the authors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste the study, abstract or claim. Add the question you want answered.
+  - Say how much you know about statistics if you want simpler or more technical wording (optional).
+  - Read the concerns first. Check that each one points to a real place in the paper.
+  - Skip the figure step unless you want a diagram. It needs code running and a paid OpenRouter key, and it sends your prompt to a third party.
+output_sample:
+  input:
+    - The study, abstract or claim you want checked
+    - The question you want answered
+    - Your background with statistics (optional)
+  prerequisites:
+    - An AI chat that can read your pasted text or files
+    - A figure is optional and needs a paid OpenRouter key, so skip it for a normal check
+  output:
+    - name: Summary
+      contains: A short overview of what was checked and which claim or result was looked at.
+    - name: Strengths
+      contains: What the study did well, so the review stays fair.
+    - name: Concerns
+      contains: Biases, confounders and weak statistics, sorted into critical, important and minor issues.
+    - name: Specific recommendations
+      contains: Practical fixes or questions to put to the authors.
+    - name: Overall assessment
+      contains: A plain verdict on evidence strength and what can and cannot be concluded.

@@ -2,17 +2,99 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-audit-integrity
 name: Security audit evidence reviewer
-summary: Share a security audit. Get claims without proof, missing facts and
-  failed checks called out.
+summary: Check a security audit before you trust it. Find findings with no proof, dropped findings and missing coverage, then get a pass or rework verdict.
 job: secure-code
 headline: Security audit evidence reviewer
-subhead: Share a security audit. Get claims without proof, missing facts and
-  failed checks called out. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Give it a security audit report and the code it covers. It checks each finding against the files, flags claims with no proof and findings that were dropped without a reason, and scores the report out of 10. You get a pass or rework verdict and a fix list.
+explain: |
+  A security audit is only worth something if each finding is real and each clean result was earned. Many reports cite lines that do not show the problem. Some quietly drop a finding as "probably fine". Others skip whole areas and say nothing. This security audit evidence reviewer reads the report like a careful second reviewer.
+
+  For each finding it checks the cited file and line, and checks that the path from user input to harm is shown. It looks for findings that were softened or called false positives without a reason. It checks that every area the audit should cover was either examined or marked "none detected" with a reason. Then it scores the report in five categories and gives a verdict.
+
+  It does not hunt for new bugs, and it does not need a scanner. It reads the files you give it. If it cannot open your code, it marks every claim about code as not verified rather than trusting the report.
+when:
+  - A contractor or a tool sent you a security report and you want to know if it holds up.
+  - Your own team wrote an audit and you want a second check before you share it.
+  - You asked an AI to review code for security and you want its answer checked.
+  - A report says "no issues found" and you want to see what was really covered.
+not_for:
+  - "You want to find new problems in your code: use the Code security scanner or the Code security reviewer."
+  - You need a penetration test of a live system. This checks a written audit, not a running app.
+  - "You want to check only your secrets and keys: use the Secrets hygiene checker."
+you_give:
+  - The audit report, or a list of its findings
+  - The code, design or dependency files the audit covers
+  - The scope and your pass rule, for example "no open High findings" (optional)
+you_get:
+  - A verdict of pass, rework or deliver with a flagged gap
+  - A table that marks each finding as verified, unsupported or wrong location
+  - A list of findings the report dropped or softened, with whether the reason holds
+  - A list of areas the audit did not cover
+  - A 1 to 10 score in each quality category
+  - A short list of fixes before you share the report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Paste this skill into Claude, ChatGPT or Gemini. Claude Code can open your files itself. In a chat, paste the report and the cited code excerpts.
+  - Say which files the audit covers and what counts as a pass. If you skip these, it asks up to two questions and then states what it assumed.
+  - Check the verdict and the finding table first. Any finding marked unsupported or wrong location needs the author's answer.
+  - Read the dropped findings list. Ask the author to justify each one, or to put it back.
+  - Fix the gaps, then run the review again. The skill allows up to two rework rounds before it delivers with the remaining gaps stated.
+how_it_works:
+  - title: Set the scope
+    text: It asks at most two questions, then states its assumptions.
+  - title: Check each finding
+    text: It opens the cited lines and checks the path from input to harm is shown.
+  - title: Look for dropped findings
+    text: It tests each "false positive" or lowered severity against a list of weak excuses.
+  - title: Run a second pass
+    text: It checks coverage, evidence and fixes again, and marks clean areas with a reason.
+  - title: Score and report
+    text: It scores five categories, applies the pass rule and lists what to fix.
+output_shape: |
+  Audit Integrity Review
+  Verdict: <PASS / REWORK / FLAG AND DELIVER> - <one line why>
+  Scope and gaps: <what was checked, what could not be>
+
+  Finding check
+  | # | Finding | Evidence cited | What was verified | Status | Gap or fix |
+
+  Dropped or downgraded findings: <each one and whether the reason holds>
+  Missing coverage: <areas not examined>
+  Quality scores: <category: score and one line of proof>
+  Fix before you share: <ordered list>
+output_sample:
+  input:
+    - A security audit report or findings list
+    - The code, design or dependency files it covers
+    - Your scope and pass rule (optional)
+  prerequisites:
+    - An AI that can open your files, or code excerpts pasted into the chat
+  output:
+    - name: Verdict
+      contains: Pass, rework or deliver with a flagged gap, and one line of reasoning.
+    - name: Finding check table
+      contains: Each finding with its cited evidence and a status such as verified or unsupported.
+    - name: Dropped or downgraded findings
+      contains: Findings the report softened or removed, and whether the reason holds up.
+    - name: Missing coverage
+      contains: Flaw types, trust boundaries or dependency files the audit never evaluated.
+    - name: Quality scores
+      contains: A 1 to 10 score for completeness, accuracy, actionability, consistency and evidence.
+    - name: Fix list
+      contains: What to correct before you share the report.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your repository and checks each cited file and line itself.
+    - name: Any good chat AI
+      why: Works if you paste the report and the code lines it cites.
+  inputs:
+    - The tool output or notes behind the report
+    - A list of the dependency files in the project
+    - Your own severity rules
+terms:
+  - term: Taint trace
+    meaning: The path a piece of untrusted input takes from where it enters to where it can do harm.
+  - term: False positive
+    meaning: A reported problem that turns out not to be a real one.
+  - term: Quality gate
+    meaning: A score check a report must pass before it is delivered.

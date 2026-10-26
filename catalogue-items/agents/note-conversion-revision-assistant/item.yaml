@@ -1,33 +1,26 @@
 slug: note-conversion-revision-assistant
 name: Note conversion revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: See how many shares your convertible note turns into, using the lower of the cap price and the discount price. Redone when a term changes.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - check-a-convertible-note-conversion
   - option-pool-top-up-checker
 steps:
   - uses: check-a-convertible-note-conversion
-    note: Run the governing workflow when The note accrual cutoff, interest conversion election, discount term or approved cap price changes.
+    note: Run the governing workflow when the interest cut-off, the interest conversion choice, the discount term or the approved cap price changes. It hands back the converting balance and the cap-versus-discount share count.
   - uses: option-pool-top-up-checker
-    note: If a new option reserve changes the cap-price denominator, check the separate pool top-up and request the independently approved updated cap conversion price before continuing. Do not solve missing SAFE capitalization interactions from the reserve illustration. Otherwise skip the reserve branch.
+    note: If a new option reserve changes the share count behind the cap price, check the pool top-up and ask for the independently approved cap price before going on. Do not solve missing SAFE interactions from the reserve example. Otherwise skip this step.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It gives no legal advice and files nothing. It checks simple-interest notes with a lower-of cap and discount only.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

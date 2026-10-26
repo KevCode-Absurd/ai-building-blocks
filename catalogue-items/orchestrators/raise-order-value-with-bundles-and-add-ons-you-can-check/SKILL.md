@@ -48,7 +48,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Run the new offers for two to four weeks and export orders and profit for the same period.
 
-5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan from the steps before. Reads the exported results against the plan and says keep, change or stop.
+5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan from step 3, the profit check from step 4 and your own test export. Reads the exported results against the plan and says keep, change or stop.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

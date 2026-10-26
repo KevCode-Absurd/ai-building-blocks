@@ -11,6 +11,8 @@ metadata:
 
 # Market Research Reports
 
+**Working in a chat (added by AI Blocks).** If a market size plan or a findings-and-guesses report is in the chat, build the report from it: keep its numbers as they are, carry its fact or guess labels through, and show the range it gives.
+
 ## Purpose
 
 Create decision-focused market reports whose claims, calculations, assumptions,

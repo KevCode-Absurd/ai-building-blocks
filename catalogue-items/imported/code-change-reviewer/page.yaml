@@ -2,33 +2,73 @@ thinking: high
 thinking_why: It runs two reviews at once and compares them.
 new_slug: code-change-reviewer
 name: Code change reviewer
-summary: Point it at a set of changes. Get a review against your coding
-  standards and your spec, side by side.
+summary: Review your code changes two ways, side by side. One checks them against your coding standards. The other checks them against your ticket or spec.
 job: test-and-fix-code
 headline: Code change reviewer
-subhead: "Two reviews of the same set of changes, side by side: does the code
-  follow your team's standards, and does it do what the ticket asked?"
+subhead: Give it a branch, tag or commit to compare against. Your AI reviews the changes since then twice, once against your team's coding standards and once against the ticket or spec, and shows the two reviews under separate headings.
 explain: |
-  Two reviews of the same set of changes, side by side: does the code follow your team's standards, and does it do what the ticket asked? Keeping them apart stops one from muddying the other.
+  This code change reviewer is a code review for a branch or a pull request, built on one idea. A change can pass one check and fail the other. Code can follow every style rule and still build the wrong thing. It can do exactly what the ticket said and still break your conventions.
 
-  You give it a starting point such as a commit, branch or tag. It checks that the starting point is real and that there is a diff. Then it finds the spec, from linked issues, a file you point to or docs in the repo, and gathers every document about how code should be written. Two helper agents review in parallel, one per question, and their findings are merged into one report.
+  So it runs two reviews on the same changes. The standards review checks them against the coding rules written in your repo, plus a short list of common code smells. The spec review checks them against the ticket, an issue or a spec file. The two stay apart, so one cannot hide the other.
+
+  It starts by checking that your starting point is real and that there is a difference to review. Then it finds the spec and the standards files. If there is no spec, it says so and skips that review.
 when:
-  - You finished a branch and want a check before opening a pull request.
+  - You finished a branch and want a check before you open a pull request.
   - You are reviewing a teammate's work against the original ticket.
   - You want to know if a change breaks your written coding standards.
   - You are unsure the code covers everything the spec asked for.
+not_for:
+  - You want one ranked list of risks to post on a pull request. Use the Pull request risk reviewer or the Pull request reviewer.
+  - You want a security review of a diff. Use the Security-focused change reviewer.
+  - You have no written spec and no coding standards. Use the Parallel code reviewer for a general review instead.
 you_give:
-  - A branch, tag or commit to compare against
-  - The ticket or spec (optional)
-  - Your coding standards file (optional)
+  - A branch, tag, commit or main to compare against
+  - The ticket, issue text or spec file (optional, but the spec review needs it)
+  - Your coding standards file, such as CODING_STANDARDS.md or CONTRIBUTING.md (optional)
 you_get:
-  - Standards findings
-  - Spec findings
-  - One merged review
+  - A standards review, with each finding tied to the rule it breaks
+  - A spec review, listing missing, extra and wrong behaviour
+  - A one-line count of findings for each review
   - A note if no spec could be found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files and run subagents.
+  - Open Claude Code, or another AI that can read your repo and run git, and paste in the skill. In a plain chat, paste your diff, your ticket and your standards instead.
+  - Name the point to compare against, such as main or a tag. Share the ticket text or a link to it.
+  - If you do not use the issue tracker setup the skill mentions, paste the ticket text in the chat. Your AI will not guess a spec.
+  - Read the Standards review and the Spec review separately. Fix the worst finding in each.
+  - If your AI cannot run parallel helpers, it runs the two reviews one after the other. They stay separate.
+  - Fix what you agree with, then open the pull request.
+output_sample:
+  input:
+    - A branch, tag or commit to compare against
+    - The ticket or spec text, or its file path (optional)
+    - Your coding standards files (optional)
+  prerequisites:
+    - A git repository with your changes committed
+    - An AI that can run git and read your project, such as Claude Code (optional, you can paste the diff instead)
+  output:
+    - name: Standards review
+      contains: Where the changes break your written standards, with the rule quoted, plus code smells marked as judgement calls.
+    - name: Spec review
+      contains: Requirements missing or partial, behaviour nobody asked for, and requirements that look wrong, each with the spec line.
+    - name: Summary line
+      contains: The number of findings for each review and the worst issue within each, with no single winner.
+    - name: No-spec note
+      contains: A line saying the spec review was skipped, shown only when no spec could be found.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run git, read the standards files and run the two reviews as separate helpers.
+    - name: Claude, ChatGPT or Gemini in a plain chat
+      why: Works if you paste the diff, the ticket and the standards. Reviews then run one after the other.
+  inputs:
+    - A CODING_STANDARDS.md or CONTRIBUTING.md file.
+    - The ticket text, with its acceptance rules.
+terms:
+  - term: Diff
+    meaning: The list of lines added, changed or removed between two points in your code.
+  - term: Spec
+    meaning: The written description of what the change should do, such as a ticket or issue.
+  - term: Code smell
+    meaning: A pattern that is not wrong yet but often leads to trouble, such as the same logic copied twice.
+  - term: Merge base
+    meaning: The last point your branch and the main branch have in common.

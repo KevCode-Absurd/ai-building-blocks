@@ -2,33 +2,83 @@ thinking: low
 thinking_why: It adds and subtracts your numbers.
 new_slug: net-worth-calculator
 name: Net worth calculator
-summary: List your assets and debts. Get your net worth, how it splits, and a
-  monthly view to track.
+summary: List what you own and what you owe. Get your net worth, how it splits between cash and investments, and a monthly view you can repeat.
 job: money-and-investing
 headline: Net worth calculator
-subhead: Your net worth on one page, with a view you can repeat each month. You
-  list what you own and what you owe, and the skill does the sums and shows
-  where the money sits.
+subhead: Type in your assets and debts with today's values. Your AI adds them up, shows your net worth, splits your assets into cash, investments and slow assets, and works out three simple ratios. Add last month's figures to see what changed.
 explain: |
-  Your net worth on one page, with a view you can repeat each month. You list what you own and what you owe, and the skill does the sums and shows where the money sits.
+  This net worth calculator turns a list of what you own and what you owe into one page. You see a net worth figure, where your money sits, and a view you can repeat each month to see if you are moving forward.
 
-  Assets are grouped into three kinds: cash you can reach in days, investments and retirement accounts, and slower assets such as property or a business. It uses today's value, not what you paid, and debts at their current balance. It then works out three ratios: debts compared to assets, the share held as cash, and the share invested. If you have last month's figures, it shows the change and which item moved it most. It is a tracking aid, not financial advice.
+  Assets go into three groups: cash you can reach in days, investments and retirement accounts, and slow assets such as property or a business. It uses today's value, not what you paid, and the balance you owe now, not the original loan. It then works out debts against assets, the share held as cash and the share invested.
+
+  If you give last month's totals, it shows the change and which item moved it most. It works only from your numbers and never guesses a balance. It is a tracking aid. It is not financial advice, and the ratios are rules of thumb that change with your age, income and country.
 when:
   - You have never added up everything you own and owe in one place.
-  - You want a monthly check on whether you are moving forward.
-  - You are deciding whether to pay down debt or save more.
+  - You want a monthly check on whether your net worth is going up.
+  - You are weighing whether to pay down a loan or save more, and want the numbers first.
   - You want to see how much of your wealth is tied up in your home.
+not_for:
+  - You want a plan to clear your debts. Use the Debt payoff planner.
+  - You want to plan a monthly budget. Use the Personal budget builder.
+  - You want to know if you can retire. Use the Retirement savings projector.
+  - You want advice on what to buy or sell. This only adds up your numbers.
 you_give:
-  - Cash, investments, property and other assets with current values
-  - Loans, cards and other debts with balances
+  - Cash and bank balances
+  - Investment and retirement account values today
+  - Property, vehicle and business values today
+  - Every loan, card and other debt with its balance
   - Last period's totals (optional)
+  - Your monthly savings, to work out a milestone date (optional)
 you_get:
-  - Your net worth figure
-  - Assets split into cash, invested and slow
-  - Three health ratios
-  - A change summary since last time
+  - A net worth statement with assets and debts as tables
+  - Assets split into cash, invested and slow, with percentages
+  - Three ratios with a plain note on each
+  - A change since last time and the biggest cause (if you gave last time)
+  - The next round-number milestone
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - List every asset with its value today, and every debt with what you owe now. Include the date and the currency.
+  - Open the skill and paste your list. Add last month's totals if you have them.
+  - Check the totals it shows. Make sure each item is in the right group and none is missing.
+  - Read the three ratios as rough guides. They are not tests you pass or fail.
+  - Save the statement with its date. Repeat next month with the same list so the change is clear.
+  - If a debt is your worry, take the result to the Debt payoff planner.
+output_sample:
+  input:
+    - Your assets and their values today
+    - Your debts and their balances
+    - Last period's totals (optional)
+    - Your monthly savings (optional)
+  prerequisites:
+    - An AI that can run Python makes the sums exact (optional)
+  output:
+    - name: Net worth statement
+      contains: Assets and debts as tables, each with an amount and a share of the total, and your net worth.
+    - name: Asset split
+      contains: How much sits in cash, investments and slow assets such as property.
+    - name: Three ratios
+      contains: Debt to assets, cash share and invested share, each with a plain note.
+    - name: Trend
+      contains: Change in net worth since last time, in amount and percent, and what moved it most.
+    - name: Health notes
+      contains: Short comments on debt, cash for emergencies and how invested you are, with a caveat.
+    - name: Next milestone
+      contains: The next round figure, and months to reach it if you gave a monthly savings amount.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is simple arithmetic and works in any chat.
+    - name: Claude or ChatGPT with code running
+      why: Runs the included script, so every total is exact.
+  inputs:
+    - Last month's statement
+    - A rough value for your home from a recent valuation
+    - A list of loans with their current balances from your lender
+terms:
+  - term: Net worth
+    meaning: What you own minus what you owe.
+  - term: Asset
+    meaning: Something you own that has value, such as cash, shares or a home.
+  - term: Liability
+    meaning: Money you owe, such as a loan or card balance.
+  - term: Liquid
+    meaning: Cash or something you can turn into cash within days.

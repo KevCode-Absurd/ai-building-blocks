@@ -12,11 +12,11 @@ outputs:
   - {type: test_report}
 uses: [saas-starter-builder, stripe-payments-builder, transactional-email-builder, logging-and-alerts-setter, test-suite-writer]
 steps:
-  - {uses: saas-starter-builder, note: "Starts the project with sign-in, a database and a dashboard."}
-  - {uses: stripe-payments-builder, note: "Builds billing on the project from the step before."}
-  - {uses: transactional-email-builder, note: "Adds welcome, receipt and password emails to the same project."}
-  - {uses: logging-and-alerts-setter, note: "Makes the payment and email paths visible once they are in place."}
-  - {uses: test-suite-writer, note: "Tests the finished app, billing and emails included."}
+  - {uses: saas-starter-builder, note: "Starts the project with sign-in, a database and a dashboard. Hands the project folder to the billing step."}
+  - {uses: stripe-payments-builder, note: "Builds billing on the project from the step before. Hands the project with billing added, and a list of what changed, to the email step."}
+  - {uses: transactional-email-builder, note: "Adds welcome, receipt and password emails to the same project. Hands the project with emails added, and a list of what changed, to the alerts step."}
+  - {uses: logging-and-alerts-setter, note: "Makes the payment and email paths visible once they are in place. Hands the project with logs and alerts added to the test step."}
+  - {uses: test-suite-writer, note: "Tests the finished app, billing and emails included. Reads the project as it stands after step 4, plus the list of changes."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/paid-app-starter/skeleton.yaml

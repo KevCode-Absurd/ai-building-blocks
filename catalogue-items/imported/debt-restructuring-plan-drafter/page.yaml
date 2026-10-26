@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It balances creditor claims against cash that may not cover them.
 new_slug: debt-restructuring-plan-drafter
 name: Debt restructuring plan drafter
-summary: Give it a company's debts and cash flow. Get a draft plan with new
-  terms for each creditor.
+summary: Give it your company's debts and cash flow. You get a draft debt restructuring plan with new terms for each creditor and a recovery comparison.
 job: money-and-investing
 headline: Debt restructuring plan drafter
-subhead: Give it the company's debts with rates and due dates, which debt is
-  secured, cash on hand and free cash flow. It works out what the business can
-  afford. You get a capital structure analysis, haircut and extension scenarios,
-  proposed terms for each creditor and a negotiation approach.
+subhead: Give it the company's debts with rates and due dates, which debt is secured, cash on hand and free cash flow. It works out what the business can afford. You get a capital structure analysis, haircut and extension scenarios, proposed terms for each creditor and a negotiation approach.
 explain: |
   A first-draft plan for a company that cannot pay its debts as written. It sets out new terms for each creditor that match what the business can actually afford, so liquidation is not the only road.
 
@@ -19,6 +15,10 @@ when:
   - You must present creditors with a credible alternative to default.
   - An adviser asks you to model a haircut versus a longer maturity.
   - You want to know how much debt the cash flow can carry.
+not_for:
+  - You need legal advice or a filing. Hire a licensed insolvency adviser or lawyer, who can take this draft as a starting point.
+  - Your company can still pay its debts on time. Check your cash flow first with a finance review, or ask your accountant.
+  - You need the exact figures for a court or a creditor vote. Have an accountant check every number first.
 you_give:
   - List of debts with rates and due dates
   - Cash flow and cash balance
@@ -30,7 +30,30 @@ you_get:
   - Proposed terms by creditor
   - Negotiation approach
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Paste your debt list: amounts, rates, due dates and which debts are secured."
+  - Add your cash balance and the free cash flow (cash left after running costs) you can use for debt payments.
+  - Ask for a restructuring proposal. If it needs code to do the maths, use an AI that can run code or ask it to show the sums in the chat.
+  - Check every assumption and figure yourself before you show the plan to any creditor.
+  - Have a licensed insolvency adviser or lawyer review the plan before you use it.
+output_sample:
+  input:
+    - Your list of debts, with amounts, interest rates and due dates
+    - Which debts are secured, and what secures them
+    - Your cash balance and the free cash flow you have for debt payments
+    - Any loan covenants or creditor demands (optional)
+  prerequisites:
+    - An AI that can run code, if you want it to use the skill's calculation script (optional, it can also work the maths in the chat)
+  output:
+    - name: The Situation
+      contains: Your current debts in order of who gets paid first, and the proof that you will default if nothing changes.
+    - name: Haircut calculation
+      contains: How much of the debt must be cut to match what your cash flow can carry.
+    - name: Debt-for-equity swap model
+      contains: What ownership stake creditors would get if they trade debt for shares.
+    - name: Covenant proposal
+      contains: Looser loan conditions to avoid a technical default while the business recovers.
+    - name: The Proposal
+      contains: New terms for each creditor group, plus a balance sheet before and after.
+    - name: Creditor Incentive
+      contains: A comparison of what each creditor recovers in a restructuring versus in liquidation.

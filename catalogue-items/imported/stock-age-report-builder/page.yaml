@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It buckets items by age.
 new_slug: stock-age-report-builder
 name: Stock age report builder
-summary: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90
-  days and over."
+summary: "Build a stock age report for your Shopify store. See units, cost value and carrying cost by how long stock has gone unsold."
 job: run-your-store
 headline: Stock age report builder
-subhead: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90
-  days and over. Bring your Shopify store link and read access. Use the result
-  to plan your next step."
+subhead: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90 days and over. Bring your Shopify store link and read access. Use the result to plan your next step."
 explain: |
   A clear picture of which products have sat on your shelves too long, and what holding them costs. Every item with stock is placed in an age bucket based on when it last sold, such as 0 to 30, 31 to 60, 61 to 90, 91 to 180 and 181 or more days.
 
@@ -18,6 +15,10 @@ when:
   - You are planning a clearance sale and need to know what to include.
   - Your storage fees are rising and you want to see which items cause them.
   - You want a monthly ageing view of inventory for your accountant.
+not_for:
+  - Your store has under a year of order history. Use a plain stock count sheet, since the age of slow items will be a guess.
+  - You have not entered unit costs in Shopify. Fill them in first, or use a plain stock count sheet, because values will show as zero.
+  - You want prices changed on old stock. This report only reads your store, so make the price changes yourself or with another tool.
 you_give:
   - Your Shopify store link and read access
   - Bucket ranges in days (optional)
@@ -29,8 +30,32 @@ you_get:
   - Monthly carrying cost per bucket
   - A ranked list of markdown candidates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run code and sign in to Shopify, such as Claude Code. A plain chat window cannot read your store.
+  - Sign in to your store with read access to orders, products and stock.
+  - Paste in this skill and give your store link. Add your own buckets, carrying cost rate or supplier if you want them.
+  - Let it run. It reads your stock, a year of orders and your unit costs. Nothing in your store is changed.
+  - Check the buckets summary first. Items never sold are aged from the date the product was created.
+  - Open the CSV and sort by age to pick your markdown candidates.
+output_sample:
+  input:
+    - Your Shopify store link
+    - Read access to your products, orders and stock
+    - Your own age buckets in days (optional)
+    - A yearly carrying cost rate, 25 percent if left blank (optional)
+    - One supplier to focus on (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands and read your store, such as Claude Code
+    - A signed-in Shopify session with read access to orders, products and stock
+  output:
+    - name: Session start banner
+      contains: The store name and the time the report began.
+    - name: Step log
+      contains: One line per step showing what was asked of Shopify and how many results came back.
+    - name: Aging buckets summary
+      contains: SKU count, stock value and share of total value for each age bucket, from fresh to dead.
+    - name: Carrying cost totals
+      contains: The monthly and yearly cost of holding your stock, based on the rate you set.
+    - name: Top aging items by value
+      contains: The oldest, highest value products with SKU, age in days, quantity and value.
+    - name: inventory_aging_<date>.csv
+      contains: One row per variant with quantity, unit cost, value, last sold date, age in days, bucket and monthly carrying cost.

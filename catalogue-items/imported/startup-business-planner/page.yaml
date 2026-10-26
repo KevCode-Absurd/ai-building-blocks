@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It runs many linked phases of research and judgment.
 new_slug: startup-business-planner
 name: Startup business planner
-summary: Describe your startup idea. Get market sizing, a business model, brand
-  basics and tests to run first.
+summary: Turn your startup idea into a market scan, lean canvas, brand basics and tests to run first. A startup business planner that tells you go or no-go.
 job: test-an-idea
 headline: Startup business planner
-subhead: "A set of planning documents that takes a startup idea from a rough
-  thought to something tested. Tell it your idea. It moves through phases:
-  intake, brainstorm, research, customer discovery, strategy, brand, product,
-  finance and validation."
+subhead: "A set of planning documents that takes a startup idea from a rough thought to something tested. Tell it your idea. It moves through phases: intake, brainstorm, research, customer discovery, strategy, brand, product, finance and validation."
 explain: |
   A set of planning documents that takes a startup idea from a rough thought to something tested. Tell it your idea. It moves through phases: intake, brainstorm, research, customer discovery, strategy, brand, product, finance and validation.
 
@@ -19,6 +15,10 @@ when:
   - You need a business plan or lean canvas for an investor.
   - You want market size and competitors without weeks of research.
   - You need experiments to test the idea cheaply.
+not_for:
+  - "You already run an established business: use a simple lean canvas on one page, or talk to your accountant."
+  - "You cannot spend 1 to 2 weeks talking to real customers: do the interviews first, then come back with your notes."
+  - "You need numbers an investor will trust today: check every market figure and projection yourself, as they are assumptions until sourced."
 you_give:
   - Your startup idea
   - Your budget and time limits (optional)
@@ -31,8 +31,37 @@ you_get:
   - Financial projections
   - A list of validation experiments
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and save files.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill, or upload its folder if your AI takes files.
+  - Tell your AI your idea. Say if you want fast mode or full mode, and add your budget and time limits.
+  - Answer the intake questions. Share notes from any customer conversations you have had.
+  - Let it run the phases. It works best when your AI can search the web and save files.
+  - Check the go or no-go note after research. Then do the customer interviews it asks for.
+  - Treat all market figures and projections as assumptions. Mark any number you could not source before you show it to an investor.
+output_sample:
+  input:
+    - Your startup idea in a few sentences
+    - Your budget and time limits (optional)
+    - Notes from past customer conversations (optional)
+    - Fast mode or full mode
+  prerequisites:
+    - An AI that can save files and search the web works best
+    - Time for real customer interviews before the plan is final
+  output:
+    - name: brief.md
+      contains: Your idea, goals, limits and any customer conversations, organised in one place.
+    - name: brainstorm.md
+      contains: Several ways your idea could work, so you can pick a direction.
+    - name: market-analysis.md
+      contains: Market size, growth, timing and rules that may affect you, with notes on how sure each claim is.
+    - name: competitor-landscape.md
+      contains: Who else serves your buyers, a comparison table, and where they are weak.
+    - name: target-audience.md
+      contains: Who your buyer is, their biggest pains, the words they use and where to reach them.
+    - name: confidence-dashboard.md
+      contains: Each major claim, its source, how many sources agree and how sure we are.
+    - name: research-gate.md
+      contains: A go or no-go check after research, before you spend more time.
+    - name: README.md
+      contains: A summary of findings, top risks and links to every document.
+    - name: action-plan-30-days.md
+      contains: A week-by-week plan for customer talks, experiments, a simple first version and a final decision.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Legal wording needs care, but the structure is set.
 new_slug: nda-drafter
 name: NDA drafter
-summary: Name the two parties and what is shared. Get a draft confidentiality
-  agreement with the clauses a lawyer should check.
+summary: Draft an NDA between two companies in minutes. Give names, addresses, the information shared and the law. You get a full draft and legal review flags.
 job: check-contracts
 headline: NDA drafter
-subhead: Name the two parties and what is shared. Get a draft confidentiality
-  agreement with the clauses a lawyer should check. Bring both parties' names,
-  addresses and representatives. Use the result to plan your next step.
+subhead: Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check. Bring both parties' names, addresses and representatives. Use the result to plan your next step.
 explain: |
   A first draft of a confidentiality agreement between two named parties, with a plain-language note beside each clause and the risky ones marked for a lawyer.
 
@@ -18,6 +15,10 @@ when:
   - You want a draft to hand to your lawyer instead of starting from nothing.
   - You need a mutual agreement for early talks with another company.
   - You want to understand what each clause means before you sign.
+not_for:
+  - "You need employment terms or a non-compete: ask a lawyer to write them, because this skill only drafts confidentiality agreements."
+  - "The other side sent you their own NDA: read and mark up their version with a lawyer instead of starting a new draft."
+  - "You want a final contract to sign today: have a licensed lawyer review any draft first, since this is a starting point only."
 you_give:
   - Both parties' names, addresses and representatives
   - What kind of information will be shared
@@ -29,7 +30,24 @@ you_get:
   - Clauses flagged for legal review
   - A short list of questions to settle first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool and paste the skill instructions into a chat. No code, files or paid tools are needed.
+  - "Add the required details: both parties' names and addresses, the kinds of information shared, and the governing law."
+  - Add the representatives' names and titles. Say if the NDA is one-way or mutual, because this changes the wording.
+  - Read the summary first, then the full draft. Check every spot marked for legal review.
+  - Send the draft and the notes to a licensed lawyer before anyone signs.
+output_sample:
+  input:
+    - Both parties' names and addresses
+    - Names and titles of each party's representatives
+    - The kinds of information to be shared
+    - The law that governs the agreement, such as a state or country
+    - Whether it is one-way or mutual, and how long it should last (optional)
+  output:
+    - name: "Part 1: Summary"
+      contains: A bullet overview of the parties, the information covered, the length of the agreement and the governing law.
+    - name: "Part 2: Full NDA Document"
+      contains: The full agreement with preamble, definitions, duty of confidence, permitted disclosures, term, return or destruction, remedies and general terms.
+    - name: Legal review flags
+      contains: Marks inside the draft where a lawyer should check wording, such as standard of care, remedies and dispute resolution.
+    - name: "Part 3: Customization Notes"
+      contains: The clauses to review, the choices the parties must make, common changes and next steps for review and signing.

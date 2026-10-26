@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows standard asset rules with some judgment.
 new_slug: fixed-asset-register-keeper
 name: Fixed asset register keeper
-summary: Give it your purchases and disposals. Get what to capitalise, yearly
-  depreciation and impairment checks.
+summary: Decide what to capitalise, build a yearly depreciation schedule and check impairment for your fixed asset register, with journal entries for each asset.
 job: money-and-investing
 headline: Fixed asset register keeper
-subhead: Give it your purchases and disposals. Get what to capitalise, yearly
-  depreciation and impairment checks. Bring list of purchases or disposals with
-  costs and dates. Use the result to plan your next step.
+subhead: Give it your purchases, disposals and your own depreciation rules. It rules on what to capitalise, builds the yearly schedule and checks for impairment. The rules follow IFRS (IAS 16 and IAS 36) and US GAAP (ASC 360), so tell it which one you use. Have a qualified accountant check the result.
 explain: |
   A fixed asset register that stays accurate, with clear rulings on what to capitalise, how much to depreciate each year and when an asset has lost value.
 
@@ -16,21 +13,44 @@ explain: |
 when:
   - You bought equipment and are unsure whether to capitalise or expense it.
   - You need a yearly depreciation schedule for a set of assets.
-  - An asset is idle or damaged and you suspect impairment.
-  - You sold or scrapped an asset and need the gain or loss and entries.
+  - An asset is idle or damaged and you suspect it has lost value.
+  - You sold or scrapped an asset and need the gain or loss and the entries.
+not_for:
+  - "You need tax depreciation or the book-versus-tax gap: use your tax adviser, as this skill covers book accounting only."
+  - "You need to account for a lease or a right-of-use asset: use a lease accountant or a lease accounting tool, as this page does not cover leases."
+  - "You want a final ruling with no review: ask a qualified accountant to check it against your framework and local tax rules."
 you_give:
-  - List of purchases or disposals with costs and dates
-  - Capitalisation threshold and useful life rules
-  - Residual value and depreciation method (optional)
-  - Opening register balances (optional)
+  - Your list of purchases or disposals, with costs and dates
+  - Your capitalisation threshold and useful life rules
+  - Your residual value and depreciation method (optional)
+  - Your opening register balances (optional)
 you_get:
-  - Capitalise or expense ruling with reasons
-  - Depreciation schedule
-  - Impairment check
-  - Journal entries
-  - Register rollforward that ties to the ledger
+  - A capitalise or expense ruling for each item, with reasons
+  - A yearly depreciation schedule
+  - An impairment check for assets with warning signs
+  - Journal entries for each ruling
+  - A register rollforward that ties to the ledger
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini and paste in the full skill text.
+  - Say which framework you use, IFRS or US GAAP, and paste your purchases or disposals with costs and dates.
+  - Paste your capitalisation threshold, useful lives and residual value rules. Add opening balances if you have them.
+  - Use an AI that can run code, so the depreciation and gain or loss figures are worked out by code, not by guess.
+  - Check each ruling and the rollforward against your ledger before you book anything.
+  - Treat the result as a starting point. Ask a qualified accountant to check it against your framework and local tax rules.
+output_sample:
+  input:
+    - Your list of purchases or disposals, with costs and dates
+    - Your capitalisation threshold and useful life rules
+    - Your residual value and depreciation method (optional)
+    - Your opening register balances (optional)
+  prerequisites:
+    - An AI that can run code, to work out the depreciation and gain or loss figures
+  output:
+    - name: Conclusion
+      contains: The capitalise or expense ruling, or the disposal or impairment outcome, with the standard it follows.
+    - name: Computation
+      contains: The depreciation schedule, or the gain or loss on disposal, or the impairment working.
+    - name: Entries
+      contains: Full journal entries for each ruling, ready for your accountant to review.
+    - name: Register Impact
+      contains: How the register rollforward moves, so closing balances tie to the ledger control accounts.

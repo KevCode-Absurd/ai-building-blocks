@@ -1,6 +1,6 @@
 slug: build-a-clear-sponsorship-decision-brief
 name: Build a clear sponsorship decision brief
-summary: Share the source files. Get an audience fit review, cost comparison and a bounded pilot recommendation.
+summary: "Decide whether a sponsorship is worth it. Get a cost comparison, an audience fit review and a small paid pilot with a spend cap and decision date."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,8 +8,10 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
+  - type: brief
+    required: false
   - type: question
     required: false
 outputs:
@@ -22,11 +24,11 @@ uses:
   - decision-checklist-runner
 steps:
   - uses: vendor-comparison-writer
-    note: Normalize the proposal deliverables and costs against available alternatives.
+    note: "Compare the proposal with alternatives on total cost with every fee and what you actually receive. Mark audience facts as seller claim or your data. Pass the total and open questions to step 2."
   - uses: event-marketing-planner
-    note: Use sponsorship evaluation mode to plan a bounded pilot with tracking, caps and a decision date. Label observed responses as observational; do not imply randomized or causal proof.
+    note: "Use sponsorship evaluation mode to plan a small pilot with a spend cap, tracking, a definition of a result and a decision date. Label results as observational, never as proof of cause. Reads step 1's cost comparison and your own goal. Pass the plan to step 3."
   - uses: decision-checklist-runner
-    note: Check the pilot recommendation against the user supplied audience, cost and measurement requirements, marking unknown answers.
+    note: "Run the person's checklist on the pilot plan. Mark each item pass, fail or unknown with the fact behind it, show failed stop items first, and end with go, wait or no."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

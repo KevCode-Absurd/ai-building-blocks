@@ -1,6 +1,6 @@
 slug: prepare-a-survey-findings-briefing
 name: Prepare a survey findings briefing
-summary: Share the source files. Get a checked findings table, sampling caveats and briefing outline.
+summary: Turn survey results into a briefing you can defend. Get a checked findings table, honest sampling caveats and a slide-by-slide briefing outline.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -11,8 +11,6 @@ inputs:
   - type: brief
     required: true
   - type: spreadsheet
-    required: false
-  - type: performance_sheet
     required: false
   - type: document
     required: false

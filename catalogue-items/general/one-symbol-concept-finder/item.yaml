@@ -1,6 +1,6 @@
 slug: one-symbol-concept-finder
 name: "One-symbol concept finder"
-summary: "Describe your poster, cover or video opening. Get one symbol, one feeling and what to leave out."
+summary: "Find the one idea for your poster, cover or video opening. Get a one-line core, one feeling, one symbol and a list of what to leave out."
 category: general
 type: skill
 role: make
@@ -8,7 +8,6 @@ job: strategy
 level: intermediate
 inputs:
   - {type: brief, required: true}
-  - {type: question, required: true}
 outputs:
   - {type: image_plan, required: true}
 origin: rebuilt

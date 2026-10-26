@@ -1,6 +1,6 @@
 new_slug: power-stage-build-planner
 name: "Power build-order planner"
-summary: "Paste your power test and market facts. Get your stage, the powers still open and a first test."
+summary: "Find which lasting edge your market still lets you build. Paste your power test and market facts. You get your stage and a first test."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to judge the stage of a market from thin signs and then choose between powers. A weaker model tends to pick the most famous power instead of the one still open."
@@ -17,6 +17,10 @@ when:
   - You know your edge is thin and want to choose which one to build next.
   - You are about to spend on brand, scale or a platform and want to know if the timing is right.
   - You are choosing a product design and want to know which long-run edges it will allow or rule out.
+not_for:
+  - "You have no market facts and no power result yet: run the Business power tester first, or write a few lines on your business."
+  - "You want to check if your model beats the leader's: use the Counter-positioning finder."
+  - "You want to score the seven powers for your business first: use the Seven powers scorecard builder."
 
 you_give:
   - A power test or scorecard for your business
@@ -34,6 +38,27 @@ how_to_use:
   - Name the choices that would be costly to undo, such as your main supplier or your price model.
   - Run the first test it writes and come back with the result.
   - If the answer is a counter-positioning idea, check it with "Counter-positioning finder" first.
+output_sample:
+  input:
+    - Your power test or scorecard, or a few lines on your business
+    - Market growth, number of rivals and your main rival (optional)
+    - Early choices that are hard to undo (optional)
+    - Your budget and time limit (optional)
+  output:
+    - name: Your stage
+      contains: Starting, taking off or settled, with the signs behind the call and a confidence level.
+    - name: Powers at this stage
+      contains: Each of the seven powers marked open, narrowing or closed, with a reason.
+    - name: Build first
+      contains: The one power to build, why it wins, a first test, a pass line, a check date and a fallback.
+    - name: Early choices that decide the rest
+      contains: Up to three hard-to-undo choices, one line each, showing which powers each helps or closes.
+    - name: Main rival
+      contains: Who your main rival is at this stage and what they would do if your plan worked.
+    - name: Missing
+      contains: Facts not given, including the one that would most change the stage call.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: Finds your stage

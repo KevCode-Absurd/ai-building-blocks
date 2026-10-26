@@ -1,53 +1,64 @@
 new_slug: buying-habit-stack-designer
 name: "Buying habit stack designer"
-summary: "Describe what you sell and the buying you want repeated. Get the rewards, ties, reach and proof that make it a habit."
+summary: "Design a repeat purchase habit: get the cue, real rewards, true brand ties, rival gaps and a chain that makes buyers reach for you again."
 job: plan-strategy
 thinking: high
 thinking_why: "It must judge which forces are real for your product and how they feed each other. That calls for careful, joined-up reasoning."
 
 headline: "Buying habit stack designer"
-subhead: "Describe your product and the buying you want repeated. It names the action and its cue, lists the real rewards, five true ties the brand can earn, where rivals could form a habit, and where use can be made visible. It then links the forces into a chain and runs an honesty check."
+subhead: "Tell it what you sell, who buys it and the buying you want repeated. It names the one action and its cue, grades each reward, finds where a rival could become the habit and links it all in a chain. An honesty check then removes any false proof."
 
 explain: |
-  Some products are bought without a fresh decision each time. That habit is worth more than any single ad, because it repeats. Habits come from a short list of forces, and the best results come when many work together so each helps the next.
+  Some products get bought again with no fresh decision. The buyer just reaches for them. A repeat purchase habit like that is worth more than one clever ad, because it repeats on its own.
 
-  This skill designs the stack. It names the one action to repeat and what triggers it, checks the rewards are real, lists true ties the brand can earn, finds the places a rival could become the habit because you are absent, and picks places where use can be seen. It links the forces into a chain and counts them. It then checks for false claims and for success you have not earned.
+  Habits come from a short list of forces: a cue that sets them off, a reward each time, pleasant ties to the brand, being easy to find wherever a rival could be, and seeing other people use it. One force alone is thin. This skill grades each one as strong, weak or none, then links them so each helps the next. If few rewards are strong, it tells you to fix the product first.
+
+  Unlike a plain "customer loyalty" plan, it hunts for the places where a rival could become the habit because you are absent. It ends with an honesty check that removes ties or proof built on a false claim. The method follows Charlie Munger's account of how consumer brands build habits.
 
 when:
-  - You want customers to buy again without comparing every time.
-  - Your plan has an ad idea but no reason people would repeat the purchase.
-  - You are choosing where to spend to make a product feel like the obvious choice.
+  - You want customers to buy again without comparing options each time.
+  - Your plan has an ad idea but no reason anyone would buy twice.
+  - You sell something used often, such as coffee, razors or a monthly app, and a rival wins the moment of choice.
+  - You must choose where to spend so your product feels like the obvious pick in one moment, such as the mid-afternoon dip.
+
+not_for:
+  - "The purchase is rare, such as a mattress or a wedding dress. There is no repeat to build. Use the Brand reach audit to see where buyers can't think of you or can't buy."
+  - "You don't yet know if anyone wants the product. Test the idea first with the Smallest test picker."
+  - "You need one word or name to own in your market. Use the Ownable word picker."
 
 you_give:
-  - "Your plan, with what you sell, to whom, at what price and where"
-  - The action you want repeated (optional)
-  - What you know about when and where buyers buy now (optional)
+  - "What you sell, who buys it, the price and where it is sold. Paste your plan or a few lines."
+  - The one action you want repeated, such as "reorder on the first of the month" (optional)
+  - When and where buyers buy now, and which rivals they use (optional)
+  - Your budget, if you want the reach map sized to it (optional)
+
 you_get:
-  - The response and its cue
-  - A rewards table marked strong, weak or none
-  - Five true ties and how each is made
+  - The one action to repeat and the cue that sets it off
+  - A rewards table with each reward marked strong, weak or none
+  - Up to five true ties the brand can earn, and how each is made
   - A reach map, a visibility plan and a chain showing how the forces feed each other
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your plan and say the one action you want repeated.
-  - Add what you know about when and where buyers reach for this now.
-  - Read the rewards table first. Fix the product if few are strong.
-  - Take the plan to the "Failure-first plan check".
+  - Open the skill in Claude, ChatGPT or Gemini. If you added it, call it by name. If not, copy it and paste it in.
+  - Paste what you sell, who buys it, the price and where it is sold. Add the one action you want repeated.
+  - Add what you know about when and where buyers reach for this now, and who the rivals are. It needs no files or web access.
+  - Read the rewards table first. If few are strong, fix the product before you build on it.
+  - Check each tie and each piece of proof. Cut any you could not say out loud to a customer.
+  - Take the plan to the Failure-first plan check, then test the cue with a few real buyers.
 
 how_it_works:
   - title: Names the response and the cue
-    text: One action to repeat and what triggers it, such as a time, a place or a feeling.
+    text: One action to repeat and what triggers it, such as a time, a place or a feeling. With no cue given, it proposes two or three to test.
   - title: Checks the rewards
     text: Usefulness, sensory pleasure, lift or calm, and fit for the moment, each marked strong, weak or none.
   - title: Lists true ties
-    text: Five pleasant links the brand can earn honestly, and how each is made.
+    text: Up to five pleasant links the brand can earn honestly, and how each is made. Any tie that needs a false claim is dropped.
   - title: Maps your reach
-    text: Finds where a rival could become the habit because you are not there.
+    text: Lists every place a buyer might reach for something, and finds where a rival could become the habit because you are not there.
   - title: Plans what others can see
-    text: Picks places where use can be visible, and removes any fake proof.
+    text: Picks places where use can be visible, and marks any fake proof for removal.
   - title: Links the forces into a chain
-    text: Shows how each force helps the next, and counts the links.
+    text: Shows how each force helps the next, and counts the links. It only counts forces it could fill in.
   - title: Runs an honesty and envy check
     text: Removes false beliefs and hidden costs, and asks how to deserve the success.
   - title: Checks itself
@@ -61,7 +72,7 @@ output_shape: |
   Usefulness: <what> [STRONG/WEAK/NONE]
   Sensory: ...  Lift or calm: ...  Fit for the moment: ...
 
-  FIVE TRUE TIES
+  TRUE TIES (up to five)
   1. <tie>: made by <how>
 
   REACH MAP
@@ -81,6 +92,29 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - What you sell, who buys it, the price and where it is sold
+    - The one action you want repeated (optional)
+    - When and where buyers buy now, and which rivals they use (optional)
+  output:
+    - name: Response and cue
+      contains: The one action to repeat and the time, place or feeling that sets it off.
+    - name: Rewards table
+      contains: Usefulness, sensory pleasure, lift or calm, and fit for the moment, each marked strong, weak or none.
+    - name: True ties
+      contains: Up to five pleasant links the brand can earn honestly, each with how it is made.
+    - name: Reach map
+      contains: Every place a buyer might reach for something, how well you cover it and where a rival could win.
+    - name: What others can see
+      contains: Places where buying or using shows, and what shows there. Fake proof is marked for removal.
+    - name: The chain
+      contains: How each force feeds the next, with a count of the links.
+    - name: Honesty and fairness check
+      contains: What was removed for false claims or hidden costs, and how to deserve the success.
+    - name: Missing and checks missed
+      contains: Facts that would firm up the design, plus any check the skill could not pass.
 
 tweaks:
   - what: The cue
@@ -125,5 +159,7 @@ terms:
     meaning: The time, place, feeling or sight that sets off the habit.
   - term: Tie
     meaning: A pleasant link between the brand and something people like, earned honestly.
+  - term: Force
+    meaning: One thing that builds a habit, such as a reward, a tie, reach or what others can see.
   - term: Stack
     meaning: Many forces used together so that each one helps the next.

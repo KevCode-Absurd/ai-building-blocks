@@ -61,12 +61,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Pick the buyer and the angle.** Use the skill `ad-angle-planner`. Start from the idea and write the brief that fixes who the ad is for and what it argues.
-2. **Write the satisfying-motion script.** Use the skill `satisfying-motion-ad-script`. Give it the brief from the steps before. Use the brief to write an opening built on one satisfying movement of your product, then the demo.
-3. **Make the reel.** Use the skill `offer-reel-real-product`. Give it the script from the steps before. Build a 10 to 20 second reel from the script and your real product photos.
-4. **Plan the on-screen words.** Use the skill `video-ad-text-overlays`. Give it the script and the video ads from the steps before. Read the reel and the script and place short words clear of the buttons.
-5. **Make the captions.** Use the skill `branded-video-captions`. Give it the video ads and the script from the steps before. Add timed captions to the reel in your brand font and write the subtitle file.
-6. **Check before launch.** Use the skill `pre-launch-ad-checker`. Give it the video ads and the script from the steps before. Check the finished reel before it runs.
+1. **Pick the buyer and the angle.** Use the skill `ad-angle-planner`. Start from the idea and write the brief that fixes who the ad is for and what it argues. Hands step 2 the brief.
+2. **Write the satisfying-motion script.** Use the skill `satisfying-motion-ad-script`. Give it the brief from the steps before. Use the brief to write an opening built on one satisfying movement of your product, then the demo. Hands step 3 the script.
+3. **Make the reel.** Use the skill `offer-reel-real-product`. Give it the script from the steps before. Build a 10 to 20 second reel from the script and your real product photos. Hands step 4 the finished reel.
+4. **Plan the on-screen words.** Use the skill `video-ad-text-overlays`. Give it the script and the video ads from the steps before. Read the reel and the script and place short words clear of the buttons. Hands step 5 an edit plan with the timed words.
+5. **Make the captions.** Use the skill `branded-video-captions`. Give it the video ads, the script and the edit plan from the steps before. Add timed captions to the reel in your brand font, keeping to the edit plan from step 4, and write the subtitle file. Hands step 6 the captioned reel.
+6. **Check before launch.** Use the skill `pre-launch-ad-checker`. Give it the video ads and the script from the steps before. Check the captioned reel before it runs, against the script. Hands you a list of what to fix before launch.
 7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

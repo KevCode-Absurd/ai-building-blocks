@@ -1,6 +1,6 @@
 new_slug: amazon-listing-writer
 name: "Amazon listing writer"
-summary: "Give it product facts and keyword tiers. Get an Amazon title, five benefit bullets and backend keywords."
+summary: "Write an Amazon listing from your product facts: a title with the main phrase first, five benefit bullets and backend keywords, ready to paste."
 job: sell-on-amazon
 thinking: medium
 thinking_why: "It writes copy to a fixed pattern from facts you give it, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You have a product, a keyword list and a listing form open, and need the words.
   - Your listing gets views but few clicks, and you suspect the title or main image.
   - You are about to launch and need the listing set up so it goes live on your chosen day.
+not_for:
+  - "You sell on Etsy: use the Etsy listing SEO scorer, or write the copy for that site with a general listing writer."
+  - "You have no product facts yet: gather what it is, what it does and your proof first, or ask your supplier for the specs."
+  - "You want to pick the keywords: use the Amazon keyword picker first, then bring its tiers here."
 
 you_give:
   - Product facts, benefits and proof you can show
@@ -29,11 +33,30 @@ you_get:
   - A short description, a backend keyword list, and notes on category, price and launch date
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts and the keyword tiers. Add two or three competitor titles.
+  - Open a chat in Claude, ChatGPT or Gemini. Add the skill, or paste it in. It needs no code, files or paid tools.
+  - Paste your product facts and your keyword tiers. Add two or three competitor titles if you have them.
   - Check every fact and number in the draft against your product. Remove anything you cannot prove.
-  - Check your category's current style guide for title length, then paste the copy into the listing form.
-  - Test the money-back bullet. It rests on one seller's belief, not proven results.
+  - Confirm Amazon's current return terms, and make sure the money-back bullet matches your real terms. Test it against a version without it.
+  - Check your category's current style guide for title length, then paste the copy into Seller Central.
+output_sample:
+  input:
+    - Your product facts, benefits and proof you can show
+    - Your keyword tiers, ranked by importance (strongly advised)
+    - Competitor titles and main images (optional)
+    - Your landed cost and planned price (optional)
+  output:
+    - name: TITLE
+      contains: One title with the main search phrase first, then supporting phrases, with its character count.
+    - name: BULLETS
+      contains: Five bullets with the benefit first, then the feature, and a money-back note last marked as a test.
+    - name: DESCRIPTION
+      contains: A short selling paragraph with the main phrases, plus a note on richer A+ content if your brand is registered.
+    - name: BACKEND KEYWORDS
+      contains: Leftover true phrases, common misspellings and synonyms for the hidden search field.
+    - name: LISTING FORM
+      contains: The category to copy, the brand field note, a price check against 3 times landed cost, and a future offer start date.
+    - name: MISSING and CHECKS MISSED
+      contains: Any facts or keyword tiers you left out, and any checks the draft failed.
 
 how_it_works:
   - title: Writes the title

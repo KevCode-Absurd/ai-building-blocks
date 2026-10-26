@@ -1,6 +1,6 @@
 new_slug: small-win-praise-planner
 name: "Small win praise planner"
-summary: "Describe the change you want from someone. Get what counts as a win, the exact praise to give and when."
+summary: "Make a change stick after a hard talk. Get three stages of progress to look for, honest praise for each and when to say it."
 job: lead-people
 thinking: low
 thinking_why: "The steps are fixed. It mostly turns a goal into stages and writes honest, specific lines."
@@ -11,48 +11,56 @@ subhead: "Give it the change you want from someone. It splits the change into st
 explain: |
   After a hard conversation, most managers go quiet until the next mistake. The person sees only the criticism, and every small step in the right direction goes unnoticed. People repeat what gets noticed, and a step that nobody sees tends to fade.
 
-  This skill plans the follow-up. It splits the change into a first sign, a steady habit and the full change. For each stage it writes praise that names the exact thing and what it did for others. Each line has a detail only someone paying attention would know. It picks the setting, plans what to say after a slip, and sets a time to taper off. Praise you do not mean is struck out. It would sound false.
+  This skill plans the praise that follows a talk about change. It splits the change into a first sign, a steady habit and the full change, each one something you could really see. For each stage it writes praise that names the exact thing and what it did for others. It leaves a slot for the detail only you would know, such as a number, a phrase or a time. The idea comes from Dale Carnegie's advice to praise every improvement, and to be specific so it reads as sincere.
+
+  It also picks the setting, plans what to say after a slip and sets a time to taper off. Praise you do not mean is struck out, because it would sound false. The skill never writes praise for something you have not seen.
 
 when:
-  - "You have just asked someone to change and want it to stick."
-  - "A new hire is improving and nobody has told them."
-  - "You notice you only speak up when something goes wrong."
+  - You have just asked someone to change and want it to stick.
+  - A new hire is improving and nobody has told them.
+  - You notice you only speak up when something goes wrong.
+  - Someone slipped back after a good week and you want to respond without scolding.
+
+not_for:
+  - "You are writing a performance review or deciding pay or promotion: use your formal review process. This plans day-to-day praise, not a verdict."
+  - "You want to send one thank-you note now: use the honest appreciation note writer."
+  - "You want a reward plan for the whole team: use the recognition plan designer."
+  - "You have not had the hard talk yet: use the feedback conversation planner first, then come back here for the weeks after."
 
 you_give:
-  - "The change you want, and who from"
-  - "Notes on the person, such as the output of \"Behaviour and fix notes writer\" (optional)"
-  - "How and when you see their work"
+  - "The change you want, and who from, in terms of something you could see"
+  - "Notes on the person, such as the output of the Behaviour and fix notes writer (optional)"
+  - "How and when you see their work, such as a weekly report or a daily meeting (optional)"
   - "Whether they like praise in private or in public (optional)"
 you_get:
   - "Three stages of the change, from first sign to full habit"
-  - "Praise lines for each stage, with the detail to name"
-  - "When and where to say them, and what to do after a slip"
-  - "A date to taper and review"
+  - "Praise lines for each stage, with a slot for the detail you saw"
+  - "When and where to say them, and how to notice each stage"
+  - "A plan for a slip, and what not to say"
+  - "A date to taper off and review"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe the change and how you will see their work."
-  - "Add anything you know about how they like praise."
-  - "Put the check dates in your calendar."
-  - "After the first win, say the line within a day."
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Describe the change in terms you could see. 'Starts the report earlier' works better than 'is more organised'.
+  - Say how you will see their work, and whether they like praise in private or in public.
+  - Put the check dates in your calendar.
+  - When you see a stage, fill in the detail you noticed and say the line within a day.
 
 how_it_works:
-  - title: "Splits the change"
-    text: "Three stages: first sign, steady habit, full change."
-  - title: "Plans how you will notice"
-    text: "Where and when you will see each stage."
-  - title: "Writes the praise"
-    text: "Names the exact thing, its effect and one detail."
-  - title: "Chooses the setting"
-    text: "Private or public, and who is in the room."
-  - title: "Keeps the good name"
-    text: "A line that ties the praise to the quality they are growing."
-  - title: "Plans for a slip"
-    text: "What to say and not say when it slides back."
-  - title: "Tapers"
-    text: "When to move from frequent praise to occasional, and a review date."
-  - title: "Checks the plan"
-    text: "Runs its own checks and names any it missed."
+  - title: Splits the change
+    text: Three stages, first sign, steady habit and full change, each one something you could notice.
+  - title: Plans how you will notice
+    text: Where and when you will see each stage, and how often you will check.
+  - title: Writes the praise
+    text: A line per stage that names the exact thing, what it did and a slot for the detail you saw.
+  - title: Chooses the setting
+    text: Private or public, spoken or written, with no new request in the same breath.
+  - title: Keeps the good name
+    text: A line that ties the praise to a true quality they are growing, used only with fresh evidence.
+  - title: Plans for a slip
+    text: What to say when the old habit returns, and one line you will not say.
+  - title: Tapers and reviews
+    text: A date to move to occasional praise, and what to do if the habit did not hold.
 
 output_shape: |
   THE CHANGE
@@ -86,38 +94,60 @@ output_shape: |
   CHECKS MISSED
   <one line per check missed, or none>
 
+output_sample:
+  input:
+    - "The change you want, and who from"
+    - "How and when you see their work (optional)"
+    - "Notes on the person, such as from the Behaviour and fix notes writer (optional)"
+    - "Whether they like praise in private or in public (optional)"
+  output:
+    - name: "THE CHANGE and THE THREE STAGES"
+      contains: "The change in one line, split into a first sign, a steady habit and the full change."
+    - name: "HOW YOU WILL NOTICE"
+      contains: "Where, when and how often you will check, so you catch each stage."
+    - name: "THE PRAISE"
+      contains: "One line per stage naming the exact thing, with a slot for the detail you saw."
+    - name: "WHERE AND HOW"
+      contains: "Private or public, spoken or written, for each line."
+    - name: "IF THEY SLIP"
+      contains: "What to say when the old habit returns, and what not to say."
+    - name: "TAPER AND REVIEW"
+      contains: "A date to praise less often and what to check then."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Details you have not seen yet, and any check it could not pass."
+
 tweaks:
-  - what: "The change"
-    how: "Be specific about the first sign. \"Starts the report earlier\" is easier to spot than \"is more organised\"."
-  - what: "How they like praise"
-    how: "Say if they dislike public praise. The plan keeps it private."
-  - what: "How often you see their work"
-    how: "A daily view needs a different plan from a monthly one."
-  - what: "The good name"
-    how: "Tell it a true quality you want to name. It builds the lines around it."
+  - what: The change
+    how: Be specific about the first sign. 'Starts the report earlier' is easier to spot than 'is more organised'.
+  - what: How they like praise
+    how: Say if they dislike public praise. The plan keeps it private.
+  - what: How often you see their work
+    how: A daily view needs a different plan from a monthly one.
+  - what: The good name
+    how: Tell it a true quality you want to name. It builds the lines around it.
 
 judge:
-  - "Each praise line names the exact thing, not just \"good job\"."
-  - "Each has a detail only a person paying attention would know."
-  - "You would mean every line."
-  - "The first sign is something you will really notice."
-  - "There is a kind plan for a slip."
+  - Each praise line names the exact thing, not just "good job".
+  - Each has a detail only a person paying attention would know.
+  - You would mean every line.
+  - The first sign is something you will really notice.
+  - There is a kind plan for a slip.
 
 test:
-  - "Use the first line within a day of the first win and watch the reaction."
-  - "Ask a colleague if the lines sound like you."
-  - "Run it twice. The stages should stay close."
-  - "After a month, see whether the behaviour held."
+  - Use the first line within a day of the first win and watch the reaction.
+  - Ask a colleague if the lines sound like you.
+  - Run it twice. The stages should stay close.
+  - After a month, see whether the behaviour held.
 
 improve:
-  - "Add the names of the things you tend to notice, so the details fit."
-  - "Add a short list of private and public ways your team likes to be thanked."
-  - "Save the praise lines that worked, with the person."
-  - "Pair it with \"Recognition plan designer\" for a team-wide plan."
+  - Add the names of the things you tend to notice, so the details fit.
+  - Add a short list of private and public ways your team likes to be thanked.
+  - Save the praise lines that worked, with the person.
+  - Pair it with "Recognition plan designer" for a team-wide plan.
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Writing specific, sincere lines from a short brief is text work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Writing specific, sincere lines from a short brief is text work. No files, web access or paid tools needed."}
     - {name: "Your calendar", why: "Set the checks as repeating reminders so the praise does not lapse."}
   inputs:
     - "A short log of what you noticed each week"
@@ -125,7 +155,9 @@ works_best_with:
     - "Past thanks that landed well"
 
 terms:
-  - term: "Small win"
-    meaning: "A step in the right direction, even before the full change."
-  - term: "Taper"
-    meaning: "To praise less often once the habit holds."
+  - term: Small win
+    meaning: A step in the right direction, even before the full change.
+  - term: Taper
+    meaning: To praise less often once the habit holds.
+  - term: Good name
+    meaning: A true quality you name in someone so they have something to live up to.

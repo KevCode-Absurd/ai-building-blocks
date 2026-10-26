@@ -1,6 +1,6 @@
 new_slug: show-dont-tell-scene-rewriter
 name: "Show-don't-tell scene rewriter"
-summary: "Paste a paragraph that names the feeling. Get it rewritten in short, plain sentences where things carry it."
+summary: "Show, don't tell: paste a paragraph that names the feeling and get it rewritten in short, plain sentences, with every feeling word cut."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It reshapes a paragraph with a few fixed moves and little judgement."
@@ -17,6 +17,10 @@ when:
   - "Your story or customer case reads like a summary of feelings."
   - "A speech or post says \"amazing\" and \"incredible\" and nobody believes it."
   - "You have the facts of a scene but the writing keeps explaining them."
+not_for:
+  - "Your text must stay factual, such as a report, a legal note or a medical text. Use the Plain English editor."
+  - "You want a whole scene drafted from a plan. Use the Page-turner scene drafter."
+  - "You have no facts about what happened. Write down the objects, words and place first."
 
 you_give:
   - "The paragraph that names the feeling"
@@ -52,6 +56,25 @@ how_it_works:
     text: "An action or a short plain line."
   - title: "Reads it aloud"
     text: "Fixes the rhythm, then names any check it missed."
+
+output_sample:
+  input:
+    - "The paragraph that names the feeling"
+    - "Facts about what happened, such as objects, words said and the place (optional)"
+    - "Who is telling it and how formal (optional)"
+  output:
+    - name: "Rewrite"
+      contains: Your paragraph in short, plain sentences, ending on an action or a short line.
+    - name: "What happened, in order"
+      contains: One plain line for each event in the paragraph, with no feeling words.
+    - name: "Feeling words cut"
+      contains: Each feeling word removed, beside the thing that caused it.
+    - name: "The detail"
+      contains: The one exact thing a reader can picture, and where it came from.
+    - name: "Missing"
+      contains: Facts it needs from you, so it never invents an object or a line of speech.
+    - name: "Checks missed"
+      contains: One line for each of the skill's own checks the rewrite failed, or none.
 
 output_shape: |
   REWRITE

@@ -14,6 +14,30 @@ use_cases:
   - Compare staying put with a realistic alternative
   - Prepare a decision record before the result is known
   - Ask a trusted person for useful challenge
+not_for:
+  - "You need legal, medical or financial advice, or a contract sets the process: ask a qualified expert for that part."
+  - "You want help building habits to stick with a long goal: use the Angela Duckworth mind instead."
+  - "You want to check how a person might fool themselves when they judge a choice: ask a trusted person to challenge you, or run the decision past a friend who will disagree."
+output_sample:
+  input:
+    - The choice you face now, and why it matters to you
+    - Your realistic options, such as continue, shrink, pause or stop
+    - What the next step would cost in time, money or effort
+    - The people affected if you change course
+    - Notes or messages from the time of an earlier decision (optional)
+  output:
+    - name: Choice set
+      contains: The options open to you now, and the purpose each one serves.
+    - name: Evidence record
+      contains: What you knew then, what you assumed, and what you only learned later.
+    - name: Forward-looking comparison
+      contains: Future costs and benefits of each option, with past effort kept apart from what still affects others.
+    - name: Test brief
+      contains: A small check of the hardest unknown, with a limit on time or cost and how to read the result.
+    - name: Continuation and stopping conditions
+      contains: A review date, signs you can observe, and what you will do if one appears.
+    - name: Decision record and review request
+      contains: A short note of your reasons and doubts, plus a focused question for a trusted person.
 seats:
   - seat: Decision quality and a sensible exit
     asks: Knowing what you know now, is the next investment worthwhile, and what would make you stop?

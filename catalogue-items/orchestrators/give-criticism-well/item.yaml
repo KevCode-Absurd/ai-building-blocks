@@ -15,7 +15,7 @@ steps:
   - {uses: behaviour-and-fix-notes-writer, note: "One watchable behaviour, the result you want, what is good in their work and the smallest fix."}
   - {uses: hard-feedback-message-writer, note: "A short message with true praise, one change asked for, and a way out that keeps their pride."}
   - {uses: order-to-request-rewriter, note: "Every order in the draft becomes a question or a request with a gain for them."}
-  - {uses: small-win-praise-planner, note: "A plan to notice and praise each step in the right direction, in specific words."}
+  - {uses: small-win-praise-planner, note: "A plan to notice and praise each step in the right direction, in specific words. Uses the notes from step 1 and what you saw after the talk, not the message draft."}
 origin: rebuilt
 version: 1.0.0
 minds: [dale-carnegie, abraham-lincoln]

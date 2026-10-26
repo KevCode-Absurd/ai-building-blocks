@@ -69,14 +69,14 @@ Hand it back in exactly this layout, with these labels in this order:
 
 ```
 AREA RESULTS
-payment and checkout: <pass | fail>  <gaps>
-product listings:     <pass | fail>  <gaps>
-branding:             <pass | fail>  <gaps>
-shipping:             <pass | fail>  <gaps>
-returns:              <pass | fail>  <gaps>
-legal:                <pass | fail>  <gaps>
-contact:              <pass | fail>  <gaps>
-site:                 <pass | fail>  <gaps>
+payment and checkout: <pass | fail | not run>  <gaps>
+product listings:     <pass | fail | not run>  <gaps>
+branding:             <pass | fail | not run>  <gaps>
+shipping:             <pass | fail | not run>  <gaps>
+returns:              <pass | fail | not run>  <gaps>
+legal:                <pass | fail | not run>  <gaps>
+contact:              <pass | fail | not run>  <gaps>
+site:                 <pass | fail | not run>  <gaps>
 
 FIX LIST (by risk)
 HIGH   <gap | where | fix>
@@ -84,10 +84,13 @@ MEDIUM <gap | where | fix>
 LOW    <gap | where | fix>
 
 SCHEDULE  weekly: <...>  monthly: <...>  on each promotion: <...>  once: <...>
-SCORE  <n>/100 (100 - 20 x <High> - 10 x <Medium> - 5 x <Low> = <n>)
-NOT RUN  <check | what is needed>
+SCORE  <n>/100 (100 - 20 x <High> - 10 x <Medium> - 5 x <Low> = <n>), on the checks run
+NOT RUN  <check | what is needed, or "none">
 MISSING: <what would sharpen it>
+NOTE  Google does not name the exact reason for a suspension. This is a best-practice check, not a guarantee.
 ```
+
+Use `pass`, `fail` or `not run` for each area. NOT RUN is also the checks-missed line: list only checks you could not run, or write "none". Always end with the NOTE line, even when nothing could be checked.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

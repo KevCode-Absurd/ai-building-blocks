@@ -1,6 +1,6 @@
 new_slug: reply-getting-fix-writer
 name: "Reply-getting fix writer"
-summary: "Paste your ad and its diagnosis. Get a fixed version with a stronger headline, a clear offer and an easy reply."
+summary: "Fix a weak ad: paste it with its diagnosis and get a new version that changes only the top three causes, with a change list to test."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It rewrites to a diagnosis and must resist changing more than the causes call for."
@@ -17,6 +17,10 @@ when:
   - You have a diagnosis of a weak ad and want a fixed version.
   - Your rewrites change everything and you cannot tell what helped.
   - Your offer or reply path is hard to find.
+not_for:
+  - You have no diagnosis yet. Run the Ad pull diagnoser first, then come back.
+  - You want a new ad from scratch. Use the Fact-based ad copy writer.
+  - You want to compare the old and new ad. Plan that with the Split-run test planner.
 
 you_give:
   - The ad to fix
@@ -49,6 +53,28 @@ how_it_works:
     text: Replaces vague claims with facts and figures you gave it, or marks them missing.
   - title: Lists the changes
     text: Shows each change beside its cause and gives the fixed version a new key.
+
+output_sample:
+  input:
+    - The ad you want fixed, in full
+    - The diagnosis, with its ranked causes
+    - Your offer, price and any real deadline (optional)
+    - A pattern from your best ads (optional)
+  prerequisites:
+    - A diagnosis, from the Ad pull diagnoser or written by you
+  output:
+    - name: "Fixed ad"
+      contains: The whole ad again, with only the parts the top three causes called for changed.
+    - name: "Changes"
+      contains: Each change beside the cause it answers.
+    - name: "Kept"
+      contains: What was fine and was left as it was.
+    - name: "Not touched"
+      contains: Causes outside the top three, with the reason each was left.
+    - name: "Key"
+      contains: The old ad's code and a new code for the fixed version.
+    - name: "Missing and checks missed"
+      contains: Facts you still need to give, and any check the fix could not meet.
 
 output_shape: |
   FIXED AD

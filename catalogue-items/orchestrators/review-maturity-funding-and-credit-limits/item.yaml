@@ -1,15 +1,13 @@
 slug: review-maturity-funding-and-credit-limits
 name: Review maturity funding and credit limits
-summary: A maturity funding ladder and connected exposure exception pack
+summary: Line up debt maturities against cash and confirmed funding, then check credit exposure against your limit. Get a shortfall ladder and exceptions.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -40,3 +38,4 @@ credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+needs_mode: manual

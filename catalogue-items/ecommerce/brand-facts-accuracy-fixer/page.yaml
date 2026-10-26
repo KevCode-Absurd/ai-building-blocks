@@ -1,56 +1,66 @@
 new_slug: brand-facts-accuracy-fixer
 name: "Brand facts accuracy fixer"
-summary: "Paste what AI says about your store. Get wrong facts, the fix for each and a fact accuracy score out of 100."
+summary: "Check what AI says about your store against your true facts. Get each wrong claim, the page behind it, the fix and an accuracy score."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It compares what AI says with your true facts, claim by claim. A mid-level model is enough. Use a stronger one if there are many claims."
 
 headline: "Brand facts accuracy fixer"
-subhead: Paste what AI assistants say about your store, and your true facts and policies. It finds each wrong or stale claim, shows the source AI used, and gives the fix. You get a fact table, the checklist AI uses in your category, an update list and a fact accuracy score out of 100.
+subhead: "Paste what AI assistants say about your store, and your true facts and policies. It checks each claim and marks it right, wrong, stale or unverified. It names the page AI likely used and gives the fix. You get a fact table, an update list, FAQ and policy text, and a fact accuracy score out of 100."
 
 explain: |
-  AI assistants repeat what they find. If an old review site says your delivery takes two weeks, an assistant may say it to every shopper who asks. A vague true claim loses to a specific wrong one. Shoppers act on those answers.
+  AI assistants repeat what they find. If an old review site says your delivery takes two weeks, an assistant may tell that to every shopper who asks. A vague true claim can lose to a specific wrong one. This AI store facts checker finds those wrong facts and tells you where to fix them.
 
-  This skill starts with the answers AI gives, with web search on and off. It compares each claim with your facts and finds where the AI got it. Then it lists the fixes: the correct fact in plain words on your site, the same fact on your channels and third-party pages, consistent listings, and review profiles that are current. Fixes are slow, often months, because older training data persists. If the product is poor, listing work will not change how people feel about it.
+  It starts with the answers AI gives about your store, with web search on and off. It compares each claim with your facts, one row per claim. It reads the sources AI shows, so you know which pages to correct first. Then it lists the fixes: the true fact in plain words on your site, the same fact on your channels and other sites, matching listings and current review profiles.
+
+  Fixes are slow, often months, because older training data persists. If the product is poor, listing work will not change how people feel about it.
 
 when:
-  - An AI assistant gave a shopper the wrong price, delivery time, returns rule or product detail about you.
+  - An AI assistant gave a shopper the wrong price, delivery time, returns rule or product detail about your store.
   - You changed a policy or product and want AI to stop repeating the old version.
-  - You want to know what AI looks for when it recommends a store like yours.
+  - You want to know what AI says it looks for when it recommends a store like yours.
+  - A review site or old blog post has wrong facts about you and you want to find out if AI is repeating them.
+
+not_for:
+  - "You want to know how often AI names your store. Use the AI search visibility tester."
+  - "You want to change your product pages so AI can read them. Use the Product page editor for AI search."
+  - "You have no written facts about your store yet. Build your brand brain first with the Website brand brain builder."
+  - "You hope listing work will fix a poor product or bad reviews. It will not. Fix the product first."
 
 you_give:
-  - AI answers about your store, with web search on and with it off
-  - Your true facts and policies
+  - What AI says about your store, with web search on and with it off, from each assistant you use
+  - Your true facts and policies, with exact numbers and dates
   - A list of your profiles and listings (optional)
 
 you_get:
-  - "A fact table: claim, correct fact, source AI used, fix"
+  - "A fact table: claim, right or wrong, your true fact, the source AI used, the fix"
   - The checklist AI says it uses in your category
   - An update list for listings and review profiles
-  - FAQ and policy text for your site, and a fact accuracy score out of 100
+  - Draft FAQ and policy text for your site
+  - A fact accuracy score out of 100, with the sum shown
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - "Ask each assistant: 'What do you know about my store name?' and 'What do you look for when recommending a store like mine?'. Do it with web search on and off. Paste the answers."
-  - "Paste your true facts: delivery times, returns, guarantee, prices, materials, sizes."
-  - Fix the Stop items first, then update your listings and review profiles.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code or files.
+  - "Ask each assistant two questions. First: 'What do you know about my store name?'. Second: 'What do you look for when recommending a store like mine?'. Do each with web search on and off. Paste the answers."
+  - "Paste your true facts: delivery times, returns, guarantee, prices, materials, sizes. Use exact numbers."
+  - Fix the Stop items first. Those are price, returns, delivery, safety and ingredients. Then update your listings and review profiles.
   - Ask the same questions a month later and run the skill again.
 
 how_it_works:
   - title: Collects the answers
     text: Two questions per assistant, with web search on and off. Free versions often answer from memory.
   - title: Splits the claims
-    text: One row per claim AI makes about your store.
+    text: One row per claim AI makes about your store, in the AI's own words.
   - title: Checks each claim
-    text: Compares it with your true facts and marks it right, wrong, stale or unverifiable.
+    text: It compares the claim with your true facts and marks it right, wrong, stale or unverified. Price, returns, delivery, safety and ingredients are marked Stop.
   - title: Finds the source
-    text: Reads the sources AI shows. That is the hit list of pages to correct.
+    text: It reads the sources AI shows. That is the list of pages to correct.
   - title: Writes the fix
-    text: The correct fact in plain words with numbers and dates, on your FAQ and policy pages.
+    text: The true fact in plain words with numbers and dates, for your FAQ and policy pages.
   - title: Spreads the fix
-    text: The same fact on your channels, third-party pages and short founder videos.
+    text: The same fact on your channels, other sites and short founder videos.
   - title: Fixes listings and reviews
-    text: Consistent name, address and phone, current profile text, replies to bad reviews and honest review requests.
+    text: Matching name, address and phone, current profile text, replies to bad reviews and honest review requests.
   - title: Scores accuracy
     text: Right claims out of claims checked, with the sum.
 
@@ -58,8 +68,8 @@ output_shape: |
   CLAIMS CHECKED  <n> | ASSISTANTS  <list> | SEARCH ON / OFF
 
   FACT TABLE
-  <claim> | <assistant, search on or off> | <RIGHT / WRONG / STALE / UNVERIFIED> | <severity>
-    your fact: <the true fact> | source AI used: <page>
+  <claim, quoted> | <assistant, search on or off> | <RIGHT / WRONG / STALE / UNVERIFIED> | <Stop / Normal>
+    your fact: <the true fact> | source AI used: <page, or not shown>
     fix: <where to publish the true fact, in plain words>
 
   WHAT AI LOOKS FOR IN YOUR CATEGORY
@@ -73,8 +83,30 @@ output_shape: |
 
   SCORE  <n>/100 (<right claims> of <claims checked> x 100 = <n>)
 
-  RECHECK  monthly, same questions
+  FIXES TAKE MONTHS: older training data persists, so expect slow change. Recheck monthly with the same questions.
   MISSING: <what was not given>
+
+output_sample:
+  input:
+    - What each AI assistant says about your store, with web search on and off
+    - Your true facts and policies, with exact numbers and dates
+    - A list of your profiles and listings (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional)
+    - An account with each assistant you want to check
+  output:
+    - name: Fact table
+      contains: One row per claim, quoted. Each is marked right, wrong, stale or unverified, with your true fact, the page AI likely used and the fix.
+    - name: What AI looks for in your category
+      contains: The checklist an assistant gives when asked what it looks for. Use it to build pages and profiles.
+    - name: Update list
+      contains: Each listing or review profile and what to change, such as name, address and phone or old profile text.
+    - name: FAQ and policy text
+      contains: Draft lines with numbers and dates, ready to check and publish on your site.
+    - name: Score
+      contains: Your fact accuracy out of 100, with the sum shown. Unverified claims are listed and left out.
+    - name: Fixes take months note
+      contains: A fixed reminder that older data lingers, so change is slow. Recheck each month with the same questions.
 
 tweaks:
   - what: Search on and off
@@ -103,7 +135,7 @@ improve:
   - Add your true facts to the skill file as a standing list, so each check uses the same source.
   - Add your policy dates. Numbers and dates beat vague claims.
   - Add your review rules, such as asking all buyers for honest reviews with no reward tied to a rating.
-  - Pair it with the AI recommendation panel runner and the AI-ready product page editor.
+  - Pair it with the AI search visibility tester and the Product page editor for AI search.
 
 works_best_with:
   tools:
@@ -120,5 +152,7 @@ terms:
     meaning: One fact an AI states about your store, such as a delivery time or a price.
   - term: Stale claim
     meaning: A fact that was once true and is not now.
+  - term: Stop claim
+    meaning: A claim about price, returns, delivery, safety or ingredients. These go first.
   - term: NAP
     meaning: Name, address and phone. Keep them the same in every listing.

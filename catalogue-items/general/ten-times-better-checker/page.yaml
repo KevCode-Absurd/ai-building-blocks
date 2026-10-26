@@ -1,6 +1,6 @@
 new_slug: ten-times-better-checker
 name: "Ten-times-better checker"
-summary: "Paste your product and what buyers use today. Get a measured gap to the closest substitute and a ten-times verdict."
+summary: "Find out if your product is ten times better than what buyers use now. Get the gap after switching cost and a clear verdict."
 job: test-an-idea
 thinking: medium
 thinking_why: "It needs a measured comparison and a sum for switching cost, but the order is fixed."
@@ -17,6 +17,10 @@ when:
   - "You think your product is better and want to know if it is enough."
   - "Your pitch is about being slightly cheaper or faster."
   - "You are deciding which buyer to start with."
+not_for:
+  - "You have no buyers to talk to yet: speak to a few likely buyers first, then come back with what they say."
+  - "Your product has no cost a buyer can measure, like time, money or mistakes: ask buyers what they would pay to fix."
+  - "You want to know if the gap lasts for years: check that after this step, once the gap holds."
 
 you_give:
   - "What your product does and for whom"
@@ -33,6 +37,28 @@ how_to_use:
   - "Paste your product and what buyers use today. Mark any number you are guessing."
   - "Add real figures from tests or customers if you have them. Say if a number came from a demo."
   - "If the verdict is marginal, take the narrower buyer it suggests to your next conversation."
+output_sample:
+  input:
+    - What your product does and who it is for
+    - What buyers use today (optional, but best)
+    - Your numbers on time, cost or errors, from tests or customers (optional)
+  output:
+    - name: The substitute
+      contains: What the buyer would do if your product did not exist.
+    - name: The measure
+      contains: The one thing the buyer cares about, with both numbers and where each came from.
+    - name: Net gap
+      contains: The gain left after setup, retraining and risk, over one month, one quarter and one year.
+    - name: Verdict
+      contains: Ten times, close, marginal or new, with the reason.
+    - name: What could widen it
+      contains: Whether technology, network, scale or brand could make the gap harder to close.
+    - name: What to do
+      contains: One move to make next, such as a narrower buyer if the gap is marginal.
+    - name: Missing
+      contains: The numbers that would firm up the result.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: "Names the substitute"

@@ -1,6 +1,6 @@
 name: "Creator filming brief writer"
 new_slug: creator-filming-brief-writer
-summary: "Paste your approved script. Get a creator filming brief, shoot order and file-naming pattern."
+summary: "Turn your approved script into a creator filming brief with talking points, a shoot order and one file-naming pattern. Ready to send."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -14,9 +14,14 @@ explain: |
   This skill gives them talking points with blanks for their own true details, and tells them to drop a line if they have nothing true to put there. It sets a run order for the shoot: a quick test clip, the talk takes, silent product shots, the openings last once they're warmed up, and a few seconds of room sound for the edit. Rules are split into must and maybe, so the creator knows what's fixed and where they're free. Anything you haven't confirmed, like the deadline or how the video will be used, sits at the top for you to sort before it goes out.
 
 when:
-  - A customer, creator or founder is about to film a video from a script you've approved.
-  - Past creator videos came back unusable (wrong length, bad light, no product close-ups).
-  - You want to be sure nobody is asked to claim a result they didn't have.
+  - A customer or creator is about to film a video from a script you have approved.
+  - A founder will film in their own words and needs talking points, not lines.
+  - Past creator videos came back with the wrong length, bad light or no product close-ups.
+  - You want to be sure nobody is asked to claim a result they did not have.
+not_for:
+  - "You want a customer to speak freely with no script: ask them for a plain recorded testimonial instead."
+  - "You have no approved script yet: write the script first, then come back for the brief."
+  - "You need a signed deal for paid ads: agree usage rights in writing with the creator, since this brief does not grant them."
 
 you_give:
   - The approved script (the openings chosen, talking points, the proof moment, facts allowed, the hand-off line)
@@ -37,6 +42,26 @@ how_to_use:
   - Add your never-say list. If you don't have one, write the claims you can't make.
   - Fix every [CONFIRM] at the top before you send the brief.
   - Send it to the creator as it is. The skill doesn't send or post anything.
+output_sample:
+  input:
+    - Your approved script, with openings, talking points and the hand-off line
+    - "What you need delivered: length, shape, deadline and how it will be used"
+    - How the product is opened, held and used
+    - Words and claims the creator must never say
+    - Your brand voice (optional)
+  output:
+    - name: Before you start
+      contains: Deliverables, deadline, how the video will be used, and every item marked [CONFIRM] for you to clear first.
+    - name: The idea
+      contains: Two or three sentences on who talks, what happens with the product, and why it should look like their own post.
+    - name: Run order
+      contains: Test clip, talk takes with blanks, silent hands takes, approved openings, then five seconds of room sound.
+    - name: Must and maybe
+      contains: Fixed rules on light, sound, product and claims, beside the choices the creator keeps.
+    - name: Sending
+      contains: One file-naming pattern and a note on the favourite opening, changed lines and missed shots.
+    - name: Checks missed
+      contains: One line for each of the skill's own checks the brief still fails, or none.
 
 how_it_works:
   - title: Starts with the terms

@@ -1,6 +1,6 @@
 new_slug: big-idea-and-mechanism-builder
 name: "Big idea and mechanism builder"
-summary: "Give it your product and buyer. Get a big idea, root cause, named mechanism and why-now line."
+summary: "Build a big idea for your store page: give it product facts and reviews, get a root cause, a named mechanism and the claims you must prove."
 job: write-ad-copy
 thinking: high
 thinking_why: "It has to connect product facts, buyer pain and market in a way that stays true, and a stronger model holds all three together."
@@ -17,6 +17,10 @@ when:
   - You are about to write a long product page, an ad campaign or an advertorial and don't yet know what idea it stands on.
   - Your product looks like every rival's and you need a true reason it is different.
   - Your page lists features but visitors don't buy, and reviews show they have tried other fixes first.
+not_for:
+  - "You only need a name for how your product works: use the Mechanism namer."
+  - "Your product has no real difference and you have no customer words: gather reviews first, or talk to a few buyers."
+  - "You already have your idea and need to pick which angle to test first: use the Advertorial angle and format picker."
 
 you_give:
   - Product facts (parts or materials, form, how it is used)
@@ -36,6 +40,27 @@ how_to_use:
   - Add the rivals and what each claims, and any proof you hold.
   - Read the claims list first. Get proof for each claim, or cut it.
   - Take the mechanism to the Mechanism namer if you want more name options, then use the idea in your page, ads and advertorial.
+output_sample:
+  input:
+    - Your product facts (parts, form, how it is used)
+    - Customer words from reviews or tickets
+    - Three to five rival products and their claims (optional)
+    - Proof you hold, such as test results and review counts (optional)
+  output:
+    - name: Pain points (ranked)
+      contains: Each pain scored on urgency, reach and closeness to your product, with the one to lead with, plus an optional side idea.
+    - name: Big idea
+      contains: One line that joins product, market and buyer, with what only your product has and a true reason for each part.
+    - name: Root cause
+      contains: A picture the buyer already holds for why the problem keeps coming back, with a check that the verb fits.
+    - name: Mechanism
+      contains: A short name, how it works in two lines, the specs behind it, and how it maps to the root cause.
+    - name: Why now
+      contains: One true line on what changed in the world, or a MISSING note if nothing true applies.
+    - name: Seven levers and market stage
+      contains: Which levers are present, and whether buyers are clueless, curious or in a crowded market.
+    - name: Claims to prove
+      contains: Every fact, result, health or money claim, the proof needed, and whether you hold it or it is missing.
 
 how_it_works:
   - title: Finds what is unique

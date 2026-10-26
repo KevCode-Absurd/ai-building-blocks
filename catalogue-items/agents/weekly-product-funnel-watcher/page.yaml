@@ -1,6 +1,6 @@
 new_slug: weekly-product-funnel-watcher
 name: Weekly product funnel watcher
-summary: Give it your product events each week. Get the step that lost the most, the cause and one experiment to run.
+summary: Find the step in your product funnel that lost the most each week, the likely cause and one experiment to run. Give it your weekly events.
 job: build-product
 thinking: high
 thinking_why: It tells a real move from a normal swing, reads groups against a changes log and reasons to a cause. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your product tracks events and the weekly review is a dashboard and a debate.
   - A rate moved and nobody can say which of last week's three changes did it.
   - You report numbers that only go up and want the ones that show cause.
+not_for:
+  - "Your product has no event tracking yet: set up a simple event list first, or review a plain dashboard with your team."
+  - "Fewer than about 200 users reach the funnel each week: read two weeks together by hand, since one week swings too much."
+  - "An experiment just ended and you want the full result: use the Experiment readout desk."
 you_give:
   - Last week's event log or per-step counts with user id, event, time and sign-up date
   - The numbers your team reports today (advised)
@@ -32,6 +36,32 @@ how_to_use:
   - On the first run, describe the product and the numbers you report. Approve the tracking plan it builds.
   - Each week, paste what changed, with dates. Read the funnel and the one experiment. Run the experiment you agree with in your own tools.
   - Run it again next Monday. It reads the new groups and judges any experiment that is due.
+output_sample:
+  input:
+    - Last week's events with user id, event, time and sign-up date
+    - The numbers your team reports today (optional)
+    - What changed last week, with dates (optional)
+    - Your tracking plan and experiment log, once they exist (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code, to keep the files between weeks
+    - An export of events from your analytics tool
+  output:
+    - name: This week
+      contains: The main metric against last week, the inputs you control, and how many steps moved past their normal swing.
+    - name: The funnel
+      contains: Conversion per step, last week's rate, the normal swing, and a mark for noise or a real move.
+    - name: The groups
+      contains: Each sign-up week's path through the steps, beside the change that shipped that week.
+    - name: Experiments read
+      contains: Any experiment that reached its read date, with its rate, the move expected, the move seen and a verdict.
+    - name: The cause
+      contains: The chain of whys and the fixable cause, or unknown with the fact that would settle it.
+    - name: One experiment
+      contains: One change, the rate it should move, who gets it and the date to read it.
+    - name: Vanity watch
+      contains: Any reported number that only goes up, and the per-customer number to use instead.
+    - name: Files and missing
+      contains: Each step's saved file, every MISSING line and any checks that failed or could not run.
 how_it_works:
   - title: Build the plan once
     text: Sets the events, steps, groups and main metric, marks the vanity numbers and picks the inputs you control.

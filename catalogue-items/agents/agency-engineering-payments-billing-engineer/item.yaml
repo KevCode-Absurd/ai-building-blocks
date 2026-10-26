@@ -1,0 +1,42 @@
+slug: agency-engineering-payments-billing-engineer
+name: Payments & Billing Engineer agent
+summary: Get a billing integration plan with webhook and reconciliation checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-payments-billing-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-payments-billing-engineer.md
+  licence: MIT
+  original_name: Payments & Billing Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: ce47609b6805087e2f731ea62f69edffaf61e1968049042e2ca3d225d4392b40
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Payments & Billing Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Payments & Billing Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-payments-billing-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

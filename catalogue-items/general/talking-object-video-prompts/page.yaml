@@ -1,6 +1,6 @@
 new_slug: talking-object-video-prompts
 name: Talking object video clip prompt writer
-summary: Paste your talking-object script and attach a product photo. Get a character card, clip prompts and edit notes.
+summary: Turn your talking object script and a product photo into video clip prompts. You get a fixed character card, timed prompts and edit notes.
 job: make-video-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a talking object script and want to make it with an AI image and video tool.
   - Earlier tries gave you a face that moved, extra limbs, or a product with a face.
   - You want to test the same complaint told by different objects and need a fixed setup for each.
+not_for:
+  - "You have no script yet: write the script first with a talking object ad script writer, then come back here."
+  - "You want a human presenter or a spokesperson on camera: write a normal video script and brief a real person instead."
+  - "Your product has no front or flat spot for a face: pick a different object to speak for it, or shoot the product plainly."
 you_give:
   - The script, clip by clip, with the narrator, its mood and the turn
   - A real front photo of your product, its size, how it opens and what it replaces
@@ -31,6 +35,32 @@ how_to_use:
   - Approve the character card, make the reference images and pick one at thumbnail size on your phone.
   - Approve the sheets, then the storyboard and its start frames.
   - Make the clips in order, join them with hard cuts, and add captions and the offer in your editor.
+output_sample:
+  input:
+    - Your talking object script, clip by clip, with the narrator, mood and turn
+    - A real front photo of your product
+    - Your video tool and clip lengths (optional)
+    - Your buyer's moment and humour limits (optional)
+  prerequisites:
+    - An AI that can make images and a video tool to run the clip prompts in
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Narrator
+      contains: Which object speaks, and why it stays or is replaced.
+    - name: Character card and voice line
+      contains: One fixed description of the object and its voice, for you to approve.
+    - name: Reference images
+      contains: Three or four prompts for the face on the object, and the one you picked.
+    - name: Sheets
+      contains: Prompts for the object from every angle, your product from its photo, and the set, each with lock lines.
+    - name: Storyboard
+      contains: Start frames for clip 1 and the turn clip, plus a shot card for every clip.
+    - name: Clip prompts
+      contains: Timed beats with each line in quotes, the end frame, attached images and room sound.
+    - name: Edit notes
+      contains: Hard cuts, captions, offer text and the voice route, with a fix table for drift.
+    - name: Checks missed
+      contains: One line for each check the prompts still miss, or none.
 how_it_works:
   - title: Confirms who talks
     text: Keeps the script's narrator unless it's not really in that room, has no natural face spot, or could be mistaken for the product.

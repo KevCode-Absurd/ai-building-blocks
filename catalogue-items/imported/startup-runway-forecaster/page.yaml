@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It fits a forecast model to your data.
 new_slug: startup-runway-forecaster
 name: Startup runway forecaster
-summary: Give it your monthly cash data. Get a forecast of burn and the month
-  cash runs out.
+summary: "Give it 12 to 24 months of cash data. You get a startup runway forecast: the month your cash runs out, with odds, and when to start raising."
 job: money-and-investing
 headline: Startup runway forecaster
-subhead: Give it your monthly cash data. Get a forecast of burn and the month
-  cash runs out. Bring monthly net cash flow for 12 to 24 months. Use the result
-  to plan your next step.
+subhead: Give it your monthly cash data. Get a forecast of burn and the month cash runs out. Bring monthly net cash flow for 12 to 24 months. Use the result to plan your next step.
 explain: |
   Instead of one rough guess, you get the month your cash is likely to run out, with odds attached, such as 70 percent for October and 20 percent for November. That gives you a fundraising start date you can plan around.
 
   It looks at 12 to 24 months of net cash flow and separates the long-term trend from seasonal spikes and one-off costs like annual software renewals. Burn is then adjusted for planned headcount and marketing growth. The result is a runway in months, a trend label such as accelerating burn, and a safety window for starting a raise. It uses forecasting methods in Python, so it works best where code can run.
 when:
-  - Your burn is uneven and a simple cash divided by average spend gives a wrong
-    answer.
+  - Your burn is uneven and a simple cash divided by average spend gives a wrong answer.
   - You need to know the latest date you can start fundraising.
   - You have big yearly costs that bunch up in certain months.
   - You plan to hire fast and want to see the effect on cash-out.
+not_for:
+  - "You have under 12 months of cash data or no steady monthly burn: use a simple budget or cash-plan spreadsheet instead."
+  - "You want a firm fundraising date to act on: ask a finance adviser to check the result first, because the odds are estimates."
+  - "You need to value your company or plan how to hold your cash: ask an accountant or finance adviser."
 you_give:
   - Monthly net cash flow for 12 to 24 months
   - A list of lumpy or seasonal expenses
@@ -31,8 +31,27 @@ you_get:
   - A split of fixed and variable burn drivers
   - A fundraising trigger date
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Open Claude, ChatGPT or Gemini. Pick a mode that can run Python code and accept files, if your plan has one.
+  - Paste the skill text into the chat. Or upload the skill folder if your AI accepts files.
+  - Add your monthly net cash flow for 12 to 24 months. Add your lumpy costs and your hiring and marketing plans.
+  - Ask your AI to run scripts/calculate.py with python3. It self-tests, and the code uses Prophet and pandas for the forecast.
+  - If your AI can't run code, say so. It will give a rougher estimate by reasoning instead.
+  - Treat the odds as estimates, not facts about your business. Ask a finance adviser to check any fundraising date before you act.
+output_sample:
+  input:
+    - Your monthly net cash flow for the last 12 to 24 months
+    - A list of lumpy costs, such as yearly software renewals or twice-a-year bonuses
+    - Your plans for hiring and marketing growth
+    - A date you aim to be profitable (optional)
+  prerequisites:
+    - An AI that can run Python code and read your files, for the best result
+    - Without code, your AI can still give a rougher estimate by reasoning through the steps
+  output:
+    - name: The Prediction
+      contains: Your estimated cash-out month, your current runway in months, and a trend rating such as accelerating burn or stabilizing.
+    - name: Scenario probabilities
+      contains: A spread of likely cash-out months with a chance for each, instead of one single date.
+    - name: AI Visuals (Description)
+      contains: A written description of the confidence range for the next 12 months and a split of fixed and variable burn drivers.
+    - name: Actionable Insight
+      contains: "The fundraising trigger: the date you must start your next raise to avoid a cash crunch."

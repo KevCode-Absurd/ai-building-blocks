@@ -1,55 +1,123 @@
 new_slug: construction-variation-review-assistant
-name: Construction variation review assistant
-headline: Construction variation review assistant
-summary: A variation comparison, arithmetic review and decision brief.
+name: Construction variation cost and approval tracker
+headline: Construction variation cost and approval tracker
+summary: Check a construction variation request against the signed contract and its prices. Get a cost and time check and a brief. Nothing is approved for you.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A variation comparison, arithmetic review and decision brief. Share the actual variation request, signed contract, priced scope, schedule impact evidence and delegated approval rules. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
-explain: |-
-  A variation comparison, arithmetic review and decision brief.
+subhead: Give it the variation request, the signed contract, the priced scope and your approval rules. It checks the contract's change process, recomputes the quantities and rates, and compares the new version with the last. You get a decision brief and a record of exactly what has been approved, by whom.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Proposed scope is separate from signed scope; cost and time claims trace to evidence and no variation is approved. Missing tools or evidence stay visible in the final summary.
+explain: |
+  A variation is a change to the work after the contract is signed. Extra scope, a different material, a delay. Each one arrives with a price and a time claim. The trouble starts when the request is treated as an approval. Work begins, and later nobody can show who agreed to what and for how much.
+
+  This construction variation review starts from your last review. It compares the new request with the signed contract and the priced scope. It uses the Construction change decision brief writer to find the contract's change, notice, approval and pricing clauses, recompute the quantities and rates, and draft a decision brief. Proposed work is kept apart from signed work. Each cost and time claim is traced to evidence or marked unproven.
+
+  When an approval arrives, it records the accepted scope, who approved it, the amount and the date, taken from that approval. A submitted variation is never treated as an approved one. It reviews and drafts. It gives no legal or quantity surveying advice and approves nothing.
+
 when:
-  - You need a variation comparison, arithmetic review and decision brief.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A subcontractor sends a priced variation, and you need it checked against the contract before anyone replies.
+  - The variation was revised and repriced, and you need to see what moved since the last version.
+  - An approval email arrives, and you need to record what it really covers.
+  - You must show an owner or lender why a variation is held, with the evidence behind each figure.
+
+not_for:
+  - There is no signed contract or priced scope yet. Take it to the commercial team first, because this review has nothing to compare against.
+  - The work is a client service engagement and not construction. Use the Client scope change and decision tracker.
+  - You are checking a delay or time claim only. Use the Project delay test reviewer.
+  - You want a risk review of the contract wording for a lawyer. Use the Contract clause risk reviewer.
+  - You want the AI to approve, price or instruct the work. It drafts, and a person with authority decides.
+
 you_give:
-  - The actual variation request, signed contract, priced scope, schedule impact evidence and delegated approval rules. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The variation request, with its version and date
+  - The signed contract, with its change, notice and approval clauses
+  - The priced scope, such as the bill of quantities or rate schedule
+  - Evidence for any time impact, such as a program or delay notice
+  - Your delegated approval rules, showing who may approve what amount
+  - Your last review and any approval received (optional)
+
 you_get:
-  - A variation comparison, arithmetic review and decision brief.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A list of what changed since the last version, with the source and date of each change
+  - The contract's change, notice, approval and pricing clauses, each with its clause reference
+  - A recomputed cost table that checks quantities and rates against the priced scope and flags excluded charges and unmatched units
+  - A comparison of signed scope and proposed change
+  - A decision brief with cost and time evidence, approval status and open questions
+  - A record of any approval received, with the accepted scope, authority, amount and date
+  - A MISSING list, CHECKS MISSED and a short record for the next review
+
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add the decision brief writer, the contract summary, the invoice totals checker and the update writer from the pack.
+  - Say if this is a first run. If not, paste your last review and its record.
+  - Attach the variation request, the signed contract and the priced scope. Write your approval rules in two or three lines.
+  - Read "Changed since last version" first. Check each change against the new request.
+  - Check one line of the cost table against the priced scope by hand. Then read the brief and its open questions.
+  - When an approval arrives, paste it and run it again. The agent approves and sends nothing.
+
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep variation ID, contract version, proposed and approved amounts, approval source and open questions. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A priced variation or contract approval record changes.
-  - title: Choose the next step
-    text: Run prepare-a-construction-variation-decision for changed evidence or a due review. If approval is supplied, extract the actual accepted scope, authority, amount and date before updating the decision trace. Do not equate submission with approval.
-  - title: Check and save evidence
-    text: Proposed scope is separate from signed scope; cost and time claims trace to evidence and no variation is approved. Save source versions, branch reasons, outputs and unresolved checks.
-output_shape: |-
-  Scope and source coverage
-  A variation comparison, arithmetic review and decision brief.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  - title: Compare with the last review
+    text: Reads the saved record if it belongs to this contract and variation, or sets a first baseline. Lists what changed in the request, the price or the approval record. If nothing changed, it says so and stops.
+  - title: Find the contract rules
+    text: Quotes the change procedure, notice, approval and pricing clauses with their clause numbers. It leaves the meaning of each clause to your professional adviser.
+  - title: Recompute the cost
+    text: Recomputes the variation quantities and rates against the priced scope. It shows excluded charges and units that do not match.
+  - title: Draft the decision brief
+    text: Shows the signed scope beside the proposed change, with cost and time evidence, approval status and open questions.
+  - title: Record an approval, only if one arrived
+    text: Reads the approval and records the accepted scope, who approved, the amount and the date, using the Action item tracker. A submission or a reply that is not an approval stays open.
+
+output_shape: |
+  REVIEW DATE <date>   CONTRACT <ref>   VARIATION <id, version>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST VERSION  <quantity, rate, scope or time: old to new, source and date>
+  CONTRACT RULES    <topic | clause | what it says, quoted>
+  COST CHECK        <line | quantity | rate | recomputed | priced | difference>
+  SCOPE COMPARISON  <signed scope | proposed change | difference>
+  TIME EVIDENCE     <claim | evidence or unproven>
+  DECISION BRIEF    <baseline vs change, cost and time, approval status, open questions>
+  APPROVAL RECORD   <accepted scope | approver | authority | amount | date>, or none received
+
+  RECORD FOR NEXT REVIEW  contract version, variation version, approval status, amounts, dates
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - The variation request and the signed contract
+    - The priced scope and any evidence of time impact
+    - Your approval rules
+    - Your last review and any approval received (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Construction change decision brief writer and the Action item tracker in the agent pack
+  output:
+    - name: Changed since last version
+      contains: Each change to scope, quantity, rate or time, with its source and date.
+    - name: Contract rules
+      contains: The change, notice, approval and pricing clauses, quoted with their clause numbers. It does not interpret them.
+    - name: Cost check
+      contains: Each variation line with quantity, rate and recomputed amount against the priced scope, flagging excluded charges and unmatched units.
+    - name: Scope comparison
+      contains: The signed scope beside the proposed change, so you can see what is new.
+    - name: Time evidence
+      contains: Each time claim with the evidence behind it, or marked unproven.
+    - name: Decision brief
+      contains: The baseline against the proposed change, cost and time evidence, approval status and open questions.
+    - name: Approval record
+      contains: Only when an approval arrived. The accepted scope, who approved it, their authority, the amount and the date.
+    - name: Record for next review
+      contains: The contract and variation versions, approval status, amounts and dates, to paste into the next run.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
+
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Pick one variation so the sources are comparable.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Proposed scope is separate from signed scope; cost and time claims trace to evidence and no variation is approved.
+    how: Provide the real contract, prices and notices, and not a summary from memory.
+  - what: A revised price
+    how: Paste the new priced request. The review shows which lines moved and by how much.
+  - what: An approval email
+    how: Paste the email and say who sent it. It records the scope, approver, amount and date only from the words in it.
+
 judge:
   - Proposed scope is separate from signed scope; cost and time claims trace to evidence and no variation is approved.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +130,26 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
+  - Give every variation one ID and quote it in each email about it.
+  - Keep a short list of who may approve what amount, and paste it in every time.
+  - Keep corrections with the result so the next run uses current facts.
+
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Reads the contract, the prices and the emails together, and can save the record file. In plain chat it returns the same tables as text.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The signed contract and the priced scope, not drafts.
+    - The variation's own price breakdown with units.
+    - A named person who has authority to approve and will check the result.
+
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Variation
+    meaning: A change to the work or the price after the contract is signed. Some regions call it a change order.
+  - term: Priced scope
+    meaning: The agreed list of work with quantities and rates.
+  - term: Approval
+    meaning: A written yes from a person with the authority to give it. A submitted variation is not one.
+  - term: Delegated authority
+    meaning: The amount and kind of change a named person is allowed to approve.

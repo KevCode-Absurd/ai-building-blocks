@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The checks are set steps, but the severity calls need judgment.
 new_slug: data-quality-scorecard-maker
 name: Data quality scorecard maker
-summary: Give it a dataset and your rules. Get checks for blanks, duplicates,
-  broken links and stale data, plus a scorecard.
+summary: Check a dataset for blanks, duplicates, broken links and stale data against your rules. Get a data quality scorecard and a shareable report.
 job: track-numbers
 headline: Data quality scorecard maker
-subhead: A shareable report and one page scorecard that show whether a dataset
-  is fit to use, tested against your own rules. It suits the moment right after
-  a load, before reports depend on it.
+subhead: A shareable report and one page scorecard that show whether a dataset is fit to use, tested against your own rules. It suits the moment right after a load, before reports depend on it.
 explain: |
   A shareable report and one page scorecard that show whether a dataset is fit to use, tested against your own rules. It suits the moment right after a load, before reports depend on it.
 
@@ -18,6 +15,10 @@ when:
   - A stakeholder says totals look off and you need proof.
   - You must hand a governance team a formal quality record.
   - You are onboarding a new data source.
+not_for:
+  - "You need live monitoring of a streaming or real-time feed: use a data observability tool that runs all the time."
+  - "Your data is not in rows and columns, such as images, audio or free text: ask a data person to review it by hand."
+  - "You only want a quick look at a small sheet: scan it yourself with filters and a pivot table in Google Sheets or Excel."
 you_give:
   - The dataset
   - Which columns are keys and how tables link
@@ -29,8 +30,33 @@ you_get:
   - Pass and fail counts per check
   - Severity ratings
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open files.
+  - Open an AI that can run Python code and read files. Upload the skill folder and your dataset.
+  - Tell your AI which columns are keys and how your tables link.
+  - Paste your business rules, allowed ranges and how fresh the data should be. Add error limits if you have them.
+  - Ask your AI to run the data quality audit skill on your dataset.
+  - Read the scorecard first. Then open the report and check the critical and high findings.
+  - Share the report with your team, or fix the flagged issues and run it again.
+output_sample:
+  input:
+    - Your dataset as a CSV, Parquet file or table export
+    - Which columns are keys and how your tables link
+    - Your business rules, such as allowed ranges and value lists
+    - How fresh the data should be
+    - Your acceptable error rates (optional)
+  prerequisites:
+    - An AI that can run Python code and open files
+  output:
+    - name: Quality report (HTML)
+      contains: A full report you can share, with every finding, its quality dimension and its severity.
+    - name: Quality scorecard
+      contains: A one page summary with a score for each quality dimension.
+    - name: Blank check results
+      contains: Blank counts for each column, with columns above your limit flagged.
+    - name: Duplicate check results
+      contains: Full row and key level duplicates, and whether they look intended or like errors.
+    - name: Broken link check results
+      contains: Child records whose parent key is missing, with the orphan rate for each link between tables.
+    - name: Range and freshness results
+      contains: Values outside your rules, and whether the latest record is newer than your freshness limit.
+    - name: Pass and fail counts
+      contains: Pass and fail totals for each check, with a severity from low to critical.

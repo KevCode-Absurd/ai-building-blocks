@@ -16,6 +16,31 @@ use_cases:
   - "Name the external, internal and deeper problems your customer faces"
   - "Show what's at stake if a customer doesn't act, without overdoing fear"
   - "Check every social post or email against one clear part of the story"
+not_for:
+  - "You need to place your product against rivals and pick the right buyers: use the April Dunford mind."
+  - "You want to sharpen a category or focus a brand in buyers' minds: use the Al Ries mind."
+  - "You need long sales letters with a hard offer and tracking: use the Dan Kennedy mind."
+output_sample:
+  input:
+    - Your home page text, pitch or draft message
+    - What your customer wants and the problem in their way
+    - Your product facts and the steps to buy
+    - The one problem you want to own (optional)
+  output:
+    - name: Before and after
+      contains: Your weakest part shown as it is now and as a clearer rewrite, usually the plan or the button.
+    - name: Eight-second check
+      contains: A read on whether a stranger could tell what you offer, how it helps and how to buy.
+    - name: Customer problem on three levels
+      contains: The practical problem, the feeling it causes and the sense that it should not be this way.
+    - name: One-liner
+      contains: Three short drafts that name the problem, your solution and the result.
+    - name: Three-step plan
+      contains: A simple way for buyers to work with you, from first step to result.
+    - name: Call to action
+      contains: One direct next step for the page, plus a gentler step for people not ready.
+    - name: Exercise and film comparison
+      contains: One task to try on strangers and one film example that shows the fix.
 seats:
   - {seat: "Clear brand message", asks: "Could a stranger say what we offer, how it makes their life better and what to do next?"}
   - {seat: "Customer as hero", asks: "Are we the hero of this story, or is the customer?"}

@@ -22,19 +22,19 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **GA4 store setup checker.** Use the skill `ga4-store-setup-checker`. Starts with the base layer: what GA4 is missing before anything else is measured.
+1. **GA4 store setup checker.** Use the skill `ga4-store-setup-checker`. Starts with the base layer: what GA4 is missing before anything else is measured. Hands the GA4 report to step 2.
 
 Pause here: Fix the GA4 gaps, place a test order and check it appears in GA4 the next day.
 
-2. **Meta server tracking checker.** Use the skill `meta-server-tracking-checker`. Fresh start after the GA4 fix: gets Meta counting each sale once.
+2. **Meta server tracking checker.** Use the skill `meta-server-tracking-checker`. Give it the audit report from the steps before. Uses the GA4 report to compare counts, and gets Meta counting each sale once. Hands the Meta report to step 3.
 
 Pause here: Apply the Meta route and check in Events Manager that one test purchase shows once.
 
-3. **Campaign link tracker.** Use the skill `campaign-link-tracker`. With both sets of events working, tags every link so orders can be matched to a campaign.
+3. **Campaign link tracker.** Use the skill `campaign-link-tracker`. Give it the audit report from the steps before. With both sets of events working, tags every link so orders can be matched to a campaign. Hands the tagged-link sheet to step 4.
 
 Pause here: Run the tagged campaigns for two weeks, then pull platform ROAS and store totals for the same dates.
 
-4. **Platform ROAS reality check.** Use the skill `platform-roas-reality-check`. Give it the spreadsheet from the steps before. Reads the tagged-link sheet from the step before to compare what platforms claim with what the store counts.
+4. **Platform ROAS reality check.** Use the skill `platform-roas-reality-check`. Give it the spreadsheet and the audit report from the steps before. Reads the tagged-link sheet from the step before to compare what platforms claim with what the store counts.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -21,15 +21,17 @@ This skill exists to **prevent desktop-thinking, AI-defaults, and unsafe assumpt
 
 Before designing or implementing **any mobile feature or screen**, assess feasibility.
 
-### MFRI Dimensions (1–5)
+### MFRI Dimensions (score each 0–5, whole numbers)
 
-| Dimension                  | Question                                                          |
-| -------------------------- | ----------------------------------------------------------------- |
-| **Platform Clarity**       | Is the target platform (iOS / Android / both) explicitly defined? |
-| **Interaction Complexity** | How complex are gestures, flows, or navigation?                   |
-| **Performance Risk**       | Does this involve lists, animations, heavy state, or media?       |
-| **Offline Dependence**     | Does the feature break or degrade without network?                |
-| **Accessibility Risk**     | Does this impact motor, visual, or cognitive accessibility?       |
+Two dimensions are good when high. Three are risks, bad when high. Give a short reason for every score.
+
+| Dimension                       | Question                                                                    | 0 means                  | 5 means                         |
+| ------------------------------- | --------------------------------------------------------------------------- | ------------------------ | ------------------------------- |
+| **Platform Clarity** (+)        | Is the target platform (iOS / Android / both) explicitly defined?           | Not stated               | Platform and framework stated   |
+| **Accessibility Readiness** (+) | Are motor, visual and cognitive needs known and planned for in this screen? | Not considered           | Needs known and covered         |
+| **Interaction Complexity** (−)  | How complex are gestures, flows, or navigation?                             | One tap, one screen      | Many gestures, deep navigation  |
+| **Performance Risk** (−)        | Does this involve lists, animations, heavy state, or media?                 | Static content           | Long lists, animation and media |
+| **Offline Dependence** (−)      | Does the feature break or degrade without network?                          | Works fully offline      | Useless without network         |
 
 ### Score Formula
 
@@ -38,7 +40,9 @@ MFRI = (Platform Clarity + Accessibility Readiness)
        − (Interaction Complexity + Performance Risk + Offline Dependence)
 ```
 
-**Range:** `-10 → +10`
+**Range:** `-15 → +10` (best case 5 + 5 − 0 − 0 − 0 = 10, worst case 0 + 0 − 5 − 5 − 5 = −15)
+
+If the user did not state a dimension, do not guess a flattering number. Score Platform Clarity 0 when the platform is not stated, and tell the user which unknowns kept the score down.
 
 ### Interpretation
 
@@ -50,6 +54,29 @@ MFRI = (Platform Clarity + Accessibility Readiness)
 | **< 0**  | Dangerous | Redesign before implementation        |
 
 ---
+
+## 1b. When NOT to use
+
+- Web or desktop layouts. This skill is for phone apps only.
+- The platform and framework are fixed and the user only wants a code review of finished code. Use a code review instead.
+- Watch, TV or car apps. Say the skill does not cover them and stop.
+- Server or API work with no screen. This skill covers what the phone user sees and feels.
+
+## 1c. What to return
+
+Return these sections in this order. Keep each short.
+
+```
+Screen: <what the screen is and what the user does>
+Platform and framework: <iOS | Android | both, framework, or MISSING>
+MFRI: <score> (<Safe | Moderate | Risky | Dangerous>)
+| Dimension | Score 0-5 | Reason |
+Layout: <top to bottom, with thumb zone, touch sizes and where the main action sits>
+Platform notes: <what differs on iOS and on Android for this screen>
+Offline and loading states: <what shows with no signal, while loading, and after an error>
+Changes to make: <only if MFRI is below 3: what to simplify first>
+Open questions: <anything you assumed or could not know>
+```
 
 ## 2. Mandatory Thinking Before Any Work
 
@@ -66,7 +93,7 @@ If **any of the following are not explicitly stated**, you MUST ask before proce
 | Devices    | Phone only or tablet too?                  | Layout & density rules                   |
 | Audience   | Consumer, enterprise, accessibility needs? | Touch & readability                      |
 
-🚫 **Never default to your favorite stack or pattern.**
+Ask all open questions in one message. If the user cannot answer one, state your assumption, mark it ASSUMED in the output, and score the affected MFRI dimension as if the answer were unknown. Never default to your favorite stack or pattern.
 
 ---
 
@@ -92,6 +119,7 @@ If **any of the following are not explicitly stated**, you MUST ask before proce
 | Cross-platform | BOTH above          |
 
 > ❌ If you haven’t read the platform file, you are not allowed to design UI.
+> If you cannot open these files (for example, you only have this one file in a chat), say so at the top of your answer and rely on the rules in this file alone. Do not pretend to have read them.
 
 ---
 
@@ -286,7 +314,9 @@ No debate without justification.
 ---
 
 ## When to Use
-This skill is applicable to execute the workflow or actions described in the overview.
+- Designing or reviewing a phone-app screen or flow for iOS, Android or both
+- Checking how risky a screen is before paying a developer to build it
+- Making sure a screen still works with no signal, slow loading, large touch needs and thumb-only use
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

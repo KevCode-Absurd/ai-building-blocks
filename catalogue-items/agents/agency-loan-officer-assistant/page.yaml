@@ -1,0 +1,133 @@
+name: Loan Officer Assistant agent
+summary: "Get a loan file checklist that shows missing documents, expiry dates, deadlines to track and questions for the reviewer. No credit decisions."
+headline: Loan Officer Assistant agent
+subhead: "Say what kind of loan it is, where the file stands and which documents you hold. Remove ID numbers first. You get a checklist of what is missing or out of date, the dates to track, a log of open conditions and draft messages to the borrower. It never decides credit."
+job: money-and-investing
+thinking: high
+thinking_why: It tracks dates and gaps across a whole file and must never guess a date or a rule. Use a model that handles lists and dates carefully and says when it is unsure.
+explain: |-
+  A loan file checklist lists every document a lender needs for one loan, marks what you hold, and shows what is missing, out of date or unclear. Loans slow down when a gap shows up late, such as an expired pay stub or a missing page on a bank statement, and the underwriter asks for it at the last minute.
+
+  This agent works from your file and the loan type. For each document it records the status, the gap and a question for the reviewer. It tracks the dates that can cost a borrower money or time, such as a rate lock end, a disclosure due date and the day a document goes stale. It lists the underwriting conditions still open and what proof clears each one, in writing.
+
+  It also drafts plain, kind messages to the borrower, such as a document request or a reminder. It never says a borrower is approved, denied or likely to be approved. It never quotes a rate. Rules and time limits differ by lender, state and country, so every date rule is marked for you to confirm. Redact personal and account numbers before you paste anything.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A new loan application lands and you want a document list built for that loan type and that borrower.
+  - A file is stuck and you want to see what is missing or stale before the underwriter asks.
+  - You track many files and want one list of the dates that could cost money, such as rate lock ends.
+  - You are a borrower gathering papers for a mortgage or a business loan and want to know what a lender will ask for.
+not_for:
+  - You want to know if a borrower will be approved. Only a licensed underwriter can decide that.
+  - You want to write a credit assessment of a business borrower. Use the Borrower credit memo writer.
+  - You want to check the terms of a venture loan. Use the Venture loan terms reviewer.
+  - You want a rate quote. Use your lender's current rate sheet.
+you_give:
+  - The loan type, such as a home purchase, a refinance, a small business loan or a consumer loan.
+  - The stage of the file, such as application taken, in processing or in underwriting.
+  - A list of the documents you hold, with their dates, and any underwriter conditions. Remove ID, account and Social Security numbers first.
+  - Key dates, such as application date, rate lock end and target closing date
+  - Your lender's document rules and time limits (optional)
+you_get:
+  - A checklist with each document marked held, missing, out of date or unclear
+  - A reviewer question for each gap
+  - A date tracker for the deadlines you gave, with the days left
+  - A log of open conditions and the proof that would clear each one
+  - Draft messages to the borrower for a document request or a status update
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Remove Social Security numbers, account numbers, dates of birth and addresses from anything you paste. Use initials or a file number for the borrower.
+  - Name the loan type and the stage. List the documents you hold with their dates, and any conditions from underwriting.
+  - Type "Build the file checklist. Mark every date rule I did not give you as CHECK. Do not decide credit or quote a rate."
+  - Read the gaps and the date tracker first. Collect what is missing, then ask for the checklist again.
+  - Review the draft borrower messages before you send them yourself. Check every deadline against your lender's rules.
+how_it_works:
+  - title: Set the file
+    text: It records the loan type, stage and key dates. Anything missing is asked once, then marked MISSING.
+  - title: Build the checklist
+    text: It lists the documents that type of loan needs, then marks what you hold, what is missing and what is stale.
+  - title: Add reviewer questions
+    text: Each gap gets a plain question for the processor or underwriter.
+  - title: Track the dates
+    text: It lists each deadline you gave with the days left. Rules you did not give are marked CHECK.
+  - title: Log the conditions
+    text: Each underwriting condition is listed with what written proof would clear it.
+  - title: Draft the messages
+    text: It writes short borrower messages in plain words, for you to review and send.
+output_shape: |-
+  FILE SUMMARY
+    Loan type <type> | Stage <stage> | Borrower reference <initials or file number> | Target closing <date or MISSING>
+
+  DOCUMENT CHECKLIST
+    <document> | <Held, Missing, Out of date or Unclear> | <gap> | <question for the reviewer>
+
+  DATE TRACKER
+    <deadline> | <date> | <days left> | <source of the rule: you gave it, or CHECK>
+
+  CONDITIONS LOG
+    <condition> | <type: before documents, before closing or other> | <proof that would clear it> | <Open or Cleared>
+
+  BORROWER MESSAGES (drafts)
+    <message type> | <short text, in plain words>
+
+  OPEN QUESTIONS
+    <question for the lender, underwriter or compliance team> | <why it matters>
+output_sample:
+  input:
+    - The loan type and the stage of the file
+    - The documents you hold, with their dates, and any underwriting conditions (identifiers removed)
+    - Key dates, such as application, rate lock end and target closing
+    - Your lender's document rules and time limits (optional)
+  prerequisites:
+    - Personal and account numbers removed from anything you paste
+  output:
+    - name: File summary
+      contains: The loan type, stage, a borrower reference and the target closing date.
+    - name: Document checklist
+      contains: Each document marked held, missing, out of date or unclear, with the gap and a reviewer question.
+    - name: Date tracker
+      contains: Each deadline with the date, the days left and whether the rule was given or needs checking.
+    - name: Conditions log
+      contains: Each underwriting condition with the written proof that would clear it, and its status.
+    - name: Borrower messages
+      contains: Draft messages for a document request or a status update, for you to review.
+    - name: Open questions
+      contains: Points for the lender, underwriter or compliance team, with why each one matters.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a document list or a conditions sheet you attach and build the checklist from it.
+  inputs:
+    - Your lender's checklist or product guide for this loan type.
+    - The list of conditions exactly as underwriting issued them.
+    - Your lender's holiday and business day calendar, so due dates are right.
+terms:
+  - term: Underwriter
+    meaning: The person at the lender who decides whether a loan is approved.
+  - term: Condition
+    meaning: Something the underwriter needs before the loan can close, such as a new document.
+  - term: Rate lock
+    meaning: A promise to hold an interest rate for a set time. It ends on a set date.
+  - term: Loan Estimate and Closing Disclosure
+    meaning: Two US mortgage forms that must reach the borrower within set times. Rules vary by country.
+  - term: Redact
+    meaning: To remove or black out personal details before sharing a document.
+tweaks:
+  - what: Loan type
+    how: Name the exact type, such as "home purchase, first-time buyer" or "small business term loan". The checklist then fits.
+  - what: Lender rules
+    how: Paste your lender's own document list and time limits. They replace the general ones.
+  - what: Messages
+    how: Say how you speak to borrowers, such as short and warm or formal. The drafts then match your voice.
+improve:
+  - Keep each checklist with the file, and update it after each condition clears.
+  - Add your lender's document rules and your usual borrower message style to the pack.
+  - Pair it with the Borrower credit memo writer when the file moves to a business credit review.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

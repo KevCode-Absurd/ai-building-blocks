@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set import and cleanup steps for each sensor type.
 new_slug: driving-data-importer
 name: Driving data importer
-summary: Give it recorded GPS, camera or lidar data. Get it loaded, synced and
-  cleaned for building driving scenarios.
+summary: Load recorded GPS, camera and lidar driving data into MATLAB, sync it and clean it up, ready to build driving scenarios from your recording.
 job: build-software
 headline: Driving data importer
-subhead: Recorded driving data loaded, lined up in time and cleaned, ready for
-  building driving scenarios in MATLAB. It handles GPS, camera, lidar and
-  tracked-object data from common sources.
+subhead: Recorded driving data loaded, lined up in time and cleaned, ready for building driving scenarios in MATLAB. It handles GPS, camera, lidar and tracked-object data from common sources.
 explain: |
   Recorded driving data loaded, lined up in time and cleaned, ready for building driving scenarios in MATLAB. It handles GPS, camera, lidar and tracked-object data from common sources.
 
@@ -18,6 +15,10 @@ when:
   - Camera and lidar timestamps do not match.
   - You need to crop one segment out of a long recording.
   - Your sensors use different sample rates and must share a timeline.
+not_for:
+  - "You want to build a scenario or export to RoadRunner or OpenSCENARIO: use the scenario builder skill in MATLAB, which takes over after this import."
+  - "You only want to look at or replay a recording: open the Driving Log Analyzer app in MATLAB yourself. This skill does not open it unless you ask."
+  - "You have no MATLAB with Automated Driving Toolbox: ask a colleague who has it, because this skill needs code run in MATLAB."
 you_give:
   - Your raw recording files
   - The dataset type, such as KITTI or ROS bag
@@ -29,8 +30,31 @@ you_get:
   - Time offsets corrected
   - A saved dataset ready for scenario building
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Automated Driving Toolbox.
+  - Open an AI that can run MATLAB code, with MATLAB and Automated Driving Toolbox installed.
+  - Give your AI this skill and say you want to import driving data.
+  - Point it to your recording folder and say which dataset type it is.
+  - Add calibration files and sensor mounting details if you have them.
+  - Check the data summary it prints before you go on. Fix any missing sensor or wrong frame.
+  - Ask it to sync, trim or fix time offsets, then save the result for scenario building.
+output_sample:
+  input:
+    - Your raw recording files, such as a KITTI folder, a ROS bag, MAT, CSV or video
+    - The dataset type, such as KITTI, nuScenes, Waymo or ROS bag
+    - Calibration files and sensor mounting details (optional)
+    - The part of the recording you want to keep (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with Automated Driving Toolbox and any toolboxes your sensors need
+  output:
+    - name: Data summary
+      contains: Dataset name, recording, duration, each sensor with its sample count and rate, whether annotations exist, and which calibration is available.
+    - name: GPSData
+      contains: Your GPS or GNSS track wrapped as a scenario builder object.
+    - name: ActorTrackData
+      contains: Tracks of other vehicles and people, from your annotations or computed from lidar when none exist.
+    - name: CameraData
+      contains: Your camera frames wrapped as an object, with mounting position, angles and camera settings attached.
+    - name: LidarData
+      contains: Your lidar point clouds wrapped as an object, with mounting position and angles attached.
+    - name: Synchronized dataset
+      contains: All sensors on one timeline, with time offsets fixed, segments trimmed and a common time zero.

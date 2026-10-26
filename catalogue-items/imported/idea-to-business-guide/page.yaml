@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It runs a long chain of decisions that depend on one another.
 new_slug: idea-to-business-guide
 name: Idea to business guide
-summary: Describe your idea. Get a tested customer, a position, a price and a
-  first market to win, step by step.
+summary: Test a business idea step by step. You get a proven customer, a clear position, a price and the first market to win, saved as short files.
 job: test-an-idea
 headline: Idea to business guide
-subhead: A step-by-step path from a raw idea to a business you can defend. You
-  get a tested customer, a clear position, a price and the first market to win,
-  each saved as a short document.
+subhead: A step-by-step path from a raw idea to a business you can defend. You get a tested customer, a clear position, a price and the first market to win, each saved as a short document.
 explain: |
   A step-by-step path from a raw idea to a business you can defend. You get a tested customer, a clear position, a price and the first market to win, each saved as a short document.
 
@@ -18,6 +15,10 @@ when:
   - You want proof of demand before you spend money building.
   - You need a price and offer, and do not know what people will pay.
   - You come back to the idea each week and want your progress saved.
+not_for:
+  - "Your business already has paying customers: use a growth or fix-it guide for sales and operations, not this idea test."
+  - "You want to build the product, app or website: use a build tool for that step, since this guide stops at the plan."
+  - "You want one method on its own, like customer interviews: run that single skill directly, not all ten phases."
 you_give:
   - Your business idea
   - Who you think the customer is
@@ -29,7 +30,30 @@ you_get:
   - A strategy and positioning document
   - An offer and pricing plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your idea in a few sentences, your guess at the customer, and any interview notes (optional).
+  - Use an AI tool that can read and write files, such as Claude with file access. You may need a paid plan.
+  - Add the ten skills this guide runs with npx skills add, then add this skill to the same project folder.
+  - Ask your AI to follow this skill and start at the intake questions.
+  - Answer each question, then approve each draft before it is saved to the docs folder.
+  - Come back later and say you want to resume. The tracker file shows where you stopped.
+output_sample:
+  input:
+    - Your business idea in a few sentences
+    - Who you think the customer is
+    - Your skills, budget and time (optional)
+    - Notes from customer conversations (optional)
+  prerequisites:
+    - An AI that can read and write files in a project folder
+    - The ten skills this guide runs, added with npx skills add
+    - Time for several sessions, since this is a long guide and not a one-shot answer
+  output:
+    - name: docs/CUSTOMER.md
+      contains: The job your customer hires you for, plus what you learned from real customer conversations.
+    - name: docs/EXPERIMENTS.md
+      contains: The tests you ran with five customers and the smallest first product to try.
+    - name: docs/POSITIONING.md
+      contains: Your strategy, the space nobody else holds, and how you explain what makes you different.
+    - name: docs/OFFER.md
+      contains: Your offer and your price, based on what customers say they will pay.
+    - name: docs/CREATE-BUSINESS-PLAN.md
+      contains: A progress tracker, plus the first market to win, so you can pause and resume.

@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: copy_draft
     required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: test_report
 uses: []

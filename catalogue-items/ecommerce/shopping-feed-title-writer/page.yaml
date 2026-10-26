@@ -1,6 +1,6 @@
 new_slug: shopping-feed-title-writer
 name: "Shopping feed title writer"
-summary: "Give it your products and converting search terms. Get search-led titles, descriptions and image fixes."
+summary: "Rewrite your Google Shopping feed titles with the search terms that already sell. You get new titles, descriptions, image fixes and a rollout plan."
 job: run-google-ads
 thinking: medium
 thinking_why: "It writes many titles to a fixed pattern and has to keep every word true to the product."
@@ -17,6 +17,10 @@ when:
   - Your Shopping ads get impressions but few clicks or sales.
   - Your titles are brand names, codes or the supplier's text.
   - You have search term data and want it written into the feed.
+not_for:
+  - "You have fewer than 15 live products: feed-only Performance Max has too little to learn from, so start with a plain tidy-up of your titles by hand."
+  - "You have no search data and only want messy titles cleaned up: use a simple title cleaner, or fix the titles by hand."
+  - "Your main problem is price or disapproved items: fix those in Google Merchant Center first, or ask your feed agency or developer."
 
 you_give:
   - Product list with current titles, variants, colours, sizes and features
@@ -36,6 +40,37 @@ how_to_use:
   - Say whether your brand is a market leader in its niche.
   - Check every new title against the real product before you use it.
   - Roll out titles in small batches and watch clicks, cost per click and returns after each batch.
+output_sample:
+  input:
+    - Your product list with current titles, variants, colours, sizes and features
+    - Your converting search terms from Shopping, Performance Max or Search reports (optional for a new store)
+    - Your brand name, and whether shoppers know it
+    - Your top 20 products by revenue
+    - Your current product images (optional)
+  prerequisites:
+    - A Google Merchant Center account linked to Google Ads
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+  output:
+    - name: TITLE ORDER
+      contains: The one fixed order used for every title, in one line.
+    - name: BRAND
+      contains: Whether the brand goes last or first, and why.
+    - name: TITLES
+      contains: One line per product and variant with the old title, the new title and the character count.
+    - name: DESCRIPTIONS
+      contains: About 1,000 characters per product in two short paragraphs, checked against the product facts.
+    - name: IMAGES
+      contains: For each product, the image issue, the fix and what to test.
+    - name: CUSTOM LABELS
+      contains: Label names, their values and how campaigns can use them.
+    - name: FEEDS
+      contains: One feed for each currency and country.
+    - name: ROLLOUT
+      contains: Batches of products, what to watch after each batch and when to look.
+    - name: WHERE SOURCES DIFFER
+      contains: The choice made where the advice behind the skill disagrees.
+    - name: CHECKS MISSED
+      contains: Any check the skill could not do, or none.
 
 how_it_works:
   - title: Finds the words buyers use

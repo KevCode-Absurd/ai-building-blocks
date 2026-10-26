@@ -14,10 +14,10 @@ outputs:
   - {type: document}
 uses: [layoff-plan-writer, termination-risk-checker, offboarding-plan-builder, staff-announcement-writer]
 steps:
-  - {uses: layoff-plan-writer, note: "Who decides, the order of events, what the person is offered, where and when they hear it, and the plain words to use, in the order Ben Horowitz and Brian Chesky set out."}
-  - {uses: termination-risk-checker, note: "Risk flags on notice, final pay timing, severance and release points, and anything in the reasons that could be read as unfair. A first check, not legal advice."}
-  - {uses: offboarding-plan-builder, note: "The handover checklist, the access and kit list with dates, and the exit interview questions."}
-  - {uses: staff-announcement-writer, note: "The announcement for the rest of the team, a rollout order (who hears first) and honest answers to the questions they will ask. Nothing goes out until you say so."}
+  - {uses: layoff-plan-writer, note: "Who decides, the order of events, what the person is offered, where and when they hear it, and the plain words to use, in the order Ben Horowitz and Brian Chesky set out. Hands the exit plan to step 2."}
+  - {uses: termination-risk-checker, note: "Reads the exit plan for risk flags on notice, final pay timing, severance and release points, and anything in the reasons that could be read as unfair. A first check, not legal advice. Hands the flags to step 3."}
+  - {uses: offboarding-plan-builder, note: "Takes the exit plan and the risk flags and builds the handover checklist, the access and kit list with dates, and the exit interview questions. Hands the handover plan to step 4."}
+  - {uses: staff-announcement-writer, note: "Uses the exit plan and the handover plan as the facts for the announcement to the rest of the team, a rollout order (who hears first) and honest answers to the questions they will ask. Nothing goes out until you say so."}
 origin: own
 version: 1.0.0
 minds: [ben-horowitz, brian-chesky]

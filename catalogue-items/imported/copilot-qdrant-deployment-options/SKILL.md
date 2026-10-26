@@ -8,6 +8,31 @@ description: "Guides Qdrant deployment selection. Use when someone asks 'how to 
 Start with what you need: managed ops or full control? Network latency acceptable or not? Production or prototyping? The answer narrows to one of four options.
 
 
+## Before you start (added by AI Blocks)
+
+This skill reads a description, not code. Ask once for anything missing. If an answer is unknown, write "unknown" and say which option it would change. Never guess a number.
+
+1. Prototype, test or production?
+2. About how many vectors, and about how much data (a rough size is enough)?
+3. Is a network round trip to a server acceptable, or must search run inside your app?
+4. Do you want a managed service or full control (and who runs upgrades, backups and monitoring)?
+5. Any rule about where data must live (data residency)?
+6. Which language is the app written in? Local mode is Python only.
+
+Prices change. Do not state a price. Point to the Qdrant Cloud pricing page instead.
+
+## What you hand back (added by AI Blocks)
+
+1. **Recommended option.** One of local mode, Docker, Qdrant Cloud, Hybrid Cloud or Qdrant EDGE, with the reasons tied to the user's answers.
+2. **Comparison table.** One row per option you considered:
+
+| Option | Fits when | Who runs it | Main limit |
+|---|---|---|---|
+
+3. **Main risk.** The biggest risk of the recommended option, and how to cover it.
+4. **What would change the answer.** The unknowns that could flip the choice.
+5. **Next step.** Which quickstart or guide to follow, using the links below.
+
 ## Getting Started or Prototyping
 
 Use when: building a prototype, running tests, CI/CD pipelines, or learning Qdrant.

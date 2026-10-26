@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans outreach and tracking from set steps.
 new_slug: tiktok-creator-outreach-planner
 name: TikTok creator outreach planner
-summary: Tell it your product and budget. Get how to find creators, what to
-  offer, and how to track results.
+summary: "Plan your TikTok creator outreach: find creators who fit your product, set an offer and budget, and track results. Give it your product and budget."
 job: grow-social
 headline: TikTok creator outreach planner
-subhead: A plan for finding TikTok creators who fit your product, what to offer
-  them, and how to tell if the partnership paid off. It covers the full path
-  from first search to repeat deals.
+subhead: A plan for finding TikTok creators who fit your product, what to offer them, and how to tell if the partnership paid off. It covers the full path from first search to repeat deals.
 explain: |
   A plan for finding TikTok creators who fit your product, what to offer them, and how to tell if the partnership paid off. It covers the full path from first search to repeat deals.
 
@@ -18,6 +15,10 @@ when:
   - You want 20 creators for a launch and need a process.
   - Past creator posts got views but no sales.
   - You need a brief and an outreach message that creators will answer.
+not_for:
+  - "You run B2B or non-TikTok campaigns: use a general influencer or affiliate plan, or ask a person who knows that channel."
+  - "You want live creator lists, real rates or real follower data: the plan can't pull them, so search the Creator Marketplace yourself."
+  - "You already have creators signed and only need legal terms: ask a lawyer to check your contract."
 you_give:
   - Your product and niche
   - Budget and number of creators
@@ -29,7 +30,36 @@ you_get:
   - Offer and rate guidance
   - A results tracking sheet outline
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Add your product, niche, budget, number of creators and follower range. Add past results if you have them.
+  - Read the plan. Replace every bracketed example number with your own facts, since your AI has no live TikTok data.
+  - Search the Creator Marketplace yourself and fill in the creator table.
+  - "Add a clear #ad label and TikTok's branded content toggle to your brief before you send it."
+output_sample:
+  input:
+    - Your product and niche
+    - Your budget and how many creators you want
+    - The follower range you want
+    - Your past creator results (optional)
+  output:
+    - name: Creator Discovery Strategy
+      contains: The target creator profile, with follower range, engagement rate, audience, content style and brand safety.
+    - name: Creator Research Results
+      contains: A table to fill with prospect creators, their numbers, rate and priority.
+    - name: Campaign Strategy & Structure
+      contains: The goal, key message, content format, hashtag and what each video must include.
+    - name: Creator Partnership Framework
+      contains: Tiers by follower size, with deliverables, pay, commission ideas and contract terms.
+    - name: Outreach & Negotiation Strategy
+      contains: A first message to creators and simple negotiation rules.
+    - name: Performance Tracking & KPIs
+      contains: A tracking table for views, clicks, sales and return per creator.
+    - name: Creator Relationship Management
+      contains: Ways to keep strong creators working with you.
+    - name: Campaign Optimization Plan
+      contains: A week by week checklist, plus a monthly review.
+    - name: Budget Allocation & ROI Projections
+      contains: How to split your budget and what results to aim for.
+    - name: Next Actions
+      contains: A short checklist of what to do first.

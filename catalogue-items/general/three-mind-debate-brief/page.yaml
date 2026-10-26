@@ -1,6 +1,6 @@
 new_slug: three-mind-debate-brief
 name: "Three-mind debate brief"
-summary: "Paste a hard decision. Get three thinkers arguing it and a brief with three first steps."
+summary: "Paste a hard decision and get three thinkers arguing both sides in a three-mind debate brief, with the strongest dissent and three first steps."
 job: think-with-minds
 thinking: medium
 thinking_why: "It has to hold three different views apart and then weigh them."
@@ -17,6 +17,10 @@ when:
   - "You are stuck between two good options."
   - "You want to hear the case you are not making."
   - "You have to defend a choice to others."
+not_for:
+  - "Your question has one right answer or is a plain fact check: do your own research or look it up directly."
+  - "You need investment, legal, medical or tax advice: talk to a qualified person, then use this to test your thinking."
+  - "You want a quick yes or no on a small choice: use a simple pros and cons list instead."
 
 you_give:
   - "The decision and the result you want"
@@ -33,6 +37,26 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - The decision you face and the result you want
+    - Facts and limits, such as numbers and deadlines (optional)
+    - Three thinkers you want in the debate (optional)
+  output:
+    - name: QUESTION
+      contains: Your decision restated in one line, with the result you want.
+    - name: COUNCIL
+      contains: The three thinkers and the seat each one takes.
+    - name: OPENING VIEWS
+      contains: One short view from each thinker, with a recommendation, a reason and one risk.
+    - name: CHALLENGES
+      contains: Each thinker pushes back on the view they disagree with most.
+    - name: RANKING
+      contains: The three views ranked blind on reasoning, then who wrote which.
+    - name: BRIEF
+      contains: The recommended decision, the strongest dissent, what would change the call, and three first steps.
+    - name: MISSING
+      contains: Facts you did not give, marked so nothing is guessed.
 
 how_it_works:
   - title: "Restate the decision"

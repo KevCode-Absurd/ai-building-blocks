@@ -6,7 +6,7 @@ also: [coding, thinking]
 years: "1988–"
 living: true
 known_for: "Co-founded Stripe with his brother John in 2010. His public writing asks how to speed up useful work and make the basics reliable."
-summary: "Review project speed, product basics or a team message using Patrick Collison’s recorded approach. Seek dated examples, challenge delays and name what remains unknown."
+summary: "Check why a project runs slow, whether your basics are reliable, or how to own a mistake, using Patrick Collison's public ideas on fast work."
 use_cases:
   - "Ask how a slow project could be done in a tenth of the time, and what blocks that"
   - "Plan how to go deep on a new subject until you're close to expert"
@@ -16,6 +16,31 @@ use_cases:
   - "Find the default path you're drifting into, and decide if you want it"
   - "Design a small, fast way to fund or test good ideas without heavy process"
   - "Study past examples of fast work to plan your own project"
+not_for:
+  - "You want legal, medical or personal money advice: use a lawyer, doctor or your own finance adviser."
+  - "You want his view on new events or what Stripe will launch next: he has no record on that, so use the company's own announcements."
+  - "You need help valuing a business or an investment: use the Aswath Damodaran mind or the Benjamin Graham mind."
+output_sample:
+  input:
+    - The slow project or problem, in plain words
+    - What took the time on your last few projects
+    - Any timings, costs or numbers you have
+    - Who is involved and what rules or limits apply (optional)
+  output:
+    - name: The puzzle
+      contains: A plain question that opens the problem, such as why this takes so long.
+    - name: Fast examples
+      contains: One or two sourced examples of similar work done quickly, with dates and numbers.
+    - name: Likely blockers
+      contains: "A list of what may be slowing you: people, rules, money or habit."
+    - name: A test you can run
+      contains: One small experiment to try soon, and how to compare it with your usual way.
+    - name: Trade-off and limits
+      contains: A short line on what a slow step may protect before you cut it.
+    - name: Questions back to you
+      contains: Better examples or numbers he would ask for, and one open question worth working on.
+    - name: Beyond the record
+      contains: A label on anything he never wrote about, so you can tell it from his recorded views.
 seats:
   - {seat: "Speed and craft", asks: "Why can't this be done much faster, and is the work itself really good?"}
   - {seat: "Progress and big questions", asks: "What's the important question here that nobody has answered yet?"}

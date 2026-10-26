@@ -1,49 +1,56 @@
 new_slug: pitch-deck-checker-10-20-30
 name: Pitch deck 10/20/30 checker
-summary: Share your pitch slides, time limit and audience. Check length, type size and opening, with clear fixes and a custom score.
+summary: Check your pitch deck against the 10/20/30 rule. Paste your slides and talk time. Get a score out of 100 from five checks and fixes by slide.
 job: speak-and-persuade
 thinking: low
 thinking_why: It counts and compares against fixed limits, then lists fixes.
 headline: Pitch deck 10/20/30 checker
-subhead: It counts slides, estimates speaking time and reviews the opening and stated niche. It checks a valid font size you supply; without one, word count is only a labelled text-density proxy. Get fixes by slide and bounded custom points. Missing inputs stay visible. The score does not predict audience response or funding.
+subhead: Paste your slide text, your talk time and who you are pitching to. It counts slides, estimates speaking time and checks text size, your opening and your stated niche. You get a score out of 100 from five parts, with each part shown, and fixes by slide.
 explain: |
-  The ten-slide, twenty-minute and thirty-point rule is a presentation guide, not a test of whether a pitch will succeed. Word counts can help plan timing, but a rehearsal is needed to measure it. Font size also needs the actual deck or a valid supplied value.
+  The 10/20/30 rule says a pitch deck should have ten slides, run twenty minutes and use type no smaller than thirty points. It is a guide for presenting, not a test of whether a pitch will win funding. This pitch deck checker applies the rule to your deck so you can see where it runs long, dense or generic.
 
-  This skill reviews the supplied text and gives fixes by slide. Its five custom parts each stay between 0 and 20. The total appears only when the inputs or stated proxies support it. A word-count proxy does not measure font size or legibility. Timing assumptions, proxies and missing checks remain visible beside the points.
+  It scores five parts, each from 0 to 20: slide count, talk length, text size, opening and aim with niche. It shows the working for each. It judges your opening against the audience you name, not against a general company intro. Every fix names the slide to change.
+
+  Some checks need facts you may not have given. Without a font size, it marks the font check missing and uses a labelled word-count guess. Timing is an estimate from a planning pace of 130 words a minute, so rehearse to be sure. The score is a review aid. It does not predict funding or audience response.
 when:
   - Your deck has twenty slides and you have a short slot.
   - You are not sure the text is big enough for the room.
   - You use the same opening with every audience.
+  - You have a pitch tomorrow and want one last pass on length and clarity.
+not_for:
+  - "You want a view on whether the business is fundable. This checks the form of the deck, not the business."
+  - "You have no deck yet and need the story outlined: use the Pitch arc planner."
+  - "The deck is fine but the order of the talk is weak: use the Speech tension planner."
+  - "Your readers will read a document alone and nobody will present it: use the Narrative memo checker."
 you_give:
-  - The text of your deck, slide by slide
-  - How long you have to speak, and the room or screen
-  - The smallest font size in the deck (optional)
+  - The text of your deck, slide by slide, with a heading for each slide
+  - How long you have to speak, and who you are pitching to
+  - The smallest font size in the deck, from your slide software (optional)
+  - Your speaker notes (optional)
 you_get:
-  - Five custom score parts between 0 and 20, with a supported total or partial subtotal
-  - Slide count, estimated timing and a font check or labelled text-density proxy
+  - A score out of 100 from five parts, each worked out and shown
+  - Slide count, estimated talk time and a font check
   - Fixes in order of impact, each tied to a slide
-  - A note on the opening for this audience
+  - A note on whether your opening fits this audience
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the deck text, with a heading for each slide.
-  - Say who you are pitching to and how long you have.
-  - Fix the highest-impact items first, then run it again.
-  - Keep both scores to see what changed.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Paste the deck text with a heading for each slide. Add your speaker notes if you have them.
+  - Say who you are pitching to and how long you have. Add the smallest font size from your slide software.
+  - Fix the highest-impact items first, then run it again and compare the two scores.
+  - Time yourself speaking the deck once, and compare it with the estimate.
 how_it_works:
   - title: Counts the slides
     text: Compares slide count with the ten slide limit and names slides to merge or cut.
   - title: Times the talk
-    text: Uses the source’s 130-words-per-minute planning assumption. Actual speaking time needs a rehearsal.
+    text: Divides the spoken words by 130 a minute, a planning pace. Real timing needs a rehearsal.
   - title: Checks text size
-    text: Checks a valid supplied font size. Without it, marks the font check missing and uses a labelled word-count proxy where text is available.
+    text: Checks the font size you give. Without one, it marks the check missing and uses a labelled word-count guess.
   - title: Checks the opening
     text: Looks for an opening made for this audience, not a general company history.
-  - title: Checks the aim
-    text: Checks the deck aims to avoid being ruled out, not to win every point.
-  - title: Checks the niche
-    text: Looks for a stated niche that is valuable and unique.
+  - title: Checks the aim and niche
+    text: Checks the deck aims to avoid being ruled out, and states a niche that is valuable and unique.
   - title: Scores and fixes
-    text: Bounds each custom part 0–20 and shows any proxy or unresolved input. Points do not predict the pitch outcome.
+    text: Shows each part from 0 to 20 and the total only when the inputs support it. Lists fixes by slide, biggest gain first.
 output_shape: |
   CUSTOM SCORE: <n>/100 if supported, or <known subtotal and unresolved parts>
   How it was worked out: slides <n>/20, length <n>/20, text size <n>/20, opening <n>/20, aim and niche <n>/20
@@ -72,6 +79,29 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+output_sample:
+  input:
+    - Your deck text, slide by slide
+    - How long you have and who you are pitching to
+    - The smallest font size in the deck (optional)
+    - Your speaker notes (optional)
+  output:
+    - name: CUSTOM SCORE
+      contains: A total out of 100 from five parts, each out of 20, with the working shown.
+    - name: SLIDES
+      contains: Your slide count against the limit of ten, and which slides to merge or cut.
+    - name: LENGTH
+      contains: Word count, estimated minutes at 130 words a minute, and your time limit.
+    - name: TEXT SIZE
+      contains: Your smallest font size, or MISSING with a labelled word-count guess and the dense slides.
+    - name: OPENING
+      contains: What your first slide does now and what an opening made for this audience needs.
+    - name: AIM AND NICHE
+      contains: Quoted lines that show your aim and your niche, or a note that they are missing.
+    - name: FIXES, IN ORDER
+      contains: Each fix names a slide, ordered from biggest point gain to smallest.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts you did not give, and any check the review could not finish.
 tweaks:
   - what: Your talk time
     how: Give the real slot. The limit changes from twenty minutes to whatever you have.
@@ -98,7 +128,7 @@ improve:
   - Change the limits in step 1 if your event sets different ones, such as eight slides.
   - Add your investor or client list so the opening check knows their interests.
   - Add your own points system if you want to weight length higher.
-  - Pair it with "Talk tension planner" to order the beats before you check them.
+  - Pair it with "Speech tension planner" to order the beats before you check them.
 works_best_with:
   tools:
     - name: Any good chat AI
@@ -114,3 +144,5 @@ terms:
     meaning: A rule of thumb for decks of ten slides, twenty minutes and type no smaller than thirty points.
   - term: Niche
     meaning: The narrow place where you are both valuable to a buyer and different from rivals.
+  - term: Proxy
+    meaning: A stand-in measure, such as word count for text size. It is labelled and never counted as the real check.

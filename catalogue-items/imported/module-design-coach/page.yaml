@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Good design needs weighing trade-offs across the code.
 new_slug: module-design-coach
 name: Module design coach
-summary: Name the part you want to improve. Get a simpler design with clear
-  boundaries that is easier to test.
+summary: "Get a module design review for the code you want to improve: a simpler interface, a clear seam and a test plan. Names the part, you get the fix."
 job: build-software
 headline: Module design coach
-subhead: A simpler design for the part of your code you want to improve, with
-  clear edges that make it easier to test. The goal is a lot of behavior behind
-  a small, plain interface.
+subhead: A simpler design for the part of your code you want to improve, with clear edges that make it easier to test. The goal is a lot of behavior behind a small, plain interface.
 explain: |
   A simpler design for the part of your code you want to improve, with clear edges that make it easier to test. The goal is a lot of behavior behind a small, plain interface.
 
@@ -18,6 +15,10 @@ when:
   - Tests break every time you rename something inside.
   - You want to split a messy file but do not know where the line goes.
   - You are reviewing a design before it is built.
+not_for:
+  - "You have one small function with no reuse: a plain code review or a quick refactor is enough."
+  - "You only want bugs found or style fixed in a file: ask your AI for a normal code review."
+  - "You want to build a new feature from scratch: write the plan first, then come back to check the design."
 you_give:
   - The code or area you want to improve
   - What callers need from it
@@ -30,8 +31,28 @@ you_get:
   - What to hide inside
   - A testing approach through the interface
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste the code you want to improve. If your AI can read files, point it at the right folder instead.
+  - Say what callers need from it and what hurts, such as hard to test or hard to change.
+  - Read the depth rating first. Check that the proposed interface is smaller than the one you have.
+  - Ask your AI to show the seam and the test approach for the new design.
+  - No code running or paid tool is needed.
+output_sample:
+  input:
+    - The code or area you want to improve
+    - What callers need from it
+    - Pain points, such as hard to test or hard to change
+    - Your language and framework (optional)
+  prerequisites:
+    - An AI that can read your project files, or code you can paste into the chat
+  output:
+    - name: Depth rating
+      contains: Whether the module is deep or shallow, with the reasons, using the deletion test.
+    - name: Proposed interface
+      contains: A smaller set of methods and parameters that callers need to learn.
+    - name: Seam location
+      contains: Where the interface should live, and whether something really varies across it.
+    - name: Hidden internals
+      contains: What moves behind the interface so callers no longer need to know it.
+    - name: Testing approach
+      contains: How to test through the interface, with dependencies passed in and results returned.

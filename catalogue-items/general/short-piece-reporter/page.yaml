@@ -1,6 +1,6 @@
 new_slug: short-piece-reporter
 name: "Short piece reporter"
-summary: "Name a place or person and a word limit. Get a reporting plan and a tight piece in three jobs."
+summary: "Plan one day of reporting, then write a short piece of 150 to 400 words about a place or person, built from your own notes."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "The plan and piece follow a fixed shape, and the work is mostly shaping facts you supply."
@@ -17,6 +17,10 @@ when:
   - You need a 300-word profile of a shop, a site, a team member or a customer.
   - You write a newsletter, case study or local story and want it tight.
   - You have a word limit and too much material.
+not_for:
+  - "You need a piece over about 400 words: ask your AI for a longer article outline, or work with an editor."
+  - "You cannot visit the place or meet the person: this needs your own notes, so use a simple Q&A by email instead."
+  - "You only want a fact check or a line edit of a finished draft: ask a human editor or a plain chat with your AI."
 
 you_give:
   - A place or person you can reach, and your word limit
@@ -32,6 +36,26 @@ how_to_use:
   - Ask for the reporting plan first. Visit, interview and take far more notes than you need.
   - Paste your notes and ask for the draft.
   - Check each fact against your notes before you publish.
+output_sample:
+  input:
+    - A place or person you can reach in a day
+    - Your word limit
+    - Your notes and quotes from the visit (after you report)
+  output:
+    - name: Subject and limit
+      contains: The place or person in one sentence, and your word limit.
+    - name: Reporting plan
+      contains: Who to ask, 8 to 10 questions, and what to look at and note.
+    - name: Paragraph map
+      contains: The word limit split by paragraph, with one job for each.
+    - name: Draft
+      contains: The short piece in active sentences, ending on a person's voice.
+    - name: Fact check
+      contains: Each fact in the draft and the note it came from.
+    - name: Missing
+      contains: Facts or notes you still need, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check the draft still fails, or none.
 
 how_it_works:
   - title: Picks the subject

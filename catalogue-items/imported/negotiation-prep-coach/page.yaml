@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It applies known tactics to your case and you choose the lines.
 new_slug: negotiation-prep-coach
 name: Negotiation prep coach
-summary: Describe a deal or salary talk. Get an opening, calibrated questions
-  and a fallback plan. Uses tactical empathy.
+summary: Prepare for a salary talk, supplier price push or contract deal. Get an opening line, questions to ask and a fallback plan in one negotiation prep sheet.
 job: sell-and-negotiate
 headline: Negotiation prep coach
-subhead: A prepared plan for a hard conversation, whether it is a contract, a
-  supplier price or a pay rise. It follows the approach of former FBI negotiator
-  Chris Voss, which treats the other side's feelings and needs as the way to a
-  better deal.
+subhead: A prepared plan for a hard conversation, whether it is a contract, a supplier price or a pay rise. It follows the approach of former FBI negotiator Chris Voss, which treats the other side's feelings and needs as the way to a better deal.
 explain: |
   A prepared plan for a hard conversation, whether it is a contract, a supplier price or a pay rise. It follows the approach of former FBI negotiator Chris Voss, which treats the other side's feelings and needs as the way to a better deal.
 
@@ -19,6 +15,10 @@ when:
   - A supplier is pushing back on price and you need a better approach.
   - A client keeps saying no and you do not know why.
   - You tend to give in too quickly and want a fallback plan.
+not_for:
+  - "You need contract wording reviewed or a dispute is already in court: use a lawyer or your procurement team."
+  - "You want to persuade shoppers on a product page or ad: this skill is for talks with a real person, so write that copy yourself or with a marketing item."
+  - "You want a script to read word for word: it gives you prep and options, so you still choose your own lines."
 you_give:
   - A description of the deal or talk
   - What you want and your limits
@@ -31,7 +31,30 @@ you_get:
   - A fallback plan
   - A prep score with gaps to fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the full text of this skill. No code, files or paid tools are needed.
+  - Describe the deal or talk in a few lines. Say who you are talking to and what is at stake.
+  - Add what you want, your limits, and your best option if no deal happens.
+  - Add what you know about the other side, such as their goals, pressures and past replies (optional).
+  - Read the prep sheet and check the score. Ask your AI to fill the gaps it names.
+  - Rewrite the opening and questions in your own words before the talk.
+output_sample:
+  input:
+    - A short description of the deal or talk
+    - What you want and your limits
+    - What you know about the other side (optional)
+    - Your best option if no deal happens (optional)
+  output:
+    - name: Opening line
+      contains: A first thing to say that shows you understand their side and sets a calm tone.
+    - name: Feeling labels
+      contains: Short phrases that name the fears or worries the other side may have, starting with "it sounds like".
+    - name: Calibrated questions
+      contains: Open questions starting with "how" or "what" that get them to explain their needs and limits.
+    - name: Accusation audit
+      contains: The worst things they may think about you, said out loud first to lower their guard.
+    - name: Black Swan hunt
+      contains: Hidden facts to look for that could change what the deal is really about.
+    - name: Walk-away and fallback plan
+      contains: Your best option if no deal happens, and the step-by-step plan for your offers.
+    - name: Score and gaps
+      contains: Your prep score out of 10 and the specific gaps to fix to reach 10.

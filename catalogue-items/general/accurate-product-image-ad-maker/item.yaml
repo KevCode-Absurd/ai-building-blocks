@@ -19,6 +19,8 @@ inputs:
     required: false
   - type: lessons_register
     required: false
+  - type: hooks
+    required: false
 outputs:
   - {type: image_prompt}
 uses: [ai-image-fix-rules]

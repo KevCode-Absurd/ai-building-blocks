@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It changes layout only and never rewrites the content.
 new_slug: article-formatter
 name: Article formatter
-summary: Give it plain text or rough markdown. Get a tidy article with title,
-  summary, headings and lists, same words.
+summary: Format your article in markdown. Give it plain text or a rough draft and get a tidy copy with title, summary, headings and lists. Your words stay.
 job: work-with-files
 headline: Article formatter
-subhead: "A messy draft turned into a clean, easy-to-scan article with title,
-  summary, headings, bold key points, lists and code blocks. The words stay
-  yours: it formats and fixes obvious typos only."
+subhead: "A messy draft turned into a clean, easy-to-scan article with title, summary, headings, bold key points, lists and code blocks. The words stay yours: it formats and fixes obvious typos only."
 explain: |
   A messy draft turned into a clean, easy-to-scan article with title, summary, headings, bold key points, lists and code blocks. The words stay yours: it formats and fixes obvious typos only.
 
@@ -18,18 +15,41 @@ when:
   - You want a summary and title options before publishing.
   - Your article mixes Chinese and English and spacing is off.
   - You need the original kept and a tidy copy saved alongside.
+not_for:
+  - Your text must stay exactly as written, with no typo fixes. Keep your original file, or have a person check each change.
+  - You want the article rewritten, shortened or made more engaging. Ask your AI for an edit, or work with a human editor.
+  - You choose the typography-only option. It changes your original file in place and makes no copy, so save a backup first.
 you_give:
-  - Plain text or a markdown file
+  - Your article as plain text or a markdown file
   - Title or summary preferences (optional)
-  - Bun or npx installed
+  - Bun or npx installed on your computer
 you_get:
   - A formatted markdown file
   - Title and summary options
   - Headings, bold points and lists
   - The original left unchanged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Give your AI this skill and your article file. Use an AI that can run code and save files.
+  - "If your file already has markdown, pick one option: optimize, keep the format, or typography fixes only."
+  - Pick a title from the options, or type your own. You can skip this by saving a preference in a settings file.
+  - Open the new -formatted file and check the headings, bold points and typo fixes.
+  - Publish the formatted file, or edit the title and summary first. Your original file stays unchanged, except with typography only.
+output_sample:
+  input:
+    - Your article as plain text or a markdown file
+    - Title or summary preferences (optional)
+    - "Your choice on existing markdown: optimize, keep, or typography only"
+  prerequisites:
+    - An AI that can read files, run code and save files
+    - Bun or npx installed on your computer
+  output:
+    - name: "{filename}-analysis.md"
+      contains: Key points, structure notes, formatting problems and typos found in your draft, used as the plan for formatting.
+    - name: "{filename}-formatted.md"
+      contains: Your article with frontmatter, headings, bold key points, lists, tables, code marks and quotes, with the same words.
+    - name: Title options
+      contains: Four or five title choices to pick from, with a recommended one first.
+    - name: Frontmatter
+      contains: Title, slug, a one-sentence summary and a longer description at the top of the file.
+    - name: Completion report
+      contains: A count of headings, bold marks, lists, tables and typos fixed, and which typography fixes ran.

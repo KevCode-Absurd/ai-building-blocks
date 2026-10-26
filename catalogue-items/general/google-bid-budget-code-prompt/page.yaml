@@ -1,6 +1,6 @@
 new_slug: google-bid-budget-code-prompt
 name: Google bid and budget coding prompt
-summary: Get a coding brief for Google Ads bid and budget checks, with matched data, business targets and proposed changes.
+summary: Get a coding brief for Google Ads bid and budget checks. It covers a bid strategy review and safe budget moves, written as proposals to review.
 job: build-software
 headline: Google bid and budget coding prompt
 subhead: Get a coding brief for Google Ads bid and budget checks, with matched data, business targets and proposed changes.
@@ -12,6 +12,10 @@ when:
   - You need a coding brief for the bid strategy diagnostic + budget reallocator.
   - You need build the bid strategy diagnostic + budget reallocator prompt for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - Your account has no conversion tracking. Do a manual bid review in Google Ads instead.
+  - You want your AI to change bids or budgets in the account. This brief only proposes changes for you to review.
+  - You have no code project to build in. Ask a person who runs Google Ads to review bids and budgets by hand.
 you_give:
   - The repository or relevant code and schema
   - The feature requirements and available services
@@ -22,6 +26,30 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - Your code project, or its schema and file layout
+    - What the feature must do
+    - Your approved ROAS or CPA targets (optional)
+    - Your total spend limit and any campaigns to protect (optional)
+  prerequisites:
+    - An AI that can read your code project
+    - "Google Ads API access only if you later run it on a real account: developer token, OAuth and account permissions"
+  output:
+    - name: Typed input
+      contains: The fields the code takes, such as customer ID, date range, currency, current budgets, targets and data freshness.
+    - name: Bid strategy diagnosis module
+      contains: Checks strategy fit, learning status, impression share loss and conversion evidence, and marks missing data.
+    - name: Target attainment calculation
+      contains: Actual results against target ROAS or CPA, with no profit claim unless margin is supplied.
+    - name: Budget reallocation module
+      contains: Proposed moves that keep the total spend and respect minimums, maximum changes and protected campaigns.
+    - name: Move table
+      contains: "Per move: campaign ID, current and proposed budget, change, reason, evidence window, risk, review owner and stop condition."
+    - name: Test cases
+      contains: Tests for missing targets, zero conversions, currency, budget totals, no-move cases and unknown impact.
+    - name: Setup gaps
+      contains: A list of missing files, schemas and API permissions to fix before building.
 how_it_works:
   - title: Inspect the target project
     text: Check its file structure, interfaces and service setup before choosing paths.

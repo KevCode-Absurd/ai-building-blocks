@@ -1,6 +1,6 @@
 new_slug: buyer-brief-writer
 name: Buyer brief writer
-summary: Share your offer and real buyer words. Get a short copy brief showing their situation, doubts and the main concern to address.
+summary: Write a buyer brief from your offer and real customer words. See what pushes buyers, what holds them back, and the one thing your copy must address.
 job: understand-customers
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You're about to write an ad, a page, an email or a script and want to aim it first.
   - You have a pile of reviews and want to know what they say about why people buy.
   - Your copy explains the problem well, but people still don't buy.
+not_for:
+  - "You have no buyers yet and no customer words: talk to a few likely buyers first, then come back with their answers."
+  - "You already have a brief and want the copy itself: use the Proof-backed sales copy writer."
+  - "You want to map rival products or habits buyers use instead: use the Job rival mapper."
 you_give:
   - Your offer in a few lines, what you sell, the price and the terms
   - Buyer evidence, such as reviews, support messages, survey answers, call notes or cancellation reasons
@@ -26,9 +30,35 @@ you_get:
   - A bank of buyer phrases to borrow, and a list of gaps to ask customers about
   - Any of its own checks the brief still misses, each named
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill. No code, files or paid tools are needed.
+  - "Paste your offer: what you sell, the price and the terms."
+  - "Paste your buyer evidence: reviews, support messages, survey answers, call notes or cancellation reasons. Add your brand file if you have one."
+  - Ask for the buyer brief. If it marks a force as MISSING, treat that as a gap, not a fact.
+  - Check that each quote appears word for word in what you pasted.
+  - Hand the brief to your copywriter or to the next skill, such as the Proof-backed sales copy writer.
+output_sample:
+  input:
+    - "Your offer: what you sell, the price and the terms"
+    - "Buyer evidence: reviews, support messages, survey answers, call notes or cancellation reasons"
+    - Where the copy will run (optional)
+    - Your brand brain or brand file (optional)
+  output:
+    - name: Job line
+      contains: One sentence on when the buyer starts looking, what they want, and what stops them, in their words.
+    - name: Awareness level
+      contains: How much the buyer knows, from unaware to most aware, with the evidence that placed them.
+    - name: Market stage
+      contains: How much buyers have already heard this promise, with the evidence for that call.
+    - name: Four forces
+      contains: Push, pull, fear and habit, each with a buyer quote or marked MISSING.
+    - name: Force to work on
+      contains: The one force the copy must move, and what that means for where the words go.
+    - name: Word bank
+      contains: Five to eight phrases in the buyers' own wording to borrow.
+    - name: Gaps
+      contains: What the evidence does not show, plus up to three questions to ask customers.
+    - name: Checks missed
+      contains: One line for each of the skill's own checks the brief still misses, or none.
 how_it_works:
   - title: Finds the moment
     text: Quotes what happened right before buyers started looking, as a situation, never a label.

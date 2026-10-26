@@ -1,6 +1,6 @@
 new_slug: amazon-product-viability-scorer
 name: "Amazon product viability scorer"
-summary: "Give it a product idea and costs. Get a score out of 100, the weakest test and a go or no-go."
+summary: "Score your Amazon product idea out of 100 before you buy stock. You get the weakest test, any hard stop and a go, test first or no-go call."
 job: sell-on-amazon
 thinking: high
 thinking_why: "It judges one idea against ten tests and several hard stops, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You have a product idea for Amazon and are about to ask a supplier for a quote.
   - You have two or three ideas and need to know which one to test first.
   - You found a product in a research tool and want a second opinion before you spend.
+not_for:
+  - "You resell other brands through wholesale or arbitrage: this scorer covers private label only, so use a resale checker or ask your supplier for terms."
+  - "You already sell the product on Amazon: this checks new ideas, so look at your own sales and ad results instead."
+  - "You only want the real profit per unit: work it out in the Seller Central fee calculator, or ask an accountant about VAT."
 
 you_give:
   - Your product idea, planned price and category
@@ -35,6 +39,28 @@ how_to_use:
   - Paste page 1 for your main search phrase, with prices, review counts and ratings. Add research tool figures if you have them.
   - Read the hard stops first, then the weakest test. Fix what can be fixed and run the score again.
   - Before you order stock, run the cheapest test it names, and check the trademark.
+output_sample:
+  input:
+    - Your product idea, planned price and category
+    - Landed cost per unit, plus size and weight
+    - Page 1 results with prices, review counts and ratings
+    - The cash you could lose on the first order and ads
+    - Monthly search volume and your country (optional)
+  output:
+    - name: VERDICT
+      contains: A go, test first or no-go call with the score out of 100 and the weakest test.
+    - name: HARD STOPS
+      contains: Whether the idea hit a restricted category, fad, patent, price under 10 dollars or cash gap.
+    - name: SCORE
+      contains: Ten tests with points for each, and the sum so you can check it.
+    - name: REPEATED COMPLAINTS
+      contains: Low-star review complaints ranked by count, each turned into a change to ask your supplier for.
+    - name: CHEAPEST NEXT TEST
+      contains: A pre-sale, social page or crowdfunding page to run before you order stock.
+    - name: CHECK FIRST
+      contains: A reminder to search the trademark and check current fees in Seller Central.
+    - name: NOT RUN and MISSING
+      contains: Tests that could not run and the inputs you did not give.
 
 how_it_works:
   - title: Runs the kill list

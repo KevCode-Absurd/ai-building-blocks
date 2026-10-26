@@ -2,36 +2,101 @@ thinking: medium
 thinking_why: It weighs public signals to judge fit.
 new_slug: creator-audience-checker
 name: Creator audience checker
-summary: Give it a creator. Get who their audience is, where they live and if
-  they fit a sponsorship. Collects data from websites.
+summary: Check a creator's audience before you pay them. See where their fans live, what language they use and if they fit your market.
 job: understand-customers
 headline: Creator audience checker
-subhead: "A fit check on a creator: who their audience is, where they live, what
-  language they use and whether a sponsorship makes sense. You decide before you
-  spend, using evidence from public pages."
+subhead: Give it a creator, your product and the market you sell to. It reads their public profile and comments for where fans live, what language they use and what they care about. You get a fit rating, the evidence behind it and a sponsorship call.
 explain: |
-  A fit check on a creator: who their audience is, where they live, what language they use and whether a sponsorship makes sense. You decide before you spend, using evidence from public pages.
+  An influencer audience check helps you decide before you spend. A creator can have a big following and still reach the wrong country, the wrong language or the wrong kind of buyer.
 
-  You name a creator. The skill collects public profile signals, such as follower and following numbers, comments, audience location and language, and content type. It sets these out as evidence with sources, then writes audience notes and a fit summary. It ends with a sponsorship recommendation and says what is unknown. It also lists common pitfalls, like trusting follower counts alone. It reads data from websites, so what it can see depends on what is public.
+  You name the creator and describe who you sell to. The skill collects public signals: follower numbers, audience region where the platform shares it, recent comments, language and content topics. It lays each signal out in a table with its source. Then it rates the fit as High, Medium or Low, says how sure it is, and ends with what it could not find.
+
+  It does not guess exact audience details from a feel for the account. When the public data is thin, the result says so and tells you what to ask the creator for.
 when:
-  - A creator pitched you and you want to check their audience first.
+  - A creator pitched you and you want to check their audience before you reply.
   - You are choosing between three influencers for one budget.
   - You sell in one country and need to know if their fans live there.
-  - You need evidence to show your boss why you picked someone.
+  - You need evidence to show your boss or client why you picked one creator.
+not_for:
+  - "You can get the creator's own audience report or media kit: ask for it first, then use this to check their numbers."
+  - "You want to understand the followers of your own brand: use the Audience profile analyst."
+  - "You want a full breakdown of a creator's posts and what to test: use the Creator profile teardown writer."
 you_give:
-  - Creator name or profile link
-  - Your product and target market
-  - Budget range (optional)
-  - Sponsorship goal
+  - The creator's name or profile link
+  - Your product and the market you sell to, such as country and language
+  - What the sponsorship should do, such as sales or sign-ups
+  - Your budget range (optional)
+  - A ScrapeCreators key for live data (optional, paid service)
 you_get:
-  - Audience summary
-  - Location and language evidence
-  - Fit summary
-  - Sponsorship recommendation
-  - What is still unknown
+  - A fit rating of High, Medium or Low, with how sure it is
+  - A table of evidence, each line with its source
+  - Notes on where fans live, their language and topic fit
+  - A sponsorship call of good fit, maybe or poor fit, with the reason
+  - A list of what is still unknown
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - "Pick your route. For live data, use an AI that can run commands, such as Claude Code, with your ScrapeCreators key set. ScrapeCreators is a paid service, so check its price first."
+  - "No key? Open Claude, ChatGPT or Gemini and paste in the creator's public details: profile text, follower numbers, about 20 recent comments and their link-in-bio page. The result will show low confidence."
+  - Paste the skill, then the creator, your product, the market you sell to and your goal.
+  - Read the evidence table first. Every line should name a source. Ignore any line that does not.
+  - If confidence is Low, ask the creator for a screenshot of their own audience data before you pay.
+  - Use the call as a first check, not the final say. Compare two or three creators the same way.
+how_it_works:
+  - title: Pull the profile
+    text: It reads the profile numbers and any audience data the platform shares, such as audience region on TikTok.
+  - title: Read recent posts and comments
+    text: It looks at what people say and which language they use.
+  - title: Pull out the signals
+    text: It notes region, language, topic, products and community clues, each with its source.
+  - title: Score the fit
+    text: It compares those signals with the market you sell to and rates the fit High, Medium or Low.
+  - title: Label confidence
+    text: It says how sure it is, based on how much public data it found, and lists what is still unknown.
+output_shape: |
+  # Audience Research: <creator>
+  ## Fit Summary
+  Target market, fit rating, how it was scored, confidence
+  ## Evidence
+  Table of <signal>, <evidence>, <source>
+  ## Audience Notes
+  Geography, language, topic fit, comment quality
+  ## Sponsorship Recommendation
+  Good fit, maybe or poor fit, and why
+  ## Still Unknown
+  What the public data could not show
+output_sample:
+  input:
+    - The creator's name or profile link
+    - Your product and the market you sell to
+    - What the sponsorship should do
+    - Your budget range (optional)
+  prerequisites:
+    - A ScrapeCreators API key and an AI that can run commands, for live data (paid service)
+    - Or the creator's public details pasted in, for a lower-confidence check
+  output:
+    - name: Fit Summary
+      contains: Your target market, a High, Medium or Low fit rating, how it was scored and how sure it is.
+    - name: Evidence
+      contains: A table of each signal found, what it showed and where it came from.
+    - name: Audience Notes
+      contains: Where fans appear to live, their language, how well topics match and how real the comments look.
+    - name: Sponsorship Recommendation
+      contains: Good fit, maybe or poor fit, with the main reason.
+    - name: Still Unknown
+      contains: What public data could not show and what to ask the creator for.
+works_best_with:
+  tools:
+    - name: ScrapeCreators
+      why: It is the paid data service this skill uses to read public profiles and TikTok audience data.
+    - name: Claude Code
+      why: It can run the commands that fetch live data with your key.
+  inputs:
+    - The creator's own audience screenshot or media kit
+    - Two or three creators to compare the same way
+    - Results from past creator deals you ran
+terms:
+  - term: ScrapeCreators
+    meaning: A paid service that reads public social media profiles for you.
+  - term: API key
+    meaning: A private code that lets your AI use a service on your account.
+  - term: Fit rating
+    meaning: How closely the audience matches the people you want to sell to.

@@ -1,6 +1,6 @@
 ---
 name: ml-training-recipes
-description: Battle-tested PyTorch training recipes for all domains — LLMs, vision, diffusion, medical imaging, protein/drug discovery, spatial omics, genomics. Covers training loops, optimizer selection (AdamW, Muon), LR scheduling, mixed precision, debugging, and systematic experimentation. Use when training or fine-tuning neural networks, debugging loss spikes or OOM, choosing architectures, or optimizing GPU throughput.
+description: Practical PyTorch training recipes for all domains — LLMs, vision, diffusion, medical imaging, protein/drug discovery, spatial omics, genomics. Covers training loops, optimizer selection (AdamW, Muon), LR scheduling, mixed precision, debugging, and systematic experimentation. Use when training or fine-tuning neural networks, debugging loss spikes or OOM, choosing architectures, or optimizing GPU throughput.
 version: 1.0.0
 author: dailycafi
 license: MIT
@@ -10,7 +10,7 @@ dependencies: [torch>=2.0.0]
 
 # ML Training Recipes
 
-Battle-tested patterns for PyTorch training across domains. Drawn from production codebases
+Common patterns for PyTorch training across domains. These come from public code and papers, and they are starting points: test them on your own data. Drawn from production codebases
 (Karpathy's autoresearch/nanochat, torchvision, HuggingFace) and modern training practice.
 
 ## Reference files (read when needed)
@@ -21,6 +21,30 @@ Battle-tested patterns for PyTorch training across domains. Drawn from productio
 - `references/scaling-and-selection.md` — Scaling laws, compute budget tables, decision trees, DGX Spark
 - `references/biomedical.md` — Drug discovery, protein models, medical imaging, genomics, clinical NLP
 - `references/experiment-loop.md` — Autonomous experiment loop (autoresearch keep/discard/revert)
+
+---
+
+## When Not to Use This Skill
+
+- Clinical or patient-facing models: settings here are not a safe basis for them. A qualified clinical and regulatory review is needed, and patient data needs approved handling
+- Your model is already trained and you only need to run it: use an inference or serving tool
+- You cannot run Python and PyTorch (the code here assumes both)
+- You want a tuned production run with no experiments: this gives a first recipe, then you must test it
+
+## Output Format
+
+Reply with these sections, in order:
+
+1. **Your setup**: data type, data size, hardware, budget, and any MISSING items.
+2. **Model choice**: one pick from the Architecture Selection table, with the reason, and one fallback.
+3. **Settings table**: optimizer, learning rate, weight decay, schedule, precision, gradient clipping. Mark each as a starting value.
+4. **Training loop**: code adapted from this file, sized to the user's setup.
+5. **Troubleshooting checklist**: the checks from the Debugging Checklist that fit the user's symptom. If they gave none, list the five most likely.
+6. **Next steps**: run an overfit-one-batch test first, then track experiments (see `references/experiment-loop.md`).
+
+If data type, data size or hardware is missing, ask once, then mark it MISSING. Never invent results, loss values or speed figures. Say what you cannot check without running code.
+
+For drug discovery, medical imaging or clinical text, add this line: "These settings are for research and need expert and regulatory review before any clinical or patient use."
 
 ---
 

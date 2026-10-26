@@ -1,6 +1,6 @@
 new_slug: price-ending-picker
 name: Price ending picker
-summary: Paste a price and what you sell. Get round, just-below or exact digits, with the reason.
+summary: Pick the right price ending for your product. Paste a price and what you sell. You get round, just-below or exact digits, with the reason.
 job: set-prices
 thinking: low
 thinking_why: It applies a short set of rules to the facts you give.
@@ -14,6 +14,10 @@ when:
   - You are stuck between $199, $200 and $197.50.
   - You are pricing add-ons or an upgrade tier.
   - You are setting up a product page and want the price to look right.
+not_for:
+  - "You want to know how high to charge: work from your costs and what buyers pay now, as this prompt sets only the digits."
+  - "You want the full set of price display checks: use the Price display planner."
+  - "You have one fixed price list that never changes: keep it as it is, and test only if sales drop."
 you_give:
   - The product and the price you are weighing
   - Whether the brand is premium or value
@@ -28,6 +32,24 @@ how_to_use:
   - "Say how buyers choose: for feeling or for the job."
   - List add-ons and tiers so they get matching endings.
   - Run the test it gives you before you change every price.
+output_sample:
+  input:
+    - The product and the price you are weighing
+    - Whether your brand is premium or value, and whether people buy for feeling or for the job
+    - Add-ons, upgrade tiers, a sale price or your country (optional)
+  output:
+    - name: PRICE
+      contains: The price you gave it, as the starting point for the advice.
+    - name: STYLE
+      contains: Round, just below or exact, with a reason tied to your product and buyer.
+    - name: ADD-ONS AND TIERS
+      contains: Prices and endings for add-ons and upgrade tiers so they match the main price.
+    - name: PAGE
+      contains: Where the price goes on the page, such as under the product picture.
+    - name: REJECTED
+      contains: The one style it ruled out and why.
+    - name: TEST
+      contains: Two prices to compare on your own shop before you change every price.
 how_it_works:
   - title: Classify the product
     text: Bought for enjoyment or bought to do a job.

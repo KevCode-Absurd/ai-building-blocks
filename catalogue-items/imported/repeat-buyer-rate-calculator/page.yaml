@@ -2,34 +2,60 @@ thinking: low
 thinking_why: It counts customers with two or more orders.
 new_slug: repeat-buyer-rate-calculator
 name: Repeat buyer rate calculator
-summary: Get the share of customers who order again within your chosen days,
-  split by product or collection.
+summary: "Find your repeat buyer rate: the share of new customers who order again within your chosen days, split by first product bought."
 job: run-your-store
 headline: Repeat buyer rate calculator
-subhead: The share of your customers who come back and order again within the
-  number of days you pick, with the rate split by first product bought.
+subhead: Give it your Shopify store and two time windows. It finds customers who first bought in that period and checks who ordered again. You get the repeat rate and which first products bring people back.
 explain: |
   The share of your customers who come back and order again within the number of days you pick, with the rate split by first product bought. It shows which products bring people back.
 
   You choose a period for first-time buyers and a repeat window, such as 90 days. The skill reads customers acquired in that period from Shopify, then checks their later orders. The repeat rate is the share who placed a second order inside the window. With product segmenting on, it ranks first purchases by how often those buyers return. It reads data only. It needs a logged-in Shopify command line session with customer and order access.
 when:
-  - You want to know if customers return after the first order.
-  - You are deciding which product to promote to new shoppers.
+  - You want to know if customers come back after the first order.
+  - You are choosing which product to promote to new shoppers.
   - You want a baseline before you try a loyalty campaign.
   - An investor or partner asks for your repeat purchase rate.
+not_for:
+  - Your store mostly sells subscriptions. Repeat orders are built in, so the rate will look high. Compare plan renewals in your subscription app instead.
+  - You want long-term retention trends by month. Use a cohort report in Shopify analytics or ask a person who knows your numbers.
+  - You do not use Shopify. This skill reads Shopify data only, so use your own shop's order export in a spreadsheet.
 you_give:
-  - Store domain
-  - Period for first-time buyers
-  - Repeat window in days
-  - Segment by product (optional)
+  - Your store domain, like mystore.myshopify.com
+  - Days back to look for first-time buyers (optional)
+  - Days after the first order that count as a repeat (optional)
+  - Split by first product (optional)
+  - Text or JSON result (optional)
 you_get:
-  - Overall repeat buyer rate
-  - Rate by first product
-  - Ranked list of products that bring buyers back
-  - Output as text or JSON
+  - Your overall repeat buyer rate
+  - The repeat rate for each first product
+  - A ranked view of which products bring buyers back
+  - A CSV file with one row per customer
+  - The summary as text or JSON
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code and use the Shopify command line, such as Claude Code. A plain chat window cannot reach your store.
+  - Log in to your store with read access to customers and orders. The skill only reads data and changes nothing.
+  - Paste the skill and give your store domain. Add your two windows and say if you want the split by product.
+  - Check the customer count first. If it looks too low, widen the days back.
+  - Read the rate by first product. Guest checkouts have no customer record, so they are left out.
+  - Open the CSV to spot-check a few customers before you act on the numbers.
+output_sample:
+  input:
+    - Your store domain
+    - How many days back to look for first-time buyers (optional, 90 days if blank)
+    - How many days after the first order counts as a repeat (optional, 90 days if blank)
+    - Whether to split the rate by first product (optional)
+    - Text or JSON as the result format (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify command line
+    - A Shopify login with read access to customers and orders
+  output:
+    - name: Start banner
+      contains: Your store name and the time the run began.
+    - name: Step log
+      contains: One line per step showing what was asked and how many records came back.
+    - name: Repeat purchase rate summary
+      contains: Both time windows, customers acquired, repeat buyers and the overall repeat rate as a percent.
+    - name: By first product
+      contains: Each first product with the number of buyers and the share who came back.
+    - name: repeat_purchase_<date>.csv
+      contains: One row per customer with first order date, first product, total orders, repeat flag, days to repeat and total spent.

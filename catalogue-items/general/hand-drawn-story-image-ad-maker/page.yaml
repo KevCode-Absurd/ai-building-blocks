@@ -1,6 +1,6 @@
 new_slug: hand-drawn-story-image-ad-maker
 name: "Hand-drawn story image ad maker"
-summary: "Paste your story ad. Get a wordless hand-drawn panel plan and an image prompt ready to paste."
+summary: "Turn your story ad into a wordless hand-drawn image ad: a plan for one to four panels and an image prompt you can paste into an image tool."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your buyer's problem is private, inside the body, or likely to be flagged as a photo.
   - Your story has a clear bad moment and a habit that kept repeating.
   - Your photo ads look like every other ad in the feed.
+not_for:
+  - "Your problem is safe to show in a photo: use a photo ad skill, or a camera and a real setting."
+  - "You want words, a logo or the product in the picture: ask a designer or use a design tool instead."
+  - "You have no story ad yet: write one first with the Fact-based ad copy writer."
 
 you_give:
   - Your approved story ad, with the bad moment and the habit
@@ -34,6 +38,33 @@ how_to_use:
   - Paste the prompt into an image tool that handles panels well, or hand the brief to an illustrator.
   - Check every panel shows the same place from the same angle.
   - If any words appeared in the drawing, ask again without them.
+output_sample:
+  input:
+    - Your approved story ad, with the bad moment and the habit
+    - What your brand may show of the body (optional)
+    - Who the narrator is, so the pen and paper fit them (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - An image tool or an illustrator to draw the panels (the skill plans the picture; it may not make it)
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: The frame
+      contains: The place and angle that every panel repeats.
+    - name: Panels
+      contains: How many panels, and what changes in each one, in order.
+    - name: Figure
+      contains: How the simple figure looks and what they wear, the same in every panel.
+    - name: Drawn with
+      contains: The pen and paper the drawing looks made with.
+    - name: Line under the image
+      contains: The short headline under the picture, about 27 characters, with a character count.
+    - name: Flags
+      contains: Anything that comes near your brand's limits on showing the body.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt ready to paste into an image tool.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Sets the house rules

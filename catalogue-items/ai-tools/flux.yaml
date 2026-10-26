@@ -2,30 +2,30 @@ slug: flux
 name: Flux
 maker: Black Forest Labs
 url: https://bfl.ai
-promise: "Create and edit images from prompts through an API or a supporting app."
+promise: "Make and edit images from text through an API for your own app."
 use_cases: [make-images]
 categories: [image]
 what_it_does:
-  - Makes images from a written description.
-  - Edits an existing image from a written instruction.
-  - "Uses references to help keep a character or product consistent across images."
-  - Runs through an API that other apps and your own code can call.
-  - Offers some model files you can run on your own computer.
+  - "Makes images from a written description (checked 26 Oct 2026)."
+  - "Edits an existing image from a written instruction. The site lists edit tools such as outpainting and an eraser (checked 26 Oct 2026)."
+  - "Runs through an API that other apps and your own code can call (checked 26 Oct 2026)."
+  - "Sells self-hosting licences for model files you run yourself, in Builder, Platform, Professional and Enterprise tiers (checked 26 Oct 2026)."
+  - "Can use reference images to keep a character or product the same across images. Not checked on 26 Oct 2026."
 benefits:
-  - Add image making to your own app or workflow with one API.
-  - Pay only for the images you make, with no seat fees.
-  - Use the same model inside several other products.
+  - "Add image making to your own app or workflow with one API."
+  - "Buy credits and spend them per image. One credit is US$0.01."
+  - "Choose from several Flux models, from edit tools to open weights you can license."
 best_for:
   - Teams that build image making into a product or a batch workflow.
   - Photo-real scenes and product-style shots.
-  - People who want control over where the model runs.
+  - People who want to choose where the model runs.
 not_for:
-  - A simple app for everyday image making, which other products on this list provide.
-  - Anyone who does not want to deal with an API.
+  - "An app for everyday image making. Ideogram or Krea give you a screen to type into, with no code."
+  - "Anyone who does not want to use an API or buy credits before the first image."
 pricing:
   model: usage
-  from: Check the maker's site
-  note: Pay as you go per image through the API, with no subscriptions or seat fees. The price depends on the model. Licences for self-hosting are sold separately.
+  from: US$0.01 per credit (checked 26 Oct 2026)
+  note: "Checked 26 Oct 2026. You buy credits at api.bfl.ai, and 1 credit is US$0.01. The price per image depends on the model and the image size, so use the pricing calculator on bfl.ai/pricing. The calculator showed US$0.048 per image without naming the model. For the Klein models, the first megapixel has a flat price and each extra megapixel adds to it. A batch costs the one-image price times the number of images. Self-hosting licences are priced separately, and the page lists limits such as 10K or 100K images a month, not prices."
 works_with:
   - krea
   - freepik
@@ -37,6 +37,32 @@ blocks:
   - image-ad-settings-picker
   - marketing-image-maker
 alternatives: [stable-diffusion, midjourney, nano-banana, ideogram]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  api:
+    - "Sign in at dashboard.bfl.ai (linked from bfl.ai) and create an API key. The docs we read do not list the key steps, so follow the dashboard."
+    - "Go to api.bfl.ai, sign in and choose Add to buy credits. If you run out, requests fail with a 402 error."
+    - "Save your key as an environment variable named BFL_API_KEY. Send a POST request to your chosen model's endpoint from docs.bfl.ai, with your key in an x-key header and a JSON body with prompt, width and height."
+    - "The reply holds an id and a polling_url. Request the polling_url with your key every second or so until the status says Ready."
+    - "Take the image link from result.sample and save the file within 10 minutes. The signed link stops working after that."
+needs:
+  - "An API key and credits from the Black Forest Labs dashboard."
+  - "A way to send web requests: a short script, or a tool that can call an API."
+  - "A written prompt and the image size you want."
+  - "A self-hosting licence, only if you will run the model files on your own machines."
+example:
+  task: "Make one image from a written description through the API."
+  cost: "Credits are US$0.01 each. The price calculator on bfl.ai/pricing showed US$0.048 per image but did not say for which model, so check it for your model and size before you run a batch."
+  reply: "A JSON reply with an id and a polling_url. When the status is Ready, result.sample holds a link to the image, and the link works for 10 minutes."
+not_verified:
+  - "Free credits for new accounts. The pricing page does not mention any."
+  - "Exact price per image for each model. The docs table we read had empty price cells."
+  - "Which products use Flux today. Krea, Freepik and Higgsfield were listed earlier, and we did not recheck them."
+  - "Keeping a character or product consistent across images with references."
+  - "The self-hosted terms of service, which we did not open."
 sources:
   - https://bfl.ai/pricing
+  - https://bfl.ai/licensing
+  - https://docs.bfl.ai/quick_start/generating_images
+  - https://docs.bfl.ai/quick_start/pricing

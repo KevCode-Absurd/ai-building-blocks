@@ -30,6 +30,33 @@ you_get:
   - A better layout of the work, with the steps in order, fewer moves and a place for each part
   - A list of waste and by-products, each priced as a possible product, reuse or saving, and ranked by money recovered for the effort
 
+not_for:
+  - "You want to know what each step costs today, not work back from a price: use Cost every step and turn your waste into profit."
+  - "Your main cost is what a factory charges you: use Cut your product cost and turn supplier terms into cash."
+  - "You only want to find where a process wastes time and why: use Find process waste and the cause behind it."
+  - "You want to set a price that covers every cost, not cut cost to meet a price: use Price a product so it pays after every cost."
+
+output_sample:
+  input:
+    - "The price you want to sell at, and who can pay it"
+    - "Your product facts, such as costs, parts, materials and steps"
+    - "Your rivals' prices (optional)"
+    - "A cost or process report (optional)"
+    - "A sheet of your costs and volumes (optional)"
+  prerequisites:
+    - "An AI that can read files, to run the handoff pack"
+  output:
+    - name: "Step 1: Price-first cost plan"
+      contains: "Each cost line and step marked needed by the customer or not, with remove, simplify or keep, and the saving."
+    - name: "Step 2: Work layout"
+      contains: "The steps in order with a time for each, where each tool and part sits, and moves counted before and after."
+    - name: "Step 3: Waste and by-products"
+      contains: "Each scrap or idle item with its monthly amount, who might buy it, its value and the effort to reclaim it."
+    - name: "Ranked list and first actions"
+      contains: "Waste ranked by money recovered against effort, with the first three actions and a date to count again."
+    - name: "Hand-back summary"
+      contains: "Each step's file and every MISSING line in one list."
+
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".

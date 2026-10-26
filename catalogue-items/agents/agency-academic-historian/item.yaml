@@ -1,0 +1,42 @@
+slug: agency-academic-historian
+name: Historian agent for period accuracy
+summary: Check a story, game or script for anachronisms and myths. Get a period report with confidence levels and what daily life really looked like.
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: academic/academic-historian.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-historian.md
+  licence: MIT
+  original_name: Historian
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 2c59c10dceec033d9e92990b6156553471b7b94dd8e0c64fe27148f612be8955
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Historian
+  - Agency Agents
+  - Academic
+credits:
+  - title: Historian
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-historian.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

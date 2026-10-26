@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: comic-strip-image-ad-maker
 name: "Comic strip image ad maker"
-summary: "Paste your selling idea. Get a four-panel comic image prompt and the feed copy."
+summary: "Turn one selling idea into a comic strip image ad. You get the panel layout, the words, an image prompt and the feed copy."
 job: make-image-ads
 
 headline: "Comic strip image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your product fixes an everyday problem you can show in three drawn panels.
   - You want an image ad that people read panel by panel instead of scrolling past.
   - You made the comic video and want a still in the same look.
+not_for:
+  - "Your product is judged by how it pours, stretches or fits: use a plain photo of the product, or ask a designer for a photo ad."
+  - "Your offer has long terms or needs a real person to prove it: use a photo ad and put the terms in the feed text."
+  - "You want a moving ad: use the Motion comic video ad script writer."
 
 you_give:
   - Your selling idea, or the one claim to act out
@@ -37,6 +41,32 @@ how_to_use:
   - Say who the buyer is and the moment the problem bites, in a sentence.
   - Make the three drawn panels from the prompt, then place your real product photo in the fourth cell and set the words in a design tool.
   - Cover the words and look at the drawings. If you can't tell what changed, ask for a clearer turn panel.
+output_sample:
+  input:
+    - Your selling idea, or the one claim to act out
+    - Your product facts, approved claims, offer and colours
+    - Product photos with a sharp label (optional)
+    - The buyer and the moment the problem bites (optional)
+  prerequisites:
+    - An image tool such as ChatGPT, Gemini or Higgsfield to draw the panels from the prompt
+    - A design tool such as Canva to place the product photo and set the words
+  output:
+    - name: Fit and claim
+      contains: Why a comic suits this ad, and the one claim every panel builds toward, with its source.
+    - name: Hero line, ink line and palette
+      contains: One line describing the drawn hero, the line and fill style, and the few flat colours.
+    - name: Panels
+      contains: "What each of the four cells shows: set and grow, turn, land, then the photo panel."
+    - name: Layout
+      contains: The image size, the two by two grid and a zone map in percent.
+    - name: Words on the image
+      contains: The headline and up to three other items, each with size, colour and contrast.
+    - name: Image prompt
+      contains: A ready prompt for the three drawn panels, with no words in the image and cell four left empty.
+    - name: Feed copy
+      contains: The first line, main text, headline and button for the ad.
+    - name: Notes and checks missed
+      contains: Buyer words used, claims left out, anything missing, and any check the ad still fails.
 
 how_it_works:
   - title: Checks a comic fits

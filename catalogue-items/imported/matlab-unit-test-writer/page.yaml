@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans cases, then writes them in a set style.
 new_slug: matlab-unit-test-writer
 name: MATLAB unit test writer
-summary: Give it MATLAB code. Get class-based unit tests with fixtures, mocks
-  and app tests that you can run.
+summary: Write MATLAB unit tests for your code. Get a test plan, then class-based test files with fixtures and mocks, run to confirm they pass.
 job: test-and-fix-code
 headline: MATLAB unit test writer
-subhead: A set of MATLAB unit tests you can run today, written as classes with
-  edge cases covered. Give it your code and get tests that check what it does,
-  not how it does it.
+subhead: A set of MATLAB unit tests you can run today, written as classes with edge cases covered. Give it your code and get tests that check what it does, not how it does it.
 explain: |
   A set of MATLAB unit tests you can run today, written as classes with edge cases covered. Give it your code and get tests that check what it does, not how it does it.
 
@@ -18,6 +15,10 @@ when:
   - You need tests for a class with several input types.
   - You want to test an app without clicking through it each time.
   - You need mocks so a test does not call a real service.
+not_for:
+  - "You want to run tests, track code coverage or set up CI: use your AI with MATLAB's own test runner, since this skill only writes tests."
+  - "You need tests for a Simulink model: use the Simulink test tools that come with your MATLAB licence."
+  - "You need quick one-off checks in a script: just run the code and look at the result, as this skill only writes class-based tests."
 you_give:
   - The code to test
   - Expected behaviours and error cases
@@ -29,8 +30,34 @@ you_get:
   - Fixtures and mocks where needed
   - A passing test run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Check you have MATLAB (paid licence) and the MATLAB MCP server connected to your AI tool. Baseline tests also need MATLAB Test, release R2024b or later.
+  - Paste the skill into a chat with your AI, or add it as a skill in your AI tool.
+  - Paste your MATLAB code. Say what it should do, which errors it should raise and which outside services to fake.
+  - Read the test plan. Ask for changes, then say yes.
+  - Let your AI write the test files and run them in MATLAB. Check the pass or fail summary.
+  - If a test fails, check whether the test or your code is wrong before you fix either.
+output_sample:
+  input:
+    - Your MATLAB function or class code
+    - What it should do and which errors it should raise
+    - Outside services to fake (optional)
+    - Your MATLAB release (optional)
+  prerequisites:
+    - MATLAB (paid licence)
+    - An AI tool connected to MATLAB through the MATLAB MCP server, so it can run the tests
+    - MATLAB Test, release R2024b or later, only for baseline tests
+  output:
+    - name: Test plan
+      contains: The test methods, edge cases and parameter ranges it plans to cover, for you to approve before any code.
+    - name: Test class files
+      contains: One class-based test file per function or class, named like functionNameTest.m, saved in a tests folder.
+    - name: Parameterized tests
+      contains: Tests that run the same check over many inputs, with readable case names.
+    - name: Fixtures and mocks
+      contains: Setup and cleanup code, plus fake objects so tests do not call real services.
+    - name: App tests
+      contains: Tests for App Designer apps that press, choose and type in the app with code.
+    - name: Baseline tests
+      contains: Tests that compare results to stored reference data, when you ask for regression checks.
+    - name: Test run result
+      contains: A pass or fail summary from running the new tests in MATLAB.

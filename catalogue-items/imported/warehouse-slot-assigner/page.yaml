@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It ranks items by pick rate, then maps them to spots.
 new_slug: warehouse-slot-assigner
 name: Warehouse slot assigner
-summary: Give it your products and their pick counts. Get which item goes in
-  which spot so fast sellers sit closest.
+summary: Plan which product goes in which warehouse slot so fast sellers sit closest. Give it your pick counts and locations. Get a slot plan and a reslot schedule.
 job: plan-supply-chain
 headline: Warehouse slot assigner
-subhead: A plan for which product goes in which storage spot, so fast sellers
-  sit close and slow ones sit far away. That cuts the distance pickers walk each
-  day.
+subhead: A plan for which product goes in which storage spot, so fast sellers sit close and slow ones sit far away. That cuts the distance pickers walk each day.
 explain: |
   A plan for which product goes in which storage spot, so fast sellers sit close and slow ones sit far away. That cuts the distance pickers walk each day.
 
@@ -18,6 +15,10 @@ when:
   - You are setting up a new site and need a first slot plan.
   - Peak season changes what moves fastest.
   - Pickers queue up in one busy aisle.
+not_for:
+  - "You need the best walking route for pickers: use a picker routing tool or ask your AI for a pick path plan, as this plan only sets where items sit."
+  - "You are designing a new building or its aisles: use a warehouse design plan, as this plan only fills slots you already have."
+  - "You have no pick counts for your products: count picks for a few weeks first, or the ranking will be a guess."
 you_give:
   - Product list with picks per week
   - Product size and weight
@@ -29,8 +30,34 @@ you_get:
   - Rules for heavy and special items
   - A schedule for reslotting
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat.
+  - Add your product list as a table. Include a product ID, picks per month, size per unit and weight.
+  - Add your storage locations with their level and capacity. Add your rules, such as cold zones or heavy items low.
+  - Ask your AI to rank your products and assign each one to a slot.
+  - Check the top 25 moves first. Make sure each one fits its slot and your rules.
+  - For a long list, use an AI that can run code (Python) and upload your spreadsheet as a file.
+output_sample:
+  input:
+    - Your product list with picks per week or month
+    - Product size and weight
+    - Your storage locations, levels and how much each holds
+    - Your rules, such as cold, hazmat or first-in-first-out (optional)
+    - Which items are often ordered together (optional)
+  prerequisites:
+    - An AI that can run code (Python) if you have a long product list
+    - A spreadsheet or CSV of your products and locations
+  output:
+    - name: Executive Summary
+      contains: Your current pick rate, the expected rate after the change, how many products move and a rough time to do it.
+    - name: ABC Analysis Results
+      contains: Products grouped by how often they are picked, with the zone each group should use.
+    - name: Top SKUs for the Golden Zone
+      contains: Your fastest products with their current spot, the best spot and the walking saved.
+    - name: Product Affinity Clusters
+      contains: Groups of products often ordered together, with the aisles where each group should sit.
+    - name: Implementation Plan
+      contains: A phased move plan, starting with the fastest sellers and ending with slow stock.
+    - name: Expected Benefits
+      contains: A table comparing current and planned pick travel, picks per hour and labor hours.
+    - name: Maintenance Plan
+      contains: How often to check pick rates and redo the plan as demand shifts.

@@ -1,7 +1,7 @@
 new_slug: oci-reclassification-bridge
 name: OCI reclassification bridge
 headline: OCI reclassification bridge
-summary: Prove how recycling between OCI and profit leaves total comprehensive income unchanged.
+summary: Check that moving an amount between OCI and profit leaves total comprehensive income unchanged. Get a signed, after-tax reclassification table.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need an after-tax profit/OCI reclassification table with a comprehensive-income conservation check.
   - You work on issuer accounting and earnings and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need to know if the standard lets you recycle an amount to profit: read the accounting standard first, or ask your auditor."
+  - "You need to review an OCI reserve balance or its valuation: use a separate reserve or valuation review, or ask your accountant."
+  - "You need to track tax or owner transactions: keep these in your own schedules, because this bridge leaves them out."
 you_give:
   - Profit before a specific reclassification, OCI before it, signed after-tax reclassification and source notes on recycling eligibility.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,31 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Profit before the reclassification
+    - OCI before the reclassification
+    - The signed after-tax amount being reclassified
+    - Source notes showing the amount may be recycled
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can create and read spreadsheet files, if you want a workbook
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Reclassification table
+      contains: Profit and OCI before and after the after-tax amount, with equal and opposite signs.
+    - name: Comprehensive-income check
+      contains: Total comprehensive income before and after, showing it does not change.
+    - name: Scope and dated sources
+      contains: The sources, dates, currency, scale and accounting basis the work relies on.
+    - name: Inputs and assumptions
+      contains: Every input with its source, sign and reporting period, kept apart from assumptions.
+    - name: Model calculations and reconciliations
+      contains: The workings and the checks that tie opening and closing balances.
+    - name: Actual file verification
+      contains: Which workbook and script checks ran, and what they found.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and checks that failed or could not run.
 how_it_works:
   - title: 1. Identify the reserve and whether the applicable standard permits recycling to profit; distinguish reclassification from a new fair-value or actuarial movement
     text: Identify the reserve and whether the applicable standard permits recycling to profit; distinguish reclassification from a new fair-value or actuarial movement.

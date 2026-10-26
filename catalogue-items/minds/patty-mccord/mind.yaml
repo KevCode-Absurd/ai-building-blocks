@@ -16,6 +16,29 @@ use_cases:
   - "Rethink annual reviews and bonuses so they help the work ahead"
   - "Teach your team how the business makes money so they can decide well"
   - "Question each process and drop the ones that don't add value"
+not_for:
+  - "You need a script for a tough talk built on caring and clear feedback: use the Kim Scott mind."
+  - "You want to build a space where people feel safe to speak up and admit mistakes: use the Amy Edmondson mind."
+  - "You need legal advice on dismissals or pay in a regulated field: use an employment lawyer or HR adviser in your area."
+output_sample:
+  input:
+    - The people problem you face, such as a hire, a rule or a review
+    - What your team is working toward and by when
+    - The rules and rewards you have today
+    - The person you have been avoiding a talk with (optional)
+  output:
+    - name: The real problem
+      contains: A plain statement of what problem you are solving with the hire, rule or review.
+    - name: Behaviours you reward
+      contains: A list of what your team actually rewards, set next to the values you state.
+    - name: One policy to cut
+      contains: The one permission step or rule to drop, and what you fear will happen.
+    - name: Hard conversation for this week
+      contains: The talk to have now, with a short script in plain words.
+    - name: Small dated test
+      contains: A change to try in one team, with a date and a way to tell if it worked.
+    - name: Where it may not fit
+      contains: A note on where her Netflix practices failed or may not suit your team.
 seats:
   - {seat: "Hiring and honest culture", asks: "What problem does this hire need to solve, and are we telling people the truth about how they're doing?"}
   - {seat: "Freedom and responsibility", asks: "Do we need this rule, or are we just afraid to trust adults?"}

@@ -1,6 +1,6 @@
 new_slug: coupon-and-form-fixer
 name: Coupon and form fixer
-summary: Paste your coupon or form and offer. Get a version that sells the offer and asks only what you need.
+summary: Fix a reply coupon or sign-up form so it sells your offer and asks only what you need. Paste the form and offer to get a rewrite with a tracking code.
 job: read-ad-results
 thinking: low
 thinking_why: It applies a fixed list of checks and writes from your offer terms.
@@ -14,6 +14,10 @@ when:
   - Your form is a bare box with a button.
   - People start the form and do not finish it.
   - You get replies with missing or useless details.
+not_for:
+  - "You need a checkout or a landing page sign-up flow: use your shop or page builder, and ask a person who builds pages."
+  - "You have no offer yet: work out the offer and its real terms first, then come back with them."
+  - "You want to judge the tone of finished copy: use the Anti-AI-slop copy editor."
 you_give:
   - Your current coupon or form text and fields
   - The offer with its exact terms
@@ -28,6 +32,23 @@ how_to_use:
   - Paste your form as it is, with the fields.
   - Say whether you want more replies or better ones.
   - Add the code to the form and run it.
+output_sample:
+  input:
+    - Your current coupon or form text, with its fields
+    - Your offer, with exact terms
+    - Whether you want more replies or better ones (optional)
+    - "How the form is sent: print, page or email (optional)"
+  output:
+    - name: RULES
+      contains: Each of the ten rules for selling inside a coupon, marked pass or fail.
+    - name: REWRITTEN FORM
+      contains: "The new form: headline, what you get, what you do, a reason to reply now if real, fields, how to send, and a key code."
+    - name: FIELD TABLE
+      contains: Each field marked keep, drop or add, with the reason.
+    - name: MISSING
+      contains: Offer terms the form needs that you did not give.
+    - name: CHECKS MISSED
+      contains: One line for each final check that still fails, or none.
 how_it_works:
   - title: Ten rules
     text: Checks the form against ten rules for selling inside a coupon.

@@ -1,6 +1,6 @@
 new_slug: growth-idea-ranker
 name: "Growth idea ranker"
-summary: "Paste your list of growth ideas. Get each scored for impact, confidence and ease, with the first three to test."
+summary: "Rank your growth ideas by impact, confidence and ease. Get the top three tests, each with a measure and a stop date, in one sorted list."
 job: plan-strategy
 thinking: low
 thinking_why: "Scoring and sorting by a fixed rule is quick, though your scores need honest reasons."
@@ -17,6 +17,10 @@ when:
   - You have many growth ideas and no way to choose.
   - Meetings about what to try next end in a debate.
   - You ran tests and want the results to change the ranking.
+not_for:
+  - "You have no ideas yet: run a customer survey or talk to five buyers first, then bring what you learn here."
+  - "You need to choose between products or set a price: use a plain pros and cons list, or ask your customers directly."
+  - "You want to build the full plan for one idea: write a short project plan with your team instead."
 
 you_give:
   - Your list of ideas, from everyone who has them
@@ -34,6 +38,26 @@ how_to_use:
   - Share any results or notes from earlier checks.
   - Run the tests it sets in the order it gives.
   - Come back with the results so it can re-score the list.
+output_sample:
+  input:
+    - Your list of growth ideas, from everyone who has them
+    - What you know so far, such as results from earlier checks
+    - Your goal number and what you tried before (optional)
+  output:
+    - name: The list, scored and sorted
+      contains: Every idea with impact, confidence and ease scores, an average, and a short reason for each score.
+    - name: The first three to test
+      contains: One small test per top idea, with what you do, the measure, the stop date and days to run.
+    - name: Run order
+      contains: The three tests ordered quickest first, with why, and which can run side by side.
+    - name: Flagged as long builds
+      contains: Ideas that take more than about two weeks to try, kept out of the first round.
+    - name: After the tests
+      contains: A table to fill in with each idea, what it showed, new scores and new rank.
+    - name: Missing
+      contains: Facts that would sharpen the scores, such as a goal number or earlier results.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: Collects the ideas

@@ -16,11 +16,11 @@ outputs:
 uses: [release-readiness-reviewer, release-preparer, ship-readiness-gate, safe-release-planner, deploy-verifier, release-proof-checker]
 steps:
   - {uses: release-readiness-reviewer, note: "Every release, first and read-only: real deploy risks such as migrations, config, order and rollback. A blocker here stops the run before any version is set."}
-  - {uses: release-preparer, note: "Once the first review has no blockers: the next version number and the changelog, left as a local change for you."}
-  - {uses: ship-readiness-gate, note: "After the version is set: a go or no-go from set checks. On a no-go, you fix the blockers and it runs again, up to three times."}
-  - {uses: safe-release-planner, note: "On a go: the deploy steps, the checks after each step and a rollback. Longer when the release has migrations or config changes."}
-  - {uses: deploy-verifier, note: "Only after you say you deployed and give the link: proof that the live site serves the new build."}
-  - {uses: release-proof-checker, note: "Only after you say you deployed: fresh proof across code, checks, data and live pages. A failure points to the rollback."}
+  - {uses: release-preparer, note: "Once the first review has no blockers. It uses your project, not the review report, which has already cleared the way. It hands over your project with the next version number and the changelog in it, left as a local change for you."}
+  - {uses: ship-readiness-gate, note: "Checks your project with the new version set and gives a go or no-go. On a no-go, you fix the blockers and it runs again, up to three times. It hands over the verdict and the blocker list."}
+  - {uses: safe-release-planner, note: "On a go: uses your project and the gate verdict to write the deploy steps, the checks after each step and a rollback. Longer when the release has migrations or config changes. It hands over the deploy plan."}
+  - {uses: deploy-verifier, note: "Only after you say you deployed and give the link. It uses your project and that live link, not the plan, and hands over proof that the live site serves the new build."}
+  - {uses: release-proof-checker, note: "Only after you say you deployed. It uses your project and the live site again, not the earlier proof, and hands over fresh proof across code, checks, data and live pages. A failure points to the rollback."}
 schedule: "Before each release, and again once you have deployed"
 asks_before: [committing the version bump or changelog, creating or pushing a tag, publishing or deploying, running a database migration, rolling back]
 origin: own

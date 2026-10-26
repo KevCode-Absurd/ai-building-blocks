@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: Ordering the steps well depends on your data and deadline.
 new_slug: analysis-plan-builder
 name: Analysis plan builder
-summary: Give it a brief and your data. Get ordered steps with time estimates
-  and a list of risks.
+summary: Plan your data analysis before you start. Give it a brief and your data sources. You get ordered steps, time estimates and a risk list.
 job: track-numbers
 headline: Analysis plan builder
-subhead: A step by step plan for a data analysis, with time estimates and a list
-  of what could go wrong, made before you touch any data.
+subhead: A step by step plan for a data analysis, with time estimates and a list of what could go wrong, made before you touch any data.
 explain: |
   A step by step plan for a data analysis, with time estimates and a list of what could go wrong, made before you touch any data. It is most useful when the work has many steps or the data may not be there.
 
@@ -17,6 +15,10 @@ when:
   - The deadline is tight and you need to know if the work fits.
   - You are not sure the data you need even exists.
   - You want stakeholders to agree on the plan at a kickoff.
+not_for:
+  - "You only need a quick one-off number pulled: just run the query or build the sheet yourself."
+  - "Your brief is not agreed yet: gather the requirements from your stakeholders first, using the stakeholder requirements gathering skill."
+  - "You already have a plan and want to start the work: begin with your first step and check it against the deadline."
 you_give:
   - The analysis brief or requirements
   - Available data sources
@@ -27,7 +29,32 @@ you_get:
   - A risk and dependency log
   - A kickoff document (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. It works as pasted text and needs no code, web access or paid tool.
+  - Paste the skill instructions into the chat.
+  - Paste your brief, then list your data sources and your deadline.
+  - Say if you want a kickoff document for stakeholders.
+  - Read the plan. Check the time total against your deadline and look at any data marked unknown.
+  - Fix the gaps, then share the plan with the people who asked for the work.
+output_sample:
+  input:
+    - Your analysis brief or requirements
+    - The data sources you have, or think you have
+    - Your deadline
+    - Who and what time you have to do the work (optional)
+  prerequisites:
+    - A written brief, agreed with the people who asked for the work
+  output:
+    - name: Sub-questions
+      contains: The business question split into smaller questions, each answered by one data pull or one calculation.
+    - name: Data needs
+      contains: For each sub-question, the data required, marked confirmed, likely or unknown so blockers show early.
+    - name: Sequenced steps
+      contains: The order of work so each result feeds the next, with steps that can run side by side marked.
+    - name: Time estimates
+      contains: A time for each step, added up to a total you can compare with your deadline.
+    - name: Risk and dependency log
+      contains: Anything that could delay or break the plan, such as data gaps, approvals or unclear methods.
+    - name: Analysis plan
+      contains: All of the above filled into one plan document, ready to share.
+    - name: Kickoff document (optional)
+      contains: A short document for a stakeholder kickoff meeting, so everyone agrees on the plan.

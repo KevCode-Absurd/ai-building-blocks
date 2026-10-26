@@ -2,28 +2,24 @@ thinking: medium
 thinking_why: It picks the right symbolic steps and checks them.
 new_slug: symbolic-math-coder
 name: Symbolic math coder
-summary: Describe the equation. Get exact solutions worked out in MATLAB, and
-  turned into fast numeric functions.
+summary: Turn your equation into MATLAB code that solves it exactly and builds a fast numeric function. Built for symbolic math in MATLAB.
 job: build-software
 headline: Symbolic math coder
-subhead: Describe the equation in plain words, with any known values or
-  assumptions. It writes MATLAB code that sets up the variables, then
-  differentiates, integrates, solves or transforms, and simplifies the result.
-  You get working code, the exact solution, a fast numeric function and notes on
-  the assumptions used.
+subhead: Describe the equation in plain words, with any known values or assumptions. It writes MATLAB code that sets up the variables, then differentiates, integrates, solves or transforms, and simplifies the result. You get working code, the exact solution, a fast numeric function and notes on the assumptions used.
 explain: |
   MATLAB code that solves your equation exactly, shows the result in clean form, and turns it into a fast numeric function you can run on real data. That saves you from hand algebra and from syntax slips that make symbolic code fail.
 
   The skill follows the correct Symbolic Math Toolbox patterns. It declares symbolic variables with the right assumptions, then differentiates, integrates, solves or takes transforms. It simplifies or rewrites the result, and uses variable precision when you need digits. It converts answers with matlabFunction, and can go on to C code, transfer functions or state space form. You need MATLAB with the Symbolic Math Toolbox to run it.
 when:
-  - You have a differential equation and need its exact solution, not an
-    approximation.
-  - You derived a long formula and want it simplified or rewritten into a
-    cleaner form.
+  - You have a differential equation and need its exact solution, not an approximation.
+  - You derived a long formula and want it simplified or rewritten into a cleaner form.
   - You need a Laplace or Fourier transform worked out and checked.
   - You want a symbolic result turned into a fast function for simulations.
-  - You are working with physical units and want them tracked through the
-    algebra.
+  - You are working with physical units and want them tracked through the algebra.
+not_for:
+  - "You only need numbers from data or a simple calculation: use plain MATLAB numeric functions, or a spreadsheet."
+  - "You want an approximate answer to a differential equation: use a numeric solver such as ode45 in MATLAB."
+  - "You want statistics, machine learning or image work on data: use the MATLAB tools for that job, not this skill."
 you_give:
   - The equation or expression in plain words
   - Known values or assumptions for each variable
@@ -35,8 +31,26 @@ you_get:
   - A numeric function made from the symbolic result
   - Notes on assumptions used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Symbolic Math Toolbox.
+  - Open MATLAB with the Symbolic Math Toolbox installed. Check that it is there before you start.
+  - Open your AI chat and paste in the skill instructions from this page.
+  - Describe your equation in plain words. Add known values and any assumptions, such as a variable being positive.
+  - "Say what form you want back: exact answer, numeric function, or transfer function."
+  - Copy the MATLAB code your AI returns and run it. Check the exact result first, then the numeric function, then the assumptions.
+  - If MATLAB shows an error, paste the message back to your AI and ask it to fix the code.
+output_sample:
+  input:
+    - Your equation or formula in plain words
+    - Known values or assumptions for each variable (optional)
+    - The form you want back, such as exact, numeric or transfer function (optional)
+  prerequisites:
+    - MATLAB with the Symbolic Math Toolbox
+    - An AI that can write code, and ideally run MATLAB
+  output:
+    - name: MATLAB code
+      contains: Script that declares the symbolic variables with assumptions, then differentiates, integrates, solves or transforms your expression.
+    - name: Exact solution
+      contains: The simplified or rewritten symbolic result, with digits shown through variable precision when you ask for them.
+    - name: Numeric function
+      contains: A fast function made from the symbolic result with matlabFunction, ready to run on real data.
+    - name: Assumptions used
+      contains: A short note on the variable assumptions and choices the code relies on.

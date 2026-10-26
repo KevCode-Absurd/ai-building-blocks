@@ -10,6 +10,10 @@ level: advanced
 inputs:
   - type: codebase
     required: true
+  - type: feedback_notes
+    required: false
+  - type: code_change
+    required: false
 outputs:
   - type: security_report
 uses: []

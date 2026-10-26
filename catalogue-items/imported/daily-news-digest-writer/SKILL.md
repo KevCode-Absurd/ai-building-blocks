@@ -8,297 +8,127 @@ date_added: "2026-02-27"
 
 # Daily News Report v3.0
 
-> **Architecture Upgrade**: Main Agent Orchestration + SubAgent Execution + Browser Scraping + Smart Caching
+Reads a list of sites the user chose, picks the best items, and writes one Markdown report a day. A main agent plans and judges. Helper agents (sub-agents) fetch pages. A cache remembers what was already reported.
 
-## Core Architecture
+**Why the risk label is "critical":** this skill fetches pages from other people's websites, may open a headless browser, and runs several helper agents. Used carelessly it can break a site's rules, hit a login or paywall, or burn a lot of time and AI usage. Follow "Before you fetch" every run.
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        Main Agent (Orchestrator)                    │
-│  Role: Scheduling, Monitoring, Evaluation, Decision, Aggregation    │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                      │
-│   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
-│   │ 1. Init     │ → │ 2. Dispatch │ → │ 3. Monitor  │ → │ 4. Evaluate │     │
-│   │ Read Config │    │ Assign Tasks│    │ Collect Res │    │ Filter/Sort │     │
-│   └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘     │
-│         │                  │                  │                  │           │
-│         ▼                  ▼                  ▼                  ▼           │
-│   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
-│   │ 5. Decision │ ← │ Enough 20?  │    │ 6. Generate │ → │ 7. Update   │     │
-│   │ Cont/Stop   │    │ Y/N         │    │ Report File │    │ Cache Stats │     │
-│   └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘     │
-│                                                                      │
-└──────────────────────────────────────────────────────────────────────┘
-         ↓ Dispatch                          ↑ Return Results
-┌─────────────────────────────────────────────────────────────────────┐
-│                        SubAgent Execution Layer                      │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                      │
-│   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐              │
-│   │ Worker A    │   │ Worker B    │   │ Browser     │              │
-│   │ (WebFetch)  │   │ (WebFetch)  │   │ (Headless)  │              │
-│   │ Tier1 Batch │   │ Tier2 Batch │   │ JS Render   │              │
-│   └─────────────┘   └─────────────┘   └─────────────┘              │
-│         ↓                 ↓                 ↓                        │
-│   ┌─────────────────────────────────────────────────────────────┐   │
-│   │                    Structured Result Return                 │   │
-│   │  { status, data: [...], errors: [...], metadata: {...} }    │   │
-│   └─────────────────────────────────────────────────────────────┘   │
-│                                                                      │
-└─────────────────────────────────────────────────────────────────────┘
-```
+## Before you fetch
 
-## Configuration Files
+1. **Use only sites the user named or approved.** Never add sites yourself.
+2. **Check each site's terms and robots.txt.** If the site forbids automated fetching, skip it and tell the user. Prefer a site's RSS feed or email digest when it has one.
+3. **Never fetch login-only or paywalled pages.** Skip them and list them as skipped.
+4. **Do not get around blocks.** If a page returns 403 or a "bot check", mark the source `disabled` with the reason. Do not retry with other tools to get past it.
+5. **Be gentle.** One fetch per page, no tight loops, and respect the cache so the same page is not fetched twice in an hour.
+6. **Quote little.** Write your own 2 to 4 line summary of each item and link to the original. Do not copy articles.
 
-This skill uses the following configuration files:
+## What you need
+
+Ask once, in one message, for anything missing:
+
+1. **Sources:** the site addresses, grouped as most trusted (tier 1), good (tier 2) and needs a browser (tier 3). If the user only gives addresses, put them all in tier 1 and say so. `sources.json` in this folder is the author's example list. Replace it with the user's, and ignore its old quality and success numbers.
+2. **Topics:** what to keep and what to drop (optional). Default: cutting-edge tech, deep tech, productivity and practical information. Default drop: general science, marketing puff, overly academic papers and job posts.
+3. **How many items:** default 20 (optional).
+4. **Date:** default today (optional).
+5. **Tools available:** can you fetch web pages? Can you run helper agents? Is a browser tool connected (the chrome-devtools MCP)? Each is optional. If none are available, ask the user to paste page text or article links and work from that.
+
+## Files
 
 | File | Purpose |
 |------|---------|
-| `sources.json` | Source configuration, priorities, scrape methods |
-| `cache.json` | Cached data, historical stats, deduplication fingerprints |
+| `sources.json` | The sources, their tiers, how to fetch each, and quality limits. Edit it to your own list. |
+| `cache.json` | What was reported before, so repeats are skipped. Start from the empty one in this folder. |
 
-## Execution Process Details
+## Steps
 
-### Phase 1: Initialization
+### Phase 1: Set up
 
-```yaml
-Steps:
-  1. Determine date (user argument or current date)
-  2. Read sources.json for source configurations
-  3. Read cache.json for historical data
-  4. Create output directory NewsReport/
-  5. Check if a partial report exists for today (append mode)
-```
+1. Set the date. Read `sources.json` and `cache.json`.
+2. Create the output folder `NewsReport/`. If today's report exists, add to it.
+3. Run the "Before you fetch" checks on every source. Mark failures `skipped` with the reason.
+4. Check what tools you have (helper agents, web fetch, browser). If you cannot run helper agents, use **serial mode** below.
 
-### Phase 2: Dispatch SubAgents
+### Phase 2: Fetch in waves
 
-**Strategy**: Parallel dispatch, batch execution, early stopping mechanism
+- **Wave 1:** fetch the tier 1 sources, in two parallel batches if helper agents are available.
+- If fewer than 15 good items so far, **wave 2:** fetch the tier 2 sources.
+- If still fewer than 20, **wave 3:** fetch tier 3 sources that need JavaScript, using a browser tool if connected (see Phase 6). If no browser tool is connected, skip tier 3 and say so in the report.
 
-```yaml
-Wave 1 (Parallel):
-  - Worker A: Tier1 Batch A (HN, HuggingFace Papers)
-  - Worker B: Tier1 Batch B (OneUsefulThing, Paul Graham)
+### Phase 3: What each helper does
 
-Wait for results → Evaluate count
+Each helper is a stateless worker. It receives a list of URLs and returns JSON only:
 
-If < 15 high-quality items:
-  Wave 2 (Parallel):
-    - Worker C: Tier2 Batch A (James Clear, FS Blog)
-    - Worker D: Tier2 Batch B (HackerNoon, Scott Young)
-
-If still < 20 items:
-  Wave 3 (Browser):
-    - Browser Worker: ProductHunt, Latent Space (Require JS rendering)
-```
-
-### Phase 3: SubAgent Task Format
-
-Task format received by each SubAgent:
-
-```yaml
-task: fetch_and_extract
-sources:
-  - id: hn
-    url: https://news.ycombinator.com
-    extract: top_10
-  - id: hf_papers
-    url: https://huggingface.co/papers
-    extract: top_voted
-
-output_schema:
-  items:
-    - source_id: string      # Source Identifier
-      title: string          # Title
-      summary: string        # 2-4 sentence summary
-      key_points: string[]   # Max 3 key points
-      url: string            # Original URL
-      keywords: string[]     # Keywords
-      quality_score: 1-5     # Quality Score
-
-constraints:
-  filter: "Cutting-edge Tech/Deep Tech/Productivity/Practical Info"
-  exclude: "General Science/Marketing Puff/Overly Academic/Job Posts"
-  max_items_per_source: 10
-  skip_on_error: true
-
-return_format: JSON
-```
-
-### Phase 4: Main Agent Monitoring & Feedback
-
-Main Agent Responsibilities:
-
-```yaml
-Monitoring:
-  - Check SubAgent return status (success/partial/failed)
-  - Count collected items
-  - Record success rate per source
-
-Feedback Loop:
-  - If a SubAgent fails, decide whether to retry or skip
-  - If a source fails persistently, mark as disabled
-  - Dynamically adjust source selection for subsequent batches
-
-Decision:
-  - Items >= 25 AND HighQuality >= 20 → Stop scraping
-  - Items < 15 → Continue to next batch
-  - All batches done but < 20 → Generate with available content (Quality over Quantity)
-```
-
-### Phase 5: Evaluation & Filtering
-
-```yaml
-Deduplication:
-  - Exact URL match
-  - Title similarity (>80% considered duplicate)
-  - Check cache.json to avoid history duplicates
-
-Score Calibration:
-  - Unify scoring standards across SubAgents
-  - Adjust weights based on source credibility
-  - Bonus points for manually curated high-quality sources
-
-Sorting:
-  - Descending order by quality_score
-  - Sort by source priority if scores are equal
-  - Take Top 20
-```
-
-### Phase 6: Browser Scraping (MCP Chrome DevTools)
-
-For pages requiring JS rendering, use a headless browser:
-
-```yaml
-Process:
-  1. Call mcp__chrome-devtools__new_page to open page
-  2. Call mcp__chrome-devtools__wait_for to wait for content load
-  3. Call mcp__chrome-devtools__take_snapshot to get page structure
-  4. Parse snapshot to extract required content
-  5. Call mcp__chrome-devtools__close_page to close page
-
-Applicable Scenarios:
-  - ProductHunt (403 on WebFetch)
-  - Latent Space (Substack JS rendering)
-  - Other SPA applications
-```
-
-### Phase 7: Generate Report
-
-```yaml
-Output:
-  - Directory: NewsReport/
-  - Filename: YYYY-MM-DD-news-report.md
-  - Format: Standard Markdown
-
-Content Structure:
-  - Title + Date
-  - Statistical Summary (Source count, items collected)
-  - 20 High-Quality Items (Template based)
-  - Generation Info (Version, Timestamps)
-```
-
-### Phase 8: Update Cache
-
-```yaml
-Update cache.json:
-  - last_run: Record this run info
-  - source_stats: Update stats per source
-  - url_cache: Add processed URLs
-  - content_hashes: Add content fingerprints
-  - article_history: Record included articles
-```
-
-## SubAgent Call Examples
-
-### Using general-purpose Agent
-
-Since custom agents require session restart to be discovered, use general-purpose and inject worker prompts:
-
-```
-Task Call:
-  subagent_type: general-purpose
-  model: haiku
-  prompt: |
-    You are a stateless execution unit. Only do the assigned task and return structured JSON.
-
-    Task: Scrape the following URLs and extract content
-
-    URLs:
-    - https://news.ycombinator.com (Extract Top 10)
-    - https://huggingface.co/papers (Extract top voted papers)
-
-    Output Format:
+```json
+{
+  "status": "success | partial | failed",
+  "data": [
     {
-      "status": "success" | "partial" | "failed",
-      "data": [
-        {
-          "source_id": "hn",
-          "title": "...",
-          "summary": "...",
-          "key_points": ["...", "...", "..."],
-          "url": "...",
-          "keywords": ["...", "..."],
-          "quality_score": 4
-        }
-      ],
-      "errors": [],
-      "metadata": { "processed": 2, "failed": 0 }
+      "source_id": "hn",
+      "title": "...",
+      "summary": "2 to 4 sentences, your own words",
+      "key_points": ["...", "...", "..."],
+      "url": "...",
+      "keywords": ["...", "..."],
+      "quality_score": 4
     }
-
-    Filter Criteria:
-    - Keep: Cutting-edge Tech/Deep Tech/Productivity/Practical Info
-    - Exclude: General Science/Marketing Puff/Overly Academic/Job Posts
-
-    Return JSON directly, no explanation.
+  ],
+  "errors": [],
+  "metadata": { "processed": 2, "failed": 0 }
+}
 ```
 
-### Using worker Agent (Requires session restart)
+Rules for the helper: at most 10 items per source. Score quality 1 to 5. Keep only items that match the topics. Skip on error and say why in `errors`.
 
-```
-Task Call:
-  subagent_type: worker
-  prompt: |
-    task: fetch_and_extract
-    input:
-      urls:
-        - https://news.ycombinator.com
-        - https://huggingface.co/papers
-    output_schema:
-      - source_id: string
-      - title: string
-      - summary: string
-      - key_points: string[]
-      - url: string
-      - keywords: string[]
-      - quality_score: 1-5
-    constraints:
-      filter: Cutting-edge Tech/Deep Tech/Productivity/Practical Info
-      exclude: General Science/Marketing Puff/Overly Academic
-```
+### Phase 4: Watch and decide (main agent)
 
-## Output Template
+- Count what came back and note each source's success.
+- If a source fails twice, mark it disabled in `sources.json` with the reason.
+- Stop fetching when you have at least 25 items and at least 20 of high quality.
+- Keep going if fewer than 15 items. If every wave is done and there are still fewer than 20, write the report with what you have. Quality beats quantity.
+
+### Phase 5: Clean up and rank
+
+- Remove exact URL repeats, titles that are more than 80% alike, and anything already in `cache.json`.
+- Make the scores comparable across helpers. Weight by how much the user trusts the source.
+- Sort by score, then by source tier. Keep the top N (default 20).
+
+### Phase 6: Pages that need JavaScript (optional)
+
+Only for allowed sites that load their content with JavaScript, and only if a browser tool is connected. With the chrome-devtools MCP: open the page (`new_page`), wait for it to load (`wait_for`), read it (`take_snapshot`), pull out the items, then close the page (`close_page`). Never use this to get past a block or a login.
+
+### Phase 7: Write the report
+
+Save as `NewsReport/YYYY-MM-DD-news-report.md`, using the template below.
+
+### Phase 8: Update the cache
+
+In `cache.json`, record the last run, each source's results, the URLs and content fingerprints you used, and the articles included. Keep entries for 7 days.
+
+## Serial mode (no helper agents)
+
+If you cannot run helper agents, do every fetch yourself, one source at a time. It is slower but works the same. Put a clear note at the top of the report that it ran in serial mode.
+
+## Output template
 
 ```markdown
 # Daily News Report (YYYY-MM-DD)
 
-> Curated from N sources today, containing 20 high-quality items
-> Generation Time: X min | Version: v3.0
+> Curated from N sources, containing M items
+> Run time: X min
 >
-> **Warning**: Sub-agent 'worker' not detected. Running in generic mode (Serial Execution). Performance might be degraded.
+> Notes: <skipped sources and why, serial mode, missing browser tool>
 
 ---
 
 ## 1. Title
 
-- **Summary**: 2-4 lines overview
-- **Key Points**:
+- **Summary**: 2 to 4 lines in your own words
+- **Key points**:
   1. Point one
   2. Point two
   3. Point three
 - **Source**: Link
 - **Keywords**: `keyword1` `keyword2` `keyword3`
-- **Score**: ⭐⭐⭐⭐⭐ (5/5)
+- **Score**: 5 of 5
 
 ---
 
@@ -307,52 +137,46 @@ Task Call:
 
 ---
 
-*Generated by Daily News Report v3.0*
-*Sources: HN, HuggingFace, OneUsefulThing, ...*
+*Sources: HN, HuggingFace, ...*
 ```
 
-## Constraints & Principles
+## Constraints
 
-1.  **Quality over Quantity**: Low-quality content does not enter the report.
-2.  **Early Stop**: Stop scraping once 20 high-quality items are reached.
-3.  **Parallel First**: SubAgents in the same batch execute in parallel.
-4.  **Fault Tolerance**: Failure of a single source does not affect the whole process.
-5.  **Cache Reuse**: Avoid re-scraping the same content.
-6.  **Main Agent Control**: All decisions are made by the Main Agent.
-7.  **Fallback Awareness**: Detect sub-agent availability, gracefully degrade if unavailable.
+1. **Quality over quantity.** Weak items stay out of the report.
+2. **Early stop.** Stop fetching once there are enough good items.
+3. **Parallel first.** Helpers in one wave run at the same time.
+4. **One failure is not the end.** A source that fails does not stop the run.
+5. **Cache reuse.** Do not fetch the same content again.
+6. **The main agent decides.** Helpers fetch and score. They do not choose what ships.
+7. **Be honest about gaps.** Say what was skipped, blocked or not fetched.
 
-## Expected Performance
+## Expected time
 
-| Scenario | Expected Time | Note |
+| Case | Time | Note |
 |---|---|---|
-| Optimal | ~2 mins | Tier1 sufficient, no browser needed |
-| Normal | ~3-4 mins | Requires Tier2 supplement |
-| Browser Needed | ~5-6 mins | Includes JS rendered pages |
+| Best | about 2 minutes | Tier 1 is enough, no browser |
+| Typical | 3 to 4 minutes | Needs tier 2 |
+| With browser | 5 to 6 minutes | Includes JavaScript pages |
 
-## Error Handling
+These are the original author's estimates. Your time depends on your sites, tools and AI.
 
-| Error Type | Handling |
+## Errors
+
+| Error | What to do |
 |---|---|
-| SubAgent Timeout | Log error, continue to next |
-| Source 403/404 | Mark disabled, update sources.json |
-| Extraction Failed | Return raw content, Main Agent decides |
-| Browser Crash | Skip source, log entry |
+| Helper times out | Log it, move on |
+| Source returns 403 or 404 | Mark it disabled, record the reason, do not retry around it |
+| Login or paywall | Skip it and list it as skipped |
+| Extraction fails | Return the raw text, the main agent decides |
+| Browser crashes | Skip that source, log it |
 
-## Compatibility & Fallback
+## If something is missing
 
-To ensure usability across different Agent environments, the following checks must be performed:
+- No sources: ask for them. Do not choose sites yourself.
+- No fetch tool and no pasted text: say you cannot read pages here, and ask for pasted text or links. Do not write items from memory.
+- Fewer good items than asked: report the real count. Do not pad.
+- Never invent an article, a quote, a date or a link.
 
-1.  **Environment Check**:
-    -   In Phase 1 initialization, attempt to detect if `worker` sub-agent exists.
-    -   If not exists (or plugin not installed), automatically switch to **Serial Execution Mode**.
+## Next steps
 
-2.  **Serial Execution Mode**:
-    -   Do not use parallel block.
-    -   Main Agent executes scraping tasks for each source sequentially.
-    -   Slower, but guarantees basic functionality.
-
-3.  **User Alert**:
-    -   MUST include a clear warning in the generated report header indicating the current degraded mode.
-
-## When to Use
-This skill is applicable to execute the workflow or actions described in the overview.
+Read the report. Tell the AI which items were weak, and which sources to drop or raise a tier. For a regular habit, run it on a schedule in a tool that can run on a timer.

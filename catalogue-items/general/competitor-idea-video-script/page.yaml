@@ -1,6 +1,6 @@
 name: "Video script writer from a competitor ad idea"
 new_slug: competitor-idea-video-script
-summary: "Paste an admired ad and facts. Get a script on one idea, checked so nothing is copied."
+summary: "Turn a competitor ad you admire into a new video script. It borrows one idea, writes from your own facts, and checks nothing else is copied."
 job: study-competitors
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -19,6 +19,10 @@ when:
   - A teammate shares an ad and says "something with this energy".
   - You've studied competitor ads and want one idea from them without copying anyone.
   - You want to test whether a move from another category works for your buyer.
+not_for:
+  - 'You only have notes about a brand, like "science-first", and no ad you have seen: collect one real ad from the Meta Ad Library first, or give your own words about an ad you saw.'
+  - "You want to keep the ad's order and pace: use the competitor-video-ad-script skill instead."
+  - "You have no customer reviews or product facts: gather a few real quotes and facts first, or the proof lines will be marked missing."
 
 you_give:
   - A real ad, as a screenshot, a video, its words with where you saw them, or a breakdown card (attach the screenshot; your AI can see pictures)
@@ -29,7 +33,7 @@ you_get:
   - The one idea borrowed, in a sentence, with the fact it rests on and where it acts
   - A new script with the belief it changes, every line sourced, opening variants and a test plan
   - A five-line distance check and a list of anything missing
-  - Eight checks, such as a real ad named and nothing copied, with each one still missed named
+  - A list of any of the nine checks still missed, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -37,6 +41,28 @@ how_to_use:
   - Paste your reviews and product facts underneath. Add anything you don't want borrowed.
   - Read the idea line first. If it isn't what you liked, say what you liked and run it again.
   - Check all five distance lines say yes before you film anything.
+output_sample:
+  input:
+    - "A real ad you admire: a screenshot, its words with where you saw it, or a breakdown card"
+    - Your customer reviews or survey answers
+    - Your product facts, proof, offer, guarantee and allowed claims
+    - What not to borrow, and script length and speaker (optional)
+  prerequisites:
+    - A real ad someone saw, with an ID, a link or its own words
+    - Your brand facts, or the Brand profile builder result (helps, not required)
+  output:
+    - name: REFERENCE
+      contains: The ad you studied, with its source, and one line on what it does.
+    - name: IDEA BORROWED
+      contains: The one idea in a sentence, the fact of yours it rests on, and where it acts.
+    - name: SCRIPT
+      contains: The belief shift, a beat table with sourced lines, opening variants, a selling beat and a test plan.
+    - name: DISTANCE CHECK
+      contains: Five yes or no lines showing nothing but the idea came across from the ad.
+    - name: MISSING
+      contains: Every gap marked in the work, or none.
+    - name: CHECKS MISSED
+      contains: Each of the nine checks that failed or could not run, or none.
 
 how_it_works:
   - title: Checks there is a real ad

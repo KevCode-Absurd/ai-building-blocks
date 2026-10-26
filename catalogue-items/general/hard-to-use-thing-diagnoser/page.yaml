@@ -1,6 +1,6 @@
 new_slug: hard-to-use-thing-diagnoser
 name: "Hard-to-use thing diagnoser"
-summary: "Describe a thing people get wrong, or paste support complaints. Get what misleads them and the smallest fix."
+summary: "Find why people keep getting something wrong. Paste complaints or describe the mistake. You get the root cause and the smallest fix to try."
 job: design-work
 thinking: medium
 thinking_why: "It traces mistakes to their root cause and chooses the smallest effective fix, which needs judgement."
@@ -17,6 +17,10 @@ when:
   - Customers keep making the same mistake with your product, form or process.
   - Support tickets repeat and a label or manual has not helped.
   - You see people hesitate or push the wrong part and want to know why.
+not_for:
+  - "You have one odd complaint, not a repeat mistake: reply to that person and watch for more before you change anything."
+  - "The problem is only confusing wording: rewrite the text in plain words, or use the Plain words interface rewriter if you can find it."
+  - "You want a full redesign or a new feature plan: this finds one cause and small fixes, so hire a designer for bigger work."
 
 you_give:
   - What people try to do and what they do instead, or support complaints
@@ -34,6 +38,31 @@ how_to_use:
   - Say how often it happens and what it costs, if you know.
   - Read the root cause first. Check it against what you have seen people do.
   - Make the smallest fix and test it with someone who has never used the thing.
+output_sample:
+  input:
+    - What people try to do and what they do instead, or support complaints pasted as written
+    - Photos or screenshots of the thing (optional)
+    - Reviews or messages in people's own words (optional)
+    - How often the mistake happens (optional)
+  prerequisites:
+    - An AI that can read images, if you want it to check photos or screenshots
+  output:
+    - name: What people want and do
+      contains: For each mistake, what the person wanted to do, what they did instead, and how often if known.
+    - name: Clues
+      contains: Each clue at the point of action, marked present, missing or misleading, with its effect.
+    - name: Feedback
+      contains: Whether the thing shows that an action worked, and whether that sign is clear, weak, late or absent.
+    - name: Root cause
+      contains: A chain of up to five why lines, ending in one sentence about the design.
+    - name: Fixes, smallest first
+      contains: Three to five fixes, each with the clue it adds and a low, medium or high effort.
+    - name: Test with a new person
+      contains: Who to test with, the task to give them, and what counts as a pass.
+    - name: Missing
+      contains: What you still need to confirm the cause.
+    - name: Checks missed
+      contains: One line for each check the result failed, or none.
 
 how_it_works:
   - title: Writes want and action

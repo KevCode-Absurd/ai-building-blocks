@@ -2,18 +2,97 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-react18-lifecycle-patterns
 name: React unsafe lifecycle migrator
-summary: Share your React class components. Get replacements for unsafe
-  lifecycle methods and notes on changed behavior.
+summary: Replace componentWillMount, componentWillReceiveProps and componentWillUpdate in React class components with safe methods for React 18.
 job: test-and-fix-code
 headline: React unsafe lifecycle migrator
-subhead: Share your React class components. Get replacements for unsafe
-  lifecycle methods and notes on changed behavior. Share your goal and the files
-  you already have. The skill file sets out the steps and the tools needed for
-  this job.
+subhead: Paste a React class component that uses componentWillMount, componentWillReceiveProps or componentWillUpdate. Your AI decides what each method really does and moves it to the right safe method. No UNSAFE_ prefix shortcuts.
+explain: |
+  Three old class methods are unsafe: componentWillMount, componentWillReceiveProps and componentWillUpdate. React 18.3.1 warns about them, and React 19 removes them, with or without the UNSAFE_ prefix. Adding the prefix only hides the warning.
+
+  The right fix depends on what the method does. Setting up state belongs in the constructor. A fetch or subscription belongs in componentDidMount or componentDidUpdate. Reading the screen before an update belongs in getSnapshotBeforeUpdate. Picking the wrong one gives a bug that tests may not catch.
+
+  So this skill sorts each method first, using three small decision tables, then applies the matching pattern. It warns about the traps of getDerivedStateFromProps, such as running on every render and having no access to this. It allows the UNSAFE_ prefix only as a short-term hold, marked with a TODO.
+when:
+  - Your console shows warnings about componentWillMount or componentWillReceiveProps on React 18.3.1.
+  - You are getting ready for React 19 and your class components still use these methods.
+  - A component fetches data when a prop changes and you are not sure where that code should go.
+  - You are tempted to add UNSAFE_ to clear the warnings.
+not_for:
+  - "Your component only has async state bugs after the upgrade: use the React batching regression fixer."
+  - "You want to change string refs or old context: use the React string ref migrator or the React legacy context migrator."
+  - "You have function components with hooks only: there is nothing to migrate here, so check your effects with a code review."
+you_give:
+  - The class component files that use the unsafe methods
+  - Your React version
+  - What each method is meant to do, if the code is unclear (optional)
+  - Your tests for the component (optional)
+you_get:
+  - A table listing each unsafe method, what it does, and where it moves
+  - The rewritten component code
+  - Notes on any change in behavior, such as timing
+  - A list of spots that still need your decision
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page. If your AI takes file uploads, upload the whole skill folder so it can read the references folder.
+  - Paste one class component at a time. Say your React version.
+  - Ask your AI to name what each unsafe method does before it changes anything. Read that list. Correct it where your AI misread the code.
+  - Ask for the rewrite. Check that nothing added the UNSAFE_ prefix unless you asked for a short-term hold.
+  - Run your tests and click through the screen on your own machine. Your AI cannot do this in a chat window.
+how_it_works:
+  - title: Find the unsafe methods
+    text: It lists each use of componentWillMount, componentWillReceiveProps and componentWillUpdate.
+  - title: Sort by what it does
+    text: Each method is sorted by its job, such as set state, run a side effect, derive state or read the screen.
+  - title: Pick the safe method
+    text: The decision tables point to the constructor, componentDidMount, componentDidUpdate, getDerivedStateFromProps or getSnapshotBeforeUpdate.
+  - title: Rewrite the code
+    text: It applies the before and after pattern for that case from the reference files.
+  - title: Check the traps
+    text: It checks getDerivedStateFromProps use, since it runs on every render and cannot use this.
+  - title: Mark any hold
+    text: If you ask for a UNSAFE_ prefix, it adds a TODO that says React 19 removes it.
+output_shape: |
+  Methods found
+  - <component>: <method>, does <what it does>, moves to <safe method>
+  Rewritten code
+  <component code>
+  Behavior changes
+  - <method>: <what changes, such as timing>
+  Check by hand
+  - <anything unclear>
+output_sample:
+  input:
+    - Your class component files
+    - Your React version
+    - Notes on what a method is meant to do (optional)
+    - Your tests for the component (optional)
+  prerequisites:
+    - Your code kept in version control, so you can undo the change
+    - An AI that can read your pasted code or uploaded files
+  output:
+    - name: Methods found
+      contains: Each unsafe method, what it does, and the safe method it moves to.
+    - name: Rewritten code
+      contains: The component updated with constructor, componentDidMount, componentDidUpdate or getSnapshotBeforeUpdate.
+    - name: Behavior changes
+      contains: Any change in timing or order, so you know what to test.
+    - name: UNSAFE_ holds
+      contains: Any short-term UNSAFE_ prefix, marked with a TODO for React 19.
+    - name: Check by hand
+      contains: Methods your AI could not sort without more context.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can sort the methods and rewrite one component at a time. Upload the skill folder if it accepts files.
+    - name: An AI coding tool in your project
+      why: It can search all your files for the unsafe methods and run your tests.
+  inputs:
+    - A search list of every file that uses the three methods
+    - The tests for each component
+    - A note on what each component is for
+terms:
+  - term: Lifecycle method
+    meaning: A class method that React calls at a set time, such as when a component first appears.
+  - term: getDerivedStateFromProps
+    meaning: A static method that sets state from props. It runs on every render.
+  - term: Side effect
+    meaning: Work outside the screen, such as a fetch or a subscription.

@@ -16,6 +16,27 @@ use_cases:
   - "Find the everyday choices that show your team's real culture, not the values on the wall"
   - "Work out your next move when a plan has failed and cash is short"
   - "Prepare a hard talk with a loyal colleague who is no longer the right fit"
+not_for:
+  - "You want investment picks or a view on current politics: this mind gives neither, so talk to a licensed financial adviser instead."
+  - "You need a legal or HR ruling on a layoff or a firing: ask an employment lawyer or an HR adviser."
+  - "You want a calm, valuation-first look at a deal or share price: use the Aswath Damodaran mind, who works from the numbers behind a business."
+output_sample:
+  input:
+    - The hard decision or problem in your own words
+    - "The facts: what went wrong, how much cash or time you have left"
+    - Who is involved and who owns the next step
+    - What your team already knows (optional)
+  output:
+    - name: Peace or war call
+      contains: A plain answer on whether your team faces a threat to survival or an ordinary setback, and how to lead.
+    - name: The real problem
+      contains: The one hard problem named, with the shortcuts or pivots he would cut.
+    - name: Numbered steps
+      contains: What to do in order, who should do each step, and what to say.
+    - name: Draft message
+      contains: A frank note to your team that owns your part and skips spin, when you ask for one.
+    - name: Questions back to you
+      contains: Questions such as whether you have told the team the truth and who could share the load.
 seats:
   - {seat: "When things go wrong", asks: "Are we at peace or at war right now, and are we acting like it?"}
   - {seat: "No silver bullets", asks: "What's the real problem, and are we fixing it or looking for a shortcut?"}

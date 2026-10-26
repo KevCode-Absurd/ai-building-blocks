@@ -1,15 +1,14 @@
 slug: hours-to-assets-planner
 name: "Hours-to-assets planner"
-summary: "Paste how you earn today. Get which parts pay only while you work, and a plan to build something you own."
+summary: "See which of your income stops when you stop working. Get one way to turn your skill into something you own and a first step."
 category: general
 type: skill
 role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: plan, required: true}
-  - {type: question, required: false}
-  - {type: performance_sheet, required: false}
+  - {type: question, required: true}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt
@@ -17,3 +16,6 @@ version: 1.0.0
 minds: [naval-ravikant]
 credits:
   - {title: "The Almanack of Naval Ravikant", by: "Naval Ravikant and Eric Jorgenson", url: "https://www.navalmanack.com/", used: "How he separates wealth from money and status, the idea of specific knowledge, three kinds of multiplier, and judging partners by integrity first"}
+next: [smallest-test-picker, money-first-business-cut-planner, pricing-decision-planner]
+before: [specific-knowledge-finder]
+needs_mode: manual

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs tier layout and price choices with set rules.
 new_slug: membership-plan-pricer
 name: Membership plan pricer
-summary: Tell it your plans or membership. Get tier prices, flat or pay-per-use
-  advice, and ways to win upgrades.
+summary: Set prices for your membership plan tiers. Get tier prices, flat rate or pay-per-use advice, and a clear path for members to upgrade.
 job: set-prices
 headline: Membership plan pricer
-subhead: Clear prices for your plan tiers that nudge people to pick a plan and
-  move up a level. You give your tiers and goals, and get rounded,
-  ready-to-publish prices with a one-line reason for each.
+subhead: Clear prices for your plan tiers that nudge people to pick a plan and move up a level. You give your tiers and goals, and get rounded, ready-to-publish prices with a one-line reason for each.
 explain: |
   Clear prices for your plan tiers that nudge people to pick a plan and move up a level. You give your tiers and goals, and get rounded, ready-to-publish prices with a one-line reason for each.
 
@@ -18,6 +15,10 @@ when:
   - Few Basic members upgrade and you want to know why.
   - You are deciding between a flat monthly fee and pay-per-use.
   - You charge for extra seats or storage and the add-on prices look messy.
+not_for:
+  - "You sell one-off digital products like ebooks or courses: price them with a simple one-time price check, as this tool is for plans that renew."
+  - "You want to know what members are willing to pay each month: run a customer survey or ask a few members, as this tool does not measure demand."
+  - "You only need wording for a plan discount: ask your AI to write the discount text, as this tool sets prices, not copy."
 you_give:
   - Your tiers, prices and billing period
   - Any per-use price, such as per seat or per video
@@ -30,7 +31,28 @@ you_get:
   - Simple add-on prices
   - A short reason for each choice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your current price list, your billing period, and your member count by tier. Add recent upgrade numbers if you have them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your tiers, prices, any per-use price, and the tier you want people to pick.
+  - Add your perks or rewards if you have them. Say so if you do not.
+  - Read the table of prices and the reason for each line. Check that the upgrade path matches your goal.
+  - Note that the pay-per-use advice comes from research on business buyers of usage-based services. It may not hold for consumer memberships, so test it with your own members.
+output_sample:
+  input:
+    - Your plan tiers, prices and billing period
+    - Any per-use price, such as per seat, per video or per GB
+    - Which tier you want people to move to
+    - Your perks or rewards for members (optional)
+  output:
+    - name: Tiers
+      contains: The price for each plan tier and its billing period, rounded and ready to publish.
+    - name: Upgrade path
+      contains: How the lower tier price sits next to the higher one so a step up feels small.
+    - name: Pay-per-use
+      contains: Whether to keep pay-per-use as an entry option and how it compares with the flat rate.
+    - name: Components
+      contains: Simple prices for extra seats, storage or minutes, with no admin fee.
+    - name: Perk / rewards
+      contains: A minimum order for paid perks, and an automatic single-tier reward with a threshold.
+    - name: Why
+      contains: One line giving the reason for each choice above.

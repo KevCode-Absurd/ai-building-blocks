@@ -9,6 +9,8 @@ level: beginner
 inputs:
   - {type: plan, required: true}
   - {type: question, required: true}
+  - {type: audit_report, required: false}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report, required: true}
 origin: rebuilt

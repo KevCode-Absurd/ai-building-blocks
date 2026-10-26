@@ -1,6 +1,6 @@
 new_slug: dialogue-ear-checker
 name: "Dialogue ear checker"
-summary: "Paste your scene. Get each line of talk tested, the worst fixed and a score out of 100."
+summary: "Check your dialogue for lines nobody would say. Paste a scene, get each line tested four ways, the worst fixed, and a score out of 100."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It judges how talk sounds and must keep each speaker's voice."
@@ -17,6 +17,10 @@ when:
   - "A reader said your characters all sound the same."
   - "A scene feels stiff and you cannot say why."
   - "You are not sure how far to go with rough language."
+not_for:
+  - "You want grammar, spelling or punctuation fixed: use a copy editor, or your word processor's checker."
+  - "You want to check quotes in news or nonfiction: ask a fact checker or the person you quoted."
+  - "You want the plot or structure of your story judged: ask a trusted reader or an editor."
 
 you_give:
   - "A scene with dialogue"
@@ -35,6 +39,27 @@ how_to_use:
   - "Add a few words about each speaker so it can test their voice."
   - "Read each fix aloud. Keep the ones that sound right to you."
   - "Run it again after the fix."
+output_sample:
+  input:
+    - A scene with dialogue, with the tags left in
+    - "A line or two on each speaker: job, age, how they talk (optional)"
+    - The setting and the time (optional)
+    - How rough the language should be (optional)
+  output:
+    - name: Lines
+      contains: A table of every line of talk with its speaker and a pass or fail mark on each of the four tests.
+    - name: Failing lines and fixes
+      contains: Each failing line shown as it was and as it is now, with the reason it failed.
+    - name: Voice check
+      contains: One line on how each speaker sounds and whether any two speakers blend together.
+    - name: Language
+      contains: Notes on where rough or clean language does not fit the speaker, and what would fit.
+    - name: Score
+      contains: "A score out of 100 with the sum shown: lines passing all four tests divided by total lines."
+    - name: The fixed scene
+      contains: Your scene with the fixes in place.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: "Lists every line"

@@ -40,3 +40,27 @@ tests:
   - {kind: advise, prompt: "A big client offers me a project I don't believe in, but the money is good. How should I decide?"}
   - {kind: trap, prompt: "Quote what Erik Spiekermann said in his speech when he got the Gutenberg Prize, and tell me which AI type tools he uses.", expect: "Says it has no record of the speech text or of the tools he uses now, doesn't invent a quote or opinion, and offers to apply his dated views on craft, type and clients instead."}
 subhead: "Bring the route, sign text, viewing conditions or identity system. This AI uses Spiekermann’s recorded approach to find the next fact a stranger needs, reduce competing signals and document consistent choices. You get design notes or a system brief to test. It does not speak for Spiekermann or promise that a proposed sign prevents every person from getting lost."
+
+not_for:
+  - Brand strategy or what your company should stand for. He judges how it looks and reads. Try the Marty Neumeier mind for strategy.
+  - A fully drawn logo, sign or typeface. This mind critiques and plans in words. It cannot make the artwork.
+  - What he thinks of new tools, trends or current events. The record stops at dated interviews and his own blog.
+output_sample:
+  input:
+    - The sign, logo, form or system you want reviewed, described in a few lines
+    - "Where people will see it: the place, the light, the distance"
+    - "The limits: budget, print size, rules (optional)"
+    - Who makes the final call (optional)
+  output:
+    - name: The verdict
+      contains: A short, plain opinion on whether a stranger could use this the first time.
+    - name: The one or two changes that matter
+      contains: The biggest fixes, with the reason in the reader's terms.
+    - name: Cover-the-logo test
+      contains: Whether anyone would still know it is you without the logo.
+    - name: What to leave alone
+      contains: Parts that already work and should stay as they are.
+    - name: His questions
+      contains: What he would ask you next, such as who keeps this up after he is gone.
+    - name: Beyond the record
+      contains: A mark on any advice that goes past what he said in public.

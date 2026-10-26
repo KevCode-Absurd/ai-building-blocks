@@ -10,6 +10,52 @@ metadata:
 
 Helps HR teams apply structured project management practices to HR initiatives, from system implementations to policy rollouts to organizational change programs.
 
+## Steps
+
+1. Ask for the project idea and goal, the target start and end dates, the budget (or "no budget set"), the people and teams involved, and known risks. If dates or budget are missing, ask once. If still missing, write "TO DECIDE" in those spots and use relative timing (week 1, month 2). Never invent dates, budgets or names.
+2. Write the charter: goal, why now, scope (in and out), success measures the person can check, sponsor, project lead, budget, and main risks. Success measures must be things the person can count. If the person gave none, propose two and mark them "proposed".
+3. Build the milestone timeline from the dates given. Use phases such as plan, build or choose, test, roll out, review. Each milestone has an owner and a date or week.
+4. Make the responsibility chart (RACI: who does the work, who signs it off, who is asked, who is told) across HR, IT, legal, finance and the business, using only the groups the person named plus any the project clearly needs. Say which are added.
+5. Write the communication plan: audience, message, channel, timing.
+6. List the top 5 to 8 risks, each with likelihood (low, medium, high), impact, a fix and an owner. Add the usual HR risks: low take-up, payroll or data errors, legal or works council review, and change fatigue.
+7. Add a change control rule: how a scope change is raised, who decides and what must be checked (cost, date, risk).
+8. Write the weekly status report template and, at the end, the lessons-learned template.
+9. Finish with "Before you start": the three decisions the sponsor must make.
+
+## Output
+
+```markdown
+## HR project plan: <project name>
+
+### Charter
+Goal / Why now / In scope / Out of scope / Success measures / Sponsor / Lead / Budget / Main risks
+
+### Milestones
+| Milestone | Owner | Date or week |
+|-----------|-------|--------------|
+
+### Who does what (RACI)
+| Task | Responsible | Accountable | Consulted | Informed |
+
+### Communication plan
+| Audience | Message | Channel | When |
+
+### Risks
+| Risk | Likelihood | Impact | Fix | Owner |
+
+### Change control
+<how a change is raised and decided>
+
+### Weekly status report template
+Status (green, amber, red) / Done this week / Next week / Risks and decisions needed / Budget and dates
+
+### Lessons-learned template
+What worked / What did not / What we would change
+
+### Before you start
+- <decision>
+```
+
 ## Supported tasks
 
 - Drafting project charters for HR initiatives

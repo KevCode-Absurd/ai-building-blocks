@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It lists risks and judges their size.
 new_slug: financial-risk-mapper
 name: Financial risk mapper
-summary: Describe your exposures. Get risks listed and sized, with stress test
-  scenarios and ways to limit each.
+summary: Size the risks to your money in one pass. Get a financial risk assessment with VaR, stress tests and ways to limit each risk.
 job: money-and-investing
 headline: Financial risk mapper
-subhead: A list of the threats to your money, each sized in cost and likelihood,
-  with stress tests and steps to limit them. It turns a vague worry into numbers
-  you can act on.
+subhead: A list of the threats to your money, each sized in cost and likelihood, with stress tests and steps to limit them. It turns a vague worry into numbers you can act on.
 explain: |
   A list of the threats to your money, each sized in cost and likelihood, with stress tests and steps to limit them. It turns a vague worry into numbers you can act on.
 
@@ -18,6 +15,10 @@ when:
   - A customer or supplier looks shaky and you need to size your exposure.
   - Your lender asks for a risk review.
   - You need stress cases for a board paper.
+not_for:
+  - "You want a buy or sell call or personal investment advice: talk to a licensed financial adviser."
+  - "You want to value a stock or business: use an investment analysis step, not this risk review."
+  - "You need to place hedges or trade derivatives: ask a qualified professional and check your own risk limits first."
 you_give:
   - Your positions, exposures or counterparties
   - Time horizon
@@ -30,7 +31,27 @@ you_get:
   - Mitigation steps
   - A monitoring plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Say which risk you care about: portfolio, credit or operational. Add your time horizon."
+  - Paste your positions or counterparties. Add price history or credit ratings if you have them.
+  - Ask for the risk dashboard. Code running helps the VaR figures, so use a chat that can run code if you can.
+  - Check the top three risks and stress cases against what you know. Treat the hedging ideas as general information and show them to a qualified professional before you act.
+output_sample:
+  input:
+    - Your positions, exposures or counterparties
+    - Your time horizon, such as one day or one year
+    - Price history or credit ratings (optional)
+    - Liquidity figures (optional)
+  prerequisites:
+    - An AI that can run code, if you want the VaR figures calculated by the skill's script
+  output:
+    - name: Executive Summary
+      contains: Your top three risk exposures and whether you are within or over your risk limits.
+    - name: VaR Analysis Table
+      contains: Value at Risk at 95% and 99% confidence, explained in plain words.
+    - name: Stress Test Results
+      contains: Each bad-case scenario, such as a rate spike or sector crash, next to its estimated loss.
+    - name: Concentration report
+      contains: Where you are too heavily invested in one area.
+    - name: Mitigation Plan
+      contains: Hedging ideas, diversification steps and how much cash reserve to hold.

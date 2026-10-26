@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It scans definitions for a few known problems.
 new_slug: unused-custom-field-finder
 name: Unused custom field finder
-summary: Get custom field definitions that are unused, undocumented or share a
-  key, so your setup stays clean.
+summary: Find unused, undocumented and duplicate Shopify custom fields (metafield definitions) in a read-only scan, so you know what to review before a clean-up.
 job: run-your-store
 headline: Unused custom field finder
-subhead: A tidy list of Shopify custom field definitions that nobody uses,
-  nobody explained, or that repeat the same key in several places. You can clean
-  up your store setup with confidence.
+subhead: A tidy list of Shopify custom field definitions that nobody uses, nobody explained, or that repeat the same key in several places. You can clean up your store setup with confidence.
 explain: |
   A tidy list of Shopify custom field definitions that nobody uses, nobody explained, or that repeat the same key in several places. You can clean up your store setup with confidence.
 
@@ -18,6 +15,10 @@ when:
   - A developer left and you need to know what is safe to remove.
   - You want to find duplicates before a theme or app change.
   - You are preparing a store clean-up.
+not_for:
+  - You want to delete fields right now. This only reads. Search your theme for each namespace.key first, since a field with no saved values may still be used.
+  - You need to see what is stored inside the fields. Check a sample of values in your Shopify admin or ask a developer.
+  - You want to change or pin fields. This scan makes no changes, so do that in your Shopify admin.
 you_give:
   - Your store domain
   - Owner types to scan (optional)
@@ -29,8 +30,29 @@ you_get:
   - Flags for undocumented fields
   - Flags for duplicate keys
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Check that your AI can run code and that you are signed in to the Shopify command line with read access. If not, this skill cannot run.
+  - Paste the skill text into your AI. Give it your store domain, such as mystore.myshopify.com.
+  - Say which parts of your store to scan, or leave it blank to scan all of them.
+  - Read the report. Treat each flagged field as a candidate to review, not as safe to remove.
+  - Before you delete anything, search your theme code for each flagged namespace.key. A field with no saved values may still be read by the theme.
+  - Check a few real values for each unused field. Counts can lag in new stores.
+output_sample:
+  input:
+    - Your store domain
+    - Which parts of your store to scan, such as products or customers (optional)
+    - Which checks to run (optional)
+    - Report style, readable or JSON (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify command line
+    - A signed-in Shopify session with read access to products, customers, orders and inventory
+  output:
+    - name: Run summary
+      contains: Counts of fields scanned, and how many are unused, undocumented or share a key, grouped by owner type.
+    - name: Unused definitions
+      contains: Fields with zero saved values, which are candidates to review, not to delete yet.
+    - name: Undocumented definitions
+      contains: Fields that have no description, so nobody can tell what they are for.
+    - name: Duplicate keys
+      contains: Namespace and key pairs that appear on more than one owner type, such as orders and customers.
+    - name: metafield_def_audit_<date>.csv
+      contains: One row per field with its type, owner type, value count, pinned status and flags.

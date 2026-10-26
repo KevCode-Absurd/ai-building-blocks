@@ -1,13 +1,14 @@
 slug: new-user-drop-off-finder
 name: "New user drop-off finder"
-summary: "Paste visits, sign-ups and 30-day users. Get the biggest drop-off, a first-visit fix and a measure."
+summary: "Find where new users drop off between visit, sign-up and day 30. Get the biggest leak, the missing first-visit step and one fix to measure."
 category: general
 type: skill
 role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: shortlist, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

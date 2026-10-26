@@ -1,6 +1,6 @@
 new_slug: growth-bottleneck-finder
 name: Growth bottleneck finder
-summary: Share store results and planned changes. Get possible growth limits, a work order and the next check needed to test the leading idea.
+summary: Find what is holding back your store's growth. Give it your ad and funnel numbers. You get a ranked work order and the next test to run.
 job: plan-strategy
 thinking: high
 thinking_why: It has to weigh several layers against each other and pick one limit, and a wrong pick sends weeks of work the wrong way.
@@ -9,11 +9,15 @@ subhead: It reviews data quality, funnel steps, creative, account structure and 
 explain: |
   A store can stay flat for several reasons. A weak rate is a sign to investigate; it does not by itself prove what caused the problem.
 
-  This skill checks the data first, then compares the funnel, creative, account structure, outside events and cash. It names a leading hypothesis only where the evidence supports one and keeps other explanations visible. It sizes proposed changes as supported estimates or clearly labelled scenarios. Missing effect evidence stays unresolved. The result is a review and test plan, not proof that one change will unlock growth.
+  This skill checks the data first, then compares the funnel, creative, account structure, outside events and cash. It names a leading hypothesis only where the evidence supports one and keeps other explanations visible. It sizes proposed changes as supported estimates or clearly labelled scenarios. Missing effect evidence stays unresolved. The result is a review and test plan, not proof that one change will drive growth.
 when:
   - Revenue or profit has been flat for months even though you keep making changes.
   - You have a list of ideas, such as new ad sets, new pages and budget moves, and cannot tell which matters.
   - You are not sure whether the problem is your ads, your site, your product or your cash.
+not_for:
+  - "Your main problem is cash, stock or shipping: use the Online store bottleneck finder."
+  - "You want to know if your ad platform's ROAS is real: use the platform ROAS reality check, then the incrementality test planner for proof."
+  - "You have no ad, funnel or margin numbers yet: collect 3 months of data first, or ask your analyst for an export."
 you_give:
   - Monthly revenue, ad spend and gross margin
   - The metrics you use to decide, such as ROAS and conversion rate
@@ -33,6 +37,28 @@ how_to_use:
   - Say what outside the ad account might have moved sales, such as a creator deal or a press hit.
   - Read the evidence, alternative causes and missing checks before choosing a test. A score alone cannot establish the bottleneck.
   - Run it again on the re-test date with new numbers.
+output_sample:
+  input:
+    - Monthly revenue, ad spend and gross margin
+    - 3 to 6 months of CPM, click-through rate, CPC, conversion rate, order value and CAC
+    - Creative volume, ad age and account structure
+    - Your planned changes (optional)
+    - Cash and stock position (optional)
+  output:
+    - name: BOTTLENECK
+      contains: The leading supported idea, or UNRESOLVED, with the numbers that back it and a re-test date.
+    - name: LAYER CHECK
+      contains: A pass, part or fail for data, funnel, creative, account structure, and cash, with a reason for each.
+    - name: CUSTOM RUBRIC
+      contains: A score out of 100, how many layers were checked, and which layers are unknown.
+    - name: ORDER OF WORK
+      contains: "The order to fix things in: data first, then funnel or creative, then structure."
+    - name: CHANGES YOU PLANNED
+      contains: Each planned change with a supported estimate, a labelled scenario or an unresolved impact.
+    - name: IGNORE THIS QUARTER
+      contains: A short list of things not worth your time right now.
+    - name: CHECKS MISSED / MISSING
+      contains: The checks that failed and the numbers you did not give.
 how_it_works:
   - title: Checks the data first
     text: Do your metrics match profit? If the numbers you decide on are wrong, nothing else is worth tuning.

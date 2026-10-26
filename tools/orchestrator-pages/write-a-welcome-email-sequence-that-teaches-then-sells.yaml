@@ -1,6 +1,6 @@
 new_slug: write-a-welcome-email-sequence-that-teaches-then-sells
 name: Write a welcome email sequence that teaches, then sells
-summary: Give it your offer and reader. Get a five-email sequence, a Hopkins-style review, fixes and a send check.
+summary: "Write a welcome email sequence that teaches first and sells later: five emails, a review, fixes and a send check. Give it your offer and reader."
 job: write-emails
 thinking: high
 thinking_why: It writes emails real people will read and judges every claim in them. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your welcome email is one line and a discount code.
   - New subscribers buy at a lower rate than you expected.
   - You have knowledge your customers want and never share it.
+not_for:
+  - Your list has not opted in. Get permission first, then run this. The Email permission and message review can help you check.
+  - You want a one-off promotion. Use the Campaign email writer for a single email.
+  - You want emails that chase buyers who did not reply or buy. Use the Follow-up email sequence writer instead.
 you_give:
   - What you offer and who joins your list
   - Three to five things you know that a new reader would find useful
@@ -30,13 +34,33 @@ how_to_use:
   - Paste your offer, your reader and the useful things you know. It writes the sequence.
   - Read the review and the fixed emails. Change anything that does not sound like you.
   - Read the send check, then load the sequence into your email tool.
+output_sample:
+  input:
+    - What you offer and who joins your list
+    - Three to five useful things you know that a new reader would want
+    - Your voice, or two emails you were happy with
+    - Your brand file (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+    - A buyer brief from the Buyer brief writer (optional but helps)
+  output:
+    - name: "Step 1: Sequence"
+      contains: Five emails with timing, each with a subject, the one thing it teaches, when the ask comes, and the body.
+    - name: "Step 2: Hopkins review"
+      contains: Each email judged on claim, reason why, proof and one action, with a fix for each weak point.
+    - name: "Step 3: Fixed emails"
+      contains: The final subject and body of each email, with a note of what changed.
+    - name: "Step 4: Send check"
+      contains: A score for each email, with notes on links, length, spam triggers and what to fix first.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the sequence
     text: Writes five emails with timing, each teaching one useful thing, with the ask after the reader has had something.
   - title: Review like Hopkins
     text: "Reviews each email against Hopkins's tests: specific claim, reason why, proof, one clear action."
   - title: Fix the mistakes
-    text: "Fixes each flagged line: vague subjects, claims without proof, two asks in one email."
+    text: "Edits the step 1 emails, using the review as the list of flagged lines: vague subjects, claims without proof, two asks in one email."
   - title: Check each is ready
     text: Scores each email for send readiness and lists what to fix before it goes live. You switch it on.
 output_shape: |-

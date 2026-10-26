@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It compares dense rule text with your real practice.
 new_slug: new-ai-rule-gap-checker
 name: New AI rule gap checker
-summary: Give it a new AI law. Get gaps against what you do now and a fix plan.
-  Not legal advice.
+summary: Check a new AI law against what your company does today. You get a gap list and a dated fix plan. Not legal advice.
 job: check-contracts
 headline: New AI rule gap checker
-subhead: A list of what a new AI law or guidance means for your company, set
-  against what you already do. Instead of reading a hundred pages, you see the
-  gaps and a plan to close them.
+subhead: Give it a new AI law or guidance and a record of how you use AI today. It checks if the rule applies to you, then lists the gaps. You get a fix plan with owners and dates.
 explain: |
   A list of what a new AI law or guidance means for your company, set against what you already do. Instead of reading a hundred pages, you see the gaps and a plan to close them.
 
@@ -16,24 +13,53 @@ explain: |
 when:
   - A new AI law is announced and you need to know if it affects you.
   - Your legal team needs a gap list before a compliance deadline.
-  - You want to see which AI tools you use fall under a rule.
-  - You must brief leadership on what to change first.
+  - You want to know which of your AI tools fall under a rule.
+  - You need to tell leadership what to change first.
+not_for:
+  - "You need legal advice or a signed-off opinion: ask your lawyer, because this only drafts a gap list for them to review."
+  - "You want to review a vendor or customer contract: read it with your lawyer, as this checks rules, not contract terms."
+  - "You have no record of your AI uses yet: write a simple list of the AI tools you use first, then run this."
 you_give:
-  - The regulation or guidance to check
-  - A record of your AI uses and policies
-  - Your location and sector (optional)
+  - The AI law or guidance to check, as a name or pasted text
+  - Your record of AI uses, vendor positions, impact checks and public promises, in the CLAUDE.md file
+  - Your location, size and sector (optional)
   - Vendor details (optional)
 you_get:
-  - A yes or no on whether the rule applies
-  - The requirements pulled out
-  - Gaps ranked by urgency
-  - A dated remediation plan for your file
+  - A yes or no on whether the rule applies to you
+  - The requirements pulled out of the rule
+  - Each gap sorted into must do, should do, already met or accepted
+  - A dated fix plan with owners and deadlines, saved as a file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web for the rule text.
-  - Where the skill points to /ai-governance-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Use an AI that can read files. Web search helps it find the rule text. Legal research tools are optional and paid.
+  - Fill in your CLAUDE.md file first. Add short sections for your places and sector, your AI uses, your public promises, your vendors and your impact check habits.
+  - Open the skill in your AI. Give it the rule name, or paste the rule text.
+  - Read the scope answer first. If the rule does not apply, it stops with one line.
+  - Check the gap table against what you really do. Fix anything wrong.
+  - Have your lawyer check every citation, then save the dated plan and track items as they close.
+output_sample:
+  input:
+    - The AI law or guidance, as a name or pasted text
+    - Your record of AI uses, vendor positions and policy promises
+    - Your location, size and sector (optional)
+    - Your past impact checks (optional)
+  prerequisites:
+    - An AI that can read your files and, ideally, search the web for the rule text
+    - A filled-in CLAUDE.md file with your AI uses, vendors, impact checks and public promises
+    - A legal research tool to check citations (optional, paid)
+  output:
+    - name: Scope check
+      contains: A short answer on whether the rule applies to you, based on place, role, size and sector.
+    - name: Requirements list
+      contains: Each duty pulled out of the rule, with where it came from and notes where the law is unclear.
+    - name: Gap table
+      contains: Each requirement set against your current practice, with the gap or match for each one.
+    - name: Must-do before enforcement
+      contains: Gaps that need action before the rule is enforced, with owners and deadlines.
+    - name: Should-do
+      contains: Important gaps that do not block enforcement, with owners and deadlines.
+    - name: Already compliant
+      contains: Requirements you already meet, with the practice that meets them.
+    - name: Accepted gaps
+      contains: Gaps you chose to leave open, with the risk you accepted.
+    - name: Dated markdown file
+      contains: The whole plan saved as a file you can keep and update as items close.

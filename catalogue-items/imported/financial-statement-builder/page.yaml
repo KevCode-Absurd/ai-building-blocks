@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It assembles linked statements that must agree.
 new_slug: financial-statement-builder
 name: Financial statement builder
-summary: Give it your books. Get a balance sheet, cash flow statement, P&L and
-  executive summary.
+summary: Turn your trial balance into a balance sheet, cash flow statement, P&L and plain summary. Build financial statements from your books in one chat.
 job: money-and-investing
 headline: Financial statement builder
-subhead: The three main statements and a short summary, produced from a trial
-  balance or ledger export. You get an income statement, balance sheet and cash
-  flow statement ready to hand to a reader.
+subhead: The three main statements and a short summary, produced from a trial balance or ledger export. You get an income statement, balance sheet and cash flow statement ready to hand to a reader.
 explain: |
   The three main statements and a short summary, produced from a trial balance or ledger export. You get an income statement, balance sheet and cash flow statement ready to hand to a reader.
 
@@ -18,6 +15,10 @@ when:
   - You must show lenders last quarter's results.
   - You want a comparison with the same quarter last year.
   - Your board needs a one-page explanation of the numbers.
+not_for:
+  - "You need tax filings or audited accounts: ask a qualified accountant, because this gives analysis, not advice."
+  - "You only need a routine monthly close: use the reports built into your accounting software."
+  - "Your trial balance has missing accounts: ask your bookkeeper to finish it first, then run this."
 you_give:
   - A trial balance, ledger or categorized transactions
   - Reporting period
@@ -30,7 +31,25 @@ you_get:
   - Key ratios
   - An executive summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your trial balance or ledger export under it. Spreadsheet text works, or attach the file if your AI takes files.
+  - Say the reporting period and whether you use GAAP or IFRS. Add last period figures if you have them.
+  - Check that the balance sheet balances and that net income matches across all three statements.
+  - Send the results to your bookkeeper or accountant before they go to lenders, investors or regulators.
+output_sample:
+  input:
+    - Your trial balance, ledger export or sorted transactions
+    - The reporting period
+    - GAAP or IFRS
+    - Last period or last year figures (optional)
+  output:
+    - name: Income statement
+      contains: Revenue down to net income, with gross profit and operating income subtotals, and changes against the earlier period if you gave one.
+    - name: Balance sheet
+      contains: Assets, liabilities and equity, split into current and long-term, checked so assets equal liabilities plus equity.
+    - name: Cash flow statement
+      contains: Net income turned into operating cash, then investing and financing activity, ending with cash at the close of the period.
+    - name: Key ratios
+      contains: Margins, current ratio, quick ratio, debt to equity and other ratios, with flags on big shifts from the earlier period.
+    - name: Executive summary
+      contains: A one-page plain-language note that opens with the headline, then the main drivers, risks and items needing attention.

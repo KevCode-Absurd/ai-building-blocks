@@ -1,6 +1,6 @@
 new_slug: feedback-conversation-planner
 name: "Feedback conversation planner"
-summary: "Describe the person and the problem. Get the conversation: what to praise, what to say and how to say it."
+summary: "Plan a feedback conversation that gets heard. Describe the person and the problem. You get what to praise, what to say and how to say it."
 job: lead-people
 thinking: medium
 thinking_why: "It reads a situation and adapts, but the conversation steps are fixed."
@@ -17,6 +17,10 @@ when:
   - You have been avoiding a talk with someone for days or weeks.
   - You are not sure whether you are too soft or too harsh with someone.
   - You have a draft message and need to turn it into a conversation.
+not_for:
+  - "You need to raise a serious conduct, safety or legal issue: talk to HR or your manager first."
+  - "You only want to thank someone: write a short note yourself, or use the Honest appreciation note writer."
+  - "You want to calm a disagreement between peers: use the Disagreement calming line writer."
 
 you_give:
   - The person, your relationship and how long the problem has gone on
@@ -35,6 +39,29 @@ how_to_use:
   - Add any draft message you wrote earlier.
   - Read the plan and choose the time and place. Do it soon, in person.
   - Afterwards, tell the skill how it went and plan the next step.
+output_sample:
+  input:
+    - The person, your relationship and how long the problem has gone on
+    - What you saw them do and the effect it had
+    - What you have already said, if anything
+    - A draft message (optional)
+  output:
+    - name: Where you are on the chart
+      contains: Whether you show care and challenge, the box you are in, and what to change in your approach.
+    - name: Open with
+      contains: One specific, sincere piece of praise taken from what you shared.
+    - name: Say
+      contains: The behaviour in plain words and the effect it had, with no comment on character.
+    - name: How to say it
+      contains: Lines to keep it humble, helpful, immediate and in person.
+    - name: Ask and listen
+      contains: Two questions for their view and a plan for push-back.
+    - name: Follow-up
+      contains: A date within days to two weeks and what you will look for.
+    - name: MISSING
+      contains: Any facts you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Places the situation

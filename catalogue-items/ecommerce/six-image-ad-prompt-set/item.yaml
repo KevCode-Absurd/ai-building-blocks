@@ -1,6 +1,6 @@
 slug: six-image-ad-prompt-set
 name: Six image ad prompt builder
-summary: Turn one real product photo into six complete ad prompts, with a shared brand fingerprint and clear scene or overlay directions.
+summary: Turn one product photo into six ready-to-paste image ad prompts that share the same brand details, copy and layout rules.
 category: ecommerce
 type: skill
 role: make
@@ -15,8 +15,6 @@ inputs:
     required: false
 outputs:
   - type: image_prompt
-    required: true
-  - type: brief
     required: true
 uses: []
 package_files: all

@@ -1,6 +1,6 @@
 new_slug: behaviour-and-fix-notes-writer
 name: "Behaviour and fix notes writer"
-summary: "Describe what keeps going wrong and who does it. Get one watchable behaviour, their likely reason, true strengths and a small fix."
+summary: "Write clear notes before you give hard feedback. Name one watchable behaviour, a fair reason for it, true strengths and a small fix."
 job: lead-people
 thinking: medium
 thinking_why: "It has to separate behaviour from character and pick true praise, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "Someone's work or conduct has slipped and you have not said anything yet."
   - "You keep repeating the same complaint and nothing changes."
   - "You must give feedback tomorrow and your notes are a list of annoyances."
+not_for:
+  - "You face a formal disciplinary or performance process: talk to HR or follow your written policy first."
+  - "You need the message itself: use the Hard feedback message writer after you have your notes."
+  - "The problem is a one-off with a small cost: let it go or say a quick word."
 
 you_give:
   - "What keeps going wrong, with one or two real examples"
@@ -35,6 +39,29 @@ how_to_use:
   - "Add what you value in them. If nothing comes to mind, say so."
   - "Read the notes. Check that the behaviour is something you could film."
   - "Take the notes to \"Hard feedback message writer\"."
+output_sample:
+  input:
+    - What keeps going wrong, with one or two real examples
+    - Who it is and how you work together
+    - The result you would like instead
+    - What you value in them (optional)
+  output:
+    - name: Worth raising?
+      contains: Whether it is a pattern or a one-off, what silence costs, and a decision to raise it or let it go.
+    - name: The behaviour and the result
+      contains: One sentence a camera could record, and one sentence on the result you want instead.
+    - name: Your part
+      contains: What you did or did not do that may have helped cause the problem.
+    - name: Why they may do it
+      contains: A fair reason marked known or guess, with a question to check it.
+    - name: True strengths
+      contains: Three things they do well, each with an example, and the one closest to the problem marked.
+    - name: The smallest fix
+      contains: The first easy step, why it is easy, and what better looks like in a week.
+    - name: Keep, change and leave out
+      contains: Strengths to name, the one behaviour and fix to raise, and old faults you will not bring up.
+    - name: Missing and checks missed
+      contains: What you did not say that would help, and any of its own checks that failed.
 
 how_it_works:
   - title: "Decides if it is worth raising"

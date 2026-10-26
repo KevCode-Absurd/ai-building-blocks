@@ -1,6 +1,6 @@
 new_slug: inquiry-problem-diagnoser
 name: Inquiry problem diagnoser
-summary: Paste your ad results. Get a call on whether you need more leads or better ones, with the sums.
+summary: Find out if your ads need more replies or better ones. Paste your ad results and get the cost per reply and per sale, plus a clear call.
 job: read-ad-results
 thinking: medium
 thinking_why: It does fixed sums, then makes a judgement call between raising and cutting.
@@ -14,6 +14,10 @@ when:
   - Your ad brings replies but you do not know if they are the right ones.
   - Your sales team complains about junk leads.
   - Your replies fell and you do not know why.
+not_for:
+  - "You have no ad results yet, or fewer than about 20 replies in total: wait for more data before you judge, or run the ads longer first."
+  - "You want the offer itself rewritten: use the Lead offer tuner once you know what to fix."
+  - "You want to know whether to keep or change a whole campaign: use the Campaign keep-or-change checker."
 you_give:
   - Your offer and what a reply gets the person
   - "For each ad: cost, replies, qualified leads, sales"
@@ -25,10 +29,30 @@ you_get:
   - Outside factors that may explain the result
   - What to change in the offer, in plain terms
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your numbers by ad or version.
-  - Say how you decide a lead is qualified.
-  - Take the call to the Lead offer tuner.
+  - Open a chat in Claude, ChatGPT or Gemini. Add the skill, or copy it and paste it in. No code or paid tool is needed.
+  - "Paste your offer, then your numbers for each ad: cost, replies, qualified leads and sales."
+  - Say in one line what makes a lead qualified, and what it costs you to follow up one reply.
+  - Read the call and the sums. Check any ad with fewer than about 20 replies as a hint, not a finding.
+  - Take the call to the Lead offer tuner to change the offer.
+output_sample:
+  input:
+    - Your offer and what a reply gets the person
+    - Cost, replies, qualified leads and sales for each ad
+    - What you spend to follow up one reply
+    - Where and when each ad ran (optional)
+  output:
+    - name: Funnel by ad
+      contains: One row per ad with cost, replies, qualified leads, sales, cost per reply and cost per sale with follow-up.
+    - name: Call
+      contains: "One verdict: raise the number, raise the quality, or fix the ad first, with the reason."
+    - name: Outside factors
+      contains: Size, colour, season, position, news and weather that may explain the result, and how likely each is.
+    - name: Offer as run
+      contains: Where the offer sits in the ad, how big it is, what it says and whether a price shows.
+    - name: Missing
+      contains: Any numbers you did not give, so nothing is guessed.
+    - name: Checks missed
+      contains: One line for each check the answer failed, or none.
 how_it_works:
   - title: Counts the funnel
     text: Replies, qualified leads and sales for each ad.

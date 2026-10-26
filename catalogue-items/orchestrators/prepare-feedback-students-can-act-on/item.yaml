@@ -1,6 +1,6 @@
 slug: prepare-feedback-students-can-act-on
 name: Prepare feedback students can act on
-summary: Share the source files. Get criterion-linked feedback, a revision task and a teacher review list.
+summary: Turn your draft comments into feedback students can act on. Get a clear rubric, rewritten comments tied to it and a short revision task.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -24,11 +24,11 @@ uses:
   - practice-problem-set-writer
 steps:
   - uses: single-point-rubric-builder
-    note: Clarify the target standard and observable evidence for the supplied task.
+    note: "Turns your goal or rubric into one clear standard with space for gaps and evidence. Hands the standard to the comment check."
   - uses: written-feedback-checker
-    note: Check whether the draft feedback is specific, accurate and useful for the next revision.
+    note: "Checks each draft comment against that standard for specificity, accuracy and a next step, and rewrites the weak ones. Hands the main gap to the revision task step."
   - uses: practice-problem-set-writer
-    note: Create a short, checked revision task targeting the specific gap identified in the feedback.
+    note: "Writes a short revision task aimed at that gap, with answers or marking notes. Hands the task to the teacher review list."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

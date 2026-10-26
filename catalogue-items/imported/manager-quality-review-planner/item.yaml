@@ -8,7 +8,7 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: question
+  - type: brief
     required: true
 outputs:
   - type: plan
@@ -31,7 +31,7 @@ credits:
   - title: hr-manager-effectiveness skill
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-manager-effectiveness
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Adapted under the MIT licence. We gave it a plain name and added steps, an output format and safety rules.
   - title: Original author
     by: Tuan Duc Tran
     url: https://github.com/tuanductran

@@ -1,6 +1,6 @@
 new_slug: long-form-draft-editor
 name: Long-form draft editor
-summary: Give it a finished draft. Get it checked, edited and checked again until it passes, with every change logged.
+summary: Give this long-form draft editor a finished story, talk or article. It edits in rounds, fixes what it can and lists the problems left for you.
 job: write-and-tell-stories
 thinking: high
 thinking_why: It reads a long draft closely, decides who owns each problem and fixes only what it should. Give it your strongest model.
@@ -16,6 +16,10 @@ when:
   - You have a finished draft that has rested and you want it tightened without losing your voice.
   - You want to know which problems you must fix yourself and which an editor can fix for you.
   - Your readers sent notes and you want a ranked list of what to fix first.
+not_for:
+  - "You want to edit an ad, sales page or email: use a copy editor or ask your AI to rewrite it for the sale."
+  - "Your draft is under about 1,000 words: one quick edit pass in your AI is enough, so skip the rounds."
+  - "You want the agent to fix a plot hole or a wrong fact: that is your call, so decide it yourself or ask a trusted reader."
 you_give:
   - The whole draft in one file, and how long it has rested
   - "The kind of piece, a story or narrative or an article, guide or post"
@@ -34,6 +38,30 @@ how_to_use:
   - Read the hand-back. Fix the problems on your list yourself.
   - Send the draft to first readers with the question sheet. When their notes come in, run the agent again. It starts with their notes.
   - Run it as many times as you like. It keeps a kept-on-purpose list, so it never undoes a choice you made.
+output_sample:
+  input:
+    - Your whole draft in one file, and how long it has rested
+    - "The kind of piece: a story or narrative, or an article, guide or post"
+    - The brief or word limit (optional)
+    - First readers' notes (optional)
+    - Your facts and sources, if it is an article (optional)
+  prerequisites:
+    - An AI that can save and read files, such as Claude Code, to keep the edit folder between rounds
+  output:
+    - name: The draft
+      contains: The latest round's file, next to your untouched original.
+    - name: Scores by round
+      contains: Each check's result at the start and after each round.
+    - name: Why it stopped
+      contains: Whether the draft passed, hit the round cap, reached your turn, or stopped making progress.
+    - name: What changed
+      contains: Every change per round, with the skill that made it and the reason.
+    - name: Yours to decide
+      contains: Each plot hole, out-of-character act or unsupported fact left, with the page and the question to answer.
+    - name: Questions for first readers
+      contains: A question sheet to send to readers, or a note that it waits for your decisions.
+    - name: Files and missing
+      contains: Each round's file, then every MISSING line in one list.
 how_it_works:
   - title: Set up
     text: Saves your original, asks the kind of piece, and opens the list of lines you said to keep.

@@ -2,35 +2,94 @@ thinking: low
 thinking_why: It follows a set job post shape from your facts.
 new_slug: inclusive-job-post-writer
 name: Inclusive job post writer
-summary: Name the role. Get a clear job post with real requirements, plus a fix
-  for biased or bloated wording.
+summary: Write an inclusive job post from a role or an old ad, with clear must-haves, 30, 60 and 90 day goals and biased wording fixed.
 job: hire-people
 headline: Inclusive job post writer
-subhead: A job post that candidates can read in a minute and trust, with real
-  requirements and no wording that quietly pushes good people away. Give it a
-  role, or paste an old post to be fixed.
+subhead: Give it a role, or paste an old job ad. It writes a job post people can read in a minute. It splits must-have skills from nice-to-have ones. It flags biased wording and swaps in plainer words.
 explain: |
-  A job post that candidates can read in a minute and trust, with real requirements and no wording that quietly pushes good people away. Give it a role, or paste an old post to be fixed.
+  An inclusive job post writer helps you reach strong people who would skip a poor ad. Long wish lists and words like "rockstar" put off good applicants. This skill opens with why the role matters, not with a list of demands.
 
-  The skill writes an opening summary, what the person will do, and what success looks like at 30, 60 and 90 days. It splits must-have skills from nice-to-have ones, since long wish lists keep out strong applicants who doubt themselves. It scans for biased or inflated terms, like "rockstar" or ten years for a new tool, and offers plainer swaps. It also covers pay, benefits and a team description that reads as honest.
+  It writes what the person will do and what success looks like at 30, 60 and 90 days. It keeps must-have skills to the few the job truly needs. Then it scans for biased or inflated wording, such as degrees or years of experience the job does not need, and offers plainer swaps.
+
+  It is built around the must-have split and the first three months. If you want the AI to ask you questions first and pass the post on to sourcing and outreach, use the Job post writer.
 when:
   - You must hire for a role and have no job post yet.
-  - Your old job post gets few or narrow applicants.
-  - The requirements list is long and half of it is not needed.
-  - You want a post checked for biased wording.
-  - You need to explain what the first three months look like.
+  - Your last job post got few applicants, or only one kind of applicant.
+  - Your list of requirements is long and half of it is not needed.
+  - A teammate says, "Can you check this ad for biased wording?"
+not_for:
+  - "You want to find or message candidates: use the Candidate sourcing planner or the Candidate outreach drafter."
+  - "Your company fixes the wording or pay bands by policy: fill in your approved template instead."
+  - "You want the AI to ask you questions first and pass the post to sourcing steps: use the Job post writer."
 you_give:
-  - The role title and team
-  - Key duties and must-have skills
+  - The role title, team and who it reports to
+  - What the person must get done in the first year
+  - Your must-have and nice-to-have skills
   - Pay range and benefits (optional)
-  - An existing post to fix (optional)
+  - An old job post to fix (optional)
 you_get:
-  - A complete job post
-  - A split of must-have and nice-to-have skills
-  - Flagged wording with replacements
-  - 30, 60 and 90 day goals
+  - A finished job post under 500 words
+  - Must-have and nice-to-have skills, split
+  - Goals for the first 30, 60 and 90 days
+  - A table of flagged words with plainer swaps
+  - A list of open questions for your hiring manager
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload the skill folder if your tool allows it.
+  - Paste the role title, team and what the person must get done in the first year.
+  - Add your must-have skills, pay range and benefits. Add an old post if you have one.
+  - Answer any questions the AI asks about gaps. Do not guess for it.
+  - Check the wording table. Accept or reject each swap.
+  - Send the post and the open questions to your hiring manager. Check your local pay posting rules, then publish.
+how_it_works:
+  - title: Read the old post
+    text: If you gave one, it names the three biggest problems first, such as no pay or too many musts.
+  - title: Write the opening
+    text: It says why the role exists and why it is worth taking, in three or four sentences.
+  - title: Set the work and goals
+    text: It lists five to seven outcomes and the goals for 30, 60 and 90 days, using only your facts.
+  - title: Split the skills
+    text: It keeps must-haves to five or fewer and moves the rest to nice-to-have.
+  - title: Scan the wording
+    text: It flags gender-coded, age-coded and inflated words and offers a plainer swap for each.
+  - title: Finish and list gaps
+    text: It adds team, pay and a closing line, and lists anything MISSING for the hiring manager.
+output_shape: |-
+  Job post (under 500 words)
+    <Title>
+    Opportunity: <3 or 4 sentences>
+    What you will do: <5 to 7 bullets>
+    First 30, 60 and 90 days: <one goal each>
+    Must-have: <5 or fewer>
+    Nice-to-have: <list>
+    Team and how we work: <short paragraph>
+    Pay and benefits: <range, or MISSING>
+    Closing line
+  Wording changes: <original phrase | why | plainer swap>
+  Open questions: <every MISSING item>
+output_sample:
+  input:
+    - The role title, team and who it reports to
+    - What the person must get done in the first year
+    - Your must-have and nice-to-have skills
+    - An old job post to fix (optional)
+    - Pay range and benefits (optional)
+  output:
+    - name: Job post
+      contains: Opportunity, what you will do, first 30, 60 and 90 days, must-haves, nice-to-haves, team and pay.
+    - name: Wording changes
+      contains: Each flagged phrase, why it puts people off, and a plainer swap.
+    - name: Open questions
+      contains: Every spot marked MISSING that your hiring manager needs to confirm.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Any chat AI can write and check one job post. No code or web access is needed.
+  inputs:
+    - Your hiring manager's notes on the role
+    - Your company's approved closing statement
+    - Your local pay posting rules
+terms:
+  - term: Must-have
+    meaning: A skill the person cannot do the job without.
+  - term: Gender-coded words
+    meaning: Words that lean toward one gender, such as "rockstar" or "nurturing".

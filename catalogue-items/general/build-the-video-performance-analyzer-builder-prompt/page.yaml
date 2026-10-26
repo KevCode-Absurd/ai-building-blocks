@@ -1,33 +1,115 @@
 new_slug: build-the-video-performance-analyzer-builder-prompt
 name: Video ad results coding prompt
-summary: Get a coding brief to compare video ad results, calculate view rates and flag patterns worth checking.
+summary: Get a coding brief for a Google Ads video ad review. It checks view rate and drop-off for each ad and lists fixes to test. Read-only.
 job: build-software
 headline: Video ad results coding prompt
-subhead: Get a coding brief to compare video ad results, calculate view rates and flag patterns worth checking.
+subhead: Give your coding assistant your project and your Google Ads video account. It plans a read-only module. The module reads each video ad's view rate and drop-off, sorts the ads into six groups and lists what to test next. It never changes your account.
 explain: |-
-  Share your project and the required feature. Get a coding brief for the video performance analyzer, with setup and test steps.
+  A video ad can fail in different places. Some ads lose people in the first few seconds. Some lose them in the middle. Some hold attention to the end and still get no sales. Checking each ad by hand in Google Ads is slow. This prompt gives a coding assistant a brief to build a video ad review in your own project.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The brief sorts each ad into six groups. Weak hook. Drop in the middle. Finishes but no action. Top performer. Too long. Tired, where the view rate falls from the week before. It also writes an account summary: the best five and worst five ads, the average drop-off curve and a YouTube against Demand Gen split. Demand Gen is judged on its own benchmarks, not on YouTube ones.
+
+  The brief has no built-in benchmarks you must trust. If you give none, it uses the median of your own ads. Every limit is a starting default you confirm. View-through conversions always appear next to direct ones, because they are weaker proof. This prompt reviews video. To review where Display ads showed, use the Display placement review coding prompt.
 when:
-  - You need a coding brief for the video performance analyzer.
-  - You need build the video performance analyzer prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You run YouTube or Demand Gen video ads and can't tell which ones lose people, or where.
+  - You review video results by hand each week and want that check built into your own tool.
+  - A video gets views but few sales, and you want to know if the call to action is the problem.
+  - Your team wants a short list of ads to refresh or scale, with the numbers behind each.
+not_for:
+  - Your account runs Search or Display only, or you want a one-time review with no code. Paste your export into the Google Ads report auditor instead.
+  - You want to review where Display ads showed. Use the Display placement review coding prompt.
+  - Your video ads run on Meta, not Google. Use the Meta Ads report coding prompt.
+  - You want it to pause ads or change budgets. It only proposes. You make the change in Google Ads.
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, or its main folders and database schema
+  - The customer ID of the Google Ads account with the video campaigns, and the names of the credentials your project uses (never the secrets)
+  - The date range to review (30 days if you don't say)
+  - Your own benchmarks for view rate, completion rate and view-through conversion rate (optional)
+  - The least data an ad needs before it can be flagged (optional, 1,000 impressions and 25 in your currency if you don't say)
 you_get:
-  - A coding brief for the video performance analyzer
-  - Required files, setup gaps and test cases
+  - A list of setup gaps before any code is written
+  - A read-only video review module that fits your project
+  - Six ad groups, each with limits you can change
+  - An account summary with best and worst ads, average drop-off and a Demand Gen split
+  - Test cases and a sample result built from made-up rows
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your coding assistant, such as Claude Code or Codex, in your project folder. A plain chat AI can only write a plan.
+  - Paste the skill, then add the items under "What you need". Never paste a secret key.
+  - Read the setup gaps first. Fix each one, or tell the assistant to go on with placeholders.
+  - Give your own benchmarks if you have them, and say yes to each starting limit or change it. A wrong limit gives wrong flags.
+  - Read every change before you accept it. Run the tests in your own project.
+  - Treat each finding as an idea to test. Check a few flagged ads in Google Ads before you change any creative or budget.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project first
+    text: Reads your folders, any Google Ads client and shared types, then lists what is missing before it writes code.
+  - title: Reads the video ad report
+    text: Plans queries for each ad's views, drop-off by quarter of the video, cost and conversions. Money is converted once, and unknown fields stay empty.
+  - title: Sets the benchmarks
+    text: Uses yours, or the median of your own ads. YouTube and Demand Gen each get their own set.
+  - title: Sorts ads into six groups
+    text: Tests each ad against your limits. Ads with too little data are never flagged. The fatigue check needs an earlier week to compare with.
+  - title: Writes findings as ideas to test
+    text: Each finding shows direct and view-through conversions and one thing to consider. It never sets a budget for you.
+  - title: Adds the summary and the tests
+    text: Builds the account summary, writes tests on made-up rows and proposes a schedule without creating one.
+output_shape: |-
+  SETUP GAPS
+  <what is missing: schemas, permissions, field names to confirm>
+
+  FUNCTION SIGNATURE
+  analyzeVideoPerformance(<input>) -> DiagnosticOutput
+
+  SAMPLE DiagnosticOutput (made-up rows)
+  <findings with checkId, severity, direct and view-through conversions, and one idea to test>
+
+  ACCOUNT SUMMARY
+  best 5 ads | worst 5 ads | average drop-off by quarter | YouTube vs Demand Gen
+
+  TEST RESULTS
+  <passed, failed, or not run and why>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your code project, or its main folders and database schema
+    - The customer ID of your Google Ads video account and the names of your credentials
+    - The date range, and your own benchmarks (optional)
+  prerequisites:
+    - A coding assistant that can open your project, such as Claude Code or Codex
+    - Google Ads API access with read permission, set up before you run the module
+  output:
+    - name: Setup gaps
+      contains: Missing schemas, permissions and field names to check before any code is written.
+    - name: Function signature
+      contains: The inputs and result type of the video review function in your project.
+    - name: Sample DiagnosticOutput
+      contains: Findings from made-up rows, each with a check ID, severity, direct and view-through conversions and one idea to test.
+    - name: Account summary
+      contains: The best five and worst five ads, the average drop-off curve and the YouTube against Demand Gen split.
+    - name: Test results
+      contains: Tests for each of the six groups and the Demand Gen switch, or a plain note that none were run.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your project, reads your Google Ads files, edits code and runs your tests.
+    - name: Codex
+      why: Does the same work in a repository and shows each change for you to review.
+    - name: Google Ads video report
+      why: Lets you check a few flagged ads by hand before you change anything.
+  inputs:
+    - The view rate and completion rate you already see as normal for your best videos
+    - The length and goal of each video, such as awareness or sales
+terms:
+  - term: View rate
+    meaning: The share of people who saw your ad and watched it, as Google counts a view.
+  - term: Quartile
+    meaning: A quarter mark in the video. The 25, 50, 75 and 100 percent rates show how many viewers reach each point.
+  - term: Demand Gen
+    meaning: A Google Ads campaign type that shows video and image ads in feeds such as YouTube and Discover.
+  - term: View-through conversion
+    meaning: A sale or sign-up from someone who saw your ad, did not click, and acted later. It is weaker proof than a click.
+  - term: Read-only
+    meaning: The module can look at your account data but cannot change anything in it.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

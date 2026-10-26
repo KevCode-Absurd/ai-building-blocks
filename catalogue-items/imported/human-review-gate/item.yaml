@@ -10,6 +10,12 @@ level: advanced
 inputs:
   - type: code_change
     required: true
+  - type: test_report
+    required: false
+  - type: security_report
+    required: false
+  - type: feedback_notes
+    required: false
 outputs:
   - type: audit_report
 uses: []

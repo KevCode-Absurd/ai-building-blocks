@@ -1,7 +1,7 @@
 new_slug: trailing-period-financial-bridge
 name: Trailing-period financial bridge
 headline: Trailing-period financial bridge
-summary: Build a trailing-year flow from annual and matching year-to-date statements.
+summary: Find a trailing 12-month figure for revenue or another flow. Give it last year and matching year-to-date numbers. You get a checked bridge.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a trailing-period additive-flow reconciliation with period-boundary checks.
   - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need trailing EPS, margins or average-balance ratios: these need a different method, so work them out with your finance lead or accountant."
+  - "You need a balance-sheet figure such as cash or debt: use the closing balance from the latest statement, not a trailing sum."
+  - "You want to trade, file or move money from the result: this only checks the numbers, so ask a qualified person to act on it."
 you_give:
   - Last full-year flow, current YTD flow, comparable prior YTD flow and fiscal-period definitions.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,29 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your last full-year figure for one flow, such as revenue
+    - Your current year-to-date figure for the same flow
+    - Your year-to-date figure for the same period last year
+    - Your fiscal year end, currency and scale
+    - Your four quarter records (optional)
+  prerequisites:
+    - An AI that can build and check spreadsheet files, for the workbook
+    - Node.js 20 or later, only to run the bundled calculation script (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The flow you chose, the reporting date, and where each number came from.
+    - name: Inputs and assumptions
+      contains: Each input with its period, currency, scale and sign, plus any assumption made.
+    - name: Model calculations and reconciliations
+      contains: "The bridge: last full year plus current year-to-date minus prior year-to-date, tied to quarter records where available."
+    - name: Actual file verification
+      contains: What was recalculated, inspected and reopened in the workbook, and what could not run.
+    - name: "MISSING: lines"
+      contains: Each input or evidence gap that stopped or limited a calculation.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or none if all passed.
 how_it_works:
   - title: 1. Identify an additive flow such as revenue or operating profit and align fiscal cut-offs, currency and accounting perimeter
     text: Identify an additive flow such as revenue or operating profit and align fiscal cut-offs, currency and accounting perimeter.

@@ -1,100 +1,39 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import vm from 'node:vm';
-
-const script = fs.readFileSync(new URL('../public/analytics.js', import.meta.url), 'utf8');
-const key = 'abb:analytics-consent:v1';
-function browser({ url = 'https://useaiblocks.com/', consent = null, gpc = false, dnt = null } = {}) {
-  const nodes = new Map(), calls = [], windowEvents = {}, documentEvents = {}, values = new Map();
-  if (consent) values.set(key, JSON.stringify({ value: consent, at: Date.now() }));
-  const location = { assign(target) { calls.push(['assign', target]); }, reload() { calls.push(['reload']); } };
-  const setUrl = target => { const u = new URL(target, location.href); Object.assign(location, { href: u.href, origin: u.origin, pathname: u.pathname, search: u.search, hash: u.hash, hostname: u.hostname }); };
-  setUrl(url);
-  class Element {
-    constructor(tag) { this.tagName = tag; this.children = []; this.events = {}; this.attrs = {}; }
-    append(...items) { items.forEach(item => this.appendChild(item)); }
-    appendChild(item) { this.children.push(item); if (item.id) nodes.set(item.id, item); if (item.tagName === 'script') calls.push(['script', item.src]); return item; }
-    setAttribute(name, value) { this.attrs[name] = value; }
-    addEventListener(name, fn) { this.events[name] = fn; }
-    remove() { nodes.delete(this.id); }
-  }
-  const document = { readyState: 'complete', cookie: '_ga=synthetic; _clck=synthetic', head: new Element('head'), body: new Element('body'), documentElement: new Element('html'), createElement: tag => new Element(tag), getElementById: id => nodes.get(id), addEventListener: (name, fn) => { documentEvents[name] = fn; } };
-  const history = { pushState(_s, _u, target) { setUrl(target); }, replaceState(_s, _u, target) { setUrl(target); } };
-  const window = { addEventListener: (name, fn) => { windowEvents[name] = fn; } };
-  const context = { window, document, location, history, navigator: { globalPrivacyControl: gpc, doNotTrack: dnt }, localStorage: { getItem: name => values.get(name), setItem: (name, value) => values.set(name, value) }, URL, Date };
-  vm.runInNewContext(script, context);
-  const clickChoice = label => { const node = nodes.get('abb-analytics-choice'); assert(node, 'consent choices visible'); const button = node.children.find(x => x.className === 'abb-analytics-actions').children.find(x => x.textContent === label); assert(button && !button.disabled); button.events.click(); };
-  const vendors = () => calls.filter(c => c[0] === 'script');
-  const events = () => (window.dataLayer || []).map(args => [...args]);
-  return { ...context, calls, nodes, vendors, events, clickChoice, documentEvents, windowEvents, values };
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';
+const script=fs.readFileSync(new URL('../public/analytics.js',import.meta.url),'utf8');
+function browser({url='https://useaiblocks.com/',referrer=''}={}){
+ const calls=[],documentEvents={},windowEvents={},values=new Map([['abb:analytics-consent:v1','denied'],['abb:kits','saved kits'],['abb:flows','saved workflows']]);const location={};
+ const setUrl=target=>{const u=new URL(target,location.href);Object.assign(location,{href:u.href,origin:u.origin,pathname:u.pathname,search:u.search,hash:u.hash,hostname:u.hostname});};setUrl(url);
+ const document={readyState:'complete',referrer,head:{appendChild(el){calls.push(['script',el.src]);}},documentElement:{setAttribute(name,value){calls.push(['attribute',name,value]);}},createElement(tag){assert.equal(tag,'script','No cookie popup elements');return{};},addEventListener(name,fn){documentEvents[name]=fn;}};
+ const history={pushState(_s,_u,target){setUrl(target);},replaceState(_s,_u,target){setUrl(target);}};
+ const window={addEventListener(name,fn){windowEvents[name]=fn;}};const context={window,document,history,location,URL,URLSearchParams,Date,Set,localStorage:{removeItem(key){calls.push(['removeItem',key]);values.delete(key);}}};vm.runInNewContext(script,context);
+ return {...context,calls,documentEvents,windowEvents,values,events:()=>Array.from(window.dataLayer??[],args=>[...args])};
 }
-
-test('no vendor requests before consent or after a saved decline', () => {
-  const fresh = browser(); assert.equal(fresh.vendors().length, 0); assert(fresh.nodes.has('abb-analytics-choice'));
-  fresh.clickChoice('Reject cookies'); assert.equal(fresh.vendors().length, 0); assert.equal(JSON.parse(fresh.values.get(key)).value, 'denied');
-  assert.equal(browser({ consent: 'denied' }).vendors().length, 0);
+test('Google and Clarity start automatically with analytics cookies and advertising denied, with no popup',()=>{
+ const b=browser();assert.deepEqual(b.calls.filter(x=>x[0]==='script').map(x=>x[1]),['https://www.googletagmanager.com/gtag/js?id=G-FLLHB8ZGN7','https://www.clarity.ms/tag/z1oj0rgzrv']);
+ const consent=b.events()[0];assert.equal(consent[0],'consent');assert.equal(consent[2].analytics_storage,'granted');for(const k of ['ad_storage','ad_user_data','ad_personalization'])assert.equal(consent[2][k],'denied');
+ assert.equal(b.window.clarity.q[0][1].analytics_Storage,'granted');assert.equal(b.window.clarity.q[0][1].ad_Storage,'denied');assert(b.calls.some(x=>x[1]==='data-clarity-mask'&&x[2]==='true'));
+ const config=b.events().find(x=>x[0]==='config')[2];assert.equal(config.send_page_view,false);assert.equal(config.allow_google_signals,false);assert.equal(config.allow_ad_personalization_signals,false);
 });
-test('opt-in loads exactly the intended vendors, masks all text and denies advertising', () => {
-  const b = browser(); b.clickChoice('Accept cookies');
-  assert.deepEqual(b.vendors().map(c => c[1]), ['https://www.googletagmanager.com/gtag/js?id=G-FLLHB8ZGN7', 'https://www.clarity.ms/tag/z1oj0rgzrv']);
-  assert.equal(b.document.documentElement.attrs['data-clarity-mask'], 'true');
-  const page = b.events().find(args => args[0] === 'event' && args[1] === 'page_view')[2];
-  assert.equal(page.page_location, 'https://useaiblocks.com/'); assert.equal(page.page_referrer, '');
-  const config = b.events().find(args => args[0] === 'config')[2]; assert.equal(config.send_page_view, false); assert.equal(config.allow_google_signals, false);
-  const consent = b.events().find(args => args[0] === 'consent' && args[1] === 'update')[2]; assert.equal(consent.ad_storage, 'denied'); assert.equal(consent.ad_user_data, 'denied');
+test('retiring the old popup preference preserves kits and all saved work',()=>{
+ const b=browser();assert.equal(b.values.has('abb:analytics-consent:v1'),false);assert.equal(b.values.get('abb:kits'),'saved kits');assert.equal(b.values.get('abb:flows'),'saved workflows');assert.deepEqual(b.calls.filter(x=>x[0]==='removeItem'),[['removeItem','abb:analytics-consent:v1']]);
 });
-test('private, query-bearing and builder URLs never load vendors even with saved consent', () => {
-  for (const path of ['/space', '/s/synthetic-share-key', '/compose', '/from-a-source', '/example-app/', '/?owner=synthetic-owner-key', '/?q=synthetic-private-input', '/#build', '/#synthetic-owner-key', '/tools/growth-channel-planner?goal=synthetic']) {
-    const b = browser({ url: 'https://useaiblocks.com' + path, consent: 'granted' }); assert.equal(b.vendors().length, 0, path);
-  }
-  assert.equal(browser({ url: 'https://preview.example/', consent: 'granted' }).vendors().length, 0);
+test('private, query-bearing, preview and builder pages never load vendor scripts',()=>{
+ for(const path of ['/account','/sign-up','/space','/s/private-share-key','/compose','/from-a-source','/example-app/','/?owner=private','/?q=private','/#build','/tools/example?goal=private'])assert.equal(browser({url:'https://useaiblocks.com'+path}).calls.filter(x=>x[0]==='script').length,0,path);
+ assert.equal(browser({url:'https://preview.example/'}).calls.filter(x=>x[0]==='script').length,0);
 });
-test('SPA page views are deduplicated, private transitions stop replay without reloading', () => {
-  const b = browser({ consent: 'granted' });
-  b.history.pushState(null, '', '/skills/ad-angle-multiplier'); b.history.replaceState(null, '', '/skills/ad-angle-multiplier');
-  const views = b.events().filter(args => args[0] === 'event' && args[1] === 'page_view'); assert.equal(views.length, 2);
-  assert.equal(views[1][2].page_location, 'https://useaiblocks.com/skills/ad-angle-multiplier');
-  b.window.clarity('start', { projectId: 'z1oj0rgzrv' });
-  b.history.pushState(null, '', '/s/synthetic-private-key'); assert.equal(b.location.pathname, '/s/synthetic-private-key');
-  assert.equal(b.calls.some(c => c[0] === 'assign' || c[0] === 'reload'), false);
-  assert.equal(b.events().filter(args => args[0] === 'event').length, 2);
-  assert.equal(b.window.clarity.q.some(args => args[0] === 'start'), false);
+test('public page views are deduplicated and do not contain incoming referrers',()=>{
+ const b=browser({referrer:'https://elsewhere.test/?private=secret'});b.history.pushState(null,'','/skills/ai-search-audit');b.history.replaceState(null,'','/skills/ai-search-audit');const views=b.events().filter(x=>x[0]==='event'&&x[1]==='page_view');assert.equal(views.length,2);assert.equal(views[1][2].page_location,'https://useaiblocks.com/skills/ai-search-audit');assert.equal(views[0][2].page_referrer,'https://elsewhere.test/');assert(!JSON.stringify(b.events()).includes('secret'));assert.equal(b.window.clarity,undefined,'unsafe referrer disables replay');
 });
-test('private link navigation stops replay while preserving the normal SPA click', () => {
-  const b = browser({ consent: 'granted' }); let blocked = 0;
-  b.documentEvents.click({ button: 0, target: { closest: () => ({ href: 'https://useaiblocks.com/compose', target: '', hasAttribute: () => false }) }, preventDefault() { blocked++; }, stopImmediatePropagation() { blocked++; } });
-  assert.equal(blocked, 0); assert.equal(b.calls.some(c => c[0] === 'assign'), false);
-  b.window.clarity('start', {}); assert.equal(b.window.clarity.q.some(args => args[0] === 'start'), false);
+test('private SPA transitions stop replay and disable Google collection without changing navigation',()=>{
+ const b=browser();b.window.clarity('start',{});b.history.pushState(null,'','/s/private-key');assert.equal(b.location.pathname,'/s/private-key');assert.equal(b.window['ga-disable-G-FLLHB8ZGN7'],true);assert.equal(b.window.clarity.q.some(x=>x[0]==='start'),false);const n=b.events().length;b.documentEvents['abb:ux-event']({detail:'file_download'});assert.equal(b.events().length,n);b.history.pushState(null,'','/skills/ai-search-audit');assert.equal(b.window['ga-disable-G-FLLHB8ZGN7'],false);
 });
-test('search typing stops active replay before history changes without losing focus or reloading', () => {
-  const b = browser({ consent: 'granted' }); const commands = [];
-  b.window.clarity = (method) => {
-    commands.push([method, b.location.href]);
-    if (method === 'stop') { b.window.clarity = function () { (b.window.clarity.q ||= []).push(arguments); }; }
-  };
-  b.window.clarity.v = 'synthetic-vendor';
-  b.documentEvents.beforeinput();
-  b.history.replaceState(null, '', '/?q=synthetic-private-search');
-  assert.deepEqual(commands, [['stop', 'https://useaiblocks.com/']]);
-  assert.equal(b.location.search, '?q=synthetic-private-search');
-  assert.equal(b.calls.some(c => c[0] === 'reload' || c[0] === 'assign'), false);
-  b.window.clarity('start', {}); assert.equal(b.window.clarity.q.some(args => args[0] === 'start'), false);
+test('search typing stops recording before its text enters history, without reading its value',()=>{
+ const b=browser();const commands=[];b.window.clarity=(method)=>{commands.push([method,b.location.href]);if(method==='stop')b.window.clarity=function(){(b.window.clarity.q??=[]).push(arguments);};};b.window.clarity.v='test-vendor';
+ const event={target:{matches:()=>true,get value(){throw Error('Never read input');}}};b.documentEvents.beforeinput(event);b.documentEvents.beforeinput(event);b.history.replaceState(null,'','/?q=synthetic-private');assert.deepEqual(commands,[['stop','https://useaiblocks.com/']]);assert.equal(b.events().filter(x=>x[1]==='search_started').length,1);assert(!JSON.stringify(b.events()).includes('synthetic-private'));assert.equal(b.window['ga-disable-G-FLLHB8ZGN7'],true);
 });
-test('a late vendor download cannot queue start after entering a private flow', () => {
-  const b = browser({ consent: 'granted' });
-  b.history.pushState(null, '', '/compose');
-  // Emulate the official tag arriving after the user has navigated away.
-  b.window.clarity('metadata', () => {}); b.window.clarity('start', { projectId: 'z1oj0rgzrv' });
-  b.window.clarity.q.unshift(b.window.clarity.q.pop());
-  assert.equal(b.window.clarity.q.some(args => args[0] === 'start'), false);
+test('action tracking forwards only the fixed vocabulary, never arbitrary data',()=>{
+ const b=browser();for(const name of ['task_started','request_copied','pack_download_requested','file_download','result_useful'])b.documentEvents['abb:ux-event']({detail:name});b.documentEvents['abb:ux-event']({detail:{name:'file_download',email:'private@example.test'}});b.documentEvents['abb:ux-event']({detail:'private@example.test'});const events=b.events().filter(x=>x[0]==='event');assert.equal(events.length,6);assert.equal(events.find(x=>x[1]==='file_download')[2].time_bucket,'under_30s');assert(!JSON.stringify(events).includes('private@example.test'));
 });
-test('revocation persists denial, signals both vendors and reloads', () => {
-  const b = browser({ consent: 'granted' }); b.documentEvents['abb:cookie-settings'](); b.clickChoice('Reject cookies');
-  assert.equal(JSON.parse(b.values.get(key)).value, 'denied'); assert.equal(b.calls.at(-1)[0], 'reload');
-  const updates = b.events().filter(args => args[0] === 'consent' && args[1] === 'update'); assert.equal(updates.at(-1)[2].analytics_storage, 'denied');
-  assert.equal([...b.window.clarity.q.at(-1)][1].analytics_Storage, 'denied');
-});
-test('GPC and Do Not Track override stored opt-in', () => {
-  for (const options of [{ gpc: true }, { dnt: '1' }]) { const b = browser({ consent: 'granted', ...options }); assert.equal(b.vendors().length, 0); }
+test('a delayed Clarity download cannot start after private navigation',()=>{
+ const b=browser();b.history.pushState(null,'','/compose');b.window.clarity('metadata',()=>{});b.window.clarity('start',{});assert.equal(b.window.clarity.q.some(x=>x[0]==='start'),false);
 });

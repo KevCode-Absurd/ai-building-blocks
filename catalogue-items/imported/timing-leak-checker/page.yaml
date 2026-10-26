@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It needs close reading of low-level code and compiled output.
 new_slug: timing-leak-checker
 name: Timing leak checker
-summary: Point it at crypto code. Get a list of spots where run time could leak
-  secret keys, with fixes.
+summary: Check your crypto code for timing leaks that could expose secret keys. Get each risky spot, why it leaks and a fix. Timing leak checker.
 job: secure-code
 headline: Timing leak checker
-subhead: Spot places in encryption or signing code where the time it takes could
-  give away a secret key. Attackers can measure small time differences, so a
-  clean-looking function can still be broken.
+subhead: Spot places in encryption or signing code where the time it takes could give away a secret key. Attackers can measure small time differences, so a clean-looking function can still be broken.
 explain: |
   Spot places in encryption or signing code where the time it takes could give away a secret key. Attackers can measure small time differences, so a clean-looking function can still be broken.
 
@@ -18,6 +15,10 @@ when:
   - You use division or modulo on secret numbers.
   - Someone mentioned KyberSlash or side-channel attacks.
   - You compare tokens or hashes and worry about early exit.
+not_for:
+  - "You work on ordinary business code or screens that never touch secrets: skip it, a normal code review is enough."
+  - "You want to check cache or hardware side-channels: ask a security engineer, because this skill cannot see them."
+  - "You only call a trusted library that already handles timing: no check needed, just keep the library up to date."
 you_give:
   - Your cryptographic source code
   - The language and compiler
@@ -29,8 +30,29 @@ you_get:
   - Constant-time rewrites
   - Functions marked safe
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste in the skill, or upload the skill folder. Check that the folder holds ct_analyzer/analyzer.py.
+  - Add your crypto source file. Say the language and which values are secret.
+  - Let your AI run the analyzer on your file. This needs code running and the right compiler installed.
+  - "Ask your AI to check each flag: does it touch a secret, or only a length or constant? Drop the false alarms."
+  - Apply the fixes, then run the analyzer again. Ask a crypto expert to review before you ship.
+output_sample:
+  input:
+    - Your crypto source code, such as sign, verify, encrypt, decrypt or key derivation functions
+    - The language and compiler you use
+    - Which values are secret, such as keys, plaintext or tokens
+    - The chip type to test, such as x86_64 or arm64 (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - The compiler or runtime for your language installed, such as gcc, go, rustc, a JDK or Node.js
+    - The analyzer script ct_analyzer/analyzer.py in the skill folder, which the page cannot confirm ships yet
+  output:
+    - name: Result
+      contains: PASSED if no slow, value-dependent operations were found, or FAILED with each risky instruction listed.
+    - name: Flagged operations
+      contains: Each risky instruction, such as a division or a branch, with the function it sits in and why it leaks.
+    - name: False positive check
+      contains: A note on whether each flagged spot really touches a secret, or only a length, count or constant.
+    - name: Constant-time fixes
+      contains: A safer rewrite for each real leak, such as bit masking, Barrett reduction or a constant-time compare.
+    - name: Safe functions
+      contains: The functions where no risky operation was found.

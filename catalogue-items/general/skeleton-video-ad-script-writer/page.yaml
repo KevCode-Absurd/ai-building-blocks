@@ -1,6 +1,6 @@
 new_slug: skeleton-video-ad-script-writer
 name: "Skeleton video ad script writer"
-summary: "Name the habit you replace. Get a skeleton comedy video script, claims list and cast note."
+summary: "Write a skeleton video ad script that shows a habit piling up, in 15, 25 or 35 seconds, with a claims list and cast note."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -19,6 +19,10 @@ when:
   - Your product replaces a habit or a pile of old things, and you want to show where the old way ends up.
   - You need an ad for people who don't yet think they have a problem, and a straight product ad would get skipped.
   - You want something funny and visual that still keeps every claim honest.
+not_for:
+  - "You need a real person to give proof or a close look at the real product: film a customer or a plain product demo instead."
+  - "Your buyers already know the fix and only need to see how it works: use a simple product demo video instead."
+  - "The story is about a change in a body, like a health or weight result: write a plain testimonial ad with approved claims instead."
 
 you_give:
   - Your product, who it's for, how much they already know, and the length (15, 25 or 35 seconds)
@@ -40,6 +44,28 @@ how_to_use:
   - Say the length ("25 seconds") and who the ad is for.
   - Check the claims list. Any rung with a number tied to a result should point to a claim you hold.
   - Take the script and cast note to the skill that turns a skeleton script into shots. It runs the video process from there.
+output_sample:
+  input:
+    - Your product, who it is for, and the ad length (15, 25 or 35 seconds)
+    - The old habit or old things your product replaces, and how it is used
+    - Your approved claims, any time points you can source, and your offer
+    - Review lines about the old way (optional)
+    - A signature item for the skeleton, like a cap or scarf (optional)
+  output:
+    - name: Game
+      contains: One sentence on what grows, which way it runs, how each step is counted and why it fits.
+    - name: Question
+      contains: One open question about the viewer's habit, under 10 words, that the last step answers.
+    - name: Script table
+      contains: Each step's label, narration, picture beats and seconds, then the turn to your product and the close.
+    - name: Timing
+      contains: The spoken word count against the target for your chosen length.
+    - name: Claims list
+      contains: Each label and claim marked free or tied to an approved claim and its source.
+    - name: Cast note
+      contains: How the skeleton should look, any silent onlookers, and why.
+    - name: Checks missed
+      contains: One line for each of its own checks the script still misses, or none.
 
 how_it_works:
   - title: Checks the fit

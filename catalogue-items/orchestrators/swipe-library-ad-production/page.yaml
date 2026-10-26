@@ -8,6 +8,34 @@ explain: A production workflow for a user-supplied or cleared swipe library. It 
 when:
   - You have a swipe library and want finished ads from selected layouts.
   - You need a review deck with revisions tracked by ad and size.
+not_for:
+  - "You have no reference ads, only your own: use the Own-ad style remix builder."
+  - "You want new image ads in the style your winners share: use Make new image ads in the style your winners share."
+  - "You want one ad built on an offer: use Get three offer image ads ready to launch."
+  - "You only want a product photo set: use the Reference library product photoshoot."
+output_sample:
+  input:
+    - Your brand facts, logo, fonts, live offers and approved claims
+    - Real photos of the exact product variant
+    - Reference ads you have the right to study, with any direction for each
+    - The ad sizes you want, if not 4:5 and 9:16 (optional)
+  prerequisites:
+    - An AI that can read files and build web pages, or an AI plus a design tool you can use yourself
+    - Your Brand brain, if you have one
+  output:
+    - name: brand.json
+      contains: Your name, colours, fonts, logo, product photos, approved claims, blocked claims and current offer.
+    - name: Reference index and selection
+      contains: Each reference with a stable ID, format, message device and risk, and who picked it, you or the AI.
+    - name: Adaptation map
+      contains: For each reference, what to keep, swap or drop, plus any claim that cannot move to your brand.
+    - name: Ad briefs
+      contains: One brief per ad with the buyer problem, one supported message, on-image words and layout zones.
+    - name: Editable ad files and exports
+      contains: Ads with live text and logo layers, exported at 1080x1350 and 1080x1920 where your tools allow.
+    - name: Review deck, QA log and revision manifest
+      contains: Each ad and size with a version, a check status and the corrections you asked for.
+
 you_give:
   - Brand facts, live offers, approved claims, logo and fonts.
   - Real photos of the exact product variant.

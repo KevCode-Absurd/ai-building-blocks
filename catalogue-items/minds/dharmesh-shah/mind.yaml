@@ -16,6 +16,28 @@ use_cases:
   - "Set tags for team messages so people know how strongly you feel"
   - "Work out what customers need after they buy, so they stay"
   - "Pick the three things you'll focus on this year and drop the rest"
+not_for:
+  - "You want clear positioning for your product: use the April Dunford mind, who works on why the right buyers should choose you."
+  - "You want sharper writing for one reader: use the Ann Handley mind, who teaches clear, human copy."
+  - "You want a verdict on your ad numbers or ad hype: use the Bob Hoffman mind, or ask a person who can see your data."
+output_sample:
+  input:
+    - Your buyer problem, in a few plain lines
+    - Your current marketing channels and what you spend on them
+    - Your team size and any rules or values you have now (optional)
+    - What customers do after they buy (optional)
+    - The list of ideas you are choosing between (optional)
+  output:
+    - name: Framework note
+      contains: One named framework picked for your case, with a plain cause-and-effect reason for it.
+    - name: Quick maths
+      contains: A profit, passion and probability score for your ideas, multiplied so you can compare them side by side.
+    - name: First questions
+      contains: Questions about whether people would seek this out and whether customers succeed after the sale.
+    - name: First experiment
+      contains: A small test you can start this week, such as a rough free tool or a short culture page.
+    - name: Where it may not fit
+      contains: A plain note on limits, such as having no cash to wait for inbound marketing to pay off.
 seats:
   - {seat: "Inbound and culture", asks: "Would people seek this out if we stopped pushing it at them, and does our team culture help us earn that?"}
   - {seat: "Customer success", asks: "If the customer doesn't succeed with this, why would they stay?"}

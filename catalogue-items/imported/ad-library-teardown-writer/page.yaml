@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It gathers ads, then reads the pattern in them.
 new_slug: ad-library-teardown-writer
 name: Ad library teardown writer
-summary: Name a competitor. Get their live ads broken into hooks, offers, calls
-  to action and tests to run.
+summary: Run an ad library teardown on any rival. Give a brand name, get their live ads sorted into hooks, offers, calls to action and tests to run.
 job: study-competitors
 headline: Ad library teardown writer
-subhead: Name a competitor or paste an ad library link and pick the platform. It
-  pulls their active public ads from the Meta, Google or LinkedIn library,
-  records the wording, offers, buttons and video speech, and reads the landing
-  page. You get a summary of their angles, a swipe file of hooks, offers and
-  calls to action, and recommended tests.
+subhead: Name a competitor or paste an ad library link and pick the platform. It pulls their active public ads from the Meta, Google or LinkedIn library, records the wording, offers, buttons and video speech, and reads the landing page. You get a summary of their angles, a swipe file of hooks, offers and calls to action, and recommended tests.
 explain: |
   A competitor's live ads get broken into hooks, offers, calls to action and test ideas for you to try. It collects public ads from websites, so it works only on what is shown there.
 
@@ -20,6 +15,10 @@ when:
   - You need fresh hook ideas from your market.
   - You want to see which offers a competitor repeats.
   - You are planning tests and want a starting list.
+not_for:
+  - "You want to know which ads make money or what a rival spends: those numbers are not public, so use your own ad account data."
+  - "You need ads from TikTok, X or other sites: this skill reads only the Meta, Google and LinkedIn ad libraries."
+  - "You have no way to run code or add a ScrapeCreators key: ask your AI to read a few ads you paste in, or look at the libraries by hand."
 you_give:
   - A competitor name or ad library link
   - The platform to check
@@ -32,8 +31,35 @@ you_get:
   - Notes from video transcripts
   - Recommended tests for you
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - Get a ScrapeCreators API key from scrapecreators.com. Check their site for current pricing, as it is not listed here.
+  - Use an AI that can run code and reach the web, and add the key as SCRAPECREATORS_API_KEY in its settings. A plain chat window without code cannot pull the ads.
+  - "Give your AI the skill file. Then say: Tear down the ads for this competitor on Meta."
+  - Add the brand name or ad library link. Add your own product and how many ads to study if you want.
+  - Check the Sources list. Treat an active ad as active, not as a winner.
+  - Pick one or two of the recommended tests and run them in your own ad account.
+output_sample:
+  input:
+    - A competitor name or ad library link
+    - "The platform to check: Meta, Google or LinkedIn"
+    - Your own product and audience (optional)
+    - How many ads to study (optional)
+  prerequisites:
+    - An AI that can run code and reach the web
+    - A ScrapeCreators API key, set as SCRAPECREATORS_API_KEY
+  output:
+    - name: Summary
+      contains: How many ads were studied, which platforms, the main positioning and the offer that shows up most.
+    - name: Messaging Angles
+      contains: A table of angles such as pain point, offer or proof, with evidence and example ads.
+    - name: Hooks and Headlines Swipe File
+      contains: A list of the hooks and headlines the brand uses, quoted from their ads.
+    - name: Offers and CTAs
+      contains: A table of each offer, its call to action, the platform and an example.
+    - name: Video Transcript Notes
+      contains: For Meta video ads, a summary, the hook and the best quote, with a link.
+    - name: What They Appear to Be Testing
+      contains: A numbered list of the tests the brand seems to be running, based on repeated patterns.
+    - name: Recommended Tests for Us
+      contains: Test ideas for your own ads, based on repeated patterns and gaps.
+    - name: Sources
+      contains: Links to every ad the teardown used.

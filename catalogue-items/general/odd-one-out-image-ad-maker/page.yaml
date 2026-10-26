@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: odd-one-out-image-ad-maker
 name: "Odd-one-out image ad maker"
-summary: "Paste your story ad. Get a photo prompt of one odd thing and a caption."
+summary: "Turn your story ad into an odd-one-out image ad: one strange everyday thing in a photo prompt, plus a short line to run under the picture."
 job: make-image-ads
 
 headline: "Odd-one-out image ad maker"
@@ -17,6 +17,10 @@ when:
   - Every rival in your market shows the same problem photo, and yours blends in.
   - A story ad already works and you want a fresh picture to test against it.
   - Your story's opening has one strange, specific detail that makes people ask why.
+not_for:
+  - "Your story has no odd detail in its first lines: use the Problem moment image ad maker to show the buyer's problem instead."
+  - "You want a picture built from a chat screenshot: use the Chat screenshot image ad maker."
+  - "You have no story ad yet: write one first, or ask a person on your team for the approved text."
 
 you_give:
   - Your approved story ad, with its first lines
@@ -35,6 +39,34 @@ how_to_use:
   - Say whether you want a few words on the picture. If you're not sure, ask for both versions.
   - Paste the image prompt into your image tool and make one square picture.
   - Show it to someone who hasn't read the story. They should name the thing but not know why.
+output_sample:
+  input:
+    - Your approved story ad, with its first lines
+    - Where and when the problem shows up for the buyer (optional)
+    - Whether you want a few words on the picture (optional)
+  prerequisites:
+    - An AI that can make images, if you want the picture made in the chat (ChatGPT or Gemini). Otherwise paste the prompt into an image tool.
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: The mismatch
+      contains: The kind of mismatch and the story line that explains it.
+    - name: Where and when
+      contains: The place, the time of day and what surrounds the odd thing.
+    - name: Framing
+      contains: How close to shoot it and where it sits in the frame.
+    - name: Words on the image
+      contains: Nothing, or 3 to 6 words lifted from your story.
+    - name: Blank version
+      contains: A version with no words, only if the picture has words.
+    - name: Line under the image
+      contains: A short caption of about 27 characters that does not give the answer away.
+    - name: Flags
+      contains: Any words you wrote or lifted, and anything the AI had to guess.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt, ready to paste into an image tool.
+    - name: Checks missed
+      contains: One line for each check it still missed, or none.
 
 how_it_works:
   - title: Sets the house rules

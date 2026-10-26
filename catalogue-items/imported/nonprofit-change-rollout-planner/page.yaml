@@ -1,22 +1,58 @@
 new_slug: nonprofit-change-rollout-planner
 name: Plan a nonprofit change rollout
-summary: Plan a nonprofit change with care. Map who it affects, tell the truth and track what happens next.
+summary: "Plan a nonprofit change rollout: map who is affected, write one honest message, and get a 90-day plan. Built for mergers, layoffs and program pivots."
 job: lead-people
 headline: Plan a nonprofit change rollout
 subhead: Bring an approved change and known gaps. Map staff, funders and clients, draft the message sequence and build a plan to follow through.
 explain: Bring an approved change and known gaps. Map staff, funders and clients, draft the message sequence and build a plan to follow through.
 when:
-  - You want to plan a nonprofit change rollout.
+  - You have just approved a merger, restructure or program closure and must tell people.
+  - Staff are anxious and you need a plan before you announce anything.
+  - Your executive director is leaving and funders and clients need clear news.
+  - You need to tell directly affected staff first, and in the right order.
+not_for:
+  - You are still deciding whether to merge or take a fiscal sponsor. Get advice on the deal itself first, then come back to plan the rollout.
+  - You need to pick or hire a new executive director. Work with your board's transition committee or a search consultant for that.
+  - You want to improve staff morale when no change is happening. Use regular check-ins and a retention plan instead.
 you_give:
-  - Approved change, known decisions, remaining uncertainties and constraints
-  - Stakeholder groups, affected roles and existing promises
+  - The change that has been approved, the decisions already made and what is still unknown
+  - Your staff count, with teams and roles that are affected
+  - Your board members, and the names of your funders
+  - Key dates for the change
+  - Promises you have already made in public, such as to clients or funders
+  - Limits you must work within, such as budget or legal advice (optional)
 you_get:
-  - Stakeholder impact map and message sequence
-  - Core narrative, FAQ and a 90-day follow-through plan
+  - A stakeholder impact map with severity, influence, notice order, owner and channel for each group
+  - A core narrative that is honest about what is not decided
+  - A communication calendar and a staff FAQ
+  - A 90-day plan to track early wins and update job descriptions
+  - A debrief survey for three to six months later
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - "Gather your facts first: staff count, board members, funder names, key dates and public promises."
+  - Open your AI tool and paste in the skill, or upload the skill folder if your tool allows files. No code or web access is needed.
+  - Paste your facts and say which change you are planning, such as closing one program.
+  - Check the impact map first. Make sure every group is there and the people facing job loss are told one to one, before any group message.
+  - Fix anything marked missing and remove any claim you cannot back up.
+  - Have a person on your team review the plan before you share it, as layoffs and restructures affect real people.
+output_sample:
+  input:
+    - The change that has been approved, and what is still undecided
+    - Your staff count, board members and funder names
+    - Key dates and any promises you have already made in public
+    - Limits you must work within, such as budget or legal advice (optional)
+  output:
+    - name: Stakeholder impact map
+      contains: Each affected group with how much it is affected, how much influence it has, who tells them, and in what order.
+    - name: Core change narrative
+      contains: Why the change is happening, what stays the same, what is changing, and what is not yet decided.
+    - name: Communication calendar
+      contains: Who says what to which group, through which channel, and when.
+    - name: Staff FAQ
+      contains: Short answers to the questions staff are likely to ask, with a named person for follow-up.
+    - name: 90-day wins tracking plan
+      contains: Early wins to share, training and policy updates to make, and who owns each one.
+    - name: Debrief survey and lessons memo
+      contains: Questions to ask staff three to six months later, and a place to record what you learned.
 how_it_works:
   - title: Map the impact
     text: Identify directly affected staff, board, funders, participants, partners and volunteers and plan appropriate advance notice.

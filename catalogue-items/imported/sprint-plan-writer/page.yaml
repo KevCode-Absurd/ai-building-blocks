@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It balances scope against capacity.
 new_slug: sprint-plan-writer
 name: Sprint plan writer
-summary: Give it your backlog and team time off. Get sprint scope, goals and a
-  stretch list sized to real capacity.
+summary: Plan a sprint your team can finish. Give it your backlog and time off. You get capacity, a sprint goal and a must-do and stretch list.
 job: build-product
 headline: Sprint plan writer
-subhead: A sprint plan sized to the time your team really has. Give it your
-  backlog and who is away. The skill works out capacity by taking off time off
-  and regular meetings, so you are not planning for a full-strength team that
-  does not exist.
+subhead: Give your AI your backlog and who is away. It works out how much time your team really has. Then it writes a sprint plan with a goal and a must-do and stretch list.
 explain: |
   A sprint plan sized to the time your team really has. Give it your backlog and who is away. The skill works out capacity by taking off time off and regular meetings, so you are not planning for a full-strength team that does not exist.
 
@@ -18,20 +14,51 @@ when:
   - Planning day is tomorrow and the backlog is a mess.
   - Two people are on leave and you need honest capacity.
   - Work from last sprint is still unfinished.
-  - You want a clear goal for the sprint, not just a list.
+  - You want one clear goal for the sprint, not just a list.
+not_for:
+  - "You need a plan for one ticket or task: break it into steps yourself or ask your AI for a simple to-do list."
+  - "You need a long-range roadmap: use a roadmap tool or a planning doc, as this plans one sprint only."
+  - "Your backlog is not ranked yet: sort and rank it first, then come back to plan the sprint."
 you_give:
-  - Your backlog items
-  - Team members and time off
+  - Your backlog items, ranked if you can
+  - Your team members and their time off
+  - Your sprint length or dates
   - Last sprint's unfinished work (optional)
-  - Sprint name or dates
+  - Anything blocked on other teams (optional)
 you_get:
-  - Sprint goals and success measures
-  - A capacity estimate
-  - Must-do and stretch items
-  - A list of dependencies and risks
-  - A sprint plan document
+  - One sprint goal in a single sentence
+  - A capacity table that takes off time off and meetings
+  - Items sorted into must-do, should-do and stretch
+  - A list of risks and what to do about each
+  - Key dates and a Definition of Done checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your backlog and the leave dates for each person. Add last sprint's unfinished work if there is any.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code, files or paid tools are needed.
+  - Paste your backlog, team, time off and sprint length. If your AI has a tracker or calendar connected, it can pull these itself.
+  - Check the capacity table first. The skill suggests planning to 70 to 80 percent of capacity to leave room for interruptions.
+  - Read the sprint goal. If it takes more than one sentence, ask your AI to tighten the scope.
+  - Share the plan with your team and check it again at the mid-sprint date.
+output_sample:
+  input:
+    - Your team and who is away this sprint
+    - Your sprint length or dates
+    - Your ranked backlog (paste it, describe it, or pull it from your tracker)
+    - Unfinished work from last sprint (optional)
+    - Anything blocked on other teams (optional)
+  prerequisites:
+    - A project tracker or calendar is optional. Without them, you paste the details in.
+  output:
+    - name: Sprint goal
+      contains: One clear sentence that says what success looks like for this sprint.
+    - name: Capacity
+      contains: A table of each person's available days and work allowance, with notes on time off and on-call.
+    - name: Sprint backlog
+      contains: Items ranked P0 must ship, P1 should ship and P2 stretch, each with an estimate, owner and dependencies.
+    - name: Planned capacity and sprint load
+      contains: Total capacity next to the work you took on, shown as a share of capacity.
+    - name: Risks
+      contains: Each risk, what happens if it hits, and what to do about it.
+    - name: Definition of Done
+      contains: A checklist of what must be true before an item counts as finished.
+    - name: Key dates
+      contains: Sprint start, mid-sprint check-in, sprint end or demo, and retro.

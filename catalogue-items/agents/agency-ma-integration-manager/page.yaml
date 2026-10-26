@@ -1,0 +1,153 @@
+name: M&A Integration Manager agent
+summary: Plan your first 100 days after buying or merging with a business. Get a Day 1 checklist, workstream owners, dependencies and the risks to watch.
+headline: M&A Integration Manager agent
+subhead: Describe the deal that has closed or is about to close, the people and systems on both sides, and why you did it. Your AI builds a post-merger integration plan. You get a Day 1 readiness checklist, one owner per workstream, a dependency list and a 100-day plan.
+job: organise-work
+thinking: high
+thinking_why: It must tell what is known from what is assumed across many linked workstreams. Use a model that reasons well and keeps dates, owners and dependencies consistent.
+explain: |-
+  Most post-merger problems start the same way. The deal is signed, and nobody owns payroll on Day 1, or the best people leave in month two, or the savings in the deal model never show up. This M&A integration agent treats the signed deal as the start of a project with a clock, and builds a plan around who owns what by which date.
+
+  It starts with the reason for the deal. Did you buy a product, customers, a team or a market? That decides how much to merge. A team you bought for its skills needs a light touch. A business you bought to fold in needs a full plan. It then lays out Day 1 readiness, which has no partial credit: pay, customer service, orders and system access must work when the deal closes.
+
+  It will not call the business "ready" while any key process is unconfirmed. It will not count a savings target as a result. It treats keeping key people and handling culture as part of the plan, not an afterthought. And it gives every temporary service from the seller an end date.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have bought a smaller company and need a Day 1 list so pay, email and customer service do not break.
+  - Two businesses are merging and nobody can say who owns IT, finance or sales integration.
+  - The seller will run some services for you for a while, and you want an end date for each.
+  - Your board or lender asks for a 100-day plan after the deal closes.
+not_for:
+  - You are still deciding whether to buy, or how to value the deal. Use the Chief Financial Officer agent or the Business Strategist agent.
+  - You need legal, tax or regulatory advice on the deal. Take the questions to a lawyer and an accountant.
+  - You want a plan to help staff adopt new ways of working. Use the Change Management Consultant agent.
+  - You have a normal project with no merger. Use the Senior Project Manager agent.
+you_give:
+  - The deal in a few lines, such as what you bought, why, the close date, and the size of each side by headcount and customers
+  - The people and teams on both sides, and who runs each function such as finance, IT, HR and sales
+  - The main systems, such as payroll, email, accounting software and customer tracking, for each business
+  - Any services the seller will run for you for a time, with the dates agreed (optional)
+  - The savings or sales gains the deal was built on, with your own numbers (optional)
+you_get:
+  - A Day 1 readiness checklist that marks each item ready, not ready or unknown
+  - One owner and one date for each workstream, such as HR, IT, finance and sales
+  - A list of what depends on what, with the steps that cannot slip
+  - A 100-day plan in three phases, with the people and customer risks to watch
+  - A list of the facts and files still needed before the plan can be trusted
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the deal and both businesses in plain words. Say the close date, or say it has closed. Paste the org charts, a systems list and the deal terms if you have them.
+  - Name who runs each function today. If nobody does, say so. The plan will mark those gaps.
+  - Read the Day 1 checklist first. Anything marked unknown needs an answer from a real person before the close date.
+  - Check every date and owner with the people named. Treat the day counts as starting points to adjust.
+  - Take legal, tax and regulatory points to your advisers. Do not send any staff or customer message without reading it yourself.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the deal facts, the close date and which side is which. It asks once for what is missing, then marks it MISSING.
+  - title: Set the approach
+    text: It asks why you did the deal and picks an approach, such as fold in fully, keep apart, mix some parts or hold.
+  - title: Check Day 1
+    text: It goes through legal, people, finance, systems, customers and communication, and marks each item ready, not ready or unknown.
+  - title: Assign owners and dates
+    text: It gives each workstream one owner and a date. A task with no single owner is marked not yet planned.
+  - title: Map the dependencies
+    text: It finds the steps that block other steps, such as a legal merger before a system move, and puts them first.
+  - title: Plan 100 days and list risks
+    text: It sets three phases, lists the people to keep and the customer risks, and tracks seller services to an exit date.
+output_shape: |-
+  DEAL SNAPSHOT
+    Deal <what was bought> | Close date <date or MISSING> | Why <reason> | Approach <fold in, keep apart, mix or hold>
+
+  DAY 1 READINESS
+    <area: legal, people, finance, systems, customers, communication> | <item> | <ready, not ready or unknown> | <owner> | <what is needed>
+
+  WORKSTREAM OWNERS
+    <workstream> | <one owner> | <first milestone> | <date: proposed>
+
+  DEPENDENCIES
+    <step> | <depends on> | <blocks> | <on the critical path: yes or no>
+
+  100-DAY PLAN
+    DAYS 1 TO 30, STABILISE: <actions> | <owner>
+    DAYS 31 TO 70, INTEGRATE: <actions> | <owner>
+    DAYS 71 TO 100, IMPROVE: <actions> | <owner>
+
+  PEOPLE AND CUSTOMER RISKS
+    <risk> | <who is affected> | <what to do> | <owner>
+    KEY PEOPLE TO KEEP: <role or name> | <why> | <action>
+
+  SELLER SERVICES (if any)
+    <service> | <provider> | <cost> | <start> | <exit date> | <what must happen first>
+
+  SAVINGS TRACKER
+    <initiative> | <planned, from your numbers> | <confirmed so far> | <status>
+
+  SOURCES STILL NEEDED
+  ASSUMPTIONS AND CHECKS NOT DONE
+output_sample:
+  input:
+    - The deal in a few lines, with the close date and why you did it
+    - The people, functions and main systems on both sides
+    - Org charts, deal terms or a systems list (optional)
+    - Services the seller will run for you, with dates (optional)
+  prerequisites:
+    - An AI that can read files, if you attach org charts or deal terms
+  output:
+    - name: Deal snapshot
+      contains: What was bought, the close date, the reason for the deal and the integration approach.
+    - name: Day 1 readiness
+      contains: Each check in legal, people, finance, systems, customers and communication, marked ready, not ready or unknown.
+    - name: Workstream owners
+      contains: One owner, first milestone and proposed date for each function.
+    - name: Dependencies
+      contains: Which steps block which, with the critical path marked.
+    - name: 100-day plan
+      contains: Three phases of actions with owners, from stabilising to improving.
+    - name: People and customer risks
+      contains: Risks with who is affected, the action and the owner, plus key people to keep.
+    - name: Seller services
+      contains: Each temporary service with a provider, cost, exit date and what must happen first.
+    - name: Savings tracker
+      contains: Each planned saving or gain from your own numbers, against what is confirmed so far.
+    - name: Sources still needed
+      contains: The facts and files you must still supply before the plan can be trusted.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read org charts, a systems list and deal terms next to your description and tie each date to a real document.
+  inputs:
+    - Current org charts for both businesses.
+    - A list of contracts that need the other party's consent when ownership changes.
+    - Your top customers and who owns each relationship.
+terms:
+  - term: Day 1
+    meaning: The first day the two businesses are one owner. Pay, email and customer service must work.
+  - term: Post-merger integration
+    meaning: The work of combining two businesses after a deal, so they run as one or work well side by side.
+  - term: Workstream
+    meaning: One strand of the plan, such as HR, IT, finance or sales, with its own owner.
+  - term: Critical path
+    meaning: The chain of steps where a delay in one step delays the whole plan.
+  - term: Transition service agreement (TSA)
+    meaning: A deal where the seller keeps running some services, such as payroll or IT hosting, for a set time after the sale.
+  - term: Synergy
+    meaning: A saving or gain the deal was meant to create, such as fewer duplicate vendors or selling more to the same customers.
+tweaks:
+  - what: Deal size
+    how: Say how many people and customers are on each side. A 20-person deal needs a shorter plan than a 500-person one.
+  - what: Approach
+    how: Say if you want the bought business left alone or folded in. If unsure, let the AI ask why you did the deal.
+  - what: Scope
+    how: Ask for Day 1 only, if the close is close. Ask for the full 100 days once Day 1 is settled.
+improve:
+  - Keep the plan in a shared file, and update every owner and date after each weekly check-in.
+  - Add your real org chart and systems list to the pack so you do not retype them.
+  - At day 100, paste what happened and ask the AI to write a short lessons-learned list.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

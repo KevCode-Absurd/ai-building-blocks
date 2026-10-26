@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set pattern to move secrets.
 new_slug: matlab-secret-keeper
 name: MATLAB secret keeper
-summary: Give it code with passwords or API keys. Get them moved into the MATLAB
-  Vault, not left in the file.
+summary: Move passwords and API keys out of your MATLAB code and into the MATLAB Vault. Give it a script, get a safe version you can share.
 job: secure-code
 headline: MATLAB secret keeper
-subhead: Passwords, tokens and keys taken out of your MATLAB code and kept in
-  the MATLAB Vault, so a shared file never leaks them. You give it a script with
-  credentials in plain text and get the safe version back.
+subhead: Passwords, tokens and keys taken out of your MATLAB code and kept in the MATLAB Vault, so a shared file never leaks them. You give it a script with credentials in plain text and get the safe version back.
 explain: |
   Passwords, tokens and keys taken out of your MATLAB code and kept in the MATLAB Vault, so a shared file never leaks them. You give it a script with credentials in plain text and get the safe version back.
 
@@ -18,18 +15,44 @@ when:
   - A database login is typed straight into your connection code.
   - You need to change a token without editing every file.
   - You push code to GitHub and want no secrets in the repo.
+not_for:
+  - "You use HashiCorp Vault, AWS Secrets Manager or Azure Key Vault: use that tool's own guide, as this skill only covers the MATLAB Vault."
+  - "You need help with the connection or query logic and no password is involved: ask your AI to write it as a plain MATLAB task."
+  - "You only want to clean or analyze data you already loaded: ask your AI for a data analysis step instead."
 you_give:
   - Code that contains credentials
   - What the credential connects to
   - MATLAB release
 you_get:
-  - Code with secrets removed
-  - Vault store and retrieve steps
-  - A pattern for your connection type
-  - A rotation method
+  - Your script with secrets removed and replaced by Vault calls.
+  - The list of secret names you need to create, with the steps to store them.
+  - A connection pattern that fits your service.
+  - A short note on how to rotate each secret.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open a chat with your AI and paste this skill's instructions.
+  - Paste your script. Say what each credential connects to and which MATLAB release you use.
+  - Read the edited script. Check that no password, token or key is left in it.
+  - Run the store steps it gives you at the MATLAB prompt. MATLAB asks you for each value.
+  - Run the script to test it. If your AI cannot run MATLAB, run it yourself.
+  - Pair it with the MATLAB data skills once your connection works.
+output_sample:
+  input:
+    - Your MATLAB script that has a password, token or key in it
+    - What the credential connects to, such as a web service, database, SFTP server or cloud storage
+    - Your MATLAB release (optional)
+  prerequisites:
+    - MATLAB R2024a or newer for the Vault functions
+    - An AI that can run MATLAB, if you want it to test the result (optional)
+  output:
+    - name: Decision guide pick
+      contains: "Which way to supply each secret: the Vault, a secrets file, a secret ID, or a process environment variable."
+    - name: Store step
+      contains: The setSecret call you run once at the MATLAB prompt, or an importSecrets call for a set of secrets or CI jobs.
+    - name: Edited script
+      contains: Your code with each plain-text secret replaced by a getSecret or secretID call at the point of use.
+    - name: Connection pattern
+      contains: "A ready pattern for your type: web service token, SFTP key passphrase, database login or cloud storage keys."
+    - name: Rotation method
+      contains: How to replace a secret with setSecret and Overwrite, plus an optional expiry check using secret metadata.
+    - name: Checks
+      contains: Steps to confirm each secret exists and that no secret value is left in the script, logs or saved files.

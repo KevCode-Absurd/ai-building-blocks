@@ -1,6 +1,6 @@
 new_slug: premium-positioning-mapper
 name: Premium positioning mapper
-summary: Share product facts, buyer groups and costs. Get positioning lines, proof needs and price scenarios to test with real buyers.
+summary: Map premium positioning for each buyer group. Get three lines to test, the proof you need and a price table, so you can hold a higher price.
 job: brand-file
 thinking: medium
 thinking_why: It writes angles for several buyer groups and checks the price sums, so a mid-size model works and a stronger one finds sharper angles.
@@ -14,6 +14,10 @@ when:
   - You want to raise prices or stop relying on sales, and need a reason a buyer will accept.
   - You sell the same product to different kinds of buyers and one message does not fit them all.
   - You are about to brief creators or write ads and want a story that does not lean on a discount.
+not_for:
+  - Your product sells on price alone, like a commodity. Compare costs and rival prices in a spreadsheet, or ask a pricing adviser.
+  - Your store cannot control its range, brand or where it sells. Fix that first, because a premium story needs you to back it up.
+  - You need facts on what your brand stands for first. Build your brand brain with the Website brand brain builder, then come back.
 you_give:
   - Your product and current price
   - Two to four buyer groups, with how well each knows you and your rivals
@@ -31,6 +35,32 @@ how_to_use:
   - Add your landed cost, fulfilment cost and the higher prices you want to test.
   - Test the best line per group with 2 or 3 buyers before you spend on ads.
   - Keep a control at your old price when you try a higher one.
+output_sample:
+  input:
+    - Your product and current price
+    - Two to four buyer groups and how well each knows you
+    - Your landed cost, fulfilment cost, fees and returns allowance at each test price
+    - Reviews or buyer interview notes (optional)
+    - Rival prices and what rivals claim (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder helps, but is optional
+  output:
+    - name: Group blocks
+      contains: "For each buyer group: what feels exclusive, the identity they want, the story, and who may appear."
+    - name: Three draft lines per group
+      contains: Lines to test, with provisional ratings that are not real buyer tests.
+    - name: Ad ideas and DO NOT SAY list
+      contains: Ads that carry the story without a discount, plus claims to avoid and a rule for when a sale is allowed.
+    - name: PRICE CHECK
+      contains: Contribution per unit at the current and higher test prices, and a sales target when the inputs allow it.
+    - name: BRAND FIT
+      contains: Whether the proposed claim is consistent, inconsistent or unresolved against your brand.
+    - name: FREE IDEA + PAID KEEPSAKE
+      contains: A proposal for a free idea paired with a paid keepsake.
+    - name: TEST PLAN
+      contains: Real buyer conversations and a measured comparison against a control price.
+    - name: MISSING / CHECKS MISSED
+      contains: Inputs you did not give and checks the skill could not run.
 how_it_works:
   - title: Checks the fit
     text: Stops early when the product sells on price alone or the store cannot control its brand.

@@ -1,6 +1,6 @@
 new_slug: amazon-fee-and-margin-checker
 name: "Amazon fee and margin checker"
-summary: "Give it price, landed cost and size. Get profit per unit, all fees and a score out of 100."
+summary: "Check your Amazon fees and margin before you order stock. Give it price, landed cost and size. You get profit per unit and a score out of 100."
 job: sell-on-amazon
 thinking: high
 thinking_why: "It adds many fees and must get the arithmetic exactly right, so a stronger model is safer."
@@ -17,6 +17,10 @@ when:
   - You have a product, a price and a supplier quote, and want the real profit per unit.
   - You are checking whether a price rise would be safer than running out of stock.
   - You need to know how much cash you need before the first order.
+not_for:
+  - "You only want a quick fee check on one product: use the Seller Central revenue calculator on its own."
+  - "You have no supplier quote or measured size and weight yet: get both first, because the fee lines depend on them."
+  - "You want to know if a product is worth selling at all: ask a person who sells on Amazon, or check demand and competition by hand first."
 
 you_give:
   - Price, landed cost, size and weight
@@ -33,6 +37,27 @@ how_to_use:
   - Get today's fee figures for your size and weight from Amazon's revenue calculator in Seller Central, and paste them in.
   - Paste your price, landed cost, size, weight, months in stock, return rate and ad spend per sale.
   - Read the profit per unit and the break-even ad cost. If the score is low, change the price or the cost and run it again.
+output_sample:
+  input:
+    - Your selling price and landed cost per unit
+    - The size and weight of the packed unit
+    - Months in stock, return rate and ad spend per sale (optional)
+    - Today's fee figures from Seller Central (optional, but best)
+  output:
+    - name: PROFIT PER UNIT
+      contains: Each fee on its own line, then profit before ads and profit after ads, with percent of price.
+    - name: BREAK-EVEN AD COST PER SALE
+      contains: The most you can pay in ads per sale before the sale makes no profit.
+    - name: PRICE CHECK
+      contains: Your price against three times landed cost, and what a price rise could do compared with running out of stock.
+    - name: START-UP CASH
+      contains: First order plus about 1,000 dollars of ads, compared with the cash you can afford to lose.
+    - name: SCORE
+      contains: A score out of 100 in four parts, with the sum shown and a note that it is our own scoring.
+    - name: MISSING
+      contains: Any input you did not give, such as current fee figures or size and weight.
+    - name: CHECK IN SELLER CENTRAL
+      contains: "The fees to confirm today: referral rate, size tier, pick and pack, storage and brand bonus."
 
 how_it_works:
   - title: Lists the costs

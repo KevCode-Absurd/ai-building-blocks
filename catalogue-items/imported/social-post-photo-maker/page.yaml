@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The outfit must stay the same while the scene changes.
 new_slug: social-post-photo-maker
 name: Social post photo maker
-summary: Give it an outfit photo. Get lifestyle shots with new models, scenes
-  and poses for social posts. Your image model draws them.
+summary: Turn one outfit photo into social post photos with a new model, scene and pose. The clothes stay the same. Your image tool draws them.
 job: product-photos
 headline: Social post photo maker
-subhead: Lifestyle photos for social posts made from one outfit picture. The
-  outfit stays the same, but the model, scene and pose change, so a clean
-  product shot becomes a casual, real-looking post image.
+subhead: Lifestyle photos for social posts made from one outfit picture. The outfit stays the same, but the model, scene and pose change, so a clean product shot becomes a casual, real-looking post image.
 explain: |
   Lifestyle photos for social posts made from one outfit picture. The outfit stays the same, but the model, scene and pose change, so a clean product shot becomes a casual, real-looking post image.
 
@@ -18,20 +15,47 @@ when:
   - You want the same outfit shown on a different model.
   - You need a cafe or street scene without a real shoot.
   - Your catalogue photos look too stiff for social media.
+not_for:
+  - "You want photos of real customers or influencers: ask them for their own photos and permission instead."
+  - "You want to suggest a person endorsed or used your product: don't use this. Use honest photos or real reviews."
+  - "You want to copy a real person's face without consent: skip this and hire a model or get written permission."
 you_give:
-  - The outfit photo
-  - A scene or pose reference image (optional)
-  - The mood or setting you want
-  - Access to an image generating tool
+  - Your outfit photo, full or nearly full body, with one person and every item clear
+  - A scene or pose reference photo (optional)
+  - The mood or setting you want, such as a cafe or a street at golden hour
+  - An image tool or a key for one
 you_get:
   - A detailed image prompt that keeps the outfit unchanged
   - Lifestyle images with a new model and scene
   - Variations in pose and angle
   - Tips to finish the images in your image tool
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Clean your photo first. Remove filters, text and stickers, or the new image will keep them. The watermark remover skill can help.
+  - Open your AI and paste this skill. Add the outfit photo and, if you have one, a scene reference photo.
+  - Tell it the mood or scene. It lists each item you wear, then writes the picture prompt.
+  - Run the prompt in your image tool. The skill's commands use the dlazy tool and an API key, which may cost money per image, so check prices first.
+  - Make three or four images per scene. Pick the most natural pose.
+  - Check each image for swapped items, odd hands and a busy background. Add a fix line to the prompt and run again if needed.
+output_sample:
+  input:
+    - Your outfit photo, full or nearly full body, one person, every item clear
+    - A scene or pose reference photo (optional)
+    - The mood or setting you want, if you have no reference photo
+    - An image model key and the dlazy tool, or another image tool
+  prerequisites:
+    - An AI that can run code and the dlazy command line tool
+    - An API key for the image service, which may cost money per image
+    - Check the dlazy site for prices before you run a batch
+  output:
+    - name: Outfit list
+      contains: "One line for each item: top, bottom, shoes, bag and accessories, reused in every prompt."
+    - name: Picture prompt
+      contains: A prompt that locks the outfit, then sets the new model, scene, pose, light and camera style.
+    - name: Lifestyle images
+      contains: Three or four tall images per scene, so you can pick the most natural pose.
+    - name: Scene versions
+      contains: The same outfit in several scenes, such as street, cafe, home, travel and commute.
+    - name: Quality check
+      contains: A check for missing or swapped items, hands, a candid feel and a background that steals focus.
+    - name: Fix lines
+      contains: Short lines to add to the prompt when an item changes, the pose is stiff or hands look wrong.

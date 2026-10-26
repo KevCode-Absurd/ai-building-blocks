@@ -1,6 +1,6 @@
 new_slug: turn-the-first-weeks-after-an-order-into-repeat-buyers
 name: Turn the first weeks after an order into repeat buyers
-summary: Give it your products and order data. Get post-order emails, delivery updates, a customer stage map and a test plan.
+summary: "Turn the first weeks after an order into repeat buyers: get post-order emails, delivery updates, a customer stage map and a ranked test plan."
 job: keep-customers
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your only email after an order is the receipt, and nothing brings buyers back.
   - Customers write to ask where their parcel is, and you want to answer before they ask.
   - You have several flows, and some buyers get emails from two of them at once.
+not_for:
+  - "You get under about 50 orders a month, so test results will be too thin: send one plain receipt and shipping email by hand instead."
+  - "You want to win back buyers who went quiet months ago: use a win-back workflow instead."
+  - "You only need delivery messages: use the Delivery update flow builder."
 you_give:
   - Your products, and what pairs well with each
   - Your delivery times, and how many order-status tickets you get a month
@@ -31,6 +35,27 @@ how_to_use:
   - Paste your product list, delivery times and email results. Add how you define a new, returning and loyal buyer.
   - Build the flows in your email tool in the order the map gives.
   - Run the first test it ranks, and read the result only when the sample size is reached.
+output_sample:
+  input:
+    - Your products, and what pairs well with each
+    - Your delivery times and monthly order-status tickets
+    - Your email results, such as flow revenue and recipients per month
+    - Your current flows, with triggers and delays (optional)
+    - Your brand brain and offer (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude in a Project or Claude Code
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "STEP 1: Post-purchase flow builder"
+      contains: The trigger, a split by order count, six email outlines with subject lines, and timing.
+    - name: "STEP 2: Delivery update flow builder"
+      contains: A delivery date rule, four update messages, a tracking page plan and a late parcel script.
+    - name: "STEP 3: Customer stage flow mapper"
+      contains: Your flows by new, returning and loyal buyer, with goal, tone, offer rule and a build order.
+    - name: "STEP 4: Email test planner"
+      contains: A ranked test queue with hypothesis, sample size, winning metric and tests to skip.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Post-purchase flow builder
     text: Builds the emails after a first order. It starts with a plain founder note, then adds more products, a shipping update and how to get the most from what they bought.

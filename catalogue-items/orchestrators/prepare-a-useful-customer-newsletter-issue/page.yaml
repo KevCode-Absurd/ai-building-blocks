@@ -1,52 +1,116 @@
 new_slug: prepare-a-useful-customer-newsletter-issue
 name: Prepare a useful customer newsletter issue
 headline: Prepare a useful customer newsletter issue
-summary: Share the source files. Get a sourced newsletter draft, subject options and a review checklist.
+summary: Turn customer messages and your store news into a customer newsletter draft with subject lines and a pre-send checklist, in your voice.
 job: write-emails
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A sourced newsletter draft, subject options and a review checklist. Share your online store customer question, approved product news, source links, mailing rules, buyer brief and actual brand voice examples. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Paste the customer messages you already have, your approved store news and a few emails in your voice. Your AI picks one real customer question, writes one newsletter email that answers it, and edits it to sound like you.
 explain: |-
-  A sourced newsletter draft, subject options and a review checklist.
+  Most store newsletters start from what the store wants to say. This customer newsletter workflow starts from what your customers asked. It reads your reviews, emails or support messages, picks one question worth answering, and builds a short value email around it. You can use it for a care guide, a sizing answer or a shipping change, as long as you have the facts.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Each item helps the intended reader; offers, dates and claims match the supplied source. Missing tools or evidence stay visible in the final summary.
+  The first step counts how many messages sit behind the question and says so. One customer asking is a fine topic, but the email then says "a customer asked", not "many of you ask". The second step writes one email with one message. You get subject and preview lines under 50 characters, a plain-text version, two A/B variants and a claims check. It writes no offer you did not give it.
+
+  The last step edits the wording to your voice. It fixes words your customers would not use and leaves facts, prices, dates and promises alone. Nothing is sent. You get a checklist of what to confirm before you press send in your email tool.
 when:
-  - You need a sourced newsletter draft, subject options and a review checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have a pile of customer emails, reviews or support chats and want a newsletter issue made from them
+  - The same customer question keeps coming in and you want to answer it for the whole list
+  - You have store news to share, such as a care guide, a size chart or a shipping change, and want it to help rather than sell
+  - Your newsletter sounds like everyone else's and you want it in your own voice
+not_for:
+  - You want to announce a sale, launch or restock. Use Campaign email writer, or Plan a month of campaign emails that sell without discounts.
+  - You want to tell one true story from you or your founder. Use Write a personal story email and read how it did.
+  - You have no customer messages and no real question yet. Use Email topic bank builder to find topics from your product facts.
 you_give:
-  - Your online store customer question, approved product news, source links, mailing rules, buyer brief and actual brand voice examples.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Customer messages from the last few months, such as reviews, emails or support chats
+  - Store news you have approved, with dates and links to the pages it comes from
+  - Three to five past emails or a short voice note, so it can match how you write
+  - Mailing rules, such as who gets this issue, the sender name and the send date
+  - Your buyer brief or brand brain (optional)
 you_get:
-  - A sourced newsletter draft, subject options and a review checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - The one customer question it picked, with the exact quote and how many messages sit behind it
+  - Two subject and preview options, a short email, a plain-text version and two A/B variants
+  - A claims check that matches each statement to a fact you gave
+  - A voice check with a score out of 100 and every wording change shown
+  - A checklist of what to confirm before you send, and every fact still missing
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack. It is a zip with HANDOFF.md and the three skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md". No code, web access or paid tool is needed.
+  - Paste your customer messages, your approved store news and your past emails. Add the mailing rules.
+  - Read the customer question first. Check the quote is word for word and the count of messages is right. Ask for another question if you prefer one.
+  - Read the email next to your source facts. Fix every MISSING line, then send it from your own email tool. The AI does not send anything.
 how_it_works:
   - title: Feedback theme finder
-    text: Find a useful customer question in the provided feedback and preserve the sample limits. A small or single-customer sample does not establish a wider trend.
+    text: Reads your customer messages and groups them into questions. Picks one that your store news can answer, copies a real quote and counts the messages behind it. Saves step 1 and hands on the question, the count and the sample limits.
   - title: Campaign email writer
-    text: Use value-email mode to draft one core message around the customer question and approved store news, with subject, preview and plain-text versions. Do not invent an offer or send a test.
+    text: Writes one value email around that question and your approved news. Makes subject and preview options, a plain-text version, two A/B variants and a claims check. Saves step 2 and hands on the full draft.
   - title: Brand voice editor
-    text: Edit the draft to the supplied voice without adding facts, offers or promises.
+    text: Reads the draft against your past emails and voice notes. Swaps off-voice words, keeps every fact, price and date, and scores the voice out of 100 before and after. Saves step 3.
+  - title: Check and hand back
+    text: Compares the final email with your sources, lists every MISSING line and builds the pre-send checklist. Names any check that could not run.
 output_shape: |-
-  Scope and source coverage
-  A sourced newsletter draft, subject options and a review checklist.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CUSTOMER QUESTION
+    Question | exact quote | <number> of <number> messages | sample limits
+
+  SUBJECT AND PREVIEW OPTIONS
+    1. <subject under 50 characters> | <preview>
+    2. <short option> | <preview>
+    A/B variants: A as written | B with <one thing> changed
+
+  NEWSLETTER EMAIL (about 100 words)
+    Headline / Body / Button / P.S., in your voice
+
+  PLAIN-TEXT VERSION
+    <short note signed by a person>
+
+  CLAIMS AND VOICE CHECK
+    Claim | fact it matches | pass or fail
+    Voice score now <score>, after fixes <score>
+
+  PRE-SEND CHECKLIST
+    Facts to confirm | links | sender and unsubscribe | send date
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | CHECKS MISSED | one next step
+output_sample:
+  input:
+    - Your customer messages, such as reviews, emails or support chats
+    - Your approved store news, with the pages it comes from
+    - Three to five past emails or a voice note
+    - Your mailing rules, such as audience, sender name and send date
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Your brand brain or buyer brief, if you have one (optional)
+  output:
+    - name: Customer question
+      contains: The question picked, an exact customer quote, how many messages back it and the limits of the sample.
+    - name: Subject and preview options
+      contains: Two subject and preview pairs under 50 characters, plus two A/B variants that each change one thing.
+    - name: Newsletter email
+      contains: One short value email that answers the question using only your approved facts, edited to your voice.
+    - name: Plain-text version
+      contains: A short note signed by a person, with one call to action.
+    - name: Claims and voice check
+      contains: Each claim matched to a fact you gave, and a voice score out of 100 with the changes shown.
+    - name: Pre-send checklist
+      contains: What to confirm before sending, such as dates, links, the unsubscribe link and the sender address.
+    - name: Hand-back summary
+      contains: The files saved, every MISSING line, any check that could not run, and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read pasted messages or files and keep each step's result as a file. None of them can send the email for you.
+  inputs:
+    - At least 10 customer messages, so the count behind the question means something.
+    - A past email your customers replied to, as a voice example.
+    - The page for each fact in your news, so claims can be checked.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Use one period of feedback, such as the last 90 days, so the question counts are comparable.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the messages themselves, not your memory of them. The quote has to be word for word.
   - what: Acceptance
-    how: Each item helps the intended reader; offers, dates and claims match the supplied source.
+    how: Say what must stay out, such as discounts or delivery promises. The AI will keep to it.
 judge:
   - Each item helps the intended reader; offers, dates and claims match the supplied source.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +123,16 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - After you send, note which subject line and which question got replies. Ask for next month's issue from the next question.
+  - Keep your approved news and past emails in one folder so each issue starts from the same facts.
+  - Run the finished draft through the Email draft reviewer for a second read before it goes out.
+next:
+  - plan-a-month-of-campaign-emails-that-sell-without-discounts
+  - write-a-personal-story-email-and-read-how-it-did
 terms:
+  - term: Value email
+    meaning: An email that helps the reader first, with one soft call to action, instead of pushing a sale.
+  - term: A/B variant
+    meaning: A second version that changes one thing, such as the subject line, so you can see which works better.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

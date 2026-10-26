@@ -1,52 +1,87 @@
 new_slug: build-a-clear-sponsorship-decision-brief
 name: Build a clear sponsorship decision brief
 headline: Build a clear sponsorship decision brief
-summary: Share the source files. Get an audience fit review, cost comparison and a bounded pilot recommendation.
+summary: Decide whether a sponsorship is worth it. Get a cost comparison, an audience fit review and a small paid pilot with a spend cap and decision date.
 job: plan-strategy
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An audience fit review, cost comparison and a bounded pilot recommendation. Share a sponsorship proposal, audience evidence, quoted costs, deliverables, goal and an existing ordered decision checklist with stop rules. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the sponsorship proposal, its full cost, what you know about the audience and your decision checklist. Your AI compares the offer with alternatives, plans a small pilot with tracking, and runs your checklist to a go, wait or no.
 explain: |-
-  An audience fit review, cost comparison and a bounded pilot recommendation.
+  Sponsorship pitches talk about reach: followers, attendees, views. Reach is not sales. This workflow asks what you would actually buy, what it costs with every fee, and what result you would count.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Reach is not treated as sales; the pilot states tracking, caps and a decision date. Missing tools or evidence stay visible in the final summary.
+  It compares the offer with other ways to spend the same money. Then it plans the smallest pilot that would teach you something. The pilot has a spend cap, a way to track results and a decision date. Last, it runs your own checklist on the plan, so the call follows rules you set before the pitch.
+
+  Pilot results are observational. They show what happened, not that the sponsorship caused it.
 when:
-  - You need an audience fit review, cost comparison and a bounded pilot recommendation.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A podcast, newsletter, event or creator sends you a sponsorship offer with big reach numbers.
+  - You are asked to commit a budget and want a way to test it first.
+  - You have two or three sponsorship offers and need to compare them fairly.
+  - A partner says "everyone sponsors this event" and you want your own evidence.
+not_for:
+  - "The proposal has no price yet: ask the seller for the full price first, then run this."
+  - "You want to sell sponsorships to others: use the Nonprofit sponsor package planner."
+  - "You are choosing a software or service vendor: use the Preserve a procurement decision audit trail workflow."
 you_give:
-  - A sponsorship proposal, audience evidence, quoted costs, deliverables, goal and an existing ordered decision checklist with stop rules.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The sponsorship proposal, with what is included and the dates (from the seller)
+  - Every quoted cost, including fees and extras
+  - What you know about the audience, from the seller or your own data (optional, but it helps)
+  - Your goal, such as sales, leads or booked meetings, and the most you would pay for one
+  - Your decision checklist with stop rules (build one with the Decision checklist builder)
+  - Other offers or ads you could buy instead (optional)
 you_get:
-  - An audience fit review, cost comparison and a bounded pilot recommendation.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - An audience fit review that keeps the seller's claims apart from your own evidence
+  - A cost comparison with the full price and the price per deliverable
+  - "A pilot plan: what to buy, a spend cap, how to track results and a decision date"
+  - Your checklist run on the plan, with a go, wait or no call
+  - A list of what is still missing
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Collect the proposal, the price list and any audience facts the seller gave you.
+  - Give the pack to Claude, ChatGPT or Gemini. Attach those files and your checklist.
+  - Say what one good result is worth, such as the most you would pay for one sale. Without it, the pilot has no pass mark.
+  - Check the cost table first. Every fee should be in the total.
+  - Set up the tracking link or code before any money moves. Then take the pilot plan to the seller.
 how_it_works:
   - title: Vendor comparison writer
-    text: Normalize the proposal deliverables and costs against available alternatives.
+    text: Sets the offer against alternatives. Shows the total cost with every fee, what you actually get, and the cost per deliverable. Marks each audience fact as a seller claim or your data. Hands step 2 the total and the open questions.
   - title: Event marketing planner
-    text: Use sponsorship evaluation mode to plan a bounded pilot with tracking, caps and a decision date. Label observed responses as observational; do not imply randomized or causal proof.
+    text: Used in sponsorship mode. Plans the smallest buy that would teach you something, with a spend cap, tracking, a definition of a result, dates and a decision date. Results are labeled observational. Hands step 3 the pilot plan.
   - title: Decision checklist runner
-    text: Check the pilot recommendation against the user supplied audience, cost and measurement requirements, marking unknown answers.
+    text: "Runs your checklist on the pilot plan. Each item is a pass, a fail or unknown, with the fact behind it. Ends with a go, wait or no call. Check first: failed stop items show first."
 output_shape: |-
-  Scope and source coverage
-  An audience fit review, cost comparison and a bounded pilot recommendation.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  AUDIENCE FIT      <fact | SELLER CLAIM or YOUR DATA | what it shows>
+  COST COMPARISON   <offer | total cost with fees | what you get | cost per deliverable>
+  PILOT PLAN        <what to buy | spend cap | tracking | what counts as a result | start and end | decision date | most you would pay per result>
+  CHECKLIST RUN     <item | PASS, FAIL or UNKNOWN | fact>
+  THE CALL          <go, wait or no | reason | what would change it>
+  FILES SAVED       <each file and the step that made it>
+  MISSING           <each gap, and what it stops>
+  CHECKS MISSED     <one line each, or none>
+output_sample:
+  input:
+    - The sponsorship proposal and every quoted cost
+    - What you know about the audience
+    - Your goal and the most you would pay per result
+    - Your decision checklist with stop rules
+  prerequisites:
+    - A decision checklist, built with the Decision checklist builder if you have none
+  output:
+    - name: Audience fit
+      contains: Each audience fact marked as a seller claim or your own data, and what it shows.
+    - name: Cost comparison
+      contains: The full price with every fee, what you get, and cost per deliverable against alternatives.
+    - name: Pilot plan
+      contains: What to buy, a spend cap, tracking, what counts as a result, dates and a decision date.
+    - name: Checklist run
+      contains: Each checklist item marked pass, fail or unknown, with the fact behind it.
+    - name: The call
+      contains: Go, wait or no, with the reason and what would change it.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Reach is not treated as sales; the pilot states tracking, caps and a decision date.
+  - what: Goal
+    how: "Pick one goal: sales, leads or meetings. The pilot then tracks that result and nothing else."
+  - what: Budget
+    how: Give your spend cap. The plan picks the smallest package that fits under it.
+  - what: Alternatives
+    how: Add one other offer or an ad you already run. The comparison then shows what the same money buys elsewhere.
 judge:
   - Reach is not treated as sales; the pilot states tracking, caps and a decision date.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +94,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - When the pilot ends, bring the tracked results back and run the checklist again.
+  - Add any checklist item you wished you had to your checklist before the next offer.
+  - Keep one sheet of every sponsorship you tried, its cost and its tracked results.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It reads the proposal, the price list and your checklist together. No code or paid tool is needed.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A unique link or discount code you can give the seller for tracking.
+    - The seller's own audience numbers, labeled as claims.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Reach
+    meaning: How many people may see the sponsorship. It does not say how many will buy.
+  - term: Pilot
+    meaning: A small, capped test you run before committing to a larger buy.
+  - term: Observational
+    meaning: Results you saw happen, which do not prove the sponsorship caused them.
+  - term: Stop rule
+    meaning: A checklist item that ends the decision at once if it fails.

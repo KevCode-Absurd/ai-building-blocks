@@ -12,8 +12,12 @@ inputs:
     required: false
   - type: brief
     required: false
+  - type: source_text
+    required: false
 outputs:
   - type: document
+  - type: spreadsheet
+    required: false
 uses: []
 origin: imported
 source:

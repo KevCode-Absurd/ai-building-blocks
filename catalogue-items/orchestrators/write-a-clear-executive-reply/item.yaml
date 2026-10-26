@@ -1,7 +1,6 @@
 slug: write-a-clear-executive-reply
 name: Write a clear executive reply
-summary: Share a thread and your goal. Get a fact-checked reply draft edited for
-  your preferred voice.
+summary: Paste an email thread and say what you want. Get a reply draft with recipients listed, facts checked and the wording in your voice.
 category: orchestrator
 boards:
   - business
@@ -11,14 +10,10 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: source_text
-    required: false
-  - type: script
-    required: false
-  - type: ad_copy
-    required: false
+    required: true
   - type: brand_brain
     required: false
 outputs:
@@ -28,18 +23,10 @@ uses:
   - brand-voice-editor
 steps:
   - uses: executive-email-draft
-    note: 1. Read skills/executive-email-draft/SKILL.md. Share an email thread and
-      your goal. Get a reply draft with clear recipients, supported facts and a
-      specific next step. Save the result with source references. Carry the
-      user's goal and all earlier findings into this step. If required evidence
-      or tool access is missing, mark this step blocked; do not fabricate a
-      result.
+    note: "Reads the thread and your goal. Hands the voice step a reply draft, the To, CC and BCC list, the facts checked and any missing facts."
   - uses: brand-voice-editor
-    note: 2. Read skills/brand-voice-editor/SKILL.md. Paste your ad and customer
-      quotes. Get off-brand words fixed, claims untouched, and a score out of
-      100. Save the result with source references. Carry the user's goal and all
-      earlier findings into this step. If required evidence or tool access is
-      missing, mark this step blocked; do not fabricate a result.
+    note: "Edits the draft's wording to match your sent emails and voice notes. Changes words only, never a fact, date, price or promise. Hands back the final reply and a list of each change."
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 credits:

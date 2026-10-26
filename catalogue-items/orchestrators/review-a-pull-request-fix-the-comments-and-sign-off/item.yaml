@@ -13,9 +13,9 @@ outputs:
   - {type: audit_report}
 uses: [pull-request-risk-reviewer, review-comment-fixer, human-review-gate]
 steps:
-  - {uses: pull-request-risk-reviewer, note: "Reads the change and ranks the issues a reviewer should raise."}
-  - {uses: review-comment-fixer, note: "Works through the comments you posted from the review and updates the code."}
-  - {uses: human-review-gate, note: "Takes the fixed change and holds it until a named person has reviewed it and no blocker is open."}
+  - {uses: pull-request-risk-reviewer, note: "Reads the change and ranks the issues a reviewer should raise. It hands over ranked review comments for you to post on the pull request."}
+  - {uses: review-comment-fixer, note: "Works through the comments you posted from step 1's review, read from the pull request, and the code branch. It changes only the comments you pick and hands over the fixed code."}
+  - {uses: human-review-gate, note: "Takes the fixed change from step 2 and holds it until a named person has reviewed it and no blocker is open. It hands over the one-page sign-off with proof."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/pull-request-review-loop/skeleton.yaml

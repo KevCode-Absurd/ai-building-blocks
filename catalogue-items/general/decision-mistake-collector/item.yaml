@@ -8,6 +8,7 @@ job: research
 level: beginner
 inputs:
   - {type: question, required: true}
+  - {type: lessons_register, required: false}
 outputs:
   - {type: lessons_register, required: true}
 origin: rebuilt

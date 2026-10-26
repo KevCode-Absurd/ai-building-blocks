@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It reads trends and links them to actions.
 new_slug: marketing-results-reporter
 name: Marketing results reporter
-summary: Give it your marketing numbers. Get a report on trends, funnel
-  drop-offs and what to do next.
+summary: Turn your marketing numbers into a report. Find which channels start sales, where visitors drop off, and what to do next in your marketing results.
 job: read-ad-results
 headline: Marketing results reporter
-subhead: Give it exports from your analytics and ad tools, the period and your
-  main goal numbers. It compares each metric to last period and shows which
-  channels start sales and which finish them. You get a report with a summary,
-  channel breakdown, funnel drop-off figures and ranked recommendations.
+subhead: Give it exports from your analytics and ad tools, the period and your main goal numbers. It compares each metric to last period and shows which channels start sales and which finish them. You get a report with a summary, channel breakdown, funnel drop-off figures and ranked recommendations.
 explain: |
   Numbers from your ads, site and email turned into a report that says what happened and what to do about it. It looks past last-click credit to show which channels start sales and which ones finish them.
 
   It starts by fixing the goal and the period. Then it collects data from your tools, such as Google Analytics, search console and ad accounts, and compares each metric to the last period and the same period a year ago. It tests several credit models, maps the funnel from first visit to purchase and finds where people drop off. The report ends with a summary, a channel breakdown, key insights and ranked recommendations.
 when:
-  - You think a channel is failing but last-click numbers may be hiding its real
-    role.
+  - You think a channel is failing but last-click numbers may be hiding its real role.
   - You need to find the step where most visitors leave your funnel.
   - You want a monthly report that compares this month to last year.
   - You must decide which ad channel to cut or grow.
+not_for:
+  - "You have fewer than about 100 conversions or only one day of data: check one metric by hand in your analytics tool instead."
+  - "You want a live dashboard that updates by itself: use the dashboard in your analytics or ad tool instead."
+  - "You have no exports or numbers yet: pull the reports from your tools first, or ask whoever runs your ads."
 you_give:
   - Data exports from analytics and ad tools
   - The reporting period
@@ -32,7 +31,30 @@ you_get:
   - Credit comparison across channels
   - Ranked recommendations
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the exports you need. Use your analytics tool (for example Google Analytics) and each ad account. CSV files work well. Some tools need a paid account or API access for exports.
+  - Decide the reporting period. Write dates in one format, such as 1 Jan 2025 to 31 Jan 2025. Add last period and last year if you have them.
+  - Write your goal in one line, such as leads or sales, plus the target number if you have one.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste or upload your exports, period and goal. No code is needed.
+  - Check the report first. Any metric you did not supply should read 'not provided', not a guess. Then pick the top recommendation to act on.
+output_sample:
+  input:
+    - Exports from your analytics and ad tools, such as Google Analytics, search console and ad accounts
+    - The reporting period you want to review
+    - Your main goal numbers, such as leads, sales or cost per sale
+    - Email, CRM or social exports (optional)
+  prerequisites:
+    - An AI that can read pasted tables or uploaded files
+    - Access to download exports from your own tools
+  output:
+    - name: Executive summary
+      contains: Each key metric for this period next to last period and the same period last year, with the change.
+    - name: Channel breakdown
+      contains: How each channel did on visits, conversion rate, leads and cost, with a next step for each.
+    - name: Credit comparison
+      contains: How credit for sales shifts across channels when you look past last click.
+    - name: Funnel analysis
+      contains: Drop-off at each stage from first visit to purchase, and the stages with the most friction.
+    - name: Key insights
+      contains: The few findings that matter most, each with why it matters and what to do.
+    - name: Recommendations
+      contains: Ranked actions based on the data, such as where to add or cut budget.

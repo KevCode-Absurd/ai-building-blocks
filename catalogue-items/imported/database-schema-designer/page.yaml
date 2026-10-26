@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a structure from your needs with set design rules.
 new_slug: database-schema-designer
 name: Database schema designer
-summary: Describe your app. Get tables, links, indexes and rules in a clean,
-  normalized schema.
+summary: "Describe your app and get a database schema design: tables, links, indexes and rules, plus ready-to-run SQL for PostgreSQL, MySQL or SQLite."
 job: build-software
 headline: Database schema designer
-subhead: Plain descriptions of what your app does become a clean set of tables,
-  relationships and rules, plus the SQL to create them. The design avoids
-  duplicated data and bad entries from the start.
+subhead: Plain descriptions of what your app does become a clean set of tables, relationships and rules, plus the SQL to create them. The design avoids duplicated data and bad entries from the start.
 explain: |
   Plain descriptions of what your app does become a clean set of tables, relationships and rules, plus the SQL to create them. The design avoids duplicated data and bad entries from the start.
 
@@ -18,6 +15,10 @@ when:
   - Your spreadsheet of data has repeated values that cause errors.
   - You have to model orders, customers and products with links.
   - A teammate asks for the schema in SQL.
+not_for:
+  - "You need a NoSQL or document store such as MongoDB: ask a developer or your AI to model documents instead, since this plans tables only."
+  - "You only need reports across large amounts of data: use a data warehouse design, not this app database layout."
+  - "You already have a live database and want to change one table: ask your AI for a single migration script, or ask a developer."
 you_give:
   - A description of your app and its data
   - Main items and what they hold
@@ -29,7 +30,28 @@ you_get:
   - Ready to run SQL statements
   - Check against your needs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code running or paid tool is needed.
+  - Describe your app in plain words. List the main things it tracks and how they connect.
+  - Name the database you will use, such as PostgreSQL, MySQL or SQLite. Add any special rules.
+  - Read the assumptions and the table list first. Fix anything that is wrong and ask for a new version.
+  - Run the SQL script in a test database, not your live one. Then use a migration tool such as Flyway, Prisma Migrate or Alembic to keep track of changes.
+output_sample:
+  input:
+    - A plain description of your app and what it does
+    - The main things it tracks and what each one holds
+    - How those things link together (optional)
+    - Which database you will use, such as PostgreSQL, MySQL or SQLite (optional)
+    - Special rules, such as unique emails or no negative prices (optional)
+  output:
+    - name: Assumptions
+      contains: The choices your AI made about links, required fields and rules before it started the design.
+    - name: Tables and relationships
+      contains: Each table with its columns, keys and how it links to other tables, one to one, one to many or many to many.
+    - name: Normalization check
+      contains: A review that every column depends on the right key, with any planned shortcuts and the reason for them.
+    - name: Constraints and indexes
+      contains: Rules such as NOT NULL, UNIQUE, CHECK and defaults, plus indexes for lookups and joins.
+    - name: SQL script
+      contains: CREATE TABLE statements in the right order, with indexes, written for the database you chose.
+    - name: Requirements check
+      contains: A review that every item and link you described appears in the design.

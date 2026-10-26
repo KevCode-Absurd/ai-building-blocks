@@ -23,11 +23,11 @@ uses:
   - vendor-comparison-writer
 steps:
   - uses: spend-savings-finder
-    note: Identify duplicate spend and possible unused services using the supplied usage evidence.
+    note: "Identify duplicate spend and possible unused services using the supplied usage evidence. Hands the register and a shortlist of tools to check to step 2."
   - uses: vendor-agreement-status-checker
-    note: Check contract terms and create dated renewal decisions for the supported candidates.
+    note: "Check contract terms and create dated renewal decisions for the supported candidates. Starts from step 1's shortlist and hands the notice dates to step 3."
   - uses: vendor-comparison-writer
-    note: Compare keep, consolidate and replace options with migration effort and recurring cost.
+    note: "Compare keep, consolidate and replace options with migration effort and recurring cost. Uses the shortlist and notice dates from steps 1 and 2."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

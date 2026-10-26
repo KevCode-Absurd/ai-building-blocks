@@ -46,7 +46,7 @@ How to start:
 2. **Say it like a person.** Read each line aloud. If you couldn't imagine saying it to a friend over coffee, rewrite it plainly. Joined sentences ("so", "and", "because") are how people talk; a run of clipped fragments isn't. Borrow customers' words inside the speaker's own sentences rather than reciting a review. Each line is clear the first time it's heard, and describes something an ordinary person really does, thinks or feels. For the stock phrases to avoid, use the list in "Anti-AI-slop copy editor". When the script is done, read it once more just for these and rewrite each one as a joined sentence a person would say:
    - a list of clipped fragments ("Greens, vitamins, minerals, fiber.")
    - a "no this, no that" list ("No water, no shaker.")
-   - a question the speaker answers straight away ("So gummies? I figured...")
+   - a question the speaker answers straight away ("So gummies? I figured..."), or a buyer's doubt asked as a question that a later line answers, even several lines on. Say the doubt as a statement instead ("I figured a gummy couldn't hold enough")
    - a slogan as the last line
    When you borrow a customer's words, keep them as they were said, or put them in your own words without quote marks. Never half-quote and change the meaning.
 3. **Match the words to what the buyer knows.** A buyer who doesn't know a fix exists has no word for what's in the product, so describe what each thing does, in their words. Someone weighing up options can handle category terms, as long as each comes with its effect for them.
@@ -62,7 +62,7 @@ How to start:
 6. **Write shot notes a crew could film.** Who holds the product, what's around it, the real use shown. Each note is one clear picture, or one plain cut said as "Cut to". Don't start an action in one shot and drop it in the next. Don't show a habit kept, more energy or any change the brand can't prove, even as a passing scene. A before-and-after, or any picture that implies an improvement, is a result claim and needs approved evidence.
 7. **Respect the voice.** A shared frustration can carry the reason to buy when research supports it. Don't invent a villain, attack a competitor, shame the buyer or hint that unfamiliar ingredients are harmful. In spoken ads the speaker is a person, so brand slogans stay out of their mouth.
 8. **Set the length.** The brief's range for this buyer wins over format habits. Strangers need the most; buyers who know the product need the least. Never squeeze a story to fit or pad one.
-9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. List any check still missed on the CHECKS MISSED line, one line each with why, or "none". For a review, list the checks the draft missed as given, then any still missed with your replacements in. Mark a check missed whenever a line fails it; don't pass a check you haven't tested line by line.
+9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. List any check still missed on the CHECKS MISSED line, one line each with why, or "none". For a review, list the checks the draft missed as given, then any still missed with your replacements in. Mark a check missed whenever a line fails it; don't pass a check you haven't tested line by line. To test the question rule, find every line that ends in a question mark and every line that answers one. List only the checks that failed, never the ones that passed.
 
 ## Format notes
 - **One person talking to a phone camera:** a face and voice the viewer believes. Strong when the problem is told from inside it, when one doubt gets answered, or when the product sits in a real hand. Half-finished thoughts are fine; a feature list isn't. An AI-made presenter can't be presented as a real customer, the founder or an expert. They can speak as a person similar to the buyer, drawn only from what genuine customers say, and they never cite a figure, a medical result or a review.
@@ -108,7 +108,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 - Every line passes the read-aloud test.
-- No slogan at the end, no question the speaker answers themself, and no "no this, no that" list.
+- No slogan at the end, no question the speaker answers themself (in the next line or later), no buyer doubt asked as a question, and no "no this, no that" list.
 - No made-up customer, number, quote, study, award or deadline.
 - One idea, one thread, one next step.
 - The length sits inside the brief's range.

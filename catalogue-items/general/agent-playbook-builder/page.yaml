@@ -1,38 +1,146 @@
 new_slug: agent-playbook-builder
-name: Correlated agent playbook builder
-summary: Build a dry-run playbook with grouped signals and proposed actions.
+name: "Correlated agent playbook builder"
+summary: "Plan a dry-run playbook that fires when several agents flag the same problem. Get trigger rules, cooldowns, proposed actions and test cases."
 job: build-software
-headline: Correlated agent playbook builder
-subhead: Share dated findings, match conditions, cooldowns and owners. Get a dry-run playbook with grouped signals and proposed actions.
-explain: |-
-  Share dated findings, match conditions, cooldowns and owners. Get a dry-run playbook with grouped signals and proposed actions.
+headline: "Correlated agent playbook builder"
+subhead: "Share your dated findings from your agents, the pattern you want to catch, the time window, the cooldown and who owns it. This skill plans a playbook that fires only when enough separate signals line up. You get grouped signals, proposed actions that wait for approval, a failure checklist and test cases."
+explain: |
+  One agent's alert is often noise. Three agents flagging related problems inside a day is a pattern. Without a rule, you either chase every alert or miss the pattern. A rule that fires on each new finding floods your channel.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This multi-agent playbook planner describes a playbook as a pattern. It names which agents must flag which kinds of finding, at what severity, inside what time window, and how many different signals must match. A cooldown stops it firing again for the same client. When it matches, the plan asks the agents involved for their view, joins them into one diagnosis and posts it. It can also open a parent task or a draft proposal, but both wait for a person to approve.
+
+  The playbook only reports and proposes. Before it can fire for real, you test it against your past findings in a dry run. The pack's checklist asks for under 10% false alarms across 30 days of past findings. The pack's example playbooks have gaps of their own, such as a file that holds a different playbook than its name says, and one rule that counts two signals from the same agent. The plan flags gaps like these and does not copy them.
+
 when:
-  - You need a dry-run playbook with grouped signals and proposed actions.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - "Several of your AI agents flag problems, and you want one combined response."
+  - "You get repeated alerts about the same thing and want a cooldown so it fires once."
+  - "A drop shows up in your email, store and tracking reports at the same time."
+  - "You want to test a rule on past findings before it is allowed to fire."
+
+not_for:
+  - "You have one agent and one alert. A single signal is an alert, not a playbook. The pack's own checklist asks for at least two signals."
+  - "You want the system to act without approval. A playbook here only reports and proposes."
+  - "You want to build the check that spots unusual changes in your data. Use the Agent anomaly monitor builder."
+  - "You want a daily brief that merges findings from all agents. Use the Multi-agent findings brief builder."
+  - "You want the approval step itself. Use the Agent approval workflow builder."
+
 you_give:
-  - Dated findings, match conditions, cooldowns and owners
+  - "Your agents' findings from the last 30 days if you can: which agent, type of finding, how serious, which client and when"
+  - "The pattern you want to catch: which agents and which kinds of finding count"
+  - "The time window, and how many different signals must match"
+  - "The cooldown for each client"
+  - "The person who owns the playbook and approves what it proposes"
+  - "Your project's code, so the starter can be adapted to it (optional)"
 you_get:
-  - A dry-run playbook with grouped signals and proposed actions
-  - A failure checklist and synthetic test cases
+  - "Signals grouped by agent, with the lowest severity that counts"
+  - "A trigger rule with the window and minimum matches, and the reason for each number"
+  - "A cooldown, and which agents add their view"
+  - "Proposed actions, each one waiting for approval"
+  - "A dry run on your findings: would it fire, and why"
+  - "A failure checklist and test cases using made-up findings"
+
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Add the skill to your AI, or open the pack and give your AI SKILL.md and the files in its references folder. An AI that can read your project folder, such as Claude Code, works best. A chat AI works if you paste them."
+  - "Paste your findings as a table or list, with dates. Add the pattern you want to catch and who owns it."
+  - "If you do not know the window or cooldown, say so. It will propose numbers and mark them as proposals."
+  - "Read the dry run first. Check each time it fires or stays quiet against what you remember happening."
+  - "Run the test cases yourself in a test copy. Keep the playbook in report-only mode until your owner has approved it."
+
 how_it_works:
-  - title: Step 1
-    text: Collect scoped findings in a defined time window.
-  - title: Step 2
-    text: Match the required independent signals.
-  - title: Step 3
-    text: Deduplicate incidents and enforce a cooldown.
-  - title: Step 4
-    text: Build child tasks and approval proposals.
-  - title: Step 5
-    text: Dry-run against known examples.
-  - title: Step 6
-    text: Keep the workflow recommendation-only until an owner authorizes execution.
-thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+  - title: "Collects findings in a window"
+    text: "Takes your findings, grouped by client, inside the time window. Findings with no date or client are marked, not used."
+  - title: "Matches separate signals"
+    text: "Counts how many different required signals appear at or above the severity floor. Two signals from one agent count as one source."
+  - title: "Stops repeat firing"
+    text: "Sets a cooldown per client so one pattern does not fire again and again while the first response is still in progress."
+  - title: "Builds tasks and proposals"
+    text: "Plans the combined diagnosis, an optional parent task and an optional draft proposal. None of them acts until a person approves."
+  - title: "Dry-runs on known cases"
+    text: "Runs the rule against your past findings and shows when it would have fired and when it would not."
+  - title: "Stays recommendation-only"
+    text: "Keeps the playbook in report-only mode until the owner says in writing that it may act."
+
+output_shape: |
+  PLAYBOOK: <id> | <name> | <the pattern it catches in one line>
+  OWNER: <who reviews and approves>
+
+  SIGNALS
+  <agent> | finding types: <...> | lowest severity: <info | warning | critical>
+
+  TRIGGER RULE
+  window: <hours> | needs: <n> of <m> separate signals | why these numbers: <...>
+
+  COOLDOWN
+  <hours> per <client> | why: <...>
+
+  WHO ADDS A VIEW
+  <agent> | what it adds
+
+  PROPOSED ACTIONS (each waits for approval)
+  <parent task | draft proposal | diagnosis post> | approver: <who>
+
+  DRY RUN
+  <set of past findings> | fires: <yes | no> | why
+
+  FAILURE CHECKLIST
+  <failure> | what should happen | how to check
+
+  TEST CASES (made-up findings)
+  <case> | findings | expected result
+
+  CODE CHANGES (only if code was given)
+  <file> | change | status: <proposed | done>
+
+  MISSING
+  <inputs that would change the plan>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+
+output_sample:
+  input:
+    - "Your agents' findings, with agent, type, severity, client and date"
+    - "The pattern you want to catch"
+    - "The time window, the number of signals that must match and the cooldown"
+    - "The person who owns the playbook"
+  prerequisites:
+    - "An AI that can read your files, or the files pasted in"
+    - "At least a few weeks of past findings, to dry-run against"
+  output:
+    - name: "SIGNALS"
+      contains: "For each agent, the finding types that count and the lowest severity."
+    - name: "TRIGGER RULE and COOLDOWN"
+      contains: "The window, how many separate signals must match, the cooldown and the reason for each number."
+    - name: "WHO ADDS A VIEW"
+      contains: "The agents that contribute to the combined diagnosis, and what each adds."
+    - name: "PROPOSED ACTIONS"
+      contains: "The diagnosis post, an optional parent task and an optional draft proposal, each waiting for approval."
+    - name: "DRY RUN"
+      contains: "Whether the rule would have fired on each set of your past findings, and why."
+    - name: "FAILURE CHECKLIST"
+      contains: "Each way the playbook can fail, what should happen and how to check."
+    - name: "TEST CASES"
+      contains: "Made-up findings with the result each should produce."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Inputs it lacked and checks it could not run."
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "It can read your project folder and the starter files, so the plan fits the code you already have."}
+    - {name: "Any good chat AI", why: "Works if you paste your findings and the pattern. It cannot see your code, so it marks anything it has to guess."}
+  inputs:
+    - "A table of findings with agent, type, severity, client and date"
+    - "A list of which agents cover which topics"
+    - "Notes on past incidents, so the dry run can be checked against what really happened"
+
+terms:
+  - term: "Playbook"
+    meaning: "A saved pattern: what to watch for, and the joined response to plan when it appears."
+  - term: "Finding"
+    meaning: "A note from one agent that something looks wrong or worth acting on."
+  - term: "Cooldown"
+    meaning: "A pause after the playbook fires, so it does not fire again for the same client."
+  - term: "Dry run"
+    meaning: "A test on past data that shows what the rule would have done, without doing anything."
+  - term: "Severity floor"
+    meaning: "The lowest seriousness a finding must have to count as a signal."

@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: codebase
     required: false
+  - type: test_report
+    required: false
 outputs:
   - type: document
 uses: []

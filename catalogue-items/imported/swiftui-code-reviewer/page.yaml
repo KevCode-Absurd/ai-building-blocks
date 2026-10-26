@@ -2,37 +2,63 @@ thinking: medium
 thinking_why: It checks current APIs, then applies set review steps.
 new_slug: swiftui-code-reviewer
 name: SwiftUI code reviewer
-summary: Give it your SwiftUI code. Get it written, reviewed or refactored with
-  current APIs and fewer speed traps.
+summary: Get a SwiftUI code review that lists each bug, old API and slow spot with the line and the fix, for iPhone, iPad and Mac apps.
 job: build-software
 headline: SwiftUI code reviewer
-subhead: Share your SwiftUI code, or describe the feature you want. It checks
-  data flow, view composition, animation and localisation against a checklist,
-  and swaps old APIs for newer ones. You get review findings, refactored code
-  and speed fixes, with a note on why each change helps.
+subhead: Share your SwiftUI code, or describe a new screen. It checks data flow, lists, animation and old APIs against a checklist. You get a table of issues with line numbers, the fixed code and the reason for each change.
 explain: |
-  SwiftUI code that is written, reviewed or fixed with current APIs and fewer slow spots. You get changes that follow how SwiftUI actually behaves, for iPhone, iPad or Mac apps.
+  This skill is a SwiftUI code reviewer for iPhone, iPad and Mac apps. You share a file, or describe a screen you want built. It checks the code against a list of rules that SwiftUI breaks in quiet ways, such as state that ignores updates, list rows with unstable IDs and animations with no value.
 
-  Share your code or describe the feature. For a review, the skill checks data flow, view composition, identity, environment use, animation and localisation against a correctness checklist. It suggests migrating old APIs to newer ones. For speed problems, it records an Instruments trace or reads one you provide, then ties slow views back to the code. A topic router sends each question to the right reference notes. It works best with Xcode on a Mac.
+  It looks up the newest replacement for each old API before it suggests a change. Speed ideas are labelled as suggestions, so you choose which to take. It does not push one app architecture.
+
+  If you have an Instruments recording of a slow screen, it can read it and tie slow views back to your code. That part needs a Mac with Xcode and an AI that can run commands.
 when:
-  - A SwiftUI screen feels slow or redraws too much.
-  - You inherited code using old APIs and want it updated.
-  - You are building a new view and want it right the first time.
-  - You have an Instruments trace and cannot read it.
+  - A SwiftUI screen feels slow or redraws more than it should.
+  - You inherited an app that uses old SwiftUI APIs and want it brought up to date.
+  - You are building a new view and want to get state and lists right the first time.
+  - You have an Instruments trace of a slow screen and cannot read it.
+not_for:
+  - "Your code is UIKit or AppKit only: this skill is for SwiftUI, so ask your AI for a general code review."
+  - "You want text translated or an app set up for other languages: use the App translation setup helper."
+  - "You want a security check or an App Store review: this skill checks SwiftUI correctness and speed only."
 you_give:
-  - Your SwiftUI code
-  - What you want, such as review or a new feature
-  - An Instruments trace (optional)
-  - Target platform and minimum version
+  - Your SwiftUI file or files, or a description of the screen you want
+  - Whether you want a review, a refactor or a new feature
+  - Your lowest iOS or macOS version
+  - An Instruments trace file of the slow screen (optional)
 you_get:
-  - Review findings
-  - Refactored code
-  - Updated APIs
-  - Performance fixes tied to the trace
-  - Notes on why each change helps
+  - A table of issues with file, line, fix and reason
+  - The changed code, before and after
+  - Old APIs swapped for current ones
+  - Speed suggestions, linked to the trace if you gave one
+  - A next step and anything left unchecked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Use an AI that can read your Xcode project folder, such as Claude Code or Codex. For one file, paste it into a chat.
+  - Add the skill folder to your AI. The pasted text alone misses the reference notes, so use the folder if you can.
+  - Say what you want, for example "Review ProfileView.swift for iOS 17 and up". Add your lowest iOS version.
+  - Read the table from the top. Bugs come first, then old APIs, then speed suggestions.
+  - Apply the fixes in a branch and build in Xcode. Run the screen in the simulator or on a device before you merge.
+  - For a slow screen, ask it to record a trace, or add a trace you made. Trace work needs Xcode on a Mac and an AI that can run commands.
+output_sample:
+  input:
+    - One or more SwiftUI files, or a description of a new screen
+    - Your lowest iOS or macOS version
+    - An Instruments trace of a slow screen (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - A Mac with Xcode and Python 3, only for trace recording and analysis
+  output:
+    - name: Review table
+      contains: One row per issue with file and line, the problem, the fix and why it matters.
+    - name: Changed code
+      contains: Before and after code for each fix, with old APIs swapped for current ones.
+    - name: Speed suggestions
+      contains: Optional changes to reduce redraws, labelled as suggestions and tied to the trace if given.
+    - name: Next line
+      contains: What to build and test next, and one thing the review could not check.
+works_best_with: Claude Code or Codex with your Xcode project folder open, so it can read every file and run the trace scripts. Add your lowest iOS version for safer API advice.
+terms:
+  Instruments: Apple's tool in Xcode for recording how an app uses time and memory.
+  trace: A file Instruments saves with a recording of your app.
+  deprecated API: An old SwiftUI feature that Apple has replaced and may remove later.
+  state: Data a view keeps or reads that changes what the screen shows.

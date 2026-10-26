@@ -1,46 +1,58 @@
 new_slug: meeting-to-written-update-converter
 name: "Meeting to written update converter"
-summary: "Paste a recurring meeting's purpose and agenda. Get the written update that replaces it, with a template."
+summary: "Turn a recurring status meeting into a short written update. Get each agenda item sorted, the hours saved, a template and a two-week trial."
 job: organise-work
 thinking: low
 thinking_why: "It sorts a given agenda and designs a short template from it."
 
 headline: "Meeting to written update converter"
-subhead: "Paste a recurring meeting's purpose, agenda, attendees and a set of recent notes. The prompt sorts each item into report, decide, solve or social, counts the hours it costs, moves the reports into a written update with a template, keeps only what needs a room, and plans a two-week trial."
+subhead: "Paste a recurring meeting's purpose, agenda, attendees and a recent set of notes. It sorts each item into report, decide, solve or social and counts the hours the meeting costs. You get a written update to replace the report parts, a template, the shorter meeting that stays and a two-week trial."
 
 explain: |
-  The weekly status meeting is six people listening to one person read. Everyone agrees it is too long, nobody cancels it, because somewhere in it a decision gets made. Jason Fried has made the public case for years that the report parts belong in writing and the room should be kept for the few things that need one.
+  The weekly status meeting is six people listening to one person read. Everyone agrees it is too long. Nobody cancels it, because somewhere in it a decision gets made. Jason Fried has made the public case for years that the report parts belong in writing and the room should be kept for the few things that need one.
 
-  This prompt sorts your agenda into the four kinds of item, checks the labels against what was actually said last time, and counts the cost in hours per month. It designs the written update, with who writes it, when, where, a word limit and how questions get asked. It keeps the decide and solve items in a shorter meeting with fewer people, finds a home for the social part so it is not lost, writes the template with headings and limits, and sets up a two-week trial with something to measure.
+  This prompt sorts your agenda into four kinds of item: report, decide, solve or social. It checks each label against what was said last time, so the sort rests on the notes and not on the agenda. It counts the cost in hours per month and shows every sum, so you can check them. Then it designs the written update, with who writes it, when, where, a word limit and how questions get asked.
+
+  The decide and solve items stay in a shorter meeting with fewer people. The social part gets a new home so it is not lost by accident. It ends with a template with headings and word limits, and a two-week trial with something to measure.
 
 when:
   - "A weekly meeting has grown to an hour and most of it is updates."
   - "Your team is spread across time zones and the live meeting leaves someone out."
   - "You want to cancel a meeting but are afraid of losing the one decision it makes."
+  - "People say they leave a meeting with nothing decided, and you want to find which items cause it."
+
+not_for:
+  - "The meeting is mostly live talk, such as an interview, a coaching one-on-one or an incident call: keep it as a call."
+  - "You have a long list of meetings and approvals to cut: use the Process and meeting cull planner."
+  - "You only have rough notes from one meeting and want minutes: use the Rough notes to minutes writer."
+  - "A decision keeps slipping and you want one meeting to settle it: use the Debate-then-decide meeting planner."
 
 you_give:
-  - "The meeting's purpose, frequency, length, attendees and agenda"
-  - "Notes from a recent occurrence (advised)"
+  - "The meeting's purpose, how often it runs, how long it lasts, who attends and the usual agenda"
+  - "Notes from one to three recent meetings (advised)"
   - "What people complain about (optional)"
+  - "Where your team already writes, such as a channel or a doc (optional)"
 you_get:
-  - "Each agenda item sorted, with the hours the meeting costs"
-  - "The written update design and its template"
+  - "Each agenda item sorted as report, decide, solve or social, with a line from the notes as proof"
+  - "The hours the meeting costs per month, and the hours saved, with every sum written out"
+  - "A written update design and its template, with a word limit on each heading"
   - "The shorter meeting that stays, if any, and where the social part goes"
-  - "A two-week trial with a measure"
+  - "A two-week trial with a measure and an end question"
 
 how_to_use:
   - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the meeting details under it."
   - "Paste last week's notes so the sort is based on what really happened."
-  - "Check AGENDA SORTED. Fix any label you disagree with and run again."
-  - "Post the template, start the trial, and ask the end question in two weeks."
+  - "Check AGENDA SORTED. Fix any label you disagree with and run it again."
+  - "Check the hours. Every sum is written out, so you can redo one with a calculator."
+  - "Post the template, start the two-week trial, and ask the end question when it is over."
 
 how_it_works:
   - title: "Sorts the agenda"
-    text: "Report, decide, solve or social, each backed by the notes."
+    text: "Report, decide, solve or social, each backed by a line from the notes or marked as a guess."
   - title: "Counts the cost"
-    text: "People times minutes, in hours per month."
+    text: "People times minutes, in hours per month, before and after, with every sum shown."
   - title: "Moves reports to writing"
-    text: "Who writes, when, where, the word limit, how questions work."
+    text: "Who writes, when, where, the word limit, and how questions work."
   - title: "Keeps what needs a room"
     text: "Decide and solve items in a shorter meeting with only the people who decide."
   - title: "Protects the social part"
@@ -50,7 +62,8 @@ how_it_works:
 
 output_shape: |
   AGENDA SORTED   <item | label | evidence>
-  COST NOW        <hours per month>
+  COST NOW        <attendees x minutes / 60 x meetings per month = hours per month>
+  COST AFTER      <kept meeting + reading + writing = hours per month; saving = now - after>
   WRITTEN UPDATE  <who, when, where, limit, questions>
   MEETING KEPT    <items, length, attendees> or none
   SOCIAL          <where it goes>
@@ -58,6 +71,23 @@ output_shape: |
   TRIAL           <changes, measure, end question>
   MISSING         <...>
   CHECKS MISSED   <one line each, or none>
+
+output_sample:
+  input:
+    - "The meeting's purpose, how often it runs, its length, who attends and the usual agenda"
+    - "Notes from one to three recent meetings (advised)"
+    - "What people complain about (optional)"
+  prerequisites:
+    - "An AI chat. No files, web access or paid tools are needed."
+  output:
+    - {name: "Agenda sorted", contains: "Each item labelled report, decide, solve or social, with a line from the notes to back it."}
+    - {name: "Cost now", contains: "Attendees times minutes times meetings per month, written out as hours per month."}
+    - {name: "Cost after", contains: "Hours for the shorter meeting plus reading and writing time, and the saving, with each sum shown."}
+    - {name: "Written update", contains: "Who writes it, when, where, the word limit and how questions get asked."}
+    - {name: "Meeting kept", contains: "The decide and solve items that stay, the new length and who attends, or none needed."}
+    - {name: "Social", contains: "Where the social part goes so it is not lost."}
+    - {name: "Template", contains: "The update's headings, each with a one-line instruction and a word limit."}
+    - {name: "Trial", contains: "What changes on day one, what to measure over two weeks, and the end question."}
 
 example:
   business: sprout
@@ -85,6 +115,8 @@ tweaks:
     how: "Say it. 'Nothing gets decided' points at the decide items, 'runs long' at the report items."
   - what: "Your tools"
     how: "Say where written updates can live (a channel, a doc) so the design uses what you have."
+  - what: "Reading and writing time"
+    how: "Say how long people take to read and write an update. Without it the prompt assumes 10 minutes to read and 20 to write, and says so."
 
 judge:
   - "The labels match what happened in the notes."
@@ -105,7 +137,16 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+    - {name: "Claude, ChatGPT or Gemini", why: "A one-message plan works in any strong chat AI."}
+    - {name: "A calculator or spreadsheet", why: "Lets you check the hours sums yourself."}
   inputs:
     - "Two or three sets of past notes, so the sort sees a pattern"
     - "The calendar invite, so attendees and length are exact"
+
+terms:
+  - term: "Report item"
+    meaning: "An agenda item where one person tells and everyone else listens."
+  - term: "Decide item"
+    meaning: "An item where the group must choose, and the choice needs a room."
+  - term: "Template"
+    meaning: "The fixed headings of the written update, each with a word limit."

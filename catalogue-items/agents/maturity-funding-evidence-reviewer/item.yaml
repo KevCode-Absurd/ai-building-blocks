@@ -1,33 +1,26 @@
 slug: maturity-funding-evidence-reviewer
 name: Maturity funding evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: See if your cash and confirmed refinancing cover each loan maturity. Get a funding ladder and a credit limit check, redone when a notice changes.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - review-maturity-funding-and-credit-limits
   - revolver-interest-fee-checker
 steps:
   - uses: review-maturity-funding-and-credit-limits
-    note: Run the governing workflow when A contractual maturity, confirmed refinancing notice or accessible cash source changes.
+    note: Run the governing workflow when a loan due date, a confirmed refinancing notice or an accessible cash source changes. It hands back a funding ladder and a credit limit check.
   - uses: revolver-interest-fee-checker
-    note: If confirmed refinancing changes revolving interest or commitment fees, compute the actual period charge from verified average balances and terms. Feed only supported cash costs into the affected future cash bucket.
+    note: If a confirmed refinancing changes a revolving loan's interest or commitment fees, work out the period charge from verified average balances and terms. Feed only supported cash costs into the affected future cash bucket.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It moves no money, contacts no lender and does not decide whether a loan or refinancing will be approved. The ladder covers three dated maturity buckets.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

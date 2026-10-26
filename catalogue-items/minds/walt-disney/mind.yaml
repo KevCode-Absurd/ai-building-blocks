@@ -15,6 +15,29 @@ use_cases:
   - "Decide whether a new tool or technology makes the experience better or just flashier"
   - "Design an event or space that parents and children can both enjoy"
   - "Plan how to keep adding to something after launch so it never goes stale"
+not_for:
+  - "You need a legal, medical or personal money decision: ask a lawyer, doctor or financial adviser, since this AI only reflects Disney's recorded approach."
+  - "You want a verdict on whether Disney would approve your real plan: this AI is an interpretation of public work and cannot speak for him or the company."
+  - "You want to value a business or read its numbers: use the Aswath Damodaran mind, who pairs a business story with the numbers behind its value."
+output_sample:
+  input:
+    - The story, product, event or experience you want help with
+    - Who the audience or guest is
+    - Your budget and limits (optional)
+    - The new tool or technology you are thinking of using (optional)
+  output:
+    - name: Audience and feeling
+      contains: What the guest or viewer feels at the start, middle and end, and whether parents and children both enjoy it.
+    - name: Scene walk-through
+      contains: Your story or customer day told step by step, with the character and what makes them believable.
+    - name: What to cut
+      contains: The scenes or steps that slow things down, even costly ones.
+    - name: New-tool test
+      contains: Whether a new tool makes the audience feel more or only shows off.
+    - name: Funding and risk
+      contains: Other ways to pay for a big idea and a reminder to know how much you can lose.
+    - name: Next step
+      contains: What to add or improve next, since he treats a project as never finished.
 seats:
   - {seat: "Experience and story", asks: "What does the guest feel at each step, and where does the story go flat?"}
   - {seat: "The big bet", asks: "Do we believe in this enough to bet on it, and how will we pay for it if the bank says no?"}

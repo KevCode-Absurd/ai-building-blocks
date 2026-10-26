@@ -1,11 +1,11 @@
 new_slug: daily-shutdown-planner
 name: Daily shutdown planner
-summary: Give it your task list and tomorrow's calendar each evening. Get the day closed, three priorities set and focus hours protected.
+summary: "Close your workday with a daily shutdown routine. Paste today's tasks and tomorrow's calendar. Get three priorities and protected focus time."
 job: organise-work
 thinking: medium
 thinking_why: The daily pass is short and well bounded. A fast model handles most evenings. Use a stronger one on Friday, when it reads the week for patterns.
 headline: Daily shutdown planner
-subhead: Give it today's task list and tomorrow's calendar at the end of each day. It closes the day, carries what is open, picks three priorities against the real free hours, places protected focus blocks and boxes shallow work into two windows. On Friday it writes the stop rules and your status update. You approve every change.
+subhead: Paste today's task list and tomorrow's calendar at the end of your working day. It marks each task done, carried or dropped, picks three priorities that fit the free hours, and places focus blocks. On Friday it adds stop rules and a status update. You approve every change.
 explain: |
   Days end without ending. The list is half ticked, three new things arrived at five, and the mind keeps working through dinner because nothing was closed. Then the morning starts with the inbox, the first focus hour goes to whatever is loudest, and the thing that mattered carries to Thursday.
 
@@ -14,12 +14,18 @@ when:
   - Your evenings leak into work because nothing was closed.
   - Your mornings start with the inbox and the real work starts at eleven.
   - The same task has carried for a week and you keep rolling it forward.
+  - You want one fixed end-of-day routine instead of a new planning app.
+not_for:
+  - You want to close a whole week and plan the next one. Use the Weekly review keeper.
+  - You only want a brief of today's meetings and open tasks. Use the Executive daily briefing writer.
+  - You have no task list at all. It can't close a day it can't see, so write down what you did and what is left first.
+  - You want it to move meetings, decline invites or message people. It only proposes, and you make each change.
 you_give:
-  - Today's task list with what got done and what came in
-  - Tomorrow's calendar with times
+  - Today's task list, with what got done, what did not and what came in (from your to-do app or a note)
+  - Tomorrow's calendar with times (copy it from Google Calendar or Outlook)
   - The one or two outcomes that matter most this week (advised)
   - Today's notes and loose thoughts (optional)
-  - The shutdown log, once it exists
+  - The shutdown log from earlier days (optional; paste it back each evening if you use a plain chat)
 you_get:
   - The day closed, with done, carried and proposed drops
   - Three priorities for tomorrow that fit the real free hours, each with a first step
@@ -28,11 +34,34 @@ you_get:
   - On Friday, at most two stop rules with swaps, and a one-page status update if you ask
   - One two-minute habit to guard a block that keeps breaking
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to close the day.
-  - Paste today's list and tomorrow's calendar, or keep them in a folder it can read.
-  - Say the one or two outcomes that matter this week. It saves them.
-  - Read tomorrow's three and add the blocks to your own calendar. Then stop working.
-  - Run it again tomorrow evening. After three days it starts seeing patterns.
+  - Open Claude, ChatGPT or Gemini and paste the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to close the day.
+  - Paste today's list and tomorrow's calendar, or keep them in a folder it can read. No web access or code is needed.
+  - Say the one or two outcomes that matter this week. In a plain chat, paste them again each evening.
+  - Check that every task on today's list is marked done, carried or proposed drop, and that tomorrow's three fit the free hours you gave.
+  - Add the focus blocks to your own calendar, then stop working.
+  - Run it again tomorrow evening and say whether the blocks held. After three days it starts seeing patterns.
+output_sample:
+  input:
+    - "Today's task list: what got done, what did not, and what came in"
+    - Tomorrow's calendar with times
+    - The one or two outcomes that matter most this week (advised)
+    - Today's notes (optional)
+    - Your shutdown log from earlier days (optional)
+  output:
+    - name: Today, closed
+      contains: Each task marked done, carried or proposed drop, and whether your focus blocks held.
+    - name: Tomorrow's three
+      contains: Three priorities that fit your free hours, each with a time block and a first step.
+    - name: The day's shape
+      contains: Your focus hours, two shallow work windows and a three-line morning list.
+    - name: Stuck items
+      contains: "Any task carried three days, with three ways out: drop it, shrink it or give it a block."
+    - name: Friday
+      contains: At most two stop rules with swaps, and a one-page status update if you ask.
+    - name: The guard
+      contains: One two-minute habit to protect a focus block that keeps breaking.
+    - name: Files and missing
+      contains: The day's file and a line for every fact it could not find.
 how_it_works:
   - title: Close the day
     text: Marks each task done, carried or proposed drop, records whether the focus blocks held, and writes the day closed.
@@ -90,6 +119,7 @@ example:
     Log so far this week: Mon focus block broken by Slack pings; Tue broken
     by Slack pings; Wed broken by a surprise founder request.
   output: pending
+
 tweaks:
   - what: Tomorrow's calendar
     how: Give the real one. A focus block in a 45-minute gap is a wish.

@@ -1,6 +1,6 @@
 new_slug: positioning-memo
 name: "Outcome-first positioning memo writer"
-summary: "Paste your product facts. Get a team memo that names the outcome you sell, who users become and a relatable example user."
+summary: "Paste your product facts. Get a positioning memo for your team that names the outcome you sell and ends with one line everyone can repeat."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It reframes the product around an outcome and must keep every claim tied to the facts."
@@ -14,27 +14,54 @@ explain: |
   This skill writes a memo for your team that starts there. It states what customers think they are shopping for and translates your value into those terms and into the outcome they really get. It asks who a customer becomes after three months. It uses one analogy from a business that sells a way of life, not a thing. It invents a clearly labelled, relatable user and walks them through. It boils everything to one line the team can repeat, and ends with the bar of polish the work must meet.
 
 when:
-- "Your team argues about features and nobody can say what you sell."
-- "You are about to write a launch, a pitch or a site and need one clear point."
-- "You joined a company and want to write down what it is really for."
+  - "Your team argues about features and nobody can say what you sell."
+  - "You are about to write a launch, a pitch or a site and need one clear point."
+  - "You joined a company and want to write down what it is really for."
+not_for:
+  - "You need a decision on a proposal with the ask on page one: use the Six-page narrative memo writer."
+  - "You want ad copy or a landing page now: agree the one line first, then write the copy with a separate ad or page writer."
+  - "You have no product facts yet: write down what it does, who uses it and what it costs first, or talk to a few customers."
 
 you_give:
-- "Facts about your product or service: what it does, who uses it, what it costs"
-- "What customers say they wanted when they came (optional)"
-- "Your brand file (optional)"
-- "Who the memo is for (optional)"
+  - "Facts about your product or service: what it does, who uses it, what it costs"
+  - "What customers say they wanted when they came (optional)"
+  - "Your brand file (optional)"
+  - "Who the memo is for (optional)"
 you_get:
-- "What customers think they are shopping for, and the outcome they get"
-- "Who users become after three months"
-- "A relatable example user, labelled as invented"
-- "A memo with one repeatable line and a polish bar"
+  - "What customers think they are shopping for, and the outcome they get"
+  - "Who users become after three months"
+  - "A relatable example user, labelled as invented"
+  - "A memo with one repeatable line and a polish bar"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Paste the product facts."
-- "Say who will read the memo."
-- "Check the outcome against what real customers have told you."
-- "Read the repeatable line aloud to your team."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the product facts."
+  - "Say who will read the memo."
+  - "Check the outcome against what real customers have told you."
+  - "Read the repeatable line aloud to your team."
+output_sample:
+  input:
+    - "Facts about your product or service: what it does, who uses it, what it costs"
+    - What customers say they wanted when they came (optional)
+    - Your brand file (optional)
+    - Who the memo is for (optional)
+  output:
+    - name: What they think they are shopping for
+      contains: One or two lines on what a customer believes they are buying, in their words.
+    - name: Outcome
+      contains: "Three columns: what you built, what it lets them do, and what it changes."
+    - name: Who they become
+      contains: Two or three lines on who a customer is after three months of use.
+    - name: Analogy
+      contains: One business that sells a way of life, how it maps to yours and where it breaks.
+    - name: Example user
+      contains: One invented, labelled user walked from first need to first result.
+    - name: The line
+      contains: One sentence your team can repeat in one breath that names the outcome.
+    - name: Quality standard
+      contains: The standard the work must meet, plus three things that fail it.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your facts, and any checks the memo still fails, or none.
 
 how_it_works:
   - title: "Say what they think they are shopping for"
@@ -93,23 +120,23 @@ tweaks:
     how: "Name one you like and it will use it."
 
 judge:
-- "The outcome would still make sense without your product's name."
-- "The repeatable line fits in one breath."
-- "The example user is labelled invented."
-- "Every claim traces to your facts."
-- "You could read the memo to a new hire and they would get it."
+  - "The outcome would still make sense without your product's name."
+  - "The repeatable line fits in one breath."
+  - "The example user is labelled invented."
+  - "Every claim traces to your facts."
+  - "You could read the memo to a new hire and they would get it."
 
 test:
-- "Read the line to three team members and ask what they think you sell."
-- "Compare the outcome with what your last five customers told you."
-- "Check each product claim against your facts."
-- "Run it twice. The line should stay close."
+  - "Read the line to three team members and ask what they think you sell."
+  - "Compare the outcome with what your last five customers told you."
+  - "Check each product claim against your facts."
+  - "Run it twice. The line should stay close."
 
 improve:
-- "Add your real customer quotes to the facts."
-- "Add your own quality bar to the last step."
-- "Save the line in your brand file."
-- "Pair it with a landing page or ad writer once the line is agreed."
+  - "Add your real customer quotes to the facts."
+  - "Add your own quality bar to the last step."
+  - "Save the line in your brand file."
+  - "Pair it with a landing page or ad writer once the line is agreed."
 
 works_best_with:
   tools:

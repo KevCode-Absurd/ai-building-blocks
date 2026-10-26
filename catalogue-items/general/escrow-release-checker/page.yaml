@@ -1,53 +1,114 @@
 new_slug: escrow-release-checker
 name: Escrow release checker
 headline: Escrow release checker
-summary: Reconcile remaining escrow with supported claim reserves and available release cash.
+summary: Work out how much escrow can be released now and how much to keep for approved pending claims. Claims above the balance are shown.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Remaining escrow, retained reserve, proposed release and collateral shortfall. Share opening escrow deposit, paid disbursements, approved pending reserves, release date and actual release conditions.
+subhead: Give it the opening escrow deposit, the amounts already paid out, the approved pending claims and the release conditions. It works out the balance left, the reserve to keep, the amount to release and any claims the escrow cannot cover.
 explain: |-
-  Remaining escrow, retained reserve, proposed release and collateral shortfall.
+  After a company sale, part of the price often sits in escrow. A neutral agent holds the money to cover claims the buyer may make. Later, whatever the claims do not need is released to the sellers. This escrow release checker works out how much that is.
 
-  Acquisition closing. Illustrative figures only. 10 deposited less2 paid leaves8. Claims3 retain3 and release5; claims12 leave4 beyond escrow.
+  It takes the deposit and subtracts what has already been paid out. It keeps back the smaller of the approved pending claims and the balance left. The rest can be released. If claims are bigger than the balance, it shows the extra as a shortfall, so nobody thinks the escrow covers it. Every paid and pending claim needs its own ID, so no claim is counted twice.
+
+  The result is a proposal. It does not authorize a payment, and it does not decide whether a claim is valid. Practice numbers: 10 deposited and 2 paid out leaves 8. With claims of 3, keep 3 and release 5. With claims of 12, keep all 8, and 4 is beyond the escrow.
 when:
-  - You need remaining escrow, retained reserve, proposed release and collateral shortfall.
-  - You work on acquisition closing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A release date is near, and you want to know what the sellers can get.
+  - A new claim has been approved, and you want the reserve to reflect it.
+  - The escrow agent's statement and your own numbers do not match.
+  - A buyer asks for more than the escrow holds, and you want to see the gap.
+not_for:
+  - You need a legal ruling on whether to release, or whether a claim is valid. Ask a lawyer or the escrow agent.
+  - The escrow earns interest, has tax withheld or pays several kinds of claim in a set order. This skill covers one plain account.
+  - You are checking an earnout paid from escrow. Use the Earnout payout checker, or run the Check an escrow-funded earnout workflow.
+  - You want the sellers' total proceeds at closing. Use the Closing equity proceeds checker.
 you_give:
-  - Opening escrow deposit, paid disbursements, approved pending reserves, release date and actual release conditions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The opening escrow deposit (from the escrow agreement)
+  - Payments already made from the escrow, with dates (from the escrow agent's statement)
+  - Approved pending claims, each with an ID and an amount (from the claim notices)
+  - The release date and the release conditions (from the escrow agreement)
+  - The currency and units
 you_get:
-  - Remaining escrow, retained reserve, proposed release and collateral shortfall.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The balance left, the reserve to keep and the amount that can be released
+  - Any claims above the balance, shown as a shortfall
+  - A list of claim IDs, matched to the claim notices
+  - A check of the release conditions
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the deposit, the payments so far, the approved pending claims with IDs, the release date and the release conditions. Say the currency and units.
+  - "Ask: how much escrow is left, how much do we keep, and how much can be released?"
+  - Check the sums. The balance is the deposit minus what was paid. Keep the smaller of the approved claims and the balance. The release is the balance minus what you keep.
+  - Check that each claim ID appears once, and that payments so far are not more than the deposit.
+  - Read MISSING and CHECKS MISSED, then show the proposal to the escrow agent. Only the agent and the parties can release money.
 how_it_works:
-  - title: 1. Match paid and pending claims to unique IDs and verify release authority and conditions
-    text: Match paid and pending claims to unique IDs and verify release authority and conditions.
-  - title: 2. Subtract actual disbursements; reserve the lesser of approved pending claims and remaining escrow
-    text: Subtract actual disbursements; reserve the lesser of approved pending claims and remaining escrow.
-  - title: 3. Reconcile proposed release plus retained balance and separately show claims exceeding escrow
-    text: Reconcile proposed release plus retained balance and separately show claims exceeding escrow.
+  - title: Matches the claims
+    text: Gives each paid and pending claim its own ID. Checks who may release the money and on what conditions.
+  - title: Subtracts the payments
+    text: Takes what has already been paid out from the opening deposit.
+  - title: Sets the reserve
+    text: Keeps the smaller of the approved pending claims and the balance left.
+  - title: Works out the release
+    text: Release plus the amount kept must equal the balance left.
+  - title: Shows the excess
+    text: Shows claims above the balance on their own, as a shortfall.
+  - title: Marks the gaps
+    text: Writes MISSING for any figure it was not given. It never fills a gap with zero.
 output_shape: |-
-  Remaining escrow, retained reserve, proposed release and collateral shortfall.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Balance left <amount> | Reserve kept <amount> | Proposed release <amount> | Claims above the balance <amount>
+
+  ESCROW BRIDGE
+  Opening deposit <amount> - paid out <amount> = balance left <amount>
+  Reserve kept = the lesser of approved pending claims <amount> and balance left <amount>
+  Proposed release = balance left - reserve kept
+
+  CLAIMS
+  <claim ID | paid or pending | amount | approved or not | source>
+
+  RELEASE CONDITIONS
+  <each condition and whether it is met, with its evidence, or "not evidenced">
+
+  INPUT SOURCES AND ASSUMPTIONS
+  <release date, currency and units, source and date for each input, workbook check if any>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The opening escrow deposit
+    - Payments already made from the escrow
+    - Approved pending claims, each with an ID and amount
+    - The release date and the release conditions
+  prerequisites:
+    - The escrow agreement
+    - The escrow agent's latest statement and the claim notices
+  output:
+    - name: RESULT
+      contains: The balance left, the reserve kept, the proposed release and any claims above the balance.
+    - name: ESCROW BRIDGE
+      contains: Deposit less payments, then the reserve and the release, with each sum shown.
+    - name: CLAIMS
+      contains: "Each claim by ID: paid or pending, amount, approved or not, and its source."
+    - name: RELEASE CONDITIONS
+      contains: Each condition in the agreement, met or not, with its evidence.
+    - name: INPUT SOURCES AND ASSUMPTIONS
+      contains: Release date, currency, units and the source and date of every input.
+    - name: MISSING
+      contains: Each figure it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Prior disbursements cannot exceed opening escrow.
+  - what: A claim is approved
+    how: Add it with its ID and amount, then run again. The reserve grows and the release shrinks.
+  - what: A claim is paid
+    how: Move it from pending to paid and give the payment date.
+  - what: The release date moves
+    how: Give the new date and say whether the release conditions are still met.
 judge:
   - Prior disbursements cannot exceed opening escrow.
   - Release plus retention equals remaining escrow, while excess claims remain visible.
@@ -62,15 +123,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can work through the sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The escrow agreement pages that set the release conditions and who can release money
+    - The escrow agent's statement and the claim notices, each with an ID
+    - A named reviewer and the question you want answered
 terms:
+  - term: Escrow
+    meaning: Money held by a neutral third party until set conditions are met.
+  - term: Escrow agent
+    meaning: The bank or firm that holds the escrow money and pays it out.
+  - term: Reserve
+    meaning: The part of the escrow kept back to cover approved claims that are not yet paid.
+  - term: Pending claim
+    meaning: A claim that has been made and approved but not yet paid.
+  - term: Release
+    meaning: Paying the escrow money that is no longer needed to the sellers.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real deal.

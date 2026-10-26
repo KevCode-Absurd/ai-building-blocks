@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs competing priorities and decides what to leave out.
 new_slug: quarterly-roadmap-builder
 name: Quarterly roadmap builder
-summary: Give it your backlog and requests. Get a multi-quarter roadmap that
-  balances build, improve and maintain, plus a not-doing list.
+summary: Turn your backlog and requests into a quarterly roadmap that balances new builds, fixes and upkeep, with a not-doing list you can defend.
 job: plan-strategy
 headline: Quarterly roadmap builder
-subhead: A multi-quarter roadmap you can defend in a room, plus the ranking work
-  behind it. It balances new builds, improvements and upkeep, and ends with a
-  list of things you are not doing and why.
+subhead: A multi-quarter roadmap you can defend in a room, plus the ranking work behind it. It balances new builds, improvements and upkeep, and ends with a list of things you are not doing and why.
 explain: |
   A multi-quarter roadmap you can defend in a room, plus the ranking work behind it. It balances new builds, improvements and upkeep, and ends with a list of things you are not doing and why.
 
@@ -18,6 +15,10 @@ when:
   - Some items depend on others and the order matters.
   - Stakeholders keep asking for features and you need a firm reply.
   - A missed quarter or new strategy means you must replan.
+not_for:
+  - "You need to write the spec for one feature: use a spec writer or write a short brief with your team instead."
+  - "You are still unsure the idea is worth building: talk to your customers first, then come back to plan."
+  - "You have no goals or strategy yet: set 3 to 5 goals with your team first, because a roadmap without them is only a queue."
 you_give:
   - Top goals or themes
   - Full backlog with one line each
@@ -30,7 +31,31 @@ you_get:
   - Not-doing list
   - Version for stakeholders
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Paste your goals, your backlog with one line each, and your team capacity. Add deadlines if you have them.
+  - Tell your AI your planning period, such as one quarter or a year.
+  - Read the themes and the ranking first. Fix anything your team would disagree with before you go on.
+  - Check the capacity model. If the plan uses all of everyone's time, ask your AI to cut items.
+  - Share the version that fits each audience, and review the roadmap again each month.
+output_sample:
+  input:
+    - Your top goals or themes (3 to 5)
+    - Your backlog, with one line for each item
+    - Your team size and time available
+    - Your planning period, such as a quarter or a year
+    - Deadlines and limits (optional)
+  output:
+    - name: Strategy summary
+      contains: Your themes, why you chose them, and how each one ties to your top goals.
+    - name: The plan
+      contains: A month-by-month or quarter-by-quarter view of what ships, grouped by theme.
+    - name: Initiative briefs
+      contains: One short brief per initiative with its outcome, size, owner, dependencies and success measure.
+    - name: Capacity model
+      contains: Who does what, and how much of their time the plan really uses.
+    - name: Trade-offs and Not now
+      contains: The requests you turned down, the reason for each, and what would bring them back.
+    - name: Risks and assumptions
+      contains: What could throw the plan off track.
+    - name: Update cadence
+      contains: When you will review the roadmap again, usually each month.

@@ -10,6 +10,21 @@ metadata:
 
 Comprehensive succession planning knowledge for HR business partners, talent management specialists, and people leaders — from understanding modern pipeline development principles and leadership readiness assessment to running talent reviews, calibrating 9-box grids, and sustaining critical role continuity.
 
+## How to run this skill
+
+Succession data is about named people's careers. Before you start, say this to the user: "Use role titles and initials, not full names, unless your company policy lets you share staff data with an AI tool."
+
+1. Ask for what you need in one message: the key roles, who holds each one now, any possible successors for each, and the company size and industry. Performance and potential notes are optional.
+2. If something is missing, write `MISSING: <what is needed>`. Never invent a successor, a rating, a date or a reason. If a role has no named successor, write "No named successor".
+3. Rate each role by the damage a vacancy would do: high, medium or low, with one reason taken from what the user said.
+4. Build a coverage table with one row per role: Role | Current holder | Risk if vacant | Ready now | Ready in 1 to 2 years | Gap | Development action.
+5. Prepare the talent review. Place people on a 9-box grid (performance across, potential up) only from ratings the user gave. With no ratings, give a blank grid and five questions to ask in the meeting. Remind the user that high performance is not the same as high potential.
+6. For each named successor, write a 12-month development plan: 3 to 5 actions, one stretch assignment, and a check-in date.
+7. Write a board summary of 200 words or fewer: roles covered, roles with no cover, the top 3 gaps, the actions planned, and the decision needed.
+8. Close with: "Readiness calls are yours. This is a draft to discuss, not a decision."
+
+Optional: the platforms and tools named below are paid products from the original author's list. None is needed to use this skill.
+
 ## Supported tasks
 
 - Explaining succession planning concepts and terminology for HR teams and business leaders
@@ -24,6 +39,8 @@ Comprehensive succession planning knowledge for HR business partners, talent man
 - Writing succession plan proposals, readiness briefings, and board talent reports
 
 ## What succession planning means in 2026
+
+The views below and the 2026 trend claims are the original author's. No sources are given, so treat them as opinion.
 
 Modern succession planning is no longer:
 
@@ -53,6 +70,8 @@ Modern succession planning teams are increasingly expected to support:
 AI-assisted pipeline analytics and skills-based succession models are becoming major industry trends in 2026.
 
 ## Succession planning ecosystem (2026)
+
+These are paid products from the original author's list. None is needed. Prices and features are not checked here.
 
 ### Talent management and succession platforms
 

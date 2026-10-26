@@ -1,6 +1,6 @@
 slug: build-the-keyword-tier-classifier-builder-prompt
 name: Keyword grouping coding prompt
-summary: Get a coding brief to group keywords by intent and results, with clear rules, confidence and review cases.
+summary: "Get a coding brief that sorts Google Ads keywords into five tiers by results, flags the ones to pause, and shows week-to-week moves. Read-only."
 category: general
 type: prompt
 role: make

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set build pattern with exact geometry.
 new_slug: custom-pcb-shape-builder
 name: Custom PCB shape builder
-summary: Describe a PCB shape. Get a custom layout with shapes, feeds and layers
-  built from code.
+summary: Describe a custom PCB shape and get MATLAB code that builds it as a pcbComponent, with layers, feeds and cut-outs. For RF engineers.
 job: build-software
 headline: Custom PCB shape builder
-subhead: Some RF structures are not in any catalog, so you have to build them
-  from shapes. Describe the board shape you want and you get MATLAB code that
-  builds it as a pcbComponent, with metal layers, feeds and cut-outs in place.
+subhead: Some RF structures are not in any catalog, so you have to build them from shapes. Describe the board shape you want and you get MATLAB code that builds it as a pcbComponent, with metal layers, feeds and cut-outs in place.
 explain: |
   Some RF structures are not in any catalog, so you have to build them from shapes. Describe the board shape you want and you get MATLAB code that builds it as a pcbComponent, with metal layers, feeds and cut-outs in place.
 
@@ -18,6 +15,10 @@ when:
   - You want to cut a pattern into a ground plane.
   - An existing component needs a pad added or a vertex edited.
   - Your design has several metal layers with different shapes.
+not_for:
+  - "You want a standard transmission line, filter or coupler: use the matching catalog design skill in PCB Toolbox, not a custom build."
+  - "You have a Gerber, ODB++ or Allegro file to open: import it with the PCB Toolbox file reader instead."
+  - "You only need to define substrate or metal materials, or run EM analysis on a finished board: do that step directly in MATLAB."
 you_give:
   - A description or sketch of the shape
   - Substrate and conductor details
@@ -29,8 +30,28 @@ you_get:
   - Feed and via placement
   - A note on the next steps, such as EM analysis
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Open a chat with an AI that can write MATLAB code. Paste in the skill text.
+  - Describe the shape you want, or paste a sketch. Add substrate, conductor, feed type and position, dimensions and layer order.
+  - Copy the MATLAB script it writes into MATLAB. You need the Antenna Toolbox or PCB Toolbox to run it.
+  - Check the layer numbers and feed settings against the list it gives you.
+  - Run your EM analysis once the shape looks right.
+output_sample:
+  input:
+    - A description or sketch of the shape you want
+    - Your substrate and conductor details
+    - Feed type and where each feed sits
+    - Dimensions and layer order (optional if the sketch shows them)
+  prerequisites:
+    - MATLAB with the Antenna Toolbox or PCB Toolbox
+    - Your substrate and conductor set up first
+  output:
+    - name: Layers and board shape
+      contains: The metal and substrate layers in order, plus which layer sets the board outline.
+    - name: Shapes
+      contains: Rectangles, lines, polygons and other shapes placed on each metal layer.
+    - name: Boolean steps
+      contains: Union, subtract and intersect steps that join shapes or cut slots, such as in a ground plane.
+    - name: Feeds and vias
+      contains: Feed positions and types, such as probe, edge, coaxial or delta-gap, and via placement.
+    - name: Checks
+      contains: A short list of layer and feed settings to verify before you run EM analysis.

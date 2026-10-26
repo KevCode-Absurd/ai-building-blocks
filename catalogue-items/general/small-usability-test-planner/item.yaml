@@ -11,6 +11,7 @@ inputs:
   - {type: question, required: true}
   - {type: persona, required: false}
   - {type: web_page, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan, required: true}
 minds: [steve-krug, jakob-nielsen, melanie-perkins, don-norman]

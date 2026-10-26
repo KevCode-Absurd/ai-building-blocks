@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It picks from a fixed idea list.
 new_slug: marketing-idea-picker
 name: Marketing idea picker
-summary: Describe your product. Get tested marketing ideas matched to your stage
-  and budget.
+summary: Describe your product and get three to five marketing ideas picked for your stage, budget and team, with first steps for each.
 job: plan-strategy
 headline: Marketing idea picker
-subhead: Describe your product, audience, stage, budget and what you have
-  already tried. It picks three to five ideas from a library of 139, across
-  content, paid ads, email, partnerships and more. You get the matched ideas,
-  why each fits you, first steps and the effort needed.
+subhead: Describe your product, audience, stage, budget and what you have already tried. It picks three to five ideas from a library of 139, across content, paid ads, email, partnerships and more. You get the matched ideas, why each fits you, first steps and the effort needed.
 explain: |
   Three to five marketing ideas picked for your product, stage and budget, with steps to try the ones you choose. It draws from a library of 139 ideas across the main areas.
 
@@ -19,6 +15,10 @@ when:
   - You have a small budget and need ideas that cost time, not money.
   - You want free-tool ideas such as calculators or generators.
   - Your current channel stalled and you need new options.
+not_for:
+  - "You want a full written plan, not a few ideas: ask for the marketing-plan skill, or write a one-page plan with a person on your team."
+  - "You need help running one channel, such as ads or email: use a tool or skill built for that channel."
+  - "You sell physical products: many ideas will not fit, so ask a marketer who knows your trade."
 you_give:
   - Your product and audience
   - Your stage
@@ -30,7 +30,26 @@ you_get:
   - First steps for each
   - A note on the effort needed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Describe your product, your audience and your stage in a few lines.
+  - Add your budget, your time and your team size. Say what you have already tried, if anything.
+  - Answer any questions it asks. Skip the ones your saved marketing context already covers.
+  - Read the three to five ideas. Pick one and ask for a longer plan for it.
+output_sample:
+  input:
+    - Your product and who it is for
+    - Your stage, such as before launch, early or growing
+    - Your budget, time and team size
+    - What you have already tried (optional)
+    - Your saved marketing context file (optional)
+  output:
+    - name: Idea name
+      contains: A one-line description of each picked idea.
+    - name: Why it fits
+      contains: How the idea connects to your product, stage and resources.
+    - name: How to start
+      contains: The first two or three steps to try the idea.
+    - name: Expected outcome
+      contains: What success looks like if the idea works.
+    - name: Resources needed
+      contains: The time, money and skills the idea asks for.

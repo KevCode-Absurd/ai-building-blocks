@@ -29,7 +29,7 @@ How to start:
 
 ## What you need
 - **Store numbers** (required): orders per month, sessions per month and conversion rate for the page to test. Take sessions from GA4 if the owner has it, because Shopify sessions include bots.
-- **The change** (required): what will change on the page and why they think it helps.
+- **The change** (required): what will change on the page and why they think it helps. The top pick from a Test idea ranker or Big swing test picker shortlist works as the change.
 - **Broken or just maybe better?** (required): is anything on the page failing today?
 - **Smallest lift worth shipping** (optional): the smallest gain that would pay for the work. If missing, work it out in step 4.
 - **Planned dates, sales and email sends** (optional).

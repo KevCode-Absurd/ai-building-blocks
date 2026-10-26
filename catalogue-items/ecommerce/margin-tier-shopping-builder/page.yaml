@@ -1,6 +1,6 @@
 new_slug: margin-tier-shopping-builder
 name: "Margin-tier Shopping builder"
-summary: "Give it products with margin and ROAS history. Get a Shopping structure and a target for each tier."
+summary: "Build a Google Shopping campaign structure by margin tier. Give it product margins and ROAS history. Get a target ROAS for each tier."
 job: run-google-ads
 thinking: high
 thinking_why: "It weighs margins, conversion counts and two structures against each other, so a stronger model avoids bad targets."
@@ -17,6 +17,10 @@ when:
   - Your catalogue has margins from 30 to 70 percent and one target ROAS is wasting money.
   - You run Standard Shopping or Performance Max and want your best-margin products to get more budget.
   - You have a few zombie products with no spend that you want to give a fair test.
+not_for:
+  - "Your catalogue has fewer than about 30 products: fix your product titles and merge campaigns first, instead of splitting into tiers."
+  - "Your products all have about the same margin: use a plain Shopping setup with one target, or the ROAS history tiers this skill may pick."
+  - "You only need a bidding choice for one campaign: ask a person who runs your Google Ads, or pick the bid strategy in Google Ads."
 
 you_give:
   - A product list with gross margin, 90-day spend, ROAS and conversions
@@ -35,6 +39,30 @@ how_to_use:
   - Say how many hours a week you can give to the account.
   - Build the tiers one at a time and leave each alone for 2 to 4 weeks.
   - Judge the Performance Max test on total revenue and new-customer ROAS, not campaign ROAS.
+output_sample:
+  input:
+    - Your product list with gross margin, 90-day spend, ROAS and conversions
+    - Your break-even ROAS, or the margin so it can be worked out
+    - Your weekly hours for managing the account
+    - Your current Shopping and Performance Max setup (optional)
+  prerequisites:
+    - Margins worked out before ad spend, not guessed
+    - Google Ads access to apply the tiers (the AI only plans them)
+  output:
+    - name: FIT
+      contains: Product count, conversions per tier and the margin range, so you can see if tiers are worth it.
+    - name: STRUCTURE
+      contains: Whether to group by ROAS history or by margin tier, with the reason.
+    - name: TIERS
+      contains: Each tier with its products, margin, break-even ROAS, target ROAS, budget note and any merge advice.
+    - name: PERFORMANCE MAX SAFETY NET
+      contains: A catch-all target, a 4 to 6 week test plan, how to judge it and the warm shopper warning.
+    - name: BUDGET SPLIT
+      contains: Two views on sharing budget across campaign types, and which one fits your weekly time.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none.
+    - name: MISSING
+      contains: Any input not given, such as margins, spend and ROAS, or conversions.
 
 how_it_works:
   - title: Checks the size

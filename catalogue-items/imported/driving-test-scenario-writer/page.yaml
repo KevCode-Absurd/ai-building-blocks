@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It sequences actors and conditions into one scenario.
 new_slug: driving-test-scenario-writer
 name: Driving test scenario writer
-summary: Describe the traffic event. Get a RoadRunner scenario with actors,
-  routes and triggers, built in code.
+summary: Turn a traffic event into a RoadRunner scenario. Get MATLAB code with actors, routes and triggers for a cut-in or pedestrian crossing test.
 job: build-software
 headline: Driving test scenario writer
-subhead: Describe a traffic event in words and get a RoadRunner scenario written
-  as code. A car cuts in, a pedestrian crosses, a lead vehicle brakes hard.
+subhead: Describe a traffic event in words and get a RoadRunner scenario written as code. A car cuts in, a pedestrian crosses, a lead vehicle brakes hard.
 explain: |
   Describe a traffic event in words and get a RoadRunner scenario written as code. A car cuts in, a pedestrian crosses, a lead vehicle brakes hard. Each one becomes actors, routes and trigger logic you can run and change.
 
@@ -17,6 +15,10 @@ when:
   - You want a pedestrian crossing set up without clicking through the editor.
   - You plan many variations of one traffic event.
   - You want the scenario checked before you simulate.
+not_for:
+  - "You need to open or connect RoadRunner: use roadrunner-core first, as this skill needs a session already running."
+  - "You want to import a map or scene: use roadrunner-import-scene, not this skill."
+  - "You want to draw roads, lanes or junctions: use roadrunner-rrhd-authoring. To run or export the scenario, use roadrunner-scenario-simulating."
 you_give:
   - A plain description of the traffic event
   - The road or scene to use
@@ -28,8 +30,32 @@ you_get:
   - Phase logic with conditions and actions
   - A structure check before simulation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with RoadRunner.
+  - Open RoadRunner from MATLAB and load the scene you want. Your AI needs a live session to work.
+  - Give your AI the skill text and describe the traffic event in plain words.
+  - Add actor types, speeds and trigger conditions if you have them.
+  - Let your AI run the MATLAB code it writes, or copy it into MATLAB yourself.
+  - Read the summary and the structure check before you change anything.
+  - Run the simulation yourself when you are ready. This skill does not start it.
+output_sample:
+  input:
+    - A plain description of the traffic event
+    - The scene to use
+    - Actor types and speeds (optional)
+    - Trigger conditions (optional)
+  prerequisites:
+    - MATLAB and RoadRunner, both licensed and installed
+    - An AI that can run MATLAB code
+    - A RoadRunner session already open and connected
+  output:
+    - name: Scenario setup
+      contains: Code that opens your scene and starts a new scenario in RoadRunner.
+    - name: Scene check
+      contains: A survey of the scene to find valid lane positions before actors are placed.
+    - name: Actors
+      contains: Vehicles and pedestrians added to the scenario and placed on roads.
+    - name: Routes
+      contains: Routes and waypoints for actors that need to move along a path.
+    - name: Phase logic
+      contains: Phases, conditions and actions that set when each event starts.
+    - name: Validation and summary
+      contains: A structure check, then a short report of what was built. It does not run the simulation.

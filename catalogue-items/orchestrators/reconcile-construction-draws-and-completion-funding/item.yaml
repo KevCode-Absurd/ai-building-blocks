@@ -1,14 +1,12 @@
 slug: reconcile-construction-draws-and-completion-funding
-name: Reconcile construction draws and completion funding
-summary: A construction funding, capitalized interest and completion gap schedule
+name: Construction funding and interest checker
+summary: Share approved project costs, loan terms and draw dates. Get cost draws, interest schedules and a completion-funding gap check.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: source_text
     required: true
   - type: spreadsheet
@@ -18,8 +16,9 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+next:
+  - reconcile-project-reserves-and-payment-priority
+  - bridge-availability-payments-into-project-cash
 uses:
   - construction-funding-draw-planner
   - construction-interest-schedule-builder

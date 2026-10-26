@@ -1,41 +1,53 @@
 name: "Image style picker for story ads"
 new_slug: image-style-picker-for-story-ads
-summary: "Paste your story ad. Get the right picture brief, its image prompt and a runner-up to test."
+summary: "Paste a story ad. Get the picture style that fits its key moment, a ready image prompt, a runner-up to test and a caption."
+
 job: make-image-ads
 thinking: high
 thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
 
 headline: "Image style picker for story ads"
-subhead: Paste your approved story ad. It finds the moment the old way stopped working and where that moment leaves evidence, then picks the picture that shows it. You get the brief with its image prompt, the line under the picture and a runner-up to test.
+subhead: "Paste your approved story ad. It finds the moment the old way stopped working, then picks which of 19 picture styles shows it best. You get the brief with its image prompt, the line under the picture and a runner-up to test."
 
 explain: |
-  A story ad (an ad whose text tells one person's story) needs a picture that looks like something a person posted. People skip anything that looks like an ad. The picture's only job is to stop the right stranger and make them want the first line.
+  A story ad is an ad whose text tells one person's story. Its picture has to look like something a person posted, or people scroll past. The picture has one job: stop the right stranger and make them want the first line.
 
-  This skill doesn't start from a list of looks. It quotes the moment in your story where the old way stopped being bearable, then asks where that moment would show up if someone took out their phone: in a room, on a thing, on the body, in words someone wrote or sent, in a fact you can source, or nowhere safe to photograph. That answer picks the picture skill. It runs that skill's own honesty checks, adds a runner-up from a different kind of evidence for your first test, and writes the line under the picture.
+  This image style picker for story ads does not start from a list of looks. It quotes the moment in your story where the old way stopped being bearable. Then it asks where that moment would show up if someone took out a phone: in a room, on a thing, on the body, in words someone wrote, in a fact you can source, or nowhere safe to photograph. That answer picks the picture style.
+
+  It then runs that style's own honesty checks and adds a runner-up from a different kind of evidence, so your first test teaches you something. If your ad has no moment of struggle, it says so and points you to a direct product ad. It also tells you when the picture you asked for can't be made honestly, and swaps it with a reason.
 
 when:
-  - You have an approved story ad and don't know what picture to put with it.
-  - You were asked for a picture type and want to check you have the facts to make it honestly.
-  - You want two pictures worth testing against each other, not two versions of the same idea.
+  - "You have an approved story ad and don't know what picture to put with it."
+  - "Your designer or boss asked for a picture type, such as a sticky note or a chat screenshot, and you want to check you have the facts to make it honestly."
+  - "You want two pictures to test against each other under the same story, not two versions of the same idea."
+  - "Your story ad runs on Facebook or Instagram and you need the short line under the picture too."
+
+not_for:
+  - "You want a quick brief with no picture-style chain. Use the Story ad picture brief writer, which is the lighter prompt version of this one."
+  - "You already know the style you want. Use that picture skill on its own, such as the Sticky-note image ad maker, for more options."
+  - "Your ad is a plain product ad with no story or moment of struggle. Use the Single image ad planner."
+  - "You want to find what your past winners share. Use the Winning image ad style finder."
 
 you_give:
-  - Your approved story ad, and who narrates it
-  - When the problem bites for your buyer, in their words (optional)
-  - Your places, things never shown, and claims with sources (optional)
-  - A picture type you'd like, if you have one (optional)
+  - "Your approved story ad text, and who tells it"
+  - "When the problem bites for your buyer, in their own words (optional)"
+  - "Places, props and claims you may use, and things never shown (optional)"
+  - "A picture type you'd like, if you have one (optional)"
+
 you_get:
-  - The moment it builds on, quoted from your story
-  - The picture skill chosen, and why, plus a runner-up to test
-  - The full brief and a ready-to-paste image prompt
-  - The line under the picture and a one-line test plan
-  - Any of its own checks the brief couldn't pass, named one per line
+  - "The key moment, quoted from your story"
+  - "The picture style chosen and why, plus a runner-up from a different kind of evidence"
+  - "The full brief with a ready-to-paste image prompt"
+  - "The line under the picture, about 27 characters, with its count"
+  - "A one-line test plan, and one line for each check the brief missed"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your approved story ad. The picture is chosen from the story, so don't skip this.
-  - Add a few lines on your buyer and your claims list, if you have them.
-  - Read the flags first, then paste the image prompt into your image tool.
-  - Make the runner-up too, and test the two under the same story.
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start a chat with it. If not, copy it and paste it in."
+  - "Paste your approved story ad. The picture is chosen from the story, so don't skip this step."
+  - "Add a few lines on your buyer, the claims you can back and anything you never show, if you have them."
+  - "For the full brief, add the picture skills it uses (the Problem moment image ad maker and the others in its Uses list) to your AI. Without them it still builds the brief from each style's description."
+  - "Read the flags first. Then paste the image prompt into ChatGPT (GPT Image) or Gemini (Nano Banana), because Claude can't draw."
+  - "Make the runner-up too, and run both under the same story in Meta Ads Manager."
 
 how_it_works:
   - title: Quotes the moment
@@ -68,6 +80,31 @@ output_shape: |
   <chosen picture against the runner-up, under the same story>
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your approved story ad, and who tells it"
+    - "When the problem bites for your buyer (optional)"
+    - "Claims with sources, and things never shown (optional)"
+    - "A picture type you'd like (optional)"
+  prerequisites:
+    - "An image tool such as ChatGPT (GPT Image) or Gemini (Nano Banana) to make the picture"
+    - "The picture skills this one uses, added to your AI (optional)"
+  output:
+    - name: "Push"
+      contains: "The line where the old way stopped being bearable, quoted from your story."
+    - name: "Trace and skill"
+      contains: "Where the evidence lives, the picture style chosen, and why it was swapped if it was."
+    - name: "Runner-up"
+      contains: "A second style from a different kind of evidence, for your first test."
+    - name: "The brief"
+      contains: "Everything the chosen style hands back, with its image prompt."
+    - name: "What it makes people wonder"
+      contains: "One line the picture raises, and the story's opening words that answer it."
+    - name: "Line under the picture"
+      contains: "About 27 characters, with which of four line types it is."
+    - name: "Test and CHECKS MISSED"
+      contains: "The picture against the runner-up under the same story, and any check still missed."
 
 example:
   business: sprout

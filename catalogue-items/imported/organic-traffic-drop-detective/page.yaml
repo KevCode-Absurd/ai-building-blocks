@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It must tell apart updates, site changes and market shifts from the same data.
 new_slug: organic-traffic-drop-detective
 name: Organic traffic drop detective
-summary: Connect Ahrefs and Search Console. Get the likely cause of a traffic
-  drop or stall and an action plan.
+summary: Find why your organic traffic dropped or stalled. Give it the symptom and dates. You get a likely cause, the pages hit hardest and a fix plan.
 job: read-ad-results
 headline: Organic traffic drop detective
-subhead: The likely cause of a search traffic drop or stall, found in a set
-  order instead of guessing, with an action plan to fix it.
+subhead: The likely cause of a search traffic drop or stall, found in a set order instead of guessing, with an action plan to fix it.
 explain: |
   The likely cause of a search traffic drop or stall, found in a set order instead of guessing, with an action plan to fix it.
 
@@ -17,19 +15,50 @@ when:
   - Traffic has been flat despite months of new content.
   - You just migrated your site or changed domains.
   - Rankings dropped right after a Google update.
+not_for:
+  - "You only want a routine performance report: use your analytics tool, or ask your AI to build a simple monthly report."
+  - "You want to plan new content, not explain a drop: use a content gap review of your topics against rivals."
+  - "Your problem is broken tracking or dashboard setup, not real traffic: fix the tracking first, then come back."
 you_give:
   - What changed and by how much
-  - The date it started
-  - Recent deploys, migrations or content changes
-  - Ahrefs and Search Console access
+  - The date it started (your best guess is fine)
+  - Recent deploys, site moves, content changes or link campaigns
+  - Access to Ahrefs and Search Console, or exports from both
+  - Your analytics organic sessions (optional)
 you_get:
   - Confirmation the drop is real
   - A ranked list of likely causes with evidence
   - Pages and keywords hit hardest
   - An action plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to Ahrefs and Search Console.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
+  - "Describe the drop: what changed, by how much, the start date, and what you changed on the site lately."
+  - Connect Ahrefs and Search Console if your AI can. If not, paste or upload exports from both. A paid Ahrefs account is needed.
+  - Answer its questions. It works through five layers and stops when it has enough evidence.
+  - Read the cause and the proof first. Check that the dates line up before you act on the plan.
+  - If a data source is missing, the result says what is missing and what it affects. It will not guess numbers.
+output_sample:
+  input:
+    - What changed and by how much
+    - The date it started
+    - Recent deploys, migrations, content changes or link campaigns
+    - Ahrefs and Search Console data or access
+    - Analytics organic sessions (optional)
+  prerequisites:
+    - An AI that can connect to Ahrefs and Search Console, or exports from both that you can paste or upload
+    - Similarweb data for rival traffic (optional, paid)
+  output:
+    - name: Summary
+      contains: What changed, when, by how much, and the likely cause in one paragraph.
+    - name: The symptom
+      contains: Charts and splits by country, device, section, brand or non-brand queries, and page.
+    - name: Layer-by-layer findings
+      contains: What each of the five layers ruled in or out, with the evidence.
+    - name: Root cause hypothesis
+      contains: One sentence naming the likely cause, backed by the evidence found.
+    - name: Action plan
+      contains: Ordered fixes, each tied to the evidence, with owners and timelines.
+    - name: Recovery forecast
+      contains: A realistic view of how long recovery may take and how far it may go.
+    - name: Monitoring plan
+      contains: What to watch to confirm the traffic is coming back.

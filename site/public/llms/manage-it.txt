@@ -1,0 +1,8 @@
+# Manage IT services and recovery: AI Blocks
+
+> 4 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Backup restore rehearsal planner](https://useaiblocks.com/workflows/build-a-backup-recovery-rehearsal): Map what needs to be restored, write a safe rehearsal checklist and track the evidence needed to check recovery.
+- [Backup restore rehearsal reviewer](https://useaiblocks.com/agents/recovery-rehearsal-evidence-assistant): Check restore evidence against recovery targets. Get a revised test plan, missed targets and follow-up actions.
+- [IT service manager agent](https://useaiblocks.com/agents/agency-engineering-it-service-manager): Set up an IT service desk process for your team. Get ticket priorities, a change approval path, response targets and a rollout order.
+- [Small team IT troubleshooter](https://useaiblocks.com/skills/small-team-it-fixer): Describe the IT problem and affected users. Get a triage path and platform-specific checks, with access and recovery limits marked.

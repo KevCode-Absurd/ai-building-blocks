@@ -1,6 +1,6 @@
 new_slug: winning-product-scorer
 name: "Winning product scorer"
-summary: "Give it a product idea and its costs. Get a score out of 100 and a verdict."
+summary: "Score a winning product idea before you buy stock or run ads. Give it your cost and price. You get 11 rule marks, a score out of 100 and a verdict."
 job: find-products
 thinking: medium
 thinking_why: "It applies a fixed rule list and checks sums, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You found a product on TikTok, an ad spy tool or a supplier site and want a quick yes or no before you spend.
   - You have three ideas and want to rank them on the same rules.
   - A product has thin margin and you want to know the price or bundle that would fix it.
+not_for:
+  - "You sell a service, a digital product or to other businesses: this skill needs a physical product and a landed cost, so use a simple price and cost sum in a spreadsheet."
+  - "You already sell the product and want to read ad results: work from your own ad numbers in Meta Ads Manager instead, because this skill only checks an idea before you spend."
+  - "You need to know how many rivals sell it or how much it earns: use a rival check or a sales estimate, because this skill does not look up markets and never predicts sales."
 
 you_give:
   - The product, or a link, and the problem it solves in your buyer's words
@@ -36,6 +40,30 @@ how_to_use:
   - Add size, weight, shop availability and video links if you have them. Each one removes a gap.
   - Read the margin sums first. If a margin rule fails, fix the price or the cost before anything else.
   - Run the 2 to 3 day test only on a go. Paste the shortlist line into your sheet.
+output_sample:
+  input:
+    - Your product, or a link, and the problem it solves in your buyer's words
+    - Landed cost per unit (product plus shipping) and the price you plan
+    - Size, weight, material and shelf life (optional)
+    - Whether local shops sell it (optional)
+    - Links to videos or ads that show it, and your cash for tests (optional)
+  output:
+    - name: Margin sums
+      contains: The price-to-cost multiple, the gross profit per unit and the most you can pay in ads per sale.
+    - name: Rules
+      contains: One line each for rules R1 to R11, marked pass, warn or fail, with points and a reason.
+    - name: Score
+      contains: Points added up to a score out of 100, with the sum shown.
+    - name: Verdict
+      contains: Go, test small or drop, based on the score and any failed key rule.
+    - name: Fix first
+      contains: The one change that wins back the most points, with the number to reach.
+    - name: Bent rules
+      contains: Any soft rule you bent, with the proof you gave, or none.
+    - name: Shortlist line
+      contains: One line with product, cost, price, profit, problem, score and verdict to paste in your sheet.
+    - name: Checks missed
+      contains: Any rule that could not be checked and what is needed, or none.
 
 how_it_works:
   - title: Works out the margin

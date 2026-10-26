@@ -1,6 +1,6 @@
 new_slug: cross-over-copy-test-planner
 name: "Cross-over copy test planner"
-summary: "Paste two versions and the different places they will run. Get a plan that swaps places halfway and compares cost per sale."
+summary: "Plan a fair copy test across different places. Swap versions halfway and compare cost per sale to pick the better copy. A cross-over copy test planner."
 job: plan-ad-tests
 thinking: high
 thinking_why: "It has to design a fair test across places and control the things that could skew the result."
@@ -17,6 +17,10 @@ when:
   - "You have two versions of a sales message and want a fair way to choose."
   - "You run in several magazines, towns, lists or channels and the places differ."
   - "You count replies but have never followed them through to sales."
+not_for:
+  - "You only have one place to run the copy or no way to track replies: first set up a code, link or phone number for each version, or run one version at a time."
+  - "Both versions can run at the same time to matched halves of one audience: use the Split-run test planner."
+  - "You want ideas for what to test: ask a colleague or your AI for new angles first, then come back with two finished versions."
 
 you_give:
   - "Two versions of the copy"
@@ -35,6 +39,32 @@ how_to_use:
   - "Say what a reply is and what you send to everyone who replies."
   - "Create the keys it lists and run round one, then the swap."
   - "Bring the counts back and ask it to fill the report."
+output_sample:
+  input:
+    - Two versions of your copy
+    - The places they can run, with the cost of each
+    - What counts as a reply, and the follow-up you send
+    - Past results by place (optional)
+  prerequisites:
+    - An AI chat tool
+    - A spreadsheet to hold your counts (optional)
+  output:
+    - name: Places
+      contains: Your places split into two matched halves, with the reason the halves match.
+    - name: Round one
+      contains: Which version runs in which half, the equal spend for each, and a key for every version.
+    - name: Round two (swap)
+      contains: Each version moves to the half where the other ran, with new keys.
+    - name: Follow-up sent to every reply
+      contains: What you send, when, and by which route, the same for every reply.
+    - name: Report
+      contains: A table by version with spend, replies, cost per reply, sales and cost per sale.
+    - name: Winner rule
+      contains: The rule for picking a winner, set before the test, with a minimum reply count and a tie rule.
+    - name: Record
+      contains: "What to keep after the test: versions, places, dates, keys, spend, replies, sales and the decision."
+    - name: Missing and checks missed
+      contains: Gaps you still need to fill, and any check the plan did not pass.
 
 how_it_works:
   - title: "Picks the places"

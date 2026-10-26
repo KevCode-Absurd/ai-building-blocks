@@ -16,6 +16,29 @@ use_cases:
   - "Plan a sequence to music: what moves, when, and on which beat"
   - "Cut a busy design down to a few shapes, two colours and strong contrast"
   - "Explain the creative process to a team, with its mess, failure and joy"
+not_for:
+  - "You need a finished brand guideline or a trademark check: ask a brand strategist or trademark counsel."
+  - "You want a busy, expressive layout that breaks the rules: use the David Carson mind instead."
+  - "You want a plain, practical read on charts or data visuals: use the Cole Nussbaumer Knaflic mind instead."
+output_sample:
+  input:
+    - The thing you are making, such as a logo, poster, video opening or talk
+    - What it is about, in your own words
+    - Who will see it, and where
+    - Any limits you already have, like colours, length or budget (optional)
+  output:
+    - name: The core in one line
+      contains: What your project is really about, boiled down to a single sentence.
+    - name: The feeling
+      contains: What people should feel before they read a word.
+    - name: The one symbol
+      contains: A single image or shape that sums up the whole thing, described in words.
+    - name: The limits
+      contains: A short set of rules to work inside, such as two colours and one kind of movement.
+    - name: What to take away
+      contains: Parts of your idea to cut, or to hint at instead of showing.
+    - name: Next step
+      contains: A quick mock-up or test with a few people before any debate.
 seats:
   - {seat: "Posters and title design", asks: "What is the one image that sums this whole thing up?"}
   - {seat: "Mood and opening", asks: "Before anyone reads a word, what should they feel?"}

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It shapes group roles so cooperation is real.
 new_slug: group-knowledge-task
 name: Group knowledge-building task designer
-summary: Give it a topic. Get a group task where learners build knowledge
-  together and share responsibility for the result.
+summary: Design a group knowledge-building task where each learner holds a needed piece and the group shares responsibility for the result.
 job: teach-and-train
 headline: Group knowledge-building task designer
-subhead: A group task where learners build an answer together and share the
-  blame or credit for it. Give it a topic and you get a task design built on the
-  Ubuntu idea that a person is a person through other people.
+subhead: A group task where learners build an answer together and share the blame or credit for it. Give it a topic and you get a task design built on the Ubuntu idea that a person is a person through other people.
 explain: |
   A group task where learners build an answer together and share the blame or credit for it. Give it a topic and you get a task design built on the Ubuntu idea that a person is a person through other people.
 
@@ -18,6 +15,10 @@ when:
   - You want a task that values shared learning over ranking.
   - You teach across cultures and want a more collective approach.
   - You need a new group project on a given topic.
+not_for:
+  - "You need a task that one student does alone and is graded alone: use a standard group task or a plain individual assignment."
+  - "You want a quick warm-up or a single worksheet: write a short class activity yourself instead."
+  - "You need interviews with elders or care-home residents without school approval: get that approval and consent first, or pick a task that stays in the classroom."
 you_give:
   - Your topic
   - Learner age and group size
@@ -29,7 +30,31 @@ you_get:
   - A way to check understanding together
   - A reflection activity
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from the skill folder.
+  - Add your learning objective and a few lines on your class. Add the optional details if you have them.
+  - Read the task design. Check that every learner holds a piece the group needs.
+  - If students will interview elders or care-home residents, get school approval first. Get consent from each person they interview.
+  - Adjust the roles and timing to fit your class, then run the task.
+  - Afterward, use what the group built as a shared class record, and read the evidence note to see how strong the research is.
+output_sample:
+  input:
+    - Your learning objective, the topic or skill students need to learn
+    - "Your class context: who is in the class and how they work together now"
+    - Your subject and year group (optional)
+    - The task you use now (optional)
+    - How the task could involve your wider community (optional)
+  output:
+    - name: Why Collective Knowledge Matters Here
+      contains: A short reason this topic is better learned together than alone.
+    - name: Task Design
+      contains: The redesigned task, built on shared responsibility and benefit to the community.
+    - name: Collective Knowledge Structure
+      contains: How each person's piece is needed, so the group result only works when pieces combine.
+    - name: Community Dimension
+      contains: How the learning links to people and places outside the class.
+    - name: Individual Within Collective
+      contains: How each learner's own effort is seen and how to handle individual assessment.
+    - name: Teacher's Role
+      contains: What you do before, during and after the task.
+    - name: Known Limitations
+      contains: A note on how strong the research behind the approach is.

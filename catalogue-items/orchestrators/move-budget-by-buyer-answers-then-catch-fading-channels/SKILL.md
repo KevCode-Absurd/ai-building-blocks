@@ -24,12 +24,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Post-purchase survey reader.** Use the skill `post-purchase-survey-reader`. Shows which channels the platforms over-credit and which budget move to test.
-2. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the plan from the steps before. Takes the survey's budget move and ranks it against the other channels.
+1. **Post-purchase survey reader.** Use the skill `post-purchase-survey-reader`. Shows which channels the platforms over-credit and which budget move to test. Hands the budget move to step 2.
+2. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the plan from the steps before. Takes the survey's budget move and ranks it against the other channels. Hands the budget plan to step 3, to judge after eight weeks.
 
 Pause here: Make the budget move and leave it for eight weeks. Then export spend, responses and customers by channel for each month, including earlier months.
 
-3. **Channel decay checker.** Use the skill `channel-decay-checker`. Shows whether the moved budget helped and which channels are wearing out.
+3. **Channel decay checker.** Use the skill `channel-decay-checker`. Give it the new monthly results you exported and the budget plan from step 2. Shows whether the moved budget helped and which channels are wearing out.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

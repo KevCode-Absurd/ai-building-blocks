@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It condenses facts into a set template.
 new_slug: on-call-handoff-writer
 name: On-call handoff writer
-summary: Give it your shift alerts and open issues. Get a handoff note the next
-  person can act on at once.
+summary: Turn your shift alerts and open issues into an on-call handoff note the next engineer can read fast and act on. Unknown facts are marked.
 job: organise-work
 headline: On-call handoff writer
-subhead: A handoff note the next on-call person can read in two minutes and act
-  on. It stops the usual loss of context when one shift ends and another begins.
+subhead: A handoff note the next on-call person can read in two minutes and act on. It stops the usual loss of context when one shift ends and another begins.
 explain: |
   A handoff note the next on-call person can read in two minutes and act on. It stops the usual loss of context when one shift ends and another begins.
 
@@ -17,6 +15,10 @@ when:
   - You are new to on-call and do not know what to include in a handoff.
   - Your team's handoffs are chat messages that nobody can find.
   - You want a template every engineer uses the same way.
+not_for:
+  - "You only have a single task update and no open incidents: send a plain status message in chat."
+  - "You need to run a live incident or post to a status page: use your team's incident runbook and your incident commander."
+  - "You want to change paging routes, test alerts or run fixes: do that yourself in your paging tool, since this only drafts the note."
 you_give:
   - Alerts from your shift
   - Open incidents and tickets
@@ -28,7 +30,27 @@ you_get:
   - Things to watch in the next shift
   - A reusable handoff template
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. This needs no code running, files or paid tools.
+  - Paste your shift alerts, open incidents and tickets, and what you tried. Add upcoming changes if you have them.
+  - Say which note you want. Use the quick note for a calm shift. Use the full note when several issues are open. Use the incident note if one is still live.
+  - Ask your AI to sort each item into active, investigating or resolved, and to mark any fact you did not give as unknown.
+  - Check the note against your tickets and dashboards. Fix links, owners and next steps before you send it.
+  - Share it, then book a short sync call with the next person.
+output_sample:
+  input:
+    - Alerts from your shift
+    - Open incidents and tickets
+    - What you tried and what you found
+    - Upcoming changes, releases or maintenance (optional)
+    - Names of the outgoing and incoming engineers (optional)
+  output:
+    - name: Shift Handoff Document
+      contains: The full note with active incidents, investigations, resolved items, recent changes, known issues, upcoming events and escalation contacts.
+    - name: Quick Handoff (Async)
+      contains: A short note with a summary, a watch list, recent changes and what is coming up.
+    - name: Incident Handoff (Mid-Incident)
+      contains: Current state, what is known, what was done, what must happen next, key people and links.
+    - name: Handoff Sync agenda
+      contains: A 15 minute call plan for walking the next person through issues, changes, events and questions.
+    - name: Handoff checklists
+      contains: Tick lists for the outgoing and incoming engineer, such as checking paging, access and dashboards.

@@ -7,6 +7,33 @@ description: Data engineering skill for building scalable data pipelines, ETL/EL
 
 Production-grade data engineering skill for building scalable, reliable data systems.
 
+## Before you start (added by AI Blocks)
+
+Ask for these once. If one is missing, write `MISSING: <what>` in your answer, make the plan with a clearly marked assumption, and never invent source names, column names, volumes or credentials.
+
+1. Each data source and its format (database, file, app or event stream).
+2. Where the data must end up, and who uses it.
+3. How fresh it must be (once a day, hourly, within seconds).
+4. Rough size, for example rows per day (optional).
+5. Tools already in use (optional).
+
+Tools this skill needs: the commands under Quick Start run Python 3 scripts, so your AI must be able to run code, or you run them yourself. Snowflake, Databricks, Monte Carlo and Datadog need your own paid or account-based access. Say so when you recommend them, and offer a free option such as Postgres, DuckDB or dbt Core with Airflow where it fits. Keep passwords and keys out of code. Use environment variables. Test on a small copy of the data first, never on production.
+
+## What you hand back (added by AI Blocks)
+
+Return these sections in order:
+
+1. **Pipeline design.** Sources, destination, freshness target, batch or streaming, ETL or ELT, with a one-line reason for each choice.
+2. **Data model.** The tables and how they link, for example a star schema.
+3. **Code.** One block per file, each with its file name and what it does.
+4. **Quality checks.** Each check and what makes it fail (freshness, completeness, uniqueness).
+5. **Schedule.** When it runs and what to do when a run fails.
+6. **Open questions.** Anything marked MISSING.
+
+## When not to use (added by AI Blocks)
+
+Not for a one-off export that fits in a spreadsheet, a single website or API pull (use the Data extraction pipeline builder), only designing app tables (use the Database schema designer), or machine learning pipelines (use the Machine learning pipeline builder). After the run, review the quality check results, run the checks on the test copy, then turn on the schedule.
+
 ## Table of Contents
 
 1. [Trigger Phrases](#trigger-phrases)

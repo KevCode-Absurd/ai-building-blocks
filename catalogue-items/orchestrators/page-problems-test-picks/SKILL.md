@@ -50,16 +50,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Conversion research planner.** Use the skill `conversion-research-planner`. A research order that finds where, what and why before you test anything
+1. **Conversion research planner.** Use the skill `conversion-research-planner`. A research order that finds where, what and why before you test anything. Step 2 then reviews your page.
 
 Pause here: Do the research the plan lists: analytics, a walk-through and customer questions.
 
-2. **Landing page auditor.** Use the skill `landing-page-auditor`. Reads the finished page like a stranger and ranks what to fix before it goes live.
+2. **Landing page auditor.** Use the skill `landing-page-auditor`. Uses your own page, not step 1's plan. Reads it like a stranger and hands step 3 a ranked list of what to fix before it goes live.
 3. **Page issue sorter.** Use the skill `page-issue-sorter`. Give it the audit report from the steps before. Each one sorted into fix now, investigate, test or tracking, with a ranked order. Reads the audit report from the step before
 
 Pause here: Pull your visits and orders for the page you want to test.
 
-4. **A/B test traffic checker.** Use the skill `ab-test-traffic-checker`. Says whether your traffic can prove the new page works and how many weeks that takes.
+4. **A/B test traffic checker.** Use the skill `ab-test-traffic-checker`. Give it the plan from the steps before. Uses your own visits and orders, and takes the problems step 3 sorted as 'test' as the changes to size. Says whether your traffic can prove the new page works and how many weeks that takes.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

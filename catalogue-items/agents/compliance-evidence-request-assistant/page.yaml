@@ -1,56 +1,104 @@
 new_slug: compliance-evidence-request-assistant
 name: Compliance evidence request assistant
 headline: Compliance evidence request assistant
-summary: A changed evidence gap list and proposed requests for the responsible owners.
+summary: Find which compliance evidence has expired or is missing, with a draft request for each owner. Give it your evidence list and last gap list.
 job: check-contracts
 thinking: high
-thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A changed evidence gap list and proposed requests for the responsible owners. Share an owner-approved review scope, control evidence index, due dates and the prior gap register. Your AI prepares the work and marks any facts it cannot verify.
+thinking_why: It compares dated evidence with the last review, picks a path, and must not call a control met without proof.
+subhead: Give it your review scope, your evidence list and your last gap list. It finds what changed, marks each control current, expired, missing or unchecked, and drafts one request for each evidence owner. Nothing is sent.
 explain: |-
-  A changed evidence gap list and proposed requests for the responsible owners.
+  Before a compliance review, someone has to chase the evidence. Files expire. Owners change. A task marked done proves nothing. This agent keeps your compliance evidence gap list current, so you chase only what changed since the last review.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Evidence is current, scoped and attributable; a closed task alone does not prove a control works. Missing tools or evidence stay visible in the final summary.
+  Each run it compares your evidence list with the last review. If a requirement changed, it rebuilds the checklist and the owner plan with the Prepare evidence for a compliance review workflow. If only some evidence was refreshed, it checks the list with the Spreadsheet checker. A gap stays open until someone reviews the proof behind it.
+
+  It drafts the evidence requests and stops. It never sends them. It also never says you are compliant. It reports readiness, and your reviewer decides. Installing it sets up no schedule.
 when:
-  - You need a changed evidence gap list and proposed requests for the responsible owners.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - Your audit window opens in a few weeks and you need to know which controls still lack current evidence.
+  - An owner says "I uploaded it" and you need to see if the file is dated, in scope and from the right system.
+  - A rule or framework requirement changed since your last review.
+  - Your evidence list lives in a sheet and last quarter's gap list is buried in a folder.
+not_for:
+  - You have no evidence list or checklist yet. Start with the Compliance readiness checklist builder, or run the Prepare evidence for a compliance review workflow.
+  - You only want a spreadsheet's formulas or data checked. Use the Spreadsheet checker.
+  - You want a signed opinion that you comply, or legal advice. This reports readiness only. Your auditor or lawyer decides.
+  - You want the requests emailed for you. It drafts them and stops.
 you_give:
-  - An owner-approved review scope, control evidence index, due dates and the prior gap register.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - Your review scope, which is the framework, the controls in scope and the review dates (from your compliance lead or auditor)
+  - Your evidence list, one row per control with the file or link, its date, its owner and its due date
+  - Your last gap list and record (optional, needed to see what changed)
+  - Any requirement that changed since the last review (optional)
+  - Today's date and your time zone
 you_get:
-  - A changed evidence gap list and proposed requests for the responsible owners.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A gap list that shows what changed since the last review
+  - One draft request for each evidence owner, with what is needed and by when
+  - The path it took (rebuild the checklist, or check refreshed evidence) and why
+  - Lines marked MISSING for anything it could not confirm
+  - A short record to paste into your next review
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent to your AI with the two pieces it uses, the Prepare evidence for a compliance review workflow and the Spreadsheet checker. If your AI cannot open them, paste both in with the agent.
+  - Say if this is the first run. If not, paste last time's record and gap list. Then attach your evidence list and review scope.
+  - Read "What changed" first, then the gap list. Open two or three evidence files yourself and check their dates.
+  - Edit the draft requests and send them yourself. Put the owners' replies into your evidence list.
+  - Run it again when evidence expires, a requirement changes or a due date arrives. In plain chat it cannot save files, so keep the record it hands back.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep control ID, evidence reference, scope, checked date, owner, due date and verification state. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: Evidence expires, a review requirement changes or a preparation action becomes due.
-  - title: Choose the next step
-    text: Check the evidence index against the saved requirements. Run the preparation workflow for changed requirements; use spreadsheet-checker for refreshed evidence. Keep gaps open until supporting evidence is reviewed, and prepare requests without sending them.
-  - title: Check and save evidence
-    text: Evidence is current, scoped and attributable; a closed task alone does not prove a control works. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Reads the last record
+    text: Uses the saved record if it matches this review, or sets a first baseline. The record holds control ID, evidence reference, scope, checked date, owner, due date and state.
+  - title: Checks what changed
+    text: Compares evidence dates, owners and requirement versions with the record. A missing export counts as unknown, not as no change. If nothing changed and nothing is due, it says so and stops.
+  - title: Picks the path
+    text: Changed requirements run the Prepare evidence for a compliance review workflow. Refreshed evidence alone runs the Spreadsheet checker on your evidence list.
+  - title: Grades each control
+    text: Marks each control current, expired, missing or unverified. Current means dated, in scope and tied to a named owner. A closed task alone never counts.
+  - title: Drafts the requests
+    text: Writes one request per owner that names the control, the proof needed, the date wanted and what acceptable proof looks like. Drafts only.
+  - title: Saves the review
+    text: Writes a run log, the step files and a new record, and keeps the old record. Lists MISSING lines and CHECKS MISSED.
 output_shape: |-
-  Scope and source coverage
-  A changed evidence gap list and proposed requests for the responsible owners.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  REVIEW <date>, scope <framework and period>   LAST REVIEW <date or first baseline>
+
+  WHAT CHANGED  <control, old state, new state, why>
+  GAP LIST
+    <control ID> | <evidence reference> | <checked date> | <owner> | <due> | <current | expired | missing | unverified>
+  DRAFT REQUESTS (not sent)
+    To <owner>: <control>, <proof needed>, by <date>, acceptable if <dated, in scope, from the named system>
+  PATH TAKEN  <rebuilt checklist | checked refreshed evidence | unchanged> because <reason>
+
+  RECORD FOR NEXT REVIEW  <control ID, evidence reference, scope, checked date, owner, due date, state>
+  MISSING  <each gap and the control it affects>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - Your review scope (the framework, the controls in scope and the review dates)
+    - Your evidence list, one row per control (file or link, date, owner, due date)
+    - Your last gap list and record (optional, needed to see what changed)
+    - Any requirement that changed since the last review (optional)
+  prerequisites:
+    - An AI that can read uploaded files, such as Claude, ChatGPT or Gemini
+    - The two pieces it uses, the Prepare evidence for a compliance review workflow and the Spreadsheet checker
+  output:
+    - name: What changed
+      contains: Each control whose evidence expired, appeared or changed owner, with its old and new state. On a first run it says first baseline.
+    - name: Gap list
+      contains: One row per control with control ID, evidence reference, checked date, owner, due date and a state of current, expired, missing or unverified.
+    - name: Draft requests for owners
+      contains: One short request per owner naming the control, the proof needed, the date wanted and what acceptable proof looks like. Marked not sent.
+    - name: Path taken
+      contains: Whether it rebuilt the checklist or only checked the refreshed evidence, and why the other path was skipped.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Every fact it could not confirm and every check that failed or could not run, or the word none.
+    - name: Record for next review
+      contains: A small block to paste next time with control ID, evidence reference, scope, checked date, owner, due date and state.
+    - name: Saved files
+      contains: A run log and the step files in a dated folder under reviews/compliance-evidence-request-assistant/, when your AI can save files.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Evidence is current, scoped and attributable; a closed task alone does not prove a control works.
+    how: Pick one framework and one review window so the evidence is comparable.
+  - what: How old is too old
+    how: Give your own rule, such as the age your auditor accepts. With no rule, it uses the expiry date written on the evidence and marks the rest unverified.
+  - what: Owners
+    how: Name an owner for every control. A control with no owner gets a MISSING line, not a guess.
+  - what: Reviewer
+    how: Name who reviews proof. Without one, nothing is marked current until you say a person checked it.
 judge:
   - Evidence is current, scoped and attributable; a closed task alone does not prove a control works.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -63,16 +111,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Add your auditor's own wording for what counts as acceptable proof, so each request uses it.
+  - Keep each run's record in one folder named by date, so the next run starts from the true earlier state.
+  - Record checks that need a person, such as opening a screenshot or confirming a system export, and finish them before you rely on the gap list.
+  - Pair it with the Executive action register keeper to track who answered each request.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A chat AI that reads uploaded files
+      why: Claude, ChatGPT and Gemini can read your evidence list and the pack. In plain chat you save the record yourself.
+    - name: Your sheet or evidence tracker
+      why: Export it as a spreadsheet so each control has a date, an owner and a link on one row.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your auditor's own list of evidence they will ask for.
+    - The name of the person who reviews proof and signs off.
+    - Last quarter's gap list.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Control
+    meaning: A rule or step you follow to stay compliant, such as reviewing user access each quarter.
+  - term: Evidence index
+    meaning: A list of each control and the proof you hold for it.
+  - term: Gap list
+    meaning: The controls whose proof is missing, out of date or not yet checked.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adapts content to one platform.
 new_slug: wechat-article-planner
 name: WeChat article planner
-summary: Name your topic. Get a WeChat Official Account article plan with title
-  options and layout built for the platform.
+summary: Plan your next WeChat Official Account article with title options, a section-by-section layout and a call to action built for WeChat readers.
 job: grow-social
 headline: WeChat article planner
-subhead: A full plan for one WeChat Official Account article, built around how
-  the platform works. Distribution is closed, sharing happens in Moments and
-  readers tap titles that promise something.
+subhead: A full plan for one WeChat Official Account article, built around how the platform works. Distribution is closed, sharing happens in Moments and readers tap titles that promise something.
 explain: |
   A full plan for one WeChat Official Account article, built around how the platform works. Distribution is closed, sharing happens in Moments and readers tap titles that promise something. You leave with a title shortlist, a layout and a call to action that fits your goal.
 
@@ -18,6 +15,10 @@ when:
   - Your open rates are low and you suspect the titles.
   - You want readers to move from articles into a mini-program or private group.
   - You are entering the Chinese market and do not know the platform's rules.
+not_for:
+  - "You want short visual posts for Xiaohongshu: use the xiaohongshu-content-strategist skill, which is not in this library yet."
+  - "You have no WeChat Official Account yet: set one up with WeChat first, then come back for a plan."
+  - "You need the finished article, design or layout: this gives a plan and copy, so use a writer or your own design tool."
 you_give:
   - Your topic
   - Account type (subscription or service)
@@ -31,7 +32,28 @@ you_get:
   - Call to action to private traffic
   - Posting schedule suggestion
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI your topic, account type, target readers and goal. Add brand voice notes if you have them.
+  - "Ask for the plan: title options, article layout, sharing hooks and a call to action."
+  - Check the plan. Add your own facts, data and customer quotes, because the AI will not know them.
+  - If you post about beauty, health or money, have the claims reviewed before you publish.
+output_sample:
+  input:
+    - Your topic
+    - Your account type (subscription or service)
+    - Your target readers
+    - Your goal, such as sales or followers
+    - Your brand voice notes (optional)
+  output:
+    - name: Account type check
+      contains: What your account type means for how often you can post and where your article shows up.
+    - name: Title options
+      contains: Several title choices written with WeChat formulas such as curiosity gap, counter-intuitive and value promise.
+    - name: Article architecture
+      contains: An outline with first fold, ramp, core content, emotional peak and call to action.
+    - name: Sharing hooks
+      contains: Pull quotes for Moments and a suggested text readers can use when they forward the article.
+    - name: Call to action
+      contains: One low-effort next step, such as following, sharing or tapping through to your mini-program.
+    - name: Posting time tips
+      contains: Suggested peak reading times in China time.

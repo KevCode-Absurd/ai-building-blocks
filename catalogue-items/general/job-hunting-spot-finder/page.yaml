@@ -1,6 +1,6 @@
 new_slug: job-hunting-spot-finder
 name: Job hunting spot finder
-summary: Tell it what you sell. Get ranked leads for unmet jobs and what to go and watch for each.
+summary: Find unmet customer jobs in your market. Tell it what you sell, get ranked leads and a plan for what to watch for the top three.
 job: understand-customers
 thinking: medium
 thinking_why: It sorts many small clues into leads and scores them by a fixed rule. A mid-range model does this well.
@@ -14,6 +14,10 @@ when:
   - Growth feels stuck and every idea is a tweak to what you already sell.
   - You have customer words but no list of leads.
   - You want to know who you are not serving and why.
+not_for:
+  - "You need to set a price or test a brand-new product with no customers yet: talk to a few likely buyers in person instead."
+  - "You already have a lead and want it written up as a clear job: use the Job spec writer."
+  - "You want to study rival ads: use the Competitor ad gap finder."
 you_give:
   - What you sell and who buys it
   - Your question, such as where growth could come from
@@ -30,6 +34,27 @@ how_to_use:
   - Paste any customer words as they are.
   - Take the visit plan out and watch. Write what you see in people's own words.
   - Bring the notes to "Job spec writer".
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your question, such as where growth could come from
+    - Product facts (optional)
+    - Reviews, support emails or returns notes, word for word (optional)
+  output:
+    - name: The question
+      contains: Who you serve, what you sell and what you want to learn.
+    - name: Ranked leads
+      contains: Each lead is a person in a moment, with evidence, struggle and score, plus what they do now.
+    - name: Hunch list
+      contains: Leads with no evidence yet, kept apart until you have watched them.
+    - name: Watch plan (top three)
+      contains: Where to go, when, what to watch for and the first question to ask.
+    - name: Not searched
+      contains: Any of the five places skipped, with the reason.
+    - name: Missing
+      contains: Gaps in what you gave it, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each self-check it failed, or none.
 how_it_works:
   - title: Searches your own life
     text: Starts with moments where you struggled, because a problem you feel is often shared.

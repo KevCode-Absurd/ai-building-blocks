@@ -1,33 +1,117 @@
 new_slug: ai-creator-portfolio-and-pitch-planner
 name: AI creator portfolio and pitch planner
-summary: Describe your creative service. Get a spec portfolio plan, draft pitch, scope fields and staged actions to find clients.
-job: sell-and-negotiate
 headline: AI creator portfolio and pitch planner
-subhead: Describe your creative service. Get a spec portfolio plan, draft pitch, scope fields and staged actions to find clients. Bring the brief and any files you want it to use.
+summary: Plan a spec portfolio, a pitch and a 90-day client plan for your AI creative service. You get labelled sample projects, scope fields and weekly steps.
+job: sell-and-negotiate
+subhead: Describe your creative service, such as product images, ad visuals or short video made with AI, and the one customer you want. It plans a small portfolio of labelled sample projects, drafts a short pitch, lists the scope fields to settle before you quote, and sets a 90-day plan with weekly steps.
 explain: |-
-  Use this when you need a focused creative-service offer, portfolio and delivery plan. Choose one deliverable family and one customer type: product images, ad visuals, creator-style content or short video, for example. Keep production capability distinct from unsupported outcome promises.
+  Most people who sell AI images or video start with no clients and no portfolio. They say "I can make anything for anyone", show a mixed set of samples, and wait. A buyer cannot picture what to order. This portfolio and pitch planner narrows the offer first: one kind of deliverable for one type of customer, such as product images for small ceramic makers.
 
-  Inventory existing proof and gaps. Plan a small set of labeled speculative projects that resemble real deliverables; do not represent spec work as a paid client or invent performance statistics.
+  Then it plans the proof. It lists what you already have and what is missing, and plans a few speculative projects that look like real orders. Each one is labelled as a spec project, never as paid client work. It plans the portfolio page, shortlists brands that fit from sources you supply, and drafts a short pitch built around a personal sample. It lists the scope fields to settle before any quote: formats, quantity, revisions, usage rights and dates. It does not invent your rates or silently give away unlimited rights.
+
+  The 90-day plan has five stages: offer, proof, outreach, delivery and repeat. Each stage has weekly actions and an evidence gate, so you move on only when the proof exists. Any revenue figure is a planning assumption, not a promise. Nothing is sent for you, and no tool here makes the images.
 when:
-  - You need a focused creative-service offer, portfolio and delivery plan.
-  - You want a clear draft and checks from the material you already have.
+  - You make images or video with AI and have no paying clients yet.
+  - A possible client asked "do you have a portfolio?" and you have nothing to show for one niche.
+  - You want to pitch brands but do not know what sample to send first.
+  - You are about to quote your first job and have not settled revisions, usage rights or dates.
+not_for:
+  - A client has already asked for a price on a website project. Use the Prepare your first freelance project quote workflow.
+  - A signed client wants more than the agreed scope. Use the Prepare a client scope change brief workflow.
+  - You only need one pitch letter. Use the Capability pitch letter writer.
+  - You want ads bought or sales guaranteed. This plans your own offer and outreach, and cannot promise clients or revenue.
 you_give:
-  - brief
-  - "Optional: reference set"
+  - The one deliverable you offer, such as product images, ad visuals, creator-style content or short video
+  - The one type of customer you want, such as small ceramic makers
+  - Work you already have, or "none yet"
+  - Hours per week you can spend, for the 90-day plan
+  - Brands you already know, or public pages about them (optional)
+  - Your rates, if you have decided them (optional)
 you_get:
-  - plan
-  - document
-  - Missing inputs and steps that still need to run
+  - An offer and proof gaps note: one service, one customer, the proof you have and the proof you lack
+  - A portfolio plan with labelled spec projects and the layout of the portfolio page
+  - A draft pitch built around a personal sample, marked not sent
+  - Proposal and delivery fields, with price left as MISSING if you gave none
+  - A 90-day plan with weekly actions and an evidence gate for each stage
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini.
+  - Describe your offer in a few lines. Name one deliverable and one customer type. Add the work you have and your weekly hours.
+  - Read the offer and proof gaps first. If it says your offer is too wide, narrow it before you do anything else.
+  - Make the planned spec projects yourself, with your own image or video tool. This workflow plans them and does not make them. Label each one as a spec project.
+  - Check the pitch draft against your real work. Send pitches yourself, and only once you have a sample worth sending.
+  - Work through the 90-day plan one week at a time. Move to the next stage only when its evidence gate is met.
 how_it_works:
-  - title: Read the brief
-    text: "Choose one deliverable family and one customer type: product images, ad visuals, creator-style content or short video, for example. Keep production capability distinct from unsupported outcome promises."
-  - title: Build the result
-    text: For product portfolios show product accuracy, use context, varied composition and cohesive craft. Build a readable portfolio document with a short offer, strong examples, process, scope and contact method.
-  - title: Check and hand off
-    text: For a 90-day plan stage offer→proof→outreach→delivery→repeat with modest weekly actions and evidence gates. A forecast is a planning assumption, not a guaranteed revenue result.
+  - title: Choose one offer
+    text: "Picks one deliverable family and one customer type from your description. Keeps what you can make apart from promises about results."
+  - title: Inventory proof and plan spec work
+    text: "Lists the proof you have and the gaps. Plans a small set of labelled speculative projects that look like real deliverables. Never shows spec work as a paid client or invents performance numbers."
+  - title: Plan the portfolio
+    text: "For product work, plans for product accuracy, real use settings and varied framing. Lays out a readable portfolio page with a short offer, the best examples, your process, your scope and how to contact you."
+  - title: Shortlist brands and draft the pitch
+    text: "Shortlists brands from sources you supply or public pages you allow, with a reason each fits. Drafts a personalised sample idea and a short pitch. Nothing is sent."
+  - title: Set proposal fields
+    text: "Lists what to settle before a quote: client and project, exact formats and quantity, assumptions, schedule, revision rounds, price, usage rights, approvals and exclusions. It never makes up your rates."
+  - title: Define delivery
+    text: "Sets accepted file types, naming, review windows, how changes are handled, handover and invoice fields. Strips real third-party names, bank details and contacts from any template."
+  - title: Build the 90-day plan
+    text: "Stages offer, proof, outreach, delivery and repeat, with modest weekly actions scaled to your hours and an evidence gate at the end of each stage. Any forecast is a planning assumption."
+output_shape: |-
+  OFFER AND PROOF GAPS      <one service | one customer | proof you have | proof you lack>
+  PORTFOLIO PLAN            <spec project 1 to n: what it shows | labelled as spec> | <portfolio page layout>
+  PITCH DRAFT               <short pitch and sample idea> (not sent)
+  PROPOSAL AND DELIVERY     <formats and quantity | revisions | usage rights | dates | approvals | exclusions | price: MISSING or as given>
+  90-DAY ACTION PLAN        <stage | weeks | weekly actions | evidence gate>
+  MISSING                   <each gap and the line it stops>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - The one deliverable you offer and the one customer type you want
+    - Work you already have, or "none yet"
+    - Hours per week you can spend
+    - Your rates and any brands you know (optional)
+  prerequisites:
+    - An AI such as Claude, ChatGPT or Gemini
+    - Your own image or video tool, to make the spec projects the plan lists (optional)
+  output:
+    - name: Offer and proof gaps
+      contains: One service for one customer, the proof you have and the proof you still lack.
+    - name: Portfolio plan
+      contains: A few labelled spec projects and the layout of the portfolio page.
+    - name: Pitch draft
+      contains: A short pitch with a personal sample idea, marked not sent.
+    - name: Proposal and delivery fields
+      contains: Formats, quantity, revisions, usage rights, dates and approvals to settle, with price left MISSING if unknown.
+    - name: 90-day action plan
+      contains: Stages from offer to repeat, with weekly actions and an evidence gate for each.
+tweaks:
+  - what: Deliverable
+    how: Pick one, such as product images or short video. A wide offer gives a vague portfolio and a weak pitch.
+  - what: Customer
+    how: Name the type of customer in plain words, such as small ceramic makers. Brand shortlists and samples follow it.
+  - what: Your weekly hours
+    how: Give a real number. The weekly actions in the 90-day plan are sized to it.
+  - what: Your rates
+    how: Add them if you have decided. Without them, price stays MISSING in the proposal fields.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+improve:
+  - Keep the spec projects you made and the pitch replies you get, then run the plan again with real proof.
+  - After your first paid job, add the real result and the client's quote to the portfolio plan, with their permission.
+  - Change one thing in your pitch at a time, so you can tell what made the difference.
+works_best_with:
+  tools:
+    - name: An AI image or video tool you already use
+      why: This workflow plans the spec projects but does not make them. You make them in your own tool.
+    - name: A spreadsheet or notes app
+      why: Holds the brand shortlist and the weekly plan, so you can tick off each evidence gate.
+  inputs:
+    - Examples of work you have already made, even if rough.
+    - Public pages for brands you would like to work with.
+    - A list of what you will and will not do for a client.
+terms:
+  - term: Spec project
+    meaning: A sample you make without being paid, to show the kind of work a client could order. Always labelled as a sample.
+  - term: Usage rights
+    meaning: What a client may do with the finished work, such as where it can be shown and for how long.
+  - term: Evidence gate
+    meaning: A check you must pass before the next stage, such as "three finished spec projects exist".

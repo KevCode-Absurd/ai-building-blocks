@@ -1,6 +1,6 @@
 new_slug: amazon-listing-first-draft-writer
 name: "Amazon listing first draft writer"
-summary: "Paste product facts and search phrases. Get an Amazon title, five bullets and backend keywords."
+summary: "Write a first Amazon listing from your product facts and search phrases. You get a title, five bullets, a short description and backend keywords."
 job: sell-on-amazon
 thinking: low
 thinking_why: "It turns facts and phrases into set pieces of copy."
@@ -17,6 +17,10 @@ when:
   - "You are listing a product for the first time."
   - "Your current listing gets views but few sales."
   - "You have search phrases and no copy."
+not_for:
+  - "Your listing already has strong reviews and sales: make small edits by hand instead of a full rewrite."
+  - "You need a listing in several languages or a fuller set of checks: use the Amazon listing writer."
+  - "You have no product facts yet: gather what it is, what it does and any true numbers first, or ask your supplier."
 
 you_give:
   - "Product facts (required): what it is, what it does, true numbers, certificates, guarantees."
@@ -34,6 +38,23 @@ how_to_use:
   - "Under it, paste your details: product facts; search phrases; competitor titles; whether your brand is registered."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - "Your product facts: what it is, what it does, true numbers, certificates, guarantees"
+    - Your main search phrase and three to five more
+    - Titles of rival listings (optional)
+    - Whether your brand is registered (optional)
+  output:
+    - name: TITLE
+      contains: One title with your main search phrase first, then supporting phrases, with a character count.
+    - name: BULLETS
+      contains: Five bullets that lead with a benefit, then the feature, using only true numbers you gave.
+    - name: DESCRIPTION
+      contains: One short paragraph that uses your main phrases.
+    - name: BACKEND KEYWORDS
+      contains: Leftover true phrases, common misspellings and synonyms that are not repeated from the title.
+    - name: MISSING
+      contains: The facts or phrases you did not give, so you can add them and run it again.
 
 how_it_works:
   - title: "Write the title"

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks what to measure, then follows a set test pattern.
 new_slug: matlab-speed-test-writer
 name: MATLAB speed test writer
-summary: Give it MATLAB code to time. Get repeatable performance tests that
-  measure run time with sound statistics.
+summary: Get a MATLAB performance test class that times your code with repeat runs, several input sizes and a before-and-after check for slowdowns.
 job: test-and-fix-code
 headline: MATLAB speed test writer
-subhead: Repeatable MATLAB speed tests that tell you how long code really takes,
-  with enough runs to trust the number. Give it the code to time and get a test
-  class ready to run.
+subhead: Repeatable MATLAB speed tests that tell you how long code really takes, with enough runs to trust the number. Give it the code to time and get a test class ready to run.
 explain: |
   Repeatable MATLAB speed tests that tell you how long code really takes, with enough runs to trust the number. Give it the code to time and get a test class ready to run.
 
@@ -18,6 +15,10 @@ when:
   - A function seems fast on small input and slow on large input.
   - You need timing tests to run each time code changes.
   - Your timing numbers vary too much between runs to trust.
+not_for:
+  - "You want a quick one-off time for one line of code: use MATLAB's timeit function, no test class needed."
+  - "You want to make slow code faster: ask your AI to profile it to find the slow lines first, then rewrite them."
+  - "You want to measure memory use, not run time: use MATLAB's memory tools or ask your AI for a memory check."
 you_give:
   - The code to time
   - Input sizes to try
@@ -29,8 +30,32 @@ you_get:
   - Instructions to run the tests
   - A way to compare before and after
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Paste the MATLAB code you want to time. Say which input sizes to try and which MATLAB release you use.
+  - Ask for a performance test class. Read it to check setup sits outside the timed part.
+  - Save the class as a .m file in MATLAB and run it with runperf. This needs a paid MATLAB licence.
+  - Save the first results as a baseline. After you change your code, run again and compare against the baseline.
+  - If the results look noisy, ask your AI to fix the setup or raise the input size, then run again.
+output_sample:
+  input:
+    - The MATLAB function or code you want to time
+    - The input sizes to try, such as small, medium and large
+    - What counts as fast enough (optional)
+    - Your MATLAB release
+  prerequisites:
+    - A paid MATLAB licence, since the tests run inside MATLAB
+    - A MATLAB release that includes the performance testing framework, which is part of MATLAB's test tools
+    - An AI that can run MATLAB, or you run the test class yourself
+  output:
+    - name: Performance test class
+      contains: A MATLAB class that sets up your data, times only your code and checks the result is not empty.
+    - name: Parameters
+      contains: Input sizes set in setup, plus extra options such as algorithms, so each size gets its own timing.
+    - name: Run commands
+      contains: The runperf command, and a fixed sample count option if you want a faster run.
+    - name: Results summary code
+      contains: Code that prints median, standard deviation and coefficient of variation for each test, and flags results above 10% as noisy.
+    - name: Baseline comparison
+      contains: Code that saves a baseline, then compares later runs and marks each test as OK, REGRESSION or IMPROVEMENT.
+    - name: Quality checklist
+      contains: A short check that setup is outside the timer, random data is seeded and output is switched off.

@@ -2,34 +2,95 @@ thinking: medium
 thinking_why: It groups messy spend rows, then ranks the savings.
 new_slug: spend-savings-finder
 name: Spend savings finder
-summary: Give it a list of what you paid suppliers. Get spend grouped by type,
-  the biggest savings chances and quick wins.
+summary: Find where your supplier money goes and what to cut first. Give it a payments export and get spend by category, top suppliers and ranked savings.
 job: track-numbers
 headline: Spend savings finder
-subhead: Your supplier payments sorted by type, with the biggest savings chances
-  and quick wins listed. Give it an export from your accounting, purchasing or
-  card data.
+subhead: Give it an export of what you paid suppliers, from your accounting, purchasing or card data. Your AI cleans it, groups spend by category and supplier, shows which few suppliers take most of your money and ranks savings by size and effort.
 explain: |
-  Your supplier payments sorted by type, with the biggest savings chances and quick wins listed. Give it an export from your accounting, purchasing or card data. The skill first cleans it and groups each payment into a category, supplier and business unit, which is the spend cube view.
+  Spend analysis answers a plain question: where does our money go, and where can we save? Most small firms cannot answer it, because payments sit in rows with messy supplier names and no categories.
 
-  It then runs a Pareto check to show which few suppliers take most of your money, and looks at tail spend, off-contract buying and duplicate suppliers. It ranks savings by size and effort, so you know what to chase first and what can wait.
+  The skill first cleans the export and shows you a cleaning summary. Then it groups each payment by what it was for and who it went to. It runs a Pareto check, which shows how few suppliers take most of the spend. It also looks at the long tail of small suppliers, duplicate suppliers and, if you give it a contract list, buying outside contracts.
+
+  Each saving is ranked by size and effort, so you know what to chase first. Savings are estimates, and each one shows its assumption. Your AI needs to run Python, or you can try it on a short pasted sample.
 when:
-  - You do not know where your money goes each month.
-  - You suspect you pay too many suppliers for the same thing.
-  - Staff buy outside approved contracts and you want the size of it.
-  - You need a short list of savings to act on this quarter.
+  - You do not know where your money goes each month and want one clear view.
+  - You suspect you pay several suppliers for the same thing and want to consolidate.
+  - Staff buy outside approved contracts and you want to see how much.
+  - You need a short list of savings to act on this quarter, ranked by size and effort.
+not_for:
+  - You only want to find double-paid software. Use the Software spend auditor.
+  - Your supplier names in Shopify have typos. Use the Supplier name cleaner first.
+  - You have a handful of payments. Read them by eye, since a table of 20 rows needs no analysis.
+  - You want to review payroll or a single one-off purchase. Use your accounting system's own reports.
 you_give:
-  - A list of supplier payments or a spend export
-  - The time period covered
-  - Goals such as cost cuts or fewer suppliers (optional)
+  - An export of supplier payments with supplier, amount and date columns
+  - The time period it covers
+  - A category column, if your export has one (optional)
+  - A list of approved suppliers or contracts, to size buying outside contracts (optional)
+  - Your goal, such as cutting cost, fewer suppliers or contract compliance (optional)
 you_get:
-  - Spend grouped by category and supplier
-  - A Pareto view of top suppliers
-  - Tail and off-contract spend
-  - Ranked savings chances
-  - Quick wins list
+  - A cleaning summary showing rows kept, rows dropped and total spend
+  - Spend by category and by supplier
+  - A view of the few suppliers that take most of your spend
+  - Small-supplier and outside-contract spend, when you gave the data for it
+  - Savings ranked by size, effort and how sure the estimate is
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Export your payments from QuickBooks, Xero, your bank, card or purchasing system as a CSV or spreadsheet. Keep supplier, amount and date columns. Remove personal or payroll rows.
+  - Use an AI that can run Python, such as Claude Code or ChatGPT with data analysis. For a short list, a plain chat can work on a pasted sample.
+  - Paste the skill and attach the file. Say the period it covers and your goal.
+  - Check the cleaning summary first. Look at rows dropped, duplicates removed and any supplier names merged. Fix anything wrong before you accept the ranking.
+  - Read the Pareto view and the ranked savings. Ask your AI to show the assumption behind each saving.
+  - Pick the top two or three savings and ask for a short action plan with an owner for each.
+how_it_works:
+  - title: Set the goal
+    text: It confirms your goal, the period and what data you have, and marks gaps as missing.
+  - title: Clean the data
+    text: It tidies names, flags possible duplicates, sets credits aside and drops rows with no supplier, amount or date.
+  - title: Classify the spend
+    text: It sorts each payment into a category, a supplier and, if you have it, a business unit.
+  - title: Run the Pareto check
+    text: It shows how few suppliers take most of your spend and how long the tail is.
+  - title: Look for savings
+    text: It checks the tail, duplicate suppliers, buying outside contracts and price differences.
+  - title: Rank the savings
+    text: It ranks each by size, effort and confidence, and shows the assumption behind it.
+output_shape: |
+  CLEANING     <rows in, possible duplicates, rows dropped, credits set aside, total spend kept>
+  OVERVIEW     <total spend, suppliers, transactions, spend under contract if known>
+  BY CATEGORY  <category> | <spend> | <share> | <suppliers> | <opportunity>
+  TOP SUPPLIERS <supplier> | <spend> | <share> | <running share>
+  TAIL         <how many suppliers make up the last 10% of spend>
+  SAVINGS      <opportunity> | <baseline> | <estimate> | <assumption> | <confidence> | <effort>
+  RISKS        <outside-contract spend, single-source suppliers, price gaps>
+  ACTIONS      <now> <next 3 to 6 months> <later>
+  MISSING      <inputs not given, or none>
+output_sample:
+  input:
+    - An export of supplier payments with supplier, amount and date
+    - The period it covers and your goal
+    - A category column (optional)
+    - A list of approved suppliers or contracts (optional)
+  prerequisites:
+    - An AI that can run Python with pandas, or a short list you can paste into a chat
+  output:
+    - name: Cleaning summary
+      contains: Rows kept, possible duplicates, rows dropped, credits set aside and total spend kept.
+    - name: Spend by category
+      contains: Spend, share, supplier count and opportunity level for each category.
+    - name: Pareto view of suppliers
+      contains: The few suppliers that make up most of your spend, and the size of the long tail.
+    - name: Savings list
+      contains: Each saving with a baseline, an estimate, its assumption, confidence and effort.
+    - name: Risks
+      contains: Single-source suppliers, buying outside contracts and price gaps, where your data allows.
+    - name: Action plan
+      contains: What to do now, in the next few months and later.
+terms:
+  - term: Pareto check
+    meaning: A check of how much of your spend sits with your few biggest suppliers.
+  - term: Tail spend
+    meaning: Many small payments to many small suppliers that add up but get little attention.
+  - term: Off-contract spend
+    meaning: Buying from a supplier or at a price outside the deals you already agreed.
+  - term: Spend cube
+    meaning: Spend viewed by what was bought, who it was bought from and which team bought it.

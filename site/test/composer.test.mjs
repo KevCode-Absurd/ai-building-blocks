@@ -10,25 +10,25 @@ import { WORKFLOW_CASES } from "../../tools/lib/workflow-cases.mjs";
 import { validateCustomSkills, withCustomSkills, replacementImpact, replacementOptions, replaceFlowSkill } from "../src/lib/custom-skills.ts";
 import { GENERAL_CASES } from "../../tools/lib/workflow-general-cases.mjs";
 const c = decodeCatalogue(JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8")));
-test("ten-thousand-character requests and server-owned model selection", async () => {
+test("three-thousand-character new requests and approved model discovery", async () => {
   const policy = fs.readFileSync("public/_headers", "utf8");
   assert.match(policy, /Permissions-Policy: camera=\(\), microphone=\(self\), geolocation=\(\)/);
-  assert.equal(LIMITS.request, 10000);
-  assert.equal(requestError("Build a landing page. ".padEnd(10000, "x")), null);
-  assert.ok(requestError("x".repeat(10001)));
+  assert.equal(LIMITS.request, 3000);
+  assert.equal(requestError("Build a landing page. ".padEnd(3000, "x")), null);
+  assert.ok(requestError("x".repeat(3001)));
   const metadata = await (await handleComposer(new Request("https://example.test/api/compose"), c, env, memoryComposer(), "ip")).json();
-  assert.deepEqual(metadata, { enabled: true });
+  assert.equal(metadata.enabled,true); assert.equal(metadata.defaultModel,"claude-haiku-5-5"); assert.equal(metadata.models.length,3); assert(metadata.models.find(m=>m.id==="claude-haiku-5-5").available);
   let selected;
   const run = async (model, ...args) => { selected = model.id; return runner(model, ...args); };
   const response = await handleComposer(request(), c, { ...env, OPENAI_API_KEY: "test", WORKFLOW_DEFAULT_MODEL: "gpt-6.1-sol" }, memoryComposer(), "ip", run);
   assert.equal(response.status, 200); assert.equal(selected, "gpt-6.1-sol");
-  const longGoal = "Build a landing page. ".padEnd(10000, "क"); let received;
+  const longGoal = "Build a landing page. ".padEnd(3000, "क"); let received;
   const longResponse = await handleComposer(request({ goal: longGoal, context: "क".repeat(4000) }), c, env, memoryComposer(), "ip", async (m, k, prompt, ...args) => { received = JSON.parse(prompt.user); return runner(m, k, prompt, ...args); });
   assert.equal(longResponse.status, 200); assert.equal(received.request, longGoal); assert.equal(received.context.length, 4000);
   assert.equal((await handleComposer(request({ model: "claude-opus-5-5" }), c, env, memoryComposer(), "ip", run)).status, 400);
 });
 test("OpenAI final JSON is extracted without concatenating commentary", async () => {
-  const model = MODELS.find(m => m.id === "gpt-6-luna");
+  const model = MODELS.find(m => m.id === "gpt-6.1-sol");
   const response = { status: "completed", output: [
     { type: "message", role: "assistant", phase: "commentary", content: [{ type: "output_text", text: "{\"draft\":true}" }] },
     { type: "message", role: "assistant", phase: "final_answer", content: [{ type: "output_text", text: "{\"final\":true}" }] },
@@ -124,7 +124,7 @@ test("validation rejects invented blocks, unsupported questions and runaway revi
 });
 const env = { ANTHROPIC_API_KEY: "test-key-not-real", WORKFLOW_COMPOSER_ENABLED: "true", WORKFLOW_DAILY_CAP_USD: "2", WORKFLOW_DEFAULT_MODEL: "claude-haiku-5-5" };
 const body = { goal: "Build a landing page from scratch", context: "", choices: {} };
-const request = (patch = {}, id = crypto.randomUUID(), headers = {}) => new Request("https://example.test/api/compose", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": id, ...headers }, body: JSON.stringify({ ...body, ...patch }) });
+const request = (patch = {}, id = crypto.randomUUID(), headers = {}) => new Request("https://example.test/api/compose", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": id, ...headers }, body: JSON.stringify({ ...body, assignMinds: false, ...patch }) });
 const runner = async (_m, _k, _prompt, schema) => ({ text: JSON.stringify(schema?.properties?.intents ? { intents: [{ query: body.goal, kind: "create" }] } : freeSelection(c, body.goal)), usage: { input: 100, output: 500, cached: 0, cacheWrite: 0 }, cost: .00026, latencyMs: 10, finish: "completed", actualModel: "claude-haiku-5-5" });
 test("API rejects greetings, foreign origins, oversized inputs and unsupported models before spending", async () => {
   let calls = 0; const run = async (...args) => { calls++; return runner(...args); };
@@ -163,7 +163,7 @@ test("all provider adapters use server credentials, return billed usage and reje
   for (const provider of ["openai", "anthropic", "gemini", "deepseek"]) {
     const model = MODELS.find(m => m.provider === provider);
     const outputs = {
-      openai: { model: model.id, status: "completed", output: [{ content: [{ type: "output_text", text: "{}" }] }], usage: { input_tokens: 200, output_tokens: 50, input_tokens_details: { cached_tokens: 20 } } },
+      openai: { model: model.id, choices: [{ message: { content: "{}" }, finish_reason: "stop" }], usage: { prompt_tokens: 200, completion_tokens: 50, prompt_tokens_details: { cached_tokens: 20 } } },
       anthropic: { model: model.id, stop_reason: "end_turn", content: [{ type: "text", text: "{}" }], usage: { input_tokens: 180, output_tokens: 50, cache_read_input_tokens: 20 } },
       gemini: { candidates: [{ finishReason: "STOP", content: { parts: [{ text: "{}" }] } }], usageMetadata: { promptTokenCount: 200, candidatesTokenCount: 40, thoughtsTokenCount: 10, cachedContentTokenCount: 20 } },
       deepseek: { choices: [{ finish_reason: "stop", message: { content: "{}" } }], usage: { prompt_tokens: 200, prompt_cache_hit_tokens: 20, completion_tokens: 50 } },

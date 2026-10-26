@@ -2,17 +2,103 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-go-mcp-server-generator
 name: Go MCP server starter builder
-summary: Describe your tools and data. Get a Go MCP server project with working
-  structure and tests.
+summary: Build a Go MCP server project from a plain description of your tools, with a working layout, config, README and tests, ready to connect to your AI.
 job: connect-tools
 headline: Go MCP server starter builder
-subhead: Describe your tools and data. Get a Go MCP server project with working
-  structure and tests. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: "Describe the tools you want your AI to call, and the data behind them. You get a Go MCP server project with a clear folder layout, typed tools, a README and a first test. You need Go installed and an AI that can write files."
+explain: |
+  An MCP server is a small program that lets an AI use your tools or data, such as a customer list or an order lookup. This Go MCP server builder writes the starting project for you, using the official Go SDK from the Model Context Protocol team.
+
+  It follows one fixed layout: a main file, a tools folder with one file per tool, a config file read from environment settings, a README and a test. Each tool has typed inputs and outputs, so the AI knows what to send and what comes back.
+
+  It handles safe shutdown, checks inputs, and wraps errors. It does not write your business logic for you. You tell it what each tool should do, and it makes a working shell that you then fill in and test.
+when:
+  - You want your AI to look up data that lives in your own system, and you work in Go.
+  - A teammate says "can the AI call our orders service?" and you need a first version to show.
+  - You want a clean Go layout for an MCP server before you add real tools.
+  - You are comparing Go with Python or TypeScript for an MCP server and want a starter in each.
+not_for:
+  - "You write Python or TypeScript: use the Python MCP server starter builder or the TypeScript MCP server starter builder."
+  - "You want to change a server that already exists: use the MCP tool set designer to plan the tools, then edit the code yourself."
+  - "You only want to wrap an existing web API: use the API to MCP server builder."
+  - "You have no one who can run Go code: ask a developer to run it, as the result must be built and tested."
+you_give:
+  - A short name for the project, such as orders-server
+  - What each tool should do, with its inputs and what it returns
+  - Where the data comes from, such as a file, a database or an API
+  - Your Go module path, such as github.com/yourname/orders-server (optional)
+  - Your Go version (optional)
+you_get:
+  - A go.mod file and a main.go that starts the server
+  - One file per tool in a tools folder, with typed inputs and outputs
+  - A config file that reads settings from environment variables
+  - A README with install, run and tool descriptions
+  - A main_test.go with a first test for each tool
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Install Go on your computer. Use an AI that can create files and run commands, such as Claude Code or Codex.
+  - "Write down the tools you want in plain words. For each one give a name, what it needs and what it returns. Two or three tools is a good start."
+  - Paste the skill and your tool list. Say the project name, and your module path if you have one.
+  - Run go mod tidy and then go test ./... in the new folder. Ask your AI to fix any error it shows.
+  - Add the server to your AI app's MCP settings, and try each tool with a real question.
+  - Replace the sample logic in each tool with your own, and keep the tests passing.
+how_it_works:
+  - title: Gather the facts
+    text: It asks for the name, the tools, the data source and the module path, and does not guess them.
+  - title: Lay out the project
+    text: It creates the folder tree, go.mod, config and README from the template.
+  - title: Write the tools
+    text: It makes one file per tool with typed input and output structs and a register function.
+  - title: Wire the server
+    text: It sets up main.go with the SDK, stdio transport and clean shutdown.
+  - title: Test and check
+    text: It adds a test for each tool, then runs go mod tidy and go test and fixes what fails.
+output_shape: |
+  <project-name>/
+    go.mod
+    main.go
+    tools/<tool-name>.go  (one per tool), tools/registry.go
+    config/config.go
+    README.md
+    main_test.go
+
+  Then a short note: what each tool does, the commands to run,
+  anything you must fill in, and what was not tested.
+output_sample:
+  input:
+    - A project name and, if you have one, your Go module path
+    - A plain description of each tool, with what goes in and what comes out
+    - Where the data comes from, such as a file, database or API
+  prerequisites:
+    - Go installed on your computer
+    - An AI that can create files and run commands
+  output:
+    - name: go.mod and go.sum
+      contains: Your module path, Go version and the official MCP Go SDK as a dependency.
+    - name: main.go
+      contains: Starts the server over stdio and shuts it down cleanly on exit signals.
+    - name: tools folder
+      contains: One file per tool with typed inputs and outputs, plus a registry that adds them to the server.
+    - name: config/config.go
+      contains: Server name, version and log level, read from environment variables with defaults.
+    - name: README.md
+      contains: How to install, run and configure the server, and what each tool takes and returns.
+    - name: main_test.go
+      contains: A first test for each tool, so you can run go test straight away.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can create the files, run go mod tidy and go test, and fix errors in one pass.
+    - name: Chat AI without file access
+      why: It can write each file for you to copy into a folder, but you run the commands yourself.
+  inputs:
+    - A sample of the data a tool will read, with private details removed.
+    - The list of questions you want your AI to answer with these tools.
+terms:
+  - term: MCP server
+    meaning: A small program that lets an AI use your tools or data in a set way.
+  - term: Tool
+    meaning: One action the AI can ask the server to do, such as look up an order.
+  - term: Stdio transport
+    meaning: The server talks to your AI app through plain text in and out of the program.
+  - term: Go module
+    meaning: A Go project with its own name and list of packages it uses.

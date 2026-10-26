@@ -1,53 +1,89 @@
 new_slug: reconcile-restricted-utility-program-cash
 name: Reconcile restricted utility program cash
 headline: Reconcile restricted utility program cash
-summary: A utility collections, restricted fund and usable cash reconciliation
+summary: Reconcile a water utility's collections, restricted grant cash and usable cash, so you know how much of the program's bank balance you can spend.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A utility collections, restricted fund and usable cash reconciliation. Share utility billing/collection records, program bank cash, actual grant restrictions, approved eligible program payments, restricted/unrestricted receipts and source allocation rules.
+subhead: Give it the utility's billing and collection records, the program bank balance, the grant restrictions and the approved eligible payments. It works out what customers actually paid, splits restricted from free cash, then shows how much you can reach. You get the three schedules and a usable cash figure.
 explain: |-
-  A utility collections, restricted fund and usable cash reconciliation.
+  A utility program often runs on two streams of money. Customers pay their water bills, and a grant pays for approved work. Both land in one bank account. Billed is not collected, grant money has rules, and a pending debit can block cash you thought was free. So the bank balance is not the spendable balance.
 
-  Utility program funding controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow keeps the streams apart. Step 1 reconciles billings, receipts and receivables, and passes on only cash actually collected. Step 2 rolls restricted cash and total bank cash separately, using only the restriction rules you supply. Step 3 takes off any extra collateral or pending debits to reach cash you can use, and ties it back to the prior fund bridge.
+
+  It never calls customer payments grant revenue, and it does not decide whether a spend is eligible. That needs your grant terms and a person who knows them.
 when:
-  - You need a utility collections, restricted fund and usable cash reconciliation.
-  - You work on utility program funding controls and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - The program bank balance looks healthy and you need to know how much of it is really free.
+  - A grant report asks you to show restricted and unrestricted cash separately.
+  - Billings are up but collections are slow, and you need the cash view, not the billing view.
+  - A pending debit or collateral hold may block part of the balance.
+not_for:
+  - You only need the water billing and collections view. Use the Water utility collections reconciler on its own.
+  - You only need to split restricted from free cash. Use the Grant restrictions cash reconciler on its own.
+  - You need to prove grant spending followed the agreement. Use the Prepare a grant spending evidence pack workflow.
+  - You need a dated cash ladder of future payments. Use the Reconcile treasury settlement liquidity workflow.
 you_give:
-  - Utility billing/collection records, program bank cash, actual grant restrictions, approved eligible program payments, restricted/unrestricted receipts and source allocation rules.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Utility billing and collection records for the period, with receivables (from the billing system)
+  - The program bank cash balance (from the bank statement)
+  - The grant restrictions and approved eligible program payments (from the grant agreement and approvals)
+  - Which receipts are restricted and which are not, with the allocation rules (from the grant terms)
+  - The period dates, currency and scale
 you_get:
-  - A utility collections, restricted fund and usable cash reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A billing and collections reconciliation, with closing receivables kept outside cash
+  - Restricted cash and total bank cash, rolled forward separately
+  - Usable cash after collateral and pending debits
+  - A tie of general cash to the prior fund bridge
+  - Every MISSING input and any check that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can build spreadsheets.
+  - Attach the billing records, bank statement and grant terms. Paste the restriction and allocation rules. Say the period, currency and scale once.
+  - After step 1, check billed, collected and receivable amounts. Only collected cash should move on.
+  - After step 2, check restricted and total bank cash both close to the bank statement.
+  - After step 3, check the usable cash figure against any holds. Fill every MISSING line before anyone spends against it.
 how_it_works:
   - title: Water utility collections reconciler
-    text: Reconcile consumer water billings, current/arrears receipts and receivables on the actual period. Pass only actual collected cash to the program bank map and preserve billing balances outside cash.
+    text: Reconciles water billings, current and arrears receipts and receivables for the period. Passes only collected cash to the bank map, and keeps billing balances outside cash. Check before moving on, billed less collected equals closing receivables.
   - title: Grant restrictions cash reconciler
-    text: Map the award-funded program with consumer collections classified only by the supplied restriction rules. Roll restricted and total bank cash separately; do not describe consumer receipts as grant revenue or assume award spending eligibility.
+    text: Maps the grant-funded program. Classes customer receipts only by the restriction rules you supply. Rolls restricted and total bank cash separately, and never calls customer payments grant revenue. Check before moving on, restricted cash is not above the bank balance.
   - title: Restricted cash availability checker
-    text: Use the reconciled bank and restriction balances to calculate accessible cash after any additional nonoverlapping collateral or pending debit blocks. Tie final general cash to the prior fund bridge before concluding available funding.
+    text: Uses the reconciled bank and restriction balances. Takes off any extra collateral or pending debits that do not overlap. Ties final general cash to the prior fund bridge before saying what is available. Check before you rely on it, no cash is counted twice.
 output_shape: |-
-  A utility collections, restricted fund and usable cash reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  PERIOD <dates>, <currency>, <scale>
+
+  1 UTILITY COLLECTIONS  billed <n>, collected <n> (current <n>, arrears <n>)
+                         closing receivables <n>
+  2 BANK CASH            restricted <n>, general <n>, total <n>
+  3 USABLE CASH          general cash <n> - collateral <n> - pending debits <n> = <n>
+  TIE                    general cash vs prior fund bridge, difference <n>
+
+  SOURCES                <each input, its source, date and unit>
+  MISSING                <each gap and the line it stops>
+  CHECKS MISSED          <one line each, or none>
+output_sample:
+  input:
+    - Utility billing and collection records
+    - The program bank balance and bank statement
+    - Grant restrictions and allocation rules
+    - Approved eligible program payments
+  prerequisites:
+    - An AI that can read files
+    - Last period's fund bridge, to tie to
+  output:
+    - name: outputs/step-1-water-utility-collections-reconciler.md
+      contains: Billed, collected and closing receivables, with only collected cash passed on.
+    - name: outputs/step-2-grant-restrictions-cash-reconciler.md
+      contains: Restricted and total bank cash, each rolled forward on its own.
+    - name: outputs/step-3-restricted-cash-availability-checker.md
+      contains: Usable cash after collateral and pending debits, tied to the prior bridge.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Consumer receipts and grant receipts remain separate source streams; restricted releases require evidence and general cash is not double-counted.
+  - what: Slower collections
+    how: Lower the collected amount. Receivables rise, the cash passed on falls, and usable cash drops with it.
+  - what: A new debit hold
+    how: Add a pending debit. Usable cash falls by that amount and the restricted and general split does not change.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and lists what it could not verify.
 judge:
   - Consumer receipts and grant receipts remain separate source streams; restricted releases require evidence and general cash is not double-counted.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +94,25 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep one sheet with the grant's restriction and allocation rules, and paste it in every time.
+  - Record each restricted release with its evidence and date so the next run starts from the true balance.
+  - Save last period's fund bridge so the final tie has something to match.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The grant agreement wording on restricted use.
+    - The bank statement for the same dates.
+    - Last period's fund bridge.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Receivable
+    meaning: Money customers owe you but have not yet paid.
+  - term: Arrears
+    meaning: Late payments for earlier bills.
+  - term: Restricted cash
+    meaning: Money you may spend only on what the grant allows.
+  - term: Collateral hold
+    meaning: Cash set aside as security that you cannot use.
+  - term: Fund bridge
+    meaning: A schedule that moves a fund's cash from one period's balance to the next.

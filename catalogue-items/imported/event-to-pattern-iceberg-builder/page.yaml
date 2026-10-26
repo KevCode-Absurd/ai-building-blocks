@@ -35,3 +35,29 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - You only want the hidden beliefs behind a problem. Use the Hidden belief mapper.
+  - Something broke at work and you want the cause fast. Use the Problem root cause tracer or the Five whys session planner.
+  - You want an action plan. This gives a map of possible causes, not a response plan.
+output_sample:
+  input:
+    - One visible event or repeated issue you can actually observe
+    - The setting and why it matters, such as a class, school or team
+    - The people or groups involved (optional)
+    - Notes, data or stories you already have (optional)
+    - Age or year group, if you teach (optional)
+  output:
+    - name: Event
+      contains: The visible event in exact, observable words.
+    - name: Patterns and Behaviours
+      contains: What keeps happening over time, and what makes it stronger or weaker.
+    - name: Structures
+      contains: Routines, space, rules, incentives, roles, information flow, history and power that make the pattern likely.
+    - name: Mental Models
+      contains: Possible beliefs, who may hold them, how they shape the system and what evidence would test them.
+    - name: Evidence We Still Need
+      contains: Questions to answer before you act strongly.
+    - name: Possible Places to Act
+      contains: Three to five ideas, worded as small experiments or questions.
+    - name: Facilitation Cautions
+      contains: How to avoid blame, stereotyping and unsafe sharing in the room.

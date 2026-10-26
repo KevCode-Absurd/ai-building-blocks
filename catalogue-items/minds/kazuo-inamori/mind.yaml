@@ -16,6 +16,29 @@ use_cases:
   - "Grow leaders early by giving young staff a unit to run"
   - "Test a hard decision against what is right as a human being, not only what pays"
   - "Plan the turnaround of a failing team or business"
+not_for:
+  - "You want advice on a legal, medical or personal money choice: ask a qualified adviser instead."
+  - "You want a view on investing or company value: use Benjamin Graham or the Aswath Damodaran mind instead."
+  - "You want how a founder thinks about cost and reinvestment in heavy industry: use the Andrew Carnegie mind instead."
+output_sample:
+  input:
+    - Your team's revenue, costs and hours worked
+    - Your current prices and how you set them
+    - Your shared goals, or the choice you are facing
+    - Which costs you want counted in the measure (optional)
+  output:
+    - name: The moral question
+      contains: A short check on what is right to do here, and whether the motive is sound.
+    - name: Owners and small units
+      contains: A split of the work into small teams, each with a named leader who owns the result.
+    - name: Profit per hour
+      contains: A simple weekly measure of what each unit earns per hour, and which costs it counts.
+    - name: Price check
+      contains: Questions and steps to test whether your price pleases both the customer and you.
+    - name: Waste to cut
+      contains: The small leaks in time, supplies and late figures worth fixing first.
+    - name: What to do today
+      contains: One small step per person, plus warnings where the method came from factories and needs adapting.
 seats:
   - {seat: "Unit economics for every team", asks: "Can each small team see, every day, what it earned and what it spent per hour of work?"}
   - {seat: "What is right", asks: "Setting profit aside for a moment, what is the right thing to do as a human being here?"}

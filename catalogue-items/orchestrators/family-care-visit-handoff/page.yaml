@@ -1,0 +1,115 @@
+name: Family care visit and handoff
+headline: Family care visit and handoff
+summary: Prepare questions for a relative's care visit, record what the care team said and draft a short family handoff. You review it; nothing is sent.
+subhead: Give it the visit goal and a short care summary. It writes the questions to ask before the visit, records what the care team said in their own words after it, and drafts a short note for each family member who needs one.
+job: organise-work
+thinking: high
+thinking_why: The task compares evidence and alternatives. Its output still needs the stated checks.
+explain: |-
+  When you help care for an older relative, the details get lost between the visit and the family. Questions are forgotten in the room. Instructions are remembered a little differently by each person. This workflow helps you prepare questions for a care visit and share what was said afterwards.
+
+  It works in four stages. It first makes a short card of facts, with who reported each one. Then it turns your worries into questions for the care team. After the visit, you give it your notes and it records what was said, with who said it and when. Last it drafts a short note for each person who needs to know, with only the details that person needs.
+
+  It is not medical advice. It does not diagnose, check doses or judge how urgent a symptom is. Anything unclear is sent back to the care team. For anything urgent, call the care team or emergency services.
+
+  This workflow uses selected methods from the Aging Parent Care Companion. It is a focused adaptation. The original agent remains available: [Aging Parent Care Companion agent](https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion).
+when:
+  - You have a doctor or care visit coming up for a parent or relative and want your questions ready.
+  - You went to the visit and need to write down what was said before it blurs.
+  - Several family members need an update, but each should only see what they need.
+  - Notes from past visits disagree and you want the open questions in one list.
+not_for:
+  - You need medical advice, a dose or a medicine check. Ask the care team or a pharmacist.
+  - Your relative has urgent symptoms. Call the care team or emergency services now.
+  - You want a full care plan with medicines and appointments tracked over time. Use the Aging Parent Care Companion agent.
+you_give:
+  - The purpose and date of the visit, and what you want from it
+  - A short summary of the facts that matter, using first names or initials
+  - Changes you have seen and instructions the care team gave before, with who said them
+  - Who needs a handoff and how much each may know
+  - Your notes from the visit, once it has happened (optional until then)
+you_get:
+  - A short card of facts, with who reported each one and what is still unconfirmed
+  - A dated list of questions for the care team, grouped by priority
+  - Visit notes that keep the care team's words apart from your own summary
+  - A handoff draft for each person, with owners and open follow-ups
+  - A list of unclear points to take back to the care team
+how_to_use:
+  - Before you paste anything, use first names or initials, share only what the plan needs and check your AI tool's data handling. Health details are private.
+  - Download the workflow and give all its files to Claude, ChatGPT or Gemini. Say "Read SKILL.md and workflow-state.json, then start with the first stage."
+  - Share the visit purpose, date and a short care summary. Check the fact card it writes before moving on.
+  - Take the question list to the visit. Come back with your notes and the AI will record them in the care team's own words.
+  - Read each handoff draft, cut anything the person does not need, then send it yourself. Nothing is sent for you.
+how_it_works:
+  - title: Reconcile the supplied care card
+    text: Makes a short card of facts, with who reported each one. Unknowns and conflicts stay marked. It hands the card to the question step.
+  - title: Prepare the visit questions
+    text: Turns your worries into questions for the care team, grouped by priority. It keeps your original doubts. It hands the agenda to the notes step.
+  - title: Record the reported visit outcome
+    text: Records what was said, with who said it and when. It stops until you bring real notes and never invents an answer from the care team.
+  - title: Draft the minimum necessary handoff
+    text: Writes one note per person with only what they need, owners for each open item and a list of what is still unclear.
+output_shape: >-
+  1. Reconcile the supplied care card
+     Handoff: Short factual card, changes list and unresolved questions.
+     Gate: Facts without a source remain unconfirmed. Clinical interpretation stays with the care team.
+
+  2. Prepare the visit questions
+     Handoff: Pre-visit agenda and questions, with original uncertainties retained.
+     Gate: This stage can finish before the visit; later outcome capture waits for actual reported notes.
+
+  3. Record the reported visit outcome
+     Handoff: Attributed reported-outcome notes and clarification questions.
+     Gate: Unclear instructions stay unresolved for the care team. No dose, refill date, diagnosis or urgency level is inferred.
+
+  4. Draft the minimum necessary handoff
+     Handoff: Recipient-specific handoff draft and open-items register.
+     Gate: Nothing is represented as sent, scheduled or remembered across sessions unless actually performed with authorization.
+output_sample:
+  input:
+    - The purpose and date of the visit
+    - A short summary of the facts that matter, using first names or initials
+    - Changes you have seen and what the care team told you before
+    - Who needs a handoff and how much each may know
+    - Your notes from the visit, once it has happened (optional until then)
+  prerequisites:
+    - An AI tool whose data handling you have checked, since care notes are health information
+  output:
+    - name: Care card
+      contains: A short list of facts with who reported each, the changes you have seen and what is still unconfirmed.
+    - name: Visit questions
+      contains: Questions for the care team, grouped by priority, with your original doubts kept.
+    - name: Visit notes
+      contains: What the care team said in their own words, with who said it and when, apart from your summary.
+    - name: Handoff drafts
+      contains: One short note per person with only the facts they need, plus an owner for each follow-up.
+    - name: Open-items register
+      contains: Every unclear instruction or question still to take back to the care team.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can follow the four stages. Pick one whose data handling you have read, since you share health details.
+  inputs:
+    - A list of the people who need updates and what each may know.
+tweaks:
+  - what: Task scope
+    how: State the intended result, available evidence and actual tools before starting.
+  - what: Sharing limits
+    how: Say what each person may know. A paid carer, a sibling and a neighbour need different notes.
+judge:
+  - Every clinical instruction is attributed or unresolved.
+  - No diagnosis, missed-dose advice, interaction check or symptom triage is produced.
+  - A future visit has no invented outcome notes.
+  - Sharing drafts respect recipient-specific limits.
+  - Local notes, messages and reminders are described according to what actually happened.
+test:
+  - Try a small supplied case whose facts and result you can check.
+  - Omit one required fact and check that the affected work stays unresolved.
+improve:
+  - Keep useful corrections with the task evidence for the next run.
+next:
+  - agency-healthcare-aging-parent-care-companion
+  - executive-action-register
+terms:
+  - term: Handoff
+    meaning: A short note that passes on what a person needs to know and what they need to do.

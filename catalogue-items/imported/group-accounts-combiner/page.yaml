@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows consolidation rules step by step.
 new_slug: group-accounts-combiner
 name: Group accounts combiner
-summary: Give it each company's accounts. Get one set of group statements with
-  the cancelled internal items shown.
+summary: Combine a parent and its subsidiaries into one set of group accounts. Intercompany items are removed and shown, with minority share worked out.
 job: money-and-investing
 headline: Group accounts combiner
-subhead: One set of group accounts that treats a parent and its subsidiaries as
-  a single business. Give it each company's accounts and it combines them, with
-  the cancelled internal items shown so you can see what was removed.
+subhead: One set of group accounts that treats a parent and its subsidiaries as a single business. Give it each company's accounts and it combines them, with the cancelled internal items shown so you can see what was removed.
 explain: |
   One set of group accounts that treats a parent and its subsidiaries as a single business. Give it each company's accounts and it combines them, with the cancelled internal items shown so you can see what was removed.
 
@@ -18,6 +15,10 @@ when:
   - Subsidiaries trade with each other and inflate group revenue.
   - Some subsidiaries report in a different currency.
   - You have part-owners and must show their share.
+not_for:
+  - "You only have one company's accounts: use a plain financial statement prep step, or ask your bookkeeper."
+  - "You need statutory filings or audited accounts: ask a qualified accountant to review and sign them."
+  - "You want to audit the elimination entries: ask your auditor, since this gives drafts and does not check them."
 you_give:
   - Accounts for each entity
   - Ownership percentages
@@ -29,7 +30,23 @@ you_get:
   - Currency translation workings
   - Minority interest calculation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste each company's accounts, and say who owns what and by what percentage.
+  - Add the list of trades between the companies, and exchange rates if any company uses another currency.
+  - Ask your AI to combine the accounts.
+  - Check the Intercompany Log against your own records. The result is a draft, so have a qualified accountant review it before you use it.
+output_sample:
+  input:
+    - Accounts for the parent and each subsidiary
+    - Ownership percentage for each company
+    - A list of trades between the companies
+    - Exchange rates for any foreign subsidiary (optional)
+  prerequisites:
+    - An AI that can run code, if you want it to use the built-in calculation script (optional)
+  output:
+    - name: Consolidation Worksheet
+      contains: One column each for the parent, every subsidiary and the eliminations, ending in a consolidated total.
+    - name: Consolidated Statements
+      contains: The profit and loss, balance sheet and cash flow for the whole group.
+    - name: Intercompany Log
+      contains: A list of each internal item that was removed, so a reviewer can check it.

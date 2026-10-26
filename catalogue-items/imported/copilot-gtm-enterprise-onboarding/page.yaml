@@ -2,18 +2,54 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-enterprise-onboarding
 name: Enterprise customer onboarding planner
-summary: Share a signed customer and success goals. Get onboarding stages,
-  owners and checks for reaching first value.
+summary: Plan your enterprise customer onboarding from signed contract to first value. Get stages, owners and checks that stop Week 4 ghosting and Week 12 drop-off.
 job: plan-strategy
 headline: Enterprise customer onboarding planner
-subhead: Share a signed customer and success goals. Get onboarding stages,
-  owners and checks for reaching first value. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: "Give your AI the signed customer and their success goals. It builds an onboarding plan with stages, owners and checks. It also flags the two points where enterprise customers often drift away: Week 4 and Week 12."
+not_for:
+  - "Your customer is self-serve or has a single seat: use a simple welcome email and a short setup guide, not a full plan."
+  - "You want to grow through free trials and product-led sign-ups: use the product-led-growth skill listed in this skill's Related Skills."
+  - "You have not signed the deal yet: use your sales process and a person on your team to qualify the buyer first."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste the full text of the skill into a new chat.
+  - Add your contract summary, the customer's goals, the people involved and your go-live date.
+  - Say which inputs you do not have, so your AI marks them as missing instead of guessing.
+  - Read the owner check first. If a role has no named person, fix that before the kickoff call.
+  - Share the plan with your team and review it at each phase. No code or paid tool is needed.
+output_sample:
+  input:
+    - Your signed contract or a summary of what was sold
+    - The customer's success goals
+    - Named stakeholders on the customer side
+    - Your go-live target date
+    - Integrations and single sign-on needs (optional)
+  output:
+    - name: Internal owner check
+      contains: Who on the customer side will attend, unblock, drive adoption and escalate, so the project has a real owner.
+    - name: Pre-onboarding checklist
+      contains: What to confirm between sales and customer success before the first customer call.
+    - name: Four-phase onboarding flow
+      contains: The stages from contract to value, with owners and checks for each stage.
+    - name: Parallel tracks review
+      contains: A check that technical, business and adoption work run in step and do not block each other.
+    - name: Risk checks
+      contains: Questions that show if onboarding is at risk and if adoption is holding after go-live.
+    - name: Common mistakes and quick reference
+      contains: A short list of traps to avoid and a one-page summary to keep nearby.
+when:
+  - A big customer has just signed and you need a plan for the first 90 days.
+  - A customer went live but few people use the product.
+  - A customer stopped answering your calls a few weeks into setup.
+  - A trial is moving into full use and you need a clear handover.
+you_give:
+  - Your signed contract or a summary of what was sold
+  - The customer's success goals
+  - The names and roles of people on the customer side
+  - Your go-live target date
+  - Integrations and single sign-on needs (optional)
+you_get:
+  - A check of who really owns the project on the customer side
+  - A pre-kickoff checklist for sales and customer success
+  - A four-phase onboarding plan with owners and checks
+  - Warning signs that onboarding is at risk
+  - Checks for whether use is holding after go-live

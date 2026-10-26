@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: codebase-learning-map
 name: Codebase learning map
-summary: Share a code folder. Get an ordered learning map, key prerequisites and
-  paths that fit your goal.
+summary: Turn a code folder into a study map. Get ordered phases, what to know first and 2 or 3 paths that fit your goal and level.
 job: study-and-practice
 headline: Codebase learning map
-subhead: Give it a code folder, its main guide and your learning goal. It maps
-  the lessons and features, checks what you need to know first and suggests
-  routes. You get an ordered study map and a choice of starting paths.
-explain: Give it a code folder, its main guide and your learning goal. It maps
-  the lessons and features, checks what you need to know first and suggests
-  routes. You get an ordered study map and a choice of starting paths.
+subhead: Give it a code folder, its main guide and your learning goal. It maps the lessons and features, checks what you need to know first and suggests routes. You get an ordered study map and a choice of starting paths.
+not_for:
+  - You want one task done in a codebase, like fixing a bug. Ask your AI for that task directly.
+  - You want to learn a topic with no code folder. Ask your AI for a study plan on that topic instead.
+  - You already know the order and want a lesson on one idea. Ask your AI to teach that idea.
+explain: Give it a code folder, its main guide and your learning goal. It maps the lessons and features, checks what you need to know first and suggests routes. You get an ordered study map and a choice of starting paths.
 you_give:
   - A repository and its main guide or course outline.
   - Your goal and current level.
@@ -27,9 +26,30 @@ how_it_works:
   - title: Step 3
     text: Offer different learning paths and ask you to choose.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini. Pick one that can read files or a pasted folder.
+  - Paste this skill into the chat.
+  - Add your code folder or its file list, plus the README or course outline.
+  - Say what you want to learn and your level.
+  - Read the phase table and the paths. Answer the checkpoint question to pick a path.
+  - Ask your AI to start teaching only after you have chosen.
+output_sample:
+  input:
+    - Your code folder or its file list
+    - The main guide, such as the README or course outline
+    - Your goal for learning it
+    - Your current level (optional)
+  prerequisites:
+    - An AI that can read your folder or the files you paste in
+  output:
+    - name: Repo type
+      contains: Whether the folder is built around lessons, a project, reference material or a mix.
+    - name: Your goal and level
+      contains: What you want from the folder and where you start, as your AI understood it.
+    - name: Phase table
+      contains: The phases in order, with what you can do after each one.
+    - name: Prerequisite list
+      contains: What you need to know first for each phase, and where learners often get stuck.
+    - name: Study paths
+      contains: Two or three routes that fit your goal, with the tradeoffs and effort of each.
+    - name: Checkpoint question
+      contains: One question that helps you pick a path before any teaching starts.

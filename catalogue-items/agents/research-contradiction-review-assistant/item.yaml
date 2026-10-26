@@ -1,29 +1,29 @@
 slug: research-contradiction-review-assistant
 name: Research contradiction review assistant
-summary: A paper comparison, disagreement map and evidence gaps.
+summary: "Compare research papers that disagree. Give it two or more full papers. Get a side-by-side table, a disagreement map and the evidence gaps that matter."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
+    required: true
+  - type: brief
     required: false
   - type: copy_draft
     required: false
 outputs:
-  - type: document
   - type: audit_report
+  - type: document
 uses:
-  - compare-conflicting-research-findings
   - source-note-summariser
+  - compare-conflicting-research-findings
 steps:
-  - uses: compare-conflicting-research-findings
-    note: "Run when: A supplied paper is added or corrected, or the user requests a comparison review."
   - uses: source-note-summariser
-    note: Run compare-conflicting-research-findings for changed evidence or a due review. If a paper changes, extract the changed sections before updating only the affected comparisons. If the paper is missing, return a source request.
+    note: "Only when a paper is new or corrected: pulls out the changed sections, so only the comparisons they touch are updated. A missing paper gets a source request. It hands over a note of the changed sections."
+  - uses: compare-conflicting-research-findings
+    note: "Runs when a paper is added or corrected, or you ask for a review. It uses your full papers, plus the changed-section note from step 1 when there is one. It hands over the comparison table, the disagreement map and the evidence gaps."
 schedule: On request or when the user supplies a changed paper. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

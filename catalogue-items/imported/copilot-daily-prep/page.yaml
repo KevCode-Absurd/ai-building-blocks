@@ -2,17 +2,58 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-daily-prep
 name: Outlook day preparation helper
-summary: Connect your work calendar and task context. Get meeting preparation,
-  conflicts and a plan for tomorrow.
+summary: Prepare for tomorrow's Outlook meetings. Get prep notes per meeting, clashes flagged and a plan for focus time, as one HTML file.
 job: organise-work
 headline: Outlook day preparation helper
-subhead: Connect your work calendar and task context. Get meeting preparation,
-  conflicts and a plan for tomorrow. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give it your Outlook calendar and your open tasks. It labels each meeting, flags clashes and writes prep notes. It also finds time for learning and focused work. This needs a Microsoft 365 Copilot licence and the WorkIQ tool. Without them, paste your calendar into a chat instead.
+not_for:
+  - "You don't use Outlook or Microsoft 365: paste your meeting list into your AI and ask for prep notes by hand."
+  - "You can't use the WorkIQ tool: copy tomorrow's calendar into a chat and ask your AI to sort it."
+  - "You want notes from a meeting that already happened: use your AI's meeting summary feature or write a short recap yourself."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Check you have a Microsoft 365 Copilot licence and the WorkIQ tool connected to your AI. The skill cannot read your calendar without it.
+  - Use an AI that can read your files and write a file, and point it at your task and project folders.
+  - Add the skill to your AI, then say "Prepare me for tomorrow" or name a day.
+  - Read the clashes and decline list first. Change the zone times if your day runs differently.
+  - Open the HTML file from your outputs folder. If one already exists for that day, the AI updates it and keeps your notes.
+output_sample:
+  input:
+    - The day you want to prepare for (optional, it defaults to tomorrow)
+    - Access to your Outlook calendar through the WorkIQ tool
+    - Your open task files and project or customer folders
+  prerequisites:
+    - A Microsoft 365 account with the WorkIQ tool connected to your AI
+    - An AI that can read your files and write a file
+  output:
+    - name: Meeting prep
+      contains: Each meeting in time order, with organizer, attendees, a label and three to five prep bullets.
+    - name: Conflicts
+      contains: A table of meetings that overlap, with a suggestion for each one.
+    - name: Day Fit Issues
+      contains: A table of meetings that break your ideal day, such as too many customer calls or lunch clashes.
+    - name: Learning Slots
+      contains: Free gaps for learning, with the time, length and a suggested activity, against the daily target.
+    - name: Deep Work Blocks
+      contains: Free gaps in the afternoon focus zone, each with a task picked from your open tasks.
+    - name: Productivity recommendations
+      contains: A Day Fit Score, day shape, decline candidates, energy warnings and your top 3 priorities.
+    - name: YYYY-MM-DD-prep.html
+      contains: One self-contained web page with all of the above, saved in your outputs folder.
+when:
+  - The end of your day, when you want to be ready for tomorrow.
+  - You need to know what Friday looks like before you commit to more.
+  - You want to plan a week by running it one day at a time.
+  - Your day feels packed and you want to know which meetings to decline.
+you_give:
+  - The day to prepare for (optional, it defaults to tomorrow)
+  - Access to your Outlook calendar through the WorkIQ tool
+  - Your open task files
+  - Your project or customer folders (optional)
+  - Your own times for learning, lunch and focus (optional)
+you_get:
+  - A prep list for each meeting, with three to five bullets.
+  - Each meeting labelled as customer, internal, community, upskilling, optional or personal.
+  - A list of clashes and meetings that break your ideal day.
+  - Free slots for learning and focused work.
+  - A Day Fit Score, a list of meetings to decline and your top 3 priorities.
+  - One HTML file you can open in any browser.

@@ -16,6 +16,25 @@ use_cases:
   - "Deal with a stronger rival by yielding and finding the gaps, the way water does"
   - "Check whether your pride or your need for credit is getting in the way"
   - "Finish a project with the same care you gave its start"
+not_for:
+  - "You need deadlines, numbers or a step-by-step plan: use a planning tool or a person who plans projects, since this mind gives none."
+  - "You face a legal, medical or money decision: ask a qualified adviser, because this mind will send you to one."
+  - "You want direct action and quick adapting to real conditions in a fight: use the Bruce Lee mind instead."
+output_sample:
+  input:
+    - The situation you are stuck in, in a few sentences
+    - What you have already tried
+    - Who is affected, such as your team or a rival
+    - What you want to happen (optional)
+  output:
+    - name: A picture
+      contains: One short image from water, wood or the home that frames your problem.
+    - name: One line of advice
+      contains: A plain line on what to stop doing, leave alone or do first.
+    - name: Questions for you
+      contains: A few questions, such as what you are forcing and whether the problem is still small.
+    - name: What to take away
+      contains: The rules, steps or effort he would cut before you add anything new.
 seats:
   - {seat: "Doing less", asks: "What happens if we stop pushing and do less here?"}
   - {seat: "Leading from behind", asks: "When this is done, will people say they did it themselves?"}

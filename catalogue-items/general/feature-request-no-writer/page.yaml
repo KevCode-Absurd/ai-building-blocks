@@ -1,6 +1,6 @@
 new_slug: feature-request-no-writer
 name: "Feature request no writer"
-summary: "Paste a feature request you will not build. Get a no the customer accepts, with the real reason."
+summary: "Write a feature request no that opens with the no and gives the real reason. Paste the request and your reason. You get a reply under 120 words."
 job: help-customers
 thinking: low
 thinking_why: "It writes one short reply from a decision and a reason you give it."
@@ -17,6 +17,10 @@ when:
   - "A customer asks for a feature that would make the product worse for everyone else."
   - "You have twenty requests in the queue and have been avoiding the honest ones."
   - "You keep writing 'passed to the team' and the team has never heard of it."
+not_for:
+  - "You need to reply to a bug report or a billing problem: answer it yourself, or ask a colleague who handles support."
+  - "You have not decided yet whether to build the feature: decide first, then come back to write the reply."
+  - "You want to check a draft reply for promises you cannot keep: use the Customer reply promise checker."
 
 you_give:
   - "The customer's request as written"
@@ -33,6 +37,25 @@ how_to_use:
   - "Write the real reason, even if it is uncomfortable."
   - "Read OWNER NOTE. If it questions the no, decide again before sending."
   - "Send the reply as is. Do not add a maybe."
+output_sample:
+  input:
+    - The customer's feature request as they wrote it
+    - Your decision and the real reason you will not build it
+    - A way to get close today, if one exists (advised)
+    - What your product is for (optional)
+  output:
+    - name: THE NEED
+      contains: One line on what the customer wants to achieve, under the feature they asked for.
+    - name: OWNER NOTE
+      contains: A short note on why the no may be wrong, or none.
+    - name: REPLY
+      contains: The no, the real reason, what exists today, thanks for the detail, and a sign-off, in under 120 words.
+    - name: DO NOT SAY
+      contains: Lines that would soften the no into a false maybe.
+    - name: MISSING
+      contains: Facts you did not give, such as the real reason.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: "Finds the need"

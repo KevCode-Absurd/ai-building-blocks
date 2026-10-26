@@ -1,38 +1,127 @@
 new_slug: issues-how-agents-track-work-implementation-planner
 name: Agent issue and checkout builder
-summary: Build an issue schema and atomic checkout and release flow.
+summary: Plan a task table where one AI agent claims a task at a time, with expiring claims, blocked tasks and tests. Draft code only.
 job: build-software
 headline: Agent issue and checkout builder
-subhead: Share issue states, ownership, parent links and lease duration. Get an issue schema and atomic checkout and release flow.
+subhead: Tell it your database, your agents and how long a task can run. It reviews the starter files and plans a task table where one agent holds a task at a time. You get the gaps, a draft schema, claim and release functions, and tests. Nothing is run.
 explain: |-
-  Share issue states, ownership, parent links and lease duration. Get an issue schema and atomic checkout and release flow.
+  When several AI agents share one list of tasks, two of them can start the same task. An agent that crashes can also hold a task forever. This skill plans a shared task table, called an issue table, that stops both. It uses one database step to claim a task, a claim that expires, and a check that blocks any task with an open blocker.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  It starts from the starter files that come with it: a small task table and a TypeScript helper. It lists what they leave out. The helper calls a claim function the SQL never defines. Any agent can release another agent's task. Status changes and their comments are not saved together. It then plans the fixes: claim, renew, release and recover functions, an append-only comment log, and the order to try them in.
+
+  The result is a plan and draft code. It does not run the code or touch your database. You try it on a copy first. To store agent data in a new database, use the Agent database setup planner. To run one task from start to finish, use the Single-task agent heartbeat builder.
 when:
-  - You need an issue schema and atomic checkout and release flow.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - Two agent runs picked up the same task and did the work twice.
+  - An agent crashed and a task stayed stuck as "in progress".
+  - You want sub-tasks, blockers and a comment trail for what each agent did.
+  - You have a starter task table and need to know what it is missing before you rely on it.
+not_for:
+  - Your agents never share a task list, or you run one agent by hand. A simple task tracker is enough.
+  - You need to set up the whole agent database first. Use the Agent database setup planner, then come back.
+  - You want a loader for agent role files. Use the Agent role file loader builder.
+  - You want it to apply the SQL for you. It drafts the SQL. You run it on a copy first.
 you_give:
-  - Issue states, ownership, parent links and lease duration
+  - Your database and how your code talks to it, such as Postgres with Supabase
+  - The agents that will claim tasks, and whether tasks belong to one client or many
+  - The longest a normal task runs, so the claim time limit can be set
+  - Your current task table and its columns (optional)
+  - Rules for sub-tasks and blocked tasks (optional)
 you_get:
-  - An issue schema and atomic checkout and release flow
-  - A failure checklist and synthetic test cases
+  - A list of gaps in the starter files, each with a fix
+  - A draft task table, comment log and indexes
+  - Claim, renew, release and recover functions
+  - Changes to the TypeScript helper
+  - Tests to run on a copy, starting with two claims at once
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in your AI. A chat AI works if you paste the code in. Claude Code or Codex can read your files.
+  - Say which database you use and how your code connects. If you have a task table, paste its columns.
+  - Give the agent names and the longest a task can run. Mark any time you are guessing.
+  - Read the gaps table first. Check that each problem is real in your project.
+  - Run the draft SQL on a copy of your database, never on live data. Then run the tests listed, two claims at once first.
+  - Before you turn it on, fill each item under MISSING.
 how_it_works:
-  - title: Step 1
-    text: Create a scoped issue and parent link.
-  - title: Step 2
-    text: Atomically acquire one owner lease.
-  - title: Step 3
-    text: Refuse work already held by another owner.
-  - title: Step 4
-    text: Track blocked dependencies.
-  - title: Step 5
-    text: Renew leases while working and release in a finalizer.
-  - title: Step 6
-    text: Recover stale leases without losing the audit trail.
+  - title: Creates a scoped issue
+    text: Gives every issue a client key, a fixed status list and an optional parent, so sub-tasks link to a main task.
+  - title: Claims in one step
+    text: One database call locks the row and checks the status, any live claim and any open blocker. Then it writes the owner and expiry.
+  - title: Refuses held work
+    text: A task held by another agent returns a clean "no", so a second agent moves on.
+  - title: Tracks blockers
+    text: A task with an open blocker cannot be claimed. The plan says how to stop two tasks blocking each other.
+  - title: Renews and releases
+    text: Only the run that holds the claim can renew or release it. A lost claim stops the work.
+  - title: Recovers stale claims
+    text: A sweep clears expired claims and logs who lost the task and when. Comments are never deleted.
+output_shape: |-
+  STATUS
+  <plan and draft code only; nothing run or applied; what was read>
+
+  GAPS IN THE REFERENCES
+  <#> | <what the starter does> | <why it is a problem> | <proposed fix>
+
+  DRAFT SCHEMA (untested)
+  <issue table, relations table, comments table, indexes>
+
+  CLAIM FUNCTIONS (untested)
+  <checkout, renew, release, recover>
+
+  CODE CHANGES (draft)
+  <changes to the TypeScript helper and one agent run with renewal>
+
+  TESTS TO RUN
+  <number> | <case> | <expected result>
+
+  ASSUMPTIONS
+  <starting values and what to check them against>
+
+  MISSING
+  <each missing input and what it stops>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your database and how your code connects to it
+    - The agents that will claim tasks, and whether tasks belong to one client or many
+    - The longest a normal task runs
+    - Your current task table (optional)
+  prerequisites:
+    - A Postgres database you can test on a copy
+    - An AI that can read your code, or code pasted into the chat
+  output:
+    - name: Status
+      contains: A plain note that this is a plan and draft code, nothing was run, and what was read.
+    - name: Gaps in the references
+      contains: A table of what the starter files leave out, why it matters and the fix.
+    - name: Draft schema
+      contains: The issue table, blocker links, an append-only comment log and indexes, marked untested.
+    - name: Claim functions
+      contains: Database functions to claim, renew, release and recover a task, marked untested.
+    - name: Code changes
+      contains: Changes to the TypeScript helper, and the shape of one agent run with renewal and a finally step.
+    - name: Tests to run
+      contains: Cases such as two claims at once, a blocked task, an expired claim and a release by the wrong run.
+    - name: Assumptions, missing and next step
+      contains: Starting values to check, inputs still missing, and the one smallest step to take first.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your helper and SQL together and proposes exact edits.
+    - name: Supabase
+      why: Gives you Postgres where the draft functions can be tried on a copy of your project.
+  inputs:
+    - Your longest and shortest normal task run times
+    - Past cases where two agents took the same task, to turn into tests
+terms:
+  - term: Issue
+    meaning: One task in the shared list that an agent can claim and work on.
+  - term: Claim
+    meaning: A lock on a task that says which agent holds it and until when. Also called a checkout or lease.
+  - term: Atomic
+    meaning: Done in one step that cannot be split, so two agents cannot both succeed.
+  - term: Blocker
+    meaning: A task that must finish before another task can start.
+  - term: Stale claim
+    meaning: A claim that has passed its expiry because the agent crashed or stopped.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

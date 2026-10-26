@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It turns a known answer into a standard layout.
 new_slug: solved-ticket-help-page-writer
 name: Solved-ticket help page writer
-summary: Give it a solved ticket. Get a help article with steps, what you should
-  see, and a fix for next time.
+summary: Turn a solved support ticket into a help article customers can follow. Get steps, what they should see, and a fix for common problems.
 job: help-customers
 headline: Solved-ticket help page writer
-subhead: "A help article customers can follow on their own, written from a
-  ticket you have already solved. Paste the issue and the fix. The skill sorts
-  it into the right type: how-to, troubleshooting, FAQ, known issue or
-  reference."
+subhead: "A help article customers can follow on their own, written from a ticket you have already solved. Paste the issue and the fix. The skill sorts it into the right type: how-to, troubleshooting, FAQ, known issue or reference."
 explain: |
   A help article customers can follow on their own, written from a ticket you have already solved. Paste the issue and the fix. The skill sorts it into the right type: how-to, troubleshooting, FAQ, known issue or reference. It then writes a title in the words customers actually search, a plain opening line, numbered steps, and the exact error messages people see.
 
@@ -19,6 +15,10 @@ when:
   - You fixed a tricky ticket and want the answer saved for next time.
   - A bug has a workaround and customers need to see it.
   - You want help pages that read the same way every time.
+not_for:
+  - "The fix only worked once and nobody else will hit it: keep a short internal note for your team instead."
+  - "You need a reply to one customer right now: write a short direct answer to that person instead."
+  - "You need to fix a broken help page that already exists: edit that page by hand, then use this to check what is missing."
 you_give:
   - The solved ticket or a description of the issue
   - The steps that fixed it
@@ -30,7 +30,32 @@ you_get:
   - A fix for common follow-up problems
   - Search-friendly title and keywords
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini.
+  - Paste the full text of this skill into the chat.
+  - Below it, paste your solved ticket and the steps that fixed it. Add who is affected if you know.
+  - Send it. You get a full article draft with a title, tags, steps and publishing notes.
+  - Check the steps against the ticket and fix any menu names. Ask your AI to adjust the depth for a different reader if needed.
+  - Publish it, or ask your AI for a companion article. No code or paid tool is needed.
+output_sample:
+  input:
+    - Your solved ticket, or a short description of the issue
+    - The steps or answer that fixed it
+    - Who is affected, such as a plan or setup (optional)
+    - Links to your existing help pages (optional)
+  prerequisites:
+    - Your help desk or help centre can be connected (optional). Without it, paste the ticket text into the chat.
+  output:
+    - name: Article draft header
+      contains: The title, article type, category, tags and audience for the page.
+    - name: Opening line
+      contains: One plain sentence that restates the problem or task in the customer's words.
+    - name: Article body
+      contains: "Content laid out for the chosen type: how-to, troubleshooting, FAQ, known issue or reference."
+    - name: Steps and checks
+      contains: Numbered steps, the exact path to click, and what the customer should see after each one.
+    - name: Common issues or still having issues
+      contains: Fixes for likely follow-up problems and where to get help if the fix fails.
+    - name: Related articles
+      contains: Suggested links to companion help pages.
+    - name: Publishing notes
+      contains: The source ticket, existing articles to update, who should review it, and a review date.

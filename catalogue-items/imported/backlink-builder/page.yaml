@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It finds targets and drafts pitches.
 new_slug: backlink-builder
 name: Backlink builder
-summary: Give it your site. Get places to earn links, pitch text and a plan to
-  win mentions.
+summary: Find sites to earn backlinks from, with pitch drafts and a safe link building plan for your key pages. Give it your site and goals.
 job: plan-strategy
 headline: Backlink builder
-subhead: A plan for earning links and mentions from other sites that help you
-  rank in search and get cited by AI answers. Give it your site, target pages,
-  the searches you want to win and what you could offer, such as data, tools or
-  expert comments.
+subhead: A plan for earning links and mentions from other sites that help you rank in search and get cited by AI answers. Give it your site, target pages, the searches you want to win and what you could offer, such as data, tools or expert comments.
 explain: |
   A plan for earning links and mentions from other sites that help you rank in search and get cited by AI answers. Give it your site, target pages, the searches you want to win and what you could offer, such as data, tools or expert comments.
 
@@ -19,6 +15,10 @@ when:
   - A competitor outranks you and has far more links.
   - You want to be named in the pages AI tools quote.
   - You need pitch emails for guest posts or digital PR.
+not_for:
+  - "Your page is thin, not indexed or off-topic for the search: fix the page first with an SEO audit, then come back."
+  - "You want press coverage or journalist replies: use a PR person or a public relations skill, not link outreach."
+  - "You want to buy links that pass ranking credit: this plan will not do that, and paid links need a sponsored or nofollow tag."
 you_give:
   - Your site and target pages
   - Target searches and AI prompts
@@ -30,7 +30,33 @@ you_get:
   - Pitch text for outreach
   - Rules, pace and a measuring plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Add your site, your target pages, the searches you want to win and your hours and budget each week.
+  - Add what you could offer to link to, such as data, a free tool or an expert. Add backlink tool exports if you have them.
+  - Read the diagnosis first. If links are not the problem, fix the page before any outreach.
+  - Check the prospect list and edit the pitch drafts. Send them yourself, as the skill does not send anything.
+  - Check results monthly, by target page.
+output_sample:
+  input:
+    - Your site and the pages that need to rank or be cited
+    - The searches and AI questions you want to win
+    - Your hours per week and budget
+    - What you could offer to link to, such as data, tools or an expert (optional)
+    - Your backlink tool, if you have one (optional)
+  prerequisites:
+    - A backlink tool such as Ahrefs, Semrush, DataForSEO or Moz gives the best link gap, and needs an account or API key. Without one, use Search Console's Links report and search operators.
+  output:
+    - name: Diagnosis
+      contains: Whether links are the real problem for each target page, with the link gap against the pages that outrank it.
+    - name: Assets
+      contains: What you already have that people could link to, and what to build first if nothing exists.
+    - name: Tactic mix
+      contains: The three or four tactics to start with, ranked by effort and quality, with the reason for each.
+    - name: Prospect list
+      contains: Qualified targets with the page, the contact, the angle, and whether AI tools already cite that page.
+    - name: Outreach drafts
+      contains: Short pitch text for you to approve and send, at least one per tactic.
+    - name: Risk notes
+      contains: Anything in your link history or a vendor offer that breaks Google's link rules.
+    - name: Measurement
+      contains: Goals for new referring domains, rankings and AI mentions at 30 and 90 days.

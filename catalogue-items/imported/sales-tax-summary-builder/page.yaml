@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It adds tax lines into groups.
 new_slug: sales-tax-summary-builder
 name: Sales tax summary builder
-summary: Pick a filing period. Get tax collected by state, province and rate,
-  ready for filing prep.
+summary: Build a sales tax summary from your Shopify orders. Get tax collected by state, province or rate for a filing period, ready to hand to your accountant.
 job: run-your-store
 headline: Sales tax summary builder
-subhead: Tax collected, grouped the way you file it. Pick a period and get your
-  sales tax split by state, province or rate, ready for whoever prepares your
-  return.
+subhead: Tax collected, grouped the way you file it. Pick a period and get your sales tax split by state, province or rate, ready for whoever prepares your return.
 explain: |
   Tax collected, grouped the way you file it. Pick a period and get your sales tax split by state, province or rate, ready for whoever prepares your return. This is prep for a professional, not tax advice.
 
@@ -18,6 +15,10 @@ when:
   - Your accountant asks for tax collected by rate.
   - You want to see how refunds change what you owe.
   - You sell in several regions and need a clean breakdown.
+not_for:
+  - "You need to know where you must collect tax: ask a tax professional or check your Shopify Tax setup."
+  - "You want tax advice or the final amount you owe: this shows tax collected only, so ask your accountant."
+  - "Your store is not on Shopify: copy your order tax totals into a spreadsheet and group them there."
 you_give:
   - Your store domain
   - The period in days
@@ -29,8 +30,30 @@ you_get:
   - A summary for filing prep
   - A reminder to check with a tax professional
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. This skill reads your Shopify store, so a plain chat will not work.
+  - Sign in with the Shopify command line and allow read access to orders.
+  - Paste the skill and give your store domain. Set the number of days to match your filing period, such as 30 for monthly or 90 for quarterly.
+  - Choose to group by state or province, or by tax rate.
+  - Check the totals on screen, then open the CSV file it saves.
+  - Send the CSV to your accountant or tax preparer.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - How many days back to look (optional, 90 is the default)
+    - Group by state or province, or by tax rate (optional)
+    - Whether to leave out refunded orders (optional)
+    - Human-readable or JSON results (optional)
+  prerequisites:
+    - An AI that can run commands and read files
+    - The Shopify command line, signed in to your store with read access to orders
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step with the key settings and how many orders came back.
+    - name: Summary on screen
+      contains: Orders checked, total tax collected, and tax per state, province or rate with order counts.
+    - name: JSON summary (optional)
+      contains: The same totals as JSON, if you ask for that format.
+    - name: tax_liability_<date>.csv
+      contains: One row per group with jurisdiction, country, province, tax rate, order count, total tax collected and currency.

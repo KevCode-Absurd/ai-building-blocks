@@ -38,6 +38,7 @@ How to start:
 This skill runs on its own. All it needs to start is the product and its landed cost (product plus shipping to the customer) and the planned price. Everything else makes the score better. If something is missing, ask once in one short message for what you can't work without, then carry on and mark each gap `MISSING:`.
 
 - **The product and the problem it solves** (required): a link or a plain description, and the problem in the buyer's words.
+- **The gap you chose** (optional): the ranked gaps or shortlist from an earlier step. The problem it must solve comes from the gap you picked.
 - **Landed cost per unit and planned price** (required): in one currency. Say which one.
 - **Size, weight, material, shelf life** (strongly advised).
 - **Whether shops sell it** (strongly advised): can a buyer pick it up at a local store or grocer?

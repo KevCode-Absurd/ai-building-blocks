@@ -1,6 +1,6 @@
 new_slug: build-a-lesson-from-explanation-to-practice-and-a-quiz
 name: Build a lesson from explanation to practice and a quiz
-summary: Give it the topic and learners. Get a lesson plan, worked examples, a practice set and a quiz.
+summary: Build a lesson plan with worked examples, a practice set and a recall quiz from your topic and learners, then check it for overload.
 job: teach-and-train
 thinking: high
 thinking_why: It must get the content right and judge how much a learner can take in. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You teach a topic learners keep getting wrong.
   - You are training staff on something technical and have one session.
   - Your lessons explain well but learners cannot do the task afterwards.
+not_for:
+  - "You only need one short explanation of an idea: use the Direct teaching lesson builder on its own."
+  - "You have no source material for the topic: gather your notes or a reading first, because this workflow will not invent facts."
+  - "You want to grade student work you already have: use the Mark student work against a rubric and sharpen your feedback workflow."
 you_give:
   - The topic and the source material you teach from
   - Who the learners are and what they already know
@@ -30,6 +34,26 @@ how_to_use:
   - Paste the topic, the source material and who the learners are. It plans the lesson and builds the examples.
   - Read the practice set and the quiz. Check the answers yourself.
   - Read the overload check and teach the trimmed version.
+output_sample:
+  input:
+    - The topic you teach
+    - Your source material, such as notes, a reading or a transcript
+    - Who the learners are and what they already know
+    - How long the lesson is and where it runs (optional)
+    - A common mistake learners make (optional)
+  output:
+    - name: "Step 1: Lesson plan"
+      contains: What to say and show, in order, with a check for understanding after each new idea.
+    - name: "Step 2: Worked examples"
+      contains: A full example, one with gaps, and one the learner finishes, with the thinking shown.
+    - name: "Step 3: Practice set"
+      contains: Problems from easy to hard, mixed so learners must choose the method, with answers.
+    - name: "Step 4: Recall quiz"
+      contains: Short questions that ask learners to recall and do, with answers and the mistake each one catches.
+    - name: "Step 5: Overload check"
+      contains: Too many new ideas, too much text or too few pauses, and what to cut or split.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the teaching
     text: Plans what to say and show, in order, with a check for understanding after each new idea.

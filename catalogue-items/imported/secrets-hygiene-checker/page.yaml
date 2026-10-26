@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It scans for secrets and plans fixes.
 new_slug: secrets-hygiene-checker
 name: Secrets hygiene checker
-summary: Point it at your project. Get leaked keys found, env files tidied and a
-  plan to rotate secrets.
+summary: Scan your project for leaked keys and passwords. Get findings ranked by risk, plus a plan to rotate secrets and tidy your .env files.
 job: secure-code
 headline: Secrets hygiene checker
-subhead: A scan of your project for leaked keys and passwords, plus a clear
-  order for fixing them. It finds likely credentials in the working files and
-  ranks each one critical, high or lower, so you start with what could hurt
-  most.
+subhead: A scan of your project for leaked keys and passwords, plus a clear order for fixing them. It finds likely credentials in the working files and ranks each one critical, high or lower, so you start with what could hurt most.
 explain: |
   A scan of your project for leaked keys and passwords, plus a clear order for fixing them. It finds likely credentials in the working files and ranks each one critical, high or lower, so you start with what could hurt most.
 
@@ -19,6 +15,10 @@ when:
   - A contributor joins and you need safe .env conventions for them.
   - You suspect a password was committed and need a rotation plan.
   - Your example env file might contain real values.
+not_for:
+  - "You need to search your full git history for old leaks: run gitleaks, which can scan past commits."
+  - "You want a place to store and hand out secrets in production: use a secret manager such as HashiCorp Vault or AWS Secrets Manager."
+  - "You need to set up a full production vault with backups and recovery: ask a security engineer or a DevOps person."
 you_give:
   - Your project folder
   - Your current .env and .env.example setup
@@ -30,8 +30,35 @@ you_get:
   - A tidied env file layout
   - A pre-merge secret scan setup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in a tool that can read your project files and run code. Add the skill's instructions and its scripts folder.
+  - Tell your AI to scan your project folder. It runs python3 scripts/env_auditor.py /path/to/repo.
+  - Ask for JSON output if you want to use the results in CI. It adds the --json option.
+  - Read the critical and high findings first. Check each one is a real credential.
+  - Rotate any real credential, remove the exposed value, then fix your .env.example and .gitignore.
+  - Ask your AI to set up secret scanning before merge, so new leaks get caught.
+output_sample:
+  input:
+    - Your project folder
+    - Your .env and .env.example files
+    - Where secrets live in production (optional)
+    - Your CI setup (optional)
+  prerequisites:
+    - An AI that can run Python code and read your project files
+    - Python 3 installed, to run the bundled scan script
+  output:
+    - name: Scan findings
+      contains: Likely credentials found in your working files, each ranked critical, high or lower.
+    - name: JSON report
+      contains: The same findings in a format your CI checks can read, made with the --json option.
+    - name: Fix order
+      contains: Which findings to handle first, starting with critical and high ones.
+    - name: Rotation steps
+      contains: How to make a new credential, deploy it everywhere, check it works, then revoke the old one.
+    - name: Env file cleanup
+      contains: Changes to .env.example and .gitignore so examples hold no real secrets.
+    - name: Common mistakes
+      contains: Traps to avoid, like rotating one system but missing the services that depend on it.
+    - name: Secret store comparison
+      contains: How Vault, AWS, Azure and GCP secret managers differ and which fits your setup.
+    - name: Pre-merge scanning advice
+      contains: How to add secret scanning with gitleaks or detect-secrets before code is merged.

@@ -1,0 +1,1288 @@
+composio-community/support-skills:auto-tag:
+  slug: gorgias-ticket-tag-planner
+  name: Gorgias ticket tag planner
+  summary: Share a ticket or queue. Get suggested tags, confidence levels, and reasons before changes.
+  subhead: Give it a Gorgias ticket number or a batch of untagged tickets. It reads your existing tags and each message. You get suggested tags with reasons and confidence levels, ready to review before applying them.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - A ticket number or a batch of untagged tickets.
+    - Access to the current tag list and messages in Gorgias.
+  you_get:
+    - Show the tag table and ask which changes you want to apply.
+  how_it_works:
+    - title: Read your tag list
+      text: Read the tags already set up in Gorgias so suggestions use your own labels.
+    - title: Match messages to tags
+      text: Read the ticket topic, issue, urgency, and customer group. Explain each suggested label.
+    - title: Review proposed changes
+      text: Show the tag table and ask which changes you want to apply.
+  works_best_with:
+    tools:
+      - name: Gorgias
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias ticket tag planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide a ticket number or a batch of untagged tickets.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:bug-report:
+  slug: gorgias-bug-report-writer
+  name: Gorgias bug report writer
+  summary: Share a Gorgias ticket. Get a bug report with steps, evidence, and missing details.
+  subhead: Give it the number of a Gorgias ticket that describes a bug. It separates the expected result from what happened and collects the evidence. You get a clear bug report, with an option to create an approved Linear issue.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - A Gorgias ticket number for a reported bug.
+    - Access to the full conversation and any available evidence.
+  you_get:
+    - Show the report. Create a Linear issue only after you approve the report and team.
+  how_it_works:
+    - title: Read the full thread
+      text: Fetch the ticket and read customer and staff messages before drafting.
+    - title: Build the bug report
+      text: Write the problem, steps, expected result, actual result, impact, and quoted evidence. Flag missing details.
+    - title: Offer an issue draft
+      text: Show the report. Create a Linear issue only after you approve the report and team.
+  works_best_with:
+    tools:
+      - name: Gorgias and Linear
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias bug report writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide a Gorgias ticket number for a reported bug.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:call-summary:
+  slug: dialpad-and-leexi-call-summarizer
+  name: Dialpad and Leexi call summarizer
+  summary: Choose a call. Get the main points, promises, owners, and next steps from its transcript.
+  subhead: Give it a call number or ask for recent calls in Dialpad or Leexi. It reads the call records and transcripts. You get a short summary, key decisions, promises, next steps, and warning signs worth checking.
+  licence_file: README.md
+  task: work-with-audio
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - A call number or a request for recent calls.
+    - Dialpad or Leexi call records and transcripts.
+  you_get:
+    - Return a short summary for each call, plus an overview table when several calls were reviewed.
+  how_it_works:
+    - title: Fetch call records
+      text: Find the chosen call or a small set of recent calls and read the transcripts.
+    - title: Pull out commitments
+      text: Separate topics, decisions, promised work, owners, and due dates from the conversation.
+    - title: Write the call brief
+      text: Return a short summary for each call, plus an overview table when several calls were reviewed.
+  works_best_with:
+    tools:
+      - name: Dialpad or Leexi
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for dialpad and leexi call summarizer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide a call number or a request for recent calls.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: compress
+composio-community/support-skills:chatbot-review:
+  slug: support-chatbot-conversation-review
+  name: Support chatbot conversation review
+  summary: Choose recent chatbot chats. Get missed questions, wrong answers, and fixes for your help content.
+  subhead: Connect Botsonic, Docsbot, or Landbot and ask for a review of recent chats. It checks whether replies answered the question and flags unsupported claims. You get failed examples, repeated missing topics, and suggested help content or handover changes.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Recent chats from Botsonic, Docsbot, or Landbot.
+    - Verified product facts or help content for checking answers.
+  you_get:
+    - Show failed conversations, repeated unanswered questions, and suggested help content or handover rules.
+  how_it_works:
+    - title: Read recent chats
+      text: Fetch recent conversation logs from the connected chatbot service.
+    - title: Check each answer
+      text: Review whether the answer was useful and accurate. Note failures and requests for a person.
+    - title: List fixes by topic
+      text: Show failed conversations, repeated unanswered questions, and suggested help content or handover rules.
+  works_best_with:
+    tools:
+      - name: Botsonic, Docsbot, or Landbot
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for support chatbot conversation review by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Recent chats from Botsonic, Docsbot, or Landbot.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: check
+composio-community/support-skills:contact-sync:
+  slug: gorgias-and-hubspot-contact-check
+  name: Gorgias and HubSpot contact check
+  summary: Connect Gorgias and HubSpot. Get missing contacts, mismatched fields, and suggested fixes.
+  subhead: Connect Gorgias and HubSpot and ask for a contact check. It matches customer email addresses from recent support tickets to your contact records. You get missing contacts, conflicting names or fields, and suggested fixes to review.
+  licence_file: README.md
+  task: organise-work
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Recent Gorgias customer email addresses and names.
+    - HubSpot contact records for comparing those fields.
+  you_get:
+    - List missing contacts and mismatches with suggested fixes. This review does not sync records itself.
+  how_it_works:
+    - title: Collect customer records
+      text: Read recent Gorgias tickets and collect unique customer email addresses and names.
+    - title: Match HubSpot contacts
+      text: Look up each email in HubSpot and compare the fields found in both tools.
+    - title: Explain the gaps
+      text: List missing contacts and mismatches with suggested fixes. This review does not sync records itself.
+  works_best_with:
+    tools:
+      - name: Gorgias and HubSpot
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias and hubspot contact check by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Recent Gorgias customer email addresses and names.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: check
+composio-community/support-skills:csat-followup:
+  slug: gorgias-satisfaction-follow-up-writer
+  name: Gorgias satisfaction follow-up writer
+  summary: Choose resolved tickets. Get personal follow-up emails to review before sending through Gmail.
+  subhead: Connect Gorgias and Gmail and choose recently closed tickets. It reads how each issue was solved and writes a short rating request. You get personal follow-up emails to review, with sending available after approval.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: copy_draft
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Recently closed Gorgias tickets with customer and resolution details.
+    - Gmail access only if you want approved emails sent.
+  you_get:
+    - Show all drafts first. Send only the emails you approve and report the result for each.
+  how_it_works:
+    - title: Read closed tickets
+      text: Find recently resolved tickets and collect the customer, issue, and resolution.
+    - title: Write personal follow-ups
+      text: Reference the real issue, request a rating, and give the customer a way to reopen it.
+    - title: Approve and send
+      text: Show all drafts first. Send only the emails you approve and report the result for each.
+  works_best_with:
+    tools:
+      - name: Gorgias and Gmail
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias satisfaction follow-up writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Recently closed Gorgias tickets with customer and resolution details.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:customer-360:
+  slug: gorgias-and-hubspot-customer-brief
+  name: Gorgias and HubSpot customer brief
+  summary: Share a name or email. Get past tickets, contact details, and recent notes in one brief.
+  subhead: Give it a customer name or email and connect Gorgias and HubSpot. It reads recent support tickets and contact history. You get one customer brief with their open issues, past contact, recent activity, and points needing attention.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - A customer name or email.
+    - Access to that customer's Gorgias and HubSpot records.
+  you_get:
+    - Combine the profile, support history, activity timeline, and points needing attention.
+  how_it_works:
+    - title: Find the customer
+      text: Search both tools using the name or email you provide.
+    - title: Read recent history
+      text: Read recent ticket threads and HubSpot notes, calls, emails, and deal records.
+    - title: Write one brief
+      text: Combine the profile, support history, activity timeline, and points needing attention.
+  works_best_with:
+    tools:
+      - name: Gorgias and HubSpot
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias and hubspot customer brief by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide a customer name or email.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:draft-reply:
+  slug: gorgias-support-reply-writer
+  name: Gorgias support reply writer
+  summary: Share a ticket number. Get a reply based on the whole thread, ready for review.
+  subhead: Give it a Gorgias ticket number and connect your support account. It reads the full thread, earlier fixes, and unanswered questions. You get a warm, clear reply to review, with an option to save it as a Gmail draft.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: copy_draft
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - A Gorgias ticket number and access to the full thread.
+    - Verified facts needed to answer any open questions.
+  you_get:
+    - Show the draft and offer edits. Save it in Gmail only when you choose that option.
+  how_it_works:
+    - title: Read the conversation
+      text: Read the full thread, customer details, current owner, and ticket status.
+    - title: Answer open questions
+      text: Cover the latest message, respect what has already been tried, and state the next step.
+    - title: Review the reply
+      text: Show the draft and offer edits. Save it in Gmail only when you choose that option.
+  works_best_with:
+    tools:
+      - name: Gorgias; Gmail for optional drafts
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias support reply writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide a Gorgias ticket number and access to the full thread.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:escalate:
+  slug: gorgias-to-linear-issue-handover
+  name: Gorgias to Linear issue handover
+  summary: Share a ticket or problem. Get an issue draft and Slack alert to approve together.
+  subhead: Give it a Gorgias ticket number or describe the problem. It prepares a Linear issue and a Slack message with the right team and channel. You review both before it creates the issue and posts the approved alert.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: false
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - A Gorgias ticket number or a clear problem description.
+    - The intended Linear team and Slack channel.
+  you_get:
+    - After approval, create the Linear issue and include its returned link in the Slack alert.
+  how_it_works:
+    - title: Collect the issue facts
+      text: Read the ticket or problem description and find the available Linear teams and Slack channels.
+    - title: Prepare the handover
+      text: Show the proposed issue title, details, priority, team, and Slack message.
+    - title: Create approved records
+      text: After approval, create the Linear issue and include its returned link in the Slack alert.
+  works_best_with:
+    tools:
+      - name: Gorgias, Linear, and Slack
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias to linear issue handover by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide a Gorgias ticket number or a clear problem description.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:feedback-digest:
+  slug: customer-feedback-report-from-survey-tools
+  name: Customer feedback report from survey tools
+  summary: Choose a date range. Get feedback themes, repeated requests, quotes, and suggested next steps.
+  subhead: Connect Delighted, GatherUp, Gleap, or Simplesat and choose a date range. It gathers recent feedback and groups the comments by topic. You get repeated problems, feature requests, praise, and suggested actions with counts and sample quotes.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - A date range and the connected feedback sources to review.
+    - Comments from Delighted, GatherUp, Gleap, or Simplesat.
+  you_get:
+    - Show theme counts, sample quotes, urgent concerns, and proposed product or help content changes.
+  how_it_works:
+    - title: Gather recent feedback
+      text: Read feedback from the connected services for the chosen dates.
+    - title: Group common themes
+      text: Sort comments into problems, usability, pricing, support, praise, and feature requests.
+    - title: Write the report
+      text: Show theme counts, sample quotes, urgent concerns, and proposed product or help content changes.
+  works_best_with:
+    tools:
+      - name: Delighted, GatherUp, Gleap, or Simplesat
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for customer feedback report from survey tools by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide a date range and the connected feedback sources to review.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: compress
+composio-community/support-skills:freshdesk-triage:
+  slug: freshdesk-ticket-priority-planner
+  name: Freshdesk ticket priority planner
+  summary: Connect Freshdesk. Get open tickets grouped by urgency, issue type, and response deadline.
+  subhead: Connect Freshdesk and ask which open tickets need attention first. It reads up to fifteen full ticket threads and checks priority, issue type, and response deadlines. You get a queue grouped by urgency with suggested next steps.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Open and pending Freshdesk tickets and their full threads.
+    - Your response targets or recorded ticket due dates.
+  you_get:
+    - List urgent tickets first, show response deadline status, and suggest next actions.
+  how_it_works:
+    - title: Read open tickets
+      text: Fetch open and pending tickets, then read the full threads for up to fifteen.
+    - title: Sort by urgency
+      text: Classify outages, broken features, billing questions, minor issues, and feedback.
+    - title: Show the queue
+      text: List urgent tickets first, show response deadline status, and suggest next actions.
+  works_best_with:
+    tools:
+      - name: Freshdesk
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for freshdesk ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Open and pending Freshdesk tickets and their full threads.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:handoff-notes:
+  slug: gorgias-shift-handover-writer
+  name: Gorgias shift handover writer
+  summary: Connect Gorgias. Get urgent tickets, pending replies, recent fixes, and clear notes for the next shift.
+  subhead: Connect Gorgias before a shift change or ticket handover. It checks open work and reads the threads needing attention. You get a handover note covering urgent tickets, customer replies, work in progress, recent fixes, and unresolved blockers.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Open and pending Gorgias tickets.
+    - Current owners, last actions, waiting replies, and recent fixes.
+  you_get:
+    - Show the last action, next step, blockers, and useful context for the incoming person.
+  how_it_works:
+    - title: Read active work
+      text: Find open and waiting tickets. Read urgent threads and recent customer replies.
+    - title: Separate waiting states
+      text: Group tickets by immediate action, waiting on customers, work in progress, and recent resolution.
+    - title: Write handover notes
+      text: Show the last action, next step, blockers, and useful context for the incoming person.
+  works_best_with:
+    tools:
+      - name: Gorgias
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias shift handover writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Open and pending Gorgias tickets.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: compress
+composio-community/support-skills:inbox-zero:
+  slug: gorgias-support-queue-action-planner
+  name: Gorgias support queue action planner
+  summary: Connect Gorgias. Get one suggested next action for each waiting ticket, with reply drafts where useful.
+  subhead: Connect Gorgias and ask for help with the waiting queue. It reads tickets in small batches and picks a next action for each. You get reply drafts and suggestions to assign, defer, close, or pass an issue to another team.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Open Gorgias tickets needing attention.
+    - The latest messages and the teams available to handle them.
+  you_get:
+    - Show the proposed actions and drafts. Carry out only the actions you approve.
+  how_it_works:
+    - title: Read waiting tickets
+      text: Fetch unhandled tickets from oldest to newest and read them in batches of ten.
+    - title: Pick one next action
+      text: Choose a quick reply, request for information, handover, assignment, delay, or closure suggestion.
+    - title: Review the action queue
+      text: Show the proposed actions and drafts. Carry out only the actions you approve.
+  works_best_with:
+    tools:
+      - name: Gorgias
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias support queue action planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Open Gorgias tickets needing attention.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:intercom-resolve:
+  slug: intercom-conversation-action-planner
+  name: Intercom conversation action planner
+  summary: Connect Intercom. Get waiting chats grouped by next action, with reply drafts to review.
+  subhead: Connect Intercom and ask for a review of open conversations. It reads recent threads and decides which need a reply, more facts, another team, a pause, or closure. You get a clear queue and reply drafts to review before changes.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Open or paused Intercom conversations.
+    - Full message history and facts needed for replies.
+  you_get:
+    - Show a dashboard and reply drafts. Ask before sending replies or changing conversation status.
+  how_it_works:
+    - title: Read recent conversations
+      text: Fetch open and paused conversations, then read up to fifteen full threads.
+    - title: Choose the next step
+      text: Separate clear questions, missing facts, technical issues, waiting cases, and resolved chats.
+    - title: Review proposed actions
+      text: Show a dashboard and reply drafts. Ask before sending replies or changing conversation status.
+  works_best_with:
+    tools:
+      - name: Intercom
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for intercom conversation action planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Open or paused Intercom conversations.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:knowledge-search:
+  slug: notion-help-article-finder
+  name: Notion help article finder
+  summary: Share a customer question. Get matching Notion articles, useful excerpts, and a reply draft.
+  subhead: Give it a customer question and connect your Notion workspace. It searches exact titles and related words, then reads the best matches. You get linked articles, useful excerpts, a suggested reply, and gaps in your help content.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - The customer's question or topic.
+    - Access to the relevant Notion knowledge base.
+  you_get:
+    - Return article links, useful excerpts, a customer reply, and missing or outdated help topics.
+  how_it_works:
+    - title: Search the question
+      text: Try the exact topic and related words in your Notion knowledge base.
+    - title: Read the best matches
+      text: Read the full content of the best matching pages and note their dates.
+    - title: Draft a sourced answer
+      text: Return article links, useful excerpts, a customer reply, and missing or outdated help topics.
+  works_best_with:
+    tools:
+      - name: Notion
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for notion help article finder by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide the customer's question or topic.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: source
+composio-community/support-skills:merge-tickets:
+  slug: gorgias-duplicate-ticket-finder
+  name: Gorgias duplicate ticket finder
+  summary: Connect Gorgias. Get tickets about the same issue, with match reasons to check before merging.
+  subhead: Connect Gorgias and ask for duplicate tickets. It compares recent open tickets by customer, subject, message, date, and shared details. You get groups of likely duplicates and related issues, with reasons and suggested primary tickets for human review.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Recent open or pending Gorgias tickets.
+    - Customer, subject, message, tags, order details, and dates.
+  you_get:
+    - Separate likely duplicates from related issues and explain each match. It does not merge tickets.
+  how_it_works:
+    - title: Read recent tickets
+      text: Fetch recent open and pending tickets and collect customer, subject, message, tags, and dates.
+    - title: Compare shared details
+      text: Use matching customers, similar messages, close dates, shared errors, and order references as clues.
+    - title: List groups for review
+      text: Separate likely duplicates from related issues and explain each match. It does not merge tickets.
+  works_best_with:
+    tools:
+      - name: Gorgias
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias duplicate ticket finder by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Recent open or pending Gorgias tickets.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: check
+composio-community/support-skills:nps-collect:
+  slug: delighted-and-satismeter-survey-assistant
+  name: Delighted and Satismeter survey assistant
+  summary: Connect your survey tool. Get a satisfaction report, or review a recipient list before sending surveys.
+  subhead: Connect Delighted or Satismeter and choose to read results or send surveys. It groups responses and calculates the available scores. You get trends, reasons for low ratings, positive themes, and next steps, or an approved survey send report.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Survey service access and dates for a results review.
+    - A recipient list and approved survey if you want to send one.
+  you_get:
+    - Show scores, response counts, trends, reasons for low ratings, positive comments, and next actions.
+  how_it_works:
+    - title: Choose the survey task
+      text: Ask to review existing responses or prepare surveys for a chosen customer list.
+    - title: Read or send surveys
+      text: Read available results. If sending, confirm the recipient list before any survey goes out.
+    - title: Report the findings
+      text: Show scores, response counts, trends, reasons for low ratings, positive comments, and next actions.
+  works_best_with:
+    tools:
+      - name: Delighted or Satismeter
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for delighted and satismeter survey assistant by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Survey service access and dates for a results review.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:refund-processor:
+  slug: gorgias-refund-review-brief
+  name: Gorgias refund review brief
+  summary: Share a ticket or customer email. Get refund facts, policy checks, a recommendation, and a reply draft.
+  subhead: Give it a Gorgias ticket number or customer email and your refund policy. It checks the request against past tickets and HubSpot records. You get the facts, policy checks, a proposed decision, and a reply draft for a person to approve.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - The request or ticket, customer email, and refund policy.
+    - Gorgias and HubSpot records, including past refunds and usage if available.
+  you_get:
+    - Show the facts, recommendation, and reply draft. This skill does not issue the refund.
+  how_it_works:
+    - title: Collect the refund facts
+      text: Read the request, account details, past refunds, payment plan, and customer history.
+    - title: Check the policy
+      text: Compare the reason and dates with your policy and flag cases needing manager approval.
+    - title: Prepare the decision brief
+      text: Show the facts, recommendation, and reply draft. This skill does not issue the refund.
+  works_best_with:
+    tools:
+      - name: Gorgias and HubSpot
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias refund review brief by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide the request or ticket, customer email, and refund policy.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:root-cause:
+  slug: support-issue-cause-investigator
+  name: Support issue cause investigator
+  summary: Share related tickets or notes. Get shared patterns, a possible cause, evidence, and a fix plan.
+  subhead: Give it related Gorgias tickets, a topic, or pasted issue descriptions. It compares patterns and traces possible causes through repeated why questions. You get an evidence table, impact summary, possible root cause, and fixes to verify with the responsible team.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: voc_reviews
+      required: true
+    - type: tool_connection
+      required: false
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Related ticket numbers, a topic, or pasted issue descriptions.
+    - Any dated evidence, common errors, or known workarounds.
+  you_get:
+    - Show the proposed cause, evidence, impact, fixes by owner, and any temporary workaround.
+  how_it_works:
+    - title: Collect related issues
+      text: Read the chosen ticket threads or pasted descriptions and note dates, customers, and common symptoms.
+    - title: Trace possible causes
+      text: Compare patterns and follow a chain of why questions, checking each explanation against the evidence.
+    - title: Write the investigation
+      text: Show the proposed cause, evidence, impact, fixes by owner, and any temporary workaround.
+  works_best_with:
+    tools:
+      - name: Gorgias for ticket lookup; pasted notes also work
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for support issue cause investigator by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Related ticket numbers, a topic, or pasted issue descriptions.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: check
+composio-community/support-skills:sentiment-check:
+  slug: customer-message-tone-and-urgency-review
+  name: Customer message tone and urgency review
+  summary: Paste customer messages. Get tone, urgency, warning signs, and a suggested response approach.
+  subhead: Paste a customer message or share a Gorgias ticket number. It looks for emotional language, urgency, and signs the customer may leave. You get ratings with supporting quotes and a suggested tone, priority, and points to address.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: voc_reviews
+      required: true
+    - type: tool_connection
+      required: false
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Customer message text or a Gorgias ticket number.
+    - Earlier customer messages if you want a tone trend.
+  you_get:
+    - Show quotes behind each rating and suggest the tone, priority, and concerns to address.
+  how_it_works:
+    - title: Read the message
+      text: Use pasted text directly or fetch all customer messages from the chosen ticket.
+    - title: Review the signals
+      text: Rate tone and urgency, identify emotions, and mark language about cancelling or switching.
+    - title: Recommend a response approach
+      text: Show quotes behind each rating and suggest the tone, priority, and concerns to address.
+  works_best_with:
+    tools:
+      - name: Gorgias for ticket lookup; pasted messages also work
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for customer message tone and urgency review by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Customer message text or a Gorgias ticket number.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: check
+composio-community/support-skills:sla-monitor:
+  slug: gorgias-response-deadline-checker
+  name: Gorgias response deadline checker
+  summary: Share your response targets. Get late and at-risk Gorgias tickets, deadlines, and next actions.
+  subhead: Connect Gorgias and share your reply and resolution targets. It compares ticket timestamps with those limits. You get late and at-risk tickets, time remaining, suggested actions, and a score out of 100 for meeting response targets.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Your reply and resolution time targets.
+    - Gorgias ticket messages with timestamps and current status.
+  you_get:
+    - Group late, at-risk, and on-track tickets with times, next steps, and response target scores.
+  how_it_works:
+    - title: Set response targets
+      text: Use your stated reply and resolution limits. Review any suggested defaults before relying on them.
+    - title: Compare ticket times
+      text: Read open ticket threads and compare customer and staff timestamps with each target.
+    - title: Show deadline risks
+      text: Group late, at-risk, and on-track tickets with times, next steps, and response target scores.
+  works_best_with:
+    tools:
+      - name: Gorgias
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias response deadline checker by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide your reply and resolution time targets.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: check
+composio-community/support-skills:support-metrics:
+  slug: gorgias-support-metrics-report
+  name: Gorgias support metrics report
+  summary: Choose report dates. Get ticket counts, response times, issue groups, and trends, with sample limits shown.
+  subhead: Connect Gorgias and choose the dates you want to review. It gathers ticket records and samples detailed threads for response times. You get counts, issue groups, trends, and timing measures, with an optional Google Sheets export. Check the sample limits before sharing.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - The report date range and access to Gorgias tickets.
+    - Full message timestamps for the sampled response-time measures.
+  you_get:
+    - Show volume, response times, issue groups, trends, and notable tickets. Offer a Google Sheets export.
+  how_it_works:
+    - title: Choose the date range
+      text: Read ticket records for the chosen dates within the skill's stated collection limits.
+    - title: Measure the sample
+      text: Use a sample of full threads for response times. Keep sampled measures separate from whole-queue counts.
+    - title: Prepare the report
+      text: Show volume, response times, issue groups, trends, and notable tickets. Offer a Google Sheets export.
+  works_best_with:
+    tools:
+      - name: Gorgias; Google Sheets for optional export
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias support metrics report by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide the report date range and access to Gorgias tickets.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: check
+composio-community/support-skills:ticket-summarize:
+  slug: support-ticket-thread-summarizer
+  name: Support ticket thread summarizer
+  summary: Paste a thread or share a ticket. Get the timeline, attempted fixes, blockers, and next actions.
+  subhead: Paste a conversation or give it a Gorgias ticket number. It tracks the issue, earlier attempts, and who is waiting for what. You get a short summary, timeline, current state, and clear next actions for the next person handling it.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: source_text
+      required: true
+    - type: tool_connection
+      required: false
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - A pasted thread or a Gorgias ticket number.
+    - Any available owner, status, and date details.
+  you_get:
+    - Return a short overview, timeline, specific actions, and internal context worth preserving.
+  how_it_works:
+    - title: Read the thread
+      text: Use the pasted conversation or fetch the full ticket with its status and owner.
+    - title: Track what happened
+      text: List the main exchanges, fixes already tried, current blockers, and waiting parties.
+    - title: Write the next-step summary
+      text: Return a short overview, timeline, specific actions, and internal context worth preserving.
+  works_best_with:
+    tools:
+      - name: Gorgias for ticket lookup; pasted threads also work
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for support ticket thread summarizer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide a pasted thread or a Gorgias ticket number.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: compress
+composio-community/support-skills:ticket-triage:
+  slug: gorgias-ticket-priority-planner
+  name: Gorgias ticket priority planner
+  summary: Connect Gorgias. Get open tickets grouped by urgency and issue type, with suggested next steps.
+  subhead: Connect Gorgias and ask which tickets need attention first. It reads recent open tickets and up to fifteen full threads. You get a queue grouped by urgency and issue type, with the customer, ticket age, and suggested next steps.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Recent open Gorgias tickets and message threads.
+    - Any status, date, or tag filters you want to use.
+  you_get:
+    - Show each ticket with its age, category, customer, summary, and recommended next step.
+  how_it_works:
+    - title: Read open tickets
+      text: Fetch recent open tickets and read the full conversations for up to fifteen.
+    - title: Sort by urgency
+      text: Group outages, broken features, payment issues, questions, and feedback into clear priority levels.
+    - title: Plan the next actions
+      text: Show each ticket with its age, category, customer, summary, and recommended next step.
+  works_best_with:
+    tools:
+      - name: Gorgias
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Recent open Gorgias tickets and message threads.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:tone-rewriter:
+  slug: support-reply-tone-editor
+  name: Support reply tone editor
+  summary: Paste a reply and choose a tone. Get a rewrite that keeps the same facts and next steps.
+  subhead: Give it a support reply and the tone you want, such as warm, firm, formal, or brief. It changes the wording while keeping the meaning and facts. You get a rewritten reply and a short explanation of the changes.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: copy_draft
+      required: true
+    - type: tool_connection
+      required: false
+  outputs:
+    - type: copy_draft
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - The support reply you want changed.
+    - Your preferred tone, such as warm, firm, formal, or brief.
+  you_get:
+    - Return the new reply and key edits, or several tone options when no preference was given.
+  how_it_works:
+    - title: Read the reply
+      text: Identify the existing tone, core message, facts, and requested tone.
+    - title: Rewrite the wording
+      text: Adjust formality, detail, warmth, or length while preserving the reply's meaning.
+    - title: Explain the changes
+      text: Return the new reply and key edits, or several tone options when no preference was given.
+  works_best_with:
+    tools:
+      - name: Pasted text; no outside account needed
+        why: This task works directly from the text you provide.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for support reply tone editor by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide the support reply you want changed.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:translate-ticket:
+  slug: customer-support-message-translator
+  name: Customer support message translator
+  summary: Paste a customer message. Get an English translation and a reply draft in the customer’s language.
+  subhead: Paste a customer message or give it a Gorgias ticket number. It identifies the language, explains unclear phrases, and matches the level of formality. You get an English translation, a reply draft in the original language, and its English meaning.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: voc_reviews
+      required: true
+    - type: tool_connection
+      required: false
+  outputs:
+    - type: copy_draft
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - The customer message or Gorgias ticket number.
+    - Verified product facts for the reply.
+  you_get:
+    - Write a reply in the customer's language and translate that reply into English for review.
+  how_it_works:
+    - title: Identify the language
+      text: Read the message. Identify its language, possible dialect, and how formal it is.
+    - title: Translate the meaning
+      text: Translate to English. Flag unclear phrases and explain sayings that do not translate well.
+    - title: Draft and translate back
+      text: Write a reply in the same language. Give its English meaning so the support person can check it.
+  works_best_with:
+    tools:
+      - name: Gorgias for ticket lookup; pasted text also works
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for customer support message translator by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide the customer message or Gorgias ticket number.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:vip-alert:
+  slug: gorgias-priority-customer-ticket-brief
+  name: Gorgias priority customer ticket brief
+  summary: Connect Gorgias and HubSpot. Get open tickets from important accounts, with context and suggested handling.
+  subhead: Connect Gorgias and HubSpot and ask which important accounts need attention. It matches open tickets to customer records and value signals. You get a priority queue with account context and suggested handling, plus an optional Slack alert after approval.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Open Gorgias tickets and HubSpot account records.
+    - The account value signals or priority flags your team uses.
+  you_get:
+    - Show tickets with account context and recommended handling. Ask before posting any Slack alert.
+  how_it_works:
+    - title: Match open tickets
+      text: Read open tickets and look up each customer email in HubSpot.
+    - title: Check account signals
+      text: Review plan, deal value, account flags, active growth plans, and signs the customer may leave.
+    - title: Prepare the priority brief
+      text: Show tickets with account context and recommended handling. Ask before posting any Slack alert.
+  works_best_with:
+    tools:
+      - name: Gorgias and HubSpot; Slack for optional alerts
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias priority customer ticket brief by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Open Gorgias tickets and HubSpot account records.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: check
+composio-community/support-skills:weekly-digest:
+  slug: gorgias-weekly-support-report
+  name: Gorgias weekly support report
+  summary: Connect Gorgias. Get the week’s ticket trends, repeated problems, notable cases, and recommended fixes.
+  subhead: Connect Gorgias and ask for the weekly support report. It gathers the week's tickets and reads a sample of detailed threads. You get volume, timing measures, recurring problems, notable cases, and proposed fixes, with an optional approved Slack post.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - The week's Gorgias ticket records and full-thread sample.
+    - Earlier comparable records if you want a change-over-time comparison.
+  you_get:
+    - Show trends and proposed fixes. Review the report before posting it to a Slack channel.
+  how_it_works:
+    - title: Read the week's work
+      text: Gather tickets from the past week and read a sample of detailed conversations.
+    - title: Find recurring issues
+      text: Compare issue groups, response times, unresolved work, and notable cases. State the sample scope.
+    - title: Prepare the weekly report
+      text: Show trends and proposed fixes. Review the report before posting it to a Slack channel.
+  works_best_with:
+    tools:
+      - name: Gorgias; Slack for optional sharing
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for gorgias weekly support report by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide the week's Gorgias ticket records and full-thread sample.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: compress
+composio-community/support-skills:whatsapp-support:
+  slug: whatsapp-support-reply-assistant
+  name: WhatsApp support reply assistant
+  summary: Connect Wati or Whautomate. Get waiting chats, reply drafts, and issues needing another team.
+  subhead: Connect Wati or Whautomate and ask for a review of waiting WhatsApp chats. It reads recent conversations and groups them by next action. You get reply drafts, missing details, issues for another team, and resolved chats to review before sending.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Unresolved Wati or Whautomate conversations.
+    - Recent message history and verified facts for replies.
+  you_get:
+    - Show the waiting queue and reply drafts. Send only the replies you approve.
+  how_it_works:
+    - title: Read waiting chats
+      text: Fetch unresolved WhatsApp conversations and read recent history for the top ten.
+    - title: Choose each next step
+      text: Mark clear questions, missing details, issues needing another team, and chats that appear resolved.
+    - title: Review proposed replies
+      text: Show the waiting queue and reply drafts. Send only the replies you approve.
+  works_best_with:
+    tools:
+      - name: Wati or Whautomate
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for whatsapp support reply assistant by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Unresolved Wati or Whautomate conversations.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:zendesk-triage:
+  slug: zendesk-ticket-priority-planner
+  name: Zendesk ticket priority planner
+  summary: Connect Zendesk. Get waiting tickets grouped by urgency, issue type, and response deadline.
+  subhead: Connect Zendesk and ask which tickets need attention first. It reads open and pending tickets, then up to fifteen full conversations. You get a queue grouped by urgency and issue type, with response deadline status and suggested next steps.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Open and pending Zendesk tickets and comment threads.
+    - Recorded response deadlines or your response targets.
+  you_get:
+    - Return ticket details, ages, deadline status, and specific actions for urgent cases.
+  how_it_works:
+    - title: Read waiting tickets
+      text: Fetch open and pending tickets, then read up to fifteen full conversation threads.
+    - title: Sort issues by urgency
+      text: Group serious outages, broken features, billing issues, questions, and feedback.
+    - title: Show the priority queue
+      text: Return ticket details, ages, deadline status, and specific actions for urgent cases.
+  works_best_with:
+    tools:
+      - name: Zendesk
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for zendesk ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Open and pending Zendesk tickets and comment threads.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:zoho-desk-triage:
+  slug: zoho-desk-ticket-priority-planner
+  name: Zoho Desk ticket priority planner
+  summary: Connect Zoho Desk. Get waiting tickets grouped by urgency, department, and issue type.
+  subhead: Connect Zoho Desk and ask for a review of waiting tickets. It reads open tickets and up to fifteen full threads. You get a queue grouped by urgency, with the department, customer, age, issue type, and suggested next steps.
+  licence_file: README.md
+  task: help-customers
+  thinking: medium
+  inputs:
+    - type: question
+      required: true
+    - type: tool_connection
+      required: true
+  outputs:
+    - type: audit_report
+      required: true
+  when:
+    - You use this tool for customer support and need help with this task.
+  you_give:
+    - Open Zoho Desk tickets and full message threads.
+    - The ticket departments, contacts, dates, and issue details.
+  you_get:
+    - List tickets by urgency with department, age, customer, and suggested next actions.
+  how_it_works:
+    - title: Read open tickets
+      text: Fetch open tickets and read full details and message threads for up to fifteen.
+    - title: Classify the issues
+      text: Separate serious problems, billing issues, questions, feature requests, and account issues.
+    - title: Show team priorities
+      text: List tickets by urgency with department, age, customer, and suggested next actions.
+  works_best_with:
+    tools:
+      - name: Zoho Desk
+        why: Live lookups need Composio CLI access and connected accounts for these services.
+  how_to_use:
+    - Add the downloaded folder to an AI that can read skill files.
+    - Ask for zoho desk ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
+    - Provide Open Zoho Desk tickets and full message threads.
+    - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
+    - Review the result. Approve any proposed sending or account changes before they happen.
+  role: make
+composio-community/support-skills:angry-customer-playbook:
+  skip: Existing angry customer reply writer and checker cover this job.
+composio-community/support-skills:customer-winback:
+  skip: Existing retention and win-back skills cover this job; this draft also assumes an incentive.
+composio-community/support-skills:email-verify:
+  skip: Existing customer email list checker covers this job.
+composio-community/support-skills:lead-enrich:
+  skip: Existing contact research skills cover business profile lookups.
+composio-community/support-skills:macro-builder:
+  skip: Template asks for predicted resolution rates and handle times without a required evidence basis.
+composio-community/support-skills:outreach-campaign:
+  skip: Existing outreach sequence and campaign tools cover this job.
+composio-community/support-skills:proposal-draft:
+  skip: Existing sales proposal writer covers the same deliverable.
+composio-community/support-skills:qa-response:
+  skip: Existing support reply checker covers this job; source also uses a different scoring scale.
+composio-community/support-skills:response-templates:
+  skip: Existing support reply and help template writing covers this basic job.

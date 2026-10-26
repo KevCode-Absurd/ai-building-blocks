@@ -1,6 +1,6 @@
 new_slug: payment-reminder-letter-writer
 name: "Payment reminder letter writer"
-summary: "Paste the invoice facts and your history with the customer. Get a reminder that starts where they are and keeps their goodwill."
+summary: "Write a payment reminder letter for a late invoice. Give it the invoice facts and your history with the customer. You get a kind letter and a follow-up."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It is a short letter built from a few facts and a fixed order of parts."
@@ -17,6 +17,10 @@ when:
   - An invoice is a week or two late and you want to keep the customer.
   - You are tired of writing reminders that sound either meek or angry.
   - A good customer has missed one payment after years of paying on time.
+not_for:
+  - "The customer disputes the invoice: talk to them first, sort out the issue, then send a new invoice if needed."
+  - "You need legal collection or a final demand: ask a lawyer or a collections service, since this letter never threatens."
+  - "The customer is brand new and you have no history: send your standard invoice follow-up, or ask them by phone."
 
 you_give:
   - The invoice number, amount, due date and how to pay
@@ -33,6 +37,24 @@ how_to_use:
   - Say whether you want a letter or an email, and who signs it.
   - Check every number and date against your own record before sending.
   - Send the first letter, and keep the follow-up for the date you set.
+output_sample:
+  input:
+    - Your invoice number, amount, due date and how to pay
+    - How long you have worked with this customer and how they usually pay
+    - Whether this is a first or later reminder (optional)
+  output:
+    - name: Feeling we want
+      contains: One line on how the customer should feel at the end of the letter.
+    - name: What they may be thinking
+      contains: Likely thoughts about the bill, each marked as from your history or a guess.
+    - name: Letter
+      contains: A subject line and a short reminder with the amount, date, one reason to pay and one easy step.
+    - name: Follow-up
+      contains: A slightly firmer second letter to send on a set date if there is no reply.
+    - name: Missing
+      contains: Any facts you did not give, marked so you can fill them in.
+    - name: Checks missed
+      contains: One line for each check the letter still fails, or none.
 
 how_it_works:
   - title: Sets the feeling

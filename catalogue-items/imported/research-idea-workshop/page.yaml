@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It needs creative ideas and tough challenge of each.
 new_slug: research-idea-workshop
 name: Research idea workshop
-summary: Name your research area. Get ideas built, challenged and ranked, with
-  assumptions and a decision log.
+summary: Run a research idea workshop on your topic. Get ideas built, challenged and ranked, with the hidden assumptions and a log of why you chose.
 job: research-topics
 headline: Research idea workshop
-subhead: A structured brainstorm for your research area that builds ideas,
-  challenges them and ranks them, ending with a log of why you chose what you
-  chose.
+subhead: A structured brainstorm for your research area that builds ideas, challenges them and ranks them, ending with a log of why you chose what you chose.
 explain: |
   A structured brainstorm for your research area that builds ideas, challenges them and ranks them, ending with a log of why you chose what you chose. Ideas stay proposals until evidence says otherwise.
 
@@ -18,6 +15,10 @@ when:
   - You want your ideas attacked before you invest months.
   - You need a written record of why you chose one idea.
   - You are working alone and want the group effect.
+not_for:
+  - "You already have a testable idea and need a hypothesis: use hypothesis-generation."
+  - "You need a study plan or sample size: use experimental-design or statistical-power."
+  - "You need ethics approval or clinical advice: ask your ethics board or a qualified clinician."
 you_give:
   - Research area or question
   - Participants and their views (optional)
@@ -30,7 +31,26 @@ you_get:
   - Ranked shortlist
   - Decision log
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - Your research area or question
+    - The people taking part and their views (optional)
+    - The criteria that matter to you
+    - Evidence you already have (optional)
+  prerequisites:
+    - "Optional: Python 3.11 or newer, only if you want the small helper tools to organise the files"
+  output:
+    - name: Independent ideas
+      contains: Each person's or round's ideas written alone, before anyone sees the others.
+    - name: Clusters
+      contains: The ideas grouped by theme, with minority views and odd ideas kept.
+    - name: Assumptions
+      contains: The hidden assumptions behind each idea, labelled so they are not mistaken for facts.
+    - name: Adversarial review
+      contains: Notes that attack the weak points of each idea.
+    - name: Scored shortlist
+      contains: Ideas ranked against your criteria, with the scoring shown.
+    - name: Decision log
+      contains: What you chose, why you chose it, and what would make you revisit it.

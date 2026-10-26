@@ -16,6 +16,31 @@ use_cases:
   - "Write simple rules for a decision so emotion doesn't take over"
   - "Check a hot trend for signs that mood, not value, is driving the price"
   - "Explain value investing to a beginner in plain words"
+not_for:
+  - "You want a buy or sell call, or advice on your own savings: talk to a licensed adviser, because this mind gives a method, not a pick."
+  - "You want to value a growth company with a story and little profit: use Aswath Damodaran, who pairs a business story with the numbers behind its value."
+  - "You want to test your own bias and check incentives before a big choice: use Charlie Munger, who checks incentives and failure risks."
+output_sample:
+  input:
+    - The decision you face, such as buying a business, lending money or holding through a fall
+    - Several years of what it earns, owns and owes
+    - The price you are being asked to pay
+    - How many hours a month you can give, and what you did in the last fall (optional)
+  output:
+    - name: Investment or speculation call
+      contains: A sort of your case at this price, with the reasons, based on safety of what you put in and a fair return.
+    - name: Your investor style and split
+      contains: Whether you are the defensive or the enterprising type, with a stock and bond split and a rule to restore it.
+    - name: Value range
+      contains: A low, likely and high value, with the floor if the business stopped, set beside the price.
+    - name: Margin of safety
+      contains: The gap between value and price, and what happens if your estimate is wrong.
+    - name: Debt safety call
+      contains: For a loan or bond, a verdict of safe, speculative or reject, with ranked reasons.
+    - name: Falling market plan
+      contains: Written rules for three sizes of fall and a jump, plus a fixed day to review.
+    - name: Rule you can keep
+      contains: A simple checklist with a selling rule set before you buy, and a plain note on what he does not know.
 seats:
   - {seat: "Margin of safety", asks: "What is this really worth, and how far below that are we paying in case we're wrong?"}
   - {seat: "Investment or speculation", asks: "Does this promise safety of what we put in and a fair return, or are we just hoping the price goes up?"}

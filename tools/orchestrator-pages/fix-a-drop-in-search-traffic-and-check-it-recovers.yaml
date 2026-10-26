@@ -1,6 +1,6 @@
 new_slug: fix-a-drop-in-search-traffic-and-check-it-recovers
 name: Fix a drop in search traffic and check it recovers
-summary: Give it your Search Console export. Get the pages that lost clicks, a ranked fix list and a recovery report.
+summary: Find why your search clicks fell, fix the causes in order and check your traffic recovers. Give it your Search Console export to start.
 job: get-found-in-search
 thinking: high
 thinking_why: Four steps trace a cause and carry it forward, and a wrong cause sends the fixes the wrong way. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Organic clicks fell and you need to find the cause, fix it in the right order and prove the traffic is returning.
   - A Shopify store has duplicate or thin pages that may be wasting search crawling.
   - You want a plain report that shows whether search brings new customers, with brand searches removed.
+not_for:
+  - "Your clicks fell because analytics broke or your site went down: check the tracking and the site first, then come back."
+  - "Your paid ad traffic fell: use the Ad sales drop analyst, since this workflow only reads organic search data."
+  - "You only want a monthly view of search results with no drop to fix: use the Organic search report builder on its own."
 you_give:
   - A Search Console export covering the drop and the period before it
   - Crawl or indexing reports, or page screenshots (optional)
@@ -31,6 +35,29 @@ how_to_use:
   - Export Search Console for the drop and the equal period before it. Give it the theme files if you use Shopify.
   - Duplicate your theme and test each change there before it goes live. Do not noindex pages that bring organic sales.
   - Wait four weeks after the fixes, export again for the same pages, and run the last step.
+output_sample:
+  input:
+    - Your Search Console export for the drop and the period just before it
+    - Your Shopify theme files, for the duplicate page fixes
+    - Crawl or indexing reports, or page screenshots (optional)
+    - Your brand search terms (optional)
+    - After four weeks, a fresh export for the same pages
+  prerequisites:
+    - An AI that can read uploaded files, such as Claude with a Project or Claude Code
+    - Access to your Shopify theme, so you can test each change on a copy
+  output:
+    - name: "Step 1: Diagnosis"
+      contains: Pages ranked by clicks lost, what they share, a likely cause for each group and a score out of 100.
+    - name: "Step 2: Fix ranking"
+      contains: Fixes ranked by revenue at risk, a list of things to ignore, a setup checklist and a score.
+    - name: "Step 3: Duplicate pages"
+      contains: Exact theme edits, redirects and settings, pages not to noindex, a re-test checklist and a score.
+    - name: Pause
+      contains: You make the fixes live, wait four weeks and export a fresh report for the same pages.
+    - name: "Step 4: Recovery report"
+      contains: Non-branded and branded clicks, the organic sales funnel, a changes log, a score and the next thing to check.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Diagnose the drop
     text: Ranks pages by clicks lost, finds what they share, reads click rate against position and checks the store itself before blaming search. It orders fixes for each group and scores how clear the cause is.

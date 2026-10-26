@@ -1,0 +1,165 @@
+name: Deal Strategist agent
+summary: Score a B2B deal against all eight MEDDPICC checks and get the gaps ranked, a competitor plan and next actions with owners and dates.
+headline: Deal Strategist agent
+subhead: Paste your notes on one big sales deal, plus any rivals you know. It scores each of the eight MEDDPICC checks from your evidence, names what you do not know yet, shows where you win and lose against each rival, and gives next actions with owners and dates.
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A deal can look healthy in your CRM and still be weak. The buyer liked the
+  demo, but nobody has met the person who controls the budget. The legal review
+  has not started. A rival helped write the criteria. This deal strategist agent
+  checks a complex B2B deal for those gaps using MEDDPICC, a qualification
+  checklist with eight parts: metrics, economic buyer, decision criteria,
+  decision process, paper process, pain, champion and competition.
+
+
+  It scores each part from your evidence, not from how you feel. If you wrote
+  "the buyer loved it", it asks what they said, who said it and what they
+  agreed to do next. Every gap comes with a next action, an owner and a date. For
+  each rival it sorts the buyer's criteria into where you win, where it is a
+  fight and where you lose, and it suggests honest questions that bring up your
+  strengths early.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It works only from
+  your notes and cannot open your CRM or talk to the buyer. The scores are its
+  judgment from what you paste. The win-rate and deal-size claims in the profile
+  are the author's, not results from AI Blocks.
+when:
+  - You are about to put a large deal in your forecast and want to know if the evidence holds up.
+  - Your deal has stalled and you suspect you have never met the person who controls the budget.
+  - A rival has entered the deal and you need a plan for each point where you compare.
+  - Your manager asks for a deal review and you have an hour to prepare.
+not_for:
+  - You want one deal read straight from your CRM, email and calls. Use the Deal health reviewer, which is built for connected tools.
+  - You want a whole pipeline checked and a forecast. Use the Pipeline Analyst agent.
+  - A deal has gone quiet and you want a message to revive it. Use the Stalled deal revival desk.
+  - You want to improve how a rep sells. Use the Sales Coach agent.
+  - You want a proposal or a contract written. Use the Proposal Strategist agent.
+you_give:
+  - The account, the deal value, the stage and the date you hope to close
+  - Everything you know under the eight MEDDPICC headings, even if it is only a line each
+  - Notes or a transcript from your latest calls (optional)
+  - The rivals in the deal, and what the buyer has said about them (optional)
+  - What you plan to do next (optional)
+you_get:
+  - A score for each MEDDPICC check, with the evidence and the gap beside it
+  - An overall verdict, such as winnable if the gaps close in 14 days
+  - Red flags that often kill deals, with the ones that apply to you marked
+  - A map of where you win, fight and lose against each rival, with questions to ask the buyer
+  - A next action for each gap, with an owner and a date
+  - A list of what you must confirm with the buyer before you rely on the score
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your notes on the deal. List each MEDDPICC heading and write what you know under it. Write "unknown" where you do not know.
+  - Add your rivals and what you have heard about them. Say if you want a message plan as well as the review.
+  - Read the score table first. For any heading marked MISSING or UNPROVEN, check your notes, since the score depends on what you wrote.
+  - Pick the top two gaps and book the actions this week. Ask the buyer the questions it gives you.
+  - Paste the new facts back in after your next call and ask for a new score.
+how_it_works:
+  - title: Collect the facts
+    text: It lists what you know for each of the eight checks and marks what is missing or only your opinion.
+  - title: Score the evidence
+    text: It scores each check from 0 to 5 with the proof behind it. It does not count hopes or polite comments.
+  - title: Test the soft spots
+    text: It asks the hard questions, such as who controls the money, when you last spoke to them and what the champion says happens next.
+  - title: Check for red flags
+    text: It looks for one thread to a person who is not the buyer, no deadline, no access to the budget holder and criteria that favor a rival.
+  - title: Compare with rivals
+    text: It sorts each buying criterion into win, fight or lose, with honest ways to reposition and questions to ask.
+  - title: Plan the message
+    text: If asked, it builds a short teaching sequence that moves from the buyer's problem to your solution.
+  - title: Set the actions
+    text: It gives a next action, an owner and a date for each gap and says what to confirm.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <account> | value <amount or MISSING> | stage <stage> | target close <date> | ASSUMED: <list> | MISSING: <list>
+
+  MEDDPICC SCORE
+    <element> | score <0 to 5 or UNKNOWN> | evidence <what the buyer said or did> | gap or risk <what is not known>
+    total <sum out of 40> | note <how many elements are UNKNOWN>
+
+  VERDICT
+    <strong, winnable if gaps close, at risk or not a real deal> | because <reasons> | window <days>
+
+  RED FLAGS
+    <flag> | applies <yes, no or unknown> | evidence
+
+  COMPETITIVE POSITION (if rivals are named)
+    <rival> | <criterion> | zone <win, fight or lose> | how to handle it | question to ask the buyer
+
+  MESSAGE PLAN (if asked)
+    <step> | what to say | proof you need
+
+  NEXT ACTIONS
+    <action> | gap it closes | owner | due date
+
+  STILL TO CHECK
+    <item> | who confirms it
+output_sample:
+  input:
+    - The account, deal value, stage and target close date
+    - What you know under each of the eight MEDDPICC headings
+    - Notes from recent calls, and the rivals in the deal (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your honest notes. Mark unknowns as unknown, not as a guess.
+  output:
+    - name: MEDDPICC score
+      contains: A 0 to 5 score for each of the eight checks, with evidence and the gap.
+    - name: Verdict
+      contains: A plain call on the deal and how long you have to close the gaps.
+    - name: Red flags
+      contains: The deal-killing signs that apply to your deal, and the evidence for each.
+    - name: Competitive position
+      contains: For each rival, where you win, fight or lose, and what to ask the buyer.
+    - name: Message plan
+      contains: A teaching sequence from the buyer's problem to your solution, if you asked for one.
+    - name: Next actions
+      contains: One action per gap, with an owner and a date.
+    - name: Still to check
+      contains: Facts to confirm with the buyer before you trust the score.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They keep all eight checks in view and press on soft answers. You get a score table back in one pass.
+    - name: Your CRM
+      why: It holds the stage and contacts. Copy the deal notes in, as the AI cannot read your CRM itself.
+  inputs:
+    - A call transcript that shows what the buyer said in their own words.
+    - The buyer's written criteria or evaluation sheet, if they sent one.
+    - The names and roles of everyone you have met on the buyer's side.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scale
+    how: Use the 0 to 5 score per check by default. Ask for red, amber and green instead if you prefer a simpler view.
+  - what: Method
+    how: Name your own checklist, such as BANT or MEDDIC, if your team does not use MEDDPICC. Say which headings you use.
+  - what: Scope
+    how: Ask for the score and next actions only. Add the rival plan and message plan after you have fixed the gaps.
+improve:
+  - Paste what you learn after each call and ask for a fresh score. Compare it with the last one.
+  - When a deal closes or is lost, paste the result and ask which gaps it missed, then use that on the next deal.
+terms:
+  - term: MEDDPICC
+    meaning: A deal checklist with eight parts, such as who pays, what the problem is and how the buyer decides.
+  - term: Economic buyer
+    meaning: The person who can say yes to the spend, even if others say no.
+  - term: Champion
+    meaning: A person on the buyer's side who wants you to win and has the access and power to help.
+  - term: Paper process
+    meaning: The legal, security and purchasing steps that come after the buyer says yes.
+  - term: Happy ears
+    meaning: Hearing a polite or keen buyer as if they had agreed to buy.
+  - term: Landmine question
+    meaning: An honest question that brings up a need where you are strong and a rival is weak.

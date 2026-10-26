@@ -1,6 +1,6 @@
 new_slug: cut-caption-and-check-a-video-ad-before-launch
 name: Cut, caption and check a video ad before launch
-summary: Give it your clips and script. Get a cut list, brand-font captions and a launch check.
+summary: Turn your clips and script into a cut list, brand-font captions and a launch check for your video ad, with a fix for each mistake.
 job: make-video-ads
 thinking: medium
 thinking_why: Each step is a defined check. A mid-level model is enough.
@@ -13,24 +13,54 @@ explain: |-
 
   It plans and checks. It does not edit or render the video for you.
 when:
-  - Your clips are ready but the ad is not edited.
+  - Your clips are ready but the ad is not edited yet.
   - You edited an ad and want captions that fit the speech.
-  - You want a last check before you put money behind it.
+  - You want a last check before you put money behind the ad.
+  - You want one run that covers the cut, the captions and the check.
+not_for:
+  - "Your ad is already cut and captioned: use the Pre-launch ad checker on its own."
+  - "You only need captions on a finished video: use the Video caption maker in your brand font."
+  - "You still need a script: write one first with the Video ad script writer from customer quotes."
 you_give:
-  - The list of your clip files
+  - The list of your raw clip files
   - The script the clips follow
   - Your offer (optional)
-  - Your brand font and file (optional)
+  - Your brand font file (optional)
+  - The exported video, after you edit it at the pause
 you_get:
   - A cut list with in and out times for each shot
   - A caption plan in your font, an exported file and a subtitle file
   - A launch check with a verdict, a fix for each mistake and a score out of 100
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Attach or list your clips and paste the script.
-  - When it stops after the cut list, edit the video and export it.
-  - Attach the exported video and your font. It adds captions, then checks the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
+  - List your clips and paste your script. Step 1 needs only these.
+  - When it stops after the cut list, edit the video in your own editor and export it.
+  - Attach the exported video and your font. Step 2 adds captions and step 3 checks the result.
+  - Fix every stop-ship mistake, then run the check again before you launch.
+output_sample:
+  input:
+    - The list of your raw clip files
+    - Your video ad script, beat by beat
+    - Your offer (optional)
+    - Your brand font file (optional)
+    - Your brand brain folder (optional)
+  prerequisites:
+    - A video editor, to cut and export the ad at the pause
+    - An AI that can read files, if you use the handoff pack
+  output:
+    - name: Cut list
+      contains: Cuts by clip file with in and out times, caption windows, a sound plan, export settings and gaps.
+    - name: Caption groups
+      contains: The script split into word-for-word caption groups, with a style, font and timing table.
+    - name: Subtitle file
+      contains: A timed subtitle file you can load next to the captioned video.
+    - name: Fault list
+      contains: Caption problems found, such as text sitting under app buttons, each with a fix.
+    - name: Launch check
+      contains: Stop-ship mistakes first, each with a fix, then a ship or fix verdict and a score out of 100.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the cut
     text: Sorts your clips by job, opens on a clean first frame, times every shot to the real files and plans sound and exports.

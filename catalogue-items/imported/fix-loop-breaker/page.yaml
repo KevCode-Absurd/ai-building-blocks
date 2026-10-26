@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must tell real progress from repeated guesses.
 new_slug: fix-loop-breaker
 name: Fix loop breaker
-summary: Give it a bug your AI keeps failing to fix. Get a three-try repair
-  plan, proof it works and a way back.
+summary: Stop your AI from patching the same bug over and over. Get a three-try repair plan, proof the fix works and a tested way to undo it.
 job: test-and-fix-code
 headline: Fix loop breaker
-subhead: When your AI keeps patching the same bug and nothing changes, this
-  gives it a strict way to stop guessing. You get a repair with proof that it
-  worked and a tested way back.
+subhead: When your AI keeps patching the same bug and nothing changes, this gives it a strict way to stop guessing. You get a repair with proof that it worked and a tested way back.
 explain: |
   When your AI keeps patching the same bug and nothing changes, this gives it a strict way to stop guessing. You get a repair with proof that it worked and a tested way back.
 
@@ -18,6 +15,10 @@ when:
   - A small test passes but the live app still fails.
   - You need proof that a fix works, not only a claim.
   - You want a rollback that has been tested before you trust a change.
+not_for:
+  - "You have a one-shot edit and one check already covers the whole behavior: make the edit and run that check, no extra steps needed."
+  - "You cannot reproduce the bug at all: first get a command or steps that show it fail, or ask a developer to help, before any repair."
+  - "You only want to find the cause and not change code: ask your AI to investigate and report, or ask a developer to review the logs."
 you_give:
   - Description of the bug
   - Command or steps that show the failure
@@ -30,8 +31,33 @@ you_get:
   - Tested rollback
   - "Plain verdict: fixed, not fixed or inconclusive"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in a tool that can run code and read your project files, such as Claude Code, Codex CLI, Cursor or Gemini CLI.
+  - Paste the skill into the chat, or add its folder to your project.
+  - Describe the bug and paste the command or steps that show the failure.
+  - Tell your AI to follow the skill and stop after three attempts.
+  - Check the final status. Only trust the fix if it says proven and lists the checks it ran.
+  - Confirm before it changes anything in a live or production setup.
+output_sample:
+  input:
+    - A short description of the bug
+    - The command or steps that show the failure
+    - Access to your project files
+    - How to undo the change (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - A copy of the project you can safely test on
+  output:
+    - name: Repair contract
+      contains: The exact bug, the command that shows it, the starting result and the way to undo the change.
+    - name: Attempt log
+      contains: Up to three attempts, each with one cause, a prediction, changed files and the check results.
+    - name: Failure fingerprint
+      contains: A stable record of what the system did, used to spot when the same failure keeps coming back.
+    - name: Real-path check
+      contains: Proof the fix works where it matters, such as the live app, not only in a small test.
+    - name: Negative control
+      contains: A run on a copy with the bug put back, showing the check can fail.
+    - name: Rollback test
+      contains: Proof the undo steps restore the old behavior on a separate copy.
+    - name: Final status
+      contains: "One verdict: proven, inconclusive or blocked, with commands, results and gaps left."

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It groups and ranks by a set method.
 new_slug: search-intent-keyword-mapper
 name: Search intent keyword mapper
-summary: Give it your topic. Get keywords sorted by search intent, grouped into
-  themes and ranked for what to write first.
+summary: Turn a keyword list into search intent groups and a ranked plan. Give it your topic and get keywords sorted by intent, grouped into topics.
 job: get-found-in-search
 headline: Search intent keyword mapper
-subhead: A keyword list sorted by what searchers want, grouped into topics and
-  ranked by what to write first. It works with any keyword tool, or with Search
-  Console data alone if you have none.
+subhead: A keyword list sorted by what searchers want, grouped into topics and ranked by what to write first. It works with any keyword tool, or with Search Console data alone if you have none.
 explain: |
   A keyword list sorted by what searchers want, grouped into topics and ranked by what to write first. It works with any keyword tool, or with Search Console data alone if you have none.
 
@@ -18,6 +15,10 @@ when:
   - You have a long keyword export and no idea which ones belong together.
   - You want to plan next quarter's content calendar from real demand.
   - You need to find topics your competitors rank for and you do not.
+not_for:
+  - "You already know the one keyword for a page and want to tune that page: use a page-level SEO check, or edit the page by hand."
+  - "You want to compare your site with a competitor on many points: do a competitor review with a person or a separate SEO tool."
+  - "You want to check how your existing pages perform: look at Google Search Console, or ask an SEO specialist for a content audit."
 you_give:
   - Your site or topic area
   - Audience and what they need
@@ -29,7 +30,30 @@ you_get:
   - A ranked order of what to write first
   - Content gaps against competitors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Tell your AI your site or topic, your audience and what they need.
+  - Paste your keyword export or Search Console queries. Add three to five competitors if you have them (optional).
+  - Check the intent label on a few keywords against what ranks in Google.
+  - Write the top cluster's main page first, then link its secondary topics to it.
+  - Next, tune each page with seo-onpage, and review old pages later with seo-content-audit.
+output_sample:
+  input:
+    - Your site or topic area
+    - Your audience and what they need
+    - A keyword export or Search Console data
+    - Three to five competitors (optional)
+  prerequisites:
+    - A keyword export from a tool like Ahrefs, Semrush or Google Keyword Planner, or Search Console data. Without either, volume figures will be rough.
+  output:
+    - name: Keyword sheet
+      contains: One row per keyword with volume, difficulty, intent, SERP features, cluster, cluster role, scores, priority and notes.
+    - name: Intent labels
+      contains: Each keyword marked informational, navigational, commercial or transactional, checked against what ranks in search results.
+    - name: Cluster list
+      contains: Keywords grouped by topic, each with one primary keyword and several secondary keywords for one page.
+    - name: Cluster scores
+      contains: Each cluster scored on opportunity, difficulty and strategic fit, then combined into a priority score.
+    - name: Markdown summary
+      contains: The top 10 to 20 clusters in detail, ranked by what to write first.
+    - name: Data gaps note
+      contains: What data was missing and which parts of the result it affects.

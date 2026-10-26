@@ -17,12 +17,12 @@ outputs:
   - {type: ad_copy}
 uses: [pre-launch-ad-checker, meta-ads-compliance-checker, ad-and-page-policy-checker, claim-and-proof-matcher, ad-and-page-match-checker, sound-off-commercial-checker]
 steps:
-  - {uses: pre-launch-ad-checker, note: "Every round: stop-ship mistakes, the five links, the facts, a verdict and a score."}
-  - {uses: meta-ads-compliance-checker, note: "Every round, if the ad runs on Meta: compliance problems, a score and a fixed ad."}
-  - {uses: ad-and-page-policy-checker, note: "Every round instead of the Meta check, if the ad runs on another platform: policy risks with safer rewrites."}
-  - {uses: claim-and-proof-matcher, note: "Only when a round flags a claim as not confirmed or ahead of its proof: each claim paired with its proof."}
-  - {uses: ad-and-page-match-checker, note: "Once, for a picture ad that has a page: whether the ad and page make the same promise."}
-  - {uses: sound-off-commercial-checker, note: "Only for a video ad, and again whenever the script changes: whether it still sells with the sound off."}
+  - {uses: pre-launch-ad-checker, note: "Every round: stop-ship mistakes, the five links, the facts, a verdict and a score. Hands the fix step the stop-ship list and the smallest fix for each; it does not rewrite the ad."}
+  - {uses: meta-ads-compliance-checker, note: "Every round, if the ad runs on Meta: reads the current version of your ad, with the last round's fixes in, not step 1's report. Hands back compliance problems, a score and the ad with the fixes in, which the later checks read."}
+  - {uses: ad-and-page-policy-checker, note: "Every round instead of the Meta check, if the ad runs on another platform: reads the current ad copy and hands back policy risks with safer rewrites, which the claim check reads."}
+  - {uses: claim-and-proof-matcher, note: "Only when a round flags a claim as not confirmed or ahead of its proof: reads the current ad copy from the policy or Meta check, and the proof from the facts you gave. Hands back each claim paired with its proof, or cut back."}
+  - {uses: ad-and-page-match-checker, note: "Once, for a picture ad that has a page: uses your picture ad and your page, not the earlier reports. Hands back whether the ad and page make the same promise, with the mismatches to fix."}
+  - {uses: sound-off-commercial-checker, note: "Only for a video ad, and again whenever the script changes: uses your video script, not the earlier reports. Hands back whether it still sells with the sound off, with a replacement shot for each spoken line that has no picture."}
 schedule: "Each time an ad is finished, before it goes into the ad account"
 asks_before: [adding any claim, number, offer term or guarantee that is not in the facts you gave, uploading or publishing the ad, changing the ad's picture or video, spending anything on the ad]
 origin: own

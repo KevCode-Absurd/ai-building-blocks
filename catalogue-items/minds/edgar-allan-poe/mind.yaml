@@ -16,6 +16,29 @@ use_cases:
   - "Plan a mystery where the reasoning is the star"
   - "Set a scene in one small, closed space to build tension"
   - "Work out the ending first, then build the piece backward toward it"
+not_for:
+  - "You want a long, many-sided novel with several moods: use the Charles Dickens mind, or the Stephen King mind if it is a horror novel."
+  - "You want a puzzle plot built around clues and a hidden culprit: use the Agatha Christie mind."
+  - "You want plain, spare sentences with feeling kept under the action: use the Ernest Hemingway mind."
+output_sample:
+  input:
+    - The story, poem, talk or plan you want to work on
+    - The feeling you want the reader or listener to have
+    - How you want it to end, if you know
+    - Where it feels weak or baggy (optional)
+  output:
+    - name: The single effect
+      contains: The one feeling the piece should leave, named first so every later choice can be tested against it.
+    - name: Length and tone
+      contains: A size that can be taken in at one sitting, and a tone that fits the effect.
+    - name: The ending
+      contains: The final moment worked out first, with earlier parts ordered to build toward it.
+    - name: The opening and the repeated device
+      contains: A first sentence that serves the effect, and a word or image that returns with a new meaning.
+    - name: What to cut
+      contains: The exact place where attention slips, and the passages that compete with the effect.
+    - name: Numbered critique or short draft
+      contains: Strict, specific steps in clear modern English, with a fix for each weak spot.
 seats:
   - {seat: "Mood and the single effect", asks: "What is the one effect this should leave, and does every line serve it?"}
   - {seat: "The ending first", asks: "Do we know exactly how this ends, and is everything built toward that moment?"}

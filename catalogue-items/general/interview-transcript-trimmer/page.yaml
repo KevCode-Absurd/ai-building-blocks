@@ -1,6 +1,6 @@
 new_slug: interview-transcript-trimmer
 name: "Interview transcript trimmer"
-summary: "Paste a long interview transcript. Get it cut in passes to the few truly interesting passages, with the order to use them."
+summary: "Trim a long interview transcript to the few lines worth using. You get the speaker's own words, in order, plus follow-up questions."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "Cutting in passes needs repeated judging, but each rule is simple and checkable."
@@ -14,26 +14,46 @@ explain: |
   This skill works the way an editor does by hand. It reads the whole transcript once and underlines only lines that surprise. It copies them to a new file, then cuts that file in passes until it is about a tenth of the length. It orders what is left by feeling, not by time, and checks that no cut or move changes what the speaker meant. It also marks the thin spots where you should have asked more, and turns each into a follow-up question.
 
 when:
-- "You recorded an hour of talk and need the five minutes that matter."
-- "You are making a quote page, a podcast clip list or a case study from an interview."
-- "You want to know what to ask in the next interview."
+  - "You recorded an hour of talk and need the five minutes that matter."
+  - "You are making a quote page, a podcast clip list or a case study from an interview."
+  - "You want to know what to ask in the next interview."
+not_for:
+  - "You only want a plain summary of the talk: use a summary tool or ask your AI for a short recap."
+  - "Your clip is under about ten minutes: read it and pick the lines yourself."
+  - "You want to rewrite the speaker's words into a polished article: use a writer or editor, since this tool never rewords."
 
 you_give:
-- "The full transcript, with the speaker named"
-- "What the piece is for (optional)"
-- "Lines or topics you must keep (optional)"
+  - "The full transcript, with the speaker named"
+  - "What the piece is for (optional)"
+  - "Lines or topics you must keep (optional)"
 you_get:
-- "The kept passages in the speaker's own words"
-- "The order to use them, with a reason"
-- "A list of cut passes showing what went when"
-- "Follow-up questions for the thin spots"
+  - "The kept passages in the speaker's own words"
+  - "The order to use them, with a reason"
+  - "A list of cut passes showing what went when"
+  - "Follow-up questions for the thin spots"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Paste the full transcript with speaker names."
-- "Say what the cut will be used for."
-- "Check the kept lines against your memory of the talk."
-- "Ask for a second pass if you need it shorter."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the full transcript with speaker names."
+  - "Say what the cut will be used for."
+  - "Check the kept lines against your memory of the talk."
+  - "Ask for a second pass if you need it shorter."
+output_sample:
+  input:
+    - Your full interview transcript, with speaker names
+    - What the cut is for (optional)
+    - Lines or topics you must keep (optional)
+  output:
+    - name: Kept passages
+      contains: The best lines in the speaker's own words, in the order to use, each with its time or line number and a reason.
+    - name: Pass log
+      contains: The word count of the source, after each cutting pass, and at the end.
+    - name: Follow-up questions
+      contains: One question for each thin spot, tied to the line where the talk moved on too soon.
+    - name: MISSING
+      contains: Any gap, such as unnamed speakers or missing time marks, marked instead of guessed.
+    - name: CHECKS MISSED
+      contains: One line for each check that still failed, or none.
 
 how_it_works:
   - title: "Read once and underline"
@@ -80,23 +100,23 @@ tweaks:
     how: "Label every speaker so lines are not mixed up."
 
 judge:
-- "Every kept line is word for word from the source."
-- "You can find each line in the source by its marker."
-- "The cut is at least 80 percent shorter."
-- "The order builds instead of following the clock."
-- "Every follow-up question points at a line."
+  - "Every kept line is word for word from the source."
+  - "You can find each line in the source by its marker."
+  - "The cut is at least 80 percent shorter."
+  - "The order builds instead of following the clock."
+  - "Every follow-up question points at a line."
 
 test:
-- "Check five kept lines against the source by searching for them."
-- "Ask a friend to read the cut and say what the talk was about."
-- "Compare the cut with your own favourite lines. Note what it missed."
-- "Run it twice. Most kept lines should repeat."
+  - "Check five kept lines against the source by searching for them."
+  - "Ask a friend to read the cut and say what the talk was about."
+  - "Compare the cut with your own favourite lines. Note what it missed."
+  - "Run it twice. Most kept lines should repeat."
 
 improve:
-- "Add your own tests of what surprises you to step 1."
-- "Add a limit on the length of each kept line."
-- "Save the follow-up questions in a file for the next interview."
-- "Pair it with \"Case-first story builder\" to use the passages in a piece."
+  - "Add your own tests of what surprises you to step 1."
+  - "Add a limit on the length of each kept line."
+  - "Save the follow-up questions in a file for the next interview."
+  - "Pair it with \"Case-first story builder\" to use the passages in a piece."
 
 works_best_with:
   tools:

@@ -1,0 +1,41 @@
+slug: agency-narrative-designer
+name: Narrative Designer agent
+summary: Get a game narrative plan with story and player choice paths. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/narrative-designer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/narrative-designer.md
+  licence: MIT
+  original_name: Narrative Designer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7a5489c7b0502aa167030018137e3f349d2c32505c0ad7b9ec1de066a9a93f0d
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Narrative Designer
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Narrative Designer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/narrative-designer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

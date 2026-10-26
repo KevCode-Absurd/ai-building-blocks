@@ -45,7 +45,7 @@ Check the market has a clear before and after and loyal buyers. If the person ha
 List 30 emotional sub-niches (specific buyer problems) for a beginner direct-to-consumer brand in that market. Example sub-niches from the source: lower back stiffness, neck and shoulder tension, plantar fasciitis. Each line has the problem in the buyer's words, and who has it. Make them specific problems, not product types. A winning problem can hold many products. Example: for migraines, the products could be supplements, a head band, a massage gun or neck traction.
 
 ## 3. Help pick five
-Let the person pick the five they like most. If they ask for help, rank by: how often the problem is felt (daily is best), how much the buyer wants it solved, how many different products could solve it, and how well the person knows the space. State that this ranking is judgment, not data.
+Let the person pick the five they like most. If they ask for help, rank by: how often the problem is felt (daily is best), how much the buyer wants it solved, how many different products could solve it, and how well the person knows the space. State that this ranking is judgment, not data. For each pick list exactly 2 or 3 other products that could solve the problem, never fewer and never more.
 
 ## 4. List who sells to each pick
 For each of the five, list the brands that sell to it with enough active ads, and for each: the product, the pain point, the ad pattern, the page type (product page or article-style page) and the top ad.
@@ -55,13 +55,10 @@ For each of the five, list the brands that sell to it with enough active ads, an
 Never write a brand name or an ad count that did not come from the tool or the person.
 
 ## 5. Choose a product
-Choose a product for the best problem that fits the winning product scorer's rules (margin, problem, shipping), then check it with the competitor revenue estimator. List 2 or 3 product options per picked problem, not just one.
+List 2 or 3 product options per picked problem, not just one. Say which fits a beginner best on margin, shipping and how clearly it solves the problem. Then tell the person to check the best option with the Product idea viability scorer and the Competitor revenue estimator, which are separate items in the library. If they do not have them, give the manual checks: work out cost, price and shipping by hand, and look at how many stores sell the product and how busy they are.
 
 ## 6. Write the game plan
-Plan before any money is spent. If the test fails, the first question is why. Rarely is it the product alone. Check the ads first, then the page and checkout, using the ad performance diagnoser skill. Say that the person should decide the test budget and the stop point in advance.
-
-## 7. Time it
-Budget about an hour for this process once the tool is set up.
+Plan before any money is spent. If the test fails, the first question is why. Rarely is it the product alone. Check the ads first, then the page and checkout, using the Ad performance change investigator (a separate item in the library) or the person's own ad numbers. Say that the person should decide the test budget and the stop point in advance.
 
 ## What you hand back
 Hand it back in exactly this layout:
@@ -86,7 +83,7 @@ SEARCHES TO RUN (when there is no tool)
 <problem>: <free Ad Library search terms>
 
 PRODUCT PICKS
-<problem> -> <product option> (check with the winning product scorer and the competitor revenue estimator)
+<problem> -> <product option> (check with the Product idea viability scorer and the Competitor revenue estimator)
 
 GAME PLAN
 Test budget <n> | stop point <n> | if it fails ask why: ads first, then page and checkout
@@ -109,9 +106,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Checks
 Before you hand it back, check each one and fix any that fail.
 - There are exactly 30 sub-niches, and each is a buyer problem, not a product.
-- Five picks are shown with a reason each.
+- Five picks are shown with a reason each, and each lists exactly 2 or 3 other products.
 - Every brand and ad count came from the tool or the person. Anything else is marked `[idea, not data]`.
-- Product picks name the next checks (scorer, revenue estimator).
+- Product picks name the next checks (Product idea viability scorer, Competitor revenue estimator).
 - The game plan names the budget, the stop point and the ads-first rule.
 - Health, weight and body markets carry the check-with-a-qualified-person line.
 

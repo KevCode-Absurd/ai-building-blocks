@@ -1,6 +1,6 @@
 slug: voice-over-stripping-test
 name: "Voice-over stripping test"
-summary: "Paste a script with narration. Get a verdict on each line: does the story work without it?"
+summary: "Find which voice-over lines your video script can cut. Get each line sorted as telling or counterpoint, plus a shorter script."
 category: general
 type: skill
 role: check
@@ -8,6 +8,7 @@ job: ops
 level: intermediate
 inputs:
   - {type: script, required: true}
+  - {type: plan, required: false}
 outputs:
   - {type: feedback_notes}
   - {type: script}

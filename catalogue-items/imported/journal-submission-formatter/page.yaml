@@ -2,21 +2,24 @@ thinking: low
 thinking_why: It applies set venue rules to your paper.
 new_slug: journal-submission-formatter
 name: Journal submission formatter
-summary: Name the venue, year, track and stage. Check its official guide, then
-  fit your paper to confirmed rules.
+summary: Check a journal or conference's official rules, then fit your paper to them. Get a dated rules note and a page and font check on your PDF.
 job: research-topics
 headline: Journal submission formatter
-subhead: Name the venue, year, track and stage; we check its official guide,
-  date each rule, then fit your paper to confirmed venue rules.
+subhead: Name the venue, year, track and stage; we check its official guide, date each rule, then fit your paper to confirmed venue rules.
 explain: |
   Your paper fitted to the rules of the venue you are sending it to, with those rules checked at the source. Name the journal or conference, the year, the track and the stage: first submission, revision or final copy. The skill finds the official author instructions and records the page, date checked, page limit, anonymity rules, required sections and citation style.
 
   It will not guess a style file by changing the year on an old name. It offers LaTeX starting points for common document types and clearly labels them as generic, not official. It can also inspect a PDF for page count and fonts, and it covers funding proposals and posters. Reviewer expectations shape the writing advice.
 when:
-  - You are submitting to a conference and the deadline is close.
-  - Your paper is over the page limit and you need to cut smartly.
+  - You are sending a paper to a conference and the deadline is close.
+  - Your paper is over the page limit and you need to know what counts toward it.
   - You must hide author details for blind review.
   - You are writing a grant proposal and need the funder's format.
+  - Your paper needs a revision and you need the rules for that stage.
+not_for:
+  - "You have an accepted paper and need the final print files: follow the publisher's own production instructions instead."
+  - "You can't find an official author guide for the venue: ask the editors or organizers first, as this tool won't guess the rules."
+  - "You only want the paper's writing improved, with no venue to target: ask a colleague or a writing coach to review it."
 you_give:
   - The journal, conference or funder
   - The year, track and submission stage
@@ -28,8 +31,30 @@ you_get:
   - A page and font check on the PDF
   - Writing tips for that venue's reviewers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and search the web.
+  - Open your AI tool and paste in the skill. Pick one that can search the web.
+  - Tell it the venue, year, track and stage. Paste your draft.
+  - Check the compliance note it writes. Open the source link and confirm the rules yourself.
+  - Ask it to fit your draft to the official template. Download that template from the venue first.
+  - If you have a PDF and your AI can run code, ask for the page and font check.
+  - Go through the final checklist by hand before you submit.
+output_sample:
+  input:
+    - The journal, conference or funder you are sending to
+    - The year, track and stage (first submission, revision or final copy)
+    - Your draft paper or proposal
+    - Your PDF, if you want a page and font check (optional)
+  prerequisites:
+    - An AI that can search the web to read the official author guide
+    - An AI that can run code, for the PDF check and the template helpers (optional)
+    - LaTeX on your computer, to compile the paper (optional)
+  output:
+    - name: Compliance note
+      contains: The venue, year, track, stage, official source link, date checked, page limit, anonymity rule and template.
+    - name: Fitted draft
+      contains: Your paper set into the official template or a labeled generic starting point, using only confirmed rules.
+    - name: PDF validation report
+      contains: The page count against the limit and a list of fonts that are not embedded.
+    - name: Venue writing advice
+      contains: Tips on tone and structure based on what reviewers at that venue look for.
+    - name: Final compliance checklist
+      contains: A tick list of items still to check by hand, such as anonymity, required statements and supplements.

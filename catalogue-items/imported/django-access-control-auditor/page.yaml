@@ -2,23 +2,23 @@ thinking: high
 thinking_why: It traces permission paths through the code.
 new_slug: django-access-control-auditor
 name: Django access control auditor
-summary: Point it at a Django project. Get a review of who can see or change
-  what, with fixes for each gap.
+summary: "Check your Django access control: find where one user can reach another user's data. Each confirmed gap comes with a code fix."
 job: secure-code
 headline: Django access control auditor
-subhead: "A review of your Django code that answers one question: can user A
-  see, change or delete user B's data? You get confirmed problems, each with a
-  fix, not a list of guesses."
+subhead: "A review of your Django code that answers one question: can user A see, change or delete user B's data? You get confirmed problems, each with a fix, not a list of guesses."
 explain: |
   A review of your Django code that answers one question: can user A see, change or delete user B's data? You get confirmed problems, each with a fix, not a list of guesses.
 
   The skill first learns how your project handles permissions: decorators, mixins, serializers, queryset filters and so on. Then it asks specific questions about each data flow and traces the code to find where checks happen or are missing. It reports only what it has proved by reading the code. It is built on the OWASP guidance on object-level authorization, and it works on Django and Django REST Framework. It reads your code and does not run attacks.
 when:
-  - You are about to launch and want to know if users can reach each other's
-    records.
+  - You are about to launch and want to know if users can reach each other's records.
   - An API takes object IDs and you are unsure if ownership is checked.
   - You added new endpoints and need a security check before release.
   - A customer asks for proof that data is separated between accounts.
+not_for:
+  - "You need a network or server security check: hire a penetration tester, who tests live systems."
+  - "Your app is not built on Django or Django REST Framework: ask a developer who knows your stack to review who can reach whose data."
+  - "You want an attack run against live user accounts: ask a security professional to test on a staging copy, never on real users' data."
 you_give:
   - Your Django or DRF project code
   - Your user and permission model (optional)
@@ -29,8 +29,27 @@ you_get:
   - The code path behind each finding
   - A suggested fix for each gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, or upload the skill folder if your AI takes files.
+  - Share your project code. Views, models, serializers and permission files matter most. Your AI needs to read files, so use a tool that can open your project.
+  - Say which areas worry you most, such as billing or user records. Skip this if you are not sure.
+  - Read each finding and the code path behind it. Check the ones marked for manual verification yourself.
+  - Apply the fixes. Then test with bad requests on a staging copy, never on real users' data, and run the review again.
+output_sample:
+  input:
+    - Your Django or Django REST Framework project code
+    - Your user and permission model (optional)
+    - The areas that worry you most (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - A staging copy of your app, only if you want to test fixes with bad requests
+  output:
+    - name: Authorization Model
+      contains: A short description of how your project checks who can see or change what.
+    - name: Findings
+      contains: Each confirmed gap with its file location, confidence, the code path traced, the evidence and the impact.
+    - name: Suggested Fix
+      contains: Code that enforces the check, not a comment, for each gap.
+    - name: Needs Manual Verification
+      contains: Places where a check may exist but the AI could not confirm it works.
+    - name: Areas Not Reviewed
+      contains: Endpoints or flows the review did not cover.

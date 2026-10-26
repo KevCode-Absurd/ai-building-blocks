@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set order and fills templates.
 new_slug: directory-listing-planner
 name: Directory listing planner
-summary: Give it your product. Get a ranked list of directories and ready
-  listing text to submit by hand.
+summary: Plan your directory listings for a software product. Give it your product details. You get a ranked directory list and listing text to submit by hand.
 job: grow-social
 headline: Directory listing planner
-subhead: A ranked list of directories where your software product should be
-  listed, plus listing text ready to submit by hand. Directory links pass
-  authority to your site and put you in front of people who are shopping.
+subhead: A ranked list of directories where your software product should be listed, plus listing text ready to submit by hand. Directory links pass authority to your site and put you in front of people who are shopping.
 explain: |
   A ranked list of directories where your software product should be listed, plus listing text ready to submit by hand. Directory links pass authority to your site and put you in front of people who are shopping.
 
@@ -18,6 +15,10 @@ when:
   - You do not know which directories are worth the time.
   - Your landing page is missing assets that directories require.
   - You want varied listing text so each site gets a different description.
+not_for:
+  - "You have no landing page yet: build one first, then come back. The readiness check will show what is missing."
+  - "Your product is not software, such as a shop or a local service: use the sites that fit your trade, or ask a marketer to pick them."
+  - "You want to run a full launch or paid ads: this plan covers only the directory layer, so use a separate launch plan."
 you_give:
   - Your product and what it does
   - Your landing page link
@@ -31,7 +32,37 @@ you_get:
   - Positioning variants
   - A submission order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your product details, landing page link and pricing. Add your marketing notes if you have them.
+  - Read the readiness check first. Fix any missing items before you submit anywhere.
+  - Submit by hand in the order given, using the listing text for each directory.
+  - Ask for a review plan only if you will follow each site's rules on asking for and rewarding reviews. Treat any figures in the plan as unsourced estimates and check them.
+output_sample:
+  input:
+    - Your product name and what it does
+    - Your landing page link
+    - Your pricing and who it is for
+    - Your logos, screenshots and demo video link
+    - Your product marketing notes (optional)
+  prerequisites:
+    - A live landing page with a pricing page
+    - An AI that can read what you paste or upload
+  output:
+    - name: Readiness assessment
+      contains: Which items your site is missing before you submit, and which of them block submission.
+    - name: Tier selection
+      contains: Which groups of directories fit your product, which to skip, and why.
+    - name: Submission order
+      contains: Directories split into week 1, week 2 and week 3 batches.
+    - name: Destination page list
+      contains: The pages to build first, so directory links land somewhere useful.
+    - name: Positioning variants
+      contains: Listing text written differently for each type of directory.
+    - name: Product Hunt 3-week prep timeline
+      contains: Prep tasks mapped to dates if you know your launch day.
+    - name: Reviews 10-in-30 plan
+      contains: Who to ask for reviews, when, and how, following each site's rules.
+    - name: Weekly targets
+      contains: How many directories to submit and reviews to gather each week.
+    - name: Tracker
+      contains: A spreadsheet to log each submission and check the live backlink.

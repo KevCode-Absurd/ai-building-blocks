@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It explores set logo types and explains the choices.
 new_slug: logo-concept-generator
 name: Logo concept generator
-summary: Describe your brand. Get several logo directions, from wordmarks to
-  symbols, each with the reasoning and how to use it.
+summary: Get 6 to 12 logo concepts for your brand, from wordmarks to monograms, each with a reason and notes on where it works best.
 job: design-work
 headline: Logo concept generator
-subhead: Describe your brand. Get several logo directions, from wordmarks to
-  symbols, each with the reasoning and how to use it. Bring your brand name and
-  tone of voice. Use the result to plan your next step.
+subhead: Describe your brand. Get several logo directions, from wordmarks to symbols, each with the reasoning and how to use it. Bring your brand name and tone of voice. Use the result to plan your next step.
 explain: |
   Six to twelve logo options for one brand, each built a different way, so you can pick a direction instead of staring at one idea. The output is material for a decision, not a finished logo.
 
@@ -18,6 +15,10 @@ when:
   - You want a monogram for a long name that must fit small spaces.
   - You have a wordmark and want symbol ideas to sit beside it.
   - You picked a direction and want it refined for real use.
+not_for:
+  - "You need a full brand system with colors, fonts and voice: use the Brand identity skill, or a designer."
+  - "You have no brand name or tone yet: work out your positioning first, then come back for logo ideas."
+  - "You need a finished, legally cleared logo: this gives ideas to choose from, so hire a designer and check trademarks before you use one."
 you_give:
   - Your brand name and tone of voice
   - What the brand stands for
@@ -29,7 +30,36 @@ you_get:
   - Use notes for small, large and motion cases
   - A refined version of your chosen pick
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Add your brand name, tone of voice, what the brand stands for, and where the logo must work.
+  - Read the variants and cross out any that feel wrong for your brand.
+  - Pick one and ask your AI to refine it, with spacing, weight and small shape fixes.
+  - Before you use it, check that it is not too close to an existing logo or trademark in your field. Mockup images need an AI that can make pictures.
+output_sample:
+  input:
+    - Your brand name
+    - Your brand's tone of voice
+    - What your brand stands for
+    - Where the logo must work, such as a website, signs or embroidery
+    - Looks or competitors to avoid (optional)
+  prerequisites:
+    - An AI that can write text. Images need an AI that can make or render them.
+  output:
+    - name: Variant name
+      contains: A numbered title that says the style and typeface, so you can compare options quickly.
+    - name: Architecture
+      contains: Whether the option is a wordmark, lockup, symbol, letterform-as-symbol or monogram.
+    - name: Typography
+      contains: The typeface and weight, plus any custom letter notes and spacing choices.
+    - name: Symbol description
+      contains: What the symbol looks like and how it was built, when the option has one.
+    - name: Color tokens
+      contains: Hex codes for the main colors, plus one-color black, one-color white and reverse versions.
+    - name: Application notes
+      contains: Where the option works well and where it needs a simpler fallback, such as a tiny icon or embroidery.
+    - name: Signals
+      contains: What the option says about your brand.
+    - name: Rejects
+      contains: What the option is not, so you can see what you give up by choosing it.
+    - name: Mockups
+      contains: Pictures of the option in three to five uses, at least a web header, business card and favicon.

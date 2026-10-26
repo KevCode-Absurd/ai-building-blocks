@@ -1,6 +1,6 @@
 new_slug: delivery-update-flow-builder
 name: "Delivery update flow builder"
-summary: "Give it your shipping setup and ticket counts. Get an update flow, tracking page plan and delay script."
+summary: "Build a delivery update flow that cuts \"where is my order\" emails. Give it your order and ticket counts. You get a date rule and four messages."
 job: keep-customers
 thinking: medium
 thinking_why: "It works out a few rates and writes short messages, so a mid-size model is enough if you give it real numbers."
@@ -17,6 +17,10 @@ when:
   - Your support inbox is full of "where is my order" emails.
   - Customers get only the carrier's tracking link and nothing from your store.
   - Parcels are often late and you only hear about it when someone is angry.
+not_for:
+  - "You ship fewer than 300 orders a month and want a paid tracking page: start with the email flow and the date rule, then add a tracking page later."
+  - "Your parcels are often late: fix delivery accuracy with your carrier first, because messages do not fix lateness."
+  - "You want to find orders that are already at risk: use a where-is-my-order risk finder, or check your carrier scan data by hand."
 
 you_give:
   - Orders per month and the number of tickets that ask about order status
@@ -35,6 +39,28 @@ how_to_use:
   - Paste your current shipping emails if you have them, and say which tool sends them.
   - Build the date rule and the email flow first. Add a branded tracking page only if your order volume covers the monthly fee.
   - Re-measure after 30 days and move on when WISMO is under 5 percent of orders and accuracy is above 90 percent.
+output_sample:
+  input:
+    - Your orders per month
+    - Your order-status tickets per month
+    - Your carrier, handling time and real delivery times by region
+    - Your current shipping emails (optional)
+    - Your email or SMS tool (optional)
+  output:
+    - name: YOUR NUMBERS
+      contains: Your WISMO rate, agent hours lost to lookups, and delivery accuracy, each shown with the sum.
+    - name: DELIVERY DATE RULE
+      contains: For each region, handling time plus real carrier time plus padding, and where to show the date.
+    - name: UPDATE FLOW
+      contains: "Four automatic messages: confirmation, shipped, out for delivery and delayed, each with a trigger and copy."
+    - name: TRACKING PAGE
+      contains: The sections for a tracking page on your own domain, and whether it is worth the cost now.
+    - name: DELAY SCRIPT
+      contains: A short, honest message to send before a late parcel becomes a complaint.
+    - name: QUIET-DAYS PLAN
+      contains: First-use help to send between order and delivery.
+    - name: MOVE ON WHEN
+      contains: The test for being done, plus a re-measure after 30 days.
 
 how_it_works:
   - title: Measures first

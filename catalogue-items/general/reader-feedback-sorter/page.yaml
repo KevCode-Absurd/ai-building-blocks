@@ -1,6 +1,6 @@
 new_slug: reader-feedback-sorter
 name: "Reader feedback sorter"
-summary: "Paste what several readers said. Get what to fix, what to leave alone and a ranked rewrite list."
+summary: "Sort feedback from several readers into what to fix, what to leave alone and a ranked rewrite list for your next draft."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It sorts notes by fixed rules but must judge what a note means."
@@ -17,6 +17,10 @@ when:
   - "You have notes from several readers and they conflict."
   - "You are not sure which comments to act on."
   - "You want a clear list before the second draft."
+not_for:
+  - You have only one or two readers. Every point is a maybe, so read the notes yourself and decide.
+  - You only need spelling or grammar fixed. Ask a proofreader or use a simple line edit instead.
+  - You want the draft rewritten for you. This only sorts notes, so rewrite it yourself or ask your AI in a new chat.
 
 you_give:
   - "Each reader's notes, labelled by reader"
@@ -35,6 +39,31 @@ how_to_use:
   - "Paste the draft or a scene list so notes can be tied to places."
   - "Read the washes. They are yours to decide."
   - "Start the rewrite from the top of the ranked list."
+output_sample:
+  input:
+    - Each reader's notes, labelled by reader
+    - Which reader is your ideal reader
+    - Your draft or a scene list (optional)
+    - Anything you already plan to change (optional)
+  output:
+    - name: READERS
+      contains: Each reader's label and whether they are your ideal reader.
+    - name: NOTES BY PLACE
+      contains: Every point tied to a place in the draft, with its type and how many readers raised it.
+    - name: AGREED PROBLEMS
+      contains: Points most readers raised, with the reader count and a suggested change.
+    - name: WASHES
+      contains: Points where readers split, showing who was for and against, left for you to decide.
+    - name: FACT CATCHES
+      contains: Facts a reader flagged, who flagged them and what to check.
+    - name: IDEAL READER ONLY
+      contains: Points only your ideal reader raised and why they count.
+    - name: TOO VAGUE
+      contains: Notes you cannot act on, each with a question to ask the reader.
+    - name: RANKED REWRITE LIST
+      contains: One ordered list of changes for your next draft.
+    - name: CHECKS MISSED
+      contains: Any check the sort failed, or none.
 
 how_it_works:
   - title: "Splits the notes"

@@ -1,6 +1,6 @@
 new_slug: hidden-value-check
 name: "Hidden value check"
-summary: "Paste a job, step or rule you want to cut or automate. Get what it quietly does besides the obvious task."
+summary: "Check what a step you want to cut or automate quietly does. Get a hidden value check with who gains, what would break, and a cut, keep or replace call."
 job: think-and-decide
 thinking: medium
 thinking_why: "It looks for unstated effects, which needs imagination, but the questions are fixed."
@@ -17,6 +17,10 @@ when:
   - "You plan to automate a manual step and want to know what you would lose."
   - "A rule feels pointless and you are about to remove it."
   - "A cost-cutting list has items that look wasteful but have been there for years."
+not_for:
+  - "You need a legal, safety or compliance check on a rule: ask a qualified person, such as a lawyer or safety officer, before you change it."
+  - "The job affects no one, such as an old file nobody opens: just delete it."
+  - "The advice to cut came from someone selling the replacement: use the Advice skin-in-the-game checker first."
 
 you_give:
   - "The job, step or rule, described in plain words"
@@ -35,6 +39,30 @@ how_to_use:
   - "Say who does it, who receives it and how long it has been done."
   - "Read the hidden parts first. Add any you know that it missed."
   - "If the answer is replace, act on the named replacement first, then cut."
+output_sample:
+  input:
+    - The job, step or rule, in plain words
+    - Why you want to cut or automate it
+    - Who does it and who sees the result (optional)
+    - How long it has run (optional)
+    - A replacement you have in mind (optional)
+  output:
+    - name: THE JOB
+      contains: The job in one plain sentence, with the reason you gave for cutting it.
+    - name: WHAT IT DOES UNSEEN
+      contains: Each hidden effect, who gains from it, and whether that is known or guessed.
+    - name: WHAT WOULD BREAK
+      contains: What would be lost with each hidden part, when it would show, and a cost range with its assumption.
+    - name: HABIT CHECK
+      contains: A possible reason for a long-standing habit, and who to ask.
+    - name: SAVING FROM CUTTING and VALUE AT RISK
+      contains: The saving from cutting set against the estimated value you could lose.
+    - name: DECISION
+      contains: Cut, keep or replace, with a replacement for each part kept and what to watch afterwards.
+    - name: MISSING
+      contains: Facts that would change the decision.
+    - name: CHECKS MISSED
+      contains: One line for each self-check it failed, or none.
 
 how_it_works:
   - title: "Name the job simply"

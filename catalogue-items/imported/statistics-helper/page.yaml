@@ -2,36 +2,92 @@ thinking: high
 thinking_why: Statistics need the right method and honest limits.
 new_slug: statistics-helper
 name: Statistics helper
-summary: Give it data and a question. Get trends, outliers, correlations and
-  tests, explained in plain words.
+summary: Find what is typical, odd or changing in your data, and whether a difference is real. Get a plain-words read of outliers, trends and tests.
 job: track-numbers
 headline: Statistics helper
-subhead: "Plain-language answers from your data: what is typical, what is odd,
-  what is moving and what is likely just noise. You paste a table or describe a
-  metric, and get a written read of it, not a wall of numbers."
+subhead: Paste a table or describe a metric and ask a question. Your AI tells you what is typical, what is odd, what is moving and what is likely noise, in plain words rather than a wall of numbers.
 explain: |
-  Plain-language answers from your data: what is typical, what is odd, what is moving and what is likely just noise. You paste a table or describe a metric, and get a written read of it, not a wall of numbers.
+  Most business questions about numbers are simple. Is this average misleading? Did sign-ups really change, or is that normal wobble? Is that spike a mistake? This statistics helper answers them in plain words.
 
-  It picks the right centre for the shape of your data, mean for even data and median for skewed, and often reports both so the gap shows skew. It adds spread, key percentiles and a note on outliers. For trends it uses moving averages and checks for seasonality. For comparisons it runs suitable tests and says when a result is too weak to trust. It also warns about weak claims, like treating correlation as cause.
+  It picks the right kind of average for the shape of your data. It uses the mean when values are evenly spread and the median when a few big values pull the mean up. Often it shows both, since the gap between them shows skew. It adds spread, key percentiles and a note on outliers.
+
+  For change over time it uses moving averages and checks for seasons. To compare groups it runs a fitting test and says when the result is too weak to trust. It always warns when a claim goes too far, such as treating two things that move together as cause and effect.
 when:
   - You have a spreadsheet of sales or usage and want to know what it says.
   - An average looks off and you suspect a few big values are pulling it.
-  - You need to tell if a change between two weeks is real or random.
-  - You want to explain a result to a team that does not like statistics.
+  - You need to know if the change between two weeks is real or just chance.
+  - You must explain a result to a team that does not like statistics.
+not_for:
+  - You need the exact test chosen, checked and written up in APA style. Use the Research test picker and reporter.
+  - You want to find which factors drive a result, or build a forecast. Use the Regression and forecast modeller.
+  - You have fewer than about 30 events in a group. The results will not hold, so collect more data first.
+  - A big decision about money or health rests on the answer. Ask a statistician to check it.
 you_give:
-  - A data table or file
-  - The question you want answered
-  - What each column means (optional)
-  - The time period or groups to compare (optional)
+  - Your data as a pasted table or a CSV file, with column names
+  - The question you want answered, in one line
+  - What each column means and its unit (optional)
+  - The groups or time periods you want compared (optional)
 you_get:
-  - A summary of typical values and spread
-  - Outliers flagged with context
-  - Trend and seasonality notes
-  - Test results in plain words
-  - Cautions about what the data cannot show
+  - What is typical and how much values vary
+  - Outliers flagged, with ideas on what they might be
+  - Trend and season notes for data over time
+  - Test results in plain words, with the size of the difference
+  - Cautions about what your data cannot show
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Put your data in a table with clear column names. Write one line on what you want to know, such as "Did sign-ups change after the price rise?"
+  - Use an AI that can run code for a big file, such as Claude Code or ChatGPT with data analysis. For a small table, a plain chat can work.
+  - Paste the skill, then your table or attach the file, then your question. Say what each column means.
+  - Check the summary first. Make sure the number of rows, the date range and the groups match what you meant.
+  - Ask your AI to explain any result you do not follow, in one sentence, as if to a colleague who dislikes statistics.
+  - Do not remove outliers without checking them. Ask what each one might be, then look it up in your records.
+how_it_works:
+  - title: Describe the data
+    text: It reports the middle, the spread and the shape, and shows mean and median side by side.
+  - title: Check the extremes
+    text: It flags outliers with a stated rule and asks what they are before it drops any.
+  - title: Look at change over time
+    text: It uses moving averages and same-period comparisons to separate trend from season.
+  - title: Test differences
+    text: It picks a test that fits your data, then reports the size of the difference and its range.
+  - title: Warn about weak claims
+    text: It checks sample size, many-tests problems, missing groups and cause versus link.
+output_shape: |
+  QUESTION     <what you asked and the data used: rows, columns, period>
+  TYPICAL      <mean and median, which one to trust and why>
+  SPREAD       <range, quartiles, key percentiles>
+  ODD VALUES   <outliers by rule, how many, what they might be>
+  OVER TIME    <trend, season, change versus last period>
+  DIFFERENCE   <test used, size of difference, range, plain reading>
+  CAUTIONS     <sample size, causes, missing groups, tests run>
+  NEXT         <what to check or collect next>
+  MISSING      <inputs not given, or none>
+output_sample:
+  input:
+    - Your data as a pasted table or CSV with column names
+    - Your question in one line
+    - What each column means (optional)
+    - The groups or periods to compare (optional)
+  prerequisites:
+    - An AI that can run code for large files, or a small table you can paste
+  output:
+    - name: Typical values
+      contains: Mean and median side by side, with a note on which to trust.
+    - name: Spread and percentiles
+      contains: How much values vary, and the low and high ends of the normal range.
+    - name: Outliers
+      contains: Values flagged by a stated rule, with ideas on what they may be.
+    - name: Trend and season notes
+      contains: Direction over time, repeating patterns and change against the same period before.
+    - name: Test result
+      contains: The test used, the size of the difference, its range and a plain reading.
+    - name: Cautions
+      contains: Sample size, number of tests run, missing groups and where cause cannot be claimed.
+terms:
+  - term: Mean and median
+    meaning: The mean is the usual average. The median is the middle value, and big outliers move it less.
+  - term: Outlier
+    meaning: A value far from the rest. It may be an error or a true extreme.
+  - term: Percentile
+    meaning: The value below which a share of the data falls. The 90th percentile is higher than 90% of values.
+  - term: Statistically significant
+    meaning: A difference unlikely to be chance alone. It can still be too small to matter.

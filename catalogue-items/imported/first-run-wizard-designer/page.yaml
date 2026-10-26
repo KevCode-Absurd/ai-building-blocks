@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It decides what to ask now and what to leave for later.
 new_slug: first-run-wizard-designer
 name: First-run wizard designer
-summary: Describe your product's first minutes. Get a step-by-step setup wizard
-  with skip options, rewards and drop-off tracking.
+summary: Plan a first-run setup wizard for your product. Get steps, skip rules, rewards and drop-off events so new users reach their first result fast.
 job: build-product
 headline: First-run wizard designer
-subhead: A setup wizard plan that gets new users to their first real result
-  without a long tour. It decides step by step what each screen earns and where
-  people can skip.
+subhead: A setup wizard plan that gets new users to their first real result without a long tour. It decides step by step what each screen earns and where people can skip.
 explain: |
   A setup wizard plan that gets new users to their first real result without a long tour. It decides step by step what each screen earns and where people can skip.
 
@@ -18,6 +15,10 @@ when:
   - Your current onboarding has low completion and you do not know why.
   - You are building a first-run flow and need to decide what goes in it.
   - You need to choose which setup tasks are required and which can wait.
+not_for:
+  - "Your product reaches value in one action: add small in-app hints instead, or ask a designer for a simple tooltip."
+  - "You need to fix a wizard already live and don't know where users leave: look at your analytics first, then bring the step counts here."
+  - "You want a long feature tour or help center: write help articles, or ask a support person to draft them."
 you_give:
   - What your product does
   - Steps a new user must do before value shows up
@@ -30,7 +31,30 @@ you_get:
   - Reward and progress cues
   - Drop-off measures to track
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Describe what your product does and who signs up.
+  - List the steps a new user must finish before they see value.
+  - Add your drop-off numbers if you have them (optional).
+  - Read the wizard decision first. If it says you don't need a wizard, use the hints it suggests instead.
+  - Check that each step asks for one thing, then give the step list to your designer or developer.
+output_sample:
+  input:
+    - What your product does
+    - The steps a new user must do before value shows up
+    - Who signs up (role, skill level)
+    - Your current completion or drop-off numbers (optional)
+  output:
+    - name: Wizard decision
+      contains: Says whether a wizard is worth building or whether small contextual hints would work better for your product.
+    - name: First-value moment
+      contains: Names the point where a new user first sees real value, so every step works toward it.
+    - name: Step outline
+      contains: A numbered list of steps, each asking for one thing and showing what the user gains.
+    - name: Skip and return rules
+      contains: Which steps are required, which can be skipped, and how people come back to finish later.
+    - name: Reward and progress cues
+      contains: Ways to show progress and reward finishing, without slowing the user down.
+    - name: Drop-off measures
+      contains: The events to track at each step so you can see where people leave.
+    - name: Common mistakes to avoid
+      contains: Warnings against cramming every feature into a long intro or letting users skip into an empty product.

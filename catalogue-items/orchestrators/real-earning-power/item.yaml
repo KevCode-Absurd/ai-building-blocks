@@ -1,20 +1,20 @@
 slug: real-earning-power
 name: "Find a company's real earning power and its tricks"
-summary: "Paste several years of a company's income statements. Get one-offs removed, padding flagged and a normal earnings range."
+summary: "See what a company really earns in a normal year. Paste its income statements; get one-offs removed, padding flagged and a normal earnings range."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: analysis
 level: advanced
 inputs:
-  - {type: source_text, required: true}
+  - {type: document, required: true}
 outputs:
   - {type: audit_report}
 uses: [one-off-items-separator, earnings-padding-detector, earnings-reliability-check, normal-earnings-estimator]
 steps:
-  - {uses: one-off-items-separator, note: "A clean year-by-year table of what the business earned from its ordinary work."}
-  - {uses: earnings-padding-detector, note: "Finds profit that comes from accounting choices instead of the business."}
-  - {uses: earnings-reliability-check, note: "Says how much weight the history can bear, before it is turned into a figure."}
+  - {uses: one-off-items-separator, note: "A clean year-by-year table of what the business earned from its ordinary work. Hands that table to step 2."}
+  - {uses: earnings-padding-detector, note: "Finds profit that comes from accounting choices instead of the business. Hands restated earnings to step 3."}
+  - {uses: earnings-reliability-check, note: "Says how much weight the history can bear, before it is turned into a figure. Hands its rating to step 4."}
   - {uses: normal-earnings-estimator, note: "One range of normal earnings, with the tricks found and how far to trust it."}
 origin: rebuilt
 version: 1.0.0

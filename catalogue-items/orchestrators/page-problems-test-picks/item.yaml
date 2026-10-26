@@ -16,10 +16,10 @@ outputs:
   - {type: audit_report}
 uses: [conversion-research-planner, landing-page-auditor, page-issue-sorter, ab-test-traffic-checker]
 steps:
-  - {uses: conversion-research-planner, note: "A research order that finds where, what and why before you test anything"}
-  - {uses: landing-page-auditor, note: "Reads the finished page like a stranger and ranks what to fix before it goes live."}
+  - {uses: conversion-research-planner, note: "A research order that finds where, what and why before you test anything. Step 2 then reviews your page."}
+  - {uses: landing-page-auditor, note: "Uses your own page, not step 1's plan. Reads it like a stranger and hands step 3 a ranked list of what to fix before it goes live."}
   - {uses: page-issue-sorter, note: "Each one sorted into fix now, investigate, test or tracking, with a ranked order. Reads the audit report from the step before"}
-  - {uses: ab-test-traffic-checker, note: "Says whether your traffic can prove the new page works and how many weeks that takes."}
+  - {uses: ab-test-traffic-checker, note: "Uses your own visits and orders, and takes the problems step 3 sorted as 'test' as the changes to size. Says whether your traffic can prove the new page works and how many weeks that takes."}
 origin: rebuilt
 version: 1.0.0
 minds: [peep-laja]

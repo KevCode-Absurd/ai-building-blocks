@@ -55,8 +55,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Big idea and mechanism builder.** Use the skill `big-idea-and-mechanism-builder`. Builds one big idea, a root cause and a named mechanism from your product facts and reviews.
 2. **Store advertorial writer.** Use the skill `store-advertorial-writer`. Give it the brief from the steps before. Writes the advertorial from the big idea brief.
 3. **Advertorial story and belief checker.** Use the skill `advertorial-story-and-belief-checker`. Give it the landing page and the brief from the steps before. Reads the draft page and flags where the story breaks or a belief is not yet earned.
-4. **Store social proof placer.** Use the skill `store-social-proof-placer`. Give it the landing page from the steps before. Places reviews and proof where the checked draft raises a doubt.
-5. **Landing page 30-point checker.** Use the skill `landing-page-30-point-checker`. Give it the landing page from the steps before. Scores the finished page on 30 points before it goes live.
+4. **Store social proof placer.** Use the skill `store-social-proof-placer`. Give it step 2's page with step 3's rewrites applied, and your reviews. Places reviews and proof where the checked draft raises a doubt.
+5. **Landing page 30-point checker.** Use the skill `landing-page-30-point-checker`. Give it step 2's page with step 3's rewrites and step 4's proof placements applied. Scores the finished page on 30 points before it goes live.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

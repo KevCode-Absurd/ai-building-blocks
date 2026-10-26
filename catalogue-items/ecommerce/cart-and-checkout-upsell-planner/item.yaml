@@ -1,6 +1,6 @@
 slug: cart-and-checkout-upsell-planner
 name: "Cart and checkout upsell planner"
-summary: "Give it products and margins. Get cart and checkout offers, ranked by profit added per order."
+summary: "Rank cart and checkout upsells by profit added per order. Get one offer per slot, a cart layout and exit offers by stage."
 category: ecommerce
 type: skill
 role: make
@@ -11,6 +11,7 @@ inputs:
   - {type: performance_sheet, required: false}
 outputs:
   - {type: plan}
+  - {type: offer}
 uses: []
 origin: rebuilt
 example_pending: true

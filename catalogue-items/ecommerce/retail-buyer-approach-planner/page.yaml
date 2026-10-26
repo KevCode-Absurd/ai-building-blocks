@@ -1,6 +1,6 @@
 new_slug: retail-buyer-approach-planner
 name: "Retail buyer approach planner"
-summary: "Give it your product and retailer. Get a plan to make the buyer call and keep the shelf."
+summary: "Plan how to get a big retailer's buyer to call you, and how to keep the shelf. Give it your product, price, stock and cash. You get a step-by-step plan."
 job: plan-strategy
 thinking: high
 thinking_why: "It joins your sales proof, cash and a long relationship plan, and it must be honest about what a small store can and cannot do. A stronger model handles the trade-offs."
@@ -17,6 +17,10 @@ when:
   - Your product sells well online and you are thinking about a major retailer.
   - A retailer already asked about your product and you want a plan before the meeting.
   - You are in one retailer and want to keep your place and open another.
+not_for:
+  - "Your cash is below the cost of one purchase order: fix the cash first with the PO funding options planner and the growth cash limit checker."
+  - "Your goods are bulky or fresh and may not suit online sales or retail: talk to a distributor or a retail consultant before you plan a pitch."
+  - "You have no online sales proof yet: build sales first, then come back to plan the buyer approach."
 
 you_give:
   - Your product, price and online sell-through
@@ -35,6 +39,34 @@ how_to_use:
   - Name the retailer and, if you know, the buyer or category lead.
   - Read the fit check first. If cash is short, fix that before any outreach.
   - Follow the sequence one retailer at a time, and update your proof sheet each month.
+output_sample:
+  input:
+    - Your product and price
+    - Your online sales and sell-through
+    - The retailer you want, and the buyer's name if you know it
+    - Your stock and cash position
+    - Your recent sales by month (optional)
+  output:
+    - name: FIT CHECK
+      contains: Says if retail suits you now or not yet, with the reason.
+    - name: APPROACH SEQUENCE
+      contains: Ordered steps, each with timing, what you need and what good looks like.
+    - name: WHO DECIDES
+      contains: The retailer, the role or name of the decision maker, and how to learn who it is.
+    - name: CREATORS THE BUYER FOLLOWS
+      contains: How to find them, plus the disclosure rule for paid or gifted partnerships.
+    - name: BUYER OPTIONS
+      contains: Two or three real options you can supply, with your pick and why.
+    - name: STOCK AND SUPPLY CHECKLIST
+      contains: Each item with amount, cash needed and where the cash comes from, so no order is missed.
+    - name: RELATIONSHIP ROUTINE
+      contains: Monthly steps to stay known to each decision maker.
+    - name: PROOF SHEET
+      contains: Sales, sell-through, on-time fill rate and what you did for the buyer in the last three months.
+    - name: SPREAD THE RISK
+      contains: How to spread sales across channels and creators so no single one can sink you.
+    - name: NEXT RETAILER
+      contains: How to use the first retailer's result to open the next one.
 
 how_it_works:
   - title: Checks the fit

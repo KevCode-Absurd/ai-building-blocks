@@ -1,6 +1,6 @@
 new_slug: sale-break-even-and-cac-allowance-modeler
 name: "Sale break-even and CAC allowance modeler"
-summary: "Give it discount depth and margin. Get break-even ROAS, a CAC limit and a score out of 100."
+summary: "Find your break-even ROAS and CAC limit at each sale discount. Get a go or skip call for each and a readiness score out of 100."
 job: plan-strategy
 thinking: medium
 thinking_why: "The maths is simple but each step feeds the next, so it needs care with your costs and with the repeat-rate gap."
@@ -17,6 +17,10 @@ when:
   - You are choosing between 10%, 20%, 40% off or a free gift, and want to see what each does to your ad limits.
   - Your ads look fine during a sale but your profit does not.
   - You want one clear break-even ROAS and CAC limit to hand your media buyer before the sale starts.
+not_for:
+  - "You want break-even ROAS and CPA with no sale in play: use the break-even ROAS and CPA calculator."
+  - "You need to set daily hold and cut points for ad spend: use the sale season pacing sheet builder once you have your numbers."
+  - "You do not know your product cost, shipping or fees: work those out first, because break-even cannot be trusted without them."
 
 you_give:
   - Current price, product cost, shipping and fees per order
@@ -36,6 +40,26 @@ how_to_use:
   - Say whether the aim is profit or clearing stock. The CAC limit is different for each.
   - Add your November and February repeat rates for two years if you have them.
   - Take the break-even ROAS and CAC limit to your pacing sheet and your media buyer.
+output_sample:
+  input:
+    - Your price, product cost, shipping and fees per order
+    - The discounts you want to compare, and the cost of any gift
+    - Your normal CAC limit
+    - Whether the aim is profit or clearing stock
+    - Your November and February repeat rates for two years (optional)
+  output:
+    - name: OBJECTIVE
+      contains: Your aim for the sale, your normal break-even ROAS and your normal CAC limit.
+    - name: BY DISCOUNT DEPTH
+      contains: A table with margin, break-even ROAS, sale CAC limit and go or skip for each discount.
+    - name: COHORT CHECK
+      contains: Whether November customers repeat less than February customers, and how customer value changed.
+    - name: DECISION
+      contains: Discount, add a gift or bundle, or skip, with one line of reasoning.
+    - name: SCORE
+      contains: A readiness score out of 100, with the four parts added up.
+    - name: MISSING
+      contains: Any input you did not give, so nothing is guessed.
 
 how_it_works:
   - title: Recomputes margin

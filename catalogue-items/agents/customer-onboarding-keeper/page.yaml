@@ -1,6 +1,6 @@
 new_slug: customer-onboarding-keeper
 name: Customer onboarding keeper
-summary: Give it each week's new-customer cohort. Get where they stall in the first 30 days and one fix to approve.
+summary: Check your customer onboarding each week. See which step loses new sign-ups in the first 30 days, and get one fix to approve.
 job: keep-customers
 thinking: high
 thinking_why: It reads groups against each other, judges whether a fix moved a rate and picks one fix from the cause. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell a product people must set up or use for the first time before they see the point.
   - Cancels cluster in the first month and you fix the welcome email every time.
   - You made an onboarding change and cannot tell whether it worked.
+not_for:
+  - "You sell one-off purchases, or your product has no first win: look at your sales and reviews by hand, or ask a person to call a few buyers."
+  - "Your customers are already past 30 days and you want to know who may cancel: use the Weekly customer health watcher."
+  - "You have no step counts by sign-up week: start with a simple export from your product, store or email tool, then come back."
 you_give:
   - Each sign-up week's count at every onboarding step, from your product, store or email tool
   - What the product does and what the first win is (advised)
@@ -33,6 +37,31 @@ how_to_use:
   - On the first run, describe the product and the first win. It builds the plan and saves it after you approve it.
   - Read the fix. Make the change in your tools, then tell the agent the date it went live.
   - Run it again next Monday. It judges the fix against the groups that came after it.
+output_sample:
+  input:
+    - Each sign-up week's count at every onboarding step
+    - What the product does and what the first win is
+    - Support messages, survey answers or cancel notes from the first 30 days (optional)
+    - Your brand brain, for any email or text (optional)
+    - Last week's plan and chart, once they exist
+  prerequisites:
+    - An AI that can keep files between weeks, such as Claude Code
+    - An export of onboarding steps grouped by sign-up week
+  output:
+    - name: This week in one line
+      contains: Sign-ups, the share reaching the first win, and the step that loses the most.
+    - name: The chart
+      contains: Each sign-up week's share at each step, with the newest week at the bottom.
+    - name: Last fix
+      contains: The step, the rate it was meant to move, and a verdict of helped, no change or worse.
+    - name: What customers said
+      contains: Themes behind the losing step, with quotes from new customers.
+    - name: The one fix
+      contains: The cause, the skill run, what changes, the one rate to move and the check date.
+    - name: Changes to approve
+      contains: Each email, text or flow change in one line, with where it goes.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line.
 how_it_works:
   - title: Build the plan once
     text: Turns the product and its customers into onboarding steps, milestones and owners, saved after you approve them.

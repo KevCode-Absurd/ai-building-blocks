@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: visible-symptom-image-ad-maker
 name: "Visible symptom image ad maker"
-summary: "Paste your story ad. Get a body-safety check and a close-up photo prompt, or a safer idea."
+summary: "Check if a body sign is safe to show in your story ad. Get a close phone-photo prompt for it, or a safer picture idea if it fails."
 job: make-image-ads
 
 headline: "Visible symptom image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your buyer's problem shows on a hand, foot, arm or leg.
   - Your reviews describe that sign in the buyer's own words.
   - You want a picture that only the people with the problem will stop for.
+not_for:
+  - "Your sign is on the face, chest, stomach or hips: use the Hand-drawn story image ad maker, or show a private problem as a drawing."
+  - "Your buyer copes with the problem and no sign shows on the body: use the Problem moment image ad maker."
+  - "You want a mark circled on an object, not on skin: use the Circled flaw image ad maker."
 
 you_give:
   - Your approved story ad and the sign its opening describes
@@ -34,6 +38,31 @@ how_to_use:
   - Add your buyers' words for the sign, taken from reviews or research, not your guess.
   - Add any limits your brand has on showing the body.
   - If it stops and hands you to another picture, follow that. Don't push it to show a face or a stomach.
+output_sample:
+  input:
+    - Your approved story ad, or its first lines
+    - The sign its opening describes, in your buyers' own words
+    - Your buyers' age range and skin tone (optional)
+    - What your brand may show of the body (optional)
+  prerequisites:
+    - An AI that can make images, if you want the picture made in the chat (optional)
+  output:
+    - name: Gate
+      contains: Three answers on where the sign is, whether the words stay off the reader, and whether it feels fine to see.
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: The sign
+      contains: What the sign is, how much shows, and where on the body.
+    - name: The moment
+      contains: Where and when your buyer notices it, and what else is in view.
+    - name: Line under the image
+      contains: A short line that names the moment or the thing, never the reader's body.
+    - name: Flags
+      contains: Anything near your body limits, and claims to watch in the copy.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt, ready to paste into an image tool.
+    - name: Why it stops and hand-off
+      contains: "When the gate fails: the reason, the moment to show instead, and a line idea."
 
 how_it_works:
   - title: Runs the body gate

@@ -1,6 +1,6 @@
 new_slug: supplier-partner-terms-planner
 name: "Supplier partner terms planner"
-summary: "Paste what you buy and your growth plan. Get terms for your suppliers, with give-backs, shared savings and no side payments."
+summary: "Plan supplier terms that work for both sides. Give it what you buy and your growth plan. You get give-backs, a savings split and a no-gifts rule."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It balances what you need from a supplier against what they need from you, using a fixed list of terms. A mid-range model does it well."
@@ -17,6 +17,10 @@ when:
   - You depend on one or two suppliers and have not talked about how both sides grow.
   - Your partners or franchisees buy through you and you want their costs to stay fair.
   - A supplier has hinted at gifts, favours or side payments.
+not_for:
+  - "You need fair terms for franchisees or resellers who run your business: use the Franchise and reseller terms writer."
+  - "You need a contract a lawyer can sign: ask a lawyer, because this plan is a talking guide and not legal advice."
+  - "You only want a lower price from a supplier today: ask for quotes from other suppliers and compare them."
 
 you_give:
   - What you buy, to what standard, and how much now
@@ -35,6 +39,29 @@ how_to_use:
   - Add your growth forecast. If you have partners, add what they pay for each item.
   - Take the plan to the supplier as an opening conversation, not a demand.
   - Review it once a year with the numbers on both sides.
+output_sample:
+  input:
+    - What you buy, the standard each item must meet, the volume now and what you pay
+    - Your growth forecast (optional)
+    - What your partners pay for each item (optional)
+    - Other suppliers you could use (optional)
+  output:
+    - name: What you need
+      contains: Each item with its standard, volume now, volume in a year and delivery, or MISSING where a number is absent.
+    - name: What you give back
+      contains: The forecast, payment days, contract length and start-up help you can truly deliver to the supplier.
+    - name: The no-gifts rule
+      contains: Two plain sentences with a reason, plus words to decline a gift or side payment.
+    - name: Who keeps the savings
+      contains: A percent split of any saving between partners, supplier and you, or MISSING with a yearly review rule.
+    - name: The bad-week plan
+      contains: What each side does in the first day of a late shipment, cash gap or quality failure, with a second source.
+    - name: The review
+      contains: A yearly date and the numbers both sides will look at.
+    - name: MISSING lines
+      contains: The facts you must supply, with the number blocking a firm offer first.
+    - name: Checks missed
+      contains: One line for each of its own checks still missed and why, or none.
 
 how_it_works:
   - title: Starts with the product

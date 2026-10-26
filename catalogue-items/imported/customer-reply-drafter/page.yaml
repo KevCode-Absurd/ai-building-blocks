@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The tone has to fit the person and the news.
 new_slug: customer-reply-drafter
 name: Customer reply drafter
-summary: Describe the customer's situation. Get a reply in the right tone, plus
-  notes on what to check before you send it.
+summary: Draft a customer reply in the right tone for a hard message. Describe the situation and get the draft plus notes on what to check before you send.
 job: help-customers
 headline: Customer reply drafter
-subhead: A hard customer message is easier to answer when the draft is done and
-  the checks are listed. Describe the situation and you get a reply in the right
-  tone, plus notes on what to check before you send it.
+subhead: A hard customer message is easier to answer when the draft is done and the checks are listed. Describe the situation and you get a reply in the right tone, plus notes on what to check before you send it.
 explain: |
   A hard customer message is easier to answer when the draft is done and the checks are listed. Describe the situation and you get a reply in the right tone, plus notes on what to check before you send it.
 
@@ -18,6 +15,10 @@ when:
   - You must say no to a feature request without losing the account.
   - An outage hit a key customer and they want updates.
   - A billing error needs a quick, calm fix.
+not_for:
+  - "You face a legal dispute or a threat to sue: take it to your legal team before you reply."
+  - "The customer wants a refund or a policy exception: ask a manager to approve it first, then write the reply."
+  - "You only need a one-line thank you: write it yourself, it will be faster."
 you_give:
   - A description of the situation
   - The customer's name and history (optional)
@@ -29,8 +30,26 @@ you_get:
   - Points to avoid promising
   - An alternative shorter version
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your help desk or email.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Describe the situation in a few lines. Say who the customer is, what happened and how urgent it is.
+  - Add the channel and any facts you can share. Add past messages if you have them.
+  - Read the draft and the internal notes. Check each fact before you send.
+  - Ask for a shorter or warmer version if you need one.
+  - If your AI is linked to your email, chat, CRM or help desk, it can look up past messages itself. If not, paste what you know.
+output_sample:
+  input:
+    - A short description of the customer situation
+    - The customer's name and history (optional)
+    - The channel, such as email, chat or ticket (optional)
+    - Facts you are allowed to share (optional)
+  prerequisites:
+    - "Optional: an AI that can read your email, chat, CRM or help desk, so it can look up past messages and account details"
+  output:
+    - name: Draft Response
+      contains: The reply to the customer, in a tone that fits the situation, the channel and the reader.
+    - name: Notes for You (internal, do not send)
+      contains: Facts to verify, promises to avoid and anything to run past a colleague before you send.
+    - name: Quality checks
+      contains: A last pass on the draft for tone, clarity, a clear next step and no risky promises.
+    - name: Shorter version
+      contains: A shorter version of the same reply, offered after the first draft.

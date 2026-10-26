@@ -7,6 +7,28 @@ description: Bootstrap, develop, and design modern WinUI 3 desktop applications 
 
 Use this skill for WinUI 3 and Windows App SDK work that needs grounded setup guidance, app bootstrap, modern Windows UX decisions, or concrete implementation patterns.
 
+## Before you start
+
+- This skill needs Windows 10 (version 1809 or newer) or Windows 11, and an AI that can run PowerShell and dotnet commands on that machine. If it cannot, say so and give the steps for the user to run.
+- For a new app you need a short description of what the app does. If it is missing, ask once. App name and folder are optional: pick a safe name and say what you chose.
+- Never change the machine without a clear yes from the user (see step 2).
+
+## When not to use
+
+- A web, mobile or cross-platform app. WinUI 3 is for Windows desktop only.
+- An older WPF, WinForms or UWP app the user wants to keep as it is. Do not rebuild it in WinUI unless they ask.
+- A Mac or Linux machine. Say so and stop.
+
+## What you produce
+
+Finish with this, in order:
+
+1. **Machine check**: what is present, missing and uncertain.
+2. **Project**: the folder tree of the new app, and which packaging model you chose and why.
+3. **Build result**: the `dotnet build` result line.
+4. **Launch result**: the window title or other sign the app opened, or "did not open" with the reason.
+5. **Next**: the first screen or feature to add, and anything left unchecked.
+
 ## Required Flow
 
 1. Classify the task as environment/setup, new-app bootstrap, design, implementation, review, or troubleshooting.
@@ -16,11 +38,15 @@ Use this skill for WinUI 3 and Windows App SDK work that needs grounded setup gu
    - If the user did not give a name, derive a short PascalCase name from the request and state what you chose.
    - Create the project in the user's current workspace unless they asked for another location.
    - Do not use `--force` unless the user explicitly asked to overwrite existing files.
-   - Run the bundled WinGet configuration from the skill directory so the relative path stays exactly `config.yaml`:
+   - First check whether the machine is already ready (see `references/foundation-environment-audit-and-remediation.md`). If it is, skip the configuration.
+   - If it is not ready, **ask before changing the machine.** Tell the user in plain words what `config.yaml` will do: turn on Developer Mode, and install or update Visual Studio Community 2026 with the WinUI workloads. It can take a long time and use several GB of disk space. Wait for a clear yes. If the user says no, use the manual guidance instead.
+   - After a yes, run the bundled WinGet configuration from the skill directory so the relative path stays exactly `config.yaml`:
 
 ```powershell
-winget configure -f config.yaml --accept-configuration-agreements --disable-interactivity
+winget configure -f config.yaml
 ```
+
+   - Windows may show its own agreement prompt, and Developer Mode needs admin rights. If your AI cannot answer those, ask the user to run this one command in their own admin terminal and tell you the result. Add `--accept-configuration-agreements` only after the user has seen the list above and agreed.
 
    - Treat the configuration as intended to enable Developer Mode, install or update Visual Studio Community 2026, and install the Managed Desktop, Universal, and Windows App SDK C# components needed for WinUI development.
    - Assess the configuration result before continuing. Continue on success. If it fails, inspect the output instead of guessing. If the `winui` template is already available and the toolchain is usable, note the partial failure and continue. If prerequisites are still missing, stop and report the blocker clearly.

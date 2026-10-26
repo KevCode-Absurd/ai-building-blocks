@@ -1,0 +1,146 @@
+name: Tool Evaluator agent
+summary: Choose between software tools with a scored comparison. Get your criteria, a trial plan, a cost view and a pick you can defend.
+headline: Tool Evaluator agent
+subhead: Name the job you need a tool for and the two to five options you are weighing. It sets criteria with weights, plans a trial with your real work and works out the full cost. You get a score table, a risk list and a recommendation with how sure it is.
+job: research-topics
+thinking: high
+thinking_why: It must weigh many tradeoffs and not trust vendor claims. Use a model that reasons well and says when it has no evidence.
+explain: |-
+  A tool evaluation (also called a software comparison or vendor selection) goes wrong in familiar ways. Teams pick the tool with the best demo. They compare price lists and forget setup, training and add-on fees. They never try the tool on their own work. This agent is built to avoid those mistakes.
+
+  It starts with the job, not the product. Who will use the tool, what must it do, and what must it connect to? From your answers it builds a short list of criteria and gives each a weight. The profile's starting set is features, ease of use, speed and reliability, security, connections to your other tools, support and cost. You change the weights to match what matters to you.
+
+  Then it plans a fair trial. Each tool is tested on the same real tasks, with the same people, so the scores can be compared. It treats vendor claims as claims until you have seen them in the trial or from a customer you can call.
+
+  It works out the full cost over a set number of years. That includes licences, setup, training, moving your data and support, not only the price per seat. It asks for each number and marks any it had to guess. It never looks up prices itself unless your AI can search, and then it shows the page.
+
+  It cannot run the trial for you. You or your team try the tools, and you report what happened. Security and contract points need a person who knows your rules.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your team needs a new project, CRM, email or design tool and three or four options look alike.
+  - You are about to renew a tool and want to know if a rival is worth switching to.
+  - A vendor's price looks cheap and you want the full cost over three years before you sign.
+  - You must explain to a boss or client why you picked one tool over the others.
+not_for:
+  - You want to know if a trend or market is worth entering. Use the Trend Researcher agent.
+  - You need a security audit or a contract reviewed by a lawyer. This agent lists the questions to ask. A specialist must do the review.
+  - You want to haggle on price. It lists terms to ask for. It does not talk to vendors for you.
+  - You want a summary of what many papers say about a topic. Use the Research Synthesist agent.
+you_give:
+  - The job the tool must do, and who will use it
+  - The tools you are weighing, with links to their pages (two to five is best)
+  - Must-have features, and anything it must connect to, such as Shopify or Google Sheets
+  - Your budget, number of users and how long you plan to use it
+  - Prices, plan names and anything vendors told you (optional)
+  - Notes from any trial you have already run (optional)
+you_get:
+  - A list of criteria with weights, built from your needs
+  - A trial plan with the same real tasks for every tool
+  - A score table that shows how each tool did on each criterion
+  - A cost view over the years you choose, with every guess marked
+  - A risk list and a recommendation with its confidence level
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Say what job the tool must do, who will use it and which tools you are weighing. Add links, your budget and your user count.
+  - Type "Set the criteria and weights first. Show them to me before you score anything."
+  - Change the weights, then ask for the trial plan. Run each tool through the same tasks and write down what happened. If your AI can search the web, it can also check public pricing pages.
+  - Paste your trial notes and any prices, then ask for the score table, the cost view and the recommendation.
+  - Check every price against the vendor's own page before you sign. Ask each vendor's reference customers the questions it lists.
+how_it_works:
+  - title: Define the job
+    text: It confirms what the tool must do, who uses it and what it must connect to. Gaps are asked once, then marked MISSING.
+  - title: Set criteria and weights
+    text: It builds a short list of criteria with weights and shows them to you first, so you can change them.
+  - title: Plan a fair trial
+    text: It writes the same real tasks for each tool and says who should run them and what to record.
+  - title: Score from evidence
+    text: It scores each tool only from your trial notes and sources you gave. Vendor claims are marked unproven.
+  - title: Work out the full cost
+    text: It adds licences, setup, training, data moving and support over your chosen years, and marks guesses.
+  - title: Recommend and flag risks
+    text: It names a pick with confidence, the risks and what to ask the vendor before you sign.
+output_shape: |-
+  EVALUATION: <tool category>
+
+  JOB AND LIMITS
+    Job <what the tool must do> | Users <who and how many> | Must connect to <list> | Budget <amount or MISSING> | Years <number>
+
+  CRITERIA AND WEIGHTS
+    <criterion> | <weight, total 100> | <how it will be tested>
+
+  TRIAL PLAN
+    <task> | <tools it runs on> | <who runs it> | <what to record>
+
+  SCORE TABLE
+    <tool> | <score per criterion, 0 to 10> | <weighted score> | <evidence: trial, source or vendor claim>
+
+  COST VIEW
+    <tool> | Licences <amount> | Setup <amount> | Training <amount> | Data move <amount> | Support <amount> | Total over <years> | Marked guess <yes or no>
+
+  RISKS AND VENDOR QUESTIONS
+    <risk> | <tool> | <question to ask or check to run>
+
+  RECOMMENDATION
+    Pick <tool> | Confidence <low, medium or high> | Why <short> | What would change it <short>
+
+  CHECKS STILL NEEDED
+    <item>
+output_sample:
+  input:
+    - The job the tool must do, and who will use it
+    - The two to five tools you are weighing, with links
+    - Must-have features, connections, budget and number of users
+    - Prices and any trial notes (optional)
+  prerequisites:
+    - A small team trial of each tool on the same real tasks, if you want scored results
+  output:
+    - name: Criteria and weights
+      contains: The tests each tool must pass, weighted to match what matters to you, shown before any scoring.
+    - name: Trial plan
+      contains: The same real tasks for each tool, who runs them and what to record.
+    - name: Score table
+      contains: Each tool's score on every criterion and the evidence behind it.
+    - name: Cost view
+      contains: Licences, setup, training, data moving and support over your chosen years, with guesses marked.
+    - name: Risks and vendor questions
+      contains: What could go wrong with each tool and the questions to ask before you sign.
+    - name: Recommendation
+      contains: The pick, how sure it is, why, and what would change it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search
+      why: It can open public pricing and review pages and quote them. Check each price on the vendor's own page.
+  inputs:
+    - Your own list of tasks the tool must do every week.
+    - A call with a customer of each vendor, using the questions the agent lists.
+    - Your current tool's costs, so you can compare against staying put.
+terms:
+  - term: Total cost of ownership
+    meaning: The full cost of a tool over time, including setup, training and support, not only the price per user.
+  - term: Weighted score
+    meaning: A score where the criteria that matter most count for more.
+  - term: Vendor claim
+    meaning: Something the seller says about their tool. It stays unproven until you see it in a trial or hear it from a customer.
+  - term: Pilot
+    meaning: A small test with a few real users before the whole team switches.
+tweaks:
+  - what: Weights
+    how: Move weight to what matters most. A tiny team may put ease of use first. A regulated business puts security first.
+  - what: Number of tools
+    how: Keep to two to five. More than that spreads the trial too thin.
+  - what: Years
+    how: Pick how many years you will use it. A one-year and a three-year view can point to different tools.
+improve:
+  - Keep the criteria and trial tasks and reuse them when you compare tools next time.
+  - Record what happened after you chose, then check if the cost and adoption matched the plan.
+  - Set a date to run the comparison again, such as before renewal.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

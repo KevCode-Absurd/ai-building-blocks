@@ -1,0 +1,152 @@
+name: Inclusive Visuals Specialist agent
+summary: Describe the people and the story. Get image or video prompts built to avoid stereotypes, cloned faces and fake cultural symbols, plus a review checklist.
+headline: Inclusive Visuals Specialist agent
+subhead: Tell it who the picture shows, where, and what is happening. It writes an image or video prompt that keeps the people specific and respected, adds a list of AI mistakes to block, and gives a review checklist to use before you publish.
+job: make-images
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  AI image and video tools fall back on stock looks. Groups of people come out
+  with the same face repeated. Cultural scenes get a giant symbol in the middle,
+  or signs with made-up writing. Wheelchairs and head coverings can glitch. This
+  inclusive visuals agent writes prompts that guard against those faults. It
+  keeps your subjects specific and ordinary, not tokens.
+
+
+  You give the story and the people as you know them. It builds the prompt in
+  parts: who, what they do, where, the camera and light, and what to leave out. For
+  video, it adds lines on how clothing, hair and mobility aids should move. Then it
+  gives you a short checklist to run on the finished picture.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. It writes
+  prompts and checks. It does not draw, and it cannot say a picture is accurate
+  or fair to a community. Only people from that community can. The zero-percent
+  stereotype target in the profile is the author's goal, not a result.
+when:
+  - You are making a campaign picture of a real community, a festival or a workplace and want it to feel true.
+  - Every AI picture of a group comes out with the same face repeated.
+  - You need a video clip where someone uses a wheelchair, a cane or a head covering and it must move right.
+  - Your team wants one review checklist for AI pictures before anything is published.
+not_for:
+  - You want a general photo prompt with no focus on representation. Use the Image Prompt Engineer agent.
+  - A picture already made has fake-looking skin, hands or contact. Use the Skin realism image prompt checker.
+  - You want visual rules for your whole brand. Use the Visual system rules writer.
+  - You need rights, consent or legal clearance for a real person's likeness. Ask a lawyer.
+  - You need to know if a picture is fair to a community. Ask people from that community to review it.
+you_give:
+  - The story or message the picture tells, and where it will appear.
+  - Who is shown, in your own words, such as ages, jobs, setting, clothing and language. Say only what you know to be true.
+  - Image or video, and the tool you will use, such as Midjourney, DALL-E, Sora or Runway.
+  - Details of the place, such as the country, the room or the street (optional but it prevents wrong buildings and signs).
+  - Things to avoid, and reference photos you have the right to use (optional).
+you_get:
+  - One prompt in parts, covering who, action, setting, camera, colour and look.
+  - A list of AI mistakes to block, such as cloned faces, fake text and an oversized symbol.
+  - For video, lines on how clothes, hair and mobility aids should move.
+  - A review checklist of up to seven points to run on the finished picture.
+  - Open questions, and the checks that only a person from the community can make.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe the story, the people and the place. Say image or video, and name your tool.
+  - Answer the questions it asks once. It will not guess a person's identity. Anything missing is marked MISSING.
+  - Paste the prompt into your image or video tool. Check the picture against the leave-out list and the review checklist.
+  - Show the result to someone from the community you depict before you publish. Fix what they flag.
+  - Save the changes that worked as your own prompt rules.
+how_it_works:
+  - title: Read the brief
+    text: It finds the human story, and the stock looks the AI tool is likely to fall back on for it.
+  - title: Build the prompt
+    text: It writes who, action, setting, camera and colour as separate parts, and uses only the identities you gave.
+  - title: Block the faults
+    text: It adds a leave-out list for cloned faces, fake writing, oversized symbols and stock-photo smiles.
+  - title: Set the motion
+    text: For video, it states how clothing, hair and mobility aids behave as the person moves.
+  - title: Write the review checklist
+    text: It gives up to seven points to check the finished picture for accuracy, dignity and glitches.
+  - title: Mark the limits
+    text: It lists what only a person from the community, or a lawyer, can confirm.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    story <text> | use <where it appears> | tool <name> | image or video | ASSUMED: <list> | MISSING: <list>
+
+  PROMPT, IN PARTS
+    who <people as you described them> | action <text> | setting <text> | camera and light <text> | colour and look <text>
+
+  FULL PROMPT
+    <one prompt, ready to paste>
+
+  LEAVE OUT
+    <cloned faces, fake text, oversized symbols, stock smiles, other items for this brief>
+
+  VIDEO MOTION (video only)
+    <clothing> | <hair> | <mobility aid> | <how each should move>
+
+  REVIEW CHECKLIST (up to 7)
+    <point to check> | pass or fix
+
+  OPEN QUESTIONS
+    <item> | who can answer it: <community reviewer, lawyer or you>
+output_sample:
+  input:
+    - The story the picture tells and where it will appear
+    - Who is shown and the place, as you know them
+    - Image or video, and the tool you will use
+    - Things to avoid (optional)
+  prerequisites:
+    - An AI you can paste a brief into, such as Claude, ChatGPT or Gemini
+    - An image or video tool to make the picture
+    - Someone from the community shown, to review the result (recommended)
+  output:
+    - name: Prompt in parts
+      contains: Who, action, setting, camera and look, written separately so you can change one at a time.
+    - name: Full prompt
+      contains: One prompt ready to paste into your image or video tool.
+    - name: Leave out
+      contains: Mistakes to block, such as cloned faces, made-up writing and an oversized cultural symbol.
+    - name: Video motion
+      contains: How clothing, hair and mobility aids should move, for video prompts only.
+    - name: Review checklist
+      contains: Up to seven points to check the finished picture for accuracy, dignity and glitches.
+    - name: Open questions
+      contains: What is still unknown and who can answer it.
+works_best_with:
+  tools:
+    - name: Midjourney, DALL-E, Sora or Runway
+      why: The profile was written for these image and video tools. Name yours so the leave-out list fits it.
+    - name: Claude, ChatGPT or Gemini with image upload
+      why: You can attach the finished picture and ask it to run the review checklist.
+  inputs:
+    - Photos you have the right to use, showing the real place and clothing.
+    - A short note from someone in the community on what to get right.
+    - Your usual wording for how you describe the people you serve.
+terms:
+  - term: Clone faces
+    meaning: A fault where an AI draws several people with the same face.
+  - term: Negative prompt
+    meaning: A list of things you do not want in the picture. Some tools have a field for it.
+  - term: Stereotype
+    meaning: A fixed, over-simple picture of a group, such as a job or a look shown the same way every time.
+  - term: Tokenism
+    meaning: Showing a person only to look diverse, without making them a real part of the scene.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Image or video
+    how: Say which. Video adds motion lines for clothing, hair and mobility aids.
+  - what: Who is shown
+    how: Give real details, such as age, job and clothing. The agent will not guess identity from a name or a look.
+  - what: Place
+    how: Name the country, room or street. It helps prevent wrong buildings, clothing and signs.
+improve:
+  - Add the corrections a community reviewer gave you to the leave-out list, and paste the list at the start of each run.
+  - Save prompts whose pictures passed review, and reuse their wording as a starting point.

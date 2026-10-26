@@ -9,17 +9,59 @@ description: "This skill should be used when the user asks about quality of hire
 
 Close the feedback loop on hiring: measure quality of hire, capture hiring manager and candidate experience, run search retrospectives, manage silver medalists, and coordinate onboarding handoff. This is the "learn and improve" engine of the recruiting function.
 
+## How to run it
+
+1. Ask what the person needs: surveys, a look back at the search, a silver medalist list, a pre-boarding checklist, or all four. If they say "all", do all four in the order below.
+2. Ask for the facts of the finished search: role, how long it took, where the candidates came from (source of hire), interview scores if any, outcome (filled, cancelled), start date of the new hire, and any feedback from the hiring manager or new hire. If a fact is missing, write MISSING in that spot. Do not invent scores, dates, sources or names.
+3. If the search is still open and no offer has been accepted, stop. Say that this skill is for a closed search, and offer a progress check instead.
+4. Write the surveys (Quality of Hire, Hiring Manager, Candidate) from the question sets below and in `references/survey-templates.md`. Use the person's role and company name only where they gave them.
+5. Run the look back. Use the retro agenda below on the facts given. Where the facts do not support a finding (for example, no scores to compare interviewers), say "not enough data" and name what to collect next time. Finish with 3 specific changes.
+6. Build the silver medalist list only from candidates the person names. Use the capture fields below.
+7. Build the pre-boarding checklist from the start date. Use `references/onboarding-checklists.md` for the role family.
+8. End with "Before you send": who should read each item, and what to check.
+
+## Output
+
+```markdown
+## Hiring quality review: <role>, <date>
+
+### Surveys
+- Quality of hire check-ins (30, 60, 90 days): <questions>
+- Hiring manager survey: <5 questions>
+- Candidate survey, by outcome: <questions per outcome>
+
+### Search look back
+- Timeline: <actual vs target, where time was lost>
+- What worked / what did not: <points>
+- Sources and interviewers: <what the data shows, or "not enough data">
+- 3 changes for next time: <list>
+
+### Silver medalists
+| Candidate | Strengths | Good for | Re-contact on |
+|-----------|-----------|----------|---------------|
+
+### Pre-boarding checklist
+<items by date, with owner>
+
+### Before you send
+- <who checks what>
+```
+
+Save the look back as `roles/<role-name>/reports/retrospective.md` if your AI can write files. If not, give it as text.
+
 ## Quality of Hire Framework
 
 **What to measure:**
 
-| Metric | Source | Timing | Benchmark |
-|--------|--------|--------|-----------|
-| Hiring Manager Satisfaction | HM survey | 30/60/90 days | >4.0/5.0 |
+| Metric | Source | Timing | Target |
+|--------|--------|--------|--------|
+| Hiring Manager Satisfaction | HM survey | 30/60/90 days | Set your own target, such as an average score you would call good |
 | New Hire Performance Rating | Performance review | 6/12 months | Meets/Exceeds expectations |
 | Ramp Time to Productivity | HM assessment | 90 days | Within expected range per role |
-| Retention | HRIS data | 6/12/24 months | >85% at 12 months |
+| Retention | HRIS data | 6/12/24 months | Your own target |
 | New Hire Engagement | Engagement survey | 90 days | Equal to or above team avg |
+
+The targets are examples to adjust to your company. They are not proven industry norms. Do not present a number as a standard unless the person gives a source.
 
 **Survey cadence:** 30-day check-in → 60-day deeper dive → 90-day full assessment
 
@@ -27,15 +69,8 @@ Close the feedback loop on hiring: measure quality of hire, capture hiring manag
 
 - Mix quantitative (1-5 scale) with qualitative (open-ended)
 - Ask about specific behaviors, not general impressions
-- Include a "would you hire this person again?" question (strongest single QoH predictor)
-- Correlate QoH scores back to upstream signals: source of hire, interviewer scores, time-in-process
-
-**Correlation analysis:** Track which sourcing channels, interviewers, and process steps predict high QoH. Over time, this reveals:
-
-- Which sources produce the best hires (not just the most hires)
-- Which interviewers are most predictive
-- Whether time-in-process correlates with hire quality
-- Which competencies from scorecards best predict on-the-job performance
+- Include a "would you hire this person again?" question
+- Correlate QoH scores back to upstream signals: source of hire, interviewer scores, time-in-process (only when the person has that data)
 
 ## HM Experience Survey
 
@@ -50,8 +85,6 @@ Close the feedback loop on hiring: measure quality of hire, capture hiring manag
 **When to send:** Within 1 week of offer acceptance or role closure
 
 **Response collection:** Anonymous optional, but recommend named for actionable feedback
-
-**Trend analysis:** Track scores over time per recruiter, per department, per role type
 
 ## Candidate Experience Survey
 
@@ -68,14 +101,13 @@ Close the feedback loop on hiring: measure quality of hire, capture hiring manag
 **Candidate NPS:** "On a scale of 0-10, how likely are you to recommend applying at [Company] to a friend?"
 
 - Promoters (9-10), Passives (7-8), Detractors (0-6)
-- Track per department, per recruiter, over time
-- Segment by outcome (hired vs rejected) — expect hired to score higher, but rejected should still be >6
+- Segment by outcome (hired vs rejected)
 
 **Anonymity:** Always anonymous for rejected candidates. Named is fine for hired candidates.
 
 ## Retrospective Framework
 
-**When to run:** After every closed search (filled or cancelled). Non-negotiable.
+**When to run:** After every closed search (filled or cancelled).
 
 **Who attends:** Recruiter, hiring manager, lead interviewer(s). 30-45 minutes.
 
@@ -89,17 +121,9 @@ Close the feedback loop on hiring: measure quality of hire, capture hiring manag
 6. **Process friction** (5 min) — scheduling delays, interviewer availability, tool issues
 7. **Lessons & action items** (5 min) — 3 specific things to do differently next time
 
-**Output format:** Save to `roles/[role-name]/reports/retrospective.md`
-
 ## Silver Medalist Management
 
 **Definition:** Candidates who scored "Hire" or "Strong Hire" but didn't get the offer (e.g., another candidate was selected, role was cancelled, timing didn't work).
-
-**Identification criteria:**
-
-- Final-round candidate with overall "Hire" recommendation
-- Withdrawn candidate who expressed continued interest
-- Candidate who declined offer but remained warm
 
 **What to capture (in candidate file):**
 
@@ -110,6 +134,8 @@ Close the feedback loop on hiring: measure quality of hire, capture hiring manag
 - Last contact date
 - Nurture status
 
+Ask the candidate's permission before keeping them on a list. Follow your local data rules on how long you may keep their details.
+
 **Nurture cadence:**
 
 | Timing | Action | Channel |
@@ -119,13 +145,6 @@ Close the feedback loop on hiring: measure quality of hire, capture hiring manag
 | 3 months | Check in on career status, mention any new roles | Email/LinkedIn |
 | 6 months | Deeper re-engagement if new role opens | Phone |
 | Trigger: new matching role | Immediate priority outreach | Phone + Email |
-
-**Re-engagement triggers:**
-
-- New role opens matching their profile
-- Candidate posts job-seeking signals (LinkedIn status, profile updates)
-- Company milestone (funding, launch, expansion) that changes the opportunity
-- Their current employer has layoffs or negative news
 
 ## Onboarding Handoff
 
@@ -160,29 +179,22 @@ Close the feedback loop on hiring: measure quality of hire, capture hiring manag
 
 ## Cross-Role Analytics
 
-**Metrics to track across all roles:**
+Use this only when the person gives data for several searches.
 
-| Metric | Formula | Target |
-|--------|---------|--------|
-| Time-to-Fill | Days from opening to offer acceptance | Role-dependent |
-| Source Effectiveness | % of hires per source channel | Track trend |
-| Conversion Rate (per stage) | Candidates advancing / candidates entering stage | Track by role family |
-| Offer Acceptance Rate | Offers accepted / offers extended | >80% |
-| Diversity Pipeline | % underrepresented at each stage | Track drop-off points |
-| Cost-per-Hire | Total recruiting costs / hires | Role-dependent |
-| Interview-to-Offer | Interviews conducted / offers extended | <5:1 |
+| Metric | Formula |
+|--------|---------|
+| Time-to-Fill | Days from opening to offer acceptance |
+| Source Effectiveness | % of hires per source channel |
+| Conversion Rate (per stage) | Candidates advancing / candidates entering stage |
+| Offer Acceptance Rate | Offers accepted / offers extended |
+| Cost-per-Hire | Total recruiting costs / hires |
+| Interview-to-Offer | Interviews conducted / offers extended |
 
-**Identify systemic issues:**
-
-- If screening pass rate is >80%, you're not sourcing aggressively enough
-- If screening pass rate is <30%, persona/targeting is off
-- If HM rejection rate >50%, calibration needed
-- If offer decline rate >30%, comp positioning needs review
-- If source X produces most hires but worst retention, reconsider
+**Spot systemic issues** from the person's own numbers. For example, if very few candidates pass screening, the targeting may be off. If most hiring managers reject the shortlist, the intake may need work. If many offers are declined, look at pay and the offer process. If one source produces the most hires but the worst retention, reconsider it. Do not apply fixed cut-off numbers unless the person gives them.
 
 ## Reference Files
 
-You are **stongly encouraged** to read the reference files
+Read these when they are available:
 
 - **`references/survey-templates.md`** — Ready-to-use survey question sets for QoH, HM experience, and candidate experience.
 - **`references/retrospective-guide.md`** — Step-by-step retro facilitation guide with examples.

@@ -1,6 +1,6 @@
 new_slug: failure-root-cause
 name: Find why it went wrong and fix it in proportion
-summary: Describe a failure. Get a no-blame review plan, a checked chain of whys and sized fixes.
+summary: Find the root cause of a failure with a no-blame review plan, a checked chain of whys and fixes sized to the pain. Give it what went wrong.
 job: lead-people
 thinking: high
 thinking_why: It checks causes against evidence and sizes fixes to the pain. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Something broke or missed its date and you want to stop it happening again.
   - Your last review ended with one person being blamed.
   - Someone wants a full rebuild after a small failure.
+not_for:
+  - "You have one small slip that needs no review: write a simple fix-it note, or just fix it and tell the team."
+  - "You want to blame one person: use a talk with their manager instead, because this review stays on the process."
+  - "You need to calm a disagreement: use the Disagreement calming line writer, not a failure review."
 you_give:
   - What went wrong, when, who noticed and how often it has happened
   - The people and teams involved, and how much they trust one another (optional)
@@ -29,6 +33,23 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the failure in a few lines and name the people involved. Send the plan to attendees before the review.
   - Share the write-up with everyone, and check each fix on its date.
+output_sample:
+  input:
+    - What went wrong, when, who noticed and how often it has happened
+    - The people and teams involved, and how much they trust one another (optional)
+    - Logs, messages or customer comments (optional)
+    - How much it hurt, such as customers affected, time or money lost (optional)
+  prerequisites:
+    - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: The review plan"
+      contains: The failure class, trigger rule, who attends and why, a moderator, ground rules, the line for blame and an agenda.
+    - name: "Step 2: The chain of whys"
+      contains: Each why with its answer and evidence, a second branch, a cause you can change and a prevention check.
+    - name: "Step 3: Fixes in proportion"
+      contains: The pain band and one fix per level with size, owner, date, done-when and check, plus a recurrence rule.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plans the review
     text: Narrows the target, writes a trigger rule, lists who must attend, names a moderator and sets the rules and the line for when blame starts.

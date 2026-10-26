@@ -1,6 +1,6 @@
 new_slug: test-failure-repair-loop
 name: Test failure repair loop
-summary: Point it at a red test suite. Get capped rounds of fixes, re-checked each time, until green or stopped.
+summary: Fix a failing test suite in capped rounds. It re-runs your tests after each fix and stops at green or at a limit, with a clear report.
 job: test-and-fix-code
 thinking: high
 thinking_why: It reads each result, picks the next fix path and watches for going in circles. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your tests are red after a change and you want them fixed without the guesswork.
   - A pull request check fails and you do not know why.
   - You have flaky browser tests and want the cause fixed, not retries added.
+not_for:
+  - Your suite is already green. There is nothing to fix, so run your normal checks instead.
+  - You have one known bug you can fix yourself. Make the change by hand and run the tests once.
+  - The failure has no test output at all. Use the bug-root-cause-finder skill first, or a debugger, to find the cause.
 you_give:
   - The code, in a folder or repository it can run
   - The command that runs your tests
@@ -30,6 +34,28 @@ how_to_use:
   - Let it run. It stops by itself at the limit.
   - Read the diff and the list of what is still failing. Decide on any test that looks out of date.
   - Commit the changes yourself when you are happy. It will not.
+output_sample:
+  input:
+    - Your code, in a folder or repository your AI can run
+    - The command that runs your tests
+    - The failing output or failed check (optional)
+    - A list of tests you know are flaky (optional)
+  prerequisites:
+    - An AI that can run code and edit files, such as Claude Code
+    - Your tests must run on your machine, with any services or secrets they need
+  output:
+    - name: RESULT
+      contains: Green, partly fixed or stopped, with the number of failures before and after.
+    - name: ROUNDS
+      contains: One line per round with the failure group, the cause, the change and the result.
+    - name: CHANGES MADE
+      contains: The files changed and why, left uncommitted so you can read the full diff.
+    - name: STILL FAILING
+      contains: Each remaining test, its cause and the decision it needs from you.
+    - name: FLAKY FOUND
+      contains: Tests added to the flaky list because the cause sits outside the code.
+    - name: CHECKS AND MISSING
+      contains: The lint and type check result, then every MISSING line.
 how_it_works:
   - title: Take a baseline
     text: Runs the full suite and saves the failing tests, so every later round is compared with the start.

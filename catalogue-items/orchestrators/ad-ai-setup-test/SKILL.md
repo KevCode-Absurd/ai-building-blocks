@@ -52,12 +52,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the story ad test.** Use the skill `story-ad-test-planner`. Writes the plan for the chain of AI steps that will make your story ads.
-2. **Plan the handoffs.** Use the skill `ai-workflow-handoff-planner`. Give it the plan from the steps before. Takes the test plan and writes what each AI step is sent and must never lose.
+1. **Plan the story ad test.** Use the skill `story-ad-test-planner`. Writes the plan for the chain of AI steps that will make your story ads. Hands step 2 the plan and its four story tests.
+2. **Plan the handoffs.** Use the skill `ai-workflow-handoff-planner`. Give it the plan from the steps before. Takes the test plan and writes what each AI step is sent and must never lose. Hands you the run rules to use at the pause, when you make the new set of ads.
 
 Pause here: Run the old chain and the new chain on the same briefs and save every image ad each one makes.
 
-3. **Score old against new.** Use the skill `old-vs-new-ad-prompt-scorer`. Compares the two sets of image ads and says whether the new setup is better, worse or just cheaper.
+3. **Score old against new.** Use the skill `old-vs-new-ad-prompt-scorer`. Compares the two sets of image ads and says whether the new setup is better, worse or just cheaper. Uses the old and new ads you saved at the pause and the brief both were made from, not step 2's plan.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

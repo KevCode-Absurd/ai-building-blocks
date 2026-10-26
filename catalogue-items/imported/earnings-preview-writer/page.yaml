@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It gathers set figures, then explains what they mean.
 new_slug: earnings-preview-writer
 name: Earnings preview writer
-summary: Give it a stock ticker. Get the report date, what analysts expect, past
-  surprises and what to watch. Collects data from websites.
+summary: "Get an earnings preview for any stock ticker: report date, what analysts expect, past beats and misses, and what to watch. Needs code and web access."
 job: money-and-investing
 headline: Earnings preview writer
-subhead: A pre-earnings briefing for one stock, built from live data. Give a
-  ticker and you get the report date, what analysts expect, how the company has
-  beaten or missed before, and what to watch.
+subhead: A pre-earnings briefing for one stock, built from live data. Give a ticker and you get the report date, what analysts expect, how the company has beaten or missed before, and what to watch.
 explain: |
   A pre-earnings briefing for one stock, built from live data. Give a ticker and you get the report date, what analysts expect, how the company has beaten or missed before, and what to watch.
 
@@ -18,6 +15,10 @@ when:
   - You want to see how often it has beaten estimates.
   - You need the consensus numbers in one place.
   - You hold a stock and want to know what moves it on results.
+not_for:
+  - The company has already reported. Use earnings-recap to read the results instead of a preview.
+  - The company is private or listed outside the US. Yahoo Finance data may be missing, so check the company's own investor page.
+  - You want advice on whether to buy or sell. This brief shows what the street expects. Talk to a licensed adviser.
 you_give:
   - A stock ticker or company name
   - Python with internet access
@@ -28,8 +29,29 @@ you_get:
   - Past surprise history
   - A short list of what to watch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python and get online, such as Claude with code tools turned on.
+  - Paste in this skill, or upload its folder.
+  - "Type the ticker, for example: Write an earnings preview for the ticker you hold. Add any metrics you care about (optional)."
+  - Let it install yfinance if asked. This is a free tool that reads Yahoo Finance data.
+  - Read the brief. Check any line with missing data, since Yahoo may lack some figures.
+  - After the company reports, use earnings-recap to compare the results with this brief.
+output_sample:
+  input:
+    - A stock ticker or company name
+    - Specific metrics to watch (optional)
+  prerequisites:
+    - An AI that can run Python code and get online
+    - Permission to install the yfinance package, which the skill installs if missing
+  output:
+    - name: Date and context
+      contains: Company, sector, report date, whether it reports before or after the market, current price, recent price moves and market cap.
+    - name: Consensus estimates
+      contains: A table of expected earnings per share and revenue with low, high, analyst count, year-ago value and growth.
+    - name: Beat/miss track record
+      contains: The last four quarters of estimated against actual earnings, with surprise percent, a beat count and the average surprise.
+    - name: Analyst sentiment
+      contains: How many analysts rate it buy, hold or sell, plus price targets and the gap from the current price.
+    - name: What to watch
+      contains: The few things the market will focus on, such as growth, margins and sharp line item changes.
+    - name: Overall read and caveats
+      contains: A short view of the setup, framed as what the street expects, with notes on data limits.

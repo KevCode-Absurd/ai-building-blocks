@@ -1,6 +1,6 @@
 new_slug: post-flop-reason-finder
 name: "Post flop reason finder"
-summary: "Paste a post and its numbers. Get why it flopped (unseen, skipped or ignored) and one change."
+summary: "Find out why your X or LinkedIn post flopped. Paste the post and its numbers. You get the cause (unseen, skipped or ignored) and one change."
 job: grow-social
 thinking: low
 thinking_why: "It sorts numbers into one of three causes using fixed rules."
@@ -17,6 +17,10 @@ when:
   - "A post you liked got almost no response."
   - "You keep rewriting hooks and nothing changes."
   - "You want one clear thing to try next, not a list of ten."
+not_for:
+  - "You have not published the post yet: ask a person you trust to read the draft, or wait for real numbers."
+  - "You want every check run on a flop: use the Flop post diagnoser."
+  - "You want to sort customer feedback, not post numbers: use the Feedback pile sorter."
 
 you_give:
   - "The post text"
@@ -32,6 +36,23 @@ how_to_use:
   - "Paste the post text and its numbers under the prompt. Both X and LinkedIn show you these."
   - "Add your usual numbers so it knows what a flop means for you."
   - "Make the one change on your next post and compare."
+output_sample:
+  input:
+    - Your post text
+    - Impressions, likes or reactions, comments and reposts
+    - Your usual numbers for other posts (optional)
+    - Which platform it was on, X or LinkedIn (optional)
+  output:
+    - name: FAILURE
+      contains: Whether the post was unseen, skipped or ignored, and the numbers that show it.
+    - name: WHAT IT RULES OUT
+      contains: One line on what is not the problem, such as the writing when reach was low.
+    - name: WHY
+      contains: Two or three lines that explain the cause using your numbers.
+    - name: ONE CHANGE
+      contains: One thing to do differently, and whether it should matter a lot or a little.
+    - name: MISSING
+      contains: Any number you did not give, so nothing is guessed.
 
 how_it_works:
   - title: "Check the numbers"

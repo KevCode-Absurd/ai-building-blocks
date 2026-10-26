@@ -77,6 +77,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without last week's notes for a person, build the agenda from their open items and goals and say the win and repeat checks were skipped. Without goals, praise from the notes alone and say the agenda is not tied to a goal. On the first week, set up the files and say the repeat check starts next week.
 
+## When not to use this
+- Not for a manager with one or two reports. A shared note and a good question may be enough. Say so.
+- Not for the end-of-quarter review. That is the `quarterly-performance-review-keeper`, which reads these person files.
+- Not for a serious problem such as a safety issue or a policy breach. Tell the manager to raise it at once, without waiting for two weeks of notes.
+
 ## Honest limits
 - It reads the manager's notes. It cannot see the person's side, so every behaviour note is a hypothesis to test in the room.
 - Two weeks is a starting point for a pattern. A serious problem gets raised at once, by the manager, without waiting for the agent.

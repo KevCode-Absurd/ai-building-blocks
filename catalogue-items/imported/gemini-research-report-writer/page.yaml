@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Gemini does the searching; you set the question and check the sources.
 new_slug: gemini-research-report-writer
 name: Gemini research report writer
-summary: Give it a research question. Get a long report with cited sources from
-  Google Gemini. Needs a paid Gemini API key.
+summary: Run a Gemini deep research report on any question. You get a long, cited report saved as a file. Needs Python and a paid Gemini API key.
 job: research-topics
 headline: Gemini research report writer
-subhead: A long research report with cited sources, written while you do
-  something else. You give a question and Google Gemini's research mode plans
-  the search, reads the pages and writes the report.
+subhead: A long research report with cited sources, written while you do something else. You give a question and Google Gemini's research mode plans the search, reads the pages and writes the report.
 explain: |
   A long research report with cited sources, written while you do something else. You give a question and Google Gemini's research mode plans the search, reads the pages and writes the report. The skill starts the job, checks on it, and collects the finished text.
 
@@ -18,10 +15,14 @@ when:
   - A quick web search will not cover a topic you must understand.
   - You want a literature review draft to react to.
   - You want research running in the background while you work.
+not_for:
+  - "You need a quick fact or a short answer: use a plain web search or a normal chat with your AI."
+  - "Your question holds private or confidential material, such as customer data or passwords: remove it first, or do the research by hand."
+  - "You cannot run code or pay for a Gemini API key: ask your AI to search the web in a normal chat instead."
 you_give:
   - Your research question
-  - A Gemini API key
-  - Python installed
+  - A Gemini API key from Google AI Studio
+  - A report layout, like a list of section headings (optional)
   - A place to save the report (optional)
 you_get:
   - A long report with cited sources
@@ -29,8 +30,31 @@ you_get:
   - Progress updates while it runs
   - The finished report saved as a file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Gemini API key.
+  - Get a Gemini API key from Google AI Studio. Set it on your computer as GEMINI_API_KEY. Never paste it into a chat.
+  - Open an AI that can run code, such as Claude Code, and give it the skill folder. In the folder, ask it to run pip install -r requirements.txt.
+  - Tell your AI your research question and any layout you want. Remove private details first.
+  - Check the question, the cost range and the save location it shows you. Say yes only if all three are right.
+  - Wait 2 to 10 minutes. Your AI can stream progress, or check status or wait using the job ID it gives you.
+  - Read the report and check key claims against the original sources. Ask for a follow-up on any point that needs more.
+output_sample:
+  input:
+    - Your research question
+    - Your Gemini API key from Google AI Studio
+    - A report layout you want, like section headings (optional)
+    - A place to save the report (optional)
+  prerequisites:
+    - An AI that can run code on your computer
+    - Python 3.8 or newer
+    - A paid Gemini API key, saved as GEMINI_API_KEY
+    - The httpx package, installed from requirements.txt
+  output:
+    - name: Approval summary
+      contains: The exact question, the fact it goes to Google, the expected cost range and where the file will be saved.
+    - name: Progress updates
+      contains: Live status while the research runs, or a job ID you can check later with status or wait.
+    - name: Research report
+      contains: A long markdown report built from many searches, with cited sources, in your layout if you gave one.
+    - name: Saved report file
+      contains: The finished report stored in the place you chose.
+    - name: Follow-up report
+      contains: An extra report on one point, built on the earlier research when you ask for more.

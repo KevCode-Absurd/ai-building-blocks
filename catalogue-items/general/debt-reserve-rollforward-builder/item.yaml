@@ -1,25 +1,21 @@
 slug: debt-reserve-rollforward-builder
 name: Debt reserve rollforward builder
-summary: A debt reserve rollforward and unfunded requirement
+summary: "Roll a debt service reserve account forward one period: required balance, top-up from available cash, ending balance and any unfunded gap."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
 origin: own
 version: 1.0.0

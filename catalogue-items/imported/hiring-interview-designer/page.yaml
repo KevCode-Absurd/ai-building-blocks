@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a structured process for the role.
 new_slug: hiring-interview-designer
 name: Hiring interview designer
-summary: Name the role. Get an interview plan with questions, scoring guides and
-  a way to compare candidates.
+summary: Plan a fair interview loop for one role. Name the role and level. You get rounds, questions, scoring guides and a debrief guide.
 job: hire-people
 headline: Hiring interview designer
-subhead: An interview plan for one role that gives every candidate the same fair
-  test. It sets the rounds, what each round covers, how long it runs, and which
-  questions to ask so interviewers do not overlap or improvise.
+subhead: An interview plan for one role that gives every candidate the same fair test. It sets the rounds, what each round covers, how long it runs, and which questions to ask so interviewers do not overlap or improvise.
 explain: |
   An interview plan for one role that gives every candidate the same fair test. It sets the rounds, what each round covers, how long it runs, and which questions to ask so interviewers do not overlap or improvise.
 
@@ -18,6 +15,10 @@ when:
   - Different interviewers ask different things and decisions feel random.
   - You want a scoring guide so candidates can be compared fairly.
   - You need to run a debrief that ends with a decision.
+not_for:
+  - You are hiring one contractor for a short job. Use a quick call and a look at their past work instead.
+  - You need to write the job ad. Use a job description writer, because this plan starts after the role is clear.
+  - You want to screen many applicants by CV. Use a simple checklist of must-have skills, not a full interview loop.
 you_give:
   - The role and level
   - Key skills the role needs
@@ -29,7 +30,31 @@ you_get:
   - Scoring guides with evidence rules
   - A bias checklist and debrief guide
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI the role, the level and the skills the role needs.
+  - Say how many rounds you can run. Add past hiring problems if you have them.
+  - Read the plan. Check that each round tests one skill and no two rounds repeat.
+  - Share the scoring guide with your interviewers before the first interview.
+  - "Optional: if your AI can run code, it can use the Python script to draft the loop. It needs Python 3, a role and a level."
+output_sample:
+  input:
+    - The role you are hiring for
+    - The level, such as mid or senior
+    - Key skills the role needs (optional)
+    - How many interview rounds you can run (optional)
+    - Past hiring problems (optional)
+  prerequisites:
+    - Python 3 only if you want the small script to draft the loop. A chat AI can do the plan without it.
+  output:
+    - name: Interview loop plan
+      contains: Each round with its focus, its timing and the skill it tests, so rounds do not overlap.
+    - name: Question sets
+      contains: Suggested questions for each round, matched to the skill that round tests.
+    - name: Scoring guide
+      contains: A shared scoring rubric that asks for evidence behind every score.
+    - name: Competency matrix
+      contains: The skills needed for the role and level, laid out so each round maps to one skill.
+    - name: Bias checklist
+      contains: Checks that guard against unstructured chats and giving one round too much weight.
+    - name: Debrief guide
+      contains: Steps for the team meeting that compares candidates and ends with a decision.

@@ -1,56 +1,65 @@
 new_slug: new-leader-first-message-writer
 name: "New leader first message writer"
-summary: "Paste your background and team situation. Get a first-week message saying who you are and what happens next."
+summary: "Write your first message as a new leader. Get a one-page note covering who you are, why you are here and what happens next."
 job: lead-people
 thinking: low
 thinking_why: "It follows a fixed shape with your own facts."
 
 headline: "New leader first message writer"
-subhead: "Paste your background and describe your team's situation. It builds a message from a personal memory, the shift in your field and four answers: who you are, why you are here, why the team is here and what happens next."
+subhead: "Paste your background and describe your team's situation. It builds a one-page message from a personal memory, the shift in your field and four answers: who you are, why you are here, why the team is here and what happens next. Gaps are marked, not invented."
 
 explain: |
-  Your first message is read closely and remembered. A speech full of goals reads like every other, and a title list tells people nothing about how you will lead.
+  Your first message to a new team is read closely and remembered. A speech full of goals reads like every other one. A list of past job titles tells people nothing about how you will lead.
 
-  This skill writes a one-page message in a fixed order. It opens with a personal moment and thanks to the people before you, names the shift in your field and answers four questions: who you are, why you are here, why the team is here and what happens next. It also admits what you do not know and ends with one ask. Facts it lacks are marked, never invented.
+  This skill writes a first-day email or letter for a new manager, boss or business owner. It follows the shape of Satya Nadella's first email as CEO. It opens with a personal moment and thanks to the people who led before you. It names one change in your field and what it means for this team. Then it answers four questions people have in a new boss: who are you, why are you here, why is the team here and what happens next.
+
+  It also admits one thing you do not know, says what stays the same and ends with one ask. It only uses facts you give it. If you give it no memory or no team details, it asks. It will not make up a story, a date or a plan.
 
 when:
-  - "You start a new role next week and need your first email."
-  - "You took over a team that has had a leader leave."
-  - "You run a small business and are bringing in a manager."
+  - You start a new role next week and need your first email to the team.
+  - You took over a team after a leader left, and people are waiting to hear from you.
+  - You run a small business and are bringing in a manager, or stepping in as one.
+  - You are promoted from inside the team and need to say what changes and what stays.
+
+not_for:
+  - "You want a lasting culture document, not a first message: use the team culture memo writer."
+  - "You want the whole first month, including who you will listen to and agreements after those talks: use the Take over a team as its new leader workflow."
+  - "You are announcing a change of direction or a re-org to an existing team: use the internal change announcement writer."
+  - "You have no personal memory or team details yet. It will ask for them first rather than write a template with nothing in it."
 
 you_give:
-  - "Your background and one personal memory"
-  - "The team's situation"
-  - "What you will change and leave alone (optional)"
+  - "Your background and one small, true personal memory that shaped how you lead"
+  - "The team's situation: what they do, who led them before, what has changed and what is hard"
+  - "Names of the people who built the team before you (optional)"
+  - "What you will change soon and what you will leave alone (optional)"
+  - "How formal the team is (optional)"
 you_get:
-  - "A one-page first message"
+  - "A one-page first message, ready to edit and send"
   - "The four questions answered in order"
-  - "A list of facts you still need to fill"
+  - "A thank-you to the people before you, and a line on what stays the same"
+  - "One honest line on what you do not know, and one ask"
+  - "A list of facts you still need to fill in"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Write down the memory you would tell a friend, even if rough."
-  - "Describe the team and what has changed for it."
-  - "Paste it all in and ask for the message."
-  - "Read it aloud. Cut any line you would not say in person."
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Write down the memory you would tell a friend, even if it is rough. Then describe the team and what has changed for it.
+  - Add the names of people to thank, your first thirty days and what you will not change, if you know them.
+  - Read the message out loud. Cut any line you would not say in person.
+  - Fill in every MISSING line with a true fact before you send it.
 
 how_it_works:
-  - title: "Open with a memory and thanks"
-    text: "Opens with a personal memory and thanks to the people before you."
-  - title: "State the shift"
-    text: "States the shift in your field and what it means for the team."
-  - title: "Answer who I am"
-    text: "Answers: who am I."
-  - title: "Answer why I am here"
-    text: "Answers: why am I here."
-  - title: "Answer why we are here and what happens next"
-    text: "Answers: why are we here and what do we do next."
-  - title: "Admit what you do not know"
-    text: "Admits what you do not know."
-  - title: "End with one ask"
-    text: "Ends with a short ask and a first-name signature."
-  - title: "Checks its own work"
-    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+  - title: Opens with a memory and thanks
+    text: Two or three sentences on one personal moment, then thanks to the people who led or built the team before you.
+  - title: States the shift
+    text: Names one change in your field with a concrete example and what it means for the team.
+  - title: Answers who I am and why I am here
+    text: Four sentences on who you are, including one thing you do badly, then why you took the role.
+  - title: Answers why we are here and what next
+    text: The team's purpose in one sentence, your first thirty days, what changes and what stays.
+  - title: Admits what you do not know
+    text: Two lines on what you are unsure about, with no apology for being new.
+  - title: Ends with one ask
+    text: One short ask for how you will build together, signed with your first name, on one page.
 
 output_shape: |
   <Opening: a personal memory, thanks to the people before you>
@@ -77,42 +86,65 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "Your background and one personal memory that shaped how you lead"
+    - "The team's situation: what they do, who led them and what has changed"
+    - "Names of the people before you (optional)"
+    - "What you will change and what you will leave alone (optional)"
+  output:
+    - name: "Opening"
+      contains: "A short personal memory and thanks to the people who led or built the team before you."
+    - name: "The shift"
+      contains: "One change in your field, with an example, and what it means for this team."
+    - name: "Who am I / Why am I here"
+      contains: "Four sentences about you, including one thing you do badly, and what drew you to this role."
+    - name: "Why are we here, and what do we do next"
+      contains: "The team's purpose, your first thirty days, what changes and what stays the same."
+    - name: "What I do not know and One ask"
+      contains: "Two honest lines on what you are unsure about, then one ask, signed with your first name."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts for you to fill in, such as a date or a name, and any check it could not pass."
+
 tweaks:
-  - what: "The memory"
-    how: "A small, true moment works better than a big claim."
-  - what: "The first thirty days"
-    how: "Real dates and names make the next-steps section land."
-  - what: "Tone"
-    how: "Say how formal the team is. A small firm wants fewer headings."
-  - what: "What you will not change"
-    how: "Naming this early calms people more than any promise."
+  - what: The memory
+    how: A small, true moment works better than a big claim.
+  - what: The first thirty days
+    how: Real dates and names make the next-steps section land.
+  - what: Tone
+    how: Say how formal the team is. A small firm wants fewer headings.
+  - what: What you will not change
+    how: Naming this early calms people more than any promise.
 
 judge:
-  - "It answers all four questions in order."
-  - "The people before you are named and thanked."
-  - "It says what stays the same."
-  - "It admits one thing you do not know."
-  - "It fits on one page."
+  - It answers all four questions in order.
+  - The people before you are named and thanked.
+  - It says what stays the same.
+  - It admits one thing you do not know.
+  - It fits on one page.
 
 test:
-  - "Send the draft to one person who works there and ask what they would ask you."
-  - "Check each fact against what you told it."
-  - "Run it twice and see if the ask stays the same."
+  - Send the draft to one person who works there and ask what they would ask you.
+  - Check each fact against what you told it.
+  - Run it twice and see if the ask stays the same.
 
 improve:
-  - "Replace the examples in step 2 with ones from your field."
-  - "Add your own phrases for the sign-off."
-  - "Save the final message in your brand file as a voice sample."
-  - "Pair it with \"Team culture memo writer\" for the next month."
+  - Replace the examples in step 2 with ones from your field.
+  - Add your own phrases for the sign-off.
+  - Save the final message in your brand file as a voice sample.
+  - Pair it with "Team culture memo writer" for the next month.
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Sorting plain rules into checkable form is text work any strong chat AI does well with this skill."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Turning your own facts into a short, ordered message is text work. No files, web access or paid tools needed."}
+    - {name: "Your email app", why: "Paste the draft in and read it as the team will, on a screen, before you send."}
   inputs:
     - "A short note on each direct report"
     - "Names of people who built the team"
     - "A date for your first team meeting"
 
 terms:
-
-
+  - term: Shift in your field
+    meaning: One real change in your industry or market that affects this team's work.
+  - term: The four questions
+    meaning: Who am I, why am I here, why are we here and what do we do next.

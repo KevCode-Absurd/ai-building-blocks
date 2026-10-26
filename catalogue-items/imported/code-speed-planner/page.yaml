@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must reason about cost before writing any code.
 new_slug: code-speed-planner
 name: Code speed planner
-summary: Before it writes loops or queries, it states the best approach and
-  cost. Get code that avoids slow patterns.
+summary: Check your code for slow loops and one-query-per-row traps before it ships. Your AI plans the faster approach first, then writes the code.
 job: build-software
 headline: Code speed planner
-subhead: Code that avoids slow patterns from the start. Before it writes a loop
-  or a query, it states the best approach and what it will cost, so O(n squared)
-  work and N+1 queries do not reach production.
+subhead: Code that avoids slow patterns from the start. Before it writes a loop or a query, it states the best approach and what it will cost, so O(n squared) work and N+1 queries do not reach production.
 explain: |
   Code that avoids slow patterns from the start. Before it writes a loop or a query, it states the best approach and what it will cost, so O(n squared) work and N+1 queries do not reach production.
 
@@ -18,6 +15,10 @@ when:
   - Your code runs one database query per item.
   - You are reviewing code that has a loop inside a loop.
   - You want speed checked before code is written.
+not_for:
+  - Your list has fewer than about 10 items, where speed does not matter. Write the simple version.
+  - The slowness comes from small constant costs or from disk and network waits. Use a profiler, a tool that times each part of your code.
+  - You only want a bug fixed with no speed concern. Ask your AI to debug it directly, or ask a developer to review it.
 you_give:
   - The task or the code to review
   - Typical data size (optional)
@@ -28,8 +29,27 @@ you_get:
   - Faster replacements
   - Code that avoids those patterns
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste in the text of this skill's SKILL.md file.
+  - Describe the task, or paste the code or pull request you want checked.
+  - Add your typical data size, language and database if you know them (optional).
+  - Read the plan and the cost it states before you accept any code.
+  - Review the slow patterns it lists, then use the faster replacement.
+  - If your AI can read project files, point it at the folder so it can scan more code at once.
+output_sample:
+  input:
+    - The task you want coded, or the code or pull request to review
+    - Typical data size (optional)
+    - Your language and database (optional)
+  prerequisites:
+    - An AI that can read your project files works best, but you can paste code into a chat instead
+  output:
+    - name: Pre-write plan
+      contains: The cost in Big-O terms, the data structure and the kind of algorithm, stated before any loop or query is written.
+    - name: Canonical example
+      contains: A side-by-side of the same task written without the plan and then with it, showing the faster version.
+    - name: Rule scan
+      contains: Slow patterns found in your code, such as a loop inside a loop, a search inside a loop or one query per item.
+    - name: Faster replacement
+      contains: Rewritten code that uses a lookup table, a single sort, a batch or a join in place of the slow step.
+    - name: Verification checklist
+      contains: A short list of checks that the final code matches the plan and the stated cost.

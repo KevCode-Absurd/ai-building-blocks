@@ -9,6 +9,7 @@ job: ops
 level: expert
 inputs:
   - {type: plan, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: plan}
 uses: []

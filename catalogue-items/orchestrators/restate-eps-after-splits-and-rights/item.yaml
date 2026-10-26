@@ -1,15 +1,13 @@
 slug: restate-eps-after-splits-and-rights
 name: Restate EPS after splits and rights
-summary: Put split and discounted rights events onto a consistent comparative EPS and share basis.
+summary: Put past EPS on one basis after a stock split or rights issue. Give the terms and past EPS. Get a restated EPS workbook and a share count tie-out.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -43,3 +41,4 @@ credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+needs_mode: manual

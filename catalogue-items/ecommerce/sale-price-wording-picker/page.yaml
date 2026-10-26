@@ -1,6 +1,6 @@
 new_slug: sale-price-wording-picker
 name: Sale price wording picker
-summary: Paste a full price and a sale price. Get the discount shown the clearest way, with warnings.
+summary: Paste a full price and a sale price. Get the sale price wording that reads clearest, the discount sums, a badge and a banner line.
 job: set-prices
 thinking: low
 thinking_why: It runs the same sums and rules on every price you give.
@@ -14,6 +14,10 @@ when:
   - You are planning a sale and need the badge and banner.
   - You are unsure whether to say percent or dollars off.
   - You want to check a discount before you send the email.
+not_for:
+  - Your full price was never really charged. Use a plain price with no crossed-out number, or ask a qualified person about your local rules.
+  - You are clearing old stock and a deep cut is expected. Use a bundle or a free gift offer, or just state the clearance price.
+  - You need help choosing how big the discount should be. Work that out first with your margins, or ask your accountant.
 you_give:
   - The full price and the sale price
   - Where it will show (optional)
@@ -24,10 +28,30 @@ you_get:
   - A badge and a banner or email line
   - Warnings, and a check-with-a-qualified-person line on local rules
 how_to_use:
-  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
-  - Only use a full price you really charged.
-  - Say where the discount will appear.
-  - Check the local rules on "was" prices before you publish.
+  - Copy the prompt and paste it into Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Under the prompt, type your full price and your sale price.
+  - Add where the price will show and the reason for the sale, if you have them.
+  - Check the sums, then read the warnings before you use any wording.
+  - Only use a full price you really charged. Check your local rules on was prices before you publish.
+output_sample:
+  input:
+    - Your full price
+    - Your sale price
+    - Where the price will show, such as a banner, badge, coupon or email (optional)
+    - The reason for the sale (optional)
+  output:
+    - name: SUMS
+      contains: The amount off, the percent off, and how much higher the full price is than the sale price.
+    - name: SHOW IT AS
+      contains: The price display, using amount off or percent off, with both prices side by side.
+    - name: BADGE
+      contains: Short badge text for the product.
+    - name: BANNER OR EMAIL LINE
+      contains: One line for a banner or email, with the condition before the reward.
+    - name: WARNINGS
+      contains: A flag if the cut is over 40 percent, or none.
+    - name: CHECK WITH A QUALIFIED PERSON
+      contains: A reminder to check local rules on was prices before you publish.
 how_it_works:
   - title: Check the full price
     text: It must be a price you really charged.

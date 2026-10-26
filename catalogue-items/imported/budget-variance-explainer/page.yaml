@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It breaks changes into causes and writes them up.
 new_slug: budget-variance-explainer
 name: Budget variance explainer
-summary: Give it actual and budget numbers. Get what moved, why, and a short
-  note for leadership.
+summary: Find out why your actuals missed budget. Give it actual and budget numbers and get each gap split by cause, plus short notes for leadership.
 job: track-numbers
 headline: Budget variance explainer
-subhead: Know why the numbers moved, not just that they did. You get a short
-  written explanation of each gap between actual and budget, ready for a
-  leadership update.
+subhead: Know why the numbers moved, not just that they did. You get a short written explanation of each gap between actual and budget, ready for a leadership update.
 explain: |
   Know why the numbers moved, not just that they did. You get a short written explanation of each gap between actual and budget, ready for a leadership update.
 
@@ -18,6 +15,10 @@ when:
   - You have a monthly close and need commentary for each large gap.
   - Leadership asks if the miss was price or volume.
   - You want a waterfall view from budget to actual.
+not_for:
+  - "You only want a cash-flow review or a forecast with no budget to compare: ask a finance professional or build the forecast in a spreadsheet first."
+  - "You have no budget or prior period to compare against: collect a baseline first, because the skill cannot split a gap without one."
+  - "You need numbers ready to file or report without a check: have a qualified finance professional review the result first."
 you_give:
   - Actual and budget numbers
   - Prior period or forecast numbers (optional)
@@ -30,8 +31,28 @@ you_get:
   - A waterfall chart outline
   - A list of gaps worth action
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your numbers file.
+  - Put your numbers in one table. Use one row per line item, with columns for actual and budget. Add volume and price columns if you have them (optional).
+  - Decide what size of gap matters to you, as a dollar amount or a percent. If you skip this, the skill uses common defaults.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste or attach your table.
+  - Ask for the breakdown by cause, the notes for each large gap, and a waterfall from budget to actual.
+  - Check that the drivers add up to the total gap. Then have a finance professional review it before you share it.
+  - Note that the example figures inside the skill are only illustrations. Your own numbers are used for the result.
+output_sample:
+  input:
+    - Your actual and budget numbers, one row per line item
+    - Prior period or forecast numbers (optional)
+    - Volume and price data for each line (optional)
+    - The size of gap that counts as material (optional)
+  output:
+    - name: Variance breakdown
+      contains: Each gap between actual and budget split into causes such as volume, price, mix, headcount or timing, adding up to the total.
+    - name: Materiality check
+      contains: Which gaps pass your threshold and deserve a look, ranked by size and surprise.
+    - name: Variance narrative
+      contains: A short note per gap with the driver, whether it will continue, and any action needed.
+    - name: Waterfall
+      contains: A text bridge from budget to actual, with each driver and its amount, that reconciles to the total.
+    - name: Bridge reconciliation table
+      contains: Each driver's amount, its share of the total variance and a running total.
+    - name: Budget, forecast and actual comparison
+      contains: Gaps against budget and against forecast side by side, when you give it forecast numbers.

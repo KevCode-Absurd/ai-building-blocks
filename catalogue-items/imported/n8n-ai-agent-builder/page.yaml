@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set patterns but must fit your workflow.
 new_slug: n8n-ai-agent-builder
 name: n8n AI agent builder
-summary: Say what your n8n agent should do. Get the agent, tools, memory and
-  review steps set up the right way.
+summary: Build an n8n AI agent that does one job well. Get the right node choice, model, memory, tools and approval steps for your workflow.
 job: connect-tools
 headline: n8n AI agent builder
-subhead: An n8n AI agent that does one job well, instead of an over-built mess
-  of nodes. The skill starts by asking if you need an agent at all, since a
-  simple text chain or classifier is often easier to run and debug.
+subhead: An n8n AI agent that does one job well, instead of an over-built mess of nodes. The skill starts by asking if you need an agent at all, since a simple text chain or classifier is often easier to run and debug.
 explain: |
   An n8n AI agent that does one job well, instead of an over-built mess of nodes. The skill starts by asking if you need an agent at all, since a simple text chain or classifier is often easier to run and debug.
 
@@ -18,6 +15,10 @@ when:
   - You are not sure whether to use an agent or a simple AI chain.
   - Your agent returns messy text and you need clean fields from it.
   - You want a person to approve the agent's actions before they happen.
+not_for:
+  - "You only need to sort or pull fields from one piece of text: use n8n's Text Classifier or Basic LLM Chain node, which are simpler to run and fix."
+  - "You want a fixed set of steps with no AI decisions: build a normal n8n workflow, with no agent at all."
+  - "You can't see your n8n setup and have no way to check node settings: ask whoever runs your n8n to review the plan first."
 you_give:
   - What the agent should do
   - The tools or apps it can reach
@@ -29,8 +30,30 @@ you_get:
   - Structured output settings
   - Approval steps for risky actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can use the n8n MCP tools.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill's instructions, or upload the skill folder if your AI accepts files.
+  - Describe the job your agent should do and the apps it needs to reach.
+  - Say which n8n version you run. If your AI can use the n8n MCP tools, connect them so it can check each node.
+  - Read the node choice first. If a simple chain or classifier fits, build that instead.
+  - Check the approval steps before you turn the workflow on. Add your keys only in n8n credentials, never in prompts.
+output_sample:
+  input:
+    - What your agent should do, in plain words
+    - The tools or apps it can reach
+    - Access to your n8n setup (optional)
+    - Rules for when a person must approve its work (optional)
+  prerequisites:
+    - An n8n setup you can reach
+    - An AI that can use the n8n MCP tools, for live checks of node settings
+  output:
+    - name: Node choice
+      contains: Whether you need an AI Agent, a Basic LLM Chain or a classifier, with the reasons.
+    - name: Sub-node wiring
+      contains: How the chat model, memory, tools and output parser connect to the agent.
+    - name: Tools
+      contains: Which of the four tool types fit, with a name and clear description for each.
+    - name: System prompt
+      contains: A prompt that sets the agent's role and rules, kept apart from tool descriptions.
+    - name: Structured output
+      contains: A JSON schema and parser settings, with a second model to fix broken answers.
+    - name: Human review
+      contains: Approval steps placed before any action that sends, writes, buys or changes accounts.

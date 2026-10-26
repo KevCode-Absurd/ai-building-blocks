@@ -1,6 +1,6 @@
 new_slug: product-page-doubt-mapper
 name: "Product page doubt mapper"
-summary: "Paste your product and what buyers doubt. Get the page sections, each tied to real proof."
+summary: "Find what makes buyers doubt your product page. Get a product page plan with each doubt tied to a section and proof, plus a list to collect."
 job: set-up-store
 thinking: low
 thinking_why: "It maps listed doubts to sections, with little judgement."
@@ -17,6 +17,10 @@ when:
   - "You are building a new product page."
   - "A page gets visits but few orders."
   - "You have photos and reviews but no plan for the order of the page."
+not_for:
+  - "You want the full version with every check: use the Product page section planner."
+  - "You need the words for each section: use a product page copywriter, then bring this plan to it."
+  - "You have no reviews, photos or test results yet: collect some first, or ask a few buyers what worries them."
 
 you_give:
   - "Product and price (required)."
@@ -34,6 +38,23 @@ how_to_use:
   - "Under it, paste your details: product and price; buyer doubts; proof you have; your theme."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Your product and its price
+    - The doubts buyers have, or a competitor page or top reviews if you have none
+    - The proof you have, such as reviews, test results, certificates and photos (advised)
+    - Your store theme (optional)
+  output:
+    - name: DOUBTS AND PROOF
+      contains: Each buyer doubt, the section that answers it, the proof type, and whether you have that proof.
+    - name: SECTIONS, TOP TO BOTTOM
+      contains: The page order, starting with the buy area, then one section per doubt, strongest doubt first.
+    - name: TABS
+      contains: The tab names for repeat questions, such as description, fit, care, shipping and returns.
+    - name: COLLECT BEFORE BUILDING
+      contains: The photos and proof you still need to gather before the page can be built.
+    - name: MISSING
+      contains: Any detail you did not give that would change the plan.
 
 how_it_works:
   - title: "List the doubts"

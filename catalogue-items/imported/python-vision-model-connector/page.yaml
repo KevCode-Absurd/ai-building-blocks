@@ -2,35 +2,59 @@ thinking: medium
 thinking_why: It reads the repo and wraps it step by step.
 new_slug: python-vision-model-connector
 name: Python vision model connector
-summary: Give it a vision model repo on GitHub. Get a MATLAB function that runs
-  it on your images.
+summary: Turn a Python vision model on GitHub into a MATLAB function that runs on your images. Get a demo script and setup steps too.
 job: connect-tools
 headline: Python vision model connector
-subhead: Give it a vision model repo on GitHub. Get a MATLAB function that runs
-  it on your images. Bring gitHub link or package name of the vision model. Use
-  the result to plan your next step.
+subhead: Give it the GitHub link or package name of a Python vision model. It reads the repo and writes a MATLAB function that runs the model on your images. MPyReq is a free MATLAB add-on that sets up the Python side for you.
 explain: |
   A MATLAB function that runs a Python vision model on your images, so you can use tools like segmentation or depth estimation without leaving MATLAB.
 
   Give it a GitHub repository or pip package for an image model. The skill reads the repo, then builds a MATLAB interface with the MPyReq framework: a function that sends your image to the Python model and returns the result as MATLAB data. It covers models for segmentation, depth, detection, super-resolution, pose, optical flow and image generation. It does not suit audio or text models, model serving or pure MATLAB image work. You need MATLAB, Python and MPyReq set up.
 when:
   - A new segmentation or depth model exists only as Python code.
-  - You work in MATLAB and want to call that model on your own images.
-  - You want a demo showing the model working end to end.
+  - You work in MATLAB and want to run that model on your own images.
+  - You want a demo that shows the model working from start to end.
   - You need to wrap a pip package such as Cellpose or SAM2.
+not_for:
+  - "You want to link MATLAB to Python code that has no image model: set up the MATLAB and Python link by hand, or ask a MATLAB engineer."
+  - "You work with text, audio or table models: this only covers image and vision models, so look for a tool made for that model type."
+  - "You want to host a model for other people to call: use a model serving tool. This builds MATLAB code, not a server."
 you_give:
-  - GitHub link or package name of the vision model
-  - Sample images
-  - MATLAB and Python environment details
-  - Model weights location (optional)
+  - The GitHub link or pip package name of the vision model
+  - A sample image to test with
+  - Details of your MATLAB and Python setup
+  - Where your model weights are kept (optional)
 you_get:
-  - MATLAB function that calls the model
+  - A MATLAB function that runs the model on your image
   - Setup steps for the Python side
-  - A demo script on your sample image
-  - Notes on inputs and outputs
+  - A demo script that runs on your sample image
+  - Notes on what goes in and what comes out
+  - A report of what works and what needs attention, if a test run fails
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and Python.
+  - Install MPyReq from the MATLAB File Exchange. Open the .mltbx file in MATLAB to add it.
+  - Open your AI and paste in this skill. If it can run MATLAB, say so. If not, it gives you the code to run yourself.
+  - Paste the GitHub link or package name. Add your sample image and say which MATLAB and Python versions you have.
+  - Run the setup script first. Then run the demo script on your sample image.
+  - If something fails, read the handoff report. It lists what works and what to fix next.
+  - When the demo works, call the MATLAB function from your own MATLAB code.
+output_sample:
+  input:
+    - The GitHub link or pip package name of the vision model
+    - A sample image to test it on
+    - Where your model weights are kept (optional)
+  prerequisites:
+    - MATLAB installed
+    - Python installed
+    - MPyReq, a free MATLAB add-on that sets up the Python side
+    - An AI that can run MATLAB, for the test step (optional)
+  output:
+    - name: Setup script
+      contains: MPyReq code that builds the Python environment and installs the model package, its needs and its weights.
+    - name: MATLAB inference function
+      contains: A function that sends your image to the Python model and returns the result as MATLAB data.
+    - name: Demo script
+      contains: A script that runs the model on your sample image and shows the result.
+    - name: Notes on inputs and outputs
+      contains: What image format goes in and what kind of data comes back.
+    - name: Handoff report
+      contains: If a test run fails, a list of what works, what needs attention and next steps.

@@ -1,6 +1,6 @@
 new_slug: positioning-statement-writer
 name: Positioning statement writer
-summary: Share your product, buyer evidence and main rivals. Get a proposed position, one clear statement and a short team brief.
+summary: Write a positioning statement from your product, buyer evidence and rivals. You get one clear line, the proof it needs and a short team brief.
 job: plan-strategy
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - Your pitch lists many strengths and buyers can't say what you stand for.
   - A rival leads your category and you need to know how to compete.
   - You are writing a homepage, ad or pitch and need one clear message first.
+not_for:
+  - "You need to name a product or choose a price: use a naming workshop with your team, or compare prices by hand against your rivals."
+  - "You want to know if buyers believe the line: ask real buyers, because this only writes a proposed position and marks the reader test as not run."
+  - "You have no rivals or buyer evidence to share: first collect a few rival sites and reviews, then come back."
 you_give:
   - Your product and who it is for
   - Your main rivals, and what they are known for
@@ -24,9 +28,35 @@ you_get:
   - One proposed position, a plain statement and limits on its use
   - A short team brief, rival substitution check and reader-test status
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code, files or paid tools are needed.
+  - Paste your product, who it is for and your main rivals. Add what each rival is known for, using words from reviews if you have them.
+  - Add any facts you can prove, such as tests, awards or firsts. Mark guesses as guesses.
+  - Read the one-line position and the rival check. Ask for a rewrite if a rival could say the same thing.
+  - Check the MISSING and CHECKS MISSED lines, then test the line with real buyers before you use it in a homepage or ad.
+output_sample:
+  input:
+    - Your product and who it is for
+    - Your main rivals, and what each is known for
+    - What you can truthfully claim, such as tests, firsts or facts (optional)
+  output:
+    - name: The ladders
+      contains: Two to four buyer categories, who sits top and second in each, and where you sit.
+    - name: What each rival owns
+      contains: The one word or attribute buyers link to each rival, and where that comes from.
+    - name: The weak spot you can use
+      contains: A trade-off you can prove against the nearest rival, or a note that the difference is unresolved.
+    - name: The category you can lead
+      contains: An open place in a known category, or a proposed niche, and why.
+    - name: The one attribute to own
+      contains: The single attribute you will hold, and the ones you drop.
+    - name: The position, in one line
+      contains: One plain statement, with a check that a rival could not use the same line.
+    - name: The stretch limit
+      contains: Where the line stops being true, so the brand does not stretch too far.
+    - name: Brief for the team
+      contains: Three to five lines on buyer, position, proof and what not to say.
+    - name: Missing and checks missed
+      contains: Facts that would sharpen the position, and any check the result still fails.
 how_it_works:
   - title: Maps buyer choices
     text: Names the relevant categories and rivals from the supplied buyer evidence. Any guessed ranking stays marked.

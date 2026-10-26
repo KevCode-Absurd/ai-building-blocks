@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a standard logging pattern.
 new_slug: training-curve-viewer
 name: Training curve viewer
-summary: Give it your training code. Get live charts of loss and accuracy, plus
-  a way to compare runs.
+summary: Add TensorBoard to your PyTorch or TensorFlow code to see live loss and accuracy charts and compare training runs side by side.
 job: track-numbers
 headline: Training curve viewer
-subhead: Live charts of loss and accuracy while your model trains, with runs
-  lined up so you can see which settings worked. You stop guessing from printed
-  numbers and watch the curves.
+subhead: Live charts of loss and accuracy while your model trains, with runs lined up so you can see which settings worked. You stop guessing from printed numbers and watch the curves.
 explain: |
   Live charts of loss and accuracy while your model trains, with runs lined up so you can see which settings worked. You stop guessing from printed numbers and watch the curves.
 
@@ -18,19 +15,47 @@ when:
   - You are comparing runs with different learning rates or layer sizes.
   - Your model stops improving and you want to inspect weights and gradients.
   - Training is slow and you need to find the bottleneck.
+not_for:
+  - "You want to watch a live product or server in production: use a logging or monitoring service built for that."
+  - "Your code does not train a model: a simple chart in a spreadsheet or Google Sheets will do the job."
+  - "You need to keep a team record of runs, notes and files: use a hosted experiment tracking tool instead."
 you_give:
   - Your training script
   - The framework you use, PyTorch or TensorFlow
   - What you want to watch, such as loss or images (optional)
   - Names for the runs you want to compare (optional)
 you_get:
-  - Logging code added to your script
-  - Live charts of training metrics
-  - A run comparison setup
-  - The command to launch the viewer
+  - Your training script with logging code added.
+  - A log folder for each run, so runs can be compared on one page.
+  - The command that starts the viewer.
+  - Live charts of loss and accuracy in your browser at localhost:6006 after the first run.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and open a browser.
+  - "Install the tools on your computer: run pip install tensorboard, plus torch or tensorflow if you do not have them."
+  - Paste your training script into your AI and ask it to add TensorBoard logging with this skill. Say if you use PyTorch or TensorFlow.
+  - Copy the updated script back to your computer. Give each run its own name, such as a learning rate, so you can compare them.
+  - Run your script. Your AI cannot do this step unless it can run Python code.
+  - In a terminal, run tensorboard --logdir=runs. For Keras, use the log folder from your script instead.
+  - Open http://localhost:6006 in your browser. Check that the loss and accuracy charts appear, then compare your runs.
+output_sample:
+  input:
+    - Your training script
+    - Your framework, PyTorch or TensorFlow
+    - What you want to watch, such as loss, accuracy or images (optional)
+    - Names for the runs you want to compare (optional)
+  prerequisites:
+    - An AI that can run Python code, or your own computer with Python
+    - TensorBoard installed with pip
+    - PyTorch or TensorFlow installed
+  output:
+    - name: Install step
+      contains: The pip command that installs TensorBoard and the framework package you use.
+    - name: Updated training script
+      contains: Your code with logging added for loss and accuracy, using a writer or a Keras callback.
+    - name: Run folders
+      contains: One log folder per run, named so you can tell runs apart, such as runs/experiment_1.
+    - name: Extra logging (optional)
+      contains: Code to log histograms, images, the model graph, embeddings, text or hyperparameters if you ask for them.
+    - name: Profiler setup (optional)
+      contains: Code that records slow steps and shows them in the Profile tab.
+    - name: Launch command
+      contains: The tensorboard command that starts the viewer, which you open at http://localhost:6006 in your browser.

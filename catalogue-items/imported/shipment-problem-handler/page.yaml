@@ -2,34 +2,116 @@ thinking: medium
 thinking_why: It sorts the problem type, then follows a set claim process.
 new_slug: shipment-problem-handler
 name: Shipment problem handler
-summary: Describe a late, lost or damaged shipment. Get the right steps, claim
-  paperwork and carrier messages.
+summary: Fix a late, lost or damaged freight shipment. Get the next steps, a carrier claim checklist and drafts of your carrier and customer messages.
 job: plan-strategy
 headline: Shipment problem handler
-subhead: A plan for a late, lost or damaged shipment, with the claim paperwork
-  and carrier messages ready to send. Acting fast and documenting well decides
-  whether you get paid.
+subhead: Tell it what went wrong with a late, lost or damaged shipment. It sorts the problem, lists what to photograph and file, and drafts your freight claim, carrier message and customer update. You decide what to send.
 explain: |
-  A plan for a late, lost or damaged shipment, with the claim paperwork and carrier messages ready to send. Acting fast and documenting well decides whether you get paid.
+  When a freight shipment goes wrong, the first few hours decide whether you get paid. A late pallet, crushed boxes or a missing delivery each follow different rules. Most people lose a claim because they signed the receipt clean, took no photos or filed too late.
 
-  You describe what happened. It sorts the problem into a type (transit delay, visible damage, hidden damage, loss, dispute) because each type has its own steps, deadlines and proof. It tells you what to photograph and note on the delivery receipt, whether fault lies with the carrier or an event outside their control, and when to file. It then drafts the claim, the carrier email and the customer update, in the order that protects your money and the relationship.
+  You describe what happened. The skill sorts it into a type: transit delay, visible damage, hidden damage, shortage, loss or refused delivery. For that type it lists what to do now, what proof to gather, and whether the fault looks like the carrier's or an event outside their control. Then it drafts the claim, the carrier email and the customer update.
+
+  It also helps with the money call: file the claim, push hard, or absorb a small loss. The deadlines and dollar limits in it are US examples from a public skill. Check each one against your carrier contract. It is not legal advice.
 when:
-  - A pallet arrived with crushed boxes and the driver already left.
-  - A shipment is days late and the customer is asking where it is.
-  - A carrier denied your claim and you want to push back.
-  - You are not sure what proof you need before filing a freight claim.
+  - A pallet arrived with crushed boxes and the driver left before you could check it.
+  - A shipment is days late and your customer keeps asking where it is.
+  - A carrier turned down your claim and you want to know whether to push back.
+  - You do not know what proof you need before you file a freight claim.
+not_for:
+  - "You want to choose a carrier or shipping mode before you ship: use the Freight mode and carrier picker."
+  - "You want to set up tracking so problems show early: use the Shipment tracking planner."
+  - "You manage your carrier list and rate quotes: use the Freight carrier manager."
+  - "You are going to court or the claim is large. See a lawyer and read your carrier contract first."
 you_give:
-  - What happened and the shipment details
-  - Carrier, mode and dates
-  - Photos or delivery receipt notes
-  - Goods value and insurance (optional)
+  - What happened, in your own words
+  - Carrier, shipping mode (parcel, LTL, truckload, ocean or air) and key dates
+  - Reference numbers such as PRO, bill of lading or tracking (optional)
+  - What the delivery receipt says and what photos you have
+  - Goods value and any insurance (optional)
 you_get:
-  - The problem type and next steps
-  - A claim checklist and draft paperwork
-  - A carrier message
-  - A customer update
+  - The problem type, and why it fits
+  - Steps to take now, in order, with the deadline for each
+  - A list of proof to gather before you file
+  - A claim checklist with a short draft of the claim
+  - A message to the carrier and an update for your customer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Open Claude, ChatGPT or Gemini and paste the skill. A plain chat works because nothing needs to run."
+  - "Describe what happened in your own words. Add carrier, mode, dates, and what the delivery receipt says. Say what you do not know."
+  - "Read the problem type it picks. If it is wrong, say so and tell it what you saw."
+  - "Check every deadline it gives against your carrier contract. The ones in the skill are US examples and may be out of date."
+  - "Edit the carrier message and customer update. Check names, numbers and dates, then send them yourself. Nothing is sent for you."
+  - "Add your own photos and papers to the claim. For a large claim or a refusal, ask a lawyer."
+how_it_works:
+  - title: Sort the problem
+    text: Puts the case in a type, such as delay, visible damage, hidden damage, shortage or loss.
+  - title: Judge the stakes
+    text: Rates how serious it is from the value, the customer and the time left.
+  - title: Check the proof
+    text: Lists the photos, receipts and invoices that decide a claim, and what is missing.
+  - title: Weigh the fault
+    text: Says whether the carrier looks responsible or the cause was outside their control.
+  - title: Choose fight or absorb
+    text: Compares the claim size to the work of filing it and says what to do.
+  - title: Draft the messages
+    text: Writes the claim, the carrier note and the customer update, in a tone that fits.
+output_shape: |
+  Problem type: <type> because <reason>
+
+  Do this now
+  1. <step> by <deadline, or "check your contract">
+
+  Proof to collect
+  - <photo, receipt note, invoice>
+
+  Fault view: <carrier / outside their control / unclear>
+
+  Claim checklist and draft
+  - <item>
+
+  Message to the carrier
+  <draft>
+
+  Update for your customer
+  <draft>
+
+  Next steps: <escalate when, eat the cost or fight the claim, and why>
+output_sample:
+  input:
+    - What happened, in your own words
+    - Carrier, shipping mode and dates
+    - What the delivery receipt says and what photos you have
+    - Goods value and insurance (optional)
+  output:
+    - name: Problem type
+      contains: The kind of problem, such as hidden damage or loss, and the reason it fits.
+    - name: Do this now
+      contains: Ordered steps with a deadline for each, marked to check against your contract.
+    - name: Proof to collect
+      contains: The photos, receipt notes and invoices a claim needs, and what you still lack.
+    - name: Claim checklist and draft
+      contains: A checklist of papers to file and a short claim draft.
+    - name: Message to the carrier
+      contains: A ready-to-edit email with the facts, what you need and a reply date.
+    - name: Update for your customer
+      contains: A short note with what you know, what you are doing and the new timeline.
+    - name: Next steps
+      contains: When to escalate, and whether to absorb the loss or fight the claim.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A plain chat is enough. It reads your notes and writes the drafts.
+  inputs:
+    - Your carrier contract or terms, so deadlines match what you agreed
+    - Photos and a copy of the delivery receipt
+    - The commercial invoice that shows the value
+terms:
+  - term: Freight claim
+    meaning: A written request to the carrier to pay for goods that were lost, short or damaged.
+  - term: Delivery receipt (POD)
+    meaning: The paper you sign when freight arrives. What you write on it counts as proof.
+  - term: Hidden damage
+    meaning: Damage you find after delivery that was not noted on the receipt.
+  - term: PRO number
+    meaning: The tracking number a truckload or LTL carrier gives a shipment.
+  - term: Bill of lading (BOL)
+    meaning: The shipping paper that lists what was handed to the carrier.

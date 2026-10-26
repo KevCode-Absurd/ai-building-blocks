@@ -16,6 +16,27 @@ use_cases:
   - "Cut the time from a customer's order to getting paid"
   - "Plan a big change in small sections, starting inside before you ask partners to change"
   - "Find work that keeps people busy but adds nothing a customer would pay for"
+not_for:
+  - "You need a safety or legal decision: ask a safety engineer or a lawyer, because this advisor is not built for those calls."
+  - "Your work is one-off and creative, and you want help judging the idea: ask a person you trust. This advisor looks at how things get made, not what to make."
+  - "You want a lesson on cost and reinvestment in a growing firm: use the Andrew Carnegie mind instead."
+output_sample:
+  input:
+    - The process or problem you want looked at, in plain words
+    - The steps as they run today, with where work waits or piles up
+    - A repeat defect, delay or complaint (optional)
+    - Any limits you must keep, such as safety or contract rules (optional)
+  output:
+    - name: Waste list
+      contains: The steps that add nothing a customer would pay for, named by kind of waste.
+    - name: Where to go and look
+      contains: The place in the work you should watch yourself before changing anything.
+    - name: Why questions
+      contains: A chain of why questions that leads from the symptom toward a cause you can fix.
+    - name: One small test
+      contains: One change to try on one line, and the result that would change the view.
+    - name: Limits of the advice
+      contains: A note where your question goes past his recorded work, so you know what is guesswork.
 seats:
   - {seat: "Waste and flow", asks: "Which step here adds nothing the customer would pay for, and why is it still there?"}
   - {seat: "Go and see", asks: "Have you stood where the work happens and watched it, or are you reading a report?"}

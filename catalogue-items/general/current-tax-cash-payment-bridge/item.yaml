@@ -1,15 +1,13 @@
 slug: current-tax-cash-payment-bridge
 name: Current tax cash-payment bridge
-summary: Reconcile current tax expense and tax-payable movements to disclosed cash payments.
+summary: "Check how much income tax a company paid in cash. Give it tax expense and payable balances. Get the gap to reported cash tax."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -33,3 +31,6 @@ credits:
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
 package_files: all
+before: []
+next: [noncash-working-capital-bridge, project-cash-available-bridge]
+needs_mode: manual

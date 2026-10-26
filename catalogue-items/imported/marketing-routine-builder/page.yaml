@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It must plan safe repeat runs with stop rules.
 new_slug: marketing-routine-builder
 name: Recurring marketing routine builder
-summary: Pick an outcome. Get a loop that runs weekly or daily, checks itself
-  and stops when it should.
+summary: Build a recurring marketing routine for one outcome. Get a loop with a run schedule, approval points and stop rules, so it checks itself and halts.
 job: set-up-ai
 headline: Recurring marketing routine builder
-subhead: Tell it the outcome to protect, such as rankings, ad cost or sign-ups,
-  how fast that data changes and what it may do alone. It picks the closest loop
-  from a catalogue. You get the loop, a run schedule, approval points before
-  spending or publishing and stop rules.
+subhead: Tell it the outcome to protect, such as rankings, ad cost or sign-ups, how fast that data changes and what it may do alone. It picks the closest loop from a catalogue. You get the loop, a run schedule, approval points before spending or publishing and stop rules.
 explain: |
   A marketing task that repeats itself on a schedule, checks its own results and stops when it should. You pick the outcome to protect, such as rankings, ad cost, sign-ups or repeat sales, and get a loop built around it.
 
@@ -19,19 +15,53 @@ when:
   - You want draft posts or emails prepared for you each week to approve.
   - You need a routine that watches search rankings and flags drops.
   - You want to know if a task is worth turning into a loop at all.
+not_for:
+  - "You want one-off ideas to try once: use a marketing ideas session with your AI, not a routine."
+  - "Strategy, positioning or brand choices are the real work: talk it through with a person on your team first."
+  - "Your data is too thin to read, such as a weekly rate on 40 visitors: wait until you have more traffic."
 you_give:
-  - The outcome the routine should protect
-  - How often the data changes
-  - What it may do alone and what needs approval
+  - The outcome the routine should protect, such as rankings, ad cost or sign-ups
+  - How often that data changes
+  - What the routine may do alone and what needs your approval
+  - Your product and marketing notes (optional)
+  - Your spend and send limits (optional)
   - The tool where it will be scheduled (optional)
 you_get:
-  - A loop built from a tested pattern
-  - A run schedule that fits your data
-  - Approval points before spending or publishing
-  - Stop rules for when the loop should end
+  - A routine picked from a catalogue of 58 marketing loops and adapted to your outcome
+  - A run schedule that fits how fast your data changes
+  - Approval points before anything is published, sent or paid for, unless you give clear permission and set limits
+  - Stop rules, a self-check and a way to switch it off
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run on a schedule.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed to plan the routine.
+  - Say which outcome you want to protect, and how often the data changes.
+  - Say what the routine may do alone, and what it must leave for your approval. Add any spend or send limits.
+  - Read the plan. Check the schedule, the approval points and the stop rule before you use it.
+  - To run it without you, set it up in a tool that can run on a schedule. Otherwise run it by hand each week.
+output_sample:
+  input:
+    - The outcome you want to protect or grow, such as rankings, ad cost or sign-ups
+    - How often that data really changes
+    - What the routine may do alone and what needs your approval
+    - Your product and marketing notes (optional)
+    - Spend and send limits, and access to your analytics (optional)
+  prerequisites:
+    - An AI that can run on a schedule, if you want it to run without you. Otherwise you can run it by hand each week.
+  output:
+    - name: Check cadence
+      contains: How often the routine looks at your data, matched to how fast that data changes.
+    - name: Acts when
+      contains: The condition that must be true before it does anything. Most runs only check and skip.
+    - name: Purpose
+      contains: The one outcome this routine exists to move.
+    - name: Skills used
+      contains: Which marketing skills the routine calls on each run.
+    - name: Loop body
+      contains: The ordered steps the routine follows each time it runs.
+    - name: Self-check
+      contains: The check done before acting, so it does not act on noise, seasonality or a tracking bug.
+    - name: State / idempotency
+      contains: What it remembers between runs, so it does not repeat actions or nag the same people.
+    - name: Stop / bail-out
+      contains: When it skips, halts, hands over to you or switches itself off, and what it does on error.
+    - name: Output
+      contains: Where the results go, such as a file, a staged draft, a notification or a report.

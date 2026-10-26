@@ -1,6 +1,6 @@
 new_slug: monthly-help-centre-keeper
 name: Monthly help centre keeper
-summary: Give it last month's support tickets each month. Get the questions your help pages miss, new articles drafted and stale ones fixed.
+summary: Find the questions your help centre misses each month. Give it last month's support tickets and get new help articles drafted and weak ones rewritten.
 job: help-customers
 thinking: high
 thinking_why: It groups messy tickets into topics, judges whether an article failed or was never found, and must keep customer details out of every draft. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - The same question fills your support inbox and the help page for it either does not exist or nobody finds it.
   - Your help articles have not been checked against what support says since launch.
   - You want proof that an article you published last month reduced tickets.
+not_for:
+  - "You need to answer today's tickets: use the Customer inbox priorities and reply drafts, which writes replies to open tickets."
+  - "You have no ticket export yet, or only one ticket: write the help page by hand from the reply that solved it."
+  - "You want articles published or customers answered for you: this agent only drafts, and a person must publish."
 you_give:
   - Last month's ticket export with the question, the reply that solved it and the page visited first, if recorded
   - Every help article as text, with its address and last-updated date
@@ -33,6 +37,31 @@ how_to_use:
   - Attach your brand brain if you have one.
   - Read the mismatches first and settle them with the product owner. Then read the drafts.
   - Publish what you approve in your help centre yourself. Run it again next month; it tells you whether the articles worked.
+output_sample:
+  input:
+    - Last month's support tickets, with the reply that solved each one
+    - Every help article as text, with its address and last-updated date
+    - Your brand brain, for the voice check (advised)
+    - Product docs or release notes (optional)
+    - Last month's keeper file (not needed on the first run)
+  prerequisites:
+    - A ticket export from your support tool
+    - An AI that can read files, if you want it to keep topics.md and articles.md between months
+  output:
+    - name: This month
+      contains: Ticket count, top topics, topics with no article, and articles that failed.
+    - name: Did last month's articles work
+      contains: Each article with tickets before and after, marked worked, no change or worse.
+    - name: The topics
+      contains: Top topics ranked by ticket count, with whether an article exists, was found, and the action.
+    - name: Mismatches
+      contains: Articles that say one thing while support said another, for the product owner to settle.
+    - name: New articles
+      contains: Drafts built from real solved tickets, with personal details removed.
+    - name: Rewrites
+      contains: Failed articles rewritten answer first, with new titles and facts that still need a source.
+    - name: Files and missing
+      contains: Each step's file, plus every MISSING line for gaps.
 how_it_works:
   - title: Read last month
     text: Counts this month's tickets on each topic an article was published for, against last month.

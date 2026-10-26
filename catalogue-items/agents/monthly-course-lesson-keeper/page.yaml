@@ -1,6 +1,6 @@
 new_slug: monthly-course-lesson-keeper
 name: Monthly course lesson keeper
-summary: Give it your course lessons each month. Get stale or hard-to-follow lessons found, each fixed with an example, opener and quiz.
+summary: Check your course lessons each month. Find stale or confusing ones, then get a rewrite with a simple example, a five-minute opener and a quiz.
 job: teach-and-train
 thinking: high
 thinking_why: It reads learner questions for patterns, checks lesson claims against a changing tool and rewrites so a learner can check their own result. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run a course or training that teaches a tool or process that keeps changing.
   - The same learner question keeps arriving under the same lesson.
   - You want every lesson re-checked on a schedule instead of when someone complains.
+not_for:
+  - "You want one new lesson written from scratch: ask your AI to draft it, or use the Lesson opener planner for just the start of a class."
+  - "You only want to see which quiz topics your class missed: use the Class quiz reteach keeper, which reads quiz results after each test."
+  - "Your course teaches a subject that never changes and gets no learner questions: a yearly read-through by you is enough."
 you_give:
   - Your lessons as text, with the date each was last updated
   - The month's learner questions, complaints and quiz results, tagged by lesson (advised)
@@ -32,6 +36,29 @@ how_to_use:
   - Point it at the current docs or code for the tool you teach.
   - Read the stale claims and the rewrites. Publish the ones you approve in your course platform.
   - Run it again on the first Monday of next month. It tracks questions and review dates over time.
+output_sample:
+  input:
+    - Your lessons as text, with the date each was last updated
+    - The month's learner questions, tagged by lesson (advised)
+    - The current docs or code for the tool you teach (advised)
+    - Last month's keeper file (optional)
+  prerequisites:
+    - An AI that can read a folder of files, such as Claude Code, to keep the lesson and question files between months
+  output:
+    - name: This month
+      contains: One line with lessons, questions, lessons flagged, rewritten and due next month.
+    - name: The question map
+      contains: Questions per lesson this month against last month, with the repeated question quoted.
+    - name: Stale lessons
+      contains: Each false claim and changed step, with what is true now and where that comes from.
+    - name: Rewrites
+      contains: "For each rewritten lesson: an opener, the smallest working example, the body changes and a quiz with answers."
+    - name: Design fixes
+      contains: Ranked fixes for lessons that need changes but not a full rewrite.
+    - name: Due next month
+      contains: Lessons reaching their review date, with the date each was last reviewed.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line for inputs it did not have.
 how_it_works:
   - title: Look at the data
     text: Counts questions per lesson by hand, flags repeats and jumps, and adds lessons past their review date.

@@ -8,6 +8,29 @@ user-invocable: false
 
 Descriptive statistics, trend analysis, outlier detection, hypothesis testing, and guidance on when to be cautious about statistical claims.
 
+## How to run this (AI Blocks notes)
+
+Ask once for what is missing: the data (a table or file with column names), the question, what each column means and its unit, and the groups or periods to compare. Mark anything still missing as `MISSING: <what>`. Never invent data, columns or results.
+
+Never work out statistics by eye. If you can run code, run it. If you cannot, calculate only simple figures such as count, sum, mean and median from a small pasted table, and say how you got them. For anything else, say the figure needs code and give the code to run.
+
+Start by stating the rows, columns and period you used. If a group has fewer than about 30 events, say the result is weak and do not report a firm conclusion.
+
+## Report format
+
+Hand back these sections in order, skipping any the question does not need:
+
+1. **Question and data used**: rows, columns and period.
+2. **Typical values**: mean and median, and which one to trust.
+3. **Spread**: range, quartiles and key percentiles.
+4. **Odd values**: outliers by a stated rule, how many, and what they might be. Do not remove any without saying so.
+5. **Over time**: trend, season, and change against the same period before.
+6. **Difference**: the test used, why it fits, the size of the difference, its range and a plain reading. Report the effect size, not only the p-value.
+7. **Cautions**: sample size, how many tests were run, who is missing from the data, and where cause cannot be claimed.
+8. **Next**: what to check or collect next.
+9. **MISSING**: inputs not given, or none.
+
+
 ## Descriptive Statistics Methodology
 
 ### Central Tendency

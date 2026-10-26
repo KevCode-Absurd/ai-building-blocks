@@ -1,6 +1,6 @@
 new_slug: four-kind-proof-finder
 name: Four-kind proof finder
-summary: Paste your ad brief and product facts. Get each claim paired with its strongest proof, and the claims that have none.
+summary: Find proof for each claim in your ad. Give it your claims and product facts. You get a proof map and a list of claims with no proof.
 job: write-ad-copy
 thinking: medium
 thinking_why: It matches claims to evidence and ranks it, but each kind of proof has fixed tests.
@@ -14,6 +14,10 @@ when:
   - You have the claims for an ad but do not know which ones you can back.
   - Your ad is mostly adjectives and you want facts beside each claim.
   - Readers say they do not believe the ad.
+not_for:
+  - "You have no claims written yet: write the ad first with the Typed headline batch writer, then come back to find proof."
+  - "You want the ad body written for you: use the Typed headline batch writer for headlines, or ask a copywriter for the full body."
+  - "You only have a product description and no real facts, reviews or results: gather those first, or this will mostly list what is missing."
 you_give:
   - The ad brief or the list of claims you want to make
   - "Your product facts: materials, process, results, awards, guarantees"
@@ -28,6 +32,22 @@ how_to_use:
   - Paste the brief and your product facts.
   - Add real reviews and results with where they came from.
   - Use the proof map when you write the body, and cut what has no proof.
+output_sample:
+  input:
+    - Your ad brief or a list of the claims you want to make
+    - "Your product facts: materials, process, results, awards, guarantee wording"
+    - Customer reviews, testimonials or test results, with source and date (optional)
+  output:
+    - name: Proof map
+      contains: One row per claim with the reader's likely doubt, the strongest proof, its kind and where it goes in the ad.
+    - name: Bare claims
+      contains: Each claim with no proof, marked cut, shrink or add a test offer.
+    - name: The one proof to use early
+      contains: The single strongest proof to place near the headline.
+    - name: MISSING
+      contains: Proof you still need to collect, one line per gap.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed and why, or none.
 how_it_works:
   - title: Claim list
     text: Pulls every claim out of the brief, one per line.

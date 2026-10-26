@@ -1,6 +1,6 @@
 new_slug: small-working-example-explainer
 name: "Small working example explainer"
-summary: "Name a mechanism you need to teach. Get the smallest example that shows it, with traced values and predictions to check."
+summary: "Teach how a formula or process works with the smallest worked example. You get traced steps, predictions to try, and a check against a trusted source."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It must pick the smallest example that still shows the mechanism, and compute it correctly."
@@ -17,6 +17,10 @@ when:
   - "You are writing a lesson, guide or onboarding note and the real example is too big."
   - "A team member keeps asking how a formula or process works and slides are not helping."
   - "You need to explain a calculation, rule or system to a customer in one page."
+not_for:
+  - You need to explain a big real dataset or a full case. Use a short walkthrough with a subject expert, or a spreadsheet of the real data.
+  - You only want a draft cleaned up. Use a plain edit pass by a colleague or your AI, with no example built.
+  - You need a proof or deep theory. Use a textbook or a teacher, since this skill keeps only the smallest working case.
 
 you_give:
   - "The mechanism to teach, in a sentence"
@@ -35,6 +39,29 @@ how_to_use:
   - "Tell it what the learner already knows."
   - "Paste a trusted formula, tool or page if you have one for it to check against."
   - "Try the predictions yourself before you read the answers."
+output_sample:
+  input:
+    - The mechanism you want to teach, in one sentence
+    - Who is learning and what they already know (optional)
+    - A trusted formula, tool or page to check against (optional)
+    - Your current explanation (optional)
+  output:
+    - name: Goal
+      contains: What the learner can do at the end, and what they already know.
+    - name: The example
+      contains: The smallest case, with every input and in-between result named, and the rule shown once.
+    - name: Trace
+      contains: Each step in order, with what happens and the value it gives.
+    - name: Predict first
+      contains: Two to four questions to answer before reading on, with answers and working after.
+    - name: Checked against
+      contains: The same numbers run through your trusted source, and whether the result matches.
+    - name: Left out
+      contains: Two or three real-world things the small version hides.
+    - name: Missing
+      contains: Any gaps, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: "Asks what must be understood"

@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: layered-research-handover-builder
 name: Layered research handover builder
-summary: Share research notes and sources. Get a short summary linked to deeper analysis and supporting evidence.
+summary: "Turn your research notes and sources into a layered research handover: a short summary that links to deeper analysis and evidence files."
 job: document-work
 headline: Layered research handover builder
 subhead: Share your research question, notes, sources, and who will read the work. It separates the main findings from deeper analysis and source records. You get a linked research folder so readers can start with the summary and inspect the evidence when needed.
+not_for:
+  - "You only need a quick answer to one question: ask your AI directly, no folder needed."
+  - "You have a one-off lookup or calculation: just run it and keep the answer, no handover needed."
+  - "Your source material is already the final product and needs no summary: share it as it is."
 you_give:
   - A research question, audience, notes, source evidence, and a destination folder.
 you_get:
@@ -24,3 +28,26 @@ works_best_with:
 how_to_use:
   - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - Your research question
+    - Your notes and source material
+    - Who will read the work
+    - A folder to save the files in
+  prerequisites:
+    - An AI that can read the skill's reference files
+    - An AI that can create files in a folder, or you copy the text out yourself
+    - Python 3.9 and a shell only if you want the optional checker script
+  output:
+    - name: 00-index.md
+      contains: A map of the project that helps readers find files, with no findings in it.
+    - name: 01-summary/
+      contains: One file with the research question, key findings and main implications, linking to the analysis files.
+    - name: 02-analysis/
+      contains: One file per topic, such as market or risk, each readable alone and linking to evidence.
+    - name: 03-dossiers/
+      contains: A flat set of files with source excerpts, raw data, transcripts and method notes.
+    - name: SOURCES section
+      contains: A closing list in every file of the paths below it and what you will find there.
+    - name: artifact-inventory.md
+      contains: A tracker of which files exist at each layer, so gaps are easy to spot.

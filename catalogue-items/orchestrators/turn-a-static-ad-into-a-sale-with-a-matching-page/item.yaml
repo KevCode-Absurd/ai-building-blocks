@@ -16,8 +16,8 @@ outputs:
 uses: [static-ad-critic, ad-awareness-stage-checker, ad-matched-landing-page-writer, meta-ads-compliance-checker]
 steps:
   - {uses: static-ad-critic, note: "Starts with your ad and gives back a checked version with its copy."}
-  - {uses: ad-awareness-stage-checker, note: "Reads the fixed ad copy and says how much the buyer already knows when the ad starts."}
-  - {uses: ad-matched-landing-page-writer, note: "Writes the landing page from the ad copy so the page repeats the ad's promise."}
+  - {uses: ad-awareness-stage-checker, note: "Reads the fixed ad copy and says how much the buyer already knows when the ad starts. Hands the ad copy, rewritten to fit that stage, to step 3."}
+  - {uses: ad-matched-landing-page-writer, note: "Writes the landing page from the ad copy so the page repeats the ad's promise. Also uses your brand brain and offer, and hands the page to step 4."}
   - {uses: meta-ads-compliance-checker, note: "Checks the final ad and page together before they go live."}
 origin: rebuilt
 version: 1.0.0

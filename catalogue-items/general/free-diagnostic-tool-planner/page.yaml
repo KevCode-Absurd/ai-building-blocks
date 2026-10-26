@@ -1,6 +1,6 @@
 new_slug: free-diagnostic-tool-planner
 name: "Free diagnostic tool planner"
-summary: "Describe your business and buyer. Get a free checker that shows the problem you fix, with a score and a sign-up step."
+summary: "Plan a free diagnostic tool that shows buyers a problem you fix. Get the inputs, score, result text and sign-up spot, ready to build."
 job: make-offer
 thinking: medium
 thinking_why: "It designs scoring that has to be fair and explainable, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - You want a reason for strangers to give you their email other than a newsletter.
   - Buyers do not know they have the problem you fix.
   - You already know what separates a good result from a bad one in your field.
+not_for:
+  - "You want a plain newsletter or guide as the lead offer: use the Information-led lead offer planner."
+  - "You have no problem a visitor can measure from a few answers: write a guide or run a short call instead."
+  - "You want the tool built and live today: hand the design to a developer or a no-code form builder."
 
 you_give:
   - What you sell, who buys it and the problem you fix
@@ -35,6 +39,29 @@ how_to_use:
   - Say what you can measure in a visitor's answers, and what good looks like.
   - Hand the design to whoever builds it, or to a no-code tool.
   - Test it on five people before it goes live.
+output_sample:
+  input:
+    - What you sell, who buys it and the problem you fix
+    - What a good and a bad result look like in your field
+    - Your brand file (optional)
+    - Data on how buyers compare (optional)
+  output:
+    - name: The problem
+      contains: One line naming the problem the tool shows and who has it.
+    - name: Inputs
+      contains: Five or fewer questions, each with its answer form and the part of the score it feeds.
+    - name: The score
+      contains: How the answers become one result, shown as a number, percentile or band.
+    - name: What each result says
+      contains: For each score band, what it means for the visitor and one next step.
+    - name: The sign-up
+      contains: Where the email ask sits after the score and what the visitor gets for it.
+    - name: How it leads to your service
+      contains: How each result links to your service and a single next step.
+    - name: MISSING
+      contains: Facts or comparison data the score needs and you did not give.
+    - name: Checks missed
+      contains: One line per check the design still fails, or none.
 
 how_it_works:
   - title: Finds the hidden problem

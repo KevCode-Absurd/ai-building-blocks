@@ -2,25 +2,23 @@ thinking: medium
 thinking_why: It reasons about the buyer's state and picks the message.
 new_slug: buyer-awareness-stage-mapper
 name: Buyer awareness stage mapper
-summary: Describe your audience and offer. Get each buyer stage, from unaware to
-  ready, and what to say.
+summary: Find where your buyers sit, from unaware to ready to buy, and what to say at each stage. Use this buyer awareness stage mapper before you write copy.
 job: understand-customers
 headline: Buyer awareness stage mapper
-subhead: Describe your audience, what you sell and the action you want. It
-  places buyers on a map from not knowing they have a problem to ready to buy,
-  with the words and proof that fit each stage. You get the map, language per
-  stage, a message order and claims to verify.
+subhead: Describe your audience, what you sell and the action you want. It places buyers on a map from not knowing they have a problem to ready to buy, with the words and proof that fit each stage. You get the map, language per stage, a message order and claims to verify.
 explain: |
   Your message finally matches where each buyer is in their thinking. You describe your audience and offer, and you get a map of where people sit, from not knowing they have a problem to ready to buy. Each stage comes with the words, tone and proof that suit it.
 
   The skill starts by getting context: who the person is and what you want them to do. Then it places them on the awareness ladder and shapes the approach for that spot. Someone who feels the pain needs different copy from someone comparing prices. It treats psychology claims as ideas to check, not proven facts, and avoids targeting sensitive traits.
 when:
-  - Your ads and emails sound the same to people who are at very different
-    stages.
-  - You are about to write a landing page and are not sure what the reader
-    already knows.
+  - Your ads and emails sound the same to people who are at very different stages.
+  - You are about to write a landing page and are not sure what the reader already knows.
   - A campaign gets clicks but few sales and you suspect the message is off.
   - You need a sequence of messages that moves cold readers toward an offer.
+not_for:
+  - "You already know your audience well and have copy that works: keep that copy and test small changes instead."
+  - "You need one social post: write it directly, since a full stage map is too much for a one-off."
+  - "You have no idea who your buyers are yet: talk to a few real customers first, then come back with their words."
 you_give:
   - A description of your audience
   - What you sell and the action you want
@@ -32,7 +30,32 @@ you_get:
   - A suggested order for your messages
   - Notes on claims to verify before publishing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Describe your audience, what you sell and the action you want. Add channel and length limits if you have them.
+  - Paste interview notes or buyer questions if you have them (optional). Your AI will mark guesses as guesses.
+  - Read the stage diagnosis first. Fix it if it does not match what you know about your buyers.
+  - Use the language and message order to write your copy. Check the claims list before you publish.
+output_sample:
+  input:
+    - Your audience, in plain words
+    - What you sell
+    - The action you want people to take
+    - Channel, length and trust limits (optional)
+    - Customer interview notes or questions buyers asked (optional)
+  prerequisites:
+    - A psychographic profile or jobs-to-be-done notes help, but are not needed if you can describe your audience yourself
+  output:
+    - name: Stage diagnosis
+      contains: "Where your audience sits: unaware, problem aware, solution aware, product aware or most aware, marked as a guess when evidence is thin."
+    - name: Persuasion route
+      contains: Whether to teach, compare or prove, based on how much your buyers know and care.
+    - name: Language register
+      contains: The vocabulary, jargon level and detail that suit this stage.
+    - name: Entry point
+      contains: "The best first touch: education, proof, demo, comparison or a direct offer."
+    - name: Message order
+      contains: The order to send messages so cold readers move toward your offer without a pushy jump.
+    - name: Claims to verify
+      contains: Psychology ideas and claims to check before you publish them as fact.
+    - name: Quality check
+      contains: A short list confirming the stage, route, language and trust fit the audience.

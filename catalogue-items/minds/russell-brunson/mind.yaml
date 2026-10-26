@@ -17,6 +17,29 @@ use_cases:
   - "Add a repeat-payment option so income doesn't depend on the next launch"
   - "Pick one headline or button to split test this week, and log the result"
   - "Find where your ideal customers already gather and what would draw them in"
+not_for:
+  - "You sell a regulated, health or legal offer: ask a qualified human advisor, since urgency and value claims there need expert checks."
+  - "You need a positioning or pitch for a new product: use the April Dunford mind."
+  - "You want proof that ads work through small, tracked tests: use the Claude Hopkins mind, or the Dan Kennedy mind for direct response offers."
+output_sample:
+  input:
+    - What you sell and its price
+    - Your current funnel steps, from first contact to sale
+    - Who your customers are and where they gather
+    - Your costs and your last test results (optional)
+  output:
+    - name: Funnel map
+      contains: Your steps written out from stranger to sale, with the missing next step flagged.
+    - name: The one funnel to fix first
+      contains: Which single funnel drives your growth and what should feed it.
+    - name: Hook, story and offer draft
+      contains: Copy for a page, email or video that stops the scroll and builds belief.
+    - name: Value ladder
+      contains: Your offers placed from a free first step up to your most premium one.
+    - name: Monthly payment idea
+      contains: Where a repeat-payment option could fit in your business.
+    - name: One test for this week
+      contains: A single headline or button to split test, and how to log the result.
 seats:
   - {seat: "Funnels", asks: "What is the next step you want this person to take, and what happens right after they take it?"}
   - {seat: "Offers and story", asks: "What's the hook, what story makes them believe, and why is the offer worth far more than the price?"}

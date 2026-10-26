@@ -1,53 +1,88 @@
 new_slug: prepare-a-survey-findings-briefing
 name: Prepare a survey findings briefing
 headline: Prepare a survey findings briefing
-summary: Share the source files. Get a checked findings table, sampling caveats and briefing outline.
+summary: Turn survey results into a briefing you can defend. Get a checked findings table, honest sampling caveats and a slide-by-slide briefing outline.
 job: speak-and-persuade
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A checked findings table, sampling caveats and briefing outline. Share an anonymized survey dataset, questionnaire, sampling and recruitment notes, response counts and existing findings. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI your survey data, the questionnaire and how you found respondents. It checks the counts and percentages, explains each finding in plain words with its limits, then outlines a briefing for the people who must act on it.
 explain: |-
-  A checked findings table, sampling caveats and briefing outline.
+  Survey percentages are easy to get wrong and hard to take back. A figure that counts everyone when only half were asked the question looks bigger than it is. A survey that people chose to answer cannot speak for everyone, and a briefing that forgets this gets challenged in the first minute.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Percentages reconcile to eligible respondents; missing responses and nonrandom recruitment stay explicit. Missing tools or evidence stay visible in the final summary.
+  This workflow checks the numbers before it writes about them. Step 1 checks how many people answered each question, who was skipped by the questionnaire's routing, missing answers, duplicates and any weighting. Step 2 explains each checked result in plain words and shows who it covers. Step 3 outlines the briefing: one finding per slide, with what the finding can support and what it cannot.
+
+  It will not turn an opt-in sample, such as people who clicked a link in your newsletter, into a claim about a whole population. If recruitment was not random, the caveat appears next to the finding, not in a footnote.
 when:
-  - You need a checked findings table, sampling caveats and briefing outline.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You ran a customer, member or staff survey and must brief a manager or a board on it.
+  - Your results came from an email or social media link and you want to say what they can and cannot show.
+  - A reader asked "out of how many?" and you are not sure of the answer.
+  - You have a spreadsheet of answers and need a short, plain briefing, not a data dump.
+not_for:
+  - You have not sent the survey yet. Use the Check a marketing survey before sending it workflow.
+  - You need a statistical estimate for a whole population, with weights or margins of error. Ask a statistician. This workflow checks counts and caveats.
+  - You have a general dataset and want the top insights. Use the Turn a dataset into a checked brief of top insights workflow.
+  - You want slides made, not an outline. Take the outline to a slide tool or the Turn a report into an editable briefing deck workflow.
 you_give:
-  - An anonymized survey dataset, questionnaire, sampling and recruitment notes, response counts and existing findings.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - The survey answers as a sheet, with names or emails removed
+  - The questionnaire, with any questions that skip people based on an earlier answer
+  - How you found respondents, such as a random draw, an email list or a social post
+  - How many people were invited and how many answered
+  - Any findings or percentages you have already written (optional)
+  - Who the briefing is for and how long it should be (optional)
 you_get:
-  - A checked findings table, sampling caveats and briefing outline.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A checked findings table with each percentage, who it covers and the number of answers behind it
+  - A list of data problems, such as missing answers, duplicates and skipped questions
+  - A plain-words note on each finding and what it cannot show
+  - Sampling caveats stated next to the findings they affect
+  - A briefing outline with one finding per slide and the decision it can and cannot support
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini. Use one that can open spreadsheets.
+  - Remove names and emails from the sheet. Attach it with the questionnaire. Say how you found respondents and how many you invited.
+  - After step 1, compare three figures with your own sheet. Fix any that are wrong before going on.
+  - Read each caveat. If you disagree with one, say why. The AI will keep it unless you show a reason.
+  - Take the outline to a slide tool. Say each caveat out loud when you present the finding it belongs to.
 how_it_works:
   - title: Spreadsheet checker
-    text: Check response denominators, question routing, missing values, duplicates and any weighted formulas against the supplied questionnaire and sampling notes.
+    text: "Checks how many answered each question, who was skipped by the questionnaire's routing, missing answers, duplicates and any weighted formulas. Hands step 2 a table of checked figures. Check before moving on: every percentage shows the number of people it covers."
   - title: Figures to plain pictures writer
-    text: Explain verified results with their real denominators and periods; do not turn an opt-in sample into a population estimate.
+    text: "Explains each checked result in plain words, with the group it covers and the time period. Does not turn an opt-in sample into a claim about everyone."
   - title: Presentation builder
-    text: Prepare a findings briefing outline using checked figures and visible limitations. Show the decision each finding can and cannot support.
+    text: "Outlines the briefing from the checked figures and their limits. Shows the decision each finding can and cannot support."
 output_shape: |-
-  Scope and source coverage
-  A checked findings table, sampling caveats and briefing outline.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SAMPLE          <invited | answered | how recruited | who is missing>
+  FINDINGS TABLE  <question | answer | % | people it covers | answers behind it | caveat>
+  DATA PROBLEMS   <problem | rows or questions affected | effect on results>
+  IN PLAIN WORDS  <finding | what it says | who it covers | what it does not show>
+  BRIEFING        <slide | finding | caveat | decision it can support | decision it cannot>
+  MISSING         <each gap and the finding it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Your survey answers as a sheet, with names and emails removed
+    - The questionnaire, including any skipped questions
+    - How you found respondents and how many answered
+    - Findings you have already written (optional)
+  prerequisites:
+    - An AI that can read spreadsheets
+    - The pack with its three component skills
+  output:
+    - name: Findings table
+      contains: Each percentage with who it covers, the number of answers behind it and its caveat.
+    - name: Data problems
+      contains: Missing answers, duplicates and skipped questions, with how each affects the results.
+    - name: Plain-words findings
+      contains: Each result in everyday language, with the group it covers and what it does not show.
+    - name: Briefing outline
+      contains: One finding per slide, with its caveat and the decision it can and cannot support.
+    - name: Hand-back summary
+      contains: Each saved file, every MISSING line and the checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Percentages reconcile to eligible respondents; missing responses and nonrandom recruitment stay explicit.
+  - what: Reader
+    how: Say who the briefing is for, such as a board or front-line staff. The plain-words notes and the outline follow their needs.
+  - what: Length
+    how: Say how many findings the briefing can hold. The outline keeps the ones the reader must act on.
+  - what: Sample
+    how: Say if respondents were chosen at random or chose to answer. The caveats change to match.
 judge:
   - Percentages reconcile to eligible respondents; missing responses and nonrandom recruitment stay explicit.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -65,11 +100,17 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can open your sheet and count rows. In plain chat, paste a small table and say that counts were not recalculated in a spreadsheet engine.
+    - name: A spreadsheet app such as Excel or Google Sheets (optional)
+      why: Lets you filter the sheet and check the AI's counts yourself.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The email or post that invited people to answer, so recruitment is described correctly.
+    - A copy of the survey as respondents saw it.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Opt-in sample
+    meaning: People who chose to answer, such as those who clicked a link. They may differ from people who did not.
+  - term: Routing
+    meaning: A rule that skips a question for some people, based on an earlier answer.
+  - term: Weighting
+    meaning: Adjusting counts so a group in the answers matches its size in the wider group.

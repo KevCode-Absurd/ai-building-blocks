@@ -1,6 +1,6 @@
 new_slug: bundle-tier-layout-planner
 name: "Bundle tier layout planner"
-summary: "Give it your product and costs. Get a 3-tier bundle layout, savings wording and a test plan."
+summary: "Plan a bundle tier layout for your product page. Give it your price and costs. You get three tiers, savings wording, a margin check and a test plan."
 job: make-offer
 thinking: medium
 thinking_why: "It sets out three tiers, a margin check and a test order, which a mid-size model does well if you check the sums."
@@ -13,6 +13,10 @@ when:
   - Your product page offers four or more pack sizes and most buyers pick the smallest.
   - You show your savings as a small percentage under the option and want a clearer way to say it.
   - You want to test bundle layouts with a clear plan and margin check.
+not_for:
+  - "You need to set bundle prices or quantity breaks from scratch: use the bundle and quantity break builder first, then bring the prices here."
+  - "You sell a single size, or only two pack sizes: there is nothing to cut to three tiers, so test your price or page copy instead."
+  - "You want to find friction elsewhere on the page: use a store friction check, or watch a few session recordings of real buyers."
 you_give:
   - Your product, unit price and unit cost
   - Your current bundle options and which ones sell
@@ -29,6 +33,28 @@ how_to_use:
   - Add shipping and fee costs if you know them, so the margin check is accurate.
   - Build the three tiers on your product page, or in your bundle app, as one change at a time.
   - Track conversion, AOV and revenue per visitor together for two weeks on each change.
+output_sample:
+  input:
+    - Your product, unit price and unit cost
+    - Your current bundle options and which ones sell
+    - Your page traffic per week (optional)
+    - Your shipping cost and payment fees (optional)
+    - The prices you charged in the last 30 days (optional)
+  output:
+    - name: Bundle tier layout
+      contains: Three tiers with units, price, compare-at price and a title that shows the saving in money.
+    - name: Saving steps
+      contains: The amount saved when moving from tier 1 to 2 and from tier 2 to 3.
+    - name: Margin check
+      contains: Revenue, cost, shipping, fees, contribution and margin percent for each tier, after discount.
+    - name: Tiers dropped
+      contains: The pack options removed and the reason for each.
+    - name: Compare-at price note
+      contains: The real earlier price used, and a reminder to check local rules on compare-at pricing.
+    - name: Test plan
+      contains: One change at a time, in order, with conversion, AOV and revenue per visitor tracked together.
+    - name: Checks missed
+      contains: Any check that could not be run, or none.
 how_it_works:
   - title: Cuts to three tiers
     text: One drinks brand went from five bundles to three after recordings showed buyers picking only the smallest option or leaving. Conversion rose about 53% and AOV about 13.5%, in that one test.

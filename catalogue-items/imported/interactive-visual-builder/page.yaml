@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set design system but makes many layout choices.
 new_slug: interactive-visual-builder
 name: Interactive visual builder
-summary: Describe what to show. Get a chart, diagram or explainer with sliders
-  and toggles, ready to open in a browser.
+summary: Turn your idea into an interactive chart, diagram or explainer with sliders and toggles. Opens in a browser. Ask for a visual and get one back.
 job: design-work
 headline: Interactive visual builder
-subhead: A diagram, chart or explainer that you can click and drag, with sliders
-  and toggles, ready to open in a browser. It picks the right type of visual
-  from the way you phrase the request.
+subhead: A diagram, chart or explainer that you can click and drag, with sliders and toggles, ready to open in a browser. It picks the right type of visual from the way you phrase the request.
 explain: |
   A diagram, chart or explainer that you can click and drag, with sliders and toggles, ready to open in a browser. It picks the right type of visual from the way you phrase the request.
 
@@ -19,6 +16,10 @@ when:
   - You have numbers and want a chart with toggles.
   - You want to compare options in a simple grid.
   - You need a visual that works without special software.
+not_for:
+  - "You only need a written answer or plain text summary: ask your AI to write it in chat, no visual needed."
+  - "You want raw data exported or edited as a table: use a spreadsheet such as Google Sheets or Excel."
+  - "You need a finished brand design or print layout: work with a designer or a design tool such as Figma."
 you_give:
   - What you want to show
   - The data or facts to include
@@ -29,8 +30,26 @@ you_get:
   - Controls like sliders and toggles
   - A page you can open in a browser
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open a browser.
+  - In Claude, paste the skill into a chat, or add it as a skill if your plan allows. Then describe the visual you want.
+  - In ChatGPT or Gemini, paste the skill text first. Then describe your visual and add your numbers. Ask for a full HTML page you can save.
+  - In Codex or any tool that can save files, ask for a complete HTML file. Then open the file in your browser.
+  - "Check the result: move each slider and toggle, and make sure the numbers look right."
+  - Chat follow-up buttons only work where your AI has a chat link. Without one, they are removed. Sliders and toggles still work.
+output_sample:
+  input:
+    - What you want to show, in a sentence
+    - The numbers or facts to include
+    - Where the visual will be used (optional)
+  prerequisites:
+    - An AI that can show visuals in chat, or save an HTML file you can open in a browser
+  output:
+    - name: Visual type choice
+      contains: "The kind of visual picked from your wording: diagram, flowchart, comparison grid, chart or interactive explainer."
+    - name: SVG diagram
+      contains: A drawn diagram or flowchart for questions like how it works or what the steps are.
+    - name: HTML explainer or chart
+      contains: A chart or explainer with sliders and toggles that update the numbers as you move them.
+    - name: Saved HTML page
+      contains: A complete page you open in your browser, when your AI has no built-in visual tool.
+    - name: Short explanation
+      contains: A few lines on what the visual shows, how to use the controls, and one key point.

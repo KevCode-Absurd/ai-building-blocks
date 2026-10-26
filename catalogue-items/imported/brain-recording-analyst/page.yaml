@@ -2,35 +2,61 @@ thinking: high
 thinking_why: Each step affects the next and needs expert reading.
 new_slug: brain-recording-analyst
 name: Brain recording analyst
-summary: Give it Neuropixels recordings. Get cleaned data, sorted neuron spikes
-  and quality checks.
+summary: Turn raw Neuropixels recordings into sorted neurons and quality checks. A Neuropixels spike sorting workflow for your AI, using SpikeInterface.
 job: research-topics
 headline: Brain recording analyst
-subhead: Give it Neuropixels recordings. Get cleaned data, sorted neuron spikes
-  and quality checks. Bring neuropixels recording files. Use the result to plan
-  your next step.
+subhead: Give your AI your Neuropixels recording files. It cleans the signal, corrects drift, sorts spikes into neurons and scores each unit. You get curated data ready to export and check.
 explain: |
   Go from raw Neuropixels recordings to cleaned data, sorted neuron spikes and quality checks you can act on. The workflow follows common practice from SpikeInterface, the Allen Institute and the International Brain Laboratory.
 
   It loads data from SpikeGLX, Open Ephys or NWB, then filters and re-references the signal and finds bad channels. It corrects drift, runs a spike sorter such as Kilosort4, and computes quality measures such as signal-to-noise and ISI violations. Last comes curation and export. Ready-made scripts and a template come with it. It needs Python and the SpikeInterface packages.
 when:
-  - You have raw Neuropixels files and need them preprocessed.
-  - Your recording drifts and you must correct the motion.
+  - You have raw Neuropixels files and need them cleaned up.
+  - Your recording drifts and you need to correct the motion.
   - You want to sort spikes into single neurons.
   - You need to drop low-quality units before analysis.
+not_for:
+  - "Your recording has no probe details, calibration or valid timing data: fix those first, or follow the SpikeInterface docs."
+  - "You want to sort spikes by hand: use Phy on its own, or ask a lab colleague who has done it."
+  - "You have no way to run Python code: ask your lab's data person to run it, since a chat alone cannot process recording files."
 you_give:
-  - Neuropixels recording files
-  - The probe and acquisition format
+  - Your Neuropixels recording files
+  - The probe type and file format (SpikeGLX, Open Ephys or NWB)
   - Your choice of spike sorter (optional)
-  - A computer with Python and enough memory
+  - An Anthropic API key for AI-assisted review (optional)
 you_get:
-  - Cleaned, filtered recordings
-  - Sorted units
-  - Quality metrics for each unit
-  - Curated data ready to export
+  - A cleaned and filtered recording
+  - Spikes sorted into units
+  - A quality score table for each unit
+  - Curated units ready to export to Phy
+  - A figure report you can read through
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and use computing power.
+  - Check you have Python 3.10 or newer and SpikeInterface installed. This skill needs an AI that can run code and read your files.
+  - Open your AI tool and paste in the skill, or add the skill folder if your tool takes files.
+  - Tell your AI where your recording folder is and which probe and format you used.
+  - Ask it to load the recording, preprocess it and check drift before it sorts.
+  - Review the quality table and report, then ask it to keep only the good units.
+  - Export to Phy if you want to check units by hand. Note that Kilosort4 needs its own CUDA install, and native sorters and pretrained models were not tested in the source.
+output_sample:
+  input:
+    - Your Neuropixels recording folder (SpikeGLX, Open Ephys or NWB)
+    - Which probe you used (Neuropixels 1.0 or 2.0)
+    - Your choice of spike sorter, such as Kilosort4 (optional)
+    - An Anthropic API key, only for AI-assisted review (optional)
+  prerequisites:
+    - An AI that can run Python code on your computer
+    - Python 3.10 or newer with SpikeInterface and its helper packages
+    - A separate CUDA install if you want to run Kilosort4 on a GPU (CPU sorters also work)
+  output:
+    - name: Preprocessed recording
+      contains: Your signal after filtering, re-referencing and bad channel removal, with drift corrected if the drift check calls for it.
+    - name: Sorted units
+      contains: Spikes grouped into units by your chosen spike sorter.
+    - name: quality_metrics.csv
+      contains: One row per unit with measures such as signal-to-noise, ISI violations, presence ratio and amplitude cutoff.
+    - name: sorting_curated
+      contains: Only the units that pass your quality thresholds, with optional model-based or AI-assisted review for unclear units.
+    - name: phy_export
+      contains: A folder you can open in Phy to check units by hand.
+    - name: report
+      contains: Figures that summarise each unit and the overall recording quality.

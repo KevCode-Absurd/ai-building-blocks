@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It turns workshop answers into set outputs.
 new_slug: company-values-culture
 name: Company values and culture builder
-summary: Describe your team. Get values written as behaviours, a culture code
-  and a simple health check.
+summary: Turn your team description into company values written as behaviours, a culture code and a quarterly culture health check you can repeat.
 job: lead-people
 headline: Company values and culture builder
-subhead: Describe your team. Get values written as behaviours, a culture code
-  and a simple health check. Bring a description of your team and its size. Use
-  the result to plan your next step.
+subhead: Describe your team and its size. Your AI turns that into values written as behaviours, a culture code and a health check. Then you can add the code to your handbook and run the first check next quarter.
 explain: |
   Values your team can see in daily behaviour, a short culture code, and a simple way to check how healthy your culture is. A value like transparency means little until it says what people do, for example sharing bad news within a day.
 
@@ -18,6 +15,10 @@ when:
   - You are growing and new hires are not picking up how things work.
   - You think what you say and what you reward have drifted apart.
   - You need a culture code for your handbook.
+not_for:
+  - You have no values yet and no team habits to look at. Talk with your best people first, then come back.
+  - The problem is one person's conduct or poor performance. Handle it with your HR lead or a manager, not a culture tool.
+  - You need a full staff survey tool with anonymous replies. Use a survey app, and use this only to write the questions.
 you_give:
   - A description of your team and its size
   - Values you have now (optional)
@@ -29,7 +30,28 @@ you_get:
   - Rituals to try
   - A simple culture health check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Describe your team, its size and any values you have now.
+  - Add examples of great or poor behaviour you have seen. Add your current rituals if you have them.
+  - Answer the three questions on mission, vision and values. Keep each answer short.
+  - Check that each value reads as something people do. Ask for a rewrite if it still sounds like a slogan.
+  - Put the culture code in your handbook. Run the health check each quarter.
+output_sample:
+  input:
+    - A description of your team and its size
+    - Your current values (optional)
+    - Examples of great or poor behaviour you have seen
+    - Your current rituals and meetings (optional)
+  output:
+    - name: Mission, vision and values
+      contains: Short answers to three questions, with values built from what your best hires did without being asked.
+    - name: Values as behaviours
+      contains: Each value rewritten as an action a new hire could check by day 30.
+    - name: Culture code
+      contains: A document on who thrives here, who does not, and how you decide, communicate and grow people.
+    - name: Culture health check
+      contains: Eight to twelve anonymous questions on safety, clarity, fairness, growth and trust in leaders, with a guide to the scores.
+    - name: Rituals for your size
+      contains: Meetings and habits that fit your team size, such as all-hands, recognition and onboarding buddies.
+    - name: Red flags
+      contains: Signs that your stated values and your real habits have drifted apart.

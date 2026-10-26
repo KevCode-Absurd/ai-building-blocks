@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches content types to channels.
 new_slug: content-channel-planner
 name: Content channel planner
-summary: Give it your content and audience. Get where to share it, when, and
-  which channels to skip.
+summary: Plan where to share your content so people see it. Give it your content and audience. You get a content channel plan with a posting rhythm.
 job: grow-social
 headline: Content channel planner
-subhead: A plan for where your content goes after it is published, matched to
-  your audience, with channels to drop. Most teams put nine tenths of their
-  effort into making content and almost none into getting it seen.
+subhead: A plan for where your content goes after it is published, matched to your audience, with channels to drop. Most teams put nine tenths of their effort into making content and almost none into getting it seen.
 explain: |
   A plan for where your content goes after it is published, matched to your audience, with channels to drop. Most teams put nine tenths of their effort into making content and almost none into getting it seen.
 
@@ -18,6 +15,10 @@ when:
   - You are choosing between email, social, search and paid.
   - A budget cut means you must drop channels.
   - You are launching a new content program and need a distribution plan.
+not_for:
+  - "You want to turn one piece into many formats: do that first with a content repurposing step, then come back here."
+  - "You have no content yet: write a first few pieces, or ask a writer, before you plan where to share them."
+  - "You need ad copy or a paid campaign setup: use your ad platform's own tools or a media buyer."
 you_give:
   - Your content types
   - Your audience
@@ -29,7 +30,30 @@ you_get:
   - Channels to drop
   - Notes on owned, earned and paid mix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Tell your AI your content types, your audience and the channels you use now.
+  - Add your budget and team size if you know them (optional).
+  - Ask for a channel plan with a posting rhythm and channels to drop.
+  - Check each channel against what your audience really uses. Treat any rule of thumb in the plan as a guide, not a fact.
+  - Cut the channels it says to drop. Test the plan for a month, then ask your AI to review it.
+output_sample:
+  input:
+    - Your content types, such as blog posts, video or a newsletter
+    - Your audience and where they spend time online
+    - Channels you use now
+    - Your budget and team size (optional)
+  output:
+    - name: Channel taxonomy
+      contains: Your channels sorted into owned, earned and paid, with the role each one plays.
+    - name: Audience-channel match
+      contains: Where your audience actually engages, not just where they have an account.
+    - name: Content-channel match
+      contains: Which type of content fits which channel, and where the format is a poor fit.
+    - name: Distribution cadence
+      contains: How often to post on each channel, split into steady posting and campaign bursts.
+    - name: Channels to drop
+      contains: Channels that cost effort and bring little reach, with the reason to stop.
+    - name: Measurement plan
+      contains: What to track on each channel to see if sharing works.
+    - name: Common failure check
+      contains: Warning signs in your current setup, such as posting everywhere with no plan.

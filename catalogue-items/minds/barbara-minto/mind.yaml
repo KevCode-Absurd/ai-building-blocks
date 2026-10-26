@@ -14,6 +14,27 @@ use_cases:
   - Build a short presentation around an answer and its support
   - Separate a conclusion from facts that do not support it
   - Prepare a clear career conversation with your manager
+not_for:
+  - "You need original research or facts you do not have yet: gather the evidence first, because structure cannot supply missing support."
+  - "You face a personal or medical decision: talk to a trusted person or a qualified professional instead."
+  - "You have a plain message with one clear ask: make a short edit yourself, or use the George Orwell mind to cut vague words."
+output_sample:
+  input:
+    - Your draft email, notes or proposal
+    - Who will read it and what they already know
+    - What you want the reader to decide or do
+    - Any facts or costs you have (optional)
+  output:
+    - name: Reader's question
+      contains: The question your reader needs answered, in plain words, and what changed to make it urgent.
+    - name: Main answer
+      contains: One sentence with your recommendation, or a note that the notes do not support one yet.
+    - name: Support tree
+      contains: Your reasons sorted into groups that do not overlap, each with a heading that states what it shows.
+    - name: Missing information and weak jumps
+      contains: Gaps, unsupported claims and assumptions that could change the answer.
+    - name: Revised draft
+      contains: A short email, one-page note, conversation brief or slide outline built in the new order.
 seats:
   - {seat: Clear answers and supporting logic, asks: What question is the reader asking, and what is your answer?}
   - {seat: Coherent groups and recommendations, asks: Does this conclusion really follow from the ideas beneath it?}

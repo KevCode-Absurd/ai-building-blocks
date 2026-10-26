@@ -2,14 +2,10 @@ thinking: high
 thinking_why: A good critique weighs the whole piece against several methods.
 new_slug: sales-copy-reviewer
 name: Sales copy reviewer
-summary: Paste your sales copy. Get a direct-response critique with fixes for
-  the weakest parts.
+summary: Paste your sales copy and get a direct-response review. It finds the weak lines, gives rewrites and a score, and lists what to cut.
 job: write-ad-copy
 headline: Sales copy reviewer
-subhead: A direct-response review of your sales copy that points to the weakest
-  parts and shows how to fix them. Paste in a video sales letter, email, ad or
-  landing page and get a critique grounded in the methods of well-known response
-  copywriters.
+subhead: A direct-response review of your sales copy that points to the weakest parts and shows how to fix them. Paste in a video sales letter, email, ad or landing page and get a critique grounded in the methods of well-known response copywriters.
 explain: |
   A direct-response review of your sales copy that points to the weakest parts and shows how to fix them. Paste in a video sales letter, email, ad or landing page and get a critique grounded in the methods of well-known response copywriters.
 
@@ -19,6 +15,10 @@ when:
   - An ad or email draft feels flat and you cannot say why.
   - You wrote a video sales script and want a second opinion.
   - You want to know if your opening stops people scrolling.
+not_for:
+  - You only need a legal or ad-platform check. Ask a compliance reviewer or read the Meta and Google ad rules yourself.
+  - Your piece has no offer, such as a blog post or newsletter. Ask a human editor for general feedback instead.
+  - You need a fresh draft, not a critique. Ask your AI to write a first draft, then bring it back here.
 you_give:
   - The copy to review
   - What is being sold and to whom
@@ -30,7 +30,30 @@ you_get:
   - Notes on the lead and mechanism
   - Rewrites for the weakest parts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full text of the skill into the chat as your first message.
+  - In a second message, paste your copy. Say what you sell, who it is for, and where it runs.
+  - Read the Piece Classification first. If it gets your reader or funnel stage wrong, correct it and ask for a fresh review.
+  - Fix the Top 3 High-Impact Changes first. Then use the rewrites for weak lines and delete everything on the Kill List.
+  - Paste the new version back in and ask for a second review. Repeat until the score stops rising.
+output_sample:
+  input:
+    - The sales copy to review, pasted as text
+    - What you sell and who it is for
+    - Where the copy runs, such as cold ads or email
+    - Results so far (optional)
+  output:
+    - name: Piece Classification
+      contains: The type of piece, where it sits in the funnel, the target reader, how aware they are, and the main idea.
+    - name: Big Picture Assessment
+      contains: A verdict on the big idea, the opening, the mechanism, the offer, the close and the emotional flow.
+    - name: Line-Level Review
+      contains: Each problem with its location, the issue, a rewrite you can use, and the principle behind it.
+    - name: Conversion Readiness
+      contains: A score from 1 to 10 with a short reason.
+    - name: Top 3 High-Impact Changes
+      contains: The three edits most likely to help sales, in order.
+    - name: What's Working
+      contains: The parts the writer got right and should keep.
+    - name: Kill List
+      contains: Sections, tangents and lines to cut completely.

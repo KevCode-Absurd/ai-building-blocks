@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a repeatable pipeline with a few tuning choices.
 new_slug: microscopy-cell-counter
 name: Microscopy cell counter
-summary: Give it microscope images. Get cell counts, outlines and per-cell
-  brightness, run the same way every time.
+summary: Count nuclei in microscope images and measure each cell's brightness with a CellProfiler pipeline you can rerun the same way every time.
 job: research-topics
 headline: Microscopy cell counter
-subhead: Give it microscope images. Get cell counts, outlines and per-cell
-  brightness, run the same way every time. Bring grayscale TIFF images of the
-  nuclear channel. Use the result to plan your next step.
+subhead: Give it microscope images. Get cell counts, outlines and per-cell brightness, run the same way every time. Bring grayscale TIFF images of the nuclear channel. Use the result to plan your next step.
 explain: |
   Cell counts, outlines and per-cell brightness from your microscope images, produced the same way every run so conditions can be compared fairly. It builds a CellProfiler pipeline for nuclei in a single grayscale channel.
 
@@ -18,6 +15,10 @@ when:
   - You want nuclear fluorescence measured for each cell.
   - A teammate counted by hand and you need a repeatable method.
   - You have images from a proprietary format that need converting first.
+not_for:
+  - "You have 3D stacks, colour images or multichannel cell painting: build and check a separate CellProfiler pipeline for that."
+  - "You have tissue slides that need a special model: use a tissue-specific tool, not this nuclei starter."
+  - "You only want a quick count of a few images by eye: use a simple tool like ImageJ instead."
 you_give:
   - Grayscale TIFF images of the nuclear channel
   - A manifest of plate, well and site
@@ -30,8 +31,31 @@ you_get:
   - Outline overlays to check results
   - A pilot checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run command line tools and save files.
+  - Install CellProfiler 4.2.8 first, or a container that runs it. The run step cannot work without it.
+  - Save your nuclear channel images as grayscale TIFF files. Convert other formats first.
+  - Give your AI this skill, then your images and a CSV list with plate, well and site.
+  - Ask it to run a small pilot on control, dense, dim and edge images. Check the outline images for misses, splits and merges.
+  - Tune the size range once, then run the whole batch with the same settings for every treatment.
+  - Next, compare treatments by biological replicate, not by single cells. Thousands of cells from one well count as one well.
+output_sample:
+  input:
+    - Grayscale TIFF images of the nuclear channel
+    - A CSV list of each image with plate, well and site
+    - Pixel size and camera bit depth
+    - A few typical images for tuning (optional)
+  prerequisites:
+    - CellProfiler 4.2.8, or a container that runs it, installed on your computer
+    - An AI that can run Python and command line tools and save files
+  output:
+    - name: Image.csv
+      contains: One row per image, with the nuclei count and the plate, well and site details.
+    - name: Nuclei.csv
+      contains: One row per nucleus, with mean and total brightness, area and shape.
+    - name: "*_nuclei.png"
+      contains: Green outlines drawn over each input image so you can check for misses, splits and merges.
+    - name: pipeline.cppipe
+      contains: An exact copy of the pipeline used for the run.
+    - name: cellprofiler.done
+      contains: A marker file showing that CellProfiler finished the run.
+    - name: assay_qc.json
+      contains: Run status, image checks, counts, mean area per field and flags for saturated images.

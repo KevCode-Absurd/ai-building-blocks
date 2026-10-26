@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It gathers background and shapes it for the meeting.
 new_slug: legal-meeting-briefer
 name: Legal meeting briefer
-summary: Name a negotiation or review meeting. Get background, key issues,
-  questions to ask, then action items. Not legal advice.
+summary: Prepare for a legal meeting in minutes. Name the meeting and get a prep sheet with background, issues and questions to ask. Not legal advice.
 job: check-contracts
 headline: Legal meeting briefer
-subhead: A one-page prep sheet for a legal meeting, so you walk in knowing the
-  background, the issues and what to ask. Name the meeting. The skill works out
-  its type, such as a deal review, board session, vendor call or dispute, then
-  decides what prep that type needs.
+subhead: A one-page prep sheet for a legal meeting, so you walk in knowing the background, the issues and what to ask. Name the meeting. The skill works out its type, such as a deal review, board session, vendor call or dispute, then decides what prep that type needs.
 explain: |
   A one-page prep sheet for a legal meeting, so you walk in knowing the background, the issues and what to ask. Name the meeting. The skill works out its type, such as a deal review, board session, vendor call or dispute, then decides what prep that type needs.
 
@@ -19,6 +15,10 @@ when:
   - The board wants a legal update and you need the key points.
   - A vendor call is about open terms and you need the history.
   - You want action items recorded and assigned after a meeting.
+not_for:
+  - "You need legal advice on a dispute or claim: talk to your lawyer or outside counsel, as this only helps you prepare."
+  - "You want to review the terms of a contract: read the contract with a lawyer, as this does not mark up or judge clauses."
+  - "You only need meeting notes written up: use a plain note-taking step in your AI, as this focuses on prep and action items."
 you_give:
   - Meeting name, time and attendees
   - The agenda (optional)
@@ -30,8 +30,38 @@ you_get:
   - Questions to ask
   - Action items after the meeting
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your email, calendar and files.
+  - Open Claude, ChatGPT or Gemini and paste in the instructions from this skill.
+  - Type the meeting name, time, attendees and your role. Add the agenda if you have one.
+  - If your AI can reach your email, calendar, chat or files, tell it to use them. If not, paste in the contracts, emails or notes yourself.
+  - Read the Preparation Gaps section first. Fill in anything it could not find, then check every fact before you rely on it.
+  - After the meeting, paste in your notes and ask for the action items table. Each task gets one owner and a date.
+  - Send the action items to everyone who was there.
+output_sample:
+  input:
+    - The meeting name, date and time
+    - Who is attending
+    - Your role in the meeting, such as advisor or negotiator
+    - The agenda (optional)
+    - Related contracts, emails or notes (optional)
+  prerequisites:
+    - An AI that can read your calendar, email, chat or documents gives the best result
+    - Without those links, paste the background in yourself
+  output:
+    - name: Meeting Details
+      contains: The meeting title, time, length, place and your role in it.
+    - name: Participants
+      contains: A table of each attendee, their organization, role and what they care about.
+    - name: Background and Context
+      contains: A short summary of the history, the current state and why the meeting is happening.
+    - name: Open Issues
+      contains: A table of open points with status, owner, priority and notes.
+    - name: Legal Considerations
+      contains: The legal risks and points that matter for the topics on the agenda.
+    - name: Talking Points and Questions to Raise
+      contains: The points you want to make and the questions to ask, each with a reason.
+    - name: Decisions Needed
+      contains: Each decision to be made, with the options and a suggested choice.
+    - name: Preparation Gaps
+      contains: What could not be found or checked, so you know what to confirm.
+    - name: Action Items
+      contains: "After the meeting: a table of tasks with one owner, a deadline, priority and status."

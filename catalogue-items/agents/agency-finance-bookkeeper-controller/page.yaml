@@ -1,0 +1,138 @@
+name: Bookkeeper & Controller agent
+summary: "Get a month-end close review from your bank and ledger exports: accounts that do not reconcile, odd entries and what to fix before closing."
+headline: Bookkeeper & Controller agent
+subhead: "Paste your bank statement, your ledger or trial balance and last month's close notes. It checks that each account matches its support, spots odd or undocumented entries and lists what is still open. You get a close review and a fix list."
+job: money-and-investing
+thinking: high
+thinking_why: It compares balances line by line and must never call a difference "fine" without a reason. Use a model that handles tables well and shows its working.
+explain: |-
+  A month-end close review is a check that your books match the real world before you call the month done. Most small teams skip it, or only look at the bank balance. A cash account can match while a loan, a prepaid cost or a customer balance is quietly wrong.
+
+  This agent works account by account. For each one it sets the ledger balance beside the proof, such as a bank statement or an invoice list. It shows the gap and lists each item that explains it. It marks any gap with no cause as unexplained, and it does not hide small ones. A $50 gap gets the same question as a $5,000 gap.
+
+  It also scans for entries with no description, round-number entries, duplicates and items posted to the wrong month. Then it lists the accruals you may have missed and gives you the close checklist with what is done and what is open. It proposes entries but never posts them. It is an AI reading of your exports, not an audit or a tax filing.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Month end is here and you want to know if your books are right before you send them to your accountant.
+  - Your QuickBooks or Xero balance does not match your bank and you cannot see why.
+  - You took over the books from someone else and want to know which accounts to trust.
+  - A lender, investor or accountant asked for clean books and you want to find the gaps first.
+not_for:
+  - You need to sort a pile of transactions into categories. Use the Expense sorter.
+  - You want accruals worked out in a schedule. Use the Accrual schedule drafter.
+  - You need an audit, a tax return or a signed set of statements. Hand those to a qualified accountant.
+  - You only want to check bank fees. Use the Bank fee reconciliation checker.
+you_give:
+  - Your bank and card statements for the month, as a CSV, PDF or pasted list.
+  - Your general ledger or trial balance for the same month, exported from QuickBooks, Xero or a spreadsheet.
+  - Supporting lists, such as the unpaid invoices from customers and suppliers (optional)
+  - Last month's reconciliations or close checklist (optional)
+  - The software you use and the month you are closing
+you_get:
+  - A table for each account with the ledger balance, the proof balance and the gap
+  - A list of items that explain each gap, and gaps with no cause yet
+  - Entries to question, such as no description, duplicates or the wrong month
+  - Accruals you may have missed, shown as proposed entries
+  - A close checklist marked done, open or not checked, and a fix list in order
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Name the month and your accounting software. Attach or paste the bank statements and the ledger or trial balance for that month.
+  - Add your unpaid invoice lists and last month's reconciliations if you have them. No code or software access is needed.
+  - Type "Review this close. Show the gap for each account. Do not guess a balance I did not give you."
+  - Read the unexplained gaps first. Find the missing item in your software, then ask for the review again.
+  - Post any proposed entry yourself, with support attached. Send the review to your accountant with the open items.
+how_it_works:
+  - title: Set the close
+    text: It confirms the month, the accounts to check and the files you gave. Anything missing is asked once, then marked MISSING.
+  - title: Match each account
+    text: For each account it sets the ledger balance beside the proof and lists the items that explain the gap.
+  - title: Flag odd entries
+    text: It scans for no description, duplicates, round amounts and entries dated in the wrong month.
+  - title: Look for missed accruals
+    text: It lists costs you have used but not yet booked, and drafts the entry for you to review.
+  - title: Walk the checklist
+    text: It marks each close task as done, open or not checked, based only on what you supplied.
+  - title: Rank the fixes
+    text: It orders the fixes by size and risk, and lists what your accountant should decide.
+output_shape: |-
+  CLOSE STATUS
+    Month <month> | Software <name> | Accounts checked <number> | Accounts with unexplained gaps <number>
+
+  RECONCILIATIONS
+    <account> | Ledger balance <amount> | Proof balance <amount> | Gap <amount> | Status <Matched, Explained or Unexplained>
+
+  RECONCILING ITEMS
+    <account> | <date> | <item> | <amount> | <Open or Cleared>
+
+  ENTRIES TO QUESTION
+    <date> | <entry> | <amount> | <reason flagged>
+
+  ACCRUALS TO CONSIDER
+    <cost or income> | <basis> | <amount> | <proposed entry, not posted>
+
+  CLOSE CHECKLIST
+    <task> | <Done, Open or Not checked> | <evidence>
+
+  FIX LIST (in order)
+    <action> | <why now> | <small, medium or large> | <who>
+output_sample:
+  input:
+    - Your bank and card statements for the month
+    - Your ledger or trial balance for the same month
+    - Unpaid invoice lists and last month's reconciliations (optional)
+    - The software you use and the month you are closing
+  prerequisites:
+    - An AI that can read files, if you attach statements or exports
+  output:
+    - name: Close status
+      contains: The month, the accounts checked and how many still have gaps.
+    - name: Reconciliations
+      contains: Each account with ledger balance, proof balance, the gap and its status.
+    - name: Reconciling items
+      contains: Each item that explains a gap, with date, amount and whether it is open.
+    - name: Entries to question
+      contains: Entries with no description, duplicates, round amounts or the wrong month.
+    - name: Accruals to consider
+      contains: Costs used but not booked, with the basis and a proposed entry that is not posted.
+    - name: Close checklist
+      contains: Each close task marked done, open or not checked, with the evidence.
+    - name: Fix list
+      contains: Actions in order, each marked small, medium or large, with who should do it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads bank CSVs and ledger exports as files and matches the lines for you.
+  inputs:
+    - A chart of accounts, so the review can name accounts the way your software does.
+    - Your own rule for what counts as a big gap, such as any gap over a set amount.
+    - Payroll reports for the month, so payroll accounts can be checked.
+terms:
+  - term: Reconciliation
+    meaning: Matching a ledger balance to proof, such as a bank statement, and explaining any gap.
+  - term: General ledger
+    meaning: The full list of every entry in your books.
+  - term: Trial balance
+    meaning: A list of every account and its balance at one date.
+  - term: Accrual
+    meaning: A cost or income that belongs to this month but has not been billed or paid yet.
+  - term: Close
+    meaning: The steps that finish a month, so you can trust its numbers.
+tweaks:
+  - what: Scope
+    how: Review bank and card first, then loans and customer balances in a second pass. One big run in one go gives thin answers.
+  - what: Gap size
+    how: Tell it which gap size you want flagged. It still lists every gap, but it ranks by your line.
+  - what: Software
+    how: Name your software. The fix steps then use its words, such as Banking tab or Reconcile screen.
+improve:
+  - Keep each review with your close notes, so next month starts from the last open items.
+  - Add your usual monthly entries to the pack, such as rent and insurance, so it checks they were posted.
+  - Pair it with the FP&A Analyst agent once the books are clean, to review the month against budget.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

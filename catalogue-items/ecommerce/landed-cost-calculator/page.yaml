@@ -1,6 +1,6 @@
 new_slug: landed-cost-calculator
 name: "Landed cost calculator"
-summary: "Give it your quote and freight. Get cost per sellable unit and margin, scored out of 100."
+summary: "Work out your landed cost per unit and margin from a factory quote. Add freight, duties and fees, and get a go or no-go score out of 100."
 job: plan-supply-chain
 thinking: medium
 thinking_why: "The work is arithmetic and layers, so a mid-level model is enough. Check its sums yourself once."
@@ -14,9 +14,14 @@ explain: |
   This skill lists every layer, then divides the total by the units that pass inspection, not the units you ordered. It shows air against sea, a small order against a big one, and the selling price you need for your target margin. The score tells you how safe the numbers are. It is a house scale, and the page shows how each point is earned. It also gives you the figures to load into Shopify as cost per item, so daily profit stays true.
 
 when:
-  - You have a quote and want to know if the product can make money before you place the order.
-  - Freight, supplier, 3PL or import country changed, and you need the new cost per unit.
-  - You are choosing between air and sea, or between two order sizes.
+  - You have a factory quote and want to know if the product can make money before you order.
+  - Your freight, supplier, 3PL or import country changed and you need the new cost per unit.
+  - You are choosing between air and sea shipping, or between two order sizes.
+  - You want to set a selling price that hits your target margin.
+not_for:
+  - "You already hold stock and know your costs: use Shopify cost per item or your accounting books."
+  - "You run a service business with no physical goods: use your own price sheet or ask your accountant."
+  - "You need a duty rate or tariff code: ask a customs broker or use your country's tariff lookup."
 
 you_give:
   - The factory price per unit (ex-factory) and the units you will order
@@ -37,6 +42,30 @@ how_to_use:
   - Say your selling price and target margin.
   - Read the layers and the score. Fix any "estimate" layer by getting a real quote, then run it again.
   - If you go ahead, enter the landed cost in Shopify as cost per item for each product.
+output_sample:
+  input:
+    - Factory price per unit and the units you will order
+    - Freight quote, duty rate, insurance and packaging costs
+    - "Warehouse costs: storage, pick and pack, courier fees"
+    - Your selling price, platform and payment fees, and target margin
+    - Your defect share (optional)
+  prerequisites:
+    - A duty rate from a customs broker or your country's tariff lookup
+  output:
+    - name: Landed cost
+      contains: Each cost layer per unit, labelled real quote, looked up or estimate, plus cost per sellable unit after defects and spares.
+    - name: Margin
+      contains: Your margin at your selling price, the price needed for your target margin, and the ad room left.
+    - name: Scenarios
+      contains: Air or sea, and small or big order, each with unit cost, margin, lead time and cash tied up.
+    - name: Verdict
+      contains: A go, hold or no-go call based on your margin and target.
+    - name: Score
+      contains: A score out of 100 with the sum shown, built from margin, cushion and quote quality points.
+    - name: Shopify
+      contains: The cost per item to enter in Shopify and when to check it again.
+    - name: Missing
+      contains: Anything you did not give, so you know which layers are still estimates.
 
 how_it_works:
   - title: Lists the layers

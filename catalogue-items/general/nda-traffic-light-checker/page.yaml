@@ -1,6 +1,6 @@
 new_slug: nda-traffic-light-checker
 name: NDA traffic-light checker
-summary: Paste an NDA. Get a green, yellow or red rating and the odd clauses explained.
+summary: Check an NDA before you sign. Paste it in and get a green, yellow or red rating, plus the odd clauses explained in plain words.
 job: check-contracts
 thinking: medium
 thinking_why: It compares each clause against a standard, which needs some judgement.
@@ -11,6 +11,10 @@ when:
   - Someone sent you an NDA and wants it back today.
   - You want to know if it is standard before you call a lawyer.
   - You send NDAs and want to check the ones you get back.
+not_for:
+  - "You are about to sign a high-value or long-term deal: have a qualified lawyer read it."
+  - "Your NDA is rated yellow or red: ask a qualified person to review it before you sign."
+  - "You need a full clause-by-clause review of many NDAs: use the NDA quick checker."
 you_give:
   - The full NDA text
   - Whether you share, receive or both
@@ -24,6 +28,22 @@ how_to_use:
   - Under it, paste the NDA text and your side.
   - Send it and read the result.
   - Do not sign yellow or red ones without a second look.
+output_sample:
+  input:
+    - The full NDA text
+    - Whether you are sharing, receiving or both
+    - What you plan to share (optional)
+  output:
+    - name: RATING
+      contains: Green, yellow or red, with a one-line reason for the rating.
+    - name: ODD CLAUSES
+      contains: Each odd clause with its section number, the quoted words, what it means and why it matters.
+    - name: WHAT TO ASK THEM TO CHANGE
+      contains: A short list of edits to request before you sign.
+    - name: MISSING
+      contains: Facts it needed but did not have, marked so nothing is guessed.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none if all checks ran.
 how_it_works:
   - title: Check the shape
     text: One-way or two-way, and the definition of confidential.

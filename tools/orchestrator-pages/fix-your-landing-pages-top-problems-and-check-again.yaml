@@ -1,6 +1,6 @@
 new_slug: fix-your-landing-pages-top-problems-and-check-again
 name: Fix your landing page's top problems and check again
-summary: Give it your page. Get ranked problems, a fix-now list and a second check once you've fixed them.
+summary: "Fix your landing page's top problems: get ranked issues and a fix-now list, then run a second 30-point check to see what is left."
 job: audit-landing-page
 thinking: medium
 thinking_why: The steps read a page and sort findings. A mid-size model does the job.
@@ -14,6 +14,10 @@ when:
   - Your page gets visits but few sales and you don't know where to start.
   - You got a long list of page problems and need to know what to fix first.
   - You fixed some things and want to know if the page is better.
+not_for:
+  - "Your page has no visitors yet: fix the ad or the traffic first, then come back."
+  - "You only want a review and no second check: use the Landing page conversion reviewer."
+  - "You only want the 30 yes-or-no checks on a page you already fixed: use the 30-point landing page checker."
 you_give:
   - Your landing page as a link, text and screenshots
   - The ad that sends traffic to it (optional)
@@ -30,6 +34,24 @@ how_to_use:
   - Give it the page and, if you have it, the ad that sends traffic. Screenshots of the phone view help most.
   - Make only the fix-now changes. Leave the test ideas for later, so you can tell what helped.
   - Save the updated page and give it back for the last check.
+output_sample:
+  input:
+    - Your landing page as a link, text or screenshots
+    - The ad that sends visitors to it (optional)
+    - Your brand facts (optional)
+    - After the pause, your page again with the fix-now changes made
+  prerequisites:
+    - An AI that can read files and follow a handoff file
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Step 1 audit report
+      contains: What the page is for, findings rated 0 to 4, quick wins, test ideas and a page score out of 100.
+    - name: Step 2 sorted issues
+      contains: Every issue with its proof, sorted into tracking faults, fix now, investigate and test, in ranked order.
+    - name: Step 3 second check
+      contains: Thirty yes-or-no checks on the fixed page, a quote for every no, five fixes left and a second score.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Audit the page
     text: Names what the page is for, then reads it as a glance, a skim and a doubt. It rates each finding from 0 to 4, splits quick wins from tests and scores the page.

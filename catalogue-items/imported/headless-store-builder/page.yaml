@@ -2,14 +2,10 @@ thinking: high
 thinking_why: A custom storefront has many linked design and code choices.
 new_slug: headless-store-builder
 name: Headless store builder
-summary: Describe the store you want. Get a fast custom Shopify storefront built
-  on Hydrogen, with deploy steps.
+summary: Build a custom Shopify storefront with Hydrogen. Get the project, home, product and collection pages, product queries and Oxygen deploy steps.
 job: build-websites
 headline: Headless store builder
-subhead: Give it your Shopify store domain, API token, design idea and page
-  list. It sets up a Hydrogen project, a custom React storefront that talks to
-  your Shopify store behind the scenes. You get the project, pages for home,
-  product and collection, the product queries and deploy steps for Oxygen.
+subhead: Give it your Shopify store domain, API token, design idea and page list. It sets up a Hydrogen project, a custom React storefront that talks to your Shopify store behind the scenes. You get the project, pages for home, product and collection, the product queries and deploy steps for Oxygen.
 explain: |
   A custom online storefront that loads fast and looks exactly how you want, connected to your Shopify store behind the scenes. Instead of using a theme, you build the front end yourself with React and Shopify's Hydrogen framework, then host it free on Shopify's Oxygen.
 
@@ -19,20 +15,52 @@ when:
   - Your store is slow and you want faster page loads.
   - You want a custom React front end on top of Shopify.
   - You plan to deploy a storefront to Shopify's own hosting.
+not_for:
+  - "You want a quick shop on a standard look: use a Shopify theme, which needs no code."
+  - "Your team does not know React or Node.js: use a Shopify theme, or hire a developer."
+  - "You only want to change a few words or colors: edit your current theme in Shopify admin."
 you_give:
-  - A Shopify store and its domain
+  - Your Shopify store domain
+  - Your Storefront API token
   - Your design idea and page list
   - Whether you use JavaScript or TypeScript
-  - Your Node.js and React setup
-  - Storefront API token
 you_get:
   - A new Hydrogen project setup
   - Pages for home, product and collection
   - GraphQL queries for your products
   - Deploy steps for Oxygen
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Before you start, get your Storefront API token. In Shopify admin, install the Headless channel and create a storefront. Copy the token from there.
+  - Keep the token in your .env file. Never paste it into a chat.
+  - Paste this skill into Claude, ChatGPT or Gemini. Add your store domain, design idea, page list and JavaScript or TypeScript.
+  - Run the commands your AI gives you. This needs Node.js 18 or newer, so use an AI that can run code or run them yourself.
+  - Check that the home, product and collection pages load. If a code sample fails, ask your AI to match it to the router package your project uses.
+  - Run the deploy steps to put your storefront on Oxygen.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - Your Storefront API token
+    - Your design idea and page list
+    - JavaScript or TypeScript (your pick)
+  prerequisites:
+    - Node.js 18 or newer on your computer
+    - Some React knowledge
+    - An AI that can run code, or a developer to run the commands
+    - A Shopify store
+  output:
+    - name: Hydrogen project
+      contains: A new storefront app made with the Hydrogen setup command, using the template and language you pick.
+    - name: .env file
+      contains: Your session secret, Storefront API token and store domain, kept out of the chat.
+    - name: Home page route
+      contains: The front page of your storefront, saved as _index.tsx.
+    - name: Product page route
+      contains: A page that loads one product by its handle, with price, image and an add to cart button.
+    - name: Collection page route
+      contains: A page that loads a collection and lists its first 24 products.
+    - name: Cart route
+      contains: Code to add, update and remove cart lines.
+    - name: GraphQL queries
+      contains: The requests that fetch your products and collections from Shopify.
+    - name: Oxygen deploy steps
+      contains: The commands to link your store and deploy, plus where to set environment variables.

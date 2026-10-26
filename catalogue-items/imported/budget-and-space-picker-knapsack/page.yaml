@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares many item combinations.
 new_slug: budget-and-space-picker-knapsack
 name: Budget and space picker (knapsack)
-summary: Give it items with values and costs. Get the best set to pick within
-  your budget, weight or space limit.
+summary: Pick the best set of items within a budget, weight or space limit. Give it a list with values and costs. You get what to take and what to skip.
 job: plan-supply-chain
 headline: Budget and space picker (knapsack)
-subhead: Give it items with values and costs. Get the best set to pick within
-  your budget, weight or space limit. Bring a list of items with value and cost
-  or weight. Use the result to plan your next step.
+subhead: Give it items with values and costs. Get the best set to pick within your budget, weight or space limit. Bring a list of items with value and cost or weight. Use the result to plan your next step.
 explain: |
   Out of many options, pick the set that gives the most value without going over your budget, weight, time or space limit.
 
@@ -18,6 +15,10 @@ when:
   - You must pack a shipment with a weight limit and want the most valuable load.
   - You are choosing features for a release with limited team time.
   - You need to fill a shelf or truck with products by space and profit.
+not_for:
+  - "You need to fit boxes or shapes into a space: use the 2d-bin-packing or 3d-bin-packing skills."
+  - "Your list is short enough to rank by hand: sort by value for the cost and pick from the top."
+  - "You want to model a wider planning problem, not pick items: use the optimization-modeling skill."
 you_give:
   - A list of items with value and cost or weight
   - Your limit, such as budget, weight or space
@@ -29,8 +30,25 @@ you_get:
   - Total value against the limit
   - A note on the method used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - "Paste a table of your items with three columns: name, value, and cost or weight."
+  - State your limit, such as a budget or a weight cap. Add must-have items or conflicts if you have them.
+  - Ask for a table of items selected, items left out, and total value against the limit.
+  - Check the chosen set against real limits before you commit. Large lists work best if your AI can run code.
+output_sample:
+  input:
+    - A list of items with a value and a cost or weight for each
+    - Your limit, such as budget, weight or space
+    - Items you must take or items that cannot go together (optional)
+    - Category quotas (optional)
+  prerequisites:
+    - An AI that can run code helps on large lists, but a chat AI can handle small ones
+  output:
+    - name: Problem
+      contains: The type of problem found, the number of items, the limit and the goal.
+    - name: Solution
+      contains: The total value reached, the total weight or cost used, and how much of the limit that fills.
+    - name: Selected Items
+      contains: A table of the items to take, with value, weight and value per unit of weight.
+    - name: Not Selected
+      contains: The items left out, why they did not fit, and the value left on the table.

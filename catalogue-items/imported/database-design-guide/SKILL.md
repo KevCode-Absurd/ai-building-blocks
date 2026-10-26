@@ -33,6 +33,16 @@ date_added: "2026-02-27"
 
 ---
 
+## How to run this skill (added by AI Blocks)
+
+1. Ask once for what is missing: what the app does and stores, where it runs (server, serverless, edge), the language and team tools, the current schema (optional), any slow query (optional). Ask at most five questions. If an answer is still missing, write `MISSING: <what>` and name the assumption you used. Never invent tables, row counts or traffic.
+2. Read only the notes in the table above that the request needs.
+3. Hand back, in this order: Database pick, ORM pick, Schema outline, Index plan, Slow query notes (only if a query was given), Safe change steps, Open questions. Give each pick one reason and one trade-off.
+4. This skill gives principles and an outline, not full SQL. For ready-to-run CREATE TABLE statements, point to the Database schema designer. For a migration file with a rollback, point to the Database migration writer.
+5. For any change to a large live production table, say a database specialist should review it before it runs.
+
+---
+
 ## Decision Checklist
 
 Before designing schema:

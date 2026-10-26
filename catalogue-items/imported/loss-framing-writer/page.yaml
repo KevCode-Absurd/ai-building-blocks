@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs gain and loss framing against your audience.
 new_slug: loss-framing-writer
 name: Loss framing writer
-summary: Describe your offer. Get honest wording that shows what people lose by
-  waiting, without fear tactics.
+summary: Write loss framing copy that shows what waiting really costs your buyer, with real facts and no scare tactics. Get gain-framed versions to compare.
 job: write-ad-copy
 headline: Loss framing writer
-subhead: Messaging that shows what people lose by putting off a decision,
-  written with real facts and without scare tactics. Used well, loss framing
-  creates honest urgency.
+subhead: Messaging that shows what people lose by putting off a decision, written with real facts and without scare tactics. Used well, loss framing creates honest urgency.
 explain: |
   Messaging that shows what people lose by putting off a decision, written with real facts and without scare tactics. Used well, loss framing creates honest urgency. Used badly, it reads as manipulation.
 
@@ -18,6 +15,10 @@ when:
   - Your urgency copy sounds like hype and you want it to be believable.
   - You are writing a follow-up email to people who stalled.
   - You want to test a loss angle against a gain angle.
+not_for:
+  - Your offer has no real cost to waiting. Use a gain-framed message that shows the benefit instead.
+  - Your audience does not trust you yet. Lead with proof, like reviews or results you can show, before any loss angle.
+  - You need a hard deadline or a scarcity claim. Only use a real one, and ask a person on your team to confirm it is true.
 you_give:
   - Your offer and its real facts
   - Who the audience is
@@ -29,7 +30,25 @@ you_get:
   - A check for claims that need proof
   - Notes on where to avoid pressure
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
+  - Paste your offer, the facts you can prove, who it is for, and what you want them to do.
+  - Add what you know about how much your audience trusts you, and any proof of what waiting costs.
+  - Read the loss lines next to the gain lines. Pick the pair that fits your audience.
+  - Check the list of claims that need proof. Remove or confirm each one before you publish.
+output_sample:
+  input:
+    - Your offer and its real facts
+    - Who the audience is and how much they trust you
+    - What you want them to do
+    - Proof of what waiting costs (optional)
+  output:
+    - name: Reference point
+      contains: What your audience sees as normal today, and whether loss or gain wording fits better.
+    - name: Loss-framed copy
+      contains: Lines that state the real, near-term cost of waiting, kept at the lowest strength that still works.
+    - name: Gain-framed versions
+      contains: A matching gain line for each loss line, so you can compare and test both.
+    - name: Claims to verify
+      contains: Facts in the copy that need proof, and any research idea to check before you use it in public.
+    - name: Pressure check
+      contains: Notes on where the copy could feel like fear or fake urgency, and how to soften it.

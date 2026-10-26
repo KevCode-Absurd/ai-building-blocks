@@ -16,8 +16,8 @@ steps:
   - {uses: closed-setting-planner, note: "A small closed world where every exit is shut for a reason a reader accepts."}
   - {uses: volatile-antagonist-mood-mapper, note: "The person who holds the power gets a mood scale, so every calm scene carries a threat."}
   - {uses: rising-cost-ladder-builder, note: "Every try gets more expensive, and a deadline sits over all of it."}
-  - {uses: fair-escape-checker, note: "Every escape uses something the reader has already seen."}
-  - {uses: scene-turn-checker, note: "Reads the plan and marks any scene where nothing turns."}
+  - {uses: fair-escape-checker, note: "Every escape uses something the reader has already seen. Hands back a fair, weak or cheat verdict for each escape. Fix the cheats in your plan before step 5."}
+  - {uses: scene-turn-checker, note: "Uses your scene list and the plan from steps 1 to 3 with step 4's fixes applied, not step 4's verdict list. Marks any scene where nothing turns."}
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-king, alfred-hitchcock]

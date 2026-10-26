@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It groups orders by age.
 new_slug: daily-fulfillment-digest-writer
 name: Daily fulfillment digest writer
-summary: Run it each morning. Get open orders grouped by age, with holds and
-  exceptions flagged for action.
+summary: Get a daily list of your open Shopify orders grouped by age, with held orders flagged, so you can see which orders are late.
 job: run-your-store
 headline: Daily fulfillment digest writer
-subhead: Each morning you see every unshipped order sorted by how long it has
-  waited, with stuck ones called out. No more scrolling the Orders page to find
-  what is going late.
+subhead: Each morning you see every unshipped order sorted by how long it has waited, with stuck ones called out. No more scrolling the Orders page to find what is going late.
 explain: |
   Each morning you see every unshipped order sorted by how long it has waited, with stuck ones called out. No more scrolling the Orders page to find what is going late.
 
@@ -18,6 +15,10 @@ when:
   - A customer asks where their order is and you need to spot delays fast.
   - You run a small team and need a morning list of what to ship first.
   - You want to catch held orders before customers complain.
+not_for:
+  - "You need to place or release a hold on an order: use the order-hold-and-release skill."
+  - "You have no way to give your AI access to your Shopify admin: check orders by hand on the Orders page."
+  - "You want to track orders that already shipped: use the shipping and carrier tracking in your Shopify admin."
 you_give:
   - Your store address
   - Age cut points in days (optional)
@@ -28,8 +29,27 @@ you_get:
   - Oldest orders listed first
   - Counts per age group
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Sign in to your store with the Shopify CLI first. Your sign-in needs permission to read orders.
+  - Give your AI the skill and your store address. Add your own age cut points if you want them (optional).
+  - Read the age table first. Start with the oldest group.
+  - Check the held orders list. Then fix those orders in Shopify, or use the order-hold-and-release skill.
+output_sample:
+  input:
+    - Your store address
+    - Age cut points in days (optional)
+    - Whether to show held orders (optional)
+  prerequisites:
+    - An AI tool that can run commands and is signed in to your Shopify store
+    - Permission to read orders on your store
+  output:
+    - name: Start banner
+      contains: The store address and the time the digest began.
+    - name: Step log
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Fulfillment Age Digest
+      contains: A table of order counts for each age group, with the oldest order in each group.
+    - name: Orders On Hold
+      contains: A table of held orders with their hold status, shown only when you ask for holds.
+    - name: Outcome summary
+      contains: Total open orders, counts per age group, number on hold and number of errors.

@@ -1,35 +1,102 @@
 thinking: medium
-thinking_why: It reads data against metric benchmarks.
+thinking_why: It reads data against your own earlier results.
 new_slug: tiktok-shop-results-reader
 name: TikTok Shop results reader
-summary: Give it your shop numbers. Get what is working across video, live
-  sales, affiliates and ads, and what to change.
+summary: Find which TikTok Shop videos, live shows, creators and ads make sales. Give it your Seller Center numbers and get what to test next.
 job: read-ad-results
 headline: TikTok Shop results reader
-subhead: Give it your shop numbers. Get what is working across video, live
-  sales, affiliates and ads, and what to change. Bring dashboard numbers or
-  exports. Use the result to plan your next step.
+subhead: Give it your TikTok Shop numbers for a period. It shows which videos, live shows, creators and ads make money, and where views fail to turn into orders. You get a short list of tests to run next.
 explain: |
-  Your TikTok Shop numbers read through for you: which products, videos, live shows, affiliates and ads actually make money, and what to change first.
+  TikTok Shop gives you many numbers and no clear answer. This skill reads your TikTok Shop analytics and tells you what is working, what is leaking, and what to test first.
 
-  You paste in your dashboard figures or describe them. The skill reviews sales trend, order value, conversion and repeat buyers. It compares video formats and hooks to see which ones turn views into sales, scores live sessions by sales per show and audience behavior, and checks affiliate and ad results against their cost. When views are high and sales are low, it traces the leak, such as weak product page, unclear offer or poor call to action, and suggests a test for each.
+  You paste or upload exports from Seller Center. It works out revenue, order value, conversion and change against your earlier period. It ranks videos, live sessions, creators and ad campaigns by what they earned against what they cost.
+
+  When a video has views but few orders, it finds the step where buyers drop off, such as the product page or the offer. It then suggests one test for each. It only uses your numbers. It will not invent category averages, best posting times or hashtags.
 when:
   - You want to know which videos and products made last month's sales.
   - Your videos get views but few orders.
-  - You are unsure whether live selling is worth the time.
-  - You want to compare your results with others in your category.
+  - You are not sure live selling is worth your time.
+  - You pay creators or run TikTok Shop ads and want to see if they pay back.
+not_for:
+  - You have no TikTok Shop orders yet. Plan your first listing with the TikTok Shop listing writer or the TikTok Shop launch planner.
+  - You want to compare your shop with others in your category. This skill has no category data, so it compares you with your own earlier periods.
+  - You want to audit a TikTok Ads account in depth. Use the TikTok ads account auditor.
 you_give:
-  - Dashboard numbers or exports
-  - Time period
-  - Costs for ads and creators (optional)
+  - Seller Center exports or copied numbers for sales, videos, live sessions, creators or ads
+  - The period to look at, and the period before it
   - Your goal for the shop
+  - Ad spend and creator commissions (optional)
 you_get:
-  - Summary of what is working
-  - Weak spots in the sales path
-  - Live and affiliate scorecards
-  - A list of changes and tests
+  - A sales summary with change against your earlier period
+  - Your top products and videos, with the numbers
+  - The step where views fail to turn into orders
+  - Live session and creator rankings
+  - Up to 5 tests to run next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page, or upload the skill folder if your AI takes files.
+  - In TikTok Shop Seller Center, export your sales, video, live and affiliate reports for the period. Do the same for the period before it.
+  - Paste the exports. Add your goal, and your ad spend and creator commissions if you want return on spend.
+  - Check the Missing list first. If it names data you have, send it and ask for a redo.
+  - Pick one test from the list. Change one thing, run it for the time it suggests, then export again and run this skill on the new numbers.
+  - You do not need a paid tool. Your own exports are enough.
+how_it_works:
+  - title: Ask for what is missing
+    text: It asks once for the period, goal and exports. Gaps are marked missing, not filled with typical figures.
+  - title: Work out each metric
+    text: It shows the sums for revenue, order value, conversion, return on spend and change against your earlier period.
+  - title: Find the leak
+    text: For videos with views and few orders, it names the step with the biggest drop and the likely cause.
+  - title: Compare formats
+    text: It groups videos by your own labels and says which turned views into orders best. Small samples are flagged.
+  - title: Rank live and creators
+    text: Live sessions are ranked by revenue per show. Creators are ranked by sales against commission paid.
+  - title: Turn it into tests
+    text: Each change names the number it should move and how long to run it.
+output_shape: |
+  TikTok Shop results: <period>
+  Goal, data used, missing data
+  Sales summary: <revenue, orders, order value, conversion, change>
+  What is working: <top products and videos with numbers>
+  Where sales leak: <item, step with biggest drop, likely cause, confidence>
+  Video formats: <type, videos, views, orders, revenue>
+  Live sessions: <sessions, viewers, revenue per session>
+  Affiliates and ads: <sales, cost, return>
+  Tests to run next: <change, number it moves, run time>
+output_sample:
+  input:
+    - Seller Center exports for sales, videos, live sessions or creators
+    - The period to look at, and the period before it
+    - Your goal for the shop
+    - Ad spend and creator commissions (optional)
+  prerequisites:
+    - A TikTok Shop with some orders to read
+    - An AI that can read pasted tables or uploaded files
+  output:
+    - name: Sales summary
+      contains: Revenue, orders, order value and conversion, with change against your earlier period.
+    - name: What is working
+      contains: Your top products and videos ranked by revenue, with the numbers.
+    - name: Where sales leak
+      contains: The step where viewers drop off for each weak video, the likely cause and how sure it is.
+    - name: Video formats
+      contains: A table of your video types and what each earned, with small samples flagged.
+    - name: Live sessions
+      contains: Viewers and revenue per show, with your best and weakest session.
+    - name: Affiliates and ads
+      contains: Sales against cost for each creator and ad campaign you gave data for.
+    - name: Tests to run next
+      contains: Up to five changes, each with the number it should move and how long to run it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read full Seller Center exports instead of a pasted sample.
+  inputs:
+    - The same reports for the period before, so it can show change.
+    - Your product costs, so it can judge profit and not only revenue.
+terms:
+  - term: Seller Center
+    meaning: The TikTok Shop dashboard where you manage products and download reports.
+  - term: GMV
+    meaning: The total value of orders placed, before returns and fees.
+  - term: Affiliate
+    meaning: A creator who promotes your product and earns a commission on each sale.

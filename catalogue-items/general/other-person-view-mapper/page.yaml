@@ -1,6 +1,6 @@
 new_slug: other-person-view-mapper
 name: "Other person's view mapper"
-summary: "Describe the person and the matter. Get their side only: what they want, why they act so and how they save face."
+summary: "See your hard talk from their side first. Give it the person and the matter. You get what they want, why they act so, and how they save face."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It has to judge motives fairly and tell known facts from guesses, but the shape of the answer is fixed."
@@ -17,6 +17,10 @@ when:
   - "You are about to ask someone for something and do not know what they care about."
   - "Someone is acting in a way that annoys you and you want to know why before you speak."
   - "You are stuck in a dispute where both sides think they are right."
+not_for:
+  - You want to build a case against someone or find a weak spot. This will not do that. Talk to them directly or ask a neutral person to help.
+  - You need to plan what to say to them. Use the Buy-in conversation planner after you have their view.
+  - You are in a real conflict that needs a third party. Ask a mediator or a manager to step in.
 
 you_give:
   - "The person, and your relationship to them"
@@ -35,6 +39,33 @@ how_to_use:
   - "Say what you would like to happen."
   - "Read the view back. Cross out any line you cannot say about them without a sneer."
   - "Take the result to a planner such as \"Buy-in conversation planner\"."
+output_sample:
+  input:
+    - The person, and who they are to you
+    - The matter in a few lines, with what has happened so far
+    - What you want from them
+    - Quotes, past messages or pressures they face (optional)
+  output:
+    - name: The matter
+      contains: Your request and the facts so far, with no words about their character.
+    - name: What they want
+      contains: Three to five wants in their words, each marked known or guess.
+    - name: Why they act as they do
+      contains: The fair reason a person in their place would do the same.
+    - name: Where they are right
+      contains: At least one true point in their position.
+    - name: What they gain and lose
+      contains: Gains and losses if they agree and if they refuse.
+    - name: How they keep their pride
+      contains: One honest way for them to change course without losing face.
+    - name: A true sympathy line
+      contains: One sentence you could say and mean, or a note that you cannot yet.
+    - name: Ask them
+      contains: Short, friendly questions that test each guess, most important first.
+    - name: Missing
+      contains: What you do not know yet.
+    - name: Checks missed
+      contains: One line for each check it failed, or none.
 
 how_it_works:
   - title: "Writes the matter"

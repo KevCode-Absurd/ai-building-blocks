@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It adapts each lesson to your answers.
 new_slug: adaptive-tutor
 name: Adaptive tutor
-summary: Name a topic and your goal. Get a level check, then short lessons with
-  practice and feedback.
+summary: Learn a topic at your level. Give it your goal and time. It checks what you know, then teaches in short steps with practice and feedback.
 job: think-and-decide
 headline: Adaptive tutor
-subhead: Name a topic, your goal and how much time you have. It asks a few
-  questions to find your level, then teaches in short steps, each followed by a
-  question you answer from memory. You get the level check, lessons in steps,
-  practice with feedback, a study guide if you want one and a plan for what to
-  review next.
+subhead: Name a topic, your goal and how much time you have. It asks a few questions to find your level, then teaches in short steps, each followed by a question you answer from memory. You get the level check, lessons in steps, practice with feedback, a study guide if you want one and a plan for what to review next.
 explain: |
   You get a lesson that fits your level on a topic you choose. It begins with a short check of what you already know, then teaches in small steps with practice and feedback.
 
@@ -20,6 +15,10 @@ when:
   - You have an exam coming and need practice questions.
   - You studied something once and want a refresher.
   - You teach and want a lesson plan that adapts to the group.
+not_for:
+  - "You only need a quick fact or a one-line answer: ask your AI the question directly."
+  - "You need a certified course or a credential: sign up for an official course from the provider instead."
+  - "You want a real teacher to mark long essays or projects: ask a tutor or teacher for that."
 you_give:
   - A topic to learn
   - What you already know (optional)
@@ -32,7 +31,26 @@ you_get:
   - A study guide (optional)
   - A plan for what to review next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text, then tell your AI the topic you want to learn.
+  - Add your goal, your deadline and how much time you have. Say what you already know if you can.
+  - Answer the level-check questions. Then work through the first lesson.
+  - Try each practice question before you read the answer. Ask for a study guide if you want one.
+  - Ask for the next lesson, or for a review plan, when you finish.
+output_sample:
+  input:
+    - The topic you want to learn
+    - Your goal or deadline
+    - How much time you have
+    - What you already know (optional)
+  output:
+    - name: Level check
+      contains: One to three short questions that show what you already know and what you want from the lesson.
+    - name: Lesson
+      contains: A short goal, a concrete example, the idea behind it and a guided practice step.
+    - name: Knowledge check
+      contains: A question or task you answer yourself, with feedback on why answers are right or wrong.
+    - name: Study plan
+      contains: For longer goals, a short path with daily focus, practice and review points. Only if you ask.
+    - name: Next step
+      contains: What to practice or review next, based on how you answered.

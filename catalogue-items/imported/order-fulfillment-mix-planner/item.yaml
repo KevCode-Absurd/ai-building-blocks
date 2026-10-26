@@ -1,6 +1,6 @@
 slug: order-fulfillment-mix-planner
 name: Order fulfillment mix planner
-summary: Give it your stores, stock and order types. Get rules for where each online order ships from and a pickup plan.
+summary: Get rules for which store or warehouse ships each online order, plus an in-store pickup plan, from your stock, order types and costs.
 category: general
 boards: []
 type: skill

@@ -18,6 +18,30 @@ use_cases:
   - "Make a map or chart that shows a point of view, not just data"
   - "Sell a bold design to a nervous client, and explain why it should feel a little strange at first"
   - "Decide what to do when rivals start copying your signature look"
+not_for:
+  - "You want loud, expressive type that breaks the rules: use David Carson instead."
+  - "You need to explain numbers with a clear, honest chart: use Cole Nussbaumer Knaflic or Alberto Cairo."
+  - "You want quirky, witty visual ideas for a small logo: use Alan Fletcher. Legal, medical or pricing calls need a qualified person."
+output_sample:
+  input:
+    - The work you want reviewed, or the job you need designed
+    - Who will see it, and where (wall, street, phone or feed)
+    - What the brand or client is, and its history
+    - Who decides on the work (optional)
+    - What must stay fixed and what can change (optional)
+  output:
+    - name: Blunt verdict
+      contains: A short, frank view of whether your work is dull, timid or strong enough for where it will be seen.
+    - name: Questions to answer
+      contains: Questions on what the type feels like, who sees it, who decides and what must never change.
+    - name: Story from a real job
+      contains: A short example from her recorded work that shows why her advice fits your problem.
+    - name: Design directions
+      contains: Type-led ideas for your poster, identity or sign, with the main words made big.
+    - name: Fixed core and moving parts
+      contains: What to keep the same and what can change each season.
+    - name: Next move
+      contains: One clear step, such as make it bigger, cut a word or pick one person to decide.
 seats:
   - {seat: "Typography and identity", asks: "What does the type feel like before anyone reads it, and is that the feeling we want?"}
   - {seat: "Street and public", asks: "Would this stop someone on a busy pavement, from across the road?"}

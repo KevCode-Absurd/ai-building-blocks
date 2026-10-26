@@ -1,39 +1,48 @@
 new_slug: big-decisions-first-sorter
 name: "Big decisions first sorter"
-summary: "List the open questions on a plan. Get the big ones your goal already settles, and the hard ones left."
+summary: "Sort a messy plan's open questions against your goal. Get the big choices it already settles, with reasons, and the few hard questions left."
 job: plan-strategy
 thinking: medium
 thinking_why: "It tests each question against your goal and decides which are forced. The rule is clear, but spotting a forced choice takes judgement."
 
 headline: "Big decisions first sorter"
-subhead: "Tell it your goal and the questions you have not settled. It tests each question against the goal, settles the ones the goal already forces, gives a one-line reason for each and notes what each choice rules out. You get a shorter list of the hard questions, in the order to work on them."
+subhead: "Tell it your goal, with a size or a date, and the questions you have not settled. It tests each question against the goal and settles the ones the goal already forces. Each gets a one-line reason and a note of what it rules out. You get a shorter list of hard questions, in the order to work on them."
 
 explain: |
-  A big plan feels impossible because every question seems open at once. Most are not. When the goal is clear, a few large choices follow almost without thought, and each one answers many smaller questions.
+  A big plan feels impossible because every question seems open at once. Most are not. When the goal is clear, a few large choices follow almost without thought, and each one answers many smaller questions. Settling those first is the quickest way to shrink a big plan.
 
-  This skill finds those choices. It lists every open question, tests whether the goal forces an answer, and settles those first with a one-line reason. It writes what each choice rules out and which smaller questions it removes, then sorts what is left. If a choice answers no other question, it is not a big one. You end with a smaller problem and the first hard question to work on.
+  This skill finds those choices. It lists every open question, tests whether the goal forces an answer, and settles those first with a one-line reason. A choice is forced when any other answer would make the goal impossible or silly. It writes what each choice rules out and which smaller questions it removes, then sorts what is left. If a choice answers no other question, it is not a big one.
+
+  It needs a goal with a number or a date. Without one it asks for it and stops, because no choice can be called forced against a vague goal. You end with a smaller problem and the first hard question to work on.
 
 when:
   - You are planning a business, product or project and do not know where to begin.
   - Your list of open questions keeps growing and none of them gets answered.
   - You want to avoid wasting weeks on details that the goal already decides.
+  - You have a goal with a clear size or date and want to know which choices it settles.
+
+not_for:
+  - "Your goal is still unclear, or the whole thing just feels too big: use the Big problem splitter."
+  - "You are stuck on one choice and want to know how easy it is to undo: use the Reversible decision sorter."
+  - "The questions come down to taste. No goal forces an answer, so they stay open."
+  - "You already have a plan and want to know how it could fail: use the Failure-first plan check."
 
 you_give:
-  - Your goal, with a size or date if you have one
-  - The questions you have not settled (optional)
+  - Your goal, with a size or a date, such as "10,000 paying users by next spring"
+  - The questions you have not settled, even small ones (optional)
   - Limits you cannot change, such as money, time or rules (optional)
 you_get:
   - The goal in one sharp line
   - Three to six settled choices, each with its reason and what it rules out
-  - A shorter ordered list of the hard questions
-  - The first question to work on
+  - A shorter, ordered list of the hard questions
+  - The first question to work on, and what you need to find out
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - State your goal in a line, with a size or a date.
-  - Paste every open question you can think of, even small ones.
+  - Paste every open question you can think of, even small ones. With none, it draws up a list.
   - Read the settled choices and cross out any whose reason is weak.
-  - Take the plan to the "Target size back-solver".
+  - Work on the first hard question. Take the goal to the Target size back-solver, or the settled choices to the Failure-first plan check.
 
 how_it_works:
   - title: Sharpens the goal
@@ -50,8 +59,6 @@ how_it_works:
     text: Marks which questions are now forced, which matter less and which are still open.
   - title: Hands the hard ones forward
     text: An ordered list with the first to work on and what you need to find out.
-  - title: Checks itself
-    text: Runs its own checks and names any it missed.
 
 output_shape: |
   GOAL
@@ -73,6 +80,20 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your goal, with a size or a date"
+    - "The questions you have not settled (optional)"
+    - "Limits you cannot change (optional)"
+  prerequisites:
+    - "An AI chat. No files, web access or paid tools are needed."
+  output:
+    - {name: "Goal", contains: "Your goal in one line, with a size or a date, or a flag that it is too vague."}
+    - {name: "Settled choices", contains: "Three to six choices the goal forces, each with a one-line reason, what it rules out and which questions it answers."}
+    - {name: "Still open, in order", contains: "The hard questions left, in the order to work on them, with what you need to find out for each."}
+    - {name: "Unknown", contains: "Questions that a missing fact would settle, with the fact named."}
+    - {name: "MISSING and CHECKS MISSED", contains: "Facts you did not give, and any check that failed or could not run."}
 
 tweaks:
   - what: The goal
@@ -105,7 +126,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Sorting questions against a stated goal is text work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Sorting questions against a stated goal is text work any strong chat AI does well."}
     - {name: "A whiteboard or index cards", why: "Writing each open question on a card lets you move settled ones aside."}
   inputs:
     - "A written goal with a number"

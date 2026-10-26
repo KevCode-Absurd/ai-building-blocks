@@ -2,14 +2,28 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: narrative-decision-memo-writer
 name: Narrative decision memo writer
-summary: Share a decision and evidence. Get a clear memo with choices, risks, missing facts, and a review plan.
+summary: Turn a decision and your evidence into a clear decision memo with options, costs, risks, gaps and a review plan. Pick a brief or a full narrative.
 job: document-work
 headline: Narrative decision memo writer
-subhead: Share the decision, reader, evidence, and limits. It chooses a short brief, fuller narrative, or future-product question document. You get a connected argument with choices, costs, risks, and gaps kept visible. It uses original templates inspired by Amazon's writing practices.
+subhead: Share the decision, the reader, your evidence and your limits. The skill picks a short brief, a full narrative or a future-product question document. You get connected prose that keeps choices, costs, risks and gaps in view. It is adapted from a public MIT-licensed source on Amazon-style writing, not official Amazon templates.
+not_for:
+  - "You need an architecture decision record or an incident write-up: use the adr-authoring or incident-learning skill, which keep the right structure for those."
+  - "You need setup steps, runbooks or instructions: ask for technical-documentation, or write the steps as a plain checklist."
+  - "You still do not know if customers want it: do the problem and demand research first, because a polished memo cannot supply missing evidence."
 you_give:
-  - The reader, decision, evidence, options, known costs, constraints, and review needs.
+  - The reader and the person who will decide.
+  - The decision to make and the deadline.
+  - Your evidence, with where it came from.
+  - The options, including doing nothing.
+  - Known costs and limits (optional).
+  - Your own draft to revise (optional).
 you_get:
-  - A decision memo or short brief, assumptions and evidence gaps, and review arrangement when requested.
+  - A decision memo or short brief in connected prose.
+  - A one-sentence reason for the form it chose.
+  - A list of assumptions and evidence gaps.
+  - A small test with an owner and review date, when evidence is thin.
+  - A review plan with the decision owner and the questions to settle.
+  - "Sections you can expect: summary, options, costs, risks, gaps and review plan."
 how_it_works:
   - title: Choose the right form
     text: Respect the requested document and reader. Use only the structure and length the decision needs.
@@ -24,5 +38,36 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Download the skill folder. Your AI needs to read its reference and template files. Or paste the instructions into a chat.
+  - Tell your AI the reader, the decision owner and the deadline.
+  - Paste your evidence and options. Say which are facts and which are guesses.
+  - Read the form choice first. Ask for a different form if it misses.
+  - Check the gaps list. Fill what you can, or keep the proposed test.
+  - Ask for the review plan, then send the memo yourself. The skill does not send or schedule anything.
+output_sample:
+  input:
+    - The reader and the decision owner
+    - The decision to make, and the deadline
+    - Your evidence, with sources and dates
+    - The options you see, including doing nothing
+    - Known costs and limits (optional)
+  prerequisites:
+    - A chat AI that can read the skill's reference and template files
+  output:
+    - name: Form choice
+      contains: "One sentence on which form fits: short decision brief, decision narrative, or PR/FAQ, and why."
+    - name: Memo or brief
+      contains: The problem, the baseline, the options, the proposal, costs and risks, written as connected prose.
+    - name: Assumptions and evidence gaps
+      contains: What is fact, what is assumed, and what is missing, with how each gap affects the decision.
+    - name: Test or checkpoint
+      contains: When evidence is thin, a small proposed test with scope, owner, review date and what to inspect.
+    - name: Review plan
+      contains: The decision owner, how the memo will be read, the questions to settle, and where the outcome is kept.
+    - name: Revision notes
+      contains: For a revision, a short list of what changed in the reasoning and why.
+when:
+  - You must ask a leader to choose between two or more options.
+  - You have notes and data but no clear written case.
+  - A draft memo reads flat or mechanical and needs better reasoning.
+  - You want a plan for how a team will read and decide on it.

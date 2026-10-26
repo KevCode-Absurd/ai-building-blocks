@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Fitting and judging flux models needs careful, many-step reasoning.
 new_slug: carbon-13-flux-estimator
 name: Carbon-13 flux estimator
-summary: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit
-  checks and a profile you can trust.
+summary: Estimate metabolic fluxes from your carbon-13 tracing data. Get fitted rates, fit checks and which fluxes your experiment can truly pin down.
 job: research-topics
 headline: Carbon-13 flux estimator
-subhead: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit
-  checks and a profile you can trust. Bring a carbon network with atom
-  assignments. Use the result to plan your next step.
+subhead: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit checks and a profile you can trust. Bring a carbon network with atom assignments. Use the result to plan your next step.
 explain: |
   Carbon-13 labelling data turns into estimated reaction rates in a cell, with checks on how well the fit holds. You give a carbon map, tracer mixtures and corrected measurements, and the skill returns a fitted flux set and tells you which fluxes your experiment pins down.
 
@@ -18,20 +15,48 @@ when:
   - You need to know which reactions your tracer design actually measures.
   - A fit looks good but you are unsure if it is trustworthy.
   - You combine several tracer experiments on one cell state.
+not_for:
+  - Your labelling data comes from a time course, so the labelling is still changing. Use a nonstationary flux method (INST-MFA) that also takes pool sizes, built for that.
+  - You want flux balance analysis with a growth goal, as in COBRA tools. This skill fits measured labelling, so use a COBRA flux balance tool.
+  - You only have raw peak intensities or raw spectra. Get a person or a lab tool to process and correct them first, then come back.
 you_give:
-  - A carbon network with atom assignments
-  - Tracer mixtures and carbon input details
-  - Corrected mass distribution measurements
+  - A carbon network with atom assignments and where each came from
+  - Tracer mixtures and every carbon input, including unlabeled supplements
+  - Corrected mass distribution measurements for each fragment
   - Measurement error estimates
-  - Python to run the solver
+  - Extracellular rate measurements or a stated reference flux (optional)
+  - Python 3.12, uv and Git to install the solver
 you_get:
   - Estimated metabolic fluxes
   - Goodness of fit checks
   - Which fluxes are well or poorly determined
   - A profile of the fit you can inspect
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and save files.
+  - Check that your data is steady state and corrected. This tool does not fit time-course labelling.
+  - Open an AI that can run Python and save files. Add the skill and your model and data files.
+  - Let it install the solver with uv and Git. The install runs dependency build code, so use your own analysis folder.
+  - Ask it to check your inputs first. Fix anything it flags before fitting.
+  - Ask it to fit, and to profile the fluxes you care about. Rerun with another seed if the network is nonlinear.
+  - Read the fit.json results and the profile status. Treat flat directions as unresolved, not as answers.
+output_sample:
+  input:
+    - A carbon network with the source of each atom assignment
+    - Tracer mixtures and every carbon input, including unlabeled supplements
+    - Corrected mass distribution measurements for each fragment
+    - Measurement error estimates
+    - Extracellular rates or a stated reference flux, plus bounds
+  prerequisites:
+    - An AI that can run Python 3.12 code and save files
+    - uv and Git installed, to set up the solver
+    - Willingness to let the install run dependency build code
+  output:
+    - name: input-check.json
+      contains: Results of the atom, fragment, tracer, error and mass-balance checks before any fitting starts.
+    - name: simulated-mdvs.json
+      contains: Predicted labelling for one flux set you supply, to compare with a reference.
+    - name: fit.json
+      contains: Fitted fluxes, residuals, failed starts, local sensitivity rank, profile brackets, and model and data hashes.
+    - name: Flux profiles
+      contains: For each flux you pick, an interval under your error model and a status such as unresolved within bounds.
+    - name: Scientific report
+      contains: Package versions, data sources, units, predictions, residual checks, and the flux combinations the data cannot separate.

@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows set size rules and a few animation steps.
 new_slug: slack-gif-maker
 name: Slack GIF maker
-summary: Describe the animation. Get a GIF sized and checked to work in Slack.
+summary: Make a Slack GIF from a plain description. You get an animated emoji or message GIF at Slack's size, checked against Slack's limits.
 job: make-images
 headline: Slack GIF maker
-subhead: A small animated GIF that fits Slack's limits and looks right on
-  screen. You describe the animation, like a star spinning or a coffee cup
-  bouncing, and get a file that uploads without trouble.
+subhead: A small animated GIF that fits Slack's limits and looks right on screen. You describe the animation, like a star spinning or a coffee cup bouncing, and get a file that uploads without trouble.
 explain: |
   A small animated GIF that fits Slack's limits and looks right on screen. You describe the animation, like a star spinning or a coffee cup bouncing, and get a file that uploads without trouble.
 
@@ -17,6 +15,10 @@ when:
   - A GIF you found is too large and Slack rejects it.
   - You want to animate a logo or a photo for a message.
   - You need a short reaction animation made from a plain description.
+not_for:
+  - "You want a still image or logo: use an image editor or ask your AI to draw it."
+  - "Your GIF is already within Slack's limits: upload it with Slack's own uploader."
+  - "You need a video clip or a screen recording: use a screen recorder, then convert it with a GIF tool."
 you_give:
   - A description of the animation
   - An image to animate (optional)
@@ -24,11 +26,27 @@ you_give:
   - Colours or style notes (optional)
 you_get:
   - An animated GIF at the right Slack size
-  - A file size and frame check
-  - A smaller version if the first one is too big
+  - A check of the file against Slack's limits
+  - A smaller version, only if you ask for one
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open your AI tool. Use one that can run Python code and save files.
+  - Paste the skill text, or upload the skill folder.
+  - Describe the animation, like a star spinning. Say if it is for emoji or a message.
+  - Add an image or colour notes if you have them.
+  - Check the GIF and the Slack check result. Ask for a smaller file if it is too big.
+output_sample:
+  input:
+    - A description of the animation, such as a star spinning
+    - Emoji or message use
+    - An image to animate (optional)
+    - Colours or style notes (optional)
+  prerequisites:
+    - An AI that can run Python code and save files
+    - Python with the pillow, imageio and numpy libraries installed
+  output:
+    - name: Animated GIF
+      contains: The finished animation, drawn frame by frame at 128 by 128 for emoji or 480 by 480 for messages.
+    - name: Slack check
+      contains: A pass or fail check of the file against Slack's size, frame and colour limits.
+    - name: Smaller version
+      contains: "Only if you ask for it: a lighter file with fewer frames, fewer colours or smaller dimensions."

@@ -45,10 +45,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Critique the ad.** Use the skill `static-ad-critic`. Starts the chain: scores the ad and writes two rewrites.
-2. **Match it to the buyer's awareness.** Use the skill `ad-awareness-stage-checker`. Give it the ad copy from the steps before. Reads the rewritten copy from the step before and checks it speaks to one stage.
-3. **Check the five jobs of the ad.** Use the skill `five-part-ad-checker`. Give it the ad copy from the steps before. Tests the fixed copy for proof and a clear ask, which the earlier steps do not score.
-4. **Run the stop-ship check.** Use the skill `pre-launch-ad-checker`. Give it the ad copy from the steps before. Runs the last check on the ad with the fixes from the three reports applied.
+1. **Critique the ad.** Use the skill `static-ad-critic`. Starts the chain: scores the ad and hands step 2 the ad copy with two rewrites.
+2. **Match it to the buyer's awareness.** Use the skill `ad-awareness-stage-checker`. Give it the rewritten ad copy from step 1. Checks it speaks to one stage and hands step 3 the ad copy with its awareness-stage rewrites.
+3. **Check the five jobs of the ad.** Use the skill `five-part-ad-checker`. Give it the rewritten ad copy from step 2. Tests the rewritten copy for proof and a clear ask, which the earlier steps do not score.
+4. **Run the stop-ship check.** Use the skill `pre-launch-ad-checker`. Give it the ad copy with the fixes from steps 1 to 3 applied by you, not step 3's report itself. Runs the last check and gives the ship call.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

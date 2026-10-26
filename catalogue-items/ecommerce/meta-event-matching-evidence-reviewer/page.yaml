@@ -1,43 +1,124 @@
 new_slug: meta-event-matching-evidence-reviewer
 name: Meta event matching evidence reviewer
-summary: Review supplied Meta event scores, matching fields and duplicate events. List gaps without claiming a revenue lift.
+summary: "Check how well your Meta events match real customers. Get a per-event review of missing fields, hashing and duplicates, with fixes in order."
 job: check-ads
 headline: Meta event matching evidence reviewer
-subhead: Share the inputs listed below. Get a per-event evidence review and prioritized verification plan. Check the gaps before you use the result.
+subhead: "Give it your Events Manager match scores and a redacted list of the customer fields each event sends. It reviews Purchase and other events one by one. You get missing fields, hashing mistakes, duplicate-event findings and a ranked fix list."
 explain: |-
-  Review supplied Meta event scores, matching fields and duplicate events. List gaps without claiming a revenue lift.
+  Meta can only credit an ad for a sale if it can match the event to a person. Event match quality is the score in Events Manager that shows how well it can. A low score often means a customer field is missing, or is sent in the wrong form. This Meta event match quality check finds those faults.
 
-  Share redacted event field lists, supplied emq scores and deduplication evidence. Get a per-event evidence review and prioritized verification plan.
+  It works from evidence you give: the score Events Manager shows for each event, the customer fields each event sends, and how browser and server events are paired. It marks each field sent, not sent or unknown. It flags values that should be hashed but are not, and values that should not be hashed but are. Hashing means turning a value into a scrambled code before it leaves your site.
+
+  It does not estimate your score, and it never turns a score gap into a revenue figure. Nobody can know that number from the score alone. It tells you what to fix and what to look at again once new data has come in.
 when:
-  - You need a per-event evidence review and prioritized verification plan.
-  - You need meta event matching evidence reviewer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - Events Manager shows a low or middling match quality score for your Purchase event.
+  - You added a server connection (the Conversions API) and want to know if it is set up right.
+  - Meta Ads Manager shows more sales than your store does, or fewer, and you suspect double counting.
+  - A developer or agency says tracking is fine and you want a second check.
+not_for:
+  - "You haven't chosen how to send server events yet: use the Meta server tracking checker."
+  - "You want the whole account reviewed, not only tracking: use the Meta Ads 30-check account auditor."
+  - "Your site has only the pixel and no server events. This review has little to check, so set up server events first."
+  - "You want a forecast of how much money better matching would earn. This skill does not give one, because the score alone cannot show it."
 you_give:
-  - Redacted event field lists
-  - Supplied EMQ scores and deduplication evidence
+  - The events you want to review, such as Purchase, Lead, Add to cart and Initiate checkout
+  - The match quality score Events Manager shows for each event, with its date range
+  - A redacted list of the customer fields each event sends, from the browser and from the server (for example "email yes, phone no")
+  - How you send events, such as the pixel only, your store's built-in connection, a partner tool or custom code
+  - What you know about duplicate events, such as whether browser and server send the same event ID (optional)
 you_get:
-  - A per-event evidence review and prioritized verification plan
-  - The sources used, missing inputs and assumptions
+  - A review of each event with its supplied score and which customer fields are sent, not sent or unknown
+  - Hashing mistakes, listing fields that should be hashed and are not, and the other way round
+  - Where each missing field could come from, and how big the job is in plain words
+  - Duplicate-event findings, based on only the evidence you gave
+  - Fixes in order, each with an owner, and a plan for what to check again in Events Manager
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - In Events Manager, open your pixel or dataset and write down the match quality score for each event you want reviewed. Add the date range you looked at.
+  - Write a list of what each event sends. Use "yes" or "no" for each field, and never paste real customer emails, phone numbers or names.
+  - Tell the AI how events are sent and whether browser and server events share an event ID.
+  - Read the hashing issues first, because they are the quickest wins. Check Meta's current documentation before you change any field.
+  - After you fix something, wait for new data, then read the same score again and compare it with your first note.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm redacted event field lists, supplied emq scores and deduplication evidence. Mark facts that are missing.
-  - title: Why EMQ Matters
-    text: Follow the why emq matters section in the full method and keep its required fields and decision rules.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: Score Each Event
-    text: Follow the score each event section in the full method and keep its required fields and decision rules.
-  - title: Calculate Revenue Impact
-    text: Follow the calculate revenue impact section in the full method and keep its required fields and decision rules.
-  - title: Diagnose Missing Parameters
-    text: Follow the diagnose missing parameters section in the full method and keep its required fields and decision rules.
-  - title: Deduplication Check
-    text: Follow the deduplication check section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a per-event evidence review and prioritized verification plan. Check facts, math and the decisions before any action.
+  - title: Confirm the setup
+    text: It notes the events, how they are sent and the dates behind each score you gave.
+  - title: Review each event's fields
+    text: It marks each customer field sent, not sent or unknown, and counts completeness as a rough guide that is kept apart from the Meta score.
+  - title: Find hashing mistakes
+    text: It flags plain-text values that should be hashed, and values such as IP address, user agent and the two cookie IDs that must be sent as they are.
+  - title: Diagnose missing fields
+    text: For each missing field it says where the data would come from, why it may be missing and how big the fix is.
+  - title: Check duplicate events
+    text: If browser and server both send an event, it checks that they share one event name and one event ID, and reports only the counts you gave.
+  - title: Rank the fixes and plan the recheck
+    text: Fixes come in order with an owner. It tells you what to read in Events Manager after new data arrives. It makes no revenue forecast.
+output_shape: |-
+  SETUP  events <list> | sent by <pixel, server or both> | score dates <from to>
+  PER-EVENT REVIEW
+  <event> | supplied score <n or MISSING> + rating label | sent <fields> | not sent <fields> | hashing issues <list> | duplicates <evidence> | priority <n>
+  HASHING ISSUES  <field> | <what is wrong> | <correct form>
+  MISSING FIELDS  <field> | would come from <source> | likely cause <x> | effort <small, medium, large>
+  DEDUPLICATION  <event> | event name match <yes, no or unknown> | event ID match <yes, no or unknown> | counts given <x>
+  FIXES IN ORDER  <fix> | events affected <list> | source <x> | owner <name or MISSING>
+  CHECK PLAN  after new data, read <event> score again and compare with <date and value>
+  MISSING AND NOT RUN  <list>
+output_sample:
+  input:
+    - The match quality score Events Manager shows for each event, with dates
+    - A redacted list of customer fields each event sends, browser and server
+    - How you send events and whether browser and server share an event ID
+  prerequisites:
+    - A Meta pixel, and ideally server events, already sending data
+    - Access to Events Manager, to read the scores
+  output:
+    - name: Per-event review
+      contains: Each event with its supplied score, fields sent and not sent, hashing issues and priority.
+    - name: Hashing issues
+      contains: Fields sent in the wrong form, with the correct form for each.
+    - name: Missing fields
+      contains: Each missing field with where the data would come from, the likely cause and the size of the fix.
+    - name: Deduplication findings
+      contains: Whether browser and server events share a name and an ID, using only the evidence you gave.
+    - name: Fixes in order
+      contains: What to add or change first, the events it helps and who should do it.
+    - name: Check plan
+      contains: What to read in Events Manager after new data comes in, and the earlier value to compare with.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  tools:
+    - name: Meta Events Manager
+      why: It shows the match quality score for each event, and the customer fields received. This is where your evidence comes from.
+    - name: Meta's Conversions API documentation
+      why: It lists which fields to hash and how to clean them. Check it before you change anything.
+  inputs:
+    - A screenshot of the event details in Events Manager, with any personal values hidden.
+    - The name of your store platform or tracking tool, such as Shopify or Stape.
+    - The date your server events started.
+terms:
+  - term: Event match quality
+    meaning: A score in Events Manager that shows how well Meta can match an event to a person.
+  - term: Conversions API
+    meaning: Meta's way for your server to send events straight to Meta.
+  - term: Hashing
+    meaning: Turning a value, such as an email, into a scrambled code before it is sent.
+  - term: Event ID
+    meaning: A code that lets Meta see the browser and server copies of one event, so it counts them once.
+  - term: Deduplication
+    meaning: Counting one event once when the browser and the server both report it.
+  - term: Redacted
+    meaning: With personal details removed. A field list is enough, so you never need to share real customer data.
+tweaks:
+  - what: Events you review
+    how: Start with Purchase, because it matters most to Meta's results. Add the others once Purchase is clean.
+  - what: Detail on fields
+    how: Say "yes" or "no" for each field, per event, and say if it comes from the browser or the server. "Unknown" is better than a guess.
+  - what: Event ID evidence
+    how: Say if browser and server use the same event ID. This is the most common cause of double counting.
+  - what: Order of work
+    how: Fix hashing mistakes first. They need no new data from customers.
+improve:
+  - Keep a note of each event's score and date before and after every change, so you can see what helped.
+  - Add your own tracking tool's field names to SKILL.md so the review uses your words.
+  - Re-run the review after each tracking change, using the same list of events.
+  - Pair it with the Meta Ads 30-check account auditor, and the Meta server tracking checker if you still need to pick a server route.

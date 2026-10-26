@@ -1,6 +1,6 @@
 new_slug: scene-turn-checker
 name: "Scene turn checker"
-summary: "Paste a scene list or outline. Get each scene marked for what changes and which choice changes it, with weak scenes flagged."
+summary: "Check your scene list for scenes where nothing changes. Get each scene marked for its turn, its cost and a fix, plus a score for the whole list."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It judges every scene against the same few questions, which takes steady attention."
@@ -14,26 +14,48 @@ explain: |
   This skill goes through the list scene by scene. For each it writes what changes, in one line, and the choice a character makes that causes the change. It checks that the choice costs the character something, since a choice with no price shows nothing about who they are. It checks that every set-up has a pay-off later, and every pay-off has a set-up. Scenes where nothing turns are flagged, and each gets a fix: cut it, merge it or sharpen the turn. It gives a score for the share of scenes that pass.
 
 when:
-- "Your outline is long and you suspect some scenes do nothing."
-- "Your story feels slow in the middle."
-- "You are cutting a script to length and need to know which scenes to lose."
+  - "Your outline is long and you suspect some scenes do nothing."
+  - "Your story feels slow in the middle."
+  - "You are cutting a script to length and need to know which scenes to lose."
+not_for:
+  - "You want to test the idea behind the story before you outline: use the Story premise tester."
+  - "You have a finished script and need to check that the pictures carry the story: use the Voice-over stripping test."
+  - "You need line edits on a finished draft or notes on nonfiction: ask an editor or a trusted reader."
 
 you_give:
-- "Your scene list or outline, in order"
-- "The main character and what they want (optional)"
-- "Any scenes you must keep (optional)"
+  - "Your scene list or outline, in order"
+  - "The main character and what they want (optional)"
+  - "Any scenes you must keep (optional)"
 you_get:
-- "A table of scenes with the change and the choice behind it"
-- "Flags on scenes where nothing turns or the choice costs nothing"
-- "A set-up and pay-off list"
-- "A fix for each flagged scene and a score"
+  - "A table of scenes with the change and the choice behind it"
+  - "Flags on scenes where nothing turns or the choice costs nothing"
+  - "A set-up and pay-off list"
+  - "A fix for each flagged scene and a score"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Paste the scene list with one line per scene."
-- "Say who the main character is and what they want."
-- "Go through the flags and decide which fixes to take."
-- "Run it again on the new list."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the scene list with one line per scene."
+  - "Say who the main character is and what they want."
+  - "Go through the flags and decide which fixes to take."
+  - "Run it again on the new list."
+output_sample:
+  input:
+    - Your scene list or outline, in order
+    - The main character and what they want (optional)
+    - Scenes you must keep (optional)
+  output:
+    - name: SCENES
+      contains: One row per scene with the change, the choice behind it, the cost of that choice, and PASS or FLAG.
+    - name: FLAGGED SCENES
+      contains: "Each weak scene, what it does now, and one fix: cut it, merge it with a named scene, or sharpen the turn."
+    - name: SET-UPS AND PAY-OFFS
+      contains: Each set-up matched to its pay-off, with gaps marked where one has no partner.
+    - name: SCORE
+      contains: Scenes passed out of total scenes, worked out as a number out of 100.
+    - name: MISSING
+      contains: Details the outline did not give, so nothing is guessed.
+    - name: CHECKS MISSED
+      contains: One line for each self-check that still failed, or none.
 
 how_it_works:
   - title: "List the scenes"
@@ -83,23 +105,23 @@ tweaks:
     how: "Say if it is a film, a novel or a talk. Talks have fewer scenes."
 
 judge:
-- "Each change is something you can point to in the scene."
-- "Each flagged scene really does feel slow to you."
-- "Costs come from your outline, not from guesses."
-- "Every fix says what to do and to which scene."
-- "The score shows the counts."
+  - "Each change is something you can point to in the scene."
+  - "Each flagged scene really does feel slow to you."
+  - "Costs come from your outline, not from guesses."
+  - "Every fix says what to do and to which scene."
+  - "The score shows the counts."
 
 test:
-- "Run it on a scene list from a film you know well."
-- "Add a scene where nothing happens and check that it gets flagged."
-- "Apply two fixes and run again. The score should rise."
-- "Run it twice. The flagged scenes should mostly match."
+  - "Run it on a scene list from a film you know well."
+  - "Add a scene where nothing happens and check that it gets flagged."
+  - "Apply two fixes and run again. The score should rise."
+  - "Run it twice. The flagged scenes should mostly match."
 
 improve:
-- "Add your own scene types, such as dream or flashback, with special rules."
-- "Add a limit on how many scenes can be cut."
-- "Keep the set-up list as a file for later drafts."
-- "Pair it with \"Story premise tester\" before this and \"Voice-over stripping test\" after the script."
+  - "Add your own scene types, such as dream or flashback, with special rules."
+  - "Add a limit on how many scenes can be cut."
+  - "Keep the set-up list as a file for later drafts."
+  - "Pair it with \"Story premise tester\" before this and \"Voice-over stripping test\" after the script."
 
 works_best_with:
   tools:

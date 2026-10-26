@@ -1,55 +1,66 @@
 new_slug: launch-task-force-planner
 name: "Launch task force planner"
-summary: "Paste your new product idea and your team. Get a kickoff plan that puts design, sales, marketing and engineering first."
+summary: "Plan a product launch kickoff that puts design, sales, marketing and engineering in the room first. Get roles, an agenda and two sell tests."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sets roles, trims data and checks a product against two tests, which takes judgment but follows a fixed outline."
 
 headline: "Launch task force planner"
-subhead: Paste your new product or service idea and the people you have. It lists the roles needed on day one, plans a single kickoff, caps the data the team reads, adds a second parallel team for options and checks the idea is easy to advertise and sell.
+subhead: "Paste your new product idea and the people you have. It lists the roles needed on day one, plans one kickoff meeting and caps the data the team reads. It adds a second team to find options, then checks the idea is easy to advertise and easy to sell."
 
 explain: |
-  Many launches go wrong in order: engineering builds, then design polishes, then sales and marketing are told what to say. Each group meets the product too late to shape it.
+  Many launches go wrong in order: engineering builds, then design polishes, then sales and marketing are told what to say. Each group meets the product too late to shape it. A launch task force fixes that by putting everyone in the room at the start.
 
-  This skill puts design, engineering, sales and marketing in the room at the start. It plans one kickoff so everyone hears the job, the timing and the method together. It adds market analysis done by people who understand both design and selling, keeps the data short so nobody is buried, and sets up a second, free-running team to find options the first team cannot see. Last it checks the product against two tests: is it easy to advertise, and is it easy to sell.
+  This skill puts design, engineering, sales and marketing together on day one. It plans one kickoff so everyone hears the job, the timing and the method at once. It gives market analysis to people who understand both design and selling, keeps the data short so nobody is buried, and sets up a second, free-running team to find options the first team cannot see. Last, it checks the product against two tests: is it easy to advertise, and is it easy to sell.
+
+  The method comes from Raymond Loewy's 1955 speech on how to launch products. It works for goods, services and software. Roles you do not have are listed as gaps with ways to fill them. It never invents a team member.
 
 when:
   - You have a new product or service idea and a team that works in separate silos.
   - Your launches keep reaching sales and marketing too late.
   - You want a kickoff agenda and a set of roles for the first two weeks.
+  - You are a team of two or three and want to know which roles you are missing.
+
+not_for:
+  - "Your product is built and you need the launch order of teaser, preview and launch. Use the Launch teaser to preview planner, or the Publicity-first launch planner to lead with press."
+  - "You are not sure the product should launch at all. Run the Go or no-go launch checker on your plan first."
+  - "You want a task-by-task schedule with dates. This gives roles, one agenda and a brief, not a full schedule. Use a project tool for that."
 
 you_give:
-  - "A short description of the product or service idea"
+  - "A short description of the product or service idea, and who it is for"
   - "The people or roles you have, and who is missing"
-  - "Your timing and any fixed limits such as budget or launch date"
-  - "Any early plan or notes (optional)"
+  - Your launch date and any fixed limits, such as budget or rules you must follow (optional)
+  - Any early plan or notes (optional)
 
 you_get:
-  - "A roster of every role needed at the start, with the gaps"
-  - "A one-page kickoff agenda"
-  - "A data pack list kept short, with what to leave out"
-  - "A second team's brief, and a result for the two sell tests"
+  - A roster of every role needed at the start, with the gaps and ways to fill them
+  - A one-page agenda for a single kickoff meeting
+  - A short data pack list, with what to leave out and why
+  - A brief for a second team, and a pass, weak or fail on two sell tests
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste the product idea and who is on your team."
-  - "Add your launch date and any limits."
-  - "Read the roster and fill any gap with a person or a partner."
-  - "Run the kickoff using the agenda, and hand the second team its brief."
+  - Open the skill in Claude, ChatGPT or Gemini. If you added it, call it by name. If not, copy it and paste it in.
+  - Paste the product idea, who it is for and who is on your team, by name or by role. It needs no files or web access.
+  - Add your launch date and any limits.
+  - Read the roster and fill any gap with a person, a partner or a freelancer.
+  - Run the kickoff from the agenda. Everyone attends and nobody gets a summary later.
+  - Give the second team its brief. Do not show it the first team's answer.
 
 how_it_works:
   - title: Lists the starting roles
-    text: Names design, engineering, sales and marketing, plus any role the idea needs, and who fills each.
+    text: Names design, engineering, sales and marketing, plus any role the idea needs, and who fills each. Gaps get a proposed fix.
   - title: Plans one kickoff
-    text: Gets everyone to hear the job, the timing and the method at once.
+    text: Gets everyone to hear the job, the timing and the method at once, with a length and an output.
   - title: Adds market analysis
-    text: Gives it to people who also understand design and selling.
+    text: Gives it to people who also understand design and selling, with the questions it must answer.
   - title: Caps the data
-    text: Keeps the pack short so the team is not buried.
+    text: Keeps the pack to one page, so the team reads all of it, and says what is left out.
   - title: Runs a parallel team
-    text: Sets up a second free team to find options the first cannot see.
+    text: Sets up a second free team that is not told the first team's answers, to find options the first cannot see.
   - title: Applies two tests
-    text: Checks the product is easy to advertise and easy to sell.
+    text: Checks the product is easy to advertise and easy to sell, with a reason and a fix for any weak result.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
 
 output_shape: |
   THE JOB
@@ -71,14 +82,38 @@ output_shape: |
   <members> | <brief> | <what they hand back and when>
 
   SELL TESTS
-  Easy to advertise: <result and reason>
-  Easy to sell: <result and reason>
+  Easy to advertise: <pass, weak or fail, and reason>
+  Easy to sell: <pass, weak or fail, and reason>
 
   MISSING
   <what you could not tell>
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - The product or service idea, and who it is for
+    - The people or roles you have, and who is missing
+    - Your launch date and any fixed limits (optional)
+    - Any early plan or notes (optional)
+  output:
+    - name: The job
+      contains: The product or service, the buyer and the launch date in one line.
+    - name: Roles at the start
+      contains: Every role needed on day one, who fills it, what they decide and the gaps.
+    - name: Kickoff agenda
+      contains: One meeting in order, with the job, buyer, date and limits, how you decide, and week-one tasks with owners.
+    - name: Market analysis
+      contains: Who does it and the questions it must answer, such as who buys and why they would switch.
+    - name: Data pack
+      contains: One page of facts with sources, and what is left out and why.
+    - name: Second team
+      contains: Its members, a short brief, and what it hands back and when.
+    - name: Sell tests
+      contains: Pass, weak or fail for easy to advertise and easy to sell, each with a reason and a fix.
+    - name: Missing and checks missed
+      contains: What it could not tell, plus any check the skill could not pass.
 
 tweaks:
   - what: Team size
@@ -122,3 +157,5 @@ terms:
     meaning: A small team with all the skills a project needs, brought together for one job.
   - term: Kickoff
     meaning: The first meeting where everyone hears the job, the timing and the plan together.
+  - term: Sell tests
+    meaning: Two checks on the product itself. Can the main benefit be shown fast, and can a buyer decide without a long study.

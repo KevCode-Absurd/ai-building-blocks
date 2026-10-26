@@ -1,14 +1,12 @@
 slug: reconcile-clinic-remittances-to-settlement-cash
-name: Reconcile clinic remittances to settlement cash
-summary: A clinic claims reconciliation and ordered settlement cash ladder
+name: Clinic claim cash reconciliation checker
+summary: Share claim records, offsets, bank receipts and payment timing. Get a claims reconciliation and a schedule of cash actually available for payments.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: source_text
     required: true
   - type: spreadsheet
@@ -18,8 +16,9 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+next:
+  - reconcile-treasury-settlement-liquidity
+  - reconcile-service-capacity-and-shared-cost
 uses:
   - clinic-claims-collections-bridge
   - settlement-liquidity-ladder-builder

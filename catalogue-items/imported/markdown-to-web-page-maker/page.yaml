@@ -2,33 +2,58 @@ thinking: low
 thinking_why: It converts text into a page with set parts.
 new_slug: markdown-to-web-page-maker
 name: Markdown to web page maker
-summary: Give it a long markdown file. Get one HTML page with a contents bar,
-  search and light interactivity.
+summary: Turn a long markdown file into one HTML page with a contents bar, search and code copy buttons. Share the page as a single file.
 job: work-with-files
 headline: Markdown to web page maker
-subhead: One tidy HTML page built from a long markdown file, with a contents bar
-  that follows you, a search box and copy buttons on code.
+subhead: Give it a long markdown file. It builds one HTML page you can share, with a contents bar, a search box and copy buttons on code. It uses the colors and fonts from your design setup.
 explain: |
   One tidy HTML page built from a long markdown file, with a contents bar that follows you, a search box and copy buttons on code. It suits specs, plans, reports and explainers that people will skim.
 
   Three small Python scripts do the work. One reads the markdown into sections. A second turns them into a styled page using your brand colors and fonts. A third adds the behavior: scroll tracking, filtering and copy buttons. The page needs web fonts and a code highlighter loaded from the internet. Files under 100 lines are refused, since plain markdown reads fine, and slide decks or code reviews go to other tools. You need Python installed.
 when:
   - Your project spec is a long markdown file that nobody scrolls through.
-  - You want a shareable report with a contents sidebar and search.
+  - You want a shareable report with a contents bar and search.
   - You need code snippets with copy buttons in a doc.
-  - You want your plan to use your brand look.
+  - You want your plan to match your brand look.
+not_for:
+  - "You have a code review with diff blocks: use the md-review tool from the same markdown pack, or keep the markdown."
+  - "You have a slide deck split by lines of three dashes: use the md-slides tool from the same pack."
+  - "Your file is under 100 lines: keep it as plain markdown, it reads fine as it is."
 you_give:
   - A markdown file of 100 lines or more
-  - Your brand colors and fonts
-  - Python installed on your machine
+  - Your design setup with brand colors and fonts, done once with /cs:design-system
+  - Python 3 installed on your computer
 you_get:
-  - A single HTML page
-  - A sticky contents bar
-  - Live search filtering
-  - Copy buttons on code
+  - One HTML page you can share as a single file
+  - A contents bar that stays on screen as you scroll
+  - A search box that filters the page as you type
+  - Copy buttons on code blocks
+  - Your brand colors and fonts on the page
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Check your file has 100 lines or more. Shorter files are refused.
+  - Set up your design look first by running /cs:design-system. The page will not build without it.
+  - Use an AI that can run code, such as Claude Code or Codex. Give it your markdown file and the skill.
+  - "Ask it to run the three steps in order: parse the markdown, build the page, then add search and copy buttons."
+  - Open document.html in your browser. Check the contents bar, search and a code copy button.
+  - Share the single HTML file. To change the look, set a different design style and run it again.
+output_sample:
+  input:
+    - Your markdown file of 100 lines or more
+    - Your design setup, done once with the design-system command
+    - Python 3 on your computer
+  prerequisites:
+    - An AI that can run code and save files
+    - Python 3 installed
+    - Design-system setup finished (run /cs:design-system first)
+    - An internet link when you open the page, for web fonts and the code highlighter
+  output:
+    - name: sections.json
+      contains: Your markdown split into headings, text, code, tables and callouts, ready for the next step.
+    - name: document.html
+      contains: One styled page in your brand colors and fonts, with all styles and scripts inside the file.
+    - name: Contents bar
+      contains: A sticky list of your headings that highlights the section you are reading.
+    - name: Search box
+      contains: A box that filters the page as you type.
+    - name: Code copy buttons
+      contains: A copy button on every code block, with colored code.

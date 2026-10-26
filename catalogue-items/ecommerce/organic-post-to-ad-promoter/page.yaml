@@ -1,6 +1,6 @@
 new_slug: organic-post-to-ad-promoter
 name: "Organic post to ad promoter"
-summary: "Give it your posts and views. Get outliers ranked and each marked run-as-is or reshoot the hook."
+summary: "Find which of your organic posts to turn into ads. Give it your posts and views. You get outliers ranked, each marked run as is or reshoot the hook."
 job: grow-social
 thinking: low
 thinking_why: "It compares numbers to a baseline and sorts posts into two groups, which a small model does well."
@@ -17,6 +17,10 @@ when:
   - One of your posts got several times your usual views and you wonder what to do with it.
   - You post often but run ads with videos made from scratch.
   - A team member or creator has a post that took off and you want to use it as an ad.
+not_for:
+  - You have only a few posts, so there is no baseline to compare. Keep posting first, or just pick the post you like best and test it as an ad.
+  - You want outliers from other people's accounts. Use an outlier post finder tool or ask a person to pull the top posts for you, then bring them here.
+  - You need a full ad written from scratch with no post behind it. Write the ad with your AI and your offer instead.
 
 you_give:
   - A list of your posts with their views and dates
@@ -31,10 +35,35 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your posts with views, or attach your analytics export.
-  - Say who owns each account, and whether the owner has agreed to the post being used as an ad.
-  - Tell it your product and offer so it can write the promo half.
-  - Test the top picks as ads with a small budget, and bring back the results.
+  - Paste your posts with views and dates, or attach your analytics export.
+  - Say who owns each account, and whether each owner agreed to the post being used as an ad.
+  - Give it your product, your offer and the claims you can back up, so it can write the promo half.
+  - Run each reshot as a split test against your current best ad. Use the same fixed budget for both, and pick the winner by sales, not views.
+  - Bring the results back to your AI to decide what to test next.
+output_sample:
+  input:
+    - A list of your posts with views and dates
+    - Your normal views per post (optional, it can work this out)
+    - Who owns each account that posted
+    - Your product, current offer and approved claims
+    - Comments on your top posts (optional)
+  output:
+    - name: BASELINE
+      contains: Your typical views per post, how many posts it came from, and a warning if that is too few.
+    - name: OUTLIERS, RANKED
+      contains: Each post that beat your baseline, with its multiple, format, hook, topic and whether it touches your product.
+    - name: DECISION
+      contains: For each outlier, run as is or reshoot the hook, with the reason, who owns it and whether they agreed.
+    - name: Rules to clear
+      contains: Paid label, music rights and claims to check before each post runs as an ad.
+    - name: PROMO BACK HALF
+      contains: For each reshoot, the kept hook, a line that turns it to your product, and your offer.
+    - name: TEST PLAN
+      contains: Budget, the ad to compare against, and a sales-based way to judge the winner.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none.
+    - name: MISSING
+      contains: Anything you did not give it, marked so nothing is invented.
 
 how_it_works:
   - title: Finds your baseline

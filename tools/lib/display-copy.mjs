@@ -1,8 +1,12 @@
 // Editorial copy is separate from licensed source instructions and stable URLs.
 export function applyDisplayCopy(item, page, edit) {
   if (!edit) return { item, page, aliases: [] };
-  const allowed = new Set(["name", "summary", "subhead", "reason"]);
+  const allowed = new Set(["name", "summary", "subhead", "reason", "aliases"]);
   for (const [key, value] of Object.entries(edit)) {
+    if (key === "aliases") {
+      if (!Array.isArray(value) || value.some(name => typeof name !== "string" || !name.trim())) throw new Error(`Invalid display aliases: ${item.slug}`);
+      continue;
+    }
     if (!allowed.has(key) || typeof value !== "string" || !value.trim()) throw new Error(`Invalid display copy: ${item.slug}/${key}`);
   }
   const before = page?.name ?? item.name;
@@ -11,6 +15,6 @@ export function applyDisplayCopy(item, page, edit) {
   return {
     item: { ...item, ...fields },
     page: { ...page, ...fields },
-    aliases: edit.name && before !== edit.name ? [before] : [],
+    aliases: [...new Set([...(edit.name && before !== edit.name ? [before] : []), ...(edit.aliases ?? [])])],
   };
 }

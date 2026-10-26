@@ -1,6 +1,6 @@
 new_slug: fragile-code-spotter
 name: "Fragile code spotter"
-summary: "Paste code an AI wrote fast. Get the few real risks that will hurt later and the smallest fix for each."
+summary: "Find the risks in fast-written code before they hurt. Paste your code and get ranked findings, each with the smallest fix, in any chat AI."
 job: test-and-fix-code
 thinking: medium
 thinking_why: "It needs to read code and judge which problems are real."
@@ -17,6 +17,10 @@ when:
   - "An AI built something for you and it seems to work."
   - "You are about to show a prototype to real users."
   - "You are handing a quick project to someone else."
+not_for:
+  - "You want a full, deep review of AI-written code: use the AI-written code reviewer."
+  - "Your code is already live and has been audited: ask the person or team who audited it to check the new changes."
+  - "You want style, naming or formatting advice: use a linter or ask a developer on your team."
 
 you_give:
   - "The code, in full"
@@ -33,6 +37,20 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - Your code, pasted in full
+    - What the code is for and who uses it
+    - Where it will run, such as your laptop or real customers (optional)
+  output:
+    - name: WHAT IT DOES
+      contains: Two lines saying what the code does and how it is organised.
+    - name: FINDINGS
+      contains: Up to ten risks, worst first, each with its place, risk level, why it matters and the smallest fix.
+    - name: WHAT IS FINE
+      contains: Two things the code does well, so you know what to keep.
+    - name: CANNOT TELL FROM THIS
+      contains: Gaps the AI could not judge from the pasted code alone.
 
 how_it_works:
   - title: "Read for what it does"
@@ -87,8 +105,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "A line on where the code will run"
-  - "Your language and framework"
+    - "A line on where the code will run"
+    - "Your language and framework"
 
 terms:
   - term: "Swallowed error"

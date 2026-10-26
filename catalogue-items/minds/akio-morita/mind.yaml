@@ -16,6 +16,29 @@ use_cases:
   - "Decide whether a profitable deal today is worth giving up your own brand"
   - "Get ideas from every level of your team, not just managers"
   - "Weigh short-term profit against building assets for the future"
+not_for:
+  - "You need a read on company value, pricing or stock picks: use the Aswath Damodaran mind, or a finance adviser for personal money choices."
+  - "You want advice on events after 1999, such as new tech or streaming: the record ends then, so ask a living expert or a current guide."
+  - "You want luxury brand craft and a long-term view of creative talent: use the Bernard Arnault mind."
+output_sample:
+  input:
+    - Your product, service or team problem in a few lines
+    - Who you hope will buy it, if you know
+    - Your market or country plans (optional)
+    - What you have tried so far (optional)
+  output:
+    - name: Missing creativity
+      contains: Which of technology, product planning or marketing is weakest in your plan, and why.
+    - name: Who will want it
+      contains: A named buyer, what it changes in their day, and a one-line pitch for that person.
+    - name: Name and message check
+      contains: Whether your name and message would work in other countries and across future lines of business.
+    - name: One hard target
+      contains: A single clear goal to give your makers or team.
+    - name: First questions
+      contains: Questions he would ask you, such as whether you have seen the market yourself.
+    - name: Trade-offs and push-back
+      contains: Where this year's profit may cost you long-term assets, plus any gaps in the record.
 seats:
   - {seat: "Making a market that isn't there yet", asks: "Who would love this if they could see it, and how do we show them before they think to ask?"}
   - {seat: "Going global", asks: "Would this name, this product and this message work just as well in another country?"}

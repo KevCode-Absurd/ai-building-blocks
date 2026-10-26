@@ -1,6 +1,6 @@
 new_slug: store-financial-model-builder
 name: "Store financial model builder"
-summary: "Give it ad budget, CAC, prices and costs. Get a 36-month store model with cash and runway."
+summary: "Build a 36-month store financial model from your ad budget, CAC, prices and costs. See profit after ads, cash, runway and your riskiest guess."
 job: track-numbers
 thinking: high
 thinking_why: "Many linked numbers have to agree, and one wrong formula spoils the whole model. A stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You are starting a store and want to know how much cash you need before it can pay for itself.
   - You plan to raise ad spend and want to see when profit after ads turns positive.
   - A lender, partner or buyer asks for a forecast and you want one that holds together.
+not_for:
+  - You have no sales history and no ad plan yet. Use a simple one-line estimate of cost per customer and price, then come back.
+  - You only need to plan stock buying and cash. Use the Inventory cash planner.
+  - You need to decide on tax or sign a loan. Check the result with an accountant first.
 
 you_give:
   - Your ad spend plan by month and the CAC you expect
@@ -36,6 +40,32 @@ how_to_use:
   - Add your repeat or churn data from the last six months if you have it. Without it the model is a hypothesis.
   - Read the cautious case first. Then read which assumption matters most and get a real number for that one.
   - Take the stock plan to the Inventory cash planner and bring back the cash view.
+output_sample:
+  input:
+    - Your ad spend plan by month and the CAC you expect
+    - Your price, refunds, discounts and cost per order
+    - Your one-time and subscriber mix, with repeat or churn rates
+    - Your team and running costs, and starting cash
+    - Your stock plan (optional)
+  prerequisites:
+    - An AI that can make a spreadsheet file (optional, it can also give tables with the formulas written out)
+  output:
+    - name: Assumptions
+      contains: Every input in one block, each marked as your data, looked up, or a guess.
+    - name: Customers
+      contains: New buyers, returning buyers, subscribers kept and lost, and total orders each month.
+    - name: Revenue and contribution
+      contains: Gross and net revenue, cost lines, and contribution margin with a check against your unit margin.
+    - name: After marketing and operating income
+      contains: The first month profit after ads turns positive, the first month operating income does, and when tax starts.
+    - name: Metrics
+      contains: Run rate, lifetime value for each buyer type, and LTV against CAC.
+    - name: Cash
+      contains: The lowest cash point, the extra cash needed and the runway in months.
+    - name: Cases
+      contains: Base, conservative and best case side by side.
+    - name: Matters most
+      contains: The one input that moves the result most, and by how much.
 
 how_it_works:
   - title: Starts with ad spend

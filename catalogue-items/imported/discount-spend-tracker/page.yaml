@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It adds up discount totals over time.
 new_slug: discount-spend-tracker
 name: Discount spend tracker
-summary: Pick a time range. Get total discount dollars by week or month, split
-  by discount type and code.
+summary: Track discount spend by week, month or quarter. See total dollars given away in your Shopify store, split by discount code and type.
 job: run-your-store
 headline: Discount spend tracker
-subhead: A clear total of how much money your store gave away in discounts, by
-  week, month or quarter, split by code and by type. You can see if discounting
-  is growing before it hurts margin.
+subhead: A clear total of how much money your store gave away in discounts, by week, month or quarter, split by code and by type. You can see if discounting is growing before it hurts margin.
 explain: |
   A clear total of how much money your store gave away in discounts, by week, month or quarter, split by code and by type. You can see if discounting is growing before it hurts margin.
 
@@ -18,6 +15,10 @@ when:
   - You suspect discounting went up during a sale season.
   - You want to see which codes cost the most.
   - You are setting a yearly promotion budget.
+not_for:
+  - "You want to know if one discount earned back its cost: use the discount-roi-calculator, since this only totals what you gave away."
+  - "You need orders that are not paid, such as pending or refunded ones: this counts paid orders only, so check them in your Shopify admin."
+  - "You want to change or end a discount: this only reads orders, so make the change in your Shopify discounts page."
 you_give:
   - Your Shopify store domain
   - "Bucket size: week, month or quarter"
@@ -30,8 +31,30 @@ you_get:
   - The top codes named individually
   - A trend you can compare across periods
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Sign in to Shopify CLI for your store with permission to read orders. This skill needs an AI that can run code.
+  - Paste the skill into your AI, or open the skill folder in your AI tool.
+  - Give your store domain, bucket size and how many periods to look back.
+  - Add the number of top codes and whether to count shipping discounts, if you want to change the defaults.
+  - Check the summary and the CSV file. Look at the latest period against the one before it.
+  - Use the discount-roi-calculator on any code that looks costly.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - "Bucket size: week, month or quarter"
+    - How many periods to look back (optional)
+    - How many top codes to list on their own (optional)
+    - Whether to count shipping discounts (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A signed-in Shopify CLI session that can read orders
+  output:
+    - name: Summary
+      contains: Total discount cost, average per period, and the latest period compared with the one before.
+    - name: By bucket
+      contains: Discount cost for each week, month or quarter, split into cart and shipping discounts.
+    - name: By discount type
+      contains: Spend and share for code, automatic, manual and shipping discounts.
+    - name: Top codes
+      contains: The costliest codes with spend and share, and the rest grouped as other.
+    - name: discount_cost_trend CSV file
+      contains: One row per bucket and code with type, order count, cart, shipping and total discount, and currency.

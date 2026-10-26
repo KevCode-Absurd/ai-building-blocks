@@ -12,7 +12,7 @@ Each qualification field should serve one of two purposes: route the booking to 
 
 **The win.** Four fields: company size, role, primary use case, timeline. Each routes or preps. Conversion is high; rep prep is concrete.
 
-**The fail.** Twelve fields including industry code, employee count range, marketing source, lead-source detail, gender. Most do not affect routing or prep; conversion drops 70 percent.
+**The fail.** Twelve fields including industry code, employee count range, marketing source, lead-source detail, gender. Most do not affect routing or prep; conversion drops sharply.
 
 The discipline. Audit each field. Cut fields that do not earn placement.
 

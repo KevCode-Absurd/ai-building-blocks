@@ -2,35 +2,60 @@ thinking: medium
 thinking_why: It reads terms and flags what to act on.
 new_slug: supplier-contract-manager
 name: Supplier contract manager
-summary: Give it your supplier deals. Get a renewal calendar, terms to push for
-  and a way to track broken promises.
+summary: Give your supplier contracts to your AI. Get a renewal calendar, terms to push for, and a way to track missed promises in supplier contract management.
 job: check-contracts
 headline: Supplier contract manager
-subhead: Your supplier deals tracked in one place, with the renewal dates, the
-  terms worth pushing for and a way to catch missed promises. You stop finding
-  out about an auto-renewal after it has happened.
+subhead: Give your AI your supplier contracts. It builds a renewal calendar, lists the terms worth pushing for and flags promises that were missed. You stop finding out about an auto-renewal after it happens.
 explain: |
   Your supplier deals tracked in one place, with the renewal dates, the terms worth pushing for and a way to catch missed promises. You stop finding out about an auto-renewal after it has happened.
 
   The skill sets up a contract lifecycle from draft to renewal. It prepares you for negotiation by comparing pricing models and key terms, adds service levels with penalty structures, and tracks each obligation with upcoming and overdue checks. It also monitors spend against what was agreed, and offers a renewal decision framework. Python examples are included for the tracking and analysis.
 when:
   - You have a dozen supplier contracts and no renewal calendar.
-  - A renewal is due and you want to know what to ask for.
+  - A renewal is due soon and you want to know what to ask for.
   - A supplier keeps missing delivery targets and you need evidence.
-  - You want to see spend against contract terms.
+  - You want to see your spend against what the contract says.
+not_for:
+  - "You buy once or hold contracts worth a few thousand pounds: use a simple spreadsheet with dates and notice periods."
+  - "You need legal wording checked or drafted: ask a qualified contract lawyer."
+  - "You have no contract details to hand yet: collect the dates, values and notice periods first."
 you_give:
-  - Your supplier contracts or key terms
-  - Renewal dates
-  - Performance or spend data (optional)
+  - Your supplier contracts, or a list of each contract's key terms
+  - Start and end dates, notice periods and whether each contract auto-renews
+  - Contract values and what each supplier is meant to deliver
+  - Spend or supplier performance data (optional)
   - Your negotiation goals (optional)
 you_get:
-  - A renewal calendar
-  - Terms to negotiate
+  - A renewal calendar with each notice deadline and the action to take
+  - A one-page list of terms to push for
   - Service level targets with penalties
-  - An obligation tracker with overdue flags
-  - A renew or exit recommendation
+  - An obligation tracker that flags what is due and what is overdue
+  - A renew or exit recommendation based on performance and spend against the contract
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Before you start, make a spreadsheet or export with one row per contract: supplier, start and end dates, notice period, value, and whether it auto-renews."
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your contract list or key terms. Add your goals and any spend data if you have them.
+  - Answer the questions your AI asks about how many contracts you hold and what matters most.
+  - Check the renewal calendar dates against your own records before you act on them.
+  - Ask for the Python tracking examples only if your AI can run code. Otherwise ask for the tables in plain text.
+output_sample:
+  input:
+    - Your supplier contracts or a list of key terms
+    - Start dates, end dates and notice periods
+    - Your spend or supplier performance data (optional)
+    - Your negotiation goals (optional)
+  prerequisites:
+    - An AI that can run code, if you want the Python tracking examples to run
+  output:
+    - name: Contract Summary Report
+      contains: Total value, number of active contracts, key risks and a list of actions to take.
+    - name: Portfolio Overview
+      contains: A table of contract value, contracts expiring soon and how well suppliers keep to terms.
+    - name: Contracts Requiring Action
+      contains: A table of each contract, its supplier, expiry date and the action needed.
+    - name: Renewal Pipeline
+      contains: Contracts due by quarter over the next 12 months, each marked renew, renegotiate or bid.
+    - name: Compliance Issues
+      contains: Price gaps, volume shortfalls and missed service levels, each with a suggested action.
+    - name: Key Recommendations
+      contains: A short ranked list of what to do first.

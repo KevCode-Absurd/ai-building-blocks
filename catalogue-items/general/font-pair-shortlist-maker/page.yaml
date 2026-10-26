@@ -1,6 +1,6 @@
 new_slug: font-pair-shortlist-maker
 name: "Font pair shortlist maker"
-summary: "Paste your brand feel and who reads the site. Get three font pairs with sizes and line spacing that read well."
+summary: "Get a font pair shortlist for your website: three headline and body pairs with sizes and line spacing, plus one pick for your readers."
 job: build-websites
 thinking: low
 thinking_why: "It applies fixed readability rules to a short brief."
@@ -17,6 +17,10 @@ when:
   - "You are building a site and every font looks the same to you."
   - "Readers say your text is hard to read."
   - "Your brand feels off and you suspect the fonts."
+not_for:
+  - "You need a logo or full brand identity: use the Brand style guide writer."
+  - "You want print layouts or packaging type: ask a designer, as this only sets sizes for screens."
+  - "You want every check on a pair you already like: use the Web font pairing picker."
 
 you_give:
   - "Your brand in three words"
@@ -34,6 +38,21 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - Your brand in three words
+    - Who reads your site and on what device
+    - The kind of content you publish
+    - Fonts you must keep (optional)
+  output:
+    - name: Three pairs
+      contains: Each pair has a headline font, a body font and the feeling it gives.
+    - name: Sizes and spacing
+      contains: Body size, line spacing, line length and heading sizes for each pair.
+    - name: Watch out for
+      contains: Readability risks such as thin weights, look-alike letters, low contrast or too many font families.
+    - name: My pick
+      contains: One pair for your readers with a one-sentence reason.
 
 how_it_works:
   - title: "Split the two jobs"
@@ -90,8 +109,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "A paragraph of your real copy"
-  - "Your logo font"
+    - "A paragraph of your real copy"
+    - "Your logo font"
 
 terms:
   - term: "Line length"

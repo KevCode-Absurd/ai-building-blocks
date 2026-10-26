@@ -2,17 +2,56 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-acreadiness-policy
 name: Agent readiness rule setter
-summary: Share your repo's needs. Get scoring rules that fit the project and
-  show which checks matter.
+summary: "Set up an AgentRC readiness policy: turn off checks that don't fit your repo, raise the ones that matter, and set a pass-rate goal."
 job: set-up-ai
 headline: Agent readiness rule setter
-subhead: Share your repo's needs. Get scoring rules that fit the project and
-  show which checks matter. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Tell your AI about your repo and how strict you want to be. It writes a small policy file that changes how AgentRC scores your repo. You can also chain a company baseline with team rules.
+not_for:
+  - "Your repo does not use AgentRC yet: set up AgentRC first, then come back to write a policy."
+  - "You want to add new checks: JSON policies cannot add criteria, so use AgentRC's TypeScript plugin system."
+  - "You only want a readiness report: run the AgentRC readiness command, or the assess skill, which is not in this folder."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI in a place where it can run terminal commands and read your repo. This skill needs code running and Node installed.
+  - Paste the skill, then say "new my-policy" and name your stack and pass-rate goal.
+  - Answer its questions on what to turn off and what to raise. It will ask you to confirm before it disables any check.
+  - Check the policy file it writes and the line added to agentrc.config.json.
+  - Say "apply" with the policy path to run AgentRC and see your new score. The report step hands off to the assess skill, which is not in this folder.
+  - Add the CI line if you want builds to fail below a set level.
+output_sample:
+  input:
+    - Your repo's stack, such as a static site or a web app
+    - Which checks you think do not apply to it
+    - "Your pass-rate goal: lenient, standard or strict"
+    - Your AgentRC config file, agentrc.config.json (optional)
+  prerequisites:
+    - An AI that can run terminal commands, to run the AgentRC command with npx
+    - Access to the repo folder on your computer
+    - Node installed, so npx can fetch AgentRC from github:microsoft/agentrc
+  output:
+    - name: policies/<name>.json
+      contains: Your policy file with checks to turn off, impact changes and a pass-rate threshold.
+    - name: agentrc.config.json update
+      contains: The policies line that points AgentRC to your new policy file.
+    - name: Trade-off notes
+      contains: A short note on each check you turn off and what you lose by doing so.
+    - name: Readiness run
+      contains: The AgentRC readiness result using your policy, with the score and grade.
+    - name: CI gating line
+      contains: A ready-to-paste command that fails the build below a maturity level you pick (optional).
+when:
+  - Some AgentRC checks do not fit your project, such as observability on a static site.
+  - You want must-haves like a README to count more in the score.
+  - Your company wants one baseline with team overrides on top.
+  - You want CI to fail when your repo falls below a set level.
+you_give:
+  - Your repo's stack, such as a static site or a web app
+  - The checks you think do not apply
+  - "Your pass-rate goal: lenient, standard or strict"
+  - Your AgentRC config file (optional)
+  - An existing company baseline policy (optional)
+you_get:
+  - A policy file saved as policies/<name>.json
+  - The config line that turns the policy on
+  - A plain note on what each disabled check costs you
+  - A readiness run using your policy
+  - A CI command that enforces a minimum level (optional)

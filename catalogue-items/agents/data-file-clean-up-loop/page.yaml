@@ -1,6 +1,6 @@
 new_slug: data-file-clean-up-loop
 name: Data file clean-up loop
-summary: Give it a messy data file. It fixes and re-checks until the file passes, and saves your rules for the next one.
+summary: Clean up a messy data file in rounds. It fixes, re-checks and stops when the file passes, and saves your rules for the next export.
 job: work-with-files
 thinking: low
 thinking_why: Each step is a count and a rule. A smaller, faster model is enough, as long as it follows your pass rules.
@@ -14,6 +14,10 @@ when:
   - A report or import keeps failing because of blanks, duplicates or text where numbers should be.
   - You get the same kind of messy export every week or month.
   - You want a clean file and a record of what was changed.
+not_for:
+  - "Your file already passes your rules and you want a one-off look: open it yourself or ask a person to scan it."
+  - "You need to merge real records, such as two people who might be the same: use a person or a dedicated deduplication tool."
+  - "You want blanks filled with guesses or averages: ask a person to choose the values, because this agent never guesses."
 you_give:
   - The data file, as a spreadsheet or CSV
   - What each column means, and which ones must never be blank (optional but best)
@@ -31,6 +35,30 @@ how_to_use:
   - Say what each column means, or let it propose rules and say yes to them.
   - Read the hand-back. Fix the cells it left for you, or tell it the rule to use.
   - Next time, give it the new export. It reads your rules file and cleans the same way.
+output_sample:
+  input:
+    - Your data file, as a spreadsheet or CSV
+    - What each column means and which must never be blank (optional)
+    - What the file is for, such as a report or an import (optional)
+    - Your rules file from last time (after the first run)
+  prerequisites:
+    - An AI that can open and save files, such as Claude Code
+    - The linked cleaning and checking skills, which it reads from the site if they are not installed
+  output:
+    - name: Result
+      contains: One line saying passed or not passed, and how many rounds it took.
+    - name: Counts
+      contains: Blanks, duplicates, wrong types and odd values, before and after each round.
+    - name: What was changed
+      contains: Each rule applied and how many cells or rows it touched.
+    - name: removed.csv
+      contains: Every removed row, saved with the reason it was removed.
+    - name: Left for a person
+      contains: Each remaining cell or group, with what you need to decide.
+    - name: rules.md
+      contains: The pass rules and column meanings, so the next export is cleaned the same way.
+    - name: final.csv
+      contains: The cleaned file, saved apart from your untouched original.
 how_it_works:
   - title: Read or write the rules
     text: Uses last time's rules, or writes down what a passing file looks like and asks for your yes.

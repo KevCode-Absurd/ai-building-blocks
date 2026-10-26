@@ -1,6 +1,6 @@
 new_slug: video-ad-shot-list-maker
 name: "Video ad shot list maker"
-summary: "Paste your script and storyboard. Get timed shots, clip prompts and an edit list."
+summary: "Turn an approved video ad script into timed shots, clip prompts and an edit list for an AI video tool or a film crew. Check shot tables first."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - Your storyboard is approved and you need clips that don't look like one long static shot.
   - Your AI clips keep inventing objects mid-shot or showing the product the wrong way.
   - You want to brief a real film crew with exact shot sizes, angles and timings.
+not_for:
+  - "You have no approved storyboard yet: run the Video avatar and storyboard planner first, then come back here."
+  - "You want a still product ad with no video: write the ad copy and shoot a photo instead."
+  - "You need a script from customer quotes: use the Video ad script writer from customer quotes, then bring the script here."
 
 you_give:
   - The approved script or voice-over lines
@@ -37,6 +41,33 @@ how_to_use:
   - Add what you sell, how it's used and a product photo. Say the pace, the look and your tool's clip length.
   - Approve the shot tables, then make two or three takes of each clip from its prompt and pick the best.
   - Cut the clips together with the edit list, and check the timings in the finished video.
+output_sample:
+  input:
+    - Your approved video ad script or voice-over lines
+    - What you sell, how it is used, and a real product photo
+    - Your approved avatar card, sheets, lock lines and storyboard (for AI video)
+    - Your pace, look and your tool's clip length (optional)
+  prerequisites:
+    - An approved script, for example from the Video ad script writer from customer quotes
+    - For AI video, an approved storyboard from the Video avatar and storyboard planner
+    - A video tool to make the clips, which may need a paid account
+  output:
+    - name: Clip plan
+      contains: The script split into clips at sentence ends, with word count, pace and seconds for each.
+    - name: Film plan
+      contains: The main place, where each clip cuts to, who is in each, and what we see.
+    - name: Shot tables
+      contains: Each shot with timing, size, camera position, one move and one action, for you to approve.
+    - name: Start and end frames
+      contains: A picture prompt for the first and last frame of each clip.
+    - name: Clip prompts
+      contains: Text for your video tool that describes only the motion, with lock lines word for word.
+    - name: Voice plan
+      contains: How one voice runs across the cuts, and lip-sync only where someone speaks on camera.
+    - name: Edit list
+      contains: The order of clips, cuts, captions, music, end card and safe areas.
+    - name: Checks missed
+      contains: One line for each of its own checks the shot list could not pass, or none.
 
 how_it_works:
   - title: Checks what came in

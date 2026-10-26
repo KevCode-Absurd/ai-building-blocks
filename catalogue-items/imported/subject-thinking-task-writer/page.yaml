@@ -2,23 +2,23 @@ thinking: high
 thinking_why: It ties each thinking skill to the subject knowledge.
 new_slug: subject-thinking-task-writer
 name: Subject thinking task writer
-summary: Give it a subject topic. Get tasks that build thinking using that
-  subject's own facts and methods.
+summary: Write a subject thinking task for your class. Give it a topic, and get a task built on that subject's own facts and ways of reasoning.
 job: teach-and-train
 headline: Subject thinking task writer
-subhead: Give it a subject topic. Get tasks that build thinking using that
-  subject's own facts and methods. Bring the topic. Use the result to plan your
-  next step.
+subhead: Give it a subject topic. Get tasks that build thinking using that subject's own facts and methods. Bring the topic. Use the result to plan your next step.
 explain: |
   A thinking task built from the facts and methods of your own subject, so students reason like a historian, a scientist or a mathematician, not in a vague 'critical thinking' way.
 
   You give the topic, the stage and the subject. The skill first checks what knowledge students need before they can think about it at all. It states how experts in that discipline judge good thinking, then sets the task, such as weighing causes of the First World War. It supplies the sources and tools students use, assessment guidance for what strong reasoning looks like, and notes to help you improve the task over time.
 when:
-  - You are asked to teach critical thinking but your subject is history or
-    science.
+  - You are asked to teach critical thinking but your subject is history or science.
   - Students can recall facts but cannot argue from them.
   - You want one strong task for a unit, not a general skills lesson.
   - You need to know how to mark thinking, not only answers.
+not_for:
+  - "You only want a single fact-recall lesson: write a plain recall lesson or quiz yourself, since this builds one reasoning task."
+  - "You want a general thinking skills lesson that is not tied to a subject: use a simple skills lesson plan instead."
+  - "You have no subject knowledge yet to teach: teach the facts first, then come back to build the thinking task."
 you_give:
   - The topic
   - Subject and year level
@@ -32,7 +32,31 @@ you_get:
   - Sources and tools for students
   - Marking guidance
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code, files or paid tools are needed.
+  - Type your topic, your subject and your students' year or age.
+  - Add what students already know and the type of thinking you want. Both are optional, but they make the task fit better.
+  - Read the Knowledge Prerequisite Check first. If students lack the facts, teach those before you set the task.
+  - Check the task and the marking guidance against your own subject knowledge. Change anything that does not fit your class.
+  - You do not need a source text. Your topic, subject and year level are the required inputs.
+output_sample:
+  input:
+    - Your topic, such as the causes of a historical event
+    - Your subject and the year or age of your students
+    - What your students already know about the topic (optional)
+    - The type of thinking you want, such as weighing evidence (optional)
+    - Learning targets the task should link to (optional)
+  output:
+    - name: Knowledge Prerequisite Check
+      contains: The facts students must know before they can think about the topic, and whether your class has them.
+    - name: Disciplinary Thinking Standard
+      contains: How experts in your subject judge good thinking, in plain terms.
+    - name: Thinking Demand
+      contains: The kind of thinking the task asks for, such as judging between competing explanations.
+    - name: The Task
+      contains: The task itself, ready to give to students.
+    - name: Intellectual Resources
+      contains: The sources, facts and tools students use to do the task.
+    - name: Assessment Guidance
+      contains: What strong, middling and weak reasoning looks like, so you can mark the thinking.
+    - name: Teacher Development Notes
+      contains: Notes to help you improve the task each time you use it.

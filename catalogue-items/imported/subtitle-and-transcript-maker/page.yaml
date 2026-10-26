@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sends your file to a set tool and saves the result.
 new_slug: subtitle-and-transcript-maker
 name: Subtitle and transcript maker
-summary: Give it a recording or video. Get a written transcript with who spoke,
-  word timing and subtitles.
+summary: Turn a meeting, interview or video into a written transcript with speaker names and timing. Uses ElevenLabs speech to text and your own API key.
 job: work-with-audio
 headline: Subtitle and transcript maker
-subhead: Turn a recording into a written transcript with who said what, the time
-  of each word, and subtitles ready to use. It handles meetings, interviews and
-  videos.
+subhead: Turn a recording into a written transcript with who said what, the time of each word, and subtitles ready to use. It handles meetings, interviews and videos.
 explain: |
   Turn a recording into a written transcript with who said what, the time of each word, and subtitles ready to use. It handles meetings, interviews and videos.
 
@@ -18,6 +15,10 @@ when:
   - You need subtitles for a video.
   - A podcast episode needs a searchable transcript.
   - Product names keep getting misspelled in your transcripts.
+not_for:
+  - You have no ElevenLabs API key or no internet. Type the notes yourself or use a transcription tool that runs on your own computer.
+  - You want live captions during a call. This page covers files, so use the real-time part of the ElevenLabs guide instead.
+  - You want a summary or meeting minutes. Get the transcript here first, then ask your AI to summarise it.
 you_give:
   - An audio or video file
   - An ElevenLabs API key
@@ -30,8 +31,30 @@ you_get:
   - Subtitle output
   - A cost estimate
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own ElevenLabs API key.
+  - Get an ElevenLabs account and an API key. Keep the key private.
+  - Open an AI that can run code, and paste in this skill.
+  - Add your audio or video file. Say if you want speaker labels, word timing or a set language.
+  - List any names or jargon your AI should spell right (optional).
+  - Run it and read the transcript. Check names and numbers against the recording.
+  - Ask your AI to turn the word timing into a subtitle file, or to summarise the text.
+output_sample:
+  input:
+    - An audio or video file
+    - Your ElevenLabs API key
+    - Names and jargon to watch for (optional)
+    - The language, if you know it (optional)
+  prerequisites:
+    - An AI that can run code, Python or JavaScript
+    - An ElevenLabs account and API key
+    - Internet access
+  output:
+    - name: Full text
+      contains: The whole recording as plain written text, with the language the tool detected.
+    - name: Speaker labels
+      contains: Each word tagged with the speaker who said it, when speaker labels are switched on.
+    - name: Word timestamps
+      contains: The start and end time of every word, plus marks for spaces and sounds like laughter.
+    - name: Multichannel transcript
+      contains: One transcript per audio channel, or one merged by time, when each person has their own channel.
+    - name: Request ID
+      contains: A reference you can use to track what the request cost you.

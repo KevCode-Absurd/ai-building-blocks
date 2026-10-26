@@ -1,6 +1,6 @@
 new_slug: amazon-reimbursement-claim-finder
 name: "Amazon reimbursement claim finder"
-summary: "Give it shipment and fee reports. Get a claim-readiness score and the claims to file."
+summary: "Find Amazon reimbursement claims you can file. Give it 90 days of shipment and fee reports. You get a readiness score and a list of claims with proof."
 job: sell-on-amazon
 thinking: medium
 thinking_why: "It compares counts and fee lines across reports, which needs care with the numbers but follows a fixed list."
@@ -17,6 +17,10 @@ when:
   - You have closed shipments and want to check Amazon received every unit you sent.
   - You think your fees are higher than your product's size should cost.
   - You want a monthly routine to catch Amazon's errors before the claim window ends.
+not_for:
+  - "You have few shipments or no closed inbound shipments: read the shipment and fee reports in Seller Central yourself."
+  - "You want to know what a product will cost you in fees before you sell: work it out with Amazon's own fee tools."
+  - "You want to alter receipts or papers to make a claim work: this never helps, so ask Amazon support or a person who knows your account."
 
 you_give:
   - Shipment summaries with sent and received counts
@@ -34,6 +38,27 @@ how_to_use:
   - Paste your receipts and bills of lading, and your real product sizes and weights.
   - File the claims it lists, starting with the largest, and attach the proof it names.
   - Run it once a month and keep the log of claims filed, paid and rejected.
+output_sample:
+  input:
+    - Your shipment summaries with units sent and received
+    - Your receipts, packing lists and bills of lading
+    - Your fee and returns reports for the last 90 days
+    - Your product sizes and weights
+    - Your 90-day Amazon sales (optional)
+  prerequisites:
+    - Access to your Seller Central reports
+    - An AI chat where you can paste or attach your reports
+  output:
+    - name: Claim readiness score
+      contains: A score out of 100 with each of the six parts shown, and the money found beside it.
+    - name: Claims to file
+      contains: Each claim, largest first, with the shipment or product, the amount, the proof to attach and a deadline to check.
+    - name: Checks
+      contains: A result for sent against received, size tier, fee lines, damaged and lost, returns and storage, and seller feedback.
+    - name: Monthly routine
+      contains: Steps to repeat each month, and a log of claims filed, paid and rejected, with the reason.
+    - name: Not run and missing
+      contains: Checks that could not run, the report or proof each one needs, and a reminder to confirm current claim windows.
 
 how_it_works:
   - title: Compares sent and received

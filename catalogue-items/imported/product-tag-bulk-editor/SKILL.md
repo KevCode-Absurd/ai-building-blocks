@@ -26,6 +26,7 @@ Universal (store, format, dry_run) + skill-specific:
 |-----------|------|----------|---------|-------------|
 | action | string | yes | — | `add` or `remove` |
 | tags | array | yes | — | One or more tag strings to add or remove (e.g., `["summer-sale", "clearance"]`) |
+| dry_run | boolean | no | **true** | Preview only. Lists what would change and writes the CSV, but changes nothing. Live changes run only after the user confirms the preview. |
 | collection_id | string | no* | — | GID of a collection — target all products in this collection |
 | filter_tag | string | no* | — | Target all products that currently have this tag |
 | query_filter | string | no* | — | Shopify product search query (e.g., `"product_type:Apparel"`) |
@@ -34,15 +35,21 @@ Universal (store, format, dry_run) + skill-specific:
 
 ## Safety
 
+**Preview first, always.** `dry_run` is `true` by default. Run steps 1 and 2 as a preview: show the user the count, the first 20 product titles, and the tags each would gain or lose. Then ask "Apply this to <count> products?" and wait for a clear yes. Only then run with `dry_run: false`. A yes to an earlier preview does not cover a changed tag list or a changed product set; preview again.
+
+If the user has no Shopify access in this chat, do not guess. Give them the preview from an exported product list they paste in, and tell them to run the change in Shopify admin (bulk edit) or in a session with Shopify CLI access.
+
+**Before removing a tag,** check whether it drives a rule. Ask the user, or look at their automated collections, for rules that use this tag. Removing it can drop products out of a collection or a customer group. Say which ones you found, or say you could not check.
+
 > ⚠️ Step 2 executes bulk tag mutations. `tagsRemove` is irreversible — if you remove the wrong tag, you must re-add it manually or run this skill again with `action: add`. Run with `dry_run: true` to see the full product list before committing. For large catalogs (1000+ products), dry_run is strongly recommended before any removal operation.
 
 ## Workflow Steps
 
 1. **OPERATION:** `products` — query
-   **Inputs:** `first: 250`, `query` built from `collection_id`, `filter_tag`, or `query_filter`; paginate until all matching products fetched
-   **Expected output:** List of product GIDs and current tag arrays; confirm target set before proceeding
+   **Inputs:** `first: 250`, `query` built from the target: `collection_id:<numeric id from the collection GID>` for a collection, `tag:'<filter_tag>'` for a tag, or `query_filter` as given. If more than one target is given, join them with `AND`. Paginate until all matching products are fetched.
+   **Expected output:** List of product GIDs and current tag arrays. Show the count and a sample, and confirm the target set with the user before step 2. If the count is 0, stop and ask the user to check the spelling.
 
-2. **OPERATION:** `tagsAdd` — mutation (if `action: add`)
+2. **OPERATION:** `tagsAdd` — mutation (if `action: add`, and only after the user confirms the preview)
    **Inputs:** `id: <productId>`, `tags: <tags array>` per product
    **Expected output:** Updated `node.id` with `userErrors`
 
@@ -169,7 +176,7 @@ For `format: json`, emit a JSON object with this schema:
 ```
 
 ## Output Format
-CSV file `tag-update-<YYYY-MM-DD>.csv` with columns: `product_id`, `product_title`, `action`, `tags_changed`, `previous_tags`, `result`.
+CSV file `tag-update-<YYYY-MM-DD>.csv` with columns: `product_id`, `product_title`, `action`, `tags_changed`, `previous_tags`, `result`. In a preview, `result` is `preview`. Keep the file: `previous_tags` is how you put the tags back if a change was wrong.
 
 ## Error Handling
 | Error | Cause | Recovery |
@@ -180,8 +187,9 @@ CSV file `tag-update-<YYYY-MM-DD>.csv` with columns: `product_id`, `product_titl
 | Tag not present (on remove) | Product doesn't have the tag you're removing | Silently skips — `tagsRemove` on a non-existent tag is a no-op |
 
 ## Best Practices
-1. Run `dry_run: true` before any `action: remove` — the CSV preview shows exactly which products will lose the tag.
+1. Preview before every run, and most of all before `action: remove`. The CSV preview shows exactly which products will lose the tag.
 2. To set up a campaign cleanly, run `action: add` at launch and `action: remove` at the end — keeping your product tags tidy prevents collection rule drift.
 3. Use `query_filter: "tag:old-campaign-name"` for teardown — it will find exactly the products tagged from the previous run.
-4. You can add multiple tags in one run — pass `tags: ["sale", "homepage-featured", "clearance"]` to apply all three atomically.
+4. You can add several tags in one run. Pass `tags: ["sale", "homepage-featured", "clearance"]` and each product gets all three.
 5. Tags are case-insensitive in Shopify collection rules but case-preserving in the API — use consistent casing to avoid duplicates like `Sale` and `sale`.
+6. Do not use this for one or two products. Edit those in Shopify admin. After a run, tell the user to open two products and check the tags. If a change was wrong, offer to put the old tags back from the CSV, after a new preview.

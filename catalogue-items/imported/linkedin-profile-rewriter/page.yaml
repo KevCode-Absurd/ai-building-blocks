@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It rewrites each section with set checks.
 new_slug: linkedin-profile-rewriter
 name: LinkedIn profile rewriter
-summary: Describe your profile. Get a stronger headline, About section and
-  experience bullets.
+summary: Fix your LinkedIn profile headline, About section and experience bullets. Get a scored audit and a rewrite that puts your best point first.
 job: grow-social
 headline: LinkedIn profile rewriter
-subhead: A LinkedIn profile that tells people why to contact you. You describe
-  yours and get a sharper headline, About section and experience bullets, fixed
-  in the order that pays off most.
+subhead: A LinkedIn profile that tells people why to contact you. You describe yours and get a sharper headline, About section and experience bullets, fixed in the order that pays off most.
 explain: |
   A LinkedIn profile that tells people why to contact you. You describe yours and get a sharper headline, About section and experience bullets, fixed in the order that pays off most.
 
@@ -18,6 +15,10 @@ when:
   - You are changing roles and need your story rewritten.
   - You are unsure what your About section should say.
   - Your headline is just a job title.
+not_for:
+  - "You need a post plan or posting schedule: use a LinkedIn content planner, since this only fixes your profile."
+  - "You need a CV for a recruiter or job application: use a CV rewrite tool or a career coach."
+  - "You have no real results yet: write plain, honest bullets about your work first, then come back."
 you_give:
   - Your current profile text
   - Who you want to attract
@@ -30,7 +31,30 @@ you_get:
   - Stronger experience bullets
   - Notes on Featured, banner and recommendations
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste your profile text, section by section. Add who you want to reach and your goal.
+  - Add real results you can prove. Your AI will not invent any.
+  - Fix the quick wins from the audit first, then take the new headline.
+  - "Check the About section: your main point and call to action must sit above the see more cut."
+  - The scoring scripts need an AI that can run code. If yours can't, ask it to score and rewrite by hand.
+output_sample:
+  input:
+    - Your current profile text, section by section
+    - Who you want to attract
+    - Your goal, such as a job or clients
+    - Real results you can prove (optional)
+  prerequisites:
+    - An AI that can run code, to use the three scoring scripts. Without it, your AI can still do the rewrite by hand.
+  output:
+    - name: Profile audit
+      contains: A score out of 100 across 14 checks, with fixes ranked by points gained per hour.
+    - name: First-hour plan
+      contains: The quick fixes to do first, often Featured, Open To and skills.
+    - name: Headline
+      contains: A rewritten headline scored on audience, outcome, proof, searchability and clarity, within the 220 character limit.
+    - name: About section
+      contains: A first-person About section with your key message and call to action placed above the see more cut.
+    - name: Experience bullets
+      contains: Duty lists turned into outcomes, using only facts you gave.
+    - name: Featured and recommendations notes
+      contains: Advice on what to pin and how to ask for two specific recommendations.

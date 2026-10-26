@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes from approved facts and must not invent.
 new_slug: customer-one-pager-deck
 name: Customer one-pager and deck builder
-summary: Give it your account notes. Get a customer deck, one-pager or
-  leave-behind with no made-up numbers.
+summary: Build a customer one-pager or deck from your account notes and approved facts. Every number has a source or a blank to fill. No made-up claims.
 job: sell-and-negotiate
 headline: Customer one-pager and deck builder
-subhead: A sales asset for a specific customer, built only from facts you can
-  back up. Give it your account notes and approved material and you get a deck,
-  one-pager or leave-behind with no invented numbers.
+subhead: A sales asset for a specific customer, built only from facts you can back up. Give it your account notes and approved material and you get a deck, one-pager or leave-behind with no invented numbers.
 explain: |
   A sales asset for a specific customer, built only from facts you can back up. Give it your account notes and approved material and you get a deck, one-pager or leave-behind with no invented numbers.
 
@@ -18,6 +15,10 @@ when:
   - A prospect wants a one-page summary to share with their team.
   - You need a short deck tailored to one account.
   - You want a leave-behind that uses their own words.
+not_for:
+  - "You need an internal briefing or battlecard for your own team: write it by hand or ask your AI for a plain internal brief, because this builds customer-facing pieces only."
+  - "You are writing a first cold email with no account notes: write a short email yourself, because this needs facts about the account."
+  - "You want a quote, logo or result from a customer you have no proof for: ask the customer first, because this never makes them up."
 you_give:
   - The account name and context
   - Approved product and pricing material
@@ -29,8 +30,31 @@ you_get:
   - Bracketed placeholders for missing numbers
   - A list of UNVERIFIED claims to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open your AI chat. Paste the skill text, or upload the skill file.
+  - Paste or upload your account notes and your approved product and pricing material. Add call notes if you have them.
+  - Say which asset you want and who will read it. Say if it is for the customer or only for your team.
+  - Check the claim list and outline it shows you. Fix anything wrong, then say go.
+  - Read the finished asset. Fill each bracketed placeholder and check each UNVERIFIED claim before you send it.
+  - Connecting your CRM, email or docs helps but is not needed. Pasted notes work.
+output_sample:
+  input:
+    - Your account name and what you know about them
+    - Your approved product and pricing material
+    - Call notes or a transcript (optional)
+    - The asset you want (deck, one-pager, leave-behind or FAQ) and who will read it
+  prerequisites:
+    - An AI chat where you can paste text or upload files
+    - Your CRM, email or docs connected (optional, you can paste instead)
+  output:
+    - name: Content inventory
+      contains: Each claim you plan to use, with where it came from, shown for your go-ahead before anything is built.
+    - name: Proposed outline
+      contains: The pages or slides in order. A first-call deck is 5 to 6 slides unless you ask for more.
+    - name: Finished asset
+      contains: Your deck, one-pager, leave-behind or FAQ, written for that one customer from the approved facts.
+    - name: Bracketed placeholders
+      contains: Spots like [CUSTOMER METRIC] where a number is missing and you need to add it.
+    - name: UNVERIFIED list
+      contains: Claims that no approved material or note backs up, so you can check or cut them.
+    - name: Quality check and next step
+      contains: A note that every claim traces to a source, nothing internal slipped in, and what to do next.

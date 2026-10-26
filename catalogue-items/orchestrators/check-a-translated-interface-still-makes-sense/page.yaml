@@ -1,52 +1,93 @@
 new_slug: check-a-translated-interface-still-makes-sense
 name: Check a translated interface still makes sense
 headline: Check a translated interface still makes sense
-summary: Share the source files. Get a meaning check, revised wording and a layout review list.
+summary: Find lost meaning, broken placeholders and cut-off text in translated app screens. You get a string-by-string review, fixes and a layout checklist.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A meaning check, revised wording and a layout review list. Share original and translated interface copy, screenshots, locale and supported product behavior. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your original interface text, the translated text and the target language. Your AI checks each string for meaning, set terms, placeholders such as {name} and plural forms. Then it lists the screens where longer text may not fit.
 explain: |-
-  A meaning check, revised wording and a layout review list.
+  A translated interface check looks at each string the way a user meets it. A translation can read well on its own and still fail in the product. A button can mean something else. A {name} placeholder can vanish. A label can run twice as long and get cut off.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Meaning, variables and product promises match; expansion, truncation and direction changes are checked where visible. Missing tools or evidence stay visible in the final summary.
+  This workflow runs three steps. First it finds unclear source labels, because a vague original gives a vague translation. Then it compares each translated string with the original for meaning, terms, placeholders and plurals. Last it lists the screens and states each string appears in and marks layouts that need a look.
+
+  It reads text, not your running app. It tells you which languages it cannot judge well, so a fluent reader can check those. It does not replace a native speaker for legal, medical or safety wording.
 when:
-  - You need a meaning check, revised wording and a layout review list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A translation vendor sends back your strings file and you want a second check before release.
+  - Your German or Spanish app shows cut-off buttons, or users say a label means something else.
+  - You are adding a new language and want to test the first screens before the rest.
+  - A support ticket says the translated checkout makes no sense and you need to find the strings behind it.
+not_for:
+  - You have one string or a short text to translate. Use the Translator.
+  - You want a whole article or help page translated. Use the Article translator.
+  - Your app still has text typed into the code and no translation setup. Use the App translation setup helper first.
+  - The text is legal, medical or safety wording. A qualified human reviewer must sign it off.
 you_give:
-  - Original and translated interface copy, screenshots, locale and supported product behavior.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your original interface text, as a strings file, a spreadsheet or pasted lines, with an ID for each string if you have one
+  - The translated text for the same strings
+  - The target language and region, such as French (Canada)
+  - Screenshots, or a list of the screens each string appears on (optional)
+  - Your list of terms that must always be translated the same way (optional)
 you_get:
-  - A meaning check, revised wording and a layout review list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A string-by-string table with meaning, term, placeholder and plural problems
+  - Revised wording for each string that failed
+  - Unclear original labels, with clearer wording that keeps meaning and variables
+  - A layout checklist of screens and states where longer text may break
+  - A list of what could not be checked, such as a language your AI cannot judge well
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini. One that reads files works best.
+  - Paste or attach the original strings and the translated strings. Say the target language and region once at the top.
+  - Add screenshots or a screen list if you have them. Without them, the layout results are warnings, not checks.
+  - After step 2, read the table. Fix every row marked meaning changed or placeholder missing before anything else.
+  - Ask a fluent reader to check any language the summary lists as not assessed. Then look at the flagged layouts in your running app.
 how_it_works:
   - title: Plain words interface rewriter
-    text: Clarify the original labels and preserve the meaning and variables in each string.
+    text: Reads the original strings and marks unclear labels. Suggests clearer wording that keeps the meaning and every variable. Hands step 2 the original strings and a list of source fixes. Check before moving on, no variable such as {name} was changed or dropped.
   - title: Translator
-    text: Compare the source and target UI strings for meaning, glossary consistency, placeholders and plural rules; flag languages you cannot assess.
+    text: Compares each translated string with the original for meaning, set terms, placeholders and plural forms. Marks languages it cannot judge well. Hands step 3 the table of strings and their problems. Check before moving on, every string ID appears once.
   - title: Screen states designer
-    text: Check that translated strings cover all states and identify layouts requiring visual review.
+    text: Lists the screens and states each string appears in, such as empty, loading and error. Marks where translated text is longer, cut off or reads in another direction. Hands back the layout checklist. Check before moving on, any state with no translated text is listed as missing.
 output_shape: |-
-  Scope and source coverage
-  A meaning check, revised wording and a layout review list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE            <language and region>, <number of strings>, <source file names>
+
+  MEANING CHECK    <string ID> | <original> | <translation> | <meaning, term, placeholder or plural problem> | <revised wording>
+
+  SOURCE FIXES     <unclear original label> -> <clearer wording that keeps the variables>
+
+  LAYOUT CHECKLIST <screen> | <state> | <risk: longer, cut off or reversed> | <what to look at>
+
+  MISSING          <each gap, and the line it stops>
+  CHECKS MISSED    <one line each, or none>
+  NEXT STEP        <one action for you>
+output_sample:
+  input:
+    - Your original interface strings, with an ID for each if you have one
+    - The translated strings for the same IDs
+    - The target language and region
+    - Screenshots or a list of screens (optional)
+    - Your list of fixed terms (optional)
+  prerequisites:
+    - An AI that can read a strings file or a spreadsheet
+  output:
+    - name: Meaning check
+      contains: A table of each string with its meaning, term, placeholder and plural problems.
+    - name: Revised wording
+      contains: A fixed translation for each string that failed, with the reason for the change.
+    - name: Source fixes
+      contains: Unclear original labels with clearer wording that keeps their meaning and variables.
+    - name: Layout checklist
+      contains: Screens and states where longer, cut off or reversed text may break, and what to look at.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks not run, languages needing a fluent reader, and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Meaning, variables and product promises match; expansion, truncation and direction changes are checked where visible.
+  - what: A fixed terms list
+    how: Paste the terms that must always be translated the same way. Step 2 checks each term in every string.
+  - what: A right-to-left language
+    how: Say the language reads right to left, such as Arabic or Hebrew. Step 3 adds checks for mirrored layouts and icons.
+  - what: Strings with counts
+    how: Mark strings that show numbers, such as 3 items. Step 2 checks the plural forms the language needs.
+  - what: Screenshots
+    how: Attach screenshots of the translated screens. The layout checklist then names what it saw, not only what might break.
 judge:
   - Meaning, variables and product promises match; expansion, truncation and direction changes are checked where visible.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -70,5 +111,11 @@ works_best_with:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
 terms:
+  - term: Placeholder
+    meaning: A marker such as {name} or %s that the app swaps for real text.
+  - term: Plural form
+    meaning: Some languages use a different word for 1, 2 or many items.
+  - term: String
+    meaning: One piece of interface text, such as a button label or an error message.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result and file passed from one step to the next.

@@ -10,6 +10,7 @@ level: intermediate
 inputs:
   - {type: voc_reviews, required: true}
   - {type: brief, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: audit_report}
 uses: []

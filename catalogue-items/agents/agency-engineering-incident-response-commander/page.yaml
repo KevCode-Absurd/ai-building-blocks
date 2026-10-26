@@ -1,0 +1,150 @@
+name: Incident Response Commander agent
+summary: Get a clear severity call, roles, update messages and a blameless post-mortem for a tech outage. Bring the timeline, alerts and who is on call.
+headline: Incident Response Commander agent
+subhead: Describe what broke, who is affected and what you know so far. It helps you set severity, give people roles, write status updates and plan the next 15 minutes. Afterward it drafts a post-mortem and a runbook. It cannot see your systems. A person runs the fix.
+job: ship-and-host
+thinking: high
+thinking_why: Under pressure it must sort facts from guesses, keep to a clear order and avoid blaming people. Use a model that reasons carefully and says when something is unknown.
+explain: |-
+  When a site or app goes down, people pile into a chat and everyone tries to fix it at once. No one decides how serious it is, no one talks to customers and no one writes down what was tried. The fix takes longer, and the lessons are lost.
+
+  This agent plays the incident commander role. It asks for the facts you have and marks what is still unknown. It helps you pick a severity level, assign roles (a lead, a person who writes updates, a technical lead and a note taker) and set a rhythm for updates. It suggests time-boxed paths to test, so you move on if a guess is not confirmed in about 15 minutes. It drafts messages for your team, your leaders and your customers.
+
+  After the incident it drafts a blameless post-mortem. That is a review that asks what the system lacked, such as an alert or a test, and never who to blame. It adds a timeline, root causes with the "5 Whys" method, and action items with owners. It can also turn the lessons into a runbook. It works from what you tell it. It cannot read logs, join your tools or run a command.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your site or app is down or slow, and a team is in a chat trying to fix it with no clear lead.
+  - You need to tell customers or leaders what is happening, and what you know and do not know.
+  - The incident is over and you have to write the post-mortem and the follow-up actions.
+  - You want a first runbook for a failure that has happened before.
+not_for:
+  - You think you were hacked or data was stolen. Use the Incident Responder agent, which covers security incidents.
+  - A database is down or may have lost data. Use your own runbook and your database admin first. For recovery planning later, use the Database Reliability Engineer agent.
+  - You want service goals, error budgets and alert rules set up. Use the SRE agent.
+  - You want it to find the cause in your logs or fix the system. It cannot see your systems. Your engineers do that.
+you_give:
+  - What is broken, since when and who is affected.
+  - What you have seen so far, such as alert text, error messages or a graph description.
+  - Recent changes, such as a deploy or a settings change in the last day.
+  - Who is on call and who can make decisions, with their roles.
+  - Your own severity levels or on-call rules (optional)
+  - After the incident, the full timeline and what fixed it (optional)
+you_get:
+  - A severity call and why, with what would raise or lower it.
+  - Named roles and who does what.
+  - A short list of things to check next, each with a time limit.
+  - Draft status updates for your team, your leaders and your customers.
+  - After the incident, a blameless post-mortem draft with action items and owners, and a runbook draft.
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste what you know in a few lines. Say what is broken, since when, who is hurt, recent changes and who is on call. Leave out passwords and customer details.
+  - Type "Act as incident commander. Give a severity call, roles and the next 15 minutes. Mark what is unknown. Draft a first status update."
+  - Check the severity and roles with the person in charge. Send updates only after a person approves the wording.
+  - Keep pasting new facts as they come. Ask it to update the plan and the next update.
+  - After the incident, paste the timeline and ask for the post-mortem and a runbook. Review both with your team.
+how_it_works:
+  - title: Take the facts
+    text: It asks what is broken, who is affected and what changed, and marks what is unknown instead of guessing.
+  - title: Set the severity
+    text: It uses your severity levels if you have them, or offers a simple four-level scale, and says what would change the call.
+  - title: Assign roles
+    text: It names a lead, a person who writes updates, a technical lead and a note taker, and says who decides.
+  - title: Plan the next steps
+    text: It lists likely causes to check in order, each with a time limit and a way to confirm or drop it.
+  - title: Draft the updates
+    text: It writes messages for engineers, leaders and customers, each with what is known, what is not and when the next update comes.
+  - title: Write up what happened
+    text: After the incident it drafts the timeline, the causes, what went well and poorly, action items and a runbook.
+output_shape: |-
+  DURING THE INCIDENT
+
+  SITUATION
+    Broken <what> | Since <time> | Affected <who> | Recent changes <list> | Unknown <list>
+
+  SEVERITY
+    <level> | <why> | <what would raise or lower it>
+
+  ROLES
+    <role> | <name> | <what they do>
+
+  NEXT 15 MINUTES
+    <check> | <how to confirm or drop it> | <time limit> | <who>
+
+  STATUS UPDATES
+    <audience> | <message: known, unknown, next update at>
+
+  AFTER THE INCIDENT
+
+  POST-MORTEM
+    Summary | Impact | Timeline | Causes and contributing factors | 5 Whys | What went well | What went poorly | Action items <task, owner, date>
+
+  RUNBOOK DRAFT
+    Detect | Diagnose | Fix options | Verify | Who to tell
+
+  GAPS AND CHECKS
+    <missing fact> | <why it matters> | <who decides>
+output_sample:
+  input:
+    - What is broken, since when and who is affected
+    - Alerts, error messages and recent changes
+    - Who is on call and who decides
+    - After the incident, the full timeline and what fixed it (optional)
+  prerequisites:
+    - A person in charge who can approve each update before it is sent.
+  output:
+    - name: Situation
+      contains: What is broken, since when, who is affected, recent changes and what is still unknown.
+    - name: Severity
+      contains: A level with the reason, and what would raise or lower it.
+    - name: Roles
+      contains: A lead, an updates writer, a technical lead and a note taker, with what each does.
+    - name: Next 15 minutes
+      contains: Things to check in order, each with a time limit and a way to confirm or drop it.
+    - name: Status updates
+      contains: Draft messages for your team, leaders and customers, with known, unknown and next update time.
+    - name: Post-mortem
+      contains: Timeline, causes, what went well and poorly, and action items with owners and dates.
+    - name: Runbook draft
+      contains: Steps to detect, diagnose, fix and verify this failure next time.
+    - name: Gaps and checks
+      contains: Missing facts and open choices, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Pick one you can open beside your incident chat and paste into quickly. It needs no code running or web access. It only sees what you paste.
+  inputs:
+    - Your own severity levels and on-call list.
+    - A timeline copied from your incident chat or ticket.
+    - Your status page wording rules, if you have any.
+terms:
+  - term: Incident
+    meaning: An unplanned problem that hurts users or the business, such as an outage.
+  - term: Severity level
+    meaning: A scale, often SEV1 to SEV4, that shows how bad an incident is and who must act.
+  - term: Incident commander
+    meaning: The person who leads the response. They coordinate and decide. They do not have to do the fix.
+  - term: Post-mortem
+    meaning: A written review after an incident that covers what happened and what to change.
+  - term: Blameless
+    meaning: Focusing on what the system lacked, such as alerts or tests, instead of who made a mistake.
+  - term: Runbook
+    meaning: A step-by-step guide for handling a known problem.
+tweaks:
+  - what: Severity scale
+    how: Paste your own levels if you have them. If not, ask for a simple four-level scale and edit it.
+  - what: Audience
+    how: Say who needs updates, such as support, sales, leaders or customers. Each gets a different message.
+  - what: Update rhythm
+    how: Say how often you can send updates. Pick a time you can keep, even if the news is "no change".
+improve:
+  - Keep each post-mortem with its action items. Check the open items at the start of each month.
+  - Turn each repeat incident into a runbook and test the runbook once a quarter.
+  - Pair it with the SRE agent to set goals and alerts that catch the next one sooner.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

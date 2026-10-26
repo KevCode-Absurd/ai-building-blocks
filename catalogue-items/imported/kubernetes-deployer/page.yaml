@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows known manifest patterns for your app.
 new_slug: kubernetes-deployer
 name: Kubernetes deployer
-summary: Give it your app. Get manifests, Helm charts and autoscaling so it runs
-  on Kubernetes.
+summary: Deploy your app on Kubernetes with ready config files, a rollout check and autoscaling. Give it your image, copies and limits.
 job: ship-and-host
 headline: Kubernetes deployer
-subhead: Your app, running on Kubernetes, with the config files to prove it.
-  Give the container image, how many copies you want and how much CPU and memory
-  each may use.
+subhead: Your app, running on Kubernetes, with the config files to prove it. Give the container image, how many copies you want and how much CPU and memory each may use.
 explain: |
   Your app, running on Kubernetes, with the config files to prove it. Give the container image, how many copies you want and how much CPU and memory each may use. The skill first confirms your kubectl points at the right cluster and namespace. It then writes the deployment, service and ingress files, including health probes and TLS for your domain.
 
@@ -16,9 +13,12 @@ explain: |
 when:
   - You have a container image and need it running in production on Kubernetes.
   - You want the app to add copies automatically when traffic spikes.
-  - You run staging and production and want one Helm chart with different
-    settings for each.
+  - You run staging and production and want one Helm chart with different settings for each.
   - You need a domain with HTTPS pointing at your service.
+not_for:
+  - "You cannot reach a cluster with kubectl: ask your host or a teammate for access first, or use a managed app host instead."
+  - "You only need to run a one-off script: run it on your own machine or with a simple job runner."
+  - "You want a plain site or small app with no cluster: use a managed app host, which needs no config files."
 you_give:
   - Container image name and tag
   - Number of replicas and resource limits
@@ -31,8 +31,32 @@ you_get:
   - Autoscaling rules
   - A Helm chart with per-environment values (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run commands on your computer, and make sure kubectl points at your cluster.
+  - Paste this skill into your AI. Add your image and tag, copies, limits, health check path, domain, cluster and namespace.
+  - Read the files your AI writes. For production, ask it to run kubectl diff or helm diff and show you the result before it applies anything.
+  - Approve the change. Your AI applies the files and watches the rollout until every pod is healthy.
+  - Check the autoscaler targets in the result. If the rollout stalls, ask your AI to look at the pod logs or roll back.
+output_sample:
+  input:
+    - Your container image name and tag
+    - How many copies to run, and the CPU and memory limits
+    - Your health check path
+    - Your domain name for HTTPS (optional)
+    - Your target cluster and namespace
+  prerequisites:
+    - kubectl set up with access to a real cluster
+    - An AI that can run commands on your computer
+    - Helm installed, only if you want a Helm chart
+  output:
+    - name: deployment.yaml
+      contains: The app deployment with image tag, copies, CPU and memory limits, health probes and spread across nodes.
+    - name: service.yaml
+      contains: The service that makes your app reachable inside the cluster or from outside.
+    - name: ingress.yaml
+      contains: The rule that sends your domain to the service, with HTTPS from cert-manager.
+    - name: hpa.yaml
+      contains: The autoscaler with minimum and maximum copies and the CPU or memory target that adds or removes them.
+    - name: Helm chart
+      contains: Your files packaged with values for each environment, such as staging and production (optional).
+    - name: Rollout status
+      contains: A check that every pod is running and healthy, and the autoscaler targets.

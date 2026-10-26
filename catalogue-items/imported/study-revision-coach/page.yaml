@@ -2,18 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: study-revision-coach
 name: Study revision coach
-summary: Share covered topics, mistakes and your deadline. Get a focused review
-  session that starts with your weakest topics.
+summary: Plan your exam revision in one session. Share your topics, past mistakes and deadline, and get a ranked review plan that starts with your weakest topics.
 job: study-and-practice
 headline: Study revision coach
-subhead: Share the topics you covered, past mistakes and time before your exam
-  or interview. It ranks what needs review and tests recall before teaching
-  again. You get a focused session plan, practice questions and an honest list
-  of remaining gaps.
-explain: Share the topics you covered, past mistakes and time before your exam
-  or interview. It ranks what needs review and tests recall before teaching
-  again. You get a focused session plan, practice questions and an honest list
-  of remaining gaps.
+subhead: Share the topics you covered, past mistakes and time before your exam or interview. It ranks what needs review and tests recall before teaching again. You get a focused session plan, practice questions and an honest list of remaining gaps.
+not_for:
+  - "You need to learn new material first: ask your AI to teach the topic, or ask your teacher, then come back to review."
+  - "You only have one topic to review: ask your AI for a short quiz on that topic instead."
+  - "You want to build a project, not prepare for a test: work with your AI step by step on the project instead."
+explain: Share the topics you covered, past mistakes and time before your exam or interview. It ranks what needs review and tests recall before teaching again. You get a focused session plan, practice questions and an honest list of remaining gaps.
 you_give:
   - Covered topics, recurring errors and confidence notes.
   - Your deadline and time available for review.
@@ -29,9 +26,29 @@ how_it_works:
   - title: Step 3
     text: Record clean passes and choose what needs another round.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Collect your topic list, any mistakes you keep making, your deadline and how many minutes you have.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code or paid tool is needed.
+  - Paste your details. Say how confident you feel in each topic, for example from 1 (lost) to 5 (sure). This is optional.
+  - Check the ranked plan. It covers five topics at most, and the weakest come first.
+  - Answer each recall question in your own words. Your AI tests you before it teaches.
+  - Read the session summary and note which topics need another round. Paste it into your next session.
+output_sample:
+  input:
+    - The topics you have covered
+    - Mistakes you keep making (optional)
+    - Your deadline and what it is, such as an exam or interview
+    - The minutes you have for this session
+    - How confident you feel in each topic (optional)
+  prerequisites:
+    - An AI chat that can ask you follow-up questions and wait for your answers
+  output:
+    - name: Deadline and time budget
+      contains: Your deadline, the type of deadline and the minutes you have for this session.
+    - name: Prioritized topic list
+      contains: Each topic with a score out of 10, split into must-revise and should-revise, with the method for each.
+    - name: Per-topic recall and test
+      contains: Your short summary of the topic, the exercises you answered and how each one went.
+    - name: Session summary
+      contains: Which topics passed cleanly, which need another round and which can leave your review list.
+    - name: Next session recommendation
+      contains: What to review next if your deadline is still coming up.

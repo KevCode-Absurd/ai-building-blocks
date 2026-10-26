@@ -1,6 +1,6 @@
 new_slug: strongest-objection-finder
 name: "Strongest objection finder"
-summary: "Paste a plan you feel sure about. Get the three best arguments against it and a go, change or wait call."
+summary: "Test a plan you feel sure about. Paste it and get the three best arguments against it, plus a clear go, change or wait call."
 job: think-and-decide
 thinking: medium
 thinking_why: "It has to argue a side it was not given and judge how well you can answer it."
@@ -17,6 +17,10 @@ when:
   - "You feel very sure about a plan and want it tested."
   - "You must defend a choice to people who disagree."
   - "You are about to spend money or time on one big idea."
+not_for:
+  - "You want to check if a fact is true: use a fact check by a person, or look up the source yourself."
+  - "The decision is already made and cannot be undone: talk it through with someone you trust instead."
+  - "You want the full version with every check: use the Case-against writer."
 
 you_give:
   - "Your plan or opinion"
@@ -34,6 +38,26 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - Your plan or opinion
+    - Your three or four main reasons
+    - Who disagrees and what they said (optional)
+  output:
+    - name: POSITION
+      contains: Your plan in one line, with each reason marked as a fact, a guess or a value.
+    - name: OPPONENT
+      contains: Who would argue against you, and what they lose if you are right.
+    - name: THREE ARGUMENTS
+      contains: The three strongest arguments against, each with your answer rated full, part or none.
+    - name: WEAKEST ASSUMPTION
+      contains: The one assumption of yours that the arguments hit hardest.
+    - name: WOULD CHANGE MY MIND
+      contains: One test or result that should make you drop the plan.
+    - name: CALL
+      contains: Go, change or wait, with the reason in two lines.
+    - name: MISSING
+      contains: Facts you did not give, so the AI could not use them.
 
 how_it_works:
   - title: "State your position"

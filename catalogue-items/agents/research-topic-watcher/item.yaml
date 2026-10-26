@@ -16,11 +16,11 @@ outputs:
   - {type: shortlist}
 uses: [literature-review-finder, scholarly-database-searcher, paper-claim-evidence-finder, study-claim-checker, research-paper-summarizer]
 steps:
-  - {uses: literature-review-finder, note: "Once, on the first run: the key papers sorted by theme, to build your standing summary of what is known."}
-  - {uses: scholarly-database-searcher, note: "Every month: papers and preprints published since the last run, found from open databases with the search shown."}
-  - {uses: paper-claim-evidence-finder, note: "Only for new papers that touch your standing summary and have full text available: the claims with their numbers and limits."}
-  - {uses: study-claim-checker, note: "Only for a new paper that supports or goes against your standing summary: biases, weak statistics and an evidence grade."}
-  - {uses: research-paper-summarizer, note: "Only for the few papers worth reading in full, and always for one that goes against your standing summary: the key findings in plain words."}
+  - {uses: literature-review-finder, note: "Once, on the first run: the key papers sorted by theme, to build your standing summary of what is known. It hands over the themed paper list, and the first run stops there."}
+  - {uses: scholarly-database-searcher, note: "Every month: uses your topic and the date of the last run, not step 1's list. It hands over papers and preprints published since then, found from open databases with the search shown, as a ranked shortlist with full text where open."}
+  - {uses: paper-claim-evidence-finder, note: "Only for new papers on the shortlist from step 2 that touch your standing summary and have full text available. It hands over the claims with their numbers and limits."}
+  - {uses: study-claim-checker, note: "Only for a new paper whose claims from step 3 support or go against your standing summary. It hands over biases, weak statistics and an evidence grade."}
+  - {uses: research-paper-summarizer, note: "Only for the few papers worth reading in full, and always for one that goes against your standing summary. It uses the full text of that paper from step 2, not the grade from step 4, and hands over the key findings in plain words."}
 schedule: "On the first working day of each month"
 asks_before: [changing your standing summary, sending anything to a colleague, client or journal, citing a paper as settled in work you publish, paying for a database or a full-text download]
 origin: own

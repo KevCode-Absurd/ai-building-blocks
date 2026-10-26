@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adapts standard terms to your product.
 new_slug: terms-of-service-drafter
 name: Terms of service drafter
-summary: Describe your web app or marketplace. Get a Terms of Service draft to
-  review with a lawyer.
+summary: Describe your web app or marketplace and get a terms of service draft built around how you work, ready to review with a lawyer. Not legal advice.
 job: check-contracts
 headline: Terms of service drafter
-subhead: A full Terms of Service draft for your web app, SaaS or marketplace,
-  written around how your business really works. It gives you something specific
-  to take to a lawyer, in place of a generic template.
+subhead: A full Terms of Service draft for your web app, SaaS or marketplace, written around how your business really works. It gives you something specific to take to a lawyer, in place of a generic template.
 explain: |
   A full Terms of Service draft for your web app, SaaS or marketplace, written around how your business really works. It gives you something specific to take to a lawyer, in place of a generic template.
 
@@ -19,6 +16,10 @@ when:
   - You run a marketplace and need rules for buyers and sellers.
   - You take subscriptions and need clear renewal wording.
   - You allow user uploads and need a content policy.
+not_for:
+  - "Your business is in health, finance or another regulated field: talk to a lawyer directly, because a general draft will miss the rules for your industry."
+  - "You want a document to publish as is: have a lawyer review the draft first, then publish."
+  - "You need a privacy policy: ask a lawyer or a privacy policy tool, because this draft only covers terms of service."
 you_give:
   - What your product does
   - How you earn money
@@ -30,7 +31,35 @@ you_get:
   - Dispute and cancellation wording
   - Notes on clauses that may not hold up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tool are needed.
+  - Paste the full text of this skill into the chat.
+  - Below it, describe your product, how you earn money, where your company and users are, and any special risks.
+  - Ask your AI to draft the Terms of Service.
+  - Read the notes on weak clauses. Check that the draft matches how your business really works.
+  - Take the draft to a lawyer before you publish it.
+output_sample:
+  input:
+    - What your product does and who uses it
+    - How you earn money, such as subscriptions, fees or ads
+    - Where your company and your users are
+    - Special risks like user uploads or payments (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code or paid tool needed.
+    - A lawyer to review the draft before you publish it
+  output:
+    - name: Acceptance of terms
+      contains: How users agree to the terms, and who is bound when they sign up for a company.
+    - name: Account and subscription terms
+      contains: Sign-up rules, plan limits, billing, upgrades, downgrades, renewals and what happens when a payment fails.
+    - name: User responsibilities and acceptable use
+      contains: What users may do, what is banned, and when you can suspend an account.
+    - name: Liability and warranty sections
+      contains: As-is wording, a cap on what you owe, and exclusions for indirect damages.
+    - name: Dispute resolution
+      contains: Governing law, arbitration and class action wording where it holds up, and steps to try first.
+    - name: Changes and termination
+      contains: How you give notice of changes, how accounts end, and what happens to user data.
+    - name: Platform sections as needed
+      contains: Extra parts such as content license, moderation, copyright takedowns and seller payouts, if your product needs them.
+    - name: Enforceability review
+      contains: Notes on terms courts often strike down and terms that must be shown clearly.

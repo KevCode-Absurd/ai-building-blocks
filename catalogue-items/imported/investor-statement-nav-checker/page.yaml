@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It recomputes figures and compares them.
 new_slug: investor-statement-nav-checker
 name: Investor statement NAV checker
-summary: Give it an investor statement and the fund's NAV pack. Get the capital
-  account recomputed and any mismatch flagged.
+summary: Check an investor statement against the fund's NAV pack. Your AI recomputes the capital account and flags any line that does not match.
 job: money-and-investing
 headline: Investor statement NAV checker
-subhead: Proof that an investor's capital statement matches the fund's books.
-  Give it the generated statement and the period's NAV pack from the fund admin
-  system.
+subhead: Checks that an investor's capital statement matches the fund's books. Give it the statement and the period's NAV pack. You get a pass or fail for each line.
 explain: |
   Proof that an investor's capital statement matches the fund's books. Give it the generated statement and the period's NAV pack from the fund admin system. The statement is the thing under test and the pack is the source of truth.
 
@@ -18,6 +15,10 @@ when:
   - A statement figure looks off and you want to know why.
   - You close the quarter and need statements tied to fund value.
   - An auditor asks how you verify capital accounts.
+not_for:
+  - "You need audit or legal sign-off: use the fund's auditor or legal counsel, since this only checks the files you give it."
+  - "You need to fix a wrong figure: edit the input in your fund admin system, because this check never changes the statement."
+  - "You have no NAV pack for the period: get it from your fund admin first, or ask your fund accountant to run the check."
 you_give:
   - The generated investor statement
   - The NAV pack for the period
@@ -29,7 +30,27 @@ you_get:
   - The input behind each mismatch
   - A list of flags for review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add the investor statement and the NAV pack for the period. Add the prior or next statement and the commitment register if you have them.
+  - Ask your AI to run the NAV tie-out. It needs the files pasted or uploaded, and no code.
+  - Read the flags. Each one names the input behind the mismatch.
+  - "Next step: fix the flagged input in your fund admin system, then run the check again before statements go out."
+output_sample:
+  input:
+    - The generated investor statement
+    - The NAV pack for the period
+    - Prior and next period statements (optional)
+    - The commitment register (optional)
+  prerequisites:
+    - Access to the fund admin system, or the NAV pack as a file you can paste or upload
+  output:
+    - name: Line-by-line result
+      contains: A pass or fail for each statement line, checked to within one cent.
+    - name: Recomputed values
+      contains: Your AI's own figures for each capital account line, shown beside the statement values.
+    - name: Mismatch drivers
+      contains: For each mismatch, the input that causes it, such as an ownership percentage that differs.
+    - name: Extra checks
+      contains: Whether ending capital matches next period's opening, all investors sum to fund value, and commitments match the register.
+    - name: Flags for review
+      contains: A list of items for the publisher to check. The statement itself is never edited.

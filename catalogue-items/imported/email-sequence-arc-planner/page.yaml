@@ -2,34 +2,62 @@ thinking: medium
 thinking_why: It plans the order of ideas across several messages.
 new_slug: email-sequence-arc-planner
 name: Email sequence arc planner
-summary: Name the goal and buyer. Get an email series where each message builds
-  trust and sets up the next.
+summary: Plan an email sequence where each message has one job and sets up the next, from your goal and reader. Get a day-by-day plan before you write.
 job: write-ad-copy
 headline: Email sequence arc planner
-subhead: An email series where each message sets up the next, so readers keep
-  opening and the last email feels earned. Name the goal and buyer, and you get
-  a plan that paces curiosity, trust and the final ask.
+subhead: Tell it your goal and who the reader is. It plans a 3 to 8 email sequence with one job per email, a question that links each message to the next, and a clear last ask. It plans only. You write the emails after.
 explain: |
-  An email series where each message sets up the next, so readers keep opening and the last email feels earned. Name the goal and buyer, and you get a plan that paces curiosity, trust and the final ask.
+  Most email sequences fail the same way. Every email repeats the pitch, so readers stop opening by email three. An email sequence planner fixes the order before you write a word.
 
-  The skill first asks who the reader is, how aware they are, the end goal and any limits. It then gives each email one emotional job. It opens a question in one email and answers it in the next, and starts with small commitments before a larger ask. The ideas come from psychology research that the skill marks as planning ideas to test, not proven rules. It also keeps persuasion honest.
+  This one asks who the reader is, how well they know you, and what you want them to do at the end. Then it gives each email one job. One email opens a question and the next one answers it. You give value first and ask for small steps before the big one.
+
+  The ideas come from persuasion and habit research. The skill treats them as things to test, not proven rules, and it will not claim a result. It plans an email series with respect for consent: no pressure tricks, no endless cliffhangers.
 when:
-  - Your onboarding sequence repeats the same pitch.
-  - You want readers to open email three because of email two.
-  - You are planning a sales sequence for a new offer.
-  - You need each message to have one clear job.
+  - Your welcome emails all repeat the same pitch, and people stop opening.
+  - You want readers to open email three because of how email two ended.
+  - You are planning a sales sequence for a new offer and need the order.
+  - You have a draft sequence and want each message to have one clear job.
+not_for:
+  - "You want the full emails written: use the email sequence writer after this plan."
+  - "You are planning a launch with fixed dates and resends: use the launch email sequence planner."
+  - "You need a one-off message like a receipt or a password reset: use the transactional email builder."
+  - "You only want a posting plan for social posts: use the give before ask sequence planner."
 you_give:
-  - The goal of the sequence
-  - Who the reader is
-  - Where they are in awareness and trust
-  - Channel limits and send rhythm (optional)
+  - The goal of the sequence, such as a trial that turns into a paid plan
+  - Who the reader is and what they care about
+  - How well they know you today (cold, warm or ready to buy)
+  - Your send rhythm and any limits, such as 1 email a week (optional)
+  - Your draft emails, if you already have them (optional)
 you_get:
-  - A step-by-step email sequence plan
-  - One emotional goal per email
-  - Open-loop hooks that link emails
-  - Small to large ask progression
+  - A plan with one row per email, in send order
+  - One clear job per email, such as curiosity, proof or the ask
+  - A question that opens in one email and is answered in the next
+  - The value you give and the size of the ask in each email
+  - A final email with one simple, honest decision
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Paste your goal, your reader and how well they know you. Add your draft emails if you have them.
+  - Check the plan. Each email needs one job, and no email should close hard before the last.
+  - Ask for fixes where two emails do the same job or a question is left open too long.
+  - Take the plan to the email sequence writer to draft the copy. Check any stat before it goes in an email.
+output_sample:
+  input:
+    - The goal of the sequence
+    - Who the reader is and how well they know you
+    - Send rhythm and limits (optional)
+    - Your draft emails to rework (optional)
+  output:
+    - name: Sequence plan table
+      contains: One row per email with send day, its one emotional job, the open question, the value given and the ask.
+    - name: Arc summary
+      contains: How feeling and commitment build from first email to last, in a few lines.
+    - name: Loop schedule
+      contains: Which email opens each question and which one answers it, so none drags on.
+    - name: Final decision email
+      contains: A short brief for the last email, with one simple, concrete choice and no pressure.
+    - name: Claims to verify
+      contains: Any research idea or stat in the plan that you should check before using it outside.
+works_best_with: Any chat AI works, since it only plans. Add your customer research or reviews so the reader notes come from real people.
+terms:
+  - Open loop: A question you raise in one email and answer in the next.
+  - Commitment steps: Small asks, like a click or a reply, before a larger ask.

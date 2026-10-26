@@ -1,32 +1,66 @@
 new_slug: fleet-replacement-cash-comparer
 name: Fleet replacement cash comparer
 headline: Fleet replacement cash comparer
-summary: An incremental replacement cash schedule and present value
+summary: Compare replacing a fleet vehicle with keeping it. Get a cash schedule and present value of the extra cash, so you can judge a fleet replacement.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An incremental replacement cash schedule and present value. Share quoted replacement purchase cash, realizable old-vehicle sale at time zero, three annual incremental operating savings, signed new-minus-keep terminal cash difference and approved discount rate.
+subhead: Give it your replacement quote, the old vehicle's sale value, three years of savings, the end-of-term difference and your discount rate. It builds a cash schedule for replacing instead of keeping. You get the present value and a list of anything still missing.
 explain: |-
   An incremental replacement cash schedule and present value.
 
   Fleet capital decisions. Illustrative USD amounts only. Replace now costs1000 less old sale200=800 at time zero. Annual incremental operating savings are300 each; the terminal input100 is replacement sale proceeds less the keep-vehicle terminal sale forgone, so final-year incremental cash400 gives present future cash1000 at zero discount and net benefit200. With a negative terminal difference of100, future cash800 exactly covers the initial800. No depreciation or financing cash is included.
 when:
-  - You need an incremental replacement cash schedule and present value.
-  - You work on fleet capital decisions and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are deciding whether to replace a truck or van now or keep it.
+  - A manager asks you to show the cash case for a fleet purchase.
+  - You have a vehicle quote and a trade-in value and want the net cash at time zero.
+  - A reviewer needs to trace every number back to a dated source.
+not_for:
+  - "You need tax, financing or downtime effects: these need their own dated sources, so ask your accountant or finance lead."
+  - "You do not know what the old vehicle would sell for at the end: find a dated quote first, because the skill will not assume zero."
+  - "You want to decide if a vehicle is safe or due for service: ask your mechanic or fleet manager, as this only compares cash."
 you_give:
-  - Quoted replacement purchase cash, realizable old-vehicle sale at time zero, three annual incremental operating savings, signed new-minus-keep terminal cash difference and approved discount rate.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The quoted cash price of the replacement vehicle, with its date and currency.
+  - What the old vehicle would sell for today, with its date.
+  - The extra cash saved each year for three years.
+  - The difference in end-of-term sale value, replacement minus keep (can be negative).
+  - Your approved discount rate.
 you_get:
-  - An incremental replacement cash schedule and present value.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A cash schedule for time zero, years 1 to 3 and the end of term.
+  - The present value of that extra cash, and the net benefit.
+  - An editable workbook with inputs, formulas and test cases.
+  - A list of missing inputs and checks that did not run.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Gather the five inputs above, each with its date and currency.
+  - "Open Claude, ChatGPT or Gemini with a tool that can make spreadsheet files. Upload the pack and say: follow SKILL.md."
+  - Paste your inputs. If one is missing, the AI marks it MISSING and stops that part.
+  - To run the bundled calculation, use an AI that can run code with Node.js 20 or later.
+  - Read the assumptions, the reconciliations and CHECKS MISSED before you rely on the result.
+output_sample:
+  input:
+    - Quoted cash price of the replacement vehicle
+    - What the old vehicle would sell for today
+    - Extra cash saved each year for three years
+    - Difference in end-of-term sale value, replacement minus keep (can be negative)
+    - Your approved discount rate
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, to run the bundled calculation (optional)
+  output:
+    - name: Incremental cash schedule
+      contains: Cash at time zero, years 1 to 3 and the end-of-term difference, for replacing instead of keeping.
+    - name: Present value
+      contains: Future cash discounted at your rate, with undiscounted and discounted totals shown and reconciled separately.
+    - name: Scope and dated sources
+      contains: Where each input came from, with its date, currency and scale.
+    - name: Inputs and assumptions
+      contains: Every input and assumption, kept apart from reported facts.
+    - name: Model calculations and reconciliations
+      contains: The working formulas and the checks that the totals agree.
+    - name: Actual file verification
+      contains: Which workbook checks ran, such as recalculation, a changed input and reopening the file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
     text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.

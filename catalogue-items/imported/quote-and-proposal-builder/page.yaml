@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It prices from your history and writes to win.
 new_slug: quote-and-proposal-builder
 name: Quote and proposal builder
-summary: Give it your call notes, photos or an RFP. Get a branded, costed
-  proposal or quote in your own template.
+summary: Turn call notes, job photos or an RFP into a priced proposal on your own template. Build a quote you can send the same night.
 job: sell-and-negotiate
 headline: Quote and proposal builder
-subhead: Notes from a call, photos of a job, or an RFP become a branded, priced
-  proposal ready to send. It uses your own templates and past prices, so quotes
-  look the same each time and stop eating your evenings.
+subhead: Notes from a call, photos of a job, or an RFP become a branded, priced proposal ready to send. It uses your own templates and past prices, so quotes look the same each time and stop eating your evenings.
 explain: |
   Notes from a call, photos of a job, or an RFP become a branded, priced proposal ready to send. It uses your own templates and past prices, so quotes look the same each time and stop eating your evenings.
 
@@ -18,6 +15,10 @@ when:
   - A customer sent an RFP and you must respond with a price.
   - You have voice notes and photos but no written scope.
   - Your quotes come out in different formats each time.
+not_for:
+  - You sell fixed-price retail goods. Use your shop's price list or your invoicing tool's quote feature.
+  - You have no past prices or rate sheet. Write your rates down first, or ask a peer in your trade what they charge, then come back.
+  - You need a contract checked by a lawyer. Ask a lawyer to review the terms before you send them.
 you_give:
   - Call transcript, voice note, photos or RFP
   - Your proposal template
@@ -28,10 +29,30 @@ you_get:
   - Scope and exclusions
   - Signature and deposit steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions. Use one that can read uploaded files.
+  - "Say where your call notes live: Zoom, Notion, Drive, Gmail, or paste them in the chat. Add photos or the RFP if you have them."
+  - Upload your proposal template and past prices if you have them. Without prices, your AI will mark the gaps.
+  - Read the gaps and risk notes first. Fix any guessed size or cost before you trust the numbers.
+  - Download the Word or PDF file and check it against your own template. Then send it.
+  - Connected tools are optional. Each needs your account, and some need a paid plan. Apollo lead data is personal data, so use it under your own privacy rules.
+output_sample:
+  input:
+    - Your call transcript, voice note, job photos, drawings or RFP
+    - Your own proposal template (optional)
+    - Your past quotes or rate sheet (optional)
+  prerequisites:
+    - An AI that can read uploaded files and make Word and PDF files
+    - Connected accounts such as Zoom, Notion, Drive or Gmail are optional, and some need a paid plan
+  output:
+    - name: Discovery summary
+      contains: What the customer wants, their limits, what is out of scope, and any dates or budget.
+    - name: Gaps and assumptions
+      contains: The facts that are missing, and what the quote assumes for each one.
+    - name: Priced proposal
+      contains: Scope, a clear list of what is not included, priced lines, timeline and terms, on your template.
+    - name: Risk flags for you
+      contains: Notes on where the job could lose money. These are for you, not the customer.
+    - name: Word and PDF files
+      contains: The proposal ready for you to review and send yourself.
+    - name: Signature and deposit steps
+      contains: How to send it for signature and raise the deposit invoice once it is accepted.

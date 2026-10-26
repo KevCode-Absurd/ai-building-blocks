@@ -2,15 +2,10 @@ thinking: high
 thinking_why: It must tell real results from luck and avoid overclaiming.
 new_slug: ad-spend-analyst
 name: Ad spend analyst
-summary: Give it your ad exports. Get wasted spend, standout campaigns and small
-  budget tests to run next.
+summary: Find wasted ad spend and your best campaigns. Give it your ad exports and get a clear read on what works and small budget tests to run next.
 job: read-ad-results
 headline: Ad spend analyst
-subhead: Give it ad exports from each channel, your goal, your target cost per
-  sale and your total budget. It lines up the data so channels can be compared,
-  checks each campaign's health and labels what the data proves versus what it
-  only hints at. You get the wasted spend, standout performers, budget shift
-  scenarios and small tests to run next.
+subhead: Give it ad exports from each channel, your goal, your target cost per sale and your total budget. It lines up the data so channels can be compared, checks each campaign's health and labels what the data proves versus what it only hints at. You get the wasted spend, standout performers, budget shift scenarios and small tests to run next.
 explain: |
   You get a clear view of what is working and what is wasting money across your ad channels, plus small budget tests to try next. It labels what the data proves and what it only hints at.
 
@@ -20,6 +15,10 @@ when:
   - You need to decide where to move next month's budget.
   - You want to know which campaigns to cut.
   - You want test ideas that risk little money.
+not_for:
+  - You have one campaign with no sales or lead tracking. Use the platform's own report, or fix your conversion tracking first.
+  - You want new ad copy or creative ideas. Write those with your AI directly, then bring the results back here.
+  - You need a firm answer on cause and effect from a few days of data. Wait for more data, or run a simple split test.
 you_give:
   - Ad exports from each channel
   - Your goal and target cost per sale
@@ -32,7 +31,34 @@ you_get:
   - Budget shift ideas with scenarios
   - Small tests to run next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Export your ad results from each channel as a CSV, or copy the table into your chat.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code or paid tool is needed.
+  - Paste your exports, then add your goal, budget, date range and target cost per sale.
+  - Answer any questions your AI asks about changes you made during the period.
+  - Check the Limitations section first. Then pick one or two small tests from the Action Plan.
+output_sample:
+  input:
+    - Ad exports from each channel, such as Google Ads, Meta Ads or LinkedIn
+    - Your goal, such as demos, trials, purchases or leads
+    - Your total ad budget and the date range
+    - Your target cost per sale (optional)
+    - Funnel rates and average deal size (optional)
+  prerequisites:
+    - An AI that can read pasted tables or CSV files
+  output:
+    - name: Executive Summary
+      contains: The main findings, what the data proves, and the top actions to take.
+    - name: Performance Dashboard
+      contains: All channels and campaigns in one table so you can compare them side by side.
+    - name: Investigation Report
+      contains: Spend that needs review, such as campaigns with no sales or a high cost per sale, plus bounded tests.
+    - name: Candidates to Test
+      contains: Top keywords, audiences and ads that look strong so far.
+    - name: A/B Test Results
+      contains: Results of any tests you ran, with a note on whether the numbers are big enough to trust.
+    - name: Budget Reallocation
+      contains: Current versus suggested budget by channel, funnel coverage and new channels to consider.
+    - name: Action Plan
+      contains: Steps for this week, this month and next month.
+    - name: Limitations
+      contains: What the data cannot show, so you do not over-trust the results.

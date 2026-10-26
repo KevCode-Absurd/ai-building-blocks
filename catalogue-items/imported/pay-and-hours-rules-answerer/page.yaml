@@ -2,36 +2,97 @@ thinking: high
 thinking_why: The answer depends on the exact place and facts.
 new_slug: pay-and-hours-rules-answerer
 name: Pay and hours rules answerer
-summary: Ask a pay, overtime or break question and where you are. Get the rule
-  with its source. Not legal advice.
+summary: Ask an overtime, break or final pay question and name your state. Get the rule with its source and a flag if it is a close call.
 job: hire-people
 headline: Pay and hours rules answerer
-subhead: A cited answer to a pay, overtime or break question for the place you
-  actually work. It looks up the current rule instead of quoting from memory.
+subhead: Ask a pay, overtime, break, leave or final pay question and say where the person works. It looks up the current rule for that place, cites the source, and tells you if the answer is close or changing.
 explain: |
-  A cited answer to a pay, overtime or break question for the place you actually work. It looks up the current rule instead of quoting from memory. It is not legal advice.
+  Overtime, breaks and final pay rules differ by state and country, and the numbers change often. This pay and hours rules answerer is built so it never quotes a rule from memory. It researches the rule for your place, names the source, and tags each cite by where it came from.
 
-  You ask something like whether a role is exempt from overtime, how meal breaks work or when final pay is due, and say the state or country. It researches that place's rules, names the source, and says when the answer is close or changing. Pay thresholds and exemption tests shift often and differ by state, so it never states them unchecked. It asks for the location if you leave it out.
+  You ask something like "Is a salaried assistant in California exempt from overtime?" or "When is final pay due after someone quits?" It states the rule in one paragraph. Then it says if the case is clear, close or in flux, so you know when to stop and ask a lawyer.
+
+  If your AI has no research tool, it says the answer is not verified and tags every cite "verify". If the place is missing, it asks. It is not legal advice.
 when:
   - You are not sure if a role needs overtime pay.
-  - An employee asks about breaks or leave.
-  - You must know when final pay is due after someone leaves.
-  - You are deciding how to classify a worker.
+  - An employee asks about meal breaks, rest breaks or leave.
+  - You need to know when final pay is due after someone leaves.
+  - You want to know if accrued PTO must be paid out in your state.
+not_for:
+  - "You must decide if someone is an employee or a contractor: use the Employee or contractor checker."
+  - "You plan to fire someone and want the risks: use the Termination risk checker."
+  - "You need a final back-pay figure to pay or claim: use a wage and hour lawyer. The skill only sets out the method."
 you_give:
   - Your question
-  - State or country
-  - Role details such as pay and duties (optional)
+  - The state or country where the person works
+  - Role details such as pay, duties and hours (optional)
+  - Bonus or commission detail, if the question is about back pay (optional)
 you_get:
-  - Rule for your location
-  - Source link or citation
-  - Note on close calls
-  - Flag if the law is changing
+  - The rule for that place, in one paragraph, with its source
+  - A tag on each source showing where it came from
+  - A flag saying clear, close call, changing, or not verified
+  - A note if the answer differs in other places you named
+  - Two to four next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web for the current rule.
-  - Where the skill points to /employment-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini with web search turned on. A legal research tool such as Westlaw or CourtListener is better if you have one.
+  - Paste in the skill, then your question and the place. Add pay, duties and hours for exemption questions.
+  - Read the flag first. If it says close call, changing or not verified, check with a lawyer before you act.
+  - Open each cited source yourself. Any tagged "verify" must be checked before you rely on it.
+  - Keep the answer with its date. Rules change, so ask again before you use it next year.
+output_sample:
+  input:
+    - Your pay, overtime, break, leave or final pay question
+    - The state or country where the person works
+    - Role details such as pay, duties and hours (optional)
+  prerequisites:
+    - An AI with web search, or a legal research tool, so the rule is looked up and not recalled
+  output:
+    - name: The rule
+      contains: One paragraph stating the rule for your place, with a pinpoint cite and its effective date.
+    - name: Flag
+      contains: Whether the answer is clear, a close call, changing, or not verified.
+    - name: Other places
+      contains: A line on whether the answer differs in other places you named.
+    - name: Sources
+      contains: Each cite tagged with its origin, such as web search or model knowledge, so you know what to check first.
+    - name: Next steps
+      contains: Two to four options, such as get more facts, ask a lawyer or watch for a rule change.
+how_it_works:
+  - title: Fix the place
+    text: Asks where the person works if you didn't say, since the answer holds only for that place.
+  - title: Research the rule
+    text: Looks up the rule in force now and cites the statute, rule or case, with the date it took effect.
+  - title: Stop on thin results
+    text: If the search finds little, it reports that and asks before using web search or memory.
+  - title: Tag every source
+    text: Marks each cite by origin so you know which ones carry the most risk of being wrong.
+  - title: Handle back pay carefully
+    text: For back-pay questions it shows the method and the inputs and asks for what is missing before it computes.
+  - title: Flag the call
+    text: Says plainly if the case is clear, close, changing or unverified.
+output_shape: |-
+  <PLACE>: <the researched rule in one paragraph, with cite, source tag and effective date>
+
+  Close call or changing law: <flag, or "Clear on the researched rule">
+
+  Other places: <one line, if the answer differs>
+
+  Sources: <cite | tag> | Not verified: <anything unchecked>
+
+  Next steps: <2 to 4 options>
+works_best_with:
+  tools:
+    - name: Any chat AI with web search
+      why: The rule must be looked up and cited, not recalled.
+    - name: Westlaw or CourtListener
+      why: They give primary sources with cites you can check. Westlaw is a paid service.
+  inputs:
+    - The employee's job title, duties and pay
+    - Typical hours and the pay period
+    - Any bonus, commission or shift pay
+terms:
+  - term: Exempt
+    meaning: A role not owed overtime pay because it meets a pay level and a duties test.
+  - term: Pinpoint cite
+    meaning: A reference to the exact section or page of a law or case, not only its name.
+  - term: Regular rate
+    meaning: The hourly pay figure overtime is based on. It can include bonuses, not only the hourly wage.

@@ -1,6 +1,6 @@
 new_slug: category-search-plan-builder
 name: "Category search plan builder"
-summary: "Pick one product category. Get a 90-day plan of what to publish, where, and in what order."
+summary: "Build a 90-day category search plan: pick one product category and get what to publish, where, and in what order, plus 5 searches to track."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It builds a long plan from your pages and rivals, so it needs steady reasoning more than deep analysis."
@@ -17,6 +17,10 @@ when:
   - You sell in several categories and don't know where to put your search effort first.
   - You want a quarter-long content plan for one collection, with a clear order.
   - You want a plan that covers both Google results and AI answers for one product type.
+not_for:
+  - "You want to plan several categories at once: run this once per category, one quarter each, and start with the best margin."
+  - "You need paid ads: use a plain ad plan or talk to your ad person, because this plan covers search only."
+  - "You have a brand-new store with no pages yet: build the category page and a few product pages first, then come back."
 
 you_give:
   - The one category to win (the collection page and 3 or 4 of its product pages)
@@ -36,6 +40,32 @@ how_to_use:
   - Say who will do the work and the hours a week they have. A solo owner gets a smaller plan.
   - Paste any Search Console or crawl numbers and your main rivals if you have them.
   - Cut the topic list yourself (about one in five will be weak), then start with the first week.
+output_sample:
+  input:
+    - Your category page link and 3 or 4 of its product pages
+    - Who will do the work and the hours a week they have
+    - Search Console, GA4 or a crawl export (optional)
+    - 5 to 10 named competitors (optional)
+    - Your brand voice and what you may claim (optional)
+  output:
+    - name: CATEGORY
+      contains: The one category the plan covers and whether it runs for one quarter or two.
+    - name: WHAT YOU HAVE
+      contains: Your category pages, the assets found on the topic, and the gaps.
+    - name: 5 CORE QUERIES
+      contains: Five searches with different intent, each with a starting record in classic results, AI answers, citations and video.
+    - name: TOPIC MAP
+      contains: Topics by buyer awareness stage, most aware first, each marked as an FAQ or its own page, with a channel.
+    - name: PUBLISH ORDER
+      contains: Your own site first, then owned channels that get indexed, then earned placements and the budget they need.
+    - name: 90-DAY PLAN
+      contains: Week by week assets, with an owner for each task and who shares each post.
+    - name: SIZE
+      contains: The number of assets in the plan compared with what your hours allow.
+    - name: CHECKS
+      contains: What to re-check at day 30, 60 and 90, and whether to stay or move on.
+    - name: MISSING
+      contains: Anything you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: Picks one category

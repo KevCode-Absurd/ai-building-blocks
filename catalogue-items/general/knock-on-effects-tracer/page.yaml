@@ -1,62 +1,99 @@
 new_slug: knock-on-effects-tracer
 name: "Knock-on effects tracer"
-summary: "Paste a change you plan to make. Get what it causes, what that causes, and what to watch."
+summary: "Paste a planned change, such as a price, rule or bonus. Get what it causes, what that causes next, and three signs to watch."
 job: think-and-decide
 thinking: medium
 thinking_why: "It has to reason through chains of cause and effect, not just list them."
 
 headline: "Knock-on effects tracer"
-subhead: "Paste a change you plan to make. Your AI follows it through three steps of cause and effect, flags what it rewards by accident, and gives you three signs to watch."
+subhead: "Paste a change you plan to make and the result you want. Your AI follows it through three steps of cause and effect, flags what it pays people to do by accident, and gives you three signs to watch, each with what to do if it shows."
 
 explain: |
-  Most changes work as planned for the first week. The trouble comes next, when customers, staff or competitors react. A discount trains buyers to wait. A sales bonus on volume pushes people to cut quality.
+  Most changes work as planned for the first week. The trouble comes next, when customers, staff or competitors react. A discount can train buyers to wait for the next one. A sales bonus on volume can push people to cut quality.
 
-  This prompt follows the chain: what happens first, who reacts, and what that causes. It also asks what the change now rewards. You end with three early signs to watch and what to do if they show.
+  This knock-on effects tracer follows the chain for each group the change touches: what happens first, who reacts, and what that causes. It also asks what the change now rewards, since people do more of whatever pays. You end with three early signs you can count and an action for each.
+
+  It is the short, quick version. It gives a chain in plain lines, not sums. To work out how much of a gain you keep, how people could game the new rule, and a reworked plan, use the Second-order effects tracer.
 
 when:
-  - "You are about to change a price, a rule or a bonus."
+  - "You are about to change a price, a rule, a bonus or a process."
+  - "You plan a discount and want to know what buyers will do after it ends."
   - "A change worked at first and then something odd happened."
-  - "You want to explain a plan to people who will push back."
+  - "You need to explain a plan to people who will push back."
+
+not_for:
+  - "You want to know how much of a gain you keep, or a reworked plan. Use the Second-order effects tracer."
+  - "The change is already made and a result surprised you. Use the Surprise cause ranker."
+  - "You are choosing between options, not tracing one change. Use the Pros and cons decision planner."
+  - "It is a cost cut that no customer or staff member will notice. There is no chain to trace."
 
 you_give:
-  - "The change and the result you want"
-  - "Who is affected (optional)"
-  - "Current numbers (optional)"
+  - "The change you plan, in one or two lines"
+  - "The result you want from it"
+  - "Who is affected, such as customers, staff or partners (optional)"
+  - "Current numbers, such as prices and volumes (optional)"
 
 you_get:
-  - "A chain of effects by group"
-  - "Any behaviour the change pays for by accident"
-  - "A watch list of three early signs"
+  - "A chain of effects for each group: first, second and third"
+  - "Anything the change pays people to do by accident"
+  - "A watch list of three signs you can count, each with what to do if it shows"
 
 how_to_use:
-  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
-  - "Paste your details under it, in the slots under What you need."
-  - "Send it and read the answer against the checks on this page."
+  - "Copy the prompt (the card on this page) and paste it into Claude, ChatGPT or Gemini. Or open it if you added it to your AI."
+  - "Under it, write the change, the result you want and who is affected. Add real numbers if you have them. If you send no change, it asks for one and stops."
+  - "Read the unintended rewards first. Ask: could someone do the wrong thing here and still get paid?"
+  - "Pick the watch signs you can count within a month. Put a check date in your calendar."
   - "Reply with what to change, and keep the version that works."
 
 how_it_works:
-  - title: "State the change"
-    text: "And the result you want."
-  - title: "List first effects"
-    text: "Who feels it right away."
-  - title: "Follow the reactions"
-    text: "Second and third effects."
-  - title: "Check the rewards"
-    text: "What behaviour the change pays for."
-  - title: "Pick three signs"
-    text: "With what to do if they show."
+  - title: "States the change"
+    text: "Writes the change in one line, with the result you want."
+  - title: "Lists first effects"
+    text: "What happens right away, and who feels it."
+  - title: "Follows the reactions"
+    text: "Who changes what they do because of it, and what that causes. Once more for the biggest."
+  - title: "Checks the rewards"
+    text: "Asks what each group is now paid or praised for, and flags anything you did not mean to reward."
+  - title: "Picks three signs"
+    text: "The three effects that matter most, each with a sign you can count and what to do if it shows."
 
 output_shape: |
   CHANGE
-  <one line> - Wanted result: <line>
+  <one line> | Wanted result: <line>
+
   EFFECT CHAIN
-  <group>: first - second - third
+  <group>: <first> > <second> > <third>
+
   UNINTENDED REWARDS
-  <lines or none>
+  <lines, or none>
+
   WATCH LIST
-  1. <sign> - If it shows: <action>
+  1. <sign you can count> | If it shows: <action>
+  2. ...
+  3. ...
+
   MISSING
-  <lines>
+  <numbers or facts you did not give>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "The change you plan, and the result you want from it"
+    - "Who is affected (optional)"
+    - "Current numbers, such as prices and volumes (optional)"
+  output:
+    - name: "CHANGE"
+      contains: "Your change in one line, with the result you want from it."
+    - name: "EFFECT CHAIN"
+      contains: "For each group, a short line of first, second and third effects."
+    - name: "UNINTENDED REWARDS"
+      contains: "Any behaviour the change pays for that you did not mean to, or none."
+    - name: "WATCH LIST"
+      contains: "Three signs you can count within a month, each with what to do if it shows."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Numbers you did not give, and one line for each of its own checks it missed."
 
 tweaks:
   - what: "Groups"
@@ -92,3 +129,5 @@ works_best_with:
 terms:
   - term: "Second effect"
     meaning: "What happens because people react to the first effect."
+  - term: "Unintended reward"
+    meaning: "A behaviour the change pays for that you did not plan to pay for."

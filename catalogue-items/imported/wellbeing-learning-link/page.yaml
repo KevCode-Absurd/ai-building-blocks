@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must link claims to real evidence.
 new_slug: wellbeing-learning-link
 name: Wellbeing and learning link mapper
-summary: Give it a wellbeing programme. Get the evidence linking it to academic
-  results, for reports and funding cases. Not medical advice.
+summary: Map the evidence linking a school wellbeing programme to learning results. Get a case for governors, funders or inspectors. Not medical advice.
 job: teach-and-train
 headline: Wellbeing and learning link mapper
-subhead: The case, in evidence, for how a wellbeing programme helps academic
-  results. It gives you wording for governors, leaders, parents or inspectors
-  who ask why you spend time and money on it.
+subhead: The case, in evidence, for how a wellbeing programme helps academic results. It gives you wording for governors, leaders, parents or inspectors who ask why you spend time and money on it.
 explain: |
   The case, in evidence, for how a wellbeing programme helps academic results. It gives you wording for governors, leaders, parents or inspectors who ask why you spend time and money on it.
 
@@ -18,6 +15,10 @@ when:
   - Governors ask how it improves attainment.
   - You are choosing between two wellbeing initiatives.
   - You must write the rationale section of a school improvement plan.
+not_for:
+  - "You need proof that your programme caused results: use an evaluation plan, or ask a researcher to design one."
+  - "You want to replace your own school's outcome data: gather attendance, behaviour and attainment figures and use those."
+  - "You need medical or clinical advice for a pupil: speak to a qualified professional, such as your school's safeguarding or health lead."
 you_give:
   - The wellbeing programme
   - Your school context and phase
@@ -30,7 +31,29 @@ you_get:
   - Expected outcomes with timeframes
   - Short statement for school leaders
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste in the skill instructions from this page.
+  - Add your programme description, school phase and context, the outcomes you hope for, and who will read the case.
+  - Add attendance or survey data if you have it (optional).
+  - Read the result. Check every study and figure against the original source before you put it in a bid or report.
+  - Add your own school's data to the rationale before you share it.
+output_sample:
+  input:
+    - Your wellbeing programme, described in a few lines
+    - Your school context, such as phase, pupils and main challenges
+    - The outcomes you hope for (optional)
+    - Attendance, behaviour or survey data (optional)
+    - Who will read the case, such as governors, parents or inspectors (optional)
+  output:
+    - name: Causal Pathway
+      contains: A step-by-step chain from the programme to the learning outcomes it should affect.
+    - name: Mechanism Analysis
+      contains: How the programme is expected to change pupil behaviour, attention and motivation, linked to research.
+    - name: Expected Outcomes
+      contains: Likely results at pupil, class and school level, with realistic timeframes.
+    - name: Conditions for Impact
+      contains: What must be in place for the programme to work, such as training and time.
+    - name: Leadership Rationale
+      contains: A short statement you can use with leaders, governors, parents or inspectors.
+    - name: Honest Caveats
+      contains: The limits of the evidence and what the case cannot show.

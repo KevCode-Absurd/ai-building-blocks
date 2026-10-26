@@ -2,38 +2,64 @@ thinking: medium
 thinking_why: It follows a defined test protocol with many variants.
 new_slug: car-safety-test-scenario-maker
 name: Car safety test scenario maker
-summary: Name the Euro NCAP test. Get its scenario and variants made, plotted
-  and exported with scores.
+summary: Set up a Euro NCAP braking test in MATLAB. Get the test scenario, its variants, plots and scores. Made for automotive simulation engineers.
 job: build-software
 headline: Car safety test scenario maker
-subhead: Name the Euro NCAP test you care about and get its driving scenario
-  built, varied, plotted and scored. The skill creates the starting scenario for
-  the test, makes variants from it, and moves the scenarios between two
-  simulators.
+subhead: Name a Euro NCAP test and its protocol year. Your AI writes MATLAB code that builds the test scenario, makes variants, plots them and moves them between two simulators. For the 2026 protocol it also scores the results and exports a report.
 explain: |
   Name the Euro NCAP test you care about and get its driving scenario built, varied, plotted and scored. The skill creates the starting scenario for the test, makes variants from it, and moves the scenarios between two simulators.
 
   It picks the right route by protocol year. For 2023 it uses the standalone scenario call with prefixes like SA AEB. For 2026 it sets up an assessment object, can set a custom vehicle under test, then builds the scenario. After that you can plot single or grouped scenarios, translate them between drivingScenario and RoadRunner, compute scores and export reports. You need MATLAB with the automated driving tools and the NCAP support package.
 when:
   - You need a Euro NCAP car-to-car braking test set up in simulation.
-  - You want many variants of one test to check how sturdy your braking system
-    is.
-  - You must move a scenario between two simulators.
-  - You need NCAP scores and a report from your results.
+  - You want many variants of one test to see how well your braking system holds up.
+  - You must move a scenario between drivingScenario and RoadRunner.
+  - You need NCAP scores and a report from your simulation results.
+not_for:
+  - "You want to build a driving scene from scratch with roads, lanes and cars: use the drivingScenario tools in MATLAB directly."
+  - "You need to manage RoadRunner projects or import assets: use the RoadRunner tools for that."
+  - "You need a Simulink test bench for your braking system: set that up in Simulink first, then bring the scenarios in."
 you_give:
-  - The Euro NCAP test name and protocol year
-  - MATLAB with the driving and NCAP support packages
+  - The Euro NCAP test name, such as CCFtap
+  - The protocol year, 2023 or 2026
   - A custom vehicle under test (optional)
-  - Variation settings (optional)
+  - Your simulation results, to fill the score table (optional)
 you_get:
-  - A seed scenario for the named test
-  - Generated variants
-  - Plots of scenario descriptors
-  - Translated scenarios for another simulator
-  - NCAP scores and exported reports
+  - A starting scenario for the test you named.
+  - Many variants of that scenario.
+  - Plots of one scenario or a grid of them.
+  - Scenarios translated for another simulator.
+  - An NCAP score and a report file, built from the results you supply.
+  - A report to share with your test team or compare with physical test results.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Euro NCAP support package.
+  - Check you have a paid MATLAB licence, the Automated Driving Toolbox and the Euro NCAP support package. Without them the code will not run.
+  - Paste the skill into an AI that can run MATLAB code, or ask it to write code you run yourself.
+  - Say the test name and the protocol year. For 2023 use names like SA AEB CCFtap. For 2026 use names like CA FC CCFtap.
+  - Ask for the seed scenario first, then the variants, then plots.
+  - For scores, replace the zero placeholder values in the assessment table with real simulation results. A score or report built from zeros is not a real result. Do not share it as one.
+  - Export the report and share it with your test team.
+output_sample:
+  input:
+    - The Euro NCAP test name, such as CCFtap
+    - The protocol year, 2023 or 2026
+    - A custom vehicle under test (optional)
+    - Your own simulation results, to fill the score table (optional)
+  prerequisites:
+    - A paid MATLAB licence with the Automated Driving Toolbox
+    - The Euro NCAP support package for the Automated Driving Toolbox
+    - An AI that can run MATLAB code
+  output:
+    - name: Seed scenario
+      contains: The starting driving scenario for the test you named, as a scenario descriptor.
+    - name: Variants
+      contains: Many versions of the seed scenario, made with the AllScenarios option.
+    - name: Descriptor plots
+      contains: Plots of one scenario or a grid of scenarios, with play and seek for animation.
+    - name: Translated scenarios
+      contains: The same scenarios moved between drivingScenario and RoadRunner.
+    - name: Assessment table
+      contains: A table of test results for you to fill in with real simulation values.
+    - name: NCAP score
+      contains: The total score and the score available, worked out from your filled table.
+    - name: Report
+      contains: A report figure for the test, exported to a file with exportReport.

@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It picks patterns and lays out the steps.
 new_slug: user-flow-designer
 name: User flow designer
-summary: Describe a goal. Get a step-by-step user flow and navigation layout
-  built on proven patterns.
+summary: Turn a goal into a user flow and navigation layout. Get a step-by-step flow, a screen list and error states for your app.
 job: design-work
 headline: User flow designer
-subhead: Say what a person wants to do in your app, and get a clear flow from
-  first tap to done, plus a navigation layout that fits it.
+subhead: Say what a person wants to do in your app, and get a clear flow from first tap to done, plus a navigation layout that fits it.
 explain: |
   Say what a person wants to do in your app, and get a clear flow from first tap to done, plus a navigation layout that fits it. Every step has a way in, a way out and a way back from errors.
 
@@ -17,18 +15,41 @@ when:
   - Onboarding has too many steps and people give up.
   - You want a navigation plan before a designer builds mockups.
   - You need to explain a flow to a developer in one page.
+not_for:
+  - "You need one finished page built: ask your AI to build that single screen once the flow is settled."
+  - "You want the words on each screen: write the copy after the flow is settled, with your AI or a copywriter."
+  - "You need pixel-perfect mockups or a map of a whole product: use a design tool, or pick one flow and start there."
 you_give:
   - The goal the user wants to reach
   - Who the user is and what device they use
   - Existing screens or components (optional)
   - Any steps that must happen, such as sign in
 you_get:
-  - A flow diagram from entry to exit
-  - A navigation pattern choice
-  - Error and loading states for each step
-  - A screen list in order
+  - A text flow diagram from entry to exit
+  - "A navigation pattern choice: hub and spoke, straight line or tabs"
+  - A screen list with the purpose of each screen
+  - Empty, error and loading states for each screen
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Write the goal in one line, for example the task a person wants to finish in your app.
+  - Add who the user is, what device they use and any steps that must happen.
+  - If you have design notes or a component list, paste them in. If not, say so and your AI will use common patterns.
+  - Read the flow diagram first. Check that each screen has a way in, a way out and a way back from errors.
+  - Ask for the page files only if your project uses the same parts. This step needs your AI to write code files.
+output_sample:
+  input:
+    - The goal your user wants to reach
+    - Who the user is and what device they use
+    - Screens or parts you already have (optional)
+    - Steps that must happen, such as sign in (optional)
+  prerequisites:
+    - Your app's design notes or component list, if you have them (optional)
+  output:
+    - name: Flow diagram
+      contains: A text diagram showing how screens connect, from the first screen to the exit.
+    - name: Screen inventory
+      contains: Each screen with its purpose and the main parts on it.
+    - name: Edge cases
+      contains: Empty, error and loading states for each screen, with a way to recover.
+    - name: Scaffolded pages
+      contains: Starter page files with a top bar and bottom navigation, if your project has those parts.

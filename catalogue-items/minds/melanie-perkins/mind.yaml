@@ -16,6 +16,31 @@ use_cases:
   - "Design a free version that gives real value and still leads to paid plans"
   - "Plan how a business could do good once it succeeds"
   - "Organise a team around a few clear goals"
+not_for:
+  - "You need a legal or financial review of a finished pitch deck: use a lawyer or a finance adviser."
+  - "You want to value a company or check the numbers behind a deal: use the Aswath Damodaran mind."
+  - "You want advice on what Canva is doing now, or a quote from a private meeting: her record is public articles and interviews, so use her own latest posts."
+output_sample:
+  input:
+    - Your product, pitch or team problem in a few lines
+    - Who you want to reach, and who uses it now
+    - What you have tried and what happened, such as rejections or feedback
+    - Your limits, such as time, money or team size
+  output:
+    - name: The real problem
+      contains: Who has the problem, how many people share it, and where your pitch or product does not yet show it.
+    - name: Beginner test
+      contains: Where a first-time user gets stuck, and a first small win they could reach in minutes.
+    - name: Simplest fix
+      contains: Fewer steps, with templates or defaults, so a beginner gets something good quickly.
+    - name: Small first market
+      contains: The narrowest group that has the problem badly, and what to learn there before going wide.
+    - name: What the rejection taught
+      contains: What each no may say about the problem, the market or the team, and what to change.
+    - name: Big goal and next step
+      contains: One very big goal, then the first small step toward it and what to hand off next.
+    - name: Open doubts
+      contains: What she is unsure of, and what falls outside her recorded views.
 seats:
   - {seat: "Making hard things simple", asks: "How long does it take a beginner to get value from this, and how do we make it minutes?"}
   - {seat: "Persistence in the pitch", asks: "What did the last 'no' teach us, and how do we prove the problem is real?"}

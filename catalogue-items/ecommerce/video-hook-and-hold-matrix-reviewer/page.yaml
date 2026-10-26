@@ -1,6 +1,6 @@
 new_slug: video-hook-and-hold-matrix-reviewer
 name: Video hook and hold matrix reviewer
-summary: Use view counts to place video ads in a hook and hold matrix. Get fixes for each weak point.
+summary: Find which video ads lose people early or late. Give it your view counts. You get a hook and hold matrix with a fix for each ad.
 job: read-ad-results
 headline: Video hook and hold matrix reviewer
 subhead: Share video impressions, three-second views, later views and conversion results. Get metric math, four-quadrant labels and fixes for each ad.
@@ -12,6 +12,10 @@ when:
   - You need metric math, four-quadrant labels and fixes for each ad.
   - You need video hook and hold matrix reviewer for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "You only have static or carousel ads: the hook and hold math needs video views, so compare clicks and sales by hand or in your ads report."
+  - "Your ads have very little spend or few views: the labels will be unsure, so wait for more data before you act."
+  - "You want to know whether to raise budget or pause an ad: use your sales and profit numbers, because this only reads attention."
 you_give:
   - Video impressions
   - Three-second views
@@ -20,9 +24,29 @@ you_get:
   - Metric math, four-quadrant labels and fixes for each ad
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Paste your numbers for each video ad: impressions, three-second views, later views, video length, spend and conversions."
+  - Say which later-view count you used, and set your own high and low cutoffs if you have them.
+  - Read the metric table first. Check the counts against your ads report.
+  - Pick one or two ranked tests and run them. Treat any budget change as your own decision.
+output_sample:
+  input:
+    - Impressions for each video ad
+    - Three-second views for each ad
+    - Later views for each ad, such as ThruPlay
+    - Video length, spend and conversion results for the same dates
+    - Link clicks (optional)
+  output:
+    - name: Metric table
+      contains: Hook rate, hold rate and click rates for each ad, with the counts used and notes on what each number means.
+    - name: Matrix placement
+      contains: Each ad placed as high or low on opening and on retention, or marked unsure when close to the line.
+    - name: Creative hypotheses
+      contains: What each quadrant may mean for the ad, written as ideas to test and not as verdicts.
+    - name: Ranked tests
+      contains: Specific changes to try, such as a new first frame or a clearer link from promise to body.
+    - name: Evidence gaps
+      contains: Missing fields, checks not run, assumptions made and the review plan.
 how_it_works:
   - title: Check the inputs
     text: Confirm video impressions, three-second views, later views and conversion results. Mark facts that are missing.

@@ -14,6 +14,35 @@ when:
   - Your products run out, such as food, skincare, supplements or refills, and buyers don't come back on time.
   - You send the same reorder email to everyone and want it to fit each buyer.
   - You want to know which branch of a flow earns before you build more.
+not_for:
+  - "Your products are one-off buys, like furniture, where nobody needs a refill: use Plan a month of campaign emails that sell without discounts."
+  - "You need welcome, cart and browse emails first: use Roll out your welcome, cart and browse emails."
+  - "You want to restock your own shelves, not email buyers: use Reorder stock before you run out and track the shipment."
+  - "You sell on subscription and want to cut cancellations: use Launch a subscription and keep your subscribers."
+output_sample:
+  input:
+    - Your products and how many days each one lasts
+    - Your past order dates, to find the real gap between orders (optional)
+    - Your offer and the most you can discount (optional)
+    - Your brand brain (optional)
+    - Flow and campaign numbers exported after 30 days
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - An email tool, such as Klaviyo or Mailchimp, where you build the flows yourself
+  output:
+    - name: "Step 1: Reorder plan"
+      contains: For each product, the run-out day, a refill nudge day, a second-order nudge, an offer rule and who to skip.
+    - name: "Step 2: Customer stage flow map"
+      contains: New, returning and loyal buyer paths, each with a goal, a tone, an incentive rule and an offer check against margin.
+    - name: "Step 3: Dynamic block plan"
+      contains: Show and hide rules with exact field values, product feed blocks, abandonment blocks and a test list.
+    - name: Pause
+      contains: You build the flows in your email tool, run them for 30 days and export the numbers.
+    - name: "Step 4: Email and SMS review"
+      contains: Findings ranked with evidence, flow revenue, list growth, the branch that earned and a score out of 100.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
+
 you_give:
   - Your products and how long each one lasts
   - Past order dates, to find the real gap between orders (optional)

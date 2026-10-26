@@ -43,12 +43,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Untapped avatar finder.** Use the skill `untapped-avatar-finder`. Finds outlier buyer groups in reviews and rival ads that the category leaders ignore.
+1. **Untapped avatar finder.** Use the skill `untapped-avatar-finder`. Finds outlier buyer groups in reviews and rival ads that the category leaders ignore. Hands the ranked pick and a first buyer profile to step 2.
 
 Pause here: Spend an hour in the forums and review threads where the chosen group talks, and save the posts.
 
-2. **Forum and review avatar digger.** Use the skill `forum-and-review-avatar-digger`. Pulls the group's own words and worries from what you saved. Starts from the group chosen in the step before.
-3. **Buyer brief writer.** Use the skill `buyer-brief-writer`. Give it the voc reviews from the steps before. Writes the half-page brief from those words. Reads the quotes from the step before.
+2. **Forum and review avatar digger.** Use the skill `forum-and-review-avatar-digger`. Pulls the group's own words and worries from what you saved. Starts from the buyer profile step 1 picked, and hands the quotes and buyer sketch to step 3.
+3. **Buyer brief writer.** Use the skill `buyer-brief-writer`. Give it the voc reviews from the steps before. Writes the half-page brief from those words. Reads the quotes from the step before and hands the brief to step 4.
 4. **Ad angle planner.** Use the skill `ad-angle-planner`. Give it the brief from the steps before. Turns the brief into angles to test. Reads the brief from the step before.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

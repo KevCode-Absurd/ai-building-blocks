@@ -1,30 +1,26 @@
 new_slug: traction-unconventional-pr
 name: Publicity experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a small publicity experiment for your software product. Paste your link. You get a test with cost limits, measures and stop rules.
 job: plan-strategy
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Publicity experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused unconventional pr plan for your product. It reads the buyer and
-  offer, checks why this channel might work and writes a small test. The default
-  is SaaS; you can ask for general-business mode.
+  A focused unconventional pr plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Storyboard or privately demonstrate one concept to a small relevant group.
-  Check comprehension and willingness to share before funding an event.
+  Storyboard or privately demonstrate one concept to a small relevant group. Check comprehension and willingness to share before funding an event.
 
 
-  Raw reach may reward a spectacle that attracts no buyers. Exclude fabricated
-  controversy, deceptive demonstrations and unsolicited public actions.
+  Raw reach may reward a spectacle that attracts no buyers. Exclude fabricated controversy, deceptive demonstrations and unsolicited public actions.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "Your buyers never share things in public: use the Traction workflow to pick a channel that fits them better."
+  - "You have no cash limit and no hours to give: set both first, or ask a person you trust to set them with you."
+  - "You want to compare all 19 growth channels: use the Traction workflow, not this single-channel planner."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -34,21 +30,47 @@ you_get:
   - A small test with an owner, cost cap and decision rule
   - The next action and what needs approval
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Open Claude, ChatGPT or Gemini and paste the skill. Web access helps it read your site.
+  - Paste your product link. Add your goal, buyer, budget and time limits if you know them.
+  - If it cannot open your page, paste your homepage and pricing text.
+  - Read the plan. Check that the evidence matches your business and that the buyer would share this action.
+  - Approve or change the cash cap and hours cap. Nothing is spent or published until you say so.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and time limits (optional)
+    - Past tests and their results (optional)
+  prerequisites:
+    - An AI that can browse the web helps. If not, paste your page text.
+  output:
+    - name: Recommendation
+      contains: Whether to test now, test later or skip, with the reason.
+    - name: Evidence
+      contains: Each fact with its source link, the date it was read and what it means.
+    - name: Buyer and useful action
+      contains: Who the buyer is and the first useful thing they do in your product.
+    - name: Channel mechanism
+      contains: How attention from a stunt would lead a buyer to real value.
+    - name: Pilot
+      contains: The idea, audience, offer, deliverable and owner for one small, reversible test.
+    - name: Limits
+      contains: Cash cap, hours cap and date, marked as proposed or approved.
+    - name: Measurement
+      contains: What to count, which group to count, and how to credit results.
+    - name: Decision
+      contains: The rule for when to continue, revise or stop.
+    - name: Risks and next action
+      contains: Reputation and workload risks, and the next step that needs your approval.
+    - name: MISSING
+      contains: The facts the plan still needs from you.
 how_it_works:
   - title: Check 1
-    text: Generate contrasting concepts around a surprising product demonstration, a
-      useful public challenge and exceptional customer care.
+    text: Generate contrasting concepts around a surprising product demonstration, a useful public challenge and exceptional customer care.
   - title: Check 2
-    text: Explain why a software buyer would share each action and how the attention
-      connects to a concrete problem the product solves.
+    text: Explain why a software buyer would share each action and how the attention connects to a concrete problem the product solves.
   - title: Check 3
-    text: Screen the concepts for truthful claims, consent, reputational risk,
-      operational burden and imitation risk. Choose one reversible prototype
-      with a clear owner.
+    text: Screen the concepts for truthful claims, consent, reputational risk, operational burden and imitation risk. Choose one reversible prototype with a clear owner.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -62,21 +84,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - A prank produces many views from outside the buyer market. Flag the audience
-    mismatch and do not treat views as traction.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - A prank produces many views from outside the buyer market. Flag the audience mismatch and do not treat views as traction.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

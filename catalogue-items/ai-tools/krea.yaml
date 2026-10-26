@@ -2,30 +2,30 @@ slug: krea
 name: Krea
 maker: Krea
 url: https://www.krea.ai
-promise: "Create and refine images, video and 3D work with several models in one account."
+promise: "Make and sharpen images and video with many AI models in one account."
 use_cases: [make-images, make-video, design]
 categories: [image, video]
 what_it_does:
-  - Gives you many image, video, 3D and lip-sync models in one account.
-  - Updates an image live as you change the prompt, with real-time models.
-  - Makes images bigger and sharper, up to 2K on the free plan.
-  - Trains a style on your own images.
-  - Chains steps into a repeatable flow with Krea Nodes.
+  - "Gives you many image, video and 3D models in one account. The site says 64 or more models (checked 26 Oct 2026)."
+  - "Renders as you draw or change the prompt, with real-time models (checked 26 Oct 2026)."
+  - "Makes images bigger and sharper, up to 22K for images and 8K for video (checked 26 Oct 2026)."
+  - "Trains a style, face or product on your own images. Free and Basic allow 50 images (checked 26 Oct 2026)."
+  - "Chains models into a repeatable flow with Krea Nodes (checked 26 Oct 2026)."
 benefits:
   - Compare several models on the same idea without extra sign-ups.
-  - "Try ideas with the listed free daily allowance."
+  - "Try ideas on the free daily allowance."
   - Keep a brand look by training on your own pictures.
 best_for:
   - Designers and marketers who test many models.
   - Quick rounds of image ideas that change as you type.
   - Anyone who wants image and video in one account.
 not_for:
-  - Long videos with one continuous take.
-  - Saving up free units, which do not carry over to the next day.
+  - "Saving up free units. They refill every day and do not carry over."
+  - "Client or ad work on the free plan. The commercial licence is listed for paid plans only, so check the terms."
 pricing:
   model: freemium
-  from: US$9 per month
-  note: Free plan gives 100 compute units a day with a commercial licence. Basic gives 5,000 units a month and costs about US$5 a month billed yearly. Pro is US$35.
+  from: "Free, then US$9 per month (US$5 a month billed yearly)"
+  note: "Checked 26 Oct 2026. Free: 100 compute units a day. Basic: US$9 a month, or US$5 a month billed yearly, with 5,000 units a month. Pro: US$35 a month, or US$21 billed yearly, with 20,000 units. Max: US$105 a month, or US$63 billed yearly, with 60,000 units. Business: US$200 a month, or US$160 billed yearly, with 80,000 units. Paid plans include a commercial licence, and the free plan is not listed as including one. Some models need a paid plan, such as Seedance."
 works_with:
   - flux
   - kling
@@ -33,6 +33,28 @@ works_with:
 runs_in: [web]
 blocks: []
 alternatives: [higgsfield, freepik, leonardo, midjourney]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Sign up free at krea.ai. The site says no credit card is needed."
+  - "Open the image tool and pick a model. Start with one you can compare with another."
+  - "Type a short prompt with the subject, the setting and the look, then generate."
+  - "Run the same prompt in a second model and compare the two."
+  - "Upscale the one you like, then download it. Check the plan terms before you use it in an ad."
+needs:
+  - "A free account. No card is needed to start."
+  - "A short prompt, and a reference image if you want a set look (optional)."
+  - "A paid plan for commercial use and for some models."
+example:
+  task: "Make a clean product shot of a water bottle on a stone ledge in soft morning light."
+  cost: "The free plan gives 100 compute units a day. The units each image uses vary by model, and the page does not give a table, so check the cost on screen before you run it."
+  reply: "A set of images from the model you picked. Your prompt decides the look, so refine it and run again. Upscale the best one."
+not_verified:
+  - "The units each model costs per image or per second of video. The pricing page does not give a table."
+  - "Any plan-specific upscale limit. The page names image and video size limits but ties none to a plan."
+  - "Max plan size. The visible page says 60,000 units at US$105, while a hidden data block says 40,000 at US$70."
+  - "That the free plan allows commercial use. An earlier note said so, but the page only lists a licence for paid plans."
+  - "Free plan upscale size. An earlier note said up to 2K, which we could not confirm."
 sources:
   - https://www.krea.ai/pricing
+  - https://www.krea.ai

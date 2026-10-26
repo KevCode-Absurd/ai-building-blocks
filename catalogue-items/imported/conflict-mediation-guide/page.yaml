@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads a tense situation and plans a fair talk.
 new_slug: conflict-mediation-guide
 name: Workplace conflict mediation guide
-summary: Describe the conflict. Get its likely causes, a mediation plan with
-  ground rules and what to say in the talk.
+summary: Describe a workplace conflict. Get a mediation plan with likely causes, ground rules and opening lines for the talk, plus next steps.
 job: hire-people
 headline: Workplace conflict mediation guide
-subhead: Describe the conflict. Get its likely causes, a mediation plan with
-  ground rules and what to say in the talk. Bring a description of the conflict.
-  Use the result to plan your next step.
+subhead: Describe the conflict. Get its likely causes, a mediation plan with ground rules and what to say in the talk. Bring a description of the conflict. Use the result to plan your next step.
 explain: |
   A plan for handling a workplace conflict: what is probably behind it, how to run the mediation, and what to say when you sit down with each person. It helps you act early, before the conflict spreads.
 
@@ -18,6 +15,10 @@ when:
   - You must lead a difficult conversation and don't know how to open it.
   - A conflict looks like it is turning into a complaint.
   - You are writing a conflict policy for the first time.
+not_for:
+  - "You face a harassment, discrimination or legal complaint: talk to a qualified HR adviser or employment lawyer first."
+  - "The conflict is too heated or too personal for you to stay neutral: ask a neutral outside mediator to lead it."
+  - "You only want a written conflict policy or a training course: ask your AI for that directly, as this page plans one dispute."
 you_give:
   - A description of the conflict
   - Who is involved and their roles
@@ -30,7 +31,28 @@ you_get:
   - De-escalation tips
   - Next steps after the meeting
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Describe the conflict in a few lines. Say who is involved and what their roles are.
+  - Add what has been tried and your company policy, if you have them.
+  - Read the likely causes first. Check they fit what you know.
+  - Use the ground rules and opening lines to plan the talks. Hold the private talks before the joint meeting.
+  - Write down what is agreed and set a date to follow up. No code or paid tool is needed.
+output_sample:
+  input:
+    - A description of the conflict
+    - Who is involved and their roles
+    - What has been tried so far (optional)
+    - Your company policy on conflict (optional)
+  output:
+    - name: Likely root causes
+      contains: The deeper reasons that may sit behind the surface issue, and signs the conflict is getting worse.
+    - name: Ground rules and structure
+      contains: The rules to set at the start and a clear order for how the talk will run.
+    - name: Private talks with each person
+      contains: How to hold a confidential one-to-one talk, with questions and active listening tips.
+    - name: Opening lines
+      contains: Words to start the joint meeting and keep it fair.
+    - name: De-escalation tips
+      contains: Steps to calm a tense moment and when to bring in a neutral outsider.
+    - name: Next steps
+      contains: How to write down agreements, follow up, and rebuild trust afterwards.

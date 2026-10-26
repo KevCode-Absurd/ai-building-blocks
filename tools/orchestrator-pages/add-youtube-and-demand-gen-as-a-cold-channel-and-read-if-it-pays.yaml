@@ -1,6 +1,6 @@
 new_slug: add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays
 name: "Add YouTube and Demand Gen and check they pay"
-summary: Give it your Google data and best video ads. Get a yes or wait, a cold campaign, an ad scorecard and remarketing.
+summary: Check if YouTube ads will pay before you spend. Give it your Google results and best video ads. You get a yes or wait call and a Demand Gen plan.
 job: run-google-ads
 thinking: high
 thinking_why: It runs four skills in a row, and the scorecard step judges ads against break-even numbers. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your Meta video ads work, your Shopping and brand Search are steady, and you want a new source of customers on Google.
   - You ran a YouTube test, got mixed numbers, and cannot tell which ads to keep or what to change.
   - You have many site visitors who left without buying and want a plan to win them back with video.
+not_for:
+  - "Your store has no proven offer or Meta video results yet: start with Google Shopping or brand Search first, then come back."
+  - "You only want to read results from a YouTube test you already ran: use the Ad results report writer."
+  - "Your sales dropped and you need to know why: use the Ad sales drop analyst."
 you_give:
   - Your Google results (spend, sales and cost per sale by campaign)
   - Your best video ads from Meta or TikTok, with their results
@@ -32,6 +36,28 @@ how_to_use:
   - Give it your Google results, your best video ads and your average order value. If the answer is wait, fix what it names before you spend.
   - When it pauses, cut three to five short videos from your best Meta video and choose the landing page.
   - After two to four weeks, export results by ad, with placement and new-customer cost, and bring them back for step 3.
+output_sample:
+  input:
+    - "Your Google results: spend, sales and cost per sale by campaign"
+    - Your best video ads from Meta or TikTok, with their results
+    - Your average order value, margin and break-even cost per new customer
+    - The landing page you would send YouTube traffic to
+    - Your brand file (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - A paid Google Ads budget for the Demand Gen and remarketing campaigns
+    - Three to five short videos cut from your best Meta video
+  output:
+    - name: Readiness call
+      contains: A yes or wait answer with a score out of 100, hard stops, a budget split and what to skip.
+    - name: Cold campaign plan
+      contains: Budget, bid, audiences, placements, ad groups, ad text, a video brief with a five-second hook and the order to scale in.
+    - name: Ad scorecard
+      contains: Each ad scored on view rate, click rate, conversion rate and new-customer cost, with scale, keep or pause.
+    - name: Remarketing plan
+      contains: List sizes, audiences, setup, budget, frequency cap and five ad ideas for the reasons people leave.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check if YouTube is ready
     text: Tests fit, timing, page and claims against ten checks. Gives a yes or wait with a score out of 100, and what to hold back.

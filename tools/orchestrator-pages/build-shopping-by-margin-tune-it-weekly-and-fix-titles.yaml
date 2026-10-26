@@ -1,6 +1,6 @@
 new_slug: build-shopping-by-margin-tune-it-weekly-and-fix-titles
 name: Build Shopping by margin, tune it weekly and fix titles
-summary: Give it your products with margins. Get Shopping tiers with targets, weekly product calls and search-led titles.
+summary: Set Google Shopping targets by product margin. Give it your products and past return, and get tiers, weekly product calls and better titles.
 job: run-google-ads
 thinking: medium
 thinking_why: Three skills run in a row and the break-even sums are simple. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - Your Shopping campaign has one target for every product, whatever the margin.
   - Some products take spend and never sell and you cannot tell which.
   - Your titles are the supplier's names and do not match what people search.
+not_for:
+  - "You have fewer than about 30 products: fix your titles first with the Shopping feed title writer, then split into tiers later."
+  - "You run Performance Max only: product-level calls need Standard Shopping, so tune your asset groups by hand instead."
+  - "You want a check of a whole Google Ads account: use the Google Ads report auditor."
 you_give:
   - Your products with price, margin and past return on ad spend
   - The weekly Shopping report with search terms, after the first two weeks
@@ -30,6 +34,27 @@ how_to_use:
   - Give it real margins per product. It marks any margin you guessed.
   - When it pauses, build the tiers, run them two weeks and export the weekly report with search terms.
   - Pause again to pull converting search terms for the products it chose to fix.
+output_sample:
+  input:
+    - Your products with price, margin and past return on ad spend
+    - The weekly Shopping report with search terms, after two weeks of running
+    - The converting search terms for the products to fix, and their current titles
+    - Photos of the products (optional)
+  prerequisites:
+    - Access to your Google Ads account to build the tiers and export reports
+    - A Standard Shopping campaign, so product-level calls work
+    - Two weeks of running the tiers before step 2
+  output:
+    - name: "Step 1: Tiers and targets"
+      contains: Shopping tiers by margin, with a break-even and a target for each tier, and a budget split.
+    - name: "Step 2: Weekly read"
+      contains: A call on each product with enough clicks, search terms to block, impression share and a waste score.
+    - name: "Step 2: Weekly edit"
+      contains: The changes to make this week, in order.
+    - name: "Step 3: Titles"
+      contains: New titles and descriptions in one order, using words buyers typed, with rollout batches.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Set tiers and targets
     text: Checks you have enough products and sales to split, picks tiers by margin or by past return, and sets each target from break-even. It also decides where Performance Max fits.

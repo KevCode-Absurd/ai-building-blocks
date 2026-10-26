@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a checklist, but each fix depends on your database.
 new_slug: sql-query-launch-reviewer
 name: SQL query launch reviewer
-summary: Give it a SQL query before it goes live. Get wrong-result risks, slow
-  spots and rewrites ranked by impact.
+summary: Check your SQL query before it goes live. Find wrong-result risks and slow spots, with rewrites ranked by impact for Snowflake, BigQuery, Postgres or Redshift.
 job: track-numbers
 headline: SQL query launch reviewer
-subhead: "A review of your SQL query before it goes live, listing wrong-result
-  risks and slow spots, ranked by impact. Paste the query and name the engine:
-  Snowflake, BigQuery, Postgres or Redshift."
+subhead: "A review of your SQL query before it goes live, listing wrong-result risks and slow spots, ranked by impact. Paste the query and name the engine: Snowflake, BigQuery, Postgres or Redshift."
 explain: |
   A review of your SQL query before it goes live, listing wrong-result risks and slow spots, ranked by impact. Paste the query and name the engine: Snowflake, BigQuery, Postgres or Redshift.
 
@@ -18,6 +15,10 @@ when:
   - A report shows numbers that look wrong.
   - A query runs slowly and nobody knows the cause.
   - You want a second pair of eyes before a launch.
+not_for:
+  - "You need a new query written from scratch: ask your AI to draft it first, then bring it here to check."
+  - "Your database is not Snowflake, BigQuery, Postgres or Redshift: check the findings by hand or ask a data person."
+  - "You want to test the data itself, such as nulls or duplicates: use data-quality tests in your database or a data person."
 you_give:
   - The SQL query
   - The database engine
@@ -31,8 +32,23 @@ you_get:
   - Join fan-out warnings
   - Rewrites ranked by impact
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open your AI tool and paste in the skill instructions. If your AI can run code, upload the skill folder too.
+  - Paste your SQL query and say which database engine you use.
+  - Add your table layouts, row counts, query plan or what the query should work out (optional).
+  - Ask your AI to review the query with this skill.
+  - Read the correctness findings first. Then work down the ranked rewrites.
+  - Test the rewritten query on a copy of your data before it goes live.
+output_sample:
+  input:
+    - Your SQL query
+    - "Your database engine: Snowflake, BigQuery, Postgres, Redshift or other"
+    - Your table layouts and row counts (optional)
+    - Your query plan from EXPLAIN or a query profile (optional)
+    - What the query should work out (optional)
+  prerequisites:
+    - An AI that can run code, so the lint, plan and row-count checks can run (optional but best)
+  output:
+    - name: Query review
+      contains: Findings sorted into correctness, performance and style, each with a severity rating.
+    - name: Optimization recommendations
+      contains: Rewrite suggestions ranked by expected impact, filled in only when the review finds performance issues.

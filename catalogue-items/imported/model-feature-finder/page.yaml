@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Reading what the features mean takes research judgment.
 new_slug: model-feature-finder
 name: Model feature finder
-summary: Give it a language model. Get a small network trained to show which
-  ideas its inner activity stands for.
+summary: Find what ideas sit inside a language model. Train a sparse autoencoder with SAELens to get named features and test them. Needs Python and a GPU.
 job: research-topics
 headline: Model feature finder
-subhead: A small helper network, trained on your language model, that shows
-  which ideas its inner activity stands for. Instead of a blur of numbers, you
-  get named features such as a place, a tone or a risky topic.
+subhead: A small helper network, trained on your language model, that shows which ideas its inner activity stands for. Instead of a blur of numbers, you get named features such as a place, a tone or a risky topic.
 explain: |
   A small helper network, trained on your language model, that shows which ideas its inner activity stands for. Instead of a blur of numbers, you get named features such as a place, a tone or a risky topic.
 
@@ -18,6 +15,10 @@ when:
   - You are studying whether a model holds a feature for something unsafe.
   - You want to steer a model by adjusting one named feature.
   - You need to load a ready-made feature set and look around.
+not_for:
+  - "You only want to look at basic activations: use TransformerLens directly, with no feature network."
+  - "You want to test cause and effect by editing parts of a model: use pyvene or TransformerLens."
+  - "You are not comfortable with Python or research code: ask a machine learning researcher, or browse ready-made features on Neuronpedia."
 you_give:
   - A language model and the layer to study
   - A text dataset to read activations from
@@ -30,8 +31,34 @@ you_get:
   - Steering and removal tests
   - Notes on quality checks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Use an AI that can run Python code on a computer with a GPU. A chat window alone cannot run this.
+  - "Install the tools with: pip install sae-lens. You need Python 3.10 or newer."
+  - Tell your AI the model name, the layer to study and the text dataset to use.
+  - Start with a ready-made feature set if one exists for your model. Train your own only if none fits.
+  - "Check the quality numbers first: dead features, average active features and loss kept."
+  - Read the top text for each feature, then test the ones you care about by turning them up or down.
+output_sample:
+  input:
+    - The name of your language model
+    - The layer you want to study
+    - A text dataset to read activations from
+    - A feature index or topic to look at (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - A GPU with enough memory for your model
+    - The sae-lens and transformer-lens packages installed
+  output:
+    - name: Loading and analysis code
+      contains: Code that loads a model and a ready-made feature set, then lists the top features for each token.
+    - name: Training config and run
+      contains: A setup for training your own feature network, with size, sparsity, warm-up and checkpoint settings.
+    - name: Quality metrics
+      contains: Average active features, share of model loss kept, dead feature share and explained variance, with target ranges.
+    - name: Feature analysis
+      contains: Code that scores sample texts against one feature to show what makes it fire.
+    - name: Feature steering
+      contains: Code that adds one feature's direction to the model to see how its writing changes.
+    - name: Feature attribution
+      contains: A ranked list of features that push the model toward a chosen next word.
+    - name: Fixes for common problems
+      contains: Settings to try for dead features, weak reconstruction, unclear features and memory errors.

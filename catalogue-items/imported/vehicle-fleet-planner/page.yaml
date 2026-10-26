@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares running cost against replacement cost.
 new_slug: vehicle-fleet-planner
 name: Vehicle fleet planner
-summary: Give it your vehicles and costs. Get how many you need and when to
-  replace each one.
+summary: Plan your vehicle fleet size and replacement timing. Give it your vehicles and costs. You get how many you need and when to replace each one.
 job: plan-supply-chain
 headline: Vehicle fleet planner
-subhead: The right number of vehicles for your demand, and a plan for when to
-  replace each one. You stop paying for idle vans and stop running old ones past
-  the point they cost more than they are worth.
+subhead: The right number of vehicles for your demand, and a plan for when to replace each one. You stop paying for idle vans and stop running old ones past the point they cost more than they are worth.
 explain: |
   The right number of vehicles for your demand, and a plan for when to replace each one. You stop paying for idle vans and stop running old ones past the point they cost more than they are worth.
 
@@ -18,6 +15,10 @@ when:
   - Repair bills on older vehicles keep growing.
   - You are choosing between leasing and buying a new batch.
   - Demand is seasonal and you want to plan extra capacity.
+not_for:
+  - "You need delivery routes or stop order: use a route planning tool or your dispatcher, because this plans the fleet, not the trips."
+  - "You are deciding on one van only: compare the quote and your running costs by hand, since no modelling is needed."
+  - "You have no cost figures yet: gather your fuel, repair and insurance bills first, or the plan will rest on guesses."
 you_give:
   - Your vehicles with type, age and owned or leased status
   - "Running costs: fuel, repairs, insurance"
@@ -29,7 +30,30 @@ you_get:
   - A cost of ownership comparison
   - A utilization review and maintenance plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your vehicle list with type, age, owned or leased, and your real cost figures from invoices and quotes.
+  - Add your demand by day or season, and any limits such as parking.
+  - Ask for the fleet analysis report. If a cost is missing, tell your AI to mark it missing, not guess.
+  - Check the replacement table against your repair bills before you act on it. The cost models run best in an AI that can run code.
+output_sample:
+  input:
+    - Your vehicles with type, age and owned or leased status
+    - "Your running costs: fuel, repairs, insurance and driver pay"
+    - Your demand by day or season
+    - Your service goals and limits, such as parking space (optional)
+  prerequisites:
+    - Your own invoices and quotes for costs. Do not use made-up defaults.
+    - An AI that can run code, if you want the sizing and cost models calculated rather than estimated
+  output:
+    - name: Executive summary
+      contains: Current fleet, utilization, total annual cost, cost per vehicle and the main recommendation.
+    - name: Fleet composition
+      contains: A table of each vehicle type with count, average age, mileage, utilization and annual cost.
+    - name: Utilization analysis
+      contains: Current figures against targets, including vehicles that are barely used and empty miles.
+    - name: Cost breakdown
+      contains: Annual cost by category, such as depreciation, fuel, maintenance, insurance and drivers, per vehicle and as a share.
+    - name: Replacement plan
+      contains: A multi-year table of which vehicles to replace each year, the investment and the reason.
+    - name: Recommendations
+      contains: Numbered actions such as cutting vehicles or replacing old units, with the expected saving or payback.

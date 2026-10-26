@@ -1,53 +1,111 @@
 new_slug: reinvestment-supported-growth
 name: Reinvestment-supported growth schedule
 headline: Reinvestment-supported growth schedule
-summary: Connect operating growth assumptions to actual reinvestment and incremental capital returns.
+summary: Check how much growth your reinvestment can support. Get the reinvestment rate and supported growth from profit, net capex and working capital.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A reinvestment-rate and supported-growth schedule with financing feasibility notes. Share nOPAT, net capital expenditure, operating working-capital investment and an evidenced incremental return assumption.
+subhead: Give it after-tax operating profit, net capital spending, working capital investment and the return you expect on new capital. It works out the reinvestment rate and the growth that spending can support. Then you can compare it with your forecast.
 explain: |-
-  A reinvestment-rate and supported-growth schedule with financing feasibility notes.
+  Growth costs money. A company that wants to grow its operating profit must spend on equipment, buildings and working capital. This reinvestment-supported growth schedule checks if the growth in a forecast matches the reinvestment behind it.
 
-  Public equity valuation. Illustrative figures.(20+5)/100=25% reinvestment.25%×20%=5% growth. Net capex30 makes reinvestment35 and growth7% under the same return assumption.
+  It adds net capital spending (capex less depreciation) and working capital investment to get net reinvestment. It divides that by after-tax operating profit (NOPAT) to get the reinvestment rate. Then it multiplies the rate by the return you expect on new capital. The result is the growth the spending can support.
+
+  The return on new capital is an assumption, not a fact. The skill asks you to say where it comes from, and keeps growth that needs new money apart from growth that comes from doing the same work better. It is a valuation check. It does not tell you what a share is worth.
 when:
-  - You need a reinvestment-rate and supported-growth schedule with financing feasibility notes.
-  - You work on public equity valuation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A forecast shows 8% growth and you want to know if the capex and working capital behind it can support that.
+  - You are building a stock valuation and need growth and reinvestment to agree.
+  - Capex goes up in a scenario and you want to see the change in supported growth.
+  - A reviewer asks where the growth rate in a model comes from.
+not_for:
+  - You want the reinvestment that a terminal value already assumes. Use the Implied terminal reinvestment schedule.
+  - You want to test a stable-growth terminal value against the cash it needs. Use the Terminal growth reinvestment check.
+  - The growth comes from price rises or cost cuts, not new capital. This only shows growth that new capital can support.
+  - The company is a bank or an insurer. They need capital rules, not this operating capital approach.
 you_give:
-  - NOPAT, net capital expenditure, operating working-capital investment and an evidenced incremental return assumption.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - After-tax operating profit (NOPAT) for the year (from your income statement and tax rate)
+  - "Net capital spending: capex less depreciation (from the cash flow statement and notes)"
+  - Operating working capital investment for the year (from the balance sheet)
+  - The return you expect on new capital, as a percent, and why you expect it
+  - Your forecast growth rate to compare with (optional)
+  - The currency, units and reporting year
+  - Your own model spreadsheet (optional)
 you_get:
-  - A reinvestment-rate and supported-growth schedule with financing feasibility notes.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "Net reinvestment: net capex plus working capital investment"
+  - "The reinvestment rate: net reinvestment divided by NOPAT"
+  - "Supported growth: reinvestment rate times return on new capital"
+  - A comparison with your forecast growth, if you gave one
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste NOPAT, net capex, working capital investment and the return on new capital. Say where each came from, and give the currency, units and year.
+  - Say how you worked out the return on new capital. A past average return is not the same as the return on the next dollar.
+  - "Check one line yourself: reinvestment rate is net reinvestment divided by NOPAT. For 25 and 100, that is 25%."
+  - Read the comparison with your forecast growth, then MISSING and CHECKS MISSED. Treat the result as a check, not a valuation.
 how_it_works:
-  - title: 1. Reconcile NOPAT, net capex and operating working capital on the same business perimeter; separate acquisitions
-    text: Reconcile NOPAT, net capex and operating working capital on the same business perimeter; separate acquisitions.
-  - title: 2. Divide net reinvestment by positive NOPAT and multiply by the incremental return assumed on new capital
-    text: Divide net reinvestment by positive NOPAT and multiply by the incremental return assumed on new capital.
-  - title: 3. Compare the result with forecast growth; distinguish historical average returns from prospective incremental returns and efficiency gains
-    text: Compare the result with forecast growth; distinguish historical average returns from prospective incremental returns and efficiency gains.
+  - title: Lines up the inputs
+    text: Confirms NOPAT, net capex and working capital cover the same business and year, and removes acquisitions.
+  - title: Adds net reinvestment
+    text: Adds net capex and working capital investment. Depreciation is taken off capex once.
+  - title: Finds the reinvestment rate
+    text: Divides net reinvestment by NOPAT. NOPAT must be above zero.
+  - title: Finds supported growth
+    text: Multiplies the rate by the return on new capital you gave.
+  - title: Compares with the forecast
+    text: Shows the gap between supported growth and forecast growth, and what it would take to close it.
 output_shape: |-
-  A reinvestment-rate and supported-growth schedule with financing feasibility notes.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Net reinvestment <amount> | Reinvestment rate <percent> | Supported growth <percent> | Forecast growth <percent or not given>
+
+  SCOPE AND SOURCES
+  <currency, units, year; source and date for each input; the business covered>
+
+  INPUTS AND ASSUMPTIONS
+  <NOPAT, net capex, working capital investment, return on new capital and where it came from>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <net reinvestment; rate; supported growth; comparison with forecast; check that depreciation is deducted once>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Your after-tax operating profit (NOPAT)
+    - Your net capital spending and working capital investment
+    - The return you expect on new capital
+    - Your forecast growth rate (optional)
+  prerequisites:
+    - Income statement, cash flow statement and balance sheet for the same year
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Net reinvestment, the reinvestment rate, supported growth and your forecast growth side by side.
+    - name: SCOPE AND SOURCES
+      contains: The currency, units, year and business covered, with a source for each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Your four inputs and where you got the return on new capital.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum in order, and the check that depreciation is deducted once.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Depreciation is deducted exactly once in net capex.
+  - what: Return on new capital
+    how: Give the return you expect on new money, not the company's past average. Say how you chose it.
+  - what: Acquisitions
+    how: Leave out spending on acquisitions. Ask for a separate run if they matter to your forecast.
+  - what: Scenario
+    how: Change net capex and ask for a second run to see how supported growth moves.
 judge:
   - Depreciation is deducted exactly once in net capex.
   - Efficiency-driven growth is separated from growth requiring new capital.
@@ -62,15 +120,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The income statement, cash flow statement and balance sheet
+    - Notes on depreciation and acquisitions
+    - Your forecast growth rate
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: NOPAT
+    meaning: "Net operating profit after tax: operating profit less the tax on it, before interest."
+  - term: Net capex
+    meaning: Money spent on equipment and buildings, less depreciation.
+  - term: Reinvestment rate
+    meaning: The share of NOPAT that is put back into the business.
+  - term: Return on new capital
+    meaning: The profit you expect each new dollar of investment to earn.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+next:
+  - terminal-growth-reinvestment-consistency
+  - implied-terminal-reinvestment

@@ -2,34 +2,94 @@ thinking: medium
 thinking_why: It judges craft details against known principles.
 new_slug: interface-polish-reviewer
 name: Interface polish reviewer
-summary: Give it a screen or component. Get notes on animation, feel and small
-  details that make it feel finished.
+summary: Get craft notes on your UI's animation, easing and small details, as a Before, After, Why table and a ranked list of fixes.
 job: design-work
 headline: Interface polish reviewer
-subhead: "Notes on the feel of your screen: how it moves, responds and handles
-  small details, so it reads as finished and cared for. Give it a screen or
-  component and get craft-level feedback."
+subhead: Give your AI a screen, a component or its code. It reviews how your interface moves and responds, from easing and timing to press and hover feedback. You get a Before, After, Why table and a ranked list of fixes.
 explain: |
-  Notes on the feel of your screen: how it moves, responds and handles small details, so it reads as finished and cared for. Give it a screen or component and get craft-level feedback.
+  A screen can work and still feel stiff. The cause is usually small: an animation that runs too long, a button that does not react when pressed, a menu that grows from the wrong corner. This reviewer looks for those details in your code or your description of the screen.
 
-  The skill reviews motion quality, easing, durations and how physical an interaction feels. It looks at feedback on press and hover, subtle states, and whether each choice suits the product. It works with React, Tailwind, CSS and Framer Motion. It reads a longer guide before it starts. It treats its advice as judgement, not law: your brand system, platform habits and requirements come first, and you should test on real devices.
+  It follows the design engineering guide by Emil Kowalski. For each moving part it asks four things. Should it animate at all? What is the purpose? Which easing fits? How fast should it be? It flags known slips, such as transition: all, a start from scale(0), ease-in on interface parts, and hover effects on touch screens.
+
+  Its advice is judgement, not law. Your brand system and platform rules come first, and a still image cannot show motion, so test on real devices. It leaves out spacing and layout slips, which the Interface polish checker covers.
 when:
   - Your interface works but feels stiff or flat.
-  - Animations feel too slow, too fast or too bouncy.
-  - You want a design critique before shipping a feature.
-  - Buttons and menus lack feedback when used.
-  - You are choosing between two motion approaches.
+  - Your animations feel too slow, too fast or too bouncy.
+  - You want a craft review of a feature before you ship it.
+  - Your buttons and menus give no feedback when pressed.
+not_for:
+  - "You want spacing, type and layout slips found in code: use the Interface polish checker."
+  - "You want a screen built from nothing: use the Polished interface builder."
+  - "Your brand system or platform already sets its own motion rules: follow those first."
+  - "You need accessibility sign-off or a test on real devices: this reviews code and descriptions, so test on devices and ask a specialist."
 you_give:
-  - The screen, component or code
-  - The framework you use
-  - The feeling you want (optional)
+  - The component or screen code, or a description of the screen and how it moves
+  - The framework you use, such as React, Tailwind, CSS or Framer Motion
+  - The feeling you want, such as quick and calm (optional)
+  - A screenshot (optional, because motion cannot be judged from a still)
 you_get:
-  - Notes on motion, easing and timing
-  - Feedback and state suggestions
-  - Small detail fixes
-  - A priority order for changes
+  - A table with Before, After and Why for each issue
+  - Notes on easing, timing and durations
+  - Gaps in press, hover and state feedback
+  - The top 3 to 5 changes, in order
+  - A line on what already works
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste the detailed guide (references/detailed-guide.md) straight after it. It needs both.
+  - Paste your component code, or describe the screen and how it moves. Add your framework and the feeling you want.
+  - Read the table first. Each row shows what to change and why.
+  - Skip any rule that clashes with your brand system, and keep the rest. Then apply the top changes.
+  - Test the motion on a real phone and a laptop before you ship.
+how_it_works:
+  - title: Check the input
+    text: It asks once for what to review if you gave nothing, and says so when it only has a still image.
+  - title: Ask the four motion questions
+    text: For each moving part it asks if it should animate, why, which easing and how fast.
+  - title: Check components
+    text: It looks at press feedback, popover origins, tooltips, enter and exit timing, and stagger.
+  - title: Check performance and access
+    text: It looks at what is animated, hover rules on touch devices and reduced-motion settings.
+  - title: Write the table
+    text: It lists each issue as a row with Before, After and Why.
+  - title: Rank the changes
+    text: It picks the 3 to 5 changes that improve the feel most, and ends with a next step.
+output_shape: |-
+  | Before | After | Why |
+  | <what the code does now> | <what to change it to> | <one-line reason> |
+  Top changes, in order:
+  1. <change> because <reason>
+  What already works: <short note>
+  Next step: <apply the top changes, then test on a real device>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - Your component code, or a description of the screen and how it moves
+    - Your framework
+    - The feeling you want (optional)
+  prerequisites:
+    - The detailed guide from references/detailed-guide.md, pasted after the skill
+  output:
+    - name: Review table
+      contains: One row per issue, with what it does now, what to change it to and why.
+    - name: Top changes
+      contains: The 3 to 5 changes that improve the feel most, each with its reason.
+    - name: What already works
+      contains: A short note on the parts you should leave alone.
+    - name: Next step
+      contains: Apply the top changes, then test the motion on a real device.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Paste the code in and the AI reviews it. No files or paid tools are needed.
+  inputs:
+    - The CSS or Framer Motion code for the moving parts
+    - A short description of how it moves now
+    - The device you care about most, such as a phone
+terms:
+  - term: Easing
+    meaning: How an animation speeds up and slows down over its length.
+  - term: Framer Motion
+    meaning: A library for animating React interfaces.
+  - term: Stagger
+    meaning: Starting items one after another, a few milliseconds apart, instead of all at once.
+  - term: Reduced motion
+    meaning: A device setting that asks apps to cut animation, for people who find it hard to watch.

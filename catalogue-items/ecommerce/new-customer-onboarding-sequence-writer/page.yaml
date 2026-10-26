@@ -1,6 +1,6 @@
 new_slug: new-customer-onboarding-sequence-writer
 name: "New customer onboarding sequence writer"
-summary: "Give it your product and its use. Get a 14-day email and SMS plan and a 100-day map."
+summary: "Write a new customer onboarding email sequence and SMS plan for days 0 to 14, plus a 100-day touch map, from your product facts."
 job: keep-customers
 thinking: medium
 thinking_why: "It writes a set of emails and texts from facts you give it and a fixed timing plan, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Your product needs regular use to show results, or there is a delivery wait or a learning curve.
   - Cancels or returns cluster in the first two weeks after a first order.
   - You want a plan for the whole first 100 days, not only a welcome email.
+not_for:
+  - "You want a welcome series for people who join your list before they buy: use the Welcome flow builder."
+  - "You need the survey questions on their own: use the Post-purchase survey builder."
+  - "Your product has a fit or shipping problem: fix that first, then write the sequence."
 
 you_give:
   - Your product, how long results take and how to use it correctly
@@ -36,6 +40,34 @@ how_to_use:
   - Paste survey answers if you have them. With few customers, say how people actually use it and refresh later.
   - Check every claim about results and timing before you send. Only keep the "90 to 120 days" line if it is true for your product.
   - Build it in your email and SMS platforms, then compare the second-order rate and cancels by day with the quiet window on and off.
+output_sample:
+  input:
+    - Your product, how to use it and how long results take
+    - Whether you sell to subscribers, one-time buyers or both
+    - Your delivery time and gift schedule
+    - Survey answers on how customers use it (optional)
+    - Your founder story and a photo or short video (optional)
+  prerequisites:
+    - A brand brain from the Website brand brain builder makes the result better (optional)
+  output:
+    - name: Branch and habit to teach
+      contains: Whether the plan is for subscribers or one-time buyers, and the habit every email will teach.
+    - name: Days 0 to 14
+      contains: One line per send with the day, channel, purpose and subject line, with the quiet window marked.
+    - name: Emails
+      contains: Full copy for about six emails, from the founder thank-you to a consistency tip.
+    - name: SMS
+      contains: About four texts under 160 characters, sent every other day to people who opted in.
+    - name: Before arrival
+      contains: The pre-arrival sequence and a welcome insert for the first box.
+    - name: Day 100 map
+      contains: Touches by phase from pre-arrival to a day-100 review, including a reward after the second purchase.
+    - name: Review and referral rule
+      contains: When to ask, how long to wait after delivery, and why.
+    - name: Survey
+      contains: Questions to find the habit linked to customers staying.
+    - name: Measure
+      contains: Second-order rate in 60 to 100 days, cancels by day, and refunds and contacts per order.
 
 how_it_works:
   - title: Finds the habit

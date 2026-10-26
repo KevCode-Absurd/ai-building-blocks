@@ -1,6 +1,6 @@
 new_slug: win-back-visitors-who-did-not-buy-on-meta
 name: Win back visitors who did not buy on Meta
-summary: Give it your reviews and store results. Get an ad for each objection, a three-ad sequence and a retargeting budget cap.
+summary: Win back visitors who did not buy on Meta. Give it your reviews and store results. Get one ad per objection, a 3-ad sequence and a budget cap.
 job: launch-and-scale-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - People visit your store, leave without buying, and your retargeting ads all say the same thing.
   - Your retargeting looks cheap on paper, but your new customer numbers have stopped growing.
   - You have reviews and survey answers that explain why people hesitate, but no ads that use them.
+not_for:
+  - "Your store has no retargeting traffic yet: build the audience first, then come back to this."
+  - "You only need to check an ad against Meta's rules: use the Meta ad policy checker."
+  - "You want to set the test budget for new ads, not retargeting: use the Ad test budget setter."
 you_give:
   - Your store conversion rate
   - Why visitors left, from surveys, reviews, chat, calls or your own list
@@ -31,6 +35,22 @@ how_to_use:
   - Paste your reviews, survey answers and support questions. Add your conversion rate and spend by channel.
   - Mark which numbers are measured and which are guesses. The plan labels shares the same way.
   - Build the ads in the order it gives and keep the spend under the cap.
+output_sample:
+  input:
+    - Your reviews, survey answers and support questions
+    - Your store conversion rate
+    - Your product list with margins, plus your proof, offer and guarantee
+    - Your spend and new-customer revenue by channel
+    - How many visitors you can retarget (optional)
+  output:
+    - name: Retargeting objection ad planner
+      contains: Visitors split by price, trust, quality and not ready yet, with one ad concept, claim and proof for each.
+    - name: Retargeting ad sequence planner
+      contains: An objection ad, a proof ad and a cross-sell ad, with a pairing table, audience and window.
+    - name: Next-dollar budget allocator
+      contains: A ranking of channels for the next dollar, a stop point for retargeting and a spend cap.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Retargeting objection ad planner
     text: Splits the visitors who left into price, trust, quality and not ready yet, and maps one ad concept to each, with one claim and its proof.

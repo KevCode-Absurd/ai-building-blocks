@@ -34,3 +34,30 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - "You want to test a working design or prototype. Use the Small usability test planner."
+  - "You have a business idea and no product yet. Use the Customer discovery interview planner."
+  - "You need numbers, such as how many people do something. Interviews give reasons, not counts. Use your analytics or a survey instead."
+  - "You only want help picking a method and a sample size. The User research planner does that. This one goes on to the interview guide and the write-up."
+output_sample:
+  input:
+    - The research question, or the decision it should change
+    - Who you can reach, such as current customers, prospects or lapsed users
+    - Your timeline and budget
+    - Who needs the findings, and any earlier research (optional)
+  prerequisites:
+    - A way to reach real people for 5 to 15 interviews
+    - A way to record sessions, with each person's consent
+  output:
+    - name: Research plan (research-plan-[topic].md)
+      contains: Sharper questions, the chosen method, who to recruit and how many, and the timeline.
+    - name: Interview guide (interview-guide-[topic].md)
+      contains: A friendly opening, open questions, follow-up probes and a close.
+    - name: Recruiting plan
+      contains: Who to include and leave out, where to find them, pay, and extra sign-ups for no-shows.
+    - name: Synthesis steps
+      contains: How to turn notes into themes and insights, and how to tell a pattern from a one-off remark.
+    - name: Findings template (research-findings-[topic].md)
+      contains: Top insights with quotes, themes, outliers and next steps, to fill in after the sessions.
+    - name: Sharing plan
+      contains: Which format reaches which person, so the findings change a decision.

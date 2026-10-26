@@ -1,6 +1,6 @@
 new_slug: monthly-repeat-buyer-keeper
 name: Monthly repeat buyer keeper
-summary: Give it your order export each month. Get your repeat health scored, the one stage to fix and a plan for it.
+summary: Check your monthly repeat buyer rate. Give it your order export. You get a health score, the one stage to fix and a plan to approve.
 job: keep-customers
 thinking: high
 thinking_why: It reads cohort numbers, judges whether last month's fix worked and picks one of five paths from the cause. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell things people could buy again and want to know where buyers drop off.
   - You made a change last month and want an honest read on whether it worked.
   - You are about to rebuild your emails and want to be sure that is the real problem.
+not_for:
+  - "You sell things people buy once, like a sofa: skip repeat tracking and look at how you win new buyers instead."
+  - "You run a subscription business: cancels need their own check, so use your billing tool's cancel reasons or ask a person who knows churn."
+  - "You have fewer than a few hundred orders or under six months of history: the numbers will be rough, so read them as directions only."
 you_give:
   - An orders export with customer, date, value, discount code and refund flag
   - Your products, and how long one unit lasts
@@ -31,6 +35,31 @@ how_to_use:
   - Add your product list with how long one unit lasts, and any returns or ticket data.
   - Read the plan and approve what you want. Make the changes yourself, or say yes to each one.
   - Run it again next month. It compares with last month's files.
+output_sample:
+  input:
+    - Your orders export with customer, date, value, discount code and refund flag
+    - Your product list and how long one unit lasts
+    - Returns, support tickets and delivery dates (optional)
+    - Reviews or survey comments (optional)
+    - Last month's repeat files (after the first run)
+  prerequisites:
+    - An AI that can read pasted data or files
+    - Last month's repeat folder, if you have run it before
+  output:
+    - name: Repeat health score
+      contains: A score out of 100 with the three parts, the sums and the change from last month.
+    - name: Last month's fix
+      contains: "What you changed, the number it should move, what happened, and a call: keep, drop or too early."
+    - name: The stage to fix
+      contains: The stage holding buyers back, the likely cause and the evidence for it.
+    - name: The one fix
+      contains: A plan from the skill that fits the cause, with its cost, ready for your yes or no.
+    - name: The measure
+      contains: The one number to watch next month, its value today and the group it covers.
+    - name: Not this month
+      contains: The other causes it saw, in order, so next month starts from them.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Read last month
     text: Opens last month's score, the fix you chose and the number it was meant to move. On the first run, this month becomes the base.

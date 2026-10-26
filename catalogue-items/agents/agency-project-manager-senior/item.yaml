@@ -1,0 +1,42 @@
+slug: agency-project-manager-senior
+name: Senior Project Manager agent
+summary: Get a scoped project plan with tasks and acceptance checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: project-management/project-manager-senior.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-manager-senior.md
+  licence: MIT
+  original_name: Senior Project Manager
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 70fb27cab174c97375293311211d5563c5ac257fba274450d1ca9c05b540ef2d
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Senior Project Manager
+  - Agency Agents
+  - Project Management
+credits:
+  - title: Senior Project Manager
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-manager-senior.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

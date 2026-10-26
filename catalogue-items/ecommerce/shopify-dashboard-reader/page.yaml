@@ -1,6 +1,6 @@
 new_slug: shopify-dashboard-reader
 name: "Shopify dashboard reader"
-summary: "Paste your Shopify analytics numbers. Get which tiles to trust, your cash collected and a score out of 100."
+summary: "Read your Shopify dashboard the safe way. Paste your analytics numbers to see which tiles to trust, your cash collected and a score out of 100."
 job: track-numbers
 thinking: medium
 thinking_why: "It applies a fixed set of rules to your numbers and does a little arithmetic. A mid-level model is enough; check the cash collected sum yourself once."
@@ -17,6 +17,10 @@ when:
   - You make decisions from the Shopify dashboard and want to know which numbers are safe to use.
   - Your conversion rate or sessions jumped and you suspect bot traffic.
   - You need one revenue figure to put into a profit sheet or to share with an ad partner.
+not_for:
+  - "You want to know how loyal your customers are: open the full cohort report in Shopify Analytics, not the returning customer rate tile."
+  - "Your sales fell and you need the cause: split the drop by hand in Shopify, by channel and by product, before you read the tiles."
+  - "You run a high-ticket store and want the 2:1:1 funnel target: use the 4:2:1 ratio, and read this page's funnel result as a guide only."
 
 you_give:
   - Gross sales, discounts, returns, net sales, shipping charges and taxes for one period
@@ -36,6 +40,33 @@ how_to_use:
   - Tell it which tiles you look at when you make decisions.
   - Read the verdicts and use the cash collected figure as your revenue line.
   - If sessions differ a lot from GA4, follow its steps to check sessions by city.
+output_sample:
+  input:
+    - Gross sales, discounts, returns, net sales, shipping charges and taxes for one period
+    - Orders, AOV, sessions and conversion rate from Shopify
+    - Add to cart, reached checkout and purchase counts
+    - GA4 sessions for the same dates (optional)
+    - The tiles you use today, and your store type (optional)
+  prerequisites:
+    - Access to your Shopify Analytics page to copy the numbers from
+    - A Google Analytics 4 account if you want the bot-traffic check
+  output:
+    - name: Cash collected
+      contains: Net sales plus shipping charges, with the sum shown and a note on why tax and gross sales are left out.
+    - name: Tiles
+      contains: Each tile you pasted gets a verdict of use, use with care or ignore, with a one-line reason.
+    - name: Returns
+      contains: Returns this period, whether they came from earlier sales, and what to report apart.
+    - name: AOV
+      contains: Shopify's average order value next to the figure with shipping added back.
+    - name: Sessions
+      contains: Shopify sessions against GA4 sessions, the gap, and any cities worth checking for bot visits.
+    - name: Funnel
+      contains: Your add to cart, checkout and purchase counts as a ratio, and the step with the biggest unexpected drop.
+    - name: Score
+      contains: A score out of 100 from ten checks, with the sum shown and each check marked pass, partial or fail.
+    - name: Checks not run
+      contains: Anything it could not check for lack of numbers, marked MISSING.
 
 how_it_works:
   - title: Works out cash collected

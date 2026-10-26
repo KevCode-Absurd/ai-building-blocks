@@ -1,0 +1,108 @@
+name: Senior SecOps Engineer agent
+summary: Paste code. Get a scan for hardcoded secrets, bad JWT checks and
+  SQL injection, then a review against your login, CORS and logging rules.
+headline: Senior SecOps Engineer agent
+subhead: Paste a code change, a file, or a PR diff. It scans it first for
+  hardcoded secrets and bad defaults, then checks logins, tokens, CORS,
+  rate limits and logs against the rules in this profile.
+job: secure-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Most "security review" prompts start by reading your request and only later, if at all, actually look at the code. This one does the opposite: before anything else, it scans whatever code you pasted for the things that cause real breaches, hardcoded secrets, insecure fallback values, JWTs accepted with no algorithm check, SQL built by string concatenation, and reports that scan first, every time, even if you asked for something else.
+
+  Then it reviews the rest against a defined practice: tokens in HttpOnly cookies, roles sourced from the identity provider rather than trusted from the client, CORS as an allowlist rather than a wildcard, rate limiting on every auth route, and input validated at the trust boundary. It can review existing code, implement a control the way the standard wants it done, or walk through a checklist for a specific build phase.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+when:
+  - You're about to merge a pull request and want it scanned for hardcoded secrets and injection risks before it ships.
+  - You're building a login, token or session feature and want it built to a defined standard the first time.
+  - You inherited a codebase and want a first-pass security scan of the files that handle auth, tokens or user input.
+  - You want a checklist to confirm a security-relevant phase (adding auth, adding an API) is actually done, not just "looks done."
+not_for:
+  - You want a cloud account or network architecture reviewed, not application code. Use the Cloud Security Architect agent.
+  - You need a full application security program with CI gates and dependency scanning set up. Use the Application Security Engineer agent.
+  - You have an active incident, not a pre-merge review. Use the Incident Responder agent.
+you_give:
+  - The code to review: a file, a diff, or a pull request's changed lines, pasted or attached.
+  - What mode you want: review existing code, implement a control, or check a specific phase against a checklist.
+  - Your own security standard or rules, if you have one that differs from the defaults listed here (optional).
+you_get:
+  - A security scan result, run first, every time code is given: findings by severity (Critical, High) with the line and the rule it breaks.
+  - A fuller review against the standard: authentication, tokens, cookies, CORS, rate limiting, input validation and logging.
+  - For implement mode, code that follows the standard, not just a description of what it should do.
+  - For checklist mode, a pass or fail per item for the phase you named.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
+  - Paste the code, diff or PR you want checked.
+  - "Say which mode you want: review this, implement this control, or check this phase against the checklist."
+  - Read the automatic scan result first. Fix any Critical finding (hardcoded secret, SQL injection, JWT with no algorithm check) before anything else.
+  - Then work through the fuller review findings in severity order.
+  - If your team has its own standard that differs from the defaults, say so and it will check against yours instead.
+how_it_works:
+  - title: Run the automatic scan
+    text: Before anything else, it scans the pasted code for hardcoded secrets, insecure fallbacks, bad JWT handling and SQL injection patterns, and reports them even if you asked for something else.
+  - title: Pick the mode
+    text: Review (audit existing code), Implement (build a control to the standard) or Checklist (pass or fail a named phase).
+  - title: Check against the standard
+    text: It walks authentication, token storage, CORS, rate limiting, input validation and logging against the rule set, citing which rule each finding breaks.
+  - title: Classify and fix
+    text: Each finding gets a severity and, where the mode calls for it, a corrected code example that fixes it without changing what the code is meant to do.
+output_shape: |-
+  SECURITY SCAN
+    [Critical/High] <finding> on line <N> → Rule <reference>
+
+  REVIEW FINDINGS (if mode is review or implement)
+    [severity] <finding> | <rule broken> | <fix>
+
+  CHECKLIST RESULT (if mode is checklist)
+    <item> | Pass or Fail | <reason>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <assumption or gap> | <what to verify>
+output_sample:
+  input:
+    - The code, diff or pull request to check
+    - "The mode: review, implement or checklist"
+    - Your own security standard, if different from the defaults (optional)
+  prerequisites:
+    - None beyond pasting the code; no code execution is needed
+  output:
+    - name: Security scan
+      contains: Hardcoded secrets, insecure fallbacks, bad JWT handling and SQL injection findings, with line numbers and the rule broken.
+    - name: Review findings
+      contains: Each issue against the auth, token, CORS, rate-limiting and logging rules, with its fix.
+    - name: Checklist result
+      contains: A pass or fail for each item in the named build phase, with the reason.
+    - name: Assumptions and checks
+      contains: What the agent assumed and which facts you still need to confirm.
+works_best_with:
+  tools:
+    - name: Claude Code or any AI that reads a full repo
+      why: It can scan more than the pasted snippet and catch where a secret or token check lives elsewhere in the same file.
+  inputs:
+    - Your team's own written security standard, if one exists.
+    - The PR description or ticket, so the review knows what the change is meant to do.
+terms:
+  - term: Insecure fallback
+    meaning: Code that uses a default value, like "secret" or "admin", when a required setting is missing, instead of failing loudly.
+  - term: Trust boundary
+    meaning: The point where data crosses from something you don't control (a user, another service) into your code.
+  - term: Allowlist
+    meaning: A list of exactly what's permitted, with everything else blocked by default, the opposite of a wildcard or blocklist.
+tweaks:
+  - what: Mode
+    how: Say "review," "implement" or "checklist" plainly. Each gives a different shaped result.
+  - what: Scope
+    how: Paste the actual diff, not a description of the change. The scan only sees what you give it.
+improve:
+  - Save your team's real security standard into the pack so future reviews check your rules, not just the defaults.
+  - Pair it with the Security-focused change reviewer for ongoing PR review once the baseline is set.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

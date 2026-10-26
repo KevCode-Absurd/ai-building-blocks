@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It works out which questions come first and why.
 new_slug: plan-stress-tester
 name: Plan stress-tester
-summary: Give it a plan or idea. Get a tough round of questions with a suggested
-  answer to each.
+summary: Stress-test your plan before you build it. Give it your idea and get rounds of tough questions, each with a suggested answer you can accept.
 job: think-and-decide
 headline: Plan stress-tester
-subhead: A tough round of questions on your plan or idea, each with a suggested
-  answer, so you reach a shared and settled design fast. You mostly say yes or
-  change a few answers.
+subhead: A tough round of questions on your plan or idea, each with a suggested answer, so you reach a shared and settled design fast. You mostly say yes or change a few answers.
 explain: |
   A tough round of questions on your plan or idea, each with a suggested answer, so you reach a shared and settled design fast. You mostly say yes or change a few answers.
 
@@ -18,6 +15,10 @@ when:
   - You want to agree on a design before starting to build.
   - You keep missing decisions that hit you later.
   - You want quick answers, not a long interview.
+not_for:
+  - "You need a quick yes or no on a small choice: use a plain checklist or ask a friend."
+  - "You want your AI to start building now: skip this and give it a clear brief instead."
+  - "You want facts looked up for you only: use a normal web search or ask your AI a direct question."
 you_give:
   - Your plan or idea
   - Any constraints you already know
@@ -28,7 +29,23 @@ you_get:
   - A decision tree that narrows each round
   - A settled plan at the end
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Describe your plan or idea in a few lines. Add any limits you already know.
+  - Read the first round. Answer yes to accept a suggestion, or type a change.
+  - Send your answers. Your AI then asks the next round of questions.
+  - Keep going until your AI says nothing is left to decide, then confirm the plan.
+  - Turn the settled plan into a task list or a short brief to start work.
+output_sample:
+  input:
+    - Your plan or idea, in a line or a few paragraphs
+    - Any limits you already know, such as budget or deadline (optional)
+    - Your answers to each round of questions
+  output:
+    - name: Question round
+      contains: A numbered list of questions you can answer now, each with a title and a full question body.
+    - name: Recommended answer
+      contains: A suggested answer under each question, worded so a plain yes accepts it.
+    - name: Next round
+      contains: New questions that were waiting on your earlier answers, asked after you reply.
+    - name: Shared understanding check
+      contains: A final point where every branch has been covered and your AI asks you to confirm before acting.

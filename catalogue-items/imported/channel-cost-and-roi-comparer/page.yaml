@@ -2,25 +2,23 @@ thinking: medium
 thinking_why: It runs set maths, then you judge the mix.
 new_slug: channel-cost-and-roi-comparer
 name: Channel cost and ROI comparer
-summary: Give it direct and partner sales costs. Get cost to serve, ROI by
-  channel and the best mix.
+summary: Compare direct and partner sales costs. Get the full cost to serve, ROI and a verdict for each channel, plus a channel mix that holds up.
 job: money-and-investing
 headline: Channel cost and ROI comparer
-subhead: "Which sales channel really makes money? You get a clear verdict for
-  each one: double down, maintain, defund or exit. Plus a suggested mix of
-  direct and partner sales that holds up when costs shift."
+subhead: "Which sales channel really makes money? You get a clear verdict for each one: double down, maintain, defund or exit. Plus a suggested mix of direct and partner sales that holds up when costs shift."
 explain: |
   Which sales channel really makes money? You get a clear verdict for each one: double down, maintain, defund or exit. Plus a suggested mix of direct and partner sales that holds up when costs shift.
 
   You fill in a short data template for each channel: deals, revenue, margin, acquisition cost, partner discounts, support load and the often forgotten extras like partner training. Scripts then work out the full cost to serve per deal and per dollar of revenue. They score return three ways: first-year cash, lifetime value and the next dollar spent. A last step tests mixes against your limits, such as a minimum direct share, and shows what happens if costs rise 20%. Python is needed.
 when:
-  - Your pipeline is split between direct and partner sales and you do not know
-    which half is profitable.
-  - You are thinking of hiring a channel manager and want to know if the channel
-    can pay for one.
-  - Your board asks what you got back for the money spent on partner marketing
-    funds.
+  - Your pipeline is split between direct and partner sales and you do not know which half is profitable.
+  - You are thinking of hiring a channel manager and want to know if the channel can pay for one.
+  - Your board asks what you got back for the money spent on partner marketing funds.
   - You are opening a new region and must pick direct first or partner first.
+not_for:
+  - "You want to design partner tiers, revenue splits or a joint sales plan: use a partnerships specialist, this tool only checks if the program pays off."
+  - "You need a past channel profit report for the books: ask your accountant, this tool looks forward to help a decision."
+  - "You have no code tools or channel numbers yet: gather your costs first, as the maths runs in Python scripts."
 you_give:
   - Deals, revenue and margin by channel
   - Acquisition and sales cycle numbers
@@ -33,8 +31,28 @@ you_get:
   - A verdict for each channel
   - A tested channel mix with a cost-shift table
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open a chat with an AI that can run Python code and read files, then add the skill folder.
+  - Fill in the channel data template for each channel. Use real numbers from the last 12 months.
+  - Ask your AI to follow the skill and run the cost to serve script for each channel first.
+  - Run the ROI script, then the mix script. Add your mix limits if you have them.
+  - Check the verdicts and the cost-shift table, then take them to your channel review.
+output_sample:
+  input:
+    - Your channel data template, filled in for each channel (deals, revenue, margin, acquisition cost, sales cycle)
+    - Partner discounts, marketing funds and training costs
+    - Support load and overhead share for each channel
+    - Retention and expansion rates for each channel
+    - Limits on your mix, such as a minimum direct share (optional)
+  prerequisites:
+    - An AI that can run Python code and read files
+  output:
+    - name: Cost to serve report
+      contains: Full cost to serve per deal and per dollar of revenue for each channel, with hidden costs flagged and true gross margin.
+    - name: Channel ROI report
+      contains: "Three ROI numbers per channel: first-year cash, lifetime value and the next dollar spent, plus where returns start to shrink."
+    - name: Channel verdicts
+      contains: "One verdict per channel: double down, maintain, defund or exit, with the rule behind each."
+    - name: Channel mix recommendation
+      contains: The mix that earns the most revenue within your limits, such as minimum direct share and maximum partner share.
+    - name: Sensitivity table
+      contains: What happens to the mix if direct acquisition cost rises or the partner discount widens.

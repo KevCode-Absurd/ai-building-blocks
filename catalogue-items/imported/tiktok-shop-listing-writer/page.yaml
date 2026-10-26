@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills set listing templates.
 new_slug: tiktok-shop-listing-writer
 name: TikTok Shop listing writer
-summary: Give it your product details. Get a title, description, image and video
-  plan that fits TikTok Shop search.
+summary: Write a TikTok Shop listing that gets found in search. Give it your product details. You get a title, description, and image and video plan.
 job: write-landing-page
 headline: TikTok Shop listing writer
-subhead: Product listings that get found in TikTok Shop search and then convince
-  the person looking. You get a title, description and a plan for images and
-  video, all based on how shoppers search there.
+subhead: Product listings that get found in TikTok Shop search and then convince the person looking. You get a title, description and a plan for images and video, all based on how shoppers search there.
 explain: |
   Product listings that get found in TikTok Shop search and then convince the person looking. You get a title, description and a plan for images and video, all based on how shoppers search there.
 
@@ -18,6 +15,10 @@ when:
   - You are listing a new item and want it right the first time.
   - Your listing gets views but few sales.
   - You need to know which images and videos a listing needs.
+not_for:
+  - "You need real search volume numbers: check TikTok Shop Seller Center, because this skill only gives estimates."
+  - "You want to write a video script or post: ask a person on your team or write it yourself, since this skill plans the listing only."
+  - "You sell on Amazon or Shopify: use that site's own listing tools, because the title and image rules here are for TikTok Shop."
 you_give:
   - Product details and features
   - Price and any promotion
@@ -30,7 +31,30 @@ you_get:
   - An image and video plan
   - Hashtag ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your product name, features, price and any promotion. Add photos and competitor links if you have them (optional).
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Paste your product details and ask for a TikTok Shop listing plan.
+  - Check the keyword numbers. They are estimates, so confirm them in TikTok Shop Seller Center.
+  - Check that every price, review and claim came from your own details. Remove anything you did not supply.
+  - Add the title and description to your listing, then make the images and video from the plan.
+output_sample:
+  input:
+    - Your product name and key features
+    - Your price and any promotion
+    - Photos you already have (optional)
+    - Links to competing listings (optional)
+  output:
+    - name: SEO Optimization Strategy
+      contains: Your main and long-tail keywords, with search volume and competition marked as estimates, plus a keyword-rich title under 60 characters.
+    - name: Product Description Structure
+      contains: A description with a hook, key features, why to choose it, what is in the box, who it suits, and hashtags.
+    - name: Visual Content Strategy
+      contains: A list of 9 images to prepare and what your product video needs, including length, format and first three seconds.
+    - name: Listing Attributes & Categories
+      contains: The category path and product details such as brand, material, size, weight, colors and target buyer.
+    - name: Competitive Analysis Summary
+      contains: A table comparing up to three competitors on title, price, strengths and gaps you can use.
+    - name: Performance Tracking Setup
+      contains: The numbers to watch and a weekly, two-week and monthly schedule for checking them.
+    - name: Next Actions
+      contains: A checklist for using the new title, description, images and video, and setting up tracking.

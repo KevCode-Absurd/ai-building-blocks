@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes strict instructions an agent can run alone.
 new_slug: coding-agent-handoff-writer
 name: Coding agent handoff writer
-summary: Describe the change you want. Get a handoff note with scope, checks and
-  stop rules for a coding agent.
+summary: Write a coding agent handoff from your plan. You get a note with scope, checks and stop rules so the agent can run alone and return a draft PR.
 job: build-software
 headline: Coding agent handoff writer
-subhead: A handoff note that lets a coding agent run on its own and come back
-  with work a person can review. It is made for overnight or background jobs
-  where you will not be watching.
+subhead: A handoff note that lets a coding agent run on its own and come back with work a person can review. It is made for overnight or background jobs where you will not be watching.
 explain: |
   A handoff note that lets a coding agent run on its own and come back with work a person can review. It is made for overnight or background jobs where you will not be watching.
 
@@ -18,6 +15,10 @@ when:
   - You are turning a spec into a brief an agent can run.
   - Your agent runs vary and you want them comparable.
   - A draft handoff needs a second look before it goes out.
+not_for:
+  - "You need the spec or product requirements doc itself: write that first with the pm-spec-writing skill, then come back."
+  - "You want to review the pull request the agent sends back: read the diff yourself or use a code review step."
+  - "You are working live with an agent on a small change: just chat with it, no handoff note needed."
 you_give:
   - The plan or spec
   - The repo and its default branch
@@ -29,7 +30,34 @@ you_get:
   - Checks the agent must pass
   - A review path for the result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI (Claude, ChatGPT or Gemini) and paste in the skill text. It needs no code running or paid tool.
+  - Paste your plan or spec. Add the repo link, its default branch and whether it is public or private.
+  - Add the commands that prove the work, such as tests, lint and build. Say who merges and who cleans up.
+  - Ask your AI to write the handoff. It saves it as dispatch-short-name-date.md, with the pull request body format set in the note.
+  - Read the note as the agent would. Answer any question it leaves open, or turn it into a stop rule.
+  - Give the note to your coding agent. Read the diff and the pasted check results before you merge. This skill is a copy of RampStack's dispatch-authoring skill, shared under the MIT licence.
+output_sample:
+  input:
+    - Your plan or spec
+    - Your repo link, whether it is public or private, and its default branch
+    - Your repo's contribution rules (optional)
+    - The commands that prove the work, such as tests, lint and build
+    - Who merges the result and who cleans up
+  prerequisites:
+    - A coding agent such as Claude Code, Codex or Cursor to run the note
+    - A way to check the work, such as tests or a build command
+  output:
+    - name: Header
+      contains: Date, repo, visibility, branch name and who plans, runs and merges the work.
+    - name: Gate 0
+      contains: Checks the agent runs before it writes anything, each with a stop action if it fails.
+    - name: Scope
+      contains: What may change, then what must not change, so the agent does not tidy up nearby code.
+    - name: Specification
+      contains: The work in enough detail that the agent does not need to ask, with examples to match.
+    - name: Verification
+      contains: The exact commands, the result expected from each, and the files to read back and paste.
+    - name: Delivery
+      contains: Branch name, commits, a draft pull request that is never merged, and who cleans up.
+    - name: Stop conditions
+      contains: When the agent must quit and report instead of guessing, such as a failed check or an unclear spec.

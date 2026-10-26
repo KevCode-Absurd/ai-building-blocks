@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads real code and summarises the style.
 new_slug: design-rules-file-writer
 name: Design rules file writer
-summary: Point it at your project. Get a DESIGN.md that lists the colours, type,
-  spacing and parts your product really uses.
+summary: Point it at your project and get a DESIGN.md that lists the colours, type, spacing and parts your product really uses, so new screens match.
 job: design-work
 headline: Design rules file writer
-subhead: A DESIGN.md that tells people and AI agents which colours, type sizes,
-  spacing and parts your product really uses. With one in place, each new screen
-  matches the last instead of inventing styles.
+subhead: A DESIGN.md that tells people and AI agents which colours, type sizes, spacing and parts your product really uses. With one in place, each new screen matches the last instead of inventing styles.
 explain: |
   A DESIGN.md that tells people and AI agents which colours, type sizes, spacing and parts your product really uses. With one in place, each new screen matches the last instead of inventing styles.
 
@@ -18,6 +15,10 @@ when:
   - A new designer joins and asks for the style guide that does not exist.
   - You want to document a design system that only lives in code.
   - Screens built by different people look slightly different.
+not_for:
+  - Your project has no styles yet. Pick your colours and fonts first, or ask a brand designer, then run this.
+  - You want a full rebrand or a new logo. Hire a brand designer, because this only writes down what the code already uses.
+  - You need a polished brand guide for print or clients. Ask a designer, since this file is short and made for people and AI agents.
 you_give:
   - Project folder with styles and components
   - Brand notes (optional)
@@ -28,8 +29,34 @@ you_get:
   - Component rules
   - Things to avoid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI in a tool that can read your project files, such as Claude Code, Codex or Cursor. A plain chat works if you paste in your styles.
+  - Paste the skill into the chat, or add the skill folder to your project.
+  - "Say: Write a DESIGN.md for this project. Add any brand notes you have."
+  - Read the Open questions section first. Choose which near-duplicate colours and sizes to keep.
+  - Check two of your screens against the file and fix anything that is wrong.
+  - Ask your AI to add a line to AGENTS.md or CLAUDE.md so it reads DESIGN.md before any UI work.
+output_sample:
+  input:
+    - Your project folder with its styles and components
+    - Brand notes (optional)
+    - Pages that show the look you prefer (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - An existing DESIGN.md is updated, not replaced, and it asks first
+  output:
+    - name: Tokens, Colors
+      contains: Each colour grouped by role, with its exact value and where it is used.
+    - name: Tokens, Typography
+      contains: Font families and the real type scale for headings, body, labels and small text.
+    - name: Tokens, Spacing and Shapes
+      contains: The spacing steps, corner radii, border widths and shadows the project uses.
+    - name: Components
+      contains: One short entry per part, such as buttons and inputs, with hover, focus and error states.
+    - name: Layout
+      contains: Content widths, grid or columns, and breakpoints.
+    - name: Do's and Don'ts
+      contains: Rules written as instructions that keep new screens consistent.
+    - name: Agent Prompt Guide
+      contains: A few sentences an AI agent should read before it touches the design.
+    - name: Open questions
+      contains: Near-duplicate values and gaps found, each with a suggested fix for you to decide.

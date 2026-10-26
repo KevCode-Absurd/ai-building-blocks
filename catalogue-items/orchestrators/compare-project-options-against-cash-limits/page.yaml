@@ -32,3 +32,26 @@ how_to_use:
   - Give the complete folder to your AI. Start with START_HERE.txt, then provide the named inputs in the coordinator skill.
   - Follow its checkpoints and check the evidence before using any output. Agent packs run one requested cycle; they do not create a schedule.
 thinking: high
+not_for:
+  - You only want a 30, 60 and 90 day cash forecast. Use the Cash forecast builder.
+  - You have one plan and want to see where a bad year breaks it. Use the Bad year plan stress tester.
+  - You have no cash records yet. This workflow will not recommend funded projects without a starting balance, fixed commitments and a reserve rule.
+output_sample:
+  input:
+    - Your projects, the choices you control and who decides by when
+    - Your starting cash balance, due dates for money in and out, and fixed commitments
+    - Your minimum cash reserve and any staffing or time limits
+    - Which timings are uncertain and how wrong past forecasts were
+  output:
+    - name: Dated cash schedule
+      contains: Money in and out by date, with gaps marked and no double-counting.
+    - name: Source and assumption register
+      contains: Where each figure came from and each assumption the schedule rests on.
+    - name: Option and limit table
+      contains: Each project choice against each hard limit, with units and any limit it breaks.
+    - name: Feasible shortlist
+      contains: The choices that fit, with how delayed payments would change them.
+    - name: Decision record
+      contains: Owner, next action, fallback and the evidence that would change the choice.
+    - name: Check table
+      contains: PASS, FAIL or NOT RUN for each check, with the next person or input needed.

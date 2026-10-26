@@ -1,6 +1,6 @@
 slug: customer-spend-tier-tagger
 name: Customer spend tier tagger
-summary: Set your spend levels. Get each customer tagged Bronze, Silver, Gold or Platinum from lifetime spend. Changes live customer tags.
+summary: "Tag every Shopify customer Bronze, Silver, Gold or Platinum by lifetime spend. You set the limits and check a preview before any tag changes."
 category: general
 boards: []
 type: skill

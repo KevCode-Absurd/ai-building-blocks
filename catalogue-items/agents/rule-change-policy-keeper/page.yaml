@@ -1,6 +1,6 @@
 new_slug: rule-change-policy-keeper
 name: Rule change policy keeper
-summary: Give it a rule that changed and your policies. Get gaps found and small redrafts checked for review. A lawyer still checks.
+summary: Check which of your policies a new law or platform rule breaks. Get small redrafts to review, with each gap ranked. A lawyer still checks.
 job: check-contracts
 thinking: high
 thinking_why: It ranks gaps, drafts edits, re-checks them in a loop and must not miss a clause. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A law, platform rule or standard that applies to you has changed.
   - You are about to start a new use of customer data and want to know if your policy covers it.
   - You have written policies and no one has time to check them against every change.
+not_for:
+  - Your policies are not written yet. Start by drafting them with a lawyer, then come back.
+  - The rule plainly does not apply to you. Skip it and save the time.
+  - You need a ruling on a fine, a licence or a claim. Ask a lawyer to read the rule itself.
 you_give:
   - "The rule change, as its text or a summary with its source, where it applies and when it starts"
   - The approved text of the policies that might be touched
@@ -29,6 +33,30 @@ how_to_use:
   - Paste the rule text, not only a news summary. Say where you operate.
   - Read each draft with the policy owner. Nothing is applied by the agent.
   - Take the drafts and the reminder to a lawyer before you publish. Mark each gap closed yourself once it is applied and approved.
+output_sample:
+  input:
+    - The rule change, as its text or a summary with its source, where it applies and when it starts
+    - The approved text of the policies that might be touched
+    - How you really handle data, orders or staff now (optional)
+    - Who owns each policy (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - The approved current version of each policy
+  output:
+    - name: THE RULE
+      contains: What changed, where it applies, when it starts, and whether it is confirmed in force.
+    - name: POLICIES TOUCHED
+      contains: Each policy with its gaps ranked high, medium or low, and the reason.
+    - name: DRAFTS TO REVIEW
+      contains: Each redraft file, the edit in one line, the rounds it took and any high gap left.
+    - name: OPEN GAPS
+      contains: Gaps still open after three rounds, or that need a decision from a person.
+    - name: DEADLINES
+      contains: The dates that matter, marked verified or unverified.
+    - name: WHO DECIDES
+      contains: The policy owner for each draft.
+    - name: FILES AND MISSING
+      contains: Each step's file, every MISSING line, and any checks that failed or could not run.
 how_it_works:
   - title: Check the rule is in force
     text: Asks for the source and date. If it cannot be confirmed, every date is marked unverified.

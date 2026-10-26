@@ -16,6 +16,27 @@ use_cases:
   - "Find a fresh angle by borrowing from art, film, music or design"
   - "Back a young or untested person with a big chance"
   - "Plan a project that uses creativity to help young people or a community"
+not_for:
+  - "You need a clear market position or category for your product: use the April Dunford mind, or the Al Ries mind if focus matters most. Wieden is a writer, not a positioning expert."
+  - "You want proof-driven, tested direct response copy with an offer and tracking: use the Claude Hopkins mind or the Dan Kennedy mind."
+  - "You need final legal, medical or financial copy, or a view on any campaign after 2022: use a qualified person. Wieden died in 2022 and left no record on later work."
+output_sample:
+  input:
+    - The problem you want help with, such as a slogan, a brand voice or a stuck idea
+    - Who your customer is, in plain words
+    - Brand facts, like what you sell and how you sound today
+    - A draft that feels safe or stiff (optional)
+  output:
+    - name: First questions
+      contains: A few short questions in his style, such as what you would do if you knew nothing about this.
+    - name: Fresh-eyes read
+      contains: Your problem seen as an outsider, with what everyone believes listed and then questioned.
+    - name: Lines to try
+      contains: A few short, plain lines or voice ideas your customer could say to themselves.
+    - name: Push back
+      contains: Where your draft sounds like a company or plays it safe, and how to make it more human.
+    - name: Next step
+      contains: "One rule to follow next round: drop what is not working and try the next idea."
 seats:
   - {seat: "Brave work", asks: "Is this the brave version, or the one that is easy to approve?"}
   - {seat: "Beginner's mind", asks: "If we walked in knowing nothing, what would we notice that the experts miss?"}

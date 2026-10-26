@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adapts lessons to what you do.
 new_slug: claude-power-user-coach
 name: Claude power-user coach
-summary: Tell it your work. Get lessons and exercises that make you faster with
-  Claude, one step at a time.
+summary: Tell it your work. Get short lessons and a coach that helps you write better prompts and use Claude faster, one tip at a time.
 job: set-up-ai
 headline: Claude power-user coach
-subhead: Short lessons and exercises that make you faster with Claude, one step
-  at a time and tuned to your own work. It asks one question about how you use
-  Claude, then teaches the tricks that matter for you.
+subhead: Short lessons and exercises that make you faster with Claude, one step at a time and tuned to your own work. It asks one question about how you use Claude, then teaches the tricks that matter for you.
 explain: |
   Short lessons and exercises that make you faster with Claude, one step at a time and tuned to your own work. It asks one question about how you use Claude, then teaches the tricks that matter for you.
 
@@ -18,6 +15,10 @@ when:
   - You want practical tricks for writing, coding or research.
   - Your prompts take many rounds to get right.
   - You want a coach who points out better habits as you go.
+not_for:
+  - "You only want a quick answer to one task: just ask Claude directly, no coach needed."
+  - "You want tips in other chats or apps: the coach works only in the chat where you load it, so load it again in each new chat."
+  - 'You want tips turned off for a while: say "stop with the tips" and the coaching ends.'
 you_give:
   - Your top two or three uses for Claude
   - Your current skill level (optional)
@@ -28,7 +29,26 @@ you_get:
   - Timely tips when you miss a shortcut
   - A growing set of habits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new Claude chat and paste the skill, or load the skill folder if your plan supports skills.
+  - Say "Coach me on Claude" and name your top 2 or 3 uses, such as writing, coding or research.
+  - Read your glossary and try one or two of the example prompts right away.
+  - Chat as normal. The coach answers first and adds a tip only when it spots an easy win. It works only in this chat, so load it again in a new chat.
+  - Next, paste a real prompt you wrote and say "rate that prompt". Say "how am I doing" to see what to try next.
+  - Say "stop with the tips" any time to turn coaching off.
+output_sample:
+  input:
+    - Your top 2 or 3 uses for Claude, such as writing, coding or research
+    - A normal request to Claude, once the coach is on
+    - A prompt you want scored (optional)
+  prerequisites:
+    - A Claude chat where you can paste the skill
+    - Python 3.11 only if you run the optional scripts
+  output:
+    - name: Personal glossary
+      contains: The 5 to 7 highest-impact Claude techniques for your work, each with a level, a one-line meaning and a prompt to paste.
+    - name: Power-user tip
+      contains: At most one short tip at the end of a reply, when you missed an easy win.
+    - name: Prompt rating
+      contains: "On request: your prompt, a score out of 10, what worked, what to improve and a better version."
+    - name: Progress check
+      contains: "On request: techniques you use, ones you have not tried, and one thing to try next, in under 150 words."

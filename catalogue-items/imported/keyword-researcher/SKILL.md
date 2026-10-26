@@ -11,6 +11,34 @@ metadata:
 
 This skill enables an AI agent to perform end-to-end keyword research for any niche, product, or content initiative. The agent starts from seed keywords, expands into long-tail variations, classifies search intent, analyzes competitor keyword portfolios, and delivers a prioritized keyword strategy. The output helps content teams, SEO specialists, and product marketers target the right search terms to drive qualified organic traffic.
 
+## How to run this skill
+
+AI Blocks added these notes, and one line under Examples. The rest of the original skill below is unchanged. Where a note here disagrees with it, follow the note.
+
+### What you need
+Required:
+- The seed topic, product or service.
+- The target market and language.
+
+Optional, and it makes the report better:
+- What the content is for: blog posts, landing pages, product pages or paid campaigns.
+- The site URL, and three to five rival sites, for the gap step.
+- A keyword export from a keyword tool, or a Google Search Console export, for real numbers.
+
+### If something is missing
+- Ask once for the topic and the market. If you still do not have them, write `MISSING: <what>` and stop. Do not guess a market.
+- Never invent a search volume, difficulty, cost, trend or ranking.
+
+### Where the numbers come from
+- Steps 3 and 5 ask for volume, difficulty, cost per click, trend and rival rankings. A chat AI has no live search data. Use the figures in the person's export if they gave one. Otherwise give a rough band (for example "low", "medium", "high") and label every figure `estimate`.
+- Without an export or a paid keyword tool, rival rankings cannot be known. Say so. Name the terms rivals appear to cover from their pages, and mark the gap list `unverified`.
+- Page-two terms (positions 11 to 20) can only be named from the person's own data. Do not list them without it.
+- End the report with a line that says which numbers came from the person's data and which are estimates, and tell them to check the top terms in a keyword tool before they write.
+
+### What you hand back
+- Follow the report layout in step 6: a keyword table, a gap table, keyword groups tied to content pillars, and content ideas for each group.
+- Finish with `CHECKS MISSED:` and list any step you could not do, or write "none".
+
 ## Workflow
 
 1. **Collect seed keywords and define scope.** Gather initial seed keywords from the user's product description, existing content, and business goals. Identify the target market, geographic region, and language. Clarify whether the research is for blog content, landing pages, product pages, or paid campaigns, as this affects intent priorities.
@@ -32,6 +60,8 @@ Provide the agent with a seed keyword or topic, your website URL (optional, for 
 **Prompt:** `Perform keyword research for the topic "AI-powered customer support" targeting SaaS companies in the US market. My site is https://supportbot.io.`
 
 ## Examples
+
+All the figures, rankings and sites in the two examples below are invented to show the layout. They are not real data. Do not copy them into a report.
 
 ### Example 1: SaaS Product Keyword Research
 

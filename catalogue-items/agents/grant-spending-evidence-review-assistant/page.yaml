@@ -1,56 +1,134 @@
 new_slug: grant-spending-evidence-review-assistant
 name: Grant spending evidence review assistant
 headline: Grant spending evidence review assistant
-summary: A reconciled grant spending table, variance brief and evidence gaps.
+summary: Check grant spending against the award rules and budget. Get a reconciled table, a variance brief, evidence gaps and a draft fund owner update.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A reconciled grant spending table, variance brief and evidence gaps. Share the award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the award agreement, the approved budget, your transaction records and your receipts. It matches each cost to a budget line and an award clause, then shows variances and costs with no proof. You get a reconciled table, a variance brief and questions for the fund owner. It is not an audit.
 explain: |-
-  A reconciled grant spending table, variance brief and evidence gaps.
+  Grant spending is checked against two things: what the award allows and what the budget approved. This agent matches every transaction to both. It uses only the award clauses you supply.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Restricted spending follows the supplied award rules; unknown eligibility is a question for the fund owner. Missing tools or evidence stay visible in the final summary.
+  Where eligibility is unclear, it does not decide. It writes the question for your fund owner. It separates timing differences from real overspend, and it shows any move between budget lines that nobody approved. Costs with no receipt, or a receipt that does not match, go on an evidence gap list.
+
+  The result helps you prepare for your fund owner and funder. It is not an audit opinion or a funder return, and it submits nothing. The fund owner or an auditor should review it before anyone relies on it.
 when:
-  - You need a reconciled grant spending table, variance brief and evidence gaps.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A grant reporting date is coming and you need spending matched to the award terms.
+  - The funder changes a restriction, or you get a new version of the budget.
+  - New transactions arrive and you need to know which ones are eligible.
+  - Your fund owner asks why spending is above or below budget.
+not_for:
+  - You are still writing the bid. Use the Grant Writer agent.
+  - You need restricted and general cash kept apart. Use the Grant restrictions cash reconciler.
+  - You need an audit opinion or a funder return. Your fund owner or auditor does that. This agent submits nothing.
 you_give:
-  - The award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - The award agreement, or the clauses on eligible costs, limits, dates and reporting
+  - The approved budget, with its version or date
+  - Transaction records for the reporting period, up to a cutoff date
+  - Receipts or invoices for those transactions
+  - The reporting period and the name of your fund owner
+  - Your last review file (optional)
 you_get:
-  - A reconciled grant spending table, variance brief and evidence gaps.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A reconciled table that matches each cost to a budget line, an award clause and its proof
+  - A variance brief that separates timing differences from real overspend
+  - A list of costs with missing or mismatched proof
+  - Questions for the fund owner on costs where eligibility is unclear
+  - A draft fund owner update, not sent
+  - A review log for your next review
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack from this page and add it to your AI. If you cannot add it, paste SKILL.md into a new chat.
+  - Attach the award agreement, the approved budget and your transaction export. Add receipts, or a list of which transactions have one.
+  - Type the reporting period, the cutoff date and your fund owner's name. Attach your last review if you have one.
+  - Say "Reconcile this spending to the award rules. Do not decide eligibility where the clause is unclear." Your AI asks once for anything missing.
+  - Open eligibility-questions.md and evidence-gaps.md first. Send them to your fund owner yourself.
+  - Ask your fund owner or an auditor to review the table before you rely on it. Keep review-log.md for next time.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep award ID, budget version, transaction cutoff, restrictions source and unresolved costs. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A grant reporting checkpoint is due or new eligible transaction evidence is supplied.
-  - title: Choose the next step
-    text: Run prepare-a-grant-spending-evidence-pack for changed evidence or a due review. If an award restriction or budget version changes, extract the actual clause before reclassifying the review table. Missing eligibility returns to the fund owner.
-  - title: Check and save evidence
-    text: Restricted spending follows the supplied award rules; unknown eligibility is a question for the fund owner. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last state
+    text: It keeps the award ID, budget version, transaction cutoff, the source of the restrictions and open costs. The first run sets a baseline.
+  - title: Check what triggered the review
+    text: A reporting date is due, a restriction or budget version changed, or new transactions arrived.
+  - title: Pull the award clauses
+    text: It lists the clauses on eligible costs, limits, dates and prior approval, with clause references. It uses only these.
+  - title: Reconcile every transaction
+    text: Each cost is matched to a budget line, a period, a clause and its proof. Totals are checked against your ledger.
+  - title: Explain the variances
+    text: It compares actual spending with the budget by line and period, and flags unapproved moves between lines.
+  - title: Draft the questions and update
+    text: Unclear costs become questions for the fund owner. The update draft lists totals, open questions and decisions needed.
+  - title: Save the review
+    text: It records what changed, what is missing and the state for next time.
 output_shape: |-
-  Scope and source coverage
-  A reconciled grant spending table, variance brief and evidence gaps.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  AWARD CLAUSES USED
+    <clause reference> | <what it allows or limits> | <source file>
+
+  RECONCILED SPENDING
+    <date> | <description> | <amount and currency> | <budget line> | <in period: yes or no> | <Eligible per clause, Ineligible per clause, or Unknown> | <proof: matches, missing or mismatch>
+    Totals match ledger: <yes or no, and the difference>
+
+  VARIANCE BRIEF
+    <budget line> | <budget> | <actual> | <difference> | <timing, overspend or unapproved move> | <note>
+
+  EVIDENCE GAPS
+    <transaction> | <what is missing> | <who could supply it>
+
+  QUESTIONS FOR THE FUND OWNER
+    <cost> | <the unclear point and clause> | <decision you need>
+
+  REVIEW LOG
+    MISSING lines | CHECKS MISSED | what changed | next reporting date
+output_sample:
+  input:
+    - The award agreement and the approved budget
+    - Your transaction records and receipts for the reporting period
+    - The reporting period, cutoff date and fund owner
+    - Your last review file (optional)
+  prerequisites:
+    - A written award agreement or its restriction clauses
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - A spreadsheet tool, only if you want formulas recalculated in a workbook
+  output:
+    - name: spending-reconciliation.csv
+      contains: Each transaction matched to a budget line, an award clause, its period and its proof.
+    - name: variance-brief.md
+      contains: Actual against budget by line and period, with timing, overspend and unapproved moves kept apart.
+    - name: evidence-gaps.md
+      contains: Costs with no receipt or a mismatched one, and who could supply it.
+    - name: eligibility-questions.md
+      contains: Costs where the clause is unclear, each written as a question for your fund owner.
+    - name: fund-owner-update-draft.md
+      contains: Totals, open questions and decisions needed. A draft only, never submitted.
+    - name: review-log.md
+      contains: Missing facts, checks not done, what changed and the state for the next review.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Restricted spending follows the supplied award rules; unknown eligibility is a question for the fund owner.
+  - what: The award text
+    how: Attach the clauses themselves, not a summary. Every eligibility call points to a clause you can read.
+  - what: The cutoff date
+    how: State it. The agent treats transactions after it as out of scope, not as proof of no spending.
+  - what: Budget version
+    how: Say which version the funder approved. A newer unapproved budget will give the wrong variances.
+improve:
+  - Add your fund owner's own cost categories, so the table uses their labels.
+  - Keep each reconciliation file with the grant records. The next run then starts from your real history.
+  - Add a rule for receipts your group needs, such as itemised receipts for travel, if your policy has one.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads the award text, the budget and the transaction list together.
+    - name: A spreadsheet tool such as Excel or Google Sheets
+      why: It lets you recalculate formulas and check totals in a workbook you can open.
+  inputs:
+    - The funder's reporting template.
+    - Prior approval emails for any change to the budget.
+    - A list of costs your fund owner already confirmed.
+terms:
+  - term: Fund owner
+    meaning: The person in your group who answers to the funder for how grant money is spent.
+  - term: Eligible cost
+    meaning: A cost the award agreement allows you to charge to the grant.
+  - term: Variance
+    meaning: The gap between what the budget said and what was spent.
+  - term: Timing difference
+    meaning: Money spent earlier or later than planned, but still within the award total.
 judge:
   - Restricted spending follows the supplied award rules; unknown eligibility is a question for the fund owner.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,17 +140,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

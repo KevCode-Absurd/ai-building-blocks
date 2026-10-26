@@ -10,6 +10,17 @@ user-invocable: false
 
 # SaaS / Subscription Agreement Review
 
+## Using this skill in a chat (AI Blocks note)
+
+This skill came from a plugin that keeps a team playbook in a config file. In a plain chat that file does not exist, and nothing needs installing. Work like this instead:
+
+- Where the skill says to read the playbook or `CLAUDE.md`, use the rules the person pastes. If they paste none, ask for their position on each term as you reach it (notice window, price rise limit, data export, uptime, subprocessors), once, and record the answers in the reply. Never invent a position or a threshold.
+- If the person has no written rules, skip any step that tells them to run a setup interview. Use the `setup-interview` folder in this package only if they want to build a full playbook.
+- There is no legal research tool in a chat. Do not look up or recall statutes or cases unless the person asks. If you cite one, tag it `[model knowledge - verify]` and tell them to check it against an official source.
+- If a matter workspace or practice-level config is mentioned and the person has none, say "practice-level" and carry on.
+- If the contract text is missing or cut off, ask for the missing part. Mark any term you cannot find as NOT FOUND. Never fill it from what is typical.
+- This is a first check for the person or their lawyer. It is not legal advice. For a large, cross-border or hard-to-leave deal, say a lawyer should review the whole contract.
+
 ## Matter context
 
 **Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/commercial-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/commercial-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
@@ -212,7 +223,7 @@ Data-exit, auto-renewal, and price-escalation findings are the ones most likely 
 
 ## Handoffs
 
-**To renewal-tracker:** When you find the renewal date and notice window, hand them off. The renewal-tracker register expects the following fields (see `skills/renewal-tracker/references/renewal-register.yaml` for the full schema):
+**To renewal-tracker:** When you find the renewal date and notice window, hand them off. The renewal-tracker register expects the following fields (the fields below are the full record; the renewal tracker file is not in this package):
 
 ```yaml
 counterparty:         [name]

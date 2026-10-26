@@ -1,6 +1,6 @@
 ---
 name: accurate-product-image-ad-maker
-description: Use when one ad's scene, layout and words are approved and you need an AI image that keeps the real product and the exact words. It gives every product photo a role, fixes the lock lines, plans the light, camera, hands and words, writes the prompt in five blocks fitted to your model, then checks the first image against the photos on six pass-or-fail lines and fixes one thing at a time.
+description: Use when one ad's scene, layout and words are approved and you need an AI image that keeps the real product and the exact words. Not for a new ad with no approved scene (write the ad copy first) or for six ideas from one photo. It gives every product photo a role, fixes the lock lines, plans the light, camera, hands and words, writes the prompt in five blocks fitted to your model, then checks the first image against the photos on six pass-or-fail lines and fixes one thing at a time.
 ---
 
 # Accurate product image ad maker
@@ -75,7 +75,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
    - **Scene and light:** the product takes the scene's light direction, shadow softness, colour and reflections, and rests on or is held by something.
    - **Camera:** a real position ("counter height, about 40 cm away"), not a mood. Framing, height, angle and distance are separate choices.
    - **Added details:** add only what the camera needs. Any detail the approved ad doesn't give (surface material, time of day, light direction, font look) goes in one line under LEFT OUT as "Added, not in the brief: <...>", so the owner can change it.
-   - **People:** made-up adults only, never shown as a customer, expert or founder. A real person only from their own photos, with permission. No children. Say which hand grips what and what the free hand does. No finger covers the label.
+   - **People:** made-up adults only, never shown as a customer, expert or founder. A real person only from their own photos, with permission. No children. Any hand in the picture gets its own line in the Subject block: left or right, what it grips and where, which hand does the action (tear, pour, lift), and how the hands move from the first moment to the last (for example "left hand holds the pack by its lower half; right thumb and finger tear the top straight across; then the right hand tips the pack into the left palm"). If the approved ad doesn't say which hand, choose one and list it under "Added, not in the brief". An action with no grip named is a failed prompt. No finger covers the label.
    - **Words:** only approved words, never a claim, price or offer that isn't in the facts. Better still, set them in a design tool and ask for clear space.
 5. **Write the prompt in five blocks,** most important first, since many models weigh early words more:
    1. **Use and shape:** "A 4:5 photo for a social ad."
@@ -101,14 +101,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 For a clip, approve this still first and hand it to the video steps as the start frame. Motion, sound and timing belong there.
 
 ## What you hand back
-1. **Prompt:** the five blocks and the keep line, ready to paste, with its character count. Count it exactly; if you can't, write "about <n>" and leave margin under any limit.
-2. **Images:** one line per attached photo and its role.
-3. **Left out:** what was dropped and why, in one line.
-4. **Check:** the six lines, to run on the first image, then pass or fail per line once you have it, with the failure notes.
-5. **Missing:** any fact or photo it needed and didn't have.
-6. **Checks missed:** one line per prompt check still missed, or none.
-
-Hand it back in exactly this layout, with these labels in this order. Use plain labels as shown, not markdown headings or numbered sections:
+Count the prompt's characters exactly; if you can't, write "about <n>" and leave margin under any limit. Run the six lines on the first image once you have it, then mark each pass or fail. Hand it back in exactly this layout, with these labels in this order. Use plain labels as shown, not markdown headings or numbered sections:
 
 ```
 PROMPT (<characters>)

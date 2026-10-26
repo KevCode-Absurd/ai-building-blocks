@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It balances roles so each age group benefits.
 new_slug: mixed-age-group-task-designer
 name: Mixed-age group task designer
-summary: Describe the age groups. Get a shared task where older and younger
-  learners both gain.
+summary: Plan a mixed-age group task where older and younger pupils both learn. Give the goal and age range, get roles, steps and tutor training.
 job: teach-and-train
 headline: Mixed-age group task designer
-subhead: A shared task where older and younger pupils both learn something, not
-  one group helping the other. Give the learning goal and the age range and you
-  get a plan with roles, steps and tutor training.
+subhead: A shared task where older and younger pupils both learn something, not one group helping the other. Give the learning goal and the age range and you get a plan with roles, steps and tutor training.
 explain: |
   A shared task where older and younger pupils both learn something, not one group helping the other. Give the learning goal and the age range and you get a plan with roles, steps and tutor training.
 
@@ -18,6 +15,10 @@ when:
   - You want a buddy-class activity that stretches the older children.
   - Your older pupils tend to take over when paired with younger ones.
   - You need a regular cross-year routine, not a one-off.
+not_for:
+  - You teach a single-age class. Use a normal group task or pair pupils by ability instead.
+  - Your older pupils are not yet confident in the content. Teach them the topic first, then pair them.
+  - You want a simple one-to-one tutoring set-up. Use the peer-tutoring-protocol-designer, if you have it, or a short buddy routine.
 you_give:
   - The learning objective
   - The age groups paired
@@ -29,7 +30,30 @@ you_get:
   - A short tutor training script
   - Signs to watch for during the session
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Add your learning goal and the age groups you will pair. Add session length, group sizes and materials if you have them.
+  - Read the Role Structure first. Check that each age group brings something the other needs.
+  - Run the session. If you repeat it, check the Quality Indicators after week one and adjust the plan.
+output_sample:
+  input:
+    - The learning goal for both age groups
+    - The year groups or ages you will pair
+    - Subject, group sizes and session length (optional)
+    - Space and materials you have (optional)
+    - Whether it is one session or a regular routine (optional)
+  output:
+    - name: Task Overview
+      contains: What the pupils do, the learning goal, and why both age groups gain from the task.
+    - name: Role Structure
+      contains: What each age group does, and how the task needs both groups to finish.
+    - name: Tutor Preparation
+      contains: How to teach older pupils to ask before telling, wait, and check understanding.
+    - name: Task Sequence
+      contains: The steps in order, with timings and materials for each one.
+    - name: Learning Outcomes
+      contains: What the older pupils learn and what the younger pupils learn.
+    - name: Quality Indicators
+      contains: Signs to watch for that show the pairing is working or going wrong.
+    - name: Adaptation Notes
+      contains: Ways to change the task for different group sizes, time or a regular routine.

@@ -1,6 +1,6 @@
 new_slug: write-your-team-culture-memo-and-make-it-real-in-daily-habits
 name: Write a culture memo your team lives by
-summary: Give it how your team works. Get a culture memo, a standards sheet and a rule to drop.
+summary: Write a team culture memo that changes daily habits. Give it how your team works. Get a memo, a standards sheet, a praise plan and a rule to drop.
 job: lead-people
 thinking: high
 thinking_why: It turns values into rules people can follow and judge each other by. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your team has grown past ten and new people cannot tell how things are done here.
   - You have values on the wall and behaviour that does not match them.
   - You want to drop a rule but fear what happens without it.
+not_for:
+  - "You need to handle a disciplinary, legal or pay matter: talk to an HR adviser or an employment lawyer."
+  - "You work alone or have a team of one: a short list of your own working rules is enough."
+  - "You want to cut a rule tied to money, legal duty or safety: ask the person who signs it off, and leave it in place."
 you_give:
   - "How your team really works: what gets praised, what gets ignored, the unwritten rules"
   - Where it falls short and the behaviour you want instead
@@ -30,6 +34,26 @@ how_to_use:
   - Paste how the team really works and where it falls short. It writes the memo and the standards.
   - Read the memo with two people you trust. Cut any line that is a wish rather than a practice.
   - Start the praise plan this week. Run the rule trial for the time it sets and review.
+output_sample:
+  input:
+    - "How your team really works: what gets praised, what gets ignored, the unwritten rules"
+    - Where it falls short and the behaviour you want instead
+    - Your current rules and policies
+    - Your brand file or a past memo in your voice (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Brand profile builder (optional)
+  output:
+    - name: Culture memo
+      contains: What the team does, what it refuses to do, and what it chooses when two good things collide.
+    - name: Standards sheet
+      contains: Each behaviour as a standard, with what good looks like, how it is checked and who owns it.
+    - name: Praise plan
+      contains: How behaviour gets noticed and praised in public, how often, with a specific example line.
+    - name: Rule trial
+      contains: One rule to drop, the risk, how long to test without it and the sign to bring it back.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the culture memo
     text: "Writes the memo as behaviour: what the team does, refuses to do, and does when good things collide, in the manner of the Netflix culture deck."

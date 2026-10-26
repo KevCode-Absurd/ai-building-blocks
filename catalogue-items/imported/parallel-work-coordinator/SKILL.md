@@ -27,6 +27,22 @@ to the user and retaining responsibility for the integrated result.
 
 Keep trivial tasks with the coordinator.
 
+## When Not to Use
+
+- The task is small or has one step: just do it.
+- The parts depend on each other, so one cannot start until another finishes: run them in order instead.
+- Several helpers would need to edit the same files: give those files to one helper.
+- Your AI tool cannot start helper agents. See "No helper agents" below.
+
+## What You Give It
+
+Ask once for any that are missing. If one is still missing, write MISSING and say what it changes. Never invent the goal or the limits.
+
+1. The large task and the result the person wants.
+2. Which files, folders or areas the helpers may touch (optional). Default: read-only.
+3. Rules and limits: what must not change, what needs the person's approval, a deadline (optional).
+4. How to check the result: tests to run, or a checklist (optional).
+
 ## Workflow
 
 1. Decompose the task into distinct, bounded assignments with explicit outputs.
@@ -39,6 +55,21 @@ Keep trivial tasks with the coordinator.
    instruct leaf workers not to delegate.
 5. Integrate the outputs, resolve conflicts, and verify the combined result.
 6. Keep approvals and externally consequential decisions with the user.
+
+## Output
+
+Return these in order. Keep the whole answer to about one page.
+
+1. **Task table**: `<lane>` | `<owner>` | `<what they may touch>` | `<output expected>` | `<status>`. One row per helper. Files must not repeat across owners.
+2. **Scout findings**: one short block per read-only scout, with the facts they found and where they found them.
+3. **Merged result**: the combined work, with every conflict between helpers named and how it was settled.
+4. **Verification note**: what you checked (tests run, files re-read, claims compared) and what you could not check.
+5. **Open questions for the person**: anything that needs their approval or a decision.
+6. **Next steps**: what the person should do now, such as reading the changes, running the tests or approving the next stage.
+
+## No Helper Agents
+
+If your tool cannot start helper agents, still use the plan. Write the task table, then do each lane one after another in the same chat, keep each lane's output in its own labelled section, and merge them at the end. It is slower, but the structure and the checks still help.
 
 ## Examples
 

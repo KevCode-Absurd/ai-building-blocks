@@ -2,36 +2,108 @@ thinking: medium
 thinking_why: It compares load to capacity.
 new_slug: team-capacity-planner
 name: Team capacity planner
-summary: Give it your team and projects. Get workload against people, who is
-  overloaded, and whether you can take on more.
+summary: See who is overloaded, who has room and whether your team can take the next project. Give it your people, their work and what is coming.
 job: organise-work
 headline: Team capacity planner
-subhead: A clear picture of who has too much work, who has room, and whether you
-  can say yes to the next project. You can show your plan with numbers instead
-  of a feeling that the team is stretched.
-explain: |
-  A clear picture of who has too much work, who has room, and whether you can say yes to the next project. You can show your plan with numbers instead of a feeling that the team is stretched.
+subhead: Give it your team, their weekly hours and the work they hold. It works out how full each person is, checks it against coming projects and lists your options. You get a capacity table, the gaps and a recommendation.
+explain: |-
+  A team capacity planner turns a feeling that people are stretched into numbers. You can show leaders who is over their limit and by how many hours, instead of saying the team is busy.
 
-  You give the team, their roles, what they are working on and what is coming next quarter. The skill lines workload up against available hours and skills. It flags people over capacity, spots skill gaps, and shows what happens if a project is added, a hire is delayed or a contractor joins. The plan lists options, such as delay, hire, outsource or drop.
+  You give it the people, their weekly hours, what each one holds and the work coming next. It takes off time away and fixed load such as meetings or support, then works out how full each person is. It compares that with common targets, such as about 80 percent for most roles, and shows where a new project does not fit.
+
+  It then lists options such as delay, hire, bring in a contractor or drop something, with the hours each one frees up. It uses only your numbers. It will not guess what skills a person has beyond their role, and it marks missing hours instead of assuming a 40 hour week.
 when:
-  - A new project lands and you must say whether the team can take it.
-  - Two people are burning out and you need proof to rebalance.
-  - You are planning next quarter and need a headcount case.
+  - A new project lands and you need to say whether the team can take it.
+  - Two people are close to burnout and you need numbers to rebalance the work.
+  - You are planning next quarter and need a case for a hire or a contractor.
   - A key person is leaving and you need to see the gap.
-  - You want to compare hiring against using contractors.
+not_for:
+  - "You size a support or operations team by ticket volume and queues: use the Ops capacity planner."
+  - You plan one person's tasks or a single short sprint. A simple to-do list does the job.
+  - "You want to know if a production line can make more: use the Production capacity checker."
 you_give:
-  - Team members and roles
-  - Current projects and who is on them
-  - Upcoming work
-  - Budget and hiring limits (optional)
+  - Each person or role, with hours available per week
+  - What each person works on now, with rough hours per week
+  - Time away, such as leave and holidays (optional)
+  - Fixed load such as meetings, support or on-call time (optional)
+  - Work coming next, with dates and the effort it needs
+  - Budget or hiring limits (optional)
 you_get:
-  - Workload against capacity per person
-  - Overloaded and spare capacity flagged
-  - Skill gaps
-  - Options with trade-offs
+  - A table of hours available, hours used and percent full for each person
+  - A list of who is over or under their target
+  - Which coming projects fit and which leave a gap
+  - Three to five options with the hours each one frees up
+  - One recommendation, and what would change it
+  - A list of assumptions and missing facts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read a workload file you upload.
+  - "Gather your numbers: each person's weekly hours, what they work on, and the projects you may add. A spreadsheet or tracker export works."
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code, web access or paid tools are needed.
+  - Paste your numbers and say the period, for example "next quarter".
+  - Answer any question about missing hours. If you can't, leave them marked MISSING.
+  - Check that the totals add up and the options use only your numbers.
+  - Review it monthly, and again when someone joins or leaves.
+how_it_works:
+  - title: Set the period
+    text: It states the dates, then builds a table of people, hours available and hours used.
+  - title: Work out how full
+    text: It takes off time away and fixed load, then divides hours used by hours available for each person.
+  - title: Compare with targets
+    text: It flags anyone over 100 percent or far from the target for their role. Targets are rules of thumb you can change.
+  - title: Add the coming work
+    text: It sets each project's hours against free time in its dates and marks it Covered or Gap.
+  - title: Find the bottlenecks
+    text: It names the role or weeks that are oversubscribed. It does not assume skills you did not give.
+  - title: List options
+    text: It gives three to five options with hours freed or added, and checks any people-to-hours conversion against your numbers.
+  - title: Recommend and check
+    text: It picks one option, says what would change the pick, and lists assumptions and missing facts.
+output_shape: |-
+  Capacity plan: <team or project>   Period: <dates>
+  Current utilization
+  | Person or role | Hours available | Allocated | Free | Percent full |
+  Capacity summary: <total available>, <allocated>, <free>, <who is over 100%>
+  Upcoming demand
+  | Project | Start | End | Hours or people needed | Covered or gap |
+  Bottlenecks: <role or weeks>
+  Options
+  | Option | What changes | Cost or trade-off |
+  Recommendation: <one option, why, what would change it>
+  Assumptions and missing facts: <list>
+output_sample:
+  input:
+    - A list of your people and roles, with hours per week
+    - What each person works on now, with rough hours
+    - The projects or requests coming, with dates and effort
+    - Leave, meetings and support time (optional)
+  prerequisites:
+    - A tracker export or calendar your AI can read (optional)
+  output:
+    - name: Current utilization
+      contains: Hours available, hours used and percent full for each person or role.
+    - name: Capacity summary
+      contains: Total hours available, used and free, and who is over 100 percent.
+    - name: Upcoming demand
+      contains: Each coming project against free hours, marked Covered or Gap.
+    - name: Bottlenecks
+      contains: The roles or weeks that are oversubscribed, and why.
+    - name: Options
+      contains: Three to five choices with the hours each frees up and what it costs.
+    - name: Recommendation
+      contains: One option, the reason, and what would change it.
+    - name: Assumptions and missing facts
+      contains: Every guess made and every number you still need to supply.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It needs your numbers pasted in. A tracker or calendar connection saves typing.
+  inputs:
+    - Your past quarter's actual hours, to check estimates against
+    - Known skill needs for each coming project
+    - The target percent full you use for each role
+terms:
+  - term: Utilization
+    meaning: The share of a person's available hours that is already taken by work.
+  - term: Gap
+    meaning: A project that needs more hours than your team has free.
+  - term: Full-time equivalent (FTE)
+    meaning: One person working a full week, used to count hours as people.

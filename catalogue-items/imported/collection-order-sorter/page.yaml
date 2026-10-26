@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts by one stock rule.
 new_slug: collection-order-sorter
 name: Collection order sorter
-summary: Pick a collection. Get in-stock products moved to the top and sold-out
-  ones to the bottom. Changes your live store.
+summary: Sort a Shopify collection by stock so in-stock products come first and sold-out ones sink. Preview the order first, then change your live store.
 job: run-your-store
 headline: Collection order sorter
-subhead: Products in stock move to the top of a Shopify collection and sold-out
-  ones drop to the bottom. It changes your live store, so shoppers see what they
-  can actually buy first.
+subhead: Products in stock move to the top of a Shopify collection and sold-out ones drop to the bottom. It changes your live store, so shoppers see what they can actually buy first.
 explain: |
   Products in stock move to the top of a Shopify collection and sold-out ones drop to the bottom. It changes your live store, so shoppers see what they can actually buy first.
 
@@ -18,20 +15,43 @@ when:
   - You want a quick reorder without clicking through the admin.
   - You want to preview the new order before it goes live.
   - A launch sold out and you need to refresh the page.
+not_for:
+  - Your collection is smart (rule-based). The skill stops unless sorting is manual, so switch it to manual in the Shopify admin first.
+  - You want to keep your hand-made product order. Sorting overwrites it, so note or export the current order first, or sort by hand in the admin.
+  - You need stock counts for one warehouse or location. This reads total stock only, so check inventory in the Shopify admin.
 you_give:
-  - Your store domain
-  - The collection ID
-  - Sort direction (optional)
-  - A signed-in Shopify CLI with product permissions
+  - Your store domain, like mystore.myshopify.com
+  - The collection ID, from the collection page address in your Shopify admin (it ends in a number)
+  - "Sort direction: highest stock first or lowest first (optional)"
+  - Preview mode, to see the plan without changing anything (optional)
 you_get:
   - A preview of the new order
   - The reordered live collection
   - A report of what moved
   - A way to reverse it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Note or export your current product order first. The sort overwrites it and the old custom order cannot be restored.
+  - Sign in to the Shopify CLI for your store. This needs an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Give your AI the skill, your store domain and the collection ID. Ask for a preview first.
+  - Check the preview order. The skill stops if the collection is not manual.
+  - Ask your AI to run it for real. Then refresh your storefront, as the change can take a few seconds.
+  - To flip the order, run it again with the opposite direction.
+output_sample:
+  input:
+    - Your store domain
+    - Your collection ID (optional sort direction, optional preview mode)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A signed-in Shopify CLI session for your store
+    - Permission to read and write products
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step 1 report
+      contains: The collection name, a check that it is manual, and how many products were fetched.
+    - name: Step 2 report
+      contains: The reorder request with the number of moves, or a dry-run note if nothing was changed.
+    - name: Outcome summary
+      contains: The collection title, products reordered, sort direction and error count.
+    - name: JSON report (optional)
+      contains: The same summary as data, if you ask for json format.

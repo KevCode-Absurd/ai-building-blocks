@@ -1,6 +1,6 @@
 new_slug: clear-an-email-backlog-and-set-triage-rules-that-stick
 name: Clear an email backlog and set triage rules that stick
-summary: Give it your inbox rules and the backlog. Get a saved triage guide, drafted replies and fixes.
+summary: Clear an email backlog with saved triage rules. Give it your inbox habits and the pile. Get a guide, a drafted reply for each email, and checked drafts.
 job: write-emails
 thinking: high
 thinking_why: It drafts replies in your name and decides what matters. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have more than two hundred unanswered emails.
   - You dread your inbox and answer the easy ones first.
   - You cleared it once and it filled up again.
+not_for:
+  - "You have only a few emails or one reply to write: use a simple prompt in your AI, or just answer them yourself."
+  - "You want to check one draft before sending: use the Email draft readiness checker."
+  - "You want the AI to send or archive email for you: this workflow only drafts, so you send each one yourself."
 you_give:
   - Twenty minutes to answer questions about your email
   - The backlog, exported or pasted, with sender and date
@@ -29,6 +33,24 @@ how_to_use:
   - Answer its questions about how you handle email. It saves the guide.
   - Paste the backlog. It drafts a reply or a decision for each email and checks them.
   - Send the drafts you approve, in batches. Keep the guide for next time.
+output_sample:
+  input:
+    - Your answers to the inbox interview, about 20 minutes
+    - Your email backlog, exported or pasted, with sender, date, subject and body
+    - What you can promise and who takes forwarded email
+    - Two replies you were happy with (optional)
+  prerequisites:
+    - An AI chat that can read long pasted text or files
+    - An export of your emails from your email client
+  output:
+    - name: Inbox guide
+      contains: Your sender groups, always-yes and always-no rules, reply voice, who gets forwards, and your triage rule.
+    - name: The backlog
+      contains: A drafted reply, forward, one-line decision or archive call for each email, oldest first, with your-only emails marked.
+    - name: Checked drafts
+      contains: Each draft checked for wrong names, promises you did not make, dates you cannot keep and tone, then fixed.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Learn your inbox rules
     text: Interviews you about your senders, your yeses and nos, your voice and what gets forwarded, and saves it as a guide.

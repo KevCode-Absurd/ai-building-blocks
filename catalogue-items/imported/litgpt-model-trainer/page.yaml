@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The steps are set, but sizing the run to your computer takes care.
 new_slug: litgpt-model-trainer
 name: LitGPT model trainer
-summary: Pick a small open model and your data. Get it downloaded, trained on
-  your examples and ready to chat with.
+summary: Train a small open model on your own examples with LitGPT. Get download, LoRA tuning and chat commands sized to your GPU.
 job: build-software
 headline: LitGPT model trainer
-subhead: A small open model, downloaded, trained on your examples and ready to
-  chat with, without writing training code from scratch. You pick the model and
-  data and get working commands.
+subhead: A small open model, downloaded, trained on your examples and ready to chat with, without writing training code from scratch. You pick the model and data and get working commands.
 explain: |
   A small open model, downloaded, trained on your examples and ready to chat with, without writing training code from scratch. You pick the model and data and get working commands.
 
@@ -18,6 +15,10 @@ when:
   - You have a single GPU and need a method that fits.
   - You want to learn how model designs differ by training one.
   - You have a set of question and answer examples ready.
+not_for:
+  - "You have no GPU or cannot run Python: use a hosted fine-tuning service, or ask a developer to run it for you."
+  - "You only want to use a model, not train one: chat with it in Claude, ChatGPT or Gemini."
+  - "You need to train a model above 70B across many machines: use Megatron-Core, as the skill itself advises."
 you_give:
   - The model you want to start from
   - Your training examples
@@ -30,8 +31,35 @@ you_get:
   - Steps to chat with the result
   - How to watch training logs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Tell your AI which model you want, how much GPU memory you have and what the model should do.
+  - Paste or describe your training examples. Your AI will put them in the right JSON format.
+  - For gated models like Meta-Llama, sign in to Hugging Face, accept the licence and give your access token first.
+  - Run the commands your AI gives you on your own computer. This needs Python, LitGPT and a GPU.
+  - Check that your tuned model appears in the out folder, then try the chat steps.
+output_sample:
+  input:
+    - The small open model you want to start from
+    - Your training examples, as question and answer pairs
+    - How much memory your GPU has
+    - What you want the model to do
+    - A Hugging Face account and access token (only for gated models like Meta-Llama)
+  prerequisites:
+    - An AI that can run Python code, on a computer with a GPU
+    - LitGPT installed with pip
+    - A Hugging Face account and accepted licence, for gated models
+  output:
+    - name: Download command
+      contains: The litgpt download command for your chosen model, which saves it to the checkpoints folder.
+    - name: Dataset file
+      contains: Your examples saved as a JSON file with instruction, input and output fields.
+    - name: Fine-tuning command
+      contains: A LoRA or full tuning command with settings sized to your GPU memory.
+    - name: Training logs
+      contains: How to watch progress in the logs file or in TensorBoard while training runs.
+    - name: out/finetune/
+      contains: The folder where checkpoints are saved, including the final tuned model.
+    - name: Merged model folder
+      contains: Optional folder made by the merge command, with LoRA changes folded into the base model.
+    - name: Chat steps
+      contains: Short Python steps to load your tuned model and ask it questions.

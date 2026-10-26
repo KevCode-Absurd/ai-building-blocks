@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a plan from several marketing frameworks.
 new_slug: online-store-marketing-planner
 name: Online store marketing planner
-summary: Describe your store. Get a marketing plan covering search, email, paid
-  ads, conversion and keeping customers.
+summary: Get an online store marketing plan for search, email, paid ads, conversion and repeat buyers. Give it your store details and budget.
 job: run-your-store
 headline: Online store marketing planner
-subhead: A full marketing plan for your online store, covering search, email,
-  paid ads, conversion and keeping customers. You describe your store and get a
-  plan in the order to do it.
+subhead: A full marketing plan for your online store, covering search, email, paid ads, conversion and keeping customers. You describe your store and get a plan in the order to do it.
 explain: |
   A full marketing plan for your online store, covering search, email, paid ads, conversion and keeping customers. You describe your store and get a plan in the order to do it.
 
@@ -18,6 +15,10 @@ when:
   - You get 5,000 visitors a month but only about 2 percent buy.
   - You have no email flows set up.
   - You want to know where to put a small ad budget first.
+not_for:
+  - "You have no live Shopify store or no visitor numbers yet: set up your store and analytics first, or ask a marketing person to audit it."
+  - "You need one channel run in depth, such as paid ads: hire a specialist for that channel."
+  - "You want exact sales forecasts: this plan gives rough targets, so check them against your own figures."
 you_give:
   - What your store sells
   - Monthly visitors and conversion rate
@@ -29,7 +30,43 @@ you_get:
   - Ad channel and budget suggestions
   - Conversion and retention actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. You do not need to install anything or run code.
+  - "Describe your store: what you sell, who buys, monthly visitors, conversion rate, budget and channels you use."
+  - If you do not know a number, say so. Ask your AI to mark it as an estimate, not guess it.
+  - Read the plan and check the targets against your real figures.
+  - Get opt-in consent from customers before you start any email or text flows.
+  - Start with the Next Actions section and do those first.
+output_sample:
+  input:
+    - What your store sells and who buys it
+    - Monthly visitors and conversion rate (optional)
+    - Your budget
+    - Channels you already use (optional)
+  prerequisites:
+    - A Shopify or similar direct-to-consumer store
+    - Web search is not needed. A chat AI is enough.
+  output:
+    - name: Business & Market Analysis
+      contains: Where your store stands today, who your buyers are and what you already run.
+    - name: Traffic Generation Strategy
+      contains: Search work, content ideas and partner or influencer ideas to bring in visitors.
+    - name: Paid Advertising Strategy
+      contains: Which ad channels to try and how to split your budget.
+    - name: Conversion Rate Optimization
+      contains: Where visitors drop off and what to change on product pages and checkout.
+    - name: Email Marketing Automation
+      contains: Email flows to set up, such as welcome, cart recovery and win-back.
+    - name: SMS Marketing Integration
+      contains: Text message flows that work with your email plan.
+    - name: Customer Retention Strategy
+      contains: Loyalty and repeat-purchase ideas to bring buyers back.
+    - name: Analytics & Tracking Setup
+      contains: What to track so you can see which work pays off.
+    - name: Budget Allocation Strategy
+      contains: How your spend is shared across the channels.
+    - name: Implementation Timeline
+      contains: The order to do each task.
+    - name: Projected Results & ROI
+      contains: Rough targets for traffic, conversion and revenue, marked as estimates.
+    - name: Next Actions
+      contains: The first steps to take this week.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It generates data from your schema by clear rules.
 new_slug: test-data-seeder
 name: Test data seeder
-summary: Describe your tables. Get realistic, repeatable test data loaded for
-  development and staging.
+summary: Get a test data seeder script that fills your database with realistic, repeatable rows. Give it your schema. Safe to run twice.
 job: test-and-fix-code
 headline: Test data seeder
-subhead: Describe your tables. Get realistic, repeatable test data loaded for
-  development and staging. Bring your schema or migration files. Use the result
-  to plan your next step.
+subhead: Describe your tables. Get realistic, repeatable test data loaded for development and staging. Bring your schema or migration files. Use the result to plan your next step.
 explain: |
   Realistic test data loaded into your database, the same every time you run it, so development and staging stop depending on empty tables or a copy of real customers. Everything fits your schema and keeps its links intact.
 
@@ -19,6 +16,10 @@ when:
   - You want a large dataset to test slow queries.
   - You cannot use real customer data for testing.
   - A seed script keeps failing on foreign keys.
+not_for:
+  - "You want to copy real customer data into testing: use a masked copy made by your database admin, never raw production rows."
+  - "You only need fixed reference data such as country lists or roles: use your migration tool or fixtures."
+  - "You want to fill a live production database: stop, and use a staging copy instead."
 you_give:
   - Your schema or migration files
   - Database and language you use
@@ -30,8 +31,26 @@ you_get:
   - Data that respects your constraints
   - A check of row counts and links
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your schema or migration files. Say which database and language you use.
+  - "Say which environment this is for and how much data you want: small, medium or large."
+  - Read the seed script. Check it refuses to run against production.
+  - Run it on a test database. Your AI can do this only if it can run code. Otherwise run it yourself.
+  - Check the row counts and the link check. Then commit the script next to your migrations.
+output_sample:
+  input:
+    - Your schema or migration files
+    - The database and language you use
+    - The environment and data size you want
+    - Rules for realistic values (optional)
+  prerequisites:
+    - An AI that can run code and reach your test database, if you want it to load the data for you
+  output:
+    - name: Seed script
+      contains: Code in your language that adds rows to each table, parent tables first, and can be run twice safely.
+    - name: Data profiles
+      contains: Small, medium and large settings you pick with an environment variable or a command-line option.
+    - name: Row-count table
+      contains: How many rows were added to each table after the run.
+    - name: Link check result
+      contains: Whether every foreign key points to a row that exists.

@@ -1,26 +1,25 @@
 slug: treasury-forecast-backtest-checker
 name: Treasury forecast backtest checker
-summary: A signed flow backtest and cumulative cash drift bridge
+summary: "Backtest a cash forecast against what really happened: see each period's miss, the average error and why closing cash ended above or below plan."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+before: []
+next: [lean-year-cash-rules-writer, debt-maturity-funding-ladder, restricted-cash-availability-checker]
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -1,6 +1,6 @@
 new_slug: incrementality-test-planner
 name: "Incrementality test planner"
-summary: "Tell it your spend and regions. Get a lift test sized to you and how to read it."
+summary: "Plan an incrementality test for your ad channel. Get a test sized to your spend and regions, plus a cut, hold or scale rule to read it."
 job: track-numbers
 thinking: high
 thinking_why: "Matching regions and sizing a test needs careful reasoning about data, and a bad design wastes real money. A stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You spend on more than one channel and need to know where the next dollar earns most.
   - You doubt that a channel, such as branded search or an automated Google campaign, really earns what it reports.
   - A platform's number and your store's sales do not match, and the Platform ROAS reality check could not settle it.
+not_for:
+  - "You want to check a platform's reported ROAS against your store sales: use the Platform ROAS reality check."
+  - "You want to test retargeting, email or a site change on single users: use the Holdout test planner."
+  - "Your store is small or sells through one channel: skip the test and use the cheaper checks the planner names."
 
 you_give:
   - The channel or campaign to test and its monthly spend
@@ -36,6 +40,31 @@ how_to_use:
   - If it says do not test yet, do the cheaper check it names and come back later.
   - If it plans a test, hand the region design to an analyst or a testing vendor to check the match.
   - Run one test at a time, with no promotions in the window, then read it with the rule it gave you.
+output_sample:
+  input:
+    - The channel or campaign to test and its monthly spend
+    - Sales by region for 6 to 12 months, with spend, new-customer revenue and orders
+    - The budget you can add or cut, and how many weeks you have
+    - The channel's ROAS now and your break-even ROAS
+    - Your yearly revenue and where else you sell (optional)
+  prerequisites:
+    - An AI chat tool. No code needed.
+    - An analyst or testing vendor to check the region match, if it plans a region test
+  output:
+    - name: Should you test?
+      contains: A yes or not yet call, with the reason and a cheaper check if the answer is not yet.
+    - name: Test type
+      contains: In-platform lift, region test or user holdout, and why it fits your size.
+    - name: Groups
+      contains: Treatment and control regions, and how closely they match on spend, revenue and orders.
+    - name: Change and cost
+      contains: What changes in which group, start date, length, post-test window, and the cost and risk.
+    - name: Read-out and rule
+      contains: The incremental ROAS formula, a noise band, and a cut, hold or scale rule against break-even ROAS.
+    - name: Factor
+      contains: Incremental ROAS divided by platform ROAS, to apply when you read that platform.
+    - name: Keep clean and mistakes to avoid
+      contains: What to hold steady during the test and the errors that spoil the result.
 
 how_it_works:
   - title: Decides whether to test

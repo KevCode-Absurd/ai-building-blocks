@@ -1,6 +1,6 @@
 new_slug: book-notes-system
 name: "Book notes and margin system builder"
-summary: "Name what you want to learn. Get a slow reading routine with margin notes, a notes file and one action per book."
+summary: "Set up a slow reading routine for books you want to use: margin marks, one notes file with sources, and one action to take after each book."
 job: think-and-decide
 thinking: low
 thinking_why: "It sets up a routine from a fixed pattern."
@@ -17,6 +17,10 @@ when:
   - "You buy books and finish few, or finish them and remember little."
   - "You are learning a new field and want your reading to feed your work."
   - "You keep notes in many places and cannot find anything."
+not_for:
+  - "You want to choose what to read: use the Specific knowledge finder first, then come back here."
+  - "You read for pleasure and want no notes or homework: just read, and skip the system."
+  - "You want to read as many books as you can: this routine is slow on purpose, so use a simple reading list."
 
 you_give:
   - "What you want to learn or the job the reading serves"
@@ -35,6 +39,29 @@ how_to_use:
   - "Name the book, or ask for a short list of three to start from."
   - "Set up the notes file as the routine says before you open the book."
   - "At the end of the book do the one action, then revisit on the date."
+output_sample:
+  input:
+    - What you want to learn, or the job the reading serves
+    - How many minutes a day you can keep
+    - A book you have in mind (optional)
+    - How you take notes now (optional)
+  output:
+    - name: The question
+      contains: Your question in one sentence and the minutes a day you can keep.
+    - name: The book
+      contains: One book, or three to pick from, with why it fits and a finish date.
+    - name: Margin key
+      contains: Four marks for comments, questions, disagreements and things to look up.
+    - name: Notes file entry
+      contains: A blank entry with your own words, book, page, date, mark and a claim check.
+    - name: End of book
+      contains: What you will do differently and one action for this week.
+    - name: Revisit on
+      contains: A date to reread your notes and a question to ask yourself then.
+    - name: Missing
+      contains: Anything you did not give that would make the routine sharper.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: "Name the question"

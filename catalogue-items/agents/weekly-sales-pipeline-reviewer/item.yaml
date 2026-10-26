@@ -14,14 +14,14 @@ outputs:
   - {type: plan}
 uses: [crm-hygiene-auditor, deal-watch-digest-writer, pipeline-stage-health-reviewer, deal-health-reviewer, stalled-deal-indecision-checker, deal-next-stage-gap-finder, deal-slip-impact-modeler, win-and-loss-pattern-finder]
 steps:
-  - {uses: crm-hygiene-auditor, note: "Every week, first: finds past close dates, empty amounts and missing next steps, so you know how far to trust the numbers."}
-  - {uses: deal-watch-digest-writer, note: "Every week: compares this export with last week's and lists deals gone quiet, dates that slipped and deals that are new or missing."}
-  - {uses: pipeline-stage-health-reviewer, note: "Every week: stage totals, how long deals sit in each stage and coverage of your target."}
-  - {uses: deal-health-reviewer, note: "Only for the up to three flagged deals worth the most: a health score, the risks and the next actions."}
-  - {uses: stalled-deal-indecision-checker, note: "Only for a flagged deal that went quiet after good meetings and whose notes show hesitation: whether the buyer doubts the choice or fears a mistake, and what to send."}
-  - {uses: deal-next-stage-gap-finder, note: "Only for a flagged deal that is stuck in a stage without hesitation in the notes: what is missing to move it forward, who does it and by when."}
-  - {uses: deal-slip-impact-modeler, note: "Only when coverage is under the bar or one big deal is at risk: what the slip does to your number and what pipeline must replace it."}
-  - {uses: win-and-loss-pattern-finder, note: "Only on the first run of a month, when you give it closed deals: where losses happen and what wins share."}
+  - {uses: crm-hygiene-auditor, note: "Every week, first: finds past close dates, empty amounts and missing next steps, so you know how far to trust the numbers. Uses your deal export. Hands on: the data fixes and a trust level for everything below."}
+  - {uses: deal-watch-digest-writer, note: "Every week: compares this export with last week's and lists deals gone quiet, dates that slipped and deals that are new or missing. Uses the two exports, not step 1's report. Hands on: the flagged deals that step 5 picks from."}
+  - {uses: pipeline-stage-health-reviewer, note: "Every week: stage totals, how long deals sit in each stage and coverage of your target. Uses your deal export and target. Hands on: the coverage figure, which decides whether step 7 runs."}
+  - {uses: deal-health-reviewer, note: "Only for the up to three flagged deals worth the most: a health score, the risks and the next actions. Uses each flagged deal's record from your export. Hands on: the risks for each deal."}
+  - {uses: stalled-deal-indecision-checker, note: "Only for a flagged deal that went quiet after good meetings and whose notes show hesitation: whether the buyer doubts the choice or fears a mistake, and what to send. Uses your notes on that deal, read beside step 4's risks."}
+  - {uses: deal-next-stage-gap-finder, note: "Only for a flagged deal that is stuck in a stage without hesitation in the notes: what is missing to move it forward, who does it and by when. Uses the deal's record from your export, not step 5's message."}
+  - {uses: deal-slip-impact-modeler, note: "Only when coverage is under the bar or one big deal is at risk: what the slip does to your number and what pipeline must replace it. Uses your target and export, with the plans from steps 5 and 6 for the deal."}
+  - {uses: win-and-loss-pattern-finder, note: "Only on the first run of a month, when you give it closed deals: where losses happen and what wins share. Uses the closed deals you give, not the slip model."}
 schedule: "Every Monday morning, from a fresh export of your open deals"
 asks_before: [changing a deal record in your CRM, moving a close date, stage or amount, sending any message to a buyer or a teammate, logging activity on a deal, sharing the forecast with anyone]
 origin: own

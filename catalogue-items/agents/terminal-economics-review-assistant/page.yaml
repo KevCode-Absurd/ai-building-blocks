@@ -1,51 +1,96 @@
 new_slug: terminal-economics-review-assistant
-name: Terminal economics review assistant
-headline: Terminal economics review assistant
-summary: Review whether updated growth and terminal assumptions still fund the required reinvestment.
+name: Long-term growth and reinvestment reviewer
+headline: Long-term growth and reinvestment reviewer
+summary: Check that long-term growth is paid for by reinvestment when a forecast changes. Get the corrected terminal value and the gap against your limit.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A terminal-economics challenge memo and linked forecast/reinvestment cases. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-explain: |-
-  A terminal-economics challenge memo and linked forecast/reinvestment cases.
+subhead: Give it the model you accepted last time, the new forecast or filing, and the size of change that matters to you. It checks that the forecast's growth is paid for by new investment. It backs out what the terminal value assumes and compares both with last time. You get a challenge memo with a corrected case and the gap in value, plus a short record for the next review.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A terminal value is the value of every year after your forecast ends. It is often most of a company's value, and it rests on two numbers that are easy to change by accident: how fast the business grows, and how much it spends to grow. Raise the growth rate and leave the spending alone, and the model quietly assumes the company earns a huge return on every new dollar, for ever.
+
+  This agent keeps a small record of the last review: the forecast version, profit after tax from operations (NOPAT), growth, the return on new capital, the discount rate (WACC), the reinvestment rate and the terminal value. When a revised forecast, a new view of the company's competitive edge or a new terminal assumption arrives, it compares the new numbers with that record. Then it works out how much investment the growth needs at the return your sources support, and compares that with what the model spends. It also works backwards from the terminal value to the return it assumes, and rejects a result that cannot be read, such as no investment at all.
+
+  If your sources say the edge will fade sooner, it builds a separate finite case for that. It reviews and reports. It gives no price target and no buy or sell view, and a person who knows the company checks the sources and the assumptions.
+
 when:
-  - You need a terminal-economics challenge memo and linked forecast/reinvestment cases.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A new annual report or investor update lifts the growth forecast, and you want to see whether the investment line moved with it.
+  - Your analyst raised the long-term growth rate from 3% to 4% and the terminal value jumped. You want to know if that jump is paid for.
+  - A note says a rival is entering the market, and you want to see what a shorter period of excess returns does to value.
+  - You review the same holding every quarter and want each change checked against the last accepted model.
+
+not_for:
+  - You want a price target, a buy or sell view or advice on a trade. It reviews assumptions and nothing else.
+  - The company is a bank or an insurer. Its growth is paid for with equity and regulatory capital, so this cash-flow method does not fit.
+  - You have no dated sources for growth, return or discount rate. It will mark each gap MISSING and stop those lines, but it cannot judge numbers that have no source.
+  - You only want to check one number, such as the implied return. Use the Business terminal value assumption checker.
+  - You want to build the whole growth and reinvestment spreadsheet from scratch. Use the Growth and reinvestment spreadsheet modeller.
+
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The model you accepted last time, as a spreadsheet, and last time's review record (optional on a first run)
+  - The new forecast, filing or analyst note, each with its date (from the annual report, the investor pack or your own notes)
+  - Your first stable-year NOPAT, growth rate, return on new capital and WACC, each with the source and date
+  - The change size that counts as material, such as "5% of terminal value" (your own rule)
+  - Any dated source that says the company's edge will last a shorter or longer time (optional)
+  - The valuation date, the currency and the scale, such as millions
+
 you_get:
-  - A terminal-economics challenge memo and linked forecast/reinvestment cases.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A change log of every assumption that moved since last time, with its source
+  - The investment the growth needs at the supported return, set beside what the model spends
+  - The return on new capital hidden inside the model's terminal value, and whether it is believable
+  - A corrected terminal value where growth is paid for, and the gap in value, as a figure and a percentage
+  - A separate fade case, only when a source says excess returns end sooner
+  - A challenge list, MISSING lines, CHECKS MISSED and a short record for the next review
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. In a chat-only tool it still works, but cannot save files, so you keep the record it hands back.
+  - Say if this is the first run. If not, paste last time's record. Then attach the accepted model, the new forecast or filing, and your growth, return, WACC and materiality figures with their sources.
+  - Read "changed since last review" first. Check each moved number against its source before you read the rest.
+  - Look at the funding check. The investment needed should equal growth divided by return on new capital. Try it by hand on one line.
+  - Fill every MISSING line, then run it again. Treat the challenge list as questions for the analyst, not as an answer.
+
 how_it_works:
-  - title: Link operating growth to terminal reinvestment
-    text: Run the governing workflow when When the user supplies a revised operating forecast, competitive-advantage assessment or terminal-value assumption, compare its source and drivers with the accepted model.
-  - title: Economic profit fade schedule
-    text: If evidence shortens the excess-return period, build a separate finite economic-profit fade case. When actual capital changes, expand the schedule instead of applying the constant-capital illustration mechanically.
-output_shape: |-
-  A terminal-economics challenge memo and linked forecast/reinvestment cases.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this company and currency, or sets a first baseline. Lists each assumption that moved. If nothing changed and no review is due, it says so and stops.
+  - title: Checks the inputs match
+    text: Confirms one currency, one inflation basis and one discount rate that fits the cash flows. Stops a line when a source or date is missing, and sends banks and insurers elsewhere.
+  - title: Links growth to reinvestment
+    text: Works out the investment needed as growth divided by the return on new capital. Takes it off NOPAT to get free cash flow, then divides by WACC less growth to get terminal value. Needs WACC to be above growth.
+  - title: Backs out what the model assumes
+    text: Starts from the model's terminal value and works backwards to its cash flow, its investment and the return on new capital it needs. It rejects a case with no investment or more than all of NOPAT, because growth cannot be read from it.
+  - title: Builds a fade case only if a source asks
+    text: When a dated source shortens the period of excess returns, it builds a separate case that charges capital each year and adds the discounted profit above that charge to capital. When capital changes, it expands the schedule.
+  - title: Sizes the gap and saves the record
+    text: Compares the gap in value with your materiality rule, lists the challenges and MISSING lines, and writes the small record for next time. It keeps the old record.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <assumption: old to new, source and date>
+  FUNDING CHECK     growth <g> at return <r> needs reinvestment <g/r>
+                    model reinvests <n>, shortfall <n>
+  IMPLIED RETURN    <g> / <model reinvestment rate> = <r> on new capital
+                    against <source return> and WACC <w>: <supported or not>
+  FUNDED CASE       FCFF <n>, terminal value <n>, model <n>
+                    gap <n> (<x>% of model value) against rule <y>%: <inside or challenge>
+  FADE CASE         <run, with reason> or <skipped, with reason>
+
+  CHALLENGES  <one line each, written as a question to the analyst>
+  RECORD FOR NEXT REVIEW  forecast version, NOPAT, g, r, WACC, reinvestment, terminal value
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Growth/reinvestment identities reconcile, rates match operating cash flows, terminal timing is consistent and infeasible implied returns are explicitly rejected for interpretation.
+  - what: A lower return on new capital
+    how: Change the return from 12% to 10% and run again. The investment needed rises, free cash flow falls and the gap against the model grows.
+  - what: A WACC close to growth
+    how: Move WACC to 5% with growth at 4%. The terminal value swells, which shows how fragile the number is. If WACC is not above growth, it stops.
+  - what: A stricter rule
+    how: Change the materiality rule from 5% to 2% of terminal value. More changes land in the challenge list.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Growth/reinvestment identities reconcile, rates match operating cash flows, terminal timing is consistent and infeasible implied returns are explicitly rejected for interpretation.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +101,65 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
+  - Write down where your return on new capital comes from and its date. Without a source, it cannot tell a real change from a guess.
+  - Use the same materiality rule every time. A rule that moves between runs makes the change log hard to compare.
+  - Pair it with the Economic profit value calculator when a source says the edge ends in a few years, and the Terminal growth reinvestment checker when you only need one terminal year checked.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: Your filing or analyst note
+      why: Gives the growth and return figures a date and a source, so each assumption can be traced.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The accepted model file with its date, not a copy edited afterwards.
+    - The note or filing that explains why the forecast changed.
+    - A named person who owns the valuation and will check the sources.
+
 terms:
+  - term: Terminal value
+    meaning: The value of all the years after your forecast ends, added up into one number at the end of the forecast.
+  - term: NOPAT
+    meaning: Profit from running the business after tax, before interest costs. It is the cash the business could pay out if it grew no more.
+  - term: Reinvestment rate
+    meaning: The share of NOPAT put back into the business each year to pay for growth.
+  - term: Return on new capital
+    meaning: The profit each new dollar of investment earns. Growth equals reinvestment rate times this return.
+  - term: WACC
+    meaning: The yearly return investors in the whole business expect, mixing debt and equity. It is the discount rate for cash flows before interest.
+  - term: Free cash flow (FCFF)
+    meaning: NOPAT minus the investment needed for growth. It is the cash left for all investors.
+  - term: Excess return
+    meaning: Profit above what investors expect on the capital used. When it falls to zero, extra growth adds no value.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the calculation works, with no claim about a real company.
+
+output_sample:
+  input:
+    - The model you accepted last time, as a spreadsheet, and last time's record (optional on a first run)
+    - The new forecast, filing or analyst note, each with its date
+    - Your growth rate, return on new capital, discount rate and first stable-year profit, each with its source
+    - The size of change that counts as material, such as 5% of terminal value
+    - A dated source on how long the company's edge lasts (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Growth and reinvestment spreadsheet modeller in the agent pack
+    - The Economic profit value calculator in the pack, only if a source says the edge fades early
+  output:
+    - name: Changed since last review
+      contains: Every assumption that moved since last time, old to new, with its source and date.
+    - name: Funding check
+      contains: The reinvestment the growth needs at the supported return, set beside what the model spends, and the shortfall.
+    - name: Implied return
+      contains: The return on new capital hidden inside the model's terminal value, and whether your sources support it.
+    - name: Funded case
+      contains: A corrected terminal value where growth is paid for, the gap against the model, and whether it is inside your limit.
+    - name: Fade case
+      contains: A separate case where excess returns end sooner. It appears only when a dated source asks for it, otherwise it says why it was skipped.
+    - name: Challenges
+      contains: One question per line for the analyst, such as what supports a return the sources do not.
+    - name: Record for next review
+      contains: The forecast version, profit, growth, return, discount rate, reinvestment rate and terminal value, to paste into the next run.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.

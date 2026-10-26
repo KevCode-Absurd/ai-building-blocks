@@ -1,6 +1,6 @@
 new_slug: meta-delivery-troubleshooter
 name: "Meta delivery troubleshooter"
-summary: "Describe what Meta is doing with your ads. Get the failing delivery step and what to change first."
+summary: "Find why Meta ads stall. Give it your frequency, click rate, CPM and cost per sale. Get the failing delivery step and what to change first."
 job: read-ad-results
 thinking: high
 thinking_why: "It reasons from symptoms to a cause across several steps, so a stronger model diagnoses better."
@@ -17,6 +17,10 @@ when:
   - Your frequency is high and spend stays in warm audiences.
   - A new ad or concept lost and you can't tell if the idea or the ad was the problem.
   - Someone gave you Meta advice (reset learning, 20 percent budget rule, interest targeting) and you want to know if it holds.
+not_for:
+  - You have less than 7 days of results, or spend under about $1,000 a day. Wait and collect more data, then run it again.
+  - You want to plan how to lay out campaigns and ad sets. Use a Meta account structure planner if you have one, or ask a media buyer.
+  - You only want to know whether to keep or cut one campaign. Use the Campaign keep-or-change checker.
 
 you_give:
   - "Symptoms with numbers: frequency, click rate, CPM, cost per sale and spend by ad"
@@ -34,6 +38,29 @@ how_to_use:
   - Say how you target, how you bid, how much you spend a day and how many different concepts you run.
   - Change one thing at a time from the list it gives you, in the order it gives.
   - Read the result over 7 days or more before you decide whether it worked.
+output_sample:
+  input:
+    - "Your symptoms with numbers: frequency, click rate, CPM, cost per sale and spend by ad, for 7 days or more"
+    - Your targeting setup and bid strategy
+    - Your creative mix and landing page
+    - Your daily spend level
+  output:
+    - name: Symptoms
+      contains: Your numbers listed back to you, so you can check it read them right.
+    - name: Delivery step diagnosis
+      contains: Findings on who your creative reaches, estimated action rate, auction and bid, data sent to Meta, and unit economics.
+    - name: Failing step
+      contains: The one delivery step that is failing, with the evidence from your numbers.
+    - name: Change first
+      contains: One change to make first, why, and how to read the result.
+    - name: Leave alone
+      contains: What not to touch, and why.
+    - name: 7-day broad vs interest test
+      contains: A plan to run your best interest ad against a copy with no interests and compare cost per sale.
+    - name: Myths checked
+      contains: Common Meta claims with a verdict and a way to test each in your own account.
+    - name: Checks missed
+      contains: Any checks it could not run, or none.
 
 how_it_works:
   - title: Maps the serving steps

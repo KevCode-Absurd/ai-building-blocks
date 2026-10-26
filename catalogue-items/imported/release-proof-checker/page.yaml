@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It gathers evidence from several systems and judges it.
 new_slug: release-proof-checker
 name: Release proof checker
-summary: Point it at a deployed service. Get fresh proof across code, CI,
-  database and live routes before you call it ready.
+summary: Check a deployed service with fresh proof across code, CI, database and live pages. Get a clear green, red or blocked release verdict.
 job: ship-and-host
 headline: Release proof checker
-subhead: A clear pass, fail or blocked verdict on a deployed service, backed by
-  fresh evidence instead of a green build light. A finished pipeline does not
-  mean the live site works, and this shows the difference.
+subhead: A clear pass, fail or blocked verdict on a deployed service, backed by fresh evidence instead of a green build light. A finished pipeline does not mean the live site works, and this shows the difference.
 explain: |
   A clear pass, fail or blocked verdict on a deployed service, backed by fresh evidence instead of a green build light. A finished pipeline does not mean the live site works, and this shows the difference.
 
@@ -18,6 +15,10 @@ when:
   - You must hand a release to operations or a client with proof.
   - A migration ran and you need to confirm the schema is right.
   - You are auditing a release before calling it ready.
+not_for:
+  - "You want to test a new feature for your users: use a person who knows the feature, or your own acceptance tests."
+  - "You need a security review or a load test: ask a security specialist or use a load testing tool."
+  - "You have not deployed yet: finish the release first, then come back to check it."
 you_give:
   - Code version and target environment
   - Health and readiness addresses
@@ -30,8 +31,36 @@ you_get:
   - Steps to repeat each check
   - List of gaps that block release
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach your deployed service.
+  - Open Claude, ChatGPT or Gemini and paste the skill, or upload the skill folder.
+  - Give your AI the code version, the environment, the health addresses and the key routes to test.
+  - Say which tests are allowed and which test account to use. Never paste passwords into the chat.
+  - Check that your AI can run code and reach the live service. Without that, many gates come back blocked.
+  - Read the verdict. If it is red, fix the first failed gate. If it is blocked, give the missing access.
+  - Run the check again after each fix. A green verdict ends when the code, settings or database change.
+output_sample:
+  input:
+    - Your code version and the environment to check
+    - Your health and readiness web addresses
+    - Your key pages or routes to test
+    - Your database version (optional)
+    - What tests you allow, and which test account to use
+  prerequisites:
+    - An AI that can run code and reach your live service
+    - Read access to your CI results, database version and logs
+  output:
+    - name: Source validation
+      contains: Whether tests and checks pass on the exact code version you named.
+    - name: CI
+      contains: Whether the required CI jobs passed for that same version, with time of the run.
+    - name: Deployment identity
+      contains: Whether the live service runs the code version you expect.
+    - name: Database migrations
+      contains: Whether the database changes finished and the schema version is the one you expect.
+    - name: Liveness and readiness
+      contains: Whether the service responds and is ready to take traffic, with status codes and times.
+    - name: Critical routes
+      contains: Whether your key pages or routes work in a small, safe test.
+    - name: Operational signals
+      contains: Crashes, errors or failing dependencies found in the logs after the deploy.
+    - name: Overall verdict
+      contains: Green, red or blocked, with evidence and a list of open risks.

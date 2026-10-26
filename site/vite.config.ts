@@ -1,3 +1,4 @@
+import { handleLibrary, memoryLibrary } from "./src/server/account-library";
 import fs from "node:fs";
 import path from "node:path";
 import { defineConfig, loadEnv, type Plugin } from "vite";
@@ -6,9 +7,12 @@ import { handleComments, memoryStore } from "./src/server/comments";
 import { handleSpaces, memorySpaces } from "./src/server/spaces";
 import { decodeCatalogue, handleComposer, memoryComposer } from "./src/server/composer";
 import { loadWorkflowEnv } from "../tools/lib/workflow-env.mjs";
-import { authenticateUser, authConfigured, handleAccount } from "./src/server/auth";
+import { authenticateUser, authConfigured, handleAccount, verifiedEmails } from "./src/server/auth";
 import { handleTranscription, MAX_VOICE_BYTES } from "./src/server/transcription";
 import { handleAccountMinds, memoryMinds } from "./src/server/account-minds";
+import { devPublicApi } from "./scripts/vite-public-api";
+import { handleCommunity } from "./src/server/community";
+import { memoryCommunity } from "./src/server/community-store";
 
 function devSecurity(): Plugin {
   return { name: "dev-security", configureServer(server) {
@@ -22,11 +26,32 @@ function devSecurity(): Plugin {
 function devComposer(): Plugin {
   const store = memoryComposer();
   const minds = memoryMinds();
+  const library = memoryLibrary();
+  const community = memoryCommunity();
+  const communityEnv = loadEnv("development", process.cwd(), "COMMUNITY_");
   const keys = loadWorkflowEnv(path.resolve(".."));
   const auth = loadEnv("development", process.cwd(), "CLERK_");
   const publicAuth = loadEnv("development", process.cwd(), "VITE_CLERK_");
-  const env = { ...keys, ...auth, CLERK_PUBLISHABLE_KEY: auth.CLERK_PUBLISHABLE_KEY || publicAuth.VITE_CLERK_PUBLISHABLE_KEY || keys.CLERK_PUBLISHABLE_KEY, WORKFLOW_COMPOSER_ENABLED: keys.WORKFLOW_COMPOSER_ENABLED ?? "true", WORKFLOW_DAILY_CAP_USD: keys.WORKFLOW_DAILY_CAP_USD ?? "2" };
+  const env = { ...keys, ...auth, CLERK_PUBLISHABLE_KEY: auth.CLERK_PUBLISHABLE_KEY || publicAuth.VITE_CLERK_PUBLISHABLE_KEY || keys.CLERK_PUBLISHABLE_KEY, WORKFLOW_COMPOSER_ENABLED: keys.WORKFLOW_COMPOSER_ENABLED ?? "true", WORKFLOW_DAILY_CAP_USD: keys.WORKFLOW_DAILY_CAP_USD ?? "10", WORKFLOW_DAILY_ATTEMPT_LIMIT: keys.WORKFLOW_DAILY_ATTEMPT_LIMIT ?? "5" };
   return { name: "dev-composer", configureServer(server) {
+    server.middlewares.use("/api/community", async (req, res) => {
+      try {
+        const chunks: Buffer[] = []; let bytes = 0;
+        for await (const chunk of req) { bytes += chunk.length; if (bytes > 605000) { res.statusCode = 413; res.end('{"error":"Keep the submission under 600 KB."}'); return; } chunks.push(chunk as Buffer); }
+        const request = new Request(`http://${req.headers.host}/api/community${req.url === "/" ? "" : req.url}`, { method: req.method, headers: req.headers as Record<string, string>, body: !["GET", "HEAD"].includes(req.method ?? "GET") ? Buffer.concat(chunks) : undefined });
+        const out = await handleCommunity(request, { ...env, ...communityEnv }, community, async () => JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8")));
+        res.statusCode = out.status; out.headers.forEach((v, k) => res.setHeader(k, v)); res.end(Buffer.from(await out.arrayBuffer()));
+      } catch { res.statusCode = 503; res.end('{"error":"Community publishing is temporarily unavailable."}'); }
+    });
+    server.middlewares.use("/api/library", async (req, res) => {
+      try {
+        const chunks: Buffer[] = []; let bytes = 0;
+        for await (const chunk of req) { bytes += chunk.length; if (bytes > 4000000) { res.statusCode = 413; res.end('{"error":"Account library is too large."}'); return; } chunks.push(chunk as Buffer); }
+        const request = new Request(`http://${req.headers.host}/api/library`, { method: req.method, headers: req.headers as Record<string, string>, body: !["GET", "HEAD"].includes(req.method ?? "GET") ? Buffer.concat(chunks) : undefined });
+        const out = await handleLibrary(request, env, library);
+        res.statusCode = out.status; out.headers.forEach((v, k) => res.setHeader(k, v)); res.end(await out.text());
+      } catch { res.statusCode = 503; res.end('{"error":"Your account library is temporarily unavailable."}'); }
+    });
     server.middlewares.use("/api/minds", async (req, res) => {
       try {
         const chunks: Buffer[] = []; let bytes = 0;
@@ -88,6 +113,7 @@ function devComments(): Plugin {
 /** /api/spaces on the dev server: the live site's handler with an in-memory store (the live site uses D1). */
 function devSpaces(): Plugin {
   const store = memorySpaces();
+  const env = { ...loadWorkflowEnv(path.resolve("..")), ...loadEnv("development", process.cwd(), "CLERK_") };
   return {
     name: "dev-spaces",
     configureServer(server) {
@@ -95,8 +121,8 @@ function devSpaces(): Plugin {
         const chunks: Buffer[] = [];
         for await (const c of req) chunks.push(c as Buffer);
         const body = ["GET", "HEAD"].includes(req.method ?? "GET") ? undefined : Buffer.concat(chunks);
-        const request = new Request(`http://localhost/api/spaces${req.url === "/" ? "" : req.url}`, { method: req.method, headers: req.headers as Record<string, string>, body });
-        const out = await handleSpaces(request, store, { ip: req.socket.remoteAddress ?? "", teamToken: process.env.SPACES_TEAM_TOKEN || "dev-team-token", limit: false });
+        const request = new Request(`http://${req.headers.host}/api/spaces${req.url === "/" ? "" : req.url}`, { method: req.method, headers: req.headers as Record<string, string>, body });
+        const out = await handleSpaces(request, store, { ip: req.socket.remoteAddress ?? "", teamToken: process.env.SPACES_TEAM_TOKEN || "dev-team-token", limit: false, authenticate: () => authenticateUser(request, env), verifiedEmails: user => verifiedEmails(user, env) });
         res.statusCode = out.status;
         out.headers.forEach((v, k) => res.setHeader(k, v));
         res.end(await out.text());
@@ -132,9 +158,9 @@ function exampleApp(): Plugin {
 
 // Preact runs the same React code at a fraction of the size: react and react-dom are aliased to preact/compat.
 export default defineConfig(({ mode }) => ({
-  plugins: [preact(), devSecurity(), devComments(), devSpaces(), devComposer(), exampleApp()],
+  plugins: [preact(), devPublicApi(), devSecurity(), devComments(), devSpaces(), devComposer(), exampleApp()],
   // Only the app entry is source; immutable release snapshots must not be scanned.
   optimizeDeps: { entries: ["index.html"] },
   server: { port: 5180, fs: { allow: [".."] }, ...(mode === "test" ? { hmr: false, watch: null } : {}) }, // tests use a stable snapshot while other tasks edit files
-  build: { target: "es2020", modulePreload: { polyfill: false }, cssCodeSplit: true },
+  build: { target: "es2020", modulePreload: { polyfill: false }, cssCodeSplit: true, rollupOptions: { input: { main: path.resolve('index.html'), mcpConnect: path.resolve('connect-mcp.html') } } },
 }));

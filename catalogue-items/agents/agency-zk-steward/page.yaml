@@ -1,0 +1,147 @@
+name: Zettelkasten note linker agent
+summary: Turn loose notes into a linked knowledge base. Get a four-rule check, link suggestions, index entries and a daily log line. Paste a note.
+headline: Zettelkasten note linker agent
+subhead: Paste a note, a reading summary or a task. The agent checks it against four Zettelkasten rules, proposes at least two links and index entries, and writes a log line. For a book or long article it also builds a structure note.
+job: document-work
+thinking: high
+thinking_why: It has to judge whether each note stands alone and find links that make sense, not just add tags.
+explain: >-
+  A Zettelkasten is a note system where each note holds one idea and links to
+  other notes. Most note piles never get linked, so you cannot find anything
+  later. This agent checks each note, finds links to other notes and tells you
+  where to look for it again.
+
+
+  It uses four rules from the sociologist Niklas Luhmann. A note must make sense
+  alone. It needs at least two links. It should not be over-sorted into folders.
+  And it should lead to more thinking. At the end of each task it shows how your
+  note did on each rule. It also names the expert viewpoint it is using, such
+  as Feynman for learning, and asks one counter-question from another field to
+  spark new links.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The original
+  files notes and writes a daily log in a project folder. In a plain chat it
+  cannot save files, so it gives you the text to save yourself. Its success
+  targets describe the intended work. They are not measured results from AI
+  Blocks.
+when:
+  - You finished a book or video and want notes you can link and find again.
+  - You have a pile of loose notes with no links between them.
+  - You are starting a note system in Obsidian or plain Markdown files and want clear rules.
+  - A big task needs to be broken into linked notes, not one long answer.
+not_for:
+  - You only want clean Obsidian formatting, such as callouts and properties. Use the Obsidian note writer.
+  - You want what you learned turned into small linked notes and an index for your AI to read. Use the Notes wiki builder.
+  - You want a graph of people, things and relations pulled out of a text. Use the Text-to-knowledge-graph builder.
+  - You want book notes with margin marks and no linking system. Use the Book notes and margin system builder.
+you_give:
+  - The note, reading summary or task you want filed and linked.
+  - A list of your existing note titles, so links point to real notes (optional).
+  - Your name, so each reply opens with it (optional).
+  - Your folder layout or note naming rule (optional).
+  - The book, article or video text, if you want a structure note (optional).
+you_get:
+  - A pass or fix on each of the four rules, with the reason.
+  - At least two link suggestions, each with one line on why the notes belong together.
+  - Index entries and keywords, so you know where to look the note up later.
+  - One counter-question from another field, to spark a new note.
+  - A file path and a daily log entry with intent, changes and open loops.
+  - For a book or long article, a structure note with a logic tree and a reading order.
+how_to_use:
+  - Add the pack to your AI as a skill. In a plain chat, paste SKILL.md first, then your note.
+  - Paste the note or task. Add your list of note titles if you have one, so links point to real notes.
+  - Say "Check this note and propose links" or "Break this task into linked notes."
+  - Read the four-rule check first. Fix any rule marked Fix before you save the note.
+  - Copy the note, links and log entry into your own notes app. A plain chat cannot save files for you.
+  - For a book, save the single-idea notes first. Then ask for a structure note that ties them together.
+how_it_works:
+  - title: Say whose lens it uses
+    text: It opens with your name and says which expert viewpoint fits the task, such as Feynman for learning or Munger for strategy.
+  - title: Check the four rules
+    text: It asks if the note stands alone, has two or more links, avoids over-sorting and leads to more thinking.
+  - title: File and link
+    text: It picks a file path, proposes at least two links and one or more index entries, and adds back-links at the bottom.
+  - title: Propose links
+    text: It lists link candidates and keywords, then asks one counter-question from another field.
+  - title: Close the task
+    text: It writes the log entry, lists open loops and says if the note is worth sharing.
+output_shape: |-
+  From <expert or school>'s perspective, <your name>, <one line on the approach>.
+
+  FOUR-RULE CHECK
+    Stands alone: <pass or fix, and why>
+    Connected (2 or more links): <pass or fix, and why>
+    Not over-built: <pass or fix, and why>
+    Leads to more thinking: <pass or fix, and why>
+
+  FILING
+    Path: <YYYY/MM/YYYYMMDD/YYYYMMDD_short-description.md>
+    Links: [[<note>]] because <reason> (at least 2)
+    Index entries: <keywords or index notes>
+    Counter-question: <one question from another field>
+
+  DAILY LOG
+    ### <YYYYMMDD> <short task title>
+    Intent: <what you wanted>
+    Changes: <what was done>
+    Open loops: <items still open, or "None.">
+output_sample:
+  input:
+    - Your note, reading summary or task
+    - Your existing note titles (optional)
+    - The text of a book or article if you want a structure note (optional)
+  prerequisites:
+    - A place to keep notes, such as Obsidian or a folder of Markdown files
+  output:
+    - name: Four-rule check
+      contains: A pass or fix on each rule, with the reason, so you know what to repair.
+    - name: Links and index entries
+      contains: At least two links to other notes with a reason each, plus keywords for finding it later.
+    - name: Counter-question
+      contains: One question from another field that points to a note you have not written yet.
+    - name: Filing path
+      contains: A file name and folder path in the YYYYMMDD style, unless you gave your own rule.
+    - name: Daily log entry
+      contains: Intent, changes and open loops for the task, ready to paste into your log file.
+    - name: Structure note (books and long reads)
+      contains: Five key questions, a logic tree and a reading order that tie your small notes together.
+works_best_with:
+  tools:
+    - name: Obsidian or any Markdown notes folder
+      why: Links in double square brackets and plain files match how this agent names and links notes.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can run the checks. One that can read your folder can find real links itself.
+  inputs:
+    - A list of your note titles, so links are real and not guesses.
+    - Your existing index or map-of-content note.
+    - Your past daily log, so open loops carry over.
+terms:
+  - term: Zettelkasten
+    meaning: German for slip box. A system where each note holds one idea and links to others.
+  - term: Atomic note
+    meaning: A note that holds one idea and makes sense on its own.
+  - term: Index entry
+    meaning: A way in to a note, such as a keyword. It is not a category, and one note can have many.
+  - term: Structure note
+    meaning: A note that puts your small notes in a reading order, with the argument as a tree.
+  - term: Counter-question
+    meaning: A question from another field, asked to spark a new link. The original profile calls it Gegenrede.
+tweaks:
+  - what: Your list of note titles
+    how: Paste it. Without it, links come back marked NEW and you must match them yourself.
+  - what: One idea per note
+    how: Paste one idea at a time. A note with three ideas fails the stands-alone rule.
+  - what: Naming and folder rule
+    how: Tell it your file naming rule. Otherwise it uses a date-based path.
+improve:
+  - Keep your list of note titles up to date and paste it each time, so links stay real.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

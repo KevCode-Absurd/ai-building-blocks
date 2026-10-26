@@ -1,32 +1,40 @@
 new_slug: adviser-fee-tier-checker
 name: Adviser fee tier checker
 headline: Adviser fee tier checker
-summary: Check a two-tier marginal success fee and the retainer credited against it.
+summary: Work out a two-tier success fee, take off the retainer you already paid and see what is left to invoice. Each number ties back to your signed letter.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Gross success fee, retainer credit and remaining fee invoice. Share signed engagement, contractual transaction-value definition, marginal breakpoint, two rates, minimum success fee and eligible retainer credit.
+subhead: Give it your signed engagement letter and the deal value. It splits the value at the breakpoint, applies each rate to its own slice, checks the minimum fee and credits the retainer. You get the gross fee, the credit and the amount left to invoice.
 explain: |-
-  Gross success fee, retainer credit and remaining fee invoice.
+  Many fee letters charge one rate on the first slice of a deal and a lower rate only on the slice above it. A common slip is to apply one rate to the whole value. This adviser fee checker applies each rate to its own slice only.
 
-  Investment banking fees. Illustrative figures only. 2% of first100 plus1% of next50 is2.5;0.5 retainer leaves2. Value200 gives3 gross and2.5 due.
+  Before it uses any rate, it settles what counts as deal value under your letter, such as debt taken on, later payments and rolled-over shares. It then compares the fee with the minimum fee and takes off only the retainer the letter lets you credit, once. If the credit is larger than the fee, it flags that and does not go below zero.
+
+  It shows the sums so a reviewer can trace each number to the letter. It does not say whether a fee is owed.
 when:
-  - You need gross success fee, retainer credit and remaining fee invoice.
-  - You work on investment banking fees and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your adviser sends a success fee invoice and you want to check it against the signed letter.
+  - The letter has two rates that switch at a breakpoint and you are not sure how they apply.
+  - You paid a retainer and need to know how much of it comes off the final fee.
+  - A reviewer asks you to show how the fee was worked out.
 you_give:
-  - Signed engagement, contractual transaction-value definition, marginal breakpoint, two rates, minimum success fee and eligible retainer credit.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed engagement letter, including the page that defines deal value
+  - The breakpoint, the two rates and the minimum success fee
+  - The deal value, and what counts in it (debt taken on, later payments, rolled-over shares)
+  - The retainer you paid and how much of it the letter lets you credit
+  - The reporting date and currency
 you_get:
-  - Gross success fee, retainer credit and remaining fee invoice.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The gross success fee, split by tier
+  - The retainer credit applied and the amount left to invoice
+  - An editable workbook with your inputs, the sums and test cases
+  - A list of missing inputs and the checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in.
+  - Attach the signed letter and give the deal value, the currency and the date.
+  - Ask for the workbook. If your AI cannot make files, ask for the sums as a table.
+  - Check that each rate was applied to its own slice and not to the whole value.
+  - Read MISSING and CHECKS MISSED before you pay or send an invoice.
+  - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
   - title: 1. Resolve transaction-value inclusions such as assumed debt, contingent consideration and rollover before applying rates
     text: Resolve transaction-value inclusions such as assumed debt, contingent consideration and rollover before applying rates.
@@ -74,3 +82,28 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+not_for:
+  - "You want to check an adviser's fee as part of seller closing proceeds: use Check adviser fees in seller proceeds."
+  - "You need a private fund's management fee or fee credits worked out: use Fund fee and credit reviewer."
+  - "Your letter has a tail period, expense refunds or tax on the fee. This checker leaves those out."
+output_sample:
+  input:
+    - Your signed engagement letter
+    - The deal value and what counts in it
+    - The breakpoint, the two rates and the minimum fee
+    - The retainer paid and the part you may credit
+  prerequisites:
+    - An AI that can read files (to read your letter and make the workbook)
+  output:
+    - name: Fee calculation
+      contains: Gross fee by tier, the minimum fee test, the retainer credit and the amount left to invoice.
+    - name: Workbook
+      contains: An editable file with your inputs, the formulas and test cases you can change and recalculate.
+    - name: Source index
+      contains: Where each input came from, with its date, currency and period.
+    - name: Reconciliations
+      contains: Checks that the outputs tie back to the inputs and the letter.
+    - name: MISSING lines
+      contains: Each input you did not supply, left open and never replaced with zero.
+    - name: CHECKS MISSED
+      contains: The checks that could not run, or the word none.

@@ -1,53 +1,97 @@
 new_slug: explain-observed-shareholder-return
 name: Explain an observed shareholder return
 headline: Explain an observed shareholder return
-summary: Reconcile share-price changes and dividend reinvestment using consistent corporate-action-adjusted evidence.
+summary: Explain why a share price moved and what reinvested dividends added, using split-adjusted EPS, P/E changes and real reinvestment prices.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A historical price-attribution and dividend-share reconciliation workbook. Share dated unadjusted prices, comparable EPS/P-E observations, confirmed split factors, dividend payments and reinvestment records.
+subhead: Give it dated share prices, EPS and P/E at both dates, confirmed split terms, dividends paid and your reinvestment prices. Step 1 puts EPS on one split basis. Step 2 splits the price move into an earnings effect and a multiple effect. Step 3 builds shares and wealth from reinvested dividends.
 explain: |-
-  A historical price-attribution and dividend-share reconciliation workbook.
+  A share price can rise because earnings grew, because investors paid more for each dollar of earnings, or both. Splits and dividends can blur the picture. This shareholder return breakdown separates the pieces so they add up exactly to what was observed.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 restates past EPS and share counts onto one split basis, and keeps the unadjusted prices and dividends so a dividend is not counted twice. Step 2 uses comparable positive EPS and dated P/E ratios to split the price change into an earnings effect and a multiple effect, taken in order. The part from both moving together falls in the second one, and the order is stated. Step 3 follows each dividend into extra shares at the price you actually reinvested at, compares the result with holding the cash, and reconciles it to the simple return.
+
+  It looks back at dates you give it. It needs positive EPS. It is not a forecast, a trade call or investment advice.
 when:
-  - You need a historical price-attribution and dividend-share reconciliation workbook.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A stock has risen or fallen over a period and you want to know how much was earnings and how much was the multiple.
+  - A split happened in the period and old EPS no longer lines up with today's.
+  - You reinvested dividends and want to know the shares and wealth they added.
+  - A reviewer wants the return pieces to add up to the observed price change.
+not_for:
+  - You want to know what to buy, hold or sell. This explains a past return and gives no advice.
+  - EPS was zero or negative at either date. The bridge needs positive, comparable EPS.
+  - A discounted rights issue was involved. Use the Restate EPS after splits and rights workflow.
+  - You want what a buyback did to EPS and book value. Use the Reconcile buybacks with owner cash workflow.
+  - You want a valuation. Use the Review equity valuation sensitivity assumptions workflow.
 you_give:
-  - Dated unadjusted prices, comparable EPS/P-E observations, confirmed split factors, dividend payments and reinvestment records.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Unadjusted share prices at the start and end dates (from exchange records or your broker)
+  - EPS and P/E at both dates, on a comparable basis, with EPS above zero (from the company's filings)
+  - Confirmed split terms and dates (from company announcements)
+  - Dividend payment dates and amounts per share (from company records or your broker)
+  - Reinvestment dates and prices, plus any fees and tax withheld (from your broker statements)
+  - The shares held at the start, and the currency and scale
 you_get:
-  - A historical price-attribution and dividend-share reconciliation workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - EPS and share counts restated to one split basis
+  - The price change split into an earnings effect and a multiple effect, adding to the observed change
+  - Shares and ending wealth from reinvested dividends
+  - The cash-held case beside it, and the gap between the two
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach your price records, the filings with EPS, the split announcement and your broker statements. Say the start and end dates.
+  - After step 1, check the split factor is the confirmed one and that prices and dividends were left unadjusted.
+  - After step 2, check the earnings effect and multiple effect add up exactly to the observed price change, and that the order is stated.
+  - After step 3, check shares and cash reconcile, and that fees and withholding are shown. Fill every MISSING line. This is not advice.
 how_it_works:
   - title: Stock-split EPS restatement
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Put historical EPS and shares on the confirmed common split basis; preserve unadjusted price and dividend records to avoid total-return double counting.
+    text: "Puts past EPS and weighted shares on the confirmed split basis. Keeps unadjusted prices and dividends so the return is not double counted. Hands step 2 EPS on one basis. Check before moving on: the split factor is confirmed, not guessed."
   - title: EPS and multiple return bridge
-    text: Use comparable positive EPS and dated P/E observations to decompose observed price change; state sequential ordering and reconcile the earnings/multiple interaction exactly.
+    text: Derives each date's price from EPS times P/E. Holds the opening multiple to find the earnings effect, then applies the ending EPS to the multiple change. States the order, so the part from both moving together is not lost. Divides each effect and dividends by the opening price and ties to the simple return.
   - title: Dividend reinvestment share schedule
-    text: Use actual payment and reinvestment prices to build shares and ending wealth. Compare with the cash-held case and reconcile separately from the non-reinvested simple return.
+    text: Takes each dividend, less fees or withholding, and divides by your reinvestment price to add shares. Compares ending wealth with holding the cash. Reconciles separately from the simple, non-reinvested return.
 output_shape: |-
-  A historical price-attribution and dividend-share reconciliation workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SPLIT BASIS      factor <n for n>   EPS start <n> -> <n>, EPS end <n>
+                   unadjusted price start <n>, end <n>
+
+  PRICE BRIDGE     earnings effect <n> + multiple effect <n>
+                   = observed price change <n>   (order used: <stated>)
+                   each as a share of opening price <n%>; dividends <n%>; simple return <n%>
+
+  REINVESTMENT     shares start <n> + added <n> = <n>
+                   ending wealth <n> vs cash-held case <n>; fees <n>, withholding <n>
+
+  SOURCES          <each input, its source, date, currency and scale>
+  MISSING          <each gap, and the line it stops>
+  CHECKS MISSED    <one line each, or none>
+output_sample:
+  input:
+    - Start and end share prices, EPS and P/E, with the confirmed split terms
+    - Dividend dates and amounts per share
+    - Your reinvestment dates and prices, with fees and tax withheld
+  prerequisites:
+    - The company's filings and split announcement
+    - Your broker statements for dividends and reinvestments
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: SPLIT BASIS
+      contains: EPS and weighted shares on one split basis, with unadjusted prices and dividends kept as recorded.
+    - name: PRICE BRIDGE
+      contains: Earnings and multiple effects that add exactly to the observed price change, with the order used.
+    - name: REINVESTMENT
+      contains: Shares added from dividends, ending wealth, and the cash-held case for comparison.
+    - name: SOURCES
+      contains: Each input with its source, date, currency and scale.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Price effects sum to observed price change; explicit dividends are not added to already-adjusted return series; reinvested wealth reconciles to shares and cash with fees/withholding disclosed.
+  - what: The order of effects
+    how: Apply the multiple change before the earnings change. The two effects shift, because the part from both moving together goes to the one applied second. The total stays equal to the observed change.
+  - what: The reinvestment price
+    how: Use a different execution price. Shares added change, and the gap from holding cash changes.
+  - what: Fees and withholding
+    how: Add a fee or tax withheld. Net cash falls, so fewer shares are bought and the gap narrows.
+  - what: The period
+    how: Change the start or end date. Prices, EPS and P/E all need new dated sources, and any missing one stops its step.
 judge:
   - Price effects sum to observed price change; explicit dividends are not added to already-adjusted return series; reinvested wealth reconciles to shares and cash with fees/withholding disclosed.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +102,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep your broker statements and the company's filings for the whole holding period in one folder.
+  - Record the date each P/E figure came from, so the multiple effect uses matching dates.
+  - Add your usual broker's fee and tax rules to your copy of the skill, so reinvestment is netted correctly.
+  - Run the Review equity valuation sensitivity assumptions workflow next if you want to test what the price could be worth.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and a checks tab you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Unadjusted price history from an exchange or your broker, not an adjusted chart series.
+    - The company's own EPS table and split notice.
+    - A named reviewer who knows the holding.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: EPS
+    meaning: "Earnings per share: profit for the period divided by the shares outstanding."
+  - term: P/E multiple
+    meaning: Share price divided by EPS. It shows how much investors pay for each unit of earnings.
+  - term: Split-adjusted
+    meaning: Restated so old per-share figures match today's share count.
+  - term: Interaction
+    meaning: The part of the price change from earnings and the multiple moving together. It lands in whichever effect is applied second.
+  - term: Dividend reinvestment
+    meaning: Using a dividend to buy more shares instead of taking the cash.
+before: []
+next:
+  - reconcile-buybacks-with-owner-cash
+  - review-equity-valuation-sensitivity-assumptions

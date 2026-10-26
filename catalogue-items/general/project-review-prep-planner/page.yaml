@@ -1,6 +1,6 @@
 new_slug: project-review-prep-planner
 name: "Project review prep planner"
-summary: "Name a finished project. Get prep: a fresh format, a two-list form, numbers to pull and who hears the lessons."
+summary: "Plan a project review that gets honest answers. Give it a finished project. You get a new format, a two-list form, numbers to pull and who hears the lessons."
 job: lead-people
 thinking: medium
 thinking_why: "It builds a plan from fixed parts, but it has to choose a format and numbers that fit your project."
@@ -17,6 +17,10 @@ when:
   - A project just ended, well or badly, and the team wants to learn from it.
   - Your last review turned into polite thanks and nothing changed.
   - You want the lessons to reach people who were not on the project.
+not_for:
+  - Your project is still running. Hold a short mid-project check-in with your team instead.
+  - It was a one-person task. Write yourself a short note on what to repeat and what to skip.
+  - You need to sort the lists people send back. Use the Review lists sorter for that step.
 
 you_give:
   - The project, its dates and the people by role
@@ -33,6 +37,30 @@ how_to_use:
   - Describe the project and say what format you used last time.
   - Send the form and the invitation. Ask the person who owns each number to pull it.
   - When the lists and numbers are back, bring them to "Review lists sorter".
+output_sample:
+  input:
+    - The project, its dates and the people by role
+    - The format of your last review (optional)
+    - Any records you keep, such as estimates against actuals (optional)
+  output:
+    - name: The project
+      contains: Three lines on what it was, the dates and the people by role, plus days since it ended.
+    - name: Why this review
+      contains: The two or three reasons that matter most for this review, and why.
+    - name: Format
+      contains: A review format that differs from the last one, and why the change helps.
+    - name: The two-list form
+      contains: Five things to do again and five never again, each with a reason, and a return date.
+    - name: Numbers to pull
+      contains: Four to six figures, each with a definition, a source and an owner, plus what they cannot show.
+    - name: Who hears the lessons
+      contains: People outside the room who face similar work, and the form the lessons take for them.
+    - name: Meeting rules
+      contains: A facilitator who was not the project lead, time per topic, meeting length and who attends.
+    - name: Invitation
+      contains: A short message with the reasons, the form, the return date and a call for honesty.
+    - name: Missing and checks missed
+      contains: Gaps that would sharpen the plan, and any checks the plan still fails.
 
 how_it_works:
   - title: Sets the reasons

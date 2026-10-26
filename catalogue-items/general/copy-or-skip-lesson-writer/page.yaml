@@ -1,6 +1,6 @@
 new_slug: copy-or-skip-lesson-writer
 name: Copy-or-skip lesson writer
-summary: Paste why something worked. Get what carries over to your case, what was luck, and a small test of each idea.
+summary: Paste why something worked and describe your case. Get each cause sorted as copy, adapt, skip or luck, with a small test for each idea you keep.
 job: think-and-decide
 thinking: medium
 thinking_why: It compares two situations and sorts ideas by how well they carry over, following a fixed method.
@@ -14,6 +14,10 @@ when:
   - You have worked out why something succeeded and want to use it.
   - A rival's success is tempting you to copy their moves.
   - You want to try several ideas without betting on all of them.
+not_for:
+  - "You face one decision and have no similar success to learn from: write a plain pros and cons list, or ask a trusted person."
+  - "You have not yet worked out why the success happened: use the Incentive checker or the Many-field model checklist runner first, then come back."
+  - "You want to test one idea with real people right now: use the Smallest test picker."
 you_give:
   - The checks and causes from the step before, or your own list
   - A description of your situation
@@ -28,6 +32,28 @@ how_to_use:
   - Paste the causes and checks, then describe your own situation.
   - Say what you can spend on tests in a month.
   - Run the first test and write down the result against the pass number.
+output_sample:
+  input:
+    - The checked causes of a success, ranked, from an earlier step or your own list
+    - "A description of your situation: size, market, resources, time and people"
+    - What you can spend on tests in a month (optional)
+  prerequisites:
+    - The ranked causes from the Incentive checker or the Many-field model checklist runner, or a list you made yourself
+  output:
+    - name: Two cases
+      contains: The causes of the success and your situation, set side by side in the same terms.
+    - name: Causes sorted
+      contains: Each cause with its conditions, hidden parts, a copy, adapt, skip or luck label, and a one-line reason.
+    - name: Tests
+      contains: A small test for each idea you keep, with what to do, how long, cost, and pass and fail numbers.
+    - name: Order
+      contains: The tests ranked by cost and chance, and the first test to run this month.
+    - name: Stop copying
+      contains: The attractive features to leave alone, with a line on why.
+    - name: Missing
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 how_it_works:
   - title: Set the two cases side by side
     text: Writes the causes and your situation in two short lists.

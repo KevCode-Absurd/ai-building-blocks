@@ -1,46 +1,58 @@
 new_slug: app-script-auditor
 name: "App script auditor"
-summary: "Give it your apps and speed report. Get each app marked keep, remove or delay, and a score."
+summary: "Find which Shopify apps slow your store. Get each app marked keep, remove, delay or one page only, plus a score out of 100."
 job: speed-up-store
 thinking: medium
 thinking_why: "It matches script names to apps and makes a judgment on each one. A mid-size model does this well with a clear list."
 
 headline: "App script auditor"
-subhead: "Give it your installed apps and the third-party and blocking-time parts of your PageSpeed report. It marks every app keep, remove, delay or one-page-only with a reason, and gives your app stack a score out of 100, now and after the changes."
+subhead: "Give it your installed apps and the third-party and blocking-time parts of your PageSpeed report. It marks each app keep, remove, delay or one page only, with a reason. You also get a score out of 100 for your apps, now and after the changes."
 
 explain: |
-  Every app you install can add code that runs on each page. Over time stores collect apps for features they no longer use, trial apps that were never removed, and apps that do something your theme already does. Each one competes with your product images and your Add to cart button for the phone's attention.
+  Every app you install can add code that runs on each page. Stores pile up apps for features they no longer use, trial apps nobody removed, and apps that do a job the theme already does. Each one competes with your product images and your Add to cart button for the phone's attention.
 
-  This skill asks the one question that matters for each app: does it clearly make money or save time? It matches the scripts in your speed report to your app list, ranks apps by how long they block the page, and decides where each one must load. It leaves your ad and analytics tags alone, because those must load early or you lose data. It also gives you an install rule for next time.
+  This app script auditor asks one question about each app: does it clearly make money or save time? If you can't name the sales link, the app is marked remove. It matches the scripts in your speed report to your app list and ranks apps by how long they block the page. It then decides where each app must load.
+
+  It leaves your ad and analytics tags alone, because those must load early or you lose data. It ends with a rule for the next app you install.
 
 when:
   - "You have more than about 15 apps and a slow mobile score."
-  - "Before you install a new app."
-  - "Quarterly store cleanup, or before a sale."
+  - "You are about to install a new app and want to know what it will cost you."
+  - "It is time for a quarterly store clean-up, or you are about to run a sale."
+  - "PageSpeed lists many third-party scripts and you don't know which apps they belong to."
+
+not_for:
+  - "You want to find code an uninstalled app left behind: use the leftover app code finder."
+  - "You want to check apps and scripts for security risk, not speed: use the store script and app risk auditor."
+  - "You want to delay the scripts of the apps you keep: use the theme script and style loader."
+  - "Your store is not on Shopify, or you can't open the Apps list or theme editor: the app checks won't fit."
 
 you_give:
   - "Your list of installed apps and theme app embeds (a screenshot or a paste)"
   - "The third-party, unused JavaScript and blocking time sections of your PageSpeed report"
-  - "What each app is for and what revenue it supports, if you know (optional)"
+  - "What each app is for and what sales it supports, if you know (optional)"
+  - "What you sell (optional)"
 
 you_get:
-  - "A table: each app, what it loads, which pages need it, the verdict and the reason"
-  - "A score out of 100 for your app stack, now and after the changes, with the sum shown"
-  - "Apps to uninstall, plus a follow-up list for the leftover code finder"
-  - "An install rule for your store from now on"
+  - "A table with each app, what it loads, which pages need it, the verdict and the reason"
+  - "A score out of 100 for your apps, now and after the changes, with the sum shown"
+  - "A list of apps to uninstall, with a follow-up for the leftover app code finder"
+  - "A list of apps to delay, for the theme script and style loader"
+  - "A rule for the next app you install"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Open the skill in your AI. Claude, ChatGPT and Gemini all work. Add it to your AI, or copy it and paste it into a new chat."
   - "In Shopify, open Apps and take a screenshot of the list. Then open the theme editor, App embeds, and screenshot that too."
-  - "Paste the third-party and blocking time sections from PageSpeed (mobile)."
-  - "Note what each app is for and the sales it helps, even roughly."
-  - "Uninstall the 'remove' apps, then give the list to the leftover app code finder, which finds the code they leave in your theme."
+  - "Run PageSpeed on your store and paste the third-party and blocking time sections (mobile)."
+  - "Add what each app is for and the sales it helps, even roughly. An app with no sales link gets marked remove."
+  - "Test each removal on a duplicate theme first. Ask a developer to make any theme embed change."
+  - "Uninstall the remove apps, then give that list to the leftover app code finder."
 
 how_it_works:
   - title: Asks the money question
     text: For each app, does it clearly make money or save time? If you can't name the sales link, it is marked remove.
   - title: Counts outside services
-    text: Counts third-party services and compares the count with a benchmark, with the category in mind.
+    text: Counts third-party services and compares the count with a benchmark for your category. The benchmark is one vendor's data.
   - title: Matches scripts to apps
     text: Reads the PageSpeed lists and puts a name to each script. Apps are ranked by blocking time.
   - title: Checks app embeds
@@ -52,7 +64,7 @@ how_it_works:
   - title: Decides where each loads
     text: Reviews only on product pages, subscriptions on product and collection pages, and so on.
   - title: Scores and sets a rule
-    text: Scores the stack, marks apps to delay, and writes a rule for adding new apps.
+    text: Scores the apps, marks which to delay, and writes a rule for adding new apps.
 
 output_shape: |
   APP SCRIPT AUDIT  <store>, <date>
@@ -63,8 +75,11 @@ output_shape: |
   APP | WHAT IT LOADS | PAGES THAT NEED IT | BLOCKING TIME | VERDICT | REASON
   <app> | <script/style> | <pages> | <ms> | <keep | remove | delay | one page only> | <money link or why not>
 
-  LEAVE ALONE: <ad and analytics tags, duplicates flagged>
-  THEME DOES IT ALREADY: <app> replaced by <theme feature>
+  LEAVE ALONE
+  <ad and analytics tags, duplicates flagged>
+
+  THEME DOES IT ALREADY
+  <app> replaced by <theme feature>
 
   UNINSTALL, THEN CHECK FOR LEFTOVER CODE
   <apps for the leftover code finder>
@@ -75,9 +90,30 @@ output_shape: |
   INSTALL RULE
   <the rule for new apps>
 
+  DEVELOPER NOTE
+  A developer is safer for theme embed changes. Test each change on a duplicate theme first.
+
   NOT RUN
   <checks and what is needed>
   MISSING: <what>
+
+output_sample:
+  input:
+    - "A screenshot or paste of your Apps list and the theme editor's App embeds"
+    - "The third-party and blocking time sections of your mobile PageSpeed report"
+    - "What each app is for and the sales it supports (optional)"
+  prerequisites:
+    - "Access to your Shopify admin and theme editor"
+    - "A PageSpeed Insights run on your store"
+  output:
+    - {name: "App score", contains: "A score out of 100 now and after the changes, with the deductions shown."}
+    - {name: "App table", contains: "Each app with what it loads, its pages, blocking time, verdict and reason."}
+    - {name: "Leave alone", contains: "Your ad and analytics tags, with any duplicate tags flagged."}
+    - {name: "Theme does it already", contains: "Apps that do a job your theme can do for free."}
+    - {name: "Uninstall list", contains: "The remove apps, to hand to the leftover app code finder."}
+    - {name: "Mark for delay", contains: "The apps that stay, to hand to the theme script and style loader."}
+    - {name: "Install rule", contains: "A short rule to follow before you add the next app."}
+    - {name: "Developer note", contains: "A line that a developer is safer for theme embed changes."}
 
 tweaks:
   - what: What each app earns
@@ -113,6 +149,7 @@ works_best_with:
   tools:
     - {name: "Google PageSpeed Insights", why: "Its third-party and blocking time sections show which scripts cost the most."}
     - {name: "Shopify admin Apps and theme editor", why: "The Apps list and the theme editor's App embeds show what is installed and what is switched on."}
+    - {name: "Any good chat AI", why: "Reads your screenshots and matches scripts to apps. No code or paid tool needed."}
   inputs:
     - "A screenshot of the theme editor's App embeds panel"
     - "The date you installed each app and whether it is on a trial"
@@ -126,3 +163,5 @@ terms:
     meaning: How long the page cannot react because scripts are running. Apps are a common cause.
   - term: Third-party script
     meaning: Code that comes from another company's server, such as a chat widget or reviews app.
+  - term: Duplicate theme
+    meaning: A copy of your live theme that you edit and test before you publish it.

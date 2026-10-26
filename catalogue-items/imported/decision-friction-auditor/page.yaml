@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It looks for friction and then redesigns the order of steps.
 new_slug: decision-friction-auditor
 name: Decision friction auditor
-summary: Give it a page or flow. Get the spots where layout, defaults or order
-  stop people, with fixes.
+summary: Find where your sign-up or checkout page loses people. Get a friction audit of layout, defaults and step order, with a fix for each.
 job: audit-landing-page
 headline: Decision friction auditor
-subhead: Give it a page, screenshot or flow such as a checkout or sign-up, the
-  one action you want and who the users are. It traces the path step by step.
-  You get a marked-up list of friction points in layout, defaults and order, a
-  clearer replacement for each and ideas to test.
+subhead: Give it a page, screenshot or flow such as a checkout or sign-up, the one action you want and who the users are. It traces the path step by step. You get a marked-up list of friction points in layout, defaults and order, a clearer replacement for each and ideas to test.
 explain: |
   Spot why people stall on your page or flow, and fix it. Give it a screen, checkout or sign-up and you get a marked-up list of friction points in layout, defaults, order of steps and cues, each with a clearer replacement.
 
@@ -19,6 +15,10 @@ when:
   - A pricing page has too many options and people leave.
   - Your checkout feels long and you do not know which step to cut.
   - Copy tweaks did not help, so the problem may be the layout.
+not_for:
+  - "You have no traffic or user feedback yet: talk to a few real users first, then run this audit."
+  - "You only need better wording on the page: rewrite the copy by hand or ask your AI for a copy edit."
+  - "You want to force people to buy with pressure or tricks: this skill refuses that and keeps exits clear."
 you_give:
   - Page, screenshot or flow description
   - The action you want users to take
@@ -30,7 +30,27 @@ you_get:
   - Redesign suggestions
   - Ideas to test
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code, files or paid tools are needed.
+  - Paste your page text or flow steps, or attach a screenshot if your AI reads images.
+  - Say the one action you want and who the users are. Add limits such as accessibility (optional).
+  - Read the friction list first. Check each point against your own page and data.
+  - Pick the top fixes and run each as an A/B test before you roll it out.
+output_sample:
+  input:
+    - A page, screenshot or description of the flow
+    - The one action you want users to take
+    - Who the users are
+    - Limits such as platform, accessibility or brand (optional)
+  output:
+    - name: Target behavior
+      contains: The one action the flow must produce, stated in a single line.
+    - name: Friction audit
+      contains: Each extra decision, field, screen or pause point, marked where it sits in the flow.
+    - name: Why it hurts
+      contains: A short reason each friction point makes people stall or leave.
+    - name: Redesign suggestions
+      contains: A clearer default path, with small yes-steps before the big ask.
+    - name: Ideas to test
+      contains: Changes to A/B test, framed as guesses to check, not proven results.
+    - name: Ethics check
+      contains: A note that the design guides people and keeps easy exits.

@@ -2,34 +2,104 @@ thinking: medium
 thinking_why: It weighs trade-offs between price models.
 new_slug: usage-pricing-designer
 name: Usage pricing designer
-summary: Describe your product. Get a pay-as-you-go pricing model users
-  understand, accept and can predict, with no surprise bills.
+summary: Design pay-as-you-go pricing your customers can predict, with a metric, free allowance, spend cap and pricing page copy. No surprise bills.
 job: set-prices
 headline: Usage pricing designer
-subhead: A pay-as-you-go price that customers can read, guess and trust, so
-  nobody opens a bill and gets a shock. You get the thing to charge for, the
-  tiers, and a pricing page that explains it.
+subhead: "Tell it what your product does and what one unit costs you. It picks one thing to charge for, sets a free allowance and price steps, adds spend caps and alerts, and writes the pricing page. You also get three example monthly bills."
 explain: |
-  A pay-as-you-go price that customers can read, guess and trust, so nobody opens a bill and gets a shock. You get the thing to charge for, the tiers, and a pricing page that explains it.
+  Usage pricing, also called pay-as-you-go pricing, charges customers for what they use: calls, minutes, gigabytes or active users. It goes wrong when people cannot guess the bill. The fix is a simple unit and a page that shows the maths.
 
-  The skill starts by choosing a metric people already understand, such as API calls, compute time, storage, bandwidth or active users. It rejects made-up units like "compute credits" that no one can estimate. Then it designs free allowances, volume steps and spend caps or alerts. It adds a cost calculator and worked examples so a buyer can predict a month. It compares your plan with competitors and checks that costs grow in line with the value customers receive.
+  This skill picks one unit a customer can count, such as API calls, storage or bandwidth. It rejects made-up units like "compute credits" that nobody can estimate. Then it adds a free allowance, price steps for bigger use, and a spend cap with alerts so a bug cannot run up a huge bill.
+
+  It writes the pricing page and works three example months, a small, a typical and a heavy customer, line by line. Prices are drafts. You check them against your own costs and real usage before you launch.
 when:
-  - You are launching an API or tool and must decide what to charge per unit.
-  - Customers complain their bill was higher than they expected.
-  - You want to add a usage tier next to a flat monthly plan.
+  - You are launching an API or a tool and must decide what to charge per unit.
+  - Customers say their bill was higher than they expected.
+  - You want to add pay-as-you-go next to a flat monthly plan.
   - Your pricing page confuses people and sales keep explaining it.
+not_for:
+  - "You charge per seat or per user only: use the SaaS pricing designer."
+  - "You are still choosing between flat, tiered and usage pricing: start with the Pricing model designer, then come back here."
+  - "You sell custom enterprise contracts: this builds public, listed prices."
+  - "You want to change live billing: it only designs the plan, and you make any change in your own billing tool."
 you_give:
-  - What your product does and what it costs you to run
-  - Your current prices, if any (optional)
-  - Competitor prices you know of (optional)
-  - Who your customers are
+  - What your product does and who uses it
+  - What one unit costs you to run, such as cost per call or per gigabyte
+  - Your current plans and prices (optional)
+  - Competitor prices you have checked on their own sites (optional)
+  - Real usage numbers from a few customers (optional)
 you_get:
-  - A recommended usage metric
-  - A tier and free allowance design
-  - Pricing page copy with worked examples
-  - A cost calculator outline
+  - One recommended usage metric, with a backup
+  - A free allowance and price steps
+  - Spend cap, alert and dashboard design
+  - Pricing page copy with a calculator outline and FAQ
+  - Three worked example monthly bills
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat, or open the skill if you added it to your AI.
+  - Describe your product, your cost per unit and your customers. Add competitor prices only if you checked them yourself.
+  - If it asks for a number you do not have, say so. It will mark the gap instead of guessing.
+  - Check the metric first. Ask yourself if a customer could count it without help. If not, ask for the backup.
+  - Run the three example bills past a real customer or two. Test the prices with real usage data before you launch.
+how_it_works:
+  - title: Collect your inputs
+    text: It asks once for your product, your cost per unit and your customers, and marks anything missing.
+  - title: Pick the metric
+    text: It scores the usual metrics, drops made-up units and hidden multipliers, and picks one with a backup.
+  - title: Set allowance and steps
+    text: It adds a free allowance and volume steps, and checks the price per unit never rises as a customer grows.
+  - title: Protect the bill
+    text: It chooses a spend cap type, alert levels and what the usage dashboard shows.
+  - title: Write the page
+    text: It writes the unit price, calculator fields, tier table and an FAQ on going over the limit.
+  - title: Test with example months
+    text: It works a small, typical and heavy month by hand, then checks that customers can predict their bill.
+output_shape: |
+  Recommended metric: <metric>, <why it fits>, <backup>, <rejected metrics>
+  Allowance and tiers: <tier> | <units included> | <price per unit>
+  Bill protection: <cap type>, <alert levels>, <dashboard contents>
+  Pricing page copy: <headline>, <price per unit>, <calculator fields>, <FAQ answers>
+  Example months: <small, typical and heavy usage with line items and totals>
+  Competitor comparison: <one row per competitor you supplied, or MISSING>
+  Gaps and next steps: <missing inputs and what to test before launch>
+output_sample:
+  input:
+    - What your product does and who uses it
+    - What one unit costs you to run
+    - Your current plans and prices (optional)
+    - Competitor prices you have checked yourself (optional)
+    - Real usage numbers from a few customers (optional)
+  output:
+    - name: Recommended metric
+      contains: The one thing to charge for, why customers can count it, a backup, and the metrics it rejected.
+    - name: Allowance and tiers
+      contains: A table with the free allowance, the units in each tier and the price per unit.
+    - name: Bill protection
+      contains: The spend cap type, alert levels and what the customer sees on a usage dashboard.
+    - name: Pricing page copy
+      contains: Headline, unit price, calculator fields and FAQ answers, ready to paste into your page.
+    - name: Three example months
+      contains: A small, typical and heavy customer bill, with the arithmetic shown line by line.
+    - name: Gaps and next steps
+      contains: Every missing input and every draft price, plus what to test with real usage before launch.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can work the example bills and write the page copy in one chat.
+    - name: A billing tool such as Stripe Billing
+      why: It can run the price once you are happy with the plan. Check its current fees yourself.
+  inputs:
+    - Your own cost per unit
+    - Usage logs from your top customers
+    - A list of customer complaints about bills
+terms:
+  - term: Usage-based pricing
+    meaning: Customers pay for what they use, not a flat fee.
+  - term: Metric
+    meaning: The unit you charge for, such as API calls or gigabytes.
+  - term: Free allowance
+    meaning: The amount of use customers get before they pay.
+  - term: Spend cap
+    meaning: A limit that stops or flags charges once a customer reaches a set amount.
+  - term: Metered billing
+    meaning: Counting use as it happens and billing for it at the end of the month.

@@ -1,6 +1,6 @@
 new_slug: ad-claim-sorter
 name: Ad claim sorter
-summary: Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
+summary: Check your ad claims before you publish. Paste your copy and proof. You get each claim sorted as fine, needs proof or cut, with safer wording.
 job: check-contracts
 thinking: medium
 thinking_why: Each claim needs a judgement about proof and risk.
@@ -11,6 +11,10 @@ when:
   - An ad is about to go live and you want a last check.
   - You are not sure which words need proof.
   - A page has big claims and no proof next to them.
+not_for:
+  - "You need legal sign-off on health or money claims: ask a qualified reviewer, because this is a first check and not legal advice."
+  - "You want to check a whole site with every check: use the Marketing claims checker."
+  - "You want to follow up after an audit with new policy wording: use the Policy redraft proposer."
 you_give:
   - The ad, page or email copy
   - The proof you hold
@@ -24,6 +28,18 @@ how_to_use:
   - Under it, paste your copy and the proof you hold.
   - Send it and read the result.
   - Keep your proof in a folder with the date, so you can show it later.
+output_sample:
+  input:
+    - Your ad, page or email copy
+    - The proof you hold, such as tests, reviews, dates and numbers
+    - Your country and audience (optional)
+  output:
+    - name: Claim table
+      contains: One row per claim with its type, the proof you gave, a call of fine, needs proof or cut, and a safer line.
+    - name: EXTRA CARE
+      contains: Health, money-result and free claims, and testimonials, flagged for a closer look.
+    - name: MISSING
+      contains: Proof you did not give, listed so you know what to find before you publish.
 how_it_works:
   - title: List
     text: Every claim, in order.

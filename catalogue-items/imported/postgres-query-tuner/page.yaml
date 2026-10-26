@@ -2,33 +2,104 @@ thinking: medium
 thinking_why: It applies ranked rules to your queries and schema.
 new_slug: postgres-query-tuner
 name: Postgres query tuner
-summary: Share your queries or schema. Get faster Postgres with better indexes,
-  types and settings, ranked by impact.
+summary: Rewrite a slow Postgres query. Get faster SQL with the new index, column types or settings it needs, plus a way to check the gain.
 job: build-software
 headline: Postgres query tuner
-subhead: Share a slow query or a table design and get back a faster version with
-  the reason for each change. Fixes are ranked from biggest gain to smallest.
+subhead: Paste one slow query and the tables it reads. Your AI works out why it is slow, rewrites it, and shows before and after SQL for each change. You also get a way to time the new version against the old.
 explain: |
-  Share a slow query or a table design and get back a faster version with the reason for each change. Fixes are ranked from biggest gain to smallest.
+  When one report or page takes ten seconds, you need that query fixed, not a long audit. This is a Postgres query tuner for that case. It starts from the query and the tables it reads, and it stays on that query until you have a faster version.
 
-  The skill works through Supabase's Postgres rules in order of impact. It looks first at query performance, then connection handling and row-level security, then schema choices such as column types and keys. After that come locking, data access patterns and monitoring. For each issue it shows the before and after SQL, so you can test the change yourself. It is useful when reviewing code before release or hunting a single slow endpoint.
+  It works from Supabase's Postgres rules. It checks the query plan first, then missing indexes, wrong column types, locking and settings. For each change it shows the SQL before and the SQL after, so you can test it yourself. It then asks you to run the query again and compare the times.
+
+  Reviewing a whole app and its schema at once is a different job. For that, use the Postgres performance tuner.
 when:
-  - One report query takes ten seconds.
-  - Your column types waste space or block indexes.
-  - You need to check indexes before a release.
-  - Locks are blocking writes at peak times.
+  - One report query takes ten seconds and you need it faster today.
+  - A page loads slowly and you think one database call is the cause.
+  - Your column types waste space or stop Postgres from using an index.
+  - Locks are blocking writes at busy times and you want to see which query holds them.
+not_for:
+  - "You want your whole schema and every query reviewed: use the Postgres performance tuner."
+  - "You are designing new tables: use the Postgres schema designer."
+  - "Your database is not Postgres: these rules do not carry over to MySQL, SQL Server or Snowflake."
+  - "It is an emergency on a live database: get a database admin first, and use this afterwards to learn what went wrong."
 you_give:
-  - Queries or schema files
-  - Table sizes (optional)
-  - EXPLAIN output (optional)
-  - Database settings (optional)
+  - The slow query, as plain SQL
+  - The definitions of the tables it reads (CREATE TABLE and existing indexes)
+  - The result of EXPLAIN ANALYZE for that query (optional)
+  - Table sizes and how often the query runs (optional)
 you_get:
-  - Rewritten SQL
-  - Index and type recommendations
-  - Settings changes
-  - A ranked list of issues
+  - A rewritten query, with the reason for each change
+  - Index and column type changes, as SQL you can run
+  - Settings changes, where they apply
+  - Before and after SQL you can time on a copy of your data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - In your Postgres tool, run EXPLAIN ANALYZE in front of the slow query. Copy everything it prints. Also copy the CREATE TABLE statements for the tables the query reads.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. If you can attach files, add the rules folder too.
+  - Paste the query, the tables, then the EXPLAIN ANALYZE output. Say how big the tables are and how often the query runs.
+  - Read the first change. Ask your AI why it helps, in plain words, before you run anything.
+  - Run the new index or query on a copy of your database. Your AI cannot run SQL for you in a chat.
+  - Run EXPLAIN ANALYZE again and paste it back. Ask your AI to compare the two runs. Keep the change only if the new run is faster.
+how_it_works:
+  - title: Read the query and tables
+    text: It lists what the query reads, joins and filters on, and what it was not given.
+  - title: Read the plan
+    text: It finds the slow step in your EXPLAIN ANALYZE output, such as a full table scan.
+  - title: Match a rule
+    text: It opens the rule file that covers that step, such as missing indexes or partial indexes.
+  - title: Apply the top fix
+    text: It rewrites the query or adds the index, and shows the SQL before and after.
+  - title: Check the side effects
+    text: It says what the change costs, such as slower writes or a table lock while an index builds.
+  - title: Re-measure
+    text: It asks for a second EXPLAIN ANALYZE and compares it with the first before going to the next fix.
+output_shape: |
+  Slow step: <what the plan shows and where>
+  Change 1: <name of the fix> (rule file: <file name>)
+  Before: <your SQL>
+  After: <your SQL>
+  Why it helps: <one or two plain sentences>
+  Cost: <what it adds or slows down>
+  Test it: <what to run and what to compare>
+  Next: <the next change to try if the query is still slow>
+  Not checked: <anything it could not judge, and what to send>
+output_sample:
+  input:
+    - The slow query
+    - The definitions of the tables it reads
+    - EXPLAIN ANALYZE output for the query (optional)
+    - Table sizes and how often it runs (optional)
+  prerequisites:
+    - A copy of your database to test on
+    - Access to run EXPLAIN ANALYZE
+  output:
+    - name: Slow step
+      contains: Which part of the query plan is slow, and why it matters.
+    - name: Changes in order
+      contains: Each fix as SQL before and after, with the rule file behind it.
+    - name: Cost notes
+      contains: What each change adds, such as a bigger index or slower inserts.
+    - name: Re-test steps
+      contains: What to run again and how to tell whether the query got faster.
+    - name: Not checked
+      contains: What it could not judge from your input, and what to send next.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It reads pasted SQL and query plans well and explains each change in plain words.
+    - name: Claude Code or Codex
+      why: They can open your project files and the rules folder, so you paste less.
+    - name: psql or your database's SQL editor
+      why: You run EXPLAIN ANALYZE there before and after each change.
+  inputs:
+    - Output from pg_stat_statements, to confirm this is the query that costs most
+    - Your current indexes on the tables
+    - How many rows the query returns
+terms:
+  - term: EXPLAIN ANALYZE
+    meaning: A Postgres command that runs a query and shows how it ran and how long each step took.
+  - term: Index
+    meaning: A lookup list Postgres keeps so it can find rows without reading the whole table.
+  - term: Partial index
+    meaning: An index that only covers rows matching a rule, so it stays small.
+  - term: Row-level security
+    meaning: Rules that decide which rows each user can see or change.

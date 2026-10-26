@@ -1,6 +1,6 @@
 new_slug: five-whys-session-planner
 name: Five whys session planner
-summary: Describe a failure and your team. Get who must attend, a trigger rule, ground rules and a no-blame agenda.
+summary: Plan a five whys review after a failure. Give it what went wrong and get who must attend, a trigger rule, ground rules and a no-blame agenda.
 job: lead-people
 thinking: medium
 thinking_why: It sets up a meeting from fixed rules, but needs judgment about who to include and how to handle blame.
@@ -14,6 +14,10 @@ when:
   - Something broke or missed its date and you want to learn from it.
   - Your last review ended with a person being blamed.
   - The same kind of mistake keeps coming back.
+not_for:
+  - "You have a one-off error with a known fix: just fix it and tell the people it touched."
+  - "You want to run the review and find the cause: use the Root cause finder."
+  - "You need to pick and size the fixes after the review: use the Proportional fix planner."
 you_give:
   - What went wrong, when, and who noticed
   - Your team and how they get on (optional)
@@ -23,10 +27,35 @@ you_get:
   - A moderator and ground rules
   - A one-page agenda
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the failure in a few lines and name the people involved.
+  - Open a chat in Claude, ChatGPT or Gemini. Add the skill, or copy it and paste it in. No code or paid tool is needed.
+  - Describe the failure in a few lines. Say when it happened, who noticed and how often it happens.
+  - Add the people and roles involved, and how well they trust each other (optional).
+  - Check the attendee list and the moderator. Fill any MISSING line before you send the plan.
   - Send the attendee list and agenda before the meeting.
-  - Run the review with the Root cause finder, then the Proportional fix planner.
+  - Run the review with the Root cause finder, then plan the fixes with the Proportional fix planner.
+output_sample:
+  input:
+    - What went wrong, when, and who noticed
+    - How often something like it has happened
+    - Your team and how well they trust each other (optional)
+    - How many minutes you have for the review (optional)
+  output:
+    - name: Failure class
+      contains: One plain line that anyone can use to tell if a new event fits.
+    - name: Trigger rule
+      contains: A fixed rule that starts a review within a set number of days, with no judgment calls.
+    - name: Who attends
+      contains: Everyone who found, fixed or built the failed part, each with the reason they are there.
+    - name: Moderator
+      contains: The person who runs the review and follows up, with why they fit, or a note that none exists.
+    - name: Ground rules
+      contains: Two simple rules, a look at the set-up not the person, and a line to say when blame starts.
+    - name: If trust is low
+      contains: A smaller, simpler way to start when people fear being punished.
+    - name: Agenda
+      contains: A one-page plan with minutes, a parking list and what people should bring.
+    - name: Missing and checks missed
+      contains: Gaps you did not supply and any checks the plan failed, or none.
 how_it_works:
   - title: Narrows the target
     text: One class of failure, started where mistakes cost little.

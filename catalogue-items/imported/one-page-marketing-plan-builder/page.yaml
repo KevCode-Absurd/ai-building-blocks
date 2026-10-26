@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It fills a fixed nine-box plan from your answers.
 new_slug: one-page-marketing-plan-builder
 name: One-page marketing plan builder
-summary: Describe your business. Get a one-page plan that takes people from
-  stranger to loyal fan.
+summary: Build a one-page marketing plan with nine squares, from stranger to loyal fan. Get a score out of ten and the gaps to fix first.
 job: plan-strategy
 headline: One-page marketing plan builder
-subhead: Your whole marketing plan on one page, from a stranger who has never
-  heard of you to a customer who tells friends. It is a grid of nine squares,
-  and each square has one job.
+subhead: Your whole marketing plan on one page, from a stranger who has never heard of you to a customer who tells friends. It is a grid of nine squares, and each square has one job.
 explain: |
   Your whole marketing plan on one page, from a stranger who has never heard of you to a customer who tells friends. It is a grid of nine squares, and each square has one job.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a business and need a plan that fits on one page.
   - You want to know why customers buy once and never return.
   - You need a simple plan to share with a partner or a new hire.
+not_for:
+  - "You already have a tested marketing plan that works: keep it and fix only the weak spots with a person you trust."
+  - "You only need ad words or a message: write that one piece in your AI chat without the full plan."
+  - "You want a long report with market research: hire an analyst or run your own customer interviews first."
 you_give:
   - What your business sells
   - Who your best customer is
@@ -29,7 +30,24 @@ you_get:
   - The weakest squares named
   - Next actions for each gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your notes first: your best customer type, the marketing you do now, and any sales numbers."
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
+  - Paste your business details. Say what you sell, who buys, and what you do today.
+  - Answer any questions your AI asks. If you skip a detail, it should mark that square as missing, not guess.
+  - Read the score and the weakest squares. Fix the lowest square first, then ask your AI to score the plan again.
+output_sample:
+  input:
+    - What your business sells
+    - Who your best customer is
+    - What marketing you do today
+    - Your budget and goals (optional)
+    - Your sales numbers (optional)
+  output:
+    - name: The 9-square grid
+      contains: "One page with nine squares: target market, message, media, lead capture, nurture, conversion, experience, lifetime value and referrals."
+    - name: Score
+      contains: A score from 0 to 10 based on how many squares are specific and measurable.
+    - name: Weakest squares
+      contains: The squares that failed the check, with a short note on why each one is vague.
+    - name: Next actions
+      contains: One clear step for each gap, aimed at reaching a full score.

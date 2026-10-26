@@ -1,50 +1,102 @@
 new_slug: build-a-volunteer-induction-checklist
 name: Build a volunteer induction checklist
 headline: Build a volunteer induction checklist
-summary: Share the source files. Get an induction procedure, practice plan and supervision gaps.
+summary: Turn your volunteer roles and rules into an induction procedure, a checklist with sign-offs, a supervised practice plan and a list of supervision gaps.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An induction procedure, practice plan and supervision gaps. Share actual volunteer roles, approved conduct and safeguarding rules, supervision arrangements, training needs and available time. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Paste your volunteer roles, your conduct and safeguarding rules, who supervises whom and the time you have. Your AI writes the induction procedure and a checklist with sign-offs, plans supervised practice and lists supervision gaps.
 explain: |-
-  An induction procedure, practice plan and supervision gaps.
+  A new volunteer needs to know what to do, who to ask and what they must not do on their first day. This workflow builds a volunteer induction checklist from your own roles and rules, so every volunteer gets the same start and you can see what was done.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Access and responsibilities stay within approved roles; safeguarding clearance is never inferred from training attendance. Missing tools or evidence stay visible in the final summary.
+  First it writes the induction procedure: joining, the role briefing, access, supervision, what to do when something goes wrong, and leaving. Each step says who does it. Then it plans role-specific training, with demonstrations and supervised practice, and says what evidence to keep. Last, it turns the procedure into a checklist and lists any place where a role has no named supervisor.
+
+  It never clears anyone. Safeguarding and background checks are done by the person in your organisation who owns them. The checklist shows that status as not yet checked until you say it is.
 when:
-  - You need an induction procedure, practice plan and supervision gaps.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are starting a volunteer programme and have no written induction
+  - Each volunteer gets a different welcome because it all lives in one person's head
+  - An inspector, funder or insurer asks what volunteers are told before they start
+  - You want to see which roles have no one supervising them
+not_for:
+  - You are onboarding paid staff. Use the 30-60-90 day onboarding planner.
+  - You want to check records for volunteers you already have. Use the Volunteer induction evidence review assistant.
+  - You are planning the whole volunteer programme, including recruiting and screening. Use the Nonprofit volunteer program planner.
+  - You need a safeguarding policy or a background check. Ask your safeguarding lead. This workflow never clears anyone.
 you_give:
-  - Actual volunteer roles, approved conduct and safeguarding rules, supervision arrangements, training needs and available time.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The volunteer roles and what each one does
+  - Your approved conduct and safeguarding rules, pasted as text
+  - Who supervises each role, and when
+  - What training each role needs, and how much time you have for induction
+  - Your current induction notes or forms (optional)
+  - Your steps for a volunteer who leaves (optional)
 you_get:
-  - An induction procedure, practice plan and supervision gaps.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - An induction procedure for joining, role briefing, access, supervision, escalation and exit, with who does each step
+  - A checklist with one row per stage, who signs off and what evidence is kept
+  - A plan for role-specific demonstrations and supervised practice
+  - "A list of supervision gaps: roles with no named supervisor or no cover"
+  - A clear note of what is not yet checked, such as safeguarding clearance
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the roles, your rules, who supervises whom and the time you have. Paste the real rules, not a summary.
+  - Read the supervision gaps first. Each one is a role the procedure cannot cover until you name a supervisor.
+  - Have the person who owns safeguarding read the procedure before you use it with a volunteer.
 how_it_works:
   - title: Process and SOP writer
-    text: Document the approved volunteer joining, role briefing, access, supervision, escalation and exit process; preserve organization safeguarding requirements.
+    text: Writes the induction procedure from your roles and rules, with who does each step and what to do when things go wrong. It keeps your safeguarding rules as written and hands the procedure on.
   - title: Training program builder
-    text: Plan role-specific demonstrations and supervised practice with evidence checks; keep unverified readiness and required clearance visible.
+    text: Plans role-specific demonstrations and supervised practice, and the evidence to keep for each. It keeps clearance and readiness marked as not yet checked.
+  - title: Checklist and gaps
+    text: Turns the procedure and practice plan into one checklist with sign-offs, and lists every role with no supervisor or no cover.
 output_shape: |-
-  Scope and source coverage
-  An induction procedure, practice plan and supervision gaps.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  INDUCTION PROCEDURE
+    Stage (join, briefing, access, supervision, escalation, exit) | Steps | Who does it | Rules that apply
+
+  CHECKLIST
+    Stage | Item | Who signs off | Evidence kept | Done (blank)
+    Safeguarding clearance: not yet checked
+
+  PRACTICE PLAN
+    Role | Demonstration | Supervised practice | Supervisor | Evidence
+
+  SUPERVISION GAPS
+    Role | Gap | What is needed
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - Your volunteer roles and what each one does
+    - Your conduct and safeguarding rules, as written
+    - Who supervises each role, and when
+    - The time you have for induction
+  prerequisites:
+    - A person who owns safeguarding in your organisation and can read the procedure
+  output:
+    - name: Induction procedure
+      contains: Joining, role briefing, access, supervision, escalation and exit, with who does each step.
+    - name: Checklist
+      contains: One row per stage with who signs off and what evidence is kept. Clearance shows as not yet checked.
+    - name: Practice plan
+      contains: For each role, a demonstration, supervised practice, the supervisor and the evidence to keep.
+    - name: Supervision gaps
+      contains: Roles with no named supervisor or no cover, and what is needed to close each gap.
+    - name: Hand-back summary
+      contains: Files saved, facts that were missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read the pasted text or files and keep each step's result as a file. None of them can run a lesson, a class or a check for you.
+  inputs:
+    - Your real safeguarding and conduct rules, as written.
+    - A person who knows each role first hand.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Start with your one or two busiest roles. One finished checklist beats five half-done ones.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste your actual rules and forms. A summary from memory can drop a rule that matters.
   - what: Acceptance
-    how: Access and responsibilities stay within approved roles; safeguarding clearance is never inferred from training attendance.
+    how: Say what proof you keep for each stage, such as a signed form or a supervisor's note.
 judge:
   - Access and responsibilities stay within approved roles; safeguarding clearance is never inferred from training attendance.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +109,16 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - After the first volunteer goes through it, bring back what was unclear and ask for the procedure to be changed.
+  - Add each new role and ask for its row in the checklist and practice plan.
+  - Check the volunteers' records later with the Volunteer induction evidence review assistant.
+next:
+  - volunteer-induction-evidence-review-assistant
+  - nonprofit-volunteer-program-planner
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Induction
+    meaning: What a new volunteer is told, shown and checked on before and during their first shifts.
+  - term: Supervised practice
+    meaning: A volunteer does the task while a named person watches and can step in.
+  - term: Escalation
+    meaning: What a volunteer does and who they tell when something goes wrong or is outside their role.

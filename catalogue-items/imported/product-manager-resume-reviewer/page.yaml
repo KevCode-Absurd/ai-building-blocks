@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores against set rules and rewrites to fit the job.
 new_slug: product-manager-resume-reviewer
 name: Product manager resume reviewer
-summary: Share your resume and target job. Get ten resume checks, specific fixes
-  and a draft suited to the role.
+summary: Check your product manager resume against ten rules. Get fixes from your own bullets and a draft tailored to the job you want.
 job: hire-people
 headline: Product manager resume reviewer
-subhead: A PM resume reviewed line by line against ten best practices, with
-  suggestions taken straight from your own bullet points. If you add a job
-  posting, the feedback and rewrite are tuned to that role.
+subhead: A PM resume reviewed line by line against ten best practices, with suggestions taken straight from your own bullet points. If you add a job posting, the feedback and rewrite are tuned to that role.
 explain: |
   A PM resume reviewed line by line against ten best practices, with suggestions taken straight from your own bullet points. If you add a job posting, the feedback and rewrite are tuned to that role.
 
@@ -18,6 +15,10 @@ when:
   - Your bullets list duties and show no results.
   - You want your resume to match a specific job posting.
   - You need a second opinion before sending applications.
+not_for:
+  - "You are applying for a role that is not product management: use a general resume editor or ask a recruiter in that field."
+  - "You need an academic CV or a long research format: use your university career office or a CV template for that field."
+  - "You want help with a cover letter or interview answers: ask your AI for that task on its own, as this only reviews a resume."
 you_give:
   - Your resume text
   - A target job posting (optional)
@@ -28,7 +29,22 @@ you_get:
   - Keyword gaps against the posting
   - A tailored resume version
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your resume text. Add the job posting and your target level if you have them.
+  - Read the feedback on all ten points. Each one shows your current text and a better version.
+  - Check every number before you use it. Example figures in the skill, like percentages and dollar amounts, are placeholders. Only use figures you can prove.
+  - Ask for the tailored draft, edit it, then paste it back for a second pass.
+output_sample:
+  input:
+    - Your resume text
+    - A job posting for the role you want (optional)
+    - Your name, if you want it used in the feedback (optional)
+  output:
+    - name: Introduction
+      contains: A friendly greeting and one or two strengths the reviewer sees right away.
+    - name: Feedback on the ten practices
+      contains: "For each practice: what works, what does not, quotes from your resume, and a suggested rewrite."
+    - name: Keyword match
+      contains: Key skills from the job posting and where your resume is missing them, if you added a posting.
+    - name: Conclusion
+      contains: A short summary of the top changes to make first, and an offer to review again.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Setup problems vary and need some diagnosis.
 new_slug: matlab-to-python-bridge
 name: MATLAB to Python bridge
-summary: Say which Python library you need. Get MATLAB code that calls it, with
-  setup and errors fixed.
+summary: Call a Python library from MATLAB with code that runs. Get the calls, the Python setup and fixes for module and path errors.
 job: connect-tools
 headline: MATLAB to Python bridge
-subhead: MATLAB code that calls a Python library and works, with the setup
-  problems fixed. Tell it which library you need, such as pandas or
-  scikit-learn, and it writes the calls and gets the environment right.
+subhead: MATLAB code that calls a Python library and works, with the setup problems fixed. Tell it which library you need, such as pandas or scikit-learn, and it writes the calls and gets the environment right.
 explain: |
   MATLAB code that calls a Python library and works, with the setup problems fixed. Tell it which library you need, such as pandas or scikit-learn, and it writes the calls and gets the environment right.
 
@@ -18,6 +15,10 @@ when:
   - MATLAB says it cannot find your Python module.
   - Your call fails because Python wants an integer and gets a double.
   - MATLAB points to the wrong Python install.
+not_for:
+  - "You want to call MATLAB from Python: use the MATLAB Engine API for Python, which MathWorks provides."
+  - "You want to build MEX files or Python C extensions: ask a developer who knows C or C++."
+  - "You only write Python and never use MATLAB: use a plain Python guide or ask your AI for help with Python alone."
 you_give:
   - The Python library or function
   - Your MATLAB code to connect
@@ -29,8 +30,29 @@ you_get:
   - Error fixes
   - Notes on data type conversion
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and Python.
+  - Open your AI tool and paste in the skill text. Use one that can run MATLAB and a Bash tool.
+  - Tell it the Python library you want and paste your MATLAB code. Add your MATLAB release.
+  - If a run failed, paste the full error message too.
+  - Let it set up the Python environment first. It asks before it restarts a running Python session, so read that warning.
+  - Run the new code on a small test input before you use real data.
+  - "Next step: ask for notes on data types for your next Python call."
+output_sample:
+  input:
+    - The Python library or function you want to call
+    - Your MATLAB code, or the task you want it to do
+    - Your MATLAB release
+    - The error message, if a run failed (optional)
+  prerequisites:
+    - MATLAB and a Python install on your computer
+    - An AI that can run MATLAB through a MATLAB connection and use a Bash tool for pip and virtual environments
+  output:
+    - name: MATLAB code
+      contains: Code that calls the Python library with py. names, name=value arguments and integer types where Python needs whole numbers.
+    - name: Python environment setup
+      contains: Bash steps to create a virtual environment and install packages, then the pyenv lines that point MATLAB at it.
+    - name: Error diagnosis
+      contains: The type of error found, such as a missing module, an unresolved py name or an empty Python path.
+    - name: Fix applied
+      contains: The change that fixes that error type, and a check that the Python call now runs.
+    - name: Data type notes
+      contains: How numbers and string arrays are converted for your MATLAB release.

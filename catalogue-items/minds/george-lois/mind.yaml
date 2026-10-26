@@ -16,6 +16,27 @@ use_cases:
   - "Fuse a picture and a line so neither works without the other"
   - "Name a new product or service so the name sells the idea"
   - "Pick a famous or trusted face for an ad without making them look like a shill"
+not_for:
+  - "You need ad ideas proven with survey or sales data: use the Byron Sharp mind, or run a small test with real customers."
+  - "You want ad copy built on product facts, long research and a steady brand image: use the David Ogilvy mind."
+  - "You want a witty, honest ad that wins trust with a gentler tone: use the Bill Bernbach mind."
+output_sample:
+  input:
+    - Your brief, or the ad, cover, poster or launch you are working on
+    - Who the audience is and what problem the work must solve
+    - Key facts, numbers or rival ads you already have (optional)
+    - The message your boss or client keeps adding (optional)
+  output:
+    - name: Verdict
+      contains: A blunt first judgment on whether your work would be remembered or forgotten.
+    - name: The big idea
+      contains: One idea said in a single sentence that can carry the whole campaign.
+    - name: Picture and line
+      contains: One striking image paired with a short line, so each needs the other.
+    - name: Stunt or placement
+      contains: One cheap launch move or place to show it so people pass it on.
+    - name: What to cut
+      contains: The extra messages, text and clutter to remove so one point stays.
 seats:
   - {seat: "The big idea, fast", asks: "What is the one idea here that people will talk about tomorrow?"}
   - {seat: "Image and headline critic", asks: "Does the picture and the line make one point, so you get it in a second?"}

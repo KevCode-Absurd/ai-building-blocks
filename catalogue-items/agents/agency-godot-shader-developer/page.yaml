@@ -1,0 +1,146 @@
+name: Godot Shader Developer agent
+summary: Get a Godot 4 shader plan and draft code for effects like outlines, dissolve or water, matched to your renderer, platform and speed limits.
+headline: Godot Shader Developer agent
+subhead: Describe the effect you want and where the game runs. It picks the shader type, checks which renderer the effect needs, and drafts the code with artist-friendly settings. You get a plan, a draft shader and a speed checklist.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A Godot shader that looks right on your desktop can fail on a phone, or fail
+  without an error. Godot's shader language looks like GLSL but is not the same.
+  Code copied from a tutorial for Godot 3 or from raw GLSL often breaks. And
+  some effects, such as screen reads and depth, only work in the high-end
+  renderer. A good Godot 4 shader plan settles the renderer before the code.
+
+
+  This agent starts there. It asks which renderer and platform you target,
+  because that decides what the effect may use. It picks the shader type, then
+  decides if the effect should start as a VisualShader graph for artists or as
+  code. It drafts the shader with a header that states its needs, and with named
+  settings that artists can change in the inspector.
+
+
+  It cannot open Godot or see your effect. You run the shader and compare it to
+  your reference. It is a role profile from Agency Agents, shared under MIT.
+  Check any built-in or setting it names against your Godot version's docs.
+when:
+  - You want a 2D or 3D effect in Godot 4, such as a sprite outline, a dissolve or a water surface.
+  - A shader works on your computer but fails or looks wrong on a phone or in the Compatibility renderer.
+  - You have a tutorial shader for Godot 3 or raw GLSL and need it ported to Godot 4.
+  - You need a full-screen effect and want to know which renderer it needs.
+not_for:
+  - Your game is in Unity. Use the Unity Shader Graph Artist agent.
+  - Your game is in Unreal. Use the Unreal Technical Artist agent.
+  - You need game rules and code rather than a visual effect. Use the Godot Gameplay Scripter agent.
+  - You need a wider art pipeline plan, not one effect. Use the Technical Artist agent.
+you_give:
+  - The effect you want, ideally with a reference image or video
+  - Whether it is for 2D sprites and interface, 3D surfaces, particles or the full screen
+  - Your Godot version, your renderer and your target devices
+  - Your existing shader or material file, pasted as text (optional)
+  - What you see now if it is broken, and any error text (optional)
+you_get:
+  - A short effect brief with the shader type and the renderer it needs
+  - A choice between starting in a VisualShader or in code, with a reason
+  - A draft shader with a header that lists its needs and uniforms with hints
+  - A parameter list that artists can edit in the inspector
+  - A speed check with texture counts and the mobile risks
+  - A test list to run in Godot, including a Compatibility renderer pass if you target phones
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe the effect. Say your Godot version, renderer and target devices. Add a reference image and your current shader text if you have them.
+  - Type "Plan this effect, then draft the shader." Your AI asks once for anything missing.
+  - Read the renderer needs first. If the effect needs the high-end renderer and you target phones, choose a fallback before you go on.
+  - Paste the draft into a shader in your project. Compare it to your reference on the real target device.
+  - Open Godot's rendering profiler and compare frame time with and without the effect. Your AI cannot measure this.
+how_it_works:
+  - title: Set the effect brief
+    text: It states the visual target, the shader type and the renderer you target. It marks anything it must assume.
+  - title: Find the renderer needs
+    text: It checks if the effect needs screen or depth reads, which limits it to certain renderers, and plans a fallback if you target a lower tier.
+  - title: Choose VisualShader or code
+    text: It suggests a graph when artists must extend the effect, and code when speed or complex logic matters.
+  - title: Draft the shader
+    text: It writes the shader with the type declared at the top, Godot's own built-ins, and named settings with hints so they show in the inspector.
+  - title: Check speed and mobile
+    text: It counts texture reads, flags loops and discard on mobile, and lists the profiler checks for you to run.
+output_shape: |-
+  EFFECT BRIEF AND ASSUMPTIONS
+    <effect> | <shader type> | <renderer and devices> | <reference> | <assumptions>
+
+  RENDERER NEEDS
+    <what the effect reads> | <renderers that allow it> | <fallback>
+
+  APPROACH
+    <VisualShader or code> | <reason> | <steps>
+
+  DRAFT SHADER (NOT RUN)
+    <file name> | <header: type, renderer, needs> | <uniforms with hints and ranges>
+
+  PARAMETER LIST
+    <uniform> | <hint and range> | <what it changes>
+
+  SPEED CHECK
+    <item> | <count or risk> | <fix>
+
+  TEST LIST AND NEXT STEP
+    <test> | <how to run it> | <what a pass looks like>
+output_sample:
+  input:
+    - The effect you want, with a reference image or video
+    - Whether it is 2D, 3D or full screen
+    - Your Godot version, renderer and target devices
+    - Your existing shader text (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Godot editor and your target device to check the result
+  output:
+    - name: Effect brief and assumptions
+      contains: The visual target, shader type, renderer and devices, and what the plan assumes.
+    - name: Renderer needs
+      contains: What the effect reads, which renderers allow it and the fallback for lower ones.
+    - name: Approach
+      contains: Whether to start in a VisualShader or in code, and why.
+    - name: Draft shader
+      contains: Shader code with a header of its needs and uniforms that have hints, marked as not run.
+    - name: Parameter list
+      contains: Each setting artists can change, with its range and what it does.
+    - name: Speed check
+      contains: Texture reads, loops and mobile risks, each with a fix.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with image upload
+      why: It can compare your reference image with your description and ask what is different.
+  inputs:
+    - A screenshot of the effect as it looks now.
+    - The device model you worry about most, for the mobile pass.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name one effect at a time. Add the next effect after the first runs on your target device.
+  - what: Renderer
+    how: Say the lowest renderer you must support, so the plan does not use features that break on it.
+improve:
+  - Keep a note of each device where an effect failed and paste it in on the next run, so the plan avoids that feature.
+terms:
+  - term: Shader
+    meaning: A small program that tells the graphics card how to draw a surface or a pixel.
+  - term: VisualShader
+    meaning: Godot's node graph for building a shader without writing code.
+  - term: Renderer
+    meaning: The part of Godot that draws the game. Godot 4 has three, with different limits.
+  - term: Uniform
+    meaning: A setting in a shader that you can change from the inspector or from code.
+  - term: Texture read
+    meaning: One look-up of a pixel from an image. Each one costs speed, so fewer is better.
+  - term: Post-processing
+    meaning: An effect applied to the whole screen after the scene is drawn.

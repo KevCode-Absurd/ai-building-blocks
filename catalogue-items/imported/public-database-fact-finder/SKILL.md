@@ -11,6 +11,8 @@ metadata:
 
 # Database Lookup
 
+**Working in a chat (added by AI Blocks).** If a market size plan is in the chat, treat each of its inputs as one fact to look up, in turn. Record the source and date for each, or write `No public data found: <input>`.
+
 This skill catalogs 80 databases with public, registered, or licensed access patterns. Your job is to turn the user's intent into a reproducible retrieval: select the authoritative database(s), make bounded and rate-limited API calls, verify counts when completeness matters, and return results with enough provenance that another agent or human can repeat the lookup.
 
 For complex biomedical retrievals, assume small filtering differences can change downstream conclusions. Prefer deterministic APIs, explicit identifiers, exhaustive pagination, and auditable logs over broad searching or plausible summaries.

@@ -45,3 +45,11 @@ Prioritize names that are:
 - Include any naming conventions or patterns used by your company
 - Share the product's core value proposition and key features
 - Mention geographic markets or languages to consider
+
+## AI Blocks note
+
+Added by AI Blocks. The original skill above is unchanged.
+
+- You cannot look up live trademark records or domain names. Treat each note on availability as something to check, not a result. Say so in your reply.
+- If the context is missing the product or the buyers, ask once before writing the names. Do not make up either one.
+- Finish with one line: "Shortlist two or three, search each in a trademark database for your market and at a domain registrar, then test them with a few real buyers."

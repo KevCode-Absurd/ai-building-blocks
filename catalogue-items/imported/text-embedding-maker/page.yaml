@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows standard model calls.
 new_slug: text-embedding-maker
 name: Text embedding maker
-summary: Give it sentences or documents. Get number versions of them for search,
-  grouping and finding similar text.
+summary: Turn your sentences or documents into text embeddings your computer can compare. Use them for search by meaning, grouping and finding similar text.
 job: build-software
 headline: Text embedding maker
-subhead: Give it sentences or documents. Get number versions of them for search,
-  grouping and finding similar text. Bring your sentences or documents. Use the
-  result to plan your next step.
+subhead: Give it sentences or documents. Get number versions of them for search, grouping and finding similar text. Bring your sentences or documents. Use the result to plan your next step.
 explain: |
   Turn sentences or documents into lists of numbers that capture their meaning, so a computer can find text that says similar things even when the words differ. That powers meaning-based search, grouping of similar items and question answering over your own files.
 
@@ -18,6 +15,10 @@ when:
   - You have thousands of support tickets and want to group similar ones.
   - You are building a question-answering tool over your own documents.
   - You need embeddings in several languages without paying per request.
+not_for:
+  - "You want to write or rewrite text: use your AI chat directly, since this only turns text into numbers."
+  - "You cannot run Python on your computer: use a hosted embedding service from an AI company instead."
+  - "You only need exact word search: use the find tool in your document app or spreadsheet."
 you_give:
   - Your sentences or documents
   - The language or languages involved
@@ -29,8 +30,28 @@ you_get:
   - Similarity scores between texts
   - A working search or clustering example
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your sentences or documents. Say which languages they use.
+  - "Say what you want: search, group or compare similar text."
+  - Run the code it writes. This needs an AI that can run Python, or Python on your own computer.
+  - Check the top matches make sense. If not, ask your AI to try a different model.
+output_sample:
+  input:
+    - Your sentences or documents
+    - The language or languages they are in
+    - "What you want to do: search, group or compare"
+    - Your search question (optional)
+  prerequisites:
+    - An AI that can run Python code, or Python on your own computer
+    - The sentence-transformers package installed with pip
+  output:
+    - name: Model choice
+      contains: The pre-trained model picked for your language and speed needs, with the reason it fits.
+    - name: Embeddings
+      contains: One list of numbers per input text, with the length set by the model.
+    - name: Similarity scores
+      contains: Cosine similarity scores that show how close each pair of texts is in meaning.
+    - name: Semantic search results
+      contains: A ranked list of the texts closest to your question, from the semantic_search function.
+    - name: Batch encoding code
+      contains: Python code that encodes large sets of text in batches with a progress bar.

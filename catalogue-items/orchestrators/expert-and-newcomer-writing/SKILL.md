@@ -49,7 +49,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Show the draft to one expert and one newcomer, and write down what each did and said.
 
-6. **Sort what each group said.** Use the skill `reader-feedback-sorter`. Give it the feedback notes and the copy draft from the steps before. A ranked rewrite list that says which group each change serves.
+6. **Sort what each group said.** Use the skill `reader-feedback-sorter`. Give it the notes your testers send back after the pause (not step 5's plan) and the copy draft from the steps before. A ranked rewrite list that says which group each change serves.
 7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

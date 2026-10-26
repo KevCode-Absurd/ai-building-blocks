@@ -2,34 +2,58 @@ thinking: medium
 thinking_why: It scores pages and applies decision rules.
 new_slug: old-content-refresher
 name: Old content refresher
-summary: Give it your existing posts. Get which to update, merge or delete, and
-  how deep each update goes.
+summary: Find which old blog posts to update, merge or delete. Give it your posts and traffic. You get a priority list and how deep each refresh goes.
 job: get-found-in-search
 headline: Old content refresher
-subhead: A clear list of which old posts to update, merge or delete, and how
-  much work each deserves. Your library decays as search habits change and facts
-  go stale, and this puts your effort where traffic can come back.
+subhead: Give it a list of your old posts and how much traffic each gets. It sorts them into update, merge or delete. You get the order to work in and how deep each update should go.
 explain: |
   A clear list of which old posts to update, merge or delete, and how much work each deserves. Your library decays as search habits change and facts go stale, and this puts your effort where traffic can come back.
 
   The skill runs a quarterly audit. It scores each piece on how much it once earned, how far it has fallen, and how much it matters to the business. Then it sorts pieces into a light touch, a deep rewrite, a merge into a stronger page, or removal. It sets the order and timing, and gives you a rhythm to repeat each quarter. A refresh that does not move traffic gets a diagnosis instead of more edits.
 when:
   - Your blog has hundreds of old posts and you cannot update them all.
-  - Traffic is dropping on pieces that used to perform.
+  - Traffic is dropping on posts that used to perform.
   - Two older posts cover nearly the same topic and compete with each other.
   - You updated posts but rankings did not move.
+not_for:
+  - "You have fewer than about 50 posts: spot-check each one by hand, or ask a colleague to review them."
+  - "You have no traffic data for your posts: pull a report from your analytics tool first, then come back."
+  - "You want to write a brand new post: use a writer or your usual drafting step, as this only reviews old posts."
 you_give:
   - A list of your posts with traffic over time
   - Your main business goals
   - Your team's capacity per month
   - Search or ranking data (optional)
 you_get:
-  - An update, merge or delete decision per piece
-  - A priority order
-  - Depth of refresh for each one
-  - A repeatable quarterly schedule
+  - An update, merge or delete decision for each post
+  - A priority order for the work
+  - How deep each refresh should go
+  - A quarterly schedule you can repeat
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Export your post list from your analytics tool, with traffic for at least two periods.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your post list, then add your goals and how many posts your team can handle each month.
+  - Add search or ranking data if you have it. If a post has no data, ask your AI to mark it as missing.
+  - Check the decisions on your top posts first. Change any call you disagree with.
+  - Put the next audit in your calendar for next quarter and run it again with fresh data.
+output_sample:
+  input:
+    - A list of your posts with traffic over time
+    - Your main business goals
+    - Your team's capacity per month
+    - Search or ranking data (optional)
+  prerequisites:
+    - An export of your post list and traffic from your analytics tool
+  output:
+    - name: Refresh signals
+      contains: The signs of decay found in each post, such as falling traffic, ranking drops, stale facts or a shift in what searchers want.
+    - name: Prioritization
+      contains: Each post placed by past value and decay, so high-value posts that are falling come first.
+    - name: Refresh, merge or delete decision
+      contains: "One call per post: update it, merge it into a stronger page, or delete it and redirect."
+    - name: Refresh depth
+      contains: "How much work each update gets: light edit, substantial revision, full rewrite or structural redesign."
+    - name: Quarterly audit schedule
+      contains: A repeatable rhythm for the next audit, with order and timing for the work.
+    - name: Effectiveness check
+      contains: A way to track recovery after each refresh and a diagnosis for any refresh that did not work.

@@ -9,6 +9,10 @@ job: ops
 level: beginner
 inputs:
   - {type: brief, required: true}
+  - {type: document, required: false}
+  - {type: plan, required: false}
+  - {type: spreadsheet, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: document}
 uses: []

@@ -1,13 +1,13 @@
 slug: brand-voice-one-pager-writer
 name: "Brand voice one-pager writer"
-summary: "Describe your brand and who you write for. Get a one-page voice guide with do and don't lines."
+summary: "Get a one-page brand voice guide with tone sliders, word lists and before and after lines from a short description of your brand and readers."
 category: general
 type: prompt
 role: make
 job: brand
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: brief, required: false}
 outputs:
   - {type: brand_guide}
 uses: []

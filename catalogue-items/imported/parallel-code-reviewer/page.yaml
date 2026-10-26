@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It runs several reviewers, then filters their findings.
 new_slug: parallel-code-reviewer
 name: Parallel code reviewer
-summary: Point it at a code change. Get four reviewers working at once and one
-  short list of issues that matter.
+summary: Get a code review of your git changes from four reviewers working at once. You get one short list of issues that matter, ranked, with fixes.
 job: test-and-fix-code
 headline: Parallel code reviewer
-subhead: One short list of code issues that matter, produced by four reviewers
-  working at the same time on your change. Noise is filtered out before you see
-  it.
+subhead: One short list of code issues that matter, produced by four reviewers working at the same time on your change. Noise is filtered out before you see it.
 explain: |
   One short list of code issues that matter, produced by four reviewers working at the same time on your change. Noise is filtered out before you see it.
 
@@ -18,6 +15,10 @@ when:
   - A large diff is too long to read line by line.
   - You want security and logic checked together.
   - You need a review without code being modified.
+not_for:
+  - "You have a tiny change or one small file: read it yourself or ask your AI for a quick single review."
+  - "You want the problems fixed for you: this tool only reviews, so ask your AI to make the edits after you read the list."
+  - "Your AI tool cannot run sub-agents (helpers that work in parallel): ask your AI for a normal one-pass code review instead."
 you_give:
   - A git diff, branch, commit or file list
   - Project notes or rules (optional)
@@ -28,8 +29,26 @@ you_get:
   - Why it matters
   - No changes to your files
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run sub-agents and read your project files.
+  - Open your AI tool in the project folder, so it can read your files and run sub-agents (helpers that work at the same time).
+  - Paste the skill into the chat, or load it as a skill if your tool supports that.
+  - "Say what to review: file names, your current changes, or a branch or commit."
+  - Add what the change should do, and any rules to follow (optional). If you skip this, your AI will guess from the code.
+  - Read the ranked list. Start with Fix now. Your AI will not edit anything, so make the fixes yourself or ask in a new request.
+output_sample:
+  input:
+    - A git diff, branch, commit or list of files
+    - Project notes or rules, such as AGENTS.md (optional)
+    - What the change should do, in your words (optional)
+  prerequisites:
+    - An AI that can read your project files and run sub-agents
+  output:
+    - name: Findings
+      contains: Each issue with its file and line or symbol, category, severity, why it matters, a fix and a confidence level.
+    - name: Open questions
+      contains: Possible problems your AI could not judge because the goal of the change was unclear.
+    - name: Fix now
+      contains: High-severity, high-confidence issues to fix before you merge.
+    - name: Fix soon
+      contains: Medium issues that are likely worth fixing before merge.
+    - name: Optional follow-up
+      contains: Lower-severity points that can wait, plus what is safe to leave alone.

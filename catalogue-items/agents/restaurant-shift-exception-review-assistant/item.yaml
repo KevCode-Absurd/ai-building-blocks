@@ -1,6 +1,6 @@
 slug: restaurant-shift-exception-review-assistant
 name: Restaurant shift exception review assistant
-summary: A shift handover, unresolved issue register and escalation notes.
+summary: "Turn end-of-shift notes into a restaurant shift handover, an open-issue register and escalation notes for the next lead."
 category: agent
 type: agent
 role: orchestrate
@@ -21,9 +21,9 @@ uses:
   - process-and-sop-writer
 steps:
   - uses: prepare-a-restaurant-shift-handover
-    note: "Run when: A new shift handover is supplied with unresolved orders, equipment or safety escalations."
+    note: "Run when a new shift handover is supplied with unresolved orders, equipment or safety escalations. It uses the shift notes you give it and hands over the handover note and the open-issue register."
   - uses: process-and-sop-writer
-    note: Run prepare-a-restaurant-shift-handover for changed evidence or a due review. If an exception has no approved handling path, document the missing procedure and route a question to the responsible lead; do not invent safety instructions.
+    note: Only when an exception has no approved handling path and you ask for one. It uses the register entry for that issue from step 1 and your question about the missing procedure. It hands over an unapproved draft procedure and a question for the responsible lead; it does not invent safety instructions.
 schedule: At each user-requested shift change. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

@@ -1,6 +1,6 @@
 new_slug: sales-role-splitter
 name: "Sales role splitter"
-summary: "List who does which sales job. Get which job to split out first, who owns it and what to track."
+summary: "Use this sales role splitter to see who does which sales job, which one to split out first, and what to track. You get a short sales role plan."
 job: lead-people
 thinking: medium
 thinking_why: "It weighs time shares and picks a split, but the rules are fixed."
@@ -17,6 +17,10 @@ when:
   - "Your closers also find their own leads, and leads dry up when they are busy."
   - "You are about to make your first sales hire."
   - "Deals stall at a handoff and you do not know why."
+not_for:
+  - "You have one seller and no pipeline yet: write down your niche and first offer, then talk to ten likely buyers yourself before you plan a split."
+  - "You want to hire and train a person today: write the job post yourself or ask a recruiter, because this only plans the split."
+  - "You need to forecast revenue or fix a single stalled deal: use your CRM reports or review the deal with your sales lead."
 
 you_give:
   - "Your sales plan or niche"
@@ -33,6 +37,31 @@ how_to_use:
   - "Paste your plan, then list each person and the sales jobs they do."
   - "Check the time shares. Correct any that are guesses."
   - "Share the handoff rule with both sides before the first hire."
+output_sample:
+  input:
+    - Your sales plan or niche
+    - Who does each sales job and roughly how long it takes
+    - Numbers such as leads per month or deals closed (optional)
+    - Hours per job (optional)
+  prerequisites:
+    - Your sales plan from the step before, with a clear niche
+  output:
+    - name: JOBS
+      contains: Each sales job with its owner and its share of their working week.
+    - name: SIDE JOBS
+      contains: Jobs that take over a fifth of a role but are not its core.
+    - name: FIRST SPLIT
+      contains: The job to move to its own person first, why, and what that person does all day.
+    - name: NICHE
+      contains: The one customer type and pain that person works on.
+    - name: HANDOFF
+      contains: What counts as qualified, who qualifies it, who receives it, and what is sent with it.
+    - name: RESULT NUMBERS
+      contains: Two or three result numbers per role and how each is measured.
+    - name: LOST CONTEXT
+      contains: What each handoff loses and one cheap way to keep it.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your input, and any checks the plan did not pass.
 
 how_it_works:
   - title: "Lists the jobs"

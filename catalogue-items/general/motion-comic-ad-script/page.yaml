@@ -1,6 +1,6 @@
 new_slug: motion-comic-ad-script
 name: "Motion comic video ad script writer"
-summary: "Paste your idea and product facts. Get a motion-comic panel list, captions and a cast note."
+summary: "Write a motion comic video ad script from your idea and product facts. Get a panel list, short captions and a cast note for your video clips."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your product fixes an everyday problem you can tell in a few panels.
   - You want a vertical video ad that looks handmade and still makes one clear point.
   - You want a script your video tool can follow panel by panel, with a hero who never changes.
+not_for:
+  - "You want one still image ad, not a video: use the Comic strip image ad maker."
+  - "Your proof rests on a real person, a long offer, or how the product pours, stretches or fits: use a short filmed clip with a real person."
+  - "You need drawn avatars, sheets, storyboard or clips from a finished script: use the Motion comic video clip prompt writer."
 
 you_give:
   - The selling idea, or a script you already have
@@ -37,6 +41,30 @@ how_to_use:
   - Say the length, such as "30 seconds".
   - Cover the captions and read only the drawings. If you can't tell what changed, ask for a clearer turn panel.
   - Take the panel list and cast note to "Motion comic video clip prompt writer". It takes it from there, with the avatar, sheets, storyboard and clips.
+output_sample:
+  input:
+    - Your selling idea, or a script you already have
+    - Your product facts, approved claims and current offer
+    - A photo of your product
+    - Your video length and lettering typeface (optional)
+  prerequisites:
+    - A chat AI that can read pictures, if you attach a product photo
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: FIT
+      contains: Why a comic suits this ad, or what to use instead.
+    - name: CLAIM
+      contains: The one claim the comic acts out, and where it comes from.
+    - name: HERO and PALETTE
+      contains: A simple hero line and a few flat colours to reuse in every prompt.
+    - name: Panel list
+      contains: Each panel with its movement, cut, drawing, motion, caption, narration and seconds, ending on the product photo panel.
+    - name: NOTES
+      contains: Buyer words used, claims left out, and anything missing or inferred.
+    - name: CAST NOTE
+      contains: Who carries the ad, why, the narrator's voice and what never changes about the hero.
+    - name: CHECKS MISSED
+      contains: One line for each check the script still fails, or none.
 
 how_it_works:
   - title: Checks a comic fits

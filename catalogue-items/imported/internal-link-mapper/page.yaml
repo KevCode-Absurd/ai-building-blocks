@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It compares many pages to find links.
 new_slug: internal-link-mapper
 name: Internal link mapper
-summary: Give it your pages. Get which pages should link to which, with anchor
-  text and orphan pages to fix.
+summary: Plan internal links for your site. Give it your pages and get which pages should link to which, with anchor text and orphan pages to fix.
 job: get-found-in-search
 headline: Internal link mapper
-subhead: A map of which pages should link to which, with the anchor text to use
-  and a list of orphan pages that nothing links to.
+subhead: A map of which pages should link to which, with the anchor text to use and a list of orphan pages that nothing links to.
 explain: |
   A map of which pages should link to which, with the anchor text to use and a list of orphan pages that nothing links to. Good internal links help readers and help search engines find your best pages.
 
@@ -18,6 +16,10 @@ when:
   - You are planning a topic cluster and need the link plan.
   - You want better anchor text than "click here".
   - You are launching new pages and want them linked from day one.
+not_for:
+  - "You have only a handful of pages: link them by hand, no map is needed."
+  - "You need a live crawl of a large site: use a site crawler tool, since this only reads the pages you list."
+  - "You want to rewrite page copy or fix titles: edit the pages yourself or ask your AI for a plain content edit."
 you_give:
   - A list of pages with titles and URLs
   - The target keyword for each page
@@ -29,7 +31,31 @@ you_get:
   - A list of orphan pages
   - Pages that need more links in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste your list of pages. Add title, URL, target keyword, page type and a short summary for each.
+  - Name your focus page, and your product or pricing pages, if you have them.
+  - Ask your AI to build the internal linking report.
+  - Fix the orphan pages and high priority links first, then work down the list.
+  - Check the map against your real site, since your AI only sees the pages you pasted.
+output_sample:
+  input:
+    - A list of your pages, each with title, URL (blank if not live) and target keyword
+    - The page type for each one, such as pillar, cluster article or product page
+    - A one or two sentence summary of each page
+    - The page you most want to boost (optional)
+    - Your product, pricing or signup pages (optional)
+  output:
+    - name: Summary
+      contains: Counts of pages checked, link chances found, orphan pages, anchor clashes and links into your focus page.
+    - name: Orphan Page Alert
+      contains: Pages nothing links to, with a suggested page to link from.
+    - name: Link Opportunities
+      contains: Each link with type, source, target, anchor text, where to place it and a sentence to use, ranked by priority.
+    - name: Cannibalization Risks
+      contains: Cases where the same anchor points to one page more than once, with a different anchor to use.
+    - name: Link Equity Map
+      contains: A simple tree of which pages send links to and receive links from your focus page.
+    - name: Links Per Page Check
+      contains: Incoming and outgoing link counts for each page, flagging any with too many outgoing links.
+    - name: Action Checklist
+      contains: A short tick list to confirm every fix is done.

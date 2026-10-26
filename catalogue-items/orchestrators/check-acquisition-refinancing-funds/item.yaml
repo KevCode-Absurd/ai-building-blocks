@@ -1,15 +1,13 @@
 slug: check-acquisition-refinancing-funds
 name: Check acquisition refinancing funds
-summary: Trace debt face value to refinancing payoff cash and the complete closing funding gap.
+summary: "Check the cash new debt really raises, the cost of paying off old debt, and whether an acquisition closing is fully funded."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false

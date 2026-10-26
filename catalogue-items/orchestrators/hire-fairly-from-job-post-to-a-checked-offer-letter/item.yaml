@@ -14,9 +14,9 @@ outputs:
 uses: [hiring-packet-builder, applicant-shortlist-builder, fair-candidate-comparer, offer-letter-check]
 steps:
   - {uses: hiring-packet-builder, note: "Makes the job post, the scoring guide and the offer template that every later step uses."}
-  - {uses: applicant-shortlist-builder, note: "Scores applicants only on the needs written in the job post from the step before."}
-  - {uses: fair-candidate-comparer, note: "Compares candidates using the interview notes you took against the scoring guide. You make the hiring call."}
-  - {uses: offer-letter-check, note: "Checks the filled-in offer letter, built from the template in step one, before you send it. Not legal advice."}
+  - {uses: applicant-shortlist-builder, note: "Scores applicants only on the needs written in step 1's job post. Hands on a ranked shortlist for you to interview."}
+  - {uses: fair-candidate-comparer, note: "Uses your own interview notes (taken with step 1's questions on the people shortlisted in step 2), not a file from step 2. Scores them against the scoring guide and hands on a comparison. You make the hiring call."}
+  - {uses: offer-letter-check, note: "Uses the offer letter you filled in from step 1's template, not step 3's comparison. Hands back risky terms to review before you send it. Not legal advice."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/hire-fairly-from-job-post-to-a-checked-offer-letter/skeleton.yaml

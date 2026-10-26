@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a short set of checks in order.
 new_slug: gpu-setup-checker
 name: GPU setup checker
-summary: Say your GPU is not working in MATLAB. Get it found, tested and ready
-  for GPU code.
+summary: Fix a GPU that MATLAB cannot find. Run this GPU setup check to test your card, find the cause of the error and get fix steps.
 job: build-software
 headline: GPU setup checker
-subhead: MATLAB cannot see your GPU, and this finds out why. It checks whether a
-  compatible GPU is available, tests that it works, and points at what is broken
-  when it does not.
+subhead: MATLAB cannot see your GPU, and this finds out why. It checks whether a compatible GPU is available, tests that it works, and points at what is broken when it does not.
 explain: |
   MATLAB cannot see your GPU, and this finds out why. It checks whether a compatible GPU is available, tests that it works, and points at what is broken when it does not.
 
@@ -18,6 +15,10 @@ when:
   - MATLAB says no GPU found but you own one.
   - You have several GPUs and need to select one.
   - You want to confirm a machine is ready before GPU work.
+not_for:
+  - "You want to write or speed up GPU code: this checker only finds and tests your GPU, so ask your AI for help with the code itself."
+  - "You want to watch GPU memory or use while code runs: read the gpuDevice properties in MATLAB or use NVIDIA's own tools."
+  - "You want to split work across several GPUs: set up a parallel pool in MATLAB instead."
 you_give:
   - Your MATLAB release
   - Error messages (optional)
@@ -29,8 +30,34 @@ you_get:
   - The cause of any failure
   - Fix steps including driver advice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB on a computer with a GPU.
+  - Open your AI tool and paste in the text of this skill.
+  - Tell it your MATLAB release. Add any error message, your GPU model or your nvidia-smi output if you have them.
+  - Let your AI run the checks in MATLAB on the computer with the GPU. If it cannot run MATLAB, run each command yourself and paste back the results.
+  - Read the diagnosis and the fix steps. Check any driver advice against the GPU requirements page for your release.
+  - Before you edit the Windows Registry, back it up first. A wrong edit can break Windows.
+  - Run the check again to confirm MATLAB now sees your GPU.
+output_sample:
+  input:
+    - Your MATLAB release
+    - Any error message you see (optional)
+    - Your GPU model and driver version (optional)
+    - The text printed by nvidia-smi (optional)
+  prerequisites:
+    - MATLAB R2024b or newer
+    - The Parallel Computing Toolbox, which is paid and needs a licence
+    - An AI that can run MATLAB on the computer with the GPU, or you paste in the results yourself
+  output:
+    - name: GPU availability check
+      contains: A true or false answer from canUseGPU on whether MATLAB can use a GPU, with licence and toolbox state covered.
+    - name: Diagnosis
+      contains: The validateGPU results, with the failed layer named and matched to its likely cause.
+    - name: Device list
+      contains: The GPUs MATLAB can see, with their index numbers, so you can pick the right one.
+    - name: Selected device properties
+      contains: The details of the GPU you chose, read from the device.
+    - name: Windows driver model check
+      contains: Whether the GPU is shared with the display and whether long jobs may be stopped by Windows.
+    - name: Fix steps
+      contains: What to change next, including driver advice checked against the GPU requirements page for your MATLAB release.
+    - name: Speed test tip (optional)
+      contains: A suggestion to run gpuBench from the MATLAB File Exchange to measure your GPU.

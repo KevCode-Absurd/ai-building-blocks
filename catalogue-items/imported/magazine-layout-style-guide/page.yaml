@@ -2,35 +2,107 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: magazine-layout-style-guide
 name: Magazine layout style guide writer
-summary: "Describe your product. Get a style guide with a magazine feel: serif
-  type, tidy grids and easy reading."
+summary: Get a magazine-style design guide for your site or app, with serif type, a tidy grid, colour tokens and a contrast check.
 job: design-work
 headline: Magazine layout style guide writer
-subhead: "Describe your product. Get a style guide with a magazine feel: serif
-  type, tidy grids and easy reading. Bring a description of your product. Use
-  the result to plan your next step."
+subhead: Describe your product and who reads it. Your AI writes an editorial style guide with serif type, a type scale, colour tokens and 8-point spacing. It checks the contrast of each colour pair and sets rules for reading comfort.
 explain: |
-  A style guide for your product with a magazine feel, covering serif type, tidy grids and easy reading. Engineers and designers can use it directly without further interpretation.
+  Reading-heavy products feel cheap when type, spacing and colour change from page to page. This skill writes a magazine layout style guide, so your blog, course reader or content app feels like one well-edited publication.
 
-  It sets a type scale, here 14 up to 40, with a serif font for body and display text. It adds a restrained color set with named tokens for primary, neutral, success, warning, danger and surface. Spacing follows an 8-point grid. It states rules to follow and to avoid, such as always using tokens, keeping clear hierarchy and designing empty, loading and error states. Accessibility is built in: WCAG 2.2 AA, visible focus, large touch targets and reduced motion. It also sets a short, clear tone for text.
+  Your AI starts with one sentence on the design idea. The defaults are the Gelasio serif for text and headings, Ubuntu Mono for code, six type steps from 14 to 40, near-black text on white with a light grey accent, and an 8-point spacing grid. It then writes rules for each part and every state, with accessibility rules you can test.
+
+  It is built for article-like reading. For a chat screen use the AI assistant interface style guide writer, and for a sales page that walks visitors through a story use the Story-led page style guide writer. This guide also checks contrast. The green and orange status colours are only about 3.3 to 1 and 3.2 to 1 on white, so the guide tells you to use them for icons and fills.
 when:
-  - You want your app or site to feel like a well-edited publication.
-  - Your team needs one shared set of type, color and spacing rules.
-  - You are building a reading-heavy product and want comfortable text.
-  - You need design guidance that also meets accessibility standards.
+  - You want your app or site to feel like a well-edited magazine.
+  - You build a blog, a course reader or another reading-heavy product.
+  - Your team needs one shared set of type, colour and spacing rules.
+  - You need type rules that also meet accessibility standards.
+not_for:
+  - "Your product must keep its own brand fonts and colours: this guide sets Gelasio and a fixed colour list, so extend your own guide with the Design rules file writer."
+  - "You are building a chat screen: use the AI assistant interface style guide writer."
+  - "You are building a sales page that tells a story: use the Story-led page style guide writer."
+  - "You only need colour, type and spacing as code files: use the Design token builder."
 you_give:
-  - A description of your product
-  - Your audience
-  - Fonts or colors you must keep (optional)
-  - The platform, web or app (optional)
+  - A description of your product and what it does
+  - Who reads or uses it
+  - Fonts or colours you must keep (optional)
+  - Web or app (optional)
 you_get:
-  - Type scale and font choices
-  - Color tokens
-  - Spacing and layout rules
-  - Accessibility requirements
-  - Tone-of-voice notes
+  - A type scale, serif font choices and colour tokens, with a contrast ratio for each pair
+  - Spacing and layout rules on an 8-point grid
+  - Rules for each part and its states
+  - Accessibility rules, tone notes and a review checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product description and who reads it. Add any fonts or colours you must keep, and say if it is web or app.
+  - Answer the one round of questions it asks, or say "use the defaults". Anything you do not give is marked MISSING.
+  - Check the colour table and the line width for body text. Darken any text colour below 4.5 to 1.
+  - Give the guide to your designer or developer, or paste it into your coding AI's project instructions. Later, run the Page design standards checker on a built page.
+how_it_works:
+  - title: State the design idea
+    text: It writes one sentence on the editorial look and who it is for, before it sets any rules.
+  - title: Set the foundations
+    text: It sets the serif fonts, six type sizes from 14 to 40, colour tokens and an 8-point spacing grid.
+  - title: Check the contrast
+    text: It tests each text and background pair and flags any below the 4.5 to 1 needed for normal text.
+  - title: Set reading comfort
+    text: It sets a comfortable line width and line spacing for long text.
+  - title: Write part rules
+    text: For each part it covers anatomy, variants, states, and how it works by keyboard, mouse and touch.
+  - title: Add tone and a checklist
+    text: It adds tone examples, do and don't pairs and a list your team can run in code review.
+output_shape: |-
+  1. Context and goals: <the design idea in one sentence, the product, who reads it>
+  2. Design tokens
+     | Token | Value | Use | Contrast on surface |
+     | <text> | <hex> | <where it goes> | <ratio, pass or fail> |
+     Fonts: <body and display serif>, <code>
+     Type steps: <name = size>
+     Spacing: <8-point steps>
+     Reading width: <characters per line>
+  3. Parts: <article card, byline, nav> with anatomy, variants, states, small screens
+  4. Accessibility rules: <rule> and <how to test it>
+  5. Tone: <voice words>, then <before> and <after> examples
+  6. What not to do: <rule> and <example to avoid>
+  7. Review checklist: - [ ] <check>
+  Next step: <who gets the guide>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - Your product and what it does
+    - Who reads or uses it
+    - Fonts or colours you must keep (optional)
+    - Web or app (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the editorial look, the product and who reads it.
+    - name: Design tokens and foundations
+      contains: Serif fonts, type sizes, colour tokens and 8-point spacing, with a contrast ratio for each pair.
+    - name: Component rules
+      contains: Anatomy, variants, states and small-screen behaviour for each part.
+    - name: Accessibility requirements
+      contains: Testable rules for focus, contrast, keyboard use, touch size and reduced motion.
+    - name: Content and tone standards
+      contains: Short, clear voice words with before and after examples.
+    - name: Anti-patterns
+      contains: What not to build, each paired with an example.
+    - name: QA checklist
+      contains: A list your team can run in code review before shipping.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Three publications whose layout you like, in a few words each
+    - Your logo colours as hex codes
+    - A sample of your longest article, to set the reading width
+    - Screenshots of your current article page
+terms:
+  - term: Style guide
+    meaning: A written set of rules for how a product looks, so every screen matches.
+  - term: Serif
+    meaning: A font with small strokes on the letter ends, common in books and magazines.
+  - term: Token
+    meaning: A named value, such as text colour or large space, used in place of a raw number.
+  - term: Contrast ratio
+    meaning: How far apart two colours are in brightness. Normal text needs at least 4.5 to 1.

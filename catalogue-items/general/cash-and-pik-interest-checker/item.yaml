@@ -1,15 +1,13 @@
 slug: cash-and-pik-interest-checker
 name: Cash and PIK interest checker
-summary: Separate cash interest from principal growth under one fixed opening-balance PIK period.
+summary: "Split a loan's interest for one period into cash paid and PIK interest added to the balance. Get both amounts and the new loan total."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - debt-cash-sweep-checker
+  - net-leverage-covenant-checker
+  - review-sponsor-debt-cash-demands
 origin: own
 version: 1.0.0
 added: 2026-10-22

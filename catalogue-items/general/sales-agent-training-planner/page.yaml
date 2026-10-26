@@ -1,6 +1,6 @@
 new_slug: sales-agent-training-planner
 name: "Sales agent training planner"
-summary: "Describe your product and who could sell it. Get a short course, a pay and prize plan and a first-month schedule."
+summary: "Plan sales agent training in one go. Give it your product and who could sell it. You get a short course, a pay and prize plan and a first-month schedule."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It designs pay and training together and must keep promises affordable."
@@ -17,6 +17,10 @@ when:
   - "You want others to sell your product."
   - "Agents sign up and drop out in the first month."
   - "You need a plan for pay, prizes and training that you can afford."
+not_for:
+  - "You want to plan one agent's sales talk: use the Counter demo script writer."
+  - "You want to keep buyers coming back after a sale: use the Post-sale follow-up planner."
+  - "You need legal advice on pay or recruiting rules: ask a local lawyer or your trade body."
 
 you_give:
   - "Your product and the problem it solves"
@@ -34,6 +38,29 @@ how_to_use:
   - "Add price and cost if you have them."
   - "Run the course with one or two agents before you recruit more."
   - "Tell the skill what they found hard and ask it to revise."
+output_sample:
+  input:
+    - Your product and the problem it solves
+    - Who could sell it, with their time and reach
+    - Your price, cost and what you can afford to pay (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Product test
+      contains: Who to try the product on, what to ask them and what counts as it working.
+    - name: Method steps
+      contains: Numbered steps an agent can repeat, with NEEDS DEMO on any step that cannot be shown.
+    - name: Course
+      contains: Modules in order, each with a time and a way to check it was learned.
+    - name: Pay
+      contains: The commission rule, week-one pay at three sales levels and whether you can afford it.
+    - name: Prizes
+      contains: Prizes beyond sales, such as recruiting, repeat buyers and local good, and how each is won.
+    - name: Meetings
+      contains: A regular local meeting and a yearly gathering, with what happens at each.
+    - name: Records
+      contains: The records to keep and who keeps each one.
+    - name: First month
+      contains: A week-by-week schedule, plus MISSING lines and any checks it missed.
 
 how_it_works:
   - title: "Tests the product"

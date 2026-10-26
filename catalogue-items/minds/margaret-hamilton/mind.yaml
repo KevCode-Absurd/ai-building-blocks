@@ -16,6 +16,29 @@ use_cases:
   - "Review a project's past mistakes, sort them by cause, and change the process so they can't repeat"
   - "Write down what a system must do before anyone argues about how to build it"
   - "Make the case to doubtful managers that careful work up front saves time later"
+not_for:
+  - "You want to speed up slow code or a slow site: use the Brendan Gregg mind, who is known for methods to investigate performance."
+  - "You want small steps and fast tests while you build: use the Kent Beck mind, whose recorded approach uses small changes and quick feedback."
+  - "You need a legal, medical or one-off fact check: ask a qualified person, because this mind reviews systems and does not give expert advice."
+output_sample:
+  input:
+    - The system, plan or process you want reviewed
+    - Past faults or mistakes, if you have them (optional)
+    - What the system must do, in plain words
+    - Your change records, if you keep them (optional)
+  output:
+    - name: Impossible-mistake review
+      contains: What happens when the thing people say will never happen does happen, and how the system should notice it.
+    - name: Error kinds by seam
+      contains: Likely errors sorted by cause, with extra focus on where parts, teams or tools meet.
+    - name: Priorities under load
+      contains: What the system should drop first and what it must protect when it is overloaded.
+    - name: Warning and go or no-go
+      contains: What the person sees when something fails, and a clear choice they can make in time.
+    - name: Recovery plan
+      contains: How the system returns to a safe point, plus a rehearsal with a real person in the loop.
+    - name: Change control and next steps
+      contains: Who approves each change and why, plus what to fix first and what to test.
 seats:
   - {seat: "Software that can't fail", asks: "What happens when the thing we were told would never happen happens anyway?"}
   - {seat: "Error hunter", asks: "Where do the parts meet, and what breaks at that seam?"}

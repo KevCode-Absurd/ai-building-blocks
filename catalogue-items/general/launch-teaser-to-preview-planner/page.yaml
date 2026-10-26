@@ -1,6 +1,6 @@
 new_slug: launch-teaser-to-preview-planner
 name: "Launch teaser to preview planner"
-summary: "Paste what you are launching and when. Get a teaser, preview and launch plan with a sign-up page and free sample."
+summary: "Plan a product launch teaser from your date. Get a dated plan, sign-up page spec, free sample and launch message so people are waiting on day one."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sets stages from a date and specifies a page and a sample. The structure is fixed and the judgement is in what to show when."
@@ -17,6 +17,10 @@ when:
   - You have a launch date and no audience waiting for it.
   - You want to show the product in stages instead of one big reveal.
   - You need a sign-up page and a free sample plan for your product or service.
+not_for:
+  - "Your launch has no fixed date yet: pick a date first, then come back to this planner."
+  - "Your scope is not cut yet and you are unsure what ships: use the Launch scope cutter first."
+  - "You want the final page copy or finished emails written: ask your AI to draft them after you have this plan."
 
 you_give:
   - What you are launching and the launch date
@@ -35,6 +39,31 @@ how_to_use:
   - Add your brand file if you have one, so the voice fits.
   - Check each stage date against your calendar.
   - Start with the sign-up page. Everything else uses the list it builds.
+output_sample:
+  input:
+    - What you are launching and the launch date
+    - What is in the smaller launch scope
+    - Your brand file or voice notes (optional)
+    - The people you could show first, such as customers, peers or press (optional)
+  output:
+    - name: The launch
+      contains: What you are launching, the date and the features that are in scope.
+    - name: Timeline
+      contains: Dated stages from hints and sign-up page to insider early look, preview and launch week.
+    - name: Sign-up page
+      contains: A headline, one line of promise and an email box, all above the fold.
+    - name: Promo site
+      contains: The sections of the site and what each holds, drawn from the real product.
+    - name: Free sample
+      contains: What people get for free and whether it shows the real product.
+    - name: Teaching piece
+      contains: One topic people would share, and the reason they would share it.
+    - name: Launch message plan
+      contains: Who gets the message, what it says, the call to action and the date.
+    - name: Missing
+      contains: Facts that would change the plan, such as insider names or case studies.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Works back from the date

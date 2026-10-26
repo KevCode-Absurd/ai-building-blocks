@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must separate fact from belief and rebuild the argument.
 new_slug: hidden-assumption-auditor
 name: Hidden assumption auditor
-summary: Describe a decision or idea. Get its hidden assumptions sorted by how
-  fragile they are, then a rebuilt conclusion.
+summary: Find the hidden assumptions behind a decision or idea, see which are most likely wrong, and get a conclusion rebuilt from what holds up.
 job: think-and-decide
 headline: Hidden assumption auditor
-subhead: A decision or idea tested against the things you have not questioned.
-  Most plans rest on beliefs that feel like facts. This skill digs them out,
-  labels them, and rebuilds your conclusion using only what holds up.
+subhead: A decision or idea tested against the things you have not questioned. Most plans rest on beliefs that feel like facts. This skill digs them out, labels them, and rebuilds your conclusion using only what holds up.
 explain: |
   A decision or idea tested against the things you have not questioned. Most plans rest on beliefs that feel like facts. This skill digs them out, labels them, and rebuilds your conclusion using only what holds up.
 
@@ -18,6 +15,10 @@ when:
   - A plan feels solid but you cannot say why.
   - You want to stress-test a product idea before building it.
   - Someone says it has always been done this way and you want to check.
+not_for:
+  - "You need a plain fact looked up or checked: use a search engine or ask your AI the question directly."
+  - "The decision is already made and you just need a to-do list: write a simple action plan with a teammate or friend."
+  - "You want a fast pros and cons list: ask your AI for one in a single message, no audit needed."
 you_give:
   - The decision, idea or belief to test
   - Context and what is at stake
@@ -28,7 +29,28 @@ you_get:
   - The three most dangerous assumptions
   - A rebuilt conclusion from verified premises
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Describe your decision or idea in a few lines. Add what is at stake, what you have tried, and any deadline.
+  - "Answer the first step: check that the one-sentence question your AI writes is the real problem."
+  - Review the labels and the Top 3 list. If you disagree, give evidence, not feelings, because the skill holds its ground.
+  - Read the rebuilt conclusion next to your original. Then check the Top 3 questions in real life.
+  - "For a fast result, ask for the quick version: the Top 3 assumptions and the one thing to check first."
+output_sample:
+  input:
+    - The decision, idea or belief you want to test
+    - Context and what is at stake
+    - What you have already tried or decided (optional)
+    - Any deadline (optional)
+  output:
+    - name: Reframed core question
+      contains: One sentence that restates the real problem, for you to confirm before the audit goes on.
+    - name: Assumption list
+      contains: 8 to 12 hidden assumptions, sorted into surface, middle and deep layers.
+    - name: Assumption labels
+      contains: Each assumption tagged as physical fact, historical convention, subjective belief or interest-driven.
+    - name: Risk ranking
+      contains: A fragility score and an impact score for each assumption, multiplied into one risk score.
+    - name: Top 3 most dangerous assumptions
+      contains: The three riskiest assumptions, each with a clear question you can check.
+    - name: Rebuilt conclusion
+      contains: A new conclusion built only from verified premises, set beside your original thinking to show what changed.

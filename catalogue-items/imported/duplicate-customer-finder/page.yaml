@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Matching names and emails needs judgment on near misses.
 new_slug: duplicate-customer-finder
 name: Duplicate customer finder
-summary: Run it on your customers. Get likely duplicate records matched by
-  email, phone or name, ready to review.
+summary: Find duplicate customers in your Shopify store by email, phone or name. Get a CSV of likely matches to review and merge by hand.
 job: run-your-store
 headline: Duplicate customer finder
-subhead: A review list of customer records that probably belong to one person.
-  Run it on your Shopify store and see matches by email, phone or name, so order
-  history stops splitting across profiles.
+subhead: A review list of customer records that probably belong to one person. Run it on your Shopify store and see matches by email, phone or name, so order history stops splitting across profiles.
 explain: |
   A review list of customer records that probably belong to one person. Run it on your Shopify store and see matches by email, phone or name, so order history stops splitting across profiles.
 
@@ -18,6 +15,10 @@ when:
   - You want a clean customer list before an email send.
   - You need to check phone numbers as well as emails.
   - You want a safe check that cannot edit anything.
+not_for:
+  - "You want to merge records for you: this skill only reads, so merge the flagged pairs yourself in Shopify Admin under Customers."
+  - "Your customers are B2B accounts or share one inbox, where different people use one email: check the flagged groups by hand, or match on phone instead."
+  - "You have no Shopify store or no way to sign in with the Shopify CLI: export your customers to a spreadsheet and sort by email."
 you_give:
   - Store domain
   - "Match type: email, phone, name or all"
@@ -29,8 +30,29 @@ you_get:
   - Plain or JSON output
   - A list ready to merge by hand
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Sign in to Shopify with the Shopify CLI and allow it to read customers. Your AI needs to run commands and save files for this.
+  - Paste the skill into your AI chat, or add the skill folder if your tool supports files.
+  - "Tell it your store domain. Pick a match type: email, phone, name or all. Email gives the most reliable matches."
+  - Add a minimum order count if you want to skip records with no orders (optional).
+  - Open the CSV and the report. Check each group, since common names can match different people.
+  - Merge the real duplicates yourself in Shopify Admin under Customers. Then delete the CSV, because it holds personal data.
+output_sample:
+  input:
+    - Your store domain
+    - "Match type: email, phone, name or all (optional)"
+    - Minimum orders (optional)
+    - "Output style: plain or JSON (optional)"
+  prerequisites:
+    - An AI that can run commands and save files
+    - The Shopify CLI signed in to your store with permission to read customers
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store and the start time.
+    - name: Step log
+      contains: One line per step with what was asked and how many records came back.
+    - name: Duplicate customer report
+      contains: Counts of customers scanned, duplicate groups found and customers affected, plus a sample of groups.
+    - name: duplicate_customers_<date>.csv
+      contains: One row per customer in each group, with match key, match type, name, email, phone, orders, spend and created date.
+    - name: JSON summary
+      contains: If you ask for JSON, the same counts and the CSV file name in a short block.

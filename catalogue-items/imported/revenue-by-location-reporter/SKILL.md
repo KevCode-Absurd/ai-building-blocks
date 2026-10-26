@@ -17,7 +17,8 @@ Attributes order revenue to the fulfillment location that shipped the order. Pro
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders`
-- API scopes: `read_orders`
+- API scopes: `read_orders`. Shopify returns only the last 60 days of orders unless the access also has `read_all_orders`. If `days_back` is more than 60 and you do not have it, say so before you start.
+- **No Shopify access?** Ask once for an orders export for the window that includes the order total and the fulfillment location for each order, then run step 4 on it. If the export has no location column, stop and say the report cannot be made from it. Never guess a location.
 
 ## Parameters
 
@@ -39,13 +40,17 @@ Attributes order revenue to the fulfillment location that shipped the order. Pro
 
 2. **OPERATION:** `orders` — query
    **Inputs:** `query: "fulfillment_status:shipped created_at:>='<NOW - days_back days>'"`, `first: 250`, select `fulfillments { assignedLocation }`, `totalPriceSet`, pagination cursor
-   **Expected output:** Fulfilled orders with location attribution
+   **Expected output:** Shipped orders with location attribution. Also select `cancelledAt` and leave out any cancelled order.
 
-3. **OPERATION:** `fulfillmentOrders` — query (for open orders attribution)
+3. **OPERATION:** `fulfillmentOrders` — query (to fill gaps only)
    **Inputs:** Per location, `status: CLOSED`, `first: 250`
-   **Expected output:** Closed fulfillment orders for revenue attribution
+   **Expected output:** Closed fulfillment orders. Use them only to find a location for an order from step 2 that had none, matching on order ID. Never add an order that step 2 did not return, or revenue is counted twice.
 
-4. Aggregate revenue by location; orders without location data attributed to "Unknown"
+4. Aggregate revenue by location:
+   - An order shipped from one location goes to that location, at its full total.
+   - An order shipped from more than one location goes to a line named "Split across locations", at its full total. Never divide a total by guesswork. Report how many orders fall here.
+   - An order with no location data after step 3 goes to "Unknown".
+   - Revenue is the order total including tax and shipping, before refunds. Say so in the report.
 
 ## GraphQL Operations
 
@@ -72,6 +77,7 @@ query RevenueByLocation($query: String!, $after: String) {
         id
         name
         createdAt
+        cancelledAt
         totalPriceSet {
           shopMoney {
             amount
@@ -162,6 +168,9 @@ REVENUE BY LOCATION  (<days_back> days)
   ─────────────────────────────────────────────────
   Warehouse A             <n>      $<n>       <pct>%
   Warehouse B             <n>      $<n>       <pct>%
+  Split across locations  <n>      $<n>       <pct>%
+  Unknown                 <n>      $<n>       <pct>%
+  (Revenue is the order total, including tax and shipping, before refunds)
   Output: revenue_by_location_<date>.csv
 ══════════════════════════════════════════════
 ```
@@ -187,10 +196,12 @@ CSV file `revenue_by_location_<YYYY-MM-DD>.csv` with columns:
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| Order with no fulfillment location | Unfulfilled or POS order | Attribute to "Unassigned" |
+| Order with no fulfillment location | Unfulfilled or POS order | Attribute to "Unknown" |
 | Single-location store | All revenue from one location | Report still valid, shows full total |
 
 ## Best Practices
 - For multi-3PL operations, this report helps identify if one 3PL is handling a disproportionate share and may need capacity relief.
+- Use this for stores with two or more locations. With one location, every order lands on that line and the report adds nothing.
 - Revenue attribution here is based on fulfillment assignment, not customer shipping address — it reflects operational throughput per location, not geographic demand.
-- Pair with the inventory valuation report to calculate inventory turns per location (revenue / inventory value).
+- Revenue is not profit. Place each location's costs (rent, staff, shipping, stock) beside its revenue to judge it. This skill does not know those costs.
+- Pair with an inventory value report to work out inventory turns per location (revenue divided by inventory value).

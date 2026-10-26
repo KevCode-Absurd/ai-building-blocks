@@ -1,6 +1,6 @@
 new_slug: short-video-hook-writer
 name: "Short video hook writer"
-summary: "Give it a product and post idea. Get ten hooks checked for length, reading level and first shot."
+summary: "Write short video hooks for Reels or TikTok. Give it your product and post idea. You get ten hooks, checked, and the two to film first."
 job: grow-social
 thinking: medium
 thinking_why: "It weighs ten styles against a set of checks, so a mid-size model is enough. A small one tends to skip the first-shot check."
@@ -17,6 +17,10 @@ when:
   - You have a product and a post idea but the opening line is blank.
   - Your videos get few views and you suspect the first three seconds.
   - You are about to film a batch and want to pick which openings to shoot.
+not_for:
+  - "You want long videos or horizontal video: write the script yourself or ask a video editor, because this only plans the first line and first shot of a short vertical clip."
+  - "You want the first line of a static ad: use the Ad first line writer and scorer."
+  - "Your product can't be filmed, such as a service with nothing to show: plan a simple picture first, or work with a person who shoots video."
 
 you_give:
   - Your product and the post idea
@@ -35,6 +39,26 @@ how_to_use:
   - Say what you can really film, such as the product in your hand, your kitchen or your warehouse. The picture comes first.
   - Add one proof number only if you can show where it came from.
   - Film the two hooks it picks. Compare them by 3-second hold in your analytics.
+output_sample:
+  input:
+    - Your product and the post idea
+    - Who the viewer is, in one sentence (optional)
+    - What you can really film as the first shot (optional)
+    - One proof number you can back up (optional)
+    - Reels or TikTok (optional)
+  output:
+    - name: Header
+      contains: Your product, post idea, the viewer in one sentence and the real first shot you can film.
+    - name: Ten hooks
+      contains: One line per hook in ten different styles, with on-screen text, word count, reading level and framing.
+    - name: Top three
+      contains: "For the best three: style, on-screen text, the first picture to film and a half-second test."
+    - name: Film first
+      contains: The two hooks to film first, with the reason for each.
+    - name: Checks missed
+      contains: Any check that failed or could not run, or the word none.
+    - name: Missing
+      contains: Anything you did not give it, such as the viewer, first shot or proof number.
 
 how_it_works:
   - title: Picks the first shot

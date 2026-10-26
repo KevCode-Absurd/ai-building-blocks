@@ -1,6 +1,6 @@
 new_slug: defensive-stock-quality-screener
 name: "Defensive stock quality screener"
-summary: "Paste a company's ten-year figures. Get it passed or failed on size, strength, profit record, dividends and growth."
+summary: "Check a stock screener list the plain way: paste ten years of figures and see which companies pass or fail five quality tests, with the figure behind each."
 job: money-and-investing
 thinking: medium
 thinking_why: "The tests are fixed and the sums are small. The care is in reading each figure from the pasted data without filling gaps."
@@ -17,6 +17,10 @@ when:
   - You have a list of large companies and want to cut it before you study any of them.
   - You want to hold a few sound businesses for many years with little fuss.
   - A friend or a tip named a company and you want to test it against plain rules first.
+not_for:
+  - "You want to test a bank or insurer: the skill only flags these as other tests apply, so read their own reports or ask an adviser."
+  - "The company has under ten years of figures, such as a young growth firm: use a growth review by hand or ask a financial adviser."
+  - "You want to know if a share price is fair or whether to buy: this only tests quality, so ask a licensed adviser."
 
 you_give:
   - Ten years of figures for each company, pasted from its reports or a data site
@@ -35,6 +39,27 @@ how_to_use:
   - Paste the figures, one company at a time or as a table.
   - Say which are utilities, banks or insurers, since those use different tests.
   - Take the survivors to "Earnings padding detector".
+output_sample:
+  input:
+    - "Ten years of figures for each company: sales or total assets, current assets and liabilities, long-term debt"
+    - Profit per share and dividends per share for each year
+    - Whether each company is an industrial, utility, bank or insurer (optional)
+    - Your own size floor in today's money (optional)
+  output:
+    - name: Size
+      contains: Pass, fail or unknown for size, with the figure and the floor, which is marked as your choice.
+    - name: Strength
+      contains: Current ratio and debt against working capital, or debt against equity for utilities, with each sum shown.
+    - name: Profit record
+      contains: Pass, fail or unknown for a profit in each of ten years, with any loss years listed.
+    - name: Dividends
+      contains: Pass, fail or unknown for an unbroken twenty-year dividend record, and the year the run began.
+    - name: Growth
+      contains: The first and last three-year profit averages, the rise in percent, and the result.
+    - name: Result and list
+      contains: One result per company, then lists of companies that passed all five, failed or are unknown.
+    - name: Missing and checks missed
+      contains: Figures still needed and where to find them, plus any check the skill did not meet.
 
 how_it_works:
   - title: Sets a size floor

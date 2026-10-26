@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It matches the request to known jq patterns.
 new_slug: json-query-helper
 name: JSON query helper
-summary: Describe the JSON data and what you need. Get a working jq command that
-  filters, reshapes or sums it.
+summary: Get a working jq command for your JSON. Describe your data and goal, and it filters, reshapes or totals the data and explains each part.
 job: work-with-files
 headline: JSON query helper
-subhead: The exact jq command for the JSON in front of you. Describe the data
-  and what you want from it, or paste a sample. The skill writes a working
-  command that picks fields, filters records, renames keys, flattens arrays,
-  groups items and totals numbers.
+subhead: The exact jq command for the JSON in front of you. Describe the data and what you want from it, or paste a sample. The skill writes a working command that picks fields, filters records, renames keys, flattens arrays, groups items and totals numbers.
 explain: |
   The exact jq command for the JSON in front of you. Describe the data and what you want from it, or paste a sample. The skill writes a working command that picks fields, filters records, renames keys, flattens arrays, groups items and totals numbers.
 
@@ -19,6 +15,10 @@ when:
   - You need to sum values or group records from a JSON file.
   - You inherited a jq one-liner and cannot read it.
   - You want to reshape JSON inside a bash script.
+not_for:
+  - "Your data is YAML or CSV, not JSON: use yq for YAML, or a spreadsheet for CSV."
+  - "You need complex business rules or many steps: ask your AI for a short Python script instead."
+  - "You cannot install anything on your computer: ask your AI to reshape a small JSON sample by hand in the chat."
 you_give:
   - A sample of the JSON
   - What you want to pull out or change
@@ -29,8 +29,27 @@ you_get:
   - The expected output on your sample
   - A version ready to paste into a script
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands.
+  - Install jq on your computer. Then type jq --version in your terminal to check it works.
+  - Copy a small sample of your JSON. Remove private values such as emails or keys first.
+  - Paste the sample into your AI chat. Say what you want to pull out, change or add up.
+  - Copy the jq command it gives you. Run it on your sample file and compare the result with the expected output.
+  - If the result looks right, run it on the full file or paste it into your script.
+  - If your AI can run commands, ask it to test the command for you. If not, you run it yourself.
+output_sample:
+  input:
+    - A small sample of your JSON, or a plain description of its shape
+    - What you want to pull out, change or add up
+    - The tool or command that made the JSON (optional)
+    - A long jq expression you want explained (optional)
+  prerequisites:
+    - jq installed on your computer, to run the command
+    - An AI that can run commands (optional, lets it test the command for you)
+  output:
+    - name: jq command
+      contains: A working filter that picks fields, filters records, renames keys, flattens arrays, groups items or adds up numbers.
+    - name: Explanation
+      contains: A plain note on what each part of the command does, useful for a one-liner you inherited.
+    - name: Example input and output
+      contains: A small input and the result you should see, so you can check the command before you rely on it.
+    - name: Shell script version
+      contains: The same command ready to paste into a bash script, with shell variables passed in safely.

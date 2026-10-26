@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: The math is set but inputs need careful pairing.
 new_slug: seawater-carbonate-calculator
 name: Seawater carbonate calculator
-summary: Give it two seawater measures like alkalinity and pH. Get the full
-  carbonate chemistry worked out.
+summary: "Seawater carbonate calculator: give it two measures like alkalinity and pH. Get pH, pCO2, saturation states and the Revelle factor, with assumptions."
 job: track-numbers
 headline: Seawater carbonate calculator
-subhead: Give it two seawater measures like alkalinity and pH. Get the full
-  carbonate chemistry worked out. Bring two measured carbonate variables with
-  units. Use the result to plan your next step.
+subhead: Give it two seawater measures like alkalinity and pH. Get the full carbonate chemistry worked out. Bring two measured carbonate variables with units. Use the result to plan your next step.
 explain: |
   A full carbonate chemistry table for each seawater sample, worked out from two measures such as alkalinity and pH. You get pH, pCO2, carbonate ion, aragonite and calcite saturation, and the Revelle factor, with a note of the assumptions used.
 
   First it checks your inputs: the units, the salinity scale, the temperature you measured at, the pressure and the pH scale. Missing values are never turned into zero. It can move a sample from lab conditions to ocean conditions. It can also show how your measurement error changes the answer. It uses PyCO2SYS in Python and covers seawater only.
 when:
-  - You have bottle samples with alkalinity and DIC and need the full carbonate
-    system.
+  - You have bottle samples with alkalinity and DIC and need the full carbonate system.
   - You are running an ocean acidification experiment and need saturation states.
   - Your pH was measured in the lab and you need it at sea temperature.
   - You want to know how much your measurement error changes the answer.
+not_for:
+  - "You work with freshwater, brines or porewaters with unknown alkalinity: use a separately checked chemistry model, or ask a marine chemist."
+  - "You want air-sea gas flux or carbon removal numbers: use a flux model built for that, because this only solves seawater equilibrium."
+  - "You have only one carbonate measure: measure a second one first, since the calculation needs two independent measures."
 you_give:
   - Two measured carbonate variables with units
   - Salinity, temperature and pressure
@@ -32,8 +32,30 @@ you_get:
   - Uncertainty propagation
   - A record of the assumptions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Check that your AI can run Python code, or that you have a terminal. You need Python 3.13, PyCO2SYS 1.8.3.4 and NumPy.
+  - Prepare a CSV with two measured values per sample, with units, salinity, temperature, pressure, phosphate and silicate.
+  - Paste the skill into your AI chat, or add it to your AI tool, and share your CSV. Say which two measures you have and which pH scale applies.
+  - Ask it to solve the samples. It writes carbonate.csv and provenance.json.
+  - Check the flags and residuals in carbonate.csv and provenance.json.
+  - Report the pH scale, constants and uncertainty scope with your table.
+output_sample:
+  input:
+    - A table of samples with two measured carbonate values, such as alkalinity and DIC, with units
+    - Salinity, temperature and pressure for each sample
+    - The pH scale used, if pH is one of your two values
+    - Phosphate and silicate levels, or a stated reason to use zero
+    - Measurement uncertainties (optional)
+  prerequisites:
+    - An AI that can run Python code, or a terminal
+    - Python 3.13 with PyCO2SYS 1.8.3.4 and NumPy installed
+  output:
+    - name: carbonate.csv
+      contains: One row per sample with pH, pCO2, carbonate ion, aragonite and calcite saturation, and Revelle factor, plus flags.
+    - name: provenance.json
+      contains: The settings, constants, units, software versions and assumptions used for the run.
+    - name: Output-condition results
+      contains: Columns ending _out that show results at the ocean temperature and pressure you supplied.
+    - name: Uncertainty columns
+      contains: Propagated uncertainty for pH, pCO2 and aragonite saturation, when you give input uncertainties.
+    - name: Flags and consistency review
+      contains: Notes on calibration range, gas pressure handling and carbon balance to check before you report.

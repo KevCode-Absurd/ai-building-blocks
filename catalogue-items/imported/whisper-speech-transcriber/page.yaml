@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a short, fixed recipe.
 new_slug: whisper-speech-transcriber
 name: Whisper speech transcriber
-summary: Give it an audio file. Get a written transcript in 99 languages, or an
-  English translation.
+summary: Turn an audio file into a written transcript with Whisper, in 99 languages or translated to English. Runs on your own computer with Python.
 job: work-with-audio
 headline: Whisper speech transcriber
-subhead: Give it an audio file. Get a written transcript in 99 languages, or an
-  English translation. Bring an audio or video file. Use the result to plan your
-  next step.
+subhead: Give your AI an audio or video file. It runs Whisper on your computer and writes out what was said. You can keep the original language or get English.
 explain: |
   A written transcript of your audio, in the original language or translated into English. Podcasts, interviews and meeting recordings become searchable text.
 
@@ -17,21 +14,47 @@ when:
   - You have a recorded interview and need the words on a page.
   - Your podcast needs show notes or subtitles.
   - A recording is in another language and you want it in English.
-  - Meeting audio is noisy and other tools mishear it.
+  - You have many audio files to turn into text in one go.
+not_for:
+  - "You need speaker labels, like who said what: use AssemblyAI, a paid transcription service."
+  - "You need live captions or streaming speech: use Deepgram, which is built for real-time audio."
+  - "You cannot run Python or install software: use a cloud tool such as Google Speech-to-Text, or ask a person to type it up."
 you_give:
   - An audio or video file
-  - Language, if you know it (optional)
-  - Whether you want a translation
-  - Computer with Python
+  - The spoken language, if you know it (optional)
+  - A note on the topic, for names and tricky terms (optional)
+  - Whether you want an English translation (optional)
 you_get:
-  - Full text transcript
-  - Timestamps
-  - English translation (optional)
-  - Choice of model size
-  - Saved transcript file
+  - A full text transcript of your file
+  - Timestamps for each line, or each word if you ask
+  - An English translation of non-English audio (optional)
+  - A subtitle file in srt or vtt format
+  - A saved transcript file you can reuse
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Use an AI that can run Python code, or follow the steps on your own computer. You need Python and ffmpeg installed.
+  - Paste this skill into your chat and attach your audio or video file.
+  - Tell your AI the language if you know it, and say if you want English. Pick the turbo model for a good mix of speed and quality.
+  - Ask it to save the transcript as a text or subtitle file.
+  - Read the transcript while you listen to key parts. Whisper can invent or repeat text, and noise or strong accents can lower accuracy.
+  - Split audio longer than 30 minutes into parts, since accuracy drops on long files. Then paste the checked transcript into your AI to write a summary or show notes.
+output_sample:
+  input:
+    - Your audio or video file, such as an mp3 or mp4
+    - The language spoken, if you know it (optional)
+    - Whether you want the words in English instead (optional)
+    - A short note on the topic, to help with names and terms (optional)
+  prerequisites:
+    - An AI that can run Python code, or a computer where you can run it yourself
+    - Python 3.8 to 3.11 and ffmpeg installed
+    - A computer with a graphics card (GPU) if you want faster results (optional)
+  output:
+    - name: Transcript text
+      contains: The full spoken words from your file as plain text, in the original language or in English.
+    - name: Timestamped segments
+      contains: Each line of speech with its start and end time, so you can find a moment fast.
+    - name: Word timestamps
+      contains: The time of each single word, if you ask for it.
+    - name: Subtitle file (srt or vtt)
+      contains: Your transcript as a subtitle file you can add to a video.
+    - name: Saved transcript file
+      contains: The result saved as txt or json, ready to paste into another tool.

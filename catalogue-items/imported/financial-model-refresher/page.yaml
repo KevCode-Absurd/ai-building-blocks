@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It changes linked numbers and checks the effects.
 new_slug: financial-model-refresher
 name: Financial model refresher
-summary: Give it a model and new results or guidance. Get estimates updated and
-  the biggest changes flagged.
+summary: Update your financial model after earnings or new guidance. See what moved in your estimates, what it does to value, and the biggest changes.
 job: money-and-investing
 headline: Financial model refresher
-subhead: An existing model brought up to date after earnings, new guidance or a
-  market move, with the biggest changes to estimates pointed out. You see what
-  moved and why.
+subhead: An existing model brought up to date after earnings, new guidance or a market move, with the biggest changes to estimates pointed out. You see what moved and why.
 explain: |
   An existing model brought up to date after earnings, new guidance or a market move, with the biggest changes to estimates pointed out. You see what moved and why.
 
@@ -18,6 +15,10 @@ when:
   - Management raised or cut guidance.
   - Interest rates or currency moved and your forecast is stale.
   - You need a short note on what changed in your numbers.
+not_for:
+  - "You have no earlier model for the company: build one first, then come back to update it."
+  - "You want to rebuild the model from scratch: start a new model instead of using this one."
+  - "You plan to share the rating or price target with clients: get a compliance check first, as this is for your own analysis."
 you_give:
   - The current model file
   - New results, guidance or the event
@@ -29,7 +30,31 @@ you_get:
   - Largest changes flagged
   - A short change summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - "Say what triggered the update: results, guidance, a macro move or an event."
+  - Paste your current model, or upload the file if your AI can read files.
+  - Add the new results or guidance. Add your own view if you have one (optional).
+  - Check the actuals table first. Then read the flagged changes and the summary.
+  - Treat the rating and price target as your own working view until a compliance check is done.
+output_sample:
+  input:
+    - Your current financial model file
+    - The new results, guidance or event
+    - Your own view on what changed (optional)
+  prerequisites:
+    - An AI that can read your model file, or numbers pasted into the chat
+  output:
+    - name: Update trigger
+      contains: "What caused the update: results, guidance, a macro move or an event."
+    - name: Actuals table
+      contains: Each line with your prior estimate, the actual, the gap and a short note.
+    - name: Segment and balance sheet updates
+      contains: New segment results, cash and debt, share count, capex and working capital changes.
+    - name: Forward estimates table
+      contains: Old and new estimates for this year and next year, with the change and the reason.
+    - name: Valuation impact
+      contains: Prior and updated value from each method, and the price target.
+    - name: Estimate change summary
+      contains: One paragraph on what changed, why, and whether it matters or is noise.
+    - name: Rating and price target
+      contains: Whether to keep or change the rating, the new target and the upside or downside.

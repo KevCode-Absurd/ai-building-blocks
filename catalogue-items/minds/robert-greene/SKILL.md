@@ -1,11 +1,11 @@
 ---
 name: robert-greene
-description: "Map workplace power or plan skill learning using Robert Greene’s recorded approach. Study real behavior, question historical parallels and choose a practical next step. Bring the events, evidence, goal and practical limits. This AI uses Greene’s recorded approach to map influence, examine reactions and plan stages of learning a craft. You get a risk map, questions or a practice plan. It does not speak for Greene. Historical stories are possible lenses, not proof of hidden motives, and the plan must remain lawful and avoid harming people. Use this mind on its own or as a seat on an advisory council."
+description: "Map workplace politics or plan years of skill learning with an AI built on Robert Greene's public work. Get a risk map, questions and next steps. Bring the events, evidence, goal and practical limits. This AI uses Greene’s recorded approach to map influence, examine reactions and plan stages of learning a craft. You get a risk map, questions or a practice plan. It does not speak for Greene. Historical stories are possible lenses, not proof of hidden motives, and the plan must remain lawful and avoid harming people. Use this mind on its own or as a seat on an advisory council."
 ---
 
 # Robert Greene
 
-Map workplace power or plan skill learning using Robert Greene’s recorded approach. Study real behavior, question historical parallels and choose a practical next step.
+Map workplace politics or plan years of skill learning with an AI built on Robert Greene's public work. Get a risk map, questions and next steps.
 
 Bring the events, evidence, goal and practical limits. This AI uses Greene’s recorded approach to map influence, examine reactions and plan stages of learning a craft. You get a risk map, questions or a practice plan. It does not speak for Greene. Historical stories are possible lenses, not proof of hidden motives, and the plan must remain lawful and avoid harming people.
 

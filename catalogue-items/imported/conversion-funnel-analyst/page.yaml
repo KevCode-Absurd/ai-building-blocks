@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The counting is set, but picking the fix needs judgment.
 new_slug: conversion-funnel-analyst
 name: Conversion funnel analyst
-summary: Give it an event log and your steps. Get conversion per step,
-  drop-offs, time to convert and what to fix.
+summary: Find where people leave your sign-up or checkout funnel. Give it an event log and your steps to get conversion per step and ranked fixes.
 job: track-numbers
 headline: Conversion funnel analyst
-subhead: A funnel table showing how many people reach each step, where they
-  leave, how long they take, and which fixes are worth the most. It points you
-  at the step costing you the most customers.
+subhead: A funnel table showing how many people reach each step, where they leave, how long they take, and which fixes are worth the most. It points you at the step costing you the most customers.
 explain: |
   A funnel table showing how many people reach each step, where they leave, how long they take, and which fixes are worth the most. It points you at the step costing you the most customers.
 
@@ -18,6 +15,10 @@ when:
   - You want to compare mobile and desktop conversion.
   - You are planning a test and need a baseline rate.
   - You need a monthly funnel report that looks the same every time.
+not_for:
+  - "You only need one conversion rate for a single step: work it out by hand in a spreadsheet, dividing people who finished by people who started."
+  - "You have very few users in the log: wait for more data, since small counts make step rates jump around and mislead."
+  - "You want to know if a change worked: use a simple A/B test readout, then come back here to find the step to test."
 you_give:
   - Event log with user, event and time
   - Ordered funnel steps
@@ -31,8 +32,35 @@ you_get:
   - Segment comparison
   - Ranked fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini with a mode that can run code and accept file uploads.
+  - Paste the skill text into the chat, then upload your event log file.
+  - Tell your AI your funnel steps in order and the time window to finish. Add segment columns and the value of a conversion if you have them.
+  - Ask it to run the funnel analysis and write the report.
+  - Check that the step counts match what you expect from your own data before you trust the ranking.
+  - Turn the top fix into an A/B test, then run the funnel again after the change.
+output_sample:
+  input:
+    - Your event log with a user, an event name and a time for each row
+    - Your funnel steps in order, as event names
+    - How long a person has to finish, such as 24 hours or 7 days
+    - Columns to split by, such as channel or device (optional)
+    - What one conversion is worth in money (optional)
+  prerequisites:
+    - An AI that can run Python code and read your event file
+  output:
+    - name: scripts/funnel_analyzer.py
+      contains: A script that builds each person's path from the event log and counts conversion, drop-offs and time between steps.
+    - name: references/funnel_design_guide.md
+      contains: Advice on setting steps and time windows, and on mistakes that make funnel numbers wrong.
+    - name: assets/funnel_report_template.md
+      contains: The report layout your results are written into.
+    - name: Funnel overview table
+      contains: People reaching each step, step to step conversion, overall conversion and how many left at each step.
+    - name: Drop-off analysis
+      contains: The steps where the most people leave, in plain words.
+    - name: Segment comparison
+      contains: The same funnel split by channel, device or group, showing where the weakest group falls behind the best.
+    - name: Time-to-convert
+      contains: The middle wait and the slow-end wait between each pair of steps.
+    - name: Ranked recommendations
+      contains: Fixes ordered by people lost times what a conversion is worth.

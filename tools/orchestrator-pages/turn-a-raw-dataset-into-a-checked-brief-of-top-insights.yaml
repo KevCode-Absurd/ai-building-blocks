@@ -1,6 +1,6 @@
 new_slug: turn-a-raw-dataset-into-a-checked-brief-of-top-insights
 name: Turn a dataset into a checked brief of top insights
-summary: Give it a data file and a question. Get a checked analysis and a ranked insight brief.
+summary: Turn a raw data file into a checked analysis and a short ranked brief of insights. Give it your file and one question, then fix what it flags.
 job: track-numbers
 thinking: high
 thinking_why: The analysis and the check both do real maths on your data. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have an export or a spreadsheet and a question, and nobody has looked at the file yet.
   - You are about to share an analysis and want it checked first.
   - You have a pile of findings and need to say which ones to act on.
+not_for:
+  - "Your file has only a few dozen rows: read it by eye or sort it in your spreadsheet instead."
+  - "You need one number, such as a total or an average: use a single spreadsheet formula or a calculator."
+  - "You only want an existing analysis reviewed: use the Analysis checker on its own."
 you_give:
   - A data file such as a CSV or spreadsheet
   - The one question you want the data to answer
@@ -29,6 +33,24 @@ how_to_use:
   - Attach your data file. Step 1 reports on it and stops.
   - Pause. Fix or drop the columns the profile flagged, then write your one question in plain words.
   - Tell it who will read the brief. The last step ranks insights for that reader.
+output_sample:
+  input:
+    - Your data file, such as a CSV or spreadsheet
+    - The one question you want the data to answer
+    - Your goals and who will read the brief (optional)
+  prerequisites:
+    - An AI that can read your file. In Claude, ChatGPT or Gemini, attach the file to the chat.
+  output:
+    - name: Dataset profile
+      contains: What is in the file, with blanks, repeats, odd values and the columns worth using.
+    - name: Analysis
+      contains: Answers your question with summary numbers, trends, group differences, outliers and the limits of the data.
+    - name: Analysis check
+      contains: A review of the method and sums, the problems found, fixes to make and a trust rating.
+    - name: Insight brief
+      contains: The top insights ranked, each with why it matters, likely cause, impact, next action and confidence.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Profile the file
     text: Finds the shape and the one-row-per-what of the table, sorts the columns by kind, counts blanks and repeats, and names the columns worth analyzing.

@@ -1,52 +1,105 @@
 new_slug: build-a-practical-manager-training-session
 name: Build a practical manager training session
 headline: Build a practical manager training session
-summary: Share the source files. Get a session plan, practice activity and evidence of learning to collect.
+summary: Plan a manager training session built around practice. Get a timed session plan, a practice activity and the behaviours to look for afterwards.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A session plan, practice activity and evidence of learning to collect. Share a real management skill gap, audience experience, available session time and relevant policy. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Describe a real gap in how your managers work, who they are and how long you have. Your AI sets the outcome, plans a short explanation and realistic practice, and lists the behaviours and work evidence that show it worked.
 explain: |-
-  A session plan, practice activity and evidence of learning to collect.
+  Many manager training sessions are talks that people attend and forget. This workflow plans a manager training session around practice on a real task, and checks what people do afterwards instead of counting who turned up.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Practice reflects a real task and the check measures the target skill rather than attendance. Missing tools or evidence stay visible in the final summary.
+  First it turns your gap into an outcome you can see, such as a manager doing a thing in a given situation, and picks the work situations the session should cover. Then it builds the session: a short explanation, practice on a realistic case and a discussion. Last, it writes the behaviours and the work evidence you will look for in the weeks after.
+
+  It keeps your own policy and rules in. If something needs legal or HR sign-off, it marks it and leaves the decision to the person who owns it.
 when:
-  - You need a session plan, practice activity and evidence of learning to collect.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - New managers keep struggling with one thing, such as delegating or giving feedback
+  - You have an hour or half a day and want people practising, not listening
+  - You must show that training changed what managers do, not only that they attended
+  - A company policy changed and managers need to practise applying it
+not_for:
+  - You want to check whether a course already run has worked. Use Check training transfer after a course.
+  - You are preparing one manager for one hard conversation. Use Plan a difficult feedback conversation.
+  - You need a full leadership programme over many months. Use the Leadership program designer.
+  - The training is about a process or a policy that needs legal sign-off. Ask the policy owner first, then use Write a procedure, test it and build a training deck.
 you_give:
-  - A real management skill gap, audience experience, available session time and relevant policy.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The gap you see, with one or two real examples of it at work
+  - Who the managers are and how experienced they are
+  - How much time you have for the session
+  - Any policy or standard managers must follow (optional)
+  - What managers do now and what you want them to do (optional)
+  - Your company values or role descriptions (optional)
 you_get:
-  - A session plan, practice activity and evidence of learning to collect.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A session outcome stated as something a manager does, and the work situations it covers
+  - A timed session plan with a short explanation, practice on a realistic case and a discussion
+  - A practice activity with a scenario drawn from your own situations
+  - A list of behaviours to look for and work evidence to collect afterwards
+  - Follow-up steps for the weeks after the session
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the gap with its real examples, who the managers are, the time you have and any policy that applies.
+  - Read the outcome and the situations first. Change them if they do not match what you see at work.
+  - Run the session, then use the behaviour list to look for the change in the weeks that follow.
 how_it_works:
   - title: Leadership program designer
-    text: Set an observable outcome and choose the management situations the session should address.
+    text: Turns your gap into an outcome you can see and picks the work situations the session should cover. It hands the outcome and situations on.
   - title: Training program builder
-    text: Build the session around short explanation, realistic practice and discussion.
+    text: Builds the session around a short explanation, practice on a realistic case and discussion, with timings and follow-up. It hands the session plan on.
   - title: Role skills framework builder
-    text: Define observable behavior and work evidence for checking the trained management skill.
+    text: Writes the behaviours and the work evidence that show the skill, at the level you are training. It hands back the checklist for use after the session.
 output_shape: |-
-  Scope and source coverage
-  A session plan, practice activity and evidence of learning to collect.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SESSION OUTCOME
+    <Manager> will <do what> in <which situation>
+    Situations covered
+
+  SESSION PLAN
+    Minutes | Part (explain, practise, discuss) | What happens | Material needed
+    Practice activity: <scenario> | roles | what to try
+
+  BEHAVIOUR CHECKLIST
+    Behaviour you can see | Level | Work evidence to collect | Where to find it
+
+  FOLLOW-UP
+    Week | Step | Who
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - The management gap, with one or two real examples
+    - Who the managers are and how experienced they are
+    - The time you have for the session
+    - Any policy managers must follow (optional)
+  prerequisites:
+    - A named owner for any policy the session covers, who can confirm it is right
+  output:
+    - name: Session outcome
+      contains: What a manager will do, in which work situations, stated so you can see it.
+    - name: Session plan
+      contains: "Timed parts: a short explanation, practice on a realistic case and a discussion."
+    - name: Practice activity
+      contains: A scenario from your own situations, with roles and what to try.
+    - name: Behaviour checklist
+      contains: Behaviours you can see and the work evidence to collect, at the level you are training.
+    - name: Follow-up steps
+      contains: What to do and who does it in the weeks after the session.
+    - name: Hand-back summary
+      contains: Files saved, facts that were missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read the pasted text or files and keep each step's result as a file. None of them can run a lesson, a class or a check for you.
+  inputs:
+    - Real, anonymised examples of the gap at work.
+    - A person from HR or the policy owner to review any policy content.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Train one skill per session. Two skills in one session split practice time and neither sticks.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Give real examples of the gap from work. A general description gives a general session.
   - what: Acceptance
-    how: Practice reflects a real task and the check measures the target skill rather than attendance.
+    how: Say how many minutes of practice you want, such as at least half the session. The plan will keep to it.
 judge:
   - Practice reflects a real task and the check measures the target skill rather than attendance.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +112,16 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - After the session, add what people got stuck on and ask for the practice case to be changed.
+  - Ask for a second practice case at a harder level for managers who finish early.
+  - Run the behaviour checklist after a month and bring back what you found.
+next:
+  - check-training-transfer-after-a-course
+  - plan-a-difficult-feedback-conversation
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Observable behaviour
+    meaning: Something a person does that you can see or read about in their work, not a trait or an attitude.
+  - term: Work evidence
+    meaning: A real piece of work, such as an email or a meeting note, that shows the behaviour.
+  - term: Practice case
+    meaning: A realistic situation that managers work through, so they try the skill and do not only hear about it.

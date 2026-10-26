@@ -1,33 +1,26 @@
 slug: terminal-economics-review-assistant
 name: Terminal economics review assistant
-summary: Review whether updated growth and terminal assumptions still fund the required reinvestment.
+summary: Check that long-term growth is paid for by reinvestment when a forecast changes. Get the corrected terminal value and the gap against your limit.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
-    required: true
+    required: false
+outputs: []
+needs_mode: manual
 uses:
   - link-operating-growth-to-terminal-reinvestment
   - economic-profit-fade-schedule
 steps:
   - uses: link-operating-growth-to-terminal-reinvestment
-    note: Run the governing workflow when When the user supplies a revised operating forecast, competitive-advantage assessment or terminal-value assumption, compare its source and drivers with the accepted model.
+    note: Run this when a revised operating forecast, a new view of the company's edge or a new terminal-value assumption arrives. Compare its source and drivers with the accepted model, fund the growth with reinvestment and back out the return the terminal value assumes. Hands step 2 the linked workbook with the funded terminal value, WACC and first stable-year NOPAT.
   - uses: economic-profit-fade-schedule
-    note: If evidence shortens the excess-return period, build a separate finite economic-profit fade case. When actual capital changes, expand the schedule instead of applying the constant-capital illustration mechanically.
+    note: Run this only when a dated source shortens the period of excess returns. Build a separate finite case, and expand the schedule when capital changes instead of using the constant-capital example. Uses step 1's workbook for NOPAT, WACC and capital, plus your dated source on how long the excess returns last.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It gives no price target and no buy or sell view, and a person who knows the company must check the sources and assumptions.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

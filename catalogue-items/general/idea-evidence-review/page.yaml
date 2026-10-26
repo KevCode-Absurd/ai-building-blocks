@@ -1,6 +1,6 @@
 new_slug: idea-evidence-review
 name: "Idea evidence review"
-summary: "Paste your beliefs and notes from customer talks. Get a keep going, change or stop call and your next three talks."
+summary: "Check your customer talk notes against what you believed. Get a keep going, change or stop call on your idea, plus your next three talks."
 job: test-an-idea
 thinking: high
 thinking_why: "It weighs mixed evidence against your beliefs and has to make a call."
@@ -17,6 +17,10 @@ when:
   - You've done five or so customer talks and don't know what they add up to.
   - Everyone seemed positive but nobody has paid, booked or introduced you.
   - You need to tell a partner or investor what you've really learned.
+not_for:
+  - "You want the review to confirm an idea you already chose: talk to a trusted peer who will push back, because this review counts only facts and commitments."
+  - "You need market size or a revenue forecast: use a market research report or ask an analyst, since this skill does not predict numbers."
+  - "Your notes are raw and unsorted: sort them first with the Customer conversation notes sorter, then run this review."
 
 you_give:
   - What you believed before the talks, and your big questions
@@ -35,6 +39,30 @@ how_to_use:
   - Paste your sorted notes and say what anyone committed to.
   - Read the call and the traps, then decide. The call is a recommendation, not a ruling.
   - Book the next three conversations it suggests before you close the chat.
+output_sample:
+  input:
+    - What you believed before your customer talks, and your big questions
+    - Your notes from the talks, ideally already sorted
+    - What people committed to, such as time, introductions or money (optional)
+  output:
+    - name: What happened
+      contains: How many talks you had, the types of people, and the facts, commitments and next steps you got.
+    - name: Beliefs checked
+      contains: Each belief marked supported, weakened, wrong or untested, with the facts and commitments behind the mark.
+    - name: Traps
+      contains: Which traps apply, such as wrong people, too broad a group, product risk or going through the motions.
+    - name: Surprises
+      contains: Answers you did not expect and whether they changed your plan.
+    - name: The call
+      contains: Keep going, change or stop, with the reason, what would change it and a stop rule.
+    - name: Next three questions
+      contains: The three big questions to ask about your riskiest open beliefs.
+    - name: Next three conversations
+      contains: Who to talk to, where to find them, and what to ask for at the end.
+    - name: Missing
+      contains: Evidence that would settle the call, with gaps marked instead of guessed.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: Checks the ask

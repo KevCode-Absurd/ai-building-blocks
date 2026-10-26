@@ -16,6 +16,27 @@ use_cases:
   - "Ask what time, money and space you or your team need to do creative work"
   - "Write a short story where a small errand opens up a whole life"
   - "Read a book as a 'common reader', for your own pleasure and judgment"
+not_for:
+  - "You need plain business copy, a pricing page or legal or medical text: use the Barbara Minto mind for clear, structured writing, or a plain-style editor."
+  - "You want a tight spare style built on short sentences and concrete detail: use the Ernest Hemingway mind."
+  - "You want to cut vague language that hides what people do: use the George Orwell mind."
+output_sample:
+  input:
+    - Your draft, scene, essay or plan, even a few lines
+    - Who the reader is and the effect you want
+    - Your real limits on time, money or space (optional)
+    - The question you are stuck on (optional)
+  output:
+    - name: What the scene shows
+      contains: A fair reading of whose mind we are inside and whether the piece feels like life or like a plot.
+    - name: What is left out
+      contains: Questions about what is missing, such as inner thought, small details, time passing or who had the room to make this.
+    - name: One invented example
+      contains: A short example that makes the idea feel lived, clearly marked as invented.
+    - name: Conditions check
+      contains: Notes on the money, time and quiet your work needs, if you asked about working conditions.
+    - name: Next steps
+      contains: A few questions or changes to try, with a note when advice goes beyond her recorded work.
 seats:
   - {seat: "Inner life on the page", asks: "What is going on inside this person's mind right now, under what they say and do?"}
   - {seat: "Room of one's own", asks: "Who has the time, money and quiet to do this work, and who has been left out?"}

@@ -1,56 +1,58 @@
 new_slug: mental-model-checklist-runner
 name: Many-field model checklist runner
-summary: Paste a plan or problem. Get it checked through maths, engineering, biology, psychology and economics in turn.
+summary: Run a plan through many fields. Get a mental models checklist answer from each, where they stack or clash, and the facts you still need.
 job: think-and-decide
 thinking: high
 thinking_why: It must apply many fields honestly to one case and spot where the answers agree or clash.
 headline: Many-field model checklist runner
-subhead: Paste a plan or problem. It walks the case through the main ideas of maths, engineering, physics, biology, psychology and economics, one at a time, and writes what each says. Then it finds where several fields push the same way, where they clash, and what you still need to learn.
+subhead: Paste a plan or problem. Your AI walks it through the main ideas of maths, accounting, engineering, physics, biology, psychology and economics, one at a time. Then it finds where several fields push the same way, where they clash, and which facts you still need.
 explain: |-
-  A person with one favourite tool tends to see every problem as fitting it. A founder sees only marketing, an engineer only systems, an accountant only the numbers. The cure is to carry a few big ideas from many fields and run through them in a fixed order, so no field is skipped because it did not come to mind.
+  A person with one favourite tool tends to see every problem as fitting it. A founder sees only marketing, an engineer only systems, an accountant only the numbers. The cure is a mental models checklist: carry a few big ideas from many fields and run a plan through them in a fixed order, so no field is skipped because it did not come to mind.
 
-  This skill runs your case through that list and writes a short answer for each field, including "nothing useful here" when that is true. It then looks for forces that stack up in one direction, which can give extreme results, and for forces that conflict, which give trade-offs.
+  This skill runs your case through that list and writes a short answer for each field, including "nothing useful here" when that is true. It does not add the answers into a score. It looks for forces that stack up in one direction, which can give extreme results, and for forces that clash, which give trade-offs.
+
+  It also names the field your plan leans on most, and what the other fields would have changed.
 when:
   - You are about to commit to a plan and only one kind of expert has looked at it.
   - Something surprising happened and you want to know why, from more than one angle.
   - You feel sure, and you want to check you are not just using your favourite tool.
+  - Your team always starts from the same angle, such as marketing or the numbers.
+not_for:
+  - "You want a deep look at the mind-tricks part only. Use the Decision bias pile-up checker."
+  - "You want to know who is paid for what in a plan. Use the Incentive checker."
+  - "You already have your own checklist to run. Use the Decision checklist runner."
+  - "You have a simple fact to check, or a plan with no real trade-off. One direct question is faster."
 you_give:
-  - The plan or problem, with what you want from it
-  - "The numbers you have: money, volumes, time (optional)"
+  - The plan or problem, and what you want from it
+  - "Numbers you have, such as money, volumes, rates and dates (optional)"
   - Which field you or your team lean on most (optional)
+  - The time frame you care about, such as one year or ten (optional)
 you_get:
-  - A short answer from each field, rated as pushing for, against, or neutral
+  - A short answer from each field, rated for, against or neutral, with how sure it is
   - The places where two or more fields agree and the result could be extreme
   - The clashes and the trade-off each one creates
-  - The facts you still need, and the field you leaned on too much
+  - The three facts to find next, and the field you leaned on too much
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your plan or problem. Add numbers if you have them.
-  - Say which tool you or your team reach for first. It will check that field last.
-  - Pick the top two findings and test them before you act.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. No files, web search or code needed.
+  - Paste your plan or problem. If you send nothing, it asks for a one-line case and stops.
+  - Add numbers if you have them. With figures, the maths and accounting lines become sums. Without them, they become questions.
+  - Say which tool you or your team reach for first. It tells you what the other fields would have changed.
+  - Pick the top two findings, a stack or a clash, and test them before you act.
 how_it_works:
   - title: State the case
-    text: Writes the plan, the goal and the time frame in a few lines.
-  - title: Run maths
-    text: Checks growth over time, odds and the number of ways things can go.
-  - title: Run accounting
-    text: Checks what the numbers measure and what they miss.
-  - title: Run engineering and physics
-    text: Checks backups, breaking points and the point where things take off.
-  - title: Run biology
-    text: Checks niches, competition and who adapts.
-  - title: Run psychology
-    text: Checks reasons on one track and mind tricks on the other.
-  - title: Run economics
-    text: Checks scale, the best alternative, rewards and who keeps the gain.
+    text: Writes the plan, the goal and the time frame in three lines, and guesses your favoured field if you did not say.
+  - title: Run maths and accounting
+    text: Checks growth over time, odds and payoffs, and what the numbers measure and miss.
+  - title: Run engineering, physics and biology
+    text: Checks backups, breaking points, the point where things take off, and who adapts or copies.
+  - title: Run psychology and economics
+    text: Checks real interests on one track and mind tricks on the other, then scale, the best alternative and who keeps the gain.
   - title: Rate each field
-    text: Rates every field for, against, or neutral, with how sure it is.
+    text: Writes one line per field, rated for, against or neutral, with how sure it is.
   - title: Find stacks and clashes
-    text: Finds where several fields agree and where they conflict.
+    text: Finds where several fields push the same way and where they conflict, with the trade-off each creates.
   - title: Name the gaps
-    text: Names the facts still needed and the tool leaned on too much.
-  - title: Checks its own work
-    text: Runs its own checks and names any it missed.
+    text: Names the three facts still needed and the field leaned on too much, then lists any checks it missed.
 output_shape: |-
   THE CASE
   <three lines> | favoured tool: <field>
@@ -79,7 +81,27 @@ output_shape: |-
   <gaps>
 
   CHECKS MISSED
-  <one line each, or none>
+  <only checks that failed, one line each, or none>
+output_sample:
+  input:
+    - The plan or problem, and what you want from it
+    - "Numbers you have, such as money, volumes and dates (optional)"
+    - The field you or your team lean on most (optional)
+  output:
+    - name: THE CASE
+      contains: The plan, the goal and the time frame in three lines, and the field you favour.
+    - name: BY FIELD
+      contains: One line each for maths, accounting, engineering and physics, biology, psychology and economics, rated for, against or neutral.
+    - name: STACKS
+      contains: Fields that push the same way, and the extreme result that could follow.
+    - name: CLASHES
+      contains: Fields that pull against each other, and the trade-off each one creates.
+    - name: FACTS TO FIND
+      contains: The three facts that would most change the answer, and where to find each.
+    - name: LEANED ON TOO MUCH
+      contains: The field your plan relies on most, and what the others would have changed.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in what you gave, and one line for each of its own checks that failed.
 tweaks:
   - what: The numbers you give
     how: With real figures the maths and accounting answers become sums instead of questions, and the stacks are more reliable.

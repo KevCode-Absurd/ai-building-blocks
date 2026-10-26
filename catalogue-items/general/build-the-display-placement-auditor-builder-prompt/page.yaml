@@ -1,33 +1,115 @@
 new_slug: build-the-display-placement-auditor-builder-prompt
 name: Display placement review coding prompt
-summary: Get a coding brief to review Display ad sites. Find signs of waste and list proposed blocks with proof.
+summary: Get a coding brief that finds Google Ads Display placements wasting spend, with proposed exclusions and the numbers behind each. Read-only.
 job: build-software
 headline: Display placement review coding prompt
-subhead: Get a coding brief to review Display ad sites. Find signs of waste and list proposed blocks with proof.
+subhead: Give your coding assistant your project and your Google Ads Display account. It plans a read-only module. The module reads the placement report, flags apps and sites that spent with no results, and lists exclusions to consider. It never changes your account.
 explain: |-
-  Share your project and the required feature. Get a coding brief for the display placement auditor, with setup and test steps.
+  Display is the noisiest part of Google Ads. Your ads can show on thousands of sites and apps. Some of them take your money and never lead to a sale. Checking the placement report by hand each week is slow. This prompt gives a coding assistant a brief to build that check as a Display placement review in your own project.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The brief sorts each placement into five buckets. Mobile apps that spent with no results. Websites that spent with no results. YouTube spend inside a Display campaign. Placements people rarely see. Placements that pay for themselves. It also adds two roll-ups, one for a whole app category and one for a campaign where too much spend went to placements with no results.
+
+  Every spend limit in the brief is a starting default, not a Google rule. You confirm each one before it goes into code. The module only proposes exclusions. A person adds them in Google Ads. This prompt reviews where ads showed. To review keywords, use the Keyword grouping coding prompt.
 when:
-  - You need a coding brief for the display placement auditor.
-  - You need build the display placement auditor prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - Display spend is rising and you can't tell which sites or apps are getting it.
+  - You check the placement report by hand each week and want it built into your own tool.
+  - Your team wants a list of exclusions with the numbers behind each, not a hunch.
+  - You already have Google Ads code in a project and want the placement check to fit it.
+not_for:
+  - Your account runs Search or Video campaigns only, or you want a one-time review with no code. Paste your export into the Google Ads report auditor instead.
+  - You want to review video ad results. Use the Video ad results coding prompt.
+  - You want it to add the exclusions for you. It only proposes them. You add them in Google Ads yourself.
+  - You have no Google Ads API access yet. Start with the Google Ads Cloud and OAuth client planner, then the Google Ads token and access check planner.
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, or its main folders and database schema
+  - The customer ID of the Display account, and the names of the credentials your project uses (never the secrets)
+  - The date range to review (30 days if you don't say)
+  - Your target ROAS or CPA for each campaign (optional)
+  - Spend limits you accept, or a yes to the starting limits in the brief (optional)
 you_get:
-  - A coding brief for the display placement auditor
-  - Required files, setup gaps and test cases
+  - A list of setup gaps before any code is written
+  - A read-only placement review module that fits your project
+  - Five placement buckets with limits you can change
+  - Proposed exclusions, each with spend, clicks and conversions
+  - Test cases and a sample result built from made-up rows
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your coding assistant, such as Claude Code or Codex, in your project folder. A plain chat AI can only write a plan.
+  - Paste the skill, then add the items under "What you need". Never paste a secret key.
+  - Read the setup gaps first. Fix each one, or tell the assistant to go on with placeholders.
+  - Say yes to each starting limit or change it. A wrong limit gives wrong flags.
+  - Read every change before you accept it. Run the tests in your own project.
+  - Treat the exclusion list as proposals. Check a few placements in Google Ads, then add the exclusions yourself.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project first
+    text: Reads your folders, any Google Ads client and shared types, then lists what is missing before it writes code.
+  - title: Reads the placement report
+    text: Plans queries for each placement's cost, clicks, conversions and viewable views. It converts money once and leaves unknown fields empty.
+  - title: Sorts placements into buckets
+    text: Tests each placement against your limits. Placements under the minimum spend are never flagged.
+  - title: Writes findings as proposals
+    text: Each finding has the evidence and one exclusion to consider. It never proposes bid changes.
+  - title: Adds the two roll-ups
+    text: One proposes an app category exclusion. One flags a campaign with too much spend on placements with no results.
+  - title: Plans tests and handover
+    text: Writes tests on made-up rows. It proposes a schedule but does not create one.
+output_shape: |-
+  SETUP GAPS
+  <what is missing: schemas, permissions, field names to confirm>
+
+  FUNCTION SIGNATURE
+  auditDisplayPlacements(<input>) -> DiagnosticOutput
+
+  SAMPLE DiagnosticOutput (made-up rows)
+  <findings with checkId, severity, evidence and proposal>
+
+  TOP 10 PLACEMENTS TO CONSIDER EXCLUDING
+  <placement> | <cost> | <clicks> | <conversions> | <reason>
+
+  TEST RESULTS
+  <passed, failed, or not run and why>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your code project, or its main folders and database schema
+    - The Display account's customer ID and the names of your Google Ads credentials
+    - The date range, and your target ROAS or CPA (optional)
+  prerequisites:
+    - A coding assistant that can open your project, such as Claude Code or Codex
+    - Google Ads API access with read permission, set up before you run the module
+  output:
+    - name: Setup gaps
+      contains: Missing schemas, permissions and field names to check before any code is written.
+    - name: Function signature
+      contains: The inputs and result type of the placement review function in your project.
+    - name: Sample DiagnosticOutput
+      contains: Findings from made-up rows, each with a check ID, severity, evidence and one proposed exclusion.
+    - name: Top 10 placements to consider excluding
+      contains: A paste-ready list with cost, clicks, conversions and the reason for each.
+    - name: Test results
+      contains: Tests for each bucket and roll-up, or a plain note that none were run.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your project, reads your Google Ads files, edits code and runs your tests.
+    - name: Codex
+      why: Does the same work in a repository and shows each change for you to review.
+    - name: Google Ads placement report
+      why: Lets you check a few flagged placements by hand before you exclude anything.
+  inputs:
+    - A short list of apps and sites you want to keep showing on
+    - Your brand and target buyer, so a mismatch is easier to spot
+terms:
+  - term: Placement
+    meaning: A website, app or YouTube video or channel where one of your ads showed.
+  - term: Exclusion
+    meaning: A rule in Google Ads that stops your ads from showing on a placement.
+  - term: Viewable impression
+    meaning: An ad that was on screen long enough to count as seen, by Google's own definition.
+  - term: ROAS
+    meaning: Return on ad spend. Sales value divided by ad cost.
+  - term: Read-only
+    meaning: The module can look at your account data but cannot change anything in it.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

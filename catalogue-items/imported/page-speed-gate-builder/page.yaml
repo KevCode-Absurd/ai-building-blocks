@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It sets budgets and a workflow from a fixed pattern.
 new_slug: page-speed-gate-builder
 name: Page speed gate builder
-summary: Point it at your web app. Get a Lighthouse check in CI that blocks slow
-  or weak pages.
+summary: Add a page speed check to your build pipeline. It fails the build when your home page or listed URLs get slow or score low.
 job: ship-and-host
 headline: Page speed gate builder
-subhead: A speed check that runs on every code change and blocks pages that get
-  slow or weak, so a slow page cannot slip into your live site unnoticed.
+subhead: A speed check that runs on every code change and blocks pages that get slow or weak, so a slow page cannot slip into your live site unnoticed.
 explain: |
   A speed check that runs on every code change and blocks pages that get slow or weak, so a slow page cannot slip into your live site unnoticed.
 
@@ -17,6 +15,10 @@ when:
   - You want a failing check when load time passes a set limit.
   - Your speed test gives a different score every run.
   - You need speed reports saved with each code change.
+not_for:
+  - "You only want a one-off speed test: run Lighthouse in Chrome or use PageSpeed Insights."
+  - "You want to watch real visitor speed over time: use a field-data monitoring tool, not this lab check."
+  - "Your site is plain static files with no build step: test it by hand with PageSpeed Insights."
 you_give:
   - Your web app code
   - Your build and start commands
@@ -28,8 +30,29 @@ you_get:
   - Median-of-runs setup to cut flaky results
   - Saved reports for each run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in a place where it can read your project files and run code.
+  - Paste this skill and tell it to add the page speed gate to your app.
+  - Give it your build and start commands, and the URLs to check if not just the home page.
+  - Run the check on your computer first and read the report.
+  - Commit the config and workflow file, then open a pull request to see the check run in your pipeline.
+output_sample:
+  input:
+    - Your web app code
+    - Your build and start commands
+    - Speed limits you want (optional)
+    - The URLs you want checked (optional, the home page by default)
+  prerequisites:
+    - An AI that can read your project files and run code
+    - Node installed
+    - A build pipeline such as GitHub Actions
+  output:
+    - name: lighthouserc.cjs
+      contains: One config with named budgets for load time, layout jumps and blocking time, plus minimum category scores.
+    - name: package.json script
+      contains: An lhci script that runs the same check on your computer and in your pipeline.
+    - name: .github/workflows/lighthouse.yml
+      contains: A pipeline job that builds, starts the app, runs the check and saves the reports.
+    - name: Dev dependency
+      contains: The @lhci/cli package added to your project to run the check.
+    - name: Saved reports
+      contains: HTML and JSON speed reports uploaded from each run.

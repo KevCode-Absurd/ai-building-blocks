@@ -1,6 +1,6 @@
 new_slug: selfie-style-video-prompts
 name: Selfie-style video clip prompt writer
-summary: Paste your selfie-style script and attach product photos. Get phone-style clip prompts and an edit list.
+summary: Turn an approved selfie-style script and your product photos into phone-style AI video clip prompts, with a storyboard and an edit list.
 job: make-video-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,11 @@ when:
   - You have an approved script and want a phone-style video ad without filming anyone.
   - Your AI video clips keep changing the presenter's face or the product between shots.
   - You need a product demo that stays readable when the sound is off.
+  - You want an ad that carries the platform's AI label from the start.
+not_for:
+  - "You want a real customer on camera: film them on a phone and ask for a signed release, since this skill makes a made-up presenter."
+  - "You do not have a script yet: write one first with the Video ad script writer from customer quotes, then come back."
+  - "Your product has never been photographed in use: take a few real photos first, because the sheets are built from them."
 you_give:
   - The approved script, with the demo line marked and the disclosure line
   - Real product photos, labelled front, in hand and in use
@@ -32,6 +37,32 @@ how_to_use:
   - Approve the presenter card, then make the reference images and pick one.
   - Make and approve the sheets, then approve the storyboard.
   - Make the demo clip first, check it, then the rest. Add captions and the AI label in the edit.
+output_sample:
+  input:
+    - Your approved selfie-style script, with the demo line marked
+    - Real product photos, labelled front, in hand and in use
+    - How the product is opened and used
+    - Your brand file with buyer, voice and never-show list (optional)
+  prerequisites:
+    - An AI that can read your photos
+    - An image tool and a video tool to make the pictures and clips from the prompts
+  output:
+    - name: Sent back lines
+      contains: Any script lines a made-up presenter could not truthfully say, or a note that none were found.
+    - name: Avatar card
+      contains: The made-up presenter's look and voice, written down for you to approve.
+    - name: Reference images
+      contains: Prompts for three or four phone-style pictures of the presenter, so you can pick one.
+    - name: Sheets and lock lines
+      contains: Prompts for the presenter, product and room from every angle, plus lines pasted unchanged into every clip.
+    - name: Storyboard
+      contains: One frame and one shot card per clip, each with a single action and the hand that does it.
+    - name: Clip prompts
+      contains: One phone-style prompt per clip with the action, quoted words, product, face, light and sound.
+    - name: Edit list
+      contains: Hard cuts, captions, the platform's AI label, the disclosure line and a final check against the script.
+    - name: Checks missed
+      contains: One line for each check the prompts still miss, or none.
 how_it_works:
   - title: Reads the script
     text: Sends back any line a made-up person couldn't truthfully say, such as their own result.

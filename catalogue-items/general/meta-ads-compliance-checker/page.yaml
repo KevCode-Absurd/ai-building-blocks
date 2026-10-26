@@ -1,6 +1,6 @@
 new_slug: meta-ads-compliance-checker
 name: "Meta ads compliance checker"
-summary: "Paste your ad and image. Get a compliance score out of 100, every problem and a fixed ad."
+summary: "Check your Facebook or Instagram ad against Meta's ad rules before launch. Get a score out of 100, each problem with its fix and the ad rewritten."
 job: check-ads
 thinking: high
 thinking_why: "It judges work against many checks, so a stronger model catches more."
@@ -17,6 +17,14 @@ when:
   - You're about to launch an ad, above all in a field with extra rules, like health, beauty, food, money, alcohol, gambling, dating, housing, jobs or politics.
   - An ad was rejected and you want to know which line caused it.
   - You've written a strong claim and want to know if it crosses a line before you spend money on images.
+  - Your ad shows a big discount and you're not sure the landing page backs it up.
+  - Someone on the team says "just run it" and you want a written list of risks first.
+
+not_for:
+  - You need Meta's own decision or a lawyer's sign-off. This reads Meta's published rules, so check the live policy page. For health, money or politics, get professional advice as well.
+  - You want to know if the ad will sell, not if it will pass review. Use the Pre-launch ad checker.
+  - You want to check how well the ad and its page match, not the rules. Use the Ad and page match checker.
+  - You want a review of your whole ad account, not one ad. Use the Meta Ads 30-check account auditor.
 
 you_give:
   - The ad's words (main text, headline, description and button), or a video script, or both
@@ -42,7 +50,7 @@ how_it_works:
   - title: Picks the rule groups
     text: Every ad gets the rules on prices and offers, on personal attributes and on relevance. Then it adds the rules for your field, such as health and beauty, money, alcohol, gambling, dating, housing, jobs or politics.
   - title: Judges only what it can see
-    text: Checks the words and pictures in the ad. Anything that depends on targeting, licences or the landing page is marked as such and never rated "would reject" on its own.
+    text: Checks the words and pictures in the ad. Anything that depends on targeting, licences or the landing page is marked as such. A gap you can only see by comparing the ad with the page is a warning or a restriction, never "would reject".
   - title: Writes each finding
     text: Names the group and rule, quotes where it is, says what's wrong in plain words and gives the fix.
   - title: Rates how serious it is
@@ -54,7 +62,7 @@ how_it_works:
   - title: Rewrites the ad
     text: Keeps every line that passed, changes only what a finding names, and marks each change. Where only you can decide, such as which discount is real, it writes MISSING instead of guessing.
   - title: Lists what passed
-    text: Shows the areas it checked and found nothing in, and what it could not check.
+    text: Shows only the rule groups that apply to your ad and were clear, and what it could not check.
 
 output_shape: |
   VERDICT  <ready to run | fix first | likely rejected>
@@ -278,3 +286,27 @@ terms:
     meaning: A setting outside the ad that lets it run, such as 18+ age targeting or a country exclusion.
   - term: Landing page
     meaning: The page people reach when they tap the ad.
+
+output_sample:
+  input:
+    - Your ad's words, field by field, or a video script with timings
+    - The image, or screenshots of the video
+    - Your landing page text and offer (optional)
+    - What you sell, your countries and age range (optional)
+  prerequisites:
+    - An AI that can look at pictures, if you attach an image
+  output:
+    - name: VERDICT
+      contains: Ready to run, fix first or likely rejected, with the one main reason.
+    - name: COMPLIANCE SCORE
+      contains: A score out of 100 now and after the fixes, with the sum shown.
+    - name: FINDINGS
+      contains: Each problem with its rule group, the exact spot, how serious it is and the fix.
+    - name: RESTRICTIONS TO SET OUTSIDE THE AD
+      contains: Settings to change in Ads Manager, such as age, countries, permissions and labels.
+    - name: THE AD WITH THE FIXES IN
+      contains: Every field rewritten, changed lines marked, and MISSING where only you can choose.
+    - name: PASSED
+      contains: The rule groups that apply to your ad and came back clear.
+    - name: COULD NOT CHECK
+      contains: What needs your landing page, account or targeting to judge.

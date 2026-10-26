@@ -1,52 +1,92 @@
 new_slug: prepare-a-workplace-accommodation-conversation
 name: Prepare a workplace accommodation conversation
 headline: Prepare a workplace accommodation conversation
-summary: Share the source files. Get a confidential discussion guide, possible adjustments and a review plan.
+summary: Prepare for a workplace accommodation conversation. Get a discussion guide, adjustment options and a review plan, with health details kept out.
 job: hire-people
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A confidential discussion guide, possible adjustments and a review plan. Share the stated work barrier, employee preferences shared voluntarily, job tasks and local review requirements. Your AI prepares the work and marks any facts it cannot verify.
+subhead: An employee has told you a part of their job is hard. Give your AI the barrier in their words, the job tasks it touches and your HR rules. You get a guide for the talk, adjustments to consider and a plan to review them, with no medical questions and nothing agreed in advance.
 explain: |-
-  A confidential discussion guide, possible adjustments and a review plan.
+  A workplace accommodation conversation is a talk with an employee about changes that make their work possible. It can go wrong in two ways. A manager asks for health details they do not need. Or a manager promises a fix before HR has looked at it. This workflow helps you prepare so neither happens.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Medical details are minimized; options stay provisional until the employee and appropriate HR reviewer agree. Missing tools or evidence stay visible in the final summary.
+  It starts from the barrier as the employee described it and the job tasks it affects. It never asks for a diagnosis and never guesses at a condition. Step 1 builds the respectful process. Step 2 lists the practical risks, such as missed deadlines and who gets to see the notes. Step 3 turns it into a short action list with owners.
+
+  Every adjustment stays marked as proposed. It becomes real only when the employee and your HR reviewer agree. This is not legal or medical advice. The rules depend on your country, so you give it your location and your review rules.
 when:
-  - You need a confidential discussion guide, possible adjustments and a review plan.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - An employee tells you a task is hard for them because of a health or other need, and you must plan the talk.
+  - You manage the person and want a respectful guide before you meet, with no medical questions in it.
+  - HR asked for a written plan of options and a date to review them.
+  - A first fix did not work and you need to prepare the next conversation.
+not_for:
+  - You need a company-wide accommodation process and draft policy. Use the workplace accommodation process builder on its own.
+  - You want legal or medical advice, or a view on what the law requires. Ask an employment adviser or an occupational health service.
+  - The employee has made a complaint about how they were treated. Use the workplace investigation guide.
+  - You need cover for someone who is away. Use the prepare a team absence handover workflow.
 you_give:
-  - The stated work barrier, employee preferences shared voluntarily, job tasks and local review requirements.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - What the employee said makes the work hard, in their own words (from your notes or their written request)
+  - What they chose to share about what would help (optional)
+  - The job tasks affected (from the job description or your task list)
+  - Your country or region, and who in HR reviews this (from your HR policy)
+  - What you cannot change, such as budget, safety rules or fixed hours (optional)
 you_get:
-  - A confidential discussion guide, possible adjustments and a review plan.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A discussion guide with opening lines and questions about the work, not the health
+  - A table of possible adjustments, each tied to a named job task and marked proposed
+  - A short list of delivery and privacy risks, each with an owner
+  - A review plan that says who checks it, when, and how it ends or changes
+  - A list of missing facts and checks that did not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste your notes on the barrier, the job tasks and your HR rules. Leave out any diagnosis or medical record.
+  - Say your country or region and who in HR will review the plan.
+  - After step 1, check that every barrier is in the employee's words and tied to a real job task.
+  - Ask your HR reviewer to read the guide before you meet. Nothing is agreed until they and the employee agree.
 how_it_works:
   - title: Workplace accommodation process builder
-    text: Identify the work barriers and a respectful process for considering adjustments.
+    text: Links each barrier to a job task and sets out a respectful path for considering changes. Hands step 2 the barrier list and the tasks. Check before moving on, no diagnosis or health guess appears.
   - title: People risk register builder
-    text: Record practical delivery and privacy risks without inferring health conditions.
+    text: Lists delivery risks, such as deadlines and coverage, and privacy risks, such as who sees the notes. Hands step 3 each risk with a suggested owner. Check before moving on, no risk guesses at a condition.
   - title: Executive action register keeper
-    text: Prepare a restricted action plan with agreed owners, review dates and unanswered questions.
+    text: Turns the options and risks into a short action list with owners and review dates. Marks every action proposed until agreed. Hands back the open questions.
+  - title: Check and hand back
+    text: Builds the discussion guide, adjustment table and review plan from the three step files. Adds a hand-back summary with every gap marked MISSING.
 output_shape: |-
-  Scope and source coverage
-  A confidential discussion guide, possible adjustments and a review plan.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE            <role, tasks affected, country or region, HR reviewer>
+  DISCUSSION GUIDE <purpose of the talk, opening lines, questions about the work,
+                    what not to ask, what you can and cannot promise, how to close>
+  POSSIBLE ADJUSTMENTS
+                   <barrier | job task | option | effort or cost | effect on others | status: proposed>
+  RISKS            <delivery and privacy risks, each with an owner>
+  REVIEW PLAN      <who checks, review date, what to look at, how it ends or changes>
+  PRIVACY NOTES    <who may see this, where it is kept>
+  MISSING          <each gap and the part it stops>
+  CHECKS MISSED    <one line each, or none>
+output_sample:
+  input:
+    - "What the employee said makes the work hard, in their own words"
+    - "The job tasks affected"
+    - "Your country or region and who in HR reviews the plan"
+    - "What you cannot change, such as budget or fixed hours (optional)"
+  prerequisites:
+    - "An AI that can read files or long pasted text"
+    - "Your HR policy on adjustments, if you have one (optional)"
+  output:
+    - name: "Discussion guide"
+      contains: "Opening lines and work-focused questions, what not to ask, and what you can and cannot promise."
+    - name: "Possible adjustments"
+      contains: "Each option tied to a job task, with effort, effect on others and a proposed status."
+    - name: "Risks"
+      contains: "Delivery and privacy risks with an owner for each, and no guesses about health."
+    - name: "Review plan"
+      contains: "Who reviews the plan, when, and how it ends or changes."
+    - name: "Missing and checks missed"
+      contains: "Every gap, marked MISSING, and any check that could not run."
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Medical details are minimized; options stay provisional until the employee and appropriate HR reviewer agree.
+    how: Cover one employee and one request at a time, so the guide stays specific to their tasks.
+  - what: Country
+    how: Name your country or region. Without it, legal points are marked MISSING and no law is named.
+  - what: Earlier fixes
+    how: Add what was already tried and why it fell short. The options will skip them.
 judge:
   - Medical details are minimized; options stay provisional until the employee and appropriate HR reviewer agree.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +99,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep your HR policy and one approved example with the pack so each run uses your wording.
+  - After the meeting, record what was agreed and the review date so the next run starts from facts.
+  - Ask your HR reviewer to mark any option your policy rules out, and add that to your notes.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads your notes and the pack together. Nothing is sent or filed for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your written HR policy on adjustments.
+    - The employee's own written request, if they made one.
 terms:
+  - term: Accommodation
+    meaning: A change to how, when or where work is done so a person can do the job. Some places call it an adjustment.
+  - term: Barrier
+    meaning: Something in the job that makes a task hard or impossible for this person.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

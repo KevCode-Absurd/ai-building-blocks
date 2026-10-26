@@ -68,3 +68,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each weak line comes as a question, not an order.
 - At least one part is marked leave alone.
 - No note is about whether it will sell.
+
+## If something is missing
+
+If there is no draft, do not fill in the sections. Reply in one line asking for the draft pasted whole, with what it is for and who reads it, even if they said to go ahead. If the draft is there but the purpose or what they love is missing, write `MISSING: <what>` for that part and carry on. Never invent praise, a line the draft does not contain or a fact about the maker.

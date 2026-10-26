@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It shapes a brand from your answers.
 new_slug: tiktok-shop-brand-builder
 name: TikTok Shop brand builder
-summary: Describe your shop. Get your brand voice, content pillars, story and
-  ways to build a community.
+summary: "Build your TikTok Shop brand: give your shop details and get a brand voice, content pillars, a brand story and a plan to grow a community."
 job: brand-file
 headline: TikTok Shop brand builder
-subhead: Describe your shop. Get your brand voice, content pillars, story and
-  ways to build a community. Bring a description of your shop and products. Use
-  the result to plan your next step.
+subhead: Describe your shop. Get your brand voice, content pillars, story and ways to build a community. Bring a description of your shop and products. Use the result to plan your next step.
 explain: |
   A clear brand for your TikTok Shop that people recognize in a few seconds of scrolling: a voice, a few content themes, a story, and ways to turn buyers into a community.
 
@@ -18,6 +15,10 @@ when:
   - You are not sure what tone your videos and captions should use.
   - You want repeat buyers and need a plan to keep them.
   - You are about to hire a video editor and need brand rules to give them.
+not_for:
+  - Your shop has no products live yet. Wait until you have something to sell, or write down your idea and your buyer on paper first.
+  - Your problem is low sales or prices, not how your brand looks. Review your pricing and sales numbers with a person who knows your shop.
+  - You need a logo, colors or packaging made. Hire a designer, because this gives you written guidelines only.
 you_give:
   - A description of your shop and products
   - Your main competitors
@@ -30,7 +31,33 @@ you_get:
   - A brand story draft
   - A community plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into a new chat.
+  - Describe your shop and products, your main competitors and your ideal buyer. Add brand colors or examples you like if you have them.
+  - Read the positioning statement and voice guide first. Check they sound like your shop.
+  - Ask your AI to fix anything that feels generic, then share the voice guide and content pillars with whoever makes your videos.
+output_sample:
+  input:
+    - A description of your shop and products
+    - Your main competitors
+    - Your ideal customer
+    - Brand colors or examples you like (optional)
+  output:
+    - name: Brand Foundation & Identity
+      contains: Your mission, vision, values and a short positioning statement for your shop.
+    - name: Competitive Differentiation Strategy
+      contains: What sets you apart from the other sellers in your category.
+    - name: Brand Voice & Personality Framework
+      contains: How your brand sounds on TikTok, with examples of what to say and avoid.
+    - name: Content Pillar Strategy
+      contains: A few themes your videos can return to, tied to your brand values.
+    - name: Visual Identity & Aesthetic Guidelines
+      contains: Look and feel rules for your videos and shop, adapted to TikTok.
+    - name: Brand Storytelling Framework
+      contains: A draft of your brand story and the core narrative behind it.
+    - name: Community Building Strategy
+      contains: Ways to engage buyers, reward loyal ones and spot fans who could become ambassadors.
+    - name: Crisis Management & Brand Protection
+      contains: Steps to take if a complaint or bad review goes public.
+    - name: Implementation Timeline
+      contains: The order to do the work in, with budget notes and next actions.

@@ -1,37 +1,128 @@
 new_slug: meta-results-review-agent
 name: Meta results review agent
-summary: Share dated Meta results and business targets. Get ranked findings, evidence gaps, proposed next steps and a checkpoint for follow-up.
+summary: Review your Meta Ads results against your targets. Get ranked findings, tracking gaps, proposed fixes and a checkpoint for the next review.
 job: set-up-ai
 headline: Meta results review agent
-subhead: Share dated Meta results and business targets. Get ranked findings, evidence gaps, proposed next steps and a checkpoint for follow-up.
+subhead: Give it your Meta Ads Manager exports and your targets. It checks that the numbers line up, then reviews campaigns, ad sets and ads. You get six files, from ranked findings to a checkpoint for next time.
 explain: |-
-  Share the inputs listed below. Get an evidence-backed meta findings report and follow-up checkpoint. Check the gaps before you act.
+  A Meta Ads results review goes wrong when the numbers are not comparable. The dates, time zone, currency or attribution setting differ between exports. Or tracking is broken and nobody notices. This agent checks those first. Then it reads your campaign, ad set and ad results against your own targets.
 
-  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+  It keeps what the data proves apart from what it only hints at. Low sample size and missing tracking are named as gaps, not blamed on an ad. It never changes your account. A budget change, a pause or a new ad comes back as a proposal for you to approve.
+
+  Every review ends with a checkpoint file. Give it back next time and the agent compares the new results with this review instead of starting cold.
 when:
-  - You need an evidence-backed meta findings report and follow-up checkpoint.
+  - Your Meta results moved and you need to know if the cause is the ads, the tracking or too little data.
+  - A client or boss asks for a Meta Ads review that shows its evidence.
+  - You want to check results against a target cost per sale or return on ad spend.
+  - You review every month and want each review to start from the last one.
+not_for:
+  - You want a score across 30 account checks. Use the Meta Ads 30-check account auditor.
+  - You want the same checks every Monday and a scale-or-hold call. Use the Meta Ads weekly account keeper.
+  - You have one odd symptom, such as ads that will not spend. Use the Meta delivery troubleshooter.
 you_give:
-  - Scoped dated Meta exports, tracking evidence and approved contribution targets
-  - Authorized tools, owner, limits and any prior checkpoint
+  - Ads Manager exports for one date range, at campaign, ad set and ad level, with spend, results, conversion value and frequency
+  - Your account time zone, currency and attribution setting, for example 7-day click
+  - Your targets, such as the cost per sale or return on ad spend you need
+  - Proof that tracking works, such as Events Manager screenshots of your events and match quality (optional)
+  - Your last checkpoint file (optional)
+  - Change history for the same dates (optional)
 you_get:
-  - An evidence-backed Meta findings report and follow-up checkpoint
-  - Evidence gaps, proposed actions and checks not run
+  - A setup check that says if your dates, currency, attribution and metrics line up
+  - A ranked findings table with the evidence, the sum and how sure the AI is for each row
+  - A tracking check that lists what is confirmed and what is not
+  - A list of evidence gaps and the checks that did not run
+  - A proposed actions list, with nothing changed in your account
+  - A checkpoint file for your next review
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Download the pack from this page and add it to your AI. If you cannot add it, paste SKILL.md into a new chat. Claude, ChatGPT and Gemini all work if they can read files.
+  - Export your results from Ads Manager for one clear date range and attach the files. No Meta login is needed.
+  - Type your time zone, currency, attribution setting and targets. Attach your tracking screenshots and last checkpoint if you have them.
+  - Say "Run the review. Propose changes, do not make any." Your AI asks once for anything missing.
+  - Open setup-check.md first. If the numbers do not line up, fix the exports before you trust the findings.
+  - Check each finding against its evidence ID. Make the changes you agree with in Ads Manager yourself, then keep checkpoint.md for next time.
 how_it_works:
-  - title: Step 1
-    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
-  - title: Step 2
-    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
-  - title: Step 3
-    text: Confirm the exact account, dates, timezone, currency, attribution and current objective. Read only authorized data or supplied exports. Validate raw and derived metric definitions before drawing conclusions.
-  - title: Step 4
-    text: Review tracking, campaign/ad-set/ad results, creative mix, delivery and change history against local baselines and approved contribution economics. Separate low sample, missing tracking and plausible explanations from confirmed faults.
-  - title: Step 5
-    text: Return prioritized findings with source IDs, calculations, uncertainty, recommended checks and proposed actions. A budget change, pause, new ad or client message remains a proposal unless the current user authorized that exact action.
-  - title: Step 6
-    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+  - title: Fix the scope
+    text: It confirms the account, dates, time zone, currency, attribution setting and your goal. Anything missing is asked once, then marked MISSING.
+  - title: Load the last checkpoint
+    text: If you supply one, it compares scope and dates and says what is new. Your current request wins over the old checkpoint.
+  - title: Check the numbers line up
+    text: It recomputes cost per result and return on ad spend from the raw columns and compares them with the exported ones.
+  - title: Check tracking
+    text: It reads your tracking evidence and marks each part Confirmed, Not confirmed or Not supplied.
+  - title: Read the results
+    text: It reviews campaigns, ad sets and ads against your targets, your own earlier numbers, creative mix and change history.
+  - title: Rank and propose
+    text: Each finding gets an evidence ID, the sum behind it and a confidence level. Actions stay proposals until you approve that exact action.
+  - title: Save a checkpoint
+    text: It records scope, evidence dates, open questions and the next review trigger, so a later run can compare.
+output_shape: |-
+  SETUP CHECK
+    Account <name> | <start date> to <end date> | <time zone> | <currency> | <attribution setting>
+    Metrics that match: <list> | Metrics that do not: <list and the gap>
+
+  FINDINGS (ranked by money at stake, then confidence)
+    <rank> | <finding> | <evidence IDs> | <the sum, with the numbers> | <high, medium or low> | <proposed action>
+
+  TRACKING CHECK
+    <event or part> | <Confirmed, Not confirmed or Not supplied> | <evidence ID>
+
+  EVIDENCE GAPS
+    <what is missing> | <which finding it limits> | <how to get it>
+
+  PROPOSED ACTIONS (none done)
+    <action> | <where in Ads Manager> | <why> | <risk> | <needs your approval>
+
+  CHECKPOINT
+    Scope, evidence IDs and dates, open questions, approvals, next review trigger
+output_sample:
+  input:
+    - Your Meta Ads Manager exports for one date range
+    - Your time zone, currency, attribution setting and targets
+    - Tracking evidence from Events Manager (optional)
+    - Your last checkpoint file (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - Permission to export results from your Meta Ads Manager
+  output:
+    - name: setup-check.md
+      contains: Whether dates, time zone, currency, attribution and metric definitions match, with every mismatch listed.
+    - name: findings.md
+      contains: Ranked findings, each with evidence ID, the sum behind it, confidence and a proposed action.
+    - name: tracking-check.md
+      contains: Each tracking part marked Confirmed, Not confirmed or Not supplied, with the evidence for it.
+    - name: evidence-gaps.md
+      contains: What is missing, which finding it limits and how to get it.
+    - name: proposed-actions.md
+      contains: Each change you could make, with where, why, risk and a note that nothing was done.
+    - name: checkpoint.md
+      contains: Scope, evidence dates, open questions, approvals and the trigger for the next review.
+tweaks:
+  - what: Date range
+    how: Use one clear range, such as the last full month. Mixed ranges make the setup check fail.
+  - what: Your targets
+    how: Give a real target cost per sale or return on ad spend. Without one, findings are ranked by spend only.
+  - what: Tracking evidence
+    how: Attach Events Manager screenshots. Without them, every conversion finding gets lower confidence.
+improve:
+  - Add your own break-even numbers to the inputs, so every finding is measured against what you can afford.
+  - Keep each checkpoint file with your ad reports. Each review then starts from your real history.
+  - Add a rule for how much spend a finding must affect before it makes the list, if your account is large.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: The agent reads several exports and screenshots at once and does sums on them.
+  inputs:
+    - Your break-even return on ad spend, worked out from your margin.
+    - Your store or CRM sales totals for the same dates.
+    - The previous period exports, with the same attribution setting.
+terms:
+  - term: Attribution setting
+    meaning: The rule Meta uses to decide which ad gets credit for a sale, such as 7-day click.
+  - term: Return on ad spend
+    meaning: Sales value divided by ad spend. Also called ROAS.
+  - term: Checkpoint
+    meaning: A file that records where this review stopped, so the next review can pick up from it.
+  - term: Evidence ID
+    meaning: A short tag, like E1, that points to one export or screenshot behind a finding.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.

@@ -2,36 +2,59 @@ thinking: medium
 thinking_why: It applies set methods but needs choices on gates.
 new_slug: flow-cytometry-gating-analyst
 name: Flow cytometry gating analyst
-summary: Give it flow cytometry files. Get compensated, gated cell populations
-  and a gating plan you can repeat.
+summary: Run flow cytometry gating on your FCS files. Get gate counts per sample and a script that repeats the same gates on every batch.
 job: research-topics
 headline: Flow cytometry gating analyst
-subhead: Raw flow cytometry files become compensated, gated cell populations
-  with a gating plan you can run again on every batch. Your counts come out the
-  same each time.
+subhead: Raw flow cytometry files become compensated, gated cell populations with a gating plan you can run again on every batch. Your counts come out the same each time.
 explain: |
   Raw flow cytometry files become compensated, gated cell populations with a gating plan you can run again on every batch. Your counts come out the same each time.
 
   It uses the Python FlowKit package. First it matches detector names to the compensation matrix and checks sample IDs for clashes. It applies compensation before any transform, then builds the gate tree with full parent paths, using your gating strategy or a FlowJo workspace. Results are exported as counts and event tables. Importing a workspace does not prove it matches FlowJo, so it asks for your controls and thresholds rather than guessing. You need Python.
 when:
   - You have a folder of FCS files and need the same gates on every one.
-  - You want to move a FlowJo gating plan into a repeatable script.
-  - Your compensation or channel names look mismatched.
-  - You need cell population counts for a report.
+  - You want to turn a FlowJo gating plan into a script you can repeat.
+  - Your compensation matrix and channel names do not seem to match.
+  - You need cell population counts and percentages for a report.
+not_for:
+  - "You only need to read file details or repair a damaged FCS file: use FlowIO, or ask the lab that ran the machine."
+  - "You want proof that a FlowJo workspace import matches FlowJo: open the same samples in FlowJo and compare the counts yourself."
+  - "You have no gating plan or control samples yet: ask the scientist who designed the panel to set the gates first."
 you_give:
-  - FCS files
-  - Gating strategy, GatingML file or FlowJo workspace
-  - Compensation matrix (optional)
-  - Control samples and thresholds (optional)
+  - Your FCS files
+  - "A gating plan: a GatingML file, a FlowJo workspace (.wsp) or your own gate rules"
+  - Your compensation matrix (optional)
+  - Your control samples and thresholds (optional)
 you_get:
-  - Compensated and transformed data
-  - Gate hierarchy with full paths
-  - Population counts per sample
-  - Python script to repeat the analysis
-  - Notes on what could not be verified
+  - Compensated data, with transforms applied in the right order
+  - A gate tree with the full path for each gate
+  - Event counts and percentages for every gate in every sample
+  - A Python script and a GatingML file to repeat the analysis
+  - Notes on what could not be checked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Check you have Python 3.13, the uv tool and internet access. The first install needs the internet. Your files stay on your computer.
+  - Use an AI that can run code and read your files, such as Claude with code tools. A plain chat can only write the script for you to run.
+  - Give your AI the skill, your FCS files and your gating plan. Add your compensation matrix and controls if you have them.
+  - Tell your AI which controls set the positive gates. If you do not, it should ask, not guess.
+  - Replace the example matrix and thresholds in the sample code. They are made-up teaching values, so use settings you have validated for your study.
+  - Open gate_report.csv and check the counts against a few samples in FlowJo. Importing a workspace does not prove the results match.
+output_sample:
+  input:
+    - Your FCS files
+    - "A gating plan: a GatingML file, a FlowJo workspace (.wsp) or your own gate rules"
+    - Your compensation matrix (optional)
+    - Your control samples and thresholds (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python 3.13 and the uv tool on your computer
+    - Internet access for the first install
+  output:
+    - name: gate_report.csv
+      contains: One row per gate and sample, with event counts, parent counts, percentages and the full gate path.
+    - name: provenance.json
+      contains: The input files, package versions and analysis settings used for the run.
+    - name: gates.xml
+      contains: The gating strategy saved as a GatingML file you can reuse on the next batch.
+    - name: Python script
+      contains: The code that loads samples, applies compensation and transforms, builds the gates and runs the analysis.
+    - name: Checks and warnings
+      contains: Notes on name clashes, missing files, empty parents and anything that could not be verified.

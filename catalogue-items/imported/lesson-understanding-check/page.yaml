@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a check for each stage of the lesson.
 new_slug: lesson-understanding-check
 name: Lesson understanding check planner
-summary: Give it your lesson stages. Get a check for each stage, so you know who
-  has it before moving on.
+summary: Plan a check for every lesson stage, so you know who understands before you move on. Get a hinge question, cold-call order and exit ticket.
 job: teach-and-train
 headline: Lesson understanding check planner
-subhead: Know who has understood before you move on, not after the test. Give it
-  your lesson stages and you get a planned check for each one, so quiet students
-  cannot hide behind the confident few.
+subhead: Know who has understood before you move on, not after the test. Give it your lesson stages and you get a planned check for each one, so quiet students cannot hide behind the confident few.
 explain: |
   Know who has understood before you move on, not after the test. Give it your lesson stages and you get a planned check for each one, so quiet students cannot hide behind the confident few.
 
@@ -18,6 +15,10 @@ when:
   - Your class says they understand when they do not.
   - You need a hinge question for the middle of a lesson.
   - You want an exit ticket that shows what to reteach tomorrow.
+not_for:
+  - "You only need one exit ticket: ask your AI to write a short exit ticket directly, no full plan needed."
+  - "You want to plan the whole lesson, not just the checks: write the lesson outline first, then come back here for the checks."
+  - "You want students to recall facts from past weeks: use a simple low-stakes quiz, or ask a teaching colleague for retrieval practice ideas."
 you_give:
   - What you are teaching
   - Lesson stages or timing
@@ -31,7 +32,26 @@ you_get:
   - An exit ticket
   - A decision tree for what to do with answers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
+  - Tell your AI what you are teaching and which lesson stages need checks.
+  - Add your year group and how the class tends to act. Add common mistakes and what you have in the room, if you know them.
+  - Read the plan. Check that the hinge question has one clear right answer, and that any maths in it is correct.
+  - Use the checks in your lesson. Sort the exit tickets afterwards, and follow the decision tree to plan what to reteach.
+output_sample:
+  input:
+    - What you are teaching in the lesson
+    - "Which lesson stage needs checks: during teaching, after guided practice, end of lesson, or all"
+    - Year group and how the class tends to behave
+    - Common mistakes students make (optional)
+    - Class size and what you have in the room, like mini-whiteboards (optional)
+  output:
+    - name: During-Instruction Checks
+      contains: Techniques picked for each teaching moment, with a short script for how to run each one.
+    - name: Hinge Question
+      contains: One question that splits students who got it from those who did not, with notes on wrong answers.
+    - name: Cold-Call Sequence
+      contains: The order to ask students, with questions that start easy and get harder.
+    - name: End-of-Lesson Check (Exit Ticket)
+      contains: A short closing task that shows what each student can do on their own.
+    - name: Response Decision Tree
+      contains: What to do next if most, some or few students answer correctly.

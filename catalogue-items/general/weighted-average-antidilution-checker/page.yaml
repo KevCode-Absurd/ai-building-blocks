@@ -1,7 +1,7 @@
 new_slug: weighted-average-antidilution-checker
 name: Weighted-average antidilution checker
 headline: Weighted-average antidilution checker
-summary: Check one charter-defined conversion price reset after a qualifying cash issuance.
+summary: Check a weighted-average antidilution reset. Give it your charter clause and share counts. You get the revised conversion price and ratio.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need revised conversion price and protected-series conversion ratio.
   - You work on venture financing and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You have a full-ratchet clause, several series or linked instruments: ask your startup lawyer, because this checks one cash issuance and one series."
+  - "You do not have the charter text: get the signed charter from the company first, since the skill needs the real formula."
+  - "You want to know who is legally owed shares or votes: ask counsel, because this only does the arithmetic."
 you_give:
   - Actual charter formula, old conversion price, defined A shares, qualifying C shares, cash consideration and trigger/exemption confirmation.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -23,10 +27,34 @@ you_get:
   - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
   - Reconciliation results, unresolved inputs and actual checks completed.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open your AI and paste in the skill, or upload the pack and ask it to follow SKILL.md.
+  - Paste the charter conversion price clause and your old conversion price.
+  - Add the A share count, the qualifying C shares and the cash paid, and say whether the trigger and exemptions were checked.
+  - Say which spreadsheet tool you use. Running the bundled calculation needs Node.js 20 or later.
+  - Read the assumptions, the reconciliations and the MISSING and CHECKS MISSED lines before you rely on the result.
+output_sample:
+  input:
+    - Your charter conversion price clause
+    - Your old conversion price
+    - Your count of shares in the charter's A definition
+    - Your count of qualifying new shares (C) and the cash paid for them
+    - Your confirmation that the issue triggers the reset and no exemption applies
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation check
+  output:
+    - name: Revised conversion price and ratio
+      contains: The new conversion price for the protected series and its conversion ratio, or the old price if no reset applies.
+    - name: Scope and dated sources
+      contains: The charter and records used, with their dates.
+    - name: Inputs and assumptions
+      contains: Each input with its source, plus the assumptions made where the charter was unclear.
+    - name: Model calculations and reconciliations
+      contains: The steps that find B and the new price, with checks that tie back to your inputs.
+    - name: Actual file verification
+      contains: Which workbook checks ran, such as recalculation, a changed-input test and reopening the file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Map actual A, B and C definitions including outstanding options and deemed issuances; verify exemptions and trigger
     text: Map actual A, B and C definitions including outstanding options and deemed issuances; verify exemptions and trigger.

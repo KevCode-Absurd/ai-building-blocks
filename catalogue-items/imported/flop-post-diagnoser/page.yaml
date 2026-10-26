@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts the failure type first, then picks the fix.
 new_slug: flop-post-diagnoser
 name: Flop post diagnoser
-summary: Paste a post that did badly. Get why it failed, whether unseen, skipped
-  or ignored, and what to change.
+summary: Find out why your X or LinkedIn post flopped. Paste the post and its numbers to learn if it was unseen, skipped or ignored, and get one fix.
 job: grow-social
 headline: Flop post diagnoser
-subhead: A clear answer on why one X or LinkedIn post did badly, and what to
-  change next time. It separates the three ways a post fails, because each needs
-  a different fix.
+subhead: A clear answer on why one X or LinkedIn post did badly, and what to change next time. It separates the three ways a post fails, because each needs a different fix.
 explain: |
   A clear answer on why one X or LinkedIn post did badly, and what to change next time. It separates the three ways a post fails, because each needs a different fix.
 
@@ -18,6 +15,10 @@ when:
   - You do not know if people never saw it or just ignored it.
   - You are about to rewrite a post and want to know what to fix.
   - You want one specific post reviewed, not your whole account.
+not_for:
+  - "You want your whole account reviewed: ask a person who knows social media, or look at your platform's own analytics."
+  - "You cannot get impressions for the post: the skill can only read the writing, so ask a friend for honest feedback instead."
+  - "You want a new post written from scratch: write the draft yourself or ask your AI for a plain first draft."
 you_give:
   - Post text
   - Impressions, likes, comments and reposts
@@ -29,7 +30,27 @@ you_get:
   - Specific changes to try
   - Honest note when numbers are missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Paste your post text. Add its impressions, likes or reactions, comments and reposts.
+  - Say which platform it was on. Say what a normal post gets for you, if you know.
+  - Read the failure type first. Check the evidence matches your numbers.
+  - Try the one change on your next post. Do not rewrite the old post unless the verdict says the writing was the issue.
+output_sample:
+  input:
+    - Your post text
+    - Its impressions, likes or reactions, comments and reposts
+    - The platform, X or LinkedIn
+    - What a normal post of yours gets (optional)
+  output:
+    - name: Failure type
+      contains: Whether the post was barely shown, seen and skipped, or read but not acted on.
+    - name: Evidence
+      contains: The numbers you gave, set against what you say is normal for your account.
+    - name: What this rules out
+      contains: The parts that are fine, such as a hook that did not need a rewrite.
+    - name: Writing check
+      contains: A look at the first line, buried detail and the ask, only when people saw the post and scrolled.
+    - name: Variance note
+      contains: An honest line if the post may simply have had a bad day.
+    - name: One change
+      contains: A single thing to do differently next time and whether it will matter a lot or a little.

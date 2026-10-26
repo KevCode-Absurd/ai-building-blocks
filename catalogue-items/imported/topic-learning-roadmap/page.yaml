@@ -2,19 +2,59 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: topic-learning-roadmap
 name: Topic learning roadmap
-summary: Share a topic and what you know. Get a reading path with clear
-  milestones and checks for each step.
+summary: Build a learning roadmap for any new topic. Share your goal and what you know. Get milestones, readings and checks for each step.
 job: study-and-practice
 headline: Topic learning roadmap
-subhead: Bring a topic, your goal and any course notes. Get concepts in the
-  order they build on each other, with readings and checkpoints. Suggested
-  readings need web search to be verified.
+subhead: Bring a topic, your goal and any course notes. Get concepts in the order they build on each other, with readings and checkpoints. Suggested readings need web search to be verified.
+explain: |
+  Learning a new field goes wrong when you read things out of order. This topic learning roadmap puts the ideas in the order they build on each other, so each step has what it needs from the one before.
+
+  It states your goal and your background first, then lists what you need to know before you start. You get three to six milestones, each with a short intro, readings and a checkpoint of things you should be able to do. It closes with where the field stands now and a short list of key terms.
+
+  Readings are only confirmed real if your AI can search the web. Without that, they are marked unverified, and you should check them before you rely on them.
 when:
   - You need to learn an unfamiliar topic for a course or work project.
+not_for:
+  - "You want one paper explained: use the Paper reader, or ask your AI to summarize it in plain words."
+  - "You want to compare several papers you have read: use the Literature map."
+  - "You want to test what you learned: use the Understanding check."
+you_give:
+  - "The topic you want to learn"
+  - "Your goal: adopt a technique at work, start research or understand the basics"
+  - "What you already know about it (optional)"
+  - "Course notes, slides or articles you have (optional)"
+you_get:
+  - "Your goal, background and topic boundary, written down as assumptions"
+  - "What you need to know first, and how to fill each gap"
+  - "Three to six milestones in order, each with an intro and readings"
+  - "A checkpoint for each milestone, in things you should be able to do"
+  - "Where the field is now, with current approaches and open problems"
+  - "Five to ten key terms with short definitions"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your course material and search for
-    readings, or mark readings it cannot verify.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - "Say the topic you want to learn and your goal: adopt it at work, start research, or understand the basics."
+  - Add what you already know. Paste or upload any course notes or slides.
+  - Turn on web search if your AI has it. It uses search to confirm each reading is real. Without it, readings are marked unverified.
+  - Check the readings marked unverified yourself before you rely on them.
+  - Work through one milestone at a time. Use the Understanding check to test each checkpoint.
+output_sample:
+  input:
+    - The topic you want to learn
+    - "Your goal: adopt a technique at work, start research, or understand the basics"
+    - What you already know about it (optional)
+    - Course notes, slides or articles you have (optional)
+  prerequisites:
+    - An AI that can search the web, so it can confirm readings exist. Without it, readings are marked unverified.
+  output:
+    - name: Assumptions
+      contains: Your goal, background and topic boundary, stated when you did not give them.
+    - name: Prerequisites
+      contains: What you need to know first, why it matters, and how to fill each gap.
+    - name: Milestones
+      contains: Three to six steps in dependency order, each with a short intro, readings and a checkpoint.
+    - name: Checkpoint
+      contains: Concrete things you should be able to do before moving to the next milestone.
+    - name: Where the field is now
+      contains: Current approaches, open problems and active debates in the topic.
+    - name: Key vocabulary
+      contains: Short definitions of five to ten terms the readings assume you know.

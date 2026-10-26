@@ -28,7 +28,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Fix what the review found and rerun your analysis where it asks for it. Then pick your journal or conference and bring the revised paper back.
 
-4. **Fit the paper to the journal.** Use the skill `journal-submission-formatter`. Give it the document from the steps before. Starts from the revised paper and checks it against the journal's current rules.
+4. **Fit the paper to the journal.** Use the skill `journal-submission-formatter`. Uses your revised paper (step 2's draft after you fix what step 3's review found), not the review itself. Checks it against the journal's current rules and hands back the fitted paper.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

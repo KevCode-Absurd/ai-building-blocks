@@ -1,52 +1,95 @@
 new_slug: make-a-realistic-plan-for-a-busy-week
 name: Make a realistic plan for a busy week
 headline: Make a realistic plan for a busy week
-summary: Share the source files. Get a capacity-aware week plan with trade-offs and a review point.
+summary: Turn last week's calendar and this week's to-do list into a realistic week plan with hours that fit, what to cut, and a midweek check.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A capacity-aware week plan with trade-offs and a review point. Share last week actual calendar or activity log, upcoming commitments, fixed events, effort estimates and top priorities. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it last week's calendar, this week's fixed events and your to-do list with time guesses. Your AI works out how many hours you really have, picks the work that matters most and builds a week plan that fits.
 explain: |-
-  A capacity-aware week plan with trade-offs and a review point.
+  Most weekly plans assume a full week of free hours. Last week's calendar shows how many you really got. This workflow builds a realistic weekly plan from that number, not from hope.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Scheduled work fits available hours and contains room for uncertainty; proposed cuts stay explicit. Missing tools or evidence stay visible in the final summary.
+  Step 1 sorts last week's hours into time you chose, time others took and time habit took. That sets your real hours for this week. Step 2 picks the big tasks, names three priorities and checks the total against those hours. Step 3 turns the first day into a dated brief you can start on.
+
+  The difference from a plain to-do list is that the cuts are written down. Whatever does not fit is named, with the reason, so you decide what drops instead of finding out on Friday.
 when:
-  - You need a capacity-aware week plan with trade-offs and a review point.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - It is Sunday night and your to-do list is longer than the week.
+  - Last week ended with half the plan undone and you want to know why.
+  - Someone asks for something new and you need to see what it pushes out.
+  - Travel, school holidays or a launch leave you fewer hours than usual.
+not_for:
+  - You only need a plan for one day or one meeting. Use the Executive daily briefing writer.
+  - You want to pick priorities from a list and have no calendar to share. Use the Week priority picker.
+  - You only want to see where last week's time went, with no new plan. Use the Weekly time audit planner.
+  - The work runs for months and needs risks tracked. Use the Project risk and portfolio manager.
 you_give:
-  - Last week actual calendar or activity log, upcoming commitments, fixed events, effort estimates and top priorities.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Last week's calendar, or a note of how you spent your hours (from your calendar app or your own log)
+  - This week's fixed events, such as meetings, school runs or travel
+  - Your to-do list with a rough time guess for each task
+  - Your one to three goals for the week
+  - The hours you can really work, if they differ from your calendar (optional)
 you_get:
-  - A capacity-aware week plan with trade-offs and a review point.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - Your real hours for this week, based on how last week went
+  - Three weekly priorities, each with protected time
+  - A week plan with tasks placed on days, and room left for surprises
+  - A list of tasks to cut, move or hand off, each with a reason
+  - A dated brief for your first day, and a midweek review point
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Open Claude, ChatGPT or Gemini. Pick one that can read files if you want to attach a calendar export.
+  - Add the workflow pack, then paste or attach last week's calendar, this week's fixed events, your task list with time guesses and your goals.
+  - After step 1, check the hours count. Does "chosen by you" match how last week felt? Fix any event it sorted wrongly.
+  - After step 2, check that the big tasks add up to less than your real hours. If they do not, ask which task to cut.
+  - Read the first-day brief and fix every MISSING line. Nothing is booked for you, so add the events to your own calendar.
 how_it_works:
   - title: Weekly time audit planner
-    text: Audit last week actual time as evidence for realistic capacity, then compare it with the upcoming fixed commitments.
+    text: "Sorts last week's hours into chosen, taken by others and taken by habit, then sets this week's real hours after fixed events. Hands step 2 one number: the hours you can plan. Check before moving on: the sorted hours match your calendar, and any gap is listed as not accounted for."
   - title: Week priority picker
-    text: Choose the work that best serves the stated goals and identify what must wait.
+    text: "Takes your task list and goals and picks the big tasks, three priorities and what to put off. Hands step 3 the chosen work with its hours. Check before moving on: planned hours stay under your real hours, with a buffer you can see."
   - title: Executive daily briefing writer
-    text: Turn the chosen commitments into a dated brief and a manageable first day.
+    text: Turns the chosen work and your fixed events into a dated brief for day one. It lists meetings, due work and decisions in the order you will meet them. The workflow then adds the week plan, the cuts and a midweek review point.
 output_shape: |-
-  Scope and source coverage
-  A capacity-aware week plan with trade-offs and a review point.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  REAL HOURS THIS WEEK   <hours you can plan> of <hours open on the calendar>, from last week's count
+  LAST WEEK IN HOURS     chosen <h> | taken by others <h> | taken by habit <h> | not accounted for <h>
+  THREE PRIORITIES       1 <task> | 2 <task> | 3 <task>, each with protected time
+  WEEK PLAN              <day> <time> <task> | <hours> | <priority or other>
+  BUFFER                 <hours left unplanned>
+  CUT OR HAND OFF        <task> | cut, hand off or move to <week> | <reason>
+  FIRST DAY              <time> <meeting, task or decision>
+  REVIEW POINT           <day and time> to compare hours used with the plan
+  MISSING                <facts that would change the plan>
+  CHECKS MISSED          <one line each, or none>
+output_sample:
+  input:
+    - Last week's calendar or time log
+    - This week's fixed events
+    - Your task list with rough time guesses
+    - Your goals for the week (up to three)
+  prerequisites:
+    - An AI that can read files, if you attach a calendar export (optional)
+  output:
+    - name: Real hours this week
+      contains: The hours you can truly plan, worked out from how last week went.
+    - name: Last week in hours
+      contains: Hours sorted into chosen by you, taken by others and taken by habit.
+    - name: Three priorities
+      contains: The work that best serves your goals, each with protected time.
+    - name: Week plan
+      contains: Tasks placed on days so the total fits your real hours, with a buffer left.
+    - name: Cut or hand off list
+      contains: Each task that does not fit, with the reason and what to do with it.
+    - name: First day brief
+      contains: Day one with times, meetings, due work and decisions in order.
+    - name: Review point
+      contains: A midweek time to compare hours used with the plan.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps that could change the plan, and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Scheduled work fits available hours and contains room for uncertainty; proposed cuts stay explicit.
+  - what: Your hours
+    how: Give two or three past weeks instead of one. The real-hours number gets steadier.
+  - what: A new request
+    how: Add the request to your task list and run again. The plan shows what it pushes out.
+  - what: A lighter week
+    how: Tell it you can work fewer hours, such as school holidays. It plans to the lower number.
 judge:
   - Scheduled work fits available hours and contains room for uncertainty; proposed cuts stay explicit.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -64,11 +107,20 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: Claude, ChatGPT or Gemini can read a calendar export or a pasted week, so the hours are counted, not guessed.
+    - name: Your calendar app
+      why: Copy a week of events or export them. The AI cannot see your calendar unless you share it.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Two or three past weeks of calendar, for a steadier hours count.
+    - A note of the tasks you keep moving forward week after week.
 terms:
+  - term: Real hours
+    meaning: The hours you can plan for work, after fixed events and the time last week showed you lose.
+  - term: Protected time
+    meaning: A block on your calendar kept for one priority, so meetings do not take it.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+next:
+  - trace-why-work-keeps-missing-deadlines
+  - prepare-a-team-absence-handover

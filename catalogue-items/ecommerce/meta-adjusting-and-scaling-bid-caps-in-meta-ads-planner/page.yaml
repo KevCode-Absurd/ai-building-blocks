@@ -1,25 +1,59 @@
 new_slug: meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner
 name: Meta bid cap adjustment planner
-summary: Review Meta bid caps against delivery and business targets. Get proposed adjustments, a test window and clear stop rules.
+summary: Check your Meta bid caps against real results and your cost limits. You get small bid changes to test, a review date and clear rules for when to stop.
 job: launch-and-scale-ads
 headline: Meta bid cap adjustment planner
-subhead: Review Meta bid caps against delivery and business targets. Get proposed adjustments, a test window and clear stop rules.
+subhead: Paste your Meta campaign settings, recent results and cost target. Your AI checks if the bid cap is really the problem. You get small changes to test, with a review date and stop rules.
 explain: |-
   Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
 
   A bid cap is an auction constraint. Realized CPA, delivery and contribution can change; none is guaranteed by the cap.
 when:
-  - You need a campaign plan with proposed settings and review points.
+  - Your ad set spends well under its budget and you think the bid cap is too low.
+  - Your cost per purchase is above target and you want to know if the cap should change.
+  - You want to raise a cap in small steps without losing control of spend.
+  - You made a bid change last week and need to decide whether to keep it.
+not_for:
+  - Your campaign has no purchase tracking or no purchase objective. Fix your tracking first, with a person who manages your pixel or Conversions API setup.
+  - Your ads get few clicks or your page does not sell. Review the ad creative or the landing page with a teammate, because a bid change will not fix that.
+  - You want the AI to change live settings for you. This plan only proposes changes. You make them in Meta Ads Manager.
 you_give:
-  - Campaign settings, dated results, target economics and budget limits
-  - The exact change you want and actions you authorize
+  - Your campaign and ad set settings, including bid caps and budgets
+  - "Your dated results by ad set: spend, purchases and cost per purchase"
+  - Your target cost per purchase, set by the owner
+  - Your budget limits and how much extra spend you accept
+  - Your profit margin per sale (optional)
 you_get:
-  - A campaign plan with proposed settings and review points
-  - Missing inputs and a bounded verification plan
+  - A proposed bid cap for each ad set, with the size of the change
+  - The most extra spend the plan allows
+  - A test window and the date to review it
+  - Stop rules for when to hold or revert
+  - The old settings, saved so you can roll back
+  - A list of missing inputs
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code or paid tool is needed.
+  - Paste your campaign settings, dated results, cost target and budget limits.
+  - Say which change you want and which actions you approve. The AI only plans. It cannot change Meta for you.
+  - Check the plan against your own numbers. Make sure the dates and currency match.
+  - Make the change in Meta Ads Manager, and write down the old settings first.
+  - After the test window, paste in the new results and ask the AI whether to hold, revert or test again.
+output_sample:
+  input:
+    - Your campaign and ad set settings, including current bid caps and budgets
+    - "Your dated results by ad set: spend, purchases and cost per purchase"
+    - Your target cost per purchase and your budget limits
+    - The change you want and which actions you approve
+  output:
+    - name: Campaign plan
+      contains: Each ad set with its current bid cap, the proposed cap and the change, kept within your budget and risk limits.
+    - name: Extra spend and test window
+      contains: The most extra spend the plan allows and how many days to wait before judging the result.
+    - name: Stop criteria
+      contains: The signs that mean you should hold, revert or try a different test.
+    - name: Prior settings
+      contains: The old values to restore if you need to roll the change back.
+    - name: Missing inputs and verification plan
+      contains: What the AI could not confirm, and the checks to run after the change.
 how_it_works:
   - title: Step 1
     text: Confirm the account, purchase objective, active bid strategy, recent delivery, actual bid settings, budget limits and owner-approved acquisition target. A bid cap limits auction bidding; it does not guarantee a realized cost per purchase or profitability.

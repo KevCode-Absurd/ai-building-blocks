@@ -1,6 +1,6 @@
 new_slug: defensive-price-ceiling-tester
 name: "Defensive price ceiling tester"
-summary: "Paste a company's earnings, book value and share price. Get a pass or fail on three price ceilings, with every sum shown."
+summary: "Test a stock's price against three ceilings. Paste share price, earnings and book value, and get pass or fail with every sum shown."
 job: money-and-investing
 thinking: medium
 thinking_why: "The sums are fixed and small. The care is in using the cleaned earnings and not letting a good story soften a failed ceiling."
@@ -17,6 +17,10 @@ when:
   - A company passed the quality tests and you want to know if its price is sensible.
   - A popular company seems to have a great record and you want to know how much you would pay for hope.
   - You are comparing two companies and want one clear price test for both.
+not_for:
+  - "You want to know if the company itself is sound: check its earnings and debt first, for example with the Earnings padding detector, then come back here."
+  - "You need a buy or sell call or personal advice: talk to a licensed financial adviser, as this only tests price."
+  - "The company has under three years of earnings, or is a bank or insurer: use a simple read of its annual report, as these ceilings fit poorly."
 
 you_give:
   - The share price
@@ -35,6 +39,27 @@ how_to_use:
   - Paste the price and the earnings and book value figures.
   - Use the restated earnings from "Earnings padding detector" if you have them.
   - Read the failed ceilings first.
+output_sample:
+  input:
+    - The share price
+    - Earnings per share for the last seven years
+    - Book value per share
+    - What high-grade bonds pay now (optional)
+  output:
+    - name: Ceilings table
+      contains: Price against three-year earnings, price against book value, and the two multiplied, each with the sum and a pass or fail.
+    - name: Seven-year and latest-year test
+      contains: Price against seven-year average earnings and against the latest year, each with its ceiling and a pass or fail.
+    - name: Earnings yield
+      contains: Average earnings divided by price, set beside the safe bond yield, or marked missing if no bond yield is given.
+    - name: Result
+      contains: One line saying the price passes all tests, or listing the tests it fails.
+    - name: How far off
+      contains: For each failed test, the price at which it would pass.
+    - name: Missing
+      contains: Any figure you did not give, marked so nothing is made up.
+    - name: Checks missed
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Averages the earnings

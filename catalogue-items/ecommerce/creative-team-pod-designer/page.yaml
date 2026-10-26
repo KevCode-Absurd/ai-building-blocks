@@ -1,6 +1,6 @@
 new_slug: creative-team-pod-designer
 name: "Creative team pod designer"
-summary: "Give it your team and review process. Get a two-person pod design, review rules and a fast-trend budget."
+summary: "Fix slow creative approvals. Give it your team and review steps. You get two-person pods, review rules and a trend budget plan."
 job: lead-people
 thinking: medium
 thinking_why: "It turns your team facts into rules and a plan, which a mid-range model does well."
@@ -17,6 +17,10 @@ when:
   - Ads or content take weeks to approve and you miss trends.
   - Many people comment on each post and the result gets watered down.
   - You are building a small creative team and want roles that fit.
+not_for:
+  - "You run a large company that needs legal and brand sign-off on every post: keep your full review and ask your legal lead which parts can be lighter."
+  - "You only need one fast ad for a health, money or other regulated claim: send it through full legal review, not a lighter tier."
+  - "You want to run a hard talk with your team about the plan: write it yourself, then use the Disagree-and-commit note writer."
 
 you_give:
   - Who is on your team and what each person does
@@ -35,6 +39,27 @@ how_to_use:
   - Describe how a post gets approved today, with the number of reviewers and the wait.
   - Pick a trend budget and hours you would approve without a meeting.
   - Try the new rules on one campaign before changing everything.
+output_sample:
+  input:
+    - Who is on your team and what each person does
+    - How creative is approved now, and by how many people
+    - The measurable target for each role (optional)
+    - A trend budget and hours you can approve in advance (optional)
+  output:
+    - name: POD DESIGN
+      contains: Each pod of two, what the analytical person owns, what the creative owns, and who owns the result.
+    - name: MEDIA AND STRATEGY
+      contains: The one person who buys media and plans creative, and the designer or creator who backs them.
+    - name: REVIEW RULES
+      contains: Two or three reviewers, who decides when a result can be measured, and the full and lighter review tiers.
+    - name: TREND SLA
+      contains: Your trend budget, deadline, the named creator and the person who can say yes.
+    - name: WEEKLY FLOW
+      contains: Where the idea board lives, who writes the weekly report, the ideas channel and the quality bar.
+    - name: CHECKS MISSED
+      contains: Any check the plan failed, or none.
+    - name: MISSING
+      contains: Any input you did not give, marked so nothing is made up.
 
 how_it_works:
   - title: Builds pods of two

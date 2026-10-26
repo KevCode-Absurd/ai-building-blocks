@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It guides choices with a set method.
 new_slug: hardware-project-mentor
 name: Hardware project mentor
-summary: Describe your sensor or device idea. Get a board pick, where readings
-  go and a phased build plan.
+summary: Plan your sensor or device idea with a hardware project mentor. Get a board pick, a plan for where readings go, and a breadboard build plan.
 job: build-product
 headline: Hardware project mentor
-subhead: "Describe what the device should do, what you have built before, your
-  budget and timeline. It picks a board and toolchain with one alternative, and
-  decides where readings end up: phone, PC, dashboard or alert. You get a phased
-  build plan from breadboard up, with costs, time and the top risks."
+subhead: "Describe what the device should do, what you have built before, your budget and timeline. It picks a board and toolchain with one alternative, and decides where readings end up: phone, PC, dashboard or alert. You get a phased build plan from breadboard up, with costs, time and the top risks."
 explain: |
   A plain-language plan for a sensor or device idea, from first breadboard to something you could manufacture. You describe what you want to build and what you have built before. The mentor answers at your level, not above it.
 
@@ -19,6 +15,10 @@ when:
   - You want to see sensor readings on your phone but not sure how.
   - You are new to electronics and need a first project at the right size.
   - You need a rough cost and time estimate before you start buying parts.
+not_for:
+  - "You need a mains-powered or safety-critical design: ask a qualified electrical engineer, because this mentor only plans low-power breadboard builds."
+  - "You want a finished product run, a production PCB or certification help: hire a PCB designer or a contract manufacturer. This skill stops at a breadboard build unless you ask for more."
+  - "You only have a narrow part question, like which regulator to use: ask your AI that question directly."
 you_give:
   - What you want the device to do
   - What you have built before
@@ -30,7 +30,30 @@ you_get:
   - A phased build plan from breadboard up
   - Costs, time and the top risks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. It needs no code running, files or paid tools.
+  - Tell your AI what the device should do, what you have built before, and your country, budget and timeline.
+  - Answer any questions it asks, one at a time. It may ask about power, where the device sits and who views the readings.
+  - Check the board pick, the cost table and the risks. Ask for a cheaper or simpler option if one looks too much.
+  - Buy the parts and build the breadboard version first. Ask for later stages, like a PCB, only when it works.
+  - Note that some ways to see readings away from home cost money, such as Nabu Casa or a hosted dashboard beyond its free tier.
+output_sample:
+  input:
+    - What you want the device to do
+    - What you have built before, in code and in hardware
+    - Your country, budget and timeline
+    - Where and how the device is powered, and who views the readings (optional)
+  output:
+    - name: Understanding
+      contains: One line that repeats your goal back, left out when your brief was already clear.
+    - name: Recommended stack
+      contains: A table with the main board and toolchain, one alternative, and why each fits you.
+    - name: Where the data is seen
+      contains: "How readings reach you: phone, PC, dashboard or alert, and what to avoid."
+    - name: Time and cost
+      contains: A small table of rough cost and time ranges, with any running costs.
+    - name: MVP plan
+      contains: Three to five short steps for a working breadboard build, each with a way to know it works.
+    - name: Next actions
+      contains: Three things to do next.
+    - name: Risks
+      contains: The two to four biggest risks, such as power, supply, debugging or learning curve.

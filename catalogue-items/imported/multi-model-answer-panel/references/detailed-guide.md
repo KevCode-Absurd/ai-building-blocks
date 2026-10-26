@@ -97,8 +97,8 @@ MODEL_MAP = {
 After gathering input, run this script to get responses from all selected models in parallel:
 
 ```bash
-QUERY="USER_QUERY_HERE"
-MODELS='["accounts/fireworks/models/glm-5", "accounts/fireworks/models/deepseek-v3p1"]'
+export QUERY="USER_QUERY_HERE"
+export MODELS='["accounts/fireworks/models/glm-5", "accounts/fireworks/models/deepseek-v3p1"]'
 
 python3 << 'PYEOF'
 import os
@@ -202,7 +202,7 @@ PYEOF
 Each model reviews and ranks the anonymized responses from Phase 1:
 
 ```bash
-SESSION_DIR="/tmp/llm-council/TIMESTAMP_HERE"
+export SESSION_DIR="/tmp/llm-council/TIMESTAMP_HERE"
 
 python3 << 'PYEOF'
 import os
@@ -334,8 +334,8 @@ PYEOF
 The Chairman model receives all responses and rankings, then produces the final synthesis:
 
 ```bash
-SESSION_DIR="/tmp/llm-council/TIMESTAMP_HERE"
-CHAIRMAN_MODEL="accounts/fireworks/models/glm-5"
+export SESSION_DIR="/tmp/llm-council/TIMESTAMP_HERE"
+export CHAIRMAN_MODEL="accounts/fireworks/models/glm-5"
 
 python3 << 'PYEOF'
 import os
@@ -445,7 +445,7 @@ PYEOF
 Read all saved files and display the complete council deliberation:
 
 ```bash
-SESSION_DIR="/tmp/llm-council/TIMESTAMP_HERE"
+export SESSION_DIR="/tmp/llm-council/TIMESTAMP_HERE"
 
 python3 << 'PYEOF'
 import os

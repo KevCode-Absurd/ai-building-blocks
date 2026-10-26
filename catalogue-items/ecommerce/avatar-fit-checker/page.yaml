@@ -1,6 +1,6 @@
 new_slug: avatar-fit-checker
 name: "Avatar fit checker"
-summary: "Paste your buyer notes, ad and page. Get a fit score out of 100 and every mismatch."
+summary: "Check if your buyer description is specific enough, then see where your ad and page miss that buyer. Get a fit score out of 100 and rewrites."
 job: understand-customers
 thinking: high
 thinking_why: "It judges a buyer description, an ad and a page against many checks and has to spot small mismatches in wording. A stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You wrote a buyer description and want to know if it is specific enough to write ads from.
   - Your ads get clicks, but the page loses people, and you suspect the page tells a different story.
   - You are about to test a new buyer group and want ad, page and photos to match before you spend.
+not_for:
+  - "You have no buyer quotes or reviews yet: use the Forum and review avatar digger first, because this skill checks evidence and does not find it."
+  - "You want new hooks or ad copy written from scratch: use an ad copywriting skill, then bring the result here to check."
+  - "You want to find new buyer groups to test: use the Buyer identity segment finder."
 
 you_give:
   - The buyer description, with quotes or sources
@@ -36,6 +40,31 @@ how_to_use:
   - Paste your ad text and your page text. Attach the product photos so it can see them.
   - Read the Stage 1 result first. Fix the buyer description before you rewrite any copy.
   - Use the rewrite list, then run the check again on the new versions.
+output_sample:
+  input:
+    - Your buyer description, with quotes or sources
+    - Your ad text or script (optional)
+    - Your product or landing page text, and what the photos show (optional)
+    - Your offer (optional)
+    - Call transcripts, reviews or survey answers (optional)
+  prerequisites:
+    - An AI chat that can read attached images, if you want the photos checked
+    - Buyer quotes from reviews, forums or calls, or the Forum and review avatar digger result
+  output:
+    - name: Stage 1 buyer description
+      contains: A pass or fail on the 30-second test and each of the seven buyer fields, with the evidence or a guess flag.
+    - name: Limiting beliefs and tired promises
+      contains: The hidden beliefs your buyer holds and the promises they are sick of hearing, plus a next research step per gap.
+    - name: Stage 2 fit by part
+      contains: A 0, 5 or 10 score for the hook, text, photos, page and offer, with each mismatch.
+    - name: Ad and page checks
+      contains: Pass or fail on ad-to-page match, the outsider test, belief order and wording for the buyer's age.
+    - name: Score
+      contains: A fit score out of 100, with the sum shown and any part that was not scored.
+    - name: Rewrite list
+      contains: Each fix shows where it goes, the current line and a replacement using the buyer's own words.
+    - name: Next and missing
+      contains: The one most useful next step, and what extra input would improve the check.
 
 how_it_works:
   - title: Runs the 30-second test

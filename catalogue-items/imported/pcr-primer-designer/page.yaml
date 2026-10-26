@@ -2,23 +2,24 @@ thinking: medium
 thinking_why: It runs a design tool, then checks each pair against set rules.
 new_slug: pcr-primer-designer
 name: PCR primer designer
-summary: Give it a target sequence. Get primer pairs checked for temperature,
-  off-target matches and clear coordinates.
+summary: Design and check PCR primer pairs from your target sequence. Each pair is screened for melting temperature, off-target products and exact coordinates.
 job: research-topics
 headline: PCR primer designer
-subhead: Give it a target sequence. Get primer pairs checked for temperature,
-  off-target matches and clear coordinates. Bring target sequence or
-  coordinates. Use the result to plan your next step.
+subhead: Give your AI a target sequence and a reference genome. It designs primer pairs, checks their melting temperature and structure, and searches your genome for unwanted products. You get ranked pairs with exact product coordinates. This skill needs code running on your computer.
 explain: |
   Primer pairs you can trust, with the proof behind them. Give a target sequence and get candidate primers with melting temperature, secondary structure, off-target matches and exact product coordinates checked, not just a good-looking score.
 
   The skill first pins down the assay: template, chemistry, reference genome and intended products. It then designs primers with Primer3, calculates thermodynamics with supplied tools, and screens every possible product across your search scope. It handles exon junctions, tailed cloning primers, multiplex panels and checking pairs you already own. Degenerate, bisulfite and probe assays are flagged as needing a special route. Local tools and a reference database are needed.
 when:
-  - You need a primer pair for a gene and want to know it will not amplify
-    anything else.
-  - You have existing primers and want them checked against a genome.
-  - You are designing an RT-qPCR assay that spans an exon junction.
+  - You need a primer pair for a gene and want to know it will not copy anything else.
+  - You have primers on the shelf and want them checked against a genome.
+  - You are building an RT-qPCR assay that spans an exon junction.
   - You are adding cloning tails and need the final product rebuilt.
+  - You are planning a multiplex panel and need to check pairs against each other.
+not_for:
+  - "You need degenerate, bisulfite, probe or modified-base primers: ask a molecular biologist or use a specialist design tool, as this skill only handles plain A, C, G, T primers."
+  - "You have no way to run code or load a reference genome: use the free NCBI Primer-BLAST web tool instead."
+  - "You need proof the assay works in the lab: this skill only checks primers on the computer, so test them on the bench."
 you_give:
   - Target sequence or coordinates
   - Species and reference genome
@@ -31,8 +32,34 @@ you_get:
   - Off-target product screen
   - Exact product coordinates and sequence
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Check your setup first. You need Python 3.11 or newer and the primer3-py 2.3.1 package. NCBI BLAST+ is optional.
+  - Use an AI that can run code and read files, because a chat-only AI cannot run the scripts. Download the skill folder and add it to that AI.
+  - Give your AI the target sequence or coordinates, species, reference genome, assay type and product size range. Add existing primers if you have them.
+  - Ask your AI to follow this skill. It will confirm the assay details before it designs anything.
+  - Read the specificity status for each pair. Fix any pair marked as an off-target product or an unfound target.
+  - Treat the result as a computer check only. Test your chosen pairs in the lab.
+output_sample:
+  input:
+    - Your target sequence or its coordinates
+    - Your species and reference genome
+    - Your assay type and chemistry, such as PCR or RT-qPCR
+    - Your product size range
+    - Primers you already own (optional)
+  prerequisites:
+    - An AI that can run code and use files on your computer
+    - Python 3.11 or newer and the primer3-py 2.3.1 package
+    - A reference genome file for the off-target search
+    - NCBI BLAST+ installed (optional, for the BLAST search)
+  output:
+    - name: Assay contract
+      contains: The template, chemistry, reference genome, intended products and search scope the checks are based on.
+    - name: Primer candidates
+      contains: Primer pairs written 5-prime to 3-prime, with tails added when you want cloning primers.
+    - name: Thermodynamics report
+      contains: Melting temperature and hairpin, self-dimer and pair-dimer checks for each full oligo.
+    - name: Specificity report
+      contains: Every product found in your reference, marked as intended or off-target, with a clear status.
+    - name: Product coordinates and sequence
+      contains: The exact position and rebuilt sequence of each intended product, including any tails.
+    - name: Validation notes
+      contains: What the checks show, what they do not prove, and what to test in the lab.

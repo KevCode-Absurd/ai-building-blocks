@@ -1,6 +1,6 @@
 slug: narrated-video-maker
 name: Narrated video maker
-summary: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+summary: "Turn a Markdown document into narrated slides and a voiceover video. Get slide and script files, and an MP4 on a computer that can run code."
 category: general
 boards: []
 type: skill

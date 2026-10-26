@@ -1,6 +1,6 @@
 new_slug: sales-copy-opening-writer
 name: "Sales copy opening writer"
-summary: "Paste your buyer, offer and proof. Get two openings to test, from neighbouring lead types."
+summary: "Write the opening of your sales copy: paste your buyer, offer and proof, and get two different openings to test against each other."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You're writing an ad, page or email and aren't sure how to start it.
   - You want to test two openings that differ in approach, not in wording.
   - Your openings keep starting with the product for buyers who've never heard of you.
+not_for:
+  - You only need a headline for the top of a page. Use the Top of page headline writer.
+  - You want many first lines to scan at once. Use the Ad opening line batch writer.
+  - You have no offer or buyer notes yet. Write them first with the Buyer brief writer.
 
 you_give:
   - A brief on the buyer, how aware they are, what they want and their main doubt
@@ -50,6 +54,28 @@ how_it_works:
     text: Names the promise the close must keep, so the piece ends where its opening pointed.
   - title: Checks the openings
     text: Goes through its own checks, such as two different leads, no fact you didn't supply and every offer with its limit, fixes what it can, and names any it still misses.
+
+output_sample:
+  input:
+    - A brief on your buyer, how aware they are and their main doubt
+    - Your offer, its terms and the proof you can use
+    - What competitors promise (optional)
+    - How much text shows before "see more" (optional)
+  prerequisites:
+    - A buyer brief, from the Buyer brief writer, if you have one (optional)
+  output:
+    - name: "Buyer"
+      contains: How aware the buyer is, and whether the market has heard your promise often.
+    - name: "Opening A"
+      contains: The first opening, the lead type it uses and why it fits this buyer.
+    - name: "Opening B"
+      contains: A second opening from the next lead type along, with the reason for the step.
+    - name: "Close must keep"
+      contains: One line naming the promise the end of the piece has to keep.
+    - name: "Skipped"
+      contains: Any lead type left out because you gave no proof for it.
+    - name: "Checks missed"
+      contains: One line for each of the skill's own checks the openings failed, or none.
 
 output_shape: |
   BUYER: <awareness>, market <fresh / heard it often>

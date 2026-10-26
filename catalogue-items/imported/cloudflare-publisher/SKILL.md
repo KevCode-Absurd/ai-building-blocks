@@ -7,9 +7,38 @@ description: Deploy applications and infrastructure to Cloudflare using Workers,
 
 Consolidated skill for building on the Cloudflare platform. Use decision trees below to find the right product, then load detailed references.
 
+## When not to use (added by AI Blocks)
+
+- Your site is a plain folder of pages and you already host it somewhere that works. Moving it adds risk for no gain.
+- You only want to write the site's code or copy. Use a build skill first, then come back to publish.
+- You need a database or login system designed from scratch. Plan that first; this skill picks and deploys, it does not design your product.
+
+## Before you deploy (added by AI Blocks)
+
+Ask once for anything missing. Never guess.
+
+1. The project folder, and what it does (a static site, an app that runs code, or an app that stores data).
+2. Which Cloudflare account to use. Run `npx wrangler whoami` and read the account name back to the user.
+3. Whether the user has a Cloudflare login or an API token. Never ask the user to paste a token into the chat. Tell them to run `wrangler login` or set `CLOUDFLARE_API_TOKEN` on their own machine.
+4. **Confirm before you publish.** Say the account, the project name, the product and the public address it will get. Wait for a yes. A deploy makes the site public.
+5. **Cost.** Some products, such as R2, Queues and Containers, may need a paid plan or a card on file. Check the Cloudflare pricing page and tell the user before you add one.
+
+If any of 1 to 3 is missing, stop and list what you need. Do not deploy a guess.
+
+## Output (added by AI Blocks)
+
+When you finish, report these four things:
+
+1. **Live URL.** The address the deploy printed. If none, say "no URL yet".
+2. **Product used.** Workers, Pages or another product, and why it fit.
+3. **Command run.** The exact deploy command, and the account it ran against.
+4. **Errors left.** Any warning or failure still open, with the next fix. If all went well, say "none".
+
+Then give a next step: open the URL, check the pages that matter, and set up a custom domain or a build on each Git push if they want one.
+
 ## Prerequisites
 
-- When sandboxing blocks the deployment network calls, rerun with `sandbox_permissions=require_escalated`.
+- If your AI tool blocks network calls from its sandbox, stop and tell the user. Ask them to allow it or run the command themselves. Never raise your own permissions without the user saying yes first.
 - The deployment might take a few minutes. Use appropriate timeout values.
 
 ## Authentication (Required Before Deploy)
@@ -213,12 +242,10 @@ Need IaC? → pulumi/ (Pulumi), terraform/ (Terraform), or api/ (REST API)
 
 ## Troubleshooting
 
-### Escalated Network Access
+### Blocked network access
 
-If deployment fails due to network issues (timeouts, DNS errors, connection resets), rerun the deploy with escalated permissions (use `sandbox_permissions=require_escalated`). The deploy requires escalated network access when sandbox networking blocks outbound requests.
-
-Example guidance to the user:
+If the deploy fails with timeouts, DNS errors or connection resets, the cause may be your AI tool's sandbox. Running with wider permissions lets a command reach the network and bypasses the sandbox's limits, so the user must approve it first. Say it plainly and wait for a yes:
 
 ```
-The deploy needs escalated network access to deploy to Cloudflare. I can rerun the command with escalated permissions—want me to proceed?
+The deploy needs wider network access than my sandbox allows. This lets the command reach Cloudflare. Do you want me to rerun it that way, or would you rather run the command yourself?
 ```

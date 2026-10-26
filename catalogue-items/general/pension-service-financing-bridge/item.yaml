@@ -1,17 +1,15 @@
 slug: pension-service-financing-bridge
 name: Pension service and financing bridge
-summary: Separate pension service cost, net interest, remeasurement and funding in a single reconciliation.
+summary: Split a company's pension cost into service cost, net interest and remeasurement, then roll the deficit forward after cash contributions (simple IAS 19 case).
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

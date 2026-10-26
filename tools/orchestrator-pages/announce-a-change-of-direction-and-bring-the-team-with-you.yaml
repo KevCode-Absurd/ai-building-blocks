@@ -1,6 +1,6 @@
 new_slug: announce-a-change-of-direction-and-bring-the-team-with-you
 name: Announce a change of direction and keep the team
-summary: Give it the change and why. Get the memo, a rollout plan, the announcement script and listening talks.
+summary: Announce a change of direction to your team. Give it the change and why. You get a memo, rollout plan, announcement script and listening talks.
 job: lead-people
 thinking: high
 thinking_why: It writes the words a team will judge you by and plans how they hear them. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are moving the company's main effort from one thing to another.
   - A past change was announced once and quietly ignored.
   - A few senior people will dislike the change and you need them on side.
+not_for:
+  - "You are making a small tweak nobody needs to hear about: just tell your team in one message."
+  - "You are announcing layoffs or pay changes: talk to HR and a lawyer first, then use this for the wording."
+  - "You only want one decision recorded with its dissent: use the Team decision and dissent note writer."
 you_give:
   - "The change: what starts, what stops and why"
   - Who it touches most and who will push back
@@ -30,6 +34,25 @@ how_to_use:
   - Paste the change, the reason and who it touches. It writes the memo and the rollout plan.
   - Read the announcement and the hard-question answers. Cut anything you would not stand behind.
   - Hold the listen-first talks before the all-hands, then announce.
+output_sample:
+  input:
+    - "The change: what starts, what stops and why"
+    - Who it touches most and who will push back
+    - The timeline you have
+    - Your notes or a draft (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project, to run the handoff pack
+  output:
+    - name: "Step 1: Memo"
+      contains: A short memo naming the shift, why now, what stops and what each team does differently.
+    - name: "Step 2: Rollout plan"
+      contains: Who hears first, in what setting, how far apart, and what each group can do the week after.
+    - name: "Step 3: Announcement"
+      contains: The leader message, manager talking points, town hall script and honest answers to hard questions.
+    - name: "Step 4: Listening talks"
+      contains: A listen-first talk plan for each person likely to push back, to hold before the announcement.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the memo
     text: Writes a short memo that names the shift, the reason, what stops and what each team does differently, in the manner of Gates's 1995 memo.

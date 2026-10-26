@@ -2,34 +2,78 @@ thinking: medium
 thinking_why: It builds scenarios from known figures.
 new_slug: earnings-week-briefing-writer
 name: Earnings week briefing writer
-summary: Name a company about to report. Get what to watch, scenario cases and
-  the numbers that matter.
+summary: Name a company about to report. Get a one-page earnings preview with consensus, what to watch and bull, base and bear cases.
 job: money-and-investing
 headline: Earnings week briefing writer
-subhead: What to watch before a company reports, set out as scenarios so the
-  result does not catch you off guard. Name the company and you get the numbers
-  that matter and how each outcome could land.
+subhead: Name a company and the quarter. Your AI finds consensus revenue and earnings with sources, lists the numbers to watch and sets out bull, base and bear cases. You get a one-page earnings preview in chat, with every gap marked so nothing unverified looks real.
 explain: |
-  What to watch before a company reports, set out as scenarios so the result does not catch you off guard. Name the company and you get the numbers that matter and how each outcome could land.
+  An earnings preview is a short plan you write before a company reports. It shows what the market expects, which numbers matter most, and how results could land. This skill writes one on a single page.
 
-  The skill starts with context: the quarter, consensus revenue and earnings per share found by web search, the date and time of release, and anything said on the last call. It then builds a watch list tied to this company, including segment revenue, margins, free cash flow and guidance against consensus. It sets out bull, base and bear cases. Indian conventions apply: an April to March year, and crore and lakh units with careful labels.
+  It starts with context: the quarter, consensus revenue and earnings per share, the date and time of the release, and anything said on the last call. Each consensus figure carries its source and date. If your AI cannot find one, the cell says so. It then builds a watch list for this company, such as segment revenue, margins, free cash flow and guidance against consensus. Last, it writes a bull, base and bear case, and a short list of what will decide the reaction.
+
+  For an Indian company it labels periods April to March and uses lakh and crore carefully. The preview is research support. It is not a forecast and not advice.
 when:
   - Results are due soon and you want a one-page plan.
   - You need bull, base and bear cases written down.
-  - You want the guidance numbers that could swing the share price.
-  - You follow Indian companies and need fiscal labels right.
+  - You want to know which guidance numbers could swing the share price.
+  - You follow an Indian company and need fiscal quarter labels right.
+not_for:
+  - You want a data-built report with charts and a source appendix. Use the earnings preview writer for a US ticker, or the earnings preview report builder for India.
+  - The company has already reported. Use the earnings recap writer.
+  - You want a view on whether to buy or sell. This is research support, so use a licensed broker note or adviser.
 you_give:
-  - Company name and quarter
-  - Consensus numbers (optional)
+  - The company name and the quarter
+  - Consensus numbers for revenue and earnings per share (optional, your AI can search for them)
   - Your view or position (optional)
-  - Segments you care about (optional)
+  - Segments or metrics you care about (optional)
+  - An options-implied move, if you have one (optional)
 you_get:
-  - A what-to-watch list
-  - Scenario cases
-  - Consensus estimates and results date
-  - Key metrics and guidance checks
+  - A one-page earnings preview
+  - A consensus table with source and date on every row
+  - A ranked list of numbers to watch
+  - A bull, base and bear table
+  - A list of gaps to check by hand
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Turn on web search if you have it, and paste in this skill.
+  - Name the company and quarter. Paste the consensus numbers if you already have them.
+  - Check the consensus table first. Any row marked unverified or n/a is one you must look up yourself.
+  - Compare the earnings date with the company's investor page.
+  - Read the three cases. Edit any number that does not match your own view.
+  - After the company reports, put the real results beside the three cases.
+output_sample:
+  input:
+    - The company name and the quarter
+    - Consensus numbers for revenue and earnings per share (optional)
+    - Your view or position (optional)
+    - Segments or metrics you care about (optional)
+  prerequisites:
+    - Web search in your AI, or consensus numbers you paste in
+  output:
+    - name: Header
+      contains: Company, quarter, results date and time, and whether the date was confirmed.
+    - name: Consensus table
+      contains: Expected revenue, earnings per share and segment figures, each with its source and date.
+    - name: What to watch
+      contains: Numbers ranked by importance, such as segment revenue, margins, free cash flow and guidance.
+    - name: Scenario table
+      contains: Bull, base and bear cases with revenue, earnings, the driver and a possible share price reaction.
+    - name: Catalyst checklist
+      contains: Three to five things that decide the reaction, such as guidance against consensus.
+    - name: Gaps and caveats
+      contains: Every unverified figure, what to check, and a line that it is not investment advice.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search
+      why: Finds consensus and the results date, and shows where each came from.
+  inputs:
+    - The previous quarter's results release or call summary
+    - Consensus from your broker or data terminal
+terms:
+  - term: Consensus
+    meaning: The average of analyst forecasts for the quarter.
+  - term: Guidance
+    meaning: What the company says it expects for the next quarter or year.
+  - term: Implied move
+    meaning: The size of share price swing that options prices suggest after results.
+  - term: Lakh and crore
+    meaning: Indian units. A lakh is 100,000 and a crore is 10,000,000.

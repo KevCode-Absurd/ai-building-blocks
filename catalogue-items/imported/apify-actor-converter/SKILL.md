@@ -25,6 +25,19 @@ Actorization converts existing software into reusable serverless applications co
 - Wrapping a CLI tool or script as an Actor
 - Migrating a Crawlee project to Apify
 
+## Inputs to Gather First
+
+Before you change anything, make sure you have these. If one is missing, ask once. Do not guess.
+
+- The project folder, or the script to convert.
+- What the code reads in (web links, file paths, settings) and what it gives back (rows, files, messages).
+- A small sample input that should work, for the Step 7 test.
+- Confirmation that the person has an Apify account. Apify is a paid service, so tell them to check current plans on apify.com before Step 8.
+
+This skill needs a coding AI that can read the project and run shell commands (`apify init`, `apify run`, `apify push`). In a plain chat window with no tools, give the code changes as text and list the commands for the person to run.
+
+Never ask the person to paste a token into the chat.
+
 ## Prerequisites
 
 Verify `apify` CLI is installed:
@@ -134,6 +147,8 @@ apify run --input-file ./test-input.json
 
 ## Step 8: Deploy
 
+Stop and ask for a clear yes first. Pushing uploads the code to the person's Apify account.
+
 ```bash
 apify push
 ```
@@ -184,6 +199,16 @@ Otherwise, the MCP Server url: `https://mcp.apify.com/?tools=docs`.
 - [Apify SDK for Python](https://docs.apify.com/sdk/python) - Full SDK reference
 - [Apify CLI Reference](https://docs.apify.com/cli) - CLI commands
 - [Actor Specification](https://raw.githubusercontent.com/apify/actor-whitepaper/refs/heads/master/README.md) - Complete specification
+
+## What You Hand Back
+
+When the work is done, reply with:
+
+1. Project check: language, starting file, what it takes in, what it gives back.
+2. Files added or changed: one line per file saying what changed.
+3. Local test: the `apify run` command and sample input you used, and whether the results look right.
+4. Pre-deployment checklist: which items pass and which are open.
+5. Next step: run `apify push`, then open the Actor in the Apify Console to test a run and set a schedule.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

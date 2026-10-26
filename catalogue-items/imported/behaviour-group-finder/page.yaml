@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Choosing and naming useful groups takes judgment on top of the math.
 new_slug: behaviour-group-finder
 name: Behaviour group finder
-summary: Give it customer data and a goal. Get natural groups found by
-  behaviour, each profiled with a plan.
+summary: Find customer groups by behaviour in your data. Give it user data and a goal. You get a profile and a plan for each group.
 job: track-numbers
 headline: Behaviour group finder
-subhead: Natural customer groups found in your data and described in a way you
-  can act on. Say what decision the groups should inform, such as a campaign, a
-  roadmap or a retention plan, and the AI picks three to seven behaviours to
-  compare.
+subhead: Natural customer groups found in your data and described in a way you can act on. Say what decision the groups should inform, such as a campaign, a roadmap or a retention plan, and the AI picks three to seven behaviours to compare.
 explain: |
   Natural customer groups found in your data and described in a way you can act on. Say what decision the groups should inform, such as a campaign, a roadmap or a retention plan, and the AI picks three to seven behaviours to compare.
 
@@ -19,6 +15,10 @@ when:
   - You suspect your best customers share a pattern.
   - Churn is rising and you need to spot at-risk users.
   - Your current customer segments feel arbitrary.
+not_for:
+  - "You have fewer than about 100 users per group you expect, or no user-level data: use simple rule-based groups, such as recent, frequent and high spend, instead."
+  - "You only want to check one idea, such as whether paying users churn more: a simple chart in a spreadsheet is enough."
+  - "You have no way to run code and a large data file: ask an analyst to run the k-means script for you."
 you_give:
   - User-level data with behaviour and plan details
   - What the groups will be used for
@@ -29,8 +29,22 @@ you_get:
   - A validity check on the groups
   - A recommended strategy per group
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini with a mode that can run code and upload files.
+  - Paste this skill, then upload your user data file.
+  - Say what the groups will be used for, such as a campaign, a roadmap or a retention plan.
+  - Add the traits you think matter (optional). Your AI picks three to seven if you do not.
+  - Check the group profiles. Ask whether you would treat each group differently, and rerun with other traits if not.
+output_sample:
+  input:
+    - Your user-level data, with details like plan type and behaviour such as sessions, spend and last visit
+    - The decision the groups should help with, such as a campaign, a roadmap or a retention plan
+    - Any groups you already use (optional)
+  prerequisites:
+    - An AI that can run Python code and read your data file
+  output:
+    - name: segmentation_runner.py
+      contains: The script that runs k-means, draws the elbow and silhouette charts, and gives each user a group label.
+    - name: segmentation_approaches.md
+      contains: A guide to when k-means, RFM or rule-based groups fit best, and how to read the results.
+    - name: segment_profile_template.md
+      contains: One profile per group with size, key traits, a name, a recommended strategy and a plan to track it.

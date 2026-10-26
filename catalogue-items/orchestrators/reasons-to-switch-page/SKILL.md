@@ -56,7 +56,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Build an offer that answers the doubt.** Use the skill `offer-builder`. Makes the offer the page will carry, built to settle the buyer's main doubt.
 2. **Write the reasons-to-switch page.** Use the skill `reasons-to-switch-page-writer`. Give it the offer from the steps before. Builds the page around the offer from the step before, with one reason and one piece of proof each.
 3. **Find the doubts the page leaves open.** Use the skill `customer-question-finder`. Give it the landing page from the steps before. Checks the new page against customer questions and lists each doubt it does not yet answer.
-4. **Audit the page.** Use the skill `landing-page-auditor`. Give it the landing page from the steps before. Reads the finished page like a stranger and ranks what to fix before it goes live.
+4. **Audit the page.** Use the skill `landing-page-auditor`. Give it the landing page from step 2 and the unanswered doubts from step 3. Reads the finished page like a stranger and ranks what to fix before it goes live.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

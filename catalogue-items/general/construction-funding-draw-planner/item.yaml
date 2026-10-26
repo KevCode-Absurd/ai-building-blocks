@@ -1,15 +1,13 @@
 slug: construction-funding-draw-planner
 name: Construction funding draw planner
-summary: A construction draw schedule and uncovered cost register
+summary: "Plan how three periods of building costs get paid: equity first, then the loan up to what is left, with any cost nobody covers shown."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - construction-interest-schedule-builder
+  - completion-funding-gap-checker
+  - reconcile-construction-draws-and-completion-funding
 origin: own
 version: 1.0.0
 added: 2026-10-22

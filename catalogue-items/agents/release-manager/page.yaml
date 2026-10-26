@@ -1,6 +1,6 @@
 new_slug: release-manager
 name: Release manager
-summary: Run it before each release. Get a go or no-go, version, changelog, rollback plan and a live check.
+summary: Check your software release before it ships. Get a go or no-go, the next version, a changelog, a rollback plan and a live site check.
 job: ship-and-host
 thinking: high
 thinking_why: It chooses its path from the review results, loops on the go or no-go check and plans a rollback. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You ship software and want the same checks before every release.
   - A release has a data change or a setting change and you want the rollback planned first.
   - You want proof the live site runs the new version, not a hope.
+not_for:
+  - "You ship a static site or a one-off change with no build, deploy or rollback: use a plain release checklist instead."
+  - "You want the agent to commit, tag, deploy or roll back for you: do those steps yourself, as this agent only plans and checks."
+  - "You have no code history since the last release: ask a teammate for the list of changes first, or the changelog will be incomplete."
 you_give:
   - Your project, with its history since the last release
   - How the last release was done, the first time
@@ -31,6 +35,30 @@ how_to_use:
   - Read the plan and the rollback. Commit, tag and deploy yourself, or say yes to each step one by one.
   - After you deploy, give it the live link and ask it to check.
   - It saves the release for next time, including the rollback steps that worked.
+output_sample:
+  input:
+    - Your project, with its history since the last release
+    - How the last release was done (first run only)
+    - Known risks such as a data change (optional)
+    - The live link, once you have deployed (optional)
+  prerequisites:
+    - An AI that can read your project files and commit history, such as Claude Code
+    - A folder called release/ where the agent saves its notes
+  output:
+    - name: Verdict
+      contains: A go, no-go or blocked at review, with the reasons.
+    - name: Version and changelog
+      contains: The next version number, why it was chosen, and the changelog text.
+    - name: Blockers
+      contains: Each blocker, where it is, what clears it, and whether it came back from a past release.
+    - name: Deploy plan
+      contains: The steps in order, with a check after each step to see it worked.
+    - name: Rollback
+      contains: The steps back, how long they take, and anything that cannot be undone.
+    - name: After deploy
+      contains: Whether the live site serves the new build, and a pointer to the rollback if it does not.
+    - name: Files and missing
+      contains: The file saved for each step, then every MISSING line in one list.
 how_it_works:
   - title: Read its memory
     text: Opens the last release and the blockers found in earlier releases, and lists what changed since.

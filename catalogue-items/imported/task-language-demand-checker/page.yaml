@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It reads the task for hard language, not hard ideas.
 new_slug: task-language-demand-checker
 name: Task language demand checker
-summary: Paste a task or text. Get the words and sentence types that may block
-  students still learning English.
+summary: Check your task for hard language. Paste it in and see which words and sentences may block students learning English, plus supports.
 job: teach-and-train
 headline: Task language demand checker
-subhead: Paste the task or text and say the year group and subject. It flags
-  abstract nouns, passive voice, long nested sentences and command verbs such as
-  justify or evaluate. You get the list of barriers, a language demand rating, a
-  support for each barrier and the words to pre-teach.
+subhead: Paste the task or text and say the year group and subject. It flags abstract nouns, passive voice, long nested sentences and command verbs such as justify or evaluate. You get the list of barriers, a language demand rating, a support for each barrier and the words to pre-teach.
 explain: |
   A list of the words, phrases and sentence types in a task that may stop students who are still learning English, before they ever get to the subject itself. You can then support the language and keep the thinking hard.
 
@@ -20,6 +16,10 @@ when:
   - You need to decide what to pre-teach before a lesson.
   - An exam question uses wording students rarely meet.
   - You want to compare two texts and pick the more accessible one.
+not_for:
+  - "You want to judge what a student knows about the subject: mark their work or talk with them, since this only checks the wording."
+  - "You only need a list of words to teach: use a vocabulary tiering tool, since this checks sentences and task wording too."
+  - "You want the task rewritten for you: ask a teacher or your AI to adapt it after you read the barriers."
 you_give:
   - The task or text
   - Year group
@@ -31,7 +31,25 @@ you_get:
   - Suggested supports for each barrier
   - Words to pre-teach
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
+  - Paste the task or text your students will see.
+  - Add the year group and the subject.
+  - Add your students' English level if you know it (optional).
+  - Ask your AI to run the language demand analysis. It gives you the four-part profile, supports and priority actions.
+  - Read the barriers, then use the Scaffolded task modifier or the Academic language sentence frame generator to act on them.
+output_sample:
+  input:
+    - The task or text students must complete
+    - Year group
+    - Subject
+    - English level of your students (optional)
+    - Texts or worksheets used in the task (optional)
+  output:
+    - name: Language Demand Profile
+      contains: The hard words, grammar and sentence types in the task, split into vocabulary, grammar, discourse and genre.
+    - name: Scaffold Recommendations
+      contains: A support for each kind of barrier, such as sentence starters, word banks or visuals.
+    - name: Priority Actions (if time is limited)
+      contains: The few supports to put in place first if you are short on time.
+    - name: Teacher Language Notes
+      contains: Short notes on the language in the task that you may want to explain or model.

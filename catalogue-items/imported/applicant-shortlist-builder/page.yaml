@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must score fairly and back every score with evidence.
 new_slug: applicant-shortlist-builder
 name: Applicant shortlist builder
-summary: Give it the job and the resumes. Get a ranked shortlist scored only on
-  the job needs, with replies drafted.
+summary: Build a fair applicant shortlist from your job post and resumes. Get candidates ranked on the job's needs, with evidence and reply drafts.
 job: hire-people
 headline: Applicant shortlist builder
-subhead: A ranked shortlist of the people worth calling, scored only on what the
-  job needs, with reply drafts ready. It turns a full inbox of applications into
-  a short list you can act on today.
+subhead: A ranked shortlist of the people worth calling, scored only on what the job needs, with reply drafts ready. It turns a full inbox of applications into a short list you can act on today.
 explain: |
   A ranked shortlist of the people worth calling, scored only on what the job needs, with reply drafts ready. It turns a full inbox of applications into a short list you can act on today.
 
@@ -18,6 +15,10 @@ when:
   - You want your hiring choices to be fair and easy to explain.
   - The best field worker has the worst-formatted resume.
   - You need polite replies to people you won't interview.
+not_for:
+  - Your job post has no stated needs yet. Write the post and rubric first with the Job post builder, or list the must-have skills yourself.
+  - You need to judge who to hire on gut feel or culture fit. This tool only scores the written job needs, and you make the final choice.
+  - You only need one email to a single applicant. Write it by hand, or ask your AI for one plain reply.
 you_give:
   - The job post or a rubric
   - Resumes or access to the hiring inbox
@@ -29,10 +30,34 @@ you_get:
   - Fairness notes on what was ignored
   - Draft replies and interview invites
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your job post. If you have no rubric, answer the questions as your AI builds one with you.
+  - Upload the resumes, or connect your hiring inbox if your AI can read it.
+  - Check the ranked shortlist and the quoted evidence. Look at the cannot assess group before you reject anyone.
+  - Read the draft replies. Say yes before anything is sent, or copy them and send them yourself.
+  - Optional tools like Gmail, Calendar, Gusto, DocuSign and Trello need your own account. The skill works without them.
+output_sample:
+  input:
+    - Your job post or a rubric (the list of skills and experience the job needs)
+    - Resumes as files, or access to your hiring inbox
+    - How many people you want on the shortlist
+    - The tone you want for replies (optional)
+  prerequisites:
+    - Gmail and Google Calendar are optional, and need your own accounts
+    - Gusto, DocuSign and Trello are optional, and need your own accounts, maybe a paid plan
+    - Without them, upload resumes and send the drafted replies by hand
+  output:
+    - name: Rubric
+      contains: The skills and experience from your job post, with a weight for each, built with you if you have none.
+    - name: Ranked shortlist
+      contains: Each candidate scored on each rubric point, with a quoted line from their resume behind every score.
+    - name: Bands
+      contains: Candidates sorted into interview, maybe, no, and cannot assess, with a note where a missing fact lowered a score.
+    - name: Fairness notes
+      contains: What was ignored on purpose, such as name, age, photo, address, school and resume looks.
+    - name: Draft replies
+      contains: An interview invite, a hold note and a decline for each candidate, listed by name. Nothing sends without your yes.
+    - name: Interview schedule
+      contains: Two or three open times per candidate, shown for your approval before any invite goes out.
+    - name: Onboarding checklist
+      contains: Paperwork, access, equipment, first-week plan and a 30-day check-in for the person you hire.

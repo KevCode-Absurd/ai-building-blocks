@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows IAS 12 and ASC 740 steps.
 new_slug: deferred-tax-calculator
 name: Deferred tax calculator
-summary: Give it asset and liability figures. Get deferred tax, whether it can
-  be used, and a tax rate reconciliation.
+summary: Work out deferred tax from your balance sheet and tax bases. You get the asset or liability, a check on whether it can be used, and a rate bridge.
 job: money-and-investing
 headline: Deferred tax calculator
-subhead: Give it asset and liability figures. Get deferred tax, whether it can
-  be used, and a tax rate reconciliation. Bring balance sheet with carrying
-  amounts. Use the result to plan your next step.
+subhead: Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation. Bring balance sheet with carrying amounts. Use the result to plan your next step.
 explain: |
   Your deferred tax position worked out line by line, with a view on whether the asset will ever be used. Give it carrying amounts and tax bases and you get the temporary differences, the deferred tax asset or liability, and a rate reconciliation.
 
@@ -18,6 +15,10 @@ when:
   - You have tax losses and must decide whether to book an asset.
   - Auditors ask for a reconciliation of the effective tax rate.
   - Tax rates change and you must restate deferred balances.
+not_for:
+  - "You need a filed tax return or an audited tax provision: have a qualified tax accountant review the result first."
+  - "You need rules for one country, such as loss carry-forward limits: ask a tax adviser who knows that country."
+  - "You only need current tax for this year: use your tax computation or your accountant, as this tool covers deferred tax only."
 you_give:
   - Balance sheet with carrying amounts
   - Tax bases from your tax computation
@@ -30,7 +31,26 @@ you_get:
   - Recoverability assessment
   - Tax rate reconciliation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your balance sheet with carrying amounts and the tax base for each item.
+  - Add the enacted tax rates, your country, and any unused losses with expiry dates (optional).
+  - Ask your AI to build the schedule. For exact sums, use an AI that can run code.
+  - Check the rate bridge. Treat any unexplained gap as an error to track down, and have a qualified reviewer sign off before you book entries.
+output_sample:
+  input:
+    - Your balance sheet with carrying amounts
+    - Tax bases from your tax computation or fixed asset tax register
+    - Enacted tax rates for when the differences reverse
+    - Unused tax losses and credits with expiry dates (optional)
+    - Your country or tax rules
+  prerequisites:
+    - An AI that can run code, to build the schedule with the calculation script (optional, the AI can also work it out in chat)
+  output:
+    - name: TD Schedule
+      contains: A table per item with carrying amount, tax base, temporary difference, rate, closing asset or liability, and where the movement goes.
+    - name: DTA Recognition Memo
+      contains: Your evidence on whether future taxable profit is likely enough to book a deferred tax asset from losses.
+    - name: ETR Reconciliation
+      contains: A bridge from the statutory tax rate to your effective rate, with each reason for the gap.
+    - name: Entries
+      contains: Debit and credit entries split across profit and loss, other comprehensive income and equity.

@@ -1,50 +1,66 @@
 new_slug: strategy-trade-off-planner
 name: "Strategy trade-off planner"
-summary: "List what you offer and who you serve. Get a position, what you will not do and the activities that must fit."
+summary: "Choose a business position that rivals cannot copy. Get a one-line position, a not-do list and a yes or no on every new idea."
 job: plan-strategy
 thinking: high
 thinking_why: "It makes real trade-offs and tests whether activities fit together, where shallow answers look right but fail."
 
 headline: "Strategy trade-off planner"
-subhead: List what you offer, who you serve and what rivals do. It separates being better from being different, picks a position, writes what you will not do, checks that your activities support each other, and tests each new idea against the position.
+subhead: "List what you offer, who you serve, how you do the work and what rivals do. It separates being better from being different and picks a position. You get a not-do list, a check that your activities fit together, and a yes or no on each new idea you are considering."
 
 explain: |
-  Most businesses try to be better at the same things as their rivals. That is a race with no end, and anything good enough to win gets copied. A real position means you do some things and refuse others, so a rival cannot copy you without giving something up.
+  Most businesses try to be better at the same things as their rivals. That is a race with no end, and anything good enough to win gets copied. A business strategy built on trade-offs works the other way. You choose some things and refuse others, so a rival cannot copy you without giving something up.
 
-  This skill separates what makes you better at the same tasks from what makes you different. It chooses a position: a narrow set of products, one group's needs, or a different way to reach buyers. It decides whether the position leads to a premium price or to lower cost. It writes the list of what you will not do, lists the activities that carry the position, and tests whether they fit together. New ideas are then tested against the position.
+  This skill separates what makes you better at the same tasks from what makes you different. It picks a position: a narrow set of products, one group's needs, or a different way to reach buyers. It says whether that position leads to a premium price or to lower cost. Then it writes what you will not do, lists the 6 to 10 activities that carry the position and tests whether they fit together.
+
+  New ideas are tested against the position last. A good idea that blurs it still gets a no, or a place as a separate offer. The method follows Michael Porter's writing on strategy.
 
 when:
   - You compete on the same things as everyone else and cannot say why you are different.
-  - Every new idea sounds good and the offer is getting blurry.
+  - Every new idea sounds good and your offer is getting blurry.
   - A bigger rival copies what you do within months.
+  - You have a list of ideas for the next quarter and need a way to say no to some.
+
+not_for:
+  - "You don't know your industry or where its profit sits yet: run the Five forces industry checker first."
+  - "You already have one word to own and only need to cut what blurs it: use the Give-up list planner."
+  - "You have no offer or buyers yet: use the First market picker."
+  - "You want a model your market leader would lose money by copying: use the Counter-positioning finder."
 
 you_give:
-  - What you offer, who you serve and how you reach them
-  - What your main rivals do (optional)
-  - The ideas you are considering adding
+  - "What you offer, who you serve and how you reach them"
+  - "The main activities that make up your work, from sourcing to delivery"
+  - "What your main rivals do (optional)"
+  - "The new ideas you are thinking about adding (optional)"
+  - "What you would never give up (optional)"
+
 you_get:
-  - A position in one sentence, with who it is for
-  - Whether it leads to a premium price or lower cost
-  - A list of what you will not do
-  - A fit check of the activities and a yes or no on each new idea
+  - "A split of what makes you better from what makes you different"
+  - "A position in one sentence, with who it is for"
+  - "Whether it leads to a premium price or lower cost, and why"
+  - "A not-do list, each line with what it gives up"
+  - "A fit check of your activities and a yes or no on each new idea"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe your offer, your buyers and how you do the work. Add rivals if you know them.
-  - List the new ideas you are considering.
-  - Read the not-do list first. If it has nothing you mind giving up, ask again.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "Describe your offer, your buyers and the main things you do each week. Add rivals if you know them."
+  - "List the new ideas you are considering."
+  - "Read the not-do list first. If it has nothing you mind giving up, ask again."
+  - "Put the not-do list where you make decisions, such as the top of your roadmap, and use it to answer the next idea."
 
 how_it_works:
   - title: Splits better from different
     text: Separates what makes you better at the same things from what makes you different.
   - title: Picks a position
-    text: Chooses a narrow product set, one group's needs or a different way to reach buyers.
+    text: Chooses a narrow product set, one group's needs or a different way to reach buyers, and says why.
   - title: Sets price or cost
-    text: Decides if the position leads to a premium price or lower cost.
+    text: Decides if the position leads to a premium price or lower cost, with the reason.
   - title: Writes the not-do list
-    text: Lists what you will not do, so rivals cannot copy you without giving something up.
+    text: Lists at least four things you will not do, each with what it gives up.
   - title: Maps the activities
-    text: Lists the activities that carry the position and checks each supports the others.
+    text: Lists the 6 to 10 activities that carry the position and marks each fit strong or weak.
+  - title: Fixes weak fit
+    text: Says whether to change each weak activity or drop it.
   - title: Tests new ideas
     text: Tests each new idea against the position and says no to those that blur it.
 
@@ -72,6 +88,28 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check missed, or none>
+
+output_sample:
+  input:
+    - "What you offer, who you serve and how you reach them"
+    - "The main activities in your work"
+    - "What your main rivals do (optional)"
+    - "The new ideas you are considering (optional)"
+  output:
+    - name: "Better versus different"
+      contains: "What you do the same as rivals but better, and what you do differently."
+    - name: "Position"
+      contains: "One sentence on your position, who it is for and the route: products, needs or access."
+    - name: "Price or cost"
+      contains: "Whether the position leads to a premium price or lower cost, and the reason."
+    - name: "What we will not do"
+      contains: "At least four refusals, each with what it gives up."
+    - name: "Activities that carry the position"
+      contains: "Six to ten activities, which others each supports, and whether the fit is strong or weak."
+    - name: "New ideas tested"
+      contains: "A yes or no for each idea, with one or two lines on why."
+    - name: "Missing and Checks missed"
+      contains: "Facts you did not give, and any check the skill could not pass."
 
 tweaks:
   - what: How clearly you describe your work
@@ -104,7 +142,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Choosing a position and testing ideas against it is text work any strong chat AI can do."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Choosing a position and testing ideas against it is text work. No files, web access or paid tools needed."}
   inputs:
     - "Your list of activities, from ordering to delivery"
     - "A grid of rivals from Competitor white space mapper"
@@ -115,3 +153,5 @@ terms:
     meaning: The particular set of buyers, needs or products you choose to serve, and the way you serve them.
   - term: Trade-off
     meaning: Something you give up by choosing something else, so you cannot do both well.
+  - term: Fit
+    meaning: How well your activities support each other. A set that fits is harder to copy than one activity.

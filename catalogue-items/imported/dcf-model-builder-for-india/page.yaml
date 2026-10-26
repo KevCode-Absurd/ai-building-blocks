@@ -2,35 +2,78 @@ thinking: high
 thinking_why: It builds a long model with many linked assumptions.
 new_slug: dcf-model-builder-for-india
 name: DCF model builder for India
-summary: Name a listed Indian company. Get a discounted cash flow Excel model
-  with WACC, sensitivities and a summary.
+summary: Build a discounted cash flow valuation in Excel for a listed Indian company, with WACC, bear, base and bull cases and sensitivity tables.
 job: money-and-investing
 headline: DCF model builder for India
-subhead: Name a listed Indian company. Get a discounted cash flow Excel model
-  with WACC, sensitivities and a summary. Bring company name or ticker. Use the
-  result to plan your next step.
+subhead: Name a company listed on the NSE or BSE. Your AI builds a DCF model in Excel from its filings and your assumptions. You get a forecast, a WACC sheet, bear, base and bull cases, sensitivity tables and an implied price, with April to March years and crore units done right.
 explain: |
-  An Excel valuation model for a listed Indian company, with projected cash flows, a worked out discount rate, sensitivity tables and a summary. Indian reporting quirks are handled so numbers do not end up wrong.
+  A DCF model, short for discounted cash flow, estimates what a company is worth today from the cash it should earn in future. This skill builds that Indian company valuation in Excel, step by step, and stops to check each stage with you.
 
-  Two rules guard against common mistakes. Fiscal years run April to March, so FY2025 ends 31 March 2025 and periods are labelled with their months. Money is shown in lakh and crore, and the skill divides by 10,000,000 in a live formula because the usual Excel crore format is wrong by 100 times. It builds the model from company filings and any data connection you have, and states plainly where India has no equivalent input. You need Excel to open the result.
+  The workbook has two sheets. The DCF sheet holds the forecast, a case switch for bear, base and bull, the step from company value to price per share, and three sensitivity tables. The WACC sheet works out the discount rate from an Indian government bond yield, a beta against the NIFTY 50 and an equity risk premium. Every projection is a live formula, and every typed input has a cell comment with its source.
+
+  It follows Indian rules that US tools get wrong. Years run April to March. Amounts are in lakh and crore, and the skill divides by 10,000,000 in a formula, because Excel's usual crore format is wrong by 100 times. The result is a research model. It is not advice, and the equity risk premium and growth are judgement calls.
 when:
-  - You want to value a company listed on NSE or BSE.
+  - You want to value a company listed on the NSE or BSE.
   - You are checking whether a stock looks cheap or expensive.
-  - You need a clear model with sensitivity to growth and discount rate.
-  - A finance course or review needs a full DCF on an Indian firm.
+  - You need a model that shows how the value changes with growth and discount rate.
+  - A finance course or review needs a full DCF on an Indian company.
+not_for:
+  - The company is unlisted or foreign. The Indian sources and rules do not fit, so use a general valuation with a professional.
+  - You want a quick range from peer multiples and past deals. Use the valuation method comparer or the company fair value modeler.
+  - You want to check a model you already have for unit and year-label errors. Use the India modeling rules checker.
+  - You want a buy or sell call. This is a research model, not investment advice.
 you_give:
-  - Company name or ticker
-  - Financial statements or filings (optional)
-  - Assumptions on growth and margins (optional)
-  - Your own view of risk (optional)
+  - The company name or NSE or BSE ticker
+  - Its annual reports or results filings, or figures you paste in (optional)
+  - Your growth and margin assumptions for bear, base and bull (optional)
+  - Your own view on discount rate inputs (optional)
 you_get:
-  - Excel DCF workbook
-  - Discount rate working
-  - Sensitivity tables
-  - Summary of valuation
+  - An Excel workbook with a DCF sheet and a WACC sheet
+  - Bear, base and bull cases with a case switch
+  - The step from company value to price per share
+  - Three sensitivity tables with the base case marked
+  - A list of assumed inputs and their sources
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read files.
+  - Use an AI that can run commands and save files, such as Claude Code. The skill builds the Excel file with a command line tool called officecli. A plain chat cannot do this and would give you a table of formulas.
+  - Open the skill and name the company. Add the annual reports if you have them.
+  - Check each stage when it pauses: raw inputs, revenue forecast, cash flow, discount rate, then the value bridge. Reply to continue or to change an assumption.
+  - If it asks for the 10-year government bond yield because the web page failed, paste the current yield and its date.
+  - Open the file. Read the sensitivity tables to see which assumptions move the answer most. Do this before you compare the implied price with the market price.
+  - Check the figures in the cell comments against the company's filings. Treat the result as research, not advice.
+output_sample:
+  input:
+    - The company name or NSE or BSE ticker
+    - Annual reports or results figures (optional)
+    - Growth and margin assumptions for each case (optional)
+  prerequisites:
+    - An AI that can run commands and save files, with the officecli tool installed
+    - Excel or a compatible app to open the result
+  output:
+    - name: DCF sheet
+      contains: Historical figures, bear, base and bull forecasts, free cash flow, terminal value and price per share.
+    - name: WACC sheet
+      contains: Government bond yield, beta against the NIFTY 50, equity risk premium, cost of debt and the discount rate.
+    - name: Case selector
+      contains: A switch that moves the whole model between bear, base and bull assumptions.
+    - name: Sensitivity tables
+      contains: Price per share across discount rate and terminal growth, and two more pairs, with the base case highlighted.
+    - name: Cell comments
+      contains: A source and date on every typed input, and a flag on anything assumed.
+    - name: Valuation summary
+      contains: Implied value per share, the terminal value share of the total, and a not-advice note.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Runs the command line tool, builds the Excel file and checks it for formula errors.
+  inputs:
+    - The company's last three to five annual reports
+    - Your own forecast, if you have one
+terms:
+  - term: DCF
+    meaning: Discounted cash flow. A value found by adding up future cash, reduced for time and risk.
+  - term: WACC
+    meaning: The average rate the company pays for its debt and equity. It is the discount rate.
+  - term: Terminal value
+    meaning: The value of all the cash flows after the forecast years.
+  - term: Lakh and crore
+    meaning: Indian units. A lakh is 100,000 and a crore is 10,000,000.

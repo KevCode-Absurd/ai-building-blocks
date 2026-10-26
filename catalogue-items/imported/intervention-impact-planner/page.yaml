@@ -32,3 +32,26 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - "You have not yet looked at why the problem keeps happening. Start with the Event-to-pattern iceberg builder, then bring its result here."
+  - "You are not sure what you can really change. Use the Control and influence circles map first, then test your action here."
+  - "You need a task list with dates and owners. This tool weighs ideas and does not schedule them."
+output_sample:
+  input:
+    - Your systems analysis, or a short description of the problem and what keeps it going
+    - The action you are thinking of taking
+    - Your limits on time, budget, authority and reach (optional)
+    - Age range and setting, such as a school or community group (optional)
+  output:
+    - name: Place on the ladder
+      contains: Where your action sits on the twelve places to intervene, and what it leaves untouched.
+    - name: Unintended Consequence Analysis
+      contains: Side effects such as fixes that fail, plus the loops your action may trigger.
+    - name: Response Options
+      contains: Two or three options at different levels, each with its effect, risk and how doable it is.
+    - name: Proportionality Check
+      contains: Whether each option fits what you can influence, or puts a load on you that belongs elsewhere.
+    - name: Do Less Harm Check
+      contains: Whether watching and naming the problem is wiser than acting now.
+    - name: Recommended Next Step
+      contains: One specific first action or decision.

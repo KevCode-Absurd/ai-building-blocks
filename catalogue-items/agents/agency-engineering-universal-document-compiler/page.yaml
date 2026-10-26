@@ -1,0 +1,150 @@
+name: YAML and JSON to PDF document agent
+summary: Plan how YAML or JSON data becomes a paged PDF. Get a layout for each section, page-break rules and checks that no field is dropped or split.
+headline: YAML and JSON to PDF document agent
+subhead: Paste a YAML or JSON file, or describe its shape, and name the page size. It picks a layout for each section, plans the page breaks and lists the checks that no field gets lost. Built for developers who make resumes, invoices and reports from data.
+job: work-with-files
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Most document tools use a fixed form. A resume tool knows "work" and
+  "education", so a field it has not heard of, such as "patents" or
+  "benchmarks", is silently dropped. This YAML and JSON to PDF document agent
+  works the other way. It reads the shape of your data and picks a layout to
+  fit it, so nothing is thrown away.
+
+
+  It checks each section. A list of records with the same keys becomes cards.
+  Records with dates become a timeline. Short tags become a badge row. Plain
+  pairs become a table. Long text becomes prose. Then it plans where pages may
+  break, so a heading never sits alone at the foot of a page and a card never
+  splits in two. Layout choices live in a separate file, never inside your
+  data, so your source file stays clean.
+
+
+  It writes a plan and code to adapt. It cannot run your parser or render a
+  PDF in a chat, so every check stays yours to run. The speed and accuracy
+  targets in the profile are goals from its author, not measured results.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide.
+when:
+  - You build a resume, invoice or report maker and users add fields your template does not know.
+  - You have one YAML or JSON file and want it to become a clean, paged document.
+  - Your editor and your preview must stay in step, and edits keep wiping comments or the cursor.
+  - Long sections split across pages and you want rules to stop it.
+not_for:
+  - You want one PDF from text or a sheet with no code. Use the PDF maker and reader or the Document file generator.
+  - Your problem is blank pages or blurry text in a web-page PDF. Use the HTML to PDF layout architect agent.
+  - You need a Word, slide or Excel file. Use the Document generator agent for PDF, Word, slides and Excel.
+  - You need a final contract, medical or financial report. Have a qualified person sign it off, even if this agent plans the layout.
+you_give:
+  - The data file, or a sample of it, in YAML, JSON or Markdown front matter
+  - The page size, such as A4 or US Letter
+  - The kind of document, such as a resume, invoice, spec or proposal
+  - The tools you build with, such as React or Node (optional)
+  - Fields you must always show, and any layout you already like (optional)
+you_get:
+  - A layout choice for each section of your data, with the reason
+  - A plan that keeps every field, including ones no template knew about
+  - Page-break rules, so headings and cards stay whole
+  - A small layout settings file kept apart from your data
+  - Checks to run, and the questions still open
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste a sample of your data. Say the page size and the kind of document.
+  - Type "Plan the layout for each section of this data" or "Find fields this template would drop".
+  - Read the layout table first. Fix any section where the AI chose a layout that does not suit it.
+  - Run the checks on a real PDF from your own code. The AI cannot render one for you. Ask a developer to review any code before use.
+how_it_works:
+  - title: Read your data
+    text: It lists every key and value in your file, with comments and order kept in mind.
+  - title: Measure each section
+    text: It checks how alike the records are, how long the text is and whether dates or numbers appear.
+  - title: Choose a layout
+    text: It picks cards, timeline, badge row, table or prose for each section, and flags any it is unsure about.
+  - title: Keep layout apart from data
+    text: It puts sizes, colours and overrides in a separate settings file, matched to each section by a stable name.
+  - title: Plan the pages
+    text: It sets break rules for headings and cards and a split plan if a section is longer than one page.
+  - title: Check the result
+    text: It lists tests that no field is missing and no page ends in a stray heading, marked NOT RUN until you run them.
+output_shape: |-
+  DOCUMENT TYPE AND PAGE
+    Type: <resume, invoice, spec or other> | Page: <size>
+
+  FIELD MAP
+    <path in your data> | <layout> | <why> | <confidence>
+
+  UNKNOWN OR EXTRA FIELDS
+    <path> | <layout chosen> | <shown or hidden by you>
+
+  LAYOUT SETTINGS FILE
+    <section name> | <override, such as font size or columns>
+
+  PAGE-BREAK RULES
+    <element> | <rule> | <what happens if it is too long>
+
+  CHECKS
+    <check> | <how to run it> | <pass, fail or NOT RUN>
+
+  OPEN QUESTIONS
+    <question> | <what changes the answer>
+output_sample:
+  input:
+    - A YAML or JSON data file, or a sample of it
+    - The page size and kind of document
+    - Your tools, such as React or Node (optional)
+    - Fields that must always show (optional)
+  prerequisites:
+    - A developer who can run code and test a PDF
+    - Claude, ChatGPT or Gemini, or an agent such as Claude Code that can read your files
+  output:
+    - name: Document type and page
+      contains: The kind of document and the page size the plan is built for.
+    - name: Field map
+      contains: Each section of your data, the layout chosen, the reason and how sure the AI is.
+    - name: Unknown or extra fields
+      contains: Fields no template covers, with the layout picked so none are dropped.
+    - name: Layout settings file
+      contains: Sizes, colours and overrides kept apart from your data, matched by section name.
+    - name: Page-break rules
+      contains: Rules that keep headings with their text and stop cards splitting.
+    - name: Checks
+      contains: Tests for missing fields and bad page ends, each marked NOT RUN until you run it.
+    - name: Open questions
+      contains: Decisions only you can make, such as which fields to hide.
+works_best_with:
+  tools:
+    - name: Claude Code or another agent with access to your code
+      why: It can read your real data files and parser and name the exact place a field gets dropped.
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good for the layout plan. You paste your sample in and copy changes out yourself.
+  inputs:
+    - A sample with the oddest fields you have, not the tidiest.
+    - A PDF you already like, so it can match the look.
+terms:
+  - term: YAML
+    meaning: A plain text format for data, written as indented lines of keys and values.
+  - term: Front matter
+    meaning: A block of data at the top of a Markdown file.
+  - term: Layout settings file
+    meaning: A separate file that holds how each section looks, so your data stays untouched.
+  - term: Paged document
+    meaning: A document split into fixed pages, such as a PDF in A4 or US Letter.
+  - term: ATS
+    meaning: Applicant tracking system, the software that reads resumes for employers.
+tweaks:
+  - what: Scope
+    how: Ask for one thing at a time, such as only the field map, or only the page-break rules.
+  - what: Document kind
+    how: Name the kind, such as resume or invoice. The profile has presets for a resume, a technical spec, a proposal and a clinical report.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

@@ -1,6 +1,6 @@
 new_slug: get-a-new-hire-to-full-speed-in-90-days
 name: Get a new hire to full speed in 90 days
-summary: Give it the role and start date. Get a day-one plan, 90-day goals, one-on-ones and a look back.
+summary: Plan a new hire's first 90 days before day one. Give it the role and start date. You get a first-week plan, 30-60-90 goals and one-on-ones.
 job: hire-people
 thinking: high
 thinking_why: It turns a role into goals and meetings a new person can follow. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Someone starts in two weeks and you have not written down what their first month looks like.
   - Your last new hire left inside six months and said they never knew what was expected.
   - You manage people for the first time and want a one-on-one routine that works.
+not_for:
+  - "The hire is already past 90 days: use the Set team goals, run one-on-ones and settle decisions workflow instead."
+  - "You are hiring a contractor for a short project: write a simple scope, a deadline and a check-in date by hand."
+  - "You still need to pick who to hire: finish interviews first, then come back once someone accepts."
 you_give:
   - The role and what it covers
   - The new person's name, start date and team
@@ -30,6 +34,28 @@ how_to_use:
   - Paste the role, the team and the start date. It writes the duties sheet, the first-week plan and the 90-day goals.
   - Hold the one-on-ones as planned and keep short notes.
   - After 30 days, paste your notes for the look back.
+output_sample:
+  input:
+    - The role and what it covers
+    - The new person's name, start date and team
+    - What good looks like at 90 days, in your words
+    - Your notes after the first month (optional)
+  prerequisites:
+    - An AI chat that can hold several files and follow a handoff file
+    - Your calendar, to book the one-on-ones and check-in dates
+  output:
+    - name: Duties and level sheet
+      contains: The real duties, time split, skills needed and a fair level for the role.
+    - name: Pre-start checklist and first-week plan
+      contains: Accounts, kit, people to meet, a day by day first week and first draft goals.
+    - name: 30-60-90 day plan
+      contains: Goals for each month, who helps with each, and check-in dates the new hire can tick off.
+    - name: One-on-one routine
+      contains: A weekly meeting where the new hire sets the agenda, with your questions and goal checks.
+    - name: Month one look back
+      contains: Survey for the new hire and manager, what worked, and a fixed start-day checklist.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Write down the real job
     text: Writes the duties, time split, skills and level for the role, so the goals fit the job.

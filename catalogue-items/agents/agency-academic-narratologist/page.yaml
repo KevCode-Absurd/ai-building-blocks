@@ -1,0 +1,150 @@
+name: Narratologist agent for story structure
+summary: Check a story's structure, character arcs and pacing against named frameworks. Get what is weak, why, and two or three ways to fix it.
+headline: Narratologist agent for story structure
+subhead: Paste your story, outline or script and say what worries you. It maps the structure, the character arcs and the tension, names the framework behind each point, and tells you where the problem really sits. You get options with trade-offs.
+job: write-and-tell-stories
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  "Make the hero more relatable" is advice that fixes nothing. This narratologist
+  agent for story structure gives advice you can act on. A narratologist studies
+  how stories are built. The agent finds the load-bearing parts of your story
+  and the stress points, then names the idea of story theory that backs each
+  call.
+
+  Its first move is to split the story from the telling. The story is what
+  happens, in order. The telling is how you reveal it to the reader. Most
+  problems sit in the telling, such as the order of scenes, who knows what and
+  when, and whose eyes we see through. It diagnoses at that level before it
+  suggests a fix, then offers two or three directions and what each one costs.
+
+  It reads only what you paste, and it works from general knowledge of story
+  theory. It cannot check a book page or confirm a quote. Treat the framework
+  names as a guide, and check any claim you plan to publish in the source. The
+  profile's examples and success targets are the author's, not measured results.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide.
+when:
+  - Your draft feels slow in the middle and you cannot say why.
+  - A story, script or talk has a plot but you suspect it has no real point.
+  - A character changes at the end and it does not feel earned.
+  - You set up a promise early, such as a secret or a threat, and want to know if you paid it off.
+not_for:
+  - You only want to know if a story idea is strong. Use the Story premise tester.
+  - You want a draft checked against plain fiction rules with a score. Use the Story rules checker.
+  - You want a line edit or a proofread. Ask for an edit from your AI or a human editor.
+  - You write a game with branching dialogue and lore. Use the Narrative Designer agent.
+  - You need publication-grade claims about literature. Check every claim in the source or ask a specialist.
+you_give:
+  - Your story, script, outline or synopsis, pasted in full if you can
+  - The kind of work, such as novel, screenplay, short story or talk
+  - What worries you most, such as pacing, a character, theme or the ending
+  - Genre and who it is for (optional)
+  - A framework you prefer, such as three acts or the hero's path (optional)
+you_get:
+  - A structure map with the controlling idea, the main turns and where tension rises and falls
+  - A check of each main character's arc, with want, need and the false belief they hold
+  - A list of promises you made the reader and whether each one is paid off
+  - A diagnosis that says if the problem sits in the story or in the telling
+  - Two or three fixes with the cost of each, and the framework behind each point
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your story or outline. For a long work, paste a synopsis and the key scenes, and say what you left out.
+  - Type "Map the structure and check the character arcs" or "Why does the middle drag?"
+  - Read the diagnosis first, then the options. Pick one direction and ask it to test that choice.
+  - Check the facts about any named book or film before you quote it. The AI works from memory and can be wrong.
+how_it_works:
+  - title: Pick the level
+    text: It asks if the issue is plot, character, theme, narration or genre, so it studies the right layer.
+  - title: Choose frameworks
+    text: It picks the story theories that fit, such as three acts, Todorov's equilibrium or kishōtenketsu.
+  - title: Map the structure
+    text: It finds the controlling idea, the act breaks, the tension curve and what the reader knows versus what the characters know.
+  - title: Check the arcs
+    text: It tests each main character's want, need, wound and false belief and the steps of their change.
+  - title: Diagnose
+    text: It names the structural problem and says if it lives in the story or in the telling, before it offers fixes.
+  - title: Offer options
+    text: It gives two or three fixes with what each one costs, based on how similar stories handle the problem.
+output_shape: |-
+  STRUCTURAL ANALYSIS
+    Controlling idea: <what the story argues about life>
+    Structure model: <three acts, five acts, kishōtenketsu or other> | Why: <reason>
+    Act breakdown: <setup> | <confrontation> | <resolution>
+    Tension curve: <peaks and valleys, by scene>
+    Information gap: <what the reader knows> | <what characters know>
+
+  CHARACTER ARC: <name>
+    Arc type: <transformative, steadfast, flat, tragic or comic> | Framework: <model>
+    Want: <outer goal> | Need: <inner need> | Wound: <past hurt> | False belief: <lie>
+    Checkpoints: <ordinary world> | <catalyst> | <midpoint shift> | <lowest point> | <change>
+
+  NARRATIVE DEBTS
+    <promise made> | <where made> | <paid off, late or open>
+
+  DIAGNOSIS
+    Level: <story or telling> | Problem: <named issue> | Framework: <model>
+
+  OPTIONS
+    <direction> | <what it fixes> | <what it costs> | <similar case>
+
+  OPEN QUESTIONS
+    <question> | <what changes the answer>
+output_sample:
+  input:
+    - Your story, script, outline or synopsis
+    - The kind of work and what worries you most
+    - Genre and audience (optional)
+    - A framework you prefer (optional)
+  prerequisites:
+    - Claude, ChatGPT or Gemini with room to paste your text
+  output:
+    - name: Structural analysis
+      contains: The controlling idea, structure model, act breaks, tension curve and who knows what.
+    - name: Character arc
+      contains: Arc type, want, need, wound, false belief and the checkpoints of change, for each main character.
+    - name: Narrative debts
+      contains: Each promise made to the reader, where it was made and whether it is paid off.
+    - name: Diagnosis
+      contains: The named problem, the level it sits at and the framework that explains it.
+    - name: Options
+      contains: Two or three fixes with what each costs and a similar case.
+    - name: Open questions
+      contains: What the AI could not tell from your text, and what to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A long chat lets it track promises, setups and arcs across several drafts and flag a clash with earlier notes.
+  inputs:
+    - The full text, or a scene list with one line per scene.
+    - Your own one-line statement of what the story is about.
+    - Two or three stories you want yours to feel like.
+terms:
+  - term: Narratology
+    meaning: The study of how stories are built and told.
+  - term: Controlling idea
+    meaning: The one point about life that the story proves by the end.
+  - term: Fabula and sjuzhet
+    meaning: The events in time order, and the order and way the story tells them.
+  - term: Focalization
+    meaning: Whose eyes and mind the reader sees the story through.
+  - term: Narrative debt
+    meaning: A promise made to the reader that has not been paid off yet.
+  - term: Kishōtenketsu
+    meaning: A four-part story shape from East Asia that turns on a twist, not on conflict.
+tweaks:
+  - what: Focus
+    how: Ask for one level only, such as character arcs only or pacing only.
+  - what: Framework
+    how: Name the one you use, such as Save the Cat or kishōtenketsu, and ask it to test your story against that.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

@@ -15,8 +15,8 @@ uses: [project-review-prep-planner, review-lists-sorter, blame-free-review-agend
 steps:
   - {uses: project-review-prep-planner, note: "The form to send, the numbers to pull and the shape of the meeting, ready before anyone sits down."}
   - {uses: review-lists-sorter, note: "Themes with who raised them, what the numbers say and what nobody can see yet."}
-  - {uses: blame-free-review-agenda-writer, note: "A timed agenda with wording rules, a slot for old hurts and questions for the next project."}
-  - {uses: mistake-to-principle-writer, note: "Each lesson written as a rule the next team can check."}
+  - {uses: blame-free-review-agenda-writer, note: "A timed agenda with wording rules, a slot for old hurts and questions for the next project. You hold the review from it and write down what was said."}
+  - {uses: mistake-to-principle-writer, note: "Uses your own notes from the review meeting, with step 3's agenda as the list of themes. Each lesson written as a rule the next team can check."}
 origin: rebuilt
 version: 1.0.0
 minds: [ed-catmull]

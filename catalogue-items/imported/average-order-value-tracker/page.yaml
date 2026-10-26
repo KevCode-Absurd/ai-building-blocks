@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It averages and charts order data.
 new_slug: average-order-value-tracker
 name: Average order value tracker
-summary: Pick a time range. Get average order value over time, split into new
-  and returning customers.
+summary: Track average order value over time for your Shopify store, split into new and returning customers. Pick 90 days or any window, by day, week or month.
 job: run-your-store
 headline: Average order value tracker
-subhead: A trend of average order value for your Shopify store, split into new
-  and returning customers. Pick a look-back window, such as 90 days, and a
-  bucket size of day, week or month, and see whether orders are getting bigger
-  or smaller.
+subhead: A trend of average order value for your Shopify store, split into new and returning customers. Pick a look-back window, such as 90 days, and a bucket size of day, week or month, and see whether orders are getting bigger or smaller.
 explain: |
   A trend of average order value for your Shopify store, split into new and returning customers. Pick a look-back window, such as 90 days, and a bucket size of day, week or month, and see whether orders are getting bigger or smaller.
 
@@ -19,6 +15,10 @@ when:
   - You suspect repeat customers spend more than new ones.
   - You need an AOV trend line for a monthly report.
   - You want to check how a price change affected basket size.
+not_for:
+  - "You want profit or refund-adjusted order value: this reads order totals only, so work from your accounting tool or a spreadsheet export instead."
+  - "Most of your orders are guest checkouts: new customers will be under-counted, so treat the split with care or use the overall average only."
+  - "You have no Shopify store or cannot sign in to Shopify CLI: export your orders to a spreadsheet and average them by hand."
 you_give:
   - Your store domain
   - A look-back period in days
@@ -30,8 +30,30 @@ you_get:
   - The trend over time
   - Output as a table or JSON
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open an AI that can run code, such as Claude Code, and add this skill.
+  - Sign in with the Shopify command line tool, giving read access to orders and customers.
+  - Tell your AI your store domain, how many days to look back, and day, week or month buckets.
+  - Check the order count first. Then read the table for the trend and the new versus returning gap.
+  - Open the CSV file in a spreadsheet if you want a chart for your report.
+output_sample:
+  input:
+    - Your store domain
+    - How many days to look back (optional, 90 by default)
+    - Day, week or month buckets (optional, week by default)
+    - Table or JSON format (optional, table by default)
+  prerequisites:
+    - An AI that can run code and use the Shopify command line tool
+    - A Shopify CLI sign-in with read access to orders and customers
+  output:
+    - name: Start banner
+      contains: Shows the store name and the time the run started.
+    - name: Step log
+      contains: One line per step with what was asked and how many results came back.
+    - name: Summary block
+      contains: Orders analyzed, overall average order value, and the averages for new and returning customers.
+    - name: Period table
+      contains: One row per day, week or month with order count, average order value, and new and returning averages.
+    - name: aov_trends CSV file
+      contains: The same period rows as columns, plus the currency, ready to open in a spreadsheet.
+    - name: JSON result (optional)
+      contains: The same numbers in JSON, if you ask for that format instead of the table.

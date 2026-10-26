@@ -3,6 +3,44 @@ name: to-3d
 description: 平铺图转隐形模特立体图。平铺图 → 有体积感与版型的立体展示图。当用户说「转 3D」「立体图」「隐形模特」「把衣服撑起来」时使用。
 ---
 
+# English guide (added by AI Blocks; the original skill below is in Chinese)
+
+**What it does.** It turns a flat lay photo of one garment into a shaped "ghost mannequin" product photo. The garment looks worn by an invisible person. Shoulders and chest fill out, sleeves bend, the inside of the collar shows, and the hem casts a soft shadow. Colour, knit, print, ribbing and label stay the same. No person or mannequin appears.
+
+**Your AI cannot draw this itself.** Claude, ChatGPT and Gemini can check your photo and write the prompt. A separate image maker draws the picture. You can use the image feature in ChatGPT or Gemini, or run the command line path below.
+
+**Check the photo first (all must be true):**
+- One garment only. No sets in one photo.
+- Laid completely flat. Not folded, not piled, no big wrinkles.
+- Front view, with clear collar and hem edges, on a plain background.
+- File size 20KB to 15MB. Larger than 400 by 400 pixels. jpg, jpeg, png or webp.
+- No person in the photo. A garment already worn needs a different skill.
+
+**Steps to follow in a chat:**
+1. Confirm the photo passes the checks. If it does not, say what to fix and stop.
+2. Ask once for the garment type, colour and fabric if the photo does not show them. If the person does not know, write MISSING. Do not guess a fabric.
+3. Write one English prompt with the three shape controls: filled shoulders and chest with natural drape, sleeves with a natural bend, visible inside of the collar. Add the two room rules: soft shadow under the hem and inside the sleeves, and "No mannequin, no person, no visible support, no text."
+4. Add a "keep the garment 100% faithful" line that names this garment's colour, knit or fabric, print position, ribbing and label.
+5. Pick a square size (1024 by 1024) for the main image, or tall (1024 by 1536) for dresses and long coats. Knits and fur need the high quality setting.
+6. Hand back the prompt, the size and quality, and a check list. Tell the person to make 2 or 3 versions and pick one, because the shape changes each run.
+
+**What it can cost.** The command line path in this file uses a dLazy account and credits, and each image costs credits. Add `--dry-run` first to see what would be sent without paying. You can also use your own key for OpenAI, Gemini, fal, Replicate or Ark, and then your own provider bills you. In ChatGPT or Gemini, the image feature uses your own plan. Do not run a paid call until the person says yes.
+
+**Fixes to add to the end of the prompt:**
+- A mannequin or body appears: "Absolutely no mannequin, torso, neck, arms or hands anywhere in the frame, only the garment."
+- The garment looks too wide or puffy: "Keep the original garment proportions: body width, sleeve length and hem width must match image 1 exactly. Add volume, not size."
+- The collar is a flat hole: "The collar opening must show the inner facing and the inside back of the garment, with correct depth and shadow."
+- The knit looks smooth: use the high quality setting and add "resolve individual knit loops and yarn twist".
+- Shadows point in different ways: "Single soft top-left light source; one consistent contact shadow beneath the garment."
+
+**Check the finished image for:** no body or mannequin, the same proportions as the flat lay, a collar that shows its inside, and the stitch pattern still visible.
+
+**Translation of the placeholders in the Chinese prompt template:** 品类 + 颜色 + 面料 = garment type, colour and fabric. 颜色 = colour. 织法/纹理 = knit or texture. 印花/图案位置 = print or pattern position. 罗纹/领口/袖口/下摆结构 = rib, collar, cuff and hem structure. 吊牌/织标 = tag or woven label. 背景色 = background colour.
+
+**Not for:** garments worn on a person (use the Virtual try-on photo maker), folded or piled garments, or several pieces in one photo.
+
+---
+
 # to-3d — 平铺图生成服装 3D 立体图
 
 把**平摊在桌面上的服装图**变成**有体积感的立体图**——像被一个看不见的人穿着（业内叫 ghost mannequin / 隐形模特）。

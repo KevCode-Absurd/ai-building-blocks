@@ -1,6 +1,6 @@
 new_slug: online-media-buy-auditor
 name: "Online media buy auditor"
-summary: "Paste your online ad plan and reports. Get where money may leak and what to ask each supplier."
+summary: "Check your online ad reports for money leaks. Paste your plan and supplier reports. Get a score out of 100 and questions to ask each supplier."
 job: read-ad-results
 thinking: high
 thinking_why: "It must weigh evidence quality and conflicts of interest, and it must not claim fraud without proof."
@@ -17,6 +17,10 @@ when:
   - "You spend on online ads and your reports come from the seller or your agency."
   - "Your results look good but sales do not follow."
   - "You are about to renew or raise a budget and want questions to put to the supplier."
+not_for:
+  - "You run one campaign and no seller or agency sends you reports: check it against your own site analytics instead."
+  - "You want to know if one ad should stay or go: use the Campaign keep-or-change checker."
+  - "You think you have proof of fraud: ask a lawyer or an outside verification firm, because this skill only flags risk."
 
 you_give:
   - "Your online ad plan or media list, with spend by supplier"
@@ -35,6 +39,31 @@ how_to_use:
   - "Say who sends each report and how that person is paid."
   - "Send each supplier the questions it lists."
   - "Run the one outside check on a single campaign and bring the result back."
+output_sample:
+  input:
+    - Your online ad plan, with spend by supplier
+    - The reports you get, and who sends each one
+    - How your agency or supplier is paid (optional)
+    - Sales or orders for the same dates (optional)
+  output:
+    - name: Score
+      contains: A score out of 100 for how independent your figures are, with the sums shown.
+    - name: Spend split
+      contains: Your spend in direct buys and programmatic or open-network buys, with amount and share.
+    - name: Who reported what
+      contains: Each figure with who made it, whether they are independent and how they know.
+    - name: Weak points
+      contains: Each risk marked fact, estimate, range or unknown, with the evidence seen.
+    - name: Who gains if the numbers look good
+      contains: Each party paid on volume or spend, written as a motive to check.
+    - name: Questions for each supplier
+      contains: A set of questions written for each supplier.
+    - name: Proposal
+      contains: Spend to move to direct buys and one campaign for an outside check.
+    - name: Data missing
+      contains: Every gap marked MISSING, so you can fill it in later.
+    - name: Checks missed
+      contains: One line per check the skill missed, or none.
 
 how_it_works:
   - title: "Splits the spend"

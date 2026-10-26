@@ -1,6 +1,6 @@
 slug: review-staff-adoption-of-a-policy-change
 name: Review staff adoption of a policy change
-summary: Share the source files. Get an adoption evidence brief, barriers and follow up support plan.
+summary: See whether staff follow a new policy. Get an adoption brief, the barriers in the way and a support plan, with small groups kept private.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - change-rollout-planner
 steps:
   - uses: employee-survey-designer
-    note: Use the employee listening analysis method on supplied feedback. Preserve sample scope and anonymity; distinguish actual feedback from assumptions about adoption.
+    note: Use the employee listening analysis method on supplied feedback. Preserve sample scope and anonymity; distinguish actual feedback from assumptions about adoption. Hands step 2 the tagged barriers with counts by group.
   - uses: change-rollout-planner
-    note: Use the actual barriers and approved policy to propose awareness, training, ability and reinforcement actions; no policy or live process is changed.
+    note: Use the actual barriers and approved policy to propose awareness, training, ability and reinforcement actions; no policy or live process is changed. Uses step 1's barriers and your approved policy brief. Hands you the support plan.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

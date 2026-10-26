@@ -1,6 +1,6 @@
 new_slug: problem-cost-question-writer
 name: "Problem cost question writer"
-summary: "Paste what you sell and a buyer's situation. Get the questions that make the cost of their problem clear."
+summary: "Write problem cost questions for your next sales call. Paste what you sell and who the buyer is. You get questions that help them say what the problem costs."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It writes questions in a fixed sequence from facts you give it."
@@ -17,6 +17,10 @@ when:
   - "You have a first meeting with a buyer who could be big."
   - "Your calls end with 'send me a proposal' and then silence."
   - "You are training a new seller who talks too much."
+not_for:
+  - "You sell a low-value item where one short call is the whole sale: just answer their questions and ask for the order."
+  - "You need replies to doubts the buyer already raised: use the Objection answer sheet writer after the questions."
+  - "You know nothing about what you sell or who the buyer is: first write down your product's problems and the buyer's role, then come back."
 
 you_give:
   - "What you sell and the problems it solves best"
@@ -33,6 +37,32 @@ how_to_use:
   - "Add where your calls usually stall."
   - "Read TELLING TRAPS before the call. They are the moments you will want to pitch."
   - "Ask the questions in order and write down the buyer's numbers."
+output_sample:
+  input:
+    - What you sell and the two or three problems it solves best
+    - The buyer's role, business and what you know about them
+    - Where your calls usually stall (advised)
+    - How past buyers described the problem (optional)
+  prerequisites:
+    - A buyer brief from the Buyer brief writer (or paste the buyer facts yourself)
+    - Your brand brain (optional)
+  output:
+    - name: SITUATION
+      contains: Two or three questions about the buyer's setup that you cannot look up beforehand.
+    - name: PROBLEM
+      contains: Four to six open questions that let the buyer name difficulties you solve, without naming your product.
+    - name: KNOCK-ON
+      contains: Two questions per problem on what it leads to and costs, with number-asking ones marked.
+    - name: WORTH
+      contains: Three or four questions on what solving the problem would be worth or allow.
+    - name: TELLING TRAPS
+      contains: Three moments where sellers start pitching, and what to ask instead.
+    - name: CLOSE
+      contains: One question that asks the buyer for a commitment, such as a date or a meeting.
+    - name: MISSING
+      contains: Buyer facts or problems you did not give, marked so nothing is invented.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
 
 how_it_works:
   - title: "Cuts situation questions"

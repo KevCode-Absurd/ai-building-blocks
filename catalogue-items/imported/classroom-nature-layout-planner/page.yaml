@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It suggests low-cost changes based on design research.
 new_slug: classroom-nature-layout-planner
 name: Classroom nature layout planner
-summary: Describe your room and what feels off. Get layout, light and plant
-  ideas for a calmer room. Not medical advice.
+summary: Plan a calmer classroom with light, layout and plant ideas. Describe your room and what feels off, and get a staged plan that fits your budget.
 job: teach-and-train
 headline: Classroom nature layout planner
-subhead: Ideas to make your room calmer using light, plants, natural materials
-  and views, scaled to your budget. You describe the room and what feels off,
-  and you get a plan you can do in stages.
+subhead: Ideas to make your room calmer using light, plants, natural materials and views, scaled to your budget. You describe the room and what feels off, and you get a plan you can do in stages.
 explain: |
   Ideas to make your room calmer using light, plants, natural materials and views, scaled to your budget. You describe the room and what feels off, and you get a plan you can do in stages. It is not medical advice.
 
@@ -18,6 +15,10 @@ when:
   - You cannot keep live plants but want a natural feel.
   - You have almost no money to spend.
   - You want a quiet corner that helps students settle.
+not_for:
+  - "You need a school-wide policy or a building plan: ask your head teacher or a facilities manager."
+  - "A student has medical or sensory needs that need expert advice: ask your school SENCO or an occupational therapist."
+  - "You want lessons held outdoors: plan them yourself or with a colleague, as this item only changes the room."
 you_give:
   - A description of the room
   - What you want to improve
@@ -30,7 +31,26 @@ you_get:
   - Plant and natural material ideas
   - Options that fit your budget
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write a short description of your room. Add the windows, lights, floor, walls and any plants.
+  - Say what you want to improve, such as focus or a calmer feel. Add your budget and any plant or landlord rules.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. Then paste your room details. A photo or sketch can help if your AI can read images.
+  - Read the ranked changes first. Pick the free ones to try this week.
+  - Check the plan against your school rules before you buy anything. Ask your SENCO about students with sensory needs.
+output_sample:
+  input:
+    - "A description of your room: size, layout, windows, lighting, surfaces and any plants"
+    - What you want to improve, such as focus or a calmer feel
+    - Your budget level (optional)
+    - Rules such as no live plants or limited wall space (optional)
+    - Sensory needs in your class (optional)
+  output:
+    - name: Assessment of Current Space
+      contains: What the room has now, and which parts help or hurt your goal.
+    - name: Priority Changes (Ranked by Impact)
+      contains: The changes to make first, with the reason for each and its cost level.
+    - name: Sensory Design Map
+      contains: How light, sound, texture and sight work in the new layout, zone by zone.
+    - name: Implementation Plan
+      contains: Steps in stages, from free changes to ones that need money or approval.
+    - name: Considerations for Specific Needs
+      contains: Notes for sensory needs, plant rules and shared rooms.

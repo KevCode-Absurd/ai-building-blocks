@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Operators have subtle correctness traps.
 new_slug: kubernetes-operator-builder
 name: Kubernetes operator builder
-summary: Describe the resource you manage. Get a custom operator with its CRD
-  design and reconcile loop.
+summary: Build a Kubernetes operator with a CRD design and a safe reconcile loop. Check it for seven common mistakes before it reaches your cluster.
 job: build-software
 headline: Kubernetes operator builder
-subhead: Describe the resource you manage. Get a custom operator with its CRD
-  design and reconcile loop. Bring the resource the operator should manage. Use
-  the result to plan your next step.
+subhead: Describe the resource you manage. Get a custom operator with its CRD design and reconcile loop. Bring the resource the operator should manage. Use the result to plan your next step.
 explain: |
   Most operator bugs live in the reconcile loop, not in Kubernetes. This skill builds a custom operator and checks it against seven common mistakes. They are: step-by-step logic, no retry on short errors, missing finalizers, editing spec instead of status, skipping the status subresource, blocking calls and no leader election.
 
@@ -18,6 +15,10 @@ when:
   - You inherited an operator that loops forever or leaves orphaned resources.
   - You are choosing between kubebuilder, operator-sdk and Kopf.
   - You need to review a CRD for status, conditions and finalizer mistakes.
+not_for:
+  - "You only want to package an app as a chart: use a Helm chart builder, or write the chart by hand."
+  - "You just want to run a workload: use a plain Deployment or Job, not an operator."
+  - "You want general cluster security advice: ask a security reviewer or your platform team, as this skill covers only the operator pattern."
 you_give:
   - The resource the operator should manage
   - Your language and framework preference (optional)
@@ -29,8 +30,29 @@ you_get:
   - CRD and reconcile lint results
   - A capability level score with gaps to close
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill. Use an AI that can run Python and read your files.
+  - Describe the resource you want the operator to manage. Add your language, and any CRD or controller code you already have.
+  - Read the CRD design first. Fix every warning before you write controller code.
+  - Run the reconcile linter on your controller. It uses pattern checks, so still read the code yourself.
+  - Check the capability level and work on the next steps it lists.
+  - Test the operator in a kind cluster before you deploy it.
+output_sample:
+  input:
+    - The resource the operator should manage
+    - Your language and framework preference (optional)
+    - Your existing CRD or controller code (optional)
+    - Your cluster and RBAC limits
+  prerequisites:
+    - An AI that can run Python and read your project files
+    - A Kubernetes dev setup, such as a kind cluster, to test the operator
+  output:
+    - name: CRD design
+      contains: The custom resource with a status subresource, conditions, finalizer hint, printer columns and a versioned schema.
+    - name: Controller skeleton
+      contains: A reconcile function that is safe to repeat, sets conditions, uses finalizers and requeues on short errors.
+    - name: crd_validator findings
+      contains: Warnings on the CRD, such as a missing status subresource or an unchecked schema.
+    - name: reconcile_lint findings
+      contains: Pattern-based flags on the controller, such as sleeps, spec updates and missing requeues. It can miss issues.
+    - name: Capability level
+      contains: Your operator's OperatorHub level from 1 to 5, with next steps to reach the level above.

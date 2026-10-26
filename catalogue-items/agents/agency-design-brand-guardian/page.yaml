@@ -1,0 +1,154 @@
+name: Brand Guardian agent
+summary: Get a brand foundation document or a brand consistency check. See your purpose, voice and look in writing, or where your materials drift from them.
+headline: Brand Guardian agent
+subhead: Tell it about your business, or paste the brand rules and materials you already have. It either writes your brand foundation, with purpose, audience, voice, colour and type directions, or checks your materials against it and lists what to fix.
+job: brand-file
+thinking: high
+thinking_why: It links brand choices to business goals and compares many pieces against one set of rules. Use a model that can hold the whole brand in view.
+explain: >-
+  Most small brands are described in a few loose lines, if at all. Then each ad,
+  email and web page drifts a little further from the last. This brand guardian
+  agent has two jobs. It can write the brand foundation you are missing. Or it
+  can check your existing materials against the brand rules you already have.
+
+
+  When it builds, it works from your business facts. It sets out why you exist,
+  who you serve, what makes you different, how you sound and a starting colour
+  and type direction. It also adds a plan for keeping the brand consistent. When
+  it checks, it compares each piece you paste with your rules and lists the
+  gaps, with proof from the piece and a fix.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It writes
+  strategy and rules in text. It does not draw logos, and it is not legal advice.
+  The success targets in the original, such as 95 percent consistency, are the
+  author's goals, not results from AI Blocks.
+when:
+  - You are starting a business or a product and need your purpose, audience, voice and look written down.
+  - Your ads, emails and pages no longer sound or look like one brand.
+  - A new writer, freelancer or agency joins and needs one set of brand rules.
+  - You plan a refresh or a new product line and want to know what to keep.
+not_for:
+  - You already have a brand file and only want to check drafts for voice. Use the Brand voice reviewer agent.
+  - You already have a brand file and want a printable guide. Use the Brand guide builder.
+  - You want your brand pulled from your website link. Use the Brand profile builder.
+  - You need a logo drawn or a symbol designed. Plan it with the Brand mark system planner, then hire a designer.
+  - You need trademark clearance or legal advice. Ask a trademark lawyer.
+you_give:
+  - What your business does, who it serves and what you sell
+  - Your goals for the next year and what makes you different
+  - Your main competitors or alternatives, as names or links
+  - Your existing brand rules, logo notes or style guide (optional)
+  - Pieces to check, such as an ad, an email or a page (optional)
+you_get:
+  - A brand foundation with purpose, vision, mission, values, personality and promise
+  - Positioning with your audience, difference and three to five brand pillars
+  - A voice guide with traits, tone for different places, a tagline idea and key messages
+  - Colour and type directions, marked as starting ideas to test
+  - A consistency check of each piece you paste, with proof and a fix for each gap
+  - A brand protection and monitoring plan, with the checks you need from a lawyer
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Say which job you want. "Build my brand foundation" or "Check these pieces against my brand." Then paste your business facts and any rules you have.
+  - Your AI asks once for anything missing, such as your audience or your goals. Anything still unknown is marked as an assumption.
+  - Read the positioning and voice first. Fix anything that does not sound like you before it is used anywhere.
+  - Treat colour, type and tagline ideas as drafts. Test them on your real pages, and take logo and legal steps to a designer or lawyer.
+  - Save the result as your brand file. Use the Brand voice reviewer agent to check new drafts against it.
+how_it_works:
+  - title: Discover the brand
+    text: It reads your business facts, goals, competitors and any existing rules, and says what is missing.
+  - title: Set the foundation
+    text: It writes purpose, vision, mission, values, personality and promise, each tied to a business goal.
+  - title: Set positioning and voice
+    text: It names your audience and difference, then writes voice traits, tone by place and key messages.
+  - title: Propose the look
+    text: It suggests colours, type and usage rules in text, with contrast checks on colour pairs. It does not draw a logo.
+  - title: Check consistency
+    text: It compares each piece you paste with the rules and lists each gap with proof from the piece and a fix.
+  - title: Plan protection
+    text: It lists how to monitor use of the brand and the trademark and legal checks to take to a professional.
+output_shape: |-
+  JOB AND ASSUMPTIONS
+    <build or check> | <business facts used> | ASSUMED: <list> | MISSING: <list>
+
+  BRAND FOUNDATION
+    purpose <why you exist> | vision <future state> | mission <what you do and for whom>
+    values <3 with how each shows up> | personality <3 traits> | promise <what customers can count on>
+
+  POSITIONING
+    audience <primary, secondary> | difference <what is unique> | pillars <3 to 5> | statement <one line>
+
+  VOICE
+    traits <3 to 5> | tone by place <list> | tagline ideas <list> | key messages <list> | words to use and avoid <list>
+
+  LOOK (STARTING DIRECTIONS)
+    colours <name, hex, role> | contrast checks <pair, pass or fail> | type <headline, body, rules> | logo use notes <clear space, small sizes>
+
+  CONSISTENCY CHECK (check job only)
+    <piece> | <rule it breaks> | <proof from the piece> | <fix> | severity <high, medium or low>
+
+  PROTECTION AND MONITORING
+    <how to watch use of the brand> | <how often> | needs a lawyer: <trademark and legal checks>
+
+  CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What your business does, who it serves and what you sell
+    - Your goals for the next year and what makes you different
+    - Competitors or alternatives, as names or links
+    - Existing brand rules or pieces to check (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Your brand file if you already have one, for the check job (optional)
+  output:
+    - name: Brand foundation
+      contains: Purpose, vision, mission, values, personality and promise, each written in plain words.
+    - name: Positioning
+      contains: Your audience, what sets you apart, three to five pillars and a one-line position.
+    - name: Voice guide
+      contains: Voice traits, tone for each place you write, key messages, tagline ideas and words to use or avoid.
+    - name: Look directions
+      contains: Colour and type ideas with contrast checks, marked as drafts to test.
+    - name: Consistency check
+      contains: Each piece you pasted, the rule it breaks, proof from the piece and a fix.
+    - name: Protection and monitoring plan
+      contains: How to watch brand use, plus the trademark and legal checks to take to a lawyer.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your existing guide, past ads and web pages, so the check uses your real pieces.
+    - name: Your design tool, such as Canva or Figma
+      why: Test the colour and type ideas on a real page before you commit to them.
+  inputs:
+    - Five of your best pieces of past copy as examples of the voice.
+    - Screenshots of the pages and ads that feel off-brand.
+    - Your current logo and colour codes, if you have them.
+terms:
+  - term: Brand foundation
+    meaning: The core words that explain why the brand exists, what it stands for and how it behaves.
+  - term: Positioning
+    meaning: Where your brand sits in a buyer's mind next to the other choices, and why yours is different.
+  - term: Brand pillars
+    meaning: Three to five themes that every message and design choice should support.
+  - term: Consistency check
+    meaning: A comparison of one piece, such as an ad, against your written brand rules.
+  - term: Contrast check
+    meaning: A test that text colour is readable on its background colour.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Job
+    how: Say "build" to write a brand from facts, or "check" to compare pieces to rules you already have.
+  - what: Channels
+    how: Name where your brand shows up, such as email, Instagram or packaging, so tone and look rules cover each place.
+  - what: Depth
+    how: Ask for foundation and voice only if you do not need colour, type or a protection plan yet.
+improve:
+  - Save the approved result as your brand file, then check each new piece against it.
+  - Add real before and after examples of your own copy to the voice guide as you go.

@@ -1,6 +1,6 @@
 new_slug: long-run-effects-checker
 name: "Long-run effects checker"
-summary: "Paste your plan. Get each tactic's short-term and long-term effect, a fad or trend call and what to change."
+summary: "Check your marketing plan for tactics that pay now and cost you later. Get each effect, a discount sum and a fad or trend call."
 job: plan-strategy
 thinking: medium
 thinking_why: "It weighs each tactic over two time spans and does a small sum, but the tests are fixed."
@@ -18,6 +18,10 @@ when:
   - A hot product or trend is pulling you to scale up fast.
   - You are about to put your name on a new product because it will sell now.
   - Your plan rests on a three-year forecast or on a wave of press.
+not_for:
+  - "You want a one-off clearance with no repeat checked: just compare your stock and margin in a spreadsheet, as the harm here comes from repeat offers."
+  - "You want the rest of your plan checked for non-marketing questions: use the Marketing plan law checker, or ask an accountant for money questions."
+  - "You need a forecast of future sales: ask your AI for a plain forecast, as this skill sets rules for being wrong and does not predict."
 
 you_give:
   - Your marketing plan
@@ -35,6 +39,29 @@ how_to_use:
   - Paste the plan. Add sales figures for the weeks before, during and after your last discount if you have them.
   - Read the net sums first. A discount with a net below zero is a habit, not a growth tactic.
   - Take the changes into your plan. Then run "One bold move picker" to choose what to back.
+output_sample:
+  input:
+    - Your marketing plan
+    - Sales before, during and after a past discount (optional)
+    - Your price and cost (optional)
+    - Fixed costs you would add to meet new demand (optional)
+  output:
+    - name: Tactics and their two effects
+      contains: Each tactic with what it does in the next 90 days, what it does after two years, and whether it reverses.
+    - name: Discount sums
+      contains: Units and revenue before, during and after each offer, the net, and a call of habit or growth.
+    - name: Fad or trend
+      contains: A score for each bet, the need behind it, a fad or trend call and whether to dampen or ride it.
+    - name: Forecasts in the plan
+      contains: Each hidden forecast with what you do if it is wrong and the fixed cost at risk.
+    - name: Press versus sales
+      contains: A line each on press coverage and on repeat buying, so excitement is not read as results.
+    - name: Changes
+      contains: Up to seven changes, each tied to a tactic and the effect it fixes.
+    - name: Missing
+      contains: The figures that would settle any call you could not make.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Lists the tactics

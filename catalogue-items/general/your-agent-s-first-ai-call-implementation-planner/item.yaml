@@ -1,6 +1,6 @@
 slug: your-agent-s-first-ai-call-implementation-planner
 name: Agent AI call cost tracker builder
-summary: Build a bounded ai call wrapper with token and cost records.
+summary: "Plan a wrapper for your agent's AI calls that checks the budget first, then records tokens and cost on every call, so spend is never a surprise."
 category: general
 type: skill
 role: make

@@ -1,6 +1,6 @@
 new_slug: pattern-from-cases-finder
 name: "Pattern from cases finder"
-summary: "Paste your first ten or twenty cases. Get the pattern, a one-line rule and a test of it on unseen cases."
+summary: "Find the rule behind your list of cases. Paste 10 or more in order and get a one-line rule, tested on cases held back, with its error."
 job: think-and-decide
 thinking: high
 thinking_why: "Finding a rule that fits the data and then testing it on cases held back needs careful, checkable reasoning."
@@ -17,6 +17,10 @@ when:
   - You have a list of results and want to know if there is a rule behind them.
   - You think you have spotted a pattern but have not tested it on new data.
   - You need a forecast rule that is simple enough to explain and check.
+not_for:
+  - You have fewer than ten cases. Collect more first, or ask a person who knows the field to judge them.
+  - You want to check the words in your claim. Use the Definition tester.
+  - Your data is one-off events with no order. Look at each event on its own, or ask a person who was there.
 
 you_give:
   - Your cases in order, one per line, with the value you care about
@@ -35,6 +39,27 @@ how_to_use:
   - If it asks what a column means, answer in a few words.
   - Read the rule and the error before you trust it.
   - Send the doubtful list to a person or a tool that can check it.
+output_sample:
+  input:
+    - Your cases in order, one per line, with the value you care about
+    - Three or more cases to hold back, or let it hold back the last three
+    - What each column means (optional)
+    - The pattern you think you see (optional)
+  output:
+    - name: The cases
+      contains: Each case on its own numbered line, with the step from the last case and the step of those steps.
+    - name: The rule
+      contains: One line that makes each known case, and how many cases it fits.
+    - name: The test
+      contains: The held-back cases, the predicted and actual values, and the size of the error.
+    - name: The whole list
+      contains: Every case or range the rule allows, and any gap where the data has none.
+    - name: Sorted
+      contains: Findings under known, new and doubtful, with who or what should check each doubtful one.
+    - name: Missing
+      contains: Data that would change the rule, marked MISSING where it was not given.
+    - name: Checks missed
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Writes out the cases

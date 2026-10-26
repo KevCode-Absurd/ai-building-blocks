@@ -1,6 +1,6 @@
 new_slug: talking-product-video-ad
 name: "Get a talking product video ad ready to generate"
-summary: "Give it your product and buyer. Get a script where the product talks, clip prompts, and an ad rules check."
+summary: "Make a talking product video ad: give your product and buyer, get a script where the product speaks, clip prompts and an ad rules check."
 job: make-video-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You want a playful video ad that stands out, and your product can be a character.
   - You plan to make the clips with an AI video tool.
   - You want the claims checked before any clip is made.
+not_for:
+  - "Your product has no face or voice to give it, or you want a plain demo: use the Product claim demo planner."
+  - "You only want a script with no video tool: use the Ad script read-aloud editor to polish one you already have."
+  - "You want a cartoon, clay or anime look: use the Animated film video ad script writer or the Claymation video ad script writer."
 
 you_give:
   - Your product facts, with the claims you may make
@@ -36,6 +40,28 @@ how_to_use:
   - Have your inputs ready. Your product facts, your brand file, and a line on who the ad is for.
   - Check the script before you generate anything. Fix any line the ad rules check marks "Fix first".
   - Paste each clip prompt into your video tool with the character sheet and your real product photo.
+output_sample:
+  input:
+    - Your product facts, with the claims you may make
+    - Your brand file and who the ad is for
+    - Your customer reviews (optional)
+    - Your target countries for the ad rules check (optional)
+  prerequisites:
+    - An AI video tool such as Veo or Kling, which needs its own account or plan, to make the clips
+    - Your brand brain from the Website brand brain builder (optional, but it makes the result better)
+  output:
+    - name: Brief
+      contains: The buyer, their main doubt and the one argument the ad makes.
+    - name: Script
+      contains: Spoken lines and picture notes where the product talks, in one mood, with a fit check.
+    - name: Line check
+      contains: Weak lines quoted with the check that failed and a fix for each.
+    - name: Clip prompts
+      contains: Motion-only prompts for each clip, with a character sheet, voice and lip-sync notes, and an edit plan.
+    - name: Ad rules check
+      contains: A verdict on the script and its claims against Facebook and Instagram ad rules, with the exact lines.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 
 how_it_works:
   - title: Picks the buyer and the angle

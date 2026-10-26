@@ -2,17 +2,55 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-positioning-strategy
 name: SaaS market position adviser
-summary: Share your product and rivals. Get a distinct market position, buyer
-  reasons and messages to test.
+summary: Find a market position that sets your SaaS product apart. Give it your product and rivals. Get a clear position, buyer reasons and tests.
 job: plan-strategy
 headline: SaaS market position adviser
-subhead: Share your product and rivals. Get a distinct market position, buyer
-  reasons and messages to test. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI your product, your rivals and your best customer type. It checks if your message sounds like everyone else. You get a position to own, reasons buyers care, and messages to test before you commit.
+not_for:
+  - You only need a price plan. Use a pricing review or ask a finance adviser, as this skill does not set prices.
+  - You want a new logo, name or look. Work with a brand designer, as this skill covers market position and words only.
+  - You need a full launch plan with dates and budget. Build that plan by hand, then use this skill for the message part.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text into the chat.
+  - Paste your product description, your rivals and your best customer type. Add win and loss notes if you have them.
+  - Ask your AI to run the positioning clarity check first, then build the position.
+  - Read the test plan. Start with the small first stage and check the results before you go wider.
+  - Treat the word swap story in the skill as an example, not a proven result for your market.
+output_sample:
+  input:
+    - Your product description
+    - Your main rivals, as links or their homepage headlines
+    - Your best customer type
+    - Your current messages or headlines (optional)
+    - Notes on deals you won or lost (optional)
+  output:
+    - name: Positioning clarity diagnosis
+      contains: A check of whether your message sounds like rivals and where buyers get confused.
+    - name: Market positioning architecture
+      contains: Your position built in three layers, from the broad market claim down to proof.
+    - name: Headline and sub-headline tests
+      contains: Message options to try side by side, so you can see which one buyers prefer.
+    - name: Positioning defensibility assessment
+      contains: A check of how hard it is for rivals to copy the position you pick.
+    - name: Crawl-Walk-Run rollout plan
+      contains: A staged plan to test the position in small steps before you commit to it.
+    - name: Decision trees
+      contains: Simple yes or no guides on whether to reposition, which angle to test and when to move on.
+when:
+  - Your messages sound the same as your rivals.
+  - People know your brand but few of them buy.
+  - Your sales team cannot say why you are different.
+  - You are thinking about a new position and want to test it first.
+you_give:
+  - Your product description
+  - Your main rivals, as links or homepage headlines
+  - Your best customer type
+  - Your current headlines or messages (optional)
+  - Notes on deals you won or lost (optional)
+you_get:
+  - A check of how clear and different your message is today
+  - A market position built in three layers
+  - Headline and sub-headline options to test
+  - A check of how easy the position is for rivals to copy
+  - A step-by-step plan to test the position in small stages

@@ -16,6 +16,29 @@ use_cases:
   - "Cut a crowded cast of characters down to the ones the plot needs"
   - "Write brisk, light dialogue that moves a story along"
   - "Check your own reasoning for the obvious answer you dismissed too fast"
+not_for:
+  - "You want to build one main effect in a short horror story: use the Edgar Allan Poe mind."
+  - "You want serial chapters with strong characters that keep readers waiting: use the Charles Dickens mind."
+  - "You want a clear business memo or recommendation, not a puzzle: use the Barbara Minto mind."
+output_sample:
+  input:
+    - Your plot, plan or problem, in a few lines or pages
+    - The ending you want, if you know it (optional)
+    - Your cast, or the people and steps involved
+    - Anything you already suspect is weak (optional)
+  output:
+    - name: The facts as she sees them
+      contains: A plain list of what is known so far, in order, with who was where and when.
+    - name: The detail that doesn't fit
+      contains: The one small fact that clashes with the rest, and why it matters.
+    - name: The timeline gap
+      contains: The step or moment nobody can account for, with a question to close it.
+    - name: The clue to move
+      contains: Which clue to hide in plain sight, and where in the story or plan.
+    - name: The cut
+      contains: Which character, scene or step can go without losing a clue.
+    - name: Where the reveal goes
+      contains: Where to place the full explanation so the ending lands and feels fair.
 seats:
   - {seat: "Plot and suspense", asks: "Who knows what, and when does the audience find out?"}
   - {seat: "The detective", asks: "Which small fact doesn't fit, and why have we all ignored it?"}

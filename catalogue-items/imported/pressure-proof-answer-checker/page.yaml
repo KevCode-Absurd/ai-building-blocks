@@ -2,32 +2,104 @@ thinking: medium
 thinking_why: It must spot pressure tactics and weigh the evidence.
 new_slug: pressure-proof-answer-checker
 name: Pressure-proof answer checker
-summary: Use it when someone pushes your AI to agree or sign off. Get answers
-  that separate evidence from pressure.
+summary: Stop a rubber-stamp on a risky plan. Get counter-evidence first, then what is unproven and what you can honestly sign off.
 job: think-and-decide
 headline: Pressure-proof answer checker
-subhead: A way to keep your AI honest when someone pushes it to agree, sign off
-  or hurry. It separates what the evidence shows from what the pressure demands.
+subhead: Paste a request that pushes you to agree, sign off or hurry, plus the evidence you have. Your AI names the pressure, puts the strongest counter-evidence first, lists what is unproven and says what it can and cannot sign off.
 explain: |
-  A way to keep your AI honest when someone pushes it to agree, sign off or hurry. It separates what the evidence shows from what the pressure demands.
+  When someone says "approve this by tomorrow" or "the boss already decided", it is easy to agree and move on. This skill helps you say no for the right reasons, and shows your work.
 
-  Before replying, the AI looks for pressure patterns: forced urgency, appeals to authority, requests to certify unchecked work. If an external anti-deception tool is set up, it can call that tool, but only when you allow sharing the context, and never with private details. The answer then leads with the strongest counter-evidence, states what is unknown, and refuses to give false assurance. You get a reply you can defend later.
+  Your AI looks for pressure patterns: forced deadlines, appeals to authority, "everyone agrees", and requests to certify work nobody tested. It splits what the evidence shows from what is only asserted. The reply leads with the best counter-evidence, lists what is unproven and refuses false sign-off. It also says what would change its mind.
+
+  It works with no extra tools. An optional outside service, the Ejentum anti-deception tool, can add a checklist. That service is run by a third party and may need its own account or key, so check its page first. It is not needed.
 when:
-  - A boss wants the AI to approve a risky plan before tomorrow.
-  - Someone claims authority to push through weak claims.
+  - A boss wants a risky plan approved before tomorrow and you doubt it.
+  - Someone cites a title or a big name to push weak claims through.
   - You are asked to confirm work that was never tested.
   - You want your AI to stop agreeing just to be pleasant.
+not_for:
+  - You want facts checked claim by claim against sources. Use the AI answer fact-checker.
+  - You want to test your own idea from all sides. Use the Claim stress tester.
+  - Your question is neutral and nobody is pushing. Ask it normally, or use the Answer double-checker.
+  - You want to know if an advisor has a stake in the outcome. Use the Advice skin-in-the-game checker.
 you_give:
-  - The message or request applying pressure
-  - Facts or evidence you have
-  - Permission to use an external tool (optional)
+  - The message or request that is pushing you
+  - The evidence you have, such as tests, numbers or documents
+  - What you are being asked to approve
+  - Permission to use an outside tool (optional)
 you_get:
-  - Reply that leads with counter-evidence
-  - Clear list of what is unproven
-  - Refusal of false sign-off
-  - Honest next steps
+  - The strongest counter-evidence, first
+  - A list of what is unproven
+  - The pressure patterns it noticed
+  - What it can sign off and what it refuses
+  - One next step to close the biggest gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text as your first message.
+  - Paste the request that is pushing you, word for word. Then paste your evidence. If you have none, say so.
+  - Do not paste private names, credentials or client details. Describe them in general terms instead.
+  - Read the counter-evidence first. Then read what is unproven. Those two parts are the ones to act on.
+  - Use the sign-off section as your reply. Send the next step with it, so the person pushing gets a way forward.
+how_it_works:
+  - title: Names the pressure
+    text: Says which tactics are in the request, such as a forced deadline or a claim of authority.
+  - title: Splits evidence from persuasion
+    text: Lists what is shown apart from what is only asserted.
+  - title: Leads with counter-evidence
+    text: Puts the strongest point against the claim before any conclusion.
+  - title: Marks what is unproven
+    text: Lists each claim that nothing you gave it supports.
+  - title: Decides what to sign off
+    text: Confirms what it can, refuses the rest and says what would change that.
+  - title: Gives a next step
+    text: Names one action that closes the biggest gap.
+output_shape: |
+  COUNTER-EVIDENCE
+  <strongest points against the claim or the sign-off>
+
+  WHAT IS UNPROVEN
+  - <claim with no support>
+
+  PRESSURE I NOTICED
+  <patterns, such as deadline pressure or appeal to authority>
+
+  WHAT I CAN AND CANNOT SIGN OFF
+  Can: <part>  Cannot: <part>  Would change if: <condition>
+
+  NEXT STEP
+  <one concrete action>
+output_sample:
+  input:
+    - The request that is pushing you to agree
+    - The evidence you have (optional if none)
+    - What you are being asked to approve
+    - Permission to use an outside tool (optional)
+  prerequisites:
+    - For the optional tool only, an account or key with that third party. Not verified.
+  output:
+    - name: Counter-evidence
+      contains: The strongest points against the claim, placed before any conclusion.
+    - name: What is unproven
+      contains: Each claim that nothing you provided supports.
+    - name: Pressure I noticed
+      contains: The tactics found, such as forced urgency or an appeal to authority.
+    - name: What I can and cannot sign off
+      contains: What it will confirm, what it refuses and what would change that.
+    - name: Next step
+      contains: One action that closes the biggest gap.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The steps are plain reasoning, so Claude, ChatGPT and Gemini all work with no setup.
+    - name: Ejentum anti-deception tool (optional)
+      why: A third-party tool the original skill can call. It may need an account or key. Not verified.
+  inputs:
+    - Test results or numbers that bear on the claim
+    - The deadline and what happens if it is missed
+    - Who is asking and what they gain
+terms:
+  - term: Counter-evidence
+    meaning: Facts that point against the claim you are being asked to accept.
+  - term: Appeal to authority
+    meaning: Using a job title or a famous name as the reason to agree, instead of evidence.
+  - term: Sign-off
+    meaning: Saying in writing that you approve or certify something.

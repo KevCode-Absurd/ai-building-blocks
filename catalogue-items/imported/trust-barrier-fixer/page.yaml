@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs proof against doubts for one audience.
 new_slug: trust-barrier-fixer
 name: Trust barrier fixer
-summary: Give it your message and audience. Get the doubts they hold and the
-  proof and claim strength that settle them.
+summary: Find why your audience doubts your message. Get the trust barriers, the proof that fits each one, and how bold each claim should sound.
 job: understand-customers
 headline: Trust barrier fixer
-subhead: The doubts your audience really holds, and the proof and claim strength
-  that settle them. You stop overclaiming to people who do not believe you, and
-  stop underselling to people who would.
+subhead: The doubts your audience really holds, and the proof and claim strength that settle them. You stop overclaiming to people who do not believe you, and stop underselling to people who would.
 explain: |
   The doubts your audience really holds, and the proof and claim strength that settle them. You stop overclaiming to people who do not believe you, and stop underselling to people who would.
 
@@ -18,6 +15,10 @@ when:
   - You sell in a category where people feel burned before.
   - You are not sure how bold your headline can be.
   - You need to decide which proof to show first.
+not_for:
+  - "You have a brand-new offer with no customer data: talk to a few real buyers first, then come back."
+  - "You need legal or medical claims checked: ask a compliance reviewer or a lawyer, not this skill."
+  - "You want to fake reviews or authority: this skill only builds trust with real proof, so use none."
 you_give:
   - Your message or page copy
   - Your target audience
@@ -29,7 +30,25 @@ you_get:
   - Claim strength advice
   - Reworded lines to try
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your message or page copy. Say who it is for and what you want them to do.
+  - Add past customer feedback or objections if you have them.
+  - Check the first barrier it names. Ask it to redo that part if it does not match what you hear from customers.
+  - Try the reworded lines. Only use proof you really have.
+output_sample:
+  input:
+    - Your message or page copy
+    - Who it is for
+    - What you want them to do
+    - Past customer feedback or objections (optional)
+  output:
+    - name: Trust barrier
+      contains: "What your audience feels is missing: skill, good intent, proof, familiarity or legitimacy."
+    - name: Category baseline
+      contains: Whether people trust, distrust or disagree about your kind of offer, and how much proof that calls for.
+    - name: Trust signal
+      contains: The proof that fits each barrier, such as results, credentials, endorsements, plain facts or a view of your process.
+    - name: Signal placement
+      contains: Where in the page or funnel to show each signal, before the riskiest decision.
+    - name: Repair risk check
+      contains: Places where a line may sound defensive, exaggerated or pushy, and how to calm it.

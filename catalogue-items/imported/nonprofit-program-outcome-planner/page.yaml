@@ -2,16 +2,31 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-program-outcome-planner
 name: Nonprofit program outcome planner
-summary: Share your program and intended change. Get a clear activity-to-outcome map, assumptions, and evidence gaps.
+summary: Plan a nonprofit program logic model. Give it your activities and goal. You get a map from work to change, plus assumptions to check.
 job: plan-strategy
 headline: Nonprofit program outcome planner
 subhead: Share your program, resources, community need, and intended change. It maps how each activity could lead to results and checks the links. You get a one-page program model, a plain explanation of the change, and assumptions or evidence gaps to review.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - You are designing a new program and need to show how it should work.
+  - A funder or board asks how your activities lead to results.
+  - A program has run for years and no one can say why it should work.
+  - You are redesigning a program and want to check its hidden assumptions.
+not_for:
+  - "You still need to show the need exists: do a needs assessment first, using community data or a local survey."
+  - "You want to write the model into a grant application: use a grant writing step or a grant writer after this."
+  - "You want to measure whether results happened: use an outcomes measurement plan or an evaluator instead."
 you_give:
-  - Confirmed community need, resources, program activities, intended participant changes, and supporting evidence.
+  - Your program activities and who they serve.
+  - The community need you have confirmed.
+  - "Your resources: staff, funding, volunteers, partners."
+  - The changes you want for participants.
+  - Counts of work delivered so far (optional).
+  - Past evaluation data or research that supports your approach (optional).
 you_get:
-  - A program model table, change explanation, assumptions list, and notes for measurement or grant writing.
+  - A one-page logic model table.
+  - A short explanation of how your work should lead to change.
+  - A list of assumptions and outside factors to review.
+  - Notes on evidence gaps, measures to set, and parts to use in a grant.
 how_it_works:
   - title: Start with the change
     text: Define the long-term aim, then work backward to the smaller changes needed along the way.
@@ -26,5 +41,28 @@ works_best_with:
   inputs:
     - Logic models set what the program promises to achieve.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill's instructions. No code or paid tool is needed.
+  - "Paste your program details: activities, resources, the need, and the change you want."
+  - Add counts and evaluation data if you have them. Say so if you have none.
+  - Read the table. Check that counts sit under outputs and changes in people sit under outcomes.
+  - Ask your AI to explain any link that does not make sense. Fix or cut it.
+  - Show the draft to the staff who run the program. Ask what assumptions are false.
+output_sample:
+  input:
+    - Your program name and what it does
+    - The community need you have already confirmed
+    - "Your resources: staff, funds, volunteers, partners, space"
+    - The change you want for participants
+    - Any past results or evaluation data (optional)
+  prerequisites:
+    - A chat AI. No code or file tools are needed if you paste your details in.
+    - A confirmed community need. This skill does not prove the need.
+  output:
+    - name: One-page logic model
+      contains: A table with inputs, activities, outputs, short-term, mid-term and long-term outcomes, with counts kept apart from changes.
+    - name: Theory of change narrative
+      contains: A one to two page if-then-because explanation of how the program leads to change, with the evidence behind each link.
+    - name: Assumptions and risk list
+      contains: Conditions that must hold for the model to work, plus outside factors that could help or hurt.
+    - name: Handoff notes
+      contains: Which outcomes need measures, and which parts a grant writer will need to turn into text.

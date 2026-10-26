@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It balances freedom and structure in a time block.
 new_slug: choice-work-block-planner
 name: Choice work block planner
-summary: Describe your time block. Get a plan for a long stretch of independent,
-  choice-based work.
+summary: Plan a choice-based work block for your class. Give it your real time and activities. You get a timed work cycle plan for independent work.
 job: teach-and-train
 headline: Choice work block planner
-subhead: A plan for a long, uninterrupted stretch where students pick their own
-  work and stay focused. You tell it how much time you really have and what is
-  on offer, and you get a block that works in a real timetable.
+subhead: A plan for a long, uninterrupted stretch where students pick their own work and stay focused. You tell it how much time you really have and what is on offer, and you get a block that works in a real timetable.
 explain: |
   A plan for a long, uninterrupted stretch where students pick their own work and stay focused. You tell it how much time you really have and what is on offer, and you get a block that works in a real timetable.
 
@@ -18,6 +15,10 @@ when:
   - Students hop between tasks and never settle into one.
   - You are unsure how to run small lessons while others work alone.
   - You need a way to track what each student chooses.
+not_for:
+  - "You want whole-class direct teaching: use a standard lesson plan instead."
+  - "Your block is under about 60 minutes: use a standard lesson plan, since a work cycle needs a long block."
+  - "You only need to set up shelves and stations: use the prepared-environment-designer skill."
 you_give:
   - The real length of your time block
   - The activities students can choose from
@@ -29,7 +30,34 @@ you_get:
   - Notes on how to open and close the session
   - Ways to support students who struggle to choose
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Tell your AI the real length of your time block.
+  - List the activities students can choose from. Add class size, age and your worries if you like.
+  - Read the plan. Check that the timing fits your real timetable.
+  - Adjust anything that does not fit your room. Then plan your shelves with the prepared-environment-designer skill and your short lessons with the three-part-lesson-designer skill.
+output_sample:
+  input:
+    - The real length of your time block
+    - The activities students can choose from
+    - Student age or level (optional)
+    - Class size (optional)
+    - Your current routines and worries (optional)
+  output:
+    - name: Work Cycle Structure
+      contains: The full block laid out in time, with the teacher's role in each phase.
+    - name: Opening Routine
+      contains: How to start the session and help students settle into their choices.
+    - name: Work Period
+      contains: How the long stretch of independent work runs and what students do.
+    - name: Teacher Observation Protocol
+      contains: How to watch students and give short lessons without breaking others' focus.
+    - name: Materials Rotation and Choice Management
+      contains: How to manage the choices on offer and help students who struggle to choose.
+    - name: Closing Routine
+      contains: How to end the session and have students record what they did.
+    - name: Transition Management
+      contains: How to move students in and out of the block smoothly.
+    - name: Building the Routine Over Time
+      contains: How to grow the work cycle step by step over several weeks.
+    - name: Addressing Common Concerns
+      contains: Answers to the worries you shared, such as off-task students or easy choices.

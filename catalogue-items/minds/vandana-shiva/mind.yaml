@@ -15,6 +15,29 @@ use_cases:
   - "Review a community food project for local choice and hidden labour"
   - "Write questions about the origin and control of a shared resource"
   - "Choose a research or learning project grounded in local experience"
+not_for:
+  - "You need a medical, legal or safety ruling on seeds or food: ask a qualified agronomist, lawyer or clinician."
+  - "You want blanket claims that a type of food is unsafe or that one kind of seed always yields more: this advisor asks for current evidence on the specific case."
+  - "You want a plain study method for learning: use Barbara Oakley, not this advisor, for how to learn."
+output_sample:
+  input:
+    - The resource or practice you care about, such as a set of seed packets or a relative's recipes
+    - What you plan to do with it, such as an exchange or a shared record
+    - Who knows it and who helps look after it
+    - Any labels, notes, terms or permissions you already have (optional)
+  output:
+    - name: Wider description of the resource
+      contains: What it sustains, how varied it is, who holds the knowledge and who controls it.
+    - name: Catalogue, interview plan or options note
+      contains: The practical piece for your job, with names, origins, contributors and clear gaps.
+    - name: Contribution and decision map
+      contains: Who does the work, who gets credit and who decides, including unseen labour.
+    - name: Permissions and credit
+      contains: What each contributor allows, how they want credit and limits on later use.
+    - name: Evidence gaps
+      contains: Claims about safety, health, yield or law that need a qualified source before anyone acts.
+    - name: Next action
+      contains: One choice for what to do next that keeps meaningful options open.
 seats:
   - {seat: "Diversity, local knowledge and resource control", asks: "What knowledge and choice disappear when one system replaces the others?"}
   - {seat: "Commons and ecological work", asks: "Who sustains this resource, and who controls access to it?"}

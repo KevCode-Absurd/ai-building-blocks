@@ -13,6 +13,25 @@ metadata:
 
 > **Portability:** stdlib only. No database, no embeddings, no network, no LLM calls.
 
+## Before you start (added by AI Blocks)
+
+- **Needs:** Claude Code, `python3`, and a project with a `CLAUDE.md`. The three hooks and the `adopt` command named below come from the original repo (see `source` in item.yaml), not from this folder. This folder holds the three scripts that extract, inspect and promote. `memory_extract.py` prints the facts it finds. It does not write the store; the SessionEnd hook does that.
+- **Privacy:** session transcripts can hold names, keys and private details. Redaction is a word-pattern filter and does not catch everything. Do not turn on automatic capture for a project with secrets in its sessions, and read `.memory/` before you share or commit anything.
+- **Missing input:** if there is no `.memory/` folder yet, say so and start at L0. If there is no transcript, work from the notes file only. Never invent a remembered fact or a source line.
+- **No Claude Code?** Do the "Sort your notes file" step below in a normal chat. It needs no scripts and writes nothing.
+
+## Sort your notes file (added by AI Blocks, optional first step)
+
+Read the user's current `CLAUDE.md`. For each line, label it KEEP (a project fact or rule that applies every session), PARK (a one-off remark that has not recurred; hold it as an L1 idea) or CUT (stale, duplicated, or a passing preference). Show the labels and a shortened file as a proposal. Do not edit the file. The user decides.
+
+## What you hand back (added by AI Blocks)
+
+1. The sort table (KEEP, PARK, CUT) with a one-line reason per row, if you ran the sort step.
+2. The output of the script you ran: `--tier` list, `--why` trace, `--contested` list or the promotion dry run.
+3. For a `--why` question: the sessions, the days, and the quoted source line. If the result is ambiguous, say "no trace found". Do not guess.
+4. A list of staged proposals in `.memory/staged/` with, for each, the claim, the sessions and days it recurred in, and what it needs before it can move up.
+5. A next step: which proposals to adopt by hand, which to reject, and what to check after a week of sessions.
+
 ## The problem
 
 A project's `CLAUDE.md` is a memory system with one tier and no eviction: every

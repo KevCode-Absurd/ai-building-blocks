@@ -1,6 +1,6 @@
 new_slug: design-principles-checker
 name: "Design principles checker"
-summary: "Paste a spec, API or tool design. Get a score out of 100 against six design principles, with fixes."
+summary: "Check a spec, API or file format against six design principles. You get a score out of 100, the reasons, and fixes in order."
 job: build-software
 thinking: high
 thinking_why: "It must judge a design against six principles with reasons, which needs careful reading."
@@ -17,6 +17,10 @@ when:
   - You are about to publish a spec, an API or a file format that others will build on.
   - You are choosing between two designs and want a clear way to compare them.
   - A tool you built is getting hard to extend and you do not know why.
+not_for:
+  - "You are testing a change to a design people already use: use the Breaking change reviewer."
+  - "You built a one-off internal tool that nobody else will build on: skip this and ask a teammate for a quick read."
+  - "You want to know if a design is easy for users to follow: test it with a few real users, not this checker."
 
 you_give:
   - The design, as a spec, API description, file format or tool overview
@@ -34,6 +38,24 @@ how_to_use:
   - Say who builds on it and what could change in the future.
   - Read the failed principles first, then the single points of control.
   - Make the changes, then run it again and compare scores.
+output_sample:
+  input:
+    - Your design, as a spec, API description, file format or tool overview
+    - What it is for and who builds on it (optional)
+    - A rival design to compare against (optional)
+  output:
+    - name: The design
+      contains: A short note on what the design is and who builds on it.
+    - name: Score
+      contains: A score out of 100, with the six marks (full, half or none) that make it up.
+    - name: Six principle results
+      contains: A pass, partial or fail with a reason for simplicity, modularity, tolerance, decentralisation, independent invention and least power.
+    - name: Burden on others
+      contains: Each extra feature other specs must handle, marked as needed or removable.
+    - name: Changes, in order
+      contains: Fixes with the biggest gain first, each naming the principle it fixes.
+    - name: Missing / checks missed
+      contains: Gaps in what you pasted and any checks that could not be passed.
 
 how_it_works:
   - title: Counts the building blocks

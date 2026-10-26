@@ -2,32 +2,87 @@ thinking: low
 thinking_why: It rewrites one message more simply.
 new_slug: plain-message-re-pitcher
 name: Plain message re-pitcher
-summary: Say you are lost. Get the last message said again in simple words, with
-  a little context.
+summary: Lost in your AI's last reply? Get it said again in short, plain sentences, with the missing background filled in so you can decide.
 job: think-and-decide
 headline: Plain message re-pitcher
-subhead: When a reply loses you, say so and get the last message said again in
-  plain words, with a little background first. It uses Simplified Technical
-  English, a short-sentence style built for clarity.
+subhead: When an AI reply loses you, say so. Your AI says the last message again in short, plain sentences. It adds the missing background first and uses your project's own terms if you have a glossary.
 explain: |
-  When a reply loses you, say so and get the last message said again in plain words, with a little background first. It uses Simplified Technical English, a short-sentence style built for clarity.
+  AI replies can be full of jargon, skipped steps and long sentences. This skill is how you say "wait, I am lost" and get a clear version of the same message, not a new one.
 
-  The skill is a single prompt. It asks the AI to re-pitch what it just said: give some context, write in Simplified Technical English and use the agreed terms from the project's glossary file. If the repository has more than one glossary, it follows the glossary map to the right one. The result is the same content in words a newcomer can follow. It works best in a project that already has a glossary file.
+  Your AI gives a little context first. Then it says the message again in Simplified Technical English, a style with short sentences, common words and one word for one thing. It does not add new facts or drop warnings. It uses the terms from your project's glossary file when there is one, so a new teammate learns your words and not a synonym.
+
+  It is one short prompt that works in any chat. It does its best work when your project has a glossary file, but it does not need one.
 when:
-  - The AI gave a long answer full of jargon.
-  - A teammate joins and cannot follow earlier talk.
-  - You need the same point in shorter sentences.
-  - You want replies that match your project's own terms.
+  - Your AI gave a long answer full of terms you do not know.
+  - A new teammate joins and cannot follow what the AI has said so far.
+  - You want the same point in shorter sentences before you forward it.
+  - You want replies that use your project's own words, not new ones.
+not_for:
+  - You want a fresh answer or new research. Ask a new question instead.
+  - You want a long text shortened. Use the Context shrinker.
+  - You want a claim checked for truth. Use the AI answer fact-checker.
+  - The message is not in this chat and you cannot paste it. There is nothing to restate.
 you_give:
-  - The message you did not follow
-  - A glossary file (optional)
-  - How much context you need (optional)
+  - The message you did not follow, in your chat or pasted
+  - Your project's glossary file (optional)
+  - How much background you want, such as one line or the full story (optional)
 you_get:
-  - The message restated simply
-  - A short context lead-in
-  - Terms matched to your glossary
+  - A short lead-in on where things stand
+  - The same message again in short, plain sentences
+  - A list of terms it kept, each with a short meaning
+  - One question, if the first message itself was unclear
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open the chat where the reply lost you. Add this skill, or paste its text as your next message.
+  - Type "Wait, I don't understand. Re-pitch that." If the message was in another chat, paste it first.
+  - If your project has a glossary file, paste it or point your AI to it. Skip this if you have none.
+  - Read the new version. Check that it matches the first message and adds nothing new.
+  - If a word is still hard, ask "What does X mean?" Then ask for the message again with that word explained.
+how_it_works:
+  - title: Finds the message
+    text: Takes your last AI message, or the one you paste. It asks once if there is none.
+  - title: Finds your terms
+    text: Reads the glossary file if there is one. If not, it says so and uses everyday words.
+  - title: Adds context
+    text: Writes two or three short sentences on where things stand.
+  - title: Says it again
+    text: Rewrites the same points in short plain sentences with no new facts.
+  - title: Lists terms
+    text: Names any technical word it kept, with a few words of meaning.
+output_shape: |
+  WHERE WE ARE
+  <two or three short sentences of context>
+
+  THE MESSAGE AGAIN
+  <same points, one idea per sentence, main point first>
+
+  WORDS USED
+  <term>: <few words of meaning>
+
+  STILL UNCLEAR?
+  <one question, only if the first message was unclear>
+output_sample:
+  input:
+    - The AI message you did not follow
+    - Your project's glossary file (optional)
+    - How much background you want (optional)
+  output:
+    - name: Where we are
+      contains: Two or three short sentences on what you are doing and why the message matters.
+    - name: The message again
+      contains: The same points in short sentences, main point first, with no new facts.
+    - name: Words used
+      contains: Each technical term it kept, with a few words of meaning.
+    - name: Still unclear
+      contains: One question, only if the first message was itself vague.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is one short prompt, so Claude, ChatGPT and Gemini all work.
+  inputs:
+    - A GLOSSARY.md file with your project's terms
+    - A GLOSSARY-MAP.md file if you keep more than one glossary
+terms:
+  - term: Simplified Technical English
+    meaning: A writing style with short sentences, common words and one word for one thing.
+  - term: Glossary
+    meaning: A file listing the words your project uses and what each one means.

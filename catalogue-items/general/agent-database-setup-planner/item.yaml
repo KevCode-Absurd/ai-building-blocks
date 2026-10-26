@@ -1,6 +1,6 @@
 slug: agent-database-setup-planner
 name: Agent database setup planner
-summary: Plan an agent database with scoped records, access rules and staging checks. Get the schema map and setup steps.
+summary: "Plan the database your AI agents need. Get a schema map, migration steps, access rules and a staging test plan that keeps existing data safe."
 category: general
 type: skill
 role: make

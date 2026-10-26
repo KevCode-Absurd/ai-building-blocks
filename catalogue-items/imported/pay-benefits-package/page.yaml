@@ -2,35 +2,121 @@ thinking: high
 thinking_why: Pay choices affect cost and fairness for years.
 new_slug: pay-benefits-package
 name: Pay and benefits package designer
-summary: Give it your pay goals and team size. Get pay bands, bonus ideas and a
-  total pay statement outline. Not legal advice.
+summary: Design your total pay offer. Get pay levels, a pay fairness screen, bonus or commission options, a pay statement and a raise cycle plan.
 job: hire-people
 headline: Pay and benefits package designer
-subhead: "An outline of your total pay offer: pay bands, bonus ideas, benefits
-  and a statement showing employees the full value. It is a draft, not legal
-  advice."
+subhead: Give it your pay goals, team size, roles and budget. It sets pay levels and bands, screens current pay for gaps, compares bonus or commission options, outlines a total pay statement and plans your raise cycle.
 explain: |
-  An outline of your total pay offer: pay bands, bonus ideas, benefits and a statement showing employees the full value. It is a draft, not legal advice.
+  A pay package is more than a salary. This pay and benefits package designer works on the whole offer: pay levels and bands, bonus or commission, benefits, and the statement that shows an employee what all of it is worth.
 
-  You share your pay goals and team size. It covers salary structures and job levels, benchmarking by role and place, pay fairness checks, bonus and sales commission design, stock plans, and benefits. It explains measures like compa-ratio, which compares a person's pay to the range midpoint, and range position. It also helps plan review and raise cycles and write policy and communication drafts that link pay to hiring and keeping people.
+  It goes further than a first draft plan. If you give it current pay by person, it screens for gaps within each level and lists the ones nobody can explain. It tests each bonus or commission option at low, target and high performance, so you see the cost before you launch. It also plans the raise cycle, using compa-ratio, which is a person's pay divided by the midpoint of their range.
+
+  It does not invent market pay or costs. It is a draft, not legal advice. Check any fairness result with an employment adviser before you act on it.
 when:
   - Staff do not see the value in their total pay.
   - You are building salary levels from scratch.
-  - You need a commission or bonus plan.
-  - You must plan an annual raise cycle.
+  - You need a commission or bonus plan, and want to see what each version costs.
+  - You must plan an annual raise cycle and check for pay gaps first.
+not_for:
+  - "You want one fast first draft from roles and budget: use the Pay and benefits plan builder."
+  - "You only need the pay range for one role: use the Pay band builder."
+  - "You need a legal pay equity audit or a pay transparency opinion: use an employment lawyer. This is a first screen only."
 you_give:
-  - Pay goals and team size
-  - Roles and levels
-  - Budget
-  - Current pay and benefits (optional)
+  - Your pay goals, such as hire better, keep people or hold cost
+  - Your team size, roles and levels
+  - Your budget
+  - Market data for your roles (optional)
+  - Current pay and benefits by person or role (optional)
+  - Your location (optional)
 you_get:
-  - Pay bands and levels
-  - Bonus or commission ideas
-  - Benefits suggestions
-  - Total pay statement outline
-  - Raise cycle plan
+  - Pay levels and bands for each level
+  - A pay fairness screen, when you give current pay
+  - Bonus or commission options with cost at low, target and high results
+  - Benefits suggestions, core first
+  - An outline for a total pay statement
+  - A raise cycle plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down your goals, roles, levels, budget and, if you have it, pay by person. Remove names if you like.
+  - Open Claude, ChatGPT or Gemini and paste in this skill, then your notes.
+  - Answer its question on where you want to pay against the market.
+  - Read the fairness screen and the cost lines first. Fix any level that looks wrong before you go on.
+  - Ask for a deeper pass on one part, such as a commission plan, using the prompts in the skill.
+  - Have HR, finance and an employment adviser review the draft before you share it.
+output_sample:
+  input:
+    - Your pay goals and team size
+    - Your roles and levels
+    - Your budget
+    - Current pay by person or role (optional)
+    - Market data for your roles (optional)
+  output:
+    - name: Levels
+      contains: Each level with a one-line meaning and the roles in it.
+    - name: Pay bands
+      contains: Min, mid and max for each level, with spread, headcount and cost at midpoint.
+    - name: Fairness screen
+      contains: Pay gaps within each level, with the reason given or marked unexplained.
+    - name: Bonus or commission
+      contains: Two or three options with what they reward, cost at low, target and high, and risks.
+    - name: Benefits
+      contains: Core and optional benefits tied to your goals and budget.
+    - name: Total pay statement
+      contains: The sections an employee sees and how each value is worked out.
+    - name: Raise cycle plan
+      contains: Dates, owners, budget pool and the rule linking raises to performance and range position.
+    - name: Flags and next steps
+      contains: Assumptions, missing data and what finance or legal should review.
+how_it_works:
+  - title: Restate the brief
+    text: Repeats your goals, roles and budget, and marks anything missing instead of guessing.
+  - title: Set levels and bands
+    text: Groups roles by scope, asks where you want to pay against the market, and sets min, mid and max.
+  - title: Screen for pay gaps
+    text: Compares pay within each level and lists gaps with no clear reason. It is a first screen, not an audit.
+  - title: Test bonus options
+    text: Models each bonus or commission option at low, target and high results and shows the cost.
+  - title: Build the statement
+    text: Outlines what an employee sees, so hidden value in benefits and time off shows up.
+  - title: Plan the raise cycle
+    text: Sets dates, owners and a raise rule based on compa-ratio and performance, using the budget pool you choose.
+output_shape: |-
+  LEVELS
+    <level> | <what it means> | <roles>
+
+  PAY BANDS
+    <level> | min <n> | mid <n> | max <n> | spread <%> | headcount <n> | cost at mid <n>
+
+  FAIRNESS SCREEN
+    <level> | <gap found> | <reason or "unexplained"> (or "not run: no pay data")
+
+  BONUS OR COMMISSION
+    <option> | rewards <what> | cost low <n> / target <n> / high <n> | risk <what>
+
+  BENEFITS
+    Core: <list> | Optional: <list>
+
+  TOTAL PAY STATEMENT
+    <sections and how each is valued>
+
+  RAISE CYCLE PLAN
+    <date> | <owner> | pool <n> | rule <text>
+
+  FLAGS AND NEXT STEPS
+    <assumptions> | MISSING: <items> | Review needed: <items>
+works_best_with:
+  tools:
+    - name: Any chat AI that builds tables
+      why: The bands, cost lines and raise rules are easier to check in a table.
+    - name: Google Sheets or Excel
+      why: Paste the bands and cost lines in to test other budgets.
+  inputs:
+    - A salary survey extract for your roles
+    - Your last raise cycle's results
+    - Your current benefits list with what each costs you
+terms:
+  - term: Compa-ratio
+    meaning: A person's pay divided by the midpoint of their range. One means pay sits at the midpoint.
+  - term: Pay equity
+    meaning: Whether people doing similar work are paid fairly, whatever their background.
+  - term: Total pay statement
+    meaning: A page showing an employee all they earn, including bonus, benefits and equity.

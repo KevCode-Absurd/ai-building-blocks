@@ -1,6 +1,6 @@
 new_slug: world-detail-consistency-checker
 name: "World detail consistency checker"
-summary: "Paste your world notes and drafts. Get every clash between details, a fix for each and a score."
+summary: "Check your world notes and new scenes for clashing details. You get each clash quoted, which fact should win, a fact log and a score."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It compares many passages against a list of facts, then judges which detail should win in each clash."
@@ -17,6 +17,10 @@ when:
   - You are adding a chapter, level, scene or illustration to a world you already described.
   - A picture or sketch came back and you want to know if it matches your text.
   - Several people write in the same world and details have started to drift.
+not_for:
+  - "You have one passage and no earlier notes to check against: read it yourself, or write down your facts first and come back."
+  - "You want to fix wording, tone or grammar: use a copy editor, a person or an editing tool, since this checks facts only."
+  - "You want to plan a plot or invent new world details: use a plain chat with your AI, since this only checks what you already wrote."
 
 you_give:
   - Your world notes or earlier text, with the facts about places, people and rules
@@ -34,6 +38,24 @@ how_to_use:
   - If you have a picture, attach it, and say what it is meant to show.
   - Read the clash list top to bottom and decide each one yourself. The skill suggests, you choose.
   - Keep the fact log beside your draft and give it to anyone else who writes in the world.
+output_sample:
+  input:
+    - Your world notes or earlier chapters
+    - The new passage, scene or picture brief to check
+    - A short brief on what the world is for and its rules (optional)
+  output:
+    - name: Fixed facts found
+      contains: Each stated fact about places, people and rules, with where it appears.
+    - name: Clashes
+      contains: Each clash with both passages quoted, its weight, which fact wins, the fix and any world rule that explains it.
+    - name: Fact log
+      contains: Each settled fact once, its status and its source, ready to reuse on later pages.
+    - name: Score
+      contains: A consistency score out of 100, with the numbers used to work it out.
+    - name: Missing
+      contains: What you did not supply, so some facts could not be checked.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: Lists the fixed facts

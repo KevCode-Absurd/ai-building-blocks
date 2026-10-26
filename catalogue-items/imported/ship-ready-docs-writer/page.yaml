@@ -2,35 +2,115 @@ thinking: medium
 thinking_why: It reads the code and writes set documents, with some judgment on what applies.
 new_slug: ship-ready-docs-writer
 name: Ship-ready docs writer
-summary: "Point it at an AI-built app. Get the short set of docs a reviewer
-  needs: architecture, permissions, secrets and test map."
+summary: "Write the short docs a reviewer needs to judge an AI-built app: how it fits together, who can do what, where secrets live and what is tested."
 job: document-work
 headline: Ship-ready docs writer
-subhead: "A short set of documents that lets a reviewer judge an AI-built app
-  without guessing what it was meant to do. AI writes code fast but leaves no
-  record of intent, so nobody can tell if the app is safe to ship."
+subhead: Point your AI at the code folder of an app it helped build. It reads the code and writes a short set of documents that show how the app works, who is allowed to do what and which rules have tests. A reviewer can then judge the app without guessing what it was meant to do.
 explain: |
-  A short set of documents that lets a reviewer judge an AI-built app without guessing what it was meant to do. AI writes code fast but leaves no record of intent, so nobody can tell if the app is safe to ship.
+  AI writes code fast, but it leaves no record of what the app is meant to do. Without that record, a reviewer, a client or the next developer cannot tell if the app is safe to ship. This skill writes the missing record as a short set of documents, read from the code itself.
 
-  The core set has five docs: architecture, user and permission flows, permissions, variables and secrets, and a test-coverage map. Extra docs are added only when they apply: emails, scheduled jobs, search visibility and embedded agents. Each doc says what it must capture and how a reviewer uses it. The repo's own folder names and rules win over the defaults. These docs also serve as the baseline for later security checks.
+  Five documents are always written. They cover how the app fits together, the key flows where permissions matter, who may do what, which settings and secrets it uses, and which rules have tests. Four more are added only when the app has that feature: emails, scheduled jobs, search and sharing previews, and built-in AI agents. If a feature is missing, one line says so.
+
+  Your folder names and rules come first. If your project already has a docs folder or an instructions file, the skill writes there and updates what exists. Each document is short and mostly tables and lists. The aim is an honest map, not a clean bill of health.
 when:
-  - You built an app with AI and a reviewer or client needs to understand it.
-  - You are handing a codebase to another developer or an auditing agent.
-  - You need to map who can do what before a security review.
-  - You want to see which rules in the app have tests and which do not.
+  - You built an app with AI and a client or reviewer needs to understand it.
+  - You are handing a codebase to another developer, or to an agent that will check it.
+  - You need a map of who can do what before a security review.
+  - You want to see which rules in the app have tests and which have none.
+not_for:
+  - "You have one script, or a project with no AI-written code: a README is enough. Use the GitHub README improver."
+  - "You want the code checked for bugs and risks: use the AI-written code reviewer. This skill writes the map it works from."
+  - "You want a security scan of the code: use the Code security scanner, after these docs exist."
+  - "You want a note that lets a coding agent carry on a task: use the Coding agent handoff writer."
 you_give:
-  - The app's code folder
-  - Any existing docs or agent instruction files (optional)
-  - Who will review it (optional)
+  - The app's code folder, which your AI must be able to open
+  - Any existing docs, or your AGENTS.md or CLAUDE.md file (optional)
+  - Who will review the app and what they care about (optional)
 you_get:
-  - An architecture doc
-  - A user and permission flow doc
-  - A secrets and variables list
-  - A test-coverage map
-  - Extra docs for emails, schedules or agents where they apply
+  - architecture.md, with the tech stack, how login works and known risks
+  - flows.md, with the key flows where permissions and side effects matter
+  - permissions.md, with roles and who can do what to which thing
+  - variables.md, with every setting and secret by name, with its risk
+  - tests.md, with which rules have tests, which are proposed and which have none
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your code files.
+  - Open a coding AI that can read your project folder, such as Claude Code. A chat AI works too if you upload the files.
+  - Add this skill, or paste its text. Tell your AI where the code folder is and who will review the app.
+  - Ask for the first four documents. Let your AI read the code and write them.
+  - Read the architecture document. Fix anything that does not match what you meant the app to do.
+  - Ask for the test map. It is built from the first four documents and from the tests already in the project.
+  - Send the documents to your reviewer. Never paste real secret values into any document, only their names.
+how_it_works:
+  - title: Finds your setup
+    text: Looks for your instructions file, your docs folder and any document that already covers one of the five.
+  - title: Writes the architecture
+    text: Describes what the app is, its tech stack, how login and sessions flow, and the risks it can see in the code.
+  - title: Maps the key flows
+    text: Follows each flow that touches permissions, money, privacy or outside services, and notes the check at each step.
+  - title: Lists who can do what
+    text: Builds a table of roles, things and actions, and says which data has row-level rules and which relies on code checks.
+  - title: Lists settings and secrets
+    text: Records each name, where it is used, whether it is server or browser side, and how risky it is.
+  - title: Adds docs only where they apply
+    text: Writes emails, scheduled jobs, search previews and agents docs when the app has them, and one line when it does not.
+  - title: Builds the test map
+    text: Ties each rule to a test that exists, a test that is proposed, or nothing, and ranks the gaps.
+output_shape: |
+  architecture.md
+    Overview and assumptions | Tech stack | Login and sessions | Trust boundaries
+    Known risks (each tied to the code) | Related documents
+
+  flows.md
+    <flow>: who, before, after
+      step | check at this step | what happens if denied | side effects
+
+  permissions.md
+    Roles and where they come from | <thing> x <action> x <role> table | Row-level rules
+
+  variables.md
+    <name> | used by | server or browser | source | rotation | risk
+    Go-live checklist
+
+  tests.md
+    Existing coverage | Proposed tests | Gaps (ranked)
+
+  Only if they apply: emails.md, cron.md, seo.md, automation.md
+
+  FILES WRITTEN
+  <path> | followed your setup or a default
+output_sample:
+  input:
+    - The app's code folder
+    - Your AGENTS.md, CLAUDE.md or existing docs (optional)
+    - Who will review it (optional)
+  prerequisites:
+    - An AI that can read your project files, such as Claude Code
+  output:
+    - name: architecture.md
+      contains: What the app is, its tech stack, how login works, trust boundaries and known risks.
+    - name: flows.md
+      contains: The key flows where permissions and side effects are checked, with the check at each step.
+    - name: permissions.md
+      contains: Roles, where each role comes from, and who can do what to which resource.
+    - name: variables.md
+      contains: Every setting and secret by name, where it is used, and how risky it is.
+    - name: tests.md
+      contains: Rules with a test today, rules with a proposed test, and rules with nothing.
+    - name: Conditional docs
+      contains: emails.md, cron.md, seo.md and automation.md, written only when the app has that feature.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your whole project folder and write the files in place.
+    - name: Any chat AI that accepts uploaded files
+      why: It can work from the files you upload, but it may miss code you leave out.
+  inputs:
+    - Your existing tests, so the test map shows what is covered today
+    - Your deploy settings, so variables and scheduled jobs are complete
+    - A line on what the app is for, so the documents say what it was meant to do
+terms:
+  - term: Trust boundary
+    meaning: A place where data crosses from one part to another, such as browser to server, so it must be checked.
+  - term: Row-level rules
+    meaning: Database rules that decide which rows each user may read or change.
+  - term: Secret
+    meaning: A key, password or token that must never be shown to the public or put in browser code.

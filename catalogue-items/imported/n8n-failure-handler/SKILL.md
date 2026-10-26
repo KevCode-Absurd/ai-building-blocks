@@ -13,6 +13,19 @@ license_source: https://github.com/czlonkowski/n8n-skills/blob/main/LICENSE
 
 # n8n Error Handling
 
+## Before you start
+
+Ask once for anything missing. Never invent it.
+
+- The workflow: exported JSON, or a clear list of its steps. If you only get a description, say which steps you assumed.
+- Where alerts should go (Slack channel or email address). Ask for a second channel for the error workflow to use, in case the first is down.
+- Which steps send an email or message, take a payment, or write data. If unknown, treat every such step as unsafe to retry until the person says otherwise.
+- Whether the workflow answers a webhook.
+
+This skill assumes the community n8n MCP tools (`n8n_get_workflow`, `n8n_update_partial_workflow` and the others named below). If you do not have them, do not pretend to edit the workflow. Write the changes as a numbered edit list for the person to make in n8n (in each node's Settings tab, find On Error and Retry On Fail), plus the error workflow as JSON they can import. Say "not applied" in the output.
+
+---
+
 ## When to Use
 
 Use this skill for unattended workflows, webhook/API response contracts, retry design, error outputs, Error Trigger workflows, alerting, or any path where failure must be visible and recoverable.
@@ -105,7 +118,15 @@ Before you build error branches, absorb the transient failures so they never rea
 
 Why this comes **first**: a 429 or a brief upstream hiccup will retry and usually succeed on its own. The error output then fires only on *real, persistent* failures — so your 5xx responses and on-call alerts reflect actual problems instead of noise.
 
-Engine limits to know: retry fires on **any** error (there's no per-status-code filter), `maxTries` caps at 5, and `waitBetweenTries` caps at 5000ms — so 5000 is both the max and a sensible default. See **n8n-node-configuration** (NODE_FAMILY_GOTCHAS.md) for node-specific notes.
+Engine limits to know: retry fires on **any** error (there's no per-status-code filter), `maxTries` caps at 5, and `waitBetweenTries` caps at 5000ms — so 5000 is both the max and a sensible default. Node-specific notes are not bundled in this package. If a node behaves oddly, check n8n's own documentation for that node.
+
+### Make every retry safe (do this before you turn retries on)
+
+A retry runs the same call again. For a read, that is harmless. For a send, a charge or a write, it can happen twice.
+
+- Do **not** set `retryOnFail` on a step that sends an email or message, takes a payment, or creates a record, unless the target accepts an **idempotency key** (a unique ID per action, such as the order ID) or the step first checks whether the action already happened.
+- If a step cannot be made safe, leave retry off for it, route its failure to the error path, and say so in the output.
+- Never retry on a bad-input error. Retries are for short network failures only.
 
 ---
 
@@ -125,7 +146,7 @@ Three things make this work:
 
 1. **Fan-in to one error responder.** Many fallible nodes can route their `main[1]` to a single `Respond` node. Keeps the graph readable.
 2. **Validation failures (4xx) are checked *upstream*, not via error outputs.** A missing field isn't a node *crashing* — it's an expected outcome with a known response. Branch on it with IF/Switch (or the schema validator below) and return 400/401/403/404 directly. Error outputs are for *unexpected* failures (5xx).
-3. **`responseCode` defaults to 200 — even on error branches.** This is its own silent trap (see references/RESPONSE_SHAPES.md and **n8n-node-configuration** at `../n8n-node-configuration/references/NODE_FAMILY_GOTCHAS.md`): an error branch that returns 200 with an error body looks like success to the caller's HTTP client, so their error handling never fires. Set `responseCode` explicitly on every Respond node.
+3. **`responseCode` defaults to 200 — even on error branches.** This is its own silent trap (see references/RESPONSE_SHAPES.md): an error branch that returns 200 with an error body looks like success to the caller's HTTP client, so their error handling never fires. Set `responseCode` explicitly on every Respond node.
 
 ### Input validation: the Set-node schema validator
 
@@ -249,7 +270,7 @@ What the MCP **can** do: build the error workflow, set `onError`/`retryOnFail` o
 ## Integration with other skills
 
 - **n8n-workflow-patterns** — the webhook/API and scheduled patterns are where error handling lives. Use it for the overall shape; use this skill to harden it.
-- **n8n-node-configuration** — `onError`/`retryOnFail` are node config; NODE_FAMILY_GOTCHAS.md covers the Webhook/Respond response-code traps in depth.
+- **n8n-node-configuration** — `onError`/`retryOnFail` are node config. That skill is not bundled here; the Webhook/Respond response-code trap is covered in references/RESPONSE_SHAPES.md.
 - **n8n-validation-expert** — the half-wired error output (one of the two steps missing) is a connection/config audit item, not a validation error. This skill is the fix.
 - **n8n-expression-syntax** — the expression-driven `Response Code` and the alert-message expressions rely on correct `{{ }}` syntax and `$json.error` access.
 - **n8n-code-javascript / n8n-code-python** — if you catch errors *inside* a Code node, decide deliberately: re-throw to use the error output, or handle and continue. Don't return error-shaped data and pretend it succeeded.
@@ -287,3 +308,19 @@ For an **unattended** (scheduled/cron/queue) workflow:
 - Retry safety depends on each downstream operation's idempotency and cannot be inferred from workflow shape alone.
 - MCP validation cannot assign or prove the instance-level Error Workflow setting; verify it in the n8n UI.
 - Redaction rules must be adapted to the workflow's data classification and legal requirements.
+
+## Output format
+
+Finish every job with this summary. Leave out a block that does not apply, and write NOT KNOWN for anything you could not find out.
+
+```
+Risky steps found: <list, with what each does>
+Retries: <step, tries, safe to repeat: yes or no, why>
+Error paths: <step -> handler, and whether it was applied or is an edit list>
+Webhook replies: <cause -> status code -> error code>
+Error workflow: <name, alert channel, fields in the alert>
+Check by hand: set the error workflow in the n8n workflow settings (the MCP cannot do this)
+Test: <how to make it fail on purpose, and what you should see>
+```
+
+Never say the workflow is fixed unless you read it back (`n8n_get_workflow`) and saw both `onError` and the wired error output on every risky step. If you could not read it back, say "not checked".

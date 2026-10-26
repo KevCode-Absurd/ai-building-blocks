@@ -2,36 +2,57 @@ slug: harvey
 name: Harvey
 maker: Harvey
 url: https://www.harvey.ai
-promise: "Research legal questions, review contracts and draft documents for legal teams."
+promise: "Research law, review contracts and run legal work with AI agents built for lawyers."
 use_cases: [legal]
 categories: [productivity, writing]
 what_it_does:
-  - "Researches questions about law, rules and tax."
-  - Reviews contracts and supports negotiation.
-  - Stores large sets of documents and answers questions about them.
-  - Runs multi-step legal tasks through agents.
-  - Tracks regulatory changes that affect a client.
+  - "Researches legal, regulatory and tax questions across areas of law (checked 26 Oct 2026)."
+  - "Speeds up routine contract reviews, supports negotiation and shows trends across a contract portfolio (checked 26 Oct 2026)."
+  - "Stores documents in a Vault and answers questions about many of them at once (checked 26 Oct 2026)."
+  - "Routes legal tasks to purpose-built agents. Teams can assign, run and review work with agents and staff (checked 26 Oct 2026)."
+  - "Tracks regulatory changes with Horizon Scanning and gives shared Spaces for firms, clients and co-counsel (checked 26 Oct 2026)."
 benefits:
   - "Use AI to help review a set of contracts, with a lawyer checking the result."
-  - Get answers that point back to their sources.
-  - "Use separate spaces and access restrictions for client work."
-  - See how your firm uses AI.
+  - "Keep client work in shared spaces with sign-in controls. It lists SAML sign-in, audit logs and IP allow-listing (checked 26 Oct 2026)."
+  - "See how your firm uses AI, through its usage dashboard (checked 26 Oct 2026)."
+  - "Send intake requests from across a company to the right place."
 best_for:
   - Law firms.
   - In-house legal teams.
   - Teams with large volumes of contracts.
 not_for:
-  - Small businesses without a legal team, since it is sold to firms by demo.
-  - Final legal advice, which still needs a lawyer to review it.
+  - "Small businesses without a legal team, since it is sold to firms by demo. Use Claude or ChatGPT for a first read, then see a lawyer."
+  - "Final legal advice. A lawyer still has to review every result."
+  - "Teams that want to try it today for free. No free trial is stated."
 pricing:
   model: enterprise
   from: Check the maker's site
-  note: No public prices. The maker asks you to request a demo.
+  note: "No public prices and no free trial stated (checked 26 Oct 2026). The page asks you to request a demo. It lists regional sign-in for the US, EU and Australia."
 works_with:
-  - Microsoft Word
+  - Custom MCP connectors
 runs_in: [web]
 blocks: []
 alternatives: [claude, chatgpt, microsoft-copilot, glean]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Use the Request a Demo link at harvey.ai. No self-serve sign-up is described."
+  - "Bring the kind of work you want to try, such as a batch of vendor contracts, and roughly how many you handle."
+  - "Ask to see it on one batch of your own documents, with your lawyers in the room."
+  - "Ask what each answer links back to, so a lawyer can check it against the source."
+  - "Agree who reviews the output before it goes to a client."
+needs:
+  - "A firm or company plan agreed through a demo."
+  - "A set of your own documents to test, with permission to share them."
+  - "A lawyer to check every result."
+example:
+  task: "Review a set of supplier contracts and list the clauses on liability and termination."
+  cost: "No public price. It is set after a demo."
+  reply: "We could not confirm the exact output. The site says it surfaces insights across a contract portfolio. Ask in the demo for a clause-by-clause list with links back to the contract text. A lawyer then checks it."
+not_verified:
+  - "That it drafts documents. The page lists research, review, Vault, agents and workflows, but not drafting."
+  - "Microsoft Word support. Our earlier notes said so. The page we read does not."
+  - "Whether customer data is used to train models, how long data is kept, and who its sub-processors are. The page does not say."
+  - "Its security claims are the vendor's own. The page links to certifications but not to audit reports."
 sources:
   - https://www.harvey.ai/

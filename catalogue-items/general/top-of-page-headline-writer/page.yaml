@@ -1,6 +1,6 @@
 new_slug: top-of-page-headline-writer
 name: "Top-of-page headline writer"
-summary: "Paste your offer, buyer, proof and ad. Get five headlines with a pick, a subhead, a button and proof."
+summary: "Write the top of your landing page: five headline options with a pick, plus a subhead, button and proof. Paste your offer, buyer and ad."
 job: write-landing-page
 thinking: low
 thinking_why: "It follows set rules to write short pieces of copy, with few decisions."
@@ -17,6 +17,10 @@ when:
   - "A page loses most visitors before they scroll."
   - "You are launching a new offer or ad."
   - "You want a few headline options to test."
+not_for:
+  - "You need the whole page, not just the first screen: use the Store hero section writer, which has the full set of checks."
+  - "You have no offer, price or terms yet: use the New offer opportunity finder first, then come back."
+  - "You want to write the ad itself: use the Fact-based ad copy writer, then bring the ad here."
 
 you_give:
   - "Your offer, price and guarantee"
@@ -33,6 +37,29 @@ how_to_use:
   - "Under it, paste your offer, buyer and proof."
   - "Paste the ad copy so the headline can match it."
   - "Pick one headline and put the others in your test list."
+output_sample:
+  input:
+    - Your offer, with price and guarantee
+    - Your buyer and what they want
+    - Proof you hold, such as ratings with counts (optional)
+    - The words of the ad that sends traffic (optional)
+  prerequisites:
+    - Your offer, from the New offer opportunity finder or your own notes
+  output:
+    - name: HEADLINES
+      contains: Five headline options that state the benefit in different ways and say who it is for.
+    - name: PICK
+      contains: The one headline that repeats the ad's promise, with the reason it was chosen.
+    - name: SUBHEAD
+      contains: A line that stops the pain and gives two or three real reasons your way works.
+    - name: PROOF
+      contains: Two kinds of proof for the first screen, each with its source.
+    - name: BUTTON
+      contains: A button label that names the benefit.
+    - name: UNDER THE BUTTON
+      contains: The doubt-reducers you can honestly claim, such as guarantee, returns, shipping and price.
+    - name: MISSING
+      contains: Anything you did not give, so nothing is made up.
 
 how_it_works:
   - title: "Chain the result"

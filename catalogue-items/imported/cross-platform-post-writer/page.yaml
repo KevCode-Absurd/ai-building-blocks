@@ -2,33 +2,49 @@ thinking: medium
 thinking_why: It rewrites one idea twice, each in its own platform style.
 new_slug: cross-platform-post-writer
 name: Cross-platform post writer
-summary: Give it one idea. Get an X post and a LinkedIn post that read as
-  written separately.
+summary: Turn one idea into an X post and a LinkedIn post that read as written separately. Get both posts and a short note on what changed.
 job: grow-social
 headline: Cross-platform post writer
-subhead: Pasting the same words onto X and LinkedIn makes one of the two posts
-  sound wrong. Here you give one idea and get two posts, each written from
-  scratch for its own audience.
+subhead: Pasting the same words on X and LinkedIn makes one post sound wrong. Give it one idea. You get two posts, each written fresh for its own readers.
 explain: |
   Pasting the same words onto X and LinkedIn makes one of the two posts sound wrong. Here you give one idea and get two posts, each written from scratch for its own audience.
 
   It first states your idea back in one plain sentence. If it cannot, it asks which part is the point instead of writing two versions of a muddle. Then it writes the X post as compressed, with a first line that works alone and no setup. The LinkedIn post gets the context and fuller reasoning readers expect there. Neither is an edit of the other, so no seams show.
 when:
-  - You have one insight to share and want it on both platforms today.
-  - Your LinkedIn post reads like a press release when copied to X.
+  - You have one idea to share on X and LinkedIn today.
+  - Your LinkedIn post sounds like a press release when you copy it to X.
   - You wrote a short tweet and want a fuller LinkedIn version.
-  - You are unsure how the same point should change between the two.
+  - You are not sure how the same point should change between the two.
+not_for:
+  - "You only need a post for one platform: ask your AI to write it directly, with no cross-post step."
+  - "You want to post to Instagram, Facebook or TikTok: this covers X and LinkedIn only, so adapt those by hand or ask your AI for that platform."
+  - "You want a promise of reach or likes: no skill can do that, so test posts and watch your own results."
 you_give:
-  - The idea, rough notes or a draft
-  - Any facts or numbers to include
-  - Your voice or a sample post (optional)
+  - Your idea, rough notes or a draft
+  - Any facts or numbers to include (optional)
+  - A sample of your own posts, to match your voice (optional)
 you_get:
-  - An X post that stands on its first line
-  - A LinkedIn post with the needed context
-  - The one-sentence idea both are built on
+  - The idea in one plain sentence, for you to check
+  - An X post that works from its first line
+  - A LinkedIn post with the context readers expect there
   - A short note on what changed and why
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. It needs no code, files, web access or paid account.
+  - Paste your idea, notes or draft. Add any facts, numbers or a sample of your own posts.
+  - Check the one-sentence idea your AI gives back. If it asks which part is the point, answer it.
+  - Read the X post and the LinkedIn post. Look for lines that appear in both, and ask for a rewrite if you find one.
+  - Edit to your voice, then post. Posting is by hand. The optional VoiceMoat connector in the skill needs a paid plan and is not needed for the writing.
+output_sample:
+  input:
+    - Your idea, rough notes or a draft
+    - Any facts or numbers to include (optional)
+    - A sample of your own posts, to match your voice (optional)
+  output:
+    - name: The idea in one sentence
+      contains: Your point stated plainly, so you can confirm both posts start from the same place.
+    - name: X post
+      contains: A short post that opens with the claim, with no setup, so the first line works alone.
+    - name: LinkedIn post
+      contains: A fuller post that opens with the situation, uses line breaks and lands the lesson.
+    - name: What changed and why
+      contains: One line on how the two posts differ in structure, not only in length.

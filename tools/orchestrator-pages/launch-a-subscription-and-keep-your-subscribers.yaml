@@ -1,6 +1,6 @@
 new_slug: launch-a-subscription-and-keep-your-subscribers
 name: Launch a subscription and keep your subscribers
-summary: Give it your products and orders. Get a priced offer, cancel flow, billing emails and a retention calendar.
+summary: Launch a subscription that pays back. Give it your product costs and orders. Get a priced offer, cancel flow, billing emails and a retention plan.
 job: keep-customers
 thinking: high
 thinking_why: It runs payback sums and writes email flows across six skills. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell something people use up and reorder, and want to add subscriptions that pay back.
   - You already have subscribers but too many cancel after the second or third order.
   - You are unsure how big a first-order discount you can afford.
+not_for:
+  - "You sell one-off products that nobody reorders: use the Customer offer builder to plan a single offer instead."
+  - "You only want to size a pack or bulk discount: use the Product pack and quantity discount planner."
+  - "You have no month-3 or month-6 numbers yet: run the offer step alone first, then come back with real subscriber data."
 you_give:
   - Price, product cost, landed cost and shipping by pack size
   - How long one unit lasts and your cash available
@@ -33,6 +37,32 @@ how_to_use:
   - Give it real cohort numbers for month 3 and month 6. Without them the payback check will not score the plan.
   - At the first pause, put the subscription live and let it run for about 60 days. Then export subscriber and cancel data.
   - At the second pause, pick the lapse points the audit flagged and export the orders of subscribers around those dates.
+output_sample:
+  input:
+    - Your price, product cost, landed cost and shipping by pack size
+    - How long one unit lasts and the cash you can spare
+    - Month-3 and month-6 value of subscribers and one-time buyers
+    - Reviews or cancel reasons from customers
+    - Your cancels with dates and reasons, after about 60 days
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Your brand brain from the Website brand brain builder (optional)
+    - A live subscription running for about 60 days before the last two steps
+  output:
+    - name: Subscription offer
+      contains: First-order and repeat discounts, bulk tiers, gifts, a prepaid plan, margin and the most you can pay per subscriber.
+    - name: Payback check
+      contains: The loss on order one, the cash needed until payback, a score out of 100 and a go, slow down or bundles call.
+    - name: Cancel flow
+      contains: A start screen, one save offer per cancel reason, a pause, win-back emails and failed-payment emails.
+    - name: Billing emails
+      contains: A reminder for each rebill number, order confirmations and an A/B test plan.
+    - name: Churn audit
+      contains: Cancels by days since first order, reminder and save-rate checks, and a score out of 100 for four parts.
+    - name: Retention calendar
+      contains: Lapse points, gift timing, send limits, a subscriber-only offer and a monthly schedule.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Design the offer
     text: Checks your cash first, then designs the first-order and repeat discounts, bulk tiers, gifts and a prepaid plan, and models the margin.

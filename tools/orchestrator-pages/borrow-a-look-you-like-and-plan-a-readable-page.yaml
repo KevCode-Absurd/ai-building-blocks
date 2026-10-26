@@ -1,6 +1,6 @@
 new_slug: borrow-a-look-you-like-and-plan-a-readable-page
 name: Borrow a look you like and plan a readable page
-summary: Give it designs you like and your page text. Get the look, a page plan and checked colours.
+summary: Plan a readable web page in a look you like. Give it design screenshots and your page text. Get a style profile, a grid and type plan, and checked colours.
 job: design-work
 thinking: medium
 thinking_why: It reads images and applies a profile to a layout. A mid-level model that can see images is enough.
@@ -14,6 +14,10 @@ when:
   - You have screenshots you love and no words for what they share.
   - You want your own page to feel like them without copying them.
   - You want to know the colours can be read before you build.
+not_for:
+  - "You want to copy one brand's design outright: hire a designer, or ask the brand for a licence. This only borrows the shared look."
+  - "You need ad pictures or brand strategy: this plans page layout only, so use a brand or ad item from the library."
+  - "You only need a contrast check: use the Colour contrast checker on its own."
 you_give:
   - Screenshots or links of designs you like
   - Your page content and what the page must do
@@ -29,6 +33,24 @@ how_to_use:
   - Attach your reference images, or paste the links.
   - Paste your page content and say where it is read.
   - Review the style profile before it goes into the layout.
+output_sample:
+  input:
+    - Screenshots or links of designs you like
+    - Your page content and what the page must do
+    - "Where the page is read: phone, desktop or print"
+    - Your fixed fonts or colours (optional)
+  prerequisites:
+    - An AI that can read images
+    - An AI that can read files, to open the handoff pack
+  output:
+    - name: Style profile
+      contains: Measured colours, type, spacing, layout, mood and effects, with notes where your references disagree.
+    - name: Page plan
+      contains: Margins, grid, type and sizes, order by scale and white space, with each page laid out.
+    - name: Colour check
+      contains: Each text and background pair with its ratio, pass or fail, and the closest passing colour.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read the look
     text: Measures the colours from each image, describes type, spacing, layout and mood, and notes where the references disagree.

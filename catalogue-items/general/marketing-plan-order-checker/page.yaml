@@ -1,6 +1,6 @@
 new_slug: marketing-plan-order-checker
 name: "Marketing plan order checker"
-summary: "Paste your marketing plan. Get it sorted into diagnosis, strategy and tactics, plus a score out of 100."
+summary: "Check your marketing plan is in the right order. Sort lines into diagnosis, strategy and tactics, spot tactics with no reason, and get a score out of 100."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sorts lines into three kinds and checks links between them, which needs care but follows set rules."
@@ -17,6 +17,10 @@ when:
   - Your plan is a list of channels and posting dates with no stated reason.
   - You were told to "do digital" and nobody said what for.
   - A new owner or agency has handed you a plan and you cannot tell if it is sound.
+not_for:
+  - "You need a brief for one campaign or one post: use a simple campaign brief template, since this checks a whole plan."
+  - "You want to judge the market itself, such as rivals and buyer power: use the Five forces industry checker first."
+  - "You have no plan written yet: start by writing down your market notes and goals, then paste them in."
 
 you_give:
   - Your marketing plan, in whatever form it exists
@@ -33,6 +37,26 @@ how_to_use:
   - Paste your plan as it is, messy is fine. Add what you know about the market.
   - Read the list of tactics with no strategy first.
   - Do the research list, then run the skill again on the rebuilt plan.
+output_sample:
+  input:
+    - Your marketing plan, in whatever form it exists
+    - What you know about your market and customers
+    - Your brand file or recent results (optional)
+  output:
+    - name: Sort
+      contains: Every line of your plan labelled as diagnosis, strategy or tactic, in your own words.
+    - name: Tactics with no strategy above them
+      contains: Each tactic that cannot be tied to a target, position and objective, and which one is missing.
+    - name: Research to do first
+      contains: Each gap in the diagnosis, a low-cost way to find out, and the decision it blocks.
+    - name: The plan in order
+      contains: Your plan rebuilt from diagnosis to tactics, with unsupported tactics parked until the strategy is set.
+    - name: Score
+      contains: A score out of 100 with the six checks shown as pass or fail.
+    - name: Missing
+      contains: Anything you did not give, marked so nothing is guessed.
+    - name: Checks missed
+      contains: One line for each check that still failed and why, or none.
 
 how_it_works:
   - title: Sorts every line

@@ -1,14 +1,12 @@
 slug: reconcile-currency-exposure-and-settlement
-name: Reconcile currency exposure and settlement
-summary: A currency exposure bridge and matched forward settlement schedule
+name: Currency exposure and forward settlement checker
+summary: Share foreign receipts, bills and an existing buy-forward contract. Get net exposure, settlement checks and any unmatched amount.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: source_text
     required: true
   - type: spreadsheet
@@ -18,8 +16,9 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+next:
+  - reconcile-treasury-settlement-liquidity
+  - reconcile-cash-pool-interest-and-fees
 uses:
   - currency-exposure-netting-checker
   - currency-forward-settlement-checker

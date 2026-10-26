@@ -1,6 +1,6 @@
 slug: map-journal-reviewer-requests-to-evidence
 name: Map journal reviewer requests to evidence
-summary: Share the source files. Get a response matrix, revision tasks and unresolved evidence requests.
+summary: Map each journal reviewer comment to your manuscript and evidence, once. Get a response matrix, revision tasks and the requests you cannot answer yet.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,27 +8,26 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
-    required: false
+    required: true
   - type: meeting_notes
+    required: false
+  - type: copy_draft
     required: false
 outputs:
   - type: document
   - type: plan
-  - type: copy_draft
 uses:
   - source-note-summariser
   - executive-action-register
   - proofreader
 steps:
   - uses: source-note-summariser
-    note: Read the reviewer comments and manuscript; map each comment to the relevant section and available evidence without claiming a revision has been made.
+    note: Read the reviewer comments and manuscript; map each comment to the relevant section and available evidence without claiming a revision has been made. Hands step 2 the response matrix, one row per comment.
   - uses: executive-action-register
-    note: Turn explicit author commitments into a versioned response register. Separate proposed work from accepted tasks and retain missing owners and dates.
+    note: Turn explicit author commitments into a versioned response register. Separate proposed work from accepted tasks and retain missing owners and dates. Hands step 3 the numbered task list, which is the reference for comment numbers.
   - uses: proofreader
-    note: If an actual response draft was supplied, check respectful wording, consistent comment numbering and manuscript references. If no draft exists, explicitly skip this optional proofreading step and return the response matrix and tasks; do not invent experimental findings.
+    note: If an actual response draft was supplied, check respectful wording, consistent comment numbering and manuscript references. If no draft exists, explicitly skip this optional proofreading step and return the response matrix and tasks; do not invent experimental findings. Uses your own response draft as the text to check, not step 2's output.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

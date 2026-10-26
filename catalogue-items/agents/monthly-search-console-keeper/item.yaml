@@ -18,12 +18,12 @@ outputs:
   - {type: plan}
 uses: [site-search-basics-checker, search-console-quick-win-finder, thin-page-finder, topic-cluster-mapper, keyword-to-post-outline-writer, answer-first-page-rewriter]
 steps:
-  - {uses: site-search-basics-checker, note: "Once a quarter, or when pages were added or moved: duplicate titles, a missing sitemap and dead links."}
-  - {uses: search-console-quick-win-finder, note: "Every month: the pages sitting just off the first page or losing clicks, ranked by what pushing them is worth."}
-  - {uses: thin-page-finder, note: "Every month, if the site is connected read-only: pages that are empty, short or missing search fields."}
-  - {uses: topic-cluster-mapper, note: "Once a quarter, or when the quick wins run out: the main page and supporting posts to write next, ranked."}
-  - {uses: keyword-to-post-outline-writer, note: "Only for the two or three posts chosen this month: a one-page outline with intent, headings and what the post must cover."}
-  - {uses: answer-first-page-rewriter, note: "Only for a quick-win page whose problem is the writing, not the links: sections rewritten answer first."}
+  - {uses: site-search-basics-checker, note: "Once a quarter, or when pages were added or moved: duplicate titles, a missing sitemap and dead links. Uses your site address and page list. Hands a fix list to do before any new writing, not to the next step."}
+  - {uses: search-console-quick-win-finder, note: "Every month: the pages sitting just off the first page or losing clicks, ranked by what pushing them is worth. Uses your Search Console export, not step 1's fix list. Hands the ranked pages (at most three to push) on to the rewrite and thin-page checks."}
+  - {uses: thin-page-finder, note: "Every month, if the site is connected read-only: pages that are empty, short or missing search fields. Uses your read-only site connection, not step 2's ranked list. Hands the thin pages to the hand-back, each with the searches it should answer."}
+  - {uses: topic-cluster-mapper, note: "Once a quarter, or when the quick wins run out: the main page and supporting posts to write next, ranked. Uses your business goal and the searches in your export, not step 3's thin-page list. Hands the ranked post plan to the outline writer."}
+  - {uses: keyword-to-post-outline-writer, note: "Only for the two or three posts chosen this month: a one-page outline with intent, headings and what the post must cover. Takes each keyword and reader from step 4's plan. Hands the outline to your writer."}
+  - {uses: answer-first-page-rewriter, note: "Only for a quick-win page whose problem is the writing, not the links: sections rewritten answer first. Uses the text of that page from step 2, not step 5's outline. Hands the rewritten page back for your yes."}
 schedule: "On the second Monday of each month, once last month's search data is final"
 asks_before: [publishing or changing any page, deleting or redirecting a page, changing a title or description live, submitting anything to a search engine, buying links or tools]
 minds: [neil-patel]

@@ -691,3 +691,27 @@ If you plan to exit Codex immediately after debugging, run the cleanup cell firs
 - `browserContext.newPage: Protocol error (Target.createTarget): Not supported` while working with Electron: do not use `appWindow.context().newPage()` or `electronApp.context().newPage()` as a scratch page; use the Electron-specific screenshot normalization flow in the model-bound screenshots section.
 - `js_repl` timed out or reset: rerun the bootstrap cell and recreate the session with shorter, more focused cells.
 - Browser launch or network operations fail immediately: confirm the session was started with `--sandbox danger-full-access` and restart that way if needed.
+
+
+## Inputs, safety and what to return
+
+Added by AI Blocks. The method above is unchanged.
+
+**Safety.** This skill asks for the sandbox to be turned off (`--sandbox danger-full-access`). That gives your AI wider access to the computer. Use it only on a local app the user trusts. Do not point it at a live site, a site with real customer data, or a page where the user is signed in to a real account. Tell the user this before you start.
+
+**You need:** the address of the local app (or the Electron project folder), a description of the bug, and the steps that show it.
+
+**If something is missing:**
+- No bug description or steps: ask once. Do not invent a bug to test.
+- No address and the app is not running: ask for the start command, or the port. Do not guess a port.
+- `js_repl` is not available in this tool: say so. If the tool can run code, offer to run the same steps as a short Playwright script, and tell the user the browser may reopen on each run. If the tool cannot run code, stop and say that this skill needs one that can.
+- A check cannot be run (for example no phone size was given): say it was not tested. Do not claim it passed.
+
+**Return in this order:**
+1. **Test list**: what was asked, what changed and what will be claimed, with a check for each.
+2. **Cause**: why the bug happens, in plain words.
+3. **Changes**: files and what changed.
+4. **Checks**: function checks and visual checks, with screen sizes and results.
+5. **Not tested**: anything left out, and why.
+
+**Next:** tell the user to run their own tests and look at the code changes before saving them.

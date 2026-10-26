@@ -2,18 +2,98 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gdpr-compliant
 name: Privacy engineering practice reviewer
-summary: Share the way your app handles personal data. Get engineering gaps and
-  changes to support privacy requirements.
+summary: Check your code and pull requests against GDPR engineering practice. Get each gap with its file, the rule it breaks and a fix. Not legal advice.
 job: secure-code
 headline: Privacy engineering practice reviewer
-subhead: Share the way your app handles personal data. Get engineering gaps and
-  changes to support privacy requirements. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Give it your code, a pull request, a schema or a cloud setup. It checks how you collect, log, store, delete and protect personal data against GDPR engineering rules. You get a list of gaps with the file, the rule broken and a change to make, plus items for a lawyer to decide.
+explain: |
+  GDPR is a law, but most of it lands on engineers. A URL that holds an email, a log that prints a full request, a table with no deletion date. This privacy engineering practice reviewer checks your code for those everyday GDPR mistakes. It is a GDPR code review for engineers, based on the rules in GDPR Articles 5, 25, 32, 33 and 35 and on CNIL developer guidance.
+
+  It reads your code against 14 groups of rules, such as collecting less data, retention, API design, logging, error messages, encryption, password hashing, secrets and test data. It also works as a pull request checklist for new tables, endpoints, cloud resources and sub-processors.
+
+  The report lists each gap with the file and line, the rule behind it and a suggested change. It also lists what only a person can decide, such as your legal basis, retention periods or whether you need an impact assessment. It is not legal advice and does not replace a data protection officer or a lawyer.
+when:
+  - You are about to merge a pull request that adds a table, field or endpoint holding personal data.
+  - A customer or partner asks "is your app GDPR compliant?" and you want an honest engineering check first.
+  - You are designing an API, a login flow or a deletion job and want the privacy rules up front.
+  - You are setting up logging, analytics or test data and want to avoid leaking real people's data.
+not_for:
+  - "You want a legal opinion on whether you comply. Ask a lawyer or data protection officer."
+  - "You want to map what sensitive data you hold and how it could leak: use the Sensitive data exposure mapper."
+  - "You are preparing answers for an auditor: use the GDPR audit prep coach. To draft an impact assessment and track data requests, use the GDPR privacy checker."
+you_give:
+  - Your code, a pull request, a schema or a cloud setup
+  - Whether you are reviewing existing work or designing something new
+  - The countries your users live in (optional)
+  - Your legal basis and retention periods, if you have them (optional)
+you_get:
+  - A list of gaps, each with the file, the rule broken and a suggested change
+  - A priority of High, Medium or Low for each gap
+  - A list of areas checked with no gap found
+  - A list of decisions only a lawyer or data protection officer can make
+  - The three most important changes to make first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Paste this skill into Claude, ChatGPT or Gemini. Claude Code can open your project itself. In a chat, paste the code, schema or diff you want checked.
+  - Say if you are reviewing something built or designing something new. Add your countries and your legal basis if you know them. Missing items are marked MISSING.
+  - Read the gaps table, High priority first. Open each file and check the point is real before you change anything.
+  - Take the "needs a person" list to your lawyer or data protection officer. Do not treat a clean engineering review as proof you comply.
+  - Make the changes, then run the review on the next pull request. The checklist in section 15 of the skill works well as a pull request template.
+how_it_works:
+  - title: Read your inputs
+    text: It reads the code, schema or design, and asks once for anything missing.
+  - title: Check the 14 rule groups
+    text: It tests data minimization, retention, APIs, logs, errors, encryption, passwords, secrets and test data.
+  - title: Record each gap
+    text: Each gap gets the file and line, the rule broken, a fix and a priority.
+  - title: List clean areas
+    text: It names what it checked with no gap, so silence is never mistaken for a pass.
+  - title: Hand off decisions
+    text: It lists the legal calls a lawyer or officer must make, and gives three next steps.
+output_shape: |
+  Privacy Engineering Review
+  Scope: <what was reviewed and what was not, plus MISSING inputs>
+
+  Gaps found
+  | # | File and line | What is wrong | Rule broken | Suggested change | Priority |
+
+  Checked, no gap: <area and what was checked>
+  Needs a person: <legal basis, retention, contracts, impact assessment>
+  Next steps: <3 changes in order>
+  This is an engineering review, not legal advice.
+output_sample:
+  input:
+    - Your code, a pull request, a schema or a cloud setup
+    - Whether you are reviewing or designing
+    - Your countries and legal basis (optional)
+  prerequisites:
+    - An AI that can open your files, or the relevant code pasted into the chat
+  output:
+    - name: Scope
+      contains: What was reviewed, what was not, and any input marked MISSING.
+    - name: Gaps found
+      contains: Each gap with file and line, the rule broken, a suggested change and a priority.
+    - name: Checked, no gap
+      contains: Each area reviewed with no problem, and one line on what was checked.
+    - name: Needs a person
+      contains: Legal basis, retention periods, contracts and impact assessment decisions for a lawyer or officer.
+    - name: Next steps
+      contains: The three most important changes, in order.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your whole project and checks real files and lines.
+    - name: Any good chat AI
+      why: Works on pasted code, schemas or pull request diffs.
+  inputs:
+    - Your record of processing activities, if you keep one
+    - A list of the services that receive user data
+    - Your current data retention rules
+terms:
+  - term: GDPR
+    meaning: The European Union law on how you handle personal data.
+  - term: DPIA
+    meaning: A written check of privacy risk, needed before some high-risk uses of data.
+  - term: RoPA
+    meaning: Your record of what personal data you process and why.
+  - term: Pseudonymization
+    meaning: Swapping names for codes, with the key kept apart. The data still counts as personal.

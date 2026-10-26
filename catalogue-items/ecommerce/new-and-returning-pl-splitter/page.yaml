@@ -1,6 +1,6 @@
 new_slug: new-and-returning-pl-splitter
 name: "New and returning P&L splitter"
-summary: "Paste your monthly P&L and order tags. Get one P&L for first-time and one for returning customers, scored."
+summary: "Split your monthly P&L into first-time and returning customers. See if new customers pay for themselves, with a score out of 100."
 job: track-numbers
 thinking: high
 thinking_why: "It splits shared costs by a stated rule and reads the trend across months, so a stronger model keeps the allocation honest."
@@ -17,6 +17,10 @@ when:
   - Your overall P&L is positive but cash feels tight.
   - Ad spend is rising and you suspect new customers cost more than they bring.
   - You want to know how much of your profit comes from customers you already have.
+not_for:
+  - "Your store has under a few hundred orders a month: the split is too noisy, so track simple monthly profit in a spreadsheet instead."
+  - "You want a per-customer view of how fast a new customer pays back: use the CAC payback checker."
+  - "Your orders are not tagged first-time or returning: tag them first, because the split cannot be guessed."
 
 you_give:
   - Your P&L lines for one month, with cost of goods and delivery split out
@@ -36,6 +40,31 @@ how_to_use:
   - Say how shared costs should be split, and keep that rule the same each month.
   - Read the first-time bottom line first. Then check the trend against earlier months.
   - Run it again monthly and save each result.
+output_sample:
+  input:
+    - Your P&L lines for one month, with cost of goods and delivery split out
+    - Your orders tagged first-time or returning
+    - A rule for splitting shared costs
+    - Earlier months (optional)
+  prerequisites:
+    - An AI that can read an attached order list and show its sums
+  output:
+    - name: Month header
+      contains: The month, the order counts for each group and the rule used to split shared costs.
+    - name: First-time P&L
+      contains: Revenue, cost of goods, delivery, ad spend and other costs for first-time customers, ending in profit contribution.
+    - name: Returning P&L
+      contains: The same lines for returning customers, with no ad spend, ending in profit contribution.
+    - name: Who pays for whom
+      contains: Whether returning profit covers any first-time loss, and by how much.
+    - name: Trend
+      contains: First-time profit contribution month by month, with its direction.
+    - name: Score
+      contains: A score out of 100 for acquisition health, split into first-time result, trend and funding, with the sum shown.
+    - name: Funding options
+      contains: Ways a first-time loss can be funded, with a note that outside money needs a qualified adviser.
+    - name: Next and missing
+      contains: The first change to make and any inputs that were missing.
 
 how_it_works:
   - title: Tags every line

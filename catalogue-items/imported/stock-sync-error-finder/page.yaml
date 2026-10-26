@@ -2,34 +2,96 @@ thinking: medium
 thinking_why: It must tell real drift from normal moves.
 new_slug: stock-sync-error-finder
 name: Stock sync error finder
-summary: Get products with negative or impossible stock across your locations, a
-  sign your counts have drifted.
+summary: Find Shopify products with negative or impossible stock at each location, so you can fix drifted counts before a customer orders.
 job: run-your-store
 headline: Stock sync error finder
-subhead: Get products with negative or impossible stock across your locations, a
-  sign your counts have drifted. Bring your Shopify store link and read access.
-  Use the result to plan your next step.
+subhead: Give it your Shopify store, or an inventory export. It checks every active location for negative stock and for more units committed to orders than you hold. You get a list of flagged products by location and a short note on where to look first.
 explain: |
-  A list of products where your inventory counts cannot be right, found before a customer finds them. It scans every active location in your Shopify store and flags items with a negative available quantity, or with more units committed to orders than you hold on hand.
+  Shopify can show stock that cannot be right. A product sits at minus 3, or more units are promised to orders than are on the shelf. Customers then buy items you do not have. This stock sync error finder scans each location in your store and lists those products before a customer finds them.
 
-  Those patterns usually point to a sync problem with a warehouse, app or channel, or to counts that drifted. You can limit the scan to certain locations, choose which of the two checks to run and include or skip products with tracking turned off. The output shows each flagged product by location so you know where to look first. It only reads data and changes nothing.
+  It runs two checks. One flags products with a negative available count. The other flags products where the committed count is higher than the on-hand count. It skips products that do not track stock, unless you ask it not to. It never changes anything. It only reads your numbers.
+
+  Drift often comes from a warehouse, app or sales channel that posts changes late. The report groups flags by location, so you can see which source to question first. A negative number is not always a mistake. It can be normal in a flash sale, so the skill marks each flag as a lead to check, not proof.
 when:
-  - Customers ordered items your system said were in stock.
-  - You added a new warehouse or app and want to check numbers still line up.
-  - Your dashboard shows minus stock on some products.
-  - You want a monthly health check on inventory data.
+  - A customer ordered something your store said was in stock.
+  - You added a new warehouse, app or sales channel and want to check the counts still match.
+  - Your inventory screen shows minus numbers on some products.
+  - You want a monthly health check on your Shopify inventory.
+not_for:
+  - "Your store does not track stock. Every product is skipped, so you get nothing. Use a physical count or your warehouse's own report."
+  - "You want to put a value on your stock: use the Inventory value calculator."
+  - You want the counts corrected. This only finds the problems. You fix them in Shopify yourself.
 you_give:
-  - Your Shopify store link and read access
-  - Specific locations to check (optional)
-  - Whether to include untracked items (optional)
+  - Your Shopify store link (like mystore.myshopify.com)
+  - Read access to your inventory, or an inventory export from your Shopify admin
+  - Which locations to check (optional)
+  - Whether to include products that do not track stock (optional)
 you_get:
-  - Products with negative available stock
-  - Products committed above on-hand
-  - Results grouped by location
-  - A short list of where to investigate
+  - A summary table by location with counts of each kind of flag
+  - A list of products with negative available stock
+  - A list of products with more committed than on hand
+  - A CSV of every flagged product, or the same rows in the chat
+  - A short "where to look first" list, with likely causes marked as guesses
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Pick how your AI gets the numbers. The best way is read-only Shopify access (the Shopify CLI, or an AI with a Shopify connection). If you have none, export your inventory from Shopify admin and upload the file.
+  - Paste this skill into Claude, ChatGPT or Gemini. Add your store link, and the locations to check if you want only some.
+  - Let it run the two checks. If it says a location did not finish, ask it to retry that location before you trust the totals.
+  - Read the "where to look first" list. For each flagged product, compare with recent orders. Negative stock during a sale can be normal.
+  - Fix the counts in Shopify yourself. Run the check again a few days later to see if the flags came back.
+how_it_works:
+  - title: List your locations
+    text: It reads your active locations, or only the ones you name.
+  - title: Read each stock level
+    text: For each location it reads available, committed and on-hand counts, page by page.
+  - title: Skip untracked products
+    text: Products that do not track stock are left out unless you ask for them.
+  - title: Flag the two problems
+    text: It marks negative available stock and committed counts above on-hand counts.
+  - title: Report by location
+    text: It gives a summary table, the flagged rows, and where to look first.
+output_shape: |
+  Summary
+  | Location | Variants scanned | Negative available | Committed > on hand |
+
+  Flagged products
+  | <location> | <product> | <variant> | <sku> | <available> | <committed> | <on hand> | <flag> |
+
+  Where to look first
+  1. <location or product with most flags>: <likely cause, marked as a guess>
+
+  File: inventory-audit-<date>.csv
+output_sample:
+  input:
+    - Your Shopify store link
+    - Read access to your inventory, or an inventory export
+    - Locations to check (optional)
+  prerequisites:
+    - Read-only Shopify access for your AI, or an exported inventory file
+    - Inventory tracking turned on for the products you want checked
+  output:
+    - name: Summary table
+      contains: Per location, how many variants were scanned and how many were flagged for each problem.
+    - name: Flagged products
+      contains: Each flagged product with its location, SKU, and available, committed and on-hand counts.
+    - name: inventory-audit-<date>.csv
+      contains: The same flagged rows in a file you can sort and share with your warehouse.
+    - name: Where to look first
+      contains: The locations and products with the most flags, with a likely cause marked as a guess.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with a Shopify connection
+      why: Lets the AI read your live stock levels with read-only access.
+    - name: Any good chat AI
+      why: Works on an exported inventory file if you have no connection.
+  inputs:
+    - Your last 30 days of orders, to tell flash-sale dips from real errors
+    - A note on which warehouse or app updates each location
+terms:
+  - term: Available
+    meaning: The units you can still sell.
+  - term: Committed
+    meaning: Units already promised to open orders.
+  - term: On hand
+    meaning: Units physically in the location.
+  - term: Location
+    meaning: A place that holds stock, like a warehouse or a shop.

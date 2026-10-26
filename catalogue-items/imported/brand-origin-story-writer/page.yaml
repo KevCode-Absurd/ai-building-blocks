@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It finds the human truth first, then writes the story.
 new_slug: brand-origin-story-writer
 name: Brand origin story writer
-summary: Tell it how you started and why. Get an origin story and an About page
-  that sound human.
+summary: Write your brand origin story and About page from your own answers. You get a long story, a short one and a one-line origin that sound human.
 job: write-and-tell-stories
 headline: Brand origin story writer
-subhead: An origin story and About page that read like a person wrote them. It
-  finds the real reason you started and builds a story people connect with,
-  instead of opening with "We were founded in...".
+subhead: An origin story and About page that read like a person wrote them. It finds the real reason you started and builds a story people connect with, instead of opening with "We were founded in...".
 explain: |
   An origin story and About page that read like a person wrote them. It finds the real reason you started and builds a story people connect with, instead of opening with "We were founded in...".
 
@@ -18,6 +15,10 @@ when:
   - You are asked how the company started and have no good answer.
   - You are launching and need a story for press and social.
   - You want a founder story that feels honest.
+not_for:
+  - "You need a tagline or short brand message: use brand-messaging, a plain step outside this page, or ask a copywriter."
+  - "You need product page text or ad copy: write those with a product or ad copy tool, not an origin story."
+  - "You have no real story to tell yet and want a brand strategy first: work out your brand strategy before you write the story."
 you_give:
   - The moment you decided to start
   - The founder's background
@@ -29,7 +30,24 @@ you_get:
   - An opening that pulls readers in
   - Language that sounds human
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - If you have saved brand notes in .agents/brand-context.md, paste them in too. Your AI reads them first and skips questions it can already answer.
+  - "Answer the six questions: the moment you started, the founder's background, what you believe, what your customer struggles with, your promise, and where the brand is now."
+  - Say if you want first person from the founder or third person from the brand. Say if the tone should be raw or polished.
+  - Read the three versions. Check that each opens with a scene or a question, not a founding year, and fix any detail that is not true.
+output_sample:
+  input:
+    - The moment you decided to start the brand
+    - The founder's background
+    - What you believe that others in your field do not
+    - The problem your customer faces that other brands ignore
+    - Your promise and where the brand is now
+  prerequisites:
+    - Saved brand notes in .agents/brand-context.md (optional, so you are not asked twice)
+  output:
+    - name: "Version 1: The Long Story"
+      contains: A 600 to 900 word story for your About page, from opening scene to a promise readers can hold you to.
+    - name: "Version 2: The Short Story"
+      contains: A 150 to 200 word version of the same story for your homepage or a pitch.
+    - name: "Version 3: The One-Liner Origin"
+      contains: One sentence of 25 to 40 words on why the brand exists, in the way a founder would say it.

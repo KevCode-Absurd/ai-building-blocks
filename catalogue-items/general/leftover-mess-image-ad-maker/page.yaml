@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: leftover-mess-image-ad-maker
 name: "Leftover mess image ad maker"
-summary: "Paste your story ad. Get a close-up mess photo prompt and a caption."
+summary: "Turn your story ad into a close-up photo prompt of the mess your problem leaves behind, plus a short line to run under the image."
 job: make-image-ads
 
 headline: "Leftover mess image ad maker"
@@ -17,16 +17,20 @@ when:
   - Your buyer's problem leaves something behind they can see or touch.
   - You're showing ads to people who don't know you yet and want a picture that earns a second look.
   - Your story opens by describing what the narrator keeps finding.
+not_for:
+  - "Your problem leaves nothing you can see or touch: use a problem-moment image ad maker and show the daily routine instead."
+  - "You want to point at one spot on a picture: use a circled-flaw image ad maker."
+  - "Your problem shows on the body or looks like injury or illness: skip this and show the routine, not the body."
 
 you_give:
   - Your approved story ad and the residue it names
   - How your buyers describe what they find, and how much (optional)
 you_get:
-  - The residue, its honest amount and where it was found
+  - The mess, its honest amount and where it was found
   - How close to shoot it, from what angle, and with which light
   - A short line to run under the image
   - A 60 to 120 word image prompt, ready to paste
-  - Any of the skill's six checks it still missed, one line each, or none
+  - Any of the six checks it still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -34,6 +38,31 @@ how_to_use:
   - Add how your buyers describe what they find, from reviews or messages, if you have it.
   - Paste the image prompt into your image tool. If it looks like a clean studio close-up, ask again with "phone flash, slightly blurry edges".
   - Compare the amount in the picture with your research. If it looks worse than real life, make it again.
+output_sample:
+  input:
+    - Your approved story ad, with the mess it names
+    - How your buyers describe what they find, and how much (optional)
+  prerequisites:
+    - An image tool such as GPT Image or Nano Banana, if you want the picture made
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: Where and when
+      contains: The place, the time of day and what is within reach.
+    - name: The residue
+      contains: What the mess is, how much of it there is and where it was found.
+    - name: Framing and light
+      contains: How close to shoot, the angle, and whether to use flash or room light.
+    - name: Words on the image
+      contains: None. The picture carries no text.
+    - name: Line under the image
+      contains: A short plain caption of about 27 characters that never names the product.
+    - name: Flags
+      contains: The amount and where it came from, plus anything the skill had to guess.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt, ready to paste into your image tool.
+    - name: Checks missed
+      contains: One line for each check the picture still fails, or none.
 
 how_it_works:
   - title: Sets the house rules

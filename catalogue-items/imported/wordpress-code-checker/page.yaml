@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies a fixed checklist to the code.
 new_slug: wordpress-code-checker
 name: WordPress code checker
-summary: Give it a new WordPress plugin or theme. Get security, translation and
-  speed problems found before you ship.
+summary: Check your WordPress plugin or theme code for security, translation and speed problems before you ship. Get a report with a fix for each fault.
 job: test-and-fix-code
 headline: WordPress code checker
-subhead: A check of your new WordPress plugin or theme for problems that hurt
-  security, translations and speed. You find the faults before visitors or
-  attackers do.
+subhead: A check of your new WordPress plugin or theme for problems that hurt security, translations and speed. You find the faults before visitors or attackers do.
 explain: |
   A check of your new WordPress plugin or theme for problems that hurt security, translations and speed. You find the faults before visitors or attackers do.
 
@@ -18,6 +15,10 @@ when:
   - You are about to submit a theme to the directory.
   - Your plugin is slow on busy pages.
   - You need to add translation support.
+not_for:
+  - "You want a mechanical code style scan: run PHPCS or the Plugin Check tool from WordPress.org instead."
+  - "The code runs on a live site you do not own or have no permission to review: ask the owner for written approval first."
+  - "You need help with what the plugin should do or how to design it: ask a developer or plan it in a normal chat first."
 you_give:
   - Plugin or theme code
   - What it should do
@@ -30,8 +31,29 @@ you_get:
   - Suggested code fixes
   - Review checklist result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Gather your plugin or theme folder. Note your WordPress and PHP versions if you know them.
+  - Write one line on what the code should do.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text, or attach it as a file.
+  - Add your code and your one-line note. Say that you own the code or may review it. Ask for a review, not edits.
+  - Fix the security findings first. Then fix translation and speed findings.
+  - Run PHPCS or Plugin Check after your fixes. This skill does not run them.
+output_sample:
+  input:
+    - Your plugin or theme code, as files or pasted text
+    - A one-line note on what the code should do
+    - Your WordPress and PHP versions (optional)
+    - A yes that you own the code or may review it
+  prerequisites:
+    - An AI that can read your project files, or code pasted into the chat
+    - The SKILL.md file from this page
+  output:
+    - name: Findings by file
+      contains: Each problem is listed under its file, with the rule broken, the risk and a one-sentence fix.
+    - name: Security findings
+      contains: Unescaped output, raw request data, missing nonce or permission checks, and database queries built without preparation, listed first.
+    - name: Translation findings
+      contains: Text that cannot be translated, wrong text domains, missing plural handling and sentences built by joining pieces.
+    - name: Speed findings
+      contains: Unbounded queries, uncached remote calls and scripts that load on every page.
+    - name: Severity order
+      contains: Problems ranked as must fix, should fix or worth noting, so you know what blocks release.

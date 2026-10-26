@@ -1,33 +1,26 @@
 slug: currency-maturity-evidence-reviewer
 name: Currency maturity evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Find your open foreign currency exposure and settlement cash after a forward contract. Recheck when a bill, rate or bank notice changes.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - reconcile-currency-exposure-and-settlement
   - restricted-cash-availability-checker
 steps:
   - uses: reconcile-currency-exposure-and-settlement
-    note: Run the governing workflow when An underlying payable, hedge confirmation, settlement rate or collateral notice changes.
+    note: Run the governing workflow when an underlying bill, a hedge confirmation, a settlement rate or a collateral notice changes.
   - uses: restricted-cash-availability-checker
-    note: If the counterparty documents a collateral cash block, check accessible cash using the actual notice and existing restriction ledger. Do not infer a collateral call from an exchange-rate scenario or arrange a trade.
+    note: If the bank documents a collateral cash block, check usable cash from the bank's actual notice and your restriction list. Never work out a collateral call from a rate scenario, and never arrange a trade.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It buys no currency, contacts no bank and is not a substitute for a qualified treasury review. The settlement step covers forwards that buy foreign currency only.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

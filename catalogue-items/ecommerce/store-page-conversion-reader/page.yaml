@@ -1,6 +1,6 @@
 new_slug: store-page-conversion-reader
 name: "Store page conversion reader"
-summary: "Paste GA4 exports. Get conversion by channel and page, your worst funnel drop and a score out of 100."
+summary: "Read your GA4 store reports to see which channels and product pages turn visits into purchases, where shoppers drop out, and how reliable the read is."
 job: track-numbers
 thinking: medium
 thinking_why: "It ranks tables and spots odd drops against rules, so a mid-level model is enough. Check the biggest drop against your own funnel report."
@@ -17,6 +17,10 @@ when:
   - You want to know which channels and landing pages bring buyers, not just visits.
   - Shoppers add to cart but few reach the thank-you page and you want to know where they stop.
   - A product page converts far worse than the others and you want a first cause to test.
+not_for:
+  - "You want ad creative reviewed: ask a person on your team or a designer, as this only reads numbers."
+  - "Your rows have only a few sessions each: wait for more traffic or pick a longer date range first."
+  - "Your GA4 store events may not be set up right: check that first with the GA4 store setup checker, then come back."
 
 you_give:
   - Traffic acquisition table with session key event rate filtered to purchase
@@ -36,6 +40,29 @@ how_to_use:
   - Do the same for Engagement, Landing page, then paste your funnel counts by step.
   - Read the ranking and run the first check it names before changing a page.
   - If a drop looks technical, split it by browser and paste that too.
+output_sample:
+  input:
+    - Your GA4 traffic acquisition table, filtered to purchase
+    - Your GA4 landing page report, filtered to purchase
+    - Your funnel counts from session start to purchase
+    - Engaged sessions by channel (optional)
+    - Your store-wide purchase rate (optional)
+  prerequisites:
+    - Store events already flowing into GA4, such as add to cart and purchase
+    - A few hundred sessions per row for a firm read
+  output:
+    - name: Channels
+      contains: Each channel ranked by purchase rate, with its sessions, engaged share and a short note.
+    - name: Landing pages vs store average
+      contains: Each product page marked above or below your average, with a first cause to test.
+    - name: Funnel
+      contains: Step counts, the share kept at each step, and the worst unexpected drop with where to look.
+    - name: By device or browser
+      contains: A split of the worst step that can point to a technical checkout fault, or a note it was not run.
+    - name: Check next
+      contains: A short list of checks to run, each with where to look.
+    - name: Score
+      contains: A score out of 100 for how reliable the read is, with checks run and missing items.
 
 how_it_works:
   - title: Ranks the channels

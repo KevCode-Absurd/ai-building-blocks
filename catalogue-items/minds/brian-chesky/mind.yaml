@@ -16,6 +16,29 @@ use_cases:
   - "Balance what staff, customers and the local community each need from a decision"
   - "Find a scrappy, low-cost way to keep a new idea alive"
   - "Set a shared calendar and roadmap so a scattered team ships together"
+not_for:
+  - "You need legal, HR or employment advice on named people: use a qualified employment lawyer or HR adviser."
+  - "You want his view on news or laws after 21 Oct 2026: check his own recent words, as this mind will say it has no record."
+  - "You want to plan costs, cash and reinvestment in a tight business: use the Andrew Carnegie mind instead."
+output_sample:
+  input:
+    - The problem or decision you face, in a few lines
+    - The customer's steps from first hearing of you to after they leave (optional)
+    - "Who it affects: staff, customers, neighbours"
+    - Your reason for doing this work (optional)
+  output:
+    - name: Purpose
+      contains: Why this exists and who it is for, framed around belonging and trust.
+    - name: Journey walk
+      contains: Each moment of the experience, with one moment stretched up the star ladder to find the sweet spot.
+    - name: Principles
+      contains: A few clear rules to follow before a hard call, written before you tell anyone.
+    - name: What changes
+      contains: The specific changes, who they affect and from when.
+    - name: The hard part
+      contains: The trade-off named openly, plus where to get closer to the work and where to step back.
+    - name: Beyond the record
+      contains: Anything he never addressed is marked beyond the record, not guessed.
 seats:
   - {seat: "Founder mode and design", asks: "Have you looked at this detail yourself, the way the customer will see it?"}
   - {seat: "Trust and belonging", asks: "Would a stranger feel safe and welcome here? What would make them trust us more?"}

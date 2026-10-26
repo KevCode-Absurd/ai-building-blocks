@@ -1,6 +1,6 @@
 new_slug: bargain-group-rules-writer
 name: "Bargain group rules writer"
-summary: "Paste your bargain candidates. Get group size, caps, an exit rule and a scorecard that judges the method, not one stock."
+summary: "Paste your bargain stock candidates. Get group size, caps, an exit rule and a scorecard that judges the whole group against a plain fund."
 job: money-and-investing
 thinking: medium
 thinking_why: "It sets fixed rules and a scorecard from a short list. The care is in making the rules before any purchase."
@@ -17,6 +17,10 @@ when:
   - You have bargain candidates and are about to put money in.
   - You bought a few cheap stocks and do not know how to judge the method.
   - You want to know if the research you do beats a plain fund or only feels good.
+not_for:
+  - "You are weighing one stock on its own: this skill judges a whole group, so check that one name with the Price versus value gap judge first."
+  - "You want a name or fund to buy: it never picks one, so ask a licensed adviser."
+  - "You hold only a plain index fund plan and do not pick stocks: keep the plain path and skip this."
 
 you_give:
   - The candidates that passed your tests, with their margin of safety
@@ -35,6 +39,29 @@ how_to_use:
   - Paste the candidates and the amount you plan to use.
   - Choose the plain fund you will compare against, by type, and the dates.
   - Write the rules down and keep them with your investing page.
+output_sample:
+  input:
+    - Your bargain candidates, with the margin of safety for each
+    - The money you would put in the group (optional)
+    - Your trading costs and tax rate on gains (optional)
+    - The type of plain fund to compare against
+  prerequisites:
+    - Candidates that already passed bargain tests, such as the result of the Price versus value gap judge
+  output:
+    - name: Group
+      contains: How many names to hold, the money in the group, and caps for any one name and any one industry.
+    - name: Exit rules
+      contains: A gain target and time limit set before buying, and what to do if the facts behind a name change.
+    - name: Costs and tax
+      contains: The gain you keep after trading fees and tax, and what the group must earn to beat the fund.
+    - name: Scorecard
+      contains: Start and review dates, the plain fund to compare with, and the pass mark fixed in advance.
+    - name: If the method fails
+      contains: Which result sends you back to the plain path, extends one review, or stops.
+    - name: MISSING
+      contains: Any input you did not give, marked and never made up.
+    - name: Checks missed
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Sizes the group

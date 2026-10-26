@@ -1,6 +1,6 @@
 new_slug: position-name-launch
 name: Choose a position, check a name stretch, launch with press
-summary: Paste your product and rivals. Get one position to own, a name check for the new product and a press-first launch.
+summary: Find the one idea your product can own against rivals. Get a position line, a brand name check and a press-first launch plan.
 job: plan-strategy
 thinking: high
 thinking_why: It has to weigh rivals, a brand name and a launch order together. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are launching a product and need one clear idea to own against rivals.
   - You want to add a product under your brand name and fear it will blur what the brand means.
   - You have little ad money and want coverage first, so ads start when people already trust you.
+not_for:
+  - "You have one existing product, no rivals and no name choice: use the Big problem splitter to break the job into smaller parts."
+  - "You want to know how far your brand already reaches: use the Brand reach reviewer."
+  - "You need to write a brief for a creative team from a vague ask: use the Brief reframer."
 you_give:
   - Your product and who it is for
   - Your main rivals and what each is known for
@@ -32,6 +36,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your product and rivals, plus your brand file if you have one. It works step by step and saves each result.
   - Check the weak-spot claim against a real source before you use it anywhere public.
+output_sample:
+  input:
+    - Your product and who it is for
+    - Your main rivals and what each is known for
+    - Your brand file, or a few lines on what your brand stands for
+    - The new product you want to add (optional)
+    - Product facts such as price, benefits and proof
+  prerequisites:
+    - An AI that can read a folder of files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Positioning statement
+      contains: The ladders of top brands, what each rival owns, the weak spot you can use, your position and a one-line statement.
+    - name: Brand name stretch check
+      contains: What your name means now, a stretch score out of 100, and a call to use the name, make a new one or skip.
+    - name: Press-first launch plan
+      contains: The idea to own, a news angle, a press and third-party plan, and the point of trust when ads begin.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Finds your position
     text: Maps who tops each category in buyers' minds, what each rival owns and which true weak spot you can use, then picks one attribute to own.

@@ -2,36 +2,115 @@ thinking: high
 thinking_why: It must compare sources and tie claims to evidence.
 new_slug: deal-competitor-playbook-builder
 name: Deal competitor playbook builder
-summary: Name a rival and the deal. Get a plan to win it, plus your win and loss
-  patterns.
+summary: "Win a deal against a named rival. Get a competitor playbook for that deal, built from their public pages and your own win and loss history."
 job: sell-and-negotiate
 headline: Deal competitor playbook builder
-subhead: Name the rival and the deal you are in. It reads their public pages for
-  launches, pricing and news, and your past deals against them if you connect
-  your CRM. You get a plan for winning this deal, their strengths and gaps, and
-  the patterns behind your wins and losses.
+subhead: "Name the rival and the deal you are in. It reads the rival's public pages and, if you share them, your closed deals and call notes. You get a plan for this deal and the patterns behind your wins and losses."
 explain: |
-  Before you meet a buyer who is also talking to a rival, get a plan for how to win: where the rival is strong, where it is weak, and what your past wins and losses against it show.
+  A buyer tells you they are also talking to a rival. Now you need to know where that rival is strong, where it is weak for this buyer, and how deals against it have ended for you. This competitor playbook for sales gives you that on one page.
 
-  Name the competitor. The skill reads public pages for launches, pricing changes and news, and if connected pulls your closed deals tagged with that competitor, loss reasons and call transcripts or emails. It states what it could not verify. It then writes the play for the deal at hand, plus patterns across the book such as when you tend to win. It can also set up a weekly digest of competitive changes and a team battlecard.
+  Name the competitor and describe the deal. The skill reads the rival's public pages for launches, pricing changes and news. If you give it your closed deals, loss reasons and call notes, it adds what your own history shows, such as where you tend to win. It says what it could not check, and it tells you when your sample is too small to trust.
+
+  It can also build a team battlecard or a weekly digest of what rivals changed. It works from facts and sources, and it marks a guess as a guess.
 when:
-  - A prospect says they are also looking at a rival.
-  - You want to know why you lose deals to one competitor.
-  - Your team needs a shared battlecard.
-  - You want a weekly note on what rivals changed.
+  - A prospect says they are also looking at a rival, and you have a call coming up.
+  - You keep losing deals to one competitor and want to know why.
+  - Your team needs one shared battlecard for a rival.
+  - You want a weekly note on what your rivals changed.
+not_for:
+  - "You want a broad market scan or a profile of many rivals, with no deal in mind: use the Competitor profile writer or the Competitor battlecard builder."
+  - "You have no closed deals against this rival and no call notes: you will get the rival's public view only, so use the Competitor profile writer."
+  - "You need a reply to one buyer pushback in the moment: use the Live objection responder."
+  - "You want the cheapest or fastest rival in your category ranked: use the Competitor product analyst."
 you_give:
-  - The competitor name
-  - The deal or situation
-  - CRM data or closed deal export (optional)
-  - Call notes (optional)
+  - The rival's name
+  - The deal, with the buyer, the stage and what they care about
+  - A closed-deals export with a column for the rival and the loss reason (optional)
+  - Call notes or email excerpts that mention the rival (optional)
 you_get:
-  - Plan for winning the deal
-  - Win and loss patterns
-  - Competitor strengths and gaps
-  - Battlecard or weekly digest (optional)
+  - A plan for winning this deal, with the questions to ask and proof to bring
+  - Where the rival is strong and where it is weak for this buyer
+  - Win and loss patterns against this rival, with how many deals sit behind each
+  - A list of what could not be checked
+  - A battlecard or weekly digest (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and read your CRM.
+  - "Open Claude, ChatGPT or Gemini. Turn on web search: the skill reads the rival's public pages."
+  - Paste the skill text into the chat.
+  - "Under it, paste the rival's name and the deal in a few lines. Add a closed-deals export and call notes if you have them."
+  - Read the plan first, then the sources under it. Check any claim marked unverified before you say it to a buyer.
+  - If you use a connected CRM, email or call-recording tool, it needs your own access, and some of these are paid. Files you paste work as well.
+  - Use the plan on your next call. Ask for a battlecard once you trust the facts.
+output_sample:
+  input:
+    - The rival's name
+    - The deal, with the buyer, the stage and their needs
+    - A closed-deals export with a rival column and loss reasons (optional)
+    - Call notes or emails that mention the rival (optional)
+  prerequisites:
+    - An AI that can search the web, to read the rival's public pages
+    - A connected CRM, email or call-recording tool, if you do not paste files (optional)
+  output:
+    - name: Play for this deal
+      contains: Where the rival is strong, where this buyer's needs differ, a question that shows the gap, and proof to bring.
+    - name: Win and loss summary
+      contains: Wins and losses against this rival with the count behind each, and a warning if the sample is small.
+    - name: Patterns
+      contains: Where you tend to win and lose against them, each tied to deals or quotes.
+    - name: Rival's recent moves
+      contains: Launches, pricing changes and news from their public pages, each with its source.
+    - name: Not verified
+      contains: Claims it could not confirm, so you know what to check first.
+    - name: Battlecard (optional)
+      contains: A one-page team reference for this rival, refreshed when you ask.
+    - name: Weekly digest (optional)
+      contains: New deals, new mentions and rival moves since last week. A quiet week gets one line.
+how_it_works:
+  - title: Check what is available
+    text: It sees what you pasted or connected. It works from files if that is all there is, and says what it used.
+  - title: Pull the evidence
+    text: It collects closed deals that name the rival, loss reasons, what buyers said and the rival's public moves, with a source for each.
+  - title: Analyze wins and losses
+    text: It states the sample size first, then looks for patterns. It counts wins and losses and does not lean on one recent story.
+  - title: Build the play
+    text: For your deal, it sets out their strength, the gap for this buyer, a question that shows it, proof points and what not to do.
+  - title: Mark what is unproven
+    text: It separates facts from its own read and lists what it could not verify.
+  - title: Offer the battlecard or digest
+    text: If you ask, it turns the same facts into a one-page card or a weekly summary.
+output_shape: |
+  PLAY: <rival> in <deal>
+
+  WHERE THEY ARE STRONG
+  - <strength, with source>
+
+  WHERE THIS BUYER DIFFERS
+  - <gap that fits this buyer>
+
+  QUESTION TO ASK
+  - <question that shows the gap>
+
+  PROOF TO BRING
+  - <proof, with source>
+
+  DO NOT
+  - <what has failed before, with deals or quotes>
+
+  WIN AND LOSS PATTERNS (<n> deals)
+  - <pattern>: <evidence>
+
+  NOT VERIFIED
+  - <claim>
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search on
+      why: It has to read the rival's public pages. A closed-deals export or your CRM adds your own history.
+  inputs:
+    - A closed-deals export with a column for the rival
+    - Call notes or email excerpts that name the rival
+terms:
+  - term: Battlecard
+    meaning: A one-page note for your team on how to sell against one rival.
+  - term: Win and loss pattern
+    meaning: A repeated reason you win or lose against one rival, backed by several deals.
+  - term: CRM
+    meaning: The tool where your team tracks deals and customers, such as HubSpot or Salesforce.

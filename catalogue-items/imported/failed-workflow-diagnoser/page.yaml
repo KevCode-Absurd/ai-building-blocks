@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads long logs and traces one cause.
 new_slug: failed-workflow-diagnoser
 name: Failed workflow diagnoser
-summary: Paste a failed GitHub Actions log. Get the root cause and a fix for
-  your workflow file.
+summary: Find why your GitHub Actions workflow failed. Paste the log and workflow file, and get the root cause with a diff that fixes it.
 job: test-and-fix-code
 headline: Failed workflow diagnoser
-subhead: The real reason your GitHub Actions run failed, plus the exact change
-  to your workflow file that fixes it. You skip scrolling through hundreds of
-  log lines.
+subhead: The real reason your GitHub Actions run failed, plus the exact change to your workflow file that fixes it. You skip scrolling through hundreds of log lines.
 explain: |
   The real reason your GitHub Actions run failed, plus the exact change to your workflow file that fixes it. You skip scrolling through hundreds of log lines.
 
@@ -18,17 +15,41 @@ when:
   - A workflow passes on your laptop but fails in CI.
   - An action warns that it uses an outdated Node version.
   - A deploy step fails with a vague missing key error.
+not_for:
+  - "The run failed because of a registry or runner outage: check the provider's status page, and rerun only if the failure looks short-lived."
+  - "You need a new pipeline from scratch: ask your AI to draft one, or use a starter template from GitHub."
+  - "The log has secrets you cannot remove: ask a teammate to clean it first, or paste only the failing step."
 you_give:
   - The failed workflow log
   - The workflow YAML file
   - What changed since the last green run (optional)
 you_get:
-  - The root cause in plain words
-  - A diff for the workflow file
+  - The root cause of the failure in plain words
+  - The failing step and the job it sits in
+  - A diff you can apply to your workflow file
   - A check of secrets and permissions
-  - Tips to speed up slow steps
+  - A short list of what to confirm after you push the fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your failed run on GitHub and copy the log. Remove all secrets, tokens, private keys and private URLs first. The skill does not hide them for you.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your cleaned log, then your workflow file. Add what changed since the last green run if you know it.
+  - Read the root cause and the diff. Check that the fix does not weaken your tests or checks.
+  - Apply the diff, push it, and run the workflow again. The skill cannot run it for you. Use its checklist to confirm the result.
+output_sample:
+  input:
+    - Your failed GitHub Actions log, with secrets, tokens and private URLs removed
+    - Your workflow YAML file from .github/workflows
+    - What changed since the last green run (optional)
+  output:
+    - name: Run details
+      contains: The repository, run, event, commit, runner and failing step, so the diagnosis ties to the right run.
+    - name: Root cause
+      contains: The real reason the run failed, in plain words, such as a missing secret or an old action version.
+    - name: Failing step and job
+      contains: Which step broke and which job in your workflow file it belongs to.
+    - name: Diff
+      contains: The exact change to your workflow file or script that should fix the failure.
+    - name: Secrets and permissions check
+      contains: Notes on missing secrets and whether the permissions block fits what the workflow does.
+    - name: Checks after you push
+      contains: A short list of things to confirm once you push the fix and run the workflow again.

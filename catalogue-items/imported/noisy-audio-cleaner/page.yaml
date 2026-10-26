@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sends one file to a set tool and saves the result.
 new_slug: noisy-audio-cleaner
 name: Noisy audio cleaner
-summary: Give it a noisy recording. Get clean speech with the background noise
-  and music removed.
+summary: Remove background noise from a recording and keep the speech. Give it an audio file. You get a clean MP3 from an ElevenLabs noise remover.
 job: work-with-audio
 headline: Noisy audio cleaner
-subhead: Give it a noisy recording. Get clean speech with the background noise
-  and music removed. Bring a noisy audio file or link. Use the result to plan
-  your next step.
+subhead: Give it a noisy recording. Get clean speech with the background noise and music removed. Bring a noisy audio file or link. Use the result to plan your next step.
 explain: |
   Speech pulled clean out of a noisy recording. Traffic, hiss, room echo and background music are stripped away, so you hear the voice.
 
@@ -18,6 +15,10 @@ when:
   - You want a cleaner file before sending it for transcription.
   - A video has background music you need to remove from the speech.
   - You have many short clips to tidy up in one go.
+not_for:
+  - "You want to make a voice sound different: use ElevenLabs Voice Changer, since this only cleans the voice you already have."
+  - "You cannot send audio to a paid online service: use a free denoise tool on your own computer, or ask a sound editor."
+  - "You only have a music track and want the music itself: this keeps speech and removes the rest, so use a stem splitter instead."
 you_give:
   - A noisy audio file or link
   - Your ElevenLabs API key
@@ -27,8 +28,27 @@ you_get:
   - Code to run it on more files
   - A faster PCM option for low delay
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own ElevenLabs API key.
+  - Make an ElevenLabs account and create an API key. Using it may cost credits.
+  - Open Claude, ChatGPT or Gemini with a tool that can run code. Paste this skill and your key. Do not share the key anywhere public.
+  - Give your AI the audio file or link and ask it to clean the speech.
+  - Ask it to run the example on your file first. It saves the result as clean.mp3.
+  - Play clean.mp3 and check that the voice is clear. Then run it on your other files.
+  - If you see an error, 401 means a bad key, 422 means the wrong format, and 429 means wait and try again.
+output_sample:
+  input:
+    - A noisy audio or video file, or a link to one
+    - Your ElevenLabs API key
+    - Whether the file is raw 16 kHz mono PCM (optional)
+  prerequisites:
+    - An ElevenLabs account and API key, which may use paid credits
+    - An AI that can run code, or a command line on your computer
+    - Internet access
+  output:
+    - name: clean.mp3
+      contains: Your recording with the voice kept and noise, hiss, echo and music taken out, saved as an MP3.
+    - name: Example code
+      contains: Short Python, JavaScript or command line code you can run again on more files.
+    - name: Fast PCM option
+      contains: A setting for raw 16 kHz mono audio that skips decoding so results come back sooner.
+    - name: Error notes
+      contains: What a bad key, wrong format or too many requests looks like, and what each means.

@@ -14,7 +14,7 @@ inputs:
 outputs:
   - type: document
     required: true
-  - type: document
+  - type: plan
     required: true
 uses: []
 execution: coordinator

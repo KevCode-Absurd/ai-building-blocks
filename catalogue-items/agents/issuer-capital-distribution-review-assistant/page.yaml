@@ -1,51 +1,125 @@
 new_slug: issuer-capital-distribution-review-assistant
-name: Issuer capital distribution review assistant
-headline: Issuer capital distribution review assistant
-summary: Review executed buybacks and dividends against equity cash flow and the share ledger.
+name: Share buyback and dividend reviewer
+headline: Share buyback and dividend reviewer
+summary: Check a listed company's share buybacks and dividends against its cash flow and share count. Get an EPS, cash cover and book value review.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A capital-distribution review brief and linked cash, EPS and common-equity schedules. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+subhead: Give it a company's new filing with its buyback, dividend and equity records and your last accepted model. It checks what was really bought back and paid out, and how that moved EPS, cash cover and book value per share. You get a change register, linked schedules and questions for your reviewer.
 explain: |-
-  A capital-distribution review brief and linked cash, EPS and common-equity schedules.
+  A company can announce a big buyback and spend very little of it. It can also pay a dividend and a buyback in one year that cost more than the cash it earned. EPS (earnings per share) rises after a buyback, partly because fewer shares remain. That does not show the buyback was a good use of cash. If you rebuild every quarter from the headlines, you mix up what was authorized with what was paid.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This share buyback and dividend reviewer keeps a short record of the last accepted review. It holds the dates and prices of each repurchase, executed versus authorized amounts, cash from new shares, the dividends paid, how free cash flow to shareholders was defined and any equity gaps left open. When a new filing arrives, it compares it with that record. Then it runs the Share buyback accounting checker. That workflow runs three steps: the EPS effect of the buyback, whether cash flow covers the payouts, and a book value per share roll-forward. All three use the same executed amounts.
+
+  An authorization with no executions stays pending and is never counted as cash spent. Dividend reinvestment is checked only if you supply a real reinvestment statement. It does not say whether a buyback is good value, and it does not trade or file anything. It uses only the filings you give it, and a person who knows them checks the result.
 when:
-  - You need a capital-distribution review brief and linked cash, EPS and common-equity schedules.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A company's annual report shows new repurchase and dividend figures, and you want to know what was actually spent.
+  - EPS rose after a buyback and you want to split the effect of fewer shares from the earnings lost on the cash used.
+  - You want to know if dividends and buybacks together were covered by the cash the company earned, or if it had to borrow.
+  - Book value per share changed and you want to know how much came from buybacks, dividends and profit.
+not_for:
+  - You want to know if a buyback is good value or at a fair price. It checks the arithmetic and gives no view on value.
+  - You only want the EPS effect of one buyback. Use the Cash buyback EPS checker.
+  - You only want to know if cash flow covers dividends and buybacks. Use the Shareholder payout cash checker.
+  - You only want a book value per share roll-forward. Use the Book value per share calculator.
+  - A split, option or convertible changed your share count. Use the EPS and share count reviewer.
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The new dated filing with the cash flow statement, equity statement and the note on share repurchases (from the company's results page)
+  - "Buyback records by period: shares bought, the price paid and the cash spent (from the repurchase table in the filing)"
+  - Dividends paid per share and in total, and cash received from new share issues
+  - The free cash flow to shareholders figure, with how it was defined (from the filing, or your own model)
+  - The reporting date, currency, scale and accounting basis, and your materiality threshold
+  - Your last accepted model and its review log (optional on a first run)
+  - A shareholder dividend reinvestment statement (optional, only if you want that step)
+  - The record from the last review, pasted in (optional on a first run)
 you_get:
-  - A capital-distribution review brief and linked cash, EPS and common-equity schedules.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A change register. Each buyback, dividend or equity change shows its source, its date and its effect.
+  - A buyback EPS bridge. Shares retired and earnings lost on the cash used are split out.
+  - A payout cover schedule. It shows whether free cash flow covered dividends and net buybacks, or what had to be funded.
+  - A book value per share roll-forward, with the effect of the numerator and the share count shown apart
+  - Reviewer questions for anything missing, plus MISSING lines, checks that could not run and a record for next time
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, pick one that can create spreadsheets. In plain chat it returns the same tables as text.
+  - Say whether this is the first run. If not, paste the record from last time and attach the last accepted model. Then attach the new filing and the repurchase table, and give your threshold, currency and scale.
+  - Read "changed since last review" first. Check each repurchase, dividend and issue figure against the page of the filing it came from.
+  - Check that only executed buybacks count as cash. Check that shares retired equal cash spent divided by the price paid.
+  - Check that dividends plus buybacks less new share cash, compared with free cash flow, leave a surplus or a funded gap. Then check that closing equity divided by closing shares gives the book value per share.
+  - Answer the questions or leave them marked MISSING. Nothing is filed, sent or traded.
 how_it_works:
-  - title: Reconcile buybacks with owner cash
-    text: Run the governing workflow when When the user provides updated repurchase execution, dividend or equity-statement evidence, compare actual amounts with the previously accepted cash-allocation model.
-  - title: Dividend reinvestment share schedule
-    text: If the review includes an actual shareholder reinvestment statement, reconcile dividend cash to acquired shares separately. An authorization without executions stays pending evidence and is never treated as completed buyback cash.
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this company, or sets a first baseline. Compares the filing date, periods, currency and share definitions with the record. If nothing changed and no review is due, it says so and stops.
+  - title: Separates executed from authorized
+    text: An authorization with no executions stays pending. Only repurchases with a date, price and cash amount count as cash spent.
+  - title: Builds the buyback EPS bridge
+    text: Shares retired are cash spent divided by the price paid. It takes off the after-tax income lost on that cash, then ties lower earnings and fewer weighted shares to EPS. Timing and costs stay separate.
+  - title: Tests payout cover
+    text: Adds dividends to executed buybacks, takes off cash from new shares, and compares the total with free cash flow to shareholders. It shows the cash kept or the gap that had to be funded, and checks debt and cash moves so nothing is counted twice.
+  - title: Rolls book value per share forward
+    text: Uses the parent's common equity, not total equity. Adds profit, other comprehensive income and new share cash, and takes off dividends and buyback cash. It then divides by the real closing shares and splits the equity effect from the share-count effect.
+  - title: Checks reinvestment and saves the record
+    text: Only with a real reinvestment statement, it divides net dividend cash by the actual reinvestment price. It then writes a short record for next time and keeps the old one.
 output_shape: |-
-  A capital-distribution review brief and linked cash, EPS and common-equity schedules.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <new repurchases, dividends, issues, equity changes>
+  BUYBACK EPS BRIDGE         executed cash <n> at <price> = <n> shares retired;
+                             income lost <n>; EPS <old> to <new>
+  PAYOUT COVER               dividends <n> + buybacks <n> - new share cash <n> = <n>;
+                             free cash flow <n>; cash kept or gap funded <n>
+  BOOK VALUE PER SHARE       opening <n> + profit <n> + OCI <n> + issues <n>
+                             - dividends <n> - buybacks <n> = closing <n>; / <shares> = <n>
+  REINVESTMENT               <only if a statement is supplied: net cash / price = shares>
+  PENDING                    <authorized but not executed amounts>
+  CHANGE REGISTER            <item | change | source and date | effect>
+  REVIEWER QUESTIONS         <one per gap>
+
+  RECORD FOR NEXT REVIEW  execution dates and prices, executed vs authorized, issue cash,
+                          dividends, free cash flow definition, equity residuals
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The new dated filing with the cash flow statement, equity statement and repurchase note
+    - "Buyback records by period: shares bought, price paid and cash spent"
+    - Dividends paid and cash from new share issues
+    - The free cash flow to shareholders figure and how it was defined
+    - The currency, scale, accounting basis and your materiality threshold
+    - Your last accepted model and its record (optional on a first run)
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can create spreadsheets.
+    - A named person who knows the company's filings and will check the result
+  output:
+    - name: Changed since last review
+      contains: Each new repurchase, dividend, share issue or equity change, with its filing page and date.
+    - name: Buyback EPS bridge
+      contains: Shares retired, income lost on the cash used, and EPS before and after. It does not say the buyback created value.
+    - name: Payout cover schedule
+      contains: Dividends plus net buybacks against free cash flow, showing the cash kept or the gap that was funded.
+    - name: Book value per share roll-forward
+      contains: Opening equity to closing equity, divided by closing shares. The equity effect and the share effect are shown apart.
+    - name: Dividend reinvestment (only with a statement)
+      contains: Net dividend cash divided by the actual reinvestment price, giving the shares acquired.
+    - name: Pending authorizations
+      contains: Buybacks that were approved but not executed, kept out of every cash figure.
+    - name: Change register
+      contains: "One row per change: the item, what changed, the source and date, and the effect."
+    - name: Reviewer questions
+      contains: One question for each missing price, date or equity figure.
+    - name: Record for next review
+      contains: Execution dates and prices, issue cash, dividends, the cash flow definition and any equity gaps.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops. Each check that failed or could not run, or "none".
+    - name: Workbook (if your AI can make one)
+      contains: Inputs, formulas and a checks tab linked across the three schedules.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Executed cash and shares reconcile to source records and equity; EPS accretion is distinguished from value creation, and reinvestment is used only for actual or labeled scenarios.
+  - what: A buyback funded by debt
+    how: Say how it was funded. The agent adds the funding to the cover schedule and notes the cash effect separately.
+  - what: A tighter threshold
+    how: Set a lower threshold, such as 0.005 per share. Smaller changes stay in the register but are not raised as questions.
+  - what: A reinvestment statement
+    how: Attach the statement. The agent adds the reinvestment step and keeps its cash apart from buyback cash.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - Executed cash and shares reconcile to source records and equity; EPS accretion is distinguished from value creation, and reinvestment is used only for actual or labeled scenarios.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +130,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
+  - Keep one sheet with the company's repurchase table by month, with the filing page for each row, and paste it in every time.
+  - Write down how you define free cash flow to shareholders once, so every run uses the same definition.
+  - Pair it with the EPS and share count reviewer when options, convertibles or a split change the share count.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The company's filing page
+      why: Gives the dated repurchase table, cash flow statement and equity statement, each with a page you can cite.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The company's own repurchase table, with dates, shares and prices, not a summary.
+    - The statement of changes in equity, so book value per share can be tied to the balance sheet.
+    - A named reviewer who knows the filings and will answer the questions it raises.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Buyback
+    meaning: The company buys its own shares from the market and retires them, so fewer shares remain.
+  - term: EPS
+    meaning: Earnings per share. Profit to ordinary shareholders divided by the weighted average number of shares.
+  - term: Free cash flow to equity
+    meaning: Cash left for shareholders after the company pays its costs, investment and debt service.
+  - term: Authorized versus executed
+    meaning: Authorized is the limit the board approved. Executed is what the company actually bought and paid for.
+  - term: Book value per share
+    meaning: The common equity on the balance sheet divided by the number of ordinary shares. It is not the market price.
+  - term: Accretion
+    meaning: A rise in EPS. A rise in EPS does not show that value was created.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

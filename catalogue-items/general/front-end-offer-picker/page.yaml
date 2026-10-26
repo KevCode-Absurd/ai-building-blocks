@@ -1,34 +1,54 @@
 new_slug: front-end-offer-picker
 name: Front-end offer picker
-summary: Paste your offer and lead numbers. Get a pick of premium, free or discount first step, with the reason and tests.
+summary: "Pick your best first step: premium, free or discount. Scored on your lead costs, cash and proof, with a plan to move up."
+
 job: make-offer
 thinking: medium
 thinking_why: It weighs several facts about your business against three routes and gives a reasoned pick. The scoring is fixed.
 headline: Front-end offer picker
-subhead: Give it your offer and what you know about your lead volume, costs, cash and market. It scores a premium, free and discount first step against your facts, picks one, says what must be true for it to work and when to move to premium.
-explain: |-
-  If too few people respond to your offer, the usual fix is a better ad. Often the better fix is a different way in. A premium offer on its own gives the best buyers, but it costs the most to reach them and takes the longest to pay back. A free first step brings the most leads at the lowest cost. A deep discount on one piece collects a little cash and books the next meeting.
+subhead: "Give it your offer and what you know about your leads, costs, cash and market. It scores a premium, a free and a discount first step against those facts and picks one. You get what must be true for it to work, when to move to premium, and two tests to run first."
 
-  This skill compares the three on your facts: how many leads you can handle, what a lead costs, how long you can wait to break even, how well buyers understand what you sell, any rules on free offers where you sell, and how much proof you have. It gives a pick, what must be true for it to work, and when to move on to a higher-priced start.
+explain: |
+  If too few people respond to your offer, the usual fix is a better ad. Often the better fix is a different way in. A premium offer on its own brings the best buyers, but it costs the most to reach them and pays back the slowest. A free first step brings the most leads at the lowest cost. A deep discount on one piece collects a little cash and sets up the next sale.
+
+  This front end offer picker compares the three on your facts: how many leads you can handle, what a lead costs, how long you can wait to break even, how well buyers know what you sell, any rules on free offers where you sell, and how much proof you hold. It gives each route a score, so the pick follows from the numbers and not from a hunch.
+
+  If the scores tie, or most of your facts are unknown, it makes no pick. It tells you which facts would break the tie. The ideas come from Alex Hormozi's draft chapter on how to attract buyers. His figures on free offers are his own claim, so test them on your own leads.
+
 when:
-  - Too few people respond to your offer.
-  - Your cost to win a customer is higher than you can afford.
-  - You are entering a new market with no proof yet.
+  - "Too few people respond to your offer, and a better ad has not fixed it."
+  - "Your cost to win a customer is higher than you can afford."
+  - "You are entering a new market, or a small local one, and have no proof yet."
+  - "You are unsure whether to offer a free trial, a free audit or a deep discount, and want a reason to pick one."
+
+not_for:
+  - "You have already chosen a free first step for a physical product. Use the Free sample offer planner."
+  - "You have chosen to lead with useful information. Use the Information-led lead offer planner."
+  - "You have no offer or price yet. Use the Hidden offer finder first."
+  - "You want to improve a lead offer you already run. Use the Lead offer tuner."
+
 you_give:
-  - Your offer and price
-  - Lead volume, cost per lead and per sale, close rate (optional)
-  - Cash you can spend while you learn (optional)
-  - Your market and any rules on free offers
+  - "Your offer: what is in it, and the price"
+  - "Your numbers: leads per week, cost per lead, cost per sale, close rate (optional)"
+  - "Cash you can spend while you learn, and how long you can wait to break even (optional)"
+  - "Your market, and any rules on free offers where you sell (optional)"
+  - "What proof you hold, such as reviews or results (optional)"
+
 you_get:
-  - A score for premium, free and discount against your facts
-  - The pick, with the reason and what must be true
-  - How to move to a higher-priced start later
-  - Two tests to run first
+  - "A score for premium, free and discount, fact by fact"
+  - "The pick, with the reason and what must be true for it to work"
+  - "The facts that would change the pick"
+  - "When and how to move to a higher-priced start"
+  - "Two tests with a spend, a time and a win rule written first"
+
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the offer and whatever lead and cost numbers you have.
-  - Say how much cash you could spend while you learn and what limits your volume.
-  - Take the pick to Lead cost and friction planner.
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start a chat with it. If not, copy it and paste it in."
+  - "Paste your offer and price, then whatever lead and cost numbers you have. Say \"unknown\" for any you lack. It will not invent them."
+  - "Say how much cash you could spend while you learn, and how many new leads you can answer each week."
+  - "Read the score table before the pick. If the totals tie, the answer is a list of facts to find out, not a route."
+  - "Run the two tests it sets, with the win rule it wrote first."
+  - "Take the pick to the Lead cost and friction planner."
+
 how_it_works:
   - title: Gathers your facts
     text: Volume, cost, cash, trust, rules, how well buyers know your type of offer.
@@ -64,6 +84,30 @@ output_shape: |-
 
   CHECKS MISSED
   <one line per check missed, or none>
+output_sample:
+  input:
+    - "Your offer and its price"
+    - "Your lead and cost numbers (optional)"
+    - "Cash you can spend, and your market's rules on free offers (optional)"
+    - "The proof you hold (optional)"
+  prerequisites:
+    - "Your offer from the Hidden offer finder (optional)"
+  output:
+    - name: "Your facts"
+      contains: "Volume, cost per lead, cost per sale, cash, proof and rules, with unknowns marked MISSING."
+    - name: "Scores"
+      contains: "Premium, free and discount scored 0 to 3 on each fact, with totals."
+    - name: "The pick"
+      contains: "The route, why it won, and what must be true for it to work. No pick on a tie."
+    - name: "What would change it"
+      contains: "The facts that would flip the pick."
+    - name: "Moving up"
+      contains: "When and how to go to premium once you have proof."
+    - name: "First tests"
+      contains: "Two tests, each with a spend, a time and a win rule."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and one line per check still missed."
+
 tweaks:
   - what: Your cash
     how: State how long you can wait to break even. Less cash pushes the pick toward free or discount.

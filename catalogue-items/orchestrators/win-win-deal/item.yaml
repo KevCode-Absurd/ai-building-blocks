@@ -12,11 +12,11 @@ outputs:
   - {type: plan}
 uses: [win-win-stance-planner, trust-deposit-planner, listen-first-talk-planner, third-option-finder, results-agreement-writer]
 steps:
-  - {uses: win-win-stance-planner, note: "Your stance, what a win is for each side and the point where you walk away."}
-  - {uses: trust-deposit-planner, note: "Where trust stands, and two deposits to make before the talk."}
-  - {uses: listen-first-talk-planner, note: "A listening plan: what to ask, how to restate, and when to speak."}
-  - {uses: third-option-finder, note: "At least three options that meet both sides' needs, and a small first step."}
-  - {uses: results-agreement-writer, note: "A written agreement both sides can back: results, limits, help, review and consequences."}
+  - {uses: win-win-stance-planner, note: "Your stance, what a win is for each side and the point where you walk away. Hands step 2 your stance and walk-away line."}
+  - {uses: trust-deposit-planner, note: "Where trust stands, and two deposits to make before the talk. Hands step 3 the trust plan."}
+  - {uses: listen-first-talk-planner, note: "A listening plan: what to ask, how to restate, and when to speak. Takes step 2's plan. After the talk, your notes on both sides' concerns go to step 4."}
+  - {uses: third-option-finder, note: "At least three options that meet both sides' needs, and a small first step. Takes the stance from step 1 and the concerns from the talk in step 3 as the two plans; hands step 5 the options."}
+  - {uses: results-agreement-writer, note: "A written agreement both sides can back: results, limits, help, review and consequences. Takes the plans from the steps before; hands you the agreement to share."}
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-covey]

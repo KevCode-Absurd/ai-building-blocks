@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Mistakes cost people money, so it checks carefully.
 new_slug: payroll-timesheet-checker
 name: Payroll timesheet checker
-summary: Give it your timesheets. Get hours totalled by person, every oddity
-  flagged, and a run ready for your line by line approval.
+summary: Check payroll timesheets before pay day. Get hours totalled by person, every odd entry flagged, and a run ready for you to approve line by line.
 job: hire-people
 headline: Payroll timesheet checker
-subhead: Give it your timesheets. Get hours totalled by person, every oddity
-  flagged, and a run ready for your line by line approval. Bring pay period and
-  pay date. Use the result to plan your next step.
+subhead: Give it your timesheets. Get hours totalled by person, every oddity flagged, and a run ready for your line by line approval. Bring pay period and pay date. Use the result to plan your next step.
 explain: |
   Hours totalled by person for the pay period, every oddity flagged, and a payroll run staged for you to approve line by line before any money moves.
 
@@ -18,6 +15,10 @@ when:
   - Someone forgot to clock out.
   - This week's payroll looks too high.
   - You need to confirm who was paid for the right period.
+not_for:
+  - "You only pay contractors: pay them from your bank or invoicing tool, since this checks employee hours."
+  - "You have no employees on payroll: you do not need a timesheet check yet."
+  - "You have a state overtime rule question: ask your payroll provider or an adviser before you run payroll."
 you_give:
   - Pay period and pay date
   - Timesheets from Gusto, QuickBooks or a spreadsheet
@@ -29,10 +30,30 @@ you_get:
   - Run staged for line-by-line approval
   - Journal entry for the books
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open your AI and paste in this skill. If you use Gusto or QuickBooks Payroll, connect your own account first. These may need a paid plan.
+  - Tell it your pay period dates, your pay date and who is on this run. Include new hires, exits and anyone on leave.
+  - Add your timesheets. Let your AI pull them from Gusto or QuickBooks Payroll, or upload a spreadsheet.
+  - Read the flags. Decide each one yourself. The skill will not fix them for you.
+  - Approve the run line by line. Then the journal entry posts to your books if your ledger allows it. If not, send it to your bookkeeper.
+output_sample:
+  input:
+    - Pay period start and end dates, and the pay date
+    - Timesheets from Gusto, QuickBooks Payroll or an uploaded spreadsheet
+    - Roster changes such as new hires, exits and leave
+    - Pay rates and schedules (optional)
+  prerequisites:
+    - A Gusto or QuickBooks Payroll account, if you want your AI to pull timesheets itself. A spreadsheet works without one.
+    - A ledger connection that allows journal entries, if you want the entry posted for you
+  output:
+    - name: Run sheet
+      contains: Each person with regular, overtime and paid time off hours, plus pay, and a flag next to anything odd.
+    - name: Totals block
+      contains: Headcount, total gross pay and the cash that will leave your account.
+    - name: Flags
+      contains: Missed punches, overtime spikes, rate changes, mid-period hires and exits, and hours outside the schedule, each raised and never fixed silently.
+    - name: Payroll blockers
+      contains: If Gusto reports problems, each one is explained in plain words with who fixes it and where.
+    - name: Approval step
+      contains: You approve or change each line before any money moves.
+    - name: Journal entry
+      contains: A balanced entry that posts if your ledger allows it, or goes to your bookkeeper.

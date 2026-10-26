@@ -18,10 +18,10 @@ outputs:
   - {type: photo_set}
 uses: [website-brand-brain-builder, product-photo-shoot-planner, flash-product-photos, reference-product-photos]
 steps:
-  - {uses: website-brand-brain-builder, note: "Start here so the rest uses your real prices, terms, colours and claims."}
-  - {uses: product-photo-shoot-planner, note: "Use the brand file and your photos to set one style and plan nine matching photos."}
-  - {uses: flash-product-photos, note: "Use the brand look to plan six flash snapshots that read like a real night out, not a studio."}
-  - {uses: reference-product-photos, note: "Use the brand file to match the look of one photo you admire with your own product."}
+  - {uses: website-brand-brain-builder, note: "Start here so the rest uses your real prices, terms, colours and claims. Hands steps 2, 3 and 4 the brand brain."}
+  - {uses: product-photo-shoot-planner, note: "Use the brand file and your photos to set one style and plan nine matching photos. Hands back the first of three photo sets. Steps 3 and 4 do not read it."}
+  - {uses: flash-product-photos, note: "Use the brand look to plan six flash snapshots that read like a real night out, not a studio. A separate look: uses step 1's brand brain and your own phone photos, not step 2's photo set. Hands back the second photo set."}
+  - {uses: reference-product-photos, note: "Use the brand file to match the look of one photo you admire with your own product. A separate look: uses step 1's brand brain, your own phone photos and the reference you chose, not the earlier photo sets. Hands back the third photo set."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-get-product-photos-in-three-looks-from-one-set-of-phone-photos/skeleton.yaml

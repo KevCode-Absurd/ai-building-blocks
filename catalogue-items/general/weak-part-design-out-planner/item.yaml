@@ -1,6 +1,6 @@
 slug: weak-part-design-out-planner
 name: "Weak part design-out planner"
-summary: "Describe a product, process or system that keeps breaking. Get the part that causes most trouble and ways to design it out."
+summary: "Find the part behind most of your repeat faults, returns or delays. Get ways to design it out, each with its trade-off and a first test."
 category: general
 type: skill
 role: make
@@ -8,7 +8,6 @@ job: strategy
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: brief, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

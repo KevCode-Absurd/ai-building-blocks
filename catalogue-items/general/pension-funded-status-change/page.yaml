@@ -1,46 +1,119 @@
 new_slug: pension-funded-status-change
 name: Pension funded-status change schedule
 headline: Pension funded-status change schedule
-summary: Explain changes in an issuer’s pension deficit separately from employer contributions.
+summary: See how much of a pension deficit change came from employer contributions and how much from other causes, using the pension note's balances.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A funded-status bridge separating cash funding from other deficit movements. Share opening/closing benefit obligations and plan assets, contributions, asset ceilings, currency effects and plan perimeter.
-explain: |-
-  A funded-status bridge separating cash funding from other deficit movements.
+subhead: Give it the pension obligation and the plan assets at the start and end of the year, plus the cash the employer paid in. It works out the deficit at both dates and splits the change into contributions and everything else. You get a clear schedule and a list of anything missing.
 
-  Issuer accounting and earnings. Illustrative figures. Deficit rises from100-80=20 to120-90=30, an increase10. With contributions10 the other deficit-increasing movements total20. Contributions5 with the same observed balances imply other movements15.
+explain: |-
+  A pension deficit is what the plan owes members, less what the plan holds. When the deficit in an annual report moves, a reader wants to know why. Did the company pay in cash, or did something else push it up, such as lower interest rates or a rise in what members are owed?
+
+  This skill builds a funded-status change schedule. It subtracts plan assets from the obligation at both dates, finds the change, then adds the employer contributions back. What is left is the movement that was not cash funding. Cash paid in cuts the deficit but is not pension expense, so the schedule keeps the two apart.
+
+  It does not say what caused the rest. If the note lists service cost, interest, remeasurements and currency effects, it lines them up beside the total. Otherwise it leaves the total as one number. It does not handle an asset ceiling, a settlement or a change in which plans are counted without extra input from you.
+
 when:
-  - You need a funded-status bridge separating cash funding from other deficit movements.
-  - You work on issuer accounting and earnings and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - An annual report shows the pension deficit rising even though the company paid cash into the plan.
+  - An analyst asks how much of the deficit change was funding and how much was something else.
+  - You want to check that the pension note's rows add up to the change in funded status.
+  - A reviewer wants opening and closing pension figures tied to the note with each sign shown.
+
+not_for:
+  - "You want to split pension cost into service cost, interest and remeasurement. Use the Pension service and financing bridge."
+  - "You need the size of the obligation, or a forecast of required contributions. That takes an actuary. This only reconciles figures you already have."
+  - "The plan has an asset ceiling, a settlement or a changed set of plans, and you have no note on them. The simple schedule will not be right."
+
 you_give:
-  - Opening/closing benefit obligations and plan assets, contributions, asset ceilings, currency effects and plan perimeter.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Benefit obligation at the start and end of the year, from the pension note"
+  - "Plan assets at the start and end of the year, from the pension note"
+  - "Cash contributions paid in by the employer for the year"
+  - "Currency, scale and the two balance sheet dates"
+  - "The note's rows for service cost, interest, remeasurement and currency effects (optional)"
+  - "Details of any asset ceiling or settlement (optional)"
+
 you_get:
-  - A funded-status bridge separating cash funding from other deficit movements.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The deficit at the start and end of the year"
+  - "The change in the deficit"
+  - "The part of the change that was not contributions"
+  - "Each note row beside that total, if you supplied them"
+  - "A list of anything missing, and what it held back"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach the pension note if your AI reads files."
+  - "Give the obligation and plan assets for both dates, and the contributions. Say which dates and which currency."
+  - "Check the inputs table first. Each figure should match a line in the pension note."
+  - "Read the schedule. A rise in the deficit with contributions paid means other movements pushed it up."
+  - "Add the note's other rows if you have them and ask it to run again. Any gap it shows is a row you still need."
+  - "Have a qualified accountant review the result before anyone uses it in a report."
+
 how_it_works:
-  - title: 1. Match obligation and asset measurements by date, plan and currency; preserve surpluses, deficits and any asset-ceiling restriction separately
-    text: Match obligation and asset measurements by date, plan and currency; preserve surpluses, deficits and any asset-ceiling restriction separately.
-  - title: 2. Subtract plan assets from obligations at both dates and reconcile the deficit movement
-    text: Subtract plan assets from obligations at both dates and reconcile the deficit movement.
-  - title: 3. Add employer cash contributions back to the deficit increase to isolate total non-contribution movement; decompose that movement from disclosed service, financing, remeasurement and FX rows
-    text: Add employer cash contributions back to the deficit increase to isolate total non-contribution movement; decompose that movement from disclosed service, financing, remeasurement and FX rows.
+  - title: Matches the figures
+    text: Lines up obligation and assets by date, plan and currency, and keeps any asset ceiling apart.
+  - title: Finds the deficit at both dates
+    text: Subtracts plan assets from the obligation at the start and the end of the year.
+  - title: Finds the change
+    text: Takes the opening deficit from the closing deficit.
+  - title: Adds contributions back
+    text: Adds the employer's cash contributions to the change to get the movement that was not funding.
+  - title: Lines up the note's rows
+    text: Sets any service, interest, remeasurement and currency rows beside that movement and shows what is left.
+  - title: Lists the gaps
+    text: Names every figure it was missing and every check that did not run.
+
 output_shape: |-
-  A funded-status bridge separating cash funding from other deficit movements.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES
+  <figure> | <source> | <date> | <currency, scale>
+
+  INPUTS AND ASSUMPTIONS
+  Opening obligation: <n> | Opening assets: <n> | Closing obligation: <n> | Closing assets: <n> | Contributions: <n>
+
+  FUNDED-STATUS SCHEDULE
+  Opening deficit: <obligation - assets>
+  Closing deficit: <obligation - assets>
+  Change in deficit: <closing - opening>
+  Contributions: <n>
+  Other movement: <change + contributions>
+
+  NOTE ROWS (if given)
+  <row> | <amount> | <share of other movement>
+  Not explained: <other movement - listed rows>
+
+  CHECKS RUN
+  <check> | <result>
+
+  MISSING
+  <figure and what it held back>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Obligation and plan assets at the start and end of the year"
+    - "Employer cash contributions for the year"
+    - "The pension note's rows for service cost, interest and remeasurement (optional)"
+  prerequisites:
+    - "The company's pension note for the year, with the opening balances from the year before"
+  output:
+    - name: "SCOPE AND SOURCES"
+      contains: "Each figure with the note it came from, its date, currency and scale."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "The two obligations, two asset values and the contributions, with signs."
+    - name: "FUNDED-STATUS SCHEDULE"
+      contains: "Both deficits, the change, the contributions and the other movement that was not funding."
+    - name: "NOTE ROWS"
+      contains: "Any rows from the pension note set beside the other movement, and what they leave unexplained."
+    - name: "CHECKS RUN"
+      contains: "Each tie-out and its result."
+    - name: "MISSING"
+      contains: "Any figure it could not find, and which result it held back."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [pension-service-financing-bridge, cash-versus-earnings-checker]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -48,29 +121,40 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: Contributions reduce the deficit rather than pension expense automatically.
+
 judge:
   - Contributions reduce the deficit rather than pension expense automatically.
   - The residual non-contribution movement is not mislabeled as current P&L pension cost.
   - Tie all inputs to source notes, dates, currency, scale and signs.
   - Retain reported figures beside analytical adjustments and list every unresolved source gap.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The pension note for both years, with the opening and closing balances side by side.
+    - A named reviewer and an explicit question, such as "why did the deficit grow?"
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Funded status
+    meaning: Plan assets less the pension obligation. A negative number is a deficit.
+  - term: Benefit obligation
+    meaning: The present value of the pensions the plan has promised to pay members.
+  - term: Plan assets
+    meaning: The money and investments the plan holds to pay those pensions.
+  - term: Remeasurement
+    meaning: A gain or loss from changed estimates, such as the discount rate. It does not go through profit.
+  - term: Asset ceiling
+    meaning: A limit on how much surplus a company can count as an asset.

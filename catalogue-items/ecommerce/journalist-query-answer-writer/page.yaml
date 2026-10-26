@@ -1,6 +1,6 @@
 new_slug: journalist-query-answer-writer
 name: "Journalist query answer writer"
-summary: "Give it journalist requests and your expertise. Get ranked picks, expert answers and a win-rate sheet."
+summary: "Answer journalist requests with real expertise. Get ranked picks, skimmable expert answers and a win-rate tracker to earn press links."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It ranks requests and writes short answers from facts you give it, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You want links and mentions from news and industry sites without paying for them.
   - You have 15 minutes a day, or once a month, to answer journalists.
   - You sell in a niche where journalists often ask about your topic, such as health, home or food.
+not_for:
+  - "You want to pitch your own news to reporters: use a PR agency, or write a simple pitch email yourself."
+  - "You want paid placement or guaranteed coverage: hire a PR agency, because this only helps you answer free requests."
+  - "You have no first-hand experience on the topic: skip the request, since the skill will not make up a story or credential."
 
 you_give:
   - Your category and the things you have really done, with numbers and stories
@@ -34,6 +38,31 @@ how_to_use:
   - Tell it what you have really done on each topic, with numbers and stories.
   - Fill in every EXPERIENCE NEEDED gap in your own words, then send before the deadline.
   - Keep the tracker and look at your win rate each month.
+output_sample:
+  input:
+    - Your category and what you have really done, with numbers and stories
+    - Open journalist requests copied from a request service
+    - A short bio (optional)
+    - Your past pitches and results (optional)
+  prerequisites:
+    - A free expert account on a journalist-query service such as Connectively, Featured or Source of Sources
+  output:
+    - name: RANKED QUERIES
+      contains: Each request with outlet, topic, dates, authority, fit rating, and a yes or skip decision with the reason.
+    - name: ANSWER DRAFTS
+      contains: A skimmable answer for each request, with bold key phrases, bullets, and your bio.
+    - name: EXPERIENCE NEEDED
+      contains: Clear gaps in each draft where you add your own first-hand detail.
+    - name: TRACKER
+      contains: A table with query, outlet, sent, positive reply, link won and notes.
+    - name: WIN RATE
+      contains: Links won out of answers sent, and what that says about doing more.
+    - name: ROUTINE
+      contains: Whether to answer 15 minutes a day or once a month.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none.
+    - name: MISSING
+      contains: Anything you did not give, such as real experience, a bio or requests.
 
 how_it_works:
   - title: Filters the requests

@@ -1,6 +1,6 @@
 new_slug: self-hosted-store-speed-fixer
 name: "Self-hosted store speed fixer"
-summary: "Give it your WooCommerce setup. Get hosting, caching, plugin and image fixes in order."
+summary: "Speed up your WooCommerce store. Give it your hosting, plugins and speed report. You get fixes in a safe order, plus what never to cache."
 job: speed-up-store
 thinking: high
 thinking_why: "Caching rules for carts and checkouts are easy to get wrong, and a mistake can lose orders. A stronger model is more careful."
@@ -17,6 +17,10 @@ when:
   - "Your store runs on WooCommerce or another self-hosted system."
   - "Your server response time (TTFB) is over 0.8 seconds."
   - "You pass about 100 orders a month and are still on shared hosting."
+not_for:
+  - "Your store runs on Shopify or another hosted platform: ask the platform's own support, because it handles the server and caching for you."
+  - "You have no way to test changes first: set up a staging site with your host before you start, or ask a developer to make the changes."
+  - "You want a list of fixes ranked by money, not by safe order: use the speed fix ranker if you have it, or ask your developer to rank them."
 
 you_give:
   - "Your hosting plan, PHP version, and any caching and CDN you use"
@@ -36,6 +40,29 @@ how_to_use:
   - "Paste your hosting details, plugin list and the speed report with the waterfall."
   - "Make every plugin or setting change on a staging site first, one at a time."
   - "Test in an incognito window with throttling and the cache off, then with the cache on."
+output_sample:
+  input:
+    - Your hosting plan, PHP version, caching and CDN
+    - Your plugin list and your theme or page builder
+    - A speed report with server response time and the waterfall
+    - Your orders per month (optional)
+    - Whether you have a staging site (optional)
+  prerequisites:
+    - A PageSpeed report for mobile and desktop
+    - A staging site from your host, so you can test changes safely
+  output:
+    - name: Baseline
+      contains: Your mobile and desktop scores, LCP and server response time, so you can compare after each change.
+    - name: Order of work
+      contains: "Eight steps in order: images, plugins, assets to unload, fonts, compression check, caching, CDN, then questions for your host."
+    - name: Never cache
+      contains: The pages that must not be cached, such as cart, checkout and account, and when to start a session.
+    - name: Hosting by size
+      contains: Advice on your current plan against your orders a month, with price figures marked to re-check.
+    - name: Staging test plan
+      contains: Change one thing, clear the cache, test in an incognito window, and undo it if it breaks.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Sets a baseline

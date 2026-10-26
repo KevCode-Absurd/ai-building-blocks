@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks each step against the project files.
 new_slug: readme-first-run-tester
 name: README first-run tester
-summary: Point it at a project. Get each README step marked working or broken,
-  with proof, and the edits that fix it.
+summary: Check your README first-run steps against your repo. See each step marked working or broken, with proof and the edits that fix it.
 job: test-and-fix-code
 headline: README first-run tester
-subhead: Each step in your README marked working, broken, missing or unchecked,
-  with proof from the repo and the edits that fix it. You see what a new user
-  would hit first.
+subhead: Each step in your README marked working, broken, missing or unchecked, with proof from the repo and the edits that fix it. You see what a new user would hit first.
 explain: |
   Each step in your README marked working, broken, missing or unchecked, with proof from the repo and the edits that fix it. You see what a new user would hit first.
 
@@ -18,6 +15,10 @@ when:
   - New hires keep getting stuck on setup.
   - You changed the build and fear the README is out of date.
   - You want proof for each fix, not a general complaint.
+not_for:
+  - "Your README is only a placeholder or one sentence: write the basic setup steps first, then run this check."
+  - "You want the commands actually run and tested on a clean machine: ask a new teammate to follow the README for real."
+  - "You have no access to the repo and only a short description: ask a developer to read the files with you."
 you_give:
   - Repository path or pasted README and manifests
   - Platform the newcomer uses (optional)
@@ -28,8 +29,29 @@ you_get:
   - The real first-run path
   - README edits to fix problems
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool. Paste in the skill, or upload its file.
+  - Give it your repository folder. If it cannot read files, paste your README and files like package.json, requirements.txt and .env.example.
+  - Say which platform a new user would have, if it is not macOS or Linux (optional).
+  - Say yes only if you want it to run commands. By default it only reads files.
+  - Read the step marks first. Fix every BROKEN and MISSING step with the replacement lines.
+  - Send the fixed README to a new hire for a real run. Run the check again after each dependency change.
+output_sample:
+  input:
+    - Your repository folder, or your pasted README and project files
+    - The platform a new user would have (optional)
+    - Permission to run commands (optional)
+  prerequisites:
+    - An AI that can read your project files, or files you can paste into the chat
+  output:
+    - name: Step list
+      contains: Every instruction a new user must follow, in order, from prerequisites to install, setup, run and test.
+    - name: Step checks
+      contains: Each step marked OK, BROKEN, MISSING or UNVERIFIED, with the file and line as proof.
+    - name: Link and order check
+      contains: Whether linked files exist and whether the commands appear in the order they must run.
+    - name: Real first run
+      contains: A short numbered path of what a new user would hit first, and where they would stop.
+    - name: README fixes
+      contains: Replacement lines for each problem, ordered by how soon a new user would meet them.
+    - name: What to do next
+      contains: Send the fixed README to a new hire for a real run, and re-check after each dependency change.

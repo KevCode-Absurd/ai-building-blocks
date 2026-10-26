@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set thread shape.
 new_slug: x-thread-writer
 name: X thread writer
-summary: Give it a long idea, transcript or draft. Get an X thread where every
-  post stands on its own.
+summary: Turn a long idea, article or draft into an X thread where every post stands alone. You get a beat plan and the full thread text.
 job: grow-social
 headline: X thread writer
-subhead: Give it a long idea, transcript or draft. Get an X thread where every
-  post stands on its own. Bring the idea, article, transcript or draft. Use the
-  result to plan your next step.
+subhead: Give it a long idea, transcript or draft. Get an X thread where every post stands on its own. Bring the idea, article, transcript or draft. Use the result to plan your next step.
 explain: |
   Turn a long idea, transcript or rough draft into an X thread where every post still makes sense if someone lands on it alone.
 
@@ -18,6 +15,10 @@ when:
   - You wrote a rambling draft and need to find the spine.
   - You are unsure whether your idea is a thread or just one tweet.
   - You want a thread where quoting any single post will not embarrass you.
+not_for:
+  - "You want a LinkedIn post: write a single post by hand, since LinkedIn has no threads and this skill is for X only."
+  - "Your idea is one point with one proof: write a single post instead. The skill will tell you when that is the case."
+  - "You want reach or likes promised: no tool can do that, so test posts with your own audience."
 you_give:
   - The idea, article, transcript or draft
   - Your audience on X
@@ -29,7 +30,28 @@ you_get:
   - The thread with posts separated by dashes
   - A single closing call to action
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your idea, article, transcript or draft. Say who your audience on X is.
+  - Add a few past posts if you want your own voice (optional).
+  - Check the skeleton first. Fix the order or cut beats before you accept the thread.
+  - Read each post on its own. Any post that only makes sense after the last one needs a rewrite.
+  - Copy the thread and post it by hand. Posts are split by three dashes, so each block is one post.
+output_sample:
+  input:
+    - Your idea, article, transcript or rough draft
+    - Your audience on X
+    - A few past posts to match your voice (optional)
+    - A link or call to action for the last post (optional)
+  prerequisites:
+    - None. The optional VoiceMoat connector needs a paid Pro or Enterprise plan and your own sign-in. The skill works without it.
+  output:
+    - name: Thread or single post check
+      contains: One sentence on your idea, and whether it needs a thread or works better as one post.
+    - name: Skeleton
+      contains: One line per beat, in order, shown before any post is written.
+    - name: Thread
+      contains: The full posts, each one standing alone, split by a line of three dashes.
+    - name: Closing post
+      contains: A last post that ends the thread and holds a single call to action, if you gave one.
+    - name: Length note
+      contains: A short note if your material only supports a shorter thread than expected.

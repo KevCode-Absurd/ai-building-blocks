@@ -2,32 +2,31 @@ slug: lindy
 name: Lindy
 maker: Lindy
 url: https://www.lindy.ai
-promise: "Handle email, scheduling, meeting notes and repeat work across your connected apps."
+promise: "Hand repeat work to an assistant that uses your email, meetings and apps."
 use_cases: [automate, ask-an-assistant]
 categories: [automation, productivity]
 what_it_does:
-  - Connects to more than 1,500 apps, including Slack, Gmail, Notion and HubSpot.
-  - Drafts and sends email replies, and books meetings.
-  - Joins calls, takes notes and drafts follow-ups.
-  - Runs recurring work on a schedule, such as a morning brief or weekly report.
-  - "Can reuse a task you demonstrate."
-  - Keeps memory of your work in plain files you can edit.
+  - "Connects to Gmail, Slack, Notion, HubSpot and more than 1,500 other apps (checked 26 Oct 2026)."
+  - "Sits in your meetings, shares them with your team, and lets people ask questions about them later (checked 26 Oct 2026)."
+  - "Runs repeat tasks on a schedule, such as a morning brief or a weekly report (checked 26 Oct 2026)."
+  - "Comes with 40 or more ready skills. A skill saved by one person can be used by the whole team (checked 26 Oct 2026)."
+  - "Keeps its memory of your work in plain files you can open and edit (checked 26 Oct 2026)."
 benefits:
-  - Hand off inbox replies and meeting follow-ups.
-  - Get a weekly report without building it by hand.
-  - "Save a demonstrated process for the team to reuse."
-  - Try it with free credits and no credit card.
+  - "Hand off a weekly report instead of building it by hand."
+  - "Let the whole team reuse one saved skill."
+  - "Read and fix what the assistant remembers about your work."
+  - "Try it with free credits and no credit card (checked 26 Oct 2026)."
 best_for:
   - Busy operators and founders who live in email and meetings.
   - Teams handing off sales, support and reporting chores.
-  - Anyone who wants an assistant, not a flowchart builder.
+  - People who want an assistant, not a flowchart builder.
 not_for:
-  - People who want to see and control every step of a flow.
-  - Anyone who needs a flat price, since credits are shared by the team.
+  - "People who want to see and control every step. Use n8n or Make instead."
+  - "Anyone who needs one fixed price. Credits are shared by the team and the price rises with the credits you pick."
 pricing:
   model: subscription
-  from: Check the maker's site
-  note: Starts with US$50 of free credits and no card, which last 7 days. The pricing page shows Team from US$29.99 per month for 3,000 shared credits, while the home page says US$49.99 per user, so check the live page.
+  from: US$29.99 per user per month (Team plan, 3,000 credits; checked 26 Oct 2026)
+  note: "Free plan: US$50 in free credits, no credit card, and the credits last 7 days. Team: US$29.99 a month for 3,000 credits a month, rising to US$49.99 for 5,000, US$99.99 for 15,000 and more on up to 1,750,000 credits. The page says each active user is billed, and the team shares one pool of credits. Credits that are not used in the month do not roll over. Top-ups cost US$10 per 1,000 credits. Enterprise: contact sales. All checked 26 Oct 2026 on lindy.ai/pricing. The Team price headline and the home page differ in wording, so confirm the per-user price at sign-up."
 works_with:
   - Slack
   - Gmail
@@ -37,7 +36,29 @@ works_with:
 runs_in: [web, slack, chrome]
 blocks: []
 alternatives: [gumloop, zapier, make, n8n]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to lindy.ai and choose Try for free. The free plan needs no credit card (checked 26 Oct 2026)."
+  - "Connect one app you use every day, such as Gmail. Slack setup needs a workspace admin to install Lindy first (checked 26 Oct 2026)."
+  - "Ask for one small, repeat job in plain words, such as a morning brief of your calendar and unread email, every weekday."
+  - "Run it once and read the result. Fix any wrong detail before you let it run on a schedule."
+  - "Keep any step that sends or changes something as a draft you approve, until you trust it."
+needs:
+  - "A Lindy account. The free plan needs no card."
+  - "Logins for each app you connect (Gmail, Slack, Notion, HubSpot)."
+  - "A Slack workspace admin, if you want to use Lindy in Slack."
+  - "One clear job in plain words, with how often it should run."
+  - "A budget for credits after the 7-day free credits end."
+example:
+  task: "Send me a short brief every weekday morning from my calendar and inbox."
+  cost: "Free credits (US$50, 7 days) cover your first tests. After that, the Team plan starts at US$29.99 a month for 3,000 shared credits, at about a cent a credit. How many credits one brief uses is not published on the pages we read, so watch your credit balance on the first week."
+  reply: "A scheduled message with the day's meetings and the emails that need you. Check every name, time and email against your own calendar and inbox before you rely on it."
+not_verified:
+  - "That it drafts and sends email replies or books meetings. The home page lists Gmail and Calendar as apps it connects to, but does not spell out those jobs."
+  - "How many credits one task costs."
+  - "Whether a free-plan user keeps any access after the 7 days. The page says only that the credits last 7 days."
+  - "The exact per-user price for teams. The pricing page and home page word it differently."
 sources:
   - https://www.lindy.ai/pricing
   - https://www.lindy.ai

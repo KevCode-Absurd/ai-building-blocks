@@ -1,6 +1,6 @@
 new_slug: durable-customer-need-finder
 name: Durable customer need finder
-summary: Describe your idea and who it is for. Get the customer need behind it, a ten-year test and the skills gap.
+summary: Find the durable customer need behind your idea. Get a ten-year test, a skills gap and a short need statement you can check with customers.
 job: understand-customers
 thinking: medium
 thinking_why: It weighs evidence about a need and judges what will last, but the questions are fixed.
@@ -14,6 +14,11 @@ when:
   - You have an idea and can only describe it as a product or a feature.
   - You are unsure whether a need is real or just a trend.
   - Your plan keeps shrinking to fit what your team already knows how to do.
+  - You want to know which skills you lack before you commit.
+not_for:
+  - "You already have a need statement and want to test the product on paper: use the Future press release writer."
+  - "You need proof of demand from real buyers: talk to customers or run a small paid test, because this skill only weighs what you give it."
+  - "You want ad copy or a landing page: write the buyer brief first, then move on to a copywriting item."
 you_give:
   - Your idea in a sentence, and who you think it is for
   - Any customer words you have, such as reviews, emails or call notes (optional)
@@ -30,6 +35,31 @@ how_to_use:
   - List what your team is good at, so the skills gap can be marked.
   - Read the need statement. If it does not sound like something a customer would say, fix it and run again.
   - Take the statement to "Future press release writer".
+output_sample:
+  input:
+    - Your idea in one sentence
+    - Who you think it is for
+    - Customer words such as reviews, emails or call notes (optional)
+    - What your team can already do well (optional)
+  output:
+    - name: Customer
+      contains: One type of person, where they are and the job they want done, in their words.
+    - name: The need, as a result
+      contains: One sentence on what they want to achieve, with no product in it.
+    - name: Ten-year test
+      contains: Whether customers could want the opposite in ten years, with the reason.
+    - name: Asked vs unasked
+      contains: What customers request now, and what their workarounds show they have not said.
+    - name: Skills the need demands
+      contains: Each skill marked have, can learn or must hire.
+    - name: Four marks
+      contains: Loved, large, returns and lasting, each with evidence or a missing note.
+    - name: Need statement
+      contains: About 100 words on the customer, the need, why it lasts and the skills to add.
+    - name: Biggest unknown
+      contains: The key thing you do not know and the cheapest way to learn it.
+    - name: Missing and checks missed
+      contains: Gaps in your input and any checks the result still fails.
 how_it_works:
   - title: Names the customer
     text: Picks one type of person and the job they are trying to get done, in their words.

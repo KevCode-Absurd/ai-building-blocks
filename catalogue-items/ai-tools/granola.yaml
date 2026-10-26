@@ -2,31 +2,33 @@ slug: granola
 name: Granola
 maker: Granola
 url: https://www.granola.ai
-promise: "Turn your rough meeting notes into fuller summaries without a bot joining the call."
+promise: "Turn your rough meeting notes into fuller notes, with no bot in the call."
 use_cases: [meeting-notes]
 categories: [productivity]
 what_it_does:
-  - Listens through your computer's audio, so no bot joins the call.
-  - Takes your rough notes and fills in the gaps from the transcript.
-  - Prepares a brief before a meeting from the attendees and past talks.
-  - Drafts follow-up emails and action items after the call.
-  - Answers questions across your meeting history in a chat.
+  - "Listens through your computer's audio, so no bot joins the call. Works with Zoom, Google Meet and Teams (checked 26 Oct 2026)."
+  - "Takes your rough notes and fills the gaps from what was said (checked 26 Oct 2026)."
+  - "Prepares a brief before outside meetings, from the attendees and past talks. The pricing page lists briefs under Business and up (checked 26 Oct 2026)."
+  - "After the call, lists actions and drafts a follow-up email or a project plan. Follow-up emails are listed under Business and up (checked 26 Oct 2026)."
+  - "Takes notes at in-person meetings with the iPhone or Android app (checked 26 Oct 2026)."
+  - "Answers questions across your meeting notes in a chat. On the free plan, history is 30 days (checked 26 Oct 2026)."
 benefits:
   - "Turn rough meeting notes into a fuller draft to check."
-  - Join calls without a bot that guests can see.
+  - "Join calls without a bot that guests can see."
   - "Draft a follow-up email from the meeting notes."
-  - "Choose when to share meeting notes with your team."
+  - "Keep notes private by default, and share them when you choose."
 best_for:
   - "People who run or advise teams and spend much of the day in calls."
   - In-person meetings, as well as Zoom, Meet and Teams.
   - People who prefer to write their own notes.
 not_for:
-  - Teams that want a recorder that shows up in the call as a participant.
-  - Looking back past 30 days on the free plan.
+  - "Teams that want a recorder that joins as a visible guest. Granola does not. Fireflies or Otter work that way."
+  - "Meetings where people have not agreed to be recorded. Nobody sees a bot, so tell attendees and check your local recording rules first."
+  - "Anyone who needs more than 30 days of history, briefs or follow-up emails on a free plan. Those need Business at US$14."
 pricing:
   model: freemium
   from: US$14 per month
-  note: Basic is free with 30 days of meeting history. Business is US$14 per user a month with unlimited history and more integrations. Enterprise is US$35.
+  note: "Checked 26 Oct 2026. Basic is free with 30 days of history, Slack, AI notes, AI chat and shared folders. Business is US$14 per user a month with unlimited history, briefs, follow-up emails, Notion, Zapier and HubSpot links, and API access. Enterprise is US$35 per user a month and adds SSO, an audit API and admin controls, including an option for admins to enforce a notice that Granola is in use."
 works_with:
   - Slack
   - Notion
@@ -37,7 +39,29 @@ runs_in: [desktop, mobile, api]
 blocks:
   - meeting-coaching-analyst
 alternatives: [fireflies, otter, notion-ai, claude]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Download the app from granola.ai for Mac, Windows, iPhone or Android and sign up. The site says the download is free."
+  - "Connect your calendar. Granola then spots your upcoming meetings."
+  - "Allow any audio permission your computer asks for. We did not find which ones on Granola's pages, so follow the prompts."
+  - "Before your first call, tell the others you are taking notes with an AI tool."
+  - "During the call, type your own rough notes. Short lines are fine."
+  - "After the call, open the note and check each line and action item against what you remember. Edit before you share or send anything."
+needs:
+  - "A Mac, Windows PC, iPhone or Android phone, and a Granola account."
+  - "A calendar to connect."
+  - "A meeting app such as Zoom, Google Meet or Teams, or an in-person meeting with the phone app."
+  - "The agreement of the people on the call to be recorded, where your local rules ask for it."
+example:
+  task: "A 30-minute call where you type a few rough lines."
+  reply: "Your lines filled out from what was said, plus action items. After the call you can ask for a list of actions or a follow-up email. Granola's pages show no sample note, so check each line against the call."
+not_verified:
+  - "Whether audio or transcripts are stored, and for how long. The pages we read do not say."
+  - "Which system permissions the apps ask for on Mac and Windows."
+  - "Annual billing for Business and Enterprise. The page shows a monthly price per user only."
+  - "How meeting briefs work on the free plan. The pricing table lists them under Business."
+  - "Recording consent rules in your area. These are not on Granola's pages. Check local law."
 sources:
   - https://www.granola.ai
   - https://www.granola.ai/pricing

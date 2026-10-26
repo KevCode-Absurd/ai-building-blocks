@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Refunds are costly to get wrong, so it checks each step.
 new_slug: refund-and-reorder-processor
 name: Refund and reorder processor
-summary: Name the order and items. Get a full or partial refund, plus a
-  replacement order if you want one. Moves real money.
+summary: Refund a Shopify order in full or in part, and draft a replacement order if the customer wants one. Preview the amount first. It moves real money.
 job: help-customers
 headline: Refund and reorder processor
-subhead: A refund issued on the right order, for the right items, with a
-  replacement draft order ready if the customer wants one. No clicking through
-  the Shopify admin, and no guessing at amounts.
+subhead: A refund issued on the right order, for the right items, with a replacement draft order ready if the customer wants one. No clicking through the Shopify admin, and no guessing at amounts.
 explain: |
   A refund issued on the right order, for the right items, with a replacement draft order ready if the customer wants one. No clicking through the Shopify admin, and no guessing at amounts.
 
@@ -18,6 +15,10 @@ when:
   - You need to refund only two items from a five item order.
   - You want to check the refund amount before any money moves.
   - You handle many refunds a week and want the same steps each time.
+not_for:
+  - "The order is already fully refunded: check the order's refund history in your Shopify admin, as there is nothing left to refund."
+  - "The customer only wants store credit or an exchange: do that by hand in your Shopify admin, as this tool sends money back."
+  - "You only need to find an order or check its status: look it up in your Shopify admin first, then come back with the order ID."
 you_give:
   - Store domain
   - Order number
@@ -30,8 +31,31 @@ you_get:
   - Replacement draft order (optional)
   - Preview of changes in dry run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Check you have a logged-in Shopify command line session for your store and permission to read and write orders. This tool needs an AI that can run commands, so a plain chat window will not work.
+  - Find the order in your Shopify admin and copy its ID in the long form that starts with gid://shopify/Order/. The short order number is not enough.
+  - Ask your AI to run the skill with dry run on first. Give it the store domain, the order ID and the items to refund.
+  - Read the preview. Check the items, the quantities and the refund amount before you go on.
+  - Ask your AI to run it again with dry run off. This moves real money and cannot be undone.
+  - If you asked for a replacement, send the invoice link to your customer. The draft order is not paid or shipped until they pay.
+output_sample:
+  input:
+    - Your store domain
+    - The order ID in Shopify's long form (it starts with gid://shopify/Order/)
+    - Which items and how many to refund (optional, the default is all refundable items)
+    - The refund reason (optional)
+    - Whether you want a replacement draft order (optional)
+  prerequisites:
+    - An AI that can run commands on your computer, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A logged-in Shopify command line session for your store
+    - Permission to read and write orders
+  output:
+    - name: Session start banner
+      contains: The skill name, your store domain and the start time.
+    - name: "Step 1: Order check"
+      contains: The order's payment status, each item's refundable quantity, the customer and the shipping address.
+    - name: "Step 2: Refund"
+      contains: The refund ID and the total amount refunded, or the errors if Shopify rejects it.
+    - name: "Step 3: Replacement draft order"
+      contains: The draft order name and invoice link, only when you ask for a replacement.
+    - name: Outcome summary
+      contains: The order name, refund ID, amount refunded, replacement draft name and error count, in plain text or JSON.

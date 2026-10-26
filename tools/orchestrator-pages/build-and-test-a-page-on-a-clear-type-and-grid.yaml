@@ -1,6 +1,6 @@
 new_slug: build-and-test-a-page-on-a-clear-type-and-grid
 name: Build a page on a clear grid and test it
-summary: Describe your site. Get fonts and a grid, a page that follows them and a browser test.
+summary: "Build a web page on a clear grid: describe your site, get fonts, a grid, a built page and a real browser click-through test of what breaks."
 job: build-websites
 thinking: medium
 thinking_why: Each step is a focused design or build task. A mid-size model does it well.
@@ -14,6 +14,10 @@ when:
   - You are starting a new page or site and want it to look chosen, not templated.
   - Your last AI-built page had random spacing or mismatched type.
   - You want the page clicked through before you show it to anyone.
+not_for:
+  - "You only want copy edits on a live site: edit the text yourself or ask your AI to rewrite it, since no new design is needed."
+  - "You only want a layout review of an existing page: use the Page grid and type planner on its own."
+  - "You want to fix test failures you already have: use the Test failure repair loop."
 you_give:
   - A plain description of the site, covering what it says, who reads it and what they should do
   - The words and images you have (optional)
@@ -28,6 +32,28 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your real words and images ready. The grid is only as good as the content it holds.
   - Your step is to copy the type list, grid and layout into the page brief before the build.
+output_sample:
+  input:
+    - "A plain description of your site: what it says, who reads it and what they should do"
+    - A creative brief for the page
+    - The words and images you have (optional)
+    - Any brand fonts or colours you must keep (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - A local server and a browser-testing tool for step 4, so the page can be opened and clicked through
+  output:
+    - name: "Step 1: Web font pairing picker"
+      contains: A typeface and a second one that contrasts with it, plus sizes, line spacing and a scale for each screen.
+    - name: "Step 2: Page grid and type planner"
+      contains: Margins, columns and gutters, the order of big and small type, planned white space and a layout for each page.
+    - name: "Your step: add to the brief"
+      contains: You copy the type list, grid and layout into your page brief, with your words and images.
+    - name: "Step 3: Website art director"
+      contains: A built page that follows your type and grid, checked at phone and desktop width.
+    - name: "Step 4: Web app tester"
+      contains: A browser test report of what passed and failed, with screenshots and console errors.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Pick the fonts
     text: Asks what the site says and who reads it, chooses a typeface for the tone, pairs a second one by contrast and sets sizes, line spacing and a scale for each screen.

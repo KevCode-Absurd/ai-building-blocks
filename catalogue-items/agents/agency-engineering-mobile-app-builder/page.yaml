@@ -1,0 +1,158 @@
+name: Mobile App Builder agent
+summary: "Plan your iPhone and Android app: native or cross-platform, features to build, phone tests and store launch checks. Bring your app idea."
+headline: Mobile App Builder agent
+subhead: Describe your app, your users and your team's skills. It chooses between native iPhone and Android apps or one shared codebase, and says why. You get a build plan for each platform, speed and battery targets, a phone test list and the open risks.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  The first big choice in a mobile app is how to build it. Two separate apps,
+  one for iPhone in Swift and one for Android in Kotlin, feel most at home on
+  each phone. One shared codebase, in React Native or Flutter, costs less to
+  keep up. This agent makes that call from your facts: your team, your budget,
+  and features such as Face ID login, camera, location, push alerts and
+  offline use.
+
+
+  It follows the Mobile App Builder profile. It plans for poor connections and
+  old phones from the start. It uses each platform's own navigation and design
+  rules. It ends with a test list across real devices and OS versions, and a
+  staged store rollout.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its example
+  code and targets, such as start time or crash rate, describe the intended
+  work. They are not measured results from AI Blocks. Your AI writes the plan
+  and sample code. It can't build or test the app on a phone.
+when:
+  - You have an app idea and don't know whether to build native or cross-platform.
+  - Your small business needs an app with login, push alerts, camera or offline use.
+  - You are one developer and want a build order and a test plan.
+  - Your app is slow, drains battery or crashes on older phones.
+not_for:
+  - You have a finished app and need to get it into the App Store or Google Play. Use the Mobile Release Engineer agent.
+  - You want listing text and keywords for the store page. Use the App Store Optimizer agent.
+  - You need a website that works well on phones, not an app. Use the Frontend Developer agent.
+you_give:
+  - What the app does and who uses it, in a few sentences
+  - The features you need, such as login, camera, location, payments, push alerts or offline use
+  - Your team's skills and budget, such as "one developer who knows React"
+  - The phones and OS versions you must support (optional)
+  - Your backend or API, and any design files (optional)
+you_get:
+  - A native or cross-platform decision, with the reasons
+  - A plan for the iPhone side and the Android side
+  - Speed, memory and battery targets, and how to measure them
+  - A plan for offline use, saved data and sync
+  - A test list of devices and OS versions
+  - A list of open risks and missing facts
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe the app, the features and your team in a few lines. Attach any designs or API notes.
+  - Read the first section, "Platform strategy", and check that the choice fits your team and budget.
+  - Change any limit that is wrong, such as the oldest phone you will support, and ask for a new plan.
+  - Treat every number as a target to test, not a promise. Test on real phones before you rely on it.
+  - When the plan is ready, use the Mobile Release Engineer agent to plan signing and the store launch.
+how_it_works:
+  - title: Set platforms and limits
+    text: It confirms the platforms, the oldest phones to support, your team's skills and the features you need. Missing items are asked once, then marked MISSING.
+  - title: Choose how to build
+    text: It weighs native Swift and Kotlin against React Native or Flutter, and writes the reasons for the pick.
+  - title: Plan the data
+    text: It plans saved data, sync and navigation so the app still works on a poor connection.
+  - title: Plan each platform
+    text: It lists the iPhone and Android features that need platform code, such as biometric login, camera, location and push alerts.
+  - title: Set speed and battery targets
+    text: It sets targets for start time, memory and battery use, and names the tools that measure them.
+  - title: Plan tests and launch
+    text: It lists devices and OS versions to test, the monitoring to add, and a staged rollout.
+output_shape: |-
+  PLATFORM STRATEGY
+    iOS: <minimum version and devices> | Android: <minimum API level and devices>
+    Build approach: <native, React Native, Flutter or other> | <reasons>
+
+  DEVELOPMENT APPROACH
+    State management: <choice> | Navigation: <structure> | Data storage and sync: <plan>
+
+  IOS FEATURES
+    <feature> | <framework or service> | <note>
+
+  ANDROID FEATURES
+    <feature> | <framework or service> | <note>
+
+  PERFORMANCE TARGETS
+    <measure> | <target to verify> | <how to measure>
+
+  PLATFORM INTEGRATIONS
+    Login | Camera and media | Location | Push alerts | Analytics | Crash reports
+
+  DEVICE TEST PLAN
+    <device or OS version> | <what to check>
+
+  OPEN RISKS AND MISSING FACTS
+    MISSING: <what> | <risk> | <how to settle it>
+output_sample:
+  input:
+    - What your app does and who uses it
+    - The features you need, such as login, camera or offline use
+    - Your team's skills and budget
+    - The oldest phones and OS versions to support (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - Your backend or API notes, if the app talks to one (optional)
+  output:
+    - name: Platform strategy
+      contains: Platforms, oldest supported versions, and a native or cross-platform choice with reasons.
+    - name: Development approach
+      contains: The framework, navigation, state handling, and the plan for saved data and sync.
+    - name: iOS features and Android features
+      contains: Each feature that needs platform code, and the tool or service to use for it.
+    - name: Performance targets
+      contains: Start time, memory and battery targets to verify, and the tools that measure them.
+    - name: Platform integrations
+      contains: Login, camera, location, push alerts, analytics and crash reporting choices.
+    - name: Device test plan
+      contains: Which phones and OS versions to test, and what to check on each.
+    - name: Open risks and missing facts
+      contains: What is still unknown, the risk it brings, and how to settle it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Your team's skills
+    how: Name the languages your developers already know. It leans toward what you can keep up.
+  - what: Oldest phone you support
+    how: Give a minimum iOS and Android version. It changes which features you can use.
+  - what: Offline needs
+    how: Say what must work with no signal. It changes the data and sync plan.
+improve:
+  - Save the platform choice and its reasons, and paste them into later runs so features stay consistent.
+  - Add your brand's design rules so the plan names the right colours, fonts and tone.
+  - Pair it with the Mobile Release Engineer agent for the store launch, and the App Store Optimizer agent for the listing.
+terms:
+  - term: Native app
+    meaning: An app built for one phone system with its own tools, such as Swift for iPhone or Kotlin for Android.
+  - term: Cross-platform
+    meaning: One codebase that runs on both iPhone and Android, such as React Native or Flutter.
+  - term: Offline-first
+    meaning: The app saves data on the phone and syncs it when a connection returns.
+  - term: Push alert
+    meaning: A message your app sends to a phone's lock screen.
+  - term: Staged rollout
+    meaning: Releasing to a small share of users first, then more.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read your design files and API notes alongside your brief.
+  inputs:
+    - Screens or a rough sketch of the main flows.
+    - Your API notes or a sample response.
+    - The phones your users actually have, from your site or app analytics.

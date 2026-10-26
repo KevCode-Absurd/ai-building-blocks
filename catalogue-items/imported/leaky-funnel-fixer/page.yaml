@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It chains several methods and needs you to confirm each phase.
 new_slug: leaky-funnel-fixer
 name: Leaky funnel fixer
-summary: Give it your landing page, signup or checkout. Get the leaks ranked,
-  plus tests to run in order.
+summary: Find where your landing page, signup or checkout loses people. Get a ranked list of leaks and a test plan to fix your conversion rate.
 job: audit-landing-page
 headline: Leaky funnel fixer
-subhead: A ranked list of where your page, signup or checkout loses people, and
-  a series of tests to fix them in the right order. It works in seven phases and
-  asks before every decision.
+subhead: A ranked list of where your page, signup or checkout loses people, and a series of tests to fix them in the right order. It works in seven phases and asks before every decision.
 explain: |
   A ranked list of where your page, signup or checkout loses people, and a series of tests to fix them in the right order. It works in seven phases and asks before every decision. First it uses your numbers to find the biggest drop. Then customer research explains why people leave.
 
@@ -18,6 +15,10 @@ when:
   - Your checkout loses people and you do not know where.
   - You keep changing the page without knowing if it helped.
   - You want a plan for what to test first, second and third.
+not_for:
+  - "You have no site or page yet: build one first with a simple page builder or a freelancer, then come back."
+  - "You want a quick look at the whole site for message and speed: ask your AI for a general site audit instead."
+  - "The flow already converts well but needs more visitors: work on traffic first, not on this fixer."
 you_give:
   - The page or flow that leaks
   - Your funnel numbers by step
@@ -29,7 +30,26 @@ you_get:
   - Fixes in message, offer, proof and friction order
   - A test plan with goals set in advance
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Use one that can work with files if you want to stop and resume later.
+  - Paste the skill text into the chat, or upload the skill folder.
+  - Say which page or flow leaks, and what the one goal action is. Paste your numbers for each step.
+  - Answer each question. The skill goes through seven phases and asks before every choice.
+  - "The skill calls on six method skills as it goes: lean-analytics, cro-methodology, storybrand-messaging, hundred-million-offers, influence-psychology and design-everyday-things."
+  - "At the end you have four files: METRICS.md, FUNNEL.md, EXPERIMENTS.md and CONVERSION-OPTIMIZATION-PLAN.md."
+output_sample:
+  input:
+    - The page or flow that leaks, such as a landing page, signup or checkout
+    - Your funnel numbers, step by step
+    - Customer feedback, reviews or interview notes (optional)
+    - The one action you want people to take
+  prerequisites:
+    - An AI that can read and save files in a docs folder, so you can stop and resume later
+  output:
+    - name: METRICS.md
+      contains: Your funnel numbers, the biggest leak and the one metric to move.
+    - name: FUNNEL.md
+      contains: Why people leave at the leak, with the objections and friction found in your research.
+    - name: EXPERIMENTS.md
+      contains: Each test with its goal written before you run it, and the result once it is done.
+    - name: CONVERSION-OPTIMIZATION-PLAN.md
+      contains: Fixes in order of message, offer, proof and friction, with the tests to run first, second and third.

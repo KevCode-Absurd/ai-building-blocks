@@ -1,6 +1,6 @@
 new_slug: meta-ads-weekly-account-keeper
 name: Meta Ads weekly account keeper
-summary: Give it your weekly Meta Ads exports. Get a true-return check, a scale-or-hold call and a change list to approve.
+summary: Check your Meta Ads weekly. Give it two weeks of exports and your margin. You get a break-even check, a scale call and a change list to approve.
 job: launch-and-scale-ads
 thinking: high
 thinking_why: It picks its own path from the numbers, runs up to seven skills and does budget and break-even sums. Give it your strongest model.
@@ -15,6 +15,10 @@ when:
   - Results dropped and you want to know which part broke before you change anything.
   - Meta says your ROAS is great but your bank balance does not agree.
   - You want to raise spend, but only when your own numbers say it is safe.
+not_for:
+  - "You run fewer than a few sales a day: the weekly numbers swing too much, so use a monthly view of your results instead."
+  - "You only want to know your break-even ROAS once: use a break-even calculator or a simple sum of margin and order value."
+  - "You want an agent to change your account on its own: this one never does, so ask a person on your team to make the approved changes."
 you_give:
   - Meta results for this week and last week, at campaign, ad set and ad level, with spend, purchases, purchase value and frequency
   - Your store totals for the same dates, with new-customer revenue
@@ -34,6 +38,31 @@ how_to_use:
   - The first time, give it your order value and costs. It saves your break-even numbers and reuses them.
   - Read the change list. Make the changes you agree with in Ads Manager, or say yes to each one and let it make only those if it is connected.
   - Run it again next Monday. It reads its memory file and checks last week's changes.
+output_sample:
+  input:
+    - This week's and last week's Meta exports, by campaign, ad set and ad
+    - Your store totals for the same dates, with new-customer revenue
+    - Your order value, product cost, shipping, fees and returns (first run)
+    - Cash available for ads and stock levels (advised)
+    - What changed this week, such as a sale or new offer (optional)
+  prerequisites:
+    - An AI that can read your export files, such as Claude Code
+    - Last week's memory file, if this is not your first run
+  output:
+    - name: This week
+      contains: Spend, purchases, 7-day click ROAS and cost per sale against last week and break-even, with a trust score.
+    - name: Path taken
+      contains: Whether it ran a drop analysis, a delivery check, a scale check or a routine week, and why.
+    - name: Changes to approve
+      contains: A ranked list of changes, each with where, size, the step that proposed it and the reason.
+    - name: Scale call
+      contains: A raise, hold or cut call on spend, with blended ROAS and 30-day cash behind it.
+    - name: Last week's changes
+      contains: Whether each change you approved last week worked, too early to tell, or did not work.
+    - name: Watch next week
+      contains: The one to three numbers that decide next week's path.
+    - name: Files and missing
+      contains: Each step's saved file, and every MISSING line in one list.
 how_it_works:
   - title: Get the base numbers
     text: Works out break-even ROAS and cost per sale from your margin once, then reuses them every week.

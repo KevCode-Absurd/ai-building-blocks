@@ -11,228 +11,135 @@ date_added: "2026-09-04"
 Language models exhibit predictable degradation patterns as context length increases. Understanding these patterns is essential for diagnosing failures and designing resilient systems. Context degradation is not a binary state but a continuum of performance degradation that manifests in several distinct ways.
 
 ## When to Use
+
 Activate this skill when:
-- Agent performance degrades unexpectedly during long conversations
-- Debugging cases where agents produce incorrect or irrelevant outputs
-- Designing systems that must handle large contexts reliably
-- Evaluating context engineering choices for production systems
-- Investigating "lost in middle" phenomena in agent outputs
-- Analyzing context-related failures in agent behavior
+- An AI loses track of earlier instructions or facts during a long conversation
+- An agent produces wrong or off-topic output after a lot of text has built up
+- You are designing a system that must handle large amounts of text reliably
+- A person pasted a lot of material and the AI now misses obvious facts
+
+## When Not to Use
+
+- The chat is short and the answer is still wrong. That is more likely a vague request, a missing fact or a model limit. Use the Prompt fixer.
+- You want the chat shrunk or handed to a new chat: use the Long chat summariser or the Context shrinker.
+- The AI never had the data (a file did not load, a tool failed). Fix that first.
+- You want to design what an agent remembers across sessions: use the Agent memory designer.
+
+## What You Give It
+
+Ask once for any that are missing. If one is still missing, write MISSING and say how it limits the diagnosis. Never guess the symptom.
+
+1. What goes wrong, in the person's words (the symptom).
+2. How long the chat or pasted input is (messages, pages or an estimate).
+3. A short sample of a bad answer, and what a good answer would have said (optional but very helpful).
+4. What the person already tried (optional).
+5. Which AI tool they use, and whether it keeps a long running chat or starts fresh each time (optional).
+
+## Diagnosis Procedure
+
+1. **Get the symptom.** If it is vague ("it got worse"), ask for one concrete example of something it missed or got wrong.
+2. **Check the length.** If the chat is short, say so and point to a different cause before going further.
+3. **Match one of the five patterns below.** Use the signs listed for each. If two fit, name the main one and the second one, and say how to tell them apart.
+4. **Give evidence from the person's own chat.** Quote or point to the exact message or answer that shows the pattern. If there is no sample, say the match is a guess.
+5. **Give one fix to try first.** Pick one fix from the matching pattern. Say what to do, step by step, in the person's AI tool. Add one backup fix.
+6. **Give a test.** One way to check the fix worked, for example ask the same question again and compare.
+7. **Give one prevention note** for next time.
+
+## Output
+
+Return these five items in order. Keep it under about 350 words.
+
+1. **Likely cause**: the pattern name and one plain sentence on what it means.
+2. **Evidence from your chat**: what in the person's example fits, or "No sample given, so this is a guess".
+3. **Fix to try first**: numbered steps, plus one backup fix.
+4. **Test to confirm**: what to run and what a pass looks like.
+5. **Prevention**: one habit for next time.
+
+If the symptom does not fit any pattern, say "None of the five fits" and name the likeliest other cause (vague request, missing fact, model limit, tool failure).
 
 ## Core Concepts
 
-Context degradation manifests through several distinct patterns. The lost-in-middle phenomenon causes information in the center of context to receive less attention. Context poisoning occurs when errors compound through repeated reference. Context distraction happens when irrelevant information overwhelms relevant content. Context confusion arises when the model cannot determine which context applies. Context clash develops when accumulated information directly conflicts.
+Context degradation shows up in five patterns. Each has its own signs and its own cure.
 
-These patterns are predictable and can be mitigated through architectural patterns like compaction, masking, partitioning, and isolation.
+### 1. Lost in the middle
 
-## Detailed Topics
+Facts in the middle of a long input are used less reliably than facts at the start or end. This is a well-known finding in research on long inputs (for example "Lost in the Middle", Liu and others, 2023). How strong the effect is depends on the model and the task.
 
-### The Lost-in-Middle Phenomenon
+- **Signs:** The AI misses a fact you know it was given, especially one pasted in the middle of a long document or chat.
+- **Fixes:** Put the task and the key facts at the start and again at the end. Add clear headings. Ask for a short summary of the key facts before the answer.
 
-The most well-documented degradation pattern is the "lost-in-middle" effect, where models demonstrate U-shaped attention curves. Information at the beginning and end of context receives reliable attention, while information buried in the middle suffers from dramatically reduced recall accuracy.
+### 2. Poisoning
 
-**Empirical Evidence**
-Research demonstrates that relevant information placed in the middle of context experiences 10-40% lower recall accuracy compared to the same information at the beginning or end. This is not a failure of the model but a consequence of attention mechanics and training data distributions.
+A wrong fact, from a tool, a document or the AI's own earlier answer, gets repeated and builds on itself.
 
-Models allocate massive attention to the first token (often the BOS token) to stabilize internal states. This creates an "attention sink" that soaks up attention budget. As context grows, the limited budget is stretched thinner, and middle tokens fail to garner sufficient attention weight for reliable retrieval.
+- **Signs:** The same mistake keeps coming back after you correct it. Answers that were good earlier are now off. The AI picks the wrong tool or inputs.
+- **Fixes:** Find the first message with the wrong fact. Start a new chat with only the verified facts. Or state the correction plainly and ask the AI to redo its work from that point.
 
-**Practical Implications**
-Design context placement with attention patterns in mind. Place critical information at the beginning or end of context. Consider whether information will be queried directly or needs to support reasoning—if the latter, placement matters less but overall signal quality matters more.
+### 3. Distraction
 
-For long documents or conversations, use summary structures that surface key information at attention-favored positions. Use explicit section headers and transitions to help models navigate structure.
+Too much unrelated text competes with the facts that matter.
 
-### Context Poisoning
+- **Signs:** The AI uses a detail from the pasted material that is not relevant, or leans on pasted text over what it knows.
+- **Fixes:** Paste only what the task needs. Remove old tool output and long logs. Link or fetch material on demand instead of pasting all of it.
 
-Context poisoning occurs when hallucinations, errors, or incorrect information enters context and compounds through repeated reference. Once poisoned, context creates feedback loops that reinforce incorrect beliefs.
+### 4. Confusion
 
-**How Poisoning Occurs**
-Poisoning typically enters through three pathways. First, tool outputs may contain errors or unexpected formats that models accept as ground truth. Second, retrieved documents may contain incorrect or outdated information that models incorporate into reasoning. Third, model-generated summaries or intermediate outputs may introduce hallucinations that persist in context.
+The AI cannot tell which instructions or material apply to the current task, often after the chat switched topics.
 
-The compounding effect is severe. If an agent's goals section becomes poisoned, it develops strategies that take substantial effort to undo. Each subsequent decision references the poisoned content, reinforcing incorrect assumptions.
+- **Signs:** Answers mix requirements from two earlier tasks. Tools or rules from one task get used in another.
+- **Fixes:** Give each task its own chat. Mark clear breaks ("New task, ignore earlier rules about X"). Restate the current rules in one block.
 
-**Detection and Recovery**
-Watch for symptoms including degraded output quality on tasks that previously succeeded, tool misalignment where agents call wrong tools or parameters, and hallucinations that persist despite correction attempts. When these symptoms appear, consider context poisoning.
+### 5. Clash
 
-Recovery requires removing or replacing poisoned content. This may involve truncating context to before the poisoning point, explicitly noting the poisoning in context and asking for re-evaluation, or restarting with clean context and preserving only verified information.
+Two pieces of information in the chat contradict each other, such as an old version and a new version.
 
-### Context Distraction
+- **Signs:** The AI hedges, flips between two answers, or quotes the outdated figure.
+- **Fixes:** Remove the outdated version. Label sources and versions. Say which source wins when they disagree.
 
-Context distraction emerges when context grows so long that models over-focus on provided information at the expense of their training knowledge. The model attends to everything in context regardless of relevance, and this creates pressure to use provided information even when internal knowledge is more accurate.
+## Four Ways to Fix Any of Them
 
-**The Distractor Effect**
-Research shows that even a single irrelevant document in context reduces performance on tasks involving relevant documents. Multiple distractors compound degradation. The effect is not about noise in absolute terms but about attention allocation—irrelevant information competes with relevant information for limited attention budget.
+- **Write:** Save facts outside the chat, in a notes file or a project document, and bring back only what you need.
+- **Select:** Bring only the relevant facts into the chat.
+- **Compress:** Summarise the chat so far, check the summary against the original, and continue in a new chat with it.
+- **Isolate:** Split the work across separate chats or helper agents so no single chat grows too long.
 
-Models do not have a mechanism to "skip" irrelevant context. They must attend to everything provided, and this obligation creates distraction even when the irrelevant information is clearly not useful.
+## What Not to Claim
 
-**Mitigation Strategies**
-Mitigate distraction through careful curation of what enters context. Apply relevance filtering before loading retrieved documents. Use namespacing and organization to make irrelevant sections easy to ignore structurally. Consider whether information truly needs to be in context or can be accessed through tool calls instead.
-
-### Context Confusion
-
-Context confusion arises when irrelevant information influences responses in ways that degrade quality. This is related to distraction but distinct—confusion concerns the influence of context on model behavior rather than attention allocation.
-
-If you put something in context, the model has to pay attention to it. The model may incorporate irrelevant information, use inappropriate tool definitions, or apply constraints that came from different contexts. Confusion is especially problematic when context contains multiple task types or when switching between tasks within a single session.
-
-**Signs of Confusion**
-Watch for responses that address the wrong aspect of a query, tool calls that seem appropriate for a different task, or outputs that mix requirements from multiple sources. These indicate confusion about what context applies to the current situation.
-
-**Architectural Solutions**
-Architectural solutions include explicit task segmentation where different tasks get different context windows, clear transitions between task contexts, and state management that isolates context for different objectives.
-
-### Context Clash
-
-Context clash develops when accumulated information directly conflicts, creating contradictory guidance that derails reasoning. This differs from poisoning where one piece of information is incorrect—in clash, multiple correct pieces of information contradict each other.
-
-**Sources of Clash**
-Clash commonly arises from multi-source retrieval where different sources have contradictory information, version conflicts where outdated and current information both appear in context, and perspective conflicts where different viewpoints are valid but incompatible.
-
-**Resolution Approaches**
-Resolution approaches include explicit conflict marking that identifies contradictions and requests clarification, priority rules that establish which source takes precedence, and version filtering that excludes outdated information from context.
-
-### Empirical Benchmarks and Thresholds
-
-Research provides concrete data on degradation patterns that inform design decisions.
-
-**RULER Benchmark Findings**
-The RULER benchmark delivers sobering findings: only 50% of models claiming 32K+ context maintain satisfactory performance at 32K tokens. GPT-5.2 shows the least degradation among current models, while many still drop 30+ points at extended contexts. Near-perfect scores on simple needle-in-haystack tests do not translate to real long-context understanding.
-
-**Model-Specific Degradation Thresholds**
-| Model | Degradation Onset | Severe Degradation | Notes |
-|-------|-------------------|-------------------|-------|
-| GPT-5.2 | ~64K tokens | ~200K tokens | Best overall degradation resistance with thinking mode |
-| Claude Opus 4.5 | ~100K tokens | ~180K tokens | 200K context window, strong attention management |
-| Claude Sonnet 4.5 | ~80K tokens | ~150K tokens | Optimized for agents and coding tasks |
-| Gemini 3 Pro | ~500K tokens | ~800K tokens | 1M context window, native multimodality |
-| Gemini 3 Flash | ~300K tokens | ~600K tokens | 3x speed of Gemini 2.5, 81.2% MMMU-Pro |
-
-**Model-Specific Behavior Patterns**
-Different models exhibit distinct failure modes under context pressure:
-
-- **Claude 4.5 series**: Lowest hallucination rates with calibrated uncertainty. Claude Opus 4.5 achieves 80.9% on SWE-bench Verified. Tends to refuse or ask clarification rather than fabricate.
-- **GPT-5.2**: Two modes available - instant (fast) and thinking (reasoning). Thinking mode reduces hallucination through step-by-step verification but increases latency.
-- **Gemini 3 Pro/Flash**: Native multimodality with 1M context window. Gemini 3 Flash offers 3x speed improvement over previous generation. Strong at multi-modal reasoning across text, code, images, audio, and video.
-
-These patterns inform model selection for different use cases. High-stakes tasks benefit from Claude 4.5's conservative approach or GPT-5.2's thinking mode; speed-critical tasks may use instant modes.
-
-### Counterintuitive Findings
-
-Research reveals several counterintuitive patterns that challenge assumptions about context management.
-
-**Shuffled Haystacks Outperform Coherent Ones**
-Studies found that shuffled (incoherent) haystacks produce better performance than logically coherent ones. This suggests that coherent context may create false associations that confuse retrieval, while incoherent context forces models to rely on exact matching.
-
-**Single Distractors Have Outsized Impact**
-Even a single irrelevant document reduces performance significantly. The effect is not proportional to the amount of noise but follows a step function where the presence of any distractor triggers degradation.
-
-**Needle-Question Similarity Correlation**
-Lower similarity between needle and question pairs shows faster degradation with context length. Tasks requiring inference across dissimilar content are particularly vulnerable.
-
-### When Larger Contexts Hurt
-
-Larger context windows do not uniformly improve performance. In many cases, larger contexts create new problems that outweigh benefits.
-
-**Performance Degradation Curves**
-Models exhibit non-linear degradation with context length. Performance remains stable up to a threshold, then degrades rapidly. The threshold varies by model and task complexity. For many models, meaningful degradation begins around 8,000-16,000 tokens even when context windows support much larger sizes.
-
-**Cost Implications**
-Processing cost grows disproportionately with context length. The cost to process a 400K token context is not double the cost of 200K—it increases exponentially in both time and computing resources. For many applications, this makes large-context processing economically impractical.
-
-**Cognitive Load Metaphor**
-Even with an infinite context, asking a single model to maintain consistent quality across dozens of independent tasks creates a cognitive bottleneck. The model must constantly switch context between items, maintain a comparative framework, and ensure stylistic consistency. This is not a problem that more context solves.
-
-## Practical Guidance
-
-### The Four-Bucket Approach
-
-Four strategies address different aspects of context degradation:
-
-**Write**: Save context outside the window using scratchpads, file systems, or external storage. This keeps active context lean while preserving information access.
-
-**Select**: Pull relevant context into the window through retrieval, filtering, and prioritization. This addresses distraction by excluding irrelevant information.
-
-**Compress**: Reduce tokens while preserving information through summarization, abstraction, and observation masking. This extends effective context capacity.
-
-**Isolate**: Split context across sub-agents or sessions to prevent any single context from growing large enough to degrade. This is the most aggressive strategy but often the most effective.
-
-### Architectural Patterns
-
-Implement these strategies through specific architectural patterns. Use just-in-time context loading to retrieve information only when needed. Use observation masking to replace verbose tool outputs with compact references. Use sub-agent architectures to isolate context for different tasks. Use compaction to summarize growing context before it exceeds limits.
+- Do not give a number for when a particular model "starts to fail". Limits change with each model release and depend on the task.
+- Do not quote benchmark scores from memory. If the person wants numbers, tell them to look up the model's current published results and to test with their own material.
+- Longer chats usually cost more to run, and some tools charge by length. Tell the person to check their own tool's pricing.
 
 ## Examples
 
-**Example 1: Detecting Degradation**
-```yaml
-# Context grows during long conversation
-turn_1: 1000 tokens
-turn_5: 8000 tokens
-turn_10: 25000 tokens
-turn_20: 60000 tokens (degradation begins)
-turn_30: 90000 tokens (significant degradation)
-```
-
-**Example 2: Mitigating Lost-in-Middle**
+**Example: put the key facts at the edges** (placeholders, not real figures)
 ```markdown
-# Organize context with critical info at edges
+[CURRENT TASK]                      # At the start
+- Goal: <what you want>
+- Deadline: <date>
 
-[CURRENT TASK]                      # At start
-- Goal: Generate quarterly report
-- Deadline: End of week
+[BACKGROUND MATERIAL]               # Middle, where attention is weakest
+- <long documents, data, notes>
 
-[DETAILED CONTEXT]                  # Middle (less attention)
-- 50 pages of data
-- Multiple analysis sections
-- Supporting evidence
-
-[KEY FINDINGS]                     # At end
-- Revenue up 15%
-- Costs down 8%
-- Growth in Region A
+[KEY FACTS TO USE]                  # Again at the end
+- <fact 1>
+- <fact 2>
 ```
 
 ## Guidelines
 
-1. Monitor context length and performance correlation during development
-2. Place critical information at beginning or end of context
-3. Implement compaction triggers before degradation becomes severe
-4. Validate retrieved documents for accuracy before adding to context
-5. Use versioning to prevent outdated information from causing clash
-6. Segment tasks to prevent context confusion across different objectives
-7. Design for graceful degradation rather than assuming perfect conditions
-8. Test with progressively larger contexts to find degradation thresholds
-
-## Integration
-
-This skill builds on context-fundamentals and should be studied after understanding basic context concepts. It connects to:
-
-- context-optimization - Techniques for mitigating degradation
-- multi-agent-patterns - Using isolation to prevent degradation
-- evaluation - Measuring and detecting degradation in production
-
-## References
-
-Internal reference:
-- Degradation Patterns Reference - Detailed technical reference
-
-Related skills in this collection:
-- context-fundamentals - Context basics
-- context-optimization - Mitigation techniques
-- evaluation - Detection and measurement
-
-External resources:
-- Research on attention mechanisms and context window limitations
-- Studies on the "lost-in-middle" phenomenon
-- Production engineering guides from AI labs
-
----
-
-## Skill Metadata
-
-**Created**: 2025-12-20
-**Last Updated**: 2025-12-20
-**Author**: Agent Skills for Context Engineering Contributors
-**Version**: 1.0.0
+1. Note how long the chat was when the problem first showed. That tells you more than any rule of thumb.
+2. Put critical information at the start and end of long inputs.
+3. Summarise or restart before quality drops, not after.
+4. Check any material you pull in for errors before you add it.
+5. Keep versions clear so old facts do not clash with new ones.
+6. Keep one task per chat.
+7. Test with your own material, growing it step by step, to find where your tool starts to slip.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+---
+
+Original skill by Agent Skills for Context Engineering Contributors, shared in the sickn33 collection. See LICENSE-CONTENT.

@@ -1,6 +1,6 @@
 new_slug: second-business-picker
 name: "Second business picker"
-summary: "List your strengths and new market ideas. Get each sorted as reinvention, coaction or diversification, with a pick."
+summary: "Sort your new market ideas as reinvention, coaction or diversification and pick a second business that your strengths can really carry."
 job: plan-strategy
 thinking: high
 thinking_why: "It judges how far each idea really carries over from what you own, and the answers are shades of grey."
@@ -17,6 +17,10 @@ when:
   - You have a strong first business and want to add another without losing the first.
   - You have several new market ideas and cannot say which one your strengths support.
   - A new technology threatens your market and you are deciding whether to move into it.
+not_for:
+  - "You want to test whether an edge would last: use the Business power tester."
+  - "You run one business and weigh no second line: finish and test the first business before you add another."
+  - "You need market size or demand figures: ask a person who knows that market, or run customer interviews first."
 
 you_give:
   - What you already own, such as skills, customers, know-how and assets (required)
@@ -35,6 +39,29 @@ how_to_use:
   - Say which customers and skills you could not easily carry over.
   - Read the ranking, then the evidence list. Collect the evidence before you spend money.
   - Re-run it when an idea changes or a new one comes up.
+output_sample:
+  input:
+    - "What you already own: skills, customers, know-how and assets"
+    - The new market ideas you are weighing, one line each
+    - Your brand file (optional)
+    - How the new markets work today (optional)
+  output:
+    - name: What you own
+      contains: Your capabilities, customers and other assets, with MISSING marked where a claim has no proof.
+    - name: Each idea, sorted
+      contains: Every idea typed as reinvention, coaction or diversification, with what carries over or why it was dropped.
+    - name: Fit check
+      contains: For each kept idea, whether your strength fits the new method, with the fact behind the answer.
+    - name: Power to build
+      contains: The lasting edge you could build in each market, what stops a copy, and the market stage.
+    - name: Ranking and pick
+      contains: The ideas in order with three lines of reasons and one pick.
+    - name: Evidence still needed
+      contains: What to find out before spending money, how to find it and how long it takes.
+    - name: Missing
+      contains: Gaps that would sharpen the pick.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: List what you own

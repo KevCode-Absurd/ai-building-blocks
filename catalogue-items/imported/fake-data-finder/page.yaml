@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It clicks through the page and traces each value to its source.
 new_slug: fake-data-finder
 name: Fake data finder
-summary: Give it a live page. Get a report of which numbers are real, mocked,
-  hardcoded or broken.
+summary: Find fake data on a live page. Give it your URL and get a report that marks each number as real, mocked, hardcoded, made by AI or broken.
 job: test-and-fix-code
 headline: Fake data finder
-subhead: A page audit that tells you which numbers on screen come from a real
-  source and which are made up. It matters before you show an app built with AI
-  to a customer or investor.
+subhead: A page audit that tells you which numbers on screen come from a real source and which are made up. It matters before you show an app built with AI to a customer or investor.
 explain: |
   A page audit that tells you which numbers on screen come from a real source and which are made up. It matters before you show an app built with AI to a customer or investor.
 
@@ -18,6 +15,10 @@ when:
   - A contractor delivered an app and you need a check before you pay.
   - A page looks too tidy, with every metric a round number.
   - You are about to demo an early product and want no surprises.
+not_for:
+  - "You do not own the app or cannot test it: ask the owner for a staging copy or a test account first."
+  - "You want to test a whole site: this checks one page per run, so run it again for each page."
+  - "You want to check code that is not live yet: ask a developer to review the code, or put it online on a test site first."
 you_give:
   - The live page URL
   - Login details for a test account, if needed
@@ -29,8 +30,31 @@ you_get:
   - Notes on network and console problems
   - A short fix list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Use an AI that can run code and open a browser with Playwright. A plain chat window cannot do this.
+  - Paste the skill into your AI and give it your page link.
+  - Say whether the page is public or needs a login. Offer a test account, never your real one.
+  - Name the buttons and forms that are safe to click. Say which are off limits.
+  - Read the report. Fix the hardcoded and mock values by connecting the real data source, then run it again on a fresh test account with no data.
+output_sample:
+  input:
+    - The link to your live page
+    - Login details for a test account (optional)
+    - Which buttons and forms are safe to click
+    - Read-only database access (optional)
+    - Any parts you know are made by AI on purpose (optional)
+  prerequisites:
+    - An AI that can run code and drive a browser with Playwright
+    - Permission to test the page, ideally on a test copy
+  output:
+    - name: Summary table
+      contains: How many values were marked real, mock, AI-made, hardcoded, broken or unknown.
+    - name: Findings per section or tab
+      contains: Each value with its verdict, where it came from, how serious it is and what to do.
+    - name: Console errors and network failures
+      contains: Errors the page threw and calls to its servers that failed.
+    - name: Buttons that do nothing
+      contains: Controls that were clicked and sent no request.
+    - name: Suspicious patterns
+      contains: Signs of seeded data, such as round numbers, clustered times or too few different values.
+    - name: Follow-up questions
+      contains: Questions for you to settle values the audit could not decide.

@@ -1,6 +1,6 @@
 slug: make-a-realistic-plan-for-a-busy-week
 name: Make a realistic plan for a busy week
-summary: Share the source files. Get a capacity-aware week plan with trade-offs and a review point.
+summary: Turn last week's calendar and this week's to-do list into a realistic week plan with hours that fit, what to cut, and a midweek check.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -24,11 +24,11 @@ uses:
   - executive-daily-digest
 steps:
   - uses: weekly-time-audit-planner
-    note: Audit last week actual time as evidence for realistic capacity, then compare it with the upcoming fixed commitments.
+    note: "Sort last week's hours into chosen, taken by others and taken by habit, then work out this week's real hours after fixed events. Hand step 2 the hours you can plan."
   - uses: week-priority-picker
-    note: Choose the work that best serves the stated goals and identify what must wait.
+    note: "Takes the hours you can plan from step 1, plus your open task list and main goal. Picks the big tasks and three priorities that fit those hours, and says what must wait. Hand step 3 the chosen work with its hours."
   - uses: executive-daily-digest
-    note: Turn the chosen commitments into a dated brief and a manageable first day.
+    note: Turn the chosen work and fixed events into a dated brief for day one, ready to start.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

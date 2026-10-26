@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: spreadsheet, required: true}
   - {type: performance_sheet, required: false}
+  - {type: landing_page, required: false}
 outputs:
   - {type: angle_library}
   - {type: audit_report}

@@ -1,6 +1,6 @@
 new_slug: one-goal-marketing-plan-builder
 name: "One-goal marketing plan builder"
-summary: "Paste your goal and tactics you could try. Get one numbered goal, scored tactics and a test calendar."
+summary: "Turn your marketing ideas into one goal with a number and a date. Get scored tactics and a test calendar in this one-goal marketing plan builder."
 job: plan-strategy
 thinking: low
 thinking_why: "The work is sums, scoring and a calendar from fixed rules, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You have many marketing ideas and no clear order.
   - You are about to spend on ads or content without a target.
   - You want a plan you can review in ten minutes each week.
+not_for:
+  - "You don't have a clear offer yet and don't know if people want it: talk to ten likely buyers first, then come back."
+  - "You need ad copy or a full campaign written: use a copywriter or an ad tool, since this builds the plan, not the content."
+  - "You have no profit per sale or sales numbers at all: work those out first, or the math will show MISSING."
 
 you_give:
   - "The result you want, even if rough, and by when"
@@ -36,6 +40,29 @@ how_to_use:
   - "Paste your tactic ideas. Add rough costs and time for each if you know them."
   - "Read the score sheet and change any score you disagree with, then ask it to redo the top picks."
   - "Put the calendar in your diary and run the weekly review."
+output_sample:
+  input:
+    - The result you want and by when
+    - Your price, profit per sale and current sales or sign-ups
+    - A list of tactics you could try
+    - Proof that people want what you sell (optional)
+  output:
+    - name: The goal
+      contains: One sentence with a number, the thing counted and a date.
+    - name: The math
+      contains: Profit per sale, the sales or sign-ups needed, and the amount needed each week.
+    - name: Demand check
+      contains: Proof that people want your offer, or a note that it is missing and a test to run first.
+    - name: Tactic sheet
+      contains: Each tactic with cost, time, an impact score, an ease score and a reason.
+    - name: The plan
+      contains: The top tactics with start dates, stop dates, stop rules and effort shares.
+    - name: Test calendar
+      contains: A week by week list of tests and the day each one is judged.
+    - name: Review rhythm
+      contains: A daily check, a weekly review and a rule for stopping what fails.
+    - name: Checks missed
+      contains: One line for each check the plan still misses, or none.
 
 how_it_works:
   - title: Writes one goal

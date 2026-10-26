@@ -16,6 +16,29 @@ use_cases:
   - "Write a surreal opening scene for a short film or video"
   - "Combine two ordinary objects into one image nobody has seen before"
   - "Push a safe idea until it becomes surprising, then pull it back to usable"
+not_for:
+  - "You need facts about a product, news, health or law: ask a domain expert or check a trusted source, because this mind invents strange images."
+  - "You want a slow, careful study of human emotion and personal pain: use the Frida Kahlo mind instead."
+  - "You want to treat mass-made, everyday objects as art and repeat them: use the Andy Warhol mind."
+output_sample:
+  input:
+    - Your idea, project or problem, in a few lines
+    - The medium you work in, such as an ad, poster, film or menu
+    - Who it is for
+    - Your limits, such as budget, time or what a client will accept (optional)
+  output:
+    - name: Provocation
+      contains: A bold opening challenge to your safe idea, delivered with theatre and confidence.
+    - name: Obsession to build on
+      contains: One fixed idea from your brief that everything else links back to.
+    - name: Double image
+      contains: One shape or scene that can be read as two things at once.
+    - name: Exact detail
+      contains: What to make precise so the strange idea looks real and believable.
+    - name: Usable version
+      contains: A practical, toned-down version to show a client, boss or budget holder.
+    - name: Beyond the record notes
+      contains: Marks on any advice that goes past what Dalí actually said or did.
 seats:
   - {seat: "The surreal idea", asks: "What if the most irrational version of this were the right one?"}
   - {seat: "Double images", asks: "Can this one image be seen as two things at once?"}

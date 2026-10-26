@@ -10,6 +10,21 @@ Vectors from different models are incompatible. You cannot mix old and new embed
 - Understand collection aliases before choosing a strategy [Collection aliases](https://search.qdrant.tech/md/documentation/manage-data/collections/?s=collection-aliases)
 
 
+## Before you start (added by AI Blocks)
+
+Ask once for anything missing. If an answer is unknown, write MISSING and say what it blocks. Never guess a number.
+
+1. Current model: name and vector size (dimensions).
+2. New model: name and vector size.
+3. Distance metric used now, and the one the new model is meant to use.
+4. Collection size: number of points, and the data size if known.
+5. Do payloads (the extra data stored with each vector) have to be kept?
+6. Must search stay online during the move? (Decides between alias swap and a short pause.)
+7. Do you need to compare both models side by side, or only replace one?
+8. Qdrant version (some options need v1.17 or later).
+
+This skill plans the move. It does not run it. Show every step as a plan the user runs.
+
 ## Can I Avoid Re-embedding?
 
 Use when: looking for shortcuts before committing to full migration.
@@ -44,7 +59,7 @@ You cannot add a named vector to an existing collection. Create a new collection
 - Compare quality by querying with `using: "old_model"` vs `using: "new_model"`
 - Swap alias to new collection once satisfied
 
-Co-locating large multi-vectors (especially ColBERT) with dense vectors degrades ALL queries, even those only using dense. At millions of points, users report 13s latency dropping to 2s after removing ColBERT. Put large vectors on disk during side-by-side migration.
+Co-locating large multi-vectors (especially ColBERT) with dense vectors degrades ALL queries, even those only using dense. This can slow queries a lot at large sizes, so time your own queries before and after. Put large vectors on disk during side-by-side migration.
 
 If you anticipate future model migrations, define both vector fields upfront at collection creation.
 
@@ -72,8 +87,31 @@ Use when: dataset is large and re-embedding is the bottleneck.
 - Disable HNSW during bulk load (set `indexing_threshold_kb` very high, restore after)
 - For Qdrant Cloud inference, switching models is a config change, not a pipeline change [Inference docs](https://search.qdrant.tech/md/documentation/inference/)
 
-For 400GB+ datasets, expect days. For small datasets (<25MB), re-indexing from source is faster than using the migration tool.
+Large datasets can take days to re-embed, so time a sample of your own data and scale up from it. For very small datasets, re-indexing from source may be faster than using the migration tool; check on your own data.
 
+
+## Validation and rollback (added by AI Blocks)
+
+Check before the swap:
+- The new collection has the same number of points as the old one.
+- Payloads were copied, since an alias swap does not copy them.
+- Vector size and distance metric in the new collection match the new model.
+- A set of real saved queries, embedded with the new model, return sensible top results. Compare them with the old results and have a person read a sample.
+- Your app code now embeds queries with the new model.
+
+Rollback:
+- Keep the old collection until the new one has run in production for a period you set with the user.
+- To go back, point the alias at the old collection again. This only works while the old collection and the old query model still exist.
+- Only delete the old collection after the user confirms in writing.
+
+## What you hand back (added by AI Blocks)
+
+1. **Strategy.** Alias swap, side by side, dense to hybrid, or the shortcut (Matryoshka or a change in compression), with the reason.
+2. **Numbered plan.** Phases in order: create the new collection, re-embed, copy payloads, verify, swap, watch, clean up. Each step says what to check before moving on.
+3. **Checks.** The validation list above, filled in for this collection.
+4. **Rollback.** The exact steps to go back and until when they stay possible.
+5. **Time and cost estimate.** From a timed sample of the user's own data, or "unknown, time a sample first". Never use a number from another dataset.
+6. **MISSING list and next step.** What you still need, then which Qdrant guide to open first.
 
 ## What NOT to Do
 

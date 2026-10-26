@@ -1,6 +1,6 @@
 new_slug: quarterly-client-rate-reviewer
 name: Quarterly client rate reviewer
-summary: Give it your hours and invoices by client each quarter. Get each client's real rate, who to raise and what to propose.
+summary: Check your client rates each quarter. Give it hours and invoices by client. You get each client's real hourly rate, who to raise and what to propose.
 job: set-prices
 thinking: high
 thinking_why: It judges each client from several numbers, decides between keep, raise and let go, and frames a price change. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You freelance or run a small studio and have never worked out what each client really pays per hour.
   - You feel busy and underpaid and cannot say which client is the reason.
   - A client's scope has grown for two quarters and the fee has not.
+not_for:
+  - "You are an employee on a salary: this has no client rates to review, so use your pay review or ask your manager."
+  - "You only sell one-off fixed-price projects: use a simple check of what each project paid against the hours it took."
+  - "You want to chase unpaid invoices now: use a simple reminder email to each client, then come back at quarter end."
 you_give:
   - Last quarter's hours, invoices and payments by client, with unbilled time included
   - Your lowest acceptable rate, your income goal and the hours you want to work
@@ -33,6 +37,30 @@ how_to_use:
   - Tell it your floor, income goal, hours and costs once. It saves them.
   - Read the proposals. Send the ones you agree with in your own words, then tell the agent what each client said.
   - Run it again next quarter. It compares each client with its own history.
+output_sample:
+  input:
+    - Last quarter's hours, invoices and payments by client, with unbilled time
+    - Your lowest acceptable rate, income goal and hours you want to work
+    - Your costs the fee must cover (advised)
+    - Rates you have seen for similar work (optional)
+    - Last quarter's review, once it exists
+  prerequisites:
+    - An AI that can read your files, such as Claude Code, to keep client and proposal files between quarters
+  output:
+    - name: The quarter
+      contains: One line with total hours, income, real rate across all clients and your floor.
+    - name: Clients by real rate
+      contains: Each client with hours, amount paid, days to pay, real rate and a keep, raise or let go call.
+    - name: Floor and cap
+      contains: Your fee floor, billing terms and how many clients you can serve well.
+    - name: Proposals
+      contains: For each client under the floor, the new price, a range they can likely meet and how to say it.
+    - name: Let go when current work ends
+      contains: Clients with no room to fix, each with a date and a reason.
+    - name: Agreements
+      contains: A one-page agreement for each client whose terms change, covering results, limits, help and review dates.
+    - name: Files and missing
+      contains: Each step's saved file and every line marked MISSING.
 how_it_works:
   - title: Read last quarter
     text: Opens the client rows and the proposals from last time, and notes what came of each.

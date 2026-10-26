@@ -1,0 +1,135 @@
+name: Healthcare Marketing Compliance Specialist agent
+summary: Check China healthcare ads and posts for banned claims before you publish. Get flagged lines, risk levels and safer rewrites. Not legal advice.
+headline: Healthcare Marketing Compliance Specialist agent
+subhead: Paste your ad, post or script, and say what you sell and where it will run in mainland China. The agent flags banned claims, missing approvals and privacy risks, rates each by risk and suggests safer wording. You get a review to take to your lawyer.
+job: check-ads
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Healthcare marketing in mainland China has tight rules. Words such as 'cure', 'best' or 'refund if it does not work' can bring fines. So can patient stories, before-and-after photos and a missing ad approval. This agent reviews your healthcare ad or post against those rules before you publish it.
+
+  It covers drugs, medical devices, medical aesthetics, health supplements and internet healthcare. For each risky line it gives the concern, a risk level of critical, high, medium or low, the evidence you would need and a safer rewrite. It also checks whether patient data is used.
+
+  This is a first-pass review, not legal advice. Rules change and the agent cannot confirm the current text. It marks each rule 'confirm current text', never gives a final yes, and sends critical items to a qualified lawyer in China. It covers mainland China only. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's targets are its own goals, not results measured by AI Blocks.
+when:
+  - You are about to publish an ad, post or video script for a drug, device, supplement or clinic in mainland China.
+  - A platform such as Douyin, Xiaohongshu or WeChat removed or flagged your content and you want to know why.
+  - Your team wants safer wording for a claim such as 'lowers blood pressure'.
+  - You need a pre-publish review form to hand to your compliance team.
+not_for:
+  - "You run healthcare ads outside China on Meta: use the Meta ads compliance checker."
+  - "You need a legal opinion or the official ad approval: ask a qualified lawyer in China and the health authority. This agent cannot give either."
+  - "You want to check medical facts or studies behind a claim: use the Clinical Evidence agent."
+  - "You write replies to patients or customers: use the Healthcare Customer Service agent."
+you_give:
+  - The ad, post, script or page text to review, in full
+  - "What it promotes: a drug, a device, a supplement, a cosmetic procedure or a medical service"
+  - Where it will run, such as Douyin, WeChat, a website or print
+  - Your approvals, such as an ad review certificate or approval number (optional)
+  - The approved wording of your product's use, such as the package insert (optional)
+  - Whether it shows patients, patient stories or doctors (optional)
+you_get:
+  - Each risky line quoted, with the type of rule it breaks
+  - "A risk level for each line: critical, high, medium or low"
+  - A safer rewrite for each line
+  - A list of approvals and proof you would need to show
+  - A privacy check if patient data appears
+  - "A draft result: approve, approve with changes, or reject"
+  - Questions to take to your lawyer
+how_to_use:
+  - Download the pack and add it as a skill in your AI. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste the full text to review. Say what it promotes and where it will run in mainland China. Add your approval numbers and the approved product wording if you have them.
+  - Say 'Review this for mainland China. Do not assume I have approvals I did not list.' Your AI asks once for what is missing.
+  - Fix every critical and high line first. Use the rewrites as a starting point, then check each one again.
+  - Take the review and the questions to a qualified lawyer in China. Do not publish on this review alone.
+  - Confirm each cited rule in its current official text. The AI cannot look up or confirm current law.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the product type, channel and that the market is mainland China. If it is not, it says so and stops.
+  - title: Check approvals
+    text: It lists the approvals and licences the content needs and marks each Shown, Not shown or Not supplied.
+  - title: Scan the content
+    text: It looks for absolute claims, guarantees, inducements, endorsements, comparisons, claims beyond approved use, and supplement or cosmetic-procedure claims the profile bans.
+  - title: Check privacy
+    text: It checks for patient data, case stories and health data collection.
+  - title: Rate and rewrite
+    text: It rates each line critical, high, medium or low and drafts a safer wording.
+  - title: Give a draft result
+    text: It gives approve, approve with changes or reject as a draft only, with questions for counsel.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Content <type> | Promotes <drug, device, supplement, procedure or service> | Channel <list> | Market <mainland China>
+    Assumed: <list> | MISSING: <list>
+
+  FLAGGED LINES
+    <quoted line> | <type of rule: absolute claim, guarantee, endorsement, other> | <risk: critical, high, medium or low> | <why> | <safer rewrite> | <confirm current text>
+
+  APPROVALS AND QUALIFICATIONS
+    <approval or licence> | <Shown, Not shown or Not supplied> | <note>
+
+  PRIVACY CHECK
+    <item> | <concern> | <fix>
+
+  DRAFT RESULT
+    <Approve, Approve with changes or Reject> | <the lines that decide it> | This is a draft, not legal approval
+
+  QUESTIONS FOR COUNSEL
+    <question> | <why it matters>
+output_sample:
+  input:
+    - The ad, post, script or page text to review
+    - What it promotes and where it will run in mainland China
+    - Your approvals and approved product wording (optional)
+    - Whether it shows patients or patient stories (optional)
+  prerequisites:
+    - A qualified lawyer in China to confirm the final wording
+    - An AI that takes a long pasted profile, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brief and assumptions
+      contains: The content, product type, channel and market as understood, with assumptions and MISSING items.
+    - name: Flagged lines
+      contains: Each risky line quoted, the rule type, a risk level, why, a safer rewrite and a note to confirm current text.
+    - name: Approvals and qualifications
+      contains: Each approval or licence needed, marked Shown, Not shown or Not supplied.
+    - name: Privacy check
+      contains: Any patient data or case story, the concern and the fix.
+    - name: Draft result
+      contains: Approve, approve with changes or reject, as a draft only and not legal approval.
+    - name: Questions for counsel
+      contains: What to ask your lawyer, with why each matters.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Product type
+    how: Say drug, device, supplement or procedure. The rules differ for each.
+  - what: Channel
+    how: Name the platform, such as Douyin or WeChat, since each has its own review rules.
+  - what: Scope
+    how: Ask for the flagged lines only, or the approvals check only, for a faster first pass.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Absolute claim
+    meaning: A claim such as 'best' or '100% effective' that cannot be proven.
+  - term: Ad review certificate
+    meaning: The approval a medical ad needs from the provincial health authority, according to the profile.
+  - term: NMPA
+    meaning: China's national drug and device regulator.
+  - term: Medical aesthetics
+    meaning: Cosmetic medical procedures. In China they are called yimei.
+  - term: PIPL
+    meaning: China's personal information protection law.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They read long pasted text and can review it in Chinese or English.
+    - name: A qualified lawyer in China
+      why: Only a lawyer can confirm current rules and the final wording.
+  inputs:
+    - The approved package insert or registration wording for your product.
+    - Your ad review certificate or approval number, if the content needs one.

@@ -1,6 +1,6 @@
 slug: headcount-and-turnover-reporter
 name: Headcount and turnover reporter
-summary: Give it your people data. Get headcount, turnover and team health reports with a metrics table and trends.
+summary: Turn an employee spreadsheet into a headcount or turnover report for leaders, with a metrics table, trends and next steps.
 category: general
 boards: []
 type: skill
@@ -29,4 +29,4 @@ credits:
   - title: people-report skill
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources/skills/people-report
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Adapted under the Apache 2.0 licence. We gave it a plain name and added steps, a data check and privacy rules.

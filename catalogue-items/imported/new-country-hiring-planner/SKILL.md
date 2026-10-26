@@ -8,7 +8,52 @@ metadata:
 
 # Global expansion (HR)
 
-Plan the people and HR infrastructure needed to enter a new country or region — entity vs. EOR decisions, local labor law compliance, hiring strategy, and HR readiness before the first local hire.
+Plan the people and HR infrastructure needed to enter a new country or region: entity vs. EOR decisions, local labor law compliance, hiring strategy, and HR readiness before the first local hire.
+
+This is planning help, not legal advice. Say so in the output, and tell the user to have a local employment lawyer or an EOR provider confirm the rules before anyone is hired.
+
+## Before you start
+
+You need three facts: the country (or the two countries being compared), the number and type of roles, and the target timeline. Optional: company size, current setup (any local entity, payroll or vendor already in place), and budget.
+
+If a required fact is missing, ask for it once, in one message. If the user can't answer, write "MISSING: <fact>" in the plan and carry on with a stated assumption. Never invent a country's rules, a cost or a legal threshold. When you can't check a rule (no web search), say "check locally" next to it.
+
+## Steps
+
+1. **Gather the brief.** Country, roles, timeline, company size, setup. Repeat it back in two lines.
+2. **Compare entry routes.** Build a table: own local entity vs. employer of record (EOR; a provider that hires on your behalf), and a third column for a contractor route only if the roles could lawfully be contract roles. Rows: set-up time, cost shape (set-up fee, monthly fee, per-employee cost), control, compliance risk, how easy it is to exit. Give a recommendation for this headcount and say what would change it.
+3. **List the local rules to check.** Employment contract form, probation, notice and severance, working time and leave, statutory benefits and employer contributions, payroll and tax registration, data protection, works council or union rules. Mark each "known" or "check locally". Don't state a number you can't source.
+4. **Build the hiring and pay plan.** Where to find talent in that market, how to benchmark pay (name the type of source, such as a local salary survey; don't invent pay figures), which parts of your handbook need adapting, and what managers should learn about local working culture.
+5. **Set the EOR-to-entity trigger.** Say at what headcount, spend or length of stay moving to your own entity starts to make sense, and what to check before you switch.
+6. **Write the dated sequence.** Work back from the target start date: decision, provider or entity set-up, contract template, payroll set-up, recruiting, offer, start. Give each step a week or month and an owner.
+7. **Close with next steps.** Three to five actions, including who confirms the legal points.
+
+## Output
+
+Return these sections, in this order. Keep the whole answer under about two pages.
+
+```
+BRIEF
+  Country <...> | Roles <...> | Timeline <...> | Assumptions <...>
+
+ENTITY OR EOR
+  <comparison table> | Recommendation: <route> because <reason> | What would change it: <...>
+
+LOCAL RULES TO CHECK
+  <rule area> | <known fact or "check locally"> | Who confirms: <lawyer, EOR, authority>
+
+HIRING AND PAY PLAN
+  Sourcing: <...> | Pay benchmark: <source to use> | Policy changes: <...> | Manager prep: <...>
+
+WHEN TO MOVE TO YOUR OWN ENTITY
+  <trigger and checks>
+
+DATED SEQUENCE
+  <week or month> | <step> | <owner>
+
+NEXT STEPS AND MISSING
+  <actions> | MISSING: <every gap>
+```
 
 ## Supported tasks
 
@@ -58,7 +103,7 @@ Plan the people and HR infrastructure needed to enter a new country or region �
 ## Tips
 
 - Start with an EOR for market-testing or small initial headcount; establishing a local entity is a significant commitment better made once demand is proven.
-- Research statutory requirements early — probation periods, notice requirements, severance, and mandatory benefits vary widely and materially affect cost and hiring approach.
+- Research statutory requirements early: probation periods, notice requirements, severance, and mandatory benefits vary widely and materially affect cost and hiring approach.
 - Don't copy-paste HQ policy into a new market; adapt for both legal compliance and cultural fit, or local hires will notice the mismatch immediately.
 - Budget realistically for the true cost of employment in the new market, including statutory benefits and employer contributions that may be much higher than the home country's.
-- Prepare managers for cultural and management-style differences before they start leading local teams — most global expansion friction comes from management practice mismatch, not compliance gaps.
+- Prepare managers for cultural and management-style differences before they start leading local teams.

@@ -1,6 +1,6 @@
 new_slug: future-press-release-writer
 name: Future press release writer
-summary: Paste your need statement. Get a one-page press release written as if the product launched today.
+summary: Paste your need statement. Get a one-page future press release, written as if your product launched today, with weak claims marked.
 job: write-landing-page
 thinking: medium
 thinking_why: It chooses what to lead with and what to cut, but the format is fixed.
@@ -14,6 +14,10 @@ when:
   - You have an idea and want to see if it holds up when written for a customer.
   - Your team agrees on features but cannot say why anyone will care.
   - You need a one-page picture of the product before you spend.
+not_for:
+  - "You only have an idea and no need statement yet: use the Durable customer need finder first."
+  - "You want ad or sales copy for a product that already exists: use the Sales copy editor."
+  - "You want the hard questions customers will ask: use the Hard questions FAQ writer."
 you_give:
   - A need statement, or your idea and who it is for
   - The price and how a customer would start (optional)
@@ -30,6 +34,32 @@ how_to_use:
   - Add the price and facts you can back, if you know them.
   - Read the release as a customer. Mark any line you would not believe.
   - Take the release to "Hard questions FAQ writer".
+output_sample:
+  input:
+    - Your need statement, or your idea and who it is for
+    - Your price and how a customer would start (optional)
+    - Facts you can already back, such as numbers or tests (optional)
+  output:
+    - name: HEADLINE
+      contains: What the customer gets, in about a dozen words or fewer.
+    - name: SUMMARY
+      contains: One sentence on who it is for and why it works.
+    - name: THE PROBLEM
+      contains: What the customer does now and what it costs them, in their words.
+    - name: THE BETTER WAY
+      contains: How life changes, with results rather than features.
+    - name: CUSTOMER QUOTE
+      contains: Two plain sentences, marked imagined until a real customer says it.
+    - name: TEAM QUOTE
+      contains: Why you built it, marked imagined until real.
+    - name: PRICE AND HOW TO START
+      contains: The cost, how a customer begins and what is new, or a MISSING note.
+    - name: CUT FROM THE RELEASE
+      contains: Features dropped because only a rival drove them, and why.
+    - name: MISSING
+      contains: Every claim without proof, with the three weakest first.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed, or none.
 how_it_works:
   - title: Picks the reader
     text: Writes for the customer, not the press, in plain words.

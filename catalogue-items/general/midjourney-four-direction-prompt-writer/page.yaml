@@ -1,32 +1,120 @@
 new_slug: midjourney-four-direction-prompt-writer
 name: Midjourney image prompt writer
-summary: Share an image idea or reference. Get four distinct Midjourney prompts and optional directions to try next.
+summary: "Turn one image idea or reference into four different Midjourney prompts, each a new treatment, plus four directions to try next."
 job: make-images
-headline: Midjourney image prompt writer
-subhead: Share an image idea or reference. Get four distinct Midjourney prompts and optional directions to try next. Bring the brief and any files you want it to use.
-explain: |-
-  Use this when you need four distinct Midjourney visual directions. Read the actual idea and any visible references. State a concise interpretation, separating user-required details from chosen creative assumptions.
-
-  Write four prompts by default, honoring a different requested count. Preserve required subject, identity, product, setting and exclusions across all versions.
-when:
-  - You need four distinct Midjourney visual directions.
-  - You want a clear draft and checks from the material you already have.
-you_give:
-  - brief
-  - "Optional: reference set"
-you_get:
-  - image prompt
-  - Missing inputs and steps that still need to run
-how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
-how_it_works:
-  - title: Read the brief
-    text: Read the actual idea and any visible references. State a concise interpretation, separating user-required details from chosen creative assumptions.
-  - title: Build the result
-    text: Put the visually dominant subject/medium first, followed by literal action, physical context, camera/composition, lighting, material detail and finish.
-  - title: Check and hand off
-    text: For an existing prompt or image edit, change the requested dimension and preserve the rest. Offer four optional next directions without forcing a canned closing line.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+
+headline: Midjourney image prompt writer
+
+subhead: "Tell it the picture you want, or attach a reference image. It writes four Midjourney prompts that each treat the idea differently: another frame, setting or light. You get four prompts ready to paste, a line on what it assumed, and four ideas for the next round."
+
+explain: |
+  Ask for four versions of one idea and most people get the same picture four times, with different adjectives. You then spend your Midjourney credits on four near copies.
+
+  This Midjourney prompt writer reads your idea first and says in one line what it took you to mean. It separates what you asked for from what it chose itself. The things you require stay fixed in all four prompts: the subject, the product, the setting and anything to leave out.
+
+  Each prompt then changes something you can see: the framing, the place, the time of day or the camera choice. Every prompt opens with the main subject, then the action, the setting, the camera view, the light, the material and the finish. It uses plain things a camera could capture. It leaves out mood words with nothing to see behind them.
+
+  It adds a setting such as an aspect ratio only if you gave it. It does not guess a Midjourney version. It writes the prompts and does not make the images, so you paste each one into Midjourney.
+
+when:
+  - "You have an image idea for a post, a cover or a mood board and want four different frames to try in one round."
+  - "You have a reference picture and want fresh versions that keep its subject but change the setting or the light."
+  - "One prompt gave a flat result and you want to change one thing, such as the camera angle, and keep the rest."
+  - "You are briefing a designer or client and want four directions to show before anyone commits."
+
+not_for:
+  - "You need exact words on the image, such as a logo or a headline. Use the Image ad maker with exact text."
+  - "You are making an ad and must keep your real product's label and shape. Use the Accurate product image ad maker."
+  - "You use Gemini or Nano Banana, not Midjourney. Use the Nano Banana image and edit prompt planner."
+  - "You want one plain prompt for a marketing image with a size and file name. Use the Marketing image prompt writer."
+
+you_give:
+  - "Your image idea, in a sentence or two"
+  - "A reference image or set (optional)"
+  - "What must stay the same in every version, such as the subject or product (optional)"
+  - "What to leave out, and the shape you want, such as square or tall (optional)"
+  - "How many versions you want, if not four (optional)"
+
+you_get:
+  - "A one-line reading of your idea, with what it assumed marked apart from what you asked for"
+  - "Four Midjourney prompts, each with a short label, in one block you can copy"
+  - "Four directions to try next, each a real change"
+  - "A MISSING line if your idea or reference was not clear enough"
+
+how_to_use:
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start a chat with it. If not, copy it and paste it in."
+  - "Describe the picture in a sentence or two. Name the subject, the setting and anything that must stay or must not appear. Attach a reference image if you have one."
+  - "Say the shape you want, such as square or tall, if you know it. It only adds settings you give it."
+  - "Read the interpretation line first. If it got your idea wrong, say so before you copy anything."
+  - "Copy one prompt at a time into Midjourney. Your AI can't draw the picture for you, and Midjourney needs its own account."
+  - "Pick the best result and ask for four more prompts that change only one thing, such as the light."
+
+how_it_works:
+  - title: Reads the idea
+    text: States what it took you to mean, and keeps what you required apart from what it assumed.
+  - title: Fixes what stays
+    text: Holds the subject, product, setting and exclusions the same in every prompt.
+  - title: Orders each prompt
+    text: Subject first, then action, setting, camera, light, material and finish, in short visual phrases.
+  - title: Varies the treatment
+    text: Changes the framing, setting, light or camera choice, not just the wording.
+  - title: Keeps settings honest
+    text: Adds only the settings you gave it and never guesses a version.
+  - title: Suggests next steps
+    text: Offers four different changes to try next, or edits one thing in a prompt you already have.
+
+output_shape: |
+  INTERPRETATION
+  <what it took you to mean, with what you required and what it assumed>
+
+  DIRECTION 1 <label>
+  <one copy-ready prompt>
+  DIRECTION 2 <label>
+  <prompt>
+  DIRECTION 3 <label>
+  <prompt>
+  DIRECTION 4 <label>
+  <prompt>
+
+  OPTIONAL NEXT DIRECTIONS
+  <four different refinements>
+
+  MISSING
+  <what it needed and did not get, or none>
+
+output_sample:
+  input:
+    - "Your image idea, in a sentence or two"
+    - "A reference image or set (optional)"
+    - "What must stay the same, and what to leave out (optional)"
+    - "The shape you want, such as square or tall (optional)"
+  prerequisites:
+    - "A Midjourney account, to make the pictures from the prompts"
+  output:
+    - name: "Interpretation"
+      contains: "A short reading of your idea, with what you asked for kept apart from what it assumed."
+    - name: "Direction 1 to 4"
+      contains: "Four labelled prompts, each a different treatment, each ready to paste into Midjourney."
+    - name: "Optional next directions"
+      contains: "Four different changes to try after you see the first results."
+    - name: "MISSING"
+      contains: "Anything it needed and did not get, such as a clear subject."
+
+works_best_with:
+  tools:
+    - {name: "Midjourney", why: "The prompts are written in its style, as short visual phrases in one line each."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all read a brief and a reference image well."}
+  inputs:
+    - "A reference image you like, so it can see the look you mean"
+    - "The shape you want, such as square or tall"
+    - "A list of things to leave out"
+
+terms:
+  - term: Reference image
+    meaning: A picture you attach so the AI can see the look, subject or mood you mean.
+  - term: Prompt
+    meaning: The short text you paste into Midjourney to make one picture.
+  - term: Aspect ratio
+    meaning: The shape of the picture, such as square or tall.

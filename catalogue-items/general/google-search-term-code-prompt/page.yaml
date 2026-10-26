@@ -1,33 +1,132 @@
 new_slug: google-search-term-code-prompt
 name: Google search term coding prompt
-summary: Get a coding brief to group search terms by intent and suggest negative keywords, with evidence and human review.
+summary: Get a coding brief that sorts Google Ads search terms into four groups and drafts negative keywords for wasted spend. Read-only, with tests.
 job: build-software
 headline: Google search term coding prompt
-subhead: Get a coding brief to group search terms by intent and suggest negative keywords, with evidence and human review.
+subhead: Give your coding assistant your project and your Google Ads API access. It plans code that sorts each search term into profitable, wasteful, unsure or a new theme, and drafts a paste-ready negative keyword list. Brand terms are protected. Nothing is written to your account.
 explain: |-
-  Share your project and the required feature. Get a coding brief for the search term classifier + negative keyword analyzer, with setup and test steps.
+  A Google Ads search term report shows what people typed before they saw your ad. Some of those searches make money. Some burn spend with no sale. Reading hundreds of rows by hand is slow, and a bad negative keyword can block a search that was paying for itself. This prompt gives a coding assistant a brief to build a search term classifier and a negative keyword analyzer that do the sorting for you.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The classifier puts each term in one of four groups: a profitable match, a wasteful match, a question mark that needs more data, or a new theme worth its own ad group. Your brand terms are filtered out first, as a hard rule, so you never get told to block your own name. The analyzer then drafts negative keywords, skips ones you already have, groups them into account-wide and campaign-level lists and flags any negative that would block a keyword that earns. The cut-offs for what counts as wasted spend are yours to set. The brief starts with the old course values as examples only.
+
+  The assistant writes code and tests. It does not change your account. Negative keywords come out as rows you paste into Google Ads Editor after you read them. Any weekly schedule is a proposal until you approve it. For a no-code review of one search term export, use the Search Query Analyst agent. To check API access first, use the Google Ads token and access check planner.
 when:
-  - You need a coding brief for the search term classifier + negative keyword analyzer.
-  - You need build the search term classifier + negative keyword analyzer prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - Your Google Ads search term report is too long to read by hand every week.
+  - You want a list of negative keywords you can review and paste into Google Ads Editor.
+  - A lot of your spend goes to searches that never sell and you want them found by rule.
+  - You already have a Google Ads audit engine in your code and want to add search terms to it.
+not_for:
+  - You don't have Google Ads API access. Use the Google Ads token and access check planner first.
+  - You have one export and no code. Use the Search Query Analyst agent, or the Google Ads report auditor.
+  - You want to sort keywords by results, not search terms. Use the Keyword grouping coding prompt.
+  - You want it to add the negative keywords to your account. It only drafts rows for you to review and paste.
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, or its package file and main folders
+  - Google Ads API access by name only. Customer ID, and whether you use a manager account (never tokens)
+  - Your target cost per sale or target return on ad spend
+  - Your brand terms, so they are never marked as waste
+  - The spend cut-offs you want for wasted spend, in your account currency (optional)
+  - Your audit engine's finding types and data fetcher, if you have them (optional)
 you_get:
-  - A coding brief for the search term classifier + negative keyword analyzer
-  - Required files, setup gaps and test cases
+  - A list of setup gaps before any file is written
+  - A plan for a search term classifier with four groups and a rule for each
+  - A plan for a negative keyword analyzer that removes duplicates and checks for conflicts
+  - Negative keyword rows in a paste-ready layout for Google Ads Editor
+  - Tests with made-up search terms, and a schedule proposal you approve or decline
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your coding assistant, such as Claude Code or Codex, in your project folder. A plain chat AI can only write the plan.
+  - Paste the skill. Then add your project details, your target, your brand terms and your cut-offs. Never paste a token.
+  - Read SETUP GAPS first. If your project has no audit engine yet, choose between a small version or building the audit engine first.
+  - Read BUCKET RULES and change any cut-off that is not right for your account.
+  - Check the draft negative rows against your current negatives before you paste anything into Google Ads Editor.
+  - Run the tests in your own project. Approve a weekly schedule only when you are happy with the output.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project first
+    text: Reads your folders, data fetcher and any finding types, and lists what is missing before it plans files.
+  - title: Protects brand terms
+    text: Removes any search term that contains one of your brand terms before anything is sorted.
+  - title: Sorts each search term
+    text: Marks it profitable, wasteful, unsure or a new theme, using your target and your cut-offs.
+  - title: Drafts the negative keywords
+    text: Groups wasteful terms into themes, skips negatives you already have and flags any that would block a good keyword.
+  - title: Formats the output
+    text: Lays out rows for Google Ads Editor and tells you to check the column order against an Editor export.
+  - title: Plans tests and the schedule
+    text: Writes tests on made-up terms and proposes a weekly run. It is not set up until you approve it.
+output_shape: |-
+  BASIS
+  <what was read, what is missing, nothing was run>
+
+  SETUP GAPS
+  <gap> | <why it matters> | <fix>
+
+  BUCKET RULES
+  <setting> | <starting value> | <you set it>
+
+  FILE PLAN
+  <file> | <what it does> | <inputs and outputs>
+
+  FINDINGS
+  <check ID> | <fires when> | <severity rule> | <recommendation>
+
+  NEGATIVE ROWS (draft)
+  <campaign> , <ad group> , <keyword> , <match type>
+
+  TESTS
+  <name> | <made-up terms> | <expected result>
+
+  SCHEDULE PROPOSAL
+  <when it runs> | <what it needs from you first>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your code project, or its package file and main folders
+    - Your Google Ads customer ID and target cost per sale or return on ad spend
+    - Your brand terms, and your spend cut-offs for wasted spend (optional)
+  prerequisites:
+    - A coding assistant that can open your project, such as Claude Code or Codex
+    - Google Ads API access, with a developer token and a login that can read the account
+    - A data fetcher and finding types in your project (or a small version the brief plans)
+  output:
+    - name: Setup gaps
+      contains: What is missing before any file is written, such as API access or a data fetcher.
+    - name: Bucket rules
+      contains: The cut-offs for profitable, wasteful, unsure and new-theme terms, each one yours to set.
+    - name: File plan
+      contains: The classifier, the negative keyword analyzer, the data fetch and the job that runs them.
+    - name: Findings
+      contains: Each check, when it fires, how serious it is and what it recommends.
+    - name: Negative rows
+      contains: Draft negative keywords with campaign, ad group, keyword and match type, ready to review.
+    - name: Tests
+      contains: Made-up search terms covering brand protection, all four groups and negatives that conflict.
+    - name: Schedule proposal
+      contains: A weekly run you approve or decline, and what must be set up first.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your project, reads your data fetcher and writes the files and tests in place.
+    - name: Google Ads Editor
+      why: Takes the negative rows by paste, so you review changes before they reach your account.
+    - name: Google Ads API
+      why: The source of the search term data. Needs a developer token and a login that can read the account.
+  inputs:
+    - A recent search term export, so you can compare the sorted groups with what you see
+    - A list of your current negative keywords
+terms:
+  - term: Search term
+    meaning: The exact words a person typed into Google before your ad showed.
+  - term: Negative keyword
+    meaning: A word or phrase that stops your ad showing for searches that include it.
+  - term: Match type
+    meaning: How closely a search must fit a keyword. Exact, phrase and broad are the three.
+  - term: Brand term
+    meaning: Your own name or product name. Searches with it are often your best, so they are never blocked.
+  - term: Google Ads Editor
+    meaning: Google's free desktop app for changing many ads, keywords and negatives at once.
+  - term: Target cost per sale
+    meaning: The most you want to pay for one sale. Wasted spend is judged against it.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

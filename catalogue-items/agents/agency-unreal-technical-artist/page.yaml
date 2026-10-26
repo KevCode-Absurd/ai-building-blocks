@@ -1,0 +1,128 @@
+name: Unreal Technical Artist agent
+summary: Plan Unreal Engine 5 materials, Niagara effects and PCG graphs that fit your frame budget, with Low to High presets and a cost check.
+headline: Unreal Technical Artist agent
+subhead: Give it your visual goal, target platform and frame budget. It plans the material setup, the Niagara effect and the PCG graph. You get a build plan, quality presets and a performance check list.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Unreal Engine 5 gives you three big tools for visuals: the Material Editor, Niagara for effects and PCG for filling a world. Without limits, each one eats frame time. This agent plans each one against a budget before you build it.
+
+  For materials it plans reusable Material Functions and Material Instances. It counts Static Switches, because each one doubles the number of shader versions. For Niagara it picks CPU or GPU, caps the particle count and writes Low, Medium and High presets. For PCG it plans the steps, the keep-out zones and the settings designers can tune.
+
+  It follows the Unreal Technical Artist profile from Agency Agents. It cannot open Unreal or run Unreal Insights. The profile's budgets, such as instruction counts, are starting values. Check them in your Material Stats window and for your engine version.
+when:
+  - You need a master material and instances for landscape, rock or props, and want the plan first.
+  - A Niagara effect drops frames on console and you want to rebuild it with limits.
+  - You want a PCG graph for trees or rocks that designers can tune.
+  - A material looks good, but its instruction count keeps climbing.
+not_for:
+  - You need World Partition, landscape layers or HLOD for an open world. Use the Unreal World Builder agent.
+  - You need gameplay code or systems in C++. Use the Unreal Systems Engineer agent.
+  - You use Unity. Use the Unity Shader Graph Artist agent.
+  - You need art budgets that work in any engine. Use the Technical Artist agent.
+you_give:
+  - Your Unreal Engine 5 version and target platforms
+  - Your frame rate target and the weakest hardware you support
+  - The visual goal, as reference images or a plain description
+  - "What to plan: a landscape material, an impact effect or a forest, for example"
+  - A Material Stats screenshot or an existing graph (optional)
+you_get:
+  - A material plan with Material Functions, instances and a Static Switch count
+  - A Niagara plan with CPU or GPU choice, particle cap and Low, Medium and High presets
+  - A PCG graph plan with steps, keep-out zones and designer settings
+  - A cost check for instructions, texture samples and shader versions
+  - A profiling plan for Unreal Insights and the GPU profiler
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md, then references/source-agent.md, then your brief into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your engine version, platform and frame rate target first. Then add the goal and what you want planned.
+  - Say "Plan this. Show the budget for each part and mark any number you cannot tie to my target."
+  - Read the cost check first. If a part is over, ask for a cheaper version before you build.
+  - "Build in Unreal in this order: Material Functions, then master materials, then Niagara presets, then PCG."
+  - Check Material Stats and Unreal Insights in the editor. Paste the results back to review them.
+how_it_works:
+  - title: Fix the brief
+    text: It confirms engine version, platform, frame rate target, quality tiers and the goal. Gaps are asked once, then marked MISSING.
+  - title: Plan the materials
+    text: Repeated logic goes into Material Functions. Variation goes into Material Instances. Static Switches are listed and justified.
+  - title: Plan the effects
+    text: It picks CPU or GPU for each Niagara system, caps particles and writes the three quality presets.
+  - title: Plan the PCG graph
+    text: It lists the steps from sampling to spawning, the keep-out zones and the settings exposed to designers.
+  - title: Set LOD and Nanite rules
+    text: It says which meshes use Nanite, which need hand-made LODs and where culling distances apply.
+  - title: Check the cost
+    text: It lists what to measure in Material Stats and Unreal Insights, with a budget for each.
+output_shape: |-
+  VISUAL TECH BRIEF
+    Goal <> | Platform <> | Frame rate target <> | Quality tiers <>
+  MATERIAL PLAN
+    <master material> | <Material Functions> | <instance parameters> | <Static Switches and why> | <Quality Switch tiers>
+  NIAGARA PLAN
+    <system> | <CPU or GPU, with the reason> | <max particle count> | <modules> | <renderer and overdraw cap>
+    Scalability: High <> | Medium <> | Low <>
+  PCG GRAPH PLAN
+    <step number> | <node> | <setting> | <why>
+    Keep-out zones <> | Settings exposed to designers <>
+  LOD AND NANITE NOTES
+    <asset class> | <Nanite or manual LOD> | <cull distance>
+  COST CHECK
+    <item> | <measured or estimated> | <budget> | <status>
+  PROFILING PLAN
+    <what to measure> | <tool> | <where> | <budget>
+  OPEN QUESTIONS AND CHECKS NOT RUN
+output_sample:
+  input:
+    - Your Unreal Engine 5 version and target platforms
+    - Your frame rate target and weakest hardware
+    - The visual goal, as references or a description
+    - A Material Stats screenshot or existing graph (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Unreal Engine 5, to build and measure the plan (the AI does not open it)
+  output:
+    - name: Material plan
+      contains: Master material, Material Functions, instance parameters, Static Switches and quality tiers.
+    - name: Niagara plan
+      contains: CPU or GPU choice, particle cap, modules and Low, Medium and High presets for each system.
+    - name: PCG graph plan
+      contains: Each step from sampling to spawning, keep-out zones and settings designers can tune.
+    - name: LOD and Nanite notes
+      contains: Which meshes use Nanite, which need manual LODs and the cull distances.
+    - name: Cost check
+      contains: Instructions, texture samples and shader versions against a budget, with a status for each.
+    - name: Profiling plan
+      contains: What to measure in Unreal Insights and the GPU profiler, and where.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scope
+    how: Ask for one of materials, effects or PCG at a time to get a shorter plan.
+  - what: Platform
+    how: Name the lowest platform so the Low preset fits it.
+improve:
+  - Paste back your Material Stats numbers and Unreal Insights results, and ask which part to cut first.
+terms:
+  - term: Material Function
+    meaning: A reusable piece of a material graph you can drop into many materials.
+  - term: Niagara
+    meaning: Unreal's tool for particle effects such as dust, fire and smoke.
+  - term: PCG
+    meaning: Procedural Content Generation. A graph that places things like trees and rocks by rules.
+  - term: Nanite
+    meaning: An Unreal feature that handles mesh detail for you, so you skip hand-made LODs.
+  - term: Static Switch
+    meaning: A material option that creates a whole extra copy of the shader when used.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can plan the graphs. Pick one that can read screenshots of your Material Editor or Niagara.
+  inputs:
+    - A Material Stats window screenshot
+    - An Unreal Insights capture of the slow area
+    - Reference images for the look

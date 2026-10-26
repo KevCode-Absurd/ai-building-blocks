@@ -1,6 +1,6 @@
 new_slug: subscriber-retention-calendar
 name: "Subscriber retention calendar"
-summary: "Give it your products and sending habits. Get gift timing, send rules and a monthly subscriber calendar."
+summary: "Plan gifts and sends to keep subscribers. Give it your churn and gift costs. You get a subscriber retention calendar with send rules and a sale offer."
 job: keep-customers
 thinking: medium
 thinking_why: "It turns your churn numbers and gift options into a set of rules and a calendar, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Your subscribers get the same sale emails as everyone else.
   - You know when subscribers cancel by order number, or you suspect months 2, 4 and 6.
   - A sale is coming and you want subscribers to get their own offer instead of a code that tempts them to cancel and re-buy.
+not_for:
+  - "You run a one-off store with no subscriptions: use a simple post-purchase email series from your email tool instead."
+  - "You want to find why subscribers cancel before you plan anything: ask a few cancelled customers, or look at your cancel reasons in your subscription app."
+  - "You sell something that is not used up, such as furniture: a gift every few orders will not fit, so plan reorder reminders instead."
 
 you_give:
   - Subscriber churn by month or order number
@@ -35,6 +39,29 @@ how_to_use:
   - List the gifts you could give and what they cost per order.
   - Paste your next 90 days of planned sends and sale dates.
   - Measure cancels after each subscriber send and keep what lowers them.
+output_sample:
+  input:
+    - Your subscriber churn by month or order number
+    - Your gift options and what each costs
+    - Your campaign calendar for the next 90 days
+    - Other products you could sample or offer as add-ons (optional)
+  output:
+    - name: RISK ORDERS
+      contains: The order numbers where your subscribers leave, taken from your data or from the months 2, 4 and 6 starting guess.
+    - name: ORDER-BY-ORDER PLAN
+      contains: For each risk order, the gift and its cost, the reminder version and any message.
+    - name: SEND RULES
+      contains: Which messages subscribers get, what they are left out of, and a monthly cap.
+    - name: CALENDAR (next 90 days)
+      contains: One to three subscriber campaigns a month, plus a giveaway rule with a legal check.
+    - name: SALE DAY OFFER FOR SUBSCRIBERS
+      contains: An add-on product, its discount and how it joins the next subscription order.
+    - name: MEASURE
+      contains: How to track cancels in the days after each send.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none.
+    - name: MISSING
+      contains: Anything you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: Finds the risk orders

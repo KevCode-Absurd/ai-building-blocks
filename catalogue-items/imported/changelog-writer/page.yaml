@@ -2,33 +2,98 @@ thinking: low
 thinking_why: It sorts commits into groups.
 new_slug: changelog-writer
 name: Changelog writer
-summary: Point it at a repo. Get a clear changelog built from the git history.
+summary: Turn your git history into a plain changelog grouped by day and week, with breaking changes flagged and each line linked to its commit.
 job: build-software
 headline: Changelog writer
-subhead: A readable changelog built straight from your git history, so you can
-  see what changed this week without reading every commit. Point it at a repo
-  and it groups changes by day for the last week, then by week.
+subhead: Point it at a git repository and it reads the commit history. It sorts each change by type, merges related commits into one clear line and groups the lines by day for the last week, then by week. You get a changelog you can share.
 explain: |
-  A readable changelog built straight from your git history, so you can see what changed this week without reading every commit. Point it at a repo and it groups changes by day for the last week, then by week.
+  When you ask "what changed this week?", the answer is buried in dozens of commit messages. This skill reads the git history and writes the changelog for you, so you can see recent work without reading every commit.
 
-  Each commit is sorted into a type: feature, fix, refactor, docs, config, dependency or breaking change. Related commits are merged into one clear line, written in your project's own terms and aimed at users. Breaking changes get a prominent note with migration advice. Each claim links back to its commit so you can check it. You need access to the repository's history.
+  It sorts each commit as a feature, fix, refactor, docs, config, dependency or breaking change. It merges related commits into one line, written for users and in your project's own words, taken from your README. Breaking changes get a prominent note with migration advice. Every claim links to the commit it came from, so you can check it.
+
+  It reads recent history, so it suits catch-up and team updates. For notes tied to a tagged version, use the Release notes writer.
 when:
   - A teammate asks what changed since last week.
   - You return to a project after a break and need to catch up.
   - You want a user-facing summary of recent development.
   - You need breaking changes called out before an upgrade.
+not_for:
+  - "You need notes for one tagged release: use the Release notes writer."
+  - "You want a single entry for one change: use the Changelog entry writer."
+  - "You want versions and the changelog updated automatically on each release: use the Version and changelog automator."
+  - "Your app is on the App Store or Google Play: use the App Store release notes writer."
 you_give:
-  - A git repository
-  - The time range to cover (optional)
-  - A README for project terms (optional)
+  - A git repository, or the output of its git log
+  - The time range to cover (optional, the last 7 days by default)
+  - Your README, so it uses your project's own terms (optional)
 you_get:
-  - A changelog grouped by day and week
-  - Changes sorted by type
+  - A changelog with one section per day for the last week, then one per week
+  - Each change sorted by type
+  - Related commits merged into one plain line
   - Breaking changes with migration notes
-  - Links from each line to its commit
+  - A commit link on every line
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open an AI that can read your repository, such as Claude Code. If yours cannot, run git log in a terminal and paste the output into a chat.
+  - Paste this skill. Say which repository to read and the time range you want.
+  - Paste your README or list the main terms of your project, so the lines use your words.
+  - Read the breaking changes first. Check each migration note against the code.
+  - Open two or three commit links to confirm a line says what the commit did. Fix any that overstate it.
+  - Paste the result into your release notes, a team update or a message to users.
+how_it_works:
+  - title: Read the history
+    text: It examines the commits, dates, authors and messages in the range you set.
+  - title: Group by time
+    text: It groups the last 7 days by day, and anything older by week.
+  - title: Sort each commit
+    text: It marks each commit as a feature, fix, refactor, docs, config, dependency or breaking change.
+  - title: Write the lines
+    text: It merges related commits into one line for users, in your project's terms, with a link to each source commit.
+  - title: Flag breaking changes
+    text: It puts breaking changes in a prominent note with migration advice.
+output_shape: |
+  Breaking changes
+    <change>: <what to do>. Commit <link>
+  <Day or week heading>
+    Features
+      <plain line>. Commit <link>
+    Fixes
+      <plain line>. Commit <link>
+    Other
+      <refactor, docs, config or dependency line>. Commit <link>
+  Not covered
+    <commits skipped or unclear>
+output_sample:
+  input:
+    - A git repository, or pasted git log output
+    - The time range to cover (optional)
+    - Your README for project terms (optional)
+  prerequisites:
+    - An AI that can read your repository, or a git log you paste in
+  output:
+    - name: Breaking changes
+      contains: Changes that need action before upgrading, each with a migration note.
+    - name: Daily sections
+      contains: One section for each of the last 7 days, with that day's changes in plain lines.
+    - name: Weekly sections
+      contains: Older changes grouped by week.
+    - name: Type groups
+      contains: Within each section, changes sorted into features, fixes, refactors, docs, config and dependencies.
+    - name: Commit links
+      contains: A link on each line to the commit it came from, so you can check it.
+    - name: Not covered
+      contains: Commits it skipped or could not understand, so nothing is hidden.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your repository and git history directly.
+    - name: Any chat AI
+      why: Works if you paste the output of git log.
+  inputs:
+    - A README with your project's terms
+    - Pull request titles, which often describe a change better than commit messages
+    - The names of your main features, so lines use the same words
+terms:
+  - term: Commit
+    meaning: One saved change in git, with a message and a date.
+  - term: Breaking change
+    meaning: A change that can stop existing code or setups from working until they are updated.

@@ -1,26 +1,28 @@
 slug: product-mix-capacity-checker
 name: Product mix capacity checker
-summary: A proposed product mix contribution and capacity check
+summary: Check if a plan for two products fits your tightest machine or team. Get hours needed, hours short or spare, and total contribution.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - manufacturing-yield-cost-bridge
+  - service-utilization-margin-builder
+  - restaurant-portion-cost-builder
 origin: own
 version: 1.0.0
 added: 2026-10-22

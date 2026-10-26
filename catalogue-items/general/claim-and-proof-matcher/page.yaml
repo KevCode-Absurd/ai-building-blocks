@@ -1,6 +1,6 @@
 new_slug: claim-and-proof-matcher
 name: Claim evidence checker
-summary: Share your copy and evidence. See which claims are supported, which go too far and how to fix them.
+summary: Check ad copy against your proof. See which claims are backed, which go too far, and how to fix each gap without making up evidence.
 job: check-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a page or ad ready and want to know which claims a buyer will doubt.
   - You are about to run ads in a market with strict claim rules.
   - You have lots of proof but it is not sitting next to the claims it backs.
+not_for:
+  - "You need legal or platform sign-off on a finished page: ask a compliance reviewer, because this score does not clear any rule."
+  - "You want to plan or tighten your offer: use the Offer checklist reviewer."
+  - "You have no proof at all yet: collect results, reviews and numbers first, or every claim will come back as a gap."
 you_give:
   - Your ad or page copy
   - "Your proof: test results, numbers, reviews, awards, facts (optional)"
@@ -24,9 +28,35 @@ you_get:
   - An evidence-match score with evaluated/total coverage
   - A fix for each gap and any separate rule checks still needed
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code, files or paid tools are needed.
+  - Paste your ad or page copy in the order a reader sees it.
+  - Paste your proof under it, with where each piece comes from and its date. Add your offer terms if you have them.
+  - Ask your AI to check the claims against the proof.
+  - Read the gaps first. Check that no fix adds a fact you cannot back.
+  - Use the fixes in your copy. Get a separate rule check if your market restricts claims.
+output_sample:
+  input:
+    - Your ad or page copy, in the order a reader sees it
+    - Your proof, with sources and dates (optional)
+    - Your offer terms (optional)
+    - Reviews that show what buyers doubt (optional)
+  output:
+    - name: Draft reviewed
+      contains: The exact draft or version that was checked, so the score matches the text you have.
+    - name: Claims and proof table
+      contains: Each stated and implied claim with its proof, source, date, distance from the claim and a verdict.
+    - name: Three reasons why
+      contains: Whether the copy says why you beat other choices, why the claim is true, and why to act now.
+    - name: Worn-out words and marks
+      contains: Exclamation marks and stock phrases that carry no fact.
+    - name: Evidence-match score
+      contains: Matched claims out of those checked, with coverage and unchecked claims shown apart.
+    - name: Fixes
+      contains: For each gap, whether to shrink the claim, add real proof or move proof, with the new text.
+    - name: Missing
+      contains: Proof the seller still needs to find, marked MISSING and never invented.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 how_it_works:
   - title: Lists every claim
     text: Lists every stated claim, headline first, and every claim the copy implies.

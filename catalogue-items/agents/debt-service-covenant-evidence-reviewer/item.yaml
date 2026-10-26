@@ -1,33 +1,26 @@
 slug: debt-service-covenant-evidence-reviewer
 name: Debt service covenant evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Check loan covenant cash cover for each test period. See the headroom above the minimum and the fixed charge check, rebuilt when a number changes.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - review-contractual-debt-service-cash-tests
   - debt-service-covenant-headroom-checker
 steps:
   - uses: review-contractual-debt-service-cash-tests
-    note: Run the governing workflow when A test-period cash figure, payment schedule or signed covenant definition changes.
+    note: Run the governing workflow when a test-period cash figure, a payment schedule or a signed covenant definition changes.
   - uses: debt-service-covenant-headroom-checker
-    note: If only one test period changes, rebuild that period from its source cash and service components and compare the new minimum headroom with the prior dated result. A proposed waiver never replaces the signed threshold.
+    note: If only one test period changes, rebuild that period from its source cash and debt service, then compare the new lowest headroom with the one in the last review. A proposed waiver never replaces the signed threshold.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It gives no legal opinion on a breach, contacts no lender and is not a substitute for a qualified credit or legal review.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

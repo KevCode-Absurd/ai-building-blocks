@@ -1,6 +1,6 @@
 new_slug: holding-value-change-checker
 name: "Holding value change checker"
-summary: "Paste a holding and why you bought it. Get what changed in the business and a keep, watch or weak mark."
+summary: "Check if a falling holding got worse as a business. Paste what you paid and why. Get a then-and-now table and a keep, watch or weak mark."
 job: money-and-investing
 thinking: medium
 thinking_why: "It compares then and now on business facts and writes a mark. The care is in keeping the price out of the verdict."
@@ -17,6 +17,10 @@ when:
   - A holding has fallen and you do not know if the business is to blame.
   - You bought a few years ago and have not looked at the business since.
   - You want to hold on to winners and weak holdings for good reasons, not hope.
+not_for:
+  - "You want to check a fund, crypto or a holding you bought under a year ago: ask a licensed financial adviser, or read the fund's own reports."
+  - "You want to know whether to buy or sell: this gives a method, not advice, so ask a licensed financial adviser."
+  - "You want a day-to-day price view: use a price chart, since this tool judges the business, not the price."
 
 you_give:
   - The holding, what you paid and when
@@ -35,6 +39,27 @@ how_to_use:
   - Paste the holding, your purchase reasons and the latest figures.
   - Answer the would-you-buy-today question before you look at the price.
   - Take the plan to "Price drop rules writer".
+output_sample:
+  input:
+    - The holding, what you paid and when
+    - Why you bought it and what you assumed then
+    - Five years of profit, debt, dividends and share count
+    - What you know about rivals and customers now (optional)
+  output:
+    - name: Purchase case
+      contains: Why you bought, what you assumed, and what would prove the case wrong.
+    - name: Then and now table
+      contains: Profit, debt, dividends, share count and rivals, each marked better, same or worse.
+    - name: Would I buy it today, price hidden
+      contains: A yes, no or unsure answer with a reason, written before the price is shown.
+    - name: Mark
+      contains: Keep, watch or weak, based on the facts and not on the price move.
+    - name: Plan for watch or weak
+      contains: What the business must show, by when, and what a worse result means.
+    - name: Across your holdings
+      contains: A count of keep, watch and weak marks.
+    - name: Missing and checks missed
+      contains: Facts you did not supply, and any check the skill could not pass.
 
 how_it_works:
   - title: Records the case at purchase

@@ -1,15 +1,15 @@
 new_slug: code-walkthrough-writer
 name: "Code walkthrough writer"
-summary: "Paste working code. Get an explanation for people, with each piece of code placed in reading order."
+summary: "Turn working code into a code walkthrough anyone can follow, with each piece of code beside the reason it exists, in reading order."
 job: build-software
 thinking: medium
 thinking_why: "It reads code closely and orders ideas for a reader, but the steps are fixed."
 
 headline: "Code walkthrough writer"
-subhead: Paste code that works, or a script, formula or automation you built. It lists the ideas a reader must hold, writes each as a short passage with its code piece beside it, and hands back a walkthrough a newcomer can follow without you in the room.
+subhead: Paste code that works, such as a script, a formula set or an automation you built. It lists the ideas a reader must hold and writes each as a short passage with its code beside it. You get a code walkthrough a newcomer can follow without you in the room.
 
 explain: |
-  Code is written in the order the computer needs it. A person needs a different order. They need the big idea first, then the small ideas it rests on, each one with the reason it is there. Comments on single lines rarely do that, so the next person has to guess.
+  A code walkthrough explains your code to a person, in the order they need to meet each idea. It helps when you must explain code to a new hire, a client or your future self. Code is written in the order the computer needs it. A person needs a different order. They need the big idea first, then the small ideas it rests on, each one with the reason it is there. Comments on single lines rarely do that, so the next person has to guess.
 
   This skill reads your code and lists the ideas in the order a newcomer should meet them. It writes each as a short passage to a human reader and places the matching code inside it. It names every piece, explains what happens when a user makes a mistake, and marks which claims are proved and which are only tested. It reads the result aloud to an imagined newcomer and fixes each place they would stop.
 
@@ -17,6 +17,13 @@ when:
   - You wrote something that works and nobody else can follow it.
   - A new hire or a client has to maintain your script, sheet formulas or automation.
   - You want a handover document that stays true to the code.
+  - A client asks "how does this work?" and the comments in the file don't say.
+
+not_for:
+  - You have not run the code yet, or you are not sure it works. A walkthrough would explain a guess. Test it first.
+  - You want the code tidied or made safer. Use the Function purity refactor planner.
+  - You want a note about a whole project, a person or a process, not code. Use the Handover note writer.
+  - You want a spreadsheet explained. For a workbook with sheets and macros, use the Excel workbook handover writer.
 
 you_give:
   - The code, script or formula set, pasted in full
@@ -30,7 +37,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your code in full. Say who will read the walkthrough.
+  - Paste your code in full. Say who will read the walkthrough. With no code, it asks for it in one line and stops.
   - Tell it which parts you are not sure about, so they are marked and not guessed.
   - Read the walkthrough as a newcomer. Note each place you got lost and send those back.
   - Run the code again against the walkthrough to see that nothing in the text disagrees with it.
@@ -74,6 +81,30 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - Your working code, pasted in full
+    - Who will read the walkthrough, and what they already know (optional)
+    - What the code is for, and any parts you are unsure about (optional)
+    - Test results you already have (optional)
+  prerequisites:
+    - Code you have run and believe works
+  output:
+    - name: What this does and for whom
+      contains: Two sentences on the job the code does and who it serves.
+    - name: The ideas, in order
+      contains: A numbered list of the ideas a reader must hold, each building on the ones before.
+    - name: Walkthrough
+      contains: One short passage per idea, with the matching code piece named and placed beside its reason.
+    - name: When the user makes a mistake
+      contains: Each wrong input, such as empty or out of range, and whether the code refuses, fixes or fails.
+    - name: Proved or only tested
+      contains: Each claim that the code works, marked proved, tested or not checked.
+    - name: Missing
+      contains: Parts the code does not explain on its own, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check that failed, or "none".
 
 tweaks:
   - what: Who the reader is

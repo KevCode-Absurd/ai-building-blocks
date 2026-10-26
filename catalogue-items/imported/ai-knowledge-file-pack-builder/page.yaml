@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: ai-knowledge-file-pack-builder
 name: AI knowledge file pack builder
-summary: Share knowledge and source notes. Get linked files your team and AI tools can read and reuse.
+summary: "Turn your notes and facts into an Open Knowledge Format folder: linked Markdown files your team and AI tools can read, reuse and check."
 job: document-work
 headline: AI knowledge file pack builder
 subhead: Share facts, definitions, or steps you want to reuse. It writes linked Markdown files in Open Knowledge Format v0.1. You get a portable knowledge folder with clear document types and sources. The optional Python checker covers a limited set of rules.
+not_for:
+  - "You want a normal wiki or help pages for people: use a plain wiki or docs tool instead."
+  - "You need to check full YAML syntax: use a YAML parser, because the bundled checker only reads a simple subset."
+  - "You have one short note to save: keep it in a plain document, no folder needed."
 you_give:
   - The knowledge, sources, document types, stable folder names, and intended readers.
 you_get:
@@ -22,5 +26,30 @@ works_best_with:
     - name: File access; Python for optional checks
       why: The bundled helper reads a simple subset of YAML. A full YAML parser is needed to check complete YAML syntax.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder if your AI can read files.
+  - Paste your notes, facts and sources. Say who will read the folder and what each topic should be called.
+  - Ask your AI to write the folder. Check that each file has a type and that links point to real files.
+  - To run the checker, you need an AI or a computer that can run Python 3.8 or newer with PyYAML installed. Create each folder before you add files to it.
+  - Next, save the folder in a repo or shared drive. Point your AI tool's file access at its index.md.
+output_sample:
+  input:
+    - Your notes, facts, definitions or steps to reuse
+    - Links or names of your sources
+    - The kind of document each topic should be (optional)
+    - Who will read the folder (optional)
+  prerequisites:
+    - An AI that can create files, to get the folder
+    - Python 3.8 or newer with PyYAML, only if you want to run the optional checker
+  output:
+    - name: Concept files
+      contains: One Markdown file per idea, each with a type in its header and a body that links to related files.
+    - name: Folders and file paths
+      contains: Stable names that group files by topic, so links keep working when you add more.
+    - name: index.md
+      contains: An optional list of the files in each folder, with a short line about each one.
+    - name: log.md
+      contains: An optional change history with dated headings in year-month-day form.
+    - name: Concept template
+      contains: A starter file with the suggested header fields and body sections, such as Schema, Examples and Citations.
+    - name: Format review notes
+      contains: What passed and what failed on types, reserved file names and links, from the optional checker.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It uses a small set of well-known read calls.
 new_slug: data-file-reader-and-writer
 name: Data file reader and writer
-summary: Name your CSV, Excel, JSON or Parquet file. Get it read or saved
-  correctly, with errors fixed.
+summary: Read or save a CSV, Excel, JSON or Parquet file in MATLAB without silent damage. Get working code, import options and corruption checks.
 job: work-with-files
 headline: Data file reader and writer
-subhead: Your CSV, Excel, JSON, Parquet or XML file loads correctly in MATLAB
-  and saves back the way you need, with no silent damage. Many import bugs do
-  not show errors, they just change your numbers.
+subhead: Your CSV, Excel, JSON, Parquet or XML file loads correctly in MATLAB and saves back the way you need, with no silent damage. Many import bugs do not show errors, they just change your numbers.
 explain: |
   Your CSV, Excel, JSON, Parquet or XML file loads correctly in MATLAB and saves back the way you need, with no silent damage. Many import bugs do not show errors, they just change your numbers.
 
@@ -18,6 +15,10 @@ when:
   - MATLAB says file not found but the file is right there.
   - You need data pulled from a web address into a table.
   - Old file reading code needs updating to modern commands.
+not_for:
+  - "Your file is too big for memory: use a tall array or datastore in MATLAB, or a database tool."
+  - "You need to query a database over ODBC or JDBC: use MATLAB's database tools instead."
+  - "You want to read images or audio: use MATLAB's own image or audio read commands."
 you_give:
   - The file or its address
   - What you want to read or save
@@ -29,8 +30,29 @@ you_get:
   - Corruption checks on loaded data
   - Explanation of any error
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Check your MATLAB release. Some functions need R2019a or later.
+  - Open your AI and paste this skill's instructions.
+  - Add your file path or web address, and say whether you want to read or save.
+  - Paste the error message and any locale details if you have them.
+  - Run the code in MATLAB, or let your AI run it if it can.
+  - Read the corruption checks before you trust the numbers. If your AI uses the Parquet datastore workaround, nulls become 0, so confirm that is fine for your data.
+output_sample:
+  input:
+    - The file path or web address of your data file
+    - "What you want to do: read it or save it, and in which format"
+    - The error message you see (optional)
+    - Locale or encoding details, such as comma decimals (optional)
+  prerequisites:
+    - MATLAB, which is a paid product, and an AI that can run it
+    - Your MATLAB release, since some functions need R2019a or later
+  output:
+    - name: Import code
+      contains: Working MATLAB code that reads or writes your file with the right delimiter, locale and encoding.
+    - name: Import options
+      contains: A short list of the settings chosen for your file, such as delimiter, decimal sign and variable types.
+    - name: Corruption checks
+      contains: A pass or fail list for stray NaN values, 65535 placeholders and numbers read as text.
+    - name: Error explanation
+      contains: A plain reading of any misleading error message and the real cause behind it.
+    - name: Modern replacement code
+      contains: Old fopen and fgetl code rewritten with readlines and writelines, when your code uses them.

@@ -16,6 +16,29 @@ use_cases:
   - "Check a mailing or email for layout habits that make it hard to read"
   - "Make sure the copy looks and sounds like the product it sells"
   - "Write a page break or cliffhanger that carries the reader to the next part"
+not_for:
+  - "You want brand positioning or a clear category: use the Al Ries mind, or the April Dunford mind for a pitch built on why the right buyers should choose you."
+  - "You want long sales pages built on proof and real concerns: use the Clayton Makepeace mind."
+  - "You need legal, medical or regulated-claims copy, or tests tuned to one email platform: ask a current specialist or a compliance reviewer."
+output_sample:
+  input:
+    - Your mailing, email, landing page or offer text
+    - A line on who the reader is and what you sell
+    - Your current subject line or envelope line (optional)
+    - "The medium you use: print mail, email or web (optional)"
+  output:
+    - name: Verdict
+      contains: A short, witty read on how fast your piece would be thrown away, and why.
+    - name: New envelope or subject lines
+      contains: A handful of options, each built around a question the reader wants to answer.
+    - name: Opening rewrite
+      contains: A fresh first paragraph that starts from the reader's side, not yours.
+    - name: Clearer offer
+      contains: Free and savings stated plainly and more than once, with savings in money terms.
+    - name: Layout fixes
+      contains: A short list of type and design changes that make the piece easier to read.
+    - name: Read-aloud advice
+      contains: Who to read the piece to before you send it, so a fault-finder can pounce.
 seats:
   - {seat: "The envelope that gets opened", asks: "What on the outside makes this person stop, look and want to open it right now?"}
   - {seat: "Wit that sells", asks: "Where is the surprise or the smile that makes this worth reading, and does it still sell?"}

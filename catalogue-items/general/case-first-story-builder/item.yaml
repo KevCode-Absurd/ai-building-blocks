@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: voc_reviews, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: brief}
 origin: rebuilt

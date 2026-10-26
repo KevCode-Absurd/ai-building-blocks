@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set structure and writes long copy.
 new_slug: wordpress-blog-writer
 name: WordPress blog writer
-summary: Give it a keyword. Get a full SEO blog post with tables, FAQ and
-  optional Yoast fields, ready for WordPress.
+summary: Write an SEO blog post for WordPress from one keyword. You get a long article with tables, an FAQ and optional Yoast and schema fields.
 job: get-found-in-search
 headline: WordPress blog writer
-subhead: A full blog post built for search and ready to paste into WordPress.
-  You give a keyword and get a long, structured article with the extras that
-  usually take another hour.
+subhead: A full blog post built for search and ready to paste into WordPress. You give a keyword and get a long, structured article with the extras that usually take another hour.
 explain: |
   A full blog post built for search and ready to paste into WordPress. You give a keyword and get a long, structured article with the extras that usually take another hour.
 
@@ -18,6 +15,10 @@ when:
   - Your posts lack tables and an FAQ.
   - You want Yoast fields filled in with the post.
   - You run a content calendar and need consistent structure.
+not_for:
+  - "You need a product page, landing page or sales copy: ask your AI for plain sales copy, or use a copywriter."
+  - "You need news or a time-sensitive story: write it yourself or with a reporter, because this skill can't confirm fresh facts."
+  - "You still need a plan for which keywords to target: build a simple keyword list first, then come back with one keyword."
 you_give:
   - Post title
   - Primary keyword
@@ -31,7 +32,34 @@ you_get:
   - Yoast title, description and slug (optional)
   - JSON-LD schema (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Add your title, main keyword, search intent and niche. Say if you want Yoast fields, schema and how many images.
+  - Paste any sources you want used, each with a link. Your AI should cite only those.
+  - Read the post and check every fact and number against your sources.
+  - Copy the post into WordPress. Paste the Yoast fields and schema into their boxes if you asked for them.
+output_sample:
+  input:
+    - Your post title
+    - Your main keyword
+    - "Search intent: informational, commercial or transactional"
+    - Your niche or industry
+    - Sources you want cited, with links (optional)
+  prerequisites:
+    - Web browsing is optional. Without it, the skill says so and cites only what you paste.
+  output:
+    - name: Contents
+      contains: A short table of contents that lists each section of the post in order.
+    - name: Blog post
+      contains: The title, introduction, core sections, tables, misconceptions, FAQ and conclusion, written in short, plain sentences.
+    - name: Truth Box
+      contains: A table of 5 key points and an insight for each, placed right after the introduction.
+    - name: Common Misconceptions
+      contains: Three myths about the topic, each with a simple correction.
+    - name: FAQ
+      contains: Five real reader questions with short, direct answers.
+    - name: Image SEO
+      contains: Alt text, title, caption, description and placement for each image you ask for, including a featured image.
+    - name: Yoast SEO section
+      contains: Focus keyphrase, SEO title, slug, meta description, and social title and description. Only if you ask.
+    - name: Schema markup
+      contains: JSON-LD for the blog post and the FAQ, with placeholder links. Only if you ask.

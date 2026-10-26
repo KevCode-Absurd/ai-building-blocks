@@ -1,6 +1,6 @@
 new_slug: weekly-status-update-writer
 name: Weekly status update writer
-summary: Paste what got done, what is stuck and what you need. Get a one-page status update.
+summary: Write a weekly status update from your notes. Get a one-page report with an overall call, risks and the decisions you need, in under 250 words.
 job: document-work
 thinking: low
 thinking_why: It fills a fixed one-page layout from your updates.
@@ -11,6 +11,10 @@ when:
   - A weekly update is due and you are short on time.
   - Your last update was too long to read.
   - You need a decision and want it noticed.
+not_for:
+  - "You need a full report with every check: use the Status report writer."
+  - "You are writing an incident report or a formal board pack: ask a person who owns that format, or use the Status report writer."
+  - "You have no updates yet: gather your notes first, then come back."
 you_give:
   - The period and project
   - Your updates
@@ -24,6 +28,26 @@ how_to_use:
   - Under it, paste the period, the project and your updates.
   - Send it and read the result.
   - Send it at the same time each week, so people look for it.
+output_sample:
+  input:
+    - The period and project
+    - "Your updates: what got done, what is in progress, problems and decisions you need"
+    - Who reads it (optional)
+  output:
+    - name: STATUS
+      contains: One word, On track, At risk or Off track, and one sentence on why.
+    - name: DONE
+      contains: What got finished, written as results and not as activity.
+    - name: IN PROGRESS
+      contains: Open items, each with an owner and a date.
+    - name: RISKS
+      contains: What could go wrong, the effect, and what you are doing about it.
+    - name: DECISIONS NEEDED
+      contains: Each question, the date it is needed by, and your recommendation.
+    - name: NEXT
+      contains: The top three things for the next period.
+    - name: MISSING
+      contains: Lines that flag any facts you did not give, so nothing is invented.
 how_it_works:
   - title: Call it
     text: One word and one reason, first.

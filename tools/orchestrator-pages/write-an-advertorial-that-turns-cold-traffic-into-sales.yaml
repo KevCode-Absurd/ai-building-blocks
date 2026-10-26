@@ -1,6 +1,6 @@
 new_slug: write-an-advertorial-that-turns-cold-traffic-into-sales
 name: Write an advertorial that turns cold traffic into sales
-summary: Give it your product facts and customer reviews. Get an advertorial built on one big idea and checked for story and claims.
+summary: Write an advertorial for cold traffic. Give it your product facts and reviews. You get a story-led page built on one big idea, then checked.
 job: write-landing-page
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your ads send cold visitors to a page that does not explain the product well enough to sell it.
   - Your product needs explaining, such as a new type of product or one with a real mechanism.
   - Your ads get clicks from people who do not know the problem your product solves.
+not_for:
+  - "You have no customer reviews yet: write a plain product page with the Ad-matched landing page writer, then collect reviews first."
+  - "You want a short page that matches one ad: use the Ad-matched landing page writer."
+  - "You sell a product that needs health claims checked by a rules expert: get a compliance review first, then come back."
 you_give:
   - Product facts, such as parts or materials, how it works, price and guarantee
   - Customer reviews or support questions, each with its source
@@ -32,17 +36,39 @@ how_to_use:
   - Paste your product facts and reviews. Add rival claims if you know them.
   - Read the big idea after step 1. Everything is written from it, so change it now if it feels wrong.
   - Find proof for every claim on the list, then make the five fixes the last check gives.
+output_sample:
+  input:
+    - "Your product facts: price, parts or materials, how it works, guarantee"
+    - Your customer reviews or support questions, with the source of each
+    - Three to five rival products and their claims (optional)
+    - The ad that sends visitors to the page (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project, to run the handoff pack
+  output:
+    - name: Big idea and mechanism
+      contains: Ranked pain points, a one-line big idea, a root cause, a named mechanism, a why-now line and claims needing proof.
+    - name: Advertorial draft
+      contains: A long story-led page with an ad label, a button plan, a testimonial table and an image list.
+    - name: Story and belief check
+      contains: Each sentence where the story turns into a pitch, with a rewrite, plus eight checks and a score out of 100.
+    - name: Proof placement
+      contains: Real reviews matched to the doubts in the draft, a layout map and a list of proof it dropped.
+    - name: 30-point page check
+      contains: A short verdict, 30 checks with evidence, the five fixes to make first and a score out of 100.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Big idea and mechanism builder
     text: Lists what is truly unique about the product, ranks the pain points, names a mechanism that matches what the product does, writes the why-now and lists claims needing proof.
   - title: Store advertorial writer
     text: Writes a long page for one named person from the big idea, with the pains, the mechanism, two closing options and an image list.
   - title: Advertorial story and belief checker
-    text: Marks every sentence where the story turns into a pitch, checks the mechanism, the risk and the honesty, and rewrites the weak spots.
+    text: Marks every sentence where the story turns into a pitch, checks the mechanism, the risk and the honesty, and rewrites the weak spots for you to apply.
   - title: Store social proof placer
-    text: Matches each real review or press quote to a doubt in the draft, puts proof where readers hesitate and lists what it dropped.
+    text: Matches each real review or press quote to a doubt in the draft, puts proof where readers hesitate and lists what it dropped. It works on the page with the rewrites applied, and you apply its proof map.
   - title: Landing page 30-point checker
-    text: Runs 30 yes-or-no checks on the finished page and lists the five fixes to make first.
+    text: Runs 30 yes-or-no checks on the finished page and lists the five fixes to make first. It checks the page with the rewrites and proof applied.
 output_shape: |-
   STEP 1: BIG IDEA AND MECHANISM BUILDER
     Ranked pain points | one-line big idea | root cause | mechanism name and how it works | why-now line | claims needing proof

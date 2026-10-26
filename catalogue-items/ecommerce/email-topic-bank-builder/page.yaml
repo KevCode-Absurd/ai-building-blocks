@@ -1,6 +1,6 @@
 new_slug: email-topic-bank-builder
 name: "Email topic bank builder"
-summary: "Give it your product and customer questions. Get 10 topics, 100 one-point email ideas and formats."
+summary: "Build an email topic bank from your product facts and customer questions: 10 topics, 100 one-point email ideas, each with a format."
 job: write-emails
 thinking: medium
 thinking_why: "It sorts a lot of facts into topics, but each idea is short and the method is fixed."
@@ -17,6 +17,10 @@ when:
   - You send the same sale email every week and want useful emails between the sales.
   - You are about to plan next month's emails and have no list of ideas.
   - You want a year of email ideas drawn from your own product, reviews and support questions.
+not_for:
+  - "You need a sale email this week: write a plain sale email yourself, one offer and one button."
+  - "You want to place emails on dates: use the Email campaign calendar planner after you have your ideas."
+  - "You have no product facts yet: write down what it is, what is in it and how it is used first."
 
 you_give:
   - Your product facts, such as what it is made of, how it is made and how it is used
@@ -37,6 +41,28 @@ how_to_use:
   - Read the 10 broad topics first. Ask for a swap if one does not fit your customers.
   - Pick 10 ideas for the next two months. Mix problem, process and solution emails.
   - Write each email in your own words and have someone read it for claims before it goes out.
+output_sample:
+  input:
+    - Your product facts, such as what it is, what is in it and how it is used
+    - Questions your customers ask support (optional)
+    - Your reviews and testimonials (optional)
+    - Dates and seasons that matter to your buyers (optional)
+    - How people join your list (optional)
+  output:
+    - name: Compiled notes
+      contains: The sayings, angles, hooks and stories you already have, and the belief each story shifts.
+    - name: 10 broad topics
+      contains: Each topic ties your product to a part of your customer's life.
+    - name: 100 email ideas
+      contains: Ten narrow ideas under each topic, each with one takeaway, a format tag and a claim-to-check line.
+    - name: Support questions as emails
+      contains: Each customer question matched to an email format.
+    - name: Holiday and season hooks
+      contains: Dates matched to a real link with your product.
+    - name: First 10 to send
+      contains: A mix of problem, process and solution emails for the next two months.
+    - name: Checks missed and missing
+      contains: Any check that failed and any facts you did not give.
 
 how_it_works:
   - title: Sets the one-topic rule

@@ -11,6 +11,7 @@ inputs:
   - {type: copy_draft, required: false}
   - {type: landing_page, required: false}
   - {type: voc_reviews, required: false}
+  - {type: brief, required: false}
 outputs:
   - {type: audit_report}
 uses: []

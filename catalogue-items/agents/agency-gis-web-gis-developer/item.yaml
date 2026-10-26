@@ -1,0 +1,42 @@
+slug: agency-gis-web-gis-developer
+name: Web GIS Developer agent
+summary: "Plan an interactive web map. Get the mapping library choice, data and tile plan, and mobile and speed checks for MapLibre, Leaflet or ArcGIS."
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: gis/gis-web-gis-developer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-web-gis-developer.md
+  licence: MIT
+  original_name: Web GIS Developer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: dbf3ceea4bb8fdc2f2fc61bf96806adeb89f725c8d67a01cd103d256e56909a7
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Web GIS Developer
+  - Agency Agents
+  - GIS
+credits:
+  - title: Web GIS Developer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-web-gis-developer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a fixed template from what you know.
 new_slug: runbook-writer
 name: Runbook writer
-summary: Name a service. Get runbooks for deploy, incidents, maintenance and
-  rollback, ready to edit.
+summary: Build a runbook for your service with deploy, incident, maintenance and rollback sections. Name the service and get a markdown file to fill in.
 job: ship-and-host
 headline: Runbook writer
-subhead: On-call people need clear steps at 3 a.m., and this builds them before
-  launch. Name a service and get a runbook with sections for deploy, incidents,
-  maintenance and rollback, ready to fill in.
+subhead: On-call people need clear steps at 3 a.m., and this builds them before launch. Name a service and get a runbook with sections for deploy, incidents, maintenance and rollback, ready to fill in.
 explain: |
   On-call people need clear steps at 3 a.m., and this builds them before launch. Name a service and get a runbook with sections for deploy, incidents, maintenance and rollback, ready to fill in.
 
@@ -18,6 +15,10 @@ when:
   - Your teams write runbooks in different styles and you want one shape.
   - A new on-call engineer needs docs they can follow alone.
   - An incident showed gaps and you want to rewrite the steps.
+not_for:
+  - "Your service already has a tested runbook: edit that file, or use your last incident postmortem to fix single steps."
+  - "You need a full incident review after an outage: write a postmortem with your team instead."
+  - "You have no way to run a short Python script: ask your AI to write the sections in chat, or copy a template by hand."
 you_give:
   - The service name
   - The owner or team
@@ -29,7 +30,29 @@ you_get:
   - Incident response steps
   - A checklist to test it in staging
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your service name, owner, deploy and rollback commands, health check links and escalation contacts.
+  - Open the skill folder in an AI that can run code, or run the Python script yourself.
+  - Run the script with the service name. Add the owner and output file if you want them.
+  - Fill in real commands and links. Add a check after each key step that shows it worked.
+  - Set clear rollback triggers, then do a trial run in staging.
+  - Save the file in version control next to your service code.
+output_sample:
+  input:
+    - The service name
+    - The owner or team (optional)
+    - The file path to save to (optional)
+    - Your deploy and rollback commands (optional)
+    - Your escalation contacts (optional)
+  prerequisites:
+    - An AI that can run a Python script, or a computer with Python 3 and the skill folder
+  output:
+    - name: Runbook skeleton
+      contains: A markdown file named for your service, with the owner set if you gave one.
+    - name: Start, stop and health check sections
+      contains: Blank steps for starting and stopping the service and checking that it is healthy.
+    - name: Deployment and rollback sections
+      contains: Places for your deploy commands, rollback triggers and rollback commands.
+    - name: Incident handling and escalation
+      contains: Placeholders for incident steps and who to contact, and in what order.
+    - name: Reference templates
+      contains: Extra deployment and incident playbook templates in references/runbook-templates.md.

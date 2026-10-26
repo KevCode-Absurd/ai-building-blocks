@@ -2,36 +2,56 @@ thinking: low
 thinking_why: It pulls listed facts into a table without much judgment.
 new_slug: store-product-data-collector
 name: Store product data collector
-summary: Give it a product search or store link. Get prices, reviews and seller
-  details in a table. Collects data from websites.
+summary: Collect prices, reviews and seller details from online shops into one table. Give a product search or store link and get a file you can sort.
 job: study-competitors
 headline: Store product data collector
-subhead: "Prices, reviews and seller details from online shops, gathered into
-  one table you can sort. Give a product search or a store link, and pick from
-  three jobs: track products and prices, read reviews for patterns, or find
-  which sellers carry a product."
+subhead: "Give it a product search or a store link. It collects prices, reviews or sellers from online shops into one table. You then get a short summary of what it found."
 explain: |
   Prices, reviews and seller details from online shops, gathered into one table you can sort. Give a product search or a store link, and pick from three jobs: track products and prices, read reviews for patterns, or find which sellers carry a product.
 
   It uses the Apify scraping service, so you need an Apify token and Node.js to run it. You choose the output format and file name, it runs the collection and then summarises what it found, such as price gaps against competitors, repeated complaints in reviews or unauthorised sellers. This reads public pages from outside sites, so check the site rules and keep volumes sensible. Paid service usage may apply.
 when:
-  - You want to compare your prices with rivals every week.
-  - You need to learn what buyers complain about in a competitor's reviews.
-  - You suspect a reseller is breaking your minimum advertised price.
-  - You are researching a new product and want market prices.
+  - You want to compare your prices with rivals each week.
+  - You want to learn what buyers complain about in a rival's reviews.
+  - You think a reseller sells below your minimum advertised price.
+  - You are researching a new product and want to see market prices.
+not_for:
+  - "Sites whose rules forbid scraping, or pages behind a login: use the shop's official product feed or API instead."
+  - "You want data on your own store only: export it from your store's admin, such as a Shopify or WooCommerce product export."
+  - "You need a one-off price check on a few items: look them up by hand and note them in a spreadsheet."
 you_give:
-  - A product search term or store link
-  - Which of the three jobs to run
-  - An Apify account token
-  - Output format and file name (optional)
+  - A product search word or a store link
+  - "Which job to run: products and prices, reviews, or sellers"
+  - Your Apify token
+  - File type and file name (optional)
 you_get:
-  - A table of products and prices
-  - A review file with sentiment notes
-  - A list of sellers for a product
-  - A short written summary
+  - A table of products with prices, brands and links
+  - A file of customer reviews you can filter by rating
+  - A list of sellers for one product
+  - A short summary of price gaps, review themes or unknown sellers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Apify token.
+  - Make an Apify account and copy your token. Save it as APIFY_TOKEN in a file at ~/.claude/.env.
+  - Install Node.js 20.6 or newer. Put the skill folder at ~/.claude/skills/apify-ecommerce.
+  - Open an AI that can run code, such as Claude Code. Paste the skill and say which job you want.
+  - Give your search word or store link. Say if you want a CSV or JSON file and what to call it.
+  - Let it run the script, then read the summary. Open the file and check a few rows against the live shop page.
+  - Before you act on a price or seller finding, check the shop page yourself and the shop's site rules.
+output_sample:
+  input:
+    - A product search word or store link
+    - "Which job to run: products and prices, reviews, or sellers"
+    - Which shops to search, such as Amazon or Walmart
+    - File type and file name (optional)
+  prerequisites:
+    - An AI that can run code on your computer, with Node.js 20.6 or newer
+    - An Apify account and its token, saved in a .env file
+    - Apify may charge for the run, depending on your plan
+  output:
+    - name: Products and prices file
+      contains: One row per product with name, link, price, currency, brand and image, plus seller and stock details.
+    - name: Reviews file
+      contains: Customer reviews from the product pages, sorted the way you chose, ready to scan for repeated complaints.
+    - name: Sellers file
+      contains: Sellers found for a product through Google Shopping, so you can spot ones you do not know.
+    - name: Written summary
+      contains: How many items were found, where the file is saved, and key findings for the job you ran.

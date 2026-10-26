@@ -1,6 +1,6 @@
 new_slug: tiktok-ads-account-setup-checker
 name: "TikTok ads account setup checker"
-summary: "Say what you set up on TikTok. Get missing steps and a score out of 100."
+summary: "Check your TikTok ads account setup before you spend. Get missing steps, a pixel event check and a readiness score out of 100."
 job: launch-and-scale-ads
 thinking: low
 thinking_why: "It walks a fixed checklist, so a fast model handles it well."
@@ -17,6 +17,10 @@ when:
   - You are about to run your first TikTok ad and want to know nothing is missing.
   - Your TikTok ads won't deliver, or your purchases don't show in TikTok.
   - A freelancer set up the account and you want a second pair of eyes before you add budget.
+not_for:
+  - "You want to judge ad creative or hooks: ask your AI to review the ad script, or test two versions with a small budget."
+  - "You want to read results from ads that already ran: look at the numbers in TikTok Ads Manager, or ask a media buyer to review them."
+  - "You want a campaign layout and budget: plan it with the TikTok starter campaign builder, once the setup is clear."
 
 you_give:
   - "Which accounts you have: Ads Manager, Business Center, TikTok business profile, TikTok Shop"
@@ -34,6 +38,32 @@ how_to_use:
   - List what you have set up, and attach screenshots of your payment page and Events Manager.
   - Test your store with TikTok Pixel Helper while you add a product to the cart, then paste what it shows.
   - Do the fixes in the order it lists, then run the check again before you add budget.
+output_sample:
+  input:
+    - Which accounts you have set up (Ads Manager, Business Center, TikTok profile, TikTok Shop)
+    - Screenshots of your Business Center assets, payment page and Events Manager (optional)
+    - A TikTok Pixel Helper result from a test visit to your store (optional)
+    - Your store platform, such as Shopify
+  prerequisites:
+    - An AI that can read images, if you want to attach screenshots
+    - The TikTok Pixel Helper Chrome add-on, to test your events (optional)
+  output:
+    - name: Setup readiness line
+      contains: "Your score out of 100 and a launch call: ready, or not yet with the items that stop you."
+    - name: Accounts and links
+      contains: Each account and link marked done, missing or not sure, with one fix per gap.
+    - name: Billing and documents
+      contains: Address, documents, main card, backup method and payment type, each marked with a fix.
+    - name: Team and security
+      contains: Whether each person has the smallest role they need, and whether two-step sign-in is on.
+    - name: Pixel and events
+      contains: A table showing if page view, view content, add to cart, initiate checkout and purchase fired.
+    - name: Defaults and per-ad settings
+      contains: Location, age, brand safety, account health, ad library box and music settings.
+    - name: Do first
+      contains: The fixes in the order you should do them.
+    - name: Not checked
+      contains: Items it could not see, and what to send so it can check them.
 
 how_it_works:
   - title: Checks accounts and links

@@ -1,6 +1,6 @@
 new_slug: business-value-range-calculator
 name: "Business value range calculator"
-summary: "Paste a business's owner earnings. Get a no-growth floor value and low, middle and high growth values, with what each assumes."
+summary: "Find what a business is worth to its owner. Paste its owner earnings and get a no-growth floor value plus low, middle and high growth values."
 job: money-and-investing
 thinking: high
 thinking_why: "It runs a multi-year sum for several cases, and a slip in the arithmetic or the rate changes the answer a lot. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You know a business's owner earnings and want to know what it is worth to an owner.
   - You have been given a price and want to see what growth it asks you to believe.
   - You want to see how much of a value is the business as it is and how much is hope.
+not_for:
+  - "Your cash swings wildly or you can't explain it: the skill stops and calls it too hard to value. Check the money with the Bad-year break-even tester first."
+  - "You want a buy or sell call: this gives estimates only. Talk to a licensed financial adviser."
+  - "You don't have owner earnings yet: work them out first with the Owner earnings calculator, then come back."
 
 you_give:
   - Low, middle and high owner earnings, with the growth history if you have it
@@ -35,6 +39,31 @@ how_to_use:
   - Give the long-term bond yield today and any price you want placed.
   - Read the floor first, then the three cases, then the cases' conditions.
   - Take the table to "Bad-year break-even tester" and "Price versus value gap judge".
+output_sample:
+  input:
+    - Low, middle and high yearly owner earnings, with growth history if you have it
+    - The date of those earnings
+    - The long-term government bond yield today (optional)
+    - A price or stake value to place on the table (optional)
+  prerequisites:
+    - Owner earnings from the Owner earnings calculator, or your own figures
+  output:
+    - name: Can the cash be estimated?
+      contains: A yes, or a stop with TOO HARD TO VALUE and the reason.
+    - name: Rate
+      contains: The discount rate used and where it came from.
+    - name: Floor
+      contains: "The value if the business never grows: middle owner earnings divided by the rate."
+    - name: Cases
+      contains: Low, middle and high values, each with its fast and slow growth, what it needs and what would break it.
+    - name: Rate check
+      contains: The middle case run again at a rate two points higher.
+    - name: Where the price falls
+      contains: Which case your price sits near and what growth it asks you to believe.
+    - name: Missing
+      contains: Any input you did not give, marked so nothing is made up.
+    - name: Checks missed
+      contains: One line for each self-check that still fails, or none.
 
 how_it_works:
   - title: Checks the cash can be estimated

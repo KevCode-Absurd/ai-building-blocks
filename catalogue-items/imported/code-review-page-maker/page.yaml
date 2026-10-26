@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It converts text into a page with set parts.
 new_slug: code-review-page-maker
 name: Code review page maker
-summary: Give it a markdown code review. Get one HTML page with severity tags
-  and diffs that are easy to read.
+summary: Turn a markdown code review into one HTML review page. Diffs sit beside severity-tagged comments, with a jump menu and a named reviewer.
 job: work-with-files
 headline: Code review page maker
-subhead: A markdown code review becomes one HTML page that is easy to scan. You
-  get a jump menu, diffs on one side, comments on the other, severity tags such
-  as blocker and major, and the reviewer named at the bottom.
+subhead: A markdown code review becomes one HTML page that is easy to scan. You get a jump menu, diffs on one side, comments on the other, severity tags such as blocker and major, and the reviewer named at the bottom.
 explain: |
   A markdown code review becomes one HTML page that is easy to scan. You get a jump menu, diffs on one side, comments on the other, severity tags such as blocker and major, and the reviewer named at the bottom.
 
@@ -18,9 +15,15 @@ when:
   - Your pull request notes have diffs and severity callouts.
   - You want reviewers to jump straight to blockers.
   - Plain markdown reviews are hard for your team to read.
+not_for:
+  - "Your notes have no diff blocks, or are a long report: use the md-document tool in the same toolset, or share the markdown as it is."
+  - "You want slides from your markdown: use the md-slides tool in the same toolset."
+  - "Your review is under 100 lines: keep it as plain markdown or paste it in a pull request comment thread."
 you_give:
-  - A markdown review with diff blocks and severity callouts
-  - Your design settings
+  - A markdown code review with diff blocks and severity callouts (BLOCKER, MAJOR, MINOR or NIT)
+  - The name of the reviewer who signs off
+  - A page title, such as your pull request title
+  - Your design system, already set up with the design system step
   - Python 3 on your machine
 you_get:
   - One HTML review page
@@ -28,8 +31,32 @@ you_get:
   - Severity tags
   - A jump menu
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Set up your design system first. The tool will not run without it.
+  - Download the skill folder and open it in an AI that can run Python code and save files.
+  - Give your AI the markdown review, the reviewer name and the page title.
+  - "Ask your AI to run the three steps in order: pull out the diffs, find the comments, then build the page."
+  - Open review.html in your browser. Check that each comment sits next to the right diff and each severity tag is right.
+  - Share the HTML file with your reviewers. If your input has no diffs or is only prose, use md-document instead.
+output_sample:
+  input:
+    - Your markdown code review with diff blocks
+    - Severity callouts marked BLOCKER, MAJOR, MINOR or NIT
+    - The name of the person who signs off on the review
+    - The page title, such as your pull request title
+  prerequisites:
+    - An AI that can run Python 3 code and save files
+    - Your design system set up first, or the tool refuses to run
+    - A review of at least 100 lines
+  output:
+    - name: hunks.json
+      contains: The diff blocks pulled out of your markdown, ready for the next step.
+    - name: annotations.json
+      contains: Each severity callout, attached to the closest diff block before it.
+    - name: review.html
+      contains: One page with diffs on the left, comment cards on the right, and a reviewer footer.
+    - name: Jump menu
+      contains: A list at the top of every finding with its severity tag, a short preview and a link.
+    - name: Approval bar
+      contains: A green note that says no findings were flagged, shown only when there are LGTM marks and no severity callouts.
+    - name: General comments
+      contains: Comments not tied to any diff block, shown in their own section at the bottom.

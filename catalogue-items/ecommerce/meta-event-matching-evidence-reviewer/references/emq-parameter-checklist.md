@@ -20,18 +20,18 @@ Every CAPI event must include:
 
 ## User Data Parameters (the match signals)
 
-All string values must be lowercase, trimmed, and SHA-256 hashed before sending. Exceptions: IP address, user agent, fbp, fbc, external_id (those are sent as-is or with specific hashing rules).
+Customer fields such as email, phone and names are cleaned as Meta's documentation says, then SHA-256 hashed before sending. These are sent as they are and must NOT be hashed: client_ip_address, client_user_agent, fbp and fbc. The external_id can be hashed, and Meta recommends it. Check Meta's current Conversions API "customer information parameters" page before you change anything.
 
-### Tier 1 (must have)
+### Strongest matching fields (send these first when you have them)
 - [ ] `em` (email, hashed)
 - [ ] `ph` (phone, E.164 format, hashed)
-- [ ] `external_id` (customer_id or session_id, hashed)
+- [ ] `external_id` (customer_id or session_id, hashing recommended)
 - [ ] `client_ip_address` (NOT hashed)
 - [ ] `client_user_agent` (NOT hashed)
 - [ ] `fbp` (browser cookie, NOT hashed)
 - [ ] `fbc` (click cookie, NOT hashed, only if fbclid was present)
 
-### Tier 2 (boosts match quality meaningfully)
+### Further fields (send when you collect them)
 - [ ] `fn` (first name, hashed)
 - [ ] `ln` (last name, hashed)
 - [ ] `ct` (city, hashed, lowercase)
@@ -39,7 +39,7 @@ All string values must be lowercase, trimmed, and SHA-256 hashed before sending.
 - [ ] `zp` (zip, hashed, 5 digit)
 - [ ] `country` (hashed, 2-letter ISO, lowercase)
 
-### Tier 3 (incremental)
+### Optional fields
 - [ ] `db` (date of birth, YYYYMMDD, hashed)
 - [ ] `ge` (gender, 'm' or 'f', hashed)
 
@@ -85,19 +85,16 @@ Every event must have a matching `event_id` in both browser pixel AND CAPI serve
 - Shopify: Use `checkout.token` or generate UUID per session
 - Custom: Generate UUID at page load, store in sessionStorage, use for both browser and server events
 
-### Deduplication rates:
-- 0-30%: Something is badly broken. event_id not matching.
-- 30-60%: Partial match. Some events deduping, some not.
-- 60-90%: Healthy range.
-- 90%+: Possibly only one side (browser or server) firing. Check coverage.
+### Reading deduplication
+Meta publishes no single "healthy" percentage, so do not judge by one. Use only the counts you have from Events Manager. If both browser and server send an event and the counts do not line up, check first that both sides send the same `event_name` and `event_id`. If server events are far lower than browser events, or the reverse, check the server connection, ad blockers and consent settings as possible causes.
 
 ---
 
 ## Common Mistakes
 
 1. **Hashing fbp, fbc, IP, or user agent.** Don't. These are sent as-is.
-2. **Mixed hashing formats.** Some events hash with uppercase, some lowercase. Meta rejects. Pick one (lowercase) and stick to it.
-3. **Sending `value: 0` on Purchase.** Algorithm can't learn. Always send the actual amount.
+2. **Mixed hashing formats.** Some events hash with uppercase, some lowercase. The same person then hashes to different values and may not match. Clean values the same way every time, as Meta's documentation says.
+3. **Sending `value: 0` on Purchase.** Value-based optimization has nothing to learn from. Send the real amount.
 4. **Missing event_id on one side.** Browser has it, CAPI doesn't. No deduplication possible.
 5. **Sending PII in custom_data.** Don't. PII goes in user_data, hashed. custom_data is for product info.
 6. **Not handling international phones.** Meta expects E.164 with country code. "555-1234" is not enough.
@@ -113,7 +110,7 @@ Before deploying, use Meta's Test Events tab in Events Manager:
 - Verify match quality per parameter
 - Check deduplication signal
 
-Don't deploy until test events show EMQ 7.5+ with all intended parameters detected.
+Do not go live until test events show all the parameters you meant to send. Match quality scores appear in Events Manager only after real events have come in.
 
 ---
 

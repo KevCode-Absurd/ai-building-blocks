@@ -1,6 +1,6 @@
 new_slug: tense-email-softener
 name: "Tense email softener"
-summary: "Paste an email you are angry about. Get a version the reader wants to help with."
+summary: "Soften a tense email before you send it. Paste your angry draft and get a calm version that keeps the facts and asks for one fix by one date."
 job: write-emails
 thinking: low
 thinking_why: "It rewrites one email from the facts you give it."
@@ -17,6 +17,10 @@ when:
   - "A supplier shipped late again and you need the next order on time."
   - "A client changed the brief twice and is now blaming you for the delay."
   - "You wrote the email at 11pm and something tells you not to send it yet."
+not_for:
+  - "You need a formal record, such as a legal notice or a debt demand: talk to a solicitor or lawyer, who can word it so it holds up."
+  - "The money is owed and you only want it paid: use a plain late invoice reminder, or ask your accountant to send it."
+  - "You want to vent, not send: write the angry version in a notes app and keep it to yourself."
 
 you_give:
   - "The email you wrote"
@@ -34,6 +38,29 @@ how_to_use:
   - "Add the dates and amounts if your draft only has feelings."
   - "Read HEAT REMOVED first. If a line there is a fact, tell the AI and run it again."
   - "Send the email. Put the follow-up date in your calendar."
+output_sample:
+  input:
+    - The email you wrote, however blunt
+    - What you need from them
+    - The facts with dates (advised)
+    - Who they are and whether you need them again (optional)
+  output:
+    - name: FACTS
+      contains: What happened, with dates and numbers, and no blame.
+    - name: HEAT REMOVED
+      contains: The lines from your draft that blame or sting, quoted so you can see what was cut.
+    - name: WHAT THEY WANT
+      contains: One line on what the reader needs out of this, which the email opens from.
+    - name: SUBJECT
+      contains: A plain subject line under seven words.
+    - name: EMAIL
+      contains: Your part if any, the facts, one request with one date, and a warm close.
+    - name: IF THEY DO NOTHING
+      contains: A firmer follow-up in three lines, with no threats you cannot keep.
+    - name: MISSING
+      contains: Facts you did not give, such as dates or amounts, marked so nothing is guessed.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Separates facts from heat"

@@ -1,33 +1,121 @@
 new_slug: deploy-worker-to-render-builder-prompt
 name: Deploy Worker to Render coding prompt
-summary: Get a coding brief to deploy your agent worker on Render, with service settings, startup checks and rollback steps.
+summary: Get a coding brief to deploy an always-on agent worker to Render, with a config file, secret names, startup checks and a rollback step.
 job: build-software
 headline: Deploy Worker to Render coding prompt
-subhead: Get a coding brief to deploy your agent worker on Render, with service settings, startup checks and rollback steps.
+subhead: Give your coding assistant your project and the services your worker uses. It plans the Render config file, checks that the worker starts and stops cleanly and writes a go-live checklist with a rollback step. It never deploys and never sees your secrets.
 explain: |-
-  Share your project and the required feature. Get a coding brief for deploy worker to render, with setup and test steps.
+  A worker that only runs on your laptop stops when you close the lid. Render can run it all day, but a first deploy can fail for plain reasons. A secret was never entered. A build tool was left out. The worker never handles the stop signal, so a deploy cuts a job in half. This prompt gives a coding assistant a brief to plan your move to Render so those mistakes get caught first.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The brief starts by checking how your worker starts. If it needs a TypeScript runner that is only a dev dependency, it can fail on Render, and the brief offers two fixes. It drafts a Render config file with secret names only, never values. It checks that the worker stops cleanly, and it picks a way to know the worker is alive. A Background Worker has no web address, so a health route in a web app would tell you nothing.
+
+  The brief quotes no Render price. Plans and prices change, so you read them on Render's own page and choose. The assistant writes files and a checklist. You push, create the service and enter the secrets yourself. Before this, set up the worker with the Agent worker runtime starter builder.
 when:
-  - You need a coding brief for deploy worker to render.
-  - You need deploy worker to render prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - Your agent worker runs on your laptop and you want it running all day without it.
+  - A first deploy failed and you can't tell if the cause is a secret, a build step or the start command.
+  - You want a rollback step and a checklist written before you go live, not after.
+  - You aren't sure whether your project needs a Background Worker or a Web Service.
+not_for:
+  - Your app answers web requests or serves pages. A worker is the wrong service type. Ask the assistant to plan a Render Web Service instead.
+  - You only need a task that runs once an hour or once a day. A scheduled job may fit better than an always-on worker. Check Render's current options.
+  - You haven't built the worker yet. Use the Agent worker runtime starter builder first.
+  - You want it to create the Render service and press deploy. It only plans and drafts. You do those steps in Render yourself.
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, or its package file and main folders
+  - The file that starts your worker and how you run it today
+  - The services it connects to, such as Redis, Supabase and Slack, and the environment variable names your code reads (never the values)
+  - Where your code is hosted, such as GitHub
+  - The Render plan you plan to use (optional)
 you_get:
-  - A coding brief for deploy worker to render
-  - Required files, setup gaps and test cases
+  - A list of setup gaps before anything is written
+  - A draft Render config file with secret names and no values
+  - A table of environment variable names, with which ones are secret
+  - A check that the worker stops cleanly, and a fix if it doesn't
+  - A go-live checklist with a rollback step
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your coding assistant, such as Claude Code or Codex, in your project folder. A plain chat AI can only write a plan.
+  - Paste the skill, then add the items under "What you need". Never paste a secret value.
+  - Read the setup gaps and the start-command check first. Choose between the two fixes if it asks.
+  - Read the Render config file before you save it. Look up the plan on Render's pricing page and choose one yourself.
+  - Push your code, create the service in Render and enter each secret in the dashboard by hand.
+  - Work down the checklist. Watch the logs for the start lines your own code prints, then run the five-minute test with the laptop closed.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project first
+    text: Reads your package file, start file and any Render or Docker files, then lists what is missing.
+  - title: Checks how the worker starts
+    text: Finds the start command and whether the tools it needs will be installed on Render. Offers two fixes if not.
+  - title: Drafts the Render config file
+    text: Defines one worker service with named variables. Secrets are marked so you type their values in the dashboard.
+  - title: Checks shutdown
+    text: Confirms the worker handles the stop signal, and plans a wait for running jobs before it closes.
+  - title: Picks a way to see it is alive
+    text: Compares reading logs, a Slack ops line on a timer, and a web port. Recommends one.
+  - title: Writes the checklist and rollback
+    text: Lists each step to tick before and after going live, and how to return to the last working version.
+output_shape: |-
+  SETUP GAPS
+  <what is missing or unclear>
+
+  RENDER CONFIG (draft)
+  <render.yaml with named variables and no values>
+
+  VARIABLES
+  <name> | <connects to> | <secret: yes or no>
+
+  SHUTDOWN CHECK
+  <what the worker does on the stop signal> | <change needed or not>
+
+  HOW YOU WILL KNOW IT IS ALIVE
+  <recommended option and why>
+
+  DEPLOY CHECKLIST
+  <steps to tick, ending with the rollback step>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your code project, or its package file and main folders
+    - The file that starts your worker, and the names of the variables it reads
+    - The services it uses and where your code is hosted
+  prerequisites:
+    - A coding assistant that can open your project, such as Claude Code or Codex
+    - A Render account, and a plan chosen from Render's pricing page
+    - Accounts for the services the worker uses, such as Redis, Supabase and Slack
+  output:
+    - name: Setup gaps
+      contains: What is missing before any file is written, such as a start file or a variable name.
+    - name: Render config
+      contains: A draft config file with one worker service, named variables and no secret values.
+    - name: Variables
+      contains: Each variable name, the service it connects to and whether it is a secret.
+    - name: Shutdown check
+      contains: What your worker does when Render stops it, and the change needed so running jobs finish.
+    - name: Alive check
+      contains: The option recommended for knowing the worker still runs, and why.
+    - name: Deploy checklist
+      contains: Steps to tick before and after going live, including a five-minute test and a rollback step.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your project, reads the start file and drafts the config and checklist as files.
+    - name: Render
+      why: The service the plan is written for. Check its pricing page and Blueprint docs before you choose.
+    - name: GitHub
+      why: Render deploys from your repository, so each push starts a new deploy.
+  inputs:
+    - A copy of your environment file with the values removed, so the variable names are exact
+    - The command you use to run the worker on your laptop
+terms:
+  - term: Background Worker
+    meaning: A Render service that runs all the time but has no web address and takes no web traffic.
+  - term: Web Service
+    meaning: A Render service that answers web requests, such as a website or an API.
+  - term: Environment variable
+    meaning: A named setting your code reads at start, such as a Redis address. Secrets live here, not in code.
+  - term: Auto-deploy
+    meaning: Render starts a new deploy each time you push to the branch it watches.
+  - term: Rollback
+    meaning: Going back to the last version that worked after a bad deploy.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

@@ -14,7 +14,16 @@ description: >
 
 # Fintel Data Skill
 
-If your host has not already executed the shell probes below (for example, in Codex), run the commands inside the `!` wrappers with its shell tool before choosing a setup path. Use the actual output; if shell access is unavailable, report that limitation.
+## Before you start
+
+- **Paid service.** This skill needs a Fintel API key from a paid Fintel plan. Short interest also has to be switched on for the account. If the user has no key, say so, and stop. Do not guess figures from memory. Point to free public sources instead: SEC EDGAR for 13F holders and Form 3, 4 and 5 insider filings, and the exchanges or FINRA for short interest reports.
+- **Needs a shell.** The steps use `curl` and a shell, so your AI must be able to run commands (for example Claude Code). On a plain chat that cannot run commands, say that, and ask the user to paste the Fintel data or use their MCP connection.
+- **US securities first.** Several datasets are US only (fails-to-deliver, 13F holders and Form 3, 4 and 5 filings). For other countries, check the entitlements in `/v1/account` and report what is missing. Do not fill gaps.
+- **Never put the key in your reply.** Do not print `FINTEL_API_KEY` or write it to a file you share.
+- **Not investment advice.** Present the data and where it came from. Do not give a buy, sell or squeeze call.
+- **If the question is missing.** Ask once for the ticker. If no question is given, return a short summary of short interest, top owners, recent insider filings, analyst targets and the next dividend date.
+
+If your host has not already executed the shell probe in Step 1 (for example, in Codex), run the command inside the `!` wrapper with its shell tool before choosing a setup path. Use the actual output; if shell access is unavailable, report that limitation.
 
 Fintel ([fintel.io](https://fintel.io)) is an institutional-grade market
 intelligence platform.
@@ -147,16 +156,21 @@ access is restricted (note: neither works on Claude.ai's sandbox).
 
 - Format numbers cleanly: prices to 2 decimals, percentages to 1-2
   decimals, share counts with commas or abbreviations (2.3M, 1.1B).
-- For short data: contextualize — short interest as % of float, days to
-  cover, borrow fee trend direction. High borrow fee + falling shares
-  available is the classic squeeze setup; present the data, not a
-  prediction.
+- For short data: put it in context: short interest as % of float, days to
+  cover, borrow fee trend direction. Report what the numbers are. Do not
+  call a pattern a squeeze setup and do not predict price moves.
 - For ownership/insiders: use tables (holder, shares, change, date).
   Distinguish buys from sells and option exercises in Form 4 data.
 - Note the data source: "Fintel" with dataset provenance (SEC 13F, Form
   3/4/5, NYSE/NASDAQ short reports) when relevant.
 - Never turn the data into a trading recommendation, price target, or
   squeeze call — present facts and let the user draw conclusions.
+- Return this layout: (1) a one-line header with ticker, country and the date you pulled the data;
+  (2) one short table or list per dataset asked for (short interest and borrow, top holders,
+  insider filings, analyst targets, dividend dates), each with its source and as-of date;
+  (3) a "Not available" line for any dataset that returned 403 or empty, with the reason;
+  (4) a closing line: check the filings at the source before you act, and pair this with an
+  earnings or dividend calendar if timing matters.
 
 ---
 

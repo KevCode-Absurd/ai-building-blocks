@@ -1,6 +1,6 @@
 new_slug: small-launch-test-planner
 name: "Small launch test planner"
-summary: "Describe an idea you are not sure will sell. Get a small test in a few places and a rollout rule."
+summary: "Plan a small launch test for an offer you doubt will sell. Get a few test places, what to measure and a roll out, change or drop rule."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It designs a test with fixed rules and sets decision thresholds from your numbers."
@@ -17,6 +17,10 @@ when:
   - "You have a new offer and do not know if it will sell."
   - "You want to test a new plan without disturbing a campaign that works."
   - "You need to decide before you spend whether to expand."
+not_for:
+  - You have no price yet. Set a price first, because the test needs a real price to measure.
+  - You are relaunching a whole brand. Use a simple plan with a person who knows your market, not a small test.
+  - You only need to choose what to test first. Use the Reach-before-repeat planner.
 
 you_give:
   - "Your offer or idea, with price and who it is for"
@@ -35,6 +39,31 @@ how_to_use:
   - "List places you could use, or ask for suggestions."
   - "Agree the rule before you start, and save it."
   - "Run the test, record the numbers in its table and bring them back."
+output_sample:
+  input:
+    - Your offer or idea, with price and who it is for
+    - Your test budget, as a number
+    - Results from past campaigns (optional)
+    - Places you could run it (optional)
+  output:
+    - name: QUESTION
+      contains: The one question the test must answer with numbers.
+    - name: PLACES
+      contains: Four or five typical places, with why each is typical and its size.
+    - name: HOW PEOPLE START
+      contains: A free sample or coupon, with a separate code or link for each place.
+    - name: WHAT TO RECORD
+      contains: A table of cost, customers, cost per customer, sale per customer, repeat buyers and days to repay.
+    - name: KEEP APART
+      contains: What your current campaign keeps doing unchanged, so results can be traced.
+    - name: BUDGET CAP
+      contains: The total test budget and a stop rule, with the sums shown.
+    - name: DECISION RULE
+      contains: Numbers that mean roll out, change or drop, set before the test.
+    - name: HOW TO SCALE
+      contains: Steps to widen the test, and what to check at each step.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps you need to fill, and any checks the plan did not pass.
 
 how_it_works:
   - title: "States the question"

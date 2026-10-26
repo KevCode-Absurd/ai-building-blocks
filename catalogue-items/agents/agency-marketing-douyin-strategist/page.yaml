@@ -1,0 +1,132 @@
+name: Douyin Strategist agent
+summary: "Get a Douyin marketing plan for China: video hooks, scripts, a weekly calendar and a livestream lineup. Bring your product, region and budget."
+headline: Douyin Strategist agent
+subhead: Give it your product, your account and your goal on Douyin, China's version of TikTok. It plans video hooks, a content calendar and scripts, and a livestream lineup if you sell live. You get a Douyin plan with a compliance check.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  On Douyin the first three seconds decide whether a video gets pushed to more people. This agent plans every video around that. It puts completion rate first, then likes, comments and shares, which is the order the original profile gives. Each script has a hook, a core and a close, with a note on how it should keep viewers watching.
+
+  It also plans the work around the video: posting times, comment replies, small paid boosts to test audiences, and, if you sell live, a livestream lineup and pacing. It sorts products into traffic drivers, profit items, prestige items and flash deals, then paces them over the stream.
+
+  It checks claims against the profile's compliance rules, such as no absolute claims and extra care for food, medicine and cosmetics. It cannot see Douyin, your account stats or what is trending this week. It lists what to check in your own dashboard. The targets in the original profile are goals, not measured results.
+when:
+  - You are starting a Douyin account to sell or build a brand in China.
+  - Your Douyin videos get views but people leave in the first few seconds.
+  - You plan to sell live on Douyin and need a product lineup and run order.
+  - You want a weekly posting plan with scripts you can film.
+not_for:
+  - You sell on TikTok outside China. Use the TikTok Strategist agent.
+  - You want a coach for a livestream you already run. Use the Livestream Commerce Coach agent.
+  - You are on Kuaishou, not Douyin. Use the Kuaishou Strategist agent.
+you_give:
+  - Your product and who buys it
+  - Your Douyin account status, such as new or running, and the account type
+  - Your goal, such as sales, followers or brand awareness
+  - Your target region and your monthly budget for boosts and ads
+  - "Stats for your last videos: completion rate, views and follows (optional)"
+  - Your product list with prices and margins, if you plan a livestream (optional)
+you_get:
+  - "Account positioning: who you are, what you post and how you earn"
+  - A weekly content calendar with video types
+  - Video scripts with hook options, a core and a close
+  - "A traffic plan: posting times, comment steps and boost tests"
+  - A livestream lineup and pacing, if you sell live
+  - A compliance check on your claims
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you can't, paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your product, buyer, goal, region and budget. Say if the account is new or running.
+  - Add your last video stats from the Douyin creator dashboard, and your product list if you plan a livestream.
+  - "Say: \"Make my Douyin plan. Don't invent trends or stats. Mark anything you can't check as a check for me.\""
+  - Read the compliance check before you film. Change any claim it flags.
+  - Film one script, post it, then bring back the completion rate for a fresh round. A native Chinese reader should check subtitles and claims first.
+how_it_works:
+  - title: Confirm the account
+    text: It confirms product, buyer, goal, region, budget and account status. Missing items are asked for once, then marked MISSING.
+  - title: Position the account
+    text: It sets the persona, content direction and how the account earns, from your facts.
+  - title: Plan the content
+    text: It plans a weekly calendar over formats such as teaching, story, product review and vlog.
+  - title: Write the scripts
+    text: Each script has a hook in the first three seconds, a core with the pain point and the fix, and a close.
+  - title: Plan traffic
+    text: It plans posting times, comment handling and small boost tests, and says what to measure.
+  - title: Plan the livestream
+    text: If you sell live, it sorts products into roles and paces the run. It then adds a compliance check and a review plan.
+output_shape: |-
+  ACCOUNT POSITIONING
+    Persona <who> | Direction <what you post> | Earning path <how it pays>
+
+  WEEKLY CALENDAR
+    <day> | <video type> | <topic> | <hook style> | <target length>
+
+  SCRIPTS
+    <title> | <hook options, seconds 1 to 3> | <core, seconds 4 to 20> | <close and prompt> | <shooting notes>
+
+  TRAFFIC PLAN
+    <posting times to test> | <comment steps> | <boost test> | <what to measure>
+
+  LIVESTREAM LINEUP (if you sell live)
+    <product role: traffic driver, profit, prestige, flash deal> | <share of lineup> | <time slot> | <script focus>
+
+  COMPLIANCE CHECK
+    <claim> | <risk> | <safer wording>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+output_sample:
+  input:
+    - Your product, buyer and goal
+    - Your Douyin account status and account type
+    - Your target region and monthly budget
+    - Stats for your last videos, and your product list if you sell live (optional)
+  prerequisites:
+    - A Douyin account, or a plan to open one
+    - A native Chinese reader to check subtitles and claims before you publish
+  output:
+    - name: Account positioning
+      contains: Who the account is, what it posts and how it earns.
+    - name: Weekly calendar
+      contains: Video types, topics, hook styles and lengths for each day.
+    - name: Scripts
+      contains: Hook options, a core and a close for each video, with shooting notes.
+    - name: Traffic plan
+      contains: Posting times to test, comment steps and boost tests, with what to measure.
+    - name: Livestream lineup
+      contains: Product roles, time slots and script focus for each part of a live sale.
+    - name: Compliance check
+      contains: Claims that carry risk, with safer wording.
+    - name: Review plan
+      contains: The numbers to track after each video and what to change if they are low.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Completion rate
+    meaning: The share of viewers who watch a video to the end. Douyin weighs it above likes.
+  - term: DOU+
+    meaning: Douyin's tool for paying to boost one video to a chosen audience.
+  - term: Qianchuan
+    meaning: Douyin's ad platform, run through Ocean Engine.
+  - term: Content matrix
+    meaning: A set of video types and accounts you run together to reach different viewers.
+  - term: GPM
+    meaning: Sales value per thousand views of a livestream.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three write scripts and calendars and read Chinese. A native reader should check the final text.
+  inputs:
+    - Screens of your last 10 videos with completion rate.
+    - Three competitor accounts you want to match or beat.
+    - Your product list with prices and margins.

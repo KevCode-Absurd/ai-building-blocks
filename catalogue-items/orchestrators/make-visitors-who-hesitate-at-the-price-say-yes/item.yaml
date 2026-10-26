@@ -19,9 +19,9 @@ uses: [value-equation-scorer, price-against-value-checker, guarantee-designer, h
 steps:
   - {uses: value-equation-scorer, note: "Scores the offer on what the buyer gets against what it asks of them, and finds the weak part."}
   - {uses: price-against-value-checker, note: "Compares the price with that value score and says whether to change the price or the story."}
-  - {uses: guarantee-designer, note: "Designs a guarantee aimed at the weak part the checks found."}
-  - {uses: honest-urgency-planner, note: "Plans a true reason to act now that fits the offer and the guarantee."}
-  - {uses: call-to-action-writer, note: "Writes the closing line that states the offer, the guarantee and the deadline together."}
+  - {uses: guarantee-designer, note: "Designs a guarantee aimed at the weak part the checks found. Hands step 4 the offer with the guarantee in it."}
+  - {uses: honest-urgency-planner, note: "Plans a true reason to act now that fits the offer and the guarantee. Hands step 5 the real limits and dates."}
+  - {uses: call-to-action-writer, note: "Writes the closing line that states the offer, the guarantee and the deadline together, from your ad draft plus step 3's offer and step 4's limits."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/make-visitors-who-hesitate-at-the-price-say-yes/skeleton.yaml

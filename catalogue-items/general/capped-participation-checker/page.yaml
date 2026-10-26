@@ -1,53 +1,114 @@
 new_slug: capped-participation-checker
 name: Capped participation checker
 headline: Capped participation checker
-summary: Check one preferred class participation cap against its optional conversion payout.
+summary: Find what a preferred investor gets from a sale under a capped participation payout, and whether converting to common shares pays more.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Preference, capped participation, conversion and common residual payouts. Share equity proceeds after senior claims, one class investment, preference and inclusive cap multiples, ownership and conversion right.
+subhead: Give it the sale proceeds and the terms of one preferred share class. It works out the capped payout and the payout if the investor converts to common shares. You get the larger payout and what is left for everyone else.
 explain: |-
-  Preference, capped participation, conversion and common residual payouts.
+  Some investors hold preferred shares. In a sale, an investor with capped participation gets their money back first. This is the preference. They then share in what is left, up to a cap. This capped participation checker shows what that investor is paid and what is left for the other owners.
 
-  Venture financing. Illustrative figures only. 100 preference plus20% of900 pays280 at1000 proceeds. At2000 conversion400 exceeds the300 participation cap.
+  The cap here includes the money back. A 3x cap on 100 invested means the investor can take 300 in total, not 300 on top. The skill also works out the other choice. The investor can convert to common shares and take their ownership share of all the proceeds. The cap does not limit that choice. The investor takes whichever is larger.
+
+  Practice numbers, not a real deal: 100 invested, a 1x preference, a 3x cap and 20% ownership. At 1000 of proceeds, the preference pays 100. Then 20% of the 900 left adds 180. Capped participation pays 280, and converting pays only 200, so 280 wins. At 2000 of proceeds, the cap holds the first route to 300, but converting pays 400, so converting wins.
 when:
-  - You need preference, capped participation, conversion and common residual payouts.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A term sheet gives your investor a 1x preference with participation capped at 3x, and you want their payout at a given sale price.
+  - You want to find the sale price where converting to common starts to beat the capped payout.
+  - A board member asks how much is left for common holders after one preferred class is paid.
+  - You are checking a lawyer's or accountant's payout table against the share terms.
+not_for:
+  - The preferred class has no participation, only a preference or a choice to convert. Use the Nonparticipating preference checker.
+  - Two or more preferred classes rank against each other, or the terms add dividends. This covers one class and no dividends, so ask a lawyer or build a full payout table.
+  - You want what the sellers take home after debt, cash and deal costs. Use the Closing equity proceeds checker first, then bring its result here.
 you_give:
-  - Equity proceeds after senior claims, one class investment, preference and inclusive cap multiples, ownership and conversion right.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The sale proceeds left for shareholders after debt and any claims that rank ahead (from the sale agreement or your cap table)
+  - The amount the investor paid in for this class of shares (from the term sheet or share purchase agreement)
+  - The preference multiple, such as 1x, and the cap multiple, such as 3x, including the money back (from the share terms)
+  - The investor's ownership share if they converted to common, and whether the terms let them convert (from your cap table)
+  - The currency and units, such as USD thousands
+  - Your own payout spreadsheet (optional)
 you_get:
-  - Preference, capped participation, conversion and common residual payouts.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The preference paid, the participation paid and the capped total
+  - The payout if the investor converts to common shares
+  - Which choice pays more, and the investor's final payout
+  - What is left for common holders and everyone else
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the share terms, the amount invested, the ownership share and the sale proceeds. Say the currency and units. Attach the term sheet page if you can.
+  - Ask in plain words, such as what does the investor get at 1000 of proceeds, and would converting pay more?
+  - Check one line yourself. The capped route is the preference plus the ownership share of what is left, held at the cap. The convert route is the ownership share of all proceeds.
+  - Read MISSING and CHECKS MISSED before you use any figure. Run a second sale price to find where converting wins.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Confirm the cap includes initial preference and optional conversion remains available
-    text: Confirm the cap includes initial preference and optional conversion remains available.
-  - title: 2. Pay preference up to available proceeds, add ownership share of residual, then cap total participation
-    text: Pay preference up to available proceeds, add ownership share of residual, then cap total participation.
-  - title: 3. Compare capped participation with unrestricted conversion, elect the larger payout and reconcile remaining common proceeds
-    text: Compare capped participation with unrestricted conversion, elect the larger payout and reconcile remaining common proceeds.
+  - title: Checks the terms
+    text: Confirms the cap includes the money back, that the cap is not below the preference, and that converting is still allowed.
+  - title: Pays the preference
+    text: Pays the preference first, up to the proceeds there are.
+  - title: Adds capped participation
+    text: Adds the ownership share of what is left, then holds the total at the cap.
+  - title: Works out converting
+    text: Takes the ownership share of all proceeds, with no cap on this route.
+  - title: Picks the larger payout
+    text: Gives the investor the larger of the two, and shows what is left for everyone else.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given and lists checks it could not run. It never fills a gap with zero.
 output_shape: |-
-  Preference, capped participation, conversion and common residual payouts.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Preference paid <amount> | Participation paid <amount> | Capped total <amount> | Convert payout <amount> | Investor takes <capped or convert> <amount> | Left for others <amount>
+
+  SCOPE AND SOURCES
+  <period, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <amount invested, preference multiple, cap multiple, ownership share, proceeds>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of investor payout plus left for others to proceeds>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The sale proceeds left for shareholders
+    - The amount the investor paid in for this class
+    - The preference multiple and the cap multiple
+    - The investor's ownership share if they converted
+    - Your own payout spreadsheet (optional)
+  prerequisites:
+    - The term sheet or share terms that set the preference and the cap
+    - A cap table that shows the ownership share
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The preference, participation, capped total, convert payout, the one the investor takes, and what is left for others.
+    - name: SCOPE AND SOURCES
+      contains: The period, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that the payouts add up to the proceeds.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Total participation cap must be at least the preference multiple.
+  - what: A different sale price
+    how: Change the proceeds and run it again. The capped route stops growing at the cap, and converting keeps growing.
+  - what: A different cap
+    how: Change the cap multiple. A cap below the preference multiple is refused.
+  - what: A different ownership share
+    how: Change the ownership share. It sets both the participation and the convert payout.
 judge:
   - Total participation cap must be at least the preference multiple.
   - The independent conversion alternative is not capped by the participation cap.
@@ -62,15 +123,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the term sheet or share terms that sets the preference, the cap and the right to convert
+    - The cap table that shows the investor's ownership share
+    - A named reviewer and the question you want answered
 terms:
+  - term: Preferred shares
+    meaning: Shares that get paid before common shares in a sale.
+  - term: Preference
+    meaning: The money an investor gets back first, often the amount they paid in.
+  - term: Participation
+    meaning: A share of what is left after the preference is paid.
+  - term: Cap
+    meaning: The most the investor can take through the preference and participation together.
+  - term: Convert to common
+    meaning: Swap the preferred shares for common shares and take an ownership share of all the proceeds.
+  - term: Common shares
+    meaning: The ordinary shares held by founders, staff and others, paid after preferred shares.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real deal.

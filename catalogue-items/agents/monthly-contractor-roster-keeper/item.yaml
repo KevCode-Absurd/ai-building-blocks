@@ -16,11 +16,11 @@ outputs:
   - {type: document}
 uses: [contractor-program-setup-guide, invoice-checker, long-term-partner-screener, results-agreement-writer, contract-and-proposal-drafter]
 steps:
-  - {uses: contractor-program-setup-guide, note: "Once, and again when you add a new kind of work: the classification risk check, the onboarding checklist and the vendor plan."}
-  - {uses: invoice-checker, note: "Every month: each contractor invoice matched to the agreed rate, hours and deliverables, with mismatches listed."}
-  - {uses: long-term-partner-screener, note: "Every quarter per contractor, or when a problem repeats: whether this is a person worth repeating with, on ability, energy and integrity."}
-  - {uses: results-agreement-writer, note: "Only for a contractor you will keep whose work has no written results agreement, or whose scope drifted: the one-page agreement."}
-  - {uses: contract-and-proposal-drafter, note: "Only when a new contractor starts, or an agreement must be redone: the contract or statement of work draft, for counsel to check."}
+  - {uses: contractor-program-setup-guide, note: "Once, and again when you add a new kind of work: the classification risk check, the onboarding checklist and the vendor plan. Uses the kinds of work and where everyone is based. Passes on the risk signs that each month is checked against."}
+  - {uses: invoice-checker, note: "Every month: each contractor invoice matched to the agreed rate, hours and deliverables, with mismatches listed. Uses this month's invoices and the roster's agreed rates, not step 1's plan. Passes on the mismatch list as evidence for the screen."}
+  - {uses: long-term-partner-screener, note: "Every quarter per contractor, or when a problem repeats: whether this is a person worth repeating with, on ability, energy and integrity. Uses what you have seen of the contractor, including step 2's mismatches, not a plan. Passes on the keep, test-first or walk-away call."}
+  - {uses: results-agreement-writer, note: "Only for a contractor you will keep whose work has no written results agreement, or whose scope drifted: the one-page agreement. Uses the call from step 3 and the scope as it drifted. Passes on the agreed results, to use as the scope in a contract."}
+  - {uses: contract-and-proposal-drafter, note: "Only when a new contractor starts, or an agreement must be redone: the contract or statement of work draft, for counsel to check. Uses a short brief of the contractor, rate and place, with step 4's agreement as the scope. Passes on the draft for counsel."}
 schedule: "On the last working day of each month, when contractor invoices are in"
 asks_before: [paying or disputing any invoice, ending or pausing a contractor, sending any agreement or contract, changing a rate or scope, sharing feedback about a contractor with anyone, classifying anyone as employee or contractor]
 minds: [naval-ravikant]

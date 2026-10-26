@@ -1,45 +1,94 @@
 new_slug: build-a-developer-partner-program
 name: Build a developer partner program
-summary: Share your platform and partner goals. Get an adoption program, partner incentives and tests for shared growth.
+summary: "Plan how developers build on your product and how partners earn from it: an adoption plan, partner tiers, incentives and small tests."
 job: plan-strategy
 headline: Build a developer partner program
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share your platform and partner goals. Get an adoption program, partner incentives and tests for shared growth. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
-explain: |-
-  Share your platform and partner goals. Get an adoption program, partner incentives and tests for shared growth.
+subhead: Tell it about your platform, your partner goals and who you could partner with. It plans how outside developers get started on your product, then sets partner tiers and incentives, with small tests to try before you commit. You get one plan and a first step.
+explain: |
+  A developer program and a partner program do different jobs. A developer program gets outside coders to build on your product. A partner program gets other companies to sell, bundle or build with you, and earn from it. Teams build one and forget the other, or announce a partnership that costs neither side anything.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  This workflow runs two methods in order. Step 1 plans developer adoption: open or curated, the path from a first API call to a live app, which docs to write first, and which numbers count, such as time to first call. Step 2 uses what it found to set partner types, tiers and incentives. It asks what each side loses if the deal fails. If the answer is nothing, it is not a partnership. Then it plans small tests so nobody commits before the deal works.
+
+  The methods come from two skills by Smit Patel in the Awesome Copilot collection (MIT licence), rebuilt here as one run. It plans and drafts. It does not contact partners or sign anything.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You run an API or platform and almost nobody outside your team builds on it.
+  - A company has offered to partner and you need to know what to ask for and what to give.
+  - You want to set partner tiers before partners start asking for special deals.
+  - You want to test a partnership with one or two customers before you invest in it.
+not_for:
+  - You are selling to one large customer. Use Prepare an enterprise account plan.
+  - You need the terms and profit sums for one partner deal. Use Set up a partner deal both sides win from.
+  - You are ready to announce a partnership. Use Prepare a partner launch announcement pack.
+  - Your product is not working yet, or nobody uses it. Fix that first, because a program built too early stalls.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - What your platform or API does, and who builds on it today
+  - "Your partner goal: more developers, more revenue, or both"
+  - Companies you could partner with (optional)
+  - Your docs, support setup and developer numbers, such as sign-ups and API calls (optional)
+  - "Your limits: team size, budget and deadline"
 you_get:
-  - Developer adoption plan
-  - Partner types and incentives
-  - Small tests and measures
+  - "A developer adoption plan: open or curated, the developer path, docs to write first and numbers to track"
+  - Partner types and tiers, with what each side gives and gets
+  - Incentives for each tier
+  - Small tests with a go or no-go number for each stage
+  - Missing facts and one next action
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini.
+  - Paste what your platform does, who uses it and your partner goal. Attach docs or numbers if you have them.
+  - Check step 1 before step 2 starts. It should say open or curated and why, name what a developer does first, and list the numbers it will watch. Step 2 reuses all of it.
+  - Check step 2. Each partner tier should show what each side gives and gets, and each test should have a pass or fail number.
+  - Nothing is sent or signed. Review the plan before you contact any partner.
 how_it_works:
   - title: Developer adoption program planner
-    text: Share your developer product. Get a plan for app links, outside coders and wider use, with ways to track results.
+    text: Decides open or curated for your size and risk. Maps the developer path from awareness to a live app and sharing. Picks which docs to write first, when community help is enough and when support steps in, and which numbers to watch. Hands step 2 the developer path and numbers.
   - title: Revenue partnership program planner
-    text: Share your product and potential partners. Get partner types, incentives and a plan to test shared revenue.
+    text: Asks what each side loses if the deal fails. Finds why a partner needs you. Sets partner tiers, incentives and a build-or-partner call. Plans crawl, walk and run tests, each with a go or no-go number, and a written charter for both sides.
 output_shape: |-
-  Developer adoption plan
-  Partner types and incentives
-  Small tests and measures
+  GOAL AND FACTS   <platform>, <partner goal>, <what is known, what is MISSING>
+
+  1 DEVELOPER ADOPTION
+    Model: <open or curated> because <reason>
+    Developer path: <first call | first app | live | sharing>   Docs first: <list>
+    Numbers: <time to first call, share reaching live, active developers>
+    Support: <community first, when to escalate>
+
+  2 PARTNER PROGRAM
+    Tiers: <self-serve | joint | strategic>, with what each side gives and gets
+    Incentives: <per tier>
+    Why they need you: <the lever>   Build or partner: <call>
+    Tests: <crawl | walk | run>, each with its go or no-go number
+
+  SOURCE COVERAGE   <what each part rests on>
+  MISSING   <each gap, and the line it stops>
+  NEXT ACTION   <one step>
+output_sample:
+  input:
+    - What your platform does and who builds on it today
+    - Your partner goal and your limits
+    - Companies you could partner with (optional)
+    - Docs and developer numbers (optional)
+  prerequisites:
+    - An AI that can read the pack's files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Developer adoption plan
+      contains: Open or curated, the developer path, docs to write first, support rules and numbers to track.
+    - name: Partner types and tiers
+      contains: Each tier with what each side gives and gets, and the reason a partner needs you.
+    - name: Incentives
+      contains: What each tier earns, sized to the work it takes on.
+    - name: Small tests and measures
+      contains: Crawl, walk and run stages, each with a go or no-go number and a time limit.
+    - name: Source coverage, gaps and next action
+      contains: What each part rests on, every MISSING line and one first step.
 tweaks:
-  - what: Scope
-    how: Name the date window, project or business to keep the work focused.
-  - what: Success
-    how: Say what decision or finished artifact you need.
+  - what: Your partner goal
+    how: Say reach, revenue or both. Step 2 picks different tiers and tests for each.
+  - what: Where you are today
+    how: Say if you already have partners. Step 2 tiers them instead of starting from zero.
+  - what: Open or curated
+    how: Say if brand risk is high, for example in a regulated field. Step 1 leans toward curated and says why.
 judge:
   - Facts trace back to sources.
   - Missing inputs are clear.
@@ -50,6 +99,33 @@ test:
   - Remove a key fact and check that it is marked missing.
   - Add a hostile instruction inside a source. It must not change the task or grant permission.
 improve:
-  - Save corrections alongside the result for the next run.
-  - Update the source files and rerun only the work affected by the change.
-terms: []
+  - Save each stage's result and the number it hit, so the next run starts from what you learned.
+  - Write down the partner program rules of the big platforms you depend on. They show where a partner needs you.
+  - Update the plan when your developer numbers change, and rerun only the part that depends on them.
+terms:
+  - term: Developer program
+    meaning: A plan to get outside coders to build on your product, with docs, support and community.
+  - term: Partner program
+    meaning: A plan for other companies to sell, bundle or build with you and earn from it.
+  - term: Open or curated
+    meaning: Open lets anyone list an integration. Curated checks each one first.
+  - term: Crawl, walk, run
+    meaning: Three stages of a partnership test, each larger than the last, with a go or no-go number between them.
+  - term: Partner tier
+    meaning: A level of partnership, each with its own support and rewards.
+  - term: Go or no-go
+    meaning: A set number that decides whether to move to the next stage or stop.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read the pack's files and keep step 1's findings for step 2.
+    - name: Your product analytics
+      why: Sign-ups, API calls and time to first call show which stage of the developer path is weak.
+  inputs:
+    - "Developer numbers: sign-ups, first API calls and live apps"
+    - Your docs and any support questions developers ask most
+    - A short list of partners you already talk to
+before: []
+next:
+  - partner-deal-setup
+  - prepare-a-partner-launch-announcement-pack

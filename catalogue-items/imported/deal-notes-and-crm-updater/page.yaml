@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set steps and judges what is worth logging.
 new_slug: deal-notes-and-crm-updater
 name: Deal notes and CRM updater
-summary: Give it your emails, calls and meetings. Get deals and contacts updated
-  and follow-ups drafted.
+summary: Update your CRM from calls, emails and meetings without typing. Logs notes to the right deal and drafts follow-ups for quiet deals.
 job: sell-and-negotiate
 headline: Deal notes and CRM updater
-subhead: "Give it a meeting, call transcript or email thread and pick a mode:
-  log, sweep, follow-up or clean-up. It logs the activity against the right deal
-  and updates contacts and fields. You get a next-step queue with owners and
-  follow-up drafts for deals that went quiet."
+subhead: "Give it a meeting, call transcript or email thread and pick a mode: log, sweep, follow-up or clean-up. It logs the activity against the right deal and updates contacts and fields. You get a next-step queue with owners and follow-up drafts for deals that went quiet."
 explain: |
   Stop typing into the CRM. Give it a meeting, call transcript or email thread and it logs the activity against the right deal, updates contacts, and queues the next step so nothing sits without an owner.
 
@@ -19,6 +15,10 @@ when:
   - Your pipeline is out of date and you do not know which deals went quiet.
   - You want a weekly sweep that logs new activity for you.
   - Your CRM has duplicate contacts and records nobody has touched in months.
+not_for:
+  - You have one email with no deal attached. Write the reply yourself, there is nothing to log.
+  - You cannot connect a CRM. Ask for the spreadsheet CRM build in this skill instead.
+  - You want a sales pitch or proposal written. Write it yourself or ask your AI for a plain draft, this skill only keeps records.
 you_give:
   - Email, meeting notes or call transcript
   - CRM access or an export (optional)
@@ -30,10 +30,32 @@ you_get:
   - Follow-up drafts for quiet deals
   - Next-step queue with owners
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open your AI and paste this skill. If your AI supports skill folders, upload the folder instead.
+  - "Say which mode you want: log, sweep, follow-up or clean-up. Paste the call transcript, email thread or notes."
+  - Connect your CRM if your AI allows it. HubSpot, Salesforce, Monday.com and Zoho CRM work. Some plans need a paid tier or API access. No CRM? Ask for the spreadsheet version.
+  - Calendar, email and call tools such as Zoom are optional. They let your AI find activity on its own.
+  - Read what it plans to change before you approve. It shows edits first and does not write without your yes.
+  - Copy the follow-up drafts and send them yourself.
+output_sample:
+  input:
+    - A meeting note, call transcript or email thread
+    - "Which mode you want: log, standing sweep, follow-up or hygiene"
+    - Your CRM, such as HubSpot, Salesforce, Monday.com or Zoho (optional)
+    - Your calendar (optional)
+  prerequisites:
+    - An AI that can read your CRM, email or calendar, if you want it to update records directly
+    - A paid CRM plan with connector or API access, if your CRM needs one
+    - Your output preference, if you want a file instead of a page
+  output:
+    - name: What needs you
+      contains: The short list of items that need your decision, shown first so you can act fast.
+    - name: Logged activity
+      contains: The note written against the right deal and contact, with the changes it proposes to fields.
+    - name: Next-step queue
+      contains: Each open deal with a next step, an owner and a date.
+    - name: Follow-up drafts
+      contains: A message for each quiet deal, in a copy block so you can send it by hand.
+    - name: Hygiene edits
+      contains: Duplicates, stale records and missing fields, shown as before and after changes for you to approve.
+    - name: Spreadsheet CRM
+      contains: A simple contacts and deals sheet, built only if you have no CRM.

@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: product_data, required: false}
+  - {type: plan, required: false}
+  - {type: copy_draft, required: false}
 outputs:
   - {type: plan, required: true}
 origin: rebuilt

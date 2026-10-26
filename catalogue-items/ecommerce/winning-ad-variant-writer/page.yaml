@@ -1,6 +1,6 @@
 new_slug: winning-ad-variant-writer
 name: "Winning ad variant writer"
-summary: "Paste your winning ad and top customer groups. Get same-voice variants and a launch plan."
+summary: "Turn one winning Meta ad into same-voice variants for each customer group, with a launch plan. Paste your winner, groups and product facts."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It rewrites in a matching voice and plans a launch, so a mid-size model gives clean variants."
@@ -17,6 +17,10 @@ when:
   - You have one ad that works and you want more ads like it.
   - Your winner is tiring and you need fresh versions that keep its voice.
   - Some ads you rated highly got no spend and you want to give them a fair run.
+not_for:
+  - "You have no proven ad yet, or too little spend to test: write one first with the Ad first line writer and scorer."
+  - "You want new angles, not the same ad for new groups: use the Ad angle multiplier."
+  - "You need to check an ad against Meta's rules before it runs: use the Meta ads compliance checker."
 
 you_give:
   - Your winning ad, with its copy and image
@@ -35,6 +39,30 @@ how_to_use:
   - List the customer groups that bring the most revenue, with their words, and your product facts.
   - Check each variant against your product facts and Meta's ad policies before it goes live.
   - Launch the winners together in one CBO and let Meta move spend.
+output_sample:
+  input:
+    - Your winning ad copy and image, with its spend and result
+    - Your top customer groups and the words they use
+    - Your product and offer facts
+    - Claims you may not make (optional)
+  prerequisites:
+    - A Meta ad that already works and has enough spend to read
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: WINNER
+      contains: The ad you chose, its spend and result, and notes on its tone, sentence length and signature phrases.
+    - name: VARIANTS
+      contains: For each customer group, a headline, primary text, the group word and where it sits, and the facts used.
+    - name: LAUNCH PLAN
+      contains: How to run the winners together in one CBO test, with budget and read window.
+    - name: Zombie campaign
+      contains: Which good ads got no spend, the ad set to put them in, and when to review.
+    - name: Weekly creative hour
+      contains: The day and time you set aside each week to make fresh ads.
+    - name: POLICY AND CLAIMS CHECK
+      contains: A pass, or a list of changes needed to match ad policy and your facts.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not be run, or none.
 
 how_it_works:
   - title: Picks the winner

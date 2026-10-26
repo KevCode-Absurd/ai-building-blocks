@@ -2,35 +2,60 @@ thinking: medium
 thinking_why: It sorts many reviews and ranks them by harm.
 new_slug: low-star-review-triager
 name: Low-star review triager
-summary: Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat
-  problems and what to fix first.
+summary: Triage low-star app reviews. Paste 1 to 3 star Shopify app reviews and get a ranked brief of risks, repeat problems and what to fix first.
 job: understand-customers
 headline: Low-star review triager
-subhead: A ranked brief from your 1 to 3 star app reviews that shows which ones
-  are urgent, which repeat, and what to fix first. It stops you treating every
-  angry review as equally important.
+subhead: Paste your public 1 to 3 star Shopify app reviews. The skill sorts each one by type and ranks it from P0 (urgent) to P3. You get a brief that shows what to fix first.
 explain: |
   A ranked brief from your 1 to 3 star app reviews that shows which ones are urgent, which repeat, and what to fix first. It stops you treating every angry review as equally important.
 
   Paste the public review text. The skill sorts each review into a type: a real incident, a design problem, a pricing wording problem or a feature request. It scores how much damage each could do on a P0 to P3 scale, groups repeats across apps, and gives a first action for each row. Original wording stays attached so you can trace the source. It was made for Shopify apps. It needs no network or code, and you supply the text.
 when:
-  - A new 1-star review lands and you must decide whether it is an incident.
-  - You run several app listings and need one weekly support brief.
-  - You want to know which complaints keep coming back.
-  - You track a few competitors and want their weak spots.
+  - A new 1-star review lands and you must decide if it is a real incident.
+  - You run several app listings and want one weekly support brief.
+  - You want to see which complaints keep coming back.
+  - You watch a few competitors and want to know where they are weak.
+not_for:
+  - "You want to collect reviews, contact reviewers or post replies: use your support inbox tool, or write the reply yourself."
+  - "Your reviews are not in English or come from a store other than the Shopify App Store: the skill sends them to a human read, so check them yourself."
+  - "You need to sort private support tickets or merchant emails: use your help desk tool, because this skill takes public review text only."
 you_give:
-  - Low-star review text
+  - The text of your public 1 to 3 star app reviews
   - Which app each review belongs to
-  - Your own app and competitors (optional)
-  - Any known issues (optional)
+  - Your own apps and any competitors you watch (optional)
+  - Known issues your team already tracks (optional)
 you_get:
-  - A P0 to P3 ranking
-  - Review type for each row
-  - Repeating problem groups
-  - A first action per review
-  - Original wording kept
+  - A P0 to P3 ranking of every review
+  - "The type of each review: incident, design problem, pricing wording or feature request"
+  - Groups of problems that repeat across reviews and apps
+  - A first action for each review
+  - The original wording kept next to each row, so you can trace it
+  - A list of reviews left for a person to read
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. It needs no code, web access or paid tool.
+  - Paste your review text. Add the app name for each review.
+  - Add your own apps, competitors and known issues if you have them.
+  - Ask for the brief. Read the P0 section first.
+  - Check the Needs human read section yourself. Non-English reviews and reviews from other stores land there.
+  - Copy the first actions into your feature-request log or support backlog.
+output_sample:
+  input:
+    - The text of your public 1 to 3 star Shopify App Store reviews
+    - Which app each review belongs to
+    - Your own apps and any competitors you watch (optional)
+    - Known issues your team already tracks (optional)
+  output:
+    - name: P0, Incident risk
+      contains: Reviews that may point to a real incident, with the original wording, the source and a first action.
+    - name: P1, Repeated friction
+      contains: Problems that show up in more than one review or app, grouped, with a first action.
+    - name: P2, Pricing confusion
+      contains: Reviews where the price or plan wording confused the merchant, with a suggested fix.
+    - name: P3, Feature requests
+      contains: Reviews that ask for something the app does not do yet.
+    - name: Needs human read
+      contains: Reviews the skill could not sort with confidence, left for a person to judge.
+    - name: Competitor watch
+      contains: Weak spots that show up in the reviews of the competitors you listed.
+    - name: Decisions this week
+      contains: A short list of what to act on first, drawn from the sections above.

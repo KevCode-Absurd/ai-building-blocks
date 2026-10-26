@@ -16,6 +16,29 @@ use_cases:
   - "Mix a little humour into a serious piece without breaking the mood"
   - "Tell a scene with pictures and sound instead of dialogue"
   - "Spot where a story relies on a surprise that would work better as suspense"
+not_for:
+  - "You need legal, medical or financial copy, where hiding facts to build tension can harm people: write it in plain language and put the key facts first."
+  - "You want a film built on story order and time, or a puzzle told out of sequence: use the Christopher Nolan mind."
+  - "You want a film told through movement, weather and different points of view: use the Akira Kurosawa mind."
+output_sample:
+  input:
+    - The scene, talk, video, email sequence or plan you want to improve
+    - What your audience already knows, and what you want them to feel
+    - The one fact, object or event the piece is built around (optional)
+    - Where the piece feels flat or gives away too much (optional)
+  output:
+    - name: Before and after
+      contains: A short look at the dull version of your piece, then a more gripping version.
+    - name: The bomb question
+      contains: What the audience should worry about, and whether they have been shown it yet.
+    - name: Plan in steps
+      contains: A list of shots or beats, with when the audience learns each key fact.
+    - name: Picture-first pass
+      contains: Places where a picture or sound can replace talking, and which close details to cut between.
+    - name: Pace check
+      contains: Where attention may sag, and what question keeps the audience's mind busy there.
+    - name: Closing question
+      contains: One last question about what to show and what to hold back.
 seats:
   - {seat: "Suspense on screen", asks: "What does the audience know that the character doesn't?"}
   - {seat: "Plan before you shoot", asks: "Can you see the whole thing, cut by cut, before you start making it?"}

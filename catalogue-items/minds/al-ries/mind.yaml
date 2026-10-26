@@ -16,6 +16,29 @@ use_cases:
   - "Plan a launch that starts with press coverage before you spend on ads"
   - "Spot when your brand is tied to a fading category, and what to do about it"
   - "Choose the customers you want before launch, so the brand takes on their character"
+not_for:
+  - "You want ad copy that sells with product facts and research: use the David Ogilvy mind instead."
+  - "You want to win a market by reaching more buyers, not by narrowing your focus: use the Byron Sharp mind instead."
+  - "You need pricing, cash flow or operations advice: ask an accountant or a finance adviser, as Ries's record does not cover it."
+output_sample:
+  input:
+    - Your brand, product or business in a few lines
+    - Your main rivals and who leads your category
+    - The choice you face, such as a new name, a new product or a launch
+    - What you sell and who buys it today (optional)
+  output:
+    - name: Verdict
+      contains: A short, blunt call that states the rule first and says if your plan follows it or breaks it.
+    - name: Brand cases
+      contains: Three or four famous brands that show the rule, with the winners and the losers.
+    - name: Your ladder
+      contains: Who sits on top of your category, which rung you hold and whether a rival owns your word.
+    - name: Laws your plan breaks
+      contains: Each law your plan breaks, with the line in your plan that breaks it.
+    - name: What to give up
+      contains: The product lines, targets or claims to drop so your message stays short.
+    - name: Final call
+      contains: One move to back, such as own this word, launch with press or start a new brand.
 seats:
   - {seat: "Positioning", asks: "What position do we already hold in the customer's mind, and what open hole could we own?"}
   - {seat: "Category and focus", asks: "What category can we be first in, and what are we willing to give up to own one word?"}

@@ -1,6 +1,6 @@
 new_slug: proportional-fix-planner
 name: Proportional fix planner
-summary: Paste a chain of whys. Get a fix at each level, sized to the pain, with an owner, date and check.
+summary: Turn a chain of whys into a proportional fix plan. Each level gets a fix sized to the pain, with an owner, a date and a check.
 job: lead-people
 thinking: medium
 thinking_why: It sizes fixes against the pain using fixed rules, but needs care to keep the deep fixes from being dropped.
@@ -14,6 +14,10 @@ when:
   - You have a root cause and need to decide what to fix and how much to spend.
   - Someone has asked for a full rebuild after a small failure.
   - Your fixes keep stopping at the surface.
+not_for:
+  - "You have no chain of whys yet: run the Root cause finder first, then come back."
+  - "It was a one-off slip with no deeper cause: fix it and move on, no plan needed."
+  - "You need to decide on a full rebuild: that needs its own review with the people who would pay for it."
 you_give:
   - The chain of whys, from the Root cause finder or your own
   - How much it hurt (optional)
@@ -28,6 +32,26 @@ how_to_use:
   - Paste your chain of whys and say how much the problem cost.
   - Give each fix to the named owner and put the dates in the calendar.
   - Send the write-up to everyone who was in the review.
+output_sample:
+  input:
+    - Your chain of whys, each question and its answer
+    - "How much it hurt: people affected, time or money lost (optional)"
+    - Your review plan, with owners (optional)
+  output:
+    - name: Chain
+      contains: Your whys and answers in order, with any blame rewritten as a fact about how the work is set up.
+    - name: Pain
+      contains: A small, medium or large rating with the facts behind it and a total effort for all fixes.
+    - name: Fixes
+      contains: One row per level with finding, fix, size, owner, date, done-when line and check.
+    - name: If it comes back
+      contains: What the next review does if the same problem happens again.
+    - name: Write-up
+      contains: "A short plain-words page with two parts: what we do and what we learned."
+    - name: Missing
+      contains: Any pain figure, owner or date you did not give, marked and never invented.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 how_it_works:
   - title: Lays out the chain
     text: And rewrites any blame as a set-up fact.

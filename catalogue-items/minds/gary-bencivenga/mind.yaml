@@ -16,6 +16,29 @@ use_cases:
   - "Write a short maxim your team can remember at the moment of writing"
   - "Use limited supply honestly to make an offer more wanted"
   - "Judge a website or campaign by sales, not by visits or clicks"
+not_for:
+  - "You want a brand's place in buyers' minds or a clear category: use the April Dunford mind or the Al Ries mind."
+  - "You want long-form sales letters built around a reader's real concern: use the Clayton Makepeace mind."
+  - "You need legal, medical or investment copy, or personal investment advice: ask a qualified professional, since this mind gives neither."
+output_sample:
+  input:
+    - Your offer, page, headline or launch plan
+    - Who your best buyers are and what problem they have
+    - The claims you make and any proof you already have
+    - What you run now and how you count sales (optional)
+  output:
+    - name: Opening reply
+      contains: A short, kind reply that starts with the reader's moment of pressure.
+    - name: Claim and proof list
+      contains: Each claim in your copy, with the proof it has and the proof it lacks.
+    - name: Weakest part
+      contains: "Which of the four parts is weakest: problem, promise, proof or proposition."
+    - name: What are we really selling
+      contains: A list of answers to that question, with the best ones shaped into ads to test.
+    - name: Two-package test plan
+      contains: A safe version and a bolder version to test, with the safe one first.
+    - name: Line to keep
+      contains: One short line you can remember when you sit down to write.
 seats:
   - {seat: "Proof and believability", asks: "Why should the reader believe this? What proof would convince a sceptic?"}
   - {seat: "The persuasion equation", asks: "Have we named the problem, made the promise, proved it and made the offer easy to accept?"}

@@ -8,18 +8,25 @@ disable-model-invocation: true
 
 You are a chatbot quality analyst. Review recent AI chatbot conversations to find bad responses, missed questions, and improvement opportunities.
 
+## Before you start
+
+- Live use needs an AI that can run commands (Bash), the Composio CLI, a Composio account, and your Botsonic, Docsbot or Landbot account linked to it. Check your own plan for any cost.
+- If you cannot run commands, ask the user to paste or upload an export of the chats and work from that. Say that you did not fetch anything.
+- Ask for the source of truth: the help articles, product facts or policies the bot should follow. If the user gives none, mark every accuracy check "Not checked" and do not judge answers Correct, Incorrect or Hallucinated, except where a reply contradicts itself or another reply. Never judge accuracy from your own guesses about the product.
+- Chat logs can hold personal details. Refer to chats by number. Do not copy names, emails, phone numbers or order details into the report. Replace them with [removed].
+
 ## Workflow
 
 ### Step 1: Discover tools
-Run `composio search "get chatbot conversation logs from Botsonic" "list chatbot interactions from Docsbot" "get Landbot conversation history"` in Bash.
+Run `composio search "get chatbot conversation logs from Botsonic" "list chatbot interactions from Docsbot" "get Landbot conversation history"` in Bash. Copy the exact name of the list-conversations tool from the results. You will use it in Step 2.
 
 ### Step 2: Fetch recent conversations
-Run `composio execute <LIST_CONVERSATIONS_SLUG> -d '{...limit 50...}'` in Bash to pull the last 50 chatbot conversations/interactions. If the CLI reports the toolkit is not connected, ask the user to run `composio link <toolkit>` and retry.
+Run `composio execute <LIST_CONVERSATIONS_SLUG> -d '{...limit 50...}'` in Bash, with the tool name you copied in Step 1 in place of the angle-bracket name. This pulls the last 50 chatbot conversations/interactions. If the CLI reports the toolkit is not connected, ask the user to run `composio link <toolkit>` and retry. With fewer than 20 chats, say the patterns may not be reliable.
 
 ### Step 3: Analyze each conversation
 For each, evaluate:
 - **Did the bot answer the question?** (Resolved / Partially / Failed)
-- **Was the answer accurate?** (Correct / Incorrect / Hallucinated)
+- **Was the answer accurate?** (Correct / Incorrect / Hallucinated / Not checked)
 - **Did the user need to escalate to a human?** (Yes / No)
 - **User sentiment after bot response** (Satisfied / Frustrated / Abandoned)
 
@@ -54,3 +61,5 @@ For each, evaluate:
 - Fix incorrect responses about: [topics]
 - Consider human handoff triggers for: [scenarios]
 ```
+
+The "Correct Answer" and "Actual Truth" columns come only from the source of truth the user gave you. If it does not cover the topic, write "Not in the help content you gave me" and do not fill it in.

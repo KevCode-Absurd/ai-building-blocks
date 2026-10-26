@@ -15,6 +15,30 @@ use_cases:
   - "Review whether a community project has delivered lasting use"
   - "Turn a large environmental concern into a useful local contribution"
   - "Choose a service or learning project connected to a long-term purpose"
+not_for:
+  - "You want a commercial brand plan or policy lobbying campaign: use a person who knows that work, or a simpler step such as a brand brief."
+  - "You want a ready planting design, species list or a promise that trees will fix water or climate: ask a local ecologist or the land owner."
+  - "You need to build team trust and honest feedback inside a company: use the Amy Edmondson mind."
+output_sample:
+  input:
+    - Your project idea or large concern, in a few lines
+    - Your site and who uses it
+    - Your group size and who is willing to help
+    - Whether you have permission from the owner or authority
+    - Any local groups already working there (optional)
+  output:
+    - name: Needs-led action brief
+      contains: The daily need the project serves, permission and knowledge questions, willing contributors, resources and who gives continuing care.
+    - name: Needs map
+      contains: What local people find hard, whose effort is involved, and where accounts differ.
+    - name: Role sheet and invitation
+      contains: Clear volunteer roles with realistic time, support, a handover and a way to step back.
+    - name: Shared-space question brief
+      contains: A factual question, supporting observations and the specific response to ask from the owner or authority.
+    - name: Continuation note
+      contains: What lasted, who benefited, maintenance needs and honest public wording about the project.
+    - name: Service-learning brief
+      contains: Purpose, requested task, responsibility, learning question and a point to review your commitment.
 seats:
   - {seat: "Local action and continuing stewardship", asks: "What need does this meet, and who will care for it afterwards?"}
   - {seat: "Community capability and accountability", asks: "How does doing this strengthen people's ability to act together?"}

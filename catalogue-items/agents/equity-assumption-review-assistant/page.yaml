@@ -1,56 +1,122 @@
 new_slug: equity-assumption-review-assistant
-name: Equity assumption review assistant
-headline: Equity assumption review assistant
-summary: A checked valuation scenario report and assumption challenge list.
+name: Share valuation assumption reviewer
+headline: Share valuation assumption reviewer
+summary: Check a share valuation model when new filings arrive. Get scenarios, assumptions to challenge and source gaps, with facts and guesses kept apart.
 job: money-and-investing
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A checked valuation scenario report and assumption challenge list. Share actual company filings, dated market data, exchange, currency, as-of date, the existing valuation model and explicit scenario assumptions. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
-explain: |-
-  A checked valuation scenario report and assumption challenge list.
+subhead: Give it the company's new filings, dated prices, your valuation model and your scenario assumptions. It finds the exact source for each change and reruns only the scenarios that move. You get a scenario report and a list of assumptions to challenge.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Scenarios use dated evidence and explicit inputs; model validity is separate from investment merit. Missing tools or evidence stay visible in the final summary.
+explain: |
+  A share valuation moves when its inputs move. A new filing changes revenue or debt. A new price changes the starting point. A new view on growth or the discount rate changes the answer. The model rarely shows which change did it. Many reviews also start from a blank page each time, so an old recommendation comes back as a new finding.
+
+  This agent keeps a record of the last review. It holds the company, exchange, currency, as-of date and model version. It also holds the date of each input and how the scenarios differ. When a new filing, dated market exhibit or assumption arrives for the same company, it is compared with that record. If the exchange, currency or valuation date changed, it sets a new baseline instead. If nothing changed, it says so and stops.
+
+  For each changed input it first pulls the exact period and source. It then runs the valuation engine in the Equity research and valuation report builder and checks the arithmetic. The Unsupported claim spotter reads the commentary for claims the filings and prices do not support. Scenarios are what-ifs. They are not price forecasts, investment advice or a fairness opinion. A person who knows the company checks the sources.
+
 when:
-  - You need a checked valuation scenario report and assumption challenge list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A company you follow files new results, and your valuation model still uses the old figures.
+  - A new share price or market exhibit arrives, and you need to know which scenarios it moves.
+  - You change a growth, margin or discount rate assumption and want it challenged before you rely on it.
+  - The exchange, currency or valuation date changed, and the old model no longer fits.
+
+not_for:
+  - You want a first valuation report for a company. Use the Equity research and valuation report builder.
+  - You want a buy or sell view, a price target or a fairness opinion. It gives none. Speak to a licensed adviser.
+  - You only want to test an investment argument against opposing evidence. Use the Investment argument and contrary-evidence review.
+  - You want live prices. It uses no market-data feed, so you must supply dated prices.
+
+output_sample:
+  input:
+    - The company's new filings, with its exchange and currency
+    - Dated market data, such as the share price and its date
+    - Your valuation model and the scenario assumptions you want tested
+    - The as-of date and your size limit for a material change
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The pack's component files added to your AI
+    - Python 3.9 or later, to run the valuation engine. Without it the scenario sums are marked unchecked.
+  output:
+    - name: Changed since last review
+      contains: Each filing figure, price or assumption that moved, with its period, source, old value and new value.
+    - name: Scenario report
+      contains: Value per share for each scenario, plus a grid of discount rate against terminal growth.
+    - name: Assumptions to challenge
+      contains: Each key assumption with the evidence for it, the evidence against it and what would change it.
+    - name: Source ledger
+      contains: Each figure tied to a filing, a period and a page.
+    - name: Claim check
+      contains: Commentary that the filings and prices do not support, with the evidence that is missing.
+    - name: Record for next review
+      contains: A short record to paste into your next run.
+    - name: Missing and checks missed
+      contains: Each gap, and each check that failed or could not run.
+
 you_give:
-  - Actual company filings, dated market data, exchange, currency, as-of date, the existing valuation model and explicit scenario assumptions. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
-  - "Available tools for the finished output: The bundled valuation engine and report renderer."
+  - The company's new filings, with its exchange and currency (from the company's investor page or the exchange)
+  - Dated market data, such as the share price and the date it was taken
+  - Your existing valuation model, and the scenario assumptions you want tested
+  - The as-of date, and your size limit for a material change
+  - The record from your last review (optional on a first run)
+
 you_get:
-  - A checked valuation scenario report and assumption challenge list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A scenario report with value per share for each scenario and a grid of discount rate against terminal growth
+  - A list of assumptions to challenge, each with the evidence for and against it
+  - A source ledger that ties each figure to a filing, a period and a page
+  - A check of the commentary for claims the evidence does not support
+  - MISSING lines, CHECKS MISSED and a record for next time
+
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. An AI that can run Python works best, because the valuation engine and its checker are Python scripts. In plain chat it still works, but it marks the scenario sums as unchecked.
+  - Say whether this is the first run. If not, paste the record from last time. Then attach the new filings, the dated prices and your model.
+  - Read "changed since last review" first. Check each changed figure against the filing page it names.
+  - Read the assumptions to challenge. Take the two that move the value most and check the evidence for them yourself.
+  - Read the scenarios as what-ifs, not forecasts. Check that each scenario's inputs match the assumptions you gave.
+  - Fix every MISSING line. Run it again when a new filing, price date or assumption arrives. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep company identifier, exchange, currency, as-of date, model version, input source dates and scenario differences. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A new filing, dated market exhibit or valuation assumption is supplied for the same company.
-  - title: Choose the next step
-    text: Run review-equity-valuation-sensitivity-assumptions for changed evidence or a due review. If an input changed, extract its exact period and source before running the affected scenarios. If the exchange, currency or valuation date changed, establish a new baseline.
-  - title: Check and save evidence
-    text: Scenarios use dated evidence and explicit inputs; model validity is separate from investment merit. Save source versions, branch reasons, outputs and unresolved checks.
-output_shape: |-
-  Scope and source coverage
-  A checked valuation scenario report and assumption challenge list.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this company, or sets a first baseline. Compares exchange, currency, as-of date, model version, input dates and scenario differences. If nothing changed and no review is due, it says so and stops.
+  - title: Pulls the source for each change
+    text: Uses the Source note summariser on each changed filing or exhibit to find the exact period, figure and page. It hands those sources to the scenario step.
+  - title: Runs the scenarios
+    text: Uses the valuation engine and the matching checker in the Equity research and valuation report builder on your explicit inputs. It keeps the source ledger and inspects the rendered report. Scenarios are what-ifs, never price forecasts.
+  - title: Checks the commentary
+    text: Uses the Unsupported claim spotter to read the thesis and valuation commentary against the filings, dated prices and scenario results. It flags claims made with too much certainty and missing counter-evidence. It gives no personal recommendation.
+  - title: Starts a new baseline when needed
+    text: If the exchange, currency or valuation date changed, it does not compare with the old review. It sets a new baseline and says so.
+  - title: Saves the record
+    text: Writes the small record for next time and lists what is still MISSING. It proposes a state update and keeps the old one. It corrects a failed step at most twice, then reports the blocker.
+
+output_shape: |
+  REVIEW DATE <date>   COMPANY <name, exchange>   CURRENCY <currency, scale>
+  AS-OF <date>   BASELINE <first run, or compared with <date>>
+
+  CHANGED SINCE LAST REVIEW  <input, period, source, old value, new value>
+  SCENARIO REPORT  scenario | key assumptions | value per share
+                   grid  discount rate <low, mid, high> x terminal growth <low, mid, high>
+  ASSUMPTIONS TO CHALLENGE  rank | assumption | value used | evidence for | evidence against
+                            | what would change it
+  SOURCE LEDGER  figure | filing | period | page
+  CLAIM CHECK  <commentary claim, why the evidence does not support it>
+
+  RECORD FOR NEXT REVIEW  company, exchange, currency, as-of date, model version,
+                          input source dates, scenario differences
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+  This is scenario arithmetic. It is not investment advice or a fairness opinion.
+
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Scenarios use dated evidence and explicit inputs; model validity is separate from investment merit.
+  - what: A different discount rate
+    how: Change the rate and run it again. Every scenario moves, the grid shows the gap, and the source ledger stays the same.
+  - what: A new filing
+    how: Attach it. The changed figures are pulled with their period and page, and only the affected scenarios are rerun.
+  - what: A new valuation date or currency
+    how: Say so. It does not compare with the old review. It sets a new baseline and says why.
+  - what: A workbook or a PDF
+    how: Say which one you want. The report builder can export its page to PDF, and every page should be checked by eye.
+
 judge:
   - Scenarios use dated evidence and explicit inputs; model validity is separate from investment merit.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -63,16 +129,34 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep each review's record in one folder named by date, so the next run starts from the true earlier state.
+  - Write your scenario assumptions in one list and keep the same names every run, so a changed assumption is easy to see.
+  - Keep each filing with its date and page numbers. A figure with no page cannot be checked.
+  - Pair it with the Investment argument and contrary-evidence review when you want the thesis tested against opposing evidence, and with the Valuation method comparer when you want a second method.
+
 works_best_with:
   tools:
-    - name: The bundled valuation engine and report renderer
-      why: Run the matching strict validator and inspect the actual report; this pack contains no live market-data feed.
+    - name: An AI that can run Python and read files
+      why: Runs the report builder's valuation engine and its matching checker, and can save the record file. In plain chat the scenario sums are marked unchecked.
+    - name: The company's filings and a dated price source
+      why: Give each figure and price a date and a page, so nothing rests on memory.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The latest annual or interim report, with page numbers.
+    - A dated share price and the exchange it comes from.
+    - A named reviewer who knows the company and will check the sources and the assumptions.
+
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Scenario
+    meaning: A what-if case. It shows the value if a set of assumptions holds, not a forecast.
+  - term: Discount rate
+    meaning: The yearly return used to bring future cash flows back to today's value.
+  - term: Terminal growth
+    meaning: The steady growth rate assumed for cash flows after the forecast years.
+  - term: As-of date
+    meaning: The date the prices and figures are taken to be true.
+  - term: Baseline
+    meaning: The first accepted review. Later reviews are compared with it.
+  - term: Source ledger
+    meaning: A list that ties each figure to a filing, a period and a page.
+  - term: Fairness opinion
+    meaning: A formal view from a licensed adviser on whether a deal price is fair. This agent does not give one.

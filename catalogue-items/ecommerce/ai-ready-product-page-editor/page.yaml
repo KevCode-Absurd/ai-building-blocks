@@ -1,6 +1,6 @@
 new_slug: ai-ready-product-page-editor
 name: "AI-ready product page editor"
-summary: "Give it a product page. Get the facts, spec table, FAQs and markup checklist AI tools can use."
+summary: "Edit a product page so AI tools quote it right. Give it your page and facts. You get a change list, spec table, FAQ and markup checklist."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It rewrites a page from your facts and keeps every claim true. A mid-level model is enough. Check the facts it uses against your own."
@@ -17,6 +17,10 @@ when:
   - A product page ranks or sells well and you want AI assistants to quote it correctly.
   - AI tools state a wrong price, size or shipping time for your product.
   - You want a collection page to answer a "best X for Y" question.
+not_for:
+  - "You want to plan the classic search layout of a product page: use the product page SEO builder."
+  - "You only need to find out which questions shoppers ask: use the shopper question mapper."
+  - "Your store copies product text from a supplier and has no facts of its own: first gather real specs, sizes and reviews, or ask the supplier for them."
 
 you_give:
   - The product or collection page address and its text
@@ -36,6 +40,27 @@ how_to_use:
   - Read the change list. Do the top three first.
   - Publish the spec table and FAQ. Check the markup in a free validator.
   - Check the page loads its key content with JavaScript turned off.
+output_sample:
+  input:
+    - Your product or collection page address and its text
+    - "Your product facts: specs with units, materials, sizing, price, shipping and returns"
+    - Your reviews and customer questions (optional)
+    - Shopper questions from the shopper question mapper (optional)
+  output:
+    - name: Change list
+      contains: The edits to make, in priority order, each with a reason and the part of the page it touches.
+    - name: First screen
+      contains: What the product is, who it is for or where it ships, the next step, and the key facts shown.
+    - name: Spec table
+      contains: Each attribute with its value and unit, and the fact you gave that it came from.
+    - name: FAQ
+      contains: About five specific questions with answers taken only from your facts.
+    - name: Title, H1 and meta
+      contains: A draft page title, main heading and meta description for the page.
+    - name: Markup checklist
+      contains: Whether product, offer, review and availability markup is present or needs adding, and if it passed a check.
+    - name: Links, checks missed and missing
+      contains: Related pages to link, any checks that failed, and the facts you did not give.
 
 how_it_works:
   - title: Applies the 2-second rule

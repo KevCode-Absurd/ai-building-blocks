@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts requirements by set rules, then drafts answers.
 new_slug: rfp-response-builder
 name: RFP response builder
-summary: Paste an RFP or security questionnaire. Get requirements sorted by must
-  have, a fit score and draft answers.
+summary: Turn an RFP or security questionnaire into a sorted requirements list, a fit check and a bid or no-bid call. Gaps are shown, never made up.
 job: sell-and-negotiate
 headline: RFP response builder
-subhead: A response plan for a tender or security questionnaire that shows what
-  the buyer wants, where you are strong and whether to bid. It marks gaps openly
-  and never invents claims.
+subhead: A response plan for a tender or security questionnaire that shows what the buyer wants, where you are strong and whether to bid. It marks gaps openly and never invents claims.
 explain: |
   A response plan for a tender or security questionnaire that shows what the buyer wants, where you are strong and whether to bid. It marks gaps openly and never invents claims.
 
@@ -18,6 +15,10 @@ when:
   - A customer sends a long security questionnaire.
   - Your team needs one view of every must-have requirement.
   - You want win themes that are more than generic claims.
+not_for:
+  - "You want a free-form proposal or executive brief: write it with a proposal writer or by hand, since this tool answers the buyer's own questions in their order."
+  - "You need to redline a contract after you win: use your lawyer or legal adviser."
+  - "You need web copy or sales sheets for many buyers: use a marketing writing tool, not this one."
 you_give:
   - The RFP, RFI or questionnaire text
   - Your case studies, certificates and proof points
@@ -30,8 +31,30 @@ you_get:
   - A win-chance estimate and bid call
   - Draft answers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Paste the RFP or questionnaire text into your AI, along with this skill's instructions.
+  - "Add your proof points: case studies, certificates and references. Say where each one can be checked."
+  - Answer the seven check questions the skill asks one at a time, such as whether there is an incumbent. Set your bid threshold before you see the results.
+  - Let it sort the requirements, build the fit matrix and draft win themes. Read the gap audit first.
+  - Read the win-chance estimate as a rough guide only. Its weights are editable assumptions, so change them to match your own deals.
+  - This skill includes three Python scripts. They need an AI that can run code. In a plain chat, your AI can follow the same steps by hand.
+output_sample:
+  input:
+    - The RFP, RFI or security questionnaire text
+    - "Your proof points: case studies, certificates, customer references (with where each can be checked)"
+    - Your draft win themes (optional)
+    - "Deal context: incumbent, your relationship, number of rivals, deal size (optional)"
+  prerequisites:
+    - An AI that can run Python code, to use the three scripts. Without code, paste the steps into a chat and work through them by hand.
+  output:
+    - name: Parsed requirements
+      contains: Every requirement tagged must have, weighted or nice to have, plus sections, scoring rules, deadline and format limits.
+    - name: Proof-point matrix
+      contains: Each requirement rated strong, partial or gap, tied to the proof that backs it.
+    - name: Win themes
+      contains: Three to five buyer-side themes, showing which requirements each one runs through. Themes in fewer than two are flagged.
+    - name: Gap audit
+      contains: A plain list of requirements you cannot back up, left open for your team to decide.
+    - name: Win-chance estimate
+      contains: A percentage with a confidence range and the factors that moved it.
+    - name: Bid call
+      contains: Bid, partner-bid or no-bid, with the named factors behind the call.

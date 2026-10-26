@@ -33,3 +33,22 @@ how_it_works:
     text: Review dialogue intelligibility on speakers/headphones, transitions and peaks, end silence, sync and rights. If processing tools exist, preserve originals and report actual measurements; otherwise provide a timecoded edit plan without claiming a finished mix.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You need to clean a noisy recording, not plan a mix: use Noisy audio cleaner."
+  - "You want a cut list for a video ad, not an audio plan: use Video ad edit planner."
+  - "You want an edit plan for short social clips: use Social video edit planner."
+output_sample:
+  input:
+    - Your brief, with where the video will play and how long it runs
+    - Your script (optional)
+    - Voice takes, music and sound effect files, with their usage rights (optional)
+    - Your footage or a timed edit (optional)
+  output:
+    - name: Asset inventory
+      contains: Each file with its role, approval and duration, and what is only planned.
+    - name: Timecoded mix plan
+      contains: Voice, room tone, music, sound effects and fades or ducking, in time order.
+    - name: Export and review targets
+      contains: The loudness and file target for where it plays, and the listening checks to do.
+    - name: Not run
+      contains: Any editing, listening, loudness check or export that did not happen.

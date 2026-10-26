@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set pricing formulas and builds a chart.
 new_slug: options-payoff-chart-maker
 name: Options payoff chart maker
-summary: Give it your option strikes and prices. Get a chart of what the trade
-  earns or loses. Collects data from websites.
+summary: Turn your option strikes and prices into a payoff chart that shows what the trade earns or loses. Sliders let you test price, time and volatility.
 job: money-and-investing
 headline: Options payoff chart maker
-subhead: An interactive chart of what your options trade makes or loses, drawn
-  from the strikes and prices you already have. Drag sliders and watch the lines
-  move.
+subhead: An interactive chart of what your options trade makes or loses, drawn from the strikes and prices you already have. Drag sliders and watch the lines move.
 explain: |
   An interactive chart of what your options trade makes or loses, drawn from the strikes and prices you already have. Drag sliders and watch the lines move.
 
@@ -18,6 +15,10 @@ when:
   - You have a broker screenshot and want a clearer chart.
   - You want to see how the trade changes as time passes.
   - You need break-even prices before placing the trade.
+not_for:
+  - "You only hold stock and no options: use your broker's own chart or a simple profit and loss sum."
+  - "You want to place or send a trade: use your broker, since this only draws a chart."
+  - "You have margin or assignment questions: use your broker's own risk tool or ask your broker."
 you_give:
   - Strikes and expiry
   - Premium paid or received
@@ -30,8 +31,29 @@ you_get:
   - Max profit, max loss and break-evens
   - Sliders for price, volatility and time
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini. Pick one that can show charts or save an HTML file.
+  - Paste the skill text into the chat, or upload the skill folder.
+  - "Type your trade: strategy, ticker, strikes, expiry, premium and quantity. Or add a broker screenshot."
+  - Check the strategy summary. Any value you did not give, such as premium, volatility, spot or days left, is a default guess. Replace it with your real number.
+  - Drag the sliders to see how price, volatility and time change the lines.
+  - A live price quote needs Python with yfinance and fetches data from a third-party site. Without it, type your spot price. This is for learning, not advice.
+output_sample:
+  input:
+    - Your strategy type and underlying, typed or from a broker screenshot
+    - Your strikes and expiry
+    - The premium you paid or received, and your quantity
+    - Spot price and implied volatility (optional)
+  prerequisites:
+    - An AI that can show charts or save an HTML file
+    - Python with yfinance, only if you want a live price quote (it fetches data from a third-party site)
+  output:
+    - name: Strategy summary
+      contains: The strategy your AI found and how it matched each leg, plus any default values it used.
+    - name: Payoff chart
+      contains: A dashed line for profit at expiry and a solid line for today's Black-Scholes value.
+    - name: Sliders
+      contains: Controls for strikes, premium, quantity, implied volatility, days to expiry, interest rate and spot price.
+    - name: Stats cards
+      contains: Max profit, max loss, break-even prices and the current theoretical profit or loss at spot.
+    - name: Key insight
+      contains: A short note on max profit, max loss and one point worth knowing about this trade.

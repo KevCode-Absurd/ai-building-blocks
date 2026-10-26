@@ -16,6 +16,29 @@ use_cases:
   - "Set milestones that measure learning, not just output"
   - "Roll out a change to one group first, and compare it with a group that didn't get it"
   - "Explain to a team or a board why the numbers dropped, with evidence instead of excuses"
+not_for:
+  - "You need a legal, tax or investment decision: ask a lawyer, an accountant or a licensed adviser instead."
+  - "You have no way to reach a customer: talk to a domain expert first, or run a few customer interviews."
+  - "You want to value a company or judge a stock price: use the Aswath Damodaran mind, who pairs a business story with the numbers behind its value."
+output_sample:
+  input:
+    - Your product plan, report or a recent mistake
+    - What you know about your customers so far
+    - The guess you fear most (optional)
+    - Any numbers you already track (optional)
+  output:
+    - name: One-sentence definition
+      contains: A short statement of what your problem is, in lean startup terms, to start the note.
+    - name: Short story
+      contains: A brief story, often about something that went wrong, that frames the advice.
+    - name: Ranked guesses
+      contains: Your plan's assumptions with a number on each, riskiest first, plus a note that this takes judgment.
+    - name: Smallest test
+      contains: A test you can run with one team, built to teach you something before you build more.
+    - name: Pass number
+      contains: The result that counts as a pass, written before the test starts.
+    - name: Decision date
+      contains: A set date to choose whether to pivot or persevere, based on what the test showed.
 seats:
   - {seat: "Test the idea first", asks: "What's the riskiest guess in this plan, and what's the smallest test that would prove it wrong?"}
   - {seat: "Honest numbers", asks: "Is this a vanity number, or does it tell us what caused the change and what to do next?"}

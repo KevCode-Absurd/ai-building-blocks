@@ -17,6 +17,29 @@ use_cases:
   - "Write a referral ask your happy customers will actually act on"
   - "Plan the offer that comes after the first sale, so each customer is worth more"
   - "Pick which market to serve when you could sell to anyone"
+not_for:
+  - "You need to handle a hard talk or negotiation: use the Chris Voss mind."
+  - "You want to understand why buyers say yes to a request: use the Robert Cialdini mind."
+  - "You have no product or customers yet and only a loose idea: talk to ten possible buyers first, then come back."
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your current price and what it costs you to deliver
+    - How many new leads or customers you get now
+    - Where you think the business is stuck (optional)
+  output:
+    - name: Problem sort
+      contains: Whether you have too few customers or too little cash left, and which part is weakest.
+    - name: Market check
+      contains: Your buyer group scored on pain, money, reach and growth, with a flag if one is zero.
+    - name: Offer and price fix
+      contains: The weak part of the offer, a price based on what the result is worth, and the sums behind it.
+    - name: Enhancers
+      contains: Limits and dates that are real, bonuses that answer one doubt each, a guarantee with refund sums, and a name.
+    - name: Way in and next offer
+      contains: How to get first buyers, and what to sell right after the first yes.
+    - name: Monday plan
+      contains: A short numbered list that starts with the one thing to change first.
 seats:
   - {seat: "Offers and pricing", asks: "Would a buyer feel stupid saying no to this? If not, what would make the deal better?"}
   - {seat: "Lead flow", asks: "How many new people saw this offer this week, and what would double that?"}

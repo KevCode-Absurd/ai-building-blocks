@@ -1,6 +1,6 @@
 new_slug: five-part-ad-checker
 name: Five-part ad checker
-summary: Paste your finished ad. Get a pass or fail on its five jobs, a score out of 100 and ranked fixes.
+summary: Check your ad copy before it runs. Paste a finished ad and get a pass or fail on its five jobs, a score out of 100 and ranked fixes.
 job: check-ads
 thinking: medium
 thinking_why: It judges each part against fixed pass lines, with some judgement on length and flow.
@@ -14,6 +14,10 @@ when:
   - You have a finished ad and want to know what is missing before it runs.
   - Your ad reads well and still does not pull.
   - You are reviewing someone else's ad.
+not_for:
+  - "You only doubt the headline: use the Headline promise checker."
+  - "You have a brand awareness post or an organic post with no clear ask: the action part will fail by design, so read it as a style review."
+  - "You have no draft yet: use the Fact-based ad copy writer to write one first."
 you_give:
   - "The finished ad: headline, body, proof, ask"
   - The brief or the offer (optional)
@@ -28,6 +32,24 @@ how_to_use:
   - Paste the whole ad.
   - Add the brief or the offer if you have them.
   - Fix the first failing part, then run it again.
+output_sample:
+  input:
+    - "Your finished ad: headline, body, proof and ask"
+    - The brief or the offer (optional)
+    - Price and where the ad will run (optional)
+  output:
+    - name: Five-part table
+      contains: "For each part: the quoted text, pass or fail, points out of 20, and a one-line fix."
+    - name: Score
+      contains: A total out of 100, the sum of the five parts.
+    - name: Length
+      contains: A verdict of too short, right or too long, with the reason for this product and price.
+    - name: Fix order
+      contains: Fixes ranked with the earliest failing part first.
+    - name: Missing
+      contains: Facts the verdicts needed but did not have, such as price or where the ad runs.
+    - name: Checks missed
+      contains: One line for each check that still failed, or none.
 how_it_works:
   - title: Marks the five parts
     text: Quotes where each part sits in the ad.

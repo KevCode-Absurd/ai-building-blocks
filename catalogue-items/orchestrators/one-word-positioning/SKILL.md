@@ -50,8 +50,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Map the words rivals already own.** Use the skill `owned-word-mapper`. Which words are taken, which are claimed by everyone and which are open.
 2. **Pick the word to own.** Use the skill `ownable-word-picker`. Give it the audit report from the steps before. One word with two backups, each tested on four lines.
-3. **Write the honest line that sets it up.** Use the skill `candid-line-writer`. Give it the shortlist from the steps before. Three admit-then-turn lines that set up the word.
-4. **Decide what to give up.** Use the skill `give-up-list-planner`. Give it the shortlist from the steps before. What to cut, which target to aim at and a rule that protects the word.
+3. **Write the honest line that sets it up.** Use the skill `candid-line-writer`. Give it the shortlist from the steps before. Takes the word from step 2. Hands back three admit-then-turn lines that set up the word.
+4. **Decide what to give up.** Use the skill `give-up-list-planner`. Give it the shortlist from step 2, not the lines from step 3. Hands back what to cut, which target to aim at and a rule that protects the word.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -1,6 +1,6 @@
 new_slug: close-the-month-and-explain-every-line-that-moved
 name: Close the month and explain every line that moved
-summary: List your close tasks. Get a close plan, accruals, draft statements and a reason for each big move.
+summary: Close the month in a fixed order. Get a close plan, sorted costs, accruals, draft statements and a reason for each big move.
 job: money-and-investing
 thinking: high
 thinking_why: The accrual and statement steps do sums that must tie. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You close your own books each month and want the same order every time.
   - Your close drifts late because accruals and statements get tangled.
   - A boss, partner or investor asks why a line moved and you need an answer written down.
+not_for:
+  - "Your books are already closed by a team or close software: use this only to check the order of your tasks."
+  - "You need final statements to file or send to a lender: give the drafts to your accountant to review first."
+  - "You only want to sort one month of spending: use the Expense sorter on its own."
 you_give:
   - Your close tasks, who does each, and roughly how long they take
   - The month's card, bank and bill transactions as one table
@@ -33,6 +37,29 @@ how_to_use:
   - Pause. Export the month's transactions as one table. After it drafts the accruals, review them, post the ones you accept and export the trial balance and last month's figures.
   - Set your limit for a big move, such as 5 percent or a fixed amount.
   - Give the finished drafts to your accountant to review.
+output_sample:
+  input:
+    - Your close tasks, who does each and how long they take
+    - The month's card, bank and bill transactions as one table
+    - Your accrual list, such as rent, payroll costs and fees
+    - Your trial balance after you post the entries, and last month's figures
+    - Your limit for a big move (optional)
+  prerequisites:
+    - An AI that can read your files, such as Claude with a project or Claude Code
+    - A way to export transactions and a trial balance from your books
+  output:
+    - name: Close plan
+      contains: Tasks in order with owners, the longest chain, blockers and a day by day calendar.
+    - name: Sorted costs
+      contains: Each transaction by category, department and tax treatment, with a list of lines it is unsure about.
+    - name: Accrual schedule
+      contains: The month's share of each accrual, the support for it and a draft journal entry for each.
+    - name: Financial statements
+      contains: Draft income statement, balance sheet and cash flow, with checks that the numbers tie.
+    - name: Variance commentary
+      contains: One sentence of reason for every line past your limit, plus a short note on the biggest movers.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and every missing item in one list.
 how_it_works:
   - title: Plan the close
     text: Orders the tasks by what must finish first, finds the longest chain, marks blockers and writes the day by day calendar.

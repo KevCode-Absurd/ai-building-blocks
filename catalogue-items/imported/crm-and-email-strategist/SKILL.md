@@ -136,3 +136,10 @@ Condensed reference material is available in topic files in this directory. Use 
 - **[impact-sizing.md](impact-sizing.md)** — How to size the potential impact of email experiments: model types, formula mechanics, input gathering, sample size planning, common mistakes
 - **[measurement.md](measurement.md)** — Condensed measurement digest: core metrics, attribution, holdouts, retention/LTV, sample size and power, testing frameworks, uplift and incrementality
 - **[channels.md](channels.md)** — Condensed channel digest: SMS/RCS, push, browser push, in-app, wallet passes, conversational messaging, direct mail, and more — permissions, constraints, measurement per channel
+
+## Guard rails and answer format
+
+- If the question is vague, ask once what outcome the user wants and what platform they use. If metrics or domain checks are missing, say so, mark findings that rest on a guess, and never invent numbers.
+- The wiki pages named `references/legislation-and-compliance.md` and `references/tracking-and-measurement-consent.md` exist only in the online wiki, not in this folder. If the wiki cannot be fetched, use the legislation quick reference in `esp-and-reference.md` and say it is a summary. Compliance answers are marketing guidance, never a legal ruling. Advise the user to ask a lawyer for GDPR, CAN-SPAM, CASL or CCPA decisions.
+- Use the formats in `workflows.md`: audit (summary, findings with severity, up to 8 actions), sequence table, subject line batch, copy parts, test proposal.
+- End each answer with the one action to do first and what to measure afterwards.

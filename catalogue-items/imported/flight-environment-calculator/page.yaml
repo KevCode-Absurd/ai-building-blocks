@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks the right model for each value, then runs the calculation.
 new_slug: flight-environment-calculator
 name: Flight environment calculator
-summary: Give it a place, height and date. Get air, gravity, wind and magnetic
-  field values, worked out in MATLAB.
+summary: Find air, gravity, wind and magnetic field values for a place, height and date. Get MATLAB code and a flight environment calculator result.
 job: build-software
 headline: Flight environment calculator
-subhead: Air, gravity, wind and magnetic values for a given place, altitude and
-  date, worked out in MATLAB with the right Aerospace Toolbox calls. You can
-  drop them straight into flight or spacecraft analysis.
+subhead: Air, gravity, wind and magnetic values for a given place, altitude and date, worked out in MATLAB with the right Aerospace Toolbox calls. You can drop them straight into flight or spacecraft analysis.
 explain: |
   Air, gravity, wind and magnetic values for a given place, altitude and date, worked out in MATLAB with the right Aerospace Toolbox calls. You can drop them straight into flight or spacecraft analysis.
 
@@ -18,6 +15,10 @@ when:
   - You need gravity or wind values for a trajectory study.
   - You need the magnetic field at a location for compass correction.
   - You need Moon or planet positions on a specific date.
+not_for:
+  - "You need to change coordinate frames or rotate vectors: use the matlab-convert-aerospace-coordinates skill."
+  - "You need to predict an orbit or flight path over time: use a trajectory or orbit tool in MATLAB, since this only gives positions and values."
+  - "You want a Simulink environment model: use the blocks in Aerospace Blockset instead."
 you_give:
   - Latitude, longitude and altitude
   - Date and time
@@ -29,8 +30,29 @@ you_get:
   - Sanity check on the results
   - Model choice with reason
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Aerospace Toolbox.
+  - Open MATLAB with the Aerospace Toolbox. Use an AI that can run MATLAB code, or copy its code into MATLAB yourself.
+  - Paste the skill into your chat.
+  - Tell your AI the place, altitude, date and time, and which quantity you need.
+  - Add a planet or model if you have a preference.
+  - Run the code and read the results table. Check each unit and the sanity notes.
+  - For planet positions, download the aeroDataPackage first. For space weather, add a CelesTrak CSV.
+output_sample:
+  input:
+    - Latitude, longitude and altitude
+    - Date and time
+    - Which quantity you need, such as air density or gravity
+    - Planet or model preference (optional)
+  prerequisites:
+    - MATLAB with an Aerospace Toolbox licence
+    - An AI that can run MATLAB code
+    - The aeroDataPackage download, only for planet positions
+    - A CelesTrak CSV file, only if you need space weather for NRLMSISE-00
+  output:
+    - name: Quantity and model choice
+      contains: The value you asked for, the model picked for it and a short reason.
+    - name: MATLAB code
+      contains: Ready script with the Aerospace Toolbox calls for each quantity, with units set correctly.
+    - name: Results table
+      contains: Each value with its unit and the model used.
+    - name: Sanity check
+      contains: A check that units and sizes make physical sense, with any warning.

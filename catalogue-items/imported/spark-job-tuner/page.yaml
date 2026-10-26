@@ -2,36 +2,114 @@ thinking: medium
 thinking_why: It diagnoses first, then tunes.
 new_slug: spark-job-tuner
 name: Spark job tuner
-summary: Give it a slow Spark job. Get changes to partitions, caching and memory
-  that speed it up.
+summary: Speed up a slow Apache Spark job. Get a ranked list of partition, shuffle, skew, caching and memory changes, each with a way to check it.
 job: test-and-fix-code
 headline: Spark job tuner
-subhead: Give it a slow Spark job. Get changes to partitions, caching and memory
-  that speed it up. Bring the Spark job code. Use the result to plan your next
-  step.
+subhead: Give it your Spark job code, cluster size and current run time. It finds the slow stage, names the cause, and gives ranked setting and code changes with the numbers to check after each one.
 explain: |
-  A slow Spark job made faster, with each change explained. You share the job code, its settings and where it spends time. The skill looks at the usual causes in order: how data is split into partitions, shuffles between steps, uneven data that overloads a few tasks, memory pressure, and slow serialisation.
+  A slow Spark job usually has one clear cause. This Spark job tuner looks for it in order: how data is split into partitions, how much moves between steps (the shuffle), a few overloaded tasks from skewed data, memory spill, and slow serialization.
 
-  It suggests fixes such as adaptive query settings, broadcast joins, salting skewed keys, caching the right data, Kryo serialisation and better file formats. You get advice on executor memory and partition counts, plus ways to confirm the job improved. It assumes you can run Spark code.
+  From that diagnosis it picks fixes such as adaptive query execution, broadcast joins, salting a skewed key, caching the right data, Kryo serialization and a better file format. Each fix comes with the exact setting or code change, the effect to expect and the number to check afterwards.
+
+  It tells you when a job is too small or too skewed for settings to help. It also warns you that these settings change memory and cost, so you try them on a small run first. It gives advice. It does not run your cluster.
 when:
-  - A nightly Spark job takes far too long.
-  - A few tasks run much longer than the rest.
-  - Your executors run out of memory or spill to disk.
-  - You are scaling a pipeline to a much bigger dataset.
+  - A nightly Spark job takes far longer than it did last month.
+  - Spark UI shows a few tasks running much longer than the rest.
+  - Executors run out of memory or spill to disk.
+  - You are about to run the same pipeline on ten times more data.
+not_for:
+  - The job runs fine today. Leave it alone.
+  - Your slow step is a SQL query on a warehouse such as BigQuery. Use the Data warehouse query reviewer instead.
+  - The job gives wrong results. Fix the bug first, for example with the Bug diagnoser, then tune.
+  - You want to find slow code in a normal app, not a Spark job. Use the Slow code finder.
 you_give:
-  - The Spark job code
+  - The Spark job code, PySpark, Scala or Spark SQL
+  - Where it runs and your Spark version, such as Databricks or EMR
   - Cluster size and current settings
-  - Job run times or the stage view (optional)
-  - Rough data size
+  - Rough data size and how long it runs now
+  - A screenshot or notes from the Spark UI stage view (optional)
 you_get:
-  - Partition and shuffle changes
-  - Memory and executor settings
-  - Fixes for skewed data
-  - Caching advice
-  - Ways to check the speed gain
+  - The slow stage and its likely cause
+  - A ranked list of changes, each with the setting or code to use
+  - The expected effect and risk of each change
+  - The numbers to compare after each run
+  - What to try if the gain is too small
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill.
+  - Paste your job code, your cluster size and settings, your data size and your run time.
+  - Add the Spark UI stage view if you can. It is the best clue to what is slow.
+  - Check that the diagnosis names one slow stage and one cause before you accept any fix.
+  - Try the first change alone on a small run or a copy of the data. Compare the numbers it told you to watch.
+  - Keep a note of old and new values for every setting so you can roll back.
+how_it_works:
+  - title: State the goal
+    text: It writes your target in one line, such as cutting a two hour run to under one hour.
+  - title: Find the slow stage
+    text: It reads the stage view and names the stage and cause, or marks its guess as unmeasured.
+  - title: Choose fixes
+    text: It picks from seven patterns, such as partitions, joins, caching, memory, shuffle and file format.
+  - title: Show each change
+    text: Each fix comes as an exact setting or code change, with its effect and risk.
+  - title: Plan the check
+    text: It names the numbers to compare on the same run and the same data.
+  - title: Know when to stop
+    text: If the data is too skewed or too small, it says so and suggests a data layout change.
+output_shape: |
+  Diagnosis
+  <slow stage, cause, evidence>
+
+  Changes, ranked
+  | change | why | expected effect | risk | metric to check |
+  <one row per change>
+
+  Rewritten code
+  <only the parts that change>
+
+  Settings to try
+  <old value and new value for each setting>
+
+  How to confirm
+  <numbers to compare before and after>
+
+  Next steps
+  <what to try if the gain is small>
+output_sample:
+  input:
+    - Your Spark job code
+    - Cluster size, current settings and Spark version
+    - Data size and current run time
+    - The Spark UI stage view (optional)
+  prerequisites:
+    - A test run or a copy of the data to try changes on
+    - Access to the Spark UI or your job logs
+  output:
+    - name: Diagnosis
+      contains: The slow stage, its cause and the evidence for it.
+    - name: Ranked changes
+      contains: A table of settings and code changes with why, expected effect, risk and the metric to check.
+    - name: Rewritten code
+      contains: Only the parts of your job that change.
+    - name: Settings to try
+      contains: Old and new values for each setting, so you can roll back.
+    - name: How to confirm
+      contains: The run time, shuffle size, spill and longest task to compare after each run.
+    - name: Next steps
+      contains: What to try if the gain is small, and what to watch in the Spark UI.
+works_best_with:
+  tools:
+    - name: Spark UI
+      why: The stage and task views show skew, spill and shuffle size, which this skill needs for a real diagnosis.
+    - name: Any good chat AI
+      why: This skill gives advice from what you paste. It does not need to run code or reach your cluster.
+  inputs:
+    - The SQL or query plan from df.explain
+    - Last week's run times for the same job
+terms:
+  - term: Shuffle
+    meaning: Data moving between machines when a step needs rows grouped or joined by a key.
+  - term: Data skew
+    meaning: A few keys hold most of the rows, so a few tasks run long while the rest wait.
+  - term: Adaptive query execution
+    meaning: A Spark setting that adjusts partitions and joins while the job runs.
+  - term: Broadcast join
+    meaning: A join that sends a small table to every machine so the big table does not move.

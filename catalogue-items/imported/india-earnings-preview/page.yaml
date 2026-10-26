@@ -2,36 +2,86 @@ thinking: high
 thinking_why: It combines many sources into one report.
 new_slug: india-earnings-preview
 name: Earnings preview report builder for India
-summary: Name an Indian stock. Get a short HTML earnings preview with consensus,
-  past surprises and peers. It collects data from websites.
+summary: Get a 4 to 5 page earnings preview for an Indian listed company, with consensus, past surprises, peers and beat or miss cases. It uses free web data.
 job: money-and-investing
 headline: Earnings preview report builder for India
-subhead: Name an Indian stock. Get a short HTML earnings preview with consensus,
-  past surprises and peers. It collects data from websites. Bring the company
-  name or ticker. Use the result to plan your next step.
+subhead: Name an Indian listed company and the quarter. Your AI pulls free consensus, price and peer data from websites. You get a printable HTML earnings preview with a source table and a list of gaps you must check by hand.
 explain: |
-  A short HTML earnings preview for an Indian listed company, built from free web data, with consensus, past surprises, peers and a view on what could beat or miss. It prints to about four or five pages.
+  This builds an earnings preview for an Indian listed company, the kind an analyst writes before results day. It shows what the market expects, how past results compared with those hopes, how peers are priced, and what would count as a beat or a miss.
 
-  The skill handles Indian conventions that trip up outside tools: the April to March fiscal year, quarters labelled like Q3 FY26, and lakh and crore units. It uses no paid terminal. It gathers figures from free sources, measures how estimates moved, compares past results with expectations, and frames the setup with a range of outcomes. Where free data does not exist, it names the gap instead of faking it. It collects data from websites.
+  It follows Indian habits that outside tools get wrong. The year runs April to March, so a quarter reads "Q3 FY26 (Oct to Dec 25)". Money is in lakh and crore, and the skill divides by 10,000,000 in a live formula instead of using a number format that is off by 10 times.
+
+  It will not fill a hole with a guess. The reported actuals source in this skill covers US filers only, so for an Indian company the latest results are marked for manual review, or you paste them in. Every number links to a source row in the appendix.
 when:
-  - A company you follow reports results next week and you need a brief.
-  - You want past earnings surprises set against the consensus.
-  - You cover Indian stocks and have no paid data terminal.
-  - You need a printable page to share with a team.
-  - You want peer figures beside the company before results.
+  - A company you follow reports results next week and you need a one-page view of what to watch.
+  - You want the last 8 quarters of beats and misses set against what analysts expected.
+  - You cover NSE or BSE stocks and have no paid data terminal.
+  - You need a printable page to share with a team before the call.
+not_for:
+  - You want a full valuation or target price. Use the DCF model builder for India instead.
+  - You need real-time prices or live estimates. Free sources are end of day or delayed, so use a licensed data terminal.
+  - You want to check a finished spreadsheet for unit and year-label errors. Use the India modeling rules checker.
+  - You want a buy or sell call. This is a research aid, not investment advice.
 you_give:
-  - The company name or ticker
-  - The quarter being previewed
-  - Your point of view or questions (optional)
+  - The company name or NSE ticker, such as RELIANCE.NS
+  - The quarter you are previewing, such as Q3 FY26 (optional, your AI can take the next one)
+  - The latest quarterly results, pasted from the company's NSE or BSE filing (optional, but needed for actuals)
+  - A free Alpha Vantage key (optional, otherwise Yahoo estimates are used)
+  - Your own view or questions (optional)
 you_get:
-  - A self-contained HTML report
-  - Estimate revisions and consensus
-  - Past surprise history
-  - Peer comparison
-  - Beat or miss scenarios
+  - One self-contained HTML report, about 4 to 5 printed pages
+  - A table of consensus, revisions and your own estimate
+  - The last 8 quarters of surprises, with the beat rate
+  - A peer table with the data source named on every row
+  - A source appendix and a manual review list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the web.
+  - Pick an AI that can run Python and reach the web, such as Claude Code or ChatGPT with code running. A plain chat cannot fetch the data.
+  - Install yfinance once (pip install yfinance). Get a free Alpha Vantage key if you want analyst consensus from that source.
+  - Open the skill, then give your AI one company, the quarter, and the latest results if you have them.
+  - Read the manual review table first. Check every gap against the company's own results filing on NSE or BSE.
+  - Open the HTML file and check the consensus source line, the as-of dates and that fiscal quarters are labelled right.
+  - Do not act on the report alone. Confirm key numbers before you share or trade.
+output_sample:
+  input:
+    - The company name or NSE ticker
+    - The quarter to preview, such as Q3 FY26
+    - The latest quarterly results pasted from the NSE or BSE filing (optional)
+    - Your own estimate or questions (optional)
+  prerequisites:
+    - An AI that can run Python and reach the web
+    - Python 3 with yfinance installed
+    - A free Alpha Vantage key (optional)
+  output:
+    - name: Cover and thesis
+      contains: The title, a short view of the print, and setup bullets on revisions, the bar and consensus.
+    - name: Consensus and revision table
+      contains: Mean estimate, range, your estimate and 30 and 90 day drift for EPS and revenue.
+    - name: Surprise history
+      contains: The last 8 quarters of reported against expected, with beat rate and the bar to clear.
+    - name: Themes and news
+      contains: Key metrics beyond EPS, themes to watch and recent news with a link for each item.
+    - name: Figures 1 to 9
+      contains: Charts and tables for results, margins, price, peers and revisions, each with a source line.
+    - name: Source appendix
+      contains: One row for every number, with where it came from and how it was worked out.
+    - name: Manual review table
+      contains: Every figure that could not be found free, and what a person must check by hand.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Runs the Python, saves the HTML file and opens it for you.
+    - name: ChatGPT with code running
+      why: Can fetch the data and build the file, if it has web access turned on.
+  inputs:
+    - The company's quarterly results filing from NSE or BSE
+    - Your own estimate for revenue and profit
+    - Two or three peers you trust
+terms:
+  - term: Consensus
+    meaning: The average of analyst forecasts for the quarter.
+  - term: Surprise
+    meaning: How far the reported result was above or below consensus.
+  - term: Lakh and crore
+    meaning: Indian units. A lakh is 100,000 and a crore is 10,000,000.
+  - term: Fiscal year
+    meaning: In India it runs April to March. FY26 ends 31 March 2026.

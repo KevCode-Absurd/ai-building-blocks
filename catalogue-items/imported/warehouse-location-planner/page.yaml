@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Cost and delivery speed pull in different directions.
 new_slug: warehouse-location-planner
 name: Warehouse location planner
-summary: Give it your customers and demand. Get how many warehouses you need and
-  where to put them.
+summary: "Plan your warehouse locations: give it customer locations and demand, and get how many sites you need, where to put them, and what each option costs."
 job: plan-supply-chain
 headline: Warehouse location planner
-subhead: An answer to how many warehouses you need and where they should go. It
-  balances shipping cost, delivery speed and the cost of running each site.
+subhead: An answer to how many warehouses you need and where they should go. It balances shipping cost, delivery speed and the cost of running each site.
 explain: |
   An answer to how many warehouses you need and where they should go. It balances shipping cost, delivery speed and the cost of running each site.
 
@@ -17,6 +15,10 @@ when:
   - You want faster delivery and wonder if a second warehouse would pay.
   - You are growing into a new region.
   - You want to close a site and need to see the effect.
+not_for:
+  - "You run one site and have no order data: compare cost per mile by hand or ask a freight broker for quotes."
+  - "You only need to pick a single site from a short list: a simple cost and drive time comparison in a spreadsheet will do."
+  - "You need a day-to-day stock or pick plan inside a building: use your warehouse system or ask your operations lead."
 you_give:
   - Customer or order locations with volumes
   - Where products come from
@@ -28,8 +30,27 @@ you_get:
   - Cost and delivery time per option
   - A trade-off summary for your decision
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Add your customer locations with order volumes, and where your products come from.
+  - Add your delivery target, such as next-day. Add your current sites and costs if you have them (optional).
+  - Ask your AI to compare network options. For the full cost model, use an AI that can run code.
+  - Read the trade-off summary and check the site picks against what you know about your area.
+  - Pick one or two options and build a site-by-site business case for each.
+output_sample:
+  input:
+    - Your customer or order locations with volumes
+    - Where your products come from
+    - Your delivery time target
+    - Your current sites and what they cost (optional)
+    - Which product types need special storage (optional)
+  prerequisites:
+    - An AI that can run code, for the full cost model. Without it, you get a simpler estimate.
+  output:
+    - name: Network configuration
+      contains: Total cost, number of open sites, how full each site is, and the share of orders that meet your delivery target.
+    - name: Option comparison
+      contains: Each network option with its site count, site locations, cost split and delivery time.
+    - name: Candidate locations
+      contains: The places the model picked, and why each one serves your customers well.
+    - name: Trade-off summary
+      contains: What you gain and give up as you add or remove sites, in plain terms.

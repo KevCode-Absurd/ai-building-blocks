@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It places spans and links them to each other.
 new_slug: code-tracing-adder
 name: Code tracing adder
-summary: Give it MATLAB code. Get tracing added so you can see where time goes
-  and where errors start.
+summary: Add OpenTelemetry tracing to your MATLAB code. Give it your functions and get spans that show where time goes and where errors start.
 job: build-software
 headline: Code tracing adder
-subhead: Your MATLAB code gains tracing, so you can see where time goes and
-  where errors start. Each function reports what it did, how long it took and
-  whether it failed.
+subhead: Your MATLAB code gains tracing, so you can see where time goes and where errors start. Each function reports what it did, how long it took and whether it failed.
 explain: |
   Your MATLAB code gains tracing, so you can see where time goes and where errors start. Each function reports what it did, how long it took and whether it failed.
 
@@ -18,6 +15,10 @@ when:
   - An error appears and you cannot find where it began.
   - You want your MATLAB code to show up in your tracing tool.
   - You need traces that link parent and child calls.
+not_for:
+  - "Your code is not MATLAB: use the tracing tool made for your language, or ask a developer who knows it."
+  - "You only want to time one slow line: use MATLAB's built-in Profiler instead."
+  - "You cannot install the OpenTelemetry-MATLAB package or use MATLAB R2022b or newer: ask your team to set that up first."
 you_give:
   - Your MATLAB functions
   - OpenTelemetry-MATLAB installed
@@ -29,8 +30,28 @@ you_get:
   - Recorded exceptions
   - Timed events inside slow steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Install the OpenTelemetry-MATLAB package, version 1.11.0 or newer. You need MATLAB R2022b or newer.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your MATLAB functions. Say where you want traces sent, if you know.
+  - Read the changed code. Check that your function signatures are the same.
+  - Run your code once in MATLAB. Open your tracing tool and confirm the spans show up.
+output_sample:
+  input:
+    - Your MATLAB functions or script files
+    - A name for your tracer (optional)
+    - Where to send traces (optional)
+  prerequisites:
+    - The OpenTelemetry-MATLAB package, version 1.11.0 or newer
+    - MATLAB R2022b or newer
+    - An AI that can run MATLAB, to check that spans appear (optional)
+  output:
+    - name: Instrumented functions
+      contains: Your own functions with spans added, linked parent to child, and function signatures left unchanged.
+    - name: Span attributes
+      contains: Key-value details on each span, using snake_case names that describe your domain.
+    - name: Error handling
+      contains: Status set to Ok or Error on each span, with caught exceptions recorded.
+    - name: Events and loop spans
+      contains: Timed events inside slow steps, and spans ended mid-function inside loops.
+    - name: Verification check
+      contains: A final pass that checks the spans follow the skill's rules.

@@ -1,46 +1,87 @@
 new_slug: reconcile-basic-and-diluted-issuer-eps
 name: Reconcile basic and diluted issuer EPS
 headline: Reconcile basic and diluted issuer EPS
-summary: Build a sourced share timeline and test option and convertible dilution against reported EPS.
+summary: Build basic and diluted EPS from earnings, a share ledger and option and convertible terms. Get a linked workbook that ties to the company's EPS note.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked basic and diluted EPS workbook with numerator, denominator and anti-dilution reconciliations. Share ordinary earnings, the dated share ledger, option/convertible terms and the issuer EPS note.
+subhead: Give it ordinary earnings, a dated share ledger, option and convertible terms and the company's EPS note. It builds the share count day by day, adds option shares, then tests each convertible in order. You get basic and diluted EPS with the open differences listed.
 explain: |-
-  A linked basic and diluted EPS workbook with numerator, denominator and anti-dilution reconciliations.
+  Basic EPS is profit divided by the average number of shares in the period. Diluted EPS adds the shares that options and convertible bonds could create, but only when that lowers EPS. To get there you need a dated share count, a rule for options and a test for each convertible. A slip in any one and your number will not match the company's note.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 builds the share count row by row, weighting each stretch by its days. Step 2 adds shares from options with the treasury-stock method: the money from exercise is assumed to buy back shares at the period's average price, and only the extra shares count. Step 3 tests each convertible by adding the interest saved after tax to profit and the new shares to the count. It keeps the convertible only if EPS falls, trying the most dilutive first.
+
+  It ties the result to the EPS note and lists each excluded instrument and each missing term. Rules differ between accounting standards, so say which one the company uses. It checks the arithmetic. It does not read the instrument contracts for you.
 when:
-  - You need a linked basic and diluted EPS workbook with numerator, denominator and anti-dilution reconciliations.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your diluted EPS does not match the number in the company's EPS note and you need to find why.
+  - A company issued shares or bought some back during the year and you need the weighted count.
+  - The company has stock options and you need to know how many extra shares they add.
+  - A convertible bond is outstanding and you need to know if it raises or lowers EPS.
+not_for:
+  - "You only need the share count: use the Weighted share count calculator."
+  - "You want adjusted EPS that adds back acquired-asset costs: use the Adjusted EPS and comprehensive income checker."
+  - "You want to see what a share buyback does to EPS and cash: use the Share buyback accounting checker."
 you_give:
-  - Ordinary earnings, the dated share ledger, option/convertible terms and the issuer EPS note.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Profit for the ordinary shareholders from continuing operations, with any preference dividends
+  - "A dated share ledger: opening shares, issues, buybacks and cancellations"
+  - "Option classes: number, exercise price and the period's average share price"
+  - "Convertible terms: conversion ratio, interest, tax rate and dates (optional)"
+  - The company's EPS note, to tie to
+  - Period, currency, scale and accounting standard
 you_get:
-  - A linked basic and diluted EPS workbook with numerator, denominator and anti-dilution reconciliations.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A weighted share count with a row for each stretch
+  - Basic EPS and its working
+  - Extra shares from each option class, and the diluted EPS after options
+  - "A test result for each convertible: included or excluded, and why"
+  - A tie to the company's EPS note, with differences listed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the workflow pack to Claude, ChatGPT or Gemini. Use an AI that can read files, and make spreadsheets if you want a workbook.
+  - Attach the EPS note and the share ledger. Paste the option and convertible terms. Say the period, currency, scale and accounting standard once.
+  - After step 1, check that the day fractions add to one and that closing shares match the filing.
+  - After step 2, check each option class has its own line, and that out-of-the-money options add no shares.
+  - After step 3, check that any convertible that would raise EPS is shown as excluded.
+  - Compare the final EPS with the note. Read every difference and MISSING line before you rely on it.
 how_it_works:
   - title: Weighted-average share schedule
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile dated ordinary shares and ordinary earnings to basic weighted shares; carry the verified continuing-operations control numerator and denominator forward.
+    text: Builds the share count from the dated ledger, one row for each stretch, weighted by days. Works out basic EPS from ordinary profit and carries the profit and the basic count to step 2.
   - title: Treasury-stock option dilution
-    text: Use the verified basic denominator and actual weighted option classes, average prices and all required assumed proceeds. Retain each option class contribution and eligibility evidence.
+    text: Takes each option class with its average price and total assumed proceeds. Assumed proceeds divided by the average share price gives shares bought back. Only the positive extra shares are added to the basic count.
   - title: Convertible EPS inclusion test
-    text: Use the same control earnings and actual convertible terms; sequence instruments and exclude anti-dilutive effects before reconciling the final diluted EPS note.
+    text: Adds the after-tax interest saved to profit and the conversion shares to the count for each convertible, most dilutive first. Keeps it only if EPS falls, and reconciles the final diluted EPS to the note.
 output_shape: |-
-  A linked basic and diluted EPS workbook with numerator, denominator and anti-dilution reconciliations.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  BASIC AND DILUTED EPS  <company>, <period>, <currency>, <scale>
+
+  1 BASIC          share rows (from, to, shares, days), weighted shares <n>
+                   profit <n>, basic EPS <n>
+  2 OPTIONS        class <name>: options <n>, proceeds <n>, bought back <n>, extra shares <n>
+                   diluted shares after options <n>
+  3 CONVERTIBLES   instrument <name>: profit adjustment <n>, shares <n>, EPS effect <n>
+                   included or excluded (anti-dilutive), diluted EPS <n>
+  TIE TO NOTE      reported basic <n>, diluted <n>, differences <n or none>
+
+  SOURCES         <each input, its source, date and unit>
+  MISSING         <each gap and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Profit for the ordinary shareholders
+    - A dated share ledger
+    - Option and convertible terms
+    - The company's EPS note
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can make spreadsheets.
+  output:
+    - name: Weighted share schedule
+      contains: A row for each stretch, weighted by days, giving the basic share count.
+    - name: Basic EPS
+      contains: Ordinary profit divided by weighted shares, with the working.
+    - name: Option dilution
+      contains: Extra shares from each option class under the treasury-stock method.
+    - name: Convertible tests
+      contains: Each convertible included or excluded, with its effect on EPS.
+    - name: Tie to the EPS note
+      contains: Basic and diluted EPS beside the company's figures, with differences listed.
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,15 +101,25 @@ test:
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a linked workbook, recalculates it and reopens the saved file. In plain chat you get the same tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The option and convertible notes from the filing
+    - The period's average share price, from the filing or a market data source you trust
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Basic EPS
+    meaning: Profit for ordinary shareholders divided by the weighted average number of shares.
+  - term: Diluted EPS
+    meaning: EPS after adding shares that options and convertibles could create.
+  - term: Treasury-stock method
+    meaning: "A way to count option shares: exercise money is assumed to buy back shares at the average price."
+  - term: Convertible
+    meaning: A bond or share that can be swapped for ordinary shares.
+  - term: Anti-dilutive
+    meaning: Raising EPS when added in. It is left out of diluted EPS.
+next:
+  - reconcile-alternative-eps-and-comprehensive-income
+  - reconcile-buybacks-with-owner-cash

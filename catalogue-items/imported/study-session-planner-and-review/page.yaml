@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a fixed plan, check and review loop.
 new_slug: study-session-planner-and-review
 name: Study session planner and review
-summary: Set goals at the start, check your method halfway, and note what
-  changed at the end of a study session.
+summary: Plan your study session, check your method halfway and note what changed at the end. A study session planner that builds a learning habit.
 job: teach-and-train
 headline: Study session planner and review
-subhead: A study session with a start, a midpoint check and an end, so time
-  spent turns into learning you can see. It builds the habit of managing your
-  own learning.
+subhead: A study session with a start, a midpoint check and an end, so time spent turns into learning you can see. It builds the habit of managing your own learning.
 explain: |
   A study session with a start, a midpoint check and an end, so time spent turns into learning you can see. It builds the habit of managing your own learning.
 
@@ -18,6 +15,10 @@ when:
   - A student drifts halfway through homework with no check on progress.
   - You want a repeatable routine for revision weeks.
   - You coach learners and want them to plan and reflect on their own.
+not_for:
+  - "You need last-minute exam cramming: use a teacher-led revision plan or a past-paper timetable instead."
+  - "You have no topic or goal for the session: pick a topic first, or ask a teacher or tutor what to focus on."
+  - "You want a long-term plan across weeks: build a simple weekly timetable by hand, then use this for each single session."
 you_give:
   - The subject or topic
   - The type of session, such as revision or new reading
@@ -30,7 +31,27 @@ you_get:
   - An end-of-session reflection
   - A note on what to do next time
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI the topic, the session type and how long you have. Add notes from earlier sessions if you have them.
+  - Start with the opening step. Agree a goal you can finish in the time you have.
+  - Halfway through, come back and ask for the mid-session check. Say how it is going and switch method if the coach suggests it.
+  - At the end, ask for the closing step. Write down what changed and what you will do next time.
+  - Keep the goal and next step. Paste them in at the start of your next session.
+output_sample:
+  input:
+    - The subject or topic you are studying
+    - "The type of session: opening, mid-session, closing or full wrap"
+    - How long you plan to study (optional)
+    - Goals and results from earlier sessions (optional)
+    - Your age or level (optional)
+  prerequisites:
+    - For a mid-session or closing check, the goal you set in the opening step
+  output:
+    - name: Opening plan
+      contains: A clear, finishable goal for the session, and a quick rating of how confident you feel before you start.
+    - name: Mid-session check
+      contains: A question about whether your method is working, with an offer to switch method if it is not.
+    - name: Closing reflection
+      contains: Your own words on what changed in your understanding, and what to do next time.
+    - name: Example transcript
+      contains: The full run written as a short back-and-forth between you and the coach.

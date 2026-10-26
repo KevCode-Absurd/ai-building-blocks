@@ -1,6 +1,6 @@
 new_slug: weekly-stock-and-cash-reorder-watcher
 name: Weekly stock and cash reorder watcher
-summary: Give it your stock and sales each week. Get what to reorder, what it costs and whether cash can cover it.
+summary: "Weekly stock reorder planner: give it your stock, sales and cash. Get what to reorder, what it costs and whether cash can cover it."
 job: plan-supply-chain
 thinking: high
 thinking_why: It runs up to seven skills, picks a path for each product and tests cash week by week. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You hold stock and reorder every few weeks or months.
   - You've run out of a best seller, or been stuck with stock that doesn't sell.
   - Your orders are big enough that cash decides what you can buy.
+not_for:
+  - "You make products to order and hold no stock: use a simple job list and a cash forecast in a spreadsheet instead."
+  - "You have a few products and one supplier you reorder from by habit: a reminder in your calendar is enough."
+  - "You want a loan or credit advice: take the cash gap to your lender or accountant."
 you_give:
   - Units on hand, units sold per week and stock already on order, by product
   - Supplier lead time, unit cost, minimum order and payment terms, the first time
@@ -30,6 +34,28 @@ how_to_use:
   - Each Monday, add the new stock counts and sales to the same folder.
   - Read the list. Place the orders you agree with yourself, and tell the agent what you placed so it can track them.
   - Take any loan or credit question to your lender or accountant.
+output_sample:
+  input:
+    - Units on hand, units sold per week and stock on order, by product
+    - Supplier lead time, unit cost, minimum order and payment terms (first run)
+    - Cash in the bank and bills due in the next 13 weeks
+    - What changed this week, such as a sale or late shipment (optional)
+  prerequisites:
+    - At least 8 weeks of sales history
+    - An AI that can save files in a folder, such as Claude Code, to keep each week's results
+  output:
+    - name: This week in one line
+      contains: How many products to reorder now, watch or mark slow, and the lowest cash point with its week.
+    - name: Reorder list
+      contains: Each product with units, order-by date, cost and cover against lead time, most urgent first.
+    - name: Cash check
+      contains: The lowest cash point with and without the new orders, plus payment terms to ask for if cash falls short.
+    - name: Slow stock
+      contains: Each slow product with days of cover and the cash a markdown would free.
+    - name: Watch next week
+      contains: Products that will cross their reorder point within 30 days.
+    - name: Files and missing
+      contains: Each step's saved file, then every missing fact in one list.
 how_it_works:
   - title: Get the base
     text: Saves your supplier facts and builds a forecast from past sales, with a way to track how far off it is.

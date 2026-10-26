@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Choosing the right contrasts takes careful thought.
 new_slug: concept-contrast-task
 name: Confusing concept contrast task designer
-summary: Name two ideas your learners mix up. Get a task of contrasting examples
-  that shows what sets them apart.
+summary: Find the one feature your students miss when they mix up two ideas. Get a confusing concept contrast task with examples and class questions.
 job: teach-and-train
 headline: Confusing concept contrast task designer
-subhead: A learning task that shows students the difference between two ideas
-  they keep mixing up, by putting the right examples side by side. It follows
-  variation theory, which says people notice a feature only when they see it
-  change.
+subhead: A learning task that shows students the difference between two ideas they keep mixing up, by putting the right examples side by side. It follows variation theory, which says people notice a feature only when they see it change.
 explain: |
   A learning task that shows students the difference between two ideas they keep mixing up, by putting the right examples side by side. It follows variation theory, which says people notice a feature only when they see it change.
 
@@ -19,6 +15,10 @@ when:
   - Your explanation is clear to you but the same error keeps coming back.
   - You want to redesign a worksheet so it shows the key difference.
   - You are planning a lesson on a notoriously confused topic.
+not_for:
+  - You are teaching a topic for the first time. Start with clear, direct teaching, then use this task once students know the basics.
+  - You only need students to recall facts or terms. A short quiz or flashcards will do that better.
+  - You want a full lesson plan or a test. This makes one short task, so plan the rest yourself or with your AI.
 you_give:
   - The concept to be learned
   - The common mistake or confusion
@@ -30,7 +30,25 @@ you_get:
   - Worked examples
   - Questions to ask in class
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Pick one pair of ideas your students mix up, such as area and perimeter.
+  - "Write the mistake you see most. For example: students think a bigger shape always has a longer perimeter."
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then add the idea, the mistake and the year group. Add your old worksheet if you have one.
+  - Read the key feature your AI picks. Check it matches the real mix-up in your class.
+  - Check every example by hand. For maths, count each area and perimeter on the grid before class.
+  - Run the task, then use the Assessment Check to see if the mix-up has gone.
+output_sample:
+  input:
+    - The idea students need to learn
+    - The mistake or mix-up students make
+    - Year group and what they already know (optional)
+    - Subject (optional)
+    - Your current task or worksheet (optional)
+  output:
+    - name: Variation Analysis
+      contains: The key feature students must notice, what changes in the examples, and what stays the same.
+    - name: Task Sequence
+      contains: A set of examples that contrast the idea, change one feature at a time, and then bring features together.
+    - name: Teacher Guidance
+      contains: What to point out, which questions to ask, and which mistakes to expect while students work.
+    - name: Assessment Check
+      contains: A quick way to see if students now spot the difference between the two ideas.

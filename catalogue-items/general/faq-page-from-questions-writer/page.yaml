@@ -1,6 +1,6 @@
 new_slug: faq-page-from-questions-writer
 name: "FAQ page writer from customer questions"
-summary: "Paste real customer questions and your answers. Get an FAQ page people and search engines find."
+summary: "Turn real customer questions and your true answers into an FAQ page writer result: search-friendly questions, answers first, grouped in buying order."
 job: get-found-in-search
 thinking: low
 thinking_why: "It groups and rewrites given questions and answers into a fixed page shape."
@@ -17,6 +17,10 @@ when:
   - "Your support team answers the same twenty questions every week."
   - "Your FAQ page exists but nobody can find their question on it."
   - "You want search engines and AI assistants to pick up your answers."
+not_for:
+  - "You need one reply to one customer: write the reply yourself, or ask your AI for a short answer."
+  - "You have no real customer questions yet: collect them from support emails, chats and reviews first, then come back."
+  - "You want the page title and search snippet: use the Search title and snippet writer, since it only covers the page title and description."
 
 you_give:
   - "The questions as customers wrote them, with rough counts"
@@ -33,6 +37,29 @@ how_to_use:
   - "Add the true answers with exact prices, days and limits."
   - "Fill any A MISSING lines before publishing."
   - "Publish it, and read FOR THE OWNER with your product team."
+output_sample:
+  input:
+    - Customer questions as they wrote them, with rough counts
+    - Your true answers with prices, days and limits
+    - Your offers, policies and claims file (optional)
+    - Where the page will live (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+  output:
+    - name: TITLE
+      contains: A page title under eight words with the product or topic name.
+    - name: INTRO
+      contains: One line on who the page is for and how to find a question fast.
+    - name: GROUP
+      contains: Each question in customer words with its count, then an answer that starts with the fact and links the next step.
+    - name: NEEDS A PERSON
+      contains: Legal, medical or money questions that point to a person or source, and why.
+    - name: FOR THE OWNER
+      contains: Three lines on questions that should not need asking and gaps in the answers.
+    - name: MISSING
+      contains: Facts you did not give, so you can fill them before publishing.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Merges and keeps customer words"

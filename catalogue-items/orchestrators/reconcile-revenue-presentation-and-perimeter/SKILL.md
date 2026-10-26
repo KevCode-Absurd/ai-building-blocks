@@ -1,46 +1,29 @@
 ---
 name: reconcile-revenue-presentation-and-perimeter
-description: "Explain reported revenue changes through gross-to-net deductions, business scope and extra trading weeks."
+description: "Use when you need to explain reported revenue growth through deductions, acquisitions, disposals, currency and an extra week, each counted once. Runs three checkers in order. Not for trailing models or customer cash."
 ---
 
 # Reconcile revenue presentation and perimeter
 
-A linked reported revenue and comparable-growth reconciliation workbook.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Explain reported revenue growth in three steps run in order: gross to net, then the business and currency changes, then the extra week. Each hands the next a reconciled revenue figure.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (all as of each period end):
+- **Gross billings and revenue policies** (yours): deductions such as returns and rebates, and how they are netted.
+- **Reported net revenue** (yours): both periods, from the income statement.
+- **Acquisition and disposal revenue** (yours): amounts and dates.
+- **Currency effects and calendar** (yours): the issuer's currency disclosure and the fiscal calendar.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** the company's own definition of organic growth.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Gross billings and revenue policies, deductions, acquisition/disposal revenue, currency effects and fiscal-calendar evidence.
+The items under "Before you start", all as of each period end, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,11 +33,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Gross-to-net revenue bridge** (`gross-to-net-revenue-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile reported net revenue from actual policy-supported deductions; fix presentation differences before comparing reported growth. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-gross-to-net-revenue-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Gross-to-net revenue bridge** (`gross-to-net-revenue-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile reported net revenue from actual policy-supported deductions; fix presentation differences before comparing reported growth. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-gross-to-net-revenue-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** rebuilt net revenue ties to reported net revenue, or the gap is shown. If not, stop and say which line is off.
 
-2. **Organic revenue perimeter bridge** (`organic-revenue-perimeter-bridge`). Use the reconciled reported periods, map continuing businesses and remove sourced acquisition/disposal and FX effects once with a stated ordering. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-organic-revenue-perimeter-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Organic revenue perimeter bridge** (`organic-revenue-perimeter-bridge`). Use the reconciled reported periods, map continuing businesses and remove sourced acquisition/disposal and FX effects once with a stated ordering. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-organic-revenue-perimeter-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** each acquisition, disposal and currency effect is removed once, and the order is stated.
 
-3. **Extra-week revenue comparability schedule** (`extra-week-revenue-comparability`). Apply only an evidenced calendar adjustment not already included in the organic bridge; retain the exact extra-week amount and explain residual trading-day/holiday differences. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-extra-week-revenue-comparability.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Extra-week revenue comparability schedule** (`extra-week-revenue-comparability`). Apply only an evidenced calendar adjustment not already included in the organic bridge; retain the exact extra-week amount and explain residual trading-day/holiday differences. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-extra-week-revenue-comparability.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** gross-to-net, perimeter and calendar effects do not overlap, reported revenue stays primary, and no unexplained gap is called organic growth.
 
 ## Workbook checks
 
@@ -71,4 +54,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with reported growth and comparable growth side by side, then the steps behind them. State plainly that nothing was filed or published, and that a person who knows the company's accounts must check the definitions before anyone quotes a growth rate. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- The [Build a comparable trailing revenue model](https://useaiblocks.com/workflows/build-a-comparable-trailing-revenue-model) workflow, when you want a trailing 12-month view.
+- The [Reconcile contract balances and customer cash](https://useaiblocks.com/workflows/reconcile-contract-balances-and-customer-cash) workflow, when you want to judge how revenue turns into cash.
+Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

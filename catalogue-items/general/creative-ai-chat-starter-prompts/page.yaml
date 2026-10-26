@@ -1,31 +1,100 @@
 new_slug: creative-ai-chat-starter-prompts
 name: Creative AI chat starter prompts
-summary: Name the creative task. Get one tailored starter prompt for copy, content, ads or strategy, with facts and output rules.
+summary: Name a creative task like copy, hooks, ads or a sales page. Get one ready-to-paste AI prompt filled with your facts and clear output rules.
 job: set-up-ai
 headline: Creative AI chat starter prompts
-subhead: Name the creative task. Get one tailored starter prompt for copy, content, ads or strategy, with facts and output rules. Bring the brief and any files you want it to use.
+subhead: Tell it the creative task and what it is for. It picks the best of 20 starter prompts, fills in your audience, facts and tone, and adds clear output rules. You paste the result into ChatGPT, Claude or Gemini.
 explain: |-
-  Use this when you need a selected creative task prompt from a reusable starter set. Identify the actual deliverable first: copy, content ideas, ad/script, visual concept, brand strategy or prompt repair. Use the closest starter rather than forcing an image/video workflow onto every job.
+  Most people ask an AI for "some copy" and get bland text. The fix is a better request: who it is for, which facts are true, what shape the answer takes. This creative prompt builder writes that request for you, so your chat AI starts with the right brief.
 
-  Replace placeholders with supplied context, audience, approved facts, tone, goal and output requirements. Keep unavailable facts marked MISSING; do not invent proof, customer experiences or performance.
+  It holds 20 starter prompts: copywriter, hook writer, ad strategist, landing page expert, email writer, script doctor, honest reviewer and more. It names the task first, picks the closest starter, and fills its blanks with what you gave it. Anything you did not give stays marked MISSING. It never invents proof, reviews or results.
+
+  It writes the prompt, not the finished piece. Run the prompt in your chat to get the copy, ideas or review.
 when:
-  - You need a selected creative task prompt from a reusable starter set.
-  - You want a clear draft and checks from the material you already have.
+  - You know the task, like "write hooks" or "critique my sales page", but not how to ask for it.
+  - Your AI keeps giving generic copy and you want a sharper brief.
+  - You want one prompt you can reuse each week for the same kind of task.
+  - A teammate needs a prompt to paste in without learning prompt tricks.
+not_for:
+  - "You already have a rough prompt that only needs fixing: use the AI prompt editor."
+  - "You want the ad itself, with every line tied to a product fact: use the Fact-based ad copy writer."
+  - "You want an image or video prompt: use the Midjourney image prompt writer for pictures. This makes written work only."
+  - "You want something sent, posted or paid for. This writes a draft prompt and does nothing outside the chat."
 you_give:
-  - brief
+  - "The creative task in a few words, such as five hooks for a podcast or a review of my sales page"
+  - "What it is for: your product, offer or topic, and the goal"
+  - "Facts you approve, such as price, features or proof (optional)"
+  - "Who it is for, the tone and the channel (optional)"
+  - "A draft prompt you already use, to repair (optional)"
 you_get:
-  - document
-  - Missing inputs and steps that still need to run
+  - "The starter it picked from the 20, and why"
+  - "One tailored prompt to paste into your chat AI"
+  - "A list of missing facts, only the ones that change the result"
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the prompt in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Say the task and what it is for in one or two lines. Add any facts you approve, such as price or features, and who it is for.
+  - Read the starter it picked. If it picked the wrong kind of task, say so and ask for another.
+  - Fix anything marked MISSING if you can. Then paste the tailored prompt into a fresh chat and run it.
+  - Check the copy it gives you against your own facts before you use it.
 how_it_works:
-  - title: Read the brief
-    text: "Identify the actual deliverable first: copy, content ideas, ad/script, visual concept, brand strategy or prompt repair. Use the closest starter rather than forcing an image/video workflow onto every job."
-  - title: Build the result
-    text: Choose one starter by default and return the tailored prompt. Twenty starter templates live in the reference file, not twenty separate agents. Role labels describe a drafting perspective and do not authorize tool actions.
-  - title: Check and hand off
-    text: Keep fact-based claims and creative assumptions separate. If the selected task needs another specialist, explain what input to take there rather than silently switching the deliverable.
-thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+  - title: Names the task
+    text: Works out what you want made first, such as copy, content ideas, an ad script, a brand message or a prompt repair.
+  - title: Picks one starter
+    text: Chooses the closest of the 20 starters. It does not force an image or video job onto a writing task.
+  - title: Fills the blanks
+    text: Puts in your audience, facts, tone, goal and length. Anything you did not give stays marked MISSING.
+  - title: Sets the output rules
+    text: Adds the exact shape of the answer, the limits and a few checks. It removes empty role-play and promises of high results.
+  - title: Keeps facts and ideas apart
+    text: Marks claims that come from your facts separately from creative guesses.
+  - title: Checks itself
+    text: Confirms every gap is listed once, as needed or optional, and fixes any contradiction before it hands back.
+output_shape: |
+  SELECTED STARTER
+  <starter name> | Why: <one line>
+
+  TAILORED PROMPT
+  <context, goal, facts, constraints, output shape and checks, ready to paste>
+
+  MISSING INPUTS
+  Needed: <facts that change the result, or none>
+  Optional: <facts that would help, or none>
+output_sample:
+  input:
+    - "The creative task, in a few words"
+    - "What it is for: your product, offer or topic"
+    - "Facts you approve, audience and tone (optional)"
+    - "A draft prompt to repair (optional)"
+  output:
+    - name: "SELECTED STARTER"
+      contains: "The one starter from the 20 that fits your task, with a one-line reason."
+    - name: "TAILORED PROMPT"
+      contains: "A paste-ready prompt with your facts, goal, limits, answer shape and quality checks filled in."
+    - name: "MISSING INPUTS"
+      contains: "Facts you did not give, split into needed and optional, so you know what to add."
+tweaks:
+  - what: The facts you approve
+    how: Give real prices, features and proof. The prompt then tells the AI to use only those.
+  - what: Who it is for
+    how: Name the person and their main worry. This changes the angle more than any other detail.
+  - what: The channel and length
+    how: Say where the result will run, such as an email or a 30-second video, so the answer fits.
+  - what: Your own draft prompt
+    how: Paste it. The skill keeps what works and repairs the gaps.
+improve:
+  - Add your own brand voice rules to the starter file, so every prompt carries them.
+  - Save the prompts that gave you good copy, with the facts you used, and reuse them.
+  - Add words and claims your business never uses to step 4.
+  - Pair it with the "Brand voice editor" to tidy the copy the prompt gives you.
+works_best_with:
+  tools:
+    - {name: "Claude, ChatGPT or Gemini", why: "Writing and filling a prompt is text work. Any of them can run the finished prompt."}
+  inputs:
+    - "Your brand voice notes"
+    - "A short list of your real customer words"
+    - "Examples of copy you like"
+terms:
+  - term: Starter prompt
+    meaning: A ready-made prompt with blanks in square brackets that you fill with your own details.
+  - term: MISSING
+    meaning: A label on a fact you did not give. The prompt leaves the blank in place instead of guessing.

@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It reads in full and tests understanding.
 new_slug: deep-reading-map-builder
 name: Deep reading map builder
-summary: Give it an article, book or PDF. Get a knowledge map of its ideas and a
-  check that you understood.
+summary: Turn a long article, book or PDF into a deep reading map. Each idea links to its evidence and page, then you test what you understood.
 job: think-and-decide
 headline: Deep reading map builder
-subhead: Give it an article, book, PDF or web page and choose a map, notes or a
-  comparison of several sources. It links each idea to the evidence behind it
-  and keeps the page locations attached. You get a knowledge map, a comparison
-  matrix for several sources and a plain-language recall check.
+subhead: Give it an article, book, PDF or web page, and pick how deep to go. It splits the text into single ideas and ties each one to its evidence and page. You get a map of how the ideas connect, plus a check of what you understood.
 explain: |
   A knowledge map of an article, book or PDF, with each idea linked to the evidence behind it, followed by a plain-language check that you understood. It turns long reading into a structure you can study from.
 
@@ -19,17 +15,47 @@ when:
   - You are comparing three reports that disagree.
   - You need to find where a long article's argument is weakest.
   - You want to test yourself after reading a chapter.
+not_for:
+  - "You only want a quick skim: ask for quick mode in this skill, or paste the text and ask your AI for a short summary."
+  - "You still need to find sources to read: gather them first with a search tool or a research assistant, then bring them here."
+  - "Your PDF is a scan with no text you can select: run it through an OCR tool first, or paste the text in."
 you_give:
-  - Article, book, PDF or web page
-  - "Choice of output: map, notes or comparison matrix"
-  - Your own explanation to test (optional)
+  - An article, book, PDF, web page or a set of documents
+  - The question you want the reading to answer
+  - "The mode: quick, deep, map, feynman or book"
+  - Your own explanation of the idea to test (optional)
 you_get:
-  - Knowledge map with linked ideas
-  - Claims tied to evidence and locations
-  - Comparison matrix for several sources
-  - Feynman-style recall check
+  - A map of ideas with labeled links such as supports or contradicts
+  - Claims tied to their evidence and where to find it in the source
+  - A note when the source gives no evidence for a claim
+  - A comparison of several sources that keeps their disagreements
+  - A plain-language check with recall questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the full text of this skill.
+  - Add your source. Upload the PDF or paste the text. A web page needs an AI that can browse.
+  - "Say which mode you want: quick, deep, map, feynman or book. Also say your reading question."
+  - Check that each main claim has evidence or a note that none was given.
+  - For the Feynman check, close the source and explain the idea in your own words before your AI corrects you.
+  - Scanned PDFs need OCR first. If your AI cannot read the source, it should stop and ask for the text.
+output_sample:
+  input:
+    - An article, book, PDF, web page or a set of documents
+    - The question you want the reading to answer
+    - "The mode you want: quick, deep, map, feynman or book"
+    - Your own plain-language explanation to test (optional)
+  prerequisites:
+    - An AI that can read files or web pages, or text pasted into the chat
+    - OCR support if your PDF is a scan
+  output:
+    - name: Reading contract
+      contains: The source, your reading question, the chosen mode and the depth you want.
+    - name: Survey questions
+      contains: Three to seven questions the reading should answer, drawn from the headings and structure.
+    - name: Evidence ledger
+      contains: Each key claim with its evidence, location, data context, relationship, confidence and caveat.
+    - name: Mode report or knowledge map
+      contains: A deep analysis, a labeled concept map, a quick summary or a chapter-by-chapter book map, as you chose.
+    - name: Feynman check
+      contains: A simple explanation, the places it turns vague, corrections and recall questions for later.
+    - name: Comparison of sources
+      contains: For several documents, where they agree and disagree, with disagreements kept visible.

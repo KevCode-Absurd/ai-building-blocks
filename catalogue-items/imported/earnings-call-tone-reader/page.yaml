@@ -2,34 +2,77 @@ thinking: medium
 thinking_why: It reads for tone and cites the lines.
 new_slug: earnings-call-tone-reader
 name: Earnings call tone reader
-summary: Give it an earnings call transcript. Get shifts in management tone and
-  confidence flagged, with quotes.
+summary: Paste an earnings call transcript. Get shifts in management tone, hedging and Q&A friction flagged, each backed by a quote.
 job: money-and-investing
 headline: Earnings call tone reader
-subhead: A report on how management sounded on the call, not just what they
-  said. Give it a transcript and you get shifts in tone and confidence flagged,
-  each backed by a quote.
+subhead: Paste an earnings call transcript, and the last few if you have them. Your AI scores management's tone, counts hedging words, and compares the answers with the analysts' questions. You get a report with a quote behind every flag and the gaps between tone and numbers.
 explain: |
-  A report on how management sounded on the call, not just what they said. Give it a transcript and you get shifts in tone and confidence flagged, each backed by a quote.
+  An earnings call sentiment analysis reads how management sounded, not only what they said. A confident script can sit on top of cautious answers in the Q&A. This skill looks for that gap.
 
-  The skill cleans the transcript, strips legal disclaimers, and treats the Q&A as the most revealing part. It scores sentiment with finance-aware word lists, because general tools mislabel words like cost and tax as negative. It compares the positive to negative ratio with the last four quarters. It also counts hedging words such as uncertain, might and assume, which often rise before a price drop. Finally, it compares management's tone with the analysts' questions to spot friction.
+  It cleans the transcript, strips the legal disclaimers and treats the Q&A as the most revealing part. It scores tone with finance-aware word lists, because general tools mark routine words like cost and tax as negative. It compares the mix of positive and negative words with the last few quarters, so you see the change, not just the level. It counts hedging words such as uncertain, might and assume per 100 words. Last, it compares management's tone with the analysts' questions to spot friction.
+
+  Rising hedging can signal caution. It does not predict a price move, and the report does not claim it does. It is research input, not advice.
 when:
-  - You want a read beyond the numbers before you trade or decide.
-  - You follow a company and want to track tone quarter to quarter.
+  - You want a read beyond the numbers before you make a decision.
+  - You follow a company and want to track tone from quarter to quarter.
   - You suspect management got more cautious in the Q&A.
   - You need a short note on what management talked about more or less.
+not_for:
+  - You want the results against expectations. Use the earnings recap writer.
+  - You want to prepare before the company reports. Use the earnings preview writer, or the earnings week briefing writer.
+  - You want a buy or sell signal. Tone is one input, not a trade call, so ask a licensed adviser.
 you_give:
-  - The earnings call transcript
-  - Transcripts from prior quarters (optional)
-  - Whether to focus on prepared remarks or Q&A
-  - The company name
+  - The earnings call transcript, pasted or attached
+  - The company name and quarter
+  - Transcripts from the last one to four quarters (optional, needed to measure a shift)
+  - Whether to focus on prepared remarks or Q&A (optional)
+  - A share price history (optional, only for the price overlay)
 you_get:
-  - A tone shift score against past quarters
-  - Flagged hedging and uncertainty language
-  - Quotes that support each flag
-  - A sentiment report
+  - A tone score from minus 1 to plus 1, with how it was worked out
+  - The change in tone against prior quarters
+  - Hedging and uncertainty words counted per 100 words
+  - Three stress points from the Q&A, each with a quote
+  - Places where tone and the reported numbers disagree
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Get the transcript from the company's investor page or the exchange filing. Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Paste the transcript and name the company and quarter. Paste older transcripts too if you have them. Without them you get a level, not a shift.
+  - Say whether you care most about the prepared remarks or the Q&A.
+  - Read the Key Findings first. Check each quote against the transcript.
+  - Then read the Check against the numbers section. Look up those numbers in the results.
+  - Use the result as one input. Do not trade on it alone.
+output_sample:
+  input:
+    - The earnings call transcript
+    - The company name and quarter
+    - Transcripts from earlier quarters (optional)
+    - A share price history (optional)
+  prerequisites:
+    - Transcripts you can paste or attach, from the company's investor page or filing
+    - An AI that can run Python, only if you want a FinBERT model score (optional)
+  output:
+    - name: Sentiment scorecard
+      contains: An overall score from minus 1 to plus 1 and the tone shift against earlier quarters.
+    - name: Key findings
+      contains: Three stress points from the Q&A and vague answers, each with a short quote and the speaker.
+    - name: Hedging count
+      contains: Uncertainty words per 100 words, compared with earlier quarters when you gave them.
+    - name: Management and analyst gap
+      contains: How management's answers compare with the tone of the analysts' questions.
+    - name: Check against the numbers
+      contains: Where tone and reported figures disagree, with what to look up.
+    - name: Quantitative overlay
+      contains: How tone shifts lined up with past price moves. Skipped if you gave no price history.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Handles a long transcript in one chat and quotes the lines it relies on.
+  inputs:
+    - The last four quarters of transcripts from the same company
+    - The results release for the same quarter, to check tone against the numbers
+terms:
+  - term: Hedging
+    meaning: Careful words such as might, assume and uncertain, used to avoid a firm promise.
+  - term: Q&A section
+    meaning: The part of the call where analysts ask questions and management answers live.
+  - term: FinBERT
+    meaning: A language model trained on finance text. It scores tone better than general tools.

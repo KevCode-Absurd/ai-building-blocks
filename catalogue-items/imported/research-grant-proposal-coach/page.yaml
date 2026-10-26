@@ -2,35 +2,99 @@ thinking: high
 thinking_why: Proposals need fit to each funder's rules and a convincing argument.
 new_slug: research-grant-proposal-coach
 name: Research grant proposal coach
-summary: Name the funder and your idea. Get aims, a compliance checklist, a
-  budget outline and a critique of your draft.
+summary: Plan an NSF, NIH, DOE, DARPA or Taiwan NSTC research grant. Get aims, a rules checklist, a budget outline and a critique of your draft.
 job: research-topics
 headline: Research grant proposal coach
-subhead: "A grant application taking shape: aims, a checklist of the funder's
-  rules, a budget outline and a critique of your draft. You find gaps before
-  reviewers do."
+subhead: Name the funder, the call and your research idea. You get an outline of aims, a checklist of the call's rules, a budget outline and a critique of any draft you have. You find gaps before reviewers do.
 explain: |
-  A grant application taking shape: aims, a checklist of the funder's rules, a budget outline and a critique of your draft. You find gaps before reviewers do.
+  A research grant proposal fails most often on fit, not on science. The call has its own rules, page limits and review criteria, and a good idea written to the wrong ones still loses. This coach starts by pinning down the exact call.
 
-  It starts by confirming the exact funding call, because each funder has its own rules and review criteria. It covers NSF, NIH, DOE, DARPA and Taiwan's NSTC. It then helps with specific aims, project narrative, broader impact, timelines and budget reasoning. It scores your draft against that funder's criteria and helps you answer reviewer comments on a resubmission. It can look up current opportunities online, or work from official documents you provide.
+  It records the funder, call number, due date, limits and review criteria, and checks them against the live call when it can get online. It builds a table of each requirement, where it sits in your draft, and what is missing. It covers NSF, NIH, DOE, DARPA and Taiwan's NSTC.
+
+  It then outlines your aims, a budget and a timeline, and critiques your draft against that funder's criteria. For a resubmission, it answers each reviewer comment. It never invents data, citations or partners.
 when:
   - You have a research idea and a deadline for a federal grant.
-  - Your first application was rejected and you must resubmit.
-  - You are unsure what the funder requires in each section.
+  - Your first application was turned down and you must resubmit.
+  - You are not sure what the funder wants in each section.
   - You need a budget justification that matches your plan.
+not_for:
+  - You need a nonprofit program grant, not a research grant. Use the Nonprofit grant proposal writer.
+  - You want the AI to write your NIH application. NIH excludes applications that AI substantially developed, so use this for checklists, critique and consistency checks only.
+  - You are still looking for funders to apply to. Use the Grant and bid response writer to find and rank them first.
 you_give:
-  - Funder and call name
-  - Your research idea
-  - Draft sections (optional)
-  - Reviewer comments (optional)
-  - Team and budget details (optional)
+  - The funder and the call or program name
+  - Your research idea in a few sentences
+  - Any draft sections you have (optional)
+  - Reviewer comments from an earlier round (optional)
+  - Team, budget and timeline limits (optional)
 you_get:
-  - Draft specific aims
-  - Compliance checklist
-  - Budget outline
-  - Critique against review criteria
+  - The confirmed facts of the call, with what is still unchecked
+  - A checklist of requirements against your draft
+  - An outline of aims or objectives for you to write from
+  - A budget outline with a reason for each line
+  - A critique against the funder's review criteria
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page, or upload the skill folder if your AI takes files.
+  - Say the funder and the call name or number. If your AI can browse, ask it to check the current call. If not, paste the call text yourself.
+  - Paste your idea in a few sentences, plus any draft sections or reviewer comments.
+  - Read the Call facts part first and fix anything wrong. Then work through the checklist and mark each gap.
+  - Write the aims and sections yourself, using the outline. Then paste your draft back for a critique against the review criteria.
+  - Before you submit, check every page limit and date against the live call. Some rules in the skill may be out of date.
+how_it_works:
+  - title: Confirm the call
+    text: It records funder, call number, due date, eligibility, limits, forms and review criteria, with the source and date.
+  - title: Build the rules table
+    text: Each requirement is matched to the section of your draft that answers it, and gaps are listed.
+  - title: Outline the aims
+    text: It drafts aims or objectives from your own idea, and lists the data and citations you must add.
+  - title: Plan budget and timeline
+    text: Budget lines and milestones follow your plan. Figures stay blank unless you give them.
+  - title: Critique your draft
+    text: It reads your draft against the funder's review criteria and lists strengths first, then gaps.
+  - title: Answer reviewers
+    text: For a resubmission, it pairs each reviewer comment with a response and a change to make.
+output_shape: |
+  Call facts: <funder, call, due date, limits, source and date>
+  Compliance checklist: <requirement, source, where in your draft, gap>
+  Aims outline: <aims, what you must supply>
+  Budget outline: <line items, reason for each>
+  Critique: <strengths, gaps by review criterion>
+  Resubmission plan: <reviewer comment, response, change>
+output_sample:
+  input:
+    - The funder and the call or program name
+    - Your research idea in a few sentences
+    - Draft sections or reviewer comments (optional)
+    - Team and budget limits (optional)
+  prerequisites:
+    - Web access to check the live call, or the call text pasted in
+    - An OpenRouter key, only if you choose the optional figure maker (it sends your prompt to a third party)
+  output:
+    - name: Call facts
+      contains: Funder, call number, due date, limits and review criteria, each with where it was found.
+    - name: Compliance checklist
+      contains: Every requirement matched to your draft, with the gaps marked.
+    - name: Aims outline
+      contains: Draft aims or objectives from your idea, and the data and citations you must add.
+    - name: Budget outline
+      contains: Cost lines with a reason for each. Figures stay blank unless you give them.
+    - name: Critique
+      contains: Your draft read against the funder's review criteria, strengths first, then gaps.
+    - name: Resubmission plan
+      contains: Each reviewer comment with a response and the change to make.
+works_best_with:
+  tools:
+    - name: An AI that can browse the web
+      why: It can check the live call, its amendments and the latest agency rules.
+  inputs:
+    - The full text or PDF of the call, so rules come from the source and not memory.
+    - Your own preliminary data, so the feasibility section has real evidence to cite.
+terms:
+  - term: Call
+    meaning: The funder's public notice of a grant program, with its rules and due date.
+  - term: Specific aims
+    meaning: A one-page list of what your project will do and why it matters.
+  - term: Review criteria
+    meaning: The points reviewers must score your application on.
+  - term: Resubmission
+    meaning: A second try at a grant that was not funded, with a reply to the reviewers.

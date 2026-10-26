@@ -1,52 +1,92 @@
 new_slug: make-a-research-report-easier-to-share
 name: Make a research report easier to share
 headline: Make a research report easier to share
-summary: Share the source files. Get an executive summary, slide brief and fact-check list.
+summary: Turn a finished research report into an executive summary, a slide brief and a fact-check list, with every caveat and source kept.
 job: work-with-files
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An executive summary, slide brief and fact-check list. Share a completed report, its source material, target audience and allowed publication scope. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your report, its sources, who will read it and what you may share. It rewrites the findings in plain English for that reader, outlines slides around the decision, then checks that figures and conclusions agree everywhere.
 explain: |-
-  An executive summary, slide brief and fact-check list.
+  A long research report is hard to share. The people who decide read the first page, and a short version often drops the caveats, the period or the source. This workflow makes a research report easier to share without losing what keeps it honest.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The short formats preserve qualifications, periods and source attribution from the report. Missing tools or evidence stay visible in the final summary.
+  Step 1 edits the findings into plain English for your reader and keeps the uncertainty and the caveats that matter. Step 2 turns the supported findings into a slide outline built around the decision, one idea per slide. Step 3 fixes typos and wording, and the workflow then compares every figure, date and source across the report, the summary and the slide brief. Each difference goes on the fact-check list.
+
+  It writes the short versions and the checks. It does not publish anything, and it stays inside the sharing limits you set. A claim the report does not support is flagged for you, not smoothed over.
 when:
-  - You need an executive summary, slide brief and fact-check list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You finished a research report and the people who decide will not read all of it.
+  - You need a one-page summary and a few slides from the same report.
+  - A short version of your findings left out a caveat last time.
+  - You must share findings with people outside your field.
+not_for:
+  - You want the report turned into a finished editable deck. Use Turn a report into an editable briefing deck.
+  - You have survey results, not a report. Use Prepare a survey findings briefing.
+  - You want to check a report's claims against sources, not shorten it. Use the Unsupported claim spotter.
+  - Your sources disagree and you must compare them. Use Compare conflicting research findings.
 you_give:
-  - A completed report, its source material, target audience and allowed publication scope.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your finished report (Word, PDF or pasted text)
+  - The sources behind it, such as data, papers or links
+  - Who will read the summary and what they must decide
+  - What you may share and what must stay private
+  - Length limits, such as one page or ten slides (optional)
 you_get:
-  - An executive summary, slide brief and fact-check list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - An executive summary in plain English
+  - "A slide brief: one outline, one idea per slide, each linked to its source"
+  - "A fact-check list: each figure and conclusion, where it appears and whether the versions agree"
+  - A list of caveats that must stay beside each finding
+  - A hand-back summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the report and its sources. Say who will read the summary and what they must decide.
+  - Read the fact-check list first. Settle every difference between the report and the short versions.
+  - Check that each caveat is still next to the finding it belongs to.
+  - Take the slide brief to a slide tool, or use the Turn a report into an editable briefing deck workflow to build it.
 how_it_works:
   - title: Plain English editor
-    text: Edit the report for the intended reader while retaining uncertainty and material caveats.
+    text: Edits the findings for your reader. Keeps the uncertainty and caveats that matter. Hands the plain version to the slide step.
   - title: Presentation builder
-    text: Turn the supported findings into a decision-focused slide outline.
+    text: Turns the supported findings into a slide outline around the decision, one idea per slide. This workflow uses the outline, not a finished deck.
   - title: Proofreader
-    text: Check that figures, source references and conclusions agree across the report and slides.
+    text: Fixes typos and wording in the summary and the slide text. The workflow then compares each figure, date and source across the report, summary and slides.
 output_shape: |-
-  Scope and source coverage
-  An executive summary, slide brief and fact-check list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  EXECUTIVE SUMMARY
+    Decision | Main findings in plain English | Caveats | Sources
+
+  SLIDE BRIEF
+    Slide number | Takeaway headline | What goes on the slide | Source
+
+  FACT-CHECK LIST
+    Figure or conclusion | Where it appears | Agrees across report, summary and slides | Fix
+
+  CAVEATS TO KEEP
+    Finding | Caveat | Period | Source
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | Checks not done | One next step
+output_sample:
+  input:
+    - Your finished report
+    - The sources behind it
+    - Your reader and the decision they face
+    - What you may share
+  output:
+    - name: Executive summary
+      contains: The findings in plain English for your reader, with caveats and sources kept.
+    - name: Slide brief
+      contains: A slide-by-slide outline built around the decision, each slide linked to its source.
+    - name: Fact-check list
+      contains: Each figure and conclusion, where it appears and whether every version agrees.
+    - name: Caveats to keep
+      contains: The qualifiers, periods and sources that must stay beside each finding.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks that could not run and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Pick one report and one reader. A summary for three audiences at once suits none of them.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Attach the report and the data behind its key figures, not a summary of them.
   - what: Acceptance
-    how: The short formats preserve qualifications, periods and source attribution from the report.
+    how: The short versions keep each caveat, period and source from the report.
 judge:
   - The short formats preserve qualifications, periods and source attribution from the report.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +99,23 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Ask the reader to say back the main finding. If they cannot, simplify the summary.
+  - Add your usual reader and sharing limits so the next run starts from them.
+  - Keep the fact-check list with the report. Update it when the report changes.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read a long report as a file and keep track of figures across versions.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The data tables behind the report's key figures.
+    - A named reviewer who knows the research.
+next:
+  - turn-a-report-into-an-editable-briefing-deck
+  - prepare-research-poster-source-notes
 terms:
+  - term: Caveat
+    meaning: A limit on a finding, such as the period it covers or the group it applies to.
+  - term: Executive summary
+    meaning: A short version for people who decide and will not read the whole report.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Stock at one site changes what the others need.
 new_slug: warehouse-stock-level-planner
 name: Warehouse stock level planner
-summary: Give it your warehouses and demand. Get how much stock to hold at each
-  level of your network.
+summary: Plan warehouse stock levels across your network. Give it your sites, lead times and demand. You get stock targets and safety stock for each site.
 job: plan-supply-chain
 headline: Warehouse stock level planner
-subhead: A plan for how much stock to hold at every level of your network, from
-  the central warehouse down to local sites. It keeps service high without tying
-  up cash in extra stock.
+subhead: A plan for how much stock to hold at every level of your network, from the central warehouse down to local sites. It keeps service high without tying up cash in extra stock.
 explain: |
   A plan for how much stock to hold at every level of your network, from the central warehouse down to local sites. It keeps service high without tying up cash in extra stock.
 
@@ -18,6 +15,10 @@ when:
   - You have a central warehouse feeding regional sites and stores.
   - You want to cut total inventory without losing sales.
   - You need to set safety stock across many locations.
+not_for:
+  - "You run a single site: use a simple reorder point and safety stock sheet, or ask your AI for single-location inventory help."
+  - "You need delivery routes planned along with stock: use a routing tool or a person who plans routes."
+  - "You need exact, provably best stock levels: the results are estimates, so check them with someone who knows your supply chain."
 you_give:
   - "Network layout: sites and who supplies whom"
   - Demand and its ups and downs at each site
@@ -29,8 +30,33 @@ you_get:
   - Central versus local stock split
   - Notes on transfers and rush shipping
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Build a sheet with one row per site. Add columns for site name, the site that supplies it, lead time, average weekly demand, how much weekly demand swings, and holding cost.
+  - Add your ordering cost, shipping cost and target service level. Note whether sites can send stock to each other or use rush shipping (optional).
+  - Open your AI and paste the skill. Then paste your sheet.
+  - Ask for the full stock plan. If you have a paid AI that can run code, say so, as it can work out the numbers more reliably.
+  - Check the result against what you know. Ask your AI to explain any site whose stock target looks wrong.
+  - Treat the numbers as estimates. They assume demand at each site is separate. Start with one pilot site before you change everything.
+output_sample:
+  input:
+    - Your sites and which site supplies which
+    - Lead time on each link between sites
+    - Demand at each end site, and how much it swings
+    - Holding, shipping and ordering costs
+    - Your target service level and any rush shipping or transfer options (optional)
+  prerequisites:
+    - An AI that can run code gives the best results, but a chat AI can still make a rough plan
+  output:
+    - name: Executive Summary
+      contains: Your current network, current stock, the improved stock plan and the effect on service.
+    - name: Current State Analysis
+      contains: A table of each level of your network with its stock, service level and main issues.
+    - name: Optimized Policy
+      contains: A table with an order-up-to level, safety stock, expected stock and service target for each level.
+    - name: Financial Impact
+      contains: Current and improved stock cost, service level and working cash tied up.
+    - name: Risk Pooling Benefit
+      contains: How holding stock centrally cuts the safety stock you need across sites.
+    - name: Implementation Plan
+      contains: A phased rollout, starting at the central warehouse and one pilot site.
+    - name: Technology Requirements
+      contains: The stock visibility and reorder tools you need to run the plan.

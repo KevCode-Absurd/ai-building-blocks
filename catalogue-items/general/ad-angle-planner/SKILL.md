@@ -31,7 +31,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The ad idea** (required): the buyer, the reason they'd buy, the format.
+- **The ad idea** (required): the buyer, the reason they'd buy, the format. A top-ranked angle from an angle library, with its awareness read, works as the idea.
 - **Awareness level** (optional): one of the five below. Best taken from "Buyer brief writer". If missing, judge it from the idea and say so.
 - **Market stage** (optional): 1 to 5, from the same brief or from what competitors promise. If missing, use stage 2 and say so.
 - **Brand file** (optional): the buyer's main doubt, proof on file, offer terms.

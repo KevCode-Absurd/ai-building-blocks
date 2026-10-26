@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It fits set models and checks if the picture is believable.
 new_slug: cell-direction-velocity-analyst
 name: Cell direction velocity analyst
-summary: Give it single-cell counts with spliced reads. Get cell direction
-  arrows, timing and the genes that drive them.
+summary: Run RNA velocity analysis on single-cell counts with spliced reads. Get cell direction arrows, a time order per cell and ranked driver genes.
 job: research-topics
 headline: Cell direction velocity analyst
-subhead: Single-cell data tells you which way cells seem to be heading, how far
-  along they are, and which genes push them. Give it counts with spliced and
-  unspliced reads, and you get arrows on the cell map, a timeline for each cell,
-  and ranked driver genes.
+subhead: Single-cell data tells you which way cells seem to be heading, how far along they are, and which genes push them. Give it counts with spliced and unspliced reads, and you get arrows on the cell map, a timeline for each cell, and ranked driver genes.
 explain: |
   Single-cell data tells you which way cells seem to be heading, how far along they are, and which genes push them. Give it counts with spliced and unspliced reads, and you get arrows on the cell map, a timeline for each cell, and ranked driver genes.
 
@@ -19,6 +15,10 @@ when:
   - You need the genes that drive a branching path.
   - You want a pseudo-time order for cells in a trajectory.
   - You are checking if a model fits before trusting its arrows.
+not_for:
+  - "You have bulk RNA data or only scaled counts with no spliced and unspliced layers: ask your lab or core to re-count the reads first."
+  - "You only want to cluster cells and name cell types: use standard Scanpy clustering instead."
+  - "You need proof of cell fate or true drivers: use lineage tracing or labeling experiments, since arrows are model estimates."
 you_give:
   - A single-cell file with spliced and unspliced counts
   - Cell type labels and a cell map embedding
@@ -31,8 +31,31 @@ you_get:
   - Phase portraits for chosen genes
   - Notes on what the results do not prove
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Check that your single-cell file has spliced and unspliced count layers. Without them, stop here.
+  - Open an AI that can run Python code, such as Claude with code tools. Paste in this skill.
+  - Upload your H5AD file and name the column that holds your cell groups, if you have one.
+  - Ask your AI to set up a clean Python environment and run the workflow with the dynamical model.
+  - Open the arrow plots and gene phase plots. Check that they make sense before you trust any arrow.
+  - Compare the results with outside evidence, such as a time course, before you draw conclusions.
+output_sample:
+  input:
+    - A single-cell file (H5AD) with spliced and unspliced count layers
+    - Cell group labels, such as clusters (optional)
+    - "Your choice of model: steady-state or dynamical"
+  prerequisites:
+    - An AI that can run Python code
+    - A Python setup with scVelo and Scanpy installed
+    - Internet access to install packages, unless they are already cached
+  output:
+    - name: adata_velocity.h5ad
+      contains: Your cell data with velocities, graph, time values, fit results, package versions and chosen settings saved inside.
+    - name: Velocity plots (PNG)
+      contains: Arrows drawn on the cell map, saved as image files in the results folder.
+    - name: Latent time
+      contains: A relative time order for each cell, made only by the dynamical model.
+    - name: Velocity pseudotime and confidence
+      contains: A graph-based cell order and a score for how well neighbor cells agree on direction.
+    - name: Ranked velocity genes
+      contains: Genes linked to each cell group's velocity, ranked when there are at least two groups. Exploratory only.
+    - name: Diagnostics notes
+      contains: Warnings about empty graphs, constant time values or failed fits, and what the results do not prove.

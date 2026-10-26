@@ -1,25 +1,19 @@
 slug: link-operating-growth-to-terminal-reinvestment
 name: Link operating growth to terminal reinvestment
-summary: Connect an operating forecast’s growth to the investment needed in its stable terminal state.
+summary: Check that forecast growth is paid for by reinvestment and that terminal value holds up. Get a linked workbook from your NOPAT, capex and WACC.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+needs_mode: manual
 uses:
   - reinvestment-supported-growth
   - terminal-growth-reinvestment-consistency

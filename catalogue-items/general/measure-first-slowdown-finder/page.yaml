@@ -1,6 +1,6 @@
 new_slug: measure-first-slowdown-finder
 name: "Measure first slowdown finder"
-summary: "Describe what feels slow. Get a measurement plan, the worst-case view and a ranked fix list."
+summary: "Find what is slowing down your program, page, report or process. Give it what feels slow and any timings. You get a ranked list of what to fix first."
 job: build-software
 thinking: medium
 thinking_why: "It ranks findings and checks numbers, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - Something feels slow and everyone has a different guess about why.
   - A report, page or process is fine on average but terrible some of the time.
   - You have spent a week on a fix and cannot tell if it helped.
+not_for:
+  - "You want a cost estimate and nothing is running yet: use a simple spreadsheet of the steps and ask the person who runs it for rough times."
+  - "The slow stage could be removed, not sped up: use the Weak part design-out planner."
+  - "You need deep code-level timing inside a program: use a profiler, then bring its numbers back here."
 
 you_give:
   - What feels slow, when it happens and how long it takes
@@ -34,6 +38,29 @@ how_to_use:
   - List the fixes you already thought of. They will be tested against the numbers.
   - Collect the timings it asks for, then send them back.
   - Fix the top item, measure again and bring the new numbers back.
+output_sample:
+  input:
+    - What feels slow, when it happens and how long it takes
+    - Timings, logs or a profiler export (optional)
+    - The slowest runs, not only the average (optional)
+    - Fixes you already tried and your target speed (optional)
+  prerequisites:
+    - A stopwatch, log or profiler to collect timings, if you have none yet
+  output:
+    - name: The slow moment
+      contains: One sentence saying what is slow, when it happens and how long it takes.
+    - name: What to time
+      contains: Each stage, with the tool or clock to time it, or MISSING if not yet measured.
+    - name: The numbers
+      contains: "For each stage: the average, the worst run, the best possible time and the gap."
+    - name: Uneven work
+      contains: Work done only some of the time, and what decides when it happens.
+    - name: Fix first
+      contains: Fixes ranked by time saved, each with how to measure again.
+    - name: Dropped ideas
+      contains: Ideas the numbers rule out, each with the number that ruled it out.
+    - name: Missing and checks missed
+      contains: Measurements still needed, and any check the skill could not pass.
 
 how_it_works:
   - title: Names the slow moment

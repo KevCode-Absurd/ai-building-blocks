@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies your rules to each order.
 new_slug: order-tagger
 name: Order tagger
-summary: Set your rules, such as region or order value. Get matching orders
-  tagged. Changes live orders, so preview first.
+summary: Tag Shopify orders by your own rules, like region or order value. Preview the tags first, then apply them to live orders.
 job: run-your-store
 headline: Order tagger
-subhead: Set your rules, such as region or order value. Get matching orders
-  tagged. Changes live orders, so preview first. Bring store domain. Use the
-  result to plan your next step.
+subhead: Set your rules, such as region or order value. Get matching orders tagged. Changes live orders, so preview first. Bring store domain. Use the result to plan your next step.
 explain: |
   Orders tagged automatically by your own rules, so your team can filter, route and report without reading each one. Think high-value, international, first-time buyer or needs review.
 
@@ -18,6 +15,10 @@ when:
   - Fraud checks need all high-risk orders in one list.
   - You want repeat buyers tagged for a thank-you note.
   - Your packing team needs bulk orders labelled.
+not_for:
+  - "You only want a report and no changes to orders: use your Shopify admin order filters or export instead."
+  - "Your store login has no permission to edit orders: ask the store owner for access first, or run it in preview only."
+  - "You want to remove or replace old tags: this tool only adds tags, so edit those in Shopify admin."
 you_give:
   - Store domain
   - Tagging rules (condition and tag)
@@ -29,9 +30,27 @@ you_get:
   - Skipped orders already tagged
   - A count per rule
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Open an AI that can run Shopify CLI commands, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Paste the skill. Give it your store domain and sign in to Shopify with order read and write access.
+  - Write your rules. Each rule is a condition and a tag, like total_price > 500 gives high-value.
+  - Run it in preview first. Check the report and the CSV to see which orders would be tagged.
+  - Ask it to apply the tags only when the preview looks right. This changes live orders.
+  - Open the CSV to check the changes. Then filter orders by tag in Shopify admin.
+output_sample:
+  input:
+    - Your store domain
+    - Your tagging rules, each with a condition and a tag
+    - How many days back to look (optional)
+    - Preview or apply (optional, preview is the default)
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - A Shopify login that can read and edit orders
+  output:
+    - name: Start banner
+      contains: Your store, the mode (preview or live) and the start time.
+    - name: Step log
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Order tagging report
+      contains: Orders scanned, orders matched, tags applied or that would apply, and a count for each rule.
+    - name: order_tags_<date>.csv
+      contains: One row per order with its id, name, existing tags, new tags and the rules that matched.

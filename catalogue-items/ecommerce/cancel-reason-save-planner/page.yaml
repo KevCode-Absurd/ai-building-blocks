@@ -1,6 +1,6 @@
 new_slug: cancel-reason-save-planner
 name: "Cancel reason save planner"
-summary: "Paste your cancel reasons and what your tool can do. Get one save per reason and the numbers to track."
+summary: "Match each reason a subscriber gives for cancelling to one fair save, with screen copy, a discount cap and a sheet to track results."
 job: keep-customers
 thinking: medium
 thinking_why: "It matches each reason to a fitting save and weighs margin."
@@ -17,6 +17,10 @@ when:
   - "Subscribers leave and you only offer a discount."
   - "You are setting up the cancel screen in your subscription tool."
   - "You want to know which saves actually keep customers."
+not_for:
+  - "You want the full cancel flow with win-back and failed-payment steps: use the Subscription cancel flow builder."
+  - "Your buyers made one-off purchases with no subscription: use a simple win-back email, written by you or a teammate."
+  - "You have no cancel reasons yet: ask leavers why they left first, with a short exit survey in your subscription tool."
 
 you_give:
   - "Your cancel reasons"
@@ -32,6 +36,21 @@ how_to_use:
   - "Paste your cancel reasons under the prompt, with counts if you have them."
   - "List what your tool can do, so every save is one you can build."
   - "Build the flow, then track the columns it gives you."
+output_sample:
+  input:
+    - Your cancel reasons, with counts if you have them
+    - What your subscription tool can do (advised)
+    - Your biggest save discount (advised)
+    - Your product and how fast people use it up (optional)
+  output:
+    - name: CANCEL FLOW
+      contains: "For each reason: the save, one line of screen copy, a clear cancel link and the discount cap or none."
+    - name: TRACKING COLUMNS
+      contains: A column layout for reason, shown, saved, save rate, repeat orders after save and discount cost.
+    - name: LEGAL NOTE
+      contains: A reminder that cancelling must stay easy and that rules differ by place, so check locally.
+    - name: MISSING
+      contains: Anything you did not give, such as the discount cap, so you can add it.
 
 how_it_works:
   - title: "Group the reasons"

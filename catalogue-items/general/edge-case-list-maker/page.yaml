@@ -1,6 +1,6 @@
 new_slug: edge-case-list-maker
 name: "Edge case list maker"
-summary: "Paste a change you plan to make. Get the cases to check, smallest first, before you write any code."
+summary: "Turn a planned change into an edge case list. Get the cases to check, smallest first, plus the first check to run before you write any code."
 job: build-software
 thinking: medium
 thinking_why: "It must think of odd cases and order them well."
@@ -17,6 +17,10 @@ when:
   - "You are about to change code, a spreadsheet or a form and want to know what could break."
   - "Your AI keeps building the main case and missing the edges."
   - "You want a clear first step before any work starts."
+not_for:
+  - "You need a full test plan with every check: use the Test list writer."
+  - "You are fixing a one-line typo: just make the fix and look at the result yourself."
+  - "You want to plan a whole new feature: split it into single changes first, then run this once for each change."
 
 you_give:
   - "The change, in your own words"
@@ -33,6 +37,22 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - The change you plan to make, in your own words
+    - What it does today (optional)
+    - Past bugs or odd customers (optional)
+  output:
+    - name: CHANGE
+      contains: "The change stated in one line: when this happens, this result follows instead of what happens today."
+    - name: CASES
+      contains: Cases in order, smallest first, each with its group and size, written as given, when, then.
+    - name: START WITH
+      contains: "The first case to check, in plain words: starting data, action and expected result."
+    - name: DECISIONS FOR LATER
+      contains: Design questions kept out of the cases, so you can answer them after the checks.
+    - name: MISSING
+      contains: Any facts you did not give that the list needed, marked so you can fill them in.
 
 how_it_works:
   - title: "State the change in one line"
@@ -91,8 +111,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "A past bug in the same area"
-  - "A sentence on today's behaviour"
+    - "A past bug in the same area"
+    - "A sentence on today's behaviour"
 
 terms:
   - term: "Edge case"

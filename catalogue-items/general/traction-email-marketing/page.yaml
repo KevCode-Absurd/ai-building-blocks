@@ -1,30 +1,26 @@
 new_slug: traction-email-marketing
 name: Lifecycle email experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a lifecycle email test for your product. Give it your link. You get one small test with a holdout, cost cap and stop rule.
 job: write-emails
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Lifecycle email experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused email marketing plan for your product. It reads the buyer and offer,
-  checks why this channel might work and writes a small test. The default is
-  SaaS; you can ask for general-business mode.
+  A focused email marketing plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Draft a short activation sequence for one eligible segment and compare its
-  product outcome with an appropriate holdout after an approved send.
+  Draft a short activation sequence for one eligible segment and compare its product outcome with an appropriate holdout after an approved send.
 
 
-  Open rates can reflect automated activity. Suppress users who have already
-  completed the action, and never use purchased lists as permission.
+  Open rates can reflect automated activity. Suppress users who have already completed the action, and never use purchased lists as permission.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You have no email list with permission and no product sign-up data: pick another channel, or ask a person who knows your market where your buyers are."
+  - "You want to compare all 19 growth channels: use the Traction workflow, which this item is one part of."
+  - "You want finished email copy for a one-off send, not a test plan: write the single email yourself with your AI in a plain chat."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -34,20 +30,48 @@ you_get:
   - A small test with an owner, cost cap and decision rule
   - The next action and what needs approval
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Web access helps, but pasted page text works too.
+  - Paste your product link. Add your goal, budget, hours and past results if you have them.
+  - "Say: plan a lifecycle email test for this product."
+  - Read the Recommendation and MISSING sections first. Fill any gaps and ask the AI to update the plan.
+  - Check the holdout and the stop rule before you send anything. The AI sends nothing on its own.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and time limits (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can browse the web, or product page text you paste in
+    - A list of people who agreed to get your email
+  output:
+    - name: Recommendation
+      contains: Whether to test lifecycle email now, later, or not at all, with the reason.
+    - name: Evidence
+      contains: Each fact used, with its source link, the date you read it, and what it means.
+    - name: Buyer and useful action
+      contains: Who the buyer is and the first useful thing they should do in your product.
+    - name: Channel mechanism
+      contains: How an email helps that buyer reach value.
+    - name: Pilot
+      contains: The test idea, who gets it, the offer, what is made, and who owns it.
+    - name: Limits
+      contains: Cash, hours and end date, marked as proposed or approved.
+    - name: Measurement
+      contains: Events to track, the group sizes, the holdout group and how credit is given.
+    - name: Decision
+      contains: The rule for when to continue, change or stop.
+    - name: Risks and next action
+      contains: What could go wrong and the next step that needs your approval.
+    - name: MISSING
+      contains: Facts the AI could not find and you still need to supply.
 how_it_works:
   - title: Check 1
-    text: Separate prospects, inactive trial users, activated users, paying accounts
-      and at-risk customers. Use actual product events when available.
+    text: Separate prospects, inactive trial users, activated users, paying accounts and at-risk customers. Use actual product events when available.
   - title: Check 2
-    text: Draft a short event-driven sequence with one useful action per message,
-      explicit entry conditions, suppression rules and exit conditions.
+    text: Draft a short event-driven sequence with one useful action per message, explicit entry conditions, suppression rules and exit conditions.
   - title: Check 3
-    text: Verify list permission and delivery readiness. Define a holdout or staged
-      rollout to avoid crediting email for every natural conversion.
+    text: Verify list permission and delivery readiness. Define a holdout or staged rollout to avoid crediting email for every natural conversion.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -61,21 +85,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - A user activates before the next reminder. The sequence must suppress that
-    reminder and record the exit event.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - A user activates before the next reminder. The sequence must suppress that reminder and record the exit event.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

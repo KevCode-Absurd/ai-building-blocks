@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs the merit of a claim and the stakes are real.
 new_slug: incoming-demand-letter-reviewer
 name: Incoming demand letter reviewer
-summary: Give it a demand letter you got. Get the claims, how strong they look
-  and your reply options. Not legal advice.
+summary: Review a demand letter you received. Get the claims, amounts, deadline, a merit read and your reply options. A first read, not legal advice.
 job: check-contracts
 headline: Incoming demand letter reviewer
-subhead: "A first read of a demand letter you received: what they claim, how
-  strong it looks, and your options for answering. It is a starting point for
-  talking to a lawyer, not legal advice."
+subhead: "A first read of a demand letter you received: what they claim, how strong it looks, and your options for answering. It is a starting point for talking to a lawyer, not legal advice."
 explain: |
   A first read of a demand letter you received: what they claim, how strong it looks, and your options for answering. It is a starting point for talking to a lawyer, not legal advice.
 
@@ -19,6 +16,10 @@ when:
   - You need a deadline and options before calling a lawyer.
   - Your team gets many demand letters and needs one method.
   - You want the letter turned into a case file in one step.
+not_for:
+  - "You were served court papers, or the letter is from a regulator or about a crime: call a lawyer first, because deadlines can be short."
+  - "You want to send a demand letter, not answer one: ask a lawyer, or write a plain request letter yourself."
+  - "You need a final opinion on who would win: hire a lawyer, since this gives a first read to help route the letter."
 you_give:
   - The demand letter file
   - Your matter log and risk settings, if set up (optional)
@@ -30,12 +31,33 @@ you_get:
   - Response options with a recommendation
   - A saved triage note
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved legal setup notes and your
-    files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Download the skill folder, or paste the skill text into a chat with your AI.
+  - Add the demand letter file. Add your matter log and risk settings if you have them.
+  - Ask your AI to follow the skill. It works best in a tool that can read and save files.
+  - Read the merit rating and every cited law as a first read, and check each cite yourself.
+  - Pick a reply option, then take the triage note to your lawyer.
+  - If the skill mentions the setup interview, use the setup-interview folder inside this one.
+output_sample:
+  input:
+    - The demand letter file
+    - Your matter log of past and current cases (optional)
+    - Your risk settings and house tone for replies (optional)
+    - Notes on the sender (optional)
+  prerequisites:
+    - An AI that can read files, if you want it to check your matter log and save the triage note
+    - A legal research tool such as Westlaw is optional and paid, and is not needed to run the skill
+  output:
+    - name: The demand
+      contains: Who sent it, what they ask for, their deadline, the facts they claim and any laws they cite.
+    - name: Portfolio cross-check
+      contains: Whether this sender matches an open or closed matter, with advice to add it to a case or start one.
+    - name: Merit assessment
+      contains: Their case, your likely defenses, whether the amount fits, and a rating from substantial to frivolous.
+    - name: Response options
+      contains: "Four choices: full reply, holding letter, settlement reply, or ignore and preserve, with one recommended."
+    - name: Deadlines
+      contains: Their stated deadline, your own decision date and any legal deadlines to calendar.
+    - name: Immediate actions
+      contains: A checklist covering legal hold, matter log entry, assigned counsel, insurance and who to tell inside.
+    - name: triage.md
+      contains: The saved file that holds all of the above, stored next to a copy of the letter.

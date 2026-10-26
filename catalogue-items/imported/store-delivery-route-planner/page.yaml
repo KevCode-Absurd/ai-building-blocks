@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Time windows and visit rules add many limits.
 new_slug: store-delivery-route-planner
 name: Store delivery route planner
-summary: Give it your stores, order sizes and delivery windows. Get weekly truck
-  routes that cover every store at less cost.
+summary: Plan weekly store delivery routes. Give it your stores, order sizes and delivery windows. You get truck routes that fit drivers' hours and capacity.
 job: plan-supply-chain
 headline: Store delivery route planner
-subhead: Weekly truck routes that visit every store on time and cost less to
-  run. You describe your stores, how much each orders, delivery windows and your
-  vehicles, and get a route plan that fits drivers' hours and truck capacity.
+subhead: Weekly truck routes that visit every store on time and cost less to run. You describe your stores, how much each orders, delivery windows and your vehicles, and get a route plan that fits drivers' hours and truck capacity.
 explain: |
   Weekly truck routes that visit every store on time and cost less to run. You describe your stores, how much each orders, delivery windows and your vehicles, and get a route plan that fits drivers' hours and truck capacity.
 
@@ -18,6 +15,10 @@ when:
   - Stores complain about deliveries that miss their receiving hours.
   - You are adding a truck or a driver and must re-cut the routes.
   - You want to know the cost per delivery before and after a change.
+not_for:
+  - "You ship parcels to homes or run last-mile courier rounds: use a last-mile delivery or vehicle routing tool, as the library has no sibling item for this yet."
+  - "You move full loads from a warehouse to a few depots: ask your carrier or a freight planner, because stop-by-stop store routing adds nothing."
+  - "You need live routing with traffic and drivers on the road today: use a routing app built for dispatch."
 you_give:
   - Store list with addresses and order sizes
   - Delivery windows and receiving hours
@@ -31,8 +32,29 @@ you_get:
   - Overtime and capacity warnings
   - Ideas to cut cost per stop
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open your AI tool. Claude, ChatGPT or Gemini all work. Paste in the skill text from this page.
+  - Add your store list. Include a store ID, address or map position, order size, delivery window and minutes to unload for each store.
+  - Add your trucks and driver rules. Give each truck's capacity, whether it needs refrigeration, and shift length and overtime limits.
+  - Say which stops you must serve and which are optional. Say how often each store needs a visit.
+  - Run it. If your AI can run code, it can test more route options. Otherwise it plans by reasoning, so check the times yourself.
+  - Read the result. Check each route against store windows and shift limits before you give it to drivers.
+output_sample:
+  input:
+    - Your store list with addresses and order sizes
+    - Delivery windows and receiving hours for each store
+    - Your vehicle types and how much each can carry
+    - Driver shift rules and overtime limits
+    - Your current miles and cost per stop (optional)
+  prerequisites:
+    - An AI that can run code, for the best route maths. Without it, you get a rougher plan built by reasoning.
+  output:
+    - name: Executive Summary
+      contains: Total routes, stops, miles, average stops per route, estimated cost and on-time rate for the week.
+    - name: Route Details
+      contains: One block per truck with driver, vehicle, departure, stops in order, arrival, service time, cases and running load.
+    - name: Performance Metrics
+      contains: Miles per stop, stops per route, cost per delivery, cube use and on-time rate, each checked against a target.
+    - name: Zone Coverage
+      contains: Routes, stops, miles and stop density for each zone of your delivery area.
+    - name: Recommendations
+      contains: Ways to merge low-volume days, fix service times, add a route or move start times.

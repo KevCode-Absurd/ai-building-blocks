@@ -1,0 +1,147 @@
+name: DevOps Automator agent
+summary: Turn manual deploys into an automated pipeline that tests, ships and rolls back, with alerts and a rollout order. Bring your stack and current steps.
+headline: DevOps Automator agent
+subhead: Describe where your code lives, where it runs and how you deploy today. It plans the automated pipeline from test to release, a rollback, alerts and a safe order to roll it out. You get a plan and sample config for your engineers to test. It does not run anything.
+job: ship-and-host
+thinking: high
+thinking_why: It must fit a pipeline to your tools, plan rollback and avoid unsafe automation. Use a model that reasons about steps and failure and says when a detail is missing.
+explain: |-
+  Manual deploys break in small ways. Someone skips a step, a secret ends up in the wrong place, or nobody can say how to undo last night's release. A CI/CD pipeline, which is a set of automatic steps that test, build and release your code, removes most of that. It still has to fit your tools and your risks.
+
+  This agent starts from how you deploy today. It lists each manual step and decides what to automate first. Then it plans the stages: security checks, tests, build, deploy to a test environment, deploy to production, health checks. It picks a release method that fits your downtime limit, such as rolling, blue-green or canary, and it plans how a bad release rolls back on its own. It adds alerts and a way to keep secrets out of your code.
+
+  It writes a plan and, if you ask, sample config for the tool you use, such as GitHub Actions or Terraform. The sample is a sketch to adapt and test. It does not run, install or deploy anything. The profile's goals, such as deploys many times a day, are targets from the author, not results.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You deploy by hand and want it automated, with a rollback you trust.
+  - You are moving to GitHub Actions, GitLab CI or Jenkins and want a pipeline plan first.
+  - A bad release took you down and you want health checks and a rollback that triggers on its own.
+  - You want your servers described in code, such as Terraform, so they can be rebuilt the same way.
+not_for:
+  - You want goals, error budgets and on-call alerts for a service. Use the SRE agent.
+  - You want branch names, commit rules and pull request checks. Use the Git workflow agent.
+  - You want to keep existing servers healthy and patched. Use the Infrastructure Maintainer agent.
+  - You want your cloud bill reviewed. Use the FinOps Engineer agent.
+  - You want it to deploy, install or change live systems. It writes the plan. Your engineers apply it on a test environment first.
+you_give:
+  - Where your code lives and which CI tool you use or want, such as GitHub Actions or GitLab CI.
+  - Where the app runs, such as AWS, Google Cloud, Azure, Kubernetes or a hosting service.
+  - Your deploy steps today, in order, including the manual ones.
+  - Your environments, such as test, staging and production.
+  - How much downtime you can accept, and how fast a rollback must be.
+  - What you already monitor and who gets alerted (optional)
+you_get:
+  - A list of what to automate first, from your current steps.
+  - A pipeline plan with stages and what each stage checks.
+  - A release and rollback plan that fits your downtime limit, with health checks and the signal that triggers a rollback.
+  - A monitoring and alert plan, and a way to keep secrets out of code.
+  - A rollout order your team can follow, with sample config only if you ask.
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write your CI tool, where the app runs, your deploy steps today and your downtime limit. Do not paste passwords or keys.
+  - Type "Plan an automated pipeline for this setup. List the manual steps first. Mark every assumption. No code until I ask."
+  - Check the rollback plan first. It must say what signal triggers a rollback and what rolls back.
+  - Ask for sample config for your tool once you accept the plan. Treat it as a sketch.
+  - Have an engineer run it on a test environment before production. The AI does not run anything.
+how_it_works:
+  - title: Read your current deploy
+    text: It lists each step you do today, who does it and what can go wrong, then marks missing facts.
+  - title: Pick what to automate first
+    text: It ranks steps by risk and effort, so the riskiest manual steps go first.
+  - title: Design the pipeline stages
+    text: It orders security checks, tests, build, test deploy, production deploy and health checks.
+  - title: Choose the release method
+    text: It picks rolling, blue-green or canary to fit your downtime limit, and plans an automatic rollback.
+  - title: Plan monitoring and secrets
+    text: It sets alerts that match your goals, and a safe place for keys and tokens.
+  - title: Write the rollout order
+    text: It gives a step-by-step order to introduce the pipeline, with a check after each step.
+output_shape: |-
+  SCOPE
+    CI tool <name> | Runs on <platform> | Environments <list> | Downtime limit <time or MISSING> | Assumptions <list>
+
+  CURRENT DEPLOY STEPS
+    <step> | <manual or automatic> | <risk> | <automate first? yes or no>
+
+  PIPELINE PLAN
+    <stage> | <what it checks or does> | <stops the release if it fails? yes or no>
+
+  RELEASE AND ROLLBACK PLAN
+    <method> | <health checks> | <rollback signal> | <what rolls back> | <who is told>
+
+  MONITORING AND ALERTS
+    <what to watch> | <alert when, from you> | <who gets it>
+
+  SECRETS AND ACCESS
+    <secret or access> | <where it lives> | <who can read it>
+
+  ROLLOUT ORDER
+    <step> | <check before the next step> | <owner>
+
+  GAPS AND CHECKS
+    <missing fact> | <why it matters> | <who decides>
+output_sample:
+  input:
+    - Your CI tool and where the app runs
+    - Your current deploy steps, in order
+    - Your environments and your downtime limit
+    - What you monitor now and who is alerted (optional)
+  prerequisites:
+    - A test environment where an engineer can try the pipeline before production.
+  output:
+    - name: Scope
+      contains: Your tools, environments, downtime limit and the assumptions the plan makes.
+    - name: Current deploy steps
+      contains: Each step you do today, how risky it is and whether to automate it first.
+    - name: Pipeline plan
+      contains: The stages from checks to release, and which ones stop a bad release.
+    - name: Release and rollback plan
+      contains: The release method, health checks, the signal that triggers a rollback and who is told.
+    - name: Monitoring and alerts
+      contains: What to watch, when to alert and who gets the alert.
+    - name: Secrets and access
+      contains: Where each key and token lives and who can read it.
+    - name: Rollout order
+      contains: The order to introduce the pipeline, with a check after each step.
+    - name: Gaps and checks
+      contains: Missing facts and open choices, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A strong reasoning model keeps stages, rollback and secrets consistent. No code running or web access is needed. Check tool settings against the tool's own docs.
+  inputs:
+    - Your current deploy script or checklist, with secrets removed.
+    - A diagram or note of your environments.
+    - The last bad release, and what went wrong.
+terms:
+  - term: CI/CD
+    meaning: Automatic steps that test, build and release your code each time you change it.
+  - term: Pipeline
+    meaning: The ordered set of automatic steps from a code change to a live release.
+  - term: Infrastructure as code
+    meaning: Describing servers and settings in files, so they can be rebuilt the same way each time.
+  - term: Blue-green deploy
+    meaning: Running the new version beside the old one, then switching traffic over when it is healthy.
+  - term: Canary release
+    meaning: Sending a small share of users to the new version first, and widening it if it stays healthy.
+  - term: Rollback
+    meaning: Going back to the last good version after a bad release.
+tweaks:
+  - what: Size
+    how: Say how many people deploy and how often. A solo developer needs a lighter pipeline than twenty engineers.
+  - what: Downtime limit
+    how: Give a real limit, such as "none" or "five minutes at night". It sets the release method.
+  - what: Tool
+    how: Name the CI tool and cloud you already use. The plan fits those instead of suggesting new ones.
+improve:
+  - Keep each plan with your notes on what worked in the test environment.
+  - Rerun it after any big change, such as a new cloud, a new app part or a bad release.
+  - Pair it with the SRE agent for service goals and with the Application Security Engineer agent to review the pipeline's security checks.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

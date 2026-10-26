@@ -51,7 +51,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Write the sequence.** Use the skill `email-sequence-writer`. Five emails with timing, each teaching one useful thing before any ask, in your voice, with the sale asked for only after the reader has had something from you.
 2. **Review like Hopkins.** Use the skill `email-draft-reviewer`. Give it each email. Each email reviewed against Claude Hopkins's tests: a specific claim, a reason why, proof, one clear action, and nothing clever that hides the offer.
-3. **Fix the mistakes.** Use the skill `email-mistake-fixer`. Give it the emails and the review. Each flagged line fixed: the vague subject, the claim without proof, the two asks in one email, the paragraph that says nothing.
+3. **Fix the mistakes.** Use the skill `plain-english-editor`. Give it step 1's emails and the review from step 2 as the list of flagged lines. Each flagged line fixed: the vague subject, the claim without proof, the two asks in one email, the paragraph that says nothing.
 4. **Check each is ready.** Use the skill `email-send-readiness-scorer`. Give it the fixed emails. Each email scored for send readiness: links, names, length, spam triggers, the missing unsubscribe, with what to fix before it goes live. You switch it on.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

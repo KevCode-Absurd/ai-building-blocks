@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies a known set of principles to what you show it.
 new_slug: everyday-usability-reviewer
 name: Everyday usability reviewer
-summary: Give it a product or screen. Get what confuses people and fixes for
-  clues, limits and feedback. Uses Don Norman's principles.
+summary: Find what confuses people on your screen or product, and get fixes. This usability review scores it out of 10 using Don Norman's principles.
 job: design-work
 headline: Everyday usability reviewer
-subhead: A list of exactly what confuses people in your product or screen, with
-  fixes. It tells you why users press the wrong thing, miss a feature or cannot
-  tell whether an action worked.
+subhead: A list of exactly what confuses people in your product or screen, with fixes. It tells you why users press the wrong thing, miss a feature or cannot tell whether an action worked.
 explain: |
   A list of exactly what confuses people in your product or screen, with fixes. It tells you why users press the wrong thing, miss a feature or cannot tell whether an action worked.
 
@@ -18,6 +15,10 @@ when:
   - People click the wrong button or give up halfway through a form.
   - You are reviewing a design before it goes to developers.
   - A physical product or device gets blamed for user mistakes.
+not_for:
+  - "You want a review of visual style or brand look: ask a designer, since this checks how easy it is to use."
+  - "You want a full usability score with set heuristics: use the ux-heuristics item, if your library has it."
+  - "You need proof of what real users do: run a short usability test with five real users instead."
 you_give:
   - Description or screenshot of the product or screen
   - The task users try to do
@@ -28,7 +29,24 @@ you_get:
   - Fixes for cues, limits and feedback
   - Error recovery suggestions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. It needs no code, files or paid tools.
+  - Describe your screen or product in a few lines, or attach a screenshot.
+  - Say the task users are trying to do. Add complaints or support questions if you have them.
+  - Ask your AI to review it with this skill.
+  - Read the score and the failing checks first. Then pick the fixes that match your top complaints.
+output_sample:
+  input:
+    - A description or screenshot of your product or screen
+    - The task users try to do
+    - Complaints or support questions (optional)
+  output:
+    - name: Score
+      contains: A score out of 10, with 2 points for each of the five checks your design passes.
+    - name: Failing checks
+      contains: "The checks that lost points: finding what to do, seeing results, fixing errors, matching controls, and limits."
+    - name: Confusing points
+      contains: Each spot where users get lost, with the reason it confuses them.
+    - name: Fixes
+      contains: Changes grouped under cues, limits and feedback, so users know what to do and what happened.
+    - name: Error recovery
+      contains: Ways to stop common mistakes and help users undo them.

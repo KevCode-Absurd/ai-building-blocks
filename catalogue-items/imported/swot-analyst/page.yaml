@@ -2,35 +2,114 @@ thinking: low
 thinking_why: It fills four boxes and adds standard actions.
 new_slug: swot-analyst
 name: SWOT analyst
-summary: Name your business or product. Get strengths, weaknesses, opportunities
-  and threats, with actions to take.
+summary: Run a SWOT analysis for your business or product. Get strengths, weaknesses, opportunities and threats, plus actions and a one-page summary.
 job: plan-strategy
 headline: SWOT analyst
-subhead: Name your business or product and give some background. It sorts what
-  it finds into strengths and weaknesses from inside the business, and
-  opportunities and threats from outside, then turns each point into an action.
-  You get the four lists, recommended actions and a one-page summary.
+subhead: Name your business or product and tell it what it does and who it serves. It splits what it finds into four lists, then turns them into up to five actions with owners. You also get a one-page summary and a list of what it could not tell.
 explain: |
-  A SWOT analysis that goes past four lists. Each point leads to something you can do, so the result drives a decision.
+  A SWOT analysis sorts what you know into four boxes. Strengths and weaknesses are inside your business. Opportunities and threats are outside it. Most SWOTs stop at four lists. This one goes on to ask which strengths can win which opportunities, and which weaknesses leave you open to which threats.
 
-  Name your business or product and give a little background. The skill sorts what it finds into strengths and weaknesses, which come from inside the business, and opportunities and threats, which come from outside. It keeps those two sides separate so they do not blur, then turns the findings into recommended actions. It can also be used for competitive checks or for judging a product's position. You can feed it your own facts to make it specific.
+  You give it a short brief. It uses only what you gave it and marks anything it assumed. If a box has little support, it says so and asks for more, instead of filling it with guesses.
+
+  The result drives a decision: build, defend, pivot or exit. Use it before a planning meeting, a pitch or a product call. Run it again each quarter, or when the market moves.
 when:
-  - You are planning next year and need a quick strategic review.
-  - You are weighing a new product against the market.
-  - A competitor moved and you want to judge your position.
-  - You need a one-page assessment for a meeting or pitch.
+  - You are planning next year and want a quick, honest review of where you stand.
+  - You are weighing a new product against its market.
+  - A competitor made a move and you want to judge your position.
+  - You need a one-page business assessment for a meeting, a bank or a pitch.
+not_for:
+  - "You want to size the market in numbers: use the Market size estimator."
+  - "You want a full profile of one rival: use the Competitor profile writer."
+  - "You need to decide where to position your product against rivals: use the Go-to-market positioning planner."
+  - "You need a financial forecast. A SWOT has no numbers in it."
 you_give:
   - Your business or product name
   - What it does and who it serves
-  - Competitors or market notes (optional)
+  - Your main competitors or market notes (optional)
+  - Your resources and limits, such as team, budget and skills (optional)
+  - Customer feedback or usage data (optional)
   - Goals for the next year (optional)
 you_get:
-  - Strengths and weaknesses
-  - Opportunities and threats
-  - Recommended actions
+  - Strengths and weaknesses from inside the business
+  - Opportunities and threats from outside it
+  - A cross-check of how the four boxes affect each other
+  - Up to five actions, each with an owner and a first step
+  - Measures to track, and a list of what it could not tell
   - A one-page summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Open Claude, ChatGPT or Gemini and paste the skill. A plain chat works."
+  - "Write your business or product name, then a short brief. Say what it does, who buys, who you compete with, and what you can and cannot do."
+  - "Answer its question if it asks for something missing. Paste real facts such as reviews or sales notes. It will not invent them."
+  - "Check every point marked as an assumption. Fix it or delete it."
+  - "Pick the actions you agree with. Give each an owner and a date."
+  - "Run it again in three months, or when a competitor or the market changes."
+how_it_works:
+  - title: Read your brief
+    text: Takes your description, market notes and limits, and asks once for what is missing.
+  - title: Sort inside from outside
+    text: Puts strengths and weaknesses on the inside and opportunities and threats on the outside, so they stay apart.
+  - title: Back each point
+    text: Keeps only points your brief supports and marks any assumption.
+  - title: Cross-check
+    text: Asks how strengths meet opportunities, and how weaknesses meet threats.
+  - title: Recommend
+    text: Picks up to five actions, tied to the points behind them, with owners.
+  - title: Name the gaps
+    text: Lists what it could not tell, so you know what to find out next.
+output_shape: |
+  <Business or product>: <one-line position>
+
+  Strengths
+  - <point> (assumption, if it is one)
+  Weaknesses
+  - <point>
+  Opportunities
+  - <point>
+  Threats
+  - <point>
+
+  Cross-check
+  - <strength + opportunity>, <weakness + threat>
+
+  Recommendations
+  1. <action> | owner: <role> | first step: <step>
+
+  Measures to track: <list>
+  What I could not tell: <list>
+  One-page summary: <short version>
+output_sample:
+  input:
+    - Your business or product name
+    - What it does and who it serves
+    - Competitors and market notes (optional)
+    - Your resources, limits and goals (optional)
+  output:
+    - name: Four lists
+      contains: Strengths, weaknesses, opportunities and threats, with assumptions marked.
+    - name: Cross-check
+      contains: How strengths meet opportunities and how weaknesses meet threats.
+    - name: Recommendations
+      contains: Up to five actions, each with an owner and a first step.
+    - name: Measures to track
+      contains: What to watch to know if the actions work, with no made-up targets.
+    - name: What I could not tell
+      contains: Missing facts that would sharpen the analysis.
+    - name: One-page summary
+      contains: A short version for a meeting or a pitch.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A plain chat is enough. Nothing needs to run.
+  inputs:
+    - Real customer reviews or feedback you can paste
+    - Names of two or three direct competitors
+    - Last year's goals
+terms:
+  - term: SWOT
+    meaning: Strengths, weaknesses, opportunities and threats. A way to sort what helps and hurts you.
+  - term: Internal factor
+    meaning: Something inside your business that you control, such as your team or your costs.
+  - term: External factor
+    meaning: Something outside your business that you do not control, such as a rival or a law.
+  - term: Assumption
+    meaning: A point the AI could not check from your brief, so you must confirm it.

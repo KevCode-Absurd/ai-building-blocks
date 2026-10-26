@@ -1,6 +1,6 @@
 new_slug: support-capacity-planner
 name: "Support capacity planner"
-summary: "Give it ticket data and your sales forecast. Get cost per ticket and hiring dates for peak."
+summary: "Plan support staffing for peak sales. Give it your tickets, costs and sales forecast. You get cost per ticket and the dates to hire and train."
 job: run-your-store
 thinking: medium
 thinking_why: "It does a series of sums on your data and sets dates, which a mid-range model can do if you check the numbers."
@@ -17,6 +17,10 @@ when:
   - You get a big sales peak and support fell behind last time.
   - You do not know what each ticket costs you.
   - Tickets keep asking the same questions and you want to fix the cause.
+not_for:
+  - "You get under 200 tickets a month: keep a simple monthly log of tickets and costs instead."
+  - "You need a plan for a team that is not support: use a general ops capacity planner or ask your team lead."
+  - "You need pay, hours or contract advice: ask a qualified person in your country, as this tool does not set them."
 
 you_give:
   - Tickets per month for 12 months
@@ -36,6 +40,28 @@ how_to_use:
   - Tell it how long it takes to hire and train one agent.
   - Add your top ticket reasons if you tag them.
   - Check the plan against actual tickets each month and move the dates when the forecast changes.
+output_sample:
+  input:
+    - Your tickets per month for the last 12 months
+    - Your support costs for agents and software
+    - Your sales forecast by month
+    - How long it takes to hire and train one agent
+    - Your top ticket reasons (optional)
+  output:
+    - name: Baseline
+      contains: Cost per service, resolution time, touches per ticket and reviews for the last 12 months, with the likely cause of slow replies.
+    - name: Ticket forecast
+      contains: A month by month table of forecast orders, tickets per order, forecast tickets, agents needed and planned cost per service.
+    - name: Hiring and training dates
+      contains: When to hire, when training starts and when agents are ready for peak, using your own training time.
+    - name: Team mix
+      contains: Which tickets suit simple handling and which need local agents, with a note that training changes efficiency.
+    - name: Help page and macro gaps
+      contains: Your top ticket reasons matched to a fix, plus questions buyers ask before they purchase.
+    - name: Monthly review
+      contains: How to compare actual tickets and resolution time with the plan and move hire dates.
+    - name: Checks missed
+      contains: Any check the AI could not run, or none.
 
 how_it_works:
   - title: Sets the baseline

@@ -1,38 +1,49 @@
 new_slug: ai-fit-problem-checker
 name: "AI-fit problem checker"
-summary: "Describe a problem. Get a three-test verdict on whether AI suits it, and the data you would need."
+summary: "Check if AI fits your problem. Get a verdict from three tests, plus a data plan, an outside test and a first small proof."
 job: test-an-idea
 thinking: medium
 thinking_why: "It applies three fixed tests, but each answer needs judgement on the problem."
 
 headline: "AI-fit problem checker"
-subhead: "Describe a problem and the goal behind it. It runs three tests on it: a huge space of answers, learnable structure and a clear score. It also checks your data and names an outside test. You get a verdict and the first small proof."
+subhead: "Describe a problem and the goal behind it. The skill runs three tests: too many answers to try by hand, patterns a model could learn, and a clear score. It also checks your data and names an outside test. You get a verdict and a first small proof."
 
 explain: |
-  People reach for AI on problems it cannot help, and miss problems where it could. A chat model is not the right tool for every task, and a model with no data or no way to score answers cannot learn anything.
+  People reach for AI on problems it can't help with, and miss problems where it could. A chat model is not the right tool for every task. A model with no data, or no way to score an answer, learns nothing.
 
-  This skill asks three questions: are there too many possible answers to try one by one, is there structure a model could learn, and is there a clear score to aim at. It then checks the data you have, or a simulator that could make more, and names an outside test to judge the result. You get a verdict and the smallest proof to try first.
+  This skill checks whether AI is a good fit for your problem with three questions. Are there too many possible answers to try one by one? Do good answers share patterns a model could learn? Is there a clear score that says how good an answer is? A "score" here means a measure you can compute, not a grade for your problem.
+
+  It then looks at the data you have, or a simulator that could make more, and names an outside test to judge the result. You get a verdict and the smallest proof to try first, sized for weeks, not months.
 
 when:
   - "A team wants to use AI on a problem and nobody has checked if it fits."
   - "You have a hard problem and wonder if a model could help."
-  - "You need to explain to a boss why a project should or should not use AI."
+  - "You must explain to a boss why a project should or should not use AI."
+  - "A vendor pitches an AI tool and you want to test the claim before you pay."
+
+not_for:
+  - "You already chose AI and need a go or no-go on a pilot with a budget: use the AI pilot decision checker."
+  - "You want to hand a routine chore, such as a weekly report, to AI: use the Routine task automation planner."
+  - "You want to know if a business idea will sell: use the Product idea risk checker."
 
 you_give:
-  - "The problem and the goal it serves"
-  - "Data, past attempts or tools you have (optional)"
+  - "The problem, in a sentence or two, and the goal it serves"
+  - "Data, past attempts or tools you already have (optional)"
   - "How you would know it worked (optional)"
+  - "What a wrong answer would cost (optional)"
 you_get:
-  - "Yes, no or unsure for each of three tests, with reasons"
-  - "A data or simulator plan"
+  - "Yes, no or unsure for each of three tests, with a reason"
+  - "The measure that scores an answer, and what it leaves out"
+  - "A data plan, or a simulator idea if data is thin"
   - "An outside test that is not your own opinion"
-  - "A verdict and the first small proof"
+  - "A verdict: good fit, maybe or poor fit, and the first small proof"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe the problem and what you want from it."
-  - "Answer its questions about data and scoring."
-  - "Run the first small proof before any bigger spend."
+  - "Open the skill in your AI, or copy it and paste it into Claude, ChatGPT or Gemini. It needs no files or tools."
+  - "Describe the problem and the goal in plain words. Say what data you have."
+  - "Answer its questions about your data and how you would score a good answer."
+  - "Read the three tests, then the verdict. Check each reason against what you know about the work."
+  - "For a good fit or a maybe, run the first small proof before you spend more. A notebook such as Google Colab helps if the proof needs your data."
 
 how_it_works:
   - title: "States the problem"
@@ -56,10 +67,12 @@ output_shape: |
 
   TEST 1: HUGE SPACE
   <yes/no/unsure>: <estimate and reason>
+
   TEST 2: STRUCTURE
   <yes/no/unsure>: <reason with example>
+
   TEST 3: CLEAR SCORE
-  <yes/no/unsure>: <score> leaves out <x>
+  <yes/no/unsure>: <the measure>; it leaves out <x>
 
   DATA
   Have: <list>  Missing: <list>  Simulator idea: <line or none>
@@ -68,16 +81,43 @@ output_shape: |
   <test> because <reason>
 
   VERDICT
-  <good fit/maybe/poor fit>
+  <good fit / maybe / poor fit>: <one-line reason>
 
   FIRST SMALL PROOF
-  <data, score, pass line, time>
+  <data, measure, pass line, time>
 
   MISSING
   <gaps>
 
   CHECKS MISSED
   <lines or none>
+
+output_sample:
+  input:
+    - "The problem and the goal it serves, in plain words"
+    - "Data, past attempts or tools you have (optional)"
+    - "How you would know it worked (optional)"
+  prerequisites:
+    - "Any chat AI. A notebook such as Google Colab is only needed to run the first proof."
+  output:
+    - name: "PROBLEM AND GOAL"
+      contains: "The problem in one sentence and the goal it serves in another."
+    - name: "TEST 1: HUGE SPACE"
+      contains: "Yes, no or unsure on whether there are too many answers to try one by one, with an estimate."
+    - name: "TEST 2: STRUCTURE"
+      contains: "Yes, no or unsure on whether good answers share patterns a model could learn, with an example."
+    - name: "TEST 3: CLEAR SCORE"
+      contains: "Yes, no or unsure on whether a measure says how good an answer is, and what it leaves out."
+    - name: "DATA"
+      contains: "The data you have, what is missing, and a simulator idea if data is thin."
+    - name: "OUTSIDE TEST"
+      contains: "A judge your team did not build, and why it is fair."
+    - name: "VERDICT"
+      contains: "Good fit, maybe or poor fit, with one reason that follows from the three tests."
+    - name: "FIRST SMALL PROOF"
+      contains: "The smallest test to run first: data, measure, pass line and how many weeks."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check the answer failed, or none."
 
 tweaks:
   - what: "The goal"
@@ -106,7 +146,7 @@ improve:
   - "Add the data rules of your field (privacy, consent) to step 5."
   - "Add your past AI projects as examples of good and poor fit."
   - "Keep the verdicts in a log with the later results."
-  - "Pair it with an MVP experiment planner to test the first proof."
+  - "Take the first small proof to the MVP experiment planner or the One-change experiment planner to design the test."
 
 works_best_with:
   tools:

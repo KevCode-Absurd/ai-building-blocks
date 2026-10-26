@@ -20,9 +20,9 @@ uses:
   - training-program-builder
 steps:
   - uses: process-and-sop-writer
-    note: Document the approved volunteer joining, role briefing, access, supervision, escalation and exit process; preserve organization safeguarding requirements.
+    note: Document the approved volunteer joining, role briefing, access, supervision, escalation and exit process; preserve organization safeguarding requirements. Hands step 2 the written procedure and the roles.
   - uses: training-program-builder
-    note: Plan role-specific demonstrations and supervised practice with evidence checks; keep unverified readiness and required clearance visible.
+    note: Takes the procedure from step 1 and your roles and induction time, then plans role-specific demonstrations and supervised practice with evidence checks; keep unverified readiness and required clearance visible. Hands the practice plan to the checklist step.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

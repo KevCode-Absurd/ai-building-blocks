@@ -1,0 +1,42 @@
+slug: agency-specialized-korean-business-navigator
+name: Korean Business Navigator agent
+summary: "Prepare for business in Korea: a meeting plan, KakaoTalk and email drafts at the right formality and a read on what your contact's replies may mean."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-korean-business-navigator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-korean-business-navigator.md
+  licence: MIT
+  original_name: Korean Business Navigator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 71eb41ef3705fe155eee87d99e0ec7a52a237af442dd66e3421e225b76580f21
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Korean Business Navigator
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Korean Business Navigator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-korean-business-navigator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

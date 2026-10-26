@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: performance_sheet, required: true}
   - {type: plan, required: false}
+  - {type: offer, required: false}
 outputs:
   - {type: audit_report}
   - {type: lessons_register}

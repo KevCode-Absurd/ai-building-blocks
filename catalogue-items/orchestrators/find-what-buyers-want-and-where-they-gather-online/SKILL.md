@@ -41,10 +41,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Reddit thread collector.** Use the skill `reddit-thread-collector`. Starts the chain: collects what people say about your topic into a table of their own words.
-2. **Customer buying reasons finder.** Use the skill `customer-buying-reasons-finder`. Give it the voc reviews from the steps before. Reads the collected posts and ranks why people buy, in their exact words.
-3. **Ideal customer profile writer.** Use the skill `ideal-customer-profile-writer`. Give it the voc reviews from the steps before. Builds a buyer profile from the same posts, with the reasons found in the step before.
-4. **Audience hangout finder.** Use the skill `audience-hangout-finder`. Give it the persona and the voc reviews from the steps before. Takes the buyer profile and the posts and ranks the places to show up first.
+1. **Reddit thread collector.** Use the skill `reddit-thread-collector`. Starts the chain: collects what people say about your topic into a table of their own words. Hands the posts to steps 2, 3 and 4.
+2. **Customer buying reasons finder.** Use the skill `customer-buying-reasons-finder`. Give it the voc reviews from the steps before. Reads the collected posts and ranks why people buy, in their exact words. Hands the ranked reasons to step 3.
+3. **Ideal customer profile writer.** Use the skill `ideal-customer-profile-writer`. Give it the voc reviews and the ranked buying reasons from the steps before. Builds a buyer profile from the posts in step 1 and the buying reasons from step 2. Hands the profile to step 4.
+4. **Audience hangout finder.** Use the skill `audience-hangout-finder`. Give it the persona and the voc reviews from the steps before. Takes the buyer profile from step 3 and the posts from step 1 and ranks the places to show up first.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

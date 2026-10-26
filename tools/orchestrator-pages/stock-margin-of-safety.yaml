@@ -1,6 +1,6 @@
 new_slug: stock-margin-of-safety
 name: Value a stock with a margin of safety
-summary: Paste a company's results, its balance sheet and the share price. Get an earnings value, an asset floor and the gap.
+summary: Check what a stock is worth next to its price. Give it earnings, a balance sheet and the share price. You get a value range, an asset floor and a verdict.
 job: money-and-investing
 thinking: high
 thinking_why: It runs four skills in a row and every one builds a range from rough facts. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are thinking of buying shares or a small business and want to compare price with value.
   - A share price looks cheap, or very high, and you want to know how much rests on hope.
   - You want to write down your reasons before you commit money.
+not_for:
+  - "You only want the asset side of the picture: use the Business asset value estimator."
+  - "You want to know if debt and preferred dividends are covered by earnings: use the Debt and preferred dividend coverage checker."
+  - "The company has no audited accounts or a balance sheet you can trust: ask an accountant to check the numbers first."
 you_give:
   - The purchase and the price, in a sentence or two
   - Normal earnings per share as a range (the result of "Find a company's real earning power and its tricks")
@@ -29,6 +33,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the earnings range, the balance sheet and the price. It works step by step and saves each result.
   - Read the verdict first, then the range and the floor behind it.
+output_sample:
+  input:
+    - The purchase and the price, in a sentence or two
+    - Normal earnings per share as a range
+    - The latest balance sheet with the notes
+    - The share count
+    - Today's bond yield (optional)
+  prerequisites:
+    - An AI that can read pasted text or attached files
+    - Your normal earnings range, from the earning power step that comes before this workflow
+  output:
+    - name: "Step 1: Label"
+      contains: A first label of investment or speculation, with the test result behind it and a reminder the value is a range.
+    - name: "Step 2: Value from earnings"
+      contains: A low, middle and high value per share, the multiple used and why, and how much of the price is hope.
+    - name: "Step 3: Asset floor"
+      contains: Book value, net current assets, typical and harsh sale values, and a cash strength rating.
+    - name: "Step 4: The gap"
+      contains: Where the price sits against the value range, a verdict, ranked reasons and what would change it.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Labels the purchase
     text: Asks whether careful study promises safety of your money and a fair return at this price, and warns that the value is a range.

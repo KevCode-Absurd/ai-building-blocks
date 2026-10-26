@@ -1,41 +1,50 @@
 new_slug: ownable-word-picker
 name: "Ownable word picker"
-summary: "Paste your word map and product. Get one word to own, two backups and a four-test result for each."
+summary: Pick the one word your brand can own. Get a four-test score for each candidate, two backups and a list of what to stop saying.
 job: plan-strategy
 thinking: high
 thinking_why: "It weighs many candidate words against four tests and a halo check, so more thinking gives a better single pick."
 
-headline: "Pick the one word your brand can own, and prove it is free"
-subhead: "Paste your map of the words rivals own and what you sell. It lists candidate words of four kinds, drops any that are taken or empty, tests the rest on four points and a halo check, and picks one word with two backups."
+headline: Ownable word picker
+subhead: Paste your word map, which shows the words your rivals own, and what you sell. It lists candidate words, drops any that are taken or empty and scores the rest on four tests. You get one word to own, two backups and a stop list.
 
 explain: |
-  The strongest move in positioning is owning one word in the buyer's mind. A good word is simple, wanted, true and has an opposite that someone else could stand on. A word that fails any one of those ends up as decoration. Research often misleads here. If a survey says buyers want "fast" and a rival already owns it, advertising "fast" strengthens the rival.
+  The strongest move in brand positioning is to own one word in the buyer's mind. A good word is simple, wanted and true, and it has an opposite that another brand could stand on. A word that fails any of these ends up as decoration. Research can mislead here. If a survey says buyers want "fast" and a rival already owns it, advertising "fast" helps the rival.
 
-  This skill takes your word map and writes candidates of four kinds: a benefit, a service, an audience and a preference. It cuts anything taken or empty and scores the rest on simple, wanted, true and opposed. It prefers a word opposite to the leader's, checks what buyers would assume once they believe it (the halo), and picks one word and two backups. It then lists what you must stop saying, because one word needs the others to go quiet.
+  This skill takes your word map and writes candidates of four kinds: a benefit, a service, an audience and a preference. It cuts any word that is taken or empty, then scores the rest on simple, wanted, true and opposed. It prefers a word opposite to the leader's. It checks what buyers would assume once they believe the word, and picks one word and two backups.
+
+  It ends with what you must stop saying, because one word needs the others to go quiet. No word map yet? Make one first with the Owned word mapper, or use the Open word finder for a quicker look. The method draws on Al Ries and Jack Trout's laws of marketing.
 
 when:
   - Your message lists four strengths and buyers remember none.
-  - Research says buyers want something and you suspect a rival owns it.
-  - You must pick between two good words and can't decide.
-  - You are about to write a homepage, name or slogan.
+  - Research says buyers want something, and you suspect a rival already owns it.
+  - You must choose between two good words and cannot decide.
+  - You are about to write a homepage, a name or a slogan.
+not_for:
+  - "You have no map of the words rivals own: run the Owned word mapper first, or the Open word finder for a quicker look."
+  - "You already have your word and need the sentence that states your position: use the Positioning statement writer."
+  - "You want a name for a new kind of product: use the Category name writer."
+  - "You have your word and want a full list of what to cut against it: use the Give-up list planner. This skill only gives a short stop list."
 
 you_give:
-  - A map of who owns which word, such as the output of "Owned word mapper"
-  - Your product facts and proof (optional)
-  - Your brand facts (optional)
+  - "Your word map: which rival owns which word, and which words are open (from the Owned word mapper or the Open word finder)"
+  - What you sell, and any proof you hold, such as tests, numbers, awards or customer results (optional)
+  - Words you cannot use because of law or brand rules (optional)
+  - Reviews or survey lines that show what buyers care about (optional)
 you_get:
-  - Ten to fifteen candidate words of four kinds
-  - A four-test score for each that survives
-  - A halo check for the top words
-  - One word to own and two backups
-  - What you must stop saying
+  - Ten to fifteen candidate words, in four kinds
+  - A score from 0 to 2 on four tests for each word that survives
+  - What buyers would also assume if they believed each of your top words
+  - One word to own and two backups, with the proof you hold and lack
+  - A stop list of messages to drop
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the word map and a short description of what you sell, with any proof you have.
-  - Read the proof lines. If a word has no proof, it fails the true test.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it into a new chat. It needs no files, web access or paid tools.
+  - Paste your word map. If you do not have one, run the Owned word mapper first. The skill will not pick without it.
+  - Add a short description of what you sell, with any proof you have.
+  - Read the proof lines. A word with no proof scores low on the true test.
   - Say the winning word to five people and ask what they assume about you.
-  - Take the word into "Candid line writer" and "Give-up list planner".
+  - Take the word into the Positioning statement writer, then the Give-up list planner.
 
 how_it_works:
   - title: Lists candidates
@@ -76,6 +85,25 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+output_sample:
+  input:
+    - Your word map from the Owned word mapper or Open word finder
+    - What you sell, and any proof you hold (optional)
+    - Words you cannot use (optional)
+    - Reviews or survey lines on what buyers care about (optional)
+  output:
+    - name: CANDIDATES
+      contains: Ten to fifteen words in four kinds, each marked taken, empty or kept.
+    - name: FOUR TESTS
+      contains: Each kept word scored 0 to 2 on simple, wanted, true and opposed, with a total.
+    - name: HALO
+      contains: "For the top three words: two other good things buyers would assume, and one risk."
+    - name: THE PICK
+      contains: One word to own, two backups, the proof you have and lack, and the position in five words.
+    - name: STOP SAYING
+      contains: Messages, features and claims to drop so the word is heard, each with a reason.
+    - name: MISSING and CHECKS MISSED
+      contains: Proof or buyer evidence that would change the pick, and any check still failing.
 
 tweaks:
   - what: Proof
@@ -108,13 +136,15 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Listing words and scoring them against fixed tests is text work any strong chat AI does with this skill."}
+    - { name: "Any good chat AI", why: "Listing words and scoring them against fixed tests is text work any strong chat AI does with this skill." }
   inputs:
     - "The word map from Owned word mapper"
     - "Proof such as tests, awards, numbers and customer results"
     - "Reviews that show what buyers care about"
 
 terms:
+  - term: Word map
+    meaning: A list of which rival owns which word in buyers' minds, and which words are still open.
   - term: Owned word
     meaning: The one word buyers link to a brand.
   - term: Halo

@@ -1,6 +1,6 @@
 new_slug: monthly-freelancer-books-closer
 name: Monthly freelancer books closer
-summary: Give it the month's transactions. Get them sorted, checked against your budget and a cash forecast with the tax set aside.
+summary: Close your freelancer books each month. Give it your bank export and get sorted lines, receipt gaps, tax set aside and a 90-day cash forecast.
 job: track-numbers
 thinking: high
 thinking_why: It applies your category rules the same way each month, spots what no rule covers and explains what moved. Mistakes here cost real money, so give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run a one-person business or a small team and do your own books between client work.
   - Your categories drift from month to month and your accountant keeps asking the same questions.
   - You want to know, before the 10th, how much of the cash in the bank is really yours.
+not_for:
+  - "You run payroll, several companies or a VAT group that needs full bookkeeping software: use your accountant's ledger."
+  - "You want the books posted, taxes filed or bills paid for you: ask your accountant, because this agent never posts, pays or files."
+  - "You need a cash forecast only and no month-end sort: use a plain spreadsheet of invoices and bills."
 you_give:
   - Last month's bank and card export with date, description and amount
   - Receipts and supplier invoices for the month (advised)
@@ -33,6 +37,32 @@ how_to_use:
   - Tell it your tax set-aside rate once. It saves it.
   - Read the proposed rules and say yes or no to each. Approved rules apply every month after.
   - Run it again on the 3rd of next month. It reuses the rules and compares the months.
+output_sample:
+  input:
+    - Last month's bank and card export with date, description and amount
+    - Receipts and supplier invoices for the month (optional)
+    - Your budget by category (optional)
+    - Your tax set-aside rate and whether you charge sales tax or VAT (optional)
+    - Last month's sorted file and rules, once they exist (optional)
+  prerequisites:
+    - An AI that can read your files, such as Claude Code, to keep rules and the set-aside total between months
+  output:
+    - name: THE MONTH
+      contains: Income, spend, what is left and the tax set aside this month, with the running total.
+    - name: NEW RULES TO APPROVE
+      contains: Each proposed category rule and tax treatment, with how many lines it covers, waiting for your yes.
+    - name: PERSONAL LINES
+      contains: Personal spending found on a business card, grouped on its own.
+    - name: RECEIPT GAPS
+      contains: Bank lines over your limit with no receipt, and receipts with no bank line.
+    - name: WHAT MOVED
+      contains: Each category that moved past your limit against budget, with the reason in plain words.
+    - name: CASH VIEW (after set-aside)
+      contains: Cash expected at 30, 60 and 90 days after tax is set aside, with doubtful amounts marked.
+    - name: STATEMENTS
+      contains: A P&L, balance sheet and cash flow statement at quarter end, or a note that none are due.
+    - name: FILES AND MISSING
+      contains: Each step's saved file and every item that was missing.
 how_it_works:
   - title: Read last month
     text: Opens the saved rules and last month's file, and picks up any line left unsure.

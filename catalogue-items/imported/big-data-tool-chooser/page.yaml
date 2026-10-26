@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs a few options against your data.
 new_slug: big-data-tool-chooser
 name: Big data tool chooser
-summary: Describe your large files. Get the right MATLAB tool picked for data
-  too big for memory.
+summary: Find the right MATLAB tool for files too big for memory. Give it your file details. You get one clear path and code for your big data task.
 job: build-software
 headline: Big data tool chooser
-subhead: "One clear MATLAB path for working with files too big for memory, not a
-  menu of options. Describe your data: CSV, Parquet, text or spreadsheet files,
-  how many and how big, and what you want to do with them."
+subhead: "One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them."
 explain: |
   One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them.
 
@@ -18,6 +15,10 @@ when:
   - You have a folder of two hundred CSV files to treat as one dataset.
   - You want to speed up a loop over many files.
   - Your data is in a format MATLAB can't read in chunks.
+not_for:
+  - "Your data is in a MAT file: use matfile in MATLAB, which reads parts of a MAT file without loading it all."
+  - "Your file fits in memory: use readtable or parquetread in MATLAB, no big data tool needed."
+  - "You do not have MATLAB: ask a data person for a tool that fits your setup, since this skill only picks MATLAB tools."
 you_give:
   - File type, count and total size
   - What you want to compute
@@ -29,8 +30,26 @@ you_get:
   - Parallel settings if they help
   - A custom datastore outline (if needed)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run MATLAB.
+output_sample:
+  input:
+    - File type, such as CSV, Parquet, text or spreadsheet
+    - How many files you have and how big they are
+    - What you want to work out from the data
+    - Your MATLAB setup and memory (optional)
+  prerequisites:
+    - MATLAB, ideally with an AI that can run it
+    - Parallel Computing Toolbox, only if you want parallel reads
+  output:
+    - name: Pre-flight check
+      contains: A quick test of file size against memory to see if you need a big data tool at all.
+    - name: Recommended path
+      contains: One chosen approach from the decision flowchart, with the reasons it fits your data.
+    - name: MATLAB code
+      contains: Working code for the chosen path, such as a datastore with tall arrays or with transform.
+    - name: Parallel settings
+      contains: Settings for running reads in parallel, only when they help your case.
+    - name: Custom datastore outline
+      contains: A plan for reading chunks of formats with no built-in datastore, only if you need it.

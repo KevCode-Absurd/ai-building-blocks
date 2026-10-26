@@ -1,6 +1,6 @@
 new_slug: heatmap-and-recording-reader
 name: "Heatmap and recording reader"
-summary: "Paste your heatmap and recording notes. Get the friction found, a test idea for each, and a friction score."
+summary: "Find where shoppers get stuck with a heatmap and recording reader. Paste your click and scroll data. You get ranked problems, test ideas and a score."
 job: test-store-changes
 thinking: medium
 thinking_why: "It reads data and screenshots and ranks what it finds, so a mid-size model works. Use a stronger one for many pages."
@@ -17,6 +17,10 @@ when:
   - You installed a free heatmap tool and do not know what to look for.
   - Your product page gets traffic but few people add to cart.
   - You want test ideas that come from what shoppers do on your site, not from guesses.
+not_for:
+  - "You have no heatmap or recording tool yet: install Microsoft Clarity first, then come back with the data."
+  - "You want test ideas but have no shopper behaviour data: use the Test idea ranker with the ideas you already have."
+  - "You want to know why shoppers acted that way: run a post-purchase survey or call a few customers."
 
 you_give:
   - Dashboard numbers for rage clicks, dead clicks, excessive scrolling and quick backs
@@ -36,6 +40,29 @@ how_to_use:
   - Add any recording notes, and your traffic and margin per page if you have them.
   - Fix the repairs first, then send the test ideas to the test idea ranker.
   - Watch the recordings it picks, then run it again with your notes.
+output_sample:
+  input:
+    - Dashboard numbers for rage clicks, dead clicks, excessive scrolling and quick backs
+    - Click maps and scroll depth for your top 3 pages, mobile and desktop (screenshots work)
+    - Notes from recordings you watched (optional)
+    - Traffic, conversion rate and gross profit per order for each page (optional)
+  prerequisites:
+    - A heatmap or recording tool already installed on your store, with a few months of data
+  output:
+    - name: Friction list
+      contains: Each problem by page, with evidence, severity, money at stake, a hypothesis and a test idea, highest first.
+    - name: Fix list
+      contains: Repairs to make right away, such as a widget covering a button, kept apart from tests.
+    - name: Watch plan
+      contains: Which pages to watch, how to sort recordings, how many to start with and when to stop.
+    - name: Research stack
+      contains: Low-cost tools for each research job, free first, with dated price notes.
+    - name: Score
+      contains: A friction score out of 100, now and after the fixes, with the sum shown.
+    - name: Not run
+      contains: Anything that could not be read, and what is needed to check it.
+    - name: Missing
+      contains: Any input you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: Reads the dashboard

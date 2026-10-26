@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 name: "Image ad maker from customer quotes"
 new_slug: customer-quote-image-ad
-summary: "Paste review lines. Get quote image ads, feed text and flags for quotes to check first."
+summary: "Turn real customer reviews into quote image ads. Paste your best lines and get ad briefs, feed text and flags for quotes to check first."
 job: make-image-ads
 
 headline: "Image ad maker from customer quotes"
@@ -17,6 +17,10 @@ when:
   - Your reviews have a line that says it better than your own ads do.
   - You want to test which reason to buy works, using customers' words instead of yours.
   - You have a review that admits a doubt and then answers it, and want to use it honestly.
+not_for:
+  - "You have no real customer reviews yet: collect a few first, or ask buyers for a short quote. Do not write fake ones."
+  - "Your quotes are not sorted by reason to buy: use the Customer buying reasons finder first."
+  - "You want ads made from an article headline, not a customer quote: use the Article headline image ad maker."
 
 you_give:
   - One reason to buy, the customer phrases you picked, and the reviews they came from
@@ -37,6 +41,26 @@ how_to_use:
   - Attach your real product photos, and say how many ads you want.
   - Read the flags first. Don't run a quote marked "check before paid use" until you've confirmed it.
   - After you make each image, read the words on it at full size and compare them with the brief.
+output_sample:
+  input:
+    - One reason to buy and the customer phrases you picked
+    - The reviews those phrases came from, with a number or name for each
+    - A real photo of your product
+    - Whether each reviewer is verified or got the product free (optional)
+    - How many ads you want, from 1 to 4 (optional)
+  prerequisites:
+    - An AI that can make images, or an image tool such as Ideogram or GPT Image, to turn the briefs into pictures
+  output:
+    - name: Ad brief
+      contains: The job of the quote, the layout, the locked phrase with its source, the scene and the product photo to use.
+    - name: Feed text
+      contains: A headline of 27 characters or fewer, a short and a long main text, and an optional description.
+    - name: Trim record
+      contains: Any quote that was cut, where it was cut and why.
+    - name: Flags
+      contains: Verified status, free product status and any claim inside a quote that you must be able to back.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Sorts quotes by job

@@ -1,50 +1,92 @@
 new_slug: hand-over-founder-dependent-operations
 name: Hand over founder dependent operations
 headline: Hand over founder dependent operations
-summary: Share the source files. Get a founder dependency map, readiness gaps and operating handover.
+summary: Find the work only the founder does, see who can take it on, and get a handover note for each deputy with gaps and deadlines marked.
 job: lead-people
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A founder dependency map, readiness gaps and operating handover. Share the founder current recurring responsibilities, actual deputies and work evidence, access limits, handover horizon and critical dependencies. Your AI prepares the work and marks any facts it cannot verify.
+subhead: List what the founder does that nobody else can. Add who might take each task and what shows they can. Your AI builds a founder dependency map with the gaps ranked, then writes a handover note for each deputy. Access is proposed, never granted.
 explain: |-
-  A founder dependency map, readiness gaps and operating handover.
+  In many small businesses, a few jobs sit with the founder and nowhere else. Pricing calls, supplier chasing, the bank login, the one customer who only trusts them. Handing these over fails when the founder just names a deputy and writes one long note.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A named deputy is not a trained successor; acceptance and demonstrated readiness require actual evidence. Missing tools or evidence stay visible in the final summary.
+  This workflow starts with a founder dependency map. Each task gets a row: how often it happens, why only the founder does it, what breaks if it is missed, who could take it, and what proves they can. A named deputy is not a ready successor. Readiness needs evidence, such as past cover or a sample of their work. Where there is none, the row says so.
+
+  Step 2 then writes a handover note for each deputy. It puts the things that will break first at the top, then deadlines, live work, where things live, what to leave alone and how to reach the founder. It lists the access each deputy would need as requests. It grants nothing.
 when:
-  - You need a founder dependency map, readiness gaps and operating handover.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are a founder stepping back from daily work and want a plan for what moves to whom.
+  - You are about to take leave, sell, or take a new role, and only you know how some tasks run.
+  - A deputy asks "what do you actually do all week?" and you cannot answer on one page.
+  - An investor, lender or buyer has asked how the business runs without you.
+not_for:
+  - You are away for a short time and will return. Use the prepare a team absence handover workflow.
+  - You need a long-term plan for who replaces a key role or leader. Use the plan coverage for a critical role workflow.
+  - You have one task and one person taking it. Use the handover note writer on its own.
+  - You are hiring someone to take the work over. Use the hire the person who unblocks growth and hand over workflow.
 you_give:
-  - The founder current recurring responsibilities, actual deputies and work evidence, access limits, handover horizon and critical dependencies.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The founder's recurring tasks, with how often each happens and where the steps are written down (from your calendar, inbox and task list)
+  - Who could take each task now, and what shows they can, such as past cover or work they have done
+  - Access and limits only the founder holds, such as logins, approvals and spending limits
+  - The date the founder steps back, and how far (full exit or fewer hours)
+  - People outside the business who deal only with the founder, such as suppliers, banks and key customers (optional)
 you_get:
-  - A founder dependency map, readiness gaps and operating handover.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A founder dependency map with one row per task, its risk, its deputy and the evidence of readiness
+  - A ranked list of readiness gaps, each with what would close it, an owner and a date
+  - One handover note per deputy, with what breaks first at the top
+  - A list of proposed access requests, with nothing granted
+  - A list of missing facts and checks that did not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste your task list, deputies, access limits and handover date. Add any past cover or work samples.
+  - After step 1, check each row. A deputy with no evidence should show as a gap, not as ready.
+  - After step 2, read each note as the deputy would. Ask them what is unclear before you rely on it.
+  - Approve any access requests yourself. The AI grants none.
 how_it_works:
   - title: Succession plan builder
-    text: Use critical role coverage and readiness evidence methods to map founder-held operations to available deputies, retaining training and capacity gaps.
+    text: Maps each founder-only task to a possible deputy and rates readiness only from evidence. Hands step 2 one block of tasks per deputy, with the gaps. Check before moving on, no deputy is called ready without evidence.
   - title: Handover note writer
-    text: Prepare the supported deputy handover with deadlines, source locations, escalation and leave-alone rules. Propose access requests without granting access.
+    text: Writes one note per deputy from their block of tasks. Puts what breaks first at the top, then deadlines, live work, where things live and what to leave alone. Lists access as requests only.
+  - title: Check and hand back
+    text: Joins the map, the gaps, the notes and the access requests. Marks every missing fact and every check that did not run.
 output_shape: |-
-  Scope and source coverage
-  A founder dependency map, readiness gaps and operating handover.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  FOUNDER DEPENDENCY MAP
+    <task | how often | why only the founder | what breaks if missed | deputy |
+     evidence of readiness: none, claimed or shown | gap>
+  READINESS GAPS
+    <gap | what closes it | owner | date>, ranked by risk
+  HANDOVER NOTE, <deputy name>
+    IF YOU READ NOTHING ELSE <date | action | consequence>
+    DUE IN THE WINDOW, LIVE WORK, WHERE THINGS LIVE, PEOPLE, LEAVE ALONE, REACHING THE FOUNDER
+  PROPOSED ACCESS REQUESTS
+    <system | person | why | level>, none granted
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - "The founder's recurring tasks, how often they happen and where the steps live"
+    - "Who could take each task and what shows they can"
+    - "Access and limits only the founder holds"
+    - "The date the founder steps back"
+    - "Outside contacts who deal only with the founder (optional)"
+  prerequisites:
+    - "An AI that can read files or long pasted text"
+  output:
+    - name: "Founder dependency map"
+      contains: "One row per task with risk, deputy, evidence of readiness and the gap."
+    - name: "Readiness gaps"
+      contains: "Ranked gaps, each with what closes it, an owner and a date."
+    - name: "Handover note per deputy"
+      contains: "What breaks first, deadlines, live work, where things live, what to leave alone, how to reach the founder."
+    - name: "Proposed access requests"
+      contains: "System, person, reason and level of access, with nothing granted."
+    - name: "Missing and checks missed"
+      contains: "Every unknown fact, marked MISSING, and any check that could not run."
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Start small
+    how: List only the ten tasks that would hurt most if missed for a month. Add the rest in a later run.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: A named deputy is not a trained successor; acceptance and demonstrated readiness require actual evidence.
+    how: Attach one real example per task, such as an email thread or a past cover week. The readiness rating gets firmer.
+  - what: Horizon
+    how: Say whether the founder is leaving fully or cutting hours. The note changes what stays with the founder.
 judge:
   - A named deputy is not a trained successor; acceptance and demonstrated readiness require actual evidence.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +99,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the dependency map and update the evidence column each month until every gap is closed.
+  - Ask each deputy to mark what their note got wrong, and add the fixes to your task list.
+  - Move the highest-risk gaps into the plan coverage for a critical role workflow once the first handover is done.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads your task list and the pack together. Nothing is sent or changed for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A calendar export or a week of the founder's inbox subjects, to catch tasks the founder forgot.
+    - Past cover, such as who ran things during a holiday.
 terms:
+  - term: Founder dependency
+    meaning: A task or contact that only the founder handles, so the business stalls without them.
+  - term: Deputy
+    meaning: The person named to take a task. A deputy is not ready until there is evidence they can do it.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

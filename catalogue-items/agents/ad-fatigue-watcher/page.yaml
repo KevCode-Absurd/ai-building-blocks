@@ -1,6 +1,6 @@
 new_slug: ad-fatigue-watcher
 name: Ad fatigue watcher
-summary: Give it your ad results twice a week. Get tired ads caught early and a brief for each replacement.
+summary: Catch tired ads early with an ad fatigue check. Give it your ad results twice a week. You get a list of sliding ads and a brief for each replacement.
 job: read-ad-results
 thinking: high
 thinking_why: It compares each ad with its own history, sorts winners from weak ads and chooses between hooks and new ideas. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have one or two ads that carry most of your spend and you want warning before they fade.
   - A winner has started to slip and you need a replacement plan, not a guess.
   - Your ads all look alike and results are flattening.
+not_for:
+  - Your account has only a few sales a day. The numbers swing too much, so check once a week by hand or ask your AI for a plain ad review.
+  - You want to check an ad against Meta's rules before it goes live. Use the Meta ads compliance checker instead.
+  - You have one ad that never worked. A new opening will not fix it, so pause it or give it more spend.
 you_give:
   - Ad results for the last 7 days, one row per ad, with spend, purchases, frequency and click rate
   - The cost per sale or ROAS each ad needs to hit
@@ -33,6 +37,31 @@ how_to_use:
   - Give it your target and, for your best ad, the transcript.
   - Read the list. Approve the pauses and launches you agree with.
   - Run it again in three or four days. It adds the new rows to its history and looks for the trend.
+output_sample:
+  input:
+    - Ad results for the last 7 days, one row per ad
+    - The cost per sale or ROAS each ad needs to hit
+    - The history file from your last run (optional)
+    - Stock and cash for your best seller (optional)
+    - The words of your winning ad (optional)
+  prerequisites:
+    - An AI that can read files, to keep the history between runs
+    - Your brand brain, only if the whole account needs new ideas (optional)
+  output:
+    - name: Sliding ads
+      contains: Each ad with its last runs of return, frequency and click rate, and whether the ad is spent or the audience is small.
+    - name: Not fatigue
+      contains: Weak ads that never met the target, each marked as a pause candidate or needing more spend.
+    - name: Replacement briefs
+      contains: Hook briefs for each proven winner, each tagged with what it changes, plus new idea briefs if needed.
+    - name: Pace
+      contains: Whether to squeeze the winner or run it lower for months, based on your stock and cash.
+    - name: Backups
+      contains: Formats to add now if one ad holds more than half of your spend.
+    - name: Changes to approve
+      contains: Pauses, budget moves and launches, each with a reason. Nothing happens without your yes.
+    - name: Next check and missing
+      contains: The numbers to watch next time, and every MISSING line for facts it could not find.
 how_it_works:
   - title: Read the history
     text: Opens the saved rows for each ad and adds this run's numbers, so a trend comes from data.

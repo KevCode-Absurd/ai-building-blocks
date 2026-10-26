@@ -6,7 +6,7 @@ also: [sales, business]
 years: "birth year unconfirmed–"
 living: true
 known_for: "Author of Obviously Awesome and Sales Pitch. Her public method helps teams explain why the right buyers should choose their product."
-summary: "Explain why buyers should choose your product using April Dunford’s public method. Compare real alternatives, find useful differences and shape a clear sales story."
+summary: "Work out why buyers should choose your product. Use April Dunford's positioning method to find real alternatives, buyer value and a clear sales pitch."
 use_cases:
   - "List the real alternatives your buyers weigh, including doing nothing"
   - "Turn a list of features into the value buyers would choose you for"
@@ -16,6 +16,31 @@ use_cases:
   - "Turn a bigger rival's strength into a weakness for the right buyers"
   - "Build a sales pitch that tells a story instead of walking through features"
   - "Decide what you're positioning before the team meets: one product, a suite or the whole company"
+not_for:
+  - "You want one clear category and a place in buyers' minds: use the Al Ries mind."
+  - "You need a finished market-entry plan and have no deal or customer data: talk to customers first, then come back."
+  - "You want a headline or ad written in a classic copywriting style: use the David Ogilvy mind."
+output_sample:
+  input:
+    - What your product does and who buys it
+    - Notes from your last few deals, wins and losses (optional)
+    - The alternatives buyers weigh, including doing nothing (optional)
+    - What you think you do that rivals can't
+  output:
+    - name: Real alternatives
+      contains: The options buyers would use if you did not exist, including doing nothing.
+    - name: Unique attributes
+      contains: What you can do that those alternatives cannot.
+    - name: Value for the buyer
+      contains: Each unique attribute turned into a reason to choose you, split from objection handlers.
+    - name: Best-fit customers
+      contains: The buyers who care most about that value.
+    - name: Market frame
+      contains: Where your value makes the most sense to the buyer.
+    - name: One-paragraph pitch
+      contains: A short sales story built on the points above, with guesses marked.
+    - name: Where to look next
+      contains: Next steps, such as asking sales for the last five wins.
 seats:
   - {seat: "Positioning for products", asks: "Compared with what? What would the buyer do if we didn't exist?"}
   - {seat: "Differentiated value", asks: "Would a customer choose us for this alone, or is it just something they expect?"}

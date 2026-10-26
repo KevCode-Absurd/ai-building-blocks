@@ -11,6 +11,17 @@ metadata:
 
 # Shopify Liquid Templating
 
+## How to run this skill (added by AI Blocks)
+
+1. Ask once for what is missing: what the snippet should show, the theme file where it goes (optional), the user's current code around it (optional), and the product, collection or cart details involved. If something is still missing, write `MISSING: <what>`. Never invent product fields, metafield names or theme file names. Use only the fields shown in this file or in the user's own code.
+2. Write one snippet that does one job. Handle empty cases (no price, no image, empty cart) and use `render`, not `include`.
+3. Hand back, in this order: the snippet in one code block, the theme file to put it in and where, a one-line note on each object and filter used, preview steps, and `OPEN QUESTIONS` for anything marked MISSING.
+4. Preview steps always say: duplicate the live theme, paste the snippet into the copy, check a sale product, a normal product and an empty cart, and publish only when all look right.
+5. Prices in Shopify are stored in cents. Always use a money filter when you show one.
+6. Not for: checkout code (use the Shopify checkout customizer), app code (use the Shopify app builder), whole theme sections with settings (use the Shopify theme code writer), or theme-wide rebuilds (a Shopify developer).
+7. Next step: paste the snippet into a copy of the theme, check it in the preview, then publish the copy.
+
+
 ## When to use this skill
 
 Use this skill when:
@@ -198,8 +209,8 @@ Use `-` to strip whitespace:
 {{ 5 | times: 3 }}                   <!-- 15 -->
 {{ 10 | divided_by: 3 }}             <!-- 3 -->
 {{ 10 | modulo: 3 }}                 <!-- 1 -->
-{{ 1234.56 | money }}                <!-- $1,234.56 -->
-{{ 1234.56 | money_without_currency }} <!-- 1,234.56 -->
+{{ 123456 | money }}                 <!-- $1,234.56 (money filters read cents) -->
+{{ 123456 | money_without_currency }} <!-- 1,234.56 -->
 ```
 
 ### Array Filters

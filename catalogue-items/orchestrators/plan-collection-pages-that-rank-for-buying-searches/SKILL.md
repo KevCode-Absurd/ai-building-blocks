@@ -44,15 +44,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Store keyword validator.** Use the skill `store-keyword-validator`. Tests your keyword ideas for buying intent, volume and difficulty, and names the page type and owner page for each keeper.
+1. **Store keyword validator.** Use the skill `store-keyword-validator`. Tests your keyword ideas for buying intent, volume and difficulty, and names the page type and owner page for each keeper. Hands the validated keyword report to the planner and the page writer.
 
 Pause here: Pick one main keyword per page from the keepers and save them as a sheet with the products that belong on each page.
 
-2. **Collection page planner.** Use the skill `collection-page-planner`. Turns the chosen keywords into a build order for collection pages, with handles and links. Reads the keyword sheet you saved after the last step.
+2. **Collection page planner.** Use the skill `collection-page-planner`. Give it the keyword report from the steps before. Turns the chosen keywords into a build order for collection pages, with handles and links. Reads the validated keyword report from step 1 and the keyword sheet you saved at the pause. Hands the collection plan to the page writer.
 
 Pause here: Choose the first collection from the plan and note its keyword, its products and a few customer review lines.
 
-3. **Collection page SEO builder.** Use the skill `collection-page-seo-builder`. Writes the page text and search listing for that collection, using the keyword and products you chose from the plan.
+3. **Collection page SEO builder.** Use the skill `collection-page-seo-builder`. Give it the plan and the keyword report from the steps before. Writes the page text and search listing for that collection, using the collection, keyword and products you chose from the plan in step 2, and your review lines.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

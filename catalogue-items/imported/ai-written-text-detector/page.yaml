@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs language clues and says when it cannot tell.
 new_slug: ai-written-text-detector
 name: AI-written text detector
-summary: Paste a document. Get an honest estimate of whether AI wrote it, with
-  the wording clues behind it.
+summary: Check if AI wrote a document. Paste text or add a file and get an honest lean, the wording clues behind it, and a clear note when it cannot tell.
 job: write-and-tell-stories
 headline: AI-written text detector
-subhead: Paste a document. Get an honest estimate of whether AI wrote it, with
-  the wording clues behind it. Bring a document as a file, link or pasted text.
-  Use the result to plan your next step.
+subhead: Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it. Bring a document as a file, link or pasted text. Use the result to plan your next step.
 explain: |
   An honest estimate of whether AI wrote a document, with the wording clues behind it and a clear "cannot tell" when the document is not suited to testing. It reads style only. It cannot prove who wrote something.
 
@@ -18,6 +15,10 @@ when:
   - You review inbound articles or guest posts and need to triage them.
   - You read CVs or cover letters and want to flag, not reject, AI drafts.
   - You want to see which phrases make a text read like AI.
+not_for:
+  - "You need proof of who wrote a document: no tool can give that, so ask the writer to explain their work in person."
+  - "You want to know if a document is fake or edited: use a document check that looks at the file itself, not its style."
+  - "Your document is a form, table, payslip or scan: the service refuses these, so read it by hand."
 you_give:
   - A document as a file, link or pasted text
   - An API key for the detection service
@@ -28,7 +29,28 @@ you_get:
   - The flagged phrases and patterns
   - A note on what the result cannot show
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Get consent from the writer first. Your document is sent to a hosted third party, so remove private details you do not need.
+  - Open an AI that can run a web request, such as Claude with code tools. Paste the skill instructions.
+  - Add your Stipple API key, then give it your file, link or pasted text.
+  - Read the lean, the flagged phrases and the limits note. If it says the document is not prose, stop there.
+  - Treat the result as one signal. Talk to the writer before you act on it.
+output_sample:
+  input:
+    - Your document as a file, link or pasted text
+    - Your Stipple API key
+    - Who will read the result (optional)
+  prerequisites:
+    - An AI that can run a web request, or a way to send one yourself
+    - A Stipple API key
+    - Consent from the writer to send their document to a third party
+  output:
+    - name: Provider AI-style score
+      contains: A number from 0 to 1 with the lean of ai, human or unsure, marked as uncalibrated.
+    - name: Prose ratio
+      contains: How much of the document is real prose that can be tested.
+    - name: Linguistic tells
+      contains: The phrases and patterns flagged, such as stock openers, even sentence length and low variety.
+    - name: Reasoning
+      contains: Why the service reached its lean.
+    - name: Limitations
+      contains: A note on what the score cannot show, including noise and false flags.

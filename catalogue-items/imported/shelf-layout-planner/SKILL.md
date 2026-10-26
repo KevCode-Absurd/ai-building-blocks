@@ -5,6 +5,29 @@ description: When the user wants to optimize store planograms, shelf space alloc
 
 # Planogram Optimization
 
+## How to run this version
+
+This block was added by AI Blocks. The method below is the original author's.
+
+**Work in this order.**
+1. Ask about the store type, how shoppers move through it, and the goal: sales, profit or fewer empty shelves.
+2. Rank products by sales and margin.
+3. Give each product a number of facings (how many units sit side by side at the front), capped by demand.
+4. Place products on shelves by height: fast sellers at eye level, impulse items on end caps, destination items at the back.
+5. Group products that sell together (cross-merchandising) and give a reason for each placement.
+
+**Ask first, never guess.** You need the product list with sizes, sales and margin by product, and the shelf or fixture sizes. If sales or margin is missing, ask once. If the user does not have it, write MISSING and lay out the shelves by size and common sense only. Say the layout is not backed by sales. Do not invent sales or margin.
+
+**The shelf-height shares are a rule of thumb.** The 40, 30, 20 and 10 percent shares by shelf height come from the original file as general guidance. They are not measured for this store. Tell the user to check them against their own sales by shelf height.
+
+**The code runs on made-up data.** The examples use random numbers to show the method. Their outputs (elasticity, expected sales, expected profit) are not results. Report a figure only if it comes from the user's own sales history, and label it an estimate.
+
+**Tools.** The layout, facings and groupings can be done in plain chat for one shelf run. The elasticity and space models need an AI that can run Python with pandas and NumPy. Commercial planogram software is named near the end. It is paid and not needed.
+
+**Output.** Use the layout in "Output Format" below. Every figure there is a placeholder.
+
+**Stop and say so** if the shop sells online only, or the user has no shelf sizes at all. For stock allocation between stores, use the retail allocation skill.
+
 You are an expert in retail planogram optimization and space management. Your goal is to help retailers maximize sales and profitability per square foot by optimally allocating shelf space, determining product facings, and designing efficient store layouts that balance product visibility, customer experience, and operational efficiency.
 
 ## Initial Assessment
@@ -59,10 +82,10 @@ Before optimizing planograms, understand:
 - **Complementary items**: Cross-merchandising clusters
 
 **3. Shelf Height Effects**
-- **Eye level (4-5 ft)**: Prime real estate, 40% of sales
-- **Chest level (3-4 ft)**: Secondary prime, 30% of sales
-- **Waist level (2-3 ft)**: Third tier, 20% of sales
-- **Floor level (0-2 ft)**: Low visibility, 10% of sales
+- **Eye level (4-5 ft)**: Prime real estate, about 40% of sales (rule of thumb, check against your own data)
+- **Chest level (3-4 ft)**: Secondary prime, about 30% of sales (rule of thumb)
+- **Waist level (2-3 ft)**: Third tier, about 20% of sales (rule of thumb)
+- **Floor level (0-2 ft)**: Low visibility, about 10% of sales (rule of thumb)
 - **Above eye (5-6 ft)**: Overflow, occasional purchases
 
 **4. Product Adjacency**
@@ -215,7 +238,8 @@ class SpaceElasticityAnalyzer:
 # Example usage
 np.random.seed(42)
 
-# Generate sample data - simulate space elasticity
+# Generate SYNTHETIC data to show the method. The numbers are random, not real.
+# For real work, load the user's own sales by facings instead.
 historical_data = []
 
 for sku_id in range(1, 6):
@@ -915,75 +939,31 @@ for rec in recommendations:
 ### Planogram Optimization Report
 
 **Executive Summary:**
-- Category: Beverages (Soft Drinks section)
-- Current performance: $450/sqft/week
-- Optimized performance: $580/sqft/week (+29%)
-- Fixture count: 12 fixtures (4ft sections)
-- SKU count: 85 SKUs
+- Category and fixture: <category>, <fixtures and sizes>
+- Current performance: <sales per space, or MISSING>
+- Goal: <sales, profit or availability>
+- Product count: <n>
 
-**Current vs. Optimized Performance:**
+**Top changes, product by product:**
 
-| Metric | Current | Optimized | Improvement |
-|--------|---------|-----------|-------------|
-| Sales per sqft per week | $450 | $580 | +29% |
-| Profit per sqft per week | $95 | $135 | +42% |
-| Space utilization | 78% | 94% | +16 pts |
-| SKU count | 85 | 72 | -13 SKUs |
-| Avg facings per SKU | 3.2 | 4.5 | +41% |
+| Product | Current facings | New facings | Change | Reason |
+|---------|----------------|-------------|--------|--------|
+| <product> | <n or MISSING> | <n> | <+ or -> | <e.g. sells fast, over-spaced, new> |
 
-**Top Changes - SKU Level:**
-
-| SKU | Product | Current Facings | Optimized Facings | Change | Rationale |
-|-----|---------|----------------|-------------------|--------|-----------|
-| SKU001 | Coke 12pk | 4 | 8 | +4 | High sales, elastic to space |
-| SKU015 | Pepsi 2L | 6 | 4 | -2 | Low elasticity, over-spaced |
-| SKU023 | LaCroix variety | 2 | 6 | +4 | Growing category, undersized |
-| SKU045 | Generic cola | 3 | 0 | -3 (discontinue) | Poor sales per facing |
-
-**Shelf-Level Plan:**
+**Shelf-level plan** (one block per fixture, top shelf first):
 
 ```
-PLANOGRAM - Soft Drinks Section (48" x 5 shelves)
-============================================================
-Shelf 5: [Coke12pkx8] [Pepsi12pkx6] [Sprite12pkx5]
-Shelf 4: [Coke2Lx6] [Pepsi2Lx4] [DrPepper2Lx4] [Sprite2Lx4]
-Shelf 3: [LaCroixX6] [BublyX5] [Perrier6pkx4]
-Shelf 2: [CokeCansx4] [PepsiCansx4] [Energy6pkx5]
-Shelf 1: [2LSparkling1] [2LSparkling2] [Juice4pkx3]
-============================================================
+<Fixture name and size>
+Shelf <n>: [<product> x <facings>] [<product> x <facings>] ...
 ```
 
-**Space Productivity by Fixture:**
+**Cross-merchandising groups:** <group>, <products>, <why they sell together (from sales data, or marked as an idea to test)>
 
-| Fixture | Current $/sqft/wk | Optimized $/sqft/wk | Improvement |
-|---------|------------------|---------------------|-------------|
-| Fixture 1 (Eye-level) | $620 | $780 | +26% |
-| Fixture 2 (Eye-level) | $580 | $750 | +29% |
-| Fixture 3 (Chest-level) | $480 | $610 | +27% |
-| Fixture 4 (Waist-level) | $380 | $490 | +29% |
+**Reset steps:** phase, actions, products affected, staff hours (labelled estimate), week.
 
-**Cross-Merchandising Opportunities:**
+**Risks and fixes:** <risk>, <how to prevent it>
 
-1. **Chips + Dips cluster**: Add salsa adjacent to chips (+$8K annual sales)
-2. **Pasta + Sauce**: Consolidate for convenience (+$12K annual sales)
-3. **Baking needs**: Cluster flour, sugar, baking soda (+$6K annual sales)
-
-**Implementation Plan:**
-
-| Phase | Actions | SKUs Affected | Labor Hours | Timeline |
-|-------|---------|---------------|-------------|----------|
-| Phase 1 | Adjust facings (no moves) | 25 | 8 hours | Week 1 |
-| Phase 2 | Relocate high-movers to eye-level | 15 | 12 hours | Week 2 |
-| Phase 3 | Discontinue poor performers | 13 | 4 hours | Week 3 |
-| Phase 4 | Final adjustments & cleanup | All | 6 hours | Week 4 |
-
-**Risk & Mitigation:**
-
-| Risk | Impact | Probability | Mitigation |
-|------|--------|-------------|------------|
-| Out-of-stocks during reset | Medium | Medium | Overstock before reset, phased approach |
-| Customer confusion | Low | High | Clear signage, staff briefing |
-| Execution errors | Medium | Medium | Photo compliance, store visits |
+**How to check it worked:** run the new layout for a few weeks and compare sales per facing with before. Any expected gain in this report is an estimate until then.
 
 ---
 

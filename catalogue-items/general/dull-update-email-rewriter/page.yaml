@@ -1,6 +1,6 @@
 new_slug: dull-update-email-rewriter
 name: "Dull update email rewriter"
-summary: "Paste a flat company update. Get an email people open, with the reader's gain first."
+summary: "Rewrite a dull update email so readers open it. Give it your flat draft. You get a subject, a first line with the reader's gain, and the cut lines."
 job: write-emails
 thinking: low
 thinking_why: "It rewrites one short email from facts you give it."
@@ -17,6 +17,10 @@ when:
   - "You have a product change, a price change or a schedule change to tell customers about."
   - "Your team newsletter gets opened by half the people it used to."
   - "You wrote the update in five minutes and it reads like a legal notice."
+not_for:
+  - "You must send a legal notice, a price-change disclosure or an outage notice: send the plain notice, because the exact facts matter more than the framing."
+  - "You need a full sales email or ad copy: use the Sales copy editor on your draft instead."
+  - "You only want to catch AI-sounding wording in a finished email: use the AI-style wording editor."
 
 you_give:
   - "The draft email, or the facts of the update"
@@ -33,6 +37,26 @@ how_to_use:
   - "Say who reads it, such as customers, subscribers or your team."
   - "Read the READER'S GAIN line first. If it is wrong, tell the AI what the real gain is and run it again."
   - "Check every date and price against your source, then send."
+output_sample:
+  input:
+    - Your draft update email, or the facts of the update
+    - Who reads it and what they care about (advised)
+    - Two or three lines you have sent before (optional)
+  output:
+    - name: READER'S GAIN
+      contains: One line saying what changes for the reader, in their words.
+    - name: SUBJECT
+      contains: A subject line of under eight words that states the news or gain.
+    - name: EMAIL
+      contains: "The rewritten email: a first line that proves the subject, short paragraphs, one action line and a sign-off."
+    - name: ALSO
+      contains: Optional list of points moved out of the main body, one line each.
+    - name: CUT
+      contains: The generic lines removed, one per line, so you can see what changed.
+    - name: MISSING
+      contains: Facts the update needs but you did not give.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
 
 how_it_works:
   - title: "Finds the reader's gain"

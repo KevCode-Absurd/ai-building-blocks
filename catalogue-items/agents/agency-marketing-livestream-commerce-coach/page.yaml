@@ -1,0 +1,171 @@
+name: Livestream Commerce Coach agent
+summary: Plan a live selling stream with a timed product run order, host scripts, safe wording and a way to review your numbers after.
+headline: Livestream Commerce Coach agent
+subhead: List the products you will sell, your platform, the stream length and your host's experience. It sets the product order, writes host scripts for each product, checks the wording, plans paid and free traffic, and gives you drills and a review sheet.
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A live selling stream fails in simple ways. The wrong product is on screen when
+  viewers arrive. The host runs out of things to say. A line breaks a platform
+  rule. This livestream commerce coach agent plans the stream before you go
+  live: which product goes when, what the host says, and what to check
+  afterward. It comes from the Chinese live commerce world (Douyin, Kuaishou,
+  Taobao Live and WeChat Channels), and the ideas also help on other live
+  selling platforms.
+
+
+  It sorts your products into four roles. Traffic drivers bring viewers in.
+  Hero products make the sales. Profit items earn the margin. Flash deals lift
+  the numbers when viewers drop. It places each one to match when viewers tend
+  to arrive. Scripts follow five steps: a hook to keep viewers, the product,
+  trust, a push to buy and a follow-up. It treats watch time and chat activity
+  as what the platform rewards, so the plan builds those before it chases sales.
+
+
+  This is a role profile from Agency Agents, shared under MIT. A chat AI cannot
+  watch your stream, log in to an ad account or read your live numbers. You
+  paste the numbers and run the plan yourself. The profile's targets, such as a
+  60 second watch time or 5% chat rate, are its author's goals, not results from
+  AI Blocks. Platform rules change, so check wording against each platform's
+  current rules.
+when:
+  - You are about to run your first live selling stream and need a run order and a script.
+  - Your stream gets viewers but few orders, and you want to find where it leaks.
+  - You are training a new host and need drills, a script to learn and a way to score each practice run.
+  - You want your selling lines checked for claims a platform may ban, such as "lowest price anywhere" or health promises.
+not_for:
+  - You want a short video edited or a hook written for a clip. Use the Short-Video Editing Coach agent.
+  - You want a content plan for Douyin videos as well as live. Use the Douyin Strategist agent.
+  - You sell mainly on TikTok outside China. Use the TikTok Strategist agent for the content plan. The ad parts here are about Chinese ad tools.
+  - You want it to run ads, set prices or go live for you. It cannot log in or spend money.
+  - You run a bid-style live auction rather than a sales stream. Use the Live auction show planner.
+you_give:
+  - The products you will sell, with price, what each costs you and how much stock you have
+  - Your platform, such as Douyin, Kuaishou, Taobao Live or WeChat Channels
+  - How long the stream runs and how much live experience your host has
+  - Your audience, in a line or two
+  - Numbers from your last stream, such as viewers, watch time, orders and sales (optional)
+  - Your ad budget and the ad tool you use (optional)
+you_get:
+  - A timed run order with each product's role, its slot and why it sits there
+  - Host scripts for your main products, with a chat prompt for each
+  - A wording check with safe replacements for claims a platform may ban
+  - A traffic plan that mixes paid and free viewers for your stage
+  - Practice drills for the host, including what to do when talk goes quiet
+  - A review sheet for during and after the stream, plus a list of what is still unchecked
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your product list, platform, stream length and host experience. Add last stream's numbers if you have them.
+  - Answer any question once. Anything you skip is marked MISSING or ASSUMED, and you can change it.
+  - Read the run order first. Check that your hero products sit where viewers tend to arrive and that stock and margin work.
+  - Read the wording check and compare each line with the platform's current rules. A chat AI cannot confirm those rules.
+  - Run a practice stream, paste your numbers afterward, and ask for a review and next steps.
+how_it_works:
+  - title: Read the room
+    text: It reviews your products, platform, host and any past numbers to see where viewers leak out.
+  - title: Sort the products
+    text: It labels each product as a traffic driver, a hero, a profit item or a flash deal.
+  - title: Set the run order
+    text: It times each slot so the hero is on screen when viewers tend to arrive, and keeps a flash deal ready for drops.
+  - title: Write the scripts
+    text: It writes a five-step script for each hero product and chat prompts that keep viewers watching.
+  - title: Check the wording
+    text: It flags risky claims and swaps them for safer lines, by product category.
+  - title: Plan the traffic and practice
+    text: It sets the paid and free viewer mix for your stage and gives the host drills.
+  - title: Set up the review
+    text: It lists the numbers to watch during the stream and the checks to run after it.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <platform> | stream length <hours> | host level <new, some or experienced> | ASSUMED: <list> | MISSING: <list>
+
+  RUN ORDER
+    <time slot> | <product> | role <traffic driver, hero, profit item or flash deal> | why here <reason> | host action <line or move> | stock and margin check
+
+  HOST SCRIPTS
+    <product> | hook <line> | product <line> | trust <proof to show> | push <price reveal and limit> | follow-up <line> | chat prompt <line>
+
+  WORDING CHECK
+    <risky line> | why it is risky | safer line | CHECK against current <platform> rules
+
+  TRAFFIC PLAN
+    stage <cold start, growth or mature> | paid share <value> | free share <value> | rules of thumb <list, marked as the author's> | stop rule <list>
+
+  HOST PRACTICE
+    <drill> | goal | how to score it | dead-air rule <what to do>
+
+  REVIEW SHEET
+    during <numbers to check and when> | after <funnel steps and where it leaks> | next stream changes <list>
+
+  STILL TO CHECK
+    <item> | who or what confirms it
+output_sample:
+  input:
+    - Your product list with prices, costs and stock
+    - Your platform, stream length and how experienced your host is
+    - Numbers from your last stream (optional)
+    - Your ad budget and tool (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your live room dashboard, to paste in numbers after a stream
+  output:
+    - name: Run order
+      contains: A timed table of products, each with its role, why it sits there and what the host does.
+    - name: Host scripts
+      contains: A five-step script and a chat prompt for each main product.
+    - name: Wording check
+      contains: Risky lines, why they are risky, and safer replacements to check against platform rules.
+    - name: Traffic plan
+      contains: The mix of paid and free viewers for your stage, with stop rules.
+    - name: Host practice
+      contains: Drills with a way to score each one, and what to do when talk goes quiet.
+    - name: Review sheet
+      contains: The numbers to watch during the stream and the funnel steps to check after it.
+    - name: Still to check
+      contains: Platform rules, stock and numbers the AI could not confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They can write scripts in the language you sell in. You paste your numbers in and read the plan back.
+    - name: Your platform's live dashboard
+      why: It holds the real numbers for viewers, watch time and orders. Paste them in for the review.
+  inputs:
+    - A screenshot or copy of your last stream's numbers.
+    - The platform's current list of banned claims for your product category.
+    - A recording of a practice run, with notes on where you went quiet.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Platform
+    how: Name the exact platform. Taste in products, pace and wording differ between Douyin, Kuaishou, Taobao Live and Channels.
+  - what: Host level
+    how: Say if the host is new or experienced. A new host gets word-for-word scripts. An experienced host gets short cue cards.
+  - what: Scope
+    how: Ask for one part only, such as the run order or the wording check, then add the rest later.
+improve:
+  - After each stream, paste your numbers and ask which step lost the most viewers. Change one thing for the next stream.
+  - Keep a list of lines that platforms flagged and add it to your next brief so they are not used again.
+terms:
+  - term: Run order
+    meaning: The planned order and timing of products during a stream.
+  - term: Hero product
+    meaning: The product you expect to bring in most of the sales.
+  - term: Flash deal
+    meaning: A short, low-price offer used to win back viewers when numbers drop.
+  - term: Watch time
+    meaning: How long a viewer stays in the live room. Platforms use it to decide who sees your stream.
+  - term: GPM
+    meaning: Sales per thousand views of the live room.
+  - term: Qianchuan
+    meaning: A Chinese ad tool used to buy viewers for a Douyin live room.
+  - term: Dead air
+    meaning: A stretch of silence while the host is live.

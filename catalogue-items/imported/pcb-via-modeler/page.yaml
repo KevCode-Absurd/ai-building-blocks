@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Via behavior depends on many linked settings.
 new_slug: pcb-via-modeler
 name: PCB via modeler
-summary: Describe a via transition. Get a via modeled with pads and return vias
-  and its signal quality checked.
+summary: Model a PCB via with pads, antipads and ground return vias, then check its signal quality. Give it your stackup and via position.
 job: build-software
 headline: PCB via modeler
-subhead: A via is where signals on a board often go wrong. Describe the layer
-  change and get a model of it, with pads, antipads and ground return vias set,
-  and a check of its signal quality.
+subhead: A via is where signals on a board often go wrong. Describe the layer change and get a model of it, with pads, antipads and ground return vias set, and a check of its signal quality.
 explain: |
   A via is where signals on a board often go wrong. Describe the layer change and get a model of it, with pads, antipads and ground return vias set, and a check of its signal quality.
 
@@ -18,6 +15,10 @@ when:
   - You are deciding where to place ground return vias.
   - You suspect a resonance in a thick board stackup.
   - You want to try different pad and antipad sizes.
+not_for:
+  - "You need to design a trace or control impedance: use the matlab-design-pcb-transmission-line skill or a plain trace calculator."
+  - "You want to check power delivery on an imported board: use the matlab-analyze-pcb-pdn skill."
+  - "You have no MATLAB with the RF PCB Toolbox: ask a signal integrity engineer or use your board tool's own via checker."
 you_give:
   - Your layer stackup and materials
   - Signal via position and layers
@@ -29,8 +30,32 @@ you_get:
   - S-parameters with resonances flagged
   - Pad tuning suggestions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Open an AI that can run MATLAB code. You also need MATLAB with the RF PCB Toolbox, which is a paid add-on.
+  - Paste the skill text into the chat, or upload the skill folder.
+  - Give your AI your layer stackup, materials, signal via position and layers, and frequency range. Add ground via spots if you have them.
+  - Ask it to build the via model and run the S-parameter check.
+  - Look at the resonances and the ground via spacing note. Change pad sizes or ground vias and run it again.
+  - Next, cascade the via with trace or connector models using the matlab-integrate-pcb-circuit skill.
+output_sample:
+  input:
+    - Your layer stackup and materials
+    - Where the signal via sits and which layers it joins
+    - Where the ground return vias go (optional)
+    - The frequency range you care about
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the RF PCB Toolbox, which needs its own licence
+    - Substrate and conductor set up first with the matlab-manage-pcb-material skill
+  output:
+    - name: Via model
+      contains: A single-ended via with signal layers, ground layers, signal via position and ground return via positions set.
+    - name: Port definition
+      contains: The signal table that sets which layer holds each port, the trace width and the trace direction.
+    - name: Pad and antipad tables
+      contains: The pad and antipad shape for each layer, which you can view and edit.
+    - name: S-parameters
+      contains: Loss and reflection of the via across your frequency range, with plots.
+    - name: Resonance check
+      contains: Barrel resonances found in the result, so you can see where the via misbehaves.
+    - name: Ground via spacing check
+      contains: A comparison of ground return via spacing against the critical wavelength.

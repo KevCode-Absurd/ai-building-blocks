@@ -1,56 +1,67 @@
 new_slug: dip-or-dead-end-checker
 name: "Dip or dead end checker"
-summary: "Paste a project you are tempted to quit. Get a call: push through, change course or stop, with the reason."
+summary: "Tell it which project you want to quit. Get one call, push through, change course or stop, with your evidence and your fears set apart."
 job: think-and-decide
 thinking: high
 thinking_why: "The call rests on separating evidence from fear, and a wrong call costs months. It needs careful weighing."
 
 headline: "Dip or dead end checker"
-subhead: "Tell it about a project you want to quit and how long it has run. It separates evidence from fear, tests whether effort has been paying off, and calls it: push through, change course or stop. You get the reason, a date and one hard step."
+subhead: "Tell it about a project you want to quit and how long it has run. Your AI tests whether effort has paid off, splits your reasons into evidence and fear, then gives one call: push through, change course or stop. You get the reason, a check date and one next step."
 
 explain: |
-  Every project hits a low point where the work gets harder and the results slow down. Sometimes that is a dip: a stretch that ends if you keep going, and that scares off most of your rivals. Sometimes it is a dead end, where more effort changes nothing. From inside, the two feel the same, so people quit good projects and cling to bad ones.
+  Every project hits a low point where the work gets harder and results slow down. Sometimes that is a dip: a stretch that ends if you keep going. Sometimes it is a dead end, where more effort changes nothing. From inside, the two feel the same. So people quit good projects and cling to bad ones. This checker helps you decide whether to quit a project or keep going.
 
-  This skill asks for the facts of the project, checks whether past effort has made the results better, and tests whether pushing through would put you among the best at something worth being best at. It marks which of your reasons are evidence and which are fear or a wish to compromise. Then it gives one call, a date, and a way out with no guilt if the answer is to stop.
+  It asks for the facts first: the start date, the hours and money put in, and what got harder and when. Then it tests two things. Did more effort make results better in the past? And would getting through make you the best at something worth being best at, in a way you could check against named rivals?
+
+  It marks each of your reasons as evidence, fear or a wish to settle for less. Then it gives one call and a date. If the call is to stop, it plans a clean exit with no guilt in the wording. It does not give money, legal or medical advice.
 
 when:
-  - You have worked on something for months and every week feels harder.
-  - You are tempted to quit but cannot tell if it is wisdom or fear.
-  - You are keeping a project alive only because you have already put so much in.
+  - "A project is months old and every week feels harder than the last."
+  - "You want to quit and cannot tell if it is good sense or fear."
+  - "You keep a project going mainly because of how much you have already put in."
+  - "Someone says 'give it one more quarter' and you want a call you can argue with."
+
+not_for:
+  - "You have no start date or results yet. There is nothing to test. Make a plan first."
+  - "The real block is one scary step you keep avoiding. Use the Fear-setting planner."
+  - "You are choosing between two options, not deciding whether to quit. Use the Third option finder or the Pros and cons decision planner."
+  - "You want to set the stop line before you start. Use the Decision options and tripwire planner."
 
 you_give:
-  - The project and what you want from it
-  - How long it has run and what has got harder
-  - Your numbers or signs of progress over time (optional)
-  - What a win would look like (optional)
+  - "The project and what you want from it"
+  - "How long it has run, and what has got harder and when"
+  - "Results over time, even rough: at the start, the middle and now (optional)"
+  - "Who the best are in your field, and what a win would look like (optional)"
+  - "How long you can keep going, in money and hours (optional)"
 you_get:
-  - "A clear call: push through, change course or stop"
-  - Your reasons split into evidence and fear
-  - A date to check again, and one hard step if you push on
-  - A plan to quit without guilt, if the call is to stop
+  - "One call: push through, change course or stop, with the reason"
+  - "Your reasons split into evidence, fear and wish to settle for less"
+  - "What you would be best at if you got through, and how you could check it"
+  - "A check date, and one hard step if you push on"
+  - "A way to quit well, if the call is to stop"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the project, how long it has run and what has got harder. Include real numbers if you have them.
-  - Say what "best" would mean in this field and who the best are.
-  - Read the call, then the evidence list, before you decide.
-  - Put the check date in your calendar.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. No files or tools needed."
+  - "Describe the project, how long it has run and what has got harder, with dates. If you send nothing, it asks for those facts and stops."
+  - "Add real numbers if you have them: results at the start, the middle and now."
+  - "Read the call and the evidence list before you decide. Check that each fear says why it is not evidence."
+  - "Put the check date in your calendar. If the call is to stop, set the quit date too."
 
 how_it_works:
-  - title: Gets the facts
-    text: Writes down the project, its age and what got harder, with dates.
-  - title: Tests the effort
-    text: Asks whether more effort has made the results better so far.
-  - title: Tests the prize
-    text: Asks whether pushing through would make you the best at something worth being best at, in a way you can test.
-  - title: Splits evidence from fear
-    text: Marks each reason as evidence, fear or a wish to compromise.
-  - title: Makes the call
-    text: Decides if it is a dip that ends or a dead end that does not.
-  - title: Plans the exit or the push
-    text: For a dead end it sets the quit date and way out. For a dip it sets the one hard step and a check date.
-  - title: Checks itself
-    text: Runs its own checks and names any it missed.
+  - title: "Gets the facts"
+    text: "Writes down the project, its start date, what you have put in and what got harder, with dates."
+  - title: "Tests the effort"
+    text: "Looks at your results in time order and asks whether more effort made them better. The answer is yes, no or unknown."
+  - title: "Tests the prize"
+    text: "Names what you would be best at if you got through, and whether you could check it against named rivals."
+  - title: "Splits evidence from fear"
+    text: "Marks each reason as evidence, fear or a wish to settle for less, and says why a fear is not evidence."
+  - title: "Counts the cost of staying"
+    text: "Writes what the project takes each month in money and hours, and what else that time could buy."
+  - title: "Makes the call"
+    text: "Picks push through, change course or stop, with one sentence of reason tied to the evidence."
+  - title: "Plans the push or the exit"
+    text: "Sets the one hard step and a check date, or a quit date and a clean way out."
 
 output_shape: |
   THE PROJECT
@@ -70,8 +81,12 @@ output_shape: |
   BEST AT WHAT
   <the thing, the field, and the test of whether you could lead it>
 
+  COST OF STAYING
+  <money and hours each month> | <what else that time could buy>
+
   NEXT STEP
   If push: <the one hard step> by <date>, check again on <date>
+  If change: <what to change> by <date>, check again on <date>
   If stop: <quit date> | <how to end it well> | <what to do with the time>
 
   MISSING
@@ -79,6 +94,30 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "The project and what you want from it"
+    - "How long it has run, and what has got harder and when"
+    - "Results over time, even rough (optional)"
+    - "Who the best are in your field (optional)"
+  output:
+    - name: "THE PROJECT"
+      contains: "The project, how long it has run and what got harder, with dates."
+    - name: "THE CALL"
+      contains: "Push through, change course or stop, with one sentence of reason tied to the evidence."
+    - name: "EVIDENCE"
+      contains: "The facts for pushing on and the facts for stopping, each with its source."
+    - name: "WHAT IS FEAR OR COMPROMISE"
+      contains: "Each reason that is a feeling, not a fact, and why it is not evidence."
+    - name: "BEST AT WHAT"
+      contains: "What you would lead if you got through, and a test of whether you could."
+    - name: "COST OF STAYING"
+      contains: "What the project takes each month in money and hours, and what else that time could buy."
+    - name: "NEXT STEP"
+      contains: "For push or change, one step and a check date. For stop, a quit date and a clean way out."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts that would change the call, and one line for each of its own checks it missed."
 
 tweaks:
   - what: Numbers over time
@@ -123,3 +162,5 @@ terms:
     meaning: A hard stretch that ends if you keep going, after which results improve.
   - term: Dead end
     meaning: A stretch that never gets better, however hard you push.
+  - term: Compromise
+    meaning: A wish to settle for a smaller or safer version of the goal.

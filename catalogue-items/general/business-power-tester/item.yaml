@@ -9,6 +9,7 @@ level: expert
 inputs:
   - {type: question, required: true}
   - {type: competitor_set, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

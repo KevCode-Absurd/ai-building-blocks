@@ -2,35 +2,71 @@ thinking: high
 thinking_why: Tuning memory and speed needs careful tradeoffs.
 new_slug: vllm-model-server-setup
 name: vLLM model server setup
-summary: Name your model and GPU. Get a fast model server running, with settings
-  for speed and memory.
+summary: Run an open AI model on your own GPU with vLLM. Get launch commands, memory settings and an OpenAI-style endpoint your app can call.
 job: build-software
 headline: vLLM model server setup
-subhead: A running model server that answers requests fast, with settings picked
-  to fit your GPU and model size. It speaks the same API as OpenAI, so your
-  existing code points at it with a one-line change.
+subhead: Name your open model and your GPU. It gives you the vLLM launch command, memory and context settings, a test call and a go-live checklist. The server speaks the OpenAI API, so your app changes one line.
 explain: |
-  A running model server that answers requests fast, with settings picked to fit your GPU and model size. It speaks the same API as OpenAI, so your existing code points at it with a one-line change.
+  This skill sets up a vLLM server, so you can host an open language model on your own GPU instead of paying per call. vLLM is free software that serves a model over the same API as OpenAI.
 
-  The skill starts from a quick install and a test call. It then sets memory use, context length and port for your model, and for large models it splits work across several GPUs. It covers shrinking models with quantization to fit smaller cards, testing with light traffic, turning on monitoring and checking speed numbers before go-live. It needs Python, a supported GPU and the vLLM package. You download the model yourself.
+  It starts with a small install and a test call. Then it sets memory use, context length and port for your model. A large model can be split across several GPUs, and a quantized model fits a smaller card. It checks your numbers on your own setup instead of quoting speed claims.
+
+  It also covers access. A server open to your network needs a firewall or a key, and some models only load with a Hugging Face token. You need a GPU machine, Python and the vllm package. You download the model yourself.
 when:
   - You want to host an open model on your own GPU instead of paying per call.
-  - Your current setup is slow or runs out of memory under load.
-  - You need an OpenAI-style endpoint for an existing app.
-  - A large model must be split across two or more GPUs.
+  - Your current setup is slow or runs out of memory when several people use it.
+  - You have an app that calls OpenAI and you want it to call your own model instead.
+  - A big model has to be split across two or more GPUs.
+not_for:
+  - "You want AI on a laptop or a single user's CPU: use llama.cpp or a desktop model app instead."
+  - "You want a rented GPU for training, not serving: use the Rented GPU server setup helper."
+  - "You do not want to run a server at all: call a hosted model API instead."
 you_give:
-  - The model you want to run
+  - The exact name of the model, from Hugging Face
   - Your GPU type and how many you have
-  - Expected traffic or response time target
-  - Whether a smaller, quantized model is acceptable (optional)
+  - How many people will use it, and a response-time goal (optional)
+  - Whether a smaller quantized model is fine (optional)
+  - A Hugging Face token, set in your own terminal, if the model is gated
 you_get:
-  - Install and launch commands
-  - Tuned settings for memory and context
-  - A test call using the OpenAI client
-  - A launch check list with monitoring
+  - The install and launch commands
+  - A table of settings with a reason for each
+  - A test call that uses the OpenAI client
+  - Your own measured speed and memory numbers
+  - A go-live checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code on a machine with an NVIDIA GPU.
+  - Use an AI that can run commands on the machine with your GPU, such as Claude Code or Codex. Without that, it writes the commands and you run them.
+  - Check the machine has a supported GPU, Python and room for the model files. NVIDIA is the main path.
+  - Tell your AI the model name and your GPU. For a gated model, accept its licence on Hugging Face and set your token in your own terminal. Never paste it into chat.
+  - Run the test call first. Then run the light-traffic test and check the numbers against your goal.
+  - Before real users connect, set an API key or put the server behind a firewall. Do not leave an open port.
+  - Fix any step that fails, then work down the go-live checklist.
+output_sample:
+  input:
+    - The exact name of your open model
+    - Your GPU type and how many you have
+    - Expected users and a response-time goal (optional)
+    - A Hugging Face token for gated models, set in your own terminal
+  prerequisites:
+    - A machine with a supported GPU
+    - Python and the vllm package
+    - An AI that can run commands on that machine
+  output:
+    - name: Launch command
+      contains: The one command that starts the server with your model and settings.
+    - name: Settings table
+      contains: Model, GPU count, memory setting, context length, port and quantization, each with a reason.
+    - name: Test result
+      contains: The test call with the OpenAI client and the reply, or a note that it was not run.
+    - name: Measured numbers
+      contains: Your own first-token time, requests per second and GPU memory use.
+    - name: Go-live checklist
+      contains: Access locked down, token set, logs clean and targets met, each marked done or not.
+    - name: Next
+      contains: The one thing to do next, such as a longer load test.
+works_best_with: Claude Code or Codex on the GPU machine itself, so it can run the tests and read the numbers. Have your model's Hugging Face page open for its licence and size.
+terms:
+  vLLM: Free software that runs open AI models fast and serves them over a web API.
+  quantization: Storing a model in a smaller form so it fits on a smaller card, with some quality risk.
+  tensor parallelism: Splitting one model across several GPUs so a big model can run.
+  OpenAI-compatible: Uses the same request format as OpenAI, so most existing code works with a new address.
+  gated model: A model you can only download after accepting its licence and signing in with a token.

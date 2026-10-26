@@ -1,55 +1,111 @@
 new_slug: clinic-claims-collections-bridge
 name: Clinic claims collections bridge
 headline: Clinic claims collections bridge
-summary: A claims receivable and remittance settlement bridge
+summary: Roll a clinic's claims receivable forward and match insurer payments to the bank deposit, using totals only. Any gap is listed, never hidden.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A claims receivable and remittance settlement bridge. Share aggregated opening claims receivable, gross billings, approved claim adjustments, claim-applied remittance cash, provider-level offset and actual bank receipt.
+subhead: Give it your opening claims receivable, billings, approved adjustments, insurer payments and bank deposit for one period. It rolls the balance forward and compares what insurers paid with what reached your bank. You get the closing balance and any gap, with a source for every figure.
 explain: |-
-  A claims receivable and remittance settlement bridge.
+  A claims receivable roll-forward starts with what insurers owed you at the start of the period. It adds what you billed, takes off the adjustments insurers approved and the payments applied to claims, and ends with what they still owe. A second check asks a different question. Does the cash on the remittance advice match the deposit in your bank?
 
-  Healthcare administrative finance. Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.
+  These two checks use different numbers. An insurer can take back an earlier overpayment from a later payment. That offset lowers the cash you receive, but it does not lower what a claim is worth. This skill keeps those two things apart, so the receivable and the bank figure each stay honest.
+
+  It works on totals only. It needs no patient names, diagnoses, billing codes or coverage details, and it never judges any of them. A gap it cannot explain stays on the page as an open exception.
 when:
-  - You need a claims receivable and remittance settlement bridge.
-  - You work on healthcare administrative finance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - "Month end: you need to explain why the claims receivable moved and show the closing balance."
+  - An insurer's deposit is smaller or larger than the payments shown on the remittance advice.
+  - A bookkeeper, owner or reviewer asks you to trace the closing balance back to dated sources.
+  - You are closing a period and want every gap named, not hidden inside a total.
+not_for:
+  - You need patient-level billing, coding, denial or coverage work. This uses totals only and gives no coding or coverage advice.
+  - "You want to know how much of the receivable will never be collected: use the Customer credit loss allowance checker."
+  - "You want to check what your bank charged you in fees: use the Bank service fee checker."
 you_give:
-  - Aggregated opening claims receivable, gross billings, approved claim adjustments, claim-applied remittance cash, provider-level offset and actual bank receipt.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Opening claims receivable and gross billings for the period, from your ledger or aging report
+  - Approved claim adjustments, the reductions an insurer agreed on claims
+  - Payments applied to claims, from your remittance advice
+  - Provider-level offsets, the amounts an insurer took back from a payment (or confirm there were none)
+  - The bank deposit received for those payments
+  - Period dates, currency and scale
 you_get:
-  - A claims receivable and remittance settlement bridge.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The closing claims receivable, rolled forward from the opening balance
+  - Expected bank cash, the actual deposit and the difference between them
+  - Every gap named, with what explains it or a note that it is unexplained
+  - A list of sources with dates for each figure
+  - An editable workbook, if your AI can make spreadsheet files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open Claude, ChatGPT or Gemini and add the skill, or paste SKILL.md into a new chat. Use an AI that can make spreadsheet files if you want a workbook.
+  - "Paste your totals for one period: opening claims, billings, approved adjustments, payments applied, offsets and the bank deposit. Add the dates, currency and scale."
+  - Attach your remittance summary and bank statement if you have them, so each figure gets a source.
+  - Ask for the bridge. Anything missing is marked MISSING and that line stops. It is never counted as zero.
+  - Look at the difference line before you use the result. A gap means a source or an offset is missing. Then read MISSING and CHECKS MISSED.
+output_sample:
+  input:
+    - Opening claims receivable, gross billings and approved adjustments for one period
+    - Payments applied to claims, provider offsets and the bank deposit
+    - Period dates, currency and scale
+    - Your remittance summary and bank statement (optional)
+  prerequisites:
+    - An AI that can create and reopen spreadsheet files (only if you want a workbook)
+    - Node.js 20 or later (only to run the bundled calculation script)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, scale and the dated source for every figure.
+    - name: Inputs and assumptions
+      contains: Each figure with its sign and source, and any assumption made.
+    - name: Receivable roll-forward
+      contains: Opening claims, net new claims, payments applied and the closing balance, line by line.
+    - name: Remittance to bank check
+      contains: Expected bank cash, the actual deposit and the difference, with any exception named.
+    - name: Editable workbook
+      contains: The bridge as a spreadsheet with inputs, formulas and checks, if you ask for one.
+    - name: Actual file verification
+      contains: What was recalculated, rendered and reopened in the saved file, and what could not run.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs you did not give and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Use minimal aggregate administrative records; distinguish claim-level adjustments from provider-level settlement offsets
-    text: Use minimal aggregate administrative records; distinguish claim-level adjustments from provider-level settlement offsets.
-  - title: 3. Roll claims receivable from opening plus gross billings less approved claim adjustments and claim-applied receipts
-    text: Roll claims receivable from opening plus gross billings less approved claim adjustments and claim-applied receipts.
-  - title: 4. Reconcile remittance cash less separately identified provider offsets to bank settlement and retain discrepancies as unexplained exceptions
-    text: Reconcile remittance cash less separately identified provider offsets to bank settlement and retain discrepancies as unexplained exceptions.
+  - title: Maps your sources
+    text: Lists each dated record, its period cutoff, currency and unit before any maths.
+  - title: Keeps adjustments and offsets apart
+    text: Claim-level adjustments change the receivable. Provider-level offsets change the cash received.
+  - title: Rolls the receivable forward
+    text: Opening claims plus billings, less approved adjustments and payments applied, gives the closing balance.
+  - title: Matches cash to the bank
+    text: Payments applied less offsets should equal the deposit. Any difference stays visible as an exception.
 output_shape: |-
-  A claims receivable and remittance settlement bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  CLAIMS RECEIVABLE ROLL-FORWARD (<currency>, <scale>, <period>)
+  Opening claims: <amount>   Source: <file, date>
+  + Gross billings: <amount>
+  - Approved claim adjustments: <amount>
+  - Payments applied to claims: <amount>
+  = Closing claims: <amount>
+
+  REMITTANCE TO BANK
+  Payments applied to claims: <amount>
+  - Provider offsets: <amount>
+  = Expected bank cash: <amount>
+  Actual bank receipt: <amount>
+  Difference: <amount>   Explained by: <source> or UNEXPLAINED
+
+  SOURCES AND ASSUMPTIONS
+  <figure | source | date | assumption>
+
+  ACTUAL FILE VERIFICATION
+  <what was recalculated, rendered and reopened>
+
+  MISSING:
+  <each missing input>
+
+  CHECKS MISSED:
+  <each check that failed or could not run, or none>
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+    how: Use the same dates, currency and scale for every figure. Say so at the top of your message.
+  - what: Offsets
+    how: If an insurer took back an earlier overpayment, give the amount. It changes expected bank cash, not the receivable.
   - what: Acceptance
-    how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+    how: Name the person who will review it. The difference line should be zero or fully explained before sign-off.
 judge:
   - Every material driver traces to a dated source; actuals and scenarios remain separate.
   - Missing evidence blocks the affected calculation instead of becoming a zero.
@@ -69,10 +125,15 @@ works_best_with:
     - name: Node.js 20 or later
       why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your remittance advice totals for the period
+    - Your bank statement for the same dates
+    - Your claims aging report
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Claims receivable
+    meaning: Money insurers owe you for care you have already billed.
+  - term: Remittance advice
+    meaning: The insurer's statement of what it paid and why.
+  - term: Provider-level offset
+    meaning: An earlier overpayment an insurer takes back from a later payment.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A comparison that explains the difference between two records.

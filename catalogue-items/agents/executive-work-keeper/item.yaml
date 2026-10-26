@@ -22,11 +22,11 @@ uses:
   - executive-daily-digest
 steps:
   - uses: executive-action-register
-    note: Run only when the saved state and decision rules require it.
+    note: "Run only when the saved state and decision rules require it. Reads your new notes, saved action list and saved state. Hands the updated action list (owners, due dates, status) to steps 2 and 3."
   - uses: executive-due-task-drafts
-    note: Run only when the saved state and decision rules require it.
+    note: "Run only when the saved state and decision rules require it. Reads step 1's action list and the threads for tasks now due. Hands the follow-up drafts, with their send status, to step 3."
   - uses: executive-daily-digest
-    note: Run only when the saved state and decision rules require it.
+    note: "Run only when the saved state and decision rules require it. Reads step 1's action list, plus your calendar and step 2's follow-up drafts as waiting-on items. Hands back the dated work brief."
 origin: rebuilt
 version: 1.0.0
 credits:

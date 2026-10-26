@@ -40,9 +40,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Win-win stance planner.** Use the skill `win-win-stance-planner`. Sets your stance, what a win is for each side and your walk-away line. Hands on the question to settle.
-2. **Other-person view mapper.** Use the skill `other-person-view-mapper`. Give it the question from the steps before. Takes the question from the step before and maps the other side: wants, pressures and a way to save face.
-3. **Can-they-pay deal checker.** Use the skill `can-they-pay-deal-checker`. Give it the question from the steps before. Tests your ask against what they can pay and proposes one sum. Reads the question and your terms from the steps before.
-4. **Negotiation call prep planner.** Use the skill `negotiation-call-prep-planner`. Give it the question and the persona from the steps before. Turns their side and the proposed sum into the lines you open with, the questions you ask and what to listen for.
+2. **Other-person view mapper.** Use the skill `other-person-view-mapper`. Give it the question from the steps before. Takes the question from the step before and maps the other side: wants, pressures and a way to save face. Hands steps 3 and 4 that map.
+3. **Can-they-pay deal checker.** Use the skill `can-they-pay-deal-checker`. Give it the question, your terms and the map of their side from step 2. Tests your ask against what they can pay and proposes one sum. Hands step 4 the sum and its terms.
+4. **Negotiation call prep planner.** Use the skill `negotiation-call-prep-planner`. Give it the question, step 2's map of their side and step 3's sum. Turns their side and the proposed sum into the lines you open with, the questions you ask and what to listen for.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

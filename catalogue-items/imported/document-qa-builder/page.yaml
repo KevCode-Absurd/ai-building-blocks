@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sets up reading, indexing and answering.
 new_slug: document-qa-builder
 name: Document question answerer builder
-summary: Point it at your documents. Get code that answers questions from them
-  and shows which pages it used.
+summary: Build a document question answerer in Python. Give it your files. Get code that answers questions and shows the source passages it used.
 job: build-software
 headline: Document question answerer builder
-subhead: Working code that lets you ask questions about your own documents and
-  get answers that show which pages they came from. This is the common
-  retrieval-augmented generation setup.
+subhead: Working code that lets you ask questions about your own documents and get answers that show which pages they came from. This is the common retrieval-augmented generation setup.
 explain: |
   Working code that lets you ask questions about your own documents and get answers that show which pages they came from. This is the common retrieval-augmented generation setup.
 
@@ -18,19 +15,45 @@ when:
   - You have hundreds of PDFs and need to ask questions across all of them.
   - Answers must show their sources so people can check them.
   - You want to pull structured facts from a pile of documents.
+not_for:
+  - "You only need to search for exact words in your files: use a plain keyword search tool, such as your computer's file search."
+  - "You want to summarise one short file: paste it into Claude, ChatGPT or Gemini and ask for a summary."
+  - "You only need a place to store vectors: use Chroma on its own."
 you_give:
-  - Your documents or data sources
-  - The kind of questions you expect
-  - Python set up on your machine
-  - A model provider API key
+  - Your documents or data sources, such as PDFs, Word files, text files or web pages
+  - The kind of questions you expect people to ask (optional)
+  - A model provider API key, such as one from OpenAI or Anthropic
 you_get:
   - Python code for a document Q&A app
   - An index built from your files
   - Answers with source passages
   - Setup instructions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and call an AI model.
+  - Check that your AI can run Python code, or that Python is set up on your computer. You also need an API key from a model provider.
+  - Install the package with pip install llama-index.
+  - Save your API key as an environment variable. Never paste it into the code.
+  - Put your files in a folder named data.
+  - Run the short starter example from the skill. Ask one question about your files.
+  - Print the source passages for the answer. Check they match what the answer says. If you scrape web pages, get the site owner's permission first.
+output_sample:
+  input:
+    - Your documents, such as PDFs, Word files, text files or web pages
+    - The kind of questions you expect people to ask
+    - A model provider API key, such as one from OpenAI or Anthropic
+  prerequisites:
+    - An AI that can run Python code, or Python set up on your own computer
+    - The llama-index package installed
+    - An API key for an AI model provider
+  output:
+    - name: Install step
+      contains: The pip command that installs the llama-index starter package, or the smaller core package with the parts you pick.
+    - name: Document loader
+      contains: Code that reads your files from a folder, with options for web pages, GitHub and databases.
+    - name: Vector index
+      contains: Code that splits your files into passages and builds a searchable index, which you can save and load again.
+    - name: Query engine
+      contains: Code that takes a question, finds the best passages and returns an answer, with streaming if you want it.
+    - name: Source passages
+      contains: The passages behind each answer, so a person can check where it came from.
+    - name: Chat engine (optional)
+      contains: A version of the question answerer that remembers earlier questions in the same chat.

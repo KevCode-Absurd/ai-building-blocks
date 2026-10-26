@@ -1,51 +1,93 @@
 new_slug: check-a-convertible-note-conversion
 name: Check a convertible note conversion
 headline: Check a convertible note conversion
-summary: Carry the approved interest balance into the actual lower-of conversion election.
+summary: "Check how many shares a convertible note turns into: accrued interest first, then the cap or discount price, whichever is lower."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison. Share signed simple-interest convertible note, funding dates, contractual year fraction, interest conversion rule, approved cap price, round price and an actual lower-of discount clause.
-explain: |-
-  A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison.
+subhead: Give it the signed note, the funding dates, the interest rule, the cap price, the discount and the price of the new round. It works out the accrued simple interest and the balance that converts. It then compares shares at the cap, at the discount and at the round price. You get a conversion table and the lower-of price.
+explain: |
+  A convertible note is a loan that turns into shares when a priced round closes. The number of shares depends on the balance that converts, and on the price. Many notes say the price is the lower of a cap price and a discount to the round price. Founders and investors often work this out in a spreadsheet and get different answers.
 
-  Venture financing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow keeps the steps apart. Step 1 works out simple interest from the funded principal and the contract's dates, and saves the converting balance with its currency and scale. Step 2 takes that balance, confirms the lower-of wording, and compares shares at the cap price, at the discounted round price and at the round price. Share rounding stays open until the agreement is checked.
+
+  It checks arithmetic against the terms you give it. It does not read the note for you and is not legal advice. The issuer's counsel confirms the agreement before anyone relies on the share count.
 when:
-  - You need a sourced accrued-balance-to-shares bridge and cap-versus-discount comparison.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A priced round closed and a note holder asks how many shares they get.
+  - You want to know if the cap or the discount gives more shares.
+  - Interest on the note converts into shares and you need the converting balance.
+  - A lawyer's cap table shows a share count you want to tie out.
+not_for:
+  - Your investment is a SAFE, which has no interest and no maturity. Use the Check a SAFE into priced financing workflow.
+  - The note has no cap, compound interest, interest paid in cash, or other terms. This is built for simple interest and a lower-of cap and discount clause.
+  - You want the whole cap table after the round, with the option pool. This works out one note's shares only.
+  - You want a legal view on what the note says. Ask the issuer's counsel.
 you_give:
-  - Signed simple-interest convertible note, funding dates, contractual year fraction, interest conversion rule, approved cap price, round price and an actual lower-of discount clause.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The signed note: principal, simple interest rate, issue date and funding dates (from the note)"
+  - The year fraction the note uses, such as days over 365 (from the interest clause)
+  - Whether interest converts into shares (from the note)
+  - The cap price and the discount, and the lower-of wording (from the note)
+  - The price per share of the new round (from the round's term sheet)
+  - The conversion date, currency and scale
 you_get:
-  - A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Accrued simple interest, with each funding date shown
+  - The balance that converts, with principal and interest apart
+  - Shares at the cap price, at the discounted round price and at the round price
+  - The price that applies, and how many more shares it gives than the round price
+  - Share rounding left open for the agreement to decide
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach the signed note and the term sheet for the round. Paste the conversion date. Say what the note says about interest converting and share rounding.
+  - After step 1, check that interest uses the note's year fraction and each funding date, and that principal and interest appear apart.
+  - After step 2, check that the lower-of wording is quoted from the note and that the three share counts sit side by side.
+  - Fill every MISSING line, then have the issuer's counsel confirm the agreement before anyone relies on the shares. Nothing here pays, sends or files anything. A person who knows the agreement checks it before anyone acts.
 how_it_works:
   - title: Convertible note interest checker
-    text: Calculate actual simple accrual from funded principal and contractual dates. Save the interest-converting balance with currency and scale; keep share rounding unresolved until the agreement is checked.
+    text: Works out simple interest from funded principal and the contract's dates. Saves the interest-converting balance with its currency and scale. Leaves share rounding open until the agreement is checked.
   - title: Cap and discount conversion checker
-    text: Pass the verified converting balance as amount, converting scale explicitly if necessary. Use the approved cap price and actual round discount, confirm lower-of language and compare resulting shares against round-price shares.
-output_shape: |-
-  A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Takes the verified converting balance as the amount, with its scale. Uses the cap price and the round's discount, confirms the lower-of wording and compares shares against shares at the round price.
+output_shape: |
+  NOTE AND UNITS    <note date>, <conversion date>, <currency>, <scale>
+
+  1 INTEREST        principal <n> x rate <n%> x year fraction <n> = interest <n>
+                    converting balance <n> (principal <n> + interest <n>)
+  2 CONVERSION      cap price <n> -> shares <n>
+                    discount price <n> (round <n> less <n%>) -> shares <n>
+                    round price <n> -> shares <n>
+                    price that applies <cap or discount>, extra shares vs round price <n>
+
+  LOWER-OF WORDING  <quoted from the note, or MISSING>
+  SOURCES, MISSING and CHECKS MISSED  <one line each>
+output_sample:
+  input:
+    - "The signed note: principal, simple rate, issue and funding dates"
+    - The year fraction and whether interest converts into shares
+    - The cap price, the discount and the lower-of wording
+    - The price per share of the new round
+  prerequisites:
+    - The signed note and the term sheet for the priced round
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: 1 INTEREST
+      contains: Accrued simple interest from each funding date, and the converting balance with principal and interest apart.
+    - name: 2 CONVERSION
+      contains: Shares at the cap price, the discounted round price and the round price, side by side.
+    - name: Price that applies
+      contains: The lower-of price, with the wording quoted from the note and the extra shares versus the round price.
+    - name: SOURCES
+      contains: Each input with its source and date, and the currency and scale used.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap, the open share rounding, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Convert only interest the note permits and use an independently checked cap price, not a guessed valuation denominator.
+  - what: A lower cap
+    how: Lower the cap price. More shares convert at the cap, and the page shows the gap to the discount price.
+  - what: A second funding date
+    how: Add a later tranche. Interest runs from each date, and the table shows each tranche apart.
+  - what: Interest paid in cash
+    how: Say interest is paid in cash, not converted. Only principal converts and the page notes the change.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab.
 judge:
   - Convert only interest the note permits and use an independently checked cap price, not a guessed valuation denominator.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +98,31 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each note's key terms in one line (rate, year fraction, cap, discount, lower-of wording), and paste it in every run.
+  - Save the conversion table next to the counsel's confirmation, so you can show what was checked and by whom.
+  - Pair it with the Option pool top-up checker when the round also changes the option pool.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: The signed note and term sheet
+      why: They hold the exact wording on interest, cap and discount. A summary can drop a clause.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The funding dates and amounts from the company's records.
+    - The round's term sheet or closing statement.
+    - The issuer's counsel, to confirm the agreement.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Convertible note
+    meaning: A loan that turns into shares when a priced funding round closes.
+  - term: Cap price
+    meaning: A ceiling on the price per share at which the note converts.
+  - term: Discount
+    meaning: A reduction on the round's share price that rewards early investors.
+  - term: Lower-of
+    meaning: The note converts at whichever price is lower, the cap or the discounted round price.
+  - term: Year fraction
+    meaning: The part of a year used to count interest, such as days over 365.
+before: []
+next:
+  - check-a-safe-into-priced-financing
+  - option-pool-top-up-checker

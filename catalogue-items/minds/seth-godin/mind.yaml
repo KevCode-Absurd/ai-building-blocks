@@ -16,6 +16,30 @@ use_cases:
   - "Get a stuck project out the door when fear keeps pushing the launch back"
   - "Build a small community around a shared goal and help its members connect"
   - "Stop waiting for a gatekeeper and start the project yourself"
+not_for:
+  - "You need fast reach for a brand nobody knows yet: use the Byron Sharp mind, who works from buying data and broad reach."
+  - "You want a clear category and a place in buyers' minds: use the Al Ries mind."
+  - "You need a sharp pitch that tells the right buyers why to choose you: use the April Dunford mind."
+output_sample:
+  input:
+    - Your product, service or stuck project, in a few lines
+    - Who buys from you now, if anyone
+    - How people join your email list, if you have one
+    - What your work promises and what has kept it from shipping
+    - Your launch date and budget (optional)
+  output:
+    - name: The pattern under your problem
+      contains: A short name for what is really going on, such as no clear audience or fear holding back a launch.
+    - name: Questions for you
+      contains: A few pointed questions, such as who it is for and whether anyone would miss it.
+    - name: Permission check
+      contains: Whether people asked to hear from you and what your first email promises.
+    - name: Dip or dead end
+      contains: A view on whether to push through or quit, if your project has stalled.
+    - name: Smallest version to ship this week
+      contains: One small step you can take now, with the choice handed back to you.
+    - name: Where the advice is thin
+      contains: A note on what falls outside his public record and the critics' view that reach matters for unknown brands.
 seats:
   - {seat: "Remarkable products and tribes", asks: "Who is this for, and would they miss it if it were gone?"}
   - {seat: "Permission and trust", asks: "Did these people ask to hear from us, and would they complain if we stopped?"}

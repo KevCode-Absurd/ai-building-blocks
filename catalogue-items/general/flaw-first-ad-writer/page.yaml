@@ -1,6 +1,6 @@
 new_slug: flaw-first-ad-writer
 name: "Flaw-first ad writer"
-summary: "Paste your product and its real weaknesses. Get a full ad and hooks that name the flaw first and turn it."
+summary: "Write an ad that names your product's real flaw first, then shows what it proves. Give it your facts and brief. You get ad copy and hooks."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It must judge which weakness buyers already see and whether the product really backs the turn."
@@ -17,6 +17,10 @@ when:
   - Your ads sound like every rival's and nobody remembers them.
   - You have a known weakness, such as a small size, a high price or a slow process, and you tend to hide it.
   - Reviews keep mentioning the same drawback and you want to answer it in the ad.
+not_for:
+  - "Your product has no real weakness buyers notice: write a plain benefit ad with the Ad first line writer and scorer instead."
+  - "You need to check claims before you publish: use the Claim and proof matcher, then the Meta ads compliance checker."
+  - "The flaw is unsafe or unlawful to sell: fix the product or ask a compliance adviser. Do not put it in an ad."
 
 you_give:
   - A brief with the buyer and the one point to make
@@ -35,6 +39,29 @@ how_to_use:
   - Say which weaknesses you already know about. Do not hide the awkward ones.
   - Read the chosen weakness and check it is one buyers truly notice.
   - Test the best two lines against your current ad.
+output_sample:
+  input:
+    - "Your brief: who the buyer is and the one point the ad must make"
+    - Your product facts, including what it does badly
+    - Customer reviews or return reasons (optional)
+    - Rival ads (optional)
+  output:
+    - name: True weaknesses
+      contains: Each real weakness in a line, with its source such as a fact, a review or a return reason.
+    - name: The one we use
+      contains: The weakness buyers already see, why it was chosen, and what it shows about the product.
+    - name: Flat claim
+      contains: The plain, true statement of what the product offers, before any flaw-first wording.
+    - name: Flaw-first ads
+      contains: Three to five ads that name the flaw first, each with the product fact that backs it.
+    - name: Hooks
+      contains: Five short opening lines built on the same turn, for use in other formats.
+    - name: Picture note
+      contains: One sentence on what the visual should show so it matches the words.
+    - name: Missing
+      contains: Facts still needed, marked MISSING, so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check still failing and why, or none.
 
 how_it_works:
   - title: Lists true weaknesses

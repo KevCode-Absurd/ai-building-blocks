@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It lays out content you already approved, then runs set checks.
 new_slug: research-poster-builder
 name: Research poster builder
-summary: Give it your approved text and images. Get an editable PowerPoint
-  poster at print size, checked for access and file safety.
+summary: Build an editable PowerPoint research poster at print size from text you approved. It is checked for access and file safety before print.
 job: work-with-files
 headline: Research poster builder
-subhead: Give it your approved text and images. Get an editable PowerPoint
-  poster at print size, checked for access and file safety. Bring approved
-  poster text. Use the result to plan your next step.
+subhead: Give it your approved poster text, images and print rules. It builds an editable one-slide PowerPoint poster at print size. It then checks the file for layout, access and safety, and stops if anything is unresolved.
 explain: |
   An editable PowerPoint poster at print size, built only from text and images you approved, and checked for accessibility and file safety. You can still change it in PowerPoint afterward.
 
@@ -18,6 +15,10 @@ when:
   - Your department only accepts PowerPoint posters.
   - You want a poster checked for accessibility before print.
   - Co-authors must approve the exact wording.
+not_for:
+  - "You have no approved text, figures or sources yet: get your co-authors to sign off the wording first, then come back."
+  - "You need a PDF-only poster or a poster built from a template: use your printer's template or your own design tool."
+  - "You want your AI to write or fix the science: ask a co-author or your supervisor, because this tool only lays out exact approved text."
 you_give:
   - Approved poster text
   - Figures and images
@@ -30,8 +31,37 @@ you_get:
   - Record of the approved content
   - List of unresolved items
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Check that you have approved text, images with licences, your conference size and your printer's rules. If not, stop and get them first.
+  - "Open an AI that can run code and save files. Install Python 3.10 or newer, uv, and the three pinned packages: python-pptx 1.0.2, Pillow 12.3.0 and lxml 6.1.3."
+  - Copy the manifest template and fill in your text, images, sources and print rules. Your AI can help with the layout of the file.
+  - Run the validator to get the content hash. Ask your co-authors to approve that exact version, then add the approval and hash to the manifest.
+  - Run the image, colour and export checks. Then generate the poster, and run the file safety and layout checks.
+  - Open the poster in PowerPoint and run its accessibility check. Test every QR code, then get author sign-off and a printer proof before you print.
+output_sample:
+  input:
+    - Your approved poster text, with a source record for each claim
+    - Your figures and images as local PNG or JPEG files
+    - Author, funding and licence details for each image
+    - Your conference poster size and your printer's rules
+  prerequisites:
+    - An AI that can run code and save files
+    - Python 3.10 or newer, and uv
+    - The packages python-pptx 1.0.2, Pillow 12.3.0 and lxml 6.1.3
+    - Author approval tied to the manifest content hash
+  output:
+    - name: poster.json
+      contains: "Your manifest: every text block, image, source and print rule, with the approval and its content hash."
+    - name: poster.assets.json
+      contains: A list of each image with its hash, metadata check and effective DPI at final size.
+    - name: poster.palette.json
+      contains: Contrast results for your colour pairs, plus a check that colour is never the only cue.
+    - name: poster.export-plan.json
+      contains: Size, scale, font, colour and export checks to settle before you print.
+    - name: poster.pptx
+      contains: An editable one-slide PowerPoint poster at the approved canvas size, with alt text and reading order.
+    - name: poster.generation.json
+      contains: A report of what the generator built and any blockers it found.
+    - name: poster.package.json
+      contains: "The file safety check: no macros, no external links, no embedded objects."
+    - name: poster.layout.json
+      contains: Checks for shapes out of bounds, overlaps, reading order and final font size.

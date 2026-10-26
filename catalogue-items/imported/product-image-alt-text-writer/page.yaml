@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes a short line per image.
 new_slug: product-image-alt-text-writer
 name: Product image alt text writer
-summary: Point it at your product images. Get alt text set on each, so AI knows
-  what they show. Changes live files.
+summary: Write product image alt text for your Shopify store. It finds blank or file-name alt text, writes a short line for each image, and saves it after you approve.
 job: build-websites
 headline: Product image alt text writer
-subhead: Clear alt text on every product image, so AI tools know what each one
-  shows. Shopping agents cannot see pixels. They read the alt text to judge
-  color, material and style, and a file name like IMG2931 tells them nothing.
+subhead: Clear alt text on every product image, so AI tools know what each one shows. Shopping agents cannot see pixels. They read the alt text to judge color, material and style, and a file name like IMG2931 tells them nothing.
 explain: |
   Clear alt text on every product image, so AI tools know what each one shows. Shopping agents cannot see pixels. They read the alt text to judge color, material and style, and a file name like IMG_2931 tells them nothing.
 
@@ -18,6 +15,10 @@ when:
   - Alt text on your store is just file names.
   - You want visual searches like "red linen midi dress" to find your items.
   - You are making your store more accessible for screen readers.
+not_for:
+  - Your alt text is already accurate and specific, so leave it alone.
+  - You sell art, or images where a person must describe fine detail or meaning. Ask a human writer.
+  - Your store is not on Shopify. Write the alt text by hand in your own site editor.
 you_give:
   - Your store domain
   - Which products or images to cover
@@ -29,8 +30,28 @@ you_get:
   - Alt text saved to your store after approval
   - A summary of how many were updated
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Open an AI that can run Shopify CLI commands and sign in to your store.
+  - Paste this skill and give your store domain. Add a collection or tag if you want a smaller run.
+  - Ask for a dry run first. Nothing is saved on a dry run.
+  - Read the preview table. Fix any line that is wrong or vague.
+  - Approve the run. Your AI saves the alt text to your live images.
+  - Keep the option to rewrite existing alt text off at first. That change cannot be undone in bulk.
+output_sample:
+  input:
+    - Your store domain
+    - A collection or product tag to limit the run (optional)
+    - Whether to also rewrite file-name alt text (optional)
+    - A maximum length for each line (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - A signed-in Shopify CLI session for your store
+    - Permission to read products and write products and files
+  output:
+    - name: Preview table
+      contains: Each image with its proposed alt text, shown before anything is saved.
+    - name: Updated alt text
+      contains: New alt text saved to your live product images in batches of up to 25.
+    - name: Outcome summary
+      contains: How many images were updated or skipped, and how many errors came up.
+    - name: CSV of changes
+      contains: One row per image with the product, image id, old alt text and new alt text.

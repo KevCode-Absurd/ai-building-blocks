@@ -10,13 +10,62 @@ metadata:
 
 Comprehensive HR analytics support — from defining HR metrics and building dashboards to analyzing turnover, developing predictive models, managing data governance, and reporting to leadership.
 
+## Steps for a leadership report
+
+1. Ask what decisions leaders must make in the next 3 to 6 months. If the person has no answer, ask once, then suggest three common ones (keep people, hire faster, control cost) and let them pick. Do not start with metrics.
+2. Pick 5 to 8 metrics that answer those decisions. For each, give a one-line definition and formula in words (for example, "turnover rate = people who left in the period / average headcount in the period"). Say who owns the number.
+3. Check the data the person gave. List what each metric needs, what is missing, and what looks wrong (duplicates, blank dates, different team names for the same team). Do not fill gaps with made-up numbers.
+4. Lay out a dashboard for each reader (executive, HR, recruiter): which metrics, which chart type, how often it updates. Keep each to one screen.
+5. If the person gave turnover data, look for patterns by team, tenure and level, and list 2 or 3 likely causes to check. Say which are guesses until someone talks to the teams. Show patterns by group, not by named person.
+6. Draft the monthly report: a one-paragraph summary, the metrics table, 2 or 3 things that changed and why, and 2 or 3 actions with owners.
+7. Add data rules: who may see what, how long data is kept, and a monthly data quality check.
+8. Finish with "Before you share": what HR, legal or the data owner must check.
+
+## Rules for people data
+
+- Use only the data the person gives. Do not add outside benchmarks. If one is wanted, ask for a source, or label it "estimate, check before use".
+- Do not build or run flight-risk or other predictive models on named employees. Explain that this needs consent, a privacy check (such as GDPR where it applies) and fairness testing first, and offer group-level patterns instead.
+- Do not show figures for groups of fewer than 5 people.
+- Diversity and pay findings point to patterns to look into. HR and legal review them before anyone acts.
+
+## Output
+
+```markdown
+## HR metrics pack: <company or team>
+
+### Decisions this pack supports
+- <decision>
+
+### Metrics
+| Metric | Definition | Formula in words | Owner | Data needed |
+|--------|------------|------------------|-------|-------------|
+
+### Data check
+- <what is missing or wrong>
+
+### Dashboard layout
+| Reader | Metrics | Chart | Update |
+|--------|---------|-------|--------|
+
+### Turnover findings (if data given)
+<patterns by group, likely causes to check, what is a guess>
+
+### Monthly report template
+<summary, table, what changed, actions with owners>
+
+### Data rules
+<access, keeping, monthly quality check>
+
+### Before you share
+- <who checks what>
+```
+
 ## Supported tasks
 
 - Analyzing employee data and turnover patterns
 - Creating HR metrics, scorecards, and dashboards
 - Building HR reports and data visualizations
 - Conducting HR data quality audits
-- Developing predictive analytics and workforce models
 - Developing HR data governance and privacy strategies
 - Analyzing talent acquisition ROI
 - Writing HR audit reports and data management policies
@@ -25,18 +74,19 @@ Comprehensive HR analytics support — from defining HR metrics and building das
 
 ## Key prompts
 
+Use these for one task at a time. The folders `prompts/` and `examples/` hold longer versions.
+
 ### HR metrics and scorecards
 
 1. "What are the most important HR metrics for measuring [recruiting/retention/engagement/L&D] effectiveness?"
 2. "Help me design an HR scorecard that tracks [key metrics] aligned with our business strategy."
 3. "What KPIs should I include in a monthly HR dashboard for senior leadership?"
 4. "How should I define and calculate [specific metric, for example, time-to-fill, turnover rate, cost-per-hire]?"
-5. "What are the industry benchmarks for [HR metric] in [industry/company size]?"
 
 ### Data analysis and reporting
 
 1. "How should I analyze our employee turnover data to identify the primary drivers of attrition?"
-2. "What patterns in employee data indicate a high flight risk, and how should I act on them?"
+2. "What patterns in team-level data suggest people may be more likely to leave, and how should I act on them?"
 3. "Help me analyze our employee satisfaction survey results to identify the top 3 priorities for improvement."
 4. "How can I create a monthly HR report for leadership that tells a compelling story with data?"
 5. "Write an HR audit report template that covers [key HR processes/compliance areas]."
@@ -45,40 +95,26 @@ Comprehensive HR analytics support — from defining HR metrics and building das
 
 1. "What should be included in an HR analytics dashboard for a [CHRO/HR business partner/recruiter]?"
 2. "How should I design data visualizations that make HR insights easy to understand for non-HR audiences?"
-3. "What are best practices for creating an employee engagement dashboard that tracks trends over time?"
-4. "How can I design an HR reporting template that is consistent, scalable, and meaningful?"
-
-### Predictive analytics
-
-1. "How can I build a predictive attrition model using our employee data to identify at-risk employees?"
-2. "What data inputs are most valuable for building a predictive staffing/hiring model?"
-3. "How can I use predictive analytics to forecast workforce needs for the next 12-24 months?"
-4. "What machine learning approaches are most applicable to HR analytics use cases?"
-5. "How should I develop workforce segmentation strategies to identify different employee personas?"
+3. "How can I design an HR reporting template that is consistent, scalable, and meaningful?"
 
 ### Data governance and privacy
 
 1. "What should a comprehensive HR data governance strategy include for our organization?"
 2. "How can I develop HR data standardization procedures that ensure data quality and consistency?"
-3. "What are the key components of an HR data privacy policy that complies with GDPR and relevant regulations?"
-4. "How should we manage access to sensitive HR data to ensure security and compliance?"
-5. "Write an HR data management policy that governs how employee data is collected, stored, and used."
-6. "What are best practices for conducting an HR data quality audit?"
+3. "How should we manage access to sensitive HR data to ensure security and compliance?"
+4. "What are best practices for conducting an HR data quality audit?"
 
 ### Talent acquisition and D&I analytics
 
 1. "How can I conduct a talent acquisition ROI analysis that demonstrates the value of our recruiting investments?"
 2. "What metrics should I track to evaluate the effectiveness of our sourcing channels?"
 3. "How can I use data to identify which interview stages have the highest drop-off rates in our funnel?"
-4. "Write an analysis framework for measuring the quality of hire from different sources."
-5. "How can I create a diversity and inclusion scorecard that tracks representation and inclusion metrics?"
-6. "How can I use HR data to identify potential equity gaps in hiring, promotion, and pay?"
-7. "Write a workforce analytics case study template for a D&I initiative that demonstrates impact."
+4. "How can I create a diversity and inclusion scorecard that tracks representation and inclusion metrics?"
 
 ## Tips
 
 - Start with business questions, not data — identify the decisions you need to support before choosing metrics.
 - Prioritize data quality over volume — a few accurate, consistent metrics are more valuable than many unreliable ones.
 - Combine quantitative data with qualitative insights (survey comments, focus groups) for richer analysis.
-- Visualize data to tell a story — use trends, comparisons, and benchmarks rather than raw numbers.
+- Visualize data to tell a story — use trends and comparisons rather than raw numbers.
 - Protect employee privacy in all analytics work — anonymize data and obtain proper consent.

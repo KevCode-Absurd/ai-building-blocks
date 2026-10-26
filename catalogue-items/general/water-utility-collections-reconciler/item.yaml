@@ -1,17 +1,15 @@
 slug: water-utility-collections-reconciler
 name: Water utility collections reconciler
-summary: A water billing, collection and receivables bridge
+summary: Turn water produced, water billed, your rate and your receipts into closing receivables. See what you billed, collected and still need to collect.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

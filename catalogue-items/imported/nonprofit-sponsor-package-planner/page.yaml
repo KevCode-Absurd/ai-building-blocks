@@ -2,16 +2,32 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-sponsor-package-planner
 name: Nonprofit sponsor package planner
-summary: Share your event, audience, and benefits. Get sponsor tiers, pitch copy, and a promise-tracking checklist.
+summary: "Plan your nonprofit sponsor package: price tiers, write a pitch for each prospect, and track every promised benefit. Give it your event facts."
 job: sell-and-negotiate
 headline: Nonprofit sponsor package planner
-subhead: Share your event or program, audience facts, available benefits, and sponsorship goal. It builds clear price tiers and a pitch for each prospect. You get a sponsor package, tailored pitch, delivery checklist, and renewal plan. Finance reviews any tax questions.
+subhead: Give it facts about your event or program, your audience and the benefits you can offer. It builds priced sponsor tiers and a pitch for each prospect. You also get a checklist to track every promise and a plan to win renewals.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - You are building sponsor tiers for a gala, 5K or other event.
+  - You are not sure what to charge for your top sponsor spot.
+  - You need a pitch for one company that fits their brand.
+  - A sponsor asks for an extra perk and you need to know if it fits their tier.
+  - You want to plan renewal asks for next year.
+not_for:
+  - "You want grant money from a foundation or the government: use nonprofit-grant-research."
+  - "You need the event budget or event logistics: use nonprofit-fundraising-events."
+  - "You need final tax advice on sponsor deductions or UBIT: ask your finance lead or a tax adviser."
 you_give:
-  - Event or program facts, audience evidence, benefits available, existing sponsor promises, and funding goal.
+  - Your event or program facts, such as name, date and place.
+  - Your audience facts, such as attendee count, email list size and social followers.
+  - The benefits you can offer, such as logo spots, tickets and stage mentions.
+  - Promises you already made to current sponsors (optional).
+  - Your funding goal.
 you_get:
-  - Sponsor tiers, pitch copy, a benefits checklist, and a renewal outline.
+  - A sponsor tier grid with prices and benefits for each tier.
+  - A pitch for each prospect with one clear tier ask.
+  - A fulfillment checklist with benefit, owner, due date and proof.
+  - A renewal outline that leads with what you delivered.
+  - Notes for your finance lead on tax questions.
 how_it_works:
   - title: Build the tier grid
     text: List real benefits and price each tier. Reserve scarce benefits such as naming rights and category exclusivity.
@@ -26,5 +42,31 @@ works_best_with:
   inputs:
     - Benefit tiers touch the sponsorship-vs-advertising line and UBIT.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text, then add your event facts, audience facts, benefits and goal.
+  - Ask for the tier grid first. Check that each lower tier is a clearly smaller bundle.
+  - Name a prospect and ask for a pitch with one specific tier ask.
+  - Ask for the fulfillment checklist and keep it up to date during the event.
+  - Show the tier benefits to your finance lead before you send anything. Some benefits can bring tax questions, such as UBIT, a tax on income unrelated to your mission.
+output_sample:
+  input:
+    - Your event or program facts, such as name, date and place
+    - Your audience facts, such as attendee count and email list size
+    - The benefits you can offer sponsors
+    - Promises you already made to any sponsor (optional)
+    - Your sponsorship funding goal
+  prerequisites:
+    - A chat AI where you can paste text or add files
+  output:
+    - name: Sponsorship prospectus
+      contains: A tier grid with a price and a clear list of benefits for each tier, set side by side.
+    - name: Custom pitch
+      contains: A short pitch for one named prospect, tied to their business, with one specific tier ask.
+    - name: Sponsorship agreement outline
+      contains: Payment terms, what each side owes, logo use rights and a cancellation and refund clause.
+    - name: Fulfillment checklist
+      contains: Each promised benefit with an owner, a due date and the proof to collect.
+    - name: Renewal packet
+      contains: Proof of what you delivered last cycle, plus next year's ask, timed ahead of the decision.
+    - name: Finance review flags
+      contains: Notes on where benefits may raise tax questions, including UBIT, for your finance lead to check.

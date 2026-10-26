@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a clear pattern and matches tone to payment history.
 new_slug: unpaid-invoice-chaser
 name: Unpaid invoice chaser
-summary: Give it your unpaid invoices. Get a reminder for each, gentle or firm
-  to suit the customer. Nothing sends alone.
+summary: Find who owes you money. Give it your unpaid invoices and get a reminder for each, gentle or firm to suit the customer. Nothing sends alone.
 job: track-numbers
 headline: Unpaid invoice chaser
-subhead: A reminder for every overdue invoice, written to suit the customer, and
-  nothing is sent until you say so. Good payers get a gentle nudge.
+subhead: A reminder for every overdue invoice, written to suit the customer, and nothing is sent until you say so. Good payers get a gentle nudge.
 explain: |
   A reminder for every overdue invoice, written to suit the customer, and nothing is sent until you say so. Good payers get a gentle nudge. Repeat late payers get a firm one.
 
@@ -15,9 +13,12 @@ explain: |
 when:
   - You want to know who owes you money right now.
   - You dread writing the same reminder email again.
-  - You want firm wording for a repeat late payer and soft wording for a good
-    client.
+  - You want firm wording for a repeat late payer and soft wording for a good client.
   - You need to avoid chasing invoices that were just paid.
+not_for:
+  - "The invoice is disputed, or the customer is in legal talks or on a payment plan: call them yourself or ask your accounts team."
+  - "You want to know if you can cover payroll: use a payroll check or cash forecast first, then chase."
+  - "You have no list of overdue invoices and no accounting tool: pull the list from your books by hand first, or upload it as a CSV."
 you_give:
   - Access to your accounting tool
   - Payment tools such as PayPal or Stripe (optional)
@@ -29,10 +30,29 @@ you_get:
   - Tone-matched reminder drafts
   - Drafts queued for your approval
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open your AI and paste in this skill. Connect your accounting tool, or have your overdue invoice list as a CSV ready.
+  - Connect PayPal, Stripe or Airwallex if you use them. This helps it spot customers who just paid. Connect Gmail or Microsoft 365 so drafts can be queued.
+  - "Ask: who owes me money. It pulls overdue invoices and scores each customer by payment history."
+  - Read the summary table and every draft. Check any customer marked possibly paid before you chase them.
+  - Reply send these to approve the batch, or ask for changes. Any change after approval starts a new round.
+  - If you used a CSV and no mail connection, copy each reminder and send it yourself.
+output_sample:
+  input:
+    - Your overdue invoices from your accounting tool, or a CSV of your aged receivables
+    - Your payment tools such as PayPal or Stripe (optional)
+    - Your mail choice, Gmail or Microsoft 365 (optional)
+    - Your approval before anything is sent
+  prerequisites:
+    - An AI connected to your accounting tool (Xero, QuickBooks, MYOB, NetSuite or Zoho Books), or a CSV upload instead
+    - A Gmail or Microsoft 365 connection if you want drafts queued in your mailbox
+  output:
+    - name: Summary table
+      contains: Each customer with amount due, days late, tone chosen and how the reminder will go out.
+    - name: Possibly paid flags
+      contains: Customers with a recent payment in another tool, held back from reminders so you can check them.
+    - name: Reminder drafts
+      contains: One email per customer in your voice, gentle for good payers and firm for repeat late payers.
+    - name: Pay links
+      contains: A pay link in the email where one exists, such as an Airwallex link.
+    - name: Run report
+      contains: What was sent, what was queued as a draft, and what was flagged and left out.

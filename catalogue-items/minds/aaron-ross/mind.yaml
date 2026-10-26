@@ -16,6 +16,29 @@ use_cases:
   - "Work out the cost and likely return of hiring a dedicated prospector"
   - "Find out why a team keeps missing prospecting targets"
   - "Plan how to grow your average deal size instead of doing more small deals"
+not_for:
+  - "You need to ask better questions to uncover a buyer's problem: use the Neil Rackham mind instead."
+  - "You want daily prospecting habits and ways to handle rejection: use the Jeb Blount mind instead."
+  - "You sell to consumers, or in a market built on relationships: talk to a sales coach who knows your market, since his ideas fit business-to-business products best."
+output_sample:
+  input:
+    - Your current sales roles and who does what
+    - Your ideal customer, in one sentence if you can
+    - Your recent results, such as new deals or qualified opportunities
+    - What you have already tried (optional)
+  output:
+    - name: Who does what
+      contains: A check of who qualifies leads, prospects, closes and manages accounts, and where one person is doing too much.
+    - name: Niche check
+      contains: Questions on whether you can name one customer type with one pain, and how many paying customers came to you cold.
+    - name: Numbered plan
+      contains: A short list of steps to try this week, such as giving one person the job of prospecting.
+    - name: First message rewrite
+      contains: A shorter, polite opener that asks who the right person is instead of pitching.
+    - name: Numbers to track
+      contains: Results to count, such as qualified opportunities the closers accept, instead of calls made.
+    - name: Rules of thumb and timing
+      contains: The 20 percent rule, starting with two people, and 6 to 12 months before regular revenue.
 seats:
   - {seat: "Predictable pipeline", asks: "Where will next quarter's new deals come from, and who is working only on that?"}
   - {seat: "Specialist roles", asks: "Are our closers stuck prospecting or answering inbound leads? Who should take that off them?"}

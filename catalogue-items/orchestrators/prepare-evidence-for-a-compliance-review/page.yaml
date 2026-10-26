@@ -1,53 +1,86 @@
 new_slug: prepare-evidence-for-a-compliance-review
 name: Prepare evidence for a compliance review
 headline: Prepare evidence for a compliance review
-summary: Share the source files. Get an evidence index, gap list and owner-based preparation plan.
+summary: "Prepare evidence for a compliance review: get an evidence index, a gap list and a plan with owners and due dates. Readiness, not certification."
 job: check-contracts
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An evidence index, gap list and owner-based preparation plan. Share the review scope, applicable framework supplied by your reviewer, controls and existing evidence. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the review scope, the framework your reviewer uses and the evidence you hold. It turns the scope into control questions, matches each to a file and lists the gaps with an owner and a date. You get an evidence index, a gap list and a preparation plan.
 explain: |-
-  An evidence index, gap list and owner-based preparation plan.
+  Before a compliance review, the usual problem is not the controls. It is finding the proof, in the right form and the right date range. This workflow helps you prepare evidence for a compliance review so you know what you have, what is missing and who will fetch it.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every claim links to dated evidence; missing evidence is a gap, and readiness is never called certification. Missing tools or evidence stay visible in the final summary.
+  The Compliance readiness checklist builder turns your scope into control questions, each with the proof it needs. The Spreadsheet checker builds an evidence register and checks IDs, scope and dates. A filled cell is not proof, and it says so. The Executive action register keeper then turns each gap into an action with an owner, a due date and a dependency.
+
+  The framework comes from your reviewer, not from guesswork. The result says whether you look ready for review, never that you are compliant or certified. Your reviewer decides that.
 when:
-  - You need an evidence index, gap list and owner-based preparation plan.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - An auditor or customer has announced a review and you have a few weeks.
+  - Your proof sits in email, shared drives and people's heads.
+  - You need to tell the team who owes what before the review date.
+  - A past review found gaps and you want to show they are closed.
+not_for:
+  - You are still deciding which framework to follow. Use the Compliance readiness checklist builder on its own.
+  - You are planning an HR audit with file sampling. Use the HR compliance audit planner.
+  - You need to answer a customer's security questions. Use Prepare a vendor security questionnaire response.
 you_give:
-  - The review scope, applicable framework supplied by your reviewer, controls and existing evidence.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - "The review scope: systems, teams and the period under review"
+  - The framework or control list your reviewer uses (from their request)
+  - The evidence you already hold, as files or a list with dates
+  - The review date and the reviewer's name (optional)
+  - The people who own each area (optional)
 you_get:
-  - An evidence index, gap list and owner-based preparation plan.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - Control questions, each with the proof it needs
+  - "An evidence register: control, file, date, scope and status"
+  - "A gap list: what is missing, out of date or out of scope"
+  - A preparation plan with an owner, due date and dependency for each gap
+  - A readiness note and any MISSING lines
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give the whole folder to Claude, ChatGPT or Gemini. A spreadsheet-capable AI gives a workbook. Plain chat gives tables.
+  - Attach the scope, the reviewer's framework text and a list of your evidence files with dates.
+  - Check the control questions against your reviewer's own list. Add any control they named that is missing.
+  - Check the evidence register. A file counts only if its date is inside the review period and it covers the right system.
+  - Send the plan to the owners and ask them to confirm dates. Run it again when new evidence arrives.
 how_it_works:
   - title: Compliance readiness checklist builder
-    text: Turn the supplied review scope into control questions and required evidence.
+    text: "Turns the supplied scope into control questions and the evidence each needs. Hands step 2 the questions with proof types. Check before moving on: every control from the reviewer's framework appears once."
   - title: Spreadsheet checker
-    text: Build a reviewable evidence register from the checklist and source records; verify IDs, scope, evidence dates and gaps without treating a populated cell as proof of compliance.
+    text: "Builds the evidence register from the checklist and your records. Checks control IDs, scope and evidence dates, and treats a filled cell as a claim, not proof. Hands step 3 the gaps. Check before moving on: no row passes on a date outside the period."
   - title: Executive action register keeper
-    text: Create an evidence-gathering plan with owners, due dates and dependencies.
+    text: "Turns each gap into an action with an owner, due date and dependency. Hands back the preparation plan. Check before moving on: every gap has one owner, or is marked MISSING: owner."
 output_shape: |-
-  Scope and source coverage
-  An evidence index, gap list and owner-based preparation plan.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE        <systems, period, framework, reviewer>
+  REGISTER     <control id> | <question> | <file> | <date> | <in scope?> | <status>
+  GAPS         <control> | <what is missing or stale> | <risk to the review>
+  PLAN         <action> | <owner> | <due date> | <depends on>
+  READINESS    <ready, partly ready or not ready> and why
+  SOURCES      <each file and date>
+  MISSING      <each gap and what it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - "The review scope: systems, teams and period"
+    - The framework or control list your reviewer uses
+    - The evidence you already hold, with dates
+    - The people who own each area (optional)
+  prerequisites:
+    - An AI that can read files, and make spreadsheets for a workbook register
+  output:
+    - name: Control questions
+      contains: Each control from the framework as a question, with the proof it needs.
+    - name: Evidence register
+      contains: Each control matched to a file, with its date, scope and status.
+    - name: Gap list
+      contains: Controls with missing, stale or out-of-scope proof, and the risk to the review.
+    - name: Preparation plan
+      contains: One action per gap with an owner, due date and dependency.
+    - name: Hand-back note
+      contains: A readiness statement, MISSING lines and checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every claim links to dated evidence; missing evidence is a gap, and readiness is never called certification.
+  - what: One area
+    how: Pick one system or team for this run. The register stays small enough to check by hand.
+  - what: A closing review
+    how: Attach the earlier findings. Each finding becomes a row that needs new proof of the fix.
+  - what: Owner names
+    how: List who owns each area. The plan then names real people, not roles.
 judge:
   - Every claim links to dated evidence; missing evidence is a gap, and readiness is never called certification.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,16 +93,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep evidence in one dated folder named by control so the next review starts from current files.
+  - Save the register and update it each quarter, not only before a review.
+  - Record any check that needs a person, such as an access review sign-off, and finish it before the reviewer arrives.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet-capable AI
+      why: It can build and reopen a real evidence register. In plain chat you get the same register as text.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The reviewer's own request list or framework text.
+    - A list of evidence files with their dates.
 terms:
+  - term: Control
+    meaning: A rule or safeguard the review checks, such as removing access when someone leaves.
+  - term: Evidence register
+    meaning: A table that links each control to the file that shows it works.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result of one step, passed to the next.

@@ -1,15 +1,13 @@
 slug: factoring-cashflow-timing-bridge
 name: Factoring cash-flow timing bridge
-summary: Reconcile reported operating cash with receivable-sale advances and customer receipts received by a factor.
+summary: "Show how much of reported operating cash came early from selling invoices to a factor. Get an adjusted cash figure next to the reported one."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -33,3 +31,6 @@ credits:
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
 package_files: all
+before: []
+next: [noncash-working-capital-bridge, supplier-finance-leverage-bridge, receivables-allowance-movement-bridge]
+needs_mode: manual

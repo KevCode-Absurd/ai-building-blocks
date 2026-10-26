@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Control choice depends on classification and many notes.
 new_slug: australia-gov-security-check
 name: Australian government security checker
-summary: Describe your system and its data level. Get which ISM controls apply,
-  your gaps and what assessors will ask.
+summary: Check which Australian ISM security controls apply to your system, find your gaps and see what an IRAP assessor will ask for.
 job: check-contracts
 headline: Australian government security checker
-subhead: "An answer to which Australian Government security rules apply to your
-  system, and where you fall short. Say what you run, where it is hosted and how
-  sensitive the data is, such as OFFICIAL: Sensitive."
+subhead: "An answer to which Australian Government security rules apply to your system, and where you fall short. Say what you run, where it is hosted and how sensitive the data is, such as OFFICIAL: Sensitive."
 explain: |
   An answer to which Australian Government security rules apply to your system, and where you fall short. Say what you run, where it is hosted and how sensitive the data is, such as OFFICIAL: Sensitive. The AI maps this to the Information Security Manual (ISM) from the Australian Signals Directorate.
 
@@ -18,6 +15,10 @@ when:
   - You are preparing for an IRAP assessment.
   - Your cloud system needs authorisation to hold government data.
   - You need security documents that cite the right ISM controls.
+not_for:
+  - "You need an official IRAP result: hire an accredited IRAP assessor, because this gives guidance only."
+  - "Your site holds only public, unclassified content: you likely don't need ISM controls, so check the PSPF or ask your security lead."
+  - "You need legal advice on a contract or law: ask a qualified lawyer."
 you_give:
   - A description of the system and hosting
   - The data classification level
@@ -29,7 +30,27 @@ you_get:
   - An authorisation pathway
   - What assessors will ask for
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or paid tool is needed.
+  - "Describe your system, where it is hosted and the data level, such as OFFICIAL: Sensitive. If you skip the level, the AI assumes OFFICIAL: Sensitive."
+  - Say your role, such as agency or supplier. Add your current controls and documents if you have them.
+  - "Say what you want: a gap table, an authorisation plan, an IRAP checklist or a security document."
+  - Check the ISM release the answer names. Confirm every control number and date on cyber.gova.au before it goes into any document. This is guidance, not an IRAP result or legal advice.
+output_sample:
+  input:
+    - A short description of your system and where it is hosted
+    - "The data level, such as OFFICIAL: Sensitive"
+    - Your current controls and documents (optional)
+    - Your role, such as agency or supplier
+  output:
+    - name: Gap analysis table
+      contains: One row per control with ID, chapter, description, applicability, status, evidence needed and gap notes.
+    - name: Control guidance
+      contains: "For a control: its purpose, the requirement, how to put it in place and the audit evidence."
+    - name: System authorisation pathway
+      contains: Step-by-step path to authorise your system, with the deliverables for each step.
+    - name: IRAP preparation checklist
+      contains: The documents to gather, the assessment scope and what an assessor looks for.
+    - name: Security documentation
+      contains: A structured security document that cites ISM control IDs.
+    - name: Cloud answer checklist
+      contains: Extra checks added to any answer about a cloud-hosted system or cloud provider.

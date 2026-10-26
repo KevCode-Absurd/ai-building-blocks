@@ -26,6 +26,34 @@ Framework for defining and implementing Service Level Indicators (SLIs), Service
 
 Implement measurable reliability targets using SLIs, SLOs, and error budgets to balance reliability with innovation velocity.
 
+## What you need
+
+Ask once for anything not given:
+
+- The service name and what users do with it.
+- What users care about most (pages load, orders go through, data saves).
+- The names of the request counters in the monitoring tool (optional). If not given, use the example names in this file and say they are examples.
+- Current success rate and response times (optional).
+- Promises already made to customers (optional).
+
+Needs Prometheus or a similar tool to run the rules. Without one, give the targets and budget and say the rules were not written.
+
+## What you hand back
+
+1. Measures (SLIs): two or three, each with the query to read it.
+2. Targets (SLOs): a target and time window for each.
+3. Error budget: the budget for the window, with the formula shown.
+4. Budget policy: what the team does as the budget runs down.
+5. Alert rules: fast and slow burn, with the recording rules they need.
+6. Dashboard layout and review routine.
+7. Checks: say which targets were checked against real numbers and which were not.
+
+Never present a target as met or as achievable without the person's real numbers. Mark it `UNCHECKED`.
+
+## If something is missing
+
+Write `MISSING: <what>` and ask once. Never invent traffic, success rates or counter names. Remind the person that contract wording for a customer promise (an SLA) needs review by their lawyer or account owner. This skill sets internal targets.
+
 ## Use this skill when
 
 - Define service reliability targets
@@ -87,6 +115,8 @@ The downtime equivalents below assume a time-based SLI, a 30-day month and a 365
 | 99.9% | 43.2 minutes   | 8.76 hours    |
 | 99.95%| 21.6 minutes   | 4.38 hours    |
 | 99.99%| 4.32 minutes   | 52.56 minutes |
+
+The queries and examples in this file use a 28-day window. A 28-day window gives 40,320 minutes, so a 99.9% target allows 40.32 minutes of failure. If you pick a 30-day window, work the budget out for that window and say which one you used.
 
 ### Choose Appropriate SLOs
 
@@ -287,9 +317,10 @@ sli:http_availability:ratio * 100
 slo:http_availability:error_budget_remaining
 
 # Days until error budget exhausted (at current burn rate)
+# The "> 0" filter drops zero burn, which has no finite exhaustion time, so no value is shown
 (slo:http_availability:error_budget_remaining / 100) * 28
 /
-slo:http_availability:burn_rate_5m
+(slo:http_availability:burn_rate_5m > 0)
 ```
 
 ## Multi-Window Burn Rate Alerts

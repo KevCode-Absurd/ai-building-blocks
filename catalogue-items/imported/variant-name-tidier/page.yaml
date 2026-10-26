@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Renames can break cart links, so it checks first.
 new_slug: variant-name-tidier
 name: Variant name tidier
-summary: Get mixed names like Sm, Small and S fixed to one standard. Changes
-  live variants and may break saved links.
+summary: Fix mixed variant names like Sm, Small and S in Shopify. Preview every change first, then update your variant option values to one standard.
 job: run-your-store
 headline: Variant name tidier
-subhead: One standard for every size, color or other option in your store, so
-  Sm, Small, small and S all become S. Filters work, search groups items
-  correctly and customers stop guessing.
+subhead: One standard for every size, color or other option in your store, so Sm, Small, small and S all become S. Filters work, search groups items correctly and customers stop guessing.
 explain: |
   One standard for every size, color or other option in your store, so Sm, Small, small and S all become S. Filters work, search groups items correctly and customers stop guessing.
 
@@ -18,6 +15,10 @@ when:
   - You imported products from several suppliers with different naming.
   - A search app is not grouping variants because the values do not match.
   - You are cleaning up before a sale and want consistent options.
+not_for:
+  - "You want to change names during a live sale or while shoppers rely on saved cart links: wait for a quiet time, or group the values in your storefront filter or search app instead."
+  - "You have no Shopify login that can change products: ask the store owner for write access to products first."
+  - "You only need to fix one or two variants: edit them by hand in your Shopify admin."
 you_give:
   - Your store domain
   - The option to fix, such as Size or Color
@@ -29,9 +30,27 @@ you_get:
   - A count of changes made
   - A JSON report (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Open an AI tool that can run code and use the Shopify command line, such as Claude Code. Paste in this skill.
+  - Sign in to your store with a login that can read and write products.
+  - Tell your AI the store domain, the option to fix (such as Size) and your map of messy values to the standard one.
+  - Run the preview first. Check the list. Add any messy values you did not know about to your map.
+  - Approve the update. Then save the CSV file, because it holds the old values.
+  - Check that any collections built on option values still match the right products.
+output_sample:
+  input:
+    - Your store domain
+    - The option to fix, such as Size or Color
+    - Your map of messy values to the standard value
+    - A product filter, such as a tag (optional)
+  prerequisites:
+    - An AI tool that can run code and use the Shopify command line
+    - A Shopify login with read and write access to products
+  output:
+    - name: Preview
+      contains: Every variant that would change, shown first. By default nothing is changed until you approve.
+    - name: Progress notes
+      contains: A short note after each step saying what was checked and how many variants were found.
+    - name: Outcome summary
+      contains: Counts of products scanned, variants needing a fix, variants updated and errors.
+    - name: option_normalizer CSV file
+      contains: One row per variant with product, SKU, option name, old value and new value.

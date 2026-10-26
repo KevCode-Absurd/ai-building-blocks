@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a fixed template from facts you give it.
 new_slug: data-catalog-entry-writer
 name: Data catalog entry writer
-summary: Give it a table and its owner. Get a plain entry with column meanings,
-  quality notes, sources and who may use it.
+summary: Write a data catalog entry for any table. Give it the schema and owner. You get column meanings, quality notes, sources and access rules.
 job: document-work
 headline: Data catalog entry writer
-subhead: A plain, complete entry that tells anyone what a table is, who owns it,
-  how good it is and who may use it. It ends the repeated questions about what a
-  column means.
+subhead: A plain, complete entry that tells anyone what a table is, who owns it, how good it is and who may use it. It ends the repeated questions about what a column means.
 explain: |
   A plain, complete entry that tells anyone what a table is, who owns it, how good it is and who may use it. It ends the repeated questions about what a column means.
 
@@ -18,6 +15,10 @@ when:
   - Analysts keep asking you what the same columns mean.
   - An audit asks for documentation on sensitive data.
   - A new hire needs to learn what data you have.
+not_for:
+  - "You have a one-off scratch table or an unpublished draft: skip the entry and add a short note in the file or sheet."
+  - "Your team has no data catalog: put the entry on a wiki page or in a shared data dictionary instead."
+  - "You need the table built or fixed: ask your data engineer, since this only writes the documentation."
 you_give:
   - Table schema or database export
   - Name of the data owner
@@ -29,8 +30,35 @@ you_get:
   - Source and dependency map
   - Access and sensitivity details
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to your database.
+  - Open your AI chat and paste the skill instructions.
+  - Paste your table schema or export. Add the owner's name and the sources and reports linked to the table.
+  - Answer the questions about purpose, how critical the table is and who uses it.
+  - Check the quality figures. Anything your AI could not check from the data should read "not measured".
+  - Send the finished entry to your catalog owner or data team lead to review, then publish it.
+  - The script needs an AI that can run code and reach your database. Without that, paste the schema yourself.
+output_sample:
+  input:
+    - Your table schema or database export
+    - The name of the data owner
+    - Where the data comes from and which reports use it
+    - Your privacy and retention rules (optional)
+  prerequisites:
+    - An AI that can run code, if you want it to pull the schema and basic stats from your database
+    - Time with the data owner to answer a few questions about purpose and use
+  output:
+    - name: scripts/catalog_extractor.py
+      contains: A script that pulls the schema and basic stats from a database table.
+    - name: assets/catalog_entry_template.md
+      contains: The finished entry, ready to submit to your catalog.
+    - name: Technical details
+      contains: Column names, types, keys and row count taken from the table.
+    - name: Business context
+      contains: Display name, purpose, owning team, how critical the table is and known uses.
+    - name: Column descriptions
+      contains: One plain sentence per column, with example values and any rules.
+    - name: Quality notes
+      contains: Completeness, freshness and duplicate rate, plus known issues and how they affect later use.
+    - name: Lineage
+      contains: Where the data comes from and which dashboards, models or reports depend on it.
+    - name: Governance
+      contains: Access level, sensitive data tags, compliance tags, retention policy and how to request access.

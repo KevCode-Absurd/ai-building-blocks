@@ -3,29 +3,85 @@ thinking: low
 thinking_why: It runs one simple capture.
 new_slug: screen-capture-taker
 name: Screen capture helper
-summary: Capture a browser page when browser capture tools are available. State clearly when desktop capture is unavailable.
+summary: Take a screenshot of your screen, one app window or a region on Mac, Windows or Linux and save it where you choose. It says so if capture is blocked.
 job: work-with-files
 headline: Screen capture helper
-subhead: Capture a browser page with an available tool. Desktop capture needs a supported OS helper and may need screen permission.
+subhead: Tell it what to capture, such as the whole screen, one app window or a region. It runs a small capture script for your system and saves the image. You get the file path. If it cannot capture, it says why.
 explain: |
-  Capture a rendered browser page when a browser screenshot tool is available. For a full desktop, app window or screen region, the system needs a working OS capture helper. macOS requires Screen Recording permission, Linux needs a supported screenshot utility, and Windows uses the supplied PowerShell helper. The result must match the capture type the tool actually returned. Browser capture does not show other apps or the full desktop.
+  Sometimes your AI needs to see your screen, or you want a picture of one app window saved to a folder. This screen capture helper does that the same way on Mac, Windows and Linux. It uses a small script for each system, so the AI does not have to work out the commands.
+
+  It first checks what it can really do here. A browser screenshot only shows a web page, not your desktop. Desktop and window captures need a system tool. On a Mac you must allow Screen Recording once. On Linux one screenshot tool must be installed. If the right tool is missing, it tells you. It never passes off a different image as your screen.
+
+  A screenshot can show private things such as messages or customer records. The skill tells you what is in the picture before it captures, and never shares it unless you ask.
 when:
   - You want a picture of a desktop app window saved to a folder you choose.
-  - Claude needs to look at your screen to help debug something visual.
+  - You want your AI to look at your screen to help fix something visual.
   - You need a capture of one region, not the whole display.
   - You want screenshots taken the same way on Windows, Mac and Linux.
+not_for:
+  - "You want a full web page as one long image: use the full-page screenshot taker, which captures a page from its address."
+  - "You want sharp shots of your running app for Product Hunt or social posts: use the app screenshot maker."
+  - "Your screenshot shows private details you need to hide before sharing: take it, then use the screenshot privacy masker."
 you_give:
-  - What to capture (screen, app window or region)
-  - A save path or file name (optional)
-  - The app name for window shots (optional)
+  - What to capture, such as the whole screen, an app window or a region
+  - The app name, for a window shot on Mac (optional)
+  - Where to save it, as a path or file name (optional)
+  - Whether the AI should only look at it, or save it for you (optional)
 you_get:
-  - A saved image file
-  - The file path, so you can find it
-  - A temporary copy when Claude only needs to look
-  - Mac permission set up once
+  - A saved image file for each capture
+  - The full file path, one per line
+  - A note of what each file shows and which tool made it
+  - A plain message if a capture type is not possible
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can capture your screen.
+  - Use an AI that can run commands on your computer, such as Claude Code or Codex. A chat that cannot run commands cannot take screenshots.
+  - Close or hide anything private on your screen. Say what to capture, such as "the Slack window" or "the top left 800 by 600 pixels".
+  - On a Mac, allow Screen Recording when asked. The skill has a helper that asks once, before the first capture.
+  - On Linux, make sure one of scrot, gnome-screenshot or ImageMagick is installed. On Windows, the skill uses a PowerShell script.
+  - Open each file path it prints. Check the picture shows what you meant and nothing private.
+  - Use the capture in your next step, such as asking your AI to review the layout or to compare it with a design.
+output_sample:
+  input:
+    - What to capture (whole screen, one app window or a region)
+    - The app name, for a window shot on Mac (optional)
+    - Where to save the file (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - Screen Recording permission on a Mac
+    - A screenshot tool such as scrot, gnome-screenshot or ImageMagick on Linux
+  output:
+    - name: Screenshot files
+      contains: One image per capture, saved where you said or in your default screenshot folder.
+    - name: File paths
+      contains: The full path of each file, one per line, with extra files for each extra window or display.
+    - name: Capture notes
+      contains: What each file shows, which tool made it and which system it ran on.
+    - name: Unavailable message
+      contains: If a capture type cannot run, the reason and what to install or allow.
+how_it_works:
+  - title: Check what is possible
+    text: It checks for a browser capture tool and for the right system tool and permission.
+  - title: Warn about private data
+    text: It tells you what will be in the picture and asks you to hide anything private.
+  - title: Pick the save place
+    text: It saves where you said, or in your default screenshot folder, or in a temporary folder if the AI is only looking.
+  - title: Capture
+    text: It runs the script for your system, for the screen, one window or one region.
+  - title: Report
+    text: It prints each file path and says what could not be captured and why.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the capture script on your own computer.
+    - name: Codex
+      why: The skill was written for it, including its temporary capture mode.
+  inputs:
+    - The exact app name and the window title
+    - The pixel region you need, as x, y, width and height
+    - A folder name for the images
+terms:
+  - term: Region
+    meaning: A box on your screen, given by its left and top position and its width and height.
+  - term: Screen Recording permission
+    meaning: A Mac setting that lets a program take pictures of your screen.
+  - term: Temp mode
+    meaning: Saving the picture to a temporary folder when the AI only needs to look at it.

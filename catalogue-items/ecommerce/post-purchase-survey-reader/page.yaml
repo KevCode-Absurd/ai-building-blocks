@@ -1,6 +1,6 @@
 new_slug: post-purchase-survey-reader
 name: Post-purchase survey reader
-summary: Share buyer survey answers, ad spend and reported sales. Get channel comparisons, evidence gaps and ideas for further checks.
+summary: Read your post-purchase survey answers next to ad spend. See which channels buyers name, and where platform sales reports disagree.
 job: read-ad-results
 thinking: medium
 thinking_why: It sorts free-text answers into channels and compares several shares, so a mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - Your platform and survey reports differ, and you want to understand their definitions and coverage.
   - You spend on podcasts, events or creators and can't see their effect in your ad reports.
   - You're about to move budget between channels and want a second view first.
+not_for:
+  - "You have no post-purchase survey yet: use the Post-purchase survey builder to write the questions first."
+  - "You want proof that a channel caused sales: ask an analyst to set up a controlled spend test, because survey answers only show what buyers remember."
+  - "You have only a handful of replies: wait and collect more, since a small set is mostly noise."
 you_give:
   - Survey answers to "how did you hear about us", with order dates (names and emails removed)
   - Ad spend by channel for the same dates
@@ -30,6 +34,31 @@ how_to_use:
   - Paste your survey answers with order dates, after removing names and emails.
   - Paste your ad spend by channel and, if you have it, the sales each platform reports for the same dates.
   - Review differences in dates, questions, coverage and channel groups first. Agree on the evidence, risk, comparison and duration before authorizing any spend experiment.
+output_sample:
+  input:
+    - Your survey answers to how buyers heard about you, with order dates (names and emails removed)
+    - Your ad spend by channel for the same dates
+    - Sales each ad platform reports, by channel (optional)
+    - Your profit and loss for the period (optional)
+  output:
+    - name: Survey read
+      contains: The date range, eligible orders, valid replies and the share of orders that answered.
+    - name: Data basis
+      contains: The question asked, how channels were grouped, and what coverage is missing.
+    - name: Channel table
+      contains: Each channel's share of spend, answers and platform sales, with a plain read of any gap.
+    - name: Word of mouth
+      contains: Mention counts, the number they come from, and the weekly trend.
+    - name: Hard-to-track spend
+      contains: Whether podcasts, events or creators show up in the answers.
+    - name: Big-quantity buyers
+      contains: Unusually large orders, listed for a person to ask why.
+    - name: Next check
+      contains: A test or data check with its comparison, amount at risk, length, owner and stop rule.
+    - name: Custom checklist
+      contains: Planning points out of 100 across three parts, with any missing parts shown.
+    - name: Missing
+      contains: Inputs that were not given and checks that failed.
 how_it_works:
   - title: Counts the answers
     text: Shows valid replies and eligible orders with their denominators. The rough 200-reply guide is not proof of a representative sample.

@@ -1,6 +1,6 @@
 new_slug: steady-track-record-checker
 name: "Steady track record checker"
-summary: "Paste a business and its yearly results. Get whether its past is a fair guide, with any change of course flagged."
+summary: "Check a business's track record: paste what it sells and its yearly results. See if its past is a fair guide, with any change of course flagged."
 job: money-and-investing
 thinking: medium
 thinking_why: "It compares years of results and judges what counts as a change. The steps are fixed, but the judgment needs care."
@@ -17,6 +17,10 @@ when:
   - You are studying a business to own for years and want to know if its history is a fair guide.
   - A company has a good record but a new boss or a new plan.
   - You are comparing two businesses and one has changed course more than the other.
+not_for:
+  - "You want a lasting-edge check: use the Business power tester first, then come back here."
+  - 'The business has under five years of figures: this gives a "too young" call, so wait or read its plans and people instead.'
+  - "You want a buy or sell call or personal advice: talk to a licensed financial adviser."
 
 you_give:
   - What the business sells, to whom, and how the money comes in
@@ -36,6 +40,29 @@ how_to_use:
   - List any big deals, new bosses or plans you know of, with the year.
   - Read the call, then check the flags it found against the company's own reports.
   - Take the result to "Owner-minded management checker" or your own decision.
+output_sample:
+  input:
+    - What the business sells, to whom, and how money comes in
+    - Sales and operating profit for as many years as you have
+    - News about big deals, new bosses or restructurings (optional)
+    - The stake or decision you are weighing (optional)
+  output:
+    - name: Window
+      contains: The years covered, and a note if there are too few years to judge.
+    - name: First vs last
+      contains: What was sold, to whom and how money came in, each marked same, changed or added.
+    - name: Spread
+      contains: Yearly sales, operating profit and margin, with the average, best year, worst year and the gap.
+    - name: Flags
+      contains: Each change of course, such as a new line of business or turnaround, with its year.
+    - name: Bad years
+      contains: Each bad year marked as an industry cycle or a change by the company, with a reason.
+    - name: Ten years out
+      contains: Two or three things that could make the past stop working, each with a sign to watch.
+    - name: Call
+      contains: Steady, mixed, changing or too young, with the reason and what would change it.
+    - name: Missing and checks missed
+      contains: Gaps in your facts, and any of its own checks that failed, or none.
 
 how_it_works:
   - title: Sets the window

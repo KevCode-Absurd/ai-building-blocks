@@ -1,12 +1,16 @@
 new_slug: nonprofit-annual-report-planner
 name: Plan a nonprofit annual report
-summary: Plan a clear yearly report. Check the facts, numbers and names before it goes to print.
+summary: Plan a nonprofit annual report with a clear outline, then check financial totals and donor names before it goes to print or online.
 job: work-with-files
 headline: Plan a nonprofit annual report
 subhead: Bring final accounts, program results and approved stories. Build the report outline, then check totals and donor names for the year.
 explain: Bring final accounts, program results and approved stories. Build the report outline, then check totals and donor names for the year.
 when:
   - You want to plan a nonprofit annual report.
+not_for:
+  - "You need the audited financial statements themselves: ask your accountant or auditor, since this plan only sums them up for readers."
+  - "You need the Form 990 filed: use your accountant or a tax preparer, because this plan only reads the numbers."
+  - "You need the full story of a person you served: write it with consent first, then bring the finished story here to place in the report."
 you_give:
   - Fiscal-year scope and finalized financial statements
   - Verified program results, approved stories and supporter recognition preferences
@@ -14,9 +18,37 @@ you_get:
   - Section architecture with a theme and space budgets
   - A reconciliation and recognition review checklist
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open your AI tool and paste the skill instructions, or add the skill folder if your tool takes files.
+  - Paste your fiscal year, final financial numbers, program results and approved stories. Mark anything missing so your AI asks instead of guessing.
+  - Ask for the section outline with a word or space budget for each section.
+  - Check every number in the financial summary against your audited statements.
+  - Check donor names and tiers against your donor list, and keep anonymous requests.
+  - Send the outline to your director and board chair for review before design starts.
+output_sample:
+  input:
+    - Your fiscal year and the dates it covers
+    - Your final financial statements for that year
+    - Your verified program results and headline numbers
+    - Stories you have approval to share
+    - Your donor list and any give-anonymously requests
+  prerequisites:
+    - Audited or final financial numbers, not estimates
+    - Written consent for every story you plan to use
+  output:
+    - name: Cover and theme
+      contains: One line that frames the year, based on your real wins and turning points.
+    - name: Section outline with space budgets
+      contains: The eight report sections in order, each with a word or space budget.
+    - name: Leadership letter plan
+      contains: "What the board chair and director should cover: the biggest win, an honest challenge and the next priority."
+    - name: Financial summary plan
+      contains: How to show spending by program, admin and fundraising, with a few years of trend, in plain words.
+    - name: Recognition review checklist
+      contains: Steps to check donor names, giving tiers and anonymous requests against your donor list at least twice.
+    - name: Reconciliation check
+      contains: A list to confirm every number matches your audited financials for the same year.
+    - name: Leadership review step
+      contains: Who signs off before design is locked, including one board member outside marketing.
 how_it_works:
   - title: Set the year and theme
     text: Confirm the reporting period and finalized numbers, then choose a theme grounded in the year’s actual wins and challenges.

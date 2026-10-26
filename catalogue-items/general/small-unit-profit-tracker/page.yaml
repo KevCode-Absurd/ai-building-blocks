@@ -1,6 +1,6 @@
 new_slug: small-unit-profit-tracker
 name: "Small-unit profit tracker"
-summary: "List your teams and their income and costs. Get small units, a profit-per-hour figure for each and a weekly sheet."
+summary: "Split your teams into small units and find the profit per hour for each one. Get a one-page weekly sheet and a clear review rule."
 job: plan-strategy
 thinking: medium
 thinking_why: "It splits a business into units and does simple arithmetic, but the rules are fixed."
@@ -17,6 +17,10 @@ when:
   - Everyone is busy but money is still tight, and you cannot say which part pays.
   - A team has grown past the point where one person can see all of it.
   - You want each person to see their own result without reading a full report.
+not_for:
+  - "You work alone and have no team to split: use a simple profit report from your bookkeeping tool or a spreadsheet."
+  - "You cannot record hours worked: start by tracking hours for a few weeks, then come back."
+  - "You need to choose which units to grow or stop: use the Strategy trade-off planner."
 
 you_give:
   - Your teams, services or product lines, and who works in each
@@ -33,6 +37,28 @@ how_to_use:
   - List your teams, what each one sold and spent, and the hours worked. Rough figures are fine if you say so.
   - Check the units it proposes. Move anyone who sits in two units.
   - Print the weekly sheet and share each unit's line with its leader.
+output_sample:
+  input:
+    - Your teams, services or product lines, and who works in each
+    - Income, costs and hours for each, for a recent week or month
+    - Your overall business goal (optional)
+  output:
+    - name: Units and leaders
+      contains: Each small unit with one named leader, what it does, and a draft plan for the leader to correct.
+    - name: This period
+      contains: Income, costs, hours and profit per hour for each unit, with the sums shown.
+    - name: Shared costs
+      contains: How costs like rent and tools were split between units, and why that rule was chosen.
+    - name: Weekly sheet
+      contains: One line per unit with this week, last week, change and a short note.
+    - name: Goal check
+      contains: Each unit's goal set beside the business goal, marked as fitting or clashing.
+    - name: Review rule
+      contains: When a unit gets reviewed, who reviews it, and what they ask.
+    - name: Missing
+      contains: Anything you did not give, marked so nothing is guessed.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Splits into units

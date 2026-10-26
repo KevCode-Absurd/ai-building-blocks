@@ -2,22 +2,23 @@ thinking: high
 thinking_why: Finding weak spots takes creative, careful probing.
 new_slug: ai-agent-attack-tester
 name: AI agent attack tester
-summary: Give it your AI agent. Get a safe, authorized test plan and a report of
-  where it can be tricked.
+summary: Test your AI agent for weak spots with written approval. You get rules of engagement, a safe test plan and a report of where it can be tricked.
 job: secure-code
 headline: AI agent attack tester
-subhead: A safe, approved plan to find where your AI agent can be tricked, plus
-  a report of what was found. It treats written permission as step one.
+subhead: A safe, approved plan to find where your AI agent can be tricked, plus a report of what was found. It treats written permission as step one.
 explain: |
   A safe, approved plan to find where your AI agent can be tricked, plus a report of what was found. It treats written permission as step one. Without clear scope and approval, it stops at a plan and probes nothing live.
 
   First it collects the owner, the exact systems in scope, test accounts, time window, limits and a stop signal. Then it maps what the agent can touch and lists likely attacks, such as injected instructions, too much power, memory poisoning and tricks between agents. Tests use fake identities and planted marker values, never real data. Each case gets an ID and a record. Findings are merged, ranked, and retested after fixes. Cleanup is checked at the end.
 when:
   - You are about to launch an agent that can send, buy or delete things.
-  - Your boss or client asks if the agent can be talked into doing something it
-    should not.
+  - Your boss or client asks if the agent can be talked into doing something it should not.
   - You want rules of engagement written before any security test.
   - You fixed a weakness and need to prove it is closed.
+not_for:
+  - "You do not own the system or have written approval to test it: get that approval first, or ask the owner to run the test."
+  - "You want to test live production with no signed scope: ask the owner for a signed scope first, or run a threat-model review on paper."
+  - "You only want to check a chatbot's tone or answer quality: read a sample of its replies yourself or ask a teammate to review them."
 you_give:
   - Written approval and the owner's name
   - The agent's tools, access and memory
@@ -30,8 +31,34 @@ you_get:
   - Findings with proof, impact and fixes
   - Retest and cleanup results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Get written approval from the system owner first. Without it, this skill only gives you a plan and tests nothing live.
+  - "Open Claude, ChatGPT or Gemini and paste in the skill. Then add your brief: owner, systems in scope, agent tools, test accounts, time window and limits."
+  - Read the rules of engagement and the test plan. Ask the owner to approve them before any test runs.
+  - Run the approved tests on a test copy only, using fake accounts and fake secrets. Paste the results back so your AI can write the findings. Scoring needs an AI that can run code.
+  - Hand the findings to the engineering owner and log each fix. Then rerun the same case IDs to confirm each one is closed, and check that cleanup is done.
+output_sample:
+  input:
+    - Written approval and the name of the system owner
+    - "What the agent can do: its tools, access, memory and links to other systems"
+    - The systems, accounts and data that are in scope
+    - The test window, limits and who to call if something goes wrong
+    - Fake accounts, fake secrets and safe test destinations (optional)
+  prerequisites:
+    - Written permission to test the exact systems named
+    - A test or staging copy of the agent, not live production
+    - An AI that can run code and read files, if you want the campaign scoring script to run
+  output:
+    - name: Rules of engagement
+      contains: Scope, limits, stop signals, contacts and cleanup duties, marked signed off or pending.
+    - name: System and privilege map
+      contains: What the agent can reach, who it acts as, and a ranked list of likely attacks.
+    - name: Campaign plan
+      contains: Numbered test cases with targets, time window, limits, safe checks and a written and machine-readable version.
+    - name: Execution records
+      contains: For each test, the case ID, time, tool trace, result and evidence.
+    - name: Findings
+      contains: Each weak spot with proof, impact, likelihood, root cause, fix and a case to rerun.
+    - name: Campaign summary
+      contains: Counts of passes, failures, blocked, errored and untested cases against the full plan.
+    - name: Retest and cleanup results
+      contains: Whether each fix worked, what risk remains, and proof that test data and credentials are removed.

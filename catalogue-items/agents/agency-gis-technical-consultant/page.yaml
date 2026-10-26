@@ -1,0 +1,153 @@
+name: Technical Consultant agent
+summary: "Turn a business problem into a GIS plan: gap review, Esri or open source choice, phased roadmap, hidden costs and RFP text. No building."
+headline: Technical Consultant agent
+subhead: Describe the business problem and how you use location data today. The agent maps pain points to GIS options, compares Esri, open source and mixed setups, and sets a phased roadmap. You get a plan and a list of hidden costs.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Many GIS projects fail for the same reasons. The data turns out to be poor. One tool is picked before the problem is clear. A quick win never gets scoped. This GIS strategy agent works the other way round: the business problem first, the data second and the technology third.
+
+  It writes the current state, then maps each pain point to a location capability. It compares Esri, open source and mixed setups for your size, skills and budget, without favoring a vendor. It designs the layers of the setup from sources to apps. It sets a roadmap that starts with a data audit, then one quick win, then scale. It lists the costs people forget, such as data licences, training, upkeep and cloud transfer fees, and it can draft technical text for a bid or RFP.
+
+  It advises and does not build. It cannot see your systems or quote prices. For savings it asks for your numbers and shows the formula. It does not make up a percentage. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience claims are not results measured by AI Blocks.
+when:
+  - You run a utility, council, property or field team and wonder where maps could cut costs.
+  - You must choose between ArcGIS and open source tools such as QGIS and PostGIS.
+  - You are replacing AutoCAD files, a legacy GIS or spreadsheets with a proper system.
+  - You are writing the technical part of an RFP or a bid.
+not_for:
+  - "You need someone to open ArcGIS Pro and build a map: use the GIS Analyst agent."
+  - "You need a working demo to show: use the Solution Engineer agent."
+  - "You need Python code or a data pipeline: use the Spatial Data Engineer agent."
+  - "You need legal, survey or licence terms decided: ask a qualified professional or the vendor."
+you_give:
+  - The business problem in plain words, and what it costs you if you know
+  - "How location data is used today: tools, file types, spreadsheets, CAD"
+  - Team skills and rough budget
+  - Systems the GIS must connect to, such as finance, customer, sensor or field apps (optional)
+  - The RFP text or list of requirements (optional)
+  - The size of the organization and your deadline (optional)
+you_get:
+  - A current state summary and a gap list
+  - A comparison of Esri, open source and mixed options
+  - A layered design from data sources to apps, and where it runs
+  - A roadmap in phases, starting with a data audit
+  - "Three tiers: quick win, full solution and large scale"
+  - A hidden cost list and draft RFP sections if you ask
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Write the problem in business words. Then list your data, tools, people and systems. Leave out private details.
+  - Say 'Plan this GIS project. Do not guess my budget or my data.' Your AI asks once for what is missing.
+  - Read the gap list and the options first. Tell it what it got wrong before it builds the roadmap.
+  - Use your own numbers for savings. Ask the vendors for prices. The AI cannot know either.
+  - Take the quick win phase to your team. Ask the Solution Engineer agent to plan a demo of it.
+how_it_works:
+  - title: Understand the problem
+    text: It restates the business problem and the current workflow, and marks missing facts as MISSING.
+  - title: Map pain to capability
+    text: It links each pain point to a location capability and where the value would show up.
+  - title: Compare the options
+    text: It compares Esri, open source and mixed setups on cost, skills, upkeep and lock in, without taking a side.
+  - title: Design the layers
+    text: It plans sources, data loading, storage, services and apps, plus links to other systems and where it runs.
+  - title: Set the roadmap
+    text: It orders a data audit, a quick win, scale and tuning, and sets who owns each data set.
+  - title: List costs and risks
+    text: It lists hidden costs and failure risks, and offers draft RFP text if you ask.
+output_shape: |-
+  PROBLEM AND ASSUMPTIONS
+    Problem <one line> | Today <tools, data, skills, budget>
+    Assumed: <list> | MISSING: <list>
+
+  GAP LIST
+    <pain point> | <location capability> | <value to measure>
+
+  OPTIONS
+    <Esri, open source or mixed> | cost drivers <list> | skills needed <list> | upkeep <note> | lock in <note> | fits when <situation>
+
+  RECOMMENDED DESIGN
+    Sources <list> | Loading <how> | Storage <where> | Services <list> | Apps <list> | Links <systems> | Runs <cloud, on site or mixed>
+
+  ROADMAP
+    <phase 0 to 3> | <goal> | <deliverable> | <done when>
+
+  TIERS
+    Quick win <scope> | Full solution <scope> | Large scale <scope>
+
+  HIDDEN COSTS AND RISKS
+    <item> | <why it matters> | <how to check>
+
+  DATA GOVERNANCE
+    <data set> | owner <who> | update <how often> | quality rule <rule>
+
+  RFP TEXT (if asked)
+    <section> | <draft>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - The business problem in plain words
+    - How you use location data today
+    - Team skills and rough budget
+    - Systems it must connect to, or an RFP (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Problem and assumptions
+      contains: The problem and current state as understood, with assumptions and MISSING items.
+    - name: Gap list
+      contains: Each pain point matched to a location capability and the value to measure.
+    - name: Options
+      contains: Esri, open source and mixed setups compared on cost, skills, upkeep and lock in.
+    - name: Recommended design
+      contains: The layers from data sources to apps, links to other systems and where it runs.
+    - name: Roadmap and tiers
+      contains: Phases from data audit to scale, and a quick win, full and large scale tier.
+    - name: Hidden costs and risks
+      contains: Costs people forget, such as data licences, training, upkeep and cloud fees.
+    - name: Data governance
+      contains: Who owns each data set, how often it updates and the quality rule.
+    - name: RFP text and open questions
+      contains: Draft bid sections if asked, and what is unknown.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Platform
+    how: Say if you must stay with Esri, or must avoid it, so the options fit your rules.
+  - what: Audience
+    how: Say who reads the plan, such as the board or the IT team. It sets how plain the words are.
+  - what: Scale
+    how: Give the number of users and sites, since it changes the tiers.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: GIS
+    meaning: Geographic information system, software that stores, analyzes and maps location data.
+  - term: Esri and ArcGIS
+    meaning: A company and its paid GIS products.
+  - term: Open source GIS
+    meaning: Free GIS software such as QGIS and PostGIS, which you run and maintain yourself.
+  - term: Gap analysis
+    meaning: A comparison of where you are with where you need to be.
+  - term: RFP
+    meaning: Request for proposal, a document that asks suppliers to bid for a job.
+  - term: Open standards
+    meaning: Shared data formats, such as GeoJSON, GeoPackage and OGC API, that many tools can read.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan works from a pasted profile and your description of the organization.
+    - name: Claude Code
+      why: It can read a folder of your documents, such as an RFP or a data list, so the plan fits them.
+  inputs:
+    - A list of the systems and data files you use now.
+    - Any past reports or complaints about the current process.

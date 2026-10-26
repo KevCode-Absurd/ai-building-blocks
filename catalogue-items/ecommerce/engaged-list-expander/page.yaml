@@ -1,6 +1,6 @@
 new_slug: engaged-list-expander
 name: "Engaged list expander"
-summary: "Give it your list and send results. Get a plan to bring quiet contacts back safely."
+summary: "Plan an engaged list expander drip that adds quiet contacts back to your email sends in small steps, with sizes for your list and a stop rule."
 job: write-emails
 thinking: medium
 thinking_why: "It sets up rules and does sums on your numbers. A mid-size model handles that well."
@@ -17,11 +17,16 @@ when:
   - Your list is big, but you send only to a small slice of it.
   - You are preparing for a big sale and want a larger audience that still opens.
   - Your list has gone quiet and you want to win people back without hurting inbox placement.
+not_for:
+  - "Your complaints or bounces are rising now: use the inbox placement recovery planner first, then come back."
+  - "Your list was bought, rented or scraped: no plan here is safe, so start a new list from people who agreed to get your email."
+  - "You need the emails themselves planned: use the Email campaign calendar planner to set what you send and when."
 
 you_give:
   - Total profiles, and how many receive campaigns today
   - Average days between orders in your store
-  - Open, click, bounce and spam complaint numbers for recent sends
+  - Open, click, bounce and spam complaint numbers for recent sends, exported from your email tool
+  - Segment counts from your email tool (optional)
   - A calendar of sales, launches and restocks (optional)
   - Your email tool, so the segment names match (optional)
 
@@ -32,11 +37,37 @@ you_get:
   - A monthly check and a stop rule if deliverability slips
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your list size, buying cycle and recent send results. Add your sale calendar if you have one.
-  - Say what your email tool calls its segments, if you know.
-  - Check that your spam complaints and bounces are steady before you start. If they are rising, run the inbox placement recovery planner first.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill. It needs no code, files or web access.
+  - Paste your list size, buying cycle and recent send results. Export these as campaign reports and segment counts from your email tool.
+  - Add your sale calendar and the name of your email tool if you have them. Klaviyo is a paid tool, but any email tool with segments works.
+  - Confirm how your contacts opted in. If you are not sure, stop and check before you go on.
+  - Check that complaints and bounces are steady. If they are rising, run the inbox placement recovery planner first.
   - Follow the plan one step at a time. Read the results before you add the next group.
+output_sample:
+  input:
+    - Your total profiles and how many get campaigns today
+    - Your average days between orders
+    - Open, click, bounce and spam complaint numbers for recent sends
+    - Your sales and launch calendar (optional)
+    - Your email tool, so segment names match (optional)
+  prerequisites:
+    - A list built from people who agreed to get your email
+    - Complaints and bounces that are steady, not rising
+  output:
+    - name: Engaged definition
+      contains: Each signal with a day limit set from your buying cycle, and how many profiles are engaged today against the 50 percent target.
+    - name: Send split
+      contains: About 80 percent of campaigns for broad reach and about 20 percent for narrow goals from your calendar.
+    - name: Drip plan
+      contains: One row per send showing engaged count, quiet sample size, total sent and how many should move to engaged.
+    - name: Stop rules
+      contains: Complaint and bounce limits that pause the drip, and the rule for when to widen it.
+    - name: Monthly check
+      contains: The engaged size, open rate, click rate, complaints and bounces to review each month.
+    - name: Clean-up (optional)
+      contains: Segments of people to remove after a consent check, with past buyers kept.
+    - name: Missing
+      contains: A list of any inputs you did not give, so you know what the plan could not use.
 
 how_it_works:
   - title: Checks it is safe

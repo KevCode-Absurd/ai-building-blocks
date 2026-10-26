@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares many facts and picks the gaps that matter.
 new_slug: competitor-product-analyst
 name: Competitor product analyst
-summary: Give it facts on a rival. Get their pricing, features and strengths set
-  against yours, with gaps to act on.
+summary: "Run a competitor product analysis: give it facts on two to four rivals and get scores, a pricing review, a SWOT and an action plan."
 job: study-competitors
 headline: Competitor product analyst
-subhead: Give it facts on a rival. Get their pricing, features and strengths set
-  against yours, with gaps to act on. Bring two to four competitors. Use the
-  result to plan your next step.
+subhead: Give it facts on a rival. Get their pricing, features and strengths set against yours, with gaps to act on. Bring two to four competitors. Use the result to plan your next step.
 explain: |
   A scored teardown of how a rival's product, pricing and customer experience stack up against yours, with a short list of what to do next. It turns scattered facts into something a team can act on.
 
@@ -18,6 +15,10 @@ when:
   - A competitor changed pricing and you need to respond.
   - Sales wants proof for a pitch against a specific rival.
   - You are doing a quarterly competitive review.
+not_for:
+  - "You only want to check one feature and have no rival data: look at that feature on the rival's site yourself."
+  - "You have no reviews or pricing for the rival: talk to your customers first, then come back."
+  - "You want a plan for your own product only: use a simple roadmap or goals review instead."
 you_give:
   - Two to four competitors
   - Facts you already have, such as prices and reviews
@@ -29,7 +30,35 @@ you_get:
   - A SWOT and positioning map
   - An action plan by timeframe
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - List two to four rivals and say which one matters most.
+  - "Paste what you know about each: pricing, at least 20 reviews, and job post counts. Add your own product details."
+  - Ask for the scorecard first. Check that every score has a sourced note. A dimension with no data should say no data, not get a score.
+  - Ask for the matrix, pricing review, SWOT, map and action plan.
+  - Ask for the seven-slide summary if you need to share it with your team.
+output_sample:
+  input:
+    - Two to four competitors, and which one matters most
+    - Facts you have on each, such as pricing pages, reviews and job posts
+    - Your own product details
+    - The decision the review should support (optional)
+  prerequisites:
+    - An AI that can read pasted text. Web access helps if you want it to look up rival pages.
+    - Some sources may need a paid account or API key, such as Twitter/X data or an SEO tool. Check each site's terms before you collect job posts or LinkedIn data.
+  output:
+    - name: Scorecard
+      contains: A 1 to 5 score for each of 12 dimensions, per rival and for you, each with an evidence note.
+    - name: Feature comparison matrix
+      contains: Features, pricing tiers and platforms scored for your product and up to three rivals, with a total.
+    - name: Pricing analysis
+      contains: Each rival's pricing model, price points and trial length, plus who leads on price and value.
+    - name: SWOT analysis
+      contains: Strengths, weaknesses, opportunities and threats for each rival, each tied to a data signal.
+    - name: Positioning map
+      contains: A two-axis map placing each rival and your product.
+    - name: UX audit
+      contains: Onboarding, key workflows, mobile and navigation compared with your product.
+    - name: Action items
+      contains: Findings sorted into quick wins, medium-term moves and strategic bets.
+    - name: Stakeholder presentation
+      contains: A seven-slide summary, from threat level to your action plan, with raw data in an appendix.

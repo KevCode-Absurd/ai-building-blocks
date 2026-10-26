@@ -1,6 +1,6 @@
 new_slug: people-trust-checker
 name: People trust checker
-summary: Name the people behind a deal or hire. Get how able, honest and owner-minded they are, and what to verify.
+summary: Check the people behind a deal or hire. Rate their ability, honesty, reliability and owner mindset, and get a trust verdict.
 job: think-and-decide
 thinking: high
 thinking_why: It weighs character and reward evidence and has to avoid being swayed by a good pitch.
@@ -14,6 +14,10 @@ when:
   - You are about to hire, partner with or hand money to someone you only know from a pitch.
   - A manager or adviser is very persuasive and you want to test the person.
   - You inherit a team and want to know who to rely on.
+not_for:
+  - "You must run a formal hiring check: use your HR or legal process, or a regulated background-check provider."
+  - "You cannot lawfully research the people involved: stop and ask a lawyer what you may look into."
+  - "You want a view on the business itself, not the people: use the Staying power checker."
 you_give:
   - The people involved and their roles
   - What you know of their record and how they are paid
@@ -28,6 +32,31 @@ how_to_use:
   - "List the people and paste what you know: bios, claims, how they are paid."
   - "Note the sources: which facts you checked and which you were told."
   - Ask the questions it writes of people they did not name as references.
+output_sample:
+  input:
+    - The names and roles of the people involved
+    - What you know about their record, and which facts you checked
+    - How they are paid (optional but important)
+    - The result of the Staying power checker (optional)
+  prerequisites:
+    - The result of the Staying power checker, or a plain account of what you are judging
+  output:
+    - name: WHO COUNTS
+      contains: Each person who controls the result, with role, years held, and each fact marked told or checked.
+    - name: BY PERSON
+      contains: A rating for ability, honesty, reliability and owner mindset, each with the facts behind it.
+    - name: PAY
+      contains: How each person is paid, what that encourages, and where it differs from your interest.
+    - name: PEOPLE AGAINST CASE
+      contains: A weighing of how much the people matter against the strength of the case.
+    - name: CHECK WITH OTHERS
+      contains: Five questions for people they did not name as references, and three documents to read.
+    - name: VERDICT
+      contains: Trust, trust with checks, or do not trust, with the one fact that decided it.
+    - name: MISSING
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: CHECKS MISSED
+      contains: One line for each self-check that still failed, or none.
 how_it_works:
   - title: Name who counts
     text: Names the people who control the result.

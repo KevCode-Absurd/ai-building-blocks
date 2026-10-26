@@ -13,6 +13,30 @@ use_cases:
   - Sketch useful slides before opening presentation software
   - Turn a data table into a supported recommendation
   - End a talk with a specific next step
+not_for:
+  - "You only need a routine status record: write a plain written memo instead of a talk."
+  - "You need to choose charts and explain what the numbers mean: use the Cole Nussbaumer Knaflic mind."
+  - "You want the facts checked or the chart tested for honesty: use the Alberto Cairo mind."
+output_sample:
+  input:
+    - Your talk, crowded outline or set of facts
+    - Who the audience is and what they can decide
+    - How much time you have
+    - Your real evidence, such as a table or notes (optional)
+    - What you want them to do at the end
+  output:
+    - name: Audience and action brief
+      contains: Who is listening, what they already know and what they can actually decide or do.
+    - name: One-sentence change
+      contains: The proposed shift and why it matters to these listeners.
+    - name: Storyboard
+      contains: Ordered cards, each with a message, the evidence or visual it needs and a spoken note.
+    - name: Concern and response section
+      contains: The strongest likely objection, what answers it and any change to the proposal.
+    - name: Closing request
+      contains: A specific ask with a decision, owner and timing that fits the audience's authority.
+    - name: Open assumptions
+      contains: Missing facts and unresolved points, marked so nothing is invented.
 seats:
   - seat: Story structure for your audience
     asks: What should these particular people understand or do after the talk?

@@ -1,6 +1,6 @@
 name: "AI workflow handoff planner"
 new_slug: ai-workflow-handoff-planner
-summary: "List your AI steps. Get handoff cards, claim cards and run rules that keep every fact whole."
+summary: "Plan an AI workflow handoff step by step. List your steps and get claim cards, handoff cards and run rules that keep every claim whole."
 job: set-up-ai
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You're building a chain of AI steps for ads or content and want each step to get the right material.
   - Your process works but is slow or costly, and you want to trim it without breaking anything.
   - Outputs sometimes drop a condition, such as "first order only", and you need to find where it gets lost.
+not_for:
+  - "You have one prompt or a one-off piece of copy: write a plain brief and skip the planning."
+  - "You want to write the ads themselves: use the Story image ad writer once your chain is planned."
+  - "You want to know if a new prompt writes better ads: use the Reach-before-repeat planner to plan the test."
 
 you_give:
   - The steps in order and what each one should produce
@@ -33,8 +37,30 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List your steps in order, one line each, with what each one should hand on.
   - Attach proof-and-claims.md from your brand file, or paste the claims your ads use.
-  - If you know what each step is sent now, paste it or describe it, with any measured costs.
+  - If you know what each step is sent now, paste it or describe it, with any measured costs (optional).
+  - Check that steps able to open files are named. Steps that can't open files get the text pasted in instead.
   - Build the cards and run rules into your tool, then compare real usage with the estimates.
+output_sample:
+  input:
+    - Your AI steps in order, one line each, with what each should hand on
+    - Your proof-and-claims.md or the claims your ads use
+    - What each step is sent today, with any measured costs (optional)
+    - Fixed settings such as model or budget (optional)
+  prerequisites:
+    - A tool that can open files, such as Claude Code or a project with uploads, if you want steps to fetch files by reference. Without one, the plan pastes the text in.
+  output:
+    - name: Claim cards
+      contains: Each claim with an ID, its full wording, its limits and its source, ready to pass on word for word.
+    - name: Handoff cards
+      contains: One per step, listing what it needs, may use, returns and must never lose.
+    - name: Bundle order
+      contains: The stable material first, then the parts that change each run, so the start can be reused.
+    - name: Run rules
+      contains: What to save per step, retry caps, budget and where to resume.
+    - name: Shortfalls and trade-offs
+      contains: Where the plan falls short, with MISSING lines for unknown outputs, budgets or settings.
+    - name: Checks missed
+      contains: One line for each of its own checks the plan still fails, or none.
 
 how_it_works:
   - title: Locks the claims

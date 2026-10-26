@@ -1,6 +1,6 @@
 new_slug: must-have-survey-planner
 name: "Must-have survey planner"
-summary: "Paste your product and users. Get a short survey, the 40 percent test and a fan study plan."
+summary: "Plan a must-have survey for your product. Get a short survey, the 40 percent test and a plan to study the users who would be very upset."
 job: test-an-idea
 thinking: low
 thinking_why: "The survey and the scoring rule are fixed, so the work is filling in your product details."
@@ -17,6 +17,10 @@ when:
   - You can't tell if your users really need your product or just like it.
   - You are about to spend on growth and want to know if the product is ready.
   - You have users but no clear idea who your keenest ones are.
+not_for:
+  - "Your product has no active users yet: talk to five to eight likely buyers in person first."
+  - "You want to rank ideas for growth: use a simple scoring list in a spreadsheet instead."
+  - "You want to know why one person left: ask them directly in a short call."
 
 you_give:
   - What your product does and the core experience a user should have had
@@ -29,10 +33,31 @@ you_get:
   - One change to try and a plan to run the survey again
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the product, its core experience and how many active users you have.
-  - Send the survey to active users only, and wait for the answers.
-  - Bring the answers back so it can count the score and study the fans.
+  - Before you start, get your list of active users and a count. The skill will not guess your sample.
+  - Open the skill in your AI, or copy it and paste it into a chat in Claude, ChatGPT or Gemini.
+  - Describe your product, its core experience and how many active users you have.
+  - Send the survey to active users only, using a free form tool if you like, and wait for the answers.
+  - Paste the answers back so your AI can count the score and study the users who would be very upset.
+output_sample:
+  input:
+    - What your product does and the core experience a user should have had
+    - How many active users you have and how to reach them
+    - A buyer profile or customer reviews (optional)
+  output:
+    - name: Who to ask
+      contains: The group of active users to survey, how many there are, and whether that is enough.
+    - name: The survey
+      contains: One fixed key question with four answers, plus open questions on the main benefit and who it suits.
+    - name: How to count
+      contains: How to divide very disappointed answers by all answers and compare with the 40 percent line.
+    - name: After the answers
+      contains: What the very disappointed group values, who they are, one change aimed at them and a re-run date.
+    - name: If too few users
+      contains: An interview plan with the same key question, used when a survey would be too thin.
+    - name: Missing
+      contains: Facts that would sharpen the survey, such as the active user count.
+    - name: Checks missed
+      contains: One line for each quality check still missed, or none.
 
 how_it_works:
   - title: Picks who to ask

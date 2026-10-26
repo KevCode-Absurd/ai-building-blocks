@@ -1,6 +1,6 @@
 new_slug: standards-sheet-writer
 name: "Repeatable standards sheet writer"
-summary: "Describe your product or service. Get a one-page sheet of checkable standards so it feels the same every time."
+summary: "Turn how you make your product or service into a one-page standards sheet with yes-or-no checks, so it feels the same every time."
 job: lead-people
 thinking: low
 thinking_why: "It sorts what you give it into fixed headings with few judgement calls."
@@ -10,13 +10,17 @@ subhead: "Describe your product or service and give any numbers you hold. It wal
 
 explain: |
   A product that is great on Monday and average on Friday loses the customers who noticed. The fix is rarely effort. It is a clear standard that a new person can read, follow and be checked against.
-  
+
   This skill walks your product from order to hand-off, then writes standards for quality, service, cleanliness and value. Each one is a yes-or-no statement with a real number from you, such as a weight or a wait in minutes. It names what you will never cut, gives each person one job, plans how a newcomer is trained and adds a quick visit check. Gaps are marked, never guessed.
 
 when:
   - "You are about to open a second location, hire a first helper or hand work to a partner."
   - "Customers say it was better last time, and you cannot say why."
   - "You want a new hire to be good in their first week."
+not_for:
+  - "You want rules for how people behave: use the Team culture memo writer."
+  - "Your work has no fixed steps, such as one-off custom jobs: write notes for each job by hand instead."
+  - "You only need a quick checklist for one task: write a short list yourself and skip this."
 
 you_give:
   - "Your product or service, from order to hand-off"
@@ -33,6 +37,30 @@ how_to_use:
   - "Paste any numbers you hold. Leave out ones you do not know."
   - "Run the visit check on your own place first and fix what fails."
   - "Hand the sheet to one other person and ask them to check it, without your help."
+output_sample:
+  input:
+    - Your product or service, from order to hand-off
+    - Your real numbers, such as weights, times, prices and refund terms (optional)
+    - Product facts such as ingredients, materials or steps (optional)
+  output:
+    - name: Order to hand-off
+      contains: Every moment from the first request to the thing in the customer's hand, with what they get and who owns it.
+    - name: Standards
+      contains: Yes-or-no standards for quality, service, cleanliness and value, using your own numbers.
+    - name: Never cut
+      contains: The things you refuse to remove or swap for filler, even when costs rise.
+    - name: Roles
+      contains: Each person's one job and the steps it includes.
+    - name: Training
+      contains: The first week for a newcomer, in order, and who signs them off.
+    - name: Visit check
+      contains: 8 to 12 yes-or-no questions anyone can run in ten minutes, with room to note failures.
+    - name: Local ideas
+      contains: Which standards are fixed, where local ideas are collected and how one becomes a standard.
+    - name: Missing
+      contains: Numbers you did not give, marked as gaps instead of guessed.
+    - name: Checks missed
+      contains: One line for each of its own checks it still missed, or none.
 
 how_it_works:
   - title: "Walk it from order to hand-off"
@@ -55,31 +83,31 @@ how_it_works:
 output_shape: |
   ORDER TO HAND-OFF
   <n>. <moment> | Customer gets: <what> | Owner: <who>
-  
+
   STANDARDS
   Quality:     <yes-or-no standard with number>
   Service:     <...>
   Cleanliness: <...>
   Value:       <...>
-  
+
   NEVER CUT
   <list>
-  
+
   ROLES
   <role>: <one job, steps included>
-  
+
   TRAINING
   <first week in order>, signed off by <who>
-  
+
   VISIT CHECK
   <8 to 12 yes-or-no questions>
-  
+
   LOCAL IDEAS
   <what may vary, how ideas are collected>
-  
+
   MISSING
   <numbers not given>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

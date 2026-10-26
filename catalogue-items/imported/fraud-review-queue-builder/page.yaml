@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It lists scores Shopify already made.
 new_slug: fraud-review-queue-builder
 name: Fraud review queue builder
-summary: Get orders listed by fraud risk level with the warning signs, as a
-  queue for manual review.
+summary: Build a fraud review queue for your Shopify orders. Get recent orders ranked by risk, with the warning signs Shopify flagged on each one.
 job: secure-code
 headline: Fraud review queue builder
-subhead: A list of recent Shopify orders ranked by fraud risk, with the warning
-  signs shown for each, so a person can check them by hand.
+subhead: A list of recent Shopify orders ranked by fraud risk, with the warning signs shown for each, so a person can check them by hand.
 explain: |
   A list of recent Shopify orders ranked by fraud risk, with the warning signs shown for each, so a person can check them by hand. It only reads data and changes nothing in your store.
 
@@ -17,6 +15,10 @@ when:
   - You are seeing chargebacks and want to catch orders earlier.
   - You need to review only high-value orders at risk.
   - You want a safe way to look without changing anything.
+not_for:
+  - "You want orders cancelled or blocked for you: this only reads data, so set up Shopify's own fraud filters or cancel by hand in your Shopify admin."
+  - "You want to tag or hold risky orders: this skill changes nothing, so tag or hold them yourself in your Shopify admin."
+  - "You want to judge a single order by gut feel: open that order in Shopify and read its risk details there."
 you_give:
   - Store address
   - Days to look back
@@ -29,8 +31,27 @@ you_get:
   - Order values and dates
   - Readable or JSON output
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can access your Shopify admin (read only).
+output_sample:
+  input:
+    - Your store address
+    - How many days back to look
+    - The lowest risk level to include (optional)
+    - The smallest order value to include (optional)
+    - Whether you want a readable report or JSON (optional)
+  prerequisites:
+    - A Shopify login with read access to orders
+    - An AI that can run Shopify CLI commands
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store and the time the run began.
+    - name: Step log
+      contains: One line per step with what was asked and how many orders came back.
+    - name: Summary report
+      contains: Counts of orders reviewed by risk level, then the high risk orders with their warning signs.
+    - name: risk_report_<date>.csv
+      contains: One row per order with risk level, price, customer, warning signs, payment status and fulfillment status.
+    - name: JSON summary (optional)
+      contains: The same counts in JSON, with the name of the CSV file.

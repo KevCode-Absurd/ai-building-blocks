@@ -1,6 +1,6 @@
 slug: review-insight-finder
 name: Review insight finder
-summary: Give it your product reviews. Get the pain points, praise and feature requests, ranked by how often they come up.
+summary: Paste your product reviews. Get complaints, praise and feature requests ranked by how often they come up, with real customer quotes and fixes to try.
 category: general
 boards: []
 type: skill
@@ -12,7 +12,6 @@ inputs:
     required: true
 outputs:
   - type: audit_report
-  - type: persona
 uses: []
 origin: imported
 source:

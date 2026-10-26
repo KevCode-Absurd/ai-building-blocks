@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It checks you against legal articles and has to judge each answer.
 new_slug: gdpr-audit-prep-coach
 name: GDPR audit prep coach
-summary: Name your scope. Answer six article-based questions and get gaps to fix
-  before a review or regulator visit.
+summary: Get a GDPR audit prep check before a review. Name your scope, answer six article-based questions and see the privacy gaps to fix first.
 job: secure-code
 headline: GDPR audit prep coach
-subhead: Before a privacy review lands, you hear the hard questions first. Name
-  the scope, such as a product, a team or a data flow, and you get six pointed
-  questions, each tied to a GDPR article.
+subhead: Before a privacy review lands, you hear the hard questions first. Name the scope, such as a product, a team or a data flow, and you get six pointed questions, each tied to a GDPR article.
 explain: |
   Before a privacy review lands, you hear the hard questions first. Name the scope, such as a product, a team or a data flow, and you get six pointed questions, each tied to a GDPR article. Your answers turn into a list of gaps to fix.
 
@@ -18,6 +15,10 @@ when:
   - You are about to launch something that handles personal data in a new way.
   - You had a data breach and need to check what a regulator will ask.
   - A buyer is reviewing your privacy setup as part of a deal.
+not_for:
+  - "You need legal advice or a formal sign-off: talk to your data protection officer or a privacy lawyer."
+  - "Your product holds no personal data from people in the EU: you do not need a GDPR check."
+  - "You want a check of general security controls, not privacy law: use a security audit with your IT lead."
 you_give:
   - The scope to review
   - Your record of processing (optional)
@@ -29,7 +30,33 @@ you_get:
   - A list of gaps ranked by risk
   - Fix steps before the review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat and paste the skill text from this page.
+  - Name your scope, such as a product, a team or a data flow.
+  - Answer the six questions one at a time. Say so when you have no proof for an answer.
+  - Read the verdict and the top 3 actions. Fix the red items first.
+  - Take any item marked for outside counsel to your DPO or a privacy lawyer.
+output_sample:
+  input:
+    - The scope to review, such as a product, a team or a data flow
+    - Your record of processing and when it was last updated (optional)
+    - Your lawful basis notes for each purpose (optional)
+    - Your past impact assessments and your breach log (optional)
+  prerequisites:
+    - "An AI chat. The skill lists scripts, but you do not need them: answer in the chat."
+  output:
+    - name: The six questions
+      contains: Six pointed questions, each tied to a GDPR article, on records, lawful basis, impact assessments, requests, transfers and breaches.
+    - name: Article 30 RoPA status
+      contains: When your record of processing was last updated and whether all required parts are there.
+    - name: Article 6 lawful basis
+      contains: Which activities have a clear lawful basis and which claim legitimate interests without a written assessment.
+    - name: Article 35 DPIA quality
+      contains: Which risky activities need an impact assessment and whether each one is complete.
+    - name: Data subject rights, transfers and breaches
+      contains: How fast you answer requests, how you cover non-EU transfers, and whether your breach log is complete.
+    - name: Verdict
+      contains: A rating of ready, gaps found or not ready.
+    - name: Top 3 actions
+      contains: Three next steps, each with an owner and a timeline tied to an article.
+    - name: Outside counsel required
+      contains: Points where the law is unclear and you should ask a lawyer.

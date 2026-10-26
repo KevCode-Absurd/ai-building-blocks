@@ -1,6 +1,6 @@
 new_slug: doc-typo-and-term-checker
 name: Doc typo and term checker
-summary: Paste a document. Get typos, grammar slips and term clashes listed, with no rewrites.
+summary: Check a document for typos, grammar slips and term clashes before you send it. You get a numbered fix list, and your wording stays as it is.
 job: work-with-files
 thinking: low
 thinking_why: It scans for fixed kinds of slip and lists them without rewriting.
@@ -11,6 +11,10 @@ when:
   - A document is about to go out and you want a last check.
   - You hate rewrites and only want errors listed.
   - A team document uses three names for the same thing.
+not_for:
+  - "You want your tone or style rewritten: ask your AI for an edit instead, since this only lists slips."
+  - "You have a long technical document that needs every check: use the Technical doc proofreader."
+  - "You need facts checked: this only marks doubtful facts as [verify], so check them against your own sources."
 you_give:
   - The document text
   - Spellings and terms you prefer (optional)
@@ -23,6 +27,17 @@ how_to_use:
   - Under it, paste your document.
   - Send it and read the result.
   - Fix the list in one sitting, then read the result once more yourself.
+output_sample:
+  input:
+    - Your document text
+    - Spellings and terms you prefer (optional)
+  output:
+    - name: Numbered slip list
+      contains: Each slip with the original quote, a fix and a short reason.
+    - name: COUNTS
+      contains: "How many slips there are of each type: typos, grammar, terms, style and structure."
+    - name: "[verify] items"
+      contains: Facts that look wrong, marked and left unchanged for you to check.
 how_it_works:
   - title: Read
     text: Find the kind of document and the terms named two ways.

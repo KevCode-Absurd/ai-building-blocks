@@ -2,34 +2,101 @@ thinking: medium
 thinking_why: It writes posts and reads your numbers.
 new_slug: x-growth-writer
 name: X growth writer
-summary: Give it your topic and past posts. Get tweets, threads and a plan to
-  grow your audience on X.
+summary: Grow your X (Twitter) account with a profile audit, ready-to-post tweets and a thread, and a two-week posting and reply routine for your niche.
 job: grow-social
 headline: X growth writer
-subhead: A steady plan for growing on X, with the posts already written. Give it
-  your topic and a sample of past posts and you get tweets, threads and a
-  posting routine that fit your niche.
+subhead: Give it your niche, your handle or a sample of past posts, and your goal. It audits your bio and pinned post, studies what works in your space, drafts tweets and a thread, and plans two weeks of posting and replies.
 explain: |
-  A steady plan for growing on X, with the posts already written. Give it your topic and a sample of past posts and you get tweets, threads and a posting routine that fit your niche.
+  Most accounts that stall on X have the same problems: a vague bio, no pinned post that shows the best work, links in the main tweet, and no replies to bigger accounts. This X growth writer checks those first, then gives you posts to start with.
 
-  It starts with an audit of your profile: bio, pinned post, posting rate,. Then it studies accounts in your space and pulls out their hook styles, themes, formats and posting times. From that it drafts content in the formats that tend to reach furthest, starting with threads, and plans the reply work that builds followers. Some steps use small Python scripts, so you need Python.
+  It audits your profile against a short checklist. Then it studies posts from accounts in your niche, such as how they open, what they write about and when they post, and drafts tweets and a thread built from that. It plans the replies too, since replying to larger accounts is the fastest way to be seen.
+
+  The algorithm notes and posting numbers inside the skill are the original author's estimates, not published X rules. Treat them as things to test.
 when:
   - You post on X but your reach stays flat and you want a clear plan.
-  - You are starting a new account and need a week of posts to begin.
+  - You are starting a new account and need a first week of posts.
   - Your bio and pinned post feel weak and you want them audited.
-  - You want to study competitors to see which hooks work in your niche.
+  - You want to study accounts in your niche to see which openings work.
+not_for:
+  - You want one thread from an article or long draft. Use the X thread writer.
+  - You want a reply to one specific tweet. Use the X reply writer.
+  - You plan posts across LinkedIn, Instagram and X together. Use the multi-platform post planner.
 you_give:
   - Your topic or niche
-  - Your X handle or a sample of past posts
-  - A few accounts you admire or compete with (optional)
-  - Your goal, such as followers, leads or sales (optional)
+  - Your X handle, or 10 of your past posts pasted in
+  - Your goal, such as followers, leads or sales
+  - 3 to 5 accounts you admire or compete with (optional)
+  - How many posts a day you can really do (optional)
 you_get:
-  - A profile audit with fixes
-  - A map of what works for similar accounts
-  - Drafted tweets and threads
-  - A posting and reply routine
+  - A profile audit with a fix for each problem
+  - A map of hooks, themes and formats that work in your niche
+  - 5 tweets and 1 thread, ready to post
+  - A two-week posting and reply routine
+  - The numbers to check after two weeks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. A web search tool helps but is not needed.
+  - Paste your niche, your handle and 10 past posts, and say your goal. Add the accounts you admire, or paste 5 to 10 of their posts if your AI cannot search the web.
+  - Read the profile audit first. Fix your bio and pinned post before you post anything new.
+  - Edit the drafts so they sound like you. Put links in a reply, not in the main post.
+  - Follow the routine for two weeks, including the replies. You publish; the skill never posts for you.
+  - Check the numbers it names. Ask your AI to adjust the next two weeks from what you see.
+how_it_works:
+  - title: Audit your profile
+    text: It checks your bio, pinned post and recent activity against a short checklist and gives a fix for each gap.
+  - title: Study your niche
+    text: It looks at posts from similar accounts and pulls out hooks, themes, formats and posting times.
+  - title: Draft the content
+    text: It writes tweets in the formats that tend to reach furthest, and a thread with a strong first post.
+  - title: Plan the replies
+    text: It plans daily replies to larger accounts, each one adding something real.
+  - title: Build the routine
+    text: It lays out two weeks of posting, sized to the time you say you have.
+  - title: Name what to check
+    text: It names the few numbers to review after two weeks and says what to change.
+output_shape: |
+  ## Profile audit
+  <bio, pinned post, activity: fix for each>
+  ## What works in your niche
+  <hooks, themes, formats, times, and how many posts this rests on>
+  ## Drafts
+  <5 tweets and 1 thread>
+  ## Posting routine
+  <2 weeks: posts per day, replies per day>
+  ## Next check
+  <2 or 3 numbers to review>
+output_sample:
+  input:
+    - Your topic or niche
+    - Your X handle, or 10 of your past posts
+    - Your goal, such as followers, leads or sales
+    - Accounts you admire, or 5 to 10 of their posts (optional)
+  prerequisites:
+    - A web search tool for the niche step, or posts pasted in by you
+    - Python only if you want the optional helper scripts
+  output:
+    - name: Profile audit
+      contains: Your bio, pinned post and activity checked, with a fix for each gap.
+    - name: What works in your niche
+      contains: Hook patterns, themes, formats and posting times from the posts it saw.
+    - name: Drafts
+      contains: Five tweets and one thread, ready to edit and post.
+    - name: Posting routine
+      contains: Two weeks of posts and replies, sized to the time you have.
+    - name: Next check
+      contains: The two or three numbers to review after two weeks.
+works_best_with:
+  tools:
+    - {name: "Claude, ChatGPT or Gemini", why: "Any chat AI works. Paste your posts in. The Python helpers are optional."}
+    - {name: "An AI with web search", why: "It can look up public posts in your niche so you do not have to paste them."}
+  inputs:
+    - "Your own analytics from X, such as which posts got the most replies"
+    - "Notes on your voice, so the drafts sound like you"
+terms:
+  - term: Hook
+    meaning: The first line of a post, written to make people stop and read.
+  - term: Pinned post
+    meaning: The post fixed at the top of your profile that visitors see first.
+  - term: Thread
+    meaning: A run of linked posts that tell one story or teach one idea.
+  - term: Atomic tweet
+    meaning: A short single post with one idea.

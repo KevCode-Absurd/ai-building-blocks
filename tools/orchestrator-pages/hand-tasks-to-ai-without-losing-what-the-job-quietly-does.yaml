@@ -1,6 +1,6 @@
 new_slug: hand-tasks-to-ai-without-losing-what-the-job-quietly-does
 name: Give AI tasks and keep what the job quietly does
-summary: Give it a job. Get the tasks AI takes on, what each hides, safe handoffs and a failure check.
+summary: Plan which tasks to give AI, check what each task quietly does, and test the handoffs before you start. Give it a job and a normal week.
 job: set-up-ai
 thinking: high
 thinking_why: Spotting what a task quietly does needs judgment, and the last step hunts for ways the plan fails. Use your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want AI to take work off a role, such as support, reporting or admin.
   - You are about to automate a task and have a feeling it does more than it seems.
   - You are setting up several AI steps and want to know where a fact could get lost.
+not_for:
+  - "You want to automate a task nobody depends on: just hand it to your AI and skip the checks."
+  - "You need to split one big problem into smaller parts, not a job into tasks: use the Big problem splitter."
+  - "You want to rank which choices to make first: use the Decision priority planner."
 you_give:
   - The job, who does it and a typical week
   - Which tasks people dislike or find tiring
@@ -30,6 +34,26 @@ how_to_use:
   - Describe the job and a normal week. Ask two or three of the people who do it which tasks they dislike.
   - Read the hidden-value step before you automate anything. Keep or replace whatever it flags.
   - Run one small task first, and check the failure list before you add more.
+output_sample:
+  input:
+    - The job and who does it
+    - A typical week of work in that job
+    - Which tasks people dislike or find tiring
+    - The AI tools you can use (optional)
+    - Anything the job must never get wrong (optional)
+  prerequisites:
+    - An AI that can read the handoff pack files, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Tasks"
+      contains: Each task marked as draining, tiring or risky, and whether AI takes it, assists or people keep it.
+    - name: "Step 2: Hidden value"
+      contains: What each task quietly does, who gains, what breaks without it, and a call to cut, keep or replace.
+    - name: "Step 3: Handoffs"
+      contains: A card per step with what it needs, returns and must never lose, plus retry and limit rules.
+    - name: "Step 4: Failure check"
+      contains: Ways the plan could fail, whether each is covered or exposed, and a change for each gap.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Break the job into tasks
     text: Splits a normal week into tasks, marks the ones that drain, tire or endanger people, and picks what AI takes, what it assists and what stays with people.

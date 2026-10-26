@@ -1,6 +1,6 @@
 new_slug: product-angle-finder
 name: "Product angle finder"
-summary: "Give it a plain product and its story. Get eight angles plus five story angles, ranked by effort."
+summary: "Find a product angle for a plain product. Give it your product and its story. You get eight angles, five story angles and a shortlist of two."
 job: grow-social
 thinking: medium
 thinking_why: "It generates many ideas and ranks them, which a mid-size model does well. A bigger one adds little."
@@ -17,6 +17,10 @@ when:
   - Your product feels too plain for short video and you are out of ideas.
   - A buyer complaint, such as "it is too expensive", could be turned into a story.
   - You want a founder story post that you can build in about 30 minutes.
+not_for:
+  - "You already have a script and only need a stronger opening: use a hook writer, since this skill finds the angle and does not write scripts."
+  - "Your product cannot be filmed or shown, or you have no true founder or customer facts: ask your team for real facts first, then come back."
+  - "You need a full video script or ad copy: write it yourself or ask your AI for a script once you pick an angle."
 
 you_give:
   - Your product and category
@@ -36,6 +40,29 @@ how_to_use:
   - Say who can film, with what, and the most you can spend on a prop or a trip.
   - Add a news item from your space in the last three days, if there is one.
   - Pick the two angles from the shortlist. Film one and compare the results.
+output_sample:
+  input:
+    - Your product and its category
+    - The price or flaw people complain about (optional)
+    - Founder, factory and supplier facts (optional)
+    - Your best customer story (optional)
+    - Who can film, with what, and your spending cap
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tool is needed.
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: Eight angles
+      contains: One angle per move, each with a first video idea and a cost level.
+    - name: Five story angles
+      contains: Five true stories, each with a target emotion, a technique, a first-line loop and a short plan.
+    - name: Founder carousel
+      contains: One real event for each year of the business, with a photo idea and a short line of text.
+    - name: Shortlist
+      contains: Your two best angles, with the time and money each costs and a series name.
+    - name: Checks missed
+      contains: Any check that could not be run, or the word none.
+    - name: Missing
+      contains: Facts you did not give, such as founder facts, a customer story, a budget or a news item.
 
 how_it_works:
   - title: Runs eight angle moves

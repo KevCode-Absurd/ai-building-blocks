@@ -2,26 +2,105 @@ thinking: medium
 thinking_why: It follows a process checklist and ties each step to your records.
 new_slug: project-time-and-expense-plan
 name: Project time and expense plan
-summary: Share your time and expense process. Get entry rules, approval steps and a clear handoff to billing.
+summary: Set up how your team logs project hours and expenses. You get entry rules, an approval matrix and a checklist for handing time to billing.
 job: organise-work
 headline: Project time and expense plan
-subhead: Share how your team records project hours and expenses, plus the rules you use today. It maps entries, receipts, approvals and billing handoffs. You get a process plan, review roles and checks for late entries, missing receipts and project budget gaps.
-explain: Share how your team records project hours and expenses, plus the rules you use today. It maps entries, receipts, approvals and billing handoffs. You get a process plan, review roles and checks for late entries, missing receipts and project budget gaps.
+subhead: "Tell it how your team records project hours and expenses today, what tools you use and where it goes wrong. It writes entry rules, approval roles and a billing handoff. You also get fixes for late entries, lost receipts and projects that run over budget."
+explain: |
+  If you bill clients for time and costs, the money depends on a plain chain. People log hours. Someone approves them. The hours reach the invoice. When one link is weak, hours go unlogged, receipts go missing and invoices go out late.
+
+  This skill builds a project time tracking and expense process for a team under 100 people. It starts from what you do now, then sets what to record, how soon, who approves and how approved time reaches billing. It also lists what to do for each common failure.
+
+  It plans the process. It does not log time, scan receipts or send invoices. Tools it names, such as Harvest, Toggl or Expensify, are examples, and most have paid plans.
+when:
+  - Hours get logged on Friday for the whole week and nobody trusts them.
+  - Approvals pile up and invoices go out late.
+  - Client costs such as travel or software are paid by you and never billed.
+  - A project goes over budget before anyone notices.
+not_for:
+  - "You do not bill clients by the hour, or the team has only a few people: use a simple shared timesheet."
+  - "You want to check hours before pay day: use the Payroll timesheet checker."
+  - "You want to sort card transactions by category: use the Expense sorter."
+  - "You want to chase a client invoice that is already late: use the Unpaid invoice chaser."
 you_give:
-  - Current time and expense tools, project codes and policies.
-  - Approval roles, billing needs and known delays or missing records.
+  - The tools you use now for time and expenses, or none
+  - Your project and client codes, and which work is billable
+  - Who approves time and expenses today
+  - How billing works, for example hourly or retainer
+  - What goes wrong now, such as late entries or lost receipts (optional)
 you_get:
-  - Time and expense entry rules.
-  - An approval and exception process.
-  - A billing handoff plan with reporting checks.
-how_it_works:
-  - title: Step 1
-    text: Define project codes, billable flags, entry timing and receipt rules.
-  - title: Step 2
-    text: Set review roles, backup approvers and exception handling.
-  - title: Step 3
-    text: Plan the billing handoff and reports for delays and budget gaps.
+  - Entry rules for time and expenses, with receipt rules
+  - An approval matrix with a backup approver
+  - A checklist for handing approved time to billing
+  - A list of exceptions with the fix and owner for each
+  - A short list of report checks for each week or month
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text. Then paste your answers to the items above. Short notes are fine.
+  - Read the approval matrix first. Make sure each approver is a real person who can do it on time.
+  - Mark any rule that does not fit your business. Ask for a fix. Targets it suggests are rules of thumb, not facts about your firm.
+  - Share the entry rules with the team. Put the billing checklist where whoever bills can find it.
+  - Run one billing cycle. Note which exceptions came up, then ask the AI to tighten those rules.
+how_it_works:
+  - title: Map today's process
+    text: Lists how hours and costs are recorded now and where entries go missing.
+  - title: Set entry rules
+    text: Defines project codes, billable flags, entry timing and receipt rules.
+  - title: Assign approvals
+    text: Sets who reviews time and expenses, how often, and the backup if they are away.
+  - title: Plan the billing handoff
+    text: Maps the steps from approved time to a draft invoice, including costs passed on to clients.
+  - title: List the exceptions
+    text: Sets the fix and owner for late entries, lost receipts, disputes and budget overruns.
+output_shape: |
+  ENTRY RULES
+  <what to record> | <how soon> | <receipt rule>
+
+  APPROVAL MATRIX
+  <time or expense> | <approver> | <how often> | <backup>
+
+  BILLING HANDOFF CHECKLIST
+  1. <step> - <owner>
+
+  EXCEPTIONS
+  <problem> | <fix> | <owner>
+
+  REPORT CHECKS
+  <number to watch> | <how often>
+
+  OPEN QUESTIONS
+  <items marked MISSING>
+output_sample:
+  input:
+    - The tools you use now for time and expenses
+    - Your project codes and what counts as billable
+    - Who approves time and expenses, and how billing works
+    - What goes wrong today (optional)
+  output:
+    - name: Entry rules
+      contains: What to record, how soon, the smallest time block and what receipts are needed.
+    - name: Approval matrix
+      contains: Who approves time and expenses, how often, with a backup for each.
+    - name: Billing handoff checklist
+      contains: Steps from approved time and costs to a draft invoice, each with an owner.
+    - name: Exception list
+      contains: A fix and an owner for late entries, lost receipts, disputes and budget overruns.
+    - name: Report checks
+      contains: A few numbers to review each week or month, such as late entries and budget used.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It plans from your text. It does not need to read your time tool.
+    - name: Your time and expense tool, such as Harvest, Toggl or Expensify
+      why: Export a sample of entries to show what really happens. Most have paid plans.
+  inputs:
+    - A rate card or list of billable roles
+    - Your expense policy
+    - A past example of a late or lost entry
+terms:
+  - term: Billable
+    meaning: Work you can charge to a client.
+  - term: Billing handoff
+    meaning: The step where approved hours and costs move into an invoice.
+  - term: Pass-through cost
+    meaning: A cost you pay first and then bill to the client.

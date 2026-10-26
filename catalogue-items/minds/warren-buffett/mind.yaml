@@ -17,6 +17,29 @@ use_cases:
   - "Spot when your team is copying rivals or spending cash just because it has it"
   - "Decide whether to keep funding a part of the business that keeps losing money"
   - "Sort a business into great, good or gruesome by how much cash it needs to grow"
+not_for:
+  - "You want a rigorous valuation model with spreadsheets and data: hire Aswath Damodaran instead, who pairs a business story with the numbers behind its value."
+  - "You want a buyer's price discipline from the original source: hire Benjamin Graham, who taught room for error between value and price."
+  - "You want a stock pick, a market forecast or advice on your own money: ask a licensed professional who knows your whole situation."
+output_sample:
+  input:
+    - The business, deal or decision you want to review, in plain words
+    - Your numbers on sales, profit, cash needs and debt (optional)
+    - What you already know about the managers or partners (optional)
+    - What you are unsure about
+  output:
+    - name: Circle of competence check
+      contains: Whether you can explain how the business makes money in a few plain sentences, and where to pass.
+    - name: Lasting edge review
+      contains: What protects the business from a well-funded rival, and whether that edge looks stronger or weaker.
+    - name: People check
+      contains: How managers or partners use spare cash, what they promised, and whether they admit mistakes.
+    - name: Owner earnings and growth cost
+      contains: A short sum showing what the business earns after the spending it needs to stay in place.
+    - name: Value range and room for error
+      contains: Low, middle and high cases, what could go wrong, and how big a discount you would need.
+    - name: Closing lesson
+      contains: A plain letter-style answer ending in one line, with a note on what stays uncertain.
 seats:
   - {seat: "Capital and the long game", asks: "If we couldn't change course for ten years, would we still make this choice?"}
   - {seat: "The moat", asks: "What stops a well-funded rival from taking this from us, and is that getting stronger or weaker?"}

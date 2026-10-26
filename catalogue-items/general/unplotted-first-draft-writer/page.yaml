@@ -1,6 +1,6 @@
 new_slug: unplotted-first-draft-writer
 name: "Unplotted first-draft writer"
-summary: "Paste your situation and word count. Get today's pages written in order, a facts sheet and tomorrow's first question."
+summary: "Write your first draft without an outline. Paste your situation and word count, and get the day's pages, a facts sheet and tomorrow's first question."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It writes real prose and must keep the people consistent without an outline."
@@ -17,6 +17,10 @@ when:
   - "You have a situation and keep postponing the first scene."
   - "You write a page and then rewrite it all week."
   - "You want a draft that surprises you."
+not_for:
+  - "You want to plan the plot first: make an outline yourself, or ask your AI for one before you write."
+  - "You are writing nonfiction, such as a blog post or a report: use your AI as a plain writing helper, with your notes pasted in."
+  - "You want to fix or polish pages you already have: edit them yourself, or ask your AI for a line edit."
 
 you_give:
   - "Your situation and the people"
@@ -35,6 +39,25 @@ how_to_use:
   - "Read the pages once, then close them. Do not edit."
   - "Save the facts sheet. On day two, paste it with the last paragraph and ask it to go on."
   - "Keep going until the story ends by itself."
+output_sample:
+  input:
+    - Your situation and the people in it
+    - The detail sheet from the scene detail picker (optional)
+    - The day's word count (optional, it uses 1,000)
+    - Yesterday's facts sheet and last paragraph, from day two on
+  output:
+    - name: Day pages
+      contains: The day's draft, written in order, ending near your word count at a clean beat.
+    - name: Facts sheet
+      contains: Names, ages, jobs, places, promises and objects that the pages already state.
+    - name: Where it stopped
+      contains: One line saying where the pages ended.
+    - name: Tomorrow's first question
+      contains: The question the next scene has to answer.
+    - name: Word count
+      contains: A rough count of the pages written.
+    - name: Checks missed
+      contains: One line for each check that failed and why, or none.
 
 how_it_works:
   - title: "Starts from the situation"

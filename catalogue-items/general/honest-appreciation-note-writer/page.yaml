@@ -1,6 +1,6 @@
 new_slug: honest-appreciation-note-writer
 name: "Honest appreciation note writer"
-summary: "Paste what you valued about someone. Get one short thank-you note with one specific, true appreciation and no ask."
+summary: "Write an honest thank-you note from your meeting notes. It picks one true detail, says what it did for you, and leaves out any ask."
 job: speak-and-persuade
 thinking: low
 thinking_why: "The shape is fixed. The work is choosing a true detail and cutting anything that sounds false."
@@ -17,6 +17,10 @@ when:
   - "You just had a good meeting and want to say thank you in a way that lands."
   - "Someone on your team did something you want to recognise properly."
   - "A supplier or a helper went out of their way and you want them to know."
+not_for:
+  - "You want to ask for something: write the request as a separate message, sent later."
+  - "You need thank-you notes for many people at once: write one by hand each, or use a plain mail merge."
+  - "You have nothing specific you valued: wait until you do, or send a short plain thanks."
 
 you_give:
   - "Your notes on the person, such as a contact card"
@@ -35,6 +39,27 @@ how_to_use:
   - "Say how you will send it."
   - "Read the note aloud. Change any word you would not use."
   - "Send it within a day, with no request in it."
+output_sample:
+  input:
+    - Your notes on the person, such as a contact card
+    - The one thing you valued, in a sentence or two
+    - "How you will send it: card, email or message (optional)"
+    - A past note of yours, to match your voice (optional)
+  output:
+    - name: The note
+      contains: A short thank-you of 40 to 90 words in your voice, with one detail and no ask.
+    - name: The one thing and the detail
+      contains: What you valued, the specific detail used, and which of your notes it came from.
+    - name: What it did
+      contains: One sentence on the effect on you or on others.
+    - name: Cut and why
+      contains: Words or lines removed because you could not back them with an example.
+    - name: Any ask
+      contains: A request moved to a later message, or none.
+    - name: Missing
+      contains: Anything you did not give, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: "Picks the one thing"

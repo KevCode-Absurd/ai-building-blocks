@@ -2,18 +2,61 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-incident-postmortem
 name: Incident learning report writer
-summary: Share an outage timeline and evidence. Get a blameless report with
-  causes, follow-up owners and unresolved facts.
+summary: Write a blameless incident post-mortem from your outage timeline and evidence. Get root causes, action items with owners and open questions.
 job: ship-and-host
 headline: Incident learning report writer
-subhead: Share an outage timeline and evidence. Get a blameless report with
-  causes, follow-up owners and unresolved facts. Share your goal and the files
-  you already have. The skill file sets out the steps and the tools needed for
-  this job.
+subhead: Give your AI the facts and timeline of an outage. It asks for what is missing, finds the root cause and writes a blameless report. You get a document with action items, each with an owner and a due date.
+not_for:
+  - "You want to fix a bug caught in staging: skip the report and log it in your normal bug tracker."
+  - "You are planning maintenance that went as expected: a short change note to your team is enough."
+  - "The outage is still going on: handle it first, then write the post-mortem once service is back."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Say you want a post-mortem, then paste your incident details, timeline and any log or alert excerpts.
+  - Answer the questions your AI asks about missing times, impact and what made things worse.
+  - Check the timeline against your real logs, alerts and chat before you accept it.
+  - Review the root cause. If it says human error, ask your AI to keep asking why.
+  - Copy the finished report into your docs. It can save a file only if your AI can write files.
+output_sample:
+  input:
+    - Incident title, detection time and resolution time
+    - Severity level and who led the response
+    - Affected services and the effect on users
+    - Key events with times, from logs, alerts or chat (rough is fine at first)
+    - What made it worse, in the team's words (optional)
+  prerequisites:
+    - Access to your logs, alerts or chat history, so you can check the timeline against real records
+  output:
+    - name: Summary
+      contains: Two or three sentences on what happened, who it hit and how it was fixed, written for someone not involved.
+    - name: Impact
+      contains: A table of affected services, user effect, users hit, peak error rate, data loss and any SLA breach.
+    - name: Timeline
+      contains: A table of events in UTC from first symptom to full fix, with gaps in the record flagged.
+    - name: Root Cause
+      contains: The deepest gap in systems or process, found with the 5 Whys, in blameless words.
+    - name: Contributing Factors
+      contains: Conditions that made the incident worse but were not the root cause.
+    - name: What Went Well and What Could Have Gone Better
+      contains: Two short lists on what worked and where process, tools or coverage fell short.
+    - name: Action Items
+      contains: A table of specific tasks, each with an owner, a due date and a priority.
+    - name: Lessons Learned
+      contains: Optional points worth sharing with the wider team.
+when:
+  - Your service is back up after an outage and you want to write down what happened.
+  - A near-miss happened that would have been an incident if caught later.
+  - A customer-facing error, data loss or SLA breach needs a written review.
+  - You want to record what the team learned before people forget the details.
+you_give:
+  - Incident title and a short description
+  - Time you detected it and time it was resolved, with timezone
+  - Severity level and the person who led the response
+  - Affected services and what users saw
+  - Key events with times, from logs, alerts or chat
+  - Revenue or business impact (optional)
+you_get:
+  - A blameless post-mortem in one document, ready to share
+  - A timeline with gaps in the record flagged
+  - A root cause and a list of contributing factors
+  - Action items with owners, due dates and priorities

@@ -1,6 +1,6 @@
 new_slug: ad-script-read-aloud-editor
 name: "Ad script read-aloud editor"
-summary: "Paste your script. Get every line that trips when spoken, fixed, with the rule it broke."
+summary: "Fix the lines in your ad script that trip when read aloud. Paste it in and get each fix, the rule it broke, and any line still failing."
 job: make-video-ads
 thinking: low
 thinking_why: "It reshapes what you give it, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - Your script reads fine on paper but sounds stiff when someone says it.
   - An AI wrote the draft and it has the giveaway rhythms (fragments, "No X. No Y.").
   - You're about to record a voice-over or a founder video and want a clean take.
+not_for:
+  - "You have no script yet: write one first with the Video ad script writer from customer quotes, then come back to fix how it sounds."
+  - "You need to check claims, prices or offers: send the flags to whoever approves your claims, or use the Meta ad policy checker for ad rules."
+  - "The script needs a full rewrite for voice: ask your AI for a fresh draft as a separate job, because this tool only fixes the worst lines."
 
 you_give:
   - The finished script or ad text
@@ -36,6 +40,22 @@ how_to_use:
   - Paste two or three of your brand's own lines, so it keeps your phrases.
   - Say each fixed line aloud yourself. Keep the ones that sound like you.
   - Send the flags to whoever checks your claims.
+output_sample:
+  input:
+    - Your finished script or ad text
+    - "Who it is for: the public, people who know the category, or professionals (optional)"
+    - A few of your brand's own published lines (optional)
+    - Whether it is spoken or read (optional)
+    - A recording of someone reading it once (optional)
+  output:
+    - name: FIX
+      contains: Each failing line with where it is, the exact words, the rule it breaks and the full fixed text.
+    - name: LEFT AS IS
+      contains: The lines that already work, plus any brand phrases and emojis it kept.
+    - name: FLAGS FOR THE CLAIMS CHECK
+      contains: Any claim, number or offer that looks wrong, left as written with a note on why.
+    - name: STILL FAILING
+      contains: Any line a presenter still could not say cleanly after the fixes, or none.
 
 how_it_works:
   - title: Says each line aloud

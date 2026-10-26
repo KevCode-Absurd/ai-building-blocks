@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It reads the code closely to find hidden weak spots.
 new_slug: ai-written-code-reviewer
 name: AI-written code reviewer
-summary: Give it code an AI wrote fast. Get the real risks that will hurt later,
-  with the smallest fix for each.
+summary: Check AI-written code before you ship it. Get the real risks, where they are in the code, and the smallest fix for each.
 job: test-and-fix-code
 headline: AI-written code reviewer
-subhead: "Code that runs but feels fragile gets a plain risk review: what will
-  hurt later, why, and the smallest fix for each. It looks at what rapid
-  AI-assisted coding often leaves behind and ignores cosmetic nitpicks."
+subhead: "Code that runs but feels fragile gets a plain risk review: what will hurt later, why, and the smallest fix for each. It looks at what rapid AI-assisted coding often leaves behind and ignores cosmetic nitpicks."
 explain: |
   Code that runs but feels fragile gets a plain risk review: what will hurt later, why, and the smallest fix for each. It looks at what rapid AI-assisted coding often leaves behind and ignores cosmetic nitpicks.
 
@@ -18,6 +15,10 @@ when:
   - The code works but you are afraid to change it.
   - You are handing the project to another developer.
   - You want security and upkeep risks flagged before launch.
+not_for:
+  - "You only need a security check: use a dedicated security audit or ask a security engineer."
+  - "You have one small snippet with a single bug: ask your AI to fix that bug directly."
+  - "You want your code rewritten or restyled: ask your AI for a rewrite, since this review only flags risks and small fixes."
 you_give:
   - The source code, as files or pasted
   - What the system does and its scale (optional)
@@ -28,8 +29,29 @@ you_get:
   - Why each one matters
   - The smallest fix for each
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open a new chat in Claude, ChatGPT or Gemini.
+  - Paste the skill instructions first.
+  - Paste your code under them. For many files, upload them if your AI allows it.
+  - Add what the system does and how many people use it (optional), plus your language and framework (optional).
+  - Read the Executive Summary first, then fix the Critical Issues before you ship.
+  - Ask your AI to explain any finding you do not follow.
+output_sample:
+  input:
+    - Your source code, as files or pasted text
+    - What the system does and how many people use it (optional)
+    - Your language and framework (optional)
+  output:
+    - name: Audit Report header
+      contains: The files reviewed, the assumptions made, and quick stats on file count, lines of code and language.
+    - name: Executive Summary
+      contains: A short read-first view of the biggest risks and whether the code is ready for production.
+    - name: Critical Issues
+      contains: Problems to fix before production, each with its location, why it matters and a copy-paste fix.
+    - name: High-Risk Issues
+      contains: Serious problems that are less urgent, with location, reason and recommended change.
+    - name: Maintainability Problems
+      contains: Messy or inconsistent code that will make later changes slow or risky.
+    - name: Production Readiness Score
+      contains: A score for how ready the code is to ship, with the reasons behind it.
+    - name: Refactoring Priorities
+      contains: The order in which to fix things, starting with what matters most.

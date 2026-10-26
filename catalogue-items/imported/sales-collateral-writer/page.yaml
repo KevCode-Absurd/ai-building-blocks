@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks the format and writes to it.
 new_slug: sales-collateral-writer
 name: Sales collateral writer
-summary: Name the deal or buyer. Get a pitch deck outline, one-pager, objection
-  sheet or demo script.
+summary: Write a pitch deck outline, one-pager, objection sheet or demo script for your next sales deal. Name the buyer and your AI writes sales collateral.
 job: sell-and-negotiate
 headline: Sales collateral writer
-subhead: The sales material your reps will actually open and use. Name the deal
-  or buyer and get a pitch deck outline, a one-pager, an objection sheet or a
-  demo script.
+subhead: The sales material your reps will actually open and use. Name the deal or buyer and get a pitch deck outline, a one-pager, an objection sheet or a demo script.
 explain: |
   The sales material your reps will actually open and use. Name the deal or buyer and get a pitch deck outline, a one-pager, an objection sheet or a demo script.
 
@@ -18,6 +15,10 @@ when:
   - Your reps keep getting the same objection and have no good answer.
   - You need a one-page leave-behind for a buyer.
   - A demo is coming and the presenter needs a script.
+not_for:
+  - "You want a public page that compares you to rivals: write that as a competitor comparison page, not sales collateral."
+  - "You want to learn why buyers say yes or leave: run buyer interviews with a person, not this skill."
+  - "You need a cold outreach email: write it as a short email with a cold email tool or template, not a sales deck."
 you_give:
   - What you sell and who it is for
   - The deal or buyer to target
@@ -29,7 +30,30 @@ you_get:
   - An objection handling sheet
   - A demo script
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. No code, files or paid tools are needed.
+  - "Tell your AI which asset you want: a deck, one-pager, objection sheet or demo script."
+  - Share what you sell, who the buyer is, your deal size and any proof you can back up.
+  - Answer the questions it asks about your sales process and the stage of the deal.
+  - Read the draft and check every claim has proof. Test it with one rep before you send it.
+output_sample:
+  input:
+    - What you sell and who it is for
+    - The deal or buyer you are writing for
+    - Your sales process, deal size and sales cycle
+    - Proof points such as results (optional)
+    - Your product marketing context file (optional)
+  output:
+    - name: Sales deck
+      contains: A slide-by-slide outline with a headline, body copy and speaker notes for each slide.
+    - name: One-pager
+      contains: Full copy for a leave-behind, with layout advice on sections and visual order.
+    - name: Objection doc
+      contains: A table of each objection, a response, a proof point and a follow-up question.
+    - name: Live objection
+      contains: The likely concern, one reply the rep can say as written, proof and a follow-up question.
+    - name: Demo script
+      contains: A scene-by-scene script with timing, a talk track and points to ask the buyer questions.
+    - name: Win-loss report
+      contains: Scope, findings with counts and quotes, a by-competitor breakdown and updates for your assets.
+    - name: Proposal
+      contains: Section-by-section copy with notes on how to tailor it to the buyer.

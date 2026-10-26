@@ -1,6 +1,6 @@
 new_slug: three-tier-price-ladder-drafter
 name: "Three-tier price ladder drafter"
-summary: "Paste what you sell and your costs. Get three tiers with what each includes and why the middle one wins."
+summary: "Draft three price tiers for what you sell: a plain one, a middle pick and a top tier, each with price, margin and who it is for."
 job: set-prices
 thinking: medium
 thinking_why: "It balances costs, buyer value and price gaps across three tiers at once."
@@ -17,6 +17,10 @@ when:
   - "You sell one thing at one price and want to serve both the cheap buyer and the big buyer."
   - "You are launching a service and need a first draft of packages."
   - "Your current tiers confuse people and most pick the cheapest."
+not_for:
+  - "You sell a one-off product with no repeat buyers: test a single price with a few real customers first."
+  - "You only need clear wording for a discount or sale price: use the Discount wording and price display planner."
+  - "You do not know what your parts cost you: work out your costs first, with a spreadsheet or your bookkeeper, then come back."
 
 you_give:
   - "What you sell and every part you could include"
@@ -33,6 +37,31 @@ how_to_use:
   - "Add the parts buyers ask about and the parts they ignore."
   - "Check the PARTS table. Fix any cost or value that is wrong and run again."
   - "Put the three tiers in front of five customers before you publish them."
+output_sample:
+  input:
+    - What you sell and every part you could include
+    - What each part costs you
+    - What buyers ask for and push back on (advised)
+    - Your current price and how many buy (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder (optional, your AI can work from what you paste)
+  output:
+    - name: PARTS
+      contains: Every part of your offer with its cost to you and how much buyers value it.
+    - name: TIER 1
+      contains: The plain tier with its name, price, margin, what it includes, who it is for and what it gives up.
+    - name: TIER 2
+      contains: The middle tier most buyers should pick, with price, margin, what it includes and who it is for.
+    - name: TIER 3
+      contains: The top tier for the few who want everything, with price, margin, includes and who it is for.
+    - name: WHY THE MIDDLE WINS
+      contains: One line on why the middle tier is the obvious choice for your main buyer.
+    - name: TEST
+      contains: What to try first and the one number to watch.
+    - name: MISSING
+      contains: Any costs or buyer words you did not give, so you know what to add.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Lists the parts"

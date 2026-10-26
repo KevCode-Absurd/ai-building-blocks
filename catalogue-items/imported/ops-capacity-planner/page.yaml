@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It does queueing maths and has to weigh hiring trade-offs.
 new_slug: ops-capacity-planner
 name: Ops capacity planner
-summary: Give it your demand and team size. Get staffing levels, overload risk
-  and a 12-month hiring plan.
+summary: Size your support or ops team with queueing maths. Give it demand and team size. Get staffing levels, overload risk and a 12-month hiring plan.
 job: lead-people
 headline: Ops capacity planner
-subhead: Staffing numbers backed by maths, so your hiring request holds up when
-  finance pushes back. The skill sizes your team, flags who is overloaded and
-  lays out a 12-month hiring plan by quarter.
+subhead: Staffing numbers backed by maths, so your hiring request holds up when finance pushes back. The skill sizes your team, flags who is overloaded and lays out a 12-month hiring plan by quarter.
 explain: |
   Staffing numbers backed by maths, so your hiring request holds up when finance pushes back. The skill sizes your team, flags who is overloaded and lays out a 12-month hiring plan by quarter.
 
@@ -18,6 +15,10 @@ when:
   - You must justify headcount in next year's budget.
   - Demand changed more than 15 percent and you need to resize.
   - You are merging teams or opening a new segment and need a starting size.
+not_for:
+  - Your work is projects, not a queue of tickets or cases. Use your project plan or sprint tool, because this skill needs steady queued work.
+  - You do not know where work gets stuck. Find the bottleneck first with a process map, then come back to size the team.
+  - You need a 1 to 5 year plan for skills and leaders. Talk to your HR lead, because this plans 12 months of queue staffing.
 you_give:
   - Daily volume at typical, busy and peak levels
   - Team size and hours worked
@@ -30,8 +31,28 @@ you_get:
   - Team health verdict
   - A quarterly hiring plan for 12 months
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run Python 3 code and read files. A plain chat window cannot do the maths.
+  - Pull daily ticket counts for the last 90 days from your help desk. Work out typical, busy and extreme days.
+  - "Give your AI the skill and your numbers: daily volume, team size, handle time, service target and time lost to non-ticket work."
+  - Ask it to run the capacity script first. Read the 80 percent row, because that is the sizing point.
+  - Ask it to run the utilization script on each person's load. If the spread is wide, fix balance before hiring.
+  - Ask it to run the hiring script, then answer the seven questions in writing before you share the plan.
+output_sample:
+  input:
+    - Daily ticket volume at typical, busy and extreme levels, from the last 90 days
+    - Current team size and how much of each day is lost to meetings, breaks and training
+    - Average handle time per ticket
+    - Your service target, such as reply time
+    - Expected demand growth and people leaving (optional)
+  prerequisites:
+    - An AI that can run Python 3 code, because the maths runs in three scripts
+    - At least 90 days of daily volume data from your help desk
+  output:
+    - name: Capacity sizing
+      contains: People needed at 70, 80 and 90 percent busy, with the chance of missing your target and a risk rating.
+    - name: Utilization health
+      contains: "A traffic light for each person and a team verdict: healthy, squeezed, overloaded or unbalanced."
+    - name: 12-month hiring plan
+      contains: Hires by quarter, allowing for ramp time, people leaving, demand growth and when you need another manager.
+    - name: Forcing questions
+      contains: Seven questions to answer in writing before you commit the plan, such as your bottleneck and your surge plan.

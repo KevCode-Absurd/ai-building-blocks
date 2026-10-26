@@ -1,6 +1,6 @@
 new_slug: weekly-sales-pipeline-reviewer
 name: Weekly sales pipeline reviewer
-summary: Give it your weekly deal export. Get what changed, the deals to act on today and a fix list to approve.
+summary: Run a weekly sales pipeline review on your deal export. See what changed, the deals to act on today and the record fixes to approve.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It runs up to eight skills, compares two weeks of deals and picks a different check for each flagged deal. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a dozen or more open deals and no time to go through each one every week.
   - Deals keep slipping and you want to catch the quiet ones early.
   - You want to know before the end of the period whether your target is still in reach.
+not_for:
+  - "You have fewer than about ten open deals: read them by hand each week, since a review adds little."
+  - "You want a quick fix to your CRM records: make the changes yourself, because this agent only lists fixes for you to approve."
+  - "You want a message sent to a buyer: write it yourself or ask a teammate, because this agent never contacts anyone."
 you_give:
   - This week's open deals as an export or paste, with stage, amount, close date, next step and last activity
   - Your target for the period
@@ -31,6 +35,33 @@ how_to_use:
   - The first time, give it your target. It saves the export and its summary in a pipeline folder.
   - Read the list of deals to act on. Make the CRM changes you agree with, or say yes to each one.
   - Run it again next Monday. It compares with last week's export.
+output_sample:
+  input:
+    - This week's open deals, with stage, amount, close date, next step and last activity
+    - Your target for the period
+    - Last week's export (saved by the agent after the first run)
+    - Notes on stalled deals (optional)
+    - Closed deals from last quarter (optional, once a month)
+  prerequisites:
+    - An AI that can read your export, such as Claude Code if you want it to keep the pipeline folder
+    - A CRM export or a read-only CRM link
+  output:
+    - name: PIPELINE
+      contains: Open deals, amount, weighted amount, coverage against the bar and the change from last week.
+    - name: DATA TRUST
+      contains: How many deals have serious problems and whether the numbers are fine or rough.
+    - name: WHAT CHANGED
+      contains: Deals that went quiet, slipped, are new or are missing from the file.
+    - name: ACT ON TODAY
+      contains: Up to five deals, each with a reason, next action, owner and date.
+    - name: IF IT SLIPS
+      contains: The effect on your target and the pipeline needed, when a slip puts your number at risk.
+    - name: RECORD FIXES TO APPROVE
+      contains: Each proposed change with the deal, old and new value and the evidence.
+    - name: WATCH NEXT WEEK
+      contains: One to three numbers that decide next week's focus.
+    - name: FILES AND MISSING
+      contains: Each step's saved file and every MISSING line in one list.
 how_it_works:
   - title: Read last week
     text: Opens last week's export and summary. On the first run it says there is no comparison yet and saves this week as the base.

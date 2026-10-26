@@ -1,0 +1,145 @@
+name: FP&A Analyst agent
+summary: "Get a budget versus actual review with the reason behind each big gap, an updated full-year forecast and an action for each budget owner."
+headline: FP&A Analyst agent
+subhead: "Paste your budget and your actuals for the month. Add the drivers behind your plan and the gap size you want explained. It finds the reason behind each big gap, says if it will repeat and updates your full-year forecast. You get a variance review and a list of actions."
+job: money-and-investing
+thinking: high
+thinking_why: It must tell a timing gap from a lasting one and link each to a driver. Use a model that reasons through cause and effect and shows its working.
+explain: |-
+  A budget versus actual review (also called a variance analysis) compares what you planned to spend and earn with what happened. Most reviews stop at "we are $20,000 over". That tells you nothing about what to do next.
+
+  This agent keeps going. For each gap above your threshold, it asks why. Was it volume, price or mix? Was it timing, such as a deal that slipped a month, or a lasting miss? Then it says what the gap means for the rest of the year. A variance that does not change the forecast is a note. One that does is an action.
+
+  It also checks that each budget line ties to a business driver, not just last year plus a few percent. It updates your full-year outlook in three cases and shows what you would have to cut or defer to cover a new request. It works from what you paste and does not open your accounting or planning system. It is not an audit, tax or investment opinion.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Month end has passed and you need to explain to your team or your boss why you are over or under budget.
+  - A manager asks for more budget and you want to see what it costs and what you would give up.
+  - Your forecast was wrong and you want to know where it keeps missing.
+  - You are building next year's budget and want each line linked to a driver, not to last year's number.
+not_for:
+  - You want a first budget built from scratch. Use the Budget and forecast builder or the Department budget planner.
+  - You want to decide on one big spend. Use the Chief Financial Officer agent.
+  - You want a financial model checked for errors. Use the Financial Analyst agent.
+  - You need an audited statement or a tax return. Those go to a qualified accountant.
+you_give:
+  - Your budget for the period, by line or by department, as a table or spreadsheet.
+  - Your actuals for the same period and lines, from your accounting software.
+  - The drivers behind your plan, such as units sold, price, headcount or ad spend.
+  - The gap size that should be explained, such as any line more than 5% or $1,000 off
+  - Last period's forecast, and what you know about deals or costs that moved (optional)
+you_get:
+  - A variance table by line with the gap in dollars and in percent
+  - The reason behind each gap above your threshold, marked timing or lasting
+  - An updated full-year forecast in a base, better and worse case
+  - The trade-off shown for any new budget request
+  - An action list with an owner and a date for each item
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste the budget and the actuals for the same lines and the same period. Say which period it is and what the full year plan was.
+  - Add the drivers behind the plan, and the gap size you want explained. No code or software access is needed.
+  - Type "Review this period. Explain each gap above my line. Say if it is timing or lasting. Do not guess a reason I did not give you."
+  - Answer the questions it asks about the big gaps, such as "did the deal slip or was it lost?" Then ask it to update the forecast.
+  - Send each budget owner their own lines and action. Run the review again next month with the new forecast.
+how_it_works:
+  - title: Set the frame
+    text: It confirms the period, the lines, the plan and the gap size to explain. Anything missing is asked once, then marked MISSING.
+  - title: Build the variance table
+    text: It sets plan, actual and the gap beside each other and ranks the gaps from largest down.
+  - title: Find the cause
+    text: For each large gap it splits volume, price, mix and timing, and marks it timing or lasting.
+  - title: Link to drivers
+    text: It checks each budget line against a driver and flags lines that are only last year plus a percent.
+  - title: Update the forecast
+    text: It moves the full-year outlook for lasting gaps and timing shifts, in a base, better and worse case.
+  - title: Show the trade-offs
+    text: For any new request it shows what would be cut, deferred or accepted as a risk.
+  - title: Assign actions
+    text: It lists each action with an owner and a date, and the questions still open.
+output_shape: |-
+  FRAME
+    Period <period> | Lines checked <number> | Gap size explained <threshold>
+
+  VARIANCE TABLE
+    <line> | Plan <amount> | Actual <amount> | Gap <amount and %> | Over or under
+
+  EXPLANATIONS
+    <line> | <cause: volume, price, mix or timing> | <Timing or Lasting> | <effect on the full year>
+
+  DRIVER CHECK
+    <line> | <driver or "none found"> | <comment>
+
+  FORECAST UPDATE
+    <Base, Better or Worse> | Full-year revenue <amount> | Full-year costs <amount> | <what changed>
+
+  TRADE-OFFS
+    <request> | <what to cut or defer> | <risk accepted>
+
+  ACTIONS
+    <action> | <owner> | <due date> | <Open or Done>
+
+  OPEN QUESTIONS
+    <question for a budget owner> | <why it matters>
+output_sample:
+  input:
+    - Your budget for the period, by line or by department
+    - Your actuals for the same lines and period
+    - The drivers behind the plan, such as units, price or headcount
+    - The gap size to explain, and last period's forecast (optional)
+  prerequisites:
+    - An AI that can read pasted tables or a spreadsheet file
+  output:
+    - name: Frame
+      contains: The period, the number of lines checked and the gap size explained.
+    - name: Variance table
+      contains: Plan, actual and the gap in dollars and percent for each line.
+    - name: Explanations
+      contains: The cause of each large gap, marked timing or lasting, with the effect on the year.
+    - name: Driver check
+      contains: Each line's business driver, and lines with none found.
+    - name: Forecast update
+      contains: A base, better and worse full-year view with what changed.
+    - name: Trade-offs
+      contains: What a new request would cost, what to cut or defer and the risk accepted.
+    - name: Actions
+      contains: Each action with an owner, a due date and its status.
+    - name: Open questions
+      contains: Questions for budget owners, with why each one matters.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads your budget and actuals as spreadsheets and lines them up by account.
+  inputs:
+    - Last month's review, so it can say if a gap grew or closed.
+    - Key business numbers such as deals in the pipeline or hires planned.
+    - A list of budget owners by line, so each action gets a name.
+terms:
+  - term: Variance
+    meaning: The gap between what you planned and what happened.
+  - term: Timing variance
+    meaning: A gap that should reverse later, such as a bill paid a month early.
+  - term: Rolling forecast
+    meaning: A forecast you update every month or quarter as things change.
+  - term: Driver
+    meaning: A business fact that moves a number, such as units sold or hours worked.
+  - term: Mix
+    meaning: A shift in what you sell, such as more low-price items than high-price ones.
+tweaks:
+  - what: Gap size
+    how: Set your own line, such as 5% or $1,000. A low line gives long lists and a high one hides real issues.
+  - what: Scope
+    how: Review one department at a time if you have many lines. Run the full company view last.
+  - what: Forecast
+    how: Give your best, base and worst full-year guesses. It tests them against the year so far.
+improve:
+  - Keep each month's review. Track which lines keep missing, because that points to a weak driver.
+  - Add your owner list and driver list to the pack, so each run starts with them.
+  - Pair it with the Bookkeeper & Controller agent so the actuals you feed it have been checked.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

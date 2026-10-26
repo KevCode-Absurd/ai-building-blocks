@@ -1,4 +1,5 @@
 import { withCustomSkills } from "./custom-skills";
+import { trackUxEvent } from "./ux-events";
 import { assignedCustomMinds, customMindMarkdown, mindFile, withCustomMinds } from "./custom-minds";
 // Builds the handoff pack from a saved workflow with plain code: same workflow in, same pack out.
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
@@ -389,6 +390,7 @@ export function download(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url; a.download = filename; a.click();
+  trackUxEvent("file_download");
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 

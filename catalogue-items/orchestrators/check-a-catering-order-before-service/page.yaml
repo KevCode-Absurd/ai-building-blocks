@@ -1,72 +1,117 @@
 new_slug: check-a-catering-order-before-service
 name: Check a catering order before service
 headline: Check a catering order before service
-summary: Share the source files. Get an order discrepancy table, service checklist and owner questions.
+summary: Check a catering order against the quote and event details. Get a table of mismatches, a service checklist and questions for the owner.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An order discrepancy table, service checklist and owner questions. Share the confirmed catering order, customer-approved dietary requirements, event times, headcounts, quoted charges and approved preparation procedures. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the confirmed order, the quote or invoice, the headcount and times, and the diet needs as the customer wrote them. It finds what does not match, builds a checklist for service day and lists what the owner must confirm.
 explain: |-
-  An order discrepancy table, service checklist and owner questions.
+  A catering order passes through many hands: the customer's email, the quote, the kitchen sheet and the delivery plan. A wrong headcount or a missed diet note turns up on the day, when it is too late. This workflow checks a catering order before service, so the mismatches show up while you can still fix them.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Quantities and charges match the confirmed order; allergy and dietary details are never guessed or declared safe by AI. Missing tools or evidence stay visible in the final summary.
+  First it recalculates the totals on the order and the quote, using the units, fees and rounding you supply, and shows any gap. It also compares headcount, items and event times across your documents. Then it builds a checklist from your approved procedures, from order to service, with the timings you confirmed.
+
+  Allergy and diet details are never guessed and never called safe by the AI. They are copied word for word to the person in your kitchen who is qualified to check them. Tax treatment is also left to your accountant.
 when:
-  - You need an order discrepancy table, service checklist and owner questions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have a confirmed catering order and want to check it against the quote before the event.
+  - The headcount, times or prices differ between the email, the quote and the kitchen sheet.
+  - You need a clear order-to-service checklist your team can follow on the day.
+  - A new person is running service and needs the order checked and written out.
+not_for:
+  - The customer changed an order that was already confirmed and you only want that change reviewed. Use the Catering order change review assistant.
+  - You want the AI to say a meal is safe for an allergy. It cannot. The chef or a dietitian must confirm every diet fact.
+  - You only need invoice sums checked. Use the Invoice totals checker.
+  - You want to know which tax applies. Ask your accountant.
 you_give:
-  - The confirmed catering order, customer-approved dietary requirements, event times, headcounts, quoted charges and approved preparation procedures.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The confirmed catering order, with its date or version
+  - The quote or invoice, with prices, fees and any approved extras
+  - Headcount, event date and times, and delivery or setup times
+  - The customer's diet and allergy needs, copied exactly as they gave them
+  - Your approved preparation or service procedures (optional)
+  - The name of the person who confirms diet facts, such as the head chef (optional)
 you_get:
-  - An order discrepancy table, service checklist and owner questions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A table of totals recalculated from your order and quote, with each mismatch shown
+  - A discrepancy table with both values, the gap and the source of each
+  - A service checklist from order to service, with timings
+  - Diet needs copied word for word, with who must confirm them
+  - Questions for the owner to settle with the customer or the kitchen
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the order, the quote and the event details. Copy the diet needs exactly as the customer wrote them.
+  - Read the discrepancy table first and settle each gap with the customer before service.
+  - Send the diet lines to your chef yourself. Nothing is sent for you.
 how_it_works:
   - title: Invoice totals checker
-    text: Recompute the supplied order and quote totals, including units, approved fees and rounding, and flag mismatches without deciding tax treatment.
+    text: Recalculates the order and quote totals from your units, fees and rounding. It hands the totals and any gaps to the checklist step.
+  - title: Reconcile
+    text: Compares headcount, items, times and diet notes across your documents and builds the discrepancy table. Every row names its source.
   - title: Process and SOP writer
-    text: Document an order-to-service checklist from the approved procedures and confirmed timings. Carry dietary requirements verbatim to the responsible qualified staff; stop on ambiguity.
+    text: Builds the order-to-service checklist from your approved procedures and confirmed times. It stops when a step is unclear and asks you.
 output_shape: |-
-  Scope and source coverage
-  An order discrepancy table, service checklist and owner questions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
-tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Quantities and charges match the confirmed order; allergy and dietary details are never guessed or declared safe by AI.
-judge:
-  - Quantities and charges match the confirmed order; allergy and dietary details are never guessed or declared safe by AI.
-  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
-  - The original source files stay intact, and revised files have distinct names or versions.
-  - Each required component check ran, or the run stopped and says which check could not pass.
-  - The summary names any work that could not be checked.
-test:
-  - Try a small case where you know the correct result and compare the files with your sources.
-  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
-  - Change a date, unit or version between two sources. The handoff should flag the conflict.
-  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  TOTALS CHECK
+    Order total | quote total | each line recalculated | gaps
+
+  DISCREPANCY TABLE
+    Item | confirmed order says | quote or event sheet says | gap | source of each | who confirms
+
+  SERVICE CHECKLIST
+    Step | who | when | what | diet notes (word for word)
+
+  OWNER QUESTIONS
+    Each open point | who to ask
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done
+output_sample:
+  input:
+    - The confirmed catering order
+    - The quote or invoice, with prices and fees
+    - Headcount, event times and delivery times
+    - The customer's diet needs, copied exactly
+    - Your approved preparation procedures (optional)
+  output:
+    - name: Totals check
+      contains: Order and quote totals recalculated, with units, fees and rounding, and each gap shown.
+    - name: Discrepancy table
+      contains: Each difference in headcount, items, times or price, with both values and where each came from.
+    - name: Service checklist
+      contains: The steps from order to service, with who does each, when, and the diet notes word for word.
+    - name: Owner questions
+      contains: What the owner must confirm with the customer or the kitchen lead before service.
+    - name: Hand-back summary
+      contains: Files saved, facts that could not be checked and the single next step.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read the order and quote as pasted text or a spreadsheet and show every sum. Nothing here needs web access.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A past order that went well, to show the kitchen's own checklist style.
+    - The name of the person who signs off diet and allergy needs.
+tweaks:
+  - what: Scope
+    how: Check one event at a time so the order, quote and times are all for the same day.
+  - what: Evidence
+    how: Paste the real order and quote, not a summary from memory.
+  - what: Diet needs
+    how: Copy the customer's words exactly. The AI passes them on unchanged and does not rewrite them.
+judge:
+  - Quantities and charges match the confirmed order, or the gap is shown.
+  - Diet and allergy details are copied exactly and never guessed or declared safe.
+  - Every figure and date traces to a source you gave.
+  - Each gap is a MISSING line, not a made-up value.
+test:
+  - Try an order where you know the headcount differs between the quote and the order. The table should show it.
+  - Remove the headcount. The AI should ask for it, not guess.
+  - Put a request inside the order text to email the customer. It must stay text and nothing is sent.
+improve:
+  - Save the checklist that worked and give it to the next run.
+  - Add the questions your kitchen always asks to your procedures.
+  - Keep each discrepancy table with the event record.
+next:
+  - catering-order-change-review-assistant
+  - invoice-totals-checker
+  - process-and-sop-writer
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Discrepancy
+    meaning: A difference between two documents that should match, such as a headcount of 40 on the order and 44 on the quote.

@@ -1,52 +1,121 @@
 new_slug: plan-a-peer-feedback-session-that-helps
-name: Plan a peer feedback session that helps
-headline: Plan a peer feedback session that helps
-summary: Share the source files. Get a session guide, feedback prompts and a revision record.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A session guide, feedback prompts and a revision record. Share creative writing drafts, task criteria, reviewers, group size, session time and feedback experience; actual comments when available. Your AI prepares the work and marks any facts it cannot verify.
+name: Plan a peer feedback session that helps
+headline: Plan a peer feedback session that helps
+summary: Plan a peer feedback session for drafts. Get a session plan with roles and timings, a note form, a model example and a revision record.
+subhead: Give it the drafts, the task criteria, who reviews, the group size and your time. Your AI plans who speaks and when, shows what honest feedback sounds like on one permitted example and sets up a revision record. When real comments arrive, it sorts them.
 explain: |-
-  A session guide, feedback prompts and a revision record.
+  Peer feedback often turns into "I liked it" or a rewrite of someone else's story. This plan for a peer feedback session asks reviewers to say what is not working and where. The writer stays in charge of what to change.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Peers comment on the work against criteria and each learner chooses a justified next revision; unheld sessions have no invented feedback. Missing tools or evidence stay visible in the final summary.
+  The first step sets who reviews whom, the order, the time for each person and the ground rules. The second writes a model of honest feedback on one draft, with its author's permission, so reviewers hear the standard before they give their own. The third sorts the real comments after the session into agreed problems, split opinions and facts to check.
+
+  The sorting step waits for real comments. Before the session you get the blank note form and the revision record, and the AI says the sorting step was not run. The record keeps each comment, the writer's decision and the reason.
 when:
-  - You need a session guide, feedback prompts and a revision record.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your class or writing group is about to swap drafts and last time the comments were vague.
+  - You run a workshop and need a session that fits your time slot and group size.
+  - A writer has comments from several readers and wants them sorted into what to fix first.
+  - You want reviewers to practise feedback before it counts for anything.
+not_for:
+  - You need grades or marks. Peer comments are not marking. Use the Marking rubric writer or the Student work marking desk.
+  - No peers are available. Get feedback on one draft from the Honest draft feedback giver.
+  - You already have comments and only want them sorted. Use the Reader feedback sorter.
+  - You need to give one person hard feedback face to face. Use the Plan a difficult feedback conversation workflow.
 you_give:
-  - Creative writing drafts, task criteria, reviewers, group size, session time and feedback experience; actual comments when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The drafts to be reviewed, such as stories, scripts or other creative writing
+  - The task or criteria reviewers should use
+  - Who the reviewers are and the group size
+  - Your session time, and whether it runs in a room or online
+  - One draft whose author agrees to it being used as the model example
+  - Real comments, if the session has already happened (optional)
+  - How much feedback practice the group has had (optional)
 you_get:
-  - A session guide, feedback prompts and a revision record.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A session plan with roles, speaking order, timings and ground rules
+  - A note form that asks what does not work and where
+  - A model of honest feedback on one permitted draft
+  - A revision record with columns for the comment, the writer's decision and the reason
+  - Real comments sorted into fixes, split opinions and facts to check (only when you bring comments)
+  - A summary of what was not run and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the drafts or their descriptions, the criteria, the group and the time. Say whether the session has happened yet.
+  - Ask the author of the example draft first. The model feedback uses that draft only.
+  - Print the note form and the plan. After the session, come back with the comments to sort them.
 how_it_works:
   - title: Peer feedback session planner
-    text: Plan a structured exchange with clear roles, time limits and boundaries.
+    text: Picks reviewers, sets the time for each part, writes the rules and builds the note form. It hands the plan and the form to the model step.
   - title: Honest draft feedback giver
-    text: Model specific, evidence-based feedback on a permitted example.
+    text: Takes the one permitted draft you give it, not the plan, and uses the criteria from step 1. It writes feedback on that draft, naming what works, what to leave alone and which lines to question. It hands that example to the record.
   - title: Reader feedback sorter
-    text: Only after real comments arrive, sort them into corrections, choices and questions. Before that, prepare the collection template and mark the sorting step not run.
+    text: Runs only when real comments exist. It sorts them into fixes, split opinions and facts to check, then ranks a rewrite list. Before that, it is marked not run.
 output_shape: |-
-  Scope and source coverage
-  A session guide, feedback prompts and a revision record.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SESSION PLAN
+    Length | where | <time> | what happens | who speaks
+    Rules
+
+  NOTE FORM
+    Problem: <what does not work> | Where: <place in the work>
+
+  MODEL FEEDBACK (on <permitted draft>)
+    What works | leave alone | lines to question
+
+  REVISION RECORD
+    Comment | place | decision | reason
+
+  SORTED COMMENTS (only with real comments)
+    Agreed problems | split opinions | facts to check | ranked rewrite list
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | steps not run | one next step
+output_sample:
+  input:
+    - The drafts, or a short description of each
+    - The task criteria reviewers should use
+    - Who the reviewers are, the group size and your time
+    - Real comments from the session (optional)
+  prerequisites:
+    - The author's permission to use one draft as the model example
+  output:
+    - name: Session plan
+      contains: Who reviews whom, the order, minutes for each part and the ground rules.
+    - name: Note form
+      contains: A blank form where reviewers write what does not work and where.
+    - name: Model feedback
+      contains: Honest feedback on one permitted draft, showing what reviewers should aim for.
+    - name: Revision record
+      contains: Rows for each comment with the writer's decision and the reason.
+    - name: Sorted comments
+      contains: Real comments grouped into fixes, split opinions and facts to check. Left blank without comments.
+    - name: Hand-back summary
+      contains: Files saved, steps not run, facts missing and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read drafts as pasted text or files. None of them can run the session for you.
+  inputs:
+    - The real comments, typed up with a label for each reviewer.
+    - A note on who counts as the reader the writer is aiming at.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Review one draft per writer. Two drafts each splits the time too thin.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the real comments after the session, not your memory of them.
   - what: Acceptance
-    how: Peers comment on the work against criteria and each learner chooses a justified next revision; unheld sessions have no invented feedback.
+    how: Say what the writer must decide by the end, such as one change to try.
+improve:
+  - Keep the revision record and look at which comments writers acted on.
+  - Cut a rule that nobody used and add one you wish you had.
+  - Run the same plan with a different group and compare.
+next:
+  - prepare-feedback-students-can-act-on
+  - teaching-reflection-prompts
+terms:
+  - term: Peer feedback
+    meaning: Comments on a draft from people at the same level as the writer.
+  - term: Revision record
+    meaning: A list of each comment, what the writer decided and why.
 judge:
   - Peers comment on the work against criteria and each learner chooses a justified next revision; unheld sessions have no invented feedback.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,17 +127,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

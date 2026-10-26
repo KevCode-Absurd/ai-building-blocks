@@ -2,34 +2,78 @@ thinking: medium
 thinking_why: It builds a believable story from a few facts.
 new_slug: why-it-works-story-builder
 name: Why-it-works story builder
-summary: Say what people tried before and why it failed. Get a named new method
-  and the reason it works now.
+summary: "Explain why your offer works when other methods failed. Get a named method and a reason that holds up, using only facts you give."
 job: make-offer
 headline: Why-it-works story builder
-subhead: The story that explains why your offer works when other things people
-  tried did not. You get a named method with a believable reason behind it,
-  ready to use in copy.
+subhead: Tell it what your buyers tried before and why that failed. Your AI finds what is different about your offer, names the idea, and writes a short reason it works now. Anything you cannot prove is marked as a guess to test.
 explain: |
-  The story that explains why your offer works when other things people tried did not. You get a named method with a believable reason behind it, ready to use in copy.
+  People rarely buy a result. They buy a reason to believe it will work this time. This skill builds that reason: a short "why it works" story for your offer, with a name people can remember.
 
-  The process is short. You say what people tried before and why it failed. The skill then pins down what is different about your approach and why it works now, rather than five years ago. Last, it gives the idea a name that is simple, easy to remember and yours alone. The result is four lines: the failed method, the new mechanism, its name and why it works. It keeps claims believable so the story survives a sceptical reader.
+  You say what your buyers tried before and why it failed. Your AI then pins down what your offer does differently and why that matters now. Last, it gives the idea a short name that is easy to say and that you can own.
+
+  The skill only uses facts you give it. If a reason sounds good but you have no proof, it flags the reason as a guess to test. That keeps your copy honest and safe from a sceptical reader.
 when:
   - Your sales page says what you sell but not why it works.
-  - Prospects say they have tried everything already.
-  - You need a name for your method.
+  - Buyers say they have tried everything already.
+  - You need a name for your method before you write a headline.
   - Your offer sounds like every competitor's.
+not_for:
+  - "You run a store with reviews and product facts: use the big idea and mechanism builder, which works from your reviews."
+  - "You have rival ad lines and want to name the real difference: use the mechanism namer."
+  - "You need the story of how your brand began: use the brand origin story writer."
 you_give:
-  - What your audience tried before
+  - What your buyers tried before
   - Why those attempts failed
-  - What your product does differently
-  - Proof you can back the claim with (optional)
+  - What your offer does differently
+  - Proof you can back up, such as your own test results (optional)
 you_get:
-  - Failed method summary
-  - New mechanism explained
-  - Memorable method name
-  - Why-it-works paragraph
+  - A one-line summary of the failed method
+  - The new mechanism, in plain words
+  - A short, memorable name for it
+  - A "why it works" paragraph
+  - A list of claims that still need proof
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. No code or paid tools are needed.
+  - Write three short notes. What buyers tried before. Why it failed. What your offer does differently. Paste them in.
+  - Add any proof you really have, such as your own numbers or a source. Leave it out if you have none.
+  - Read the "Claims to prove" list. Cut or soften every claim you cannot back up.
+  - Test the name in a headline or on a sales page first. Use it in paid ads only after it holds up.
+how_it_works:
+  - title: Find the failed method
+    text: It lists what buyers tried and why it did not work, using your words.
+  - title: Define the mechanism
+    text: It states what is different about your offer and why it works now.
+  - title: Name it
+    text: It gives the idea a name that is simple, memorable and yours.
+  - title: Mark the proof
+    text: It lists each reason as proven by what you gave, or a guess to test.
+output_sample:
+  input:
+    - What your buyers tried before
+    - Why those attempts failed
+    - What your offer does differently
+    - Proof you can back up (optional)
+  output:
+    - name: Failed Method
+      contains: What buyers tried before and the plain reason it fell short.
+    - name: New Mechanism
+      contains: What is different about your offer, in a few plain sentences.
+    - name: Mechanism Name
+      contains: A short, memorable name you can use in headlines and copy.
+    - name: Why It Works
+      contains: A short paragraph on why it works now, using only the facts you gave.
+    - name: Claims to prove
+      contains: Each reason marked proven or a hypothesis to test, plus a next step.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a short text task. Claude, ChatGPT or Gemini will all do it from pasted notes.
+  inputs:
+    - Customer reviews or survey answers that name what buyers tried before
+    - Your own test or sales numbers
+    - Two or three rival sales pages
+terms:
+  - term: mechanism
+    meaning: The reason your offer works, told as a simple cause and effect.
+  - term: hypothesis
+    meaning: A reason that sounds right but is not yet proven, so you test it before you rely on it.

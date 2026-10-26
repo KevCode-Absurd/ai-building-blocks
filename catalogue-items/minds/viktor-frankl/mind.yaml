@@ -16,6 +16,27 @@ use_cases:
   - "Think about the freedom you still have when choices are limited, and the duty that comes with it"
   - "Treat people as capable of more than they show today, in coaching, teaching or managing"
   - "Reflect on a loss or failure by asking what attitude you want to take toward it"
+not_for:
+  - "You need a therapist or crisis help: talk to a qualified professional or a crisis line, since this mind gives ideas, not therapy."
+  - "You want to build a long-term habit or stick with a hard goal: use the Angela Duckworth mind."
+  - "You want to judge a decision by its process and not its result: use the Annie Duke mind."
+output_sample:
+  input:
+    - The situation you are in, such as a job that feels empty, a setback or a team that lost its drive
+    - What you cannot change about it
+    - What you are chasing or hoping for right now (optional)
+    - Who else is affected, such as a team, a client or a family (optional)
+  output:
+    - name: A turned question
+      contains: Your question flipped from what you want to what the moment is asking of you.
+    - name: One concrete case
+      contains: A short case from his recorded work that matches your situation.
+    - name: One principle
+      contains: A single idea, such as the freedom you still have and the duty that comes with it.
+    - name: Three routes to meaning
+      contains: Whether to create something, love someone or choose an attitude toward what you cannot change.
+    - name: A question for you
+      contains: One closing question about what is waiting for you to do, with the choice left to you.
 seats:
   - {seat: "Meaning", asks: "What is this for, and who is it for?"}
   - {seat: "Responsibility", asks: "Given the freedom we do have here, what are we answerable for?"}

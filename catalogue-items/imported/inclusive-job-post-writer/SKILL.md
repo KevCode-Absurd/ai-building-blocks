@@ -10,6 +10,54 @@ metadata:
 
 Comprehensive guidance for writing modern, inclusive, and candidate-focused job descriptions that clearly communicate the opportunity, set realistic expectations, and attract qualified talent.
 
+## When to use it
+
+Use it to write one job post from a role, or to fix one old post.
+
+Skip it when:
+
+- The role is filled by promotion with no public posting.
+- Your company fixes the wording or pay bands by policy. Fill in the approved template instead.
+- You want to find or message candidates. This skill only writes the post.
+
+## What to gather first
+
+Ask for anything missing once, in one message. If an answer is still missing, write MISSING in that spot of the post. Never invent pay, benefits, team names, company facts or goals.
+
+1. Role title, team and who the role reports to.
+2. What the person must get done in the first year.
+3. The skills they need. Ask which are must-have and which are nice-to-have.
+4. Pay range, benefits and where or how they work (optional).
+5. An old post to fix (optional).
+
+## Steps
+
+1. If an old post was given, name its three biggest problems first. Look for: starts with requirements, too many must-haves, biased or inflated wording, no pay.
+2. Write the opportunity summary: why the role exists, who it helps, and why it is worth taking. Keep it to 3 or 4 sentences.
+3. Write what the person will do as 5 to 7 outcome bullets, most important first.
+4. Write what success looks like at 30, 60 and 90 days. Use only what the user gave you. If they gave none, draft goals and mark them "confirm with the hiring manager".
+5. Split the skills. A must-have is something the person cannot do the job without. Keep must-haves to 5 or fewer. Move the rest to nice-to-have.
+6. Scan the whole post for biased or inflated wording: gender-coded or age-coded words, degrees or years of experience the job does not need, and insider jargon. List each phrase with a plainer swap.
+7. Write the team and working style, pay and benefits (or MISSING), and a closing line that invites people from all backgrounds to apply.
+
+## Output format
+
+Return three parts, in this order.
+
+1. **The job post.** Title, Opportunity, What you will do, First 30, 60 and 90 days, Must-have, Nice-to-have, Team and how we work, Pay and benefits, Closing line. Aim for under 500 words.
+2. **Wording changes.** A table with three columns: original phrase, why it is a problem, plainer swap.
+3. **Open questions.** A list of every MISSING item and what the hiring manager needs to confirm.
+
+## Rules
+
+- State no research or statistics. Give reasons in plain words only.
+- Equal opportunity wording and pay posting rules differ by country and state. If the company has an approved closing statement, use that one. Tell the user to check local pay transparency rules.
+- Stay on the role's real needs. Do not add perks or duties the user did not give.
+
+## After you run it
+
+Read the post once as a candidate. Send it to the hiring manager with the open questions. Then pair it with the Interview scorecard builder or the Candidate sourcing planner.
+
 ## Supported tasks
 
 - Writing complete job descriptions
@@ -234,6 +282,6 @@ Focus on attracting qualified candidates rather than filtering out as many appli
 
 - Lead with the opportunity and business impact before listing qualifications.
 - Describe what success looks like during the first 30, 60, and 90 days whenever practical.
-- Separate essential qualifications from preferred qualifications to improve inclusivity — research shows that underrepresented candidates are less likely to apply if they don't meet every listed requirement, even optional ones.
+- Separate essential qualifications from preferred qualifications to improve inclusivity. Long wish lists can put off strong applicants who doubt themselves.
 - Use clear, inclusive language and avoid unnecessary credential or experience requirements.
 - Include compensation, benefits, and working arrangements whenever organizational policy allows.

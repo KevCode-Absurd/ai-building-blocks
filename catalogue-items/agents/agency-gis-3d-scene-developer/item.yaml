@@ -1,0 +1,41 @@
+slug: agency-gis-3d-scene-developer
+name: "3D & Scene Developer agent"
+summary: "Plan a 3D web map scene with terrain, buildings or LiDAR, lighting, camera and speed checks for Cesium or ArcGIS. Get a build plan you can follow."
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: gis/gis-3d-scene-developer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-3d-scene-developer.md
+  licence: MIT
+  original_name: 3D & Scene Developer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 56f753732d35e54f0527a2cbdc60c73c9215463d4704cc66242e3bbaa1c744e7
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - 3D & Scene Developer
+  - Agency Agents
+  - GIS
+credits:
+  - title: 3D & Scene Developer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-3d-scene-developer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

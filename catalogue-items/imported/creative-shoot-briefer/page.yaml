@@ -2,35 +2,67 @@ thinking: medium
 thinking_why: It turns a brand look into a clear brief for others.
 new_slug: creative-shoot-briefer
 name: Creative shoot briefer
-summary: Give it your brand and campaign goal. Get a brief for a photographer,
-  illustrator or video team.
+summary: Turn your brand and campaign goal into a creative brief for a photographer, illustrator or video team. Includes shot list, variants and a quality bar.
 job: design-work
 headline: Creative shoot briefer
-subhead: Give it your brand and campaign goal. Get a brief for a photographer,
-  illustrator or video team. Bring brand and campaign goal. Use the result to
-  plan your next step.
+subhead: "Give it your approved brand look and what the work must do. It writes a brief a photographer, illustrator or video team can follow. You choose from three formats: photo shoot, illustration or general."
 explain: |
   A brief that a photographer, illustrator or video team can act on, covering the story, the look, how to shoot it, the variants needed and the quality bar. It cuts back and forth and gets you the right images the first time.
 
   You give the brand and campaign goal. The skill builds the brief in five layers: story, look, execution, variants and standards. It adapts the workflow for three jobs: briefing an outside creative, directing in-house work, or judging work that already exists. It lists failure patterns, such as mood words with no reference, and includes a clear output format. You can use it for concepts, mood boards and shot lists.
 when:
   - You are hiring a photographer and need a clear shot list.
-  - An illustrator keeps delivering work that misses the mark.
-  - You need a campaign concept before shooting starts.
-  - You want to judge whether finished images fit the brand.
+  - An illustrator keeps sending work that misses the mark.
+  - You need a campaign idea and look before shooting starts.
+  - You want to check if finished images fit your brand. Your brand look must be approved first.
+not_for:
+  - "You have no approved brand look yet: build your brand identity first, then come back to write the brief."
+  - "You need the project-wide look that many skills share: use the creative direction skill, then brief single jobs here."
+  - "You need the words for an ad or page: use a copywriting skill, or ask a writer. This one briefs images and video only."
 you_give:
-  - Brand and campaign goal
-  - Audience and channels
-  - Reference images (optional)
-  - Budget and deadline
+  - "The job to brief: photo shoot, illustration set, video or campaign"
+  - Your approved brand look, voice and image style
+  - Who the work is for and what it should do
+  - Where it will be seen, such as your site, social or email
+  - Your budget and deadline
+  - Reference images you like (optional)
 you_get:
-  - Creative brief
-  - Shot list or visual direction
-  - Variant needs
-  - Quality standards
-  - Feedback checklist
+  - A creative brief built on a photo, illustration or general template
+  - A shot list or visual direction
+  - A list of sizes and crops you need
+  - Quality standards with what is approved and what is not
+  - A checklist to judge finished work
+  - Licensing and usage rights set out before work starts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. It works as a chat, with no code or paid tool needed.
+  - Paste the skill text. Then paste your brand look, goal, audience, budget and deadline.
+  - "Say which kind of work you need: photo, illustration, video or mixed. Add reference images if your AI can read them."
+  - Read the brief. Check that the idea is one clear sentence and that the avoid list is specific.
+  - Fix any vague words like modern or clean. Ask your AI to name real references instead.
+  - Send the brief to your vendor in writing. Walk them through it and take questions before work starts.
+output_sample:
+  input:
+    - The job to brief (photo shoot, illustration set, video or campaign)
+    - Your approved brand look, voice and image style
+    - Who the work is for and what it should do
+    - Your budget and deadline
+    - Where the work will be seen
+  prerequisites:
+    - An approved brand identity, with your visual style and voice already set
+  output:
+    - name: creative-brief-[project].md
+      contains: "The full brief, built on one of three templates: photo shoot, illustration or general."
+    - name: The story
+      contains: The one-line idea, what the audience feels, the brand's role and what people take away.
+    - name: The look
+      contains: Style, light, color, composition and references, with what you want and what you do not.
+    - name: The execution
+      contains: Required shots or frames, file sizes, things to avoid and brand rules.
+    - name: The variants
+      contains: Each size and crop needed, and how the picture adapts to each one.
+    - name: The standards
+      contains: File needs, what approved work looks like, what fails and how many revision rounds are planned.
+    - name: Logistics and licensing
+      contains: Timeline, review points, budget, deliverables and usage rights agreed before work starts.
+    - name: Moodboard or visual reference doc
+      contains: The reference images that show the look to the vendor.

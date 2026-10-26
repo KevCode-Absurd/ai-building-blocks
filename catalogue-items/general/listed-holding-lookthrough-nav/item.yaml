@@ -1,26 +1,25 @@
 slug: listed-holding-lookthrough-nav
 name: Listed holding look-through NAV
-summary: Reconcile quoted ownership stakes and holding-company costs to look-through value per share.
+summary: "Find a holding company's look-through net asset value per share. Uses its listed stakes at market value, its own cash and debt, and its costs."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next: [market-mood-reader]
 origin: own
 version: 1.0.0
 added: 2026-10-22

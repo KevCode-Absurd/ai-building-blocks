@@ -2,18 +2,117 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-creating-oracle-to-postgres-migration-bug-report
 name: Database migration bug report writer
-summary: Share a migration defect and evidence. Get a reproducible report with
-  expected behavior and the affected code.
+summary: Turn an Oracle to PostgreSQL migration defect into a clear bug report with steps to reproduce, root cause, fix and how to check it.
 job: build-software
 headline: Database migration bug report writer
-subhead: Share a migration defect and evidence. Get a reproducible report with
-  expected behavior and the affected code. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Give it a defect found while moving from Oracle to PostgreSQL, with your evidence. It writes a structured bug report with severity, steps to reproduce, the root cause, the fix and how to confirm it. Oracle's behavior is the baseline.
+explain: |
+  A migration bug is hard to explain. The code ran fine on Oracle, then returns something different on PostgreSQL. A vague note like "the search is broken" sends a developer on a hunt. This skill turns what you found into a bug report anyone can reproduce and fix.
+
+  It treats Oracle as the source of truth, so the report always says what Oracle did and what PostgreSQL does now. It names the data layer difference behind the defect, such as empty text versus NULL, stricter type rules, sorting order, sequence values or time zones. The report lists the affected files, the fix, and steps to check the fix on both databases.
+
+  It avoids changes to client code unless they are needed, and says why when they are. It keeps SQL excerpts short and leaves out sensitive data.
+when:
+  - A query returns different rows on PostgreSQL than it did on Oracle.
+  - A test fails after a migration and you need to pass it to a developer.
+  - You fixed a migration defect and want a record of what went wrong and why.
+  - A reviewer asks for steps to reproduce a database difference.
+not_for:
+  - "The bug is in the app and has nothing to do with Oracle or PostgreSQL: use the Bug report writer."
+  - "You are still checking whether code has migration risks: use the Oracle migration risk reviewer first."
+  - "You need a test that proves Oracle behavior before you migrate: use the Oracle behavior baseline test writer."
+  - "You want to translate a stored procedure: use the Oracle stored procedure migrator."
+you_give:
+  - A short description of what went wrong
+  - What Oracle returns and what PostgreSQL returns, with the seed data used
+  - The failing test name and the affected file, endpoint or procedure
+  - A short SQL excerpt or log as evidence, with sensitive data removed
+  - Your project name, for the file path
+  - The fix you made or plan to make (optional)
+you_get:
+  - A bug report in Markdown, saved under a clear file name
+  - A status and severity from Low to Critical
+  - Numbered steps to reproduce, with expected and actual results
+  - The Oracle and PostgreSQL difference behind the defect
+  - The fix with file paths, and steps to check it on both databases
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Gather the evidence first. Write down the seed data, the call or query you ran, what Oracle returned and what PostgreSQL returned.
+  - Open your AI and paste this skill. If it can read your files, point it at the failing test and the affected code.
+  - Paste your evidence. Remove passwords, customer data and other sensitive data from any log or SQL first.
+  - Read the Problem and Scenario sections. A developer who has never seen the bug should be able to follow the steps.
+  - Check the Root Cause names a real Oracle and PostgreSQL difference. Remove any guess you cannot back up.
+  - Save the file as BUG_REPORT_ followed by a short PascalCase name, in the project's Reports folder. Attach it to your ticket.
+how_it_works:
+  - title: Gather the evidence
+    text: It asks for the seed data, the operation, the Oracle result, the PostgreSQL result, the test name and the file paths.
+  - title: Fill the template
+    text: It fills each field in order, from status and severity to problem, scenario, root cause, solution and validation.
+  - title: Frame from Oracle
+    text: It states expected behavior from the Oracle baseline and calls out the data layer difference.
+  - title: Keep it plain and short
+    text: It uses short sentences, lists for steps and minimal evidence, with no speculative fixes.
+  - title: Name and file the report
+    text: It saves the report as BUG_REPORT_ plus a short PascalCase name under the project's Reports folder.
+output_shape: |
+  # Bug Report: <title>
+  Status: <resolved, unresolved or in progress>
+  Component: <endpoint, repository or procedure>
+  Test: <test names>
+  Severity: <Low, Medium, High or Critical>
+  Problem
+    Oracle: <expected>   PostgreSQL: <actual>
+  Scenario
+    1. <seed data>  2. <operation>  3. <expected>  4. <actual>
+  Root Cause
+    <the Oracle and PostgreSQL difference>
+  Solution
+    <change and file paths>
+  Validation
+    <steps to confirm on both databases>
+  Files Modified
+    <file: purpose>
+  Notes / Next Steps
+    <follow-ups>
+output_sample:
+  input:
+    - What went wrong, in a few sentences
+    - Oracle and PostgreSQL results, with the seed data
+    - The failing test name and affected file or procedure
+    - A short SQL excerpt or log, with sensitive data removed
+    - Your project name, for the file path
+  prerequisites:
+    - Evidence from both databases, or a failing test that shows the difference
+  output:
+    - name: Status, Component, Test, Severity
+      contains: Where the defect is, which test shows it, and how serious it is.
+    - name: Problem
+      contains: What Oracle does against what PostgreSQL does now.
+    - name: Scenario
+      contains: Numbered steps with seed data, the operation, the expected result and the actual result.
+    - name: Root Cause
+      contains: The specific Oracle and PostgreSQL difference behind the defect.
+    - name: Solution
+      contains: The change made or needed, with file paths and any client code change explained.
+    - name: Validation
+      contains: Steps to confirm the fix on both databases, including error handling.
+    - name: Files Modified
+      contains: Each file changed and a short reason.
+    - name: Notes / Next Steps
+      contains: Follow-ups, risks and links to other fixes.
+works_best_with:
+  tools:
+    - name: Claude Code or Copilot in your editor
+      why: They can read your failing test and the affected files, so paths are correct.
+    - name: Any chat AI
+      why: Works if you paste the evidence in.
+  inputs:
+    - The Oracle source for the affected procedure
+    - The test output that fails
+    - Your ticket or issue number
+terms:
+  - term: Seed data
+    meaning: The sample rows you load so the test gives the same result each time.
+  - term: Root cause
+    meaning: The real reason the defect happens, not just where it shows up.
+  - term: Severity
+    meaning: How much damage the defect does, from Low to Critical.

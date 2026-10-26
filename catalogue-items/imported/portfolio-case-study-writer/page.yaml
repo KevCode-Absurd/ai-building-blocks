@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: portfolio-case-study-writer
 name: Portfolio case study writer
-summary: Share project notes and results. Get a case study that explains your role, choices, work and lessons.
+summary: Turn your project notes and results into a portfolio case study. Get a draft with the problem, your role, process, solution and lessons.
 job: find-a-job
 headline: Portfolio case study writer
 subhead: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
+not_for:
+  - "You only want to polish a resume line: ask your AI to rewrite the bullet, or edit it yourself."
+  - "You have no notes or results yet: write down what you did, when, and what changed, then come back."
+  - "You need a full portfolio website built: use a site builder, then paste this draft into it."
 explain: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
 you_give:
   - Project notes with your role, decisions and constraints.
@@ -22,6 +26,31 @@ how_it_works:
   - title: Step 3
     text: Present known results, lessons and the visuals readers need.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied notes and ask follow-up questions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - "Paste your project notes: your role, dates, team, the problem, your choices and any results."
+  - Say which role the case study is for, such as designer, product manager, engineer or marketer.
+  - Check the draft. Fill any gap marked as missing with a real fact, and cut anything you cannot back up.
+  - Add your screenshots using the visual asset list. No code or paid tool is needed.
+output_sample:
+  input:
+    - Your project notes, with your role, dates and team size
+    - The problem and the choices you made
+    - Real results you can back up (optional)
+    - Screenshots or work samples you have (optional)
+  output:
+    - name: Quick Facts
+      contains: Your role, company, timeline, team and a one-line result, taken from your notes.
+    - name: Overview
+      contains: A short summary of the project in two or three sentences.
+    - name: Problem
+      contains: The context, the challenge and what needed to be solved.
+    - name: Process
+      contains: Your research, approach and key decisions, with the reason for each.
+    - name: Solution
+      contains: What you built or delivered, with notes on the visuals that go with it.
+    - name: Results
+      contains: The impact you gave evidence for, in a table where you have before and after numbers.
+    - name: Learnings
+      contains: What worked, what you would change and what you learned.
+    - name: Visual Asset List
+      contains: The images and screenshots you should add to the page.

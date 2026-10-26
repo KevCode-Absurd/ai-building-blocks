@@ -1,6 +1,6 @@
 new_slug: lean-year-cash-rules-writer
 name: "Lean-year cash rules writer"
-summary: "Paste your plan and monthly numbers. Get a cash buffer, who to ask early and a clear request to send."
+summary: "Write your lean-year cash rules: a buffer size, yellow and red lines, who to ask for help, and a clear request you can send. Paste your plan."
 job: think-and-decide
 thinking: medium
 thinking_why: "It sets rules from your numbers and writes a request, with little open judgement."
@@ -17,6 +17,10 @@ when:
   - "You are about to go independent and want rules ready for a bad month."
   - "You have already borrowed more than once from the same person and are not sure how to stop."
   - "Your income swings and you want to know when to act and when to ask."
+not_for:
+  - "You do not know your monthly floor yet: work it out first with the Independent income floor calculator, or ask an accountant."
+  - "You need a plan to pay off debt you already owe: ask a debt adviser or an accountant, as this writes rules for thin months only."
+  - "You want to test if your whole plan survives a bad run: use the Ruin risk stress tester."
 
 you_give:
   - "Your plan and monthly floor, from the earlier steps or in your own words"
@@ -35,6 +39,31 @@ how_to_use:
   - "Paste your plan, floor and cash. List who could help."
   - "Save the rules where you will see them in a bad month, not in a folder you never open."
   - "Share the red-line rule with the person who relies on you."
+output_sample:
+  input:
+    - Your plan and your monthly floor
+    - Your cash on hand and any debts
+    - Who could help you, such as family, a bank or a client
+    - Fixed costs you could cut, and how fast (optional)
+  prerequisites:
+    - Your monthly floor, from the Independent income floor calculator or your own number
+  output:
+    - name: Buffer
+      contains: Your target in months and in money, with the sum shown and the gap to your cash on hand.
+    - name: Lines and actions
+      contains: The yellow and red cash lines, with dated actions to take at each one.
+    - name: Costs I can cut
+      contains: Each cost you could cut, what it saves and how fast.
+    - name: Who I can ask
+      contains: At least three sources of help, with one ask each until the last is repaid.
+    - name: The request
+      contains: A short note with the exact sum, term, purpose, repayment source and date, plan B and report date.
+    - name: Repayment rule
+      contains: Repay before any new ask, on the date written, and warn early if you cannot.
+    - name: Monthly report
+      contains: Who hears your cash number each month, and when.
+    - name: Missing and checks missed
+      contains: Any figures still needed, and any checks the result did not pass.
 
 how_it_works:
   - title: "Sizes the buffer"

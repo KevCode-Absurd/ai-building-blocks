@@ -1,52 +1,90 @@
 new_slug: compare-hr-software-before-buying
 name: Compare HR software before buying
 headline: Compare HR software before buying
-summary: Share the source files. Get a vendor comparison, privacy questions and a recommendation to review.
+summary: Compare HR software vendors on the same tasks, price terms and employee data handling. Get a side-by-side brief and questions to ask.
 job: hire-people
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A vendor comparison, privacy questions and a recommendation to review. Share required HR tasks, user count, integration needs, data categories, quotes and decision criteria. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share the HR tasks you need covered, your headcount, the systems it must connect to, the data it will hold and the quotes you have received. Your AI scores each vendor on the same list, checks how it handles employee data and writes a brief with open questions.
 explain: |-
-  A vendor comparison, privacy questions and a recommendation to review.
+  HR software quotes rarely match. One includes payroll, another charges per module, and a third adds setup fees later. This workflow puts every vendor on the same list so you can compare HR software like for like.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Quoted costs use the same term and scope; security and privacy gaps remain unresolved until evidence is supplied. Missing tools or evidence stay visible in the final summary.
+  Step one turns your needs into must-haves and scores each vendor against them. Step two looks at AI features and how each vendor handles employee data, and notes the evidence you were shown. Step three puts price, fit, setup effort and open questions into one decision brief.
+
+  Where a vendor gave no proof, such as a security report, the gap stays open. The brief ends in a recommendation for you to review. It is not legal or privacy advice.
 when:
-  - You need a vendor comparison, privacy questions and a recommendation to review.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have three quotes and cannot tell which one covers payroll.
+  - A demo showed an AI feature and you want to know where employee data goes.
+  - Your team has outgrown spreadsheets and needs a first HR system.
+  - Renewal is near and you want to know if switching is worth it.
+not_for:
+  - You only want to vet one vendor's AI tool. Use the HR AI tool vendor checker.
+  - You are comparing software that is not for HR. Use the Software vendor chooser or the Vendor comparison writer.
+  - You are hiring a person, not software. Use Hire fairly, from job post to a checked offer letter.
+  - You have chosen already and need to switch over. Use Plan a vendor change without losing work.
 you_give:
-  - Required HR tasks, user count, integration needs, data categories, quotes and decision criteria.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The HR tasks you need, such as payroll, leave and onboarding (from your HR lead)
+  - How many employees you have and where they work
+  - Systems it must connect to, such as accounting or Slack
+  - What employee data it will hold
+  - Vendor quotes, with term and what is included
+  - What matters most, such as price or ease of use (optional)
 you_get:
-  - A vendor comparison, privacy questions and a recommendation to review.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A must-have list and a score for each vendor on the same criteria
+  - Quoted costs on a like-for-like term and scope
+  - Privacy and security questions for each vendor, and the evidence still missing
+  - A decision brief with fit, setup effort and a recommendation for you to review
+  - A summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini.
+  - Paste your task list, headcount and integrations. Then paste each quote.
+  - "Say: follow the workflow file, use one term and scope for every price and stop if a check fails."
+  - Check the must-have list before scoring. Add anything you forgot.
+  - Send the open questions to each vendor and add their answers.
+  - Review the recommendation with your HR lead and finance. Sign nothing from this alone.
+output_sample:
+  input:
+    - The HR tasks you need
+    - Headcount, locations and integrations
+    - The employee data it will hold
+    - Each vendor's quote
+  prerequisites:
+    - At least two vendor quotes or proposals
+  output:
+    - name: step-01-hr-vendor-selection-planner.md
+      contains: Your must-have list and a score for each vendor on the same criteria.
+    - name: step-02-hr-ai-tool-vendor-checker.md
+      contains: Each vendor's AI features, employee data handling and the evidence of controls you were shown.
+    - name: step-03-vendor-comparison-writer.md
+      contains: Decision brief with cost on one term, fit, setup effort, open questions and a recommendation.
+    - name: Hand-back summary
+      contains: Files saved, evidence still missing, checks not run and one next step.
 how_it_works:
   - title: HR vendor selection planner
-    text: Define the must-have tasks and evaluate the supplied vendors against the same criteria.
+    text: Turns your needs into must-haves and scores each vendor against them. Hands step 2 the shortlist and the criteria.
   - title: HR AI tool vendor checker
-    text: Review AI features, employee data handling and evidence of controls for the shortlisted vendors.
+    text: Reviews AI features, how employee data is handled and what proof the vendor gave. Hands step 3 the findings and the open questions.
   - title: Vendor comparison writer
-    text: Combine price, fit, implementation effort and open questions into a decision brief.
+    text: Puts price on one term, with fit, setup effort and open questions, into a decision brief. Hands back the brief.
 output_shape: |-
-  Scope and source coverage
-  A vendor comparison, privacy questions and a recommendation to review.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  NEEDS <task list>, EMPLOYEES <n>, VENDORS <list>
+
+  MUST-HAVES    <need> | <vendor A: yes / partly / no> | <vendor B> ...
+  COST          <vendor> | <price> per <unit> for <term> | <what is included> | <extras>
+  DATA & AI     <vendor> | <AI features> | <how employee data is handled> | <evidence shown or MISSING>
+  OPEN QUESTIONS <vendor> | <question>
+  DECISION BRIEF <fit, effort, risks, recommendation for review>
+
+  MISSING        <each gap>
+  CHECKS MISSED  <one line each, or none>
+  NEXT STEP      <one action>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Quoted costs use the same term and scope; security and privacy gaps remain unresolved until evidence is supplied.
+  - what: Contract term
+    how: Pick one term, such as 12 months, and ask every vendor to price it. Costs line up at once.
+  - what: Weights
+    how: Say which three needs matter most. Scores then lean on those.
+  - what: Data rules
+    how: Add where your staff live and any rules you must meet. The data questions get sharper.
 judge:
   - Quoted costs use the same term and scope; security and privacy gaps remain unresolved until evidence is supplied.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +97,19 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the must-have list. Reuse it for the next renewal, and compare quotes against it.
+  - Save each vendor's written answers with the date. They matter if something goes wrong later.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Any good chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It must hold several long quotes and your needs list at once.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Vendor security or privacy documents they sent
+    - A list of your current tools and what they cost
+    - Names of people who will use the system
+    - Your payroll provider's requirements
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Must-have
+    meaning: A task the software has to do, or you will not buy it.
+  - term: Like for like
+    meaning: Prices compared on the same term and the same scope.

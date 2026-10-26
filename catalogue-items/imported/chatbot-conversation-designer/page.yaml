@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It plans flows from a set method but needs good judgement.
 new_slug: chatbot-conversation-designer
 name: Chatbot conversation designer
-summary: Describe your chatbot job. Get conversation flows with questions, error
-  recovery and graceful fallbacks.
+summary: Plan your chatbot conversation design before you build. Give it the bot's job and tasks. You get flows, fallbacks, a memory plan and a test script.
 job: build-product
 headline: Chatbot conversation designer
-subhead: A full conversation plan for your chatbot, so users reach their goal
-  instead of hitting dead ends. You describe the bot's job, and you get its
-  personality, the things it handles, the questions it asks and what it says
-  when it gets confused.
+subhead: A full conversation plan for your chatbot, so users reach their goal instead of hitting dead ends. You describe the bot's job, and you get its personality, the things it handles, the questions it asks and what it says when it gets confused.
 explain: |
   A full conversation plan for your chatbot, so users reach their goal instead of hitting dead ends. You describe the bot's job, and you get its personality, the things it handles, the questions it asks and what it says when it gets confused.
 
@@ -19,6 +15,10 @@ when:
   - Your current bot keeps saying "I did not get that" and users leave.
   - You must decide what the bot can and cannot do on day one.
   - You need a script to test on real users before you write code.
+not_for:
+  - "You only need answers to a few common questions: write a simple FAQ page or a plain decision tree instead."
+  - "Your bot has fewer than five tasks: sketch a plain decision tree on paper first."
+  - "You want the bot built and live: hire a developer or use a bot builder tool, as this only plans the conversations."
 you_give:
   - What the bot is for
   - Who will use it
@@ -32,7 +32,29 @@ you_get:
   - A memory plan for each conversation
   - A test script
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text into the chat, or upload the skill file if your AI takes files.
+  - Tell your AI what the bot is for, who will use it, which tasks it handles and which channel it runs on.
+  - Add your current flows if you have them (optional).
+  - Check the result for dead ends. Every path should end in an answer or a handoff to a person.
+  - Run the test script with a few real users. Tools like Voiceflow or Dialogflow CX can help you prototype, but they are optional and some plans are paid.
+output_sample:
+  input:
+    - What the bot is for
+    - Who will use it
+    - The tasks it should handle
+    - The channel, such as web widget, Slack or WhatsApp
+    - Your current flows (optional)
+  output:
+    - name: Persona and scope
+      contains: The bot's personality, tone rules, what it can do, what it cannot do, and when it hands over to a person.
+    - name: Intent list
+      contains: Every request the bot should understand, including help, cancel and talk to a human, with the details each one needs.
+    - name: Slot sequences
+      contains: For each task, the questions in order, which details are required, and when to ask a clarifying question.
+    - name: Fallback tiers
+      contains: "Three steps for when the bot is lost: rephrase, offer a short menu, then hand over to a person."
+    - name: Memory plan
+      contains: What the bot remembers during a chat, what resets between tasks, and how it handles a topic switch.
+    - name: Test script
+      contains: A script to try with real users, plus the numbers to track so you fix the weakest flows first.

@@ -14,6 +14,27 @@ use_cases:
   - Read poetry without turning every page into a quiz
   - Trim a stiff introduction for a talk or newsletter
   - Keep revision from flattening a draft's movement
+not_for:
+  - "You want plain, honest prose for an essay or report: use the George Orwell mind."
+  - "You need warm help getting a messy first draft down: use the Anne Lamott mind."
+  - "You need ad copy, legal or medical text, or a factual biography of Collins: use a copywriter or a subject expert."
+output_sample:
+  input:
+    - A short draft, or an ordinary thought you want to start from
+    - Who will read it and the occasion
+    - The opening or ending that bothers you
+    - A few true details, if it is a gift poem (optional)
+  output:
+    - name: Reader note
+      contains: Who the reader is, what they know at the first sentence and what invitation the opening can offer.
+    - name: Opening options
+      contains: A few plain ways to begin, with a pick that gives both orientation and room to move.
+    - name: Revised draft or short continuation
+      contains: An original piece or a marked revision that keeps the movement of your draft.
+    - name: Ending options
+      contains: An earlier stopping place, the current ending and a new final image, each with its effect.
+    - name: Next question
+      contains: One question or read-aloud check to guide the next lines you write.
 seats:
   - {seat: Inviting and surprising the reader, asks: Where can the reader stand before the piece starts to move?}
   - {seat: Conversational poetic craft, asks: Does the next line keep both sense and cadence alive?}

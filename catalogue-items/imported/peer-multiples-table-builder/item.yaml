@@ -1,6 +1,6 @@
 slug: peer-multiples-table-builder
 name: Peer multiples table builder
-summary: Name a company. Get a table comparing its price multiples and key numbers with its peers.
+summary: "Name an Indian listed company. Get a peer comps table in Excel with P/E, EV/EBITDA and margins in crore, and a note on every source."
 category: general
 boards: []
 type: skill
@@ -14,6 +14,8 @@ outputs:
   - type: spreadsheet
 uses: []
 origin: imported
+warnings:
+  - paid:FactSet
 source:
   by: nighomni123
   repo: nighomni123/fsi-skills-india

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It compares codes across all variants.
 new_slug: duplicate-sku-finder
 name: Duplicate SKU finder
-summary: Get a list of products that share the same SKU or barcode, so stock and
-  orders stop mixing up.
+summary: Find duplicate SKUs and barcodes in your Shopify store. Get a CSV of every clash with product names, so stock and orders stop mixing up.
 job: run-your-store
 headline: Duplicate SKU finder
-subhead: Find the products in your Shopify store that share a SKU or barcode
-  before they cause wrong stock counts and mixed-up orders. You get a list of
-  every clash, with the product names.
+subhead: Find the products in your Shopify store that share a SKU or barcode before they cause wrong stock counts and mixed-up orders. You get a list of every clash, with the product names.
 explain: |
   Find the products in your Shopify store that share a SKU or barcode before they cause wrong stock counts and mixed-up orders. You get a list of every clash, with the product names.
 
@@ -18,6 +15,10 @@ when:
   - You are about to sync with a warehouse and need clean IDs.
   - You want blank SKUs found too.
   - You inherited a catalogue and do not trust it.
+not_for:
+  - "You have no Shopify admin access: ask the store owner to run it, or ask them for a product export."
+  - "You want the clashes fixed for you: this only reads your store, so change the SKUs yourself in the Shopify admin."
+  - "You share a SKU on purpose, such as for reprints: review each clash before you change anything."
 you_give:
   - Store domain
   - Whether to check SKUs, barcodes or both
@@ -29,8 +30,29 @@ you_get:
   - Blank SKU flags (optional)
   - Plain or JSON output
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Check that your AI can run commands and that the Shopify CLI is installed. This skill does not work in a plain chat window.
+  - "Sign in to your store with read-only access by running: shopify store auth --store your-store.myshopify.com --scopes read_products"
+  - Paste the skill into your AI. Give it your store domain and say if you want SKUs, barcodes or both.
+  - Say if you want blank SKUs flagged too, and whether you want plain text or JSON.
+  - Open the CSV and review each clash. Some shared SKUs are on purpose.
+  - Fix the real errors in the Shopify admin. The skill never changes your store.
+output_sample:
+  input:
+    - Your store domain
+    - Whether to check SKUs, barcodes or both
+    - Flag blank SKUs? (optional)
+    - "Report style: plain text or JSON (optional)"
+  prerequisites:
+    - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - The Shopify CLI, signed in to your store with permission to read products
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the time the scan began.
+    - name: Step progress lines
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Summary report
+      contains: Counts of variants scanned, duplicate SKU groups, duplicate barcode groups and blank SKUs.
+    - name: Duplicate groups
+      contains: Each shared SKU or barcode, with the products and variants that use it.
+    - name: duplicates_<date>.csv
+      contains: One row per clashing variant with issue type, shared value, product, variant, SKU and barcode.

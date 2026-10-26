@@ -1,6 +1,6 @@
 new_slug: fast-decision-evidence
 name: "Make a fast, committed decision with the right evidence"
-summary: "Paste a choice you keep debating. Get its door type, how much evidence is enough, and a note that commits the team."
+summary: "Stop a debate that won't end. Paste the choice and get its door type, how much evidence is enough, and a note that commits your team."
 job: think-and-decide
 thinking: high
 thinking_why: "It weighs reversibility, evidence and disagreement. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - A decision has been argued in several meetings with no end.
   - The team keeps asking for more data before it will act.
   - Someone keeps reopening a call after it was made, or you disagree with a call as the boss.
+not_for:
+  - "The choice is already set by policy or law: follow the policy, or ask the person who owns it."
+  - "The choice is purely technical, like picking a code library: use a normal project plan with a short test."
+  - "You want to weigh whose opinion counts most in a group: use the Group decision reviewer."
 
 you_give:
   - The choice, and who it touches
@@ -35,6 +39,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the choice, your numbers and what each person thinks. It works step by step.
   - Send the team note. Act on the call and look again on the review date.
+output_sample:
+  input:
+    - The choice you keep debating, and who it touches
+    - The numbers and history you have
+    - What each person thinks and why, in a line or two
+    - Who owns the decision, and any deadline (optional)
+  prerequisites:
+    - An AI that can read the handoff files and run steps in order, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Door"
+      contains: The choice sorted as a one-way or two-way door, with the reason and the process that fits.
+    - name: "Step 2: Math or judgment"
+      contains: Whether your own numbers can settle it, or a written judgment with the math against it.
+    - name: "Step 3: Evidence bar"
+      contains: Your share of the facts you wish you had, the bar, a decide-now or wait call, and the one fact to get first.
+    - name: "Step 4: Disagree-and-commit note"
+      contains: The decision, owner and review date, each dissent on record, and the commit line for each person.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 
 how_it_works:
   - title: Sort the decision by reversibility
@@ -44,7 +67,7 @@ how_it_works:
   - title: Set the evidence bar
     text: "Weights the facts you wish you had and works out your share. Sets the bar, compares wrong with slow and gives a call date."
   - title: Write the disagree-and-commit note
-    text: "Records each dissent in one fair line and sorts it as view or aims. Escalates a clash of aims and writes the commit lines and team note."
+    text: "Takes the decision and each person's view, which you give it, plus the plan from the steps before. Records each dissent in one fair line and sorts it as view or aims. Escalates a clash of aims and writes the commit lines and team note."
 
 output_shape: |-
   STEP 1: DOOR

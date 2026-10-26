@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Judging a company needs many factors weighed.
 new_slug: company-stock-analyst
 name: Company stock analyst
-summary: Name a listed company. Get a sector-relative review of its numbers,
-  strengths and risks.
+summary: Get a stock analysis of one listed company, judged against its sector peers, with strengths, risks and a source beside every figure.
 job: money-and-investing
 headline: Company stock analyst
-subhead: Name a listed company. Get a sector-relative review of its numbers,
-  strengths and risks. Bring the company name or ticker. Use the result to plan
-  your next step.
+subhead: Name a listed company. Get a sector-relative review of its numbers, strengths and risks. Bring the company name or ticker. Use the result to plan your next step.
 explain: |
   A written review of one listed company that judges its numbers against the right peers, not a random firm in another industry. A 20 percent margin means different things in software and in distribution, so the review checks the sector first.
 
@@ -18,6 +15,10 @@ when:
   - A friend gave you a tip and you want the numbers behind it.
   - You need to compare two firms in the same sector fairly.
   - You want strengths and risks laid out with the evidence for each.
+not_for:
+  - You want advice on what to buy or sell, or how much to hold. This is research, not licensed financial advice, so ask a licensed adviser.
+  - You want trading signals or short-term price calls. This skill looks at business strength, not chart moves.
+  - You want to size a portfolio or split money across assets. Talk to a licensed financial adviser.
 you_give:
   - The company name or ticker
   - Its annual reports or filings, if you have them (optional)
@@ -29,8 +30,29 @@ you_get:
   - A list of strengths and risks
   - Gaps clearly marked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web for company data.
+  - Open Claude, ChatGPT or Gemini. Turn on web search if your AI has it.
+  - Paste the skill text into the chat.
+  - Type the company name or ticker. Add its annual report or peers if you have them (optional).
+  - "Pick a depth if the AI asks: a quick view or a full review."
+  - Check the data-quality note first to see which figures are missing.
+  - Read the company's own annual report and results call transcripts next. Make your own decision.
+output_sample:
+  input:
+    - The company name or ticker
+    - Its annual reports or filings (optional)
+    - Peers you want it compared with (optional)
+  prerequisites:
+    - An AI that can search the web for company data, or filings you paste in
+  output:
+    - name: Verdict and key risks
+      contains: The main finding and the biggest risks, placed first so a short read still gives the substance.
+    - name: Written report
+      contains: A fundamental review that follows the report template, covering profit, returns, cash, debt, growth, governance and price.
+    - name: Sector-relative scorecard
+      contains: Scores by category with the weights shown, plus a composite, so you can question any single score.
+    - name: Peer benchmark
+      contains: The company's numbers set against sector peers and its own past record.
+    - name: Bear case and invalidation
+      contains: What could go wrong and what would prove the view wrong.
+    - name: Data-quality note
+      contains: Which figures are sourced, estimated or missing, with the as-of date.

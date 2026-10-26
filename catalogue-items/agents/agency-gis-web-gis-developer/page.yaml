@@ -1,0 +1,147 @@
+name: Web GIS Developer agent
+summary: Plan an interactive web map. Get the mapping library choice, data and tile plan, and mobile and speed checks for MapLibre, Leaflet or ArcGIS.
+headline: Web GIS Developer agent
+subhead: Describe your data, what people should do on the map and the devices they use. The agent picks a mapping library, plans tiles, clustering and filters, and checks the map on phones and slow networks. You get a build plan and a checks list.
+job: build-websites
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Web maps often fail in the same ways. A blank map with no loading sign. Thousands of points that freeze the page. Controls that do not work on a phone. This agent plans an interactive web map to avoid them, with the library, data handling and layout chosen up front.
+
+  Its rules: show a loading state, start on a useful view and not the whole world, add a legend, support touch, and never load every feature at once. It compares MapLibre GL JS, ArcGIS JS API, Leaflet, Deck.gl, CesiumJS and OpenLayers by use case.
+
+  It plans the front end of the map. Cleaning data or publishing services is another job. It cannot run your map or measure speed, so it gives checks for you to run on a real phone and a slow connection. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's targets are its own goals, not results measured by AI Blocks.
+when:
+  - You have location data and want an interactive map on your website.
+  - Your map freezes or crawls with thousands of points.
+  - You must choose between MapLibre, Leaflet and the ArcGIS JavaScript API.
+  - You need live data on a map, such as vehicles or sensors.
+not_for:
+  - "You need desktop GIS analysis or a map for print: use the GIS Analyst agent."
+  - "Your data is messy and needs cleaning or converting first: use the Spatial Data Engineer agent."
+  - "You need 3D scenes or terrain: use the 3D & Scene Developer agent."
+  - "You need map colors, labels and basemap design: use the Cartography Designer agent."
+you_give:
+  - What the map should show and let people do, such as search, identify or measure
+  - "Your data: type, format and size, such as 20,000 points in GeoJSON"
+  - Who uses the map and on what devices
+  - The library or platform you already use, such as ArcGIS (optional)
+  - A live data source, such as a WebSocket or an API (optional)
+  - Sign-in needs, such as ArcGIS sign-in or API keys (optional)
+you_get:
+  - A mapping library choice with reasons
+  - "A data plan: tiles, clustering and filters"
+  - An interaction and layout plan for desktop, tablet and phone
+  - A live data plan, if you need one
+  - Code sketches, marked as drafts you have not run
+  - Speed and phone checks to run
+  - Open questions
+how_to_use:
+  - Download the pack and add it as a skill in your AI. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - "Write your brief: what the map shows, your data type and size, who uses it and on what devices. Never paste real API keys. Use a placeholder."
+  - Say 'Plan this web map. Do not guess my data size.' Your AI asks once for what is missing.
+  - Read the library choice and data plan first. Change them if you must use a platform you already have.
+  - Build the sketches in a test page. The AI cannot run your map, so test on a real phone and a slow connection yourself.
+  - Bring back what you see, such as load time or console errors, and ask for fixes.
+how_it_works:
+  - title: Collect the brief
+    text: It confirms the map's job, the data, the devices and any live feed or sign-in. It asks once for anything missing, then marks it MISSING.
+  - title: Choose the library
+    text: It compares the options for your use case and says why one fits, using the profile's guide.
+  - title: Plan the data
+    text: It plans vector tiles, clustering, viewport filtering and simpler shapes so the map never loads every feature.
+  - title: Plan interactions and layout
+    text: It plans pan, zoom, identify, search, legend and loading state, for phones, tablets and desktops.
+  - title: Plan live data
+    text: If needed, it plans how updates arrive and show without a page reload.
+  - title: List the checks
+    text: It lists tests for phone use, slow connections and large layers, and what is still unknown.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Map job <what it shows and does> | Data <type, format, size> | Devices <list>
+    Assumed: <list> | MISSING: <list>
+
+  LIBRARY CHOICE
+    <library> | <reason> | <trade-off> | <runner-up>
+
+  DATA AND TILES
+    <layer> | <how it is served: tiles, cluster or filter> | <why>
+
+  INTERACTIONS AND LAYOUT
+    <feature> | <desktop> | <tablet or phone> | <loading and legend note>
+
+  LIVE DATA
+    <source> | <how updates arrive> | <how the map shows them>
+
+  PERFORMANCE CHECKS
+    <number> | <check> | <what a pass looks like>
+
+  CODE SKETCHES (drafts, not run)
+    <name> | <short code>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - What the map should show and what people can do on it
+    - Your data type, format and size
+    - Who uses it and on what devices
+    - A live data source or sign-in needs (optional)
+  prerequisites:
+    - A test web page where you can try the sketches
+    - An AI that takes a pasted profile, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brief and assumptions
+      contains: The map's job, data and devices as understood, with assumptions and MISSING items.
+    - name: Library choice
+      contains: The mapping library, the reason, the trade-off and a runner-up.
+    - name: Data and tiles
+      contains: For each layer, whether it is served as tiles, clustered or filtered, and why.
+    - name: Interactions and layout
+      contains: Each feature on desktop and phone, with the loading state and legend.
+    - name: Live data
+      contains: How updates arrive and how the map shows them, when you need it.
+    - name: Performance checks
+      contains: Numbered checks for phones, slow connections and large layers, with what a pass looks like.
+    - name: Code sketches
+      contains: Short drafts for the map setup and layers, marked as not run.
+    - name: Open questions
+      contains: What is unknown and what each answer changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Data size
+    how: Give a count or file size, since it decides tiles or clustering.
+  - what: Library
+    how: Say if you must use one, such as ArcGIS, so the plan works inside it.
+  - what: Devices
+    how: Name the phones and connection you expect, since it sets the speed targets.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Vector tiles
+    meaning: Map data cut into small pieces that load by area and zoom level.
+  - term: GeoJSON
+    meaning: A common text format for map data. It is simple but slow for very large data sets.
+  - term: Clustering
+    meaning: Grouping nearby points into one marker until you zoom in.
+  - term: Basemap
+    meaning: The background map that your layers sit on.
+  - term: WMS and WFS
+    meaning: Standard web services that serve map images or map features.
+  - term: Viewport
+    meaning: The part of the map you can see on screen.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan and code sketches work from a pasted profile and your brief.
+    - name: Claude Code
+      why: It can read your project and data files, so the plan fits your real layers.
+  inputs:
+    - A sample of your data, such as the first 20 rows or the file sizes.
+    - A screenshot of your current map and any console errors.

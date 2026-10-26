@@ -1,6 +1,6 @@
 new_slug: product-test-result-reader
 name: "Product test result reader"
-summary: "Paste product test numbers. Get ad, page or checkout as the cause, and the next fix."
+summary: "Read your product test results and find out if the ad, the page or the checkout is the problem. Get a score out of 100 and the next fix."
 job: read-ad-results
 thinking: low
 thinking_why: "It compares numbers to fixed benchmarks, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You ran a short test on a new product and sales did not come.
   - You want to know whether to fix the ad, the page or the checkout before you drop the product.
   - You are comparing two test products and want a quick, fair read of each.
+not_for:
+  - You have a store with repeat buyers or a warm email list. The benchmarks are for cold traffic, so compare against your own past results instead.
+  - You sell outside the US or at a very different price. Treat the targets as rough, or swap in your own numbers first.
+  - You have only a handful of clicks. Wait for more data before you judge, because a few clicks are mostly noise.
 
 you_give:
   - Link cost per click, click rate and cost per 1,000 views
@@ -35,6 +39,27 @@ how_to_use:
   - Say how many days it ran, how many ads and where you sell.
   - Read the call and the next fix. Make one change, not three.
   - Run the test again and paste the new numbers.
+output_sample:
+  input:
+    - Your link cost per click, click rate and cost per 1,000 views
+    - Your landing page to cart rate and cart to purchase rate
+    - Your average order value and the base price
+    - How many days the test ran, how many ads, and your country (optional)
+  output:
+    - name: Test line
+      contains: The product, its price, how many days it ran, how many ads, and the country.
+    - name: Ad, page, checkout and order value lines
+      contains: Each number beside its benchmark, marked pass, partial or miss.
+    - name: Call
+      contains: Ad issue, page issue, checkout issue or no clear issue, based on the first miss in the shopper's path.
+    - name: Score
+      contains: A score out of 100 with the sum shown, scaled to the numbers you gave.
+    - name: Next fix
+      contains: One change, tied to the number that triggered it.
+    - name: Data warning
+      contains: A note when the test ran too briefly or had too few clicks.
+    - name: Missing
+      contains: The numbers you did not give, so you know what was not checked.
 
 how_it_works:
   - title: Asks why first

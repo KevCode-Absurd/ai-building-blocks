@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It samples posts, then reads what drives them.
 new_slug: creator-profile-teardown-writer
 name: Creator profile teardown writer
-summary: Give it a social account. Get its positioning, content themes, top
-  posts and what to test. Collects data from websites.
+summary: "Break down a creator profile teardown in one pass: get positioning, content themes, top posts and tests to run. Needs a ScrapeCreators key."
 job: study-competitors
 headline: Creator profile teardown writer
-subhead: Give it a social account. Get its positioning, content themes, top
-  posts and what to test. Collects data from websites. Bring the account link.
-  Use the result to plan your next step.
+subhead: Give it a social account. Get its positioning, content themes, top posts and what to test. Collects data from websites. Bring the account link. Use the result to plan your next step.
 explain: |
   A breakdown of a social account: how it positions itself, which themes it returns to, which posts beat the average, and what you can test yourself. You learn from what works without copying it.
 
@@ -18,6 +15,10 @@ when:
   - You are choosing a content style for your own profile.
   - You need hook ideas that already work in your niche.
   - You are researching a creator before a partnership.
+not_for:
+  - "You want data on your own account: use the analytics tool built into that app, such as Instagram Insights or TikTok Analytics."
+  - "The account is private: your AI can only read public posts, so ask the owner to share their numbers."
+  - "You want to check one post only: read that post and its comments yourself, a full teardown is too much."
 you_give:
   - The account link
   - Your own niche and goals
@@ -30,8 +31,30 @@ you_get:
   - Hooks and formats to try
   - Tests for your account
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - Get a ScrapeCreators API key from scrapecreators.com. This is a paid service, so check their site for current prices.
+  - Open an AI that can run code, such as Claude with code tools, and set your key as SCRAPECREATORS_API_KEY.
+  - Paste the skill text into the chat.
+  - Add the account link, your niche and your goals. Add a time period if you want one.
+  - Read the Outlier Posts first. The skill shows what the evidence suggests, not proof of cause.
+  - Pick one or two items from Tests for Us and run them on your own account.
+output_sample:
+  input:
+    - The account link
+    - Your own niche and goals
+    - Time period to review (optional)
+  prerequisites:
+    - An AI that can run code and use the web
+    - A ScrapeCreators API key, set as SCRAPECREATORS_API_KEY
+  output:
+    - name: Positioning
+      contains: Who the account serves, the promise it makes, and the voice it uses.
+    - name: Content Pillars
+      contains: A table of the themes it returns to, with evidence and example posts.
+    - name: Outlier Posts
+      contains: A table of posts that beat the average, with the metric, why it matters and the pattern.
+    - name: Hooks and Formats to Steal
+      contains: Hooks and post formats that seem to work and are worth adapting.
+    - name: What Not to Copy
+      contains: Parts of the account that will not suit your voice or situation.
+    - name: Tests for Us
+      contains: A numbered list of tests to run on your own account.

@@ -1,51 +1,87 @@
 new_slug: reconcile-service-capacity-and-shared-cost
 name: Reconcile service capacity and shared cost
 headline: Reconcile service capacity and shared cost
-summary: A service contribution bridge with allocated and idle shared cost
+summary: See what a service team's hours really earn after delivery cost and shared cost, with the cost of unused capacity shown on its own line.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A service contribution bridge with allocated and idle shared cost. Share actual paid/client hours, leave/fixed duties, realized fees, loaded delivery cost, a separate shared service pool and homogeneous activity drivers for the same month.
+subhead: Give it one month of paid and client hours, leave and fixed duties, realized fees, loaded delivery cost, a shared service cost pool and the activity counts behind it. It builds delivery contribution, then adds each client's share of shared cost. You get a contribution view and a separate idle cost line.
 explain: |-
-  A service contribution bridge with allocated and idle shared cost.
+  A service business earns from hours it can bill, but it pays for all the hours. Leave, training and quiet days are paid and earn nothing. A shared service such as scheduling or reporting costs money too, and is often spread over clients by a rough rule. The result hides how much capacity went unused.
 
-  Professional services FP&A. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow does it in two clear steps. Step 1 turns paid time, available client hours and realized fees into delivery contribution. Step 2 takes the shared cost pool, which must be separate from delivery labor, and spreads it by observed activity at normal capacity. What is left over is idle cost, shown on its own line.
+
+  It prevents the common mistake of taking delivery labor off twice. It is a management view built from the month you give it. It does not set prices or say who should be let go.
 when:
-  - You need a service contribution bridge with allocated and idle shared cost.
-  - You work on professional services fp&a and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A client looks profitable on fees but the team always seems stretched.
+  - You want to see how much paid time earned nothing this month.
+  - A shared service cost is spread evenly and you doubt it is fair.
+  - You are about to reprice a service and need the real cost per billable hour.
+not_for:
+  - You only need utilization and margin. Use the Service utilization margin builder on its own.
+  - You only need to spread a shared cost by use. Use the Shared service activity cost allocator on its own.
+  - You want to know if you can promise a delivery date. Use the Check capacity before promising a delivery date workflow.
+  - You want a hotel or property view. Use the Reconcile hotel room and food contribution workflow.
 you_give:
-  - Actual paid/client hours, leave/fixed duties, realized fees, loaded delivery cost, a separate shared service pool and homogeneous activity drivers for the same month.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Paid hours and client hours for the same month (from timesheets or payroll)
+  - Leave and fixed duties that cannot be billed (from your leave and rota records)
+  - Realized fees, meaning what clients actually paid (from invoices and receipts)
+  - Loaded delivery cost per hour or in total (from payroll and benefits)
+  - The shared service pool and its activity counts, for the same month (from the cost ledger and service logs)
 you_get:
-  - A service contribution bridge with allocated and idle shared cost.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A utilization and delivery margin view, with unbilled work kept
+  - Delivery contribution, passed to the second step with the month and cost ledger
+  - Shared cost spread by observed activity at normal capacity
+  - Contribution after allocated shared cost, as a management view
+  - Idle capacity cost on its own line, plus any MISSING inputs
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can build spreadsheets.
+  - Attach the timesheets, invoices and cost ledger for one month. Paste your activity counts. Say the month, currency and scale once.
+  - "After step 1, check hours add up: paid hours less leave and fixed duties give available client hours."
+  - After step 2, check the shared pool does not include delivery labor, and that idle cost is its own line.
+  - Fill every MISSING line before using a figure to price or staff. Nothing here changes a price.
 how_it_works:
   - title: Service utilization margin builder
-    text: Reconcile paid time, available client capacity and actual fee realization to delivery contribution. Pass contribution, month and direct-cost ledger to the allocation step, preserving unbilled work.
+    text: Reconciles paid time, available client capacity and realized fees to delivery contribution. Keeps unbilled work. Hands step 2 the contribution, the month and the direct cost ledger. Check before moving on, hours add up and fees match invoices.
   - title: Shared service activity cost allocator
-    text: Allocate only the separate approved shared service pool using observed activity drivers and normal capacity. Present direct contribution less allocated share as a management view; show idle cost separately and prevent a second deduction of delivery labor.
+    text: Spreads only the approved shared pool by observed activity at normal capacity. Shows contribution less the allocated share as a management view. Shows idle cost separately and stops delivery labor being taken off twice. Check before you rely on it, pool and delivery labor do not overlap.
 output_shape: |-
-  A service contribution bridge with allocated and idle shared cost.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  MONTH <month>, <currency>, <scale>
+
+  1 UTILIZATION AND MARGIN  paid hours <n>, available client hours <n>, billed hours <n>
+                            realized fees <n> - delivery cost <n> = contribution <n>
+  2 SHARED COST             pool <n>, activity units <n>, normal capacity <n>
+                            allocated <n>, idle capacity cost <n>
+  MANAGEMENT VIEW           contribution <n> - allocated shared cost <n> = <n>
+
+  SOURCES                   <each input, its source, date and unit>
+  MISSING                   <each gap and the line it stops>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - Paid hours, client hours, leave and fixed duties for one month
+    - Realized fees and loaded delivery cost
+    - The shared service cost pool
+    - Activity counts for the same month
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook
+  output:
+    - name: outputs/step-1-service-utilization-margin-builder.md
+      contains: Utilization, realized fees and delivery contribution for the month, with unbilled work kept.
+    - name: outputs/step-2-shared-service-activity-cost-allocator.md
+      contains: Shared cost spread by activity, with idle capacity cost on its own line.
+    - name: Management view
+      contains: Contribution after allocated shared cost, clearly labelled as a management view.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Delivery labor and shared pool do not overlap; activity units and hours are bridged explicitly; unused capacity cost remains visible rather than being hidden in unit fees.
+  - what: More leave
+    how: Raise leave hours. Available client hours fall, utilization falls and idle cost rises.
+  - what: A different driver
+    how: Change the activity count used to spread the pool. Each client's share changes and the total stays the same.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and lists what it could not verify.
 judge:
   - Delivery labor and shared pool do not overlap; activity units and hours are bridged explicitly; unused capacity cost remains visible rather than being hidden in unit fees.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +92,25 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a sheet that defines normal capacity for each team, and paste it in every time.
+  - Record the activity counts at the same point each month so months stay comparable.
+  - Run it for three months in a row to see whether idle cost is steady or one bad month.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - A timesheet export, not a summary.
+    - The invoice list for the same month.
+    - A short note on which costs are shared and which are delivery.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Utilization
+    meaning: The share of paid hours that were billed to clients.
+  - term: Realized fee
+    meaning: What the client actually paid, not the list price.
+  - term: Loaded cost
+    meaning: Pay plus the extra costs of employing someone, such as benefits.
+  - term: Activity driver
+    meaning: A count that shows who used a service, such as tickets or visits.
+  - term: Idle capacity cost
+    meaning: The cost of paid capacity that was not used.

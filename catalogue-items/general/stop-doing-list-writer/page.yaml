@@ -1,6 +1,6 @@
 new_slug: stop-doing-list-writer
 name: "Stop doing list writer"
-summary: "Paste everything your team does. Get the things to stop on purpose, with who tells whom."
+summary: "Paste everything your team does and get a stop doing list: what to drop now, what needs notice, who to tell, and where the freed time goes."
 job: organise-work
 thinking: medium
 thinking_why: "It judges each item against your results and sorts the stops by who depends on them."
@@ -17,6 +17,10 @@ when:
   - "Your team is busy all week and the important work never starts."
   - "You are planning next quarter and want to clear the deck before adding anything."
   - "You know something should go but nobody wants to be the one to say it."
+not_for:
+  - "You need to choose between new projects or ideas: use the Week priority picker."
+  - "You want a plan for the week ahead: use the Week priority picker."
+  - "You have no list of what your team does yet: write one line per task with a person first, then come back."
 
 you_give:
   - "Everything you do, one line each, with the time or money it takes"
@@ -34,6 +38,31 @@ how_to_use:
   - "Write the results that matter most in one line each."
   - "Read THE QUESTION column and argue with any answer. Then run again with your corrections."
   - "Send the STOP WITH NOTICE sentences this week."
+output_sample:
+  input:
+    - Everything your team or business does, one line each, with the time or money it takes
+    - The one to three results that matter most this year
+    - Who each item serves (optional)
+    - What each item brings in, if you know it (optional)
+  output:
+    - name: THE QUESTION
+      contains: Each item answered YES, NO or UNSURE on whether you would start it today, with a reason tied to your results.
+    - name: STOP NOW
+      contains: Items nobody depends on, with the time or money each one frees.
+    - name: STOP WITH NOTICE
+      contains: Items someone must be told about, with who tells whom, by when, and one sentence to use.
+    - name: STOP AFTER REPLACING
+      contains: Items that can go once a smaller replacement is in place, with that replacement named.
+    - name: UNSURE
+      contains: Items that need one more fact, with the fact, who finds it and by when.
+    - name: FREED
+      contains: The total hours or money freed, added up from the costs you gave.
+    - name: WHERE IT GOES
+      contains: Which of your key results gets the freed time.
+    - name: MISSING
+      contains: Any costs or results you did not give.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or none.
 
 how_it_works:
   - title: "Asks the question"

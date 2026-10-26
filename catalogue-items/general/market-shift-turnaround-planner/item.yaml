@@ -1,18 +1,26 @@
 slug: market-shift-turnaround-planner
 name: "Market shift turnaround planner"
-summary: "Describe a business losing share. Get what changed in the market, a new range and a survive-the-year plan."
+summary: Find why your market share is falling. Get a new range brief for the new buyer and a 12-month cash plan with the risk month marked.
 category: general
 type: skill
 role: make
 job: strategy
 level: advanced
 inputs:
-  - {type: question, required: true}
-  - {type: voc_reviews, required: false}
+  - { type: question, required: true }
+  - { type: voc_reviews, required: false }
 outputs:
-  - {type: plan}
+  - { type: plan }
 origin: rebuilt
 version: 1.0.0
-minds: [ratan-tata]
+minds: [ ratan-tata ]
 credits:
-  - {title: "Oral History of Ratan Tata", by: "Uday Kapoor, interviewer, 2017", used: "Finding when share began to fall, taking a market shift seriously, redesigning the range with the design lead, planning cash month by month and picking one near market to enter"}
+  - title: Oral History of Ratan Tata
+    by: Uday Kapoor, interviewer, 2017
+    used: "Inspiration for the order of the steps: find when share began to fall, take the market shift seriously, redesign the range with the design lead, plan cash by the month and pick one near market. Not checked line by line against the source; the cash table and checks are ours."
+next:
+  - cash-forecast-builder
+  - market-expansion-sequencer
+  - smallest-test-picker
+  - layoff-plan-writer
+needs_mode: manual

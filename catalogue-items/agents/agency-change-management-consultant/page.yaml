@@ -1,0 +1,163 @@
+name: Change Management Consultant agent
+summary: Plan the people side of a new tool, process or re-org, with a stakeholder map, message plan and adoption checks. Describe the change and who it hits.
+headline: Change Management Consultant agent
+subhead: Describe the change, who it affects and your go-live date. It builds a change management plan with a readiness check, a map of who must move and why they might resist, a message calendar, a manager briefing and a list of adoption checks for the first 90 days after go-live.
+job: lead-people
+thinking: high
+thinking_why: The plan has to read people and politics, not only tasks. Use a model that reasons about motives, flags what it does not know and does not invent facts about your team.
+explain: >-
+  Most changes fail because people do not use what you built. The new system
+  goes live and half the team keeps the old spreadsheet. This change
+  management consultant agent plans for that from the start. It looks at the
+  people the change hits, what each group may fear or gain, and what must
+  happen before, at and after go-live.
+
+
+  It uses the ADKAR steps from the original profile. People need to know why
+  (awareness), want to change (desire), know how (knowledge), be able to do it
+  (ability) and keep doing it (reinforcement). It finds the step where each
+  group is stuck. It then plans messages, manager briefings, training and
+  support to move them past it. It diagnoses resistance before it suggests a fix,
+  because the wrong fix makes it worse.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It plans and
+  drafts only. It does not know your people, so it works from what you tell
+  it and marks the rest as a question. It is not HR or legal advice. The
+  profile's statistics and targets are not results from AI Blocks.
+when:
+  - You are rolling out a new tool, such as a CRM, an ERP or a new ordering system, and you want people to actually use it.
+  - You are changing how teams are set up, and you need a message plan and a manager briefing before you announce it.
+  - A change has already launched and some people still use the old way, and you want a plan to find out why.
+  - You want a readiness check before you set a go-live date.
+not_for:
+  - You want only the announcement text. Use the Internal change announcement writer.
+  - You want a quick rollout plan with message templates for a small change. Use the Change rollout planner.
+  - The change is a layoff. Use the Layoff plan writer, and ask HR and a lawyer to review it first.
+  - It is a change in one person's own way of working. Plan it yourself, with no group to move.
+  - You need a legal or HR ruling on a role change or a dismissal. Ask HR or an employment lawyer.
+you_give:
+  - What is changing, who it affects, how many people and when it goes live
+  - The reason for the change, in your own words
+  - Who sponsors it, and how active they are
+  - What you already know about how people feel, such as worries, past changes that went badly and groups that are keen
+  - Training you have planned, the tools involved and how you will measure use (optional)
+you_get:
+  - A summary of the change and who it affects
+  - A readiness check across five areas, with the reason for each and what is unknown
+  - A stakeholder map showing each group's stage in the ADKAR steps, what is in it for them and the plan to move them
+  - A message calendar, a manager briefing and a training order
+  - A list of resistance risks with likely causes, and adoption checks at 30, 60 and 90 days
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Say what is changing, for whom, by when, why, and who the sponsor is. Add anything you know about how people feel.
+  - Say which part you want first, such as the readiness check, the stakeholder map or the message plan.
+  - Check the stakeholder map against what you really know. Correct any group it has wrong, and fill in what it marked as unknown.
+  - Talk to a few people in each affected group before you finalize. Ask what worries them. Paste what you heard back in.
+  - Use the plan as a living file. Update it after go-live with real adoption numbers, and ask it for the next move.
+how_it_works:
+  - title: Define the change
+    text: It states what changes, for whom and by when, and lists what is unclear.
+  - title: Check readiness
+    text: It rates sponsor, capacity, stakeholders, tools and messages from what you said. It shows unknowns and does not guess.
+  - title: Map the groups
+    text: It lists each affected group, its size, what it gains or fears, and where it is on the ADKAR steps.
+  - title: Plan the messages
+    text: It builds a calendar with who says what, in which channel and when, plus a briefing for managers.
+  - title: Plan for resistance
+    text: It works out the likely cause for each group before it suggests an action, and says when to escalate.
+  - title: Plan to sustain
+    text: It sets adoption measures and 30, 60 and 90 day checks, and lists signs that people are going back to old ways.
+output_shape: |-
+  THE CHANGE
+    what <line> | affects <groups and numbers> | go-live <date> | why <reason> | sponsor <name or role> | MISSING: <list>
+
+  READINESS CHECK
+    area <sponsor and leaders | capacity | stakeholders | tools and process | messages and training> | rating <1 to 5 or unknown> | evidence <fact you gave>
+    overall <score out of 100 or partial> | how worked out <areas rated and areas unknown>
+
+  STAKEHOLDER MAP
+    group <name> | size <number> | impact <high | medium | low> | influence <high | medium | low> | stuck at <awareness | desire | knowledge | ability | reinforcement | unknown> | what is in it for them <line> | plan <action>
+
+  MESSAGE CALENDAR
+    <phase> | audience <group> | message <line> | channel <email | town hall | manager | other> | sender <role> | date <date>
+
+  MANAGER BRIEFING
+    key points <list> | likely questions and answers <list> | what to ask their team <list>
+
+  RESISTANCE RISKS
+    <group> | type <vocal | silent | organized> | likely cause <cause> | action <step> | escalate when <rule>
+
+  ADOPTION CHECKS
+    <day 30 | day 60 | day 90> | measure <what> | warning sign <what> | action if low <step>
+
+  OPEN QUESTIONS
+    <item>
+output_sample:
+  input:
+    - What is changing, who it affects and when it goes live
+    - The reason for the change
+    - Who the sponsor is and how active they are
+    - What you know about how people feel (optional)
+  prerequisites:
+    - A named sponsor who agrees to speak about the change
+    - A few real conversations with the affected people, because the AI cannot know how they feel
+  output:
+    - name: The change
+      contains: A short summary of what changes, for whom, by when and why, with gaps listed.
+    - name: Readiness check
+      contains: Five areas rated from what you said, with evidence and a score that says if it is partial.
+    - name: Stakeholder map
+      contains: Each group's size, impact, where it is stuck on the ADKAR steps and the plan to move it.
+    - name: Message calendar
+      contains: Who says what, to whom, through which channel and on what date.
+    - name: Manager briefing
+      contains: Key points, likely questions with answers, and what managers should ask their teams.
+    - name: Resistance risks
+      contains: Each group's likely cause of pushback, the action and when to escalate.
+    - name: Adoption checks
+      contains: What to measure at 30, 60 and 90 days, the warning signs and the fix.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can build the plan. A stronger model handles many groups at once without mixing them up.
+    - name: Your survey tool, such as Google Forms or Microsoft Forms
+      why: Use it to ask affected people short questions before and after go-live, then paste the results in.
+  inputs:
+    - Notes from short talks with people in each affected group
+    - The last change you ran and what went wrong or right
+    - Usage numbers from the new tool, once it is live
+terms:
+  - term: ADKAR
+    meaning: Five steps a person goes through to change. Awareness, desire, knowledge, ability, reinforcement.
+  - term: Sponsor
+    meaning: The senior person who backs the change and speaks for it in public.
+  - term: Stakeholder
+    meaning: Any person or group who is affected by the change or can shape how it goes.
+  - term: Adoption
+    meaning: How many people really use the new way, and not just how many were told about it.
+  - term: Go-live
+    meaning: The day the change starts for real.
+judge:
+  - Ratings and group stages rest on facts you gave, and unknowns are marked as unknown.
+  - Each group has its own plan, with what is in it for them.
+  - Resistance is given a likely cause before an action is suggested.
+  - The calendar says who sends each message, and managers get a briefing before staff hear it.
+  - Adoption is measured by use, not by how many emails were sent.
+test:
+  - Run it on a change you already finished. See if it finds the groups that really struggled.
+  - Give it one group with no facts. The map should show "unknown" and ask what to find out.
+  - Leave out the sponsor. It should flag this as a high risk to the plan.
+tweaks:
+  - what: Group detail
+    how: Name each group by role and give a headcount. Plans for "the staff" are too vague to help.
+  - what: Change type
+    how: Say if it is a tool, a re-org, a process or a culture change. The messages and training differ.
+  - what: Past changes
+    how: Tell it how the last change went. It will plan around the lessons and the change fatigue.
+  - what: Timeline
+    how: Give the go-live date and any fixed dates. The calendar then counts back from them.
+improve:
+  - Put your own channels, such as your all-hands slot and chat tool, in SKILL.md so the calendar uses them.
+  - Add your readiness questions, and drop any that you cannot rate.
+  - After go-live, paste real adoption numbers in each month and ask for the next move.

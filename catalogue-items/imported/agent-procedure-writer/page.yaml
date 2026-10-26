@@ -2,35 +2,62 @@ thinking: medium
 thinking_why: It follows a strict file format and fixes what the checker finds.
 new_slug: agent-procedure-writer
 name: Agent procedure writer
-summary: Describe a repeatable job. Get a step-by-step procedure file for your
-  AI, with firm rules and a format check.
+summary: "Turn a job you repeat into an agent procedure: a step-by-step file your AI follows the same way each time, with firm rules and a format check."
 job: make-skills
 headline: Agent procedure writer
-subhead: A step-by-step procedure file that an AI agent follows the same way
-  each time, for a job you repeat. It has inputs you can change, clear steps,
-  and firm rules the agent cannot wave off.
+subhead: Describe a job you repeat. Your AI writes a procedure file with clear steps and firm rules, then checks the file format. Another AI can then follow it the same way each time.
 explain: |
   A step-by-step procedure file that an AI agent follows the same way each time, for a job you repeat. It has inputs you can change, clear steps, and firm rules the agent cannot wave off.
 
   The skill writes in a standard format called an Agent SOP, saved as a markdown file with a set name ending. Rules use three plain words: MUST for required, SHOULD for expected, MAY for optional. That gives the agent room to think but no room to skip the important parts. Each step carries examples and a fix list for common failures. A check script then reads the file and flags anything that breaks the format, and you re-run it after each edit.
 when:
-  - You do the same multi-step job each week and want an AI to do it your way.
-  - An agent skips steps and you need some rules to be firm.
-  - You want one procedure that works in several AI tools.
-  - Your old procedure has grown messy and needs checking.
+  - You do the same multi-step job each week and want your AI to do it your way.
+  - Your AI skips steps and some rules need to be firm.
+  - You want one procedure that works in Claude, Cursor and other AI tools.
+  - An old procedure has grown messy and needs a format check.
+not_for:
+  - "You have a one-off task or a job with no fixed steps: use a plain prompt in your AI chat."
+  - "You need an AI to run a job without checking: this writes the file only, so test it on one real run yourself."
+  - "You want to write a long guide for people to read: ask a colleague or write a normal document instead."
 you_give:
-  - A description of the repeatable job
+  - A short description of the repeatable job
   - The steps as you do them now
-  - Inputs that change each time (optional)
+  - Inputs that change each run (optional)
   - Rules that must never be broken (optional)
 you_get:
-  - A procedure file with steps and firm rules
-  - Inputs you can swap per run
+  - A procedure file with numbered steps and firm rules
+  - Inputs you can swap on each run
   - Examples and fixes for common problems
-  - A format check result
+  - A format check result with errors fixed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run shell scripts and save files.
+  - Open an AI that can save files and run shell scripts. The format check needs this.
+  - Add this skill and its validate-sop.sh script to the same folder, then tell your AI to follow the skill.
+  - Paste your job description and your steps. Add changing inputs and must-keep rules if you have them.
+  - Let your AI save the file as a .sop.md file. It uses an agent-sops folder if one exists.
+  - Ask your AI to run validate-sop.sh on the file after every change, and fix every error it finds.
+  - Once the check passes, test the procedure on one real run before you rely on it.
+output_sample:
+  input:
+    - A short description of the repeatable job
+    - The steps as you do them now
+    - Inputs that change each run (optional)
+    - Rules that must never be broken (optional)
+    - Where to save the file (optional)
+  prerequisites:
+    - An AI that can save files and run a shell script, to run the format check
+    - The validate-sop.sh script that sits next to the skill file
+  output:
+    - name: Procedure file (.sop.md)
+      contains: One markdown file named in lowercase with dashes, saved in an agent-sops folder if you have one.
+    - name: Overview
+      contains: A short note on what the procedure does and when to use it.
+    - name: Parameters
+      contains: The inputs that change each run, marked required or optional, plus rules for asking for missing ones.
+    - name: Steps
+      contains: Numbered steps, each with MUST, SHOULD and MAY rules, and a reason for every MUST NOT.
+    - name: Examples
+      contains: Sample inputs and what the agent should do with them.
+    - name: Troubleshooting
+      contains: Common problems and how to fix them.
+    - name: Format check result
+      contains: The result of validate-sop.sh, with errors fixed and warnings noted.

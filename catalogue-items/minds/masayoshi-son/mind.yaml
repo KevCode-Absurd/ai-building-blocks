@@ -16,6 +16,31 @@ use_cases:
   - "Build a group of partners that help each other grow instead of one big brand"
   - "Turn a weak position into a challenger plan against a bigger rival"
   - "Stress-test a grand plan for the risks a hopeful founder would skip"
+not_for:
+  - "You want stock picks, buy or sell calls or advice on your own money: ask a licensed financial professional, because this mind gives none."
+  - "You want to value a company from its numbers: use the Aswath Damodaran mind, who pairs a business story with the figures behind its value."
+  - "Your business could not survive a big loss: try the Charlie Munger mind, who checks incentives and failure risks before any bet."
+output_sample:
+  input:
+    - The business, team or career move you are weighing
+    - Your market today and who leads it
+    - What you have already won that looks like this bet
+    - What you could lose, and any debt you carry (optional)
+  output:
+    - name: Long view
+      contains: Where your market could be in thirty years, and the shift your idea rides.
+    - name: Core piece
+      contains: The one part every other part of this wave will need.
+    - name: Number one check
+      contains: Whether you can lead, and if not, who can and whether to partner with them.
+    - name: Timing and price
+      contains: Whether you are early enough, or the price is already high.
+    - name: Survival plan
+      contains: The loss case on one page, with a Plan B, C and D.
+    - name: What would prove it wrong
+      contains: A test for your vision and a date for when you will know.
+    - name: Beyond the record tags
+      contains: Marks on any point Son never made, so his words stay apart from our reasoning.
 seats:
   - {seat: "The 300-year bet", asks: "Where will this be in thirty years, and are we early enough to own the core of it?"}
   - {seat: "Paradigm shifts", asks: "Is this the start of a new wave, and which piece of it will everything else need?"}

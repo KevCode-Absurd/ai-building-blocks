@@ -1,6 +1,6 @@
 new_slug: sold-out-proof-line-writer
 name: "Sold-out proof line writer"
-summary: "Give it your real sales, rank and restock facts. Get short proof lines and where each one goes."
+summary: "Turn your real sales, restock and rank facts into short sold-out proof lines for ads and product pages, each with its fact and date."
 job: write-ad-copy
 thinking: low
 thinking_why: "It turns a short list of true facts into short lines, so a fast model is enough, as long as it never adds a fact."
@@ -17,6 +17,10 @@ when:
   - Your product has sold out or been restocked, and your ads and page don't say so.
   - You hit a rank or a retailer milestone and want to use it everywhere.
   - You need short proof lines for ads, your product page, social posts and emails to retailers.
+not_for:
+  - Your store has no sales history yet. Pull an order report first, or use the Website brand brain builder to gather facts you can back.
+  - You want scarcity lines like "almost gone" when stock is not low. Do not write them. Show only past facts you can date.
+  - You want to compare yourself to a named rival. Skip it, and show growth against your own past instead.
 
 you_give:
   - "Your facts: units sold, restocks, ranks, retailer wins and press, with dates and where each can be checked"
@@ -33,6 +37,24 @@ how_to_use:
   - Say where each line will run.
   - Check every line against its fact before it goes live. Remove any you can't back.
   - Put an end date on each line and take it down when the fact is no longer true.
+output_sample:
+  input:
+    - Your true sales facts, each with a date and a source
+    - Where each line will run, such as ad, product page, social or retailer outreach
+    - Your ad platform and any claim rules you know (optional)
+  prerequisites:
+    - An order or sales report, such as one from Shopify, to back each fact
+  output:
+    - name: PROOF LINES
+      contains: Short lines, each with its fact, date, source, place to run and a review date.
+    - name: HELD BACK
+      contains: Facts left out, with the reason, such as no date, no source or no longer true.
+    - name: CLAIM FLAGS
+      contains: Lines, such as rank claims, that need a check against your ad platform's rules.
+    - name: MISSING
+      contains: Facts, dates or sources you still need to give.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none.
 
 how_it_works:
   - title: Checks each fact

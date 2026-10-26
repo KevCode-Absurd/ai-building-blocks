@@ -1,6 +1,6 @@
 new_slug: review-based-ad
 name: "Turn reviews into an ad strangers read"
-summary: "Give it your reviews and product facts. You get a story ad and picture plan, checked against ad rules."
+summary: "Turn your customer reviews into a story ad for people who don't know you. You get the story, a picture plan and an ad rules check."
 job: write-ad-copy
 
 headline: "Turn reviews into an ad strangers read"
@@ -15,6 +15,10 @@ when:
   - Your ads do fine with people who already know you, but strangers ignore them.
   - Your customers had the problem for years and tried other fixes first.
   - You want to test a long, story-led ad but don't know how to write one honestly.
+not_for:
+  - "You want a plain image ad built from one customer quote: use the Image ad maker from customer quotes."
+  - "You only want to check an ad you already wrote against Facebook rules: use the Meta ad policy checker."
+  - "Your buyers decide fast and never tried other fixes first: use the Single image ad planner for a direct ad."
 
 you_give:
   - Your customer reviews, support emails or survey answers, copied as written
@@ -33,6 +37,26 @@ how_to_use:
   - Have your inputs ready. Your reviews (the more mixed and three-star ones the better), your product facts with allowed claims, and the names of anyone who has agreed in writing to be quoted.
   - It works step by step and saves each result. Read the setup sheet first. If it says the format doesn't fit, the run stops there and you make a direct ad instead.
   - Before it runs, make sure the click goes to an article-style page that explains the problem first, not straight to your product page. If you don't have one, the summary at the end says so.
+output_sample:
+  input:
+    - Your customer reviews, survey answers or support emails, copied as written
+    - Your product facts and the claims you may and may not make
+    - Who the buyer is and when the problem bites (optional)
+    - The article-style page the ad will link to (optional)
+  prerequisites:
+    - An AI that can read files, so it can follow HANDOFF.md and save each step
+    - An image tool, only if you want the picture made and not just planned (optional)
+  output:
+    - name: Setup sheet
+      contains: Whether a story ad fits, the lead problem, why buyers switch, the narrator, where the click goes and a four-story test plan.
+    - name: Story
+      contains: A 120 to 260 word story in your customers' words, with the short line that sits under the picture.
+    - name: Picture brief and image prompt
+      contains: The picture type, the scene, a square phone-photo style prompt with no product or logo, and a runner-up to test.
+    - name: Ad rules check
+      contains: A verdict on the story, line and picture, with each problem pointed to an exact line and how to fix it.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Decides if it fits

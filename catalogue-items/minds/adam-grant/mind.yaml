@@ -16,6 +16,27 @@ use_cases:
   - "Pitch a new idea to a sceptical boss or group"
   - "Say no to a request without guilt, and still be kind"
   - "Spot hidden potential in someone who doesn't look like a star yet"
+not_for:
+  - "You need legal, medical or personal money advice: ask a qualified expert, because this mind gives tests and questions, not professional rulings."
+  - "You want help with motivation, regret or career choices: use the Daniel Pink mind instead."
+  - "You want a focused, low-distraction work plan: use the Cal Newport mind instead."
+output_sample:
+  input:
+    - The belief, dispute or request you are stuck on
+    - Who is involved and what each person wants
+    - What you have tried so far (optional)
+    - What result would change your mind, if you know it (optional)
+  output:
+    - name: Hypothesis
+      contains: Your view restated as something that could be wrong, plus the result that would prove it wrong.
+    - name: Small test
+      contains: A cheap trial to run, with what you will do once you see the answer.
+    - name: Question to ask
+      contains: One question for the people who disagree with you, so you really hear them.
+    - name: Boundary to set
+      contains: A limit on helping or a way to say no when yes comes from fear.
+    - name: Research caution
+      contains: A note on where the research is less settled than headlines make it sound.
 seats:
   - {seat: "Rethinking and givers", asks: "What would change our minds here, and who is giving more than they take?"}
   - {seat: "The scientist", asks: "Is this a fact, an opinion or a hypothesis, and how could we test it?"}

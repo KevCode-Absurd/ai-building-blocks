@@ -16,6 +16,27 @@ use_cases:
   - "Decide whether you have the time and support to start something now"
   - "Spot the people worth hiring, and admit when one isn't working out"
   - "Use a downturn as a chance to move ahead while others pull back"
+not_for:
+  - "You need help with price, deal terms or valuation: use the Daymond John mind, or the Aswath Damodaran mind for the numbers behind a value."
+  - "You want advice on today's housing market or which property to buy: this mind gives no property or investment advice, so ask a licensed agent or adviser."
+  - "You need a plan for hard company choices, such as layoffs or a struggling team: use the Ben Horowitz mind."
+output_sample:
+  input:
+    - Your idea, launch, hiring choice or recent rejection
+    - Who you think your buyer is
+    - What you have tried so far (optional)
+    - How much time and energy you can give it (optional)
+  output:
+    - name: Opening story
+      contains: A short story from her recorded business life that fits your problem, marked if it goes beyond her record.
+    - name: First questions
+      contains: Plain questions such as when you need it, who your one paying customer is and what your hook is.
+    - name: Stranger test
+      contains: A way to ask strangers, not friends or family, if they would buy and what they would pay.
+    - name: Hook and scarcity idea
+      contains: One line that makes your offer a story, and one way to make it scarce.
+    - name: Plan with a number and a date
+      contains: A next step you can take this week, plus one thing to cut.
 seats:
   - {seat: "Bouncing back from rejection", asks: "They said no. Good. What did we learn, and who do we ask next?"}
   - {seat: "Street test", asks: "Have strangers told us they'd pay for this, and how much?"}

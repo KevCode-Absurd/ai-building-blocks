@@ -2,36 +2,112 @@ thinking: medium
 thinking_why: It follows a set method but depends on your setup.
 new_slug: model-run-tracker
 name: Model run tracker
-summary: Point it at your PyMC models. Get every run saved with its settings and
-  checks, so you can compare them later.
+summary: Track every PyMC model run with MLflow. Get your settings, checks and results saved per run, so you can compare runs and reload any one later.
 job: track-numbers
 headline: Model run tracker
-subhead: Point it at your PyMC models. Get every run saved with its settings and
-  checks, so you can compare them later. Bring your PyMC model code. Use the
-  result to plan your next step.
+subhead: Give it your PyMC model code and say where runs should be stored. It adds code that logs each fit with its settings, package versions and checks, and saves the full results file. You can then compare runs and bring any one back.
 explain: |
-  Every PyMC model fit saved with its settings, checks and results, so you can compare runs and bring any one back later.
+  If you fit the same Bayesian model six times with small changes, it is hard to say which run produced the number in your report. This model run tracker keeps a record of each fit, so you can tell.
 
-  The skill ties PyMC to MLflow. It sets up a named experiment and logs your data source, package versions, random seed and sampler settings before the slow fitting starts. Runs sit inside a tracked block, so failures show up as failed runs. After the fit it saves the full results file and the quality checks, and labels runs as exploring, reportable or mock. Guides cover plain PyMC, PyMC-Marketing auto-logging and saving marketing mix models. It needs Python.
+  It ties PyMC to MLflow, a free tool that stores runs. Before the slow fit starts, it logs your data source, package versions, random seed and sampler settings. The fit runs inside a tracked block, so a crash shows as a failed run, not a missing one. After the fit, it saves the full results file and the quality checks.
+
+  Each run gets a label: exploring, reportable or mock. The label says where the run came from. It does not say the model is good. The skill also covers PyMC-Marketing auto-logging and saving marketing mix models.
+
+  It tracks runs. It does not serve a model to other apps. This skill comes from PyMC Labs, shared under MIT, and needs Python.
 when:
-  - You have fit the same Bayesian model six times with small changes.
+  - You fit the same Bayesian model many times with small changes and lost track of which run was which.
   - A report needs the exact settings behind one result.
-  - You want to save and reload a marketing mix model.
-  - A failed fit left you unsure which run was the last good one.
+  - You want to save a marketing mix model and load it again later.
+  - A fit crashed and you are unsure which run was the last good one.
+not_for:
+  - You have one fit and no plan to repeat it. A saved script is enough.
+  - You want to build the model first. Use the Bayesian model builder.
+  - You want to check if a fit can be trusted. Use the Statistical model checker.
+  - You want to serve predictions to a live app. The marketing mix wrapper is not ready for that in PyMC-Marketing 1.2.0. Use native model restoration.
 you_give:
-  - Your PyMC model code
-  - Where to store runs
-  - Which runs are for exploring or for reporting
-  - PyMC-Marketing details if you use it (optional)
+  - Your PyMC model code, or the file that fits it
+  - Where to store runs, such as a local folder or an MLflow server
+  - Which runs are for exploring, which for reporting and which are mock
+  - PyMC-Marketing details, if you use it (optional)
 you_get:
-  - Code that logs each fit
-  - Saved results and checks per run
-  - Run labels for tracking status
-  - A way to compare runs
-  - Steps to restore a saved model
+  - Code changes that log each fit inside a tracked run
+  - Settings, versions, seed and checks saved for each run
+  - The full results file saved with the run
+  - A label on each run: exploring, reportable or mock
+  - Steps to compare runs and to reload a saved model
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and have MLflow installed.
+  - Download the skill folder from this page and add it to an AI that can edit code and run Python, such as Claude Code. Keep the references folder with SKILL.md.
+  - Install MLflow in your modeling environment if it is not there. Tell your AI the PyMC and ArviZ versions you use. Do not let it downgrade a working setup.
+  - Share your model code and say where runs should be stored. Say which runs are exploring, reportable or mock.
+  - Ask your AI to add tracking, using the manual guide for plain PyMC or the PyMC-Marketing guide for marketing models.
+  - Run one fit. Open MLflow and check the run shows your settings and the saved results file. Then ask your AI to reload that file from MLflow to prove it works.
+  - Keep the tracking database and results files out of source control. They can hold your data.
+how_it_works:
+  - title: Name the run
+    text: It sets a tracking location and an experiment name, and logs data source, package versions, seed and sampler settings.
+  - title: Fit inside a run
+    text: The fit sits in a tracked block, so a crash is recorded as a failed run.
+  - title: Save the results
+    text: It saves the full results file before any checks, so nothing is lost if a later step fails.
+  - title: Log the checks
+    text: It records the quality checks. Missing checks are marked unresolved, never zero.
+  - title: Reload and verify
+    text: It downloads the saved file from MLflow and reopens it to check it is whole.
+  - title: Compare like with like
+    text: It compares runs only on the same data and scale, and keeps tracking apart from serving.
+output_shape: |-
+  CODE CHANGES
+    <file> | <what was added> | <what it logs>
+
+  RUN RECORD
+    <experiment> | <tag: exploring, reportable or mock> | <data source> | <package versions> | <seed> | <sampler settings>
+
+  SAVED RESULTS AND CHECKS
+    <results file> | <diagnostics logged> | <unresolved checks>
+
+  RELOAD CHECK
+    <file reopened from MLflow: yes or NOT CHECKED, with reason>
+
+  HOW TO COMPARE RUNS
+    <metric to filter on> | <runs left out and why>
+output_sample:
+  input:
+    - Your PyMC model code
+    - Where to store runs, such as a local folder or an MLflow server
+    - Which runs are exploring, reportable or mock
+    - PyMC-Marketing details, if you use it (optional)
+  prerequisites:
+    - Python with PyMC and MLflow installed
+    - An AI that can edit code and run Python
+  output:
+    - name: Code changes
+      contains: The files changed and the tracked run block added, with what each change logs.
+    - name: Run record
+      contains: Experiment name, run label, data source, package versions, seed and sampler settings.
+    - name: Saved results and checks
+      contains: The full results file and the quality checks, with any unresolved ones listed.
+    - name: Reload check
+      contains: Proof the saved file reopens from MLflow, or a note that it was not checked.
+    - name: How to compare runs
+      contains: The numbers to compare runs on, and the runs left out and why.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can edit your model files and run the fit to prove tracking works.
+    - name: MLflow
+      why: It is the free tool that stores and shows your runs.
+  inputs:
+    - The versions of PyMC, ArviZ and MLflow you have installed
+    - A note on what changed between runs
+    - A place with access controls for tracking files, if your data is private
+terms:
+  - term: MLflow
+    meaning: A free tool that records each model run, its settings and its files.
+  - term: Run
+    meaning: One fit of a model, saved with its settings and results.
+  - term: Seed
+    meaning: A number that makes random steps repeat the same way each time.
+  - term: Sampler
+    meaning: The part of PyMC that draws many possible answers from your model.
+  - term: Marketing mix model
+    meaning: A model that links marketing spend by channel to sales over time.

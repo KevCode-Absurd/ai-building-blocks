@@ -2,23 +2,23 @@ thinking: high
 thinking_why: It maps your evidence to exact clauses and finds the gaps.
 new_slug: lab-and-device-standards-checker
 name: Lab and device standards checker
-summary: Name the standard and share your records. Get an evidence gap list for
-  ISO 13485, 14971 or 17025.
+summary: Check your records against ISO 13485, 14971, 17025 or 15189. Get an evidence gap list with blockers marked, ready for a qualified person to review.
 job: check-contracts
 headline: Lab and device standards checker
-subhead: A gap list showing which of your records already support an ISO
-  standard and which are missing. Name the standard, such as ISO 13485, 14971 or
-  17025, and share your procedures and records.
+subhead: A gap list showing which of your records already support an ISO standard and which are missing. Name the standard, such as ISO 13485, 14971 or 17025, and share your procedures and records.
 explain: |
   A gap list showing which of your records already support an ISO standard and which are missing. Name the standard, such as ISO 13485, 14971 or 17025, and share your procedures and records. The skill sorts them into scope, controlled documents, implementation records and traceability, then runs local checks to see what evidence is present.
 
   It is strict about limits. It does not certify anything, predict an audit result, or quote the standard, which is copyrighted. Every output is labelled a draft for a qualified person to review, and open decisions stay listed as blockers instead of being guessed. You need your own licensed copy of the standard.
 when:
-  - You are preparing for a quality audit and want to see your evidence gaps
-    early.
+  - You are preparing for a quality audit and want to see your evidence gaps early.
   - You need to organise documents and records against a named ISO standard.
   - A new quality manager wants a map of what exists and what is missing.
   - You want a checklist of open decisions to take to your regulatory lead.
+not_for:
+  - "You want a certificate or an audit result: this tool cannot give one, so go to your certification body, notified body or accreditation body."
+  - "You need to know if a law or rule applies to your product: ask your regulatory lead or legal counsel."
+  - "You need a test method validated or measurement uncertainty worked out: use a qualified metrologist or your laboratory director."
 you_give:
   - The standard you work to
   - Your scope statement
@@ -30,7 +30,35 @@ you_get:
   - A list of blockers and open decisions
   - A draft marked for human review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open an AI that can read files and run code, such as Claude with file tools. Add the skill folder.
+  - Tell your AI which standard you work to, and share your scope statement.
+  - Add your procedures and records as files. Add your licensed copy of the standard if you have one.
+  - Ask your AI to run the ISO standards readiness skill and send back the draft gap list.
+  - Read the blockers and open decisions first. Take them to your quality manager or regulatory lead.
+  - Treat the result as a draft. A qualified person must review it before you use it in an audit.
+output_sample:
+  input:
+    - The standard you work to, such as ISO 13485 or ISO/IEC 17025
+    - Your scope statement
+    - Your procedures and records, as files
+    - Your own licensed copy of the standard (optional)
+  prerequisites:
+    - An AI that can read files and run code, if you want the local checks to run
+    - Your own licensed copy of the standard, since the skill holds no clause text
+  output:
+    - name: Scope and owners
+      contains: The standard, the purpose of the review and the people who own each decision.
+    - name: Source and version evidence
+      contains: Which version of the standard and which dated files the review rests on.
+    - name: Document and record inventory
+      contains: Your controlled documents and records, sorted by process area.
+    - name: Process implementation findings
+      contains: Where your records show a process in use, and where evidence is thin or missing.
+    - name: Focused check results
+      contains: What the local checks found for your type of work, such as CAPA or traceability.
+    - name: Readiness evidence manifest
+      contains: A bounded list of the evidence files, each with an owner and status.
+    - name: Blockers and open decisions
+      contains: Items that need a named person to decide, listed and never guessed.
+    - name: Human review handoff
+      contains: A draft marked for review by a qualified person before anyone relies on it.

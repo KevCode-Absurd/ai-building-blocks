@@ -1,6 +1,6 @@
 new_slug: short-film-video-prompts
 name: "Short film video clip prompt writer"
-summary: "Paste your short-film script and attach product photos. Get steady clip prompts and an edit list."
+summary: "Turn an approved short film script into AI video clip prompts: floor plan, cast cards, storyboard and edit list that keep faces and rooms steady."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have an approved film-style script and want to make it with AI image and video tools.
   - Your generated shots keep changing faces, rooms or light between angles.
   - Things appear, vanish or swap hands between your shots.
+not_for:
+  - "You only need a single product photo: use your AI's image tool with a plain prompt, since this skill plans a whole film."
+  - "You have no approved script yet: use the Short film video ad script writer first, then come back here."
+  - "You want a fast talking-head or voiceover ad: use the Video ad script writer from customer quotes, which needs no floor plan or casting."
 
 you_give:
   - The approved script with speaker labels, scenes and its cast note
@@ -36,6 +40,30 @@ how_to_use:
   - Approve or change each person's card, then make the casting images and say which you picked.
   - Make and approve the sheets, the establishing frame and the lock lines, then the storyboard.
   - Make the clips in order. If a shot fails, attach a screenshot, say what went wrong and ask for the fix.
+output_sample:
+  input:
+    - Your approved short film script with speaker labels and scenes
+    - "Real photos of your product: front, side and top"
+    - How the product is held and used
+    - Your video tool's clip lengths and limits (optional)
+  prerequisites:
+    - An AI that can read images, so it can check your product photos
+    - A connected video tool or a paid video app, if you want the AI to make the clips itself
+  output:
+    - name: Turn line, floor plan and avatar cards
+      contains: One line on the story turn, a room map with lettered camera spots, and a fixed card for each person.
+    - name: Casting image prompts
+      contains: Three or four prompts per person on a plain background, so you can pick one face each.
+    - name: Sheets, establishing frame, light recipe and lock lines
+      contains: Each person from five angles, the product from your photos, one wide room frame, and lines repeated in every prompt.
+    - name: Storyboard
+      contains: One frame per shot with one action, an exact dialogue block and a log of who holds what.
+    - name: Clip prompts
+      contains: Motion-only prompts for each clip, with how each one cuts out to the next.
+    - name: Edit list
+      contains: Shot order, captions, sound, end card, safe zones and retake notes.
+    - name: CHECKS MISSED
+      contains: One line for each check the prompts still miss, or none.
 
 how_it_works:
   - title: Plans the scene

@@ -1,6 +1,6 @@
 new_slug: write-a-short-pitch-and-fix-it-after-every-no
 name: Write a short pitch and fix it after every no
-summary: Give it your idea and who must back it. Get an honest pitch that learns from each no.
+summary: Write a short pitch from your idea and the people who must back it. It cuts claims you can't prove, answers hard objections and rewrites after each no.
 job: speak-and-persuade
 thinking: high
 thinking_why: It runs four skills in a row, and the objection step needs real argument. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are pitching an idea, a business or a cause to investors, a boss, a board or a group.
   - You have pitched a few times, heard no, and cannot tell what to change.
   - You want to persuade without pressure tricks or claims you cannot prove.
+not_for:
+  - "You have a finished pitch nobody has heard yet: use the Honest persuasion editor alone to check it first."
+  - "You need ad or sales copy that sells a product: use the Ad angle planner or the Ad headline writer."
+  - "You need a letter to your customers or members, not a pitch: use the Annual letter writer."
 you_give:
   - Your idea or cause and who you want to reach
   - Facts you can prove, numbers with sources, results, quotes you may use
@@ -26,11 +30,33 @@ you_get:
   - The hardest objections with fair answers, the fact that would sink your case and what your evidence cannot show
   - A doubt log sorted by problem, market, team and place, a rewritten pitch and one advice question for the next meeting
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Give it facts you can prove. Anything it cannot check is cut or marked as missing proof.
-  - When it reaches the pause, pitch to about five people who can say no. Open each meeting by asking what they would change first, and write down each no as they said it.
-  - Come back with the notes and it finishes the rewrite.
+  - Gather your idea, who must back it, and facts you can prove. Add your brand brain if you have one (optional).
+  - "Put the workflow's skill files in one folder, or in a Claude Project: Why-first message writer, Honest persuasion editor, Hardest objections answer writer and Pitch revision log."
+  - Open that folder in Claude Code, or add the files to a Claude Project, and ask your AI to run the workflow.
+  - Check the pitch and the objection answers. Anything your AI could not prove is cut or marked MISSING.
+  - At the pause, pitch to about five people who can say no. Ask what they would change first. Write down each no in their words.
+  - Paste your notes back. Your AI sorts the doubts and rewrites the pitch.
+output_sample:
+  input:
+    - Your idea or cause, and who you want to reach
+    - Facts you can prove, with sources
+    - Why you started, in your own words
+    - Your brand brain (optional)
+    - Each no you heard, who said it and their words (after the pause)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Five people who can say no, for the pause after step 3
+  output:
+    - name: "Step 1: Why-first pitch"
+      contains: A short pitch that moves from your belief to how you act to what you make.
+    - name: "Step 2: Honest edit"
+      contains: Each line marked true, unproven or fake, with a cleaner rewrite and a list of changes.
+    - name: "Step 3: Hardest objections"
+      contains: Ranked objections with fair answers, the fact that could sink your case, and what your evidence can't show.
+    - name: "Step 4: Pitch revision log"
+      contains: A doubt log sorted by group, a rewritten opening, what to keep and one advice question for your next meeting.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Write the why-first pitch
     text: Writes your usual pitch as a baseline, finds the belief behind the work and rebuilds the message from belief to how to what you make.

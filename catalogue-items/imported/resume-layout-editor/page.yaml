@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: resume-layout-editor
 name: Resume layout editor
-summary: Share your resume layout. Get clearer sections, consistent type and fixes for text that is hard to read.
+summary: Fix your resume layout so hiring software and recruiters can read it. Get a formatting review with clear fixes for fonts, spacing and sections.
 job: find-a-job
 headline: Resume layout editor
 subhead: Share your resume and the way you plan to apply. It checks section order, spacing, fonts and details that may confuse hiring software. You get layout changes, a cleaner text structure and a checklist to review before sharing the file.
+not_for:
+  - "You need an academic CV or a creative portfolio: ask a human resume writer, as these follow different rules."
+  - "You apply through a required online form that asks for each field: fill in the form fields and skip a resume file."
+  - "You want stronger wording for your bullets or a new summary: ask a career coach or a friend in your field to read it."
 explain: Share your resume and the way you plan to apply. It checks section order, spacing, fonts and details that may confuse hiring software. You get layout changes, a cleaner text structure and a checklist to review before sharing the file.
 you_give:
   - Your resume file or its current layout details.
@@ -22,6 +26,28 @@ how_it_works:
   - title: Step 3
     text: Suggest a cleaner layout and a final file checklist.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied notes and ask follow-up questions.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - 'Paste the skill text into the chat. Say: "Use this skill to review my resume layout."'
+  - Paste your resume text, or attach the file if your AI accepts files.
+  - Tell it the role, your career stage and how you will send the resume.
+  - Read the Current Issues list first, then make the changes in your own document.
+  - Save the file as .docx or a text-based PDF and check the file name before you send it.
+output_sample:
+  input:
+    - Your resume as pasted text or a file
+    - The role you are applying for
+    - Your career stage, such as entry level or senior
+    - How you will send it, such as an online form or email
+  output:
+    - name: Current Issues
+      contains: A checklist of the layout problems found in your resume.
+    - name: Document Setup
+      contains: Your current and recommended margins, font and font sizes.
+    - name: Section Order
+      contains: Your current section order, the recommended order and why it helps.
+    - name: Visual Improvements
+      contains: Specific changes to headers, bold text, spacing and bullets.
+    - name: ATS Compatibility Fixes
+      contains: Fixes for tables, columns, text boxes or header details that hiring software may miss.
+    - name: Before/After Preview
+      contains: A short description of your current layout next to the improved one.

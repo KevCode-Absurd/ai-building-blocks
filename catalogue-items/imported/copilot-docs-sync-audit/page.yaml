@@ -2,18 +2,58 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-docs-sync-audit
 name: Code and docs drift checker
-summary: Share a feature or code change. Get outdated docs and missing
-  instructions traced to the changed behavior.
+summary: Check if your docs still match your code. Give it a feature, PR or repo. You get stale and missing docs, each tied to the code that changed.
 job: test-and-fix-code
 headline: Code and docs drift checker
-subhead: Share a feature or code change. Get outdated docs and missing
-  instructions traced to the changed behavior. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Give it a feature, a pull request or a repo. It reads your code and your docs side by side. You get a list of docs that are out of date or missing, with the code that proves it.
+not_for:
+  - "You want a general review of code quality or bugs: ask a code reviewer, or ask your AI for a plain code review."
+  - "You want the docs rewritten now: this check only reports drift, so ask your AI to update the docs after you read the report."
+  - "Your docs live outside the repo and your AI cannot open them: copy the text into the chat, or check them by hand."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI in a place where it can read your repo, such as a coding assistant. A plain chat only works if you paste in the code and docs.
+  - Paste the contents of the skill file, or add the skill folder to your AI tool.
+  - "Say what to check, for example: audit docs for the new upload endpoint. Add the pull request or branch if you have one."
+  - If you give no scope, it checks the whole repo and lists what it did not look at closely.
+  - Read each finding and open the lines it cites.
+  - Ask your AI to update the docs only after you agree with the report. The check itself changes no files.
+output_sample:
+  input:
+    - The feature, pull request, branch or folder to check (optional, it checks the whole repo if you give none)
+    - Your repo, as files your AI can read
+    - The base branch or pull request diff (optional)
+    - Where your docs live, such as README or a docs folder (optional)
+  prerequisites:
+    - An AI that can read your repo files and run read-only commands
+    - Python, if you want the bundled drift script to run (optional)
+  output:
+    - name: Summary
+      contains: The scope checked, what was compared, and whether any top-severity problems were found.
+    - name: Findings
+      contains: Each stale or missing doc with a P0 to P3 severity, the drift, who it misleads, evidence lines and a suggested fix.
+    - name: Likely Docs To Update
+      contains: A list of doc files to change, each with the reason.
+    - name: Surveyed But Not Deeply Inspected
+      contains: Docs areas found but not checked closely, for full-repo checks only, and which to check next.
+    - name: Checks Run
+      contains: Each command that was run and its result, including any counts.
+    - name: Not Tested
+      contains: Checks that were skipped, such as a docs build or link check, and the risk that leaves.
+    - name: Assumptions
+      contains: Any guesses made about scope, only when they matter.
+when:
+  - You changed an API route and want to know which docs now say the wrong thing.
+  - You are about to cut a release and want the README and changelog checked.
+  - Setup steps or env variables changed and you are not sure the guides kept up.
+  - A new teammate says the setup guide does not work.
+you_give:
+  - The feature, pull request, branch or folder to check (optional, it checks the whole repo if you give none)
+  - Your repo, as files your AI can read
+  - The base branch or pull request diff (optional)
+  - Where your docs live, such as README or a docs folder (optional)
+you_get:
+  - A ranked list of stale or missing docs, from P0 to P3.
+  - For each one, the code line and the doc line that disagree.
+  - A plain fix direction for each finding.
+  - A list of doc files most likely to need edits.
+  - A note of what was checked and what was skipped.

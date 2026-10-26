@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scans for known dangerous patterns.
 new_slug: skill-safety-auditor
 name: Skill safety auditor
-summary: Give it a skill before you install it. Get risky code and hidden
-  commands flagged.
+summary: Check a skill before you install it. Get a PASS, WARN or FAIL verdict and the risky code and hidden commands flagged in your skill safety scan.
 job: secure-code
 headline: Skill safety auditor
-subhead: A PASS, WARN or FAIL verdict on a skill before you install it, with the
-  risky code and hidden commands flagged. You avoid giving a stranger's script
-  access to your machine.
+subhead: A PASS, WARN or FAIL verdict on a skill before you install it, with the risky code and hidden commands flagged. You avoid giving a stranger's script access to your machine.
 explain: |
   A PASS, WARN or FAIL verdict on a skill before you install it, with the risky code and hidden commands flagged. You avoid giving a stranger's script access to your machine.
 
@@ -18,6 +15,10 @@ when:
   - Your team accepts skills from outside and needs a gate.
   - A skill asks for scripts and you are unsure what they do.
   - You want a report you can attach to an approval.
+not_for:
+  - "You need proof a skill is safe: this only matches known risky patterns, so read the code yourself or test it in an isolated environment."
+  - "The skill hides its code with tricks or delays its attack: coverage is limited, so ask a developer to review it by hand."
+  - "You want to check an app or a website: ask your IT person or a security reviewer instead."
 you_give:
   - A skill folder or git repo link
   - Python 3
@@ -28,8 +29,27 @@ you_get:
   - Fix advice
   - A JSON report if requested
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read files.
+  - Put the skill in a folder on your computer, or copy its git repo link.
+  - "Open a terminal and run: python3 scripts/skill_security_auditor.py /path/to/skill-name/ . For a repo, give the link and add --skill with the skill name."
+  - Add --strict to turn every warning into a fail. Add --json to save a report you can attach to an approval.
+  - Read the verdict first, then the findings from critical down to info.
+  - PASS means no known risky patterns were found. It is not proof of safety, so review anything flagged before you install.
+  - If you are unsure after reading the report, do not install. Ask the skill author what the flagged code does.
+output_sample:
+  input:
+    - A skill folder on your computer, or a git repo link
+    - The skill name, if the repo holds more than one skill (optional)
+    - Strict mode, which turns every warning into a fail (optional)
+    - A request for a JSON report (optional)
+  prerequisites:
+    - Python 3 on your computer
+    - An AI that can run code and read files, or a terminal where you can run the script yourself
+  output:
+    - name: Verdict
+      contains: A PASS, WARN or FAIL result for the whole skill, shown at the top of the report.
+    - name: Severity count
+      contains: How many critical, high and info findings the scan found.
+    - name: Findings
+      contains: Each finding names the file and line, the risky pattern, why it is a risk and how to fix it.
+    - name: JSON report
+      contains: The same results in a file a tool can read, made only when you ask for it.

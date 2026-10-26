@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads many sources and picks what matters.
 new_slug: legal-daily-and-incident-briefer
 name: Legal daily and incident briefer
-summary: Pick a daily scan, a topic or an incident. Get a short briefing from
-  your email, calendar and files. Not legal advice.
+summary: Get a legal daily brief, topic brief or incident brief from your email, calendar and files. Short, sorted by urgency. Not legal advice.
 job: check-contracts
 headline: Legal daily and incident briefer
-subhead: Pick a daily scan, a topic or an incident. Get a short briefing from
-  your email, calendar and files. Not legal advice. Bring the question or
-  situation (for topic or incident). Use the result to plan your next step.
+subhead: Pick a daily scan, a topic or an incident. Get a short briefing from your email, calendar and files. Not legal advice. Bring the question or situation (for topic or incident). Use the result to plan your next step.
 explain: |
   A short legal briefing built from your own email, calendar and files, in whichever of three forms you need. The daily brief scans for contract requests, compliance questions, counterparty replies and urgent items so you start the morning knowing what needs you. The topic brief researches one legal question.
 
@@ -18,6 +15,10 @@ when:
   - A manager asked a legal question and you need a quick topic summary.
   - A data issue just broke and you need the facts in one place.
   - You are covering for a colleague and need to catch up fast.
+not_for:
+  - "You need formal legal research or case law: use a legal research platform like Westlaw or Lexis, or outside counsel."
+  - "You need to decide a legal deadline or a filing date: ask a qualified lawyer, and use the brief only as a pointer."
+  - "You have no email, calendar, chat or files your AI can read: write down the facts yourself and ask a lawyer directly."
 you_give:
   - "Which mode: daily, topic or incident"
   - The question or situation (for topic or incident)
@@ -29,8 +30,25 @@ you_get:
   - Sources the summary used
   - Open questions for a lawyer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your email, calendar and files.
+  - Open your AI tool and paste in this skill, or add the skill folder if your tool takes files.
+  - Connect your email, calendar, chat or contract tools so your AI can read them. Without them, the brief will be thin.
+  - "Say which mode you want: daily, topic or incident. For topic or incident, add the question or situation."
+  - Read the Urgent section first, then the list of sources that were not available.
+  - Have a qualified lawyer check anything before you act on it.
+output_sample:
+  input:
+    - "Which mode you want: daily, topic or incident"
+    - The legal question or situation (for topic or incident)
+    - Access to your email, calendar, chat or contract files
+  prerequisites:
+    - An AI that can read your connected email, calendar, chat or contract tools
+    - Sources connected before you start, since it only checks what is connected
+  output:
+    - name: Daily Legal Brief
+      contains: Urgent items, contract pipeline, new requests, today's meetings, team activity, this week's deadlines and sources not available.
+    - name: Topic Brief
+      contains: Summary, background, current position, key considerations, internal precedent, gaps and recommended next steps for one legal question.
+    - name: Incident Brief
+      contains: Situation summary, timeline, immediate legal points, relevant agreements, internal response, key contacts and actions to take now.
+    - name: Sources Checked
+      contains: Which sources were searched and which were missing, so you know what the brief did not cover.

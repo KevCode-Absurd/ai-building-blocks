@@ -2,36 +2,104 @@ thinking: medium
 thinking_why: It gathers data and writes a structured note.
 new_slug: stock-research-snapshot-writer
 name: Stock research snapshot writer
-summary: Name a stock. Get a note combining estimates, reported numbers, price
-  history and the macro backdrop. It collects data from websites.
+summary: Name a stock. Get a one-page research note with analyst estimates, reported results, price history and the economy, using free data sources.
 job: money-and-investing
 headline: Stock research snapshot writer
-subhead: Name a stock. Get a note combining estimates, reported numbers, price
-  history and the macro backdrop. It collects data from websites. Bring a
-  company name or ticker. Use the result to plan your next step.
+subhead: Give it a company name and ticker, such as RELIANCE.NS. It pulls analyst estimates, three to five years of results, a year of price history and macro data from free sources. You get a short research note with tables, a thesis, risks and a list of figures it could not source.
 explain: |
-  A short research note on one company that ties together what analysts expect, what the company has reported, how the price has moved and what the economy is doing. Every number connects to a thesis so the note reads as an argument.
+  A stock research snapshot is a short note on one company that ties together what analysts expect, what the company has reported, how the price has moved and what the economy is doing. Every number connects to a thesis, so the note reads as an argument and not as a data dump.
 
-  It pulls consensus estimates, three to five years of reported results, one year of price history with beta and 52-week position, and macro data from free public sources. The version here is set up for Indian markets: it uses the April to March fiscal year, shows lakh and crore units correctly and tells you where no Indian equivalent exists. Some sources need a free API key. It is research, not advice.
+  The skill pulls consensus estimates, three to five years of reported results, one year of price history with beta and 52-week position, and macro figures. It is set up for Indian companies: the fiscal year runs April to March, money is shown in lakh and crore, and it uses the NSE or BSE ticker. The filings route it was built on covers US companies only, so for Indian ones it uses Yahoo Finance data and tells you to check it against the annual report.
+
+  Some sources need a free key. It is research, not advice, and it never writes a figure it could not source.
 when:
   - You are about to read an earnings report and want context first.
   - You need a one-page company brief for a team meeting.
   - You want to see whether results beat or missed market estimates.
   - You follow Indian companies and need fiscal-year labels done right.
+not_for:
+  - You want a full valuation model in Excel. Use the DCF model builder for India.
+  - You want a judgement against sector peers with a source beside every figure. Use the Company stock analyst.
+  - You want a buy or sell call, or help with a live trade. The note gives a research view, not advice.
 you_give:
-  - A company name or ticker
-  - Your question or view on the stock (optional)
-  - A free data key where required
+  - A company name and its ticker, such as RELIANCE.NS
+  - A free Alpha Vantage key for analyst estimates (optional, there is a no-key fallback)
   - Peers to compare (optional)
+  - Your own question or view on the stock (optional)
+  - An AI that can run Python and reach the web
 you_get:
-  - A summary of consensus estimates
-  - Multi-year fundamentals
-  - Price performance and beta
+  - A table of analyst estimates for the next two years
+  - A summary of the last three to five years of results
+  - Price performance, beta and 52-week position
   - A macro backdrop section
-  - A short thesis with risks
+  - A short thesis with risks and a list of gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the web.
+  - Open Claude, ChatGPT or Gemini with code and web tools on. Add this skill, or paste the text of SKILL.md into a new chat.
+  - Give the company name and its ticker with .NS or .BO. Add your Alpha Vantage key if you have one, or say you have none.
+  - Say yes or no when it asks to install the yfinance package.
+  - Check three figures against the company's annual report: revenue, profit and debt. Check the fiscal-year labels.
+  - Fix every line marked MISSING or n/a, or leave it out before you share the note.
+how_it_works:
+  - title: Pull the estimates
+    text: It gets analyst estimates for the next two fiscal years and notes how many analysts and how far apart they are.
+  - title: Read the results
+    text: It takes three to five years of reported figures and works out growth, margins, debt and returns.
+  - title: Check the price
+    text: It pulls a year of prices and works out year-to-date and one-year return, 52-week position and beta.
+  - title: Look at recent trading
+    text: It reads three months of daily volume and momentum.
+  - title: Set the macro scene
+    text: It looks at growth, inflation and the policy rate for the company's market and calls them a tailwind or headwind.
+  - title: Write the note
+    text: It builds the tables, a thesis with bull and bear cases, and a list of sources, gaps and checks missed.
+output_shape: |
+  Consensus: <metric> | <next year> | <year after> | <analysts> | <spread>
+  Financials: <metric> | <FY-2> | <FY-1> | <latest> | <trend>
+  Price: <YTD return>, <1Y return>, <52-week position>, <beta>
+  Macro: <growth>, <inflation>, <policy rate> and <tailwind or headwind>
+  Valuation: <forward P/E>, <EV/EBITDA>, <dividend yield>
+  Thesis: <research view>, <value range and method>, <bull case>, <bear case>, <catalysts>
+  Sources and gaps: <source and date>, <MISSING cells>
+output_sample:
+  input:
+    - A company name and its ticker, such as RELIANCE.NS
+    - A free Alpha Vantage key for estimates (optional)
+    - Peers to compare (optional)
+    - Your question or view on the stock (optional)
+  prerequisites:
+    - An AI that can run Python and reach the web
+    - Your yes to installing the yfinance package
+  output:
+    - name: Consensus Estimates
+      contains: Analyst estimates for EPS, revenue and EBITDA for two years, with analyst count and spread.
+    - name: Financials Summary
+      contains: Three to five years of revenue, margins, returns and debt, with fiscal-year labels.
+    - name: Price performance
+      contains: Year-to-date and one-year return, 52-week position, beta and recent volume.
+    - name: Macro backdrop
+      contains: Growth, inflation and policy rate, called a tailwind or headwind for the company.
+    - name: Valuation Summary
+      contains: Forward P/E, EV/EBITDA and dividend yield, with sector or history context.
+    - name: Investment Thesis
+      contains: A research view, indicative value range with method, bull and bear cases, and catalysts.
+    - name: Sources and gaps
+      contains: Each source with its date, plus every figure that is missing or unchecked.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It can run the code, hold all the tables in one note and keep source labels.
+    - name: ChatGPT
+      why: Its web and data analysis tools can pull data and chart price history.
+  inputs:
+    - The company's latest annual report, to check Yahoo figures
+    - The sector and two peers, so valuation has context
+    - Your own view of what the market has wrong
+terms:
+  - term: Consensus
+    meaning: The average of what analysts expect for a company's results.
+  - term: Beta
+    meaning: How much a stock tends to move when the market moves. Above 1 means it swings more.
+  - term: Fiscal year
+    meaning: The company's reporting year. In India it runs April to March.
+  - term: Lakh and crore
+    meaning: Indian units. One lakh is 100,000. One crore is 10,000,000.

@@ -6,15 +6,43 @@ catalog_summary: "Designing schedulers and booking flows. Distinguishes any-time
 display_order: 10
 ---
 
+## Before you start
+
+Ask once for any of these that are missing. If the user cannot give one, write MISSING and give advice that holds either way. Never invent numbers about the user's own bookings.
+
+1. What the calls are for (demo, consult, intro call) and who books them.
+2. How a good-fit person differs from a poor fit.
+3. The team that takes calls, and their availability.
+4. Optional: the booking tool in use, and the current form or page.
+
+The figures in this skill (such as the 3-5 field rule and 24-hour and 1-hour reminders) are rules of thumb from the author, not measured results. Say so when you quote them. Do not tell the user what their conversion will be.
+
+## Output format
+
+Return the plan in this order. Keep each part short.
+
+1. Do you need a booking page: yes or no, with the reason, and the simpler option if no.
+2. Booking flow: the steps from landing to confirmed time, with availability rules.
+3. Questions: 3 to 5, each with what it routes or what the rep learns. Say which common fields were cut and why.
+4. Routing rules: which lead goes to whom, and a default for unrouted leads.
+5. Prep brief: the fields the rep sees and where they show up.
+6. Emails: confirmation, reminders, reschedule, no-show and follow-up, each with timing and one line on what it says.
+7. Track: bookings, no-shows and calls that become sales.
+8. Missing: anything the user did not give.
+
+Next: build it in the user's booking tool. For the forms themselves, the Multi-step form designer helps. For the follow-up after the call, the Call follow-up drafter helps.
+
+---
+
 # Scheduler and Booking Design
 
 A senior growth practitioner's playbook for designing meeting schedulers and booking experiences that qualify leads, set up calls well, and convert at higher rates than a generic booking link. Availability logic, qualification gating, prep automation, follow-up sequencing. The discipline of building a scheduler that earns the booking by earning a better call.
 
-Most schedulers fail in one of two ways. Generic booking links produce cold demos where reps know nothing about the person they are about to talk to. Conversion stays at the rate of unqualified raw demos. Or qualification forms with 12 fields scare users off before they can book; drop-off at the form approaches 90 percent; only the leads who happen to survive the form actually convert.
+Most schedulers fail in one of two ways. Generic booking links produce cold demos where reps know nothing about the person they are about to talk to. Conversion stays at the rate of unqualified raw demos. Or qualification forms with 12 fields scare users off before they can book; many give up at the form, and only the leads who survive it convert.
 
 The schedulers that work do something different. Just enough qualification to set up the call well (3-5 strategic fields), context-aware availability (high-fit leads see senior reps; low-fit leads route differently), prep automation that briefs the rep before the call. The booking is honest about who the audience is; the call is set up to succeed.
 
-The voice is the senior growth practitioner who has watched schedulers double demo conversion when redesigned and watched them collapse when more qualification was added. Practical, opinionated about which fields earn their place, willing to call out when the booking flow is the wrong tool.
+The voice is the senior growth practitioner who has seen conversion improve when a scheduler was redesigned and fall when too much qualification was added. Practical, opinionated about which fields earn their place, willing to call out when the booking flow is the wrong tool.
 
 When to use this skill: scoping a scheduler for the first time, auditing a booking flow with poor conversion or poor downstream call quality, designing the qualification gate that produces context without producing friction, or deciding routing logic that matches leads to the right reps.
 
@@ -66,7 +94,7 @@ The keystone framing.
 
 **Any-time-friction.** Generic booking link with no qualification, no context capture. Reps show up to calls cold; they spend the first 10 minutes asking the same qualification questions the form should have captured. Conversion stays at the rate of unqualified raw demos. Cost: sales capacity used inefficiently; high-fit leads get the same experience as low-fit leads; downstream conversion suffers.
 
-**Interrogation-gate.** Qualification form with 12 fields before the user can book. Drop-off at the form approaches 90 percent. The qualification works for the leads who survive but the system loses everyone else. Cost: high-fit leads who would have converted abandon at the form; conversion rate is poor even though the post-form leads are well-qualified.
+**Interrogation-gate.** Qualification form with 12 fields before the user can book. Many people give up at the form. The qualification works for the leads who survive but the system loses everyone else. Cost: high-fit leads who would have converted abandon at the form; conversion rate is poor even though the post-form leads are well-qualified.
 
 **Qualified-fast-path.** Just enough qualification to set up the call well (3-5 strategic fields), context-aware availability (high-fit leads see senior reps; low-fit leads see SDRs or are routed to async), prep automation that briefs the rep before the call. Cost: design effort upfront is significant; conversion plus downstream call quality both improve meaningfully.
 
@@ -95,7 +123,7 @@ Which fields earn their place; which create friction.
 - **Marketing data not used in the call** (industry codes, lead-source detail).
 - **Demographic data unrelated to the call** (gender, age).
 
-**The five-field rule.** Most production schedulers work well with 3-5 qualification fields. More than 5 starts producing interrogation-gate dynamics. Less than 3 does not give the rep useful prep context.
+**The five-field rule.** In our experience, 3-5 qualification fields works for most schedulers; treat this as a rule of thumb, not a measured figure. More than 5 starts producing interrogation-gate dynamics. Less than 3 does not give the rep useful prep context.
 
 Detail in [`references/qualification-field-design.md`](references/qualification-field-design.md).
 
@@ -220,7 +248,7 @@ Rapid-fire. Diagnoses in [`references/common-scheduler-failures.md`](references/
 - "Booking conversion is high; demo conversion to sale is low." Qualification too thin; cold demos do not convert.
 - "Booking conversion is low; demo conversion to sale is high." Interrogation-gate; qualification scares off would-be buyers.
 - "Sales says many bookings come from wrong-fit leads." Routing logic not connecting qualification to rep tier.
-- "No-show rate is over 30 percent." Reminder sequence broken; or commitment friction at booking too low.
+- "Our no-show rate is high." Reminder sequence broken; or commitment friction at booking too low.
 - "Reps complain they get no context before calls." Prep automation broken; data captured but not delivered to rep.
 - "Calendar integration breaks every few weeks." Brittle integration; or rep calendar permissions changing.
 - "Mobile booking conversion is half of desktop." Mobile UX issue.
@@ -268,6 +296,6 @@ The output of the framework is a scheduler that earns the booking by earning a b
 
 The schedulers that work as compounding assets are the ones that produce better calls. Not just more bookings. Calls where the rep arrives prepared; the prospect feels respected; the conversation moves faster because qualification was already done. Conversion compounds because the calls themselves convert better.
 
-That is the bar. Below the bar are any-time-friction (cold demos, conversion suffers) and interrogation-gate (90 percent abandon at the form). Above the bar are qualified-fast-path schedulers where qualification, availability, routing, prep automation, and follow-up sequencing combine into a system that earns the booking and the call.
+That is the bar. Below the bar are any-time-friction (cold demos, conversion suffers) and interrogation-gate (many abandon at the form). Above the bar are qualified-fast-path schedulers where qualification, availability, routing, prep automation, and follow-up sequencing combine into a system that earns the booking and the call.
 
 The discipline is in the design choices. The decision to use a scheduler at all. The qualification fields that earn their place. The availability logic that matches lead to rep. The routing that respects rep tier and capacity. The prep automation that delivers context to reps before the call. The reminder cadence that reduces no-shows without becoming spam. The reschedule and no-show handling that respects the prospect.

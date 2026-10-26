@@ -1,6 +1,6 @@
 new_slug: seven-powers-check
 name: "Find which of seven powers you hold or can build"
-summary: "Describe your business. Get each of the seven powers scored on benefit and barrier, a ten-year check and what to build first."
+summary: "Find which of the seven powers your business holds or can build. Get each one scored, a ten-year check and the first power to build."
 job: plan-strategy
 thinking: high
 thinking_why: "It runs four checks in a row and has to tell a real edge from a story that flatters you. Give it your strongest model."
@@ -19,6 +19,10 @@ when:
   - You think your business has a moat and want proof before you tell a backer or build on it.
   - You can name one advantage and want to know if a stronger one is sitting unused.
   - You are choosing between spending on brand, scale, a community or a better model, and want to know which one your market still allows.
+not_for:
+  - "You have no revenue or customer data yet: size your market first, then come back."
+  - "You only want to test one edge: use the Competitive advantage tester."
+  - "You want a rival-proof pricing or model idea: ask a trusted adviser or accountant, as this gives no investment advice."
 
 you_give:
   - What you sell, to whom, and your price, cost and margin
@@ -35,6 +39,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your business and paste any numbers on price, cost, margin and repeat rate. It works step by step and saves each result.
   - Read the buildable list and the first test last. Run the test before you spend on the power.
+output_sample:
+  input:
+    - What you sell, to whom, and your price, cost and margin
+    - Your main rivals and what they do
+    - Your market growth, if you know it (optional)
+    - Your customer repeat rate or churn (optional)
+  prerequisites:
+    - An AI that can keep each step's result and pass it to the next, such as Claude with the handoff folder
+  output:
+    - name: "Step 1: business-power-tester"
+      contains: Your main advantage with a benefit in numbers, a barrier in words, a size check and the power it matches.
+    - name: "Step 2: seven-powers-scorecard-builder"
+      contains: All seven powers scored on benefit and barrier, sorted into held, buildable and out of reach.
+    - name: "Step 3: ten-year-durability-checker"
+      contains: Who could take your top power, how soon, and what change could end it.
+    - name: "Step 4: power-stage-build-planner"
+      contains: Your market stage, the power to build first, a first test and the choices that close other powers.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Tests your main advantage

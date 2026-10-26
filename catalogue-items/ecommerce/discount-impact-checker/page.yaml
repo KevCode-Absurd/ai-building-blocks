@@ -1,6 +1,6 @@
 new_slug: discount-impact-checker
 name: Discount impact checker
-summary: Share prices, costs and a planned discount. Check whether your profit goal is possible and what ad return it would need.
+summary: Check a planned discount before it goes live. Give your prices and costs. See if your profit goal is possible and what ad return it needs.
 job: make-offer
 thinking: medium
 thinking_why: It is mostly careful arithmetic with a few judgement calls, so a mid-size model is enough if it shows its sums.
@@ -15,6 +15,10 @@ when:
   - Someone suggests free shipping on a low-priced product and you want to see if it loses money.
   - A past sale had good ROAS but little profit and you want to know why.
   - You wonder if a two-for-one, bundle or gift would earn more than a percent off.
+not_for:
+  - "You have no cost or shipping data yet: work out your cost per order in a spreadsheet first, then come back."
+  - "You want to pick which kind of offer to run: ask a person on your team or test one non-discount offer, such as a gift, on a small scale."
+  - "You need to plan when to run the sale: use a sale calendar or ask your ad person, as this check does not set timing."
 you_give:
   - Price, product cost, shipping, fulfilment and payment fees per order
   - Current AOV, units per order and target ROAS or profit per order
@@ -34,6 +38,28 @@ how_to_use:
   - Paste your current AOV, units per order and target ROAS, then the discount you plan.
   - Add past sale records if available. They can inform scenarios but do not guarantee a future result.
   - Read the feasibility result first. Rework nonpositive-CPA cases before considering a limited test or score.
+output_sample:
+  input:
+    - "Your price and costs per order: product, shipping, fulfilment and payment fees"
+    - Your current average order value, units per order and target ROAS or profit per order
+    - The discount you plan and the units per order you expect on sale
+    - Past sales at different discount levels (optional)
+    - A bundle, buy-one-get-one or gift you could run instead (optional)
+  output:
+    - name: Full price
+      contains: Your order value, costs, gross profit, margin, break-even ROAS, target CPA and profit per order without a discount.
+    - name: Under the discount
+      contains: The same numbers after the discount is taken off the retail value of the units bought.
+    - name: The bar
+      contains: The ad cost your profit goal allows, whether that is possible, the ROAS needed and whether the jump is believable.
+    - name: Best depth
+      contains: The discount level with the most profit per order from your past sales, or a note that past sales are missing.
+    - name: Offer comparison
+      contains: Percent off, bundle or buy-one-get-one, and gift side by side, with discount plus ad cost per order.
+    - name: Custom score
+      contains: A planning score out of 100 with each penalty, only when the inputs are complete and the case is valid.
+    - name: Verdict and next step
+      contains: Not viable, zero-CPA only, rework inputs or a limited test, plus the first change to make and anything missing.
 how_it_works:
   - title: Build full-price numbers
     text: Works out gross profit, break-even ROAS (1 divided by gross margin), target CPA and profit per order from your costs.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It compares text to a written style guide.
 new_slug: draft-brand-voice-checker
 name: Draft brand voice checker
-summary: Paste a draft. Get deviations from your voice and style guide ranked by
-  severity, each with a before and after fix.
+summary: Check a draft against your brand voice and style guide. Get each off-voice line ranked by severity, with a before and after fix.
 job: brand-file
 headline: Draft brand voice checker
-subhead: Paste a draft. Get deviations from your voice and style guide ranked by
-  severity, each with a before and after fix. Bring the draft, file or link to
-  review. Use the result to plan your next step.
+subhead: Paste a draft and your brand voice or style guide. Your AI flags every line that drifts from your voice, ranks each by severity, and shows a before and after fix. It also flags risky claims.
 explain: |
   Your draft, checked against your brand voice and style guide, with each deviation ranked by how serious it is and a before and after fix for it.
 
@@ -17,19 +14,43 @@ when:
   - A freelancer sent a blog post and you need to check it sounds like you.
   - Several people write for your brand and the voice keeps drifting.
   - You are about to publish a launch page and want a last review.
-  - You want a list of banned phrases that slipped into a draft.
+  - You want to find banned phrases that slipped into a draft.
+not_for:
+  - "You need legal or regulatory sign-off on financial, health or claims-heavy copy: send it to your compliance or legal team."
+  - "You have no brand voice yet and want to write one: ask your AI to help you document your brand voice first, then come back."
+  - "You want a fresh draft written from scratch: ask your AI to write it, then check it here."
 you_give:
   - The draft, file or link to review
   - Your brand voice or style guide
   - The audience for the piece (optional)
   - Terms you always use or avoid (optional)
 you_get:
-  - Deviations ranked by severity
-  - The reason each was flagged
-  - A before and after fix for each
+  - Issues ranked High, Medium or Low
+  - The reason each line was flagged
+  - A before and after fix for the top issues
+  - A separate list of legal and compliance flags
   - A short overall verdict
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste your brand voice or style guide first. If you skip it, your AI will ask for one, or give a general review for clarity and consistency.
+  - Paste the draft next. You can also share a file or a link, or send several pieces at once.
+  - Read the Summary, then the findings table. Fix the High items first.
+  - Check the legal flags and send anything risky to your legal or compliance person.
+  - "Answer the closing question: rewrite the whole draft, fix only the high items, or review another piece."
+output_sample:
+  input:
+    - The draft, a file, or a link to review
+    - Your brand voice or style guide (paste it, share a file, or describe it)
+    - The audience for the piece (optional)
+    - Terms you always use or avoid (optional)
+  output:
+    - name: Summary
+      contains: An overall verdict on how well the draft fits your brand, with the biggest strengths and the top fixes.
+    - name: Detailed Findings
+      contains: A table of each issue with its location, a severity of High, Medium or Low, and a suggestion.
+    - name: Revised Sections
+      contains: Before and after text for the three to five most serious issues.
+    - name: Legal/Compliance Flags
+      contains: Claims, missing disclaimers, comparisons or testimonials that may need a legal check, with a suggested action.
+    - name: Next-step questions
+      contains: Offers to rewrite the full draft, fix only the high-severity issues, review more pieces, or document your voice.

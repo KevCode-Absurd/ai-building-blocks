@@ -1,6 +1,6 @@
 new_slug: write-a-narrated-video-ad-the-pictures-can-carry
 name: Write a narrated video ad the pictures can carry
-summary: Give it a brief and brand file. Get a trimmed narrated script and clip prompts.
+summary: Write a narrated video ad script where the pictures carry the story. Give it a brief and brand file. Get a trimmed script and clip prompts.
 job: make-video-ads
 thinking: high
 thinking_why: The strip test needs careful judgment on every line. Give it your strongest model.
@@ -16,22 +16,47 @@ when:
   - You want a one to ten minute ad that explains how something works.
   - Your last narrated ad felt like a slide show with a voice on top.
   - Many of your viewers watch with the sound off.
+not_for:
+  - "You want a fifteen-second ad: short ads rarely carry narration worth cutting, so write the script by hand or use the Long-form video ad script writer for a longer cut only."
+  - "You already have a script and only need it to sound right spoken: use the Ad script read-aloud editor."
+  - "You already have a final script and need timed shots: use the Video ad shot list maker."
 you_give:
   - "A brief: the goal, the buyer and the main point"
   - Your brand file
   - A buyer description (optional)
-  - Your product facts, for the shots
+  - Your product facts, such as price, variants and how it is used
 you_get:
   - A narrated script with a picture for every line
   - A line-by-line verdict on what the narration adds
   - A leaner script that reads cleanly aloud
   - Timed shots with a prompt for each clip
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your brief and say how long the ad should run.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the four skill files this workflow uses. Keep them together.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
+  - Paste your brief and product facts, and say how long the ad should run.
   - Read the verdict on each narration line. Say if you want to keep a line the test cut.
-  - Make the clips with your video tool from the prompts.
+  - Make the clips from the prompts. This needs a video tool, and it runs on paid credits.
+output_sample:
+  input:
+    - "Your brief: the goal, the buyer and the main point"
+    - Your brand file or brand brain
+    - A buyer description (optional)
+    - Your product facts, such as price, variants and how it is used
+    - How long the ad should run
+  prerequisites:
+    - An AI that can read files, with the four skills in the handoff pack or installed before you start
+    - A video tool or paid credits if you want the clips made, not just the prompts
+  output:
+    - name: "Step 1: Narrated script"
+      contains: Rounds of narration, a picture planned for each line, and the total length.
+    - name: "Step 2: Strip test"
+      contains: Each narration line marked as telling or adding, with a seen replacement for every telling line.
+    - name: "Step 3: Read-aloud script"
+      contains: The leaner script with each line fixed so a presenter can say it cleanly.
+    - name: "Step 4: Shots and clip prompts"
+      contains: Timed shots, an image prompt and a video prompt for each clip, and an edit plan.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the narrated script
     text: Lists problems, explanations, doubts and proof, sets the length, and writes each round with a picture for every line.

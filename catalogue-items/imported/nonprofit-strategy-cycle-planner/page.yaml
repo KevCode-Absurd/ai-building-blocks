@@ -1,12 +1,19 @@
 new_slug: nonprofit-strategy-cycle-planner
 name: Plan a nonprofit strategy cycle
-summary: Plan a nonprofit strategy process. Use real evidence to choose a few priorities, fund them and keep them under review.
+summary: Plan a nonprofit strategy cycle with your own evidence. Pick 3 to 5 priorities, link them to budget and staff, and get a board plan with owners.
 job: plan-strategy
 headline: Plan a nonprofit strategy cycle
 subhead: Bring mission goals, program results and funding trends. Run a focused planning cycle and turn the choices into a board plan with named owners.
 explain: Bring mission goals, program results and funding trends. Run a focused planning cycle and turn the choices into a board plan with named owners.
 when:
-  - You want to plan a nonprofit strategy cycle.
+  - Your current strategic plan is about to run out.
+  - You have a new executive director and need to reset direction.
+  - Your board wants a retreat to set priorities.
+  - Your board has too many priorities and wants a short list.
+not_for:
+  - "You need a logic model or theory of change for one program: use the Nonprofit program design skill."
+  - "You want weekly habits to run the plan, like scorecards and team meetings: use the Nonprofit EOS traction skill."
+  - "You want to test a new revenue stream, like earned income: use the Nonprofit revenue diversification skill."
 you_give:
   - Planning horizon, decision owners and available process capacity
   - Program and funding trends, stakeholder evidence and prior strategy
@@ -14,9 +21,34 @@ you_get:
   - Five-phase planning calendar and retreat structure
   - Draft priority framework, resource implications and a one-page plan
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open your AI tool and paste the skill instructions, or add the skill folder if your tool takes files.
+  - Gather your last plan, 3 to 5 years of revenue and program data, survey contacts and board calendar.
+  - Paste in your planning horizon, who decides and how much time your team has.
+  - Ask for the planning calendar and scan first. Check them, then move on to the retreat agenda and plan draft.
+  - Fix anything marked missing. Your AI should not invent facts about your group.
+  - Have your board and senior staff review the draft before it goes to a vote.
+output_sample:
+  input:
+    - Your planning horizon, who owns decisions and how much time and staff you can give the process
+    - Your last strategic plan, if you have one (optional)
+    - Three to five years of revenue and program results
+    - Names of board, staff, funders, partners and participants to ask for input
+    - Your board meeting calendar
+  output:
+    - name: Planning calendar
+      contains: A five-phase timeline from scoping to board adoption, with the scan limited to a set number of weeks.
+    - name: Environmental scan
+      contains: A SWOT, a PEST scan, stakeholder questions and a review of money and program trends.
+    - name: Priority-setting retreat agenda
+      contains: A session plan that clusters findings, narrows to 3 to 5 priorities and names what you will stop doing.
+    - name: Strategic plan draft
+      contains: Mission, process summary, and each priority with its rationale, goal, yearly objectives, metrics and owner.
+    - name: Resource implications
+      contains: A flag on hires, systems or fundraising the plan needs, to hand to budget planning.
+    - name: Plan on a page
+      contains: A one-page summary of the priorities for sharing with all staff.
+    - name: Adoption and review plan
+      contains: Board vote steps, staff rollout, a quarterly check-in and a yearly refresh.
 how_it_works:
   - title: Scope and gather evidence
     text: Charter the process, timebox the scan and gather staff, board, participant, partner and financial evidence.

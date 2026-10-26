@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It judges lead quality and writes a fitting reply.
 new_slug: new-inquiry-reply-drafter
 name: New inquiry reply drafter
-summary: Give it new inquiries. Get each one qualified and answered with a draft
-  reply and real meeting times. You send it.
+summary: Answer new sales inquiries fast. Give it your leads and get each one sorted, with a draft reply and real meeting times. You approve every send.
 job: write-emails
 headline: New inquiry reply drafter
-subhead: New enquiries answered while they are still warm. The skill reads what
-  came in, sorts each one by how serious it looks and drafts a reply in your
-  voice, with real meeting times offered.
+subhead: New enquiries answered while they are still warm. The skill reads what came in, sorts each one by how serious it looks and drafts a reply in your voice, with real meeting times offered.
 explain: |
   New enquiries answered while they are still warm. The skill reads what came in, sorts each one by how serious it looks and drafts a reply in your voice, with real meeting times offered.
 
@@ -18,6 +15,10 @@ when:
   - You are on the road and cannot answer enquiries quickly.
   - You want to offer open calendar slots in your first reply.
   - Your team needs hot leads passed to a person right away.
+not_for:
+  - "You want to write cold emails to people who have not contacted you: use the outreach-composer."
+  - "You need to log touches or update your CRM on its own: use the crm-autopilot."
+  - "You want your AI to send replies without you seeing them: this tool never sends on its own, so a person must approve each draft."
 you_give:
   - New enquiries (connected inbox or pasted text)
   - Your calendar availability
@@ -29,10 +30,32 @@ you_get:
   - Real meeting times in the reply
   - A handoff note for hot leads
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Or upload the skill folder if your AI accepts files.
+  - Connect your inbox, CRM and calendar if your AI allows it. If not, paste or forward each inquiry and say when you are free.
+  - Share two or three emails you liked writing so the replies sound like you (optional).
+  - Read the digest. Check each draft and any flags beside it.
+  - Copy the drafts you approve and send them yourself. Nothing goes out without you.
+output_sample:
+  input:
+    - New inquiries from your inbox, website form alerts or CRM (or forward or paste them)
+    - Your calendar availability
+    - Examples of emails in your voice (optional)
+    - The team channel for hot leads (optional)
+  prerequisites:
+    - Connected Gmail or Microsoft 365, HubSpot, Google Calendar and RingEx Chat make it automatic. Without them, pasted inquiries work.
+    - A Zapier account only if you want to connect a tool that is not listed.
+  output:
+    - name: Inquiry sort
+      contains: "Each inquiry placed in one of four groups: hot, qualified, unclear or out of scope."
+    - name: Draft replies
+      contains: A reply under 100 words for each inquiry, in your voice, answering what they asked.
+    - name: Meeting times
+      contains: Two or three real open slots from your calendar, or a request for their availability if none is connected.
+    - name: Hot lead handoff
+      contains: A note to your team channel with who it is, what they asked, why it is hot and what to do next.
+    - name: Flags
+      contains: Warnings on drafts that involve a price, a date, a complaint or a request for money or access.
+    - name: CRM log
+      contains: A record of each contact, its source, its sort and whether the reply is still a draft.
+    - name: Digest
+      contains: A short status board with counts, drafts waiting for review, and the median time to a ready draft.

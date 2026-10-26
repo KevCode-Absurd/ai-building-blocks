@@ -1,6 +1,6 @@
 new_slug: tiktok-starter-campaign-builder
 name: "TikTok starter campaign builder"
-summary: "Give your budget and target CPA. Get a TikTok campaign layout, budgets and a four-week targeting ladder."
+summary: "Plan your first TikTok ads campaign. Give your budget, target cost per sale and 3 to 5 ads. Get the layout, budgets and a four-week plan."
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: "It does budget math and picks a layout, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You have your TikTok account and pixel working and your first ads made, and you need the campaign laid out.
   - You have a small daily budget and aren't sure how many ad groups it can support.
   - You tried TikTok ads before with broad spread and no clear result, and want a tighter test.
+not_for:
+  - "Your pixel does not send a purchase event yet: use the TikTok ads account setup checker first, then come back."
+  - "You already have ads running and want to read the results: use the TikTok ad test reader."
+  - "You sell in TikTok Shop and want a Shop campaign: use the GMV Max campaign setup planner."
 
 you_give:
   - Your daily budget and how many days you can test
@@ -35,6 +39,33 @@ how_to_use:
   - Give your daily budget, your target cost per sale and how many ads you have.
   - Check that your pixel sends the purchase event before you launch. The skill marks the plan blocked if it doesn't.
   - Build the campaign as laid out. Each week, change only what the ladder says, and read results with the TikTok ad test reader.
+output_sample:
+  input:
+    - Your daily budget and how many days you can test
+    - Your target cost per sale (or a guess from another channel)
+    - Your 3 to 5 finished ads, or their scripts
+    - Whether your pixel sends a purchase event
+    - A list of past buyers who agreed to marketing (optional)
+  prerequisites:
+    - A TikTok ads account with a pixel that sends a purchase event
+    - At least 3 finished ads
+  output:
+    - name: TikTok starter plan header
+      contains: Your daily budget, target cost per sale and whether the plan is ready to launch or blocked, with the reason.
+    - name: Structure
+      contains: The campaign, ad groups and ads with names, audiences, daily budgets and placements, plus a retargeting campaign if the budget allows.
+    - name: Budget math
+      contains: The formula and result for each ad group, purchases expected in 7 days, and a note on the learning phase.
+    - name: Audiences
+      contains: "A recipe for each audience: source, time window, exclusions and settings."
+    - name: Four-week ladder
+      contains: What to run each week, from broad targeting to stacked winners, and what to keep or cut.
+    - name: Cost expectations
+      contains: One operator's rough cost ranges, marked as not guaranteed.
+    - name: Search ads add-on
+      contains: A keyword plan and setup notes, only if you ask for it.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any inputs the plan could not use.
 
 how_it_works:
   - title: Checks you are ready

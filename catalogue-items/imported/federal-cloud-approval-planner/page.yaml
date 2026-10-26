@@ -2,35 +2,58 @@ thinking: high
 thinking_why: Approval paths and papers are long and linked.
 new_slug: federal-cloud-approval-planner
 name: Federal cloud approval planner
-summary: Describe your cloud service. Get a FedRAMP path, the papers you need
-  and the gaps to close first.
+summary: Plan your FedRAMP certification path. Describe your cloud service and get a target level, the papers to write and the gaps to close first.
 job: check-contracts
 headline: Federal cloud approval planner
-subhead: "A FedRAMP path for your cloud service: what level you aim for, which
-  documents you need, and which gaps to close before you start. It saves months
-  of guessing."
+subhead: "Tell your AI about your cloud service and your federal customers. It names the FedRAMP level to aim for, the documents to write and the gaps to close first."
 explain: |
   A FedRAMP path for your cloud service: what level you aim for, which documents you need, and which gaps to close before you start. It saves months of guessing.
 
   The skill reflects the current rules, including the new certification classes and the faster 20x route built on key security indicators. You describe your service, customers and cloud setup. It checks readiness, defines the system boundary, maps NIST 800-53 controls, and lists the papers: the system security plan, assessment plan, assessment report, and the plan of action and milestones. It then covers ongoing monitoring after approval. Rules change often, so check dates against official FedRAMP pages.
 when:
-  - A federal agency wants to buy your SaaS and asks about FedRAMP.
-  - You do not know which authorization level fits your product.
-  - You need to know what documents to write first.
-  - You are authorized already and need a monitoring routine.
+  - A federal agency wants to buy your software and asks if you have FedRAMP.
+  - You do not know which approval level fits your product.
+  - You need to know which documents to write first.
+  - You already have approval and need a monthly monitoring routine.
+not_for:
+  - "Your customers are not federal agencies: ask your own security lead or a plain security questionnaire process instead, since FedRAMP only applies to federal sales."
+  - "You need a live approval decision on your system: hire an accredited assessor (a 3PAO) or qualified counsel, because this plan is guidance only."
+  - "You need today's dates and class rules: check fedramp.gov, because the rules change often and this skill may be behind."
 you_give:
-  - A description of your service
-  - Your cloud provider setup
-  - Target customers and data types
-  - Current security documents (optional)
+  - A description of your cloud service
+  - Your cloud provider setup, such as AWS GovCloud or Azure
+  - Your target federal customers and the data types you hold
+  - Your current security documents (optional)
 you_get:
-  - A recommended authorization path
-  - A gap list
-  - A document checklist
-  - A control mapping
-  - Monitoring steps
+  - A recommended approval path and target class
+  - A gap table with priority and owner for each gap
+  - A checklist of the documents to write
+  - A map of the NIST 800-53 controls that apply to you
+  - Monthly and yearly monitoring steps after approval
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your service description first. Add your cloud setup, your customers and the data types you hold, such as controlled unclassified information.
+  - Paste any security documents you already have (optional). Then ask for a gap assessment.
+  - Check the gap table and the target class. Ask for the document checklist or control map next.
+  - Compare every date and class name with fedramp.gov before you act. Put the text into the official FedRAMP templates.
+output_sample:
+  input:
+    - A description of your cloud service
+    - Your cloud provider setup
+    - Your target federal customers and the data types you hold
+    - Your current security documents (optional)
+  output:
+    - name: Gap table
+      contains: Each control family with current state, gap, priority and owner, so you see what to fix first.
+    - name: Top gaps summary
+      contains: A short prose list of the 5 to 10 gaps that matter most.
+    - name: Target class and 20x check
+      contains: The Certification Class to aim for and whether the FedRAMP 20x route looks possible for you.
+    - name: ATO document guidance
+      contains: What to write for the system security plan, assessment plan, assessment report and plan of action and milestones.
+    - name: Control mapping table
+      contains: Each NIST 800-53 control with its requirement and how to meet it.
+    - name: Architecture findings
+      contains: Bullet findings on your system boundary and cloud setup, with fixes.
+    - name: Continuous monitoring steps
+      contains: The monthly and yearly tasks to keep your approval after you get it.

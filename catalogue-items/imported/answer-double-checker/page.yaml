@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It adds a few short questions to an answer.
 new_slug: answer-double-checker
 name: Answer double-checker
-summary: Get two or three sharp follow-up questions after an answer, so you
-  check the facts and the thinking.
+summary: Add two or three sharp questions after an AI answer, so you can double-check the facts and the thinking before you act on advice or a plan.
 job: think-and-decide
 headline: Answer double-checker
-subhead: After the AI gives you advice, a plan or a number, you get two or three
-  sharp questions that help you check it before you act.
+subhead: After the AI gives you advice, a plan or a number, you get two or three sharp questions that help you check it before you act.
 explain: |
   After the AI gives you advice, a plan or a number, you get two or three sharp questions that help you check it before you act. Each question points at something specific in that answer, not a generic warning.
 
@@ -17,6 +15,10 @@ when:
   - The AI gave you estimates and you cannot tell how solid they are.
   - You want to learn how to question AI answers without extra effort.
   - A draft plan looks tidy and you want to find its weak spot.
+not_for:
+  - "You want the AI to check your own draft or reasoning: ask it to review the work directly, and it will do the checking in its reply."
+  - "You want sources for each claim: ask your AI to cite its sources in the answer. The questions here do not add sources."
+  - "You want code, poems, small talk or a quick lookup: skip it. It stays quiet for those anyway."
 you_give:
   - The question you asked
   - The answer or draft you plan to rely on
@@ -26,7 +28,27 @@ you_get:
   - Each tied to a claim in the answer
   - A prompt to check facts, logic and missing context
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat. Copy the full text of the skill file.
+  - Paste it into your chat's custom instructions, or into your first message.
+  - Ask your question as normal. Ask for advice, a plan, an estimate or a draft.
+  - Read the full answer first. Then read the two or three questions at the end.
+  - Pick the one that matters most, such as the key figure, and check it before you act. You can also send a question back to your AI.
+  - The questions appear once per chat. They stay out of simple lookups, casual chat and code.
+output_sample:
+  input:
+    - The question you asked your AI
+    - The answer, advice or plan you may act on
+    - Facts about your situation the AI may not know (optional)
+  prerequisites:
+    - Any chat AI where you can paste instructions into the first message or custom instructions
+  output:
+    - name: Your full answer
+      contains: The AI answers your question completely first, with nothing cut or hedged by this skill.
+    - name: A few things worth a second look
+      contains: A fixed lead-in line that opens the short list of follow-up questions.
+    - name: Fact question
+      contains: One question about a number or claim in the answer, asking how to check it.
+    - name: Reasoning question
+      contains: One question about a step or assumption in the answer, asking the AI to justify it.
+    - name: Missing context question
+      contains: One question about something the AI had to guess about you, such as your budget or location.

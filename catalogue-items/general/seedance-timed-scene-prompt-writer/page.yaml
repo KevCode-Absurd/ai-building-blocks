@@ -1,28 +1,39 @@
 new_slug: seedance-timed-scene-prompt-writer
 name: Seedance timed scene prompt writer
-summary: Share a scene idea and length. Get one timed video prompt with reference roles, camera moves, action and sound.
+summary: Get one timed Seedance video prompt from your scene idea and length, with reference roles, camera moves, action and sound.
 job: make-video-ads
 headline: Seedance timed scene prompt writer
-subhead: Share a scene idea and length. Get one timed video prompt with reference roles, camera moves, action and sound. Bring the brief and any files you want it to use.
+subhead: Give it a scene idea and how many seconds it runs, plus any images or clips you want used. It writes one prompt that runs second by second, gives each reference a job and says what the camera does in every beat.
 explain: |-
-  Use this when you need portable timed scene prompts with 2.0 and 2.5 modes. Route explicitly to legacy timed 2.0 or bracketed scene 2.5 when the user names a version; otherwise use a model-neutral timed treatment. Treat model-specific capacity/duration limits as unverified until checked in the actual tool.
+  A loose video prompt leaves the tool to guess the timing, the camera and what each reference is for. This Seedance prompt writer puts every beat on a timeline from second zero to the end, with the visible action, where the camera sits and one camera move or a deliberate hold.
 
-  One brief produces one prompt unless the user requests a sequence, continuation or multiple alternatives. Multiple internal cuts remain beats inside that one prompt.
+  Each reference you upload gets a role and a note on what to ignore, so a face or a background does not leak in by accident. It also locks who is wearing what and where things are, so the scene stays steady from beat to beat.
+
+  One brief gives one prompt. Several cuts inside it stay as beats of that one prompt. It writes the prompt only. It does not make the video, and it treats the tool's own length and file limits as unchecked until you test them.
 when:
-  - You need portable timed scene prompts with 2.0 and 2.5 modes.
-  - You want a clear draft and checks from the material you already have.
+  - You have a scene idea and a length in seconds and need a prompt that runs beat by beat.
+  - You have reference images, clips or audio and need each one given a clear job.
+  - A first clip came out loose and you want a tighter prompt with set camera and action beats.
+  - You need the same prompt in a second language.
 you_give:
-  - brief
-  - "Optional: reference set"
-  - "Optional: footage"
+  - Your scene idea and the length in seconds
+  - Reference images, clips or audio you want used (optional)
+  - The Seedance version you use, if you know it (optional)
+  - Music choice, language and any spoken lines (optional)
+  - Footage to edit or extend (optional)
 you_get:
-  - video prompt
-  - shot list
-  - Missing inputs and steps that still need to run
+  - One prompt with timed beats from the first second to the last
+  - An upload map that says what each reference is for
+  - The exact spoken lines, or none
+  - A short breakdown of what changes in each beat and why
+  - A list of what was not run, such as the video render
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in.
+  - Give the scene idea and the length. List the file names of any references you will upload.
+  - Say which Seedance version you use. If you do not, you get a layout that fits both the older and newer styles.
+  - Check that the beats run with no gaps from 0 to the last second.
+  - Paste the prompt into your Seedance tool and upload the references it lists. Claude does not make the video.
+  - Check the tool's own length and file limits before you run it.
 how_it_works:
   - title: Read the brief
     text: Route explicitly to legacy timed 2.0 or bracketed scene 2.5 when the user names a version; otherwise use a model-neutral timed treatment. Treat model-specific capacity/duration limits as unverified until checked in the actual tool.
@@ -32,3 +43,27 @@ how_it_works:
     text: Handle native edits, extension, first/last frames, storyboard grids and multi-reference scenes as distinct modes; only promise execution if supported tools/materials are available. Remove every private app/deck/memory dependency and bypass instruction.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You want a rapid-cut product ad that ends on a hero shot: use Rapid-cut product video prompt."
+  - "You have a finished ad script and need it cut into shots: use Video ad shot list maker."
+  - "You want a prompt for an image or for another video tool: use Image and video prompt director."
+output_sample:
+  input:
+    - Your scene idea and length in seconds
+    - Reference images, clips or audio (optional)
+    - Music choice, language and spoken lines (optional)
+  prerequisites:
+    - A Seedance tool where you will paste the prompt and upload the references
+  output:
+    - name: Upload map
+      contains: Each reference matched to its file name, its role and what to ignore, or none.
+    - name: Prompt
+      contains: Global setting, subject, performance and the timed beats with camera moves, plus things to avoid.
+    - name: Dialogue
+      contains: The exact spoken lines and their language, or none.
+    - name: Scene breakdown
+      contains: What changes in each beat and why.
+    - name: Optional translation
+      contains: The same prompt in another language, with the same reference names and timestamps.
+    - name: Not run
+      contains: The render and any tool limits that were not checked.

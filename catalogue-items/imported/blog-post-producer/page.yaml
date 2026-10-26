@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set pipeline but makes many writing choices.
 new_slug: blog-post-producer
 name: Blog post producer
-summary: Give it a topic. Get a researched, edited blog post or guide that is
-  ready to publish.
+summary: Give it a topic and who it's for. You get a researched, edited blog post or guide with a title, meta description and link ideas, ready to publish.
 job: write-and-tell-stories
 headline: Blog post producer
-subhead: A finished blog post or guide that is researched, edited and ready to
-  publish, built from a topic and an angle. It cuts out the blank-page stall and
-  the long back and forth with a draft.
+subhead: A finished blog post or guide that is researched, edited and ready to publish, built from a topic and an angle. It cuts out the blank-page stall and the long back and forth with a draft.
 explain: |
   A finished blog post or guide that is researched, edited and ready to publish, built from a topic and an angle. It cuts out the blank-page stall and the long back and forth with a draft.
 
@@ -18,6 +15,10 @@ when:
   - A writer is stuck and you need a solid first draft fast.
   - You want one clear article that targets a single search term.
   - You need a guide that links to your existing pages.
+not_for:
+  - "You need a content plan or calendar of topics: ask your AI for a content strategy, or plan the list by hand first."
+  - "You want to reuse a post you already have as social posts or email: rewrite it by hand or ask your AI for a short adaptation."
+  - "You only need a short caption or landing page copy: write a few lines in a normal chat instead."
 you_give:
   - A topic or working title
   - The main search term (optional)
@@ -30,7 +31,32 @@ you_get:
   - Search-friendly headings and a title
   - Internal link suggestions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell it your topic, reader, goal and length. Add your search term and related page links if you have them.
+  - Check that your AI can search the web. If it can't, paste in the sources you trust. Never accept a quote or number without a source.
+  - Read the brief first. Fix the angle before you ask for the full draft.
+  - Ask for the polish pass. The score and gate scripts need code running, so skip them if your AI can't run code.
+  - Check every fact and link by hand before you publish.
+output_sample:
+  input:
+    - Your topic or working title
+    - Your main search term (optional)
+    - Who will read it and what they already know
+    - Your goal and rough length
+    - Links to your related pages (optional)
+  prerequisites:
+    - An AI that can search the web, or sources you paste in yourself
+    - An AI that can run code, only if you want the score and gate checks (optional)
+  output:
+    - name: Content brief
+      contains: Search terms, reader profile, angle, section plan, claims to prove, links to include and gaps in what already ranks.
+    - name: Full draft
+      contains: A title, intro, 4 to 7 sections with headings, conclusion and next step, with source markers beside facts.
+    - name: SEO pass
+      contains: Title tag, headings and keyword placement checked, plus a short meta description and social share text.
+    - name: Readability and voice edits
+      contains: Specific sentence edits to shorten long lines, cut jargon and match your brand voice.
+    - name: Internal links
+      contains: Two to four links to and from your other pages, with plain anchor text.
+    - name: Publish checklist
+      contains: Pass or fail on each quality check, including keyword use, sources, readability and word count within 10% of target.

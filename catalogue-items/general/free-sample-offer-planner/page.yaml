@@ -1,6 +1,6 @@
 new_slug: free-sample-offer-planner
 name: "Free sample offer planner"
-summary: "Paste your product and price. Get a free sample offer, who gets it, how to claim it and a cost-per-customer check."
+summary: "Plan a free sample offer that reaches buyers and stays within budget. Give your product and price. You get the offer, claim steps and a cost check."
 job: make-offer
 thinking: medium
 thinking_why: "It makes choices about the sample, its audience and its cost, from a set of fixed rules."
@@ -17,6 +17,10 @@ when:
   - "You have a new product and want people to try it before you advertise widely."
   - "You hand out samples but do not know what a customer costs."
   - "You are not sure if a small sample shows your product well."
+not_for:
+  - "You have not yet chosen between a premium, free or discount first step: use the Front-end offer picker first."
+  - "Your product needs a regulated sampling process, such as alcohol or supplements: check the rules with a qualified person before you plan any giveaway."
+  - "You want to send samples or run the campaign: this plans the offer only, so use a form tool or your shop's own process to hand them out."
 
 you_give:
   - "Your product facts: what it is, size, cost to make"
@@ -35,6 +39,31 @@ how_to_use:
   - "Give a budget and a place you could reach people, such as a shop, event or list."
   - "Set up the keys and claim method it lists."
   - "Run it small, then use the test planner and cost check that follow."
+output_sample:
+  input:
+    - "Your product facts: what it is, sizes and the cost to make and pack one sample"
+    - Your price
+    - Your current offer (optional)
+    - Your sample budget and where you can reach buyers (optional)
+  output:
+    - name: Sample
+      contains: The smallest piece or full-size trial to give, with one line on why it shows the product well.
+    - name: Offer words
+      contains: A headline with the word Free, and your story first, then the offer.
+    - name: Who gets it
+      contains: The people and places to reach, plus the limit of one per home and any age limit.
+    - name: How to claim
+      contains: The easiest claim method for the buyer, the reason, and a key for each source.
+    - name: Tied to
+      contains: The purchase, visit or next step the sample is linked to.
+    - name: Budget and cap
+      contains: Cost of one sample, how many you can send, a spending cap and a stop rule, with each sum written out.
+    - name: Cost per customer check
+      contains: Sample cost per buyer, the most you can pay for a customer, and whether it fits.
+    - name: Missing
+      contains: Every fact you did not give, marked so you can fill it in later.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Tests the sample"

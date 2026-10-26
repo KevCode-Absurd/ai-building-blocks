@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It looks up each source and checks the details.
 new_slug: citation-and-bibtex-fixer
 name: Citation and BibTeX fixer
-summary: Give it DOIs, paper titles or a messy bibliography. Get clean, checked
-  BibTeX entries with duplicates removed.
+summary: Turn DOIs, paper titles or a messy BibTeX file into clean, checked citations. Duplicates are merged and odd entries are flagged.
 job: work-with-files
 headline: Citation and BibTeX fixer
-subhead: A clean bibliography with every entry checked against the real paper.
-  Give it DOIs, PubMed or arXiv IDs, paper titles or a messy BibTeX file, and
-  get back tidy entries with duplicates removed.
+subhead: A clean bibliography with every entry checked against the real paper. Give it DOIs, PubMed or arXiv IDs, paper titles or a messy BibTeX file, and get back tidy entries with duplicates removed.
 explain: |
   A clean bibliography with every entry checked against the real paper. Give it DOIs, PubMed or arXiv IDs, paper titles or a messy BibTeX file, and get back tidy entries with duplicates removed.
 
@@ -18,6 +15,10 @@ when:
   - Your bibliography has duplicates and odd formatting.
   - You want to be sure each reference matches the real paper.
   - You need to find key papers in a new field.
+not_for:
+  - "You need a style that a journal template controls: use the journal's own template or Zotero."
+  - "Your publisher or reference manager already gives correct BibTeX: use Zotero or the publisher's export instead."
+  - "Your AI cannot run Python or reach the web: check each entry by hand against the publisher page."
 you_give:
   - DOIs, PMIDs, arXiv IDs or paper titles
   - Your existing BibTeX file (optional)
@@ -29,8 +30,28 @@ you_get:
   - Flagged entries that do not match the source
   - Consistent key names
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and save files.
+  - Use an AI that can run Python and reach the web. Without code running, it can only do a lighter check by hand.
+  - Paste your DOIs, titles or BibTeX file into the chat. Add a topic and year range if you want it to search.
+  - Ask your AI to follow the Citation management skill and show each step it runs.
+  - Read the validation report. Check every auto-fixed entry against the publisher page.
+  - Expect Google Scholar lookups to slow down or fail at times. Try again later or use PubMed.
+  - Skim the final list before you submit your paper.
+output_sample:
+  input:
+    - DOIs, PubMed IDs, arXiv IDs or paper titles
+    - Your existing BibTeX file (optional)
+    - A topic and year range to search (optional)
+  prerequisites:
+    - An AI that can run Python code and reach the web
+    - The skill's scripts folder, which this page does not confirm is included
+  output:
+    - name: Search results file
+      contains: Papers found on Google Scholar or PubMed for your topic, with citation counts where the search gives them.
+    - name: BibTeX file from metadata
+      contains: Entries with authors, title, journal, year and pages, built from search results or from DOIs.
+    - name: Formatted and deduplicated BibTeX file
+      contains: Your entries with consistent style and keys, duplicates removed, sorted by year if you ask.
+    - name: Validation report
+      contains: Entries with errors, missing fields or details that do not match the real publication.
+    - name: Final references file
+      contains: The clean BibTeX file ready to use in your LaTeX paper or thesis.

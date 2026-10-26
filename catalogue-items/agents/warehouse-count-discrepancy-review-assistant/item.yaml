@@ -1,6 +1,6 @@
 slug: warehouse-count-discrepancy-review-assistant
 name: Warehouse count discrepancy review assistant
-summary: A reconciled stock variance table, evidence gaps and review brief.
+summary: "Reconcile a warehouse stock count against its snapshot and movements. Get a variance table that splits timing, unit and count errors."
 category: agent
 type: agent
 role: orchestrate

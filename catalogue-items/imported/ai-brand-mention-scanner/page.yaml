@@ -2,36 +2,116 @@ thinking: medium
 thinking_why: It judges each platform by clear rules.
 new_slug: ai-brand-mention-scanner
 name: AI brand mention scanner
-summary: Give it a brand name. Get a score for where it is mentioned online.
-  Collects data from websites.
+summary: Check where your brand is mentioned on YouTube, Reddit, Wikipedia and LinkedIn. Get a score out of 100, the gaps and a plan to fix them.
 job: get-found-in-search
 headline: AI brand mention scanner
-subhead: A score for how often and where your brand is mentioned across the web,
-  and which mentions matter for AI assistants. It collects data from websites,
-  so expect it to browse public pages for you.
+subhead: Give it your brand name and website. Your AI looks at public pages on YouTube, Reddit, Wikipedia, LinkedIn and other sites, and scores how visible your brand is there. You get a score out of 100, a score for each site, the gaps, and a plan for what to do first. It collects data from websites.
 explain: |
-  A score for how often and where your brand is mentioned across the web, and which mentions matter for AI assistants. It collects data from websites, so expect it to browse public pages for you.
+  More people now ask an AI assistant which brand to buy or use. The assistant draws on what the web says about a brand, not only on links to its site. This scanner checks the places where your brand is talked about, to show how visible your brand is to an AI assistant.
 
-  The idea: a recent study of 75,000 brands found that mentions without any link predict AI recommendations better than backlinks do. Place matters too. A comment on Reddit or a YouTube video counts for more than a post on a small blog. The scan searches those platforms by brand name, rates each mention by place and tone, and adds them into one score. It ends with gaps and a list of places to earn more mentions.
+  The skill's author cites an Ahrefs study of 75,000 brands from December 2025. It found that brand mentions with no link tracked AI recommendations more closely than backlinks did. We have not checked that study, so read it before you quote it. The scan searches each site by your brand name and scores each one from 0 to 100 with a set table. It then adds the scores into one total, weighted 25 percent for YouTube, 25 for Reddit, 20 for Wikipedia, 15 for LinkedIn and 15 for the rest.
+
+  Three things make it different from a normal SEO check. It reads only public pages and changes nothing. It checks Wikipedia with Wikipedia's own search, because a web search can say a page is missing when it exists. And it ends with actions grouped by when to do them. The score is a rough guide. It does not promise that any AI will name you.
 when:
-  - You want to know if AI tools are likely to name your brand.
-  - You are paying for backlinks and wonder if mentions matter more.
-  - You want a baseline before starting a brand awareness push.
-  - You need to compare your brand with a rival.
+  - You want to know whether AI assistants are likely to know your brand.
+  - You are paying for backlinks and wonder if mentions on other sites matter more.
+  - You want a starting score before a push to get your name out.
+  - You want to compare your brand with one or two rivals.
+not_for:
+  - "You want to check how one page of your own site reads to search engines: use the AI search audit."
+  - "You want your reviews and ratings from Google Maps, TripAdvisor or social sites in one file: use the Brand mention tracker."
+  - "You want a promise that an AI will recommend you: no tool can give that. Use the score as a rough guide and act on the gaps."
 you_give:
-  - Your brand name
-  - Rival brand names (optional)
+  - Your brand name, spelled as you write it, plus any other spellings
   - Your website address
-  - Platforms you care most about (optional)
+  - The founder or CEO name and your top products (optional)
+  - Up to two rival brand names (optional)
 you_get:
-  - An overall mention score
-  - A breakdown by platform
-  - Examples of mentions found
-  - Gaps compared with rivals
-  - A list of places to build mentions
+  - A brand authority score out of 100, with a rating from Minimal to Dominant
+  - A score for YouTube, Reddit, Wikipedia, LinkedIn and other sites, with what was found
+  - A mood check on Reddit and other talk, from positive to negative
+  - A side-by-side with your rivals, if you named any
+  - Actions for weeks 1 to 2, months 1 to 3 and months 3 to 12
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open an AI that can search the web, such as Claude, ChatGPT or Gemini. Add the whole skill folder. It has a second file with the scoring tables, so if your AI takes only pasted text, paste both files.
+  - Give your brand name, website, founder name, top products and rivals. The scan reads public pages only. Keep it to a few searches per site, and stop if a site blocks your AI.
+  - If your AI cannot browse, search each site yourself, for example your brand name plus site:reddit.com, and paste what you find. Sites it could not check are marked "not checked".
+  - Read the score table. Check that the status for each site matches what you know, such as having a YouTube channel.
+  - Open one or two of the mentions it quotes and judge whether the mood call is fair.
+  - Pick two actions from weeks 1 to 2. Do not edit your own Wikipedia article. Ask a person who knows Wikipedia rules instead.
+how_it_works:
+  - title: Collects brand facts
+    text: Notes your exact brand name, founder, website, field, top products and rivals.
+  - title: Searches each site
+    text: Looks for your brand on YouTube, Reddit, LinkedIn and other places, using public pages only.
+  - title: Checks Wikipedia properly
+    text: Asks Wikipedia and Wikidata directly if your AI can run code. Otherwise it opens the page address.
+  - title: Judges the mood
+    text: Reads the most recent and most prominent mentions and calls them positive, neutral, negative or mixed.
+  - title: Compares rivals
+    text: Runs a quick check on rivals, so a score can be read against your field.
+  - title: Scores each site
+    text: Rates each site from 0 to 100 using a set table and adds them into one weighted total.
+  - title: Writes the report
+    text: Saves GEO-BRAND-MENTIONS.md with the score, the findings per site and a plan by time frame.
+output_shape: |
+  # Brand Authority Report: <brand>
+  Date | Brand | Domain | Industry
+
+  BRAND AUTHORITY SCORE: <x>/100 (<rating>)
+  <site> | <score> | <weight> | <weighted> | <status>
+
+  PLATFORM DETAIL
+  YouTube: channel, subscribers, videos, last upload, third-party mentions
+  Reddit: account, own subreddit, mention volume, main subreddits, mood
+  Wikipedia: article, founder article, Wikidata entry
+  LinkedIn: page, followers, posting rhythm
+  Other: Quora, Stack Overflow, GitHub, Hacker News, news, podcasts
+
+  RECOMMENDATIONS
+  Weeks 1-2 | Months 1-3 | Months 3-12
+
+  COMPETITIVE CONTEXT
+  <brand> | <rival 1> | <rival 2>
+
+  KEY TAKEAWAY
+  <1-2 sentences>
+
+  NOT CHECKED
+  <sites it could not reach>
+output_sample:
+  input:
+    - Your brand name, as you write it
+    - Your website address
+    - Founder or CEO name and top products (optional)
+    - Up to two rival brand names (optional)
+  prerequisites:
+    - An AI that can search the web, or pages you paste in yourself
+  output:
+    - name: GEO-BRAND-MENTIONS.md
+      contains: The full report, saved as one file you can share.
+    - name: Brand authority score
+      contains: A total out of 100 with a rating, and a table of the five weighted parts.
+    - name: Platform detail
+      contains: What was found on YouTube, Reddit, Wikipedia, LinkedIn and other sites, with the mood of Reddit talk.
+    - name: Recommendations
+      contains: Actions for weeks 1 to 2, months 1 to 3 and months 3 to 12.
+    - name: Competitive context
+      contains: A score table for your brand and each rival you named.
+    - name: Key takeaway
+      contains: One or two sentences on where you stand and the best next action.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search on
+      why: The scan needs to look at live pages on each site.
+  inputs:
+    - Links to your YouTube, LinkedIn and Reddit accounts, if you have them
+    - Names of subreddits where your customers ask for advice
+    - Names of your two closest rivals
+terms:
+  - term: Unlinked mention
+    meaning: Your brand name written on a page with no link back to your site.
+  - term: Brand authority score
+    meaning: A score out of 100 that adds up your visibility on five groups of sites, weighted by how much the skill's author thinks each matters to AI.
+  - term: Wikidata
+    meaning: A free database of facts that sits behind Wikipedia and helps machines tell brands apart.

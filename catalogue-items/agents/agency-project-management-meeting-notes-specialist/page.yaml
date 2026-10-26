@@ -1,0 +1,129 @@
+name: Meeting Notes Specialist agent
+summary: Turn a meeting transcript or rough notes into clear meeting notes. Get decisions, action items with owners and dates, and open questions.
+headline: Meeting Notes Specialist agent
+subhead: Paste a transcript, a voice memo summary or your own rough notes from one meeting. Your AI pulls out what was decided, who does what by when, and what is still open. It writes only what the notes say and marks every gap.
+job: organise-work
+thinking: high
+thinking_why: It must separate what was decided from what was only discussed, and never invent an owner or a date. Use a model that reads carefully and stays strict.
+explain: |-
+  Meeting notes go wrong in two ways. They record the talk and miss the decisions. Or they get tidy and add things nobody said. This meeting notes summarizer does neither. It reads the whole transcript first, then sorts it into four fixed sections: date and attendees, decisions, action items and open questions.
+
+  It is strict about what counts. A decision is something the group agreed to do, agreed not to do or agreed was true. "We discussed the launch" is not a decision. "We will move the launch to May 15" is. An action item needs a task, an owner and a date. If the notes name no owner, it writes "unassigned". It never works out who "usually" does the job.
+
+  Every section appears every time. An empty one says "None recorded". If the date, project or attendees are missing, it asks once. If you cannot say, it uses a placeholder. It does not guess, and it adds no comment on the quality of the meeting.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have a meeting recording transcript and need a one-page record to send the team.
+  - You took scrappy notes in a call and want them turned into decisions and tasks.
+  - A client call ended and you need to confirm in writing what was agreed and who does what.
+  - You are not sure what was actually decided and want only the settled points.
+not_for:
+  - You need a formal record for HR, legal or the board. Use a human note-taker, or check the wording with the people involved.
+  - You need a word-for-word record. Use a transcription tool, such as the one built into your meeting app.
+  - You run the same meeting each week and want open actions tracked over time. Use the Weekly meeting actions keeper.
+  - You want follow-up messages drafted from the notes. Use the Executive work keeper.
+you_give:
+  - The meeting content, pasted in as a transcript, bullet points, a voice memo summary or recalled notes
+  - The meeting date and the project or topic name
+  - The names of the people who attended
+  - Names of the owners, if you know who took each task, when the notes do not say (optional)
+you_get:
+  - The date and attendees, filled in or marked with a placeholder
+  - A numbered list of decisions, each written as one full sentence
+  - A numbered list of action items, each with an owner and a due date, or marked unassigned or not specified
+  - A list of open questions that nobody answered
+  - A short list of gaps to fill, such as a missing date or an unassigned task
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste the full notes or transcript in one go. Add the meeting date, the project name and who attended.
+  - If it asks a question, answer it. If you do not know, say so and it will use a placeholder.
+  - Read the decisions first. Check each one against what you remember, and move any that were only discussed.
+  - Fill in each owner marked unassigned and each missing date, then send the notes to the group.
+how_it_works:
+  - title: Identify the input
+    text: It checks whether you pasted a transcript, bullets, a voice memo summary or recalled notes. Sparse input gets more "None recorded" lines.
+  - title: Confirm the basics
+    text: It checks the date, the project name and the attendees. It asks once for what is missing.
+  - title: Read it all first
+    text: It reads the whole input before it extracts anything, so out-of-order notes do not fool it.
+  - title: Extract decisions
+    text: It keeps only what the group agreed, and leaves out talk, options and "we looked at".
+  - title: Extract action items
+    text: Each item gets a task, an owner if the notes name one and a date if given. Nothing is worked out from habit.
+  - title: Extract open questions
+    text: It keeps the questions raised and not answered. When it is unsure, it keeps the question so you can delete it.
+output_shape: |-
+  Meeting Notes: <date> <topic or meeting name>
+
+  Date: <date or MISSING>
+  Attendees: <comma-separated names or MISSING>
+
+  Decisions
+  1. <one full sentence on what was decided>
+  (or "None recorded")
+
+  Action Items
+  1. <action> | Owner: <name or unassigned> | Due: <date or not specified>
+  (or "None recorded")
+
+  Open Questions
+  - <question raised and not answered>
+  (or "None recorded")
+
+  GAPS TO FILL
+  <missing date, unassigned owners and anything else left blank>
+output_sample:
+  input:
+    - The meeting content, as a transcript, bullet points or rough notes
+    - The meeting date and the project or topic name
+    - The names of the people who attended
+    - Owners for tasks, if the notes do not name them (optional)
+  prerequisites:
+    - A transcript from your meeting app, if you have one. Notes written afterward also work
+  output:
+    - name: Date and attendees
+      contains: The meeting date and who attended, or a placeholder where you did not say.
+    - name: Decisions
+      contains: What the group agreed to do, not do or accept as true, each as one full sentence.
+    - name: Action items
+      contains: Each task with its owner and due date, or marked unassigned or not specified.
+    - name: Open questions
+      contains: Questions raised in the meeting and not answered.
+    - name: Gaps to fill
+      contains: What you still need to supply, such as a date or an owner.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them handles long pasted notes. A transcript from Zoom, Google Meet or Teams works as pasted text.
+  inputs:
+    - The meeting agenda, so each decision can be matched to a topic.
+    - A list of the team's names with roles, so owners are spelled the same way every time.
+    - The notes from the last meeting, if you want to check what is still open. Use the Weekly meeting actions keeper for that.
+terms:
+  - term: Decision
+    meaning: Something the group agreed to do, agreed not to do or agreed was true.
+  - term: Action item
+    meaning: A specific task with someone named to do it, ideally with a date.
+  - term: Open question
+    meaning: A question that was raised in the meeting and not answered.
+  - term: Transcript
+    meaning: A written copy of what was said, often made by the meeting app.
+tweaks:
+  - what: Length
+    how: Ask for one line per item if the group wants a short record to post in chat.
+  - what: Tone
+    how: Say if you want plain or formal wording in decisions and open questions. Names, dates and owners stay as written.
+  - what: Scope
+    how: Ask for the action items alone, if that is all the team needs.
+improve:
+  - Keep the notes in one folder per project so you can find a decision later.
+  - Paste the notes from the last meeting next time and ask which actions are still open.
+  - Add your team's names and roles to the pack so owners are always spelled the same.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

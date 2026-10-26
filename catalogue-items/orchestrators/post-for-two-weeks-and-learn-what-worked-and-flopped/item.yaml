@@ -16,9 +16,9 @@ outputs:
 uses: [social-post-planner, shareable-content-checker, social-media-results-analyst, flop-post-diagnoser]
 steps:
   - {uses: social-post-planner, note: "Starts from your platforms and goal and writes the posts you will publish."}
-  - {uses: shareable-content-checker, note: "Reads the posts from the step before, so you fix the weakest before they go out."}
-  - {uses: social-media-results-analyst, note: "Fresh start after the two weeks: reads your real numbers and ranks the posts."}
-  - {uses: flop-post-diagnoser, note: "Takes the worst post from the ranking, which started as one of the drafts from step one, and says why it failed."}
+  - {uses: shareable-content-checker, note: "Reads the posts from step 1. You fix the weakest ones with its report, then publish; the report is not read again after the two weeks."}
+  - {uses: social-media-results-analyst, note: "Fresh start after the two weeks: uses the numbers you export, not step 2's report. It ranks the posts and hands step 4 the ranking and the weakest post."}
+  - {uses: flop-post-diagnoser, note: "Takes the weakest post and its numbers from step 3's ranking, and its text from the drafts in step 1, and says why it failed."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/post-for-two-weeks-and-learn-what-worked-and-flopped/skeleton.yaml

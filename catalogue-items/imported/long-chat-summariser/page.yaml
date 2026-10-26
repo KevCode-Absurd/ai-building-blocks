@@ -2,35 +2,57 @@ thinking: medium
 thinking_why: It follows a set summary shape but must judge what matters.
 new_slug: long-chat-summariser
 name: Long chat summariser
-summary: Give it a long AI session. Get a structured summary that keeps files,
-  decisions and next steps.
+summary: Turn a long AI chat into a long chat summary that keeps changed files, decisions and next steps, so a fresh chat can pick up where you stopped.
 job: set-up-ai
 headline: Long chat summariser
-subhead: Give it a long AI session. Get a structured summary that keeps files,
-  decisions and next steps. Bring the long chat or its log. Use the result to
-  plan your next step.
+subhead: Paste in a long AI chat and the goal of the session. Your AI writes a summary with set sections for files, decisions and next steps. Paste it into a new chat to carry on without losing the thread.
 explain: |
   A structured summary of a long AI session that keeps the file changes, decisions and next steps, so a fresh chat can pick up without losing the thread. The aim is fewer total tokens for the whole task, not the smallest summary.
 
   The summary has fixed sections: what you set out to do, which files were touched, what was decided and why, and what comes next. When the chat grows again, only the newly cut part is summarised and merged into the existing summary. That keeps details from fading with each rewrite. The skill also explains why a plain one-paragraph summary makes agents forget which files they edited, and how to test whether your summary kept the facts that matter.
 when:
-  - Your coding session hit the context limit and you must start a new chat.
+  - Your coding chat is hitting the length limit and you must start a new one.
   - Your AI keeps forgetting which files it already changed.
-  - You are building a tool that must compress conversation history.
-  - You want to check whether a summary dropped something important.
+  - The chat has grown again and you need to add the new part to an earlier summary.
+  - You want to check that a summary did not drop something important.
+not_for:
+  - "Your chat is short, or the AI can easily look the details up again: ask your AI for a plain two-line recap instead."
+  - "You want to cut the size of a whole codebase or document set: use the context-optimization skill, which is not in this library yet."
+  - "You need a polished write-up for other people to read: ask a teammate or your AI for a normal meeting-style summary."
 you_give:
-  - The long chat or its log
+  - The long chat, or its log
   - The goal of the session
   - Files or paths that matter (optional)
   - Questions the summary must still answer (optional)
+  - An earlier summary, if you already made one (optional)
 you_get:
-  - A sectioned session summary
-  - A list of changed files
-  - Decisions and their reasons
-  - Clear next steps
-  - A checklist to test the summary
+  - A summary with fixed sections for intent, files, decisions, state and next steps
+  - A list of files created, changed or only read
+  - Each decision with its reason
+  - Clear next steps for the new chat
+  - Questions to test whether the summary kept the key facts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open the chat that has grown too long, or find its log. Copy the skill text into a new chat in Claude, ChatGPT or Gemini.
+  - Paste the long chat or log below it. Add the goal of the session and any file names that matter.
+  - Add an earlier summary if you have one. Ask your AI to merge only the new part into it.
+  - "Check the result: are all changed files, error messages and decisions there? Ask the check questions to test it."
+  - Start a new chat, paste the summary first, then say what to do next.
+output_sample:
+  input:
+    - Your long chat, or its log
+    - The goal of the session
+    - Files or paths that matter (optional)
+    - Questions the summary must still answer (optional)
+  output:
+    - name: Session Intent
+      contains: What you were trying to get done in this session, in a sentence or two.
+    - name: Files Modified
+      contains: Each file created, changed or only read, with a short note on what changed.
+    - name: Decisions Made
+      contains: The choices made in the chat and the reason behind each one.
+    - name: Current State
+      contains: Where the work stands now, such as what passes, what fails and what is left.
+    - name: Next Steps
+      contains: A numbered list of what to do first in the new chat.
+    - name: Summary check questions
+      contains: Questions about files, errors, decisions and next steps to test whether the summary kept the facts that matter.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts notes into a set page format.
 new_slug: notion-wiki-writer
 name: Notion wiki writer
-summary: Give it a chat or notes. Get a linked Notion page for the decision,
-  how-to or FAQ.
+summary: Turn a chat thread or meeting notes into a linked Notion wiki page for a decision, how-to or FAQ. Your AI fills in owner, tags and status.
 job: organise-work
 headline: Notion wiki writer
-subhead: Turn a messy chat or set of meeting notes into a clean Notion page that
-  people can find later. It might be a decision record, a how-to, an FAQ or a
-  short write-up of what you learned.
+subhead: Turn a messy chat or set of meeting notes into a clean Notion page that people can find later. It might be a decision record, a how-to, an FAQ or a short write-up of what you learned.
 explain: |
   Turn a messy chat or set of meeting notes into a clean Notion page that people can find later. It might be a decision record, a how-to, an FAQ or a short write-up of what you learned.
 
@@ -17,8 +14,11 @@ when:
   - A long Slack thread ended in a decision and nobody wrote it down.
   - You keep answering the same question and want a proper FAQ entry.
   - You finished a project and want a how-to the next person can follow.
-  - Meeting notes sit in a doc and you want them in the team wiki with owners
-    and tags.
+  - Meeting notes sit in a doc and you want them in the team wiki with owners and tags.
+not_for:
+  - "You only need a quick answer from a chat: ask your AI to summarise it, no Notion page needed."
+  - "Your notes are one-off and nobody will read them again: keep them in a plain doc."
+  - "You do not use Notion or cannot connect it: write the page by hand in your own wiki or doc tool."
 you_give:
   - The chat, thread or notes to capture
   - Who the page is for
@@ -30,8 +30,31 @@ you_get:
   - Tags, owner and status filled in
   - Links from related hub pages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your Notion workspace.
+  - Use an AI tool that can connect to Notion. The skill steps are written for Codex.
+  - Connect Notion first. Run codex mcp add notion --url https://mcp.notion.com/mcp, turn on the remote MCP client, then run codex mcp login notion to sign in.
+  - Restart Codex after you sign in, then start the skill again.
+  - Paste your chat or notes. Say what you are saving, who it is for, and whether the page is new or an update.
+  - Answer any question about which Notion database to use.
+  - Open the new page and check the tags, owner, status and links before you share it.
+output_sample:
+  input:
+    - The chat, thread or meeting notes to save
+    - "What you are saving: a decision, how-to, FAQ, learning or documentation page"
+    - Who the page is for
+    - Whether it is a new page or an update (optional)
+  prerequisites:
+    - An AI that can connect to Notion through the Notion MCP link and sign in with OAuth
+    - A Notion workspace with a wiki or documentation database
+  output:
+    - name: Notion page
+      contains: A new or updated page in the right database, with a title, summary, context and source links.
+    - name: Page properties
+      contains: Tags, owner, status, dates and relations filled in to match the database.
+    - name: Body sections
+      contains: Facts, steps, Q&A or decision details, depending on the page type you chose.
+    - name: Decision record
+      contains: "For decisions only: the options considered, the reasons for the choice and the outcome."
+    - name: Links and changelog
+      contains: Links from hub pages and related docs, plus a short summary for future readers.
+    - name: Follow-up tasks
+      contains: Tasks created in the right database and linked to the page, if the notes list any.

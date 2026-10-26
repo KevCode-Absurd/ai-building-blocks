@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It applies set formulas to numbers you give it.
 new_slug: sample-size-planner
 name: Sample size planner
-summary: Say what effect you want to detect. Get how many subjects you need,
-  with power curves you can put in a grant.
+summary: Work out your sample size before you collect data. Give it the effect you want to detect and get the numbers, power curves and a method paragraph.
 job: track-numbers
 headline: Sample size planner
-subhead: The number of subjects, samples or replicates your study needs, worked
-  out before you collect any data. Say what effect you want to detect and get a
-  sample size with power curves ready for a grant or protocol.
+subhead: The number of subjects, samples or replicates your study needs, worked out before you collect any data. Say what effect you want to detect and get a sample size with power curves ready for a grant or protocol.
 explain: |
   The number of subjects, samples or replicates your study needs, worked out before you collect any data. Say what effect you want to detect and get a sample size with power curves ready for a grant or protocol.
 
   Four numbers are tied together: sample size, effect size, significance level and power. Fix three and the fourth follows. It uses a formula where one exists and simulation for complex designs. It checks that your assumed effect is believable, not picked to give a small study, and counts the true independent unit, since repeated measures are not separate subjects. Output includes tables, plots and a method paragraph. Code needs Python with common stats packages.
 when:
   - A funder wants a sample size justification in your grant.
-  - You are planning an experiment and do not know how many animals or samples
-    to use.
-  - Your study is already small and you need to know its power.
+  - You are planning an experiment and do not know how many animals or samples to use.
+  - Your study has already run and you want to know what effect it could have detected (a sensitivity check, not observed power).
   - You must compare two groups and want to know what effect you can detect.
+not_for:
+  - "You want to lay out the study, such as randomization, blocking or crossover: ask a statistician, or use an experimental design skill."
+  - "You already have the data and want to test it: use a statistical analysis step or a statistician."
+  - "You want to prove a result is real from the power of a finished study: this tool plans studies, so it cannot do that."
 you_give:
   - The outcome you measure and test type
   - The effect size you care about
@@ -30,8 +30,28 @@ you_get:
   - A short method paragraph
   - Notes on assumptions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code, since the numbers come from code.
+  - Paste the skill instructions into the chat, or upload the skill folder if your AI accepts files.
+  - Tell it what you measure, which test you plan, and the smallest effect that matters to you.
+  - Add past data on variation, your significance level and your power target if you have them.
+  - Check the effect size it assumed. Make sure it is believable and not picked to give a small study.
+  - Copy the method paragraph and power curve into your grant or protocol.
+output_sample:
+  input:
+    - The outcome you measure and the test you plan to use
+    - The smallest effect that matters to you
+    - Variation from past data (optional)
+    - Your significance level and power target (optional)
+  prerequisites:
+    - An AI that can run Python code with common stats packages installed
+  output:
+    - name: Sample size
+      contains: The number of subjects, samples or replicates needed per group and in total for your chosen effect.
+    - name: Power curve
+      contains: A plot showing how power changes as sample size or effect size changes, ready for a grant figure.
+    - name: Sensitivity table
+      contains: The sample size needed across a range of believable effect sizes, so you can see how fragile the plan is.
+    - name: Adjustments
+      contains: Changes for dropouts, uneven group sizes and repeated measures, so the count reflects true independent units.
+    - name: Reporting paragraph
+      contains: A method statement listing every input so a reader can repeat the calculation, for a grant or protocol.

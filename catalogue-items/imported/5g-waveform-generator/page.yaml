@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: Standards give exact settings.
 new_slug: 5g-waveform-generator
 name: 5G waveform generator
-summary: Pick a 5G test model or your own settings. Get MATLAB code that builds
-  a standard 5G waveform.
+summary: Build a 5G NR test waveform in MATLAB from a standard test model or your own settings. You get the code, IQ samples and a config.
 job: build-software
 headline: 5G waveform generator
-subhead: Tell it the link direction and a 5G test model, reference channel or
-  your own bandwidth and modulation settings. It picks the right generator route
-  and writes the MATLAB code. You get the code, the IQ samples, a config that
-  matches the 3GPP standard and notes on what to change next.
+subhead: Tell it the link direction and a 5G test model, reference channel or your own bandwidth and modulation settings. It picks the right generator route and writes the MATLAB code. You get the code, the IQ samples, a config that matches the 3GPP standard and notes on what to change next.
 explain: |
   You get a baseband 5G NR waveform that follows the 3GPP standard, ready for testing, simulation or playback on an instrument. You pick a test model, a fixed reference channel, or a custom setup and the skill writes the MATLAB code.
 
@@ -19,6 +15,10 @@ when:
   - You want a custom downlink waveform with specific channels turned on.
   - You need to play an IQ signal into an RF instrument.
   - You are setting up several bandwidth parts in one waveform.
+not_for:
+  - "You need to model a radio channel or signal fading: use MATLAB's nrCDLChannel or nrTDLChannel instead."
+  - "You need to decode or receive a 5G signal: use MATLAB's nrPDSCHDecode or nrDLSCHDecoder instead."
+  - "You want a full end-to-end link simulation: build that in MATLAB 5G Toolbox with your own link-level setup."
 you_give:
   - Link direction, downlink or uplink
   - A test model or reference channel name, or your own settings
@@ -31,8 +31,26 @@ you_get:
   - A config that matches the standard
   - Notes on which settings to change next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run MATLAB with 5G Toolbox.
+output_sample:
+  input:
+    - "Link direction: downlink or uplink"
+    - A test model or reference channel name, or your own settings
+    - Bandwidth, subcarrier spacing and modulation
+    - Which channels and signals to include (optional)
+  prerequisites:
+    - MATLAB with 5G Toolbox
+    - An AI that can write MATLAB code, and ideally run it
+  output:
+    - name: MATLAB script
+      contains: Code that sets up the carrier config or test model and calls the waveform generator.
+    - name: waveform
+      contains: Complex time-domain IQ samples, one column per antenna.
+    - name: info structure
+      contains: Resource grids, sample rate and per-slot channel resources for the waveform.
+    - name: Settings summary
+      contains: A short list of the bandwidth, spacing, modulation and channel settings used.
+    - name: Power spectrum plot
+      contains: Code to plot the spectrum so you can check the signal looks right.

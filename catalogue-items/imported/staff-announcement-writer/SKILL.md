@@ -10,6 +10,20 @@ metadata:
 
 Plan and write clear, consistent internal communications — routine updates, policy changes, benefits announcements, and sensitive messages — that employees actually read, understand, and trust.
 
+## Steps
+
+1. Ask for what you need in one message: what is changing and why, who it affects, the date, and which channels you will use. Facts you cannot share yet, and a request for a routine or sensitive tone, are optional.
+2. If something is missing, write `MISSING: <what is needed>`. Never invent a reason, date, number, name or quote.
+3. Decide if the change is routine (a policy update, a holiday schedule) or sensitive (a restructure, a leadership change, job cuts). Match the tone. Do not use cheerful wording for bad news.
+4. Write the main announcement. Put what changes, who it affects and when in the first two sentences. Use short sentences and plain words.
+5. Write one version for each channel the user named (for example email, Slack, town hall script, intranet), with the same facts in each.
+6. Write manager talking points: 3 to 5 key lines and answers to the hardest questions. Managers get these first.
+7. Write an FAQ of 5 to 8 questions. Answer only from facts the user gave. If the answer is not known, write "We do not know yet. We will tell you by [date]."
+8. Give a rollout order: managers first, then staff, then a follow-up message. Say what to send and when.
+9. End with what to check: every fact is true, nothing in it will start a rumour, and the right leader signs it.
+
+Do not use this for one person's performance or discipline. Use a one-to-one or your HR case process. Job cuts or new legal terms should be reviewed by HR or a lawyer before sending.
+
 ## Supported tasks
 
 - Writing routine HR announcements (policy updates, benefits changes, holiday schedules)

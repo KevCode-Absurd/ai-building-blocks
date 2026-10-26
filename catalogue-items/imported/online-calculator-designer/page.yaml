@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans inputs, results and lead capture together.
 new_slug: online-calculator-designer
 name: Online calculator designer
-summary: Name what your visitors want to work out. Get a calculator design that
-  gives a real answer and gathers leads fairly.
+summary: Design an online calculator that gives visitors a real answer and earns leads fairly. Name the decision, get inputs, method, results and tiers.
 job: build-websites
 headline: Online calculator designer
-subhead: "A calculator design that gives visitors a real answer they can defend
-  to their boss, and still brings in good leads. Many calculators are bait:
-  made-up multipliers and the result hidden behind a form."
+subhead: "A calculator design that gives visitors a real answer they can defend to their boss, and still brings in good leads. Many calculators are bait: made-up multipliers and the result hidden behind a form."
 explain: |
   A calculator design that gives visitors a real answer they can defend to their boss, and still brings in good leads. Many calculators are bait: made-up multipliers and the result hidden behind a form. This one earns trust instead.
 
@@ -18,18 +15,44 @@ when:
   - Your current calculator gets entries but the leads are poor.
   - People distrust your numbers and ask where they come from.
   - You need a spec to give to a developer.
+not_for:
+  - "You only want a simple download to collect emails: use a checklist or short guide, not a calculator."
+  - "You need the calculator built and coded: hand the design to a developer, since this only plans it."
+  - "You have no formula or real data behind the answer: gather that first, or the numbers will not hold up."
 you_give:
-  - What decision your visitors want help with
+  - The decision your visitors want help with
   - The formula or data behind the answer
-  - Who the audience is
+  - Who your audience is
   - What you want from the lead
+  - Sources for any benchmark numbers (optional, but each number needs one)
 you_get:
   - A calculator design with inputs and outputs
   - A plain-language method note
   - A fair plan for what is free and what needs an email
   - Lead qualifying signals
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down the decision your visitors want help with, in one sentence.
+  - Gather your formula and any benchmark numbers. Note the source for each number.
+  - Describe your audience and what you want from the lead, such as a sales call or a newsletter signup.
+  - Paste the skill into Claude, ChatGPT or Gemini, then add your notes. No code or web access is needed.
+  - Ask for the calculator design. Check that the result is free and that every number has a source before you pass it on.
+output_sample:
+  input:
+    - The decision your visitors want help with
+    - The formula or data behind the answer
+    - Who your audience is
+    - What you want from the lead
+    - Sources for any benchmark numbers (optional)
+  output:
+    - name: Calculator fit check
+      contains: Whether a calculator suits your audience and goal, or a simpler lead magnet would serve better.
+    - name: Input design
+      contains: The few questions to ask, with sensible defaults and input types, and what to hide until needed.
+    - name: Calculation logic and method note
+      contains: The formulas, assumptions and sources, written so visitors can check how the answer was reached.
+    - name: Result presentation
+      contains: A specific, clear result with context, a breakdown and a next step.
+    - name: Email-capture plan
+      contains: What stays free, what sits behind an email, and what a deeper account tier could offer.
+    - name: Lead signals
+      contains: Which answers suggest a good lead, so you can judge lead quality.

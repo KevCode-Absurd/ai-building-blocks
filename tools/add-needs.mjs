@@ -14,6 +14,9 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(path.join(ROOT, "site/package.json"));
 const YAML = require("yaml");
 const CHECK = process.argv.includes("--check");
+const onlyAt = process.argv.indexOf("--only");
+const ONLY = onlyAt >= 0 ? new Set((process.argv[onlyAt + 1] ?? "").split(",").filter(Boolean)) : null;
+if (ONLY && !ONLY.size) throw new Error("--only needs one or more catalogue slugs.");
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "site/public/data/blocks.json"), "utf8"));
 const all = data.blocks;
@@ -50,6 +53,16 @@ function toolsOf(folder, slug) {
   }
   return [];
 }
+/** Reviewed `next:` / `before:` slug lists (page.yaml, then item.yaml), the same override build-index.mjs honours. */
+function linksOf(folder, slug) {
+  const links = {};
+  const page = [path.join(folder, "page.yaml"), path.join(ROOT, "tools/orchestrator-pages", `${slug}.yaml`)].find((f) => fs.existsSync(f));
+  for (const f of [page, path.join(folder, "item.yaml")].filter(Boolean)) {
+    if (!fs.existsSync(f)) continue;
+    try { const y = YAML.parse(fs.readFileSync(f, "utf8")) ?? {}; for (const k of ["next", "before"]) if (!links[k] && Array.isArray(y[k])) links[k] = y[k]; } catch { /* unreadable: worked-out links */ }
+  }
+  return links;
+}
 /** Which lines are inside a ``` code block, so a "## " in an example is never taken for a heading. */
 function fenced(lines) {
   let open = false;
@@ -83,13 +96,16 @@ for (const category of ["general", "ecommerce", "orchestrators", "agents"]) {
   const dir = path.join(ROOT, "catalogue-items", category);
   if (!fs.existsSync(dir)) continue;
   for (const slug of fs.readdirSync(dir)) {
+    if (ONLY && !ONLY.has(slug)) continue;
     const file = path.join(dir, slug, "SKILL.md");
     const b = bySlug[slug];
     if (!fs.existsSync(file) || !b) continue;
+    const itemPath = path.join(dir, slug, "item.yaml");
+    if (fs.existsSync(itemPath) && YAML.parse(fs.readFileSync(itemPath, "utf8"))?.needs_mode === "manual") continue;
     const old = fs.readFileSync(file, "utf8");
     const nl = old.includes("\r\n") ? "\r\n" : "\n";
     let text = strip(strip(old, MARK.before), MARK.after);
-    const plan = planOf(b, bySlug, all, describe);
+    const plan = planOf(b, bySlug, all, describe, linksOf(path.join(dir, slug), slug));
     const before = beforeSection(plan, toolsOf(path.join(dir, slug), slug), nl);
     const after = afterSection(plan, nl);
     if (before) { text = insertBefore(text, nl, [MARK.before[0], before, MARK.before[1]].join(nl), "## What you need"); withBefore++; }

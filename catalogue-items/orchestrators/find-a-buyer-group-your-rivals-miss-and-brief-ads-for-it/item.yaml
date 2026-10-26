@@ -15,9 +15,9 @@ outputs:
   - {type: brief}
 uses: [untapped-avatar-finder, forum-and-review-avatar-digger, buyer-brief-writer, ad-angle-planner]
 steps:
-  - {uses: untapped-avatar-finder, note: "Finds outlier buyer groups in reviews and rival ads that the category leaders ignore."}
-  - {uses: forum-and-review-avatar-digger, note: "Pulls the group's own words and worries from what you saved. Starts from the group chosen in the step before."}
-  - {uses: buyer-brief-writer, note: "Writes the half-page brief from those words. Reads the quotes from the step before."}
+  - {uses: untapped-avatar-finder, note: "Finds outlier buyer groups in reviews and rival ads that the category leaders ignore. Hands the ranked pick and a first buyer profile to step 2."}
+  - {uses: forum-and-review-avatar-digger, note: "Pulls the group's own words and worries from what you saved. Starts from the buyer profile step 1 picked, and hands the quotes and buyer sketch to step 3."}
+  - {uses: buyer-brief-writer, note: "Writes the half-page brief from those words. Reads the quotes from the step before and hands the brief to step 4."}
   - {uses: ad-angle-planner, note: "Turns the brief into angles to test. Reads the brief from the step before."}
 origin: rebuilt
 version: 1.0.0

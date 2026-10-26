@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It lists and checks settings with simple commands.
 new_slug: parallel-cluster-finder
 name: Parallel cluster finder
-summary: Ask what parallel clusters you can use. Get a list, with profiles
-  checked and set as default.
+summary: Find the parallel clusters your MATLAB can use. Get a list of profiles, a check that each one connects, and one set as your default.
 job: build-software
 headline: Parallel cluster finder
-subhead: A list of the computing clusters your MATLAB can use, with each profile
-  checked and one set as the default. It answers the question of where you can
-  run big jobs.
+subhead: A list of the computing clusters your MATLAB can use, with each profile checked and one set as the default. It answers the question of where you can run big jobs.
 explain: |
   A list of the computing clusters your MATLAB can use, with each profile checked and one set as the default. It answers the question of where you can run big jobs.
 
@@ -18,6 +15,10 @@ when:
   - An admin sent you a profile file and you need to load it.
   - A job fails and you suspect a broken cluster profile.
   - You want to change which cluster runs by default.
+not_for:
+  - "You want to run a job on a cluster: this skill stops once the cluster is ready, so use a job submission skill or ask your cluster admin."
+  - "You want to open a pool or use parfor: start the pool in MATLAB yourself once the right profile is set."
+  - "You do not have MATLAB with Parallel Computing Toolbox: ask your admin for access, since there is nothing to list without it."
 you_give:
   - MATLAB with Parallel Computing Toolbox
   - Profile file from an admin (optional)
@@ -28,8 +29,30 @@ you_get:
   - Imported profile
   - Default cluster set
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open MATLAB and make sure Parallel Computing Toolbox is installed. Use an AI that can run MATLAB code, or paste the code it gives you into MATLAB.
+  - Paste the skill into your AI chat, or upload the skill folder if your AI accepts files.
+  - Ask a plain question, such as "What parallel clusters can I use?" Add your admin's profile file if you have one.
+  - Read the profile table. Unreachable profiles are marked, so you can tell them apart from missing ones.
+  - When you validate a profile on a shared cluster, use a small worker count, such as 2.
+  - Confirm before your AI deletes any profile. Deleting cannot be undone.
+output_sample:
+  input:
+    - MATLAB with Parallel Computing Toolbox
+    - A profile file from your admin (optional)
+    - The cluster you want as default (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with Parallel Computing Toolbox installed
+  output:
+    - name: Profile table
+      contains: One row per saved profile with its name, type, number of workers and a marker for the default.
+    - name: Discovered clusters
+      contains: Clusters found on your network and in the cloud that you have not saved as profiles yet.
+    - name: Imported profile
+      contains: The profile loaded from your admin's settings file, ready to use.
+    - name: Default profile
+      contains: The cluster profile MATLAB will use when you do not name one.
+    - name: Validation report
+      contains: A pass or fail result for each check on a profile, so you know it connects.
+    - name: Deleted profiles
+      contains: A note of any profiles you chose to remove after confirming.

@@ -1,6 +1,6 @@
 new_slug: case-against-writer
 name: Case-against writer
-summary: Paste your plan or opinion. Get the best case against it, in the other side's words, and what would change your mind.
+summary: Paste your plan or opinion and get the best case against it, in an opponent's words, plus what would change your mind and a go, change or wait call.
 job: think-and-decide
 thinking: high
 thinking_why: It has to argue well for a view you may not hold and judge honestly where your own case is weak.
@@ -14,6 +14,10 @@ when:
   - You are sure about a plan and want to know if you have earned that.
   - You must defend a decision to people who disagree.
   - You catch yourself only reading things that agree with you.
+not_for:
+  - "You need to find how a plan could fail in practice: use the Failure-first plan check."
+  - "You are choosing between options and have nothing at stake: make a plain pros-and-cons list instead."
+  - "You want people to agree with you: ask a trusted colleague to argue your side, not this skill."
 you_give:
   - Your plan or opinion
   - Your main reasons for it
@@ -28,6 +32,28 @@ how_to_use:
   - Paste your plan and your reasons exactly as you would say them.
   - Answer each argument yourself before you read its reply.
   - Write down the mind-changing test and the date you will check it.
+output_sample:
+  input:
+    - Your plan or opinion
+    - Your main reasons for it
+    - Who disagrees with you, if you know (optional)
+  output:
+    - name: Your position
+      contains: Your view in one line, with each reason marked as a fact, a guess or a value.
+    - name: The opponent
+      contains: The smart person most likely to disagree, and what they lose if you are right.
+    - name: The case against
+      contains: Three strong arguments in the opponent's voice, with backing facts and a mark of answered, value or open.
+    - name: Assumption hit
+      contains: The assumption of yours that the strongest argument hits, and how long you have held it.
+    - name: What would change your mind
+      contains: Two or three things you could observe, with numbers or dates, that would change your view.
+    - name: The call
+      contains: Go, change or wait, with the reason and what would move it.
+    - name: For the other side
+      contains: Two sentences that put your case in terms of what the listener gains or avoids losing.
+    - name: Checks missed
+      contains: One line for each check the skill missed, or none.
 how_it_works:
   - title: State your position
     text: Writes your view and your main reasons in your words.

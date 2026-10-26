@@ -16,6 +16,29 @@ use_cases:
   - "Cut the clever, decorative parts of an ad that don't help it sell"
   - "Turn a boring product fact into a story about how carefully it is made"
   - "Check whether you are trying to change a habit that is too costly to change"
+not_for:
+  - "You want a brand to hold a clear place in buyers' minds, with no way to track replies: use the Al Ries mind, who worked on positioning."
+  - "You want a steady brand image built from research and product facts across many ads: use the David Ogilvy mind."
+  - "You want an ad that wins on honest wit and one big idea: use the Bill Bernbach mind. Hopkins would cut the wit."
+output_sample:
+  input:
+    - Your ad, sales page, launch plan or pitch
+    - The plain facts about your product, with any numbers
+    - Your offer, such as a sample, trial or guarantee
+    - What you spend and how you track replies or buyers (optional)
+  output:
+    - name: Marked-up copy
+      contains: Your text with every vague claim flagged and the plain facts you have not used yet.
+    - name: Headline set
+      contains: A ranked list of headlines, each aimed at a different kind of buyer, ready to test side by side.
+    - name: Offer
+      contains: A sample, trial or guarantee where you take the risk, with a coupon or code to key it.
+    - name: Small test plan
+      contains: A few places to try first, and the cost per customer to track for each key.
+    - name: Cut list
+      contains: The clever or decorative parts that do not help the ad sell.
+    - name: Next steps
+      contains: Run the small test, log cost per customer for each key, then bring the results back for a second round.
 seats:
   - {seat: "Testing and measured ads", asks: "How will we know this ad paid? What is the key, and what is the cost per customer?"}
   - {seat: "Salesmanship in print", asks: "Would a good salesman say this to a buyer face to face?"}

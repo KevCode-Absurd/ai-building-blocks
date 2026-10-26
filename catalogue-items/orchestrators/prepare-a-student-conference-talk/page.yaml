@@ -1,50 +1,86 @@
 new_slug: prepare-a-student-conference-talk
 name: Prepare a student conference talk
 headline: Prepare a student conference talk
-summary: Share the source files. Get a talk outline, speaking notes and rehearsal checklist.
+summary: Turn your finished student project into a timed conference talk. Get a slide-by-slide outline, speaker notes and a rehearsal checklist.
 job: speak-and-persuade
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A talk outline, speaking notes and rehearsal checklist. Share the completed student project, approved findings, audience, speaking time, accessibility needs and existing speaker notes. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI your finished project, your speaking time and who will be in the room. It builds a slide-by-slide outline with a time for each slide, writes speaker notes, then proofreads them in your own voice.
 explain: |-
-  A talk outline, speaking notes and rehearsal checklist.
+  A student talk goes wrong in one of two ways. It tries to say everything in the project and runs out of time. Or it hides the one finding that matters under background.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every result comes from the student project; planned rehearsal is distinct from observed delivery. Missing tools or evidence stay visible in the final summary.
+  This workflow starts with your time and your audience. It asks how many minutes you have, who is listening and how much they know. It then builds the talk around four things: the question you asked, how you looked for the answer, what you found and what you could not show. Each slide gets a time, so the total fits your slot. Speaker notes say what to say and what to point at.
+
+  Only findings from your project go in. A proofreading pass then checks names, numbers and plain wording, and keeps your voice. The rehearsal checklist is a plan for you to follow. It does not say you have rehearsed.
 when:
-  - You need a talk outline, speaking notes and rehearsal checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are giving a 10 or 15 minute talk at a student or undergraduate conference.
+  - You finished a project and do not know which parts to leave out.
+  - Your supervisor asked for a talk outline and speaker notes by next week.
+  - You have slides but no clear way to say them in the time you have.
+not_for:
+  - You are defending a thesis. Use the Prepare a thesis defence evidence brief workflow.
+  - You want slides built from a paper and result tables with every figure traced. Use the Build a research talk from checked figures workflow.
+  - You are making a poster. This workflow plans a spoken talk.
+  - Your project is not finished and has no results yet. Wait until you have findings to talk about.
 you_give:
-  - The completed student project, approved findings, audience, speaking time, accessibility needs and existing speaker notes.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your finished project, such as a report, paper or notes
+  - Your findings, the ones your supervisor has seen or approved
+  - How long you have, and how much of it is for questions
+  - Who will listen and how much they know about your field
+  - Any rules from the conference, such as slide limits or access needs (optional)
+  - Notes or slides you have already (optional)
 you_get:
-  - A talk outline, speaking notes and rehearsal checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A slide-by-slide outline with a time for each slide that adds up to your slot
+  - Speaker notes for each slide
+  - A rehearsal checklist with timing marks
+  - A proofread version of the outline and notes, in your voice
+  - A hand-back summary that names every gap
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini.
+  - Say your speaking time, how many minutes are for questions, and who will listen. Then attach your project.
+  - Read the outline and cut anything that does not help the one finding you want people to remember.
+  - Say the speaker notes out loud once with a timer. Move the slide times if the totals are wrong.
+  - Send the proofread version to your supervisor before the conference. You do the rehearsal. The checklist only plans it.
 how_it_works:
   - title: Presentation builder
-    text: Build a timed outline around the real project question, method, evidence and limitations, with speaker notes and a practical rehearsal checklist.
+    text: "Builds a timed outline around your question, method, findings and limits, with speaker notes and a rehearsal checklist. Uses only what is in your project. Hands step 2 the outline and notes. Check before moving on: slide times add up to your slot."
   - title: Proofreader
-    text: Check the actual outline and notes for exact names, numbers and accessible wording; preserve the student voice.
+    text: "Checks the outline and notes for names, numbers, spelling and plain wording. Keeps your voice. Lists each change so you can accept or refuse it. Records that no rehearsal has happened."
 output_shape: |-
-  Scope and source coverage
-  A talk outline, speaking notes and rehearsal checklist.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  BRIEF            <minutes | questions time | audience | rules>
+  OUTLINE          <slide | title that states the point | what is on it | minutes>, total <n>
+  SPEAKER NOTES    <slide | what to say | what to point at>
+  REHEARSAL        <run | what to check | time mark>
+  PROOFREAD        <each change | reason>
+  MISSING          <each gap and the slide it stops>
+  CHECKS MISSED    <one line each, or none>
+output_sample:
+  input:
+    - Your finished project and the findings you want to share
+    - Your speaking time and the time for questions
+    - Who will listen and how much they know
+    - Slide rules from the conference (optional)
+  prerequisites:
+    - An AI that can read your project, such as Claude, ChatGPT or Gemini
+    - The pack with its two component skills
+  output:
+    - name: Outline
+      contains: Each slide with a title that states its point, what goes on it and its time.
+    - name: Speaker notes
+      contains: For each slide, what to say in your own words and what to point at.
+    - name: Rehearsal checklist
+      contains: Practice runs with what to check each time and time marks to hit.
+    - name: Proofread changes
+      contains: Each change to names, numbers or wording, with a reason, so you can accept or refuse it.
+    - name: Hand-back summary
+      contains: Each saved file, every MISSING line and the checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every result comes from the student project; planned rehearsal is distinct from observed delivery.
+  - what: Time
+    how: Change the minutes. The outline cuts or keeps slides to fit, and each cut shows its reason.
+  - what: Audience
+    how: Say if listeners are in your field or not. The notes use more or fewer terms to match.
+  - what: Voice
+    how: Paste one paragraph you wrote. The notes follow how you write.
 judge:
   - Every result comes from the student project; planned rehearsal is distinct from observed delivery.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,11 +98,15 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read your project and write the outline. Use one that opens files if your project is a document.
+    - name: A slide tool such as PowerPoint or Google Slides (optional)
+      why: You build the slides there from the outline. This workflow does not make the slide file.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The talk length rules and the room setup from the conference page.
+    - A supervisor who has seen your findings.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Limits
+    meaning: What your project could not show, such as a small sample or one place only.
+  - term: Speaker notes
+    meaning: The words you plan to say for each slide, kept out of sight of the audience.

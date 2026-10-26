@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It models uncertain reserves and prices.
 new_slug: oil-and-gas-reserves-valuer
 name: Oil and gas reserves valuer
-summary: Give it reserve and cost data. Get the present value of the reserves,
-  such as PV-10.
+summary: Value oil and gas reserves from your volumes, costs and prices. You get PV-10, a yearly cash flow table and reserve life, with each step shown.
 job: money-and-investing
 headline: Oil and gas reserves valuer
-subhead: "A present value for oil and gas reserves, worked out step by step so
-  you can check every line. The headline figure is PV-10: all future net cash
-  flow, discounted at 10 percent a year."
+subhead: "A present value for oil and gas reserves, worked out step by step so you can check every line. The headline figure is PV-10: all future net cash flow, discounted at 10 percent a year."
 explain: |
   A present value for oil and gas reserves, worked out step by step so you can check every line. The headline figure is PV-10: all future net cash flow, discounted at 10 percent a year.
 
@@ -18,6 +15,10 @@ when:
   - A lender asks for the PV-10 of your proved reserves.
   - You want to see how value changes if oil prices drop.
   - You are comparing the value of 1P and 2P cases.
+not_for:
+  - You need a reserve report for an SEC filing or a lender. Ask a qualified reserves engineer to sign it off.
+  - You want the cost of closing wells and platforms. Use aro-computation, the decommissioning cost skill.
+  - You want to value a whole oil company. Use investment-analysis, or ask an analyst.
 you_give:
   - Reserve volumes by category
   - Production or decline data
@@ -29,7 +30,24 @@ you_get:
   - Reserve life in years
   - Notes on the pre-tax versus post-tax difference
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your reserve volumes, production or decline data, costs and price choice.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste your numbers. Say which price basis you want, such as a 12-month average or a forward curve.
+  - Ask for the valuation memo. If you want the script run, use an AI that can run code.
+  - Check each yearly line in the cash flow table against your own figures.
+  - Ask your AI to show the price sensitivity table before you use the result.
+output_sample:
+  input:
+    - "Your reserve volumes by category: proved, probable or possible"
+    - Production or decline data for the well or field
+    - Lifting, development and production tax costs
+    - Your price choice, such as a 12-month average or a forward curve
+  prerequisites:
+    - An AI that can run code, if you want the calculate.py script used for the math (optional)
+  output:
+    - name: Reserve Summary
+      contains: Proved, probable and possible volumes in barrels of oil equivalent, plus the reserve life index.
+    - name: Financial Metrics
+      contains: The PV-10 value, lifting cost per barrel of oil equivalent, and finding and development cost per barrel.
+    - name: Sensitivity
+      contains: A table showing how PV-10 changes when the oil price moves up or down by 10 dollars.

@@ -1,6 +1,6 @@
 new_slug: first-in-category-finder
 name: "First-in-category finder"
-summary: "Paste your market map and product. Get ranked categories you could lead, each tested for rivals, size and timing."
+summary: "Find a new product category you can lead when a rival owns your market. Paste your market map and get ranked options, each tested for fit."
 job: plan-strategy
 thinking: high
 thinking_why: "It splits a market many ways and judges each branch on four tests, so deeper thinking finds categories a quick pass would miss."
@@ -18,6 +18,10 @@ when:
   - You are third or lower and attacking the leaders is not working.
   - You have a product that does not fit any existing kind.
   - You want to name a space before a rival does.
+not_for:
+  - "You already lead your market and want to defend it: use a plain plan to protect your lead, not a new category."
+  - "You have no map of rivals yet: build one first with the Competitor white space mapper."
+  - "You already picked a category and need a name for it: use the Category name writer."
 
 you_give:
   - A map of who holds what in your market, such as the output of "Competitor white space mapper"
@@ -31,10 +35,34 @@ you_get:
   - Gaps you need to fill before you commit
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your market map and a short description of what you sell.
-  - Check the open test yourself with a quick search. If a rival already uses the word, the branch is taken.
-  - Take the top category into "Category name writer".
+  - Open a chat with your AI. Add the skill, or copy it and paste it in.
+  - Paste your market map and a short note on what you sell.
+  - "Ask three buyers the same question: what kind of product is this, in your words? Paste their answers in so the Different test is not a guess."
+  - Search the name of each top branch yourself. If a rival already uses the word, treat that branch as taken.
+  - Take the top category to the Category name writer.
+output_sample:
+  input:
+    - "Your market map: who holds what in your buyers' minds"
+    - What you sell, and to whom (optional)
+    - Your brand strengths and limits (optional)
+  prerequisites:
+    - A map of your rivals, such as the result from the Competitor white space mapper
+    - A web search, to check whether a rival already uses the name of a branch
+  output:
+    - name: First what?
+      contains: "The claim you had, which starts with better than, and the new claim: the first kind of product for a type of buyer."
+    - name: Candidate branches
+      contains: Eight to twelve narrower kinds of product, each with the market cuts used to make it.
+    - name: The four tests
+      contains: A score from 0 to 2 for different, open, big enough and timing, with a total and who pays.
+    - name: The top categories
+      contains: One or two choices written as the first kind for a buyer, why each wins, and when to drop it.
+    - name: Or join a bigger ladder
+      contains: The larger category and the alternative spot you could hold there, if the best branch is small.
+    - name: Missing
+      contains: Facts you still need to check before you commit.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: Asks first what

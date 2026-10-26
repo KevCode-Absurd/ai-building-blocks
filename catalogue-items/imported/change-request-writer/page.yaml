@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must think through what could go wrong.
 new_slug: change-request-writer
 name: Change request writer
-summary: Describe a system or process change. Get a change request with impact,
-  risks, rollback steps and who to tell.
+summary: Write a change request for a system or process change. Get impact, risks, a rollback plan and who to tell, ready for approval.
 job: document-work
 headline: Change request writer
-subhead: A formal change request for a system or process change, with impact,
-  risks, rollback steps and who to tell. Describe the change and you get a
-  document ready for approval.
+subhead: A formal change request for a system or process change, with impact, risks, rollback steps and who to tell. Describe the change and you get a document ready for approval.
 explain: |
   A formal change request for a system or process change, with impact, risks, rollback steps and who to tell. Describe the change and you get a document ready for approval.
 
@@ -18,6 +15,10 @@ when:
   - You are retiring a process and want to show you thought it through.
   - You must list risks and a rollback in one place.
   - A change touches several teams and you need to name who to inform.
+not_for:
+  - "You are fixing an outage that is already live: follow your team's incident process, then write the change record after."
+  - "You are making a small routine tweak to a setting: use your team's standard change procedure instead."
+  - "You need a plan for how people will adopt a new way of working: ask your manager or a change lead, as this only covers one change record."
 you_give:
   - A description of the change
   - Who is affected
@@ -30,7 +31,34 @@ you_get:
   - A communication and training plan
   - A list of people to tell
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text, then describe the change in a few lines.
+  - Add who is affected, how many people, and the planned date. Name who can roll it back if you know.
+  - Read the risks and the rollback plan first. Fix anything that does not match your real setup.
+  - Fill in any gaps your AI marked as missing, then send the request for approval.
+output_sample:
+  input:
+    - A short description of the change
+    - Who is affected, and roughly how many people
+    - Planned date and any limits on timing
+    - Why the change is needed (optional)
+    - Who can roll it back (optional)
+  output:
+    - name: Header
+      contains: Title, requester, date, priority and status of the request.
+    - name: Description
+      contains: What is changing and why.
+    - name: Business Justification
+      contains: Why the change is needed, such as cost, rules, speed or lower risk.
+    - name: Impact Analysis
+      contains: A table rating the effect on users, systems, processes and cost.
+    - name: Risk Assessment
+      contains: A table of risks with likelihood, impact and how to reduce each one.
+    - name: Implementation Plan
+      contains: Steps with an owner, a date and what each step depends on.
+    - name: Communication Plan
+      contains: Who to tell, what to say, how and when.
+    - name: Rollback Plan
+      contains: When to roll back, the steps to do it, and how to check it worked.
+    - name: Approvals Required
+      contains: A table of who must approve, their role and status.

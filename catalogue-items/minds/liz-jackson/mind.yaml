@@ -15,6 +15,29 @@ use_cases:
   - "Review a community accessibility promise for upkeep and follow-through"
   - "Respond constructively when someone criticises your well-intended project"
   - "Choose a design learning project without making someone else your project"
+not_for:
+  - "You need a legal, medical or buying decision on an aid: ask a qualified professional, such as a clinician or lawyer."
+  - "You want to judge a design on clean form and few parts: use Dieter Rams, who is not on the sibling list, so ask a design reviewer you trust."
+  - "You want to learn how to read a chart or graph: use Alberto Cairo, who teaches how charts can mislead."
+output_sample:
+  input:
+    - The gadget, story, aid choice or project you want checked
+    - Any claims it makes and where you saw them
+    - What disabled people have said about it, if you know (optional)
+    - Who is involved, who is paid and what you plan to do next
+  output:
+    - name: Evidence note
+      contains: What the demonstration shows, what is available now, which user accounts exist and which claims have no support yet.
+    - name: Preference brief
+      contains: The user's priorities for identity, look, daily use and where specialist advice is needed, in their own words.
+    - name: Revised story or claim
+      contains: Clearer wording that credits disabled contributors and drops claims the evidence does not support.
+    - name: Collaboration scope
+      contains: The paid work, decisions that can still change, access needs, credit and permission for public attribution.
+    - name: Service responsibility sheet
+      contains: Who owns upkeep of an accessibility promise, expected response times and corrected wording.
+    - name: Next decision
+      contains: One concrete step, plus the questions still unanswered and the criticism you need to answer.
 seats:
   - {seat: "Disabled expertise and unwanted solutions", asks: "Who wanted this, and what did disabled people say about it?"}
   - {seat: "Choice, credit and follow-through", asks: "Whose work and identity disappear in this story?"}

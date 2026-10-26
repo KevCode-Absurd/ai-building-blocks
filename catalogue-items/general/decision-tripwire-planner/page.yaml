@@ -1,6 +1,6 @@
 new_slug: decision-tripwire-planner
 name: "Decision options and tripwire planner"
-summary: "Paste a yes-or-no choice. Get three real options, a test of your hunch and a stop line set in advance."
+summary: "Plan a yes-or-no decision: get three real options, the case against your favourite and a stop line set before you start."
 job: think-and-decide
 thinking: medium
 thinking_why: "It follows four fixed moves but has to come up with real alternatives and honest counterarguments."
@@ -17,6 +17,10 @@ when:
   - You are asking "should I or shouldn't I" about a job, hire, price or project.
   - You have already half-decided and want to test it fairly.
   - You want a clear signal in advance for when to change course.
+not_for:
+  - "The choice is already final or is a plain fact question: ask your AI for a direct answer instead."
+  - "You need to test one idea with real people: use the Smallest test picker."
+  - "You want only the strongest argument against a plan: use the Case-against writer."
 
 you_give:
   - The choice, in a sentence, and when you must decide
@@ -34,6 +38,30 @@ how_to_use:
   - Read the added options and cross out any that are not real for you. Ask for more if needed.
   - Read the case against your favourite. Mark anything you cannot answer.
   - Write the tripwire in your calendar or notes, and tell the person named in the fallback.
+output_sample:
+  input:
+    - Your choice in one sentence, and the date you must decide by
+    - What pulls you each way
+    - Which way you lean
+    - Limits such as money, time or things you will not do (optional)
+    - One or two people you trust (optional)
+  output:
+    - name: The choice
+      contains: Your choice restated in one sentence, with what pushes you toward it and away from it.
+    - name: The options
+      contains: At least three real options, two beyond yes or no, with an idea borrowed from another field.
+    - name: The case against your favourite
+      contains: At least four specific reasons your favourite might fail, with open points marked.
+    - name: Cheap checks
+      contains: Ways to test your key assumptions this week, such as a call or a small trial.
+    - name: Stepping back
+      contains: How each option may feel in ten minutes, ten months and ten years.
+    - name: The tripwire
+      contains: One number or date that forces a rethink, and what you will do when it is hit.
+    - name: If you are wrong
+      contains: A fallback plan, the cost to switch and a named person to ask for a second view.
+    - name: Missing and checks missed
+      contains: Facts still unknown and any checks the plan did not pass, or none.
 
 how_it_works:
   - title: Restates the choice

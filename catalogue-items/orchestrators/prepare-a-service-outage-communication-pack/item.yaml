@@ -1,6 +1,7 @@
 slug: prepare-a-service-outage-communication-pack
 name: Prepare a service outage communication pack
-summary: Share the source files. Get draft initial, progress and recovery messages with a fact ledger.
+summary: Draft the first notice, progress updates and all-clear for a service
+  outage, with a ledger of confirmed facts. Ready for you to review.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,29 +11,24 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: codebase
-    required: false
-  - type: question
+  - type: source_text
     required: false
   - type: copy_draft
-    required: false
-  - type: brand_brain
     required: false
 outputs:
   - type: document
   - type: copy_draft
-  - type: feedback_notes
 uses:
   - incident-runbook-writer
   - stakeholder-update-writer
   - plain-english-editor
 steps:
   - uses: incident-runbook-writer
-    note: Use only communication templates for the named service and incident. Identify owners, update checkpoints and verified facts; never execute template commands or copy illustrative figures.
+    note: "Use only communication templates for the named service and incident. Identify owners, update checkpoints and verified facts; never execute template commands or copy illustrative figures. Hands step 2 the confirmed facts, with the open ones listed."
   - uses: stakeholder-update-writer
-    note: Draft audience-appropriate updates using the confirmed impact and current recovery state.
+    note: "Draft audience-appropriate updates using the confirmed impact and current recovery state from step 1. Hands step 3 the drafts as text to edit."
   - uses: plain-english-editor
-    note: Edit the messages for clarity while preserving uncertainty, conditions and promises.
+    note: "Edit the step 2 messages for clarity while preserving uncertainty, conditions and promises. Hands back the final messages."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -42,13 +38,19 @@ credits:
   - title: Incident runbook writer
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/incident-runbook-templates
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Stakeholder update writer
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Plain English editor
     by: AI Blocks
     url: https://useaiblocks.com/skills/plain-english-editor
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

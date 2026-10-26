@@ -1,6 +1,6 @@
 new_slug: guess-test-metrics
 name: "Test your riskiest guess and measure what counts"
-summary: "Give it your product idea. Get the riskiest guess, the smallest test, honest numbers and the root cause of a miss."
+summary: "Test your product idea before you build more. Find the riskiest guess, run the smallest test, read the numbers honestly and trace a miss to its cause."
 job: test-an-idea
 thinking: high
 thinking_why: "It has to tell real progress from numbers that only look good. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You have a product idea and want evidence before you build more of it.
   - Your numbers are going up but you can't tell if the business is better off.
   - A test or launch missed its target and you need to know why before you try again.
+not_for:
+  - "You have no customers or visitors to test on yet: use the Seven-question startup scorer first."
+  - "You want to know if your business survives a bad year: use the Bad-year break-even tester."
+  - "Your ad sales dropped and you need the reason: use the Ad sales drop analyst."
 
 you_give:
   - Your product idea and the guesses it depends on
@@ -36,6 +40,24 @@ how_to_use:
   - Describe your idea. It runs step 1 and stops.
   - Run the test with real customers and collect the numbers it asked for.
   - Bring the numbers back and say "carry on from step 2". Add your notes on what happened.
+output_sample:
+  input:
+    - Your product idea and the guesses it depends on
+    - Your current plan (optional)
+    - Your test numbers, such as visits, sign-ups and sales by customer group and week
+    - Notes from customers or the team on what happened (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+    - Time to run a real test with customers between step 1 and step 2
+  output:
+    - name: "Step 1: MVP experiment planner"
+      contains: The riskiest guess, the smallest test, the pass line and a rule for changing direction or keeping going.
+    - name: "Step 2: Vanity metric fixer"
+      contains: Your numbers marked as vanity or real, with a per-customer or per-group rate in place of each.
+    - name: "Step 3: Root cause finder"
+      contains: A chain of whys checked against facts, the cause you can fix and a prevention check.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Plan the smallest test

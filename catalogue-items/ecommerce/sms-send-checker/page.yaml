@@ -1,6 +1,6 @@
 new_slug: sms-send-checker
 name: "SMS send checker"
-summary: "Paste a text and send plan. Get its cost, rule flags and a score out of 100."
+summary: "Check your SMS before you send it. Get the character count, send cost, rule flags and a send-readiness score out of 100 for your text."
 job: write-emails
 thinking: medium
 thinking_why: "It counts characters, adds up costs and runs a fixed list of rule checks."
@@ -17,6 +17,10 @@ when:
   - You wrote a text and want to check it before you send it to your whole list.
   - You are about to add images to your texts and want to know if they pay.
   - You set up a flow text, such as an abandoned cart text, and want to confirm it follows the rules.
+not_for:
+  - "You want a plan for the whole month of texts: use the SMS send planner if you have it, or a simple calendar."
+  - "You need legal sign-off on consent or quiet hours: ask a qualified person in your region."
+  - "You want to write a long marketing message or newsletter: write it as an email instead."
 
 you_give:
   - The text itself, exactly as it will be sent
@@ -37,6 +41,28 @@ how_to_use:
   - Add list size, cost per text, send time and time zone, and how people opted in.
   - Fix every Stop flag first, then the rest in order.
   - Run it again on the fixed text before you send.
+output_sample:
+  input:
+    - Your text, exactly as it will be sent
+    - Your list size and cost per text
+    - Send day, time and time zone
+    - How people opted in (optional)
+    - Revenue from your last image and plain texts (optional)
+  output:
+    - name: Text count
+      contains: The character count, the number of billed parts and whether emoji are in the text.
+    - name: Cost
+      contains: List size times cost per text, with the sum shown and the image cost if used.
+    - name: Image break-even
+      contains: Net profit with and without an image, and whether the image pays or was not tested.
+    - name: Rule flags
+      contains: Each problem marked Stop, Fix or Polish, with what it means and how to fix it.
+    - name: Urgent news check
+      contains: Whether the news is urgent enough for a text or should move to email.
+    - name: Timing
+      contains: Your send time compared with the best windows, and how it pairs with the email.
+    - name: Score
+      contains: A send-readiness score out of 100 with the sum shown and any checks not run.
 
 how_it_works:
   - title: Counts the characters

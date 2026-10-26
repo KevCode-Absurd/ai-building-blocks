@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks questions and fills files one at a time.
 new_slug: new-project-planner
 name: New project planner
-summary: Give it a vague app idea. Get eight planning files your AI reads each
-  session to stay on track.
+summary: "Turn a rough app idea into eight planning files. Your AI reads them each session so a new project plan stays on track. Count: ready to build."
 job: build-product
 headline: New project planner
-subhead: Eight planning files for a brand new app, built from a vague idea. Your
-  AI reads them at the start of each session, so it remembers what you agreed
-  and stops drifting off course.
+subhead: Eight planning files for a brand new app, built from a vague idea. Your AI reads them at the start of each session, so it remembers what you agreed and stops drifting off course.
 explain: |
   Eight planning files for a brand new app, built from a vague idea. Your AI reads them at the start of each session, so it remembers what you agreed and stops drifting off course.
 
@@ -18,6 +15,10 @@ when:
   - Your AI keeps forgetting decisions halfway through a build.
   - You change plans mid-project and files fall out of date.
   - You want to keep control while AI writes the code.
+not_for:
+  - You already have code. This planner is for brand new projects only, so ask your AI to read your code and write notes by hand instead.
+  - You only want a quick one-page idea check. Ask your AI a few plain questions in chat, no files needed.
+  - You want your AI to pick the design for you. This skill always asks for your style and colours first.
 you_give:
   - Your project idea, even a rough one
   - Style and colour preferences
@@ -29,7 +30,35 @@ you_get:
   - A progress tracker
   - Files kept in step when plans change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. Paste in the skill text from this page. No setup is needed.
+  - Type your app idea in one or two lines. A rough idea is fine.
+  - Answer its questions. It writes one file at a time and waits for your yes before the next.
+  - When it reaches Design.md, pick your style and colours. It will not choose for you.
+  - Read the final summary and add any rules. Then say what to change before it builds.
+  - Save all eight files in your project folder. To start building, hand the confirmed ImplementationPlan.md and Rules.md to your AI. Start each new chat by asking it to read all eight files first.
+output_sample:
+  input:
+    - Your app idea, even a rough one-line idea
+    - Your answers to its questions
+    - Your style and colour choices for the design file
+    - Tech choices you already made (optional)
+  prerequisites:
+    - A new project with no code yet
+    - An AI chat that can create and keep files, or a place to save the text it writes
+  output:
+    - name: PRD.md
+      contains: What the app does, who it is for, the features, goals and what you need from it.
+    - name: TechSpec.md
+      contains: The tech stack, how the parts fit together, any outside services and the database choice.
+    - name: AppFlow.md
+      contains: The steps a user takes through the app and how they move between screens.
+    - name: Schema.md
+      contains: The data the app stores, as tables and how they link.
+    - name: ImplementationPlan.md
+      contains: The step-by-step build order your AI follows once you approve the plan.
+    - name: Rules.md
+      contains: Coding standards and limits you set, such as no outside libraries.
+    - name: Tracker.md
+      contains: A running list of finished and pending work, only added to, never rewritten.
+    - name: Design.md
+      contains: Your chosen style, colour palette, type and spacing, written after you answer its questions.

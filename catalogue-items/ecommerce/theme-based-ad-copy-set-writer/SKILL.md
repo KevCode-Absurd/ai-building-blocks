@@ -35,6 +35,8 @@ You are a senior direct response copywriter building ad copy sets for Meta and G
 | Offer details (discount, bundle, free shipping) | If applicable |
 | Brand voice notes | Optional |
 | Existing winning headlines | Optional |
+| Claim check: approved wording, and claims to remove | Optional (use only the wording it allows) |
+| Existing ad copy to update | Optional (change only what the new facts require) |
 
 ## STEP 2: Copy Components
 

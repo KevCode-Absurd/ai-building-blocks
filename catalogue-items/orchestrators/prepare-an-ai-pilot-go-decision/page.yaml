@@ -1,53 +1,87 @@
 new_slug: prepare-an-ai-pilot-go-decision
 name: Prepare an AI pilot go decision
 headline: Prepare an AI pilot go decision
-summary: Share the source files. Get a pilot evidence brief, data quality gaps and go stop checklist result.
+summary: Check your AI pilot results against the baseline and your go or stop checklist. Get an evidence brief, the data gaps and a clear go, wait or stop call.
 job: set-up-ai
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A pilot evidence brief, data quality gaps and go stop checklist result. Share the bounded AI pilot hypothesis, approved baseline, actual test cases and results, budget and existing ordered go stop checklist. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the pilot goal, the baseline you measured before, the test cases with results, the cost and your go or stop checklist. It checks the evidence, finds the data gaps and runs the checklist to a go, wait or stop call.
 explain: |-
-  A pilot evidence brief, data quality gaps and go stop checklist result.
+  An AI pilot usually ends with a good demo and a vague feeling. The team says it worked. Nobody can say against what, on how many cases, or at what cost.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A prototype demo is distinct from representative evaluation; absent baseline, privacy or mandatory checks blocks the affected decision. Missing tools or evidence stay visible in the final summary.
+  This workflow makes the pilot answer three questions in order. First, was the goal testable: did you say what you would see, and what you measured before, or did the goal move after the results came in? Second, do the numbers hold up: how many cases, how many failed, what each cost and whether the results add up. Third, does the evidence pass your own go or stop checklist, item by item.
+
+  A demo on hand-picked examples is not a test on typical work, and the workflow says so. An unknown item counts as a fail until someone finds the fact. It makes no decision and changes no budget. It prepares the call for the person who owns it.
 when:
-  - You need a pilot evidence brief, data quality gaps and go stop checklist result.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You ran an AI pilot for a few weeks and need to decide whether to roll it out.
+  - A vendor or a colleague says the pilot worked and you want to see the numbers behind it.
+  - You need a one-page evidence brief for a manager, a board or a budget holder.
+  - Your pilot has no baseline or no written checklist and you want to know what is missing before you decide.
+not_for:
+  - You have not started the pilot. Use the AI build-or-buy advisor to decide what to try first.
+  - You are checking one AI agent before it goes live. Use the Review an agent before launch workflow.
+  - You only need to check one results sheet. Use the Spreadsheet checker.
+  - You want the decision made for you. This workflow prepares the evidence. A person decides.
 you_give:
-  - The bounded AI pilot hypothesis, approved baseline, actual test cases and results, budget and existing ordered go stop checklist.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - The pilot goal in one or two sentences, written before the pilot if you have it
+  - The baseline: how the work was done and measured before AI, with dates
+  - The test cases and results, as a sheet or a table, with failures included
+  - What the pilot cost and what rollout would cost (optional)
+  - Your go or stop checklist, with the pass line for each item
 you_get:
-  - A pilot evidence brief, data quality gaps and go stop checklist result.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A pilot evidence brief on what you tested, against what baseline, and what the numbers show
+  - A list of data gaps, such as no baseline, a small sample or failed cases left out
+  - Your checklist run item by item, with evidence and a pass, fail or unknown mark
+  - A go, wait or stop call with the reason, and the one fact that would change it
+  - A hand-back summary with every gap named
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini. Use one that can open spreadsheets if your results are in a sheet.
+  - Attach the results sheet. Paste the goal, the baseline, the costs and your checklist.
+  - After step 1, check that the goal was written before the results. Say so if it was changed afterwards.
+  - After step 2, check the case count and the failed cases against your own sheet. Fix any number that is wrong.
+  - After step 3, read each unknown. Find the fact, then run the checklist again. A person makes the final call.
 how_it_works:
   - title: Hypothesis-first design planner
-    text: Review the pilot as a testable hypothesis with predeclared observable signals; preserve actual baseline and avoid retrofitting success criteria.
+    text: "Restates the pilot as something you could prove wrong, with the signals you said you would watch and the baseline. It does not rewrite the goal to fit the results. Hands step 2 the goal and the signals. Check before moving on: the goal and the baseline are written, or marked MISSING."
   - title: Spreadsheet checker
-    text: Inspect the actual evaluation case table, denominators, costs, failures and result calculations; distinguish measured performance from anecdotes.
+    text: "Reads your case table. Checks how many cases, how many failed, costs and totals. Separates measured results from stories. Hands step 3 a list of checked figures and data gaps."
   - title: Decision checklist runner
-    text: Apply the existing ordered pilot approval checklist to the evidence. Retain unknown mandatory items and stop rules; no deployment or budget change occurs.
+    text: "Runs your go or stop checklist in order against the evidence. Marks each item pass, fail or unknown. An unknown counts as a fail. A failed stop item means stop. Makes no change to any budget or rollout."
 output_shape: |-
-  Scope and source coverage
-  A pilot evidence brief, data quality gaps and go stop checklist result.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  PILOT GOAL      <goal | baseline and date | signals watched | written before or after results>
+  EVIDENCE        <cases run | failed | measure | result | cost>, sources named
+  DATA GAPS       <gap | what it affects | how to close it>
+  CHECKLIST       <item | evidence | pass, fail or unknown>
+  CALL            <go, wait or stop | reason | the fact that would change it>
+  MISSING         <each gap and the item it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - The pilot goal, in one or two sentences
+    - The baseline from before the pilot, with dates
+    - Your test cases and results, including the failures
+    - Your go or stop checklist with a pass line for each item
+  prerequisites:
+    - An AI that can read a spreadsheet, if your results are in a sheet
+    - The pack with its three component skills
+  output:
+    - name: Pilot evidence brief
+      contains: The goal, the baseline, the signals watched and what the numbers show, with sources named.
+    - name: Data gaps
+      contains: Missing baselines, small samples or left-out failures, each with what it affects and how to close it.
+    - name: Checklist result
+      contains: Each item with its evidence and a pass, fail or unknown mark, and the stop rule result.
+    - name: Call
+      contains: Go, wait or stop, the reason in one line, and the one fact that would change it.
+    - name: Hand-back summary
+      contains: Each saved file, every MISSING line and the checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: A prototype demo is distinct from representative evaluation; absent baseline, privacy or mandatory checks blocks the affected decision.
+  - what: Reader
+    how: Say who reads the brief, such as a manager or a board. The brief uses their words and level of detail.
+  - what: Checklist
+    how: Paste your own list. If you have none, the AI marks the checklist MISSING and does not write a pass line for you.
+  - what: Cost
+    how: Add the rollout cost if you know it. The brief then compares it with what the pilot saved.
 judge:
   - A prototype demo is distinct from representative evaluation; absent baseline, privacy or mandatory checks blocks the affected decision.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -65,11 +99,17 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can open your results sheet and check the totals. In plain chat, paste the table as text.
+    - name: A spreadsheet app such as Excel or Google Sheets (optional)
+      why: Lets you recalculate the totals yourself and compare them with the AI's.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The written goal from before the pilot started.
+    - A named person who owns the go or stop call.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Baseline
+    meaning: How the work was done and measured before you used AI. You compare the pilot with it.
+  - term: Pilot
+    meaning: A small, time-boxed trial of AI on real work before you roll it out.
+  - term: Stop item
+    meaning: A checklist item where a fail means the answer is no, whatever else passes.

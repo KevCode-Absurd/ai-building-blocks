@@ -1,50 +1,60 @@
 new_slug: long-term-principles-writer
 name: Long-term principles writer
-summary: Describe your business and its hard trade-offs. Get a short list of plain promises on how you will choose.
+summary: Turn your hardest trade-offs into up to eight plain promises, each with its cost named, so your team and owners know how you will choose.
 job: plan-strategy
 thinking: medium
 thinking_why: It turns your trade-offs into promises and tests each, but the format is fixed.
 headline: Long-term principles writer
-subhead: Describe your business, who you answer to and the choices where the short and long term pull apart. It turns each into one plain promise that names its cost, covers seven areas and drops any promise you would break in a bad year. You get a list of eight promises or fewer.
+subhead: Describe your business, who you answer to and the choices where today and later pull apart. It turns each choice into one plain promise and names what the promise costs. You get up to eight promises. Any you would break in a bad year are dropped.
 explain: |
-  A team that has not said how it will choose will decide each hard case from scratch, under pressure, and usually in favour of this quarter. A short list of promises, written in advance, tells your team and your owners what to expect and gives you something to be held to.
+  A team that has not said how it will choose decides each hard case from scratch, under pressure, and usually in favour of this quarter. A short list of promises, written ahead of time, tells your team and your owners what to expect. It also gives you something to be held to.
 
-  This skill finds the forks where short and long pull apart. It writes a promise for each, and every promise must name its cost: if keeping it costs nothing, it is a slogan. It covers customers, time horizon, how you measure, failure and bold bets, cash and cost, people, and how you will explain your reasoning. It ends with a plain statement that this is your approach, not the only right one.
+  This skill finds the forks where short and long term pull apart. It writes one promise for each fork. Every promise must name its cost. If keeping a promise costs nothing, it is a slogan, so it gets rewritten or cut. The list covers customers, time, how you measure, failure and bold bets, cash, people and how you will explain your reasoning.
+
+  The shape follows the list of commitments in Jeff Bezos's 1997 letter to Amazon shareholders, which also says the approach is theirs and not the only right one. The cost line, the seven-area check and the bad-year test are our additions.
 when:
-  - You are writing to your team or owners and want to say how you will decide.
-  - Your team keeps trading long-term trust for a short-term number.
-  - A new leader or investor asks what you stand for.
+  - A new investor or leader asks what you stand for, and you have nothing written down.
+  - Your team keeps giving up long-term trust to hit this month's number.
+  - You are writing to staff or owners and want to say how you will decide hard cases.
+  - You passed on a sale last year because it would have hurt you later, and want that to be a rule, not luck.
+not_for:
+  - "You want one rule from one mistake: use the Mistake-to-principle writer."
+  - "You are writing rules for a space, a service or an app, such as a shop or a community: use the Place principles writer."
+  - "You are weighing one choice today, not a standing list: use the Decision options and tripwire planner."
+  - "You want to pick the numbers that show whether you keep your promises: use the Input metric picker."
 you_give:
-  - Your business and who you answer to
-  - Past hard choices where the short and long term pulled apart (optional)
-  - What you would not do even in a bad year (optional)
+  - A short description of your business and who you answer to, such as owners, partners, staff or customers
+  - Two or three past choices where you gave up something now for later, or wish you had (optional)
+  - What you would never do, even in a bad year (optional)
+  - A line or two on what your worst year would look like (optional)
 you_get:
-  - Up to eight plain promises
-  - The cost each one names
-  - The seven areas covered or marked missing
-  - A line on how you will explain bold choices
-  - A short note that this is your way
+  - Up to eight promises, each starting with what you will do
+  - A cost line under every promise, including the one on explaining your reasoning
+  - "A check that seven areas are covered: customers, time, measures, failure, cash, people and sharing reasons"
+  - A list of promises dropped because you would not keep them in a bad year
+  - A closing line that this is your way, not the only right way
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe your business and who you answer to.
-  - List two or three choices where you gave up something today for later, or wish you had.
-  - "Read each promise and ask: would I keep this in my worst year?"
-  - Take the list to "Annual letter writer".
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it into a new chat. It needs no files, web access or paid tools.
+  - "Describe your business and who will read the list: owners, staff or customers."
+  - List two or three choices where today and later pulled apart. Real choices give sharper promises than general values.
+  - If you can, describe your worst year. The skill uses it to test each promise.
+  - "Read each promise and ask: would I keep this when cash is tight? Cross out any you would not."
+  - Take the final list to the Annual letter writer, or to the Input metric picker to measure each promise.
 how_it_works:
   - title: Finds the forks
-    text: The places where short and long term pull apart.
+    text: Lists five to eight places where the short-term pull and the long-term pull differ in your business.
   - title: Writes a promise for each
-    text: One plain sentence starting with what you will do.
+    text: One sentence that starts with what you will do and the pressure you will do it under.
   - title: Names the cost
-    text: What each promise may cost you in the short term.
+    text: Adds a Cost line to every promise. A promise with no cost is cut or rewritten.
   - title: Covers seven areas
-    text: Customers, time, measures, failure, cash, people and sharing reasoning.
+    text: Checks customers, time, measures, failure, cash, people and sharing reasons. Adds a promise for any gap, or marks it MISSING.
   - title: Adds the reasoning promise
-    text: How you will explain bold choices to those who back you.
+    text: You will explain bold choices so others can judge them. It also gets a cost, such as time spent or exposure to criticism.
   - title: Runs the bad-year test
-    text: Drops any promise you would not keep.
-  - title: States it is yours
-    text: A line that this is your approach, not the only right one.
+    text: "Asks of each promise: would I keep this with cash tight? Drops the ones that fail and says why."
+  - title: Trims and closes
+    text: Keeps eight or fewer, ends with a line saying this is your way, then lists any checks it still misses.
 output_shape: |
   FORKS
   <short-term pull | long-term pull>
@@ -67,6 +77,24 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+output_sample:
+  input:
+    - Your business and who you answer to
+    - Two or three past hard choices (optional)
+    - What you would not do in a bad year (optional)
+  output:
+    - name: FORKS
+      contains: Five to eight places where the short-term pull and the long-term pull differ in your business.
+    - name: PROMISES
+      contains: Up to eight lines that start 'We will', each with the pressure it holds against and a Cost line.
+    - name: AREAS COVERED
+      contains: A check across customers, time, measures, failure, cash and cost, people and sharing reasons.
+    - name: DROPPED
+      contains: Any promise you would not keep in a bad year, with the reason.
+    - name: OUR WAY
+      contains: One or two sentences saying this is your approach, not the only right one.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts you did not give, and any check the draft still fails.
 tweaks:
   - what: The forks you give
     how: Real past choices make the promises sharper than general values.
@@ -104,3 +132,7 @@ works_best_with:
 terms:
   - term: Promise
     meaning: A plain statement of what you will do when forced to choose, with its cost named.
+  - term: Fork
+    meaning: A choice where what helps this quarter and what helps in five years point different ways.
+  - term: Bad-year test
+    meaning: Asking whether you would still keep a promise in your worst year, with cash tight.

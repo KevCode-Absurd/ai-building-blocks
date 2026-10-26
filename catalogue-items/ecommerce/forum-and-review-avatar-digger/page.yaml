@@ -1,6 +1,6 @@
 new_slug: forum-and-review-avatar-digger
 name: "Forum and review avatar digger"
-summary: "Give it your product and top buyer group. Get a 60-minute plan, quote file and buyer sketch."
+summary: "Plan a 60-minute hunt for what your buyers say on forums and Amazon reviews. Paste quotes in and get a one-page buyer sketch in their words."
 job: understand-customers
 thinking: medium
 thinking_why: "It mostly plans, marks up text you paste and keeps every line tied to a quote. A mid-size model does that well."
@@ -17,6 +17,10 @@ when:
   - You sell a product and your ads or page sound generic, and you cannot say who the buyer is in 30 seconds.
   - You are about to write ads, a product page or an email flow and want the buyer's own words first.
   - Your first ads did not sell and you suspect you are talking to the wrong person, or in the wrong way.
+not_for:
+  - "You sell a brand-new kind of product with little forum chatter: talk to real customers on calls instead."
+  - "You want to split rival reviews by star rating: use the Star-rating review miner."
+  - "You want to check your ads and page against a buyer sketch you already have: use the Avatar fit checker."
 
 you_give:
   - Your product and the problem it solves
@@ -35,6 +39,31 @@ how_to_use:
   - Set a timer for 60 minutes. Spend 30 on public forums such as Reddit and 30 on Amazon reviews, using the search phrases it gives you.
   - Read each post word for word. Paste the strongest lines into the chat with no usernames, then ask it to mark them up.
   - Ask for the one-page sketch. Check that every line has a quote, then hold it next to your current ads and page.
+output_sample:
+  input:
+    - Your product and the problem it solves
+    - The age range and gender of your biggest rival's buyers (optional)
+    - Forum posts and Amazon reviews you read and paste in, with names removed
+    - An order export (optional)
+    - Your current ads and product page (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini
+    - About 60 minutes to read forums and reviews by hand
+  output:
+    - name: SEARCH PHRASES
+      contains: Ten phrases written the way your buyer would type them, each ending in Reddit or a niche forum name.
+    - name: QUOTE FILE
+      contains: Your pasted quotes with no names, each marked with the feeling, the fix already tried and the situation.
+    - name: BUYER SKETCH
+      contains: One page on who the buyer is, what happened, what they tried, what they fear and what they would wish for.
+    - name: 10 phrases in their words
+      contains: Ten lines the buyer would really say, each resting on a pasted quote.
+    - name: Gaps
+      contains: Any line with no quote behind it, marked as a guess until you find one.
+    - name: NEXT
+      contains: One suggested next step, such as repeating the hour for a second buyer group.
+    - name: CHECKS MISSED
+      contains: Any checks the result failed, or none.
 
 how_it_works:
   - title: Warms up with five questions

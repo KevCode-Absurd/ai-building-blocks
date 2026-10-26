@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It weighs code and change history to rank what to fix.
 new_slug: tech-debt-prioritiser
 name: Tech debt prioritiser
-summary: Point it at your code. Get a ranked list of debt that slows you down,
-  with cost and small fixes.
+summary: Find the tech debt that slows your team most. Get a ranked list from your code and change history, with cost, effort and quick fixes.
 job: build-software
 headline: Tech debt prioritiser
-subhead: A ranked list of the code problems that slow your team most, with what
-  each costs and a small fix you can start this week.
+subhead: A ranked list of the code problems that slow your team most, with what each costs and a small fix you can start this week.
 explain: |
   A ranked list of the code problems that slow your team most, with what each costs and a small fix you can start this week. You stop arguing about what is messy and see what is worth fixing first.
 
@@ -18,6 +16,10 @@ when:
   - You inherited old code and want to know where to start.
   - Bugs keep appearing in the same files.
   - You are planning a sprint and want one useful clean-up item.
+not_for:
+  - "Your project is brand new with no change history: start with a plain code review by a teammate instead."
+  - "You only need to know why tests fail: read your bug tracker or your CI report instead."
+  - "You want the code changed for you: this plans fixes only, so ask a developer or your AI to make each fix."
 you_give:
   - Access to the repository
   - Recent bug or incident history (optional)
@@ -29,8 +31,33 @@ you_get:
   - Quick wins marked
   - A staged fix plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files and history.
+  - Open your AI in a tool that can read your project files and change history. Paste in the skill instructions.
+  - Add the repository. Also add recent bug history, team size and the cost of an engineer hour, if you have them.
+  - Tell your AI which areas you already worry about, if any.
+  - Ask it to run the full debt analysis. It reviews and plans only. It changes no code.
+  - Check that any cost figure comes from your own data. Items with no data should say unknown.
+  - Pick one quick win from the list and start it this week.
+output_sample:
+  input:
+    - Access to your code and its change history
+    - Recent bug or incident history (optional)
+    - Team size and cost of an engineer hour (optional)
+    - Areas you already worry about (optional)
+  prerequisites:
+    - An AI that can read your project files and history
+    - Optional tools like SonarQube, Codecov or Dependabot need their own accounts, and some may cost money
+  output:
+    - name: Debt Inventory
+      contains: "Every debt item sorted by type: code, design, tests, documents and setup, each with what was found."
+    - name: Impact Analysis
+      contains: The cost of each item in lost time or risk. Missing data is marked unknown, not guessed.
+    - name: Prioritized Roadmap
+      contains: Items ranked by impact against effort, laid out in stages over the coming months.
+    - name: Quick Wins
+      contains: Small fixes your team can start this sprint.
+    - name: Implementation Guide
+      contains: Step-by-step ways to make each change in small, safe pieces.
+    - name: Prevention Plan
+      contains: Checks and habits that stop new debt from piling up.
+    - name: ROI Projections
+      contains: Expected time saved against effort spent, built only from your own numbers.

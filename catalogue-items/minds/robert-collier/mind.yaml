@@ -16,6 +16,27 @@ use_cases:
   - "Plan a short follow-up series that adds a new reason each time instead of repeating"
   - "Write a polite payment reminder that keeps the customer's goodwill"
   - "Write a fundraising or membership letter that makes the reader want to say yes"
+not_for:
+  - "You need ad tests, coded replies or a way to track what sells: use the Claude Hopkins mind."
+  - "You need a long sales page with a deep dive on one buyer worry: use the Clayton Makepeace mind."
+  - "You need a witty envelope or a letter for a magazine offer: use the Bill Jayme mind."
+output_sample:
+  input:
+    - Your letter, email or pitch, or a plain note on what you want to write
+    - Who the reader is and what you want them to do
+    - Your offer and any proof you have, such as past customer comments (optional)
+    - Replies you have had so far (optional)
+  output:
+    - name: Reader and bait
+      contains: What the reader is likely thinking about and which want your offer can meet.
+    - name: Sample openers
+      contains: Two or three opening lines, each aimed at a different kind of reader.
+    - name: First paragraph rewrite
+      contains: A new first paragraph that starts with the reader and then moves to your offer.
+    - name: Lines to cut
+      contains: Lines that start with you, your company or your price, or promise too much.
+    - name: What to check against real replies
+      contains: A short list of things to watch in your replies after you send it.
 seats:
   - {seat: "Join the conversation in their head", asks: "What is this reader already thinking about when our message arrives, and how do we start there?"}
   - {seat: "The reader's wants", asks: "What bait will they bite on, and how does our offer move them closer to it?"}

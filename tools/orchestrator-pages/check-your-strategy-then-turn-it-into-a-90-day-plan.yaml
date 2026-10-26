@@ -1,6 +1,6 @@
 new_slug: check-your-strategy-then-turn-it-into-a-90-day-plan
 name: Check your strategy, then turn it into a 90-day plan
-summary: Give it your strategy. Get its hollow parts, a marketing plan and a 90-day plan with owners.
+summary: Check your strategy for hollow parts, then get a marketing plan and a 90-day plan with owners, weekly steps and check-ins your team can start on Monday.
 job: plan-strategy
 thinking: high
 thinking_why: The check has to be blunt and the plans have to stay consistent. Use your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a strategy or goal on paper and no plan to carry it out.
   - Your team nods at the strategy and then does different things.
   - You need a 90-day plan with owners to share on Monday.
+not_for:
+  - "Your strategy is already agreed and running: use the marketing-plan-writer skill alone if you only need a channel plan."
+  - "You have no strategy or goal on paper yet: write a short goal and the problem you face first, then come back."
+  - "You want one quick idea or a single ad: ask your AI for that directly, not a full plan."
 you_give:
   - Your strategy, goal or plan, as it stands today
   - Your business, who you sell to and what you sell
@@ -26,10 +30,31 @@ you_get:
   - A marketing plan by stage with a 90-day roadmap and a 12-month outlook
   - A 90-day plan with workstreams, owners, weekly milestones, check-ins and risks
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste the strategy as it is, even if it is messy. Do not tidy it first.
-  - At the pause, fix the hollow parts and write the half-page brief before you go on.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md". It needs a setup that can read and save files.
+  - Paste your strategy as it is, even if it is messy. Do not tidy it first.
+  - "At the pause, fix the parts the check called hollow. Then write a half-page brief: the problem, your policy, who you sell to and your budget."
+  - Say go on. Read the marketing plan, then the 90-day plan, and check each owner and date before you share it.
+output_sample:
+  input:
+    - Your strategy, goal or plan as it stands today
+    - Your business, who you sell to and what you sell
+    - Your budget and team size
+    - What is already running (optional)
+    - Your brand file (optional)
+  prerequisites:
+    - An AI that can read the handoff folder and save files, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Strategy check"
+      contains: The diagnosis, guiding policy and actions, with what is hollow and what holds.
+    - name: Your half-page brief
+      contains: "You write this at the pause: the problem, your policy, who you sell to and your budget."
+    - name: "Step 2: Marketing plan"
+      contains: A strategic frame, a plan by stage, a 90-day roadmap, a 12-month outlook and numbers to track.
+    - name: "Step 3: 90-day plan"
+      contains: Workstreams with one owner each, weekly milestones, check-ins, risks and stop signs.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the strategy for hollow parts
     text: Looks for a clear diagnosis, a guiding policy that rules things out and actions that back it. Flags vague goals and wish lists.

@@ -1,6 +1,6 @@
 new_slug: paper-cutout-ad-script
 name: "Paper cutout explainer video ad script writer"
-summary: "Paste your point and product facts. Get a timed paper-cutout explainer script and a cast note."
+summary: "Write a paper cutout explainer video ad script with one clear point, timed proof pictures and a cast note, from your product facts."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You have one clear argument, such as why the usual routine fails or what your product replaces.
   - You want viewers to follow the point with the sound off.
   - You have real figures to show, or want an ad that proves things with objects when you don't.
+not_for:
+  - "You want a still image ad: use the Paper cutout image ad maker, which makes one image in the same paper style."
+  - "Your ad is about a mood or feeling, or needs a real customer's words to be believed: ask a customer for a short testimonial instead."
+  - "You only have a price or an offer and nothing to prove: write a short text ad by hand."
 
 you_give:
   - The selling idea, or a script you already have
@@ -38,6 +42,28 @@ how_to_use:
   - Say the length, such as "30 seconds".
   - Read the point first. If it has two snags, ask for two separate ads.
   - Take the script and cast note to "Paper cutout explainer video clip prompt writer". It takes it from there, with the product sheet, storyboard and clips.
+output_sample:
+  input:
+    - Your selling idea, or a script you already have
+    - Your product facts, what it replaces and how it works
+    - Your figures with sources, plus approved and banned claims
+    - A photo of your product (optional)
+    - Your length, such as 30 seconds (optional)
+  prerequisites:
+    - An AI that can see pictures, if you attach a product photo
+  output:
+    - name: Point
+      contains: "Your whole ad in one sentence: what you do now, the snag you missed, and the product."
+    - name: Paper kit
+      contains: The paper, cut style and signal colour, and how photos are treated, kept the same all the way through.
+    - name: Line table
+      contains: "For each line: narration, key word, proof picture, signal, move, on-screen words and seconds."
+    - name: Notes
+      contains: Where each figure comes from, and anything marked MISSING.
+    - name: Cast note
+      contains: What carries the ad, why, the narrator's voice, and what must never change.
+    - name: Checks missed
+      contains: One line for each check the script failed, or none.
 
 how_it_works:
   - title: Checks it fits

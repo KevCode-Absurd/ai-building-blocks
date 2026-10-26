@@ -1,6 +1,6 @@
 new_slug: layered-draft-writer
 name: "Layered draft writer"
-summary: "Paste your two-audience brief. Get a draft with a plain surface anyone enjoys and marked touches only experts catch."
+summary: "Turn your mixed-audience brief into a layered draft that anyone can follow, with a few marked touches only experts will catch."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It balances two goals at once and has to judge each line as surface or depth."
@@ -17,12 +17,15 @@ when:
   - "You have a brief for a mixed audience and need the first draft."
   - "Your last draft was either too basic for the experts or too heavy for everyone else."
   - "You want to add substance to a simple piece without making it harder to follow."
+not_for:
+  - "You write for one audience only: use a plain drafting step in your AI, since layers add nothing."
+  - "You need a data report or a table of figures: write it plainly or ask your AI for a summary of the numbers."
+  - "You already have a draft that is too long: use the Overstuffed draft cutter to trim it."
 
 you_give:
-  - "A brief from the Two-audience brief writer, or the same facts in your own words"
-  - "The facts, claims, examples and material you want to use"
-  - "A fit plan for the person who delivers it (optional)"
-  - "Length and format"
+  - A brief from the Two-audience brief writer, or the same facts in your own words. Include both audiences, the promise to each, the format and the length.
+  - Your facts, claims, examples and any text you want used
+  - A fit plan for the person who delivers it (optional)
 you_get:
   - "A full draft with a plain surface"
   - "A depth map listing each deeper touch and what an expert would notice"
@@ -34,6 +37,26 @@ how_to_use:
   - "Paste the brief and your material. If a fit plan exists, paste that too."
   - "Read the draft first without the tags, as a newcomer would. Then read the depth map."
   - "Hand the draft to the Overstuffed draft cutter before you show anyone."
+output_sample:
+  input:
+    - "Your brief: the two audiences, the promise to each, the format and length"
+    - "Your material: facts, claims, examples and any text to use"
+    - A fit plan for the person who delivers it (optional)
+  prerequisites:
+    - A brief from the Two-audience brief writer, or the same facts in your own words
+  output:
+    - name: Main idea
+      contains: One sentence the whole draft serves, which a newcomer could repeat.
+    - name: Draft
+      contains: The full piece, with [S] after surface passages and [D] after depth touches.
+    - name: Depth map
+      contains: Each deeper touch, what an expert will notice, and why the draft still works without it.
+    - name: Feeling check
+      contains: Where the piece carries strong feeling and how it stays easy to take.
+    - name: MISSING
+      contains: Facts or material the draft needed and did not have.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed and why, or none.
 
 how_it_works:
   - title: "Writes the main idea first"

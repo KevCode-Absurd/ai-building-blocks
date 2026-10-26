@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adapts standard wording to your data practices.
 new_slug: privacy-policy-drafter
 name: Privacy policy drafter
-summary: Describe your business and data use. Get privacy policy wording and a
-  review checklist. Have a lawyer check it.
+summary: Write a privacy policy draft for your business, with a checklist for your lawyer. Built from the data you collect and where your users live.
 job: check-contracts
 headline: Privacy policy drafter
-subhead: Describe your business and data use. Get privacy policy wording and a
-  review checklist. Have a lawyer check it. Bring business and product
-  description. Use the result to plan your next step.
+subhead: Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it. Bring business and product description. Use the result to plan your next step.
 explain: |
   Privacy policy wording written for how your business really handles data, with a checklist for review. Have a lawyer check it before you publish.
 
@@ -18,6 +15,10 @@ when:
   - Your current policy is a copy from another site.
   - You added a new tool that collects data.
   - You want a list to hand your lawyer.
+not_for:
+  - "You need final legal wording or a guarantee of compliance: ask a lawyer, or check your regulator's own guidance."
+  - "Your business handles health, school or bank records under special rules: have a privacy lawyer write and review the policy."
+  - "You only need a cookie banner or consent tool: use a cookie consent tool, then bring its details here."
 you_give:
   - Business and product description
   - Data you collect
@@ -29,7 +30,30 @@ you_get:
   - Compliance gap list
   - Review checklist for your lawyer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Describe your business and what your product does.
+  - List every kind of personal data you collect, and the tools that handle it, such as analytics, payments and login.
+  - Say which countries your users live in, and whether children may use your product.
+  - Read the draft. Fill every gap the AI marks, and confirm each claim about your own systems is true, such as security and consent steps.
+  - Send the draft and the review checklist to your lawyer before you publish. Run it again when you add a new tool that collects data.
+output_sample:
+  input:
+    - Your business name, what your product does and who uses it
+    - The personal data you collect, such as email, name, payments or location
+    - The tools that touch that data, such as analytics, payments and login
+    - The countries where your users live
+  output:
+    - name: Information we collect
+      contains: What you collect from users, what you collect automatically and what you get from third parties, in plain language.
+    - name: Legal basis table
+      contains: Each way you use data matched to a legal reason, for users in the EU and UK.
+    - name: Sharing, cookies and transfers
+      contains: Which outside tools get data, how cookies are used and how data moves between countries.
+    - name: Retention, rights and security
+      contains: How long you keep data, the rights users have and how they can use them.
+    - name: Children's privacy and policy changes
+      contains: What you say about young users and how people hear about updates.
+    - name: Compliance gap list
+      contains: Open questions and missing details you still need to settle before publishing.
+    - name: Review checklist
+      contains: A list to send to your lawyer with the draft.

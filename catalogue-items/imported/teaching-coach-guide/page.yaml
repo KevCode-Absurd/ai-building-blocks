@@ -2,35 +2,52 @@ thinking: medium
 thinking_why: It shapes the questions around one focus.
 new_slug: teaching-coach-guide
 name: Teaching coach conversation guide
-summary: Give it a teaching focus. Get questions, a conversation flow and
-  follow-up actions for a coaching session.
+summary: Plan a teaching coaching conversation. Give it a focus and get open questions, a conversation flow and a small next step to agree with the teacher.
 job: teach-and-train
 headline: Teaching coach conversation guide
-subhead: "A coaching session planned before you walk in: opening questions, a
-  flow for the conversation and clear follow-up steps. It keeps the teacher
-  doing the thinking, so the change is theirs and more likely to stick."
+subhead: "Give it the teaching focus and a few lines about the teacher. It plans your coaching meeting with open questions, a flow and one small next step. The teacher does the thinking, so the change is more likely to stick."
 explain: |
   A coaching session planned before you walk in: opening questions, a flow for the conversation and clear follow-up steps. It keeps the teacher doing the thinking, so the change is theirs and more likely to stick.
 
   The skill follows a partnership approach and the Impact Cycle. The coach asks, listens and lets the teacher choose the focus. The plan covers setting a goal, looking at evidence, picking one strategy and agreeing a small action with a date. It adjusts for the teacher's experience, mood and the relationship stage, for example an eager new teacher versus someone resistant. Prompts are open questions, not advice. It ends with a short note of what was agreed.
 when:
-  - You coach a teacher and want a clear structure for the meeting.
-  - A teacher is defensive after an observation and you need a gentler route in.
-  - You find yourself talking more than listening in coaching.
-  - You want a good opening question for an overwhelmed new teacher.
-  - You need follow-up actions that are small and specific.
+  - You coach a teacher and want a clear plan for the meeting.
+  - A teacher feels defensive after an observation and you need a gentler way in.
+  - You notice you talk more than you listen in coaching.
+  - You need one small, specific action to agree at the end of a session.
+not_for:
+  - "You need a formal performance review or capability process: follow your school's own policy and talk to your leadership or HR."
+  - "You want to design how to observe a lesson: use the lesson-observation-protocol-designer first, then bring your notes here."
+  - "You want advice or a fix to give the teacher: ask a trusted colleague or a subject expert, as this guide asks questions and does not tell."
 you_give:
-  - The teacher's coaching focus
-  - Brief background on the teacher
-  - Observation notes (optional)
+  - The teaching focus the teacher wants to work on
+  - A short note on the teacher, such as experience, subject and situation
+  - Notes from a lesson observation, student work or video (optional)
   - Where you are in the coaching cycle (optional)
+  - The teacher's mood, such as eager or overwhelmed (optional)
 you_get:
-  - Opening and probing questions
-  - A conversation flow with timings
-  - Tips for the teacher's mood and stage
-  - Agreed follow-up actions
+  - Open questions to start and to dig deeper
+  - A conversation flow you can follow in the meeting
+  - Ideas for what to do if the talk gets stuck
+  - One small next step with a date and a follow-up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the full skill text. It needs no code, files or paid tools.
+  - "Fill in the two required spots: the coaching focus and the teacher context. Write them in plain sentences."
+  - Add any observation notes, the coaching stage or the teacher's mood if you have them.
+  - Read the plan before the meeting. Change any question that sounds like advice or a hint.
+  - After the meeting, write down the agreed next step. If you need observation notes first, use the lesson-observation-protocol-designer.
+output_sample:
+  input:
+    - The teaching focus the teacher wants to work on
+    - A short note on the teacher, such as experience, subject and situation
+    - Notes from a lesson observation, student work or video (optional)
+    - Where you are in the coaching cycle, the teacher's mood or the stage of your relationship (optional)
+  output:
+    - name: Conversation Plan
+      contains: A step by step flow for the meeting with open questions and what to listen for at each step.
+    - name: Key Coaching Moves
+      contains: The main things you do as coach to keep the teacher thinking and talking.
+    - name: If the Conversation Gets Stuck
+      contains: Ways to get moving again when the teacher goes quiet, gets defensive or drifts.
+    - name: Next Steps Template
+      contains: One small action with what the teacher will try, when, what support you give and when you meet again.

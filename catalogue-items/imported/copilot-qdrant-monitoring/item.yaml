@@ -1,6 +1,6 @@
 slug: copilot-qdrant-monitoring
 name: Qdrant health monitoring planner
-summary: Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search.
+summary: "Get a Qdrant monitoring plan: what to watch, which alerts to set, and how to find why search is slow or memory keeps growing."
 category: general
 boards: []
 type: skill
@@ -8,8 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: brief
     required: true
+  - type: codebase
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: plan
 uses: []

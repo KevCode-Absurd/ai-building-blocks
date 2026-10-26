@@ -1,50 +1,89 @@
 new_slug: prepare-a-property-maintenance-handover
 name: Prepare a property maintenance handover
 headline: Prepare a property maintenance handover
-summary: Share the source files. Get a maintenance handover, access constraints and overdue decisions.
+summary: Hand over open property repairs. Get a job-by-job handover, access notes and a list of overdue decisions and unresolved approvals.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A maintenance handover, access constraints and overdue decisions. Share open maintenance tickets, access permissions, appointment windows, responsible contractors and approved emergency escalation rules. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the open maintenance tickets, the access permissions, the appointment windows and your escalation rules. It writes a handover for the next property lead, then lists overdue decisions and unresolved approvals with their ticket IDs.
 explain: |-
-  A maintenance handover, access constraints and overdue decisions.
+  Open repairs are easy to drop when a property lead changes. The new lead needs to know which jobs are live, who agreed to entry at each property, and which decisions are late. This property maintenance handover answers those from your tickets.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Tenant details are minimized; no entry permission, repair completion or safety clearance is inferred. Missing tools or evidence stay visible in the final summary.
+  First, the Handover note writer puts urgent jobs first, then each live job with its status, next step, contractor and appointment. Then the Executive action register keeper pulls out confirmed commitments and unresolved approvals. It shows overdue, due soon and blocked work apart, each with a source ID.
+
+  The pack never assumes entry permission, a finished repair or a safety clearance. Tenant details stay to what the job needs, and no codes or passwords appear. A new date or contractor stays a draft.
 when:
-  - You need a maintenance handover, access constraints and overdue decisions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A property lead is leaving or moving sites, and someone else takes the open repairs.
+  - You cover a colleague's properties for a few weeks.
+  - Repairs have piled up and you cannot tell which decisions are overdue.
+  - An owner or manager asks "what is stuck, and why?"
+not_for:
+  - "You want to check that repairs are really closed, with proof, over time: use the Property maintenance evidence review assistant."
+  - "You want to plan equipment servicing on a schedule: use the Equipment maintenance planner."
+  - "The work is a building project with defects: use Prepare a construction defects handover."
+  - A safety problem is happening now. Call your emergency contact first. Do not wait for a handover.
 you_give:
-  - Open maintenance tickets, access permissions, appointment windows, responsible contractors and approved emergency escalation rules.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your open maintenance tickets, with ID, status and dates (an export or a pasted list)
+  - Who agreed to entry at each property, and any notice rules (no key codes)
+  - The booked appointment windows, and the contractor for each job
+  - Your emergency escalation rules and contacts
+  - Who takes over, and from when
 you_get:
-  - A maintenance handover, access constraints and overdue decisions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - Urgent jobs first, with who to call
+  - Each live job with status, next step, contractor and appointment
+  - Access notes for each property, with gaps marked
+  - Overdue decisions and unresolved approvals, each with a ticket ID
+  - Proposed changes kept as drafts, and a list of gaps
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste or attach your tickets, access notes, appointments and escalation rules. Say who takes over and from when.
+  - Read the urgent jobs and the access notes first. Check that no property shows entry permission you did not give.
+  - Go through the overdue decisions and give each one a person.
+  - Send the handover to the new lead yourself. Nothing is booked or closed for you.
 how_it_works:
   - title: Handover note writer
-    text: Organize actual ticket status, accepted appointments, access approval locations and urgent escalation contacts for the incoming property lead.
+    text: Puts urgent jobs first, then each live job with status, next step, contractor and appointment, then access and escalation contacts. Hands step 2 the ticket list with IDs. Check before moving on, no entry permission or repair completion is stated without a source.
   - title: Executive action register keeper
-    text: Extract confirmed maintenance commitments and unresolved approvals with source IDs. Proposed scheduling or contractor changes stay drafts.
+    text: Reads step 1's note and your original tickets and emails. Extracts confirmed commitments and unresolved approvals with source IDs. Shows overdue, due soon, blocked and undated work apart. Proposed scheduling or contractor changes stay drafts.
+  - title: Check and hand back
+    text: Joins both files, checks that every open ticket appears once, and lists every gap and every check that did not run.
 output_shape: |-
-  Scope and source coverage
-  A maintenance handover, access constraints and overdue decisions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  URGENT NOW <ticket ID | property | issue | why it cannot wait | who to call>
+  LIVE JOBS <ticket ID | property | issue | status | next step | contractor | appointment | source>
+  ACCESS <property | who agreed entry | notice rule | how access is granted | MISSING if none>
+  OVERDUE DECISIONS <decision | waiting on | since | source ID>
+  UNRESOLVED APPROVALS <approval | who must give it | source ID>
+  DRAFT CHANGES <proposed change, marked draft and not booked>
+  ESCALATION <contact | for what | when>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - Your open maintenance tickets (an export or a pasted list)
+    - Your access permissions for each property
+    - Your appointment windows and contractors
+    - Your emergency escalation rules and contacts
+  prerequisites:
+    - An AI that can read files or long pasted text
+    - The two component skills, which come in the pack
+  output:
+    - name: Urgent now
+      contains: Jobs that cannot wait, with the reason and who to call.
+    - name: Live jobs
+      contains: Each open ticket with status, next step, contractor and appointment.
+    - name: Access notes
+      contains: Who agreed to entry at each property, any notice rule, and where permission is missing.
+    - name: Overdue decisions
+      contains: Each late decision or open approval, who it waits on, since when, with its ticket ID.
+    - name: Draft changes
+      contains: Proposed new dates or contractors, marked draft and not booked.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Tenant details are minimized; no entry permission, repair completion or safety clearance is inferred.
+    how: Run one site or one portfolio at a time so the ticket list stays short enough to check.
+  - what: Tenant details
+    how: Share only a name or unit and the issue. Leave out phone numbers, key codes and health details.
+  - what: Handover window
+    how: Say when the new lead starts. Jobs due in the first week go to the top.
 judge:
   - Tenant details are minimized; no entry permission, repair completion or safety clearance is inferred.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +96,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep your escalation rules with the pack so every handover uses the same contacts.
+  - Record where entry permission is kept, such as a signed form or an email, so each line can point to it.
+  - Run the pack again at the next handover and compare which decisions are still overdue.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads a ticket export and your notes together. Nothing is booked or closed for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A ticket export from your maintenance system.
+    - Your entry notice rules for each property.
 terms:
+  - term: Ticket
+    meaning: One logged repair job, with an ID, a status and dates.
+  - term: Escalation
+    meaning: Passing a problem to a named person who can act on it.
+  - term: Unresolved approval
+    meaning: A decision someone must make before work goes ahead, with no answer yet.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

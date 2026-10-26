@@ -16,6 +16,30 @@ use_cases:
   - "Put trust and security ahead of new features when the two clash"
   - "Write a first-week message to a team you have just been asked to lead"
   - "Link a big ambition to three clear priorities people can act on"
+not_for:
+  - "You need a team where people can speak up and admit mistakes safely: use the Amy Edmondson mind, who studies psychological safety and intelligent failure."
+  - "You want to know why a simpler rival is beating you, or what job your customers hire your product for: use the Clayton Christensen mind."
+  - "You need a hard talk or direct feedback with one person: use the Kim Scott mind, or a plain coach. Skip this for legal, financial or private decisions."
+output_sample:
+  input:
+    - Your team or company, and how big it is
+    - Your current mission line, if you have one (optional)
+    - The change or failure you need to deal with
+    - The customer you serve
+    - Limits you work under, such as time, money or rules
+  output:
+    - name: The shift
+      contains: The big change in your field, as this mind would name it, and what it means for you.
+    - name: Mission line
+      contains: A short rewrite that says who you help and what they can now do.
+    - name: Two or three priorities
+      contains: A short list with one owner named for each priority.
+    - name: Rule for when things clash
+      contains: One plain rule on what wins when goals collide, such as trust over speed.
+    - name: First step this week
+      contains: The one thing to do first, plus what is hard and what stays the same.
+    - name: Questions back to you
+      contains: Questions he would ask you, such as who you help and what you would stop doing.
 seats:
   - {seat: "Turnaround and culture", asks: "Are we still learning here, or just defending what we already know?"}
   - {seat: "Platform shifts", asks: "What is the big shift coming in our field, and are we building for it or defending the old model?"}

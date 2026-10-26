@@ -16,6 +16,27 @@ use_cases:
   - "Plan a show or newsletter built around talks with interesting people."
   - "Collect everyday things in a time capsule or archive of your year"
   - "Think about how to turn your creative work into a business without losing the art"
+not_for:
+  - "You want to know what Warhol actually said or which interview a line came from: check the sources listed on this page, such as the 1963 Art News interview."
+  - "You want a drawing lesson on how to build a head or hands: use Andrew Loomis, who teaches constructive drawing step by step."
+  - "You want a warm, personal image built from your own life and symbols: use Frida Kahlo, whose work is built on self-portraits and personal symbols."
+output_sample:
+  input:
+    - A product photo or portrait you already have
+    - What the product or project is, and who it is for
+    - Your price, or how you sell it
+    - How many people can help you make it (optional)
+  output:
+    - name: One pick
+      contains: One familiar thing from your work to repeat, chosen because people already recognise it.
+    - name: Repeat and colour plan
+      contains: How many times to repeat the image and what colour each copy should be.
+    - name: Process for helpers
+      contains: Simple steps so another person can make the next one without you.
+    - name: Selling note
+      contains: Whether to sell it as a full set, and a price idea.
+    - name: Question back
+      contains: One hard question about what people already know or what to save for later.
 seats:
   - {seat: "Pop and repetition", asks: "What happens if we repeat this image twenty times, in different colours?"}
   - {seat: "Fame and the surface", asks: "What does this look like from the outside, at first glance, to everyone?"}

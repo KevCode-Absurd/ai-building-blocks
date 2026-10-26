@@ -1,6 +1,6 @@
 new_slug: retargeting-ad-sequence-planner
 name: "Retargeting ad sequence planner"
-summary: "Give your products and why visitors do not buy. Get retargeting ads in order, ending with a cross-sell."
+summary: "Plan your retargeting ad sequence: an objection ad, a proof ad, then a cross-sell, built from the real reasons visitors did not buy."
 job: launch-and-scale-ads
 thinking: low
 thinking_why: "It sorts known reasons into a short sequence, so a small model is enough."
@@ -17,6 +17,10 @@ when:
   - You retarget website visitors with the same ad they already ignored.
   - You sell more than one product and have a pool of visitors who left without buying.
   - You collect reasons from surveys, support tickets or calls and don't use them in your ads.
+not_for:
+  - "You sell one product only: start with the objection ad alone, because there is nothing to cross-sell."
+  - "You have very few site visitors: a sequence will not give a readable result, so run one objection ad first."
+  - "You want to set the total ad budget: use the existing customer ad budget sizer, then come back here."
 
 you_give:
   - Your product list with margins
@@ -34,6 +38,27 @@ how_to_use:
   - Add reviews you have permission to use.
   - Build the objection ad first and run it for a week before you add the next ad.
   - Cap the spend with the existing customer ad budget sizer and judge the sequence on 7-day click or incremental results.
+output_sample:
+  input:
+    - Your product list with margins
+    - The real reasons visitors did not buy, in their own words
+    - Reviews and testimonials you have permission to use
+    - Your current retargeting audience and window (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+  output:
+    - name: Why visitors do not buy
+      contains: A ranked list of reasons in the buyer's words, with the source and how common each one is.
+    - name: Sequence
+      contains: "Three ads in order: objection, proof and cross-sell, plus a value offer for people who still do not buy."
+    - name: Cross-sell pairing table
+      contains: For each product, which other product to show, why it fits and its margin.
+    - name: Audience and window
+      contains: The visitor pool, how many days to include, and recent buyers excluded.
+    - name: Cap
+      contains: A pointer to the budget sizer for the spend cap, and a note to judge results on 7-day click or incremental results.
+    - name: Checks missed
+      contains: Any check the AI could not run, or none.
 
 how_it_works:
   - title: Collects real reasons

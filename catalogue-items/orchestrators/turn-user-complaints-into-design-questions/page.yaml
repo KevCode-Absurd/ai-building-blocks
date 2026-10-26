@@ -1,52 +1,92 @@
 new_slug: turn-user-complaints-into-design-questions
 name: Turn user complaints into design questions
 headline: Turn user complaints into design questions
-summary: Share the source files. Get a theme map, ranked design questions and a small research plan.
+summary: Turn support tickets and feedback into themes, ranked design questions and a small research plan to test each one before you redesign.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A theme map, ranked design questions and a small research plan. Share consented support excerpts, feedback and relevant screens with dates and product versions. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it support excerpts and feedback with dates and product versions. Your AI groups the complaints by what users were trying to do, turns the strongest themes into questions you can test, and plans the research to answer them. You get a theme map, ranked questions and a research plan.
 explain: |-
-  A theme map, ranked design questions and a small research plan.
+  A pile of complaints is not a design brief. Ten people say the page is confusing. One means the menu, one means the price, and one means the error text. If you redesign from the pile, you fix the loudest complaint, not the cause.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Each question traces to evidence; complaint frequency is bounded by the supplied sample. Missing tools or evidence stay visible in the final summary.
+  This workflow groups complaints by the task the user was doing, not by the words they used. It keeps each source, date and product version beside every theme, and keeps people who disagree. Then it turns the strongest themes into questions and possible explanations, with small design options for each. Last it plans the research that tells the explanations apart before anyone approves a redesign.
+
+  Counts only describe the sample you give it. It never says how many of all your users have a problem. With very few complaints, it lists them by task and does not rank. It uses only feedback you have the right to use.
 when:
-  - You need a theme map, ranked design questions and a small research plan.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Support says the same thing keeps coming up, but nobody can say what to fix first.
+  - A new release brought a spike in tickets and you need to know which screens to look at.
+  - A stakeholder wants a redesign and you want the questions to answer first.
+  - You collected reviews or survey comments and need to turn them into a short research plan.
+not_for:
+  - You have one ticket or one bug report. Send it to the team that owns the bug.
+  - You only want the complaints grouped. Use the Feedback theme finder on its own.
+  - You want to find the cause of one mistake users keep making. Use the Hard-to-use thing diagnoser.
+  - You already know the problem and want fixes. Use the Turn a design review into fixes workflow.
 you_give:
-  - Consented support excerpts, feedback and relevant screens with dates and product versions.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Support tickets, reviews or survey comments, with the date and product version if you know them
+  - The screens or flows the complaints are about
+  - Who the users are, such as new customers or admins (optional)
+  - What you have already tried or changed (optional)
+  - Any research you have done before (optional)
 you_get:
-  - A theme map, ranked design questions and a small research plan.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A theme map with each theme tied to the task users were doing, with sources, dates and versions
+  - Where complaints disagree, kept side by side
+  - Design questions ranked by how many complaints support them, how badly they block the task and how well the evidence backs the explanation
+  - For each top question, an explanation to test and a small design option to try
+  - A small research plan with the method, who to ask and what answer would change your decision
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Remove names, emails and account numbers from the complaints, or paste only the text you may use. Add dates and versions.
+  - After step 1, read the themes against the quotes. Move any complaint that landed in the wrong theme.
+  - After step 2, read the ranking. Counts describe your sample only. Ask what would make you wrong.
+  - Run the research plan from step 3 before you approve a redesign.
 how_it_works:
   - title: Feedback theme finder
-    text: Group the complaints by user task and preserve sources and conflicting accounts.
+    text: Groups the complaints by the task the user was doing. Keeps each source, date and version, and keeps people who disagree. Counts only the sample you gave it. Hands step 2 the theme map with quotes. Check before moving on, every theme shows at least one quote and its source.
   - title: Hypothesis-first design planner
-    text: Turn the strongest themes into testable explanations and small design options.
+    text: Turns the strongest themes into explanations you can test and small design options for each. Ranks them by number of complaints, how badly they block the task and the strength of the evidence. Hands step 3 the ranked questions. Check before moving on, every question traces to quotes.
   - title: Interview and research planner
-    text: Choose research tasks that distinguish those explanations before a redesign is approved.
+    text: Picks research tasks that tell the explanations apart before a redesign is approved. Gives the method, who to ask, the questions and what answer would change your decision. Hands back the research plan. Check before moving on, each task can tell two explanations apart.
 output_shape: |-
-  Scope and source coverage
-  A theme map, ranked design questions and a small research plan.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SAMPLE         <number of complaints>, <sources>, <date range>, <product versions>
+
+  THEME MAP      <theme> | <task the user was doing> | <count in this sample> | <sample quote, date, version> | <disagreement>
+
+  RANKED QUESTIONS <rank> | <design question> | <evidence: quotes and count> | <explanation to test> | <small design option>
+
+  RESEARCH PLAN  <question> | <method> | <who to ask> | <what to ask or do> | <answer that would change the decision>
+
+  MISSING        <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+  NEXT STEP      <one action for you>
+output_sample:
+  input:
+    - Support tickets, reviews or survey comments, with dates and product versions
+    - The screens or flows the complaints are about
+    - Who the users are (optional)
+    - What you have already tried (optional)
+  prerequisites:
+    - Names, emails and account numbers removed, and only feedback you may use
+  output:
+    - name: Theme map
+      contains: Themes grouped by user task, with quotes, sources, dates, versions and any disagreement.
+    - name: Ranked design questions
+      contains: Each question with its evidence, a testable explanation and a small design option.
+    - name: Research plan
+      contains: For each top question, the method, who to ask and the answer that would change your decision.
+    - name: Sample note
+      contains: How many complaints were read and what the counts do not tell you.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks not run and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Each question traces to evidence; complaint frequency is bounded by the supplied sample.
+  - what: One product area
+    how: Name the screen or flow to look at. Complaints about other areas are listed apart and not ranked.
+  - what: Two versions
+    how: Give the product version for each complaint. Step 1 shows which themes started or stopped after a release.
+  - what: A small research budget
+    how: Say how many people you can talk to and for how long. Step 3 sizes the plan to match.
+  - what: Existing research
+    how: Attach earlier research. Step 2 checks each explanation against it before ranking.
 judge:
   - Each question traces to evidence; complaint frequency is bounded by the supplied sample.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -70,5 +110,13 @@ works_best_with:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
 terms:
+  - term: Theme
+    meaning: A group of complaints about the same task or problem, even when users word them differently.
+  - term: Design question
+    meaning: A question about why users struggle that research can answer before you change the design.
+  - term: Explanation to test
+    meaning: A guess about the cause of a problem, written so a small test can show if it is wrong.
+  - term: Sample
+    meaning: The complaints you gave it. Counts describe only these, not all of your users.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result and file passed from one step to the next.

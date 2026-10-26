@@ -1,51 +1,125 @@
 new_slug: debt-service-covenant-evidence-reviewer
-name: Debt service covenant evidence reviewer
-headline: Debt service covenant evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+name: Loan covenant cash cover reviewer
+headline: Loan covenant cash cover reviewer
+summary: Check loan covenant cash cover for each test period. See the headroom above the minimum and the fixed charge check, rebuilt when a number changes.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A defined cash coverage pack with period headroom and source exceptions. Share signed cash-coverage and fixed-charge definitions, source cash bridge, taxes/capital/rent details, scheduled debt service and three covenant periods. Include the previous dated review and source versions when available.
-explain: |-
-  A defined cash coverage pack with period headroom and source exceptions.
+subhead: Give it the signed covenant definitions, the cash for three test periods, the interest and principal due, and the taxes, repairs and rent the contract counts. It compares them with your last review and rebuilds any period that changed. You get the headroom for each period against the minimum, a fixed charge coverage check, and a record to start the next review from.
 
-  Credit covenant review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A loan covenant is a promise to keep cash above a line. The line is usually a multiple of the debt you must pay that period. Most lenders test it every quarter. The trap is that a loan often has two tests, and each has its own definition of cash and its own list of charges. If someone borrows the cash figure from one test to fill the other, both answers can be wrong, and nobody sees it until the lender does.
+
+  This agent keeps a small record of the last review: which agreement version it read, the test dates, how the contract defines the top and bottom of each ratio, the source periods, the headroom and whether a waiver exists. Each run compares new evidence with that record. A new cash figure, a changed payment schedule or a changed signed definition starts a review. If nothing changed, it says so and stops.
+
+  When only one test period changes, it rebuilds that period from its own cash and debt service, then compares the new lowest headroom with the one in the last review. It then builds the fixed charge test on its own from its own definition, and ties rent and debt service back to the first test. A proposed waiver never replaces the signed threshold. The agent reviews and reports. It does not give a legal opinion on a breach, send anything to the lender or start a schedule.
+
 when:
-  - You need a defined cash coverage pack with period headroom and source exceptions.
-  - You work on credit covenant review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A quarter closed and the cash figure for that test period came in different from the forecast.
+  - The lender sent a new payment schedule, or the loan was amended.
+  - You want to know which test period is closest to the line before you plan a dividend or a purchase.
+  - You have two covenant tests on one loan and want them checked against each other without mixing definitions.
+
+not_for:
+  - You have no signed covenant wording, only a term sheet or an email. It marks the definition MISSING and stops, because a rule from memory is not a rule.
+  - You want to know whether you are in breach in law, or whether a waiver applies. A lawyer or your lender decides that. This shows the numbers only.
+  - You only want one period's headroom. Use the Loan covenant cash coverage checker.
+  - You want to compare against a typical ratio for your industry. No market benchmark becomes the rule here, only your contract.
+  - You need next year's cash forecast. It tests the periods you give it and does not predict.
+
+output_sample:
+  input:
+    - The signed covenant wording for cash, debt service, fixed charges and the minimum, with clause numbers
+    - Cash for three test periods, with the bridge to the contract's definition of cash
+    - Interest and principal due each period, plus taxes, repairs spending and rent
+    - Any waiver the lender has signed (optional)
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The pack's two component files added to your AI
+    - The signed wording. A term sheet or an email is not enough.
+  output:
+    - name: Changed since last review
+      contains: Each period and figure that moved, with its old value, new value and source.
+    - name: Debt service test
+      contains: Qualifying cash, debt service, required cash, headroom and ratio for each period, with the lowest headroom marked.
+    - name: Fixed charge test
+      contains: Cash after allowed taxes and repairs against interest, principal and rent, tied back to the first test.
+    - name: Why the tests differ
+      contains: One line saying why the two tests give different answers.
+    - name: Waiver
+      contains: None, or a proposal shown only as a proposal. It never replaces the signed threshold.
+    - name: Record for next review
+      contains: A short record to paste into your next run.
+    - name: Missing and checks missed
+      contains: Each gap, and each check that failed or could not run.
+
 you_give:
-  - Signed cash-coverage and fixed-charge definitions, source cash bridge, taxes/capital/rent details, scheduled debt service and three covenant periods. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed definitions of qualifying cash, debt service and fixed charges, and the minimum coverage (from the loan agreement and any amendment)
+  - The cash for each of three test periods, with the bridge from the accounts (from your management accounts)
+  - Interest and scheduled principal due in each period (from the lender's payment schedule)
+  - Taxes, maintenance spending and rent for each period, as the contract counts them (from your accounts and lease)
+  - The test dates and the reporting currency and scale, such as thousands
+  - The last review's record and the earlier source versions (optional, needed to see what changed)
+  - Any waiver the lender has signed (optional, with its date and scope)
+
 you_get:
-  - A defined cash coverage pack with period headroom and source exceptions.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - What changed since the last review, period by period
+  - A debt service test table: qualifying cash, required cash, headroom and ratio for each period, with the lowest headroom marked
+  - A fixed charge coverage bridge for the same periods, tied back to the first test's interest, principal and rent
+  - Any period below the line shown as it is, and any difference between the two tests explained
+  - A short record to paste into the next review, plus MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Debt service coverage checker workflow and the Loan covenant cash coverage checker. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
+  - Say whether this is the first run. If not, paste last time's record. Then attach or paste the covenant wording, the cash bridge for each period and the payment schedule.
+  - Read "changed since last review" first. Check the changed period's cash against your accounts.
+  - Check one period by hand: required cash is debt service times the minimum, and headroom is cash less required cash. Check that the two tests use their own definitions.
+  - Fix every MISSING line. Run it again whenever a cash figure, a schedule or a signed definition changes. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Review contractual debt service cash tests
-    text: Run the governing workflow when A test-period cash figure, payment schedule or signed covenant definition changes.
-  - title: Debt service covenant headroom checker
-    text: If only one test period changes, rebuild that period from its source cash and service components and compare the new minimum headroom with the prior dated result. A proposed waiver never replaces the signed threshold.
-output_shape: |-
-  A defined cash coverage pack with period headroom and source exceptions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this agreement, or sets a first baseline. Compares the agreement version, test dates, definitions, source periods, headroom and waiver status. If nothing changed and no review is due, it says so and stops.
+  - title: Builds the debt service test
+    text: Reads the contract's own top line (qualifying cash) and bottom line (debt service) for each test date. Multiplies debt service by the minimum to get the cash required, then subtracts it from qualifying cash. The result is signed headroom for each period, with the lowest one marked.
+  - title: Rebuilds only what changed
+    text: If only one period changed, it rebuilds that period from its source cash and service parts and compares the new lowest headroom with the old one. Other periods keep their reviewed inputs.
+  - title: Builds the fixed charge test on its own
+    text: Takes cash before fixed charges and removes only the taxes and maintenance spending the contract allows. Adds up interest, scheduled principal and rent as the charges. Ties interest, principal and rent back to the first test and explains any gap between the two tests.
+  - title: Leaves waivers and breach calls alone
+    text: A proposed waiver is shown as a proposal. It never replaces the signed threshold, and the agent gives no opinion on whether a breach has happened.
+  - title: Saves the record
+    text: Writes the small record for next time and lists what is still MISSING. It proposes a state update and keeps the old one.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <period, source, old value, new value>
+  DEBT SERVICE TEST  minimum <n> x debt service
+    period | qualifying cash | debt service | required | headroom | ratio
+    lowest headroom: <period, n>
+  FIXED CHARGE TEST  minimum <n>
+    period | cash before charges - taxes - maintenance = numerator
+           | interest + principal + rent = charges | ratio | headroom
+    ties to test 1: interest <ok or gap>, principal <...>, rent <...>
+  WHY THE TESTS DIFFER  <one line>
+  WAIVER  <none, or proposed only: not applied>
+
+  RECORD FOR NEXT REVIEW  agreement version, test dates, definitions,
+                          source periods, headroom, waiver status
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Each test keeps its own numerator and denominator; shared source debt service is tied across tables but ratios and cash definitions are never substituted. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: A lower cash figure
+    how: Change one period's cash and run it again. Only that period's headroom moves, and the lowest headroom changes only if that period becomes the lowest.
+  - what: A higher minimum
+    how: Raise the minimum multiple, for example from 1.20 to 1.30. Required cash rises in every period, and headroom falls by the same share of each debt service.
+  - what: Rent in or out of the top line
+    how: Say whether the contract already takes rent off the cash before the test. The fixed charge numerator and the charges both change, and the page shows why.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Each test keeps its own numerator and denominator; shared source debt service is tied across tables but ratios and cash definitions are never substituted. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +130,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the record from each review in one folder named by date, so the next run starts from the true earlier state.
+  - Paste the covenant definitions into the agent's file once, word for word, with the clause numbers. Every run then reads the same rule.
+  - Keep one cash bridge per period in the same layout each quarter, so a changed line is easy to see.
+  - Pair it with the Project debt reserve and payment reviewer when the loan also has a reserve account, and with the Cash settlement forecast reviewer when the question is daily cash.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your lender's payment schedule
+      why: Gives interest and principal as the lender counts them, so debt service is a fact and not a rebuild.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The covenant pages of the loan agreement and every amendment, with clause numbers.
+    - A cash bridge for each test period, from the accounts to the contract's definition of cash.
+    - A named person who owns the lender relationship and will check the definitions.
+
 terms:
+  - term: Covenant
+    meaning: A promise in a loan agreement, such as keeping cash above a set line.
+  - term: Debt service
+    meaning: The interest and scheduled principal you must pay in a period.
+  - term: Headroom
+    meaning: How far your cash sits above the required line. A negative number means it is below.
+  - term: Fixed charge coverage
+    meaning: Cash after taxes and repairs, divided by interest, scheduled principal and rent.
+  - term: Waiver
+    meaning: A written agreement from the lender not to enforce a covenant for a period.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the calculation works, with no claim about a real company.

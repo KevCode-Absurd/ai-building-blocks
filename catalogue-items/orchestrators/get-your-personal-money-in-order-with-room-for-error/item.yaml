@@ -1,25 +1,25 @@
 slug: get-your-personal-money-in-order-with-room-for-error
 name: "Get your money in order with room for error"
-summary: "Give it your income, spending and debts. Get a budget, a debt plan and a savings forecast."
+summary: "Get a monthly budget, a debt payoff order and a savings forecast that survive a bad month. Give it your income, spending and debts."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: analysis
 level: beginner
 inputs:
-  - {type: brief, required: true}
   - {type: question, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: plan}
   - {type: audit_report}
   - {type: spreadsheet}
 uses: [personal-budget-builder, debt-payoff-planner, spending-story-reviewer, room-for-error-plan-checker, retirement-savings-projector]
 steps:
-  - {uses: personal-budget-builder, note: "A monthly budget from your real income and spending, with fixed costs, flexible costs, savings and a buffer for the bad months."}
-  - {uses: debt-payoff-planner, note: "The payoff order (fastest or cheapest, your choice), the monthly amount and the month each debt ends."}
-  - {uses: spending-story-reviewer, note: "What you are really buying when you buy it, in Morgan Housel's manner: status, comfort, time, and which of these the budget should keep."}
-  - {uses: room-for-error-plan-checker, note: "What happens to the plan in a bad month, a lost job or a surprise bill, and what to change so it survives, following Housel and Benjamin Graham."}
-  - {uses: retirement-savings-projector, note: "Where your savings end up over the years with plain assumptions you can change, and what each change does to the result."}
+  - {uses: personal-budget-builder, note: "A monthly budget from your real income and spending, with fixed costs, flexible costs, savings and a buffer for the bad months. Hands the budget to steps 2, 4 and 5."}
+  - {uses: debt-payoff-planner, note: "The payoff order (fastest or cheapest, your choice), the monthly amount and the month each debt ends. Hands the debt plan to steps 3 and 4."}
+  - {uses: spending-story-reviewer, note: "One habit at a time: what you are really buying, in Morgan Housel's manner, what it costs over the years and a small test. Uses your budget and debt plan as the monthly money picture, and hands what you choose to cut to step 4."}
+  - {uses: room-for-error-plan-checker, note: "What happens to the plan in a bad month, a lost job or a surprise bill, and what to change so it survives, following Housel and Benjamin Graham. Hands the changes it asks for to step 5."}
+  - {uses: retirement-savings-projector, note: "Where your savings end up over the years with plain assumptions you can change, and what each change does to the result. Uses the savings line from your budget, as changed by steps 3 and 4."}
 origin: own
 version: 1.0.0
 minds: [morgan-housel, benjamin-graham]

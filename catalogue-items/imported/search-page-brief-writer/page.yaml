@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It compares ranking pages, then plans an outline.
 new_slug: search-page-brief-writer
 name: Search page brief writer
-summary: Give it a keyword and the pages that rank. Get a brief with search
-  intent, gaps to fill, and an outline.
+summary: Write a search page brief from your keyword and the pages that rank. See the search intent, content gaps, and an outline your writer can use.
 job: get-found-in-search
 headline: Search page brief writer
-subhead: A writer-ready brief for one page, built from what the top-ranking
-  pages actually say. You give a keyword and three to five results that rank.
+subhead: A writer-ready brief for one page, built from what the top-ranking pages actually say. You give a keyword and three to five results that rank.
 explain: |
   A writer-ready brief for one page, built from what the top-ranking pages actually say. You give a keyword and three to five results that rank. Claude reads each one and records its headings, format and anything special, like a calculator or original data.
 
   From that it names the search intent with evidence, such as "4 of 5 results are step-by-step guides". A coverage table marks what is table stakes, common or rare. It lists gaps, labelled as judgement. You get an outline with title options, headings and a note on what each section must answer, plus questions to answer and a meta description. It states what it cannot know, such as volume.
 when:
-  - You are about to commission an article and want the writer to start with a
-    clear brief.
+  - You are about to commission an article and want the writer to start with a clear brief.
   - You want to see what top pages cover that yours is missing.
   - A keyword has mixed results and you need to know which intent to serve.
   - You want a title and meta description draft that fits the real results.
+not_for:
+  - You have no ranking pages to compare, such as a brand new topic. Ask a writer for a plain page brief instead.
+  - Your keyword is a brand name or a search for one site. Intent is already clear, so skip the brief and write the page directly.
+  - You want search volume, difficulty or rankings. Your AI cannot see these, so use your SEO tool.
 you_give:
   - A target keyword or question
   - Three to five URLs that rank for it
@@ -30,7 +31,35 @@ you_get:
   - An outline with titles
   - Questions and meta description draft
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Search your keyword in Google and copy three to five links to pages that rank.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Use an AI that can open web links, or paste each page's title and headings yourself.
+  - Add your keyword, the links, and one line on your site and audience. Add the page type if you know it.
+  - Read the intent line first. Check that it matches what you see in the results.
+  - Give the brief to your writer. Before you publish, check the title and meta description against the live results.
+output_sample:
+  input:
+    - Your target keyword or question
+    - Three to five web links to pages that rank for it
+    - A line on your site and who it is for
+    - The page type, such as guide or comparison (optional)
+  prerequisites:
+    - An AI that can open web links. If not, you paste each page's title, headings, lists and tables.
+  output:
+    - name: Keyword and intent
+      contains: The type of search it is, with proof from the ranking pages, and which intent to serve if mixed.
+    - name: Results reviewed
+      contains: A table of each page's title, headings, rough length, format and anything special.
+    - name: Coverage table
+      contains: Each topic found, how many pages cover it, and whether it is table stakes, common or rare.
+    - name: Gaps
+      contains: What readers likely want that few pages give, marked as judgement, not data.
+    - name: Outline
+      contains: Title options, an H1, and headings with a line on what each section must answer.
+    - name: Questions
+      contains: Questions the pages answer, plus extra ones the gaps suggest, with your additions labelled.
+    - name: Terms seen
+      contains: Words, names and ideas that repeat across the ranking pages.
+    - name: Meta draft and link slots
+      contains: A meta description under 155 characters and three internal link ideas by topic.
+    - name: Not known
+      contains: What your AI could not know, such as volume, difficulty, backlinks or pages it could not open.

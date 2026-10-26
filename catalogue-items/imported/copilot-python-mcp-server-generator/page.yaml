@@ -2,17 +2,59 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-python-mcp-server-generator
 name: Python MCP server starter builder
-summary: Describe your tools and data. Get a Python MCP server project with
-  clear handlers and tests.
+summary: Build a Python MCP server from your tools or data, with typed handlers and passing tests, so AI apps can call your code.
 job: connect-tools
 headline: Python MCP server starter builder
-subhead: Describe your tools and data. Get a Python MCP server project with
-  clear handlers and tests. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: "Describe the tools, API or data you want to open up to AI apps. It builds a Python MCP server project with typed tools and tests, runs the tests until they pass and gives you the setting to connect it to VS Code or Claude Desktop."
+explain: |
+  An MCP server lets AI apps call your code. This Python MCP server starter builder makes the whole project, not just a sketch: a server.py with typed tools, short tool descriptions and clear error messages.
+
+  It writes one test for each tool and each error, run in memory with no port or extra process, and runs them with uv run pytest until every test passes. Then it gives you the client setting and the commands to start the server and open the MCP Inspector.
+
+  It is for a server in Python only. For a client or another language, use the matching official docs.
+when:
+  - "You want Claude Desktop or VS Code to call your Python functions."
+  - "You want to expose an API or a database as MCP tools."
+  - "You need a starting project with tests that already pass."
+  - "You want to try your tools in the MCP Inspector before sharing them."
+not_for:
+  - "You want an MCP client, not a server: read the MCP Python SDK docs instead."
+  - "You need a server in another language such as TypeScript: use that language's official MCP SDK docs."
+  - "You only want to call an existing API once: write a short script or ask a developer, no server needed."
+you_give:
+  - "What your server should do, such as the tools, API or database to open up"
+  - "The Python functions or data you already have (optional)"
+  - "Which app will use it, such as VS Code or Claude Desktop"
+you_get:
+  - "A server.py with typed tools, short descriptions and clear errors"
+  - "A test_server.py with one test for each tool and each error"
+  - "A passing run of uv run pytest"
+  - "A client setting: .vscode/mcp.json for VS Code, or one install command for Claude Desktop"
+  - "Commands to start the server and open the MCP Inspector"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open an AI that can run code and make files. Check that uv and Python 3.10 or later are installed.
+  - Paste the skill into the chat, or add the skill folder to your AI tool.
+  - Describe the tools you want, and add any Python code or API details you already have.
+  - Let your AI build the project and run the tests. Ask it to fix any failures until all pass.
+  - Copy the client setting it gives you into VS Code or Claude Desktop, then try your tools.
+output_sample:
+  input:
+    - What your server should do, such as the tools, API or database it should open up
+    - The Python functions or data you already have (optional)
+    - Which app will use it, such as VS Code or Claude Desktop
+  prerequisites:
+    - An AI that can run code and make files
+    - uv and Python 3.10 or later installed
+    - Network access to install packages
+    - Node.js, only if you want to try the MCP Inspector
+  output:
+    - name: server.py
+      contains: Your MCP server with typed tools, each with a short description and clear error messages.
+    - name: test_server.py
+      contains: One test for each tool and each error, run in memory with no port or extra process.
+    - name: Passing test run
+      contains: The result of running uv run pytest until every test passes.
+    - name: .vscode/mcp.json
+      contains: The VS Code setting that starts your server (for Claude Desktop, one install command instead).
+    - name: Run commands
+      contains: The commands to start the server and to open the MCP Inspector.

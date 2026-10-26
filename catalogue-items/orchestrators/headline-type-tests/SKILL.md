@@ -54,8 +54,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Pick the buying reason to lead with.** Use the skill `what-you-really-sell-finder`. The appeal goes in the headline, so it has to be chosen first.
 2. **Write headlines in the tested types.** Use the skill `typed-headline-batch-writer`. Give it the angle library from the steps before. Twenty or more headlines, each labelled with its type and appeal.
-3. **Rank them with the cover test.** Use the skill `headline-cover-test-ranker`. Give it the hooks from the steps before. Cuts the long list to three that pass the stranger test.
-4. **Plan a small keyed test of the best three.** Use the skill `keyed-headline-test-planner`. Give it the hooks from the steps before. Turns the three into a keyed test with a winner rule.
+3. **Rank them with the cover test.** Use the skill `headline-cover-test-ranker`. Give it the hooks from the steps before. Cuts the long list to three that pass the stranger test. Hands the three to the keyed test.
+4. **Plan a small keyed test of the best three.** Use the skill `keyed-headline-test-planner`. Give it the three that passed the cover test in step 3, the full headline list from step 2 and your offer. Turns the three into a keyed test with a winner rule.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

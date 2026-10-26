@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It plans cost gates and tests each step before scaling.
 new_slug: small-sample-pipeline-builder
 name: Small-sample pipeline builder
-summary: Describe a data or AI workflow. Get it working end to end on a tiny
-  sample, then scaled with cost checks.
+summary: Build a data or AI pipeline on a tiny sample first, then scale it in steps with cost checks so a wrong prompt never burns your budget.
 job: build-software
 headline: Small-sample pipeline builder
-subhead: A data or AI workflow that works from start to finish on a tiny sample
-  before you spend real money on the full run. This stops the common mistake of
-  building every stage at full size, then finding a wrong prompt ran over a
-  whole table.
+subhead: A data or AI workflow that works from start to finish on a tiny sample before you spend real money on the full run. This stops the common mistake of building every stage at full size, then finding a wrong prompt ran over a whole table.
 explain: |
   A data or AI workflow that works from start to finish on a tiny sample before you spend real money on the full run. This stops the common mistake of building every stage at full size, then finding a wrong prompt ran over a whole table.
 
@@ -19,19 +15,50 @@ when:
   - A new data pipeline has several stages that have never run together.
   - You worry a mistake will burn warehouse credits.
   - You need a cost estimate before the full run.
+not_for:
+  - "You need one query or a one-file fix: just run it, no pipeline plan needed."
+  - "Your workflow already ran at full size and works: keep running it as is."
+  - "You cannot see any cost data, such as billing or token counts: ask your admin for a billing view first, or treat every cost figure as a rough guess."
 you_give:
-  - A description of the workflow and its stages
+  - A description of your workflow and its stages
   - A small sample of your data
-  - Your budget limit
-  - The tools you use, like Snowflake or dbt (optional)
+  - Your budget limit (optional, your AI can propose one)
+  - The tools you use, such as Snowflake or dbt (optional)
+  - Access to your data tool or AI service, such as a warehouse login or API key
 you_get:
   - A one-line definition of success and a pass or fail test
   - A working tiny version of the whole path
   - Cost projections for each scale-up step
   - A cost-gated plan to full size
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, or upload the skill file.
+  - Describe your workflow, its stages and your budget. Paste a small sample of your data.
+  - Check the pass or fail test and the ladder your AI writes before it builds anything.
+  - Let it build the one-record version first. It needs to run code and read your files for this.
+  - At each step, read the cost and the next projection. Say go only if it fits your budget.
+  - Before you trust any cost figure, make sure you can see real cost data, such as billing or token counts. Without it the numbers are guesses.
+output_sample:
+  input:
+    - A description of your workflow and its stages
+    - A small sample of your data
+    - Your budget limit (your AI proposes one if you skip it)
+    - The tools you use, such as Snowflake or dbt (optional)
+  prerequisites:
+    - Access to your data tool or AI endpoint, such as a warehouse login or an API key
+    - A way to see cost, such as a billing view, token counts or query history
+    - An AI that can run code and read your files
+  output:
+    - name: Step 0 definition
+      contains: The thinnest path through every stage, one pass or fail test, and a budget for the whole job.
+    - name: Ladder
+      contains: The planned rungs from one record up to the full run, each with a gate to pass.
+    - name: Walking skeleton
+      contains: A working version of every stage on one record, built with the cheapest settings.
+    - name: Sample findings
+      contains: Cheap wins found in the raw records, such as duplicates, repeated boilerplate and empty inputs.
+    - name: RUNLOG.md
+      contains: One row per rung with input size, result, errors, time, cost, next projection and decision.
+    - name: Gate reports
+      contains: A short note at each rung on what ran, cost so far, next projection and what to do.
+    - name: Final result
+      contains: The full run output, with totals checked and earlier sample files removed or marked.

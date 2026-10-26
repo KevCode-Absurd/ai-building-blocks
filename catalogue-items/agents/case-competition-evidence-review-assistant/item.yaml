@@ -22,9 +22,9 @@ uses:
   - source-note-summariser
 steps:
   - uses: stress-test-a-case-competition-recommendation
-    note: "Run when: The team changes its recommendation, financial exhibit or judging rubric."
+    note: "Run on the first review, and again when the team changes its recommendation, a financial exhibit or the judging rubric. Maps the rubric to slides, checks the bridge and builds the challenge register. Hands the next step the register, with the assumptions that still need a source."
   - uses: source-note-summariser
-    note: Run stress-test-a-case-competition-recommendation for changed evidence or a due review. If a new assumption drives the recommendation, extract its source or mark it unsupported before rebuilding affected slides. Stop the deck path when required rendering tools are absent.
+    note: "Run when a new assumption drives the recommendation. Uses your own case and exhibits (the source text), not step 1's deck, and takes the assumption step 1's register flagged as the question. Find its source in the case or exhibits, or mark it unsupported before any slide is rebuilt on it."
 schedule: When the user supplies a revised case or deck. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

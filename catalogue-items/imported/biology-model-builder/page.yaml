@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It builds many linked parts from a clear description.
 new_slug: biology-model-builder
 name: Biology model builder
-summary: Describe the reactions and species. Get a SimBiology model built in
-  code, with a clear diagram.
+summary: Build a SimBiology model in MATLAB code from your list of species and reactions, with an optional diagram. Edit existing models the same way.
 job: build-software
 headline: Biology model builder
-subhead: Describe the reactions and species. Get a SimBiology model built in
-  code, with a clear diagram. Bring the species and reactions to model. Use the
-  result to plan your next step.
+subhead: Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram. Bring the species and reactions to model. Use the result to plan your next step.
 explain: |
   Describe the species and reactions in your biological system, and get a working SimBiology model written as MATLAB code, with a diagram if you want one. You no longer need to click through the Model Builder by hand or guess function names.
 
   The skill covers compartments, species, reactions, parameters, rules, events, doses and variants. It loads helper scripts first, then builds the model in steps. It only opens the Model Builder app when you ask for a visual, or when you hand it a project file whose layout must be kept. Modifying an existing model works the same way. It needs MATLAB with SimBiology.
 when:
   - You have a set of reactions on paper and need them as a SimBiology model.
-  - You want to add a compartment, species or reaction to an existing model in
-    code.
+  - You want to add a compartment, species or reaction to an existing model in code.
   - You need a clean diagram of a model for a paper or a talk.
   - You are loading a saved project and must keep its diagram layout.
+not_for:
+  - "You want to run a simulation of a finished model: use the simbiology-simulate-model skill, which is not yet listed here, or run it in MATLAB yourself."
+  - "You want to fit parameters to data or run population or NCA work: use the simbiology-fit-model skill, not yet listed here."
+  - "You do not have MATLAB with SimBiology: ask a colleague who does, or draw the model on paper first."
 you_give:
   - The species and reactions to model
   - Rate laws and starting values
@@ -30,8 +30,28 @@ you_get:
   - A laid-out model diagram (optional)
   - A saved model file you can reopen
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with SimBiology.
+  - Open an AI that can run MATLAB with SimBiology. Add the skill folder or paste its text into the chat.
+  - Paste your species, reactions, rate laws, starting values and units. Add a .sbproj file if you have one.
+  - Say if you want a diagram. Without that request, the model is built in code only.
+  - Run the code your AI writes and check the model has the parts you listed.
+  - Save the model file. Then simulate or fit it with the simbiology-simulate-model or simbiology-fit-model skills.
+output_sample:
+  input:
+    - Your species and reactions, with rate laws
+    - Starting values and units for each species and parameter
+    - An existing model or .sbproj project file (optional)
+    - A request for a diagram (optional)
+  prerequisites:
+    - MATLAB with SimBiology that your AI can run
+    - The skill's helper scripts folder, added to the MATLAB path
+  output:
+    - name: Model build code
+      contains: MATLAB code that adds compartments, species, reactions, parameters, rules, events, doses, observables and variants to a SimBiology model.
+    - name: Qualified names and reaction directions
+      contains: Reactions written in the forward direction, with species and reaction parameters named in full so they resolve correctly.
+    - name: Saved model
+      contains: The finished model saved so you can reopen it later, or loaded from your .sbproj file with its layout kept.
+    - name: Model diagram
+      contains: A laid-out diagram in the Model Builder app, made only when you ask for one.
+    - name: checkDiagramLayout results
+      contains: Counts of species outside compartments, lines through blocks and overlapping blocks. All must be zero before you see the diagram.

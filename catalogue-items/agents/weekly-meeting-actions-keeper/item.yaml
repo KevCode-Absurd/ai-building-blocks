@@ -14,10 +14,10 @@ outputs:
   - {type: plan}
 uses: [meeting-minutes-writer, task-list-keeper, meeting-pre-read-writer, meeting-agenda-and-cost-planner]
 steps:
-  - {uses: meeting-minutes-writer, note: "Every week: turns rough notes into decisions, actions with an owner and a date, and open questions."}
-  - {uses: task-list-keeper, note: "Every week: sets this week's actions against last week's open ones, closes what is done and flags what is late or has slipped again."}
-  - {uses: meeting-pre-read-writer, note: "Every week: the agenda for the next meeting, led by the late and carried-over actions."}
-  - {uses: meeting-agenda-and-cost-planner, note: "Only when the same actions have slipped three weeks running, or two meetings in a row ended with no decision: a go or no-go on whether to hold the next meeting at all."}
+  - {uses: meeting-minutes-writer, note: "Every week: turns rough notes into decisions, actions with an owner and a date, and open questions. Hands on: the minutes, which step 2 sets against last week's actions."}
+  - {uses: task-list-keeper, note: "Every week: sets this week's actions from the minutes against last week's open ones, closes what is done and flags what is late or has slipped again. Hands on: the action list, late items first."}
+  - {uses: meeting-pre-read-writer, note: "Every week: the agenda for the next meeting, led by the late and carried-over actions from step 2 and the open questions from step 1."}
+  - {uses: meeting-agenda-and-cost-planner, note: "Only when the same actions have slipped three weeks running, or two meetings in a row ended with no decision: a go or no-go on whether to hold the next meeting at all, priced from step 3's agenda and the attendees you give."}
 schedule: "Right after each weekly meeting"
 asks_before: [sending the minutes or agenda to attendees, assigning an action to a person who did not agree to it, cancelling or moving a meeting, adding or removing attendees, posting to a shared channel or wiki]
 origin: own

@@ -1,26 +1,55 @@
 new_slug: cinematic-image-shot-variation-planner
 name: Cinematic image shot variation planner
-summary: Share a visual idea. Get four still-image prompts with distinct camera positions, lenses, light and moments.
+summary: Turn one visual idea into four cinematic still-image prompts, each with its own camera spot, lens feel, light and moment.
 job: make-images
 headline: Cinematic image shot variation planner
-subhead: Share a visual idea. Get four still-image prompts with distinct camera positions, lenses, light and moments. Bring the brief and any files you want it to use.
+subhead: Share a visual idea. Your AI plans four shots from places a real photographer could stand. You get four prompts you can paste into an image tool.
 explain: |-
   Use this when you need four camera-aware still-image variations. Identify subject, moment, intended style and fixed continuity. Return four variations unless the user asks for another number.
 
   Before writing, plan distance, lens feel, physical witness position, orientation, foreground, crop, focus, height and tilt for each variation.
 when:
-  - You need four camera-aware still-image variations.
-  - You want a clear draft and checks from the material you already have.
+  - You have one image idea and want four different ways to shoot it.
+  - Your first image prompt looks flat and you want new angles.
+  - You need a set of stills that share one subject or product look.
+  - You want to see before, action and reaction moments from one scene.
+not_for:
+  - "You only need one hero image: write a single prompt yourself, or ask your AI for one image prompt."
+  - "Your brief is a flat style, like a logo, icon or chart, with no camera: describe the style and medium directly to your image tool."
+  - "You want the image itself: this only writes prompts, so paste them into an image tool to make the pictures."
 you_give:
-  - brief
-  - "Optional: reference set"
+  - Your visual idea or brief
+  - Reference images or style notes (optional)
+  - Details that must stay the same, like a product or character (optional)
 you_get:
-  - image prompt
-  - Missing inputs and steps that still need to run
+  - Four copy-ready image prompts
+  - A short camera label above each prompt
+  - A list of what stays the same in all four
+  - A note of any missing input or check that did not run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text.
+  - Paste your brief. Add reference images if your AI can read them.
+  - Say if you want a number other than four.
+  - Read the four setups and check the continuity locks match your facts.
+  - Paste your favourite prompt into an image tool. This skill does not make images.
+  - If you want changes, ask for one change. The approved parts stay the same.
+output_sample:
+  input:
+    - Your visual idea or brief
+    - Reference images or notes on the look (optional)
+    - Details that must stay the same, like a product or character (optional)
+    - How many variations you want, if not four (optional)
+  prerequisites:
+    - An image tool to run the prompts, since this skill only writes them
+  output:
+    - name: Setup 1 to 4
+      contains: Four setups, each with a different camera position, lens feel and visible moment.
+    - name: Camera label
+      contains: A short line above each prompt giving distance, lens feel and where the camera stands.
+    - name: Copy-ready prompt
+      contains: Four or five sentences covering shot, subject, light, world and photographic feel.
+    - name: Continuity locks
+      contains: The things that stay the same in every version, such as subject, product or identity.
 how_it_works:
   - title: Read the brief
     text: Identify subject, moment, intended style and fixed continuity. Return four variations unless the user asks for another number.

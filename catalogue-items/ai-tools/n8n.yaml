@@ -2,32 +2,32 @@ slug: n8n
 name: n8n
 maker: n8n
 url: https://n8n.io
-promise: "Build automations and AI agents on your own server or in the cloud."
+promise: "Build automations and AI agents you can inspect step by step, self-hosted or cloud."
 use_cases: [automate]
 categories: [automation]
 what_it_does:
-  - Builds automations from steps you can open, test and re-run one by one.
-  - "Connects apps through built-in links or web requests."
-  - Builds AI agents with the model you choose and approval steps you set.
-  - Lets you switch from visual steps to code when a job gets complex.
-  - Runs on your own server or in n8n's cloud.
-  - Keeps a version history and detailed logs of every run.
+  - "Builds automations and AI agents in a visual builder where you can follow every step (checked 26 Oct 2026)."
+  - "Connects more than 500 apps with built-in links, and reaches any other app over HTTP (checked 26 Oct 2026)."
+  - "Lets you choose the AI model and add a human approval step before an agent acts (checked 26 Oct 2026)."
+  - "Lets you re-run only the step that failed, and watch runs live or open past runs (checked 26 Oct 2026)."
+  - "Keeps a version history of who changed what, and when (checked 26 Oct 2026)."
+  - "Runs on your own server with Docker, or in n8n's hosted cloud (checked 26 Oct 2026)."
 benefits:
-  - "Run workflows on your own server when your data rules require that setup."
-  - Re-run only the step that failed instead of the whole job.
-  - Add a human approval step before an agent acts.
-  - Try it free by self-hosting before you pay for the cloud.
+  - "Keep your data on your own server if your rules require it."
+  - "Fix one failed step without running the whole job again."
+  - "Add a person's approval before an agent acts."
+  - "Pay for runs, not for every step inside a run."
 best_for:
   - Technical teams that want control and self-hosting.
-  - "People working with a coder to build larger repeat tasks."
+  - People working with a coder to build larger repeat tasks.
   - Companies building AI agents with approval steps.
 not_for:
-  - Beginners who want the easiest possible setup.
-  - Anyone who does not want to manage a server, unless you use the cloud plans.
+  - "Beginners who want the easiest setup. Try Zapier or Make."
+  - "Anyone who does not want to manage a server. Use the cloud plans, or pick Lindy for an assistant that needs no setup."
 pricing:
   model: freemium
-  from: Check the maker's site
-  note: Self-hosting the Community Edition is free. Cloud plans are Starter (20 euros per month billed yearly, 2,500 runs), Pro (50 euros) and Business (667 euros, self-hosted). The price is in euros and shown for yearly billing.
+  from: 20 euros per month (Starter, billed yearly, 2,500 workflow runs; checked 26 Oct 2026)
+  note: "Cloud prices on n8n.io/pricing, checked 26 Oct 2026, shown for yearly billing in euros. Starter is 20 euros a month for 2,500 runs. Pro is 50 euros a month for 10,000 runs. Business is 667 euros a month for 40,000 runs and is self-hosted only. Enterprise: contact sales. n8n counts one run of a whole workflow as one execution, however many steps it has. Workflows keep running after you go over your quota. The Community Edition is the standard self-hosted version on GitHub. The pricing page gives it no price and no limit, so check its licence before you rely on it for a business."
 works_with:
   - claude
   - chatgpt
@@ -41,7 +41,32 @@ blocks:
   - n8n-sub-workflow-builder
   - n8n-workflow-designer
 alternatives: [zapier, make, gumloop, lindy]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  cloud:
+    - "Go to n8n.io, choose Get Started and register at app.n8n.cloud (checked 26 Oct 2026)."
+    - "Start a new workflow. Add a trigger for the start, such as a schedule or a new row in a Google Sheet."
+    - "Add the next step, such as a Slack message. Connect your account when asked."
+    - "Run the workflow once by hand. Open each step to see the data it received and sent."
+    - "Fix anything wrong, then switch the workflow on."
+  self-hosted:
+    - "Read the install guide linked from n8n.io. It covers Docker. We did not test the steps."
+    - "Start the server and open it in your browser. Then follow the same steps as in the cloud."
+needs:
+  - "Cloud: an n8n account. Self-hosted: a server you can run Docker on, and someone who can look after it."
+  - "A login or API key for each app you connect (Slack, Google Sheets, your AI model)."
+  - "One job written in a line, with its start and end."
+  - "Choose the plan by runs a month, since one run of a workflow counts once."
+example:
+  task: "Post a message in Slack each time a new row lands in a Google Sheet."
+  cost: "Starter is 20 euros a month on yearly billing, with 2,500 runs a month. A run counts once however many steps it has. That is about 83 runs a day if you spread them evenly (2,500 divided by 30). The Community Edition has no price on the page we read."
+  reply: "A workflow you can open step by step. After a test run you see the row data and the Slack message at each step. If a run fails, you re-run the failed step only."
+not_verified:
+  - "That the Community Edition is free to use for any business. The pricing page gives it no price or limit."
+  - "That you can switch from visual steps to code in a step. We did not read that on the pages we checked."
+  - "Install steps for self-hosting. We linked them but did not run them."
+  - "The 500+ app count against other lists. We used the home page number."
 sources:
   - https://n8n.io/pricing
   - https://n8n.io

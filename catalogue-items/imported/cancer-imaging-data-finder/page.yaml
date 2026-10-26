@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It builds queries and checks each dataset's licence.
 new_slug: cancer-imaging-data-finder
 name: Cancer imaging data finder
-summary: Describe the scans you need. Get matching public cancer images, licence
-  details and download commands.
+summary: Find public cancer scans for your project. Get matching collections, licence and citation details, and download commands for the files.
 job: research-topics
 headline: Cancer imaging data finder
-subhead: Describe the cancer type, scan type or collection you need and any
-  filters such as body part or case count. It searches the National Cancer
-  Institute's Imaging Data Commons by the cheapest route available. You get
-  matching collections and series, licence and citation details, and download
-  commands.
+subhead: Describe the cancer type, scan type or collection you need and any filters such as body part or case count. It searches the National Cancer Institute's Imaging Data Commons by the cheapest route available. You get matching collections and series, licence and citation details, and download commands.
 explain: |
   A short list of public cancer scans that fit your project, with licences checked and download steps ready. Describe the cancer type, scan type or collection you need, and the skill searches the National Cancer Institute's Imaging Data Commons.
 
@@ -20,6 +15,10 @@ when:
   - You want to know which collections allow reuse before you build on them.
   - You need to cite the data source properly in a paper.
   - You have a patient or study ID and want the matching images.
+not_for:
+  - You need to decide on a patient's care. This skill finds research images only, so ask a doctor or clinical team.
+  - You want to browse images by eye. Use the IDC Portal, the National Cancer Institute's website for viewing the same data.
+  - You need private hospital scans or data outside the IDC. Ask the data owner or your ethics board for access.
 you_give:
   - The cancer type, scan type or collection you need
   - Any filters such as body part or number of cases
@@ -31,8 +30,28 @@ you_get:
   - Download commands for the files
   - Notes on which access path to use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and download public data.
+  - Open a chat with an AI that can run Python code and reach the internet, such as Claude or ChatGPT with code tools on.
+  - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
+  - Describe what you need, such as the cancer type, scan type, body part and how many cases.
+  - Read the list of collections and the licence notes. Drop any collection whose licence does not fit your use.
+  - Run the download commands on a computer with enough disk space. Add the citations to your paper or report.
+output_sample:
+  input:
+    - The cancer type, scan type or collection you need
+    - Filters such as body part or minimum number of cases (optional)
+    - A patient, study or series ID (optional)
+  prerequisites:
+    - An AI that can run Python code and reach the internet
+    - Enough disk space for the files you download
+    - A Google Cloud sign-in, only for the optional BigQuery route
+  output:
+    - name: Matching collections and series
+      contains: The public collections and image series that fit your request, with scan type, body part and case counts.
+    - name: Licence summary
+      contains: The reuse terms for each collection, so you know what you may build on.
+    - name: Citations
+      contains: Ready-to-use citation text for each collection you plan to use, in APA style by default.
+    - name: Download commands
+      contains: Python commands that fetch the chosen series from public cloud storage.
+    - name: Access path notes
+      contains: Which route was used to search, such as the connected server or the local index, and why.

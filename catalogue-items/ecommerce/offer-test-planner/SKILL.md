@@ -36,6 +36,7 @@ How to start:
 
 ## What you need
 - **Current offer and its page** (required): what the buyer gets, the price, the terms and where it lives.
+- **The change to test** (optional): one proposed change from an earlier step, such as new thresholds, a checklist change or a deadline plan. Test that change, not several.
 - **Weekly visits** to the page to be tested (required for the size check).
 - **Buyer reasons** (strongly advised): review, survey or support lines in the buyers' own words.
 - **Tools** (advised): pop-up or quiz tool, post-purchase survey, subscription app.

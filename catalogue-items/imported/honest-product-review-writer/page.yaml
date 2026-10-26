@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It must sort real evidence from guesses.
 new_slug: honest-product-review-writer
 name: Honest product review writer
-summary: Name the products. Get reviews and buying guides built on real
-  evidence, with no made-up hands-on claims.
+summary: Write a product review or buying guide that shows its real evidence and never claims testing you did not do. Name the products to start.
 job: get-found-in-search
 headline: Honest product review writer
-subhead: Product reviews and buying guides that tell readers exactly where the
-  information comes from. No invented tests and no claim to have used something
-  you did not.
+subhead: Product reviews and buying guides that tell readers exactly where the information comes from. No invented tests and no claim to have used something you did not.
 explain: |
   Product reviews and buying guides that tell readers exactly where the information comes from. No invented tests and no claim to have used something you did not. Name the products and the skill builds the review from sources that are real and disclosed.
 
   It uses four tiers of evidence. First, verified maker specs. Second, patterns across many owner reviews. Third, what trusted experts reported, compared against each other. Fourth, hands-on use, only when you really did it. A short methodology box at the top says which tiers were used. The structure follows Google's review guidelines and FTC rules on disclosure, and it suggests schema markup. If data is missing, it says so instead of filling the gap.
 when:
-  - You run an affiliate or review site and need to publish without faking
-    testing.
+  - You run an affiliate or review site and need to publish without faking testing.
   - You are writing a buying guide for a product you have not owned.
   - You want reviews that follow FTC disclosure rules.
   - Past AI reviews sounded like hands-on tests that never happened.
+not_for:
+  - "You want general writing or editing help: use a plain chat with your AI, since this only sets the evidence and claims for reviews."
+  - "You want a how-to guide or tutorial for a first-time reader: write it as a normal article, and use this only to check any product claims."
+  - "You want to tune a finished page for search: use an SEO checker for that page, since this covers evidence and disclosure only."
 you_give:
   - The products to cover
   - Specs from the maker or where to find them
@@ -30,7 +30,32 @@ you_get:
   - Pros, cons and who each product suits
   - A flag where data is missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your product list, the maker's page for each product, your owner review sources, and a yes or no on whether you tested anything.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. Use an AI that can browse the web, or paste the evidence in yourself.
+  - Paste your product list and sources. Say clearly whether any hands-on testing happened.
+  - Check the criteria and the methodology block first. Each tier named must match work that was really done.
+  - Fix any flagged gaps, add your affiliate disclosure near the picks, then publish and date your updates.
+output_sample:
+  input:
+    - The product category and the pieces you plan (reviews, buying guides, or both)
+    - Links to the maker's own pages for each product
+    - Owner review sources, such as store reviews and forums
+    - Your affiliate disclosure wording (optional)
+    - A yes or no on whether you tested anything yourself
+  prerequisites:
+    - An AI that can browse the web, or evidence you paste in yourself
+  output:
+    - name: Criteria list
+      contains: The things you judge each product on, in the order of how much they matter, set before any product is looked at.
+    - name: Evidence file
+      contains: Sources gathered for each tier, with the number of owner reviews read and any spec differences between sources.
+    - name: Review or buying guide
+      contains: Findings for each criterion, a named drawback for every pick, and who each product suits.
+    - name: Methodology block
+      contains: A short note for readers naming the criteria, the evidence tiers used, any hands-on work, and the update line.
+    - name: Affiliate disclosure
+      contains: Plain wording, placed beside the picks, that says the site earns a commission and the price stays the same.
+    - name: Schema advice
+      contains: "Which markup is honest for the piece: list and article markup by default, review markup only if you tested."
+    - name: Gap notes
+      contains: Anything missing or unverified, stated plainly instead of filled in.

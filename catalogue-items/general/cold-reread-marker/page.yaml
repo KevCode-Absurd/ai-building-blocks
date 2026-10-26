@@ -1,6 +1,6 @@
 new_slug: cold-reread-marker
 name: "Cold re-read marker"
-summary: "Paste a rested draft. Get every page that needs a change, the big holes, and a score out of 100."
+summary: "Find every page in your rested draft that needs a change. Get the big holes, out-of-character acts and a score out of 100."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It reads a whole draft closely and must judge character and plot."
@@ -17,6 +17,10 @@ when:
   - "You finished a draft and put it away, and now it is time to read it."
   - "A reader said something felt off but could not say what."
   - "You suspect your start wanders."
+not_for:
+  - You just finished the draft today. Rest it for a few weeks first, or the read will be thin.
+  - You only want sentence-level fixes. Use a line edit with a human editor or a simple spell check.
+  - You want the draft rewritten. This only marks problems. Do the rewrite yourself or in a separate chat.
 
 you_give:
   - "Your draft, whole or a long section"
@@ -35,6 +39,30 @@ how_to_use:
   - "Say how long it has rested. If under two weeks, expect a thinner read."
   - "Do not fix anything while you read the report. Read it all, then pick."
   - "Pass the recurring list to the theme finder."
+output_sample:
+  input:
+    - Your draft, whole or one act at a time
+    - How long it has rested (optional)
+    - Facts the story must keep, such as ages or dates (optional)
+  output:
+    - name: Read note
+      contains: How long the draft rested, its length, and whether it was read whole or in parts.
+    - name: Pages to change
+      contains: Each page that needs work, its type of problem, and a short reason.
+    - name: Small errors
+      contains: Spelling, wrong names, and dates or facts that disagree, with both places quoted.
+    - name: Out-of-character acts
+      contains: Each act a person would not do, with the page and the question of why they would.
+    - name: Big holes
+      contains: Dropped threads, forgotten people and events with no cause, and what is missing.
+    - name: Flailing at the start
+      contains: Passages near the start that go nowhere, and where the story really begins.
+    - name: Things that recur
+      contains: Objects, images and words that appear three or more times, with page numbers.
+    - name: Score
+      contains: A score out of 100 with the sum shown. It counts problems, not the quality of the prose.
+    - name: Checks missed
+      contains: One line for each check the AI missed, or none.
 
 how_it_works:
   - title: "Reads in one pass"

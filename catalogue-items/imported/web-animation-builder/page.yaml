@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans the timeline, then writes the code.
 new_slug: web-animation-builder
 name: Web animation builder
-summary: Describe the motion. Get staggered, timed and SVG animations built with
-  Anime.js.
+summary: "Describe the motion you want and get Anime.js web animation code: staggered grids, timed sequences and SVG line drawing for your page."
 job: build-websites
 headline: Web animation builder
-subhead: Smooth, timed animations for your page, written with the Anime.js
-  library. Think headings that slide in one by one, cards that fade in as a
-  grid, or an SVG line that draws itself.
+subhead: Describe the motion you want and where it happens. Your AI writes Anime.js code for it. Think headings that slide in one by one, cards that fade in as a grid, or an SVG line that draws itself.
 explain: |
   Smooth, timed animations for your page, written with the Anime.js library. Think headings that slide in one by one, cards that fade in as a grid, or an SVG line that draws itself.
 
@@ -18,6 +15,10 @@ when:
   - A grid of cards should appear one after another.
   - You want a logo or line drawing to animate on screen.
   - CSS transitions are too limited for what you have in mind.
+not_for:
+  - "You only need a simple hover or fade on one thing: use plain CSS transitions, no library needed."
+  - "Your page is mostly data or forms and motion would distract: leave it static."
+  - "You use Anime.js version 4 and want v3 code: ask your AI to check the version first, or read the official Anime.js docs."
 you_give:
   - A description of the motion you want
   - The page or elements to animate
@@ -25,12 +26,33 @@ you_give:
   - Timing or mood notes (optional)
 you_get:
   - Working animation code
-  - A timeline with the right order
+  - A timeline that sets the order of effects
   - Easing and stagger settings
-  - Notes for getting it into your page
+  - Notes for adding it to your page
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open your AI and paste this skill, or add the skill file.
+  - Describe the motion you want and name the elements it should act on.
+  - Say which Anime.js version you use, or ask your AI to check first.
+  - Copy the code into your project and make sure the selectors match your HTML.
+  - Open the page in a browser and check it on a phone too.
+  - This works best when your AI can run code and open a browser. Otherwise, test it yourself.
+output_sample:
+  input:
+    - A description of the motion you want
+    - The page or elements to animate
+    - Your Anime.js version (optional)
+    - Timing or mood notes (optional)
+  prerequisites:
+    - A web project where you can add JavaScript
+    - Anime.js installed, or permission to add it
+  output:
+    - name: Animation code
+      contains: A JavaScript timeline that sets targets, easing, stagger and the order of effects.
+    - name: Selectors list
+      contains: The class names or elements your HTML must have for the code to find.
+    - name: Version note
+      contains: Which Anime.js version the code is written for, since v3 and v4 differ.
+    - name: Reduced-motion fallback
+      contains: A plain final state for visitors who turn motion off in their settings.
+    - name: Setup notes
+      contains: How to add the code to your page and test it in a browser.

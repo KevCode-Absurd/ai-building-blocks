@@ -1,52 +1,86 @@
 new_slug: turn-an-incident-into-a-safer-procedure
 name: Turn an incident into a safer procedure
 headline: Turn an incident into a safer procedure
-summary: Share the source files. Get a learning report, updated procedure draft and follow-up register.
+summary: Turn an incident timeline into a blameless report, a safer procedure draft and a tracked list of prevention actions with owners and dates.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A learning report, updated procedure draft and follow-up register. Share an incident timeline, logs or notes, existing procedure and confirmed recovery actions. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your incident notes, times and the current procedure. Your AI writes a blameless report, drafts a safer version of the procedure, and lists each prevention action with an owner and a review date.
 explain: |-
-  A learning report, updated procedure draft and follow-up register.
+  After an incident, the report often gets written and then nothing changes. The next outage hits the same gap. This workflow joins the three things that stop that: what happened, the procedure that should have caught it, and the actions someone owns.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Causes remain hypotheses where evidence is weak; prevention work links to an observed failure. Missing tools or evidence stay visible in the final summary.
+  Step 1 writes the learning report from your notes. Step 2 drafts the procedure changes, and each change points to a finding in the report. Steps that worked stay as they are. Step 3 turns the prevention work into a register with owners, proof of completion and a review date.
+
+  Causes stay marked as confirmed or as a guess. The workflow does not name who is to blame, and it does not edit your live procedure.
 when:
-  - You need a learning report, updated procedure draft and follow-up register.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - An outage or failed delivery has just been fixed and you owe a written review.
+  - The same kind of mistake has happened twice and the procedure never changed.
+  - A customer, auditor or boss asks what you changed to stop it happening again.
+  - Your team has an incident review coming and needs a draft to start from.
+not_for:
+  - "The incident is still going: use the Outage incident leader first, then come back after recovery."
+  - "You only need the report, not the procedure or the actions: use the Incident learning report writer."
+  - "It is a security alert in its first hour: use the Security incident triager."
 you_give:
-  - An incident timeline, logs or notes, existing procedure and confirmed recovery actions.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The incident timeline, logs, chat or notes, with times (from your alerts, chat export or notes)
+  - What was done to recover, and which facts are confirmed and which are guesses
+  - The impact you know of, such as who was affected and for how long
+  - The procedure or runbook that applied (optional, but step 2 needs it to mark changes)
+  - Who will read the result, and what you may change
 you_get:
-  - A learning report, updated procedure draft and follow-up register.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A blameless learning report with a sourced timeline and labeled causes
+  - A draft of the updated procedure, with each change tied to a finding
+  - A register of prevention actions with owners, due dates, proof of completion and a review date
+  - A list of facts that are still missing
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - "Gather the notes in one place: alerts, chat export, timeline notes and the current procedure."
+  - Give the pack to Claude, ChatGPT or Gemini. Attach the notes and say who will read the result.
+  - Tell your AI the incident is over, and ask it to follow SKILL.md.
+  - Check the report first. Fix any cause marked as confirmed that you cannot back up, before the procedure is drafted.
+  - Take the procedure draft and the register to the people involved. They agree owners and dates. Nothing here edits your live procedure.
 how_it_works:
   - title: Incident postmortem writer
-    text: Reconstruct the timeline, impact and contributing factors without assigning unsupported blame.
+    text: "Builds a sourced timeline, the impact, and the causes marked confirmed or guess, with no blame on people. Hands step 2 the confirmed causes, the controls that failed and the controls that worked. Check first: every timeline row has a source."
   - title: Process and SOP writer
-    text: Draft the procedural changes justified by the report and preserve controls that still worked.
+    text: "Drafts the safer procedure. Each changed step says which finding it answers. Each step that worked is marked kept. Hands step 3 the list of changes. Check first: no change without a finding."
   - title: Executive action register keeper
-    text: Track prevention actions with owners, evidence of completion and a review date.
+    text: "Lists each prevention action with an owner, a due date, what will show it is done and a review date. An owner is named only if someone agreed. Check at the end: each action ties to a finding."
 output_shape: |-
-  Scope and source coverage
-  A learning report, updated procedure draft and follow-up register.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  LEARNING REPORT
+    Summary, Timeline (time | event | source), Impact,
+    Detection and response, Causes (CONFIRMED or HYPOTHESIS),
+    What worked, What failed
+  PROCEDURE DRAFT
+    Purpose, Scope, Roles, Steps (marked Changed because / Kept), Exceptions
+  FOLLOW-UP REGISTER (action-register.csv)
+    id | task | owner | due_at | timezone | status | depends_on | source_id | done_when | review_date
+  FILES SAVED     <each file and the step that made it>
+  MISSING         <each gap, and what it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Incident notes, chat or alerts, with times
+    - What was done to recover
+    - Impact facts you have (optional)
+    - The procedure that applied (optional)
+  prerequisites:
+    - An incident that is over, with a recovery you can describe
+  output:
+    - name: Learning report
+      contains: A sourced timeline, impact and causes, each marked confirmed or guess, with no blame.
+    - name: Procedure draft
+      contains: The safer procedure, with each change tied to a finding and working steps kept.
+    - name: Follow-up register
+      contains: Prevention actions with owner, due date, proof of completion and review date.
+    - name: Missing and checks missed
+      contains: Facts nobody supplied and checks that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Causes remain hypotheses where evidence is weak; prevention work links to an observed failure.
+  - what: Procedure
+    how: Attach the current procedure. Changes are then marked against real steps, not a new draft.
+  - what: Reader
+    how: Say whether the report goes to your team, your boss or a customer. The detail and wording change to fit.
+  - what: Scope of change
+    how: State what you may not change, such as tools or staffing. Actions then stay inside those limits.
 judge:
   - Causes remain hypotheses where evidence is weak; prevention work links to an observed failure.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +93,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Review the register on its review date, and write down what proof showed each action was done.
+  - Add the new procedure to your team's shared folder and tell the people who use it.
+  - Run the workflow after every incident, so patterns across incidents can show up.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It reads the timeline and the procedure side by side. No code or paid tool is needed.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A chat or alert export with real times.
+    - A named person who agrees each action and its date.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Blameless
+    meaning: Describing what happened and why it made sense then, without naming a person as the cause.
+  - term: Contributing factor
+    meaning: A condition that helped the incident happen but did not cause it alone.
+  - term: Runbook
+    meaning: A step-by-step guide for handling a known situation, such as an outage.
+next:
+  - sop-and-runbook-checker

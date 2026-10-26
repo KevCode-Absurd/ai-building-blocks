@@ -2,12 +2,16 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-priority-customer-ticket-brief
 name: Gorgias priority customer ticket brief
-summary: Connect Gorgias and HubSpot. Get open tickets from important accounts, with context and suggested handling.
+summary: Find open Gorgias tickets from your most important customers. Your AI checks each one in HubSpot and suggests how to handle it.
 job: help-customers
 headline: Gorgias priority customer ticket brief
 subhead: Connect Gorgias and HubSpot and ask which important accounts need attention. It matches open tickets to customer records and value signals. You get a priority queue with account context and suggested handling, plus an optional Slack alert after approval.
 when:
   - You use this tool for customer support and need help with this task.
+not_for:
+  - Your customers have no HubSpot records. Sort tickets by age and topic by hand, or use your help desk's own filters.
+  - You need to answer a ticket. Write the reply yourself or ask your AI to draft one from the ticket text.
+  - You do not use Gorgias or HubSpot. This skill only reads those two tools, so it will not work with another help desk or CRM.
 you_give:
   - Open Gorgias tickets and HubSpot account records.
   - The account value signals or priority flags your team uses.
@@ -30,3 +34,21 @@ how_to_use:
   - Provide Open Gorgias tickets and HubSpot account records.
   - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
   - Review the result. Approve any proposed sending or account changes before they happen.
+output_sample:
+  input:
+    - Your open and pending Gorgias tickets
+    - Your HubSpot contact and account records
+    - The plan, deal value or tags your team counts as VIP (optional)
+  prerequisites:
+    - An AI that can run commands, with the Composio command line tool installed
+    - Gorgias and HubSpot connected through Composio
+    - Slack connected through Composio, only if you want an alert
+  output:
+    - name: VIP Tickets Requiring Priority Handling
+      contains: A table of VIP tickets with customer, company, plan or value, issue, age and risk level.
+    - name: VIP Context
+      contains: "For each VIP ticket: account value, lifecycle stage, owner, open deals, recent activity, support history and suggested handling."
+    - name: Summary
+      contains: Total open tickets, how many are VIP, and the ticket with the highest risk.
+    - name: Slack alert
+      contains: A short message listing the VIP tickets, posted to your support channel only after you say yes.

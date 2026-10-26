@@ -10,10 +10,15 @@
 # The library, skills and pages change with each build: use the copy you have, check for a new one in the background.
 /data/*
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
+  X-Robots-Tag: noindex
 /metadata/*
   Cache-Control: public, max-age=300, must-revalidate
   X-Robots-Tag: noindex
 /mini-tools/*
+  X-Robots-Tag: noindex
+/example-app
+  X-Robots-Tag: noindex
+/example-app/*
   X-Robots-Tag: noindex
 /space
   X-Robots-Tag: noindex, nofollow
@@ -21,13 +26,47 @@
   X-Robots-Tag: noindex, nofollow
 /skills/*
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
+# The skill files and zips are for downloading and for AI assistants; the page for each skill is what search shows.
+/skills/*/SKILL.md
+  X-Robots-Tag: noindex
+/skills/*.zip
+  X-Robots-Tag: noindex
 
 # Safer defaults on every response. The mini tools' embed pages are meant to sit in other sites' iframes, so no
 # frame rule is set here.
+# Consent must never be embeddable, including its direct static aliases.
+/connect-mcp
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Cache-Control: private, no-store
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex, nofollow
+/connect-mcp.html
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Cache-Control: private, no-store
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex, nofollow
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(self), geolocation=()
+
+# Preview images change rarely.
+/support-chat-frame.html
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self'; base-uri 'self'
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex, nofollow
+/support-chat-frame
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self'; base-uri 'self'
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex, nofollow
+/support-chat*.js
+  Cache-Control: public, max-age=0, must-revalidate
+/support-chat.css
+  Cache-Control: public, max-age=0, must-revalidate
 
 # Preview images change rarely.
 /og/*

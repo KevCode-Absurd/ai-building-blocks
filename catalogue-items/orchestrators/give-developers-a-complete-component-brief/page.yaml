@@ -1,52 +1,100 @@
 new_slug: give-developers-a-complete-component-brief
 name: Give developers a complete component brief
 headline: Give developers a complete component brief
-summary: Share the source files. Get a component brief with variants, states, accessible behavior and design tokens.
+summary: Turn one component design into a developer brief with variants, every state, keyboard and focus rules and design tokens. Gaps are marked, not guessed.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A component brief with variants, states, accessible behavior and design tokens. Share a component design, current system rules and the user tasks it supports. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it one component design, your current design system rules and the tasks the component supports. Your AI checks what already exists, defines every state and maps each style to your tokens. You get a component brief a developer can build from.
 explain: |-
-  A component brief with variants, states, accessible behavior and design tokens.
+  A component brief for developers fails when it only shows the happy path. The button looks right, then nobody knows what it does when loading, disabled or focused with a keyboard. Developers guess, and the guesses differ from build to build.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Keyboard behavior, focus, loading, errors and disabled states are specified; unsupported states are marked missing. Missing tools or evidence stay visible in the final summary.
+  This workflow runs three steps. First it checks your design system, so the component reuses what you already have instead of adding a near-copy. Then it lists each state and the move between states, including what happens when something is interrupted. Last it maps every color, size and space to a design token. It uses your approved values. It does not make a new palette.
+
+  Where the design does not say what should happen, the brief says MISSING. It does not invent the answer. Accessibility notes are proposals for your accessibility reviewer to confirm.
 when:
-  - You need a component brief with variants, states, accessible behavior and design tokens.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A designer hands over a new dropdown, date picker or card and the developer asks what happens on error.
+  - Two teams are about to build their own version of the same component.
+  - You are moving a Figma component into code and want variants and tokens written down once.
+  - A component keeps coming back from review because focus, loading or disabled states were never defined.
+not_for:
+  - You only want to find states missing from a component that changed. Use the Design handoff completeness assistant.
+  - You want working code, not a brief. Use the Accessible UI builder.
+  - You need new colors, type sizes and spacing from one brand color. Use the Design token builder on its own.
+  - You want to find where a whole product drifts from its rules each month. Use the Monthly design system keeper.
 you_give:
-  - A component design, current system rules and the user tasks it supports.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The component design, as a Figma link, screenshot, code or a written description
+  - Your design system rules or token file, so the brief reuses approved values (optional, but gaps show up without it)
+  - The user tasks the component supports, such as pick a delivery date
+  - The platforms it must work on, such as web and iOS (optional)
+  - Any limits, such as a UI library the developers must use (optional)
 you_get:
-  - A component brief with variants, states, accessible behavior and design tokens.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A list of what your system already has that this component can reuse, and what is new
+  - The variants and options the component needs, each named
+  - Every state with what triggers it and what the user sees, including loading, error and disabled
+  - Keyboard and focus behavior, proposed for your accessibility reviewer to confirm
+  - A token map showing the approved value used for each color, size and space
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Attach the component design and your design system rules or tokens. Add the user tasks in one or two lines.
+  - After step 1, check that the reuse list names components you really have. Correct any it got wrong.
+  - After step 2, read the state table. Anything marked MISSING needs a decision from your designer before developers start.
+  - Step 3 reads your token values. If your AI cannot run code it returns the token map as a table and creates no token files. Then give the brief to a developer.
 how_it_works:
   - title: Design system auditor
-    text: Identify existing patterns and gaps so the component reuses the current system.
+    text: Lists the components, tokens and naming your system already has and finds the closest match to this component. Marks what is new and what clashes. Hands step 2 the reuse list and the gaps. Check before moving on, every reused component exists in your files.
   - title: Screen states designer
-    text: Define each needed state and transition, including interruption and recovery.
+    text: Defines each state the component can be in and the move between states, including interruption and recovery. Writes keyboard and focus behavior for each. Hands step 3 the states with the styles each one needs. Check before moving on, loading, error and disabled are each defined or marked MISSING.
   - title: Design token builder
-    text: Use component mapping and developer handoff modes with the existing approved values. Preserve those values instead of generating a replacement palette.
+    text: Maps each color, size and space in the component to a token, using component mapping and developer handoff modes. Keeps your approved values and makes no new palette. Hands back the token map and developer notes. Check before moving on, no value appears that is not in your system or marked as new.
 output_shape: |-
-  Scope and source coverage
-  A component brief with variants, states, accessible behavior and design tokens.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  COMPONENT        <name>, <platforms>, <user tasks it supports>
+
+  REUSE            <existing component or token> | <what it covers> | <gap>
+  NEW              <what is new and why nothing existing fits>
+
+  VARIANTS         <variant or option> | <when it is used>
+
+  STATES           <state> | <trigger> | <what the user sees> | <how it ends>
+
+  KEYBOARD & FOCUS <key or action> | <what happens> | <focus moves to>
+                   (proposed, to be confirmed by your accessibility reviewer)
+
+  TOKENS           <style> | <token name> | <approved value> | <where it is used>
+
+  MISSING          <each gap, and who must decide>
+  CHECKS MISSED    <one line each, or none>
+  NEXT STEP        <one action for you>
+output_sample:
+  input:
+    - The component design, as a Figma link, screenshot, code or description
+    - Your design system rules or token file (optional)
+    - The user tasks the component supports
+    - Platforms and limits (optional)
+  prerequisites:
+    - An AI that can read your design files, or a written description of the component
+  output:
+    - name: Reuse list
+      contains: Which existing components and tokens this one can reuse, what is new, and any naming clash.
+    - name: Variants
+      contains: Each variant and option, such as size, tone and with or without icon, and when each is used.
+    - name: State table
+      contains: Every state with its trigger, what the user sees and how it ends, with gaps marked MISSING.
+    - name: Keyboard and focus
+      contains: Proposed keys, focus order and focus ring behavior for each state.
+    - name: Token map
+      contains: The approved token and value for each color, size and space, and any value not in your system.
+    - name: Developer notes
+      contains: Open questions, checks for the finished build and the person who must decide each gap.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Keyboard behavior, focus, loading, errors and disabled states are specified; unsupported states are marked missing.
+  - what: One platform
+    how: Name the platform, such as web only. The state table and keyboard notes cover only that platform.
+  - what: Existing tokens
+    how: Attach your token file. Step 3 then uses its exact names and values and flags anything outside it.
+  - what: A library
+    how: Name the UI library developers use. Step 1 checks the closest library component before it proposes a new one.
+  - what: A stricter bar
+    how: Add your own accessibility rules, such as a minimum touch target. The state table checks against them.
 judge:
   - Keyboard behavior, focus, loading, errors and disabled states are specified; unsupported states are marked missing.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -70,5 +118,13 @@ works_best_with:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
 terms:
+  - term: Design token
+    meaning: A named style value, such as a color or space, that the whole product reuses.
+  - term: Variant
+    meaning: A version of a component, such as small or large, or primary or secondary.
+  - term: State
+    meaning: A condition a component can be in, such as default, hover, loading, error or disabled.
+  - term: Focus
+    meaning: The control that gets the next key press when someone uses a keyboard.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result and file passed from one step to the next.

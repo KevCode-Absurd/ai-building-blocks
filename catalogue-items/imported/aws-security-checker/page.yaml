@@ -2,33 +2,97 @@ thinking: medium
 thinking_why: It runs checks, then ranks the findings.
 new_slug: aws-security-checker
 name: AWS security checker
-summary: Point it at your AWS account. Get a ranked list of security gaps with fixes.
+summary: Check your AWS account with read-only commands. Get a ranked list of security gaps in access, network, data and logs, each with a fix.
 job: secure-code
 headline: AWS security checker
-subhead: "A ranked list of security gaps in your AWS account, each with a fix.
-  The AI runs read-only AWS command line checks across four areas: identity and
-  access, network, data protection and logging."
+subhead: "Give your AI read-only access to your AWS account. It runs read-only commands across four areas, which are identity and access, network, data protection and logging. You get a ranked list of gaps, each with evidence and a fix you can review before you run it."
 explain: |
-  A ranked list of security gaps in your AWS account, each with a fix. The AI runs read-only AWS command line checks across four areas: identity and access, network, data protection and logging.
+  When you inherit an AWS account, you do not know what is open. This AWS security checker looks for the common gaps in one pass. It runs read-only commands and reports what it finds, with the command output as proof.
 
-  It looks for things like open security groups, public S3 buckets, unencrypted data, root account use, missing MFA, old access keys and gaps in CloudTrail logging. A scoring step turns the results into a security score, and findings are mapped to common compliance frameworks. You then get remediation steps in priority order. It also includes a script that runs the audit in one go. You need the AWS command line installed and read access to the account.
+  It checks identity and access (MFA, root account, old keys), network (security groups open to the world, public S3 buckets), data (unencrypted disks and databases, public snapshots) and logging (CloudTrail, Config, flow logs). It ranks the findings Critical, High or Medium, and gives one fix for each. You get a count by severity, not a single score, because a score hides which gap matters.
+
+  Any check it cannot run is listed as not run, never as clean. Compliance notes name the area a finding touches, such as CIS or PCI-DSS. They are pointers, not a verdict. Fixes are for you to read and run. The checker never changes your account.
 when:
-  - You inherited an AWS account and don't know how safe it is.
-  - A customer asked for proof of your security setup.
-  - You want a quick check before a compliance audit.
-  - You want to find public buckets before someone else does.
+  - You inherited an AWS account and do not know how safe it is.
+  - A customer asked for proof of your security setup and you want to see the gaps first.
+  - You want a quick check before a compliance review.
+  - You want to find public S3 buckets before someone else does.
+not_for:
+  - "You only want your IAM permission policies reviewed and rewritten: use the AWS access policy reviewer."
+  - You need a formal audit, a compliance sign-off or an attack test. This reads settings. A security professional or a penetration test does the rest.
+  - "You want to check cost, speed or design: use the AWS workload practice reviewer."
 you_give:
-  - AWS command line access with read permissions
-  - Which account or region to check
-  - Compliance framework in scope (optional)
+  - Read-only AWS command line access for your AI
+  - The region or regions to check
+  - Which framework matters to you, such as CIS, PCI-DSS or HIPAA (optional)
 you_get:
-  - Findings across identity, network, data and logs
-  - A security score
-  - A ranked fix list with commands
-  - Compliance mapping
+  - A ranked list of findings with the resource and the proof
+  - One fix for each finding that you can review first
+  - A count of findings by severity
+  - A list of checks that did not run, and why
+  - A short fix order for the top five actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Set up read-only access first. In AWS, give a test user the SecurityAudit and ViewOnlyAccess managed policies, and install the AWS command line. Never paste access keys into chat.
+  - Use an AI that can run commands, like Claude Code. In a plain chat, ask the AI for each command, run it yourself, and paste the output back with account names removed.
+  - Paste this skill and name the regions to check. If you skip regions, it checks only the default region and says so.
+  - Read the scope section first. Any check marked not run needs attention before you trust the result.
+  - Review each fix before you run it. Start with the Critical items. Then run the checks again to see the gaps close.
+how_it_works:
+  - title: Set the scope
+    text: It confirms your regions and what access it has, and lists any check it cannot run.
+  - title: Check identity and access
+    text: It reads the credential report for missing MFA, old keys and root account use.
+  - title: Check network and data
+    text: It looks for open security groups, public buckets and snapshots, and unencrypted disks.
+  - title: Check logging
+    text: It confirms CloudTrail is on, and looks at Config and access logs.
+  - title: Rank and fix
+    text: It ranks findings, tallies them by severity and gives one fix for each.
+output_shape: |
+  Scope: <account (masked)>, <regions>, <checks run>, <checks not run and why>
+
+  Findings (ranked)
+  | # | Severity | Finding | Resource | Evidence | Fix | Framework area |
+
+  Severity tally: <n Critical, n High, n Medium, n not run>
+  Fix order: <top 5 actions with effort>
+  Next steps: <what to re-run, and what this check cannot see>
+output_sample:
+  input:
+    - Read-only AWS command line access
+    - The regions to check
+    - A framework to note, such as CIS (optional)
+  prerequisites:
+    - The AWS command line installed, and a user with SecurityAudit and ViewOnlyAccess
+    - An AI that can run commands, or you run them and paste the output back
+  output:
+    - name: Scope
+      contains: Regions checked, checks run, and any check not run with the reason.
+    - name: Ranked findings
+      contains: Each gap with severity, resource, the command output that proves it and one fix.
+    - name: Severity tally
+      contains: How many Critical, High and Medium findings, and how many checks did not run.
+    - name: Fix order
+      contains: The top five actions in order, with how long each should take.
+    - name: Next steps
+      contains: What to re-run after fixes, and what this check cannot see.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Can run the AWS commands itself and read the output.
+    - name: AWS Security Hub
+      why: Runs continuous checks and covers more than this one-time review.
+    - name: Any good chat AI
+      why: Reads command output you paste in and ranks the findings.
+  inputs:
+    - A list of the regions your team really uses
+    - The result of your last security review, to compare
+terms:
+  - term: Read-only
+    meaning: Commands that look at settings and never change them.
+  - term: Security group
+    meaning: A firewall rule set for your servers.
+  - term: CloudTrail
+    meaning: The AWS log of who did what in your account.
+  - term: MFA
+    meaning: A second sign-in step, like a code from your phone.

@@ -2,33 +2,51 @@ thinking: medium
 thinking_why: It prompts you through steps and ranks ideas.
 new_slug: research-idea-finder
 name: Research idea finder
-summary: Describe your field or stuck project. Get ten ways to find research
-  ideas worth chasing, with the best ones ranked.
+summary: Find a research idea worth chasing. Describe your field or stuck project and get ideas from ten angles, ranked by payoff and risk.
 job: research-topics
 headline: Research idea finder
-subhead: Ten different ways to find a research idea worth chasing, applied to
-  your field, with the strongest ideas ranked at the end. When you are stuck, a
-  fresh angle matters more than a longer list.
+subhead: Tell your AI your field or the project where you are stuck. It looks at your topic from ten angles and gathers candidate ideas. Then it ranks the best ones and sharpens the winner.
 explain: |
   Ten different ways to find a research idea worth chasing, applied to your field, with the strongest ideas ranked at the end. When you are stuck, a fresh angle matters more than a longer list.
 
   The ten lenses include starting from a real problem versus starting from a method, finding gaps others skip, combining two fields, flipping a common assumption, and looking at what recently became possible. You describe your area or your stuck project, and the skill runs the lenses and collects candidates. Then it checks each for payoff, risk and fit with your skills. It does not do literature reviews or experiment design.
 when:
-  - You are starting a new direction and have no idea where to aim.
-  - Your current project is stuck and you need a new angle.
-  - You have a half-formed idea and want to test its promise.
-  - You are moving between fields and need an entry point.
+  - You are starting a new research direction and have no idea where to aim.
+  - Your current project is stuck and you need a fresh angle.
+  - You have a half-formed idea and want to test whether it has promise.
+  - You are moving to a new field and need a way in.
+not_for:
+  - You already have a clear research question and need a plan. Ask a colleague or your supervisor to help you design the study.
+  - You want a literature review. Use a literature review tool or search Google Scholar yourself.
+  - You need help with experiment design or methods. Use a guide for your own field instead.
 you_give:
-  - Your field or stuck project
+  - Your field or the project you are stuck on
+  - Where you are stuck
   - Your skills and resources (optional)
-  - Ideas you already have (optional)
+  - Ideas you already have or have tried (optional)
 you_get:
-  - Candidate ideas from ten lenses
-  - Strengths and risks for each
-  - Ranked shortlist
-  - Next step for the top ideas
+  - Candidate ideas from ten different angles
+  - The payoff and risk of each idea
+  - A ranked shortlist of the strongest ideas
+  - A sharper pitch for your top pick
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full skill text into the chat.
+  - Add your field or stuck project, where you are stuck, and any skills or past ideas.
+  - Read the ranked list. Check that the top ideas matter to people in your field.
+  - Ask your AI to sharpen the one you like best, or to run the angles again with new details.
+output_sample:
+  input:
+    - Your field or the project you are stuck on
+    - Where you are stuck
+    - Your skills and resources (optional)
+    - Ideas you already have or have tried (optional)
+  output:
+    - name: Candidate ideas
+      contains: Ideas gathered by running your topic through each of the ten angles, such as problem-first, analogy transfer and what changed.
+    - name: Filter and rank
+      contains: Each idea checked for payoff, risk and fit with your skills, then ranked from strongest to weakest.
+    - name: Refine the winner
+      contains: The top idea sharpened into a clear pitch, with a short test of whether it holds up.
+    - name: Pitfalls check
+      contains: A short list of common ideation mistakes to check your final pick against.

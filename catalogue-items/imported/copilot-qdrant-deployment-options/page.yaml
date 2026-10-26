@@ -2,17 +2,97 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-qdrant-deployment-options
 name: Qdrant hosting option adviser
-summary: Share your search workload. Get a comparison of local, Docker and cloud
-  hosting that fits your needs.
+summary: Choose where to run Qdrant. Get a pick between local mode, Docker, Qdrant Cloud or EDGE, with a comparison table and the main risk.
 job: ship-and-host
 headline: Qdrant hosting option adviser
-subhead: Share your search workload. Get a comparison of local, Docker and cloud
-  hosting that fits your needs. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: "Describe your search project in a few lines: how big it is, whether it is a test or live, and who will run it. Your AI picks the Qdrant hosting option that fits and compares it with the others. You get the main risk and the guide to follow next."
+explain: |
+  Qdrant is a vector database, the kind of store that powers meaning-based search. You can run it in a few ways, and the wrong choice costs weeks. This Qdrant deployment guide helps you choose before you build.
+
+  It starts from what you need: a quick test, full control on your own servers, a managed service with no upkeep, or search that runs inside your app with no network hop. Each need points to one option. Local mode is for prototypes. Docker is the default for self-hosting. Qdrant Cloud handles upgrades and backups. EDGE runs in your app on a single machine.
+
+  It also lists the common mistakes, such as using local mode for production or hosting yourself with no backups. If you do not know a number, it says which option the answer would change.
+when:
+  - You are starting a search or recommendation project and have not picked a Qdrant setup.
+  - Your team argues about Docker or Qdrant Cloud and needs a clear comparison.
+  - Your app needs search with no network delay, such as on a device.
+  - You have a prototype in local mode and want to know how to move to production.
+not_for:
+  - You already chose a setup and need to grow it. Use the Qdrant cluster capacity planner.
+  - You are moving to a new embedding model. Use the Qdrant embedding migration planner.
+  - Search runs but results are poor. Use the Qdrant search relevance investigator.
+  - You need prices. Check the Qdrant Cloud pricing page, since this skill does not quote them.
+you_give:
+  - What you are building and whether it is a test or live
+  - Roughly how many vectors and how much data you expect
+  - Whether a network trip to a server is acceptable
+  - Managed service or full control, and who will run it
+  - Any rule about where data must be stored (optional)
+you_get:
+  - One recommended Qdrant hosting option, with reasons
+  - A table comparing the options you could pick
+  - The main risk of your pick and how to cover it
+  - The unknowns that could change the answer
+  - The quickstart to follow next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Write 5 to 8 lines about your project: test or live, rough size, whether a network trip is fine, and who runs the servers. Say "unknown" where you do not know.
+  - Paste the skill, then your lines. Any chat AI works. No code or login is needed.
+  - Read the recommendation and the table. Check the main risk against what your team can really run, such as backups and monitoring.
+  - Answer any unknowns it lists and ask it to run the choice again if an answer changes.
+  - Follow the quickstart link it gives for the option you chose. Use the Qdrant pricing page for costs.
+how_it_works:
+  - title: Ask what you need
+    text: It starts with managed or full control, network delay, and test or live.
+  - title: Match a path
+    text: It maps your answers to prototype, self-hosted production, zero-ops production or lowest latency.
+  - title: Name the option
+    text: It picks local mode, Docker, Qdrant Cloud, Hybrid Cloud or EDGE for that path.
+  - title: Check the traps
+    text: It tests your pick against known mistakes, such as no backups or EDGE for a multi-machine setup.
+  - title: Compare and hand back
+    text: It gives the comparison table, the main risk and the guide to follow next.
+output_shape: |
+  Recommended option: <option> | <reasons tied to your answers>
+  Comparison table: <option> | <fits when> | <who runs it> | <main limit>
+  Main risk: <biggest risk> | <how to cover it>
+  What would change the answer: <unknowns>
+  Next step: <quickstart to follow>
+output_sample:
+  input:
+    - What you are building, and whether it is a test or live
+    - Rough number of vectors and amount of data
+    - Whether a network trip to a server is acceptable
+    - Managed service or full control
+    - Any rule about where data must live (optional)
+  output:
+    - name: Recommended option
+      contains: Local mode, Docker, Qdrant Cloud, Hybrid Cloud or EDGE, with reasons tied to your answers.
+    - name: Comparison table
+      contains: Each option you could pick, when it fits, who runs it and its main limit.
+    - name: Main risk
+      contains: The biggest risk of your pick and how to cover it.
+    - name: What would change the answer
+      contains: The unknowns that could flip the choice, such as data size or data location rules.
+    - name: Next step
+      contains: The Qdrant quickstart or guide that matches the option you chose.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It needs no code or login. Only a short description of your project is required.
+    - name: Qdrant's own docs
+      why: The quickstart links in the answer point there. Check them for the latest steps.
+  inputs:
+    - A rough count of vectors from your current data
+    - The latency you need, in plain words, such as "under a second"
+    - Your team's skills with servers and backups
+terms:
+  - term: Vector database
+    meaning: A store that finds items by meaning, not exact words, using lists of numbers called vectors.
+  - term: Local mode
+    meaning: Qdrant running inside your Python code with no server. Good for tests only.
+  - term: Docker
+    meaning: A way to run software in a ready-made box, so Qdrant runs on your own machine or server.
+  - term: EDGE
+    meaning: Qdrant running inside your app on one machine, with no network trip.
+  - term: Hybrid Cloud
+    meaning: Qdrant Cloud's control with the servers placed on your own infrastructure.

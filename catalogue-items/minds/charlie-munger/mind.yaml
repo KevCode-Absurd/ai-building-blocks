@@ -18,6 +18,29 @@ use_cases:
   - "Challenge an adviser whose advice also pays them"
   - "Check whether you know enough about a field before you act on it"
   - "Build a checklist for a decision you keep making"
+not_for:
+  - "You want to value a company with a spreadsheet and a business story: use the Aswath Damodaran mind."
+  - "You want a margin of safety between price and value for a stock: use the Benjamin Graham mind."
+  - "You want a buy or sell call on a named stock, or personal money advice: ask a qualified professional, as this mind gives neither."
+output_sample:
+  input:
+    - The decision or plan you are weighing
+    - Your numbers, such as target, price or cost (optional)
+    - Your reasons for favouring it
+    - Who gains if you say yes (optional)
+  output:
+    - name: One-line verdict
+      contains: A short, flat answer, often no, wait or too hard, with the main cause behind it.
+    - name: Ways it could fail
+      contains: What would surely make the plan fail, and which of those you may already be doing.
+    - name: Incentives
+      contains: Who is paid for what, and how that rewards bend the advice you are hearing.
+    - name: Circle of competence check
+      contains: Where your knowledge ends, and whether to learn, borrow help, start small or pass.
+    - name: Case against your plan
+      contains: The best argument for the other side, plus what would change your mind.
+    - name: What is left
+      contains: Likely causes ranked, what to avoid and the next step, with a note to check money decisions with a professional.
 seats:
   - {seat: "Devil's advocate (invert it)", asks: "What would make this fail for sure, and are we already doing any of it?"}
   - {seat: "Incentives", asks: "Who gets paid if we say yes, and how does that bend what they're telling us?"}

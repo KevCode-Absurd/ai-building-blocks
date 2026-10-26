@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It plans a beta and sets the exit rules.
 new_slug: beta-program-planner
 name: Beta program planner
-summary: Describe your launch. Get who to invite, what to ask them, and clear
-  rules for when the beta ends.
+summary: Plan a beta that gives you real answers. Get who to invite, what to ask, and clear rules for when your beta program ends and you launch.
 job: build-product
 headline: Beta program planner
-subhead: A beta that produces answers, not noise. Describe your launch, and the
-  AI helps you choose between a closed or open beta, then pick participants who
-  match the people you will have after launch, and size the group so you can
-  handle the feedback.
+subhead: A beta that produces answers, not noise. Describe your launch, and the AI helps you choose between a closed or open beta, then pick participants who match the people you will have after launch, and size the group so you can handle the feedback.
 explain: |
   A beta that produces answers, not noise. Describe your launch, and the AI helps you choose between a closed or open beta, then pick participants who match the people you will have after launch, and size the group so you can handle the feedback.
 
@@ -19,6 +15,10 @@ when:
   - Past betas ended with no clear call on launching.
   - Feedback arrives in scattered emails and chat messages.
   - You need to tell testers the beta is over.
+not_for:
+  - "You need a launch plan for a feature with no beta: a short checklist and a simple release note will do."
+  - "You want to test an idea before you build it: talk to five target users yourself instead of running a beta."
+  - "You need to fix bugs found in testing: use your own bug tracker and a developer, not a beta plan."
 you_give:
   - Product and launch date
   - Target users after launch
@@ -30,7 +30,29 @@ you_get:
   - A feedback and triage plan
   - Ship, extend or stop rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tools are needed.
+  - "Write a short brief: your product, launch date, who your users will be after launch, and how much feedback your team can handle."
+  - Add problems from past betas if you have any (optional).
+  - Ask your AI to write the full beta plan, from beta type through to the wind-down.
+  - Check that the cohort size fits your team and the ship, extend or stop rules are clear. Ask for changes before you invite anyone.
+output_sample:
+  input:
+    - Your product or feature and its launch date
+    - Who your users will be after launch
+    - How much feedback your team can handle each week
+    - Problems from past betas (optional)
+  output:
+    - name: Beta type
+      contains: A choice between closed and open beta, alpha or release candidate, with the reason it fits your launch.
+    - name: Participant selection criteria
+      contains: Who to invite so testers match the people you will have after launch, and who to leave out.
+    - name: Cohort size
+      contains: How many testers to bring in, sized to the feedback your team can handle.
+    - name: Onboarding plan
+      contains: "What to tell testers on day one: feedback channels, support paths and what you expect from them."
+    - name: Feedback and triage plan
+      contains: The questions to ask, the channels to use, and how to sort feedback during the beta.
+    - name: Graduation criteria
+      contains: The signals that tell you to ship to everyone, keep testing or stop.
+    - name: Wind-down plan
+      contains: How to close the beta and tell testers what happens next.

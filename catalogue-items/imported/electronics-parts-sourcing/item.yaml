@@ -1,7 +1,7 @@
 slug: electronics-parts-sourcing
 renamed_from: electronics-parts-sourcing-planner
 name: "Electronics parts sourcing planner"
-summary: "Give it your parts list. Get a plan for scarce parts, long lead times and leftover stock."
+summary: "Find the electronic parts that can stall your build. Give it your parts list to get a risk table, second-source ideas and a leftover stock plan."
 category: general
 boards: []
 type: skill

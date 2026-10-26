@@ -15,10 +15,10 @@ outputs:
   - { type: audit_report }
 uses: [ platform-roas-reality-check, meta-scaling-campaign-planner, next-dollar-budget-allocator, meta-delivery-troubleshooter ]
 steps:
-  - { uses: platform-roas-reality-check, note: "Starts by finding the return that is real, so scaling is judged on the right number." }
-  - { uses: meta-scaling-campaign-planner, note: "Sets the scaling steps against the break-even you wrote down." }
-  - { uses: next-dollar-budget-allocator, note: "Uses the scaling plan to decide how the extra budget is split." }
-  - { uses: meta-delivery-troubleshooter, note: "Finds why spend stalled or cost rose once the budget went up." }
+  - { uses: platform-roas-reality-check, note: "Starts by finding the return that is real, so scaling is judged on the right number. Hands the audit report to step 2." }
+  - { uses: meta-scaling-campaign-planner, note: "Sets the scaling steps against the break-even you wrote down. Hands the scaling plan to step 3." }
+  - { uses: next-dollar-budget-allocator, note: "Uses the scaling plan to decide how the extra budget is split. Hands the budget plan to step 4." }
+  - { uses: meta-delivery-troubleshooter, note: "Uses the budget plan to find why spend stalled or cost rose once the budget went up." }
 origin: rebuilt
 version: 1.0.1
 generated_from: intake/scale-meta-spend-while-it-still-pays/skeleton.yaml

@@ -2,34 +2,71 @@ thinking: low
 thinking_why: It lays out a standard schedule.
 new_slug: balance-roll-forward-builder
 name: Balance roll-forward builder
-summary: Name an account. Get a schedule from opening to closing balance, with
-  each movement tied to the ledger.
+summary: Build a balance sheet roll-forward from opening to closing balance, with each line tied to your ledger and any gap shown, not plugged.
 job: money-and-investing
 headline: Balance roll-forward builder
-subhead: Name an account. Get a schedule from opening to closing balance, with
-  each movement tied to the ledger. Bring the account or account group. Use the
-  result to plan your next step.
+subhead: Give it one account, the entity, the period and your ledger figures. It builds the roll-forward schedule month-end packages and audits ask for. You get opening balance, each movement and closing balance, a source for every line and a foot check that shows any gap.
 explain: |
-  A schedule that walks a balance sheet account from its opening balance to its closing balance, with every movement tied to the ledger. Name the account, the entity and the period, and the AI builds the layout: opening balance, plus new activity, plus accruals booked, minus reversals of earlier accruals, minus payments, plus or minus reclasses and currency translation, giving the ending balance.
+  A balance sheet roll-forward shows how an account got from its opening balance to its closing balance. It is the schedule an auditor asks for, and the one that goes in a month-end close package. Think accrued expenses, prepaid items or deferred revenue.
 
-  Each line is matched to a source, such as the prior close package or the general ledger. The ending figure must equal the ledger balance, and any gap is shown. It suits month-end close packages and audit support.
+  The layout is fixed: opening balance, plus new activity, plus accruals booked, minus reversals of earlier accruals, minus payments, plus or minus reclasses, plus or minus currency translation, equals closing balance. Each line gets a "ties to" note naming the ledger query or document behind it.
+
+  The schedule must add up to the ledger balance. If it does not, the gap is shown as an unexplained item. It is never hidden inside a line to make the check pass. Any line you gave no ledger source for is marked unverified instead of getting a made-up citation.
 when:
   - Month-end close needs a roll-forward for accrued expenses.
-  - An auditor asks you to prove how a balance moved in the year.
+  - An auditor asks you to show how a balance moved in the year.
   - Your ledger balance and your schedule are off by an unknown amount.
-  - You want the same layout for every balance sheet account.
+  - You want one layout for every balance sheet account in the close package.
+not_for:
+  - You have no ledger extract or query access. Every line would be unverified, so pull the ledger first.
+  - You need to match two ledgers or find breaks between a ledger and a bank statement. Use the ledger to subledger reconciler or the account reconciler.
+  - You want a roll-forward of debt reserves or equity per share. Use the debt reserve rollforward builder or the book value per share roll-forward.
 you_give:
-  - The account or account group
-  - The entity and period
-  - Opening balance and ledger activity
-  - Accruals, payments and adjustments
+  - The account or account group, such as accrued expenses
+  - The entity and the period, such as March 2026
+  - The opening balance, from last period's close package or the ledger
+  - Ledger activity for the period, as an extract or query results
+  - The closing ledger balance at period end
 you_get:
-  - A roll-forward from opening to closing balance
-  - Each line tied to its ledger source
-  - A difference check against the ledger
-  - A package ready for review
+  - A roll-forward table from opening to closing balance
+  - A "ties to" note for every line
+  - A foot check that passes or shows the gap
+  - A list of lines marked unverified
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Say which account, entity and period you want. Paste the ledger extract or attach the spreadsheet.
+  - If you have no extract yet, ask for the list of ledger queries to run. Then paste the results back.
+  - Check the foot check first. A pass means opening plus movements equals the ledger closing balance.
+  - If it fails, work on the unexplained gap before sign-off. Do not adjust a line to hide it.
+  - Check each "ties to" note against your real ledger. Then drop the table into your close package.
+output_sample:
+  input:
+    - The account or account group
+    - The entity and period
+    - The opening balance and the closing ledger balance
+    - Ledger activity for the period (extract or query results)
+  prerequisites:
+    - A general ledger export or query access, so every line has a source
+  output:
+    - name: Roll-forward table
+      contains: Opening balance, additions, accruals, reversals, payments, reclasses, currency translation and closing balance.
+    - name: Ties to column
+      contains: For each line, the ledger query or document it comes from, or "unverified".
+    - name: Foot check
+      contains: Pass or fail on opening plus movements equals closing, with the gap if it fails.
+    - name: Open items
+      contains: Lines without a ledger source and anything to chase before sign-off.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: Reads your ledger spreadsheet and does the sums for you to check.
+  inputs:
+    - Last period's close package, for the opening balance
+    - The journal source or type on each ledger line
+terms:
+  - term: Roll-forward
+    meaning: A schedule that walks an account from its opening balance to its closing balance.
+  - term: Foot check
+    meaning: A test that the schedule's lines add up to the ledger closing balance.
+  - term: Reclass
+    meaning: A move of an amount from one account to another.

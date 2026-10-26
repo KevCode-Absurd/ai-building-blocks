@@ -44,15 +44,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the pricing survey.** Use the skill `willingness-to-pay-survey`. Starts from your product facts and returns two questions to send plus the sums to read the answers.
+1. **Plan the pricing survey.** Use the skill `willingness-to-pay-survey`. Starts from your product facts and returns two questions to send plus the sums to read the answers. Hands the survey plan to step 2.
 
 Pause here: Send the survey to at least 30 people per price. Put the answers into a sheet and keep it with the survey plan.
 
-2. **Design the price model and tiers.** Use the skill `pricing-model-designer`. Reads the survey answers you collected and sets price points and tiers.
+2. **Design the price model and tiers.** Use the skill `pricing-model-designer`. Give it the plan from the steps before. Reads the survey answers you collected, using the survey plan from step 1 to read them, and sets price points and tiers. Hands the price model to step 3.
 
 Pause here: Pull your last 90 days of sales and the cost of each product. Pick the product you will test first.
 
-3. **Plan a price test you can undo.** Use the skill `price-test-planner`. Tests the tier prices from the model on one product, with your real sales and costs.
+3. **Plan a price test you can undo.** Use the skill `price-test-planner`. Give it the plan from the steps before. Tests the tier prices from the model on one product, with your real sales and costs.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

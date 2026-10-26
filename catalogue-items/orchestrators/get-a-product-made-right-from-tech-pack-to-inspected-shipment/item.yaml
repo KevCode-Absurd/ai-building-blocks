@@ -14,11 +14,11 @@ outputs:
   - {type: brief}
 uses: [product-tech-pack-writer, factory-shortlist-vetter, landed-cost-calculator, sample-approval-gatekeeper, pre-shipment-inspection-brief-writer]
 steps:
-  - {uses: product-tech-pack-writer, note: "Starts the flow. Turns your photos and ideas into the one spec every factory quotes against."}
-  - {uses: factory-shortlist-vetter, note: "Judges factories by how they answer the tech pack from the step before."}
-  - {uses: landed-cost-calculator, note: "Prices the quotes you collected, checked against the tech pack, down to cost per sellable unit and margin."}
-  - {uses: sample-approval-gatekeeper, note: "Judges the samples line by line against the tech pack from the first step."}
-  - {uses: pre-shipment-inspection-brief-writer, note: "Gives the inspector the tech pack and the gold standard to check bulk goods against, and ties payment to the result."}
+  - {uses: product-tech-pack-writer, note: "Starts the flow. Turns your photos and ideas into the tech pack, the one spec every factory quotes against. Steps 2, 3, 4 and 5 all work from it."}
+  - {uses: factory-shortlist-vetter, note: "Uses the tech pack from step 1 and the factory answers you collect. Judges factories by how they answer it, and hands you the pick to quote."}
+  - {uses: landed-cost-calculator, note: "Uses the tech pack from step 1 and the quotes you collected from the factories, not step 2's scores. Prices them down to cost per sellable unit and margin."}
+  - {uses: sample-approval-gatekeeper, note: "Uses the tech pack from step 1 and photos and measures of the samples you ordered, not step 3's costs. Judges the samples line by line and tells you which one to approve."}
+  - {uses: pre-shipment-inspection-brief-writer, note: "Uses the tech pack from step 1, your order sheet and the sample you approved after step 4. Gives the inspector the tech pack and the gold standard to check bulk goods against, and ties payment to the result."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/get-a-product-made-right-from-tech-pack-to-inspected-shipment/skeleton.yaml

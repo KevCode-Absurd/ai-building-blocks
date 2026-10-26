@@ -1,15 +1,21 @@
 slug: enterprising-bargain-screener
 name: "Enterprising bargain screener"
-summary: "Paste a table of listed companies. Get the cheap ones that pass five safety tests, with the failed test beside every cut."
+summary: "Cut a table of companies to the cheap ones that pass five safety tests, with the failed test beside each cut. Not a buy list."
 category: general
 type: skill
 role: check
 job: analysis
 level: advanced
 inputs:
-  - {type: source_text, required: true}
+  - {type: spreadsheet, required: true}
 outputs:
   - {type: audit_report}
+needs_mode: manual
+before: []
+next:
+  - asset-floor-estimator
+  - price-versus-value-gap-judge
+  - bargain-group-rules-writer
 origin: rebuilt
 version: 1.0.0
 minds: [benjamin-graham]

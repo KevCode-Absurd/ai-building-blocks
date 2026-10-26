@@ -1,6 +1,6 @@
 new_slug: public-review-reply-desk
 name: Public review reply desk
-summary: Give it each new batch of public reviews. Get a checked reply for each, with risky ones held and repeat complaints flagged.
+summary: Get a checked reply for each new batch of public reviews. Risky reviews are held for you, and repeat complaints are flagged.
 job: help-customers
 thinking: medium
 thinking_why: It drafts, sorts by risk and loops on checks for unhappy reviewers. A mid-size model handles most weeks. Use a stronger one when the batch has disputes or safety claims.
@@ -14,6 +14,10 @@ when:
   - You get a handful of reviews a week and want a reply to every one, in a human voice.
   - Some reviews are angry and you do not trust yourself to reply calmly or safely.
   - You want to spot a repeat complaint before it becomes a pattern.
+not_for:
+  - "You get fewer than about five reviews a week: write the replies by hand, in your own words."
+  - "You want to answer support emails: use a support inbox or a person, because this agent only handles public reviews."
+  - "You want to learn what buyers want from your reviews: read them yourself or use a review mining step, since this agent only counts complaints."
 you_give:
   - The new reviews, pasted or exported, with stars, date, product and text
   - Your support email and the remedies you have approved, the first time
@@ -30,6 +34,29 @@ how_to_use:
   - Paste the new reviews.
   - Read the held reviews first. Then approve the replies and post them yourself.
   - Run it again next week. It reads the log and the repeat complaints.
+output_sample:
+  input:
+    - Your new public reviews, with stars, date, product and text
+    - Your support email and the remedies you have approved (first run)
+    - A few replies you wrote and liked (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI that can keep files, such as Claude Code, to save the reply log between weeks
+  output:
+    - name: The batch
+      contains: One line with how many reviews are ready, fixed and held.
+    - name: Decide first
+      contains: Held reviews with the risk flag and what a person must check.
+    - name: Replies to approve
+      contains: Each review with stars, type, whether it was checked, and a reply ready to paste.
+    - name: Placeholders to fill
+      contains: Open slots such as your support email or a remedy.
+    - name: Repeat complaints
+      contains: Complaint types with counts and dates, plus a ranked brief for app reviews.
+    - name: Notes
+      contains: Reviews where stars and text disagree, or that name the wrong product page.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line in one list.
 how_it_works:
   - title: Read the folder
     text: Loads your reply rules, reply log and open issues. On the first run it sets the rules and asks for your approved remedies.

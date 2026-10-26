@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It gathers answers and writes one file.
 new_slug: product-context-builder
 name: Product context builder
-summary: Answer questions about your product. Get one context file every
-  marketing skill reads first.
+summary: Build a product marketing context file by answering questions about your product, buyers and voice. Your AI reads it before every marketing task.
 job: brand-file
 headline: Product context builder
-subhead: One short file about your product that every other marketing task reads
-  first, so you stop repeating yourself. It holds what you sell, who buys it,
-  how you are positioned, and how your brand sounds.
+subhead: One short file about your product that every other marketing task reads first, so you stop repeating yourself. It holds what you sell, who buys it, how you are positioned, and how your brand sounds.
 explain: |
   One short file about your product that every other marketing task reads first, so you stop repeating yourself. It holds what you sell, who buys it, how you are positioned, and how your brand sounds.
 
@@ -18,6 +15,10 @@ when:
   - You keep pasting the same product background into every chat.
   - Your positioning changed and old notes are out of date.
   - A new teammate needs to learn the audience and tone fast.
+not_for:
+  - "You only run one-off tasks and do not mind pasting product details each time: skip this and paste a short note into the chat."
+  - "You want a full brand voice guide for a person or team: use a brand voice guide, not this file, which holds a short voice section."
+  - "You need ad results or campaign reports: use your ad platform's reports, since this file only stores your rules and lessons."
 you_give:
   - Answers about your product and customers
   - Your website or existing brand notes (optional)
@@ -29,7 +30,34 @@ you_get:
   - A change log of updates
   - Gaps you still need to fill
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text. Claude works best if it can save files in your project.
+  - Say you want to create your product context. If a context file already exists, paste it in or let your AI find it.
+  - Pick a draft from your website or notes, or answer questions one section at a time. Skip sections that do not apply.
+  - Check the draft. Fix anything wrong and add real customer phrases word for word.
+  - Save the file as .agents/product-marketing.md. If your AI cannot save files, copy the text and save it yourself.
+  - Come back when your positioning changes. Your AI adds a new version and a changelog line.
+output_sample:
+  input:
+    - Your answers about your product, buyers and competitors
+    - Your website, README or existing brand notes (optional)
+    - Real customer phrases, word for word (optional)
+    - Lessons from past tests or campaigns (optional)
+  prerequisites:
+    - An AI that can read and save files in your project, or paste the file into a chat and save it yourself
+  output:
+    - name: Product Overview
+      contains: Your one-line description, what the product does, its category, type and business model.
+    - name: Target Audience
+      contains: The companies and roles you sell to, the main use case and the jobs customers hire you for.
+    - name: Problems & Pain Points
+      contains: The core problem, why other options fall short, what it costs buyers and how they feel.
+    - name: Competitive Landscape and Differentiation
+      contains: Direct, secondary and indirect rivals, and why customers pick you over them.
+    - name: Customer Language and Brand Voice
+      contains: Customer phrases word for word, words to use or avoid, and voice traits with example lines.
+    - name: Proof Points and Goals
+      contains: Results, customers and quotes you can cite, plus your main business goal and the action you want.
+    - name: Learnings
+      contains: A table of tested lessons, starting empty and filling as work ships.
+    - name: Changelog
+      contains: A version number and one line per update on what changed and why.

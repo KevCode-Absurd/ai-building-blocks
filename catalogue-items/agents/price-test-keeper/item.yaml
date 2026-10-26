@@ -16,11 +16,11 @@ outputs:
   - {type: plan}
 uses: [waterfall-price-setter, price-sensitivity-analyst, price-test-planner, split-run-result-reader, price-position-planner]
 steps:
-  - {uses: waterfall-price-setter, note: "Once per product, and again when costs change: the lowest viable price, which every test stays above."}
-  - {uses: split-run-result-reader, note: "The day a price test ends: orders and visitors for each price, with a keep, rerun or stop call."}
-  - {uses: price-position-planner, note: "Only when a rival's price changed since last time: hold, test or a bounded match, never below your floor."}
-  - {uses: price-sensitivity-analyst, note: "Only when your store is connected and no test is running: which products react to price."}
-  - {uses: price-test-planner, note: "When a product has no test running: the one price to try, three outcome cases and how to undo it."}
+  - {uses: waterfall-price-setter, note: "Once per product, and again when costs change: the lowest viable price, which every test stays above. Hands the floor to every later step."}
+  - {uses: split-run-result-reader, note: "The day a price test ends: orders and visitors for each price, with a keep, rerun or stop call. Hands the call, and the price now live, to the rival check and the next test."}
+  - {uses: price-position-planner, note: "Only when a rival's price changed since last time: hold, test or a bounded match, never below your floor. Uses step 1's floor and the rival prices you give it. Hands its price call to the next test plan."}
+  - {uses: price-sensitivity-analyst, note: "Only when your store is connected and no test is running: which products react to price. Uses your connected store, not step 3's output. Hands the list of price-sensitive products to the test planner."}
+  - {uses: price-test-planner, note: "When a product has no test running: the one price to try, three outcome cases and how to undo it. Uses the floor, the settled call and the price-sensitive list from the earlier steps."}
 schedule: "Every four weeks, and the day a price test ends"
 asks_before: [changing any live price, starting a test that shows customers different prices, matching a rival's price, bulk price changes, changing shipping or discount rules]
 origin: own

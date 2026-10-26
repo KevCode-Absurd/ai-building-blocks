@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds linked sheets and checks they balance.
 new_slug: linked-financial-model-builder
 name: Linked financial model builder
-summary: Give it your past accounts and drivers. Get income, balance sheet and
-  cash flow models that tie together.
+summary: Build a linked three statement financial model from your past accounts. Income, balance sheet and cash flow tie out, with a balance check.
 job: money-and-investing
 headline: Linked financial model builder
-subhead: Income statement, balance sheet and cash flow built so they tie out,
-  with the balance check proving it. Give it your past accounts and your key
-  drivers and you get a model you can stress and trust.
+subhead: Income statement, balance sheet and cash flow built so they tie out, with the balance check proving it. Give it your past accounts and your key drivers and you get a model you can stress and trust.
 explain: |
   Income statement, balance sheet and cash flow built so they tie out, with the balance check proving it. Give it your past accounts and your key drivers and you get a model you can stress and trust.
 
@@ -18,6 +15,10 @@ when:
   - Your own model has a circular reference you cannot clear.
   - An investor wants a three-statement model for your company.
   - You want to see how a big purchase hits cash and debt.
+not_for:
+  - "You only need a simple one-off budget or a cash-basis plan: use a budget forecast in a spreadsheet instead."
+  - "You want to value a company from an existing model: ask an accountant or build the valuation as a separate step."
+  - "You do not have a balance sheet that balances today: fix your opening books with your accountant first."
 you_give:
   - Past financial statements
   - Key drivers like growth and margins
@@ -30,7 +31,27 @@ you_get:
   - Balance checks
   - Notes on ratio changes from history
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Collect your income statement, balance sheet and cash flow for at least 3 years. A spreadsheet or pasted table works.
+  - Write down your main drivers, such as growth, margins, capex and payment days. Say how far ahead you want to forecast and why.
+  - Open Claude, ChatGPT or Gemini. Use one that can run code if you want the checks run for you. Paste the skill text.
+  - Paste your accounts and drivers. Add debt and equipment details if you have them.
+  - Check the balance check row is zero in every period. Ask your AI to explain any forecast ratio that differs from your history.
+  - "Test it: ask for zero growth and a big capex jump. The balance sheet should still balance."
+output_sample:
+  input:
+    - Your income statement, balance sheet and cash flow for the last 3 years or more
+    - Your key drivers, such as growth, margins, capex and payment days
+    - What the model is for and how far ahead it should run
+    - Your debt and equipment details (optional)
+  prerequisites:
+    - An AI that can run code, such as Python, or build a clean spreadsheet
+    - Your past accounts in a spreadsheet or pasted text
+  output:
+    - name: Assumptions Summary
+      contains: A table of every driver, with the past figure next to the forecast figure.
+    - name: Statements
+      contains: The income statement, balance sheet and cash flow, with a balance check row for every period.
+    - name: Schedules
+      contains: Rollforwards for equipment, working capital, debt and equity that feed the statements.
+    - name: Diagnostics
+      contains: Balance check status, revolver use, key ratio trends and the way interest circularity was handled.

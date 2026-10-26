@@ -2,40 +2,64 @@ slug: glean
 name: Glean
 maker: Glean
 url: https://www.glean.com
-promise: "Search connected work apps and ask questions with links to your company’s source files."
+promise: "Search every work app at once. People see only what they may open."
 use_cases: [organise-work, research]
 categories: [productivity, chat-assistant]
 what_it_does:
-  - Searches your connected work apps from one box.
-  - Answers questions in chat with links to the source files.
-  - Respects who can see which documents.
-  - Builds agents that take routine steps for you.
-  - Shows up inside the apps your team already uses.
+  - "Searches your connected work apps from one place. The site says 275+ connectors, and names Slack, Google Drive, Jira, Confluence, SharePoint, GitHub and Salesforce (checked 26 Oct 2026)."
+  - "Offers an assistant you ask questions about your company's data (checked 26 Oct 2026)."
+  - "Shows each person only what they are allowed to see (checked 26 Oct 2026)."
+  - "Lets teams build agents that automate routine steps (checked 26 Oct 2026)."
+  - "Tracks every query, answer and action, so you can see how it is used (checked 26 Oct 2026)."
+  - "Works with more than 40 AI models, the site says (checked 26 Oct 2026)."
 benefits:
-  - "Search for a document across the work apps your team has connected."
-  - Get new hires up to speed from your own files.
-  - "Give staff a place to look for answers to repeat questions."
-  - Keep results limited to what each person may see.
+  - "Find a document across the work apps your team has connected."
+  - "Get new hires up to speed from your own files."
+  - "Give staff one place to look for answers to repeat questions."
+  - "Keep answers limited to what each person may see."
 best_for:
   - Large companies with files spread over many apps.
   - Teams that lose hours to searching.
   - Companies that need access controls on AI answers.
 not_for:
-  - Small teams or solo owners, since it is sold to companies by demo.
-  - Anyone who wants a free plan or a quick trial.
+  - "Small teams and solo owners. It is sold to companies by demo, so look at Notion AI or NotebookLM first."
+  - "Anyone who wants a free plan or a price list. The site shows neither, only a demo request."
 pricing:
   model: enterprise
-  from: Check the maker's site
-  note: No public prices. The site offers a demo, and sellers report a minimum contract for companies.
+  from: "Check the maker's site (no public price)"
+  note: "Checked 26 Oct 2026. The pricing page we read lists no plans or prices and only a Get a demo button. Ask for a price and any minimum contract in the demo."
 works_with:
   - Slack
   - Google Drive
-  - Microsoft 365
   - Jira
+  - Confluence
+  - SharePoint
+  - GitHub
 runs_in: [web, browser-extension, slack, api]
 blocks: []
 alternatives: [guru, notion-ai, microsoft-copilot, notebooklm]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Decide which apps you want searchable, and ask your IT or security lead who can approve access to each one. Glean's pages do not say what setup needs, so expect to be asked."
+  - "Request a demo at glean.com/get-a-demo. The page says only Request a demo and see what Glean can do for your team, so we do not know what the form asks."
+  - "In the demo, ask for the price and any minimum contract, whether your apps have connectors, how it keeps each person's access rules, and how long setup takes."
+  - "Ask whether a small pilot group is possible before a company-wide start."
+  - "Once it is live, ask a question where you already know the answer, such as where your refund policy lives. Check the answer against the file."
+needs:
+  - "A company, not a personal account. We found no personal plan."
+  - "A list of the apps to connect, such as Slack, Google Drive, Jira or SharePoint."
+  - "Someone who can approve access to those apps and set who sees what."
+  - "A demo request through glean.com."
+example:
+  task: "Ask a question your files already answer, such as what your refund policy is."
+  reply: "An answer drawn from your connected apps. Glean says users only see what they are allowed to see, so two people can get different results. We could not confirm whether answers show links to the source files."
+not_verified:
+  - "That answers link to source files. An earlier note said so, and the pages we read do not."
+  - "A minimum contract. Third-party sites report one, and Glean does not publish it."
+  - "Whether a trial exists, what the demo form asks, and how long setup takes."
+  - "Whether Microsoft 365 is a supported connector. The pages we read name SharePoint, not Microsoft 365."
 sources:
+  - https://www.glean.com
   - https://www.glean.com/pricing
-  - https://www.eesel.ai/blog/glean-ai-pricing
+  - https://www.glean.com/get-a-demo

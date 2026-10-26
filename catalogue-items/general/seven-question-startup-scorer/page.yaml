@@ -1,6 +1,6 @@
 new_slug: seven-question-startup-scorer
 name: "Seven-question startup scorer"
-summary: "Paste your plan and earlier checks. Get a score on seven make-or-break questions and the one to fix first."
+summary: "Score your startup idea on seven make-or-break questions. Paste your plan and get a go, fix or stop call and the first fix."
 job: test-an-idea
 thinking: high
 thinking_why: "It weighs seven questions against facts and has to catch a fatal gap, which takes careful reasoning."
@@ -17,6 +17,10 @@ when:
   - "You have an idea and need one clear call on whether to go ahead."
   - "You are strong on the product but unsure about the rest of the plan."
   - "You have run other checks and want them pulled into one score."
+not_for:
+  - "Your business is already running and you want to grow it: use a person you trust who knows your numbers, or a growth plan."
+  - "You have not yet shown anyone wants this: talk to ten likely buyers first, then come back to score it."
+  - "It is a hobby or side project with no plan to sell: skip the scoring and just build it."
 
 you_give:
   - "Your idea or plan"
@@ -33,6 +37,24 @@ how_to_use:
   - "Paste your plan and any earlier checks. Say who is on the team and whether they work full time."
   - "Answer its questions for any gap. A fact you do not have is marked missing, not guessed."
   - "Do the first fix it names before you spend more on the idea, then run the score again."
+output_sample:
+  input:
+    - "Your idea or plan: what you build, for whom, and how you will sell it"
+    - Earlier checks, such as a market, ten-times or durability check (optional)
+    - Who is on the team and how long they have worked together (optional)
+  output:
+    - name: Seven question scores
+      contains: One line each for engineering, timing, monopoly, people, distribution, durability and secret, with a score, the fact behind it and what is missing.
+    - name: Total
+      contains: Your score out of 14, adding 2 for a pass, 1 for partial and 0 for a fail.
+    - name: The call
+      contains: A go, fix or stop verdict with the reason.
+    - name: First fix
+      contains: The weakest question and one task you can start this week.
+    - name: Missing
+      contains: Facts you did not give that would change a score.
+    - name: Checks missed
+      contains: One line for each self-check the AI still failed, or none.
 
 how_it_works:
   - title: "Gathers the facts"

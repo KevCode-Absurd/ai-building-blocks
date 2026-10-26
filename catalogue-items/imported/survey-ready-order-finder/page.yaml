@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It filters orders by dates and status.
 new_slug: survey-ready-order-finder
 name: Survey-ready order finder
-summary: Point it at your store orders. Get buyers delivered 7 to 14 days ago,
-  minus refunds and cancellations.
+summary: "Find buyers to email for a post-purchase survey: Shopify orders fulfilled 7 to 14 days ago, minus refunds, cancels and no-consent."
 job: run-your-store
 headline: Survey-ready order finder
-subhead: Point it at your store's order data. It reads orders through the API,
-  keeps those fulfilled 7 to 14 days ago and drops anything refunded or
-  cancelled. It changes nothing in your store. You get the eligible orders and
-  customers, counts of what was excluded, and a read-only log.
+subhead: Point it at your store's order data. It reads orders through the API, keeps those fulfilled 7 to 14 days ago and drops anything refunded or cancelled. It changes nothing in your store. You get the eligible orders and customers, counts of what was excluded, and a read-only log.
 explain: |
   A list of customers who got their order 7 to 14 days ago and are ready for a post-purchase survey, with refunded and cancelled orders left out. It reads your store and changes nothing.
 
@@ -19,18 +15,40 @@ when:
   - You are planning a survey email and need the right list.
   - You do not want to survey people who got a refund.
   - You run this every week as a routine.
+not_for:
+  - "Your store is not on Shopify, or your orders have no fulfilment status: pull the buyer list by hand from your store's order export."
+  - "Your product needs more than 14 days of use, such as furniture: change the window to 30 days, or ask your AI to widen it."
+  - "You want to send the survey itself: use your email or SMS tool, because this only builds the list and sends nothing."
 you_give:
-  - Access to your store's order data
-  - A confirmed fulfilment status
-  - The date window if different (optional)
+  - Your Shopify store domain
+  - Read-only access to your store orders, customers and fulfilments
+  - The number of days after fulfilment to start and stop (optional)
+  - Whether to keep only buyers who agreed to marketing (optional)
 you_get:
-  - A list of eligible orders
-  - Customers who qualify
-  - Counts of orders excluded
-  - A read-only session log
+  - A CSV of customers ready to load into your email or SMS tool
+  - One row per customer, even if they bought more than once
+  - Counts of orders left out for refunds, cancels, no consent and guest checkout
+  - A read-only session log. Nothing in your store changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Sign in with the Shopify CLI and give read access to orders, customers and fulfilments.
+  - Paste the skill into your AI and give it your store domain.
+  - Change the 7 and 14 day window, or the consent setting, if you need to.
+  - Check the counts, then open the CSV.
+  - Load the CSV into your email or SMS tool. This skill does not send anything.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - Access to your store orders and customers (read only)
+    - Earliest and latest days after fulfilment (optional)
+    - Whether to keep only buyers who agreed to marketing (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A signed-in Shopify session with read access to orders, customers and fulfilments
+  output:
+    - name: Session log
+      contains: A step-by-step record of each store query, its settings and how many orders it returned.
+    - name: Summary counts
+      contains: Orders checked, how many were dropped for refunds, cancels, missing consent or guest checkout, and how many are eligible.
+    - name: post_purchase_survey_<date>.csv
+      contains: One row per eligible customer, with email, name, language, order name, total, fulfilment and delivery dates, and days since fulfilment.

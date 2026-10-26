@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It asks questions, picks a layout, then builds it.
 new_slug: matlab-app-builder
 name: MATLAB app builder
-summary: Describe the app you need. Get a working MATLAB app, built from a
-  chosen layout.
+summary: Describe the MATLAB app you need. Your AI asks a few questions, picks a layout and builds a working app you can run in MATLAB.
 job: build-software
 headline: MATLAB app builder
-subhead: Describe what the app should do, who will use it, how polished it must
-  look and who will maintain it. It picks the build route that fits how long the
-  app must last, then builds it. You get a working MATLAB app and the route
-  choice with reasons.
+subhead: Describe what the app should do, who will use it, how polished it must look and who will maintain it. It picks the build route that fits how long the app must last, then builds it. You get a working MATLAB app and the route choice with reasons.
 explain: |
   A working MATLAB app built from your description, with the right build route chosen for how long it must last and who will keep it up. You skip the question of where to start.
 
@@ -19,6 +15,10 @@ when:
   - You need a MATLAB app with a polished look for a client.
   - Your team keeps editing one app and needs a clear structure.
   - A calculation takes seconds and freezes the window while it runs.
+not_for:
+  - "You only need a calculation with no window or buttons: ask your AI for plain MATLAB code."
+  - "You want to change an app you already have: ask your AI to edit the existing files instead."
+  - "You want to convert an app between .mlapp and plain text: open it in App Designer and use File > Save As."
 you_give:
   - What the app should do
   - Who will use it
@@ -31,8 +31,27 @@ you_get:
   - Background handling for long tasks
   - Files saved in your chosen format
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open your AI tool. Use one that can write files and run MATLAB code. Add this skill to the chat.
+  - Describe the app in a few lines. Say who will use it, how polished it must look, and who will maintain it.
+  - Answer its questions. Say if you want App Designer files (.mlapp or plain text) or plain code.
+  - Check the route it recommends and confirm it. Then check the plan before it builds.
+  - Run the built app in MATLAB and test it. If you use version control, save the plain-text files there.
+output_sample:
+  input:
+    - What the app should do
+    - Who will use it and who will maintain it
+    - How polished it must look
+    - Whether you want App Designer (.mlapp or plain text) or plain code
+    - Your MATLAB release number (optional)
+  prerequisites:
+    - An AI that can write files and run MATLAB code
+    - MATLAB installed on your computer
+  output:
+    - name: Recommendation
+      contains: The build route it suggests, the signals behind it, and the main trade-off, so you can confirm or change it.
+    - name: Implementation plan
+      contains: App name, route, save format, layout type, panel structure, key behaviors, files and the order of the build.
+    - name: App files
+      contains: The working MATLAB app, saved as plain code, a .mlapp file or plain-text App Designer files.
+    - name: Layout
+      contains: One chosen layout type, such as Dashboard, Explorer, Tabbed, Wizard or Canvas, with a line on how the screen is arranged.

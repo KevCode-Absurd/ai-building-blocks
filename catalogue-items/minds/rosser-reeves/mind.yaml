@@ -16,6 +16,31 @@ use_cases:
   - "Check that your product really is better before you spend on ads"
   - "Turn a feature into a clear promise a buyer cares about"
   - "Pick where to place short ads so the most people see them for the least money"
+not_for:
+  - "You want a brand image built over years: use the David Ogilvy mind, who worked from product facts and a steady brand image."
+  - "You want to own a clear place in buyers' minds against rivals: use the Al Ries mind, who worked on positioning and focus."
+  - "You want wit, story and feeling in the idea: use the Bill Bernbach mind, who paired a clear idea with honest wit."
+output_sample:
+  input:
+    - Your product facts and what makes it different
+    - What rivals claim in their ads
+    - Your ad, slogan or script (optional)
+    - Any recall or sales evidence from past campaigns (optional)
+  output:
+    - name: Verdict
+      contains: A short, blunt view on whether your claim passes his three tests.
+    - name: One-line proposition
+      contains: Your main claim restated as the one benefit a buyer gets.
+    - name: What to cut
+      contains: The extra messages that should go because they pull attention from the main claim.
+    - name: Proof picture
+      contains: A description of what viewers should see so the picture matches the spoken claim.
+    - name: Viewer check
+      contains: What to ask a few strangers about the ad, and what count would settle it.
+    - name: Numbers to watch after launch
+      contains: Recall and pull, and how to read each one.
+    - name: Limits
+      contains: Notes that his rules came from 1950s mass TV and have known weaknesses.
 seats:
   - {seat: "The one selling point", asks: "What is the one thing we promise that nobody else says, and is it strong enough to pull in new buyers?"}
   - {seat: "Proof and demonstration", asks: "How do we show this claim is true in a few seconds?"}

@@ -42,11 +42,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Organic post to ad promoter.** Use the skill `organic-post-to-ad-promoter`. Starts by choosing the posts worth putting money behind.
-2. **Video script bridge checker.** Use the skill `video-ad-bridge-checker`. Give it the script from the steps before. Checks the promo half of each reshoot script, so the hook leads somewhere.
-3. **Meta ads compliance checker.** Use the skill `meta-ads-compliance-checker`. Give it the script from the steps before. Checks the scripts against ad rules before creators film them.
-4. **Creator filming brief writer.** Use the skill `creator-filming-brief-writer`. Give it the script from the steps before. Turns the approved scripts into briefs a creator can film from.
-5. **Meta test campaign planner.** Use the skill `meta-test-campaign-planner`. Give it the brief from the steps before. Lays out the test so the new ads face your current best ad.
+1. **Organic post to ad promoter.** Use the skill `organic-post-to-ad-promoter`. Starts by choosing the posts worth putting money behind. Hands step 2 the shortlist and the reshoot scripts.
+2. **Video script bridge checker.** Use the skill `video-ad-bridge-checker`. Give it the script from the steps before. Checks the promo half of each reshoot script, so the hook leads somewhere. Hands step 3 the tightened scripts.
+3. **Meta ads compliance checker.** Use the skill `meta-ads-compliance-checker`. Give it the script from the steps before. Checks the scripts against ad rules before creators film them. Hands step 4 the scripts with the fixes in, and the problems it found.
+4. **Creator filming brief writer.** Use the skill `creator-filming-brief-writer`. Give it the script from the steps before. Turns the approved scripts from step 3 into briefs a creator can film from. Hands step 5 the briefs.
+5. **Meta test campaign planner.** Use the skill `meta-test-campaign-planner`. Give it the brief from the steps before. Lays out the test so the new ads face your current best ad. Uses step 4's briefs and your performance data.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

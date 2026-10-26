@@ -1,6 +1,6 @@
 new_slug: retargeting-objection-ad-planner
 name: "Retargeting objection ad planner"
-summary: "Give it your conversion rate and exit reasons. Get one retargeting ad per objection and a test order."
+summary: "Plan retargeting ads that answer why visitors left. Give it your conversion rate and exit reasons. You get one ad per objection and a test order."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It sorts your reasons into groups and maps ads to them, which a mid-size model does well."
@@ -17,6 +17,10 @@ when:
   - Your store gets traffic but visitors don't buy, and your retargeting ads just show the product again.
   - You have survey, review or support data on why people hesitate and no plan to use it in ads.
   - You are adding a bottom-of-funnel layer to your ads and need to know what to make first.
+not_for:
+  - "Your store has too little traffic to split into four ad sets: run these ads inside your main campaign, or email people who left their cart."
+  - "You have no data on why people left and want facts, not guesses: call 10 to 20 people who left at checkout first, then come back."
+  - "You want to sell to people who already bought: set up a separate customer campaign in Meta Ads Manager."
 
 you_give:
   - Your site conversion rate
@@ -35,6 +39,31 @@ how_to_use:
   - If you have no data, call 10 to 20 people who left at checkout (only ones who agreed to be contacted) and paste your notes.
   - Make the largest objection's ad first, in its own ad set, with existing customers excluded.
   - Read results on incremental or 7-day click, not the return Meta reports.
+output_sample:
+  input:
+    - Your site conversion rate
+    - "Why visitors left: survey answers, reviews, chat or call notes"
+    - "Your proof and offer: customer count, reviews, guarantee, real discounts"
+    - Customer videos and demos (optional)
+    - How many visitors you can retarget (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini
+    - Your own data on why people left, or notes from calls with people who left at checkout
+  output:
+    - name: Visitors who left
+      contains: The share and count of visitors who did not buy, worked out from your conversion rate and traffic.
+    - name: Objection split
+      contains: Price, trust, quality and not ready yet, each with an estimated share marked as measured, a few answers or a guess.
+    - name: Ad concepts
+      contains: One ad per objection with one claim, the proof, the format, the audience and the ad set name.
+    - name: Test order
+      contains: The objections in order, largest first, with one ad each.
+    - name: Setup note
+      contains: Whether catalog retargeting is on, that existing customers are excluded, and the pain-led to desire-led mix.
+    - name: Measure
+      contains: What to track per ad set, judged on 7-day click or incremental results.
+    - name: Checks missed and missing
+      contains: Any checks that failed and the inputs that would sharpen the plan.
 
 how_it_works:
   - title: Starts from who left

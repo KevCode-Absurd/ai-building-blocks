@@ -2,13 +2,10 @@ thinking: high
 thinking_why: One bad rule can cost real money, so each rule needs checking.
 new_slug: repricing-rules-designer
 name: Repricing rules designer
-summary: Give it your margins and stock. Get safe automatic price rules, test
-  cases, and a kill switch you can trust.
+summary: Set safe automatic repricing rules for your products. Give it your costs, margins and stock. You get floors, rules, tests and a stop plan.
 job: set-prices
 headline: Repricing rules designer
-subhead: A set of price rules that change your prices on their own within safe
-  limits, with test cases and a stop button. You get dynamic pricing without a
-  price war or a sale below cost.
+subhead: A set of price rules that change your prices on their own within safe limits, with test cases and a stop button. You get dynamic pricing without a price war or a sale below cost.
 explain: |
   A set of price rules that change your prices on their own within safe limits, with test cases and a stop button. You get dynamic pricing without a price war or a sale below cost.
 
@@ -18,6 +15,10 @@ when:
   - You want prices to react to stock levels on your own store.
   - You need to decide which products are safe to reprice automatically.
   - You want a way to stop automation fast if it misbehaves.
+not_for:
+  - "You want one best price for one product, once: work it out by hand from your cost, fees and target margin."
+  - "You want your AI to change live prices for you: it cannot, so make the change in your store or repricing tool yourself."
+  - "You have no cost data for your products: gather your costs first, or ask your accountant, because floors cannot be set without them."
 you_give:
   - Cost and target margin per product
   - Stock levels
@@ -30,7 +31,36 @@ you_get:
   - Scenario test results
   - Approval, audit and stop plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your costs, target margin, stock levels and the platform you sell on. Add any competitor prices you trust, with the date you saw them.
+  - Say which products you want covered. Answer the one round of questions it asks about missing costs or approvals.
+  - Check the floors first. Make sure no floor sits below a price you could live with.
+  - Read the simulation results. Fix any rule that sells below your floor or could start a price loop.
+  - Start in observe-only mode, then a small pilot. Set the prices yourself in your store or repricing tool. The AI changes nothing live.
+output_sample:
+  input:
+    - Your cost, fees and target margin for each product
+    - Your stock levels and how fast they sell
+    - Competitor or demand signals you trust (optional)
+    - The platform you sell on, such as Amazon or Shopify
+    - Who must approve price changes (optional)
+  prerequisites:
+    - No code or special tools needed. A chat AI is enough.
+    - Your own cost sheet or sales export, so the AI does not guess
+  output:
+    - name: Scope and Evidence
+      contains: The channels, products and sources used, with each input marked confirmed, assumed or unknown.
+    - name: Control Recommendation
+      contains: Your goal, how much to automate, how sure the AI is, and which decisions are blocked.
+    - name: Economics and Bounds
+      contains: For each product group, the current price, floor, ceiling, base and downside profit, and who approves.
+    - name: SKU Eligibility
+      contains: Whether each product is automatic, needs approval, or stays manual, with the reason.
+    - name: Signal Register
+      contains: Each signal you rely on, its source, how fresh it is, and what to do if it fails.
+    - name: Rule Matrix
+      contains: Each rule's trigger, action, step size, wait time, limits, which rule wins, and how to recover.
+    - name: Simulation Results
+      contains: How the rules behave in cases like a stockout, a coupon stack or a rival price drop.
+    - name: Governance and Rollout
+      contains: The staged rollout, logs, alerts, circuit breaker, manual override and keep or revert gates.

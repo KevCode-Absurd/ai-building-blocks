@@ -4,23 +4,15 @@ identity: Expertise researcher
 area: science
 years: 1947–2020
 living: false
-known_for: His work investigated expert performance and deliberate practice,
-  including the influential 1993 paper and later clarifications about practice
-  categories.
-summary: Use Anders Ericsson's approach to move beyond a performance plateau
-  with specific, coached practice.
+known_for: "Cognitive psychologist who studied expert performance. Best known for deliberate practice and a later paper on what the term does and does not cover."
+summary: "Break through a skill plateau the way Anders Ericsson's research suggests: pick one repeatable task, one weak part and a drill with feedback."
 use_cases:
-  - "Define a measurable skill plateau: You receive a baseline task and one
-    meaningful criterion."
-  - "Separate routine work from improvement practice: You receive a
-    practice-versus-performance map."
-  - "Use a coach to choose the drill: You receive a coach-selected drill and
-    feedback criterion."
-  - "Practice beyond the automatic routine: You receive a small diagnostic drill
-    and a harder follow-up."
-  - "Learn what an expert notices: You receive a feature map and contrast case."
-  - "Set a sustainable practice dose: You receive a practice schedule with a
-    quality boundary."
+  - "Say what your plateau is in a task you can repeat and judge"
+  - "Split your week into work that keeps you going and practice that improves you"
+  - "Choose one small drill for one weak part, with a way to check it"
+  - "Know what to bring to a coach or teacher so they can diagnose the problem"
+  - "Learn what an expert notices by comparing your read of a case with theirs"
+  - "Set a short practice session you can keep up, with a stop rule"
 seats:
   - seat: Practice with useful feedback
     asks: What performance can a skilled person reliably reproduce?
@@ -30,7 +22,7 @@ pairs_with:
   - richard-feynman
   - cal-newport
   - adam-grant
-last_checked: 2026-10-23
+last_checked: 2026-10-26
 sources:
   - n: 1
     title: Deliberate practice technical report
@@ -75,3 +67,30 @@ tests:
       learning app.
     expect: Explains that no such record is available, invents no quote or
       endorsement, and offers a clearly labeled original application instead.
+subhead: "Tell it the skill, one task you can repeat and what you have tried. You get a practice plan: the weak part, a small drill with feedback, a stop rule and a check in the full task. Examples are ours, not his."
+
+not_for:
+  - "Medical, injury or training-safety decisions. Ask a clinician, physio or qualified coach."
+  - "A skill with no way to tell good work from bad. His method needs a task you can repeat and judge."
+  - "A quote or opinion from Anders Ericsson on a new product or event. He died in 2020 and this mind works from a few public papers and pages."
+  - "A promise of mastery from a number of hours. The sources do not support that, and the mind says so."
+
+output_sample:
+  input:
+    - "The skill and one task you can repeat"
+    - "Two attempts, if you have them: a recording, draft or file (optional)"
+    - "Who can judge the work, such as a teacher or coach (optional)"
+    - "How much time you have each week"
+  output:
+    - name: "The task"
+      contains: "One repeatable performance and how you will judge it."
+    - name: "The weak part"
+      contains: "The component to work on, and who will judge it."
+    - name: "The drill"
+      contains: "A small task, what a good attempt looks like and how you get feedback."
+    - name: "The dose"
+      contains: "How long, how often and when to stop."
+    - name: "The check"
+      contains: "How you will test the gain in the full performance."
+    - name: "Beyond the record"
+      contains: "A mark on any advice that goes past his published work."

@@ -2,35 +2,62 @@ slug: deepseek
 name: DeepSeek
 maker: DeepSeek
 url: https://www.deepseek.com
-promise: "Ask questions, write text and code, or add a model to your app."
+promise: "Chat with it, or add a pay-by-use model to your own app."
 use_cases: [ask-an-assistant, write-copy, code]
 categories: [chat-assistant, coding]
 what_it_does:
-  - Answers questions and drafts text in a chat.
-  - Writes and explains code.
-  - Works through maths and logic problems step by step.
-  - Reads files you upload.
-  - Gives developers an API to build it into their own apps.
+  - "Answers questions and drafts text in a chat on the web and in a mobile app (both listed on deepseek.com, checked 26 Oct 2026)."
+  - "Gives developers an API in a format that works with OpenAI and Anthropic software kits (checked 26 Oct 2026)."
+  - "Offers two API models, deepseek-flash and deepseek-v4-pro. Both have a thinking mode (on by default) and a plain mode. Only flash reads images (checked 26 Oct 2026)."
+  - "Sells web Search and Fetch through the API at US$0.75 per 1,000 successful requests each (checked 26 Oct 2026)."
+  - "Writes and explains code. Not checked on the vendor's pages."
 benefits:
-  - Try a capable assistant at no cost in the chat app.
-  - "Compare the model’s cost and results on tasks your app runs often."
-  - Get code written and explained in one chat.
-  - "Test the model on your own tasks before choosing it."
+  - "Test a second model on the tasks your app already runs, and compare the cost and the results side by side."
+  - "Switch an existing OpenAI-style app by changing the base URL, the key and the model name (checked 26 Oct 2026)."
+  - "Pay by use. Calls outside peak hours cost half the peak rate (checked 26 Oct 2026)."
+  - "Repeated text at the start of a prompt is billed at a much lower cache rate (checked 26 Oct 2026)."
 best_for:
-  - Developers who watch cost per call.
-  - Code and reasoning questions.
-  - Teams that want to test a second model.
+  - Developers who watch the cost of each call and run the same prompt many times.
+  - Teams that want a second model to compare with the one they use now.
+  - People who want to try an assistant in a chat before they build anything.
 not_for:
-  - "Work that requires data to stay off outside servers."
-  - Topics where answers need a full check before you use them.
+  - "Private customer, staff or financial data. The privacy policy (last updated 10 Feb 2026) says personal data is stored in the People's Republic of China, and your inputs may be used to train its models unless you ask to opt out by email (checked 26 Oct 2026)."
+  - Answers you can't check yourself. Test it against a task where you know the right answer first.
 pricing:
   model: usage
-  from: US$0.15 per 1 million input tokens
-  note: The chat app is free. The API charges by use, and this price is for the deepseek-flash model off peak. Peak hours cost double, and the larger deepseek-v4-pro costs more.
-works_with: []
-runs_in: [web, mobile, api]
-blocks: []
+  from: US$0.15 per 1 million input tokens (deepseek-flash, off-peak, not cached; checked 26 Oct 2026)
+  note: "API, per 1 million tokens, off-peak (peak is double). deepseek-flash costs US$0.15 for input, US$0.003 for cached input and US$0.60 for output. deepseek-v4-pro costs US$0.66, US$0.022 and US$1.98. Peak is 01:00 to 04:00 and 06:00 to 10:00 UTC, Monday to Friday, outside Chinese public holidays. A token is a small piece of a word. Fees come from a topped-up or granted balance. The chat app: we could not confirm a price or a free plan on the vendor pages we could open, so check before you rely on it. All checked 26 Oct 2026."
+works_with:
+  - claude-code
+  - codex
+runs_in: [web, mobile, desktop, api]
+blocks:
+  - claim-stress-tester
 alternatives: [chatgpt, claude, gemini, grok]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  chat:
+    - "Open deepseek.com and follow its chat link. The chat site blocked our check on 26 Oct 2026, so the sign-in steps are not verified here."
+    - "Paste one task you already know the answer to, such as a short email you have already written or a sum you have already worked."
+    - "Compare the reply with your own. If it is wrong or vague, try the same task in another assistant before you trust it for real work."
+  api:
+    - "Create an account on the DeepSeek platform and apply for an API key (checked 26 Oct 2026). Top up a small balance."
+    - "Point an OpenAI-style client at https://api.deepseek.com with your key and set the model to deepseek-flash (checked 26 Oct 2026)."
+    - "Send one short test prompt, then read the token counts in the reply and work out the cost from the table above."
+needs:
+  - "Chat: nothing we could confirm. Check the sign-in rules on the vendor's site."
+  - "API: a platform account, an API key and a balance. Fees come out of the balance, and the granted balance is used first (checked 26 Oct 2026)."
+example:
+  task: "Summarise a 1,500-word customer email thread into 5 bullet points for a support lead."
+  cost: "About 2,000 tokens in and 500 out on deepseek-flash, off-peak, uncached: 2,000 x US$0.15 per million is US$0.0003, and 500 x US$0.60 per million is US$0.0003, so about US$0.0006 a call, or US$0.60 for 1,000 calls. At peak rates it is double. The token counts are our example, not a measured result."
+  reply: "Five short bullets in plain text. The reply shape depends on your prompt, so ask for bullets and a maximum length, then check each bullet against the thread."
+not_verified:
+  - "That the chat app is free. An earlier note here said so, but we could not confirm it on 26 Oct 2026."
+  - "File upload and web search inside the chat app. The vendor's front page does not mention them."
+  - "How good its code and reasoning are compared with other assistants. We did not test it."
 sources:
   - https://api-docs.deepseek.com/quick_start/pricing/
+  - https://api-docs.deepseek.com/
+  - https://www.deepseek.com
+  - https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html

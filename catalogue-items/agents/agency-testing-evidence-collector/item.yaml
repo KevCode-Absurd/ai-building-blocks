@@ -1,0 +1,41 @@
+slug: agency-testing-evidence-collector
+name: Evidence Collector agent
+summary: "Check a website against its spec and get a QA report with screenshots, pass or fail results and a clear FAILED, NOT DETERMINED or READY call."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: web_page
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: testing/testing-evidence-collector.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-evidence-collector.md
+  licence: MIT
+  original_name: Evidence Collector
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: ff1868ae89f3be62f6f0da1fc8693582f18578c77751b8a65a53169ef15ececd
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Evidence Collector
+  - Agency Agents
+  - Testing
+credits:
+  - title: Evidence Collector
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-evidence-collector.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

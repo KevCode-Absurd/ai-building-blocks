@@ -20,9 +20,9 @@ outputs:
 uses: [copy-foundation-docs-builder, store-quiz-funnel-builder, quiz-answers-to-ad-angles-reader, ad-angle-planner]
 steps:
   - {uses: copy-foundation-docs-builder, note: "Writes the buyer profile and brief the quiz questions and results will lean on."}
-  - {uses: store-quiz-funnel-builder, note: "Builds the quiz, its result pages and offer from the buyer profile and brief."}
-  - {uses: quiz-answers-to-ad-angles-reader, note: "Reads the exported answers for the most common problems and words, and turns them into ranked ad angles."}
-  - {uses: ad-angle-planner, note: "Turns the top quiz angles into a campaign brief for the next round of ads."}
+  - {uses: store-quiz-funnel-builder, note: "Builds the quiz, its result pages and offer from the buyer profile and brief. Hands step 3 the quiz and its question list; you run traffic through it and export the answers."}
+  - {uses: quiz-answers-to-ad-angles-reader, note: "Uses the answers you export from the quiz step 2 built (your spreadsheet), and step 2's question list to read short column names. Hands step 4 a ranked angle list with a read of how aware buyers are."}
+  - {uses: ad-angle-planner, note: "Takes the top ranked angle and its awareness read from step 3, and the buyer brief from step 1. Hands you a campaign brief for the next round of ads."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-a-quiz-funnel-that-sells-and-feeds-your-ads/skeleton.yaml

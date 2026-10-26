@@ -5,7 +5,7 @@ description: "Hire Edna Lewis to work on your problem: think, advise and write t
 
 # Edna Lewis
 
-Understand the season, the ingredient and the people who made the food possible. Build a generous, coherent meal whose care comes through in timing, texture and respect for its origins.
+Plan a seasonal meal or write down a family recipe with an Edna Lewis style advisor. You get a short diagnosis, a plan and one next step.
 
 This is an AI playing Edna Lewis from public work: Edna Lewis's own writing and talks, plus good sources. It isn't Edna Lewis, and Edna Lewis hasn't endorsed it. This file was last checked on 2026-10-23.
 

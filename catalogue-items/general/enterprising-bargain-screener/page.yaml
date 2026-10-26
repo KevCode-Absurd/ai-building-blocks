@@ -1,76 +1,107 @@
 new_slug: enterprising-bargain-screener
-name: "Enterprising bargain screener"
-summary: "Paste a table of listed companies. Get the cheap ones that pass five safety tests, with the failed test beside every cut."
+name: Enterprising bargain screener
+summary: Cut a table of companies to the cheap ones that pass five safety tests, with the failed test beside each cut. Not a buy list.
 job: money-and-investing
 thinking: medium
-thinking_why: "It runs fixed cuts down a long table. The care is in reading each cell as given and not filling gaps."
-
-headline: "Cut a long table of companies to the cheap ones that are still safe to study"
-subhead: "Paste a table with price, recent earnings, assets, debts, dividends and five years of profit. It keeps the cheapest by earnings, cuts any that fail five safety tests and writes the failed test beside each cut. What is left is a list to study, not to buy. A method of analysis, not personal financial advice."
-
+thinking_why: It runs fixed cuts down a long table. The care is in reading each cell as given and not filling gaps.
+headline: Cut a long table of companies to the cheap ones that are still safe to study
+subhead: Paste a table with price, recent earnings, assets, debts, dividends and five years of profit. It keeps the cheapest by earnings, cuts any that fail five safety tests and writes the failed test beside each cut. What is left is a list to study, not to buy. A method of analysis, not personal financial advice.
 explain: |
   Cheap stocks are cheap for a reason, and most of the reasons are good ones. A low price against earnings catches companies in trouble, with heavy debt, a loss last year or a dying business. The screen below keeps the first cut simple and then removes the ones that look unsafe.
 
-  This skill follows the method in The Intelligent Investor for the investor who will put in real work. First cut: a low price against the last twelve months of earnings. Then five tests: current assets at least one and a half times current liabilities and debt no more than net current assets, no loss in the last five years, some dividend now, earnings above those of a few years back, and price no more than 120% of tangible assets. There is no size floor, since small companies bought as a group can be safe enough. It also warns that second-quality names bought at random did worst of all. It names no company to buy.
-
+  This bargain stock screener follows the method in The Intelligent Investor for the investor who will put in real work. First cut: a low price against the last twelve months of earnings. Then five tests. Current assets must be at least one and a half times current liabilities, and long-term debt no more than 110% of net current assets. There must be no loss in the last five years and some dividend now. Earnings must be above those of a few years back. Price must be no more than 120% of tangible assets. There is no size floor, since small companies bought as a group can be safe enough. The book also warns against buying second-quality names blind. This skill names no company to buy.
 when:
   - You have a table of listed companies and time to study the survivors.
   - You want to find cheap stocks without buying the ones in trouble.
   - You want a repeatable first cut that you can rerun each year.
-
+not_for:
+  - You want a calmer list built on ten years of records. Use the Defensive stock quality screener.
+  - You want a verdict on one company. This cuts a table. For one name, use the Asset floor estimator, then the Price versus value gap judge.
+  - Your table is mostly banks, insurers or utilities. It sets them aside, because they need other tests.
+  - You want a company to buy. It never names one, and it is not personal financial advice.
 you_give:
-  - A table of companies with price and earnings for the last twelve months
-  - Current assets, current liabilities, long-term debt and tangible book value
+  - A table of listed companies with price and earnings per share for the last twelve months (from a free company data site, with the date)
+  - Current assets, current liabilities, long-term debt and tangible book value per share
   - Dividend now, and profit for each of the last five years
-  - The multiple you want for the first cut, if you have one
-
+  - The first-cut multiple you want (optional)
 you_get:
-  - A short list that passes all five tests
-  - The failed test beside every company cut
-  - The share of the table that survived at each cut
-  - A list of what to study next for each survivor
-
+  - A short list that passes all five tests, to study and not to buy
+  - The failed test and the figure beside every company cut
+  - The share of the table kept at each stage
+  - "A line on why each survivor may be cheap: neglect, a setback or unknown"
+  - A list of missing cells and checks it could not run
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the table, or send a file if your AI takes files. Check the column names with it.
-  - Choose a first-cut multiple, or let it pick one from the middle of the table and note why.
-  - Take the survivors to "Asset floor estimator".
-
+  - Paste the table, or send a file if your AI takes files. Check the column names and the date of the figures with it.
+  - Choose a first-cut multiple, or let it use the lowest tenth of your table. It will say which it used and why.
+  - Read the CUT list. Each company should show the first test it failed and the figure.
+  - Read MISSING. A cell it could not see is marked unknown and never filled in.
+  - Take the survivors to the Asset floor estimator.
 how_it_works:
   - title: Makes the first cut
-    text: Keeps the companies priced at a low multiple of the last twelve months of profit.
+    text: Keeps the companies priced at a low multiple of the last twelve months of profit, and says which multiple it used.
   - title: Tests financial condition
-    text: Needs current assets at one and a half times current liabilities and debt no more than net current assets.
+    text: Needs current assets at one and a half times current liabilities and long-term debt no more than 110% of net current assets.
   - title: Tests the record
     text: Needs no loss in five years and a dividend being paid now.
   - title: Tests direction and price
     text: Needs latest earnings above those of a few years earlier and price no more than 120% of tangible assets.
   - title: Writes the failed test
-    text: Puts the first test each company failed beside its name.
-
+    text: Puts the first test each company failed, and the figure, beside its name. Banks, insurers and utilities are set aside.
 output_shape: |
   FIRST CUT
-  Multiple used <x> | Table size <n> | Kept <n> (<n>%)
+  Multiple used <x> because <reason> | Table size <n> | Kept <n> (<n>%)
+
+  KEPT AT EACH STAGE
+  First cut <n> | Test 1 <n> | Test 2 <n> | Test 3 <n> | Test 4 <n> | Test 5 <n> (survivors)
 
   TESTS (industrial)
-  1 Current assets >= 1.5 x current liabilities, and debt <= net current assets
+  1 Current assets >= 1.5 x current liabilities, and long-term debt <= 110% of net current assets
   2 No loss in the last five years
   3 Some dividend now
   4 Latest earnings above earnings <n> years back
   5 Price <= 120% of tangible assets per share
 
-  SURVIVORS
+  SURVIVORS (a list to study, not a list to buy)
   <company> | Multiple <x> | Tests passed 5 of 5 | Why it may be cheap: <neglect / setback / unknown>
 
   CUT
   <company> | Failed: <test> | Figure: <...>
+
+  SET ASIDE
+  <banks, insurers, utilities and rows with no earnings, each with the reason>
 
   MISSING
   <list>
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
+output_sample:
+  input:
+    - A table of listed companies with price and earnings per share for the last twelve months
+    - Current assets, current liabilities, long-term debt and tangible book value per share
+    - Dividend now, and profit for each of the last five years
+    - The first-cut multiple you want (optional)
+  prerequisites:
+    - A free company data site or a spreadsheet to get the table from
+    - The date of the figures
+  output:
+    - name: FIRST CUT
+      contains: The multiple used and why, the table size and how many rows were kept.
+    - name: KEPT AT EACH STAGE
+      contains: How many companies remain after the first cut and after each of the five tests.
+    - name: TESTS
+      contains: The five tests written out, so you can see exactly what each cut used.
+    - name: SURVIVORS
+      contains: Companies that passed all five tests, with the multiple and why each may be cheap. A list to study.
+    - name: CUT
+      contains: Every company cut, with the first test it failed and the figure.
+    - name: SET ASIDE
+      contains: Banks, insurers, utilities and rows with no earnings, each with the reason.
+    - name: MISSING
+      contains: Each cell it needed and did not have. Those tests show as unknown.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
   - what: Different first cut
     how: Pick a different multiple, such as the lowest tenth of the table. A tighter cut gives a shorter list.
@@ -78,34 +109,33 @@ tweaks:
     how: Say which rows are not industrial. They use other tests, and the skill sets them aside.
   - what: Quality rating
     how: Add a column with a published earnings and dividend rating and it can drop those below average.
-
 judge:
   - Every cut shows the first test failed and the figure.
   - Missing cells are marked unknown and not filled.
   - The first-cut multiple is stated.
   - Survivors are called a list to study, not a list to buy.
   - Nothing names a company to buy.
-
 test:
   - Give it a company with a loss two years ago. It should cut it on test two.
   - Give it a company with no dividend. It should cut it on test three.
   - Give it a table with no debt column. It should mark test one unknown and say so.
   - Run it twice on the same table. The survivors should match.
-
 improve:
   - Rerun the screen each year on the whole table and note which names stay.
   - Keep the first-cut multiple and the table date with each list.
   - Track the survivors as one group with "Bargain group rules writer".
-
 works_best_with:
   tools:
-    - {name: "A spreadsheet", why: "A table of companies is easiest to check and sort in a sheet."}
-    - {name: "A free company data site", why: "Price, earnings, assets and debt come from there, and the dates matter."}
+    - name: A spreadsheet
+      why: A table of companies is easiest to check and sort in a sheet.
+    - name: A free company data site
+      why: Price, earnings, assets and debt come from there, and the dates matter.
   inputs:
-    - "A table of listed companies with price, earnings and balance sheet columns"
-    - "Five years of profit for each company"
-
+    - A table of listed companies with price, earnings and balance sheet columns
+    - Five years of profit for each company
 terms:
+  - term: First-cut multiple
+    meaning: Price divided by one year of earnings. A low number means cheap.
   - term: Net current assets
     meaning: Cash, debts owed to the company and stock, less everything the company owes.
   - term: Tangible assets

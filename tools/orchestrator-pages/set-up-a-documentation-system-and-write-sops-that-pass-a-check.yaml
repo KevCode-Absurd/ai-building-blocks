@@ -1,6 +1,6 @@
 new_slug: set-up-a-documentation-system-and-write-sops-that-pass-a-check
 name: Set up a documentation system and write procedures that pass
-summary: Give it how your team works. Get a documentation system, procedures, runbooks and a check of each.
+summary: Set up a documentation system and write SOPs for your team. Get procedures, runbooks and a check of each, so a stranger can follow them.
 job: document-work
 thinking: high
 thinking_why: It must capture how work really happens and judge whether a stranger could follow it. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - The same task is done differently by everyone who does it.
   - Something broke at night and the only person who could fix it was asleep.
   - You have docs, but nobody can find them or trusts them.
+not_for:
+  - "You already have one document to test: use the SOP and runbook checker on it."
+  - "Your team has no repeat tasks to write down: start with a simple shared notes page."
+  - "You need to teach one procedure with a training deck: use the Write a procedure, test it and build a training deck workflow."
 you_give:
   - "How your team works: the repeat tasks, who does them, where notes live today"
   - What goes wrong and how it gets fixed now
@@ -30,6 +34,25 @@ how_to_use:
   - Paste how your team works and what goes wrong. It plans the system and writes the procedures.
   - Read the runbooks with the person who fixes things today. Correct what they know differently.
   - Read the check and fix every step a stranger could not follow. Put the pages in the system.
+output_sample:
+  input:
+    - "How your team works: repeat tasks, who does them, where notes live now"
+    - What goes wrong and how it gets fixed today
+    - Your tools and systems
+    - Your existing docs, however rough (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack folder
+  output:
+    - name: Documentation system
+      contains: Where pages live, how they are named, who owns each, how often they are reviewed and how stale pages are caught.
+    - name: Procedures
+      contains: A step-by-step procedure for each repeat task, with who does each step, what good looks like and what to do if it fails.
+    - name: Runbooks
+      contains: "For each thing that breaks: the signs, checks in order, the fix, who to call and when to escalate."
+    - name: Check
+      contains: Each procedure and runbook followed as a newcomer, with every place a stranger would get stuck or need to ask.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the system
     text: Plans where documentation lives, how pages are named, who owns each and how often it is reviewed.

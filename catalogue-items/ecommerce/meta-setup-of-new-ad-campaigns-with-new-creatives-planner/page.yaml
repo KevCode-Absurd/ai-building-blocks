@@ -1,37 +1,114 @@
 new_slug: meta-setup-of-new-ad-campaigns-with-new-creatives-planner
 name: Meta creative test campaign planner
-summary: Plan a new Meta creative test with clear ad groups, a spend limit, evidence needs and review points.
+summary: "Plan a Meta creative test: how to set up the campaign, name and check each ad, cap the spend and decide when to stop and judge the winner."
 job: launch-and-scale-ads
 headline: Meta creative test campaign planner
-subhead: Plan a new Meta creative test with clear ad groups, a spend limit, evidence needs and review points.
+subhead: "Give it the new ads you want to test, your budget and the sale you track. It plans how to set up a Meta campaign for the test, names every ad, lists a preflight check for each one and caps what the test can cost. It also sets the stop rule before any money is spent."
 explain: |-
-  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+  A Meta creative test goes wrong in small ways. The old campaign you copied still counts the wrong event. One ad links to last season's page. The names make no sense two weeks later. Nobody wrote down when to stop, so the first lucky ad gets called the winner.
 
-  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+  This skill plans a Meta ads creative test before you build it. It starts with the question you are testing and the proof that would decide it. Then it lists the setup choices to check in your own account: objective, conversion event, placements, location and audience. It does not assume a sales goal, or no special ad category, fits every product.
+
+  You build one ad fully, check it, then copy it for the rest and check each copy. The skill never publishes. It gives you a draft inventory, the most the test can cost, a preflight list and a stop rule with its observation window.
 when:
-  - You need a campaign plan with proposed settings and review points.
+  - You have a few new ads to test and want a clean test with names you can read later.
+  - You are about to copy an old campaign for new ads and don't trust its settings.
+  - A teammate will build the ads and needs a checklist and a naming rule.
+  - You want to know up front what the test can cost and when to judge it.
+not_for:
+  - "You are adding new ads to a campaign that already works: use the Meta creative refresh setup planner."
+  - "You want to set a bid cap or use bid-cap bidding: use the Meta bid cap launch planner."
+  - "You still need the ad words written: use the Fact-based ad copy writer first. This skill plans the test, not the copy."
+  - Your pixel or conversion event is not set up. Fix tracking first. The skill stops at that check.
 you_give:
-  - Campaign settings, dated results, target economics and budget limits
-  - The exact change you want and actions you authorize
+  - The question you are testing, such as which opening hook gets more purchases
+  - The new ads, with media, approved words, product facts, your offer and the link each ad goes to
+  - Your total test budget and how many days it can run
+  - The sale or event you track, and the pixel or dataset that counts it
+  - An old campaign's settings or earlier results (optional)
 you_get:
-  - A campaign plan with proposed settings and review points
-  - Missing inputs and a bounded verification plan
+  - A test plan with the question, the buyer and the proof that would decide it
+  - Setup choices to check in your account, from objective to audience
+  - A naming rule and a name for each ad
+  - A draft inventory with the budget and status of every ad
+  - The most the test can cost in total
+  - A preflight checklist and a stop rule with its observation window
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - Paste your test question, the new ads and links, your offer, your budget and days, and the sale you track. If you are copying an old campaign, paste its settings too. They are things to check, not to trust.
+  - In Ads Manager, build one ad completely and check it against the preflight list. Then copy it for the other ads and check each copy.
+  - Save everything as drafts. Publish only after you approve the budget, the links and the stop rule.
+  - Write down the stop date before the test starts, and judge the winner only after it.
 how_it_works:
-  - title: Step 1
-    text: Define the creative question, target buyer, approved product facts, offer and required decision evidence. Choose whether an existing campaign draft or a new structure best fits the request. Duplication may preserve useful settings but must not carry stale assumptions into a new test.
-  - title: Step 2
-    text: Use a clear naming convention containing a stable test ID, brand or product, funnel purpose, geography, objective, audience and date where useful. Derive each field from actual setup; a naming example does not require a particular audience, country or account strategy.
-  - title: Step 3
-    text: Inspect objective, buying type, conversion event, special-category requirements, placements, geography and audience eligibility in the current account. Do not assume sales, purchase or no special category is appropriate for every product. Set the approved total budget and verify the level where it applies.
-  - title: Step 4
-    text: "Build one draft ad completely: correct media and thumbnail, approved words, current destination, tracking and preview crops. If testing hooks, preserve the intended message and offer while making the hook variants clear; additional copy variation is optional and can add confounding."
-  - title: Step 5
-    text: Duplicate the checked draft for remaining approved variants, replacing only planned elements and updating names. Verify each ad rather than assuming the template copied correctly. Choose a controlled experiment when causal comparison is required; ordinary delivery is not random equal exposure.
-  - title: Step 6
-    text: Deliver a draft inventory, budget exposure, preflight findings and review owner. Keep outstanding approvals visible. Publish only within existing authorization, verify actual status, and record the observation window and stopping rules before judging a winner.
+  - title: Frames the test
+    text: Writes the creative question, the buyer, the approved facts and offer, and the proof that will decide it. It picks a new structure or a copy of an old draft, and warns that copying can carry old assumptions into a new test.
+  - title: Names everything
+    text: Builds a naming rule from a stable test ID, product, funnel stage, location, objective, audience and date. Each part comes from your real setup, not from an example.
+  - title: Checks the account setup
+    text: Lists objective, buying type, conversion event, special ad category, placements, location and audience eligibility for you to check in your account. It does not assume sales or no special category fits every product. It sets the approved total budget.
+  - title: Builds one ad first
+    text: One draft ad, complete, with the right media and thumbnail, approved words, current link, tracking and preview crops. If you test hooks, the message and offer stay the same and only the hook changes.
+  - title: Copies and verifies
+    text: Each copy changes only the planned part and gets a new name. Every ad is checked, because a copy can carry over the wrong thing. For a fair comparison it points you to Meta's A/B test tool, since normal delivery does not give equal exposure.
+  - title: Sets the stop rule
+    text: Gives the draft inventory, the most the test can cost, preflight results, who reviews it, the observation window and when to stop, all before you publish.
+output_shape: |
+  TEST  question <...> | buyer <...> | offer <...> | proof that decides it <...>
+  SETUP  structure <new | copy of draft> | objective <...> | conversion event <...> | special ad category <no | yes | check> | placements <...> | location <...> | audience <...>
+  NAMING  rule <pattern>
+
+  DRAFT INVENTORY
+  <ad name> | <hook> | <media> | <link> | <daily budget> | <status: draft | needs approval>
+
+  BUDGET EXPOSURE  total <$> over <days> | per ad <$>
+
+  PREFLIGHT  media and thumbnail <pass | fail | not checked> | approved words only <...> | link live <...> | tracking <...> | conversion event <...> | preview crops <...>
+
+  STOP RULE  observation window <days or purchases> | stop if <rule> | judge the winner by <measure>
+  REVIEW OWNER  <name> | APPROVALS OUTSTANDING  <list>
+  NOT RUN  <check, why>
+  MISSING: <what was not given>
+output_sample:
+  input:
+    - The question you are testing and the new ads, with media, approved words, offer and links
+    - Your total test budget and the days it can run
+    - The sale or event you track in Meta
+    - An old campaign's settings (optional)
+  prerequisites:
+    - A Meta ad account with your pixel or dataset set up
+    - Approved ad words and product facts
+  output:
+    - name: TEST and SETUP
+      contains: The question, buyer, offer and deciding proof, plus the setup choices for you to check in your account.
+    - name: NAMING
+      contains: A naming rule and a clear name for every ad, built from your real setup.
+    - name: DRAFT INVENTORY
+      contains: Every ad with its hook, media, link, daily budget and status.
+    - name: BUDGET EXPOSURE
+      contains: The most the test can cost in total and per ad.
+    - name: PREFLIGHT
+      contains: Pass, fail or not-checked marks for media, words, link, tracking, conversion event and preview crops.
+    - name: STOP RULE
+      contains: The observation window, when to stop and how the winner will be judged, set before you publish.
+    - name: REVIEW OWNER, NOT RUN and MISSING
+      contains: Who reviews it, which approvals are still open, and anything not checked or not given.
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "Where you build the drafts. Use Meta's A/B test tool when you need a fair comparison between ads."}
+    - {name: "Any good chat AI", why: "Plans the test and writes the checklists from the facts you paste."}
+  inputs:
+    - "Screenshots of the old campaign's settings, if you are copying one"
+    - "Your approved product facts and offer, from your brand profile"
+terms:
+  - term: Hook
+    meaning: The first few seconds or the first line of an ad, which decides if people keep watching.
+  - term: Conversion event
+    meaning: The action Meta counts as a win, such as a purchase.
+  - term: Preflight
+    meaning: A last check of every ad before it goes live.
+  - term: Special ad category
+    meaning: A Meta label for ads about credit, jobs, housing, social issues or politics, which have extra rules.
+  - term: Observation window
+    meaning: The days or number of sales you wait for before you judge a test.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

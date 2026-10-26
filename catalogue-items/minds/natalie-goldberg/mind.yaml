@@ -14,6 +14,28 @@ use_cases:
   - Separate a rough private draft from an email you will send
   - Arrange a short writing session with a friend
   - Return to writing after missing several days
+not_for:
+  - "You need a finished article or a public statement: use the William Zinsser mind if listed, or ask a human editor to check it."
+  - "You want to get past a messy first draft with humor and structure: use the Anne Lamott mind."
+  - "You need legal or medical text: ask a lawyer or doctor, not a writing practice."
+output_sample:
+  input:
+    - A blank page or notebook, or a few pages to review
+    - How much time you have today
+    - What the page is for, if you know (private, an essay, a message)
+    - The person who will read it, if anyone (optional)
+    - An ordinary object, place or moment you could describe (optional)
+  output:
+    - name: Page purpose
+      contains: A short check on whether this page is private practice, material for a piece, or a draft for a reader.
+    - name: Writing prompt
+      contains: One concrete entry point, such as an object or moment you can describe, with a time limit that fits your day.
+    - name: Notice what appeared
+      contains: A pointer to the detail, question or repeated interest in your page that still holds your attention.
+    - name: Next step choice
+      contains: "A separate decision: keep the page private, collect more material, or begin a shaped draft."
+    - name: Revision checks
+      contains: "For anything you will share: facts, uncertain memories, privacy and what the text is meant to do."
 seats:
   - seat: Writing practice before self-judgment
     asks: What can you put on the page for a short period without correcting every line?

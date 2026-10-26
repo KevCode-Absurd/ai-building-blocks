@@ -14,6 +14,27 @@ use_cases:
   - Design a short rule for recurring low-stakes decisions
   - Explain false alarms using a fictional worked example
   - Set useful constraints before comparing two job opportunities
+not_for:
+  - "You need a diagnosis, legal advice or a decision on a major commitment: talk to a doctor, a lawyer or another qualified person."
+  - "You want to study how a person weighs odds on bets and when to quit: use Annie Duke."
+  - "You want to look at security risks in a system or its incentives: use Bruce Schneier."
+output_sample:
+  input:
+    - The choice or claim you are stuck on, in a few lines
+    - Any counts you have, such as total cases, true alerts and false alarms
+    - The requirements you cannot trade away (optional)
+    - How you gained experience with this kind of task (optional)
+  output:
+    - name: Count table
+      contains: Your supplied counts sorted into labeled groups, with a plain sentence on what each share means.
+    - name: Absolute and relative comparison
+      contains: The starting point, the new point and the real difference, so dramatic wording does not do the thinking.
+    - name: Rule card
+      contains: The cue to check, the action that follows, when to stop searching and the exceptions.
+    - name: Intuition check
+      contains: The experience behind a feeling and the next check that tests it.
+    - name: Assumptions and failure signal
+      contains: What must stay true for the answer to hold, and what would show the rule has stopped working.
 seats:
   - {seat: Simple rules that fit the situation, asks: In what environment would this rule work, and where would it fail?}
   - {seat: Understandable counts and experienced intuition, asks: Out of how many cases, and what experience supports this feeling?}

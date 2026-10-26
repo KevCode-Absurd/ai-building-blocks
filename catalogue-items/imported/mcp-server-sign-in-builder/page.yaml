@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Small mistakes in sign-in create real security holes.
 new_slug: mcp-server-sign-in-builder
 name: MCP server sign-in builder
-summary: Say how people will connect to your MCP server. Get correct OAuth
-  sign-in built into it.
+summary: Add correct OAuth sign-in to your MCP server. Say how people connect, and get discovery, token checks and a client sign-in plan that work.
 job: connect-tools
 headline: MCP server sign-in builder
-subhead: Sign-in for your MCP server built the way the standard says, so clients
-  can actually connect. Tell it how people will reach the server, and get OAuth
-  that works and is safe.
+subhead: Sign-in for your MCP server built the way the standard says, so clients can actually connect. Tell it how people will reach the server, and get OAuth that works and is safe.
 explain: |
   Sign-in for your MCP server built the way the standard says, so clients can actually connect. Tell it how people will reach the server, and get OAuth that works and is safe.
 
@@ -18,6 +15,10 @@ when:
   - Clients cannot find how to connect to your server.
   - You are unsure whether your server should issue its own tokens.
   - You want to prevent a stolen token from working on other services.
+not_for:
+  - Your MCP server runs locally over stdio. OAuth does not apply there, so read keys from the environment and keep them out of client settings.
+  - You need to find attack risks like injection or sandbox gaps. Use the MCP server security skill instead.
+  - You want login for an ordinary web or mobile app. Use your identity provider's own guide, since this follows the MCP rules only.
 you_give:
   - "How people connect: local or web"
   - Your identity provider
@@ -30,8 +31,33 @@ you_get:
   - A client registration plan
   - An end to end test
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and edit your code.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload its folder if your AI takes files.
+  - Say how people reach your server (local or web) and name your identity provider.
+  - Paste your server code and list the tools users will reach. Pick an AI that can read and edit code for best results.
+  - Check the auth model choice first. Local servers should end up with no OAuth.
+  - Add the token checks and discovery routes to your server.
+  - Run the check script against your live server. It needs code running and web access. Then try a real client.
+output_sample:
+  input:
+    - "How people connect to your server: local or web"
+    - Your identity provider, such as Auth0, Okta, Keycloak or Entra
+    - The tools your users will reach
+    - Your server code (optional)
+  prerequisites:
+    - An AI that can read and edit your code, to build the token checks
+    - Code running and web access, to test your live server with the check script
+  output:
+    - name: Auth model choice
+      contains: Whether your server needs OAuth, based on how people connect, with the reasons.
+    - name: Discovery metadata
+      contains: The protected resource metadata and the sign-in challenge on 401 replies, so clients can find your sign-in.
+    - name: Token checking
+      contains: Code that checks signature, expiry and audience on every request, using cached keys from your identity provider.
+    - name: Scopes and errors
+      contains: Separate read and write scopes, and a 403 reply that tells clients which scope is missing.
+    - name: Client registration plan
+      contains: How clients sign up with your server, in the order the standard prefers, with safe redirect rules.
+    - name: Token handling rules
+      contains: Rules that stop your server passing client tokens on to other services.
+    - name: End to end test
+      contains: A script that probes your server's sign-in, plus steps to try a real client and a wrong-audience token.

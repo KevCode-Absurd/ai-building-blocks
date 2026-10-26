@@ -1,6 +1,6 @@
 new_slug: build-a-vip-program-for-your-best-customers
 name: Build a VIP program for your best customers
-summary: Give it your order history and brand file. Get a best-customer profile, a VIP program and personal touches.
+summary: Build a VIP program for your best customers. Give it your order history. You get a profit-ranked profile, VIP tiers without discounts, and personal touches.
 job: keep-customers
 thinking: high
 thinking_why: It runs three skills in a row and sets tiers from your own spend numbers. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A small group of customers brings most of your profit and you want to keep them.
   - Your repeat rate is flat and you suspect discounts are not what brings people back.
   - You want to do something personal for your best customers, but not sure who or what.
+not_for:
+  - "You have fewer than about 30 repeat buyers: use the Best and worst customer profiler alone to learn who your best customers are first."
+  - "You only want the tiers and perks: use the Loyalty and VIP program designer on its own."
+  - "You already know your VIPs and only want personal notes or calls: use the Top customer touch planner."
 you_give:
   - Your order export with customer, date, order value, discount code, refunds and cost or margin
   - How each customer first came to you (optional)
@@ -31,6 +35,26 @@ how_to_use:
   - Export at least 90 days of orders, with cost or margin if you have it.
   - When it pauses, choose the VIP rule from the profile, either number of orders or spend, and export the orders of customers who meet it.
   - Set up the tiers, invite the first VIPs, wait a month and export their orders for the last step.
+output_sample:
+  input:
+    - Your order export with customer, date, order value, discount code, refunds and cost or margin
+    - Your monthly budget and weekly hours for VIP work
+    - How each customer first came to you (optional)
+    - Survey answers or support reasons (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - At least 90 days of orders
+    - A month's wait after you invite the first VIPs, then a fresh order export
+  output:
+    - name: "Step 1 file: Customer profile"
+      contains: Customers ranked by profit, top and bottom groups compared, what the best share, discount code split and a fit score.
+    - name: "Step 2 file: VIP program"
+      contains: A go or wait call, tiers from your spend, perks, cost per member, invite and a 90-day test.
+    - name: "Step 3 file: Personal touches"
+      contains: A ranked list of top customers, a touch and cost for each, note and video scripts, and a control group.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Profile your best customers
     text: Ranks customers by gross profit, splits them into groups and profiles each. Shows what your best have in common and which discount codes brought in the weakest.

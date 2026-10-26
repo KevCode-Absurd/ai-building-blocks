@@ -1,26 +1,25 @@
 slug: option-pool-top-up-checker
 name: Option pool top-up checker
-summary: Solve added reserved shares under an agreed pre-financing pool target.
+summary: "Work out how many shares to add to your option pool to hit the target percent before new money, and how much that dilutes holders."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next: [pro-rata-allocation-checker,check-a-safe-into-priced-financing]
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It picks a small setup and fills a set register.
 new_slug: company-wiki-planner
 name: Company wiki planner
-summary: Describe your business. Get the smallest useful process wiki set-up,
-  with a register of each process.
+summary: Plan a company wiki that your team will use. Describe your business and get a short setup plan plus a process register with owners and review dates.
 job: document-work
 headline: Company wiki planner
-subhead: The smallest process wiki that will actually get used, with one
-  register listing every process, its owner and how it runs. It avoids a giant
-  document project that nobody finishes.
+subhead: The smallest process wiki that will actually get used, with one register listing every process, its owner and how it runs. It avoids a giant document project that nobody finishes.
 explain: |
   The smallest process wiki that will actually get used, with one register listing every process, its owner and how it runs. It avoids a giant document project that nobody finishes.
 
@@ -18,6 +15,10 @@ when:
   - New hires keep asking the same how-do-I questions.
   - You want a place for step-by-step guides but have none.
   - Your processes are scattered across sheets, docs and inboxes.
+not_for:
+  - "You need payroll, tax or legal advice: ask an accountant, a lawyer or an HR adviser."
+  - "You want your real staff or customer data stored: use your own secure system, because this makes blank templates only."
+  - "You want reminders or automatic updates when a process changes: this has none, so use your calendar or a task tool."
 you_give:
   - Your business type and size
   - The processes that hurt most
@@ -29,7 +30,32 @@ you_get:
   - Blank step-by-step guide templates
   - Export files if you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Say which process hurts most to run, for example client onboarding.
+  - Answer the questions one at a time. Say "I don't know" when you are not sure.
+  - Read the short setup plan it gives you.
+  - Ask for the CSV, SQL, JSON or Notion mapping when you want files. No code runs and no paid tool is needed.
+  - Fill in the blank register yourself. Do not paste real staff or customer data into it.
+output_sample:
+  input:
+    - Your business type and size
+    - The processes that hurt most to run
+    - Who owns each process
+    - What you need it for, such as onboarding or handover
+    - The tool you prefer, such as Notion or a sheet (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Notion or a spreadsheet, only if you want the export files (optional)
+  output:
+    - name: Recommended approach
+      contains: "A short plan: one page per process with owner, trigger and steps, kept where your team already works."
+    - name: Workflow
+      contains: "The loop each process follows: trigger, steps, owner, checklist, then a review after each run."
+    - name: Process register (CSV)
+      contains: An empty table with title, category, department, description, owner, priority, status, version and review dates.
+    - name: SQL table
+      contains: A database table with the same fields as the register, if you ask for it.
+    - name: JSON schema
+      contains: A field definition with the same fields and required entries, if you ask for it.
+    - name: Notion mapping
+      contains: A column-by-column guide for turning the imported CSV into Notion properties, if you ask for it.

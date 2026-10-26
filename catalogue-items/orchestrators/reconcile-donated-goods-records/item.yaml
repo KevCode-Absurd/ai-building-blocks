@@ -1,6 +1,6 @@
 slug: reconcile-donated-goods-records
 name: Reconcile donated goods records
-summary: Share the source files. Get an in kind goods reconciliation, missing records and handover notes.
+summary: Check donated goods by item and unit. Get a stock reconciliation, a list of missing records and a handover note for the store lead.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,9 +8,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet
@@ -20,9 +20,9 @@ uses:
   - handover-note-writer
 steps:
   - uses: spreadsheet-checker
-    note: Reconcile opening stock plus receipts minus recorded distributions to closing quantities, flagging duplicate IDs and mismatched units. Do not assign monetary values.
+    note: Works out opening plus received minus given out for each item and unit, then compares it with the closing count. Flags duplicate IDs and mixed units. Hands the gap table and open questions to the next step.
   - uses: handover-note-writer
-    note: Prepare the store or program lead handover with actual shortages, source locations, unresolved custody records and accepted next actions.
+    note: "Takes the gap table and problem list from step 1 as its brain dump, and who takes over from you. Turns the gap table into a note for the store or program lead: shortages, where each record is kept, custody records still open and agreed next actions."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

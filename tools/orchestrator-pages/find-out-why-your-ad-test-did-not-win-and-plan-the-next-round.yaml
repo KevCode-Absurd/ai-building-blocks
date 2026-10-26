@@ -1,6 +1,6 @@
 new_slug: find-out-why-your-ad-test-did-not-win-and-plan-the-next-round
 name: "Find why your ad test lost and plan the next"
-summary: Give it your test results and the ads. Get a verdict per ad, a next-round brief and where the next dollar goes.
+summary: Find out why your ad test did not win. Give it your results and ads to get a verdict per ad, a next-round brief and where to spend next.
 job: read-ad-results
 thinking: high
 thinking_why: Five steps pass findings along, and the early reads decide what you cut. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A round of ads finished and you cannot tell what won, what to cut or what to make next.
   - Your best ad has stopped working and you are not sure whether to make more like it or something new.
   - You are about to add budget and want to know where an extra dollar earns the most new customers.
+not_for:
+  - "You have one ad with no spend data: use the Ad recall and pull calculator first, then come back."
+  - "Your test has only a handful of sales in total: wait for more results, as the reads are too thin to act on."
+  - "You only want a Meta test layout from a brief you already have: use the Ad test brief writer or the Ad test budget setter."
 you_give:
   - The ads you ran (images, videos and their copy, or a description of each)
   - Results per ad and ad set, with spend, purchases, return, clicks and frequency
@@ -32,6 +36,28 @@ how_to_use:
   - Attach the ads themselves where you can, as images or video stills, and paste the results export beside them.
   - Say your target return or cost per sale, so each verdict is against your goal and not a general one.
   - Read the false winners and the sameness count before you decide what to brief next.
+output_sample:
+  input:
+    - Your ads (images, videos and copy, or a description of each)
+    - Your results export for a closed date window, with spend, purchases, return, clicks and frequency
+    - Your target return or cost per sale
+    - Spend and results by channel (optional)
+  prerequisites:
+    - Paste the results export into the chat, or give ad IDs from your own ad account connector
+    - An AI that can read images or files, if you attach the ads themselves
+  output:
+    - name: "Step 1: Ad breakdowns"
+      contains: Each ad split into message and look, with the one idea behind it, patterns, gaps and swaps to test.
+    - name: "Step 2: Sameness"
+      contains: Ads against distinct ideas, which to keep and replace, cold ads above frequency 2, and a sameness score out of 100.
+    - name: "Step 3: Test read"
+      contains: A verdict per ad set and ad, false winners, concept status, the next brief and a read score out of 100.
+    - name: "Step 4: Next test layout"
+      contains: Structure, budget split, pack plan, minimum spend, naming, and rules for adding ads and scaling.
+    - name: "Step 5: Next dollar"
+      contains: Channels ranked for the next $10,000, stop points, a retargeting check and one test that could change the ranking.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Map the ads
     text: Splits each ad into message and look, writes the one idea behind it, and finds patterns and gaps across winners and losers. It never copies a rival's words or images.

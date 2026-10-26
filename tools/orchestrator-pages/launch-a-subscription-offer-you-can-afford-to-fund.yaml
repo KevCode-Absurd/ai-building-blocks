@@ -1,6 +1,6 @@
 new_slug: launch-a-subscription-offer-you-can-afford-to-fund
 name: Launch a subscription offer you can afford to fund
-summary: Give it your product and order data. Get a subscription offer, its payback time and a cancel flow that saves sign-ups.
+summary: Plan a subscription offer your cash can carry. Get the discount, payback time and a cancel flow, then check your live page for take rate.
 job: make-offer
 thinking: high
 thinking_why: It does cash and payback sums across four skills. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell something people reorder and want subscriptions without running short of cash.
   - Your subscribe discount was a guess and you do not know what it costs you per sign-up.
   - You launched a subscription and few first orders choose it.
+not_for:
+  - "You sell one-off products or buyers who never reorder: use the Product pack and quantity discount planner for bundles, or run a plain one-time discount."
+  - "You only want to know if a discount still leaves profit: use the Discount margin and ad-cost checker."
+  - "You want a points or VIP scheme for repeat buyers instead of a subscription: use the Loyalty and VIP program designer."
 you_give:
   - Price, product cost, landed cost and shipping by pack size
   - How long one unit lasts
@@ -32,6 +36,28 @@ how_to_use:
   - Give it your real cohort values for month 3 and month 6. Without them it will not score the payback.
   - At the pause, put the offer live and let it run until you have a few weeks of sign-up data. Take phone screenshots of the product page.
   - Try the page on your own phone and tell it what you see, because a screenshot cannot show every pop-up.
+output_sample:
+  input:
+    - Your product price, product cost, landed cost and shipping by pack size
+    - How long one unit lasts, plus your cash and the months you can wait for payback
+    - Customer value at month 3 and month 6 for subscribers and one-time buyers
+    - Cancel reasons or reviews (optional)
+    - Phone and desktop screenshots of your product page, after a few weeks live
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack zip with HANDOFF.md and the skill files
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Subscription offer"
+      contains: Discounts, shipping cadence, first-order deal, bulk tiers, gifts, prepaid plan, margin and the most you can pay per subscriber.
+    - name: "Step 2: Payback check"
+      contains: Payback time, loss on order one, cash needed, a safety score out of 100 and a go, slow down or bundles call.
+    - name: "Step 3: Cancel flow"
+      contains: Start screen, a save for each cancel reason, a pause option, win-back and failed-payment emails, and a save-rate sheet.
+    - name: "Step 4: Page check"
+      contains: Seven page rules marked pass or fail, conflicts found, a score out of 100 and tests for the top two fixes.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Design the offer
     text: Checks your cash first, then designs the discount, how often it ships and the first-order deal, with bulk tiers, gifts and a prepaid plan. Models the margin.

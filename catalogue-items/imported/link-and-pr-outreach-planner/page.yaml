@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows known tactics and picks the ones that fit you.
 new_slug: link-and-pr-outreach-planner
 name: Link and PR outreach planner
-summary: Describe your site. Get a plan for link building, digital PR, brand
-  mentions and local listings, with linkable ideas.
+summary: Plan link building and digital PR for your site. Get a mix of outreach, linkable ideas and local listings, plus a way to track results.
 job: get-found-in-search
 headline: Link and PR outreach planner
-subhead: A plan to earn links and mentions that point at your site, with ideas
-  people will want to link to. You stop sending bulk pitches that get ignored.
+subhead: A plan to earn links and mentions that point at your site, with ideas people will want to link to. You stop sending bulk pitches that get ignored.
 explain: |
   A plan to earn links and mentions that point at your site, with ideas people will want to link to. You stop sending bulk pitches that get ignored.
 
@@ -17,6 +15,10 @@ when:
   - You want to plan a digital PR campaign with real hooks.
   - You run a local business and need consistent listings.
   - You are tempted to buy links and want a safer plan.
+not_for:
+  - "You want to fix on-page SEO such as titles and headings: use a simple on-page checklist or an SEO specialist."
+  - "You want to buy links: this plan does not cover paid links, and they risk a penalty from Google."
+  - "Your site is thin or poorly built: fix the site first, because outreach will not work well until it is worth linking to."
 you_give:
   - Your website and what it offers
   - Your goal, such as a target ranking
@@ -29,7 +31,32 @@ you_get:
   - Outreach message guidance
   - A tracking and quarterly check plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or special tools are needed.
+  - Tell your AI your website, what it offers and your main goal.
+  - Add your backlink data from a tool if you have it. If not, say so and the plan will list what is missing.
+  - Read the strategy mix and the Q1 tasks first. Start with the linkable asset tasks in Q1.
+  - Ask for the prospect list and outreach notes, then edit each note so it sounds like you.
+  - Note that setup steps for your AI tool are not in the skill files.
+output_sample:
+  input:
+    - Your website and what it offers
+    - Your goal, such as ranking for a term or building authority
+    - Your current backlink data from a tool (optional)
+    - Your competitors (optional)
+  prerequisites:
+    - A backlink tool such as Ahrefs, Semrush, Moz or Majestic helps for prospecting. These are paid. Without one, the plan states what data is missing.
+  output:
+    - name: Current backlink profile summary
+      contains: Referring domains, anchor text mix, toxic links and lost links, with any missing data stated.
+    - name: Goal and target metrics
+      contains: The one goal the plan works toward and how you will measure it.
+    - name: Strategy mix
+      contains: How effort is split across earned media, owned assets, partnerships and citations.
+    - name: Quarterly plan
+      contains: Tasks for Q1 to Q4 in the order to do them.
+    - name: Prospecting lists
+      contains: Journalists, podcast hosts, partner sites and directories to approach, set up as spreadsheets.
+    - name: Outreach templates
+      contains: Personal pitch notes for guest posts, expert quotes, broken links and podcasts.
+    - name: Tracking and measurement plan
+      contains: What to count each month, plus a quarterly check for toxic links and when to disavow.

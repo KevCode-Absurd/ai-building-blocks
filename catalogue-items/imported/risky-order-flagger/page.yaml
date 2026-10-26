@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Holding the wrong order delays a real customer.
 new_slug: risky-order-flagger
 name: Risky order flagger
-summary: Get orders Shopify marks as risky tagged for review, and held from
-  shipping if you choose. Changes live orders.
+summary: Tag orders Shopify rates high risk so you can review them, and hold them from shipping if you choose. Starts as a safe preview.
 job: run-your-store
 headline: Risky order flagger
-subhead: Orders Shopify rates high risk are tagged for review and, if you
-  choose, held so they cannot ship until you check them. It changes live orders,
-  so it starts as a preview.
+subhead: Orders Shopify rates high risk are tagged for review and, if you choose, held so they cannot ship until you check them. It changes live orders, so it starts as a preview.
 explain: |
   Orders Shopify rates high risk are tagged for review and, if you choose, held so they cannot ship until you check them. It changes live orders, so it starts as a preview.
 
@@ -18,6 +15,10 @@ when:
   - A fraud wave hit and you need to stop risky orders leaving the warehouse.
   - Staff keep missing high-risk flags in the admin.
   - You want tags only, without delaying shipping.
+not_for:
+  - "Your store is not on Shopify, or you cannot give your AI access to the Shopify admin: check orders by hand in your store's own fraud tools."
+  - "You only want to read risk details and not change any orders: use the order-risk-report skill instead."
+  - "You want to release held orders after review: use the order-hold-and-release skill, since this skill only places holds."
 you_give:
   - Your Shopify store address
   - How many days back to check
@@ -30,9 +31,28 @@ you_get:
   - Fulfilment holds if you chose them
   - A dry-run preview before any change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Check that your AI can run Shopify CLI commands and sign in to your store. This skill needs code running and live store access.
+  - Paste the skill into your AI. Give it your store address and how many days back to check.
+  - Leave dry run on. Read the list of orders it would tag or hold.
+  - Decide on holds. They are on by default and stop orders shipping until you release them, so turn hold off if you only want tags.
+  - Run it again with dry run off. Check the CSV file it writes.
+  - Review each held order, then release the good ones with the order-hold-and-release skill.
+output_sample:
+  input:
+    - Your Shopify store address
+    - How many days back to check (optional, default is the last day)
+    - A minimum order value (optional)
+    - A tag name (optional)
+    - Whether to hold fulfilment (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands and change live store data
+    - A signed-in Shopify session with permission to read orders, write orders and write fulfilments
+  output:
+    - name: Start banner
+      contains: The skill name, your store address and the start time.
+    - name: Step log
+      contains: One line per step showing what was asked and how many orders it touched, marked DRY RUN in preview.
+    - name: Outcome summary
+      contains: Counts of high-risk orders found, orders tagged, holds placed and errors.
+    - name: risk_tagging_<date>.csv
+      contains: One row per order with its name, ID, risk level, price, currency, tag applied, hold placed and customer name.

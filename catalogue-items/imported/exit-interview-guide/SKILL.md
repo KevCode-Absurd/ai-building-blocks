@@ -10,6 +10,50 @@ metadata:
 
 Comprehensive employee relations support — from managing workplace investigations, grievances, and accommodations to conducting surveys, developing policies, and building a positive workplace culture.
 
+## How to run this skill
+
+Pick the job first: an exit or stay interview, or a grievance (an employee complaint).
+
+### Exit or stay interview
+
+1. **Ask once for what is missing.** The role and team (no names needed), why the person is leaving if known, and any past exit feedback. If you have none, write `MISSING: <what>`.
+2. **Write the question list** by theme: the role, the manager, growth, pay and benefits, culture, why they are leaving, and what would have kept them. Keep it to 10 to 12 questions.
+3. **Add how to run it:** who should lead it (not the person's manager), a private place, a calm and thank-you tone, and a note that it is voluntary.
+4. **Add the trend method:** tag each answer by theme and add them up every quarter. Share themes only, never one person's words with their name.
+5. **For a stay interview,** write 6 to 8 questions on what keeps a strong person here, what would make them leave, and what to change.
+
+### Grievance (employee complaint)
+
+Run these steps in order. Give each step a short output.
+
+1. **Intake.** Write a neutral note: who, what, when, where and who saw it. Record the employee's words. No conclusions yet. Output: intake note.
+2. **Acknowledge.** Draft a short message that thanks the person, says what happens next and when, and that retaliation is not allowed. Output: acknowledgement message.
+3. **Plan the fact-finding.** List each allegation, the evidence needed (messages, records, witnesses) and the order of interviews. Output: case plan table.
+4. **Decide.** Help the user weigh the evidence and write a clear outcome, based on facts and company policy, not assumptions. Output: outcome note with reasons.
+5. **Communicate and offer an appeal.** Draft what each side is told, and how to appeal if your policy allows it. Output: outcome messages.
+6. **Close and follow up.** A closing checklist and a follow-up date. Output: closure checklist.
+
+### Rules
+
+- Check company policy and local law. Ask the user for their policy. Do not state a legal rule for a place unless the user gives it. If you do mention one, say it is general and a lawyer should confirm it.
+- Keep documents neutral. Write what was seen or said, not guesses about intent.
+- Serious claims (harassment, discrimination, safety, or a legal dispute): stop. Tell the user to use the Workplace investigation guide and to talk to an employment lawyer.
+- We help you write a clear record. Whether it will stand up legally is for your lawyer.
+
+### Output format
+
+```
+## Exit interview questions (by theme)
+## How to run the talk
+## Trend method
+## Stay interview questions
+## Case plan (intake, acknowledge, fact-finding, decide, appeal, close)
+## Case record template
+## MISSING (anything you could not fill)
+```
+
+This is guidance for HR, not legal advice.
+
 ## Supported tasks
 
 - Conducting exit interviews and stay interviews
@@ -39,14 +83,14 @@ Comprehensive employee relations support — from managing workplace investigati
 
 1. "How should I handle an employee grievance about [issue] fairly and in accordance with our policies?"
 2. "What steps should I follow when managing an employee relations case involving [situation]?"
-3. "How can I document an employee relations case to ensure proper records and legal defensibility?"
+3. "How can I document an employee relations case so the record is clear and complete? (A lawyer decides if it will hold up legally.)"
 4. "What are best practices for managing a performance improvement plan in a way that supports the employee?"
 5. "How should I respond to an employee complaint about [workplace issue]?"
 
 ### Workplace investigations
 
 1. "What are the steps to conduct a fair and thorough workplace investigation into [complaint/allegation]?"
-2. "How should I document findings from a workplace investigation to protect the company legally?"
+2. "How should I document findings from a workplace investigation so they are clear and complete? (A lawyer decides legal protection.)"
 3. "What investigation techniques help gather evidence in a sensitive workplace matter?"
 4. "How can I ensure confidentiality throughout a workplace investigation?"
 5. "What should a final investigation report include for a case involving [type of allegation]?"
@@ -82,4 +126,4 @@ Comprehensive employee relations support — from managing workplace investigati
 - Establish consistent processes for grievances and investigations to ensure fair treatment for all.
 - Use exit interview data systematically — aggregate themes quarterly to identify systemic issues.
 - Proactively conduct stay interviews to address retention risks before employees decide to leave.
-- In Vietnam, the Labor Code requires specific documentation for disciplinary actions and termination — ensure all steps follow the correct legal procedures to avoid disputes
+- The original author's tip for Vietnam: the Labor Code requires specific paperwork for discipline and termination. This applies only where Vietnamese law applies, and we have not checked it. Wherever you are, check your own local rules with a lawyer.

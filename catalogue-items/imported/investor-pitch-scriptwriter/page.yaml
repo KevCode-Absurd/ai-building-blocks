@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It shapes a story from facts you supply, in set formats.
 new_slug: investor-pitch-scriptwriter
 name: Investor pitch scriptwriter
-summary: Share your startup details. Get pitch scripts from one minute to ten,
-  plus likely investor questions and answers.
+summary: Turn your startup details into an investor pitch script, from one minute to ten, plus likely investor questions with prepared answers.
 job: speak-and-persuade
 headline: Investor pitch scriptwriter
-subhead: Share your startup details. Get pitch scripts from one minute to ten,
-  plus likely investor questions and answers. Bring what your startup does and
-  who it serves. Use the result to plan your next step.
+subhead: Share your startup details. Get pitch scripts from one minute to ten, plus likely investor questions and answers. Bring what your startup does and who it serves. Use the result to plan your next step.
 explain: |
   Pitch scripts for every slot you might get, from a one-minute hook to a ten-minute walk-through. Share your startup details. The skill asks a short round of questions, checks for earlier work such as a business brief or lean canvas, then researches the investors you are targeting and how competitors present themselves.
 
@@ -18,6 +15,10 @@ when:
   - You need a thirty-second version for a chance meeting.
   - Your pitch buries your best traction on slide eight.
   - You want to prepare answers for the questions investors always ask.
+not_for:
+  - "Your company has no product or idea yet: talk to a few possible customers first, then come back."
+  - "You only want a cold email to investors: write a short email yourself, or ask your AI for one without the full pitch."
+  - "You have no market data yet: run the startup-design skill first, then use this one."
 you_give:
   - What your startup does and who it serves
   - Traction, team and funding ask
@@ -29,8 +30,35 @@ you_get:
   - Likely investor questions with answers
   - A rehearsal guide
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can save files.
+  - Open Claude, ChatGPT or Gemini. Claude Code is best because it can save each script as a file.
+  - Paste the skill instructions, or upload the skill folder if your AI accepts files.
+  - Say what your startup does, who it serves, your traction, your team and your funding ask. Add earlier work if you have it.
+  - Answer the short round of questions it asks. Say if you want live web research on investors and competitors.
+  - Read the pitch when it pauses for your review. Fix anything that is wrong before it writes the rest.
+  - Check every number in the pitch. Each one must come from your own records or a source you can cite. Any figures in examples are only illustrations.
+output_sample:
+  input:
+    - What your startup does and who it serves
+    - Your traction, team and funding ask
+    - The investors you want to reach (optional)
+    - Earlier work such as a business brief or lean canvas (optional)
+  prerequisites:
+    - An AI that can save files, such as Claude Code, works best. A chat AI also works but is slower.
+    - Web search access, if you want it to research investors and competitors live
+  output:
+    - name: intake.md
+      contains: Your startup details gathered in one place, ready for building the pitch.
+    - name: pitch-full.md
+      contains: The ten-minute pitch with speaker notes, transitions, a closing and your ask.
+    - name: pitch-5min.md
+      contains: A shorter version with one proof point per part and notes on pacing.
+    - name: pitch-2min.md
+      contains: A word-for-word script of about 300 words, with notes on pace and pauses.
+    - name: pitch-1min.md
+      contains: "Two elevator versions of about 150 words: one formal and one casual."
+    - name: pitch-email.md
+      contains: A cold email with three subject lines, a follow-up and notes for each investor type.
+    - name: pitch-appendix.md
+      contains: Ten likely investor questions with answers, plus how to handle objections and known weak spots.
+    - name: pitch-deck-outline.md
+      contains: A slide-by-slide outline of 10 to 12 slides, each with a headline, bullets and a visual idea.

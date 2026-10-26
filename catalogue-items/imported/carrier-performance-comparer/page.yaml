@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares carriers and judges the tradeoff.
 new_slug: carrier-performance-comparer
 name: Carrier performance comparer
-summary: Run it on your shipments. Get delivery times and costs side by side by
-  carrier, to guide your carrier mix.
+summary: Compare carriers on delivery time, on-time rate and shipping cost from your Shopify orders, so you can pick a default carrier for each route.
 job: run-your-store
 headline: Carrier performance comparer
-subhead: Your carriers are compared head to head, so you can pick the best
-  default for each route or weight. Run it on your Shopify shipments and you see
-  average transit days, on-time rate and shipping cost per order side by side.
+subhead: Your carriers are compared head to head, so you can pick the best default for each route or weight. Run it on your Shopify shipments and you see average transit days, on-time rate and shipping cost per order side by side.
 explain: |
   Your carriers are compared head to head, so you can pick the best default for each route or weight. Run it on your Shopify shipments and you see average transit days, on-time rate and shipping cost per order side by side.
 
@@ -18,6 +15,10 @@ when:
   - Customers complain that parcels arrive after the date you promised.
   - You are renegotiating rates and want delivery numbers to back you.
   - You want to choose a default carrier by country.
+not_for:
+  - You have fewer than 10 orders per carrier. The numbers will be noise, so wait for more orders or look at single parcels by hand.
+  - Your orders have no tracking details. Add tracking in Shopify first, or ask each carrier for its own delivery report.
+  - You need your true cost per parcel. This uses what the customer paid for shipping, so check your carrier invoices instead.
 you_give:
   - Your Shopify store domain with order read access
   - How many days back to look
@@ -29,8 +30,29 @@ you_get:
   - Shipping cost per order by carrier
   - A suggested default carrier per segment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - "Install the Shopify command line and sign in with: shopify store auth --store your-store.myshopify.com --scopes read_orders"
+  - Paste the skill into your AI. Give it your store domain and how many days back to look.
+  - Add a minimum order count or a split by country or weight if you want one.
+  - Check the table. Carriers with few orders are left out, and parcels with no delivery date are not counted in the averages.
+  - Open the CSV file to share it or to compare against your carrier invoices.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - How many days back to look (optional, 60 by default)
+    - Minimum orders per carrier (optional, 10 by default)
+    - A split by country or weight (optional)
+  prerequisites:
+    - An AI tool that can run code and the Shopify command line
+    - A Shopify login with permission to read orders
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step showing what was asked of Shopify and how many results came back.
+    - name: Carrier performance table
+      contains: Each carrier with order count, average and slowest-10% transit days, on-time rate and average shipping cost.
+    - name: JSON result (optional)
+      contains: The same table as data, if you ask for JSON instead of the readable table.
+    - name: carrier_performance_<date>.csv
+      contains: One row per carrier and segment with orders, transit days, on-time rate, average cost, total cost and currency.

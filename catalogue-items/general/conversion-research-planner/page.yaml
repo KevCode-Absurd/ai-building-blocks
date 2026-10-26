@@ -1,6 +1,6 @@
 new_slug: conversion-research-planner
 name: "Conversion research planner"
-summary: "Paste your page and analytics. Get a research order that finds where, what and why before you test anything."
+summary: "Plan your conversion research before you test. Paste your page and analytics. You get an order that finds where people drop and why."
 job: audit-landing-page
 thinking: medium
 thinking_why: "It plans an order of work from what you have, with fixed steps."
@@ -17,6 +17,10 @@ when:
   - "Your page converts poorly and you do not know where to start."
   - "Your team is full of test ideas and none come from evidence."
   - "You are about to trust analytics you have never checked."
+not_for:
+  - Your page has no visitors yet. There is nothing to study, so talk to five likely buyers first.
+  - You only need the words on the page rewritten. Ask your AI for a plain copy edit instead.
+  - You already have proven issues and want to pick what to test. Sort them in a simple list by proof and effect first.
 
 you_give:
   - "Your page address or saved page (optional)"
@@ -35,6 +39,27 @@ how_to_use:
   - "Do the research steps in the order it gives."
   - "Write each finding in the issue format it shows."
   - "Bring the issue list to the next skill that sorts them."
+output_sample:
+  input:
+    - Your page address or saved page (optional)
+    - "Your analytics: visits, steps and sales by page (optional)"
+    - Customer words from reviews, chats or surveys (optional)
+    - Your goal for the page (optional)
+  output:
+    - name: What we have
+      contains: One line for each source you gave, marked present or missing, which sets the shape of the plan.
+    - name: Research order
+      contains: Five steps in order, each with the question it answers, how to do it and when it is done.
+    - name: Tracking check
+      contains: A checklist to confirm your goal is tracked once and your sales match your shop or order system.
+    - name: How to write each finding
+      contains: An issue format with what, where, proof and effect on your goal.
+    - name: Not yet
+      contains: A note that tests wait until the five research steps are done.
+    - name: Missing
+      contains: Every gap in your data that you can fill in later.
+    - name: Checks missed
+      contains: One line for each check the plan failed, or none.
 
 how_it_works:
   - title: "Checks the tracking"

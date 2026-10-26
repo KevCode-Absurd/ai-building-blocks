@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks tests and reads numbers carefully.
 new_slug: experiment-result-analyst
 name: Experiment result analyst
-summary: Give it test numbers. Get the right test, sample size and whether the
-  result is real, in plain words.
+summary: Check if your A/B test result is real. Give it your test numbers. You get the right test, the p-value, sample size and a ship, hold or extend call.
 job: track-numbers
 headline: Experiment result analyst
-subhead: Give it test numbers. Get the right test, sample size and whether the
-  result is real, in plain words. Bring sample size per group. Use the result to
-  plan your next step.
+subhead: Give it test numbers. Get the right test, sample size and whether the result is real, in plain words. Bring sample size per group. Use the result to plan your next step.
 explain: |
   A plain verdict on whether your test result is real or just noise, and whether to ship, hold or keep running.
 
@@ -18,6 +15,10 @@ when:
   - You are about to launch a test and need the sample size.
   - Someone shared a result and asked if it is significant.
   - You suspect a test was stopped too early.
+not_for:
+  - "You still need to plan the test, set up groups or track events: ask a person who runs experiments, because this only reads numbers."
+  - "Your data is messy or has gaps: clean it first in a spreadsheet, then bring the totals here."
+  - "You want a Bayesian read or a bandit test: this uses classic tests and will tell you when they may not fit."
 you_give:
   - Sample size per group
   - Observed rates or averages
@@ -31,8 +32,31 @@ you_get:
   - Plain-language verdict
   - Ship, hold or extend advice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. Use an AI that can run Python 3, or it will do the maths by hand.
+  - "Say what you need: check a finished test, size a test before launch, or judge a number someone shared."
+  - "Paste your numbers: users in each group and conversions or averages. Add your usual rate and smallest change that matters if you are sizing a test."
+  - Say what decision depends on the result.
+  - Read the Bottom Line first. Then check the risk flags before you act.
+  - If the result is unclear, extend the test to the sample size it gave you.
+output_sample:
+  input:
+    - Sample size for each group (control and variant)
+    - Conversions or averages for each group
+    - Your usual rate and the smallest change that matters (for sizing a test)
+    - The decision the result feeds into (optional)
+  prerequisites:
+    - An AI that can run Python 3 for the included scripts (no paid service or key needed)
+    - Typed numbers are fine. You do not need a spreadsheet.
+  output:
+    - name: Bottom Line
+      contains: One sentence with the change, the confidence range, the p-value, the effect size and what to do.
+    - name: What
+      contains: The observed rates or averages, the difference, the p-value, the confidence interval and the effect size.
+    - name: Why It Matters
+      contains: What the effect means for users, revenue or your decision, and whether it is big enough to care.
+    - name: How to Act
+      contains: Ship, hold, extend or kill, with the reason.
+    - name: Sample size report
+      contains: Users needed per variant before launch, with a table of trade-offs between power and smallest change.
+    - name: Risk flags
+      contains: Warnings about peeking, many comparisons, small samples and other traps, with a confidence tag.

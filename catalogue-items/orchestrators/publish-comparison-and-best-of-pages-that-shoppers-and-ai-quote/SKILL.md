@@ -44,11 +44,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Comparison page set planner.** Use the skill `comparison-page-set-planner`. Plans the versus, alternative and best-of pages worth building and their order.
+1. **Comparison page set planner.** Use the skill `comparison-page-set-planner`. Plans the versus, alternative and best-of pages worth building and their order. Hands the page plan to you, and you pick the first page for step 2.
 
 Pause here: Pick the first page from the plan and gather the real prices and specs for you and each rival.
 
-2. **Best-of page writer.** Use the skill `best-of-page-writer`. Writes the first page from the facts you gathered, fairly and with sources.
+2. **Best-of page writer.** Use the skill `best-of-page-writer`. Writes the first page from the facts you gathered, fairly and with sources. Uses the page you picked from step 1's plan and the facts you gathered. Hands the draft to step 3.
 3. **Answer-first page rewriter.** Use the skill `answer-first-page-rewriter`. Give it the copy draft from the steps before. Rewrites the draft so each section opens with the answer, ready to be quoted. Reads the draft from the step before.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

@@ -1,6 +1,6 @@
 new_slug: page-turner-scene
 name: Draft a scene that makes readers need the next one
-summary: Tell it what happens in the scene. Get a hook plan, a fair way out, a drafted scene and a find-the-lull check.
+summary: Plan, draft and test a scene that makes readers need the next one. Give it what happens, and you get a hook plan, a fair escape and a drafted scene.
 job: write-and-tell-stories
 thinking: high
 thinking_why: It plans, drafts and judges a scene in four steps, and the drafting needs close control of rhythm and detail. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - Your chapters end where the action ends, and readers stop for the night.
   - You have the right scene but it reads flat.
   - You want a cliffhanger whose answer will hold up.
+not_for:
+  - "You write non-fiction or a report with no person at risk: use a plain outline, or ask your AI to tighten each section's opening."
+  - "You want to find the idea behind someone else's work: read it closely yourself first, then bring your own scene to this workflow."
+  - "You only need a quick line edit of finished prose: ask your AI for a plain copy edit, or read the draft aloud yourself."
 
 you_give:
   - What happens in the scene, and to whom
@@ -36,6 +40,26 @@ how_to_use:
   - Describe the scene. It works step by step and saves each result.
   - Paste a page of your own writing if you want the draft in your voice.
   - Edit the draft, then run the last step again on your edit.
+output_sample:
+  input:
+    - What happens in the scene, and to whom
+    - What the reader already knows and what comes next (optional)
+    - A page of your own writing, so the draft matches your voice (optional)
+    - Point of view and tense (optional)
+  prerequisites:
+    - An AI that can work through several steps in one chat and save each result
+    - The handoff pack folder, if you want each step saved as a file
+  output:
+    - name: "Step 1: Hook plan"
+      contains: The one open question, who is at risk, what they could lose, the line to stop on and the planned answer.
+    - name: "Step 2: Fairness check"
+      contains: A verdict on the planned escape (fair, weak or cheat), where it is planted, and details to show earlier.
+    - name: "Step 3: The scene"
+      contains: A drafted scene of 400 to 900 words that holds back the answer and stops on the planned line.
+    - name: "Step 4: Pull check"
+      contains: Each paragraph marked raised, pressed, delayed or forgotten, the lowest one fixed, and a verdict of strong, patchy or flat.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 
 how_it_works:
   - title: Plan the hook

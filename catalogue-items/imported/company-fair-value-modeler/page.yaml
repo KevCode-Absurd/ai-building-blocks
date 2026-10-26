@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It blends three models and the answer depends on careful assumptions.
 new_slug: company-fair-value-modeler
 name: Company fair value modeler
-summary: Give it a stock ticker. Get a fair value range from three methods, with
-  a sensitivity grid. Collects data from websites.
+summary: Find what a stock is worth. Give it a ticker and get a fair value range from three methods, plus a grid that shows how the price moves.
 job: money-and-investing
 headline: Company fair value modeler
-subhead: A fair value range for a listed company, built three ways so you can
-  see where the methods agree and where they do not. You also get a bull, base
-  and bear case and a grid that shows how the price moves when growth and
-  discount rate change.
+subhead: A fair value range for a listed company, built three ways so you can see where the methods agree and where they do not. You also get a bull, base and bear case and a grid that shows how the price moves when growth and discount rate change.
 explain: |
   A fair value range for a listed company, built three ways so you can see where the methods agree and where they do not. You also get a bull, base and bear case and a grid that shows how the price moves when growth and discount rate change.
 
@@ -19,6 +15,10 @@ when:
   - You need to test how sensitive a valuation is to your growth guess.
   - A company has several business lines and you want each valued on its own.
   - You are checking whether the market price looks high or low against peers.
+not_for:
+  - "You want to value a private or unlisted company: use a person who knows it, such as an accountant or valuer, because this needs a public ticker and market data."
+  - "You need a buy or sell decision or personal advice: talk to a licensed financial adviser, as this gives research only."
+  - "You have no way to run code in your AI: use a plain chat for a rough peer comparison, as this needs Python and web access."
 you_give:
   - A stock ticker
   - Your own growth or margin view (optional)
@@ -29,8 +29,36 @@ you_get:
   - A discount rate and growth sensitivity grid
   - Bull, base and bear scenarios
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python code and reach public websites. Paste in this skill's instructions.
+  - Type the stock ticker. Add your own growth view or a list of peers if you have them (optional).
+  - Let it run. It installs what it needs, pulls public data and builds the three methods.
+  - Read the headline verdict and the sensitivity grid first. Then check the peer list and key assumptions against the company's annual report.
+  - Treat the result as research, not advice. It does not work for unlisted companies.
+output_sample:
+  input:
+    - A stock ticker
+    - Your own growth or margin view (optional)
+    - A list of peers to compare against (optional)
+    - Segment figures from the company's annual report, if it has several business lines (optional)
+  prerequisites:
+    - An AI that can run Python code and reach public websites
+    - The yfinance data package, which the skill installs if it is missing
+  output:
+    - name: Headline verdict
+      contains: One sentence with the blended fair value, the current price, the upside or downside, and the most bullish or bearish method.
+    - name: Snapshot
+      contains: Sector, industry, market cap, current price, recent price change and recent revenue growth.
+    - name: Three-method summary
+      contains: A table of each method, its implied price, its weight and a short reason.
+    - name: DCF build
+      contains: Growth, margin and discount rate assumptions, a five year cash flow table and the step from company value to share price.
+    - name: Peer comparison
+      contains: Peers with their valuation multiples, a median row, and whether the company trades at a premium or discount.
+    - name: SOTP
+      contains: Each business segment valued on its own, with adjustments and the resulting equity value. Only for multi-segment companies.
+    - name: Sensitivity matrix
+      contains: A five by five grid of share prices across discount rate and terminal growth, with the base case marked.
+    - name: Scenarios
+      contains: Bull, base and bear cases with the changes made to each and the price each gives.
+    - name: Key risks
+      contains: The assumptions that move the answer most and what could break the thesis.

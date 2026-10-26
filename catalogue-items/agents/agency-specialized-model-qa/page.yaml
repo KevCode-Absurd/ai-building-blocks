@@ -1,0 +1,156 @@
+name: Model QA Specialist agent
+summary: Audit a machine learning model you did not build. Get a test plan, rated findings and an opinion, backed only by the evidence you supply.
+headline: Model QA Specialist agent
+subhead: Describe the model, its data, its target and its results so far. It plans an independent audit across data, features, calibration, performance and fairness, rates each finding, and says which checks still need your data and code.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A model can look strong on paper and still fail in use. The data may have
+  drifted since training. The scores may not match real odds. A feature may
+  carry the answer in by accident. This model QA specialist agent plays the
+  independent reviewer who checks a model that someone else built, such as a
+  churn, risk or demand model, before you rely on it.
+
+
+  It works through ten areas: the documents, the data, the target label, the
+  segments, the features, a rebuild of the model, calibration, performance,
+  explanations and fairness, and business impact. For each, it says what to test,
+  what result would worry it, and what you gave it that backs the finding. If you
+  did not give it evidence, the area is marked not tested. It never says a model
+  is sound without evidence.
+
+
+  This is a role profile from Agency Agents, shared under MIT. A chat AI cannot
+  run your data. It gives plan, checks and example code from the profile, which
+  you run and paste back. It does not replace a qualified data scientist or your
+  model risk team for sign-off. Targets in the original are goals, not results
+  from AI Blocks.
+when:
+  - A churn, credit, demand or ranking model is about to go live, and someone other than its builder should check it.
+  - A model that worked last year now gives odd scores, and you want to find out if the data shifted.
+  - A buyer, auditor or manager asks for proof that your model is calibrated and fair.
+  - You inherited a model with thin notes and want a list of what to test and in what order.
+not_for:
+  - You want a model built or tuned. Use the AI Engineer agent.
+  - You want a final sign-off for a regulated use such as credit or hiring. A qualified data scientist or your model risk team must give that.
+  - You want to check an AI chat prompt or an LLM, not a scoring model. Use the Prompt Engineer agent for prompts.
+  - You have no results, no data and no documents. Expect a plan and a list of what to collect, not an opinion.
+you_give:
+  - What the model predicts, how it is used, and its type, such as a churn classifier
+  - How the target label is defined, and the time windows used for training and testing
+  - The data it uses, as a field list with summary numbers, or a sample (remove private details)
+  - The results you have, such as accuracy, AUC, calibration or the decision threshold (optional)
+  - Any documents, monitoring reports or earlier reviews (optional)
+you_get:
+  - An audit plan that maps each test to one of ten areas, with what result would worry it
+  - Findings, each with the observation, the evidence you gave, the impact and a fix, rated high, medium, low or info
+  - Example Python checks for stability (PSI), ranking power (AUC, Gini, KS), calibration and explanations, to run on your data
+  - An overall opinion of sound, sound with findings, unsound or not determined
+  - A list of evidence still missing and the checks not run
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe the model, its target label, its data and the results you have. Paste summary numbers, not private records. Say how the output is used and what happens if it is wrong.
+  - Read the audit plan first. Remove tests you cannot run, and add any rule your company already has.
+  - Run the example checks on your own data, in Python or your team's tools. Paste the results back, one area at a time.
+  - Ask for the findings table and the opinion. Check that each finding points to evidence you gave.
+  - Have a qualified data scientist or your model risk team review the report before you rely on it or share it.
+how_it_works:
+  - title: Scope the audit
+    text: It lists what is being reviewed, the documents it needs, and a test plan across ten areas.
+  - title: Check data and labels
+    text: It plans checks on the population, exclusions, label definition and whether future information leaks into training.
+  - title: Check features and stability
+    text: It plans per-feature drift checks, including the Population Stability Index, and checks that the features make sense.
+  - title: Rebuild and compare
+    text: It plans a replication from the documented method, and a simple challenger model, to compare scores with the original.
+  - title: Test calibration and performance
+    text: It plans checks that scores match real rates, and that ranking power holds across splits, groups and time.
+  - title: Explain and rate
+    text: It plans explanation and fairness checks, then rates each finding by severity and gives an opinion backed by evidence.
+output_shape: |-
+  MODEL AND SCOPE
+    model <name, type, use> | target <label definition> | data <what> | ASSUMED: <list> | MISSING: <list>
+
+  AUDIT PLAN
+    <area, 1 to 10> | tests <list> | worrying result <what would flag it> | evidence supplied <yes or no>
+
+  FINDINGS
+    <number> | severity <high, medium, low, info> | area <name>
+      observation <what> | evidence <from what you supplied> | impact <effect> | recommendation <fix> | status <seen, to check>
+
+  CHECKS TO RUN
+    <check> | code or tool <example> | what to paste back
+
+  OPINION
+    <sound, sound with findings, unsound or not determined> | why | open evidence
+
+  NOT TESTED
+    <area> | what is needed to test it
+output_sample:
+  input:
+    - What the model predicts and how it is used
+    - How the target label is defined and the data time windows
+    - The data fields and summary numbers (no private records)
+    - Results so far, such as AUC and the decision threshold (optional)
+    - Documents and earlier reviews (optional)
+  prerequisites:
+    - Python and your model data, to run the example checks
+    - A data scientist or model risk reviewer for sign-off
+  output:
+    - name: Model and scope
+      contains: What is under review, its use and label, and the evidence still missing.
+    - name: Audit plan
+      contains: Ten areas, each with tests, the result that would worry it and what you supplied.
+    - name: Findings
+      contains: Each finding with severity, observation, evidence, impact and fix.
+    - name: Checks to run
+      contains: Example code for stability, ranking power, calibration and explanations, with what to paste back.
+    - name: Opinion
+      contains: Sound, sound with findings, unsound or not determined, and the reasons.
+    - name: Not tested
+      contains: Areas it could not test and what each needs.
+works_best_with:
+  tools:
+    - name: Python with pandas, scikit-learn and SHAP
+      why: The example checks use these free tools to compute drift, ranking power, calibration and feature effects.
+    - name: Claude Code or another AI that can run code on your data
+      why: It can run the checks itself and read the results. In a plain chat you run them and paste back the numbers.
+  inputs:
+    - The model's own documentation and approval records.
+    - Scores and outcomes for a holdout period, kept apart from training data.
+    - A list of the groups that matter for fairness, such as age band or region, where the law allows you to hold them.
+terms:
+  - term: Calibration
+    meaning: Whether a score of 30 percent really means about 30 in 100. A model can rank well and still be miscalibrated.
+  - term: PSI (Population Stability Index)
+    meaning: A number that shows how far a feature's spread has shifted since training.
+  - term: Label leakage
+    meaning: Information in the training data that would not be known when the model is used. It makes results look better than they are.
+  - term: AUC, Gini, KS
+    meaning: Common scores for how well a model ranks high-risk cases above low-risk ones.
+  - term: SHAP
+    meaning: A method that shows how much each feature pushed a prediction up or down.
+  - term: Challenger model
+    meaning: A simpler model built to compare against the one under review.
+tweaks:
+  - what: Audit depth
+    how: Say "plan only", "plan and checks" or "full report". Start with the plan if you have no data in hand.
+  - what: Use and stakes
+    how: Tell it how the score is used and what a wrong score costs. It weighs findings by that impact.
+  - what: Thresholds
+    how: Give your team's limits, such as the PSI level that triggers a review. Without them it uses the profile's common rules and says they are a guide.
+improve:
+  - Add your company's model risk policy to SKILL.md, so findings use your severity scale.
+  - Keep each audit report with the model's record, and rerun the same checks on a schedule.
+  - Pair it with the Test Results Analyzer agent for software test output, and keep this agent for models.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

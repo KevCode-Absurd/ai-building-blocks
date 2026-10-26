@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It checks every kind of bug against the real code.
 new_slug: hidden-bug-hunter
 name: Hidden bug hunter
-summary: Point it at your code. Get a hard line-by-line hunt for logic errors
-  and gaps, sorted by how bad they are.
+summary: Find hidden bugs in your code. Give it files or a diff. You get a bugs.md report of logic errors and security flaws, ranked by severity.
 job: test-and-fix-code
 headline: Hidden bug hunter
-subhead: A hard, hostile review of your code that tries to break it. AI tools
-  write code that looks finished but may not be right. This skill assumes the
-  code is guilty until it proves otherwise, and works through every category of
-  fault rather than a quick skim.
+subhead: A hard, hostile review of your code that tries to break it. AI tools write code that looks finished but may not be right. This skill assumes the code is guilty until it proves otherwise, and works through every category of fault rather than a quick skim.
 explain: |
   A hard, hostile review of your code that tries to break it. AI tools write code that looks finished but may not be right. This skill assumes the code is guilty until it proves otherwise, and works through every category of fault rather than a quick skim.
 
@@ -19,6 +15,10 @@ when:
   - You want a deep correctness pass before a release.
   - Something fails rarely and you cannot find why.
   - A style review passed but you still worry about hidden faults.
+not_for:
+  - "You want style, formatting or readability feedback: use a linter or ask a person for a normal code review."
+  - "You want bugs fixed right away: this skill only writes the report, so ask your AI to fix a named bug after you read it."
+  - "You need the code to actually run and be tested: use your own test suite, because this skill reads code but never runs it."
 you_give:
   - The code, file, folder or recent changes to audit
   - The scope you want, whole project or just a diff
@@ -30,8 +30,30 @@ you_get:
   - Findings ranked by severity
   - Suggested fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open the skill folder and find the file called SKILL.md. This is the file to start with.
+  - In Claude, ChatGPT or Gemini, paste the full text of SKILL.md into a new chat. Or upload it if your AI takes files.
+  - Add your code. Paste it, or upload the files. Say if you want the whole project or only recent changes.
+  - Answer the scope question if your AI asks it. Add what the code should do, if you know.
+  - Read the bugs.md it writes. If your AI cannot save files, it will show the report in the chat. Check the Critical bugs first.
+  - Ask your AI to fix a bug by its number, for example BUG-001. It will not change your code until you ask.
+output_sample:
+  input:
+    - "Your code: a file, a folder or the changes since your main branch"
+    - The scope you want, such as the whole project or only the changes
+    - What the code should do (optional)
+    - The languages and tools it uses (optional)
+  prerequisites:
+    - An AI that can read your project files, or code pasted into the chat
+  output:
+    - name: Summary
+      contains: Counts of open and fixed bugs for each severity level, with the date of the audit.
+    - name: Critical
+      contains: Bugs that give wrong results, crash, lose data or open a security hole under realistic conditions.
+    - name: Intermediate
+      contains: Bugs that appear in specific but plausible cases, or that will get worse as the code grows.
+    - name: Normal
+      contains: Small correctness issues, missing checks and low-impact leaks.
+    - name: Bug entry
+      contains: Each bug lists its file and line, the issue, the trigger, the impact, a suggested fix and its status.
+    - name: Resolved
+      contains: Fixed bugs moved here with the fix date, so the file keeps a history.

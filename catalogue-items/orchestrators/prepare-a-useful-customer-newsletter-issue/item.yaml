@@ -1,6 +1,7 @@
 slug: prepare-a-useful-customer-newsletter-issue
 name: Prepare a useful customer newsletter issue
-summary: Share the source files. Get a sourced newsletter draft, subject options and a review checklist.
+summary: Turn customer messages and your store news into a customer newsletter
+  draft with subject lines and a pre-send checklist, in your voice.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -14,12 +15,7 @@ inputs:
     required: false
   - type: brand_brain
     required: false
-  - type: script
-    required: false
-  - type: ad_copy
-    required: false
 outputs:
-  - type: audit_report
   - type: copy_draft
   - type: document
 uses:
@@ -28,11 +24,19 @@ uses:
   - brand-voice-editor
 steps:
   - uses: feedback-theme-finder
-    note: Find a useful customer question in the provided feedback and preserve the sample limits. A small or single-customer sample does not establish a wider trend.
+    note: "Finds one useful customer question in your messages and keeps the sample
+      limits: a small or single-customer sample does not show a wider trend.
+      Hands step 2 the question, one exact quote, the message count and the
+      sample limits."
   - uses: campaign-email-writer
-    note: Use value-email mode to draft one core message around the customer question and approved store news, with subject, preview and plain-text versions. Do not invent an offer or send a test.
+    note: Uses your brief and approved store news plus step 1's question and quote
+      as the customer doubt. Drafts one value email with subject, preview and
+      plain-text versions. Invents no offer and sends no test. Hands step 3 the
+      full draft.
   - uses: brand-voice-editor
-    note: Edit the draft to the supplied voice without adding facts, offers or promises.
+    note: Edits step 2's draft, given as numbered lines, to your voice. Keeps every
+      fact, offer and promise exactly as written. Hands back the final email and
+      the voice score.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -42,13 +46,19 @@ credits:
   - title: Feedback theme finder
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/customer-feedback-analysis
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Campaign email writer
     by: AI Blocks
     url: https://useaiblocks.com/skills/campaign-email-writer
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Brand voice editor
     by: AI Blocks
     url: https://useaiblocks.com/skills/brand-voice-editor
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

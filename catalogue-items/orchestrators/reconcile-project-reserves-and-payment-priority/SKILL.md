@@ -1,46 +1,29 @@
 ---
 name: reconcile-project-reserves-and-payment-priority
-description: "A debt reserve rollforward and payment priority reconciliation"
+description: "Use when a project loan has a reserve account and a payment order and you need the reserve top-up and the cash waterfall to agree. Runs two checkers in order. Not for coverage tests or multi-year repayment schedules."
 ---
 
 # Reconcile project reserves and payment priority
 
-A debt reserve rollforward and payment priority reconciliation.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Work out the project reserve top-up, then run one period's cash through senior debt, the reserve and junior debt. Two steps run in order. The first hands the second the requirement, the need and the opening reserve.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (all as of the reporting date):
+- **Operating cash** (yours): actual project cash after operations for the period, from the bank and operating statements.
+- **Debt schedule** (yours): senior and junior service amounts and due dates, with the next-service requirement.
+- **Reserve account** (yours): opening balance and approved draws.
+- **Payment order** (yours): the contract order from the loan agreement.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** a sourced cash-after-senior-service limit for preliminary reserve funding.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Actual project cash after operations, senior and junior service schedule, approved reserve draws, next-service requirement, reserve balance and contract payment priority.
+The items under "Before you start", all as of the reporting date, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,9 +33,9 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Debt reserve rollforward builder** (`debt-reserve-rollforward-builder`). Calculate reserve requirement, approved draws and top-up need from the same debt schedule. Use a sourced cash-after-senior-service limit for preliminary funding and pass requirement, need and opening reserve separately to the waterfall. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-debt-reserve-rollforward-builder.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Debt reserve rollforward builder** (`debt-reserve-rollforward-builder`). Calculate reserve requirement, approved draws and top-up need from the same debt schedule. Use a sourced cash-after-senior-service limit for preliminary funding and pass requirement, need and opening reserve separately to the waterfall. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-debt-reserve-rollforward-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** requirement, approved draws and top-up need come from the same debt schedule, and the top-up appears once. The opening reserve stays separate. If not, stop and say which line is off.
 
-2. **Project payment waterfall builder** (`project-payment-waterfall-builder`). Allocate the same available operating cash through actual senior-service, reserve and junior-service priorities. Tie actual reserve allocation to the rollforward deposit; if it differs from preliminary funding, correct the input map and record the reconciliation instead of forcing a plug. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-project-payment-waterfall-builder.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Project payment waterfall builder** (`project-payment-waterfall-builder`). Allocate the same available operating cash through actual senior-service, reserve and junior-service priorities. Tie actual reserve allocation to the rollforward deposit; if it differs from preliminary funding, correct the input map and record the reconciliation instead of forcing a plug. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-project-payment-waterfall-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** the reserve deposit in the waterfall equals the rollforward deposit, or the difference is recorded with its reason. Every unpaid senior, reserve and junior amount is shown.
 
 ## Workbook checks
 
@@ -69,4 +52,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the reserve rollforward, the payment waterfall and the tie between them, then every unpaid amount. State plainly that nothing was paid or sent, and that a person who knows the loan terms must check the definitions before anyone acts. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- The [Build a project debt service cash pack](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow, when you also need a repayment schedule and loan-life cover.
+- The [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow, when the lender sets a coverage test.
+Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

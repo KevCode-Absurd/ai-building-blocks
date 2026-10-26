@@ -16,6 +16,30 @@ use_cases:
   - "Plan repair, resale or trade-in so your customers buy less but better"
   - "Weigh a short-term cost against what a choice does to your values over decades"
   - "Choose a cause to give to, and a share of sales you can commit to every year"
+not_for:
+  - "Your business sells mainly on low price and thin margins: use the Aswath Damodaran mind to check the numbers, since the premium-brand premise may not hold."
+  - "You want fair profit, working hours and dignity at work in a luxury craft firm: use the Brunello Cucinelli mind."
+  - "You want refills, fair trade and shop campaigns for a beauty brand: use the Anita Roddick mind."
+output_sample:
+  input:
+    - The business problem you face, in plain words
+    - What you make or sell, and who buys it
+    - Your growth plans and how you pay for them
+    - What you know about the harm your product or process does (optional)
+    - How your team works today (optional)
+  output:
+    - name: Why the business exists
+      contains: A blunt view on what your company is for, and whether this choice serves that or just makes you bigger.
+    - name: Biggest harm
+      contains: The most damage your product or process does, and what it might cost to stop.
+    - name: Quality and lasting use
+      contains: Whether the product is the best you can make, and how repair or resale could help.
+    - name: Pace of growth
+      contains: Whether you can pay for this growth from your own money, and what to weigh.
+    - name: Team and values
+      contains: How to run self-starters with few rules, and how to protect your values after you leave.
+    - name: Questions and next steps
+      contains: The questions he would ask you next, with anything outside his record marked beyond the record.
 seats:
   - {seat: "Mission over growth", asks: "Why does this business exist, and does this choice serve that or just make us bigger?"}
   - {seat: "Quality and craft", asks: "Is this the best thing we can make, and will it still be in use in ten years?"}

@@ -41,7 +41,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Sort the decision by reversibility.** Use the skill `reversible-decision-sorter`. A door type and the process that fits it.
 2. **Decide whether math or judgment settles it.** Use the skill `math-or-judgment-call-sorter`. Give it the plan from the steps before. Either a model to run, or a written judgment with the math against it stated.
 3. **Set the evidence bar.** Use the skill `decision-evidence-bar-setter`. Give it the plan from the steps before. A clear bar for enough evidence, and a date to stop collecting it.
-4. **Write the disagree-and-commit note.** Use the skill `disagree-and-commit-note-writer`. Give it the plan from the steps before. The call, the dissent on record and a clear commit.
+4. **Write the disagree-and-commit note.** Use the skill `disagree-and-commit-note-writer`. Give it the decision and each person's view and reason (yours to supply), plus the plan from the steps before. The call, the dissent on record and a clear commit.
 
 Pause here: Act on the call and look again on the review date.
 

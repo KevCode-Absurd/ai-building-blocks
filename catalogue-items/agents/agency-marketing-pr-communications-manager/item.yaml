@@ -1,0 +1,42 @@
+slug: agency-marketing-pr-communications-manager
+name: PR & Communications Manager agent
+summary: "Plan an announcement for the press. Get three key messages, a press release outline, media pitch angles and spokesperson answers to review."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-pr-communications-manager.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-pr-communications-manager.md
+  licence: MIT
+  original_name: PR & Communications Manager
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: e255a9ebf00a0db0dc12e72fe2a647195ceacf3c0e63f38788e077966d69b800
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - PR & Communications Manager
+  - Agency Agents
+  - Marketing
+credits:
+  - title: PR & Communications Manager
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-pr-communications-manager.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

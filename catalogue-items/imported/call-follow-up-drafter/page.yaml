@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It turns notes into three short drafts.
 new_slug: call-follow-up-drafter
 name: Call follow-up drafter
-summary: Paste call notes or a transcript. Get a follow-up email, a team summary
-  and CRM updates to approve.
+summary: Turn your call notes or transcript into a follow-up email, a team summary and CRM updates for you to approve. Nothing is sent or saved without your yes.
 job: sell-and-negotiate
 headline: Call follow-up drafter
-subhead: Paste your call notes or a transcript and name the contact or deal. It
-  builds the follow-up from what was said and matches your CRM's own field and
-  stage names. You get a follow-up email draft, a short team summary, CRM
-  updates waiting for your yes, and next steps with owners.
+subhead: Paste your call notes or a transcript and name the contact or deal. It builds the follow-up from what was said and matches your CRM's own field and stage names. You get a follow-up email draft, a short team summary, CRM updates waiting for your yes, and next steps with owners.
 explain: |
   Right after a call, you have a follow-up email ready to send, a short team summary, and a list of CRM changes waiting for your yes. Paste notes or a transcript and the draft is built from what was said, not from guesses.
 
@@ -19,6 +15,10 @@ when:
   - Your team needs a summary of what the customer said and what was agreed.
   - Deal stages and next steps in your CRM are out of date after a meeting.
   - You want next steps and owners pulled from a long transcript.
+not_for:
+  - "You want to write a first message to a stranger: write it by hand or ask your AI for a plain cold email, since this skill needs a real call."
+  - "You need notes from an internal team meeting: use a meeting-notes tool, because this skill is built around customers and deals."
+  - "You have no notes and no transcript: write down what you remember first, because it will not draft from a meeting title alone."
 you_give:
   - Call notes or a transcript
   - The contact or deal the call relates to
@@ -30,8 +30,31 @@ you_get:
   - Proposed CRM updates to approve
   - A list of next steps and owners
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM and email.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your call notes or transcript. Say which contact or deal the call was about.
+  - Add your usual tone or sign-off if you want the email to sound like you (optional).
+  - Read the email draft, the team summary and each proposed CRM update with its source line.
+  - Say which updates to apply. If your AI has no CRM or email access, copy the text and checklist and do it yourself.
+  - Drafting needs no paid tool. Applying changes needs your own CRM or email account connected to your AI.
+output_sample:
+  input:
+    - Your call notes or transcript
+    - The contact, account or deal the call was about
+    - Your usual tone or sign-off (optional)
+    - Your CRM, email or chat connected (optional)
+  prerequisites:
+    - Call notes or a transcript, pasted or uploaded
+    - A connected CRM or email account only if you want changes applied; drafting works without one
+  output:
+    - name: Summary
+      contains: The decisions, commitments on each side, open questions, objections and next meeting, each pointing to where it was said.
+    - name: Customer follow-up email draft
+      contains: A short email under 150 words with thanks, agreed next steps, attachment placeholders and the next meeting.
+    - name: Internal team summary
+      contains: Account, stage and amount if readable, a short overview, key points, risks, and next steps split between you and them.
+    - name: CRM update set
+      contains: Proposed values for next step, stage, amount, close date and an activity entry, each with its source line.
+    - name: Instruction-like text
+      contains: Any lines in the transcript that tried to give orders, listed with their source and left out of the updates.
+    - name: Our commitments list
+      contains: What you promised on the call, so nothing gets missed.

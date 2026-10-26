@@ -16,6 +16,27 @@ use_cases:
   - "Plan how to get a whole group to switch to a new way of working at once"
   - "Tell the story of a big change so your team, backers and customers come along"
   - "Check if your team is doing real work or just busy work that looks like work"
+not_for:
+  - "You need legal, medical or money advice: ask a lawyer, doctor or financial adviser instead."
+  - "You want to know what real customers think: run a short user-research session with real people instead."
+  - "You want his current views or a quote from this week: this mind only covers his dated public work, so read his recent interviews instead."
+output_sample:
+  input:
+    - Your product, pitch or project in a few lines
+    - What happens when a new person first uses it (optional)
+    - What your customers want to get done (optional)
+    - Any numbers on sign-ups or people who come back (optional)
+  output:
+    - name: Reframe
+      contains: What you really sell, framed as the result the customer wants, and who they become after using it.
+    - name: Beginner walk
+      contains: A list of each small irritation a first-time user would hit in the first five minutes.
+    - name: Pivot check
+      contains: Whether you are hedging between two ideas, and what users keep doing that you did not plan.
+    - name: First change
+      contains: The one fix to make before anything else.
+    - name: Gaps note
+      contains: A short line on anything he never spoke about, so you know where the advice is an extension.
 seats:
   - {seat: "What you're really selling", asks: "Forget the saddle. What's the ride, and why would someone want it?"}
   - {seat: "Polish and first use", asks: "What will annoy a new user in their first five minutes, and why is it still there?"}

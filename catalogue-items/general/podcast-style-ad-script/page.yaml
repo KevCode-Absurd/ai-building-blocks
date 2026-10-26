@@ -1,6 +1,6 @@
 new_slug: podcast-style-ad-script
 name: "Podcast-style video ad script writer"
-summary: "Paste the doubt and your facts. Get a two-person podcast-style video script, with every fact sourced."
+summary: "Write a podcast-style video ad script for two made-up speakers. Give it a buyer doubt and your facts. You get a timed script with sources."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your buyers hold a belief that stops them buying, and your facts can answer it.
   - Your category has heard every claim, and plain ads get ignored.
   - You want a talking ad that feels real without anyone pretending to be a customer.
+not_for:
+  - "You need a real customer or expert on camera: film that person, since this script uses two made-up actors and never a real endorsement."
+  - "Your product is a health, supplement or other regulated one: get a legal or ad-policy review first, or use a single-speaker or product demo format."
+  - "Your point must be seen, or your offer has many terms: use a product demo clip, or a short written ad."
 
 you_give:
   - The one belief to change, how much your buyer knows already, and the length
@@ -39,6 +43,34 @@ how_to_use:
   - Say the length, for example "30 seconds".
   - Read it aloud with someone, one part each. Any line that sounds like ad copy goes back for a rewrite.
   - Take the script and cast note to "Podcast-style video clip prompt writer". It takes it from there, from the cast to the finished clips.
+output_sample:
+  input:
+    - The one belief you want to change, and how much your buyer already knows
+    - Your buyers' doubts in their own words, with sources
+    - Your product facts and a short reason it works
+    - A photo of your product or pack
+    - Your offer, banned claims and the length you want, 15 to 45 seconds
+  prerequisites:
+    - Your brand brain from the Brand profile builder, or the same facts pasted in
+    - A buyer brief from the Buyer brief writer, or the same details pasted in
+    - An AI that can read pictures, to check your product photo
+  output:
+    - name: Belief line
+      contains: What buyers think now and what they should think by the end, taken from a doubt they really voiced.
+    - name: Shape, product entry and muted opener
+      contains: How the talk moves, how the product shows up, and a short opening line for viewers with the sound off.
+    - name: Script table
+      contains: One row per line with the speaker and words, any on-screen text, and a picture note for each turn.
+    - name: Clip plan
+      contains: Which lines sit in each clip and how many words each clip holds, plus the offer as end text.
+    - name: Facts said
+      contains: Every fact a speaker says, with its source, and any gaps marked MISSING.
+    - name: Disclosure line
+      contains: The on-screen Dramatization label, plus an AI label if the people are AI-made.
+    - name: Cast note
+      contains: Which two made-up adults should play Host and Guest, how they differ, the room, and why.
+    - name: Checks missed
+      contains: One line for each check the script still missed, or none.
 
 how_it_works:
   - title: Checks it fits

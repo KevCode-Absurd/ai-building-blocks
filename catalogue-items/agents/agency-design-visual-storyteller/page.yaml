@@ -1,0 +1,139 @@
+name: Visual Storyteller agent
+summary: Turn your message into a visual story plan, with the story arc, a frame-by-frame sequence of one message per frame and a version for each channel.
+headline: Visual Storyteller agent
+subhead: Give it your story goal, your audience, where it will be seen and any brand notes. The agent shapes a story with a start, a problem and an ending. You get a frame-by-frame plan with a message and a visual for each frame, ready for a designer or an image tool.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A set of good-looking images is not a story. People need to know who it is about, what goes wrong and how it ends. This agent builds that arc first, then matches the pictures to it.
+
+  Most often the hero is your customer, the problem is theirs, and your product or idea is how it ends well. For each frame it names one message, one visual and the feeling it should leave. It also plans the pace: where the story slows down, and where it lands. If you have data or a complex idea, it plans the infographic or explainer as a short story too.
+
+  It can adapt one story to several channels, such as a vertical story, a wide video, a LinkedIn graphic or a pin. It writes text storyboards and image briefs. It does not draw or edit video. The source profile quotes big engagement gains as targets. The agent does not promise any gain.
+when:
+  - You have a message or some data and need it told as a short visual story.
+  - You are planning a brand video, a carousel or a story series and need the order of the frames.
+  - One story must run on several channels, each in its own shape.
+  - You have a complex idea and want a plan for an infographic or explainer.
+not_for:
+  - You already have a video ad script and want it turned into a storyboard. Use the Video avatar and storyboard planner.
+  - You want the written story first, such as one strong case to build on. Use the Case-first story builder.
+  - You want a frame turned into an image prompt. Use the Image and video prompt director.
+you_give:
+  - The message or goal of the story, in one or two sentences
+  - Who it is for and where it will be seen, such as Instagram Stories, YouTube or your website
+  - How long or how many frames you have (optional)
+  - Your brand notes, such as tone, colours and fonts (optional)
+  - Facts, data or customer notes the story should use (optional)
+you_get:
+  - A story arc covering who it is about, the problem and the ending
+  - A frame-by-frame sequence with one message, one visual and one feeling per frame
+  - Notes on pace, with where the story slows and where it lands
+  - A version for each channel you name, with what changes in format and length
+  - Accessibility notes such as captions, alt text and colour contrast
+  - A list of what a designer or image tool still has to make
+how_to_use:
+  - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your goal, your audience and where it will be seen. Add any facts or data the story must use.
+  - Say how many frames or seconds you have. If you do not know, it proposes a length and marks it as proposed.
+  - Read the arc first. Can you tell the story in three lines? If not, fix the arc before you look at frames.
+  - Check each frame for one message only. Cut or merge frames that repeat.
+  - Give the frames to a designer. Or use the Image and video prompt director to turn each frame into an image prompt.
+how_it_works:
+  - title: Set the story goal
+    text: It confirms the one message, the audience, the channel and the length. Missing facts are asked once, then marked MISSING.
+  - title: Shape the arc
+    text: It names the hero, the problem and the ending, and maps the feeling from start to finish.
+  - title: Plan the frames
+    text: Each frame gets one message, one visual, any words or sound, and a pace.
+  - title: Adapt for channels
+    text: It reshapes the plan for each channel you name, such as vertical, wide or square.
+  - title: Check access and facts
+    text: It adds captions and alt text notes, and keeps any figure tied to a source you gave.
+output_shape: |-
+  STORY GOAL
+    Message <one line> | Audience <who> | Channel and length <where, how long>
+
+  ARC
+    Hero <who it is about> | Problem <what goes wrong> | Ending <how it resolves> | Feeling at the end <feeling>
+
+  FRAME SEQUENCE
+    <number> | message <one line> | visual <what is shown> | words or sound <caption or voice> | feeling <feeling> | pace <slow, steady or fast>
+
+  CHANNEL VERSIONS
+    <channel> | format and length | what changes from the main plan
+
+  ACCESSIBILITY
+    <captions, alt text, contrast, motion notes>
+
+  STILL TO MAKE
+    <assets a designer or tool must produce>
+
+  OPEN CHECKS
+    <what is unverified>
+output_sample:
+  input:
+    - The message or goal of your story
+    - Who it is for and where it will be seen
+    - Your brand notes (optional)
+    - Facts, data or customer notes to use (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A designer or an image or video tool to make the frames
+  output:
+    - name: Story goal
+      contains: The one message, the audience, the channel and the length.
+    - name: Story arc
+      contains: The hero, the problem, the ending and the feeling at the end.
+    - name: Frame sequence
+      contains: Numbered frames, each with one message, one visual, any words and a pace.
+    - name: Channel versions
+      contains: How the plan changes for each channel you named.
+    - name: Accessibility notes
+      contains: Captions, alt text, colour contrast and motion limits.
+    - name: Still to make
+      contains: The images, footage or graphics a designer or tool must produce.
+    - name: Open checks
+      contains: What was not verified, such as facts to confirm.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Story goal
+    how: Give one message. A story with two messages usually lands neither.
+  - what: Length
+    how: Say how many frames or seconds you have. A tight limit forces clearer choices.
+  - what: Hero
+    how: Name who the story is about, such as a customer type. Real details beat a general "user".
+  - what: Facts
+    how: Paste any numbers or quotes the story must use. It will not invent them.
+improve:
+  - Save your arc and brand notes, and reuse them so a series of stories feels like one voice.
+  - Add your own rules to the brief, such as "always end on the product in use".
+  - Pair it with the Image and video prompt director to make the frames, and a human check of every claim before you publish.
+terms:
+  - term: Story arc
+    meaning: The shape of a story, from a start through a problem to an ending.
+  - term: Storyboard
+    meaning: A row of frames that shows a story in order, like a comic strip.
+  - term: Frame
+    meaning: One picture or moment in the sequence.
+  - term: Visual metaphor
+    meaning: A picture that stands for an idea, such as a bridge for a link.
+  - term: Alt text
+    meaning: A short written description of an image, for people who cannot see it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good for the arc and the frame plan. Attach brand images if the AI can read them.
+    - name: An image or video tool
+      why: The agent plans the frames. A separate tool or a designer must make them.
+  inputs:
+    - Your brand guide or tone notes.
+    - Customer quotes or case notes that show the problem.
+    - Examples of stories you like, with what you like about them.

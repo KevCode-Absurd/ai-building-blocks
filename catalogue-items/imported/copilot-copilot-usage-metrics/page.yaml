@@ -2,18 +2,97 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-copilot-usage-metrics
 name: Copilot team usage reporter
-summary: Name your organization and date range. Get usage metrics from GitHub,
-  with access needs and limits explained.
+summary: Get a GitHub Copilot usage report for your organization or enterprise, with active users, acceptance rate, suggestions and chat use.
 job: connect-tools
 headline: Copilot team usage reporter
-subhead: Name your organization and date range. Get usage metrics from GitHub,
-  with access needs and limits explained. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: "Give it your GitHub organization or enterprise name, and a day if you want one. It pulls your Copilot usage numbers with the GitHub command line and writes them as a short report. It needs a GitHub Enterprise Cloud plan and an admin token."
+explain: |
+  If your team pays for GitHub Copilot, you want to know if people use it. This Copilot usage report pulls the numbers from GitHub itself, so you do not click through settings pages or build a sheet by hand.
+
+  It runs four small scripts with the GitHub command line, called gh. Two give totals for an organization or an enterprise. Two give the same numbers per person. You can ask for one day or for the recent period.
+
+  GitHub only shares these numbers with admins on Enterprise Cloud, and a policy must be switched on first. The skill says so up front, and tells you what to change when GitHub refuses the request.
+when:
+  - Your manager asks how many people on the team really use Copilot.
+  - You need acceptance rate and chat use to decide whether to renew seats.
+  - You want a per-person breakdown to find who has a seat but never uses it.
+  - You need the numbers for one specific day, such as a rollout or training day.
+not_for:
+  - "You only want seat counts or the bill: use GitHub's billing page, since this skill reads usage, not cost."
+  - "You are on a free or Team plan, or are not an admin: GitHub will refuse the request, so ask your admin to run it."
+  - "You want to connect other tools to your AI: use the Go MCP server generator or the Google Workspace CLI helper."
+you_give:
+  - Your GitHub organization name or enterprise slug
+  - Whether you want totals or one row per person
+  - A single day in YYYY-MM-DD form (optional)
+  - A GitHub login with admin rights, already set up in the gh command line
+you_get:
+  - A short summary of active users, acceptance rate, suggestions and chat use
+  - A table per person, if you asked for a breakdown
+  - A note on any trend, if you ask for more than one day
+  - A plain message with the fix if GitHub refuses the request
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - "Check three things first: you are on GitHub Enterprise Cloud, the Copilot usage metrics policy is on in enterprise settings, and you have admin rights."
+  - Install the GitHub command line (gh) and sign in with gh auth login. Your AI must be able to run commands on your computer, such as Claude Code or Codex.
+  - Open the skill folder in your AI and say which organization or enterprise you want, and whether you want totals or per person. Add a day if you need one.
+  - Read the summary first. Check the totals against what you know, such as how many people hold a seat.
+  - If your AI cannot run commands, ask it to give you the gh command, run it yourself, and paste the result back.
+  - If GitHub answers 403, check your token rights and the policy setting, then run it again.
+how_it_works:
+  - title: Pick the level
+    text: It asks if you want an organization or an enterprise, and gets the name or slug.
+  - title: Pick the detail
+    text: It asks for totals or per person, and for one day or the recent period.
+  - title: Run the script
+    text: It runs one of four shell scripts that call the GitHub API through gh.
+  - title: Summarize
+    text: It reads the reply and pulls out active users, acceptance rate, suggestions and chat use.
+  - title: Explain gaps
+    text: It says if data is missing or access was refused, and what to change.
+output_shape: |
+  Copilot usage for <organization or enterprise>, <day or recent period>
+
+  | Measure | Value |
+  | Active users | <number> |
+  | Acceptance rate | <percent> |
+  | Suggestions | <number> |
+  | Chat interactions | <number> |
+
+  Per person (if asked): <one row per user>
+  Trend (if more than one day): <what rose or fell>
+  Notes: <missing data, access problems>
+output_sample:
+  input:
+    - Your GitHub organization name or enterprise slug
+    - Totals or one row per person
+    - A single day in YYYY-MM-DD form (optional)
+  prerequisites:
+    - GitHub Enterprise Cloud with the Copilot usage metrics policy switched on
+    - The gh command line, signed in with an admin account
+    - An AI that can run commands on your computer
+  output:
+    - name: Summary
+      contains: Active users, acceptance rate, total suggestions and total chat interactions for the period you asked for.
+    - name: Per-person table
+      contains: One row per user with their own usage numbers, only if you asked for the per-person scripts.
+    - name: Trend note
+      contains: What rose or fell, when you compare more than one day.
+    - name: Access notes
+      contains: Any missing data, and the fix if GitHub refused the request with a 403.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can run the gh scripts on your machine, so the report needs no copy and paste.
+    - name: Chat AI without commands
+      why: It can write the gh command for you to run, then turn the result you paste back into a report.
+  inputs:
+    - A past day to compare with, so the report can show a trend.
+terms:
+  - term: gh
+    meaning: GitHub's command line tool. You sign in once, then scripts can ask GitHub for data.
+  - term: Enterprise slug
+    meaning: The short name of your enterprise in its GitHub web address.
+  - term: Acceptance rate
+    meaning: The share of Copilot suggestions that people kept.
+  - term: Policy
+    meaning: A setting an enterprise owner switches on to let others read this data.

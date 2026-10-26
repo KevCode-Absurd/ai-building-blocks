@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It combines several data sources into one picture of where you trail.
 new_slug: rival-seo-comparer
 name: Rival SEO comparer
-summary: Name your site and rivals. Get a comparison of search overlap, content
-  depth, backlinks, technical state and brand presence.
+summary: Compare your site to rivals in search to see why they outrank you. Get gaps in topics, links and site health, plus a list of moves to close them.
 job: study-competitors
 headline: Rival SEO comparer
-subhead: A side-by-side view of how your site stacks up against rivals in
-  search, showing why they outrank you and what to do about it. You see gaps in
-  topics, links and site health.
+subhead: A side-by-side view of how your site stacks up against rivals in search, showing why they outrank you and what to do about it. You see gaps in topics, links and site health.
 explain: |
   A side-by-side view of how your site stacks up against rivals in search, showing why they outrank you and what to do about it. You see gaps in topics, links and site health.
 
@@ -18,11 +15,15 @@ when:
   - You are choosing who to benchmark against.
   - You want sites that link to rivals but not to you.
   - You are planning content and want to see what rivals cover.
+not_for:
+  - "You want to improve one page only: use the on-page SEO skill (seo-onpage), since this skill compares whole sites."
+  - "You have no rivals in mind and no keywords yet: do keyword research first (seo-keyword), then come back."
+  - "You want to review your own existing content: use a content audit (seo-content-audit), not a rival comparison."
 you_give:
   - Your site address
-  - Three to five competitor sites, or your topic area
-  - Access to a keyword or backlink tool (optional)
+  - Three to five rival sites, or your topic area if you do not know them yet
   - Your top priority keywords (optional)
+  - Exports from a keyword or backlink tool such as Ahrefs, Semrush or Similarweb (optional, these are paid and need an account)
 you_get:
   - Search overlap comparison
   - Content gaps
@@ -30,8 +31,35 @@ you_get:
   - Technical comparison
   - Where rivals are strongest, and moves to close the gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can use SEO tools you already have.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Add your site address and your three to five rivals. If you have no rivals yet, give your topic and top keywords.
+  - Paste any exports from your SEO tools. If you have none, say so. Your AI will use manual search checks and mark what it could not verify.
+  - Pick all five angles for a full report, or two or three for a focused look.
+  - Read the executive summary first. Check any number that matters before you act on it.
+  - Start with the top items in the roadmap.
+output_sample:
+  input:
+    - Your site address
+    - Three to five rival sites, or your topic area
+    - Your top priority keywords (optional)
+    - Keyword or backlink tool exports (optional)
+  prerequisites:
+    - An AI that can read pasted exports or browse the web, so it can check search results
+    - Paid tools such as Ahrefs, Semrush or Similarweb are optional and need their own account or key. Free manual search checks still work.
+  output:
+    - name: Executive summary
+      contains: Three to five key findings on where you lead and where you trail.
+    - name: Competitor profiles
+      contains: A short profile of each rival and why it was picked.
+    - name: SERP overlap analysis
+      contains: Which keywords you share with each rival, who ranks, and what page types win.
+    - name: Content gap analysis
+      contains: Topics rivals cover that you do not.
+    - name: Backlink gap analysis
+      contains: Sites that link to rivals but not to you, and the rival pages that earn the most links.
+    - name: Technical comparison
+      contains: How your site and rivals compare on speed, mobile use, schema and security.
+    - name: Brand and entity comparison
+      contains: How well known each rival is outside search, such as brand searches, mentions and reviews.
+    - name: Prioritized gap-closing roadmap
+      contains: The gaps worth closing first, ranked by traffic potential, effort and fit.

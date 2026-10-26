@@ -13,9 +13,9 @@ outputs:
   - {type: script}
 uses: [teaching-story-writer, single-effect-draft-checker, lesson-talk-writer]
 steps:
-  - {uses: teaching-story-writer, note: "Writes a one-minute funny story that carries one lesson."}
-  - {uses: single-effect-draft-checker, note: "Reads the story from the step before and checks every line serves the one point."}
-  - {uses: lesson-talk-writer, note: "Builds the talk on the stories you just checked, each ending on a next step for the room."}
+  - {uses: teaching-story-writer, note: "Writes a one-minute funny story that carries one lesson. Hands step 2 the story."}
+  - {uses: single-effect-draft-checker, note: "Reads the story from the step before and checks every line serves the one point. Hands step 3 the list of lines to cut or fix, with the story."}
+  - {uses: lesson-talk-writer, note: "Builds the talk on the stories you just checked, each ending on a next step for the room. Uses your lessons, step 1's story and step 2's cuts."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/turn-your-lessons-into-funny-stories-and-a-short-talk/skeleton.yaml

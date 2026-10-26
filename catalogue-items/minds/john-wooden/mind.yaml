@@ -16,6 +16,27 @@ use_cases:
   - "Prepare yourself to stay calm under pressure before a big day"
   - "Build a team where people pass the credit and share the work"
   - "Review a loss or a setback by asking whether you gave your best, not what the score was"
+not_for:
+  - "You need a hard conversation script for a tense moment: use the Kerry Patterson mind, or the Joseph Grenny mind, for their Crucial Conversations method."
+  - "You want direct feedback that mixes care with blunt honesty on someone's work: use the Kim Scott mind."
+  - "You need a plan for a team that fears speaking up or admitting mistakes: use the Amy Edmondson mind."
+output_sample:
+  input:
+    - A real problem from your team, work or life
+    - What you have already tried (optional)
+    - Who is involved, such as a new hire, a star or the whole team
+    - What good work looks like to you, if you know it (optional)
+  output:
+    - name: Your definition of success
+      contains: A short statement of what winning means to you, based on effort you control and not on the score.
+    - name: The weak block
+      contains: Which part of the Pyramid of Success looks weakest in your problem, checked from the bottom up.
+    - name: A short story
+      contains: One short coaching story and a maxim that fits your situation.
+    - name: A plan or feedback script
+      contains: A practice session, a few team rules, or words for correcting someone without shame.
+    - name: One action for tomorrow
+      contains: One small thing to do tomorrow morning, with a request to come back and say what you learned.
 seats:
   - {seat: "Coaching and habits", asks: "What small thing are we skipping that will cost us later?"}
   - {seat: "Character and the team", asks: "Did everyone give their best, and did anyone put themselves above the team?"}

@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It must think like an attacker across many paths.
 new_slug: ai-system-attack-tester
 name: AI system attack tester
-summary: Point it at an AI app. Get prompt injection, jailbreak and tool abuse
-  risks found, ranked and mapped to known attacks.
+summary: Find prompt injection, jailbreak and tool abuse risks in your AI app prompts. Get ranked findings with a fix for each. No live app needed.
 job: secure-code
 headline: AI system attack tester
-subhead: A ranked list of the ways someone could abuse your AI app, each tied to
-  a known attack type. Test it before real users or attackers do.
+subhead: Give it test prompts and a short description of your AI app. It checks the prompt text for known attack patterns and scores other risks from fixed tables. You get ranked findings, each tied to a known attack type, with a fix.
 explain: |
   A ranked list of the ways someone could abuse your AI app, each tied to a known attack type. Test it before real users or attackers do.
 
@@ -16,19 +14,48 @@ when:
   - You are about to launch a chatbot or agent that touches customer data.
   - Your AI can send emails or run tools and you worry it could be tricked.
   - A security review asks how you handle prompt injection.
-  - You want a repeatable set of attack prompts for each release.
+  - You want the same set of attack prompts checked on each release.
+not_for:
+  - "You want to hunt threats in your servers or logs: use a threat detection tool or your security team."
+  - "You want a general app security test, such as web or API checks: use a security pen testing tool or hire a pen tester."
+  - "You need proof of how your live AI app answers real attacks: run live tests with a security professional."
 you_give:
-  - Test prompts, or a description of your AI app
-  - What the app can access and which tools it can call
-  - Written permission for deeper testing (when needed)
+  - Test prompts as a JSON file, or use the built-in sample prompts (optional)
+  - A short description of your AI app and what kind of model it uses
+  - What the app can reach and which tools it can call
+  - Written permission for deeper testing (optional)
 you_get:
-  - Injection and jailbreak findings
-  - Risk scores for data leaks and poisoning
-  - Tool misuse risks
+  - Prompt injection and jailbreak findings, matched by pattern in your prompt text
+  - Risk scores for data leaks and data poisoning, taken from fixed tables
+  - Tool misuse risks for agents
+  - Each finding mapped to a MITRE ATLAS attack ID, a public list of attacks on AI
   - Guardrail fixes ranked by severity
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python code and add the skill folder or paste the skill.
+  - Add your test prompts as a JSON list of text lines, or ask for the built-in sample prompts.
+  - Say what your app can reach, which tools it can call, and which model type it uses.
+  - Ask for a scan. Gray-box or white-box testing needs your written permission first.
+  - Check that the coverage list includes injection and jailbreak, then read the findings from top severity down.
+  - Add the suggested guardrails, then scan again before each release.
+output_sample:
+  input:
+    - Test prompts as a JSON file, or built-in seed prompts
+    - "What kind of AI system you have: LLM, classifier or embedding model"
+    - What the app can reach and which tools it can call
+    - Written permission, if you want deeper than black-box testing (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Written authorization before any gray-box or white-box testing
+  output:
+    - name: overall_risk
+      contains: One rating that sums up how exposed the system looks.
+    - name: Findings
+      contains: Each finding names its type, such as injection, jailbreak, inversion, poisoning or tool abuse.
+    - name: MITRE ATLAS ID
+      contains: The known attack technique each finding maps to.
+    - name: Severity
+      contains: A ranking so you fix the worst problems first.
+    - name: Guardrail fix
+      contains: A suggested control for each finding, such as input checks or output filters.
+    - name: test_coverage
+      contains: A check that shows which threat types your prompts covered.

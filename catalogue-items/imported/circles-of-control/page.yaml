@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts each factor into the right circle.
 new_slug: circles-of-control
 name: Control and influence circles map
-summary: Give it a big problem. Get what students control, can influence or only
-  care about, so they act where it counts.
+summary: Turn a big problem into a map of what students control, can influence, or can only care about, so they act where it counts.
 job: teach-and-train
 headline: Control and influence circles map
-subhead: "A big problem can leave students feeling either helpless or guilty.
-  This sorts it into three rings: what they control, what they can influence,
-  and what they can only care about."
+subhead: "A big problem can leave students feeling either helpless or guilty. This sorts it into three rings: what they control, what they can influence, and what they can only care about."
 explain: |
   A big problem can leave students feeling either helpless or guilty. This sorts it into three rings: what they control, what they can influence, and what they can only care about. Then they pick actions in the right ring.
 
@@ -18,6 +15,10 @@ when:
   - Your class has mapped a problem and now needs actions.
   - You want students to act without carrying the blame for everything.
   - You need a way to review the results of student action.
+not_for:
+  - "Your issue is a safety or wellbeing risk for students: talk to your school's safeguarding lead, not a classroom map."
+  - "You need a full plan for the action: use the Project brief designer or the Agency scaffold generator after this map."
+  - "Adults must act alone on the issue: pass it to the right leader or team, and skip student action."
 you_give:
   - The issue or goal the class is looking at
   - Your class, school or community setting
@@ -29,7 +30,28 @@ you_get:
   - Notes on avoiding blame
   - A way to review what students did
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Type the issue your class is looking at, like litter on the school field. Add your class or school setting.
+  - Add your earlier systems map, the age group and any limits, if you have them.
+  - Read the four circles. Check that each action is safe and that adults own what is theirs.
+  - Pick the first step, then use the Project brief designer or the Agency scaffold generator to plan the action.
+output_sample:
+  input:
+    - The issue or goal your class is looking at
+    - Your class, school or community setting
+    - A systems map from earlier work (optional)
+    - Age or year group (optional)
+    - People involved and any limits on time, safety or rules (optional)
+  output:
+    - name: "Circle 1: Direct Control"
+      contains: Actions students can do or choose themselves, each with what to watch for and a safety check.
+    - name: "Circle 2: Direct Influence"
+      contains: Ways to affect others through talk, evidence or example, with who is involved and how to approach them.
+    - name: "Circle 3: Collective or Institutional Influence"
+      contains: Moves that need adults, leaders or money, with the student role and what adults must own.
+    - name: "Circle 4: Concern to Name Without Carrying Alone"
+      contains: Things that matter but are out of reach now, and how to hold them without self-blame.
+    - name: Recommended First Step
+      contains: One small, low-risk action the class can try soon.
+    - name: Reflection Prompts
+      contains: Questions about what is theirs, what belongs to adults, and whether the action is really helping.

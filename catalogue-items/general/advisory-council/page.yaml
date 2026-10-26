@@ -1,6 +1,6 @@
 name: "Advisory council"
 new_slug: advisory-council
-summary: "Ask a hard question. Get several great minds arguing it, then a brief you can act on."
+summary: "Get an advisory council of great minds to argue your hard decision. You get a brief with the call, the strongest dissent and your first three steps."
 job: think-with-minds
 thinking: high
 thinking_why: "It keeps several voices apart through rounds of argument, then weighs them."
@@ -17,6 +17,10 @@ when:
   - You're stuck between two or more good options, and getting it wrong would cost you.
   - You want your plan attacked from several sides before you spend money on it.
   - You want to hear how people who think very differently would handle your problem.
+not_for:
+  - Your question has one right answer. Look it up or ask your AI directly, with no debate.
+  - A lawyer, accountant or doctor must decide. Ask that expert, because the council gives no legal, tax, medical or investment advice.
+  - You need one person's view only. Ask that single mind on its own, without a council.
 
 you_give:
   - The question or decision, and what a good outcome looks like
@@ -35,6 +39,27 @@ how_to_use:
   - Name the minds you want and the role for each, or let it suggest a council.
   - Attach each mind's skill file if you have it, and any numbers that matter.
   - Read the brief, then ask a member to go deeper or run a second round on the dissent.
+output_sample:
+  input:
+    - Your decision, and what a good outcome looks like
+    - Up to seven minds, each with a role (optional)
+    - Each mind's skill file from the minds library (optional)
+    - Your numbers, facts or brand brain (optional)
+  output:
+    - name: Question
+      contains: Your decision in one line, with what a good outcome looks like and any hard limits.
+    - name: The council
+      contains: Each member, their seat, and the one question they always ask.
+    - name: Opening round
+      contains: Each member's recommendation, the reason from their own ideas, and the risk they would watch.
+    - name: Cross-examination
+      contains: Each member challenges the answer they disagree with most, and the challenged member replies.
+    - name: Blind ranking
+      contains: Answers ranked without names, then the names revealed. With one AI playing everyone, this is simulated, so weigh the reasons.
+    - name: Chair's brief
+      contains: The recommended decision, the strongest dissent, what would change the call and your first three steps.
+    - name: Missing
+      contains: Facts the council needed and did not have, or none.
 
 how_it_works:
   - title: Restates the question

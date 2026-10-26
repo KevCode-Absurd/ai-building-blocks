@@ -2,35 +2,100 @@ thinking: low
 thinking_why: It rewrites known facts for each reader.
 new_slug: roadmap-update-writer
 name: Roadmap update writer
-summary: Give it your plans. Get a roadmap story, release notes or changelog
-  written for executives, engineers or customers.
+summary: Turn your product plans into a roadmap update for executives, engineers or customers. Get the roadmap story, release notes or a changelog, one per reader.
 job: build-product
 headline: Roadmap update writer
-subhead: "One set of plans can sound wrong when it reaches the wrong reader.
-  Here you turn your roadmap into a story that fits who is reading it: a board,
-  an engineering team or your customers."
+subhead: Give it your plans and say who will read the update. It picks a roadmap format, then writes a version for each reader, plus release notes or a changelog if you ask. Dates and details it does not have are marked, not guessed.
 explain: |
-  One set of plans can sound wrong when it reaches the wrong reader. Here you turn your roadmap into a story that fits who is reading it: a board, an engineering team or your customers.
+  One set of plans sounds wrong when it reaches the wrong reader. A board wants outcomes, risks and decisions. Engineers want scope, order and blockers. Customers want to know what is live now and what is coming. This skill writes a separate roadmap update for each of them from the same plans.
 
-  First you pick a format. Now, Next, Later suits uncertain plans. A timeline suits fixed dates. A theme roadmap groups work by problem. Then the update is framed for the audience. Executives get outcomes, risks and decisions needed. Engineers get scope, order and blockers. Customers get what is live now and what is coming. It also writes release notes in user terms or internal terms, builds a changelog from git history, and checks every piece against a short quality list.
+  First it picks a format. Now, Next, Later suits uncertain plans. A timeline suits fixed dates. A theme roadmap groups work by the problem it solves. It then marks what is committed, what is only planned and what has no date, so a hope never reads as a promise.
+
+  It can also write release notes in customer terms or internal terms, group a changelog by type of change, and shape a feature announcement. Every piece is checked against a short quality list at the end.
 when:
-  - You must brief the board and the engineering team on the same plan, and they
-    need different things.
-  - A release is going out and you need notes your customers will actually read.
+  - You must brief the board and the engineering team on the same plan, and they need different things.
+  - A release is going out and you need notes your customers will read.
   - You have a long git history and need a clean changelog from it.
   - You are announcing a new feature and want a clear order for the message.
+not_for:
+  - "You want sprint status or an update on one ticket: use your project tracker, or the Sprint plan writer for sprint plans."
+  - "You want release notes from commit messages with a version bump: use the Release notes writer."
+  - "You want to rewrite a list of features as goals: use the Feature roadmap to outcomes rewriter."
 you_give:
-  - Your plans, initiatives or feature list
-  - "The audience: executives, engineers or customers"
-  - Release date or version range (optional)
-  - Git history for a changelog (optional)
+  - Your plans, initiatives or feature list, with any dates, owners and status
+  - Who will read the update: executives, engineers or customers
+  - What you want written, such as a roadmap story, release notes or a changelog
+  - A release date or version range (optional)
+  - Your git commit messages or git access, for a changelog (optional)
 you_get:
-  - A roadmap story in the format that fits
-  - An update written for your chosen audience
-  - User-facing or internal release notes
+  - A roadmap in the format that fits how certain your plans are
+  - One update for each reader you named
+  - Customer-facing or internal release notes
   - A changelog grouped by type of change
+  - A list of details you still need to supply
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your plans in one place. For each, note the date if there is one, the owner and whether it is committed or only planned.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No paid tool is needed. A changelog from git history needs git and Python 3 on your own computer.
+  - Paste your plans and say who will read the update and what you want written.
+  - For a changelog, run the script from the skill on your computer and paste the result. If you cannot, paste your commit messages, one per line.
+  - Check every date, name and promise against your own plan. Remove anything your AI added that you did not give it.
+  - Send each reader only their version. Pair it with the Release notes writer when a release is going out.
+output_shape: |
+  Format choice: <Now/Next/Later, timeline or theme> and <why>
+  Roadmap story: <plans in that format>
+  Update for <audience 1>: <outcomes, risks, decisions, or scope, order, blockers, or what is live and coming>
+  Update for <audience 2>: <...>
+  Release notes: <highlights, new, improved, fixed, known limits>
+  Changelog: <changes grouped by type>
+  Missing: <inputs not given>
+output_sample:
+  input:
+    - Your plans, initiatives or feature list
+    - Who will read the update
+    - What you want written
+    - A version range and commit messages, for a changelog (optional)
+  prerequisites:
+    - Git and Python 3 on your computer, only if you want the script to build the changelog
+  output:
+    - name: Format choice
+      contains: Which roadmap format fits your plans and why, in one or two lines.
+    - name: Roadmap story
+      contains: Your plans in that format, with committed, planned and undated work kept apart.
+    - name: Update per reader
+      contains: A separate version for each reader you named, framed for what that reader needs.
+    - name: Release notes
+      contains: Highlights, new, improved, fixed and known limits, in customer terms or internal terms.
+    - name: Changelog
+      contains: Your changes grouped by type, such as features and fixes.
+    - name: Missing
+      contains: Dates, owners or commits you did not give, and how that limits the update.
+how_it_works:
+  - title: Sort your plans
+    text: It splits what is committed, what is only planned and what has no date.
+  - title: Choose a format
+    text: It picks Now/Next/Later, a timeline or a theme roadmap from how certain the plans are.
+  - title: Write for each reader
+    text: It writes one update per reader, never a blend of all three.
+  - title: Write release notes
+    text: It leads with user value for customers, or with rollout and rollback detail for the team.
+  - title: Build the changelog
+    text: It groups commits by prefix, using the script on your computer or the messages you paste.
+  - title: Run the quality check
+    text: It checks framing, trade-offs, risks and next owners before it hands the update back.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT
+      why: Either can write the updates. Neither can read your git history, so paste the commits or run the script yourself.
+    - name: Git and Python 3
+      why: Needed only if you want the changelog script to read your git history.
+  inputs:
+    - Last quarter's update, so the new one keeps the same tone
+    - The goals or OKRs each initiative supports
+    - Known risks and decisions you need from each reader
+terms:
+  - term: Now, Next, Later
+    meaning: A roadmap with three buckets, so you show direction without false dates.
+  - term: Changelog
+    meaning: A list of what changed in each version, grouped by type.
+  - term: Conventional commits
+    meaning: Commit messages that start with a type, such as feat or fix.

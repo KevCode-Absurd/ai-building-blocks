@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It builds a multi-step cycle around one place.
 new_slug: nature-inquiry-cycle
 name: Local nature inquiry cycle planner
-summary: Name a local habitat. Get an inquiry cycle for young learners that
-  links place, nature and community.
+summary: Plan a term-long local nature inquiry for ages 5 to 12. Name a nearby place and get a five-stage cycle with activities, records and community links.
 job: teach-and-train
 headline: Local nature inquiry cycle planner
-subhead: A term-long learning cycle for children aged 5 to 12 that starts from a
-  real place near your school, such as a pond, a hedge or a stream.
+subhead: A term-long learning cycle for children aged 5 to 12 that starts from a real place near your school, such as a pond, a hedge or a stream.
 explain: |
   A term-long learning cycle for children aged 5 to 12 that starts from a real place near your school, such as a pond, a hedge or a stream. It gives teachers a clear order of work, from noticing to action, so the project does not drift.
 
@@ -17,6 +15,10 @@ when:
   - Your school wants a project that involves local people and groups.
   - You have a term to fill and want a clear order of steps.
   - You need a way to record learning without tests.
+not_for:
+  - Your learners are secondary age. Plan a simpler school-grounds project, or adapt the work with a colleague who knows that age group.
+  - Your class cannot visit the place safely or has no adult to supervise. Choose a safer site, such as the school courtyard, or work from photos in class.
+  - You need a single lesson or a one-off activity. Write a short lesson plan with a colleague instead.
 you_give:
   - Age group, early years or primary
   - The place the work will centre on
@@ -29,7 +31,33 @@ you_get:
   - Ways to record and share learning
   - A list of community links to approach
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Tell your AI the age group and the place you will work in. Add your time, local helpers and any known problem if you have them.
+  - Before you plan, check the place is safe. Do a risk assessment and arrange adult supervision for any pond, stream or uneven ground.
+  - Read each stage and change any activity that does not suit your group.
+  - Use the plan to run the term. Let the Share stage feed the Sense stage of your next cycle.
+  - Pair it with the place-based-inquiry-anchor and reggio-documentation-protocol skills for more help on the place and on recording learning.
+output_sample:
+  input:
+    - "Age group: early years or primary"
+    - The place the work will centre on
+    - Time available, such as a term (optional)
+    - Local people and groups who could help (optional)
+    - A known problem or hope for the place (optional)
+  output:
+    - name: SEEDS Overview
+      contains: A short summary of the cycle, the place at its centre and the aim to leave it better.
+    - name: "Stage 1: Sense"
+      contains: Activities to tune in to the place, gather what children know and spot what they still need to learn.
+    - name: "Stage 2: Envision"
+      contains: Steps to picture what could be better, grounded in what children found in the place.
+    - name: "Stage 3: Experiment"
+      contains: Small ideas the children can try in the place and learn from.
+    - name: "Stage 4: Design to Last"
+      contains: Ways to keep caring for the place after the term ends.
+    - name: "Stage 5: Share"
+      contains: An honest look at what changed, shared with local people.
+    - name: Documentation Plan
+      contains: Ways to record learning through learning stories, portfolios and observations.
+    - name: Known Limitations
+      contains: Where the plan is weak or where a teacher should use their own judgement.

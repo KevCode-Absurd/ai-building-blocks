@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It reads each file against a set checklist.
 new_slug: pre-push-repo-cleaner
 name: Pre-push repo cleaner
-summary: Point it at your project. Get junk files, dead code and leaked secrets
-  found and fixed before you publish.
+summary: Run a pre-push repo cleaner on your project to find junk files, dead code and leaked secrets, and fix them before you publish on GitHub.
 job: ship-and-host
 headline: Pre-push repo cleaner
-subhead: A cleaner project before it goes on GitHub. The skill reads your code
-  file by file, fixes what it can and flags what needs your decision.
+subhead: A cleaner project before it goes on GitHub. The skill reads your code file by file, fixes what it can and flags what needs your decision.
 explain: |
   A cleaner project before it goes on GitHub. The skill reads your code file by file, fixes what it can and flags what needs your decision.
 
@@ -17,6 +15,10 @@ when:
   - You want to make a private repo public safely.
   - Your folder is full of logs and old test files.
   - You worry an API key is hidden somewhere in the code.
+not_for:
+  - "You need a full security review or a plan to replace a leaked key: ask a security professional, and change any exposed key at once."
+  - "Your project has no files your AI can read and edit: use a dedicated secrets scanner on your repo instead."
+  - "You only want to write or run a git push: use your normal git steps, as this checks the code and does not push it."
 you_give:
   - Your project folder
   - Notes on files to keep (optional)
@@ -27,8 +29,28 @@ you_get:
   - List of leaked secrets found
   - Security and speed fixes applied
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and edit your project files.
+  - Open an AI that can read and edit your project files, and add your project folder.
+  - Paste in the skill instructions, or say "Follow this skill".
+  - Add notes on files to keep, and where you plan to publish (optional).
+  - Check the list of files it plans to delete, and say yes or no to each one before it removes anything.
+  - Read the report. Fix any critical items first, then run the app and the tests.
+  - Review every change before you commit, and change any key that was exposed.
+output_sample:
+  input:
+    - Your project folder
+    - Notes on files to keep (optional)
+    - The platform you will publish to (optional)
+  prerequisites:
+    - An AI that can read and edit your project files
+    - Code you can run, so it can check the app still starts
+  output:
+    - name: Files removed
+      contains: Junk such as logs, temp files, build output, backups and installed dependencies that should not be on GitHub.
+    - name: Code changes
+      contains: Each file with its fixes, such as dead code removed, vague names changed and missing error handling added.
+    - name: Security issues
+      contains: Hard-coded keys and risky code, marked by how serious they are, with the fix made.
+    - name: Scalability
+      contains: Slow database patterns and missing limits found, with the changes made.
+    - name: Final status
+      contains: A clear ready or not ready line, plus scores for security, code quality and scalability.

@@ -2,12 +2,16 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-donor-relationship-planner
 name: Nonprofit donor relationship planner
-summary: Share donor records and your goal. Get clear stages, next steps, owners, and review dates.
+summary: "Plan your donor pipeline: share donor records and your goal, get stage rules, next moves with owners and dates, and a list of stalled prospects."
 job: organise-work
 headline: Nonprofit donor relationship planner
 subhead: Share your donor records, fundraising goal, and team capacity. It places each prospect at a clear stage and checks for stalled relationships. You get a stage guide, next-step plans, owners, review dates, and a view of where progress slows.
 when:
   - You need this task done for a nonprofit, community program, or donated-goods store.
+not_for:
+  - "You need to set ask amounts or shape a major-gift proposal: ask a major-gifts fundraiser or use a proposal template."
+  - "You need thank-you steps or a plan to win back lapsed donors: use a donor retention plan instead."
+  - "You want help picking or setting up donor database software: ask the vendor or a CRM consultant."
 you_give:
   - Donor records, giving history, relationship notes, fundraising goal, and available staff time.
 you_get:
@@ -26,5 +30,32 @@ works_best_with:
   inputs:
     - Moves management runs on donor records and personal information.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open a chat AI such as Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Prepare your records first. Replace names and contact details with IDs, and check your data policy before you paste anything.
+  - Paste your records, your fundraising goal and your team's available time. A spreadsheet export pasted as text works.
+  - Ask your AI to build the stage matrix, the move plan and the pipeline report.
+  - Check the stalled list and the next moves. Fix any stage that looks wrong before your team uses the plan.
+  - Run it again each quarter with fresh records to see which stage is slowing you down.
+output_sample:
+  input:
+    - Your donor and prospect records, with IDs instead of names (a spreadsheet export works)
+    - Your fundraising goal and average gift size
+    - Your team size and the time each person has (optional)
+    - Your last contact dates and any notes on each person
+  prerequisites:
+    - Check your data policy before you paste donor records into a chat AI. Swap names and contact details for IDs.
+  output:
+    - name: Pipeline stage matrix
+      contains: Each stage with its meaning, entry and exit rules, usual time, required moves, owner and a time cap.
+    - name: Portfolio move plan
+      contains: "For each prospect: stage, last move date, next move with purpose and date, rating and owner."
+    - name: Stalled prospect list
+      contains: Prospects with no move in 60 to 90 days, each marked for a next move, a lower rating or a low-touch track.
+    - name: Pipeline report
+      contains: Counts and dollar value at each stage, plus the conversion rate from one stage to the next.
+    - name: Goal math table
+      contains: How many closed gifts and prospects you need at each stage to reach your goal.
+    - name: Prospect rating scale
+      contains: The capacity bands and the link, ability and interest scoring used, so ratings stay consistent.
+    - name: Review schedule
+      contains: A weekly check for officers and a monthly check for leaders, with what each one reports.

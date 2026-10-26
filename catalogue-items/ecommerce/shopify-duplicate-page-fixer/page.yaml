@@ -1,6 +1,6 @@
 new_slug: shopify-duplicate-page-fixer
 name: "Shopify duplicate page fixer"
-summary: "Give it your Shopify theme and crawl. Get each duplicate-page fix and a score out of 100."
+summary: "Find duplicate and thin pages on your Shopify store. Get each fix with the theme change, a re-test checklist and a score out of 100."
 job: get-found-in-search
 thinking: high
 thinking_why: "It reads theme code and judges which changes are safe, so a stronger model makes fewer mistakes."
@@ -17,6 +17,10 @@ when:
   - Search Console shows many "duplicate" or "crawled, not indexed" pages on your Shopify store.
   - Your product links in collections carry a long path and the canonical points somewhere else.
   - You have hundreds or thousands of pages and want to stop wasting crawling on copies.
+not_for:
+  - Your store has about 20 products or no duplicate-page reports. Skip it and run a plain crawl in a site crawler to check for broken links.
+  - You can't open your theme or make a copy of it. Hand the fix list to a developer, or ask a Shopify expert to do the edits.
+  - You want one page to rank higher for a keyword. Edit that page's title and text yourself, as this only removes copies.
 
 you_give:
   - Your store address and theme name
@@ -35,6 +39,33 @@ how_to_use:
   - Paste the theme files the skill asks for, and your indexing report and crawl.
   - Apply one fix at a time, in the order given, and re-test after each.
   - Publish the copy only when the checklist passes.
+output_sample:
+  input:
+    - Your store address and theme name
+    - Your theme files for product links, page head, breadcrumbs and robots
+    - Your Search Console page indexing report
+    - A crawl export (optional)
+    - A list of deleted products (optional)
+  prerequisites:
+    - A duplicate of your live theme to test on
+    - Access to edit your theme code
+  output:
+    - name: LEAKS FOUND
+      contains: A ranked list of leaks, each with where it is, the fix, the risk and whether to do it now.
+    - name: SNIPPETS
+      contains: Before and after code for each theme file, shown as patterns to test on the copy first.
+    - name: REDIRECTS
+      contains: Each deleted product address paired with the closest product or collection to send it to.
+    - name: DO NOT NOINDEX
+      contains: The pages that bring organic clicks and must stay in search.
+    - name: RE-TEST CHECKLIST
+      contains: Each check to run after a change, with the result you should see.
+    - name: SCORE
+      contains: A number out of 100 showing leaks closed against leaks that apply, with the count shown.
+    - name: NOT RUN
+      contains: Checks it could not do, and why.
+    - name: MISSING
+      contains: Anything you did not give it, marked so nothing is invented.
 
 how_it_works:
   - title: Fixes product links

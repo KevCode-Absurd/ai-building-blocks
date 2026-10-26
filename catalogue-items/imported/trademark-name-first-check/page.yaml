@@ -2,23 +2,23 @@ thinking: high
 thinking_why: Look-alike marks need careful comparison.
 new_slug: trademark-name-first-check
 name: Trademark name first-check
-summary: Give it a name you want to use. Get a flag list of similar marks and
-  risk factors. Not a clearance opinion.
+summary: Check a trademark name idea before you pay for a full search. You get a flag list of similar marks and risk points. It is not a clearance opinion.
 job: check-contracts
 headline: Trademark name first-check
-subhead: A quick first look at a name you plan to use, so you spot obvious
-  problems before you pay for a full search. The result is a flag list, never a
-  clearance.
+subhead: A quick first look at a name you plan to use, so you spot obvious problems before you pay for a full search. The result is a flag list, never a clearance.
 explain: |
   A quick first look at a name you plan to use, so you spot obvious problems before you pay for a full search. The result is a flag list, never a clearance. It will not tell you a name is safe, and it says so.
 
   You describe the name, the goods or services, and the countries. It checks if the name is too generic, descriptive, misleading, a place name, a surname or a functional term. It then searches for similar marks through any connected legal database and walks through the confusion factors used in your region, flagging each one. It ends with next steps and a note to take the result to a trademark lawyer.
 when:
   - You have a brand name idea and want early warning signs before you commit.
-  - You are about to buy a domain or print packaging and want a quick sanity
-    check.
+  - You are about to buy a domain or print packaging and want a quick sanity check.
   - You need a short memo to take to a trademark lawyer.
   - You are comparing two or three name options.
+not_for:
+  - "You need a final answer on whether you can use or file a name: hire a trademark lawyer, who will order a full professional search."
+  - "You only want to know if a domain or social handle is free: check the domain registrar or the social site directly."
+  - "You want a legal opinion that a name is safe: this check never says a name is clear, so ask a trademark lawyer."
 you_give:
   - The name you want to use
   - What you will sell under it
@@ -30,11 +30,31 @@ you_get:
   - Notes on confusion risk factors
   - Recommended next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search trademark registers.
-  - Where the skill points to /ip-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open your AI tool and add the skill folder, or paste the skill's instructions into a chat.
+  - Type the name, what you will sell under it, and the countries. Say how the name will look, if you know.
+  - Say if your AI can search trademark registers. Some connectors, such as Solve Intelligence, Descrybe and CourtListener, may need a paid plan or an API key. The check still runs without them.
+  - Read the flag list. Check each flag and any similar marks it found.
+  - If the skill asks you to run /ip-legal:cold-start-interview, use the setup-interview folder inside the skill.
+  - Take the memo to a trademark lawyer before you buy, print or file anything.
+output_sample:
+  input:
+    - The name you want to use
+    - What you will sell under it
+    - The countries where you will use it
+    - How the name will look, such as plain text or a logo (optional)
+  prerequisites:
+    - A trademark database connected to your AI is optional. Without one, the check skips the similar-marks search and only does the name checks and risk factors.
+    - The skill's setup step needs the Claude plugin setup, which is where its config files are saved.
+  output:
+    - name: Proposed mark
+      contains: The name, the goods or services, the classes, the countries and how the name will look.
+    - name: Knockout issues
+      contains: Flags for names that are too generic, descriptive, misleading, a place name, a surname or functional.
+    - name: Similar marks check
+      contains: Look-alike marks found in any connected database, or a plain note that no database was searched.
+    - name: Confusion factors
+      contains: Each risk factor used in your region, flagged for a lawyer to review, with no final call.
+    - name: Recommended next steps
+      contains: What to do next, including taking the memo to a trademark lawyer.
+    - name: Citation verification
+      contains: A note on which cases or sources named in the memo still need checking.

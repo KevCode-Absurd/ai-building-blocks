@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It checks copy against a long set of rules.
 new_slug: ad-and-page-policy-checker
 name: Ad and page policy checker
-summary: Paste your ad, page or email. Get policy risks flagged line by line,
-  safer rewrites and a compliance score.
+summary: Check your ad copy for policy risks before launch. Paste your ad, page or email and get flagged lines, safer rewrites and a score out of 10.
 job: check-ads
 headline: Ad and page policy checker
-subhead: Paste your ad copy, page text, video script or email and name the
-  platform and product type. It runs a nine-point check covering personal
-  attributes, sensational wording, health and income claims, before and after
-  images and more. You get each issue with its severity, a safer rewrite for
-  each and a compliance score.
+subhead: Paste your ad copy, page text, video script or email and name the platform and product type. It runs a nine-point check covering personal attributes, sensational wording, health and income claims, before and after images and more. You get each issue with its severity, a safer rewrite for each and a compliance score.
 explain: |
   Ads, landing pages, video scripts and emails can be checked before launch for rules that could get them rejected or your account flagged. Each issue comes with a safer rewrite.
 
@@ -20,6 +15,10 @@ when:
   - Your last ad was disapproved and you do not know why.
   - You write health or money offers and need to stay inside the rules.
   - You want your page and ad to say the same thing.
+not_for:
+  - "You need legal sign-off on health or finance claims: ask a lawyer or compliance expert, because this check is not legal advice."
+  - "You need to know today's exact rule: read the platform's live policy page, since rules change and this check can be out of date."
+  - "You want a platform other than Meta, Google, TikTok, YouTube or ClickBank: check that platform's own ad policy by hand."
 you_give:
   - Your ad copy, page text, script or email
   - The platform you will run on
@@ -32,7 +31,25 @@ you_get:
   - Safer rewrites
   - A compliance score
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
+  - Paste your ad, page text, script or email.
+  - Say which platform you will run on and what type of product it is. Add your funnel stage if you know it.
+  - Read the issue list from high severity down. Swap in the safer rewrites where they keep your meaning.
+  - Run the check again on the new copy. Then confirm the final version against the platform's current policy page before you publish.
+output_sample:
+  input:
+    - Your ad copy, page text, video script or email
+    - The platform you will run on, such as Meta or Google
+    - The product type, such as supplement, physical product, digital product or coaching
+    - Where the copy sits in your funnel, if you know (optional)
+  output:
+    - name: Copy Classification
+      contains: The copy type, platform, product category and funnel position your AI used for the check.
+    - name: "Phase 1: Checklist Audit"
+      contains: A pass or fail result for each of the nine checks, from personal attributes to ad-to-page match.
+    - name: "Phase 2: Line-Level Issues"
+      contains: Each risky line with a severity of high, medium or low, why it is risky, and a safer rewrite.
+    - name: Compliance Score
+      contains: A score out of 10 for how safe the copy looks.
+    - name: Summary
+      contains: The main problems to fix first and what to do next.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs several searches and narrows them down.
 new_slug: slack-message-finder
 name: Slack message finder
-summary: Ask what was said and where. Get the right messages, files and people
-  from your Slack, found with smart searches. Needs Slack.
+summary: Find a Slack message, file or person by asking in plain words. Your AI runs several searches and gives you the answer. Needs Slack connected.
 job: organise-work
 headline: Slack message finder
-subhead: The right Slack message, file or person, found without scrolling for an
-  hour. You ask in plain words, like "what was decided about the launch date?",
-  and the skill runs several searches and puts the answer together.
+subhead: The right Slack message, file or person, found without scrolling for an hour. You ask in plain words, like "what was decided about the launch date?", and the skill runs several searches and puts the answer together.
 explain: |
   The right Slack message, file or person, found without scrolling for an hour. You ask in plain words, like "what was decided about the launch date?", and the skill runs several searches and puts the answer together.
 
@@ -18,6 +15,10 @@ when:
   - You need a file someone shared months ago.
   - You want to know who on the team handles a topic.
   - You need context from several channels before you reply to a question.
+not_for:
+  - "You need the last few seconds of chat: open the channel in Slack, because search can lag behind new messages."
+  - "You want to search private channels or DMs but have not agreed to it: say yes when asked, or search public channels only."
+  - "You want to search email, Google Drive or a wiki: use the search in that tool, because this only reads Slack."
 you_give:
   - What you are trying to find
   - A channel, person or date range you remember (optional)
@@ -29,8 +30,26 @@ you_get:
   - Channels or people tied to the topic
   - A short summary of what was said
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to your Slack account.
+  - Connect Slack to your AI. This skill needs that link to search.
+  - Paste this skill into a chat with your AI, or add it as a skill.
+  - Ask your question in plain words, like what was decided about the launch date.
+  - Add a channel, person or date if you remember one. Say yes if it asks to search private channels.
+  - Check the answer against the messages it quotes. Open the thread in Slack if you need more.
+output_sample:
+  input:
+    - What you want to find, in plain words
+    - A channel, person or date you remember (optional)
+    - Your OK to search private channels and DMs (optional)
+  prerequisites:
+    - An AI that can connect to your Slack account
+  output:
+    - name: Search plan
+      contains: The searches your AI runs, from broad to narrow, with the filters it picks such as channel, sender and date.
+    - name: Matching messages
+      contains: The Slack messages that answer your question, with thread context when a message is part of a thread.
+    - name: Files and links
+      contains: Files, canvases and links that match, found with file type filters.
+    - name: People and channels
+      contains: The people and channels tied to the topic, so you know who to ask.
+    - name: Short summary
+      contains: A short answer to your question built from what the searches found.

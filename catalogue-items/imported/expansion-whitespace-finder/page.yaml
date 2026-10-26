@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must reason about gaps from limited data.
 new_slug: expansion-whitespace-finder
 name: Expansion whitespace finder
-summary: Name an account. Get what they own, what they could add, the proof for
-  each and the deals to open.
+summary: Find expansion whitespace in a customer account. See what they own, what they could add, the proof for each gap and the deals to open.
 job: sell-and-negotiate
 headline: Expansion whitespace finder
-subhead: Name an account. Get what they own, what they could add, the proof for
-  each and the deals to open. Bring account name, or your whole book. Use the
-  result to plan your next step.
+subhead: Name an account. Get what they own, what they could add, the proof for each and the deals to open. Bring account name, or your whole book. Use the result to plan your next step.
 explain: |
   A map of what one account already owns, what it could still buy from you, and the proof behind each possible upsell, ending in the deals worth opening.
 
@@ -18,6 +15,10 @@ when:
   - You are planning next quarter and need to rank accounts by growth room.
   - A renewal is coming and you want an expansion angle alongside it.
   - You inherited a book of accounts and need to see the gaps fast.
+not_for:
+  - "You want new customers with no purchase history: use a prospecting list or a simple account plan, since this needs past buying to compare against."
+  - "You only need to save an account that may leave: talk to the account owner and plan the renewal first, then come back for upsells."
+  - "You have no product list and cannot write one: list your products and prices by hand first, because the gaps are measured against it."
 you_give:
   - Account name, or your whole book
   - Product list or price sheet
@@ -30,8 +31,29 @@ you_get:
   - Open deals to create
   - Ranking across accounts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill. Connect your CRM if your AI can read it. If not, upload a list of accounts and what each one bought.
+  - Name one account for a deep look, or say "my book" for a quick sweep of many accounts.
+  - Paste your product list or price sheet. If you skip it, your AI will ask for it once.
+  - Add email or call notes if you have them. They show teams or needs that were never sold to.
+  - Check the grid. Every gap should show its evidence. Ask your AI to drop any gap with none.
+  - Pick the plays you want. Your AI shows each deal first, then creates it if it can write to your CRM. If it cannot, you get a checklist.
+output_sample:
+  input:
+    - The account name, or your whole book of accounts
+    - Your product list or price sheet
+    - Your CRM access, or a purchase export file
+    - Email or call notes that mention other teams or needs (optional)
+  prerequisites:
+    - A CRM your AI can read, or an uploaded list of accounts and what each one bought
+    - Your list of products or product families
+  output:
+    - name: Owned versus possible grid
+      contains: Rows for products, teams, locations and volume, each showing what they own today, the gap and the evidence.
+    - name: Top plays
+      contains: Each play with an estimated range, the evidence source, a way in and a first move.
+    - name: Parking lot
+      contains: Ideas with no evidence yet, and the signal that would move each one up.
+    - name: Ranked account list
+      contains: For a whole book, each account with its single best play, ranked.
+    - name: Opportunity records
+      contains: Early-stage deals with the evidence in the description, created only after you accept them, or a checklist if your AI cannot write to your CRM.

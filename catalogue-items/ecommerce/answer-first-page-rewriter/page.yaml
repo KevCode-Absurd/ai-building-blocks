@@ -1,6 +1,6 @@
 new_slug: answer-first-page-rewriter
 name: "Answer-first page rewriter"
-summary: "Give it a blog, guide or FAQ page. Get sections rewritten answer first, with a list of facts still needing a source."
+summary: "Rewrite a blog, guide or FAQ page answer first, so AI assistants can quote it. Get a list of facts that still need a source."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It rewrites text under many rules while keeping your meaning and facts. A mid-level model is enough. Read the result for tone."
@@ -17,6 +17,10 @@ when:
   - A guide or blog post of yours should be quoted by AI assistants when shoppers ask the question it answers.
   - Your FAQ page rambles and you want short answers that stand alone.
   - A page ranks but never gets named in AI answers.
+not_for:
+  - "You want to improve a product page: use the AI-ready product page editor."
+  - "You have no data, results or first-hand experience to add: gather those first, or ask someone on your team for a real result or quote."
+  - "You want to find the questions shoppers ask: use the shopper question and fan-out mapper first, then bring the questions here."
 
 you_give:
   - The page text
@@ -35,6 +39,27 @@ how_to_use:
   - Paste your own data, a customer result or what you learned yourself, with the source.
   - Read the rewrite and the list of facts that need a source. Fill those in yourself.
   - Add a real person's edit before you publish.
+output_sample:
+  input:
+    - Your page text (a blog post, guide or FAQ page)
+    - The questions the page should answer (advised)
+    - Your own data, experience and sources (advised)
+    - A tone sample and a list of words to avoid (optional)
+  output:
+    - name: Top of page
+      contains: A direct answer in 2 to 4 sentences, then a short summary of the page.
+    - name: Sections
+      contains: One block per question heading, with a short stand-alone answer first and the detail after it.
+    - name: Comparison table
+      contains: A table of items and their features, only when the page compares things.
+    - name: FAQ
+      contains: Three to five questions with short answers, placed at the bottom of the page.
+    - name: Labelled idea
+      contains: Your brand name joined to your own idea, so you can repeat it across channels.
+    - name: Facts that still need a source or number
+      contains: Each vague claim, with the number or source it needs.
+    - name: Checks missed and Missing
+      contains: Any check that failed and any input you did not give.
 
 how_it_works:
   - title: Puts the answer first

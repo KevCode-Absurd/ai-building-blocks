@@ -1,6 +1,6 @@
 new_slug: split-run-result-reader
 name: "Split-run result reader"
-summary: "Paste counts for two versions. Get the percentage gap, a luck check, a keep, rerun or stop call and a lesson."
+summary: "Read your split-run test results: see how much better one version is, whether luck explains it, and get a keep, rerun or stop call."
 job: read-ad-results
 thinking: medium
 thinking_why: "The sums are fixed, but the call depends on judging whether the test stayed fair."
@@ -17,6 +17,10 @@ when:
   - A test of two ads, emails or pages has finished and you have the counts.
   - You are not sure whether the gap you see is real.
   - You keep running tests and forgetting what each one taught.
+not_for:
+  - "You have one version and nothing to compare it to: wait until you have two versions, or ask a person who runs your ads what is normal."
+  - "You want a before-and-after report on a whole ad account: use the Ad results report writer."
+  - "You have not run the test yet and need a plan: use the Ad test brief writer."
 
 you_give:
   - Audience, replies, sales and spend for each version
@@ -35,6 +39,28 @@ how_to_use:
   - Paste the test plan if you have it, and note anything odd.
   - Save the lesson record to your file of past tests.
   - Run the next test it names.
+output_sample:
+  input:
+    - Audience size, replies, sales and spend for each version
+    - Your test plan (optional)
+    - Notes on anything odd that happened (optional)
+  output:
+    - name: Table
+      contains: One row per version with audience, replies, reply rate, sales and spend, and blanks marked missing.
+    - name: The gap
+      contains: How much better the leader is as a percentage, plus a rough luck check with the sum shown.
+    - name: Was it fair
+      contains: What matched in the test and anything that broke it.
+    - name: Cost
+      contains: Cost per reply and cost per sale for each version, and sales per hundred replies.
+    - name: The call
+      contains: One call, keep, rerun or stop, with the reason.
+    - name: What it taught
+      contains: A reusable note with the difference tested, result, date, audience and a one-sentence reason.
+    - name: Next test
+      contains: The next thing to test, picked in the order that usually pays most.
+    - name: Missing and checks missed
+      contains: Gaps in your data and any check the skill could not pass.
 
 how_it_works:
   - title: Sets out the table

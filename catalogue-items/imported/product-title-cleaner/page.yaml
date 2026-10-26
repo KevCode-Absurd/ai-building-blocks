@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It applies one naming pattern to every title.
 new_slug: product-title-cleaner
 name: Product title cleaner
-summary: Give it your product list. Get tidy, consistent titles as a CSV for
-  Shopify, plus a before and after sheet.
+summary: Clean up messy Shopify product titles. Give it your store or export file. Get an import CSV with one naming pattern and a before and after sheet.
 job: run-your-store
 headline: Product title cleaner
-subhead: Messy Shopify product titles tidied into one pattern across the
-  catalog, delivered as a CSV you can import as is. Only titles that need a
-  change are in the file, so a clean store with 40 edits is better than 250
-  pointless ones.
+subhead: Messy Shopify product titles tidied into one pattern across the catalog, delivered as a CSV you can import as is. Only titles that need a change are in the file, so a clean store with 40 edits is better than 250 pointless ones.
 explain: |
   Messy Shopify product titles tidied into one pattern across the catalog, delivered as a CSV you can import as is. Only titles that need a change are in the file, so a clean store with 40 edits is better than 250 pointless ones.
 
@@ -19,6 +15,10 @@ when:
   - Titles carry promo text and size clutter.
   - You are about to import a catalog and want it clean.
   - Your Google Shopping feed titles look messy.
+not_for:
+  - "You want SEO titles, meta descriptions or product descriptions: this tool only fixes product titles, so write those in a separate step or by hand."
+  - "You need to change variants, prices or stock: edit them in Shopify admin, because this tool only changes titles."
+  - "Your store blocks reading in its robots.txt file: paste your titles or upload your export CSV instead."
 you_give:
   - A store domain, collection link, products file or export CSV
   - Your brand names to keep
@@ -30,7 +30,30 @@ you_get:
   - One consistent title pattern
   - A note on titles left as they are
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI in Claude, ChatGPT or Gemini and paste in the skill. Running the script needs an AI that can run code.
+  - Give it your store address, a collection link, a products file or a Shopify export CSV. The script reads only public store pages, follows the store's robots.txt and needs no API key.
+  - Add your brand names to keep, and any products to leave unchanged (optional).
+  - Check the before and after table and the flags. Fix any duplicate titles it lists.
+  - Back up your products in Shopify with Products, then Export. Then import the CSV and tick the box to overwrite products with matching handles.
+  - Open 2 or 3 products in your admin to check the new titles.
+output_sample:
+  input:
+    - Your store address, a collection link, a products file or a Shopify export CSV
+    - Your brand names to keep (optional)
+    - A naming pattern you prefer (optional)
+    - Products to leave unchanged (optional)
+  prerequisites:
+    - An AI that can run code, to read a store link with the script. Without it, paste titles or upload your export CSV.
+  output:
+    - name: Pattern and counts
+      contains: The naming pattern in one line, plus how many products were checked, changed, unchanged and skipped.
+    - name: Before and after table
+      contains: 8 to 12 typical changes that show each kind of fix, such as promo words or capitals removed.
+    - name: shopify-import.csv
+      contains: Two columns, URL handle and Title, with only the rows that changed, ready to import.
+    - name: review.csv
+      contains: Every product with old title, new title, changed yes or no, length and what changed.
+    - name: Skipped products
+      contains: Gift cards, test items and add-ons left alone, each with the reason.
+    - name: Flags for you
+      contains: Duplicates, brand styling questions and unclear product types that need your decision.

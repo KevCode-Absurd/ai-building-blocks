@@ -1,22 +1,64 @@
 new_slug: dynamics-365-blueprint-writer
 name: Plan a Dynamics 365 blueprint
-summary: Plan a D365 system through a staged workshop. Record each choice, its owner, open issues and the next step.
+summary: Plan a Dynamics 365 blueprint one section at a time. Log each decision with its owner, date and open issues, so nobody builds on a guess.
 job: document-work
 headline: Plan a Dynamics 365 blueprint
-subhead: Bring programme goals and known constraints. Work through one section at a time to build an owned system plan.
+subhead: Give your AI your programme goals and known limits. It runs a short workshop for one section at a time. You get a saved blueprint and a log of every decision, owner and open issue.
 explain: Bring programme goals and known constraints. Work through one section at a time to build an owned system plan.
 when:
-  - You want to plan a Dynamics 365 blueprint.
+  - You are starting a Dynamics 365 Finance and Supply Chain project and need a system plan.
+  - Your team must decide legal entities, phasing or data rules before design starts.
+  - You want every choice written down with who made it and why.
+  - You are picking up a blueprint from an earlier session.
+not_for:
+  - "You want a review of a design that already exists: ask a solution architect or a design review step, because this skill writes a new blueprint."
+  - "You only need a one-off plan for a small change: a short written plan is enough, so skip the 14-section blueprint."
+  - "You need detailed interface specs, role lists or a timed cutover plan: use a specialist step or a person for that detail, as this skill stays at decision level."
 you_give:
-  - Programme context, business goals, legal entities, scope and architecture participants.
-  - Known requirements, constraints, existing decisions and current Microsoft source evidence when available.
+  - Your programme goals and business case.
+  - Your list of legal entities, countries and phases.
+  - "Your scope: which Dynamics 365 apps and modules."
+  - Known limits, such as budgets, laws and tools you must keep.
+  - Decisions already made, including licence or product choices (optional).
+  - Your last blueprint file, for later sessions (optional).
 you_get:
-  - A saved fourteen-section solution blueprint and progress tracker.
-  - A dated decision/assumption/open-item log with downstream implications and review needs.
+  - A saved 14-section solution blueprint.
+  - A progress tracker showing what is done and what is open.
+  - A decision log with rationale, rejected options, effects, owner and date.
+  - Lists of assumptions and open items, each with an owner and date.
+  - A flag on any of the eight hard-to-reverse decisions still open.
+  - A prompt to get an independent review at the end.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open your AI and paste in the skill, or upload the skill folder if your AI takes files.
+  - "Start with session 1: share your goals, legal entities, scope and known limits."
+  - Answer the 3 to 5 questions for each section, and pick from the options it offers. Say OPEN if you cannot decide.
+  - After each section, read the draft and check the decision log for owner and date.
+  - Save the blueprint file it gives you. In the next session, paste it back first so your AI picks up where you stopped.
+  - When all sections are done, ask a second architect to review the blueprint.
+output_sample:
+  input:
+    - Your programme goals and business case
+    - Your legal entities, countries and scope (apps, modules, phases)
+    - Known constraints and decisions already made
+    - Your last blueprint file, if this is a later session (optional)
+  prerequisites:
+    - An AI that can save and re-open a file between sessions, or you paste the last file back in each time
+    - Access to Microsoft Learn for checking product claims (optional)
+  output:
+    - name: Solution blueprint file
+      contains: Fourteen sections covering scope, operating model, application, data, integration, migration, security, environments, reporting, performance, testing, cutover and support.
+    - name: Progress tracker
+      contains: Which sections are done, in progress or waiting, kept at the top of the file.
+    - name: Decision log
+      contains: Each decision with rationale, rejected options, downstream effects, who decided and the date.
+    - name: Assumptions register
+      contains: Things believed true but not checked, each with an owner and a date to check.
+    - name: Open items
+      contains: Undecided points with an owner and a needed-by date, marked inline and listed together.
+    - name: Load-bearing open items
+      contains: Any of the eight hard-to-reverse decisions still open, plus the sections that depend on them.
+    - name: Architect's notes
+      contains: Where your AI disagrees with a decision, its advice and the risk it sees.
 how_it_works:
   - title: Establish foundations
     text: Resolve programme context, scope and operating-model decisions before dependent architecture sections.

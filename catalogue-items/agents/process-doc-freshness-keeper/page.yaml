@@ -1,6 +1,6 @@
 new_slug: process-doc-freshness-keeper
 name: Process doc freshness keeper
-summary: Give it your process docs each month. Get stale or ownerless ones found, rewrite drafts checked and a fix list to approve.
+summary: Check your process docs each month. Find stale or ownerless SOPs, get checked rewrite drafts for the worst five and a fix list to approve.
 job: document-work
 thinking: medium
 thinking_why: It checks many docs, ranks them and re-checks its own drafts up to two times. A mid-size model works. Use a stronger one for long runbooks.
@@ -14,6 +14,10 @@ when:
   - Your team has SOPs or runbooks that nobody has reviewed in a year.
   - New hires keep asking questions the docs should answer.
   - You want a short, ranked fix list each month, not a long audit.
+not_for:
+  - "You want one SOP checked once: use the SOP and runbook checker."
+  - "You want a new process written from scratch: use the Process and SOP writer."
+  - "Your doc covers pay, leave, discipline or safety: ask a qualified person, such as an HR adviser or a lawyer."
 you_give:
   - An export or folder of your process docs, SOPs or runbooks
   - A short description of the business, the first time, so it can build the register
@@ -25,11 +29,36 @@ you_get:
   - A list of docs that need an owner, or that may no longer be needed
   - A comparison with last month
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents.
-  - Put your docs in one folder, or paste them in. The first time, add a short note about your business.
+  - Open Claude Code and add the agent as a skill, or save it in .claude/agents. Claude Code needs a paid plan.
+  - Put your docs in one folder. The first time, add a short note about your business.
+  - Ask the agent to run. It reads your folder, so your AI must be able to open files.
   - Read the fix list. Ask each owner to confirm the drafts that touch their work.
-  - Say yes to any one named action you want the agent to take, such as saving a draft. Replacing or archiving stays with you.
-  - Run it on the first working day of next month. It reads last month's report.
+  - Say yes to one named action if you want it done, such as saving a draft. Replacing, archiving and publishing stay with you.
+  - Run it again on the first working day of each month. You can start it by hand, or set a timer such as a Claude Code routine or cron. It reads last month's report.
+output_sample:
+  input:
+    - Your folder of process docs, SOPs or runbooks
+    - A short note about your business (first run only)
+    - Last month's register and report (from the second run)
+    - What changed since last month (optional)
+  prerequisites:
+    - An AI that can read a folder of files, such as Claude Code
+    - The Company wiki planner, SOP and runbook checker, Repeat task step guide writer and Process and SOP writer skills, installed or readable from the library
+  output:
+    - name: This month in one line
+      contains: How many docs were checked and how many failed, compared with last month.
+    - name: Fix list for approval
+      contains: The top five docs, each with its problem, the path taken, the draft file and the check result.
+    - name: Questions for owners
+      contains: Docs that need a name, a check that steps are still true, or a qualified person's look.
+    - name: Proposed archives
+      contains: Docs for processes that no longer run, with the reason.
+    - name: Left for later
+      contains: The docs that did not make the top five.
+    - name: register.md and report.md
+      contains: Each process with its owner and review date, and this month's findings for next time.
+    - name: Files and MISSING lines
+      contains: Every step's file, plus each gap marked MISSING in one list.
 how_it_works:
   - title: Get the register
     text: Builds a list of the processes you run, who owns each and how often to review, once, then reuses it.

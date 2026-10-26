@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It picks a chart type and fills in known code.
 new_slug: interactive-chart-maker
 name: Interactive chart maker
-summary: Give it your data. Get an interactive Plotly chart with hover, zoom and
-  pan that you can embed in a page.
+summary: "Turn your data into an interactive chart maker file: Plotly code and an HTML chart you can hover, zoom and pan, then embed in a web page."
 job: work-with-files
 headline: Interactive chart maker
-subhead: A chart you can hover, zoom and pan, saved so you can drop it into a
-  web page, report or dashboard. Give it your data and get Plotly code for it.
+subhead: A chart you can hover, zoom and pan, saved so you can drop it into a web page, report or dashboard. Give it your data and get Plotly code for it.
 explain: |
   A chart you can hover, zoom and pan, saved so you can drop it into a web page, report or dashboard. Give it your data and get Plotly code for it. It needs Python and the Plotly package.
 
@@ -18,6 +16,10 @@ when:
   - Your notebook charts are flat and hard to read.
   - You are choosing between simple and detailed chart control.
   - You want one file you can email that still works.
+not_for:
+  - "You need a flat chart for a printed paper or journal: use matplotlib, which makes still images."
+  - "You want a full web app with buttons and live data: use Dash, the web app tool from the makers of Plotly."
+  - "You only have your AI chat and cannot run Python: ask your AI for a simple table or a spreadsheet chart instead."
 you_give:
   - Your data as a table or file
   - The chart type or question to answer (optional)
@@ -28,8 +30,27 @@ you_get:
   - An HTML file to embed
   - Install steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open an AI that can run Python code, such as Claude or ChatGPT with code tools turned on. Without code running, you get the script but no chart file.
+  - Paste the skill text into the chat, or upload the skill folder.
+  - Add your data as a CSV with a header row. Say which columns go on each axis.
+  - Ask for the chart type you want, or let your AI pick one and say why.
+  - Open chart.html in your browser. Hover, zoom and pan to check it.
+  - Ask for changes to titles, colours or labels, then save the final file.
+output_sample:
+  input:
+    - Your data as a CSV file or a table pasted into the chat
+    - The columns to plot, or the question the chart should answer (optional)
+    - Titles, colours or labels you want (optional)
+  prerequisites:
+    - An AI that can run Python code, or Python 3 on your own computer
+    - The Plotly package, installed with uv pip install plotly
+    - The kaleido package, only if you also want PNG, PDF or SVG images
+  output:
+    - name: Python script
+      contains: The code that reads your data and builds the chart, using Plotly Express or Graph Objects.
+    - name: chart.html
+      contains: A standalone interactive chart with hover tips, zoom and pan that you can embed or email.
+    - name: Static image (optional)
+      contains: A PNG, PDF or SVG copy of the chart, made with the kaleido package.
+    - name: Install steps
+      contains: The commands to set up Plotly, and kaleido if you want images.

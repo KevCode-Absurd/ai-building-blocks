@@ -1,6 +1,6 @@
 new_slug: disagreement-calming-line-writer
 name: "Disagreement calming line writer"
-summary: "Paste the point you expect them to dispute. Get short lines for pushback that keep the person while you hold your view."
+summary: "Write calm replies to pushback before the talk. Paste what they may dispute and get short, true lines that keep the person while you hold your view."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It must judge tone and what is true on both sides, but the moves are fixed."
@@ -17,6 +17,10 @@ when:
   - "You are about to talk to someone who may tell you that you are wrong."
   - "You have an angry email in your inbox and want to reply without fuel."
   - "A meeting keeps turning into a fight over who is right."
+not_for:
+  - "The decision is already made and the other side has no say: send a plain written note that states it."
+  - "You need the other person to say yes in small steps: use the Yes-ladder question writer instead."
+  - "You want to win by proving them wrong: this will not help, so ask a trusted colleague to test your facts."
 
 you_give:
   - "The plan or notes for the talk"
@@ -35,6 +39,27 @@ how_to_use:
   - "Say what you got wrong, if anything."
   - "Read each line aloud. Cut any that you would say with a sneer."
   - "Keep the lines to hand, or write the reply and wait a day before sending."
+output_sample:
+  input:
+    - Your plan or notes for the talk
+    - The points they may dispute (optional)
+    - Anything you got wrong that they may raise (optional)
+    - Whether it is spoken or written (optional)
+  output:
+    - name: Moments the talk could turn
+      contains: Up to five points where they might say no, say you are wrong, doubt you or get angry.
+    - name: Lines for each moment
+      contains: A welcome, a line showing you heard, a line agreeing where true, your admission and a line holding your view.
+    - name: Lines to replace
+      contains: Phrases that tell them they are wrong, each paired with a gentler rewrite.
+    - name: To take time
+      contains: A line that promises to think it over, thanks them and names a time to reply.
+    - name: Pause rule
+      contains: When to stop the talk, and the line to say it.
+    - name: MISSING
+      contains: Anything you did not give that the lines needed.
+    - name: Checks missed
+      contains: One line for each check the lines still fail, or none.
 
 how_it_works:
   - title: "Lists the moments"

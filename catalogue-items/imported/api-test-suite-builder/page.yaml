@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads routes and writes matching tests.
 new_slug: api-test-suite-builder
 name: API test suite builder
-summary: Point it at your endpoints. Get integration and contract tests for each
-  route, with fixtures.
+summary: Build an API test suite from your own routes. Get test files for sign-in, bad input, error codes and paging, plus test data to run.
 job: test-and-fix-code
 headline: API test suite builder
-subhead: Test files for every route in your API, covering sign-in, bad input,
-  error codes and the edge cases people forget. Point it at your code and it
-  finds the endpoints for you.
+subhead: Test files for every route in your API, covering sign-in, bad input, error codes and the edge cases people forget. Point it at your code and it finds the endpoints for you.
 explain: |
   Test files for every route in your API, covering sign-in, bad input, error codes and the edge cases people forget. Point it at your code and it finds the endpoints for you.
 
@@ -18,6 +15,10 @@ when:
   - You are building a new endpoint and want tests first.
   - You need to confirm every route has at least a smoke test before release.
   - You are preparing for a security review.
+not_for:
+  - Your project has no API, only a front end. Use a browser test tool instead, because this reads route code.
+  - You do not own the API or have no access to its code. Ask the team that owns it for its tests.
+  - You want to attack a live site. Run the injection and burst tests only on a test copy, never on your real site.
 you_give:
   - Your project folder with the routes
   - Your test tool preference
@@ -29,8 +30,33 @@ you_get:
   - Bad input and error code checks
   - Test data fixtures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste this skill, or upload it with your project folder.
+  - Tell it which test tool you use and how sign-in works. Add test accounts and any routes to skip.
+  - Ask it to list your routes first. Check the list against what you expect.
+  - Let it write the test files. Save them in your project and run them with Vitest or Pytest.
+  - Run the injection and burst tests only on a test copy of your API, never your live site.
+  - Fix any failing test or real bug, then run the suite again.
+output_sample:
+  input:
+    - Your project folder with the API routes
+    - "Your test tool: Vitest with Supertest, or Pytest with httpx"
+    - How sign-in works and any test accounts
+    - Routes to skip (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - An AI that can run code, if you want it to run the tests
+  output:
+    - name: Route map
+      contains: Each route and method found in your code, so you can check nothing was missed.
+    - name: Test file per route group
+      contains: One test file for each group of routes, with one describe block for each endpoint.
+    - name: Auth tests
+      contains: Cases for no header, bad token, expired token, wrong role and a deleted user.
+    - name: Input validation tests
+      contains: Empty body, missing fields, wrong types, boundary values, injection and script payloads.
+    - name: Error, paging and upload tests
+      contains: Checks for 400, 401, 403, 404, 422 and 500, first and last pages, and bad uploads.
+    - name: Rate limit tests
+      contains: Burst checks, placed last so they do not disturb other tests.
+    - name: Fixtures
+      contains: Test data set up and cleaned up for each test, with no hardcoded IDs.

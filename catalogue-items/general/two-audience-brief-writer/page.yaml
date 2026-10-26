@@ -1,39 +1,50 @@
 new_slug: two-audience-brief-writer
 name: "Two-audience brief writer"
-summary: "Paste your project and its audience. Get a brief with two audiences, two ways to fail and a promise to each."
+summary: "Write a brief for work that must satisfy experts and newcomers. Get two audience profiles, two failure tests and a promise to each."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It weighs two groups against each other, but the steps and tests are fixed."
 
-headline: "A brief that serves the expert and the newcomer at the same time"
-subhead: "Tell it what you are making and who it is for. It describes the knowledgeable few and the casual many, names the two ways the work can fail, and writes one promise to each. You get a brief you can hand to a writer, a designer or yourself."
+headline: "Two-audience brief writer"
+subhead: "Tell it what you are making and where people will meet it. It describes the expert and the newcomer, names the two ways the work can fail, and writes one promise to each. You get a one-page brief for a writer, a designer or yourself."
 
 explain: |
-  Most work is aimed at one reader and misses the other. Write for experts and a beginner gets lost by the second paragraph. Write for beginners and the experts decide you have nothing new. The usual fix is to aim at the middle, which gives you a bland piece that pleases nobody.
+  Most work is aimed at one reader and misses the other. Write for experts and a beginner is lost by the second paragraph. Write for beginners and the experts decide you have nothing new. The usual fix is to aim at the middle, which pleases nobody.
 
-  This skill sets the target before anything is drafted. It describes both groups by what they notice and what loses them, then names the two ends to stay away from: so plain that an expert yawns, and so dense that only an expert follows. It writes a test for each end that you can run on a draft, and a promise for each group: what a newcomer gets on the first pass with no help, and what an expert finds on a closer look. The overlap, usually a clear main idea, is named so the draft can lean on it.
+  This brief writer sets the target before anything is drafted. It describes each group by what they notice and what loses them. It names the two ends to avoid: so plain that an expert yawns, and so dense that only an expert follows. Each end gets a yes-or-no test you can run on a draft.
+
+  It then writes a promise for each group. The newcomer gets something to enjoy on the first pass with no help. The expert finds something that rewards a closer look. Where the two overlap, usually a clear main idea, it says so the draft can lean on it. It uses real comments from both sides when you have them, and marks a gap when you do not.
 
 when:
-  - "You are making a talk, article, product page, course or song and your audience ranges from beginners to experts."
+  - "You are making a talk, article, product page, course or song for an audience that runs from beginners to experts."
   - "Feedback pulls you both ways: one person says it is too basic, another says it is too hard."
-  - "You are briefing a writer or designer and want one page that says who it has to satisfy and how."
+  - "You are briefing a writer or designer and want one page on who the work must satisfy and how."
+  - "A draft keeps coming out bland and you suspect you aimed at the middle."
+
+not_for:
+  - "You are planning a campaign and need what to say, to whom and what next: use the Marketing brief writer."
+  - "You need tight design limits with room to play: use the Design brief rules writer."
+  - "You have one clear audience, such as only your buyers: use the Buyer brief writer."
+  - "You already have the brief and want the draft: use the Layered draft writer."
 
 you_give:
-  - "What you are making, in a sentence, and where people will meet it (page, stage, feed, shelf)"
-  - "Who the experts are and who the newcomers are, as best you know (names, comments or past reactions help)"
-  - "Length, format and any limits"
-  - "A buyer or audience note from earlier work (optional)"
+  - "What you are making and where people will meet it (a page, a stage, a feed, a shelf)"
+  - "Who the experts are and who the newcomers are, with real comments or past reactions if you have them (optional)"
+  - "Length, format and any limits (optional)"
+  - "A buyer note from earlier work (optional)"
 you_get:
   - "A description of each audience: what they notice, what they need and what loses them"
   - "Two failure ends, each with a test you can run on a draft"
   - "One promise to the newcomer and one to the expert"
-  - "The shared ground the draft can stand on, and a list of what is missing"
+  - "The shared ground the draft can stand on"
+  - "A list of anything missing"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Say what you are making and who will meet it. Paste real comments from both kinds of people if you have them."
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start it by name. If not, paste the skill file into a new chat. It needs no files or paid tools."
+  - "Say what you are making and where people will meet it. Paste real comments from an expert and a newcomer if you have them."
   - "Read the two failure tests. If either does not match how your field works, say so and ask for a rewrite."
-  - "Pass the brief to the next step: your drafts, or the Deliverer fit planner if someone else will present the work."
+  - "Check that the two promises are different from each other. If they sound alike, ask it to sharpen the expert one."
+  - "Take the brief to the Layered draft writer to get a draft, or give it to your writer or designer."
 
 how_it_works:
   - title: "Pins the piece down"
@@ -77,6 +88,23 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "What you are making and where people will meet it"
+    - "Who the experts and newcomers are, with real comments (optional)"
+    - "Length, format and limits (optional)"
+    - "A buyer note from earlier work (optional)"
+  prerequisites:
+    - "An AI chat. No files, web access or paid tools are needed."
+  output:
+    - {name: "The piece", contains: "What it is, where it is met and the one idea it exists to deliver."}
+    - {name: "The expert", contains: "What they know, notice, have seen too often and what makes them stop."}
+    - {name: "The newcomer", contains: "What they know, what needs explaining, how long they will give it and what loses them."}
+    - {name: "Two ways to fail", contains: "Too plain and too dense, each with a yes-or-no test for a draft."}
+    - {name: "The promises", contains: "One line for the newcomer's first pass and one for the expert's second look."}
+    - {name: "Shared ground", contains: "What both groups want, and what may go to one group only."}
+    - {name: "Missing", contains: "Facts about either group the brief still needs."}
 
 tweaks:
   - what: "Real people"

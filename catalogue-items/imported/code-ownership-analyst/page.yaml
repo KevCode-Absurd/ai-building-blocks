@@ -2,34 +2,63 @@ thinking: medium
 thinking_why: It runs a set analysis, then explains the findings.
 new_slug: code-ownership-analyst
 name: Code ownership analyst
-summary: Point it at a git repo. Get who owns the sensitive code and where one
-  person is the only owner.
+summary: Find who owns your sensitive code and where one person is the only owner. A code ownership analysis built from your git history.
 job: secure-code
 headline: Code ownership analyst
-subhead: A map of who really owns your sensitive code, and where a single person
-  is the only one who knows it. It turns git history into risk you can act on.
+subhead: Give it a git repository. It reads the commit history and shows who owns your sensitive code, like login, payment and key files. It flags files where one person is the only owner.
 explain: |
   A map of who really owns your sensitive code, and where a single person is the only one who knows it. It turns git history into risk you can act on.
 
   A Python script reads the commit history and links people to files. It marks sensitive areas using default rules or your own list, and flags files with one owner or owners who have left. It also builds a co-change graph, grouping files that tend to change together while ignoring huge noisy commits and glue files like lockfiles. You can query the results as small slices and export them to Neo4j or Gephi. It needs Python 3 and networkx.
 when:
-  - One engineer left and you do not know what they alone understood.
-  - You want to see who owns your auth and payment code.
-  - You need to find files that always change together.
+  - One engineer left and you do not know what only they understood.
+  - You want to see who owns your login and payment code.
   - An audit asks who is responsible for sensitive areas.
+  - You want to find files that always change together.
+not_for:
+  - "You want a plain list of maintainers or a non-security ownership answer: read your CODEOWNERS file instead."
+  - "You have no git history, such as a folder of loose files: ask your team who knows each part."
+  - "You cannot run code or install Python packages: ask an engineer to run it and share the summary."
 you_give:
   - A git repository
-  - A time window (optional)
+  - A time window, such as the last 12 months (optional)
   - A list of sensitive paths (optional)
-  - Python 3 with networkx
 you_get:
-  - People-to-file ownership map
-  - Single-owner risk flags
-  - Clusters of files that change together
-  - Export files for graph tools
+  - A map of which people changed which files
+  - Flags on sensitive files that only one person owns
+  - Sensitive files nobody has touched in a long time
+  - Groups of files that change together
+  - Files you can load into graph tools such as Neo4j or Gephi
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your git history.
+  - Use an AI that can run code and read your repository. Chat-only AI cannot run this.
+  - "Install the tools once: Python 3, then run pip install networkx."
+  - Open a terminal in the root folder of your repository.
+  - Ask your AI to run the ownership map, with a time window if you want one, such as the last 12 months.
+  - Read summary.json first. Look at orphaned sensitive code and files with only one owner.
+  - Compare the result with your CODEOWNERS file to see where real owners differ.
+output_sample:
+  input:
+    - Your git repository
+    - A time window, such as the last 12 months (optional)
+    - A list of sensitive paths in a CSV file (optional)
+  prerequisites:
+    - An AI that can run code and read your git repository
+    - Python 3
+    - The networkx package, installed with pip install networkx
+  output:
+    - name: people.csv
+      contains: One row for each person, with their commit counts and the time zone they work in most.
+    - name: files.csv
+      contains: One row for each file, with its sensitive tags and owners.
+    - name: edges.csv
+      contains: Links between people and the files they changed.
+    - name: cochange_edges.csv
+      contains: Pairs of files that tend to change in the same commits, with a similarity weight.
+    - name: summary.json
+      contains: "The main findings: orphaned sensitive code, hidden owners and sensitive files with few owners."
+    - name: communities.json
+      contains: Groups of files that change together, with the main maintainers of each group.
+    - name: cochange.graph.json
+      contains: The file graph in a format graph tools can load.
+    - name: commits.jsonl
+      contains: One line per commit, only if you ask for it.

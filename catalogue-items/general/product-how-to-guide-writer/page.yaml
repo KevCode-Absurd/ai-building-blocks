@@ -1,6 +1,6 @@
 new_slug: product-how-to-guide-writer
 name: "Product how-to guide writer"
-summary: "Paste your product facts and buyer problems. Get a short guide of numbered routines that teaches first and sells inside the steps."
+summary: "Write a product how-to guide from your facts. Get chapters with numbered routines, do-not lists and expected results, with your product inside the steps."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It must turn facts into steps a reader can follow and keep every promise inside what the product delivers."
@@ -17,6 +17,10 @@ when:
   - You want a booklet, email series or web page that teaches and sells at once.
   - Your buyers keep asking how to use or care for what they bought.
   - Your product does one job well but sits in a larger routine buyers don't know.
+not_for:
+  - Your product has no routine buyers repeat. Write a plain product page instead.
+  - You need to check claims, especially health or safety ones. Use the Claim and proof matcher before you publish anything.
+  - You want a short ad or a headline. Ask your AI for ad copy, or use the Sales copy editor on a draft.
 
 you_give:
   - Your product facts, including price and what it does
@@ -33,6 +37,27 @@ how_to_use:
   - Say which claims you may not make, such as health claims.
   - Try one routine yourself or with a customer before you publish.
   - Use the guide as a booklet, web page or email series.
+output_sample:
+  input:
+    - Your product facts, including price, use and care steps
+    - The problems your buyers share, or a persona (optional)
+    - Claims you may not make (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Opening
+      contains: Two or three sentences naming the problem most buyers share and saying it can be fixed.
+    - name: Chapters
+      contains: One chapter per problem or season, each with a numbered routine, a do-not list and the result to expect.
+    - name: What you need
+      contains: A tools list with each item's price and why the reader needs it, with your product among them.
+    - name: The price in context
+      contains: One line that sets your price beside a cost the reader already knows.
+    - name: Closing note
+      contains: Three or four calm sentences on what to do first and where to ask a question.
+    - name: MISSING
+      contains: Each fact the guide needed but did not get, such as an amount or a price.
+    - name: CHECKS MISSED
+      contains: One line for each quality check the guide still fails, or none.
 
 how_it_works:
   - title: Opens with the shared problem

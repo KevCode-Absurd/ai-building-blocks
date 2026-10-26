@@ -1,37 +1,128 @@
 new_slug: campaign-copy-draft-agent
 name: Campaign copy draft agent
-summary: Share your brief, offer and approved claims. Get a copy deck checked against those facts, plus a checkpoint for the next revision.
+summary: Get campaign copy checked against your approved claims. Every claim is tied to its proof, gaps are flagged and a checkpoint is saved.
 job: set-up-ai
 headline: Campaign copy draft agent
-subhead: Share your brief, offer and approved claims. Get a copy deck checked against those facts, plus a checkpoint for the next revision.
+subhead: Give it your campaign brief, your current offer and the claims you can prove. It writes copy in three or more different angles for each channel you name, and ties every claim to its proof. You get a copy deck, a claims table and a checkpoint for your next revision.
 explain: |-
-  Share campaign brief, audience, current offer, approved claims and brand voice. Get a source-checked copy deck and next-revision checkpoint.
+  Campaign copy goes wrong when the writer reaches for a claim nobody can prove. A fast "clinically proven", a made-up customer quote or a deadline that is not real can get an ad rejected, or cost you trust. This campaign copy agent starts from the other end. You hand it the claims you can back up, and it writes only from those.
 
-  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+  It writes in different angles, so you get real choices instead of one idea reworded three ways. Each angle answers a different doubt your buyer has. For ads it gives a headline, primary text and call to action. For email it gives a subject line, a preview line and a body. Then it checks every claim and number in the copy against your approved list. A claim with no proof is cut or rewritten, and it is listed so you can decide.
+
+  It ends each run with a checkpoint: what it wrote, what proof it used and the dates, what is still open and what to test next. Give the checkpoint back next time and the next revision starts from it. It drafts only. It never publishes, sends or spends anything.
 when:
-  - You need a source-checked copy deck and next-revision checkpoint.
+  - You are briefing a new campaign and need a first set of ads or emails in different angles.
+  - Your offer or its end date changed and the copy needs to match.
+  - A claim in your ad was rejected, and you need copy that uses only proven claims.
+  - You hand copy to a team or client and want each line tied to its proof.
+not_for:
+  - You want one ad built on one proven fact, with the source for every line. Use the Fact-based ad copy writer.
+  - You already have a finished ad and want its claims checked. Use the Ad claim proof gap finder.
+  - You only need headlines. Use the Five-angle ad headline writer.
+  - You want performance promises, customer quotes or scarcity you cannot back up. It will not write them.
+  - You want it to publish or send the copy. It drafts only.
 you_give:
-  - Campaign brief, audience, current offer, approved claims and brand voice
-  - Authorized tools, owner, limits and any prior checkpoint
+  - Your campaign brief, with the goal, the channels (such as Meta ads, Google ads or email) and the dates
+  - Your audience, in one sentence, and the main doubt they have before buying
+  - Your current offer, with its terms and end date
+  - Your approved claims, each with its proof and date (from a spec sheet, test, review or policy page)
+  - Your brand voice, in a few lines or a sample, and any words to avoid
+  - Character limits for each channel (optional)
+  - Your last checkpoint (optional)
 you_get:
-  - A source-checked copy deck and next-revision checkpoint
-  - Evidence gaps, proposed actions and checks not run
+  - A copy deck with an angle table, then the headline, primary text and call to action for each ad, or the subject, preview and body for each email
+  - A claims table that ties every claim and number in the copy to an approved source, or flags it
+  - A list of evidence gaps and open questions
+  - One suggested next test or revision
+  - A checkpoint file for your next revision
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Download the pack and add it to your AI, or paste SKILL.md into a new chat. Claude, ChatGPT and Gemini all work. A file upload helps if your proof is in documents.
+  - Paste or attach your brief, audience, offer, approved claims with their proof, and your brand voice. Name each channel. Attach your last checkpoint if you have one.
+  - Say "Write the copy deck. Use only my approved claims." Your AI asks once for anything missing.
+  - Open claims-check.md first. Every claim in the copy should show a source from your list. Fix or cut any that do not.
+  - Read copy-deck.md. Pick the angles you want to test. Check each line against your brand voice and the channel's limits in the platform.
+  - Send the copy through your own approval steps. Keep checkpoint.md for the next revision.
 how_it_works:
-  - title: Step 1
-    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
-  - title: Step 2
-    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
-  - title: Step 3
-    text: Extract the actual buyer, purpose, channel, offer conditions and approved claim evidence. Mark missing facts rather than filling them with performance promises or fabricated customer quotes.
-  - title: Step 4
-    text: Write the requested copy deliverable with distinct angles where useful. For ads separate headline, primary text and CTA; for email keep subject, preview and body clear. Preserve the supplied voice and exact approved facts.
-  - title: Step 5
-    text: Check each claim and number against evidence, review reading flow and channel constraints, then return the copy deck, assumptions and a focused next test or revision.
-  - title: Step 6
-    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+  - title: Fix the scope
+    text: It confirms the channels, audience, offer and dates, and who approves. Anything missing is asked once, then marked MISSING.
+  - title: Load the last checkpoint
+    text: If you supply one, it compares the scope and the evidence dates, and says what is stale. Your current request wins.
+  - title: Build the facts list
+    text: It numbers each approved claim (C1, C2) with its source and date, and lists the offer terms. Anything not on the list cannot be used as a claim.
+  - title: Pick the angles
+    text: It chooses three or more different angles, each answering a different buyer doubt and naming the claims it uses.
+  - title: Write the copy
+    text: It writes each channel block in your voice. Ads get a headline, primary text and call to action. Email gets a subject, preview and body.
+  - title: Check every claim
+    text: It matches each claim and number in the copy to the facts list. A claim with no proof is cut or rewritten, and logged.
+  - title: Save a checkpoint
+    text: It records the scope, the evidence and dates used, what is open and the next test, so a later run can compare.
+output_shape: |-
+  SCOPE  <campaign> | <channels> | <offer and end date> | <date of this run>
+  CHANGED SINCE LAST CHECKPOINT  <what changed, or "first run">
+
+  ANGLES
+    <angle> | <buyer doubt it answers> | <claim IDs used>
+
+  COPY DECK
+    <angle> | <channel>
+      Ads   HEADLINE <text> | PRIMARY TEXT <text> | CTA <text> | <character counts if limits given>
+      Email SUBJECT <text> | PREVIEW <text> | BODY <text> | CTA <text>
+
+  CLAIMS CHECK
+    <claim or number in the copy> | <approved claim ID and source, or "not approved"> | <kept, rewritten or cut>
+
+  EVIDENCE GAPS  <what is missing> | <which copy it limits> | <how to get it>
+  NEXT TEST  <one change to try> | <why>
+  CHECKPOINT  <scope, evidence IDs and dates, files, open questions, approvals, next review trigger>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - Your campaign brief, with channels and dates
+    - Your audience and the main doubt they have
+    - Your current offer, with terms and end date
+    - Your approved claims, each with its proof
+    - Your brand voice, in a few lines or a sample
+    - Your last checkpoint (optional)
+  prerequisites:
+    - An AI such as Claude, ChatGPT or Gemini
+    - Proof for every claim you want used, such as a spec sheet or test result
+  output:
+    - name: copy-deck.md
+      contains: Three or more angles, each with a headline, primary text and call to action per ad, or a subject, preview and body per email.
+    - name: claims-check.md
+      contains: Every claim and number in the copy tied to an approved source and date, or marked not approved and cut.
+    - name: evidence-gaps.md
+      contains: What proof is missing, which copy it limits and how to get it, plus checks that did not run.
+    - name: checkpoint.md
+      contains: Scope, evidence IDs and dates, files written, open questions, approvals and the one next test.
+tweaks:
+  - what: Angles
+    how: Ask for the angles you want, such as a benefit, a doubt or a proof angle. Each one then answers a different buyer doubt.
+  - what: Claims
+    how: Give each claim with its proof and date. A claim with no proof is cut, so the more proof you give, the more copy you get.
+  - what: Channels
+    how: Name each channel and give its character limits. Without limits, the counts show as not checked.
+improve:
+  - Keep every checkpoint. When the offer ends or a claim loses its proof, the next run shows exactly which copy is now stale.
+  - Add one line of proof to each claim, with its date. The more claims you can back, the more copy you get.
+  - Paste the best copy you have run, with its results, so new angles start from what worked for you.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can write the deck. File upload helps when your proof sits in PDFs or sheets.
+  inputs:
+    - A short brand voice sample with words to avoid.
+    - Real customer words from reviews, with their source (it may use them only if you supply them).
+    - Past copy that worked, with the results you have.
+terms:
+  - term: Angle
+    meaning: The reason a buyer should care, such as a benefit, a worry or proof.
+  - term: Approved claim
+    meaning: A statement about your product that you can back with a document and a date.
+  - term: Primary text
+    meaning: The main body text of an ad, above or below the picture.
+  - term: Checkpoint
+    meaning: A file that records where this run stopped, so the next run can pick up from it.
 thinking: high
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It matches every claim in the copy to the evidence and follows a specific method.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: A safe migration needs careful ordering and rollback thinking.
 new_slug: migration-planner
 name: Migration planner
-summary: Name the old system or feature. Get a plan to retire it and move users
-  over without breaking them.
+summary: Plan how to retire an old system, API or feature and move users to the new one. Get a go or no-go, phased steps and a shutdown checklist.
 job: build-software
 headline: Migration planner
-subhead: A plan to retire an old system, feature or library and move users to
-  the new one without breaking them. Name what you want to remove and you get
-  the decision, the steps and the dates.
+subhead: A plan to retire an old system, feature or library and move users to the new one without breaking them. Name what you want to remove and you get the decision, the steps and the dates.
 explain: |
   A plan to retire an old system, feature or library and move users to the new one without breaking them. Name what you want to remove and you get the decision, the steps and the dates.
 
@@ -18,6 +15,10 @@ when:
   - You want to sunset a feature few people use.
   - Two copies of the same code exist and you must pick one.
   - You plan a new system and want its exit built in.
+not_for:
+  - "No replacement exists yet: build the replacement first, then come back to plan the move."
+  - "The old system still gives value nobody else does: keep it running and put your effort into the new one."
+  - "You only want to clean up a few unused lines of code: ask a teammate to remove them and check usage first."
 you_give:
   - The system, feature or library to retire
   - What replaces it (optional)
@@ -29,8 +30,31 @@ you_get:
   - A list of users to move and effort for each
   - A shutdown checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Name the system, feature or library you want to retire. Say what replaces it, if anything.
+  - Add who uses it and how many, plus your timeline if you have one.
+  - If your AI can read your project files, let it search for who still calls the old code. Otherwise paste in what you know.
+  - Read the go or no-go first. If it says no-go, fix that gap before you use the plan.
+  - For a database change, ask for the expand and contract steps. The skill also points to a separate skill called incremental-implementation, which you do not need to run it.
+output_sample:
+  input:
+    - The system, feature or library you want to retire
+    - What replaces it (optional)
+    - Who depends on it and how many
+    - Your timeline (optional)
+  prerequisites:
+    - A way to see who still uses the old system, such as logs or usage numbers (optional but helpful)
+    - An AI that can read your project files (optional, helps it find who depends on the old code)
+  output:
+    - name: Deprecation decision
+      contains: A go or no-go, based on unique value, number of users, replacement and the cost of moving or staying.
+    - name: Deprecation type
+      contains: Whether the move is advisory (optional for users) or compulsory (with a hard deadline), and why.
+    - name: Migration approach
+      contains: "The pattern that fits: run both side by side, an adapter, a feature flag, or a step-by-step database change."
+    - name: Phased plan
+      contains: Steps from announcement to shutdown, in order, with a place for dates and owners.
+    - name: Consumer list
+      contains: Each user or system to move, what it touches, and the effort to move it.
+    - name: Shutdown checklist
+      contains: Checks before removing the old code, tests, docs and settings, including proof of zero use.

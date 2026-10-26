@@ -2,17 +2,56 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-ai-gtm
 name: AI product market entry planner
-summary: Describe your AI product and buyer. Get positioning, trust questions
-  and a plan for reaching customers.
+summary: Plan how to sell your AI product to businesses. Give it your product and buyer. You get positioning, trust questions and a go-to-market plan.
 job: plan-strategy
 headline: AI product market entry planner
-subhead: Describe your AI product and buyer. Get positioning, trust questions
-  and a plan for reaching customers. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: "Describe your AI product and the person who would buy it. Your AI uses the author's selling patterns to pick your positioning and pricing. You also get answers to the question buyers ask most: who is responsible when it breaks. The numbers and rules of thumb come from the author's own sales experience, not proven facts."
+not_for:
+  - "You want a plan for a normal software product with no AI decisions in it: use a plain positioning workshop with your team instead."
+  - "You need exact prices from market data: this gives pricing models to weigh, so check real buyer quotes or ask a finance lead."
+  - "You want ad copy or a landing page: write those after the positioning is set, with your own copywriter or your AI."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code or paid tool is needed.
+  - Write your product description, buyer role and the objections you have heard.
+  - Add your pricing options and any security or operations notes if you have them.
+  - Ask your AI to follow the skill and give you positioning, trust questions and a plan.
+  - Read the result as one author's experience, not fact. Check each point against what your own buyers tell you.
+output_sample:
+  input:
+    - Your product description, in a few lines
+    - Your target buyer's job role
+    - Objections you have heard from buyers
+    - Pricing options you are weighing (optional)
+    - Any security or operations documents you already have (optional)
+  output:
+    - name: Positioning choice
+      contains: Whether to frame your product as a copilot, an agent or a teammate, with the reason.
+    - name: Accountability answers
+      contains: Who watches the product, who fixes it and who speaks to customers when it fails.
+    - name: Pricing model pick
+      contains: A pricing approach that fits usage that varies a lot between customers.
+    - name: Trust ladder steps
+      contains: How a buyer moves from trying your product to letting it act alone.
+    - name: Demo plan
+      contains: A demo that shows a failure and the recovery, not only a success.
+    - name: Buyer readiness check
+      contains: Signs that a buyer is ready for an AI agent, and signs they are not.
+    - name: Common mistakes
+      contains: Traps to avoid when selling AI products into larger companies.
+when:
+  - Buyers say they worry about the AI breaking something in their business.
+  - Security approved your product but the operations team said no.
+  - You can't decide whether to call your product a copilot, an agent or a teammate.
+  - Your AI product costs very different amounts to run for each customer, and you need a price.
+you_give:
+  - Your product description, in a few lines.
+  - The job role of the person who would buy it.
+  - Objections you have heard from buyers.
+  - Pricing options you are weighing (optional).
+  - Security or operations documents you already have (optional).
+you_get:
+  - A positioning choice with the reason behind it.
+  - Clear answers on who monitors, fixes and owns problems when your AI fails.
+  - A pricing model that fits uneven usage.
+  - A demo plan that shows a failure and how it recovers.
+  - A short go-to-market plan with steps in order.

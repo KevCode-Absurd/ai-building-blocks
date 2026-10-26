@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores outside makers on cost, quality and fit.
 new_slug: co-packer-picker
 name: Co-packer picker
-summary: Tell it what you need made or packed. Get a way to pick a co-packer and
-  a plan to manage the deal.
+summary: Choose a co-packer with a clear scorecard. Give it what you need made and packed. You get a make-or-buy view and a plan to manage the deal.
 job: plan-supply-chain
 headline: Co-packer picker
-subhead: A clear way to choose a contract manufacturer, and a plan to run the
-  deal once you sign. It helps you avoid picking on price alone and finding out
-  about quality problems after launch.
+subhead: A clear way to choose a contract manufacturer, and a plan to run the deal once you sign. It helps you avoid picking on price alone and finding out about quality problems after launch.
 explain: |
   A clear way to choose a contract manufacturer, and a plan to run the deal once you sign. It helps you avoid picking on price alone and finding out about quality problems after launch.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a product and cannot afford a factory.
   - Your current co-packer keeps missing quality or delivery targets.
   - You are comparing three quotes and want a fair scorecard.
+not_for:
+  - "You only need to buy raw materials or ingredients: use a supplier selection step or ask your purchasing lead, since this page is about outside makers."
+  - "You want to plan your own plant volumes: work through a capacity plan first, then come back to decide what to outsource."
+  - "Your core high-volume or quality-critical product is staying in-house: you do not need a co-packer search, so keep it with your own team."
 you_give:
   - What you need made or packed
   - Volumes and seasonal peaks
@@ -29,7 +30,26 @@ you_get:
   - Questions to ask each candidate
   - A plan to manage the relationship
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI what you need made or packed and why you need a co-packer.
+  - Add your product details, rules, volumes, peaks and minimum orders.
+  - Add your current co-packers and problems, if you have any.
+  - Read the make-or-buy view first. Then check the scorecard and the questions for each candidate.
+  - Fix any gaps with your AI before you share the plan. Mark anything you do not know as missing.
+output_sample:
+  input:
+    - What you need made or packed, and why you need a co-packer
+    - Your product, packaging, shelf life and rules such as FDA or organic
+    - Yearly volumes, seasonal peaks and minimum orders
+    - Your current co-packers and any issues (optional)
+  output:
+    - name: Executive Summary
+      contains: The co-packer's name, location, products, evaluation date, overall score, grade and a clear recommendation.
+    - name: Scoring Detail
+      contains: A table scoring quality, delivery, cost and service, with weights, targets and a pass or warning status.
+    - name: Strengths
+      contains: What the co-packer does well, such as quality record, certifications, equipment and pricing.
+    - name: Weaknesses
+      contains: Where the co-packer falls short, such as delivery, spare capacity or high minimum orders.
+    - name: Recommendations
+      contains: Numbered next steps, such as better lead times, lower minimums and a small pilot run.

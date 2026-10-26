@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It wraps device code in a set format.
 new_slug: arduino-sensor-library-builder
 name: Arduino sensor library builder
-summary: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use
-  it from MATLAB.
+summary: Build a custom Arduino library so MATLAB can read a sensor it doesn't support, like a DHT22. Checks for built-in support first.
 job: build-software
 headline: Arduino sensor library builder
-subhead: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use
-  it from MATLAB. Bring the sensor or part name. Use the result to plan your
-  next step.
+subhead: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use it from MATLAB. Bring the sensor or part name. Use the result to plan your next step.
 explain: |
   A custom library so MATLAB can use a sensor or part it doesn't support out of the box, such as a DHT22, an OLED screen or NeoPixels. Name the part and you get the link between MATLAB and the Arduino code.
 
@@ -18,6 +15,10 @@ when:
   - You need to drive an OLED screen or motor driver from MATLAB.
   - You have an Arduino C++ library and want to call it from MATLAB.
   - You aren't sure whether MATLAB already supports your part.
+not_for:
+  - Your part is already in the list from listArduinoLibraries. Use the built-in MATLAB support, no custom library needed.
+  - You need plain I2C or SPI talk to a chip. MATLAB already has built-in I2C and SPI, so use those.
+  - You want standalone Arduino code with no MATLAB link, or a Simulink deployment. Use the Arduino IDE or the Simulink Arduino workflow.
 you_give:
   - The sensor or part name
   - Your Arduino board model
@@ -29,8 +30,32 @@ you_get:
   - MATLAB functions for the part
   - Setup and test steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and reach an Arduino board.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's text.
+  - Tell your AI the sensor or part name and your Arduino board model.
+  - "Run the native support check in MATLAB: type listArduinoLibraries. If your part is listed, stop and use it."
+  - If no MathWorks add-on exists, give your AI a custom library name and an output folder. Add the Arduino library name if you have one.
+  - Copy the files your AI writes into your folder, then run listArduinoLibraries again to see your library.
+  - Connect your board with arduino() and addon() to test it. This step needs MATLAB and a real board.
+output_sample:
+  input:
+    - The name of your sensor or part
+    - The name of your custom library
+    - The name of the Arduino C++ library to wrap (optional)
+    - The folder where the add-on files should go
+  prerequisites:
+    - MATLAB with the Support Package for Arduino Hardware
+    - An Arduino board you can connect to from MATLAB
+    - An AI that can run MATLAB commands, or you run them yourself
+  output:
+    - name: Native support check
+      contains: The result of listArduinoLibraries, saying if MATLAB already supports your part. If it does, the work stops here.
+    - name: File Exchange check
+      contains: A quick search for a MathWorks add-on for your part, with install steps if one exists.
+    - name: Add-on folder
+      contains: A +arduinoioaddons folder holding your new library, created in your current working folder.
+    - name: MATLAB class file (.m)
+      contains: The class that sets the library name, dependent libraries, header files and the C++ class name, with short comments.
+    - name: C++ header file (.h)
+      contains: The Arduino code in the src folder that runs the commands and sends replies back to MATLAB.
+    - name: Library check
+      contains: A listArduinoLibraries run that shows your library, plus the arduino() and addon() calls to test it.

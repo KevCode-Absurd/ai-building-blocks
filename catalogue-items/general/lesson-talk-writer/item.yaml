@@ -1,6 +1,6 @@
 slug: lesson-talk-writer
 name: "Lesson talk writer"
-summary: "Paste your stories and their lessons. Get a short talk that builds each lesson on a story, ending on a next step."
+summary: "Turn your own stories and lessons into a short talk, like a graduation speech. Get two or three repeatable lessons, a joke, a script and one next step."
 category: general
 type: skill
 role: make
@@ -9,9 +9,10 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: copy_draft, required: false}
+  - {type: audit_report, required: false}
   - {type: brand_brain, required: false}
 outputs:
-  - {type: script}
+  - {type: copy_draft}
 origin: rebuilt
 version: 1.0.0
 minds: [oprah-winfrey, stephen-king]
@@ -19,3 +20,5 @@ credits:
   - {title: "Oprah Winfrey's 2008 Stanford commencement address", by: "Oprah Winfrey, 2008", used: "Building each lesson on a true story from a low point and saying it in one repeatable sentence"}
   - {title: "Commencement address, Harvard", by: "Oprah Winfrey, 30 May 2013", used: "Bringing in an outside voice to back a lesson and speaking straight to the listener"}
   - {title: "Vassar College commencement speech", by: "Stephen King, 20 May 2001", url: "https://stephenking.com/news/2001.html", used: "Opening with a joke at your own expense and making the audience picture a hard fact about time"}
+next: [read-aloud-speech-shaper]
+needs_mode: manual

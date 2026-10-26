@@ -1,6 +1,6 @@
 new_slug: niche-first-message
 name: Find your niche, write the first message, split sales jobs
-summary: Give it your offer and how customers found you. Get a niche verdict, a stranger-friendly message and a sales role split.
+summary: Find your niche, check if it is ready, and get a first message a stranger will read. Also learn which sales job to hand off first.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It judges your niche on hard counts and then writes for a cold reader. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want outbound sales to work and need to know who to write to first.
   - Your leads come from friends, past clients and referrals, and you cannot tell whether strangers would buy.
   - You are doing every sales job yourself and need to know which one to give away first.
+not_for:
+  - "Your niche is already proven by many cold customers: skip step 1 and use the Best customer finder to learn who your best buyers are."
+  - "You have no paying customers yet: talk to a few likely buyers first. The Customer purchase interview script writer helps you plan those talks."
+  - "You only want to decide what to ask a buyer to do next: use the Sales next-step planner."
 you_give:
   - What you sell, at what price and to whom
   - A list of your paying customers and how each one found you
@@ -30,6 +34,24 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Share your offer and your customer list with how each one found you. It checks the niche first.
   - Check the local rules on email and cold calls before you send the message. It lists the rules to check.
+output_sample:
+  input:
+    - What you sell, at what price and to whom
+    - A list of your paying customers and how each one found you
+    - Who does each sales job today and how long it takes
+    - Reviews or call notes (optional)
+    - The person, role or company you want to reach (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Niche check"
+      contains: A count of cold customers, warning signs, a one-line niche statement, and a keep, pause or drop call for each offer.
+    - name: "Step 2: First message"
+      contains: A short main message, a 30-word email, a 15-second call opening, and a polite way out.
+    - name: "Step 3: Sales role split"
+      contains: A table of sales jobs, the first job to hand off, a rule for a qualified lead, and result numbers.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the niche
     text: Counts the customers who found you cold, checks the warning signs, and writes one sentence for who you serve and what you fix.

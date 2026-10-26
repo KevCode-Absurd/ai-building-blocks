@@ -10,6 +10,54 @@ metadata:
 
 Build coaching and mentoring capability across your organization — from designing structured mentoring programs and training managers in coaching skills to facilitating individual coaching conversations using proven frameworks like GROW and CLEAR.
 
+## When to use it
+
+Use it to launch a mentoring, coaching or peer coaching program for one group of staff.
+
+Skip it when:
+
+- You are dealing with one person's performance problem or a formal disciplinary case. Use a manager 1:1 and your HR case process.
+- You want a full leadership curriculum. Use the Leadership program designer.
+- You want career levels and growth paths. Use the Career ladder and growth plan writer.
+
+## What to gather first
+
+Ask for anything missing once, in one message. Mark what you still lack as MISSING. Never invent group sizes or goals.
+
+1. Who the program is for, for example new managers or early-career staff.
+2. How many people, and how long it runs (the default is 6 months).
+3. What you want it to achieve.
+4. How managers and mentors coach today (optional).
+
+## Steps
+
+1. State the program goal and who joins. Keep coaching (drawing out answers) apart from mentoring (sharing experience), and say which this is.
+2. Write the matching rules: what you match on (goals and development needs first), how pairs are chosen, and how to change a pair.
+3. Plan the six months: kickoff, monthly check-ins, mid-point review, close.
+4. Write the mentor guide and the mentee guide with expectations and limits.
+5. Write a relationship charter and 5 check-in questions.
+6. Write a manager coaching guide using the GROW model (Goal, Reality, Options, Will), with 3 practice scenarios.
+7. Set measures that include check-in feedback, not just who finished.
+
+## Output format
+
+1. Program plan (goal, audience, month-by-month table)
+2. Matching rules
+3. Mentor guide and mentee guide
+4. Relationship charter and check-in questions
+5. Manager coaching guide with practice scenarios
+6. Measures table
+
+## Rules
+
+- Say what mentors should not do, such as give legal or medical advice or handle a formal complaint. Point those to HR.
+- Do not invent success rates or program results.
+- Keep matching free of bias, and say how to handle a pair that does not work.
+
+## After you run it
+
+Run a first group of 6 to 10 pairs. Collect check-in answers monthly. Then use the Leadership program designer to grow the program.
+
 ## Supported tasks
 
 - Designing formal mentoring program structures and matching processes

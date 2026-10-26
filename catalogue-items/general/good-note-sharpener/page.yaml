@@ -1,6 +1,6 @@
 new_slug: good-note-sharpener
 name: "Good note sharpener"
-summary: "Paste raw comments on your work. Get each rewritten as a note on the problem, with fixes kept as examples."
+summary: "Turn vague or bossy feedback into clear notes on the problem. Paste your raw comments and get each one rewritten with its place and any fix as an example."
 job: lead-people
 thinking: medium
 thinking_why: "It sorts and rewrites each comment by fixed rules, but it has to judge what problem sits behind a fix."
@@ -17,6 +17,10 @@ when:
   - You got a pile of comments and do not know which ones to act on.
   - Your reviewers give orders or fixes, and you want the problems behind them.
   - You are about to share notes with someone and want them to be about the work, not the person.
+not_for:
+  - "You want to plan the feedback session before it happens: use the Peer feedback session planner."
+  - "You want to find the root cause of the problems in your notes: use the Problem root cause tracer."
+  - "You need a mark or grade for the work: ask a person who owns the marking, since this only rewrites comments."
 
 you_give:
   - The raw comments, with who said each one if you know
@@ -33,6 +37,26 @@ how_to_use:
   - Paste every comment as it came, including the harsh ones. Add the work if you can.
   - Read the notes in order. Send the reviewer questions back to the people who gave the vague comments.
   - Bring the finished notes to "Problem root cause tracer".
+output_sample:
+  input:
+    - Your raw comments, with who said each one if you know
+    - The draft, plan or work the comments are about (optional)
+    - One line on what you are trying to do (optional)
+  output:
+    - name: Notes
+      contains: Each comment rewritten as a problem in the work, with its place, what the reader lost and how many people raised it.
+    - name: Example only
+      contains: Any fix a reviewer offered, kept on its own line and marked as an example.
+    - name: What works
+      contains: Specific praise, written as exactly as the problems.
+    - name: Not about the work
+      contains: Comments that judge the person, listed apart so you can skip them.
+    - name: Questions for reviewers
+      contains: Short questions to send back where a place or a reason is missing.
+    - name: Missing
+      contains: What would sharpen the notes, such as the work itself or who said what.
+    - name: Checks missed
+      contains: One line for each self-check that still failed, or none.
 
 how_it_works:
   - title: Sorts every comment

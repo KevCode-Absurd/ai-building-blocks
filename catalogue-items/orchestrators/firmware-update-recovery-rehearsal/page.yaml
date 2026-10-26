@@ -1,0 +1,101 @@
+name: Firmware update recovery rehearsal
+headline: Firmware update recovery rehearsal
+summary: Share your device and update design. Plan failure tests, review
+  recovery evidence and prepare a gated rollout proposal.
+subhead: Share your device and update design. Plan failure tests, review
+  recovery evidence and prepare a gated rollout proposal. The workflow keeps a
+  checkpoint for each stage and waits when the next stage needs real evidence.
+job: ship-and-host
+thinking: high
+thinking_why: The task compares evidence and alternatives. Its output still
+  needs the stated checks.
+explain: |-
+  Review a firmware update and prepare a hardware-specific failure and rollback rehearsal
+
+  A coherent cross-profile job: inventory the actual fleet, inspect its update state machine, design controlled failure cases, review actual test evidence, and prepare a canary decision. These artifacts depend on one another and require clear stop/resume gates.
+
+  This task uses selected methods from IoT Fleet Engineer, Embedded Firmware Engineer. It is a focused adaptation. The original agents remain available: [IoT Fleet Engineer agent](https://useaiblocks.com/agents/agency-engineering-iot-fleet-engineer), [Embedded Firmware Engineer agent](https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer).
+when:
+  - You need a revision-specific compatibility and recovery matrix.
+you_give:
+  - Hardware/bootloader revisions, partition map and current/target firmware
+    revisions.
+  - Update manifest and verification/boot-confirm design, without secret values.
+  - Connectivity, health windows, physical recovery path and available lab
+    evidence.
+you_get:
+  - A revision-specific compatibility and recovery matrix.
+  - A fault-rehearsal plan and evidence register.
+  - A canary proposal with agreed thresholds, owners and open rollout decisions.
+how_to_use:
+  - Download the workflow and give the complete files to your AI.
+  - Ask it to read the governing instructions and workflow-state.json, then
+    start with the first stage.
+  - Supply missing evidence at the checkpoint; keep later stages pending until
+    their inputs exist.
+  - Review actual results, open items and any proposed external action.
+how_it_works:
+  - title: Bind the hardware and update revision
+    text: Compatibility/recovery matrix and unresolved prerequisites.
+  - title: Specify the recovery rehearsal
+    text: Test matrix with case ID, revision, expected transition, recovery path and
+      evidence needed.
+  - title: Run authorized lab checks or assess supplied evidence
+    text: Revision-bound PASS/FAIL/NOT_RUN/BLOCKED register with actual
+      logs/artifacts.
+  - title: Prepare a hardware-diverse canary proposal
+    text: Canary plan, acceptance/stop conditions, owners and unresolved decision
+      list.
+output_shape: >-
+  1. Bind the hardware and update revision
+     Handoff: Compatibility/recovery matrix and unresolved prerequisites.
+     Gate: Unknown required compatibility or recovery facts block affected test cases.
+
+  2. Specify the recovery rehearsal
+     Handoff: Test matrix with case ID, revision, expected transition, recovery path and evidence needed.
+     Gate: A case with no safe recovery path is BLOCKED. Planning is allowed without executing the lab.
+
+  3. Run authorized lab checks or assess supplied evidence
+     Handoff: Revision-bound PASS/FAIL/NOT_RUN/BLOCKED register with actual logs/artifacts.
+     Gate: Unrun, failed or incomplete recovery evidence blocks a rollout-ready conclusion.
+
+  4. Prepare a hardware-diverse canary proposal
+     Handoff: Canary plan, acceptance/stop conditions, owners and unresolved decision list.
+     Gate: No rollout is described as approved or executed without applicable authorization and real evidence.
+judge:
+  - Evidence identifies firmware, bootloader and hardware revisions.
+  - Recovery is demonstrated in actual lab evidence or marked unrun.
+  - Cohort percentage alone cannot replace health/rollback evidence.
+  - No bricking-proof, fleet-ready or safe-update guarantee is asserted.
+test:
+  - Try a small supplied case whose facts and result you can check.
+  - Omit one required fact and check that the affected work stays unresolved.
+tweaks:
+  - what: Task scope
+    how: State the intended result, available evidence and actual tools before
+      starting.
+improve:
+  - Keep useful corrections with the task evidence for the next run.
+terms: []
+
+not_for:
+  - "You want a general review of embedded code: use the Embedded Firmware Engineer agent."
+  - "You want day-to-day help running a fleet of connected devices: use the IoT Fleet Engineer agent."
+  - "You have no lab and no past test records. It still plans the tests, but it cannot call an update safe to roll out."
+output_sample:
+  input:
+    - Your hardware, bootloader and firmware revisions, and the partition map
+    - Your update manifest and how the device checks and confirms a new image
+    - How devices connect, and how you can reach one that fails to boot
+    - Lab test records you already have (optional)
+  prerequisites:
+    - Do not paste secret keys. Describe how signing works instead.
+  output:
+    - name: Compatibility and recovery matrix
+      contains: Each hardware revision with its update path, recovery access and open questions.
+    - name: Test matrix
+      contains: Failure cases such as cut downloads and bad images, each with expected safe state and evidence needed.
+    - name: Evidence register
+      contains: PASS, FAIL, NOT_RUN or BLOCKED for each case, linked to real logs.
+    - name: Canary proposal
+      contains: Which devices go first, health windows, stop conditions, owners and open decisions.

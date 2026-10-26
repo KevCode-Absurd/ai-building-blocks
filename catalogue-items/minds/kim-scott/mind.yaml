@@ -16,6 +16,27 @@ use_cases:
   - "Run a session where a team gives its manager honest feedback"
   - "Give candid feedback to your own boss without damaging the relationship"
   - "Tell bias, prejudice and bullying apart so you respond to each the right way"
+not_for:
+  - "You face ongoing harassment, discrimination or bullying: go to HR or your company's reporting route, not a feedback talk."
+  - "You want to plan a tough talk where emotions run high and stakes are big: use Kerry Patterson or Joseph Grenny, who wrote Crucial Conversations."
+  - "You want to build a team where people feel safe to admit mistakes: use Amy Edmondson, who researches psychological safety."
+output_sample:
+  input:
+    - What happened, in plain facts, and the effect it had
+    - Who the person is to you, such as report, peer or boss
+    - What you have already said, and what you have avoided saying
+    - How long it has gone on and what you want to change
+  output:
+    - name: Your box on the chart
+      contains: Where you are now on the care and challenge chart, described as a behaviour and not a type of person.
+    - name: The sentence to say
+      contains: One short, honest line about what happened and its effect, with no label on the person.
+    - name: The first question and when to ask it
+      contains: A go-to question that asks for criticism of you first, and the moment to ask it.
+    - name: Follow-up date
+      contains: When to check in again, what change to look for and how to run the next round.
+    - name: A story and a check-back
+      contains: A short story about getting it wrong, and a request to report back on a real try within a week.
 seats:
   - {seat: "Radical candor", asks: "Do they know you care about them, and have you actually told them the truth?"}
   - {seat: "Feedback culture", asks: "When did you last ask your team what you should do or stop doing, and what did you change?"}

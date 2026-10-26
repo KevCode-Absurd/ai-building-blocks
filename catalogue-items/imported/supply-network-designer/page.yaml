@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs cost against delivery speed across many options.
 new_slug: supply-network-designer
 name: Supply network designer
-summary: Give it your sites, customers and costs. Get a short list of warehouse
-  layouts with cost and delivery time compared.
+summary: "Plan your supply network: give it your sites, customers and costs. Get warehouse layouts compared on total cost and delivery service."
 job: plan-supply-chain
 headline: Supply network designer
-subhead: A short list of warehouse and distribution layouts, with cost and
-  delivery time side by side. You can see what adding, closing or moving a site
-  would do before you spend anything.
+subhead: A short list of warehouse and distribution layouts, with cost and delivery time side by side. You can see what adding, closing or moving a site would do before you spend anything.
 explain: |
   A short list of warehouse and distribution layouts, with cost and delivery time side by side. You can see what adding, closing or moving a site would do before you spend anything.
 
@@ -18,6 +15,10 @@ when:
   - You want to know the effect of closing a distribution centre.
   - Delivery times are slow in one region.
   - You need options to take to leadership.
+not_for:
+  - "You only need delivery routes inside a network you already have: use route-optimization, or ask your carrier for a route plan."
+  - "You have no cost data yet: get quotes for rent, freight and stock first, then come back."
+  - "You run one site and have no choice to make: a simple cost check in a spreadsheet is enough."
 you_give:
   - Current and candidate site locations
   - Customer locations and demand
@@ -30,8 +31,31 @@ you_get:
   - Trade-off comparison
   - The model code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini with a mode that can run Python code. This skill needs code running.
+  - Paste the skill text into the chat.
+  - Add your sites, customer demand, costs and service targets. Say if any site must stay open.
+  - Answer the questions your AI asks about goals, budget and limits.
+  - Check the options, the costs and the assumptions it lists. Swap any sample costs or typical ranges for your own quotes.
+  - Take the option you choose into your budget or rollout plan.
+output_sample:
+  input:
+    - Your current and possible site locations
+    - Your customer locations and demand
+    - Your facility, transport and inventory costs
+    - Your service targets, such as delivery days
+    - Sites that must stay open or rules you must follow (optional)
+  prerequisites:
+    - An AI that can run Python code
+  output:
+    - name: Executive Summary
+      contains: The recommended network, total cost against today, service gains, and the time and money to make the change.
+    - name: Network Configuration
+      contains: A table of each site with place, type, capacity, fixed cost, customers served and yearly volume.
+    - name: Cost Breakdown
+      contains: Current and proposed cost for facilities, transport and stock, with the change in each.
+    - name: Service Levels
+      contains: Current and proposed average distance, fast delivery share and on-time delivery.
+    - name: Implementation Plan
+      contains: The change in phases, such as opening a site and closing old ones.
+    - name: Model code
+      contains: The Python code that picks sites and assigns customers, so you can rerun it with new numbers.

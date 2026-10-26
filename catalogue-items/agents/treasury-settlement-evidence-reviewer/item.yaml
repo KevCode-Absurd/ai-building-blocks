@@ -7,19 +7,12 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
-    required: true
+    required: false
+outputs: []
+needs_mode: manual
 uses:
   - reconcile-treasury-settlement-liquidity
   - bank-fee-reconciliation-checker
@@ -27,7 +20,7 @@ steps:
   - uses: reconcile-treasury-settlement-liquidity
     note: Run the governing workflow when A bank balance, restriction, settlement cutoff or confirmed payment record changes.
   - uses: bank-fee-reconciliation-checker
-    note: If an unexpected bank charge explains a cash difference, reconcile only that statement fee against actual counts and contractual rates before changing the cash source map. Missing fee evidence stays unresolved.
+    note: Uses your bank fee statement and fee schedule, not step 1's ladder, and runs only when step 1 leaves a cash difference that an unexpected bank charge may explain. It reconciles that one fee against actual counts and contractual rates, and hands back the fee difference to query before you change the cash source map. Missing fee evidence stays unresolved.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It moves no money, contacts no bank and is not a substitute for a qualified treasury or audit review.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

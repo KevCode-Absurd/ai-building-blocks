@@ -1,55 +1,118 @@
 new_slug: capstone-commitment-review-assistant
-name: Capstone commitment review assistant
-headline: Capstone commitment review assistant
-summary: A team working agreement, task register and handover rules.
+name: Capstone team agreement and handover reviewer
+headline: Capstone team agreement and handover reviewer
+summary: Keep your capstone team agreement current. Compare new commitments with the last review and get a task register and handover rules.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A team working agreement, task register and handover rules. Share the assignment rubric, actual team availability, agreed deliverables, collaboration rules and existing decisions. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
-explain: |-
-  A team working agreement, task register and handover rules.
+subhead: Give it the assignment rules, your team's time, the work people agreed to and your last review. It compares what changed, checks every owner and deadline, and prepares a handover if someone drops out. You get an updated team agreement, a task register and open handover questions.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Named responsibilities reflect agreement; assessment requirements and contribution evidence remain traceable. Missing tools or evidence stay visible in the final summary.
+explain: |
+  A capstone team agreement goes stale fast. A milestone arrives. The assignment rules change. Someone takes on more work, or leaves the project. The agreement still says what was decided in week one. People then argue about who agreed to what.
+
+  This capstone team agreement review starts from your last review. It compares the new notes and rules with the accepted commitments, owners and deadlines on file. It uses the Capstone team agreement planner to update the agreement and the task register. It treats a suggested owner and an agreed owner as two different things. A task with no confirmed owner or date goes on a question list, and nobody is assigned by guess.
+
+  If a team member becomes unavailable, it uses the Handover note writer on the real state of that person's work. It does not name a replacement and does not assume the rest of the team agreed to a new share of the load. It keeps contribution evidence traceable, and it grades nothing.
+
 when:
-  - You need a team working agreement, task register and handover rules.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A team milestone is due and you want the agreement and task list checked against what people really accepted.
+  - The tutor or course changes the assignment rules, and your team agreement needs updating.
+  - Your team notes say "I'll do that", and you need to know which of those are firm commitments.
+  - A team member goes ill or leaves, and you need a handover note that lists their open work.
+
+not_for:
+  - You are setting up the team agreement for the first time. Use the Capstone team agreement planner.
+  - You only need one person's handover written. Use the Handover note writer.
+  - You want an action list from one set of meeting notes. Use the Action item tracker.
+  - You want to mark student work or judge who contributed what. Use the Student rubric feedback writer, and leave grades to the teacher.
+  - You want it to message your team or change a shared task board. It prepares drafts and takes no action.
+
 you_give:
-  - The assignment rubric, actual team availability, agreed deliverables, collaboration rules and existing decisions. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The last review and its record (optional on a first run)
+  - The assignment rubric or brief, with its version and date
+  - Each member's real availability, such as weekly hours and dates away
+  - The deliverables the team agreed, and the decisions already made (from notes, chat or minutes)
+  - The team's rules for working together, such as file naming and review
+  - Notes showing who agreed to what, with dates
+  - The date of the next milestone
+
 you_get:
-  - A team working agreement, task register and handover rules.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A list of what changed since the last review, with the source and date of each change
+  - An updated team working agreement covering file versions, reviews, blockers and handover
+  - A task register with an ID, owner, due date and status for each accepted commitment
+  - A question list for tasks with no confirmed owner or date
+  - A handover note, only if someone becomes unavailable, built from the real state of their work
+  - A MISSING list, CHECKS MISSED and a short record for the next review
+
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add the team agreement planner and the handover note writer from the pack too.
+  - Say if this is a first run. If not, paste your last review and its record.
+  - Attach the assignment rules, the team's availability, and the notes or chat where people agreed to work. Say the date of the next milestone.
+  - Read "Changed since last review" first. Check each change with the team member it names.
+  - Read the question list. Ask each person to confirm their tasks and dates, then add the answers and run it again.
+  - Share the agreement with the team only after everyone has read it. The agent sends nothing and assigns no one.
+
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep assignment version, accepted commitments, owners, deadlines and handover gaps. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A team milestone is due or an accepted commitment or assignment requirement changes.
-  - title: Choose the next step
-    text: Run set-up-a-capstone-team-agreement for changed evidence or a due review. If a contributor becomes unavailable, prepare a handover from actual work state. Do not assign a replacement or infer peer agreement.
-  - title: Check and save evidence
-    text: Named responsibilities reflect agreement; assessment requirements and contribution evidence remain traceable. Save source versions, branch reasons, outputs and unresolved checks.
-output_shape: |-
-  Scope and source coverage
-  A team working agreement, task register and handover rules.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  - title: Compare with the last review
+    text: Reads the saved record if it belongs to this team and assignment, or sets a first baseline. Lists what changed in the assignment rules and in the team's commitments. If nothing changed and no milestone is due, it says so and stops.
+  - title: Update the agreement and the task register
+    text: Runs the Capstone team agreement planner. It writes how the team versions files, reviews work, clears blockers and hands over. It then lists each accepted commitment with an owner and due date.
+  - title: Separate agreed from suggested
+    text: A task someone suggested for another person stays a suggestion until that person confirms. A task with no date or owner goes to the question list.
+  - title: Prepare a handover only when needed
+    text: If a member becomes unavailable, it runs the Handover note writer on the real state of their work. It names open tasks, files and decisions waiting. It does not pick a replacement.
+  - title: Save and hand back
+    text: Saves the files and a proposed new record, and keeps the old one. Lists every MISSING line and every check that did not run.
+
+output_shape: |
+  REVIEW DATE <date>, MILESTONE <date>   ASSIGNMENT VERSION <v>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <rule or commitment: old to new, source and date>
+  TEAM AGREEMENT    <how we version files, review work, clear blockers, hand over>
+  TASK REGISTER     <id | task | owner | due | status | source>
+  QUESTIONS         <task: who must confirm owner or date>
+  HANDOVER          <note for <name>, or not needed>
+  BRANCHES          <each step: ran or skipped, with reason>
+
+  RECORD FOR NEXT REVIEW  assignment version, accepted commitments, owners, deadlines, handover gaps
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Your last review and its record (optional on a first run)
+    - The assignment rules, each member's availability and the work the team agreed
+    - Notes or chat showing who accepted which task, with dates
+    - The date of the next milestone
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Capstone team agreement planner and the Handover note writer in the agent pack
+  output:
+    - name: Changed since last review
+      contains: Each change to the assignment rules or to a commitment, with its source and date.
+    - name: Team working agreement
+      contains: How the team versions files, reviews each other's work, resolves blockers and hands over work.
+    - name: Task register
+      contains: One row per accepted commitment with an ID, task, owner, due date, timezone, status and source. Suggested owners are marked as suggestions.
+    - name: Questions to confirm
+      contains: Tasks with no confirmed owner or date, and who has to answer each one.
+    - name: Handover note
+      contains: Only when a member is unavailable. Urgent items, what is due, live work and where files live. It names no replacement.
+    - name: Record for next review
+      contains: The assignment version, accepted commitments, owners, deadlines and handover gaps, to paste into the next run.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
+
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Choose one project and one milestone so the sources are comparable.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Named responsibilities reflect agreement; assessment requirements and contribution evidence remain traceable.
+    how: Provide the real notes and chat with their dates, and not a summary from memory.
+  - what: A member drops out
+    how: Say who is unavailable and from when. The handover note step runs for that person only.
+  - what: A shared task board
+    how: Ask for a list of changes to make on your board. It prepares them as a draft and does not change the board.
+
 judge:
   - Named responsibilities reflect agreement; assessment requirements and contribution evidence remain traceable.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +125,26 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
+  - Give every task one ID and keep it for life, so a renamed task is not read as a new one.
+  - Ask each member to confirm their own tasks in writing before the next run.
+  - Keep corrections with the result so the next run uses current facts.
+
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Reads the full pack and your notes. It can save the record file. In plain chat it returns the same tables as text.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The assignment brief with its version and date.
+    - Team chat or meeting notes that show who accepted which task.
+    - A named person on the team who checks the result.
+
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Capstone
+    meaning: A final team project at the end of a course or degree.
+  - term: Task register
+    meaning: A list of every accepted task with its owner, due date and status.
+  - term: Accepted commitment
+    meaning: A task a person said they would do, shown in the notes. A suggestion made for them is not one.
+  - term: Handover
+    meaning: The notes that let another person pick up someone's open work.

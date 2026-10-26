@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It runs several roles and weighs their views.
 new_slug: investor-panel-pitch-tester
 name: Investor panel pitch tester
-summary: Pitch a business idea. Get a panel of tough investors who grill it and
-  vote in or out.
+summary: Test your business idea on a panel of tough AI investors. They grill your pitch, then each votes in or out with reasons. Find the weak spots first.
 job: test-an-idea
 headline: Investor panel pitch tester
-subhead: Hear the no before a real investor says it. Paste your business idea
-  and a panel of up to ten simulated investors, five by default, grill it one at
-  a time.
+subhead: Hear the no before a real investor says it. Paste your business idea and a panel of up to ten simulated investors, five by default, grill it one at a time.
 explain: |
   Hear the no before a real investor says it. Paste your business idea and a panel of up to ten simulated investors, five by default, grill it one at a time. Each is built to doubt, and a founder agent answers only from your pitch file, so gaps in your story show up.
 
   The skill sizes the session first and tells you how many calls it will make. Panelists question the idea, you see the exchanges, and each investor votes in or out with reasons. The host never invests and never answers for you. It needs Python and a folder where it can save session files. Use it to practice, not as real funding advice.
 when:
   - Claude keeps telling you every idea is great and you want honest pushback.
-  - You have an investor meeting soon and want to practise answering hard
-    questions.
+  - You have an investor meeting soon and want to practise answering hard questions.
   - You are choosing between side projects and want a sceptical read on each.
   - You want to know which part of your pitch is weakest.
+not_for:
+  - "You need a real valuation or a funding decision: ask a mentor, an advisor or an accountant, because the offers here are practice numbers."
+  - "You want a friendly read on a rough idea: talk it through with your AI or a friend first."
+  - "You use a chat window only and cannot run code: this skill needs Claude Code, so ask a mentor to poke holes in your pitch instead."
 you_give:
   - Your business idea or pitch
   - Numbers such as price, cost, traction and ask (optional)
@@ -30,8 +30,28 @@ you_get:
   - A vote in or out from every investor with reasons
   - A summary of the weak spots to fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run several AI helpers at once.
+  - Open Claude Code in a folder you can save files in. Check that Python 3 is installed.
+  - Add the skill folder to Claude Code.
+  - Type /shark, then your idea. Add price, costs and customers so far. Add --investors and a number from 2 to 10 if you want.
+  - Read the one-line size check. Five investors means 11 helper calls, and each counts toward your plan usage.
+  - Let the panel run. Then read BOARD.md and start with the first item on the homework list.
+output_sample:
+  input:
+    - Your business idea in a few lines
+    - Price, costs, customers so far and what the money is for (optional)
+    - Number of investors, from 2 to 10 (optional)
+  prerequisites:
+    - Claude Code, which can run helper AIs and code
+    - Python 3 installed
+    - A folder where files can be saved
+  output:
+    - name: pitch.md
+      contains: Your idea and every fact you gave, written so the investors and founder can read it alone.
+    - name: Grill questions
+      contains: The three hardest questions from each investor about your idea.
+    - name: Founder answers
+      contains: Answers to those questions, taken only from what your pitch file says.
+    - name: Decisions
+      contains: Each investor votes in or out, with reasons and a practice offer.
+    - name: BOARD.md
+      contains: The headline result, a panel table, what would change their minds, and a homework list.

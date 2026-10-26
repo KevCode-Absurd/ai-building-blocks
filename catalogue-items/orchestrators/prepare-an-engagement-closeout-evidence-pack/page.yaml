@@ -1,50 +1,65 @@
 new_slug: prepare-an-engagement-closeout-evidence-pack
 name: Prepare an engagement closeout evidence pack
 headline: Prepare an engagement closeout evidence pack
-summary: Share the source files. Get a delivery acceptance register, closeout handover and unresolved obligations.
+summary: Close out a client engagement with proof of what was delivered and accepted. Get a register, a handover and a list of open commitments.
 job: document-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A delivery acceptance register, closeout handover and unresolved obligations. Share the agreed deliverables, actual delivery evidence, acceptance criteria, client feedback, open commitments and ongoing support terms. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share the agreed deliverables, proof of delivery, acceptance criteria, client feedback and any open promises. Your AI builds a register that shows each deliverable as delivered, reviewed or accepted, lists what is still owed, and writes the closeout handover for the client or support team.
 explain: |-
-  A delivery acceptance register, closeout handover and unresolved obligations.
+  Many client projects end with a vague "that's done". Weeks later the client says a deliverable was never accepted, or asks for a fix you thought was finished. This workflow ends an engagement with proof in hand: what was agreed, what was delivered, what the client accepted and what is still open.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Delivered, reviewed and accepted are distinct statuses; silence is not acceptance or permission to invoice. Missing tools or evidence stay visible in the final summary.
+  Two skills run in order. The first reads your sources and builds a register with one row per deliverable. Delivered, reviewed and accepted are separate columns, each with its own evidence and date. It also lists the explicit commitments still open. The second writes the closeout handover: file locations, open issues, the support period and the sign-offs still needed.
+
+  Silence is not acceptance. A deliverable with no written acceptance stays "delivered" or "reviewed". The pack does not decide that you may invoice, and it never says an engagement is complete when the evidence does not.
 when:
-  - You need a delivery acceptance register, closeout handover and unresolved obligations.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A project is wrapping up and you want a clean record before the final invoice.
+  - A client says a deliverable was never signed off, and you need to see what you hold.
+  - You are handing a finished project to a support team or a new account owner.
+  - You must show a manager or auditor what was delivered and accepted.
+not_for:
+  - "The work is still in delivery, or nobody has accepted anything yet: use the Executive action register keeper to track what is open."
+  - "You want to decide whether to invoice or chase payment: check your contract and ask your finance lead. This does not decide it."
+  - "You only need a handover note for a person: use the Handover note writer."
+  - "There is a dispute or a claim: ask a lawyer. This gathers records. It does not judge them."
 you_give:
-  - The agreed deliverables, actual delivery evidence, acceptance criteria, client feedback, open commitments and ongoing support terms.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The agreed deliverables, from your contract, proposal or statement of work
+  - Proof of delivery, such as sent files, delivery emails or notes with dates
+  - The acceptance criteria and any sign-offs or approval emails
+  - Client feedback and open requests, from emails or meeting notes
+  - Open commitments both sides still hold, and the support terms after closeout (optional)
 you_get:
-  - A delivery acceptance register, closeout handover and unresolved obligations.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A delivery and acceptance register with each deliverable's status, evidence and dates
+  - A list of open commitments with owner and due date, taken only from what was said
+  - A closeout handover with file locations, open issues, the support period and sign-offs needed
+  - Questions for anyone who must confirm a date, owner or acceptance
+  - A list of facts still MISSING
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the contract or statement of work, the delivery emails and the client's feedback. Paste meeting notes if you have them. Say the closeout date.
+  - Tell your AI to follow the pack and save each step's file.
+  - After step 1, check each "accepted" row has real written acceptance. Move any row without it back to "delivered" or "reviewed".
+  - After step 2, fill the gaps it lists, then send the handover only after you have read the open issues and sign-offs.
 how_it_works:
   - title: Executive action register keeper
-    text: Extract the remaining explicit commitments and accepted follow-ups, linking each deliverable to its actual delivery and acceptance evidence.
+    text: Reads your emails and notes and lists each open commitment with owner, due date and source. Builds the delivery and acceptance register, linking each deliverable to its proof of delivery and acceptance. Hands step 2 the register and the open items. Check before moving on, each "accepted" row cites written acceptance.
   - title: Handover note writer
-    text: Prepare the client or support team handover with file locations, open issues, agreed support window and required signoffs. Do not infer engagement completion.
+    text: Writes the handover for the client or support team from the register. It covers file locations, open issues, the support period and the sign-offs still needed. It does not say the engagement is complete unless the evidence shows it. Check before sending, every open issue matches the register.
 output_shape: |-
-  Scope and source coverage
-  A delivery acceptance register, closeout handover and unresolved obligations.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCES      <contract, evidence and dates you supplied>
+  DELIVERY REGISTER      <deliverable | agreed in | delivered (date, proof) | reviewed (by, date) | accepted (by, date, proof) | status>
+  OPEN COMMITMENTS       <ID | task | owner | due | status | source>
+  CLOSEOUT HANDOVER      <read first | file locations | open issues | support period | sign-offs needed | contacts>
+  QUESTIONS              <what needs confirming | who can answer>
+  MISSING                <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Delivered, reviewed and accepted are distinct statuses; silence is not acceptance or permission to invoice.
+  - what: Closeout date
+    how: Give the date you want to close. Commitments are sorted against it and late ones are flagged.
+  - what: Reader
+    how: Say whether the handover is for the client, a support team or your own manager. The detail and tone change.
+  - what: Support terms
+    how: Paste the support or warranty clause. The handover then states the period and what it covers, as written.
 judge:
   - Delivered, reviewed and accepted are distinct statuses; silence is not acceptance or permission to invoice.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +72,39 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the register from the start of the next project, and fill it in as work is delivered.
+  - Ask for written acceptance at each delivery. It makes the next closeout short.
+  - Record any promise made in a meeting the same day, with its owner and date.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files and email exports
+      why: It can read the contract, delivery emails and notes together. In plain chat, paste the key emails.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The signed contract or statement of work.
+    - Acceptance emails or signed forms from the client.
 terms:
+  - term: Acceptance
+    meaning: The client's written agreement that a deliverable meets what was agreed.
+  - term: Closeout
+    meaning: The end of an engagement, when you confirm what was done and what is still open.
+  - term: Open commitment
+    meaning: A promise someone made that has not yet been done.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.
+output_sample:
+  input:
+    - The agreed deliverables and the contract or statement of work
+    - Proof of delivery and any acceptance emails or sign-offs
+    - Client feedback, meeting notes and open requests
+    - Support terms after closeout (optional)
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-01-executive-action-register.md
+      contains: The delivery and acceptance register and the open commitments, each with owner, date and source.
+    - name: outputs/step-02-handover-note-writer.md
+      contains: The closeout handover with file locations, open issues, support period and sign-offs needed.
+    - name: Questions
+      contains: Each date, owner or acceptance that needs confirming, and who can answer it.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.

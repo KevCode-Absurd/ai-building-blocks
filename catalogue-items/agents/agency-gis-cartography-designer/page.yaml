@@ -1,0 +1,145 @@
+name: Cartography Designer agent
+summary: Get a map design plan with base map, colour scheme, symbols, labels, legend and layout for print or web, plus a colour blindness check.
+headline: Cartography Designer agent
+subhead: Tell it what the map must show, who reads it and where it will appear. The agent picks the base map and colours, sets symbol and label rules and plans the layout. You get a style plan you can apply in QGIS, ArcGIS or a web map tool.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A map can be accurate and still be hard to read. Muddy colours, crowded labels and a missing legend make readers give up. This agent treats map making as information design. Every colour, font and label either helps the message or hides it.
+
+  It starts with the reader and the medium. Print needs more contrast than a screen, and a small phone screen needs simpler symbols. Then it picks the base map, a colour scheme that fits your data type, the symbols, the label order and the page layout. It checks that no colour pair fails for red-green colour blindness, and it cuts layers that add noise. A map with three clear layers beats one with twenty.
+
+  It writes the design as a plan plus sample style settings. It does not draw the map and it never touches your data. It is for styling, not analysis. The sample colour schemes and settings in its source are examples, so it shapes them to your data.
+when:
+  - You have map data and need to choose colours, symbols and labels that readers understand.
+  - A map for a report, poster or website looks crowded or hard to read.
+  - You need one consistent style across a series of maps.
+  - You are choosing a base map, such as streets, satellite or a plain grey one, for your data.
+not_for:
+  - You need the analysis itself, such as hot spots, distances or areas. Use the Spatial Data Scientist agent or the GIS Analyst agent.
+  - You need a 3D scene. Use the 3D & Scene Developer agent.
+  - You need an interactive web map built. Use the Web GIS Developer agent.
+you_give:
+  - What the map must show, and the one thing readers should learn from it
+  - Who reads it and where, such as print, web, a slide or a dashboard
+  - Your data layers and what each field means, such as population by district
+  - The map area and scale, or the zoom levels for a web map
+  - Your GIS tool, such as QGIS, ArcGIS or Mapbox (optional)
+  - Brand colours or fonts (optional)
+you_get:
+  - A base map pick, with the reason
+  - A colour scheme matched to each data type, checked for colour blindness
+  - Symbol rules for points, lines and areas
+  - A label plan with size, order, outlines and placement rules
+  - A layout plan for title, legend, scale bar, north arrow and credits
+  - Sample style settings, and checks to run in your own tool
+how_to_use:
+  - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
+  - Say what the map must show, who reads it and where it will appear.
+  - List your layers and fields. Names and a few sample values are enough. Leave out private data.
+  - Read the purpose line first. If it is not the one thing readers should learn, fix it before you look at the styling.
+  - Apply the style in your GIS tool. Then show the map to someone who has not seen it and ask what it means.
+  - Test the colours in a colour blindness simulator, and send back anything that clashes.
+how_it_works:
+  - title: Define the purpose and medium
+    text: It confirms the reader, the one thing to learn and whether the map is for print, web, a slide or a dashboard.
+  - title: Pick the base map
+    text: It chooses streets, satellite, terrain, a plain light or dark map, or none, to fit your data and audience.
+  - title: Style the data
+    text: It matches the colour scheme to the data type and picks how values are grouped into colour bands.
+  - title: Set the labels
+    text: It sets label size and order by importance, with outlines so text stays readable over busy areas.
+  - title: Plan the layout
+    text: It places the title, legend, scale bar, north arrow and credits.
+  - title: Review and list checks
+    text: It checks readability, colour blindness and consistency, and lists what you must test in your own tool.
+output_shape: |-
+  MAP PURPOSE
+    Reader <who> | One thing to learn <message> | Medium <print, web, slide or dashboard>
+
+  BASE MAP
+    <type> | <reason>
+
+  DATA STYLE
+    <layer> | data type <sequential, diverging or categories> | colours <scheme> | classes <method and count> | symbol <rule>
+
+  LABELS
+    <feature> | size and order | outline <yes or no> | placement rule
+
+  LAYOUT
+    Title, legend, scale bar, north arrow and credits <placement>
+
+  CHECKS
+    Colour blindness <result> | Contrast <result> | Legend test <result>
+
+  STYLE SETTINGS
+    <sample settings, marked untested>
+
+  OPEN CHECKS
+    <what you must test in your own tool>
+output_sample:
+  input:
+    - What the map must show and who reads it
+    - Where it will appear, such as print or web
+    - Your data layers and what each field means
+    - Brand colours or fonts (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A GIS tool such as QGIS or ArcGIS to apply the style
+  output:
+    - name: Map purpose
+      contains: The reader, the one thing to learn and the medium.
+    - name: Base map choice
+      contains: The base map type and why it suits your data.
+    - name: Data style
+      contains: Colour scheme, grouping method and symbol rules for each layer.
+    - name: Label plan
+      contains: Label size, order, outlines and placement rules.
+    - name: Layout plan
+      contains: Where the title, legend, scale bar, north arrow and credits go.
+    - name: Style settings
+      contains: Sample settings to try in your tool, marked untested.
+    - name: Open checks
+      contains: Colour blindness, contrast and legend tests still to run.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Reader and medium
+    how: Say if it is for print, a phone or a wall display. It changes the contrast and symbol size.
+  - what: Data type
+    how: Say what each layer is, such as amounts, change over time or categories. This sets the colour scheme.
+  - what: Layer count
+    how: Ask for the fewest layers that tell the story. Cut anything that is not the point.
+  - what: Brand
+    how: Give your colours and font so the map matches your other pages.
+improve:
+  - Save the style plan and reuse it for every map in a series, so they look alike.
+  - Add your own rules to the brief, such as a colour you must not use.
+  - After you test with a reader, paste what confused them back in and ask for a fix.
+terms:
+  - term: Base map
+    meaning: The background map under your data, such as streets or satellite.
+  - term: Sequential and diverging colours
+    meaning: Sequential runs from low to high in one hue. Diverging runs between two opposites around a middle.
+  - term: Classification
+    meaning: How values are grouped into colour bands, such as equal steps or equal counts.
+  - term: Halo
+    meaning: A thin outline around label text that keeps it readable over busy areas.
+  - term: Symbology
+    meaning: The look of points, lines and areas on a map.
+works_best_with:
+  tools:
+    - name: QGIS or ArcGIS
+      why: You apply the style here. The agent plans it but cannot touch your data.
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good for the design plan. Attach a screenshot of your map if the AI can read images.
+  inputs:
+    - A screenshot of your current map.
+    - Your brand colours and fonts.
+    - A short note on who will read the map and what they decide from it.

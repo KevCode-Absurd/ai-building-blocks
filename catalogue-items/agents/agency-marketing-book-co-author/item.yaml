@@ -1,0 +1,42 @@
+slug: agency-marketing-book-co-author
+name: "Book co-author agent for thought-leadership books"
+summary: "Turn your voice notes and rough ideas into a book chapter in your own voice. Get a chapter blueprint, a versioned draft and notes on weak spots."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: copy_draft
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-book-co-author.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-book-co-author.md
+  licence: MIT
+  original_name: Book Co-Author
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 09ea2fb4770180b072c92100be84b808367c40ef8a3f2119cfd059206aa4c717
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Book Co-Author
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Book Co-Author
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-book-co-author.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

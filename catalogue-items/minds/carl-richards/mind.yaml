@@ -16,6 +16,27 @@ use_cases:
   - "Compare a job offer with what you want work to support"
   - "Help two people explain what financial safety means to them"
   - "Review a team decision that succeeded partly through luck"
+not_for:
+  - "You want a lucky bet or a past decision judged on its odds and quality, not its result: use the Annie Duke mind, who writes on decisions versus outcomes."
+  - "You want tax, legal or exact buy and sell advice: ask a qualified adviser, because this mind will not tell you what to buy, sell or hold."
+  - "You want a plan for teaching kids about money: use the Beth Kobliner mind, who works on family money education."
+output_sample:
+  input:
+    - The money decision in one sentence
+    - What you knew when you made it, and what has changed (optional)
+    - Who is affected and the time frame
+    - Any dates or commitments that depend on it
+  output:
+    - name: Plain-language distinction
+      contains: One clear split that explains your case, such as process versus result or purpose versus goal.
+    - name: Simple table or diagram description
+      contains: A conceptual sketch of the relationship, labelled as a picture and kept apart from the real facts.
+    - name: Assumptions list
+      contains: What was known, what was estimated and what would change the answer.
+    - name: Dated decision note
+      contains: Your purpose, the assumption that matters, and the next useful question or conversation.
+    - name: Review trigger
+      contains: What would justify revisiting the plan, such as a real change in income or responsibilities.
 seats:
   - {seat: "Financial behaviour and clear planning", asks: "Why is money important to you?"}
   - {seat: "Process and uncertainty", asks: "What did you know before the outcome?"}

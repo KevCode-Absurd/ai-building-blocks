@@ -2,38 +2,67 @@ thinking: high
 thinking_why: It needs careful sourcing and strict reporting formats.
 new_slug: research-paper-writer
 name: Research paper writer
-summary: Give it your findings. Get a manuscript in standard sections with
-  checked citations and reporting rules applied.
+summary: Turn your study results into a full journal manuscript draft with the right reporting checklist and citations you can check. Never invents data.
 job: write-and-tell-stories
 headline: Research paper writer
-subhead: A manuscript drafted in the standard sections, with citations formatted
-  correctly and the right reporting rules applied. It turns your findings into
-  text a journal editor can read.
+subhead: Give it your results, your study type and your target journal. It writes an outline first, then the abstract, introduction, methods, results and discussion, with citations flagged until you confirm them.
 explain: |
-  A manuscript drafted in the standard sections, with citations formatted correctly and the right reporting rules applied. It turns your findings into text a journal editor can read.
+  A research paper writer saves you from facing a blank page with a stack of results. You bring the findings. It brings the structure a journal editor expects.
 
-  You provide the results and the target journal. The skill writes the abstract, introduction, methods, results and discussion in the usual order. It applies the checklist for your study type: CONSORT for trials, STROBE for observational work or PRISMA for reviews. Citations follow APA, AMA, Vancouver, Chicago or IEEE as needed. It also helps with figures and tables, trims wordy sentences and drafts replies to reviewer comments. A detailed guide file sets the safety limits.
+  It outlines first, then writes connected prose, not bullet lists. It keeps your real methods and numbers, and it keeps what you saw apart from what you think it means. It picks the reporting checklist that fits your study: CONSORT for trials, STROBE for observational studies, PRISMA for reviews.
+
+  It will not make up a result or a reference. A citation it cannot check against a real source is flagged, and the claim is dropped. You need to check every reference yourself before you submit. It does not replace your co-authors or a journal's own template.
 when:
-  - You have results and need a first full draft.
-  - A journal wants a specific reporting checklist.
-  - Reviewers returned comments and you must revise.
-  - You need to match a journal's abstract and citation rules.
+  - You have results and notes and need a first full manuscript draft.
+  - A journal asks for a reporting checklist and you are not sure which one fits.
+  - You need a structured abstract that matches a journal's word limit.
+  - Reviewers sent comments and you must revise the text.
+not_for:
+  - "You only need a draft of one section from your notes: use the scientific manuscript drafter."
+  - "You are writing for NeurIPS, ICML, ICLR or ACL: use the AI research paper writer."
+  - "You are writing for OSDI, SOSP or NSDI: use the systems paper writer."
+  - "You need to review someone else's paper: use the manuscript peer review drafter."
+  - You have no results yet. It cannot write findings you do not have.
 you_give:
-  - Findings and data summary
-  - Target journal
-  - Study type
-  - Notes or earlier drafts (optional)
-  - Reference list (optional)
+  - Your findings, as a results summary, tables or analysis output
+  - The study type, such as trial, survey or literature review
+  - The target journal, and its author rules if you have them
+  - Your notes, methods and earlier drafts (optional)
+  - Your reference list or links to the papers you cite (optional)
 you_get:
-  - Manuscript in standard sections
-  - Formatted citations
-  - Checklist-aligned reporting
-  - Revised text and reviewer replies (optional)
+  - An outline for you to approve before the full draft
+  - A manuscript with abstract, introduction, methods, results and discussion
+  - Citations in the style your journal wants, each marked as checked or not
+  - A reporting checklist for your study type, with gaps listed
+  - A list of limits and anything missing from your input
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Start with launch-tools/USAGE.md for a portable workflow, available-tool
-    fallbacks and a reproducible synthetic sample. Companion tools mentioned in
-    the retained guide are not bundled.
+  - Open Claude, ChatGPT or Gemini. Add its web browsing or file reading if you can. Without it, paste in your own papers so it can check the references.
+  - Paste this skill, then your results, study type and target journal.
+  - Ask for the outline first. Fix the section order and the main claim before it writes the full text.
+  - Read the draft against your data. Check each number and every flagged reference.
+  - Tell it what to change, then export it to Word or PDF. The long guide mentions extra research and image tools. They are not included, so use what you have.
+output_sample:
+  input:
+    - Your findings, as a results summary or tables
+    - The study type and target journal
+    - Your methods notes and earlier drafts (optional)
+    - Your reference list (optional)
+  prerequisites:
+    - Real results you can share. It will not make any up.
+    - A way to check references, such as web access or your own PDFs
+  output:
+    - name: Outline
+      contains: Section order and the main claim for each section, for you to approve first.
+    - name: Manuscript draft
+      contains: Abstract, introduction, methods, results and discussion, written as connected prose.
+    - name: Reference list
+      contains: Citations in your journal's style, each marked checked or unverified.
+    - name: Reporting checklist
+      contains: The CONSORT, STROBE or PRISMA items that fit your study, with any gaps flagged.
+    - name: Limits and disclosures
+      contains: Study limits, plus placeholders for funding, ethics and data availability statements.
+works_best_with: Claude, ChatGPT or Gemini with web access, plus your own PDFs of cited papers. A word processor helps to check the layout of the final file.
+terms:
+  - IMRAD: The standard order of a paper, Introduction, Methods, Results and Discussion.
+  - Reporting checklist: A list of items a journal expects you to report for your study type.
+  - CONSORT, STROBE, PRISMA: Checklists for trials, observational studies and systematic reviews.

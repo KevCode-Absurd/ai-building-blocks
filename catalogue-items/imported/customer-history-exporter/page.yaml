@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It gathers records into one file.
 new_slug: customer-history-exporter
 name: Customer history exporter
-summary: Name a customer. Get their orders, refunds, returns, notes and consent
-  in one dated CSV.
+summary: "Export a customer's full history from Shopify: orders, refunds, returns, notes and consent in one dated CSV for support cases."
 job: run-your-store
 headline: Customer history exporter
-subhead: When a support case needs the full story, you want one file, not ten
-  tabs. Name a customer and you get their whole history in a single dated CSV,
-  with a readable timeline beside it.
+subhead: When a support case needs the full story, you want one file, not ten tabs. Name a customer and you get their whole history in a single dated CSV, with a readable timeline beside it.
 explain: |
   When a support case needs the full story, you want one file, not ten tabs. Name a customer and you get their whole history in a single dated CSV, with a readable timeline beside it.
 
@@ -18,6 +15,10 @@ when:
   - A support agent needs context before replying.
   - You received a data request and must gather the customer's records.
   - You are reviewing a high-value customer's history.
+not_for:
+  - "You need many customers at once: use Shopify's own customer export in the admin, since this skill handles one customer per run."
+  - "The buyer only checked out as a guest and has no customer record: look up their orders in the Shopify orders list by email."
+  - "You want to change or merge a customer: do that in Shopify, since this skill only reads data."
 you_give:
   - Your Shopify store and read access
   - The customer's ID
@@ -29,8 +30,29 @@ you_get:
   - Refunds and returns as separate rows
   - Lifetime spend and consent status
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open an AI that can run code and use the Shopify CLI, such as Claude Code. A plain chat window cannot reach your store.
+  - Sign in to your store with read access to customers and orders.
+  - Find the customer in your Shopify admin. Copy their ID from the page link, or ask your AI to find it.
+  - Paste the skill and give your AI the store address and the customer ID. Set an order cap if the customer has many orders.
+  - Open the CSV and the timeline. Check that the order count looks right and note if the run says it was cut short.
+  - Delete the file when the case closes. It holds personal details.
+output_sample:
+  input:
+    - Your Shopify store address
+    - The customer's ID from Shopify
+    - Whether to include line items and refunds (optional)
+    - A cap on how many orders to pull (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - Shopify access that can read customers and orders
+  output:
+    - name: Start banner
+      contains: Your store address and the start time, shown when the run begins.
+    - name: Customer timeline summary
+      contains: Name, email, join date, lifetime spend, order count, refund total, tags and email and SMS consent.
+    - name: Recent timeline
+      contains: Orders, refunds and returns listed with date, amount and status, newest first.
+    - name: customer_timeline CSV file
+      contains: One row per event with date, type, order, item, SKU, quantity, amount, status, tracking and notes.
+    - name: JSON summary (optional)
+      contains: The same header and totals in a machine-readable form, if you ask for JSON.

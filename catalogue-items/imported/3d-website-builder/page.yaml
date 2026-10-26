@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It balances many visual effects against speed.
 new_slug: 3d-website-builder
 name: 3D website builder
-summary: Describe the site and its mood. Get 3D page code with shaders, motion,
-  a preloader and phone tuning.
+summary: Build a 3D website with custom effects, smooth motion and a loading screen. Describe the look and get code tuned for phones.
 job: build-websites
 headline: 3D website builder
-subhead: Describe the site, its mood, your colours and any 3D models. It writes
-  the scene and render loop, custom shader effects, smooth motion and hover
-  behaviour, and a loading screen. You get code tuned to run well on phones,
-  with the pixel ratio capped and effects kept light.
+subhead: Describe the site, its mood, your colours and any 3D models. It writes the scene and render loop, custom shader effects, smooth motion and hover behaviour, and a loading screen. You get code tuned to run well on phones, with the pixel ratio capped and effects kept light.
 explain: |
   A high-end 3D website needs more than a model on a page, and this skill writes the code for custom shader effects, smooth motion, a loading screen and phone tuning.
 
@@ -19,6 +15,10 @@ when:
   - Your 3D page looks good on a laptop but stutters on a phone.
   - You need a branded loading screen while heavy files download.
   - You want objects to react to the mouse in a natural way.
+not_for:
+  - "You only need a text or content site: use plain HTML and CSS or a standard website template, which is cheaper and faster to load."
+  - "You want a 3D page without writing any code: use a site builder with a 3D feature, or hire a web developer."
+  - "You need a full test across many phones and chips: use real device testing or a developer, since this skill does not replace it."
 you_give:
   - A description of the site and its mood
   - Your brand colours and any 3D models
@@ -31,8 +31,31 @@ you_get:
   - Motion and hover behaviour
   - Mobile performance settings
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Describe your site and its mood. Add your brand colours, model files, framework and target devices.
+  - If you have no speed goal or model format, your AI should ask once before it writes code.
+  - Copy the code into your project and run it in a browser. This needs a code editor, and a browser to check the result.
+  - Test on a real phone. Cut effects if it stutters.
+output_sample:
+  input:
+    - Your description of the site and its mood
+    - Your brand colours
+    - Your 3D model files (optional)
+    - The framework you use, such as React (optional)
+    - Your target devices and a speed goal (optional)
+  prerequisites:
+    - An AI that can write code
+    - A place to run the code, such as a code editor and a browser
+  output:
+    - name: Scene and render loop
+      contains: Code that sets up the 3D scene, handles window resizing and caps the pixel ratio at 2.
+    - name: Shader effects
+      contains: Custom GLSL shader code for surface effects, such as a wavy liquid look.
+    - name: Post-processing
+      contains: Effects such as bloom, depth of field, vignette or film grain, using few passes.
+    - name: Motion and hover behaviour
+      contains: Spring or physics code so objects react to mouse hover, drag and click.
+    - name: Preloader and asset loading
+      contains: A loading screen and loading manager, with compressed models fetched in the background.
+    - name: Mobile performance settings
+      contains: Advice and settings for phones, such as no real-time shadows and fewer effect passes.

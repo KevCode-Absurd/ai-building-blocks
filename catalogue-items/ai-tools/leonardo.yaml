@@ -2,36 +2,59 @@ slug: leonardo
 name: Leonardo AI
 maker: Leonardo.Ai
 url: https://leonardo.ai
-promise: "Make game art, product ideas and ad images with characters you can reuse."
+promise: "Make game art, ad images and product pictures from a written description."
 use_cases: [make-images, design]
 categories: [image, design]
 what_it_does:
-  - Makes images from a written description with a choice of models.
-  - "Helps create a character that appears across a set of images."
-  - Makes bigger, sharper versions of images you like.
-  - Edits part of an image in a canvas.
-  - Keeps your generations private on paid plans.
+  - "Makes images from a written description, with a choice of many image models, including FLUX, Ideogram, Nano Banana and Phoenix (model list on docs.leonardo.ai, checked 26 Oct 2026)."
+  - "Also makes video, music and sound, 3D and cut-out backgrounds (listed on docs.leonardo.ai, checked 26 Oct 2026)."
+  - "Makes larger images with two named upscalers, Pro Upscaler Precise and Pro Upscaler Creative (checked 26 Oct 2026)."
+  - "Edits part of an image with Canvas inpainting. Its docs have a recipe for it (checked 26 Oct 2026)."
+  - "Offers an API and an MCP connector, so another app or AI assistant can ask it for images (checked 26 Oct 2026)."
 benefits:
-  - "Create a set of concepts featuring the same character or product."
-  - Pick the model that suits each job instead of living with one look.
-  - Test image ideas daily on the free plan.
+  - "Try several image models on one idea and keep the look you like best."
+  - "Make a batch of ad or product image ideas in one place."
+  - "Fix one area of an image without redrawing the whole picture."
+  - "Add image making to your own app through the API when you are ready."
 best_for:
   - Game art, characters and concept art.
   - Ad images and product visuals made in batches.
-  - Teams who want several image models in one place.
+  - People who want several image models in one place.
 not_for:
-  - Exact text inside an image.
-  - Long videos.
+  - "Pictures with exact words in them. Check every word letter by letter, because we did not test how well it spells."
+  - "Work you must keep private, until you check your plan. We could not confirm on the vendor's pages which plans keep your images private."
 pricing:
   model: freemium
-  from: US$12 per month
-  note: Free plan gives 150 tokens a day, and free generations are public. Apprentice costs about US$12 a month, with Artisan and Maestro above it. Price is from an article dated 2026, so check the page.
+  from: "Not confirmed. Third-party articles say a free plan and paid plans from about US$12 a month."
+  note: "We could not open leonardo.ai/pricing on 26 Oct 2026 (the site refused our check). Several third-party articles say the free plan gives 150 tokens a day with public images, and that paid plans (Apprentice, Artisan, Maestro) start at about US$12 a month. The articles disagree on token amounts and on the Apprentice price, so treat all of it as unconfirmed. The vendor's docs mention a pay-as-you-go option with dollar-based costs and automatic top-ups (checked 26 Oct 2026). Video costs more tokens than images, per the same articles. Check the live pricing page before you pay."
 works_with:
   - canva
   - stable-diffusion
 runs_in: [web, mobile, api]
 blocks: []
 alternatives: [midjourney, ideogram, recraft, krea]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to leonardo.ai and create an account. We could not open the sign-up page on 26 Oct 2026, so the sign-up steps are not verified here."
+  - "Write one plain sentence about the picture you want: the subject, the setting and the style. Add what must not appear in it."
+  - "Pick an image model, make a first set, and keep the one that is closest."
+  - "Make the next round from that one, or edit one area in Canvas. Upscale only the final pick."
+  - "Check hands, logos and any words in the image before you use it."
+needs:
+  - "An account. We could not confirm which sign-in methods it accepts."
+  - "A written description of the picture: subject, setting, style."
+  - "A reference image (optional). We could not confirm on the vendor's pages how references work."
+  - "A paid plan if your images must be private or you need to use them in a business. Check this on the pricing page first."
+example:
+  task: "Make a set of image ideas for an ad for a travel mug, with the same look in each."
+  cost: "Not worked out. Leonardo charges tokens, and the cost per image is not published on the vendor pages we could open. Use its pricing calculator before you plan a batch."
+  reply: "A set of images to choose from. You can upscale one, or edit one area in Canvas. The look depends on the model and the words you give it."
+not_verified:
+  - "Plan prices, the free plan's daily token amount and whether free images are public. We only found these in third-party articles."
+  - "Character Reference, the feature for keeping one character across images. It is not on the vendor docs page we could open."
+  - "How well it handles text inside images, and how long its videos can be."
+  - "That generations stay private on paid plans."
 sources:
-  - https://dailyaifixs.com/blog/leonardo-ai-pricing-2026-the-150-token-daily-cap
+  - https://docs.leonardo.ai
+  - https://leonardo.ai/pricing

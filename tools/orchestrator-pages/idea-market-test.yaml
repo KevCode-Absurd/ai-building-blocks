@@ -1,6 +1,6 @@
 new_slug: idea-market-test
 name: "Test if your idea can own its market"
-summary: "Give it your idea. Get an honest market size, a ten-times test, a ten-year check and a go, fix or stop call."
+summary: "Test your business idea against its market. Get a market size, a ten-times test, a ten-year check and a go, fix or stop call."
 job: test-an-idea
 thinking: high
 thinking_why: "It runs five skills and has to tell a real edge from a story that flatters you. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You have a business idea and want to know if it can win a market for good before you put years into it.
   - Your plan says you have no competitors, or that you only need a small share of a huge market.
   - You are about to pitch backers or hire a team and want to know where the plan is weakest.
+not_for:
+  - "Your product already has proven sales and you want to improve them: use a pricing review or a sales review instead."
+  - "You want to check how strong your edge is over rivals: use the Competitive advantage tester."
+  - "You want to test the guesses behind your plan: use the Business model assumption tester."
 
 you_give:
   - Your idea in a few sentences, and who it is for
@@ -34,6 +38,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your idea and paste any numbers you have. It works step by step and saves each result.
   - Read the weakest question last, then do the first fix it names before you spend more.
+output_sample:
+  input:
+    - Your idea in a few sentences, and who it is for
+    - Your numbers on customers, sales and costs (optional)
+    - Why recent buyers said no, in their words (optional)
+    - Your team and how long you have worked together (optional)
+  prerequisites:
+    - An AI that can save files, or one that lets you copy each step's result by hand
+  output:
+    - name: "Step 1: The belief"
+      contains: The one belief your idea rests on, whether it is new or a copy, and a first market.
+    - name: "Step 2: The market"
+      contains: Your share of the market a buyer really compares you in, and a call on whether you own it.
+    - name: "Step 3: The gap"
+      contains: How far you are ahead of the closest substitute after the buyer's cost of switching.
+    - name: "Step 4: Ten years out"
+      contains: How much value lies past year five, who can copy you, and what could end your edge.
+    - name: "Step 5: Seven questions"
+      contains: A score on seven questions, a go, fix or stop call, and the weakest question as your first fix.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Finds the belief

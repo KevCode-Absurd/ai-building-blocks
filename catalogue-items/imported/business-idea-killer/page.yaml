@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It has to hunt for the fatal flaw, not just agree.
 new_slug: business-idea-killer
 name: Business idea killer
-summary: Give it a business idea. Get the one fact that kills it, or the
-  cheapest test it still has to pass.
+summary: "Test a business idea before you build it. Get a clear verdict: dead, with the reason, or survived, with the cheapest test left to run."
 job: test-an-idea
 headline: Business idea killer
-subhead: Before you spend money or weeks, find the one fact that kills your
-  idea. If it survives, you get the cheapest test it still has to pass.
+subhead: Before you spend money or weeks, find the one fact that kills your idea. If it survives, you get the cheapest test it still has to pass.
 explain: |
   Before you spend money or weeks, find the one fact that kills your idea. If it survives, you get the cheapest test it still has to pass.
 
@@ -17,6 +15,10 @@ when:
   - You want to know if you should build something before you spend time.
   - You have many ideas and need a fast way to rule out the weak ones.
   - You want a cheap test to run before committing.
+not_for:
+  - Your idea already has paying customers. Use market research to size the market instead.
+  - You need legal, tax or money advice. Talk to a lawyer or an accountant.
+  - You want help planning the build. Run this first, then plan only if the idea survives.
 you_give:
   - Your business idea in a few lines
   - Who you plan to sell to
@@ -27,8 +29,30 @@ you_get:
   - The cheapest remaining test, if survived
   - A row for your kill list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe your idea in a few lines. Add who you will sell to and your price.
+  - Paste your kill list if you have one. If not, say yes or no to starting one.
+  - Answer the questions. Your AI asks you to look in the Meta Ad Library yourself and report back what you see.
+  - Read the verdict. If the idea survived, run the one test it names before you spend anything.
+output_sample:
+  input:
+    - Your business idea in a few lines
+    - Who you plan to sell to
+    - The price you plan to charge (optional)
+    - Your kill list file, REJECTION.md (optional)
+  prerequisites:
+    - A browser, so you can check the Meta Ad Library yourself
+    - Your OK for your AI to start a kill list file (optional)
+  output:
+    - name: Kill-list check
+      contains: Whether your idea matches a past rejected idea or a failure pattern you have seen before.
+    - name: Five filters
+      contains: A yes or no on real pain, buyer with money, proven demand, legal to charge, and a moat.
+    - name: Free-AI test
+      contains: Whether one prompt to a top AI makes the whole product for free.
+    - name: Live-market check
+      contains: "A checklist for the Meta Ad Library: active advertisers, age of the oldest ad, and three traps."
+    - name: Verdict
+      contains: Dead or survived, the kill pattern, the one deciding sentence, the evidence, and the next test.
+    - name: Kill-list row
+      contains: A one-line entry for your kill list, saved to the file only if you agree.

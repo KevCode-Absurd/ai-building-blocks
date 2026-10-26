@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Good tests need careful choices about what counts as success.
 new_slug: ai-agent-tester
 name: AI agent tester
-summary: Describe your AI agent. Get a test set, scoring rules and a release
-  decision memo you can trust.
+summary: Test your AI agent before you ship it. Give it the agent's job and risks. You get a test set, scoring rules and a ship or hold memo.
 job: test-and-fix-code
 headline: AI agent tester
-subhead: A test set, scoring rules and a release memo for your AI agent, built
-  so a decision-maker can trust the result. It avoids cherry-picked demos.
+subhead: A test set, scoring rules and a release memo for your AI agent, built so a decision-maker can trust the result. It avoids cherry-picked demos.
 explain: |
   A test set, scoring rules and a release memo for your AI agent, built so a decision-maker can trust the result. It avoids cherry-picked demos.
 
@@ -17,6 +15,10 @@ when:
   - You want to compare two prompts, models or tool set-ups fairly.
   - A production failure should become a test that never goes away.
   - You need a repeatable gate every time the agent changes.
+not_for:
+  - "You need a final safety or compliance sign-off: use a qualified person to review it, since this gives evidence and not a certificate."
+  - "You need a medical, legal, financial or hiring decision checked: ask a qualified human reviewer."
+  - "You only want to try one prompt in a chat: just run a few real requests by hand and read the answers."
 you_give:
   - What the agent is for and who uses it
   - Outcomes that must never happen
@@ -29,7 +31,31 @@ you_get:
   - Results with a comparison to the baseline
   - A decision memo for the release owner
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - "Describe your agent: its job, its users and what must never happen. Add your current version and any real examples."
+  - Read the evaluation brief and the test set first. Fix anything that does not match how your agent is really used.
+  - Run the cases on your agent and the baseline. The skill needs you to do this, or an AI that can run code and has permission to call your agent.
+  - "Optional: run the aggregate_results.py script on your results file to get a summary with pass rates."
+  - Give the decision memo to the release owner. They choose to ship, hold or roll out in part, and any failed critical case blocks release until they accept the risk.
+output_sample:
+  input:
+    - What your agent is for and who uses it
+    - Outcomes that must never happen
+    - The current version to compare against
+    - Examples from real use (optional)
+  prerequisites:
+    - Permission to run the agent and to spend any paid API budget
+    - An AI that can run code, only if you want the results summary script (aggregate_results.py)
+  output:
+    - name: Evaluation brief
+      contains: What is tested, the decision it supports, the main risks, and which agent versions are frozen.
+    - name: Dataset manifest
+      contains: Where each test case came from, its category and split, and how the holdout set stays hidden.
+    - name: Scoring specification
+      contains: Rubrics, who or what grades each check, pass marks and rules for ties.
+    - name: Run settings and results
+      contains: How the runs were set up, scores, uncertainty and the change against the baseline.
+    - name: Failure taxonomy
+      contains: Groups of failures with example cases and the limits of the evidence.
+    - name: Decision memo
+      contains: A ship, hold or limited rollout call for the release owner, with the evidence behind it.

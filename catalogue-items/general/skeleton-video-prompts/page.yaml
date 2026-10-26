@@ -1,6 +1,6 @@
 new_slug: skeleton-video-prompts
 name: "Skeleton video clip prompt writer"
-summary: "Paste your skeleton script and attach product photos. Get every image and clip prompt, plus an edit list."
+summary: "Turn a skeleton ad script and product photos into every image prompt, clip prompt and edit list for AI video tools. Keeps one skeleton in every shot."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have a skeleton "what happens if" script and need to make it with AI image and video tools.
   - Earlier tries gave you a different skeleton in every shot, or words and numbers baked into the picture.
   - You want to approve each step before you spend money on video credits.
+not_for:
+  - "You have no skeleton script yet: use the Video ad script writer from customer quotes to write a plain script first."
+  - "You want live-action footage with real people: brief a videographer or film it yourself, as this only writes prompts for AI tools."
+  - "You need one quick still image or a single short clip: use your image or video tool directly with a short prompt."
 
 you_give:
   - The script, line by line (the question, the steps with their labels, the turn, the close, the cast note)
@@ -36,6 +40,31 @@ how_to_use:
   - Approve the avatar card, then make the reference images and pick one.
   - Make the sheets and approve them with the lock lines, then approve the storyboard.
   - Make each clip from its frame, record the narration, and add the labels and offer in your editor.
+output_sample:
+  input:
+    - Your skeleton ad script, line by line
+    - Photos of your product from the front, side and top
+    - Your brand colours and music choice (optional)
+    - Your image and video tools and their clip limits (optional)
+  prerequisites:
+    - An AI chat that can read pasted text and attached photos
+    - An image tool and a video tool to make the pictures and clips from the prompts
+    - Your brand brain and script from earlier items (optional)
+  output:
+    - name: "Stage 0: Script in"
+      contains: What grows, the label for each step, the one place, and where the product enters.
+    - name: "Stage 1: Avatar card"
+      contains: The skeleton's look, signature item, props and what never changes, for you to approve.
+    - name: "Stage 2: Reference images"
+      contains: Prompts for three or four skeleton images on plain grey, plus a pick.
+    - name: "Stage 3: Sheets and lock lines"
+      contains: Character, product and set sheets, plus three fixed lines for the skeleton, look and clean surfaces.
+    - name: "Stage 4: Storyboard"
+      contains: One fixed camera for every step, a frame prompt and a shot card for each shot.
+    - name: "Stage 5: Clip prompts and edit list"
+      contains: One clip per step in three beats, with narration, labels, offer and timings for the edit.
+    - name: Checks missed
+      contains: One line for each of the six checks the prompts could not pass, or none.
 
 how_it_works:
   - title: Takes in the script

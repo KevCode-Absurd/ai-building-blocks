@@ -1,44 +1,77 @@
 new_slug: review-maturity-funding-and-credit-limits
 name: Review maturity funding and credit limits
 headline: Review maturity funding and credit limits
-summary: A maturity funding ladder and connected exposure exception pack
+summary: Line up debt maturities against cash and confirmed funding, then check credit exposure against your limit. Get a shortfall ladder and exceptions.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A maturity funding ladder and connected exposure exception pack. Share actual maturities, accessible opening cash, after-operation cash, confirmed refinancing, connected credit exposures and dated owner-approved monitoring limits.
+subhead: Give your AI the loan maturity dates, cash on hand, cash after operations, confirmed refinancing and your credit exposures. It builds a ladder that shows each shortfall, then checks funded and undrawn exposure against your approved limit.
 explain: |-
-  A maturity funding ladder and connected exposure exception pack.
+  Two questions come up together. Can each loan be paid when it falls due? And is too much money tied to one borrower or group? A maturity ladder answers the first. An exposure limit check answers the second.
 
-  Credit funding constraints. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 rolls cash and confirmed funding through each maturity date and shows the running shortfall. Step 2 adds funded loans, undrawn commitments (scaled by your approved factor) and other exposure to the same party, then compares the total with the limit.
+
+  Only confirmed money pays a maturity. Unused room under an exposure limit is not cash and is not loan approval. The two limits stay apart, so a pass on one never hides a miss on the other.
 when:
-  - You need a maturity funding ladder and connected exposure exception pack.
-  - You work on credit funding constraints and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Several loans fall due in the next year and you want to see which gap comes first.
+  - A refinancing is not signed yet and you need to know how short you are without it.
+  - You lend to one borrower or group and want total exposure, including undrawn lines.
+  - A credit committee asks for a maturity and limit exceptions pack.
+not_for:
+  - "You only need the order of cash payments and receipts by date: use the Settlement liquidity ladder builder."
+  - "You want a plan to restructure debt you cannot pay: use the Debt restructuring plan drafter."
+  - "You check one loan's cash sweep: use the Debt cash sweep checker."
+  - "You want approval to lend: this is a check, not a credit decision. Approval stays with your committee."
 you_give:
-  - Actual maturities, accessible opening cash, after-operation cash, confirmed refinancing, connected credit exposures and dated owner-approved monitoring limits.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The contractual maturity dates and amounts, in three dated buckets
+  - Accessible opening cash and the cash expected after operations
+  - Confirmed refinancing proceeds, with dates and the lender
+  - The minimum cash floor you keep
+  - Funded exposure, undrawn commitments and exposure to connected parties
+  - The approved conversion factor for undrawn commitments and your dated exposure limit
 you_get:
-  - A maturity funding ladder and connected exposure exception pack.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A maturity ladder with the cash, funding and running shortfall at each date
+  - Any maturity left with no confirmed funding
+  - A connected exposure bridge, with the total against your limit and the gap or room
+  - A note on any refinancing from the same party that also counts as exposure
+  - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the maturity schedule, the cash forecast, the facility letters and your limit policy. Give the reporting date and currency.
+  - Ask your AI to follow the pack, save a file for each step and stop a step when an input is missing.
+  - After step 1, check that every funding line in the ladder is confirmed in writing. Remove any that is only hoped for.
+  - After step 2, check the conversion factor and limit against the approved policy before the pack goes to committee. A spreadsheet tool is needed for the workbook. Without one, your AI gives the tables in chat.
 how_it_works:
   - title: Debt maturity funding ladder
-    text: Roll actual cash and confirmed funding through contractual maturities. Pass identified same-party refinancing amounts and dates as source observations, leaving all unfunded maturities visible.
+    text: Rolls accessible cash and confirmed funding through each contractual maturity. Leaves every unfunded maturity in view. Hands step 2 any refinancing from the same party, with its amount and date, as an observation.
   - title: Credit exposure limit checker
-    text: Check the connected funded and undrawn exposure implied by the confirmed facilities against the supplied monitoring limit. Preserve any independent exposure constraint; do not insert unused limit headroom into step1 as committed funding.
+    text: Adds funded exposure, undrawn commitments at your approved factor and other connected exposure. Compares the total with the monitoring limit. Never counts unused limit room as funding in step 1.
 output_shape: |-
-  A maturity funding ladder and connected exposure exception pack.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES   <reporting date, currency, scale, source of each number>
+  MATURITY LADDER           <date | maturity | cash and confirmed funding | floor | running shortfall>
+  UNFUNDED MATURITIES       <each maturity with no confirmed funding>
+  EXPOSURE BRIDGE           <funded | undrawn x factor | connected | total | limit | gap or room>
+  EXCEPTIONS                <each date or limit that fails, with the source>
+  MISSING                   <inputs not given>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - Loan maturity dates and amounts
+    - Cash now, cash after operations and confirmed refinancing
+    - Funded and undrawn exposure to the borrower or group
+    - Your approved factor and exposure limit
+  prerequisites:
+    - An AI that can read files
+    - Written confirmation of any refinancing you count
+  output:
+    - name: outputs/step-1-debt-maturity-funding-ladder.md
+      contains: Cash and confirmed funding rolled through each maturity, with cumulative shortfalls.
+    - name: outputs/step-2-credit-exposure-limit-checker.md
+      contains: The connected exposure bridge and the gap or room against the limit.
+    - name: Exceptions list
+      contains: Each unfunded maturity and each exposure over the limit, with its source.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,13 +93,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI with a spreadsheet tool
+      why: It can build the ladder and reopen the workbook. In plain chat you get the tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Signed facility letters for each refinancing you count.
+    - The written exposure limit policy.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Maturity
+    meaning: The date a loan must be repaid.
+  - term: Undrawn commitment
+    meaning: Credit you have agreed to lend but the borrower has not yet used.
+  - term: Conversion factor
+    meaning: The share of an undrawn commitment that counts as exposure.
+  - term: Connected parties
+    meaning: Borrowers treated as one risk, such as a company and its owner.
+before: []
+next:
+  - review-leverage-headroom-and-cure
+  - check-acquisition-refinancing-funds
+  - debt-restructuring-plan-drafter
+  - settlement-liquidity-ladder-builder

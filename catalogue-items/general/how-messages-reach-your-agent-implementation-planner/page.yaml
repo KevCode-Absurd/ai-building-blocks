@@ -1,38 +1,126 @@
 new_slug: how-messages-reach-your-agent-implementation-planner
 name: Scoped Slack agent router builder
-summary: Build a routing plan with scoped queue payloads and denial paths.
+summary: Plan how Slack messages reach the right AI agent, with scope checks, user permissions, bot-loop blocking and logged refusals. Draft code only.
 job: build-software
 headline: Scoped Slack agent router builder
-subhead: Share channel mappings, user permissions, agent registry and message events. Get a routing plan with scoped queue payloads and denial paths.
+subhead: Give it your Slack channel map, who may use which agent, your agent list and a few sample messages. It plans how each message is checked, matched to one agent and queued as a job. You get the routing steps, the refusal paths, the job fields and a test list. Nothing is run.
 explain: |-
-  Share channel mappings, user permissions, agent registry and message events. Get a routing plan with scoped queue payloads and denial paths.
+  A Slack message to an AI agent has a lot to get through before any work starts. Is it from a person, or from your own bot? Have you seen this event already? Which client does this channel belong to? Which agent should answer? Is this user allowed to ask that agent? Skip one check and an agent can answer in the wrong channel, read the wrong client's data or reply to itself in a loop. A Slack agent router handles all of this before a job is queued.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill plans that router from your own channel map, permission list and agent list. It follows a set order. It sorts out the channel and client first. It drops bot messages and repeat events. It matches the message to one agent, using an AI step with a keyword fallback for when the AI is unsure or down. It keeps the thread's agent unless the user clearly switches. It checks the user's access last and saves a job with a stable ID before queueing it. Each refusal path says what the user sees and what gets logged.
+
+  The result is a plan and draft code, not a running bot. It starts from a tiny scaffold that has no scope or access checks, and says so. To build a first working Slack bot, use the First Slack Bot coding prompt. To plan the queue the jobs go into, use the Recoverable agent job queue builder.
 when:
-  - You need a routing plan with scoped queue payloads and denial paths.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - You have several AI agents in one Slack workspace and need each message to reach the right one.
+  - Your agents work for more than one client and a message must never touch the wrong client's data.
+  - Your bot has answered its own messages, or answered the same message twice.
+  - You want a refusal path written down before a user asks an agent for something they should not get.
+not_for:
+  - You have never built a Slack bot. Start with the First Slack Bot coding prompt, then come back.
+  - You have one agent and one channel. A router adds checks you won't use. A plain command handler is enough.
+  - You need the job queue itself, with retries and crash recovery. Use the Recoverable agent job queue builder.
+  - You want the agents to run all day on a server. Use the Agent worker runtime starter builder, then the Deploy Worker to Render coding prompt.
 you_give:
-  - Channel mappings, user permissions, agent registry and message events
+  - Your channel list, with the client each channel belongs to
+  - Who may use which agent, as a short table of users or roles
+  - Your agent list, with a name, what each does and trigger words
+  - Three to five real message examples from Slack, with names removed
+  - Your project folder, or its package file and main folders (optional)
 you_get:
-  - A routing plan with scoped queue payloads and denial paths
-  - A failure checklist and synthetic test cases
+  - The routing steps in order, with what each check does and what happens when it fails
+  - A refusal path for each failure, with what the user sees and what is logged
+  - The fields every queued job must carry
+  - A plan for the agent-matching step, with its keyword fallback
+  - A failure checklist and made-up test cases
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill. Use Claude Code or Codex if you want it to read your project.
+  - Paste your channel list, your permission table and your agent list. Never paste a Slack token.
+  - Add three to five message examples. Include one from a bot and one that fits no agent.
+  - Read the ROUTING STEPS first. Check that the order matches how you want messages checked.
+  - Read the DENIAL PATHS. Make sure each message to the user is one you would be happy to show.
+  - Run the test cases in a test channel before any real client channel.
 how_it_works:
-  - title: Step 1
-    text: Resolve channel and client scope.
-  - title: Step 2
-    text: Ignore bot loops and duplicate events.
-  - title: Step 3
-    text: Classify intent with strict output validation and a fallback.
-  - title: Step 4
-    text: Retain thread context unless the user changes subject.
-  - title: Step 5
-    text: Check user access before dispatch.
-  - title: Step 6
-    text: Save the job, enqueue its ID and return through the response filter.
+  - title: Finds channel and client
+    text: Looks up the channel in your map. A channel with no client is refused and logged.
+  - title: Drops bots and repeats
+    text: Ignores your own bot's messages and events already seen. Slack gets its reply before the heavy work.
+  - title: Matches one agent
+    text: Uses an AI step that must return a set shape. If it is unsure or fails, a keyword fallback takes over.
+  - title: Keeps the thread
+    text: Stays with the agent already working in the thread unless the user names a different one.
+  - title: Checks the user
+    text: Looks up whether this user may use this agent for this client. Does it before any job is made.
+  - title: Saves and queues the job
+    text: Saves the job with its client, agent and a stable ID, then queues the ID. The reply goes back to the same thread.
+output_shape: |-
+  BASIS
+  <what was supplied, what is missing, nothing was run>
+
+  ROUTING STEPS
+  <#> | <check> | <passes when> | <on failure>
+
+  DENIAL PATHS
+  <case> | <what the user sees> | <what is logged>
+
+  JOB FIELDS
+  <field> | <what it holds> | <why it is needed>
+
+  MATCHING PLAN
+  <AI step: allowed answers and fallback> | <keyword triggers per agent> | <what happens when unsure>
+
+  FAILURE CHECKLIST
+  <failure> | <how it is prevented>
+
+  TEST CASES
+  <name> | <made-up message and setup> | <expected result>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your channel list, with the client each channel belongs to
+    - Who may use which agent
+    - Your agent list, with trigger words
+    - A few real message examples, with names removed
+  prerequisites:
+    - A Slack app and a test channel
+    - A queue for jobs, such as Redis, if you plan to build it
+  output:
+    - name: Routing steps
+      contains: Each check in order, what passes it and what happens when a message fails it.
+    - name: Denial paths
+      contains: What the user sees and what is logged for each refusal, such as no access.
+    - name: Job fields
+      contains: The details every queued job must hold, such as client, agent and a stable ID.
+    - name: Matching plan
+      contains: How a message is matched to one agent, and what happens when it is unclear.
+    - name: Failure checklist
+      contains: Problems such as bot loops and repeat events, each with how the plan prevents it.
+    - name: Test cases
+      contains: Made-up messages to try, such as a bot message or a user with no access.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your Slack code and agent files and proposes the changes in place.
+    - name: Slack
+      why: A test channel lets you try each denial path before real use.
+    - name: Redis
+      why: Holds the job queue the router sends job IDs to.
+  inputs:
+    - Your current Slack event handler, if you have one
+    - The list of Slack permissions your app has been granted, by name
+terms:
+  - term: Router
+    meaning: The code that decides which agent should handle each message.
+  - term: Scope
+    meaning: The client and channel a job belongs to. An agent may only read data inside its scope.
+  - term: Bot loop
+    meaning: Your bot replies to its own message, which triggers another reply, and so on.
+  - term: Stable job ID
+    meaning: An ID built from the message itself, so the same message can never make two jobs.
+  - term: Fallback
+    meaning: A simpler method used when the main one fails. Here, keyword matching when the AI step is unsure.
+  - term: Denial path
+    meaning: What happens when a message is refused, and what the user and your logs show.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,0 +1,146 @@
+name: AI citation audit agent
+summary: Find out if ChatGPT, Claude, Gemini and Perplexity name you or a rival. Get a citation table, lost questions and a ranked fix plan.
+headline: AI citation audit agent
+subhead: Give it your brand, your site and 2 to 4 rivals. The agent writes 20 to 40 questions your buyers ask AI tools. It records who gets named in each answer you collect, lists the questions you lose and writes a ranked fix plan.
+job: get-found-in-search
+thinking: high
+thinking_why: It has to compare many answers, count mentions fairly and work out why a rival was named.
+explain: >-
+  A buyer asks ChatGPT for the best product in your category. The answer names
+  a few brands. If yours is missing, a rival may get the sale. AI citation is
+  not the same as search ranking. AI tools write an answer and name sources,
+  and what earns a mention can differ from what earns a place on Google. Clear
+  brand identity, FAQ pages, comparison pages and page markup all play a part.
+
+
+  The agent builds 20 to 40 real buyer questions, sorted by type: recommend,
+  compare, how to choose and best of. You run each one in ChatGPT, Claude,
+  Gemini and Perplexity and paste the answers back. It then counts who is
+  named, where, and why the winner wins. Fixes are ranked by expected gain.
+  After you publish them, you run the same questions again about 14 days later.
+
+
+  AI answers change from one run to the next. The numbers are a snapshot, not a
+  ranking, and the agent cannot promise to get you cited. It can only improve
+  the odds. This is a role profile from Agency Agents, shared under MIT. Its
+  success targets describe the intended work, not measured results from AI
+  Blocks.
+when:
+  - A buyer tells you "ChatGPT told me to try your rival."
+  - You want to know which questions you lose, and to whom.
+  - You are about to write comparison or FAQ pages and want them aimed at real questions.
+  - You made changes and want to see if AI tools name you more often.
+not_for:
+  - You want a monthly shopper-question check for a store. Use the AI recommendation mention tracker.
+  - You want one page scored on how easy it is to quote. Use the AI citation scorer.
+  - You want the sites AI tools cite for five buyer questions, and who to contact. Use the AI citation source finder.
+  - You want a Google search review or link building. Use the SEO Specialist agent.
+you_give:
+  - Your brand name, site address and product category.
+  - Two to four main rivals.
+  - Who your buyer is and what they would ask an AI tool.
+  - The answers you collect from ChatGPT, Claude, Gemini and Perplexity for each question. The agent gives you the list to run.
+  - Your FAQ, comparison and product pages (optional).
+you_get:
+  - A list of 20 to 40 buyer questions sorted by type.
+  - A citation table by tool that shows questions tested, times you were named, times a rival was named, your rate and the gap.
+  - A lost-questions table with the question, who is named, why they win and the priority.
+  - A ranked fix plan, such as FAQ markup, comparison pages and brand fixes, each tied to target questions.
+  - Drafts of FAQ blocks, markup and comparison page outlines.
+  - A recheck plan to run the same questions about 14 days later.
+how_to_use:
+  - Add the pack to your AI as a skill. In a plain chat, paste SKILL.md first.
+  - Give your brand, site, category, rivals and buyer. Ask for the question list.
+  - Run each question in ChatGPT, Claude, Gemini and Perplexity, in a new chat each time. Paste the answers back, labelled by tool and question. If time is short, start with 10 questions.
+  - Say "Audit these answers." Read the citation table, then the lost questions.
+  - Work through the fix plan from the top and publish the changes yourself.
+  - About 14 days later, run the same questions again with the same wording and ask for a comparison.
+how_it_works:
+  - title: Set the question list
+    text: It writes 20 to 40 questions your buyer would ask, grouped as recommend, compare, how to choose and best of.
+  - title: Record who is named
+    text: From the answers you paste, it notes which brands are named, in what order and in what format, for each tool.
+  - title: Find the lost questions
+    text: It lists questions where a rival is named and you are not.
+  - title: Work out why they win
+    text: It looks at what the winning brand has, such as a comparison page, FAQ-style content or clear brand facts, and what you lack.
+  - title: Write the fix plan
+    text: It ranks fixes by expected gain, drafts the assets and schedules a recheck with the same questions.
+output_shape: |-
+  AI CITATION AUDIT: <brand> | <date>
+  | Tool | Questions tested | You named | Rival named | Your rate | Gap |
+  Overall rate: <n> percent from <N> answers. Top rival rate: <n> percent.
+  Note: answers vary run to run, so this is a snapshot.
+
+  LOST QUESTIONS
+  | Question | Tool | Who is named | Why they win | Priority |
+
+  FIX PLAN
+  Priority 1: <fix> | Target questions: <list> | Expected gain: <high, medium or low and why> | Steps: <list>
+  Priority 2: ...
+
+  DRAFTS
+  <FAQ block, markup, comparison outline>
+
+  RECHECK
+  <date, same questions, what to compare>
+output_sample:
+  input:
+    - Your brand, site and product category
+    - Two to four main rivals
+    - The answers you collect from each AI tool for the question list
+    - Your FAQ and comparison pages (optional)
+  prerequisites:
+    - Access to ChatGPT, Claude, Gemini and Perplexity to run the questions
+  output:
+    - name: Question list
+      contains: Twenty to forty questions your buyers ask, grouped by recommend, compare, how to choose and best of.
+    - name: Citation table
+      contains: For each AI tool, how often you and your rivals were named, with your rate and the gap.
+    - name: Lost-questions table
+      contains: Each question where a rival wins, who is named, why they win and the fix priority.
+    - name: Fix plan
+      contains: Ranked fixes with the questions they target, expected gain and implementation steps.
+    - name: Draft assets
+      contains: FAQ blocks, markup and outlines for comparison pages, ready for you to edit and publish.
+    - name: Recheck plan
+      contains: The same questions to run again in about 14 days and how to compare the results.
+works_best_with:
+  tools:
+    - name: ChatGPT, Claude, Gemini and Perplexity
+      why: These are the four tools the audit covers. Each names brands in its own way.
+  inputs:
+    - A list of the real questions customers ask you, from emails, reviews and sales calls.
+    - Your best comparison and FAQ pages.
+    - A note of which pages rank on Google for your category.
+terms:
+  - term: AEO and GEO
+    meaning: Answer engine optimization and generative engine optimization. Ways to get named in AI answers.
+  - term: Citation
+    meaning: When an AI answer names or links your brand as a source or a pick.
+  - term: Lost question
+    meaning: A question where an AI tool names a rival and does not name you.
+  - term: Entity
+    meaning: A brand or product an AI tool can clearly identify as one distinct thing.
+  - term: Schema markup
+    meaning: Hidden labels in a page that tell machines what each part is, such as an FAQ.
+  - term: Share of voice
+    meaning: Your share of all brand mentions across the answers.
+tweaks:
+  - what: The question list
+    how: Swap in real questions from your customers. Real wording gives truer results than invented questions.
+  - what: Number of answers
+    how: More answers per tool give steadier numbers. With few, treat the rate as a rough sign.
+  - what: Rivals
+    how: Name the rivals your buyers actually compare you to. A wrong rival list skews the gap.
+improve:
+  - Keep the question list and your first results, so each recheck compares like with like.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

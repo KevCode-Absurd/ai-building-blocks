@@ -2,36 +2,115 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: story-page-style-guide
 name: Story-led page style guide writer
-summary: Describe your story. Get a style guide for a page that walks visitors
-  through it, with clear steps and tone.
+summary: Get a style guide for a page that tells a story, with rules for type, colour, spacing and how visitors move from one part to the next.
 job: design-work
 headline: Story-led page style guide writer
-subhead: A design guide for a web page that tells a story, so a designer or
-  developer can build it without guessing. You describe the story and the
-  feeling you want, and get rules for how the page leads a visitor from one step
-  to the next.
+subhead: Describe your story and the feeling you want. Your AI writes a style guide for a web page that leads visitors through it step by step. You get type, colour and spacing values, rules for each part of the page, and a checklist for the designer and developer.
 explain: |
-  A design guide for a web page that tells a story, so a designer or developer can build it without guessing. You describe the story and the feeling you want, and get rules for how the page leads a visitor from one step to the next.
+  A story-led page style guide is a set of written rules for a page that reads like a story, not a list of features. The visitor meets the problem, then the turn, then the result, and each part of the page has its own job. This skill writes the rules that keep those parts feeling like one story.
 
-  The guide sets fonts and size scale, colours with named tokens, spacing steps, and how each part of the page behaves, including hover, focus and loading states. It adds accessibility rules to WCAG 2.2 AA, keyboard use and visible focus, plus a writing tone, do and don't lists and example components. The default style is playful, but you can change that. It is a specification document, not a finished page.
+  You give it the story and the mood. Your AI turns them into a one-line design idea, then sets fonts, colours and spacing as named values. It then writes rules for how each part of the page looks and behaves: the opening, the story steps, the proof and the call to action. The rules cover hover, focus and loading, and how a visitor moves down the page.
+
+  It also fixes what a generic guide misses. Large display type for headings is paired with plain body type for reading. Each colour pair is checked for contrast. And the guide is a specification, not a finished page, so a designer or developer still builds it.
 when:
-  - You are building a product or brand page that should read like a story.
-  - A developer and a designer need shared rules for one page.
-  - Your landing page feels like a list of features with no flow.
-  - You want accessibility rules written in from the start.
+  - You are building a brand or product page that should read like a story from start to end.
+  - Your landing page lists features with no flow, and visitors leave before the end.
+  - A designer and a developer need shared rules for one long page.
+  - You want accessibility rules written in before the build starts.
+not_for:
+  - "You want a page built to get clicks and sign-ups fast, with offers and proof up front: use the Conversion page style guide writer."
+  - "You want a page that reads like a printed magazine with columns and big pictures: use the Magazine layout style guide writer."
+  - "You need rules for a product screen or dashboard, not a story: use the Minimal style guide writer or the Brand style guide writer."
 you_give:
-  - A short description of your story
-  - The mood or style you want
-  - Brand colours and fonts (optional)
+  - A short version of your story, in a few lines
+  - The mood or feeling you want, such as warm, playful or serious
   - Who the page is for
+  - Brand colours and fonts to keep (optional)
 you_get:
-  - Typography and colour rules
-  - A spacing scale
-  - Behaviour rules for page parts
-  - Accessibility requirements
-  - Do and don't lists and a tone guide
+  - A one-line design idea for the story page
+  - Font, colour and spacing values with names
+  - Rules for each part of the page, with hover, focus and loading states
+  - Accessibility rules with contrast checked
+  - Tone examples, do and don't lists and a review checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or paste the skill text into a new chat.
+  - Paste your story in a few lines, the mood you want and who the page is for. Add brand colours and fonts if you have them.
+  - Read the design idea. It should sound like your story. If not, correct it before your AI goes on.
+  - Ask your AI to list the parts of the page in order, and check that each one moves the visitor to the next.
+  - Ask for the contrast ratio of each colour pair, and change any pair under 4.5 to 1.
+  - Hand the guide to your designer or developer. It writes rules only. It does not build the page.
+how_it_works:
+  - title: States the design idea
+    text: Writes one sentence that ties the look to your story and your visitor.
+  - title: Sets the foundations
+    text: Names the fonts, colours, type sizes and spacing steps, using your brand values where you gave them.
+  - title: Maps the story
+    text: Lists the parts of the page in order and says what each part must make the visitor feel or do next.
+  - title: Writes the part rules
+    text: Describes each part and its states, and how it works by keyboard, mouse and touch.
+  - title: Adds accessibility and tone
+    text: Writes testable rules, example wording, and things to avoid.
+  - title: Ends with a checklist
+    text: Lists what a reviewer should tick before the page goes live.
+output_shape: |
+  DESIGN IDEA
+  <one sentence>
+
+  CONTEXT AND GOALS
+  <story, visitor, what the page must achieve>
+
+  FOUNDATIONS
+  Fonts: <display and body>   Type sizes: <steps>
+  Colours: <names and values, with contrast ratios>
+  Spacing: <steps>
+
+  STORY FLOW AND COMPONENT RULES
+  <part, in page order>: job, pieces, states, small-screen behaviour
+
+  ACCESSIBILITY
+  <rules you can test>
+
+  TONE
+  <examples of the voice>
+
+  AVOID
+  <things that break the story>
+
+  QA CHECKLIST
+  <items a reviewer can tick>
+output_sample:
+  input:
+    - A short version of your story
+    - The mood or feeling you want
+    - Who the page is for
+    - Brand colours and fonts to keep (optional)
+  prerequisites:
+    - An AI chat you can paste the skill into
+  output:
+    - name: Design idea
+      contains: One sentence that ties the look of the page to your story and your visitor.
+    - name: Foundations
+      contains: Display and body fonts, type sizes, colours with contrast ratios, and spacing steps.
+    - name: Story flow
+      contains: The parts of the page in order, with the job each one does for the visitor.
+    - name: Component rules
+      contains: Pieces, versions, states and small-screen behaviour for each part.
+    - name: Accessibility, tone and avoid list
+      contains: Testable rules, example wording and things that break the story.
+    - name: QA checklist
+      contains: A short list a reviewer can tick before the page goes live.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your brand story or about page, so the mood matches your own words
+    - Screenshots of pages whose pacing you like
+    - A list of the steps the visitor should take, such as read, trust, then sign up
+terms:
+  - term: Token
+    meaning: A named value, such as a colour or a spacing step, that is used the same way everywhere.
+  - term: Display font
+    meaning: A type style used for big headings, chosen for character rather than for long reading.
+  - term: Contrast ratio
+    meaning: A number that says how easy text is to read on its background. WCAG AA asks for at least 4.5 to 1 for normal text.

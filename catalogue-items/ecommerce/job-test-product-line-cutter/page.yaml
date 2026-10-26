@@ -1,6 +1,6 @@
 new_slug: job-test-product-line-cutter
 name: "Job test product line cutter"
-summary: "List your SKUs and core job. Get each marked core, second or no job, a launch gate and a focus score."
+summary: "Sort your product list by the one job your shop does. Mark each SKU core, second or no job, and get a launch gate and a focus score."
 job: understand-customers
 thinking: medium
 thinking_why: "It sorts each SKU against one job sentence and then checks the numbers. A mid-range model does this well."
@@ -17,6 +17,10 @@ when:
   - Your range has grown and shoppers or ads no longer say clearly what you sell.
   - You are about to launch a new SKU because a rival has it, or because current buyers would probably buy it.
   - You want a rule for approving launches that is not a hunch.
+not_for:
+  - "You have no job spec yet: build one first with the Job-based avatar builder, then come back."
+  - "You want a plain keep-or-cut sort with no job test: use the Product line cutter."
+  - "You have under 10 SKUs: skip the sort and ask only for the launch gate, or just talk it through with your team."
 
 you_give:
   - Your product list with units sold, margin and return rate
@@ -35,6 +39,32 @@ how_to_use:
   - Paste the product list with units, margin and return rate. Add repeat rate if you have it.
   - Look at the hold list first. Those are the SKUs the job test would cut but the numbers say to keep.
   - Save the launch gate and ask for the sort again whenever you plan a new SKU.
+output_sample:
+  input:
+    - Your product list with units sold, margin and return rate
+    - Your job spec or avatar cards
+    - Repeat purchase rate by SKU (optional)
+    - Product page text (optional)
+    - A planned launch idea (optional)
+  prerequisites:
+    - A job spec or avatar cards, for example from the Job-based avatar builder
+  output:
+    - name: CORE JOB
+      contains: One sentence on the job your shop is hired for, with its source.
+    - name: SKU SORT
+      contains: Each SKU marked core, second or no job, with numbers, jobs per page, surface-growth flag, list result and reason.
+    - name: HOLD LIST
+      contains: SKUs with no clear job that margin or repeat rate justify keeping, each needing its own page and name.
+    - name: SECOND-JOB SKUs
+      contains: SKUs that serve a different job and need their own page and name.
+    - name: BRAND CONFUSION
+      contains: A yes or no on whether shoppers would ask what the range is for.
+    - name: LAUNCH GATE
+      contains: "Four things a new SKU needs: a named job, a named avatar, quoted evidence, and what the old range stops doing."
+    - name: SCORE
+      contains: A range focus score out of 100, with the sum shown and what it does not measure.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not given and any checks that failed.
 
 how_it_works:
   - title: Writes the core job

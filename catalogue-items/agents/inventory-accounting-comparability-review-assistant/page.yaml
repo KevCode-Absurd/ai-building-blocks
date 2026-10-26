@@ -1,51 +1,123 @@
 new_slug: inventory-accounting-comparability-review-assistant
-name: Inventory accounting comparability review assistant
-headline: Inventory accounting comparability review assistant
-summary: Review inventory reserve and charge changes before comparing issuer margins and cash investment.
+name: Inventory accounting comparison reviewer
+headline: Inventory accounting comparison reviewer
+summary: Check how a listed company's LIFO reserve, inventory write-downs and stock build change its margins and cash use. Get a change register and workbook.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An inventory-method change register and linked margin/cash-investment workbook. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+subhead: Give it a company's new filing with the inventory note and your last accepted model. It checks how the costing method, the LIFO reserve and write-downs change gross margin. It also splits how much cash went into stock. You get a change register, a linked workbook and questions for your reviewer.
 explain: |-
-  An inventory-method change register and linked margin/cash-investment workbook.
+  Two companies can sell the same goods at the same price and report different margins. One may count its stock on LIFO (last in, first out) and the other on FIFO (first in, first out). One may have written down old stock in the year, and the other may not. A year-on-year margin change can come from those choices as much as from the business. The balance sheet can also mislead. Stock may rise because a company bought another one, or because of currency, and none of that is cash spent on stock.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This inventory comparison reviewer keeps a short record of the last accepted review. It holds the costing basis, the LIFO reserve history, the write-downs and reversals by line, the noncash changes in stock, the period dates and any overlaps between adjustments. When a new filing arrives, it compares the inventory note with that record. Then it runs the Inventory cost and margin reviewer. That workflow has three steps: a LIFO to FIFO bridge, a write-down margin bridge and a split of cash invested in stock. Each charge is counted once.
+
+  LIFO is a US accounting method. The agent will not apply it to a company that reports under IFRS. It does not value stock, judge whether a reserve is right or say whether to buy a share. It uses only the filings you give it, and a person who knows the filings checks the result.
 when:
-  - You need an inventory-method change register and linked margin/cash-investment workbook.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A company you follow reports new inventory notes and you want to know if its margin moved because of the business or because of accounting.
+  - You want to compare a LIFO company's margin with a FIFO company's margin on the same footing.
+  - A filing shows a write-down or a reversal, and you need to know how much of the margin change it explains.
+  - Stock on the balance sheet jumped, and you want to know how much was cash and how much was a purchase of a business or a currency move.
+not_for:
+  - You want the LIFO to FIFO adjustment for one year only. Use the LIFO to FIFO comparison calculator.
+  - You only want to pull a write-down out of one margin. Use the Inventory write-down margin checker.
+  - You only want to see how much cash went into working capital. Use the Working capital cash change checker.
+  - You want a bank borrowing limit for your own stock. Use the Inventory borrowing limit calculator.
+  - You want to value stock, set a reserve or decide what to buy. It explains reported numbers and gives no view on value.
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The new dated filing, with the inventory note, the income statement and the cash flow statement (from the company's results page)
+  - For a LIFO company, the LIFO reserve at the start and end of the period, and the tax effect if disclosed (from the inventory note)
+  - The inventory write-downs and reversals for the period, and the income statement line they sit in (from the inventory note)
+  - Notes on business purchases, currency moves and other noncash changes in stock (from the notes to the accounts)
+  - The accounting basis, such as US GAAP or IFRS, the reporting date, the currency and the scale
+  - Your materiality threshold, such as 0.1 percentage points of margin
+  - Your last accepted model and its review log (optional on a first run)
+  - The record from the last review, pasted in (optional on a first run)
 you_get:
-  - An inventory-method change register and linked margin/cash-investment workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - An inventory change register. Each change in costing method, reserve, write-down or reversal shows its source, its date and its effect on cost of goods sold.
+  - A LIFO to FIFO margin bridge, for a company that uses LIFO
+  - A margin view with write-downs and reversals taken out, next to the reported margin
+  - The cash invested in stock, after noncash changes are removed
+  - Reviewer questions for anything missing, plus MISSING lines, checks that could not run and a record for next time
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, pick one that can create spreadsheets. In plain chat it returns the same tables as text.
+  - Say whether this is the first run. If not, paste the record from last time and attach the last accepted model. Then attach the new filing, say US GAAP or IFRS, and give your threshold, currency and scale.
+  - Read "changed since last review" first. Check each reserve figure, write-down and reversal against the page of the filing it came from.
+  - "For a LIFO company, check the bridge by hand: closing reserve added to LIFO stock, and the reserve increase taken off cost of goods sold. Check that a reserve cut is flagged as a one-off, not as growth."
+  - Check that each write-down is counted once, in one adjustment only. Then check that the cash invested in stock equals the balance change less the noncash items.
+  - Answer the questions or leave them marked MISSING. Nothing is filed, sent or traded.
 how_it_works:
-  - title: Explain inventory accounting margin effects
-    text: Run the governing workflow when On a new inventory note or fiscal-period update supplied by the user, compare reserve definitions, charges and write-offs with the prior accepted margin bridge.
-  - title: Trailing-period financial bridge
-    text: If the requested comparison uses a trailing period, reconstruct additive revenue and COGS over matching intervals before calculating margins. A change from LIFO or in reserve scope requires a documented new basis rather than a carried-forward formula.
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this company, or sets a first baseline. Compares the costing basis, the reserve definition, the periods and the currency with the record. If nothing changed and no review is due, it says so and stops.
+  - title: Bridges LIFO to FIFO
+    text: Only for a company that reports under US GAAP and uses LIFO. It adds the closing reserve to LIFO stock and takes the operating reserve increase off cost of goods sold. Business purchases, currency and method changes are left out of the increase.
+  - title: Pulls out write-downs and reversals
+    text: Checks each charge sits in the chosen cost line. It nets charges and reversals, removes them, and shows margin both ways. The reported margin stays first.
+  - title: Separates cash from noncash
+    text: Takes the change in stock and removes business purchases, currency and write-offs. What is left is cash invested. Adjusted FIFO values never replace the reported cash flow.
+  - title: Builds a trailing view when asked
+    text: Only if you want a trailing-year comparison. It adds the last full year to the current year to date and takes off the same period a year ago, for revenue and cost of goods sold only. A change in method needs a new, documented basis.
+  - title: Reconciles and saves the record
+    text: Ties cost of goods sold, margin and cash to the filings, lists every changed item, and writes a short record for next time. It keeps the old record.
 output_shape: |-
-  An inventory-method change register and linked margin/cash-investment workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  REVIEW DATE <date>, <currency>, <scale>, <US GAAP or IFRS>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <costing basis, reserve, charges, reversals, noncash items>
+  LIFO TO FIFO BRIDGE        reserve <opening> to <closing>; operating increase <n>;
+                             FIFO cost of goods sold <n>; margin <n>% vs reported <n>%;
+                             tax effect <n>; reserve cut flagged: <yes or no>
+  WRITE-DOWN MARGIN BRIDGE   reported margin <n>%; charges <n> less reversals <n> = <n>;
+                             margin without them <n>%; overlap with LIFO: <none or list>
+  CASH INVESTED IN STOCK     balance change <n> less purchases <n>, currency <n>,
+                             write-offs <n> = <n> cash invested
+  TRAILING VIEW              <only if asked: last year + year to date - same period a year ago>
+  CHANGE REGISTER            <item | change | source and date | effect on cost of goods sold>
+  REVIEWER QUESTIONS         <one per gap>
+
+  RECORD FOR NEXT REVIEW  costing basis, reserve history, charges and reversals,
+                          noncash changes, period dates, overlaps
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The new dated filing with the inventory note, income statement and cash flow statement
+    - The LIFO reserve at the start and end of the period (for a LIFO company)
+    - The write-downs and reversals for the period, and the line they sit in
+    - Notes on business purchases, currency and other noncash changes in stock
+    - The accounting basis, currency, scale and your materiality threshold
+    - Your last accepted model and its record (optional on a first run)
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can create spreadsheets.
+    - A named person who knows the company's filings and will check the result
+  output:
+    - name: Changed since last review
+      contains: Each costing, reserve, write-down or noncash change that is new, with its filing page and date.
+    - name: LIFO to FIFO bridge
+      contains: Reserve movement, FIFO cost of goods sold, margin on each basis and tax effect. A reserve cut is flagged as a one-off.
+    - name: Write-down margin bridge
+      contains: Reported margin, the net of charges and reversals, and margin without them. Any overlap with the LIFO step is named.
+    - name: Cash invested in stock
+      contains: The change in stock less purchases, currency and write-offs, tied to the cash flow statement.
+    - name: Trailing view (only if asked)
+      contains: Trailing revenue and cost of goods sold on one basis. Margins and balances are not added up.
+    - name: Change register
+      contains: "One row per change: the item, what changed, the source and date, and the effect on cost of goods sold."
+    - name: Reviewer questions
+      contains: One question for each missing note, reserve figure or noncash item.
+    - name: Record for next review
+      contains: The costing basis, reserve history, charges, noncash changes, period dates and overlaps.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops. Each check that failed or could not run, or "none".
+    - name: Workbook (if your AI can make one)
+      contains: Inputs, formulas and a checks tab linked across the bridges.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Inventory effects reconcile to reported COGS once, LIFO/IFRS conventions are distinguished and analytical values do not contaminate reported cash-flow inputs.
+  - what: A company on IFRS
+    how: Say IFRS. The LIFO bridge is skipped with a reason, and the write-down and cash steps still run.
+  - what: A tighter threshold
+    how: Set a lower threshold, such as 0.05 percentage points. Smaller changes stay in the register but are not raised as questions.
+  - what: A trailing-year comparison
+    how: Ask for it and give the year to date and the same period a year ago. It then builds revenue and cost of goods sold on one basis.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - Inventory effects reconcile to reported COGS once, LIFO/IFRS conventions are distinguished and analytical values do not contaminate reported cash-flow inputs.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +128,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
+  - Keep one sheet with the company's reserve and write-down figures by year, with the filing page for each, and paste it in every time.
+  - Write your materiality threshold into the agent's file once, so every run uses the same one.
+  - Pair it with the LIFO to FIFO comparison calculator when you only need one year's bridge.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The company's filing page
+      why: Gives the dated inventory note and cash flow statement, each with a page you can cite.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The company's own inventory note, not a summary of it.
+    - The notes on business purchases and currency, so noncash moves can be removed.
+    - A named reviewer who knows the filings and will answer the questions it raises.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: LIFO
+    meaning: Last in, first out. A way of costing stock where the newest purchases are treated as sold first. Allowed under US accounting rules, not under IFRS.
+  - term: FIFO
+    meaning: First in, first out. The oldest purchases are treated as sold first.
+  - term: LIFO reserve
+    meaning: The gap between stock valued on FIFO and stock valued on LIFO. Companies on LIFO disclose it.
+  - term: Cost of goods sold
+    meaning: What the goods the company sold cost it. Revenue minus this is gross profit.
+  - term: Write-down
+    meaning: A cut in the value of stock that is old, damaged or unlikely to sell at cost. It is charged to cost of goods sold.
+  - term: Noncash movement
+    meaning: A change in a balance that did not involve cash, such as stock acquired with a business or moved by exchange rates.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

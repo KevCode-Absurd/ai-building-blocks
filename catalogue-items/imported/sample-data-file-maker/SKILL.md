@@ -4,111 +4,120 @@ description: "Generate realistic dummy datasets for testing with customizable co
 ---
 # Dummy Dataset Generation
 
-Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script). Creates executable scripts or direct data files for immediate use.
+Make realistic fake data for testing, demos and development. The result is a data file in the format the user picks (CSV, JSON or SQL INSERT statements), a Python script that remakes it, or both.
 
-**Use when:** Creating test data, generating sample datasets, building realistic mock data for development, or populating test environments.
+**Use when:** the user needs test data, mock data or sample records and has no real data they can share.
 
-**Arguments:**
-- `$PRODUCT`: The product or system name
-- `$DATASET_TYPE`: Type of data (e.g., customer feedback, transactions, user profiles)
-- `$ROWS`: Number of rows to generate (default: 100)
-- `$COLUMNS`: Specific columns or fields to include
-- `$FORMAT`: Output format (CSV, JSON, SQL, Python script)
-- `$CONSTRAINTS`: Additional constraints or business rules
+**Do not use when:** the user wants real customer data copied or masked, a statistical simulation, or a very large load test. Say so and stop.
 
-## Step-by-Step Process
+## What to ask for
 
-1. **Identify dataset type** - Understand the data domain
-2. **Define column specifications** - Names, data types, and value ranges
-3. **Determine row count** - How many sample records needed
-4. **Select output format** - CSV, JSON, SQL INSERT, or Python script
-5. **Apply realistic patterns** - Ensure data looks authentic and valid
-6. **Add business constraints** - Respect business logic and relationships
-7. **Generate or script data** - Create executable output
-8. **Validate output** - Ensure data quality and completeness
+Collect these. Ask once, in one message, for anything missing. Never guess the columns.
 
-## Template: Python Script Output
+- `$PRODUCT`: the product or system the data is for (optional)
+- `$DATASET_TYPE`: what each row is, such as orders, user profiles or feedback
+- `$COLUMNS`: column names, with a type or example for each. If the user gives only a goal ("fake orders for a shop"), propose 6 to 10 columns and ask them to confirm before you build
+- `$ROWS`: how many rows. Default 100
+- `$FORMAT`: CSV, JSON, SQL or Python script. Default CSV
+- `$CONSTRAINTS`: business rules, such as "ship date after order date" (optional)
+
+## Steps
+
+1. **Confirm the plan.** Show a short table: column, type, allowed values or range. Show the rules in plain words. Wait for a yes if the user gave no columns. If they gave full details, go on.
+2. **Pick realistic values.** Use plain patterns: real-looking names, dates in a sensible range, prices with two decimals, IDs with a fixed prefix and padded number.
+3. **Keep it safe.** Use reserved email domains (`example.com`, `example.org`) and phone numbers in the fake range (`555-0100` to `555-0199`). Never use real people, real companies or real card numbers.
+4. **Apply every rule.** Rows must stay consistent with each other and with your rules, such as a ship date never before its order date.
+5. **Choose how to deliver.** Up to about 50 rows: write the data out directly. More than that, or if the user wants a repeatable file: write the script, and run it if you can run code. If you cannot run code, give the script and say how to run it.
+6. **Check the output.** Count the rows. Check there are no blank cells, no duplicate IDs, and that every rule holds. Report each check as passed or failed. If any check fails, fix the data before you hand it over.
+7. **Say how to use it.** Add two or three lines on loading it, such as importing the CSV into a spreadsheet or running the SQL file against a test database.
+
+## If something is missing
+
+- No column list and no clear goal: ask once. Do not build.
+- No row count: use 100 and say so.
+- No format: use CSV and say so.
+- A rule you cannot meet with the columns given: stop, say which rule and why, and ask.
+- Real data pasted in as a model: do not copy values from it. Use its shape only, and tell the user.
+
+## Script template (Python, no extra packages)
+
+Replace the columns and rules with the user's. The seed makes every run give the same data. Change it for a fresh set.
 
 ```python
 import csv
-import json
-from datetime import datetime, timedelta
 import random
+from datetime import date, timedelta
 
-# Configuration
-ROWS = $ROWS
-FILENAME = "$DATASET_TYPE.csv"
+ROWS = 100              # how many rows to make
+SEED = 42               # same seed gives the same data every run
+FILENAME = "feedback.csv"
 
-# Column definitions with realistic value generators
-columns = {
-    "id": "auto-increment",
-    "name": "first_last_name",
-    "email": "email",
-    "created_at": "timestamp",
-    # Add more columns...
-}
+random.seed(SEED)
 
-def generate_dataset():
-    """Generate realistic dummy dataset"""
-    data = []
-    for i in range(1, ROWS + 1):
-        record = {
-            "id": f"U{i:06d}",
-            # Generate values based on column definitions
-        }
-        data.append(record)
-    return data
+FIRST = ["Ana", "Ben", "Chen", "Dina", "Eli", "Farah", "Gus", "Hana", "Ivan", "Jo"]
+LAST = ["Adams", "Brooks", "Cruz", "Diaz", "Evans", "Fox", "Gupta", "Hill", "Ito", "Jones"]
+DOMAINS = ["example.com", "example.org", "example.net"]  # reserved, so no real inbox is hit
+CATEGORIES = ["Bug", "Feature Request", "Complaint", "Praise"]
+PRODUCTS = ["electronics", "clothing", "home"]
+RATINGS = [5, 4, 3, 2, 1]
+RATING_WEIGHTS = [40, 30, 20, 5, 5]  # rule: skew toward 5 stars
 
-def save_as_csv(data, filename):
-    """Save dataset as CSV"""
-    with open(filename, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=data[0].keys())
-        writer.writeheader()
-        writer.writerows(data)
 
-if __name__ == "__main__":
-    dataset = generate_dataset()
-    save_as_csv(dataset, FILENAME)
-    print(f"Generated {len(dataset)} records in {FILENAME}")
+def make_row(i):
+    rating = random.choices(RATINGS, RATING_WEIGHTS)[0]
+    # Rules: Bug only on ratings 1-3, Feature Request only on 3-5.
+    allowed = [c for c in CATEGORIES
+               if not (c == "Bug" and rating > 3)
+               and not (c == "Feature Request" and rating < 3)]
+    first, last = random.choice(FIRST), random.choice(LAST)
+    return {
+        "feedback_id": f"U{i:06d}",
+        "customer_name": f"{first} {last}",
+        "email": f"{first}.{last}{random.randint(1, 99)}@{random.choice(DOMAINS)}".lower(),
+        "feedback_date": (date.today() - timedelta(days=random.randint(0, 89))).isoformat(),
+        "rating": rating,
+        "category": random.choice(allowed),
+        "product": random.choice(PRODUCTS),
+        # Add more columns the same way.
+    }
+
+
+rows = [make_row(i) for i in range(1, ROWS + 1)]
+
+with open(FILENAME, "w", newline="", encoding="utf-8") as f:
+    writer = csv.DictWriter(f, fieldnames=rows[0].keys())
+    writer.writeheader()
+    writer.writerows(rows)
+
+print(f"Wrote {len(rows)} rows to {FILENAME}")
 ```
 
-## Example Dataset Specification
+For JSON, write the `rows` list with `json.dump(rows, f, indent=2)`. For SQL, print one `INSERT INTO <table> (<columns>) VALUES (...);` line per row and escape single quotes in text.
 
-**Dataset Type:** Customer Feedback
+## Output
 
-**Columns:**
-- feedback_id (auto-increment, U001, U002...)
-- customer_name (realistic names)
-- email (valid email format)
-- feedback_date (dates last 90 days)
-- rating (1-5 stars)
-- category (Bug, Feature Request, Complaint, Praise)
-- text (realistic feedback)
-- product (electronics, clothing, home)
+Return, in this order:
 
-**Constraints:**
-- Ratings skewed: 40% 5-star, 30% 4-star, 20% 3-star, 10% 1-2 star
-- Bug category only with ratings 1-3
-- Feature requests only with ratings 3-5
-- Email domains realistic (gmail, yahoo, company.com)
+1. **Column plan:** the table from step 1, plus the rules you applied.
+2. **The data:** the file contents in the chosen format, or the first 5 rows plus the file name if the file is long.
+3. **The script:** the full Python script, when you wrote one.
+4. **Checks:** row count, blank cells, duplicate IDs, and one line per rule, each marked passed or failed.
+5. **How to use it:** two or three lines.
 
-## Output Deliverables
+## Checks before you hand it over
 
-- Ready-to-execute Python script OR direct data file
-- CSV file with proper headers and formatting
-- JSON file with valid structure and types
-- SQL INSERT statements for database population
-- Data validation and constraint compliance
-- Realistic, business-appropriate values
-- Documentation of data generation logic
-- Quick-start instructions for using the dataset
+- Every column in the plan is in the data, in the same order.
+- Row count matches the request.
+- No blank cells unless the plan allows them.
+- IDs are unique.
+- Every rule holds on every row.
+- No real emails, phone numbers or card numbers.
 
-## Output Formats
+List any check you could not run as `CHECKS MISSED:` (or write "CHECKS MISSED: none").
 
-**CSV:** Flat tabular format, easy to import into spreadsheets and databases
+## Formats
 
-**JSON:** Nested structure, ideal for APIs and NoSQL databases
-
-**SQL:** INSERT statements, directly executable on relational databases
-
-**Python Script:** Executable generator for custom or large datasets
+- **CSV:** flat table with a header row. Opens in any spreadsheet.
+- **JSON:** a list of objects. Good for APIs and document databases.
+- **SQL:** INSERT statements. Run them on a test database, never on a live one.
+- **Python script:** remakes the data on demand and scales to more rows.

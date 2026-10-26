@@ -35,6 +35,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+- **The launch plan** (optional): from the Performance Max launch planner, so the live campaign is checked against what was planned.
 - **Search term insights** (required).
 - **Product-level spend and conversions** (required).
 - **Asset details** (strongly advised).

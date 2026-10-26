@@ -16,7 +16,7 @@ uses: [story-premise-tester, scene-turn-checker, voice-over-stripping-test]
 steps:
   - {uses: story-premise-tester, note: "The controlling idea, the idea that argues back, and a verdict on its strength"}
   - {uses: scene-turn-checker, note: "Each scene marked for what changes and which choice changes it, with weak scenes flagged. Reads the plan from the step before"}
-  - {uses: voice-over-stripping-test, note: "A verdict on each line: does the story work without it?"}
+  - {uses: voice-over-stripping-test, note: "A verdict on each line: does the story work without it? Uses the script you wrote from step 2's scene list after the pause, and reads that scene list for what each scene should do"}
 origin: rebuilt
 version: 1.0.0
 minds: [robert-mckee]

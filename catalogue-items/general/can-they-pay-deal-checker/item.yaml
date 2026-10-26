@@ -9,6 +9,9 @@ level: expert
 inputs:
   - {type: question, required: true}
   - {type: brief, required: false}
+  - {type: offer, required: false}
+  - {type: persona, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

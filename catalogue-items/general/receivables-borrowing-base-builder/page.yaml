@@ -1,55 +1,111 @@
 new_slug: receivables-borrowing-base-builder
 name: Receivables borrowing base builder
 headline: Receivables borrowing base builder
-summary: A receivables eligibility bridge and collateral advance
+summary: Work out how much a lender will advance against your receivables. Get eligible receivables, the advance rate applied and the net amount after reserves.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A receivables eligibility bridge and collateral advance. Share receivables aging total, nonoverlapping ineligibles, concentration excess, contractual advance rate and lender reserves for one certificate date.
+subhead: Give it your receivables aging total, the invoices the loan agreement excludes, any single-customer excess, the advance rate and the lender's reserves. It ties the aging to your ledger, takes off what is not eligible, and works out the advance.
 explain: |-
-  A receivables eligibility bridge and collateral advance.
+  An asset-based loan lets you borrow against your unpaid customer invoices. The lender does not lend against all of them. The loan agreement excludes some, such as invoices that are far past due or disputed. It may also limit how much one customer can count for. What is left is eligible. The lender then advances a percentage of it and holds back reserves. This receivables borrowing base builder does that sum as a clean schedule for one certificate date.
 
-  Asset based credit. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  The order matters. First the aging report must tie to your ledger. Then the ineligible invoices and the concentration excess come off, each counted once. Only then is the advance rate applied, and the reserves come off last. If the deductions are more than the receivables, the skill shows it as an error in the inputs. It does not quietly show zero.
+
+  Practice numbers, not a real loan: receivables of 1,000, ineligible 100, concentration excess 100, an 80% advance rate and reserves of 40. Eligible receivables are 1,000 - 200 = 800. The advance is 800 x 80% = 640. After the 40 reserve, the net advance is 600. If ineligibles are 200, eligible falls to 700, and the net advance to 520.
 when:
-  - You need a receivables eligibility bridge and collateral advance.
-  - You work on asset based credit and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You need to fill in a monthly borrowing base certificate for your lender.
+  - A lender sends back your certificate with a different number, and you want to find the gap.
+  - You are about to take on a big customer and want to see how the concentration limit changes your base.
+  - You want to know how much cash an asset-based loan could give you before you ask a bank.
+not_for:
+  - Your collateral is stock, not invoices. Use the Inventory borrowing base builder.
+  - You want the amount you can still draw on the loan after this base. Use the Revolver availability checker, and bring the base here.
+  - You sell invoices to a factor instead of borrowing against them. Use the Factoring cash-flow timing bridge.
+  - You want a credit decision, or to send the certificate. This is arithmetic for you to review. It does not approve a loan.
 you_give:
-  - Receivables aging total, nonoverlapping ineligibles, concentration excess, contractual advance rate and lender reserves for one certificate date.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The receivables aging report total for the certificate date, and the ledger total it should match
+  - The invoices the loan agreement excludes, with the reason for each group, such as past due or disputed
+  - The concentration excess, which is the amount over any single-customer limit, not already counted as ineligible
+  - The advance rate, such as 80%, from the loan agreement
+  - The lender's reserves, from the lender or the last certificate
+  - Your own borrowing base spreadsheet (optional)
 you_get:
-  - A receivables eligibility bridge and collateral advance.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Eligible receivables after the deductions
+  - The advance before reserves, at your advance rate
+  - The net advance after reserves
+  - A clear flag if the aging and the ledger do not tie, or the deductions overlap
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the aging total, the ledger total, the ineligible amounts, the concentration excess, the advance rate and the reserves. Say the certificate date, the currency and the units. Attach the agreement's eligibility page if you can.
+  - Ask in plain words, such as what is our net advance on this date?
+  - Check one line yourself. Receivables less ineligibles and concentration excess is the eligible amount. Multiply by the advance rate, then take off reserves.
+  - Read MISSING and CHECKS MISSED before you send anything to a lender. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Reconcile aging to the receivables control total; identify agreement-defined exclusions and separate nonoverlapping concentration excess
-    text: Reconcile aging to the receivables control total; identify agreement-defined exclusions and separate nonoverlapping concentration excess.
-  - title: 3. Deduct ineligibles and concentration amounts before applying the supplied advance rate; show negative eligibility as a source exception
-    text: Deduct ineligibles and concentration amounts before applying the supplied advance rate; show negative eligibility as a source exception.
-  - title: 4. Deduct the separately documented lender reserve and reconcile the resulting advance to the certificate supporting lines
-    text: Deduct the separately documented lender reserve and reconcile the resulting advance to the certificate supporting lines.
+  - title: Ties the aging
+    text: Compares the aging total with the ledger control total. If they differ, it lists the gap as a MISSING line, not a plug.
+  - title: Takes off ineligibles and excess
+    text: Removes the invoices the agreement excludes, then the single-customer excess. Each amount is counted once, so the two cannot overlap.
+  - title: Applies the advance rate
+    text: Multiplies the eligible receivables by your advance rate, a decimal between zero and one.
+  - title: Takes off reserves
+    text: Subtracts the lender's reserves once, after the advance. A negative result is flagged as a source problem.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given. It never fills a gap with zero.
 output_shape: |-
-  A receivables eligibility bridge and collateral advance.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Eligible receivables <amount> | Advance before reserves <amount> | Net advance <amount>
+
+  SCOPE AND SOURCES
+  <certificate date, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <aging total, ledger total, ineligibles by reason, concentration excess, advance rate, reserves>
+
+  CALCULATIONS AND TIES
+  <aging tied to ledger; each deduction with its figures; advance and net advance>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The receivables aging total and the ledger total it should match
+    - The ineligible invoices, grouped by the reason in your loan agreement
+    - The concentration excess over any single-customer limit
+    - The advance rate and the lender's reserves
+    - Your own borrowing base spreadsheet (optional)
+  prerequisites:
+    - The loan agreement page that defines eligible receivables and the advance rate
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Eligible receivables, the advance before reserves and the net advance.
+    - name: SCOPE AND SOURCES
+      contains: The certificate date, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it, with ineligibles grouped by reason.
+    - name: CALCULATIONS AND TIES
+      contains: The aging tied to the ledger, each deduction with its figures, and the advance steps.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every material input has a source location, date, unit, sign and approval status.
+  - what: More ineligible invoices
+    how: Raise the ineligible amount, such as after a customer goes past due. Eligible receivables and the advance fall.
+  - what: A lower advance rate
+    how: Change the rate, such as from 85% to 80%. The advance and net advance are worked out again.
+  - what: A new reserve
+    how: Add a lender reserve. It comes off once, after the advance rate is applied.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
@@ -64,15 +120,30 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the loan agreement that defines eligible receivables, concentration limits and the advance rate
+    - The receivables aging report and the matching ledger total, from your accounting system
+    - The last borrowing base certificate and the lender's reserve notice
 terms:
+  - term: Borrowing base
+    meaning: The most a lender will advance, worked out from the value of your eligible collateral.
+  - term: Eligible receivables
+    meaning: Invoices that meet the loan agreement's rules, so the lender counts them.
+  - term: Ineligible
+    meaning: Invoices the agreement excludes, such as those far past due or disputed.
+  - term: Concentration excess
+    meaning: The amount one customer owes above the limit the agreement allows to count.
+  - term: Advance rate
+    meaning: The share of eligible receivables the lender will lend, such as 80%.
+  - term: Reserve
+    meaning: An amount the lender holds back from your base.
+  - term: Aging report
+    meaning: A list of unpaid invoices grouped by how long they have been outstanding.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real loan.

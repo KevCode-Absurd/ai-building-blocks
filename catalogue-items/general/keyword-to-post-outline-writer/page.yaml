@@ -1,6 +1,6 @@
 new_slug: keyword-to-post-outline-writer
 name: "Keyword to post outline writer"
-summary: "Paste a keyword and who it is for. Get a one-page outline with intent, headings and what the post must cover."
+summary: "Turn a keyword into a keyword to post outline: intent, headings with notes and what to cover. Paste the phrase and who is searching."
 job: get-found-in-search
 thinking: low
 thinking_why: "It builds a short outline from a clear phrase."
@@ -17,6 +17,10 @@ when:
   - "You are about to commission or write a post."
   - "Your posts do not rank or get skimmed."
   - "You want to brief an AI writer."
+not_for:
+  - "You need a full brief with every check: use the Content brief writer."
+  - "You are writing a product page or a news story: write it by hand, or ask your AI with your own notes."
+  - "You need a title and snippet for search results: use the Search title and snippet writer."
 
 you_give:
   - "The search phrase"
@@ -33,6 +37,30 @@ how_to_use:
   - "Under it, give the search phrase and who is searching."
   - "Add your offer and pages to link to."
   - "Hand the outline to a writer or paste it into your AI with a writing request."
+output_sample:
+  input:
+    - The search phrase
+    - Who is searching and what they want to do
+    - What you sell or offer (optional)
+    - Pages on your site to link to (optional)
+    - What the top results look like (optional)
+  output:
+    - name: Intent and page type
+      contains: Whether the searcher wants to learn, compare or buy, and the kind of page that fits.
+    - name: Reader's job
+      contains: One sentence on the problem the reader is trying to solve when they land.
+    - name: Outline
+      contains: Ordered headings with a one-line note under each, some phrased as questions.
+    - name: Must cover
+      contains: Key terms, facts and numbers needed, and sources to find, with nothing invented.
+    - name: Links
+      contains: Up to three of your pages to link to.
+    - name: Avoid
+      contains: Things the post should leave out.
+    - name: Success measure
+      contains: One way to tell the post worked.
+    - name: Missing
+      contains: Facts or inputs that were not given and are still needed.
 
 how_it_works:
   - title: "Find the intent"

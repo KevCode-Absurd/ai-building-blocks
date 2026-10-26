@@ -1,51 +1,126 @@
 new_slug: seller-closing-revision-assistant
-name: Seller closing revision assistant
-headline: Seller closing revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+name: Seller closing cash and escrow reviewer
+headline: Seller closing cash and escrow reviewer
+summary: Recheck seller closing cash when a statement, working capital figure, escrow claim or fee changes. See what is paid, held and owed, each counted once.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A seller proceeds-to-paid-and-retained cash reconciliation with unresolved items. Include changed inputs, source versions, branch reasons and checks still blocked. Share signed closing price bridge, same-cutoff balances, estimated and final contractual working capital, approved escrow account and unique claim ledger. Include the actual engagement fee amendment and paid retainer ledger when adviser expenses change. Supply the previous approved review and actual changed source files with dates.
-explain: |-
-  A seller proceeds-to-paid-and-retained cash reconciliation with unresolved items. Include changed inputs, source versions, branch reasons and checks still blocked.
+subhead: Give it your last approved closing review and the new documents. It finds what changed and reruns only the checks the change touches. You get an updated seller cash picture, a fee check if the fee changed, and a list of what is still unproven.
 
-  Acquisition closing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  After a deal closes, seller cash keeps moving. A revised closing statement arrives. The final working capital figure is agreed. A claim is paid from escrow. An adviser signs a fee amendment. Each change can count the same money twice. A retainer that was already paid comes off the fee again. A working capital gap is added in full after the estimate was already paid.
+
+  This seller closing cash review starts from your last approved review. It lists each source that changed, then reruns only what the change touches. It uses the Seller closing proceeds and retained cash checker for the cash picture. It uses the Deal adviser fee checker only when the fee terms changed. A new scenario never overwrites the approved numbers.
+
+  It checks arithmetic against the documents you give it. It does not read the purchase agreement for you, settle a dispute, handle tax or approve a payment. A person who knows the agreement signs off.
+
 when:
-  - You need a seller proceeds-to-paid-and-retained cash reconciliation with unresolved items. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on acquisition closing and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A revised closing statement arrives after you approved an earlier review.
+  - The final working capital figure is agreed, and you need to know who pays whom.
+  - An escrow claim is paid or a new claim is added, and the release amount needs redoing.
+  - An adviser signs a fee amendment, and you must update seller expenses without taking off the paid retainer twice.
+
+not_for:
+  - You are the buyer and want the buyer's closing cash. This reviews the seller's side only.
+  - The price bridge is not signed yet. Use the Seller closing proceeds and retained cash checker once for a first draft, and label every figure a draft.
+  - The deal used a locked-box price with no working capital peg. Use the Locked-box deal price checker.
+  - You only need the adviser fee. Use the Deal adviser fee checker.
+  - There is a dispute, a tax question or an earnout. For an earnout held in escrow, use the Earnout payout and escrow cash checker. For the rest, ask a lawyer or tax adviser.
+
 you_give:
-  - Signed closing price bridge, same-cutoff balances, estimated and final contractual working capital, approved escrow account and unique claim ledger. Include the actual engagement fee amendment and paid retainer ledger when adviser expenses change. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your last approved review and its record (optional on a first run)
+  - The signed closing price bridge with the closing cutoff date, from the closing statement
+  - Working capital for the peg, the estimate paid at close and the final figure, all on the same contract definition
+  - The escrow deposit, what was paid out, and the claim list with one ID per claim, from the escrow agent
+  - The signed fee amendment and the record of the retainer already paid (only if the adviser fee changed)
+  - The changed files, each with its date
+  - The currency, the scale (such as thousands) and the name of who signs off
+
 you_get:
-  - A seller proceeds-to-paid-and-retained cash reconciliation with unresolved items. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A list of what changed since the last review, with the source and date of each change
+  - An updated seller cash picture with what was paid at closing, what is held, what is owed back and the total expected
+  - The working capital settlement, worked out as final less estimate, with its sign and who pays
+  - The escrow split into paid out, held for claims and ready to release
+  - A fee check with the gross success fee, the retainer credit and the remaining invoice, when the fee changed
+  - A pass or fail on each double count test
+  - A MISSING list, CHECKS MISSED and a short record to paste into the next review
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Use one that can read files. Add the closing cash workflow and the fee checker from the pack too.
+  - Say if this is a first run. If not, attach your last approved review and paste its record.
+  - Attach the changed documents and the figures above. State the closing date, the currency and the scale once.
+  - Read "Changed since last review" first. Check each change against its source document.
+  - Read the double count tests. Each says pass, or names the line that fails. Fix that line and run it again.
+  - Fill every MISSING line before anyone acts. This agent pays nothing and sends nothing. For a workbook, use an AI that can build spreadsheets. In plain chat you get the same tables as text.
+
 how_it_works:
-  - title: Reconcile seller closing cash
-    text: Run the governing workflow when A revised closing statement, final working-capital determination, paid claim or signed fee amendment arrives.
-  - title: Adviser fee tier checker
-    text: If the adviser fee changed, recompute only the supported marginal tier schedule and update unpaid seller expenses using the net remaining invoice. Preserve paid retainers and prior settlement records to prevent duplicate deductions. Otherwise leave the fee branch unrun.
-output_shape: |-
-  A seller proceeds-to-paid-and-retained cash reconciliation with unresolved items. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compare with the last review
+    text: Reads the saved record if it belongs to this deal, or sets a first baseline. Lists each source that is new or changed. If nothing changed, it says so and stops.
+  - title: Rerun the seller cash workflow
+    text: Builds equity proceeds from the closing statement, settles only final less estimate for working capital, then splits escrow into paid, held and ready to release. Each step passes the next its figure, its sign and who pays.
+  - title: Run the fee check only if the fee changed
+    text: Works out the success fee in two tiers, takes off only the retainer already paid and never goes below zero. It updates unpaid seller expenses with the remaining invoice. If the fee did not change, it skips this step and says why.
+  - title: Test for double counts
+    text: Checks that each paid amount and each escrow claim appears once, that the fee is deducted once, and that the old approved figures are still shown beside the new ones.
+  - title: Save and hand back
+    text: Saves the review files and a proposed new record, and keeps the old one. Lists every MISSING line and every check that did not run.
+
+output_shape: |
+  REVIEW DATE <date>, CLOSING CUTOFF <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <source: old to new, date>
+  SELLER CASH       paid at closing <n>, held in escrow <n>, owed back <n>, total expected <n>
+                    who pays each: <buyer, seller or escrow agent>
+  WORKING CAPITAL   peg <n>, estimate <n>, final <n>, settlement <n>, <who pays whom>
+  ESCROW            deposit <n> - paid out <n> = remaining <n>
+                    held for claims <n>, ready to release <n>
+  FEE BRANCH        <ran, with reason> gross fee <n>, retainer credit <n>, remaining invoice <n>
+                    or <skipped, with reason>
+  DOUBLE COUNT TESTS  <each test: pass or fail, with the line>
+
+  RECORD FOR NEXT REVIEW  closing version, cutoff, price bridge clause IDs, paid adjustments,
+                          working capital status, escrow claim IDs, fee credit evidence
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Your last approved review and its record (optional on a first run)
+    - The signed closing price bridge, the working capital figures and the escrow claim list
+    - The files that changed, each with its date
+    - The signed fee amendment and paid retainer record, if the adviser fee changed
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Seller closing proceeds and retained cash checker and the Deal adviser fee checker, both in the agent pack
+    - A spreadsheet tool, only if you want a workbook
+  output:
+    - name: Changed since last review
+      contains: Each source that is new or changed, with its date, and the figure it moved.
+    - name: Seller cash picture
+      contains: What was paid at closing, what is held in escrow, what is owed back and the total expected, with who pays each.
+    - name: Working capital settlement
+      contains: The peg, the estimate and the final figure on one definition, the settlement as final less estimate, its sign and who pays.
+    - name: Escrow split
+      contains: The deposit, what was paid out, what is held for pending claims and what is ready to release, with each claim ID once.
+    - name: Fee check
+      contains: The gross success fee, the retainer credit and the remaining invoice. It appears only when the fee changed, otherwise it says why it was skipped.
+    - name: Double count tests
+      contains: A pass or fail for each test, with the line that fails.
+    - name: Record for next review
+      contains: The closing version, cutoff, clause IDs, paid adjustments, claim IDs and fee credit evidence, to paste into the next run.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
+
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Working-capital amounts already paid and actual escrow disbursements appear once; final settlement signs and payer are explicit. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+    how: Use the same cutoff date, currency and scale in every input and in the result.
+  - what: A new scenario
+    how: Ask for a what-if beside the approved figures. It is shown as a scenario and never replaces the approved record.
+  - what: Fee changed or not
+    how: Attach the fee amendment to run the fee check. Leave it out and the fee step is skipped and says so.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Working-capital amounts already paid and actual escrow disbursements appear once; final settlement signs and payer are explicit. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +131,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
+  - Keep the agreement's wording on who pays a negative settlement in one note and paste it in each time.
+  - Give every escrow claim one ID and keep it for life. Without stable IDs, a claim renamed in a later file looks like a new claim.
+  - After a release is approved, note the date and amount so the next run starts from the true balance.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds, recalculates and reopens a workbook, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The escrow agent's statement
+      why: Gives the real deposit and payments, which are facts and not estimates.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed closing statement and the final working capital statement, not drafts.
+    - The agreement's wording on working capital and on who pays a negative settlement.
+    - A named person who knows the agreement and will check the definitions.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Price bridge
+    meaning: The steps from the headline price to what the seller is paid, such as adding cash and taking off debt.
+  - term: Working capital true-up
+    meaning: The later payment that corrects the estimate paid at closing to the final number.
+  - term: Escrow
+    meaning: Money held by a third party after closing. It pays the buyer's claims or goes back to the seller.
+  - term: Retainer credit
+    meaning: A fee already paid up front that counts toward the final fee, so it is not charged twice.
+  - term: Closing cutoff
+    meaning: The date all balances are measured at. Every figure must use the same one.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains the difference between two records that should match.

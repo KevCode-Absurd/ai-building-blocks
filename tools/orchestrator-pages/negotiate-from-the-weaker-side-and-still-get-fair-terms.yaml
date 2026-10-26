@@ -1,6 +1,6 @@
 new_slug: negotiate-from-the-weaker-side-and-still-get-fair-terms
 name: Negotiate from the weaker side and still get fair terms
-summary: Give it the deal. Get their view, your terms, a call plan and calming lines.
+summary: Plan a negotiation when the other side holds the power. Get their view, your walk-away point, a call plan and calming lines for the talk.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It reads the other side, sets your walk-away and plans a live conversation. Give it your strongest model.
@@ -14,6 +14,11 @@ when:
   - A customer who is a third of your revenue wants to change the terms.
   - You are renewing a lease, a supply contract or a platform fee and the other side knows you need it.
   - You tend to agree too fast when someone pushes back.
+  - A big buyer or landlord has asked for a call and you want a plan first.
+not_for:
+  - "You hold the power or have equal power: use Reach a deal both sides will back."
+  - "It is a one-off purchase you will never repeat: just compare prices and ask for a discount."
+  - "You are already in a heated row with someone close to you: use the Difficult conversation repair planner."
 you_give:
   - "The deal: what is on the table, what you need and what you can give"
   - Who you are talking to and what you know about them
@@ -30,6 +35,26 @@ how_to_use:
   - Paste the deal, who you face and what no deal costs you. It maps their view and sets your terms.
   - Read the call plan aloud once. Change any line you would not say.
   - Hold the talk. Bring back what they said if you want the next round planned.
+output_sample:
+  input:
+    - "The deal: what is on the table, what you need and what you can give"
+    - Who you are talking to and what you know about them
+    - What happens to you if there is no deal
+    - Points you expect them to dispute (optional)
+  prerequisites:
+    - An AI chat that can read pasted text, such as Claude, ChatGPT or Gemini
+    - The handoff pack files, if your AI runs the steps from files
+  output:
+    - name: "Step 1: Their side"
+      contains: What they want, why they act as they do, what they fear losing and how they would explain the deal to their boss.
+    - name: "Step 2: Your terms"
+      contains: Your ask, your walk-away point, the few things you will not give and what you can give freely.
+    - name: "Step 3: Call plan"
+      contains: An opening, feeling labels, calibrated how and what questions and a question that tests whether the deal is real.
+    - name: "Step 4: Calming lines"
+      contains: A short line to say for each point you expect them to dispute, to lower the heat without giving ground.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Map their side
     text: "Writes the other side's view only: wants, reasons, fears and how they would describe the deal to their boss."

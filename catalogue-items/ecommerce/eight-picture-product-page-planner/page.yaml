@@ -1,6 +1,6 @@
 new_slug: eight-picture-product-page-planner
 name: "Eight-picture product page planner"
-summary: "Paste your product facts and photos you have. Get a plan for the eight pictures on your product page."
+summary: "Plan the eight pictures on your product page. Give it your product facts and photo list. You get a card for each picture and a gaps list."
 job: product-photos
 thinking: medium
 thinking_why: "It scores and chooses between many possible pictures, which takes some judgement."
@@ -17,6 +17,10 @@ when:
   - "You are building or rebuilding a product page."
   - "Shoppers email you questions the gallery should answer."
   - "You need a brief for a designer."
+not_for:
+  - "You want the full set of checks on your gallery: use the Product page gallery planner."
+  - "You want to check photos you already made against a gallery plan: use the Product page image checker."
+  - "You only need one main image that meets marketplace rules: read the marketplace's own main-image rules, or ask a photographer."
 
 you_give:
   - "Product facts"
@@ -34,6 +38,19 @@ how_to_use:
   - "List the photos you have, such as front, in a hand, in use."
   - "Add your proof and biggest doubt."
   - "Use the gaps list to plan your next photo session."
+output_sample:
+  input:
+    - "Your product facts: name, price, what it is, how it is used, size and what is in the box"
+    - A list of the photos you have, by job, such as front, in a hand, in use
+    - Proof you hold, such as reviews, test results or guarantee terms (optional)
+    - Your biggest doubt, in your customers' words (optional)
+  output:
+    - name: Score table
+      contains: Each shopper question scored for how often it is asked, how much a picture helps and whether you hold proof.
+    - name: Picture cards
+      contains: One card per picture in slot order with the question, one-line message, real photo to use, headline words and source.
+    - name: GAPS
+      contains: Each missing photo or fact and the picture that waits on it.
 
 how_it_works:
   - title: "Name the kind"

@@ -1,0 +1,147 @@
+name: WeChat Mini Program Developer agent
+summary: Plan a WeChat Mini Program from your brief, with pages, login, payment, size limits and review checks, plus draft code to test in WeChat DevTools.
+headline: WeChat Mini Program Developer agent
+subhead: Tell it what your Mini Program should do and which WeChat features you need. It plans the pages, login, payment, sharing and size limits, then lists what WeChat review may check. You get a plan and draft code to test yourself.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A WeChat Mini Program is not a web page in a small window. It runs inside
+  WeChat, cannot touch the page directly, may only call servers you have
+  registered, and must pass a review before people can open it. A Mini Program
+  developer plan has to start from those rules, or the code you get back will
+  not run or will not pass review.
+
+
+  This agent works in that order. It first sets the rules your app must fit,
+  such as HTTPS, registered server addresses, package size and user consent for
+  private data. Then it lays out pages, login, payment, sharing and messages.
+  It drafts only the code you ask for and marks it as not run.
+
+
+  A general coding AI will often hand you web code or a generic app. This agent
+  keeps the plan inside WeChat's limits and ends with a list to check before you
+  submit. It is a role profile from Agency Agents, shared under MIT. The profile
+  lists goals such as fast start-up and a high first-time review pass rate.
+  Those are targets, not results from AI Blocks. WeChat changes its rules, so
+  check limits against its current documents.
+when:
+  - You are starting a Mini Program for a shop, a booking service or a members club and want the page plan first.
+  - Your app needs WeChat login, WeChat Pay or subscription messages and you want the flow laid out step by step.
+  - Your main package is close to the size limit and you need to know what to move into subpackages.
+  - You want a check against what WeChat review looks for before you submit.
+not_for:
+  - You want a web app or a phone app for iPhone and Android. Use the Frontend Developer agent or the Mobile App Builder agent.
+  - You want posts, menus and content for a WeChat Official Account. Use the WeChat Official Account Manager agent.
+  - You have existing code and want it reviewed line by line. Use the Code Reviewer agent.
+you_give:
+  - What the Mini Program should do and who uses it, in a few lines
+  - Which WeChat features you need, such as login, payment, sharing, subscription messages or location
+  - The address and main calls of your own server, if one exists (optional)
+  - Your project files, such as app.json and the pages folder (optional)
+  - Your launch date and the phones your users have (optional)
+you_get:
+  - A page and navigation plan, with the main package and subpackages
+  - A plan for login, payment, sharing and messages, step by step
+  - A size and speed plan with the limits that matter for your app
+  - Draft code for the parts you ask for, marked as not run
+  - A checklist to clear before you submit for WeChat review
+  - Your assumptions and the checks left for you to run
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your brief. Say what the app does, who uses it and which WeChat features you need. Attach app.json and other project files if you have them.
+  - Type "Plan this Mini Program and draft the login and payment code." Your AI asks once for anything missing.
+  - Read the assumptions first. Correct any that are wrong before you trust the plan.
+  - Test the draft code in WeChat DevTools, then on a real phone. Your AI cannot run it for you.
+  - Check the size, server and privacy items against WeChat's current documents. Then submit for review yourself.
+how_it_works:
+  - title: Set the rules first
+    text: It lists the limits your app must fit, such as HTTPS, registered server addresses, package size and consent for private data. It marks any it cannot confirm.
+  - title: Plan pages and navigation
+    text: It lays out app.json, the tab bar, pages and which features go in subpackages so the main package stays small.
+  - title: Plan the WeChat features
+    text: It maps login, payment, sharing and subscription messages. Your server creates and signs the order. The Mini Program only calls payment.
+  - title: Plan speed and size
+    text: It names the habits that slow a Mini Program, such as too many setData calls and large images, and what to do about each.
+  - title: Draft code and a review checklist
+    text: It writes the code you asked for, labelled not run, then lists what to check before you submit.
+output_shape: |-
+  SCOPE AND ASSUMPTIONS
+    <what the app does> | <WeChat features needed> | <assumptions>
+
+  PAGES AND NAVIGATION
+    <page> | <purpose> | <main package or subpackage>
+
+  WECHAT FEATURES
+    <login, payment, sharing, messages> | <steps> | <what your server does> | <what the app does>
+
+  SIZE AND SPEED PLAN
+    <risk> | <why it matters> | <fix>
+
+  DRAFT CODE (NOT RUN)
+    <file name> | <what it does>
+
+  BEFORE YOU SUBMIT
+    <check> | <where to confirm it> | <done or not done>
+
+  CHECKS LEFT AND NEXT STEP
+    <what you must test> | <what to do next>
+output_sample:
+  input:
+    - What your Mini Program should do and who uses it
+    - Which WeChat features you need, such as login, payment or sharing
+    - Your server address and project files (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - WeChat DevTools on your computer to test the draft code
+    - A WeChat Mini Program account, which you register yourself
+  output:
+    - name: Scope and assumptions
+      contains: What the app does, the WeChat features it needs and every assumption the plan rests on.
+    - name: Pages and navigation
+      contains: Each page, what it is for, and whether it sits in the main package or a subpackage.
+    - name: WeChat features
+      contains: Login, payment, sharing and message steps, split into what your server does and what the app does.
+    - name: Size and speed plan
+      contains: The risks to start-up time and package size, each with a fix.
+    - name: Draft code
+      contains: Code for the parts you asked for, clearly marked as not run.
+    - name: Before you submit
+      contains: A checklist of server, HTTPS, privacy and permission items to clear before WeChat review.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your app.json and page files and point to the exact lines to change.
+  inputs:
+    - A list of your server addresses, so the server items can be checked.
+    - Screenshots of the pages you plan, so the page plan matches your design.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Features in scope
+    how: Name the one or two WeChat features you need first, such as login and payment, so the plan stays short.
+  - what: Draft code
+    how: Say which files you want drafted, such as a request wrapper, or ask for none and take the plan only.
+improve:
+  - Keep the review notes WeChat sends you and paste them in next time, so the plan fixes the real reasons.
+terms:
+  - term: Mini Program
+    meaning: A small app that opens inside WeChat. People find it by search, a shared link or a QR code.
+  - term: Subpackage
+    meaning: A part of the app that loads only when needed, so the main download stays small.
+  - term: Server address whitelist
+    meaning: The list of server addresses you register with WeChat. The app can only call servers on that list.
+  - term: setData
+    meaning: The call that updates what a page shows. Many large calls slow the app down.
+  - term: WeChat DevTools
+    meaning: WeChat's tool for building and testing Mini Programs on your computer.
+  - term: Subscription message
+    meaning: A message WeChat lets you send to a user who has agreed to receive it.

@@ -16,6 +16,29 @@ use_cases:
   - "Explain why an income shortfall cannot always be solved by tiny spending cuts"
   - "Review a career course's income claims before paying"
   - "Write a plain-language list of unanswered questions in a complex offer"
+not_for:
+  - "You want an investment picked or a legal, tax or personal money decision made: see a qualified adviser or your regulator's guidance."
+  - "You want a plan to build saving habits in a family: use Beth Kobliner for practical family money education."
+  - "You want to see how your own judgment goes wrong when you choose: use Annie Duke for decision quality, outcomes and when to quit."
+output_sample:
+  input:
+    - The money claim, course page or adviser offer, in its exact words
+    - What you must pay or already have to take part
+    - Any numbers in the offer, marked as fact or forecast if you know
+    - For a household issue, your shortfall and what changed in costs or income (optional)
+  output:
+    - name: Claim and evidence table
+      contains: The promised result, price, conditions and the evidence behind each key claim, with facts and forecasts marked apart.
+    - name: Assumed resources
+      contains: The income, spare cash, time or stability the offer depends on, compared with your own situation.
+    - name: Incentive map
+      contains: Fees, referrals or product sales found in what is disclosed, with missing pay details marked unknown.
+    - name: Questions to ask
+      contains: Plain questions for the provider or adviser, with space to write their answers.
+    - name: Household arithmetic summary
+      contains: For a budget argument, the shortfall, the cost rise and the disputed spending on one sheet.
+    - name: Next inquiry and limits
+      contains: What is supported, what cannot be concluded, and where to get legal, tax or suitability help.
 seats:
   - {seat: "Financial advice, incentives and household reality", asks: "What is being promised, and who benefits if you believe it?"}
   - {seat: "Structural costs and practical agency", asks: "Which part can a household change, and which part needs another response?"}

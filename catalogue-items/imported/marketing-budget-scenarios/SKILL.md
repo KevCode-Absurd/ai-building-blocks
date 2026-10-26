@@ -13,6 +13,27 @@ Use this skill when analyzing marketing budgets, forecasting outcomes, fitting H
 
 This skill provides a mathematically rigorous approach to marketing budget allocation, replacing flat multiplier forecasting with methods that account for diminishing returns and variance.
 
+## What you need first
+
+- Past spend by channel and period (weekly or monthly), and the result per channel (for example conversions or leads).
+- Funnel counts per period, and the step-to-step rates (for example leads to qualified leads).
+- A marginal return (beta) and an error size (sigma) per channel. If the person does not have them, estimate them from the history and say that you did. With only two or three periods, say the curves are rough guesses.
+- The new total budget and the period it covers, in the same unit as the history (a monthly budget for monthly history).
+- An AI that can run Python with numpy. Without code running, explain the method and the inputs, and do not state any forecast number.
+
+## If something is missing
+
+Ask once. If it is still missing, write `MISSING: <what>` and stop that step. Never invent spend, results, betas or sigmas. A blank spend cell stays a gap, never zero.
+
+## What you hand back
+
+1. **Inputs used**: periods covered, channels, gaps found, and which betas and sigmas were supplied or estimated.
+2. **Fitted curves**: one line per channel with the asymptote, the half-saturation point and the historical mean spend.
+3. **Allocation**: spend per channel for the new budget, from the marginal-return rule (never all in one channel).
+4. **Forecast**: p10 (cautious), mean and p90 (optimistic) for total results, then the funnel counts at each stage.
+5. **Backtest**: error (RMSE or MAPE) on held-out periods. `scripts/run-budget-scenario.py` does not backtest. Compute it yourself from the history, or write `BACKTEST NOT RUN: <reason>`.
+6. **Caveats**: forecasts from past correlation, not proof that more spend causes more results. Say it in the result, not only here.
+
 ## Core concepts & workflow
 
 1. **Calibrate**: Ingest historical weekly/monthly spend by channel alongside funnel outcomes.

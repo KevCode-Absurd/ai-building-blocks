@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies a few clear rules to timing and replies.
 new_slug: review-request-and-reply-planner
 name: Review request and reply planner
-summary: Tell it about your reviews. Get when to ask, how to word the request,
-  and how to answer a bad review.
+summary: Plan when to ask for reviews and how to reply to a bad one. Get a request timing, first question and reply templates for your review requests.
 job: help-customers
 headline: Review request and reply planner
-subhead: A plan for getting more reviews and replying to bad ones in a way that
-  wins over everyone watching. It rests on a few findings that go against common
-  habit.
+subhead: A plan for getting more reviews and replying to bad ones in a way that wins over everyone watching. It rests on a few findings that go against common habit.
 explain: |
   A plan for getting more reviews and replying to bad ones in a way that wins over everyone watching. It rests on a few findings that go against common habit.
 
@@ -18,6 +15,10 @@ when:
   - You got a harsh 1-star review and wonder whether to try to remove it.
   - Your average is 4.9 and you worry it looks fake.
   - A launch needs a healthy set of early reviews.
+not_for:
+  - "You want customers to refer friends: use a referral plan or a simple share-a-link offer, not this planner."
+  - "You want help with returns, packaging or loyalty perks: set those up as a separate after-sale step, since this only covers reviews and complaints."
+  - "You want to hide or remove a bad review: this plan says to leave it and reply, so ask the review site's support if a review breaks its rules."
 you_give:
   - Your product and how long it takes to judge
   - Your current request timing and wording
@@ -29,7 +30,22 @@ you_get:
   - A reply to a bad review
   - Advice on handling ratings and complaints
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - Your product and how long it takes to judge
+    - Your current request timing and wording
+    - Your average rating
+    - A review or public complaint to answer (optional)
+  output:
+    - name: Solicitation plan
+      contains: The trigger, the day offset, the first question and the follow-ups for your review request.
+    - name: Rating policy
+      contains: What to leave alone on your average, and reply wording for a negative review most buyers can ignore.
+    - name: Public complaint reply
+      contains: A short, warm reply that moves the talk to a private channel.
+    - name: Rude complaint reply
+      contains: A reply that uses humor about the situation, never about the person.
+    - name: Positive review reply
+      contains: A short thank-you reply you can reuse for good reviews.

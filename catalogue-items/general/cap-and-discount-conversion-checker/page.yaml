@@ -1,7 +1,7 @@
 new_slug: cap-and-discount-conversion-checker
 name: Cap and discount conversion checker
 headline: Cap and discount conversion checker
-summary: Compare actual cap and discount conversion prices for a lower-of instrument.
+summary: Check which conversion price applies, the cap or the discount, and see how many shares a lower-of note converts into versus round pricing.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need selected price, conversion shares and extra shares versus round pricing.
   - You work on venture financing and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "Your note has no signed lower-of clause: ask a lawyer or your finance lead which price applies."
+  - "You need to read what the contract means: get legal review, because this only does the arithmetic."
+  - "You need the cap price worked out from a full capitalization table: use your deal lawyer or a cap table tool."
 you_give:
   - Signed instrument explicitly granting lower-of pricing, approved cap conversion price, round price, discount and converting balance.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,32 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your signed note or SAFE that grants lower-of pricing
+    - The approved cap conversion price
+    - The round price and the discount
+    - The balance that converts
+    - Your reporting date and currency
+  prerequisites:
+    - An AI that can read your files
+    - Node.js 20 or later, only if you want to run the bundled calculation
+    - A spreadsheet tool, only if you want a workbook
+  output:
+    - name: Selected price
+      contains: The lower of the cap price and the discounted round price, with the branch that applies.
+    - name: Conversion shares
+      contains: The converting balance divided by the selected price.
+    - name: Extra shares versus round pricing
+      contains: How many more shares the selected price gives than the plain round price.
+    - name: Inputs and assumptions
+      contains: Each input with its source, date, currency and scale.
+    - name: Reconciliations
+      contains: Checks that the prices apply to the same security and tie back to the inputs.
+    - name: MISSING lines
+      contains: Inputs the AI could not find, left open and never guessed.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 how_it_works:
   - title: 1. Confirm lower-of election and compute cap price separately using its actual capitalization definition
     text: Confirm lower-of election and compute cap price separately using its actual capitalization definition.

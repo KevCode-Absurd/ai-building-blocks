@@ -11,6 +11,36 @@ license_source: https://github.com/jonathimer/devmarketing-skills/blob/main/LICE
 ---
 
 # Free Tier Strategy
+
+## Working in a chat (added by AI Blocks)
+
+The advice below is the original author's and is unchanged. This section tells you how to run it in a chat.
+
+**What you need.** Ask once, in one message, for anything you do not have:
+- What the product does and who uses it (hobbyists, startups, large companies).
+- How it is sold: self-serve or sales-led.
+- What one free user costs per month. If unknown, ask for a best guess and mark it as a guess.
+- Paid plan names and prices.
+
+The "Before You Start" step points to a separate audience skill in the author's own repository. You do not need it. Ask the questions above instead.
+
+If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent costs, prices or usage numbers. Without a cost per free user, give the model pick and the feature split, and leave the limit amounts open.
+
+**What you hand back**, in this order:
+1. Model pick (free trial, free tier, freemium or open core) with the reason, tied to how the product is sold.
+2. Limits: for each, the limit type, the free amount, why it sits there and the point where a warning shows.
+3. Free feature list and gated feature list, with the need that triggers each gate.
+4. Upgrade prompts: when each shows, what it says, and the options offered (not only "upgrade").
+5. Resentment check: test the plan against hidden slowdowns, features pulled back, surprise limits, rude upgrade text and weak free support.
+6. Pricing page outline: the limits table and the answers to the four standard questions.
+7. What to watch after launch: how many free users reach each limit, and how many of them upgrade.
+8. `MISSING:` list.
+
+**Rules.**
+- The skill is written for developer tools. Say so when the product is not one, and drop examples that do not fit.
+- Company examples (Vercel, Supabase, PlanetScale, GitHub, Stripe, Cloudflare, MongoDB Atlas, Algolia) and their limits and prices come from the skill's date and may have changed. Do not quote them as current. Tell the person to check each vendor's pricing page.
+- Do not promise that a design will lift conversion. Suggest a small test.
+- This skill needs no code, files or paid tools.
 ## When to Use
 
 Use this skill when you need design free tiers that convert to paid without creating resentment or abuse. Trigger phrases: free tier design, freemium model, free trial strategy, free tier limits, developer free plan, open source commercial, feature gating, upgrade triggers, free tier conversion.

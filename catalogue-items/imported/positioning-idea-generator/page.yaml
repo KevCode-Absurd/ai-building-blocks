@@ -2,34 +2,93 @@ thinking: low
 thinking_why: It brainstorms options from your description.
 new_slug: positioning-idea-generator
 name: Positioning idea generator
-summary: Give it your product and rivals. Get several ways to stand apart, each
-  with a positioning statement and a reason.
+summary: Get five ways to position your product against rivals, each with a one-line positioning statement, supporting messages and a reason.
 job: plan-strategy
 headline: Positioning idea generator
-subhead: Five different ways to position your product, each one aimed at a gap
-  your rivals leave open. Every idea comes with a positioning statement and the
-  reasoning behind it.
+subhead: Give it your product, your audience and your rivals. It maps how five competitors present themselves, finds gaps they leave open and writes five distinct positioning ideas. Each comes with a positioning statement, the reasoning, supporting messages and the strength behind it.
 explain: |
-  Five different ways to position your product, each one aimed at a gap your rivals leave open. Every idea comes with a positioning statement and the reasoning behind it.
+  When your product sounds like three others, buyers pick on price. This generator helps you find a different angle. It lists your top five competitors and notes how each presents itself, who it targets and what it stresses. Then it looks for what they ignore or play down.
 
-  First the skill lists your top five competitors and notes how each presents itself, who it targets and what it stresses. Then it looks for what they ignore or downplay. From those gaps it generates five distinct angles that suit the people you want to reach and highlight strengths competitors skip. You can pick one to develop or combine parts. It works for new launches and for repositioning an older product.
+  From those gaps it writes five different positioning ideas. Each one aims at a group of buyers and rests on something your product really does. You get a one-sentence positioning statement for each, the reason it would land, supporting messages and the advantage that backs the claim.
+
+  Use it to brainstorm, not to decide. You pick one or blend parts. It works for a new launch and for repositioning an older product. Competitor details come from what the AI knows or what you paste, so check them before you rely on them.
 when:
   - Your product sounds just like three competitors.
-  - You are about to write a new homepage headline.
+  - You are about to write a new homepage headline and want options first.
   - You want to test which angle fits a new audience.
   - A rival changed its message and you need to respond.
+not_for:
+  - You want one tested position with buyer reasons and a test plan. Use the SaaS market position adviser.
+  - You want to see rivals on a map and find one open corner. Use the Positioning grid builder.
+  - You want a full positioning plan with an ideal buyer, battlecards and launch steps. Use the Go-to-market positioning planner.
 you_give:
-  - Product description
-  - Target audience
-  - Names of competitors (optional)
-  - Market or category
+  - What your product does and what makes it different
+  - Who you want to reach, and what they care about
+  - The market or category you compete in
+  - Your main competitors (optional)
+  - Your current positioning and what is not working (optional)
 you_get:
-  - Summary of competitor positions
-  - Five positioning ideas
-  - A positioning statement for each
-  - Reasoning on the gap each one claims
+  - A short snapshot of five competitors and their positions
+  - Five distinct positioning ideas
+  - A one-sentence positioning statement for each idea
+  - The reason each idea would land, with supporting messages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
+  - Describe your product, your audience and your market. Name your competitors if you can, so the AI does not guess.
+  - Read the competitor snapshot first. Correct anything wrong or out of date before you read the ideas.
+  - Read the five ideas. Mark two you like, and ask the AI to blend or sharpen them.
+  - Check each claim against your product. Cut any claim you cannot prove with a feature, a number or a customer.
+  - Test the best two lines with real buyers before you change your site. This needs no code and no paid tools.
+how_it_works:
+  - title: Map five competitors
+    text: It notes each rival's main angle, target audience, key points and the gaps they leave open.
+  - title: Brainstorm five ideas
+    text: It writes five different angles that suit your audience, lean on strengths rivals play down and open space nobody holds.
+  - title: Write the statements
+    text: For each idea, it writes one sentence in the form "the product is the only category for audience who want benefit".
+  - title: Give the reasoning
+    text: It explains why each idea would land, adds supporting messages and names the advantage behind it.
+output_shape: |
+  POSITIONING IDEAS: <product>
+  Competitors: <five rows: name, angle, audience, what they stress, gap>
+  Idea 1: <name of the angle>
+    Statement: <one sentence>
+    Why it lands: <reason>
+    Supporting messages: <2 to 3 lines>
+    Advantage behind it: <what you do that makes it true>
+  Ideas 2 to 5: <same layout>
+  MISSING: <facts you did not give>
+output_sample:
+  input:
+    - What your product does and what makes it different
+    - Who you want to reach, and what they care about
+    - Your market and main competitors (optional)
+    - Your current positioning (optional)
+  output:
+    - name: Competitor snapshot
+      contains: Five rivals with their main angle, audience, key points and the gaps they leave.
+    - name: Five positioning ideas
+      contains: Five distinct angles, each aimed at a gap rivals ignore.
+    - name: Positioning statements
+      contains: One sentence per idea that says who it is for and why it is different.
+    - name: Strategic rationale
+      contains: Why each idea would land with your audience and set you apart.
+    - name: Supporting messages
+      contains: Short lines that back up each positioning idea.
+    - name: Competitive advantage
+      contains: The thing you do that makes each claim true.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can brainstorm angles. One with web access can check what competitors say today.
+  inputs:
+    - Competitor homepage text, pasted in
+    - Quotes from customers or reviews that show why they chose you
+    - Your pricing and main features
+terms:
+  - term: Positioning
+    meaning: The place your product holds in a buyer's mind next to the other options.
+  - term: Positioning statement
+    meaning: One sentence that says who the product is for and why it is different.
+  - term: Gap
+    meaning: Something buyers want that rivals do not stress.

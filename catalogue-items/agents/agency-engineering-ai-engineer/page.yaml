@@ -1,0 +1,149 @@
+name: AI Engineer agent
+summary: Get a plan to add an AI feature to your product, from data check to launch, with bias tests, monitoring and a retraining trigger.
+headline: AI Engineer agent
+subhead: Describe the AI feature you want and the data you have. It checks the data, compares ways to build it, and plans how to test, launch and watch it. You get a written plan, not code.
+job: build-software
+thinking: high
+thinking_why: It weighs build options against your data, limits and risks, and plans tests and monitoring. Use a model that can compare choices and say what it does not know.
+explain: >-
+  Many AI features fail after the demo. The data is thin, nobody defined what
+  "good" means, or the model drifts a few months after launch. This AI engineer
+  agent plans for that from the start. It begins with your goal and your data,
+  then compares options: a hosted AI model, a model you train, or plain rules.
+
+
+  It plans the whole life of the feature. That covers how to measure quality,
+  how to test for unfair results across groups, how to serve answers to users,
+  and what to watch once it is live. It also sets the trigger for retraining.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The method is
+  the original author's. AI Blocks adds an intake, a fixed answer layout and
+  review rules. The profile's accuracy and speed targets are examples, not
+  promises. Your own limits replace them.
+when:
+  - You want to add a recommendation, classifier, search or text feature to your product and don't know where to start.
+  - A prototype works on a few examples and you need a plan to run it for real users.
+  - You must choose between calling a hosted AI model and training your own.
+  - Someone asks how you will test an AI feature for bias, privacy and drift.
+not_for:
+  - You want a chatbot or app built today. Use the AI app and chatbot builder.
+  - Your feature answers questions from your own documents. Use the RAG Pipeline Engineer agent or the RAG pipeline designer.
+  - You are training or tuning a large language model. Use the LLM Post-Training Engineer agent.
+  - Your problem is moving and cleaning data, not the AI itself. Use the Data Engineer agent.
+you_give:
+  - The feature you want, in one or two sentences, and who will use it.
+  - What data you have, where it lives and roughly how much (a short description is enough).
+  - Your limits, such as response time, monthly budget and where the data may be stored.
+  - What goes wrong if the AI is wrong, such as a wrong tag or a wrong decision about a person.
+  - Your current setup, such as your cloud and the languages your team uses (optional).
+you_get:
+  - A one-line measure of success and the numbers that will show it.
+  - A data check that lists what you have, what is missing and any privacy concerns.
+  - A comparison of two or three ways to build it, with one recommended and why.
+  - A test plan that covers quality, fairness across groups and a live comparison.
+  - A launch plan for how the feature answers users, with versioning and a way to roll back.
+  - A watch plan with drift, speed and cost alerts, and what should trigger retraining.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe the feature, your data, your limits and the cost of a wrong answer. Attach any notes on your current setup.
+  - Say "Plan this AI feature." Your AI asks once for anything missing.
+  - Read the data check and the option comparison first. Make sure the recommended option fits your budget and skills.
+  - Share the plan with the engineer who will build it. It does not train a model, run code or deploy anything.
+  - Replace every number marked ASSUMED with your own before you commit to a launch date.
+how_it_works:
+  - title: Pin down the goal and the data
+    text: It restates the feature and the user, asks what good looks like, and checks what data exists, how clean it is and what is private.
+  - title: Compare ways to build it
+    text: It sets a hosted model, a model you train and a rules-only version side by side on effort, cost, speed and risk.
+  - title: Plan how to measure it
+    text: It picks the quality measures, a test set, bias checks across groups and a live comparison against what you do today.
+  - title: Plan the launch
+    text: It chooses real-time, batch, streaming or on-device serving. It adds sign-in, rate limits, model versions and scaling.
+  - title: Plan the watching
+    text: It lists alerts for drift, slow answers, bad data and cost, and a trigger for retraining.
+  - title: Review safety and privacy
+    text: It checks bias, privacy, harmful output and human review, and says what a qualified person must sign off.
+output_shape: |-
+  GOAL AND SUCCESS MEASURE
+    <feature> | <user> | <what good looks like, with a number marked ASSUMED if you gave none>
+
+  DATA CHECK
+    <data source> | <what it holds> | <gaps> | <privacy note>
+
+  OPTIONS
+    <hosted model, own model or rules> | <effort> | <cost drivers> | <risks> | <recommended or not, with the reason>
+
+  TEST PLAN
+    <quality measure> | <test set> | <bias check by group> | <live comparison>
+
+  LAUNCH PLAN
+    <serving style> | <sign-in and limits> | <versioning> | <rollback>
+
+  WATCH PLAN
+    <signal> | <alert level> | <action> | <retraining trigger>
+
+  SAFETY AND PRIVACY REVIEW
+    <risk> | <control> | <who must approve>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - The AI feature you want and who will use it
+    - A short description of your data, where it lives and how much there is
+    - Your limits, such as response time, budget and where data may be stored
+    - What goes wrong if the AI is wrong
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - An engineer to build and launch the plan, because the agent writes a plan and runs nothing
+  output:
+    - name: Goal and success measure
+      contains: The feature in one line and the numbers that will show it works, with any assumed number marked.
+    - name: Data check
+      contains: Each data source, what it holds, what is missing and any privacy concern.
+    - name: Options
+      contains: A hosted model, your own model and a rules-only version compared, with one recommended.
+    - name: Test plan
+      contains: Quality measures, a test set, bias checks across groups and a live comparison.
+    - name: Launch plan
+      contains: How the feature serves answers, with sign-in, rate limits, versions and a rollback.
+    - name: Watch plan
+      contains: Alerts for drift, speed, data quality and cost, and the trigger for retraining.
+    - name: Safety and privacy review
+      contains: Bias, privacy and harm risks, the control for each and who must approve.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can compare options and write the plan. Attach notes or a data sample if you can.
+  inputs:
+    - A sample of your data with private details removed.
+    - What you do today for this task, so the plan can compare against it.
+    - Your monthly budget for the feature.
+terms:
+  - term: Model drift
+    meaning: A model gets worse over time because real data changes from the data it learned on.
+  - term: Inference
+    meaning: Using a trained model to produce an answer for one request.
+  - term: Real-time, batch and streaming
+    meaning: Answering one request at once, processing a big pile later, or processing events as they arrive.
+  - term: MLOps
+    meaning: The upkeep work for a model in use, such as versions, monitoring and retraining.
+  - term: Bias check
+    meaning: A test of whether results are worse for some groups of people than others.
+  - term: A/B test
+    meaning: A live comparison where some users get the new feature and some do not.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Build style
+    how: Say if you want a hosted model only, or open to training your own. That narrows the options.
+  - what: People affected
+    how: Say if the feature decides anything about people, such as hiring or credit. It then adds stricter fairness and review steps.
+improve:
+  - Keep your corrected limits and data notes with your brief, and reuse them in the next run.

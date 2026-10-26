@@ -1,6 +1,6 @@
 new_slug: google-ads-scale-gate-checker
 name: "Google Ads scale gate checker"
-summary: "Give it your account facts. Get pass or fail on five gates and a score out of 100."
+summary: "Check your Google Ads account before you raise spend. Get pass or fail on five gates, a score out of 100 and a go or wait call."
 job: run-google-ads
 thinking: medium
 thinking_why: "It checks facts against fixed gates and adds up points, so a mid-size model does it well."
@@ -17,6 +17,10 @@ when:
   - You want to double your Google budget and are not sure the account can take it.
   - ROAS dropped after your last budget increase and you want to know why.
   - An agency or teammate asks for more budget and you want a clear yes or wait.
+not_for:
+  - Your account is brand new with no sales yet. Wait for about 50 conversions a month, then run the check.
+  - You spend over $500K a month. The gates were written for $50K to $500K, so ask a Google Ads specialist.
+  - You want to find out why a campaign is weak. Review the offer, ad copy and creative by hand first, as budget is rarely the cause.
 
 you_give:
   - Your feed health report, or counts of disapproved products and warnings
@@ -35,6 +39,28 @@ how_to_use:
   - Add your break-even ROAS. If you do not have it, work it out first with the break-even calculator.
   - Fix every failed gate in the order it lists, then run the check again.
   - Raise spend only in the step size it gives you, and wait the days it says between steps.
+output_sample:
+  input:
+    - Your feed health report, or counts of disapproved products and warnings
+    - How purchase tracking is set up
+    - Whether brand and non-brand run in separate campaigns
+    - Creative counts and conversions per month by campaign (optional)
+    - Your break-even ROAS and planned budget change (optional)
+  output:
+    - name: Gate results
+      contains: Pass, fail or unknown for feed, tracking, structure, creative and bid maturity, each with its evidence.
+    - name: ROAS vs break-even
+      contains: Your ROAS shown next to your break-even, with a pass, fail or unknown.
+    - name: Stepped plan
+      contains: Whether your plan raises spend in small steps, and what the plan says.
+    - name: Score
+      contains: A score out of 100 with the sum shown. Unknown items count as zero.
+    - name: Call
+      contains: A go or wait call, with a safe step size and days between steps.
+    - name: Fix list
+      contains: The fixes in gate order.
+    - name: Not checked and missing
+      contains: Any gate it could not check, and what it needs to check it.
 
 how_it_works:
   - title: Checks the feed

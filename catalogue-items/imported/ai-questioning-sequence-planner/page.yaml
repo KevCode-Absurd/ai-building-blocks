@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It plans follow-up questions that test the chatbot answers.
 new_slug: ai-questioning-sequence-planner
 name: AI questioning sequence planner
-summary: Give it a topic. Get rounds of questions students put to a chatbot, to
-  see if it gives in or truly updates.
+summary: Plan a chatbot questioning exercise for your class. Give it a topic and year group. You get rounds of questions that show if the AI updates or caves.
 job: teach-and-train
 headline: AI questioning sequence planner
-subhead: Rounds of questions your students can put to a chatbot, built to show
-  whether it truly changes its answer or just gives in to pressure.
+subhead: Rounds of questions your students can put to a chatbot, built to show whether it truly changes its answer or just gives in to pressure.
 explain: |
   Rounds of questions your students can put to a chatbot, built to show whether it truly changes its answer or just gives in to pressure. It turns a vague worry about AI agreeing too easily into a class exercise.
 
@@ -17,6 +15,10 @@ when:
   - Students trust chatbot answers without testing them.
   - You need a question set on a topic from your own subject.
   - You want a debrief guide for pairs or the whole class.
+not_for:
+  - "You want a general AI literacy overview with no claim to test: use a source-evaluation task instead."
+  - "You need to write questions for a topic with no AI answer to probe: use the socratic-questioning-sequence-generator."
+  - "You want to grade student essays or work: use your own marking guide or a rubric."
 you_give:
   - The claim or topic to probe
   - Year group and how familiar students are with questioning
@@ -29,7 +31,29 @@ you_get:
   - A guide to real updates versus caving in
   - Facilitation notes and a debrief guide
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Give your AI the claim to test and your students' year group. Add the subject and number of rounds if you like.
+  - Read the plan. Check that each round's question suits your class.
+  - Have students ask the chatbot each round's question. They log every answer in the drift tracker.
+  - Use the capitulation guide to sort real updates from giving in.
+  - Hold the debrief with the debrief guide.
+output_sample:
+  input:
+    - The AI claim or answer you want students to test
+    - Your students' year group and how much they know about Socratic questioning
+    - Your subject area (optional)
+    - Number of rounds (optional)
+    - "How findings will be shared: alone, in pairs or as a class (optional)"
+  output:
+    - name: Round Structure Overview
+      contains: A short map of the rounds, so you can see how the questions build.
+    - name: Question Sequence
+      contains: Each round's question type, its purpose and the kind of reply to expect from the AI.
+    - name: Answer Drift Tracker
+      contains: A way for students to record how the AI's answer shifts from round to round.
+    - name: Capitulation Taxonomy
+      contains: A guide to tell a real update backed by new reasoning from simply giving in.
+    - name: Facilitation Notes
+      contains: Tips for you on running the exercise with your class.
+    - name: Debrief Guide
+      contains: Questions to help pairs or the whole class talk through what they found.

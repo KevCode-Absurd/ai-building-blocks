@@ -1,6 +1,6 @@
 new_slug: get-a-late-invoice-paid-and-keep-the-customer
 name: Get a late invoice paid and keep the customer
-summary: Give it the late invoice. Get a warm reminder, a range they can meet and a firm follow-up.
+summary: Chase a late invoice without losing the customer. Give it the invoice facts. You get a warm reminder, terms they can meet and a firm follow-up.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It judges what a customer can pay and writes letters that touch a relationship. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - An invoice is 30 days late and the customer has gone quiet.
   - A good customer has hit a rough patch and you want to be paid without losing them.
   - Your reminders either sound like threats or like apologies.
+not_for:
+  - "The invoice is in dispute, or the customer says the work was wrong: use the Turn a dispute into a checked demand letter draft workflow."
+  - "You have not billed the customer yet: send the invoice first, with a plain note of the due date."
+  - "You want to sue or hand the debt to a collector: talk to a lawyer or a debt collection service."
 you_give:
   - "The invoice facts: amount, date, what it was for, any part paid"
   - Your history with the customer and what they have said about the delay
@@ -29,6 +33,21 @@ how_to_use:
   - Paste the invoice facts and your history with the customer. It writes the warm reminder.
   - Send it. If nothing arrives in the agreed days, paste what you know of their means.
   - Send the proposed terms. If still nothing, send the firm follow-up.
+output_sample:
+  input:
+    - "The invoice facts: amount, date, what it was for, any part paid"
+    - Your history with the customer and what they have said about the delay
+    - What you know of their situation and means
+    - "Your own limits: how long you can wait, what plan or discount you would accept"
+  output:
+    - name: "Step 1: warm reminder"
+      contains: A subject line and a letter that assumes good faith, shows how to pay and gives a reason to pay now.
+    - name: "Step 2: what they can pay"
+      contains: The customer's situation, a realistic range and date, and proposed terms such as a plan or part payment.
+    - name: "Step 3: firm follow-up"
+      contains: A letter with the facts, the terms, the plain consequence and an open door.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the warm reminder
     text: Writes a warm reminder that assumes good faith, makes paying easy and gives a reason to pay now.

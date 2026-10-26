@@ -1,6 +1,6 @@
 slug: reversible-decision-sorter
 name: "Reversible decision sorter"
-summary: "Paste a choice you're stuck on. Get it sorted as a one-way or two-way door, with the review it needs."
+summary: Sort a stuck decision as a one-way or two-way door. Get the review it needs, plus an owner, a small trial and a review date.
 category: general
 type: skill
 role: make
@@ -15,3 +15,5 @@ version: 1.0.0
 minds: [jeff-bezos]
 credits:
   - {title: "2015 Letter to Shareholders", by: "Jeff Bezos, Amazon", used: "Sorting decisions by whether they can be undone, and matching the speed and weight of the process to the answer"}
+needs_mode: manual
+next: [decision-tripwire-planner, plan-inversion-checker, informed-captain-decisions]

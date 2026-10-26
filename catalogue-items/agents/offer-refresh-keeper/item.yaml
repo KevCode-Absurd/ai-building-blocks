@@ -17,14 +17,14 @@ outputs:
   - {type: audit_report}
 uses: [store-offer-picker, offer-profit-per-session-checker, order-threshold-planner, discount-impact-checker, offer-checklist-reviewer, commodity-trap-checker, honest-urgency-planner, offer-test-planner]
 steps:
-  - {uses: store-offer-picker, note: "First run, and when the product mix or margins change: the offer types worth testing, with the maths."}
-  - {uses: offer-profit-per-session-checker, note: "Every run: profit per session for each live offer, the winner, and whether it is safe to act on the comparison."}
-  - {uses: order-threshold-planner, note: "Only when order sizes have moved since the last run, or a free-shipping or bundle line sits at the average: thresholds set at the real order peaks."}
-  - {uses: discount-impact-checker, note: "Only when a sale or code is planned, or the profit check shows a discounted offer losing profit: the ROAS needed to keep profit per order."}
-  - {uses: commodity-trap-checker, note: "Only when profit per session is falling while discounts rise, or buyers compare on price: how much of the offer a buyer can tell apart from rivals."}
-  - {uses: offer-checklist-reviewer, note: "Only when the lead offer is not the profit winner, or has not changed in two quarters: a review against a tested checklist and the three changes most worth making."}
-  - {uses: honest-urgency-planner, note: "Only when a deadline or limit is planned: real caps and dates, and the lines to say them truthfully."}
-  - {uses: offer-test-planner, note: "Whenever one change is proposed: the funnel test, the tags to track and the read-out rule."}
+  - {uses: store-offer-picker, note: "First run, and when the product mix or margins change: the offer types worth testing, with the maths. Uses your margins, order sizes and repeat rate. Hands the menu of offer types to the choice of change in step 8."}
+  - {uses: offer-profit-per-session-checker, note: "Every run: profit per session for each live offer, the winner, and whether it is safe to act on the comparison. Uses your live offers, costs and results, not step 1's menu. Hands the winner and the safety score to the path choice."}
+  - {uses: order-threshold-planner, note: "Only when order sizes have moved since the last run, or a free-shipping or bundle line sits at the average: thresholds set at the real order peaks. Uses your order sizes, not step 2's report. Hands the new thresholds on as a candidate change."}
+  - {uses: discount-impact-checker, note: "Only when a sale or code is planned, or the profit check shows a discounted offer losing profit: the ROAS needed to keep profit per order. Uses your costs and the planned discount. Hands the required ROAS and a safe or unsafe verdict to the next steps."}
+  - {uses: commodity-trap-checker, note: "Only when profit per session is falling while discounts rise, or buyers compare on price: how much of the offer a buyer can tell apart from rivals. Uses your live offer and the rivals buyers compare with, not step 4's ROAS. Hands the verdict and the first thing to change to the checklist review."}
+  - {uses: offer-checklist-reviewer, note: "Only when the lead offer is not the profit winner, or has not changed in two quarters: a review against a tested checklist and the three changes most worth making. Uses your offer, product facts and a short draft list of why people buy. Hands those three changes on as candidates."}
+  - {uses: honest-urgency-planner, note: "Only when a deadline or limit is planned: real caps and dates, and the lines to say them truthfully. Uses your offer and your capacity. Hands the real caps and dates on as a candidate change."}
+  - {uses: offer-test-planner, note: "Whenever one change is proposed: the funnel test, the tags to track and the read-out rule. Takes the one change picked from steps 3 to 7. Hands you the test to run next quarter."}
 schedule: "First week of every quarter, and before any planned sale"
 asks_before: [changing a price, discount or guarantee, publishing or switching an offer on the live store, creating discount codes, sending an offer to customers, announcing a deadline or limit]
 origin: own

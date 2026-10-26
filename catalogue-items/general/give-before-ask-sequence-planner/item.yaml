@@ -1,6 +1,6 @@
 slug: give-before-ask-sequence-planner
 name: Give before ask sequence planner
-summary: Paste your audience and your offer. Get a run of useful posts or messages, then one clear ask.
+summary: "Turn your offer and audience into a run of useful posts or messages that earn attention, then one short ask people are ready to answer."
 category: general
 type: skill
 role: make
@@ -15,9 +15,9 @@ inputs:
     required: false
 outputs:
   - type: plan
-  - type: email_flow
 origin: rebuilt
 version: 1.0.0
+needs_mode: manual
 minds:
   - gary-vaynerchuk
 credits:

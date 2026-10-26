@@ -2,35 +2,108 @@ thinking: medium
 thinking_why: It reads only the guide parts your request needs, then decides.
 new_slug: database-design-guide
 name: Database design guide
-summary: Describe your app. Get a database pick, a schema, indexes and a safe
-  migration plan.
+summary: Describe your app. Get a database and ORM pick with reasons, a schema outline, an index plan and safe steps to change it later.
 job: build-software
 headline: Database design guide
-subhead: A database choice and design that fits your app, instead of a default
-  picked out of habit. You get the reasoning, not only the code, so you can
-  defend it later.
+subhead: Tell it what your app does, where it runs and which tools your team uses. It picks a database and an ORM for your case, outlines the tables, plans the indexes and sets out safe schema changes. You get the reasons too, so you can defend each choice.
 explain: |
-  A database choice and design that fits your app, instead of a default picked out of habit. You get the reasoning, not only the code, so you can defend it later.
+  Picking a database by habit is how small apps end up slow or stuck. This database design guide makes you pick for your case. It asks what you are building and where it will run before it says anything about tables.
 
-  You describe what you are building. The skill asks about your preferences when something is unclear, then works through a checklist before any schema is drawn. It compares options such as PostgreSQL, Neon, Turso and SQLite, and ORMs such as Drizzle, Prisma and Kysely. It then covers table design and keys, relationships, which indexes to add, how to find slow queries such as N+1 patterns, and how to change the schema safely, including on serverless databases. It reads only the notes your request needs.
+  It works as a short checklist plus six reading notes. Each note covers one question: which database, which ORM (the tool that lets your code talk to the database), how to lay out tables, which indexes to add, how to find slow queries, and how to change a live schema safely. It opens only the notes your question needs.
+
+  What sets it apart is the thinking. It compares PostgreSQL, Neon, Turso and SQLite, and Drizzle, Prisma and Kysely, then explains the trade-offs. It warns against defaults such as using PostgreSQL for a tiny app that SQLite would serve. It does not hand you SQL to copy.
 when:
-  - You are starting a new app and must choose a database.
+  - You are starting a new app and have to choose a database.
   - You cannot decide between Drizzle and Prisma.
-  - A page is slow and you suspect missing indexes.
+  - A page is slow and you suspect missing indexes or repeated queries.
   - You need to change a live schema without breaking it.
+not_for:
+  - You want ready-to-run CREATE TABLE statements. Use the Database schema designer.
+  - You are already on Postgres and want a tight design for it. Use the Postgres schema designer.
+  - You have the change planned and need the migration file with a rollback. Use the Database migration writer.
+  - You need a live production migration on a very large table. Ask a database specialist to review it first.
 you_give:
-  - A description of your app
-  - Your hosting setup (optional)
-  - Your team's tools (optional)
-  - Current schema (optional)
+  - A short description of what your app does and stores
+  - Where it runs, such as a server, serverless or the edge
+  - Your language and team tools, such as TypeScript or Python (optional)
+  - Your current schema or project folder (optional)
+  - The slow page or query, if you have one (optional)
 you_get:
-  - Database and ORM recommendation
-  - Schema design
-  - Index plan
-  - Safe migration steps
+  - A database pick with the reasons for it
+  - An ORM pick with the trade-offs
+  - A schema outline with keys and links between tables
+  - An index plan
+  - Safe steps for changing the schema later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool and paste in this skill, or add it if your tool lets you add skills.
+  - Describe your app in a few lines. Add where it runs and which language you use. Expect up to five questions back if something is unclear.
+  - Read the database and ORM picks first. Check that the reasons match your real situation.
+  - Ask for the schema outline, then the index plan. If you have a slow page, paste the query and ask for the slow query advice.
+  - Take the schema outline to the Database schema designer if you want ready-to-run SQL. Have a database specialist review any change to a large live table.
+how_it_works:
+  - title: Asks what is unclear
+    text: Checks your database preference, where the app runs and how heavy the queries are before it picks anything.
+  - title: Reads only what it needs
+    text: Opens just the notes for your question, such as database selection or indexing.
+  - title: Picks for your case
+    text: Chooses the database and ORM from your setup and warns against the default pick when a simpler one fits.
+  - title: Outlines the schema
+    text: Covers table layout, primary keys, timestamps, relationships and what happens when a row is deleted.
+  - title: Plans the indexes
+    text: Says which columns to index, which index type to use and how to order a combined index.
+  - title: Plans safe changes
+    text: Sets out how to change a live schema, including on serverless databases such as Neon and Turso.
+output_shape: |
+  DATABASE PICK
+  <database> because <reason tied to your app>. Trade-off: <what you give up>
+  ORM PICK
+  <ORM> because <reason>. Trade-off: <what you give up>
+  SCHEMA OUTLINE
+  <table>: <key>, <main columns>, links to <other tables>
+  INDEX PLAN
+  <table.column>: <why> | <index type>
+  SLOW QUERY NOTES
+  <repeated query or full scan found> -> <fix>
+  SAFE CHANGE STEPS
+  <step 1 to step n>
+  OPEN QUESTIONS
+  <anything you did not give>
+output_sample:
+  input:
+    - A short description of what your app does and stores
+    - Where it runs and your language
+    - Your current schema or project folder (optional)
+  prerequisites:
+    - An AI that can read your project files, if you want it to look at an existing schema
+  output:
+    - name: Database pick
+      contains: The database that fits your app, why it fits and what you give up.
+    - name: ORM pick
+      contains: The ORM that fits your setup and its trade-offs.
+    - name: Schema outline
+      contains: Tables, primary keys, links between tables and what happens on delete.
+    - name: Index plan
+      contains: Which columns to index and what type of index to use.
+    - name: Slow query notes
+      contains: Repeated queries and full table scans found, with a fix for each.
+    - name: Safe change steps
+      contains: The order to change a live schema without breaking the app.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your project and check a schema file with the bundled helper script.
+    - name: Any good chat AI
+      why: It can make the picks and outline from your written description.
+  inputs:
+    - Your expected number of users and rows
+    - The queries your app runs most
+    - Your hosting setup and budget
+terms:
+  - term: ORM
+    meaning: A tool that lets your code read and write the database without writing every query by hand.
+  - term: Index
+    meaning: A lookup list the database keeps so it finds rows fast without reading the whole table.
+  - term: N+1 query
+    meaning: A slow pattern where your code runs one extra query for every row it loads.
+  - term: Migration
+    meaning: A saved, ordered change to your database structure, such as adding a column.

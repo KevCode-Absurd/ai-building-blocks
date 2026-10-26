@@ -1,6 +1,6 @@
 new_slug: top-customer-touch-planner
 name: "Top customer touch planner"
-summary: "Give it your customer list and budget. Get a top-50 touch plan and a control group."
+summary: "Plan personal touches for your top customers. Give it your customer list and budget. You get a ranked touch plan and a control group."
 job: keep-customers
 thinking: low
 thinking_why: "It ranks a list and writes short notes, so a small fast model is enough if you give it real spend data."
@@ -17,6 +17,10 @@ when:
   - You have loyal buyers who have never heard from a person at your store.
   - You want to try something personal before you pay for a loyalty app.
   - You have a small budget and a few hours a week to spend on your best customers.
+not_for:
+  - "Your delivery, returns or support are still slow or broken: fix those first, then plan any gifts or notes."
+  - "Your list has few repeat buyers: wait until you have proven repeat customers, or ask a person who knows your sales which buyers to start with."
+  - "You want a program that reaches every customer and scales: use a loyalty app or a points tool instead of this hand-made plan."
 
 you_give:
   - Your customer list with lifetime spend, order count and last order date
@@ -35,6 +39,31 @@ how_to_use:
   - Add any personal details you hold about the top customers, such as a pet's name or a trip they mentioned.
   - Do the touches yourself where you can. Send a few and check how they feel before you send the rest.
   - Check reorders for the touched group against the untouched group after 90 days.
+output_sample:
+  input:
+    - Your customer list with lifetime spend, order count and last order date
+    - Your monthly budget and the hours you can give
+    - Your product category and any personal detail you hold (optional)
+    - Notes on your brand voice (optional)
+  prerequisites:
+    - An AI chat that can read a pasted or attached customer list
+  output:
+    - name: FIT CHECK
+      contains: Whether delivery and returns work, and how many notes you can write each month.
+    - name: TOP CUSTOMERS
+      contains: Your top 50 to 100 buyers ranked by lifetime spend, with orders, last order date and personal detail.
+    - name: TOUCH MENU
+      contains: The touch for each tier, such as a call, gift, note or video, with its cost.
+    - name: NOTE SCRIPT
+      contains: A short handwritten note that names a past purchase and has no discount code.
+    - name: VIDEO SCRIPT
+      contains: A 60-second outline for a personal founder video.
+    - name: TOUCHED / CONTROL SPLIT
+      contains: How the list is split into touched and untouched groups, and the size of each.
+    - name: CHECK and RULE
+      contains: How to compare reorder rates after 90 days, and when to expand to the top 200 or stop.
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that failed and any input the plan still needs.
 
 how_it_works:
   - title: Checks the base

@@ -7,17 +7,19 @@ description: Use when you have working code, a script, a formula set or an autom
 
 Code is ordered for the machine. A reader needs another order, with the main idea first and the reason beside every piece. This skill rewrites working code as a walkthrough for people. It does not change the code. To fix the structure of tangled code first, use "Function purity refactor planner".
 
+**No code, no walkthrough.** If the user has not pasted or attached the code, or you cannot open it, do not fill the output headings and do not write a placeholder walkthrough. Reply with one line asking them to paste the code. This holds even if they say "go ahead". Optional items (the reader, the purpose) never block the job. The code does.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open. A pasted script, formula set or automation also counts.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the code. They can attach files, paste it, or share a file path your assistant can read. If the code is missing, stop and ask for it (see "No code, no walkthrough" above). Ask about the reader and purpose only once, and carry on without them if they do not answer.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Reading code and writing an ordered explanation is text work any strong chat AI does.
@@ -36,7 +38,7 @@ How to start:
 2. **Write each idea as a short passage to a human.** Use "we" or "you" and plain words. Say what the idea is, then why it is there, then what would go wrong without it. Keep each passage under about 120 words. If a passage needs more, split the idea.
 3. **Place the matching code inside the passage.** Put the piece right after the sentence that explains it. Do not change the code. If the code must appear in a different order to run, say so once and show the order in a short list at the end.
 4. **Name every piece.** Give each code piece a short plain name and use that name when other passages refer to it. A name should say what the piece does, such as "round the total" and not "step 3".
-5. **Explain the user's mistakes.** List each wrong or odd input the code can meet (empty, too long, wrong type, repeated, out of range) and write what the code does with it: refuses, fixes, or fails. If the code does not handle one, write that plainly and mark it `MISSING:` in the code, not as handled.
+5. **Explain the user's mistakes.** List each wrong or odd input the code can meet (empty, too long, wrong type, repeated, out of range) and write what the code does with it: refuses, fixes, or fails. If the code does not handle one, write that plainly and mark it `MISSING:` in the code, not as handled. If the code takes no input from a person, write "This code takes no input from a user" and list what it does when a file, value or setting it reads is missing.
 6. **Read it aloud to an imagined newcomer.** Go passage by passage. Where a newcomer would stop (a word not yet explained, a jump, a name used before it was defined), add a sentence or reorder. Note each fix made.
 7. **Label proved and tested.** For each claim that the code works, mark one of three: proved (shown by reasoning for every case, and say the reasoning in a line), tested (run on some cases, list which), or not checked. Never write "works" for a claim that has no basis.
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
@@ -62,7 +64,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> for <step>`. With no reader named, write for someone who knows the language but not this project. Never guess what a piece is for. If the reason is not in the code or the notes, say it is unclear and ask.
+If the code itself is missing, or only a few lines of a larger program are pasted, ask for it in one line and stop. Never write a walkthrough of code you have not read.
+
+For anything else, write `MISSING: <what> for <step>`. With no reader named, write for someone who knows the language but not this project. Never guess what a piece is for. If the reason is not in the code or the notes, say it is unclear and ask.
 
 ## Avoid
 

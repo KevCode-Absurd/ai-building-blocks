@@ -1,6 +1,6 @@
 new_slug: turn-rival-ads-into-ranked-test-briefs
 name: Turn rival ads into test briefs and a campaign layout
-summary: Give it a rival's Ad Library ads. Get the gaps they leave, test briefs and a campaign layout.
+summary: "Turn rival ads into test briefs: give it a rival's Ad Library export and get the gaps they leave, three ideas with nine versions, and a campaign layout."
 job: study-competitors
 thinking: high
 thinking_why: It counts a large export, then writes briefs from the counts. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A rival runs a lot of ads and you want to know what they have not tried.
   - You have an Ad Library export and no time to read it ad by ad.
   - You are about to brief a designer or editor and want the ideas grounded in what the market shows.
+not_for:
+  - "You have no rival ads to export, or the ads cannot be exported: build your brand facts first with the Website brand brain builder."
+  - "You only want to find what rivals leave empty, without briefs or a campaign: use the Competitor ad opportunity finder."
+  - "You want to save rival ads to browse for ideas, not count them: use the Competitor ad swipe file builder."
 you_give:
   - Ads or an Ad Library export from one or more rivals
   - Your brand file (products, voice, claims you can make)
@@ -24,10 +28,32 @@ you_get:
   - Three ideas with nine designer-ready versions and questions to settle first
   - A test campaign layout with pack names, budget split and scale rules
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Export ads from the Ad Library with inactive ads included, and pick rivals a step or two above your size.
-  - Give it your brand file. The briefs only use claims you can make.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
+  - Export your rival's ads from the Ad Library with inactive ads included. Pick rivals a step or two above your size.
+  - Add your brand file. The briefs only use claims you can make.
+  - Check the Step 1 counts first. If they look wrong, fix the export before you use the briefs.
+  - Send the Step 3 briefs to your designer once you have answered its questions.
+output_sample:
+  input:
+    - Ads or an Ad Library export from one or more rivals
+    - Your brand file (products, voice, claims you can make)
+    - Your own ad results (optional)
+    - Your daily test budget (optional)
+  prerequisites:
+    - An Ad Library export with inactive ads included
+    - Your brand brain from the Website brand brain builder (recommended, not required)
+  output:
+    - name: "Step 1: Rival counts"
+      contains: Counts of assets, formats, ad age, landing pages, awareness stages and offers, plus missing beats and risky claims.
+    - name: "Step 2: Gaps"
+      contains: A map of nine ad types, a card for each ad, the gaps that fit your brand, and a score out of 100.
+    - name: "Step 3: Test briefs"
+      contains: An evidence grade, three ideas with nine versions, and questions you need to settle first.
+    - name: "Step 4: Campaign layout"
+      contains: Ad packs, a budget split by stage, the budget type, and rules for when to scale.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Count what the rival runs
     text: Counts assets, formats, ad age, landing pages, awareness stages and offers, and notes the missing beats and risky claims.

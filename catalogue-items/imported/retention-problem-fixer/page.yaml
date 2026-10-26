@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It diagnoses against a clear model and suggests fixes for you to pick.
 new_slug: retention-problem-fixer
 name: Retention problem fixer
-summary: Describe why users drop off. Get the cause found and fixes to
-  onboarding and habits. Uses behavior design.
+summary: Find why new users sign up and then drift away. Get a score out of 10, the main cause of drop-off and fixes for your onboarding.
 job: understand-customers
 headline: Retention problem fixer
-subhead: A diagnosis of why people sign up and then drift away, plus specific
-  changes to your first-use experience. The skill treats this as a design
-  problem, not a motivation problem, and scores your product out of 10.
+subhead: A diagnosis of why people sign up and then drift away, plus specific changes to your first-use experience. The skill treats this as a design problem, not a motivation problem, and scores your product out of 10.
 explain: |
   A diagnosis of why people sign up and then drift away, plus specific changes to your first-use experience. The skill treats this as a design problem, not a motivation problem, and scores your product out of 10.
 
@@ -18,6 +15,10 @@ when:
   - Your activation rate is low and you do not know why.
   - Users quit after their first session.
   - You want to cut the time it takes a new user to see value.
+not_for:
+  - Your product has no repeat use, like a one-off purchase. Fix the sales page or follow-up emails instead.
+  - You want habit loops or variable rewards. Use hooked-ux, a separate skill, which this site does not list yet.
+  - You want to build lasting inner drive in your users. Use drive-motivation, a separate skill, for that.
 you_give:
   - A description of your product and first-use flow
   - Where people drop off
@@ -30,7 +31,27 @@ you_get:
   - Small first steps to try
   - A list of changes in priority order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Describe your product and what a new user does in their first session.
+  - Say where people drop off. Add your activation or retention numbers if you have them.
+  - Ask your AI to run the retention diagnostic and give the score, failing rows and fixes.
+  - Pick the top fix and test it with a small group of new users before you change everything.
+output_sample:
+  input:
+    - A description of your product and what a new user does first
+    - The step where people drop off
+    - Your activation or retention numbers (optional)
+    - Your current onboarding steps (optional)
+  output:
+    - name: Score out of 10
+      contains: A score that starts at 10 and loses points for each of six failing checks.
+    - name: Quick Diagnostic
+      contains: "A pass or fail on six rows: motivation, ability, prompts, celebration, bottleneck and scaling."
+    - name: Main bottleneck
+      contains: The one thing that keeps users below the point where they act.
+    - name: Tiny first steps
+      contains: Very small first actions new users can finish in seconds.
+    - name: Prompt and onboarding fixes
+      contains: Changes to when and how you nudge users and guide them at the start.
+    - name: Priority list
+      contains: The changes ranked so you know what to try first.

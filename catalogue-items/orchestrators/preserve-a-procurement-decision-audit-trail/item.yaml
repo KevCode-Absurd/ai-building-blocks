@@ -1,6 +1,8 @@
 slug: preserve-a-procurement-decision-audit-trail
 name: Preserve a procurement decision audit trail
-summary: Share the source files. Get a vendor evidence comparison, checklist result and decision trace.
+summary: "Keep a procurement audit trail: compare vendor proposals on fixed
+  criteria, run your approval checklist and get a decision record you can
+  defend."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,9 +10,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: question
+  - type: spreadsheet
     required: false
   - type: plan
     required: false
@@ -22,9 +24,13 @@ uses:
   - decision-checklist-runner
 steps:
   - uses: vendor-comparison-writer
-    note: Compare the actual proposals on the approved criteria and same commercial scope, retaining exclusions, evidence gaps and exit costs.
+    note: Compares the actual proposals on the approved criteria and the same
+      commercial scope, keeping exclusions, evidence gaps and exit costs. Hands
+      step 2 the comparison with the source file for each claim.
   - uses: decision-checklist-runner
-    note: Run the existing ordered approval checklist against the supplied comparison and source records. Preserve all stop rules and unknowns; do not create substitute criteria.
+    note: Uses your own approved checklist and the decision question, and takes step
+      1's comparison as the facts for each item. Preserves every stop rule and
+      unknown; creates no substitute criteria.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -34,9 +40,13 @@ credits:
   - title: Vendor comparison writer
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Decision checklist runner
     by: AI Blocks
     url: https://useaiblocks.com/skills/decision-checklist-runner
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

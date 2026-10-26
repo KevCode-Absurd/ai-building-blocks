@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It asks short questions and stops after three rounds.
 new_slug: request-clarifier
 name: Request clarifier
-summary: Give it a loose request. Get a few rounds of sharp questions first, so
-  the first draft lands.
+summary: Give your AI a loose request. It asks a few short questions first, so your first draft fits and you skip three rewrites of a vague ask.
 job: think-and-decide
 headline: Request clarifier
-subhead: Better first drafts, because the AI asks sharp questions before it
-  starts. A loose request like "write me a plan" gets turned into clear choices
-  about scope, audience, tone and format.
+subhead: Better first drafts, because the AI asks sharp questions before it starts. A loose request like "write me a plan" gets turned into clear choices about scope, audience, tone and format.
 explain: |
   Better first drafts, because the AI asks sharp questions before it starts. A loose request like "write me a plan" gets turned into clear choices about scope, audience, tone and format.
 
@@ -18,6 +15,10 @@ when:
   - Your last AI draft missed the point and needed three rewrites.
   - You are not sure yourself who the audience should be.
   - The task has many possible directions and you want to choose one.
+not_for:
+  - You have a clear request with one obvious answer. Just ask your AI directly.
+  - You want one quick round of questions on a simple task. Use the Ask user questions skill, or answer a few questions yourself.
+  - You need facts from a file or site your AI cannot see. Add the file or link to the chat first.
 you_give:
   - Your loose request
   - Answers to each round of questions
@@ -28,7 +29,24 @@ you_get:
   - Stated assumptions for anything left open
   - A first draft that fits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Paste this skill into a new chat in Claude, ChatGPT or Gemini. It needs no code, files or paid tools.
+  - Type your loose request, such as "help me create a presentation for my project".
+  - Answer each short round of questions. Reply with the option letter or a few words. If your AI shows no pick-list, type your answers in plain text.
+  - Check the assumptions your AI lists before it starts. Correct any that are wrong.
+  - Read the first draft. Next, paste your choices and the draft into a drafting chat to refine it, or keep going in the same chat.
+output_sample:
+  input:
+    - Your loose request, such as "write me a plan"
+    - Your answers to each round of questions
+    - Any facts you already have, such as audience or goal (optional)
+  output:
+    - name: Round 1 questions
+      contains: Up to three short questions on the biggest open choices, each with options and one marked as recommended.
+    - name: Round 2 questions
+      contains: Up to three follow-ups that your first answers opened up. Asked only if choices are still open.
+    - name: Round 3 questions
+      contains: Up to two last questions on small details. Used rarely.
+    - name: Stated assumptions
+      contains: A short list of anything still open, which the AI will assume so it can start.
+    - name: First draft
+      contains: Your plan, email, deck or other piece, written to fit the choices you made.

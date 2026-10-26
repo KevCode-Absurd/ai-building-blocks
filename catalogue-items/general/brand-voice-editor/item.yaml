@@ -11,6 +11,7 @@ inputs:
   - {type: script, required: false}
   - {type: ad_copy, required: false}
   - {type: brand_brain, required: true}
+  - {type: copy_draft, required: false}
 outputs:
   - {type: audit_report}
 uses: []

@@ -1,0 +1,150 @@
+name: Unity Multiplayer Engineer agent
+summary: Plan Unity multiplayer with Netcode for GameObjects. Decide who owns what, what syncs and how to hide lag, with tests for slow links and cheaters.
+headline: Unity Multiplayer Engineer agent
+subhead: Describe your Unity game, how many players it holds and what must stay in sync. It decides what the server owns, sorts each piece of state into the right Netcode tool, and plans lag hiding. You get a design and a test plan for slow connections and cheaters.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Multiplayer bugs are hard to see. Two players see different things. A shot
+  hits on one screen and misses on another. A cheater sends a made-up position
+  and the server accepts it. This agent plans the design before you build, so
+  you choose who is in charge of each piece of the game on purpose.
+
+  It works for Unity's Netcode for GameObjects and Unity Gaming Services, as in
+  the Unity Multiplayer Engineer profile by Agency Agents. The server owns the
+  truth. Players send inputs, not positions. Each piece of state goes to the
+  right tool: a NetworkVariable for state that stays, a ServerRpc for a request
+  and a ClientRpc for a confirmed event. It plans how to hide lag with
+  prediction, and how to stay inside your bandwidth.
+
+  The profile gives targets, such as a limit on data per player. These are
+  starting points, not results, so measure your own game. Your AI plans and
+  reviews. It cannot run Unity or simulate lag, and any C# it writes is a
+  pattern for you to test.
+when:
+  - You are starting a Unity co-op or competitive game and need to choose how it will sync.
+  - Your players see different things, or movement jumps when the connection is slow.
+  - You worry that a player could cheat by sending fake data to your server.
+  - You are adding Relay and Lobby and need to know what to put in each.
+not_for:
+  - You use Godot. Use the Godot Multiplayer Engineer agent.
+  - You use Unreal Engine. Use the Unreal Multiplayer Architect agent.
+  - You use Mirror, Photon or another network tool. This agent covers Netcode for GameObjects and Unity Gaming Services only.
+  - You only want to tidy your project's structure. Use the Unity Architect agent.
+you_give:
+  - The game type and the most players one match holds
+  - Who hosts the game, such as a dedicated server, a player host, or not decided
+  - Your Unity and Netcode for GameObjects versions
+  - Everything that must stay in sync, such as positions, health, items and score
+  - Your current networking scripts (optional)
+  - The lowest connection quality you want to support (optional)
+you_get:
+  - A decision on who owns the game truth, with the tradeoff
+  - A table that sorts each piece of state into the right Netcode tool
+  - A plan for player movement and lag hiding
+  - A bandwidth plan and a Relay and Lobby plan
+  - A cheat check on every request the server accepts
+  - A test plan for slow connections and busy matches
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe your game, the player count and who hosts. List what must sync. Say MISSING for what you have not decided.
+  - Say "Plan this. Do not assume numbers I did not give." Your AI asks once for anything missing.
+  - Read the authority decision first. Make sure you agree with who owns the truth before you read the rest.
+  - Build the first piece in Unity, then run the test plan with simulated slow connections.
+  - Paste what you see back and ask for the next step.
+how_it_works:
+  - title: Choose who is in charge
+    text: It picks server or host authority, and says what each choice costs you.
+  - title: Sort the state
+    text: It puts each piece of game state into a NetworkVariable, a ServerRpc or a ClientRpc, using the profile's rules.
+  - title: Plan movement
+    text: It has players send inputs only, lets the server decide, and plans prediction and a correction on the client.
+  - title: Budget the data
+    text: It sets how often each kind of state updates and what must not be sent every frame.
+  - title: Plan Relay and Lobby
+    text: It uses Relay for player-hosted games and keeps only light, non-secret data in Lobby.
+  - title: Test and harden
+    text: It lists tests at set delays and a check that every server request validates its input.
+output_shape: |-
+  AUTHORITY DECISION
+    <server or host> | <why> | <what it costs>
+
+  STATE MAP
+    <state> | <NetworkVariable, ServerRpc or ClientRpc> | <update rate> | <who may change it>
+
+  MOVEMENT AND LAG
+    <inputs sent> | <what the server decides> | <prediction and correction plan>
+
+  BANDWIDTH PLAN
+    <kind of data> | <how often> | <how to keep it small>
+
+  RELAY AND LOBBY
+    <what goes where> | <public, member or private>
+
+  CHEAT CHECK
+    <ServerRpc> | <what a cheater could send> | <server check>
+
+  TEST PLAN
+    <test> | <setup> | <what must be true>
+
+  OPEN QUESTIONS
+    <what is missing or must be measured>
+output_sample:
+  input:
+    - Your game type and the most players one match holds
+    - Who hosts the game
+    - Everything that must stay in sync
+    - Your Unity and Netcode versions
+  prerequisites:
+    - A Unity project with Netcode for GameObjects, to build and test the plan
+  output:
+    - name: Authority decision
+      contains: Whether the server or a host player owns the truth, why, and what that choice costs.
+    - name: State map
+      contains: Each piece of state sorted into NetworkVariable, ServerRpc or ClientRpc, with its update rate.
+    - name: Movement and lag
+      contains: What players send, what the server decides, and how prediction and correction work.
+    - name: Bandwidth plan
+      contains: How often each kind of data updates and how to keep it small.
+    - name: Relay and Lobby
+      contains: What goes in Relay and in Lobby, and which Lobby fields stay private.
+    - name: Cheat check
+      contains: Each server request, what a cheater could send, and the check that stops it.
+    - name: Test plan
+      contains: Tests at set delays and with several players, each with what must be true.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Netcode for GameObjects
+    meaning: Unity's own tool for syncing game objects between players.
+  - term: Server authority
+    meaning: The server decides what is true. Players only ask.
+  - term: NetworkVariable
+    meaning: A value that Netcode keeps the same on every player's screen.
+  - term: RPC
+    meaning: A call sent over the network. A ServerRpc goes from a player to the server, and a ClientRpc goes from the server to players.
+  - term: Prediction
+    meaning: The player's screen moves right away, then fixes itself if the server disagrees.
+  - term: Relay and Lobby
+    meaning: Unity services that connect players behind home routers and gather them before a match.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can plan the design and review each request. One that can browse can check Netcode's current docs.
+  inputs:
+    - A list of your NetworkObjects and what each one does.
+    - Your test machine's results from Unity's simulated slow connection.

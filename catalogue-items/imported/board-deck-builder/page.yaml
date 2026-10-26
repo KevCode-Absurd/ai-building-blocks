@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set deck structure and fills it from your facts.
 new_slug: board-deck-builder
 name: Board deck builder
-summary: Give it your quarter. Get a board or investor deck outline with the
-  story, numbers and bad news placed right.
+summary: Build a board deck outline from your quarter's numbers. Get the story, metrics, bad news and board asks laid out section by section.
 job: speak-and-persuade
 headline: Board deck builder
-subhead: A board or investor deck outline where the story comes first and the
-  numbers back it up. Each section has a headline, the data, a short narrative
-  and a next step or ask, so directors know what you want from them.
+subhead: A board or investor deck outline where the story comes first and the numbers back it up. Each section has a headline, the data, a short narrative and a next step or ask, so directors know what you want from them.
 explain: |
   A board or investor deck outline where the story comes first and the numbers back it up. Each section has a headline, the data, a short narrative and a next step or ask, so directors know what you want from them.
 
@@ -18,6 +15,10 @@ when:
   - You have to deliver bad news and want it framed well.
   - You are raising money and need an investor update.
   - You want each leader's section to share the same layout.
+not_for:
+  - "You need audited financials or lender reports: send those through your finance team or accountant."
+  - "You want a pitch deck for a first-time investor meeting: ask a founder friend or advisor for a pitch format instead."
+  - "You have no numbers yet for this period: gather last period's targets and this period's actuals first."
 you_give:
   - Your stage and meeting type
   - Key metrics for the period
@@ -29,7 +30,31 @@ you_get:
   - Bad news framed with a plan
   - Placeholders where numbers are missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your inputs first: last period's targets, this period's actuals, cash and runway, your top 3 deals, and your asks for the board."
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Tell it your stage and meeting type, for example: Build a quarterly board deck, we are Series A."
+  - Paste your numbers. Any figure you skip becomes a placeholder, so fill those in yourself.
+  - Check that bad news comes early, each gap has a one-sentence cause, and the asks are specific.
+  - Treat any example figures in the skill as illustrative only. Replace them with your own.
+output_sample:
+  input:
+    - Your stage and meeting type, such as a quarterly Series A board deck
+    - Last period's targets and this period's actual numbers
+    - Your cash balance and runway
+    - Your top 3 deals (optional)
+    - The specific asks you have for the board
+  output:
+    - name: Executive Summary
+      contains: Three sentences on where the business stands, the biggest event this period, and what comes next.
+    - name: Key Metrics Dashboard
+      contains: A table of 6 to 8 metrics with this period, last period, target and status.
+    - name: Financial Update
+      contains: Profit and loss summary, cash, runway, burn trend, and one sentence on each variance to plan.
+    - name: Revenue and Pipeline
+      contains: Revenue movement, churn, pipeline by stage, a forecast with a confidence level, and top deals.
+    - name: Product, Growth, Engineering, Team and Risk updates
+      contains: One short section per leader, each with a headline, data, narrative and next step.
+    - name: Strategic Outlook
+      contains: Ranked priorities for next quarter, decisions needed, and specific asks for the board.
+    - name: Appendix
+      contains: Detailed model, full pipeline data, retention charts and headcount breakdown. Gaps appear as clear placeholders.

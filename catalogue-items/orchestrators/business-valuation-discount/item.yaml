@@ -1,6 +1,6 @@
 slug: business-valuation-discount
 name: "Value a business and the discount to ask for"
-summary: "Give it a business, its figures and a price. Get a value range, a bad-year test and a discount verdict."
+summary: "See what a business is worth and if its price leaves room for error. Paste the accounts and price; get a value range and verdict."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,15 +8,15 @@ job: analysis
 level: advanced
 inputs:
   - {type: question, required: true}
-  - {type: performance_sheet, required: true}
+  - {type: document, required: true}
 outputs:
   - {type: audit_report}
 uses: [investment-or-speculation-sorter, owner-earnings-calculator, business-value-range-calculator, bad-year-break-even-tester, price-versus-value-gap-judge]
 steps:
-  - {uses: investment-or-speculation-sorter, note: "Checks you are valuing a business and not guessing at a price move."}
-  - {uses: owner-earnings-calculator, note: "The yearly cash an owner could really take out, as a range."}
-  - {uses: business-value-range-calculator, note: "Turns owner earnings into a floor value and three growth cases."}
-  - {uses: bad-year-break-even-tester, note: "Asks how bad a year the business can take before it stops earning, in plain sums."}
+  - {uses: investment-or-speculation-sorter, note: "Checks you are valuing a business and not guessing at a price move. Hands the label to step 2."}
+  - {uses: owner-earnings-calculator, note: "The yearly cash an owner could really take out, as a range. Hands the low, middle and high figures to step 3."}
+  - {uses: business-value-range-calculator, note: "Turns owner earnings into a floor value and three growth cases. Hands the range to steps 4 and 5."}
+  - {uses: bad-year-break-even-tester, note: "Asks how bad a year the business can take before it stops earning, in plain sums. Hands its call to step 5."}
   - {uses: price-versus-value-gap-judge, note: "Sets the price against the value range and says if the discount is big enough."}
 origin: rebuilt
 version: 1.0.0

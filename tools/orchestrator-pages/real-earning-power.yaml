@@ -1,24 +1,31 @@
 new_slug: real-earning-power
 name: Find a company's real earning power and its tricks
-summary: Paste several years of a company's income statements. Get one-offs removed, padding flagged and a normal earnings range.
+summary: "See what a company really earns in a normal year. Paste its income statements; get one-offs removed, padding flagged and a normal earnings range."
 job: money-and-investing
 thinking: high
 thinking_why: It runs four skills in a row and each one reads many lines across years. Give it your strongest model.
 headline: See what a company really earns in an ordinary year, and which profit is for show
-subhead: Paste several years of income statements and their notes. It strips out the one-time gains and losses, looks for accounting choices that lift profit, tests whether the past years can guide the future, and gives low, normal and high earnings per share.
+subhead: Paste several years of income statements and their notes. It strips out the one-time gains and losses and looks for accounting choices that lift profit. It tests whether the past years can guide the future, then gives low, normal and high earnings per share.
 explain: |
-  Reported profit is a figure with a story behind it. A building sold, a tax refund, a write-down that comes back as next year's profit, a cost parked on the balance sheet. Each can move the number without changing the business.
+  What does this company really earn in a normal year? Reported profit is a figure with a story behind it. A building sold, a tax refund, a write-down that comes back as next year's profit, a cost parked on the balance sheet. Each can move the number without changing the business.
 
   This workflow follows the method in the 1940 edition of Security Analysis by Benjamin Graham and David Dodd. It rebuilds each year without the one-offs, checks for padding and rates how far the record can be trusted. Only then does it work out normal earnings, as a range. It never projects a trend and does not use the latest year alone unless three conditions hold. It is a method of analysis, not financial advice. It never says buy or sell.
 when:
   - A company's latest profit looks too good, or too poor, to be typical.
   - A big write-down was followed by a very good year.
   - You are valuing a business and need one earnings figure you can defend.
+  - You are reading an annual report and want to know which profit is for show.
+not_for:
+  - "You want a price or value for the company: run this first, then Value a stock with a margin of safety."
+  - "You are lending to the company, not owning it: use Check if a bond or loan is safe to hold."
+  - "You want to know if the business itself is any good: use Find out if a business is worth owning long term."
+  - "You have fewer than five years of statements, or the company is new. The record cannot guide, and the run will say so."
 you_give:
   - Five to ten years of income statements, with the notes
   - Balance sheets and cash flow statements for the same years (optional)
   - A few lines on the business and its industry (optional)
   - Share counts by year (optional)
+  - Years you think were unusually good for the business (optional)
 you_get:
   - A table of one-off items and each year's ordinary earnings
   - Accounting choices that lift profit, sized, with a clean, adjusted or avoid call
@@ -27,8 +34,9 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste the income statements and the notes. Add cash flow and a note on the business if you have them.
-  - Read the call on padding first. If it says avoid, stop there.
+  - Paste the income statements and the notes. Add cash flow statements and a note on the business if you have them.
+  - It runs four steps and saves each one. A missing figure is marked MISSING, never guessed.
+  - Read the call on padding first. If it says avoid, stop there. If not, use the normal earnings range.
 how_it_works:
   - title: Removes the one-offs
     text: Lists gains and losses that will not repeat, pairs the ones booked in different places and rebuilds each year.
@@ -53,6 +61,17 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+output_sample:
+  input:
+    - "Five to ten years of the company's income statements, with the notes"
+    - "Cash flow statements for the same years (optional)"
+    - "A few lines on the business and its industry (optional)"
+  output:
+    - {name: "Step 1 one-offs removed", contains: "One-off items by year and ordinary earnings by year, with the ordinary and all-in averages."}
+    - {name: "Step 2 padding", contains: "Accounting choices that lift profit, sized, restated earnings and a clean, adjusted or avoid call."}
+    - {name: "Step 3 how far the record can be trusted", contains: "Six tests of the record and a guide, partial guide or not a guide rating."}
+    - {name: "Step 4 normal earnings", contains: "Low, normal and high earnings per share, each with a reason, and the limits."}
+    - {name: "Hand-back summary", contains: "Each step's file and every MISSING line in one list."}
 tweaks:
   - what: Cash flow statements
     how: Paste them. Profit against cash from operations is the fastest warning of padding.
@@ -79,3 +98,14 @@ terms:
     meaning: What the business earned from its normal work in a year, with one-off gains and losses taken out.
   - term: Padding
     meaning: Accounting choices that lift reported profit without any change in the business.
+  - term: Earnings per share
+    meaning: A company's profit for the year divided by the number of shares it has issued.
+next: [stock-margin-of-safety, business-valuation-discount]
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Reads many lines across several years and keeps each step's table for the next."}
+    - {name: "A spreadsheet", why: "Lets you check the year-by-year table and the averages."}
+  inputs:
+    - "The company's annual reports, with the notes"
+    - "Cash flow statements for the same years"
+    - "Share counts, splits and buybacks by year"

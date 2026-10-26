@@ -1,5 +1,0 @@
-node_modules/
-build/
-previews/
-.chart-data-*/
-outputs/**/*.inspect.ndjson

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It reads the diff and fills a fixed layout.
 new_slug: pull-request-description-writer
 name: Pull request description writer
-summary: Commit your branch. Get a clear pull request that says what changed,
-  why, and what reviewers should check.
+summary: Write a pull request description from your committed branch. It says what changed, why, and what reviewers should check, then opens a draft on GitHub.
 job: build-software
 headline: Pull request description writer
-subhead: A pull request description that tells the reviewer what changed, why,
-  and what to look at first. It is written from your actual committed changes,
-  not from memory.
+subhead: A pull request description that tells the reviewer what changed, why, and what to look at first. It is written from your actual committed changes, not from memory.
 explain: |
   A pull request description that tells the reviewer what changed, why, and what to look at first. It is written from your actual committed changes, not from memory.
 
@@ -18,6 +15,10 @@ when:
   - Reviewers keep asking why a change was made.
   - The branch has many commits and you need one clear summary.
   - You want a repeatable way to open pull requests.
+not_for:
+  - "Your repo has a pull request template you must keep: fill the template by hand, because this skill ignores repo templates."
+  - "Your change is one line or a typo fix: write a short pull request yourself, it is faster."
+  - "You have uncommitted work: commit it first, then run this."
 you_give:
   - A committed branch
   - GitHub CLI signed in
@@ -29,8 +30,32 @@ you_get:
   - Reviewer notes
   - The opened pull request
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run git and the GitHub CLI.
+  - Commit all your changes on your branch. If you have loose changes, commit them first.
+  - Check that GitHub CLI is installed and signed in. Your AI needs to run git and gh commands, so use a tool that can run code.
+  - Paste this skill into your AI and ask it to write the pull request for your branch.
+  - Add your issue or ticket link and any notes for reviewers (optional).
+  - Read the title and description it writes. Check that the reason for the change is right.
+  - Let it open the draft pull request, then mark it ready when you are happy.
+output_sample:
+  input:
+    - A branch with all changes committed
+    - GitHub CLI installed and signed in
+    - A linked issue or ticket (optional)
+    - Notes reviewers should know (optional)
+  prerequisites:
+    - An AI that can run git and GitHub CLI commands
+    - GitHub CLI (gh) signed in to your account
+    - All changes committed before you start
+  output:
+    - name: Branch check
+      contains: A check that changes are committed and which branch your pull request will be compared against.
+    - name: Change review
+      contains: A read of the commit log and full diff to work out the purpose of the whole branch.
+    - name: Description body
+      contains: What the change does, why it is needed, other options considered, and any context reviewers need.
+    - name: Pull request title
+      contains: A short title in the commit style, such as type, scope and a plain description.
+    - name: Issue references
+      contains: Links to related issues or tickets, written so they close or only link when merged.
+    - name: Draft pull request
+      contains: The pull request opened on GitHub as a draft, using the title and body above.

@@ -1,46 +1,28 @@
 ---
 name: build-a-comparable-trailing-revenue-model
-description: "Link fiscal periods, currency, business scope and extra-week adjustments into a comparable revenue model."
+description: "Use when you need trailing 12-month revenue and comparable growth: currency, acquisitions, disposals and an extra week taken out in order, each tied back to reported revenue. Not for one-currency, no-deal cases or for profit."
 ---
 
 # Build a comparable trailing revenue model
 
-A linked reported and comparable trailing-revenue workbook with adjustment ordering.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Build reported trailing revenue, then take out currency, deals and an extra trading week to reach comparable revenue. Four steps run in order, and each one ties back to reported revenue.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **Revenue history** (yours): annual and year-to-date revenue by business and currency, plus last year's matching figures.
+- **Deal data** (yours): acquired and disposed revenue with completion dates, from the deal notes.
+- **Fiscal calendar** (yours): period end dates, and which year had an extra week.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** exchange rates and your chosen convention, if revenue is in more than one currency.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Annual/YTD revenue by business and currency, prior comparatives, acquisition/disposal data and fiscal-calendar disclosures.
+The items under "Before you start", as of one reporting date, with the reporting currency, scale and fiscal calendar stated once. If revenue is in more than one currency and no rate convention is named, ask for one before step 2. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,13 +32,13 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Trailing-period financial bridge** (`trailing-period-financial-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build reported trailing additive revenue from annual plus current YTD minus matching prior YTD, preserving every fiscal boundary and restatement. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-trailing-period-financial-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Trailing-period financial bridge** (`trailing-period-financial-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build reported trailing additive revenue from annual plus current YTD minus matching prior YTD, preserving every fiscal boundary and restatement. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-trailing-period-financial-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** annual plus current year-to-date less prior year-to-date ties to the reported periods, every fiscal boundary and restatement is shown, and the figure is labelled trailing, not annual.
 
-2. **Constant-currency revenue bridge** (`constant-currency-revenue-bridge`). Use period/currency buckets underlying the trailing bridge and one documented rate convention; reconstruct comparable currency revenue rather than applying an unsupported single global FX percentage. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-constant-currency-revenue-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Constant-currency revenue bridge** (`constant-currency-revenue-bridge`). Use period/currency buckets underlying the trailing bridge and one documented rate convention; reconstruct comparable currency revenue rather than applying an unsupported single global FX percentage. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-constant-currency-revenue-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** one exchange-rate convention is named and used for every bucket, no single global currency percentage is applied, and the signed currency effect ties reported growth to constant-currency growth.
 
-3. **Organic revenue perimeter bridge** (`organic-revenue-perimeter-bridge`). Apply evidenced acquisition/disposal adjustments to the same currency-normalized period; map both numerator and denominator to one continuing perimeter and exclude duplicate FX adjustments. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-organic-revenue-perimeter-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Organic revenue perimeter bridge** (`organic-revenue-perimeter-bridge`). Apply evidenced acquisition/disposal adjustments to the same currency-normalized period; map both numerator and denominator to one continuing perimeter and exclude duplicate FX adjustments. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-organic-revenue-perimeter-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 4:** acquired and disposed revenue match their completion dates, the numerator and denominator cover the same continuing perimeter, and the currency effect is not removed twice.
 
-4. **Extra-week revenue comparability schedule** (`extra-week-revenue-comparability`). Remove any extra-week contribution still inside the comparable period using sourced calendar evidence; reconcile final comparable revenue back to reported trailing revenue by adjustment. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-4-extra-week-revenue-comparability.md` and any actual native file. Stop the affected step on missing tools or inputs.
+4. **Extra-week revenue comparability schedule** (`extra-week-revenue-comparability`). Remove any extra-week contribution still inside the comparable period using sourced calendar evidence; reconcile final comparable revenue back to reported trailing revenue by adjustment. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-4-extra-week-revenue-comparability.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** the extra week comes from calendar evidence or is labelled an estimate, and comparable revenue walks back to reported trailing revenue with one line per adjustment.
 
 ## Workbook checks
 
@@ -64,7 +46,7 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Acceptance
 
-- Every period/business/currency bucket appears once, adjustments have a stated ordering, no quarter/YTD or calendar mix occurs and final comparable revenue bridges exactly to reported trailing revenue.
+- Every adjustment is applied once and in order: currency, then deals, then the extra week. Comparable revenue reconciles to reported trailing revenue by adjustment, and the same perimeter sits in the numerator and denominator.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
 - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
@@ -73,4 +55,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the walk: reported trailing revenue, each adjustment with its sign, and comparable revenue. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that nothing was paid, sent or filed, and that a person who knows the agreement must check the definitions before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Explain gross-to-net deductions and scope** with the [Reconcile revenue presentation and perimeter](https://useaiblocks.com/workflows/reconcile-revenue-presentation-and-perimeter) workflow.
+- **Stress the valuation assumptions** with the [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow.
+Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

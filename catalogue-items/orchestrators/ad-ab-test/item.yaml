@@ -16,9 +16,9 @@ outputs:
   - {type: lessons_register}
 uses: [split-run-test-planner, test-reply-offer-planner, split-run-result-reader]
 steps:
-  - {uses: split-run-test-planner, note: "One difference, same time, same audience, a key on each, a rule set before launch."}
-  - {uses: test-reply-offer-planner, note: "A reply offer that is identical in both versions and big enough to count."}
-  - {uses: split-run-result-reader, note: "A plain call on the winner and a record of what it taught."}
+  - {uses: split-run-test-planner, note: "One difference, same time, same audience, a key on each, a rule set before launch. Hands steps 2 and 3 the plan."}
+  - {uses: test-reply-offer-planner, note: "A reply offer that is identical in both versions and big enough to count. Hands step 3 the offer, so the result can tell buyers from people after a free item."}
+  - {uses: split-run-result-reader, note: "A plain call on the winner and a record of what it taught. Uses the counts you bring after the test, step 1's plan and step 2's offer."}
 origin: rebuilt
 version: 1.0.0
 minds: [john-caples, claude-hopkins]

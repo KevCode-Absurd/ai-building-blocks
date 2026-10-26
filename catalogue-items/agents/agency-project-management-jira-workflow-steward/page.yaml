@@ -1,0 +1,142 @@
+name: Jira Workflow Steward agent
+summary: Turn a Jira ticket into a Git branch name, commit messages and a pull request description. Every code change is traceable from ticket to release.
+headline: Jira Workflow Steward agent
+subhead: Give it a Jira ticket ID and say what you changed. Your AI writes the Git branch name, a short set of commit messages and a pull request description that link back to the ticket. It will not guess a missing ticket number, and it keeps secrets out of the text.
+job: organise-work
+thinking: high
+thinking_why: It must follow strict naming rules and never invent a ticket ID. Use a model that follows format rules exactly and asks when a fact is missing.
+explain: |-
+  Many teams link Jira tickets to code, and then slip. A branch is called "fix-stuff". A commit says "updates". A pull request has no link to the ticket. Months later, nobody can say why a line changed. This Jira commit message and branch naming agent keeps a clear trail from ticket to branch to commit to pull request to release.
+
+  It works on one change at a time. It picks the branch type from the risk: feature, bugfix or hotfix. It writes a branch name that holds the ticket ID. It plans small commits, each doing one thing, each starting with a gitmoji, a small icon that shows the kind of change. Then it writes the pull request text, with a risk note and a rollback step.
+
+  Its first rule is the Jira gate. With no ticket ID, it asks for one and stops. It uses the ID exactly as you give it. It also keeps secrets, tokens and customer data out of every branch name, commit and pull request text, and it says what was tested and where, not what it hopes is tested.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to start a task and want a branch name that matches your team's Jira pattern.
+  - You have a mix of changes and need them split into clean commits before a review.
+  - A pull request has a vague title and no ticket link, and a reviewer asks what it is for.
+  - An auditor or client wants to trace a release back to the tickets behind it.
+not_for:
+  - You want to change Jira itself, such as statuses, permissions or boards. Ask your Jira admin.
+  - You want rules for how a whole team should use Git. Use the Git workflow agent.
+  - You want the code in a pull request checked for bugs. Use the Code Reviewer agent or the Pull request reviewer.
+  - You want to plan a release and write its changelog. Use the Release manager.
+you_give:
+  - The Jira ticket ID, exactly as it appears, such as JIRA-214
+  - What you changed or plan to change, in a few lines
+  - Your repo's branch and commit rules if they differ from the common ones (optional)
+  - What you tested, and where, such as unit tests or staging (optional)
+  - The list of changed files or the diff summary (optional)
+you_get:
+  - A branch type and branch name that holds the ticket ID
+  - A short list of commits, each doing one thing, in the form gitmoji, ticket ID and a short note
+  - A pull request title and description with the ticket link, a change summary, a risk note and a rollback step
+  - A list of anything that should be split into its own branch or pull request
+  - Notes on what is tested and what is not
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste the Jira ticket ID and a few lines on the change. If you only have a ticket link, copy the ID from it, such as JIRA-214.
+  - Say how your team names branches and writes commits if it differs from the default. Paste your team's rule if you have it.
+  - Read the branch name and commit list. Rename or split anything that does not match what you actually did.
+  - Copy the pull request text into your pull request and fill in the test lines with what you really ran.
+  - Run the Git commands yourself. This agent only writes the text. It does not touch your repo or Jira.
+how_it_works:
+  - title: Check the Jira anchor
+    text: It looks for a ticket ID. With none, it asks once and stops. It uses the ID exactly as written and never guesses.
+  - title: Classify the change
+    text: It decides if the work is a feature, bugfix, hotfix, refactor, docs, test, config or dependency change, and picks the branch type and base branch.
+  - title: Build the branch and commits
+    text: It writes the branch name and splits the work into small commits, one per clear change, each with a gitmoji from the official catalogue.
+  - title: Write the pull request
+    text: It writes a title, the ticket link, a change summary, a risk and security note, test lines and a rollback step.
+  - title: Review for safety and scope
+    text: It removes secrets and vague wording, and flags work that mixes unrelated changes so you can split it.
+  - title: Hand back
+    text: It lists the checks it could not do, such as tests it cannot run, and what to update in Jira by hand.
+output_shape: |-
+  JIRA ANCHOR
+    Ticket <ID as given> | Outcome <one line> | Change type <feature, bugfix, hotfix, refactor, docs, test, config or dependency>
+
+  BRANCH
+    Name <type>/<ID>-<short-description> | Created from <develop or main> | Why <reason>
+
+  COMMITS (in order)
+    <gitmoji> <ID>: <short description> | <what this commit covers>
+
+  PULL REQUEST
+    Title: <gitmoji> <ID>: <short description>
+    What does it do: <summary>
+    Jira link: <ticket and branch>
+    Changes: <bullets>
+    Risk and security: <areas touched, secrets changed yes or no, rollback>
+    Testing: <what was run and where, or "not run">
+
+  SPLIT BEFORE REVIEW
+    <change that is a separate job> | <suggested branch or ticket>
+
+  ASSUMPTIONS AND CHECKS NOT DONE
+output_sample:
+  input:
+    - The Jira ticket ID, exactly as it appears
+    - What you changed or plan to change, in a few lines
+    - Your repo's branch and commit rules (optional)
+    - What you tested, and where (optional)
+    - A list of changed files or a diff summary (optional)
+  prerequisites:
+    - A Jira ticket for the work. Without one, the agent stops and asks for it
+  output:
+    - name: Jira anchor
+      contains: The ticket ID as you gave it, the outcome in one line and the type of change.
+    - name: Branch
+      contains: The branch name with the ticket ID, the branch it starts from and the reason.
+    - name: Commits
+      contains: A short, ordered list of commit lines, each with a gitmoji, the ticket ID and a short note.
+    - name: Pull request
+      contains: A title and description with the ticket link, changes, risk and security note, testing and rollback.
+    - name: Split before review
+      contains: Any change that is a separate job, with a suggested branch or ticket for it.
+    - name: Assumptions and checks not done
+      contains: What the agent assumed and which tests or checks it could not run.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A pasted ticket ID and a few lines are enough. It does not need Jira or repo access to write the text.
+    - name: A coding agent such as Claude Code
+      why: It can read your real diff and run the Git commands for you, once you check the branch and commit text.
+  inputs:
+    - Your team's written branch and commit rules.
+    - The Jira ticket description and acceptance notes.
+    - The output of git diff --stat, so it can split the commits to match the real changes.
+terms:
+  - term: Branch
+    meaning: A separate line of work in Git, so you can change code without touching the main version.
+  - term: Commit
+    meaning: A saved step of work in Git, with a short message that says what changed.
+  - term: Pull request
+    meaning: A request to merge your branch into another one, where teammates review the change first.
+  - term: Hotfix
+    meaning: An urgent fix to the live version, made from the main branch.
+  - term: Gitmoji
+    meaning: A small icon at the start of a commit message that shows the kind of change. Gitmoji.dev lists them.
+  - term: Jira task ID
+    meaning: The code Jira gives each ticket, such as JIRA-214.
+tweaks:
+  - what: Branch pattern
+    how: Paste your team's own pattern. The agent keeps your pattern and keeps the Jira ID inside it.
+  - what: Commit style
+    how: Say if you do not use gitmoji. It will write the same lines without them.
+  - what: Scope
+    how: Ask for the branch name alone, or the pull request text alone, if that is all you need.
+improve:
+  - Save your team's branch, commit and pull request rules with the pack so they apply every time.
+  - After a review, tell the AI what the reviewer asked for and ask it to adjust the next pull request text.
+  - Ask the Git workflow agent to write the team rules once, then paste them here.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

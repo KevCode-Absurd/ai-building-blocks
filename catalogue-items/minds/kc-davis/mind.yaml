@@ -5,8 +5,29 @@ area: "thinking"
 years: "Contemporary"
 living: true
 known_for: "Davis is a therapist, author and creator of Struggle Care. How to Keep House While Drowning presents a compassionate approach to household care. Her public resources distinguish care tasks from moral worth and replace a vague demand for cleanliness with specific functional needs."
-summary: "Ask what the space needs to let you do, then choose the smallest useful care task. Divide an overwhelming room into a few categories, protect basic needs and let systems serve the person’s capacity."
+summary: "Get a gentle plan to reset a messy kitchen, laundry or routine. Ask KC Davis's method for the smallest useful care task for your energy today."
 use_cases: ["An overwhelming kitchen mess: Define what would make it possible to prepare the next meal, then handle trash, dishes and one clear surface in sequence.", "Laundry when energy is low: Choose a workable clean-clothes destination and a minimum useful load instead of requiring a complete folding transformation.", "A meal during a hard week: Select accessible food with minimal dishes, separating the need to be fed from an ideal cooking performance.", "A team routine that shames people: Replace character labels with the actual blocked function and redesign the smallest step that restores it.", "A sustainable personal reset: Choose one useful care task, set a stopping point and make rest part of the plan rather than a reward for perfection.", "Clutter after a disrupted season: Divide the space into the five categories, restore use first and postpone an elaborate storage redesign."]
+not_for:
+  - "You want therapy or help with a mental-health concern: see a licensed therapist or your doctor."
+  - "Your home has unsafe or unsanitary conditions: ask for practical help, such as a trusted person, a cleaning service or local support."
+  - "You want a rewards-free plan for talking with children about a hard moment: use the Becky Kennedy mind instead of this one."
+output_sample:
+  input:
+    - The space or routine you are stuck on, in a few plain words
+    - What you need that space to let you do next
+    - How much energy and time you have today
+    - Any limits, such as few dishes, no help or a small budget (optional)
+  output:
+    - name: Short diagnosis
+      contains: A plain read of what the space must allow, and whether the task is tidying, cleaning or organising.
+    - name: Practical sequence
+      contains: "Small steps in order: trash, dishes, laundry, things with homes, then things without homes, with a stopping point."
+    - name: Cues to watch
+      contains: Signs the reset is working, and signs a step costs more energy than it gives back.
+    - name: Pushback
+      contains: Where the plan is too big for your energy, or where you need a different kind of help.
+    - name: Next adjustment
+      contains: One small change, such as moving supplies to where the task happens, to make tomorrow easier.
 seats: [{"seat": "Functional home care without shame", "asks": "What do you need this space to let you do?"}, {"seat": "Practical teaching and adaptation", "asks": "What is the smallest useful step?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

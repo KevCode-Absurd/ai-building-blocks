@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It weighs list health, rules and send risk before it suggests anything.
 new_slug: email-program-lead
 name: Email program lead
-summary: Say your email goal. Get flows, copy, deliverability fixes and
-  compliance checks, with a hard stop before any real send.
+summary: Plan and write email flows, fix spam problems and check compliance with an email marketing plan that stops before any real send.
 job: write-emails
 headline: Email program lead
-subhead: A full email marketing plan, with the sending steps held back until you
-  say go. State your goal and you get flows, copy, deliverability fixes and
-  compliance checks, built on one author's playbook drawn from running a large
-  email platform.
+subhead: A full email marketing plan, with the sending steps held back until you say go. State your goal and you get flows, copy, deliverability fixes and compliance checks, built on one author's playbook drawn from running a large email platform.
 explain: |
   A full email marketing plan, with the sending steps held back until you say go. State your goal and you get flows, copy, deliverability fixes and compliance checks, built on one author's playbook drawn from running a large email platform.
 
@@ -19,6 +15,10 @@ when:
   - Your emails land in spam and you need a fix list.
   - You need a compliance check before a big send.
   - You want an AI to work in your email tool safely.
+not_for:
+  - "You need code for order receipts or password resets: use a transactional email API and a developer."
+  - "You need to read or sort incoming mail: use your email app's own rules or search."
+  - "You want a one-off subject line only: ask your AI directly, no full plan needed."
 you_give:
   - Your email goal
   - Your sending platform and access
@@ -30,9 +30,31 @@ you_get:
   - A deliverability fix list
   - Compliance checks before any send
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your email platform through a connector
-    if you want drafts built there. It always asks you before any send.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text, or upload the skill folder if your AI accepts files.
+  - Say your goal and name your sending platform, for example a 3-email welcome flow for your shop.
+  - Add your list size, your audience and your offer. Share your seed test addresses if you have them.
+  - Connect your platform through an API or connector only if you want drafts built there. Otherwise ask for the copy and plan in the chat.
+  - Check the send packet it shows. Nothing goes to more than one person until you type "send it".
+  - Fix anything it flags, such as a missing unsubscribe link or sender authentication, before you approve.
+output_sample:
+  input:
+    - Your email goal, such as a welcome flow or a spam fix
+    - Your sending platform name, such as Klaviyo, Mailchimp, Brevo or Kit
+    - Your list size and who is on it
+    - Your brand and offer details (optional)
+  prerequisites:
+    - A login to your sending platform if you want drafts built there
+    - An AI that can connect to your platform through an API or connector (optional, you can paste text instead)
+  output:
+    - name: Session start check
+      contains: Your account, sending domain and list size read back so you can confirm them before work begins.
+    - name: Plan or flow
+      contains: The steps of the flow or campaign, with exits, subject lines and preview text for each email.
+    - name: Drafted emails
+      contains: Email copy written to avoid AI-sounding phrases, kept as drafts with a preview.
+    - name: Deliverability and compliance findings
+      contains: Problems with authentication, bounces, complaints or legal rules, with a fix list.
+    - name: Pre-send checklist
+      contains: A check that authentication, unsubscribe link and address are in place before any send.
+    - name: Send packet
+      contains: Preview link, audience size, exclusions, subject, send time, sender details and test result, shown before you approve.

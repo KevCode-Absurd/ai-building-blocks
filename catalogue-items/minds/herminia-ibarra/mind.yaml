@@ -16,6 +16,27 @@ use_cases:
   - "Try part of an unfamiliar role with permission and relevant feedback"
   - "Interpret criticism without treating it as a verdict on your identity"
   - "Lead a volunteer meeting with clearer direction and warmth"
+not_for:
+  - "You need legal, medical or personal money advice: talk to a qualified adviser, because this mind will not set budgets or savings."
+  - "You want to claim qualifications or experience you lack: use a mentor or a course to build the skill first, since this mind rejects false claims."
+  - "You want a step-by-step plan for a career pivot built on your existing strengths: use Jenny Blake, who works through Plant, Scan, Pilot and Launch."
+output_sample:
+  input:
+    - The role change, career idea or behaviour that feels unlike you
+    - What you have actually tried in the new work so far
+    - The people who know your old role and the people who could give feedback
+    - Anyone else affected, such as a partner or team (optional)
+  output:
+    - name: Identity tension
+      contains: The old self-description, the new demand and whether the worry is a value conflict, unfamiliarity, a skill gap or an unsafe expectation.
+    - name: Permitted experiment
+      contains: One piece of real work you can try with permission, without false claims about your competence.
+    - name: Relationship or stakeholder map
+      contains: Who supports your current work, your learning and your wider view, plus who would be affected by a bigger change.
+    - name: Feedback question
+      contains: A question for someone with firsthand knowledge, so you can read the result without treating it as a verdict on you.
+    - name: Provisional story
+      contains: A short, honest explanation of your direction, built from real episodes and open about what is still uncertain.
 seats:
   - {seat: "Working identity and career transitions", asks: "What can you learn by doing before defining who you must become?"}
   - {seat: "Networks and adaptive authenticity", asks: "Which value could a different behaviour still express?"}

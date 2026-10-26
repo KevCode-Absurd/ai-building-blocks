@@ -21,6 +21,33 @@ you_get:
   - Resource relationship map
   - Price assumptions
   - Cost and workload findings
+not_for:
+  - "Your setup runs on AWS, not Azure: use Review AWS cost and resilience."
+  - "You want a new Azure design from scratch: use the Azure architecture designer."
+  - "A deploy is failing or an Azure service is down: use the Azure service health investigator."
+  - "You only want to check that your deploy will pass: use the Bicep deployment preflight checker or Check Azure access before deploy."
+output_sample:
+  input:
+    - The name of your Azure resource group, or a list of your Azure resources
+    - Your Azure design files (Bicep, Terraform or ARM templates), if you have them
+    - The Azure services and regions you want priced
+    - Your goal and the limits you work within
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - Azure command line or Azure tool access and a GitHub link, only if you want the AI to read live resources and open issues
+    - Internet access, so the AI can fetch current Azure retail prices
+  output:
+    - name: Resource relationship map
+      contains: A diagram of your resources and how they connect, with a resource table and notes on weak spots.
+    - name: Price assumptions
+      contains: Current retail prices by service, size and region, with monthly and yearly estimates and the assumptions shown.
+    - name: Cost findings
+      contains: Waste found in named resources, with the proposed fix, saving, risk and effort for each.
+    - name: Workload findings
+      contains: Gaps across the five Azure Well-Architected pillars, each rated high, medium or low risk, with a fix.
+    - name: Hand-back summary
+      contains: Source coverage, missing facts and one next action.
+
 how_to_use:
   - Add the complete skill pack to your AI.
   - Share your goal and the files listed above.

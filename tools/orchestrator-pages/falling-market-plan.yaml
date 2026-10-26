@@ -1,6 +1,6 @@
 new_slug: falling-market-plan
 name: Write your plan for a falling market before it happens
-summary: Paste your holdings and what you paid. Get the market's mood read, each holding checked for real change, and a written plan.
+summary: Write your plan for a falling market while you are calm. Paste your holdings and get each move read, each business checked, and a rule card.
 job: money-and-investing
 thinking: medium
 thinking_why: It runs three skills in a row. The steps are fixed, and the care is in keeping the price out of the verdict on the business. A mid-level model is enough.
@@ -14,6 +14,10 @@ when:
   - Prices are swinging and you feel pulled to act.
   - You sold in a panic once and do not want to do it again.
   - You are about to put in more money and want a calm plan for the bumps.
+not_for:
+  - "You want a view on one day's dip with no change in the business: wait, and look again on your set look date."
+  - "You are deciding whether to buy a new holding: use the Case-against writer to test the idea first."
+  - "You want a stock to buy or sell, or advice for your own money: talk to a licensed financial adviser."
 you_give:
   - What you hold, what you paid and when
   - Your own written value for each holding and why
@@ -29,6 +33,23 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Write your value for each holding before you paste, even a rough range. Without it the gap cannot be read.
   - Print the rule card and keep it where you look at prices.
+output_sample:
+  input:
+    - What you hold, what you paid and when
+    - Your own written value for each holding and why
+    - How prices have moved and what changed in each business
+    - Money you need within five years, and any loan against your holdings (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+  output:
+    - name: "Step 1: The offer"
+      contains: Each holding's gap to your value, marked business change, mood or unknown, with take, ignore or wait.
+    - name: "Step 2: The business"
+      contains: What changed in each business, whether you would buy it today with the price hidden, and a keep, watch or weak mark.
+    - name: "Step 3: The rule card"
+      contains: The half-value test, money needed soon, rules for three sizes of fall, a rule for a jump, and look dates.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Reads the offer
     text: Sets price beside your value, sorts each move into business change or mood, and marks timing reasons as speculation.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads sources and updates linked notes.
 new_slug: personal-wiki-keeper
 name: Personal wiki keeper
-summary: Feed it sources. Get an Obsidian wiki that updates pages, links ideas
-  and flags where sources disagree.
+summary: Build a personal wiki in Obsidian that grows with every source. Your AI files notes, links ideas and flags where sources disagree.
 job: organise-work
 headline: Personal wiki keeper
-subhead: A personal knowledge base that grows each time you feed it a source,
-  instead of starting over with every question. You end up with linked notes in
-  an Obsidian vault where connections and conflicts are already marked.
+subhead: A personal knowledge base that grows each time you feed it a source, instead of starting over with every question. You end up with linked notes in an Obsidian vault where connections and conflicts are already marked.
 explain: |
   A personal knowledge base that grows each time you feed it a source, instead of starting over with every question. You end up with linked notes in an Obsidian vault where connections and conflicts are already marked.
 
@@ -18,6 +15,10 @@ when:
   - You take meeting notes and never find them again.
   - You want a companion wiki for a long book or series.
   - You want a second brain that does the filing for you.
+not_for:
+  - "You want answers from one document, once: paste it into a chat or use a plain search instead."
+  - "You will not add sources over time: a single summary in your AI chat is enough."
+  - "You do not want to use Obsidian: keep notes in your usual app and ask your AI to summarise them."
 you_give:
   - Sources such as articles, notes or transcripts
   - An Obsidian vault folder
@@ -29,8 +30,34 @@ you_get:
   - Flags where sources disagree
   - Answers drawn from the wiki
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write files in your vault.
+  - Use an AI that can read and write files, such as Claude Code. A plain chat works too, but you must copy pages in and out yourself.
+  - Create a vault folder in Obsidian. Make a raw folder and a wiki folder inside it. Put your first source in raw.
+  - "Give your AI this skill. Then say: Follow the llm-wiki skill. My topic is [your topic]. Set up the wiki folders, then read raw/[file name] and add it to the wiki."
+  - Check the source summary and the pages it changed. Tell your AI to fix anything wrong. Then add the next source.
+  - "Ask questions any time. Say: Using the wiki, answer [your question]. Ask it to save good answers as new pages."
+  - "Now and then say: Run a health check on the wiki. It lists broken links, orphan pages and conflicts. The slash commands (/wiki-ingest, /wiki-query, /wiki-lint) only work with the plugin. In a plain chat, type the same request in words."
+output_sample:
+  input:
+    - A source to add, such as an article, paper, PDF or meeting note
+    - Your Obsidian vault folder
+    - The topic or purpose of your wiki
+    - A question to ask the wiki later (optional)
+  prerequisites:
+    - Obsidian installed, with a vault folder
+    - An AI that can read and write files in your vault, such as Claude Code
+    - Python, only if you want the optional helper scripts
+  output:
+    - name: raw/
+      contains: Your original sources, kept as they are. The AI reads them and never changes them.
+    - name: wiki/sources/
+      contains: One summary page for each source you add.
+    - name: wiki/entities/ and wiki/concepts/
+      contains: Pages for people, groups, places and ideas, created or updated with links to related pages.
+    - name: wiki/comparisons/ and wiki/synthesis/
+      contains: Pages that compare sources and sum up your current view, with notes where sources disagree.
+    - name: wiki/index.md
+      contains: A catalogue of every wiki page, updated each time you add a source.
+    - name: wiki/log.md
+      contains: A dated list of what was added, asked or checked, newest at the end.
+    - name: Health check report
+      contains: Orphan pages, broken links, stale claims, contradictions and ideas that still need their own page.

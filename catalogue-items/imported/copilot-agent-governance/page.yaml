@@ -2,17 +2,111 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-agent-governance
 name: AI agent control designer
-summary: Share how your agent uses tools. Get controls for permissions, trust
-  and risky actions.
+summary: Set tool permissions, approval rules and an audit log for your AI agent. Get a policy file and a test list before it goes live.
 job: set-up-ai
 headline: AI agent control designer
-subhead: Share how your agent uses tools. Get controls for permissions, trust
-  and risky actions. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: "List the tools your AI agent can use and how risky its work is. It decides which tools to allow, block or send for human approval, and sets limits and an audit log. You get a tool table, a policy file and a test list."
+explain: |
+  AI agent governance means setting rules for what an agent may do. An agent that can send email, query a database or run commands can also do harm by mistake or when someone tricks it. This skill is an AI agent control designer: it turns your tool list into clear rules.
+
+  It starts from the tools, not from fear. For each tool it asks if the tool only reads or also changes things, and what the worst outcome is. Then it picks a strictness level, from audit only to locked down, and writes a policy: allow, block, or ask a human first. It adds a limit on calls per run, filters for sensitive text, and an audit log of every call.
+
+  It also says plainly what these controls cannot do. A pattern check on requests is a first filter that rephrasing can beat. It lowers risk. It does not replace a security review.
+when:
+  - You are about to give an AI agent access to email, a database, files or payments.
+  - Your agent already has tools and nobody has written down what it may do.
+  - An auditor, client or boss asks how you keep your AI agent in check.
+  - Several agents hand work to each other and you need to decide how far each is trusted.
+not_for:
+  - "You want your agent attacked to find holes: use the AI agent attack tester."
+  - "You want a pass or fail against the OWASP agent risks: use the Agent OWASP risk checker."
+  - "You want to design the tools themselves: use the Agent tool designer."
+  - "You only want to watch an agent after launch: use the AI agent monitoring planner."
+  - "Your AI only writes text and has no tools: there is nothing to control."
+you_give:
+  - What the agent is for, in one or two sentences
+  - Each tool the agent can use, and whether it only reads or also changes things
+  - How risky the work is, such as a test, normal use, or money, health or legal data
+  - The sensitive data it can touch, such as customer details or secrets
+  - Your code and the framework you use (optional)
+you_get:
+  - A tool table with allow, block or ask-a-human for each tool
+  - A policy file in YAML with call limits and blocked text patterns
+  - A list of risky requests to flag, with their limits stated
+  - The fields to record in your audit log
+  - A test list with one test per control
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed to get the plan.
+  - Paste the skill text into the chat, or open the skill if you added it to your AI.
+  - Paste your tool list and how risky the work is. Say if the agent handles money or personal data.
+  - If it asks for something you do not know, say so. It marks the gap instead of guessing.
+  - Check the tool table first. Make sure every tool the agent can call is in it.
+  - Ask your developer to build and test the policy. Have a person review the result before launch.
+how_it_works:
+  - title: List the tools
+    text: It puts every tool in a table with what it does and the worst thing that could go wrong.
+  - title: Choose a level
+    text: It picks open, standard, strict or locked, based on the risk you gave it.
+  - title: Write the policy
+    text: It sets allow, block or approval for each tool, plus blocked text patterns and a call limit for each run.
+  - title: Plan intent checks
+    text: It lists risky request types to flag before a tool runs, and says these checks are easy to get around.
+  - title: Design the audit log
+    text: It chooses what to record for every allowed, blocked and failed call.
+  - title: Add trust rules
+    text: For several agents, it says what each may do at each trust level and what lowers trust.
+  - title: Write the tests
+    text: It writes one test per control so you can prove each one works.
+output_shape: |
+  Level: <open, standard, strict or locked> and <why>
+  Tool table: <tool> | <reads or changes> | <allow, block or approval> | <why>
+  Policy file: <YAML with allowed tools, blocked tools, blocked patterns, call limit, approvals>
+  Intent checks: <request types to flag> and <their limits>
+  Audit log fields: <fields per call> and <where stored>
+  Trust rules: <only for several agents>
+  Tests: <one test per control>
+  Gaps: <missing inputs> and <review still needed>
+output_sample:
+  input:
+    - What your agent is for, and the tools it can use
+    - How risky the work is
+    - The sensitive data it can touch
+    - Your code and framework (optional)
+  prerequisites:
+    - A developer to build the policy if you want it enforced in code
+  output:
+    - name: Governance level
+      contains: Open, standard, strict or locked, with the reason it fits your risk.
+    - name: Tool permission table
+      contains: Each tool marked allow, block or ask a human, with the worst case.
+    - name: Policy file
+      contains: A YAML policy with allowed and blocked tools, blocked text patterns and a call limit.
+    - name: Intent checks
+      contains: Risky request types to flag before a tool runs, and how they can be beaten.
+    - name: Audit log fields
+      contains: What to record for every allowed, blocked and failed call.
+    - name: Test list
+      contains: One test for each control, so you can prove it works.
+    - name: Gaps and next steps
+      contains: Missing inputs, and a reminder that a person still reviews it before launch.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can turn a pasted tool list into the table and policy file.
+    - name: Your code editor with an AI helper
+      why: It can place the code patterns in your project once the policy is agreed.
+  inputs:
+    - Your logs from a recent agent run
+    - Your company rules on personal data
+    - A list of what happened the last time the agent made a mistake
+terms:
+  - term: Governance
+    meaning: The rules for what an agent may and may not do.
+  - term: Allowlist
+    meaning: A list of the only tools the agent may use.
+  - term: Audit trail
+    meaning: A record of every action the agent took, kept so you can check it later.
+  - term: Human approval
+    meaning: A step where a person says yes before a risky tool runs.
+  - term: Trust score
+    meaning: A number that goes up when an agent does well and down when it fails.

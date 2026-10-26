@@ -1,6 +1,6 @@
 new_slug: process-and-meeting-cull-planner
 name: "Process and meeting cull planner"
-summary: "List your regular meetings, approvals and reports. Get a keep, simplify or drop call on each."
+summary: "Cut meetings that waste your week. List your recurring meetings, approvals and reports. Get a keep, shrink or drop call on each, with a reason."
 job: lead-people
 thinking: medium
 thinking_why: "It judges each item and has to weigh what breaks if it goes."
@@ -10,13 +10,17 @@ subhead: "List your regular meetings, approvals and reports. It sorts each as po
 
 explain: |
   Every team collects meetings and approvals. Each began with a reason, and few were ever removed. The calendar fills, and the work moves to the gaps.
-  
+
   This skill puts each item through three questions. Does it make something possible? Does it make it simpler? Or neither? The neither ones go. Simplifiers are tested by what would break in a month without them. What stays gets an owner and a test of what it must produce. It also separates real output from work about work, such as status reports, and sets a review date so the list does not grow back.
 
 when:
   - "Your week is mostly meetings and you cannot say what they produce."
   - "A new manager wants to clear out old habits."
   - "People spend more time reporting on work than doing it."
+not_for:
+  - "You must keep a legal or safety meeting: leave it off the list or mark it keep-only, and ask your compliance lead if unsure."
+  - "Your team has almost no recurring meetings: talk to your team about where the time goes, or track a week of work by hand."
+  - "You need to settle one tense decision, not clear a whole calendar: use a short talk with the people involved."
 
 you_give:
   - "Your recurring meetings, approvals and reports, with length and attendees"
@@ -33,6 +37,29 @@ how_to_use:
   - "Add reports and approvals that do not appear on it."
   - "Paste the list and ask for the calls."
   - "Tell the people affected before you drop anything, and review in a month."
+output_sample:
+  input:
+    - Your recurring meetings, approvals and reports, with how often, how long and who attends
+    - Who owns each one
+    - Your goals this quarter (optional)
+    - Your own figures on time lost to searching, status updates and alerts (optional)
+  output:
+    - name: Items table
+      contains: Every item with owner, how often, length, people, kind, call and whether it is real output or work about work.
+    - name: Drop
+      contains: Each item to drop, what replaces it, and who to tell.
+    - name: Shrink or trial removal
+      contains: Items to make shorter or pause for a month, and the sign to watch for.
+    - name: Keep
+      contains: Each item that stays, its owner and what it must produce each time.
+    - name: Where time goes
+      contains: Hours per week lost to searching, status updates and alerts, from your figures.
+    - name: Cut, merge or move
+      contains: What to cut, join or move to one place.
+    - name: Review date
+      contains: The date to check the list again so it does not grow back.
+    - name: Missing and checks missed
+      contains: Facts it lacked, and any of its own checks it still failed.
 
 how_it_works:
   - title: "List everything with an owner"
@@ -55,28 +82,28 @@ how_it_works:
 output_shape: |
   ITEMS
   <name> | Owner | Often | Length | People | Kind: possible / simpler / neither | Call: drop / shrink / keep | Output or work about work
-  
+
   DROP
   <item> -> replaced by <...>, tell <who>
-  
+
   SHRINK OR TRIAL REMOVAL
   <item>: <change>, watch for <sign>
-  
+
   KEEP
   <item>: owner <...>, must produce <...>
-  
+
   WHERE TIME GOES
   <searching, status, alerts: hours per week>
-  
+
   CUT, MERGE OR MOVE
   <list>
-  
+
   REVIEW DATE
   <date>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

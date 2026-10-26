@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads many comments and groups the themes.
 new_slug: comment-mining-analyst
 name: Comment mining analyst
-summary: Give it social posts. Get what people ask, complain about and want, in
-  their own words. Collects data from websites.
+summary: Find what people ask, complain about and want in social post comments. Get their exact words, grouped by theme, from TikTok, YouTube and more.
 job: understand-customers
 headline: Comment mining analyst
-subhead: What people ask, complain about and want, in their own words, pulled
-  from social comments. Use it for product research, content ideas, copy and
-  objection handling.
+subhead: What people ask, complain about and want, in their own words, pulled from social comments. Use it for product research, content ideas, copy and objection handling.
 explain: |
   What people ask, complain about and want, in their own words, pulled from social comments. Use it for product research, content ideas, copy and objection handling.
 
@@ -18,19 +15,46 @@ when:
   - A competitor's video has hundreds of comments worth reading.
   - You want content ideas from what your audience asks.
   - You want to see objections to a product before launch.
+not_for:
+  - You have fewer than about 20 comments, so read them yourself. A small sample shows no real pattern.
+  - You want how the whole market feels. Comments from one post can't show that, so use a survey instead.
+  - You want to know why customers bought. Talk to them directly, in customer interviews.
 you_give:
   - Links to posts or videos
-  - How deep to go (optional)
+  - How many comments to read (optional)
   - Your product or topic (optional)
-  - Access to a comment data service
+  - A ScrapeCreators account and API key (paid), saved as SCRAPECREATORS_API_KEY
 you_get:
   - Top questions and complaints
   - Buying signals
   - Exact phrases people use
   - Content and copy ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - Sign up at ScrapeCreators and copy your API key. It is a paid service.
+  - Use an AI that can run code, and save the key as SCRAPECREATORS_API_KEY. This tool reads public comments, so check each platform's terms first.
+  - Paste the skill into your AI, then add your post links. Say how many comments you want and what your product is (optional).
+  - Check the sample size and confidence line first. Then read the Top Themes table and the exact quotes.
+  - Use the questions, objections and phrases in your ads, FAQ and content.
+output_sample:
+  input:
+    - Links to posts or videos (TikTok, YouTube, Instagram, Facebook, Reddit or Rumble)
+    - How many comments to read (optional)
+    - Your product or topic (optional)
+  prerequisites:
+    - An AI that can run code and reach the web
+    - A ScrapeCreators account and API key (paid), saved as SCRAPECREATORS_API_KEY
+  output:
+    - name: Summary
+      contains: The post links, how many comments were read, and how sure the AI is about the result.
+    - name: Top Themes
+      contains: A table of themes with type, how often they appear, how strong they feel, and one quote each.
+    - name: Audience Questions
+      contains: The questions people ask, in their own words.
+    - name: Objections and Concerns
+      contains: Each doubt, the comment that shows it, and a way to answer it.
+    - name: Buying Intent / Demand Signals
+      contains: Comments that show people want to buy or want the product.
+    - name: Exact Language to Reuse
+      contains: Phrases people use that you can reuse in copy.
+    - name: Content Ideas From Comments
+      contains: A numbered list of content ideas based on what people said.

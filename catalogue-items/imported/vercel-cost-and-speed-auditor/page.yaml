@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It follows data gates and checks many signals.
 new_slug: vercel-cost-and-speed-auditor
 name: Vercel cost and speed auditor
-summary: Point it at a Vercel app. Get cost and speed problems found from real
-  production metrics, with fixes.
+summary: Find what makes your Vercel app cost too much or load slowly, using real production numbers. Get a ranked list of issues with a fix for each.
 job: ship-and-host
 headline: Vercel cost and speed auditor
-subhead: A list of what is costing you money or slowing your Vercel app, found
-  from real production numbers instead of guesses, with a fix for each.
+subhead: Give it a Vercel project that is linked on your computer. It reads your real production numbers, then finds what costs money or slows your app. You get a ranked report with a fix for each issue.
 explain: |
   A list of what is costing you money or slowing your Vercel app, found from real production numbers instead of guesses, with a fix for each. 
   The skill first collects metrics, usage and contract data with the Vercel command line tool and saves them to a signals file. A script then decides what is worth looking into, such as a slow route or an expensive function. js strongest. It needs the Vercel CLI, a login, a linked project and Node. Route-level detail needs the Observability Plus plan. It never asks you to paste secret keys into commands.
@@ -15,20 +13,49 @@ when:
   - Your Vercel bill jumped and you do not know which route caused it.
   - Pages feel slow in production but fast on your computer.
   - You want a cost check before a big launch.
-  - A teammate asks for proof before changing config.
+  - A teammate asks for proof before you change a setting.
+not_for:
+  - "Your app is not deployed on Vercel yet: ship it first, then run this audit once it has real traffic."
+  - "You do not want to install the Vercel CLI or run code: review the usage page in your Vercel dashboard by hand instead."
+  - "You need to fix one slow page on your computer: ask a developer to profile that page in the browser."
 you_give:
   - A Vercel project linked on your computer
-  - A logged-in Vercel CLI
+  - The Vercel command line tool, logged in to your account
   - Node 20 or later
-  - Observability Plus for route-level numbers (optional)
+  - Observability Plus on your Vercel plan, for route-level numbers (optional)
 you_get:
-  - A signals file of production metrics
-  - Ranked cost and speed issues
-  - Fixes tied to the exact route or setting
-  - Doc references for your framework version
+  - A file of production numbers pulled from your Vercel account
+  - A ranked list of cost and speed issues
+  - A fix for each issue, tied to the exact route or setting
+  - Links to docs that match your framework version
+  - A short report you can share with your team
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Install the Vercel command line tool, then run vercel login and vercel link in your project folder.
+  - Check that Node 20 or later is installed.
+  - Open an AI tool that can run code and read files, such as Claude Code. A plain chat window cannot run it.
+  - Give your AI the skill folder and ask it to run the Vercel optimize audit on your project.
+  - Answer any question it asks about audit scope.
+  - Read the report. Apply one fix, then run the audit again to see if it worked.
+output_sample:
+  input:
+    - A Vercel project linked on your computer
+    - Your Vercel login in the command line tool
+    - Node 20 or later
+    - Observability Plus on your Vercel plan, for route-level detail (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Vercel command line tool, version 53 or later, logged in
+    - A project linked with vercel link
+  output:
+    - name: signals.json
+      contains: Production metrics, usage and contract data collected from your Vercel account for the project.
+    - name: gate.json
+      contains: The list of routes, files or settings that a fixed set of rules says are worth a closer look.
+    - name: recommendations.json
+      contains: One investigation result for each flagged item, with the cause found in the code or settings.
+    - name: verify.json
+      contains: The recommendations after checks, with doc links dropped when they do not match your framework version.
+    - name: report.md
+      contains: The final ranked report of cost and speed issues, each with a fix tied to a route or setting.
+    - name: final-message.json
+      contains: The short chat message that sums up the report for you to read.

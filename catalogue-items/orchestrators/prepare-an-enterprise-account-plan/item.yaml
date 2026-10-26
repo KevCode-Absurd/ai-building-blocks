@@ -22,18 +22,15 @@ uses:
   - copilot-gtm-enterprise-onboarding
 steps:
   - uses: copilot-gtm-enterprise-account-planning
-    note: 1. Read skills/copilot-gtm-enterprise-account-planning/SKILL.md. Share an
-      account and deal context. Get buyer roles, deal risks and next steps for a
-      complex sale. Save the result with source references. Carry the user's
-      goal and all earlier findings into this step. If required evidence or tool
-      access is missing, mark this step blocked; do not fabricate a result.
+    note: "Share the account and deal context. Get buyer roles, deal risks and next
+      steps for a complex sale, saved with source references. Hands step 2 the
+      plan: buyer roles, success goals and risks. If required evidence or tool
+      access is missing, mark this step blocked; do not make up a result."
   - uses: copilot-gtm-enterprise-onboarding
-    note: 2. Read skills/copilot-gtm-enterprise-onboarding/SKILL.md. Share a signed
-      customer and success goals. Get onboarding stages, owners and checks for
-      reaching first value. Save the result with source references. Carry the
-      user's goal and all earlier findings into this step. If required evidence
-      or tool access is missing, mark this step blocked; do not fabricate a
-      result.
+    note: Uses your signed-customer brief and step 1's plan (buyer roles, success
+      goals, risks). Get onboarding stages, owners and checks for reaching first
+      value, saved with source references. If required evidence or tool access
+      is missing, mark this step blocked; do not make up a result.
 origin: rebuilt
 version: 1.0.0
 credits:

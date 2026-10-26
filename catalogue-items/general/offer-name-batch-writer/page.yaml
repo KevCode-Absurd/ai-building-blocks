@@ -1,6 +1,6 @@
 new_slug: offer-name-batch-writer
 name: Offer name batch writer
-summary: Paste your offer and buyer. Get ten offer names built from five parts, with three to test.
+summary: Get ten offer names for your deal, built from five parts, plus the three to test. Give it your offer and who it is for.
 job: make-offer
 thinking: low
 thinking_why: It builds names from fixed parts, with few judgement calls.
@@ -14,6 +14,10 @@ when:
   - Your offer has a boring name.
   - You are launching a deal and want it to sound specific.
   - You want names to test against each other in ads.
+not_for:
+  - "You want the fuller version with every check: use the Offer name writer."
+  - "You are naming a single product with a fixed name: keep the name and write the offer around it."
+  - "Your ad rules block time or result claims: pick a plain name by hand, or drop the time part."
 you_give:
   - Your offer and its result
   - Who it is for
@@ -28,6 +32,20 @@ how_to_use:
   - Be specific about the buyer, such as a role and a situation.
   - Only keep names whose time and result you can back.
   - Test no more than three names at once.
+output_sample:
+  input:
+    - Your offer and the result it gives
+    - Who it is for, as specific as you can
+    - Platform rules on results or time claims (optional)
+  output:
+    - name: PARTS
+      contains: The reasons, buyer, result, time and container word the names are built from.
+    - name: TEN NAMES
+      contains: Ten offer names, each with the parts it uses.
+    - name: TEST THESE THREE
+      contains: Three names to test, with a line on why each was picked.
+    - name: HOW TO TEST
+      contains: "A short plan: same budget and ad for each name, keep the winner, test one new name."
 how_it_works:
   - title: Pick a reason
     text: Three believable reasons for the deal.

@@ -1,6 +1,6 @@
 new_slug: business-tenet-scorecard-writer
 name: "Business tenet scorecard writer"
-summary: "Paste your findings on a business. Get ten tests marked pass, fail or unknown, and whether a price check is worthwhile."
+summary: "Turn your findings on a business into a ten-test scorecard. Each test is pass, fail or unknown, and you learn if a price check is worth it."
 job: money-and-investing
 thinking: medium
 thinking_why: "It sorts findings into ten tests and applies a fixed ladder. The reading is careful, but the rules are set."
@@ -17,6 +17,10 @@ when:
   - You have gathered several findings on a business and need one clear page.
   - You are deciding whether a business deserves the work of a full valuation.
   - You are comparing two businesses on the same ten tests.
+not_for:
+  - "You have no findings yet: first run the Business power tester, then come back with its report."
+  - "You want to know if a stock is cheap or dear: this checks the business, not the price, so work out its value as the next step."
+  - "You want a buy or sell call: it gives none, so talk to a licensed financial adviser."
 
 you_give:
   - Your findings on the business, as they are
@@ -34,6 +38,30 @@ how_to_use:
   - Tell it if you want different cut-offs on the ladder.
   - Read the unknowns first. They are where the verdict could still change.
   - If the verdict is worth a price check, take the findings to "Value a business and the discount to ask for".
+output_sample:
+  input:
+    - Your findings on the business, pasted as they are
+    - Reports on its edge, record, managers, returns and owner earnings
+    - The stake or decision you are weighing (optional)
+  prerequisites:
+    - Findings from earlier checks, such as the Business power tester or the Owner earnings calculator
+  output:
+    - name: Findings list
+      contains: Each kind of finding marked found, with where it came from, or missing.
+    - name: The ten tests
+      contains: Pass, fail or unknown for each test, with one line of evidence.
+    - name: Must-pass results
+      contains: "The result for the three tests that must pass: understanding, lasting edge and estimable owner earnings."
+    - name: Verdict
+      contains: Too hard, not worth a price check, dig more or worth a price check, with the count behind it.
+    - name: Red flags
+      contains: Signs of poor reporting or honesty found in your findings, or none found.
+    - name: Read or ask next
+      contains: Each unknown matched to a document to read or a person to ask, in order of impact.
+    - name: Next step
+      contains: What the verdict allows you to do next.
+    - name: Missing and checks missed
+      contains: Gaps in your findings, and any of its own checks it could not meet.
 
 how_it_works:
   - title: Lists what it was given

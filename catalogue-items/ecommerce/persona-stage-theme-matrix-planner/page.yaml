@@ -1,45 +1,116 @@
 new_slug: persona-stage-theme-matrix-planner
 name: Persona, stage and theme matrix planner
-summary: Map buyers, awareness stages and ad themes. Find gaps and rank which cells to make next.
+summary: Map your buyers, their awareness stage and nine ad themes. Find gaps and get the ten best ad cells to make next, ranked.
 job: plan-ad-tests
 headline: Persona, stage and theme matrix planner
-subhead: Share buyer groups, awareness stages, themes, prior tests and capacity. Get a three-axis matrix and ranked production queue.
-explain: |-
-  Map buyers, awareness stages and ad themes. Find gaps and rank which cells to make next.
+subhead: Give it your buyer evidence, such as reviews or customer notes, plus past ad results and what you can make. It builds a matrix of buyer, awareness stage and ad theme, and ranks the 10 cells to make next. Each pick says what evidence backs it.
+explain: |
+  Ad plans often feel random. An ad gets made because it sounded good. This persona, stage and theme matrix gives every ad a place. It uses three axes: who the buyer is, how much they already know (five awareness stages) and what the ad leans on (nine themes, such as urgency, social proof or us versus them). Each ad fits exactly one cell. Empty cells show what you have not made yet.
 
-  Share buyer groups, awareness stages, themes, prior tests and capacity. Get a three-axis matrix and ranked production queue.
+  It ranks the cells by fit, using your evidence. Cold audiences get problem, lifestyle and teaching ads. Warm audiences get proof and comparison. Buyers who are ready get urgency. It never points a "buy now" ad at cold traffic.
+
+  Every buyer profile must come from your own evidence, such as reviews, survey answers or sales notes. With none, you get a clearly labelled starter matrix to test, not a finding. Ratings are judgments until you add results, and the ranking is by fit, not measured return.
 when:
-  - You need a three-axis matrix and ranked production queue.
-  - You need persona, stage and theme matrix planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are planning a quarter of ads and want to know what to make, and in what order.
+  - Your ad output feels random and nobody can say why one ad was made over another.
+  - Your ads all lean on one theme or one stage and you want to see the holes.
+  - One buyer group is not converting and you want to see what you have tried for them.
+not_for:
+  - "You only have product facts and reviews and want 30 to 40 persona and angle ideas. Use the Ad concept matrix builder."
+  - "You want briefs written for the gaps. Use the Creative gap-to-brief queue planner."
+  - "You want to see how your live ads spread across concept types. Use the Meta concept diversity test planner."
+  - "You need ads for one funnel stage only. Use the Funnel-stage creative brief builder."
+  - "You have no customer words and no sales history. You would get a starter matrix to test, not a finding. Collect reviews first."
 you_give:
-  - Buyer groups
-  - Awareness stages
-  - Themes
-  - Prior tests and capacity
+  - Customer evidence, such as reviews, survey answers, support notes or sales calls
+  - Your product, and what your buyers want or fear
+  - Past ads with their results by theme, stage or buyer (optional)
+  - How your spend splits between cold, warm and ready-to-buy buyers (optional)
+  - How many ads you can make in one sprint
 you_get:
-  - A three-axis matrix and ranked production queue
-  - The sources used, missing inputs and assumptions
+  - Three to five buyer profiles, each tied to your evidence
+  - A matrix for each buyer rating nine themes against five stages as strong, medium, weak or skip
+  - The top 10 cells to make next, each with a reason and an evidence tag
+  - Empty cells that should be filled
+  - Cells to drop, but only when you gave results
+  - A MISSING list for anything you did not give
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code or web access.
+  - Paste your customer evidence and past ad results. Add how many ads you can make.
+  - Check each buyer profile. Delete any you do not recognise and fix the wants and doubts.
+  - Read the top 10. Each is tagged DATA, CUSTOMER WORDS or ASSUMPTION. Test the assumptions first.
+  - Turn the top cells into briefs with the Creative gap-to-brief queue planner. Come back after a month of results.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm buyer groups, awareness stages, themes, prior tests and capacity. Mark facts that are missing.
-  - title: Define Personas
-    text: Follow the define personas section in the full method and keep its required fields and decision rules.
-  - title: Map Awareness Stages
-    text: Follow the map awareness stages section in the full method and keep its required fields and decision rules.
-  - title: Apply 9 Themes
-    text: Follow the apply 9 themes section in the full method and keep its required fields and decision rules.
-  - title: Build the Matrix
-    text: Follow the build the matrix section in the full method and keep its required fields and decision rules.
-  - title: Prioritize
-    text: Follow the prioritize section in the full method and keep its required fields and decision rules.
-  - title: Deliver
-    text: Follow the deliver section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a three-axis matrix and ranked production queue. Check facts, math and the decisions before any action.
+  - title: Define the buyers
+    text: Three to five profiles, each with age range, main pain or want and doubts. Each one cites your evidence or is marked as an assumption.
+  - title: Map five awareness stages
+    text: Unaware, problem aware, solution aware, product aware and most aware.
+  - title: Apply nine themes
+    text: Urgency, lifestyle, social proof, problem and solution, features and benefits, us versus them, fear of missing out, educational and aspirational.
+  - title: Build the matrix
+    text: For each buyer, which themes fit which stages, rated strong, medium, weak or skip.
+  - title: Rank the cells
+    text: Cold buyers get early-stage lifestyle, teaching and problem ads. Warm buyers get proof and comparison. Ready buyers get urgency. The rank is by fit, not measured return.
+  - title: Check the spread
+    text: It lists the buyers, stages and themes in the top 10, then counts them, so the spread numbers are right.
+  - title: Flag gaps and drops
+    text: Empty cells to fill. A cell is dropped only when three or more of its ads ran with no sales and you gave those results.
+output_shape: |
+  EVIDENCE USED: <reviews, survey, results, or "none: starter matrix">
+
+  BUYERS (3 to 5)
+  <name> | <age range> | <main pain or want> | <doubts> | <evidence or ASSUMPTION>
+
+  MATRIX (one per buyer)
+               Unaware | Problem | Solution | Product | Most aware
+  <theme>      <rating> ...        (strong | medium | weak | skip)
+
+  TOP 10 CELLS TO MAKE NEXT
+  1 <buyer> x <stage> x <theme> | why <...> | evidence <DATA | CUSTOMER WORDS | ASSUMPTION>
+  ...
+  Spread in the top 10: <n> buyers, <n> stages, <n> themes
+
+  EMPTY CELLS THAT SHOULD BE FILLED
+  <cell> | <why>
+
+  CELLS TO DROP
+  <cell> | <ads run and results> (or "none: no results given")
+
+  MISSING: <...>
+output_sample:
+  input:
+    - Customer evidence, such as reviews, survey answers or sales notes
+    - Your product, and what your buyers want or fear
+    - Past ads and their results (optional)
+    - How many ads you can make in one sprint
+  prerequisites:
+    - Your customer words, which you can pull from reviews, support emails or call notes (optional, but without them the matrix is a starter to test)
+  output:
+    - name: Buyers
+      contains: Three to five buyer profiles with age range, pain or want and doubts, each tied to your evidence or marked as an assumption.
+    - name: Matrix
+      contains: For each buyer, nine themes rated strong, medium, weak or skip across five awareness stages.
+    - name: Top 10 cells
+      contains: The ten buyer, stage and theme combinations to make next, each with a reason and an evidence tag.
+    - name: Empty cells
+      contains: Combinations you have not made that you should.
+    - name: Cells to drop
+      contains: Combinations that ran with no sales. Shown only when you gave results.
+    - name: Missing list
+      contains: Evidence or results you did not give.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  inputs:
+    - Your reviews and survey answers, so every buyer profile uses real customer words
+    - A list of past ads tagged by theme and stage, so empty cells are real
+    - Your split of spend between cold, warm and ready-to-buy buyers
+terms:
+  - term: Awareness stages
+    meaning: Five steps from not knowing you have a problem to being ready to buy. Eugene Schwartz first described them.
+  - term: Theme
+    meaning: The main thing an ad leans on, such as urgency, social proof or a comparison.
+  - term: Cell
+    meaning: One box in the matrix, made of one buyer, one stage and one theme. One ad should fit one cell.
+  - term: Cold, warm and ready buyers
+    meaning: Cold buyers have never heard of you. Warm buyers have seen you. Ready buyers want to buy and need a nudge.

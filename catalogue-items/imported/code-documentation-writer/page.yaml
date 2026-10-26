@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It reads code and writes standard docs.
 new_slug: code-documentation-writer
 name: Code documentation writer
-summary: Point it at your code. Get docstrings, a README and usage guides that
-  match what the code does.
+summary: Find missing or stale docs in your code and write docstrings, a README and usage guides that match it. A simple code documentation writer.
 job: build-software
 headline: Code documentation writer
-subhead: Point it at your code. Get docstrings, a README and usage guides that
-  match what the code does. Bring your code or project folder. Use the result to
-  plan your next step.
+subhead: Give it your code or project folder. It finds what is missing or out of date, then writes docstrings, a README and usage guides in your project's style. Review what it flags, then add a doc generator to your build so docs stay current.
 explain: |
   Docs that match what your code actually does: docstrings on each function, a README, and usage guides. They follow your project's existing style.
 
@@ -18,6 +15,10 @@ when:
   - Half your functions have no docstrings.
   - Your docs are out of date after a big refactor.
   - You need an API reference for other developers.
+not_for:
+  - "Your code is private and you cannot share it with an AI tool: write the docs by hand or use a tool that runs on your own machine."
+  - "You need docs checked on every build: use a doc generator such as TypeDoc or Sphinx in your build steps."
+  - "You only have a few lines to explain: write a short comment yourself, it is faster."
 you_give:
   - Your code or project folder
   - The doc style you use (optional)
@@ -28,8 +29,26 @@ you_get:
   - Usage examples
   - A list of docs that were stale
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI in a tool that can read your project files. If it cannot, paste one file or folder listing at a time.
+  - Say which code to cover, such as every public function in src/services. Name your doc style if you have one.
+  - Check the list of missing and stale docs it returns first.
+  - Read the new docstrings and README. Fix anything that does not match how your code really works.
+  - Look at the issues it flagged, such as names that do not match, and fix them in your code or docs.
+output_sample:
+  input:
+    - Your code or project folder
+    - The doc style you use, such as JSDoc or Google-style docstrings (optional)
+    - Which files or folders to cover (optional)
+  prerequisites:
+    - An AI that can read your project files, or code you can paste into the chat
+  output:
+    - name: Code inventory
+      contains: A list of public modules, classes, functions and constants, marked as documented, missing or stale.
+    - name: Docstrings
+      contains: Summaries, parameters, return values, errors and an example for each public item, placed above or inside the code.
+    - name: README.md
+      contains: Install steps, how to run the project, endpoints or features, and a short map of the project folders.
+    - name: API reference
+      contains: A Markdown file in the project root or a docs folder that lists each public item with its example.
+    - name: Issues to review
+      contains: Doc names that do not match the code, missing types, and examples that may not run.

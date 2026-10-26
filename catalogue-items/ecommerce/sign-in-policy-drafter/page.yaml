@@ -1,6 +1,6 @@
 new_slug: sign-in-policy-drafter
 name: "Sign-in policy drafter"
-summary: "Paste how staff and customers sign in. Get ranked gaps, a score and a one-page policy."
+summary: "Check how your staff and customers sign in to your store. Get ranked gaps, a score out of 100 and a one-page sign-in policy."
 job: protect-your-store
 thinking: low
 thinking_why: "It checks your answers against a fixed list of rules."
@@ -17,6 +17,10 @@ when:
   - "You added staff or agencies to your store."
   - "You never set up second steps on email or your domain."
   - "You need a simple policy to hand to your team."
+not_for:
+  - "You need a full security audit of every setting: use the Sign-in security checker, which runs every check."
+  - "You want a platform admin to review roles and apps: ask the person who owns your store account."
+  - "You need to reset a hacked account now: contact your platform's support first, then come back to write the policy."
 
 you_give:
   - "Platform (required): Shopify, WooCommerce, headless or custom."
@@ -34,6 +38,23 @@ how_to_use:
   - "Under it, paste your details: platform; staff and admin accounts; key accounts; password rules and recovery today."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Your platform, such as Shopify, WooCommerce, headless or custom
+    - Your staff and admin accounts, and which second step each one uses
+    - "Your key accounts: email, ad accounts and domain registrar"
+    - Your password rules and recovery setup today (optional)
+  output:
+    - name: PLATFORM OWNS / YOU OWN
+      contains: Which sign-in jobs your platform handles and which ones stay with you.
+    - name: GAPS
+      contains: Each gap ranked Critical, High, Medium or Low, with the area and one fix.
+    - name: SCORE
+      contains: A score out of 100 with the sum shown, based on how many gaps of each rank.
+    - name: POLICY
+      contains: A one-page policy covering passwords, second steps by account, recovery and risky changes.
+    - name: MISSING
+      contains: Any detail you did not give, so you can add it and run it again.
 
 how_it_works:
   - title: "Sort who owns what"

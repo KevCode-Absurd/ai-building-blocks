@@ -1,6 +1,6 @@
 new_slug: animated-video-ad-script
 name: "Animated film video ad script writer"
-summary: "Paste your idea and brand file. Get a timed animated-film video script and a cast note."
+summary: "Write an animated film video ad script: a timed 3D-style story with one cast adult, your real product and a cast note. Paste your idea and brand file."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You want a story-led video ad without filming, and the problem is a moment your buyer knows.
   - You want a script your video tool can follow, with one character who never changes.
   - You need a close view of how your product works that a camera couldn't film.
+not_for:
+  - "You need proof that rests on a real person, or a texture, pour or fit people judge by eye: film a demo or customer-style video instead, with a person or a simple phone shoot."
+  - "You already have a script and only want it to sound right aloud: use the Ad script read-aloud editor."
+  - "You want to check a finished ad against Meta rules: use the Meta ads compliance checker."
 
 you_give:
   - Your selling idea or an existing script
@@ -35,6 +39,29 @@ how_to_use:
   - Say the length and who speaks, such as "30 seconds, narrator".
   - Check every spoken line against your approved claims before you make anything.
   - Take the script and cast note to "Animated film video clip prompt writer". It takes it from there, with the avatar, sheets, storyboard and clips.
+output_sample:
+  input:
+    - Your selling idea or an existing script
+    - Your brand file, with the buyer's moment, product label words and approved claims
+    - Length and who speaks (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: Story line
+      contains: The buyer's ordinary moment, the snag, and the product in use with the small change it makes, in one line.
+    - name: Light keys
+      contains: One line of light and colour for each of the three story parts, changing only between parts.
+    - name: Casting card
+      contains: Age, build, hair, clothes and one carried item for the one made-up adult, worded the same every time.
+    - name: Script table
+      contains: Each line with speaker, words, picture, how the cut joins and seconds, ending on a held product shot.
+    - name: Notes
+      contains: What was inferred and what is marked MISSING, so no fact is guessed.
+    - name: Cast note
+      contains: Who carries the ad, why that suits your buyer, the voice, and what must never change.
+    - name: Checks missed
+      contains: One line for each of its own checks the script still fails, or none.
 
 how_it_works:
   - title: Checks the fit

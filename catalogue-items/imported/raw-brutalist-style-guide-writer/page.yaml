@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: raw-brutalist-style-guide-writer
 name: Raw brutalist style guide writer
-summary: Describe your product. Get a style guide for a raw, blunt look, with
-  type, colour, states and checks.
+summary: Write a brutalist style guide for your site. Give it your product details. You get type, colour, spacing, states and checks to build from.
 job: design-work
 headline: Raw brutalist style guide writer
-subhead: A style guide for a raw, blunt, anti-polish look, ready for designers
-  and developers to build from. It covers type, colour, spacing, states and
-  checks, so the harsh look stays consistent and still works for people.
+subhead: A style guide for a raw, blunt, anti-polish look, ready for designers and developers to build from. It covers type, colour, spacing, states and checks, so the harsh look stays consistent and still works for people.
 explain: |
   A style guide for a raw, blunt, anti-polish look, ready for designers and developers to build from. It covers type, colour, spacing, states and checks, so the harsh look stays consistent and still works for people.
 
@@ -18,6 +15,10 @@ when:
   - A designer and a developer need one shared set of rules.
   - You have a brutalist mockup but no written system.
   - You need to check that a harsh style still passes accessibility.
+not_for:
+  - "You run a content-heavy site or need a calm, conventional look: use a standard design system such as Material Design instead."
+  - "You want a soft, retro or nostalgic look: ask a designer or use a retro style guide, not this one."
+  - "You need finished screens or code: this writes rules only, so hand the guide to a designer or developer."
 you_give:
   - Product description
   - Audience and tone
@@ -28,7 +29,28 @@ you_get:
   - Component and state rules
   - Accessibility checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat.
+  - Describe your product, your audience and the tone you want. Add your brand colours if you have them (optional).
+  - Send it. No code, files or paid tools are needed.
+  - Read the accessibility section first. Check that the harsh look still has enough contrast and clear focus.
+  - Hand the tokens to your developer and run the QA checklist in code review.
+output_sample:
+  input:
+    - Your product description
+    - Your audience and the tone you want
+    - Your brand colours (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the design intent, plus what the guide is meant to achieve.
+    - name: Design tokens and foundations
+      contains: Type scale and fonts, named colour tokens and a spacing scale.
+    - name: Component-level rules
+      contains: How each part is built, with variants, states, responsive behaviour and edge cases like long labels.
+    - name: Accessibility requirements
+      contains: Testable checks aimed at WCAG 2.2 AA, with keyboard use and visible focus.
+    - name: Content and tone standards
+      contains: How text should sound, with examples.
+    - name: Anti-patterns and prohibited implementations
+      contains: What not to build, matched to each do-rule.
+    - name: QA checklist
+      contains: A list you can run in code review.

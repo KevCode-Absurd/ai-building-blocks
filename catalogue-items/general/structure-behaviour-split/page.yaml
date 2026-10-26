@@ -1,6 +1,6 @@
 new_slug: structure-behaviour-split
 name: "Structure and behaviour change splitter"
-summary: "Paste a messy change. Get tidy-up steps and new-behaviour steps, each small enough to review alone."
+summary: "Split a messy change into small tidy-up steps and new-behaviour steps, so each one is easy to review and undo. Paste your diff or edit list."
 job: build-software
 thinking: medium
 thinking_why: "It labels and sorts edits against fixed rules, which takes care but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You have a large diff or edit list and no one wants to review it.
   - You want to tidy something up and add a feature in the same piece of work.
   - An AI helper made many changes at once and you need to take them in safely.
+not_for:
+  - "You have a one-line fix or a single-purpose change: just run your tests and ship it."
+  - "You are building something new with nothing to keep the same: there is no tidy-up to separate, so plan the build in plain steps instead."
+  - "You want test cases for the new behaviour: use the Test list writer."
 
 you_give:
   - The change, as a diff, a list of edits or a plan
@@ -34,6 +38,24 @@ how_to_use:
   - Say what the change is meant to achieve in one sentence.
   - Do the steps in the order given and run the tests it names after each one.
   - Send each step for review on its own.
+output_sample:
+  input:
+    - Your change, as a diff, a list of edits or a plan
+    - The goal of the change, in one sentence
+    - The tests or checks you have today (optional)
+  output:
+    - name: The goal
+      contains: Your goal for the change, restated in one sentence.
+    - name: Edit table
+      contains: Each edit on its own line, marked structure or behaviour, with a rating for how easy it is to undo.
+    - name: Steps in order
+      contains: Small steps, each marked structure or behaviour, with when to run tests before and after.
+    - name: Which tidy-ups help
+      contains: Which tidy-ups the new behaviour needs, and which are optional and can wait or be skipped.
+    - name: MISSING lines
+      contains: Edits it could not label and steps that have no check.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: Labels each edit

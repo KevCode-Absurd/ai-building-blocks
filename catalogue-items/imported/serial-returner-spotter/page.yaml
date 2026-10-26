@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Honest returns can look like abuse.
 new_slug: serial-returner-spotter
 name: Serial returner spotter
-summary: Get customers with unusual return habits listed for you to review. It
-  never blocks anyone on its own.
+summary: Find Shopify customers with unusual return habits and get a review list for your team. It flags patterns only and never blocks anyone.
 job: secure-code
 headline: Serial returner spotter
-subhead: Get customers with unusual return habits listed for you to review. It
-  never blocks anyone on its own. Bring your Shopify store domain. Use the
-  result to plan your next step.
+subhead: Get customers with unusual return habits listed for you to review. It never blocks anyone on its own. Bring your Shopify store domain. Use the result to plan your next step.
 explain: |
   A review list of Shopify customers whose return habits stand out, for your team to check before approving the next return. It never blocks, limits or flags anyone on its own, because honest customers often return things for good reasons like sizing.
 
@@ -18,6 +15,10 @@ when:
   - Support needs a list to check before approving another refund.
   - You suspect some customers buy to wear once and return.
   - You want to tune what counts as too many returns for your store.
+not_for:
+  - "Your store has no reliable order and return data: check each refund request by hand with your support team instead."
+  - "You think returns come from one bad product: look at the return reasons for that product first, since the cause may be quality, not abuse."
+  - "You want to block or limit customers automatically: this tool cannot do that, so use your own support policy and a person's decision."
 you_give:
   - Your Shopify store domain
   - A logged-in Shopify CLI session with read access
@@ -29,8 +30,29 @@ you_get:
   - Return rates and counts per customer
   - A human or JSON output
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Check that your AI can run code and that the Shopify CLI is installed. This skill cannot run in a plain chat window.
+  - Sign in with the Shopify CLI, giving read access to orders, returns and customers.
+  - Paste the skill into your AI and give it your store domain. Add a lookback window or your own limits if you want them.
+  - Read the summary first, then open the CSV and check each flagged customer by hand before you act.
+  - Set your limits from your own past return data, not from a general rule. Run it again with new limits if too many or too few are flagged.
+  - Keep the CSV private. It holds customer names, emails and phone numbers, so share it only with people who review returns and delete it when done.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - How many days back to look (optional, 365 by default)
+    - Your own limits for what counts as too many returns (optional)
+    - "Output style: plain text or JSON (optional)"
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A logged-in Shopify CLI session with read access to orders, returns and customers
+  output:
+    - name: Start banner
+      contains: The store domain and the start time, shown when the check begins.
+    - name: Step log
+      contains: One line per step with the main inputs and a count of results.
+    - name: Summary
+      contains: Customers checked, customers flagged, and how many were caught by each of the three rules.
+    - name: Top suspects
+      contains: Customers ranked by risk with orders, returns, return rate and the flags that caught them.
+    - name: return_fraud_candidates CSV
+      contains: One row per flagged customer with contact details, return counts, flags, lifetime spend, last return date and tags.

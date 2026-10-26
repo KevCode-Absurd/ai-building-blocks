@@ -1,6 +1,6 @@
 new_slug: release-day-rollback-planner
 name: "Release day rollback planner"
-summary: "Paste what you are releasing and where it runs. Get checks, a rollback plan and how to know it worked."
+summary: "Plan a safe release before you ship. Paste what you are releasing and where it runs. Get checks, steps, a rollback plan and a way to confirm it worked."
 job: ship-and-host
 thinking: medium
 thinking_why: "It must match the plan to your setup and think through what can fail."
@@ -17,6 +17,10 @@ when:
   - "You are releasing something that touches real customers."
   - "You have never rolled back and do not know how."
   - "A release involves a database change."
+not_for:
+  - "You want the full version with every check: use the Safe release planner."
+  - "You are doing a first-time setup of a new site or app: ask whoever hosts it, or follow your host's own setup guide."
+  - "The change is not live and touches no customers, such as a test copy: skip the plan and just make the change."
 
 you_give:
   - "What you are releasing"
@@ -34,6 +38,25 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - What you are releasing, in plain words
+    - Where it runs, such as your host, and whether a database or paid service is involved
+    - "Who is affected if it breaks: customers, staff or money"
+    - Your usual way to release (optional)
+  output:
+    - name: RISK
+      contains: A rating of low, medium or high, with the reason, based on what changes and who is affected.
+    - name: BEFORE YOU START
+      contains: "A checklist: tests pass, the production build works, settings and secrets are set, and a backup and way back are ready."
+    - name: STEPS
+      contains: The release steps in order, each with a pause point where you look before going on.
+    - name: UNDO IT IF
+      contains: The signs that mean undo, the undo steps, and anything that cannot be undone.
+    - name: AFTER
+      contains: What to check once it is live, and how long to watch.
+    - name: MISSING
+      contains: Any facts you did not give, so you can fill them in and run it again.
 
 how_it_works:
   - title: "Rate the risk"
@@ -96,8 +119,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "The name of your platform"
-  - "A note on any database change"
+    - "The name of your platform"
+    - "A note on any database change"
 
 terms:
   - term: "Rollback"

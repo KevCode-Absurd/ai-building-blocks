@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Rules must fit together without gaps.
 new_slug: lead-handoff-designer
 name: Lead handoff designer
-summary: Describe your sales process. Get lead scoring, stages and handoff rules
-  from marketing to sales.
+summary: Design lead scoring, stage definitions and marketing-to-sales handoff rules before you automate. Give it your sales process, deal size and tools.
 job: sell-and-negotiate
 headline: Lead handoff designer
-subhead: The rules that tell marketing, sales and customer success when a lead
-  is ready to pass on, written down before you automate anything. Describe your
-  sales process, deal size and tools.
+subhead: The rules that tell marketing, sales and customer success when a lead is ready to pass on, written down before you automate anything. Describe your sales process, deal size and tools.
 explain: |
   The rules that tell marketing, sales and customer success when a lead is ready to pass on, written down before you automate anything. Describe your sales process, deal size and tools. The skill builds a lead scoring model, defines each stage from new lead to closed deal, and sets handoff rules with a time limit and an owner for every step.
 
@@ -18,6 +15,10 @@ when:
   - Leads sit untouched for days before anyone calls.
   - You are setting up your CRM and need stage definitions.
   - You want a speed-to-lead target and a way to track it.
+not_for:
+  - "You are a single seller with no CRM: use a simple spreadsheet of leads and follow-up dates instead."
+  - "You need cold outreach emails: use a cold email writer, not this skill."
+  - "You need nurture emails for leads who are not ready: use an email drip campaign tool instead."
 you_give:
   - How you sell, self-serve or sales-led
   - Average deal size and sales cycle
@@ -29,7 +30,25 @@ you_get:
   - Handoff rules with time limits
   - Metrics to track each handoff
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed to run it.
+  - Describe how you sell, your deal size, your sales cycle and the tools you use.
+  - Say what is going wrong today, such as slow follow-up or leads sales rejects. Start there.
+  - Read each document it gives you. Check that every stage and handoff has an owner and a time limit.
+  - Fix anything that does not match how your team works. Then build it in your CRM.
+output_sample:
+  input:
+    - "How you sell: self-serve, sales-led or a mix"
+    - Your average deal size and how long a sale takes
+    - Your CRM, marketing and scheduling tools
+    - How leads are handled today and what goes wrong (optional)
+  output:
+    - name: Lifecycle stage document
+      contains: Each stage from new lead to closed deal, with entry and exit rules, owners and time limits.
+    - name: Scoring specification
+      contains: Fit and engagement points for a lead, and the score that makes a lead ready for sales.
+    - name: Routing rules document
+      contains: Who gets each lead, how it is assigned, and what happens when no one picks it up.
+    - name: Pipeline configuration
+      contains: Deal stages, required fields and the automation triggers that move a deal forward.
+    - name: Metrics dashboard spec
+      contains: The numbers to track at each handoff, where the data comes from and the targets to aim for.

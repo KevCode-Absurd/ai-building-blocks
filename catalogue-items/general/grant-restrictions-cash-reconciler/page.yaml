@@ -1,48 +1,112 @@
 new_slug: grant-restrictions-cash-reconciler
 name: Grant restrictions cash reconciler
 headline: Grant restrictions cash reconciler
-summary: A restricted fund movement and general cash bridge
+summary: Split your bank cash into restricted grant money and free cash. Get both closing balances and a check that restricted cash never exceeds the bank.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A restricted fund movement and general cash bridge. Share opening total bank cash and restricted cash, restricted/unrestricted receipts, owner-approved eligible restricted payments, other payments and required restricted refunds.
-explain: |-
-  A restricted fund movement and general cash bridge.
+subhead: Give it your opening bank cash and opening restricted cash, this period's grant and other receipts, the payments approved against grants, other payments and any refunds to funders. It rolls restricted cash and total bank cash forward on their own. You get closing restricted cash, closing bank cash and the free cash left.
 
-  Nonprofit restricted liquidity. Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.
+explain: |-
+  A nonprofit or project team holds one bank balance, but part of it belongs to funders. Grant money can only be spent as the award says. A grant restricted cash reconciliation keeps that part separate, so a full bank account is not mistaken for money you can spend.
+
+  This skill rolls two balances forward side by side. Restricted cash goes up with restricted receipts and down with approved grant payments and refunds to funders. Total bank cash moves with every receipt and payment. Free cash is closing bank cash less closing restricted cash.
+
+  It does not decide whether a cost was allowed. You give it payments you have already approved against the award, and it will not judge a cost from its category name. If restricted cash would be larger than the bank balance, it flags a funding gap and does not plug it.
+
 when:
-  - You need a restricted fund movement and general cash bridge.
-  - You work on nonprofit restricted liquidity and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A funder asks how much of your bank balance is still restricted to their grant.
+  - Your bank shows cash, but a board member wants to know what you can spend freely.
+  - You received a grant mid-period and need restricted and free cash kept apart.
+  - You repaid part of a grant and need both balances to move once, not twice.
+
+not_for:
+  - "You want to know if grant income counts as revenue yet. This tracks cash only, not revenue recognition, a legal release of funds, tax or a filing."
+  - "You want a check on whether a cost was allowed under the award. You supply the approval; this skill does not judge eligibility."
+  - "You want a snapshot of spendable cash against a minimum balance across several accounts. Use the Restricted cash availability checker."
+
 you_give:
-  - Opening total bank cash and restricted cash, restricted/unrestricted receipts, owner-approved eligible restricted payments, other payments and required restricted refunds.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Opening total bank cash and opening restricted cash, from the bank statement and your fund ledger"
+  - "Restricted receipts and other receipts for the period"
+  - "Payments you approved as allowed against the grant, with the approval or award term behind each"
+  - "Other payments that come out of free cash"
+  - "Refunds paid back to funders"
+  - "The period dates, currency and scale"
 you_get:
-  - A restricted fund movement and general cash bridge.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "Closing restricted cash"
+  - "Closing total bank cash"
+  - "Free cash: closing bank cash less closing restricted cash"
+  - "A check that restricted cash does not exceed bank cash, and a flag if it does"
+  - "A list of anything missing, and which results it blocked"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach the bank statement and fund ledger if your AI reads files."
+  - "Give opening balances, receipts, payments and refunds for one period, and say which payments you approved against the grant."
+  - "Check the input table first. Opening restricted cash should match your fund ledger, and approved grant payments should match the award terms."
+  - "Read the three closing balances, then the check that restricted cash is not above bank cash."
+  - "If a figure is missing, it names it and stops the affected balance. Add it and run again."
+  - "A finance lead or auditor should review the result before you send it to a funder."
+
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Source award restrictions and approved use evidence; do not decide expenditure eligibility from a category name
-    text: Source award restrictions and approved use evidence; do not decide expenditure eligibility from a category name.
-  - title: 3. Roll restricted cash through restricted receipts, evidenced eligible payments and actual required refunds
-    text: Roll restricted cash through restricted receipts, evidenced eligible payments and actual required refunds.
-  - title: 4. Independently roll total bank cash through all cash movements, then subtract ending restrictions to show general cash without reclassifying funds automatically
-    text: Independently roll total bank cash through all cash movements, then subtract ending restrictions to show general cash without reclassifying funds automatically.
+  - title: Maps your sources
+    text: Lists each figure with its date, period, currency and where it came from.
+  - title: Rolls restricted cash
+    text: Opening restricted cash plus restricted receipts, less approved grant payments and refunds.
+  - title: Rolls total bank cash
+    text: Opening bank cash plus all receipts, less every payment and refund.
+  - title: Finds free cash
+    text: Closing bank cash less closing restricted cash. It does not move money between funds.
+  - title: Ties out
+    text: Checks that grant payments and refunds each moved both balances once, and that restricted cash is not above bank cash.
+  - title: Marks gaps
+    text: Writes a MISSING line for any absent figure and stops only the balances it touches.
+
 output_shape: |-
-  A restricted fund movement and general cash bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES
+  <figure> | <source> | <date> | <currency, scale, period>
+
+  INPUTS AND ASSUMPTIONS
+  Opening bank / restricted cash: <numbers> | Receipts: <restricted, other> | Payments: <approved grant, other> | Refunds: <amount>
+
+  CASH BRIDGE
+  Closing restricted cash: <opening + restricted receipts - approved payments - refunds>
+  Closing bank cash: <opening + all receipts - all payments - refunds>
+  Free cash: <closing bank less closing restricted>
+
+  CHECKS RUN
+  <check> | <result>
+
+  MISSING
+  <figure and what it blocked>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Opening total bank cash and opening restricted cash"
+    - "Restricted and other receipts for the period"
+    - "Payments approved against the grant, other payments and refunds to funders"
+    - "The grant terms, period dates and currency"
+  prerequisites:
+    - "A bank statement and a fund ledger for the same period"
+    - "Someone who has approved each grant payment against the award"
+  output:
+    - name: "SCOPE AND SOURCES"
+      contains: "Each figure with where it came from, its date, currency, scale and the period it covers."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "The opening balances, receipts, approved grant payments, other payments and refunds you gave."
+    - name: "CASH BRIDGE"
+      contains: "Closing restricted cash, closing bank cash and free cash, each shown as a short sum."
+    - name: "CHECKS RUN"
+      contains: "Each tie-out and its result, including whether restricted cash stayed within bank cash."
+    - name: "MISSING"
+      contains: "Any figure or approval it could not find, and which balance that stopped."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [restricted-cash-availability-checker, cash-versus-earnings-checker]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -50,29 +114,38 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+
 judge:
   - Every material driver traces to a dated source; actuals and scenarios remain separate.
   - Missing evidence blocks the affected calculation instead of becoming a zero.
   - Opening and closing restrictions reconcile to the fund subledger and cannot exceed bank cash without a reported funding exception.
   - Restricted payments reduce both total cash and restriction balance once; other payments reduce general cash only.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
     - Dated primary financial records and the applicable contractual definitions.
     - A named reviewer and an explicit financial question.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Restricted cash
+    meaning: Money you hold that a funder says may only be spent for set purposes, such as a named grant.
+  - term: Free cash
+    meaning: Bank cash left after taking out restricted cash. Also called general or unrestricted cash.
+  - term: Fund ledger
+    meaning: The record that tracks each grant's money separately from your other funds.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A second check that compares two records or totals and explains any gap.

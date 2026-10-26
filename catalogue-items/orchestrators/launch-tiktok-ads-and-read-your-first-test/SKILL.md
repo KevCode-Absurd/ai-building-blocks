@@ -24,19 +24,19 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **TikTok ads account setup checker.** Use the skill `tiktok-ads-account-setup-checker`. Starts by finding what is broken in the account before any money is spent.
+1. **TikTok ads account setup checker.** Use the skill `tiktok-ads-account-setup-checker`. Starts by finding what is broken in the account before any money is spent. Hands a setup report, with the pixel status, to step 2.
 
 Pause here: Fix what the checker found. Pick or film three to five videos to test.
 
-2. **TikTok starter campaign builder.** Use the skill `tiktok-starter-campaign-builder`. Builds the starter campaign around the videos you picked.
+2. **TikTok starter campaign builder.** Use the skill `tiktok-starter-campaign-builder`. Builds the starter campaign around the videos you picked, using the pixel status from step 1. Hands the plan, with its audiences and cost target, to step 3.
 
 Pause here: Run the campaign for at least three days. Export the results.
 
-3. **TikTok ad test reader.** Use the skill `tiktok-ad-test-reader`. Reads the first results against the plan and decides each ad.
+3. **TikTok ad test reader.** Use the skill `tiktok-ad-test-reader`. Reads the first results you exported against the plan and decides each ad. Hands the keep, fix or cut calls to step 4.
 
 Pause here: Pull stats on your organic posts and any creator posts.
 
-4. **TikTok Spark ad picker.** Use the skill `tiktok-spark-ad-picker`. Picks which posts to boost, using what the test read showed works.
+4. **TikTok Spark ad picker.** Use the skill `tiktok-spark-ad-picker`. Picks which posts to boost, using your post stats and the best ad from the test read.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

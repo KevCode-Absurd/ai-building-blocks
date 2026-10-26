@@ -1,6 +1,6 @@
 new_slug: page-issue-sorter
 name: "Page issue sorter"
-summary: "Paste a list of site problems. Get each one sorted into fix now, investigate, test or tracking, with a ranked order."
+summary: "Sort a long list of page problems into fix now, investigate, test or tracking, then rank them. Get a clear plan for your page issue list."
 job: audit-landing-page
 thinking: medium
 thinking_why: "It sorts into fixed buckets and ranks with reasons, which needs judgement on gain and effort."
@@ -17,6 +17,10 @@ when:
   - "You finished an audit and have a list too long to act on."
   - "Your team keeps debating what to test first."
   - "You want to separate fixes you can make today from ideas that need a test."
+not_for:
+  - "You have no list yet: run a fresh page audit first, then come back with the findings and proof."
+  - "You want to run or read an A/B test: use your testing tool, since this only plans what to test."
+  - "Your issues have no proof at all: gather a number, quote or screenshot for each first, or ask a person who knows the page."
 
 you_give:
   - "Your list of issues, from an audit report or research notes"
@@ -35,6 +39,29 @@ how_to_use:
   - "Say the page goal and how much effort you can give."
   - "Do the tracking and fix-now items first."
   - "Plan tests only for the items in the test bucket."
+output_sample:
+  input:
+    - Your list of page issues, from an audit or research notes
+    - "The proof for each issue: a number, quote or screenshot"
+    - Your goal for the page (optional)
+    - How much work your team can take on (optional)
+  output:
+    - name: TRACKING
+      contains: Each fault that makes your numbers wrong, with the proof and the step to fix it.
+    - name: FIX NOW
+      contains: Clear problems with a safe remedy, with the proof and a low, medium or high effort.
+    - name: INVESTIGATE
+      contains: Issues with an unknown cause, with the open question and one step to find the answer.
+    - name: TEST
+      contains: Each test idea written as the change, the number it should move, and why it might work.
+    - name: NO PROOF YET
+      contains: Issues set aside for lack of proof, with the proof each one needs.
+    - name: RANKED ORDER
+      contains: Every issue ranked by likely gain and effort, with a one-line reason for each rank.
+    - name: MISSING
+      contains: Any gaps in what you gave, so you can fill them in later.
+    - name: CHECKS MISSED
+      contains: One line for each self-check the AI could not pass, or none.
 
 how_it_works:
   - title: "Lists with proof"

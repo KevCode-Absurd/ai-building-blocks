@@ -1,6 +1,6 @@
 new_slug: product-page-section-planner
 name: "Product page section planner"
-summary: "Give it your product and buyers' doubts. Get the page sections and settings that answer them."
+summary: "Plan your product page sections from buyer doubts. Give it your product and price. You get ordered sections, Shopify settings and proof to collect."
 job: set-up-store
 thinking: medium
 thinking_why: "It has to match each doubt to the right proof and setting, so a middle model is enough."
@@ -17,6 +17,10 @@ when:
   - You are building a product page and want it to answer the doubts that stop buyers.
   - Your page gets visits but few sales and you suspect the page does not settle a doubt.
   - You are planning one template that must work for many products.
+not_for:
+  - "You want a review of a page that is already live: ask a person for a page audit, or check it by hand against your buyers' questions."
+  - "You sell on Amazon or another marketplace with fixed listing layouts: follow that marketplace's own listing rules."
+  - "You need the words for the page: write the copy yourself or with your AI after this plan is done."
 
 you_give:
   - The product and its price
@@ -36,6 +40,28 @@ how_to_use:
   - List the proof you already have, so it plans around real things.
   - Check your theme supports each setting before you plan around it.
   - Build the sections in order, then ask a person outside the business what still worries them.
+output_sample:
+  input:
+    - Your product and its price
+    - The doubts buyers have, such as taste, fit or quality
+    - The proof you already have, such as reviews, test results or certificates
+    - Competitor product pages or review questions (optional)
+    - Your Shopify theme and apps (optional)
+  output:
+    - name: Doubts and proof
+      contains: Each buyer doubt matched to a section and the proof that settles it, with a yes or no on whether you have it.
+    - name: Sections (top to bottom)
+      contains: The page order, starting with the buy area, with what each section proves and where its content comes from.
+    - name: Tabs
+      contains: Short summaries for description, fit, care and shipping and returns, each linking to the full policy.
+    - name: Settings to switch on or off
+      contains: Theme settings such as sticky add-to-cart, each marked with the theme support to check.
+    - name: Metafields
+      contains: Custom product fields for content that differs by product, so one template fits all.
+    - name: Recommended products
+      contains: One or two complementary products chosen by hand.
+    - name: Collect before building
+      contains: The photos and proof you still need, plus anything marked MISSING.
 
 how_it_works:
   - title: Finds the doubts

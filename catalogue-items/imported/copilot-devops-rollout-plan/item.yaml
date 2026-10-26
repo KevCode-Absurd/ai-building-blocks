@@ -10,6 +10,10 @@ level: advanced
 inputs:
   - type: codebase
     required: true
+  - type: test_report
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: plan
 uses: []

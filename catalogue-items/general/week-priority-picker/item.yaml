@@ -9,6 +9,10 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: audit_report
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: plan
 uses: []

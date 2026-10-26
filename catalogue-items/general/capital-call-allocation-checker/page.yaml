@@ -1,32 +1,41 @@
 new_slug: capital-call-allocation-checker
 name: Capital call allocation checker
 headline: Capital call allocation checker
-summary: Allocate one call over eligible commitments and expose an LP remaining-commitment limit.
+summary: Split one approved capital call across eligible commitments and see if one investor's share is more than they can still be called for.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Subject LP obligation, collectible amount and allocation shortfall. Share approved call budget, subject LP eligible commitment, other eligible commitments, actual subject unfunded balance and excuse/default rules.
+subhead: Give it the approved call amount, one investor's commitment and the other eligible commitments. It works out that investor's share, compares it with what can still be called and shows any shortfall.
 explain: |-
-  Subject LP obligation, collectible amount and allocation shortfall.
+  A capital call is split by commitment. The easy slip is to divide by the total fund commitments when some investors are excused or in default. This capital call checker first confirms who is eligible, then splits the call by each eligible commitment.
 
-  Private fund calls. Illustrative figures only. 20 of100 eligible commitments gets10 of a50 call. Budget100 allocates20 but remaining commitment15 leaves5 for review.
+  It then compares the investor's share with the amount that investor can still be called for. If the share is larger, the extra stays visible as a shortfall for fund counsel. It is not moved to other investors.
+
+  It checks one investor against the rest of the eligible group. It does not send notices or ask anyone for money.
 when:
-  - You need subject LP obligation, collectible amount and allocation shortfall.
-  - You work on private fund calls and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You have an approved call and need one investor's share of it.
+  - Some investors are excused or in default and you doubt the divisor.
+  - An investor's remaining commitment looks too low for the call.
+  - Your fund administrator sent an allocation and you want to check it.
 you_give:
-  - Approved call budget, subject LP eligible commitment, other eligible commitments, actual subject unfunded balance and excuse/default rules.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The approved call amount
+  - The investor's eligible commitment
+  - The other investors' eligible commitments (a total is enough)
+  - The investor's unfunded balance
+  - The excuse and default rules from the fund agreement
 you_get:
-  - Subject LP obligation, collectible amount and allocation shortfall.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The investor's share of the call
+  - The amount that can actually be collected from them
+  - Any shortfall, shown for fund counsel
+  - An editable workbook and a list of missing inputs
+  - The checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in.
+  - Attach the fund agreement and the call notice. Give the amounts and the date.
+  - Ask it to list who is in the divisor and why anyone is left out.
+  - Check that the share is cut back to the investor's remaining balance and the rest is shown as a shortfall.
+  - Read MISSING and CHECKS MISSED before you rely on the result.
+  - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
   - title: 1. Confirm the eligible denominator after actual excuse and default elections; do not use total fund commitments blindly
     text: Confirm the eligible denominator after actual excuse and default elections; do not use total fund commitments blindly.
@@ -74,3 +83,30 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+not_for:
+  - "You need to find out how much one investor can still be called after a change or payout: use Unfunded commitment checker."
+  - "You want one pack that checks the remaining balance and the call split together: use Reconcile a private fund capital call."
+  - "You want to move a shortfall to other investors or send notices. This checker does neither; fund counsel decides."
+output_sample:
+  input:
+    - The approved call amount
+    - The investor's eligible commitment and unfunded balance
+    - The other eligible commitments
+    - The excuse and default rules
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: Eligible group
+      contains: Who is in the divisor after excuses and defaults, with the source for each.
+    - name: Allocation
+      contains: The investor's share of the approved call, by commitment.
+    - name: Collectible amount
+      contains: The share cut back to the investor's remaining callable balance.
+    - name: Shortfall
+      contains: The part that cannot be collected, left open for fund counsel.
+    - name: Workbook
+      contains: An editable file with your inputs, formulas and test cases.
+    - name: MISSING lines
+      contains: Each input you did not supply, left open and never replaced with zero.
+    - name: CHECKS MISSED
+      contains: The checks that could not run, or the word none.

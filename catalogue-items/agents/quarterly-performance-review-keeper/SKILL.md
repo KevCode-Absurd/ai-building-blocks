@@ -81,6 +81,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without notes, build the review from results alone and say it is half a picture. Without results, build from notes and say the numbers are missing. Without the business paragraph, draft goals from this quarter alone and mark them provisional. Without a format checked with counsel, draft in plain sections and say the format must be checked before any review is shared.
 
+## When not to use this
+- Not for a person facing a warning, dismissal or legal complaint. Say that needs the manager's HR lead or counsel, and stop.
+- Not for a team with no dated notes and no key results. Say every review would be thin, and suggest the `weekly-one-on-one-prep-keeper` through next quarter.
+- Not for next week's one-on-one. That is the `weekly-one-on-one-prep-keeper`.
+
 ## Honest limits
 - It reads one side: the manager's notes and the numbers. The person's view comes in the room.
 - Employment law differs by place. The format and anything about pay, role or risk must be checked with counsel. This agent is not legal advice.

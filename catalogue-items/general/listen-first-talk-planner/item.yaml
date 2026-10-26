@@ -1,6 +1,6 @@
 slug: listen-first-talk-planner
 name: "Listen-first talk planner"
-summary: "Describe a hard conversation. Get a plan to listen until they feel heard, then state your side and agree a next step."
+summary: "Prepare a hard conversation. Get a plan to listen until they feel heard, say your side once and agree one next step with a date."
 category: general
 type: skill
 role: make
@@ -8,6 +8,7 @@ job: strategy
 level: intermediate
 inputs:
   - {type: question, required: true}
+  - {type: plan, required: false}
 outputs:
   - {type: plan, required: true}
 origin: rebuilt
@@ -18,3 +19,5 @@ credits:
   - {title: "The 7 Habits of Highly Effective People", by: "Stephen R. Covey, FranklinCovey", url: "https://www.franklincovey.com/the-7-habits/", used: "Seek first to understand, then to be understood"}
   - {title: "Brene Brown: Strong Back, Soft Front, Wild Heart", by: "Brene Brown, On Being, 2018", used: "Staying curious, and noticing when you bond with others over a shared enemy"}
   - {title: "Brene Brown: The Courage to Be Vulnerable", by: "Brene Brown, On Being, 2012", used: "Asking about their experience and staying in the discomfort"}
+next: [results-agreement-writer, disagree-and-commit-note-writer]
+needs_mode: manual

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It turns a planned discount into numbers and words with set rules.
 new_slug: discount-wording-planner
 name: Discount wording planner
-summary: Give it the discount you plan. Get the percent or amount form, sale
-  price display and banner wording that look biggest.
+summary: Plan a discount that looks big and honest. Get the percent or amount form, sale price display, coupon type and banner wording for your sale.
 job: set-prices
 headline: Discount wording planner
-subhead: The exact numbers and words that make a planned discount look as large
-  and honest as possible. The same price cut can read as big or small, depending
-  on how it is shown.
+subhead: The exact numbers and words that make a planned discount look as large and honest as possible. The same price cut can read as big or small, depending on how it is shown.
 explain: |
   The exact numbers and words that make a planned discount look as large and honest as possible. The same price cut can read as big or small, depending on how it is shown.
 
@@ -18,6 +15,10 @@ when:
   - You need banner and email subject wording for a markdown.
   - You are unsure if a deep discount will hurt how your product looks.
   - You want to know whether to add a time limit.
+not_for:
+  - "You need to set the full price itself, such as its digits or ending: use the pricing skill."
+  - "You want a deal that is not a price cut, such as a gift, bundle or pre-order: use the promotions skill."
+  - "You plan to show a was price that you never really charged: fix the price first, or skip the discount framing."
 you_give:
   - Full price and sale price, or the discount amount
   - Currency
@@ -31,7 +32,29 @@ you_get:
   - A warning if the discount is too deep
   - A check that the reference price is genuine
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text from this page. It needs no code, files or paid tools.
+  - Type your full price and your sale price, or the amount off.
+  - Add your currency, whether the sale is for one product or the whole store, and where it will show.
+  - Add the reason for the sale if you have one.
+  - Read the warnings first. Then check that your full price was a real recent selling price before you publish.
+  - Check the local rule on was prices for your country. Use the pricing and promotions skills for the next steps.
+output_sample:
+  input:
+    - Your full price and your sale price, or the amount off
+    - Your currency
+    - Whether the sale covers one product, one brand or the whole store
+    - Where the discount will show, such as product page, banner, coupon or email
+    - The reason for the sale (optional)
+  output:
+    - name: Full price and sale price
+      contains: The two prices, checked so the sale price ends the same way as the full price.
+    - name: Display
+      contains: How to show the old price struck through next to the new price, in percent or amount form.
+    - name: Badge / subject line
+      contains: Short wording for the sale badge, banner or email subject, with a time limit and timezone if you use one.
+    - name: Coupon
+      contains: Whether a code should be percent off or amount off, based on how wide the coupon applies.
+    - name: Warnings
+      contains: A flag if the cut is deeper than 40 percent, or if the percent figure goes over 100.
+    - name: Why
+      contains: One line for each choice, naming the rule behind it.

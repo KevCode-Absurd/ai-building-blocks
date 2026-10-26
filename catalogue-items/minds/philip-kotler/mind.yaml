@@ -16,6 +16,28 @@ use_cases:
   - "Check if your business serves workers, customers and the community, not just owners"
   - "Rethink an old product before the market moves on without you"
   - "Explain to a team why marketing starts before the product exists"
+not_for:
+  - "You want a sharp position in buyers' minds in a crowded category: use the Al Ries mind."
+  - "You want to grow a brand through broad reach and easy buying: use the Byron Sharp mind."
+  - "You need legal, financial or medical marketing claims checked, or you have no buyer evidence yet: talk to a qualified person or do customer research first."
+output_sample:
+  input:
+    - Your product or service in a few lines
+    - Who you think your customers are
+    - Your price and where you sell now
+    - The marketing problem you want solved (optional)
+    - What your competitors offer (optional)
+  output:
+    - name: First questions
+      contains: Questions on your target customer, the need you meet, why they choose you and who your stakeholders are.
+    - name: Target and position
+      contains: One sentence on who you serve and how you want them to see you, to test with real buyers.
+    - name: The four Ps
+      contains: Product, price, place and promotion looked at together, so no single lever carries the plan.
+    - name: What he'd push back on
+      contains: Weak spots in your plan, such as selling to everyone or relying on a price cut alone.
+    - name: Next question
+      contains: One question to answer next, ending the reply.
 seats:
   - {seat: "Marketing strategy", asks: "Who exactly are we serving, and why would they choose us over anyone else?"}
   - {seat: "Marketing for good", asks: "Does this help people and society, or only sell more?"}

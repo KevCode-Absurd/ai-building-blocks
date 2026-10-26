@@ -1,0 +1,42 @@
+slug: agency-security-appsec-engineer
+name: Application Security Engineer agent
+summary: "Get a threat model and secure code review for your feature, with bugs to fix before merge, hardening tips and security requirements you can test."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: security_report
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: security/security-appsec-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-appsec-engineer.md
+  licence: MIT
+  original_name: Application Security Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: a19f0bda46f4adca5737365dbc3c7ed93e9d93b71349536d92ff055dcf4e3b83
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Application Security Engineer
+  - Agency Agents
+  - Security
+credits:
+  - title: Application Security Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-appsec-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

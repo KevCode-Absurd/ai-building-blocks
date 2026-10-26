@@ -1,6 +1,6 @@
 new_slug: market-mood-reader
 name: "Market mood reader"
-summary: "Paste holdings and price moves. Get each move sorted as business or mood, plus take, ignore or wait."
+summary: "Check your holdings against your own value. This market mood reader sorts each price move as business change or mood, then says take, ignore or wait."
 job: money-and-investing
 thinking: medium
 thinking_why: "It compares a price with your own written value and sorts the cause of a move. The care is in keeping the story out of the sort."
@@ -17,6 +17,10 @@ when:
   - Prices have swung and you do not know whether to act.
   - A holding has fallen sharply and the news is loud.
   - Prices have jumped and you feel pulled to buy more.
+not_for:
+  - "You want a plan to sell everything in a panic: talk to a licensed financial adviser before you act."
+  - "You want a forecast of where the whole market goes next: no tool can give one, and this skill does not try."
+  - "You need a decision on your own money and taxes: use a licensed financial adviser, since this is a method and not personal advice."
 
 you_give:
   - What you hold and what each holding is worth in your own written view, with why
@@ -35,6 +39,27 @@ how_to_use:
   - Paste your holdings with your value for each and the reason for that value.
   - List what changed in each business, using facts such as profit, debt and customers.
   - Read the sort first and the offers second.
+output_sample:
+  input:
+    - What you hold, and what you think each holding is worth, with why
+    - How each price has moved, and over what time
+    - What has changed in each business since you bought (optional)
+    - Money you need soon (optional)
+  output:
+    - name: Holding block
+      contains: Price beside your value range, the gap in percent, what moved, and what changed in the business.
+    - name: SORT
+      contains: Each move marked as business change, mood or unknown, based on facts and not the tone of the news.
+    - name: Your reason to act
+      contains: Each reason you gave, marked as pricing (price against value) or timing (a guess about the market).
+    - name: OFFER
+      contains: The price read as an offer to take, ignore or wait on, with the reason.
+    - name: Across your holdings
+      contains: A count of mood moves, business changes and unknowns, plus a check for buying after a rise or selling after a drop.
+    - name: MISSING
+      contains: Gaps such as a missing value for a holding, so nothing is guessed.
+    - name: CHECKS MISSED
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Sets price beside value

@@ -1,6 +1,6 @@
 slug: plan-a-peer-feedback-session-that-helps
 name: Plan a peer feedback session that helps
-summary: Share the source files. Get a session guide, feedback prompts and a revision record.
+summary: Plan a peer feedback session for drafts. Get a session plan with roles and timings, a note form, a model example and a revision record.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -24,11 +24,11 @@ uses:
   - reader-feedback-sorter
 steps:
   - uses: peer-feedback-session-planner
-    note: Plan a structured exchange with clear roles, time limits and boundaries.
+    note: "Picks reviewers, sets the time for each part, writes the rules and builds the note form. Hands the criteria and the form to the model step."
   - uses: honest-draft-feedback-giver
-    note: Model specific, evidence-based feedback on a permitted example.
+    note: "Uses the one permitted draft you give it, not step 1's output, and the criteria from step 1. Writes honest feedback on it, naming what works, what to leave alone and which lines to question. Hands that example to the revision record."
   - uses: reader-feedback-sorter
-    note: Only after real comments arrive, sort them into corrections, choices and questions. Before that, prepare the collection template and mark the sorting step not run.
+    note: "Runs only when real comments exist. Sorts them into fixes, split opinions and facts to check, then ranks a rewrite list. Before that, it is marked not run and the record stays blank."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

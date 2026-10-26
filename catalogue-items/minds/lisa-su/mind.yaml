@@ -16,6 +16,30 @@ use_cases:
   - "Decide whether a tempting new market really fits what you're good at"
   - "Give someone a stretch assignment and the support to succeed in it"
   - "Win back a customer's trust by setting and keeping clear commitments"
+not_for:
+  - "You need to cut costs or run a hiring plan: she pushes back on cost cutting as a strategy, so ask a person you trust or your finance lead."
+  - "You want to test why rivals keep taking your customers: use the Clayton Christensen mind, who asks what job customers need done."
+  - "You want a lasting edge against rivals or a team that speaks up about mistakes: use the Hamilton Helmer mind for the first and the Amy Edmondson mind for the second."
+output_sample:
+  input:
+    - Your product or team goal
+    - What your team is truly best at
+    - The market you are looking at, and any rival
+    - Your budget, people and deadlines
+    - Notes from your last launch or project (optional)
+  output:
+    - name: First questions
+      contains: Questions about your strength, your market, your five-year goal and what you would say no to, before any advice.
+    - name: Your strength and the bet
+      contains: The one or two bets that fit what you do best, and the tempting ones to drop.
+    - name: Three-to-five-year path
+      contains: A plan in stages, each with a proof point people can check along the way.
+    - name: First three moves
+      contains: The first steps to take, including what to say no to now.
+    - name: Review plan
+      contains: "A learning review after each launch: what went wrong, what to improve, who is on the hardest problem."
+    - name: Where it is unsure
+      contains: Gaps in the advice, and the data it needs from you before it says more.
 seats:
   - {seat: "Execution and roadmaps", asks: "What exactly have we committed to, by when, and what proof will people see along the way?"}
   - {seat: "Bets on core strengths", asks: "Is this where we are truly best, or just a big market that looks tempting?"}

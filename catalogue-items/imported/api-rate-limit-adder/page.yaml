@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks an algorithm and wires it in.
 new_slug: api-rate-limit-adder
 name: API rate limit adder
-summary: Point it at your API. Get rate limiting added with Upstash, using the
-  right window type for each route.
+summary: Add API rate limiting with Upstash to stop login and sign-up floods. Give it your routes, get limits in place with a reason for each.
 job: secure-code
 headline: API rate limit adder
-subhead: Your API gets a request limit that works across every server instance,
-  so one bad actor cannot flood your login or sign-up routes. You get the code
-  in place and a clear reason for each choice.
+subhead: Your API gets a request limit that works across every server instance, so one bad actor cannot flood your login or sign-up routes. You get the code in place and a clear reason for each choice.
 explain: |
   Your API gets a request limit that works across every server instance, so one bad actor cannot flood your login or sign-up routes. You get the code in place and a clear reason for each choice.
 
@@ -18,6 +15,10 @@ when:
   - An AI endpoint costs money per call and needs a cap per user.
   - You run serverless functions and in-memory limits do not work.
   - You are not sure which limit style fits each route.
+not_for:
+  - "You are the one being rate limited by another API: use a simple retry with a short wait between tries."
+  - "You run one long-lived server with no shared state: use a plain in-memory limiter, which is simpler."
+  - "You need to log users in or check their identity: use real sign-in checks, since rate limits are not authentication."
 you_give:
   - The routes to protect
   - Who to count by, such as IP, user or key
@@ -29,8 +30,30 @@ you_get:
   - 429 replies with reset info
   - Optional usage analytics
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can edit your project files.
+  - Open your AI tool in your project, so it can edit files. Claude, ChatGPT or Gemini all work if they can see your code.
+  - Paste this skill into the chat.
+  - Tell it which routes to protect, what to count by, and how many requests to allow in what time.
+  - Add your two Upstash keys to your environment file yourself. Do not paste them into the chat.
+  - Check the limits before you deploy. Limits that are too strict can lock out real users.
+  - Test a route by sending more calls than allowed. You should see a 429 reply.
+output_sample:
+  input:
+    - The routes you want to protect
+    - Who to count by, such as IP address, user or API key
+    - How many requests to allow and in what time window
+    - Your Upstash database keys, set in your environment
+  prerequisites:
+    - A free or paid Upstash Redis database
+    - An AI that can edit your project files
+    - A Node or TypeScript project
+  output:
+    - name: Limiter setup
+      contains: A rate limiter built once outside the request handler, with its own prefix for each route or plan.
+    - name: Window type per route
+      contains: Sliding window, fixed window or token bucket chosen for each route, with a short reason.
+    - name: 429 reply
+      contains: A Too Many Requests response with limit, remaining and reset headers, plus a Retry-After header.
+    - name: Identifier choice
+      contains: The key each route counts by, such as user id, API key or IP address.
+    - name: Analytics (optional)
+      contains: Usage stats on blocked and allowed calls, if you switch them on.

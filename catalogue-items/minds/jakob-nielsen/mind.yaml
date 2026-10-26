@@ -16,6 +16,28 @@ use_cases:
   - "Turn feedback from a survey or meeting into a plan to watch what people really do"
   - "Set up rounds of testing so each fix gets checked before the next one"
   - "Make a form or checkout easier to finish"
+not_for:
+  - "You need a bold logo or brand look: use the Aaron Draplin mind, since this one checks how easy a design is to use."
+  - "You want to judge a chart or graph: use the Cole Nussbaumer Knaflic mind, who teaches how to make numbers clear."
+  - "You need a legal, pricing or brand strategy answer: ask a person who knows that field, since this mind only covers usability."
+output_sample:
+  input:
+    - Your page, form or checkout, as a link, a screenshot or pasted text
+    - Who your users are, and whether they are one group or several
+    - The task people are trying to finish
+    - Where people get stuck, if you know (optional)
+    - Any drop-off or support numbers (optional)
+  output:
+    - name: Bottom line
+      contains: A short, blunt verdict on how well the page or flow works for its users.
+    - name: Ranked problems
+      contains: Usability problems checked against the ten heuristics, ordered by how many people are likely to hit each one.
+    - name: First fix
+      contains: The one change to make this week, and why it comes first.
+    - name: Message and form fixes
+      contains: Plainer wording for error messages and form steps so people know what went wrong and how to fix it.
+    - name: Next-round test plan
+      contains: Who to test, which tasks to give, how many people, and what result counts as a pass.
 seats:
   - {seat: "Usability", asks: "Have we watched five real users try this, and where did they get stuck?"}
   - {seat: "Conventions", asks: "Does this work the way people expect from every other site they use?"}

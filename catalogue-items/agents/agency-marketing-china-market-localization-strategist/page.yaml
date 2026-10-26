@@ -1,0 +1,162 @@
+name: China Market Localization Strategist agent
+summary: Turn China trend data into a market entry brief with platform picks, content templates and a week-by-week launch checklist for a small team.
+headline: China Market Localization Strategist agent
+subhead: Give it your product, budget and screenshots or lists from Douyin, Xiaohongshu or Weibo. It spots which trends are lasting, reads buyer comments for needs and risks, and writes a China market entry brief. You get actions ranked by priority and a launch checklist.
+job: plan-strategy
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Selling in China is not a matter of translating your page. Each app works
+  like a different country. A video that does well on Douyin can fall flat on
+  Xiaohongshu, and brands lose money when they skip the step of checking that a
+  trend is real. This China market localization strategist agent starts from
+  signals, not guesses, and turns them into a plan a small team can run.
+
+
+  It reads your trend data two ways. The content track looks at which formats
+  and keywords get attention and what is missing. The comment track pulls out
+  what buyers ask for, what annoys them and which words carry risk. It marks a
+  trend as lasting only when it shows on at least two platforms, and calls
+  anything else unconfirmed.
+
+
+  Every action in the plan has a priority from P0 to P5, a rough effort and a
+  number to measure. Content comes as templates you fill in, such as a Douyin
+  script with a hook in the first three seconds. The plan is sized for one to
+  three people.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. The profile
+  says the agent reads live hot lists through APIs. A chat AI cannot do that,
+  so you supply the data or use an AI with web search. Its success targets and
+  sample figures are goals and examples, not measured results from AI Blocks.
+when:
+  - You want to sell a product in China and do not know whether to start on Douyin, Xiaohongshu or WeChat.
+  - You have screenshots or lists from China's hot charts and comments, and want product picks and content ideas out of them.
+  - You are a solo founder or small team and need a launch plan that works in one-week steps.
+  - A product is rising on TikTok and you want to know if China has the same demand and what to change.
+not_for:
+  - You already run a China store and want help with daily operations. Use the China E-Commerce Operator agent.
+  - You ship goods across borders and need customs, tax and shipping rules. Use the Cross-Border E-Commerce Specialist agent.
+  - You promote health products and need ads checked for banned claims. Use the Healthcare Marketing Compliance Specialist agent.
+  - You need legal advice on advertising law or company filings. Ask a lawyer who works in China.
+you_give:
+  - Your product, its category and its price
+  - Your target buyer and the city tiers you aim for, such as big cities or smaller ones
+  - Your budget range and how many people are on the team
+  - Screenshots or pasted lists from the hot charts of Douyin, Xiaohongshu, Weibo, Bilibili or Zhihu, with the date (optional, and without them you get a plan shell and a list of what to collect)
+  - 20 to 30 buyer comments about your category or your rivals, copied from those apps (optional)
+  - Channels you already use, and claims or topics you must avoid (optional)
+you_get:
+  - A signal table showing what is rising, on which platform, and whether it looks lasting or a short flash
+  - Buyer needs, pain points and risk words taken from the comments you pasted
+  - A list of actions with a priority from P0 to P5, effort, week and the number to measure
+  - A Douyin video script and a Xiaohongshu post template, ready to fill in
+  - A table of risk words with a prepared reply for customer service
+  - A launch checklist in phases, with a go or no-go point at each phase
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Collect your data first. Open the hot charts in each app, screenshot or copy the top entries for your category, and note the date. Copy 20 to 30 comments from the top posts. You can attach screenshots and the AI reads the Chinese text.
+  - Paste your product facts, budget and team size with the data, and type "Write the China market entry brief."
+  - Check each signal against the screenshot it came from. A trend seen on only one platform stays marked unconfirmed, so treat it as a test and not a plan.
+  - Before you publish, check advertising rules and claims with someone who knows Chinese law. The AI publishes and spends nothing.
+how_it_works:
+  - title: Sort the signals
+    text: It logs each trend with its platform, rank, direction and age. It calls a trend lasting only when it shows on two or more platforms.
+  - title: Read content and comments
+    text: It checks which formats and keywords get attention, then pulls needs, pain points and risk words from the comments.
+  - title: Match platform to job
+    text: It gives each app one job in the buyer's path, such as awareness, research, buying or keeping customers.
+  - title: Rank the actions
+    text: It writes each action with a priority, effort, timing and a number to measure. It shows the sums from your own figures.
+  - title: Draft the templates
+    text: It fills a Douyin script and a Xiaohongshu post template for your product, using the pain points it found.
+  - title: Plan the phases
+    text: It sets checklist gates from checking the signal to running the business, with a go or no-go point and budget share for each.
+  - title: List what is unchecked
+    text: It names every ranking, price or platform rule it could not confirm from your data.
+output_shape: |-
+  SIGNAL TABLE
+    <platform> | <topic> | <rank and date> | <rising, flat or falling> | <age> | <on a second platform?> | <lasting, flash or unconfirmed>
+
+  DUAL-TRACK ANALYSIS
+    Content track: <formats that work> | <keywords> | <gap in supply>
+    Comment track: <need words> | <pain points with counts> | <risk words>
+
+  ACTIONS
+    <P0 to P5> | <action> | <platform> | <effort> | <week> | <number to measure>
+
+  CONTENT TEMPLATES
+    Douyin script: hook <0 to 3s> | problem | solution | call to action
+    Xiaohongshu post: title | cover | body | tags
+
+  RISK AND FAQ TABLE
+    <risk word> | <how often> | <prepared reply> | <escalate?>
+
+  LAUNCH CHECKLIST
+    <phase> | <weeks> | <tasks> | <go or no-go test> | <budget>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to confirm>
+output_sample:
+  input:
+    - Your product, price, buyer, budget and team size
+    - Screenshots or lists from China's hot charts, with the date (optional)
+    - 20 to 30 buyer comments from your category (optional)
+    - Channels you use now, and claims you must avoid (optional)
+  prerequisites:
+    - An AI that reads images if you share screenshots, such as Claude, ChatGPT or Gemini
+    - Someone who knows Chinese advertising rules to review before you publish
+  output:
+    - name: Signal table
+      contains: Each trend with platform, rank, direction, age and whether a second platform confirms it.
+    - name: Dual-track analysis
+      contains: Which content formats work, and the needs, pain points and risk words found in comments.
+    - name: Actions
+      contains: A ranked list with priority, effort, week and the number that shows if it worked.
+    - name: Content templates
+      contains: A Douyin script and a Xiaohongshu post template, filled in for your product.
+    - name: Risk and FAQ table
+      contains: Words that signal trouble, with a prepared customer-service reply for each.
+    - name: Launch checklist
+      contains: Phases with tasks, a go or no-go test and a budget share for each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with image upload
+      why: You can attach screenshots of Chinese hot charts and comments and it reads them directly.
+    - name: An AI with web search
+      why: It can look up current trends itself. You still check each source it names.
+  inputs:
+    - Screenshots of the same chart taken on two or three different days, to show direction.
+    - Comments from your rivals' posts as well as your own category.
+    - Your real sales or ad costs if you have sold in China before.
+terms:
+  - term: Douyin
+    meaning: The Chinese version of TikTok, run by the same company, with its own app and rules.
+  - term: Xiaohongshu
+    meaning: A Chinese app where people share lifestyle posts and product reviews before they buy.
+  - term: Hot chart
+    meaning: A live list of the topics getting the most attention on an app.
+  - term: Lasting trend
+    meaning: A trend that shows on two or more platforms for more than a couple of weeks. A flash trend fades within about two days.
+  - term: KOC
+    meaning: Key opinion consumer, an everyday buyer who posts honest reviews, with a smaller but trusted audience.
+  - term: Private domain
+    meaning: Your own customer list on WeChat, which you can message without paying for each reach.
+tweaks:
+  - what: Platforms
+    how: Name the apps you will use. Say "Douyin and Xiaohongshu only" to drop the others.
+  - what: Plan length
+    how: The profile plans a six to nine month path. Ask for a 30-day test plan if you want to try first.
+  - what: Budget in yuan
+    how: Give your budget in yuan or in your own currency and say the exchange rate, so the sums are right.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

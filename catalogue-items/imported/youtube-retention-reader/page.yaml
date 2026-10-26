@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads a chart and links each drop to your words.
 new_slug: youtube-retention-reader
 name: YouTube retention reader
-summary: Give it your retention export. Get where viewers leave, what you said
-  then, and the one change to make.
+summary: Find where viewers leave your YouTube video. Give it your retention export and get the drop points, the words you said, and one fix.
 job: grow-social
 headline: YouTube retention reader
-subhead: Give it your retention export. Get where viewers leave, what you said
-  then, and the one change to make. Bring the retention CSV from YouTube Studio.
-  Use the result to plan your next step.
+subhead: Give it your retention export. Get where viewers leave, what you said then, and the one change to make. Bring the retention CSV from YouTube Studio. Use the result to plan your next step.
 explain: |
   Export your audience retention data and learn where viewers leave, what you were saying at that moment, and the one change to make.
 
@@ -18,6 +15,10 @@ when:
   - You see a sharp drop in the graph and want the words behind it.
   - You are deciding what to change in your next video's opening.
   - Your retention looks fine but views are low.
+not_for:
+  - "You want channel-wide numbers: use the overview report in YouTube Studio."
+  - "You have no retention export for the video: get the file from Studio first, or ask a person who runs the channel."
+  - "Your retention looks fine but views are low: fix your title and thumbnail instead, because the problem is packaging."
 you_give:
   - The retention CSV from YouTube Studio
   - The video length in seconds
@@ -28,8 +29,27 @@ you_get:
   - A note on any steady slide
   - The one change to make first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - In YouTube Studio, open your video, then Analytics, then Engagement. Download the audience retention chart as a CSV.
+  - Open an AI that can run Python code, and add the skill's retention.py file.
+  - Upload your CSV and tell your AI the video length in seconds.
+  - Add your transcript as an SRT file if you have one (optional). It lets the tool show the words said at each drop.
+  - Read the hook leak first, then the cliffs. Make the one change it suggests in your next opening.
+  - If the numbers look healthy, work on your title and thumbnail instead.
+output_sample:
+  input:
+    - Your retention CSV from YouTube Studio
+    - Your video length in seconds
+    - Your transcript as an SRT file (optional)
+  prerequisites:
+    - An AI that can run Python code, so it can run the retention tool on your file
+  output:
+    - name: Hook leak
+      contains: The share of viewers lost in the first 30 seconds, with a note on whether it is healthy.
+    - name: Cliffs
+      contains: Each steep drop with its timestamp and, if you gave a transcript, the words you said then.
+    - name: Slide
+      contains: A note on any steady loss across the middle, which points to pacing and cutting.
+    - name: One change
+      contains: The single biggest leak and one fix for it, or a note that the video is fine and packaging is the issue.
+    - name: Ship or change
+      contains: A closing question asking whether you will use the fix or change it.

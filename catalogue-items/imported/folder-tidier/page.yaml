@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Sorting files follows simple, repeatable rules.
 new_slug: folder-tidier
 name: Folder tidier
-summary: Point it at a messy folder. Get a clean folder plan and duplicates
-  found. Files move only when you say yes.
+summary: Tidy a messy folder with a clear plan. Your AI finds duplicate files and lists every move first. Nothing changes until you say yes.
 job: organise-work
 headline: Folder tidier
-subhead: Point it at a messy folder. Get a clean folder plan and duplicates
-  found. Files move only when you say yes. Bring folder to tidy. Use the result
-  to plan your next step.
+subhead: Point it at a messy folder. Get a clean folder plan and duplicates found. Files move only when you say yes. Bring folder to tidy. Use the result to plan your next step.
 explain: |
   A messy folder becomes a clear plan for how it should be organised, with duplicates listed. Nothing moves until you approve it.
 
@@ -18,6 +15,10 @@ when:
   - You suspect many duplicates are taking up space.
   - You are archiving old projects and want them sorted first.
   - You are starting a new project and want a clean structure.
+not_for:
+  - "You only need to find one file: use your computer's search or a file-search app instead."
+  - "You want to tidy shared, work server or system folders: ask the person who owns them, or tidy a copy first."
+  - "You want a backup of your files: use a backup tool first, then tidy."
 you_give:
   - Folder to tidy
   - Main problem (finding files, duplicates, no structure)
@@ -30,8 +31,30 @@ you_get:
   - Move plan to approve
   - Report after the changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your files and move them.
+  - Open an AI that can read and move files on your computer. Or paste the skill into a chat to get the plan only.
+  - Say which folder to tidy, what annoys you most, and what to leave alone.
+  - Tell it to show the plan first and not delete anything.
+  - Read the duplicate list and the planned moves. Ask for changes until you are happy.
+  - Say yes to start the moves. Deleting needs its own separate yes.
+  - Check the summary at the end, then keep up the habits it suggests.
+output_sample:
+  input:
+    - The folder you want to tidy
+    - Your main problem, such as can't find files or duplicates
+    - Files and folders to leave alone (optional)
+    - "How far to go: light tidy or full clean-up"
+  prerequisites:
+    - An AI that can read your files and run commands on your computer, to do the moves. In a plain chat it can only write the plan.
+  output:
+    - name: Current state summary
+      contains: How many files and folders you have, the file types, sizes, date ranges and the main problems.
+    - name: Duplicate list
+      contains: Each set of matching files with paths, sizes and dates, and which one to keep.
+    - name: Organization plan
+      contains: The proposed folder tree, the planned moves and renames, and any files that need your decision.
+    - name: Approval check
+      contains: A yes, no or modify question. Nothing moves and nothing is deleted before you answer.
+    - name: Completion summary
+      contains: The new folder tree, what changed, and the space freed by removing duplicates.
+    - name: Maintenance tips
+      contains: Weekly, monthly and yearly habits to keep the folder tidy, with a few commands for your setup.

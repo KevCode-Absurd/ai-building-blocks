@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a look from set options, then draws it.
 new_slug: article-cover-maker
 name: Article cover maker
-summary: Give it an article. Get a cover image with a type, colours and mood
-  that fit the piece.
+summary: Make an article cover image that fits your piece. Give it your article, confirm the look, and your AI's image tool draws the cover for you.
 job: make-images
 headline: Article cover maker
-subhead: A cover image for your article whose look, colours and mood fit the
-  piece. Give it the article and it designs the image around five choices and an
-  image tool draws it.
+subhead: A cover image for your article whose look, colours and mood fit the piece. Give it the article and it designs the image around five choices and an image tool draws it.
 explain: |
   A cover image for your article whose look, colours and mood fit the piece. Give it the article and it designs the image around five choices and an image tool draws it.
 
@@ -18,6 +15,10 @@ when:
   - You want covers that look consistent across a series.
   - You need a square image for social and a wide one for the site.
   - You are unsure which colours and mood suit the topic.
+not_for:
+  - "You need a logo or a product shot: use a designer or a photo of the real product."
+  - "You have no image tool in your AI: use a stock photo site or a design tool instead."
+  - "You want to edit an image you already have by hand: use a photo editor."
 you_give:
   - The article text
   - Where the cover will appear
@@ -29,8 +30,27 @@ you_get:
   - Optional title text on the image
   - The prompt, so you can redo it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can draw images with an image tool.
+  - Paste the skill into your AI chat, or add the skill folder if your AI tool takes files.
+  - Paste your article and say where the cover will be used and which shape you want.
+  - Check the type, palette, style, text and mood it suggests. Confirm them or change them.
+  - Let your AI draw the cover with its image tool. This step needs an image tool, which may need a login or an API key and may cost money.
+  - Check the image. Ask for changes, or reuse the saved prompt file to make it again.
+output_sample:
+  input:
+    - Your article text
+    - Where the cover will appear
+    - "Your preferred shape: wide cinema, widescreen or square"
+    - Style or colour wishes (optional)
+    - Reference images (optional)
+  prerequisites:
+    - An AI that can draw images with an image tool
+    - A saved or chosen image tool, which may need a login or an API key and may cost money
+  output:
+    - name: source-{slug}.{ext}
+      contains: A saved copy of your article, so the cover can be rebuilt later.
+    - name: prompts/cover.md
+      contains: The full image prompt, built from your type, palette, rendering style, text choice and mood.
+    - name: cover.png
+      contains: The finished cover image in the shape you chose.
+    - name: Completion report
+      contains: A short summary of the topic, the five choices, the title, the aspect ratio and where the files are saved.

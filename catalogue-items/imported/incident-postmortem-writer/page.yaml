@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts facts into causes without blaming people.
 new_slug: incident-postmortem-writer
 name: Incident postmortem writer
-summary: Give it the facts of an outage. Get a blameless postmortem with
-  timeline, causes and follow-up actions.
+summary: Turn your outage notes into a blameless incident postmortem with a timeline, root causes and action items that have owners and due dates.
 job: organise-work
 headline: Incident postmortem writer
-subhead: A blameless postmortem of an outage, written so your team learns from
-  it and the same failure does not return. You give the facts and get a document
-  with a timeline, causes and follow-up actions that have owners.
+subhead: Give your AI your notes, chat logs and alert times from an outage. It writes a blameless postmortem. You get a timeline, the causes, and fixes with owners and due dates.
 explain: |
   A blameless postmortem of an outage, written so your team learns from it and the same failure does not return. You give the facts and get a document with a timeline, causes and follow-up actions that have owners.
 
@@ -18,20 +15,48 @@ when:
   - You have a pile of chat logs and need a clean timeline.
   - You want to run a review meeting without finger-pointing.
   - Past reviews ended with vague actions nobody did.
-  - You need a standard format for all future incidents.
+not_for:
+  - "You have a one-line fix with no customer impact: write a bug ticket instead."
+  - "You face a security breach or data loss that needs legal or compliance review: ask your legal or compliance lead first, then use this only for the technical timeline."
+  - "You have no facts yet, only a guess at what broke: gather the chat logs and alert times first, or ask the people who were on call."
 you_give:
   - Incident notes, chat logs or alerts
   - Times of detection, response and fix
-  - Impact figures (optional)
+  - Impact figures such as users, money and time (optional)
   - Who was involved (optional)
 you_get:
   - A blameless postmortem document
   - A timeline of events
-  - Root and contributing causes
-  - Action items with owners and dates
-  - A meeting plan for the review
+  - The main cause and the contributing causes
+  - Action items with owners and due dates
+  - A 60-minute plan for the review meeting
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code or paid tools are needed.
+  - Paste the skill text, then paste your chat logs, alert times and impact notes.
+  - Ask for the timeline first. Check every time and event against your own records.
+  - Ask for the causes and the action items. Make sure each action has one owner and a due date.
+  - Replace any example name, number or ticket ID with your own. The templates use invented figures for illustration.
+  - Share the draft before the review meeting. Use the meeting plan to run it.
+output_sample:
+  input:
+    - Incident notes, chat logs or alerts
+    - Times of detection, response and fix
+    - Impact figures such as users, money and time (optional)
+    - Who was involved (optional)
+  output:
+    - name: Executive summary
+      contains: A short account of what failed, the main cause, how it was fixed, and the impact.
+    - name: Timeline
+      contains: A time-ordered table of events from the change or first alert to full recovery.
+    - name: Root cause analysis
+      contains: What happened, the direct cause, contributing factors, and a five whys chain with evidence.
+    - name: Detection and response
+      contains: What worked, what did not, and any gap between the failure and the first alert.
+    - name: Impact
+      contains: Effects on customers, the business and your systems.
+    - name: Lessons learned
+      contains: What went well, what went wrong, and where you got lucky.
+    - name: Action items
+      contains: Numbered fixes with priority, owner, due date and ticket link.
+    - name: Review meeting plan
+      contains: A 60-minute agenda for a blameless review, with tips for the person leading it.

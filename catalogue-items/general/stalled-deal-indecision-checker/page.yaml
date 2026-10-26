@@ -1,73 +1,83 @@
 new_slug: stalled-deal-indecision-checker
 name: "Stalled deal indecision checker"
-summary: "Paste notes on a quiet deal. Get whether the buyer doubts you or fears a mistake, a firm recommendation and safety nets."
+summary: "Find out why a quiet deal stalled: doubt, endless research or fear of a mistake. Paste your deal notes, get a plan and a message to send."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It reads between the lines of notes to name a cause, which takes judgement."
 
 headline: "Stalled deal indecision checker"
-subhead: "Give it your notes on a quiet deal. It reads the signs, names whether the buyer doubts the choice, wants endless research or fears a mistake, and rates how deep it goes. You get a firm recommendation, safety nets and a message to send."
+subhead: "Paste your notes on a deal that went quiet. It finds the buyer's own words that show they are stuck and names why. You get a depth rating, a firm recommendation, safety nets you can offer and a short message to send."
 
 explain: |
-  A deal that goes quiet is usually not lost to a rival. The buyer is stuck, and sending more information or a nudge often makes it worse.
+  A stalled deal is often not lost to a rival. The buyer is stuck. They cannot pick, or they feel there is always more to check, or they fear the choice will go wrong. A nudge, a deadline or another deck usually makes it worse.
 
-  This skill reads your notes for signs of indecision and names the cause. It judges how deep it runs, so you know whether to count the deal. It writes a personal recommendation, limits what you offer to explore and pairs each fear with a safety net such as an opt-out or a first-value plan. It rules out fake urgency. Indecision here means the buyer cannot choose, not that they said no.
+  This skill reads your deal notes like a stalled deal checker. It pulls out the buyer's quotes with dates and sorts the stall into one of three causes. It rates how deep it runs, so you know whether to count the deal in your forecast. If the notes show a plain no or a lost rival, it says so and stops.
+
+  Then it does what a stuck buyer needs. It gives a firm pick, says what to stop offering, and pairs each fear with a safety net you can really give. It leaves out fake urgency.
 
 when:
-  - "A deal has gone quiet after good meetings."
-  - "The buyer keeps asking for more research."
-  - "You are tempted to add a deadline or discount to force a decision."
+  - "A buyer loved the meetings, then went quiet for two weeks."
+  - "The buyer keeps asking for one more comparison, demo or reference call."
+  - "You are about to add a deadline or a discount to force an answer."
+  - "Your forecast counts a deal that has not moved in a month and you want an honest view."
+
+not_for:
+  - "The buyer has said no, or told you they chose someone else. That is a lost deal, not a stall: use the Deal win reason finder to learn from it."
+  - "The buyer is ready and you only need the closing question: use the Sales closing question planner."
+  - "The buyer is unsure they can afford it: use the Deal payment checker."
+  - "You have no notes or buyer messages yet. Gather the last three messages first."
 
 you_give:
-  - "Notes on the deal"
-  - "Your offer and what you can adjust (optional)"
-  - "Past outcomes (optional)"
+  - "Your notes on the deal: emails, call notes and what the buyer said, with dates (from your inbox, CRM or notebook)"
+  - "Your offer and what you can adjust, such as a trial, a refund or help to start (optional)"
+  - "How similar deals ended (optional)"
 you_get:
-  - "The cause of the stall, with quotes"
-  - "How deep the indecision runs and what it means for your forecast"
-  - "A personal recommendation"
-  - "Safety nets and a message to send"
+  - "The signs of a stall, quoted with dates"
+  - "The cause, with the quotes that show it"
+  - "How deep it runs and whether to count the deal in your forecast"
+  - "A personal pick, what to stop offering and a safety net for each fear"
+  - "A message under 150 words that you can send today"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste emails, call notes and any buyer words."
-  - "Say what you can offer as a safety net."
-  - "Check the cause against what you know of the buyer."
-  - "Send the message and note the reply."
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "Paste the buyer's last messages and your call notes. Keep their exact words and the dates."
+  - "Say which safety nets you can really give: a trial, a refund, start-up help. It will not offer one you did not list."
+  - "Check the cause against what you know of this buyer. If it feels wrong, say why and run it again."
+  - "Edit the message into your own voice, send it, and write down the reply."
 
 how_it_works:
   - title: "Reads the signs"
-    text: "Quotes stalls and requests with dates."
+    text: "Marks stalls, repeat requests for more information and 'let me think about it', and quotes each with its date."
   - title: "Names the cause"
-    text: "Doubt of the choice, endless learning or fear of a result."
+    text: "Sorts the stall into doubts the choice, always more to learn, or doubts the result. A plain no or a lost rival ends the run."
   - title: "Judges depth"
-    text: "Light, moderate or deep, and the forecast advice."
+    text: "Rates the stall light, moderate or deep, and says whether to count the deal in your forecast."
   - title: "Recommends"
-    text: "A personal pick with a reason."
-  - title: "Limits exploration"
-    text: "What to stop offering and what is enough."
+    text: "Writes what it would choose in the buyer's place, naming the option, the size and the start date."
+  - title: "Limits exploring"
+    text: "Lists what to stop offering, such as more demos, and writes one line on what is enough to decide."
   - title: "Adds safety nets"
-    text: "A net for each fear you can really offer."
+    text: "Pairs each fear with a net, such as an opt-out or a first-value plan. A net you cannot give is marked MISSING."
   - title: "Removes fake urgency"
-    text: "Real dates only."
+    text: "Replaces any invented deadline with a real date or a plain line on what happens next."
   - title: "Writes the message"
-    text: "Short and ready to send."
+    text: "Drafts the email or call opening in under 150 words."
 
 output_shape: |
   SIGNS FOUND
-  "<quote>" | <date>
+  "<buyer quote>" | <date>
 
   CAUSE
-  <one of three> | Evidence: <quotes>
+  <doubts the choice, always more to learn, or doubts the result> | Evidence: <quotes>
 
   DEPTH AND FORECAST
-  <light, moderate or deep> | Count in forecast: <advice>
+  <light, moderate or deep> | Count in forecast: <advice and confidence>
 
   RECOMMENDATION
   <what you would choose in their place and why>
 
   STOP OFFERING
-  <list> | What is enough to decide: <sentence>
+  <list> | What is enough to decide: <one sentence>
 
   SAFETY NETS
   Fear: <x> | Net: <y> | Can offer: <yes or MISSING>
@@ -80,6 +90,29 @@ output_shape: |
 
   CHECKS MISSED
   <one line each, or none>
+
+output_sample:
+  input:
+    - "Your notes on the deal, with the buyer's words and dates"
+    - "Your offer and what you can adjust (optional)"
+    - "How similar deals ended (optional)"
+  output:
+    - name: "SIGNS FOUND"
+      contains: "Each stall or repeat request, quoted in the buyer's words with its date."
+    - name: "CAUSE"
+      contains: "Whether the buyer doubts the choice, wants endless research or fears a mistake, with the quotes behind it."
+    - name: "DEPTH AND FORECAST"
+      contains: "A light, moderate or deep rating and whether to count the deal in your forecast."
+    - name: "RECOMMENDATION"
+      contains: "What you would pick in their place, with the option, size and start date."
+    - name: "STOP OFFERING"
+      contains: "The extras to drop, and one line on what is enough to decide."
+    - name: "SAFETY NETS"
+      contains: "Each fear paired with a net you can really give, or MISSING if you cannot."
+    - name: "MESSAGE"
+      contains: "A short email or call opening, under 150 words, with no fake deadline."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give and any check the answer still fails."
 
 tweaks:
   - what: "Buyer quotes"
@@ -108,7 +141,7 @@ improve:
   - "Add the safety nets you can offer as a standing list."
   - "Add your own rule for when to count a deal."
   - "Save outcomes by cause in a notes file."
-  - "Pair it with \"Ask-which closing planner\" once they are ready to choose."
+  - "Pair it with \"Sales closing question planner\" once they are ready to choose."
 
 works_best_with:
   tools:

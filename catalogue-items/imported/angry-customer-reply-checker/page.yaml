@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tests a draft against the message and your rules.
 new_slug: angry-customer-reply-checker
 name: Angry customer reply checker
-summary: Paste the complaint and your draft reply. Get promises, facts and tone
-  checked, plus a repaired draft.
+summary: Check your reply to an angry customer before you send it. Paste their message and your draft to catch bad promises and tone, with a fixed draft.
 job: help-customers
 headline: Angry customer reply checker
-subhead: A reply to an upset customer can calm things down or make them worse.
-  Paste the complaint and your draft, and you get a clear list of what works and
-  what will backfire, plus a repaired version you can send.
+subhead: A reply to an upset customer can calm things down or make them worse. Paste the complaint and your draft, and you get a clear list of what works and what will backfire, plus a repaired version you can send.
 explain: |
   A reply to an upset customer can calm things down or make them worse. Paste the complaint and your draft, and you get a clear list of what works and what will backfire, plus a repaired version you can send.
 
@@ -18,6 +15,10 @@ when:
   - A customer's message made you angry and you fear your draft sounds sharp.
   - You are not sure you are allowed to promise what you just offered.
   - A new team member drafts replies and you want a safety net.
+not_for:
+  - "The customer mentions injury, harm, legal action or a regulator: get advice from a lawyer or your insurer before you reply."
+  - "You need to decide whether to give a refund: ask the person in your business who approves refunds, then check the reply here."
+  - "You have no draft yet and want to start from nothing: write a short first draft yourself, then paste it in."
 you_give:
   - The customer's message, in full
   - Your draft reply
@@ -29,7 +30,25 @@ you_get:
   - Tone flags with the exact words quoted
   - A repaired draft with a clear next step
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool, such as Claude, ChatGPT or Gemini, and paste in the skill instructions.
+  - Paste the customer's message in full, then your draft reply.
+  - Paste your refund or service policy, or a list of what you can offer. Add order facts if you have them.
+  - Read the verdict and the problems first. Check any line marked as needing your decision.
+  - Make those decisions, then send the repaired draft. No code, files or paid tools are needed.
+output_sample:
+  input:
+    - The customer's message, pasted in full
+    - Your draft reply
+    - Your policy or a list of what you can offer (if you have none, promises are marked not checked)
+    - Order or case facts, such as dates and amounts (optional)
+  output:
+    - name: Verdict
+      contains: Send as is, send after fixes, or hold and decide first, with the main reason in one line.
+    - name: Checks table
+      contains: Each point the customer raised, marked answered, partly answered or missed in your draft.
+    - name: Problems
+      contains: A numbered list, most serious first, with the exact words quoted, why they matter and the fix.
+    - name: Repaired draft
+      contains: Your draft fixed using only your facts and rules, with open choices marked as decisions for you.
+    - name: Needs your decision
+      contains: The offers or facts the skill could not confirm from what you gave it.

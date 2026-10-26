@@ -1,15 +1,13 @@
 slug: management-fee-stepdown-checker
 name: Management fee stepdown checker
-summary: Compare two documented quarterly fees when the rate and chargeable basis change.
+summary: "Compare a fund's quarterly management fee before and after the fee basis and rate change, with a bridge that shows what moved the fee."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,12 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - transaction-fee-offset-checker
+  - reconcile-private-fund-fee-charges
 origin: own
 version: 1.0.0
 added: 2026-10-22

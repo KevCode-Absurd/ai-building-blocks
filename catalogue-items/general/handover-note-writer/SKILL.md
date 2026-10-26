@@ -28,7 +28,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The brain dump** (required): everything you can think of about the work, in any order: projects, tasks, deadlines, people, tools, logins (names only, never passwords), half-done things.
+- **The brain dump** (required): everything you can think of about the work, in any order: projects, tasks, deadlines, people, tools, logins (names only, never passwords), half-done things. A finished report or checked spreadsheet, such as a reconciliation's gap table, counts as part of it.
 - **Who takes over and for how long** (required): a colleague for two weeks, a successor for good.
 - **Dates** (advised): when you leave, when you are back, deadlines in the window.
 - **What they already know** (optional): so the note does not explain the obvious.

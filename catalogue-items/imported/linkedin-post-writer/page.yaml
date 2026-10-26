@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It writes in set formats and checks the draft.
 new_slug: linkedin-post-writer
 name: LinkedIn post writer
-summary: Give it a story or idea. Get a LinkedIn post, carousel script or poll
-  that you post yourself.
+summary: Write a LinkedIn post, carousel script or poll from your own story, then check the draft for weak hooks, bait lines and fake bold before you post.
 job: grow-social
 headline: LinkedIn post writer
-subhead: A LinkedIn post, carousel script or poll you can post yourself, built
-  from your own story or idea. It also checks drafts you already wrote.
+subhead: A LinkedIn post, carousel script or poll you can post yourself, built from your own story or idea. It also checks drafts you already wrote.
 explain: |
   A LinkedIn post, carousel script or poll you can post yourself, built from your own story or idea. It also checks drafts you already wrote.
 
@@ -17,6 +15,10 @@ when:
   - You want to turn a talk or article into several posts.
   - You want a verdict on whether your opening line works.
   - You need a carousel script or a poll.
+not_for:
+  - "You want to reply to comments or write DMs: use the LinkedIn engagement skill, or write them yourself."
+  - "You want to plan what your posts should be about: use the LinkedIn strategy skill first."
+  - "You only want a tone edit on general copy: use a copywriting skill or a plain edit pass."
 you_give:
   - Your story, idea or source text
   - Your goal for the post
@@ -29,7 +31,31 @@ you_get:
   - Picture and video text
   - A first comment for links
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI. Paste this skill, or upload its folder if your AI can run Python 3 scripts.
+  - Give your brief, your story or source text, and your goal. If you have no brief, your AI will suggest making one first.
+  - Your AI picks a format with the format picker script. It asks you for real details, like a number or a mistake, before it writes.
+  - Read the draft. Check that the first sentence ends before the fold and that every fact is true.
+  - Your AI checks the draft with the post linter script and fixes faults. Repeat until it scores a ship result or you choose to accept a warning.
+  - For a long article or talk, ask for the repurpose step. Add your own sentence to each unit before you post.
+output_sample:
+  input:
+    - Your story, idea, or an article, talk or transcript to repurpose
+    - Your goal for the post
+    - Your voice or a writing sample (optional)
+    - Real facts you can check, such as a number or a mistake you made
+  prerequisites:
+    - An AI that can run Python 3 scripts, or paste the skill into a chat and skip the scripts
+    - Your LinkedIn positioning brief, if you have one
+  output:
+    - name: Format pick
+      contains: The post format your material supports best, such as story, how-to, carousel, video or poll, with the reason.
+    - name: Draft post
+      contains: Your post with a complete first sentence before the mobile fold at about 140 characters.
+    - name: Alt text and captions
+      contains: Picture descriptions for every image and captions for every video.
+    - name: First comment
+      contains: The line with your link, plus a note in the post that the link is in the comments.
+    - name: Lint report
+      contains: A 0 to 100 score for mechanics, hook, integrity and accessibility, with blocking faults named.
+    - name: Reuse ledger
+      contains: A record of which parts of a long source are already posted, so no idea goes out twice.

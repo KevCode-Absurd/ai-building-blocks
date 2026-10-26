@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: Wrong prices cost money, so it checks limits.
 new_slug: bulk-price-changer
 name: Bulk price changer
-summary: Pick products and a percent or amount. Get every price changed at once,
-  within limits. Changes live prices, so preview first.
+summary: Change prices for a whole Shopify collection or tag at once, with a floor and ceiling. Preview every old and new price before it goes live.
 job: set-prices
 headline: Bulk price changer
-subhead: Change prices across a whole collection or tag in one go, within a
-  floor and a ceiling you set. It edits live prices, so preview first.
+subhead: Change prices across a whole collection or tag in one go, within a floor and a ceiling you set. It edits live prices, so preview first.
 explain: |
   Change prices across a whole collection or tag in one go, within a floor and a ceiling you set. It edits live prices, so preview first.
 
@@ -17,6 +15,10 @@ when:
   - A promotion ended and prices must go back.
   - Your supplier raised costs and you need to pass that on.
   - You want to see every price change before it goes live.
+not_for:
+  - "You want to change one product's price: edit it in the Shopify admin product page."
+  - "You want prices set from your cost and a target margin: use a costing spreadsheet or a pricing tool."
+  - "You cannot sign in to Shopify with a command line tool: change prices in the Shopify admin or with a CSV import."
 you_give:
   - Your store address
   - A collection or product tag
@@ -28,9 +30,29 @@ you_get:
   - Price limits applied
   - A summary of what changed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Use an AI that can run commands and sign in to Shopify, such as Claude Code, Cursor, Codex or Gemini CLI. A normal chat window cannot change your store.
+  - Sign in to your store with the Shopify CLI first. Your login needs permission to read and write products.
+  - Give your AI the skill and tell it your store address, the collection or tag, and the percent or fixed change. Add a lowest and highest price if you want limits.
+  - Ask for a preview first. Check the CSV of old and new prices against what you expect.
+  - Tell your AI to apply the change only when the preview looks right. Prices go live at once and there is no bulk undo.
+  - Open a few products in the Shopify admin to check the new prices. Errors are logged but do not stop the run.
+output_sample:
+  input:
+    - Your store address
+    - A collection or a product tag
+    - Percent or fixed change, and the amount (a minus sign means a discount)
+    - Lowest and highest allowed price (optional)
+    - Preview only or apply (optional)
+  prerequisites:
+    - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in to your store
+    - Permission to read and write products
+  output:
+    - name: Preview run
+      contains: A list of each variant with its old and new price, shown before anything is changed.
+    - name: price_changes_<date>.csv
+      contains: One row per variant with product ID, variant ID, SKU, title, old price and new price.
+    - name: Live price update
+      contains: New prices written to every variant in the collection or tag, kept within your lowest and highest price.
+    - name: Outcome summary
+      contains: A short count of what changed and how many errors came back.

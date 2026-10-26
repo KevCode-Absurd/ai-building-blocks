@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It lays out content with a set report toolkit.
 new_slug: matlab-report-builder
 name: MATLAB report builder
-summary: Give it your results. Get a PDF, Word or HTML report built with titles,
-  chapters, tables and charts.
+summary: Turn your MATLAB results into a PDF, Word or HTML report with a title page, chapters, tables and charts. Rerun the code to refresh it.
 job: work-with-files
 headline: MATLAB report builder
-subhead: A finished report in PDF, Word or HTML, built from MATLAB code, with a
-  title page, chapters, tables and charts. Give it your results and get a
-  document that updates whenever you rerun it.
+subhead: Give your AI your MATLAB results and the format you want. It writes the code that builds the report. You get a PDF, Word or HTML file that updates each time you rerun the code.
 explain: |
   A finished report in PDF, Word or HTML, built from MATLAB code, with a title page, chapters, tables and charts. Give it your results and get a document that updates whenever you rerun it.
 
@@ -16,21 +13,52 @@ explain: |
 when:
   - You run the same analysis each month and need a fresh report every time.
   - A client wants a PDF with your branding on the title page.
-  - You need a Simulink model documented with figures and tables.
+  - You need to document a Simulink model with diagrams and tables.
   - You are tired of pasting charts into Word by hand.
+not_for:
+  - "You only want to save data as a CSV or Excel file: use MATLAB's writetable or writematrix functions."
+  - "You want a report from a Live Script: use the export option in the MATLAB Live Editor."
+  - "You want to build a report by clicking through screens: use the Report Explorer in MATLAB."
 you_give:
-  - Your results, data or figures
-  - Output format
-  - Branding or layout needs (optional)
-  - Section titles (optional)
+  - Your MATLAB results, data or figures
+  - "The format you want: PDF, Word or HTML"
+  - Title page details such as title and author (optional)
+  - Your list of chapter or section titles (optional)
+  - Branding or layout needs, such as page borders or headers (optional)
 you_get:
-  - Report building code
-  - A title page and chapters
-  - Formatted tables and figures
-  - The report as PDF, Word or HTML
+  - MATLAB code that builds your report
+  - A title page and numbered chapters
+  - Tables and figures with automatic numbers and captions
+  - The finished report as a PDF, Word or HTML file
+  - A custom layout when the standard one does not fit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Check that MATLAB and the MATLAB Report Generator are installed. Simulink models also need the Simulink Report Generator.
+  - Gather your results file, your format, your section list and any title page or branding details.
+  - Paste the skill into your AI chat, or add it to your AI tool. Then paste your details and ask it to build the report.
+  - Run the code it gives you in MATLAB. Your AI needs to run MATLAB itself, or you run the code and share any errors.
+  - Open the saved file. Check that the titles, chapter names and captions are right.
+  - If the standard layout does not fit, ask your AI to make a custom reporter for your title page or page design.
+output_sample:
+  input:
+    - Your MATLAB results, data or figures
+    - "The format you want: PDF, Word or HTML"
+    - Title page details such as title and author (optional)
+    - Your list of chapter or section titles (optional)
+    - Branding or layout needs, such as page borders or headers (optional)
+  prerequisites:
+    - MATLAB with the MATLAB Report Generator installed
+    - An AI that can run MATLAB code
+    - Simulink Report Generator, only for Simulink model reports
+  output:
+    - name: Report code
+      contains: MATLAB code that builds the report, so you can rerun it whenever your data changes.
+    - name: Title page
+      contains: Title, author and other standard fields, or a custom title page if you need extra fields.
+    - name: Chapters
+      contains: Numbered chapters and sections that hold your text, tables and figures.
+    - name: Tables and figures
+      contains: Tables and charts with automatic numbers and captions, plus optional lists of each.
+    - name: Report file
+      contains: The finished PDF, Word or HTML file, saved to the output path you set.
+    - name: Custom reporter (only if needed)
+      contains: A template-based reporter for layout the standard parts cannot do, such as extra title page fields or page borders.

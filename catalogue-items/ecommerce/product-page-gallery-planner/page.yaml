@@ -1,6 +1,6 @@
 new_slug: product-page-gallery-planner
 name: "Product page gallery planner"
-summary: "Attach your product photos and facts. Get an 8-image gallery plan with sourced words and a gaps list."
+summary: "Plan your product page gallery image by image. Give it product facts, reviews and photos. You get an 8-image plan with sourced words and a gaps list."
 job: product-photos
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your product page gallery is mostly pack shots and you want it to answer shoppers' questions.
   - You're launching a product and need to brief a designer or an AI image tool on every image.
   - Customers keep asking the same things (how big, how do I use it) and you want the images to answer them.
+not_for:
+  - "You need one single product photo made: brief a photographer or designer, or use your image tool directly."
+  - "You have no photos, facts or reviews yet: gather them first, because the plan marks every missing proof as a gap."
+  - "You already have finished gallery images and want them checked: use the Product page image checker."
 
 you_give:
   - Product facts (name, variant, price, how it's used, ingredients or materials with amounts, size, what's in the box)
@@ -35,6 +39,26 @@ how_to_use:
   - Attach your photos and say each one's job (front, in hand, in use, close-up).
   - Add the worry you hear most, in a customer's words, if you know it.
   - Read the gaps list first. Fill the gaps or accept the swaps, then hand the cards to your designer or image tool.
+output_sample:
+  input:
+    - Your product facts (name, price, size, how it is used, what is in the box)
+    - Your claims with sources, plus reviews copied word for word
+    - Your product photos, each labelled by job (front, in hand, in use, close-up)
+    - The worry customers raise most, in their words (optional)
+    - Whether the gallery is for a marketplace (optional)
+  prerequisites:
+    - An AI that can read attached pictures, so it can sort your photos by job
+  output:
+    - name: KIND
+      contains: The one or two kinds your product fits, such as worn, held and used, or goes on the body.
+    - name: SCORES
+      contains: A table scoring each image type on how often it is asked, picture strength and proof, with its slot, gap or cut.
+    - name: CARD
+      contains: One card per image with the question, message, photo, layout, sourced words, proof level and likely mistake.
+    - name: GAPS
+      contains: Each missing fact or photo, with the image that waits on it.
+    - name: CHECKS MISSED
+      contains: Any quality checks the plan could not pass, or the word none.
 
 how_it_works:
   - title: Names the kind of product

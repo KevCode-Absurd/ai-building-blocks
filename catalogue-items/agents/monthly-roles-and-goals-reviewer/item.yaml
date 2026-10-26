@@ -14,12 +14,12 @@ outputs:
   - {type: plan}
 uses: [roles-and-goals-mapper, values-to-week-planner, okr-goal-writer, weekly-big-task-sorter, habit-plan-builder, digital-tool-audit-planner]
 steps:
-  - {uses: roles-and-goals-mapper, note: "Once, and again each quarter: your roles, what you are about in each, one or two lasting results per role, and the role crowding out the rest."}
-  - {uses: okr-goal-writer, note: "Every quarter: a few objectives with dated key results, written from the roles and the lasting results."}
-  - {uses: values-to-week-planner, note: "Every month: the plan from values to quarter, month and week, with protected hours for hard work, rebuilt from last month's calendar."}
-  - {uses: weekly-big-task-sorter, note: "Every month, for the first week: the few big tasks that matter, the small ones to batch or drop."}
-  - {uses: habit-plan-builder, note: "Only when a role has been crowded out two months running: one two-minute habit that gives it a foothold, with a cue and a restart plan."}
-  - {uses: digital-tool-audit-planner, note: "Once a quarter, or when the calendar shows more than a fifth of the month lost to tools: each app kept, cut or limited."}
+  - {uses: roles-and-goals-mapper, note: "Once, and again each quarter: your roles, what you are about in each, one or two lasting results per role, and the role crowding out the rest. Passes on the roles and lasting results."}
+  - {uses: okr-goal-writer, note: "Every quarter: a few objectives with dated key results, written from the roles and the lasting results. Passes on the goals, which the month plan uses."}
+  - {uses: values-to-week-planner, note: "Every month: the plan from values to quarter, month and week, with protected hours for hard work, rebuilt from last month's calendar. Uses the roles, the goals and last month's calendar. Passes on the plan for the week sort."}
+  - {uses: weekly-big-task-sorter, note: "Every month, for the first week: the few big tasks that matter, the small ones to batch or drop. Uses the plan from step 3. Passes on the task list for the week."}
+  - {uses: habit-plan-builder, note: "Only when a role has been crowded out two months running: one two-minute habit that gives it a foothold, with a cue and a restart plan. Uses that role and a normal-day outline, not the week sort. Passes on the habit, to place in next month's plan."}
+  - {uses: digital-tool-audit-planner, note: "Once a quarter, or when the calendar shows more than a fifth of the month lost to tools: each app kept, cut or limited. Uses your list of tools and what you value, not the habit plan. Passes on the kept, cut or limited call for each."}
 schedule: "On the last Sunday of each month, with a longer pass at the end of each quarter"
 asks_before: [creating, moving or deleting calendar events, dropping a role or a goal, sending a message to anyone, deleting or uninstalling an app, changing a commitment you made to someone else]
 minds: [stephen-covey, cal-newport]

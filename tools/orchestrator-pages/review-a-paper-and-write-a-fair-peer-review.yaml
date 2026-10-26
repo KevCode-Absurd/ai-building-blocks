@@ -1,6 +1,6 @@
 new_slug: review-a-paper-and-write-a-fair-peer-review
 name: Check a paper's claims and write a fair peer review
-summary: Give it the manuscript. Get a claim check, a methods review and a fair, kind peer review.
+summary: Review a paper and write a fair peer review. Give it the manuscript and get a claim check, a methods review and a kind, clear review.
 job: research-topics
 thinking: high
 thinking_why: It must judge evidence, methods and claims without being swayed by the writing. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - An editor has sent you a manuscript and a deadline.
   - You want to catch the claim that overreaches, which is the one that gets quoted.
   - Your past reviews were called harsh or vague.
+not_for:
+  - "You have a conflict of interest with the paper or its authors: tell the editor and decline the review."
+  - "You are checking your own manuscript before you send it: use the Unsupported claim spotter instead."
+  - "The journal bans putting manuscripts into AI tools: check its confidentiality rules first, or review by hand."
 you_give:
   - The manuscript, including figures and tables as text
   - The journal's review form or criteria, if there is one (optional)
@@ -29,6 +33,26 @@ how_to_use:
   - Paste the manuscript and the journal's criteria. It checks the claims and reviews the methods.
   - Read the draft review. Remove any point you cannot stand behind and add what you saw yourself.
   - Read the kind version once more and submit it.
+output_sample:
+  input:
+    - The manuscript, with figures and tables as text
+    - The journal's review form or criteria (optional)
+    - Your field, and what you can and cannot judge
+    - A past review you were proud of, to set your tone (optional)
+  prerequisites:
+    - Permission from the journal to put the manuscript into an AI tool
+    - An AI that can work through four steps in order and save each result
+  output:
+    - name: "Step 1: Claim check"
+      contains: Each claim from the abstract and discussion set against the results, with claims that go further than the data flagged.
+    - name: "Step 2: Methods and writing review"
+      contains: Design, analysis, novelty, missing literature and writing, with anything outside your judgement marked.
+    - name: "Step 3: Draft review"
+      contains: A summary, major points, minor points and a recommendation, each tied to a page or figure.
+    - name: "Step 4: Final review"
+      contains: Every comment rewritten to be specific and kind, so the authors know what to change.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the claims
     text: Reads every claim against the paper's own results and flags the ones that go further than the data.

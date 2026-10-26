@@ -1,28 +1,60 @@
 new_slug: five-angle-ad-headline-writer
 name: Five-angle ad headline writer
-summary: Write five short headlines for one ad, each with a new angle. Get word counts and a fair test plan.
+summary: Write five ad headlines for one product, each with a different angle. You get character counts and a plan for which two to test first.
 job: write-ad-copy
 headline: Five-angle ad headline writer
-subhead: Share product facts, buyer, offer and one ad concept. Get five benefit, curiosity, question, callout and contrarian headlines.
+subhead: Give your AI your product, your buyer and one ad idea. It writes five short headlines, each with a different angle. You also get a plan for which two to test first.
 explain: |-
   Write five short headlines for one ad, each with a new angle. Get word counts and a fair test plan.
 
   Share product facts, buyer, offer and one ad concept. Get five benefit, curiosity, question, callout and contrarian headlines.
 when:
-  - You need five benefit, curiosity, question, callout and contrarian headlines.
-  - You need five-angle ad headline writer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You have one ad idea and want five ways to open it.
+  - Your current headline stopped working and you need fresh angles.
+  - You want to test headlines fairly, changing only one thing.
+  - You need to know which angle fits a cold or a warm buyer.
+not_for:
+  - "You sell many products in one campaign: write a full creative brief first, then run this once per ad."
+  - "You need organic social posts or long captions: write those by hand or ask your AI for a caption draft."
+  - "You have no product facts or proof yet: gather them first, or the headlines will make claims you can't back up."
 you_give:
-  - Product facts
-  - Buyer
-  - Offer and one ad concept
+  - Your product and a one-sentence description
+  - Your main benefit, the one thing that sets it apart
+  - Your buyer, described in specific terms
+  - How aware your buyer is of the problem
+  - Headlines that already win for you (optional)
 you_get:
-  - Five benefit, curiosity, question, callout and contrarian headlines
-  - The sources used, missing inputs and assumptions
+  - Five headlines of 4 to 6 words each, one per angle
+  - A character count for every headline
+  - The awareness stage each headline fits best
+  - A one-line reason each headline should work
+  - The two angles to test first, and what a win means
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code, files or paid tools are needed.
+  - Paste your product facts, main benefit, buyer and awareness stage. Add your winning headlines if you have any.
+  - Read the five headlines. Check that each claim matches the facts you gave and the ad platform's rules.
+  - Cut or reword any number or claim you can't prove.
+  - Run the two angles from the test plan as separate ads. Change only the headline.
+output_sample:
+  input:
+    - Your product and a one-sentence description
+    - Your main benefit, the one thing that sets it apart
+    - Your buyer, described in specific terms
+    - How aware your buyer is of the problem
+    - Headlines that already win for you (optional)
+  output:
+    - name: "Angle 1: Benefit-First"
+      contains: A headline that states the outcome with no setup, plus its character count, best awareness stage and a one-line reason.
+    - name: "Angle 2: Curiosity"
+      contains: A headline that opens a loop so the reader wants the next line, with the same checks.
+    - name: "Angle 3: Question"
+      contains: A headline that names the viewer's situation as a question, with the same checks.
+    - name: "Angle 4: Direct Callout"
+      contains: A headline that speaks to the buyer by identity or habit, with the same checks.
+    - name: "Angle 5: Contrarian"
+      contains: A headline that challenges an idea people hold about your category, with the same checks.
+    - name: Test Recommendation
+      contains: The two angles to test first, the one thing being compared, and what a win tells you for future ads.
 how_it_works:
   - title: Check the inputs
     text: Confirm product facts, buyer, offer and one ad concept. Mark facts that are missing.

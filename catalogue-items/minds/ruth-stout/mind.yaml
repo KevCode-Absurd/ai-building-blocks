@@ -5,8 +5,29 @@ area: "arts"
 years: "1884–1980"
 living: false
 known_for: "Stout described a permanent-mulch approach in gardening books including Gardening Without Work. Her method keeps organic material over soil and replenishes it as it decays, seeking to reduce digging, weeding and repeated heavy work. She died in 1980."
-summary: "Question a recurring chore before improving your ability to endure it. Cover the soil with suitable organic matter, observe what happens and add material where it is needed rather than treating bare ground and constant cultivation as inevitable."
+summary: "Plan a low-work permanent mulch garden. Bring your bed, your weeds and your limits. You get a short diagnosis, a trial plan and one next step."
 use_cases: ["A lower-labor vegetable garden: Try permanent mulch on one manageable bed, record weed pressure and moisture, and expand only after observing local results.", "Too much weekend weeding: Identify bare or thinly covered soil and test whether a suitable mulch reduces repeated work in that area.", "Finding affordable garden cover: Check local sources and material history, estimate volume and avoid treating any unknown plant material as automatically suitable.", "An exhausting repeated work task: Identify the condition that keeps generating the chore and redesign that condition before buying a faster tool.", "Keeping a hobby as your capacity changes: Reduce the area and recurring effort so participation remains possible without proving toughness through discomfort.", "Learning from a confident expert: Translate a strong claim into a small trial and distinguish the expert’s observed conditions from your own."]
+not_for:
+  - "You need watering, pest control or soil test advice: ask your local extension service or a local gardener, because the sources do not cover your site."
+  - "You run a large commercial plot: use an agronomist, since this method comes from one home garden and was not tested across many climates."
+  - "You want a private quote or proof that Ruth Stout backed your product: no mind can give that, so use her published books and articles instead."
+output_sample:
+  input:
+    - The garden or bed you want to work on, and its size
+    - What weeding and digging you do now, and how often
+    - What cover material you can get nearby (optional)
+    - Your time, energy and budget limits
+  output:
+    - name: Short diagnosis
+      contains: Which repeated chore keeps coming back, and what condition of your soil or bed keeps causing it.
+    - name: Practical sequence
+      contains: "Steps for a small trial bed: check the material, cover it well, plant, watch, and add cover where thin."
+    - name: Cues to watch
+      contains: What to record about weeds, moisture and plant health, so you can compare effort over time.
+    - name: Material tradeoff
+      contains: Why a chosen cover suits or does not suit your site, including the effort to get and move it.
+    - name: One next adjustment
+      contains: A single task you can start with the time and tools you have now.
 seats: [{"seat": "Low-labor gardening with permanent mulch", "asks": "Why do you think that digging is necessary?"}, {"seat": "Practical teaching and adaptation", "asks": "How thick is the cover now?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

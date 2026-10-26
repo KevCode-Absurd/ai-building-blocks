@@ -1,6 +1,6 @@
 new_slug: digital-tool-audit-planner
 name: "Digital tool audit planner"
-summary: "List the apps and habits you use. Get each kept, cut or limited by two questions: what value, and is it best."
+summary: "Run a digital tool audit: list your apps and habits and what you value. Get each one marked keep, cut or limit, with a rule for every limit."
 job: think-and-decide
 thinking: low
 thinking_why: "It applies two fixed questions to a list you provide."
@@ -10,13 +10,17 @@ subhead: "List the apps and habits that take your attention and what you care ab
 
 explain: |
   Almost every app offers some benefit. That is how it gets onto your phone and stays there. But the attention it takes is never on the receipt, and what you value most gets whatever is left.
-  
+
   This skill starts from what you value. It lists each tool and habit and asks two questions. Does it add real value to something you named? Is it the best way to get that value, or only a way? It marks tools that solve an old problem and ones that made a new habit, then gives each a keep, cut or limit with a rule, and sets a review in a month.
 
 when:
   - "You pick up your phone without knowing why."
   - "Your team has too many chat channels and tools."
   - "You want to cut back but do not know where to start."
+not_for:
+  - "You are choosing one app and a quick pick is enough: compare two options yourself or ask a friend who uses both."
+  - "You need to change work tools your team or boss controls: talk with your team directly first."
+  - "You want to cut team meetings and processes, not apps: use the Process and meeting cull planner."
 
 you_give:
   - "Your tools and habits"
@@ -34,6 +38,24 @@ how_to_use:
   - "List every app, feed, channel and habit, even small ones."
   - "Follow the calls for one month."
   - "On the review date, answer the question it set."
+output_sample:
+  input:
+    - Your apps, feeds, channels and habits
+    - The three to six things you value most
+    - Rough weekly time on each (optional)
+  output:
+    - name: VALUES
+      contains: Your three to six values, each as a short phrase.
+    - name: TOOLS
+      contains: Each tool with weekly time, the value it adds, best way or only a way, old problem or new habit, call and rule.
+    - name: REPLACEMENTS
+      contains: What covers the need for each tool you cut.
+    - name: REVIEW
+      contains: A date one month out, the question to ask that day and what to count.
+    - name: MISSING
+      contains: Facts you did not give, such as time spent, marked as gaps.
+    - name: CHECKS MISSED
+      contains: One line for each check the skill still failed, or none.
 
 how_it_works:
   - title: "Write what you value"
@@ -56,19 +78,19 @@ how_it_works:
 output_shape: |
   VALUES
   <3 to 6 values>
-  
+
   TOOLS
   <tool> | Time/week | Value it adds (ties to <value>) | Best way or only a way | Old problem / new habit | Call: keep / cut / limit | Rule
-  
+
   REPLACEMENTS
   <cut tool>: <what covers the need>
-  
+
   REVIEW
   <date> | Ask: <question> | Count: <...>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

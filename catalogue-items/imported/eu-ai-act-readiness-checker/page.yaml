@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Rules depend on role, scope and risk class, so it reasons through each.
 new_slug: eu-ai-act-readiness-checker
 name: EU AI Act readiness checker
-summary: Describe your AI systems. Get a first read of your risk level, duties
-  and gaps under the EU AI Act.
+summary: Check your AI systems against the EU AI Act. Get a first read of your risk level, duties and gaps, plus a 90 day plan. Not legal advice.
 job: secure-code
 headline: EU AI Act readiness checker
-subhead: Describe your AI systems. Get a first read of your risk level, duties
-  and gaps under the EU AI Act. Bring list of AI systems and what each is used
-  for. Use the result to plan your next step.
+subhead: Describe your AI systems. Get a first read of your risk level, duties and gaps under the EU AI Act. Bring list of AI systems and what each is used for. Use the result to plan your next step.
 explain: |
   A first-pass readiness review of your AI systems against the EU AI Act: what you run, your role for each, which duties may apply and where evidence is missing. It is triage, not a legal opinion.
 
@@ -18,6 +15,10 @@ when:
   - You have no inventory of the AI tools your company runs.
   - Your board has asked how ready you are for the rules.
   - You need a plan for the next 90 days before talking to counsel.
+not_for:
+  - "You need a legal opinion or a compliance sign-off: ask a qualified EU lawyer, because this gives a first read only."
+  - "You have questions on scope, exemptions or risk class: send them to qualified EU counsel, using the questions list this skill writes."
+  - "You need to file a registration or contact a regulator: a lawyer must review and approve that step."
 you_give:
   - List of AI systems and what each is used for
   - Your role for each one, such as builder or user
@@ -30,7 +31,33 @@ you_get:
   - 30, 60 and 90 day plan
   - Questions for counsel
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Use one that can browse the web and run Python code.
+  - Paste the skill text from this page. Say you want an EU AI Act readiness check.
+  - Add your list of AI systems, your role for each, and the countries where they are used.
+  - Add your risk, privacy and security documents if you have them (optional).
+  - Check the inventory and gap register with each system owner. Fix any wrong facts.
+  - Send the questions list to a qualified EU lawyer before you act on any risk class.
+output_sample:
+  input:
+    - A list of your AI systems and what each is used for
+    - Your role for each system, such as builder or user
+    - The countries where each system is used
+    - Your existing risk, privacy and security documents (optional)
+  prerequisites:
+    - An AI that can run Python code, to check the inventory file
+    - An AI that can read current EU legal sources online, to check dates and rules
+  output:
+    - name: Sources and assumptions
+      contains: The date you ran it, the legal sources checked, your assumptions and the limits of the review.
+    - name: AI system inventory
+      contains: One row per system with its EU link, your role, use, risk guess, and when to review again.
+    - name: Gap register
+      contains: Each rule or topic, the evidence you have, the gap, its priority, an owner, a target date and a check.
+    - name: Banned use screen
+      contains: Any use that may be banned, with a note to pause and call a lawyer.
+    - name: Transparency, high-risk and general-purpose model sections
+      contains: Separate notes on what users must be told, high-risk duties and rules for general-purpose models.
+    - name: 30, 60 and 90 day plan
+      contains: Actions in order, with owners, what must come first, and proof that each is done.
+    - name: Questions for counsel
+      contains: Short fact summaries and clear questions for a qualified EU lawyer.

@@ -1,6 +1,6 @@
 new_slug: chat-screenshot-image-ad-maker
 name: "Chat screenshot image ad maker"
-summary: "Paste your story ad. Get the chat messages and a ready-to-paste screenshot image prompt."
+summary: "Turn your story ad into a chat screenshot ad. Get short messages from a partner or family group chat, plus an image prompt you can paste."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your story has a partner, relative or friend who noticed the problem or the workaround.
   - The problem is something a family jokes about or keeps noticing in each other.
   - You want a picture with words that still reads like a normal post.
+not_for:
+  - "Your story has no second person who noticed the problem: use the Phone note image ad."
+  - "You need the picture to show the moment itself, with no words on it: use the Problem moment image ad maker."
+  - "You want a finished picture file with no design step: paste the image prompt into ChatGPT or Gemini instead."
 
 you_give:
   - Your approved story ad, with the other people in it and what they noticed
@@ -34,6 +38,35 @@ how_to_use:
   - Say "group chat" or "one-to-one" if you already know which you want. Otherwise it picks from the story.
   - Type the messages into plain bubbles in a design tool, or paste the prompt into your image tool.
   - Read every message and name letter by letter, then read the flags. Any message written for the image needs a second look before it runs.
+output_sample:
+  input:
+    - Your approved story ad, with the other people in it and what they noticed
+    - How your buyer texts (optional)
+    - Whether their family uses group chats (optional)
+  prerequisites:
+    - Your story ad text, or a few lines on the moment and who noticed it
+    - A design tool or an image tool to build the screenshot
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: Thread
+      contains: Whether it is a one-to-one text or a group chat, and why it fits.
+    - name: Who and when
+      contains: Each person, a made-up name or initial, the group name if any, and the time on screen.
+    - name: What they noticed
+      contains: One line on the problem seen from outside, and where it comes from in your story.
+    - name: Messages
+      contains: The chat in order, with the sender of each, exactly as it will appear.
+    - name: Blank version
+      contains: The same screen with empty bubbles, so you can change the words later.
+    - name: Line under the image
+      contains: A short caption of about 27 characters that never names the product.
+    - name: Flags
+      contains: Messages written for the image, anything guessed, and a new story opening if needed.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt with every message in quotes once.
+    - name: Checks missed
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: Sets the house rules

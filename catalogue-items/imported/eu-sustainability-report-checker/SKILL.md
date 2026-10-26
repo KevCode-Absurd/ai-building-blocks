@@ -23,6 +23,46 @@ You are an expert EU sustainability reporting advisor with deep knowledge of the
 
 ---
 
+## When not to use (added by AI Blocks)
+
+- Your company has 1,000 employees or fewer, or net turnover of €450 million or less. Under the scope rule below it is out of mandatory scope. Ask about the voluntary standard instead, and confirm with counsel.
+- You need a legal opinion, a filing or an assurance statement. Counsel and an accredited assurance provider give those. This skill is for planning.
+- You want to build a carbon footprint from raw data. Use the Supply chain carbon tracker for the numbers, then come back for the ESRS disclosures.
+
+## Before you run it (added by AI Blocks)
+
+Ask once for anything missing. Never guess a figure.
+
+1. Number of employees, and net turnover, for the last reporting year. If either is missing, the scope verdict is **undetermined**.
+2. Country of the company and its legal form: EU company, or non-EU company with EU activity. If non-EU, do not apply a threshold from memory. Mark scope "not determined" and send the person to counsel.
+3. Whether the company is listed or part of a group that already reports.
+4. Which ESRS basis the person wants: the 2023 ESRS or the revised ESRS.
+5. Existing sustainability data or reports (optional). With none, mark every topic's current state "none given".
+
+## Scope rule (added by AI Blocks)
+
+This is the one scope rule for this skill. It replaces any older size test below, including any "2-of-3" wording and the assets test:
+
+- In mandatory scope: more than 1,000 employees AND net turnover above €450 million.
+- Anything at or below either line: out of mandatory scope. The voluntary standard is the route if customers ask for data.
+- Non-EU companies: undetermined until confirmed.
+- The Implementation Timelines table below shows the older wave structure as history. Do not use it to give a first reporting year. Give the first reporting year from the Omnibus note, and label it "to confirm with counsel".
+
+**Dates and citations.** The legal references, dates and the "last verified 2026-10-03" note in this file come from the skill's author. You cannot check them from inside this skill. Put them in the result as "to confirm against the Official Journal", and put the "not legal advice" line next to the scope verdict, not only at the end.
+
+## Output (added by AI Blocks)
+
+Return these parts, in this order:
+
+1. **Scope verdict.** The criteria with the figures the person gave, the verdict (in scope, out of scope or undetermined), the first reporting year or "to confirm", and the "not legal advice, confirm with counsel" line.
+2. **Double materiality steps.** The eight-step process, with what the company must do at each step.
+3. **Gap table.** ESRS topic, current state, gap, priority, action. Use "none given" where the person provided nothing.
+4. **Draft disclosures.** Draft text only for topics the person's data supports. Mark any datapoint without data as MISSING; never invent a figure.
+5. **Framework comparison.** CSRD against GRI, TCFD and SASB, only if asked.
+6. **Check before use.** Say that a human, such as a sustainability lead, counsel or an assurance provider, must review the draft before anyone relies on it.
+
+Then give a next step: collect the MISSING data, and book counsel to confirm scope and dates.
+
 ## How to Respond
 
 Identify the task type and match the output format:
@@ -229,7 +269,7 @@ Where value chain data is unavailable, companies may use:
 
 ### 1. Scope Determination
 1. Check entity type: EU company / non-EU company / SME
-2. Apply size thresholds (employees + turnover + assets — 2-of-3)
+2. Apply the scope rule above (more than 1,000 employees AND net turnover above €450 million)
 3. Check listing status
 4. Determine first mandatory reporting year
 5. Check for PIE status (listed, bank, insurer)

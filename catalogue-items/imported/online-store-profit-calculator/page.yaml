@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows set cost formulas on your numbers.
 new_slug: online-store-profit-calculator
 name: Online store profit calculator
-summary: Give it your price, costs and ad spend. Get your margin per sale and
-  whether your cost to win a customer works.
+summary: Use this online store profit calculator to see your margin per sale after ads and fees, and whether your cost to win a customer works.
 job: run-your-store
 headline: Online store profit calculator
-subhead: Your real profit on each sale, after every cost that eats into it, and
-  whether what you pay to win a customer makes sense. Many sellers see revenue
-  and miss how thin the margin is once ads and fees are in.
+subhead: Give it your price, costs and ad spend. It shows your profit on each sale after ads and fees. It also shows the most you can pay to win a customer.
 explain: |
   Your real profit on each sale, after every cost that eats into it, and whether what you pay to win a customer makes sense. Many sellers see revenue and miss how thin the margin is once ads and fees are in.
 
@@ -16,21 +13,44 @@ explain: |
 when:
   - You want to know if a product is worth selling after ads.
   - Sales are growing but your bank balance is not.
-  - You are setting a price and need to know your break-even.
-  - You want to check if repeat purchases cover your ad cost.
+  - You are setting a price and need your break-even.
+  - You want to know if repeat buyers cover your ad cost.
+not_for:
+  - "You sell on Amazon or another marketplace: use a calculator built for that platform, since its fees work differently."
+  - "You need tax or accounting advice: ask an accountant, because this only does rough cost math."
+  - "You want your real card fee: check your own payment plan, since the 2.9% plus $0.30 here is an example rate."
 you_give:
-  - Selling price
-  - Product and shipping costs
-  - Ad spend or cost per customer
-  - Repeat purchase rate (optional)
+  - Your selling price
+  - Your product cost
+  - Your shipping and warehouse fulfillment costs
+  - Your ad spend, as a share of the price
+  - Your repeat purchase rate (optional)
 you_get:
-  - A cost breakdown per order
-  - Profit margin per sale
-  - Customer lifetime value against acquisition cost
-  - A warning when the numbers do not work
+  - A cost breakdown for each order
+  - Your net profit and net margin per sale
+  - The most you can pay to win one customer
+  - A check of your numbers against typical ranges, which are rules of thumb and not hard rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in this skill.
+  - Say which tool you use, and note that the script needs an AI that can run Python code. If yours cannot, ask it to do the math by hand.
+  - Paste your price, product cost, shipping, fulfillment and ad spend.
+  - Replace the example card fee of 2.9% plus $0.30 with your own plan's rate.
+  - Read the net margin and the max affordable CAC. Treat the benchmark ranges as typical, and compare them with your own data.
+  - Run it again with a new price or ad spend to find your break-even. Use the max CAC to set your ad budget.
+output_sample:
+  input:
+    - Your selling price
+    - Your product cost and shipping costs
+    - Your ad spend, as a share of the price
+    - Your warehouse fulfillment cost (optional)
+  prerequisites:
+    - An AI that can run Python code, to use the calculator script
+  output:
+    - name: Profit analysis report
+      contains: Each cost as a dollar amount and a share of the selling price, ending in net profit and net margin.
+    - name: Cost breakdown
+      contains: Product cost, warehouse fulfillment, card fees, ads, returns and customer shipping if you offer free shipping.
+    - name: Max affordable CAC
+      contains: The most you can pay to win one customer before the sale stops making money.
+    - name: Health check
+      contains: Your gross margin, ad share, fulfillment share, net margin and LTV to CAC ratio against typical ranges.

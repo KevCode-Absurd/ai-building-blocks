@@ -20,9 +20,9 @@ uses:
   - study-understanding-check
 steps:
   - uses: choose-a-study-plan-you-can-keep
-    note: "Run when: A checkpoint arrives, practice reveals a new gap or available time changes."
+    note: "Run when: A checkpoint arrives, practice reveals a new gap or available time changes. Uses your source files and the free time you have now, and hands the weekly plan that the review compares your progress against."
   - uses: study-understanding-check
-    note: Use study-understanding-check on the learner actual recent answers. When the learner is absent, review only supplied answers and prepare an unrun next check; never invent responses or mastery. Keep successful parts of the plan; rerun the study planning workflow only for missed prerequisites, persistent errors or changed time. Mark the review incomplete if no practice evidence is available.
+    note: Use study-understanding-check on the learner actual recent answers. When the learner is absent, review only supplied answers and prepare an unrun next check; never invent responses or mastery. Keep successful parts of the plan; rerun the study planning workflow only for missed prerequisites, persistent errors or changed time. Mark the review incomplete if no practice evidence is available. Uses the answers and the material the learner studied, not step 1's plan; the plan is only adjusted from what the answers show.
 schedule: Weekly or at the learner agreed checkpoint.
 asks_before:
   - Sending or submitting any message or form

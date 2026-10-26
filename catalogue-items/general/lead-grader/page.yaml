@@ -1,6 +1,6 @@
 new_slug: lead-grader
 name: Lead grader
-summary: Paste your prospects. Get each graded A, B or C by how soon they need to act, with a follow-up.
+summary: Grade your sales leads A, B or C by how soon each one needs to act. Get a dated list with a follow-up plan for every grade.
 job: sell-and-negotiate
 thinking: low
 thinking_why: It sorts a list by one rule that is clear and applies it each time.
@@ -14,6 +14,10 @@ when:
   - Your list of prospects is long and you cannot follow up with all of them.
   - You chase everyone and the people who are ready get lost.
   - You want a weekly routine for who to call first.
+not_for:
+  - "Your sales run long and no prospect has a date or event behind it: do a pipeline review with your team instead."
+  - "You need the follow-up messages written: use a follow-up message writer after you grade the list."
+  - "You have only a few prospects and know each one well: just call them, no grading needed."
 you_give:
   - Your prospects, one per line, with what you know about each
   - What you sell and how long a sale usually takes
@@ -30,6 +34,27 @@ how_to_use:
   - Ask the people with no timing when they need to move, then add it.
   - Contact the A's within a day.
   - Re-grade on the day set.
+output_sample:
+  input:
+    - Your prospects, one per line, with what you know about each one's timing
+    - What you sell and how long a sale usually takes
+    - Today's date
+    - Notes from past calls or messages (optional)
+  output:
+    - name: List date and re-grade day
+      contains: Today's date and the day you should grade the list again.
+    - name: A (soon)
+      contains: Each prospect with a stated need to act soon, the timing quoted, a next step within a day and an owner.
+    - name: B (later)
+      contains: Each prospect with a real but later need, a contact rhythm and the date of the next touch.
+    - name: C (no clear need)
+      contains: Each prospect with no clear need, the reason, and a note that they are off active follow-up.
+    - name: NEED TIMING
+      contains: Prospects with no timing yet, each with one question to ask them.
+    - name: MISSING
+      contains: Facts the list did not give, marked so nothing is invented.
+    - name: CHECKS MISSED
+      contains: Any of its own checks that failed and why, or none.
 how_it_works:
   - title: Asks about timing
     text: Finds when each prospect needs to move.

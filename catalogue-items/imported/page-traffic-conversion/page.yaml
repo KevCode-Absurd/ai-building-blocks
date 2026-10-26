@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It pulls analytics numbers into a table.
 new_slug: page-traffic-conversion
 name: Page traffic and conversion reader
-summary: Run it on your store. Get sessions, conversion and bounce rate for each
-  product and collection page.
+summary: Find which Shopify product and collection pages get visits but few sales. Give your store address, get a ranked page traffic and conversion report.
 job: audit-landing-page
 headline: Page traffic and conversion reader
-subhead: A ranked list of your store's product and collection pages by visits,
-  sales rate and bounce rate, so you see which pages earn their traffic and
-  which waste it.
+subhead: Give it your Shopify store address. It reads your product and collection pages, ranks them by visits or sales rate, and flags pages with plenty of visits but few sales.
 explain: |
   A ranked list of your store's product and collection pages by visits, sales rate and bounce rate, so you see which pages earn their traffic and which waste it.
 
@@ -18,19 +15,49 @@ when:
   - A collection page has a high bounce rate and you want proof.
   - You are choosing which pages to improve first.
   - You need a monthly page performance snapshot.
+not_for:
+  - "You want ad spend or channel results: use your ad platform or analytics tool instead."
+  - "You need bounce rate for each page: this skill cannot get it from Shopify, so use your analytics tool."
+  - "Your store is not on Shopify: use the reports in your own store platform instead."
 you_give:
-  - Store address, such as mystore.myshopify.com
+  - Your store address, such as mystore.myshopify.com
   - Days to look back (optional, 30 by default)
-  - Page type and sort order (optional)
-  - Shopify login with report access
+  - "Page type: products, collections or both (optional)"
+  - "How to rank pages: visits or conversion rate (optional)"
+  - A Shopify login that can read reports
 you_get:
-  - Top pages ranked by visits, conversion or bounce
-  - Conversion and bounce rate for each page
-  - Product versus collection split
-  - Readable or JSON output
+  - Your top pages ranked by visits or conversion rate
+  - The conversion rate for each page
+  - A split of product pages and collection pages
+  - A list of busy pages that rarely sell
+  - A CSV file you can open in a spreadsheet
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI tool that can run code and reach your store, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot do this.
+  - "Log in to your store with the Shopify command line: shopify auth login --store yourstore.myshopify.com. Your login must be allowed to read reports."
+  - Give your AI this skill and your store address. Add the days to look back, the page type and the ranking if you want to change them.
+  - Let it run. It only reads data and changes nothing in your store.
+  - Check the flagged pages first. Look at stock, photos and the buy button on each.
+  - Run it again a week after you change a page to see the effect.
+output_sample:
+  input:
+    - Your store address, such as mystore.myshopify.com
+    - Days to look back (optional, 30 by default)
+    - "Page type: products, collections or both (optional)"
+    - "How to rank pages: visits or conversion rate (optional)"
+  prerequisites:
+    - An AI tool that can run code, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A Shopify login with permission to read reports
+    - A Shopify plan that includes the analytics reports
+  output:
+    - name: Start banner
+      contains: Your store address and the time the report began.
+    - name: Step log
+      contains: One line for each query step, with what was asked and how many rows came back.
+    - name: Ranked page table
+      contains: Your top pages by visits or conversion rate, with the page type, page path, visits and conversion rate.
+    - name: Optimisation candidates
+      contains: Pages with more visits than the middle page and a conversion rate under 2 percent.
+    - name: Outcome summary
+      contains: The days covered, pages checked, top visited page, top converting page and error count.
+    - name: traffic_by_page CSV
+      contains: One row per page with type, path, sessions, conversion rate percent and a flag for weak pages.

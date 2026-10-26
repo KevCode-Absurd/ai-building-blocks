@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares your identity, voice and position, then ranks what to fix first.
 new_slug: brand-health-auditor
 name: Brand health auditor
-summary: Describe your brand as it is today. Get a clear diagnosis of what works
-  and what is off, with ranked fixes.
+summary: Run a brand audit on your own brand. Get a score out of 5 on six areas, what works, what is off, and fixes ranked by urgency.
 job: brand-file
 headline: Brand health auditor
-subhead: A clear read on how well your brand is working, with a score on each
-  area and fixes ranked by importance. You see what is solid, what is off and
-  what to repair first.
+subhead: A clear read on how well your brand is working, with a score on each area and fixes ranked by importance. You see what is solid, what is off and what to repair first.
 explain: |
   A clear read on how well your brand is working, with a score on each area and fixes ranked by importance. You see what is solid, what is off and what to repair first.
 
@@ -18,6 +15,10 @@ when:
   - You are about to invest in new marketing and want a baseline.
   - A new leader asks how strong the brand really is.
   - You have too many logo versions in use.
+not_for:
+  - "You have a new brand with no materials yet: build the positioning first with a brand strategy skill, then audit it later."
+  - "You need a new logo, colours or fonts: hire a designer, since this only diagnoses and does not design."
+  - "You want one piece of copy reviewed: ask a colleague or your AI for a plain edit instead."
 you_give:
   - A description of your brand today
   - Links or samples of your materials
@@ -29,7 +30,26 @@ you_get:
   - Ranked fixes
   - A short list of quick wins
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - "Paste your brand materials: website text, social bios, pitch deck text or brand guidelines. If your AI can browse the web, a link works too."
+  - Say what prompted the audit and name your main competitors.
+  - Skip the saved brand notes file if you have none. Your AI will work from what you paste.
+  - Read the scorecard first, then start with the fixes marked do now.
+output_sample:
+  input:
+    - Your website link, social profiles or pitch deck text
+    - What made you want this review
+    - Recent changes, such as new leaders, products or markets (optional)
+    - Customer feedback or research on how people see your brand (optional)
+    - Your main competitors (optional)
+  prerequisites:
+    - Brand notes saved as .agents/brand-context.md are optional. The audit runs without them.
+  output:
+    - name: Brand health scorecard
+      contains: A table with a 1 to 5 score and a status for each of six areas, plus an overall score out of 30.
+    - name: What's working
+      contains: Three or four specific strengths, named precisely.
+    - name: What's not working
+      contains: Three to five issues ranked by priority, each with the evidence you gave and why it matters.
+    - name: Priority recommendations
+      contains: Fixes grouped as do now, next 30 to 60 days, and long-term strategic work.

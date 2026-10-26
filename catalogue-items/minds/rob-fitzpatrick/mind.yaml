@@ -18,6 +18,27 @@ use_cases:
   - "Check whether a feature request is the real need or a guess at a fix"
   - "Decide whether to keep going, change or stop after a round of talks"
   - "Plan a conversation inside a team so one person isn't the only source of what customers said"
+not_for:
+  - "You need survey results from many people, such as tested prices at scale: use a survey tool or a data analyst."
+  - "You want help valuing a business with spreadsheets and numbers: use the Aswath Damodaran mind."
+  - "You want to know how to build a product people love once you have real customers: use the Brian Chesky mind."
+output_sample:
+  input:
+    - The idea or plan you want to test, in a few sentences
+    - What you most need to learn
+    - Your draft questions, or your notes from past customer talks
+    - Who you have talked to so far (optional)
+  output:
+    - name: Sharper questions
+      contains: Your questions rewritten to ask about past behavior, with the three that could change your plan, scariest first.
+    - name: Who to talk to first
+      contains: A narrower group you can name and reach this week, cut from a broad market.
+    - name: Marked-up notes
+      contains: Your notes sorted into facts, compliments, fluff and ideas, with emotion and money marked.
+    - name: Verdict
+      contains: A call to keep going, change or stop, based on what people did, not what they said.
+    - name: Next step to ask for
+      contains: One commitment to request, such as time, an introduction or money, and the next three conversations.
 seats:
   - {seat: "What customers really do", asks: "What did this person actually do the last time this came up, and what did it cost them?"}
   - {seat: "Truth before pitch", asks: "Are you learning something that could change your plan, or collecting praise?"}

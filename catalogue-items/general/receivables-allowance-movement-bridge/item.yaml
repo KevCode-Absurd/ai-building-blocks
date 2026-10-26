@@ -1,17 +1,15 @@
 slug: receivables-allowance-movement-bridge
 name: Receivables allowance roll-forward
-summary: Reconcile credit-loss expense, write-offs and recoveries to the reported closing allowance.
+summary: Roll the allowance for doubtful accounts from opening to closing using expense, write-offs and recoveries, then see what is left unexplained.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

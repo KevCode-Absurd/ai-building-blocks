@@ -41,12 +41,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Teaching story writer.** Use the skill `teaching-story-writer`. Writes a one-minute funny story that carries one lesson.
-2. **Single-effect draft checker.** Use the skill `single-effect-draft-checker`. Give it the copy draft from the steps before. Reads the story from the step before and checks every line serves the one point.
+1. **Teaching story writer.** Use the skill `teaching-story-writer`. Writes a one-minute funny story that carries one lesson. Hands step 2 the story.
+2. **Single-effect draft checker.** Use the skill `single-effect-draft-checker`. Give it the copy draft from the steps before. Reads the story from the step before and checks every line serves the one point. Hands step 3 the list of lines to cut or fix, with the story.
 
 Pause here: Fix the lines marked competing. Then repeat the first two steps for your other lessons, so you have two or three stories.
 
-3. **Lesson talk writer.** Use the skill `lesson-talk-writer`. Give it the copy draft from the steps before. Builds the talk on the stories you just checked, each ending on a next step for the room.
+3. **Lesson talk writer.** Use the skill `lesson-talk-writer`. Give it the copy draft from the steps before. Builds the talk on the stories you just checked, each ending on a next step for the room. Uses your lessons, step 1's story and step 2's cuts.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

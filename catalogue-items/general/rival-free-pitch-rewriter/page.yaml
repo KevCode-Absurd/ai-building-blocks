@@ -1,52 +1,68 @@
 new_slug: rival-free-pitch-rewriter
 name: "Rival-free pitch rewriter"
-summary: "Paste your pitch. Get it rewritten around what only you do, with no rival, no cheaper and no fight in it."
+summary: "Rewrite your pitch so it stands without a rival. Get one-line, three-sentence and 30-second versions built on what only you do."
 job: plan-strategy
 thinking: low
 thinking_why: "It is a rewrite against clear tests, which most chat AIs do well."
 
-headline: "Get a pitch that says what only you do, with no rival in it"
-subhead: "Paste your pitch. It finds every comparison, every \"cheaper\" and every fight in your words, asks what you really do that no one else does, and gives you a one-line, three-sentence and thirty-second version a stranger could repeat."
+headline: "Rival-free pitch rewriter"
+subhead: "Paste your pitch. It finds every comparison, every \"cheaper\" and every fight in your words, then asks what you do that no one else does. You get a one-line, three-sentence and thirty-second pitch that a stranger could repeat without naming a rival."
 
 explain: |
-  When you describe yourself by a rival, you tell the listener you are a copy. When you say you are cheaper, you invite a price fight. When you say you will disrupt an old firm, you make your story about them.
+  If your pitch says "the Uber of dog walking", you tell the listener you are a copy. If it says you are cheaper, you invite a price fight. If it says you will disrupt an old firm, your story becomes about them. A pitch written without rivals avoids all three.
 
-  This skill finds those frames in your pitch and asks what each one hides. It then rebuilds the pitch around a fact only you can claim. If there is none yet, it says so plainly instead of dressing up a gap.
+  This skill marks those frames in your pitch and asks what each one hides. Then it rebuilds the pitch around one fact only you can claim, finished as "No one else ___". The fact has to be something you could check, not a feeling.
+
+  If you have no such fact yet, it says so. It will not dress up a gap with an edge it made up. It also keeps the honest comparison in a private note for sales calls, because a buyer will make it even if your pitch never does.
 
 when:
-  - "Your pitch starts with \"like [big name], but\"."
-  - "Your best line is that you cost less."
-  - "People repeat your pitch wrongly because it depends on a comparison."
+  - Your pitch starts with "like [big name], but".
+  - Your best line is that you cost less.
+  - People repeat your pitch wrongly because it depends on a comparison.
+  - An investor or buyer asks "so you're like X?" and you can only answer by naming a rival.
+
+not_for:
+  - "You have no edge yet, or you are not sure you do: use the Ten-times-better checker first. This skill will not make one up."
+  - "You want sales messages that use a rival's weak spot: use the Rival gap message writer."
+  - "You want to check a whole slide deck: use the Pitch deck 10/20/30 checker."
+  - "You want one position statement for your team: use the Positioning statement writer."
 
 you_give:
-  - "Your pitch or plan, even rough"
+  - "Your pitch or plan, even rough, with the rival names left in"
   - "Who it is for (optional)"
+  - "What you think you do better or differently, even if unsure (optional)"
   - "Numbers or customer words that back it (optional)"
+  - "Where the pitch will be heard, such as a site, an email or a talk (optional)"
+
 you_get:
-  - "Every rival frame marked"
+  - "Every rival frame in your pitch marked, with what it hides"
   - "The one thing only you do, in plain words"
   - "A one-line, three-sentence and thirty-second pitch"
-  - "Results of three tests"
+  - "The results of three tests: stranger, delete and fight"
+  - "A private note on the comparison buyers will make"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
   - "Paste your pitch as it is, rival names and all. Add the first group of buyers if you have one."
-  - "Answer its question about what you do that no one else does. If you don't know, tell it so."
-  - "Say the thirty-second version out loud to someone who does not know your market, and see if they repeat it."
+  - "Answer its question about what you do that no one else does. If you don't know, tell it so. It will say your pitch has no edge yet."
+  - "Check the \"No one else\" line. If you could not prove it to a buyer, change it."
+  - "Say the thirty-second version out loud to someone who does not know your market. See if they can repeat it."
 
 how_it_works:
   - title: "Marks rival frames"
-    text: "Comparisons, price words, rival names and fight words."
+    text: "Finds comparisons, price words, rival names and fight words, with the line each is in."
   - title: "Finds what they hide"
     text: "Asks what each frame stands in for."
   - title: "Finds your own fact"
     text: "Completes \"No one else ___\" with something checkable."
   - title: "Names group and result"
-    text: "Who it is for and what they can do after."
+    text: "Says who it is for and what they can do after."
   - title: "Writes three versions"
-    text: "One line, three sentences, thirty seconds."
+    text: "One line, three sentences and a thirty-second spoken version."
   - title: "Runs three tests"
     text: "Stranger, delete and fight."
+  - title: "Keeps the honest comparison"
+    text: "Puts the likely buyer comparison in a private note for sales calls."
 
 output_shape: |
   RIVAL FRAMES FOUND
@@ -77,6 +93,30 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "Your pitch or plan, rival names left in"
+    - "Who it is for (optional)"
+    - "What you think you do differently (optional)"
+    - "Numbers or customer words that back it (optional)"
+  output:
+    - name: "Rival frames found"
+      contains: "Each comparison, price word, rival name and fight word, with the line it is in and what it hides."
+    - name: "The thing only you do"
+      contains: "\"We make ___ so that ___ can ___\" and \"No one else ___\", with the evidence for the second line."
+    - name: "Pitch, one line"
+      contains: "A single line under 15 words that does not name a rival."
+    - name: "Pitch, three sentences"
+      contains: "What it is, who it is for and what changes for them."
+    - name: "Pitch, thirty seconds"
+      contains: "A spoken version with one example you supply or a gap marked MISSING."
+    - name: "Tests"
+      contains: "Pass or fail on the stranger, delete and fight tests."
+    - name: "Private note for sales calls"
+      contains: "The comparison a buyer will make and your honest answer, kept out of the pitch."
+    - name: "Missing and Checks missed"
+      contains: "Facts you did not give, and any check the skill could not pass."
+
 tweaks:
   - what: "Your edge"
     how: "Say what you think you do better or differently, even if you are unsure. It tests it."
@@ -103,7 +143,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Finding frames and rewriting a short pitch is text work that any strong chat AI does with this skill."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Finding frames and rewriting a short pitch is text work. No files, web access or paid tools needed."}
   inputs:
     - "Your current pitch deck or site copy"
     - "Customer words about why they bought"

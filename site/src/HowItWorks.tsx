@@ -87,6 +87,7 @@ const TOC: [string, string][] = [
   ["choose", "Which one to use"],
   ["builder", "Using the builder"],
   ["results", "Getting good results"],
+  ["trust", "How we build and review"],
   ["words", "Words you'll see"],
 ];
 
@@ -274,7 +275,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <p>An app is worth it when many people do the same job the same way, many times. For a job you do now and then, a skill is enough.</p>
               <p>An app doesn't need an agent. Some apps use AI; others do not. The app tours here show examples. They do not run work with your files.</p>
             </div>
-            <p className="hiw-now"><Status here /> <Link to="/apps">Take the tour of a finished app</Link>, or <Link to="/apps/starter-pack">get the app starter pack</Link> to build your own.</p>
+            <p className="hiw-now"><Status here /> <Link to="/apps">Take the tour of a finished app</Link>, or <Link to="/apps#starter-pack">get the app starter pack</Link> to build your own.</p>
           </Section>
 
           <Section id="council" title="An advisory council: different views on one decision">
@@ -328,6 +329,15 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <li>When a workflow writes MISSING, add what's missing and run that step again.</li>
               <li>Make the skill fit you. It's a plain text file. Change it once and every run after fits better.</li>
             </ul>
+          </Section>
+
+          <Section id="trust" title="How we build and review">
+            <ul className="checks">
+              <li>Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.</li>
+              <li>Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.</li>
+              <li>“Tested” means the item passed our safety check for harmful or hidden instructions, and its page lists what goes in and what you get.</li>
+            </ul>
+            <p className="small"><Link to="/about#how-built">Read more about how we build and review</Link></p>
           </Section>
 
           <section className="bp-sec terms" id="words" aria-labelledby="words-h">

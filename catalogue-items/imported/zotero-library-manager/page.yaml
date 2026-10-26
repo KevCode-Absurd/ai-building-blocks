@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs simple library requests one after another.
 new_slug: zotero-library-manager
 name: Zotero library manager
-summary: Say what to find or tidy in your Zotero library. Get references
-  searched, tagged, sorted or exported as citations.
+summary: Search, tag, sort and export the references in your Zotero library with a Zotero library manager that runs through Python and the Zotero API.
 job: research-topics
 headline: Zotero library manager
-subhead: Say what to find or tidy in your Zotero library. Get references
-  searched, tagged, sorted or exported as citations. Bring what to find or
-  change in the library. Use the result to plan your next step.
+subhead: Say what to find or tidy in your Zotero library. Get references searched, tagged, sorted or exported as citations. Bring what to find or change in the library. Use the result to plan your next step.
 explain: |
   Tell it what to find or tidy in your Zotero library and get the references searched, tagged, sorted or exported as citations.
 
@@ -18,6 +15,10 @@ when:
   - You need a reading list exported as citations.
   - You want to search your references by keyword from a script.
   - You need to add a batch of new references at once.
+not_for:
+  - "You only want a quick keyword search: use the search box in the Zotero app, it is faster."
+  - "You cannot sign in to the library or get an API key: use the Zotero app by hand instead."
+  - "You cannot run code in your AI: ask your AI for steps to follow in the Zotero app."
 you_give:
   - What to find or change in the library
   - Your Zotero library ID and API key
@@ -29,8 +30,27 @@ you_get:
   - Citation exports
   - A plan to review before any write
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Zotero key.
+  - Get your library ID and make an API key in your Zotero account settings. Say if it is a personal or group library.
+  - Open an AI that can run Python code. Add the Pyzotero package and keep your key in an environment variable, not in the chat.
+  - Paste this skill and say what to find or tidy, such as tagging untagged papers or exporting a reading list.
+  - Read the matched items and the proposed changes. Writes change your real library, so fix the plan first.
+  - Approve the plan to apply it, then save the exported citations where you need them.
+output_sample:
+  input:
+    - What you want to find or change in your library
+    - Your Zotero library ID
+    - Your Zotero API key
+    - Whether it is a personal or group library
+  prerequisites:
+    - An AI that can run Python code
+    - Python and the Pyzotero package
+    - A Zotero account and API key from your Zotero settings
+  output:
+    - name: Matching items
+      contains: The references that fit your request, with title and item type.
+    - name: Proposed changes
+      contains: The tags, collection moves or new entries it plans to make, shown for your review.
+    - name: Write result
+      contains: Which items were created or changed, and any that failed, after you approve.
+    - name: Citation export
+      contains: Your chosen references as BibTeX or another citation format.

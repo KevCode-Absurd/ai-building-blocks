@@ -8,6 +8,8 @@ test-results
 test-results-auth
 test-results-workers
 test-results-staging
+test-results*/
+__pycache__/
 playwright-report
 public/sitemap.xml
 public/robots.txt

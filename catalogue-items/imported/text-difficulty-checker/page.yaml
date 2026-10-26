@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It weighs several kinds of difficulty together.
 new_slug: text-difficulty-checker
 name: Text difficulty checker
-summary: Paste a text. Get its difficulty by length, meaning and reader task,
-  with support ideas for struggling readers.
+summary: Check text difficulty before you teach it. Paste a passage and class level. You get trouble spots, key words to pre-teach and a reading support plan.
 job: teach-and-train
 headline: Text difficulty checker
-subhead: "Pick the wrong text and half the class stalls, pick a text that is too
-  easy and nobody grows. This skill rates a passage three ways: how long and
-  tangled the language is, how deep the meaning goes, and how hard the task
-  asked of the reader is."
+subhead: "Pick the wrong text and half the class stalls, pick a text that is too easy and nobody grows. This skill rates a passage three ways: how long and tangled the language is, how deep the meaning goes, and how hard the task asked of the reader is."
 explain: |
   Pick the wrong text and half the class stalls, pick a text that is too easy and nobody grows. This skill rates a passage three ways: how long and tangled the language is, how deep the meaning goes, and how hard the task asked of the reader is.
 
@@ -19,6 +15,10 @@ when:
   - Some students struggle with a passage and you need ways to help.
   - You want to compare two texts for the same lesson.
   - You are planning pre-reading support for readers learning English.
+not_for:
+  - "You want a quick readability number only: use a free readability checker in your word processor or online."
+  - "You need to choose texts for a whole curriculum: ask your subject lead or a colleague to plan that with you."
+  - "You want to grade pupils or measure their reading: use your school's reading test instead."
 you_give:
   - A description or extract of the text
   - Year group and reading level
@@ -30,7 +30,25 @@ you_get:
   - Support ideas for each trouble spot
   - A suggested reading plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - "Describe the text: type, topic, length and source. Paste a short extract if you have one."
+  - Add the year group, the reading level and why students are reading it.
+  - Ask for the complexity profile, the vocabulary list and the scaffold plan.
+  - Check the trouble spots against what you know about your class, then keep the support that fits.
+  - For next steps, run the Vocabulary tiering tool, the Scaffolded task modifier or the Cognitive load analyser on the result.
+output_sample:
+  input:
+    - "A description of the text: type, topic, length and source"
+    - Year group and current reading level
+    - Why students are reading it
+    - A short extract from the text (optional)
+    - Worries you have about the text (optional)
+  output:
+    - name: Complexity Profile
+      contains: A rating of the text on language, meaning and the reading task, with the parts likely to cause trouble.
+    - name: Vocabulary Focus
+      contains: Key words to pre-teach, sorted by how much they matter.
+    - name: Scaffold Plan
+      contains: Support to use before, during and after reading, matched to the trouble spots.
+    - name: Differentiation
+      contains: Changes for students who need more help or more challenge with the same text.

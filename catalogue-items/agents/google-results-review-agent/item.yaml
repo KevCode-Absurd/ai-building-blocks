@@ -1,12 +1,14 @@
 slug: google-results-review-agent
 name: Google results review agent
-summary: Share dated Google Ads results and business targets. Get findings, evidence gaps, proposed next steps and a checkpoint for follow-up.
+summary: "Review your Google Ads results against your targets. Get ranked findings, tracking gaps, proposed changes and a checkpoint for your next review."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
+  - type: performance_sheet
+    required: true
   - type: brief
     required: true
   - type: document

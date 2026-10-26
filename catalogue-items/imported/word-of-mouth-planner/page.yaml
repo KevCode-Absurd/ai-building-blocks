@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores your idea against six clear triggers and suggests changes.
 new_slug: word-of-mouth-planner
 name: Word of mouth planner
-summary: Describe your product or message. Get ideas for making people talk
-  about it, scored on six sharing triggers. Uses the STEPPS method.
+summary: Plan word of mouth for your product. Score your idea on six sharing triggers and see which one to raise next to get people talking.
 job: grow-social
 headline: Word of mouth planner
-subhead: Ideas that make people talk about your product, each checked against
-  six reasons things spread. You see which parts of your idea are likely to be
-  shared and which are weak.
+subhead: Ideas that make people talk about your product, each checked against six reasons things spread. You see which parts of your idea are likely to be shared and which are weak.
 explain: |
   Ideas that make people talk about your product, each checked against six reasons things spread. You see which parts of your idea are likely to be shared and which are weak.
 
@@ -18,6 +15,10 @@ when:
   - Your product is good but nobody mentions it.
   - You want a campaign people pass on without being asked.
   - You need a way to judge which idea is most shareable.
+not_for:
+  - You have no clear message yet. Write down what your product does and who it is for first, then come back.
+  - You need reach this week. Run a small paid ad test, because word of mouth builds slowly.
+  - You want to push people to buy with pressure tactics. Use a sales or persuasion guide instead.
 you_give:
   - Your product or message
   - Who you want to reach
@@ -30,7 +31,25 @@ you_get:
   - Story people can retell
   - Overall sharing score
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Describe your product or message in a few lines.
+  - Say who you want to reach. Add how people hear about you now and any ideas you are weighing (optional).
+  - Read the six scores first. Then look at the driver it says to raise next.
+  - Pick one or two ideas for the weak drivers and run the plan again to see if the score goes up.
+output_sample:
+  input:
+    - Your product or message
+    - Who you want to reach
+    - How people hear about you now (optional)
+    - Ideas you are considering (optional)
+  output:
+    - name: Six driver scores
+      contains: A score of 0, 1 or 2 for social currency, triggers, emotion, public visibility, practical value and stories.
+    - name: Raw total
+      contains: The six scores added up, out of 12.
+    - name: Mapped score
+      contains: The raw total turned into a score out of 10, with the band it falls in.
+    - name: Driver to raise next
+      contains: The weak driver or drivers to fix first to reach a higher score.
+    - name: Ideas to raise weak drivers
+      contains: Specific ideas for triggers, public visibility and a story people can retell.

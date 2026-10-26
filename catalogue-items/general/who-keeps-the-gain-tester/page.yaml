@@ -1,58 +1,67 @@
 new_slug: who-keeps-the-gain-tester
 name: "Who-keeps-the-gain tester"
-summary: "Describe a business and a way it could improve. Get who keeps the gain, and whether rivals fight it away."
+summary: "See if a cost cut or new machine stays with the owner or goes to customers. Get two sums, an industry sort and a verdict."
 job: money-and-investing
 thinking: medium
 thinking_why: "It runs a fixed two-line sum on each change and sorts the industry. The judgement is in reading how rivals really behave."
 
 headline: "Who-keeps-the-gain tester"
-subhead: "Describe a business, its industry and a way it could improve. It runs the sum most people skip: if every rival gets the same gain, who ends up with it? You get the sum for each change, how rivals behave, the industry sort and a one-line verdict. It is a method of analysis, not personal financial advice."
+subhead: "Name a business, its industry and one way it could get better, such as a cheaper machine. It runs the sum most people skip: if every rival gets the same gain, who keeps it? You get two lines of sums for each change, how rivals behave, an industry sort and a one-line verdict. It is a method of analysis, not personal financial advice."
 
 explain: |
-  A better machine, a cheaper supplier or a fast-growing market all sound good for the owner. In some industries they are. In others every rival gets the same gain, the price drops to match, and the customer ends up with all of it.
+  A cheaper supplier, a faster machine or a fast-growing market all sound good for the owner. In some industries they are. In others every rival gets the same gain, the price drops to match, and the customer ends up with all of it. The business looks better and the owner earns the same.
 
-  This skill asks what stays home. For each possible change it writes two lines: what the owner keeps if only this business gets it, and what the owner keeps if every rival does too. It checks how rivals really behave, sorts the industry as commodity, brand-led or protected, and says which way technology cuts. It gives no buy or sell calls on any named security.
+  This pass-through test asks what stays home. For each possible change it writes two lines: what the owner keeps if only this business gets the gain, and what the owner keeps if every rival does too. It then checks how rivals really behave when prices move, because one rival who cuts price to win share can drag the whole industry down. It sorts the industry as commodity, brand-led or protected, and says which way technology cuts. It gives no buy or sell call on any named security.
+
+  Other skills ask whether a business is good, or what a stock is worth. This one asks one narrower question: does an improvement reach the owners? If you give no figures, it runs the sums on marked example numbers so you can swap in your own.
 
 when:
   - You like a business because it is growing or has a new efficiency, and want to know if that will reach the owners.
   - You are comparing two industries and one seems to earn more for no clear reason.
   - Someone is selling you a story about new technology helping a business.
+  - You own a small business and a new machine or supplier deal is on the table. You want to know if your rivals will get it too.
+
+not_for:
+  - "You want to know if a business has a lasting edge in the first place: use the Business power tester."
+  - "You want to price a purchase or work out long-run returns: use the Long-hold return calculator."
+  - "You want to know how much a bad year could cost: use the Bad-year break-even tester."
+  - "You want a view on whether to buy or sell a named stock. This skill gives none."
 
 you_give:
-  - The business and its industry
-  - The change you want tested, if any
-  - Recent price and margin facts, if you have them (optional)
-  - A report on the business's edge (optional)
+  - The business and its industry, with the main rivals
+  - One change you want tested, such as a new machine or a cost cut (optional)
+  - Price and cost per unit, or margin history (optional)
+  - How rivals acted in the last bad year (optional)
 you_get:
-  - A pass-through sum for each change, with both lines
+  - "A two-line sum for each change: what the owner keeps if only this business gets it, and if every rival does"
   - How rivals behave, with an example
-  - The industry sorted as commodity, brand-led or protected
-  - A one-line verdict on whether gains tend to stick
+  - The industry sorted as commodity, brand-led or protected, with the reason
+  - Which way technology cuts
+  - A one-line verdict on whether gains tend to stick, leak or are contested
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Name the business, its main rivals and one change you are testing.
-  - Paste any margin or price history you have. If not, it will use marked example numbers.
-  - Read the verdict and the two lines for each change.
-  - Take a "gains stick" result to the "Long-hold return calculator".
+  - Paste price and cost per unit if you have them. If not, it uses marked example numbers. Replace the price and cost first.
+  - Read the two lines for each change, then the industry sort and verdict.
+  - Say how rivals acted in the last bad year if you know. It changes the sort more than a good year does.
+  - If gains tend to stick, take the result to the Long-hold return calculator.
 
 how_it_works:
   - title: Lists what could help
     text: Three changes most likely to improve results for the whole industry, plus any you name.
   - title: Runs the two-line sum
-    text: What the owner keeps if only this business gets the gain, and if all rivals do.
+    text: What the owner keeps if only this business gets the gain, and if all rivals do. It says which is more likely.
   - title: Reads rival behaviour
-    text: Calm or fights for share, backed by an example from past price moves.
+    text: Calm or fights for share, backed by an example from past price moves, or marked missing.
   - title: Sorts the industry
-    text: Commodity, brand-led or protected by a licence, a patent or a lone position.
+    text: Commodity, brand-led or protected by a licence, a patent or a lone position, with a reason.
   - title: Asks which way technology cuts
     text: Whether it helps the owner or only the customer and every rival.
   - title: Names the opposite pull
     text: Size can slow decisions, and niche rivals can beat a large player in one corner.
   - title: Gives a one-line verdict
-    text: Gains stick, leak to customers or are contested, with the reason.
-  - title: Checks itself
-    text: Runs its own checks and names any it missed.
+    text: Gains stick, leak to customers or are contested, with the reason from the sums and the sort.
 
 output_shape: |
   CHANGES TESTED
@@ -82,6 +91,23 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "The business and its industry, with the main rivals"
+    - "One change to test, such as a new machine or a cost cut (optional)"
+    - "Price and cost per unit, or margin history (optional)"
+    - "A report from the Business power tester (optional)"
+  prerequisites:
+    - "An AI chat. No files, web access or paid tools are needed."
+  output:
+    - {name: "Changes tested", contains: "For each change, two sums: what the owner keeps if only this business gets it, and if every rival does."}
+    - {name: "How rivals behave", contains: "Whether rivals stay calm or fight for share, with an example from past price moves."}
+    - {name: "Industry sort", contains: "Commodity, brand-led or protected, with the reason."}
+    - {name: "Which way technology cuts", contains: "Whether technology helps the owner or only customers and rivals."}
+    - {name: "The opposite pull", contains: "One force, such as slow decisions or a focused niche rival, that works against gains."}
+    - {name: "Verdict", contains: "One line: gains stick, leak to customers or are contested, with the reason."}
+    - {name: "MISSING and CHECKS MISSED", contains: "Facts that would sharpen the sums, and any check that failed or could not run."}
 
 tweaks:
   - what: The change
@@ -114,7 +140,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "The sums are simple and the sorting is text work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "The sums are simple and the sorting is text work any strong chat AI does well."}
     - {name: "A spreadsheet", why: "Lets you rerun the two-line sum with your own price and cost figures."}
   inputs:
     - "A report from the Business power tester"
@@ -126,5 +152,7 @@ terms:
     meaning: The share of a cost saving or gain that ends up in lower prices, so the buyer keeps it.
   - term: Commodity
     meaning: A product buyers see as the same from anyone, so they switch for a small price gap.
+  - term: Brand-led
+    meaning: A product buyers pay more for because they trust the name.
   - term: Franchise
     meaning: A position that keeps rivals out, such as a licence, a patent or a lone site.

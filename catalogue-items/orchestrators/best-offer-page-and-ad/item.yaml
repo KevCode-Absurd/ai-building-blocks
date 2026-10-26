@@ -19,8 +19,8 @@ uses: [hidden-offer-finder, article-landing-page, landing-page-30-point-checker,
 steps:
   - {uses: hidden-offer-finder, note: "Finds the clashes in your live deals and the offer worth testing first."}
   - {uses: article-landing-page, note: "Puts the chosen offer in an article-style page, with the offer block near the end."}
-  - {uses: landing-page-30-point-checker, note: "Reviews the new page and ranks the five fixes to make before an ad points to it."}
-  - {uses: article-style-image-ad-writer, note: "Writes the ad that sends people to the checked page, with one claim and an image brief."}
+  - {uses: landing-page-30-point-checker, note: "Reviews the new page and ranks the five fixes to make before an ad points to it. Hands step 4 the fixes to apply to the page."}
+  - {uses: article-style-image-ad-writer, note: "Writes the ad that sends people to the checked page, with one claim and an image brief. Uses the page from step 2 with step 3's fixes applied, and your brief."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-find-your-best-offer-and-sell-it-with-an-article-style-page-and-ad/skeleton.yaml

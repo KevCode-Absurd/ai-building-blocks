@@ -1,6 +1,6 @@
 new_slug: review-a-pull-request-fix-the-comments-and-sign-off
 name: Review a pull request, fix the comments and sign off
-summary: Give it an open pull request. Get risks ranked, comments fixed in code and a signed review.
+summary: Review a pull request, fix the comments and sign off. Get risks ranked, your chosen comments fixed in code, and a one-page review with a named reviewer.
 job: test-and-fix-code
 thinking: medium
 thinking_why: Reviewing and fixing are careful but well-bounded jobs. A mid-tier model is enough, and a stronger one catches more risks.
@@ -14,6 +14,10 @@ when:
   - A pull request is open and a quick glance would not be enough.
   - You have review comments waiting and no time to work through them.
   - You need a record that a person looked before the change went in.
+not_for:
+  - "You have a tiny change that a quick read covers: read it yourself and skip this workflow."
+  - "Your pull request has no comments yet and you only want the risks: run the first step, the pull request risk reviewer, on its own."
+  - "You want to plan ad tests or read campaign results: this workflow only covers code changes, so use a person or tool built for that."
 you_give:
   - The open pull request, as a link or branch name
   - Access to the project code
@@ -29,6 +33,23 @@ how_to_use:
   - Give it the pull request. Read the ranked risks and post the ones you agree with as comments on the pull request.
   - Tell it which numbered comments to fix. Check the changes.
   - Open the review page, mark your notes as blockers or small points, then close it under your name.
+output_sample:
+  input:
+    - Your open pull request, as a link or branch name
+    - Your project code, in a folder or repo your AI can open
+    - The name of the person who signs off
+  prerequisites:
+    - An AI that can open your project files and read the pull request, such as Claude Code
+    - The review comments posted on the pull request before step 2
+  output:
+    - name: "Step 1 file: risks"
+      contains: Findings ranked by severity, what the change could break, missing tests and what to fix first.
+    - name: "Step 2 file: comment fixes"
+      contains: Numbered comments, what each one needs, which ones were fixed and the code that changed.
+    - name: "Step 3 file: sign-off review"
+      contains: A one-page review with blockers, small points, the reviewer name and whether it is closed.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Rank the risks
     text: Reads the diff and the pull request details, traces what the change could break and ranks the findings by severity.

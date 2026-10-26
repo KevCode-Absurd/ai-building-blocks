@@ -1,6 +1,6 @@
 new_slug: fix-now-or-test-sorter
 name: "Fix-now or test sorter"
-summary: "Paste your list of page problems. Get each one sorted into fix now, look into or test, then ranked."
+summary: "Sort your landing page problems into fix now, look into or test, then rank them by gain and effort, so you know what to do first."
 job: audit-landing-page
 thinking: low
 thinking_why: "It sorts what you give it into set buckets, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - "You have an audit report and no idea where to start."
   - "Your team keeps debating what to test versus what to just fix."
   - "You want a short, ranked to-do list for your page this week."
+not_for:
+  - "You want a full landing page audit with every check: use the Page issue sorter."
+  - "You have a traffic problem and no page to check: look at your ad or search reports first."
+  - "You have no list of problems yet: run an audit first, then bring the report here."
 
 you_give:
   - "A list of page problems, one per line"
@@ -32,6 +36,26 @@ how_to_use:
   - "Under it, paste your problems, one per line, with the proof beside each."
   - "Add your page goal if you have one."
   - "Do the tracking fixes first, then the fix-now items at the top of the rank."
+output_sample:
+  input:
+    - Your list of page problems, one per line
+    - "Proof for each problem: a number, a quote or what you saw"
+    - Your goal for the page (optional)
+  output:
+    - name: TRACKING
+      contains: Problems that make your numbers wrong, each with its proof and the step to fix it.
+    - name: FIX NOW
+      contains: Problems with a clear cause and a safe remedy, each with its proof and effort.
+    - name: LOOK INTO
+      contains: Problems with an unknown cause, each with one question and a way to answer it.
+    - name: TEST
+      contains: Changes worth testing, each with the number it should move and the reason from your proof.
+    - name: NO PROOF YET
+      contains: Problems you gave no proof for, and the proof each one needs.
+    - name: RANKED ORDER
+      contains: Every problem ranked by gain and effort, with a one-line reason for each rank.
+    - name: MISSING
+      contains: Anything left blank, plus any check that failed or could not run.
 
 how_it_works:
   - title: "List with proof"

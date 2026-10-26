@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It compares the work to each criterion and sorts the gaps.
 new_slug: student-work-gap-finder
 name: Student work gap finder
-summary: Paste a piece of student work and the criteria. Get exactly what is
-  missing, why, and what feedback to give.
+summary: Find the gaps in student work against your criteria. Paste the work and criteria. You get strengths, ranked gaps, next steps and a feedback script.
 job: teach-and-train
 headline: Student work gap finder
-subhead: A piece of student work, checked against your criteria, with the exact
-  gaps named. You see what is strong, what is missing, and which gap to tackle
-  first.
+subhead: A piece of student work, checked against your criteria, with the exact gaps named. You see what is strong, what is missing, and which gap to tackle first.
 explain: |
   A piece of student work, checked against your criteria, with the exact gaps named. You see what is strong, what is missing, and which gap to tackle first.
 
@@ -18,6 +15,10 @@ when:
   - A student's work is nearly there but you cannot say what is missing.
   - You are planning small-group teaching based on what the work shows.
   - You want your feedback to name one thing to fix, not ten.
+not_for:
+  - "You need a grade or mark for a high-stakes exam: use your exam board's mark scheme and a trained marker."
+  - "You want to check whether the student wrote it themselves: talk with the student or use your school's plagiarism check."
+  - "You have no criteria or learning goal yet: write them first, even as three short bullet points, then come back."
 you_give:
   - The student work, pasted or described
   - The assessment criteria
@@ -31,7 +32,26 @@ you_get:
   - Next teaching steps
   - A feedback script to say aloud
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tools are needed.
+  - Paste the student's work. Remove the student's name first.
+  - Add your criteria and the learning goal. Add year level and subject if you can.
+  - Read the strengths and gaps. Check each gap against the work itself.
+  - Use the priority gap and the feedback script to talk with the student.
+output_sample:
+  input:
+    - The student's work, pasted or described
+    - The assessment criteria or rubric
+    - The learning goal for the task
+    - Year level and subject (optional)
+    - Notes on the student's past work (optional)
+  output:
+    - name: Strengths
+      contains: What the student does well, with evidence from their own work.
+    - name: Gaps Identified
+      contains: Each gap against the criteria, its type (concept, method or writing), and why it matters.
+    - name: Priority
+      contains: Which gap to fix first and why it matters most.
+    - name: Next teaching steps
+      contains: A specific action to close each priority gap.
+    - name: Feedback Script
+      contains: A short script you can say to the student, pitched to their level.

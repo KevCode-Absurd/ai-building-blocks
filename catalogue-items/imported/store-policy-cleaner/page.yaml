@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It rewrites policies without changing their meaning.
 new_slug: store-policy-cleaner
 name: Store policy cleaner
-summary: Check your shipping, returns and privacy policies. Get clean, plain
-  text versions AI can quote to shoppers. Can update live policies.
+summary: Check your Shopify shipping, returns and privacy policies for blank or image-only pages. Get a store policy audit and plain text you can approve.
 job: build-websites
 headline: Store policy cleaner
-subhead: Shipping, returns and privacy policies that both people and AI shopping
-  assistants can read and quote correctly. When a shopper's AI asks do you ship
-  to me or what is the return window, it needs clear plain text to answer from.
+subhead: Shipping, returns and privacy policies that both people and AI shopping assistants can read and quote correctly. When a shopper's AI asks do you ship to me or what is the return window, it needs clear plain text to answer from.
 explain: |
   Shipping, returns and privacy policies that both people and AI shopping assistants can read and quote correctly. When a shopper's AI asks do you ship to me or what is the return window, it needs clear plain text to answer from. If your policy is missing or messy, it may skip you.
 
@@ -18,6 +15,10 @@ when:
   - You want AI assistants to answer shipping questions about your shop.
   - You have approved new policy wording and want it loaded into Shopify.
   - You want a quick check that all five policy types exist.
+not_for:
+  - "You have no Shopify admin access: ask the store owner to run it, or review the policy pages by hand."
+  - "You need legal wording written or checked: use a lawyer, because this skill never writes legal terms."
+  - "Your store is not on Shopify: copy your policy text into a plain page by hand."
 you_give:
   - Your Shopify store link and access
   - Which policies to check
@@ -29,8 +30,27 @@ you_get:
   - Clean plain text versions
   - A preview before any live change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Give your AI the skill text and your Shopify store address. It needs to run Shopify commands, so use a tool that can, such as Claude Code.
+  - Sign in to your store when asked. Keep it on audit only for the first run.
+  - Read the policy table. Look for policies that are missing, thin or image-only.
+  - Have a lawyer check your policy wording. Save the approved text as one file per policy.
+  - Run it again in apply mode with your folder of files. Check the preview before you let it write.
+  - Run the audit once more to confirm every policy now reads as plain text.
+output_sample:
+  input:
+    - Your Shopify store address
+    - Which policies to check (refund, shipping, privacy, terms)
+    - Folder of approved policy files, one per policy (optional)
+    - Audit only, or apply changes
+  prerequisites:
+    - An AI that can run Shopify commands and has your store login
+    - Permission to read and write legal policies in your Shopify admin
+  output:
+    - name: Policy table
+      contains: One row per policy showing its type, status (OK, missing, thin or image-only), length and whether it is readable.
+    - name: Audit verdict
+      contains: A short summary of which policies are readable and which need fixing.
+    - name: Before and after preview
+      contains: For each gap, your current text beside the approved text you supplied. Shown only in apply mode.
+    - name: Update result
+      contains: Which policies were changed and any errors Shopify returned. Only appears if you turn off the preview and apply.

@@ -1,45 +1,122 @@
 new_slug: meta-concept-diversity-test-planner
 name: Meta concept diversity test planner
-summary: Sort ads into thirteen concepts, find format and fatigue gaps, and plan three clear creative tests.
+summary: Sort your Meta ads into 13 concept types, spot gaps and tired ads, and get three ranked creative test plans with a capped budget.
 job: plan-ad-tests
 headline: Meta concept diversity test planner
-subhead: Share ad list, concepts, formats, dated results and test budget. Get concept mix, fatigue findings and three ranked test plans.
-explain: |-
-  Sort ads into thirteen concepts, find format and fatigue gaps, and plan three clear creative tests.
+subhead: Give it your Meta ad list with format, spend and dated results, plus your test budget. It labels each ad with one of 13 concept types, shows where your mix is thin and flags ads that may be tired. You get three ranked test plans, a calendar and a capped budget.
+explain: |
+  Many ad accounts run lots of ads that are really the same idea. This Meta ad concept test planner sorts each ad into one of 13 concept types, such as testimonial, before and after, how-to or founder story. Then it shows how much of your spend sits on each type. A narrow mix is a possible gap. It is not proof that Meta is holding your ads back.
 
-  Share ad list, concepts, formats, dated results and test budget. Get concept mix, fatigue findings and three ranked test plans.
+  Next it looks for tired ads. It checks age and falling results against your own history. An old ad or a low click rate is a warning to look closer, not proof of fatigue. It also sets aside tracking and landing page problems, so you do not blame the creative for a broken pixel.
+
+  Then it writes three test plans. Each has a hypothesis, a control, a variant that changes one main thing, an audience, a metric, a guardrail, a decision rule and a time window. It does not use fixed rules such as "seven days" or "1,000 impressions". Small tests can end with no clear answer, and "inconclusive" is an allowed result.
 when:
-  - You need concept mix, fatigue findings and three ranked test plans.
-  - You need meta concept diversity test planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You run many Meta ads and suspect most are one idea in different clothes.
+  - A strong ad is slipping and you want to know if it is tired or if something else broke.
+  - You have a test budget and need to pick which creative tests to run first.
+  - Your team argues about which concept to try next and you want a ranked plan.
+not_for:
+  - "You have only a few ads or no dated results. Use the Small-budget ad test planner."
+  - "You want to read the results of a finished test. Use the Creative test reader."
+  - "You want the campaign set up in Meta. Use the Meta test campaign planner."
+  - "You want briefs that fill the gaps. Use the Creative gap-to-brief queue planner."
+  - "You want to spread ads by buyer and awareness stage. Use the Persona, stage and theme matrix planner."
 you_give:
-  - Ad list
-  - Concepts
-  - Formats
-  - Dated results and test budget
+  - Your ad list with name or link, format, spend, impressions, clicks and results (an export from Meta Ads Manager works)
+  - The dates for each ad's results, and how long each ad has run
+  - The text or a preview of each ad, so it can see the concept (optional, better than names alone)
+  - What you sell and who buys it
+  - Your test budget and the most you can afford to lose
+  - The decision you want the plan to help with (optional)
 you_get:
-  - Concept mix, fatigue findings and three ranked test plans
-  - The sources used, missing inputs and assumptions
+  - Each ad labelled with a concept type, with how sure the label is
+  - A count of concepts live and how your spend is spread across them
+  - Tired-ad guesses to check, each with its evidence
+  - Three ranked test plans, each changing one main thing
+  - A test calendar and a budget with the sums shown
+  - A MISSING list for anything you did not give
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code or web access.
+  - Paste your ad list as a table with dates, spend and results. Add the ad text or a link to each preview if you can.
+  - Say how much you can spend on tests and the most you can lose.
+  - Check the concept labels first. Fix any ad in the wrong group before you read the plans.
+  - Launch nothing from the plan alone. Set the test up with the Meta test campaign planner, then read the result with the Creative test reader.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm ad list, concepts, formats, dated results and test budget. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Ad Data
-    text: Follow the collect ad data section in the full method and keep its required fields and decision rules.
-  - title: Concept Classification
-    text: Follow the concept classification section in the full method and keep its required fields and decision rules.
-  - title: Diversity Scoring
-    text: Follow the diversity scoring section in the full method and keep its required fields and decision rules.
-  - title: Fatigue Detection
-    text: Follow the fatigue detection section in the full method and keep its required fields and decision rules.
-  - title: Performance Analysis
-    text: Follow the performance analysis section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return concept mix, fatigue findings and three ranked test plans. Check facts, math and the decisions before any action.
+  - title: Confirm the question
+    text: The decision to make, the account, the buyer, the dates and the spend limit.
+  - title: Label each ad
+    text: One of 13 concept types, with the evidence and how unsure it is. Ad names are clues, not proof.
+  - title: Count the mix
+    text: How many concepts are live and where spend sits. The starting cutoffs are fewer than four concepts, or one concept above 40 or 70 percent of spend. You can change them.
+  - title: Look for tired ads
+    text: Age and falling results compared with your own history. Tracking and landing page problems are split out first.
+  - title: Rank the gaps
+    text: By buyer fit, evidence, what you would learn, effort and the loss you can afford. The best ROAS alone does not make an ad proven.
+  - title: Write three test plans
+    text: Each changes one main thing. A plan that changes several is labelled a package test.
+  - title: Size the plan
+    text: From your baseline rate, the smallest effect worth finding, how long buyers take to convert and your budget.
+output_shape: |
+  QUESTION: <decision, account, buyer, dates, spend limit>
+
+  CONCEPT LEDGER
+  <ad> | <primary concept> | <secondary> | <evidence> | <how sure>
+
+  COVERAGE
+  Concepts live: <n> | Spend by concept: <concept %, ...> | Flags: <fewer than 4 concepts | one concept above 40% or 70%>
+
+  FATIGUE HYPOTHESES (to check, not proven)
+  <ad> | <sign> | <what else could explain it>
+
+  TEST PLANS (ranked)
+  Test 1: <name>
+  Hypothesis <...> | Control <...> | Variant <...> | One main change <...>
+  Audience <...> | Split <...> | Primary metric <...> | Guardrail <...>
+  Decision rule <continue | revise | stop | inconclusive> | Window <dates>
+  Size and spend cap <baseline rate, smallest useful effect, sums>
+  Test 2 ... Test 3 ...
+
+  CALENDAR AND BUDGET
+  <week> | <test> | <spend> ... Total <sum> of <budget>
+
+  APPROVAL: <who reviews before launch>
+  MISSING: <...>
+output_sample:
+  input:
+    - Your Meta ad list with format, spend, impressions, clicks and dated results
+    - The text or preview of each ad (optional)
+    - What you sell and who buys it
+    - Your test budget and the most you can lose
+  prerequisites:
+    - An export from Meta Ads Manager with dates, or the same numbers typed into a table
+  output:
+    - name: Concept ledger
+      contains: Each ad with its concept type from a list of 13, the evidence and how sure the label is.
+    - name: Coverage
+      contains: How many concepts you run, how spend is spread, and flags for a narrow mix.
+    - name: Fatigue hypotheses
+      contains: Ads that may be tired, with the evidence and other possible causes. These are guesses to check.
+    - name: Three test plans
+      contains: Ranked tests, each with hypothesis, control, variant, metric, guardrail, decision rule and window.
+    - name: Calendar and budget
+      contains: When each test runs and what it costs, with the sums shown against your budget.
+    - name: Approval and missing list
+      contains: Who signs off before launch, and the inputs you did not give.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  inputs:
+    - A Meta Ads Manager export with daily or weekly results, so age and trends can be seen
+    - Screenshots or text of each ad, so labels rest on the creative and not on the name
+    - Your results from past tests, so new plans do not repeat them
+terms:
+  - term: Concept
+    meaning: The main idea of an ad, such as a testimonial or a how-to. Two ads can look different and share one concept.
+  - term: Creative fatigue
+    meaning: An ad that did well and now does worse because people have seen it too often.
+  - term: Control and variant
+    meaning: The control is the ad you already run. The variant is the same ad with one thing changed.
+  - term: Guardrail
+    meaning: A number you watch to make sure a test is not hurting something else, such as cost per sale.
+  - term: Inconclusive
+    meaning: The test did not give a clear answer. That is a valid result, not a failure.

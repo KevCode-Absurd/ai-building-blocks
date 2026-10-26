@@ -15,10 +15,10 @@ outputs:
   - {type: copy_draft}
 uses: [team-culture-memo-writer, standards-sheet-writer, recognition-plan-designer, policy-removal-test-planner]
 steps:
-  - {uses: team-culture-memo-writer, note: "What the team does, what it refuses to do, and what it does when two good things collide, written as behaviour in the manner of the Netflix culture deck."}
-  - {uses: standards-sheet-writer, note: "Each behaviour turned into a standard anyone can check, with what good looks like and how often it is checked, the way Ray Kroc wrote standards."}
-  - {uses: recognition-plan-designer, note: "How behaviour gets noticed and praised: in public, specific, often, tied to the standards, in the manner of Mary Kay Ash."}
-  - {uses: policy-removal-test-planner, note: "The one rule the memo makes unnecessary, the risk if it goes, a safe trial without it and the sign that says bring it back, following Patty McCord."}
+  - {uses: team-culture-memo-writer, note: "What the team does, what it refuses to do, and what it does when two good things collide, written as behaviour in the manner of the Netflix culture deck. Hands step 2 the memo and its list of behaviours."}
+  - {uses: standards-sheet-writer, note: "Each behaviour turned into a standard anyone can check, with what good looks like and how often it is checked, the way Ray Kroc wrote standards. Reads the memo and its behaviours from step 1, plus your real numbers, and hands step 3 the standards sheet."}
+  - {uses: recognition-plan-designer, note: "How behaviour gets noticed and praised: in public, specific, often, tied to the standards, in the manner of Mary Kay Ash. Reads step 2's standards sheet and your team facts, and hands step 4 the praise plan."}
+  - {uses: policy-removal-test-planner, note: "The one rule the memo makes unnecessary, the risk if it goes, a safe trial without it and the sign that says bring it back, following Patty McCord. Reads the memo and your current rules, and uses the standards and praise plan to pick the rule they make unnecessary."}
 origin: own
 version: 1.0.0
 minds: [reed-hastings, patty-mccord, ray-kroc, mary-kay-ash]

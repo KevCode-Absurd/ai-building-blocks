@@ -1,0 +1,144 @@
+name: Kuaishou Strategist agent
+summary: "Get a Kuaishou plan for China: account positioning, a daily post mix, a live-sale run sheet and a fan group plan. Bring your product and market."
+headline: Kuaishou Strategist agent
+subhead: Give it your product, your buyer and whether you plan to sell live. It plans how your account should look and sound on Kuaishou, a daily post mix and a live-sale run sheet. You also get scripts and a plan to move fans into a WeChat group.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Kuaishou is a short-video app in China where live selling and trust between creator and fans matter a great deal. The original profile argues that what works on Douyin often fails here. Polished, trendy video can feel cold. Plain, honest video, posted every day, builds the fan loyalty that sells. This Kuaishou strategy agent plans work around that idea.
+
+  It starts with who you sell to and what a fan gets from following you. It sets a persona that sounds like a real person. Then it sets a daily post mix. Most posts show daily life and products. Some build trust with proof, and some talk with fans. If you sell live, it writes a run sheet for before, during and after the show, and a simple product intro script. It also plans how to move fans into a WeChat group, called private domain.
+
+  It can't see Kuaishou, your stats or what sells this week. The profile's claims about the app's audience and algorithm are the author's view, so check them in your own data. The profile's targets, such as a 3 percent live conversion, are goals, not results from AI Blocks. The profile is full of Chinese terms, so have a native Chinese reader check scripts and claims before you film.
+when:
+  - You plan to sell on Kuaishou and want a first plan for the account and the live show.
+  - Your Douyin content gets no response on Kuaishou and you need a different approach.
+  - You sell everyday goods to smaller cities and want a trust-first plan.
+  - You run lives but have no routine for before and after the show.
+not_for:
+  - You sell on Douyin. Use the Douyin Strategist agent.
+  - You already run live shows and want coaching on the show itself. Use the Livestream Commerce Coach agent.
+  - You only want a plan to move customers into WeChat groups. Use the Private Domain Operator agent.
+  - You sell outside China or on TikTok. Use the TikTok Strategist agent.
+you_give:
+  - Your product, price range and who buys it
+  - Your region or the kind of city your buyers live in
+  - Your account status, such as new or running
+  - Whether you will sell live, and how many hours a week and how many people can help
+  - Your product list with price and margin, if you sell live (optional)
+  - Stats for your last videos or lives, if you have them (optional)
+you_get:
+  - Account positioning, with a persona, what fans get and how you differ from Douyin
+  - A daily post mix with a two-week list of video ideas
+  - A live-sale plan with a product mix and time slots to test
+  - A run sheet for before, during and after each live show
+  - A product intro script and trust lines you can say in your own words
+  - A plan to move fans into a WeChat group
+  - A review plan with the numbers to track
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your product, buyer, region, account status and how you plan to sell. Say if you want the result in English or Chinese.
+  - Add your product list with prices and margins if you plan to sell live. Add stats from your Kuaishou creator tools if you have them.
+  - "Say: \"Make my Kuaishou plan. Don't invent stats or platform rules. Mark anything you can't check as a check for me.\""
+  - Read the persona and the post mix first. Cut any line that sounds like a marketer, not like you.
+  - Have a native Chinese reader check the scripts and every product claim. Run one short test live, then bring back what happened to plan the next one.
+how_it_works:
+  - title: Confirm the basics
+    text: It confirms product, buyer, region, account status and live plans. Missing items are asked for once, then marked MISSING.
+  - title: Position the account
+    text: It sets a persona, what fans get from following and how this account differs from a Douyin account.
+  - title: Plan the daily mix
+    text: It splits posts into daily life and products, trust proof and fan talk. It lists video ideas for two weeks.
+  - title: Plan the live show
+    text: It sets how often and how long to go live, using the profile's starting points. It picks time slots to test and products to sell.
+  - title: Write the run sheet and scripts
+    text: It writes tasks for before, during and after the show. It writes a product intro script and trust lines.
+  - title: Plan fans and review
+    text: It plans how to move fans into a WeChat group and names the numbers to read after each show.
+output_shape: |-
+  ASSUMPTIONS AND MISSING
+    ASSUMED: <list> | MISSING: <list>
+
+  ACCOUNT POSITIONING
+    buyer <who, where> | persona <who you are on camera> | what fans get <list> | how it differs from Douyin <list>
+
+  DAILY POST MIX
+    <share> | <type: daily life, trust proof, fan talk> | <two-week video ideas>
+
+  LIVE-SALE PLAN
+    how often <starting point to test> | length <starting point> | time slots to test <list> | product mix <hook item, core items, offers>
+
+  LIVE RUN SHEET
+    before <tasks, who> | during <time block, what happens, goal> | after <tasks within an hour>
+
+  SCRIPTS
+    product intro <three pain points, two demos, one offer> | trust lines <list in your own words> | CHECK: <claims to prove>
+
+  FAN GROUP PLAN
+    <how fans join> | <what the group gets> | <rules that keep it honest>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+output_sample:
+  input:
+    - Your product, price range and buyer
+    - Your region or kind of city, and your account status
+    - Whether you sell live, your weekly hours and your helpers
+    - Your product list and recent stats (optional)
+  prerequisites:
+    - A Kuaishou account, or a plan to open one
+    - A native Chinese reader to check scripts and claims before you film
+  output:
+    - name: Account positioning
+      contains: Your buyer, an on-camera persona, what fans get and how you differ from Douyin.
+    - name: Daily post mix
+      contains: A split between daily life, trust proof and fan talk, with two weeks of video ideas.
+    - name: Live-sale plan
+      contains: How often and how long to go live, time slots to test and a product mix.
+    - name: Live run sheet
+      contains: Tasks for before, during and after each show, with who does what.
+    - name: Scripts
+      contains: A product intro in three parts and trust lines, with the claims you must prove.
+    - name: Fan group plan
+      contains: How fans join a WeChat group, what the group gets and the rules for it.
+    - name: Review plan
+      contains: The numbers to read after each show and what to change if they are low.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Language
+    how: Say whether you want the plan in English, Chinese or both, and whether scripts should be in Chinese.
+  - what: Focus
+    how: Ask for account positioning and the post mix only if you don't sell live yet.
+  - what: Capacity
+    how: Say how many live hours and helpers you really have, so the plan doesn't ask for more than you can keep up.
+improve:
+  - After each live show, paste your numbers and what the fans asked. Ask what to change in the next run sheet.
+  - Keep the trust lines that fans reacted to and drop the rest.
+terms:
+  - term: Kuaishou
+    meaning: A Chinese short-video and live-selling app, often compared with Douyin.
+  - term: Live commerce
+    meaning: Selling products during a live video show, where viewers buy while they watch.
+  - term: Laotie
+    meaning: A Chinese word for close friends, used for loyal fans on Kuaishou.
+  - term: Private domain
+    meaning: Fans you can reach directly, such as in your own WeChat group, not only through the app.
+  - term: GMV
+    meaning: The total value of goods sold, before returns.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three read and write Chinese. A native Chinese reader should still check the final text.
+    - name: Your Kuaishou creator tools
+      why: You read your own stats there. Your AI can't see them.
+  inputs:
+    - Screenshots of your last few lives with viewer and sales numbers.
+    - Three accounts in your product area that you want to match.
+    - Your product list with prices, margins and stock.

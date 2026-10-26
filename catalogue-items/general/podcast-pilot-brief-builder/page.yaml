@@ -1,0 +1,85 @@
+name: Podcast pilot brief builder
+headline: Podcast pilot brief builder
+summary: "Build a podcast pilot episode brief: give your show idea and listener, get a hook, timed run sheet, guest questions and a recording plan."
+subhead: Give your AI your show idea and your listener. It writes a plan for one pilot episode. You get a hook, a timed run sheet, questions and a list of facts to check.
+job: write-and-tell-stories
+thinking: high
+thinking_why: The task compares evidence and alternatives. Its output still needs the stated checks.
+explain: |-
+  Turn a show idea and target listener into a production-ready pilot episode brief, including the opening hook, narrative beats, guest questions, CTA and clip plan.
+
+  An episode brief is one bounded production artifact. A reusable skill is sufficient; a second prompt or four-phase launch workflow would duplicate the same task and expand into publishing and monetization unnecessarily.
+
+  This task uses selected methods from Global Podcast Strategist. It is a focused adaptation. The original agents remain available: [Global Podcast Strategist agent](https://useaiblocks.com/agents/agency-marketing-global-podcast-strategist).
+when:
+  - You have a show idea and need a plan for the first episode.
+  - You are about to record and want a timed run sheet that adds up.
+  - You have a guest booked and need good questions and facts to check.
+  - You want clip ideas picked before you record.
+not_for:
+  - "You need to find or contact guests: write the outreach yourself or ask a person who books guests, because this only plans one episode."
+  - "You want to publish the show or plan sponsor income: use your podcast host's own help pages, since this makes no revenue forecasts."
+  - "You want a full multi-episode launch plan: map the season by hand first, then run this once for each pilot idea."
+you_give:
+  - Your show idea and the listener you want to reach.
+  - What the listener should understand or do afterward.
+  - Your expertise as host, the episode format and the total length.
+  - Verified facts and any guest limits.
+  - A real sponsor or call to action (optional).
+you_get:
+  - A listener promise, working title and opening hook.
+  - A timed run sheet where segment times add up to your total length.
+  - Guest questions or solo beats.
+  - A fact-check list, prep notes and an outro call to action.
+  - Clip moments to look for when you edit.
+how_to_use:
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Paste your show idea, listener, format, length and any verified facts.
+  - Check the run sheet. The segment times should add up to your total length.
+  - Check the fact-check list and settle each open item before you record.
+  - Hand the run sheet and fact-check list to whoever records and edits, or use them yourself.
+output_sample:
+  input:
+    - Your show idea and the listener you want to reach
+    - What the listener should understand or do afterward
+    - Your expertise as host, and the episode format and total length
+    - Verified facts, guest limits, and any real sponsor or call to action (optional)
+  output:
+    - name: Listener promise
+      contains: One plain statement of who the episode is for and what they gain.
+    - name: Working title and opening hook
+      contains: A draft title and opening lines that name the listener's problem without promising results.
+    - name: Timed run sheet
+      contains: Each segment with start time, length, purpose, key facts and transition, with the sum shown against total length.
+    - name: Guest questions or solo beats
+      contains: Open questions with follow-ups for interviews, or an ordered story or argument for solo episodes.
+    - name: Fact-check list
+      contains: Claims that need a source, plus proof points still unverified.
+    - name: Host and guest prep notes
+      contains: What to prepare, gather or decide before you record.
+    - name: Outro call to action
+      contains: A closing action that fits the listener and your real offer.
+    - name: Clip moments
+      contains: Proposed moments worth cutting into short clips, as ideas, not edited clips.
+how_it_works:
+  - title: 1. A listener promise, working title and opening hook
+    text: Segment and transition durations add to the requested length.
+  - title: 2. A timed segment plan with guest questions or solo beats
+    text: Hook and questions serve the supplied listener problem.
+  - title: 3. A recording brief, fact-check list and proposed clip moments
+    text: Guest expertise, stories and proof points are supplied or remain unverified.
+judge:
+  - Segment and transition durations add to the requested length.
+  - Hook and questions serve the supplied listener problem.
+  - Guest expertise, stories and proof points are supplied or remain unverified.
+  - Optional sponsor/guest sections apply only to actual choices.
+  - The result is a planning artifact, with no fabricated recording or distribution results.
+test:
+  - Try a small supplied case whose facts and result you can check.
+  - Omit one required fact and check that the affected work stays unresolved.
+tweaks:
+  - what: Task scope
+    how: State the intended result, available evidence and actual tools before starting.
+improve:
+  - Keep useful corrections with the task evidence for the next run.
+terms: []

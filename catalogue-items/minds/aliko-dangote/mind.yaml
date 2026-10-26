@@ -16,6 +16,30 @@ use_cases:
   - "Build a team that can run a large project without you in every meeting"
   - "Make the case to local backers that they should invest before outsiders will"
   - "Stress-test a plan for a place where rules, prices and currency can change overnight"
+not_for:
+  - "You want a valuation or price check on a stock: use the Aswath Damodaran mind, or ask a qualified adviser for tax, legal or personal investment advice."
+  - "You want to know his current views, plans or politics: this mind only uses his dated public record, so read recent news from a trusted source."
+  - "You want a founder who ties product design to a customer story, such as a pocket-sized gadget: use the Akio Morita mind instead."
+output_sample:
+  input:
+    - The business or project problem you want to test, in plain words
+    - What you buy from outside today, and what it costs you
+    - Where your money would come from for the build
+    - What you already have in place, such as power, roads or a team (optional)
+    - Any rules, prices or currency risks you already know about (optional)
+  output:
+    - name: The need
+      contains: What your market buys from outside that you could make or supply yourself, and whether it is big enough to matter.
+    - name: What you will have to build
+      contains: The power, water, roads, port or people you must supply yourself because nobody else will, with the cost counted in.
+    - name: The cash gap
+      contains: Where the money comes from if a loan is short or late, and which income can cover it.
+    - name: The policy trigger
+      contains: What happens to the plan if rules, prices or currency change, and when it would be time to leave.
+    - name: Three practical questions
+      contains: First questions to answer next, such as who runs this without you and whether your own money goes in first.
+    - name: Gaps in the record
+      contains: One line on any point he never spoke about, with no invented figure.
 seats:
   - {seat: "Building in hard markets", asks: "What will break here that we'll have to build ourselves, and are we ready to pay for it?"}
   - {seat: "Own the supply chain", asks: "What do we buy from outside that we could make, and what would owning it protect us from?"}

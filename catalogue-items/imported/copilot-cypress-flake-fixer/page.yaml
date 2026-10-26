@@ -2,17 +2,58 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-cypress-flake-fixer
 name: Cypress flaky test fixer
-summary: Share your Cypress suite. Get fragile waits and old APIs found, then
-  fixes for the affected tests.
+summary: Find and fix flaky Cypress tests. Share your specs and get fixed waits, removed APIs and a before and after report for each change.
 job: test-and-fix-code
 headline: Cypress flaky test fixer
-subhead: Share your Cypress suite. Get fragile waits and old APIs found, then
-  fixes for the affected tests. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI your Cypress specs and your package.json. It scans for waits, old APIs and other causes of flaky tests. It fixes the test code and reports what changed.
+not_for:
+  - "You are writing new Cypress tests from scratch: follow your team's coding standards or Cypress docs instead."
+  - "The test fails because of a bug in your app, such as a double submit: report it to the app developers, as this skill only changes test code."
+  - "You want a quick fix by adding retries, longer timeouts or force: use a person to review the cause, as this skill avoids those."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can read your files and run code. The scanner needs Node.js 18 or later. It does not need Cypress installed.
+  - Add the skill to your AI, or paste in the SKILL.md text.
+  - Give it your package.json, your cypress.config file and the failing spec files. A full project folder works best.
+  - Ask it to scan first, then show you the findings before it edits anything.
+  - For one flaky spec, ask for a baseline. This runs real Cypress many times, so use a setup like your CI and expect it to take a while.
+  - Check the report table and rerun the changed spec as many times as the baseline.
+output_sample:
+  input:
+    - Your Cypress project folder, or the spec files that fail
+    - Your package.json, so your AI can read the Cypress version
+    - Your cypress.config file
+    - How often the spec fails, if you know (optional)
+  prerequisites:
+    - An AI that can run code and read your files
+    - Node.js 18 or later to run the scanner
+    - A way to run Cypress specs many times, for the before and after check (optional)
+  output:
+    - name: Scan results
+      contains: Each flake-prone pattern or removed API found, with the file and line, graded as error or warning.
+    - name: Baseline
+      contains: How many times the chosen spec failed out of the runs, taken before any change.
+    - name: Fixed specs
+      contains: Test code where fixed waits become intercept aliases or assertions, and removed APIs get their replacements.
+    - name: Cypress flake audit report
+      contains: A table of each rule with counts before and after, and notes on how each was fixed.
+    - name: Not fixed
+      contains: Places left alone, each with the reason, such as needing a change in the app.
+    - name: Application issues found
+      contains: App behavior the tests exposed, such as a missing loading state.
+    - name: Verification
+      contains: How many repeat runs of the changed spec passed after the fix.
+when:
+  - A spec passes on your laptop but fails in CI.
+  - A spec fails once in every few runs.
+  - Errors say detached from the DOM or timed out retrying.
+  - You are moving to a newer Cypress version, from 12 up to 16.
+you_give:
+  - Your Cypress project folder, or the spec files that fail
+  - Your package.json, so the Cypress version can be read
+  - Your cypress.config file
+  - The name of one flaky spec to measure (optional)
+you_get:
+  - A list of flake-prone code and removed APIs, with file and line
+  - Fixed test code that waits on real conditions, not fixed delays
+  - A report table with counts before and after each fix
+  - A list of problems that need an app change, not a test change

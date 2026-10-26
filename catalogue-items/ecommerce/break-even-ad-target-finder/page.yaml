@@ -1,6 +1,6 @@
 new_slug: break-even-ad-target-finder
 name: "Break-even ad target finder"
-summary: "Paste one product's price and costs. Get its true margin, break-even ROAS and break-even CAC."
+summary: "Find your break-even ROAS and break-even CAC for one product. Give it your price and costs. You get true margin and the ad targets it can afford."
 job: track-numbers
 thinking: low
 thinking_why: "It is mostly sums on numbers you give it."
@@ -17,6 +17,10 @@ when:
   - "You are about to set a ROAS or CAC goal for a product."
   - "You changed your price or shipping and want the new floor."
   - "A product sells well but cash feels tight."
+not_for:
+  - "You sell bundles or services with no unit cost: work out the cost by hand with your accountant, or split the bundle into single products first."
+  - "You want a profit view for the whole month or store: use a store profit calculator or ask your accountant."
+  - "You need tax advice or filed numbers: ask your accountant. These are planning numbers only."
 
 you_give:
   - "Selling price (required): without tax. If your price includes tax, say the tax rate."
@@ -36,6 +40,24 @@ how_to_use:
   - "Under it, paste your details: selling price; unit cost; per order; payment fee percent; refund rate and average discount; marketing share of price."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Your selling price, without tax
+    - Your unit cost, plus freight and duty
+    - "Your per-order costs: shipping, pick and pack, packaging"
+    - Your payment fee percent, refund rate and average discount
+    - Your marketing share of price (optional)
+  output:
+    - name: COST OF DELIVERY
+      contains: Each cost per order, line by line, with a total.
+    - name: MARGINS
+      contains: Product, gross and contribution margin, each in money and percent.
+    - name: BREAK-EVEN
+      contains: The ROAS and CAC where ads stop losing money, with the sum shown.
+    - name: WEAKEST LINE
+      contains: The one cost that hurts your margin most.
+    - name: MISSING
+      contains: Any cost lines you did not give, so no margin is made up.
 
 how_it_works:
   - title: "Take tax out"

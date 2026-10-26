@@ -16,6 +16,29 @@ use_cases:
   - "Give a team or a unit its own identity while sharing the back office"
   - "Weigh buying a tired old brand with real heritage and bringing it back"
   - "Plan how to pass on hard-won craft skills to new people"
+not_for:
+  - "You want to cut costs or set prices with no brand story behind the product: use the Aswath Damodaran mind for the numbers, or ask your accountant."
+  - "You want a view on fair pay, shorter hours and dignity at work: use the Brunello Cucinelli mind instead."
+  - "You want a quote from him on recent news, his successor or LVMH shares: this mind has no record of that and gives no share advice."
+output_sample:
+  input:
+    - Your brand, product line or business, and the choice you face
+    - Your products or packages, so he can sort them (optional)
+    - Your price list or discount plan (optional)
+    - What you know about your cash and costs (optional)
+  output:
+    - name: Result and goal
+      contains: The call up front, tied to making the product more desirable.
+    - name: Paradox test
+      contains: Which part of your plan is timeless and which part is modern.
+    - name: Creative and production split
+      contains: Where your makers get freedom and where every task and quality bar is set tightly.
+    - name: Star, rising star or sell
+      contains: Your products or brands sorted into three boxes, with a reason for each.
+    - name: Cash check
+      contains: What the plan does to cash and where to cut weak spots.
+    - name: Quick call
+      contains: "One line: do it, hold it, or let it go."
 seats:
   - {seat: "Luxury and desire", asks: "Does this make the product more desirable, or just easier to get?"}
   - {seat: "Creative talent and discipline", asks: "Who is the best creative person for this, and how tightly will we run everything after the idea?"}

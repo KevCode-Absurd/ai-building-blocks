@@ -1,42 +1,53 @@
 new_slug: price-versus-value-gap-judge
 name: "Price versus value gap judge"
-summary: "Paste your value range, asset floor and the price. Get whether there is a real margin of safety and what removes it."
+summary: "See if a price leaves a real margin of safety against your value range and asset floor, and what caused and could close the gap."
 job: money-and-investing
 thinking: high
 thinking_why: "It combines two estimates into a range, tests the price against it and has to judge whether a low price is a mistake or a fair reading. That needs careful reasoning."
 
-headline: "Find out if the gap between price and value is wide enough to protect you"
-subhead: "Give it your earnings value range, your asset floor and the price. It builds one honest range of value, places the price against its edges, asks why the market might be wrong and whether the cause is real, and names what could close the gap. You get a verdict and what would change it."
+headline: "Price versus value gap judge"
+subhead: "Give it your earnings value range, your asset floor and the price. It builds one honest range of value and places the price against its edges. It asks why the market may be wrong and whether the business is simply getting worse. You get a verdict, ranked reasons and what would change it."
 
 explain: |
-  You will never know a company's exact value. You do not need to. You need to know whether the price is clearly under the value, clearly over it, or lost in the fog between. A price inside the range means the answer depends on one estimate being right. That is a bet, not a margin of safety.
+  You will never know a company's exact value. You only need to know whether the price is clearly under the value, clearly over it, or lost in the fog between. A price inside the range means the answer rests on one estimate being right. That is a bet, not a margin of safety. This margin of safety review makes that call plainly.
 
-  This skill joins your two value views into one range and states how wide it is. It places the price against the edges, measures the margin against that width and asks why the market might be wrong. Prices are low because of exaggeration, oversimplification or neglect, and also because a business is getting worse. It tests which one fits. It names the events that could close the gap, warns that closing can be slow and asks how a group of similar cases would do. It is a method, not financial advice.
+  The skill joins your two value views into one range and states how wide it is. It places the price against the edges and compares the margin with that width. A margin smaller than the uncertainty is not protection. Then it asks why the market might be wrong. Prices can be low because of exaggeration, oversimplification or neglect. They can also be low because the business is getting worse, and it tests which one fits.
 
+  It names the events that could close the gap, warns that closing can be slow, and asks how a group of similar cases would do. If the inputs are missing it says so and gives no verdict. It is a method of analysis, not financial advice, and it never says buy or sell.
 when:
-  - You have a value estimate and a price and want a verdict you can defend.
+  - You have a value range and a price and want a verdict you can defend to yourself or a partner.
   - A price looks cheap and you want to know whether the cause is neglect or decline.
-  - You want to write down your reasons before you commit money.
+  - You want to write down your reasons, and what would change your mind, before you commit money.
+  - You hold something that fell and want to know if the gap to value is still wide enough to matter.
+not_for:
+  - You have only a ticker or a few numbers and want the value worked out from scratch. Use the Stock valuation margin-of-safety reviewer or the Company fair value modeler.
+  - You want a maximum price from dated cash flows. Use the Price against value checker.
+  - You are weighing many holdings against how the market feels. Use the Investment price and value checker.
+  - The company has no earnings record, only a story. The range will be too wide to mean anything.
+  - The decision is large or personal. This is a method, not advice. Talk to a licensed adviser.
 
 you_give:
-  - The value range from "Earnings value range builder"
-  - The asset floor from "Asset floor estimator"
-  - The price
-  - A first label from "Investment or speculation sorter" (optional)
+  - The value range from the Earnings-based share value calculator, as low, middle and high value per share
+  - The asset floor from the Business asset value estimator, with typical and harsh sale values, how fast losses use up cash, and cash strength
+  - The price per share, with its date
+  - A first label from the Investment or speculation sorter (optional)
+  - Whether you would borrow to hold it (optional)
 you_get:
-  - One range of approximate value with its width
-  - Where the price falls against it
+  - One range of approximate value, with its width
+  - Where the price falls against it, whether above, inside or below the low end
   - The margin compared with the uncertainty
-  - A likely cause of the gap, tested against decline
-  - What could close the gap, how slowly, and the downside
+  - A likely cause of the gap, tested against real decline
+  - What could close the gap, how slowly, and the downside if it does not
   - A verdict with ranked reasons and what would change it
+  - A list of every input marked MISSING
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the value range, the asset floor and the price.
-  - Say if any borrowing is involved.
-  - Read the placement of the price and the cause of the gap first.
-  - Write down what would change your mind before you decide anything.
+  - Paste the value range, the asset floor and the price. Say if any borrowing is involved.
+  - If you do not have the range or the floor yet, run the Earnings-based share value calculator and the Business asset value estimator first.
+  - Read the placement of the price and the cause of the gap first. Then check that the margin is compared with the width of the range.
+  - Write down what would change your mind before you decide anything. A verdict is an analysis result, not a signal to buy at that price.
+  - Talk to a licensed adviser before a large or personal decision.
 
 how_it_works:
   - title: Builds one range
@@ -80,14 +91,39 @@ output_shape: |
   <one line>
 
   VERDICT
-  <MARGIN OF SAFETY PRESENT / NO CLEAR MARGIN / PRICE ABOVE VALUE>
+  <MARGIN OF SAFETY PRESENT / NO CLEAR MARGIN / PRICE ABOVE VALUE / NO VERDICT: inputs missing>
   Reasons, ranked: <list> | What would change it: <facts>
+  This is a method of analysis, not advice to buy or sell.
 
   MISSING
   <facts not given>
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - The value range from the Earnings-based share value calculator
+    - The asset floor from the Business asset value estimator
+    - The price per share, with its date
+    - Whether you would borrow to hold it (optional)
+  prerequisites:
+    - Both earlier results, so the range has two sources. With one, the verdict is marked provisional.
+  output:
+    - name: RANGE OF VALUE
+      contains: One range from low to high end, with its width as a percent of the middle value.
+    - name: PRICE PLACED
+      contains: Whether the price is above the range, inside it or below the low end.
+    - name: MARGIN
+      contains: The gap to the middle value, compared with the width of the range.
+    - name: WHY THE GAP
+      contains: Exaggeration, oversimplification, neglect or real decline, with the evidence for the one that fits.
+    - name: WHAT COULD CLOSE IT
+      contains: The events that could close the gap, and how slowly they might act.
+    - name: DOWNSIDE and GROUP VIEW
+      contains: The loss if the low case or sale values hold, and how ten similar cases would do.
+    - name: VERDICT
+      contains: One of three calls, or no verdict if inputs are missing, with ranked reasons and what would change it.
 
 tweaks:
   - what: Your risk limit
@@ -120,14 +156,16 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Combining two estimates and writing a reasoned verdict is text work."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Combining two estimates and writing a reasoned verdict is text work. No files, web access or paid tools needed."}
     - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
   inputs:
     - "The value range and the asset floor from the earlier steps"
-    - "The latest price"
+    - "The latest price, with its date"
 
 terms:
   - term: Margin of safety
     meaning: The gap between what you think something is worth and what you pay. It protects you if your estimate is wrong.
+  - term: Asset floor
+    meaning: A rough value of what the business's assets would fetch if sold, used as a low reference point.
   - term: Burn
     meaning: How fast current losses use up a company's cash and assets.

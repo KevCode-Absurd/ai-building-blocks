@@ -18,6 +18,30 @@ use_cases:
   - "Make ordering easy, with one clear way to buy and good service after"
   - "Tell buyers the honest drawback of your product before they find it"
   - "Turn a product defect or delay into a chance to impress customers"
+not_for:
+  - "You need positioning, meaning a clear place in buyers' minds: use the Al Ries mind or the April Dunford mind."
+  - "You want a plain, fact-first ad built on product research and coded replies: use the Claude Hopkins mind or the David Ogilvy mind."
+  - "You need legal or medical claims checked, or your product has no true story: use a plain spec sheet or a lawyer."
+output_sample:
+  input:
+    - Your product and the true story of how you found it
+    - Your current product page or ad (optional)
+    - The honest drawback of your product
+    - Your offer, price and how people order today
+    - Where you could run a small test
+  output:
+    - name: Opening story
+      contains: A short true story to open your page, with any invented detail marked as a new example.
+    - name: Honest drawback
+      contains: The weak spot of your product, said up front in a way that builds trust.
+    - name: Page flow notes
+      contains: Where the reader may stop reading, and how each line can pull them to the next.
+    - name: One-step order path
+      contains: A simple way to buy, with one clear action for the reader.
+    - name: Backend idea
+      contains: An add-on or follow-up offer to plan for after the first sale.
+    - name: Small test plan
+      contains: One thing to change, where to test it small, and what result to watch before a rollout.
 seats:
   - {seat: "Long copy that gets read", asks: "Does the first line make them read the second, and does the story keep them going to the order?"}
   - {seat: "Testing and rollout", asks: "Where can we try this small first, and what result would make us roll it out?"}

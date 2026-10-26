@@ -2,34 +2,106 @@ thinking: high
 thinking_why: It reads closely and ties each claim to evidence.
 new_slug: paper-repo-notes
 name: Paper and repo to structured notes
-summary: Give it a paper, repo or messy notes. Get claims, methods and evidence
-  sorted into a clear research folder.
+summary: Turn a paper, code repo or messy notes into a research folder of claims, methods and evidence, with every claim linked to its source.
 job: research-topics
 headline: Paper and repo to structured notes
-subhead: "A tidy research folder built from whatever you have: a paper, a code
-  repo, logs or messy notes. It sorts the contents into claims, methods, results
-  and the evidence behind each."
+subhead: Give it a paper, a code repo, logs or messy notes. It builds a research folder with claims, methods, results and dead ends. Each claim points to the table, log or file that backs it.
 explain: |
-  A tidy research folder built from whatever you have: a paper, a code repo, logs or messy notes. It sorts the contents into claims, methods, results and the evidence behind each.
+  Research notes go stale fast. The paper says one thing, the code does another, and the failed tries live only in someone's head. This skill turns whatever you have into one research folder where each claim points to its evidence.
 
-  The compiler accepts almost any input, from PDF and arXiv links to notebooks, experiment logs, config files and meeting notes. It reads them with its own file tools, works out what was tried and what was found, and records dead ends as well as wins. Every claim links to its evidence, so you can see where it came from. The folder is then checked for completeness. If you have nothing, it builds the folder by asking you questions.
+  It reads every source you give it, including appendices, logs and notes. It writes a file for the problem, claims, key terms, planned experiments, the method, related work, settings and results tables. It keeps exact numbers as printed, and it records dead ends and decisions.
+
+  It then checks its own folder: claims must point to experiments, and experiments to claims. If something is not in your sources, it writes "Not specified" instead of guessing. If you give it nothing, it builds the folder by asking you questions.
 when:
-  - You finished a project and the knowledge is scattered across files.
-  - You want a paper and its code turned into usable notes.
-  - A teammate leaves and you need their research written down.
-  - You need claims tied to the logs that prove them.
+  - A project is done and what you learned is spread across files.
+  - You want a paper and its code turned into notes you can search and trust.
+  - A teammate is leaving and their research needs to be written down.
+  - You need each claim tied to the log or table that proves it.
+not_for:
+  - You want a one-page summary of a single paper. Use the Research paper summarizer.
+  - Your AI cannot read and write files. It needs a file-capable AI, such as Claude Code, to build the folder. In a plain chat window you can only get the main files as text.
+  - You want to critique a paper's evidence rather than record it. Use the Research paper evidence review.
 you_give:
-  - Paper, repo, logs, notebooks or notes
-  - Folder to save into
-  - Context about the research goal (optional)
+  - A paper (PDF or arXiv link), a code repo, logs, notebooks or notes
+  - A folder to save the result in
+  - Context about your research goal (optional)
+  - A grading rubric for the paper (optional)
 you_get:
-  - Structured research folder
-  - Claims linked to evidence
-  - Methods and results sections
-  - Record of failed attempts and decisions
+  - A research folder with claims, methods and results
+  - Every claim linked to its supporting table or log
+  - Results tables copied with exact numbers
+  - A record of dead ends and decisions
+  - A short report on what was filled in and what was missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your files and run code.
+  - Open an AI that can read and write files, such as Claude Code. Add the skill, then point it at your paper, repo or notes folder.
+  - Tell it where to save the result. If you do not, it uses a folder named ara-output in your current folder.
+  - Ask it to build the folder, then run the coverage check. It rereads your sources up to 3 times and patches gaps.
+  - Open evidence/README.md first. It lists each evidence file and the claims it backs. Check that the numbers match your source.
+  - Read the final report. Anything marked "Not specified" needs input from you. Add that source and run it again.
+  - If you only have a chat window, paste your text and ask for claims.md and evidence/README.md only.
+how_it_works:
+  - title: Read everything
+    text: It reads all sources in full, including appendices, then notes what each source is best for.
+  - title: Pull out the facts
+    text: It lists equations, settings, exact results, negative results and rejected ideas, before it writes any file.
+  - title: Map claims and methods
+    text: Claims, key terms and planned experiments go in the logic files. Settings and a code stub go in src.
+  - title: Rebuild the research path
+    text: It draws the route of questions, experiments and decisions, with dead ends, and marks each step as stated or inferred.
+  - title: Copy evidence exactly
+    text: Results tables and figure data are kept as printed. A subset is labeled as a subset.
+  - title: Check and fix
+    text: It rereads the sources up to 3 times, then checks that every claim, experiment and evidence file points to one that exists.
+output_shape: |
+  <output folder>/
+    PAPER.md                         <title, authors, year, summary, file index>
+    logic/problem.md                 <observations, gaps, key insight, assumptions>
+    logic/claims.md                  <C01..., statement, status, how to disprove, proof>
+    logic/concepts.md                <5 or more key terms, defined>
+    logic/experiments.md             <E01..., setup, procedure, expected direction>
+    logic/solution/                  <architecture, algorithm, constraints, heuristics>
+    logic/related_work.md            <each cited work and what is new here>
+    src/configs/ and src/environment.md   <settings, versions, hardware, seeds>
+    src/execution/<module>.py        <code stub for the new idea>
+    trace/exploration_tree.yaml      <questions, experiments, decisions, dead ends>
+    evidence/README.md               <which file backs which claim>
+    evidence/tables/, evidence/figures/   <results, exact numbers>
+output_sample:
+  input:
+    - A paper (PDF or arXiv link), a code repo, logs or notes
+    - A folder to write the result to
+    - Context about your goal (optional)
+  prerequisites:
+    - An AI that can read and write files, such as Claude Code
+    - Web access, only if you give a link or a repo URL
+  output:
+    - name: PAPER.md
+      contains: Title, authors, year, a short summary and an index of every file in the folder.
+    - name: logic/claims.md
+      contains: Each claim with its status, how to disprove it, and the experiment that backs it.
+    - name: logic/experiments.md
+      contains: Planned experiments that check each claim, with the expected direction but no numbers.
+    - name: logic/solution/
+      contains: Four files on the design, the method, its limits and the tricks that made it work.
+    - name: src/configs/ and environment.md
+      contains: Settings with reasons, plus software versions, hardware and seeds.
+    - name: trace/exploration_tree.yaml
+      contains: The path of questions, experiments, decisions and dead ends, marked as stated or inferred.
+    - name: evidence/README.md
+      contains: A table that links every evidence file to the claims it supports.
+    - name: evidence/tables/ and figures/
+      contains: Results copied with exact numbers, and data points from each figure.
+works_best_with:
+  tools:
+    - name: Claude Code or another file-capable AI
+      why: It can read your whole repo and write the folder in one go.
+  inputs:
+    - The appendix and supplementary files, which often hold the details needed to reproduce results.
+    - Raw experiment logs, so dead ends and decisions are recorded as they happened.
+terms:
+  - term: Evidence file
+    meaning: A copy of a results table or figure data, kept with its original label and numbers.
+  - term: Dead end
+    meaning: A thing that was tried and dropped, kept so nobody repeats it.
+  - term: Exploration tree
+    meaning: A map of the questions asked, what was tried and what was decided.

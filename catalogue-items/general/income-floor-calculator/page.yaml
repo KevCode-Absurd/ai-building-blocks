@@ -1,28 +1,37 @@
 new_slug: income-floor-calculator
 name: "Independent income floor calculator"
-summary: "Paste your costs and ways to earn. Get a monthly income floor, the steady streams and what a sick month costs."
+summary: "Work out the monthly income you need to go independent. Get your floor, steady streams, clients needed and the cash for a sick month."
 job: think-and-decide
 thinking: medium
 thinking_why: "The sums are fixed, but sorting streams into steady and extra takes judgement."
 
-headline: "Know the monthly income you need before you leave a salary"
-subhead: "Paste what you spend, what your employer covers and the ways you could earn on your own. It builds a monthly floor, sorts each income stream into steady or extra, works out how many clients the floor needs, and sizes the cash for a month you cannot work. You get a one-page report."
+headline: "Independent income floor calculator"
+subhead: "Paste what you spend, what your employer covers and the ways you could earn on your own. Your AI builds a monthly income floor, sorts each stream into steady or extra, works out how many clients the gap needs, and sizes the cash for a month you cannot work. You get a one-page report."
 
 explain: |
-  A salary hides costs. Health cover, a pension, a desk, software and a steady payday all come with it. Leave and you pay for each one yourself, and tax is not taken off before the money reaches you. Many people compare their old pay with their hoped-for income and miss all of that.
+  A salary hides costs. Health cover, a pension, a desk, software and a steady payday all come with it. Leave and you pay for each one yourself, and tax is not taken off before the money reaches you. Many people compare their old pay with their hoped-for income and miss all of that. This calculator shows the monthly income you need to go freelance or self-employed.
 
-  This skill builds the number from the other end. It starts with a quiet-life month, adds what the employer was covering, adds a tax share, and gives you a gross floor. It then sorts every way you could earn into steady (repeats monthly and has been known for three months or more) and extra (one-off, seasonal, hoped for). Only steady income counts toward the floor, and streams with no contract are counted at four fifths of their usual size, since clients pause. The gap is turned into a number of clients. The report ends by asking what happens in a month you cannot work, and how much cash you need to wait for the first payments. It is a planning aid, not personal financial advice.
+  It builds the number from the other end. It starts with a lean month, adds what the employer was covering, then adds a tax share to give a gross floor. It then sorts every way you could earn into steady (repeats monthly and known for three months or more) or extra (one-off, seasonal, hoped for). Only steady income counts toward the floor. A stream with no contract counts at four fifths of its size, since clients pause.
+
+  The gap becomes a number of clients. The report ends with a hard question: what happens in a month you cannot work, and how much cash do you need to wait for the first payments? It uses one flat tax share, so it may understate the floor if your tax rises in steps. It is a planning aid, not personal financial advice.
 
 when:
-  - "You are thinking of leaving a job to work for yourself and need to know if the sums hold."
-  - "You already freelance and your income swings so much you cannot plan."
+  - "You are thinking of leaving a salaried job to work for yourself and need to know if the sums hold."
+  - "You already freelance and your income swings so much that you cannot plan."
   - "Someone asks how many clients you need and you only have a guess."
+  - "A partner or family member wants to see the number before you hand in notice."
+
+not_for:
+  - "You already know your floor and need a fee, a client limit and billing terms. Use the Client fee and cap setter."
+  - "You want the notice letter and the order of talks for leaving. Use the Job exit plan writer."
+  - "You want cash rules for thin months. Use the Lean-year cash rules writer."
+  - "You need tax or legal advice for your country. Ask a local adviser. This uses one flat tax share."
 
 you_give:
   - "What you spend in a lean month and in a comfortable one"
-  - "What your job covers that you would pay for yourself: health cover, pension, equipment, space"
+  - "What your job covers that you would pay for yourself, such as health cover, pension, equipment and space (say none if you already work for yourself)"
   - "Every way you could earn: the amount, how regular, whether there is a contract, how fast it is paid"
-  - "Your tax rate or a rough figure (optional)"
+  - "Your tax rate as one flat share of income (optional)"
   - "What you would charge a new client (optional)"
 you_get:
   - "Your monthly floor, in the lean and the comfortable version"
@@ -32,22 +41,23 @@ you_get:
   - "A list of what is missing"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste your numbers as they are, with gaps. It marks what it cannot work out."
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. No files, web search or code needed."
+  - "Paste your costs, what your job covers and every income stream. Three months of bank statements help with the lean-month figure. Leave out account numbers."
+  - "Add your tax rate if you know it. If not, the report shows the floor before tax and says so. Ask a local adviser for a rate."
   - "Check the steady and extra sort. Move a stream if you know better."
-  - "Take the report to the Client fee and cap setter."
+  - "Take the report to the Client fee and cap setter to turn the gap into a fee and a client limit."
 
 how_it_works:
-  - title: "Builds the quiet-life month"
-    text: "Your leanest comfortable month, then the comfortable one."
+  - title: "Builds the lean month"
+    text: "Adds up your leanest comfortable month, then the comfortable one."
   - title: "Prices what the job gave you"
     text: "Health cover, pension, tools and space, each with a monthly cost."
   - title: "Adds a tax share"
-    text: "Turns the cost into the gross income you need to earn."
+    text: "Turns costs into the gross income you need to earn, using one flat share of your income."
   - title: "Sorts the streams"
-    text: "Steady, seasonal or extra, with a count of 80% for streams without a contract."
+    text: "Steady, seasonal or extra. Streams without a contract count at 80%."
   - title: "Finds the gap"
-    text: "Floor minus steady income, then clients needed at your fee."
+    text: "Floor minus steady income, then clients needed at your fee, rounded up."
   - title: "Tests a sick month"
     text: "What keeps paying when you cannot work, and the hole that leaves."
   - title: "Sizes the cash"
@@ -55,7 +65,7 @@ how_it_works:
 
 output_shape: |
   FLOOR
-  Lean month: <amount>  Employer extras: <amount>  Tax share: <percent>
+  Lean month: <amount>  Employer extras: <amount>  Tax share: <percent, or MISSING>
   Gross floor (lean): <amount>  Gross floor (comfortable): <amount>
 
   STREAMS
@@ -71,15 +81,40 @@ output_shape: |
   CASH BEFORE LEAVING
   Slow-payment cover: <amount>  Two sick months: <amount>  Total: <amount>
 
+  THE QUESTION
+  <the decision, in one line, for the next step>
+
   MISSING
   <figures you need>
 
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "What you spend in a lean month and a comfortable one"
+    - "What your job covers that you would pay for yourself"
+    - "Every way you could earn, with amount, how regular, contract or not, and how fast you are paid"
+    - "Your tax rate and what you would charge a new client (optional)"
+  output:
+    - name: "FLOOR"
+      contains: "Your lean month, the employer extras, the tax share, and the gross floor in a lean and a comfortable version."
+    - name: "STREAMS"
+      contains: "Each income stream marked steady, seasonal or extra, with the amount counted and the steady total."
+    - name: "GAP AND CLIENTS"
+      contains: "The floor minus steady income, and how many clients that takes at your fee, rounded up."
+    - name: "SICK MONTH"
+      contains: "What keeps paying when you cannot work, and the hole that leaves."
+    - name: "CASH BEFORE LEAVING"
+      contains: "Cover for slow first payments, two sick months, and the total to hold before you leave."
+    - name: "THE QUESTION"
+      contains: "Your decision in one line, so the next step can pick it up."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Figures you did not give, and one line for each of its own checks it missed."
+
 tweaks:
   - what: "Currency and tax"
-    how: "Name your currency and give your tax rate. Without a rate it asks you to check one with a local adviser."
+    how: "Name your currency and give your tax rate as one flat share. Without a rate the floor is shown before tax and marked MISSING."
   - what: "Benefits"
     how: "If a partner's job covers health or housing, say so. The employer extras shrink."
   - what: "Comfort level"
@@ -117,3 +152,5 @@ terms:
     meaning: "Income that repeats monthly and has been known for at least three months."
   - term: "Sick-month hole"
     meaning: "The floor minus whatever keeps paying when you cannot work."
+  - term: "Flat tax share"
+    meaning: "One percentage of your income paid as tax. Real tax may rise in steps."

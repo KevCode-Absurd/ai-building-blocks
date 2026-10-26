@@ -1,6 +1,6 @@
 new_slug: idea-odds-scorer
 name: "Idea odds scorer"
-summary: "List your ideas. Get each scored on upside, passion and odds, with the best next small step."
+summary: "Score your business ideas on profit, passion and odds. Get a ranked list, long shots weighed fairly, and a first small step with a real customer."
 job: test-an-idea
 thinking: low
 thinking_why: "The steps are fixed and the scoring is simple arithmetic with reasons."
@@ -17,6 +17,10 @@ when:
   - "You have several ideas and keep switching between them."
   - "A friend is excited about an idea and you want a fair view."
   - "You are about to spend months on something you have not compared."
+not_for:
+  - "You have already picked one idea and want to test it: use the Customer conversation request writer to ask real people."
+  - "You need a market size or a price: look up real figures first, then bring them here."
+  - "You want a plan for building the idea: this only picks the first small step, so ask a mentor or advisor."
 
 you_give:
   - "Your ideas, one sentence each"
@@ -29,10 +33,31 @@ you_get:
   - "A first small step with a real customer"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste your ideas and anything you know about each."
-  - "Change any score you disagree with and give your reason."
-  - "Take the first small step within two weeks."
+  - Open a chat in Claude, ChatGPT or Gemini. Add the skill, or copy it and paste it in. No code or paid tool is needed.
+  - Paste your ideas, one sentence each. Add what you know about the market, your skills, your time and your money.
+  - Read each score and its reason. If you disagree, say so and give your reason, and ask for a new ranking.
+  - Check any score of 0. A zero makes the whole product zero, so make sure you mean it.
+  - Take the first small step with a real customer within two weeks.
+output_sample:
+  input:
+    - Your ideas, one sentence each
+    - What you know about the market and your skills (optional)
+    - Your time and money limits (optional)
+  output:
+    - name: Ideas
+      contains: "Each idea written in one line: who you help, what you do and the result."
+    - name: Scores table
+      contains: Profit, passion and odds from 0 to 10 with a reason each, plus the product, sorted high to low.
+    - name: Long shots
+      contains: Expected value for ideas with big upside and low odds, using only figures you gave.
+    - name: Top idea and best long shot
+      contains: The idea to lead with and the long shot worth keeping, each with a reason.
+    - name: First small steps
+      contains: One step per pick that puts the idea in front of a real customer within a week or two.
+    - name: MISSING
+      contains: Gaps in what you gave, such as passion or detail, marked and never guessed.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 
 how_it_works:
   - title: "Writes ideas"

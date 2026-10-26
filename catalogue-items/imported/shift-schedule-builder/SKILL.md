@@ -5,6 +5,31 @@ description: When the user wants to optimize workforce scheduling, create shift 
 
 # Workforce Scheduling
 
+## How to run this version
+
+This block was added by AI Blocks. The method below is the original author's.
+
+**Work in this order.**
+1. Collect demand by day and hour (or the shape of it), headcount by role and contract, availability, time-off, opening hours and minimum staffing.
+2. Collect the rules: maximum days in a row, rest between shifts, break rules, overtime rules and pay rates.
+3. Match staff to demand hour by hour.
+4. Check every rule on the finished plan, one by one.
+5. Show coverage and cost for each option so the user can compare before publishing.
+
+**Ask first, never guess.** If demand, headcount or a rule is missing, ask once. If the user does not know, write MISSING and say what it affects. Do not invent demand, staff, rates or rules. Where the user has no demand figures, ask for a rough pattern (busy and quiet hours) and label the plan as built on that guess.
+
+**Only tick a rule that was checked.** In the compliance list, show a tick only for rules the user gave you and you tested on the plan. List any rule you could not test as "not checked".
+
+**The numbers in the code are examples.** The random demand, the 20 staff, the pay rates of 20 and 30 and the 1.5 times overtime factor show the shape of the model. Use the user's own figures. The 11-hour rest and 6-day limits in the Output Format are placeholders too. Rules differ by country, state, contract and union agreement.
+
+**This is a plan, not legal sign-off.** Tell the user to check rest, overtime, breaks and notice rules against local employment law or their union agreement, and to have a manager review the plan before it is published to staff.
+
+**Tools.** A small team (up to about 10 people, one week) can be planned in plain chat. Bigger teams and the optimizer need an AI that can run Python with pandas and PuLP (free CBC solver). The scheduling software named near the end is paid and not needed.
+
+**Output.** Use the layout in "Output Format" below. Every figure there is a placeholder. Fill it only from the user's inputs.
+
+**Stop and say so** if the team has fewer than about 5 people (a simple rota is enough), or the user wants to give staff tasks within a shift (use a task assignment skill).
+
 You are an expert in workforce scheduling and labor optimization for warehouses and supply chain operations. Your goal is to help create optimal shift schedules that match labor supply with demand, minimize costs, ensure compliance, and improve employee satisfaction.
 
 ## Initial Assessment
@@ -858,63 +883,41 @@ from constraint import Problem, AllDifferentConstraint
 
 ### Workforce Schedule Report
 
-**Weekly Schedule - Week of January 15-21, 2024**
+**Weekly Schedule, week of <date>**
 
 **Schedule Summary:**
 
-| Day | Shift | Employees | Total Hours | Demand (hrs) | Utilization |
-|-----|-------|-----------|-------------|--------------|-------------|
-| Mon | Morning | 12 | 96 | 92 | 96% |
-| Mon | Afternoon | 10 | 80 | 78 | 98% |
-| Mon | Evening | 6 | 48 | 45 | 94% |
-| Tue | Morning | 11 | 88 | 85 | 97% |
-| ... | ... | ... | ... | ... | ... |
+| Day | Shift | Employees | Total Hours | Demand (hrs) | Coverage gap |
+|-----|-------|-----------|-------------|--------------|--------------|
+| <day> | <shift> | <n> | <hours> | <hours> | <hours, or none> |
 
-**Employee Assignments:**
+**Employee Assignments** (one block per person):
 
 ```
-Employee: EMP001 (John Smith)
-  Mon: Morning (6:00-14:00)
-  Tue: Morning (6:00-14:00)
-  Wed: Morning (6:00-14:00)
-  Thu: Morning (6:00-14:00)
-  Fri: Afternoon (14:00-22:00)
-  Total: 40 hours
-
-Employee: EMP002 (Jane Doe)
-  Mon: Afternoon (14:00-22:00)
-  Wed: Afternoon (14:00-22:00)
-  Thu: Evening (22:00-6:00)
-  Sat: Morning (6:00-14:00)
-  Total: 32 hours (Part-time)
-
-...
+Employee: <id or name> (<role>, <contract type>)
+  <Day>: <shift> (<start-end>)
+  ...
+  Total: <hours> hours
 ```
 
-**Cost Analysis:**
+**Cost Analysis** (only if the user gave pay rates):
 
 | Category | Hours | Rate | Cost |
 |----------|-------|------|------|
-| Regular Time | 1,520 | $20/hr | $30,400 |
-| Overtime | 85 | $30/hr | $2,550 |
-| Temporary | 40 | $25/hr | $1,000 |
-| **Total** | **1,645** | - | **$33,950** |
+| Regular time | <hours> | <rate> | <cost> |
+| Overtime | <hours> | <rate> | <cost> |
+| Temporary | <hours> | <rate> | <cost> |
+| **Total** | **<hours>** | - | **<cost>** |
 
-**Performance Metrics:**
-
-- Average Utilization: 95%
-- Overtime %: 5.2%
-- Employee Satisfaction (Preferences): 8.2/10
-- Coverage: 100% (no understaffed shifts)
-- Cost per Hour: $20.64
+**Performance Metrics:** average utilization, overtime share, coverage, cost per hour, all worked from the inputs.
 
 **Schedule Compliance:**
 
-- ✓ All shifts meet minimum staffing
-- ✓ No employees exceed 40 regular hours
-- ✓ Minimum 11-hour rest between shifts
-- ✓ No more than 6 consecutive days worked
-- ✓ Skill requirements met (forklift, QC)
+- <rule the user gave>: checked and met, or checked and broken (say where), or "not checked"
+
+**Options compared:** one line per option (for example 8-hour or 10-hour shifts): <coverage>, <cost>, <main trade-off>.
+
+**Before you publish:** check the plan against local employment law or the union agreement, and have a manager review it.
 
 ---
 

@@ -1,6 +1,6 @@
 new_slug: first-market-picker
 name: "First market picker"
-summary: "Paste your product and who could use it. Get a ranked short list of small first markets and the one to own."
+summary: "Find the small group of buyers you can win first. Give it your product. You get a ranked short list and the one group to own."
 job: plan-strategy
 thinking: low
 thinking_why: "It lists groups and scores them against fixed tests, which most chat AIs do well."
@@ -17,6 +17,10 @@ when:
   - "Your product could serve many kinds of buyers and you can't pick."
   - "Your plan says \"small businesses\" or \"everyone\"."
   - "You need a group you can reach in the next few weeks."
+not_for:
+  - "Your product already sells well to a proven group: use the Market boundary checker to test where that market ends."
+  - "You already know your first group and want to talk to buyers: write a short request and ask five people for a call."
+  - "You want the size of a whole industry: use a market report or ask a person who knows the trade."
 
 you_give:
   - "What your product does"
@@ -33,6 +37,24 @@ how_to_use:
   - "Paste your product and any groups you already have in mind. Say where you can reach people."
   - "Count the numbers it asks for before you act on the pick. Treat the pick as a guess until you do."
   - "Take the pick to your next conversation with buyers, and name the group when you speak."
+output_sample:
+  input:
+    - What your product does and the problem it solves
+    - Groups of buyers you think could use it (optional)
+    - Places, lists and people you can reach now (optional)
+  output:
+    - name: Ranked short list
+      contains: Each group with a 0 to 2 score on small, close, need, served and reach, plus one line of reasoning.
+    - name: The pick
+      contains: The one group to own first, or a smaller slice of it if the top group looks too big.
+    - name: Why you could own it
+      contains: Two sentences on why you could be the first name this group thinks of.
+    - name: What to count
+      contains: The numbers to check before you act, with MISSING marked for any you don't have.
+    - name: Next group along
+      contains: The group that sits next to the pick and could be your next one.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "Lists the groups"

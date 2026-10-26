@@ -1,55 +1,84 @@
 new_slug: debt-maturity-funding-ladder
 name: Debt maturity funding ladder
 headline: Debt maturity funding ladder
-summary: A maturity funding ladder with cumulative shortfalls
+summary: Check if your cash covers three debt maturities. Get the closing cash after each one and the biggest gap below your minimum cash.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A maturity funding ladder with cumulative shortfalls. Share accessible opening cash, three dated maturity buckets, cash available after operations, confirmed refinancing proceeds and minimum floor.
+subhead: Give it your opening cash, three debt maturity dates and amounts, the cash you expect to add before each, any refinancing already signed and your minimum cash. It rolls the cash through each maturity in turn. You get the closing cash after each one and the largest gap below your minimum.
 explain: |-
-  A maturity funding ladder with cumulative shortfalls.
+  Debt does not come due all at once. A company may face one repayment this quarter, a bigger one in six months and a third next year. The question is simple: after each repayment, is there still enough cash? This debt maturity funding ladder answers it one step at a time.
 
-  Treasury debt maturities. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+  It starts with the cash you can reach today. For each maturity it adds the cash you expect from running the business and any refinancing that is already signed. It then takes off the repayment. What is left becomes the opening cash for the next step. The skill then finds the lowest balance across all steps and compares it with your minimum cash. That gives the largest shortfall, if any.
+
+  It keeps signed refinancing apart from proposals. A loan that has only been discussed is shown as an open option, never counted as cash. It also never reuses the same cash twice. This is a cash check on a list of dates, not a view on whether a lender will refinance you.
 when:
-  - You need a maturity funding ladder with cumulative shortfalls.
-  - You work on treasury debt maturities and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Three loans or bonds fall due in the next year and you want to see where cash runs short.
+  - A lender or board member asks which maturity is the tightest.
+  - You are deciding whether to refinance early and need the size of the gap first.
+  - A refinancing is signed for one maturity and you want to see what it leaves for the next two.
 you_give:
-  - Accessible opening cash, three dated maturity buckets, cash available after operations, confirmed refinancing proceeds and minimum floor.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Opening cash you can reach, leaving out trapped or restricted cash (from your bank balances or treasury report)
+  - Three maturity dates and amounts (from the loan agreements or your debt schedule)
+  - Cash you expect to add before each maturity, after running costs (from your cash forecast)
+  - Refinancing already signed for each date (from the signed loan or term sheet)
+  - Your minimum cash, the floor you must stay above (from loan terms or company policy)
+  - The currency and units, such as USD in millions
+  - Your own cash spreadsheet (optional)
 you_get:
-  - A maturity funding ladder with cumulative shortfalls.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Closing cash after each of the three maturities
+  - The largest gap below your minimum cash, or a note that there is none
+  - "A ladder that shows each step: opening cash, cash added, refinancing, repayment, closing cash"
+  - Any refinancing that is only a proposal, listed as an open option and not counted
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste your opening cash, the three maturities with their dates, and the cash you expect before each. Say where each figure came from, and give the currency and units.
+  - Say which refinancing is signed and which is only a proposal. Only signed refinancing is counted. Paste your minimum cash too, or the result marks it MISSING.
+  - "Check one line yourself: closing cash is opening cash plus cash added plus refinancing, less the repayment. For 50 plus 10, less 40, that is 20."
+  - Read the largest gap, MISSING and CHECKS MISSED before you share anything. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
-    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
-  - title: 2. Align maturity dates and mandatory repayments to the three buckets, distinguishing committed refinancing from unapproved proposals
-    text: Align maturity dates and mandatory repayments to the three buckets, distinguishing committed refinancing from unapproved proposals.
-  - title: 3. Roll accessible cash, after-operation cash and confirmed financing through each maturity payment without recycling the same proceeds
-    text: Roll accessible cash, after-operation cash and confirmed financing through each maturity payment without recycling the same proceeds.
-  - title: 4. Show every closing balance and peak below-floor gap; proposed borrowing remains an unresolved funding option
-    text: Show every closing balance and peak below-floor gap; proposed borrowing remains an unresolved funding option.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. Facts, signed terms and assumptions are kept apart.
+  - title: Sorts the maturities
+    text: Puts the three repayments in date order. Each one is a step on the ladder.
+  - title: Rolls the cash forward
+    text: Opening cash, plus cash added, plus signed refinancing, less the repayment, gives the closing cash for that step.
+  - title: Carries each balance on
+    text: The closing cash of one step is the opening cash of the next. The same money is never counted twice.
+  - title: Finds the lowest point
+    text: Takes the lowest balance across the opening cash and the three closing balances, then compares it with your minimum cash.
+  - title: Marks the gaps
+    text: Writes MISSING for any fact it was not given and lists any check it could not run. It never fills a gap with zero.
 output_shape: |-
-  A maturity funding ladder with cumulative shortfalls.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Closing cash after maturity 1 <amount> | after maturity 2 <amount> | after maturity 3 <amount> | Largest gap below minimum cash <amount or none>
+
+  SCOPE AND SOURCES
+  <currency, units; source and date for each input; the three maturity dates>
+
+  INPUTS AND ASSUMPTIONS
+  <opening cash, cash added per step, signed refinancing per step, repayments, minimum cash; proposed borrowing listed as open options>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <one row per step: opening, cash added, refinancing, repayment, closing; lowest balance; gap against minimum cash>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Actual records, contractual terms and scenarios remain distinguishable.
+  - what: Cash after running costs
+    how: Give cash added after running costs but before the debt payments on the ladder. Debt service counted twice will make the gap look bigger.
+  - what: Restricted cash
+    how: Say which cash accounts you can reach. Leave out cash held for a lender or a legal reason.
+  - what: More than one scenario
+    how: Ask for a second run with a refinancing signed or slipped by one step. Keep each run as its own ladder.
 judge:
   - Actual records, contractual terms and scenarios remain distinguishable.
   - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
@@ -64,15 +93,57 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your debt schedule with the maturity dates and amounts
+    - Your cash forecast, split by the same three dates
+    - The signed refinancing documents, if any
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Maturity
+    meaning: The date a loan or bond must be repaid.
+  - term: Funding ladder
+    meaning: A list of repayment dates in order, with the cash left after each one.
+  - term: Minimum cash
+    meaning: The least cash you must keep, set by a loan term or company policy.
+  - term: Refinancing
+    meaning: A new loan that pays off an old one. Only signed refinancing counts here.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+not_for:
+  - You have more than three maturities, or you need the order of payments inside one day. Use the Settlement liquidity ladder builder.
+  - You want to know if a loan covenant is met. Use the Debt service covenant headroom checker.
+  - You want to split one period's cash across lenders in the order the loan sets. Use the Project payment waterfall builder.
+  - You want to know if a lender will refinance you. This is a cash check and gives no view on that.
+output_sample:
+  input:
+    - Your opening cash, leaving out restricted cash
+    - Three maturity dates and amounts from your debt schedule
+    - Cash you expect to add before each maturity
+    - Signed refinancing and your minimum cash
+  prerequisites:
+    - A cash forecast that already leaves out the debt payments on the ladder
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Closing cash after each maturity and the largest gap below your minimum cash.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, the three maturity dates, and the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each figure you gave it, signed refinancing, and proposals listed as open options.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: One row per step with opening cash, cash added, repayment and closing cash, then the lowest balance.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
+next:
+  - debt-service-covenant-headroom-checker
+  - refinancing-closing-cost-checker

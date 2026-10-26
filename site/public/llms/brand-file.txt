@@ -1,50 +1,52 @@
 # Set up your brand file: AI Blocks
 
-> 46 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 48 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer): Describe your idea. Get name options, positioning angles, mood directions and a story, narrowed to one direction.
+- [Brand consistency reviewer](https://useaiblocks.com/agents/agency-design-brand-guardian): Get a brand foundation document or a brand consistency check. See your purpose, voice and look in writing, or where your materials drift from them.
+- [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer): Share your product and buyers. Explore what the brand stands for, possible names, visual styles and story ideas, then narrow the options.
 - [Brand family planner](https://useaiblocks.com/skills/brand-family-planner): List your brands and products. Get a clear structure for how they relate and what each one is called.
-- [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder): Attach your brand file. Get a printable brand guide and a values file to paste into any tool.
-- [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor): Describe your brand as it is today. Get a clear diagnosis of what works and what is off, with ranked fixes.
-- [Brand materials finder](https://useaiblocks.com/skills/brand-materials-finder): Point it at your tools. Get a report of style guides, decks and call notes you already have, plus gaps.
-- [Brand message guide](https://useaiblocks.com/skills/marketing-vector-writer): Share your brand and ad plans. Get a clear message direction and examples of ideas that fit or stray.
-- [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder): Give it your brand facts. Get a tagline, key messages and proof points for each audience.
-- [Brand mood board planner](https://useaiblocks.com/skills/brand-stylescape-planner): Share brand traits and customer details. Get three visual directions, a recommended combination and photography guidance.
+- [Brand file and style guide builder](https://useaiblocks.com/workflows/build-a-brand-file-and-style-guide-from-scratch): Turn product and buyer facts into core messages, writing rules, a visual direction and one shared brand guide.
+- [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder): Turn your brand file into a printable brand guide and a values file to paste into any design tool. Colour pairs are checked so text stays readable.
+- [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor): Share brand materials, goals and feedback. See what is clear, what clashes and how you differ from rivals, with ranked fixes.
+- [Brand materials finder](https://useaiblocks.com/skills/brand-materials-finder): Share connected workspaces and search scope. Find existing brand guides, decks and notes, with ranked sources, conflicts and coverage gaps.
+- [Brand message consistency reviewer](https://useaiblocks.com/workflows/make-every-touchpoint-say-the-same-thing): Share store pages, emails, packaging and buyer evidence. Get message mismatches ranked, sample copy edits and a practical brand guide.
+- [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder): Build your brand messaging in one pass. Give it your brand facts and get a core message, tagline options and proof points for each audience.
+- [Brand mood board planner](https://useaiblocks.com/skills/brand-stylescape-planner): Share your brand values and buyers. Get three visual directions, one combined style and clear photo rules for a designer.
 - [Brand name finder](https://useaiblocks.com/skills/brand-name-finder): Share your brand brief. Get name ideas, or scores and honest feedback on the names you already have.
-- [Brand perception auditor](https://useaiblocks.com/skills/brand-perception-auditor): Describe your brand and who it is for. Get a list of mixed signals and changes to close the gap.
+- [Brand perception auditor](https://useaiblocks.com/skills/brand-perception-auditor): Share brand materials, goals and audience feedback. Find mismatched signals and small changes to test how the brand comes across.
+- [Brand positioning and naming planner](https://useaiblocks.com/workflows/name-and-position-a-new-brand): Share the category, rivals and product proof. Get a positioning draft, name shortlist, naming checks and future-range questions.
 - [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.
-- [Brand ritual designer](https://useaiblocks.com/skills/brand-ritual-designer): Give it your product and its use. Get three customer rituals and a launch plan for one.
-- [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer): Give it your logo, colours and fonts. Get a full style guide others can follow without guessing.
-- [Brand style setup wizard](https://useaiblocks.com/skills/brand-style-setup-wizard): Answer ten questions once. Get your colours, fonts and style saved for every page that follows.
-- [Brand style starter picker](https://useaiblocks.com/skills/brand-style-starter-picker): Say what your business does. Get a ready style starting point with colours, fonts, voice and image direction.
+- [Brand ritual designer](https://useaiblocks.com/skills/brand-ritual-designer): Design a brand ritual for your product. Give it how customers use it. You get three ritual ideas and a 90-day launch plan for the best one.
+- [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer): Share the finished identity, voice rules and real examples. Get a versioned guide for logo, colour, type, images, copy and use.
+- [Brand style starter picker](https://useaiblocks.com/skills/brand-style-starter-picker): Find a brand style starting point for your business: colours, fonts, voice lines and image notes you can change. Give it a short description.
+- [Brand voice consistency reviewer](https://useaiblocks.com/agents/brand-voice-reviewer): Check drafts against approved voice rules, fix only the flagged wording and track repeat slips, stopping after three rounds.
+- [Brand voice guide and copy reviewer](https://useaiblocks.com/workflows/write-a-voice-guide-from-your-documents-and-check-copy): Share approved writing samples and a draft or writing goal. Get a voice guide, revised copy and ranked checks against the settled guide.
 - [Brand voice guide builder](https://useaiblocks.com/skills/brand-voice-guide-builder): Give it your documents or call transcripts. Get a brand voice guide with rules, examples and open questions.
-- [Brand voice one-pager writer](https://useaiblocks.com/prompts/brand-voice-one-pager-writer): Describe your brand and who you write for. Get a one-page voice guide with do and don't lines.
-- [Brand voice reviewer](https://useaiblocks.com/agents/brand-voice-reviewer): Give it each draft before it goes out. Get it checked against your voice, fixed and re-checked, with repeat slips tracked.
-- [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter): Give it a draft or a topic. Get emails, posts or pitches written in your brand voice, with notes on each choice.
-- [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer): Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow.
-- [Build a brand file and brand guide from your website](https://useaiblocks.com/workflows/brand-file-from-website): Give it your website. Get a brand file, a founder interview to fill its gaps, and a brand guide.
-- [Build a brand file and style guide from scratch](https://useaiblocks.com/workflows/build-a-brand-file-and-style-guide-from-scratch): Give it your product and buyers. Get a brand file, a visual direction and a style guide.
-- [Competitor positioning map](https://useaiblocks.com/skills/positioning-grid-builder): Give it your product and rivals. Get an XY map and the one corner you can own.
-- [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker): Paste a draft. Get deviations from your voice and style guide ranked by severity, each with a before and after fix.
-- [Founder interview planner](https://useaiblocks.com/skills/founder-interview-planner): Attach your brand file. Get a ranked founder call plan, a written form, and every answer filed.
-- [Make every touchpoint say the same thing](https://useaiblocks.com/workflows/make-every-touchpoint-say-the-same-thing): Give it your store link and reviews. Get a ranked list of where your touchpoints disagree and a brand guide.
-- [Name and position a new brand](https://useaiblocks.com/workflows/name-and-position-a-new-brand): Give it your category and rivals. Get a position to own, a tested name and a check that it fits later.
-- [Origin-true business name picker](https://useaiblocks.com/skills/origin-true-business-name-picker): Give it your roots and target markets. Get business names that stay true to you and still work for buyers.
-- [Packaging first-impression review](https://useaiblocks.com/skills/pack-and-thumbnail-glance-tester): Give it your pack image. Get a 3-second read score out of 100 and a sharper pack brief.
-- [Plan a branded unboxing that customers film and reorder for](https://useaiblocks.com/workflows/plan-a-branded-unboxing-that-customers-film-and-reorder-for): Give it your store link and order data. Get a customer ritual, an unboxing plan and the inserts that carry it.
-- [Premium positioning mapper](https://useaiblocks.com/skills/premium-positioning-mapper): Give it your product and buyer groups. Get exclusivity, identity and story angles per group to test.
-- [Product context builder](https://useaiblocks.com/skills/product-context-builder): Answer questions about your product. Get one context file every marketing skill reads first.
-- [Product name brainstormer](https://useaiblocks.com/skills/product-name-brainstormer): Describe your product and buyers. Get five memorable name ideas, each with the reason it fits.
-- [Sensory unboxing planner](https://useaiblocks.com/skills/sensory-unboxing-planner): Describe your product and pack. Get matched sense cues with costs and an unboxing script.
-- [Store brand architecture planner](https://useaiblocks.com/skills/store-brand-architecture-planner): List your stores and ranges. Get a brand structure, a naming rule and a name call per range.
-- [Store brand consistency review](https://useaiblocks.com/skills/store-brand-signal-auditor): Give it your site, emails, pack and ads. Get a score out of 100 for what each says.
-- [Store name generator](https://useaiblocks.com/skills/store-name-generator): Give it your brief and rivals. Get 200 raw names, a shortlist of 15 and a clearance list.
-- [Store name tester](https://useaiblocks.com/skills/store-name-tester): Paste your shortlisted names. Get each scored out of 100 with a keep, fix or drop call.
-- [Store photo style locker](https://useaiblocks.com/skills/store-photo-style-locker): Describe your store look once. Get a style file that keeps models, light and layout the same across every product photo.
-- [Store rebrand planner](https://useaiblocks.com/skills/store-rebrand-planner): Give it your store, name and goals. Get a keep-or-rename score out of 100 and a phased plan.
-- [Store value proposition writer](https://useaiblocks.com/skills/store-promise-writer): Give it your product and best customers. Get a three-line promise and a not-for-you list.
-- [Tagline score card](https://useaiblocks.com/prompts/tagline-score-card): Paste your tagline and rivals' lines. Get a pass or fail on ten tests, a score out of 100 and sharper lines.
-- [Tagline tester](https://useaiblocks.com/skills/tagline-tester): Paste your tagline and key messages. Get a score out of 100 from ten tests and sharper versions.
-- [TikTok Shop brand builder](https://useaiblocks.com/skills/tiktok-shop-brand-builder): Describe your shop. Get your brand voice, content pillars, story and ways to build a community.
-- [Voice and tone guide writer](https://useaiblocks.com/skills/voice-and-tone-guide-writer): Describe how your brand talks. Get voice traits, tone by situation, word lists and side-by-side examples.
-- [Write a voice guide from your documents and check copy](https://useaiblocks.com/workflows/write-a-voice-guide-from-your-documents-and-check-copy): Give it your documents. Get a voice guide, new copy in that voice and a ranked check.
+- [Brand voice one-pager writer](https://useaiblocks.com/prompts/brand-voice-one-pager-writer): Get a one-page brand voice guide with tone sliders, word lists and before and after lines from a short description of your brand and readers.
+- [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter): Give it a draft or topic and your voice guide. Get emails, posts or pitches in that voice, with notes on key choices.
+- [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer): Turn your brand details and audience needs into tone examples, word lists, and writing rules.
+- [Branded unboxing and insert planner](https://useaiblocks.com/workflows/plan-a-branded-unboxing-that-customers-film-and-reorder-for): Share store facts, product details and order margins. Get a customer ritual idea, packaging experience and insert or gift plan.
+- [Business name market-fit reviewer](https://useaiblocks.com/skills/origin-true-business-name-picker): Share your roots, target markets and name ideas. Get name suggestions or checks, with language and legal checks still needed.
+- [Competitor positioning mapper](https://useaiblocks.com/skills/positioning-grid-builder): Share your product, alternatives and buyer comments. Get comparison maps, possible gaps and a positioning claim to test.
+- [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker): Share a draft and voice guide. Get ranked findings and before-and-after edits for top issues.
+- [Founder interview planner](https://useaiblocks.com/skills/founder-interview-planner): Plan your founder interview call. Give it your brand file and get ranked questions, a written form and every answer filed.
+- [Packaging first-impression reviewer](https://useaiblocks.com/skills/pack-and-thumbnail-glance-tester): Share a pack image and five strangers’ brief-look answers. Get a custom read score, design changes and a comparison plan.
+- [Premium brand ad message planner](https://useaiblocks.com/skills/marketing-vector-writer): Share your brand and ad offers. Get one message direction, allowed ad ideas, discount rules and a creator brief.
+- [Premium product positioning planner](https://useaiblocks.com/skills/premium-positioning-mapper): Share product facts, buyer groups and costs. Get positioning lines, proof needs and price scenarios to test with real buyers.
+- [Product brand sheet planner](https://useaiblocks.com/workflows/product-brand-sheet-planner): Share your product and brand direction. Get a one-page visual sheet plan, image prompts and a list of missing assets.
+- [Product context file writer](https://useaiblocks.com/skills/product-context-builder): Share product facts, audience and positioning. Get a reviewed context file that other marketing skills can reference.
+- [Product name brainstormer](https://useaiblocks.com/skills/product-name-brainstormer): Get five product name ideas for a launch or a rename, each with why it fits your buyers, and a reminder to check trademarks and domains yourself.
+- [Product-page brand analyst](https://useaiblocks.com/skills/product-page-brand-profile-extractor): Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text.
+- [Store brand architecture planner](https://useaiblocks.com/skills/store-brand-architecture-planner): Decide if a new range gets its own name or your store name. Get a brand structure and a naming rule for future products.
+- [Store brand consistency reviewer](https://useaiblocks.com/skills/store-brand-signal-auditor): Check your store brand signals before a redesign. Give it your site, emails, pack and ads. You get a score out of 100 and a fix list.
+- [Store name generator](https://useaiblocks.com/skills/store-name-generator): Get 200+ store name ideas, a shortlist of 10 to 15 and a checklist to clear each one. Built from your brief and your rivals.
+- [Store name tester](https://useaiblocks.com/skills/store-name-tester): Test your store name before you buy a domain or logo. Get each name scored out of 100 with a keep, fix or drop call and five real-world mock-ups.
+- [Store photo style guide writer](https://useaiblocks.com/skills/store-photo-style-locker): Describe your store look. Get a reusable style file for consistent model references, lighting and layouts across product photos.
+- [Store rebrand planner](https://useaiblocks.com/skills/store-rebrand-planner): Decide if your store should keep, tweak or change its name. Get a rename score out of 100 and a four-phase store rebrand plan.
+- [Store value proposition writer](https://useaiblocks.com/skills/store-promise-writer): Write your store promise: give it what you sell and your best customers. You get a three-line promise and a list of who your store is not for.
+- [Tagline checker and rewriter](https://useaiblocks.com/prompts/tagline-score-card): Test your tagline on ten pass or fail checks. Get a score out of 100, a truth check and four rewritten taglines, each scored.
+- [Tagline tester](https://useaiblocks.com/skills/tagline-tester): Test your tagline with ten pass or fail checks. You get a score out of 100, one big idea, key messages and sharper versions to pick from.
+- [TikTok Shop brand builder](https://useaiblocks.com/skills/tiktok-shop-brand-builder): Share your shop, products and buyers. Get brand positioning, voice rules, content themes, a story and community ideas.
+- [Unboxing plan writer](https://useaiblocks.com/skills/sensory-unboxing-planner): Describe your product and pack. Get matched sense cues with costs and an unboxing script.
+- [Voice and tone guide writer](https://useaiblocks.com/skills/voice-and-tone-guide-writer): Share brand positioning, audience and writing samples. Get voice traits, tone by situation, word rules and paired examples.
+- [Website brand guide builder](https://useaiblocks.com/workflows/brand-file-from-website): Build a sourced brand file, prepare questions for its gaps and use real founder answers to create a brand guide.

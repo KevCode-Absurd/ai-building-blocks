@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It sends your saved prompt to an image service and saves the result.
 new_slug: multi-provider-image-maker
 name: Multi-provider image maker
-summary: Give it a prompt. Get an image from the image service you choose, in
-  the size you pick.
+summary: Make images from a prompt with one image maker that works with many services. Pick the service and size, and get a saved image file.
 job: make-images
 headline: Multi-provider image maker
-subhead: An image made by the image service you choose, in the size you pick,
-  from a single prompt. You can switch services without relearning anything.
+subhead: An image made by the image service you choose, in the size you pick, from a single prompt. You can switch services without relearning anything.
 explain: |
   An image made by the image service you choose, in the size you pick, from a single prompt. You can switch services without relearning anything.
 
@@ -17,20 +15,47 @@ when:
   - You need a batch of images in one size for a campaign.
   - Your usual service is down and you want a backup.
   - You want one command for all your image work.
+not_for:
+  - "You want to edit an existing photo or video: use your design tool or a photo editor instead."
+  - "You need one quick mockup: use the image feature built into your AI chat or design tool."
+  - "You cannot run code or get an API key for an image service: use your AI chat's own image feature."
 you_give:
-  - Your image prompt
-  - The service you prefer
-  - The size or shape
+  - Your image prompt, typed or saved in a file
+  - The image service you want to use
+  - The size or shape of the image
   - An API key for that service
+  - A reference image (optional)
 you_get:
   - The generated image saved as a file
   - Your saved defaults for next time
   - Batch output for many prompts
   - Messages when a setting is missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use an image service account or
-    API key.
+  - Open an AI that can run code on your computer, such as Claude Code or Codex. A plain chat window cannot run the script.
+  - Make sure Bun is installed. If not, your AI can run it with npx instead.
+  - "Add the skill folder and say: Make an image with the image maker skill. Give your prompt, service and size."
+  - On the first run, answer the setup questions. Your default service, model and size are saved for next time.
+  - Add your API key for the service when asked, or set it as an environment variable first.
+  - Open the image file at the path in the reply. For many images, give a batch file and the number of jobs to run at once.
+output_sample:
+  input:
+    - Your image prompt, typed or saved in a file
+    - The image service you want to use
+    - The size or shape of the image
+    - An API key for that service
+    - A reference image (optional)
+  prerequisites:
+    - An AI that can run code, with Bun or Node installed
+    - An account and API key for the image service you choose
+    - A saved preferences file, which the skill sets up on first run
+  output:
+    - name: Preferences file (EXTEND.md)
+      contains: Your default service, model and size, saved on first run and reused next time.
+    - name: Image file
+      contains: The picture made from your prompt, saved at the file path you give with --image.
+    - name: Reply message
+      contains: The saved file path and the service and size used, or a note about a missing setting.
+    - name: Batch file (optional)
+      contains: A list of prompts and file names, built from an outline and a prompts folder.
+    - name: Batch images (optional)
+      contains: One saved image per prompt in the batch, made in parallel with the number of jobs you set.

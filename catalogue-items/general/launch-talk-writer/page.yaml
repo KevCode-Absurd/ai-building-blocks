@@ -1,56 +1,65 @@
 new_slug: launch-talk-writer
 name: "Launch talk writer"
-summary: "Describe your product and who it is for. Get a short launch talk built on one story."
+summary: "Turn a product launch into a two-minute talk. Give your product, audience and venue. Get a timed script with one story, a demo and a closing belief."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It decides what to cut and which single story carries the talk."
 
 headline: "Launch talk writer"
-subhead: "Describe what you are launching, who it is for and where you will speak. It builds a short talk around one problem, one reveal and one true story. You get a timed script of about two minutes that ends on a belief."
+subhead: "Tell it what you are launching, who it is for and where you will speak. It builds a two-minute product launch talk around one problem, one reveal and one true story. You get a timed script, a demo written as actions and a closing line the room can repeat."
 
 explain: |
-  Most launch talks fail the same way: they walk through features and the room learns nothing it can repeat. The audience wants to know what was wrong, what is now different, and why they should care.
+  Most launch talks fail the same way. They walk through features, and the room learns nothing it can repeat. The audience wants to know what was wrong, what is different now and why they should care.
 
-  This skill starts with the problem in the words of the people who have it, then names what is wrong with today's choices in one line. It sets up a reveal by listing pieces people see as separate, then shows they are one thing. It shows the product working with no spec dump, adds one real story if you have it, and ends on a belief a stranger could repeat. It times the talk to two minutes and cuts the weakest part first.
+  This launch speech writer starts with the problem, in the words of the people who live with it. It names why today's choices fail them in one line. It lists pieces people see as separate, then shows they are one thing. That is the reveal. The demo is written as actions, with no spec list, and the talk ends on a belief a stranger could repeat.
+
+  It times each part against two minutes and cuts the weakest part first. If you did not give a real story, it leaves a marked gap and never invents a customer.
 
 when:
-  - "You are launching a product, feature or project and have two minutes on stage or camera."
-  - "Your team keeps adding features to the talk and it has no clear point."
-  - "You need a short intro for a demo day, a town hall or a launch video."
+  - "You launch a product, feature or project and have about two minutes on stage or on camera."
+  - "Your team keeps adding features to the talk and it has lost its point."
+  - "You need a short opener for a demo day, a town hall or a launch video."
+  - "You have a good product and a dull pitch, and the room's eyes are on their phones."
+
+not_for:
+  - "The room disagrees with you and you must win them over: use the Tough audience speech planner."
+  - "You already have a talk outline and only need the order fixed: use the Speech tension planner."
+  - "You need slides checked for length and text size: use the Pitch deck presentation reviewer."
+  - "You need a long keynote or a Q&A. This builds about two minutes around one story."
 
 you_give:
   - "What you are launching and who it is for"
-  - "Where the talk happens: stage, call or video"
+  - "Where the talk happens (stage, call or video) and how long you have"
   - "Product facts and numbers you may quote (optional)"
-  - "One real story from making or using it (optional)"
+  - "One true story from making or using it (optional)"
 you_get:
-  - "A timed script of about two minutes"
-  - "The reveal set up and the demo written as actions"
-  - "One story slot, filled or clearly marked"
-  - "A closing belief line, plus what was cut"
+  - "A timed script of about two minutes, with a time next to each part"
+  - "The reveal set up, and the demo written as actions"
+  - "One story slot, filled from your story or clearly marked as missing"
+  - "A closing belief line, and a note on what was cut and why"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe what you are launching and who has the problem it solves."
-  - "Tell it where you will speak and how long you have."
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "Say what you are launching, who has the problem it solves, and where you will speak."
   - "Paste the two or three facts that matter, and one true story if you have it."
-  - "Read the script aloud with a timer and change any line that sounds written."
+  - "Read the script aloud with a timer. Change any line that sounds written, not spoken."
+  - "If the closing belief is not yours, rewrite it until you would say it without notes."
 
 how_it_works:
   - title: "States the problem"
-    text: "In the words of the people who have it, with no product name yet."
+    text: "Writes it in the words of the people who have it, with no product name yet."
   - title: "Names what fails today"
-    text: "One plain line on why the current choices let people down."
+    text: "One fair, plain line on why the current choices let people down."
   - title: "Sets up the reveal"
     text: "Lists the separate pieces, then shows they are one thing."
   - title: "Shows it working"
-    text: "Two or three actions, no spec dump."
+    text: "Writes two or three actions with what the person sees. No spec dump."
   - title: "Tells one story"
-    text: "A real moment with one lesson, or a marked gap."
+    text: "Uses one real moment with one lesson, or leaves a marked gap."
   - title: "Ends on the belief"
-    text: "A line a stranger could repeat, with nothing after it."
+    text: "Closes on a line a stranger could repeat, with nothing after it."
   - title: "Fits the clock"
-    text: "Times each part and cuts the weakest first. Then names any check it missed."
+    text: "Times each part against two minutes and cuts the weakest first, then names any check it missed."
 
 output_shape: |
   TALK (<total time>)
@@ -82,6 +91,28 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "What you are launching and who it is for"
+    - "Where you will speak and how long you have"
+    - "Product facts and numbers you may quote (optional)"
+    - "One true story from making or using it (optional)"
+  output:
+    - name: "PROBLEM"
+      contains: "One or two sentences in your audience's own words, with no product name yet."
+    - name: "WHAT FAILS TODAY"
+      contains: "One fair line on why current choices let people down."
+    - name: "THE REVEAL"
+      contains: "The separate pieces people know, then the one thing they turn out to be."
+    - name: "SHOWN WORKING"
+      contains: "Two or three actions with what the person sees, and no spec list."
+    - name: "STORY"
+      contains: "Four to six true sentences with one lesson, or a marked gap if you gave none."
+    - name: "CLOSE"
+      contains: "One belief line a stranger could repeat. It is the last thing said."
+    - name: "CUT, MISSING and CHECKS MISSED"
+      contains: "What was removed to fit two minutes, facts you did not give, and any check it failed."
+
 tweaks:
   - what: "The problem in real words"
     how: "Paste a sentence a customer or teammate actually said. The opening gets closer to life."
@@ -109,7 +140,7 @@ improve:
   - "Add your own limit, such as 90 seconds, to step 8."
   - "Add words your company never uses to the Avoid list."
   - "Keep a folder of true stories and paste the best one each time."
-  - "Pair it with \"Why-first message writer\" if you are still unsure what you believe."
+  - "Pair it with \"Belief-led message writer\" if you are still unsure what you believe."
 
 works_best_with:
   tools:

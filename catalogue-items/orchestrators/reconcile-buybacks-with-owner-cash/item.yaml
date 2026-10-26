@@ -1,25 +1,22 @@
 slug: reconcile-buybacks-with-owner-cash
 name: Reconcile buybacks with owner cash
-summary: Connect executed repurchases to EPS, shareholder cash distributions and closing book value.
+summary: Check what a share buyback does to EPS, whether cash covers the payout, and how book value per share moves. Get three linked schedules.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
+needs_mode: manual
 uses:
   - cash-funded-buyback-eps-bridge
   - shareholder-distribution-coverage

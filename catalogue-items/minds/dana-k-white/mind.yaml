@@ -5,8 +5,31 @@ area: "design"
 years: "Contemporary"
 living: true
 known_for: "White writes and teaches through A Slob Comes Clean. Her books include How to Manage Your Home Without Losing Your Mind and Decluttering at the Speed of Life. Her published five-step process joins immediate removal of easy clutter with the Container Concept."
-summary: "Make the space better at every stopping point. Remove obvious things first, take an object to its actual home immediately and let the available space set the limit instead of buying another container."
+summary: "Get a clear plan to declutter a drawer, counter or shared folder in short sessions, based on Dana K. White's public method. No big mess first."
 use_cases: ["Clutter on the kitchen counter: Remove trash, take obvious items home immediately and make a donation decision before opening any new cupboards.", "An overfilled drawer: Consolidate its category, choose favourites and let the drawer’s usable capacity decide how much remains.", "Fifteen interrupted minutes: Work without emptying the room so you can stop with less clutter whenever a child, call or fatigue interrupts.", "An overflowing shared work folder: Find the real retrieval location, remove obvious duplication and set a usable capacity instead of creating endless subfolders.", "A habit that keeps collapsing: Reduce the volume you expect to maintain before designing a more elaborate routine or buying equipment.", "Moving belongings to a smaller space: Choose by the actual container and retrieval need, keeping the best-fitting useful possessions rather than negotiating imaginary storage."]
+not_for:
+  - "You need help with hoarding or attention difficulties: talk to a qualified professional, because this is a household method, not treatment."
+  - "You need to clear shared or legal records: use your team's records process and ask the owner first, since this advice does not allow deleting them."
+  - "You want to design how a space looks or how a product works: use the Dieter Rams mind, whose work centres on clear, useful design."
+output_sample:
+  input:
+    - The mess you want to fix, such as a counter, a drawer or a shared folder
+    - How much time you have and how often you get interrupted
+    - Where things should live now, if you know
+    - What you want the space to be like when you finish
+  output:
+    - name: Short diagnosis
+      contains: A plain read of where your clutter sits and what is blocking progress.
+    - name: Practical sequence
+      contains: "Steps in order: trash first, easy items home, obvious donations out, then consolidate within the container's limit."
+    - name: Retrieval questions
+      contains: Where you would look for each item first, and whether you would remember you own it.
+    - name: Cues to watch
+      contains: Signs the space is getting better, and signs the container is still too full.
+    - name: Next adjustment
+      contains: One small change to try in your next short session.
+    - name: Pushback
+      contains: Where your plan will not work in your real setting, with the reason.
 seats: [{"seat": "Clutter limits and progress without piles", "asks": "Where would you look for this first?"}, {"seat": "Practical teaching and adaptation", "asks": "Would it occur to you that you owned it?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Many linked choices affect answer quality.
 new_slug: rag-pipeline-designer
 name: RAG pipeline designer
-summary: Describe your documents. Get chunking, embedding and vector database
-  choices, with ways to test results.
+summary: Design a RAG pipeline from your own documents. Get chunking, embedding and vector database choices, plus retrieval scores that test the design.
 job: build-software
 headline: RAG pipeline designer
-subhead: A design for retrieving answers from your documents, backed by numbers
-  from your own files rather than guesses. You get chunking, embedding and
-  vector database choices, plus a test that shows how well retrieval works.
+subhead: A design for retrieving answers from your documents, backed by numbers from your own files rather than guesses. You get chunking, embedding and vector database choices, plus a test that shows how well retrieval works.
 explain: |
   A design for retrieving answers from your documents, backed by numbers from your own files rather than guesses. You get chunking, embedding and vector database choices, plus a test that shows how well retrieval works.
 
@@ -18,18 +15,43 @@ when:
   - Your current search returns the wrong passages.
   - You must choose a vector database and need a basis for the choice.
   - You want to measure retrieval quality before launch.
+not_for:
+  - "You only want to cut the cost of AI calls in general: use llm-cost-optimizer."
+  - "You want an agent that loops over retrieval and acts on it: use agenthub."
+  - "You have no way to run Python or no documents to test: ask a developer to set it up, or start with a plain keyword search."
 you_give:
-  - Your documents or a sample
-  - Number of documents and daily queries
-  - Speed and cost limits
-  - Python installed
+  - Your documents, or a sample of them, as .md or .txt files
+  - Your document count, average document size and daily queries
+  - Your speed and monthly budget limits
+  - A list of test questions, each with an ID and the question text
+  - A ground-truth file that lists, for each question ID, the document IDs that hold the answer
 you_get:
   - Chunking strategy picked from your files
   - Pipeline design
   - Embedding and database tier choices
   - Retrieval test results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Get the skill folder and make sure Python 3 is installed. Use an AI that can run code, or run the commands yourself.
+  - "Build your test questions: write 10 to 30 real questions your users ask, give each an ID, and save them as queries.json."
+  - "Build ground truth: for each question ID, list the document IDs that hold the answer, and save it as ground_truth.json."
+  - Run chunking_optimizer.py on your documents folder. Read the recommended strategy and check the sample chunks.
+  - Write your requirements file, then run rag_pipeline_designer.py to get design.json. Treat every cost as an estimate.
+  - Run retrieval_evaluator.py with your questions, documents and ground truth. If scores are low, change one thing and run it again.
+output_sample:
+  input:
+    - A folder of your documents (.md or .txt files)
+    - "A requirements file: document types, document count, average size, daily queries, speed, monthly budget"
+    - A list of test questions, each with an ID and text
+    - A ground-truth file that maps each question ID to the document IDs that answer it
+  prerequisites:
+    - An AI that can run code, or Python 3 on your own computer
+    - The skill folder with its three Python tools
+  output:
+    - name: chunking.json
+      contains: Corpus facts, results for each chunking strategy, the recommended strategy and a few sample chunks to check.
+    - name: design.json
+      contains: Chunking, embedding, vector database, retrieval and reranking choices, estimated monthly cost, a diagram and config templates.
+    - name: eval.json
+      contains: Precision, recall, MRR and NDCG at each k you set, plus examples where retrieval did poorly.
+    - name: Verify note
+      contains: A reminder on every model and price to check live provider pages, with an as-of date.

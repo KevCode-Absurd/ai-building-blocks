@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Tracking links are often incomplete.
 new_slug: utm-revenue-reader
 name: UTM revenue reader
-summary: Get revenue, order count and average order value split by campaign,
-  source and medium from your order links.
+summary: Find which ads and emails bring sales. Get UTM revenue, orders and average order value by source, medium or campaign from your Shopify orders.
 job: read-ad-results
 headline: UTM revenue reader
-subhead: Get revenue, order count and average order value split by campaign,
-  source and medium from your order links. Bring your store domain. Use the
-  result to plan your next step.
+subhead: Get revenue, order count and average order value split by campaign, source and medium from your order links. Bring your store domain. Use the result to plan your next step.
 explain: |
   You get revenue, orders and average order value split by source, medium and campaign, taken from your own Shopify orders with no extra analytics tool.
 
@@ -18,19 +15,47 @@ when:
   - Your email and social links use UTM tags and you want the sales behind them.
   - You are choosing where to put next month's ad budget.
   - You want a quick channel report without setting up another tool.
+not_for:
+  - Your sales are in-store or at a till only. Those orders have no landing link, so ask your point-of-sale system for its own sales report.
+  - You want to know what you spent on ads. This reads orders only, so use the reports inside Meta Ads or Google Ads.
+  - Your store is not on Shopify. Use the sales report in your own shop platform, or Google Analytics.
 you_give:
-  - Your store domain
-  - How many days back to look
-  - How to group the results
-  - A Shopify login with read access to orders
+  - Your store domain, such as mystore.myshopify.com
+  - How many days back to look (optional, 30 by default)
+  - "How to group the results: source, medium, campaign or source and medium (optional)"
+  - The fewest orders a group needs to be shown (optional)
+  - Whether to show orders with no tags (optional, shown by default)
 you_get:
   - Revenue by source, medium or campaign
   - Order count and average order value per group
   - Untagged orders shown separately
   - A JSON export (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot read your store.
+  - "Sign in to your store with the Shopify CLI: shopify store auth --store your-store.myshopify.com --scopes read_orders"
+  - Paste this skill into your AI. Give it your store domain, how many days back to look, and how to group the results.
+  - Let it run. It only reads orders and changes nothing in your store.
+  - Check the share of untagged orders first. If it is high, fix the tags on your campaign links before you trust the rest.
+output_sample:
+  input:
+    - Your store domain
+    - How many days back to look (optional, 30 by default)
+    - "How to group results: source, medium, campaign or source and medium (optional)"
+    - The fewest orders a group needs to show (optional)
+  prerequisites:
+    - An AI that can run code and commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in to your store with read_orders access
+    - UTM tags on your ad, email and social links
+  output:
+    - name: Start banner
+      contains: Your store domain and the time the report began.
+    - name: Step lines
+      contains: One line per step showing what was asked and how many orders came back.
+    - name: Summary
+      contains: Orders counted, total revenue, and how many orders had no tags, with the share they make up.
+    - name: Top groups
+      contains: Each group with its order count, revenue and average order value, biggest revenue first.
+    - name: attribution_report CSV
+      contains: One row per group with source, medium, campaign, orders, revenue, average order value, currency and share of revenue.
+    - name: JSON version (optional)
+      contains: The same totals and groups in JSON, if you ask for that format.

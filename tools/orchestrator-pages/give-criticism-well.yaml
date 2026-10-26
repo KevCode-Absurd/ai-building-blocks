@@ -1,6 +1,6 @@
 new_slug: give-criticism-well
 name: Give criticism that changes behaviour without resentment
-summary: Describe the person and the problem. Get a message with true praise, an easy fix and a plan to praise progress.
+summary: "Give criticism that works: describe the person and the problem. You get a message with true praise, one easy fix and a plan to praise progress."
 job: lead-people
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Someone's work or conduct has slipped and you have put off saying so.
   - You have asked for the same change more than once and nothing happened.
   - You must correct a senior person, a peer or someone who takes things hard.
+not_for:
+  - "You face a serious conduct issue, such as harassment or safety: go to your HR process or a person who handles formal cases, not this message."
+  - "You want to thank or praise someone with no problem to raise: use the Honest appreciation note writer."
+  - "You need to give bad news to a customer or client: use the Bad news update writer."
 you_give:
   - Who the person is and how you work together
   - What keeps going wrong, with one or two real, dated examples
@@ -29,6 +33,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the person, what keeps going wrong and the result you want. It works step by step and saves each result.
   - Say or send the message. Then watch for the first small improvement and start the praise plan.
+output_sample:
+  input:
+    - Who the person is and how you work together
+    - What keeps going wrong, with one or two real, dated examples
+    - The result you want instead
+    - What you honestly value in them (optional)
+  prerequisites:
+    - An AI that can work through a folder of files and save each result, such as Claude Code or a Claude Project
+    - The handoff pack zip from this page, with HANDOFF.md and the skill files
+  output:
+    - name: "Step 1: Behaviour and fix notes"
+      contains: One watchable behaviour, why they may do it, their true strengths and the smallest fix.
+    - name: "Step 2: The message"
+      contains: A short message with true praise, one plain request, what you own and a way for them to save face.
+    - name: "Step 3: Orders into requests"
+      contains: The message with every order turned into a question or request that shows their gain.
+    - name: "Step 4: The praise plan"
+      contains: Three stages of progress, specific praise for each, where to say it and what to do if they slip.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Gets the behaviour and the fix clear
     text: Decides if it is worth raising, names one behaviour anyone could watch, checks your part, finds a fair reason and lists true strengths.

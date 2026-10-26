@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies a fixed two-axis rubric.
 new_slug: ai-work-grader
 name: AI work grader
-summary: Finish a task. Get an honest score on quality and effort, with the weak
-  spots named.
+summary: Get an honest AI work grader score for a finished task. It rates how hard the task was and how well you did it, then names the weak spots.
 job: think-and-decide
 headline: AI work grader
-subhead: An honest score for the work you just finished, not the usual 4 out of
-  5 for everything. It rates how hard the task was and how well it was done,
-  then combines them with a fixed table.
+subhead: An honest score for the work you just finished, not the usual 4 out of 5 for everything. It rates how hard the task was and how well it was done, then combines them with a fixed table.
 explain: |
   An honest score for the work you just finished, not the usual 4 out of 5 for everything. It rates how hard the task was and how well it was done, then combines them with a fixed table.
 
@@ -18,6 +15,10 @@ when:
   - Your AI rates everything 4 out of 5 and the scores mean nothing.
   - You want to track whether your work quality improves.
   - You need to name the weak spots before a review.
+not_for:
+  - You have not finished the work yet. Wait until it is done, then grade it.
+  - You need a grade you can defend to a client or a boss. Ask a human peer to review it instead.
+  - You want a quick yes or no on whether work is good enough. Ask a teammate to look it over.
 you_give:
   - The finished work or a description of it
   - What you set out to do (optional)
@@ -28,7 +29,31 @@ you_get:
   - The weak spots, named
   - A saved score history that flags score inflation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat and paste the skill instructions from this page.
+  - Paste the finished work, or describe what you did. Add your goal if you have one.
+  - If you have past scores, paste the score lines too. The clustering check only works from history it can see.
+  - Read the ratings and the devil's advocate section. Argue back if a rating looks wrong.
+  - Save the new score line. If your AI can save files, it adds it to .self-eval-scores.jsonl. If not, copy the line into your own notes.
+  - Turn the named weak spots into a short fix list, or check them against your own review checklist.
+output_sample:
+  input:
+    - The finished work, or a short note on what was done
+    - What you set out to do (optional)
+    - Your past scores file, or your past score lines pasted in (optional)
+  prerequisites:
+    - An AI that can save files, if you want the score history saved for you. Without file access, copy the score line into your own notes.
+  output:
+    - name: Task summary
+      contains: One sentence on what was attempted, taken from your note or the chat so far.
+    - name: Ambition rating
+      contains: Low, medium or high for how hard and risky the task was, with one line of reasoning.
+    - name: Execution rating
+      contains: Poor, adequate or strong for how well the work was done, with one line of reasoning.
+    - name: Devil's advocate
+      contains: A case for a lower score, a case for a higher score, and how the two were settled.
+    - name: Score
+      contains: A final score from 1 to 5, read from the fixed table, with one line of reasoning.
+    - name: Clustering warning
+      contains: A warning if 4 or more of your last 5 scores are the same.
+    - name: .self-eval-scores.jsonl
+      contains: One saved line per grade with date, score, both ratings and a task summary.

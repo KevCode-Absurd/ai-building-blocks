@@ -1,6 +1,6 @@
 new_slug: payments-and-checkout-settings-checker
 name: Payments and checkout settings checker
-summary: Share store settings and your country. Get checked findings, missing rules and fixes to review, with a custom checklist score.
+summary: Check your store's payment and checkout settings against your country's rules. Get ranked fixes, consent advice by region and a checklist score.
 job: set-up-store
 thinking: medium
 thinking_why: It checks a list of settings against rules and ranks the risks, so a middle model is enough.
@@ -14,6 +14,10 @@ when:
   - You are setting up payments and need to check current provider requirements.
   - Your checkout loses buyers and you think the settings are the cause.
   - You need to review email or SMS consent for your actual customer regions.
+not_for:
+  - "You want to test real orders before launch: use the Store go-live checker, or place a test order yourself."
+  - "You need legal sign-off on consent rules: ask a qualified lawyer in each region you sell to."
+  - "You want to find what makes buyers leave the checkout page: use a checkout page auditor, or review your abandoned checkout report."
 you_give:
   - Your platform and country
   - Your actual legal business type and whether account details match; no bank, ID or card numbers
@@ -31,6 +35,28 @@ how_to_use:
   - Never type bank, ID or card numbers into the chat. Say only what type of account you have.
   - Review the sources and missing items before choosing any change. Keep launch readiness unresolved when a material check is missing.
   - Check Shopify setting names against your admin, since they move often.
+output_sample:
+  input:
+    - Your platform and country
+    - Your business type and whether names match your ID
+    - Your current payment, wallet and checkout field settings
+    - The regions you sell to
+    - Your abandoned checkout report (optional)
+  output:
+    - name: Custom checklist score
+      contains: A score out of 100 with the sum shown and how much of the list was checked.
+    - name: Ranked findings
+      contains: Each problem marked blocker, risk or polish, with a fix and its dated official source.
+    - name: Settings to change, in order
+      contains: The settings to change and the value for each, in the order to do them.
+    - name: Gateways
+      contains: Which payment methods to run together and which not to.
+    - name: Checkout fields
+      contains: Each field marked required, optional or off.
+    - name: Consent boxes by region
+      contains: For each region, whether the box can be pre-ticked, must be unticked, or is unchecked.
+    - name: Not checked
+      contains: Items it could not check, and what facts are needed to check them.
 how_it_works:
   - title: Checks the rules that apply
     text: Records platform, plan, provider, country, currency, legal business type and customer regions. Verifies current official rules before affected advice.

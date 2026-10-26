@@ -1,6 +1,6 @@
 new_slug: weekly-invoice-and-cash-chaser
 name: Weekly invoice and cash chaser
-summary: Give it your open invoices each week. Get who to chase, a reminder for each and a 90-day cash view.
+summary: Check open invoices each week. See who to chase, get a reminder for each late payer, and see 30, 60 and 90 day cash. You approve every send.
 job: track-numbers
 thinking: high
 thinking_why: It compares each invoice with its history, picks the tone for each customer and judges when a plan beats a reminder. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You invoice clients or retailers and the chasing keeps slipping to the end of the month.
   - One or two slow payers hold a large share of what you are owed.
   - You want to know, each Monday, whether the next 90 days of cash hold up.
+not_for:
+  - "Your business takes cash sales only and sends no invoices: keep a simple sales sheet or ask a bookkeeper instead."
+  - "You want ways to free up cash across the whole business: use the Cash flow improvement planner."
+  - "You need year-end accounts or tax figures: ask a bookkeeper or accountant."
 you_give:
   - Your open invoices with customer, amount, invoice date, due date and payments received
   - New invoices sent this week, as PDFs or text (advised)
@@ -33,6 +37,30 @@ how_to_use:
   - Add your bills and fixed costs once. Update them when they change.
   - Read the reminder drafts. Send the ones you agree with from your own email, then tell the agent which went out.
   - Run it again next Monday. It compares with its saved rows and checks which promises were kept.
+output_sample:
+  input:
+    - Your open invoices with customer, amount, invoice date, due date and payments received
+    - New invoices sent this week (advised)
+    - Your bills and fixed costs (advised)
+    - Notes on how each customer usually pays (optional)
+    - Your payment terms, late fee rules and plan floor (optional)
+  prerequisites:
+    - An AI that can keep files between runs, such as Claude Code, if you want it to remember last week
+  output:
+    - name: This week
+      contains: Total owed, total late, and days outstanding compared with last week.
+    - name: Invoice fixes
+      contains: Any new invoice with a wrong total, wrong date or missing field, and how to fix it.
+    - name: Reminders to send
+      contains: Each late invoice with a draft reminder or letter, the tone chosen and why.
+    - name: Plans to offer
+      contains: For customers quiet past 45 days, what they can likely pay and a plan to propose.
+    - name: Cash view
+      contains: A 30, 60 and 90 day forecast with doubtful amounts marked.
+    - name: Watch next week
+      contains: The two or three invoices that decide whether the cash view holds.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line.
 how_it_works:
   - title: Read last week
     text: Marks what was paid, adds new invoices and works out days late for each from the due date.

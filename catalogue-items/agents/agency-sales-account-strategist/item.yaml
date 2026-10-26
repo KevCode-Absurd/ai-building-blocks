@@ -1,0 +1,43 @@
+slug: agency-sales-account-strategist
+name: Account Strategist agent
+summary: Get an account growth plan with stakeholder and opportunity maps. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: sales/sales-account-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-account-strategist.md
+  licence: MIT
+  original_name: Account Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: dd9b2c37c41827286ef91d64057a5b0ff4795c2e57bd44695436feeb5a3f0423
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Account Strategist
+  - Agency Agents
+  - Sales
+credits:
+  - title: Account Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-account-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

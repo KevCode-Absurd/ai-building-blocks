@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Choosing one segment means weighing your market and trade-offs.
 new_slug: beachhead-market-picker
 name: Beachhead market picker
-summary: Describe your product and early users. Get one starting segment and a
-  plan to reach the mainstream. Uses Crossing the Chasm.
+summary: Pick one beachhead market to win first, then plan the move to mainstream buyers. Give it your product and first users. You get a score and fixes.
 job: plan-strategy
 headline: Beachhead market picker
-subhead: One starting customer segment you can win, and a plan to grow from
-  there into the mainstream. Describe your product and your first users, and the
-  AI uses Geoffrey Moore's Crossing the Chasm to see where you are on the
-  adoption curve.
+subhead: One starting customer segment you can win, and a plan to grow from there into the mainstream. Describe your product and your first users, and the AI uses Geoffrey Moore's Crossing the Chasm to see where you are on the adoption curve.
 explain: |
   One starting customer segment you can win, and a plan to grow from there into the mainstream. Describe your product and your first users, and the AI uses Geoffrey Moore's Crossing the Chasm to see where you are on the adoption curve.
 
@@ -19,6 +15,10 @@ when:
   - You are targeting five segments and winning none.
   - You need a story for investors on how you go beyond early adopters.
   - You want to know if your product is complete enough for pragmatic buyers.
+not_for:
+  - "You have no users yet or only one known customer: do a plain market-sizing exercise first, then come back."
+  - "You want help with your product's positioning alone: ask a person you trust to review it, or use a positioning guide."
+  - "You want to create a brand new market, not win an existing one: use a market-creation exercise with your team instead."
 you_give:
   - What the product is and does
   - Who uses it now
@@ -30,7 +30,28 @@ you_get:
   - A follow-on segment order
   - A 0 to 10 diagnostic score with fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. It needs no code, files or paid tools.
+  - Describe your product and what it does. Say who uses it today and why they like it.
+  - List the segments you are thinking about. Add your partners and references if you have them (optional).
+  - Ask your AI to pick one beachhead segment and score you with the quick diagnostic.
+  - Check the result against what you know about your customers. Fill in any messaging templates with real customer words before you use them.
+  - Work through the fixes for the weak rows, then run it again.
+output_sample:
+  input:
+    - What your product is and does
+    - Who uses it today
+    - Segments you might target first
+    - Your partners and customer references (optional)
+  output:
+    - name: Beachhead segment
+      contains: The one customer segment to win first, with the reasons it fits your product and users.
+    - name: Whole-product checklist
+      contains: What pragmatic buyers need around your product, which parts you have, and which partners could fill the gaps.
+    - name: Competitor and positioning
+      contains: The competitor to beat and positioning that feels like an evolution, not a revolution.
+    - name: Bowling pin sequence
+      contains: The order of nearby segments to enter after your first one.
+    - name: Quick diagnostic score
+      contains: A score out of 10 from seven yes or no rows, naming the weak rows.
+    - name: Fixes
+      contains: One fix for each weak row in the diagnostic.

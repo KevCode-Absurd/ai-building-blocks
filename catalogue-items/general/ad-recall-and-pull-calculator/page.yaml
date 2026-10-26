@@ -1,6 +1,6 @@
 new_slug: ad-recall-and-pull-calculator
 name: "Ad recall and pull calculator"
-summary: "Paste your survey answers. Get recall, buyers in each group, the pull as a number and its meaning."
+summary: "Turn your ad survey answers into recall, buying rates and pull. See who knows your ad, whether it sells, and what to do next."
 job: read-ad-results
 thinking: low
 thinking_why: "The sums are fixed. The only judgment is scoring vague answers and reading the pattern."
@@ -17,6 +17,10 @@ when:
   - "You have survey answers and no idea how to turn them into a decision."
   - "Sales are muddy and you want a number for what the ad adds."
   - "People talk about your ad, and you want to know if it sells."
+not_for:
+  - "You have no survey answers yet: plan the survey first with the Recall and pull survey planner."
+  - "You want to compare two ad versions head to head: run a proper A/B test in your ad platform instead."
+  - "You want to know whether to keep or change a whole campaign: use the Campaign keep-or-change checker with your audit report."
 
 you_give:
   - "The answer sheet: what each person said, whether they buy, and who they are"
@@ -33,6 +37,31 @@ how_to_use:
   - "Paste the answer sheet, with what each person said word for word, and your scoring rule."
   - "Read the pattern and the caution before the number."
   - "Take the result to the Campaign keep-or-change checker."
+output_sample:
+  input:
+    - "Your answer sheet: what each person said the ad said, word for word, and whether they buy"
+    - Your scoring rule from the survey plan (optional)
+    - Results from an earlier wave or a rival ad (optional)
+    - A column showing who were customers before the ad (optional)
+  prerequisites:
+    - A filled-in survey answer sheet, for example from the Recall and pull survey planner
+  output:
+    - name: Counts
+      contains: How many people were asked, how many know the ad, how many do not, and how many could not be scored.
+    - name: Recall
+      contains: The share of everyone asked who can say what the ad says.
+    - name: Buying and pull
+      contains: The buying rate in each group and the difference between them, as extra buyers per 100 who know the ad.
+    - name: Margin
+      contains: A rough error for each rate and whether the gap is bigger than chance.
+    - name: Pattern and next step
+      contains: Which of four patterns the numbers show, and what to do about it.
+    - name: What they said instead
+      contains: The most common near-miss answers, with counts.
+    - name: Caution
+      contains: A note that people who already buy may notice the ad more, so pull is a signal, not proof.
+    - name: Missing and checks missed
+      contains: What would sharpen the result, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Checks the sheet"

@@ -13,9 +13,9 @@ outputs:
   - {type: document}
 uses: [store-security-checkup, store-sign-in-security-checker, staff-phishing-rules-briefer]
 steps:
-  - {uses: store-security-checkup, note: "Starts the flow. Finds the gaps and ranks the fixes."}
-  - {uses: store-sign-in-security-checker, note: "Takes the checkup's sign-in and password findings and writes the policy for staff and customers."}
-  - {uses: staff-phishing-rules-briefer, note: "Builds the staff rule sheet and drill on top of the sign-in policy, closing the phishing gap the checkup found."}
+  - {uses: store-security-checkup, note: "Starts the flow. Finds the gaps and ranks the fixes. Hands the findings, with who has admin access and how they sign in, to step 2."}
+  - {uses: store-sign-in-security-checker, note: "Takes the checkup's sign-in and password findings and writes the policy for staff and customers. Hands the sign-in policy to step 3."}
+  - {uses: staff-phishing-rules-briefer, note: "Builds the staff rule sheet and drill on top of the sign-in policy and the checkup's phishing gap, using your own list of accounts that matter."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lock-down-your-store-logins-and-staff-against-takeover/skeleton.yaml

@@ -2,35 +2,100 @@ thinking: medium
 thinking_why: It builds a phased plan from your situation.
 new_slug: tiktok-shop-launch-planner
 name: TikTok Shop launch planner
-summary: Tell it where you are starting. Get a week-by-week plan to set up,
-  list, create content and scale.
+summary: Get a week-by-week TikTok Shop plan, from account approval and listings to content and creators, based on where your shop is today.
 job: run-your-store
 headline: TikTok Shop launch planner
-subhead: A week-by-week plan to take a TikTok Shop from nothing to steady sales,
-  starting from wherever you are today. From no account to your first few sales,
-  it tells you what to do this week.
+subhead: Tell it your stage, country, products and weekly time. It builds a phased TikTok Shop plan with a setup checklist, listing steps, a content rhythm and a creator plan. Each phase ends with a check before you move on.
 explain: |
-  A week-by-week plan to take a TikTok Shop from nothing to steady sales, starting from wherever you are today. From no account to your first few sales, it tells you what to do this week.
+  Opening a TikTok Shop has many steps, and the order matters. This TikTok Shop launch planner turns them into one plan that fits your stage, your country and the hours you have each week. If you are not started, it begins with approval. If you are live but slow, it hunts for the blocker first.
 
-  The skill covers the application and verification process, tax and payment setup, and shop policies. Then it moves to catalog setup, titles that work in TikTok search, and pricing against competitors. Next it plans content, hashtags and posting rhythm, and adds creators and ads when you are ready. For shops that are live but slow, it looks for what is blocking sales. Each phase has a clear check before you move on.
+  The plan has three phases. Foundation covers the application, business and tax details, payment, shop policies and your first listings. Content and traffic covers listing titles for TikTok search, pricing, a posting rhythm and video formats to test. Creators and scale covers affiliates, samples and how to track them.
+
+  It does not invent targets. You set sales goals from your own numbers, or it shows you how to work them out after a few weeks of sales. It also tells you to check the TikTok Shop seller centre for current rules, because fees and approval steps change by country.
 when:
   - You want to open a TikTok Shop and do not know the first step.
-  - Your shop is set up, but sales are low.
-  - You make a few sales and want a path to six figures.
+  - Your shop is set up, but sales are low and you do not know why.
+  - You make a few sales and want a clear path to grow them.
   - You need a checklist to hand to a new team member.
+not_for:
+  - "You want to read your sales numbers: use the TikTok Shop results reader."
+  - "You need one part in depth, such as ads, creators or listings: use the TikTok Shop ad planner, the TikTok Shop affiliate planner or the TikTok Shop listing writer."
+  - "You want to sell in a new country: use the TikTok Shop overseas expansion planner."
 you_give:
-  - "Your current stage: not started, set up or selling"
-  - Products and prices
-  - Time and budget per week
-  - Your country
+  - Your stage (not started, set up but not selling, or selling)
+  - The country you sell from
+  - Your products and price range
+  - How many hours and how much money you have each week
+  - Your goal for the next 3 months (optional)
+  - Your current results, if the shop is live (optional)
 you_get:
-  - A week-by-week plan
-  - Setup and approval checklist
+  - A week-by-week plan in three phases
+  - A setup and approval checklist
   - Listing and pricing steps
-  - A content and ads start plan
-  - Checks for each phase
+  - A content rhythm and creator plan
+  - A check at the end of each phase
+  - Three actions for this week
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Paste this skill into Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Answer its questions in one message. It marks anything you skip as MISSING and says what it assumed.
+  - Read the assumptions line first. Fix any that are wrong and ask it to redo the plan.
+  - Check each setup step against the TikTok Shop seller centre for your country. Rules and fees change.
+  - Do the "This week" list. When you finish a phase, come back with your results and ask for the next phase to be updated.
+how_it_works:
+  - title: Find your stage
+    text: It asks where you are, then builds only the phases you still need.
+  - title: Plan the foundation
+    text: Application, business and tax details, payment, policies and first listings.
+  - title: Plan content and traffic
+    text: A posting rhythm, video formats to test and listing titles that fit TikTok search.
+  - title: Plan creators and growth
+    text: Affiliate offers and sample rules, with a way to track what works.
+  - title: Add checks
+    text: Each phase ends with what must be true before you move on.
+output_shape: |
+  TikTok Shop Launch Plan
+  Business: <name> | Country: <country> | Stage: <stage>
+  Assumptions: <anything missing and what it assumed>
+
+  Phase 1: Foundation (weeks 1 to 4)
+  - [ ] <setup tasks>
+  Phase 2: Content and traffic (weeks 5 to 12)
+  - Posting rhythm, content mix to test, hashtag themes
+  Phase 3: Creators and scale (week 13 on)
+  - Creator plan, targets set from your own numbers
+
+  Check before moving on: <one line per phase>
+  This week: <3 actions>
+output_sample:
+  input:
+    - Your stage, country and products
+    - Your weekly time and budget
+    - Your current results (optional)
+  output:
+    - name: Assumptions
+      contains: Anything you left out, marked MISSING, and what the plan assumed instead.
+    - name: Phase 1 Foundation
+      contains: Setup and approval checklist, shop policies, shipping, and your first listings.
+    - name: Phase 2 Content and traffic
+      contains: A posting rhythm, content formats to test, hashtag themes and a content table.
+    - name: Phase 3 Creators and scale
+      contains: A creator plan, sample rules and targets you set from your own numbers.
+    - name: Check before moving on
+      contains: One line per phase on what must be true before the next phase starts.
+    - name: This week
+      contains: The three most useful actions to do now, in order.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The plan is text only, so Claude, ChatGPT or Gemini all work.
+    - name: TikTok Shop seller centre
+      why: It holds the current rules, fees and documents for your country. Check each setup step there.
+  inputs:
+    - Your last 4 weeks of shop numbers, if you are live
+    - Photos or links of your best-selling products
+    - Your product costs, so pricing steps fit your margin
+terms:
+  - term: Affiliate
+    meaning: A creator who promotes your product and earns a share of each sale.
+  - term: Seller centre
+    meaning: The TikTok page where you manage your shop and read its rules.

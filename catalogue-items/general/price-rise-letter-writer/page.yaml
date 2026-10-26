@@ -1,6 +1,6 @@
 new_slug: price-rise-letter-writer
 name: "Price rise letter writer"
-summary: "Paste the old price, the new price and why. Get a customer letter that keeps most of them."
+summary: "Write a price rise letter that leads with the new price and date. Give it your prices and reason. You get a customer letter and a short FAQ."
 job: set-prices
 thinking: low
 thinking_why: "It writes one letter and a short FAQ from facts you give it."
@@ -17,6 +17,10 @@ when:
   - "Your costs went up and the renewal price has to follow."
   - "You priced too low at the start and need to fix it without losing the customers who trusted you."
   - "A subscription renewal price is changing and people will see it on their statement."
+not_for:
+  - "You must change a signed contract or fixed-term deal: ask a lawyer first, since a letter alone may not be enough."
+  - "You have not chosen the new price yet: work out the number first, then come back to write the letter."
+  - "You need to tell customers about a change that is not a price, such as a closed product: write that notice by hand."
 
 you_give:
   - "Old price, new price, what it covers, start date"
@@ -29,10 +33,32 @@ you_get:
   - "A short FAQ answered from your facts"
 
 how_to_use:
-  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your prices and reason under it."
-  - "Add the choices customers have and the dates for each."
-  - "Check THE CHANGE line. If the percent is off, fix your input."
-  - "Send the letter at least two weeks before the date, and put the FAQ on your help page."
+  - Copy the prompt and paste it into Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Under it, paste your old and new price, the start date, who it affects and the honest reason.
+  - Add the choices customers have, with a date for each, such as keep the old price or cancel.
+  - Check the THE CHANGE line first. If the percent looks wrong, fix your numbers and run it again.
+  - Check the notice period and renewal terms where your customers live before you send. Some places or contracts need more notice.
+  - Send the letter at least two weeks before the date. Put the FAQ on your help page.
+output_sample:
+  input:
+    - Old price, new price, what it covers and the start date
+    - The honest reason for the rise
+    - Who it affects, such as all customers or renewals only
+    - What customers can do, with dates (advised)
+    - Two lines on how you write to customers (optional)
+  output:
+    - name: THE CHANGE
+      contains: Old price to new price, the rise in money and percent, the start date and who it affects.
+    - name: SUBJECT
+      contains: An email subject line under nine words that carries the price news and the date.
+    - name: LETTER
+      contains: The news first, the reason once, what stays the same, choices with dates, thanks and a sign-off.
+    - name: FAQ
+      contains: Three to five customer questions, answered only from the facts you gave.
+    - name: MISSING
+      contains: Any fact you did not give, such as a start date, marked instead of guessed.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or none.
 
 how_it_works:
   - title: "States the change"

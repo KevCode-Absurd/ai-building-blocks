@@ -1,6 +1,6 @@
 new_slug: late-invoice-reminder-writer
 name: "Late invoice reminder writer"
-summary: "Paste the invoice facts. Get a warm reminder that gets paid and a firmer follow-up."
+summary: "Write a late invoice reminder that keeps the customer. Paste your invoice facts and get a warm first letter and a firmer follow-up."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It writes two short letters from the facts."
@@ -17,6 +17,10 @@ when:
   - "An invoice is a week late and you want to keep the customer."
   - "You dread writing the reminder."
   - "You want a follow-up ready for if they do not reply."
+not_for:
+  - "The customer disputes the invoice or the work: talk to them first, or ask a lawyer or accountant for advice."
+  - "The customer is in insolvency or you are thinking of legal action: ask a qualified legal adviser, not a reminder letter."
+  - "You want the full version with every check: use the Payment reminder letter writer."
 
 you_give:
   - "The invoice facts"
@@ -31,6 +35,22 @@ how_to_use:
   - "Paste the invoice details under the prompt."
   - "Add how this customer usually pays."
   - "Send letter 1 now and set a reminder for letter 2."
+output_sample:
+  input:
+    - "Your invoice facts: number, amount, due date, days late, how to pay and what it was for"
+    - Your history with the customer (optional)
+    - How this customer usually pays (optional)
+  output:
+    - name: FEELING
+      contains: One line on how the customer should feel after reading your letter.
+    - name: LETTER 1
+      contains: A warm reminder with a shared opening, the invoice facts, one reason to pay and one clear action.
+    - name: LETTER 2
+      contains: A firmer but respectful follow-up that asks for a payment date, with the day to send it.
+    - name: MISSING
+      contains: Any invoice fact you did not give, so you can fill it in before sending.
+    - name: BEFORE YOU SEND
+      contains: A reminder to check late fee and collection rules with a qualified person before you mention fees.
 
 how_it_works:
   - title: "Pick the feeling"

@@ -1,0 +1,81 @@
+name: Human image and motion reviewer
+headline: Human image and motion reviewer
+summary: Check your AI image or clip brief for representation, context and movement problems. Get fixes tied to what you can see, plus prompt lines to use.
+subhead: Give it your brief and, if you have one, your image or clip. It checks faces, hands, movement, clothing, setting and required text. You get fixes tied to what it saw, and prompt lines to try next.
+job: design-work
+thinking: high
+thinking_why: The task compares evidence and alternatives. Its output still needs the stated checks.
+explain: |-
+  Review a human-centred AI image or motion brief and produce evidence-linked representation fixes and a generation QA brief.
+
+  This is one repeatable multimodal review task needing a brief, reference context and sometimes an actual asset; an installable skill can retain the review checklist without creating three duplicate listings.
+
+  This task uses selected methods from Inclusive Visuals Specialist. It is a focused adaptation. The original agents remain available: [Inclusive Visuals Specialist agent](https://useaiblocks.com/agents/agency-design-inclusive-visuals-specialist).
+when:
+  - You wrote a brief for an AI image or video of people and want it checked first.
+  - An AI image has odd hands, repeated faces or stiff poses.
+  - Your image must show a specific group or setting without stereotypes.
+  - You have several versions and need to know what to fix in each.
+not_for:
+  - You need final legal or cultural sign-off. Ask a person from the community or a legal reviewer.
+  - You want to talk through inclusive design in general. Use the Inclusive Visuals Specialist agent.
+  - You want the AI to make or redraw the image. This skill only writes a review and a better prompt, so use your image tool.
+you_give:
+  - Your creative brief.
+  - Where the image or clip will be used.
+  - Your image or clip (optional).
+  - Facts about the people, setting or identity you must keep (optional).
+  - Text that must appear in the image (optional).
+you_get:
+  - A table of findings, each tied to a spot, frame or phrase in your brief.
+  - Specific fixes for each finding.
+  - Prompt lines you can paste into your image tool.
+  - Questions for a human reviewer.
+  - A list of checks not done, marked NOT_RUN.
+how_to_use:
+  - Open Claude, ChatGPT or Gemini and add this skill.
+  - Paste your brief and say where the image will be used.
+  - Attach your image or clip if you have one. Use an AI that can view images.
+  - Add any facts you must keep, and any text the image must show.
+  - Read the table. Check each finding against your image.
+  - Paste the prompt lines into your image tool, then ask a person to review anything marked open.
+output_sample:
+  input:
+    - Your creative brief
+    - Where the image or clip will be used
+    - Your image or clip (optional)
+    - Facts about the people, setting or identity you must keep (optional)
+  prerequisites:
+    - An AI that can read images, if you want the image checked. Without one, only the brief is reviewed.
+  output:
+    - name: Review table
+      contains: "One row per finding: evidence, whether it is seen or uncertain, the effect, a repair and the next check."
+    - name: Corrective prompt clauses
+      contains: Prompt lines built only from the findings, keeping the valid parts of your brief.
+    - name: Choices on conflicting fixes
+      contains: A note on which fix was picked when two fixes clash, so your intent stays clear.
+    - name: Human review questions
+      contains: Questions for a person who knows the community or context, left open until answered.
+    - name: NOT_RUN checks
+      contains: Image, frame or motion checks that could not be done because no asset was given.
+how_it_works:
+  - title: 1. An evidence-linked review of representation, context, anatomy and motion
+    text: Every visual finding has visible evidence or is labelled uncertain.
+  - title: 2. Corrective prompt clauses tied to the observed issues
+    text: Absent assets and unavailable frame/motion checks remain NOT_RUN.
+  - title: 3. Questions for a relevant human reviewer and checks still needing an actual asset
+    text: No demographic trait, community endorsement or cultural authenticity is inferred.
+judge:
+  - Every visual finding has visible evidence or is labelled uncertain.
+  - Absent assets and unavailable frame/motion checks remain NOT_RUN.
+  - No demographic trait, community endorsement or cultural authenticity is inferred.
+  - Required text and supplied identity/context constraints survive repair suggestions.
+test:
+  - Try a small supplied case whose facts and result you can check.
+  - Omit one required fact and check that the affected work stays unresolved.
+tweaks:
+  - what: Task scope
+    how: State the intended result, available evidence and actual tools before starting.
+improve:
+  - Keep useful corrections with the task evidence for the next run.
+terms: []

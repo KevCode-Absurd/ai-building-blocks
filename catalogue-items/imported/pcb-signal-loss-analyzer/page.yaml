@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Solver and mesh choices change the result.
 new_slug: pcb-signal-loss-analyzer
 name: PCB signal loss analyzer
-summary: Give it a PCB design. Get S-parameters, insertion loss and fields
-  computed with the right solver.
+summary: Check insertion loss, return loss and fields of your RF PCB part before you build it. Get S-parameters from a solver matched to your design.
 job: build-software
 headline: PCB signal loss analyzer
-subhead: Know how much signal your RF board part loses, reflects and radiates
-  before you build it. You get S-parameters, insertion loss and field plots from
-  a solver chosen to match the shape of your design.
+subhead: Know how much signal your RF board part loses, reflects and radiates before you build it. You get S-parameters, insertion loss and field plots from a solver chosen to match the shape of your design.
 explain: |
   Know how much signal your RF board part loses, reflects and radiates before you build it. You get S-parameters, insertion loss and field plots from a solver chosen to match the shape of your design.
 
@@ -18,6 +15,10 @@ when:
   - A full solve takes too long and you want a faster sweep method.
   - You want to see where current crowds on a trace.
   - You are unsure which solver suits your structure.
+not_for:
+  - "You still need to design or build the board part: use the matching design skill for your part first, then come back here."
+  - "You only need to set up the board material or stackup: do that step first with a materials skill, or ask a PCB engineer."
+  - "You want to tune dimensions to hit a target or check power delivery: use an optimization step or a power analysis tool, not this one."
 you_give:
   - A designed RF PCB component
   - Your frequency range
@@ -29,8 +30,34 @@ you_get:
   - Field and current plots
   - A solver and mesh choice with reasons
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Antenna Toolbox.
+  - Check you have MATLAB with the RF PCB Toolbox and Antenna Toolbox. Both are paid. The finite-element solver also needs Windows WSL and the IDMF add-on.
+  - Open your AI tool and paste in the skill. Use an AI that can run MATLAB code.
+  - Paste your component code or describe it, then give your frequency range and port impedance.
+  - Say if you want speed or accuracy. Ask your AI to explain its solver and mesh choice.
+  - Check the S-parameter plots and the loss at your key frequencies before you build the board.
+output_sample:
+  input:
+    - Your RF PCB component, already built in MATLAB
+    - Your frequency range
+    - Port impedance, often 50 ohms (optional)
+    - Whether you want more speed or more accuracy (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - A paid MATLAB licence with the RF PCB Toolbox and Antenna Toolbox
+    - "For the finite-element solver: Windows with WSL and the IDMF add-on"
+    - A component built first, from a design skill or a custom layout
+  output:
+    - name: S-parameter extraction
+      contains: S-parameters over your band, with insertion and return loss, plus a way to pull out the numbers.
+    - name: Solver selection
+      contains: A choice between the method-of-moments and finite-element solvers, with the reason for it.
+    - name: Interpolating sweep
+      contains: A faster sweep setup so a wide frequency range does not take hours.
+    - name: Mesh control
+      contains: The mesh edge length used and a check of the mesh and memory before the solve.
+    - name: Field visualization
+      contains: Electric and magnetic field plots at a point or across a plane, and the far field.
+    - name: Current and charge distribution
+      contains: Plots of surface current and charge, and feed current across frequency.
+    - name: Behavioral S-parameters
+      contains: Fast analytic estimates for early checks, with notes on where they lose accuracy.

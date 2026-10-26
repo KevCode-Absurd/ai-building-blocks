@@ -1,6 +1,6 @@
 new_slug: cart-recovery-flow-builder
 name: "Cart recovery flow builder"
-summary: "Give it your margin, shipping terms and proof. Get cart and checkout recovery flows with filters, timing and a code rule."
+summary: "Build cart and checkout recovery emails that bring back shoppers who left. Get the trigger check, filters, timing, a code rule and email outlines."
 job: write-emails
 thinking: medium
 thinking_why: "It follows a fixed method with clear rules for who gets which email. A mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Your "abandoned cart" flow only fires after checkout starts.
   - Your cart emails give a code in the first message and you want to protect margin.
   - You have one abandonment flow and want a separate checkout flow with its own wording.
+not_for:
+  - "You have no email tool yet: set one up first and start with a plain welcome email, then come back."
+  - "You only want to follow up people who looked at a product but never added it: use a browse abandonment flow instead."
+  - "You want to check the consent and wording of text messages: ask a qualified person, since rules vary by region."
 
 you_give:
   - Products or collections, so the middle emails can be split
@@ -37,6 +41,34 @@ how_to_use:
   - Install the added-to-cart event if it is missing, and test it on your own store before you build.
   - Build the two flows from the outlines, and preview every email with a real profile.
   - Run one test at a time, starting with the delay on email 1.
+output_sample:
+  input:
+    - Your products or collections
+    - Your shipping, returns, warranty and guarantee facts
+    - Your discount policy and margin (optional)
+    - Reviews and facts for your main products (optional)
+    - What your current abandoned cart flow triggers on (optional)
+  prerequisites:
+    - An AI chat that can read pasted text
+    - Klaviyo and Shopify, if you want the exact event steps
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Current trigger check
+      contains: Says whether your cart flow fires on added to cart or checkout started, and whether there is a gap.
+    - name: Event fix
+      contains: Install and test steps for the added-to-cart event, or a note that it is not needed.
+    - name: Flow A, Added to cart
+      contains: The trigger and the filters that keep one shopper in one flow.
+    - name: Flow B, Checkout started
+      contains: The trigger and filters for shoppers who began checkout, with shorter re-entry.
+    - name: Emails
+      contains: Send time, purpose, sections, subject ideas and product block for each email.
+    - name: Code rule
+      contains: Who gets a code, how much, when it arrives and when it ends.
+    - name: SMS
+      contains: One text per abandonment, its timing and the consent needed.
+    - name: Tests, checks missed and missing
+      contains: The first three tests, any checks that failed, and facts you did not give.
 
 how_it_works:
   - title: Checks the trigger

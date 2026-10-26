@@ -1,6 +1,6 @@
 new_slug: amazon-search-gap-finder
 name: "Amazon search gap finder"
-summary: "Give it an interest or category. Get Amazon product ideas people search for that page 1 misses."
+summary: "Find Amazon product ideas by spotting search phrases page 1 misses. Give it an interest or category and get 5 to 10 ranked gaps to check."
 job: sell-on-amazon
 thinking: medium
 thinking_why: "It weighs several research methods against your own data, but each step is simple."
@@ -17,6 +17,10 @@ when:
   - You want to sell on Amazon but have no product yet, only an interest.
   - You have a product category in mind and want to know which niche inside it is open.
   - You have a keyword tool export and need it read line by line for gaps.
+not_for:
+  - "You already have a product and want to know if it can sell: use the Amazon product viability scorer."
+  - "You want ideas in a category one brand owns, or in electronics with lithium batteries: pick another niche or ask a person who sells there."
+  - "You only want to copy a best seller: this skill drops copies, so test a pre-sale of your own idea instead."
 
 you_give:
   - An interest, hobby, diet, problem or Amazon category
@@ -33,6 +37,26 @@ how_to_use:
   - Say your interest or category, how much cash you can put in, and whether you will make the product or only brand it.
   - Paste a keyword export if you have one. Free tiers of keyword tools cap lookups, so run your best phrases first.
   - Check the 3 top ideas by hand on Amazon, then run the Amazon product viability scorer on each.
+output_sample:
+  input:
+    - An interest, hobby, diet, problem or Amazon category
+    - A keyword tool export with searches and title counts (optional)
+    - Page 1 prices, review counts and ratings (optional)
+    - Your budget, and whether you make or only brand the product (optional)
+  prerequisites:
+    - A keyword tool such as Helium 10 for the filtered database and reverse lookup steps (free tier has capped lookups)
+    - A Google Ads account if you want Google's keyword planner for the trend check
+  output:
+    - name: GAP IDEAS (ranked)
+      contains: 5 to 10 ideas, each with the search phrase, volume estimate, what page 1 shows, the gap and one way to be better.
+    - name: TOP 3 FOR A FULL CHECK
+      contains: The three ideas that lead, with a line on why each one leads.
+    - name: DROPPED
+      contains: Ideas cut, with the reason, such as one brand owning it, electronics or a one-month trend.
+    - name: VERIFY BY HAND
+      contains: Phrases to type into Amazon yourself, and what to look for in the results.
+    - name: NOTE and CHECKS MISSED
+      contains: A reminder that volumes are estimates, plus any missing inputs and any checks that failed.
 
 how_it_works:
   - title: Sets the ground rules

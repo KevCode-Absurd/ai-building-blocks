@@ -2,35 +2,79 @@ thinking: medium
 thinking_why: It collects facts and lays out one page.
 new_slug: company-tear-sheet
 name: Company one-page tear sheet maker
-summary: Name a company. Get a dense one-page Word profile with numbers, ratios
-  and a business summary. It collects data from websites.
+summary: "Name a company. Get a one-page Word tear sheet with financials, ratios and a business summary, shaped for your reader, from free public data."
 job: money-and-investing
 headline: Company one-page tear sheet maker
-subhead: Name a company. Get a dense one-page Word profile with numbers, ratios
-  and a business summary. It collects data from websites. Bring the company name
-  or ticker. Use the result to plan your next step.
+subhead: Name a company and say who will read the sheet, such as an analyst, a banker, a deal team or a sales team. Your AI pulls free public data and builds a dense one-page Word profile. Every figure has a source and a date, and gaps say Not disclosed.
 explain: |
-  A dense one-page Word profile of a listed company with the numbers, ratios and a short business summary, ready to hand to a client or manager. Built for Indian companies, so it follows the April to March fiscal year and shows amounts in lakh and crore.
+  A tear sheet is a one-page company profile that a manager, client or deal team can read in a minute. This skill builds one as a Word file, with the numbers, ratios and a short business summary.
 
-  Claude pulls data from free public sources and company filings, with no paid terminal. It shapes the sheet for the reader, such as an investor or a lender. It never invents a figure. Missing data shows as not disclosed. Periods are written in full, such as Q3 FY26, and crore values use a live formula so no unit is off by 100 times. It needs a tool called officecli to build the file.
+  The layout changes with the reader. An equity research sheet leads with valuation and consensus. An investment banking sheet leads with comparable companies and deals. A corporate development sheet looks at fit and integration. A sales sheet looks at the company's priorities and what to say in the first meeting.
+
+  It uses free sources only, so some rows will be missing. For a US company the figures come from SEC filings. For an Indian company it uses delayed Yahoo Finance data and the company's own filings, which you can paste in. It never fills a gap from memory. The data is end of day or delayed, and the sheet is not investment advice.
 when:
-  - You need a one-page snapshot of an Indian listed company for a meeting.
+  - You need a one-page snapshot of a listed company for a meeting.
   - A client asked for numbers and a short business note on a company.
-  - You want fiscal periods and rupee units shown correctly.
   - You are preparing the first page of a longer research pack.
+  - You want a quick profile of a prospect before a sales call.
+not_for:
+  - You want a PowerPoint slide for a pitch book. Use the company strip profile slide maker.
+  - You want a valuation or a fair price. Use the company fair value modeler.
+  - You need live prices or a document a client will trade on. Free data is end of day or delayed, so use a licensed data terminal.
 you_give:
   - The company name or ticker
-  - The reader, such as investor or lender
-  - Fiscal period to cover
-  - Your preferred layout (optional)
+  - The reader, such as equity research, investment banking, corporate development or sales
+  - Comparable companies you want shown (optional)
+  - Page length or layout (optional)
+  - The company's annual report or results, for an Indian or private company (optional)
 you_get:
-  - A one-page Word tear sheet
-  - Key financials and ratios
-  - A short business summary
-  - Not disclosed marks where data is missing
+  - A one-page Word tear sheet for your reader
+  - Key financials for three years, with growth
+  - A short business summary and valuation snapshot
+  - A source and date on every figure
+  - Not disclosed marks wherever data was missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the web.
+  - Use an AI that can run code and reach the web, such as Claude Code. The skill builds the Word file with a command line tool called officecli, which must be installed. In a plain chat, ask for the sheet as text and paste it into Word.
+  - Open the skill and name the company. Say who the reader is. If you skip this, it will ask.
+  - For an Indian or private company, paste the annual report figures. Free sources have little on them.
+  - Read the Not disclosed marks first. Fill them from the company's filings if you need them.
+  - Check the figures and dates against the latest results. Note that the price data is delayed.
+  - Put the sheet in your pack only after you have checked it.
+output_sample:
+  input:
+    - The company name or ticker
+    - The reader (equity research, investment banking, corporate development or sales)
+    - Comparable companies (optional)
+    - Annual report figures for an Indian or private company (optional)
+  prerequisites:
+    - An AI that can run code and reach the web
+    - The officecli tool installed, to build the Word file
+  output:
+    - name: Header banner
+      contains: Company name, ticker, headquarters, employees, market cap, share price and as-of date.
+    - name: Business overview
+      contains: What the company does, its segments and its position in its market.
+    - name: Financial summary
+      contains: Three years of revenue, margins, profit and growth in one table, with units in the header.
+    - name: Valuation snapshot
+      contains: Trailing and forward multiples, and comparable companies where the reader needs them.
+    - name: Reader-specific section
+      contains: Consensus for research, deals for banking, fit for corporate development, or conversation starters for sales.
+    - name: Footer
+      contains: Data sources, retrieval date, and a line that it is for information only and not investment advice.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Pulls the data, builds the Word file and checks it before you open it.
+  inputs:
+    - A free Alpha Vantage key, for consensus on one company at a time
+    - Annual report figures, for companies outside the US
+terms:
+  - term: Tear sheet
+    meaning: A dense one-page profile of a company.
+  - term: Consensus
+    meaning: The average of analyst forecasts.
+  - term: Comparable companies
+    meaning: Similar listed firms used to judge a company's valuation.
+  - term: Lakh and crore
+    meaning: Indian units. A lakh is 100,000 and a crore is 10,000,000.

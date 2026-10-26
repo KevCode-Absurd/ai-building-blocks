@@ -25,11 +25,11 @@ uses:
   - mixed-practice-unit-planner
 steps:
   - uses: study-understanding-check
-    note: Separate slips, missing prerequisites and misunderstood concepts using the actual answers.
+    note: Separate slips, missing prerequisites and misunderstood concepts using the actual answers. Hands the error map, most frequent mistake first, to the example writer.
   - uses: flawed-example-writer
-    note: Start from a verified correct example, introduce exactly one realistic target error and keep the teacher key separate from the learner task.
+    note: Start from a verified correct example, introduce exactly one realistic target error and keep the teacher key separate from the learner task. Reads step 1's error map plus the correct worked solutions you give it. Hands the practice sets to the planner.
   - uses: mixed-practice-unit-planner
-    note: Use the prior taught topic and prerequisite order to mix corrected practice with earlier topics, then define a later retention check.
+    note: Use the prior taught topic and prerequisite order to mix corrected practice with earlier topics, then define a later retention check. Reads step 2's practice sets plus your topic order and weekly time. Hands you the practice plan and recall check.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

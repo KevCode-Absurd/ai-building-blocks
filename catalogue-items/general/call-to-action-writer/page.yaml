@@ -1,6 +1,6 @@
 new_slug: call-to-action-writer
 name: Call-to-action writer
-summary: Paste your ad and offer. Get a clear ask with a real reason to act now and the barriers removed.
+summary: Write a clear call to action for your ad. Give it your ad and offer. You get two versions of the ask, a real reason to act now, and barriers removed.
 job: write-ad-copy
 thinking: low
 thinking_why: It follows a fixed list of choices and writes from the offer terms you give it.
@@ -14,6 +14,10 @@ when:
   - Your ad ends with a logo or a vague line like 'learn more'.
   - People read your ad and do not click, call or reply.
   - You are not sure whether to ask for a purchase or a smaller step.
+not_for:
+  - "You need a brand awareness ad with no offer to act on: there is nothing to ask for, so write the ad first with the Ad first line writer and scorer."
+  - "You need the page the reader lands on after the click: use the Ad-matched landing page writer."
+  - "You want a closing sum-up before the ask: use the Summing-up paragraph writer."
 you_give:
   - Your ad draft
   - "Your offer: price, guarantee wording, trial or sample terms, dates and limits"
@@ -28,6 +32,26 @@ how_to_use:
   - Paste the draft and the offer with its exact terms.
   - Pick one of the two asks and test the other.
   - Check that every term in the ask matches your offer.
+output_sample:
+  input:
+    - Your ad draft
+    - "Your offer: price, guarantee wording, trial or sample terms, dates and limits (optional but recommended)"
+    - "How the reader acts: link, phone number, address or form"
+  output:
+    - name: Kind of ask
+      contains: Whether to ask them to go and buy, try it, or reply, with one line on why.
+    - name: Reason to act now
+      contains: A real date, limit or bonus from your offer, or a note that the facts give none.
+    - name: Barriers and fixes
+      contains: What could stop a reader who wants it, and how each barrier is removed.
+    - name: Ask, version A
+      contains: A direct ask with one action, what they get and what happens next.
+    - name: Ask, version B
+      contains: A smaller, lower risk step such as a sample, trial or question.
+    - name: Missing
+      contains: Any term you did not give, such as price, guarantee, date or way to act.
+    - name: Checks missed
+      contains: One line for each check that failed and why, or none.
 how_it_works:
   - title: Picks the ask
     text: Chooses between go and buy, try it, or reply, based on price and trust.

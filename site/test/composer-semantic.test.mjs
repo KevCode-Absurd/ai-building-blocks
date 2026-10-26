@@ -7,6 +7,11 @@ import { MODELS, ProviderError } from '../src/lib/composer-models.ts';
 import { handleComposer, memoryComposer } from '../src/server/composer.ts';
 import { WIDE_CASES } from '../../tools/lib/workflow-wide-cases.mjs';
 const c = decodeCatalogue(JSON.parse(fs.readFileSync('public/data/blocks.json', 'utf8')));
+test('topical retrieval includes a real producer for a required artifact, not only its checker', () => {
+  const found = candidatesFor(c, 'Make a tutor attendance and fees spreadsheet with a monthly summary', {}, '', [{ query: 'tutor attendance fees payments monthly summary', kind: 'create' }]);
+  assert(found.some(b => b.outputs.some(p => p.type === 'spreadsheet') && b.role !== 'check' && !b.inputs.some(p => p.required && p.type === 'spreadsheet')), 'A new workbook must have a producer that does not require an existing workbook.');
+  assert(found.length <= 90);
+});
 for (const task of WIDE_CASES) test(`semantic candidate coverage: ${task.id}`, () => {
   const found = candidatesFor(c, task.goal, {}, task.context ?? '', [{ query: task.query, kind: task.kind }]);
   assert(found.length <= 90); assert.equal(new Set(found.map(b => b.slug)).size, found.length);
@@ -23,7 +28,7 @@ test('invalid interpretations cannot become workflow instructions', () => {
 });
 const model = MODELS.find(m => m.id === 'gpt-6.1-sol');
 const env = { OPENAI_API_KEY: 'unit-test', WORKFLOW_COMPOSER_ENABLED: 'true', WORKFLOW_DEFAULT_MODEL: model.id, WORKFLOW_DAILY_CAP_USD: '2' };
-const request = () => new Request('https://example.test/api/compose', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID() }, body: JSON.stringify({ goal: 'Plan a family trip', context: '', choices: {} }) });
+const request = () => new Request('https://example.test/api/compose', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID() }, body: JSON.stringify({ goal: 'Plan a family trip', context: '', choices: {}, assignMinds: false }) });
 const result = text => ({ text: JSON.stringify(text), cost: .001, latencyMs: 1, usage: { input: 10, output: 10, cached: 0, cacheWrite: 0 }, finish: 'completed', actualModel: model.id });
 test('both model calls are budgeted before interpretation; one account attempt covers the full workflow', async () => {
   const store = memoryComposer(); let calls = 0;
@@ -41,7 +46,7 @@ test('known interpretation failures charge only known usage; unknown planning fa
   assert.equal(response.status, 502); assert.equal(calls, 1); assert.equal((await invalid.usage('user', day)).estimatedCost, .001);
   const unknown = memoryComposer();
   const failed = await handleComposer(request(), c, env, unknown, 'ip', async (_m, _k, _p, schema) => { if (schema.properties.intents) return result({ intents: [{ query: 'travel itinerary', kind: 'create' }] }); throw Error('network outcome unknown'); }, 'user');
-  assert.equal(failed.status, 502); assert.equal((await unknown.usage('user', day)).estimatedCost, semanticReservation(c, 'Plan a family trip', '', {}, model));
+  assert.equal(failed.status, 502); assert.equal((await unknown.usage('user', day)).estimatedCost, semanticReservation(c, 'Plan a family trip', '', {}, model, false));
 });
 test('rejected provider credit requests release unused reservations and report an actionable error', async () => {
   for (const failAt of [1, 2]) {

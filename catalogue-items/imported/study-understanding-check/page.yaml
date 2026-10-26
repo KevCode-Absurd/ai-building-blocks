@@ -2,17 +2,54 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: study-understanding-check
 name: Study understanding check
-summary: Share what you studied. Get questions, worked practice and feedback
-  that shows what to review next.
+summary: Check your understanding after you study. Share your notes or a chapter and get questions or a worked practice problem, plus feedback on each answer.
 job: study-and-practice
 headline: Study understanding check
-subhead: Bring your notes, a chapter or a paper you can share. Answer questions
-  or try a practice problem, then get feedback tied to the material. It supports
-  learning through your own answers.
+subhead: Bring your notes, a chapter or a paper you can share. Answer questions or try a practice problem, then get feedback tied to the material. It supports learning through your own answers.
+explain: |
+  Reading a chapter can feel like learning even when you could not use it. This study understanding check asks you to produce something: apply the idea, explain it, connect it to another idea or predict what happens next.
+
+  For ideas, you get four to six questions. For a method, a derivation or a calculation, you get a worked example and then a practice problem with one twist. When you answer wrong, it asks a guiding question before it gives the answer.
+
+  It ends with a summary of what is solid, where the gaps are and what to revisit. You can answer in your own words and in any order.
 when:
   - You want to check what you can explain or apply after studying.
+not_for:
+  - "You want a reading guide for a paper: use the paper-reader skill."
+  - "You want a critique of a paper's claims: use the paper-critique skill."
+  - "You want a plan for learning a new topic from scratch: use the topic-map skill."
+you_give:
+  - "Your notes, a chapter or a paper you just studied"
+  - "The topic name, if you do not paste the material"
+  - "Whether you want questions or a worked example and practice problem (optional)"
+  - "Your answers, once the questions are asked"
+you_get:
+  - "Four to six numbered questions that ask you to apply, explain, connect, spot an error or predict"
+  - "A step-by-step worked example, if you want to practise a method"
+  - "A slightly harder practice problem for you to solve"
+  - "Short feedback on each answer: what is right, where the reasoning went off and a hint"
+  - "A summary of what is solid, where the gaps are and where to look in the source"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of the skill's SKILL.md file as your first message.
+  - Paste your notes, the chapter or the paper text. Or say the topic name if your AI already knows the material.
+  - "Say what you want: questions to test your understanding, or a worked example and a practice problem."
+  - Answer the questions in your own words, in any order. You can pick just some of them.
+  - Read the feedback and the final summary. Go back to the parts of the source it points to.
+  - No code or paid tool is needed. If your AI can run code, it can check the numbers in worked examples.
+output_sample:
+  input:
+    - Your notes, a chapter or a paper you just studied
+    - The topic name, if the material is not pasted in
+    - Conceptual questions or a worked practice problem (optional)
+    - Your answers, once the questions are asked
+  output:
+    - name: Questions
+      contains: Four to six numbered questions that ask you to apply, explain, connect, spot an error or predict.
+    - name: Worked example
+      contains: A step-by-step example with the reasoning at each choice, used when you want to practise a method.
+    - name: Practice problem
+      contains: A slightly harder problem with one twist, for you to solve yourself.
+    - name: Feedback on each answer
+      contains: A short note on what is right, where your reasoning went off, and a hint if you are stuck.
+    - name: Summary
+      contains: What is solid, what has gaps, where to revisit in the source, and what to do next.

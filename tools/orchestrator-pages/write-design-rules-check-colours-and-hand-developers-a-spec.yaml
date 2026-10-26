@@ -1,44 +1,54 @@
 new_slug: write-design-rules-check-colours-and-hand-developers-a-spec
 name: Write design rules, check colours and hand developers a spec
-summary: Give it your brief. Get design rules, checked colours, tokens and a developer spec.
+summary: Turn a brief into design rules, colours checked for contrast, design tokens and a developer handoff spec your developer can build from.
 job: design-work
 thinking: medium
 thinking_why: Each step is a clear job with a checkable result. A mid-level model is enough.
 headline: Turn a design feeling into rules a developer can build from
-subhead: Give it your brief. It sets the feeling and firm rules for colour, type and grid, checks that the colours can be read, builds design tokens from the colours that pass, and writes the spec a developer builds from.
+subhead: Give it your brief. It writes firm rules for colour, type and grid. It checks the colours can be read. It builds tokens from the colours that pass and writes the spec your developer builds from.
 explain: |
-  Designers hold a feeling in their heads. Developers need numbers. Between them sits a gap: colours that fail contrast tests, tokens guessed from a screenshot, and a handoff that says "make it look like the mock".
+  Designers hold a feeling in their heads. Developers need numbers. Between them sits a gap: colours that fail contrast tests, tokens guessed from a screenshot, and a handoff that says "make it look like the mock". This workflow turns a brand or event brief into design rules, checked colours, design tokens and a developer handoff spec.
 
-  The first step writes the feeling first, then the few rules that carry it: which colours and what they mean, one type family, a grid, and where there is room to play. The second step measures every text and background pair and finds the closest colour that passes. The third builds tokens from the guide, using the fixed colours. The last turns the tokens into a spec with components, states, breakpoints and accessibility notes.
+  The first step writes the feeling first, then the few rules that carry it: which colours and what they mean, one type family, a grid, and where there is room to play. The second step measures every text and background pair and finds the closest colour that passes. The third builds tokens from the rules, using the colours that passed. The last turns the tokens into a spec with components, states, breakpoints and accessibility notes.
+
+  The spec comes from your rules and tokens, not from finished screens. If you have screens, add them to step four.
 when:
   - You have a brief and a feeling but no written design rules.
-  - A developer is waiting and keeps asking for exact values.
+  - A developer is waiting and keeps asking for exact colour, font and spacing values.
   - You want to know the colours can be read before anything is built.
+  - You are setting up the look of a new site, app or event and need one source of truth.
+not_for:
+  - You only want to test the colours you already have. Use the Colour contrast checker on its own.
+  - You already have a design system and want to move it to a new setup. Use the Prepare a design system migration workflow.
+  - You need one poster or one page laid out. Use the Make a readable event poster workflow.
+  - You want a quick brief for one design job, not a rule sheet. Use the Design brief rules writer.
 you_give:
-  - A brief that says what the brand or event is, who it is for and where it appears
+  - What the brand or event is, who it is for and where it will appear (web, app, print or signs)
   - The feeling it should give, in a few words
-  - Your brand file (optional)
-  - Any fonts or colours you must keep
+  - Fonts or colours you must keep (optional)
+  - Whether you need a dark theme (optional)
+  - The token format your developer wants, such as CSS, SCSS or JSON (optional)
+  - Your brand guide (optional)
 you_get:
   - A short rule sheet with the feeling, colours and their meanings, type, grid and where to play
   - A contrast check for each text and background pair, with passing fixes
   - Design tokens for colour, type, spacing and shadow, with component notes
   - A developer spec with components, every state, breakpoints and accessibility notes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your brief and say the feeling in a few words.
-  - Tell it which fonts and colours are fixed.
-  - Pass the final spec to your developer with the token file.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md". Use an AI that can run code if you can. Without it, the colour ratios are worked out by hand and shown for you to check.
+  - Paste your brief and say the feeling in a few words. Name the fonts and colours that are fixed.
+  - Read the rule sheet first. Change it now, because the next three steps build on it.
+  - Check two or three of the colour pairs yourself with a free contrast tool, then pass the spec and token file to your developer.
 how_it_works:
   - title: Write the rules
-    text: States the feeling and what to avoid. Picks the fewest colours with a meaning each, one type family and a grid. Marks where play is allowed.
+    text: States the feeling and what to avoid. Picks the fewest colours with a meaning each, one type family and a grid. It hands a colour list with hex codes to the next step.
   - title: Check the colours
-    text: Pairs each text colour with its background and measures the ratio in light and dark themes. Finds the closest passing colour for any failure.
+    text: Pairs each text colour with its background and measures the ratio in light and dark themes. It finds the closest passing colour for any failure and hands the passed list on.
   - title: Build the tokens
-    text: Takes the brand guide with the colours that passed, and builds colour, type, spacing and shadow tokens with component notes and sizes.
+    text: Starts from the main colour and style in the rules and builds colour, type, spacing and shadow tokens. The colours that passed replace any that did not.
   - title: Write the developer spec
-    text: Lists layout, tokens, components, every state, edge cases, breakpoints and accessibility notes.
+    text: Lists layout, tokens, components, every state, edge cases, breakpoints and accessibility notes, using the rule sheet and the token file.
 output_shape: |-
   STEP 1: DESIGN RULES
     Feeling | what to avoid | colours and meanings | type | grid | where to play | who checks
@@ -54,6 +64,33 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+output_sample:
+  input:
+    - What the brand or event is, who it is for and where it will appear
+    - The feeling it should give, in a few words
+    - Fonts or colours you must keep (optional)
+    - Whether you need a dark theme (optional)
+    - The token format your developer wants (optional)
+  prerequisites:
+    - An AI that can run code (Node for the colour check, Python for the tokens). Without it, the AI works the numbers by hand and says so.
+  output:
+    - name: Design rules
+      contains: The feeling, what to avoid, colours with meanings, one type family, the grid and where the team may play.
+    - name: Colour check
+      contains: Each text and background pair with its contrast ratio, pass or fail, and the closest passing colour.
+    - name: Design tokens
+      contains: Colour, type, spacing and shadow values in the format your developer needs, plus component notes.
+    - name: Developer spec
+      contains: Layout, components, every state, edge cases, breakpoints and accessibility notes.
+    - name: Hand-back summary
+      contains: Files saved, any step that could not run and every MISSING line in one list.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with code running
+      why: The colour check and the token builder are scripts. Without code running, the numbers are worked out by hand and need your check.
+  inputs:
+    - Your brand guide, if you have one, so step one starts from your real look.
+    - Screens or mock-ups, if they exist, so the spec in step four can show real layouts.
 tweaks:
   - what: Fixed colours or fonts
     how: Name them. Step 1 keeps them and the check measures them as they are.
@@ -77,3 +114,12 @@ improve:
   - Keep the token file in the project so the spec and the code stay in step.
   - Re-run the colour check whenever a colour changes.
   - Add the questions your developer asked to the spec template.
+next:
+  - design-principles-checker
+  - slide-and-page-styler
+  - turn-a-design-review-into-fixes
+terms:
+  - term: Design tokens
+    meaning: Named values for colour, type and spacing that designers and developers share, such as a text colour called "text-main".
+  - term: Contrast ratio
+    meaning: How different a text colour is from its background. A higher number is easier to read. Normal text needs 4.5 to 1 or more.

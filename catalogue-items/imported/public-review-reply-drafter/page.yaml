@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes a fitting reply per review and flags risky ones.
 new_slug: public-review-reply-drafter
 name: Public review reply drafter
-summary: Paste your store reviews. Get a specific reply to each, with risky ones
-  flagged and no refunds promised.
+summary: Paste your store reviews and get a public reply to each one. Risky reviews are flagged, and no refunds are promised. A review reply drafter for Shopify.
 job: help-customers
 headline: Public review reply drafter
-subhead: A reply for every review you paste, ready to post. Each reads as if you
-  wrote it to that one customer, and none promise anything you have not
-  approved.
+subhead: A reply for every review you paste, ready to post. Each reads as if you wrote it to that one customer, and none promise anything you have not approved.
 explain: |
   A reply for every review you paste, ready to post. Each reads as if you wrote it to that one customer, and none promise anything you have not approved.
 
@@ -18,6 +15,10 @@ when:
   - A one-star review landed and you need a calm, careful response.
   - You want replies that do not sound copied from a template.
   - You need to know which reviews carry legal or safety risk.
+not_for:
+  - "You want to answer a private customer email or chat: use your support inbox, since this skill writes public replies only."
+  - "You need to reply to reviews of a service or a non-store business: write those by hand, as this skill is built for store product reviews."
+  - "A review mentions injury, an allergic reaction or a legal threat: talk to a person first. The skill flags these but does not settle them."
 you_give:
   - Pasted reviews
   - Support email (optional)
@@ -29,7 +30,26 @@ you_get:
   - A table when there are four or more
   - Placeholders where approval is needed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Paste your reviews under it. Copy them from Judge.me, Yotpo, Okendo, Loox, Google, Trustpilot or similar.
+  - Add your support email, any remedy you approve, and your voice or sign-off name if you have them (optional).
+  - Check the flagged reviews first. Deal with these yourself before you post anything.
+  - Fill every placeholder, such as [REMEDY], then paste each reply into your review app.
+  - The skill reads only what you paste. If you give a public review page link, it may read it with your AI's own web tool. Check the platform's terms first. If the page cannot be read, paste the reviews.
+output_sample:
+  input:
+    - Your reviews, pasted in any format
+    - Your support email (optional)
+    - Remedies you have approved, such as a refund or replacement (optional)
+    - Your brand voice and sign-off name (optional)
+  output:
+    - name: Reply per review
+      contains: A specific reply for each review, thanking happy customers or apologising and giving one private next step to unhappy ones.
+    - name: Reply table
+      contains: With four or more reviews, one table with number, reviewer, stars, product, type, flag and a ready-to-paste reply.
+    - name: Needs a human
+      contains: Each flagged review with its flag code, how serious it is and what you should check.
+    - name: Other notes
+      contains: Reviews where the stars and text do not match, wrong product pages, and trends across the batch.
+    - name: Placeholders to fill
+      contains: A list of gaps, such as the remedy to offer or the restock date, for you to fill before posting.

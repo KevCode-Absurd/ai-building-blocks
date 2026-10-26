@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Measurements need exact method choices.
 new_slug: mixed-signal-waveform-analyzer
 name: Mixed-signal waveform analyzer
-summary: Give it circuit waveform data. Get phase noise, jitter, timing and ADC
-  accuracy measured.
+summary: Measure phase noise, jitter and ADC accuracy from your circuit simulation waveforms. Uses MATLAB Mixed-Signal Blockset. Also reads HSpice files.
 job: build-software
 headline: Mixed-signal waveform analyzer
-subhead: Give it circuit waveform data. Get phase noise, jitter, timing and ADC
-  accuracy measured. Bring waveform data or HSpice files. Use the result to plan
-  your next step.
+subhead: Give it circuit waveform data. Get phase noise, jitter, timing and ADC accuracy measured. Bring waveform data or HSpice files. Use the result to plan your next step.
 explain: |
   Measurements from your circuit simulation waveforms: phase noise, jitter, timing and converter accuracy, worked out with MATLAB Mixed-Signal Blockset functions. Give it the data and it picks the right function.
 
@@ -18,6 +15,10 @@ when:
   - You must turn a phase noise profile into RMS jitter.
   - Your simulator gave unevenly spaced samples.
   - You need INL and DNL for an ADC design.
+not_for:
+  - "You only need SNR, THD, SFDR or FFT results: use the Signal Processing Toolbox functions in MATLAB directly."
+  - "You need filtering or envelope detection: use the Signal Processing Toolbox, not this skill."
+  - "Your data is already evenly sampled and needs no resampling: skip this skill and measure it directly in MATLAB."
 you_give:
   - Waveform data or HSpice files
   - The measurement you want
@@ -29,8 +30,29 @@ you_get:
   - INL and DNL results
   - Data resampled to an even grid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Mixed-Signal Blockset.
+  - Check you have MATLAB and the Mixed-Signal Blockset first. Both are paid products with separate licences. The skill cannot run without them.
+  - Use an AI that can run MATLAB code and read your files. Add the skill to it.
+  - Give it your waveform data or HSpice files. Say which measurement you want.
+  - For phase noise, your AI asks for frequency offsets. Press Enter to use 10 kHz, 100 kHz, 1 MHz and 10 MHz, or type your own.
+  - Your AI sets the resolution bandwidth to half your lowest offset. Tell it if you want a different value.
+  - Read the HTML report and the plot notes. Check the results against what you expect from your design.
+output_sample:
+  input:
+    - Your waveform data or HSpice files (.tr0, .ac0, .sw0)
+    - The measurement you want, such as phase noise or jitter
+    - Frequency offsets for phase noise (optional)
+    - Clock or signal details
+  prerequisites:
+    - MATLAB and the Mixed-Signal Blockset, which are paid products licensed separately
+    - An AI that can run MATLAB code
+  output:
+    - name: Waveform summary
+      contains: A short table describing the data you loaded, such as its length and sample spacing.
+    - name: Measurement results
+      contains: Phase noise, jitter, timing, lock time, INL and DNL values, depending on what you asked for.
+    - name: Phase noise plot reading
+      contains: Notes on the slopes, loop bandwidth hump, noise floor and any ripple in the plot.
+    - name: Saved figure
+      contains: An image of the plot saved so you can inspect it.
+    - name: HTML report
+      contains: A report with the console output, tables, figure, observations and recommendations, saved next to your data file.

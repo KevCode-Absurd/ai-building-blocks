@@ -1,6 +1,6 @@
 new_slug: ad-recall-risk-checker
 name: "Ad recall risk checker"
-summary: "Paste your ad or creator brief. Get a brand-recall score out of 100 and fixes."
+summary: "Check whether viewers will remember your brand before you spend. Paste an ad script or brief and get a brand recall score out of 100, plus fixes."
 job: check-ads
 thinking: medium
 thinking_why: "It judges an ad against twenty yes or no questions and writes fixes, so a mid-size model works and a stronger one reads visuals more closely."
@@ -17,6 +17,10 @@ when:
   - You are about to spend on a new ad or brief and want to know if the brand will be remembered.
   - Your ads get views and likes, but branded search and add-to-cart do not move.
   - A creator or agency sent a script and you want a clear list of what to change.
+not_for:
+  - "Your ad is already live and you have recall data: run the ten-person poll or compare branded search and add-to-cart before and after, instead of scoring the script."
+  - "You only need to know if Meta would reject the ad: use the Meta ads compliance checker, which covers ad policy."
+  - "You want to know if your live ads repeat the same idea: use the Ad sameness checker."
 
 you_give:
   - Your ad script, storyboard, creator brief or finished ad (attach the file or link)
@@ -35,6 +39,31 @@ how_to_use:
   - Read the sections under 12 first and make the smallest change for each.
   - Run the checker again on the fixed version.
   - Run the cheap test before you scale spend.
+output_sample:
+  input:
+    - Your ad script, storyboard, creator brief or finished ad
+    - Your product name, brand name, logo and colour rules
+    - Your audience and the platform it will run on
+    - Past results for the ad (optional)
+  prerequisites:
+    - An AI that can read images or video links, if you want the look-based checks run on a finished ad
+  output:
+    - name: Header
+      contains: The ad name, its format and platform, and whether it was checked from a script, the finished ad or a description.
+    - name: Score and sum
+      contains: A brand recall score out of 100, five section scores with yes or no answers, the sum, and the score after fixes.
+    - name: Attention thieves
+      contains: Each element that pulls the eye from the product, where it appears and what it pulls away from.
+    - name: Same-as-everyone result
+      contains: Pass or fail against five rival ads with logos hidden, and the one big change if it fails.
+    - name: Controversy risk
+      contains: Any shock element that needs owner sign-off, or none.
+    - name: Fixes
+      contains: For each section under 12, the smallest change that raises it.
+    - name: Cheap test
+      contains: A ten-person poll the next day, or a head-to-head against your current ad.
+    - name: Not run
+      contains: Any check skipped, and what you need to add to run it.
 
 how_it_works:
   - title: Checks the story role

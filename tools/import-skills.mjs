@@ -182,7 +182,9 @@ if (WRITE) for (const r of batch) {
   const to = path.join(OUT, r.slug);
   // Page text we wrote by hand (explain, when, you_give, you_get) survives a re-import; the map wins only where it sets the field.
   const oldPage = fs.existsSync(path.join(to, "page.yaml")) ? YAML.parse(fs.readFileSync(path.join(to, "page.yaml"), "utf8")) ?? {} : {};
-  const kept = Object.fromEntries(["explain", "when", "you_give", "you_get"].filter((f) => oldPage[f] != null).map((f) => [f, oldPage[f]]));
+  const editorialFields = ["explain", "when", "you_give", "you_get", "how_it_works", "output_shape", "terms", "works_best_with"];
+  const kept = Object.fromEntries(editorialFields.filter((f) => oldPage[f] != null).map((f) => [f, oldPage[f]]));
+  const proposed = Object.fromEntries(editorialFields.filter((f) => r.m[f] != null).map((f) => [f, r.m[f]]));
   fs.rmSync(to, { recursive: true, force: true });
   copyDir(path.join(FROM, r.rel), to);
   if (r.lic.file.startsWith("..")) fs.copyFileSync(path.join(FROM, r.rel, r.lic.file), path.join(to, path.basename(r.lic.file)));
@@ -211,10 +213,10 @@ if (WRITE) for (const r of batch) {
     new_slug: r.slug, name: r.name, summary: r.summary, job: r.m.task ?? "set-up-ai",
     headline: r.name, subhead: r.m.subhead ?? oldPage.subhead ?? r.summary,
     ...kept,
-    ...(r.m.when ? { when: r.m.when } : {}),
-    how_to_use: [
-      "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill.",
-      "Ask for the job in your own words. Your AI opens the skill when it fits.",
+    ...proposed,
+    how_to_use: r.m.how_to_use ?? oldPage.how_to_use ?? [
+      "Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.",
+      "Ask your AI to follow this skill. Include the files and details listed on this page.",
       ...(r.m.needs ? [`It works best when your AI can ${r.m.needs}.`] : []),
       ...bring.filter((b) => b.link).map((b) => `Where the skill points to ${b.link}, use the ${b.to} folder inside it. We copied it in so the skill works on its own.`),
     ],

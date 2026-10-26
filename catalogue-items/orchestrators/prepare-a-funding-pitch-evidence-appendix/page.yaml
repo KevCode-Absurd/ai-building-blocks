@@ -1,52 +1,87 @@
 new_slug: prepare-a-funding-pitch-evidence-appendix
 name: Prepare a funding pitch evidence appendix
 headline: Prepare a funding pitch evidence appendix
-summary: Share the source files. Get a pitch evidence ledger, unsupported claim list and appendix outline.
+summary: Back every claim in your funding pitch with a dated source. Get an evidence table, a list of unsupported claims and an appendix outline for investors.
 job: speak-and-persuade
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A pitch evidence ledger, unsupported claim list and appendix outline. Share the actual pitch draft, dated traction records, financial exhibits, market sources, approved disclosures and investor meeting format. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI your pitch draft and the records behind it, such as revenue, users and market sources. It finds each claim that needs proof, matches it to a dated source and builds an appendix outline with answer notes for investor questions.
 explain: |-
-  A pitch evidence ledger, unsupported claim list and appendix outline.
+  Investors ask "how do you know?" about the numbers on your slides. If the answer lives in three spreadsheets and your memory, the meeting goes badly. If one number is wrong or has no date, the rest of the pitch loses trust.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Revenue, users and pipeline use defined periods and denominators; no market size, customer or forecast is fabricated. Missing tools or evidence stay visible in the final summary.
+  This workflow starts with the pitch, not the files. Step 1 lists every claim that needs proof: figures, market statements, forecasts and words like "first" or "leading". Step 2 matches each claim to a dated exhibit you supplied, and notes how the figure is defined (for example, revenue for which months), what it leaves out and where two sources disagree. Step 3 builds an appendix outline and short answer notes from only the checked claims.
+
+  A claim with no source stays on the unsupported list. The workflow never makes up a market size, a customer or a forecast. Projections are marked as assumptions. Exhibits marked confidential stay out of the appendix unless you say they can go in.
 when:
-  - You need a pitch evidence ledger, unsupported claim list and appendix outline.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have a pitch deck and an investor meeting, and you need an appendix that answers "how do you know?"
+  - Your numbers sit in several files and you are not sure they match the slides.
+  - A grant or fund asks for supporting evidence along with your application.
+  - A friend read your pitch and said "I would not believe that line", and you need to know which lines are weak.
+not_for:
+  - You only need to check one slide or one paragraph. Use the Unsupported claim spotter on its own.
+  - You want to judge the shape of the deck, such as slide count and font size. Use the Pitch deck 10/20/30 checker.
+  - You have no records yet. Gather them first. The workflow will only list what is missing.
+  - You want legal, tax or accounting advice on what to disclose. Ask a qualified person.
 you_give:
-  - The actual pitch draft, dated traction records, financial exhibits, market sources, approved disclosures and investor meeting format.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your pitch draft, as slides, a document or pasted text
+  - Dated records behind the numbers, such as sales reports, user counts and pipeline lists
+  - Financial exhibits and market sources you plan to cite (optional)
+  - What you may show investors and what stays confidential
+  - The meeting format and time, such as a 20-minute pitch with 10 minutes of questions (optional)
 you_get:
-  - A pitch evidence ledger, unsupported claim list and appendix outline.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - An evidence table with each claim, its source, its date and how the figure is defined
+  - A list of unsupported claims and what would support each one
+  - Notes on where two sources disagree or a figure has a gap
+  - An appendix outline with one short answer note per checked claim
+  - A hand-back summary that names every gap
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini. Use one that can open files if your records are in sheets or PDFs.
+  - Attach the pitch draft and the records. Say what is confidential and how long the meeting is.
+  - Read the unsupported list first. Fix the claim, find the source or remove the line from the pitch.
+  - Read the evidence table. Check each date and each definition against your own records.
+  - Use the appendix outline to build the slides. Keep each projection labeled as an assumption.
 how_it_works:
   - title: Unsupported claim spotter
-    text: Inventory the actual pitch claims and support required for metrics, market assertions, forecasts and superlatives.
+    text: "Lists every claim in the pitch that needs proof, such as metrics, market statements, forecasts and superlatives. Hands step 2 the claim list. Check before moving on: each claim is a quote from the pitch."
   - title: Source note summariser
-    text: Map each claim to supplied dated exhibits, retaining metric definitions, uncertainty, contradictory evidence and missing support.
+    text: "Matches each claim to a dated exhibit you gave. Notes how each figure is defined, how sure it is, and where sources disagree or are missing. Hands step 3 the table of checked claims."
   - title: Presentation builder
-    text: Build an appendix outline and sourced answer notes from the verified evidence; mark projections as assumptions and keep confidential exhibits within the allowed disclosure scope.
+    text: "Builds the appendix outline and a short answer note for each checked claim. Marks projections as assumptions. Leaves out anything you marked confidential."
 output_shape: |-
-  Scope and source coverage
-  A pitch evidence ledger, unsupported claim list and appendix outline.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CLAIMS          <n | claim, quoted | type>
+  EVIDENCE TABLE  <claim | source file | date | how defined | status: supported, partly or unsupported>
+  UNSUPPORTED     <claim | what would support it>
+  CONFLICTS       <claim | source A vs source B>
+  APPENDIX        <slide | claim it proves | exhibit | answer note>
+  MISSING         <each gap and the claim it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Your pitch draft
+    - Dated records for the numbers, such as sales, users and pipeline
+    - Market sources you plan to cite (optional)
+    - What may be shown to investors and what is confidential
+  prerequisites:
+    - An AI that can read your files
+    - The pack with its three component skills
+  output:
+    - name: Evidence table
+      contains: Each claim with its source file, its date, how the figure is defined and its status.
+    - name: Unsupported claims
+      contains: Claims with no source, and what kind of evidence would support each one.
+    - name: Conflicts
+      contains: Places where two of your sources give different figures for the same thing.
+    - name: Appendix outline
+      contains: One slide per checked claim, with the exhibit to show and a short answer note.
+    - name: Hand-back summary
+      contains: Each saved file, every MISSING line and the checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Revenue, users and pipeline use defined periods and denominators; no market size, customer or forecast is fabricated.
+  - what: Audience
+    how: Say if the readers are angel investors, a bank or a grant panel. The answer notes use the questions that group asks.
+  - what: Appendix length
+    how: Say how many appendix slides you can show. The outline keeps the claims that matter most.
+  - what: Strictness
+    how: Say "strict" to mark any claim without a dated source as unsupported, even if it seems likely.
 judge:
   - Revenue, users and pipeline use defined periods and denominators; no market size, customer or forecast is fabricated.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -64,11 +99,17 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read your pitch and your records together. In plain chat, paste the key figures with their dates.
+    - name: A slide tool such as PowerPoint or Google Slides (optional)
+      why: You build the appendix slides there from the outline. This workflow does not make the slide file.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your last two investor updates or reports, so figures can be matched to what you said before.
+    - A person who can confirm what may be disclosed.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Evidence appendix
+    meaning: Extra slides at the end of a pitch that show the proof behind the main claims.
+  - term: Denominator
+    meaning: The total a percentage is taken from, such as all visitors or all customers.
+  - term: Superlative
+    meaning: A word like first, best or leading that claims you rank above others.

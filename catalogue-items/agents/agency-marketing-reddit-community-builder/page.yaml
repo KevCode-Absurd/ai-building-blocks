@@ -1,0 +1,142 @@
+name: Reddit Community Builder agent
+summary: "Get a Reddit plan: which subreddits to join, a rules and disclosure check for each, and helpful draft posts and replies. Bring your brand."
+headline: Reddit Community Builder agent
+subhead: Tell it what your brand does, what you know well and who will post. It picks subreddits to join, checks each one's rules and disclosure needs, and plans value-first posts and replies. You get a slow, honest Reddit plan with drafts you review.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Reddit punishes brands that show up to sell. Members spot a pitch fast, and moderators remove it. What works is the opposite: answer questions well, share useful things and say who you are. This Reddit community builder agent plans that slow route.
+
+  It starts with what your team really knows, so you have something worth giving. It then shortlists subreddits where your buyers ask questions. For each one, it makes you check the rules on self-promotion and brand accounts before anything is drafted. If a subreddit bans brand posts, it says skip it. For the rest, it plans mostly helpful posts and replies, with the profile's 90/10 rule: at least nine in ten should add value and no sale. Every draft names the person's link to the brand.
+
+  It can't read Reddit, so rules and thread details come from you. Paste the rules and a few top threads for the best results. It never plans fake accounts, hidden ties to the brand, bought votes or posts that pose as customers. It drafts only. A person reads and posts each one. The profile's targets, such as 10,000 karma, are goals, not results from AI Blocks.
+when:
+  - You want your buyers to find your brand through helpful Reddit answers.
+  - You are new to Reddit and don't know which subreddits allow brand posts.
+  - You plan an Ask Me Anything and need a prepared plan and answers.
+  - A past post was removed or downvoted and you want a safer approach.
+not_for:
+  - You want to answer the threads AI tools already cite about your buyers' questions. Use the Reddit answer planner.
+  - You want Reddit posts and comments collected into a table. Use the Reddit thread collector.
+  - You want to run Reddit ads. This agent plans organic, disclosed posts only.
+  - You want fake accounts, hidden ties to your brand or bought votes. This agent will not plan them.
+  - You want to build a community on your own site or in Discord. Use the Community growth planner.
+you_give:
+  - What your brand does and who it helps
+  - Topics your team knows well and can answer in detail
+  - Who will post, and how they are linked to the brand, such as founder or employee
+  - Subreddits you already read or want to join (optional)
+  - The rules text from each subreddit you want to use (optional but needed for the rules check)
+  - A few top or recent threads from those subreddits (optional)
+you_get:
+  - A shortlist of subreddits, with why each fits and what to check
+  - A rules and disclosure check for each, with a go, ask the moderators or skip call
+  - A plan for the first weeks that builds a name by helping, with no sales in the first posts
+  - Draft posts and replies, each with a disclosure line and marked draft
+  - An AMA plan with likely questions, if you ask for one
+  - A routine for watching brand mentions and replying honestly
+  - A review plan that reads signs of trust, not only karma
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste what your brand does, what your team knows and who will post. Name the person and their role.
+  - Open each subreddit you want, copy its rules and a few top threads, and paste them in. Your AI can't see Reddit by itself.
+  - "Say: \"Make my Reddit plan. Check every rule and disclosure before drafting. Don't invent threads or numbers.\""
+  - Read the rules check first. Drop any subreddit marked skip. Message the moderators before you post if it says ask.
+  - Post each draft yourself, from the named person's own account, with the disclosure line. Reply to every comment as a person, not as a brand voice.
+how_it_works:
+  - title: Collect the facts
+    text: It confirms what the brand does, what the team knows and who posts. It asks for anything missing once, then marks it MISSING.
+  - title: Shortlist subreddits
+    text: It lists communities where your buyers ask questions and says what to check in each.
+  - title: Check rules and disclosure
+    text: It reads the rules you pasted and calls each subreddit go, ask or skip. It sets a disclosure line for each.
+  - title: Plan the helping
+    text: It plans value-first replies and posts, with no pitch in the early ones, and keeps promotion to the small share the rules allow.
+  - title: Draft the posts and replies
+    text: It writes drafts in plain, human language, marked draft, each with a disclosure line and a gap for a real detail.
+  - title: Plan monitoring and review
+    text: It sets a routine for brand mentions and honest replies, and names the signs of trust to read after a month.
+output_shape: |-
+  ASSUMPTIONS AND MISSING
+    ASSUMED: <list> | MISSING: <list, such as rules text not pasted>
+
+  WHAT YOU CAN GIVE
+    <topic your team knows> | <kind of question it answers> | <who answers>
+
+  SUBREDDIT SHORTLIST
+    <subreddit> | <why it fits> | <what the audience asks> | <what to check>
+
+  RULES AND DISCLOSURE CHECK
+    <subreddit> | <self-promotion rule> | <brand account rule> | <call: go, ask the moderators, skip> | <disclosure line>
+
+  FIRST WEEKS PLAN
+    <week> | <subreddit> | <what to do: read, reply, post> | <topic> | <no promotion: yes>
+
+  DRAFTS (all marked DRAFT)
+    <subreddit> | <post or reply> | <text> | <disclosure line> | GAP: <real detail to add>
+
+  AMA PLAN (if asked)
+    <subreddit> | <expert> | <likely questions> | <how to answer>
+
+  MONITORING AND REVIEW
+    <how to watch brand mentions> | <how to reply> | <sign of trust to read> | <starting point or MISSING>
+output_sample:
+  input:
+    - What your brand does, who it helps and what your team knows
+    - Who will post and how they are linked to the brand
+    - The rules text and a few top threads from each subreddit (optional)
+  prerequisites:
+    - A Reddit account for the person who will post, with a history of normal use
+    - Time each week to read, reply and post by hand
+  output:
+    - name: Subreddit shortlist
+      contains: Communities where your buyers ask questions, with why each fits and what to check.
+    - name: Rules and disclosure check
+      contains: Each subreddit's rules on promotion, with a go, ask or skip call and a disclosure line.
+    - name: First weeks plan
+      contains: What to read, reply to and post each week, with no promotion at the start.
+    - name: Drafts
+      contains: Posts and replies marked draft, each with a disclosure line and a gap for a real detail.
+    - name: AMA plan
+      contains: The community, the expert, likely questions and how to answer them honestly.
+    - name: Monitoring and review
+      contains: How to watch brand mentions, how to reply and the signs of trust to read after a month.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scope
+    how: Name two or three subreddits only, so the plan stays small enough to keep.
+  - what: Pace
+    how: Say how many hours a week you have, so it plans replies first and posts only if you have time.
+  - what: AMA
+    how: Ask for the AMA plan only when you have an expert ready to answer in person.
+improve:
+  - Keep a list of the replies that got thanks or follow-up questions, and ask for more like them.
+  - Add each moderator reply and rule change to your notes before the next round.
+terms:
+  - term: Subreddit
+    meaning: A Reddit community on one topic, with its own rules.
+  - term: Karma
+    meaning: Reddit's score for how much the community has liked your posts and comments.
+  - term: 90/10 rule
+    meaning: A guide that at least nine in ten of your posts and replies add value and sell nothing.
+  - term: AMA
+    meaning: Ask Me Anything. A live thread where one person answers questions from the community.
+  - term: Disclosure
+    meaning: A plain line that says who you are and how you are linked to the brand.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three can read the rules and threads you paste and write drafts in a plain, human voice.
+    - name: Reddit itself
+      why: You read the current rules, sidebars and threads there. Your AI can't see them.
+  inputs:
+    - The rules and pinned posts of each subreddit you want to use.
+    - Five recent threads where people ask what your brand answers.
+    - Your own notes from calls with customers, to find real questions.

@@ -2,35 +2,87 @@ thinking: low
 thinking_why: It writes a query and blocks any write.
 new_slug: safe-database-query-runner
 name: Safe database query runner
-summary: Ask a question about your Postgres data. Get a read-only query run with
-  write protection and the results back.
+summary: Ask a question about your Postgres data in plain words. Get a read-only SQL query run for you, with the results back and write commands blocked.
 job: work-with-files
 headline: Safe database query runner
-subhead: Ask a question about your Postgres data in plain words and see real
-  results, with no risk of changing anything. Every query runs read-only, so a
-  bad command cannot delete or edit a row.
+subhead: Ask a question about your PostgreSQL data in plain words. Your AI picks the right database, writes a read-only query, runs it and shows the rows with a short answer. Commands that would change data are refused.
 explain: |
-  Ask a question about your Postgres data in plain words and see real results, with no risk of changing anything. Every query runs read-only, so a bad command cannot delete or edit a row.
+  Most people who want a number from their database wait for a developer. This skill lets your AI write and run the SQL for you. It is built so the AI cannot edit your data by accident.
 
-  You set up a connections file listing each database with a name, a short note on what it holds and a login. Keep the file locked down since it holds passwords. A Python script lists databases and tables, shows columns and runs queries. Protection comes in layers: the connection is read-only, and the script checks each command for inserts, updates, deletes and schema changes. It needs Python and a Postgres driver. Use a read-only login.
+  You list each database in a small settings file on your computer, with a name, a note on what it holds and a login. A Python script then lists the databases and tables, shows the columns and runs queries. When you have several databases, the AI reads your notes to pick the right one.
+
+  Protection comes in layers. The session is read-only, only SELECT-style commands are allowed, and each query has a time limit and a row limit. The real control is the login. Use a read-only database login, since these checks cannot override a login that has write rights.
 when:
   - You want to count orders or users without asking a developer.
-  - You are exploring an unfamiliar database and need to see its tables.
-  - You have several databases and need the right one picked.
-  - You fear an AI-written query might change live data.
+  - You are exploring an unfamiliar Postgres database and need to see its tables.
+  - You have several databases and need the right one picked from your notes.
+  - You are worried an AI-written query might change live data.
+not_for:
+  - "You need to change data, add a column or run a migration: ask a developer or database admin, or use the database migration writer for the plan."
+  - "Your data is in large CSV or Parquet files, not Postgres: use the DuckDB big file query helper."
+  - "Your login has write rights and you cannot get a read-only one: do not use it on a live database until an admin makes you one."
 you_give:
-  - A connections file with database details
-  - A question in plain words
-  - A read-only database login
-  - Table names you care about (optional)
+  - A settings file (connections.json) listing each database, with a name, a note on what it holds and a read-only login
+  - Your question in plain words, such as "How many orders last week?"
+  - The table names you care about (optional)
 you_get:
   - A list of your databases and tables
-  - A read-only query that runs
-  - Results from your data
+  - The read-only SQL it wrote and ran
+  - The rows that came back, with the row count
+  - A short plain answer to your question
   - A clear refusal if a command would write
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to your database.
+  - Ask a database admin for a read-only login if you do not have one. This is the real safety control.
+  - Use an AI that can run Python on your computer, such as Claude Code. Install the Python driver the skill lists, and fill in connections.json yourself. Never paste passwords into a chat. Lock the file so only you can read it.
+  - Start a chat and add the skill. Ask your question in plain words. If you have several databases, name the one you mean.
+  - Read the SQL it shows before you trust the answer. Check the table and column it used.
+  - Check the row count and whether it hit the 10,000 row limit. Ask for a narrower query if it did.
+  - Results can hold personal data. Do not share them outside the people allowed to see them.
+output_sample:
+  input:
+    - Your question about the data, in plain words
+    - A connections.json file with each database's name, note and read-only login
+    - The table names you care about (optional)
+  prerequisites:
+    - An AI that can run Python on your computer
+    - Python 3.8 or newer and the psycopg2-binary driver
+    - A read-only login for each database
+  output:
+    - name: Database used
+      contains: Which database it picked from your notes, and why.
+    - name: SQL run
+      contains: The read-only query it ran, with the row limit used.
+    - name: Results table
+      contains: The rows returned, the row count and whether the 10,000 row cap was hit.
+    - name: Plain answer
+      contains: One or two sentences answering your question, with any assumption it made stated.
+    - name: Refusal notice
+      contains: If your request would write or change data, why it was refused and a read-only way to get the answer.
+how_it_works:
+  - title: List the databases
+    text: It reads your settings file and lists each database name and note.
+  - title: Pick the database
+    text: It matches your question to the notes, or asks you if it is unclear.
+  - title: Look at the tables
+    text: It lists tables and columns first, so it does not guess names.
+  - title: Run a read-only query
+    text: The script allows SELECT, SHOW, EXPLAIN and WITH only, one statement at a time, with a 30 second limit.
+  - title: Answer
+    text: It shows the SQL, the rows and a short plain answer, and warns about personal data.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the Python script on your computer and keep your passwords off the chat.
+    - name: Any chat AI
+      why: It can write the SQL for you, but you run it in your own tool.
+  inputs:
+    - Plain notes on what each table holds
+    - The date range and filters you care about
+    - A list of table names that hold personal data, so they are handled with care
+terms:
+  - term: Read-only
+    meaning: Able to look at data but not able to add, change or delete it.
+  - term: SQL
+    meaning: The language used to ask a database a question.
+  - term: PostgreSQL
+    meaning: A common database, also called Postgres.

@@ -1,0 +1,129 @@
+name: ESG & Sustainability Officer agent
+summary: Plan your ESG and sustainability reporting with material topics, framework fit, data gaps and claims that need proof. Not audit or legal advice.
+headline: ESG & Sustainability Officer agent
+subhead: Describe your company and what ESG data you have. Your AI picks the topics that matter, matches them to a reporting framework, and lists the evidence you still need. You get a reporting plan, a claims check and a calendar to review with your finance or legal lead.
+job: document-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Most ESG reporting stalls at the start. Nobody knows which topics matter, which framework to follow, or what proof a claim needs. This ESG and sustainability reporting agent works through those questions in order, starting with what matters to your business and your stakeholders.
+
+  It is built to avoid greenwashing. Every claim must trace to a method, a boundary and data you can show. A target with no funded path to reach it gets flagged. Bad news, such as missed targets, goes in the plan next to the good news.
+
+  It plans and checks. It does not calculate verified emissions, give legal advice or replace an assurance provider. Rules and deadlines change, so it marks each one "check the current text" instead of stating it as settled.
+when:
+  - A customer, lender or investor sends an ESG questionnaire and you have no plan to answer it.
+  - You must start a first sustainability report and do not know which topics to cover.
+  - You want to set a carbon target and need to check it has a believable path.
+  - Your marketing says "carbon neutral" or "eco-friendly" and you want to know if you can back it up.
+not_for:
+  - You have the data and want a draft report written. Use the ESG report preparer.
+  - You want to know if EU sustainability reporting rules apply to you. Use the EU sustainability report checker.
+  - You want emissions worked out from shipping, energy and supplier data. Use the Supply chain carbon tracker.
+you_give:
+  - A short description of your company, such as size, sector, countries and who you sell to
+  - Why you are doing this, for example a customer questionnaire, a first report or a target review
+  - What you already have, such as energy bills, travel data, HR figures, policies or an old report
+  - The framework you want to use, such as GRI, SASB, TCFD, CSRD or CDP (optional)
+  - The claims you make today in marketing or tenders (optional)
+you_get:
+  - A short list of material ESG topics with a score for each and the reason
+  - A framework fit that says which disclosures your topics point to
+  - A data gap list that says what proof you still need for each topic
+  - A plan for your emissions count, with the categories to include and where the data comes from
+  - A check of each target and public claim, with greenwashing risks marked
+  - A reporting calendar and a list of rules and dates to check against the current text
+how_to_use:
+  - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe your company and why you are asking. Attach what you have, such as emissions data, HR figures or policies.
+  - Say which job you want first. Pick one, such as the topic list, the emissions plan or the claims check.
+  - Read the gap list before the plan. A plan built on missing data is only a draft.
+  - Treat every rule, date and standard in the answer as a lead. Check it on the regulator's or standard setter's own site.
+  - Have your finance, legal or sustainability lead review the plan before you publish any claim.
+how_it_works:
+  - title: Set scope and purpose
+    text: It confirms your company, the reason for the work, the data you hold and the framework you aim for. Missing items are asked once, then marked MISSING.
+  - title: Find the material topics
+    text: It builds a list of candidate topics, scores each on financial impact, stakeholder concern and chance of becoming a rule, and sorts them into a matrix.
+  - title: Match topics to a framework
+    text: It points each material topic to the disclosures in your chosen framework and notes where you have no data.
+  - title: Plan the emissions count
+    text: It sets the scopes and the value chain categories to include, the data source for each and the calculation method. It does not invent figures.
+  - title: Check targets and claims
+    text: It tests whether each target has interim steps, funded actions and a defined baseline, and flags claims with no evidence.
+  - title: Build the calendar
+    text: It lays out the reporting steps by month, including review, assurance and sign-off, and lists rules whose dates you must verify.
+output_shape: |-
+  ESG PLAN
+    Company and scope: <size, sector, countries> | <purpose> | <framework>
+
+  MATERIAL TOPICS
+    <topic> | <financial impact 1-5> | <stakeholder concern 1-5> | <chance of becoming a rule 1-5> | <reason>
+
+  FRAMEWORK FIT
+    <topic> | <disclosure it maps to> | <data you have> | <data missing>
+
+  DATA GAPS
+    <gap> | <topic it blocks> | <where to get it> | <who owns it>
+
+  EMISSIONS COUNT PLAN
+    <scope or category> | <relevant yes or no> | <data source> | <method>
+
+  TARGETS AND CLAIMS CHECK
+    <target or claim> | <evidence> | <greenwashing risk, high, medium or low> | <what would make it safe>
+
+  CALENDAR AND RULES TO CHECK
+    <month or rule> | <step> | <owner> | <check the current text>
+
+  CHECKS STILL NEEDED
+    <item> | <who should confirm>
+output_sample:
+  input:
+    - A short description of your company and why you want an ESG plan
+    - Whatever ESG data and policies you have today
+    - The framework you want to follow (optional)
+    - The claims you make in marketing or tenders (optional)
+  output:
+    - name: Material topics
+      contains: A scored list of the topics that matter most, with the reason for each score.
+    - name: Framework fit
+      contains: Each topic matched to a disclosure in your chosen framework, with data you have and lack.
+    - name: Data gaps
+      contains: The proof you still need, where to get it and who owns it.
+    - name: Emissions count plan
+      contains: The scopes and categories to include, their data sources and calculation methods.
+    - name: Targets and claims check
+      contains: Each target and public claim rated for greenwashing risk, with what would make it safe.
+    - name: Calendar and rules to check
+      contains: Reporting steps by month, and every rule or date marked for checking against the current text.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read your spreadsheets, policies and last report, and build the topic and gap tables from them.
+  inputs:
+    - Last year's energy, fuel and travel records, so the emissions plan names real data sources.
+    - Any customer or investor ESG questionnaire you have received, so the plan answers real questions.
+terms:
+  - term: Material topic
+    meaning: An ESG issue that matters a lot to your business results or to the people your business affects.
+  - term: Scope 1, 2 and 3
+    meaning: Scope 1 is your own fuel burn. Scope 2 is bought power. Scope 3 is everything else in your value chain.
+  - term: Greenwashing
+    meaning: Making an environmental claim you cannot back up with evidence.
+  - term: Assurance
+    meaning: A check of your figures by an independent third party.
+tweaks:
+  - what: Focus
+    how: Ask for one job per run, such as only the claims check, if you are short on time.
+  - what: Framework
+    how: Name one framework. If you do not know which, ask the AI to compare two for your sector.
+improve:
+  - Fill the gaps in the data gap list, then rerun the plan so the framework fit uses real numbers.
+  - Keep the claims check and rerun it before each campaign or tender.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

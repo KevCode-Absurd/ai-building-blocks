@@ -1,44 +1,135 @@
 new_slug: audit-to-sales-presentation-planner
 name: Audit-to-sales presentation planner
-summary: Turn an audit into a ten-slide sales story. Keep the findings, proof, value assumptions and proposed scope clear.
+summary: Turn your audit of a prospect's ad account or store into a ten-slide sales pitch with findings, proof and a clear scope and fee.
 job: sell-and-negotiate
-headline: Audit-to-sales presentation planner
-subhead: Share audit findings, verified proof, proposed scope and supported cost assumptions. Get a ten-slide narrative with evidence and pricing assumptions.
-explain: |-
-  Turn an audit into a ten-slide sales story. Keep the findings, proof, value assumptions and proposed scope clear.
-
-  Share audit findings, verified proof, proposed scope and supported cost assumptions. Get a ten-slide narrative with evidence and pricing assumptions.
-when:
-  - You need a ten-slide narrative with evidence and pricing assumptions.
-  - You need audit-to-sales presentation planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
-you_give:
-  - Audit findings
-  - Verified proof
-  - Proposed scope and supported cost assumptions
-you_get:
-  - A ten-slide narrative with evidence and pricing assumptions
-  - The sources used, missing inputs and assumptions
-how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
-how_it_works:
-  - title: Check the inputs
-    text: Confirm audit findings, verified proof, proposed scope and supported cost assumptions. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Audit Data
-    text: Follow the collect audit data section in the full method and keep its required fields and decision rules.
-  - title: Build The Narrative Arc
-    text: Follow the build the narrative arc section in the full method and keep its required fields and decision rules.
-  - title: Generate Each Section
-    text: Follow the generate each section section in the full method and keep its required fields and decision rules.
-  - title: Writing Rules
-    text: Follow the writing rules section in the full method and keep its required fields and decision rules.
-  - title: IMPORTANT RULES
-    text: Follow the important rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a ten-slide narrative with evidence and pricing assumptions. Check facts, math and the decisions before any action.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+headline: Audit-to-sales presentation planner
+subhead: Paste the audit you already did on a prospect's ad account or store, plus your offer and fee. It plans a ten-slide pitch that shows what you found, how you scored it and what you would fix first. Every claim traces back to your audit.
+explain: |-
+  An audit is useful only if the prospect understands it. A 30-page report of findings rarely turns into a yes. This audit-to-sales presentation planner turns your audit into a short pitch deck plan: where they are now, what is wrong, what to fix first and what you propose to do.
+
+  It keeps the audit honest. Each finding on a slide ties to evidence from your audit and says why it matters to the business. A finding with no dollar value stays in. The planner never adds a number to make it sound better.
+
+  It also protects you from weak proof. Slide 9 uses only a case study you give it, with its limits. If you have none, it shows how you would validate the work instead. It never makes up a client result, a benchmark or a payback promise.
+
+when:
+  - You finished a Google Ads, Meta Ads or store audit and now need to pitch the fix work.
+  - A prospect asked for "the audit and a proposal" and you need a short deck, not a report.
+  - You have many findings and need the three that tell the story.
+  - You are an agency or freelancer selling a monthly retainer after a free or paid audit.
+
+not_for:
+  - "You have not done the audit yet: run one first, such as the Google Ads store account auditor or the Meta Ads 30-check account auditor."
+  - "You need a written proposal or contract: use the Proposal Strategist agent."
+  - "You want a cold outreach note, not a deck: use the Capability pitch letter writer."
+  - "You have no real evidence or permission to share it: a plain one-page offer is safer than a deck."
+
+you_give:
+  - Your audit findings, with the evidence behind each one
+  - Your offer, the work included and your fee
+  - Facts about the prospect, such as goals, spend and dates
+  - A real case study you may share, with its limits (optional)
+  - Any cost or revenue figures you can source (optional)
+you_get:
+  - A ten-slide plan with the copy for each slide
+  - A claim map that links every slide claim to your audit
+  - A list of proof and facts still missing
+  - Optional value scenarios, with the sum and the unknowns shown
+  - Scope and fee terms written out for slide 10
+
+how_to_use:
+  - Open the skill in your AI. Claude, ChatGPT and Gemini all work. Add it to your AI, or copy it and paste it into a new chat.
+  - Paste your audit report or attach it. Add your offer, your fee and what the prospect told you.
+  - Add a real case study only if you may share it. If you have none, say so.
+  - Check each slide against your audit. Delete any line you cannot back up.
+  - Build the slides in your own deck tool. The skill plans the copy. It does not make the file or send anything.
+
+how_it_works:
+  - title: Reads your audit
+    text: It lists each finding, its evidence and what is missing. It asks for your offer and fee if they are absent.
+  - title: Sets the story
+    text: Situation, diagnosis, score, action, proof and investment. The audit must help the prospect even if they do not buy.
+  - title: Plans slides 1 to 5
+    text: Slides 1 and 2 show where they are now and a real strength. Slides 3 to 5 show the main findings with evidence.
+  - title: Plans slides 6 to 8
+    text: Slide 6 explains the score and what it covered. Slides 7 and 8 give ordered actions, owners and milestones.
+  - title: Plans slides 9 and 10
+    text: Slide 9 uses a supplied case study or a validation plan. Slide 10 states scope, fee, exclusions and terms.
+  - title: Prices only what it can source
+    text: A dollar figure needs shown inputs and sums. Without them the risk is described in words and the impact stays unknown.
+  - title: Hands back the plan
+    text: Slide copy, a claim map, missing proof and scope terms. Sending the deck is your step.
+
+output_shape: |
+  SLIDE PLAN
+  1  Where you are now: <current situation, dated>
+  2  What is working: <one supported strength>
+  3  Finding 1: <finding | evidence | why it matters>
+  4  Finding 2: <finding | evidence | why it matters>
+  5  Finding 3: <finding | evidence | why it matters>
+  6  Your score: <what the score measures | what it covered | what it did not>
+  7  Fix first: <action | owner | depends on>
+  8  Then: <action | owner | milestone>
+  9  Proof: <your case study and its limits | or the validation plan>
+  10 Proposal: <work included | fee | exclusions | review rhythm | terms>
+
+  CLAIM MAP
+  slide <n> | <claim> | <audit source>
+
+  OPTIONAL SCENARIOS
+  <scenario | inputs and source | sum | timing | what is unknown>
+
+  MISSING: <proof, facts or fee still needed>
+
+output_sample:
+  input:
+    - "Your audit report with the evidence behind each finding"
+    - "Your offer, the work included and your fee"
+    - "What the prospect told you about goals and spend"
+    - "A real case study you may share (optional)"
+  prerequisites:
+    - "A finished audit of the prospect's ad account or store"
+  output:
+    - {name: "Slides 1 and 2", contains: "Where the prospect is now, and one real strength in their account."}
+    - {name: "Slides 3 to 5", contains: "The three main findings, each with its evidence and why it matters to the business."}
+    - {name: "Slide 6", contains: "What the audit score measures, what it covered and what it did not."}
+    - {name: "Slides 7 and 8", contains: "Fixes in order, with an owner, what each depends on and a milestone."}
+    - {name: "Slide 9", contains: "Your real case study with its limits, or a plan to validate the work."}
+    - {name: "Slide 10", contains: "The scope, the fee, what is not included, the review rhythm and terms."}
+    - {name: "Claim map", contains: "Each slide claim linked to the part of your audit that backs it."}
+    - {name: "Missing list", contains: "Proof, facts or fee details still needed before you send it."}
+
+tweaks:
+  - what: Deck length
+    how: Ask for a shorter deck. It will merge slides and keep the same order.
+  - what: Dollar scenarios
+    how: Give your own sourced inputs, such as spend and conversion rate, and ask for a scenario. Without them it stays in words.
+  - what: Prospect type
+    how: Say if the buyer is the owner, a marketing lead or a finance lead, so the slide wording suits them.
+  - what: Tone toward the old agency
+    how: It stays neutral about a prior agency by default. Say so if the prospect has no current agency.
+
+judge:
+  - Every finding has evidence and says why it matters.
+  - Nothing is invented, including benchmarks, quotes, case studies and results.
+  - Slide 9 uses a supplied case study or a clearly labeled validation plan.
+  - Any dollar figure shows its inputs and sum, or the impact is marked unknown.
+  - Slide 10 states a real fee and scope, or says the fee is missing.
+  - It does not promise payback or blame a past agency.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reads your audit and plans the slides. No code or paid tool needed."}
+    - {name: "Google Slides, PowerPoint or Keynote", why: "Where you build the deck from the slide copy."}
+  inputs:
+    - "The audit report from the Google Ads store account auditor or the Meta Ads 30-check account auditor"
+    - "A case study you have permission to share"
+
+terms:
+  - term: Claim map
+    meaning: A list that links each claim on a slide to the part of your audit that proves it.
+  - term: Scope
+    meaning: The work you will do, and the work you will not.
+  - term: Retainer
+    meaning: A fee the client pays each month for ongoing work.

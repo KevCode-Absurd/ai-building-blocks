@@ -1,6 +1,6 @@
 new_slug: sales-copy-readiness-checker
 name: "Sales copy readiness checker"
-summary: "Paste finished copy and facts. Get ship, fix or rewrite, three fixes and a score out of 100."
+summary: "Check your sales copy before it goes out. Paste the finished piece and your facts. Get ship, fix or rewrite, up to three fixes and a score."
 job: check-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - An ad, page or email is finished and you need a ship or don't-ship decision.
   - You're reviewing a writer's or an AI's copy and want reasons you can send back.
   - Two people disagree about whether a piece is ready.
+not_for:
+  - "Your copy is still a rough draft: use the Edit a draft so it reads clean and sells skill first, then run this as the last check."
+  - "You need new ad copy written from scratch: use the Reply-getting fix writer, then check the result here."
+  - "You want to plan what to test or read ad results: use the Ad test brief writer or the Campaign keep-or-change checker."
 
 you_give:
   - The finished copy
@@ -35,6 +39,24 @@ how_to_use:
   - Paste your approved claims and offer terms. Without them, nothing can be marked held.
   - Add one line on who it's for and their main doubt.
   - Fix the first fix on the list, then run it again.
+output_sample:
+  input:
+    - Your finished ad, page or email
+    - Your approved claims, prices and offer terms (strongly recommended)
+    - Who it is for and their main doubt (optional)
+  output:
+    - name: Verdict
+      contains: Blocked, rewrite, fix or ship, with the part or lines that decided it.
+    - name: Facts gate
+      contains: Every number, quote and claim marked held, contradicted or unverified against your facts.
+    - name: Measures
+      contains: The reading grade and longest sentence, each shown against its target.
+    - name: Checks 1 to 12
+      contains: A yes or no for each check, with the line from your copy behind it.
+    - name: Fixes
+      contains: Up to three fixes, blockers first, then in the order the reader meets the piece.
+    - name: Readiness score
+      contains: The share of the 14 items passed, now and with the fixes made.
 
 how_it_works:
   - title: Checks the facts

@@ -1,55 +1,104 @@
 new_slug: shared-service-activity-cost-allocator
 name: Shared service activity cost allocator
 headline: Shared service activity cost allocator
-summary: An activity cost allocation and unused capacity bridge
+summary: "Split a shared service cost across departments by how much each one used, with the cost of unused capacity shown on its own line."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An activity cost allocation and unused capacity bridge. Share one same-period shared service cost pool, normal activity capacity, documented department activity counts and approved allocation policy.
+subhead: "Give it one period's shared service cost, its normal capacity, each department's counted use and your allocation policy. It works out a rate per unit of activity, charges each department for what it used and shows what is left over. You get the rate, each department's charge and the cost of unused capacity."
 explain: |-
-  An activity cost allocation and unused capacity bridge.
+  Shared services such as IT, HR or facilities cost money that no single department owns. A common fix is to split the cost evenly or by headcount. That charges departments for things they never asked for. This shared service cost allocation uses an activity driver instead: tickets handled, hours used or transactions processed.
 
-  FP&A activity allocations. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+  The rate is the cost pool divided by normal capacity, not by actual use. Departments pay for what they used at the normal rate. The cost of idle capacity shows on its own line and is not pushed onto departments. That way one busy or quiet month does not distort every team's charge.
+
+  Every count must use the same unit and the same period as the cost pool. The skill refuses to mix, say, tickets and hours in one rate. If use goes above capacity, it shows unused capacity as a negative number and flags an overload to look at.
 when:
-  - You need an activity cost allocation and unused capacity bridge.
-  - You work on fp&a activity allocations and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - "A shared team such as IT, HR or facilities costs money, and departments ask why they pay what they pay."
+  - "You want to charge departments for what they use instead of by headcount."
+  - "You need to see how much of a shared cost is idle capacity."
+  - "You are changing an allocation policy and want to see the effect on each department."
+not_for:
+  - "You need a transfer price or a statutory costing rule. This is a management view, not an accounting policy. Ask your accountant."
+  - "You want to prove that cutting a department would save the cost. An allocation does not show savings you could actually make."
+  - "You want margin on billable staff time: use the Service utilization margin builder."
+  - "You want to choose which products use limited capacity best: use the Product mix capacity checker."
 you_give:
-  - One same-period shared service cost pool, normal activity capacity, documented department activity counts and approved allocation policy.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The shared service's total cost for one period, from your ledger"
+  - "Normal capacity in activity units, such as tickets or hours per month"
+  - "Each department's actual units used in the same period, from your system's counts"
+  - "Your approved allocation policy, if you have one (optional)"
+  - "The currency and the period, such as USD for March"
 you_get:
-  - An activity cost allocation and unused capacity bridge.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The rate per activity unit"
+  - "Each department's charge: units used times the rate"
+  - "The unassigned cost: the pool less all charges, which is the cost of unused capacity"
+  - "Unused units, and a flag if use is above capacity"
+  - "A list of missing figures and checks that could not run"
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Open the skill in Claude, ChatGPT or Gemini, or paste it in as your first message. Add it to your AI if you want to reuse it."
+  - "Paste the cost pool, the normal capacity and each department's counts. Say the unit and the period for each."
+  - "Check that every count uses the same unit. The AI stops if tickets and hours are mixed in one rate."
+  - "Read the rate, each department's charge and the unassigned line. Ask your finance lead if the idle cost should stay unassigned or be shared by policy."
+  - "To test a policy change, give the new capacity or counts and ask for a rerun."
 how_it_works:
-  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
-    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
-  - title: 2. Define one homogeneous activity pool and an approved normal-capacity driver; do not mix transactions and hours in the denominator
-    text: Define one homogeneous activity pool and an approved normal-capacity driver; do not mix transactions and hours in the denominator.
-  - title: 3. Divide pool cash cost by capacity and apply the driver rate to each department actual usage
-    text: Divide pool cash cost by capacity and apply the driver rate to each department actual usage.
-  - title: 4. Show signed unassigned cost and unused or excess driver units; reconcile allocations plus unassigned cost to the pool without forcing all unused capacity onto departments
-    text: Show signed unassigned cost and unused or excess driver units; reconcile allocations plus unassigned cost to the pool without forcing all unused capacity onto departments.
+  - title: 1. Fixes the pool
+    text: Writes the period, the currency and what the cost pool holds. One period and one pool at a time.
+  - title: 2. Picks one driver
+    text: Uses one activity unit for normal capacity and for every department's count. It does not mix units.
+  - title: 3. Works out the rate
+    text: Divides the pool by normal capacity. Then multiplies each department's units by that rate.
+  - title: 4. Shows what is left
+    text: The pool less all charges is the unassigned cost. Capacity less units used is the unused units. Idle cost is not forced onto departments.
+  - title: 5. Reconciles
+    text: Charges plus unassigned cost must equal the pool, and the result is checked line by line.
 output_shape: |-
-  An activity cost allocation and unused capacity bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  POOL AND PERIOD
+  <period> | <currency> | Pool: <amount> | Driver: <unit> | Normal capacity: <units>
+
+  RATE
+  <pool> / <normal capacity> = <rate> per <unit>
+
+  ALLOCATION
+  <department> | Units used: <units> | Charge: <units> x <rate> = <amount>
+  <department> | Units used: <units> | Charge: <units> x <rate> = <amount>
+  Allocated total: <amount>
+
+  UNUSED CAPACITY
+  Unassigned cost: <pool> - <allocated total> = <amount>
+  Unused units: <capacity> - <units used> = <units>
+
+  FLAGS
+  <use above capacity, mixed units or none>
+
+  MISSING
+  <figures not supplied>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+output_sample:
+  input:
+    - "One period's total cost for the shared service"
+    - "Normal capacity in one activity unit, such as tickets or hours"
+    - "Each department's units used in the same period"
+  prerequisites:
+    - "Counts from your ticket, time or transaction system, and the cost from your ledger"
+    - "Your allocation policy, if one exists (optional)"
+  output:
+    - {name: "Pool and period", contains: "The period, currency, cost pool, driver unit and normal capacity."}
+    - {name: "Rate", contains: "The cost per unit of activity, with the sum shown."}
+    - {name: "Allocation", contains: "Each department's units, rate and charge, and the allocated total."}
+    - {name: "Unused capacity", contains: "The unassigned cost, the unused units and a flag if use is above capacity."}
+    - {name: "Workbook (optional)", contains: "An editable spreadsheet with inputs, formulas and a checks tab, if your AI can make files."}
+    - {name: "MISSING and CHECKS MISSED", contains: "What you did not supply, and every check that failed or could not run."}
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Number of departments
+    how: Give every department its own line. The method adds as many as you have.
+  - what: Normal capacity
+    how: Say how you set it, such as the usual monthly volume or what the team can handle. A different base changes the rate.
+  - what: Policy for idle cost
+    how: Ask for a second view that shares idle cost by your policy. It is labeled as a policy choice, and the first view stays.
   - what: Acceptance
-    how: Each material input is sourced with currency, scale, sign and period.
+    how: Charges plus unassigned cost equal the pool, and every count uses the same unit and period.
 judge:
   - Each material input is sourced with currency, scale, sign and period.
   - Actual records and scenarios remain separate; missing evidence is not zero.
@@ -60,19 +109,28 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save your driver unit, normal capacity and policy once, so each period only changes the cost and counts."
+  - "Keep each period's unassigned cost so you can see idle capacity grow or shrink."
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Any good chat AI
+      why: The sums are short, so the AI can show them line by line in the chat.
+    - name: A file-capable AI or a spreadsheet app
+      why: Needed only if you want an editable workbook with a checks tab.
+    - name: Node.js 20 or later (optional)
+      why: Runs the bundled script that repeats the sums, as a second check.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The cost report for the shared service for the period
+    - Counts from the system that records the activity
+    - Your written allocation policy, if you have one
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Shared service
+    meaning: A team that serves many departments, such as IT, HR or facilities.
+  - term: Cost pool
+    meaning: The total cost of the shared service for one period, before it is split.
+  - term: Activity driver
+    meaning: The unit that causes the cost, such as a ticket, an hour or a transaction.
+  - term: Normal capacity
+    meaning: The amount of activity the shared service is set up to handle in a normal period.
+  - term: Unassigned cost
+    meaning: The part of the pool left over after departments are charged for what they used. It is the cost of unused capacity.

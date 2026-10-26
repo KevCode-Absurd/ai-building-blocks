@@ -1,57 +1,67 @@
 new_slug: share-or-protect-brief
 name: "Share or protect decision brief writer"
-summary: "Describe something you made. Get a one-page choice between keeping it, licensing it or giving it away, with who gains and pays."
+summary: Decide whether to keep, license or give away what you made. Get a one-page brief with who gains, who pays and what you will share.
 job: think-and-decide
 thinking: medium
 thinking_why: "It weighs two sides and writes a clear brief, but the steps are fixed."
 
 headline: "Share or protect decision brief writer"
-subhead: Describe something you made, such as a method, a tool, a dataset or a design. It shows who gains if you share it fully and who gains if you protect it, and checks what the protection money would fund. You get a one-page brief with a decision and what you will share.
+subhead: Describe something you made, such as a method, tool, template or dataset. The skill shows who gains and who pays if you share it fully, and if you protect it. It checks what the next piece of work will cost. You get a one-page brief with one decision and a list of what you will share.
 
-explain: |
-  When you make something useful, you must choose: keep it to yourself, license it for a fee, or give it away. Each has costs. Giving it away can help a whole field, but leaves you with no income to keep working. Protecting it can fund the next piece of work, but slows everyone else down.
+explain: |-
+  When you make something useful, you choose: keep it private, license it for a fee, or give it away. Each choice has a cost. Giving it away can help a whole field but leave you with no income to keep working. Protecting it can pay for the next piece of work but slows everyone else down.
 
-  This skill names what you made and who could use it. It lists who gains if you publish it fully and who gains if you protect it. It checks what further work would need money that only protecting it can bring in, and weighs the effect on your field or market. It then states the decision in one sentence and lists exactly what you will publish and what you will share on request.
+  This skill names what you made and who could use it. It lists who gains and who pays under each option, you included. Then it checks the part people skip: what the next stage costs, and whether sharing could pay for it another way, such as a service, a grant or training.
+
+  It also looks for a middle path, such as a delayed release or a free licence for non-commercial use. It ends with the decision in one sentence and three lists: what you publish, what you share on request and what you keep. This is a decision brief, not legal advice. The weighing follows Marie Curie's choice to publish her method in full. This skill is ours, not hers.
 
 when:
-  - You have built a method, template, tool or dataset others could use.
-  - A partner or advisor is pushing you to lock something down, or to open it up.
-  - You need a clear page to share with your team before you decide.
+  - You built a method, template, tool or dataset that others could use, and you must choose how to release it.
+  - A partner or adviser is pushing you to lock it down, or to open it up.
+  - You need one clear page for your team or backers before you decide.
+  - A funder or employer asks what you plan to do with the work.
+not_for:
+  - You need legal advice on a patent, a licence or a contract. Take the brief to a qualified adviser.
+  - Your money, time or name is at risk if the plan fails. Use the Ruin risk stress tester.
+  - Two sides disagree and need new options. Use the Third option finder.
 
 you_give:
   - What you made and what it does
   - Who could use it, and who might copy it
-  - What your next piece of work would cost and how you fund it
+  - What the next piece of work costs and how it will be paid for
+  - Terms that limit you, such as a funder's rules or a contract (optional)
+  - People who must agree (optional)
 you_get:
   - A table of who gains and who pays under each option
   - The funding need, named and not skipped
+  - A middle path, if one meets the need
   - A one-sentence decision with its reason
-  - A list of what will be shared openly and what only on request
+  - "Three lists: published openly, shared on request and not shared"
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe what you made and how you earn your living from this work.
-  - Say what the next stage of work needs and how it would be paid for.
-  - Read both options and correct any gains or costs it got wrong.
-  - Share the one-page brief with the people who must agree.
+  - Describe what you made and who could use it. Say how you earn a living from this work.
+  - Say what the next stage costs and how you would pay for it.
+  - Read both options. Correct any gain or cost it got wrong.
+  - If it flags a legal point, take that to a qualified adviser. Then share the one-page brief with the people who must agree.
 
 how_it_works:
   - title: Names the work and its users
-    text: States what you made and who could use it.
+    text: Writes what you made in two lines and lists the groups who could use it, rivals included.
   - title: Lists gains from sharing
-    text: Lists who gains if you publish it fully.
+    text: For each group, what they gain if you publish it fully, plus what you gain, such as trust or partners.
   - title: Lists gains from protecting
-    text: Lists who gains if you protect it, including you.
+    text: Covers keeping it private, a patent, copyright, a trade secret or a licence fee, and who gains from each.
   - title: Checks the funding need
-    text: Asks what more work needs money that only protecting it can buy.
-  - title: Weighs the field
-    text: Looks at the effect on the field or market you work in.
+    text: Asks what more work needs money that only protection brings, and if sharing could pay for it another way.
+  - title: Weighs the field and finds a middle path
+    text: One or two lines on each choice's effect on your field, then options like delayed release or free for non-commercial use.
   - title: States the decision
-    text: Writes the decision and its reason in one sentence.
+    text: One sentence with the reason, and what would change it.
   - title: Lists what is shared
-    text: Says what you will publish and what you will answer on request.
+    text: "Three lists: published openly, shared on request and not shared. It also runs its own checks."
 
-output_shape: |
+output_shape: |-
   WHAT YOU MADE
   <description> | Who could use it: <list>
 
@@ -67,8 +77,11 @@ output_shape: |
   EFFECT ON YOUR FIELD OR MARKET
   <line>
 
+  MIDDLE PATH
+  <option or none> | Meets the funding need? <yes/no/partly>
+
   THE DECISION
-  <one sentence with the reason>
+  <one sentence with the reason> | What would change it: <line>
 
   WHAT YOU WILL SHARE
   Published openly: <list>  On request only: <list>  Not shared: <list>
@@ -110,12 +123,40 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Weighing options and writing a brief is text work any strong chat AI handles with this skill."}
-    - {name: "A lawyer or licensing adviser", why: "This brief is not legal advice. For patents, licences or contracts, take it to someone qualified."}
+    - name: Any good chat AI
+      why: Weighing options and writing a brief is text work. Claude, ChatGPT and Gemini all handle it with this skill.
+    - name: A lawyer or licensing adviser
+      why: This brief is not legal advice. For patents, licences or contracts, take it to someone qualified.
   inputs:
-    - "The cost and timeline of the next stage of work"
-    - "Any existing licence, contract or funder terms that limit what you can share"
+    - The cost and timeline of the next stage of work
+    - Any existing licence, contract or funder terms that limit what you can share
+    - Who must agree, and what each of them worries about
 
 terms:
   - term: Licensing
     meaning: Letting others use your work under agreed terms, often for a fee.
+output_sample:
+  input:
+    - What you made and what it does
+    - Who could use it and who might copy it
+    - What the next stage of work costs and how it is funded
+    - Terms that limit you, such as a funder's rules (optional)
+  output:
+    - name: WHAT YOU MADE
+      contains: A two-line description and the groups who could use it.
+    - name: IF YOU SHARE IT FULLY
+      contains: Who gains and who pays if you publish it in full, you included.
+    - name: IF YOU PROTECT IT
+      contains: Who gains and who pays if you keep it private or license it.
+    - name: FUNDING NEED
+      contains: The cost of the next work and whether open sharing could pay for it.
+    - name: EFFECT ON YOUR FIELD OR MARKET
+      contains: One or two lines on what each choice does to your field.
+    - name: MIDDLE PATH
+      contains: A delayed release, a free non-commercial licence or similar, and whether it meets the need.
+    - name: THE DECISION
+      contains: One sentence with the reason, and what would change it.
+    - name: WHAT YOU WILL SHARE
+      contains: "Three lists: published openly, shared on request and not shared."
+    - name: MISSING and CHECKS MISSED
+      contains: Facts you did not give, and any of its own checks it could not pass, or none.

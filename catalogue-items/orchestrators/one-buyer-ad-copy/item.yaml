@@ -15,11 +15,11 @@ outputs:
   - {type: ad_copy}
 uses: [buyer-brief-writer, ad-angle-planner, ad-first-line-writer-and-scorer, fact-based-ad-copy-writer, ad-headline-writer]
 steps:
-  - {uses: buyer-brief-writer, note: "Turns the reviews into one buyer, one moment and the force the ad has to move."}
-  - {uses: ad-angle-planner, note: "Reads the buyer brief and returns a short brief on how the ad opens, argues and asks."}
-  - {uses: ad-first-line-writer-and-scorer, note: "Uses the angle brief to write first lines that name the buyer's moment, then scores them."}
-  - {uses: fact-based-ad-copy-writer, note: "Builds the ad body on one product fact that answers the doubt in the brief."}
-  - {uses: ad-headline-writer, note: "Writes short headlines from the same brief and facts, and marks which to test first."}
+  - {uses: buyer-brief-writer, note: "Turns the reviews into one buyer, one moment and the force the ad has to move. Hands the buyer brief to the angle planner."}
+  - {uses: ad-angle-planner, note: "Reads the buyer brief and returns a short brief on how the ad opens, argues and asks. Hands that angle brief to the first-line writer."}
+  - {uses: ad-first-line-writer-and-scorer, note: "Uses the angle brief to write first lines that name the buyer's moment, then scores them. Hands the best first line to the copy writer."}
+  - {uses: fact-based-ad-copy-writer, note: "Builds the ad body on one product fact that answers the doubt in the brief. Uses the buyer brief, your product facts and step 3's best first line. Hands the ad body to the headline writer."}
+  - {uses: ad-headline-writer, note: "Writes short headlines from the same brief and facts, and marks which to test first. Uses the buyer brief, your product facts and step 4's ad body, so no headline repeats the body. Hands back the headlines to test."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-get-ad-copy-built-on-one-buyer-and-one-real-fact/skeleton.yaml

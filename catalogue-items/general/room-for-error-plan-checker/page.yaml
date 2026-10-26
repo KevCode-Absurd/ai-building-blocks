@@ -1,6 +1,6 @@
 new_slug: room-for-error-plan-checker
 name: "Room for error plan checker"
-summary: "Paste a budget or business plan. Get a survival score out of 100, where it breaks in a bad year, and fixes."
+summary: "Check your budget or business plan for room for error. Get a survival score out of 100, where it breaks in a bad year, and fixes."
 job: money-and-investing
 thinking: high
 thinking_why: "It must imagine believable bad years, find the point where you cannot carry on and size a safety margin. That takes careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You are about to commit to a budget, a loan, a lease or a hire based on a good-year forecast.
   - Your plan works on paper but has no room if sales drop or costs rise.
   - You want to know the one rule that stops you making a panic move in a bad month.
+not_for:
+  - You want to judge one purchase or bet. Use the Investment or speculation sorter.
+  - Your plan has no cash figures yet. Gather your income, bills and savings first, then run it.
+  - You want a buy or sell call. This only tests whether your plan survives a bad year, so ask a licensed adviser.
 
 you_give:
   - "The plan: income, costs, debts and key assumptions"
@@ -35,6 +39,31 @@ how_to_use:
   - Say what a bad year looks like for you, such as a lost client or a fall in sales.
   - Read the three failures and the ruin point first.
   - Put the safety margin and the panic rule in writing where you will see them.
+output_sample:
+  input:
+    - "Your plan: income, costs, debts and the key assumptions"
+    - Your cash and savings, and what you must pay each month
+    - Your borrowing and its terms, such as when it can be called in (optional)
+    - What a bad year looks like in your field (optional)
+  output:
+    - name: What must go right
+      contains: Every assumption the plan depends on, each with its figure or a MISSING mark.
+    - name: Three ways it fails
+      contains: A bad year, a forced sale or cut, and one more, each with timing, size and cash left.
+    - name: The ruin point
+      contains: The loss after which you could not carry on, and how close each failure gets.
+    - name: Borrowing and calls
+      contains: Each debt, whether it can be called in, and a low, medium or high risk.
+    - name: Survival score
+      contains: A score out of 100, what it measures and the points taken off.
+    - name: Safety margin
+      contains: A cash, time or fixed cost change sized to the worst failure.
+    - name: Bold and careful
+      contains: Where you can take long-term risks and where to be careful this year.
+    - name: Panic rule
+      contains: One short rule that stops a rushed move in a bad month.
+    - name: Missing and checks missed
+      contains: Facts that would change the score, and any checks the AI could not pass.
 
 how_it_works:
   - title: Lists what must go right

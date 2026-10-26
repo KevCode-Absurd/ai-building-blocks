@@ -2,35 +2,110 @@ thinking: medium
 thinking_why: It plans the screen job first, then builds and inspects it.
 new_slug: product-true-ui-designer
 name: Product-true UI designer
-summary: Give it your product and screen. Get an interface built from your own
-  design system, with every state covered.
+summary: Get a web or iOS screen built from your own components and tokens, with every state covered and a check of the rendered result.
 job: design-work
 headline: Product-true UI designer
-subhead: An interface for your product that looks like your product, not a
-  generic template. It is built from your existing components, spacing and type,
-  with every state covered.
+subhead: Give your AI your product brief and the screen's job. It reuses your components, colours and spacing, plans every state, builds the screen and checks how it renders. You get the screen, a states table and a fix list.
 explain: |
-  An interface for your product that looks like your product, not a generic template. It is built from your existing components, spacing and type, with every state covered.
+  AI-built screens often come out generic: the same cards, the same blue, made-up numbers to fill space. This product-true UI designer fights that. It starts from your product and your own design system, not from a stock look.
 
-  Claude begins with the screen's real job: who uses it, their main action and the content needed. It then lists the states to design for, including loading, empty, error, success, disabled and permission. It reuses your design system and tokens before inventing anything new. Outside reference screens are optional, used only when they answer a specific visual question. The last step is to inspect the rendered result and fix what looks off.
+  Your AI first works out the screen's real job: who uses it, their main action and the content they need. It lists every state to design, such as loading, empty, error, success, disabled and no permission. For a new screen or a big redesign it writes a short design contract with the layout order, the parts allowed, and checks you can observe. Then it reuses your components before it invents anything.
+
+  Outside reference screens are optional and used only to answer a clear visual question. UIZZE, the author, offers an account-based tool for that. The skill works without it. The last step is to render the result, look at it and fix clipping, overlap or dead buttons. It covers web and iOS.
 when:
   - You are building a screen and want it to match your product.
-  - AI-built interfaces keep coming out generic.
-  - You are reviewing a design before it ships.
-  - You need to cover empty and error states.
+  - AI-built screens keep coming out generic.
+  - You are reviewing a screen before it ships.
+  - You need the empty and error states that nobody drew.
+not_for:
+  - "You only need loading, empty and error states added to code that already exists: use the Loading and error state designer."
+  - "You have no components, tokens or brief yet: write rules first with the Minimal style guide writer or the Design rules file writer."
+  - "You are building for Android or a desktop app: this skill covers web and iOS."
+  - "You want a check for AI-made looks in finished code: use the AI-look design reviewer."
 you_give:
-  - Your product brief and the screen's purpose
-  - Your existing components and design tokens
-  - "Platform: web or iOS"
-  - A reference or screenshot (optional)
+  - Your product brief and what the screen is for
+  - Web or iOS
+  - Your components and design tokens, as project files or pasted code
+  - A reference or screenshot you like (optional)
 you_get:
-  - A screen built on your design system
-  - Designs for loading, empty, error and other states
-  - A review of the rendered result
-  - A list of fixes before shipping
+  - A short design contract for new screens and big redesigns
+  - A states table with what shows and what the user can do next
+  - The screen, built from your own parts
+  - A review of the rendered result and a list of fixes before shipping
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files and open a browser.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product brief and say what the screen is for. Say web or iOS, and give your AI your components and tokens, as files or pasted code.
+  - Read the screen job and the states table first. Add any state it missed, and cut ones that cannot happen.
+  - Check the screen it builds. It works best when your AI can read your project files and open a browser to look at the result.
+  - Fix the items under "Fix before shipping". Then run your normal tests and an accessibility check, because this skill does not replace them.
+how_it_works:
+  - title: Find the screen job
+    text: It names the user, the main action, the content needed and the states that matter.
+  - title: Reuse your system
+    text: It uses your components, tokens, type and spacing before it adds anything new.
+  - title: Write a short contract
+    text: For a new screen it writes the layout order, allowed parts, small-screen changes and checks you can see.
+  - title: Use real content
+    text: It uses your labels and data, and never invents numbers, users or quotes to fill space.
+  - title: Look up references
+    text: If a visual question is open, it can use UIZZE screens, and it learns from them without copying.
+  - title: Render and fix
+    text: It builds the screen, looks at the result once and fixes clipping, overlap and dead controls.
+output_shape: |-
+  Screen job: <user, main action, content needed>
+  Design contract (new screens and big redesigns)
+  - Hierarchy: <first, second, third>
+  - Workflow: <steps from start to done>
+  - Parts reused: <your components and tokens>
+  - New parts: <only if none fits, and why>
+  - Small screens: <what changes>
+  - Done when: <checks you can see>
+  States
+  | State | Shown when | What the user sees | Next action |
+  Built or changed: <files, or the design in words>
+  Review of the rendered result: <checked, broken, fixed>
+  Fix before shipping: 1. <fix> 2. <fix>
+  References used: <UIZZE results, or none>
+  Assumed: <anything chosen without evidence>
+output_sample:
+  input:
+    - Your product brief and what the screen is for
+    - Web or iOS
+    - Your components and design tokens, as files or pasted code
+    - A reference or screenshot you like (optional)
+  prerequisites:
+    - An AI that can read your project files and open a browser, for the render check (optional)
+    - A UIZZE account, only if you want its reference screens (optional)
+  output:
+    - name: Screen job
+      contains: Who uses the screen, their main action and the content it needs.
+    - name: Design contract
+      contains: Layout order, parts allowed, small-screen changes and checks you can see, for new screens.
+    - name: States table
+      contains: Each state, when it shows, what the user sees and what they can do next.
+    - name: Built screen
+      contains: The changed files, or the design in words, using your own parts.
+    - name: Render review
+      contains: What was checked once rendered, what was broken and what was fixed.
+    - name: Fix before shipping
+      contains: A numbered list of remaining fixes, plus anything chosen without evidence.
+works_best_with:
+  tools:
+    - name: Claude Code, Cursor or Codex
+      why: They can read your components and tokens, build the screen and open it in a browser.
+    - name: Any good chat AI
+      why: It can write the contract and states table from a pasted brief and your component names.
+  inputs:
+    - Your design tokens file or Tailwind config
+    - Two or three existing screens as screenshots
+    - A list of your components and what each is for
+    - Real labels and data for the screen
+terms:
+  - term: Design system
+    meaning: The shared parts, colours, type and spacing a product reuses on every screen.
+  - term: Design token
+    meaning: A named value, such as primary colour or medium space, used in place of a raw number.
+  - term: State
+    meaning: A way a screen can look, such as loading, empty or error.
+  - term: MCP
+    meaning: A way to connect an AI to an outside tool. Here it connects to the UIZZE reference library.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes a short opener from two topics.
 new_slug: lesson-starter-writer
 name: Lesson starter writer
-summary: Give it today's topic and last lesson. Get a starter that brings back
-  what students know and links to the new content.
+summary: Write a lesson starter for your class. Give it today's topic and last lesson. You get a timed opening that links old learning to the new.
 job: teach-and-train
 headline: Lesson starter writer
-subhead: A short lesson opening that brings back what students already know and
-  links it to today's topic. Give today's topic, what you taught last time and
-  the level of your class.
+subhead: A short lesson opening that brings back what students already know and links it to today's topic. Give today's topic, what you taught last time and the level of your class.
 explain: |
   A short lesson opening that brings back what students already know and links it to today's topic. Give today's topic, what you taught last time and the level of your class. The skill designs a starter based on Rosenshine's first principle: begin with a brief review of earlier learning.
 
@@ -18,6 +15,10 @@ when:
   - Students forget key ideas between lessons.
   - You want a quick start that gets everyone thinking when they walk in.
   - You need to check prior knowledge before moving on.
+not_for:
+  - "Your topic has no earlier lesson to build on: use a general warm-up question or a short class discussion instead."
+  - "Students missed the lesson this one builds on: catch them up one to one first, then use this starter."
+  - "You need a full lesson plan: write the plan yourself or ask your AI for one, then add this starter at the start."
 you_give:
   - Today's topic
   - What was taught in earlier lessons
@@ -29,7 +30,27 @@ you_get:
   - A bridge into the new content
   - A quick way to spot gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full SKILL.md text into the chat.
+  - Add today's topic, what you taught before, and your students' year group. Add the minutes you have if you want.
+  - Read the result. Check the recall questions match what you really taught.
+  - Copy the Do Now onto the board. Use the timed script to run the opening.
+  - For next steps, use the Retrieval practice generator for more recall questions, and the Checking for understanding protocol designer for checks during the lesson.
+output_sample:
+  input:
+    - Today's topic
+    - What you taught in the last lesson or recent lessons
+    - Your students' age or year group
+    - Minutes you have for the opening (optional)
+    - Exit ticket results from last lesson (optional)
+  output:
+    - name: On the Board as Students Enter (Do Now)
+      contains: A short task students start on their own as they walk in, ready to copy onto the board.
+    - name: Retrieval Starter
+      contains: Recall questions on earlier learning, with answers, so students bring ideas back without notes.
+    - name: Prior Knowledge Bridge
+      contains: A few sentences that show how last lesson's work leads into today's topic.
+    - name: Learning Intention
+      contains: A short line that tells students what they will learn today and why.
+    - name: Complete Timed Script
+      contains: The whole opening in order, with minutes for each part and words you can say aloud.

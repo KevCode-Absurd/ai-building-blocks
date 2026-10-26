@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It picks moments and writes short copy.
 new_slug: paywall-designer
 name: Paywall designer
-summary: Describe your plans. Get upgrade screens, trigger moments and copy that
-  convert free users.
+summary: Find the right moments to ask free users to upgrade. Get paywall screens, trigger points and copy for your in-app paywall design.
 job: build-product
 headline: Paywall designer
-subhead: Describe your plans. Get upgrade screens, trigger moments and copy that
-  convert free users. Bring your plans and what is free or paid. Use the result
-  to plan your next step.
+subhead: Describe your plans. Get upgrade screens, trigger moments and copy that convert free users. Bring your plans and what is free or paid. Use the result to plan your next step.
 explain: |
   Upgrade screens, timing triggers and copy that move free users to paid. It places the ask after people have felt real value, not before.
 
-  You describe your plans and what is free. It first checks the type of upgrade: free to paid, trial to paid, a higher tier or a usage limit. Then it maps the user path to find the right moments, such as after a first win or at a limit. It designs the screen, shows what the paid plan unlocks in a tangible way, keeps the path to upgrade short and writes the wording. It also suggests tests to run.
+  You describe your plans and what is free. It first checks the type of upgrade: free to paid, trial to paid, a higher tier or a usage limit. Then it maps the user path to find the right moments, such as after a first win or at a limit. It designs the screen, shows what the paid plan adds in a tangible way, keeps the path to upgrade short and writes the wording. It also suggests tests to run.
 when:
   - Lots of people use the free plan but few upgrade.
   - A trial ends and users drop off.
   - You are adding usage limits and need a good upgrade prompt.
   - You want to push users to a higher tier.
+not_for:
+  - "You want to fix your public pricing page: use a pricing page tool or a conversion review, not this one."
+  - "You need to set prices or pick a pricing model: work that out with your team first, then come back."
+  - "You want to stop paying users from cancelling: use a cancel flow or save offer tool, not this one."
 you_give:
   - Your plans and what is free or paid
   - Where users hit limits or ends of trials
@@ -29,7 +30,28 @@ you_get:
   - Upgrade copy
   - Test ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text into the chat.
+  - Describe your plans, what is free, and where users hit limits or trials end.
+  - Add your current upgrade rate and how users move through your product, if you know them.
+  - Read the trigger moments first. Check each one comes after the user has felt real value.
+  - Pick one screen and one test to try first.
+output_sample:
+  input:
+    - Your plans and what is free or paid
+    - Where users hit limits, or when trials end
+    - Your current free to paid rate (optional)
+    - How users move through your product (optional)
+  output:
+    - name: Upgrade type
+      contains: "Which kind of upgrade this is: free to paid, trial to paid, higher tier, or usage limit."
+    - name: Trigger moments
+      contains: The points in the user path where an upgrade ask fits, such as after a first win or at a limit.
+    - name: Paywall screens
+      contains: Layouts for feature lock, usage limit and trial end screens, with headline, preview, price, button and a way to say no.
+    - name: Upgrade copy
+      contains: Headlines, benefit lines and button text written around what the paid plan gives the user.
+    - name: Timing and frequency rules
+      contains: When not to show the ask, and how long to wait after someone dismisses it.
+    - name: Test ideas
+      contains: Changes to try, such as timing, wording, price display and trial length, with numbers to track.

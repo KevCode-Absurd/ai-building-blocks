@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs report commands and reads back the numbers.
 new_slug: google-analytics-reader
 name: Google Analytics reader
-summary: Ask about your traffic, sign-ups or top pages. Get a clear Google
-  Analytics report, pulled live and read only.
+summary: Check your Google Analytics 4 traffic, top pages and sign-ups by asking in plain words. Get a live, read-only report and the query behind it.
 job: track-numbers
 headline: Google Analytics reader
-subhead: Ask about your traffic in plain words and get a Google Analytics 4
-  report built from live data. Ask for sessions by source, top pages, sign-ups
-  last week or how a campaign did, and it runs the query and reads it back.
+subhead: Ask about your traffic in plain words and get a Google Analytics 4 report built from live data. Ask for sessions by source, top pages, sign-ups last week or how a campaign did, and it runs the query and reads it back.
 explain: |
   Ask about your traffic in plain words and get a Google Analytics 4 report built from live data. Ask for sessions by source, top pages, sign-ups last week or how a campaign did, and it runs the query and reads it back.
 
@@ -18,6 +15,10 @@ when:
   - A boss asks how many sign-ups came from a campaign.
   - You want the same traffic report run every Monday.
   - You want to compare traffic across several properties.
+not_for:
+  - "You need alerts or data older than the last 30 minutes in real time: use the live view inside the Google Analytics 4 website."
+  - "Your property is an old Universal Analytics one: open it in the Universal Analytics screens, because this tool only reads GA4."
+  - "You cannot run commands or set up a Google service account: ask whoever manages your analytics for an export, or read the reports in the Google Analytics site."
 you_give:
   - A GA4 property
   - A service account with access
@@ -29,9 +30,29 @@ you_get:
   - The query that produced them
   - Notes if sign-in fails
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands, with the Google Analytics CLI
-    installed and your own Google Analytics access.
+  - Set up a Google service account with access to your GA4 property. Your AI cannot do this for you.
+  - Use an AI that can run commands, such as Claude with code tools. Add this skill to it.
+  - Ask your question in plain words, like top pages last week. Add your property ID.
+  - Check the login result first. If it fails, fix what it lists and ask again.
+  - Read the table and the query it shows. Check the date range is the one you wanted.
+output_sample:
+  input:
+    - Your GA4 property ID
+    - A Google service account key with access to that property
+    - Your question, such as top pages or sessions by source
+    - A date range (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - Node installed, so the Google Analytics tool can be added
+    - A Google Cloud project with the Analytics Admin and Data APIs turned on
+  output:
+    - name: Login check
+      contains: Confirms your sign-in works by listing your accounts, or says what to fix if it fails.
+    - name: Query
+      contains: The exact report command it ran, with the fields, date range and sort order.
+    - name: Report table
+      contains: Rows of live GA4 numbers, such as pages, sources or campaigns, with the metrics you asked for.
+    - name: Plain-words summary
+      contains: A short read-back of what the numbers show, in everyday language.
+    - name: Fix notes
+      contains: If sign-in or access fails, a list of what to change, since the AI cannot do setup for you.

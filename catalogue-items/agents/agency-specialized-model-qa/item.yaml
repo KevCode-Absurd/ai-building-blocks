@@ -1,0 +1,41 @@
+slug: agency-specialized-model-qa
+name: Model QA Specialist agent
+summary: "Audit a machine learning model you did not build. Get a test plan, rated findings and an opinion, backed only by the evidence you supply."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-model-qa.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-model-qa.md
+  licence: MIT
+  original_name: Model QA Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: effef0d607e8955ff846e1c264237d6d14dd573bcfd02c191e126868c3cbffde
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Model QA Specialist
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Model QA Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-model-qa.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

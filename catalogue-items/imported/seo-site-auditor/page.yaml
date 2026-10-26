@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks many items and ranks fixes.
 new_slug: seo-site-auditor
 name: SEO site auditor
-summary: Give it your site. Get a ranked list of SEO problems and fixes, from
-  technical to content.
+summary: Run an SEO audit of your site. Get a ranked list of search problems, with the fix for each, from technical faults to thin content.
 job: get-found-in-search
 headline: SEO site auditor
-subhead: Give it your site. Get a ranked list of SEO problems and fixes, from
-  technical to content. Bring your site address. Use the result to plan your
-  next step.
+subhead: Give it your site. Get a ranked list of SEO problems and fixes, from technical to content. Bring your site address. Use the result to plan your next step.
 explain: |
   A ranked list of what is holding your search traffic back, from site-level technical faults to thin content, with the fix for each. It audits in a set order: can Google crawl and index the site, is it fast and sound, are pages well set up, is the content worth ranking, and does the site have authority.
 
@@ -18,6 +15,10 @@ when:
   - You launched a site and need a full SEO check, technical and content.
   - You want a fix list in order of impact, not a flat checklist.
   - You recently migrated and want to confirm nothing broke.
+not_for:
+  - "You want to build many pages to target keywords: use a programmatic SEO tool, or write the pages by hand."
+  - "You only need schema markup added to a page: use a schema markup tool or your CMS plugin."
+  - "You want to show up in AI search answers: use an AI search optimization step, not a site audit."
 you_give:
   - Your site address
   - Business goal and priority topics
@@ -29,8 +30,28 @@ you_get:
   - Technical, on-page and content findings
   - A correct schema check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can browse the web.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - "Gather first: your site address, and how many pages to check. If you have them, add Search Console reports and a crawl export."
+  - Tell your AI your site type, your business goal, your priority topics and any recent changes.
+  - Use an AI that can browse the web. It needs this to read your pages.
+  - Read the Executive Summary first. Then work through the Prioritized Action Plan from the top.
+output_sample:
+  input:
+    - Your site address
+    - Your business goal and priority topics
+    - Search Console or analytics details (optional)
+    - Recent migrations or site changes (optional)
+  prerequisites:
+    - An AI that can browse the web, so it can read your pages
+    - A browser or the Rich Results Test to check schema, since a plain fetch cannot see it
+  output:
+    - name: Executive Summary
+      contains: Your site's overall health, the top 3 to 5 priority issues and the quick wins.
+    - name: Technical SEO Findings
+      contains: Crawl, index, speed, mobile, security and URL issues, each with impact, evidence, fix and priority.
+    - name: On-Page SEO Findings
+      contains: Problems with titles, descriptions, headings, images, internal links and keyword targeting, in the same format.
+    - name: Content Findings
+      contains: Gaps in content depth, trust signals and engagement, in the same format.
+    - name: Prioritized Action Plan
+      contains: "Fixes in order: critical, high impact, quick wins, then long-term work."

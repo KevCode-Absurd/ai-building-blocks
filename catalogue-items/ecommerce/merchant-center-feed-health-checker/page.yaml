@@ -1,6 +1,6 @@
 new_slug: merchant-center-feed-health-checker
 name: "Merchant Center feed health checker"
-summary: "Give it your Merchant Center diagnostics. Get problems ranked by lost sales and a score out of 100."
+summary: "Check your Merchant Center feed health. Give it your diagnostics and get problems ranked by lost sales, plus a feed score out of 100."
 job: run-google-ads
 thinking: medium
 thinking_why: "It sorts many product issues by cause and has to compute a score from counts."
@@ -17,6 +17,10 @@ when:
   - Products show as disapproved or "needs attention" in Merchant Center.
   - You are about to raise ad spend on Shopping or Performance Max.
   - Prices change often and you worry the feed lags behind the page.
+not_for:
+  - "You need to check store policy, shipping pages or checkout: use the suspension checker."
+  - "You want better product titles for Shopping ads: use the Shopping feed title writer."
+  - "Your catalogue has under 30 products: fix your tracking and offer first, then come back."
 
 you_give:
   - Merchant Center Products, then Diagnostics, as an export or screenshots
@@ -35,6 +39,32 @@ how_to_use:
   - Tell it how the feed updates (Shopify app, a feed tool, a file) and how often.
   - Fix the disapproved products first. Use Autofix only for low-risk items.
   - Run it again after the fixes, and before you raise spend.
+output_sample:
+  input:
+    - Your Merchant Center Products, then Diagnostics, as an export or screenshots
+    - Your total number of products
+    - How your feed updates and how often
+    - A sample product page and its feed row (optional)
+    - Your top products by revenue (optional)
+  prerequisites:
+    - A Google Merchant Center account with products in it
+  output:
+    - name: Issue counts
+      contains: Total products, then disapproved, warnings and limited performance counts, each with its top causes.
+    - name: Ranked by sales lost
+      contains: Issues in order of cost, with the products hit, why they cost sales and the fix type.
+    - name: Fix list
+      contains: Fixes split into autofix, manual and policy, with what to change for each.
+    - name: Link
+      contains: Whether Merchant Center is connected in Google Ads, or not checked.
+    - name: Prevention
+      contains: Update frequency, automatic item updates, pre-checks for large catalogues and price sync.
+    - name: Score
+      contains: A score out of 100 with the sum shown across approved, titles and GTIN, and price match.
+    - name: Gate
+      contains: Whether the feed is clean enough to scale spend, or needs fixing first.
+    - name: Not run and missing
+      contains: Checks that could not run and what would sharpen the result.
 
 how_it_works:
   - title: Starts with disapproved

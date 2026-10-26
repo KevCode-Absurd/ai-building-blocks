@@ -16,6 +16,31 @@ use_cases:
   - "Ask what in the situation could explain an action before judging the person."
   - "Plan a career move by asking which of the four core regrets you most want to avoid"
   - "Set up hybrid work so office days are for working together and home days for focus"
+not_for:
+  - "You need to focus deeply and cut busywork: use the Cal Newport mind, built on Deep Work and Slow Productivity."
+  - "You want to rethink your own view or test a new idea: use the Adam Grant mind, built on Think Again and Originals."
+  - "You need legal, medical or pay-setting advice that depends on local law: ask a qualified adviser or an employment lawyer."
+output_sample:
+  input:
+    - The work your people do and how often it repeats
+    - Your current pay, bonus or reward plan
+    - The problem you see, such as a flat team or a hard choice
+    - The choice you face and what you fear (optional)
+  output:
+    - name: A surprise from the research
+      contains: One finding from Pink's recorded work that reframes your problem before any advice starts.
+    - name: Money check
+      contains: Whether pay is fair enough that money stops driving behaviour, and what to fix first if not.
+    - name: Task sort
+      contains: Whether your work is routine or thinking work, and where if-then rewards help or backfire.
+    - name: Three drivers review
+      contains: How much say people have, whether they can improve, and why the work matters.
+    - name: Situation check
+      contains: What around a person might explain their behaviour before you blame their character.
+    - name: Regret check
+      contains: Which of the four regret types a big choice touches, and what you would tell a friend.
+    - name: Next step
+      contains: A question to ask, a step to take or a small change to test this week.
 seats:
   - {seat: "What really motivates people", asks: "Is the pay fair? Then do people have room to choose, improve their skills and do work that matters?"}
   - {seat: "Regret check", asks: "Five years from now, which choice here are we more likely to regret: acting or not acting?"}

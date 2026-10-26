@@ -2,36 +2,61 @@ thinking: medium
 thinking_why: Garment details must match, so it checks the result against your photo.
 new_slug: virtual-try-on-photo-maker
 name: Virtual try-on photo maker
-summary: Give it a clothing flat lay and a pose photo. Get a model-wearing shot.
-  Your image model draws it, not Claude.
+summary: Turn a flat-lay clothing photo into a model-wearing shot. Give it your garment and a pose photo, and get a virtual try-on prompt to run.
 job: product-photos
 headline: Virtual try-on photo maker
-subhead: A photo of a model wearing your garment, made from a flat product shot
-  and a pose photo. You skip the model, the studio and the shoot day.
+subhead: Give it a flat photo of your garment and a photo that sets the pose. It writes the prompt and command for your image model. You get a shot of a model wearing your garment, with no studio.
 explain: |
   A photo of a model wearing your garment, made from a flat product shot and a pose photo. You skip the model, the studio and the shoot day.
 
   You give two pictures: the garment laid flat and a reference photo that sets the pose, camera angle, light and background. The skill writes a precise prompt that tells the image model to keep the fabric, colour, texture and small details of the garment exactly as they are, and to copy the pose and scene from the reference. It also gives advice on picking a good reference. Claude does not draw the picture. A paid image model does, through an account and credits.
 when:
-  - You have a flat-lay photo of a sweater or dress and no budget for a
-    photoshoot.
+  - You have a flat-lay photo of a sweater or dress and no budget for a photoshoot.
   - You want product pages to show clothes on a person.
-  - You need the same garment shown on several poses or models.
+  - You need the same garment shown in several poses.
   - You want to test a listing photo before paying for real photography.
+not_for:
+  - You have a set with shoes or bags in one image. Split it into a top file and a bottom file, then run each one.
+  - You must prove exact print or logo placement. Book a real photo shoot instead.
+  - You have no image model account or credits. Ask a freelance photographer for a simple shoot.
 you_give:
   - A flat-lay photo of the garment
   - A reference photo for pose and setting
-  - Output size and quality preferences (optional)
+  - A second garment photo for a full outfit (optional)
+  - A model face photo (optional)
   - An account with an image model service
 you_get:
-  - A ready-to-run prompt for the image model
-  - The command to make the on-model shot
-  - Tips for choosing a reference photo
+  - An image prompt that keeps your garment's colour, fabric and fit
+  - A command to make the on-model shot
+  - Tips for choosing a good reference photo
   - A check list for garment accuracy
+  - "Next step: check each result, then add the best shot to your product listing"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Check your photos. Each must be 20KB to 15MB, over 400 by 400 pixels, and jpg, png or webp.
+  - Pick a clear reference photo. Use a front pose and a plain wall if the garment must look exact.
+  - Paste the skill into your AI. Add both photos and describe the garment's colour, fabric and fit.
+  - Run the command with your image model key. This needs code running and a paid account. Use the dry run first to see the cost.
+  - Make two to four shots and pick the best one.
+  - Check colour, fabric, print position, hands and collar. If one is off, ask your AI to add the matching fix line and run again.
+output_sample:
+  input:
+    - Your flat-lay photo of the garment
+    - A reference photo for pose, angle, light and background
+    - A second garment photo for a full outfit (optional)
+    - A model face photo to keep the same person across products (optional)
+  prerequisites:
+    - An account with an image model service that has credits
+    - An AI that can run code, or a way to run the command yourself
+  output:
+    - name: Photo check
+      contains: A check that your photos meet the size, format and clarity rules before you spend credits.
+    - name: Image prompt
+      contains: An English prompt that keeps the garment's colour, fabric, fit and details, and copies the reference pose and scene.
+    - name: Run command
+      contains: A ready command for the image model, with the photos in the right order, size 1024x1536 and high quality.
+    - name: Cost estimate
+      contains: A dry run that shows the credit cost before you make the real picture.
+    - name: On-model photo
+      contains: One to four shots of the model wearing your garment, saved as files for you to pick from.
+    - name: Quality check
+      contains: A list to check colour, texture, print position, hands and collar, with a fix line to add if one fails.

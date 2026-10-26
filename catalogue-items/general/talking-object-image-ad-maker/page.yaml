@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: talking-object-image-ad-maker
 name: "Talking object image ad maker"
-summary: "Paste your buyer's moment. Get a talking object image prompt, the bubble line and the ad words."
+summary: "Plan a talking object image ad. Give it your buyer's moment and brand file. You get the narrator, bubble line, image prompt and ad words."
 job: make-image-ads
 
 headline: "Talking object image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your buyer won't say the problem out loud, but something in their home sees it every day.
   - Your product replaces an old thing people keep and feel a bit silly about.
   - You run a talking object video and want a still that matches it.
+not_for:
+  - "You want a video, not a still: use the talking object ad script skill, which writes the video version."
+  - "Your product needs proof to sell, like numbers or before and after photos: use a plain product photo ad with the proof written on it."
+  - "You have no brand file or buyer details yet: use the Brand profile builder and the Buyer brief writer first."
 
 you_give:
   - The problem, how much the buyer knows, and the buyer's moment (room, time of day, what they tried before)
@@ -35,6 +39,31 @@ how_to_use:
   - Paste your brand file and attach the product photos. Say how dry or silly your humour can be.
   - Make the picture from the prompt, then add the bubble, the words and your real pack in your editor.
   - Show it to someone for 2 seconds. If they can't say what the object is fed up about, ask for a plainer expression.
+output_sample:
+  input:
+    - The problem, what your buyer knows, and the buyer's moment
+    - Your brand file with label text, approved claims, humour limits and offer
+    - Photos of your product from the front, side and top (optional)
+  prerequisites:
+    - An AI chat that can read your pasted brand file
+    - An image maker and an editor to build the final picture
+  output:
+    - name: Narrator
+      contains: The object that talks, which kind it is, and the four tests it passed.
+    - name: Mood and expression
+      contains: One feeling, the light to match, and what the object's face is doing.
+    - name: Layout
+      contains: A 4:5 or 1:1 frame with space kept for the bubble and the small lines.
+    - name: Words on the image
+      contains: The bubble line of 7 words or fewer, plus up to three other short lines with their source.
+    - name: Image prompt
+      contains: A full scene description for your image maker, with an empty space for the bubble.
+    - name: Post words
+      contains: The primary text, headline field and button words for the ad.
+    - name: Edit step
+      contains: How to add the bubble, lay your real pack on the picture and check contrast.
+    - name: Checks missed
+      contains: Any of the six checks the plan could not pass, one per line, or none.
 
 how_it_works:
   - title: Checks the fit

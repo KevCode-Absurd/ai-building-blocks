@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It follows a short recipe and fills in the script.
 new_slug: google-forms-automator
 name: Google Forms automator
-summary: Say what should happen on each form reply. Get a form plan and Apps
-  Script that emails alerts or logs rows.
+summary: Set up a Google Forms automation that emails you or logs a row to a sheet on every reply. You get a form plan and the script to paste in.
 job: organise-work
 headline: Google Forms automator
-subhead: A Google Form that does something the moment someone replies. Say what
-  should happen, such as an email alert, a row added to a sheet or a different
-  follow-up based on an answer, and you get a form plan plus the Apps Script to
-  do it.
+subhead: A Google Form that does something the moment someone replies. Say what should happen, such as an email alert, a row added to a sheet or a different follow-up based on an answer, and you get a form plan plus the Apps Script to do it.
 explain: |
   A Google Form that does something the moment someone replies. Say what should happen, such as an email alert, a row added to a sheet or a different follow-up based on an answer, and you get a form plan plus the Apps Script to do it.
 
@@ -19,6 +15,10 @@ when:
   - You need replies logged to a sheet with extra columns.
   - Different answers should lead to different follow-ups.
   - You do not want to build a full app for one form.
+not_for:
+  - "You need a custom screen or a full standalone app: ask a developer, since this only covers scripts tied to one form."
+  - "You want to edit a Google Sheet on its own schedule: use a Sheets script or a simple sheet formula instead."
+  - "You expect it to fire when someone edits a reply: it only runs on new form submissions."
 you_give:
   - What the form is for
   - The questions and answer types
@@ -30,7 +30,27 @@ you_get:
   - Steps to install the trigger
   - A test checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code runs on your computer.
+  - Tell your AI what the form is for, your questions, and what should happen on each reply.
+  - Add the email address or sheet link to use. Say if the sheet needs a specific name.
+  - Build the form in Google Forms, then open Extensions, then Apps Script, and paste the script your AI wrote.
+  - "Add the trigger from the clock menu: pick your function, From form, On form submit. Approve access."
+  - Send a test reply from a private window. Check the email or sheet row arrives once.
+output_sample:
+  input:
+    - What your form is for
+    - Your questions and answer types
+    - What should happen on each reply
+    - The email address or sheet to use (optional)
+  prerequisites:
+    - A Google account with access to Google Forms
+    - Permission to open Apps Script from your form
+  output:
+    - name: Form design plan
+      contains: Your questions, answer types and required fields, with clear titles the script can match.
+    - name: Response handler script
+      contains: Apps Script code to paste in that reads each reply and sends an email, logs a row or branches on an answer.
+    - name: Trigger setup steps
+      contains: How to open the script editor and set the on form submit trigger, then approve access.
+    - name: Test checklist
+      contains: How to send a test reply and check the email or sheet row arrives once, and where to read errors.

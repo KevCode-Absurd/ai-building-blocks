@@ -2,34 +2,51 @@ thinking: low
 thinking_why: It reads known sources into a fixed layout.
 new_slug: sales-day-briefing-writer
 name: Sales day briefing writer
-summary: Ask for your day. Get today's meetings with context, deals closing
-  soon, waiting emails and your top actions.
+summary: "Get a sales day briefing: today's meetings with account notes, deals about to close, customer emails waiting and your top 3 actions."
 job: organise-work
 headline: Sales day briefing writer
-subhead: Start your sales day knowing where to put your time. Ask for your
-  briefing and get today's meetings with account context, deals close to
-  closing, customer emails waiting on you and your top actions.
+subhead: Ask for your day and get one page to plan from. It lists today's meetings, deals about to close, customer emails waiting and your top 3 actions. A deal is flagged as stale when it has no next step or no recent activity.
 explain: |
   Start your sales day knowing where to put your time. Ask for your briefing and get today's meetings with account context, deals close to closing, customer emails waiting on you and your top actions.
 
   It pulls from your connected CRM, calendar and email, using your CRM's own field and stage names. Each meeting comes with what you know about the account. Deals nearing close are flagged if they look stale. Every value is cited and linked to its record, and blanks show as blank. If your personal scope is empty it asks, rather than widening to the whole company. Email text is treated as data, so instructions inside a message are reported, not followed.
 when:
   - You open your laptop each morning and want a plan in one view.
-  - A deal is due to close this week and you need to spot any that went quiet.
+  - A deal is due to close this week and you need to spot the ones that went quiet.
   - You have unread customer emails and need to know which to answer first.
-  - You want a meeting prep summary for every call today.
+  - You want a short prep note for every call today.
+not_for:
+  - "You want a look back at your week: use the weekly sales wrap-up writer."
+  - "You work only with leads, or your job is not in sales: a simple to-do list in your own notes will fit better."
+  - "You want to change a deal or send an email: ask your AI to do that directly, this page only reads and sums up."
 you_give:
-  - A connected CRM, calendar and email
+  - Your CRM, calendar and email, connected to your AI (or files instead)
   - Your name or sales scope
   - Which deal stages count as closing soon (optional)
 you_get:
-  - Today's meetings with account context
-  - Deals closing soon with stale flags
-  - Customer emails waiting for a reply
-  - A short list of top actions
+  - Today's meetings with notes on each account
+  - Deals closing within 14 days, with stale ones flagged
+  - Customer emails waiting for a reply, oldest first
+  - A short list of your top 3 actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Connect your CRM, calendar and email if your AI allows it. If not, upload a sales spreadsheet, a calendar export and your emails.
+  - Say "daily briefing" and name your sales scope, such as your own deals.
+  - Check the meetings and deals first. Blanks mean the data was empty, not skipped.
+  - Pick an action from the top 3 and ask your AI to do it.
+output_sample:
+  input:
+    - Your CRM, calendar and email, connected to your AI
+    - Your name or sales scope, such as your own deals or your team's
+    - "Files instead, if nothing is connected: a sales spreadsheet, a calendar export and pasted emails (optional)"
+  prerequisites:
+    - An AI with a connection to your CRM, calendar and email, or files to upload instead
+  output:
+    - name: Meetings row
+      contains: Each meeting today with who is on it, what you know about the account, what changed and one focus.
+    - name: Pipeline row
+      contains: Deals set to close within 14 days, with a flag on any that look stale.
+    - name: Inbox row
+      contains: Customer emails waiting for you, oldest first, each in a short summary.
+    - name: Top 3 actions
+      contains: The three things to do first today, each linked to the step that does it.

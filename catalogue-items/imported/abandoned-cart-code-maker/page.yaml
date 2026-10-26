@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It creates real codes, so it must get the rules right.
 new_slug: abandoned-cart-code-maker
 name: Abandoned cart code maker
-summary: Connect your Shopify store. Get one discount code per shopper who left
-  a cart, plus a tag.
+summary: Make one single-use discount code for each shopper who left a cart in your Shopify store, tag them, and get a CSV list to use in an abandoned cart email.
 job: make-offer
 headline: Abandoned cart code maker
-subhead: Give it your Shopify store, how many days back to look, a minimum cart
-  value and the discount. It pulls recent abandoned checkouts, drops small carts
-  and makes one unique code per shopper. You get a preview count, the live
-  codes, a tag on each customer and a summary. Codes cannot be bulk deleted.
+subhead: Give it your Shopify store, how many days back to look, a minimum cart value and the discount. It pulls recent abandoned checkouts, drops small carts and makes one unique code per shopper. You get a preview count, the live codes, a tag on each customer and a summary. Codes cannot be bulk deleted.
 explain: |
   You get a unique discount code for each shopper who left a cart, and each of them is tagged in your Shopify store so you can message them next. The codes are live as soon as they are made, and they cannot be bulk deleted.
 
@@ -19,6 +15,10 @@ when:
   - You need single-use codes so one code is not shared around.
   - You want a tagged list of customers to feed into your email tool.
   - You want to see how many carts qualify before you commit.
+not_for:
+  - "You need to send the emails: use Shopify Email or your own email tool, because this only makes codes and tags."
+  - "You want one shared code for everyone: make it by hand in your Shopify discounts page."
+  - "Your store is not on Shopify: use your own store's discount tools, because this only works with Shopify."
 you_give:
   - Your Shopify store address
   - How many days back to look
@@ -31,9 +31,32 @@ you_get:
   - A tag on each customer
   - A summary of what was created
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Open an AI that can run code and use the Shopify command line, such as Claude Code. A plain chat window cannot do this.
+  - Sign in to your store with the Shopify command line first. Your login needs the permissions listed on this page.
+  - Paste this skill. Give your store address, days back, minimum cart value, discount and code prefix.
+  - Run it in preview mode first. Turn on dry run, and check how many shoppers qualify.
+  - If the count looks right, ask your AI to run it for real. The codes go live at once and cannot be bulk deleted.
+  - Open the CSV and load it into your email tool to send each shopper their code.
+output_sample:
+  input:
+    - Your Shopify store address
+    - How many days back to look (optional)
+    - A minimum cart value (optional)
+    - The discount percentage and code prefix (optional)
+    - A tag name for the shoppers (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify command line
+    - A Shopify login with permission to read checkouts and customers, and to write discounts and customers
+  output:
+    - name: Start banner
+      contains: Your store address and the start time, shown when the run begins.
+    - name: Step log
+      contains: One line per step with what was asked and how many items it found or changed.
+    - name: Discount codes
+      contains: One single-use code per eligible shopper, with your prefix, your percentage and a 30 day expiry.
+    - name: Customer tags
+      contains: Your tag added to each shopper who got a code, so you can find them later.
+    - name: Outcome summary
+      contains: Counts of checkouts found, eligible shoppers, codes made, shoppers tagged and errors.
+    - name: recovery_list CSV
+      contains: One row per shopper with email, cart total, date left, code, discount percentage and tag.

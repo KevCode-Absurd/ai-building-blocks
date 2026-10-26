@@ -38,7 +38,7 @@ test("the header leads to Apps: one finished example app, the starter pack and t
   await page.getByRole("navigation", { name: "Sections", exact: true }).getByRole("link", { name: "Apps", exact: true }).click();
   const index = page.getByTestId("apps-index");
   await expect(index).toBeVisible();
-  await expect(page).toHaveTitle("Example AI apps you can copy · AI Blocks");
+  await expect(page).toHaveTitle("Example AI app you can click through and copy | AI Blocks");
   await expect(index.getByTestId("tour-open")).toHaveAttribute("href", "/example-app/");
   await expect(index.getByTestId("tour-open")).toHaveAttribute("target", "_blank");
   await expect(index.getByTestId("tour-open")).toHaveText("See an example");
@@ -137,8 +137,9 @@ test("every page has its own address on useaiblocks.com, and the saved app stays
   // sitemap.xml is an index; the app pages are in the pages sitemap.
   expect(fs.readFileSync("public/sitemap.xml", "utf8")).toContain("<loc>https://useaiblocks.com/sitemap-pages.xml</loc>");
   const map = fs.readFileSync("public/sitemap-pages.xml", "utf8");
-  for (const p of ["/apps", "/apps/starter-pack"]) expect(map).toContain(`<loc>https://useaiblocks.com${p}</loc>`);
+  for (const p of ["/apps"]) expect(map).toContain(`<loc>https://useaiblocks.com${p}</loc>`);
   expect(map).not.toContain("example-app");
+  expect(map).not.toContain("/apps/starter-pack");
   expect(fs.readFileSync("public/robots.txt", "utf8")).toContain("Sitemap: https://useaiblocks.com/sitemap.xml");
   expect(fs.readFileSync("../example-app-site/example-app/index.html", "utf8")).toContain('<meta name="robots" content="noindex">');
 });

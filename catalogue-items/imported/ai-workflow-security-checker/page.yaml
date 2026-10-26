@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It traces how untrusted data flows through several files.
 new_slug: ai-workflow-security-checker
 name: AI workflow security checker
-summary: Point it at a repo. Get a report on where outside text could reach an
-  AI agent in your GitHub workflows.
+summary: Check your GitHub workflows for AI agent security risks. Find where text from strangers could reach your agent, and get a report with fixes.
 job: secure-code
 headline: AI workflow security checker
-subhead: Point it at a repo. Get a report on where outside text could reach an
-  AI agent in your GitHub workflows. Bring the repo, or its workflow files. Use
-  the result to plan your next step.
+subhead: Point it at a repo. Get a report on where outside text could reach an AI agent in your GitHub workflows. Bring the repo, or its workflow files. Use the result to plan your next step.
 explain: |
   A report on where outside text, such as an issue or pull request from a stranger, can reach an AI agent that runs inside your GitHub workflows. If it can, that agent might be steered to leak secrets or run bad commands.
 
@@ -18,6 +15,10 @@ when:
   - Strangers can open issues or pull requests on your project.
   - You use a sandbox setting you are not sure is safe.
   - A security review asks how untrusted text reaches your agent.
+not_for:
+  - "Your workflows do not use an AI agent: use a general GitHub Actions security scanner instead."
+  - "You want to test a live attack on your agent: ask a security person to run that test, as this only reads files."
+  - "You use Jenkins, GitLab CI or CircleCI: use a security check made for that system."
 you_give:
   - The repo, or its workflow files
   - Which AI agent actions you use
@@ -28,8 +29,30 @@ you_get:
   - Severity for each finding
   - What to change, without edits made for you
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Add your repo link, or paste the files from .github/workflows. Say which AI agent actions you use.
+  - For a repo link, your AI needs the GitHub CLI installed and logged in with read access. Without that, paste the workflow files.
+  - Read the findings from High down. Each one shows the path the text takes and what to change.
+  - Make the changes yourself. The skill only reads and reports, and does not edit your files.
+  - This version uses built-in checks only. The extra reference files it mentions are not included, so it covers fewer attack types than the full method.
+output_sample:
+  input:
+    - Your repo link, or the text of your workflow files
+    - Which AI agent actions you use
+    - Who can open issues and pull requests (optional)
+  prerequisites:
+    - For a repo link, the GitHub CLI installed and logged in with read access to the repo
+    - An AI that can read your project files, or pasted workflow text
+  output:
+    - name: Summary header
+      contains: How many workflows and AI action steps were checked, and how many findings there were at each severity.
+    - name: Summary table
+      contains: One row per workflow file with its number of findings and its highest severity.
+    - name: Findings by workflow
+      contains: Each risk grouped under its workflow file, ordered from High to Info, with severity and what to change.
+    - name: Data flow traces
+      contains: The path from the outside text, through the env block, into the agent prompt.
+    - name: Clean-repo report
+      contains: If nothing is found, tables of the workflows and AI actions scanned, then a no-findings line.
+    - name: Remote analysis header
+      contains: For a remote repo, the repo name and ref, plus a link and source line on each finding.

@@ -1,6 +1,6 @@
 new_slug: knitted-wool-ad-script
 name: "Knitted wool video ad script writer"
-summary: "Paste your brief and product facts. Get a knitted-wool video script, a room list and a cast note."
+summary: "Write a knitted wool video ad script from your brief and product facts. You get a 15 to 40 second script, a room list and a cast note."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -19,6 +19,10 @@ when:
   - Your product deals with a subject people find awkward to look at.
   - You want a soft, unusual ad for people who don't know they need you yet.
   - You can say what your product does in one picture, like strands joining or a pack knitting into view.
+not_for:
+  - "You want one still picture instead of a video: use the Knitted wool image ad maker."
+  - "Proof, taste or fit is the point of the ad: film the real product with a person instead."
+  - "You need a script for a real person on camera: ask a writer or use a plain spoken script, not wool dolls."
 
 you_give:
   - The reason someone buys, what the buyer knows, the selling idea and the length
@@ -38,6 +42,29 @@ how_to_use:
   - Say the length, such as "30 seconds".
   - Check that every object in the script has knitted, crocheted or felted in front of it. Anything without it will come out real.
   - Take the script and cast note to the skill that turns a knitted script into shots. It runs the video process from there.
+output_sample:
+  input:
+    - "Your brief: why people buy, what they know, your selling idea and the ad length"
+    - Your product facts and a photo of the product (recommended)
+    - "Your buyer: their look, their room and what they tried before"
+    - Your approved claims, banned claims and offer
+    - Your brand colors and voice (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: Show plan
+      contains: Your selling idea, the show job, the yarn technique, the fabrics, and the claim each yarn change implies.
+    - name: Room list
+      contains: Every object in the scene with one material word and one color.
+    - name: Script
+      contains: One row per line with narration, picture and one move, the turn marked, word count, seconds and clip split.
+    - name: Claims shown
+      contains: Each yarn change with the claim that backs it, plus changes rejected and why.
+    - name: Cast note
+      contains: Who carries the ad, why, and a plain sketch of the doll.
+    - name: Checks missed
+      contains: One line for each check the script still fails, or none.
 
 how_it_works:
   - title: Checks the fit

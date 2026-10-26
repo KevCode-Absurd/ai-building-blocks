@@ -1,0 +1,143 @@
+name: Solidity Smart Contract Engineer agent
+summary: Plan a safer Solidity smart contract, with a threat list, contract layout, gas notes, a test plan and a checklist to run before an audit.
+headline: Solidity Smart Contract Engineer agent
+subhead: Give it what your contract must do, who holds power over it and which chain it runs on. It lists the ways it could be attacked, then plans the contract, the tests and the checks. You get a plan to bring to a professional audit, not a replacement for one.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A smart contract cannot be patched like a website. Once it holds money, a mistake can be final. So this agent starts with the attacker, not the code. It asks where tokens flow, who can change things, which outside contracts or price feeds you trust, and what must always be true, such as "deposits always equal the sum of balances".
+
+  Its method comes from the Agency Agents profile. Use audited building blocks, such as OpenZeppelin, rather than writing your own. Update state before any outside call. Never loop over lists that can grow without limit. Keep data off the chain when events will do. Plan for upgrades and emergency pauses on day one, and plan the storage layout so an upgrade does not corrupt it.
+
+  This is an AI role profile shared under MIT. It writes a plan and code outlines. It does not compile, test or deploy anything, and it is not a security audit. Its targets, such as no critical findings in an outside audit, are goals and not results measured by AI Blocks. Never put real funds in a contract this agent drafted until a professional has audited it.
+when:
+  - You are planning an ERC-20 token, an NFT, a vault or a staking contract and want the risks listed first.
+  - You must choose between upgrade patterns, such as UUPS or transparent proxy.
+  - Your gas costs are high and you want to know which storage and call patterns to change.
+  - You are about to hire an auditor and want your tests and notes ready, so the audit is faster.
+not_for:
+  - You have a deployed contract and need it reviewed for flaws. Use the Blockchain Security Auditor agent.
+  - You want to know whether to buy, sell or launch a token as an investment. This agent plans code, not money decisions.
+  - You need a general web or backend design. Use the Backend Architect agent or the Software Architect agent.
+  - You need a threat review of a non-blockchain app. Use the Application Security Engineer agent.
+you_give:
+  - What the contract must do, in plain words
+  - Which chain or network it will run on, such as Ethereum or an L2
+  - The token standard, if any, such as ERC-20 or ERC-721
+  - Who holds admin power, and any outside contracts or price feeds you trust
+  - Your threat worries, such as theft, rug pulls or price manipulation (optional)
+  - Your existing contract code, if you have any (optional)
+you_get:
+  - A list of ways the contract could be attacked, ranked by what is at stake
+  - A rule list of what must always be true, such as balances adding up
+  - A contract layout with interfaces, access roles and the upgrade pattern
+  - Gas notes naming the changes worth making
+  - A test plan with unit, random-input and upgrade tests, and the static checks to run
+  - A deployment checklist and audit-prep notes
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then references/source-agent.md.
+  - Describe what the contract does, the chain, the token standard and who holds admin power. Paste any existing Solidity code.
+  - Say "Write the contract plan. Ask me once if anything is missing. Do not tell me it is safe."
+  - Read the threat list first. Add any risk it missed, then check the must-always-be-true rules against your own design.
+  - Run the compile, test and static checks it lists on your own computer, with tools such as Foundry, Slither and Mythril. The agent cannot run them.
+  - Test on a testnet first. Before real money, get a professional security audit.
+how_it_works:
+  - title: Model the threats
+    text: It lists who holds power, what you trust outside the contract, and how flash loans, price manipulation or key theft could hurt you.
+  - title: State the rules that must hold
+    text: It writes down the facts that must stay true after every action, which become tests later.
+  - title: Plan the layout
+    text: It sets interfaces, roles, events and the upgrade pattern, with a storage layout that survives upgrades.
+  - title: Plan the gas savings
+    text: It names storage, call and data choices that cut cost, and skips tricks the compiler already does.
+  - title: Plan the tests
+    text: It lists unit tests, random-input tests, rule tests, upgrade tests and static analysis.
+  - title: Prepare for audit
+    text: It lists the deployment steps and the notes an auditor needs, with trust assumptions and known risks.
+output_shape: |-
+  CONTRACT PLAN: <contract or protocol name>
+
+  THREAT LIST
+    <threat> | <how it happens> | <what is at stake> | <planned defence>
+
+  RULES THAT MUST ALWAYS HOLD
+    <rule in plain words> | <how to test it>
+
+  CONTRACT LAYOUT
+    <contract or part> | <job> | <roles that can call it> | <upgrade pattern note>
+
+  GAS NOTES
+    <change> | <why it saves gas> | <trade-off>
+
+  TEST PLAN
+    <test kind> | <what it covers> | <tool to run it>
+
+  DEPLOYMENT CHECKLIST
+    <step> | <who does it> | <what to verify>
+
+  AUDIT PREP AND OPEN QUESTIONS
+    <item> | <how to settle it>
+
+  NOT AUDITED: This plan is not a security audit.
+output_sample:
+  input:
+    - What the contract must do
+    - The chain and token standard
+    - Who holds admin power and what outside contracts you trust
+    - Your existing Solidity code (optional)
+  prerequisites:
+    - Tools to run the checks yourself, such as Foundry, Slither and Mythril
+    - A professional audit before any real money is at risk
+  output:
+    - name: Threat list
+      contains: Each way the contract could be attacked, what is at stake and the planned defence.
+    - name: Rules that must always hold
+      contains: Plain statements that must stay true after every action, each with how to test it.
+    - name: Contract layout
+      contains: The parts, their jobs, who can call them and the upgrade pattern.
+    - name: Gas notes
+      contains: Storage and call changes that cut cost, with the trade-off for each.
+    - name: Test plan
+      contains: Unit, random-input, rule and upgrade tests, plus the static checks to run.
+    - name: Deployment checklist
+      contains: The steps, who does each and what to verify, from testnet to launch.
+    - name: Audit prep and open questions
+      contains: Trust assumptions, known risks and what you still need to decide.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Risk focus
+    how: Name the worst outcome you fear, such as drained funds, and ask it to plan around that first.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Smart contract
+    meaning: A program that lives on a blockchain and runs by its own rules once deployed.
+  - term: Gas
+    meaning: The fee paid for each step a contract runs on the chain.
+  - term: Proxy upgrade
+    meaning: A setup where users talk to a fixed address and the code behind it can be swapped.
+  - term: Reentrancy
+    meaning: An attack where an outside contract calls back in before your contract has updated its records.
+  - term: Audit
+    meaning: A paid review of your contract code by security specialists.
+  - term: Testnet
+    meaning: A practice blockchain where tokens have no real value.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat can write the plan and outlines. Run Foundry, Slither and Mythril on your own computer to check them.
+  inputs:
+    - The exact tokens and chains involved, so risks match your real setup.
+    - A short list of what each role, such as admin or user, may do.

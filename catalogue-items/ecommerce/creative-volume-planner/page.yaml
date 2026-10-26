@@ -1,6 +1,6 @@
 new_slug: creative-volume-planner
 name: "Creative volume planner"
-summary: "Give it your spend, target and hit rate. Get ads needed per month and a weekly quota."
+summary: "Plan how many new ads to make each month. Give it your spend, target and hit rate. You get three estimates, a budget and a weekly quota."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It does a few sums and sets a plan, so a mid-size model works as long as it shows its sums."
@@ -17,6 +17,10 @@ when:
   - You are setting next month's creative plan and need to know how many ads to make.
   - Your winners keep fading and you suspect you are not making enough.
   - You need to decide whether to hire an editor, film more or make more image ads.
+not_for:
+  - "You spend under about 5K a month: skip the totals, keep to 3 core concepts and make the ads yourself."
+  - "You are launching with no sales history: there is no hit rate or return to work from, so test a few ideas first."
+  - "You want to judge whether your ads look too alike: ask a person on your team to review them side by side."
 
 you_give:
   - Monthly ad spend and your new-customer revenue target
@@ -36,6 +40,28 @@ how_to_use:
   - Add your winners now, winners lost last month and your hit rate, if you track them.
   - Add what each type of ad costs to make.
   - Use the lowest sensible number first, hold the quality bar, and check the weekly quota against your team.
+output_sample:
+  input:
+    - Your monthly ad spend and your new-customer revenue target
+    - Ad count, spend and revenue for the last 12 months (optional)
+    - Winners live now, winners lost last month and your hit rate (optional)
+    - What a static, a video and a creator video cost you to make (optional)
+    - Your contribution margin per sale (optional)
+  output:
+    - name: Ads needed per month
+      contains: "Three estimates: the quick rule, the sum back from your revenue target, and the sum from winners lost."
+    - name: Range and start number
+      contains: The low and high from the three methods, and the number to start at with a reason.
+    - name: Creative budget
+      contains: The share of your media spend to put into making ads, based on your spend band.
+    - name: Profit per ad
+      contains: Expected profit for a static, a video and a creator video after making cost.
+    - name: Team, mix and spend split
+      contains: Who to hire or hold, the share of replicas, fixes and new concepts, and proven versus testing spend.
+    - name: Weekly quota
+      contains: Concepts times ads per concept, matching the monthly number.
+    - name: Watch and missing
+      contains: Risks such as weekend sales cycles or stock gaps, any checks missed, and any inputs not given.
 
 how_it_works:
   - title: Uses the quick rule

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It counts consent fields.
 new_slug: marketing-consent-auditor
 name: Marketing consent auditor
-summary: Run it on your customers. Get who agreed to email and SMS marketing,
-  and who did not, for compliance.
+summary: Check which Shopify customers agreed to email and SMS marketing. Get a consent audit with counts and a CSV list. Read-only and safe to run.
 job: run-your-store
 headline: Marketing consent auditor
-subhead: A count of how many of your Shopify customers agreed to email and SMS
-  marketing, and how many did not. It is useful for privacy reviews and for
-  knowing your real reachable audience.
+subhead: A count of how many of your Shopify customers agreed to email and SMS marketing, and how many did not. It is useful for privacy reviews and for knowing your real reachable audience.
 explain: |
   A count of how many of your Shopify customers agreed to email and SMS marketing, and how many did not. It is useful for privacy reviews and for knowing your real reachable audience.
 
@@ -18,6 +15,10 @@ when:
   - You want to know how many people you can legally email.
   - You plan an SMS campaign and need your opted-in count.
   - You want to find customers whose consent is still pending.
+not_for:
+  - "You need legal advice or proof for an audit: ask a privacy lawyer, and use your email tool's own consent records as the source of truth."
+  - "Your customers are not on Shopify: check the consent export from your email or SMS tool instead."
+  - "You want to change consent or send a campaign: do that in Shopify or your email tool, because this only reads data."
 you_give:
   - Your store domain
   - "The channel to audit: email, SMS or both"
@@ -28,8 +29,27 @@ you_get:
   - Pending and unreachable counts
   - A read-only report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open an AI that can run Shopify CLI commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot read your store.
+  - Sign in to Shopify CLI for your store with permission to read customers.
+  - Paste the skill and give it your store domain. Say if you want email, SMS or both.
+  - Read the counts in the report. Then open the CSV file and spot-check a few rows.
+  - The CSV holds customer emails, which are personal data. Keep it in a private folder and delete it when the review is done.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - "The channel to check: email, SMS or both"
+    - "Output style: readable or JSON (optional)"
+  prerequisites:
+    - An AI that can run Shopify CLI commands and save files
+    - A signed-in Shopify CLI session with permission to read customers
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step with what was asked and how many results came back.
+    - name: Email marketing counts
+      contains: Subscribed, unsubscribed, pending and never asked, each as a number and a percentage.
+    - name: SMS marketing counts
+      contains: Subscribed, unsubscribed and never asked, each as a number and a percentage.
+    - name: consent_audit_<date>.csv
+      contains: One row per customer with email, SMS consent state and the date consent last changed.

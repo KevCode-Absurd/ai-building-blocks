@@ -15,11 +15,11 @@ outputs:
   - {type: offer}
 uses: [cash-tied-up-finder, client-fee-and-cap-setter, pricing-decision-planner, can-they-pay-deal-checker, results-agreement-writer]
 steps:
-  - {uses: cash-tied-up-finder, note: "Every quarter: how long each client takes to pay and how much of your cash they hold, so slow payers are priced for it."}
-  - {uses: client-fee-and-cap-setter, note: "Every quarter: your fee floor, billing terms and the client cap that covers your costs, refreshed from this quarter's hours."}
-  - {uses: pricing-decision-planner, note: "Only for a client whose real rate fell below your floor, or whose scope grew: the new price and how to frame it."}
-  - {uses: can-they-pay-deal-checker, note: "Only before a raise is proposed to a client you want to keep: what they can likely pay and a range to offer."}
-  - {uses: results-agreement-writer, note: "Only for a client you will re-contract: a one-page agreement on results, limits, help and review dates."}
+  - {uses: cash-tied-up-finder, note: "Every quarter: how long each client takes to pay and how much of your cash they hold, so slow payers are priced for it. Hands the days-to-pay per client to step 2."}
+  - {uses: client-fee-and-cap-setter, note: "Every quarter: your fee floor, billing terms and the client cap that covers your costs, refreshed from this quarter's hours. Uses step 1's days-to-pay with your costs and goals; hands the floor and cap to step 3."}
+  - {uses: pricing-decision-planner, note: "Only for a client whose real rate fell below your floor, or whose scope grew: the new price and how to frame it. Uses the floor from step 2 and the client's facts; hands the proposed price to step 4 as the ask."}
+  - {uses: can-they-pay-deal-checker, note: "Only before a raise is proposed to a client you want to keep: what they can likely pay and a range to offer. Takes step 3's proposed price as the ask and what you know of the client's means; hands the range to step 5."}
+  - {uses: results-agreement-writer, note: "Only for a client you will re-contract: a one-page agreement on results, limits, help and review dates. Uses the agreed price and range from steps 3 and 4. Hands the agreement back for your yes."}
 schedule: "In the first week of each quarter, after last quarter's hours and invoices are in"
 asks_before: [sending any rate change or proposal to a client, ending or pausing work with a client, signing or sending an agreement, offering a discount or a payment plan]
 minds: [wolfgang-amadeus-mozart]

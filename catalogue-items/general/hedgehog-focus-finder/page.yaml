@@ -1,54 +1,64 @@
 new_slug: hedgehog-focus-finder
 name: "Hedgehog focus finder"
-summary: "Describe what you do and what you do well. Get a plain statement of the one thing to focus on."
+summary: "Find what your business should focus on. Say what you do, love and do well. Get a plain focus statement, stop-doing list and one bet."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to find an honest overlap of three things and separate real strengths from competence, which needs careful judgement."
 
 headline: "Hedgehog focus finder"
-subhead: "Give it what you do, what you love and what you do well. It finds where three things overlap: what you care about, what you can be best at and what drives your money. You get a plain statement of the one thing to focus on, a stop-doing list and a bet."
+subhead: "Tell it what you do, what you love, what you do well and what you do badly. It finds where what you care about, what you can be best at and what drives your money overlap. You get a plain focus statement, a stop-doing list and one bet."
 
 explain: |
-  Many businesses spread across everything they could do. The ones that stay strong find a single focus where three circles overlap: what they are deeply passionate about, what they can be best in the world at, and what drives their money or resource engine. The result is not a goal. It is an understanding of what you are, written as a plain fact.
+  Many businesses spread across everything they could do. The ones that stay strong find one business focus, where three circles overlap: what you care about deeply, what you can be best at, and the one number that drives your income. The result is not a goal. It is a plain fact about what you are.
 
-  This skill asks about each circle, including what you cannot be best at. It names the one measure that drives your engine and writes the overlap in plain words, free of bravado. It then asks what you want to be when you grow up, as an identity and not a cost goal, names what you are fundamentally best at and checks which markets are large and about to change. It ends with a stop-doing list and a bet that fits a named strength.
+  This skill asks about each circle. It is as strict about what you cannot be best at as about what you can, because being good is not the same as being best. It names the one number that drives your money, strips boasts out of the statement, and asks who you want to be, as an identity and not a cost target. It then checks which large markets are about to change and whether your main strength fits them.
+
+  It ends with a stop-doing list and one bet tied to a named strength. The first half follows Jim Collins' Hedgehog Concept. The identity and market steps come from interviews with Lisa Su. If you want to test whether an edge will last against rivals, use the Business power tester after this one.
 
 when:
   - You are doing too many things and cannot say which one to put first.
   - You are setting a direction for the next few years and want it grounded in fact.
   - A new market is tempting you and you want to test it against what you are best at.
+  - You run a small team and every new idea pulls you in a different direction.
+
+not_for:
+  - "You are choosing between two prices or two campaigns. Use the Pricing decision planner for prices, or the One bold move picker to back one move."
+  - "You already know your focus and want to test whether your edge will last against rivals. Use the Business power tester."
+  - "You want a list of products to cut. Use this first to find the focus, then the Product line cutter."
 
 you_give:
-  - What you do and who you do it for (required)
-  - What you love, what you do well and what you do badly (required, in the same message)
+  - What you do and who you do it for
+  - What you love, what you do well and what you do badly, in the same message
   - Your brand file or notes on strengths (optional)
   - Rivals and what they do best (optional)
+
 you_get:
   - A plain statement of the one thing to focus on
-  - The three circles with evidence for each
-  - The measure that drives your money or resource engine
+  - The three circles, each with evidence
+  - The one number that drives your money
   - A stop-doing list and a bet that fits a named strength
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe what you do, what you love and what you do well. Be honest about what you do badly.
-  - Name the one number that drives your income or resources, if you know it.
-  - Read the statement and the stop-doing list. Ask a colleague whether they agree.
+  - Open the skill in Claude, ChatGPT or Gemini. If you added it, call it by name. If not, copy it and paste it in.
+  - Say what you do and who for. Then say what you love, what you do well and what you do badly. Be honest about the last one. It needs no files or web access.
+  - Name the one number that drives your income, if you know it, such as profit per customer or revenue per hour.
+  - Read the focus statement first, then the list of what you cannot be best at. Cut any boast.
+  - Show the focus and the stop-doing list to a colleague who will push back.
   - Revisit it once a year, or when you face a major choice.
 
 how_it_works:
   - title: What you love
-    text: Lists what you are deeply passionate about.
+    text: Lists what you are deeply passionate about, with evidence such as work you do for little or topics you return to.
   - title: What you can be best at
-    text: Lists what you could be best in the world at, and what you cannot be best at.
+    text: Lists what you could be best at, and what you cannot be best at even if you are competent.
   - title: The engine measure
     text: Names the one measure that drives your money or resource engine.
   - title: Find the overlap
     text: Finds where the three overlap and writes it as a plain fact, not a goal.
   - title: Strip the bravado
-    text: Checks the statement is free of bravado and not merely competence.
+    text: Removes boasts and anything that is only competence.
   - title: Your identity
-    text: Asks what you want to be when you grow up, as an identity not a cost goal.
+    text: Asks who you want to be when you grow up, as an identity and not a cost goal.
   - title: Large changing markets
     text: Checks which markets are large and about to change, and picks a bet that fits a strength.
   - title: Check it
@@ -83,6 +93,30 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - What you do and who you do it for
+    - What you love, what you do well and what you do badly
+    - Your brand file or notes on strengths (optional)
+    - Rivals and what they do best (optional)
+  output:
+    - name: The three circles
+      contains: What you care about, what you could be best at, what you cannot, and the one number that drives your money.
+    - name: The focus
+      contains: One or two plain sentences on what you are, written as a fact and not a goal.
+    - name: What you want to be
+      contains: Your identity in one sentence, not a cost or size target.
+    - name: Fundamentally best at
+      contains: The one deepest strength under the others, with proof.
+    - name: Markets about to change
+      contains: Large markets where a shift is coming, and whether your strength fits each.
+    - name: The bet
+      contains: One bet that fits the named strength, with the first step.
+    - name: Stop doing
+      contains: Activities outside the overlap, each with a reason.
+    - name: Missing and checks missed
+      contains: What would sharpen the statement, plus any check the skill could not pass.
 
 tweaks:
   - what: Honesty about weaknesses
@@ -127,3 +161,5 @@ terms:
     meaning: The one number that best shows what drives your money or resources, such as profit per customer.
   - term: Stop-doing list
     meaning: A list of things you drop because they do not fit the focus.
+  - term: Hedgehog
+    meaning: Jim Collins' name for a business that knows one big thing and does it better than anyone.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It pulls dates from many files and removes repeats.
 new_slug: dispute-timeline-builder
 name: Dispute timeline builder
-summary: Give it your emails and documents. Get a dated timeline of what
-  happened, with key events marked. First check, not legal advice.
+summary: Build a dispute timeline from your emails and documents. Get dated events, merged duplicates and key moments marked. A first check, not legal advice.
 job: check-contracts
 headline: Dispute timeline builder
-subhead: A dated timeline of what happened in a dispute, built from your emails
-  and documents, with the most important events marked. It gives you a first
-  working version to check, not legal advice.
+subhead: A dated timeline of what happened in a dispute, built from your emails and documents, with the most important events marked. It gives you a first working version to check, not legal advice.
 explain: |
   A dated timeline of what happened in a dispute, built from your emails and documents, with the most important events marked. It gives you a first working version to check, not legal advice.
 
@@ -18,6 +15,10 @@ when:
   - You must brief a lawyer and want the facts laid out clearly.
   - You are building the facts section of a letter or brief.
   - You want to spot gaps in your records.
+not_for:
+  - "You need legal advice or a view on who will win: ask a lawyer, because this only lays out the facts."
+  - "Your papers came from legal disclosure and you have not checked the rules on their use: confirm permission first, or ask your lawyer."
+  - "You only have one or two documents: read them yourself and write the dates down by hand."
 you_give:
   - Emails, letters and documents about the dispute
   - Your view of the main issue
@@ -29,12 +30,32 @@ you_get:
   - A list of gaps and missing documents
   - A version history when you update it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved legal setup notes and your
-    files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open your AI tool. Use one that can read files, such as Claude. Add the skill, or paste its instructions into a chat.
+  - Tell your AI if any papers came from legal disclosure. It will ask, and it will warn you if their use may be limited.
+  - Upload your emails and documents. Say in one or two lines what the main issue is.
+  - Ask it to build the timeline. If you have case notes, add them too. Say if you want a working, statement-of-facts or witness version.
+  - Read the red entries and fix anything it got wrong. It will ask you to do this before it finishes.
+  - Use the checked red entries as the facts section of a letter or brief, or hand the timeline to your lawyer.
+output_sample:
+  input:
+    - Your emails, letters and documents about the dispute
+    - Your view of the main issue in the case
+    - Any key date or fact you already know (optional)
+    - Whether any papers came from legal disclosure
+  prerequisites:
+    - An AI that can read your files
+    - Your saved case notes (matter.md), if you have them
+    - A setup file listing where your documents are kept (optional)
+  output:
+    - name: Chronology
+      contains: A dated table of events, with the sources for each and a red, yellow or grey tag for importance.
+    - name: Key events
+      contains: A short write-up of each red event, with its date, what happened and why it matters.
+    - name: Gaps
+      contains: Documents the AI could not open or read, and periods where your records are thin.
+    - name: Version
+      contains: The version number and a summary of what changed since the last version.
+    - name: Statement-of-facts version (on request)
+      contains: A plain list of facts in date order, ready to adapt for a brief.
+    - name: Witness version (on request)
+      contains: A timeline cut down to the events one named person was involved in.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans the look, builds it, then tests it.
 new_slug: page-design-gate
 name: Page design gate
-summary: Describe your page. Get one that looks designed, checked in a real
-  browser at phone and desktop width.
+summary: Check your page design in a real browser at phone and desktop width. Describe the page and get a built page that looks designed, not generic.
 job: build-websites
 headline: Page design gate
-subhead: Describe your page. Get one that looks designed, checked in a real
-  browser at phone and desktop width. Bring what the page is for and who visits.
-  Use the result to plan your next step.
+subhead: Describe your page. Get one that looks designed, checked in a real browser at phone and desktop width. Bring what the page is for and who visits. Use the result to plan your next step.
 explain: |
   A page that looks designed instead of generic, and that has been opened in a real browser at phone and desktop width before it is called done.
 
@@ -18,6 +15,10 @@ when:
   - You want proof the page works on a phone, not a guess.
   - You are about to ship a new screen and want a final check.
   - A redesign needs a clear look, not just tweaks.
+not_for:
+  - "Your brief pins fonts, colours or an era and you want no changes to them: keep your brand rules, since the brief wins over this skill's rules."
+  - "You need a page with no visual design work, such as a data script or plain text: this skill does not apply, so skip it."
+  - "You want a fast start with no design choices: use a ready-made template or your site builder's design system instead."
 you_give:
   - What the page is for and who visits
   - Brand fonts or colours (optional)
@@ -29,8 +30,30 @@ you_get:
   - List of problems found and fixed
   - Sign-off only when hard issues are closed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open an AI that can run code and open a browser, such as Claude Code or Cursor. A plain chat window cannot run the browser check.
+  - Paste the skill, then tell your AI what the page is for and who visits. Add your page code or a short brief.
+  - Add your brand fonts or colours if you have them (optional). They override the skill's design rules.
+  - Let your AI write the direction line, build the page, then run the browser check. The first run installs Playwright and Chromium.
+  - Ask it to fix every failed finding and run the check again. Then open the two screenshots yourself and judge the look.
+output_sample:
+  input:
+    - What the page is for and who visits
+    - Your page code or a short brief
+    - Brand fonts, colours or an era (optional)
+  prerequisites:
+    - An AI that can run code and open a browser
+    - Python with Playwright and headless Chromium installed, or the setup the skill gives on first run
+    - A page the AI can reach, as a file or a local web address
+  output:
+    - name: Direction line
+      contains: One sentence naming the page kind, audience, vibe, type pairing, colour family and the signature detail.
+    - name: Built or fixed page
+      contains: Your page made on the craft floor rules for type, colour, layout, icons, states, motion and phone layout.
+    - name: Gate findings
+      contains: Each problem the browser check found, with its rule, screen width and the element that failed.
+    - name: desktop.png
+      contains: A full-page screenshot of your page at 1440 by 900.
+    - name: mobile.png
+      contains: A full-page screenshot of your page at 390 by 844.
+    - name: Final gate result
+      contains: The last pass or fail line from the gate, shown only after hard findings are fixed.

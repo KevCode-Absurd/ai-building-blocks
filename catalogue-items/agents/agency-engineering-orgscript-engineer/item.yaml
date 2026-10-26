@@ -1,0 +1,41 @@
+slug: agency-engineering-orgscript-engineer
+name: OrgScript Engineer agent
+summary: Get an OrgScript model with grammar and meaning checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-orgscript-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-orgscript-engineer.md
+  licence: MIT
+  original_name: OrgScript Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: f8426369743ff0086e32cb9facfc3935488d99a1c2de92961917f9b27d401427
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - OrgScript Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: OrgScript Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-orgscript-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -2,34 +2,92 @@ thinking: medium
 thinking_why: It plans a look first, then draws it with set steps.
 new_slug: poster-designer
 name: Poster designer
-summary: Describe the poster or artwork. Get a finished PNG or PDF design with
-  its own clear look.
+summary: Get a finished PNG or PDF poster with its own art style, from a short brief. Your AI plans the look first, then draws it with code.
 job: design-work
 headline: Poster designer
-subhead: A finished poster or piece of art as a PNG or PDF, with a distinct look
-  rather than a template feel. Describe what you want and the skill makes the
-  image itself.
+subhead: Tell your AI what the poster is about. It writes a short design philosophy, then draws one finished poster or piece of art as a PNG or PDF. Words on it are few. You get the image file and the philosophy file.
 explain: |
-  A finished poster or piece of art as a PNG or PDF, with a distinct look rather than a template feel. Describe what you want and the skill makes the image itself.
+  Most AI posters look like a template with a stock photo. This poster designer works like an art director. Your AI first writes a short design philosophy: it names a style movement and says how the piece uses space, form, colour and composition. Then it draws the poster to match, so the look has one clear idea behind it.
 
-  It works in two steps. First it writes a short visual philosophy, naming a style movement and describing how it uses space, form, colour and composition. Then it draws the piece on a canvas, with very little text, treating words as an accent. Craft comes first: careful spacing, a strict palette and balanced composition. You can ask for another round to adjust colours or layout. Output lands as a file you can print or share.
+  The result is design-led, not text-led. The skill treats words as an accent, picks fonts from a folder of more than 50 font files that comes with it, and checks that nothing overlaps or runs off the page. The topic you give is woven in as a quiet reference, so the poster reads as art first.
+
+  It works by running code to draw on a canvas. That means your AI must be able to run code and save files. It can make one page or a set of pages in the same style, and it takes a second round of edits if the first draft is not right.
 when:
-  - You need an event poster with a strong visual identity.
-  - You want wall art for an office or shop.
+  - You need an event poster with a strong look, and a few words are enough.
+  - You want wall art for an office, shop or home.
   - You need a cover image that is not a stock photo.
-  - You want a design file you can send to a printer.
+  - You want a design file to send to a printer, with specs you will check yourself.
+not_for:
+  - "Your poster must carry a lot of text, such as a schedule or a price list: use the Type-led poster planner, or build it in a slide or layout tool."
+  - "You are making a research poster from results and figures: use the Research poster maker."
+  - "You need a real logo or product photo on it: this skill does not draw them. Add them afterwards, or use the Main product image designer for a product image."
+  - "You need a press-ready file with bleed and a colour profile: ask your printer for specs and check the file against them."
 you_give:
-  - Topic or message of the poster
-  - Mood or style hints (optional)
+  - The topic or message of the poster
+  - The exact words to print, such as an event name, date and place (optional)
   - Size or format (optional)
-  - Short text to include (optional)
+  - Mood, colours or style hints (optional)
 you_get:
-  - A PNG or PDF poster
-  - Short design philosophy file
+  - One finished poster as a PNG or PDF
+  - A short design philosophy file that explains the look
+  - A note of the words used and what was assumed
   - A second round of edits if you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Use an AI that can run code and save files, such as Claude with file tools, or a coding AI.
+  - Tell it the topic. Add the exact words to print, the size, and any mood or colour hints.
+  - Answer its one round of questions. If you give no size, it makes an A3 portrait at 150 dots per inch and says so.
+  - Open the image and read every word on it. Check the spelling, the date and the place. Say what to change, such as "calmer colours" or "more space around the title".
+  - Add your logo or print details yourself, then send the file to your printer or post it.
+how_it_works:
+  - title: Ask what is missing
+    text: It asks once for topic, exact words and size. It never invents a date, place or price.
+  - title: Write the philosophy
+    text: It names a style movement and writes four to six paragraphs on space, colour, scale and composition.
+  - title: Find the quiet reference
+    text: It picks one subtle idea from your topic to weave into the art without announcing it.
+  - title: Draw the canvas
+    text: It runs code to draw the poster, with sparse text and fonts from the bundled folder.
+  - title: Check the edges
+    text: It makes sure nothing overlaps or runs off the page, and keeps margins clear.
+  - title: Refine, do not add
+    text: It does a second pass to polish what is there, rather than adding more shapes.
+output_shape: |-
+  Files: <poster file name, size in pixels or mm>, <philosophy file name>
+  Movement: <the one or two word style name>
+  Text on the poster: <the exact words used>
+  Assumed: <size, colours or anything chosen for you>
+  Next: <ask for another round, or add your logo and print details>
+output_sample:
+  input:
+    - The topic or message of the poster
+    - The exact words to print (optional)
+    - Size or format (optional)
+    - Mood, colours or style hints (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - The skill folder, which includes the fonts
+  output:
+    - name: Poster file
+      contains: One finished page as a PNG or PDF, with few words and nothing overlapping.
+    - name: Design philosophy file
+      contains: A named style movement and four to six paragraphs on its space, colour and composition.
+    - name: Closing note
+      contains: The file names and size, the words used, what was assumed and what to do next.
+works_best_with:
+  tools:
+    - name: Claude with file tools or Claude Code
+      why: The skill draws with code and saves files, so the AI needs to run code.
+    - name: Codex or another coding AI
+      why: It can also run the drawing code and save the PNG or PDF.
+  inputs:
+    - A mood in a few words, such as calm, loud or retro
+    - Two or three colours you want
+    - Where the poster will hang, so the size and reading distance make sense
+    - The exact words you must have on it
+terms:
+  - term: Design philosophy
+    meaning: A short written idea for the look, such as how it uses colour and space.
+  - term: Canvas
+    meaning: The blank page your AI draws on with code.
+  - term: Dots per inch
+    meaning: How sharp a printed image is. A higher number is sharper and makes a bigger file.

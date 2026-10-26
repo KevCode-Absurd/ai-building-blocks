@@ -1,6 +1,6 @@
 slug: prepare-a-goods-receipt-discrepancy-brief
 name: Prepare a goods receipt discrepancy brief
-summary: Share the source files. Get a receipt mismatch table, supplier questions and receiving handover.
+summary: "Match purchase orders, receipts and invoices line by line. Get a mismatch table, supplier questions and a handover brief for the receiving lead."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,11 +8,11 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: document
-    required: false
+    required: true
   - type: spreadsheet
+    required: false
+  - type: brief
     required: false
 outputs:
   - type: spreadsheet
@@ -22,9 +22,9 @@ uses:
   - handover-note-writer
 steps:
   - uses: invoice-checker
-    note: Match actual PO, receipt and invoice lines, preserving item identity, unit conversions supplied by the owner and evidence of partial deliveries.
+    note: "Match each purchase order line to its receipt line and invoice line by item ID. Keep ordered, delivered, accepted and invoiced apart, and use only unit conversions the owner gave. Pass the table and open evidence to step 2."
   - uses: handover-note-writer
-    note: Brief the incoming receiving or purchasing lead on mismatches, approved holds, unresolved inspection evidence and supplier commitments; do not approve goods or payments.
+    note: "Brief the incoming receiving or purchasing lead on mismatches, holds, open inspection evidence and supplier promises. Uses step 1's table and open evidence with your brief of who takes over. Do not approve goods or payment."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -1,17 +1,15 @@
 slug: grant-restrictions-cash-reconciler
 name: Grant restrictions cash reconciler
-summary: A restricted fund movement and general cash bridge
+summary: Split your bank cash into restricted grant money and free cash. Get both closing balances and a check that restricted cash never exceeds the bank.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

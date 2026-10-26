@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a process checklist and ties each step to your records.
 new_slug: business-data-move-runbook
 name: Business data move runbook
-summary: Plan a business data move with field maps, test imports, final switch checks and a recovery plan.
+summary: Plan a business data move from one tool to another. Get a field map, test import checks, a switch day checklist and a way back.
 job: work-with-files
 headline: Business data move runbook
 subhead: Share the old and new tools, records and deadline. It plans a test move and the final switch, then checks how to keep new work if you move back. Get a runbook, checks and a recovery plan.
+not_for:
+  - You are moving a few shared docs, like a Notion workspace. Copy them by hand and skip the runbook.
+  - You need someone to run the move inside live systems. Hire an implementation partner or ask your tool vendor.
+  - You have one small spreadsheet to clean. Fix it in your spreadsheet app, no plan needed.
 explain: Share the old and new tools, records and deadline. It plans a test move and the final switch, then checks how to keep new work if you move back. Get a runbook, checks and a recovery plan.
 you_give:
   - Source and target tools, record types and counts.
@@ -22,6 +26,29 @@ how_it_works:
   - title: Plan the switch and recovery
     text: Set switch checks and recovery triggers. Keep new records, edits and deletions, then reconcile them before reopening the old tool.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Tell it your old tool, your new tool, the record types, rough counts and your target switch date.
+  - Paste a field list or a small sample export if you have one (optional). Do not paste private customer data you do not need.
+  - Read the field map first. Fix gaps, then ask for the test import checks.
+  - "Before switch day, ask for the recovery plan. If you have no engineer, ask for the simple version: freeze both tools, export both, and let a finance or operations owner approve the way back."
+  - Your AI only plans. It cannot change your live systems, so a person must run each step.
+output_sample:
+  input:
+    - The old tool and the new tool
+    - The kinds of records you move and how many of each
+    - Your field details, if you have them (optional)
+    - Your target switch date and busy periods to avoid
+    - Who owns the move and who signs off
+  output:
+    - name: Runbook
+      contains: "The seven phases in order: plan, extract, transform, load, validate, switch, and shut down the old tool, with a checklist for each."
+    - name: Data-mapping spreadsheet
+      contains: One row per field, showing the old field, the new field and the rule for changing the value.
+    - name: Validation report
+      contains: Record counts, sample record checks, relationship checks and money totals that must match before you switch.
+    - name: Rollback triggers
+      contains: The problems in the first 24 hours that mean you should start recovery.
+    - name: Recovery plan
+      contains: Steps to keep new work made in the new tool before you go back to the old one.
+    - name: Retrospective notes
+      contains: What worked, what did not, and what to change next time.

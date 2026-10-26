@@ -2,17 +2,104 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-qdrant-model-migration
 name: Qdrant embedding migration planner
-summary: Share your current and new models. Get a search migration plan with
-  validation and rollback steps.
+summary: Switch your Qdrant search to a new embedding model with no downtime. Get a step-by-step migration plan with checks and a rollback.
 job: ship-and-host
 headline: Qdrant embedding migration planner
-subhead: Share your current and new models. Get a search migration plan with
-  validation and rollback steps. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Give it your current and new embedding models, your collection size and whether search must stay online. It picks the safest way to switch, such as an alias swap or side-by-side models. You get a numbered plan with checks at each step and a way back.
+explain: |
+  Vectors from two different embedding models cannot share one collection. Switching models means building a new collection and filling it again. This Qdrant migration plan keeps search running while you do it.
+
+  The skill first asks if you can avoid re-embedding at all. A few cases allow it, such as Matryoshka models or a change in compression. If not, it picks a path: an alias swap for no downtime, both models side by side for a test, or a rebuild to add keyword vectors for hybrid search.
+
+  It then writes the plan in order, with a check before each move and a rollback. It does not quote speed numbers from other projects. It tells you to time a sample of your own data.
+when:
+  - You want to move to a newer or cheaper embedding model without taking search offline.
+  - You changed model size or provider and old and new vectors no longer match.
+  - You want to test a new model next to the old one before you commit.
+  - You are adding keyword search to a search that uses only meaning-based vectors.
+not_for:
+  - You are only choosing where to run Qdrant. Use the Qdrant hosting option adviser.
+  - You are upgrading Qdrant itself. Use the Qdrant version upgrade planner.
+  - Search results are poor but the model has not changed. Use the Qdrant search relevance investigator.
+  - You want the migration run for you. This skill writes the plan, and you or your engineer run each step.
+you_give:
+  - Your current model name and vector size
+  - The new model name and vector size
+  - The distance metric each one uses
+  - How many points your collection holds
+  - Whether search must stay online, and whether you must keep payloads
+  - Your Qdrant version
+you_get:
+  - The safest way to switch, with the reason
+  - A numbered plan with a check at each step
+  - A validation list filled in for your collection
+  - Rollback steps and how long they stay possible
+  - A time estimate from your own sample, or a note that it is unknown
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Gather the eight facts listed above. Your Qdrant dashboard or your code shows the model, size and metric. Say "unknown" for any you cannot find.
+  - Paste the skill and your facts into any chat AI. No login is needed, because it only plans.
+  - Read the strategy it picks and the reason. Challenge it if a fact is wrong.
+  - Have an engineer review the numbered plan. Time a small sample to estimate how long the full re-embed will take.
+  - Run the steps in a test setup first. Check each item on the validation list before you swap the alias.
+  - Keep the old collection until the new one has run well in production. Delete it only after you confirm.
+how_it_works:
+  - title: Ask what changes
+    text: It records the old and new model, size, metric, data size and your uptime needs.
+  - title: Look for a shortcut
+    text: It checks whether Matryoshka models or a compression change let you skip re-embedding.
+  - title: Pick the strategy
+    text: It chooses an alias swap, side-by-side models, or a rebuild for hybrid search.
+  - title: Plan the move
+    text: It writes the phases in order, with a check before each one.
+  - title: Add the speed tips
+    text: For big data it adds batch uploads and a pause in indexing during the load.
+  - title: Write the rollback
+    text: It lists the steps to go back and how long they stay possible.
+output_shape: |
+  Strategy: <alias swap, side by side, dense to hybrid or shortcut> | <reason>
+  Plan: 1 <create new collection> | 2 <re-embed> | 3 <copy payloads> | 4 <verify> | 5 <swap alias> | 6 <watch> | 7 <clean up>
+  Checks: <point count> | <vector size and metric> | <sample queries> | <app embeds with new model>
+  Rollback: <steps to point the alias back> | <until when>
+  Time and cost: <estimate from a timed sample, or "unknown, time a sample first">
+  Missing: <facts still needed> | Next step: <guide to open first>
+output_sample:
+  input:
+    - Your current and new embedding models, with vector sizes
+    - The distance metric each one uses
+    - How many points your collection holds
+    - Whether search must stay online and payloads must be kept
+    - Your Qdrant version
+  output:
+    - name: Strategy
+      contains: Alias swap, side by side, dense to hybrid or a shortcut, with the reason for the pick.
+    - name: Numbered plan
+      contains: The phases in order, each with what to check before moving on.
+    - name: Checks
+      contains: Point counts, vector size, metric, sample queries and payloads, filled in for your collection.
+    - name: Rollback
+      contains: How to point the alias back to the old collection, and how long that stays possible.
+    - name: Time and cost
+      contains: An estimate based on a timed sample of your data, or a note that it is unknown.
+    - name: Missing and next step
+      contains: Facts still needed and which Qdrant guide to open first.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It only writes the plan, so no code or login is needed.
+    - name: Claude Code
+      why: Helpful once you run the plan, since it can write the re-embed script in your project.
+  inputs:
+    - A set of real search queries you can run before and after
+    - A timed test of embedding 1,000 of your own items
+    - The code that embeds your queries today
+terms:
+  - term: Embedding model
+    meaning: The AI model that turns text or images into lists of numbers so they can be searched by meaning.
+  - term: Collection
+    meaning: A set of vectors in Qdrant, like a table in a database.
+  - term: Alias
+    meaning: A nickname for a collection. Your app uses the nickname, so you can point it at a new collection.
+  - term: Payload
+    meaning: The extra data stored with each vector, such as titles or tags.
+  - term: Re-embed
+    meaning: To run all your data through the new model again to make new vectors.

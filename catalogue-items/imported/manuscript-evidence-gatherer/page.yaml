@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It searches, reads sources and sorts them by how well they support each point.
 new_slug: manuscript-evidence-gatherer
 name: Manuscript evidence gatherer
-summary: Name your paper topic. Get a packet of current sources, competing
-  findings and background, each with its link.
+summary: "Find sources for your paper: give your topic and claims, get about 60 checked references with links, competing findings and gaps."
 job: research-topics
 headline: Manuscript evidence gatherer
-subhead: "A research packet for your paper: current sources, studies that
-  disagree, and background reading, each with its link. The default target is 60
-  checked, distinct references, organised as a claim-to-source map instead of a
-  loose list."
+subhead: "A research packet for your paper: current sources, studies that disagree, and background reading, each with its link. The default target is 60 checked, distinct references, organised as a claim-to-source map instead of a loose list."
 explain: |
   A research packet for your paper: current sources, studies that disagree, and background reading, each with its link. The default target is 60 checked, distinct references, organised as a claim-to-source map instead of a loose list.
 
@@ -19,6 +15,10 @@ when:
   - You want to find studies that contradict your claim.
   - You need a map showing which source backs which claim.
   - You want current work on a method or mechanism.
+not_for:
+  - "You need a full systematic review: use a literature review process run by you and a librarian or your team, since this only gathers sources."
+  - "Your data is unpublished or private: keep it out, because your search text goes to an outside search service."
+  - "You have a quick fact to check: ask your AI directly or use a normal web search."
 you_give:
   - Your topic and main claims
   - Your field
@@ -31,8 +31,29 @@ you_get:
   - Retraction flags
   - Research gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open an AI that can run code and reach the web. Set up the skill from its folder.
+  - Add your search service key or log in. Your search text is sent to that paid service, so leave out unpublished work.
+  - Tell your AI your topic, your main claims and your field. Add date or journal limits if you have them.
+  - Ask it to follow this skill and build the research packet.
+  - Open the packet and the claim-to-source map. Verified here only means an excerpt was retrieved.
+  - Read each source yourself to confirm it backs your claim before you cite it.
+output_sample:
+  input:
+    - Your paper topic and main claims
+    - Your field
+    - Date or journal limits (optional)
+    - Your search service key or login
+  prerequisites:
+    - An AI that can run code and reach the web
+    - A Parallel account key or login (a paid search service)
+  output:
+    - name: packet
+      contains: The research packet with checked references, grouped by claim, with links and notes on support and conflict.
+    - name: references
+      contains: The list of references with a retrieved excerpt, and flags for any retractions.
+    - name: claim-to-source map
+      contains: Which source backs or contradicts each of your claims.
+    - name: search ledger
+      contains: A record of the searches that were run to find the sources.
+    - name: Gaps and limits
+      contains: Open questions, weak spots and missing evidence in the topic.

@@ -1,6 +1,6 @@
 new_slug: honest-persuasion-editor
 name: "Honest persuasion editor"
-summary: "Paste your message or page. Get which persuasion levers it uses, which are true, which are fake and a cleaner rewrite."
+summary: "Check your sales copy for fake urgency and made-up proof. You get each persuasion lever marked true or fake, plus an honest rewrite in your voice."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It must judge whether each claim is true from the facts it is given, then rewrite."
@@ -17,6 +17,10 @@ when:
   - You wrote a sales page, email or pitch and worry it sounds pushy.
   - You inherited copy full of "limited time" and "thousands trust us" and cannot say what is true.
   - You want persuasion that holds up if someone checks.
+not_for:
+  - "You only want a spell and grammar pass: use a plain copy editor, since this tool checks claims, not style."
+  - "You have no facts to check claims against: gather your numbers and credentials first, or a person who knows the business can confirm them."
+  - "You are writing product specs or an internal memo: skip it, as there is nothing to persuade."
 
 you_give:
   - The message or page text
@@ -34,6 +38,26 @@ how_to_use:
   - Say which claims you are sure about and which you are not.
   - Read the list of removed levers first. Check that each really was fake.
   - Use the rewrite, and keep your proof where you can show it.
+output_sample:
+  input:
+    - Your message, page or pitch text
+    - "Facts you can prove, with sources: numbers, credentials, dates, stock"
+    - Customer reviews or your brand file (optional)
+  output:
+    - name: Lever map
+      contains: Each line with the lever it uses and a status of true, unproven or fake, with the reason.
+    - name: Removed
+      contains: Every fake or unproven line that was cut, with the lever and why it failed.
+    - name: Added
+      contains: One or two true levers added as new lines, each tied to a fact you gave.
+    - name: Rewrite
+      contains: The full text in your voice, with the fake levers gone.
+    - name: What each change uses
+      contains: A note linking each change in the rewrite to the lever it uses.
+    - name: Missing
+      contains: The proof you still need to give before a claim can stay.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: Marks the levers

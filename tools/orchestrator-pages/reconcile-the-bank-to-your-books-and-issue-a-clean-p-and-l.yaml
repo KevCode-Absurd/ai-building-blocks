@@ -1,6 +1,6 @@
 new_slug: reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l
 name: Match bank to books and issue a clean P&L
-summary: Give it a bank statement and your ledger. Get matches, causes for the gaps and clean statements.
+summary: Match your bank statement to your books, trace each gap to a cause, then get a clean P&L, balance sheet and cash flow.
 job: money-and-investing
 thinking: high
 thinking_why: Matching and tracing need careful reading of many rows. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your bank balance and your ledger balance do not match.
   - You are about to send numbers to an investor, lender or tax adviser.
   - You have not reconciled for a few months and the list of differences has grown.
+not_for:
+  - Your books are not up to date. Enter your bills and sales first, then run this.
+  - You only want to match bank lines to ledger lines. Use the Bank and ledger matcher on its own.
+  - You need audited or filed accounts. Ask an accountant, and use this only to prepare the numbers.
 you_give:
   - A bank statement for the period, as a file
   - Your ledger or cash book export for the same period
@@ -30,6 +34,25 @@ how_to_use:
   - Attach the bank statement and the ledger for the same dates.
   - Pause. Work through the causes and fix the books. Export the corrected ledger and the figures for the last period.
   - Give the statements to your accountant to review.
+output_sample:
+  input:
+    - Your bank statement for the period (CSV or XLSX)
+    - Your ledger or cash book export for the same dates
+    - After the pause, your corrected ledger
+    - The figures for the last period
+    - Rounding tolerance and accounts to leave out (optional)
+  prerequisites:
+    - An AI that can read spreadsheet files
+    - Books that are up to date, with bills and sales entered
+  output:
+    - name: Bank and ledger matcher result
+      contains: Exact and near matches, split payments resolved, items left on each side, and draft entries for fees and interest.
+    - name: Reconciliation break tracer result
+      contains: Each leftover item with its cause in one sentence, and the action to take.
+    - name: P&L and balance sheet writer result
+      contains: Income statement with variances, balance sheet and cash flow built from the corrected books, with big swings flagged.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Match bank to ledger
     text: Cleans names and dates, matches exact items, then near items within a small tolerance, resolves payments that cover several entries and lists what is left.

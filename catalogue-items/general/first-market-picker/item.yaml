@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: question, required: true}
   - {type: persona, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: shortlist, required: true}
 origin: rebuilt

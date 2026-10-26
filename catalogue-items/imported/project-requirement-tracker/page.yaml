@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a process checklist and ties each step to your records.
 new_slug: project-requirement-tracker
 name: Project requirement tracker
-summary: Share project requirements. Get a table that links each need to its owner, build, test and approval.
+summary: Track project requirements from owner to build, test and sign-off in one table. Find what is still open before go-live.
 job: document-work
 headline: Project requirement tracker
 subhead: Share your project requirements, priorities and progress notes. It links each need to an owner, a build choice and a specific test. You get a compact tracking table, an approval log and a clear list of work that remains open.
+not_for:
+  - You are buying a SaaS tool and changing very little. A simple task list is enough.
+  - Your change takes under one week. Use a short checklist and skip the table.
+  - You need to decide what work each need requires first. Use the Fit-Gap Matrix, then come back here.
 explain: Share your project requirements, priorities and progress notes. It links each need to an owner, a build choice and a specific test. You get a compact tracking table, an approval log and a clear list of work that remains open.
 you_give:
   - Business requirements and their priorities.
@@ -22,6 +26,24 @@ how_it_works:
   - title: Step 3
     text: Track built, tested and approved states separately.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - "Paste your requirement list. Add a priority for each one: Must, Should or Nice."
+  - Add the names of your owners and stakeholders, and the test evidence you have.
+  - Add any approval records, with names and dates. Say which are missing.
+  - Ask your AI to build the tracking table, the sign-off log and the open list.
+  - Check that every row has an owner and a specific test plan. Fix any gaps, then keep the table up to date.
+output_sample:
+  input:
+    - Your list of project requirements, with a priority for each (Must, Should or Nice)
+    - The names of owners and the stakeholders who approve work
+    - How each need will be built, such as setup, custom work or a third-party tool
+    - Your test evidence and approval records, if you have them (optional)
+  output:
+    - name: Requirements table
+      contains: One row per requirement with its ID, priority, owner, build choice, test plan, status and sign-off.
+    - name: Sign-off log
+      contains: Who approved each requirement and the date, where you gave them.
+    - name: Open requirements
+      contains: The requirements not yet signed off, so nothing is lost after launch.
+    - name: Requirements-completion summary
+      contains: A short wrap-up of what was built, tested and approved, and what remains.

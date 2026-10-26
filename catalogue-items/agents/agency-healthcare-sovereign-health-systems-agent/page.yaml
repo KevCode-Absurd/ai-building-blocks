@@ -1,0 +1,157 @@
+name: Health ministry engagement agent
+summary: Plan how to approach a national health ministry. Get a one-page mandate brief, a two-market launch order and separate rules for each market.
+headline: Health ministry engagement agent
+subhead: Tell it about your health product and the country you want to work with. It ties your product to a national health goal, writes a one-page brief with no sales pitch, and sets the order for launching in a regulated market and a government-led market. Each market gets its own rules check.
+job: plan-strategy
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  A national health ministry is not a customer in the usual sense. It holds a
+  legal duty to its public, works to political timelines, and may take one to
+  three years to reach a decision. Teams that pitch a ministry like a hospital
+  buyer, with a demo and a price, often lose the chance. This health ministry
+  engagement agent plans the slower route. The role is called the Sovereign
+  Health Systems agent in the original profile.
+
+
+  It starts with the goal your product serves, such as reaching people outside
+  the health system, lowering what families pay, or raising the standard of
+  care. If your product cannot be tied to one of those, it tells you. Then it
+  writes a one-page brief with no pricing and no features pitch, and plans the
+  steps from first contact to a signed framework agreement.
+
+
+  It also handles the case where you launch in a regulated market, such as the
+  US or EU, and in a government-led market at once. It sets an order, so each
+  launch supports the other, and writes the rules and approvals for each market
+  separately so they never get mixed.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its timelines,
+  the 40 percent team split and its success targets describe the profile's
+  rules of thumb. They are not measured results from AI Blocks. It cannot look
+  up a country's current policy unless your AI can search the web.
+when:
+  - You plan to approach a ministry of health about a national programme, such as telemedicine, health records or community health workers.
+  - You launch in the US or Europe and in an emerging market, and need to decide which comes first.
+  - A development bank or impact investor asks how your project fits a national health coverage goal.
+  - Your plan for one country's rules keeps ending up in documents meant for another country.
+not_for:
+  - You sell software to a hospital or health plan. That is a normal sales process, so use the Go-to-market positioning planner.
+  - You need an investor memo or grant section written. Use the Healthcare Innovation Strategist agent.
+  - You want your health claims checked against sources. Use the Clinical Evidence agent.
+  - You need legal advice, contract terms or a data law ruling. Ask a lawyer in each country.
+you_give:
+  - Your product and the health problem it addresses
+  - The country you want to work with, and the other market you plan to launch in, if any
+  - The national health goal you think your product serves, or "not sure" and it proposes options to check (optional)
+  - Anyone you already know, such as a development bank, a hospital partner or a local operator (optional)
+  - Your team size and how many months of funding you have (optional)
+  - A document you want checked for sales language aimed at a ministry (optional)
+you_get:
+  - A one-page mandate brief, with no product pitch and no pricing
+  - A map from your product to the health coverage goal it serves
+  - A launch plan in phases across both markets, with a rule for how to split team time
+  - The rules and approvals for each market, written separately
+  - A checklist for before first contact, the first meeting and the steps to a framework agreement
+  - A list of open questions and facts to check against official sources
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Cover your product, the health problem, the country, your other market, and what you already know about the ministry.
+  - Type "Write the mandate brief", "Plan the two-market launch" or "Check this document for sales language".
+  - Check every statement about a country's policy, law or ministry against an official source. In a plain chat the AI works from general knowledge and does not look anything up.
+  - Have a lawyer in each country read the brief and any agreement terms before you share them. The AI sends nothing and makes no promises to anyone.
+how_it_works:
+  - title: Find the goal
+    text: It asks which national health goal your product serves. It will not plan outreach until one is named, or marks it as missing.
+  - title: Map to three commitments
+    text: It checks whether your product widens coverage, lowers what families pay, or raises quality of care, and says which fit.
+  - title: Keep sales and partnership apart
+    text: It writes ministry material in partnership language, with no price, features or return on investment, and keeps any hospital sales plan in a separate document.
+  - title: Order the two launches
+    text: It sets the phases for the government-led and the regulated market and caps how much team time goes to either one early on.
+  - title: Split the rules
+    text: It lists the approvals and data rules for each market in separate sections, and never copies one market's rules into the other.
+  - title: Plan the contact steps
+    text: It lists what to do before first contact, at the first meeting and on the way to a framework agreement.
+  - title: Flag what is unchecked
+    text: It lists every country fact, timeline and legal point you must confirm before acting.
+output_shape: |-
+  MANDATE ALIGNMENT BRIEF (one page)
+    Goal: <national health goal> | Gap: <what is missing> | How we help: <partnership framing> | Ask: <technical working group, not a sale>
+
+  COVERAGE MAP
+    <coverage, financial protection or quality> | <how the product helps> | <fit: strong, partial, none>
+
+  LAUNCH PLAN
+    <phase> | <months> | <goal> | <team share> | <proof it produces>
+
+  RULES BY MARKET
+    Regulated market: <approvals and data rules to confirm>
+    Government-led market: <approvals and data rules to confirm>
+
+  CONTACT STEPS
+    <before contact, first meeting, working group, pilot, framework agreement> | <what to do>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <official source or expert to confirm with>
+output_sample:
+  input:
+    - Your product, the health problem and the country you want to work with
+    - Your other launch market, if any
+    - The national health goal you think you serve (optional)
+    - Your team size and months of funding (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - A lawyer in each country to review the brief and any agreement terms
+  output:
+    - name: Mandate alignment brief
+      contains: One page tying your product to a national health goal, with no pitch and no pricing.
+    - name: Coverage map
+      contains: How your product fits wider coverage, lower family costs or better care, with the strength of each fit.
+    - name: Launch plan
+      contains: Phases for both markets, the team time for each and the proof each phase creates for the next.
+    - name: Rules by market
+      contains: Approvals and data rules for each market in separate sections, each marked to confirm.
+    - name: Contact steps
+      contains: What to do before first contact, at the first meeting and on the road to a framework agreement.
+    - name: Open questions and checks
+      contains: Every country fact and legal point you must confirm, with who can confirm it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search
+      why: It can look up a ministry's published programmes. You still check each source yourself.
+  inputs:
+    - A link to the ministry's published health plan or coverage policy.
+    - Names of institutions, not people, that already know your work, such as a hospital group or development bank.
+    - Any pilot data you have, with its method.
+terms:
+  - term: Ministry of health
+    meaning: The national government office that runs health policy. The original profile calls it a sovereign health engagement.
+  - term: Universal health coverage
+    meaning: A national goal that every person can get care without being pushed into poverty by the cost.
+  - term: Mandate alignment
+    meaning: Showing which official duty or policy your product helps the ministry meet.
+  - term: Framework agreement
+    meaning: A signed document, often called an MOU, that sets how both sides will work together, but is not a sales contract.
+  - term: Development finance institution
+    meaning: A bank owned by governments that funds projects for public good, such as the World Bank group.
+  - term: Jurisdiction firewall
+    meaning: Keeping each country's legal analysis in its own document so the rules are never mixed.
+tweaks:
+  - what: Task
+    how: Ask for one deliverable at a time, such as only the one-page brief, or only the rules by market.
+  - what: Second market
+    how: Name the regulated market, such as the US, EU or UK, so the rules section covers the right places.
+  - what: Team split
+    how: The profile suggests no more than 40 percent of team time on either market at first. Give your own limit if you have one.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

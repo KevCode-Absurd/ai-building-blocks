@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It weighs repair cost against downtime.
 new_slug: equipment-maintenance-planner
 name: Equipment maintenance planner
-summary: Give it your machines and repair history. Get a service schedule and
-  spare parts list that cut breakdowns.
+summary: Plan equipment maintenance that cuts breakdowns. Give it your machines and repair history. You get a service plan, a risk ranking and a spare parts list.
 job: plan-supply-chain
 headline: Equipment maintenance planner
-subhead: A service schedule for your machines, plus a spare parts list sized to
-  what actually fails. The aim is fewer surprise breakdowns and less money spent
-  on repairs that could have been avoided.
+subhead: A service schedule for your machines, plus a spare parts list sized to what actually fails. The aim is fewer surprise breakdowns and less money spent on repairs that could have been avoided.
 explain: |
   A service schedule for your machines, plus a spare parts list sized to what actually fails. The aim is fewer surprise breakdowns and less money spent on repairs that could have been avoided.
 
   It starts by asking which machines matter most, how old they are, how often they fail and what a stoppage costs. Then it sorts each machine into one of four approaches: run until it breaks, fixed-interval service, condition-based checks, or predictive monitoring. It uses failure and repair figures such as mean time between failures and mean time to repair, and ranks machines by risk. The result is a plan with tasks, intervals and the parts to keep on the shelf.
 when:
   - Your key machines keep breaking at bad times and you want a plan to stop it.
-  - You service everything on the same calendar and suspect some of it is wasted
-    effort.
+  - You service everything on the same calendar and suspect some of it is wasted effort.
   - You need to decide which spare parts are worth holding in stock.
-  - You are moving from fix-when-broken to planned servicing and need a starting
-    schedule.
+  - You are moving from fix-when-broken to planned servicing and need a starting schedule.
+not_for:
+  - You have one machine and no failure history. Start with the maker's service guide and write down each repair from now on.
+  - You need live sensor readings or alerts. Use a specialist vendor or the maintenance software you already have.
+  - You want to cut waste on a production line, not plan repairs. Ask a lean or quality specialist, or a person who knows your line.
 you_give:
   - List of machines with age and condition
   - Repair and downtime history
@@ -33,7 +32,29 @@ you_get:
   - Failure and repair time figures
   - Simple goals to track
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your machine list, your repair log and the cost of one hour of stoppage. You need no paid software or sensors.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat.
+  - Paste your machine list and repair log. Add your current service routine if you have one.
+  - Answer any questions the AI asks about which machines matter most.
+  - Check the risk ranking against what you know. Fix any wrong machine details and ask for a new plan.
+  - The code snippets in the skill are optional. You can get the plan without running any code.
+output_sample:
+  input:
+    - Your list of machines, with age, condition and how critical each one is
+    - Your repair and downtime log for the last 12 months or more, with dates and hours lost
+    - What one hour of stoppage costs you
+    - Your current service routine (optional)
+    - The maintenance software you use (optional)
+  output:
+    - name: Executive summary
+      contains: Your current maintenance approach, key reliability figures, the biggest chances to improve and the benefits to expect.
+    - name: Equipment reliability analysis
+      contains: A table per machine with time between failures, repair time, availability, failures per year and how critical it is.
+    - name: Maintenance strategy recommendations
+      contains: For each machine, your current approach, the approach we suggest and the reason why.
+    - name: Preventive maintenance schedule
+      contains: Weekly, monthly, quarterly and yearly service tasks, set by how critical each machine is.
+    - name: Predictive maintenance implementation
+      contains: A phased plan by quarter for adding condition checks on your most critical machines.
+    - name: Expected benefits
+      contains: The gains to aim for in downtime, repair cost, availability, spare parts stock and machine life.

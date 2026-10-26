@@ -1,6 +1,6 @@
 new_slug: challenge-circle-feedback
 name: "Challenge circle feedback planner"
-summary: "Paste your draft or plan. Get who to ask for early support, who to ask for attack, and the questions to send."
+summary: "Plan who to ask for feedback on your draft. Get a support list, a challenge list and the questions to send, so you know what to change."
 job: think-and-decide
 thinking: medium
 thinking_why: "It judges the stage and weighs how much each source knows."
@@ -10,13 +10,17 @@ subhead: "Paste your draft or plan and the people you could ask. It picks early 
 
 explain: |
   Feedback goes wrong in two ways. You ask critics too early, and a fragile idea dies. Or you ask friends too late, and the holes stay hidden. Either way, you rarely decide beforehand what you will change.
-  
+
   This skill starts with the stage of the work. It sorts your people into a support circle and a challenge circle, and checks each one for relevant knowledge and a field that is predictable enough for experience to help. It writes separate questions for each group, adds a flaw of your own to open with, and sets what you will change for each answer.
 
 when:
   - "You finished a draft and do not know who to show."
   - "You have only asked people who agree with you."
   - "You got feedback and did not use it."
+not_for:
+  - "You need legal, medical or tax review: ask a qualified expert in that field."
+  - "You are choosing between options, not asking for feedback: use the Pros and cons decision planner."
+  - "You want a quick edit of your wording: ask one trusted reader to mark it up."
 
 you_give:
   - "Your draft or plan, and its stage"
@@ -33,6 +37,28 @@ how_to_use:
   - "List five to ten people with a line on what each knows."
   - "Send the questions with your own flaw first."
   - "Decide your response before the answers arrive."
+output_sample:
+  input:
+    - Your draft or plan, and how far along it is
+    - The people you could ask, with what each one knows
+    - What you suspect is weak (optional)
+  output:
+    - name: STAGE
+      contains: A call on whether the work is early or finished, with one sign that backs it up.
+    - name: PEOPLE
+      contains: Each person placed in the support or challenge circle, with what they know and a source check.
+    - name: SUPPORT QUESTIONS
+      contains: Three questions that ask what is promising and what to keep.
+    - name: CHALLENGE QUESTIONS
+      contains: Three questions that ask for the strongest case against it, plus one on what is missing.
+    - name: MY FLAW
+      contains: One or two opening lines about a doubt of your own, to invite honest replies.
+    - name: IF THEY AGREE / IF THEY DO NOT
+      contains: For each question, what you will change if most agree, what you will do if not, and a date.
+    - name: MISSING
+      contains: Any facts the skill needed but did not have.
+    - name: CHECKS MISSED
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: "Name the stage"
@@ -55,25 +81,25 @@ how_it_works:
 output_shape: |
   STAGE
   <early / finished> | Sign: <...>
-  
+
   PEOPLE
   <name> | Knows: <...> | Circle: support / challenge | Source check: use / care / set aside
-  
+
   SUPPORT QUESTIONS
   <3 questions>
-  
+
   CHALLENGE QUESTIONS
   <3 questions plus one on what is missing>
-  
+
   MY FLAW
   <opening line>
-  
+
   IF THEY AGREE / IF THEY DO NOT
   <question>: change <...> / do <...> | Decide by <date>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

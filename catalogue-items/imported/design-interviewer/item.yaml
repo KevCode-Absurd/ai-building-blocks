@@ -29,4 +29,4 @@ credits:
   - title: grill-with-docs skill
     by: Matt Pocock
     url: https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Adapted under the MIT licence. The original only points to two other skills, so we wrote out their method, gave it a plain name and added an output format.

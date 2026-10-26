@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It turns known facts into a standard article format.
 new_slug: help-article-writer
 name: Help article writer
-summary: Give it support questions and product docs. Get clear, searchable help
-  center articles and FAQs.
+summary: Turn your support questions and product notes into a help center article or FAQ that customers can follow to fix a problem on their own.
 job: write-and-tell-stories
 headline: Help article writer
-subhead: Help center articles written so customers can solve a problem without
-  opening a ticket. Start with your support data and product notes. The skill
-  finds which questions come up most, then writes an article for each one that
-  matches the words customers actually search for.
+subhead: Paste in your support questions and notes on the product. The skill writes a help center article for each one, in your customers' own search words. Every step uses the button and menu names you give it.
 explain: |
   Help center articles written so customers can solve a problem without opening a ticket. Start with your support data and product notes. The skill finds which questions come up most, then writes an article for each one that matches the words customers actually search for.
 
@@ -19,10 +15,14 @@ when:
   - You launched a feature and need documentation fast.
   - Your help center is hard to search and out of date.
   - You want FAQ entries drawn from real ticket patterns.
+not_for:
+  - "You need internal engineering docs or API references: ask your engineers or use a product spec template instead."
+  - "You need legal terms, refund rules or privacy text: have a lawyer or your policy owner write it."
+  - "You have no product notes and no menu names: write down the steps yourself first, or ask a teammate who knows the product."
 you_give:
-  - Common support questions or ticket themes
+  - A list of common support questions, ticket themes or search terms from your help desk
   - Product docs or notes on the feature
-  - Exact button and menu names
+  - The exact button and menu names in your product
   - Plan limits or permissions that apply (optional)
 you_get:
   - Step by step help articles
@@ -30,7 +30,30 @@ you_get:
   - Troubleshooting sections for common errors
   - Search-friendly titles and related links
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste in the skill instructions, or upload the skill file if your AI allows it.
+  - Paste your list of ticket themes or search terms, then your product notes and exact menu names.
+  - Ask for one article or FAQ at a time, and name who will read it.
+  - Check every step and menu path against your real product. The examples in the skill are placeholders, so replace any menu path, price, plan or policy with your own facts.
+  - Add your screenshots where the article marks them, then publish.
+output_sample:
+  input:
+    - Your common support questions or ticket themes
+    - Your product docs or notes on the feature
+    - The exact button and menu names in your product
+    - Plan limits or permissions that apply (optional)
+  output:
+    - name: Title
+      contains: An action-based title that matches the words customers type when they search.
+    - name: Summary
+      contains: A one or two sentence answer at the top so readers get value fast.
+    - name: Prerequisites
+      contains: What the reader needs before they start, such as a role, a plan or access.
+    - name: Steps
+      contains: Numbered steps with one action each and what the reader should see, plus where screenshots belong.
+    - name: Troubleshooting
+      contains: Common errors, their causes and how to fix them.
+    - name: Related Articles
+      contains: Links to nearby help topics the reader may need next.
+    - name: FAQ entries
+      contains: Short question and answer versions of the same idea, for topics that don't need a full guide.

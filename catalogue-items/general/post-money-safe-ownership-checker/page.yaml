@@ -1,32 +1,69 @@
 new_slug: post-money-safe-ownership-checker
 name: Post-money SAFE ownership checker
 headline: Post-money SAFE ownership checker
-summary: Check cap-only SAFE ownership before and after a later priced round.
+summary: Check how much of the company a SAFE holder owns after the SAFE converts, and after a later priced round. Built for cap-only post-money SAFEs.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A cap-binding ownership bridge and unresolved conversion conditions. Share executed cap-only post-money SAFE, amount received, cap, capitalization definition and documented later round dilution fraction.
+subhead: Give it your cap-only post-money SAFE, the amount received, the cap and the later round's dilution. It works out the ownership the SAFE gives, then what is left after the later round. You get a plain bridge, an editable workbook and a list of open questions.
 explain: |-
   A cap-binding ownership bridge and unresolved conversion conditions.
 
   Venture financing. Illustrative figures only. 100/1000=10%; retaining80% leaves8%. Investment200 produces20% and16%.
 when:
-  - You need a cap-binding ownership bridge and unresolved conversion conditions.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You hold or issued a cap-only post-money SAFE and want to know the ownership it converts to.
+  - A priced round is coming and you want to see how it dilutes the SAFE holder.
+  - A reviewer needs to trace each ownership figure back to a signed source.
+  - You want a spreadsheet you can change and recalculate.
+not_for:
+  - "Your SAFE has only a discount, an MFN term, or more than one class of SAFE: ask a startup lawyer or use a cap table tool, since this skill does not solve those."
+  - "You need a legal reading of what the SAFE says or advice on whether to sign: ask a lawyer."
+  - "You want to guess later dilution from a headline valuation: get the dilution figure from the round documents first, because this skill only uses a figure you give it."
 you_give:
-  - Executed cap-only post-money SAFE, amount received, cap, capitalization definition and documented later round dilution fraction.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your signed cap-only post-money SAFE
+  - The amount the company received under the SAFE
+  - The valuation cap and how the SAFE counts company shares
+  - The share given up in a later priced round, from round documents
+  - Your reporting date, currency and scale
+  - Your spreadsheet tool and the file format you want (optional)
 you_get:
-  - A cap-binding ownership bridge and unresolved conversion conditions.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The ownership the SAFE gives at the cap, and what is left after the later round.
+  - A list of conversion terms that are still open and need your check.
+  - An editable workbook with inputs, formulas and checks.
+  - A comparison against your instrument ledger, with any gaps marked MISSING.
+  - A list of checks that ran and checks that did not.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open Claude, ChatGPT or Gemini. Use one that can make spreadsheet files.
+  - Paste the SKILL.md text, or upload the pack, and attach your SAFE and round documents.
+  - Give the amount received, the cap and the later round's dilution. Say your currency and scale.
+  - Ask for the ownership bridge and the workbook. The script step needs code running and Node.js.
+  - Read the MISSING lines and CHECKS MISSED before you rely on any number.
+  - Have a lawyer confirm what the SAFE means before you act on the result.
+output_sample:
+  input:
+    - Your signed cap-only post-money SAFE
+    - The amount the company received
+    - The valuation cap and how the SAFE defines the company's shares
+    - The share of ownership given up in a later priced round, from round documents
+    - Your reporting date, currency and scale
+  prerequisites:
+    - An AI that can create and open spreadsheet files
+    - Node.js 20 or later, only if you want to run the included calculation script
+  output:
+    - name: Ownership bridge
+      contains: The SAFE holder's ownership from the cap, then after the later round's dilution, with each step shown.
+    - name: Unresolved conversion conditions
+      contains: Terms that could change how the SAFE converts, such as a lower round price, listed for you to check.
+    - name: Editable workbook
+      contains: A spreadsheet with inputs, formulas and checks, using the same layout as the included example.
+    - name: Input schema and calculation reference
+      contains: The inputs the calculation needs, their units and the test cases it must match.
+    - name: Reconciliations
+      contains: A comparison of the SAFE amount and ownership against the instrument ledger.
+    - name: MISSING lines
+      contains: Every input or source that was not supplied, left open rather than guessed.
+    - name: CHECKS MISSED
+      contains: The checks that failed or could not run, or the word none.
 how_it_works:
   - title: 1. Confirm cap-binding post-money form and capitalization exclusions; stop if a lower round price changes the conversion basis
     text: Confirm cap-binding post-money form and capitalization exclusions; stop if a lower round price changes the conversion basis.

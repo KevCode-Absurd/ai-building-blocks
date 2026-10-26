@@ -2,21 +2,20 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: study-review-scheduler
 name: Study review scheduler
-summary: Share due study cards. Get a recall session and updated review dates
-  based on how well you remember.
+summary: Run a spaced repetition review of your study cards. Get a short recall session, new review dates and a view of the week ahead.
 job: study-and-practice
 headline: Study review scheduler
-subhead: Give it study cards with due dates and recent recall results. It
-  reviews the most overdue items first and adjusts each interval after your
-  answer. You get updated dates, failed items to retry and a view of the coming
-  week.
-explain: Give it study cards with due dates and recent recall results. It
-  reviews the most overdue items first and adjusts each interval after your
-  answer. You get updated dates, failed items to retry and a view of the coming
-  week.
+subhead: Paste your study cards with their due dates. Your AI quizzes you on the most overdue ones first, up to 15 cards. After each answer it sets the next review date.
+not_for:
+  - You have not learned the topic yet. Learn it first, then add it, or ask your AI to teach it step by step.
+  - You want a one-off quiz with no schedule. Ask your AI for a plain quiz on your notes instead.
+  - You need an app that sends daily reminders. Use a flashcard app, since this only works inside one chat.
+explain: Give it study cards with due dates and recent recall results. It reviews the most overdue items first and adjusts each interval after your answer. You get updated dates, failed items to retry and a view of the coming week.
 you_give:
-  - Understood study items with due dates and current intervals.
-  - Your recall result for each item.
+  - Your study cards, one per line.
+  - The due date for each card.
+  - The last interval in days for each card.
+  - Your last recall score for each card (optional).
 you_get:
   - A review session capped at fifteen items.
   - Updated intervals and next review dates.
@@ -29,9 +28,28 @@ how_it_works:
   - title: Step 3
     text: Update intervals, retry failed items and show the next review dates.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste your cards. Give each one a due date, last interval and last recall score. No code or files needed.
+  - "Answer each question before your AI shows the answer. Then score yourself: Failed, Hard, Good or Easy."
+  - Retry the failed cards at the end of the session.
+  - Save the updated dates and the 7-day list. Paste them back next time.
+output_sample:
+  input:
+    - Your study cards, one per line
+    - The due date for each card
+    - The last interval in days for each card
+    - Your last recall score for each card (optional for new cards)
+  prerequisites:
+    - Cards you already understand. New cards start at 1 day.
+    - No code, files or web access needed. Paste your cards into the chat.
+  output:
+    - name: Session start
+      contains: How many cards are due, how many are overdue, and about how long the session will take.
+    - name: Per-item review
+      contains: "For each card: topic, question, your answer, the right answer, your score and the next review date."
+    - name: Failed item retry
+      contains: Cards you failed are asked again at the end of the same session.
+    - name: Session close
+      contains: Counts of easy, good, hard and failed cards, plus the list of failed cards.
+    - name: Next 7 days
+      contains: Which cards are due each day this week, with a warning if one day looks crowded.

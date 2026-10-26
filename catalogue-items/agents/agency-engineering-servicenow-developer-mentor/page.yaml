@@ -1,0 +1,153 @@
+name: ServiceNow Developer & Mentor agent
+summary: Find why a ServiceNow script, rule or flow fails. Get the cause with log evidence, a fix, and steps to test it on a non-production instance.
+headline: ServiceNow Developer & Mentor agent
+subhead: Describe the broken record or script, and paste the logs and code. It finds the cause from the evidence, says whether the fault is standard ServiceNow or your custom work, and teaches the fix step by step.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  ServiceNow bugs are hard to guess at. A rule fires twice, a list loads slowly,
+  or a user cannot see a record. The usual cause is one custom script among
+  many, or a setting nobody remembers. Changing code before you know the cause
+  makes it worse. This ServiceNow developer agent starts with the evidence, not a
+  guess.
+
+
+  It asks for one failing record and the logs, then walks you through a
+  fixed order. Reproduce the problem. Read the log or script output. Switch off
+  custom rules one at a time to see if the fault is standard ServiceNow or yours.
+  Only then does it state the cause and write the fix. It also teaches why,
+  so you can solve the next bug alone.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It cannot log in
+  to your instance. You run each step and paste back what you see. Treat any
+  script as a draft: test it on a non-production instance first. Success
+  targets in the original are goals, not results from AI Blocks.
+when:
+  - A Business Rule fires twice, or not at all, and you don't know why.
+  - A form or list got slow after someone added a script, and you need to find which one.
+  - A user can't see or edit a record, and you suspect an ACL (an access rule).
+  - You want to write a script, such as a record count, the right way and learn why it is the right way.
+not_for:
+  - You want to fix a live production outage right now. Use the Incident Response Commander agent to run the incident, and make code changes on a non-production instance first.
+  - You need the support or process side of ServiceNow, such as tickets, SLAs or change flow. Use the IT Service Manager agent.
+  - You want the AI to log in and change your instance. It can't. It gives steps you run yourself.
+  - You can't get logs or a failing example. Expect a list of what to collect first, not a fix.
+you_give:
+  - What is wrong, in one or two sentences, and what should happen instead
+  - One record or user where it fails (the table and record number, not private data)
+  - The suspect script, rule or flow, pasted as text
+  - Log lines, script debugger output or an error message (optional, but it makes the cause certain)
+  - Whether you have a non-production instance to test on, and your ServiceNow version (optional)
+you_get:
+  - The most likely cause, with the log line or value that supports it
+  - Whether the fault is standard ServiceNow or custom, and the steps to prove it
+  - A fix in the right place, such as a Script Include or Business Rule, with a note on why
+  - How to test the fix on the failing record and on a second record, and how to undo it
+  - What to collect next, if the evidence is not enough yet
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe the problem and paste the script or rule involved, with the log lines. Remove names, emails and any private data first.
+  - Follow the steps it gives you on a non-production instance. It will ask you to reproduce the fault and to switch custom items off one at a time.
+  - Paste back what you see. Wait for it to name the cause and the evidence before you change any code.
+  - Apply the fix on the non-production instance. Test it on the failing record and on a second, unrelated record.
+  - Note what each changed record held before, so you can undo it. Then move the change through your normal release steps.
+how_it_works:
+  - title: Frame the problem
+    text: It pins down one failing record or user, and what should happen instead, so the scope is clear.
+  - title: Gather evidence
+    text: It tells you which log, debugger or test script to use, and what to paste back, so it works from real values.
+  - title: Isolate standard from custom
+    text: It has you switch custom rules, scripts and access rules off one at a time to find which one is in the path of the fault.
+  - title: Confirm the cause
+    text: It states the cause and the evidence that proves it. It will not suggest a fix without both.
+  - title: Fix in the right place
+    text: It picks the right tool, such as a Script Include for shared logic or an async rule for slow work, and keeps queries bounded.
+  - title: Verify and roll back
+    text: It gives checks for the original and a second record, and a plan to undo the change.
+output_shape: |-
+  PROBLEM
+    expected <what should happen> | actual <what happens> | scope <one form, one flow, all users> | ASSUMED: <list> | MISSING: <list>
+
+  EVIDENCE
+    <log line, value or rule that fired> | where it came from <log, debugger, script> | NOT SEEN: <what is still needed>
+
+  DIAGNOSIS
+    standard or custom <which> | cause <one sentence> | how it was confirmed <steps> | confidence <confirmed, likely, guess>
+
+  FIX
+    <script or setting change> | why this tool <reason> | side effects <records touched, notices sent>
+
+  TEST AND ROLLBACK
+    test on the failing record | test on a second record | undo steps <prior values to save first>
+
+  NEXT STEPS
+    <what to gather or do next> | docs to check <ServiceNow docs page>
+output_sample:
+  input:
+    - What is wrong and what should happen
+    - One failing record or user, as a table and number
+    - The suspect script, rule or flow, as text
+    - Log lines or an error message (optional)
+  prerequisites:
+    - Access to a non-production ServiceNow instance, to reproduce and test
+  output:
+    - name: Problem
+      contains: The failing case in one place, with expected and actual results and what is missing.
+    - name: Evidence
+      contains: The log lines or values the diagnosis rests on, and what you still need to capture.
+    - name: Diagnosis
+      contains: Whether the fault is standard or custom, the cause, and how it was proven.
+    - name: Fix
+      contains: The script or setting change, why that tool was chosen, and what else it touches.
+    - name: Test and rollback
+      contains: Checks on the failing record and a second one, plus how to undo the change.
+    - name: Next steps
+      contains: What to collect if the cause is not proven, and the ServiceNow docs to check.
+works_best_with:
+  tools:
+    - name: A non-production ServiceNow instance
+      why: You reproduce the fault and test the fix there, so your live data stays safe.
+    - name: Claude Code or another AI that can read files
+      why: It can read exported scripts and logs from a folder. In a plain chat you paste them.
+  inputs:
+    - The exported script or update set that holds the suspect rule.
+    - The system log or session log lines from the time of the fault.
+    - A short list of the custom rules and scripts on the table in question.
+terms:
+  - term: Business Rule
+    meaning: A script that runs when a record is saved, read or deleted.
+  - term: Script Include
+    meaning: A place to keep shared server code that other scripts and forms can call.
+  - term: GlideRecord
+    meaning: ServiceNow's code for reading and changing records. It runs on the server.
+  - term: GlideAggregate
+    meaning: A faster way to count or total records without loading each one.
+  - term: ACL
+    meaning: An access control rule. It decides who can see or edit a record or field.
+  - term: Out of the box (OOTB)
+    meaning: Standard ServiceNow behavior, before any custom changes.
+  - term: Non-production instance
+    meaning: A test copy of ServiceNow, such as a dev or test instance, kept apart from your live one.
+tweaks:
+  - what: One record
+    how: Give one failing record and one that works. The difference between them often points to the cause.
+  - what: Evidence
+    how: Paste the log lines from the exact time of the fault, with the script debugger output if you have it. Say how you got them.
+  - what: Learning mode
+    how: Ask it to explain each step, or to give only the cause and fix if you are short on time.
+improve:
+  - Add your instance's naming rules and release steps to SKILL.md, so fixes follow how your team ships.
+  - Keep a note of each cause you find, such as "duplicate rule on update". Patterns repeat.
+  - Pair it with the IT Service Manager agent for the process around changes and tickets.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

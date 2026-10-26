@@ -1,6 +1,6 @@
 new_slug: write-a-voice-guide-from-your-documents-and-check-copy
 name: Write a voice guide from your documents and check copy
-summary: Give it your documents. Get a voice guide, new copy in that voice and a ranked check.
+summary: Turn your documents into a voice guide, get new copy written in that voice, and check any draft for where it drifts. Fix your brand voice.
 job: brand-file
 thinking: medium
 thinking_why: It runs three skills, and the first reads long documents. A mid-size model with a long reading window is enough.
@@ -14,6 +14,10 @@ when:
   - Your pages, emails and posts sound like different people wrote them.
   - You hire writers or use AI to write and want a guide they can follow.
   - You have great old documents or call recordings and want the voice in them written down.
+not_for:
+  - "You need one post and have no ongoing writers: ask your AI to write it directly, with a few lines on how you want it to sound."
+  - "You have no documents or call notes yet: build your brand brain first with the Website brand brain builder."
+  - "You want a first voice guide and nothing else: use the Brand voice guide builder on its own."
 you_give:
   - Documents, decks, posts or call notes where the brand sounds right
   - Customer words, such as reviews or call notes (optional)
@@ -30,6 +34,25 @@ how_to_use:
   - Attach or paste your best documents and call notes. Step 1 stops with the guide and its open questions.
   - Answer the open questions with whoever owns the brand, then paste the updated guide back.
   - Give the brief for the new piece. Then paste a draft to check, or use the one it just wrote.
+output_sample:
+  input:
+    - Documents, decks, posts or call notes where your brand sounds right
+    - Customer words, such as reviews or call notes (optional)
+    - A short brief for the piece you want written
+    - A draft to check (optional)
+  prerequisites:
+    - An AI that can read your files, such as Claude with files attached
+    - Your brand brain from the Website brand brain builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: Voice guide
+      contains: Voice and tone rules with examples, a confidence rating for each rule, and open questions for your team.
+    - name: New copy
+      contains: An email, post or pitch in the settled voice, with a note on each voice choice.
+    - name: Draft check
+      contains: Each place the draft drifts from the guide, ranked by weight, with a before and after fix.
+    - name: HAND-BACK SUMMARY
+      contains: The file from each step, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the voice guide
     text: Sorts your documents by type, pulls out what they say about voice, tone and words, rates each rule by how many sources back it, and lists the open questions.

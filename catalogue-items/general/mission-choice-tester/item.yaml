@@ -1,6 +1,6 @@
 slug: mission-choice-tester
 name: "Mission choice tester"
-summary: "Paste your mission and five choices. Get how many it settles, a score out of 100 and fixes."
+summary: "Test your mission statement on five real choices. Get each one marked clear, partly clear or silent, a score out of 100 and line fixes."
 category: general
 type: skill
 role: check
@@ -11,8 +11,11 @@ inputs:
   - {type: question, required: false}
 outputs:
   - {type: audit_report}
+  - {type: question}
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-covey]
 credits:
   - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "Habit 2: treating a mission statement as a personal constitution, the standard every choice is measured against, reviewed on a schedule and revised as understanding grows"}
+before: [personal-mission-statement]
+next: [roles-and-goals-mapper, mistake-to-principle-writer]

@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It sorts feedback into a fixed layout.
 new_slug: sprint-retro-facilitator
 name: Sprint retro facilitator
-summary: Give it your team's feedback. Get what went well, what did not, and
-  action items with owners and dates.
+summary: Run a sprint retrospective in minutes. Give it your team's feedback and get themes, a sprint check and 2 or 3 action items with owners and dates.
 job: organise-work
 headline: Sprint retro facilitator
-subhead: "A retrospective run for you: what went well, what did not, and action
-  items with owners and dates. Pick a format or let the skill choose."
+subhead: "A retrospective run for you: what went well, what did not, and action items with owners and dates. Pick a format or let the skill choose."
 explain: |
   A retrospective run for you: what went well, what did not, and action items with owners and dates. Pick a format or let the skill choose. Options are Start, Stop, Continue; the four Ls of liked, learned, lacked and longed for; or Sailboat with wind, anchor, rocks and island.
 
@@ -17,6 +15,10 @@ when:
   - You have a pile of feedback notes that need sorting.
   - Past retros ended without clear actions.
   - You want a new format to keep the meeting fresh.
+not_for:
+  - "Your team has not shared any feedback yet: collect notes or run a short survey first, then come back."
+  - "You are reviewing a one-off project, not a sprint: use a post-project review run by a person, with the project lead and key people."
+  - "You want a full performance review of one person: hold a one-to-one with that person instead."
 you_give:
   - Team feedback or sticky note text
   - Sprint goal and results (optional)
@@ -28,7 +30,24 @@ you_get:
   - A sprint performance check
   - Ranked action items with owners and dates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Say which sprint you are reviewing, with its name and dates.
+  - Paste your team's feedback. Add the sprint goal, points and last retro's actions if you have them.
+  - "Pick a format: Start, Stop, Continue; the four Ls; or Sailboat. Or ask your AI to choose."
+  - Read the action items. Check each has a real owner and date, then share the summary with your team.
+output_sample:
+  input:
+    - Your team's feedback, such as sticky notes, survey answers or chat messages
+    - The sprint name and dates
+    - Sprint goal, points committed and points completed (optional)
+    - Actions from your last retro (optional)
+    - The retro format you prefer (optional)
+  output:
+    - name: Sprint Performance
+      contains: Whether the goal was met, plus points committed against points completed.
+    - name: Key Themes
+      contains: Your feedback grouped into themes, with the most mentioned topics first.
+    - name: Action Items
+      contains: Two or three actions, each with a priority, owner, deadline and a way to tell it worked.
+    - name: Carry-over from Last Retro
+      contains: Each action from the last retro marked done, in progress or not started.

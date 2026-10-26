@@ -1,55 +1,119 @@
 new_slug: client-scope-decision-review-assistant
-name: Client scope decision review assistant
-headline: Client scope decision review assistant
-summary: A scope comparison, delivery options and client decision draft.
+name: Client scope change and decision tracker
+headline: Client scope change and decision tracker
+summary: Compare a client change request with the signed scope. Get delivery options and a draft reply, with new work kept as proposed until the client accepts.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A scope comparison, delivery options and client decision draft. Share the signed engagement, actual change request, current commitments, effort evidence, available hours and approval rules. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
-explain: |-
-  A scope comparison, delivery options and client decision draft.
+subhead: Give it the signed engagement, the client's change request and your team's hours. It shows what is in and out of scope, what the change does to current work, and your options. You get a scope comparison, delivery options and a draft reply. New work stays "proposed" until the client says yes in writing.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Original and proposed commitments remain separate; the client has not accepted a change until evidence confirms it. Missing tools or evidence stay visible in the final summary.
+explain: |
+  A client asks for "one small addition". It sounds easy. Then the signed scope, the hours your team has left, and the work already promised all pull in different directions. A yes given on a call turns into extra work nobody priced.
+
+  This client scope change review compares the new request with the signed engagement, clause by clause. It uses the Client scope change planner to summarise what the contract says about deliverables, exclusions, changes, fees and notice. It checks the request against real hours and commitments, and shows what slips if you say yes. It then drafts a decision brief for the client with options, the cost and date effects it can support, and open questions.
+
+  It keeps the original scope and the proposed change apart. A change counts as accepted only when the client's reply says so. If the answer is unknown, the old commitments stay as they are and the open decision is listed. It reviews and drafts. It gives no legal advice and sends nothing.
+
 when:
-  - You need a scope comparison, delivery options and client decision draft.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A client emails "can we also add this?" and you need to see what it does to your signed scope and your hours.
+  - A client replies to your options, and you need to know if that counts as a clear yes.
+  - Your team is full, and you must show what existing work moves if the change goes ahead.
+  - You review a change request every few weeks and want each one compared with the last review.
+
+not_for:
+  - The work is a construction or building contract. Use the Construction change cost and approval tracker.
+  - You want a risk review of contract clauses for a lawyer. Use the Contract clause risk reviewer.
+  - You only want to reprice a client by their hours and fees. Use the Client fee and work-hour reviewer.
+  - You are writing the first change request form and nothing is in dispute. Use the Change request writer.
+  - You want the AI to send the reply or decide what is in scope. It drafts, and a person decides.
+
 you_give:
-  - The signed engagement, actual change request, current commitments, effort evidence, available hours and approval rules. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The signed engagement or statement of work, with its date
+  - The client's change request, as they wrote it
+  - Your current commitments and each team member's available hours
+  - Effort evidence for the change, such as past similar jobs or a range estimate
+  - Your approval rules, such as who may accept a change and any price limit
+  - Your last review and the client's reply, if there is one (optional)
+
 you_get:
-  - A scope comparison, delivery options and client decision draft.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A scope comparison that sorts the request into in scope, out of scope and unclear, with the clause for each
+  - What the change does to current work, hours and dates
+  - Delivery options, each with the cost and date effect your evidence supports
+  - A draft client reply with open questions
+  - A record of any decision the client has given, with its source
+  - A MISSING list, CHECKS MISSED and a short record for the next review
+
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add the scope planner, the contract summary, the capacity planner and the update writer from the pack.
+  - Say if this is a first run. If not, paste your last review and its record.
+  - Attach the signed engagement, the change request, your commitments and the available hours. Write your approval rules in two or three lines.
+  - Read the scope comparison first. Check each clause it quotes against the contract.
+  - Pick an option with the person who can approve it. Edit the draft reply yourself before you send it.
+  - When the client answers, paste the reply and run it again. The agent sends nothing.
+
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep engagement version, change ID, client decision source, accepted scope and date constraints. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A client changes scope or supplies an acceptance or rejection decision.
-  - title: Choose the next step
-    text: Run prepare-a-client-scope-change-brief for changed evidence or a due review. If a client decision is explicit, record its accepted commitments and source. If the outcome is unknown, preserve prior commitments and return the open decision.
-  - title: Check and save evidence
-    text: Original and proposed commitments remain separate; the client has not accepted a change until evidence confirms it. Save source versions, branch reasons, outputs and unresolved checks.
-output_shape: |-
-  Scope and source coverage
-  A scope comparison, delivery options and client decision draft.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  - title: Compare with the last review
+    text: Reads the saved record if it belongs to this client and engagement, or sets a first baseline. Lists what changed in the request or in the client's reply. If nothing changed, it says so and stops.
+  - title: Read the contract
+    text: Finds the deliverables, exclusions, change process, fee and notice clauses in the signed engagement and quotes each with its clause number. It does not interpret them.
+  - title: Check the hours
+    text: Sets the request against real commitments, skills and available hours, with ranges and not single guesses. It shows what moves if you say yes.
+  - title: Draft options and a client brief
+    text: Writes the options with the cost and date effects the evidence supports, plus open questions and approval status.
+  - title: Record the client's decision
+    text: If the client's reply clearly accepts or declines, it records the commitment and its source with the Action item tracker. If the reply is unclear, the old commitments stay and the open decision is listed.
+
+output_shape: |
+  REVIEW DATE <date>   CLIENT <name>   ENGAGEMENT <version, date>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <request or reply: old to new, source and date>
+  SCOPE COMPARISON  <request item | in, out or unclear | clause>
+  CAPACITY IMPACT   <existing work | effect if accepted | hours range>
+  OPTIONS           <option | cost effect | date effect | evidence>
+  DRAFT CLIENT REPLY  <short note with open questions>
+  DECISION STATUS   <proposed, accepted or declined, with the source quote and date>
+
+  RECORD FOR NEXT REVIEW  engagement version, accepted changes, open decisions, owners, dates
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Your signed engagement and the client's change request
+    - Your current commitments and each team member's available hours
+    - Your approval rules
+    - Your last review and the client's reply, if any (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Client scope change planner and the Action item tracker in the agent pack
+  output:
+    - name: Changed since last review
+      contains: Each new request or client reply, with its source and date.
+    - name: Scope comparison
+      contains: Each part of the request marked in scope, out of scope or unclear, with the contract clause that says so.
+    - name: Capacity impact
+      contains: What existing work and hours move if the change is accepted, shown as ranges.
+    - name: Delivery options
+      contains: The ways you could respond, each with the cost and date effect your evidence supports.
+    - name: Draft client reply
+      contains: A short, plain reply with open questions, for you to edit and send.
+    - name: Decision status
+      contains: Whether the change is proposed, accepted or declined, with the quote and date that show it. Unclear replies stay open.
+    - name: Record for next review
+      contains: The engagement version, accepted changes, open decisions, owners and dates, to paste into the next run.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
+
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Pick one client and one change request so the sources are comparable.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Original and proposed commitments remain separate; the client has not accepted a change until evidence confirms it.
+    how: Provide the real contract, emails and timesheets, and not a summary from memory.
+  - what: A client answer
+    how: Paste the reply and say the date. It records an accepted change only if the words clearly accept it.
+  - what: A tighter rule
+    how: Add a price limit above which you need a second approver. The decision status then shows the approver needed.
+
 judge:
   - Original and proposed commitments remain separate; the client has not accepted a change until evidence confirms it.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +126,26 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
+  - Give every change request an ID and quote it in each email about it.
+  - Keep a short list of who may approve what, and paste it in every time.
+  - Keep corrections with the result so the next run uses current facts.
+
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Reads the contract and emails together, and can save the record file. In plain chat it returns the same tables as text.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The signed engagement, not a draft.
+    - The client's own words for the request and for the reply.
+    - A named person who may approve a change.
+
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Scope
+    meaning: The work you agreed to do for the price in the contract.
+  - term: Change request
+    meaning: A client's ask for work beyond, or different from, the signed scope.
+  - term: Exclusion
+    meaning: Work the contract says is not included.
+  - term: Accepted change
+    meaning: A change the client has clearly said yes to, in writing.

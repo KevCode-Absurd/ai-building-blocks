@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It calculates a gap, then weighs the likely causes.
 new_slug: etf-price-gap-calculator
 name: ETF price gap calculator
-summary: Give it an ETF ticker. Get how far its price sits above or below its
-  holdings, and why. Collects data from websites.
+summary: Check if an ETF trades above or below its holdings. Give it a ticker and get the premium or discount percent, with likely reasons for the gap.
 job: set-prices
 headline: ETF price gap calculator
-subhead: The gap between an ETF's market price and the value of the assets it
-  holds, shown as a percent, with a clear reason for why it exists.
+subhead: The gap between an ETF's market price and the value of the assets it holds, shown as a percent, with a clear reason for why it exists.
 explain: |
   The gap between an ETF's market price and the value of the assets it holds, shown as a percent, with a clear reason for why it exists. You see quickly whether you would be overpaying.
 
@@ -17,9 +15,13 @@ when:
   - You are comparing several bond or crypto funds on price gap.
   - A fund jumped hard and you want to know why.
   - You want a list of the ETFs with the widest discounts.
+not_for:
+  - "You need live trading signals or the official fund value: use the fund issuer's own published NAV page."
+  - "You want advice on what to buy or sell: talk to a licensed financial adviser."
+  - "You need a number you can rely on to the cent: check the fund issuer's holdings page, since this uses free Yahoo Finance data."
 you_give:
   - One or more ETF tickers
-  - Python with data packages installed
+  - A list of tickers to scan for the widest gaps (optional)
   - Time period to look at (optional)
 you_get:
   - Premium or discount percent
@@ -28,8 +30,29 @@ you_get:
   - Plain reason for the gap
   - Breakdown of a sudden move
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini in a mode that can run Python code and use the web. The skill cannot fetch prices without this.
+  - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
+  - Type your ticker, for example one fund to check, several to compare, or a list to scan for the widest gaps.
+  - Let your AI install the data packages if it asks. Then read the premium or discount percent and the reason given.
+  - Check the fund's bid-ask spread and the issuer's holdings page before you act. The size labels are rules of thumb, not sourced limits.
+output_sample:
+  input:
+    - One or more ETF tickers
+    - A list of tickers to scan for the widest gaps (optional)
+    - Time period to look at (optional)
+  prerequisites:
+    - An AI that can run Python code and reach the web
+    - Python with yfinance, pandas and numpy (the skill installs them if missing)
+  output:
+    - name: Single ETF snapshot
+      contains: Premium or discount percent against NAV, the formula, how big the gap is, and a comparison with close peer funds.
+    - name: Multi-ETF comparison
+      contains: A ranked table of the funds you named, sorted by premium or discount.
+    - name: Premium screener
+      contains: A ranked list of the deepest discounts and highest premiums in a list of funds, with category patterns.
+    - name: Premium deep dive
+      contains: Plain reasons why one fund trades away from the value of its holdings.
+    - name: Surge decomposition
+      contains: A sudden move split into the part driven by value and the part driven by structure, with a convergence outlook.
+    - name: Caveats
+      contains: A note that this is research only, not financial advice, and that the data comes from unofficial Yahoo Finance.

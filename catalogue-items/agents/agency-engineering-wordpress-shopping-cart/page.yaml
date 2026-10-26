@@ -1,0 +1,147 @@
+name: WordPress Shopping Cart Engineer agent
+summary: Plan or fix a WooCommerce store on WordPress, covering checkout, payments, tax, coupons and orders, built update-safe with a test list.
+headline: WordPress Shopping Cart Engineer agent
+subhead: Tell it what your WooCommerce store sells, which plugins and gateway you use and what breaks or what you want to add. It plans checkout changes, payment setup, tax, coupons and order steps the update-safe way. You get a plan and test list for your developer, not live changes.
+job: set-up-store
+thinking: high
+thinking_why: Many plugins touch the cart, so it must reason about conflicts, money and order states and say what it cannot see. Use a model that reasons carefully and flags gaps.
+explain: |-
+  WooCommerce lets you change almost anything. That is the risk. A snippet pasted from a forum into a theme file can break checkout for every customer, with no error message. The next update can erase your work without a warning.
+
+  This agent plans WooCommerce changes the update-safe way. Changes go in a child theme or a small plugin and use WooCommerce hooks, not edits to core files. It plans checkout fields for the block checkout or the classic checkout, the payment gateway setup, tax, coupons and order statuses. It treats money carefully. Prices use WooCommerce's own price functions, never raw math. Payment keys sit in wp-config or environment variables, not in the database in plain text.
+
+  It also plans for the problems that cost WooCommerce stores money: plugin conflicts, stale cached carts, stock sold twice and orders that do not match payouts. It writes a plan only. It cannot log in to your site, read your plugins or change a setting.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You want to add a field, fee or rule to WooCommerce checkout and avoid breaking it on the next update.
+  - Customers report a stale or empty cart, or a checkout that fails on phones.
+  - You are adding or changing a payment gateway such as WooPayments, Stripe or PayPal and want the setup and test steps.
+  - Two plugins seem to clash over cart, coupons or payment, and you need a way to find the cause.
+not_for:
+  - Your store runs on Drupal Commerce. Use the Drupal Shopping Cart Engineer agent.
+  - You are starting a new WooCommerce store and want a non-technical plan. Use the WooCommerce store setup planner.
+  - Your store is on Shopify. Use the Shopify store setup planner.
+  - You want your store settings checked against your country's rules. Use the Payments and checkout settings checker.
+  - Customers are being charged wrongly right now. Call your payment provider and your developer first. This agent cannot see or fix a live store.
+you_give:
+  - What you sell, such as simple products, variable products or subscriptions.
+  - Your WordPress and WooCommerce versions, and whether you use the block checkout or the classic checkout (optional)
+  - Your payment gateway, and whether it is in test or live mode.
+  - Your plugins that touch the cart, checkout, payments or caching.
+  - The problem or goal, for example "coupons stack when they should not" or "add a delivery date field".
+  - How tax is set up, such as prices with or without tax (optional)
+you_get:
+  - A checkout plan that uses hooks or the block checkout tools, with each field's checks and where its data is saved.
+  - A payment plan covering the gateway, test and live mode, webhooks and matching orders to payouts.
+  - A tax and coupon plan with stacking rules and cases to test.
+  - An order status plan, with stock and refund rules.
+  - A test list for the full purchase path on a phone, plus cache rules and a rollback.
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write what you sell, your versions, your gateway and mode, your plugin list and the goal or problem. Never paste API keys or secrets.
+  - Type "Plan this WooCommerce change. Use the structure in the skill. Mark every assumption and list what you cannot check."
+  - Check that no change edits core files or the parent theme. Each change should live in a child theme or a small plugin.
+  - Run the test list on a staging copy with your developer. Cover add to cart, coupon, tax, payment, order email and a phone.
+  - Your developer applies the plan. The AI does not touch your site.
+how_it_works:
+  - title: Map your store
+    text: It records product types, plugins on the cart path, checkout type, tax mode and gateway mode, and marks what is missing.
+  - title: Plan the change the update-safe way
+    text: It uses hooks in a child theme or plugin, and the block checkout tools where they exist, and avoids template copies.
+  - title: Plan payments
+    text: It sets keys in wp-config or environment variables, webhook checks and how orders match payouts.
+  - title: Plan tax, coupons and stock
+    text: It sets tax as settings, writes coupon stacking rules and sets when stock drops.
+  - title: Plan the order flow
+    text: It sets statuses and moves, so that orders are refunded or cancelled and never deleted.
+  - title: Write the tests and cache rules
+    text: It lists the full purchase test for a phone, the pages to keep out of caching and a rollback.
+output_shape: |-
+  SCOPE
+    Goal <change, fix or review> | Versions <WordPress, WooCommerce> | Checkout type <block or classic> | Gateway and mode <name, test or live> | Plugins on the cart path <list> | Assumptions <list>
+
+  CHECKOUT PLAN
+    <change> | <where it lives: child theme or plugin> | <hook or block tool> | <checks> | <where data is saved>
+
+  PAYMENT PLAN
+    <gateway> | <where keys live> | <webhook checks> | <how orders match payouts>
+
+  TAX AND COUPON PLAN
+    <tax setup> | <coupon> | <restrictions> | <how it combines with others>
+
+  ORDER FLOW
+    <status> | <move> | <stock effect> | <what it triggers>
+
+  CACHE AND PERFORMANCE
+    <page> | <excluded from cache?> | <how to check>
+
+  TEST LIST
+    <check> | <pass if> | <owner>
+
+  RISKS, GAPS AND CHECKS
+    <issue> | <why it matters> | <who decides>
+output_sample:
+  input:
+    - What you sell and the checkout type you use
+    - Your WordPress and WooCommerce versions, and your payment gateway and mode
+    - Your plugins that touch the cart, checkout, payments or caching
+    - The problem or goal, and your tax setup (optional)
+  prerequisites:
+    - A WordPress developer and a staging copy of the store to test on.
+  output:
+    - name: Scope
+      contains: Your goal, versions, checkout type, gateway, plugins on the cart path and assumptions.
+    - name: Checkout plan
+      contains: Each change, where it lives, the hook or block tool it uses and how its data is saved.
+    - name: Payment plan
+      contains: Gateway setup, where keys live, webhook checks and how orders match payouts.
+    - name: Tax and coupon plan
+      contains: Tax settings and coupon rules, with stacking cases to test.
+    - name: Order flow
+      contains: Statuses, moves, when stock drops and how refunds keep the record.
+    - name: Cache and performance
+      contains: Which pages must stay out of caching, and how to check it.
+    - name: Test list
+      contains: The full purchase path to test on a phone, each with a pass condition.
+    - name: Risks, gaps and checks
+      contains: Open questions and risks, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A strong reasoning model spots plugin clashes and order edge cases. No code running or web access is needed.
+  inputs:
+    - A list of active plugins with versions.
+    - A screenshot of your tax and checkout settings.
+    - The exact steps that cause the bug, and one example order number.
+terms:
+  - term: WooCommerce
+    meaning: The free shop plugin that turns a WordPress site into an online store.
+  - term: Hook
+    meaning: A safe point in WooCommerce where your code can add or change behaviour without editing its files.
+  - term: Child theme
+    meaning: A small theme that sits on top of your main theme, so updates to the main theme do not erase your changes.
+  - term: Block checkout
+    meaning: The newer WooCommerce checkout built from blocks. The older one is the classic checkout.
+  - term: Webhook
+    meaning: A message your payment provider sends to your site to say a payment succeeded, failed or was refunded.
+  - term: Staging
+    meaning: A private copy of your site where you test changes before they go live.
+tweaks:
+  - what: Scope
+    how: Pick one change to plan first, such as a checkout field or a gateway. Add the rest after.
+  - what: Plugin list
+    how: Include every plugin that touches cart, coupons, shipping, payments or caching. Most clashes hide there.
+  - what: Risk level
+    how: Say how much a checkout failure would cost. That sets how many test cases to run.
+improve:
+  - Keep each plan with your test results. Add a test case every time a checkout bug turns up.
+  - Rerun it before big updates to WordPress, WooCommerce or your gateway plugin.
+  - Pair it with the Application Security Engineer agent to review any custom checkout code.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

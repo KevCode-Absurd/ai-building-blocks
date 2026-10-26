@@ -1,6 +1,6 @@
 slug: plan-a-vendor-change-without-losing-work
 name: Plan a vendor change without losing work
-summary: Share the source files. Get a vendor decision, migration plan and continuity checklist.
+summary: Switch software or service vendors without dropping work. Get a vendor choice, an exit checklist with notice dates and a staged rollout with rollback.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -22,11 +22,11 @@ uses:
   - change-rollout-planner
 steps:
   - uses: vendor-comparison-writer
-    note: Compare the replacement options using the required tasks, costs and actual supplied evidence.
+    note: Compare the current vendor and each replacement on the tasks you need, the cost and the evidence supplied. Hand step 2 the chosen option and the tasks it must cover.
   - uses: project-risk-portfolio
-    note: Map migration dependencies, data risks, overlap costs and fallback options.
+    note: "Map the risks of the move: dependencies, data, double-running cost and fallback. Hand step 3 the ranked risks."
   - uses: change-rollout-planner
-    note: Plan tool-change adoption, practice, support and staged transition using the assessed dependencies. Keep a rollback option until acceptance is checked.
+    note: Plan the staged switch with training and support. Keep a rollback until acceptance is checked. Add the exit checklist with notice and data access dates.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

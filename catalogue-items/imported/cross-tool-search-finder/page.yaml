@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs searches and lists what it finds.
 new_slug: cross-tool-search-finder
 name: Cross-tool search finder
-summary: Ask where a decision or doc lives. Get one search across your chat,
-  email and files, with sources.
+summary: Find where a decision or doc lives with one cross-tool search across your chat, email and files. You get one answer with sources.
 job: organise-work
 headline: Cross-tool search finder
-subhead: Finding where a decision was made usually means checking chat, email,
-  files and your tracker one by one. Ask once and this searches all your
-  connected tools and brings back one combined answer with sources.
+subhead: Finding where a decision was made usually means checking chat, email, files and your tracker one by one. Ask once and this searches all your connected tools and brings back one combined answer with sources.
 explain: |
   Finding where a decision was made usually means checking chat, email, files and your tracker one by one. Ask once and this searches all your connected tools and brings back one combined answer with sources.
 
@@ -18,6 +15,10 @@ when:
   - You need the latest version of a doc that was shared in a thread.
   - A teammate asks what was agreed last month and you have to find out.
   - You want everything on one project in one place.
+not_for:
+  - "You already know the file name: use your storage app's own search, it is faster."
+  - "You have no chat, email or file tools connected to your AI: connect one first, or search each app by hand."
+  - "You need a full audit of every message on a topic: ask a person who was there, or export the data from each app."
 you_give:
   - Your question or topic
   - Names, dates or channels to narrow it (optional)
@@ -28,8 +29,25 @@ you_get:
   - Results ranked by how well they match
   - A note on any tool that could not be searched
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search your chat, email and docs.
+  - Connect your chat, email, file storage or tracker to your AI in its tool settings. You need at least one.
+  - Paste this skill into a chat with your AI, or add it to your AI's skills.
+  - "Ask your question in plain words, such as: what did we decide on pricing last month? Add names, dates or channels if you know them."
+  - Check the sources listed under the answer. Open the key message or file to confirm it.
+  - Save the answer in your project doc, or share the source link with your team.
+output_sample:
+  input:
+    - Your question or topic, such as what was decided on a project
+    - Names, dates or channels to narrow the search (optional)
+  prerequisites:
+    - An AI with your chat, email, file storage or tracker connected through its tool settings
+  output:
+    - name: Direct answer
+      contains: A short answer to your question, written as one summary and not a raw list of hits.
+    - name: Sources
+      contains: Each message, email or file the answer came from, with the tool, person or channel, and date.
+    - name: Also found
+      contains: Related items from other tools, shown when you asked to find a specific thing.
+    - name: Found across
+      contains: A count of matches per tool, shown when your question is broad.
+    - name: Failed source note
+      contains: A line naming any tool the AI could not reach, so you know what was left out.

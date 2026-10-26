@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It turns a written outline into a page with set rules.
 new_slug: markdown-slide-deck-maker
 name: Markdown slide deck maker
-summary: Give it a markdown outline. Get one HTML slide deck you present with
-  arrow keys, with speaker notes.
+summary: Turn a markdown outline into one HTML slide deck with speaker notes. Present with arrow keys, then print to PDF. No PowerPoint needed.
 job: work-with-files
 headline: Markdown slide deck maker
-subhead: "One HTML file that is your slide deck: open it in any browser, move
-  with the arrow keys, show speaker notes and print to PDF."
+subhead: "One HTML file that is your slide deck: open it in any browser, move with the arrow keys, show speaker notes and print to PDF."
 explain: |
   One HTML file that is your slide deck: open it in any browser, move with the arrow keys, show speaker notes and print to PDF. You write it in plain markdown.
 
@@ -17,6 +15,10 @@ when:
   - You want speaker notes that stay hidden from the audience.
   - You need one file you can email or open without PowerPoint.
   - You want to print the deck to PDF.
+not_for:
+  - "You have one long report or spec, not separate slides: use a plain markdown-to-HTML document step, or just share the file."
+  - "You want a code review with diff changes shown: use a code review tool, since this only shows text slides."
+  - "You need custom graphics, animation or photo layouts: use PowerPoint, Keynote or Google Slides."
 you_give:
   - A markdown outline with slide breaks
   - Notes in comment blocks (optional)
@@ -27,8 +29,30 @@ you_get:
   - Presenter mode with notes
   - A print-ready PDF view
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - "Write your outline in markdown. Split slides with a --- line or a top heading. Put notes in blocks like <!-- notes: your note -->."
+  - Open your AI in a tool that can run code and save files. Python must be installed. Share the skill folder and your outline.
+  - "Ask your AI to run the three steps: split the slides, attach the notes, then build the HTML file. It saves a file named deck-{slug}.html."
+  - If it refuses, check why. Exit 5 means only one slide. Exit 6 means no clear slide breaks. Exit 7 means too few notes when strict notes is on.
+  - Open the HTML file in Chrome. Press P for presenter mode. Press Cmd+P (Ctrl+P on Windows) to save a PDF.
+output_sample:
+  input:
+    - Your markdown outline, with slides split by --- lines or by top headings
+    - Speaker notes inside comment blocks (optional)
+    - Your deck title
+    - Your brand colors (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - Python 3 installed
+    - Your design settings from the first-time setup, or a way to run the three scripts on their own
+    - An outline of at least 100 lines with 3 or more slide breaks
+  output:
+    - name: slides.json
+      contains: Your outline split into ordered slides, each with a title.
+    - name: deck.json
+      contains: The same slides, with each speaker note attached to its own slide.
+    - name: deck-{slug}.html
+      contains: One file with every slide, arrow-key moves, a progress bar and a slide counter.
+    - name: Presenter mode
+      contains: Press P to see the current slide, your notes, a clock and a preview of the next slide.
+    - name: Print view
+      contains: Print from the browser to get a PDF with one slide per page.

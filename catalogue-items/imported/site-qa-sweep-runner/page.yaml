@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set test steps but judges what counts as a problem.
 new_slug: site-qa-sweep-runner
 name: Site QA sweep runner
-summary: Name a page or site and a depth. Get a smoke, standard or full test
-  pass with a list of problems found.
+summary: Run a site QA check after a deploy or before launch. Pick smoke, standard or full, paste the console snippets, and get a list of problems to fix.
 job: test-and-fix-code
 headline: Site QA sweep runner
-subhead: A test pass on your page, feature or site at the depth you pick, with a
-  list of problems found. You can confirm something works before you call it
-  shipped.
+subhead: A test pass on your page, feature or site at the depth you pick, with a list of problems found. You can confirm something works before you call it shipped.
 explain: |
   A test pass on your page, feature or site at the depth you pick, with a list of problems found. You can confirm something works before you call it shipped.
 
@@ -18,6 +15,10 @@ when:
   - A new page launched and needs a proper test.
   - A major release is coming and you want the full matrix.
   - Someone said "something looks off" and you need to find it.
+not_for:
+  - "You need a deep accessibility audit against WCAG rules: use an accessibility specialist or a tool such as Lighthouse."
+  - "You need to find why code breaks or review the code itself: ask a developer or ask your AI to review the code directly."
+  - "You need a full speed investigation or a technical SEO setup: use a speed or SEO specialist, not a general QA pass."
 you_give:
   - The page or site URL
   - "The depth: smoke, standard or full"
@@ -29,8 +30,31 @@ you_get:
   - A list of problems found
   - Notes on what to test deeper
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open a browser.
+  - Paste this skill into Claude, ChatGPT or Gemini, or upload the skill folder.
+  - "Tell your AI the page address and the depth: smoke, standard or full."
+  - Open the page in your browser, then open dev tools and the console.
+  - If your AI cannot open a browser, paste each snippet it gives you into the console yourself. Copy the result back into the chat for review.
+  - Read the problem list. Fix each item before launch, or file it as a known issue.
+  - For standard and full runs, ask for the written report and save it as qa-report-[date].md.
+output_sample:
+  input:
+    - The page or site address you want tested
+    - "The depth you want: smoke, standard or full"
+    - Browser dev tools open on that page
+    - Specific worries to check as well (optional)
+  prerequisites:
+    - A browser with dev tools, so you can paste the snippets and copy back the results
+    - An AI that can open a browser (optional, it saves the copy and paste)
+  output:
+    - name: Smoke test result
+      contains: Console output for title, canonical link, H1 count, image alt text, broken images and schema, checked against pass rules.
+    - name: Standard page audit
+      contains: Console output for meta tags, headings, images, external links, language, favicon and skip link, plus a visual check at three screen widths.
+    - name: Full release matrix
+      contains: A pass or fail line for each of 16 checks, from links and forms to security headers and 404 pages.
+    - name: Specific QA snippets
+      contains: Optional extra checks for images, heading order, colour contrast, forms and external links.
+    - name: Problem list
+      contains: Each failed check, to fix before launch or file as a known issue.
+    - name: qa-report-[date].md
+      contains: A written report for standard and full runs, built from the report template.

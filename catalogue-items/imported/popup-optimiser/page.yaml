@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows set rules for timing and copy.
 new_slug: popup-optimiser
 name: Popup optimiser
-summary: Say what you want from visitors. Get popup type, timing and copy that
-  gets signups without annoying them.
+summary: Plan a popup that gets email signups without annoying visitors. Tell it your goal and traffic. You get the type, timing, frequency and copy.
 job: audit-landing-page
 headline: Popup optimiser
-subhead: Popups that earn signups without making visitors leave. Tell the skill
-  what you want from visitors and it picks the type, the timing, the trigger and
-  the words.
+subhead: Popups that earn signups without making visitors leave. Tell the skill what you want from visitors and it picks the type, the timing, the trigger and the words.
 explain: |
   Popups that earn signups without making visitors leave. Tell the skill what you want from visitors and it picks the type, the timing, the trigger and the words.
 
@@ -18,6 +15,10 @@ when:
   - You want an exit-intent offer that does not feel pushy.
   - Visitors complain about popups on mobile.
   - You need copy for a discount or lead magnet popup.
+not_for:
+  - "You want to fix checkout or payment pages: popups should stay off those, so ask a developer or your store platform's support instead."
+  - "You want to redesign a signup form or a whole page: use a page conversion review by a person or your own page audit, not a popup plan."
+  - "You want to write the emails people get after they sign up: write a welcome email by hand or ask your AI for an email sequence."
 you_give:
   - What you want visitors to do
   - Traffic sources and page types
@@ -29,7 +30,24 @@ you_get:
   - Headline, body and button copy
   - A/B test ideas with metrics
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI what you want visitors to do, and which pages and traffic sources matter.
+  - Add your current popup results and your offer, if you have them. Answer any questions it asks.
+  - Read the plan. Check that the popup never shows on checkout or payment pages.
+  - Build the popup in your popup tool, then run one test at a time. Treat any benchmark numbers as rough rules to test, not promises.
+output_sample:
+  input:
+    - What you want visitors to do, such as join a newsletter or claim a discount
+    - Your traffic sources and the pages where the popup would show
+    - Your current popup and how it performs (optional)
+    - Your offer or lead magnet
+    - Any privacy rules you must follow (optional)
+  output:
+    - name: Popup design
+      contains: The popup type, when it appears, who sees it, how often, and the headline, subhead, button and decline copy.
+    - name: Design notes
+      contains: Layout, imagery and how the popup should look on mobile, with an easy way to close it.
+    - name: Multiple popup strategy
+      contains: If you need more than one popup, the purpose, trigger and audience of each, plus rules so they never overlap.
+    - name: Test hypotheses
+      contains: Ideas to A/B test, each with what you expect to change and which numbers to watch.

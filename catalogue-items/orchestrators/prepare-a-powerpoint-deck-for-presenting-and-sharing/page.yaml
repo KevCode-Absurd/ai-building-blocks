@@ -1,116 +1,124 @@
 new_slug: prepare-a-powerpoint-deck-for-presenting-and-sharing
 name: Prepare a PowerPoint deck for presenting and sharing
-summary: Share your deck and sharing rules. Get navigation, speaker notes,
-  accessibility findings and an audience handout.
+headline: Prepare a PowerPoint deck for presenting and sharing
+summary: Get a finished PowerPoint deck ready to present and share. Get appendix links, speaker notes, an accessibility review and an audience handout.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
-headline: Prepare a PowerPoint deck for presenting and sharing
-subhead: Share your deck and sharing rules. Get appendix navigation, speaker
-  notes, accessibility findings and an audience handout. Work on a copy of your
-  file. Get a clear record of what passed and what still needs checking.
-explain: >-
-  Share your deck and sharing rules. Get appendix navigation, speaker notes,
-  accessibility findings and an audience handout.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
+subhead: Give it your finished deck and your sharing rules. It links the main slides to the backup slides, adds speaker notes with a time budget, reviews the deck for accessibility and exports an audience copy without your notes or hidden slides. Work on a copy of your file.
+explain: |-
+  A finished deck is not yet ready to present or share. Backup slides are hard to find on stage. Notes sit in your head. People using screen readers cannot follow slides with no titles or picture descriptions. And the audience copy must not carry your private notes or hidden slides. This workflow prepares a PowerPoint deck for presenting and sharing in four steps.
 
+  Step 1 builds links from the main story to the appendix and back, and tests them. Step 2 adds short speaker notes, each tied to its source, with a time budget. Step 3 reviews reading order, slide titles, labels, contrast and alternative text for pictures. Step 4 exports an audience copy under your rules for notes, hidden slides and private information, and leaves your presenter file unchanged.
 
-  This workflow runs the full component methods in order and checks each handoff
-  before continuing. Your source files stay intact. The method starts by
-  checking what your AI already knows and which files it can read. It asks only
-  for missing facts that change the work.
-
-
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  This needs an AI that can open and save .pptx files. Links need testing in the app you will present in. Any check your AI cannot run, such as a link test or the built-in accessibility checker, stays on the list marked not run.
 when:
-  - You need the connected deliverables described above.
-  - You want the sources and checks carried through the handover.
-  - You need to see which steps still need your input.
+  - You have a finished deck with backup slides at the end, and you want to jump to them in the room.
+  - You must give the audience a copy but keep your notes and hidden slides private.
+  - Your organization asks for accessible slides.
+  - Someone else will present your deck and needs notes and timing.
+not_for:
+  - You still need to build the deck. Use the Editable slide deck builder or Turn a report into an editable briefing deck.
+  - The deck's numbers come from Excel and must be checked. Use Build a monthly Excel and PowerPoint update.
+  - You only want an accessibility check. Use the PowerPoint accessibility reviewer on its own.
+  - The deck is a research talk built from a paper. Use Build a research talk from checked figures.
 you_give:
-  - Actual deck, appendix boundaries, audience and talk length,
-    sharing/notes/hidden-slide rules and intended presentation application.
-  - The app and file tools your AI can use for the requested work
+  - Your finished deck (.pptx)
+  - Where the main story ends and the appendix starts
+  - The audience and the talk length
+  - Your sharing rules for notes, hidden slides, comments and names
+  - The app you will present in, such as PowerPoint
+  - Any accessibility needs in the room (optional)
 you_get:
-  - The native files and reports produced by the component methods, plus a run
-    register and unresolved-input list.
-  - A record of source files, changes and check results
-  - Missing facts and any checks that could not run
+  - "navigable-deck.pptx: main slides linked to the appendix and back, with a link test record"
+  - "deck-with-notes.pptx: short speaker notes tied to sources, and a rehearsal timing sheet"
+  - accessibility-review.md, and a fixed copy if you ask for one
+  - audience-handout.pdf, your unchanged presenter file and a sharing checklist
+  - A run record and a list of open items
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach your deck. Say where the appendix starts, who the audience is and what may and may not be shared.
+  - Open navigable-deck.pptx in the app you will present in. Click every link both ways.
+  - Read accessibility-review.md and fix each item. Run the app's own accessibility check as well.
+  - Open the handout and look for notes, hidden slides and names you did not mean to share.
 how_it_works:
-  - title: Step 1
-    text: 1. Read `skills/powerpoint-appendix-navigator/SKILL.md` completely and run
-      its full method. Index actual backup evidence and test internal and return
-      links in the intended presentation environment.
-  - title: Step 2
-    text: 2. Read `skills/powerpoint-speaker-note-builder/SKILL.md` completely and
-      run its full method. Add concise source-linked presenter notes with an
-      estimated timing budget.
-  - title: Step 3
-    text: 3. Read `skills/powerpoint-accessibility-reviewer/SKILL.md` completely and
-      run its full method. Inspect logical reading order, titles, labels,
-      contrast and alternative text; state native checks that could not run.
-  - title: Step 4
-    text: 4. Read `skills/powerpoint-audience-handout-builder/SKILL.md` completely
-      and run its full method. Export the authorized audience copy under the
-      explicit notes, hidden-content and confidentiality rules; preserve the
-      presenter source.
-output_shape: >-
+  - title: PowerPoint appendix navigator
+    text: Indexes the backup slides and links them to the main story, with a way back. Tests the links. Hands the linked deck to the notes step.
+  - title: PowerPoint speaker notes builder
+    text: Adds short speaker notes tied to their sources, with a time budget. Hands the deck with notes to the accessibility review.
+  - title: PowerPoint accessibility reviewer
+    text: Checks reading order, slide titles, labels, contrast and alternative text. Names every check it could not run. Hands the reviewed deck to the handout step.
+  - title: PowerPoint audience handout builder
+    text: Exports the audience copy under your rules for notes, hidden slides and private information. Your presenter file stays unchanged.
+output_shape: |-
   FILES
-
-  The native files and reports produced by the component methods, plus a run
-  register and unresolved-input list.
-
+    navigable-deck.pptx | link test record | deck-with-notes.pptx | timing sheet | accessibility-review.md | audience-handout.pdf | sharing checklist
 
   SOURCE MAP
-
-  <file and version> | <sheet, cell or slide> | <what it supports>
-
+    <file and version> | <slide> | <what it supports>
 
   CHECKS
-
-  <check> | <passed, failed or not run> | <evidence>
-
+    <check> | <passed, failed or not run> | <evidence>
 
   OPEN ITEMS
-
-  <missing fact or unsupported check> | <next action>
+    <missing fact or unsupported check> | <next action>
+output_sample:
+  input:
+    - Your finished deck
+    - Where the appendix starts
+    - The audience and the talk length
+    - Your rules for notes, hidden slides and private information
+  prerequisites:
+    - An AI that can open and save .pptx files
+    - The app you will present in, to test links and run its accessibility check
+  output:
+    - name: navigable-deck.pptx
+      contains: Your deck with main slides linked to the appendix and back, plus a link test record.
+    - name: deck-with-notes.pptx
+      contains: Short speaker notes tied to sources, with a rehearsal timing sheet.
+    - name: accessibility-review.md
+      contains: Problems with reading order, titles, labels, contrast and alternative text, and how to fix each.
+    - name: audience-handout.pdf
+      contains: The audience copy without your notes or hidden slides, as your rules say.
+    - name: Sharing checklist
+      contains: What to check before you send the handout, and a note that your presenter file is unchanged.
 tweaks:
   - what: Your source files
-    how: Actual deck, appendix boundaries, audience and talk length,
-      sharing/notes/hidden-slide rules and intended presentation application.
+    how: Give the real deck, where the appendix starts, the audience and talk length, and your sharing rules.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the handout format and page size. Say if you want a fixed copy of the deck or only a report.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which PowerPoint or other app you will present in. Your AI must name any check it cannot run.
 judge:
   - All required source versions and their meanings are identified.
-  - Every component method ran, or the workflow stopped with its exact missing
-    prerequisite.
+  - Every component method ran, or the workflow stopped with its exact missing prerequisite.
   - Workbook results, slide evidence, periods and units agree where they connect.
   - The result names its sources and keeps unrun checks visible.
 test:
   - Try the workflow on copies of files where you know the right result.
-  - Check each step against its full skill file and keep the source map with the
-    result.
-  - Reopen the saved files and check the reported figures, links and layout
-    before relying on them.
+  - Check each step against its full skill file and keep the source map with the result.
+  - Reopen the saved files and check the reported figures, links and layout before relying on them.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Save your sharing rules once and reuse them for every deck.
+  - Rehearse with the timing sheet, then update the notes with your real timings.
+  - Fix the accessibility problems in your template so new decks start clean.
+works_best_with:
+  tools:
+    - name: An AI that can open and save PowerPoint files
+      why: Links, notes and the audience copy all change a real .pptx file. Without that, you get a plan and the steps to do by hand.
+  inputs:
+    - The same app and version you will present in.
+    - A named person who reviews the handout before it goes out.
+next:
+  - build-a-monthly-excel-and-powerpoint-update
+  - powerpoint-accessibility-reviewer
+terms:
+  - term: Appendix
+    meaning: Backup slides at the end of a deck that you show only if someone asks.
+  - term: Alternative text
+    meaning: A short description of a picture or chart that a screen reader reads aloud.
+  - term: Handout
+    meaning: A copy of the slides for the audience, often without your private notes.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.

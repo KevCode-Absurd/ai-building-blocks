@@ -1,0 +1,155 @@
+name: Terminal Integration Specialist agent
+summary: Plan a terminal view inside your iPhone, Mac or Vision Pro app with SwiftTerm, including SSH hookup, keyboard input, smooth text and a test list.
+headline: Terminal Integration Specialist agent
+subhead: Tell it which Apple app needs a terminal and how it will connect, such as SSH. It plans how to embed SwiftTerm, pass text in and out, handle keys and copy, and keep scrolling smooth. You get an integration design and a test list.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A terminal looks simple until you build one. Text arrives in a stream of
+  special codes. Colors, cursor moves and wide characters all have to be drawn
+  right. Long sessions use memory. Connections drop mid-line. This agent plans
+  how to put a terminal view inside a Swift app using SwiftTerm, an open source
+  terminal library, so you hit those problems on paper first.
+
+
+  It covers the whole path. It plans how the view sits in SwiftUI. It plans how
+  your SSH stream feeds the screen and how keystrokes and paste go back. It
+  covers fonts, colors, selection and copy. It also plans what the screen shows
+  when the connection starts, fails or drops, and how VoiceOver and larger text
+  work.
+
+
+  It works from the Terminal Integration Specialist profile by Agency Agents.
+  The profile covers SwiftTerm on Apple platforms only. It plans the part that
+  runs on the device, not the server side. Your AI cannot build or run your app.
+  It also cannot look up SwiftTerm's current methods unless it can browse, so
+  it marks any method name as "confirm in the docs".
+when:
+  - You are adding an SSH or console screen to an iOS, macOS or visionOS app and have not picked a library setup yet.
+  - Your terminal view shows wrong characters, lags when text pours in, or breaks on rotation or resize.
+  - You need keyboard shortcuts, paste, selection and copy to feel normal on a touch screen.
+  - You want to know what the screen should do when the connection drops, before you write the code.
+not_for:
+  - You use a terminal library other than SwiftTerm. The plan will not fit.
+  - You are building a terminal on Android, Windows or the web.
+  - You want to manage servers or shells on the server side. This agent plans the part that runs on the device only.
+  - You are planning the whole Apple app. Use the Desktop App Engineer agent or the Mobile App Builder agent.
+you_give:
+  - The platforms the app runs on, such as iOS, macOS or visionOS
+  - How the app is built, such as SwiftUI or UIKit
+  - What feeds the terminal, such as an SSH library and its name
+  - What the terminal must do, such as run commands, show logs or let users type
+  - Your current code or the symptom you see (optional)
+you_get:
+  - A fit check that says if SwiftTerm and your setup match
+  - A picture in words of how the view, the connection and the keys connect
+  - Integration steps in order
+  - Input and display choices, such as fonts, colors, selection and copy
+  - Notes on speed, memory and connection states
+  - An accessibility list and a test list
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Say which platforms you target, how your app is built and what the terminal connects to. Paste your code if you have some.
+  - Say "Plan this. Do not invent SwiftTerm method names." Your AI asks once for anything missing.
+  - Read the fit check first. If it says SwiftTerm does not fit, stop and rethink before you read the rest.
+  - Look up each SwiftTerm method the plan names in SwiftTerm's own docs, then build in Xcode.
+  - Run the test list on a real device, then paste any failures back to your AI.
+how_it_works:
+  - title: Check the fit
+    text: It checks that you use SwiftTerm on an Apple platform and need the client side only.
+  - title: Place the view
+    text: It plans how the terminal view sits in your SwiftUI or UIKit screens and how it starts and stops.
+  - title: Bridge the stream
+    text: It plans how text from your SSH connection reaches the screen and how keystrokes and paste go back.
+  - title: Plan input and look
+    text: It covers special keys, selection, copy, fonts, colors and cursor style.
+  - title: Plan for speed and drops
+    text: It plans background reading, buffer size, scrolling, and what the screen shows when the link fails.
+  - title: Plan the checks
+    text: It covers accessibility and a test list for characters, long output and reconnects.
+output_shape: |-
+  FIT CHECK
+    <platform> | <app framework> | <connection source> | <fits or does not fit, and why>
+
+  HOW THE PIECES CONNECT
+    <terminal view> <-> <your session code> <-> <connection library>
+
+  INTEGRATION STEPS
+    <step> | <what you build> | <API names marked "confirm in docs" when unverified>
+
+  INPUT AND DISPLAY
+    <keys, paste, selection, copy, fonts, colors, cursor>
+
+  SPEED AND MEMORY
+    <risk> | <plan>
+
+  CONNECTION STATES
+    <starting, connected, failed, dropped, reconnected> | <what the screen shows>
+
+  ACCESSIBILITY
+    <VoiceOver, text size, other needs>
+
+  TEST LIST
+    <test> | <how to run it> | <expected result>
+
+  OPEN QUESTIONS
+    <what is missing or must be checked in the docs>
+output_sample:
+  input:
+    - Your platforms and app framework
+    - What feeds the terminal, such as your SSH library
+    - What the terminal must do
+    - Your current code or the problem you see (optional)
+  prerequisites:
+    - Xcode and a Swift app project, to build what the agent plans
+  output:
+    - name: Fit check
+      contains: Whether SwiftTerm and your platforms and connection match, and why.
+    - name: How the pieces connect
+      contains: How the terminal view, your session code and the connection library pass text and keys.
+    - name: Integration steps
+      contains: Build steps in order, with SwiftTerm method names marked for you to confirm in its docs.
+    - name: Input and display
+      contains: Choices for keys, paste, selection, copy, fonts, colors and cursor.
+    - name: Speed and memory
+      contains: Risks from fast output and long sessions, each with a plan.
+    - name: Connection states
+      contains: What the screen shows when the link starts, fails, drops and returns.
+    - name: Accessibility
+      contains: What VoiceOver and larger text need from the terminal view.
+    - name: Test list
+      contains: Tests for odd characters, long output, resizing and reconnects, each with an expected result.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: SwiftTerm
+    meaning: An open source library that draws a terminal inside an Apple app.
+  - term: SSH
+    meaning: A secure way to connect to another computer and run commands on it.
+  - term: Terminal emulation
+    meaning: Software that acts like a classic terminal, drawing text and handling special codes.
+  - term: Escape sequence
+    meaning: A hidden code in the text stream that tells the terminal to move the cursor or change color.
+  - term: VoiceOver
+    meaning: Apple's built-in screen reader for people who cannot see the screen.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can plan from your code. One that can browse can check SwiftTerm's current docs.
+  inputs:
+    - The SwiftTerm version and the SSH library you use.
+    - A short screen recording or description of the bug, if you have one.

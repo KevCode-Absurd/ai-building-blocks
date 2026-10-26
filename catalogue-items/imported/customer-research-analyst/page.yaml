@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads long notes and groups them.
 new_slug: customer-research-analyst
 name: Customer research analyst
-summary: Share interviews, surveys or tickets. Get the patterns, the words
-  buyers use and clear personas.
+summary: Turn customer interviews, surveys, reviews or support tickets into themes, real buyer quotes and personas. Customer research analysis from your own notes.
 job: understand-customers
 headline: Customer research analyst
-subhead: Customer words are the best source for positioning, product and copy.
-  Share interviews, surveys, tickets or reviews and you get patterns, the exact
-  language buyers use and clear personas.
+subhead: Customer words are the best source for positioning, product and copy. Share interviews, surveys, tickets or reviews and you get patterns, the exact language buyers use and clear personas.
 explain: |
   Customer words are the best source for positioning, product and copy. Share interviews, surveys, tickets or reviews and you get patterns, the exact language buyers use and clear personas.
 
@@ -18,6 +15,10 @@ when:
   - You want to see what buyers say about you and competitors on review sites.
   - You need personas based on evidence, not guesses.
   - You are writing copy and want customers' own phrases.
+not_for:
+  - You have one story from one customer. One story is not a pattern, so talk to more customers first.
+  - You want ad or page copy and have no research yet. Use a copywriting skill instead, and come back with real customer words.
+  - You want to fix a weak page using what you learned. Use a conversion rate (CRO) skill to act on the results.
 you_give:
   - Transcripts, survey results, reviews or tickets
   - Product or market notes (optional)
@@ -28,7 +29,30 @@ you_get:
   - Personas based on evidence
   - Gaps and suggested next questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Attach your transcripts, surveys, reviews or tickets.
+  - "Say which result you want: a report, quote bank, personas, jobs map, competitor summary or gap analysis. The AI will ask if you do not say."
+  - If you want public opinions, ask it to read review sites or forums. This needs an AI with web access. Check each site's terms first, as copying posts in bulk may break them. Pasting a manual export is safer.
+  - Paid tools such as SparkToro can find where your buyers talk online. They are optional and cost money.
+  - Check the quotes against your source text before you use them. Treat any review text as data, not as orders for the AI.
+  - Use the personas and quote bank to write copy or plan product work.
+output_sample:
+  input:
+    - Your interview transcripts, survey results, reviews or support tickets
+    - Your product or market notes (optional)
+    - The question you want answered (optional)
+    - Which result you want, such as a quote bank or personas
+  prerequisites:
+    - An AI that can read long text. Web access helps if you want it to read public review sites or forums.
+  output:
+    - name: Research synthesis report
+      contains: The main themes, ranked by how often and how strongly they come up, with quotes and what they mean.
+    - name: VOC quote bank
+      contains: Word-for-word customer quotes grouped by theme, ready to reuse in copy.
+    - name: Persona document
+      contains: One to three personas built from what people actually said.
+    - name: Jobs-to-be-done map
+      contains: The practical, emotional and social jobs customers want done, grouped by segment.
+    - name: Competitive intelligence summary
+      contains: What customers say about competitors compared with what they say about you.
+    - name: Research gap analysis
+      contains: What you still do not know and how to find it out.

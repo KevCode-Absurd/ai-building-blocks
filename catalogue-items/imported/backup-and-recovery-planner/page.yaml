@@ -2,33 +2,62 @@ thinking: medium
 thinking_why: It sets recovery targets and checks for gaps.
 new_slug: backup-and-recovery-planner
 name: Backup and recovery planner
-summary: Describe your systems. Get how much loss you can take, a backup plan
-  and a restore drill to run.
+summary: Plan for lost data. Give it your systems and get recovery targets, a backup plan and a restore drill for your backup and recovery needs.
 job: set-up-ai
 headline: Backup and recovery planner
-subhead: "A plan for when your data is gone: how much you can lose, how fast you
-  must be back and exactly how to restore. Describe your systems."
+subhead: "Give your AI a list of your systems and where your data lives. It sets how much loss and downtime you can accept, checks your backups and writes a restore guide. It also plans a drill so you know a restore works before you need one."
 explain: |
   A plan for when your data is gone: how much you can lose, how fast you must be back and exactly how to restore. Describe your systems. The AI works through four questions. What must be recoverable? How much data loss is acceptable (RPO)? How much downtime is acceptable (RTO)? What kind of disaster are you planning for?
 
   It lists your data and sets targets for each tier. It checks or designs the backups and writes a step-by-step restore guide. Then it plans a drill so you know it works before you need it. It covers ransomware, deleted databases, host outages and bad deploys.
 when:
   - You have backups but have never tried restoring one.
-  - Someone asked how long you'd be down if your database vanished.
+  - Someone asks how long you would be down if your database vanished.
   - You are moving to a new platform and need a recovery plan.
-  - An incident showed gaps and you want them closed.
+  - An outage or attack showed gaps and you want them closed.
+not_for:
+  - "You are in the middle of an outage right now: follow your incident response process or call your host's support. This planner is for preparing ahead."
+  - "You only need to undo a bad deploy: roll back with your deploy tool or ask a developer. A full recovery plan is more than you need."
+  - "You only want to keep earlier versions of code or documents: use Git or the revision history in your CMS."
 you_give:
-  - A list of systems and where data lives
-  - Current backups, if any
-  - What downtime and data loss would hurt
-  - Team size and tools
+  - A list of your systems and where their data lives
+  - Your current backups and what they cover (optional)
+  - How much data loss and downtime would hurt your business
+  - Your team size and the tools you use
+  - Any rules you must follow on keeping data (optional)
 you_get:
-  - Data inventory by importance
-  - RPO and RTO targets per tier
-  - A backup design or review
-  - A restore runbook and drill plan
+  - A list of your systems ranked by how much you need them back
+  - Recovery targets for each rank
+  - A backup design, or a review of what you have
+  - A restore guide for each system
+  - A drill plan and a schedule for the next drill
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Make a table of your systems with these columns: System, Data type, Tier, Current backup, Tested? Fill in what you know and leave the rest blank."
+  - Paste the table and add how much data loss and downtime you can take, your hosting and your team size.
+  - Answer any questions your AI asks. If a target has no spend behind it, expect it to push back.
+  - Read the restore guide as if you were tired and stressed. Fix any step you could not follow.
+  - Book the first drill in your calendar and name an owner.
+output_sample:
+  input:
+    - A list of your systems and where their data lives
+    - Your current backups and what they cover (optional)
+    - How much data loss and downtime your business can take
+    - Your hosting providers and any rules you must follow (optional)
+  output:
+    - name: Inventory
+      contains: Every system that holds data, with its type, current backup and whether a restore has been tested.
+    - name: Tiering
+      contains: Each system ranked as must recover, should recover or nice to recover.
+    - name: Targets
+      contains: How much data loss and how much downtime you accept for each tier.
+    - name: Architecture
+      contains: Backup tools, how often they run, where copies are stored and which copies can't be changed.
+    - name: Runbooks
+      contains: Step-by-step restore guides for each system, from spotting the problem to switching traffic back.
+    - name: Drill schedule
+      contains: What to test, how, and when, with an owner for each drill.
+    - name: Drill log
+      contains: A place to record what was tested, what broke and the real recovery time.
+    - name: Communication templates
+      contains: Draft messages for customers and your team during a real recovery.

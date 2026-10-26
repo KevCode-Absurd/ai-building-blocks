@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/server/public-*.ts", "src/server/company-*.ts", "src/server/mcp-oauth.ts", "src/mcp-connect.ts", "src/worker.ts", "functions/api/v1/**/*.ts"]
+}

@@ -2,18 +2,64 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-devops-rollout-plan
 name: Service rollout and rollback planner
-summary: Share a release or infrastructure change. Get preflight checks, rollout
-  stages, health signals and a rollback plan.
+summary: Plan a safe service rollout and rollback. Share your release or infrastructure change and get preflight checks, stages, health signals and a rollback plan.
 job: ship-and-host
 headline: Service rollout and rollback planner
-subhead: Share a release or infrastructure change. Get preflight checks, rollout
-  stages, health signals and a rollback plan. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Tell your AI what you are changing and where it runs. It writes a rollout plan with checks, steps, health signals and a way back. You review it before anyone uses it.
+not_for:
+  - "You need to fix a live outage right now: follow your own incident runbook or call your on-call engineer, since this plan takes time to review."
+  - "You are only moving or changing data: ask your database owner for a migration runbook, because this plan covers the whole release, not data steps alone."
+  - "You want to write the code or the deploy scripts: use your CI/CD system or a developer, since this skill writes a plan and not the pipeline."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. No code running or files are needed.
+  - "Paste the skill text, then describe your change: what, from and to versions, and where it runs."
+  - Add your downtime limit, change window, approvals and known risks. Say which tools you deploy with.
+  - If your AI asks for missing details, answer them. Do not let it guess.
+  - Check every command against your own setup before you run it in production.
+  - Share the plan with your team and fix gaps before the change window.
+output_sample:
+  input:
+    - What is changing, and the from and to versions
+    - "Where it runs: the environment and the type of setup, such as Kubernetes or virtual machines"
+    - Your downtime limits, change window and approvals needed
+    - Known risks, data changes and how hard a rollback would be (optional)
+  output:
+    - name: Executive Summary
+      contains: What is changing, why, when, how long it takes, the risk level, rollback time and user impact.
+    - name: Prerequisites & Approvals
+      contains: Approvals you need, resources to have ready and backups to take before you start.
+    - name: Preflight Checks
+      contains: Health checks, baseline numbers, dependency checks and a go or no-go checklist.
+    - name: Step-by-Step Rollout Procedure
+      contains: Phases with commands, a check after each step and time estimates.
+    - name: Verification Signals
+      contains: What to watch at 0-2, 2-5, 5-15 and 15+ minutes after the change.
+    - name: Rollback Procedure
+      contains: When to roll back, the steps, how to confirm health returns and who to tell.
+    - name: Communication Plan
+      contains: Who to notify before, during and after the change, with a stakeholder table.
+    - name: Post-Deployment Tasks
+      contains: Checks and reviews at 1 hour, 24 hours and 1 week.
+    - name: Contingency Plans
+      contains: Symptoms, response and timeline for partial failure, slow performance, bad data and a failed dependency.
+    - name: Contact Information
+      contains: On-call people, the escalation path and emergency contacts.
+when:
+  - You are about to ship a new version of a service to production.
+  - You are changing infrastructure, such as a cluster or server setup.
+  - Your team needs sign-off and a clear rollback before a release.
+  - You want a stakeholder message plan for a planned change.
+you_give:
+  - What is changing, and the from and to versions
+  - "Where it runs: dev, staging or production, and the setup type"
+  - The services and dependencies it touches
+  - Your downtime limit, change window and approvals needed
+  - Known risks, data changes or compliance rules (optional)
+  - The tools you use to deploy, such as kubectl or a CI/CD system (optional)
+you_get:
+  - A summary with the risk level and rollback time
+  - Preflight checks with a go or no-go list
+  - Rollout steps with commands and a check after each
+  - Health signals to watch over the first 15 minutes and beyond
+  - A rollback plan with clear triggers
+  - A communication plan and a list of contacts

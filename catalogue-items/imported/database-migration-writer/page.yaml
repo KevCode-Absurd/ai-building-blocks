@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows migration tool rules and plans a safe rollback.
 new_slug: database-migration-writer
 name: Database migration writer
-summary: Describe the schema change. Get a versioned migration that runs forward
-  and rolls back safely.
+summary: Describe a schema change and get a database migration that runs forward and rolls back safely, with a plan for no downtime on production.
 job: build-software
 headline: Database migration writer
-subhead: A tested schema change that moves your database forward and can roll
-  back cleanly if it goes wrong. It aims for no downtime on production.
+subhead: A tested schema change that moves your database forward and can roll back cleanly if it goes wrong. It aims for no downtime on production.
 explain: |
   A tested schema change that moves your database forward and can roll back cleanly if it goes wrong. It aims for no downtime on production.
 
@@ -17,6 +15,10 @@ when:
   - You are renaming a field without breaking the live app.
   - You need a rollback plan before releasing a schema change.
   - You must backfill old rows with new values.
+not_for:
+  - Your data lives in a document store or has no fixed schema. Migrations do not apply, so use your database's own tools.
+  - You plan a major rewrite of your data model. Plan it with a database expert (DBA) and review it by hand.
+  - You only need a quick one-off query on a test database. Run the SQL yourself, no migration needed.
 you_give:
   - The schema change you want
   - Your migration tool or stack
@@ -28,8 +30,33 @@ you_get:
   - Backfill steps
   - Staged rollout plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI. Paste the skill instructions, or upload the skill folder if your AI accepts files.
+  - Describe the schema change in plain words. Add your migration tool, database type and table size if you know it.
+  - Read the migration and the rollback it gives you. Check any rename, since some tools treat a rename as drop and add.
+  - Back up your database. Run the migration on a staging copy and run your tests.
+  - Roll out to production in the phases the plan lists. Run nothing on production until you have confirmed the backup and staging test.
+  - Running the migration needs an AI that can run code and read your project files. In a plain chat, you copy the files and run the commands yourself.
+output_sample:
+  input:
+    - The schema change you want, in plain words
+    - Your migration tool or stack, such as Alembic, Prisma Migrate, Flyway, Knex, Django or Sequelize
+    - Your database type
+    - Table size (optional)
+  prerequisites:
+    - An AI that can run code and read your project files, if you want it to apply the migration for you
+    - A staging copy of your database that mirrors production
+  output:
+    - name: Change assessment
+      contains: Says whether the change is safe and additive, or breaking and needing several phases.
+    - name: Forward migration
+      contains: The migration file for your tool, built from the schema diff and then reviewed.
+    - name: Rollback migration
+      contains: The downgrade logic written by hand, so you can undo the change.
+    - name: Backfill steps
+      contains: How existing rows get new values, kept in step with the schema change.
+    - name: Staging test
+      contains: "What to check on staging: it applies cleanly, queries still work and rollback restores the old state."
+    - name: Staged rollout plan
+      contains: The expand and contract phases for production, so each phase can be rolled back.
+    - name: Post-deploy check
+      contains: How to confirm migration status and what to watch in logs and database speed.

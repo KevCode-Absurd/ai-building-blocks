@@ -1,6 +1,6 @@
 new_slug: site-search-basics-checker
 name: "Site search basics checker"
-summary: "Paste your site address and page list. Get a short fix list for duplicate titles, a missing sitemap and dead-end 404 pages."
+summary: "Check your site for duplicate titles, a missing sitemap and 404 dead ends. Get a score out of 100 and a fix list ranked by pages affected."
 job: audit-landing-page
 thinking: low
 thinking_why: "It checks a short list of basic faults and ranks them by pages affected."
@@ -17,6 +17,10 @@ when:
   - "Your site has grown by adding tags, categories or paged lists."
   - "Some pages get no search traffic and you do not know why."
   - "Visitors land on error pages from old links."
+not_for:
+  - "You run paid ads and want them checked: this skill only looks at search basics, so use your ad platform's own reports."
+  - "Your site has only a few pages: a quick look in Google Search Console is enough, so check its index and error reports by hand."
+  - "You want to know why one page ranks low: this skill checks site-wide basics, so ask a person who knows your topic to review that page."
 
 you_give:
   - "Your site address"
@@ -35,6 +39,30 @@ how_to_use:
   - "Add your 404 list and pages with no search traffic if you have them."
   - "Work down the fix list from the top."
   - "Check your search traffic again after a few weeks."
+output_sample:
+  input:
+    - Your site address
+    - A list of your pages with titles and descriptions
+    - Your list of 404 errors (optional)
+    - Your search traffic by page (optional)
+    - Whether you use a plugin or a hosted platform (optional)
+  output:
+    - name: Score
+      contains: "A score out of 100 with the sums shown: titles, sitemap, 404 handling and indexed pages."
+    - name: Duplicate titles and descriptions
+      contains: Groups of repeated titles by pattern, with the number of pages affected and examples.
+    - name: Sitemap
+      contains: Whether a sitemap exists, is submitted, and how many pages are indexed.
+    - name: 404 errors
+      contains: Each missing address, how often it was requested, and where to send it.
+    - name: Pages with no search traffic
+      contains: Pages that got no visits, and whether each one is indexed.
+    - name: The 404 page
+      contains: What a helpful error page should show, including related pages and a search box.
+    - name: Fix list
+      contains: Fixes ranked by pages affected, each with a count.
+    - name: Check again on
+      contains: A date to re-check, plus a note that the advice dates from 2013.
 
 how_it_works:
   - title: "Lists titles"

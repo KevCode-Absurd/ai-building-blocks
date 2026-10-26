@@ -1,6 +1,6 @@
 new_slug: staff-phishing-rules-briefer
 name: "Staff phishing rules briefer"
-summary: "Give it your tools and team size. Get a one-page phishing rule sheet and a ten-minute drill with answers."
+summary: "Write a phishing rule sheet for your staff, plus a ten-minute drill with ten sample cases and answers, built around the tools your team uses."
 job: protect-your-store
 thinking: low
 thinking_why: "It turns a short list of tools and rules into a clear sheet and quiz. A small, fast model can do this."
@@ -17,6 +17,10 @@ when:
   - You are onboarding staff, a contractor or an agency who will touch your store or ad accounts.
   - Someone nearly fell for a fake login, invoice or "urgent" message.
   - You want a short team session on security that people will remember.
+not_for:
+  - "Your team shares logins or has no second step on sign-in: fix that first, since no rule helps when ten people use one password."
+  - "You need to check how safe your sign-ins are right now: use the Sign-in security checker first, then come back for the rule sheet."
+  - "You need to report or stop a live attack: contact your store platform's support and change your passwords now."
 
 you_give:
   - "The accounts that matter: store admin, email, ad accounts, payments, domain registrar, social"
@@ -34,6 +38,22 @@ how_to_use:
   - Print or pin the sheet where your team works.
   - "Run the drill in a team call: show each case, ask safe or unsafe, then discuss the answer."
   - Run it again when staff change and after any near miss.
+output_sample:
+  input:
+    - The accounts that matter, such as store admin, email, ad accounts, payments, domain registrar and social
+    - Your team size and who shares logins
+    - Whether you use a password manager or security keys
+  output:
+    - name: How we avoid fake login pages
+      contains: A one-page sheet of eight plain rules on the password manager, keys, links, addresses, pop-ups, pasting, padlocks and offers.
+    - name: Who to tell
+      contains: The person or channel staff should tell about a suspicious message.
+    - name: Drill
+      contains: Ten sample cases for a ten-minute team session, each with a safe or unsafe answer and a one-line reason.
+    - name: Tools the rules need
+      contains: What must be in place first, such as a password manager or security keys, for the rules to work.
+    - name: Missing
+      contains: A note on any detail you did not give, such as accounts, team size or tools.
 
 how_it_works:
   - title: Fits your tools

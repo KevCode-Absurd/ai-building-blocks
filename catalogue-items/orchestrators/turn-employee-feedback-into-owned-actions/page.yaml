@@ -1,52 +1,93 @@
 new_slug: turn-employee-feedback-into-owned-actions
 name: Turn employee feedback into owned actions
 headline: Turn employee feedback into owned actions
-summary: Share the source files. Get a theme summary, prioritized actions and a draft response to staff.
+summary: Turn employee survey comments into a theme summary, priority actions with owners and a draft reply to staff, with small groups kept private.
 job: lead-people
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A theme summary, prioritized actions and a draft response to staff. Share anonymized employee feedback, survey purpose, team scope and privacy limits. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI staff feedback with names removed, what it was for and your privacy limits. It finds the themes, turns the supported ones into risks and priority actions with owners and dates, and drafts a staff update. Groups too small to stay anonymous are held back.
 explain: |-
-  A theme summary, prioritized actions and a draft response to staff.
+  Staff feedback often goes in one of two directions. It sits in a folder, or it turns into a long list of fixes with no owner. Then people ask what happened to their survey, and trust drops.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Small groups and identifying comments are protected; actions have owners and a way to check progress. Missing tools or evidence stay visible in the final summary.
+  This workflow keeps the loop short. Step 1 reads the comments within their sample limits, separates themes raised by many people from one-off remarks, and holds back any group too small to stay anonymous. Step 2 turns the themes that are backed by evidence into risks and priority actions. Each action gets an owner and a date to check. Where the evidence is thin, it says what to find out first. Step 3 drafts a reply for staff: what we heard, what we will look at and who owns what.
+
+  You must remove names and identifying detail before you paste. The AI does not make feedback anonymous. You also decide whether you may use the feedback this way and how long to keep it. It checks neither.
 when:
-  - You need a theme summary, prioritized actions and a draft response to staff.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A survey, exit interviews or a suggestion box produced a pile of comments and nobody has acted yet.
+  - Staff ask "what happened to the survey?" and you have no answer.
+  - You promised to report back by a date and need a clear message that makes no promises you cannot keep.
+  - Leaders want three priorities from the feedback, each with an owner.
+not_for:
+  - One person's complaint, grievance or disciplinary case. Take it to HR. The workplace investigation guide can help plan a formal review.
+  - Fewer responses than your smallest reportable group. Results would be withheld. Collect more first with the employee survey designer.
+  - You already have actions and want to track them. Use the employee feedback action review assistant.
+  - The feedback is about one new policy. Use the review staff adoption of a policy change workflow.
 you_give:
-  - Anonymized employee feedback, survey purpose, team scope and privacy limits.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Employee feedback with names and identifying details removed (from your survey tool, interview notes or suggestion box)
+  - What the feedback was for, and when it was collected
+  - The teams it covers, with headcount for each, so small groups can be held back
+  - Your privacy limits, such as the smallest group you may report on, how long to keep the data and who may see it
+  - People who could own actions (optional)
 you_get:
-  - A theme summary, prioritized actions and a draft response to staff.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A theme summary that shows what many people raised and what only a few did
+  - A list of groups held back because they are too small to report
+  - Risks and evidence gaps for the themes the feedback supports, with a proposed action for each
+  - Priority actions, each with an owner, a check date and a sign it worked
+  - A draft staff update, ready for your review before it is sent
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Remove names and any detail that points to one person. Check that you may use the feedback for this purpose.
+  - Paste the feedback, what it was for, each team's headcount and your privacy limits.
+  - After step 1, read the themes. Check that nothing points to one person and that the counts match your data.
+  - Edit the staff update before it goes out. Add a real date for your next report-back.
 how_it_works:
   - title: Employee survey designer
-    text: Read the supplied responses within their sample limits and separate recurring themes from isolated reports.
+    text: Reads the comments within their sample limits and keeps anonymity. Separates themes many people raised from one-off remarks, and holds back small groups. Hands step 2 the themes with counts. Check before moving on, no group below the limit is shown.
   - title: People risk register builder
-    text: Turn supported themes into concrete risks, evidence gaps and proposed actions.
+    text: Turns each supported theme into a risk, names the evidence gap and proposes an action. Hands step 3 the priority actions. Check before moving on, each risk traces to a theme.
   - title: Stakeholder update writer
-    text: Draft a staff update covering what was heard, what will be investigated and who owns the next steps.
+    text: Writes a staff update. It says what was heard, what will be looked at and who owns the next steps. It names no one and promises nothing beyond the actions.
+  - title: Check and hand back
+    text: Joins the three files, checks the update against the actions and marks what still needs a person to decide.
 output_shape: |-
-  Scope and source coverage
-  A theme summary, prioritized actions and a draft response to staff.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  THEME SUMMARY
+    <theme | how many raised it | which groups | recurring or one-off | what people said, in paraphrase>
+  WITHHELD <groups too small to report>
+  RISKS AND EVIDENCE GAPS
+    <risk | theme | evidence | what to find out | proposed action>
+  PRIORITY ACTIONS
+    <action | theme | owner | check date | how you will know it worked>
+  DRAFT STAFF UPDATE <what we heard, what we will look at, who owns next steps, when we report back>
+  APPROVAL <who approves before it is sent, status: draft>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - "Employee feedback with names and identifying details removed"
+    - "What the feedback was for and when it was collected"
+    - "The teams it covers, with headcount for each"
+    - "Your privacy limits, including the smallest group you may report on"
+  prerequisites:
+    - "An AI that can read files or long pasted text"
+    - "Your own check that you may use the feedback this way"
+  output:
+    - name: "Theme summary"
+      contains: "Each theme with counts, groups and whether it was recurring or a one-off."
+    - name: "Withheld groups"
+      contains: "Groups too small to report without pointing to a person."
+    - name: "Risks and evidence gaps"
+      contains: "A risk for each supported theme, what to find out and a proposed action."
+    - name: "Priority actions"
+      contains: "Each action with an owner, a check date and a sign that it worked."
+    - name: "Draft staff update"
+      contains: "What we heard, what we will look at, who owns next steps and when we report back."
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Small groups and identifying comments are protected; actions have owners and a way to check progress.
+  - what: Group size
+    how: Say your smallest reportable group. If you do not, the AI uses 5 and labels it as an assumption you can change.
+  - what: Number of actions
+    how: Ask for the top three. The rest stay in the risk list, so nothing is lost.
+  - what: Tone
+    how: Say how your team talks, formal or relaxed. The staff update follows it and keeps the same facts.
 judge:
   - Small groups and identifying comments are protected; actions have owners and a way to check progress.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +100,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the themes and actions from each run so the next survey shows what changed.
+  - Add your real report-back date and owners to the draft before it goes out.
+  - Move the actions to the employee feedback action review assistant to track them until they close.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads all the comments and the pack together. Nothing is sent or changed for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Headcount for each team, so small groups can be held back.
+    - Last survey's themes, to see what changed.
 terms:
+  - term: Theme
+    meaning: A topic that several people raised, such as workload or unclear roles.
+  - term: Small group
+    meaning: A team so small that its answers could point to one person, so results are held back.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

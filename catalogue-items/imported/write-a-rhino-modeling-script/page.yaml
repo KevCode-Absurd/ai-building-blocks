@@ -1,20 +1,54 @@
 new_slug: write-a-rhino-modeling-script
 name: Write a Rhino modeling script
-summary: Write or fix a Rhino script. Handle units, undo and user input with care.
+summary: Write or fix a Rhino script in Python, VBScript or C#. Get code that respects your units and undo, plus steps to run and check it.
 job: design-work
 headline: Write a Rhino modeling script
 subhead: Share your Rhino version, task and source script. Choose the right API and guard each change. Get code and steps to check it.
 explain: Share your Rhino version, task and source script. Choose the right API and guard each change. Get code and steps to check it.
 when:
-  - You want to write a Rhino modeling script.
+  - You want a new Rhino script for a modeling task, such as editing many objects at once.
+  - A script you have fails, freezes Rhino, or undoes only one object at a time.
+  - You need to share a script with a teammate or run it when Rhino starts.
+  - Not for a fixed list of commands with no variables (use a command macro) or for non-Rhino CAD work.
+not_for:
+  - "You only need a fixed run of commands with no variables or loops: use a Rhino command macro instead."
+  - "You work in other CAD software, not Rhino: use that program's own scripting help."
+  - "You need proof the script runs in Rhino: run it yourself, because your AI cannot test it for you."
 you_give:
   - The Rhino version, modeling task, document units, input geometry and any existing script.
 you_get:
-  - A scoped Python, VBScript, C# or command-macro solution with running instructions and verification limits.
+  - A script file in the language that fits your task, ready to paste into Rhino's Script Editor.
+  - The exact way to run it, by Script Editor steps or a run command.
+  - A short list of checks to do in Rhino to confirm it worked.
+  - A plain note on what was not tested, since your AI cannot run Rhino.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI your Rhino version, your task, your document units and what geometry the script touches.
+  - Paste your current script if you have one.
+  - Copy the code into Rhino's Script Editor and run it with the steps your AI gives you.
+  - Do the listed checks in Rhino, then send any error text back to your AI to fix.
+output_sample:
+  input:
+    - Your Rhino version
+    - What you want the script to do
+    - Your document units and the geometry it works on
+    - Your existing script, if you have one (optional)
+  prerequisites:
+    - Rhino 7 or later, with Rhino 8 best
+    - Rhino's Script Editor to run the result
+  output:
+    - name: Script choice
+      contains: "Which type fits your task: Python, VBScript, C# or a command macro, and why."
+    - name: Script code
+      contains: The full script, with checks on picked objects and your document's tolerance.
+    - name: Redraw and undo handling
+      contains: Code that pauses redraw, groups changes into one undo step, and restores the view if something fails.
+    - name: How to run it
+      contains: Steps to open the Script Editor or run the file by name, or set up a toolbar button.
+    - name: Checks to perform
+      contains: What to look for in Rhino to confirm the script did the right thing.
+    - name: Verification limits
+      contains: A plain note that the script was not run in Rhino, and what that leaves unchecked.
 how_it_works:
   - title: Choose the scripting surface
     text: Match task complexity and the installed Rhino runtime to Python, legacy VBScript, C# or a macro.

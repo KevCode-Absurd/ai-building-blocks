@@ -1,53 +1,99 @@
 new_slug: rollover-equity-ownership-checker
 name: Rollover equity ownership checker
 headline: Rollover equity ownership checker
-summary: Reconcile a seller rollover amount with cash proceeds and same-class post-close ownership.
+summary: "Work out a seller's cash and ownership share after rolling part of the sale proceeds into the buyer's new equity, with every sum shown."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Seller cash, rollover contribution and post-close ownership fraction. Share seller proceeds before rollover, approved rollover fraction, new sponsor cash and documents confirming identical class and issue price.
+subhead: "Give it the seller's proceeds before rollover, the share that rolls, the cash the buyer puts in and a note that both buy the same shares at the same price. It works out the rolled amount, the seller's cash and the seller's ownership share. You get the sums and a list of terms to confirm."
 explain: |-
-  Seller cash, rollover contribution and post-close ownership fraction.
+  In many company sales, the seller keeps a stake instead of taking all the cash. That is a rollover. The seller's proceeds drop by the rolled amount, and that amount buys new shares next to the buyer's cash. This rollover equity calculator shows both sides: how much cash the seller gets, and what share of the new company the seller owns.
 
-  Private equity ownership. Illustrative figures only. 25% of40 rolls10 beside sponsor30, giving25% ownership and30 cash.50% rolls20 for40% ownership and20 cash.
+  The sum is simple only when both sides buy the same class of share at the same price. If the seller's stake is a different class, or comes with extra shares for managers or a preferred return, the quick ownership split is wrong. The skill asks about this first. It holds back the ownership figure until the answer is clear.
+
+  It also guards against two slips. One is counting the rolled amount as cash paid out. The other is counting it again as new money in. A rollover cuts seller cash once and counts as a non-cash source of funds once. The ownership share it gives is a share of this class only. It is not voting power or exit value.
 when:
-  - You need seller cash, rollover contribution and post-close ownership fraction.
-  - You work on private equity ownership and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - "A seller will keep part of the proceeds as a stake in the new company, and you want the cash and ownership split."
+  - "You want to compare two rollover sizes, such as 25% and 50%, before a term sheet is settled."
+  - "You are building a funding table and need the rollover shown as a non-cash source."
+  - "A reviewer asks how you reached the seller's ownership percentage."
+not_for:
+  - "The seller's stake is a different class of share, or comes with extra shares or a preferred return: take it to a deal lawyer or adviser. This skill covers the same class at the same price only."
+  - "You want the cash the seller receives at closing after debt and price adjustments: use the Closing equity proceeds checker."
+  - "You want to check a manager's share above a value hurdle: use the Management equity hurdle checker."
+  - "You want ownership after a startup funding round: use the Post-money SAFE ownership checker."
+  - "You want to know if the rollover is tax free: ask a tax adviser. This skill does not decide that."
 you_give:
-  - Seller proceeds before rollover, approved rollover fraction, new sponsor cash and documents confirming identical class and issue price.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Seller proceeds before rollover, from the purchase agreement or term sheet"
+  - "The share of proceeds that rolls, as a percentage"
+  - "The cash the buyer puts into the same equity"
+  - "A document or note showing both sides buy the same class of share at the same price"
+  - "The currency and scale, such as USD millions"
+  - "Other holders or extra shares in the deal (optional)"
 you_get:
-  - Seller cash, rollover contribution and post-close ownership fraction.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The rolled amount: proceeds times the rollover share"
+  - "The seller's cash: proceeds less the rolled amount"
+  - "Total equity: rolled amount plus the buyer's cash"
+  - "The seller's ownership share, with the sum shown"
+  - "A list of terms to confirm in the documents, and what is missing"
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Open the skill in Claude, ChatGPT or Gemini, or paste it in as your first message. Add it to your AI if you want to reuse it."
+  - "Paste the figures from the list above with the currency and scale. Add the term sheet or agreement pages that show the share class and price, if you have them."
+  - "Answer the first question it asks: do both sides buy the same class of share at the same price? If you are not sure, say so. The ownership figure then waits."
+  - "Read the sums and the list of terms to confirm. Take that list to your lawyer or deal adviser."
+  - "To compare cases, ask for a rerun with a different rollover share. Buyer cash stays the same unless you change it."
 how_it_works:
-  - title: 1. Confirm seller and sponsor buy identical economic units at the same price; separate any sweet equity or preference security
-    text: Confirm seller and sponsor buy identical economic units at the same price; separate any sweet equity or preference security.
-  - title: 2. Multiply seller proceeds by rollover fraction and subtract it from seller cash
-    text: Multiply seller proceeds by rollover fraction and subtract it from seller cash.
-  - title: 3. Divide rollover contribution by rollover plus sponsor cash; reconcile each holder contribution to total same-class equity
-    text: Divide rollover contribution by rollover plus sponsor cash; reconcile each holder contribution to total same-class equity.
+  - title: 1. Checks same class and price
+    text: Asks if both sides buy identical shares at the same price. Extra shares for managers or a preferred security are set aside.
+  - title: 2. Works out the rolled amount
+    text: Multiplies the seller's proceeds by the rollover share.
+  - title: 3. Works out the seller's cash
+    text: Takes the rolled amount off the proceeds, once, so the rollover is not counted as cash paid out.
+  - title: 4. Works out ownership
+    text: Divides the rolled amount by the rolled amount plus the buyer's cash.
+  - title: 5. Reconciles
+    text: Checks that each holder's money adds up to total equity of that class, and lists the terms still to confirm.
 output_shape: |-
-  Seller cash, rollover contribution and post-close ownership fraction.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  DEAL TERMS
+  <currency and scale> | Seller proceeds: <amount> | Rollover share: <percent> | Buyer cash: <amount> | Same class and price: <confirmed, not confirmed or MISSING>
+
+  SUMS
+  Rolled amount: <proceeds> x <share> = <amount>
+  Seller cash: <proceeds> - <rolled amount> = <amount>
+  Total equity: <rolled amount> + <buyer cash> = <amount>
+  Seller ownership: <rolled amount> / <total equity> = <percent>
+
+  TO CONFIRM
+  <terms the documents must show before you rely on this>
+
+  MISSING
+  <figures not supplied>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+output_sample:
+  input:
+    - "The seller's proceeds before rollover and the share that rolls"
+    - "The cash the buyer puts into the same equity"
+    - "A note that both sides buy the same class of share at the same price"
+  prerequisites:
+    - "The term sheet or purchase agreement pages that show the share class and price"
+    - "An AI that can make files, only if you want a spreadsheet (optional)"
+  output:
+    - {name: "Deal terms", contains: "Your figures, the currency and scale, and whether same class and price is confirmed."}
+    - {name: "Sums", contains: "Rolled amount, seller cash, total equity and the seller's ownership share, each with its working."}
+    - {name: "To confirm", contains: "The terms the documents must show, such as price per share, class, fees and voting rights."}
+    - {name: "Workbook (optional)", contains: "An editable spreadsheet with inputs, formulas and a checks tab, if your AI can make files."}
+    - {name: "MISSING and CHECKS MISSED", contains: "What you did not supply, and every check that failed or could not run."}
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Rollover share
+    how: Ask for a small table at 10%, 25% and 50%, with buyer cash held the same in each row.
+  - what: Buyer cash
+    how: If the deal size moves with the rollover, give the buyer cash for each case. The sums hold it fixed unless you change it.
+  - what: Other holders
+    how: Add each holder's cash and price so every holder's share can be shown and the shares add to 100%.
   - what: Acceptance
-    how: Rollover reduces seller cash once and enters funding as a noncash source once.
+    how: Rollover reduces seller cash once and enters funding as a non-cash source once.
 judge:
   - Rollover reduces seller cash once and enters funding as a noncash source once.
   - Equal contribution valuation is valid only for the same price and economic class.
@@ -58,19 +104,27 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save the share class and price wording from your term sheet once, so each new case only changes the figures."
+  - "Keep a note of each case you ran and which one the final documents confirmed."
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Any good chat AI
+      why: The sums are short, so the AI can show them line by line in the chat.
+    - name: A file-capable AI or a spreadsheet app
+      why: Needed only if you want an editable workbook with a checks tab.
+    - name: Node.js 20 or later (optional)
+      why: Runs the bundled script that repeats the sums, as a second check.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The term sheet or purchase agreement pages that set the price and share class
+    - A deal adviser or lawyer who can confirm the terms
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Rollover
+    meaning: The seller keeps part of the sale proceeds as shares in the new company instead of taking cash.
+  - term: Sponsor
+    meaning: The buyer, often an investment firm that buys the company with its own cash.
+  - term: Same class of share
+    meaning: Shares with the same rights and the same price per share, so money in maps straight to ownership.
+  - term: Sweet equity
+    meaning: Extra shares given to managers on better terms than the buyer pays.
+  - term: Ownership share
+    meaning: The part of one class of shares a holder owns. It is not voting power or a share of exit value.

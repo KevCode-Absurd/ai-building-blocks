@@ -39,8 +39,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Specific knowledge finder.** Use the skill `specific-knowledge-finder`. Your specific knowledge, with a way to test each
-2. **Hours-to-assets planner.** Use the skill `hours-to-assets-planner`. Give it the plan from the steps before. Which parts earn only while you work, and a plan to build something you own. Reads the plan from the step before
-3. **Long-term partner screener.** Use the skill `long-term-partner-screener`. Give it the plan from the steps before. A check on intelligence, energy and integrity, and whether it is a game worth repeating. Reads the plan from the step before
+2. **Hours-to-assets planner.** Use the skill `hours-to-assets-planner`. Give it your specific knowledge from step 1 as what you are known for. Which parts earn only while you work, and a plan to build something you own. Hands the product plan to step 3
+3. **Long-term partner screener.** Use the skill `long-term-partner-screener`. Give it the plan from the steps before. A check on intelligence, energy and integrity, and whether it is a game worth repeating. Use the plan from step 2 as the game you would play together. Add who the partner is and what you have seen them do
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Choosing a filter needs technical judgement.
 new_slug: inertial-sensor-fusion-builder
 name: Inertial sensor fusion builder
-summary: Describe your sensors. Get the right fusion filter chosen and built to
-  track orientation or position.
+summary: Find the right inertial sensor fusion filter in MATLAB for your IMU and GPS. Get the build code and tuning steps to track orientation or position.
 job: build-software
 headline: Inertial sensor fusion builder
-subhead: Describe your sensors. Get the right fusion filter chosen and built to
-  track orientation or position. Bring the list of sensors you have. Use the
-  result to plan your next step.
+subhead: Describe your sensors. Get the right fusion filter chosen and built to track orientation or position. Bring the list of sensors you have. Use the result to plan your next step.
 explain: |
   The right fusion filter chosen and built for your sensors, so you can track orientation or position from accelerometers, gyros, magnetometers and GPS. It is for MATLAB with the Navigation Toolbox.
 
@@ -19,19 +16,48 @@ when:
   - Your sensors run at different rates and drop samples.
   - You do not know which filter fits your sensor mix.
   - Your estimate drifts and you need to tune the noise settings.
+not_for:
+  - "You only have a camera or lidar and no inertial sensor: use a SLAM function in MATLAB instead."
+  - "You only need to simulate sensor data: you do not need a filter, so use a sensor simulator."
+  - "You build your model in Simulink: this skill does not cover Simulink, so build the filter blocks there by hand."
 you_give:
-  - The list of sensors you have
-  - Sample rates and any dropouts
-  - What you want to estimate
-  - Recorded data (optional)
+  - The list of sensors you have, such as accelerometer, gyro, magnetometer and GPS
+  - Sample rates and any dropped samples
+  - "What you want to estimate: orientation, or position and speed too"
+  - Recorded data and ground truth (optional)
+  - MATLAB with the Navigation Toolbox, both paid
 you_get:
-  - A filter choice with the reason
-  - MATLAB code to build it
-  - Tuning guidance
-  - A way to check the output against truth
+  - The name of the filter that fits your sensors, with a one-line reason
+  - MATLAB code that builds the filter and runs it on your data
+  - Code to find your sample rate and split data at gaps
+  - Tuning steps that use the right tune call for your filter
+  - A way to check the estimate against ground truth
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Navigation Toolbox.
+  - Open an AI chat and paste the skill text. You need MATLAB R2022a or newer with the Navigation Toolbox, both paid.
+  - List your sensors, their sample rates, and whether samples drop. Say if you want orientation only or full position.
+  - Read the filter choice and its reason. Ask why if it is not what you expected.
+  - Run the MATLAB code on your recorded data. Your AI needs to run MATLAB, or you can paste the code into MATLAB yourself.
+  - Check the estimate against ground truth. Then run tune on your recorded data to improve the noise values.
+output_sample:
+  input:
+    - The list of sensors you have
+    - Sample rates and any dropouts
+    - "What you want to estimate: orientation or full position"
+    - Recorded sensor data and ground truth (optional)
+  prerequisites:
+    - MATLAB R2022a or newer, a paid licence
+    - The Navigation Toolbox, a paid add-on
+    - An AI that can run MATLAB code, to test the result
+  output:
+    - name: Filter choice
+      contains: The filter name and a one-line reason it fits your sensors and rates.
+    - name: Build code
+      contains: MATLAB code that creates the filter and sets sample rate, reference frame and reference location.
+    - name: Data preparation
+      contains: Code that finds your sample rate from timestamps and splits the data at recording gaps.
+    - name: Fusion loop
+      contains: Code that feeds each sensor reading to the filter and collects the estimates.
+    - name: Tuning guidance
+      contains: The right tune call for your filter and the noise fields to adjust.
+    - name: Check against truth
+      contains: Steps to plot the estimate against ground truth, if you have it.

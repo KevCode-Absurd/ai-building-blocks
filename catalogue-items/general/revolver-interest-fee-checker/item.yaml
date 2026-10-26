@@ -1,26 +1,25 @@
 slug: revolver-interest-fee-checker
 name: Revolver interest and fee checker
-summary: A revolver interest and commitment fee reconciliation
+summary: "Check what your lender charged on a revolving credit line: interest on drawn money, the fee on unused credit and extras, tied to your bill."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
+before: []
+next: [revolver-availability-checker, debt-service-covenant-headroom-checker, net-leverage-covenant-checker]
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

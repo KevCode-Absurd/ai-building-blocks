@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It gathers context, then shapes it for the people attending.
 new_slug: meeting-pre-read-writer
 name: Meeting pre-read writer
-summary: Name the meeting. Get an agenda and pre-read built from your Notion
-  pages and research.
+summary: Write a meeting agenda and pre-read from your Notion pages. Give the goal and decisions needed. Get a timed agenda with owners and links.
 job: organise-work
 headline: Meeting pre-read writer
-subhead: Name the meeting. Get an agenda and pre-read built from your Notion
-  pages and research. Bring the meeting goal and the decisions needed. Use the
-  result to plan your next step.
+subhead: Name the meeting. Get an agenda and pre-read built from your Notion pages and research. Bring the meeting goal and the decisions needed. Use the result to plan your next step.
 explain: |
   An agenda and pre-read page built from what your team already wrote, so people arrive knowing the goal and the decision they need to make. Name the meeting and the page comes together in Notion.
 
@@ -18,6 +15,10 @@ when:
   - You run a weekly status call and want the same clean format each time.
   - You need a customer meeting brief that pulls in past notes.
   - You want sprint planning prep built from your Notion specs.
+not_for:
+  - "You have no Notion workspace: use a plain agenda template in a doc, with the goal, the time and an owner for each item."
+  - "It is a one-off chat that needs no prep: write three lines on the goal and the decision, and send them."
+  - "You use an AI tool that cannot reach Notion: paste your notes into the chat and ask for an agenda by hand."
 you_give:
   - The meeting goal and the decisions needed
   - Attendees, date and length
@@ -29,8 +30,30 @@ you_get:
   - A template matched to the meeting type
   - Short research notes with sources (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your Notion workspace.
+  - Use Codex CLI. This skill needs the Notion connection. If it is not set up, your AI will tell you the steps.
+  - Add the skill to your AI, then ask it to follow this skill for your meeting.
+  - Give the goal, the attendees, the date, the length and the decisions needed.
+  - Let your AI search Notion. Point it to any key pages (optional).
+  - Open each outside source and check the figure. Drop any claim you cannot link.
+  - Read the agenda and pre-read in Notion. Fix owners and times, then share the page.
+output_sample:
+  input:
+    - The meeting goal and the decisions needed
+    - Attendees, date, time and length
+    - Pages in your Notion workspace to draw from (optional)
+  prerequisites:
+    - An AI that can connect to Notion (the skill uses Codex CLI with the Notion connection)
+    - A Notion workspace you can sign in to
+  output:
+    - name: Meeting page in Notion
+      contains: The agenda and pre-read, built from the template that fits your meeting type.
+    - name: Context and goals
+      contains: The aim of the meeting, the decisions needed, and links to the Notion pages pulled in.
+    - name: Agenda
+      contains: Each item with an owner, a time box and the result expected.
+    - name: Risks and open questions
+      contains: Blockers and unknowns found in past notes, listed up front.
+    - name: Research notes
+      contains: Short outside facts with source links, kept apart from opinion.
+    - name: Next steps
+      contains: Follow-up tasks with owners, linked to the right Notion database.

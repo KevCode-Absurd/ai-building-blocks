@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It chains several code methods and changes a lot of code.
 new_slug: prototype-to-production-guide
 name: Prototype to production guide
-summary: Give it a working prototype. Get tests, cleaner structure and a plan to
-  make it ready for real users.
+summary: Turn a working prototype into code you can trust. Get tests, a tech debt list and a plan to take your prototype to production, one phase at a time.
 job: test-and-fix-code
 headline: Prototype to production guide
-subhead: A step-by-step path from a prototype that works but scares you to a
-  product you can ship. It starts with a safety net of tests, so each later
-  change is safe to make.
+subhead: A step-by-step path from a prototype that works but scares you to a product you can ship. It starts with a safety net of tests, so each later change is safe to make.
 explain: |
   A step-by-step path from a prototype that works but scares you to a product you can ship. It starts with a safety net of tests, so each later change is safe to make.
 
@@ -18,6 +15,10 @@ when:
   - An AI built your prototype and now real users are coming.
   - You need tests before you refactor anything.
   - You want a written plan to pay down technical debt.
+not_for:
+  - "You have an old codebase with years of debt: use remove-technical-debt, which is built for aged code."
+  - "You are starting a new build from scratch: use design-code-architecture to plan the structure first."
+  - "You want a product or screen design review: use improve-app, or ask a designer."
 you_give:
   - Access to your prototype code
   - Who will use it and how soon
@@ -29,7 +30,31 @@ you_get:
   - Tech debt list
   - Production readiness plan saved in your docs folder
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool in your project so it can read and edit your files. Claude Code or a similar coding tool works best.
+  - Paste the skill text, or add the skill file to your project.
+  - Tell your AI who will use the app, how soon, and what worries you most.
+  - Run your existing tests first, or say you have none. Phase 1 then adds tests before anything else changes.
+  - Answer the questions at each phase. Check that the tests pass before you move on.
+  - Stop whenever you like. Next session, ask your AI to read the plan file in docs and continue.
+output_sample:
+  input:
+    - Access to your prototype code
+    - Who will use it and how soon
+    - Your biggest worries about it
+    - The time you can spend each week (optional)
+  prerequisites:
+    - An AI that can read and edit your project files and run your tests
+    - A project with a docs folder, or permission to create one
+  output:
+    - name: docs/TESTING.md
+      contains: The tests added around your key behaviour, how to run them, and what is still not covered.
+    - name: docs/TECH-DEBT.md
+      contains: A running list of code problems found in each phase, with notes on what was fixed and what is left.
+    - name: docs/IMPROVE-CODE-QUALITY-PLAN.md
+      contains: The phase tracker with your answers and choices, so you can stop and pick up in a later session.
+    - name: Cleaner code
+      contains: Code made easier to read, then reshaped with named refactorings, after the tests pass.
+    - name: Architecture boundary
+      contains: A clear line between your business rules and the tools around them, such as data and screens.
+    - name: Production readiness notes
+      contains: Plans for handling failures, real load and data, based on how many users you expect.

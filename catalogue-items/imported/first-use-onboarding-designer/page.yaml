@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It designs a flow around one early win.
 new_slug: first-use-onboarding-designer
 name: First-use onboarding designer
-summary: Describe your product and its first win. Get an onboarding flow that
-  cuts setup and builds a habit.
+summary: Design a first-use onboarding flow around one early win. Give it your product and users. You get fewer setup steps and a habit cue.
 job: build-product
 headline: First-use onboarding designer
-subhead: An onboarding flow built around one early win, so new users feel
-  capable fast and come back the next day. It cuts setup and adds a habit hook.
+subhead: An onboarding flow built around one early win, so new users feel capable fast and come back the next day. It cuts setup and adds a habit hook.
 explain: |
   An onboarding flow built around one early win, so new users feel capable fast and come back the next day. It cuts setup and adds a habit hook.
 
@@ -17,6 +15,10 @@ when:
   - Your setup asks for too much before showing any benefit.
   - You want a habit loop built into the first week of use.
   - You need onboarding paths for beginners and experienced users.
+not_for:
+  - "You want to win back users who already left: use a lifecycle email series or ask a person on your team who owns retention."
+  - "You are fixing a pricing page or checkout: use a pricing page review or a simple A/B test instead."
+  - "You have no clear first win yet: talk to five users first, then come back with what they say they wanted."
 you_give:
   - What your product does
   - Who your users are and what they want
@@ -29,7 +31,30 @@ you_get:
   - Different paths by user readiness
   - List of setup steps to cut
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Describe your product and who uses it.
+  - Say what the first win should be. If you are not sure, your AI will ask.
+  - Add time or platform limits (optional).
+  - Read the flow. Check that each step leads to the first win and that the cut list matches what you can remove.
+  - Share the flow with your team, then test it with a few new users.
+output_sample:
+  input:
+    - What your product does
+    - Who your users are and what they want
+    - The first win you want them to reach
+    - Time and platform limits (optional)
+  output:
+    - name: First-win definition
+      contains: The smallest success that proves your product has value, in one clear line.
+    - name: Onboarding flow
+      contains: Each step in order, with the reason it is there.
+    - name: Cut list
+      contains: Setup fields, choices and feature tours to remove before the first win.
+    - name: Ownership action
+      contains: One small task the user does themselves, so they feel invested.
+    - name: Habit cue and return trigger
+      contains: A link to a routine in the user's day, and a prompt to come back.
+    - name: Readiness paths
+      contains: A shorter route for new users and a deeper route for experienced users.
+    - name: Quality check
+      contains: A check that the flow is clear, helpful and not pushy.

@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It runs a long loop with many agents and checks.
 new_slug: spec-to-acceptance-builder
 name: Spec to acceptance builder
-summary: Describe a big software request. Get an approved spec, a controlled
-  build and proof it meets the criteria.
+summary: Turn a big software request into an approved spec, a controlled build and proof it works. A spec driven development workflow for AI agents.
 job: build-software
 headline: Spec to acceptance builder
-subhead: "A big software request turned into a locked spec, a controlled build
-  and proof that it works. Before any code is written, the skill freezes three
-  documents: the product requirements, the technical design and the acceptance
-  criteria."
+subhead: "Give it a big software request. It writes a product spec, a technical design and pass or fail criteria, and waits for your approval. Then it builds the work in controlled steps and checks each criterion with evidence."
 explain: |
   A big software request turned into a locked spec, a controlled build and proof that it works. Before any code is written, the skill freezes three documents: the product requirements, the technical design and the acceptance criteria. It checks facts itself and only asks you about real decisions.
 
@@ -17,23 +13,52 @@ explain: |
 when:
   - You have a large feature and the requirements are still fuzzy.
   - You want to approve what gets built before any code is written.
-  - Several agents will work on the same project and need clear lanes.
-  - You need evidence that every acceptance criterion was met.
+  - Several AI agents will work on one project and need clear lanes.
+  - You need proof that each acceptance criterion was met.
+not_for:
+  - "You need a small bug fix or a one-file change: ask your AI to make the edit directly, no spec needed."
+  - "You only want someone to read and review code or explain it: ask your AI for a plain code review instead."
+  - "Your spec is already complete and approved: skip the spec stage and give your build team the plan directly."
 you_give:
-  - The software request in plain words
-  - Answers to questions on real decisions
-  - Your approval of the frozen spec
-  - The repo where the work will happen
+  - Your software request in plain words
+  - Access to the project folder (repo) where the work will happen
+  - Your answers to a few questions on real decisions
+  - Your approval of the finished spec
 you_get:
-  - A product requirements document
+  - A product requirements document with numbered requirements
   - A technical design
-  - Numbered acceptance criteria
-  - A build checked against diffs and tests
-  - An evidence-backed acceptance report
+  - Numbered acceptance criteria with the evidence each needs
+  - A build plan that gives each agent its own files
+  - A build checked against code changes and test runs
+  - A final report with a table of results per criterion
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code, read your project files and run
-    several AI helpers.
+  - Open an AI agent that can read your project files and run code, such as Codex. The build stage needs this.
+  - "Add the skill, then give your request in plain words. Example: Build a job dashboard with role-based access."
+  - Answer the few questions it asks. It looks up facts in your code itself and asks only about real choices.
+  - Read the PRD, tech design and acceptance criteria. Say yes only when they match what you want. No code is written before that.
+  - Let it build, then read the acceptance table and the evidence for each criterion.
+  - In a plain chat without file access, paste the skill and your project details. You will get the spec documents, but not a checked build.
+output_sample:
+  input:
+    - Your software request in plain words
+    - Access to the project folder (repo) where the work will happen
+    - Your answers to a few questions on real decisions
+    - Your yes or no on the finished spec
+  prerequisites:
+    - An AI agent that can read your project files and run code, such as Codex
+    - "Optional: an AI setup that can run several helper agents at once"
+  output:
+    - name: PRD.md
+      contains: "The product requirements: problem, users, goals, numbered requirements, scope, assumptions and a log of your decisions."
+    - name: TECH_DESIGN.md
+      contains: "How it will be built: modules, data, security, failures, release and rollback, and technical decisions."
+    - name: ACCEPTANCE.md
+      contains: Numbered pass or fail criteria, each linked to a requirement and the evidence needed to prove it.
+    - name: AGENT_PLAN.md
+      contains: The build tasks, which files each agent may touch, and the checks each task must pass.
+    - name: LOOP.md
+      contains: The current status, each build attempt, the evidence, the judgment and the next action.
+    - name: Acceptance matrix
+      contains: A table of each criterion with its result, evidence and any defect or caveat.
+    - name: Final report
+      contains: The result first, then finished and deferred scope, risks, assumptions and suggested next steps.

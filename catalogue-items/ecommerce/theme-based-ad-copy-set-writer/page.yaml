@@ -1,6 +1,6 @@
 new_slug: theme-based-ad-copy-set-writer
 name: Theme-based ad copy set writer
-summary: Turn one product theme into three to five full ad copy sets. Check claims, brand voice and which pair to test.
+summary: Write three to five ad copy sets from one product theme. Each set has a headline, body and CTA, plus a pick of which two to A/B test first.
 job: write-ad-copy
 headline: Theme-based ad copy set writer
 subhead: Share product, theme, buyer stage, brand voice and approved claims. Get three to five headline, body and cta sets with test picks.
@@ -12,6 +12,10 @@ when:
   - You need three to five headline, body and CTA sets with test picks.
   - You need theme-based ad copy set writer for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "You want organic social posts: write those by hand or ask your AI for a plain post draft, since this builds paid ad copy only."
+  - "You have no approved claims for the product: gather them first, or the copy will have gaps marked as missing."
+  - "You need a full landing page: ask a copywriter or your AI for a page draft, since this only writes ad text."
 you_give:
   - Product
   - Theme
@@ -21,9 +25,30 @@ you_get:
   - Three to five headline, body and CTA sets with test picks
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the full skill text. No code, files or paid tools are needed.
+  - Add your product name, what it does, your theme and your buyer's awareness stage.
+  - Add your approved claims, brand voice notes and any offer details. Leave out anything you cannot back up.
+  - Ask for three to five copy sets.
+  - Check each headline is under 40 characters and each claim matches your approved facts.
+  - Run the two sets the AI picks as your first A/B test.
+output_sample:
+  input:
+    - Your product name and what it does
+    - Your marketing theme, such as urgency or social proof
+    - Your buyer's awareness stage
+    - Your brand voice notes and approved claims (optional)
+    - Your existing winning headlines (optional)
+  output:
+    - name: Copy sets
+      contains: Three to five sets, each with a named angle, framework, headline, subheadline, body and CTA.
+    - name: Character counts
+      contains: The length of the headline, subheadline and body for each set.
+    - name: Quality gate
+      contains: A pass or fail check on headline length, CTA, banned phrases, em dashes, set count and variety.
+    - name: A/B test recommendation
+      contains: Which two sets to test first, what single thing the test changes, and which result to measure.
+    - name: Missing inputs and assumptions
+      contains: Facts you did not supply and any guesses the AI had to make.
 how_it_works:
   - title: Check the inputs
     text: Confirm product, theme, buyer stage, brand voice and approved claims. Mark facts that are missing.

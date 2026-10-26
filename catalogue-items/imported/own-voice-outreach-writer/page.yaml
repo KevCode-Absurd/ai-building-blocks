@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It learns your voice and personalises each message.
 new_slug: own-voice-outreach-writer
 name: Own-voice outreach writer
-summary: Give it your prospects. Get emails and follow-ups that sound like you,
-  each tied to something specific about them.
+summary: Write outreach emails in your own voice. Give it your prospects and get personal emails and follow-ups, each tied to a real detail.
 job: write-emails
 headline: Own-voice outreach writer
-subhead: Emails and follow-ups that read like you wrote them, each tied to
-  something real about the person getting them. Nobody has to wonder if a bot
-  did it.
+subhead: Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. Nobody has to wonder if a bot did it.
 explain: |
   Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. Nobody has to wonder if a bot did it.
 
@@ -17,7 +14,11 @@ when:
   - You dislike how generic AI outreach sounds.
   - You have a list of prospects and want personal notes fast.
   - Your follow-ups feel stiff and get ignored.
-  - You want a team member to send in your style.
+  - A team member needs to send in your style.
+not_for:
+  - "You want bulk marketing to bought or unsubscribed lists: use an email marketing tool that handles consent and opt-outs."
+  - "You want to write to one person who already knows you: write it yourself, it will be faster."
+  - "You have no sent emails and no writing samples: write three emails you like first, then come back."
 you_give:
   - Your prospects and context
   - Sent emails or three samples of your writing
@@ -29,10 +30,32 @@ you_get:
   - Follow-ups in your tone
   - Subject line options
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open your AI and paste in the skill. Add your prospects, one per row, with a note on what you want from each.
+  - Add 15 to 30 of your sent emails. If you can't, paste three emails you were happy with.
+  - Read the voice profile it makes. Fix anything that does not sound like you.
+  - Read message one closely, then skim the follow-ups. Ask for changes until it sounds right.
+  - Approve each batch before anything is sent. If no mail account is connected, copy the drafts and send them yourself.
+  - Check your local opt-out rules before sending cold email, such as CAN-SPAM or PECR.
+output_sample:
+  input:
+    - Your prospects, one per row, with any notes you have on each
+    - Your sent emails, or three emails you were happy with
+    - What you want from each person
+    - Your mail account (optional)
+  prerequisites:
+    - Gmail or Microsoft 365 access is optional, and pasted samples work instead
+    - Apollo, Clay, HubSpot and Mailchimp are optional and each needs its own account, which may be paid
+    - An AI that can send mail or log to a CRM is needed only if you want sends queued or logged
+  output:
+    - name: Voice profile
+      contains: Your sentence length, greetings, sign-offs, contractions, how direct you are, and things you never say, saved for next time.
+    - name: Message one
+      contains: The first email in full, built around one true detail about that prospect, under 120 words.
+    - name: Follow-ups
+      contains: The rest of the sequence, each with a subject line and a new angle, not just a nudge.
+    - name: Subject line options
+      contains: A few subject lines for each message in your tone.
+    - name: Approval check
+      contains: A summary of what would be sent, to whom and when, before anything goes out.
+    - name: Send log
+      contains: A record of each touch, in your CRM if connected or in a file.

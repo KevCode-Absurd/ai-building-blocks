@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Real-time loops need careful design.
 new_slug: live-audio-processing-builder
 name: Live audio processing builder
-summary: Describe the effect. Get a frame-by-frame audio chain with filters, EQ
-  and level meters.
+summary: Build a live audio processing chain in MATLAB. Get frame-by-frame code for filters, EQ, compressors and level meters you can tune as sound plays.
 job: build-software
 headline: Live audio processing builder
-subhead: A chain of audio processing that runs on sound as it plays, with
-  filters, equaliser and level meters you can tweak while it runs. Describe the
-  effect you want and get MATLAB code that does it.
+subhead: A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it.
 explain: |
   A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it.
 
@@ -18,6 +15,10 @@ when:
   - You need a compressor or filter that works on live input.
   - You want to see audio levels while a file plays.
   - You are teaching signal processing and need a working demo.
+not_for:
+  - "You only need to play or record sound through a device: use the matlab-play-record-audio skill."
+  - "You want to process a whole audio file in one go, not frame by frame: use a plain offline script in MATLAB."
+  - "You want to make a VST or AU plugin, or run deep learning on audio: this skill does neither, so use MATLAB's own plugin tools or a separate model workflow."
 you_give:
   - The effect or chain you want
   - "Audio source: file or live input"
@@ -30,8 +31,31 @@ you_get:
   - Level meters
   - Cleanup steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Audio Toolbox.
+  - Open your AI chat and paste the skill text from this page, or upload the skill file.
+  - Describe the effect you want, your audio source and your sample rate.
+  - Copy the MATLAB code it writes into MATLAB. You need Audio Toolbox, which is paid.
+  - Run it and use the tuning panel to change settings while the audio plays.
+  - Check that the sample rate matches your source and that your computer keeps up with each frame.
+  - If you need live input or output, pair it with the matlab-play-record-audio skill.
+output_sample:
+  input:
+    - The effect or chain you want, such as a compressor or equaliser
+    - "Your audio source: a file or live input"
+    - Your sample rate
+    - Your MATLAB setup with Audio Toolbox
+  prerequisites:
+    - MATLAB with Audio Toolbox, which is paid licensed software
+    - An AI that can write MATLAB code, ideally one that can also run it
+  output:
+    - name: Source setup
+      contains: Code that reads a file or live input one frame at a time.
+    - name: Processing objects
+      contains: Audio Toolbox filters, equaliser or compressor set up for your sample rate.
+    - name: Response plots
+      contains: Calls that show the filter or compressor response before you start playing.
+    - name: Tuning panel
+      contains: A panel that lets you change settings by ear while audio plays.
+    - name: Streaming loop
+      contains: A loop that processes each frame, runs the meters and releases the objects when done.
+    - name: Metering
+      contains: Peak, loudness or level readouts shown as the file plays.

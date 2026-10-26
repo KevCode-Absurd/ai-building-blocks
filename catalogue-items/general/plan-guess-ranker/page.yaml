@@ -1,6 +1,6 @@
 new_slug: plan-guess-ranker
 name: Plan guess ranker
-summary: Paste your plan. Get the few guesses it rests on, each with a number, ranked by risk.
+summary: Paste your plan into this plan guess ranker. You get the few guesses it rests on, each with a number, ranked by risk so you know what to test first.
 job: test-an-idea
 thinking: medium
 thinking_why: It weighs how bad each guess is against what you really know.
@@ -14,6 +14,10 @@ when:
   - You have a plan and do not know what to test first.
   - You are about to spend money on something you have not checked.
   - Your plan leans on lines such as "it will be the next big thing".
+not_for:
+  - "You want the full check with every test: use the Leap-of-faith assumption finder."
+  - "You have no buyers or customers in mind yet: first write down who you think they are, then come back."
+  - "You want to know if the plan will work: this prompt ranks risks and cannot predict success. Test the top guess with real people."
 you_give:
   - Your plan in a paragraph
   - What worries you most (optional)
@@ -27,6 +31,24 @@ how_to_use:
   - Include the price and how people find you.
   - Be honest about what you have seen versus what you hope.
   - Test the top guess before you work on the others.
+output_sample:
+  input:
+    - Your plan in a paragraph
+    - What worries you most (optional)
+    - Any numbers you already have (optional)
+  output:
+    - name: VALUE GUESS
+      contains: One line on whether the benefit is big enough that people come back or pay.
+    - name: GROWTH GUESS
+      contains: One line on how the next customer finds you and why that keeps working.
+    - name: RANKED GUESSES
+      contains: A table of guesses with a number, damage score, how little you know, and the two multiplied.
+    - name: RISKIEST
+      contains: The top guess and the reason it is the biggest risk.
+    - name: TEST ON
+      contains: Who to test with, and where to find ten of them this week.
+    - name: MISSING
+      contains: Figures your plan did not give, so you know what to find out.
 how_it_works:
   - title: Strip comparisons
     text: '"The X of Y" becomes plain facts.'

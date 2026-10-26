@@ -1,53 +1,97 @@
 new_slug: connect-contract-energy-cash-to-loan-life-cover
 name: Connect energy cash to loan life cover
 headline: Connect energy cash to loan life cover
-summary: An energy cash schedule and qualified loan-life cover
+summary: Turn three years of accepted MWh and contract prices into cash for debt service and a loan life cover ratio against your remaining loan.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: "An energy cash schedule and qualified loan-life cover. Share three annual accepted MWh and contract price/cost records, financing cash definition, tax/capital/working-capital adjustments, opening loan and contract discount rate. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter."
+subhead: Give it three years of delivered MWh, the contract price and costs, the lender's cash definition, the opening loan and the contract's discount rate. Step 1 builds operating cash. Step 2 turns it into cash available for debt service. Step 3 tests loan life cover. You get the yearly cash and the cover ratio.
 explain: |-
-  An energy cash schedule and qualified loan-life cover.
+  A plant that sells all its power at one contract price has cash you can work out year by year. The risk is in the hand-offs. The same operating cost gets taken off twice, once in the energy model and again in the lender's cash definition. Working capital gets deducted on a cash figure that already includes it. This loan life cover calculator for energy projects keeps each item to one deduction.
 
-  Energy project finance. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 turns accepted MWh, contract price, variable cost and fixed cash into operating cash for each year. Step 2 converts that to cash available for debt service under the lender's definition. It declares whether your figures are accrual or actual cash, and never mixes the two. Step 3 discounts the qualifying cash at the rate in your agreement and divides it by the opening loan to give loan life cover and the cushion.
+
+  Generation forecasts stay as assumptions. Downside cases are shown separately. It does not forecast output or approve a loan.
 when:
-  - You need an energy cash schedule and qualified loan-life cover.
-  - You work on energy project finance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A plant sells all its delivered energy at one contract price, and the lender wants a loan life cover figure.
+  - You have three years of meter or settlement statements and need cash the lender will count.
+  - Operating cost might be taken off twice between your model and the lender's cash definition.
+  - You are not sure whether your figures are accrual or cash, and need the working capital step to match.
+not_for:
+  - The plant sells at market prices, not one contract price. Step 1 assumes one price per MWh.
+  - You want a repayment schedule sized to the cash. Use the Build a project debt service cash pack workflow.
+  - You want cover tested period by period against covenants. Use the Review contractual debt service cash tests workflow.
+  - You have fewer or more than three years of data. This is built for three annual periods.
+  - You only want the operating cash. Use the Contracted energy cash model on its own.
 you_give:
-  - "Three annual accepted MWh and contract price/cost records, financing cash definition, tax/capital/working-capital adjustments, opening loan and contract discount rate. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter."
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Delivered and accepted MWh for each of three years (from meter or settlement statements)
+  - Contract price per MWh, variable cash cost per MWh and fixed cash per year (from the contract and your accounts)
+  - The lender's definition of cash available for debt service, with taxes, capital spending and working capital (from the financing agreement)
+  - Whether your operating figures are accrual or actual cash (from your accounts)
+  - The opening loan balance and the loan life discount rate (from the loan agreement)
+  - The reporting date, currency and scale, such as USD thousands
 you_get:
-  - An energy cash schedule and qualified loan-life cover.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Operating cash for each year and the three-year total
+  - Cash available for debt service for each year, with each cost taken off once
+  - Loan life cover and the cushion over the loan, in currency
+  - Downside cases on separate lines, if you give them
+  - The accounting basis used, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach your settlement statements, the energy contract's price terms and the financing agreement's cash definition. Say the opening loan, the discount rate and whether your figures are accrual or cash.
+  - After step 1, check that total cash equals total MWh times cash per MWh, less three years of fixed cash.
+  - After step 2, check each cost comes off once, the basis is stated, and a cash figure has no second working capital deduction.
+  - After step 3, check the cash used stops at loan maturity. Fill every MISSING line before anyone relies on it. A person who knows the loan agreement should confirm the definitions.
 how_it_works:
   - title: Contracted energy cash model
-    text: Build operating cash by accepted MWh and actual contract terms. Pass each annual cash result and separately excluded nonoperating adjustments, preserving generation forecasts as assumptions.
+    text: "Works out cash per MWh as price less variable cost, multiplies by accepted MWh, then takes off fixed cash for each year. Keeps capital, tax, reserves and debt service out. Hands step 2 each year's operating cash and the items left out. Check before moving on: the three-year total ties."
   - title: Project cash available bridge
-    text: Convert operating cash to contract CFADS each year, explicitly avoiding a second deduction of variable and fixed operating cash already included in the energy model. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+    text: Converts each year's operating cash to cash available for debt service under the lender's definition. Declares accrual or cash first. Takes the energy model's costs off once only. Hands step 3 one qualifying cash figure per year.
   - title: Loan life cash cover checker
-    text: Calculate remaining-loan-horizon coverage using the same eligible annual cash series, actual loan balance and contractual discount basis. Preserve downside generation or price changes as separate scenarios.
+    text: Removes cash beyond loan maturity, discounts each year's qualifying cash at the contract rate, and divides by the opening loan. Shows the cushion in currency. Keeps downside generation or price cases separate from the base.
 output_shape: |-
-  An energy cash schedule and qualified loan-life cover.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  OPERATING CASH   year 1 <n> | year 2 <n> | year 3 <n> | total <n>
+                   (accepted MWh x (price - variable cost) - fixed cash)
+
+  CASH FOR DEBT    basis <accrual or actual cash>
+  SERVICE          year 1 <n> | year 2 <n> | year 3 <n>
+                   left out: <tax, capital, working capital, as defined>
+
+  LOAN LIFE COVER  present value of qualifying cash <n> / opening loan <n> = <ratio>
+                   cushion over debt <n>
+  DOWNSIDE         <case name: ratio and cushion, or none given>
+
+  SOURCES          <each input, its source, date, currency and scale>
+  MISSING          <each gap, and the line it stops>
+  CHECKS MISSED    <one line each, or none>
+output_sample:
+  input:
+    - Delivered and accepted MWh for three years, with the contract price and costs
+    - The lender's cash definition and your accrual or cash basis
+    - The opening loan balance and the contract discount rate
+  prerequisites:
+    - Meter or settlement statements, the energy contract and the financing agreement
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: OPERATING CASH
+      contains: Cash for each of the three years from accepted MWh, price, variable cost and fixed cash.
+    - name: CASH FOR DEBT SERVICE
+      contains: Each year's cash under the lender's definition, the basis used, and what was left out.
+    - name: LOAN LIFE COVER
+      contains: Discounted qualifying cash divided by the opening loan, with the cushion in currency.
+    - name: DOWNSIDE
+      contains: Any lower-generation or lower-price case you gave, shown apart from the base.
+    - name: SOURCES, MISSING and CHECKS MISSED
+      contains: Each input's source and date, each gap, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Accepted delivery and financing-qualified cash match each year; financing discount rate is contract defined and cash beyond maturity is excluded. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+  - what: Accepted MWh
+    how: Lower one year's accepted output. Operating cash, cash for debt service and cover all fall, and the page shows the lower case apart from the base.
+  - what: The accounting basis
+    how: Switch from accrual to actual cash figures. The working capital line changes to 'not applied' and the page says why.
+  - what: The discount rate
+    how: Use the rate in the loan agreement, not a valuation rate. A higher rate lowers the present value and the cover ratio.
+  - what: Loan maturity
+    how: Shorten the remaining loan. Cash beyond maturity drops out and the cover figure falls.
 judge:
   - Accepted delivery and financing-qualified cash match each year; financing discount rate is contract defined and cash beyond maturity is excluded. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +102,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the lender's cash definition in one note and paste it in each run, so every period uses the same rules.
+  - Log each year's settlement statement date beside the MWh, so you can see which figures are final.
+  - Add your downside cases, such as lower output, to your copy of the skill so they run every time.
+  - Run the Review contractual debt service cash tests workflow next to check cover period by period.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and a checks tab you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed contract's price clause, not a summary of it.
+    - The loan agreement's wording on the discount rate and the cover test.
+    - A named reviewer who knows the financing agreement.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: MWh
+    meaning: "A megawatt hour: one million watts used or delivered for one hour."
+  - term: Cash available for debt service
+    meaning: Cash left after operating costs, taxes and capital spending that can go to lenders. Often shortened to CFADS.
+  - term: Loan life cover
+    meaning: The present value of cash over the remaining loan, divided by the loan balance.
+  - term: Accrual and actual cash
+    meaning: Accrual counts income and costs when earned. Actual cash counts them when paid.
+  - term: Working capital
+    meaning: Money tied up in unpaid bills and invoices. When it grows, cash falls.
+before: []
+next:
+  - review-contractual-debt-service-cash-tests
+  - build-a-project-debt-service-cash-pack

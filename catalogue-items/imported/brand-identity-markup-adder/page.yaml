@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a fixed markup template.
 new_slug: brand-identity-markup-adder
 name: Brand identity markup adder
-summary: Give it your brand details. Get markup added so AI can confirm your
-  store is a real brand. Changes your live theme.
+summary: Add brand markup to your Shopify theme so AI shopping assistants can confirm your store is the real brand. Previews the change before it writes.
 job: build-websites
 headline: Brand identity markup adder
-subhead: Add machine-readable brand details to your Shopify store so AI shopping
-  assistants can confirm you are the real brand, not a copy or reseller. This
-  changes your live theme, so it previews first.
+subhead: Add machine-readable brand details to your Shopify store so AI shopping assistants can confirm you are the real brand, not a copy or reseller. This changes your live theme, so it previews first.
 explain: |
   Add machine-readable brand details to your Shopify store so AI shopping assistants can confirm you are the real brand, not a copy or reseller. This changes your live theme, so it previews first.
 
@@ -18,6 +15,10 @@ when:
   - Resellers or copycats use your brand name.
   - You want your social and public profiles linked to your site.
   - You need a contact point that machines can read.
+not_for:
+  - "You have no live Shopify online store or no theme write access: ask your developer to add the markup by hand in the theme editor."
+  - "You want to fix other store problems, such as missing product details: this item only adds brand identity markup."
+  - "You do not have official profile links to add: gather them first, because a wrong link hurts trust."
 you_give:
   - Your store domain
   - Logo URL (optional)
@@ -29,8 +30,27 @@ you_get:
   - The snippet added to your theme
   - A check that it reads correctly
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Duplicate your live theme in Shopify first, so you can roll back.
+  - Log in to Shopify CLI for your store. Your AI needs to run commands for this skill.
+  - Paste the skill into your AI. Give it your store domain, official profile links, and your logo link and support email if you have them.
+  - Leave preview mode on for the first run. Read the snippet and the one line it adds to theme.liquid.
+  - If it looks right, ask your AI to run it again with preview off. Then check your live store.
+  - Test the result with a structured data validator before you publish the theme.
+output_sample:
+  input:
+    - Your store domain
+    - Your logo link (optional)
+    - Links to your official social profiles and public pages, such as Wikipedia
+    - Your support email and phone (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - A logged-in Shopify CLI session with theme read and write access
+  output:
+    - name: Organization JSON-LD block
+      contains: Your brand name, store link, logo, official profile links and a support contact point, in a format machines can read.
+    - name: snippets/agentic-organization-schema.liquid
+      contains: A new theme file that holds the brand markup, kept apart from your other theme code.
+    - name: layout/theme.liquid change
+      contains: One managed line in the page head that loads the new snippet, shown as a before and after diff.
+    - name: Outcome summary
+      contains: Whether the files were written, any errors, and the output file name.

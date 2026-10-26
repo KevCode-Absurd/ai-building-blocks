@@ -16,9 +16,9 @@ outputs:
   - {type: plan}
 uses: [product-and-variant-setup-planner, collections-and-menu-planner, product-page-section-planner, ai-store-build-planner]
 steps:
-  - {uses: product-and-variant-setup-planner, note: "Starts from your product list and makes the clean product facts every later step reads."}
-  - {uses: collections-and-menu-planner, note: "Reads the product facts from step 1 and groups them into collections, filters and a menu."}
-  - {uses: product-page-section-planner, note: "Takes the product facts from step 1 and plans the page that answers each buyer doubt."}
+  - {uses: product-and-variant-setup-planner, note: "Starts from your product list and makes the clean product facts every later step reads. Hands steps 2, 3 and 4 the product facts."}
+  - {uses: collections-and-menu-planner, note: "Reads the product facts from step 1 and groups them into collections, filters and a menu. Hands step 3 the collections, and step 4 the menu."}
+  - {uses: product-page-section-planner, note: "Takes the product facts from step 1 and the collections from step 2, and plans the page that answers each buyer doubt. Hands step 4 the section-by-section page layout."}
   - {uses: ai-store-build-planner, note: "Uses the product facts from step 1 and tells the build to follow the menu and page sections from steps 2 and 3."}
 origin: rebuilt
 version: 1.0.0

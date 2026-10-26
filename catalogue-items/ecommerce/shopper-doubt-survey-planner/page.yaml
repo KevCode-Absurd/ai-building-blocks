@@ -1,6 +1,6 @@
 new_slug: shopper-doubt-survey-planner
 name: "Shopper doubt survey planner"
-summary: "Say what you sell. Get two on-site surveys, a user test script and a doubt tally."
+summary: "Plan a shopper survey for your store. Get two on-site surveys, a user test script and a tally sheet that ranks what stops shoppers buying."
 job: understand-customers
 thinking: medium
 thinking_why: "It sets timing, wording and a tally sheet from your numbers, so a mid-size model is enough if you check the maths."
@@ -13,6 +13,10 @@ when:
   - Your product page gets visits but few add-to-carts, and you do not know why.
   - You are about to rewrite a page and want the shopper's own words to write it from.
   - You want a before and after read on a redesign, using the same test twice.
+not_for:
+  - "You get only a few orders a day and want survey answers fast: start with your support tickets and a user test instead."
+  - "You want to know where shoppers leave your pages: look at your store analytics first, then come back to ask why."
+  - "You want proof that a page change lifts sales: run an A/B test, since survey answers do not prove a change will work."
 you_give:
   - What you sell, your store platform and the survey tool you use (if any)
   - How long a typical visit lasts, from your analytics
@@ -29,6 +33,31 @@ how_to_use:
   - Add the surveys and set the trigger time it gives you. Book the user test if you want one.
   - Come back with the answers pasted in (or the tester notes). The skill tallies them into ranked doubts.
   - Make one fix per top doubt, then run the same test again to compare.
+output_sample:
+  input:
+    - What you sell and your store platform
+    - How long a typical visit lasts
+    - Your top products and known shopper objections
+    - Your survey tool (optional)
+    - Pasted survey answers or tester notes (optional)
+  prerequisites:
+    - Your average visit time from your store analytics
+    - A survey tool or app to run the surveys (optional)
+  output:
+    - name: Fit check
+      contains: Says if your orders per day give enough survey answers, or if user tests and support tickets should lead.
+    - name: Post-purchase survey
+      contains: "Two open questions shown after the order: what made them buy and what almost stopped them."
+    - name: Product page survey
+      contains: A yes or no question on what holds them back, a follow-up for yes, and the trigger time.
+    - name: User test
+      contains: Panel filters, up to two screener questions, the think-out-loud script and a log sheet.
+    - name: Tally sheet
+      contains: 5 to 8 ranked doubts, each with a count, its source, one fix and a place on the page.
+    - name: Support cross-check
+      contains: Compares your top three support objections with the tally and says which source to trust.
+    - name: Checks missed
+      contains: Lists any check the skill could not do, or says none.
 how_it_works:
   - title: Checks your volume
     text: A post-purchase survey needs a few orders a day to give a useful month of answers. If you have fewer, it leans on user tests and support tickets instead.

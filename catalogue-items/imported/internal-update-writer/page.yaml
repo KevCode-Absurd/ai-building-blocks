@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a set format with the facts you give it.
 new_slug: internal-update-writer
 name: Internal update writer
-summary: Give it the facts. Get a status report, leadership update, newsletter
-  or incident note in a clear format.
+summary: "Write an internal update from your facts: a team update, newsletter, FAQ answer or status report, in a clear format your readers can scan fast."
 job: organise-work
 headline: Internal update writer
-subhead: A status report, leadership update, newsletter, FAQ answer or incident
-  note in the right format, written from the facts you give. Each type has its
-  own guideline, so the result reads as it should for that audience.
+subhead: A status report, leadership update, newsletter, FAQ answer or incident note in the right format, written from the facts you give. Each type has its own guideline, so the result reads as it should for that audience.
 explain: |
   A status report, leadership update, newsletter, FAQ answer or incident note in the right format, written from the facts you give. Each type has its own guideline, so the result reads as it should for that audience.
 
@@ -19,6 +16,10 @@ when:
   - Leadership wants a short update on project status.
   - You are producing a company newsletter.
   - You need clear answers to common staff questions.
+not_for:
+  - "You need a message to customers or the public: write it yourself or ask a PR or support lead, since this skill is for staff only."
+  - "You have no facts yet, only a vague idea: gather progress, plans and problems first, or ask the project owner."
+  - "You want a long report, slide deck or meeting notes: use a document tool or a note taker, not this skill."
 you_give:
   - The facts, progress and problems
   - The type of message and its audience
@@ -29,7 +30,25 @@ you_get:
   - Plans and problems clearly separated
   - A tone suited to the audience
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your facts: what is done, what is next and what is stuck. Add dates and owners if you have them."
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, or upload the skill folder if your AI can read files.
+  - Say what kind of message you need and who will read it. Paste your facts.
+  - Read the draft. Check every date, name and claim against your facts, and fix anything that is off.
+  - Send it where your readers look, such as your team channel or an email to leadership. Reuse the same format next time.
+output_sample:
+  input:
+    - "The facts: what got done, what comes next and what is stuck"
+    - The type of message, such as a team update, newsletter, FAQ answer or incident note
+    - Who will read it
+    - Dates and owners (optional)
+  output:
+    - name: Finished update
+      contains: A short message in the format for your message type, with the key point first.
+    - name: Progress, Plans, Problems sections
+      contains: For team updates, your facts split into what is done, what is next and what is blocked.
+    - name: Newsletter draft
+      contains: For company newsletters, your news fitted into a newsletter layout.
+    - name: FAQ answer
+      contains: For common staff questions, a clear answer in the format the FAQ guide sets.
+    - name: General update
+      contains: For anything else, such as status or incident notes, a plain structured message for your audience.

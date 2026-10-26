@@ -7,9 +7,7 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -32,6 +30,7 @@ steps:
   - uses: management-equity-hurdle-checker
     note: Keep the incentive award separate from purchased equity. Use a separately sourced net equity exit scenario, fixed hurdle and vested percentage; do not call its residual percentage current voting ownership.
 execution: coordinator
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

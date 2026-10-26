@@ -16,14 +16,14 @@ outputs:
   - {type: plan}
 uses: [proven-product-scout, rating-gap-product-finder, winning-product-scorer, competitor-saturation-checker, untapped-buyer-finder, category-and-trend-risk-checker, new-product-line-checker]
 steps:
-  - {uses: competitor-saturation-checker, note: "Every month, on each candidate already on the watch list: has the field filled up since last time."}
-  - {uses: proven-product-scout, note: "Every month: new proven products in your market, from the ad and sales evidence you attach."}
-  - {uses: rating-gap-product-finder, note: "Only when you attach reviews for a category: sub-categories with weak ratings but strong search."}
-  - {uses: winning-product-scorer, note: "Every month, on each new candidate: a score out of 100 from price, cost and fit."}
-  - {uses: competitor-saturation-checker, note: "Only for candidates that pass the score: how many rivals sell it and how strong they are."}
-  - {uses: untapped-buyer-finder, note: "Only when a candidate is crowded but not dead: buyer groups nobody targets."}
-  - {uses: category-and-trend-risk-checker, note: "Only for the top candidates in a category you do not sell in yet: market size and trend risk."}
-  - {uses: new-product-line-checker, note: "Only for the one top pick: the cost to win a customer, a launch cap and a small test plan."}
+  - {uses: competitor-saturation-checker, note: "Every month, on each candidate already on the watch list: has the field filled up since last time. Uses the candidate's name and this month's ad evidence. Passes on which candidates stay, drop or improve."}
+  - {uses: proven-product-scout, note: "Every month: new proven products in your market, from the ad and sales evidence you attach. Uses that evidence, not step 1's report. Passes on the new candidates for the pipeline."}
+  - {uses: rating-gap-product-finder, note: "Only when you attach reviews for a category: sub-categories with weak ratings but strong search. Uses the reviews you attach. Passes on the sub-categories to add as candidates."}
+  - {uses: winning-product-scorer, note: "Every month, on each new candidate: a score out of 100 from price, cost and fit. Uses each candidate's landed cost and target price from you, not step 3's list. Passes on a GO, TEST SMALL or DROP call for each."}
+  - {uses: competitor-saturation-checker, note: "Only for candidates that pass the score: how many rivals sell it and how strong they are. Uses the candidate's name and ad evidence, picked by step 4's call. Passes on a GO, TEST FAST or SKIP verdict for the field."}
+  - {uses: untapped-buyer-finder, note: "Only when a candidate is crowded but not dead: buyer groups nobody targets. Uses the product description and the rival ads, not step 5's report. Passes on the open groups, which decide if the candidate stays."}
+  - {uses: category-and-trend-risk-checker, note: "Only for the top candidates in a category you do not sell in yet: market size and trend risk. Uses the category, the exact product term and your expected price. Passes on a keep, hold or drop call."}
+  - {uses: new-product-line-checker, note: "Only for the one top pick: the cost to win a customer, a launch cap and a small test plan. Uses the pick's price, margin and your cash cap, not step 7's report. Passes on the launch call and test plan."}
 schedule: "On the first working day of each month"
 asks_before: [ordering samples or stock, contacting a supplier, spending on ads or tests, adding a product to your store, paying for a spy tool or data service]
 origin: own

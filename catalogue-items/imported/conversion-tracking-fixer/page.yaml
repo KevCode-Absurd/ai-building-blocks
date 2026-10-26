@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Faults hide across tags, pixels and platforms.
 new_slug: conversion-tracking-fixer
 name: Conversion tracking fixer
-summary: Say what counts as a sale or lead. Get tracking set up or repaired
-  across GA4, Meta, Google Ads and more.
+summary: Fix conversion tracking that shows no sales or double counts. Tell it what counts as a lead or sale. Get setup or audit steps for GA4, Meta and Google Ads.
 job: read-ad-results
 headline: Conversion tracking fixer
-subhead: Conversion tracking that counts the right events and sends them to GA4,
-  Meta, Google Ads and other platforms, either newly set up or repaired. You
-  trust your sales and lead numbers again.
+subhead: Conversion tracking that counts the right events and sends them to GA4, Meta, Google Ads and other platforms, either newly set up or repaired. You trust your sales and lead numbers again.
 explain: |
   Conversion tracking that counts the right events and sends them to GA4, Meta, Google Ads and other platforms, either newly set up or repaired. You trust your sales and lead numbers again.
 
@@ -18,6 +15,10 @@ when:
   - You are launching ads and need tracking set up first.
   - Conversions doubled after a site change and you suspect double counting.
   - You want to send leads to Meta and Google from your server.
+not_for:
+  - "You want to pick a bidding plan or tune campaigns: use an ads skill or ask your ad manager."
+  - "You want to compare attribution models: use an attribution skill, since this one only checks that events arrive."
+  - "You want a full tracking plan or UTM rules: use an analytics skill first, then come back to fix the tags."
 you_give:
   - What counts as a conversion
   - Your site and platforms
@@ -29,8 +30,27 @@ you_get:
   - Audit verdict per platform
   - Verification checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Say what counts as a conversion, such as a form, a booked call or a purchase.
+  - List your site and the platforms you use, like GA4, Meta or Google Ads. Add screenshots of your tags if you have them.
+  - Answer its three starting questions. It then runs a setup or an audit.
+  - Fire a test conversion and check it shows up. Live checks need an AI that can run code and open a browser.
+output_sample:
+  input:
+    - What counts as a conversion, such as a form, a booked call or a purchase
+    - Your website and the ad platforms you use
+    - Screenshots or access to your tag setup (optional)
+    - Any recent change to the site (optional)
+  prerequisites:
+    - An AI that can run code and open a browser, if you want it to test a live conversion
+  output:
+    - name: Three questions
+      contains: Short questions that sort your job into a new setup or an audit of tracking you already have.
+    - name: Setup flow
+      contains: Steps to count the right event on a confirmed success and send it to each platform.
+    - name: Audit flow
+      contains: Checks of your tags, pixels and events to find why counts are missing or doubled.
+    - name: Verdict rules
+      contains: A verdict for each platform, based on what the AI could actually confirm.
+    - name: Verification discipline
+      contains: A check that a test conversion really arrived, or a plain note of what stays unverified.

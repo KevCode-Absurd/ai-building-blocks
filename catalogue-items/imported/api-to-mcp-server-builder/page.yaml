@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps an API to tools using a set method.
 new_slug: api-to-mcp-server-builder
 name: API to MCP server builder
-summary: Give it an API spec. Get an MCP server in Python or TypeScript that
-  lets your AI use that API.
+summary: Turn your OpenAPI spec into an MCP server in Python or TypeScript, so your AI can call your API as tools. Includes a check for common errors.
 job: connect-tools
 headline: API to MCP server builder
-subhead: An MCP server that lets your AI use a real API, built from the API's
-  own spec instead of hand-written wrappers. Give it an OpenAPI file and you get
-  a server in Python or TypeScript that exposes each action as a tool.
+subhead: An MCP server that lets your AI use a real API, built from the API's own spec instead of hand-written wrappers. Give it an OpenAPI file and you get a server in Python or TypeScript that exposes each action as a tool.
 explain: |
   An MCP server that lets your AI use a real API, built from the API's own spec instead of hand-written wrappers. Give it an OpenAPI file and you get a server in Python or TypeScript that exposes each action as a tool.
 
@@ -18,6 +15,10 @@ when:
   - Browser automation is too fragile and you want proper tools.
   - One server should be shared by several teams and assistants.
   - You need quality checks before publishing tools.
+not_for:
+  - "Your API has no OpenAPI spec: write the tool wrappers by hand, or ask the API's owner for a spec first."
+  - "You need one quick call to an API once: ask your AI to write a short script or make the call yourself."
+  - "An MCP connector for that service already exists: install the existing connector instead of building your own."
 you_give:
   - An OpenAPI spec
   - Python or TypeScript
@@ -29,8 +30,27 @@ you_get:
   - A validation report
   - Notes for safe versioning
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Get your API's OpenAPI spec as a JSON file and save it in your project folder.
+  - Open your AI in a tool that can run code and read files. Paste in this skill.
+  - Tell it your spec file name, a server name, and Python or TypeScript.
+  - Let it make the tool list and server starter files. It needs to run code to do this.
+  - Ask it to run the validator on tool_manifest.json. Fix any errors it lists.
+  - Add the real call logic for each tool, then connect the server to your AI app.
+output_sample:
+  input:
+    - Your API's OpenAPI spec file (JSON)
+    - Python or TypeScript, your pick
+    - A server name, such as the name of the service
+    - How your API signs users in (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Python 3 installed on your computer
+  output:
+    - name: tool_manifest.json
+      contains: One tool for each API action, each with a name, a description and the data it takes.
+    - name: Server scaffold
+      contains: A starter MCP server in Python or TypeScript that lists those tools, ready for your own logic.
+    - name: Validation report
+      contains: Errors and warnings such as duplicate names, bad data shapes, missing descriptions and empty required fields.
+    - name: Production hardening notes
+      contains: Advice on keeping secrets safe, limiting which hosts the server can call, and changing tools without breaking them.

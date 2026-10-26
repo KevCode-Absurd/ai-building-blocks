@@ -1,6 +1,6 @@
 new_slug: campaign-fame-checker
 name: "Campaign fame checker"
-summary: "Paste your campaign plan or ad. Get it scored on four fame facets, with the weakest one and the first fix."
+summary: "Check your campaign plan for fame. Get a score out of 100 on four facets, the weakest one named, and one change to test first."
 job: check-ads
 thinking: medium
 thinking_why: "It rates four facets against a plan, which needs judgement but follows a fixed frame."
@@ -17,6 +17,10 @@ when:
   - "You have a campaign plan and wonder if anyone would notice it."
   - "Your ads are clear but forgettable."
   - "You are choosing between two ideas and want a fair way to compare them."
+not_for:
+  - "You need to check an ad against Meta's rules before you publish: use your ad platform's policy page, or ask a person who runs your ads."
+  - "You run a pure price promotion with no paid reach: a simple offer test on your own sales numbers will tell you more."
+  - "You want to know how many people your plan will reach: use your ad platform's reach report, because this check only judges the plan you give it."
 
 you_give:
   - "Your campaign plan or brief"
@@ -35,6 +39,33 @@ how_to_use:
   - "List any distinctive assets you already use, such as a mascot, colour or sound."
   - "Read the weakest facet first and decide on the one change to test."
   - "Run the check again on the changed plan."
+output_sample:
+  input:
+    - Your campaign plan or brief
+    - The ad copy or script (optional)
+    - Your planned reach and spend (optional)
+    - Any character, colour, tune, slogan or look you use (optional)
+  output:
+    - name: SCORE
+      contains: A total out of 100, the sum of the four facets at 25 points each.
+    - name: PLEASURE
+      contains: A score out of 25 and a reason taken from your plan or work.
+    - name: REACH
+      contains: A score out of 25 judged on audience size, channels and spend.
+    - name: DISTINCTIVE ASSETS
+      contains: The assets it found by name, and whether each is used every time.
+    - name: TAKING PART
+      contains: A score out of 25 on what the public can do with your work.
+    - name: WEAKEST FACET
+      contains: The lowest facet and why it drags the others down.
+    - name: FIRST CHANGE TO TEST
+      contains: One change to try and how you will read the result.
+    - name: WHAT IS UNKNOWN
+      contains: What the plan leaves open, since fame cannot be fully planned.
+    - name: MISSING
+      contains: Each gap in your inputs, marked so you can fill it in later.
+    - name: CHECKS MISSED
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "Checks the pleasure"

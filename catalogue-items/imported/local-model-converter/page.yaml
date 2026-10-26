@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set convert-and-test routine.
 new_slug: local-model-converter
 name: Local model converter
-summary: Give it a model. Get a smaller file that runs on your laptop or Mac
-  with no GPU, plus the run steps.
+summary: Shrink an AI model into a small GGUF file that runs on your laptop, Mac or CPU with no GPU. Get the build, convert and run steps too.
 job: build-software
 headline: Local model converter
-subhead: A smaller version of an AI model that runs on your laptop, a Mac or a
-  plain CPU with no GPU. Give it a model and get a compact GGUF file plus the
-  steps to run it.
+subhead: A smaller version of an AI model that runs on your laptop, a Mac or a plain CPU with no GPU. Give it a model and get a compact GGUF file plus the steps to run it.
 explain: |
   A smaller version of an AI model that runs on your laptop, a Mac or a plain CPU with no GPU. Give it a model and get a compact GGUF file plus the steps to run it.
 
@@ -18,6 +15,10 @@ when:
   - You use a Mac and want it to run well.
   - You need one file that works in Ollama or LM Studio.
   - You want to compare different shrink levels.
+not_for:
+  - "You run models on NVIDIA servers and want top accuracy: use AWQ or GPTQ instead, which are built for that."
+  - "You only want to chat with an AI and not run your own model: use a hosted AI app such as Claude, ChatGPT or Gemini."
+  - "You have no way to run commands on your computer: ask a developer to run the steps for you."
 you_give:
   - The model you want to shrink
   - Your computer type and memory
@@ -30,8 +31,34 @@ you_get:
   - Run steps
   - A guide to quality versus size
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and build llama.cpp.
+  - Open an AI that can run commands on your computer. If yours cannot, paste this skill into a chat and run each command yourself in a terminal.
+  - Tell it which model you want to shrink, what computer you have and how much memory it has.
+  - If the model is gated, like Meta Llama, sign in to Hugging Face, get access and have your token ready.
+  - For levels below Q5, add a plain text file of 10 to 50 KB of sample text, such as a few articles you wrote. This helps the importance matrix.
+  - Let it build llama.cpp, convert the model, shrink it and run a short test.
+  - Check that the test prints a sensible reply. Then load the file in LM Studio or Ollama.
+output_sample:
+  input:
+    - The model you want to shrink, as a Hugging Face name or a folder
+    - Your computer type (CPU, Apple Silicon or Nvidia) and memory
+    - The shrink level you want, or how much quality loss you accept (optional)
+    - A plain-text file of sample text for the importance matrix (optional)
+  prerequisites:
+    - An AI that can run commands, or your own terminal
+    - Git, Python and a C/C++ build tool on your computer
+    - A Hugging Face account with approved access and a token, if the model is gated
+  output:
+    - name: llama.cpp build
+      contains: "The build commands for your machine: plain CPU, Apple Silicon with Metal, or Nvidia with CUDA."
+    - name: model-f16.gguf
+      contains: Your model converted to a full-size GGUF file, ready to be shrunk.
+    - name: model.imatrix
+      contains: An importance matrix that helps low-bit files keep their quality. Made only when you give sample text.
+    - name: model-q4_k_m.gguf
+      contains: The shrunk model at the level you pick. Q4_K_M is the default.
+    - name: Test run
+      contains: A short prompt run that prints a reply, so you can see the model works.
+    - name: Run steps
+      contains: How to run the file in the command line, LM Studio, Ollama or a local server.
+    - name: Quality versus size guide
+      contains: A table of shrink levels with file size and quality, so you can pick or compare.

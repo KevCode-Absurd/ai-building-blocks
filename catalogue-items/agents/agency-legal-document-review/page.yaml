@@ -1,0 +1,138 @@
+name: Legal Document Review agent
+summary: Paste a contract. Get its key terms, risky clauses ranked, missing terms and questions to take to your lawyer before you sign.
+headline: Legal Document Review agent
+subhead: Give it a contract, lease or similar agreement, and say which side you are. It reads the whole text first. You get the key terms, the clauses flagged High, Medium or Low with the exact words quoted, the terms that are missing and questions for your lawyer.
+job: check-contracts
+thinking: high
+thinking_why: It must read every clause, quote the exact words and say when a point is unclear. Use a model that stays accurate over long text.
+explain: |-
+  A contract review (also called a contract risk review or a first-pass legal read) goes wrong when the reader skims. Risky terms hide in definitions and fine print. A clause that is missing can hurt more than one that is bad. This agent reads the whole text. It starts by asking who the parties are and which side you are, because the same clause can help one side and hurt the other.
+
+  It lists the key terms: what you pay, how long the deal runs, how to leave, and who pays if something goes wrong. It notes the standard terms that are absent. Then it flags clauses as High, Medium or Low, quotes the exact words, and says why each one matters. If you give it two versions, it lists every change, including small wording changes.
+
+  It flags and never decides. It does not tell you to sign or not to sign. It says where a rule may differ by state or country and leaves that to a lawyer. The result is an AI reading of the text, not legal advice.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A vendor, client or landlord sends you a contract and you have a few days before you must sign.
+  - The other side sends a new version and you need to see every change, not only the ones they mention.
+  - You want to know what a long agreement says about payment, ending it early and who pays when things go wrong.
+  - You have a meeting with a lawyer and want your questions ready, so the paid hour goes further.
+not_for:
+  - You need advice on whether to sign, or you are in a dispute or a lawsuit. Ask a lawyer. Use this agent only to prepare.
+  - You have your own contract rules and want edits that match them. Use the Contract reviewer.
+  - You want your business practices checked against the law, not one contract. Use the Legal Compliance Checker agent.
+you_give:
+  - The contract, pasted as text or attached as a file
+  - Which side you are, such as buyer, seller, tenant, landlord or contractor, and the state or country whose law applies
+  - What worries you most, such as payment terms or ending early (optional)
+  - An earlier version, if you want every change listed (optional)
+you_get:
+  - A summary card with the parties, your side, the dates and the law that applies
+  - Key terms at a glance, including price, length, how to leave, who pays if things go wrong and who owns the work
+  - A list of standard terms the contract does not have
+  - Flagged clauses ranked High, Medium or Low, each with the exact words, why it matters and a change to ask for
+  - Questions to take to your lawyer, in priority order
+how_to_use:
+  - Check your contract's confidentiality terms and your AI's data settings before you paste or attach anything.
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Attach or paste the contract. Say which side you are and which state or country's law applies.
+  - Say what worries you most. Attach the earlier version too if you want a list of changes.
+  - Type "Do a first-pass review. Quote the exact words for each flag. Mark anything you cannot tell."
+  - Read the missing terms and the High flags first. Take the lawyer questions to a lawyer before you sign.
+how_it_works:
+  - title: Identify the deal
+    text: It confirms the document type, the parties, which side you are, the law that applies and why you are reviewing it. Anything missing is asked once, then marked MISSING.
+  - title: Map the structure
+    text: It lists sections, attachments and defined terms, and checks that cross-references point to the right place.
+  - title: Read the terms
+    text: It captures price, length, ending the deal, who pays for losses, who owns the work, secrecy and how disputes are settled.
+  - title: Find what is missing
+    text: It checks for standard terms such as a limit on liability, a force majeure clause and a way to settle disputes, and flags each one that is absent.
+  - title: Flag and rank
+    text: Each risky clause gets a High, Medium or Low flag with the exact words, the reason and a change to ask for.
+  - title: Compare versions
+    text: If you gave two versions, it lists every change, marks each as good, bad or neutral for your side, and says whether to accept, reject or counter.
+  - title: Hand back questions
+    text: It ends with the points a lawyer should decide, in priority order.
+output_shape: |-
+  SUMMARY CARD
+    Type <contract type> | Parties <A and B> | Your side <role> | Date <date> | Law <place> | Purpose <why you are reviewing>
+
+  KEY TERMS AT A GLANCE
+    Length <time> | Price <amount> | Ending the deal <how> | Renewal <how> | Limit on liability <cap or none>
+    Who pays for losses <who for what> | Who owns the work <who> | Secrecy <terms> | Disputes <where and how>
+
+  MISSING TERMS
+    <standard term> | <what the absence means for you>
+
+  FLAGGED CLAUSES
+    <High, Medium or Low> | <section and page> | "<exact words>" | <why it matters> | <what is usual> | <change to ask for>
+
+  VERSION CHANGES (only if two versions were given)
+    <section> | <old words> | <new words> | <good, bad or neutral for you> | <accept, reject or counter>
+
+  OVERALL RISK
+    <High, Medium or Low> | <two or three sentences of reasons>
+
+  QUESTIONS FOR YOUR LAWYER
+    <priority> | <question> | <clause it relates to>
+output_sample:
+  input:
+    - The contract, pasted or attached
+    - Which side you are and which law applies
+    - What worries you most (optional)
+    - An earlier version to compare (optional)
+  prerequisites:
+    - An AI that can read files, if you attach a PDF or Word file
+    - Permission to share the contract with an AI tool
+  output:
+    - name: Summary card
+      contains: Document type, parties, your side, dates, governing law and why you are reviewing it.
+    - name: Key terms at a glance
+      contains: Length, price, how to end the deal, renewal, liability limit, who pays for losses, who owns the work.
+    - name: Missing terms
+      contains: Each standard term that is absent, with what its absence means for you.
+    - name: Flagged clauses
+      contains: High, Medium and Low flags with section, exact words, reason, what is usual and a change to ask for.
+    - name: Version changes
+      contains: Every change between two versions, rated good, bad or neutral for you. Only if you gave two versions.
+    - name: Overall risk and lawyer questions
+      contains: A High, Medium or Low rating with reasons, then questions in priority order.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a full PDF or Word contract with its attachments, and quote the exact section and page for each flag.
+  inputs:
+    - The signed earlier deal with the same party, so it can spot terms that changed.
+    - Your own must-have terms, such as the longest payment delay you accept.
+    - The deal's value and how long it runs, so it can judge whether a liability cap is low.
+terms:
+  - term: Clause
+    meaning: One numbered part of a contract that sets a rule or promise.
+  - term: Indemnification
+    meaning: A promise to cover the other side's losses if a named thing goes wrong.
+  - term: Limitation of liability
+    meaning: A cap on how much one side must pay the other if something goes wrong.
+  - term: Governing law
+    meaning: The state or country whose law decides what the contract means.
+  - term: Auto-renewal
+    meaning: A rule that renews the contract by itself unless you give notice by a set date.
+tweaks:
+  - what: Your side
+    how: Say who you are in the deal. A liability clause that is fair to a vendor can be unsafe for a customer.
+  - what: Review purpose
+    how: Say if you are deciding to sign, negotiating or checking before a purchase. It changes what ranks as High.
+  - what: Risk tolerance
+    how: Say "flag everything" or "material issues only". The first gives a longer list to dismiss.
+improve:
+  - Write down the terms you always ask for, such as payment in 30 days. Add them to the pack so every review checks them.
+  - Keep each review with the contract. Compare it with the lawyer's final edits to see which flags mattered.
+  - Pair it with the Contract plain-words summary writer to share a short summary with your team.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It reshapes text into a fixed layout.
 new_slug: bullet-note-maker
 name: Bullet note maker
-summary: Paste messy notes or an article. Get tidy nested bullets that are quick
-  to scan and revise.
+summary: Turn messy notes or an article into a clean bullet note list. Nested bullets, short lines, easy to scan and revise. Pick lite, full or ultra.
 job: organise-work
 headline: Bullet note maker
-subhead: Paste messy notes or an article. Get tidy nested bullets that are quick
-  to scan and revise. Bring text, notes or an article. Use the result to plan
-  your next step.
+subhead: Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise. Bring text, notes or an article. Use the result to plan your next step.
 explain: |
   Dense text turned into clean nested bullets that you can scan in seconds and revise easily. No paragraphs, no long sentences.
 
@@ -18,6 +15,10 @@ when:
   - Your meeting notes are messy and need structure.
   - You study from notes and want parent and child ideas clear.
   - Your bullet list has mixed formatting and needs cleaning.
+not_for:
+  - "You want paragraphs, a story or an essay: ask your AI to write it directly, since this skill only gives bullets."
+  - "You need exact quotes from the source: copy them by hand, because the bullets split and shorten sentences."
+  - "You need a table, code or JSON: ask your AI for that format by name, as bullets will not fit."
 you_give:
   - Text, notes or an article
   - A web page to summarise (optional)
@@ -28,7 +29,21 @@ you_get:
   - Short lines with no paragraphs
   - Consistent indentation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your source text first. This can be messy notes, an article or an old bullet list.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your text under them. Say lite, full or ultra if you want a set detail level. Full is the default.
+  - Ask your AI to turn it into bullet notes.
+  - Check that no key fact was lost, then ask for more or less detail if needed.
+output_sample:
+  input:
+    - Your messy notes, article text or tangled bullet list
+    - "A detail level: lite, full or ultra (optional)"
+  output:
+    - name: Top-level bullets
+      contains: The main ideas from your text, one short line each, with filler words removed.
+    - name: Nested sub-points
+      contains: Related details grouped under their parent idea, with one idea per line.
+    - name: Detail bullets
+      contains: Smaller facts under each sub-point. Long sentences are split into short lines.
+    - name: Clean indentation
+      contains: One dash style and two spaces per level, even if your input mixed styles.

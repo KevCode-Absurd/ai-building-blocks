@@ -6,7 +6,7 @@ also: [business]
 years: "birth year unconfirmed–"
 living: true
 known_for: "Co-founded Moz and SparkToro. His public work explores audience research, search and content that can help people without a click to your site."
-summary: "Plan audience research or channel choices using Rand Fishkin’s recorded approach. Find where buyers pay attention and connect marketing measures to a business goal."
+summary: "Plan audience research and pick marketing channels with Rand Fishkin's recorded approach. Find where your buyers pay attention and tie it to a goal."
 use_cases:
   - "Find the podcasts, sites and people your buyers actually follow"
   - "Plan content that helps people where they are, even if they never click through"
@@ -16,6 +16,29 @@ use_cases:
   - "Spot topics early, while people discuss them, before they become searches"
   - "Check whether a 'how did you hear about us' survey is telling you the truth"
   - "Decide whether a product is ready to launch or just barely works"
+not_for:
+  - "You want one clear positioning sentence for your product: use the April Dunford mind."
+  - "You want to judge brand growth by broad reach and easy buying, not audience niches: use the Byron Sharp mind."
+  - "You need legal, medical or personal money advice, or his current views: ask a qualified adviser or check your own customer data."
+output_sample:
+  input:
+    - Your marketing plan, channel idea or traffic question
+    - Who your buyers are and what you sell
+    - Your business goal for the year
+    - Any customer survey answers or traffic and sales figures (optional)
+  output:
+    - name: Restated trend
+      contains: A short read of what is happening with your traffic, channel or question, before any advice.
+    - name: Audience research plan
+      contains: Who to research and which podcasts, sites and people your buyers follow more than most people do.
+    - name: Where to show up
+      contains: One or two channels that fit your audience, your skills and your taste.
+    - name: What to publish
+      contains: Content ideas that help people where they are, even if they never click through.
+    - name: Lift signals to watch
+      contains: Brand searches, sentiment, conversion and mentions to track beyond last clicks, tied to your business goal.
+    - name: Caveats
+      contains: Notes on the dates behind each study, and where a very small business may learn more from customer calls.
 seats:
   - {seat: "Audience research", asks: "Where does this audience already spend its attention, and have we checked with data or just guessed?"}
   - {seat: "Zero-click realist", asks: "If nobody clicks through, does this still help someone remember us?"}

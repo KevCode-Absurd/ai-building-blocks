@@ -16,6 +16,27 @@ use_cases:
   - "Write a specific request for one professional conversation"
   - "Make an overwhelming career change small enough to investigate"
   - "Try a hobby before buying equipment or overcommitting"
+not_for:
+  - "You want to move into a new identity through networks and role experiments: hire Herminia Ibarra instead."
+  - "You need to give or get hard feedback at work: hire Kim Scott instead."
+  - "Your next step needs a licence, a qualification or income right away: talk to a career adviser or the body that regulates that work."
+output_sample:
+  input:
+    - Your current role and weekly hours
+    - Two or three recent tasks that went well
+    - Income and care limits that affect your choices
+    - Any permission your employer needs to give (optional)
+  output:
+    - name: Planted-foot summary
+      contains: Your strengths, useful relationships and the parts of your work you want to keep, backed by specific moments.
+    - name: Scan question
+      contains: One person to talk to, one skill question and one possible project, with an end point.
+    - name: Pilot brief
+      contains: The question, the activity, permission, time and the evidence to capture, plus a review and what you decide after.
+    - name: Pilot review
+      contains: Enjoyment, growing competence and open opportunity, judged separately, with what the result cannot show.
+    - name: Decision note
+      contains: Whether to repeat, change the question, stop or prepare a bigger move, with obligations and open conditions.
 seats:
   - {seat: "Career pivots and practical pilots", asks: "What already works, and what real activity could you test next?"}
   - {seat: "Strengths and related opportunities", asks: "What should this pilot teach you before you commit further?"}

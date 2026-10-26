@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a layout method with some design choices.
 new_slug: research-poster-maker
 name: Research poster maker
-summary: Give it your results and figures. Get a printable research poster in
-  LaTeX as a PDF.
+summary: Make a research poster in LaTeX from your results and figures. You get a one-page PDF at your venue's size, plus a print check.
 job: work-with-files
 headline: Research poster maker
-subhead: A printable research poster as a PDF, built in LaTeX from your results
-  and figures. LaTeX keeps text sharp and layouts exact, so it prints well at
-  conference size.
+subhead: A printable research poster as a PDF, built in LaTeX from your results and figures. LaTeX keeps text sharp and layouts exact, so it prints well at conference size.
 explain: |
   A printable research poster as a PDF, built in LaTeX from your results and figures. LaTeX keeps text sharp and layouts exact, so it prints well at conference size.
 
@@ -18,20 +15,49 @@ when:
   - You want to turn a finished paper into a poster.
   - Your institute gives you a LaTeX template.
   - You need a final check before sending it to print.
+not_for:
+  - "You have no LaTeX set up, or you need a quick draft: use PowerPoint, Google Slides or Canva instead."
+  - "You need a slide deck for a talk: build slides in your usual presentation tool."
+  - "You want invented charts or results: this does not make data, so run your own analysis first."
 you_give:
-  - Results and key text
-  - Figures
-  - Poster size
-  - Template or theme (optional)
-  - LaTeX installed on your computer
+  - Your results and key text
+  - Your figures, as PDF, PNG or JPEG files
+  - Your poster width, height and orientation
+  - Your institute template or theme (optional)
+  - Your logos and QR code target (optional)
 you_get:
   - LaTeX source files
   - Compiled PDF poster
   - Print preflight check
   - Notes on layout fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run LaTeX and save files.
+  - Check that LaTeX is installed, or use an AI that can run it. It also needs to save files.
+  - Paste this skill into your AI, or attach the skill folder.
+  - Add your results, figures, poster size and any template.
+  - Ask for a poster in beamerposter, tikzposter or baposter. Say which fits your template.
+  - Open the PDF and check every edge, label and figure. Ask your AI to fix what is wrong.
+  - Run the print check, then send the PDF and source files to your printer.
+output_sample:
+  input:
+    - Your results and key text
+    - Your figures, as PDF, PNG or JPEG files
+    - Your poster width, height and orientation
+    - Your institute template or theme (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - A LaTeX setup with the poster package you pick, plus Poppler for the PDF check
+    - An OpenRouter key and Python, only if you want the optional AI schematic (it costs credits)
+    - A baposter class file you supply yourself, only if you pick baposter
+  output:
+    - name: poster.tex
+      contains: The editable LaTeX source with your columns, blocks, text and figures placed at the size you set.
+    - name: Figures folder
+      contains: Your checked figures, with notes on placed size and print resolution for pictures.
+    - name: poster.pdf
+      contains: The one-page poster at the exact paper size of your venue.
+    - name: Compile log check
+      contains: A scan of the build log for overfull boxes, warnings and missing items.
+    - name: Print preflight report
+      contains: Page count, page size, font embedding and picture resolution, from the review script.
+    - name: Layout fix notes
+      contains: What to change next, such as clipped edges, small text or figures that do not fit.

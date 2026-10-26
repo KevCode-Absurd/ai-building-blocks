@@ -2,37 +2,109 @@ thinking: high
 thinking_why: RF modeling needs deep technical judgement.
 new_slug: rf-system-modeler
 name: RF system modeler
-summary: Give it S-parameter files or a spec. Get RF chains modeled, with gain,
-  noise and stability checked.
+summary: Model your radio frequency chain in MATLAB. Get total gain, noise figure and stability checked before you build any hardware.
 job: build-software
 headline: RF system modeler
-subhead: A working model of your radio frequency chain, with gain, noise,
-  distortion and stability checked, built in MATLAB from measured files or your
-  spec. You find problems on screen before you build hardware.
+subhead: Give it S-parameter files or part specs, in the order the signal flows. Your AI builds the chain in MATLAB and works out total gain, noise figure and distortion. It also checks amplifier stability. It needs paid MATLAB with RF Toolbox.
 explain: |
-  A working model of your radio frequency chain, with gain, noise, distortion and stability checked, built in MATLAB from measured files or your spec. You find problems on screen before you build hardware.
+  A radio frequency (RF) chain is a line of parts, such as an antenna filter, an amplifier and a mixer. Each part adds gain, noise and distortion. It is cheaper to find a problem on screen than on a built board. This is an RF system model, also called an RF cascade or RF budget.
 
-  It loads Touchstone S-parameter files, checks they are sound, and plots them on Smith charts. It converts between network forms, cascades parts and removes test fixtures. Chains of amplifiers, filters and mixers are run through a budget that shows total gain, noise figure and third-order intercept. It can design matching networks and test amplifier stability. It needs MATLAB with the RF Toolbox, and RF Blockset for time-domain runs.
+  The skill loads your Touchstone S-parameter files, checks they are sound, and plots them on Smith charts. It cascades the parts and can remove test fixtures. It runs the chain through a budget that gives total gain, noise figure and third-order intercept. It tests amplifier stability and designs matching networks. Many MATLAB RF rules are built in, such as the argument order that trips up first-time users.
+
+  The code runs in MATLAB with RF Toolbox. Time-domain runs also need Simulink and RF Blockset. All are paid products.
 when:
-  - You have S-parameter files and need to see how parts behave together.
+  - You have S-parameter files and need to see how the parts behave together.
   - You are checking whether a receiver chain meets its noise target.
   - An amplifier oscillates and you need a stability check.
   - You need a matching network between two stages.
+not_for:
+  - "You are designing an antenna or its radiation pattern: use MATLAB's Antenna Toolbox."
+  - "You are modeling radio path loss, fading or radar: use Communications Toolbox or Phased Array System Toolbox."
+  - "You are laying out a PCB filter: use the PCB RF filter designer."
+  - "You do not have MATLAB with RF Toolbox: the code will not run, so ask an RF engineer who has it to run the model."
 you_give:
-  - S-parameter files (.s2p, .s4p) or part specs
-  - The chain order of parts
-  - Frequency range
-  - Target gain or noise figure (optional)
-  - A MATLAB licence with RF Toolbox
+  - S-parameter files (.s2p, .s4p) or part specs from data sheets
+  - The order of the parts in the chain
+  - The frequency range and signal bandwidth
+  - Your target gain or noise figure (optional)
 you_get:
-  - Cascaded gain, noise figure and intercept results
+  - A table of each stage with its gain, noise figure and intercept
+  - Total gain, noise figure and intercept for the chain, with pass or fail against your target
   - Smith chart and rectangular plots
-  - Stability results
-  - A matching network design
-  - MATLAB scripts or a model export
+  - A stability result for each amplifier
+  - A MATLAB script you can rerun
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with RF Toolbox.
+  - Collect your S-parameter files and the data sheet values for any part without a file. Write down the order of the parts and the frequency range.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. Attach the files, or paste the values. Say what you need to know, for example total noise figure against a target.
+  - Copy the MATLAB script it writes and run it in MATLAB. A chat AI cannot run MATLAB for you.
+  - Paste back the numbers and any error. Ask your AI to fix the script or explain the result.
+  - Compare the totals with your target. For any amplifier, read the stability result before you trust the gain.
+  - Have an RF engineer review the model before you order boards.
+how_it_works:
+  - title: List the chain
+    text: It writes out each part, in order, and what data you gave for it. Missing data is marked, not guessed.
+  - title: Load and check files
+    text: It loads each S-parameter file, checks it is passive and causal, and puts all parts on the same frequency grid.
+  - title: Build the budget
+    text: It joins the parts into a cascade with your signal bandwidth and reads gain, noise figure and intercept per stage.
+  - title: Check stability and match
+    text: It tests each amplifier for stability and designs matching networks when you ask.
+  - title: Run time-domain tests
+    text: When you ask, it exports the chain to a time-domain model.
+  - title: Save the script
+    text: It saves the code as MATLAB files, so you can rerun the model after a change.
+output_shape: |
+  Chain table:
+  | Stage | Data source | Gain | Noise figure | OIP3 |
+  | <part> | <file or data sheet> | <dB> | <dB> | <dBm> |
+  Cascade: total gain <dB>, noise figure <dB>, OIP3 <dBm>, SNR <dB>
+  Target: <your target> -> <pass or fail>
+  Stability: <amplifier> <K or mu result, frequencies at risk>
+  Plots: <Smith chart, gain and return loss>
+  Matching network: <topology and part values, if asked>
+  Script: <MATLAB file names>
+  Not checked: <parts left out and why>
+output_sample:
+  input:
+    - S-parameter files or part specs for each stage
+    - The order of the parts and the frequency range
+    - Your target gain or noise figure (optional)
+  prerequisites:
+    - MATLAB with RF Toolbox (paid)
+    - Simulink and RF Blockset for time-domain runs (paid)
+  output:
+    - name: Chain table
+      contains: Each stage with its data source, gain, noise figure and intercept.
+    - name: Cascade results
+      contains: Total gain, noise figure, intercept and SNR, with pass or fail against your target.
+    - name: Stability verdict
+      contains: Whether each amplifier is stable, and which frequencies are at risk.
+    - name: Plots
+      contains: Smith charts and rectangular plots with units on every axis.
+    - name: Matching network
+      contains: A network design between two stages, if you asked for one.
+    - name: MATLAB script
+      contains: The code that built the model, ready to rerun after a change.
+works_best_with:
+  tools:
+    - name: MATLAB with RF Toolbox
+      why: This is paid software, and it runs the model. Time-domain work also needs Simulink and RF Blockset.
+    - name: Claude Code or Codex
+      why: They can run MATLAB on your computer if it is set up, so you do not copy code by hand.
+    - name: Any good chat AI
+      why: It writes the script and explains the result. You run the code yourself.
+  inputs:
+    - Measured S-parameter files from a network analyzer
+    - Fixture files, if you need to remove test fixtures
+    - Data sheet values for mixers, such as conversion gain and intercept
+terms:
+  - term: S-parameters
+    meaning: Numbers that describe how a part passes and reflects a signal at each frequency, saved in a Touchstone file.
+  - term: Noise figure
+    meaning: How much noise a part adds to the signal, in dB. Lower is better.
+  - term: OIP3
+    meaning: The output level at which distortion from two tones grows as large as the tones. Higher is better.
+  - term: Smith chart
+    meaning: A round chart that shows how well a part matches its source or load.
+  - term: Stability
+    meaning: Whether an amplifier stays quiet instead of oscillating on its own.

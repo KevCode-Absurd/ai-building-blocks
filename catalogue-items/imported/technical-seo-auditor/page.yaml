@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Technical faults interact, so it needs careful cause-finding.
 new_slug: technical-seo-auditor
 name: Technical SEO auditor
-summary: Give it your site. Get an audit of crawling, indexing, site structure,
-  structured data, page experience and security.
+summary: Run a technical SEO audit on your site. Find what stops Google crawling and indexing your pages, ranked by priority, with a fix for each.
 job: get-found-in-search
 headline: Technical SEO auditor
-subhead: "An audit of the hidden layer under your content: whether search
-  engines can find, read, index and trust your site. You get the problems listed
-  in order, so you fix what blocks ranking before polishing anything else."
+subhead: "An audit of the hidden layer under your content: whether search engines can find, read, index and trust your site. You get the problems listed in order, so you fix what blocks ranking before polishing anything else."
 explain: |
   An audit of the hidden layer under your content: whether search engines can find, read, index and trust your site. You get the problems listed in order, so you fix what blocks ranking before polishing anything else.
 
@@ -19,6 +16,10 @@ when:
   - You are launching a new site and need the SEO basics right.
   - Pages load slowly and you want to know how much it matters.
   - You run a site in several languages or countries.
+not_for:
+  - "You only want to improve one page's title, headings or text: use a plain on-page edit with your AI, not a site-wide audit."
+  - "You need keywords or a content plan: use a keyword research step first, then come back if pages still do not show in search."
+  - "You only want a faster site with no search goal: use a page speed tool or ask your web developer."
 you_give:
   - Your site address or staging address
   - Access to rendered pages, robots.txt and sitemap
@@ -30,8 +31,34 @@ you_get:
   - Specific fixes
   - A short list to do first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open pages and read site files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Add your site address. Say if it is a live site or a staging site.
+  - Paste your robots.txt and sitemap if your AI cannot open web pages. Add search console data if you have it.
+  - For a large site, say whether you want every page checked or a sample.
+  - Read the executive summary first. Then fix the critical issues before anything else.
+output_sample:
+  input:
+    - Your site address, or your staging address
+    - Access to view page source, robots.txt and the sitemap
+    - Search console access or server logs (optional)
+    - Whether to check every page or a sample (optional)
+  prerequisites:
+    - An AI that can open web pages and read site files
+    - A crawler tool for large sites (optional)
+  output:
+    - name: Scope and methodology
+      contains: What part of the site was checked, what access you had, and what could not be checked.
+    - name: Executive summary
+      contains: The 3 to 5 most serious findings in plain words.
+    - name: 6-layer score
+      contains: A score for crawlability, indexability, rendering, site structure, structured data, and page experience and security.
+    - name: Critical issues
+      contains: Problems that block indexing or cost traffic, each with example URLs and a fix.
+    - name: Important issues
+      contains: Problems that hold the site back but do not block it, with fixes.
+    - name: Nice-to-have polish
+      contains: Small improvements to make once the bigger problems are fixed.
+    - name: Implementation roadmap
+      contains: The fixes in the order you should do them.
+    - name: Redirect map (CSV, migrations only)
+      contains: Old addresses matched to new ones, so no page is lost in a move.

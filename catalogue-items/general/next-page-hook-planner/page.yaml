@@ -1,6 +1,6 @@
 new_slug: next-page-hook-planner
 name: "Next-page hook planner"
-summary: "Tell it your scene. Get the question readers must want answered, where to stop and a fair answer."
+summary: "Plan a next page hook for your scene. Get the question readers must want answered, the line to stop on, and a fair answer for the next scene."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It picks one question and one stopping line from your scene, which takes judgement, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - Your chapters end where the action ends, and readers stop for the night.
   - You know what happens but not where to cut the scene.
   - You have a cliffhanger but are not sure the answer will hold up.
+not_for:
+  - "You write nonfiction or a chapter with no reader question: use a simple outline of your points instead."
+  - "You want to test whether your cliffhanger answer is fair: use the Fair escape checker."
+  - "You want the scene itself written: use the Page-turner scene drafter."
 
 you_give:
   - What happens in the scene, and to whom
@@ -34,6 +38,28 @@ how_to_use:
   - Describe the scene in a few sentences, with the person at its centre.
   - Say what the reader knows so far and what happens in the next scene.
   - Take the plan to "Fair escape checker", then write the scene with "Page-turner scene drafter".
+output_sample:
+  input:
+    - What happens in your scene, and to whom
+    - What the reader already knows (optional)
+    - What comes next in your story (optional)
+  output:
+    - name: The question
+      contains: One plain sentence, with a person in it, that readers will want answered.
+    - name: Who and what is at stake
+      contains: The person the reader worries about and the specific thing they stand to lose.
+    - name: Why readers care
+      contains: One line on what the reader already knows that makes them care.
+    - name: Stop on
+      contains: The line to end the scene on, just before the answer, and why that one.
+    - name: The answer, next scene
+      contains: How the next scene answers it, what it costs, and what new question it opens.
+    - name: Plant earlier
+      contains: Two or three details to show earlier, and where, so the answer feels fair.
+    - name: Missing
+      contains: Facts you did not give that it still needs, marked MISSING.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: Finds the question

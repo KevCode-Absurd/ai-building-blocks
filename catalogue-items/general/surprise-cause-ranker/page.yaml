@@ -1,6 +1,6 @@
 new_slug: surprise-cause-ranker
 name: Surprise cause ranker
-summary: Describe a result that surprised you. Get ranked likely causes, how to test each, and what the facts rule out.
+summary: Find the likely cause of a surprising result. Get ranked causes, a cheap test for each, and what the facts rule out.
 job: think-and-decide
 thinking: high
 thinking_why: It reasons by elimination and by pattern, and must keep guesses separate from facts.
@@ -14,6 +14,10 @@ when:
   - A store, product or person is doing far better than the rest and you want to know why.
   - Something failed and the stories you hear do not add up.
   - You want to copy a success and need to know what actually drives it.
+not_for:
+  - "You have one odd error and no normal figure to compare it with: review the steps of the process with the people who ran it instead."
+  - "You already know the cause and need to pick an action: ask a colleague to argue against your plan before you commit."
+  - "You want a forecast of what will happen next: use a simple trend in a spreadsheet, not this skill."
 you_give:
   - The surprising result and the numbers you have
   - What is normal for comparison
@@ -28,6 +32,26 @@ how_to_use:
   - Describe the result with numbers, and what is normal for comparison.
   - Add what you already believe. It will test your belief like any other.
   - Run the first test it suggests before you act on any cause.
+output_sample:
+  input:
+    - The surprising result and the numbers you have
+    - What is normal for comparison
+    - What you already believe about the cause (optional)
+  output:
+    - name: The surprise
+      contains: The result next to what is normal, with a check on whether the result is real.
+    - name: Ruled out
+      contains: Each cause the facts cannot support, with the fact that crosses it out.
+    - name: Patterns
+      contains: A yes, no or maybe on each of the four patterns, with what each would predict.
+    - name: Ranked causes
+      contains: Four to six causes with high, medium or low likelihood, what else must be true, and a cheap check.
+    - name: First test
+      contains: The one check that tells the top two causes apart, and what each result means.
+    - name: Unexplained
+      contains: What the causes do not account for, and the kind of fact that would fill the gap.
+    - name: Missing and checks missed
+      contains: Gaps in your facts, and any of its own checks that failed, or none.
 how_it_works:
   - title: State the surprise
     text: Writes what happened against what is normal, with numbers.

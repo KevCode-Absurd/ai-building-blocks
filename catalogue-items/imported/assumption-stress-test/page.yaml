@@ -2,24 +2,23 @@ thinking: high
 thinking_why: It has to find which assumptions carry the plan.
 new_slug: assumption-stress-test
 name: Business assumption stress tester
-summary: Give it a plan and its key bets. Find which assumptions break first and
-  what to test.
+summary: Stress test a business assumption before the market does. Give it one bet in your plan. You get the evidence against it and a cheap way to test it.
 job: test-an-idea
 headline: Business assumption stress tester
-subhead: A plan tested against its own weak points before the market does it for
-  you. Pick one belief you are relying on, such as "enterprise buyers will
-  accept a six-month pilot" or "revenue will double each quarter", and the AI
-  tries to break it.
+subhead: A plan tested against its own weak points before the market does it for you. Pick one belief you are relying on, such as "enterprise buyers will accept a six-month pilot" or "revenue will double each quarter", and the AI tries to break it.
 explain: |
   A plan tested against its own weak points before the market does it for you. Pick one belief you are relying on, such as "enterprise buyers will accept a six-month pilot" or "revenue will double each quarter", and the AI tries to break it.
 
   It first restates the belief so it can be tested, with real numbers. Then it looks for evidence against it, models what happens if it is wrong, and shows how sensitive your results are to small changes. Last, it suggests a hedge: a cheap test or backup plan. It has patterns for revenue forecasts, market size, competitive edge, hiring plans and how rivals might react.
 when:
-  - Your forecast needs one big thing to go right and you want to know how
-    likely that is.
+  - Your forecast needs one big thing to go right and you want to know how likely that is.
   - Everyone on the team agrees on the market size and nobody has checked it.
   - You are about to ask investors for money on the back of a growth model.
   - You want to know which bet to test first.
+not_for:
+  - "Your assumption is already proven by customer data: review your real numbers in a spreadsheet instead."
+  - "You want a full financial model built from scratch: ask a finance person or use a spreadsheet template."
+  - "You need facts on your market: run your own research or talk to customers, because this tool does not look anything up."
 you_give:
   - The plan or model
   - The assumption to test, in one sentence
@@ -30,7 +29,25 @@ you_get:
   - A downside case with numbers
   - A hedge or test to run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your plan or model, or describe it in a few lines.
+  - Write the one assumption you want to test as a single clear sentence.
+  - Add any numbers you have, such as win rates, churn or CAC. Skip this if you have none.
+  - Read the downside model first. Check the numbers match your plan.
+  - Pick one hedge from the result and run it before you commit money.
+output_sample:
+  input:
+    - Your plan or model
+    - The one assumption you want to test, in a sentence
+    - Numbers behind it, such as win rates, churn or CAC (optional)
+  output:
+    - name: Assumption
+      contains: Your belief restated as an exact, testable statement, plus where it came from.
+    - name: Counter-evidence
+      contains: Points that challenge the assumption, such as comparable failures and data that contradicts it.
+    - name: Downside model
+      contains: What happens to the plan if the assumption is 30%, 50% or 80% worse, and whether the business survives.
+    - name: Sensitivity
+      contains: A high, medium or low rating, and how much the outcome moves when this assumption shifts.
+    - name: Hedge
+      contains: A way to test it first, a backup plan, and an early warning sign to watch.

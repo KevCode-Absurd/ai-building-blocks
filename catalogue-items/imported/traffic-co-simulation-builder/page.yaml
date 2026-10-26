@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Many linked blocks and settings must agree.
 new_slug: traffic-co-simulation-builder
 name: Traffic co-simulation builder
-summary: Describe the traffic test. Get a Simulink model joined to the SUMO
-  traffic simulator and ready to run.
+summary: Build a Simulink model linked to the SUMO traffic simulator to test a driving controller against moving traffic. Describe the test and get a saved model.
 job: build-software
 headline: Traffic co-simulation builder
-subhead: A Simulink model that runs in step with the SUMO traffic simulator, so
-  you can test a driving controller against moving traffic. You describe the
-  test, and the skill builds the model blocks and the SUMO files.
+subhead: A Simulink model that runs in step with the SUMO traffic simulator, so you can test a driving controller against moving traffic. You describe the test, and the skill builds the model blocks and the SUMO files.
 explain: |
   A Simulink model that runs in step with the SUMO traffic simulator, so you can test a driving controller against moving traffic. You describe the test, and the skill builds the model blocks and the SUMO files.
 
@@ -18,6 +15,10 @@ when:
   - You need to read vehicle speed and position from SUMO inside Simulink.
   - You want to add or remove vehicles while the simulation runs.
   - Your SUMO co-simulation fails to start on Windows.
+not_for:
+  - "You only want to run SUMO without Simulink: use SUMO's command line tools or its Python TraCI link directly."
+  - "You need to model how a car moves and handles: use Vehicle Dynamics Blockset in MATLAB."
+  - "You want to design a road scenario with Driving Scenario Designer: that is a different workflow, so use that MATLAB tool."
 you_give:
   - A description of the traffic test
   - Your road network and SUMO config files, if you have them (optional)
@@ -29,8 +30,33 @@ you_get:
   - SUMO files for the scenario
   - Setup fixes for common start-up errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Simulink and SUMO.
+  - Install MATLAB, Simulink, SUMO and the SUMO support package. Set SUMO_HOME to your SUMO folder.
+  - Open an AI that can run MATLAB code and add this skill.
+  - Describe your traffic test. Add your .sumocfg file if you have one (optional).
+  - Tell it which vehicle is the ego vehicle and how it should be controlled.
+  - Check that the model, .sumocfg and route files were saved, then open the .slx file in Simulink and press Run.
+  - Log the speed and position signals to read the results. Pair it with your own controller model.
+output_sample:
+  input:
+    - A description of the traffic test
+    - Your SUMO config file (.sumocfg), if you have one (optional)
+    - The ego vehicle behaviour you want to control
+    - Your SUMO install path
+  prerequisites:
+    - MATLAB with Simulink
+    - The Automated Driving Toolbox Interface for Eclipse SUMO Traffic Simulator support package
+    - Eclipse SUMO installed, with the SUMO_HOME setting pointing to it
+    - An AI that can run MATLAB code
+  output:
+    - name: Simulink model (.slx)
+      contains: The saved model with Server and Client blocks, plus the Reader, Writer and Actor blocks set up for your test.
+    - name: Network file (.net.xml)
+      contains: The road network SUMO drives on, made with netgenerate or converted from OpenDRIVE when you ask for a new one.
+    - name: SUMO config file (.sumocfg)
+      contains: Points SUMO to the network, sets the time range and step length, and lists route files if used.
+    - name: Route file
+      contains: Vehicle and route entries sorted by departure time, used for the ego vehicle and set routes.
+    - name: SUMO_HOME fix
+      contains: A short MATLAB step that adds the missing trailing separator so Windows runs do not fail to start SUMO.
+    - name: Run and save step
+      contains: The model is saved to your folder and run, so you can check that SUMO starts.

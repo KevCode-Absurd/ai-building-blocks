@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies a set of known principles to code and suggests edits.
 new_slug: code-habits-reviewer
 name: Code habits reviewer
-summary: Give it code. Get duplication, tight coupling and weak contracts
-  flagged, with fixes. Uses Pragmatic Programmer principles.
+summary: Find repeated logic, tangled code and unclear promises in your code. You get a score out of ten and a fix for each problem.
 job: test-and-fix-code
 headline: Code habits reviewer
-subhead: Your code gets a score out of ten against the habits from The Pragmatic
-  Programmer, plus a list of what to fix. It shows where repeated logic, tangled
-  parts and unclear promises will make future changes expensive.
+subhead: Your code gets a score out of ten against the habits from The Pragmatic Programmer, plus a list of what to fix. It shows where repeated logic, tangled parts and unclear promises will make future changes expensive.
 explain: |
   Your code gets a score out of ten against the habits from The Pragmatic Programmer, plus a list of what to fix. It shows where repeated logic, tangled parts and unclear promises will make future changes expensive.
 
@@ -18,6 +15,10 @@ when:
   - Changing one feature keeps breaking three others.
   - Business logic is copied into several places.
   - You want a quick quality score for a codebase.
+not_for:
+  - "You want line-level tidying of names and functions: use a clean code review, since SKILL.md points to its clean-code skill for that."
+  - "You want to restructure messy code step by step: use a refactoring guide, since SKILL.md points to its refactoring-patterns skill."
+  - "You have a small script or a throwaway prototype: skip this and just run it, since the habits pay off only when code lives long."
 you_give:
   - Code or a design description
   - The language and framework (optional)
@@ -28,7 +29,23 @@ you_get:
   - A fix for each problem
   - What to do first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the full text of the skill file as your first message.
+  - Paste the code you want reviewed. A few files, one module or a design doc gives the most reliable score. A whole large codebase will not fit, so pick the part you worry about.
+  - Add the language, the framework and your biggest worry if you have them.
+  - Read the score and the failing checks first. Then fix the ones that cost the most effort.
+  - Ask your AI to explain any fix you do not follow, and run the review again after you change the code.
+output_sample:
+  input:
+    - Your code, or a written description of your design
+    - The language and framework (optional)
+    - Your biggest worry about the code (optional)
+  output:
+    - name: Score
+      contains: A score out of ten, with about 1.4 points for each of the seven checks you pass.
+    - name: Score band
+      contains: A plain line on how healthy the code is, from every habit holding to entropy winning.
+    - name: Failing checks
+      contains: The checks that got a no, such as repeated knowledge, tangled layers or single-point estimates.
+    - name: Fixes
+      contains: One specific fix for each failing check, aimed at reaching ten out of ten.

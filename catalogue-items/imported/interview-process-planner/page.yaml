@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It matches each skill you need to a stage and a person.
 new_slug: interview-process-planner
 name: Interview process planner
-summary: Name the role and level. Get the interview stages, who runs each one
-  and what each stage checks.
+summary: Plan your interview process for any role. Give it the role and level. You get each stage, who runs it and what it checks.
 job: hire-people
 headline: Interview process planner
-subhead: A hiring process where every stage has a purpose and no one asks the
-  same thing twice. Give it the role and level. It lists the skills you must
-  have, then assigns each to an interview stage, such as a recruiter screen,
-  technical deep dive, work sample or panel.
+subhead: A hiring process where every stage has a purpose and no one asks the same thing twice. Give it the role and level. It lists the skills you must have, then assigns each to an interview stage, such as a recruiter screen, technical deep dive, work sample or panel.
 explain: |
   A hiring process where every stage has a purpose and no one asks the same thing twice. Give it the role and level. It lists the skills you must have, then assigns each to an interview stage, such as a recruiter screen, technical deep dive, work sample or panel.
 
@@ -19,6 +15,10 @@ when:
   - Your current process feels long and candidates keep dropping out.
   - Interviewers keep asking the same questions in every round.
   - You need to explain the stages to a hiring manager and the candidate.
+not_for:
+  - "You hire in high volume or for hourly roles: use the standard workflow in your applicant tracking system."
+  - "You need your interview questions checked for legal risk: ask an employment lawyer or your HR lead."
+  - "You need the actual questions and scoring sheets: this plan names the stages, so write those with your hiring team."
 you_give:
   - The role title and level
   - The job description or must-have skills
@@ -31,7 +31,25 @@ you_get:
   - Advance and reject criteria
   - A candidate timeline
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste the role title, level and job description. Add who can interview if you know.
+  - Ask your AI to design the interview process for that role.
+  - Check that each must-have skill appears in at least two stages.
+  - Check that each stage has a clear advance and reject rule, then share the plan with your hiring manager.
+output_sample:
+  input:
+    - The role title and level
+    - The job description or must-have skills
+    - Who can interview (optional)
+    - Your target time to hire (optional)
+  output:
+    - name: Process Overview
+      contains: A table of each stage with its format, interviewer, skills checked, length and the rule for moving on.
+    - name: Competency Coverage Matrix
+      contains: Each must-have skill matched to the stages that check it, so key skills are checked at least twice.
+    - name: Stage Details
+      contains: "For each stage: the purpose, the skills checked, and when to advance or reject a candidate."
+    - name: Candidate Communication Plan
+      contains: What to send candidates after sourcing, before each stage, between stages and after the final round.
+    - name: Logistics
+      contains: Who schedules, whether interviews are remote or on site, and which tools you will use.

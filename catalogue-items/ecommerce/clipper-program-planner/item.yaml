@@ -1,6 +1,6 @@
 slug: clipper-program-planner
 name: "Clipper program planner"
-summary: "Give it a brief and budget cap. Get pay-on-approval terms, a review checklist and a seeding plan."
+summary: "Plan a paid clipper program: pay only for clips you approve, up to a cap, with a do-not list, a review checklist and a seeding plan."
 category: ecommerce
 type: skill
 role: make
@@ -12,7 +12,6 @@ inputs:
   - {type: question, required: false}
 outputs:
   - {type: plan}
-  - {type: brief, required: false}
 uses: []
 origin: rebuilt
 example_pending: true

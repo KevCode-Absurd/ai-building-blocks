@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It asks the next question from your answer.
 new_slug: socratic-explainer
 name: Socratic explainer
-summary: Name a topic. Get it taught through questions, so you reach the idea
-  yourself and remember it.
+summary: Learn a hard idea through questions, not a lecture. Name a topic and get a Socratic explainer that helps you work it out and remember it.
 job: think-and-decide
 headline: Socratic explainer
-subhead: A topic you understand because you worked it out, not because someone
-  lectured you. Name what you want to understand, and the skill teaches it in
-  the style of Socrates, through a short back and forth of questions and small
-  thought experiments.
+subhead: A topic you understand because you worked it out, not because someone lectured you. Name what you want to understand, and the skill teaches it in the style of Socrates, through a short back and forth of questions and small thought experiments.
 explain: |
   A topic you understand because you worked it out, not because someone lectured you. Name what you want to understand, and the skill teaches it in the style of Socrates, through a short back and forth of questions and small thought experiments.
 
@@ -19,6 +15,10 @@ when:
   - You want to understand why something works, not just what it is.
   - Textbook explanations leave you lost.
   - You want to explore an abstract or philosophical idea.
+not_for:
+  - "You need a quick fact, a definition or a short lookup: ask your AI for a direct answer."
+  - "You need install steps, setup commands or troubleshooting: ask your AI for the steps, or read the tool's own guide."
+  - "You want a summary or a long list of facts: ask your AI for a plain summary instead."
 you_give:
   - The topic you want to understand
   - What you already think about it (optional)
@@ -29,7 +29,25 @@ you_get:
   - Questions that make you think
   - A clearer sense of how the idea fits together
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Say the topic in one sentence. Add what you already think about it and your level (optional).
+  - Answer each question in your own words. Short guesses are fine.
+  - If you feel lost, say so. The skill goes back to its analogy and simplifies.
+  - When the idea is clear, try explaining it back, or test it on a real case from your own work.
+output_sample:
+  input:
+    - The topic you want to understand, in one sentence
+    - What you already think about it (optional)
+    - Your level or background (optional)
+  output:
+    - name: Curiosity opening
+      contains: A question or an admission of not knowing that starts the talk and makes you reflect on the topic.
+    - name: Guided reasoning
+      contains: Small observations, thought experiments and questions that build the idea one step at a time.
+    - name: Single analogy
+      contains: One simple comparison, kept the same all the way through, that makes the idea easy to picture.
+    - name: Clarification
+      contains: Short links between the steps, with gentle fixes to any wrong ideas you voiced.
+    - name: Reflection
+      contains: A closing question that asks what picture you have now and invites more questions.

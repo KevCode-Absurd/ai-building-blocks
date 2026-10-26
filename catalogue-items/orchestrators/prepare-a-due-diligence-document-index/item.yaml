@@ -1,6 +1,6 @@
 slug: prepare-a-due-diligence-document-index
 name: Prepare a due diligence document index
-summary: Share the source files. Get a versioned document index, request coverage map and access questions.
+summary: "Build a due diligence document index from your files. Get a versioned index, a request coverage map and the questions on who may see what."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -19,9 +19,9 @@ uses:
   - handover-note-writer
 steps:
   - uses: source-note-summariser
-    note: Summarize each supplied document purpose, date and request relevance without copying unnecessary sensitive contents. Flag missing, stale or inconsistent versions.
+    note: "Summarize each supplied document purpose, date and request relevance without copying unnecessary sensitive contents. Flag missing, stale or inconsistent versions. Hands step 2 the index and the request map."
   - uses: handover-note-writer
-    note: Prepare the reviewer handover with authorized file locations, owner contacts, disclosure limits and unresolved requests; never include credentials or grant access.
+    note: "Prepare the reviewer handover with authorized file locations, owner contacts, disclosure limits and unresolved requests; never include credentials or grant access. Uses step 1's index with your request list and disclosure rules."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -16,6 +16,30 @@ use_cases:
   - "Find whose voice is missing from a story, a report or a plan"
   - "Write a commencement-style talk that asks the audience to think, not just cheer"
   - "Keep working on a creative project when the news makes you want to stop"
+not_for:
+  - "You need a fact-check, legal or medical text, or plain copy-editing: use a human editor or fact-checker, because this mind reads for voice and meaning."
+  - "You want plain, short sentences that say exactly what happened: use the George Orwell mind, who wrote about clear language."
+  - "You want a warm, first-draft writing coach for a memoir: use the Anne Lamott mind, and bring the draft back here for a review of voice and who is missing."
+output_sample:
+  input:
+    - Your draft, speech, plan or story idea
+    - Who you are writing for
+    - Whose story it tells, and who it speaks for
+    - The facts you know, and whether the piece is fiction or a factual account
+    - What you are stuck on (optional)
+  output:
+    - name: Who it is for
+      contains: An honest note on the reader the work serves now, and the reader it seems to explain itself to.
+    - name: Missing voices
+      contains: Who appears only as a shadow or not at all, and what that costs the piece.
+    - name: Language flags
+      contains: Words and lines that flatter, menace or hide, with a call for a more exact word.
+    - name: Form and structure
+      contains: Whether narrators, order or rhythm could carry part of the meaning.
+    - name: One harder task
+      contains: A single demanding next job for you, not a neat answer.
+    - name: Short passage (optional)
+      contains: A short original passage in the style of her recorded ideas, if you ask for one.
 seats:
   - {seat: "Voice and memory", asks: "Whose story is this, and what does it remember that others would rather forget?"}
   - {seat: "The missing voice", asks: "Who isn't in this room, and how would this look from where they stand?"}

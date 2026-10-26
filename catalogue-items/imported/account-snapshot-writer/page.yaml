@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It pulls the right facts and says plainly when data is thin.
 new_slug: account-snapshot-writer
 name: Account snapshot writer
-summary: Name a company. Get a short briefing on its activity, contacts and
-  signals from your Common Room data.
+summary: "Get an account research briefing on any company from your Common Room data: key contacts, signals and next steps. Needs a connected Common Room."
 job: sell-and-negotiate
 headline: Account snapshot writer
-subhead: Name a company or domain and connect your Common Room account. It finds
-  the company, pulls the activity, contacts and intent signals that matter for
-  your question, and adds a web search when the data is thin. You get a short
-  account overview, key contacts, a note when data is limited and suggested
-  angles for your approach.
+subhead: Name a company or domain and connect your Common Room account. It finds the company, pulls the activity, contacts and intent signals that matter for your question, and adds a web search when the data is thin. You get a short account overview, key contacts, a note when data is limited and suggested angles for your approach.
 explain: |
   A short briefing on a company, drawn from the signals in your Common Room data, tells you what the account has been doing so you know how to approach it.
 
@@ -20,6 +15,10 @@ when:
   - You hear a company name and want to know if they already use you.
   - You want to see what an account has done in your community.
   - You need a briefing for a teammate taking over an account.
+not_for:
+  - "You need to review many accounts at once: export a list from Common Room or your CRM instead."
+  - "The company has no Common Room record and you have no web access: use a plain web search or your CRM instead."
+  - "You only need one fact, like the owner or staff count: look it up in Common Room or your CRM directly."
 you_give:
   - A company name or domain
   - A connected Common Room account
@@ -31,8 +30,35 @@ you_get:
   - A note when data is limited
   - Suggested angles for your approach
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to your Common Room account.
+  - Check that you have a paid Common Room account and that it is connected to your AI. The skill cannot run without it.
+  - Open Claude, ChatGPT or Gemini with the Common Room connection turned on, and paste in the skill instructions.
+  - Type a company name or domain. Add your question if you have one, such as whether they show buying signals.
+  - Read the result. Check that each fact came from Common Room, and note any line that says data is limited.
+  - If the data is thin, the skill adds a web search for recent news. Allow web access in your AI if you want this.
+  - Use the next steps to plan your call or to hand the account to a teammate.
+output_sample:
+  input:
+    - A company name or domain
+    - A connected Common Room account
+    - The question you care about (optional)
+  prerequisites:
+    - A paid Common Room account
+    - Common Room connected to your AI through its MCP connection
+    - An AI that can use connected tools
+  output:
+    - name: Snapshot
+      contains: Two or three sentences on what the company does, its stage and your relationship with it.
+    - name: Key Details
+      contains: Employee count, industry, location, domain and funding, when Common Room returns them.
+    - name: CRM & Ownership
+      contains: The account owner, opportunity stage and ARR, only if your CRM fields come back.
+    - name: Scores
+      contains: Every available score as a raw value or percentile, never a label.
+    - name: Signal Highlights
+      contains: The three to five most important signals, each with a date.
+    - name: Top Contacts
+      contains: The top five contacts with name, title and score, highest score first.
+    - name: RoomieAI Research
+      contains: The summary research from Common Room and the names of other research topics available.
+    - name: Recommended Next Steps
+      contains: Two or three specific actions backed by the signals found.

@@ -28,12 +28,12 @@ function skillFor(m, personality, knowledge, playbook, toolkit = "") {
     : "";
   return `---
 name: ${m.slug}
-description: ${JSON.stringify(`Hire ${first} to work on your problem: think, advise and write the way ${first} would. ${m.known_for} Use it on its own (${m.use_cases.slice(0, 2).map((u) => u.charAt(0).toLowerCase() + u.slice(1)).join("; ")}) or as a seat on an advisory council. Built from public sources; an AI playing ${first}, not ${first}.`)}
+description: ${JSON.stringify(m.subhead ? `${m.summary} ${m.subhead} Use this mind on its own or as a seat on an advisory council.` : `Hire ${first} to work on your problem: think, advise and write the way ${first} would. ${m.known_for} Use it on its own (${m.use_cases.slice(0, 2).map((u) => u.charAt(0).toLowerCase() + u.slice(1)).join("; ")}) or as a seat on an advisory council. Built from public sources; an AI playing ${first}, not ${first}.`)}
 ---
 
 # ${m.name}
 
-${m.summary}
+${m.summary}${m.subhead ? "\n\n" + m.subhead : ""}
 
 This is an AI playing ${first} from public work: ${first}'s own writing and talks, plus good sources. It isn't ${first}, and ${first} hasn't endorsed it. ${living}
 

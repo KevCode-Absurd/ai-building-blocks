@@ -1,0 +1,130 @@
+name: Medical Billing & Coding Specialist agent
+summary: Check medical coding and claims against the visit notes, triage denials and draft appeal letters. A certified coder signs off before you submit.
+headline: Medical Billing & Coding Specialist agent
+subhead: Paste de-identified visit notes with the codes billed, or a denial notice. Your AI checks each code against what the notes support, lists missing documentation, and drafts an appeal letter with blanks for patient details. It is a second pair of eyes, not a final coder.
+job: document-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Most claim problems start before submission. The notes do not support the code, a modifier has no reason behind it, or the diagnosis does not link to the procedure. This medical billing and coding agent checks for those problems one line at a time.
+
+  It follows one rule above the rest. Code what the provider wrote, never what is assumed. If the notes are thin, it does not suggest a higher code. It writes a question for the provider instead.
+
+  It cannot see your payer contracts, the current code books or the live claim. It marks anything it cannot verify, and it never says a claim is ready to submit. A certified coder or billing professional makes that call.
+when:
+  - A provider asks if the notes support the E/M level or modifier they billed.
+  - A claim came back denied and you need to sort the cause and draft an appeal.
+  - You want a pre-submission checklist run on a batch of claims.
+  - You have KPI numbers, such as denial rate and days in accounts receivable, and want a plain readout of what they suggest.
+not_for:
+  - You want the final code or claim approved. A certified coder or billing professional does that, using the current code books and the payer's policy.
+  - You want to reply to a patient about a bill or a question. Use the Healthcare Customer Service agent.
+  - You are building billing software or a payments integration. Use the Payments & Billing Engineer agent.
+you_give:
+  - Visit notes or an operative report, with patient name, date of birth, member ID and record numbers removed
+  - The codes and modifiers billed, or the codes you want checked
+  - The payer, the provider's specialty and the year of service
+  - The denial notice or reason codes, if this is a denial (optional)
+  - The payer's policy text for the service, if you have it (optional)
+you_get:
+  - A table of each code, with what the notes support, the quote behind it and what to check
+  - A list of missing documentation and a plain question to send to the provider
+  - A pre-submission checklist marked pass, fail or not supplied
+  - A denial triage with the cause type, the deadline to look up and the next action (if a denial)
+  - An appeal letter draft with blanks for patient details (if a denial)
+  - A note on who must review it before anything goes to a payer
+how_to_use:
+  - Protect patient data first. Remove names, dates of birth, member IDs and record numbers. Use this AI only in a way your practice's privacy rules allow.
+  - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Paste the notes, the codes billed, the payer, the specialty and the year. Say the job, such as "Check these codes against the notes" or "Triage this denial and draft an appeal."
+  - Read the missing documentation list. Ask the provider to answer the questions. Do not code from guesses.
+  - Look up each code in the current code books, and read the payer's policy. The AI cannot confirm they are current.
+  - Have a certified coder or billing lead approve everything before you submit, appeal or refund anything.
+how_it_works:
+  - title: Set the job and the facts
+    text: It confirms the task, payer, specialty and year of service. Missing facts are asked once, then marked MISSING.
+  - title: Read the notes
+    text: It finds what the provider documented, such as diagnoses, procedures, time and medical need. It does not assume anything else.
+  - title: Check each code
+    text: It compares each code and modifier to the notes. It marks each Supported, Not supported, Needs a provider question, or Unverified.
+  - title: Scrub the claim
+    text: It runs a checklist on demographics, provider details, code accuracy, diagnosis links, place of service and filing window.
+  - title: Triage a denial
+    text: It sorts the cause as administrative, clinical, authorization or coding, and names the appeal deadline to look up in the notice.
+  - title: Draft and hand over
+    text: It writes the provider questions, the appeal letter or the KPI readout, with a sign-off note for the reviewer.
+output_shape: |-
+  BILLING REVIEW
+    Job: <code check, claim scrub, denial triage, appeal or KPI readout>
+    Payer: <name> | Specialty: <specialty> | Year of service: <year> | Supplied: <list>
+
+  CODE REVIEW
+    <code or modifier> | <what the notes support> | <quote from the notes> | <status: Supported, Not supported, Needs provider question, Unverified> | <what to check>
+
+  DOCUMENTATION QUESTIONS FOR THE PROVIDER
+    <question in plain words>
+
+  CLAIM CHECKLIST
+    <item> | <pass, fail or not supplied>
+
+  DENIAL TRIAGE (if a denial)
+    <claim> | <reason codes> | <cause type> | <deadline, from the notice> | <next action>
+
+  APPEAL LETTER DRAFT (if asked)
+    <letter with [patient], [claim number], [date of service] blanks and an enclosures list>
+
+  SIGN-OFF
+    Not final. A certified coder or billing professional reviews this before it goes to a payer.
+output_sample:
+  input:
+    - Visit notes with patient details removed
+    - The codes and modifiers billed, the payer, the specialty and the year
+    - A denial notice or reason codes (optional)
+    - The payer's policy for the service (optional)
+  prerequisites:
+    - Your practice's rules for using AI with patient data
+    - A certified coder or billing professional to review the result
+  output:
+    - name: Code review
+      contains: Each code or modifier with what the notes support, a quote, a status and what to check.
+    - name: Documentation questions
+      contains: Plain questions for the provider where the notes do not support a code.
+    - name: Claim checklist
+      contains: Demographics, provider, coding, linking and filing checks, each marked pass, fail or not supplied.
+    - name: Denial triage
+      contains: The cause type, the deadline to look up and the next action for each denied claim.
+    - name: Appeal letter draft
+      contains: A letter with blanks for patient details, the coding and clinical reasons, and an enclosures list.
+    - name: Sign-off note
+      contains: A reminder that a certified reviewer must approve the work before it goes to a payer.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in an account your practice has approved
+      why: Billing notes hold private health details, so use a tool your privacy lead has cleared.
+  inputs:
+    - The payer's published policy for the service. It beats general rules where it is stricter.
+    - Your own denial log, so triage can spot repeat causes by payer.
+terms:
+  - term: E/M level
+    meaning: The visit level on a claim, based on how complex the decision making was or how much time the visit took.
+  - term: Modifier
+    meaning: A short code added to a procedure code that changes how it is paid. Each one needs a reason in the notes.
+  - term: Denial reason codes
+    meaning: The codes on a payer notice that say why a claim was not paid. They are called CARC and RARC.
+  - term: Medical necessity
+    meaning: The documented reason a service was needed. Payers deny services without it.
+tweaks:
+  - what: Job
+    how: Run one job per chat, such as only the code check. Mixed jobs make the review harder to follow.
+  - what: Specialty
+    how: Name the specialty. Common mistakes differ between primary care, orthopedics, cardiology and mental health.
+improve:
+  - Keep a list of the questions providers answered, and add them to the notes template so the gaps stop recurring.
+  - Rerun the denial triage each month on new denials to see which causes repeat.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

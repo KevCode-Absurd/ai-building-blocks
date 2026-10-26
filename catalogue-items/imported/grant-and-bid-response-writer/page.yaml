@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must judge fit and write a persuasive, accurate response.
 new_slug: grant-and-bid-response-writer
 name: Grant and bid response writer
-summary: Say who you are. Get grants and bids worth chasing, a go or no-go call,
-  and a draft response. Scrapes sites.
+summary: Find grants and bids your group can win, get a clear go or no-go on each, and a draft response built from your real past work.
 job: sell-and-negotiate
 headline: Grant and bid response writer
-subhead: Fewer bids chased, more of them won. Tell it who your organisation is
-  and it finds grants and government or formal bids worth your time, makes a go
-  or no-go call on each, and drafts a response from what you have really done.
+subhead: Fewer bids chased, more of them won. Tell it who your organisation is and it finds grants and government or formal bids worth your time, makes a go or no-go call on each, and drafts a response from what you have really done.
 explain: |
   Fewer bids chased, more of them won. Tell it who your organisation is and it finds grants and government or formal bids worth your time, makes a go or no-go call on each, and drafts a response from what you have really done.
 
@@ -18,6 +15,10 @@ when:
   - You need a first draft for a grant application.
   - You want a go or no-go reason you can show your team.
   - You must send many bids a week with little time.
+not_for:
+  - "You want a bid or proposal for a normal business sale: use a plain proposal step or write it with your sales lead, not this grants and formal-bid tool."
+  - "You need a contract read for risk after you win: ask a lawyer or use a contract review step, since this tool does not check legal terms."
+  - "You already picked one bid and want only a spell check or edit: use your AI as a plain editor on your own draft."
 you_give:
   - Your organisation details
   - Past projects and results
@@ -29,10 +30,32 @@ you_get:
   - A saved organisation profile
   - A draft response for each bid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page's skill file. Use an AI that can browse web pages if you want it to search for you.
+  - Tell it who your organisation is. Paste or upload your past submissions and project results so it can build your profile.
+  - Paste today's list of solicitations, or give the links to the portals you use. It cannot read a feed on its own without web access.
+  - Read the shortlist and each go or no-go reason. Say which ones you want drafted.
+  - Fill the marked gaps with real facts. Check the draft against the compliance matrix before you submit.
+  - Submit it yourself. The AI never sends anything, and you stay the one who signs.
+output_sample:
+  input:
+    - Your organisation details, such as legal type, registrations, location and budget size
+    - Past submissions, won or lost, and results from past projects
+    - The types of grants or contracts you want
+    - Today's feed of solicitations, pasted or as web page links
+    - Deadlines and size limits (optional)
+  prerequisites:
+    - An AI that can read web pages, if you want it to search portals for you
+    - Your past submissions as files or pasted text, so drafts use your real work
+  output:
+    - name: Organisation profile
+      contains: Your entity type, registrations, codes, certifications, service area, budget, capacity and past performance, saved once for every later step.
+    - name: Opportunity shortlist
+      contains: The opportunities that passed the screen, each with the reason it made the list, plus a count of what was filtered out and why.
+    - name: Go or no-go call
+      contains: A clear decision on each opportunity, with reasons from eligibility, must-have rules, deadline and format, capacity, and odds.
+    - name: Compliance matrix
+      contains: Every required section, form, limit and scoring weight in the solicitation, matched to the part of your response that answers it.
+    - name: Draft response
+      contains: A first draft built from your past work, with clearly marked gaps where a number or reference is missing.
+    - name: Deadline and obligation list
+      contains: Question, submission, award and reporting dates, plus a pipeline record of pursuing, submitted, won, lost or no-bid.

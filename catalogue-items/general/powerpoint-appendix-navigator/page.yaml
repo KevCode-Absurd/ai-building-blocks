@@ -1,70 +1,76 @@
 new_slug: powerpoint-appendix-navigator
 name: PowerPoint appendix navigator
-summary: Share a deck with backup slides. Get an appendix index and checked
-  return links.
+summary: Add an appendix index and working return links to your PowerPoint deck with backup slides. Get a link-test register that shows what passed.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
 headline: PowerPoint appendix navigator
-subhead: Share a deck with backup slides. Get an appendix index and tested links
-  back to the relevant main slides. Work on a copy of your file. Get a clear
-  record of what passed and what still needs checking.
+subhead: Give it a deck with backup slides. It adds an appendix index and links from main slides to backup slides, with return links. You get a copy of your deck and a record of which links were tested.
 explain: >-
-  Share a deck with backup slides. Get an appendix index and tested links back
-  to the relevant main slides.
+  Share a deck with backup slides. Get an appendix index and tested links back to the relevant main slides.
 
 
-  It works with the actual PowerPoint files and follows a specific method for
-  this task. Your source files stay intact. The method starts by checking what
-  your AI already knows and which files it can read. It asks only for missing
-  facts that change the work.
+  It works with the actual PowerPoint files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
 
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share a deck with backup slides. Get an appendix index and tested links back
-    to the relevant main slides.
-  - Actual deck, main-story and appendix boundaries, desired navigation labels
-    and presentation environment.
-  - You need a checked copy while keeping your original files intact.
+  - You present a deck and want to jump to a backup slide when someone asks a question.
+  - Your appendix has many slides and the audience cannot find the one they need.
+  - You reordered or inserted slides and need links that still point to the right slide.
+  - You send the deck to others and want each backup slide to lead back to its main slide.
+not_for:
+  - "Your deck has no backup slides: you do not need this. Share the deck as it is."
+  - "You only want a list of sections: add a plain contents slide by hand in PowerPoint."
+  - "You want slides rewritten or redesigned: ask your AI for edits in a separate chat, or ask a designer."
 you_give:
-  - Actual deck, main-story and appendix boundaries, desired navigation labels
-    and presentation environment.
-  - The app and file tools your AI can use for the requested work
+  - Your PowerPoint deck (.pptx)
+  - The main-story slide range
+  - The appendix slide range
+  - The link labels you want (optional)
+  - The PowerPoint version you will present in (optional)
 you_get:
-  - navigable-deck.pptx and a link-test register.
-  - A record of source files, changes and check results
-  - Missing facts and any checks that could not run
+  - A copy of your deck with an appendix index slide
+  - Links from main slides to backup slides, and return links back
+  - A link-test register showing each path tested and the result
+  - A list of missing facts and any checks that could not run
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Open a chat in an AI that can read and save files, such as Claude with file tools. Add the skill, or paste it in.
+  - Upload your .pptx and say which slides are the main story and which are the appendix.
+  - Add your link labels and your PowerPoint version if you have them.
+  - Wait for the copy of your deck and the link-test register.
+  - Open the copy in PowerPoint slide show mode and click each link. Check anything marked not run.
+output_sample:
+  input:
+    - Your PowerPoint deck (.pptx)
+    - Which slides are the main story and which are the appendix
+    - The link labels you want (optional)
+    - The PowerPoint version you will present in (optional)
+  prerequisites:
+    - An AI that can read and save .pptx files
+    - PowerPoint on your own computer, to test links in slide show mode
+  output:
+    - name: navigable-deck.pptx
+      contains: A copy of your deck with an appendix index, links to backup slides and return links to main slides.
+    - name: Link-test register
+      contains: Each link path that was tested, with the result and what was seen.
+    - name: Source map
+      contains: Which file and slide each change came from and what it supports.
+    - name: Checks
+      contains: Each check marked passed, failed or not run, with evidence.
+    - name: Open items
+      contains: Missing facts or checks that could not run, with the next step.
 how_it_works:
   - title: Step 1
-    text: 1. Inventory slides by stable presentation IDs as well as visible titles.
-      Identify main slides, section starts and genuine backup evidence.
+    text: 1. Inventory slides by stable presentation IDs as well as visible titles. Identify main slides, section starts and genuine backup evidence.
   - title: Step 2
-    text: 2. Create a concise appendix index using actual slide titles and useful
-      topic groupings. Keep existing slide order unless a reorder is explicitly
-      requested.
+    text: 2. Create a concise appendix index using actual slide titles and useful topic groupings. Keep existing slide order unless a reorder is explicitly requested.
   - title: Step 3
-    text: 3. Add native internal hyperlinks to backup slides and return links to the
-      related main slide or index. Avoid file-system paths and private external
-      URLs.
+    text: 3. Add native internal hyperlinks to backup slides and return links to the related main slide or index. Avoid file-system paths and private external URLs.
   - title: Step 4
-    text: 4. Resolve hyperlink targets against actual saved slide relationships.
-      Check renamed or reordered slides by identity instead of assuming the
-      displayed number remains stable.
+    text: 4. Resolve hyperlink targets against actual saved slide relationships. Check renamed or reordered slides by identity instead of assuming the displayed number remains stable.
   - title: Step 5
-    text: 5. Test navigation in the intended presentation engine when available and
-      record each tested path. Render the index and backup slides; keep links
-      useful in a PDF only when the export preserves them.
+    text: 5. Test navigation in the intended presentation engine when available and record each tested path. Render the index and backup slides; keep links useful in a PDF only when the export preserves them.
 output_shape: |-
   FILES
   navigable-deck.pptx and a link-test register.
@@ -79,36 +85,26 @@ output_shape: |-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: Actual deck, main-story and appendix boundaries, desired navigation labels
-      and presentation environment.
+    how: Actual deck, main-story and appendix boundaries, desired navigation labels and presentation environment.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - All internal targets exist.
   - Return links go to the intended context.
   - PPTX and PDF navigation are verified separately.
   - The result names its sources and keeps unrun checks visible.
 test:
-  - "Try this case: A new slide was inserted ahead of appendix slide 12. Check
-    that it does this: Preserve the link to the same backup slide identity."
-  - "Try this case: A target backup slide was removed. Check that it does this:
-    Flag or repair the broken target instead of linking to the next ordinal."
-  - Reopen the saved result and compare it with the source. Keep any failed or
-    unrun check in the report.
+  - "Try this case: A new slide was inserted ahead of appendix slide 12. Check that it does this: Preserve the link to the same backup slide identity."
+  - "Try this case: A target backup slide was removed. Check that it does this: Flag or repair the broken target instead of linking to the next ordinal."
+  - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Add your confirmed field names, file rules and target app version to the required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same meanings and checks.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:
   - input: A new slide was inserted ahead of appendix slide 12
     expected: Preserve the link to the same backup slide identity.

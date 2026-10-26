@@ -1,6 +1,6 @@
 new_slug: product-tech-pack-writer
 name: "Product tech pack writer"
-summary: "Give it your product photos and ideas. Get a factory-ready tech pack with exact measures."
+summary: "Turn your product photos and notes into a tech pack a factory can build from, with every vague word rewritten as a measurement."
 job: plan-supply-chain
 thinking: medium
 thinking_why: "It turns your photos and notes into a structured document and catches vague words. A mid-level model does this well, and it must read your images."
@@ -17,6 +17,10 @@ when:
   - You are about to ask factories for quotes and have only photos and a description.
   - A batch came back different from the sample and you need a spec to hold the factory to.
   - You want to move to a new factory and need a pack that works the same way anywhere.
+not_for:
+  - "You need a spec for complex hardware or moulded parts: hire an engineer or product designer."
+  - "You sell a one-off dropship item you never inspect: skip the pack and test a sample yourself."
+  - "You want to judge a sample that has already arrived: use the Sample approval gatekeeper."
 
 you_give:
   - Photos of your product from every angle, or a reference sample you like
@@ -36,6 +40,30 @@ how_to_use:
   - Paste your materials, sizes, colors, label text and care text.
   - Read the list of vague words and answer each with a number.
   - Keep the finished pack in a shared document you control, and send the same file and quote request to two or three factories.
+output_sample:
+  input:
+    - Photos of your product from every angle, or a reference sample
+    - Materials, sizes, colors and packaging you want
+    - Label text, care text and your logo files
+    - Past defects or complaints (optional)
+  prerequisites:
+    - An AI that can read images
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Tech pack header
+      contains: Product name, version, date and page number, repeated on every page.
+    - name: Six sections
+      contains: Drawing, materials, measurements, graphics, hardware, and labels with packaging, each filled with specs or marked MISSING.
+    - name: Colors and care text
+      contains: Each color with its Pantone code, plus the care wording for labels.
+    - name: Vague words rewritten
+      contains: Each open word, such as centered or thick, turned into a measurement.
+    - name: QC check list
+      contains: Measures and weights a quality check can compare, with a target and how to check.
+    - name: Quote request
+      contains: One request asking every factory for price per variant, minimum order, lead time, packaging details and payment terms.
+    - name: MISSING and CHECKS MISSED
+      contains: What you did not give, and which checks failed, or none.
 
 how_it_works:
   - title: Reads the product

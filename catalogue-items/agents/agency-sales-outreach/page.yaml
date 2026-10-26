@@ -1,0 +1,151 @@
+name: Sales Outreach agent
+summary: "Write B2B cold outreach for one prospect: a personalized email, a 7-touch follow-up plan, replies to likely objections and the next step."
+headline: Sales Outreach agent
+subhead: "Name a prospect, say what you sell and add what you know about them. You get a short cold email, a 7-touch follow-up plan, replies to the objections you are likely to hear and a next step with a date. Nothing is sent for you."
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  B2B sales outreach works when the first message shows you understand the buyer's problem. This agent writes consultative outreach. It leads with what the prospect cares about, keeps the cold email under 150 words and asks for one small next step. It will not open with "I hope this finds you well" or pitch your product in line one.
+
+  It covers the conversation, not only the first email. You get a 7-touch plan over about three weeks across email, LinkedIn and phone. Each follow-up adds something new, such as an insight, a case study or a useful link, and the last is a polite breakup email. It also drafts replies to the objections buyers raise most, such as no budget, bad timing, an existing vendor or "send me some info". Each reply asks a question before it answers. Then it sets the next action and a date, so the deal does not sit.
+
+  It works from what you tell it. It cannot see your CRM, remember earlier chats or look up news about the prospect unless your AI has web search. Where a fact is missing it leaves a placeholder instead of guessing. Pick one job per run: first outreach, a reply to something the buyer said, or a deal check.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have a named prospect and need a first email that does not read like a template.
+  - A prospect went quiet after your first email and you need follow-ups that each add something new.
+  - A buyer said "send me some info", "not now" or "we use someone else" and you need a reply.
+  - You have open deals and want each one to have a stage, a next action and a date.
+not_for:
+  - You want a plan for a whole list of accounts, with buying signals and tiers. Use the Outbound Strategist agent.
+  - You only want to check one email's claims before you send it. Use the Cold email pre-send checker.
+  - You want a full proposal written for a buyer. Use the Proposal Strategist agent.
+  - You want to plan a first call with questions to ask. Use the Discovery Coach agent.
+  - You know nothing about the prospect. Research them first. Without a fact to work from, this agent can only give you placeholders.
+you_give:
+  - What you sell, roughly what it costs and one result you can really point to.
+  - The prospect's name, job title and company.
+  - One fact about them, such as company news, a job post or something they posted (optional)
+  - Their reply, pasted word for word, if they wrote back (optional)
+  - What you already sent them and when (optional)
+you_get:
+  - A cold email under 150 words with one clear ask
+  - A 7-touch plan over about three weeks, where each touch adds something new
+  - A short breakup email that is polite and leaves the door open
+  - Replies to the objections you are likely to hear, each starting with a question
+  - The deal stage, the next action and a date
+  - A list of claims in the drafts that you must be able to prove
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Say which job you want: first outreach, a reply to something they said, or a deal check.
+  - Paste what you sell, the prospect's details and any reply or past messages. Mark what you know and what you are guessing. No code or web access is needed.
+  - Type "Draft this. Use only the facts I gave. Put brackets where a fact is missing."
+  - Read the email out loud. If it sounds like a template or runs over a minute, ask for it shorter and more specific to this person.
+  - Fill each bracket with a real fact and send it yourself. When they reply, run the agent again with their words.
+how_it_works:
+  - title: Pin the job and the prospect
+    text: It confirms which job you want and what you know. It asks once for anything missing, then marks it MISSING.
+  - title: Find the reason to write now
+    text: It picks one trigger from what you gave, such as news, a hire or a job post. With no trigger it says so instead of making one up.
+  - title: Write the cold email
+    text: It opens with why this person and why now, adds one line of value, and ends with one low-effort ask.
+  - title: Plan the follow-ups
+    text: It lays out 7 touches. Each adds new value, and the last is a breakup email.
+  - title: Prepare the replies
+    text: For each likely objection it writes a reply that asks a question first, and never badmouths a competitor.
+  - title: Set the next action
+    text: It places the deal in a stage and names the next step, the date and what would stall it.
+  - title: Check the claims
+    text: It lists every claim in the drafts that you must be able to prove before you send.
+output_shape: |-
+  PROSPECT SNAPSHOT
+    <name> | <job title> | <company> | Known <facts you gave> | MISSING <facts not given>
+
+  WHY NOW
+    <trigger> | <why it matters to this role>
+
+  COLD EMAIL
+    Subject <under 7 words>
+    <relevance line> <value line> <one ask> (under 150 words)
+
+  FOLLOW-UP PLAN
+    Touch <n> | Day <n> | <channel> | <what is new in this touch>
+
+  BREAKUP EMAIL
+    <short, honest, door open>
+
+  OBJECTION REPLIES
+    <objection> | <question to ask first> | <reply>
+
+  NEXT ACTION
+    Stage <stage> | Next step <action> | Date <date> | Could stall if <risk>
+
+  CLAIMS TO PROVE
+    <claim in the draft> | <what you need to back it up>
+output_sample:
+  input:
+    - What you sell and one result you can really point to
+    - The prospect's name, job title and company
+    - One fact about them, such as news or a job post (optional)
+    - Their reply or your earlier messages (optional)
+  prerequisites:
+    - An AI that can read pasted text. Web search is optional and helps with prospect research.
+  output:
+    - name: Prospect snapshot
+      contains: What you know about the person and company, and what is missing.
+    - name: Why now
+      contains: The one trigger that gives you a reason to write today.
+    - name: Cold email
+      contains: A subject line and a message under 150 words with one clear ask.
+    - name: Follow-up plan
+      contains: Seven touches over about three weeks, each with something new to say.
+    - name: Breakup email
+      contains: A short, polite last message that leaves the door open.
+    - name: Objection replies
+      contains: Replies to common pushback, each opening with a question.
+    - name: Next action
+      contains: The deal stage, the next step, a date and what could stall it.
+    - name: Claims to prove
+      contains: Every claim in the drafts and the proof you need before you send.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can draft from pasted text. Use one with web search if you want it to look for news on the prospect.
+  inputs:
+    - Two or three of your own past emails, so the drafts sound like you.
+    - The prospect's LinkedIn post or company news page, pasted in as text.
+    - A real customer result you can quote, with the customer's permission.
+terms:
+  - term: Cold email
+    meaning: A first message to someone who does not know you yet.
+  - term: Touch
+    meaning: One contact attempt, such as an email, a call or a LinkedIn message.
+  - term: Objection
+    meaning: A reason a buyer gives for not going ahead, such as price or timing.
+  - term: Breakup email
+    meaning: A last, polite message that closes your file and leaves the door open.
+  - term: Pipeline stage
+    meaning: Where a deal stands, from first contact through to won or lost.
+tweaks:
+  - what: Length
+    how: Ask for 100 words if the buyer is senior. Short messages are easier to answer.
+  - what: Sales method
+    how: Say if your team uses SPIN or MEDDIC, and the questions in the replies will follow it.
+  - what: Voice
+    how: Paste two emails you wrote and liked. The drafts then sound like you.
+improve:
+  - Log each touch and each reply in a sheet. Paste the log next time so follow-ups build on what was said.
+  - When the sequence ends, paste the results and ask which touch got replies.
+  - Run the first email through the Cold email pre-send checker before you send it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -44,16 +44,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Creative volume planner.** Use the skill `creative-volume-planner`. Starts the month by sizing the work: a quota of new ads for your spend and hit rate.
-2. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the plan from the steps before. Reads the quota plan and decides where the money for it goes.
+2. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the plan from the steps before. Reads the quota plan and decides where the money for it goes. Hands the budget split on to the test layout in step 5. Step 3 does not read it.
 
 Pause here: Collect your reviews, support emails and product facts. Keep them in one place.
 
-3. **Ad concept matrix builder.** Use the skill `ad-concept-matrix-builder`. Turns your reviews and facts into ranked ad concepts to fill the quota.
+3. **Ad concept matrix builder.** Use the skill `ad-concept-matrix-builder`. Uses your reviews and product facts, not step 2's output. Turns them into ranked ad concepts to fill the quota, and hands those concepts on to the brief writer.
 
 Pause here: Pick this month's top two or three concepts from the matrix. Keep one problem per concept.
 
-4. **Creative brief writer.** Use the skill `creative-brief-writer`. Writes a brief for each chosen concept, one problem and one angle at a time.
-5. **Meta test campaign planner.** Use the skill `meta-test-campaign-planner`. Give it the brief from the steps before. Puts the briefs into a test layout that fits the monthly plan.
+4. **Creative brief writer.** Use the skill `creative-brief-writer`. Uses your reviews and product facts again, plus the concepts you picked from step 3. Writes a brief for each chosen concept, one problem and one angle at a time, and hands the briefs on to the test layout.
+5. **Meta test campaign planner.** Use the skill `meta-test-campaign-planner`. Give it the brief from the steps before. Takes the briefs from step 4 and fits them to the quota and budget split from steps 1 and 2. Hands back the test layout.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -16,6 +16,27 @@ use_cases:
   - "Say something hard indirectly, so the listener can take it in"
   - "Write a short note to send with a gift or flowers"
   - "Read your work and ask whether it is truly alive"
+not_for:
+  - "You need clear steps, a memo or instructions: write them plainly yourself, or use the Barbara Minto mind for structured business writing."
+  - "You want a warm, funny guide to getting a messy first draft done: use the Anne Lamott mind."
+  - "You want plain, direct prose with feeling kept beneath the action: use the Ernest Hemingway mind."
+output_sample:
+  input:
+    - Your draft, message or the feeling you want to put into words
+    - Who will read it
+    - Any length limit (optional)
+    - The one reader whose verdict you would trust (optional)
+  output:
+    - name: Is it alive?
+      contains: A plain verdict on whether your draft moves the reader or is only correct.
+    - name: Cut draft
+      contains: Your piece cut down to the lines that carry weight, with a note on what was removed.
+    - name: One image
+      contains: A single small object to try in place of the abstract idea.
+    - name: New short piece
+      contains: A poem of eight lines or fewer, or a brief note, if you asked for something new.
+    - name: Turning question
+      contains: One question that makes you look at the matter from the side.
 seats:
   - {seat: "Compression in poetry", asks: "What is the one image here, and what can we cut so it stands alone?"}
   - {seat: "The slant view", asks: "What happens if we come at this from the side instead of straight on?"}

@@ -1,6 +1,6 @@
 new_slug: turn-your-lessons-into-funny-stories-and-a-short-talk
 name: Turn your lessons into funny stories and a short talk
-summary: Give it two or three lessons you have learned. Get a funny story for each and a talk.
+summary: Turn your lessons into funny stories and a short talk. Give it two or three lessons and get a checked one-minute story for each, then a talk script.
 job: speak-and-persuade
 thinking: medium
 thinking_why: Three text skills, with a repeat of the first two. A mid-size model works.
@@ -14,6 +14,10 @@ when:
   - You have to speak for five to ten minutes and want people to remember the point.
   - You have lessons from your work but no stories to carry them.
   - Your talk is a list of tips and gets blank stares.
+not_for:
+  - "You need a written article, blog post or sales pitch: use the Buyer brief writer to set the buyer and the point, then write it as text."
+  - "You want to polish a talk you already wrote: read it aloud and cut what you rush, or ask a friend to listen once."
+  - "You have no lessons yet and only a topic: write down two or three things you learned the hard way first, then come back."
 you_give:
   - Two or three lessons you trust, each in a sentence
   - A true story from a low point of your own for each lesson, if you have one
@@ -28,6 +32,21 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Run the first two steps once for each lesson. Fix the competing lines yourself at the pause.
   - Give the talk step your true stories. Any lesson without one is marked as missing, not made up.
+output_sample:
+  input:
+    - Two or three lessons you trust, each in one sentence
+    - A true low-point story for each lesson (optional)
+    - Who the audience is and how long you have
+    - An outside idea, quote or fact for each lesson (optional)
+  output:
+    - name: "Step 1: The story"
+      contains: A story under 150 words for one lesson, with a small scene, one comic turn, an aside to the reader and a closing consequence.
+    - name: "Step 2: The check"
+      contains: The effect the story should leave, each paragraph marked serving, neutral or competing, where attention slips, and cuts and fixes.
+    - name: "Step 3: The talk"
+      contains: Each lesson on a true story in one sentence, an outside voice, a question for the room and an opening joke at your own cost.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write a funny story for the lesson
     text: Takes one lesson, picks a small everyday scene with one comic turn, speaks to the reader after the turn and ends on the consequence.

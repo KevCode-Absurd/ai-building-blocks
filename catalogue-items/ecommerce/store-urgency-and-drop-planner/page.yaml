@@ -1,6 +1,6 @@
 new_slug: store-urgency-and-drop-planner
 name: "Store drop and urgency planner"
-summary: "Give it stock, dates and your email list. Get drop, deadline and early-access plans, truth-checked."
+summary: "Plan a store drop, honest deadlines and early access for your email list. Give it real stock and dates. Every claim is checked for truth."
 job: make-offer
 thinking: medium
 thinking_why: "It turns your real stock and dates into plans and lines, then checks each for truth. A mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You want to launch a limited run and sell out without lying about it.
   - You run promotions and want deadlines that make people act, without fake timers.
   - You want to tell your email list first and reward them with early access.
+not_for:
+  - "You sell digital goods or items you can restock: use a date-only offer, because a quantity limit will not be believed."
+  - "You cannot count your stock: fix your counts first, or plan a sale with a real end date only."
+  - "You want a general cap or scarcity plan that is not about a store: use a plain honest scarcity plan instead."
 
 you_give:
   - Your products and the real stock by size or variant
@@ -37,6 +41,31 @@ how_to_use:
   - Say which limits are real, such as a single batch or a supplier cap.
   - Read the honesty check last and remove any line it marks as not true.
   - On the day, check each stock count and date against what is live.
+output_sample:
+  input:
+    - Your products and real stock by size or variant
+    - Real start and end dates for any offer, drop or price rise
+    - Your promotion calendar (optional)
+    - Your email and SMS schedule (optional)
+    - Real limits such as batch size or supplier minimum (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Real levers
+      contains: The limits you can truthfully use, each with its proof, such as a stock count, date or batch size.
+    - name: Drop plan
+      contains: What to release, how many, on what date, and how to announce the sell-out.
+    - name: Deadlines
+      contains: Each offer's real end time, its length, one or two reminders, and any price-rise notice.
+    - name: Lines to test
+      contains: A gain line and a loss line for each limit, plus stock lines by size or variant.
+    - name: Early access
+      contains: Who on your list hears first, when, and a note on why.
+    - name: Honesty check
+      contains: Each line marked true or not on the day, with proof, and kept or removed.
+    - name: Checks missed and missing
+      contains: Any check that failed and any input you did not give.
 
 how_it_works:
   - title: Finds the real levers

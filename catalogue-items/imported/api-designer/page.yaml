@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Interfaces are hard to change later, so each choice needs weighing.
 new_slug: api-designer
 name: API designer
-summary: Say what your code needs to offer. Get a clear, stable API or module
-  design that is hard to misuse.
+summary: Design a clear, stable API for your code. Say what it must do and who calls it. You get a written contract with types and error shapes.
 job: build-software
 headline: API designer
-subhead: An interface for your code that is clear, stable and hard to misuse.
-  Say what your code needs to offer, and you get a design for the routes, types
-  or module boundaries, with the contract written down first.
+subhead: An interface for your code that is clear, stable and hard to misuse. Say what your code needs to offer, and you get a design for the routes, types or module boundaries, with the contract written down first.
 explain: |
   An interface for your code that is clear, stable and hard to misuse. Say what your code needs to offer, and you get a design for the routes, types or module boundaries, with the contract written down first.
 
@@ -18,6 +15,10 @@ when:
   - Two teams need an agreed line between their code.
   - You are changing a public interface and fear breaking users.
   - Your component props have grown messy.
+not_for:
+  - You have one private helper with a single caller. A plain function with clear names is enough.
+  - You need to retire old behaviour or move users to a new version. The deprecation and migration skill it mentions is a separate item and is not included here.
+  - You want code written for the interface. This gives the design and contract, so ask your AI or a developer to build it after.
 you_give:
   - What the interface must do
   - Who or what will call it
@@ -29,8 +30,29 @@ you_get:
   - Notes on what to hide
   - A plan for changing it later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe what your code must offer and who will call it.
+  - Add your existing code or schema if you have it (optional). Paste it in, or upload files if your AI allows.
+  - Ask your AI to write the contract first, with typed inputs, outputs and error shapes.
+  - Check the result against the Verification list, then ask for a short plan for changing it later.
+output_sample:
+  input:
+    - What your code must offer, such as the actions or data it exposes
+    - Who or what will call it, such as a web app, another team or a partner
+    - Your existing code or schema (optional)
+    - Your language or framework (optional)
+  prerequisites:
+    - An AI that can read your project files helps, but you can paste code into a chat instead
+  output:
+    - name: Contract
+      contains: The interface written first, with typed inputs and outputs, before any code is built.
+    - name: Error semantics
+      contains: One consistent way to report errors, with clear shapes and codes callers can rely on.
+    - name: Boundary validation
+      contains: Where input is checked, so bad data is stopped at the edge.
+    - name: REST patterns
+      contains: Advice on resource design, pagination, filtering and partial updates when your interface is a REST API.
+    - name: TypeScript patterns
+      contains: Types that separate input from output, model variants clearly and keep IDs from being mixed up.
+    - name: Red flags and verification
+      contains: A checklist to test the design and spot common mistakes before you build.

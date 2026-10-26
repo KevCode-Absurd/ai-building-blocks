@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The checks are standard but fixes depend on your stack.
 new_slug: website-security-check
 name: Website security baseline checker
-summary: Point it at your site. Get a checklist covering HTTPS, security
-  headers, secrets and content policy, with fixes ranked.
+summary: Run a website security check before launch. Give it your site details and get a ranked list of fixes for HTTPS, headers, secrets and content policy.
 job: secure-code
 headline: Website security baseline checker
-subhead: A pre-launch security checklist for your site, with the weak spots
-  ranked so you fix the dangerous ones first. It matters because most breaches
-  come from basics that were never set up, not from clever attacks.
+subhead: A pre-launch security checklist for your site, with the weak spots ranked so you fix the dangerous ones first. It matters because most breaches come from basics that were never set up, not from clever attacks.
 explain: |
   A pre-launch security checklist for your site, with the weak spots ranked so you fix the dangerous ones first. It matters because most breaches come from basics that were never set up, not from clever attacks.
 
@@ -18,6 +15,10 @@ when:
   - A vendor or auditor asked how your site is protected.
   - You added a new third-party script and want to know what it exposes.
   - It has been months since anyone looked at your site's security settings.
+not_for:
+  - "You are dealing with a hack or breach right now: call your host or a security professional first, then use this check after."
+  - "You want your code reviewed for bugs: ask a developer for a code review, because this check looks at settings, not code."
+  - "You need full compliance for card payments, health data or government work: hire a specialist, because this is only a starting point."
 you_give:
   - Your site address and environments
   - Your hosting platform and CDN
@@ -31,8 +32,33 @@ you_get:
   - Secrets handling plan
   - Schedule for re-checking
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can look at your site's code or settings.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add your site address, your host, how people log in and the scripts your site loads.
+  - If you can, run a free scan at securityheaders.com first and paste in the grade and findings.
+  - Ask your AI to check all six layers and rank the fixes.
+  - Read the high-risk fixes first. Test each change on a test copy of your site before you go live.
+  - Book a re-check for three months from now. This works in a plain chat. Your AI cannot see your live site unless you paste in what it needs.
+output_sample:
+  input:
+    - Your site address and environments (live, test)
+    - Your hosting platform and CDN
+    - How people log in, if they do
+    - Your list of third-party scripts and tools
+    - Rules you must meet, such as PCI, SOC 2 or GDPR (optional)
+  prerequisites:
+    - A free scanner result from securityheaders.com or the MDN HTTP Observatory helps. If you cannot run one, the result will say which findings are affected.
+  output:
+    - name: Inventory
+      contains: The domains, public forms, login pages, admin pages and third-party tools that are in scope.
+    - name: Layer-by-layer status
+      contains: For each of the six layers, what is in place, what is missing and the risk level.
+    - name: Required headers
+      contains: The security header settings to apply, with a value for each one.
+    - name: Required configurations
+      contains: The settings for HTTPS, secrets and login that every site should have.
+    - name: Findings
+      contains: A ranked list of gaps, with high-risk and easy fixes first.
+    - name: Remediation plan
+      contains: Who fixes each gap and by when.
+    - name: Re-audit cadence
+      contains: When to check the site again, with a quarterly review as the minimum.

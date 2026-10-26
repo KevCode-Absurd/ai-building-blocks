@@ -1,6 +1,6 @@
 new_slug: set-up-redis-bullmq-job-queue-builder-prompt
 name: Redis + BullMQ Job Queue coding prompt
-summary: Get a coding brief for a Redis and BullMQ job queue, with scoped jobs, retries and failed-job handling.
+summary: "Get a coding brief for a Redis and BullMQ job queue: connection, queue, worker and a test script, with steps to run it and check it works."
 job: build-software
 headline: Redis + BullMQ Job Queue coding prompt
 subhead: Get a coding brief for a Redis and BullMQ job queue, with scoped jobs, retries and failed-job handling.
@@ -12,6 +12,10 @@ when:
   - You need a coding brief for redis + bullmq job queue.
   - You need set up redis + bullmq job queue prompt for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "You need a production queue with strict TLS checks: set up certificate checks first, or use a managed queue service."
+  - "You only need one task to run later or on a timer: use a simple scheduled job from your host instead."
+  - "You do not have a code project or a Redis server yet: set up the project and Redis first, then come back."
 you_give:
   - The repository or relevant code and schema
   - The feature requirements and available services
@@ -19,9 +23,31 @@ you_get:
   - A coding brief for redis + bullmq job queue
   - Required files, setup gaps and test cases
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your code project in an AI that can edit files, such as Claude Code.
+  - Make sure Redis is running and REDIS_URL is in your .env.local file.
+  - Paste the prompt from the download and ask the AI to list anything missing before it writes code.
+  - Run the test script with npx tsx scripts/test-queue.ts and check that all three jobs log as completed.
+  - Before real use, turn on certificate checks for your Redis link, and ask the AI to add the real job code in the worker.
+output_sample:
+  input:
+    - Your code project, opened in a coding AI such as Claude Code
+    - Your Redis link in a .env.local file (REDIS_URL)
+    - Which jobs the queue should run (optional)
+  prerequisites:
+    - An AI that can read and edit files in your project
+    - A running Redis server, either local or a cloud one such as Upstash
+    - Permission to install the bullmq and ioredis packages
+  output:
+    - name: lib/queue/connection.ts
+      contains: One shared Redis connection that reads REDIS_URL, stops with a clear error if it is missing, and handles cloud links.
+    - name: lib/queue/agent-queue.ts
+      contains: A queue named agent-jobs and an enqueueJob function that adds a job with a priority and returns its ID.
+    - name: lib/queue/worker.ts
+      contains: A worker that runs three jobs at once, logs each job, and logs when a job completes or fails.
+    - name: scripts/test-queue.ts
+      contains: A script that adds three test jobs, waits five seconds, then prints Done.
+    - name: Plain explanation
+      contains: Short notes on why to use a queue, what priority means, how retries work and what concurrency means.
 how_it_works:
   - title: Inspect the target project
     text: Check its file structure, interfaces and service setup before choosing paths.

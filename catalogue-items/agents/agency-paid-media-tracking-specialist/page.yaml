@@ -1,0 +1,158 @@
+name: Ad conversion tracking plan agent
+summary: Plan or fix your ad conversion tracking across GA4, Google Ads and Meta. Get an event list, a double-count check and a step-by-step test plan.
+headline: Ad conversion tracking plan agent
+subhead: Describe your site, your ad platforms and what counts as a sale or lead. If counts disagree, add the numbers. The agent writes a conversion tracking plan with each event, where it fires, what it must carry and how to test it. You also get a ranked list of likely causes for any mismatch.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  If a sale is counted twice, or not at all, your ad platforms learn from wrong
+  numbers. They then spend your budget on the wrong people. This ad conversion
+  tracking plan agent lays out the whole setup in one place, across Google Tag
+  Manager, GA4, Google Ads, Meta and, if you use it, server-side tracking. It is
+  built to help you set up conversion tracking that you can trust.
+
+
+  It starts from what counts as a conversion for your business. Then it lists
+  each event, the trigger, the details each one must carry (value, currency and
+  order ID) and which platform gets it. It plans how to stop the same sale being
+  counted by both the browser and the server, and how consent choices change
+  what you can measure. If your counts disagree, it ranks the likely causes
+  and says how to test each one.
+
+
+  It cannot log in to your accounts, open your site or read your tags. It
+  plans, and you make the changes and run the tests. Paste your tag list or an
+  export from Tag Manager so it can see your setup. This is a role profile from
+  Agency Agents, shared under MIT. The download includes the original profile,
+  its licence and a setup guide. The profile's targets, such as a 3% gap between
+  platforms, are goals, not results measured by AI Blocks.
+when:
+  - You are launching or redesigning a website, and need a tracking plan before the first ad runs.
+  - Google Ads, GA4 and your CRM show different conversion counts, and you need to know why.
+  - You are moving from browser-only tracking to a server setup, or adding enhanced conversions.
+  - You must check your tag setup against consent and privacy rules before a big campaign.
+not_for:
+  - "You only need to fix Meta pixel and server events: use the Meta pixel and server events fixer."
+  - "You run a Shopify store and need GA4 set up: use the GA4 store setup checker or the Shopify Google tracking builder."
+  - "You want to explain why Meta and Google report different numbers: use the Cross-platform conversion reconciler."
+  - "You want a monthly health check on tracking you already trust: use the Monthly tracking health keeper."
+  - "You need someone to change live tags on your site. Hand the plan to a tracking engineer or your developer."
+you_give:
+  - What counts as a conversion for you, such as a purchase, a lead form or a booked call, and what each is worth
+  - The ad platforms you run, such as Google Ads, Meta, LinkedIn or TikTok
+  - Your site type and platform, such as a Shopify store or a lead site on WordPress
+  - Your current setup, as a list of tags or a Tag Manager export (optional)
+  - The numbers that disagree, such as GA4 shows 120 and Google Ads shows 150 (optional)
+  - Whether you use a cookie banner, and which tool (optional)
+you_get:
+  - A list of conversion events, each with its trigger, details to send and platforms that receive it
+  - A plan for which conversion counts toward bidding and which are only for reporting
+  - A plan to stop the same sale being counted twice
+  - A consent and privacy section for your regions
+  - A test plan for each event, with the tool to use and the result to expect
+  - A ranked list of likely causes when your counts disagree
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Write down what counts as a conversion, and the platforms and site type you use. Paste your tag list or a Tag Manager export if you have one.
+  - If your counts disagree, paste the numbers for the same dates from each platform.
+  - Say what you want, such as "Plan tracking for a launch" or "Find why GA4 and Google Ads disagree".
+  - Make the changes in Tag Manager or with your developer. Then run each test in the plan and note the result.
+  - Take your test results back to the agent. Ask it to check what still does not match.
+how_it_works:
+  - title: Define the conversions
+    text: It confirms what counts as a conversion and its value, and which of them should teach the ad platform.
+  - title: Map the events
+    text: It lists each event, its trigger, the details it must carry and where it goes.
+  - title: Plan deduplication
+    text: It sets one shared event ID, so a browser and a server event for the same sale count once.
+  - title: Add consent and privacy
+    text: It notes what changes when a visitor refuses cookies, and what each region needs.
+  - title: Write the tests
+    text: It names the tool for each check, such as Tag Assistant or the Meta test events tool, and the result to expect.
+  - title: Rank the causes
+    text: For any mismatch, it lists likely causes from most to least likely and the test that settles each.
+output_shape: |-
+  CONVERSION DEFINITIONS
+    <conversion> | <value and currency> | <used for bidding or reporting only>
+
+  EVENT PLAN
+    <event name> | <trigger> | <details it must carry> | <sent to platforms> | <browser, server or both>
+
+  DEDUPLICATION
+    <event> | <shared ID> | <where the ID is created> | <how to confirm it works>
+
+  CONSENT AND PRIVACY
+    <region or rule> | <what changes in tracking> | <what to ask your lawyer or developer>
+
+  TEST PLAN
+    <event> | <tool> | <step> | <expected result>
+
+  LIKELY CAUSES OF MISMATCH
+    <rank> | <cause> | <test that settles it>
+
+  OPEN CHECKS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What counts as a conversion for you and what it is worth
+    - The ad platforms you run and your site type
+    - Your current tags or a Tag Manager export (optional)
+    - The conversion counts that disagree, with dates (optional)
+  prerequisites:
+    - Access to Tag Manager, GA4 and your ad accounts, so you can make the changes and run the tests
+    - A developer, if you need data layer or server changes
+  output:
+    - name: Conversion definitions
+      contains: Each conversion, its value and whether it teaches bidding or only reports.
+    - name: Event plan
+      contains: Each event with its trigger, the details it carries and where it goes.
+    - name: Deduplication
+      contains: A shared ID for each event, so browser and server events count once.
+    - name: Consent and privacy
+      contains: What changes in tracking when a visitor refuses cookies.
+    - name: Test plan
+      contains: A test for each event with the tool, the steps and the expected result.
+    - name: Likely causes of mismatch
+      contains: A ranked list of why your counts differ, each with the test that settles it.
+    - name: Open checks
+      contains: Facts you must confirm in your accounts before you act.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A long chat can hold your tag list and your test results, so it can tighten the plan as you go.
+    - name: Google Tag Manager, GA4, Google Ads and Meta Events Manager
+      why: These show you the real setup and let you run each test in the plan.
+  inputs:
+    - A Tag Manager container export, so it reads your real tags.
+    - A screenshot of your data layer events.
+    - Conversion counts from each platform for the same dates.
+terms:
+  - term: Conversion
+    meaning: An action you want, such as a purchase or a lead form, that you count and give to the ad platform.
+  - term: Tag Manager
+    meaning: A tool that lets you add and change tracking code on your site without editing the site itself.
+  - term: Server-side tracking
+    meaning: Sending conversion data from your server to the ad platform, not only from the visitor's browser.
+  - term: Event ID
+    meaning: A code shared by a browser event and a server event for the same action, so the platform counts it once.
+  - term: Consent mode
+    meaning: A setting that changes what Google tags do when a visitor refuses cookies.
+  - term: Enhanced conversions
+    meaning: A way to send hashed customer details with a conversion to improve matching.
+tweaks:
+  - what: Platform
+    how: Name one platform to plan, such as only Meta, if you are not ready to cover them all.
+  - what: Site type
+    how: Say if you sell online or collect leads, because the events and values differ.
+  - what: Depth
+    how: Ask for the event list first, then the test plan, then the consent section.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

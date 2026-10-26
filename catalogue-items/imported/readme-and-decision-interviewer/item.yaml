@@ -12,6 +12,10 @@ inputs:
     required: false
   - type: codebase
     required: false
+  - type: audit_report
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: document
 uses: []

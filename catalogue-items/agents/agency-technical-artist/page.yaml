@@ -1,0 +1,125 @@
+name: Technical Artist agent
+summary: Plan a game art pipeline with budgets for models, textures and effects, LOD and import rules, and a review routine, for any engine or platform.
+headline: Technical Artist agent
+subhead: Give it your engine, platforms and art style. It sets budgets for models, textures and effects, and a review routine for new assets. You get a spec sheet artists can follow and a checklist to catch frame rate problems.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A game art pipeline plan stops a common late fight: the art looks great and the game runs like a slideshow. This agent works the other way round. It fixes the limits first. Then it tells artists what each asset type can cost before they start.
+
+  It turns your platform and frame rate target into budgets for triangles, textures, effects and draw calls. It adds import rules, LOD levels and a review step for every asset. It also flags costs that hit mobile hard, such as stacked see-through effects.
+
+  It follows the Technical Artist profile from Agency Agents. The profile gives sample numbers, such as triangle counts and texture formats. Those are starting values. The agent asks for your target hardware and labels any figure it cannot tie to your project. It cannot profile your build. You run the profiler, and it tells you what to look for.
+when:
+  - Art production is about to start and artists need clear limits.
+  - The game runs below its frame rate target and you do not know what to cut first.
+  - You work in more than one engine and want one set of art rules.
+  - A new effect or shader looks good, and you worry about its cost on mobile.
+not_for:
+  - You use Unity and need a shader graph planned. Use the Unity Shader Graph Artist agent.
+  - You use Unreal and need materials, Niagara or PCG planned. Use the Unreal Technical Artist agent.
+  - You use Godot and need a shader plan. Use the Godot Shader Developer agent.
+  - You want the art itself made. Hire an artist or use an image tool.
+you_give:
+  - Your engine and the platforms you ship to, such as PC, console or mobile
+  - Your frame rate target and the weakest device you must support
+  - Your art style, and the asset types you need rules for, such as characters, props and effects
+  - A profiler screenshot or a description of a slow scene (optional)
+  - Budgets you already have (optional)
+you_get:
+  - "A budget sheet per asset type: triangles, texture sizes, LOD levels and draw calls"
+  - Texture and compression rules for each platform
+  - A review routine for new assets, from first import to sign-off
+  - Limits for shaders and effects, with a check for mobile cost
+  - A profiling plan that says what to measure and in which tool
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md, then references/source-agent.md, then your brief into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your engine, platforms and frame rate target first. Then add the asset types you need rules for.
+  - Say "Write the budget sheet and review routine. Mark any number you cannot tie to my target hardware."
+  - Check each number against your slowest device. Change what does not fit before you share the sheet.
+  - Give the budget sheet to artists before they model. Use the review routine on the first few assets.
+  - Run your engine's profiler on a real scene. Paste the results back to review a slow scene.
+how_it_works:
+  - title: Fix the limits
+    text: It confirms engine, platforms, frame rate target and weakest device. Gaps are asked once, then marked MISSING.
+  - title: Set the budgets
+    text: It writes triangle, texture, LOD and draw call budgets per asset type, each labelled as a starting value.
+  - title: Write the texture rules
+    text: It sets import, mipmap and compression rules per platform, and says to import at source size.
+  - title: Set shader and effect limits
+    text: It caps particles and see-through layers, asks for a mobile-safe shader or a PC-only flag, and lists what to check.
+  - title: Plan the review routine
+    text: Each asset passes import, lighting, LOD and a final profile check before sign-off.
+  - title: Plan the profiling
+    text: It lists what to measure, where in the scene and against which budget.
+output_shape: |-
+  ASSUMPTIONS
+    <engine> | <platforms> | <frame rate target> | <weakest device>
+  ASSET BUDGETS
+    <asset type> | <LOD level> | <max triangles> | <texture size> | <draw calls>
+  TEXTURE RULES
+    <texture type> | <PC format> | <mobile format> | <console format> | <mipmaps on or off>
+  EFFECT AND SHADER LIMITS
+    <limit> | <value> | <platform> | <how to check it>
+  ASSET REVIEW ROUTINE
+    <stage> | <what is checked> | <pass rule>
+  SHADER OR SCRIPT SKETCHES (optional, untested)
+  PROFILING PLAN
+    <what to measure> | <tool> | <where in the scene> | <budget>
+  OPEN QUESTIONS AND CHECKS NOT RUN
+output_sample:
+  input:
+    - Your engine and the platforms you ship to
+    - Your frame rate target and weakest device
+    - Your art style and the asset types you need rules for
+    - A profiler screenshot (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your engine's profiler, to check the plan on a real scene (the AI does not run it)
+  output:
+    - name: Asset budgets
+      contains: Triangles, texture size, LOD levels and draw calls for each asset type.
+    - name: Texture rules
+      contains: Compression and mipmap rules per platform and texture type.
+    - name: Effect and shader limits
+      contains: Caps on particles and see-through layers, and a mobile-safe or PC-only flag for each shader.
+    - name: Asset review routine
+      contains: The stages every asset passes before sign-off, with a pass rule for each.
+    - name: Profiling plan
+      contains: What to measure, in which tool, where in the scene and against which budget.
+    - name: Sketches
+      contains: Optional shader or check script drafts, marked untested.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Platform
+    how: Name one platform to get one clear budget, or two to get a table that compares them.
+  - what: Asset types
+    how: List only the asset types you need, such as characters and effects, to keep the sheet short.
+improve:
+  - After your first profiler run, paste the numbers back and ask for a revised budget sheet.
+terms:
+  - term: LOD
+    meaning: Level of detail. Simpler versions of a model that show when it is far away.
+  - term: Draw call
+    meaning: One request to the graphics card to draw something. Too many slow the game.
+  - term: Overdraw
+    meaning: The same screen pixels drawn many times over, common with see-through effects.
+  - term: Shader
+    meaning: A small program that decides how a surface or effect looks.
+  - term: Texture atlas
+    meaning: Many small images packed into one image.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can write the sheets. Pick one that can read a profiler screenshot.
+  inputs:
+    - A profiler capture or screenshot of your slowest scene
+    - A list of your current assets with triangle counts
+    - The device you test on, with its model name

@@ -16,6 +16,29 @@ use_cases:
   - "Build a visual language that works across every touchpoint, from the logo out"
   - "Write the brief for a brand that people love, even if a few people dislike it"
   - "Develop your own personal style as a designer, writer or maker"
+not_for:
+  - "You want bold, loud logos from a small independent studio: use the Aaron Draplin mind instead."
+  - "You want to talk through branding, belonging and the choices behind a creative life: use the Debbie Millman mind instead."
+  - "You need a finished brand system, or legal or financial claims: hire a brand designer or strategist, because this is a text exercise."
+output_sample:
+  input:
+    - Your brand, launch or personal project in a few lines
+    - Who it is for and why it exists
+    - Your deadline
+    - Your closest competitors or the look in your category (optional)
+  output:
+    - name: What is weird and true
+      contains: The odd, honest thing about your brand that people could love or hate, instead of shrug at.
+    - name: Trend check
+      contains: A plain note on where your look matches the generic style of your category, and how to step out of it.
+    - name: Three feeling words
+      contains: Up to three words for how the brand should feel, to guide type, layout and colour.
+    - name: Constraints and deadline
+      contains: The limits to try, starting with a deadline, that push the work toward a style of its own.
+    - name: Look across every touchpoint
+      contains: Early directions for how the brand shows up on the box, site and posts, not just the logo.
+    - name: Numbered next steps
+      contains: Short steps you can start tonight, with any point past her public work marked as applied judgment.
 seats:
   - {seat: "Bold brand identity", asks: "What's weird and true about this brand, and why are we hiding it?"}
   - {seat: "Trend checker", asks: "If we took the logo off, would anyone know this was us?"}

@@ -1,6 +1,6 @@
 slug: live-screen-debugger
 name: Live screen debugger
-summary: Describe the screen bug. Get your web or Electron app opened, tried out and fixed step by step.
+summary: Fix a screen bug in your local web or Electron app. Your AI opens it, clicks through it, edits the code and checks again until it works.
 category: general
 boards: []
 type: skill

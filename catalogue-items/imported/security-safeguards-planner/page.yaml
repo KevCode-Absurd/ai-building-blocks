@@ -2,29 +2,29 @@ thinking: medium
 thinking_why: It scopes your size, then checks set safeguards.
 new_slug: security-safeguards-planner
 name: Security safeguards planner
-summary: Describe your setup and size. Get which CIS safeguards you need first,
-  your gaps and a fix order.
+summary: Find the security gaps in your company with a CIS Controls planner. Give it your size and tools. You get your group, a gap table and a fix order.
 job: secure-code
 headline: Security safeguards planner
-subhead: "A short list of CIS safeguards your organisation should do first, the
-  gaps you have today, and the order to close them. It starts with the one
-  decision that matters most: which of three Implementation Groups you belong
-  to."
+subhead: "A short list of CIS safeguards your organisation should do first, the gaps you have today, and the order to close them. It starts with the one decision that matters most: which of three Implementation Groups you belong to."
 explain: |
   A short list of CIS safeguards your organisation should do first, the gaps you have today, and the order to close them. It starts with the one decision that matters most: which of three Implementation Groups you belong to. Most small teams begin with IG1, 56 basic safeguards covering essential cyber hygiene.
 
   You describe your size, staff, data sensitivity and tools. The skill places you in a group, then produces a table with control, safeguard, current state, gap, priority and action. It cites the exact control and safeguard number each time. It can also map CIS controls to NIST, ISO or CMMC, and draft policies and procedures for a safeguard.
 when:
-  - You run a small company with little IT staff and need a clear security
-    starting point.
+  - You run a small company with little IT staff and need a clear security starting point.
   - You want to see which controls you lack before an audit.
   - Your client asks how you align with NIST and you use CIS.
   - You need a written policy for one safeguard, like software inventory.
+not_for:
+  - "You need a formal audit sign-off or a legal compliance decision: use an accredited assessor."
+  - "You want to find bugs in your own code: ask a developer for a code review, because this plan covers company-wide security habits."
+  - "You want a full certification such as ISO 27001 or SOC 2: hire a qualified auditor, since this only maps CIS safeguards to those frameworks."
 you_give:
-  - Organisation size and IT staff
-  - Type of data you hold
-  - Current tools and controls
-  - Any framework you must map to (optional)
+  - Your company size and how many people handle IT
+  - The types of data you hold, such as customer or payment data
+  - Your lists of devices, software and user accounts, if you have them (optional)
+  - The security tools you use now
+  - Any framework you must match, such as NIST, ISO or CMMC (optional)
 you_get:
   - Your Implementation Group
   - A gap table with priorities
@@ -32,7 +32,26 @@ you_get:
   - Policy drafts for chosen safeguards
   - Mappings to other frameworks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
+  - "Describe your company: size, IT staff, data you hold and tools you use. Add your asset and account lists if you have them."
+  - Ask it to place you in an Implementation Group first. Check that the group fits your size and data.
+  - Ask for the gap table. Read the rows with the highest priority first.
+  - Ask for a fix order, then for a policy draft for any safeguard you want to write up.
+  - Have a qualified person review the result before you rely on it for an audit or legal decision.
+output_sample:
+  input:
+    - "A short description of your organisation: size and how many people handle IT"
+    - The kinds of data you hold, such as customer or payment data
+    - The tools and security steps you use today
+    - Any framework you must match, such as NIST, ISO or CMMC (optional)
+  output:
+    - name: Implementation Group
+      contains: Which of the three groups (IG1, IG2 or IG3) fits your size, data and staff, with the reasons.
+    - name: Gap assessment table
+      contains: One row per safeguard with control, safeguard number, current state, gap, priority and action.
+    - name: Fix order
+      contains: The order to close the gaps, starting with the safeguards that matter most.
+    - name: Policy or procedure draft
+      contains: A short document for a safeguard you pick, with purpose, scope, requirements and who is responsible.
+    - name: Framework mapping
+      contains: A side-by-side table linking CIS controls to NIST CSF, ISO 27001 or CMMC, if you ask for it.

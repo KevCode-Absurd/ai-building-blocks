@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a set connect routine.
 new_slug: usrp-radio-setup-helper
 name: USRP radio setup helper
-summary: Name your USRP model. Get it connected, set up and verified for use in MATLAB.
+summary: Set up a USRP radio in MATLAB and prove it works. Give it your model. You get host checks, radio setup steps and a test that confirms the link.
 job: build-software
 headline: USRP radio setup helper
-subhead: A USRP radio that is connected, configured and proven to work in
-  MATLAB, so you can start sending and capturing signals. It covers the models
-  E320, N300, N310, N320, N321, X300, X310 and X410.
+subhead: A USRP radio that is connected, configured and proven to work in MATLAB, so you can start sending and capturing signals. It covers the models E320, N300, N310, N320, N321, X300, X310 and X410.
 explain: |
   A USRP radio that is connected, configured and proven to work in MATLAB, so you can start sending and capturing signals. It covers the models E320, N300, N310, N320, N321, X300, X310 and X410.
 
@@ -17,6 +15,10 @@ when:
   - MATLAB says the radio is not found, and you do not know why.
   - You see dropped samples when streaming and suspect the network.
   - You need a repeatable setup before a lab session or a project.
+not_for:
+  - "You want to send or capture a first real signal: use the matlab-detect-capture-usrp skill once this setup works, or follow the Transmit and Capture guide from MathWorks."
+  - "You need to install MATLAB or the Wireless Testbench add-on: ask your IT team or MathWorks, because this skill does not cover buying or installing them."
+  - "You use the older comm.SDRuReceiver or comm.SDRuTransmitter path, or need FPGA work: use the MathWorks help pages for those."
 you_give:
   - Your USRP model
   - How it connects to your computer
@@ -28,9 +30,32 @@ you_get:
   - A test that proves the connection works
   - Fixes for the most common failures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP
-    radio.
+  - Check you have MATLAB R2026a or later with the Wireless Testbench support package. Both need a licence. This skill does not cover buying or installing them.
+  - Connect and power on your USRP radio.
+  - Open your AI tool and add the skill folder, or paste in the SKILL.md text.
+  - Tell your AI your USRP model, how it connects, and your MATLAB release. Add any error message.
+  - Let your AI run each step and show you the results. It needs to run MATLAB and shell commands on your computer.
+  - When the connection test passes, move on to the matlab-detect-capture-usrp skill to capture your first real signal.
+output_sample:
+  input:
+    - Your USRP model (E320, N300, N310, N320, N321, X300, X310 or X410)
+    - How the radio connects to your computer
+    - Your MATLAB release
+    - Any error message you see (optional)
+  prerequisites:
+    - MATLAB R2026a or later with the Wireless Testbench support package already installed, which needs a licence
+    - A USRP radio on your desk, powered on and cabled to your computer
+    - An AI that can run MATLAB and shell commands on your computer
+  output:
+    - name: Host check
+      contains: Your operating system, network card type, link speed and packet size (MTU), with what to fix.
+    - name: Radio discovery
+      contains: The findsdru and probesdru results, plus a check that the driver version matches the radio.
+    - name: Host fixes
+      contains: Commands to set a static IP, turn on jumbo frames for 10 GbE and raise network buffers.
+    - name: Radio configuration
+      contains: Code, or the setup wizard route, that saves your radio so MATLAB can use it.
+    - name: Connection test
+      contains: A basebandTransceiver run that shows samples flow without drops.
+    - name: Troubleshooting guide
+      contains: Fixes for radios not found, connection errors and dropped samples.

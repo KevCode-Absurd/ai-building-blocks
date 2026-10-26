@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It maps many controls to your setup.
 new_slug: soc-2-readiness-planner
 name: SOC 2 readiness planner
-summary: Describe your systems. Get your controls mapped, gaps found and the
-  evidence an auditor will ask for.
+summary: "Plan your SOC 2 readiness: map your controls, find gaps and list the evidence an auditor will ask for, for a Type I or Type II report."
 job: secure-code
 headline: SOC 2 readiness planner
-subhead: Your controls mapped to SOC 2, the gaps listed, and the evidence an
-  auditor will ask for. You describe your systems, and the skill builds the plan
-  for a Type I or Type II report.
+subhead: Your controls mapped to SOC 2, the gaps listed, and the evidence an auditor will ask for. You describe your systems, and the skill builds the plan for a Type I or Type II report.
 explain: |
   Your controls mapped to SOC 2, the gaps listed, and the evidence an auditor will ask for. You describe your systems, and the skill builds the plan for a Type I or Type II report.
 
@@ -18,6 +15,10 @@ when:
   - You are choosing between a Type I and a Type II report.
   - You need to know what evidence to keep from day one.
   - You want a control list your team can assign to owners.
+not_for:
+  - "You already hold a current SOC 2 report: keep it up to date with your auditor and your own control owners."
+  - "You do not store or handle customer data: ask your customer what proof they need, as SOC 2 may not apply."
+  - "You need a licensed audit or a signed report: hire an independent CPA audit firm, since this plan cannot certify you."
 you_give:
   - A description of your systems and data
   - Your current security practices
@@ -29,8 +30,32 @@ you_get:
   - An evidence collection checklist
   - A readiness summary and vendor tasks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions, or upload the skill folder.
+  - Describe your systems, the customer data you hold and the security practices you have today.
+  - Say if you want a Type I or Type II report, and add your target date if you have one.
+  - Ask for the control matrix, gap list and evidence checklist. The helper scripts need an AI that can run Python code.
+  - Check each control owner and evidence source, then give the gaps to your team to fix.
+  - Treat any audit cost or timeline figures as rough estimates. They vary by auditor and scope, so confirm them with your auditor.
+output_sample:
+  input:
+    - A description of your systems and the customer data they hold
+    - Your current security practices
+    - Which trust categories you want in scope (optional)
+    - Your target date for the report (optional)
+  prerequisites:
+    - An AI that can run Python code, if you want the helper scripts to build the matrix, evidence status and gap analysis
+  output:
+    - name: Trust Service Criteria scope
+      contains: Which of the five categories you need, with security always included and the others chosen by what your customers ask for.
+    - name: Control matrix
+      contains: One row per control, with an ID, a description, an owner and an evidence source.
+    - name: Gap analysis
+      contains: What is missing or weak today, plus a remediation plan and timeline for a Type I or Type II report.
+    - name: Evidence checklist
+      contains: What to collect for each control, such as logs, tickets and screenshots, and when to collect it.
+    - name: Audit readiness score
+      contains: A pre-audit checklist and a readiness score, with common audit findings to avoid.
+    - name: Vendor management tasks
+      contains: How to assess third-party risk and sort your vendors into risk tiers.
+    - name: Continuous compliance plan
+      contains: Upkeep tasks and a yearly review cycle, plus habits that fail audits.

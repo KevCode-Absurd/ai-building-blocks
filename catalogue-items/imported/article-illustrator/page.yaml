@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It plans each picture first, then follows set steps to draw them.
 new_slug: article-illustrator
 name: Article illustrator
-summary: Give it an article. Get a plan for where pictures belong and a matching
-  set of illustrations.
+summary: Illustrate an article with pictures that match. Give it your text. You get a plan for where images go and one set of illustrations in one style.
 job: make-images
 headline: Article illustrator
-subhead: An article with pictures in the right places, all drawn in one matching
-  look. The skill reads your text first and marks the spots where a picture
-  would help a reader, such as a hard idea, a process or a long stretch with
-  nothing to rest the eye on.
+subhead: An article with pictures in the right places, all drawn in one matching look. The skill reads your text first and marks the spots where a picture would help a reader, such as a hard idea, a process or a long stretch with nothing to rest the eye on.
 explain: |
   An article with pictures in the right places, all drawn in one matching look. The skill reads your text first and marks the spots where a picture would help a reader, such as a hard idea, a process or a long stretch with nothing to rest the eye on.
 
@@ -19,6 +15,10 @@ when:
   - You want pictures that all share one style instead of a random mix.
   - You need to know which paragraphs deserve a picture before you pay for any.
   - You are publishing an article and have no designer.
+not_for:
+  - "You need real photos of your product or team: use your own photos or a photographer."
+  - "You need pictures in a strict brand style: ask a designer, since this tool follows the style you pick, not a brand kit."
+  - "Your post is very short and one cover image is enough: make that one image in your AI's image tool."
 you_give:
   - Your article text
   - The look you want, or a few examples (optional)
@@ -29,8 +29,25 @@ you_get:
   - A matching set of illustrations
   - Placement notes for your article
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can draw images with an image tool.
+  - Open your AI app. Use one that can draw images and read skill files, or paste the skill into a chat.
+  - Paste your article or give the file. Say "illustrate this article".
+  - Pick the picture type, style and colours when it asks. Reply with your choices if it lists numbered options.
+  - Read the outline it writes. Change any spot or brief before it draws.
+  - Let it make the images. Then check that each picture sits at the right place in your article.
+  - Some image tools cost money or need a login or key. Use the one built into your AI app if you want to avoid extra cost.
+output_sample:
+  input:
+    - Your article, as a file or pasted text
+    - The picture type, style and colours you want (optional)
+    - Pictures to copy the look from (optional)
+  prerequisites:
+    - An AI that can draw images, such as an image tool built into your AI app
+  output:
+    - name: outline.md
+      contains: The list of spots where pictures belong, with one short brief per picture and its file name.
+    - name: prompts/NN-{type}-{slug}.md
+      contains: The written image instruction for each spot, saved so every picture follows the same choices.
+    - name: NN-{type}-{slug}.png
+      contains: One finished illustration for each spot in your article.
+    - name: Article with images added
+      contains: Your article with each picture linked in at the spot the outline chose.

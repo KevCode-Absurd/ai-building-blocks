@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It calls a public API and returns the figures.
 new_slug: us-treasury-data-puller
 name: US Treasury data puller
-summary: Ask about US debt, spending or interest rates. Get the latest official
-  numbers from Treasury, no key needed.
+summary: Pull US debt, spending and interest rate figures from Treasury's free Fiscal Data service. Ask in plain words, get the latest official number.
 job: track-numbers
 headline: US Treasury data puller
-subhead: Ask about US debt, spending or interest rates. Get the latest official
-  numbers from Treasury, no key needed. Bring the question you want answered.
-  Use the result to plan your next step.
+subhead: Ask about US debt, spending or interest rates. Get the latest official numbers from Treasury, no key needed. Bring the question you want answered. Use the result to plan your next step.
 explain: |
   Ask a plain question about US debt, government spending or interest rates and get the latest official figure back, with the date it was published. 
   The skill uses the Treasury's open Fiscal Data service. It picks the right data set for your question, such as total public debt to the penny, daily cash statements, monthly spending and revenue, bond auction results, interest rates, exchange rates or savings bonds. It then writes a short Python script that requests only the columns you need, filters by date, sorts newest first and loads the rows into a table. It tells you to check the data set's guide for the current address, because paths change. It needs Python with two common libraries.
@@ -17,6 +14,10 @@ when:
   - You want a year of Treasury auction results in a spreadsheet.
   - You are tracking monthly federal spending against revenue.
   - You need Treasury exchange rates for a set of currencies and dates.
+not_for:
+  - "You need live market prices or trading quotes: use a market data service or your broker, because Treasury exchange rates are reporting rates, not live quotes."
+  - "You need private company data or your own books: use your accounting tool, such as QuickBooks, or ask your accountant."
+  - "You only need one number once: look it up on the fiscaldata.treasury.gov site and skip the script."
 you_give:
   - The question you want answered
   - A date range (optional)
@@ -28,8 +29,28 @@ you_get:
   - A table of rows ready for a spreadsheet
   - The name of the data set used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can call public web APIs.
+  - Open an AI that can run Python and reach the web, such as Claude or ChatGPT with code tools on.
+  - Paste this skill into the chat.
+  - "Install the libraries by running: uv pip install requests pandas."
+  - Type your question, and add a date range if you want one.
+  - Let your AI run the script. Check the date and units on the figure it gives you.
+  - Save the table to a spreadsheet, or ask your AI to chart it.
+output_sample:
+  input:
+    - Your question about US debt, spending, rates or exchange rates
+    - A date range (optional)
+    - The countries, currencies or columns you care about (optional)
+  prerequisites:
+    - An AI that can run Python code and reach the web
+    - Python 3.10 or newer with the requests and pandas libraries
+  output:
+    - name: Latest figure
+      contains: The newest official number for your question, with the date Treasury published it.
+    - name: Data set used
+      contains: The name of the Treasury data set and the endpoint the script called.
+    - name: Python script
+      contains: Code that asks for only the columns you need, filters by date and sorts newest first.
+    - name: Results table
+      contains: Rows loaded into a table, ready to save to a spreadsheet.
+    - name: Reading notes
+      contains: Short warnings on units, such as millions, and on values that should not be added up.

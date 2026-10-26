@@ -1,0 +1,42 @@
+slug: agency-terminal-integration-specialist
+name: Terminal Integration Specialist agent
+summary: "Plan a terminal view inside your iPhone, Mac or Vision Pro app with SwiftTerm, including SSH hookup, keyboard input, smooth text and a test list."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: spatial-computing/terminal-integration-specialist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/terminal-integration-specialist.md
+  licence: MIT
+  original_name: Terminal Integration Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 3082737f766821cf1c5372b9067ff67c873916de8c30b173478fe8bbc9a10087
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Terminal Integration Specialist
+  - Agency Agents
+  - Spatial Computing
+credits:
+  - title: Terminal Integration Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/terminal-integration-specialist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,6 +1,6 @@
 name: "Influencer gifting planner"
 new_slug: influencer-gifting-planner
-summary: "Paste your product and budget. Get the box card, a tracking table and which posts to run."
+summary: "Plan an influencer gifting round: pick creators by fit, get a box card with the disclosure line, and a table to track posts. Free to use."
 job: grow-social
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You want real videos about your product without scripting creators.
   - You're about to gift product to creators and want a simple way to track it.
   - Some creator posts did well and you want to run them as ads, the right way.
+not_for:
+  - "You want to pay creators to read a script: this plan covers gifted product only, so agree the deal and filming brief with the creator yourself."
+  - "You need to find creators or message them: shortlist them first in TikTok One Creator Marketplace or Meta Creator Marketing Hub, then bring the list here."
+  - "You want a pay rate for a creator: this plan never suggests one, so agree the number with each creator."
 
 you_give:
   - What you make in one or two sentences, how it's used, and what creators must not say
@@ -37,6 +41,28 @@ how_to_use:
   - Add what one box costs you and your budget. If you have a list of creators, paste it.
   - Print the card, send the product, and fill in the tracking table as posts come in.
   - Before running any post as an ad, get the platform permission and a written agreement.
+output_sample:
+  input:
+    - What you make, how it is used, and what creators must not say
+    - What one box costs you and your budget for the round
+    - Who you want creators' followers to be (recommended)
+    - Creator handles with links to recent posts and view counts (optional)
+    - How you will pay, such as gifted only or a share of sales (optional)
+  output:
+    - name: Fit checklist
+      contains: Four signals worth one point each, plus fit points out of 4 for each creator if you gave a list.
+    - name: The card
+      contains: A card of about 120 words for the box, ready to print, with the disclosure wording.
+    - name: Disclosure line
+      contains: The plain words creators say in the video, and how to check each post has them.
+    - name: Tracking table
+      contains: One row per creator with views against their own median, buyer comments, sorting group and permission status.
+    - name: Round size
+      contains: Your budget divided by the cost of one box, giving the number of boxes.
+    - name: MISSING
+      contains: Anything you did not give, marked instead of guessed.
+    - name: Checks missed
+      contains: One line for each of the plan's own checks it still fails, or none.
 
 how_it_works:
   - title: Picks by fit evidence

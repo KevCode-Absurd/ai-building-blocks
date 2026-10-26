@@ -1,6 +1,6 @@
 new_slug: sensory-unboxing-planner
 name: "Sensory unboxing planner"
-summary: "Describe your product and pack. Get matched sense cues with costs and an unboxing script."
+summary: "Plan your unboxing experience: one matched cue each for weight, colour, sound, smell and feel, with cost per order and a 30-second script."
 job: brand-file
 thinking: medium
 thinking_why: "It matches sense cues to a brand feeling and adds cost lines, so a mid-size model works and a stronger one finds tighter matches."
@@ -17,6 +17,10 @@ when:
   - You are redoing your box, tissue or insert and want every part to say the same thing.
   - Customers say the product feels cheap, or your box looks nicer than it feels.
   - You want unboxing videos from customers and creators and need a moment worth filming.
+not_for:
+  - "You want the layout of inserts, cards and gifts: use the Unboxing insert and gift planner."
+  - "You want to add scent to food, skincare or pet products: ask a qualified safety person first, this plan only flags the risk."
+  - "You want the signature gesture a customer repeats: use the Brand ritual designer."
 
 you_give:
   - Your product, its price and the brand feeling in three words
@@ -35,6 +39,27 @@ how_to_use:
   - Read the clash list first and fix what clashes before you add anything.
   - Make the two cheapest, best-fitting changes first, and send creators the filming notes.
   - Run the two-version test and compare repeat orders or the words in reviews.
+output_sample:
+  input:
+    - Your product, its price and the brand feeling in three words
+    - Photos of your current box, insert and wrapping
+    - Your product weight and packaging budget per order
+    - Your shipping rates by weight (optional)
+  output:
+    - name: SENSORY PLAN
+      contains: One cue each for weight, colour, sound, smell and feel, with why it fits and the cost per order.
+    - name: CLASH LIST
+      contains: Any cue that works against one of your three words, and how to fix it.
+    - name: BEST TWO TO START
+      contains: The two cues with the best fit for the price, and their total cost per order.
+    - name: UNBOXING SCRIPT
+      contains: What the customer sees, hears and holds in the first 30 seconds, split into three timed parts.
+    - name: CREATOR FILMING NOTES
+      contains: Simple tips on surface, light and first look so the unboxing is easy to film.
+    - name: TEST
+      contains: Two versions to compare, the one measure to use and how long to run it.
+    - name: CHECKS MISSED
+      contains: Any check the plan failed, or the word none.
 
 how_it_works:
   - title: Sets the feeling

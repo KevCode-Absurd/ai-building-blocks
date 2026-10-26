@@ -1,6 +1,6 @@
 new_slug: write-a-procedure-test-it-and-build-a-training-deck
 name: Write a procedure, test it and build a training deck
-summary: Describe how a job gets done. Get a written procedure, a gap check and a deck to train new people.
+summary: Turn a job in someone's head into a written procedure. It checks for gaps a new person would hit, then builds a training deck. Test it first.
 job: document-work
 thinking: medium
 thinking_why: The steps are clear and short. A mid-size model works, but use a stronger one for a long process.
@@ -14,6 +14,10 @@ when:
   - Only one person knows how a job is done and you need a back-up.
   - You are about to hire or hand work to someone new.
   - Mistakes keep happening because each person does the job a different way.
+not_for:
+  - "Your job changes every week: keep a short checklist instead of a procedure and deck, because the deck will go stale."
+  - "Your steps need a formal compliance or legal review: ask your compliance lead or a qualified reviewer, since this does not replace one."
+  - "You only have a finished procedure to check: ask your AI to review it for gaps on its own, without the full workflow."
 you_give:
   - A description of the job, in your own words or from rough notes
   - Who does each step today (optional)
@@ -29,6 +33,25 @@ how_to_use:
   - Describe the job step by step, or paste notes. Answer the questions it asks about owners and edge cases.
   - After the gap check, ask someone new to follow the procedure while you watch. Write down where they stall.
   - Bring the updated procedure back for the proofread and the deck.
+output_sample:
+  input:
+    - Your description of the job, in your own words or rough notes
+    - Who does each step today (optional)
+    - What a new starter should be able to do afterwards (optional)
+  prerequisites:
+    - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project
+    - A person who has never done the job, to test the procedure between steps 2 and 3
+  output:
+    - name: Procedure
+      contains: Purpose, scope, owners, steps in order, edge cases and how to measure that the job worked.
+    - name: Gap check
+      contains: Missing owners, steps with no check, no rollback and skipped cases, with fixes ranked by importance.
+    - name: Proofread list
+      contains: Typos, grammar slips, terms used for the same thing and facts that look wrong, without rewriting.
+    - name: Training deck
+      contains: Slides with one stage each, speaker notes and the edge cases on their own slides.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the procedure
     text: Asks who does each step and what starts it, then writes the purpose, scope, owners, steps in order, edge cases and how to measure that it worked.

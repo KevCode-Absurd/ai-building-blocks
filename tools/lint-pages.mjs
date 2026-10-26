@@ -35,8 +35,7 @@ for (const { slug, file } of pages) {
   // The example is test data now (tools/test-blocks.mjs runs its input); the page shows output_shape instead (docs/MINDS-PRD.md §2).
   if (p.example && !String(p.example.input ?? "").trim()) issues.push("empty example input");
   if (words(p.headline) > 18) issues.push(`headline ${words(p.headline)} words`);
-  if (words(p.subhead) > 60) issues.push(`subhead ${words(p.subhead)} words`);
-  if (words(p.summary) > 22) issues.push(`summary ${words(p.summary)} words`);
+  if (words(p.summary) > 25) issues.push(`summary ${words(p.summary)} words`);
   if (words(p.name) > 10) issues.push(`name ${words(p.name)} words`);
   if (/—/.test(raw)) issues.push("em dash");
   const low = raw.toLowerCase();

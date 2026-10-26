@@ -7,9 +7,7 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -32,6 +30,7 @@ steps:
   - uses: net-leverage-covenant-checker
     note: Use debt after actual or clearly proposed sweep and cash eligible at the same end date. Present actual and proposed cases separately; do not mark a covenant satisfied by an unexecuted prepayment.
 execution: coordinator
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It measures the picture against fixed platform rules.
 new_slug: marketplace-photo-rule-checker
 name: Marketplace photo rule checker
-summary: Give it product photos and your platform. Get a pass or reject per
-  photo, and fixed copies.
+summary: Check your product photos against marketplace image rules before you upload. Get a pass or reject for each photo, plus fixed copies.
 job: product-photos
 headline: Marketplace photo rule checker
-subhead: Give it a product photo or a folder of them and name the store you sell
-  on. It checks each against the image rules of Amazon, TikTok Shop, Temu,
-  Shopee, Shopify and Taobao. You get a pass or reject per photo, the problems
-  found and fixed copies where possible.
+subhead: Give it a product photo or a folder of them and name the store you sell on. It checks each against the image rules of Amazon, TikTok Shop, Temu, Shopee, Shopify and Taobao. You get a pass or reject per photo, the problems found and fixed copies where possible.
 explain: |
   Run a product photo through the image rules of the store you sell on and get a clear pass or reject before you upload. If it fails, it can fix what is fixable.
 
@@ -19,19 +15,42 @@ when:
   - You have 200 photos and want to find the bad ones before upload.
   - You sell on several platforms and each wants a different size.
   - You use AI to make product images and want them to pass the first time.
+not_for:
+  - "You need to spot text, watermarks or damaged products in a photo: check by eye, since this tool only reads pixels and file facts."
+  - "You need a watermark removed or a wrinkled item repaired: use a photo editor or a retouching service, because this tool only resizes, pads and whitens."
+  - "You need to be sure of a store's current rules: read that store's own seller image guide first, because the rule table here can go out of date."
 you_give:
-  - One photo or a folder of photos
-  - The platform you sell on
+  - One product photo or a folder of photos
+  - The platform you sell on, such as Amazon, TikTok Shop, Temu, Shopee, Shopify or Taobao
   - Your own rule file (optional)
-  - Python on your computer
 you_get:
   - A pass or reject for each photo
   - A plain list of problems
   - Fixed copies where possible
   - A batch summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on your computer.
+  - Open an AI that can run Python code on your computer. Install the Pillow image library first.
+  - Copy the skill into your AI, or upload the skill folder with its scripts.
+  - Give it your photo or folder and name the platform you sell on.
+  - Read the pass or reject list first. Fix content problems such as text or watermarks yourself.
+  - Ask for the fix option to get new copies in a separate folder. Your originals stay as they are.
+  - Check the store's current seller image guide before you upload, since platform rules change.
+output_sample:
+  input:
+    - One product photo or a folder of photos
+    - The platform you sell on
+    - Your own rule file (optional)
+  prerequisites:
+    - An AI that can run Python code on your computer
+    - The Pillow image library for Python
+  output:
+    - name: Pass or reject report
+      contains: One verdict per photo for your chosen platform, with the size, file type, background colour and how much of the frame the product fills.
+    - name: Check list per photo
+      contains: Each rule marked pass, fail or cannot tell, such as white background, size, shape, file type and file weight.
+    - name: Fixed copies
+      contains: New files in a separate folder with a white background, resized frame and smaller file weight, with your originals untouched.
+    - name: Re-check of fixed copies
+      contains: A second check on each fixed file to confirm it now passes.
+    - name: JSON results (optional)
+      contains: The same results in a machine-readable form, with each measured value next to its limit.

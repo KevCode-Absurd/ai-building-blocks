@@ -16,6 +16,29 @@ use_cases:
   - "Turn a big new idea into a simple story and a picture of the future people can buy into"
   - "Decide how a small business can compete with a much bigger one"
   - "Plan which skills you need so your work doesn't get automated away"
+not_for:
+  - "You need a real demand test: talk to customers or run a survey first, because a gap on a rival grid is not proof that people will buy."
+  - "You want bold logo work or expressive type: use the Aaron Draplin mind instead, since this one is about focus and difference, not drawing."
+  - "You need legal, pricing or ad policy advice: ask a lawyer or an accountant, as this mind is an AI reading of his public work and does not cover those."
+output_sample:
+  input:
+    - What your business does and who it serves
+    - Your biggest rivals, as customers see them
+    - What customers say about you (optional)
+    - The new product or idea you want to check (optional)
+  output:
+    - name: Redefined word
+      contains: A short reset of what a brand is, as a person's gut feeling, before the work starts.
+    - name: Three focus questions
+      contains: Your answers to who you are, what you do and why it matters.
+    - name: Onliness test
+      contains: A sentence about what only you do, checked by swapping in a rival's name.
+    - name: Rival grid
+      contains: Rivals rated on the factors customers care about, with the empty spaces marked.
+    - name: Zag options
+      contains: Ideas for doing what rivals do not do, and a small, cheap way to test one.
+    - name: Test to run today
+      contains: One short next step, such as running the rival-name swap with real customers.
 seats:
   - {seat: "Brand strategy", asks: "What can you say you are the only one to do, and would a customer agree?"}
   - {seat: "Strategy meets design", asks: "Does the plan on paper match what customers will see and feel?"}

@@ -56,8 +56,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Find the offer to try.** Use the skill `hidden-offer-finder`. Finds the clashes in your live deals and the offer worth testing first.
 2. **Write the article-style page.** Use the skill `article-landing-page`. Give it the offer from the steps before. Puts the chosen offer in an article-style page, with the offer block near the end.
-3. **Check the page in 30 points.** Use the skill `landing-page-30-point-checker`. Give it the landing page from the steps before. Reviews the new page and ranks the five fixes to make before an ad points to it.
-4. **Write the article-style ad.** Use the skill `article-style-image-ad-writer`. Give it the landing page from the steps before. Writes the ad that sends people to the checked page, with one claim and an image brief.
+3. **Check the page in 30 points.** Use the skill `landing-page-30-point-checker`. Give it the landing page from the steps before. Reviews the new page and ranks the five fixes to make before an ad points to it. Hands step 4 the fixes to apply to the page.
+4. **Write the article-style ad.** Use the skill `article-style-image-ad-writer`. Give it the landing page from the steps before. Writes the ad that sends people to the checked page, with one claim and an image brief. Uses the page from step 2 with step 3's fixes applied, and your brief.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -10,6 +10,20 @@ metadata:
 
 Helps operations and HR teams forecast labor demand, design shift patterns, build fair schedules, and manage day-to-day schedule changes.
 
+## Steps
+
+1. Ask for what you need in one message: opening hours, expected demand (people needed per hour or a busy and quiet pattern), number of staff and their roles, allowed shift lengths, and any rules you must follow (rest between shifts, days in a row, local scheduling law). A current rota and complaints are optional. If a crisis or continuity plan is supplied, take the essential service windows, minimum safe coverage and working limits from it in place of asking again.
+2. If an input is missing, write `MISSING: <what is needed>` and say which result depends on it. Do not invent demand figures, staff or rules.
+3. Work out headcount. For each time block: people needed at once, times hours open, divided by hours per person per shift, plus a buffer for absence. Show the working. If the user gave no absence rate, ask or show the result with and without a buffer.
+4. Pick a pattern (fixed, rotating, 4-on-3-off or similar) and give one line on why it fits.
+5. Build the schedule as a table: staff in rows, days in columns, a shift code in each cell, and a key for the codes.
+6. Share nights, weekends and holidays by one stated rule, such as "everyone takes the same number over 8 weeks". Show each person's count.
+7. Write a one-page shift swap and open-shift policy: who can swap, who approves, the deadline and what happens if a shift is unfilled.
+8. Write a short staff notice about the schedule or a change to it.
+9. Check the schedule against each rule the user gave, as met, broken or not checked. Rules the user did not give are "not checked".
+
+This is a planning aid, not legal advice. Rest-period and predictive scheduling rules differ by country and state. Ask an employment adviser before you publish schedules or notices.
+
 ## Supported tasks
 
 - Forecasting staffing needs based on demand patterns

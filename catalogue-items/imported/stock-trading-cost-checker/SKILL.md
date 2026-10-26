@@ -13,32 +13,49 @@ description: >
 
 # Stock Liquidity Analysis Skill
 
-If your host has not already executed the shell probes below (for example, in Codex), run the commands inside the `!` wrappers with its shell tool before choosing a setup path. Use the actual output; if shell access is unavailable, report that limitation.
-
 Analyzes stock liquidity across multiple dimensions — bid-ask spreads, volume patterns, order book depth, estimated market impact, and turnover ratios — using data from Yahoo Finance via [yfinance](https://github.com/ranaroussi/yfinance).
 
 Liquidity matters because it determines the real cost of trading. The quoted price is not what you actually pay — spreads, slippage, and market impact all eat into returns, especially for larger positions or less liquid names.
 
-**Important**: This is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.
+**Important**: This is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc. It collects data from Yahoo Finance's public pages and endpoints, which Yahoo may limit, delay, change or block, and Yahoo's own terms may restrict how the data is used. Say this in the first reply.
+
+## What you need
+
+- One or more ticker symbols (use the Yahoo form, for example `AAPL`, or `RELIANCE.NS`). If missing, ask once. Do not guess.
+- Optional: the order size, in shares or in money. If it is not given, show the impact for a range of order sizes (see Sub-Skill E) and say no size was given.
+- A way to run Python 3. If your AI cannot run code, say so and stop. Offer to write the code for the user to run. Do not write any figures from memory.
+
+## What you hand back
+
+1. **What was checked.** Tickers, lookback period (default 3 months), and the date and time of the data.
+2. **Liquidity grade** for each ticker, with the figures behind it: average daily volume (shares and money), spread, turnover and Amihud ratio.
+3. **Order impact.** The estimated price impact for the order size, as a percent of the price, in basis points and in money, plus the impact curve.
+4. **Side-by-side table** when there is more than one ticker, with a line on which is easier to trade and why.
+5. **Gaps and caveats.** Any field that came back empty (marked `n/a`), and the caveats under "Always caveat" below.
+6. **Next steps.** For example split a large order over several days, compare another ticker, or check the stock's own exchange data before you trade.
 
 ---
 
 ## Step 1: Ensure Dependencies Are Available
 
-**Current environment status:**
+Check by running:
 
-```
-!`python3 -c "exec('try:\n import yfinance, pandas, numpy\n print(f\'yfinance={yfinance.__version__} pandas={pandas.__version__} numpy={numpy.__version__}\')\nexcept Exception:\n print(\'DEPS_MISSING\')')"`
+```python
+try:
+    import yfinance, pandas, numpy
+    print("yfinance", yfinance.__version__, "pandas", pandas.__version__, "numpy", numpy.__version__)
+except ImportError:
+    print("DEPS_MISSING")
 ```
 
-If `DEPS_MISSING`, install required packages:
+If it prints `DEPS_MISSING`, **ask the user before installing anything**. Say you will run `pip install yfinance pandas numpy` (packages from PyPI) and wait for a yes. Then run:
 
 ```python
 import subprocess, sys
 subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "yfinance", "pandas", "numpy"])
 ```
 
-If already installed, skip and proceed.
+If the user says no, stop and offer the code for them to run. If the packages are already installed, skip and proceed.
 
 ---
 
@@ -91,6 +108,7 @@ def liquidity_dashboard(ticker_symbol, period="3mo"):
     ask = info.get("ask", None)
     current_price = info.get("currentPrice") or info.get("regularMarketPrice") or hist["Close"].iloc[-1]
 
+    # Yahoo often leaves bid and ask empty or at 0 outside market hours. If so, keep them as None and report "n/a".
     spread = None
     spread_pct = None
     if bid and ask and bid > 0 and ask > 0:
@@ -152,7 +170,7 @@ def liquidity_dashboard(ticker_symbol, period="3mo"):
 
 Present as a summary card. For the Amihud illiquidity ratio, multiply by 1e9 for readability (standard convention).
 
-**Liquidity grade** (use these rough thresholds for US equities):
+**Liquidity grade** (these thresholds are rough rules of thumb for US equities, not an official standard, and the source gives no basis for them. Say so beside the grade):
 
 | Grade | Avg Dollar Volume | Spread (%) | Amihud (×10⁹) |
 |---|---|---|---|
@@ -179,8 +197,8 @@ def spread_analysis(ticker_symbol):
     ticker = yf.Ticker(ticker_symbol)
     info = ticker.info
 
-    bid = info.get("bid", 0)
-    ask = info.get("ask", 0)
+    bid = info.get("bid") or 0
+    ask = info.get("ask") or 0
     bid_size = info.get("bidSize", None)
     ask_size = info.get("askSize", None)
     current_price = info.get("currentPrice") or info.get("regularMarketPrice", 0)
@@ -381,8 +399,8 @@ def market_impact(ticker_symbol, order_shares=None, order_dollars=None, period="
 Show:
 - The estimated impact for the user's specific order size
 - An impact curve table showing how cost scales with order size
-- Context: "This uses the square-root market impact model, a standard institutional estimate. Actual impact depends on execution strategy (VWAP, TWAP, etc.), time of day, and current market conditions."
-- Above ~25 bps, note that the order is large for the stock's liquidity; above ~50 bps, flag it clearly and suggest the user consider algorithmic execution or splitting the order across days
+- Context: "This uses the square-root market impact model, a simple textbook estimate. It can be off by a wide margin. Actual impact depends on execution strategy (VWAP, TWAP, etc.), time of day, and current market conditions."
+- Above ~25 bps, note that the order is large for the stock's liquidity; above ~50 bps, flag it clearly and suggest splitting the order across days. These two cut-offs are rules of thumb chosen by the skill's author, not standards.
 
 ---
 
@@ -469,6 +487,7 @@ After running the appropriate sub-skill:
 
 - The **lookback period** used for historical metrics
 - The **data timestamp** — spreads and quotes are snapshots, not real-time
+- Any bid, ask or size field that was **empty**, shown as `n/a`. Say that the spread-based figures are less reliable when bid and ask are missing
 - Any tickers that returned **empty data** (invalid symbol, delisted, etc.)
 
 ### Always caveat
@@ -485,7 +504,7 @@ After running the appropriate sub-skill:
 - **Spread costs compound**: A 0.10% spread on a round-trip (buy + sell) costs 0.20% — this adds up for active strategies
 - **Illiquidity premium**: Less liquid stocks historically earn higher returns as compensation — but the transaction costs can eat this premium
 
-Present liquidity data and let the user make their own decisions; don't recommend specific trades.
+Present liquidity data and let the user make their own decisions; don't recommend specific trades. List any check you could not run as `CHECKS MISSED:` (or "none").
 
 ---
 

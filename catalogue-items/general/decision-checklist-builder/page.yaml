@@ -1,6 +1,6 @@
 new_slug: decision-checklist-builder
 name: Decision checklist builder
-summary: Paste your mistake log. Get a one-page checklist of up to twelve questions, each with a pass or fail line.
+summary: "Turn your mistake log into a decision checklist: up to twelve yes/no questions, each with a pass line, tested on two past cases."
 job: think-and-decide
 thinking: high
 thinking_why: It must turn past mistakes into short, testable questions and cut a long list down to what matters.
@@ -14,6 +14,10 @@ when:
   - You make the same kind of decision often and want a fixed way to check it.
   - You have a mistake log and want it to change what you do.
   - A team keeps making the same decision error and you want a shared list.
+not_for:
+  - "You have no mistake log yet: collect your past mistakes first with the Decision mistake collector."
+  - "You already have a checklist and need to run it on a live choice: use the Decision checklist runner."
+  - "You face a one-off decision that you will not repeat: talk it through with a trusted person instead."
 you_give:
   - Your mistake log, or the output of "Decision mistake collector"
   - The decision the list is for, and who will use it
@@ -28,6 +32,26 @@ how_to_use:
   - Paste your mistake log and say which decision the list is for.
   - Read the test results. If a past mistake slips through, ask for an item to catch it.
   - Print the list or keep it where you decide, then use it with "Decision checklist runner".
+output_sample:
+  input:
+    - Your mistake log, with causes and the questions that would have caught each mistake
+    - The decision the list is for, and who will use it
+    - Rules you already follow (optional)
+  prerequisites:
+    - A mistake log, such as the result of the Decision mistake collector
+  output:
+    - name: Trigger
+      contains: When the list fires and who runs it.
+    - name: Rules of use
+      contains: Five rules for using the list the same way each time.
+    - name: The checklist
+      contains: Twelve or fewer yes/no questions, stop items first, each with a pass line and where to find the answer.
+    - name: Test on past cases
+      contains: Two cases from your log run through the list, with what caught each and the catch rate.
+    - name: Missing
+      contains: Gaps marked MISSING where an input was not given.
+    - name: Checks missed
+      contains: One line for each self-check that still failed, or none.
 how_it_works:
   - title: Set the trigger
     text: Defines when the list is used and by whom.

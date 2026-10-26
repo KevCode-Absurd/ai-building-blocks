@@ -151,7 +151,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
   const usableResult = !(hasGeneralTemplate && !hasSpecialist);
   const possibleQuestions = [...new Set([...questions, ...Object.keys(choices)])].filter(id => Object.hasOwn(QUESTIONS, id));
   return <main className="wrap compose-page" data-testid="compose-page">
-    <div className="compose-intro"><span className="mono small">YOUR GOAL → YOUR WORKFLOW</span><h1 className="h2">Build a custom workflow</h1><p className="lede">Describe what you want to achieve. Get a step-by-step workflow with connected skills and checks, ready to edit, download and run in your own AI.</p></div>
+    <div className="compose-intro"><span className="mono small">YOUR GOAL → YOUR WORKFLOW</span><h1 className="h2">Build a custom workflow</h1><p className="lede">Describe what you want to achieve. Get a step-by-step workflow with connected skills and checks, ready to edit, download and run in your own AI.</p><p className="small compose-source-entry">Already have an article, transcript or document? <Link to="/from-a-source" data-testid="compose-from-source">Start from a link or document</Link>.</p></div>
     <nav className="compose-navigation" aria-label="Composer sections"><a href="#compose-request">1. Your request</a>{busy || result ? <a href="#compose-workflow">2. Your workflow</a> : <span aria-disabled="true">2. Your workflow</span>}</nav>
     <div className="compose-layout">
       <section id="compose-request" className="compose-form" aria-label="Your request">

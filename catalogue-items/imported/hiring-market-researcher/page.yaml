@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It must compare sources and judge how fresh each one is.
 new_slug: hiring-market-researcher
 name: Hiring market researcher
-summary: Name a role and place. Get pay ranges, talent supply and hiring
-  difficulty. Reads public web pages.
+summary: Name a role and a place. Get a hiring market research report with pay ranges, talent supply and how hard the hire will be, from public web pages.
 job: hire-people
 headline: Hiring market researcher
-subhead: A clear picture of the job market for one role in one place, so you
-  know what to offer and how long it will take.
+subhead: A clear picture of the job market for one role in one place, so you know what to offer and how long it will take.
 explain: |
   A clear picture of the job market for one role in one place, so you know what to offer and how long it will take. Name the role, level and location. The skill gathers public pay data from sources like job postings, salary sites and surveys, and tells you which ones to trust most.
 
@@ -17,6 +15,10 @@ when:
   - A hiring manager thinks the budget is enough and you disagree.
   - You want to know if talent for a role is scarce in your area.
   - You are deciding whether to hire locally or remote.
+not_for:
+  - "You have hired this role before: start with your own offers and pay data, then use this to check the market."
+  - "You need a live view of offers being made this week: ask a recruiter who is placing this role now."
+  - "You need exact pay from paid surveys like Radford, Mercer or Carta: buy that data or ask your HR lead, as this skill only reads public pages."
 you_give:
   - The role title and seniority
   - The location or remote policy
@@ -28,8 +30,28 @@ you_get:
   - A hiring difficulty rating
   - Advice you can bring to the hiring manager
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the skill instructions.
+  - Type the role, seniority and place. Add your budget and company stage if you have them.
+  - Say which sources you can reach, such as a LinkedIn login or paid pay surveys. Public pages are used if you have none.
+  - Read the summary first. Check the date and source of each pay range.
+  - Treat pool sizes and pay ranges as estimates. Check them with a recruiter before you set an offer.
+output_sample:
+  input:
+    - The role title and seniority
+    - The location or remote policy
+    - Your budget range (optional)
+    - Company stage and size (optional)
+  prerequisites:
+    - An AI that can search the web
+    - A LinkedIn login for pool sizes (optional)
+  output:
+    - name: Executive summary
+      contains: Three to five key findings, a hiring difficulty rating and the top recommendation.
+    - name: Compensation landscape
+      contains: Pay ranges by level, split into base and total pay, with place differences and how your budget compares.
+    - name: Supply and demand analysis
+      contains: Estimated talent pool size, competing open roles, whether candidates or employers hold the power, and the trend.
+    - name: Competitive landscape
+      contains: Companies hiring for similar roles, how their pay and employer brand compare, and where you can stand out.
+    - name: Recommendations
+      contains: Advice on where to source, how to position pay, how long to expect, and what risks to plan for.

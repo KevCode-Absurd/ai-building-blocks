@@ -11,6 +11,24 @@ metadata:
 
 This skill enables the agent to design, generate, and manage infrastructure as code (IaC) for cloud environments. The agent can produce configurations for Terraform, Pulumi, AWS CloudFormation, and AWS CDK, implementing the full plan/apply workflow with proper state management, modular design, and drift detection. IaC ensures that infrastructure is versioned alongside application code, enabling reproducible deployments, peer review of infrastructure changes, and automated provisioning across environments.
 
+## When not to use (added by AI Blocks)
+
+- You need one small resource and a person can click it together safely in the console. Code adds more work than it saves.
+- A managed platform already handles the job, such as a hosting service that deploys a site from a folder. Use the Cloudflare publisher for a site.
+- You want to find risks in a setup that already exists. Use the Cloud misconfiguration finder.
+
+## Before you start (added by AI Blocks)
+
+Ask once for anything missing. Never guess a value, and never put a real password, key or account number into the code.
+
+1. Cloud provider (AWS, Google Cloud, Azure and so on).
+2. The resources needed, with sizes and the security rules (who may reach what).
+3. Environments to create, such as dev and production (optional; default to one).
+4. Preferred tool (optional; if none, recommend one with a reason).
+5. A project folder the AI can write to. Without file access, show each file in the chat under its file name.
+
+Running `plan` or `apply` needs the tool installed and a cloud login. Only run `plan` yourself, and only if the user says the login is set up. Never run `apply` unless the user approves the plan.
+
 ## Workflow
 
 1. **Gather Infrastructure Requirements:** The agent collects details about the desired infrastructure including the cloud provider (AWS, GCP, Azure), the resources needed (compute, storage, networking, databases), sizing and performance requirements, security constraints, and target environments (dev, staging, production). The agent identifies dependencies between resources to determine the correct provisioning order.
@@ -24,6 +42,17 @@ This skill enables the agent to design, generate, and manage infrastructure as c
 5. **Execute Plan and Apply:** The agent runs the plan step (`terraform plan`, `pulumi preview`) to generate a detailed diff of proposed changes, then presents the plan for user review before applying. The agent verifies that no unexpected resources are being destroyed or recreated. Only after explicit approval does the agent execute the apply step to provision infrastructure.
 
 6. **Detect and Remediate Drift:** The agent periodically runs drift detection (`terraform plan`, `pulumi refresh`) to compare actual infrastructure state against the declared configuration. Any out-of-band changes made via the console or CLI are flagged and either reconciled back to the IaC definition or explicitly imported into state. This ensures the IaC code remains the single source of truth.
+
+## Output (added by AI Blocks)
+
+Hand back, in this order:
+
+1. **Tool choice.** The tool picked and why, in one or two lines.
+2. **Files.** For Terraform: `main.tf`, `variables.tf`, `outputs.tf`, `modules/` (network, compute, data) and `environments/` with one settings file per environment. For Pulumi or CloudFormation, the matching layout. Name each file with one line on what it holds.
+3. **Secrets list.** Every value the user must supply (passwords, key names, address ranges), and where to keep each one. None is filled in.
+4. **State plan.** Where state is stored, how it is locked and who can read it.
+5. **Plan summary.** What `plan` or `preview` is expected to create, change and destroy, in plain words. If it was not run, say "not run".
+6. **Next step.** Review the plan in a pull request before anyone applies it. Pair the code with a CI plan-review tool such as Atlantis or Spacelift, or the CI of your choice.
 
 ## Supported Technologies
 
@@ -47,6 +76,8 @@ Create Terraform configuration for an AWS environment with:
 ```
 
 ## Examples
+
+The examples below are illustrations. Names such as `my-terraform-state` are placeholders, and the state bucket and lock table must exist before `terraform init`. Do not use broad managed policies such as full-access ones; grant only the actions and resources the code needs.
 
 ### Example 1: Terraform Configuration for AWS VPC + EC2 + RDS
 
@@ -86,6 +117,8 @@ module "vpc" {
   azs             = ["${var.aws_region}a", "${var.aws_region}b"]
   public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
   private_subnets = ["10.0.10.0/24", "10.0.20.0/24"]
+  database_subnets = ["10.0.30.0/24", "10.0.40.0/24"]
+  create_database_subnet_group = true
 
   enable_nat_gateway   = true
   single_nat_gateway   = true
@@ -233,9 +266,17 @@ new aws.iam.RolePolicyAttachment("lambda-basic", {
   policyArn: aws.iam.ManagedPolicies.AWSLambdaBasicExecutionRole,
 });
 
-new aws.iam.RolePolicyAttachment("lambda-dynamodb", {
+// Least privilege: only these actions, only on this one table.
+new aws.iam.RolePolicy("lambda-dynamodb", {
   role: lambdaRole.name,
-  policyArn: aws.iam.ManagedPolicies.AmazonDynamoDBFullAccess,
+  policy: table.arn.apply(arn => JSON.stringify({
+    Version: "2012-10-17",
+    Statement: [{
+      Effect: "Allow",
+      Action: ["dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:DeleteItem", "dynamodb:Scan"],
+      Resource: arn,
+    }],
+  })),
 });
 
 const handler = new aws.lambda.Function("api-handler", {

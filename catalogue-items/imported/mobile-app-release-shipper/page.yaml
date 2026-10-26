@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows a set release path with a few choices.
 new_slug: mobile-app-release-shipper
 name: Mobile app release shipper
-summary: Point it at your Expo app. Get iOS and Android builds made and sent to
-  the app stores.
+summary: Ship your Expo app to the App Store and Google Play. Give it your project and accounts. You get iOS and Android builds and store submission steps.
 job: ship-and-host
 headline: Mobile app release shipper
-subhead: Your Expo app built for iOS and Android and sent to the app stores,
-  with the settings written down so the next release is one command.
+subhead: Your Expo app built for iOS and Android and sent to the app stores, with the settings written down so the next release is one command.
 explain: |
   Your Expo app built for iOS and Android and sent to the app stores, with the settings written down so the next release is one command.
 
@@ -17,6 +15,10 @@ when:
   - You want testers on TestFlight before the public release.
   - Version numbers keep clashing between releases.
   - You want a release to start automatically when code is merged.
+not_for:
+  - "Your app is not built on Expo, such as a bare React Native project: use that platform's own build tools, or ask a developer to set up your release."
+  - "You only need a website online: skip the store steps, since the skill only briefly covers web hosting."
+  - "You want to write store listing text or screenshots: do that by hand first, then bring it here when you are ready to submit."
 you_give:
   - Your Expo app folder
   - Apple and Google developer accounts
@@ -29,8 +31,33 @@ you_get:
   - A rule for version and build numbers
   - An automated release setup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and sign in to Expo.
+  - Check costs first. Apple and Google charge for developer accounts, and EAS builds have limits on your plan. Look at the current prices on their sites.
+  - Open your AI in a tool that can run commands in your Expo project folder. Paste this skill in.
+  - Tell your AI your app name, bundle identifier and which stores you want. Sign in to Expo when it asks.
+  - Let it set up eas.json and run the production build. Check the build status and the version numbers it used.
+  - Before any step that submits to a store, read the command and say yes. Submitting cannot always be undone.
+  - Start with TestFlight or the Google Play internal track. Test the app, then move to public release.
+output_sample:
+  input:
+    - Your Expo app folder
+    - Your Apple developer account sign-in
+    - Your Google Play Console account and service account key
+    - Your bundle identifier and app name
+    - Your store listing text and screenshots (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - An Expo account to sign in to EAS, the Expo build service
+    - A paid Apple developer account and a Google Play developer account
+  output:
+    - name: eas.json
+      contains: Build profiles for testing and production, plus submit settings for the iOS and Android stores.
+    - name: Production builds
+      contains: An iOS build and an Android build made by EAS, with a way to check build status.
+    - name: iOS submission
+      contains: Steps to send the build to TestFlight for testers, then to App Store review.
+    - name: Android submission
+      contains: Steps to send the build to Google Play, moving through internal, closed, open and production tracks.
+    - name: Version rule
+      contains: How version and build numbers are set and raised on each release so they do not clash.
+    - name: Automated release setup
+      contains: An optional workflow that builds and submits when you merge code.

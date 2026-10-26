@@ -65,6 +65,35 @@ export default function AiToolPage({ d, slug }: { d: AiTools; slug: string }) {
             <Bullets id="not" title="Not for" items={t.notFor} />
           </div>
 
+          {t.firstResult && (
+            <section className="at-sec" aria-labelledby="first-h" data-testid="at-first">
+              <h2 className="at-h2" id="first-h">Your first result</h2>
+              {t.firstResult.map((g, i) => (
+                <div key={i}>
+                  {g.name && <h3 className="at-h3">{g.name}</h3>}
+                  <ol className="at-steps">{g.steps.map((s) => <li key={s}>{s}</li>)}</ol>
+                </div>
+              ))}
+            </section>
+          )}
+          {t.needs && <Bullets id="needs" title="What you need" items={t.needs} />}
+          {t.example && (
+            <section className="at-sec" aria-labelledby="example-h" data-testid="at-example">
+              <h2 className="at-h2" id="example-h">Example</h2>
+              <dl className="at-example">
+                {t.example.task && <div><dt>The task</dt><dd>{t.example.task}</dd></div>}
+                {t.example.cost && <div><dt>What it costs</dt><dd>{t.example.cost}</dd></div>}
+                {t.example.reply && <div><dt>What you get back</dt><dd>{t.example.reply}</dd></div>}
+              </dl>
+            </section>
+          )}
+          {t.notVerified && (
+            <aside className="at-notverified" aria-labelledby="nv-h" data-testid="at-not-verified">
+              <h2 className="at-nv-h" id="nv-h">Not yet confirmed</h2>
+              <ul>{t.notVerified.map((x) => <li key={x}>{x}</li>)}</ul>
+            </aside>
+          )}
+
           <section className="at-sec" aria-labelledby="blocks-h" id="blocks" data-testid="at-blocks">
             <h2 className="at-h2" id="blocks-h">Blocks that use it</h2>
             {t.blocks.length ? (

@@ -16,6 +16,29 @@ use_cases:
   - "Design a way for new hires who don't fit to leave early, on good terms"
   - "Check whether a short-term gain would hurt your team culture or customer trust"
   - "Think through a big change to how your team is run before you roll it out"
+not_for:
+  - "You need legal, medical or personal money advice: use a lawyer, doctor or finance adviser, because this mind does not give that."
+  - "You want to value a business or judge a price against its worth: use the Aswath Damodaran mind."
+  - "You want a plan for hard choices in a struggling company: use the Ben Horowitz mind."
+output_sample:
+  input:
+    - The problem you face, such as a service complaint, a hiring choice or a change to how your team runs
+    - Your team's current values or rules (optional)
+    - What a change would cost you now (optional)
+    - Who is on your team and what they need (optional)
+  output:
+    - name: Opening belief
+      contains: A short statement of the view that shapes the answer, built on your values.
+    - name: One real story
+      contains: A small true example from his recorded work that fits your problem.
+    - name: The unusual practice
+      contains: The less common move that follows, such as service over ads or a culture-fit interview.
+    - name: Short-term cost and long-term payoff
+      contains: What the choice may cost you now and what it may earn later.
+    - name: Criticism and gaps
+      contains: Where his ideas drew criticism, and a one-line note on anything he never spoke about.
+    - name: One closing question
+      contains: A single question for you to answer honestly before you decide.
 seats:
   - {seat: "Service as the product", asks: "If our service were the only thing people remembered, what would they tell their friends?"}
   - {seat: "Culture first", asks: "Would we hire this person, or keep this rule, if it went against our values?"}

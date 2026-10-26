@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It fits tasks into set time blocks.
 new_slug: deep-work-day-planner
 name: Deep work day planner
-summary: Give it your tasks and calendar. Get a schedule with protected focus
-  blocks and shallow work cut back.
+summary: "Plan a deep work day: give it your tasks and fixed times, and get a time-blocked schedule with focus hours protected and shallow work boxed in."
 job: organise-work
 headline: Deep work day planner
-subhead: Give it today's tasks with rough minutes and your fixed commitments. It
-  labels each task deep or shallow, places deep work early in blocks of at least
-  90 minutes and batches shallow tasks into two short windows. You get a
-  time-blocked schedule, your deep and shallow split and a focus-hours log.
+subhead: Give it today's tasks with rough minutes, plus your start time, end time and lunch. It marks each task deep or shallow and puts deep work early in blocks of at least 90 minutes. You get a time-blocked schedule and a log of your focus hours.
 explain: |
   A day built around your best focus hours. Give it your task list with rough minutes and it returns a schedule with deep work placed early in blocks of at least 90 minutes, and shallow tasks batched into two short windows.
 
@@ -17,21 +13,50 @@ explain: |
 when:
   - Your calendar is full of meetings and you cannot get real work done.
   - You have ten tasks and no sense of which deserve your sharpest hours.
-  - You want to track how many hours a week you truly focus.
-  - Email and chat eat your mornings and you want them boxed in.
+  - You want to count how many hours a week you truly focus.
+  - Email and chat eat your mornings and you want them boxed into set times.
+not_for:
+  - "You plan for a team or a sprint: use your project tool's capacity view, since this plans one person's day."
+  - "You only need to pick what matters today: write a short list of three tasks by hand, then come back to block the time."
+  - "You want a long-term goal plan: use a simple weekly review with a person you trust, as this only plans one day."
 you_give:
-  - Today's tasks with minutes for each
-  - Your calendar and fixed commitments
-  - Deep or shallow tags (optional)
-  - Weekly deep-hours target (optional)
+  - Today's tasks with rough minutes for each
+  - Your day's start time and hard end time
+  - Your lunch time or other fixed commitments
+  - Deep or shallow tags on tasks (optional)
+  - Your weekly deep-hours target (optional)
 you_get:
-  - Time-blocked schedule
-  - Deep and shallow split
-  - Questions to cut shallow work
-  - Focus-hours log
+  - A schedule table with start time, end time, task and a deep or shallow label for each block
+  - Totals for your deep hours and shallow hours
+  - A question for each shallow task to help you cut or hand it off
+  - A focus-hours log with your weekly total and streak
+  - An end-of-day shutdown checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - List today's tasks with rough minutes. Add your start time, hard end time and lunch. Meetings and fixed times go in as busy time.
+  - Mark any task you know is deep or shallow by adding the word after it (optional).
+  - Check the shallow audit first. If it says over budget, cut or hand off tasks before you plan.
+  - Read the schedule. If deep work passes four hours, defer a task as it suggests.
+  - Running the scripts needs an AI that can run Python 3 code, with no installs. In a plain chat, ask your AI to follow the same rules by hand, and log sessions yourself.
+output_sample:
+  input:
+    - Today's tasks with rough minutes for each
+    - Your day's start time and hard end time
+    - Your lunch time or other fixed times (optional)
+    - Deep or shallow tags on tasks (optional)
+    - Your weekly deep-hours target (optional)
+  prerequisites:
+    - An AI that can run Python 3 code, with no installs needed. Without it, ask your AI to do the same steps by hand.
+  output:
+    - name: Shallow work audit
+      contains: Each task marked deep or shallow, your shallow share against the budget, and a question to cut each shallow task.
+    - name: Time-blocked schedule
+      contains: Start time, end time, task and deep or shallow label for each block, with buffers and a fixed lunch.
+    - name: Deep and shallow totals
+      contains: Your planned deep hours and shallow hours for the day.
+    - name: Refusal notes
+      contains: What to defer if deep work passes four hours, or what to drop if shallow work passes your end time.
+    - name: Focus-hours log
+      contains: Each focus session you log, this week's deep hours against your target, and your streak of days.
+    - name: Shutdown checklist
+      contains: An end-of-day routine to capture open loops and close the day.

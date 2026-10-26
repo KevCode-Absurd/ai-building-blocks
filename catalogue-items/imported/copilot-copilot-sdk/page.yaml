@@ -2,18 +2,67 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-copilot-sdk
 name: Copilot SDK app builder
-summary: Describe the agent app you need. Get Copilot SDK sessions, tools and
-  streaming code suited to your project.
+summary: Build an app with the GitHub Copilot SDK. Get working code for sessions, custom tools and streaming in Python, TypeScript, Go or .NET.
 job: connect-tools
 headline: Copilot SDK app builder
-subhead: Describe the agent app you need. Get Copilot SDK sessions, tools and
-  streaming code suited to your project. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: "Describe the app you want and pick TypeScript, Python, Go or .NET. It writes working code for the GitHub Copilot SDK: install steps, a first session, streaming replies, custom tools, an MCP connection and saved sessions."
+explain: |
+  The GitHub Copilot SDK lets you put an AI agent inside your own app. This Copilot SDK app builder gives you the code for the parts most apps need, in the language you choose.
+
+  You start with a short program that opens a session and prints one reply. Then you add streaming, tools your agent can call, a link to an MCP server, a role and rules for the agent, and session saving. It also covers handling errors and shutting down cleanly.
+
+  It builds on a paid GitHub Copilot subscription. Go also needs the GitHub Copilot command line tool installed and signed in.
+when:
+  - "You want an agent inside your own app instead of a chat window."
+  - "You need your agent to call your own functions as tools."
+  - "You want replies to appear piece by piece as they are written."
+  - "You want users to leave a session and pick it up later."
+not_for:
+  - "You only need a chat answer or a single prompt: use a plain AI chat, or a simple API call."
+  - "You have no GitHub Copilot access: set that up first, or use a no-code tool instead."
+  - "You want to build a tool server for other AI apps to call: ask a developer, as this skill is for building agents, not general servers."
+you_give:
+  - "What your agent app should do"
+  - "Your language: TypeScript, Python, Go or .NET"
+  - "The tools your agent needs to call (optional)"
+  - "Your existing project files (optional)"
+  - "A GitHub Copilot account that is signed in"
+you_get:
+  - "Install commands for your language"
+  - "A short program that opens a session, sends one prompt and prints the reply"
+  - "Code that streams the reply as it arrives"
+  - "Code for a custom tool your agent can call"
+  - "Code to connect to an MCP server"
+  - "Code to save, resume, list and delete sessions, with error handling and a clean shutdown"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read the files you provide and use the named tools when the job requires them.
+output_sample:
+  input:
+    - What your agent app should do
+    - "Your language: TypeScript, Python, Go or .NET"
+    - The tools your agent needs to call (optional)
+    - Your existing project files (optional)
+  prerequisites:
+    - GitHub Copilot access, which is a paid subscription, and a signed-in account
+    - An AI that can run code, or a dev setup where you can run the code yourself
+    - Node.js, Python, Go or .NET installed
+    - "For Go only: the GitHub Copilot CLI installed and signed in"
+  output:
+    - name: Install steps
+      contains: The commands to set up your project and add the Copilot SDK for your language.
+    - name: Quick start
+      contains: A short program that opens a session, sends one prompt and prints the reply.
+    - name: Streaming Responses
+      contains: Code that shows the reply in pieces as it arrives.
+    - name: Custom Tools
+      contains: Code that defines a tool your agent can call, with its inputs described.
+    - name: MCP Server Integration
+      contains: Code that connects your agent to an MCP server, which gives it extra tools.
+    - name: Custom Agents and System Message
+      contains: Code that sets the agent's role and rules.
+    - name: Session Persistence
+      contains: Code to save, resume, list and delete sessions.
+    - name: Error handling and shutdown
+      contains: Code that handles failures and stops the client cleanly.

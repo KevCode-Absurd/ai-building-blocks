@@ -5,7 +5,7 @@ description: Use when you have a narrated clay-town script (a lead and a crowd i
 
 # Clay town video clip prompt writer
 
-You take a clay-town script through six stages, in order. Stop for approval after stages 1, 3 and 4, and never move on from a stage that isn't approved. If the person asks for all stages in one go, or gives the approvals up front, don't stop: write every stage in one reply, mark each approval point with "(approve)" so they can review it there, and say once at the top that later stages change if they change an earlier one. Everything is planned the way a stop-motion crew plans a shoot: one scale, one finish, one light plan, one figure moving at a time. For one character on one tabletop with one changing object, use the claymation how-it-works shots instead.
+You take a clay-town script through six stages, in order. Stop for approval after stages 1, 3 and 4, and never move on from a stage that isn't approved. If the person asks for all stages in one go, or gives the approvals up front, don't stop: write every stage in one reply, mark each approval point with "(approve)" so they can review it there, and say once at the top that later stages change if they change an earlier one. Everything is planned the way a stop-motion crew plans a shoot: one scale, one finish, one light plan, one figure moving at a time. For one character on one tabletop with one changing object, use the Claymation video clip prompt writer instead. For a still image, use the Clay town image ad maker. For a paper look, use the Paper craft video clip prompt writer.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -28,9 +28,9 @@ How to start:
 3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
 
 **Tools that do this best:**
-- **Nano Banana:** Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match.
-- **Veo:** Takes a first and a last frame, so a planned change starts and ends exactly where you want.
-- **Kling:** Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot.
+- **Nano Banana:** Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match. Check the current limit in the tool.
+- **Veo:** Takes a first and a last frame, so a planned change starts and ends exactly where you want. Check that your plan includes it.
+- **Kling:** Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot. Check the current limit in the tool.
 - **ElevenLabs:** Reads the narration in a stock voice from its library, with tags for pauses and pace.
 <!-- /needs -->
 
@@ -88,6 +88,8 @@ Name each attached image by its job in every prompt ("image 1 is Dev, image 2 is
 - **One shot card per shot:** framing, camera (one instruction), the mover and their action from start to end, everyone else holding still or doing one small repeat (a blink, a sip), the line spoken over it, length and sound.
 - **Scene changes,** one per change: a **cut** (default); a **match cut** (same framing, the lead on the same spot, the scene around them changed); the **morph** (once per ad, at the swap: a first and a last frame of the same object, same camera, same hand); or a **pass-by wipe** (a crowd figure crosses close to the lens, inside one place only).
 - **Continuity:** keep the camera on one side of the action (the 180° line), match eyelines, keep the same hand holding the same thing, and keep the product's state right (a pack is torn only from the shot it's torn in).
+- **Use the product only as the brand really uses it.** Show it in the steps from the input or the brand file (for a pouch of gummy packs, tear the top and pour into a palm), never a step it doesn't have. Don't show a product stirred into water, heated or mixed unless the brand says that is how it is used.
+- **Morph frame pairs** get the full SET, LIGHT, PALETTE, LENS and LEAD lines in both the first and the last frame.
 
 **Stop here.** Show the whole storyboard and wait for a yes.
 
@@ -101,7 +103,7 @@ Name each attached image by its job in every prompt ("image 1 is Dev, image 2 is
    - If your tool makes sound: "Sound: soft room tone and small prop sounds only."
 2. **Takes.** Make 2 or 3 takes of each clip and pick one.
 3. **Voice.** Record the narrator separately, in a real or stock voice, never a cloned one. No figure speaks, so there is no lip-sync.
-4. **Edit.** Lay the clips on the narration in script order, with the scene changes from the storyboard. Add captions. Exact offer terms go on the end card as text, never in a prompt. Keep all words inside the platform's safe zone, clear of its buttons and caption area. Music only if the brand uses it, low under the voice.
+4. **Edit.** Lay the clips on the narration in script order, with the scene changes from the storyboard. Add captions. Exact offer terms go on the end card as text, never in a prompt. Renewal prices and free or trial wording must pass the ad platform's policy check before the ad goes live. Keep all words inside the platform's safe zone, clear of its buttons and caption area. Music only if the brand uses it, low under the voice.
 5. **Final check** against the script and claims: every line said, label words exact, the crowd never used as proof.
 
 ## Check it
@@ -154,7 +156,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 - You stopped for approval after stages 1, 3 and 4, or, when asked for one go, marked those three points "(approve)".
 - The set bible lines are word for word the same in every prompt, and the lead line in every shot the lead is in.
 - Each clip has one mover and one camera instruction.
-- One morph at most, at the swap.
+- One morph at most, at the swap, with the full lock lines in both frames.
+- The product is shown only in steps it really has.
 - Label lines are stated exactly; no other words appear on the set.
 - No child, real person, known character, real human hand or cloned voice.
 

@@ -1,6 +1,6 @@
 new_slug: search-term-sorter
 name: "Search term sorter"
-summary: "Paste your search terms reports. Get winners to promote, negatives to add, where each goes and a waste score."
+summary: "Sort your Google Ads search terms report into winners to promote and negative keywords to add, with a waste score out of 100."
 job: run-google-ads
 thinking: medium
 thinking_why: "It sorts many rows by clear rules, so a mid-size model is enough. Use a stronger one for very large reports."
@@ -17,6 +17,10 @@ when:
   - You launched Shopping or Performance Max and want to turn the queries it found into Search keywords.
   - Your spend is going up but the search terms report is full of terms you never meant to buy.
   - You are setting up a new campaign and want an account-wide negative list before it spends.
+not_for:
+  - Your store has under about 30 conversions a month or no conversion tracking. Start with the search terms view inside Google Ads, and treat any verdict here as an early read.
+  - You want to fix brand terms leaking into cold campaigns. Use the Brand and non-brand splitter.
+  - You want a weekly routine for your Shopping campaigns. Use the Shopping campaign tuner.
 
 you_give:
   - The search terms reports with impressions, clicks, conversions and cost, ideally by campaign
@@ -35,6 +39,30 @@ how_to_use:
   - Add your break-even CPA and your brand names with their misspellings.
   - Add the negatives in small batches, then log what you added and why.
   - Run it again in one to two weeks on fresh data.
+output_sample:
+  input:
+    - Your search terms reports from Google Shopping, Performance Max and Search
+    - Your break-even CPA, or your average order value and gross margin
+    - Your brand name, its misspellings and product-line names
+    - What you sell and do not sell (optional)
+  prerequisites:
+    - A Google Ads export with campaign, clicks, conversions and cost columns
+    - Conversion tracking that works in your account
+  output:
+    - name: DATA CHECK
+      contains: Conversions per month, days covered, and whether the verdicts are only an early read.
+    - name: WINNERS
+      contains: Converting terms at or under break-even CPA, with match type and the places to use each one.
+    - name: NEGATIVES TO ADD
+      contains: Each junk term with its match type, the level to add it at, and why.
+    - name: YOUR CALL
+      contains: Competitor names, low-intent words and unproven terms that the owner decides on.
+    - name: BRAND TERMS FOUND IN COLD CAMPAIGNS
+      contains: Brand searches spending in cold campaigns, with the campaign and the spend.
+    - name: ROOT-CAUSE FIXES
+      contains: Product titles or descriptions to change when the same junk keeps showing in Shopping.
+    - name: SCORE
+      contains: A score out of 100 with the sum shown, plus the next review date and any missing inputs.
 
 how_it_works:
   - title: Checks the data

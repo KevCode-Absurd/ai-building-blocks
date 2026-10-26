@@ -1,52 +1,90 @@
 new_slug: leave-job-own-income
 name: Leave a steady job and earn from your own work
-summary: Give it your job, pay and skills. Get an income floor, fees, a safety plan and a way to leave.
+headline: Leave a steady job and earn from your own work
+summary: Plan your move from salary to your own clients. Get an income floor, fees, a safety plan and an exit plan, with the sums checked.
 job: think-and-decide
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
-headline: Plan your move from a salary to your own clients, with the money sums done
-subhead: Tell it your job, your costs and what you could sell. It works out the monthly income you need, sets fees and a client limit, plans your first clients, stress-tests the plan, writes rules for thin months and plans how you leave. You get a plan you can check before you resign.
-explain: |
-  Most people decide to go solo from a feeling: the job is stifling, a few people have said they would pay. The sums come later, after the notice is in. By then a salary's hidden costs, slow payments and a bad month have all been missed.
+subhead: Tell it your job, your costs and what you could sell. It works out the monthly income you need, sets fees and a client limit, plans your first clients and stress-tests the plan. It also writes rules for thin months and a plan to leave. It is a planning aid, not financial advice.
+explain: |-
+  Most people decide to go solo from a feeling: the job is stifling, a few people have said they would pay. The sums come later, after the notice is in. By then the hidden costs of a salary, slow payments and one bad month have all been missed. This workflow helps you plan how to leave a job and earn from your own work before you hand in notice.
 
-  This workflow follows the path Mozart set out in his Vienna letters when he left his employer in 1781, and it adds the parts his own story shows he needed. He counted pupils by the month and took fewer at a higher fee, and he lined up work before and after the break. Later his income fell, he borrowed again and again from one friend, and he asked late. So this workflow builds the floor first, then the fee, then a stress test, then rules for thin months, then the talk with the people who rely on you, and last the way out. It is a planning aid, not personal financial advice.
+  The order of its steps is drawn from Mozart's letters from Vienna, in the volume credited on this page. The sums, the stress test and the cash rules are our own additions. We use the history for the order, not as proof that the plan works.
+
+  It builds the income floor first, then the fee and client limit, then your first clients, then a stress test. After that come rules for thin months, a plan for the talk with the people who rely on you, and last the way out. It does not tell you to resign. It says whether a readiness check passes.
+
+  Check the plan with an accountant and, if your contract has a notice period, a non-compete or a visa tied to your job, with an employment adviser.
 when:
   - You are thinking of leaving a steady job to live on your own clients, sales or commissions.
   - You already work for yourself, your income swings and you cannot plan.
-  - You are being treated badly at work and want to leave in a way you will not regret.
+  - You are treated badly at work and want to leave in a way you will not regret.
+  - A partner or family member wants to see the sums before they agree.
+not_for:
+  - "You are still deciding whether to leave at all: start with the Case-against writer, then come back."
+  - "Your contract has a non-compete, a fixed term or a visa tied to your employer: ask an employment adviser first. This plan does not read your contract."
+  - "You want tax, legal or investment advice: this is a planning aid. Ask an accountant or a qualified adviser."
 you_give:
-  - Your job, pay and what the job covers (health cover, pension, tools, space)
+  - Your job, pay, notice terms and what the job covers, such as health cover, pension, tools and space
   - Your monthly costs, lean and comfortable
   - What you could sell, to whom, and any clients or leads you already have
   - Real prices others in your field charge
   - Who relies on you
+  - Your tax rate, debts and savings (optional)
 you_get:
   - A monthly income floor, the steady streams that cover it and what a sick month does
   - A fee, billing terms and a client limit
   - A plan to win your first paying clients one by one
   - The one outcome that could ruin the plan, and a version that survives it
-  - A cash buffer, rules for thin months and a loan request ready to send
-  - A plan for the talk with your family or partner, and a leaving plan with a notice letter
+  - A cash buffer, rules for thin months and a loan request draft
+  - A plan for the talk with your family or partner, and a leaving plan with a draft notice letter
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your costs, your job's terms and three real prices ready. It works step by step and saves each result.
-  - Do not resign until step 7 says the readiness check passes.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini, in an AI that can read files, and say Follow HANDOFF.md.
+  - Have your costs, your job terms and three real prices ready. It works step by step and saves each result.
+  - Check the floor against your last three lean months. If it looks wrong, correct the input and rerun step 1.
+  - Do not resign until step 7 says the readiness check passes. Even then, check the plan with an accountant first.
+  - The notice letter and the loan request are drafts. The AI sends nothing.
+output_sample:
+  input:
+    - Your job, pay, notice terms and what the job covers
+    - Your monthly costs
+    - What you could sell and any leads
+    - Three to five real prices from your field
+    - Who relies on you
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+  output:
+    - name: Income floor
+      contains: The monthly income you need, your steady streams, the gap, clients needed and the hole in a sick month.
+    - name: Fee and client limit
+      contains: A fee with its reason, a cap with the hours sum, billing terms and a discount rule.
+    - name: First clients
+      contains: Who to approach first, how to win each one in person and what to learn from them.
+    - name: Stress test
+      contains: The one outcome you could not recover from, and a capped version of the plan with its cost.
+    - name: Thin-month rules
+      contains: A cash buffer, yellow and red lines, who to ask early and a draft loan request with a repayment date.
+    - name: Talk at home
+      contains: What the other person wants, their fear and your answer, and a check-in date.
+    - name: Leaving plan
+      contains: The readiness verdict, a draft notice letter, the order of conversations and your first quarter's income.
+    - name: Hand-back summary
+      contains: Each step's file, every MISSING line in one list and the checks that could not run.
 how_it_works:
-  - title: Works out the floor
-    text: Adds up a lean month, what the job covers and a tax share, sorts your income into steady and extra, and sizes the cash for a month you cannot work.
-  - title: Sets fees and a limit
-    text: Picks a fee above the middle on purpose, bills by the month and caps your clients so you keep time for your own work.
-  - title: Plans your first clients
-    text: Lists who already knows your work and plans how to win each of them in person, then learn what they paid for.
-  - title: Stress-tests the plan
+  - title: Work out the floor
+    text: Adds up a lean month, what the job covers and a tax share. Sorts income into steady and extra and sizes the cash for a month you cannot work.
+  - title: Set fees and a limit
+    text: Picks a fee in the top third of real prices, bills by the month and caps your clients so you keep time for your own work.
+  - title: Plan your first clients
+    text: Lists who already knows your work and plans how to win each in person, then learn what they paid for.
+  - title: Stress-test the plan
     text: Finds the one outcome that would ruin it, caps the downside and changes the plan so it survives.
-  - title: Writes rules for thin months
-    text: Sets a buffer, a yellow and a red line, who to ask early, and a request with an exact sum and a repayment date.
-  - title: Plans the talk at home
+  - title: Write rules for thin months
+    text: Sets a buffer, a yellow and a red line, who to ask early, and a request with an exact sum and a repayment date from money already due.
+  - title: Plan the talk at home
     text: Starts from what the other person wants, answers the fear behind the objection and sets a check-in date.
-  - title: Plans how you leave
-    text: Drafts a short notice, sets the order of conversations and checks that signed work covers half the floor for three months.
+  - title: Plan how you leave
+    text: Runs the readiness check, drafts a short notice and sets the order of conversations. Signed work must cover half the floor for three months.
 output_shape: |-
   STEP 1: INCOME FLOOR
     Floor | Steady streams | Gap and clients needed | Sick-month hole | Cash before leaving
@@ -92,3 +130,25 @@ improve:
   - Save the floor report. Update it every quarter with what really arrived and when.
   - Keep the thin-month rules where you will see them, and share the red-line rule with the person who relies on you.
   - After you leave, note what the plan missed and fix the steps.
+works_best_with:
+  tools:
+    - name: Claude or another chat AI
+      why: Keeps the seven steps in one run, so each uses the one before.
+    - name: A spreadsheet
+      why: Lets you check the floor sum and try a different fee or client count.
+  inputs:
+    - Three months of bank statements
+    - Your contract's notice terms
+    - A list of current clients or leads with what each pays
+next:
+  - offer-builder
+  - smallest-test-picker
+before:
+  - case-against-writer
+terms:
+  - term: Income floor
+    meaning: The least you must earn each month, before tax, to cover your costs and what your employer paid for.
+  - term: Steady income
+    meaning: Money that repeats every month and has done for at least three months.
+  - term: Readiness check
+    meaning: "A test: signed or paid work covers half the floor for each of the next three months, and cash meets the buffer."

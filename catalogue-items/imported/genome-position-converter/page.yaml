@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: Off-by-one and naming errors need careful rule checks.
 new_slug: genome-position-converter
 name: Genome position converter
-summary: Give it gene positions or variants. Get them converted between
-  conventions, with assembly and naming mismatches caught.
+summary: Convert genome positions between 0-based and 1-based, normalise variants, and catch build or chromosome name mismatches before they spoil your analysis.
 job: research-topics
 headline: Genome position converter
-subhead: Stop genomics coordinates from silently going wrong. Give it gene
-  positions or variants, and it converts them between conventions, such as
-  1-based and 0-based, and flags when assemblies or chromosome names do not
-  match.
+subhead: Stop genomics coordinates from silently going wrong. Give it gene positions or variants, and it converts them between conventions, such as 1-based and 0-based, and flags when assemblies or chromosome names do not match.
 explain: |
   Stop genomics coordinates from silently going wrong. Give it gene positions or variants, and it converts them between conventions, such as 1-based and 0-based, and flags when assemblies or chromosome names do not match.
 
@@ -19,6 +15,10 @@ when:
   - A variant fails to match its database entry and you suspect shifting.
   - You are mixing files from different genome builds.
   - You need to normalise variants against a reference.
+not_for:
+  - "You need to move positions from one genome build to another (liftover): use CrossMap or the UCSC liftOver tool."
+  - "You need HGVS names such as c.742 for a variant: use VEP, Mutalyzer or the hgvs package with the right transcript."
+  - "You need to rewrite a whole VCF file for production use: use bcftools norm, since this skill only checks and reports."
 you_give:
   - Positions or variants to convert
   - The convention each file uses
@@ -30,8 +30,28 @@ you_get:
   - Normalised variant records
   - A note of what was checked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open a chat with an AI that can run Python code and read files, such as Claude with code tools. Paste in the skill text or upload the skill folder.
+  - Upload your BED, GFF, GTF or VCF files, or paste the positions you want converted.
+  - Tell your AI which convention and genome build each file uses. Say so if you do not know.
+  - Add your reference FASTA if you want variants normalised. It must be uncompressed.
+  - Ask your AI to convert the positions, check the contigs, or audit the file. Read any warnings before you use the result.
+output_sample:
+  input:
+    - Positions, intervals or variants to convert, or a BED, GFF, GTF or VCF file
+    - The convention each file uses, such as 0-based or 1-based
+    - The genome build for each file
+    - A reference FASTA, uncompressed (optional, needed to normalise variants)
+  prerequisites:
+    - An AI that can run Python 3.11 or newer code and read your files
+    - Python standard library only, no extra packages and no internet needed
+  output:
+    - name: Converted coordinates
+      contains: Each input position or region in the target convention, with its length and an ok or unrepresentable status.
+    - name: Normalised variants
+      contains: Each variant trimmed and left-aligned against the reference, with the position shift and a reference check result.
+    - name: Variant comparison
+      contains: A verdict on whether two variant records describe the same change, or incomplete if the shift window was too small.
+    - name: Contig and assembly check
+      contains: The likely genome build, chromosome naming style, and any length conflicts or contigs found in only one file.
+    - name: Interval audit
+      contains: Findings that show a coordinate mistake, such as starts below one, positions past a contig end, or mixed naming.

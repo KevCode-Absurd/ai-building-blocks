@@ -2,34 +2,85 @@ thinking: medium
 thinking_why: It searches several places and says how sure it is.
 new_slug: customer-question-researcher
 name: Customer question researcher
-summary: Ask a customer question. Get an answer found across your docs, past
-  tickets and chats, with each source named.
+summary: Get a sourced answer to a customer question, with how sure it is. It searches your docs, past tickets and chats and names each source.
 job: help-customers
 headline: Customer question researcher
-subhead: A customer asks something and you need a reliable answer fast. Ask here
-  and it searches across your docs, past tickets, chats and other connected
-  sources, then gives one answer with each source named.
+subhead: Type a customer question, such as "does the product work with Okta?" It searches the docs, past tickets and chats your AI can reach. You get one answer, how sure it is, each source, and what is still unknown.
 explain: |
-  A customer asks something and you need a reliable answer fast. Ask here and it searches across your docs, past tickets, chats and other connected sources, then gives one answer with each source named.
+  When a customer asks something you cannot answer from memory, the fast move is a guess. This customer question researcher checks first. It looks in your official docs, then your tickets and notes, then chat and email, then the web.
 
-  It first decides what type of question it is: a customer question, a known issue, history with one account, or a general topic. Then it searches in tiers of sources and cross-checks instead of stopping at the first hit. It gives a confidence level and marks where sources disagree or nothing was found. It also checks who the answer is for, since an internal note reads differently from a customer reply.
+  It does not stop at the first hit. It compares sources and tells you when they disagree. Official docs count for more than a chat message, and the web counts for less than both. Each answer gets a confidence level of High, Medium, Low or Unable to determine.
+
+  It also tells you what it could not find and who should check the answer. It can search only what your AI is connected to. If nothing is connected, you paste in the docs and past replies yourself.
 when:
   - A customer asks if you support a tool and you are not sure.
-  - You want to know if a bug was reported before and what the workaround was.
-  - You need to check what you told an account last time.
-  - Support needs background on a topic before replying.
+  - You want to know if a bug was reported before, and what the workaround was.
+  - You need to check what you told an account the last time they asked.
+  - You need background on a topic before you write your reply.
+not_for:
+  - The answer is about price, a legal term, security or a contract. Ask the person who owns it. This tool only helps you find what was said before.
+  - You want to find word-for-word customer quotes in calls and emails. Use the Customer quote finder.
+  - You want themes from many interviews or surveys. Use the Customer research analyst.
+  - You only need to shorten one long ticket. Use the Support ticket thread summarizer.
 you_give:
-  - The question or topic
-  - The account name, if relevant (optional)
-  - Connected docs, ticket or chat tools
+  - The customer question or topic
+  - The account or customer name (optional)
+  - Who the answer is for, such as your team or the customer (optional)
+  - Docs, past ticket replies or notes, pasted in, if nothing is connected (optional)
 you_get:
-  - A single answer with sources
-  - A confidence rating
-  - Conflicts and gaps called out
-  - Suggested next steps
+  - One direct answer that leads with the bottom line
+  - A confidence level, with the reason for it
+  - Findings grouped by source, and a numbered list of sources
+  - Conflicts between sources, and what could not be confirmed
+  - Next steps, including who should check the answer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your help desk, docs and chat.
+  - Open an AI that is connected to your help center, support desk or chat if you can. Claude, ChatGPT and Gemini all work, but they only search what you connect.
+  - Paste this skill, then your question. Add the account name if it matters.
+  - If nothing is connected, paste the relevant doc text or past replies under your question.
+  - Read the confidence level and the Gaps and Unknowns section before you read the answer.
+  - Do not send the answer to a customer if it says "Not confirmed" or the confidence is Low. Ask the named owner first.
+  - If the answer will come up again, ask your AI to write it as a help center entry.
+output_sample:
+  input:
+    - The customer question or topic
+    - The account name (optional)
+    - Who the answer is for (optional)
+    - Docs or past replies, pasted in, if no tools are connected (optional)
+  prerequisites:
+    - Connected sources for the best result, such as a help center, support desk, chat or email
+    - Without them, text you paste in
+  output:
+    - name: Answer
+      contains: A direct answer with a confidence level and the reason for it.
+    - name: Key Findings
+      contains: What each source said, listed source by source.
+    - name: Context and Nuance
+      contains: Caveats and edge cases that change how you should reply.
+    - name: Sources
+      contains: A numbered list of where each fact came from.
+    - name: Gaps and Unknowns
+      contains: What could not be confirmed and who could check it.
+    - name: Recommended Next Steps
+      contains: What to do before the answer goes to the customer.
+how_it_works:
+  - title: Sort the request
+    text: It decides if this is a customer question, a known issue, account history or a general topic.
+  - title: Search in order
+    text: It checks official docs first, then tickets and notes, then chat and email, then the web.
+  - title: Compare the sources
+    text: It cross-checks results and notes where they disagree, instead of stopping at the first hit.
+  - title: Rate its confidence
+    text: It sets High, Medium, Low or Unable to determine, and flags anything it only inferred.
+  - title: Hand it back
+    text: It writes the brief, flags topics that need review, and offers to draft the reply or a help center entry.
+works_best_with:
+  tools:
+    - name: Help center, support desk, CRM, chat or email connected to your AI
+      why: It can only search what is connected. More sources means better cross-checking.
+    - name: Pasted docs and past replies
+      why: Works without any connection. It then says it used only what you pasted.
+terms:
+  - term: Confidence level
+    meaning: How sure the answer is, based on how reliable and how current the sources are.
+  - term: Source tier
+    meaning: A rank for sources. Official docs rank highest, and guesses rank lowest.

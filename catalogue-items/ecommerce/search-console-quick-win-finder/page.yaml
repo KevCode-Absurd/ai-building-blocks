@@ -1,6 +1,6 @@
 new_slug: search-console-quick-win-finder
 name: "Search Console quick-win finder"
-summary: "Paste Search Console queries and pages. Get pages to push this month and a score out of 100."
+summary: "Find pages close to page one in your Search Console data. Get a next step for each page and a score out of 100 for the traffic within reach."
 job: get-found-in-search
 thinking: low
 thinking_why: "It sorts and filters tables you paste in, so a quick model is enough."
@@ -17,6 +17,10 @@ when:
   - You have a few months of Search Console data and want to know what to work on this month.
   - A product or collection page gets plenty of impressions but few clicks.
   - You want to turn what shoppers search into FAQs and new posts.
+not_for:
+  - "Your site gets under about 1,000 impressions a month: build a keyword map by hand or with your AI, because the list will be too short."
+  - "You want a trend over time: use a monthly Search Console report or a spreadsheet to track clicks and impressions."
+  - "Your site is new and has almost no pages in Google: wait for data, and focus on publishing and getting links before you run this."
 
 you_give:
   - A Search Console performance export of 28 days or longer (pages and searches)
@@ -34,6 +38,32 @@ how_to_use:
   - Paste your collection and key product links so sales pages come first.
   - Add analytics by landing page if you have it.
   - Do the top five actions this month and run it again next month.
+output_sample:
+  input:
+    - Your Search Console export of pages and searches, 28 days or longer
+    - Your analytics export by landing page (optional)
+    - Your sitemap or page list, with collections and key products (optional)
+  prerequisites:
+    - A Search Console account for your site, to export the data
+  output:
+    - name: DATA
+      contains: The period covered, the number of rows, and whether your brand name ranks first for itself.
+    - name: PAGE-ONE EDGE
+      contains: Pages at positions 4 to 10, then 11 to 30, each with impressions, clicks and one next action.
+    - name: RETARGET
+      contains: Pages whose title aims at a weaker search than the one earning clicks, with a new title idea.
+    - name: IMPRESSIONS, FEW CLICKS
+      contains: Pages that get seen but not clicked, with the likely cause.
+    - name: QUESTIONS NO PAGE ANSWERS
+      contains: "Question searches that no page answers, with a fix: add an FAQ block or write a new post."
+    - name: GAP LIST
+      contains: Topics people search for that your sitemap does not cover.
+    - name: LINK IDEAS
+      contains: Internal links from your most-linked pages to newer pages that should rank.
+    - name: SCORE
+      contains: A score out of 100 for the share of impressions on pages at positions 4 to 30, with the numbers shown.
+    - name: NOT RUN
+      contains: Any check it could not do, and why, plus anything marked MISSING.
 
 how_it_works:
   - title: Sorts the pages

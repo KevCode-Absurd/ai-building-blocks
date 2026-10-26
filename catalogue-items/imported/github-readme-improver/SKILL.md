@@ -22,9 +22,27 @@ GitHub is where developers evaluate your project before trying it. This skill co
 
 ## Before You Start
 
-1. Read `.agents/developer-audience-context.md` if it exists
-2. Audit your current GitHub presence (profile, pinned repos, READMEs)
-3. Understand: GitHub is often the first technical evaluation — optimize accordingly
+1. Get the audience. If the user pasted a description of who the project is for, use it. If `.agents/developer-audience-context.md` exists and you can read files, read it. If neither, ask once who the project is for and what makes it different from alternatives. Mark it MISSING if they cannot say.
+2. Get the current README text, and the profile README if they want that improved. Ask the user to paste them. If you cannot browse GitHub, say you are working from pasted text only. Never guess what is in a repo you cannot see.
+3. Never invent features, install commands, badge numbers, download counts or stars. Use only what the user gave you. Mark gaps as MISSING.
+4. Understand: GitHub is often the first technical evaluation — optimize accordingly.
+
+## Run order and output
+
+1. Audit the current README against the checklist at the end and list what is weak.
+2. Rewrite the README section by section using the structure below.
+3. If asked, rewrite the profile README and suggest which repos to pin.
+4. Suggest topics and a repo description.
+5. Suggest awesome lists to check, with a reminder that each list has its own rules.
+
+Return these sections in order:
+
+1. **Audit**: a short list of what is weak, in order of impact.
+2. **One-liner**: one sentence on what the project does and for whom.
+3. **Rewritten README**: the full text in a markdown block, with `<fill in>` where a fact is missing.
+4. **Profile and pinned repos** (only if asked).
+5. **Topics and description**: up to 20 topics and a description of 350 characters or fewer.
+6. **Listing ideas**: awesome lists to check, with why each fits.
 
 ---
 
@@ -130,7 +148,7 @@ Full documentation available at [docs.example.com](https://docs.example.com)
 
 ## Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](https://github.com/jonathimer/devmarketing-skills/tree/main/skills/github-presence/CONTRIBUTING.md) for details.
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
@@ -218,8 +236,10 @@ MIT © [Your Name](https://yoursite.com)
 
 | Project | Description | Stars |
 |---------|-------------|-------|
-| [Project 1](https://github.com/jonathimer/devmarketing-skills/tree/main/skills/github-presence/link) | Brief description | ![Stars](https://github.com/jonathimer/devmarketing-skills/tree/main/skills/github-presence/badge) |
-| [Project 2](https://github.com/jonathimer/devmarketing-skills/tree/main/skills/github-presence/link) | Brief description | ![Stars](https://github.com/jonathimer/devmarketing-skills/tree/main/skills/github-presence/badge) |
+| [Project 1](<fill in: repo link>) | Brief description | <fill in: stars badge link, optional> |
+| [Project 2](<fill in: repo link>) | Brief description | <fill in: stars badge link, optional> |
+
+Replace every `<fill in>` with a real link before publishing. Never leave a placeholder link in a live profile.
 
 ## Recent Blog Posts
 
@@ -297,7 +317,9 @@ Getting on awesome lists drives traffic and credibility.
 
 ---
 
-## GitHub Actions for Marketing
+## GitHub Actions for Marketing (optional)
+
+These are optional extras for users who are comfortable with GitHub Actions. Some need secret keys (a metrics token, Twitter or X keys) and third-party actions that you should review first. Never ask the user to paste a key into the chat. Skip this section if the user just wants a better README.
 
 ### Automated README Updates
 
@@ -380,7 +402,9 @@ ko_fi: yourkofi
 custom: ["https://buymeacoffee.com/you"]
 ```
 
-### Sponsor Tiers That Work
+### Sponsor tier ideas
+
+These tiers and prices are the original author's example, not tested numbers. The user sets their own. GitHub Sponsors is optional and has its own sign-up and payout rules.
 
 | Tier | Price | Offer |
 |------|-------|-------|
@@ -440,7 +464,9 @@ Access via: Repository → Insights → Traffic
 
 ---
 
-## Tools
+## Tools (all optional)
+
+Some of these are paid or need an account. Check each one's pricing yourself.
 
 | Tool | Use case |
 |------|----------|

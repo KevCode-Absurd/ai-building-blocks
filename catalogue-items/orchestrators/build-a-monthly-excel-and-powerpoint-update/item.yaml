@@ -1,15 +1,12 @@
 slug: build-a-monthly-excel-and-powerpoint-update
 name: Build a monthly Excel and PowerPoint update
-summary: Share dated records and a slide template. Get a monthly workbook,
-  editable update deck and source-number checks.
+summary: Turn your dated records and slide template into a monthly workbook, an editable update deck and a check that every slide number matches.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: spreadsheet
     required: true
   - type: slide_deck
@@ -31,17 +28,13 @@ uses:
 execution: coordinator
 steps:
   - uses: excel-monthly-rollup-builder
-    note: Create monthly summaries from the actual reporting population and preserve
-      record IDs, month boundaries and rate definitions.
+    note: Builds the monthly summaries from your real records. Keeps record IDs, month boundaries and rate definitions. Hands the workbook and the metric definitions to the next step.
   - uses: powerpoint-template-populator
-    note: Populate the actual supplied template with the checked monthly outputs,
-      keeping charts and tables editable.
+    note: Fills your supplied template with the checked monthly results. Keeps charts and tables editable. Hands the deck and a source map to the number checker.
   - uses: excel-powerpoint-number-checker
-    note: Match every displayed monthly metric to the delivered workbook and fail
-      stale periods, swapped categories or inconsistent units.
+    note: Matches every number on the slides to the workbook. Fails stale periods, swapped categories and mixed units. Hands a clean deck to the notes step.
   - uses: powerpoint-speaker-note-builder
-    note: Add source-linked speaking notes and an estimated timing budget without
-      altering verified figures.
+    note: Adds speaker notes linked to their sources, with a time budget. It does not change a checked figure. Reads the checked deck from step 2 and the number review from step 3, plus your talk length. Hands you the deck with notes and the timing sheet.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -50,8 +43,6 @@ example_pending: true
 credits:
   - title: Original Excel and PowerPoint workflow methods
     by: AI Blocks
-    used: Original intake, file-preservation, execution and acceptance rules written
-      for this task.
+    used: Original intake, file-preservation, execution and acceptance rules written for this task.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.

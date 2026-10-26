@@ -51,7 +51,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Do the interviews and keep each customer's own words.
 
-2. **Customer buying reasons finder.** Use the skill `customer-buying-reasons-finder`. Ranks the reasons in the answers with the exact phrases customers used.
+2. **Customer buying reasons finder.** Use the skill `customer-buying-reasons-finder`. Give it the customer answers you collected by following the plan from step 1. Ranks the reasons in the answers with the exact phrases customers used.
 3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

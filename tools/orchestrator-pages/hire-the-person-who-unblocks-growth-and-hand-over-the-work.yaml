@@ -1,6 +1,6 @@
 new_slug: hire-the-person-who-unblocks-growth-and-hand-over-the-work
 name: "Hire the person who unblocks growth and hand over"
-summary: Give it your numbers and skills. Get the one hire to make, a written results agreement and a one-on-one plan.
+summary: Find the one hire that removes your growth limit. Get the 90-day result, a one-page results agreement and a one-on-one meeting plan.
 job: hire-people
 thinking: high
 thinking_why: It judges what limits growth and writes the agreements that follow. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Revenue is stuck, you are on every decision, and you think another hire is the answer.
   - You are about to write a job ad and cannot say what result the person must deliver.
   - You hired before, handed over too little, and ended up doing the job yourself.
+not_for:
+  - "You have already hired and only need to manage them: use the one-on-one meeting plan step on its own, or ask your AI to plan your weekly check-ins."
+  - "Your real limit is traffic, conversion or margin: fix that first with the Lead cost and friction planner, then come back to hire."
+  - "You need to pick between candidates: write the questions and scoring with the Interview scorecard builder."
 you_give:
   - Your revenue, net margin and growth target with a time frame
   - An honest rating of your skills (strong, ok or weak) in sourcing, paid ads, site conversion, brand, email and operations
@@ -31,6 +35,22 @@ how_to_use:
   - Rate your own skills honestly. A kind rating gives you the wrong hire.
   - Say how experienced the new person will be at the exact task. It sets how often you meet.
   - Read the agreement and meeting plan aloud before you offer the role.
+output_sample:
+  input:
+    - Your revenue, net margin and growth target with a time frame
+    - An honest rating of your skills in sourcing, paid ads, site conversion, brand, email and operations
+    - What you think is limiting growth
+    - Traffic sources, conversion rate and monthly sessions (optional)
+    - What you can offer, such as cash, a share of profit, equity or stock
+  output:
+    - name: "Step 1: Hire gap"
+      contains: Whether hiring fixes your limit, the one hire to make, the prize, pay options, the 90-day result and a readiness score.
+    - name: "Step 2: Results agreement"
+      contains: A one-page agreement with results wanted, guidelines, help on offer, how progress is judged and what follows good or poor results.
+    - name: "Step 3: One-on-one plan"
+      contains: How often and how long to meet, what they bring, warning signs, note rules, follow-up actions and your weekly hours.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find the hire gap
     text: Checks the limit is a hiring problem, maps the core jobs against your skills, sizes the prize before you pay, and writes the 90-day result in numbers before any interview.

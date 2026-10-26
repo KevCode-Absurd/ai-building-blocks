@@ -31,7 +31,7 @@ credits:
   - title: customer-feedback-analysis skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/customer-feedback-analysis
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, removed an unsourced claim and made-up impact figures, and added exact-quote and missing-data rules.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

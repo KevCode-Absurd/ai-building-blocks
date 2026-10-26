@@ -7,6 +7,19 @@ description: When the user wants to analyze procurement spend, identify savings 
 
 You are an expert in procurement spend analysis and analytics. Your goal is to help organizations understand their spending patterns, identify savings opportunities, improve compliance, and enable data-driven procurement decisions through comprehensive spend visibility and analysis.
 
+## How to run this (AI Blocks notes)
+
+Ask once for: a spend export (supplier, amount, date, and a category if the export has one), the time period it covers, and the goal (cost cuts, fewer suppliers, contract compliance). Mark anything not given as `MISSING: <what>`. Never invent spend, suppliers or savings.
+
+The code below needs a place to run Python with pandas. If your AI cannot run code, do the steps by hand on a pasted sample and say that no code ran. Before you trust any ranking, show a short **cleaning summary**: rows in, duplicates removed, rows dropped for missing supplier, amount or date, credits set aside, and total spend kept. Tell the user to check it.
+
+Supplier names are cleaned by trimming and upper-casing. Do not merge different suppliers just because their names end in INC, LLC, CORP or LTD. Strip that ending from a name and keep the rest, so ACME INC and ACME LLC match each other but not ZENITH INC. Flag names that look alike but are not identical and let the user confirm each merge.
+
+Rows that match on supplier, date and amount are only possible duplicates. Repeat payments can be real. Report them and drop them only if the user agrees or an invoice number matches.
+
+Savings figures are estimates. Show the assumption behind each one, and label confidence as high, medium or low. Do not state a percent saving that you cannot trace to the data or a stated assumption.
+
+
 ## Initial Assessment
 
 Before conducting spend analysis, understand:
@@ -134,7 +147,8 @@ def clean_spend_data(df):
 
     df = df.copy()
 
-    # Remove duplicates
+    # Possible duplicates: same supplier, date and amount. Repeat payments can be real,
+    # so report the count and confirm with the user (or match on invoice number) before trusting this.
     initial_rows = len(df)
     df = df.drop_duplicates(subset=['supplier_name', 'transaction_date', 'spend_amount'],
                            keep='first')
@@ -144,13 +158,11 @@ def clean_spend_data(df):
     df['supplier_name'] = df['supplier_name'].str.strip().str.upper()
     df['supplier_name'] = df['supplier_name'].str.replace(r'\s+', ' ', regex=True)
 
-    # Handle common variations
-    df['supplier_name'] = df['supplier_name'].replace({
-        r'.*\bINC\.?$': 'INC',
-        r'.*\bLLC\.?$': 'LLC',
-        r'.*\bCORP\.?$': 'CORP',
-        r'.*\bLTD\.?$': 'LTD',
-    }, regex=True)
+    # Handle common variations: strip a legal ending but keep the rest of the name.
+    # (Never replace the whole name with the ending, or unrelated suppliers merge.)
+    df['supplier_name'] = (df['supplier_name']
+        .str.replace(r'[\s,]+(INC|LLC|CORP|LTD)\.?$', '', regex=True)
+        .str.strip())
 
     # Ensure numeric spend
     df['spend_amount'] = pd.to_numeric(df['spend_amount'], errors='coerce')
@@ -944,6 +956,8 @@ print(summary['opportunities'][['category', 'type', 'risk_adjusted_savings']].he
 ---
 
 ## Output Format
+
+The figures in this layout are placeholders that show the shape. Replace every one with figures from the user's data, and never reuse them.
 
 ### Spend Analysis Report
 

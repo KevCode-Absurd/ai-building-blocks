@@ -8,6 +8,7 @@ job: ops
 level: intermediate
 inputs:
   - {type: question, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
   - {type: document}

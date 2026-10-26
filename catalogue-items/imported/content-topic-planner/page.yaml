@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts many topics by set rules.
 new_slug: content-topic-planner
 name: Content topic planner
-summary: Describe your business. Get topic clusters, a content calendar and the
-  pieces to write first.
+summary: Plan what to write with a content topic planner. Give it your business details. You get topic clusters, a content calendar and the first pieces to write.
 job: plan-strategy
 headline: Content topic planner
-subhead: A list of topics worth writing about, grouped into clusters, with a
-  calendar and a short list of the first pieces to write. It replaces the blank
-  page and the habit of guessing what readers want.
+subhead: A list of topics worth writing about, grouped into clusters, with a calendar and a short list of the first pieces to write. It replaces the blank page and the habit of guessing what readers want.
 explain: |
   A list of topics worth writing about, grouped into clusters, with a calendar and a short list of the first pieces to write. It replaces the blank page and the habit of guessing what readers want.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a content program and need a first quarter plan.
   - You want topics that bring in search traffic and others that earn shares.
   - You need to explain to a client why you picked these topics.
+not_for:
+  - "You need one blog post written now: ask your AI to use a copywriting skill, or write it yourself."
+  - "You want an audit of your site's search problems: use an SEO audit tool or ask an SEO expert."
+  - "You only need social posts: use a social media post skill, not a full content plan."
 you_give:
   - What your business sells
   - Who your customers are and what they ask
@@ -29,7 +30,24 @@ you_get:
   - Content calendar
   - First pieces to write, ranked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Answer its questions on your business, your customers, your current content and your competitors.
+  - Add real customer questions from sales calls, support tickets or surveys if you have them. They make the topics better.
+  - Check the ranked topic list. Move any topic up or down if you know your readers better.
+  - Start with the top pieces on the list and follow the calendar.
+output_sample:
+  input:
+    - What your business does and who your ideal customer is
+    - Your main goal for content, such as traffic or leads
+    - Questions customers ask, from sales calls, support or surveys
+    - Your existing posts (optional)
+    - Your main competitors (optional)
+  output:
+    - name: Content Pillars
+      contains: The few core themes your content will return to, each tied to your product and your customer's needs.
+    - name: Priority Topics
+      contains: A ranked list of topics, scored on customer impact, fit, search potential and the effort to make them.
+    - name: Topic Cluster Map
+      contains: Each pillar with its related topics grouped around it, with keyword ideas by buyer stage.
+    - name: Content calendar
+      contains: A plan that splits your time across content types, so the top-ranked pieces come first.

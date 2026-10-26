@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It reviews your design against known privacy rules.
 new_slug: privacy-first-app-designer
 name: Privacy-first app designer
-summary: "Describe the data your app collects. Get privacy controls designed in:
-  less data kept, clear consent, safe storage."
+summary: "Describe the data your app collects. Get a privacy-first app design with less data kept, clear consent, set retention and safe storage."
 job: secure-code
 headline: Privacy-first app designer
-subhead: "Build privacy in from day one. Describe the data your app collects and
-  get a design that keeps less, asks for clear consent and stores data safely."
+subhead: "Build privacy in from day one. Describe the data your app collects and get a design that keeps less, asks for clear consent and stores data safely."
 explain: |
   Build privacy in from day one. Describe the data your app collects and get a design that keeps less, asks for clear consent and stores data safely.
 
@@ -17,6 +15,10 @@ when:
   - Your app will have EU users.
   - You add analytics and third-party scripts.
   - You need a privacy check before production.
+not_for:
+  - "You need a lawyer to review your final privacy policy: ask a privacy lawyer or your data protection officer."
+  - "Your app holds regulated health or financial data: involve a privacy lawyer or compliance expert before you build."
+  - "You want a security test of code that already exists: ask a security engineer to review it."
 you_give:
   - Description of the app
   - List of data collected
@@ -28,7 +30,28 @@ you_get:
   - Storage and security measures
   - Pre-launch privacy checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
+  - Describe your app in a few lines.
+  - List each piece of data you collect, such as email, name or phone.
+  - Add the countries your users live in and any outside tools you use, like analytics.
+  - Ask for the data minimisation list, the consent and retention design and the pre-launch checklist.
+  - Check each kept field has a clear purpose. Then run the third-party audit before launch.
+output_sample:
+  input:
+    - A short description of your app
+    - The list of data your app collects
+    - The countries your users live in
+    - The third-party tools you use, like analytics (optional)
+  output:
+    - name: Data minimisation list
+      contains: Each data field with its purpose, and which fields you can drop or collect less of.
+    - name: Consent and retention design
+      contains: When to ask for consent, which options start off, and how long each type of data is kept.
+    - name: User rights flows
+      contains: What to build so people can see, fix, export and delete their own data.
+    - name: Storage and security measures
+      contains: Encryption, access limits, safe logging and what to leave out of API replies.
+    - name: Third-party audit
+      contains: Questions to ask about each outside tool that touches user data before you add it.
+    - name: Pre-launch privacy checklist
+      contains: A short list of checks to pass before your app goes live.

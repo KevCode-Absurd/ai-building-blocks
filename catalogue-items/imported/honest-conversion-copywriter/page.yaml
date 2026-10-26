@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It confirms a brief first, then writes within set rules.
 new_slug: honest-conversion-copywriter
 name: Honest conversion copywriter
-summary: Give it your offer and reader. Get landing page or email copy with
-  clear next steps and no made-up claims.
+summary: Write landing page copy or a sales email from your offer and reader. You confirm a brief first, and nothing is made up.
 job: write-landing-page
 headline: Honest conversion copywriter
-subhead: "Landing page or email copy that gets a click and does not invent
-  anything. Before writing, the skill makes you confirm a brief: the page's one
-  job, the audience, the offer and the context."
+subhead: "Landing page or email copy that gets a click and does not invent anything. Before writing, the skill makes you confirm a brief: the page's one job, the audience, the offer and the context."
 explain: |
   Landing page or email copy that gets a click and does not invent anything. Before writing, the skill makes you confirm a brief: the page's one job, the audience, the offer and the context. It will not start until you agree. That stops guessing.
 
@@ -18,6 +15,10 @@ when:
   - Past AI copy invented stats or customers you could not prove.
   - You are writing a launch or sales email.
   - You want a clear call to action and a few versions to test.
+not_for:
+  - You have no offer or proof yet. Work out your offer and gather real facts first, then come back.
+  - You only need a short ad headline. Ask your AI for a few headlines directly, no brief needed.
+  - You want a blog post or long article. Use a plain writing prompt, not a page with one goal and one ask.
 you_give:
   - The page's single goal
   - Who the reader is
@@ -30,7 +31,29 @@ you_get:
   - Alternative headlines and calls to action
   - Notes and ideas to test
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Tell it your page goal, your reader, your offer and any proof you have. Say if the copy is for a page or an email.
+  - Answer its questions. It will ask for anything missing before it writes.
+  - Read the brief it shows you. Fix anything wrong, then say yes. It will not write until you do.
+  - Check the copy against your facts. Fill every placeholder with a real number or quote, or cut it.
+  - Pick a headline and a call to action from the options. Test two versions if you can.
+output_sample:
+  input:
+    - The one goal of your page, such as a sign-up or a purchase
+    - Who the reader is and what they want fixed
+    - Your offer and the real facts about it
+    - Proof you have, such as numbers or quotes (optional)
+    - Where visitors come from, such as ads or email (optional)
+  output:
+    - name: Copy Brief Summary
+      contains: Four to six bullets on goal, reader, value, main call to action and context, plus your assumptions, for you to confirm.
+    - name: Page Copy
+      contains: Headline, subheadline, call to action, section headers and body copy, built only on facts you gave.
+    - name: Alternatives
+      contains: Two or three headline options and two or three call to action options, each with a short reason.
+    - name: Annotations
+      contains: Notes on why key sections read as they do and which principle each follows.
+    - name: Placeholders
+      contains: Clear marks where a number, quote or result is missing, so you fill it in with something real.
+    - name: Testing advice
+      contains: Next steps for testing headlines and calls to action, if you plan to run tests.

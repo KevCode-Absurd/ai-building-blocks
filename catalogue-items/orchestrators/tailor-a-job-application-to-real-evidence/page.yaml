@@ -1,52 +1,89 @@
 new_slug: tailor-a-job-application-to-real-evidence
 name: Tailor a job application to real evidence
 headline: Tailor a job application to real evidence
-summary: Share the source files. Get an evidence-based resume draft, application answers and a final check.
+summary: Match your resume to a job post using only what you really did. Get a tailored resume draft, application answers and a final proofread.
 job: find-a-job
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An evidence-based resume draft, application answers and a final check. Share the job description, your resume, real work examples and application requirements. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Paste the job post and your current resume, plus notes on real work you have done. Your AI matches the job's needs to your actual experience, tightens the writing and proofreads it. You get a resume draft and answers to the application questions.
 explain: |-
-  An evidence-based resume draft, application answers and a final check.
+  Tailoring a resume should mean choosing which true things to show first. It should not mean adding skills because the post asks for them. This workflow ties every line it writes to something in your own records.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every achievement is supported by your record; no experience, credential or metric is invented. Missing tools or evidence stay visible in the final summary.
+  Step one matches the job's needs to your experience and drafts the resume and any application answers. Step two makes the writing plain and easy to scan. Step three proofreads names, dates and format, and flags any line that lost its support on the way.
+
+  If the job wants something you have not done, the draft says so in a gap list and you decide what to do. Nothing here applies for you or sends anything.
 when:
-  - You need an evidence-based resume draft, application answers and a final check.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A job post asks for five things and your resume lists them in a different order.
+  - The application has two or three short-answer questions, such as 'why this role?'
+  - You have the right experience, but your resume describes an older job.
+  - A recruiter said your resume does not match the post, and you think it does.
+not_for:
+  - You are preparing for the interview itself. Use Prepare work examples for a job interview.
+  - You want to build a resume from scratch with no work records. Use the Resume and job application builder on its own.
+  - You only want spelling and grammar fixed. Use the Proofreader.
+  - You are applying to many jobs at once. Run this once per job, because each needs its own match.
 you_give:
-  - The job description, your resume, real work examples and application requirements.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The job post, copied in full (from the company site or job board)
+  - Your current resume, as a file or pasted text
+  - Notes on real work that is not on the resume, such as projects and results (optional)
+  - The application questions and word limits (from the form)
+  - Anything that must not change, such as job titles or dates (optional)
 you_get:
-  - An evidence-based resume draft, application answers and a final check.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A tailored resume draft where each achievement links to your own record
+  - Answers to each application question, within the word limit
+  - "A gap list: what the job asks for that your records do not show"
+  - A proofread check of names, dates and format, with fixes listed
+  - A summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini.
+  - Paste the job post, then your resume, then your work notes and the application questions.
+  - "Say: follow the workflow file, save each step, and stop if a check fails."
+  - Read the gap list first. Add facts you left out, or accept the gap.
+  - Compare every number, title and date in the draft with your own records.
+  - Copy the final text into your own file and apply yourself. This does not send anything.
+output_sample:
+  input:
+    - The job post
+    - Your current resume
+    - Notes on real work (optional)
+    - The application questions and word limits
+  prerequisites:
+    - An AI that can read files or long pasted text
+  output:
+    - name: step-01-resume-job-application-builder.md
+      contains: Tailored resume draft, application answers and a gap list, each line tied to your records.
+    - name: step-02-plain-english-editor.md
+      contains: The same draft in plain, scannable wording, with each change listed.
+    - name: step-03-proofreader.md
+      contains: Corrections to names, dates and format, and any line still lacking support.
+    - name: Hand-back summary
+      contains: Files saved, missing facts, checks not run and one next step.
 how_it_works:
   - title: Resume and job application builder
-    text: Match the role requirements to actual experience and draft the requested application materials.
+    text: Matches the job's needs to your real experience and drafts the resume and answers. Hands step 2 the draft, the evidence behind each line and the gap list.
   - title: Plain English editor
-    text: Make the writing specific and easy to scan while preserving the evidence and your voice.
+    text: Makes the draft specific and easy to scan, in your voice. Hands step 3 the edited draft and a list of what changed.
   - title: Proofreader
-    text: Check names, dates, consistency, requested format and any remaining unsupported claims.
+    text: Checks names, dates, consistency and format, and flags any line that lost its support. Hands back the final draft and the fixes.
 output_shape: |-
-  Scope and source coverage
-  An evidence-based resume draft, application answers and a final check.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  JOB <title, company>, SOURCES <list>
+
+  RESUME DRAFT    <section>: <line> [source: <your record>]
+  APPLICATION ANSWERS  <question> (<word limit>): <answer>
+  GAP LIST        <what the job asks for> | not shown in your records
+  CHANGES         <original> -> <edit> | <reason>
+  PROOFREAD       <name, date or format issue> | <fix>
+
+  MISSING        <each gap>
+  CHECKS MISSED  <one line each, or none>
+  NEXT STEP      <one action>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every achievement is supported by your record; no experience, credential or metric is invented.
+  - what: Length
+    how: Say if the resume must fit one page. The AI cuts the weakest lines first and tells you what it cut.
+  - what: Role change
+    how: If you are changing field, add notes on side projects or volunteer work. They can fill gaps the resume does not show.
+  - what: Voice
+    how: Paste a short note you wrote yourself. The edit keeps your way of putting things.
 judge:
   - Every achievement is supported by your record; no experience, credential or metric is invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +96,19 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the tailored resume and the gap list. When the next post comes, change only what the new post asks for.
+  - Add a line to your work notes each time you finish something. The next run has more to draw on.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Any good chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It must hold the job post, your resume and your notes at once.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Reviews or thank-you notes from managers or clients
+    - A list of tools and systems you have used, with years
+    - The company's own wording from its careers page
+    - Last two job descriptions from your own employers
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Gap list
+    meaning: What the job asks for that your records do not show.
+  - term: Evidence
+    meaning: A record of your own work, such as a project note or a result you can show.

@@ -53,3 +53,24 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - "You only need tidy minutes to circulate: use Rough notes to minutes writer."
+  - "You want a short written update from one meeting: use Meeting to written update converter."
+  - "You want the same action list kept up to date every week: use Weekly meeting actions keeper."
+output_sample:
+  input:
+    - Meeting notes, a transcript or email threads
+    - The date window and your timezone
+    - Who attended, so owners can be matched to names
+    - Your current task list (optional)
+  output:
+    - name: action-register.csv
+      contains: One row per action with id, task, owner, due date, timezone, status, dependency and source.
+    - name: clarifications.md
+      contains: Owner and deadline gaps, plus overdue, due soon, blocked and undated work.
+    - name: proposed-task-changes.md
+      contains: Task creates and updates for your task system, as a draft nothing has applied.
+    - name: follow-up-drafts.md
+      contains: One draft per due task with recipients, subject, body and the facts still missing.
+    - name: draft-ledger.csv
+      contains: Each draft's version and state, so nothing counts as sent until you send it.

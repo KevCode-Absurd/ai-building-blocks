@@ -1,6 +1,6 @@
 slug: copilot-qdrant-version-upgrade
 name: Qdrant version upgrade planner
-summary: Share your Qdrant version and setup. Get upgrade, backup and validation steps that protect availability.
+summary: "Get a Qdrant version upgrade plan with the safe order of steps, a backup, checks after each step, and how to avoid downtime."
 category: general
 boards: []
 type: skill
@@ -8,8 +8,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: brief
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: plan
 uses: []

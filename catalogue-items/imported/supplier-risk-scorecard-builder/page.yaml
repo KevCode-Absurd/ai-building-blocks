@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores a fixed set of risk areas for each supplier.
 new_slug: supplier-risk-scorecard-builder
 name: Supplier risk scorecard builder
-summary: Give it your suppliers. Get a risk score for each, warning signs to
-  watch, and a backup supplier plan.
+summary: Score each supplier for risk, see the warning signs to watch, and get a backup supplier plan for the ones that matter most.
 job: plan-supply-chain
 headline: Supplier risk scorecard builder
-subhead: A risk score for each supplier, the warning signs to watch and a backup
-  plan for the ones that matter most. You see which supplier failures would
-  hurt, before they happen.
+subhead: A risk score for each supplier, the warning signs to watch and a backup plan for the ones that matter most. You see which supplier failures would hurt, before they happen.
 explain: |
   A risk score for each supplier, the warning signs to watch and a backup plan for the ones that matter most. You see which supplier failures would hurt, before they happen.
 
@@ -18,6 +15,10 @@ when:
   - A supplier shows late deliveries and you need to judge the risk.
   - You must show a risk review to management or auditors.
   - You want early warnings, not post-mortems.
+not_for:
+  - "You are choosing a new supplier: use a supplier selection process or a plain side-by-side comparison of quotes, because this skill scores suppliers you already have."
+  - "You need a formal audit or legal sign-off: hire an auditor or your compliance team, because this gives a working risk view, not a certified review."
+  - "You have one or two suppliers and no data: talk to them directly and note the risks by hand, because a score needs some facts to work from."
 you_give:
   - A list of suppliers and what they supply
   - Spend and criticality for each
@@ -30,7 +31,29 @@ you_get:
   - Mitigation actions by risk level
   - A contingency plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
+  - Paste your supplier list with spend and how critical each supplier is. Add delivery, finance and location details if you have them.
+  - Tell your AI your own risk rules, such as the weights and alert levels. Otherwise it uses example values.
+  - If you want the scoring run as code, use an AI that can run Python. Install pandas and numpy first.
+  - Read the dashboard and the top risk factors for each supplier. Check them against what you know.
+  - Start with the actions marked high, and set a date for the next review.
+output_sample:
+  input:
+    - Your list of suppliers and what each one supplies
+    - Spend and how critical each supplier is to your business
+    - Financial or delivery data for each supplier (optional)
+    - Where each supplier is based (optional)
+  prerequisites:
+    - An AI that can run Python code, if you want it to run the scoring and alert checks. Pandas and numpy must be installed first.
+    - Your own risk rules for weights and alert levels. The ones in the skill are examples to replace.
+  output:
+    - name: Executive Summary
+      contains: The overall risk status of your suppliers, urgent alerts, whether risk is rising or falling, and the main recommendations.
+    - name: Individual Supplier Assessment
+      contains: "One supplier at a time: risk tier, scores by risk area, top risk factors and the business impact if it fails."
+    - name: Mitigation Actions
+      contains: Actions ranked high, medium or low for each supplier, matched to its risk level.
+    - name: Contingency Plan
+      contains: The backup supplier, safety stock steps and other sourcing options if a key supplier fails.
+    - name: Portfolio Risk Dashboard
+      contains: A table with supplier, risk score, criticality, spend, status, trend and the action required.

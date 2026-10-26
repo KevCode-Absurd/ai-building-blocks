@@ -1,6 +1,6 @@
 new_slug: cogs-line-sorter
 name: "COGS line sorter"
-summary: "Paste your cost lines. Get each sorted into COGS or expense, with the rule used, scored out of 100."
+summary: "Sort your store's cost lines into COGS or expense, see which rule decided each, and get gross margin before and after, scored out of 100."
 job: track-numbers
 thinking: medium
 thinking_why: "It applies a short set of accounting rules line by line and asks when your setup decides the answer. A mid-level model is enough. Review the result with your accountant."
@@ -17,6 +17,10 @@ when:
   - Your gross margin looks too good or too bad and you suspect costs are in the wrong place.
   - You are building a profit and loss statement and need cost lines sorted.
   - A new accountant or bookkeeper asks how you classify freight, packaging and fees.
+not_for:
+  - "You need to file taxes or produce statutory accounts: ask your accountant, since local rules can differ."
+  - "You make your own goods and carry labour and factory overhead: ask your accountant to set those costs, as this sorts resale stock lines."
+  - "You only want the cost of freight and duty spread across products: spread it by hand in a spreadsheet first, then bring the lines here."
 
 you_give:
   - A list of cost lines from invoices, your ledger or a profit and loss export
@@ -36,6 +40,26 @@ how_to_use:
   - Say how you sell and how shipping is charged.
   - Answer its setup questions, then read the lines in the wrong place.
   - Take the result to your accountant before changing your books.
+output_sample:
+  input:
+    - Your cost lines from invoices, your ledger or a profit and loss export
+    - "How you sell: own stock, dropship, 3PL or Amazon FBA"
+    - Whether shipping is charged to customers or built into the price
+    - Your revenue for the period (optional)
+    - The bucket each line sits in today (optional)
+  output:
+    - name: LINES
+      contains: Each cost line with its amount, current bucket, correct bucket, the rule used and a confidence mark.
+    - name: WRONG PLACE
+      contains: Lines to move between COGS and expense, and the effect of each move.
+    - name: SETUP QUESTIONS
+      contains: Lines where the answer depends on how you sell, such as free shipping or dropshipping.
+    - name: GROSS MARGIN
+      contains: Gross margin before and after the moves, with revenue and COGS shown.
+    - name: WASTE CHECK
+      contains: Whether expired, lost or written-down stock was found, and whether stock is counted on a schedule.
+    - name: SCORE
+      contains: A score out of 100 for how many lines were already in the right bucket.
 
 how_it_works:
   - title: Applies the main rule

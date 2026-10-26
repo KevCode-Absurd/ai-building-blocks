@@ -1,6 +1,6 @@
 new_slug: weekly-customer-health-watcher
 name: Weekly customer health watcher
-summary: Give it your account usage each week. Get who is slipping, who is up for renewal and the next touch for each.
+summary: Check your customer accounts each week. See who is slipping, which renewals are at risk, and the next step for each account.
 job: keep-customers
 thinking: high
 thinking_why: It compares each account with its own history, picks a cause for each slide and chooses between a touch, an escalation and nothing. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have customers on plans, subscriptions or retainers and find out about cancels when they happen.
   - Renewals come up without anyone knowing whether the account is healthy.
   - You want one early sign that tells you, in the first month, whether a customer will stay.
+not_for:
+  - "You only want to know who has already cancelled: use the Subscription churn watcher."
+  - "You sell one-off orders with no plan or renewal: use a simple repeat-buyer list in a spreadsheet instead."
+  - "You have under about 4 weeks of usage data: wait and gather it first, because there is no trend to read yet."
 you_give:
   - Last week's usage per account, with the actions that matter and the renewal date
   - Open and closed support tickets per account (advised)
@@ -33,6 +37,30 @@ how_to_use:
   - On the first run, tell it what customers do after they buy. It sets the leading sign and saves it.
   - Read the list. Send the touches you agree with, then tell the agent which went out.
   - Run it again next Monday. It adds the new scores and looks for the trend.
+output_sample:
+  input:
+    - Last week's usage per account, with the actions that matter and the renewal date
+    - Open and closed support tickets per account (advised)
+    - Survey answers, review lines or call notes from the week (optional)
+    - Last week's history file, once it exists
+  prerequisites:
+    - An AI that can save and read files between weeks, such as Claude Code
+    - A usage export from your product, billing or CRM tool
+  output:
+    - name: This week
+      contains: One line with accounts scored, how many fell, how many recovered, and renewals at risk in 60 days.
+    - name: Renewals at risk
+      contains: Each at-risk account renewing within 60 days, with score, cause and the proposed touch.
+    - name: Slipping accounts
+      contains: Last three scores, progress on the leading sign, the likely cause and one idea for each.
+    - name: Escalations
+      contains: A brief for each account with a problem another team must fix.
+    - name: Touches to send
+      contains: Thank-you notes and keep-in-touch plans for healthy and recovered accounts, as drafts.
+    - name: Leading sign check
+      contains: How many new accounts did the key action within the set number of days this week.
+    - name: Files and missing
+      contains: Each step's file and every MISSING line for facts it could not find.
 how_it_works:
   - title: Set the leading sign once
     text: Picks one early sign of success in the form "P percent do event E within T days", and re-checks it each quarter.

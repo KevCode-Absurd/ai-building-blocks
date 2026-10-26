@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must turn broad standards into specific activities.
 new_slug: competency-framework-translator
 name: Competency framework translator
-summary: Give it a framework like DigComp or ISTE. Get classroom activities that
-  teach each skill in it.
+summary: Turn a framework like DigComp or ISTE into classroom activities. Give it the competency and your subject. You get indicators, levels and tasks.
 job: teach-and-train
 headline: Competency framework translator
-subhead: Give it a framework like DigComp or ISTE. Get classroom activities that
-  teach each skill in it. Bring the framework and competency. Use the result to
-  plan your next step.
+subhead: Give it a framework like DigComp or ISTE. Get classroom activities that teach each skill in it. Bring the framework and competency. Use the result to plan your next step.
 explain: |
   A framework such as DigComp, GreenComp or ISTE turned into classroom activities your students can do, with signs you can observe to tell whether they have the skill. Official wording is often too abstract to teach from.
 
@@ -18,6 +15,10 @@ when:
   - The competency wording is too vague to plan from.
   - You want one skill taught inside a history or science unit.
   - You need to assess a skill, not just mention it.
+not_for:
+  - "You need a whole curriculum map across many years: use a scope and sequence planning step with your team instead."
+  - "You want the content of a single lesson: plan it yourself or ask your AI for a lesson plan."
+  - "You want a marking rubric: take the indicators from this skill and ask your AI to turn them into a rubric."
 you_give:
   - The framework and competency
   - Subject and year group
@@ -29,7 +30,30 @@ you_get:
   - Classroom activities in your subject
   - Assessment ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into the chat.
+  - Type the framework and competency. Add your subject, year group, and what students should do with the skill.
+  - Paste the official wording and your assessment needs if you have them.
+  - Read the result. Check each indicator against the original wording, and ask for changes if a task does not fit your class.
+  - Use the indicators to build a marking rubric, or put the tasks into your unit plan.
+output_sample:
+  input:
+    - The framework and competency you must teach
+    - Your subject and year group, and what students should do with the skill
+    - The official wording of the competency (optional)
+    - How you plan to assess it (optional)
+  output:
+    - name: Original Framework Wording
+      contains: The official competency text, kept as given so you can check the translation against it.
+    - name: Translation
+      contains: What the competency means in your subject and year group, in plain words.
+    - name: Observable Indicators
+      contains: Things students can say or do that show they have the skill, across several levels of progress.
+    - name: Classroom Tasks
+      contains: Activities set in your subject that students can only finish by using the skill.
+    - name: Assessment Criteria
+      contains: What to look for when you judge the skill, matched to how you need to assess.
+    - name: Integration Notes
+      contains: How to fit the skill into your unit, on its own or inside subject content.
+    - name: Framework Fidelity Check
+      contains: A check that the translation still matches the original framework wording.

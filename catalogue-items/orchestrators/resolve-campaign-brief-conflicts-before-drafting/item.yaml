@@ -29,13 +29,13 @@ uses:
   - theme-based-ad-copy-set-writer
 steps:
   - uses: marketing-evidence-expiry-reviewer
-    note: A conflict register with resolvable facts, open owner decisions and safe independent work.
+    note: Reads your clashing briefs and dated evidence and makes a conflict register with resolvable facts, open owner decisions and safe independent work. It hands the register to the next step.
   - uses: marketing-brief-writer
-    note: A brief showing selected decisions, factual sources, unchanged constraints and excluded unresolved assertions.
+    note: Uses your own product and buyer facts and the decisions you have made, not the raw register. It takes the resolvable facts from step 1 as the sources and fences off the open decisions as claims not allowed. It hands over a brief showing selected decisions, factual sources, unchanged constraints and excluded unresolved assertions.
   - uses: claim-and-proof-matcher
-    note: A claim map and either a safe drafting contract or a precise dependency stop.
+    note: Checks the claims the brief from step 2 says the copy will use, as the copy to check, against your offer, product facts and customer words. It hands over a claim map and either a safe drafting contract or a precise dependency stop.
   - uses: theme-based-ad-copy-set-writer
-    note: The bounded draft, decision-to-output check and a portable resume checkpoint.
+    note: Uses the brief from step 2, limited to the claims step 3 cleared, not the claim map itself. It hands over the bounded draft, a decision-to-output check and a portable resume checkpoint.
 execution: coordinator
 package_files: all
 needs_mode: manual

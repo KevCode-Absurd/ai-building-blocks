@@ -1,6 +1,6 @@
 new_slug: fraud-rules-setter
 name: "Fraud rules setter"
-summary: "Give it your order volume and payment setup. Get fraud rules, a review routine and a chargeback watch line."
+summary: "Set fraud rules for your online store. Give it your orders, chargebacks and review time. You get rules by risk level and a chargeback watch line."
 job: protect-your-store
 thinking: medium
 thinking_why: "It turns your numbers into a short rule set with clear limits. A mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You get chargebacks and want rules instead of checking every order by hand.
   - You are on Shopify Payments and have never set up Flow rules for risky orders.
   - Real buyers complain about declined cards and you suspect your checks are too tight.
+not_for:
+  - "Your store gets under about 100 orders a month: keep your platform's default fraud analysis and 3D Secure, as there is too little data to tune rules."
+  - "Nobody can check held orders each day: ask the skill to flag orders instead of holding them, or hire a person to review them."
+  - "You want to spot card testing, which means many small repeated charges: use the Bot and AI agent access planner."
 
 you_give:
   - Monthly orders and average order value
@@ -36,6 +40,28 @@ how_to_use:
   - Say who can review orders each day, and for how many hours a week.
   - Build the rules in your platform, using its templates where it has them.
   - After 30 days, bring the counts of blocked, held, released and disputed orders back to the skill.
+output_sample:
+  input:
+    - Your monthly orders and average order value
+    - Your chargeback count and rate for the last 3 months
+    - Your payment setup, such as Shopify Payments or another gateway
+    - Who reviews orders and how many hours a week
+    - Recent false declines from real buyers (optional)
+  output:
+    - name: INPUTS READ
+      contains: Your order volume, average order value, chargebacks, payment setup and review hours, as the skill understood them.
+    - name: WATCH LINE
+      contains: Your chargeback rate now, a warning level, the processor flag level and the level where cards may stop.
+    - name: RULES
+      contains: What happens to low, medium and high risk orders, and the one pattern that justifies a cancel.
+    - name: EXTRA CHECKS
+      contains: Settings for 3D Secure and the address check, plus notes on any protection cover you may have.
+    - name: REVIEW ROUTINE
+      contains: Who reviews held orders, when, a short checklist, and how to release or cancel within 24 hours.
+    - name: MONTHLY LOOP
+      contains: What to count each month and which rule to loosen or tighten.
+    - name: CHECKS MISSED
+      contains: Any check the skill could not run, or none, plus anything marked MISSING.
 
 how_it_works:
   - title: Sets the watch line

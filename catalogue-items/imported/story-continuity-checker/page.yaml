@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It compares prose to a fact list, then judges each hit.
 new_slug: story-continuity-checker
 name: Story continuity checker
-summary: Give it your manuscript and story facts. Get a list of name slips, age
-  errors, anachronisms and loose plot threads.
+summary: Check your novel for continuity errors. Give it your chapters and a story fact list. You get name slips, age errors, wrong-era words and loose clues.
 job: write-and-tell-stories
 headline: Story continuity checker
-subhead: Give it your manuscript and story facts. Get a list of name slips, age
-  errors, anachronisms and loose plot threads. Bring your manuscript or
-  chapters. Use the result to plan your next step.
+subhead: Give it your manuscript and story facts. Get a list of name slips, age errors, anachronisms and loose plot threads. Bring your manuscript or chapters. Use the result to plan your next step.
 explain: |
   A list of continuity slips in your novel or long story: names that drift, ages that do not add up, objects from the wrong era and clues that are planted but never paid off. Re-reading will not catch these, because the memory that wrote the draft is the same memory that reads it.
 
   The fix is a story bible, which is the facts of your story as a list, plus a mechanical check of the prose against it. For each hit, the skill asks one question: is the manuscript wrong, or is the bible out of date? It does not write, outline or polish. It checks and reports. It works on long manuscripts and comes with a small script.
 when:
-  - Your character is 18 in chapter one and 23 in chapter twelve with no time
-    passing.
+  - Your character is 18 in chapter one and 23 in chapter twelve with no time passing.
   - A name changed spelling somewhere in the middle of the book.
   - You wrote a historical story and fear modern objects crept in.
   - You planted a key or secret and cannot remember if it was resolved.
+not_for:
+  - "You want feedback on pacing, voice or plot logic: ask an editor or a trusted beta reader, because this only checks facts."
+  - "You have a short story of a few pages: re-read it with a simple list of names and ages instead."
+  - "You want your draft rewritten or polished: use your AI in a normal chat, since this skill only checks and reports."
 you_give:
   - Your manuscript or chapters
   - Story facts, such as names, ages, dates and places
@@ -31,8 +31,33 @@ you_get:
   - Unresolved plot threads
   - "A verdict on each: fix the text or the notes"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Put each chapter in one folder as its own .md or .txt file, with the chapter number in the file name.
+  - Open an AI that can run code and read files. Upload the skill and your folder.
+  - Ask it to build a story bible from your existing chapters, or upload yours. Check the names, birth years and clues it lists.
+  - Ask it to run the check and group each hit as a prose fix, a bible update or a retcon.
+  - Fix the prose, update the bible where you changed a fact on purpose, then ask it to run the check again.
+output_sample:
+  input:
+    - Your chapters as separate .md or .txt files in one folder
+    - A story bible file (bible.json) with names, birth years, era words to avoid and planted clues
+    - The setting and time period of your story
+    - Which characters may tell the story from inside their head (optional)
+  prerequisites:
+    - An AI that can run code and read your files
+    - Python 3.8 or newer
+    - A story bible built from chapters you have already written (the skill can start one for you)
+  output:
+    - name: Chapter sequence check
+      contains: Flags duplicate or missing chapter numbers in your folder.
+    - name: Anachronism check
+      contains: Lists words from the wrong era that appear in your prose, with file and line.
+    - name: Name drift check
+      contains: Lists spellings you told it to watch, and names one letter off a real character name.
+    - name: Age arithmetic check
+      contains: Flags ages in the text that do not match a character's birth year.
+    - name: Foreshadowing check
+      contains: Shows planted clues with no payoff, a missing payoff chapter or a passed deadline.
+    - name: POV leak check
+      contains: Warns when a character who should not have inner thoughts is given them.
+    - name: Verdicts by group
+      contains: Each hit is marked as a prose fix, a bible update or a retcon to approve, with file and line.

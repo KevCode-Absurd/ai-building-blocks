@@ -1,40 +1,26 @@
 new_slug: weekly-community-keeper
 name: Weekly community keeper
-summary: Share community posts and questions. Get useful replies, repeat
-  questions and a plan for the next week.
+summary: Check your weekly community posts for unanswered threads and repeat questions. Get fair recognition picks and a weekly note drafted in your voice.
 job: grow-social
 thinking: high
-thinking_why: It reads many voices for themes, applies a fairness rule to
-  recognition and drafts a note that must sound like you. Give it your strongest
-  model.
+thinking_why: It reads many voices for themes, applies a fairness rule to recognition and drafts a note that must sound like you. Give it your strongest model.
 headline: Weekly community keeper
-subhead: Give it the week's posts from your community every Friday. It finds the
-  themes and the threads nobody answered, picks the members who reached a level
-  under a fair recognition plan, designs one moment when a milestone is near and
-  drafts the weekly note. You post. It never does.
+subhead: Give it the week's posts from your community every Friday. It finds the themes and the threads nobody answered, picks the members who reached a level under a fair recognition plan, designs one moment when a milestone is near and drafts the weekly note. You post. It never does.
 explain: >
-  Communities die quietly, a few months after launch. A question sits unanswered
-  for a week and that member never asks again. The same five people get thanked
-  every Friday. The weekly note becomes a list of links. The thousandth member
-  joins on a Tuesday and nobody marks it.
+  Communities die quietly, a few months after launch. A question sits unanswered for a week and that member never asks again. The same five people get thanked every Friday. The weekly note becomes a list of links. The thousandth member joins on a Tuesday and nobody marks it.
 
 
-  This agent reads the week every Friday. It lists every thread unanswered after
-  two days first, because that is the fastest way to lose a member. It finds the
-  themes with quotes and the questions asked most. It checks who reached a level
-  in a recognition plan anyone can see the path to, and holds back anyone
-  thanked in the last four weeks, so recognition is earned and not favourites.
-  When a milestone is coming it designs one peak and keeps the rest simple. Then
-  it drafts the weekly note with one core idea at the top. It never posts or
-  messages anyone.
+  This agent reads the week every Friday. It lists every thread unanswered after two days first, because that is the fastest way to lose a member. It finds the themes with quotes and the questions asked most. It checks who reached a level in a recognition plan anyone can see the path to, and holds back anyone thanked in the last four weeks, so recognition is earned and not favourites. When a milestone is coming it designs one peak and keeps the rest simple. Then it drafts the weekly note with one core idea at the top. It never posts or messages anyone.
 when:
-  - You run a community for customers, members or learners and the launch energy
-    has faded.
+  - You run a community for customers, members or learners and the launch energy has faded.
   - Threads go unanswered and you only notice when a member leaves.
   - Your weekly note has become a list of links nobody reads.
+not_for:
+  - "You need to reply to comments on your own social posts: reply by hand, or ask your AI for a draft of each reply."
+  - "You have a one-off launch and no ongoing member posts: write the launch note yourself with your AI."
+  - "You want to answer one support question: paste that thread into your AI and ask for a reply."
 you_give:
-  - The week's posts and replies, exported from your own community, with
-    handles, channels and reply counts
+  - The week's posts and replies, exported from your own community, with handles, channels and reply counts
   - Members joined, active, first-time posters and left, for the week (advised)
   - Your brand brain and what the community is for (advised)
   - Launches, milestones and events in the next month (advised)
@@ -47,31 +33,48 @@ you_get:
   - The weekly note drafted with one core idea at the top
   - A four-week trend in members, first posts and unanswered threads
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in
-    .claude/agents, then ask it to run the week.
-  - Export the week's posts from your community tool. Put them in one folder, or
-    attach them in the chat.
-  - On the first run, describe who the members are and what the community is
-    for. Approve the plan and the recognition levels.
-  - Read the answers owed first and get them answered. Then approve the
-    recognitions and the note.
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run the week.
+  - Export the week's posts from your community tool. Put them in one folder, or attach them in the chat.
+  - On the first run, describe who the members are and what the community is for. Approve the plan and the recognition levels.
+  - Read the answers owed first and get them answered. Then approve the recognitions and the note.
   - Post the note yourself. Run it again next Friday.
+output_sample:
+  input:
+    - The week's posts and replies from your community, with handles, channels and reply counts
+    - Members joined, active, first-time posters and left (optional)
+    - Your brand brain and what the community is for (optional)
+    - Launches, milestones and events in the next month (optional)
+  prerequisites:
+    - An AI that can keep files between weeks, such as Claude Code, to track past recognitions
+    - Your community plan, which the agent builds with you on the first run
+  output:
+    - name: This week in one line
+      contains: Members joined, active, first posts, unanswered threads and recognitions proposed.
+    - name: Answers owed
+      contains: Every thread unanswered after two days, with its age and who could answer it.
+    - name: Themes
+      contains: The week's themes with member quotes, and the questions asked most often.
+    - name: Recognitions
+      contains: Members who reached a level, checked against who was thanked in the last four weeks.
+    - name: The moment
+      contains: When a milestone is near, the one peak to build and what stays simple.
+    - name: The weekly note
+      contains: A draft with one core idea at the top, ready for you to post.
+    - name: Trend
+      contains: Four weeks of members, first posts and unanswered threads.
+    - name: Files and missing
+      contains: Each step's file and every line marked MISSING.
 how_it_works:
   - title: Build the plan once
-    text: The channels, the onboarding path, the events and the recognition levels
-      anyone can reach, approved by you and reviewed each quarter.
+    text: The channels, the onboarding path, the events and the recognition levels anyone can reach, approved by you and reviewed each quarter.
   - title: Read the week
-    text: Adds the week's numbers, finds the themes with quotes and lists every
-      thread unanswered after two days.
+    text: Adds the week's numbers, finds the themes with quotes and lists every thread unanswered after two days.
   - title: Pick the recognitions
-    text: Members who reached a level this week, with anyone thanked in the last
-      four weeks held back unless they reached a new one.
+    text: Members who reached a level this week, with anyone thanked in the last four weeks held back unless they reached a new one.
   - title: Design the moment when one is near
-    text: For a first, a launch or a milestone in the next month, the one peak to
-      build and what stays simple.
+    text: For a first, a launch or a milestone in the next month, the one peak to build and what stays simple.
   - title: Draft the weekly note
-    text: One core idea at the top, the answers owed, the recognitions and the
-      moment, in your voice.
+    text: One core idea at the top, the answers owed, the recognitions and the moment, in your voice.
   - title: Log and hand back
     text: Updates the weeks and recognised files, then stops for your yes.
 output_shape: >-
@@ -125,13 +128,11 @@ tweaks:
   - what: Unanswered rule
     how: Two days by default. Set one day for a support-heavy community.
   - what: Recognition cooldown
-    how: Four weeks before the same member is thanked again for the same level. Set
-      your own.
+    how: Four weeks before the same member is thanked again for the same level. Set your own.
   - what: What is coming
     how: Tell it the milestones a month ahead. The moment needs time to build.
   - what: Quoting members
-    how: Say whether handles may appear in the note. The default is no handle
-      without your yes.
+    how: Say whether handles may appear in the note. The default is no handle without your yes.
 judge:
   - Every unanswered thread is listed with its age.
   - Each recognition matches a level and respects the cooldown.
@@ -139,28 +140,20 @@ judge:
   - The note has one core idea at the top.
   - Nothing was posted or sent.
 test:
-  - Give it a week where you know a thread sat unanswered for five days. It
-    should be the first line.
-  - Give it a member thanked last week for the same thing. It should hold them
-    back.
+  - Give it a week where you know a thread sat unanswered for five days. It should be the first line.
+  - Give it a member thanked last week for the same thing. It should hold them back.
   - Run it twice on the same export. The themes and recognitions should match.
 improve:
-  - Write the recognition levels with two members in the room, then approve the
-    plan.
+  - Write the recognition levels with two members in the room, then approve the plan.
   - Set your unanswered rule and cooldown before the first week.
-  - Record which recognitions and notes were sent. The fairness check depends on
-    it.
-  - Pair it with the Social comment and reply desk, which handles replies
-    outside the community.
+  - Record which recognitions and notes were sent. The fairness check depends on it.
+  - Pair it with the Social comment and reply desk, which handles replies outside the community.
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the plan, weeks and recognised files between weeks and run
-        every Friday.
+      why: It can keep the plan, weeks and recognised files between weeks and run every Friday.
     - name: Your community tool
-      why: Export the week's posts with handles, channels and reply counts. Most
-        forums and chat servers can.
+      why: Export the week's posts with handles, channels and reply counts. Most forums and chat servers can.
   inputs:
-    - A list of members who are also customers at risk, so their threads are
-      never the unanswered ones
+    - A list of members who are also customers at risk, so their threads are never the unanswered ones
     - Your event calendar for the next quarter

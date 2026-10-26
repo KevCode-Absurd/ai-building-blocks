@@ -1,6 +1,6 @@
 new_slug: build-a-paid-app-with-billing-emails-alerts-and-tests
 name: Build a paid app with billing, emails, alerts and tests
-summary: Give it your app idea. Get a starter with sign-in, billing, emails, alerts and tests.
+summary: Build a paid subscription app starter with sign-in, billing, emails, alerts and tests. Give it your app idea, plans and prices to begin.
 job: build-software
 thinking: high
 thinking_why: It writes a lot of connected code in five passes. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are starting a subscription web app and want the base done properly.
   - Your first version needs real payments, not a mock checkout.
   - You want monitoring and tests from day one.
+not_for:
+  - "You only need a landing page or a one-time payment link: use a simple page builder or your payment provider's own payment link tool."
+  - "You already have a live app and only need to fix failing tests: use the Test failure repair loop."
+  - "You want to take real payments right away: first get a developer to review the code, and use test keys until then."
 you_give:
   - Your app idea in a few sentences, with the features you need
   - Your choices for sign-in, database and payments, or say you have none
@@ -31,6 +35,29 @@ how_to_use:
   - Describe the app. Use payment test keys only, never live keys.
   - After each step, run the app and check that step before you continue.
   - Read the final test report. Fix the gaps it lists before you take real payments.
+output_sample:
+  input:
+    - Your app idea in a few sentences, with the features you need
+    - Your choices for sign-in, database and payments (optional)
+    - Your plans and prices
+    - The emails your app should send (optional)
+  prerequisites:
+    - An AI that can write and run code in a project folder, such as Claude Code
+    - A payment provider account with test keys (never live keys)
+    - An email provider account, if you want emails to send for real (optional)
+  output:
+    - name: "Step 1: Project"
+      contains: The file layout, sign-in, database, pages, dashboard and an example settings file.
+    - name: "Step 2: Billing"
+      contains: Plans, trials, checkout, customer portal, payment webhook handlers and steps to test them on your computer.
+    - name: "Step 3: Emails"
+      contains: Email templates, a sending function, a local preview and a spam check.
+    - name: "Step 4: Logs and alerts"
+      contains: The questions you will ask when something breaks, the logs that answer them and alerts for what needs action.
+    - name: "Step 5: Tests"
+      contains: The tests written, their results, a coverage report and a list of what is still untested.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Scaffold the app
     text: Lays out pages, API routes, the database and sign-in from your choices, with an example settings file.

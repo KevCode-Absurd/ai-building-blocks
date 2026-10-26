@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It ranks topics by weight and likelihood.
 new_slug: exam-study-roadmap-builder
 name: Exam study roadmap builder
-summary: Give it your syllabus, past papers or notes. Get a ranked roadmap of
-  what to study first for the best score.
+summary: Turn your syllabus, past papers or notes into an exam study roadmap. You get topics ranked by marks and how often they appear.
 job: think-and-decide
 headline: Exam study roadmap builder
-subhead: Give it your syllabus, past papers or notes. Get a ranked roadmap of
-  what to study first for the best score. Bring syllabus, past papers or notes.
-  Use the result to plan your next step.
+subhead: Give it your syllabus, past papers or notes. Get a ranked roadmap of what to study first for the best score. Bring syllabus, past papers or notes. Use the result to plan your next step.
 explain: |
   A ranked plan of what to study first for the most marks, built from your own syllabus, past papers or notes.
 
@@ -17,8 +14,11 @@ when:
   - Your exam is close and you do not know where to start.
   - You have several years of past papers and want to see what repeats.
   - You need a plan for a set number of hours, from two to many days.
-  - You want flashcards or practice for one question type, such as MCQs or
-    numericals.
+  - You want flashcards or practice for one question type, such as MCQs or numericals.
+not_for:
+  - "You have essays or coursework with no exam date: use a plain outline and a deadline list instead."
+  - "You have a question about your grade or how marks are given: ask your course tutor or read the official marking guide."
+  - "You want a promise of what will be on the exam: no tool can give that, so treat the scores as guesses."
 you_give:
   - Syllabus, past papers or notes
   - Subject and course code
@@ -31,7 +31,30 @@ you_get:
   - Flashcards or practice questions
   - Flags for out-of-syllabus items
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. This skill needs no code, web access or paid tool.
+  - Paste your syllabus, past papers or notes. If your AI can take files, upload them instead.
+  - Say your subject, your course code and how many hours you have left.
+  - Say if you want one question type only, such as MCQs, flashcards or a mock paper.
+  - Check that the course code is right and that every topic matches your syllabus.
+  - Start with the easy topics at the top of the roadmap and work down.
+output_sample:
+  input:
+    - Your syllabus, past papers or notes
+    - Your subject and course code
+    - The hours you have before the exam
+    - Question types to focus on, such as MCQs or numericals (optional)
+  output:
+    - name: Full roadmap
+      contains: Topics ranked by marks, in order from easy to medium to hard, sized to the hours you have.
+    - name: Probability score
+      contains: A score for each likely question, based on how often and how recently it appears, unit weight and marks.
+    - name: Theory, numerical, MCQ, coding or lab notes
+      contains: Short notes for the question type you pick, each tied to a syllabus unit.
+    - name: Flashcards
+      contains: Quick cards for the topics you need to memorise.
+    - name: Predicted exam paper
+      contains: A mock paper built from the likely questions, for timed practice.
+    - name: Exam readiness dashboard
+      contains: A self-check of how ready you are by topic, as a rough guide.
+    - name: Out-of-syllabus flags
+      contains: A list of anything in your files that falls outside the syllabus.

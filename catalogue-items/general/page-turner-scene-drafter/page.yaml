@@ -1,6 +1,6 @@
 new_slug: page-turner-scene-drafter
 name: "Page-turner scene drafter"
-summary: "Paste your hook plan. Get a drafted scene in plain, concrete prose that ends on the line you planned."
+summary: "Turn your hook plan into a first-draft scene in short beats with real details. It ends on the stop line you planned and holds back the answer."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "Writing a scene that holds attention needs close control of rhythm, detail and what to hold back."
@@ -17,6 +17,10 @@ when:
   - You have a plan for a scene and need a first draft that does not drift.
   - Your drafts explain the feeling instead of showing the object.
   - Your scenes have the right ending but a slow start.
+not_for:
+  - "You have no plan or stop line yet: start with the Next-page hook planner, then come back."
+  - "You are writing non-fiction, such as an article or a report: use a plain outline and write it yourself or ask your AI for a draft."
+  - "You already have a scene and want it judged: use the Page-pull scene checker."
 
 you_give:
   - A hook plan from "Next-page hook planner"
@@ -34,6 +38,26 @@ how_to_use:
   - Paste the plan. Paste a sample of your own prose if you want it to match your voice.
   - Say the point of view and the tense.
   - Edit the draft, then run "Page-pull scene checker" on it.
+output_sample:
+  input:
+    - Your hook plan from the Next-page hook planner
+    - Fair-escape notes from the Fair escape checker (optional)
+    - A page of your own writing, so it can match your voice (optional)
+    - The point of view and tense you want (optional)
+    - The place and year of the scene (optional)
+  prerequisites:
+    - A hook plan that names the question, the person, the stop line, the held-back answer and the plants
+  output:
+    - name: SCENE
+      contains: The drafted scene, 400 to 900 words, ending on your planned stop line with nothing after it.
+    - name: HELD BACK
+      contains: The one fact that answers the reader's question, kept out of the scene on purpose.
+    - name: PLANTED
+      contains: Each detail the answer needs, and where in the draft it sits.
+    - name: MISSING
+      contains: Facts it had to guess or could not know, marked so you can fill them in.
+    - name: CHECKS MISSED
+      contains: One line for each check the draft still fails and why, or none.
 
 how_it_works:
   - title: Opens in the trouble

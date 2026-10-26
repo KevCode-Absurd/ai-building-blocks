@@ -1,6 +1,6 @@
 new_slug: buy-in-conversation-planner
 name: "Buy-in conversation planner"
-summary: "Paste who you need to win over and what you want. Get a conversation plan that starts from what they want."
+summary: "Plan a buy-in conversation that starts from what the other person wants. Get their likely doubts, replies and a friendly opening."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It predicts someone's doubts and judges fairness, but follows a fixed order."
@@ -17,6 +17,10 @@ when:
   - "You need your boss, client or team to back an idea."
   - "You expect resistance and want to prepare the doubts."
   - "You keep winning arguments and losing the person."
+not_for:
+  - "You are haggling over price or contract terms: use a negotiation call prep planner, or ask a trusted colleague to role-play the call with you."
+  - "You want to trick or pressure someone into saying yes: this plan flags tricks, so it will not help."
+  - "You need a quick message, not a talk: write a short note to them yourself and ask one clear question."
 
 you_give:
   - "Who you need to win over and what you want"
@@ -34,6 +38,30 @@ how_to_use:
   - "Add what you know about how they react."
   - "Read the plan once, then say the opening out loud."
   - "After the talk, tell it what they said and run it again for the next round."
+output_sample:
+  input:
+    - Who you need to win over and what you want from them
+    - What you know about them, such as past reactions (optional)
+    - What you could change if they push back (optional)
+  output:
+    - name: What they want
+      contains: Three to five wants in their words, each marked KNOWN or GUESS.
+    - name: Why they would want it
+      contains: One honest sentence linking each want to your request.
+    - name: Likely answer and doubts
+      contains: Their first reply and top doubts, each with a reply or a question.
+    - name: Opening and first small yes
+      contains: A warm opening and one point you both already agree on.
+    - name: Questions that let them talk
+      contains: Five questions about their view, goals and worries, plus where you stop and listen.
+    - name: Where they shape it
+      contains: Gaps in the plan they can fill, such as timing or first step.
+    - name: The better reason and how to show it
+      contains: A fair reason beyond money and a way to make it real.
+    - name: Mistakes to own
+      contains: One plain sentence per fault you admit before they raise it.
+    - name: Missing and checks missed
+      contains: What you still need to learn, and any checks the plan failed.
 
 how_it_works:
   - title: "Finds what they want"

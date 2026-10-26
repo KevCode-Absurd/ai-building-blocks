@@ -16,6 +16,29 @@ use_cases:
   - "Question a career course's highlighted graduate success stories"
   - "Read a historical investing interview in its dated context"
   - "Set a review calendar with meaningful change triggers"
+not_for:
+  - "You want a view on how decisions and luck differ in a choice: hire Annie Duke instead."
+  - "You need family money habits or teaching kids about money: hire Beth Kobliner instead."
+  - "You want a personal asset mix, a buy or sell call or a loss guarantee: speak to a qualified, licensed adviser, since this mind gives none."
+output_sample:
+  input:
+    - The claim or document you want checked, such as a forecast or two advertised records
+    - The periods, benchmarks and fee or cost basis each document uses
+    - Your list of clients or options, if you want shared risks mapped (optional)
+    - What you plan to do with the answer
+  output:
+    - name: Exact claim
+      contains: Your vague claim rewritten as a sentence that can be examined, with the outcome, period and comparison named.
+    - name: Forecast-evidence sheet
+      contains: What the forecast rule is, what would count as failure and what other periods show.
+    - name: Comparison specification
+      contains: Periods, charging basis, benchmark and exclusions from each record, lined up so they can be compared.
+    - name: Missing data list
+      contains: Figures and failed cases you still need before any record can be ranked.
+    - name: Dependency map
+      contains: Which clients or options rely on the same organisation, industry or budget cycle.
+    - name: Bounded finding and review rule
+      contains: What the evidence shows, what it does not show, the next question and when to review.
 seats:
   - {seat: "Financial evidence and limits of prediction", asks: "What would have told you that before the outcome?"}
   - {seat: "Diversification and fair comparisons", asks: "Which different labels hide the same exposure?"}

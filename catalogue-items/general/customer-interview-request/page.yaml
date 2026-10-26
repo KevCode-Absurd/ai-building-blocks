@@ -1,6 +1,6 @@
 new_slug: customer-interview-request
 name: "Customer conversation request writer"
-summary: "Say who you want to talk to. Get a warm intro note, a cold message and an opening line."
+summary: "Write a customer interview request that gets a yes. Give it who you want to meet. You get a warm intro note, a cold message and an opening line."
 job: test-an-idea
 thinking: low
 thinking_why: "It follows one fixed format and fills it from what you give it."
@@ -17,6 +17,10 @@ when:
   - You know who you want to talk to but can't get a first meeting.
   - A friend offered an introduction and you need to make it easy to forward.
   - You're about to message strangers and your draft sounds like a sales pitch.
+not_for:
+  - "You already have the meeting and need questions to ask: use the Customer interview question writer."
+  - "You want to sell or pitch your idea: this skill never mentions it, so write a sales message yourself or ask a person who sells."
+  - "You have no idea yet who your first customers are: use the First customer group picker."
 
 you_give:
   - Who you want to talk to and what you're trying to learn
@@ -35,6 +39,31 @@ how_to_use:
   - Choose the route it suggests. Try the casual one first if you can.
   - Edit the message so it sounds like you, but keep the five parts.
   - Send it to the first two or three people. Don't wait for a perfect message.
+output_sample:
+  input:
+    - Who you want to talk to and what you want to learn
+    - How you could reach them, such as people you know or events
+    - What you are stuck on, in one line
+    - Your stage and whether you have anything to sell (optional)
+  output:
+    - name: ROUTE
+      contains: The easiest way to reach them, casual first, and why it fits.
+    - name: CASUAL OPENER
+      contains: One question to start a chat with no request.
+    - name: MESSAGE
+      contains: "The request in five parts: mission, where you are, what you are stuck on, why them, and the ask."
+    - name: NOTE FOR A FRIEND TO FORWARD
+      contains: A short note a friend can paste as it is.
+    - name: COLD VERSION
+      contains: A shorter message for people who do not know you.
+    - name: OPENING FOR THE MEETING
+      contains: What you say first, then your first question.
+    - name: AVOID
+      contains: Wording to leave out, and why.
+    - name: MISSING
+      contains: What would sharpen the message.
+    - name: CHECKS MISSED
+      contains: One line for each check it failed, or none.
 
 how_it_works:
   - title: Checks the plan

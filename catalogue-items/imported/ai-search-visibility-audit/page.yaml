@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tests many technical and content points.
 new_slug: ai-search-visibility-audit
 name: Search and AI answer visibility auditor
-summary: Give it your website. Get what blocks you in Google and AI answers,
-  with fixes. Scrapes sites.
+summary: Find what stops customers finding you in Google and AI answers. Give it your website and get a search visibility audit with fixes ready to paste.
 job: get-found-in-search
 headline: Search and AI answer visibility auditor
-subhead: Find out what stops customers finding you in Google and in AI
-  assistants, and get the actual files to fix it. The aim is to make your site
-  easy to read and quote correctly.
+subhead: Give it your website address. It checks whether Google and AI assistants can read your site and quote it correctly. You get a ranked fix list and files you can upload.
 explain: |
   Find out what stops customers finding you in Google and in AI assistants, and get the actual files to fix it. The aim is to make your site easy to read and quote correctly. It does not try to trick any AI into recommending you.
 
@@ -18,6 +15,10 @@ when:
   - You suspect a security plugin is blocking AI crawlers.
   - AI tools quote your hours or prices wrongly.
   - You want fixes ready to upload, not a list of advice.
+not_for:
+  - "Your site is behind a login or has no public pages: use a plain SEO audit tool, since this audit can only read public pages."
+  - "You need hosting or DNS changes made: ask your web developer or host. This audit only hands back the exact record to add."
+  - "You want an AI to recommend your business: nobody can promise that, so use a Google Business Profile and honest reviews instead."
 you_give:
   - Your website address
   - Your business type and service area
@@ -29,10 +30,34 @@ you_get:
   - The top five fixes in order
   - A corrected robots.txt and an llms.txt
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini in a chat that can open web pages. Paste in the skill text from this page.
+  - Type your website address, your business type and your service area. Add the questions customers ask, if you know them (optional).
+  - Wait for the crawl report first. Check that it lists the pages it could not reach.
+  - Read the top five fixes. Answer any question it asks about your hours, prices or services. It will not guess.
+  - Copy the new robots.txt and llms.txt into your site, or ask your web developer to do it.
+  - Run the audit again in 30 days to see what changed.
+output_sample:
+  input:
+    - Your website address
+    - Your business type and service area
+    - The questions your customers ask (optional)
+    - Access to your site platform, such as Shopify or Wix (optional)
+  prerequisites:
+    - An AI that can open web pages from a link
+  output:
+    - name: Crawl report
+      contains: The pages that could be reached, the pages that could not, and what each one shows without JavaScript.
+    - name: AI half check
+      contains: Findings on crawler access, readable text, llms.txt, structured data, clear facts and listings.
+    - name: Assistant test
+      contains: Each customer question you asked, whether you appeared, who did, and which sources were cited.
+    - name: Top five fixes
+      contains: The five findings that matter most, ranked by impact, with the rest in an appendix.
+    - name: robots.txt
+      contains: A corrected file that lets AI crawlers in.
+    - name: llms.txt
+      contains: A plain file describing what your business does, where it works and how to reach you.
+    - name: JSON-LD blocks and rewritten titles
+      contains: Structured data and new titles and descriptions, ready to paste.
+    - name: Recheck date
+      contains: A date to run the audit again, since changes take time to show.

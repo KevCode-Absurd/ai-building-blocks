@@ -1,6 +1,6 @@
 name: "Anti-AI-slop copy editor"
 new_slug: anti-ai-slop-copy-editor
-summary: "Paste your copy. Get each machine-sounding line fixed, the full rewrite and a score out of 100."
+summary: "Check your copy for AI-sounding lines. Get each one quoted with a plain fix, a full rewrite and a before and after score out of 100."
 job: check-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You used AI to write an ad, page or email and want to remove what gives it away.
   - Copy from a writer feels slick and empty, and you want to see why.
   - You want a last scan before publishing anything customers will read.
+not_for:
+  - "You have a script that people will hear, not read: run a read-aloud polish for scripts, because speech has different tells."
+  - "You have no draft yet: write one first with your AI, then bring it here to check."
+  - "You want facts checked, such as health or results claims: ask a person who knows the subject to check them. This skill only fixes wording."
 
 you_give:
   - The copy to scan
@@ -34,6 +38,23 @@ how_to_use:
   - Paste your voice notes and a few lines your brand already uses, if you have them.
   - Read the hits list first, then the rewrite. Accept or reject each change.
   - For a script that will be spoken aloud, also run a read-aloud polish for scripts.
+output_sample:
+  input:
+    - The copy you want checked
+    - Your voice notes and lines your brand already uses (optional)
+  output:
+    - name: HITS
+      contains: Each machine-sounding line quoted exactly, with the number and name of the sign and a plain fix.
+    - name: NOT FLAGGED
+      contains: Lines that looked suspicious but stay, with the reason.
+    - name: RHYTHM
+      contains: A pass or fail on sentence length, and the run of lines that fails.
+    - name: REWRITTEN COPY
+      contains: Your full copy with every fix applied, in the original line order.
+    - name: AFTER
+      contains: The number of hits per 100 words once the fixes are in.
+    - name: SCORE
+      contains: A score out of 100 before and after, with the sum shown.
 
 how_it_works:
   - title: Scans for 16 signs

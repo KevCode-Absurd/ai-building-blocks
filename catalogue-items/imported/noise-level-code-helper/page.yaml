@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies set conversions.
 new_slug: noise-level-code-helper
 name: Noise level code helper
-summary: Say your SNR target. Get noise added right, with SNR, Eb/No and Es/No
-  converted correctly.
+summary: Add noise to a MATLAB link simulation at the right level. Convert SNR, Eb/No and Es/No with the right code, and get noise variance for soft demodulators.
 job: build-software
 headline: Noise level code helper
-subhead: Noise added at exactly the level you intended in a communications
-  simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between
-  these measures are a common source of wrong results.
+subhead: Noise added at exactly the level you intended in a communications simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between these measures are a common source of wrong results.
 explain: |
   Noise added at exactly the level you intended in a communications simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between these measures are a common source of wrong results.
 
@@ -18,6 +15,10 @@ when:
   - You have an Eb/No target and need the SNR for your simulation.
   - You are adding noise after a fading channel.
   - You need the noise variance for a soft demodulator.
+not_for:
+  - "You need to set up a fading channel, with delay profile, Doppler or antenna arrays: build that channel first in MATLAB, then use this helper to add the noise."
+  - "You do not have MATLAB with the Communications Toolbox: use a plain statistics tool or a person who knows your simulation software, as this skill only writes MATLAB code."
+  - "You want a bit error curve to compare against, with no noise code needed: look up the theory curve in MATLAB with berawgn, which takes Eb/No, not SNR."
 you_give:
   - Your target SNR, Eb/No or Es/No
   - Modulation, coding rate and oversampling
@@ -29,8 +30,32 @@ you_get:
   - Noise variance for demodulators
   - A fix for common mistakes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open a chat with an AI that can read MATLAB code. Paste the skill text from the skill folder.
+  - "Say what you want: add noise, convert Eb/No to SNR, or get noise variance."
+  - Paste your target level, modulation, coding rate and samples per symbol. Add your code if you have it.
+  - Say if the link is OFDM or uses a fading channel. Give the FFT length and active subcarriers for OFDM.
+  - Run the returned MATLAB code in MATLAB with the Communications Toolbox. Check the noise variance variable and the SNR values in dB.
+  - If your AI can run MATLAB, ask it to test the code. If not, run it yourself.
+output_sample:
+  input:
+    - Your target SNR, Eb/No or Es/No, in dB
+    - Your modulation, coding rate and samples per symbol
+    - Your MATLAB simulation code (optional)
+    - Whether your link is OFDM, with FFT length and active subcarriers (optional)
+    - Whether a fading channel comes before the noise (optional)
+  prerequisites:
+    - MATLAB with the Communications Toolbox
+    - An AI that can run MATLAB, to check the result (optional)
+  output:
+    - name: Noise code for a unit-power signal
+      contains: An awgn call with an explicit signal power, never the measured option.
+    - name: SNR conversion for a coded system
+      contains: A convertSNR call that turns Eb/No into SNR using bits per symbol, coding rate and oversampling.
+    - name: OFDM conversion
+      contains: Steps from Eb/No to per-subcarrier SNR to wideband SNR, with signal power set for your FFT size.
+    - name: OFDM noise code
+      contains: Code that adds noise to an OFDM link, with signal power adjusted for receive antennas and path gains.
+    - name: Noise variance for soft demodulation
+      contains: A noise variance value, taken from the noise step, to pass to a soft-decision demodulator.
+    - name: Fixes for common mistakes
+      contains: Notes on swapping the measured option, hand-made SNR formulas and wrong power scaling for correct code.

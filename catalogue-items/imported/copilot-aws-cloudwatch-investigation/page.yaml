@@ -2,18 +2,101 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-aws-cloudwatch-investigation
 name: CloudWatch incident evidence collector
-summary: Share an AWS incident and time window. Get useful log queries,
-  deployment links and the likely affected services.
+summary: Find out what broke and when. Get an AWS incident timeline, ready-to-run CloudWatch log queries and the deploy that may have caused it.
 job: ship-and-host
 headline: CloudWatch incident evidence collector
-subhead: Share an AWS incident and time window. Get useful log queries,
-  deployment links and the likely affected services. Share your goal and the
-  files you already have. The skill file sets out the steps and the tools needed
-  for this job.
+subhead: Give it the alarm name, the time it fired and the AWS service involved. It gives you CloudWatch log queries to run, links the alarm to any deploy just before it, and narrows the affected services step by step. You get a timeline and a likely first cause.
+explain: |
+  When an AWS alarm fires, the hard part is knowing where to look. This skill is an AWS incident investigation guide for CloudWatch. It turns your alarm and time window into specific queries and a clear order of checks.
+
+  It starts from the alarm time and looks back at deploys and changes in CloudTrail. It then uses a set of log queries for error spikes, slow calls, cold starts, out of memory and timeouts. It narrows the damage from account to region to service to one resource.
+
+  At the end it lines up every source in time and names the earliest change before the first symptom. If the evidence does not show one, it says so instead of guessing. It does not write the fix plan.
+when:
+  - A CloudWatch alarm fired and you need to know what changed just before it.
+  - Errors jumped after a release and you want proof of the link.
+  - Several services broke at once and you need to find the shared cause.
+  - You must write down a clear incident timeline for your team.
+not_for:
+  - The problem is your AWS bill, not an outage. Use the Cloud bill waste finder.
+  - You want a full health check and a fix plan for one resource. Use the AWS service health investigator.
+  - Logging was off when it happened. No tool can recover data that was never recorded.
+you_give:
+  - The alarm name and the exact time it fired, with the time zone
+  - The AWS account, region and service, such as Lambda or API Gateway
+  - The log group names for the service (optional)
+  - Read-only AWS access to CloudWatch and CloudTrail, or the pasted query results
+you_get:
+  - A timeline of the first change, first error and alarm, each with its source
+  - Log queries ready to paste into CloudWatch Logs Insights
+  - A link between the alarm and any deploy before it, rated strong, weak or none
+  - The blast radius, narrowed from account down to one resource
+  - The likely first cause, or a plain note that none was found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can run AWS commands, such as Claude Code. In a plain chat, run each query in the AWS console and paste the results back, one at a time.
+  - Collect the alarm name, the exact time it fired and the time zone. Check you have read access to CloudWatch and CloudTrail.
+  - Know that CloudTrail Lake queries are a paid AWS feature. Ask your AI to use the free recent event history first.
+  - Paste the skill and the details. Ask it to start with the timeline, then the deploy check.
+  - Read the timeline and check each time against the AWS console before you trust it. Alarm times lag the real start, so the first symptom is earlier than the alarm.
+  - Pass the first cause to your rollback decision or your review after the incident.
+how_it_works:
+  - title: Fix the alarm time
+    text: It notes the exact time the alarm went into ALARM and the window to search before it.
+  - title: Check recent changes
+    text: It looks in CloudTrail for deploys, config changes and scaling in the 30 minutes before the alarm.
+  - title: Query the logs
+    text: It gives log queries for error spikes, slow calls, cold starts, out of memory and timeouts.
+  - title: Narrow the blast radius
+    text: It works from account to region to service to operation to one resource, using the evidence at each step.
+  - title: Check shared causes
+    text: If several services broke, it checks the network, sign-in service, shared database, pipeline and AWS status.
+  - title: Build the timeline
+    text: It lines up every source in time, allowing for known delays, and names the earliest change before the first symptom.
+output_shape: |
+  Timeline: T-<n>m <source> <event> | ... | T-0 <current state>
+  Deploy link: <event> | <time> | <actor> | <resource> | <STRONG, WEAK or NONE> because <reason>
+  Blast radius: <account> > <region> > <service> > <operation> > <resource>
+  Queries run: <query> | <result>
+  Root event: <earliest change before all symptoms> (or "not found")
+  Missing: <what could not be read> | Next step: <rollback or review>
+output_sample:
+  input:
+    - The alarm name and the time it fired, with the time zone
+    - The AWS account, region and service
+    - The log group names (optional)
+  prerequisites:
+    - Read-only access to CloudWatch Logs, metrics and alarm history
+    - Read access to CloudTrail. CloudTrail Lake is a paid feature, so use it only if you agree.
+    - Logging turned on for the service at the time of the incident
+  output:
+    - name: Timeline
+      contains: The first change, first error, first metric spike and alarm, in order, each with its source.
+    - name: Deploy link
+      contains: Any deploy before the alarm, with the actor and a strong, weak or none rating.
+    - name: Blast radius
+      contains: How far the problem spread, narrowed from account to one resource, with evidence.
+    - name: Queries run
+      contains: Each CloudWatch query and its result, so you can run it again.
+    - name: Root event
+      contains: The earliest change before all symptoms, or a note that the evidence does not show one.
+    - name: Missing and next step
+      contains: What the AI could not read, and where to take the result next.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the AWS command line and show each query before it runs.
+    - name: Any good chat AI
+      why: Works if you paste in query results from the AWS console one by one.
+  inputs:
+    - The name of the last deploy and who ran it
+    - A graph or export of the metric that triggered the alarm
+    - Your service's timeout and memory settings
+terms:
+  - term: CloudWatch
+    meaning: The AWS service that stores your logs and metrics and sends alarms.
+  - term: CloudTrail
+    meaning: The AWS service that records who changed what and when.
+  - term: Blast radius
+    meaning: How much of your system is hurt by one problem.
+  - term: Logs Insights
+    meaning: A search tool inside CloudWatch for asking questions of your logs.

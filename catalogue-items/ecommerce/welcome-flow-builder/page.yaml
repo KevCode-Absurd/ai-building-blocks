@@ -1,6 +1,6 @@
 new_slug: welcome-flow-builder
 name: "Welcome flow builder"
-summary: "Give it your offer, best sellers and brand story. Get a welcome flow with timing, filters, email outlines and tests."
+summary: "Build a welcome email flow for new subscribers. Give it your offer and best sellers. Get timing, filters, email outlines, SMS and tests."
 job: write-emails
 thinking: medium
 thinking_why: "It follows a fixed method and writes outlines, so a mid-size model does it well. Use a stronger one if your offer and margins are complicated."
@@ -17,6 +17,10 @@ when:
   - You collect emails with a pop-up and the welcome flow is still the tool's default, or missing.
   - Your welcome flow gets opens but little revenue, and you want to know which email to change.
   - You want to test a bigger or smaller welcome offer without guessing.
+not_for:
+  - "You have no email list or signup form yet: build the sign-up pop-up first, then come back. Your email tool has a basic form builder."
+  - "Customers who have not bought in 60 to 120 days: use a win-back flow in your email tool, not this one."
+  - "You want emails for people who just bought: build a post-purchase flow in your email tool, kept apart from this one."
 
 you_give:
   - Your brand story, founder or team details, guarantees and proof (review counts, ratings, press)
@@ -37,6 +41,32 @@ how_to_use:
   - Check the filters and delays against your email tool, then build the emails in the order given.
   - Turn smart sending off for the flow, and use a code that really expires if you mention a deadline.
   - Run one test at a time and compare revenue per recipient before you change anything else.
+output_sample:
+  input:
+    - Your brand story, proof and guarantees
+    - Your welcome offer and when it ends, or no offer
+    - Your best sellers and how long buyers take to decide
+    - Your margin per product
+    - Your current welcome flow and results (optional)
+  prerequisites:
+    - Your brand brain and your offer from earlier items help, but are optional
+  output:
+    - name: Header
+      contains: Store name, the offer, when it ends, and whether your margin can carry it.
+    - name: Trigger, filter and settings
+      contains: Who enters the flow, who is left out, smart sending off, and the exit when someone buys.
+    - name: Emails
+      contains: One block per email with send time, purpose, sections, button, offer line, subject ideas and preview.
+    - name: Email 1B
+      contains: A short plain-text note from the founder, sent hours after email 1.
+    - name: SMS plan
+      contains: Three texts on day 1, 3 and 5, only for people who agreed to texts.
+    - name: Targets and first 3 tests
+      contains: What to watch, plus the delay, offer step and email 1 tests.
+    - name: What to build first
+      contains: Which emails to ship first, sized to your team.
+    - name: Checks missed and missing
+      contains: Any failed checks and any facts you did not give.
 
 how_it_works:
   - title: Checks the offer first

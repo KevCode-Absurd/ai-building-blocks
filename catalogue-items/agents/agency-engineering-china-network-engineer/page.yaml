@@ -1,0 +1,162 @@
+name: China Network Engineer agent
+summary: Get a change plan for Huawei, H3C, Ruijie or Hillstone gear with pre-checks, exact commands, checks, rollback and MLPS 2.0 network notes.
+headline: China Network Engineer agent
+subhead: Tell it which switches, routers or firewalls you run and what must change. It drafts the pre-checks, the commands for your vendor, the checks to prove it worked and the rollback. It never calls a plan ready until you have tested it and an owner has approved it.
+job: build-software
+thinking: high
+thinking_why: Each vendor has its own commands, and a wrong command can cause an outage. Use a model that can keep four command styles apart and say when it cannot verify one.
+explain: >-
+  Most network guides teach Cisco commands. Many company networks in mainland
+  China run on Huawei, H3C, Ruijie and Hillstone instead. The same idea has
+  different commands on each, and a command that works on one can fail or do
+  harm on another. This China Network Engineer agent keeps the four apart. It
+  asks for your vendor, model and software version before it writes anything.
+
+
+  Every plan follows the same order. Capture the current setup. Test in a lab.
+  Change in an approved window. Check the result. Keep a written way back.
+  It also remembers the save step, which each vendor handles differently. A
+  change that is not saved is lost at the next restart.
+
+
+  It also covers the network side of China's MLPS 2.0 (等保 2.0) security rules.
+  That means separate zones, deny-by-default policy, central logs and locked-down
+  devices.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The method is
+  the original author's. AI Blocks adds an intake, a fixed answer layout and
+  safety rules. It cannot see your devices or run a command.
+when:
+  - You must add a VLAN, route, NAT rule or firewall rule on Huawei, H3C, Ruijie or Hillstone gear.
+  - Your team knows Cisco and needs the same job translated to a domestic vendor.
+  - You are preparing a network for a level 2 or level 3 MLPS assessment.
+  - A permitted flow still fails, and you want a short list of what to check first.
+not_for:
+  - You run Cisco, Juniper or another non-Chinese vendor. Use the Network Engineer agent.
+  - Your network is down right now. Call your on-call engineer or vendor support. This agent cannot see your devices.
+  - You want a full security or compliance audit, or an assessor's sign-off. Use the Compliance Auditor agent. This agent covers the network part only.
+  - You plan to paste commands onto live equipment with no lab test, change window or owner approval.
+you_give:
+  - The vendor, model and software version of each device. The output of "display version" or "show version" works.
+  - What must change and why, in plain words.
+  - A topology note, such as which switch connects to which firewall and the ISP links.
+  - Your current relevant config with passwords, keys and community strings removed.
+  - Your change window and who approves and answers the phone (optional).
+  - Your MLPS level, if the network is assessed (optional).
+you_get:
+  - A list of facts it has and gaps it needs before any command is safe.
+  - Pre-checks, including what to save, what to test in a lab and who must approve.
+  - Draft commands for your vendor, marked as drafts to verify on your exact model.
+  - Commands that read the state of the device, to prove the change worked.
+  - A written rollback with the exact commands to undo each step.
+  - MLPS 2.0 network notes when they apply, and a short troubleshooting list.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Remove passwords, keys and SNMP community strings from anything you paste.
+  - Give the vendor, model and software version for every device, then describe the change and your topology.
+  - Your AI asks once for anything missing. Without a version it gives no commands and asks you to run "display version" or "show version".
+  - Read the pre-checks and rollback first. Run the draft commands in a lab or test unit before any live device.
+  - Run changes yourself in the approved window, with someone on call. Keep the before and after output as proof.
+how_it_works:
+  - title: Identify the stack
+    text: It confirms which of Huawei VRP, H3C Comware, Ruijie RGOS or Hillstone StoneOS each device runs, and the model and version.
+  - title: Check what is missing
+    text: It lists facts it needs, such as version, topology and current config. It does not guess any of them.
+  - title: Write pre-checks
+    text: It adds saving the current config, a lab test, a change window and an owner sign-off before any change.
+  - title: Draft the change
+    text: It writes the commands in your vendor's style and labels them drafts. If a feature depends on the model, it gives a command to check support.
+  - title: Prove the result
+    text: It adds read-only commands that show the state, and checks the route table and the live traffic path separately.
+  - title: Write the way back
+    text: It writes the exact commands to undo each step, and the save step each vendor needs.
+  - title: Add MLPS notes
+    text: If your network is assessed, it checks zones, deny-by-default policy, log shipping, time sync and device hardening.
+output_shape: |-
+  FACTS AND GAPS
+    <device> | <vendor and OS> | <model and version> | <missing facts>
+
+  CHANGE SUMMARY
+    <what changes> | <why> | <devices affected> | <risk>
+
+  PRE-CHECKS (all before any command on live gear)
+    <save current config> | <lab test> | <change window and owner approval> | <person on call>
+
+  DRAFT COMMANDS (verify on your model first)
+    <device> | <commands in vendor style> | <how to check the feature is supported>
+
+  VERIFY
+    <device> | <read-only commands> | <what a good result looks like>
+
+  ROLLBACK
+    <device> | <commands to undo, in order> | <save step>
+
+  MLPS 2.0 NOTES (if assessed)
+    <zones> | <access control> | <audit logs and time sync> | <device hardening>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - The vendor, model and software version of each device
+    - What must change and why
+    - A topology note and your current relevant config, with secrets removed
+    - Your MLPS level, if the network is assessed (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - A lab or test device, a change window and an approver, because the plan is a draft until you have tested it
+  output:
+    - name: Facts and gaps
+      contains: Each device with its vendor, model and version, and the facts still missing.
+    - name: Change summary
+      contains: What changes, why, which devices it touches and the main risk.
+    - name: Pre-checks
+      contains: The config backup, lab test, change window, approver and on-call person needed before any command.
+    - name: Draft commands
+      contains: Commands in your vendor's style, marked as drafts, with a way to check the feature is supported.
+    - name: Verify
+      contains: Read-only commands for each device and what a good result looks like.
+    - name: Rollback
+      contains: The exact commands to undo each step, and the save step for your vendor.
+    - name: MLPS 2.0 notes
+      contains: Zone, access control, log and hardening points an assessor will check, when they apply.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can write the plan. Attach the topology and the config with secrets removed.
+    - name: A lab unit or a vendor simulator
+      why: You can test the draft commands where an error cannot take down a live network.
+  inputs:
+    - The output of the version command for each device.
+    - A topology drawing or a list of links.
+    - Your last known good config backup.
+terms:
+  - term: VRP
+    meaning: Huawei's network operating system, used on its switches, routers and firewalls.
+  - term: Comware
+    meaning: H3C's network operating system. Version 7 is the current main release.
+  - term: RGOS
+    meaning: Ruijie's network operating system, whose commands look like Cisco's but differ in places.
+  - term: StoneOS
+    meaning: Hillstone's firewall operating system, which works in zones first and routing second.
+  - term: MLPS 2.0 (等保 2.0)
+    meaning: China's graded security rules for information systems. An assessor checks the network against them.
+  - term: Rollback
+    meaning: The exact steps that put the device back as it was before the change.
+  - term: Data plane and control plane
+    meaning: The control plane decides where traffic should go. The data plane is where traffic actually goes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Language
+    how: Say if your team wants Chinese and English terms together, or English only.
+  - what: Task type
+    how: Say if you want a change plan, a Cisco translation, an MLPS check or a troubleshooting list.
+improve:
+  - Keep the before and after output of each change with your notes, and paste the useful parts into the next brief.

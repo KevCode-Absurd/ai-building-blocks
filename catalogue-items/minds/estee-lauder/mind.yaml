@@ -16,6 +16,29 @@ use_cases:
   - "Turn time spent with customers into notes the whole team can learn from"
   - "Keep pushing for a first big stockist after they've said no"
   - "Find a way to make your product something people buy for themselves"
+not_for:
+  - "You need a pricing plan, tax advice or a view on product safety: ask an accountant, a regulator or a doctor."
+  - "You need to judge a business by its numbers and long-term value: use Aswath Damodaran."
+  - "You want a luxury brand built on creative talent and a long view: use Bernard Arnault."
+output_sample:
+  input:
+    - Your product, and who you sell it to
+    - Where you sell it now, or the places you could sell it
+    - What a sample or trial would cost you (optional)
+    - The problem you want help with, such as a buyer who said no
+  output:
+    - name: First move
+      contains: The one thing to do this week, starting with the customer in front of you.
+    - name: What to put in the customer's hand
+      contains: A demo, sample or trial that lets her feel the result before she pays.
+    - name: Where to sell, or not
+      contains: Which places suit your product and which doors to close to protect how it looks.
+    - name: One thing to stop
+      contains: A habit, ad or deal that works against your brand.
+    - name: A line to remember
+      contains: One short line of reasoning you can share with your staff.
+    - name: Gaps in her record
+      contains: A one-line note where she has no record of your topic, with how her selling by touch applies.
 seats:
   - {seat: "Selling face to face", asks: "Has the customer actually tried it, on themselves, while we were there to show them?"}
   - {seat: "Sampling and word of mouth", asks: "What will she take home today that makes her tell a friend tomorrow?"}

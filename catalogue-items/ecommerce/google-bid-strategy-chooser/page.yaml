@@ -1,6 +1,6 @@
 new_slug: google-bid-strategy-chooser
 name: "Google bid strategy chooser"
-summary: "Give it campaign results and targets. Get the right bid strategy, a target, a ROAS spiral check and a score."
+summary: "Check your Google Ads bid strategy campaign by campaign. Give it 30-day results and targets. Get a keep or change verdict, a target and a score."
 job: run-google-ads
 thinking: high
 thinking_why: "The sources disagree on timing and the answer depends on conversion counts and trends, so a stronger model picks the right rule."
@@ -9,7 +9,7 @@ headline: "Google bid strategy chooser"
 subhead: Give it each campaign's type, bid strategy, spend, conversions and conversion value for 30 days, plus 12 weeks of ROAS against target and your break-even ROAS. It says keep, move up or loosen for each campaign, checks for a ROAS spiral and scores the fit out of 100.
 
 explain: |
-  Google bid strategies fall into two groups. Maximize Conversions and Maximize Conversion Value are expansive: by one speaker's model about 30 percent of spend explores new audiences, which unlocks scale. Target CPA and Target ROAS are restrictive: close to no testing, so more efficient but able to shrink. Pick the wrong one at the wrong time and spend either runs wild or dries up.
+  Google bid strategies fall into two groups. Maximize Conversions and Maximize Conversion Value are expansive: by one speaker's model about 30 percent of spend explores new audiences, which helps spend grow. Target CPA and Target ROAS are restrictive: close to no testing, so more efficient but able to shrink. Pick the wrong one at the wrong time and spend either runs wild or dries up.
 
   This skill reads your numbers and picks the strategy by conversion count, with the stage rules from several operators who disagree on timing. It checks for a ROAS spiral, where a target set above what you actually get starves the campaign, and for the ROAS trap, where a high target turns a prospecting campaign into a retargeting one. It gives each campaign a verdict, a target with the guardrail applied and a schedule of budget and target changes.
 
@@ -17,6 +17,10 @@ when:
   - You are not sure whether to use Maximize Clicks, Maximize Conversion Value or Target ROAS yet.
   - A campaign's spend fell after you raised the target, and you are not sure why.
   - You have a Shopping or Performance Max campaign and want to know when to add a target.
+not_for:
+  - "You have no conversion data yet: start with Maximize Clicks and fix your traffic quality first, since this skill needs results to read."
+  - "You want to find your break-even ROAS first: work it out from gross margin (100 divided by margin %), then bring it here."
+  - "You want to decide whether to keep or change a campaign after a test: use the Campaign keep-or-change checker."
 
 you_give:
   - Each campaign's type, bid strategy, spend, conversions and conversion value for the last 30 days
@@ -35,6 +39,28 @@ how_to_use:
   - Add your break-even ROAS and the changes you made in the last month.
   - Apply the changes in the schedule it gives, one campaign at a time.
   - Wait for each change to settle before judging it.
+output_sample:
+  input:
+    - Each campaign's type, bid strategy, spend, conversions and conversion value for the last 30 days
+    - Target and actual ROAS by week for 12 weeks
+    - Your break-even ROAS
+    - Recent changes to targets or budgets
+    - Your product price spread (optional)
+  output:
+    - name: DATA CHECK
+      contains: Conversions per campaign over the last 30 days, and whether there is enough data to use smart bidding.
+    - name: CAMPAIGNS
+      contains: For each campaign, a verdict, a target with the guardrail applied, and the timing rule used and why.
+    - name: SPIRAL CHECK
+      contains: Actual against target ROAS by week, whether a spiral is happening, and how hard to cut the target.
+    - name: TRAP CHECK
+      contains: Whether each cold campaign has turned into a retargeting campaign, and the fix.
+    - name: FEEDER PLAN
+      contains: Whether a low-target and high-target campaign pair fits your account, judged on blended backend revenue.
+    - name: SCHEDULE
+      contains: Dated bid and budget changes for each campaign, with the percent for each.
+    - name: SCORE
+      contains: Share of 30-day spend already in campaigns that match the verdict, with the sum shown.
 
 how_it_works:
   - title: Counts the conversions

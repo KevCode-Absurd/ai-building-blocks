@@ -1,0 +1,44 @@
+slug: agency-marketing-content-creator
+name: Content Creator agent
+summary: Get content drafts with audience goals and channel choices. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: brand_brain
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-content-creator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-content-creator.md
+  licence: MIT
+  original_name: Content Creator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 26ddce44f057068a3935c13d53becd3c57385fb47fcdcfdd891b80269070b3d5
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Content Creator
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Content Creator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-content-creator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

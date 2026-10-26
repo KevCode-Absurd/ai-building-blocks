@@ -37,7 +37,7 @@ How to start:
 ## What you need
 This skill works with a spend summary. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
-- **Customers by spend tier**, with their share of revenue and profit (required). A customer list with lifetime spend and order count works.
+- **Customers by spend tier**, with their share of revenue and profit (required). A customer list with lifetime spend and order count works. A best-and-worst customer report gives the top 20 percent's share of profit.
 - **Repeat rate** and how much repeat buying depends on discounts (advised).
 - **Margin limits and team time per week** (advised).
 - **Upcoming drops or new products** (optional).

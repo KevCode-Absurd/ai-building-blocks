@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It maps your practice to a fixed control list.
 new_slug: privacy-management-audit-planner
 name: Privacy management audit planner
-summary: Describe how you handle personal data. Get gaps against ISO 27701, a
-  privacy control list and an audit plan.
+summary: Describe how you handle personal data. Get an ISO 27701 gap list, a privacy control checklist and an audit plan for your privacy management system.
 job: check-contracts
 headline: Privacy management audit planner
-subhead: A clear view of where your handling of personal data falls short of ISO
-  27701, with the controls you need and a plan to audit them.
+subhead: A clear view of where your handling of personal data falls short of ISO 27701, with the controls you need and a plan to audit them.
 explain: |
   A clear view of where your handling of personal data falls short of ISO 27701, with the controls you need and a plan to audit them. Describe your setup and get the gaps.
 
@@ -17,6 +15,10 @@ when:
   - You process personal data and want to test your controls.
   - You are moving from the 2019 to the 2025 edition.
   - You need a plan before an audit.
+not_for:
+  - "You need a legal opinion or a certificate: ask a qualified privacy lawyer or an accredited assessor."
+  - "You only need to meet GDPR and do not want ISO 27701: ask a privacy lawyer for a GDPR-only review."
+  - "You want a security audit of your systems: use an ISO 27001 auditor, as this covers personal data handling only."
 you_give:
   - Description of how you handle personal data
   - Whether you act as controller or processor
@@ -28,7 +30,31 @@ you_get:
   - Statement of Applicability draft
   - Audit plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Say which edition you are on (2019 or 2025), and whether you are a controller, processor or both.
+  - Describe your three main flows of personal data, such as what you collect, where it is kept and who sees it.
+  - Add your ISO 27001 status and the laws you must meet, if you know them (optional).
+  - Ask for the gap list first. Then ask for the control checklist, the Statement of Applicability draft and the audit plan.
+  - Check the results with a qualified assessor or privacy counsel before you act on them.
+output_sample:
+  input:
+    - A short description of how you collect, use and store personal data
+    - "Your role: controller, processor or both"
+    - Which ISO 27701 edition you are on, 2019 or 2025 (optional)
+    - Your ISO 27001 status (optional)
+    - The laws you must meet, such as GDPR (optional)
+  output:
+    - name: Edition and role check
+      contains: Which ISO 27701 edition fits you and whether you act as controller, processor or both.
+    - name: Gap analysis
+      contains: Where your practice falls short of the controller, processor and shared security controls, with common gaps.
+    - name: Privacy control checklist
+      contains: The Annex A controls that apply to your role, ready to tick off.
+    - name: Statement of Applicability
+      contains: A draft listing which controls apply, which do not, and why.
+    - name: Privacy risk assessment
+      contains: Privacy risks in your data handling, with support for impact assessments and records of processing.
+    - name: Regulatory mapping
+      contains: How the standard lines up with GDPR, CCPA, LGPD and PIPEDA.
+    - name: Audit and transition plan
+      contains: The steps to prepare for an audit, or to move from the 2019 edition to the 2025 edition.

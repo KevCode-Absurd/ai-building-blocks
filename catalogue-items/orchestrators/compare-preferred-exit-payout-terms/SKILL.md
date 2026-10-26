@@ -1,46 +1,30 @@
 ---
 name: compare-preferred-exit-payout-terms
-description: "Compare nonparticipating and capped-participating alternatives on the same single-class proceeds scenarios."
+description: "Use when two draft term sets for one preferred class need payouts compared at the same exit proceeds: nonparticipating against capped participating. Not for several series, uncapped participation or deal advice."
 ---
 
 # Compare preferred exit payout terms
 
-Side-by-side preferred/common payout branches with each alternative clearly labeled.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Compare two alternative preferred exit terms for one class on the same proceeds. Two steps run in order: pay out the nonparticipating terms, then pay out the capped participating terms using the same investment, ownership and proceeds. The two results are alternatives and are never added.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **Two draft term sets** (yours): labeled alternative A and alternative B, from the term sheets.
+- **The preferred investment and multiples** (yours): the amount, each preference multiple and the inclusive cap multiple.
+- **As-converted ownership** (yours): the investor's share after conversion, the same for both, from the cap table.
+- **Equity proceeds after senior claims** (yours): one figure for each exit to test.
+- **Conversion conditions** (yours): any condition on the right to convert, from the term sheet.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** a current cap table and the latest draft of each term sheet.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Two explicitly alternative draft term sets, one preferred investment, matched as-converted ownership, equity proceeds after senior claims and conversion conditions.
+The items under "Before you start", as of one reporting date, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without. If there is more than one preferred series, unpaid dividends or uncapped participation, say so and stop: this covers one class with an inclusive cap. If proceeds are given before senior claims, ask for the after-claims figure.
 
 ## Governing scope
 
@@ -50,9 +34,9 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Nonparticipating preference checker** (`nonparticipating-preference-checker`). Calculate the nonparticipating alternative with actual available equity proceeds and optional conversion. Preserve the common residual and low-exit availability cap. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-nonparticipating-preference-checker.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Nonparticipating preference checker** (`nonparticipating-preference-checker`). Calculate the nonparticipating alternative with actual available equity proceeds and optional conversion. Preserve the common residual and low-exit availability cap. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-nonparticipating-preference-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** the investor gets the larger of preference and converted share, never more than available proceeds, and investor plus common equals proceeds. If not, stop and say which line is off.
 
-2. **Capped participation checker** (`capped-participation-checker`). Reuse only matched investment, ownership and proceeds. Apply the alternative inclusive cap and conversion right, then compare outcomes without adding the two alternatives together. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-capped-participation-checker.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Capped participation checker** (`capped-participation-checker`). Reuse only matched investment, ownership and proceeds. Apply the alternative inclusive cap and conversion right, then compare outcomes without adding the two alternatives together. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-capped-participation-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** preference plus participation stays within the cap that includes the preference, conversion is compared and the larger is taken, and investor plus common equals proceeds.
 
 ## Workbook checks
 
@@ -69,4 +53,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the side-by-side table: investor and common payout under alternative A and alternative B, at each proceeds figure tested. Name which election the investor makes in each case. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that this shows payouts under draft terms, that nothing was sent or signed, and that a lawyer with the final documents must confirm the terms before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Check a later round** with the [Review a down round rights change](https://useaiblocks.com/workflows/review-a-down-round-rights-change) workflow, if new terms could change these.
+- **Take out deal fees** with the [Check adviser fees in seller proceeds](https://useaiblocks.com/workflows/check-adviser-fees-in-seller-proceeds) workflow, if you need what holders keep after the sale.
+If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

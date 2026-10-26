@@ -2,34 +2,55 @@ thinking: low
 thinking_why: It asks a few questions, then writes short lines.
 new_slug: subject-line-writer
 name: Subject line writer
-summary: Give it your email and audience. Get subject lines in several angles
-  that earn opens without losing clarity.
+summary: Write email subject lines that get opens and stay honest. Give it your email and audience. You get options in several angles, matched to your list.
 job: write-ad-copy
 headline: Subject line writer
-subhead: Email subject lines in several angles, each built to earn an open
-  without tricking the reader. You pick the one that fits your message and your
-  audience.
+subhead: Email subject lines in several angles, each built to earn an open without tricking the reader. You pick the one that fits your message and your audience.
 explain: |
   Email subject lines in several angles, each built to earn an open without tricking the reader. You pick the one that fits your message and your audience.
 
   You give the email, who gets it, and where it sits in a sequence. The skill sets the plan first, using a decision matrix that weighs position in the sequence, how warm the audience is and whether people read on a phone. It then writes options, each using honest curiosity or a clear promise. It checks every line against a list of failure modes, such as clickbait and misleading claims, and against ethical guardrails. A final quality check trims the set.
 when:
-  - You wrote the email but the subject line is a blank.
-  - Your opens are low and you want to test new angles.
+  - You wrote the email but the subject line is still blank.
+  - Your opens are low and you want new angles to test.
   - You send a sequence and each email needs a line that fits its place.
-  - You write push notifications and have a few words to work with.
+  - You write push notifications and only have a few words.
+not_for:
+  - "You send a transactional alert, like a receipt or a password reset: write it plainly yourself, or ask a colleague to review the wording."
+  - "You want to make a marketing email look like a system notice: don't, it breaks reader trust. Write a clear, honest line instead."
+  - "You need the full email body written: use your AI with the email's goal and audience, then bring the finished draft back here."
 you_give:
   - The email or its main point
   - Who receives it and how warm they are
   - Where it sits in the sequence (optional)
   - Your brand voice (optional)
 you_get:
-  - Several subject lines in different angles
-  - A note on why each might work
-  - Checks for clickbait or misleading wording
-  - A suggested pick to test first
+  - Several subject lines, each in a different angle.
+  - A short note on why each line might work.
+  - A check that flags clickbait, creepy personalization and false urgency.
+  - One suggested line to test first.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text, or ask your AI to act as a subject line writer using it.
+  - Paste your email, say who gets it and how warm they are, and say where it sits in your sequence.
+  - Add whether readers use phones, and your sender name, if you know them.
+  - Answer any question your AI asks about your goal or sequence.
+  - Read the honesty check, make sure your email delivers each promise, then test the suggested pick first.
+output_sample:
+  input:
+    - Your email, or its main point
+    - Who receives it and how warm they are (cold, warm or hot)
+    - Where it sits in your sequence (optional)
+    - Whether most readers use a phone or a desktop (optional)
+    - Your sender name and brand voice (optional)
+  output:
+    - name: Open reason
+      contains: The one reason a reader should open this email, chosen from curiosity, identity, urgency, reassurance or specificity.
+    - name: Subject line options
+      contains: Several subject lines, each in a different angle, written for your sequence position, audience warmth and device.
+    - name: Why each might work
+      contains: A short note on the cue each line uses and the promise your email must keep.
+    - name: Honesty check
+      contains: A flag on any line that could read as clickbait, creepy personalization or false urgency, with an honest rewrite.
+    - name: Suggested pick
+      contains: The line to test first, and why it fits your sender name and your email.

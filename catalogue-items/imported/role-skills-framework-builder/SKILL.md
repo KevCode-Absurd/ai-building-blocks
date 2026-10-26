@@ -10,6 +10,21 @@ metadata:
 
 Build, maintain, and apply competency frameworks that drive consistent talent decisions across the employee lifecycle — from defining behavioral indicators and proficiency levels to integrating competencies into hiring, performance, learning, and succession processes.
 
+## Steps
+
+In this skill a "competency" is the same as a skill that shows up in behaviour.
+
+1. Ask for what you need in one message: the role titles and the team or company they sit in, and the levels you use (for example entry, professional, senior, leader). Company values and an existing framework to update are optional.
+2. If levels are missing, propose four (entry, professional, senior, leader) and say you chose them. For anything else missing, write `MISSING: <what is needed>`. Do not invent company values or role duties.
+3. Sort skills into two lists: skills every role shares, and skills for one role or family. Keep each list short.
+4. For each skill, write a one-line definition and one plain, observable behaviour at each level. A manager should be able to point to evidence for it.
+5. For each role, pick the 5 to 7 skills that matter most and set the level needed for each.
+6. Turn each role profile into: 3 to 5 job-ad criteria, one interview question per key skill with a 1 to 4 scoring guide, a sentence per skill for reviews, and one learning idea per skill.
+7. Say how to check the framework: show it to the leaders who manage the role and ask "does this describe your best people?", then edit.
+8. If the user supplied an existing framework, change only what is out of date and list what you changed.
+
+Not for pay bands, or for a single one-off hire with no team process.
+
 ## Supported tasks
 
 - Designing enterprise competency frameworks and libraries

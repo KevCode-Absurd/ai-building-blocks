@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Good questions need thought about what your customers have really done.
 new_slug: customer-interview-coach
 name: Customer interview coach
-summary: Describe your idea. Get questions that draw honest answers from
-  customers and a way to spot polite lies. Uses The Mom Test.
+summary: Get customer interview questions that draw honest answers, and score your plan or notes out of 7. Based on The Mom Test, built to catch polite lies.
 job: understand-customers
 headline: Customer interview coach
-subhead: Friends and customers tell you your idea is great, then never buy. This
-  gives you interview questions that get honest answers, and a way to spot
-  polite lies.
+subhead: Friends and customers tell you your idea is great, then never buy. This gives you interview questions that get honest answers, and a way to spot polite lies.
 explain: |
   Friends and customers tell you your idea is great, then never buy. This gives you interview questions that get honest answers, and a way to spot polite lies. It is based on The Mom Test.
 
@@ -18,17 +15,39 @@ when:
   - Everyone says they love your idea but nobody pays.
   - You think your interview questions might be leading.
   - You want to price something without asking "would you pay?"
+not_for:
+  - "You already have paying users and want to know how they use your product: review your usage or sales data instead."
+  - "You want to test a rough prototype with people clicking through it: run a short usability test with five users instead."
+  - "You want to know how big your market is: use public market reports or sales numbers, not interviews."
 you_give:
-  - Your idea or product
-  - Who you will talk to
-  - Your draft questions or interview notes (optional)
+  - Your idea or product, in a sentence or two
+  - The type of customer you will talk to
+  - 3 to 5 names or contacts you could interview (optional)
+  - Your draft questions or past interview notes (optional)
 you_get:
   - Interview questions about past behaviour
   - A score out of 7 for your plan or notes
   - Fixes for leading or hypothetical questions
   - A closing ask that tests commitment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. It needs no code, files or paid tools.
+  - Paste your idea, the type of customer, and any draft questions.
+  - Pick 3 to 5 people who have faced the problem in the past, and run the interviews with the new questions.
+  - Paste your notes back into the chat after each talk.
+  - Read the score out of 7, then fix the rows it names before your next interview.
+output_sample:
+  input:
+    - Your idea or product, in a sentence or two
+    - Who you plan to talk to
+    - Your draft questions or interview notes (optional)
+  output:
+    - name: Score out of 7
+      contains: How your plan or notes did on the seven-row check, with the failing rows named.
+    - name: Fixes
+      contains: A specific fix for each failing row, such as swapping a leading question for one about the past.
+    - name: Rewritten questions
+      contains: Interview questions about their life and what they have already done, not about your idea.
+    - name: Compliments and opinions to ignore
+      contains: Lines from your notes that are polite fluff, with the facts worth keeping.
+    - name: Closing ask
+      contains: A next step to test real commitment, such as time, an intro or money.

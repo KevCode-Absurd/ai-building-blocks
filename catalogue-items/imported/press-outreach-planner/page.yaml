@@ -2,11 +2,10 @@ thinking: medium
 thinking_why: It finds angles and drafts pitches.
 new_slug: press-outreach-planner
 name: Press outreach planner
-summary: Say your news. Get a media list, pitch emails and a press kit outline.
+summary: "Plan your press outreach: tell it your news and get a media list, pitch emails and a press kit outline, with a check on whether PR is worth it yet."
 job: grow-social
 headline: Press outreach planner
-subhead: "Tell it your news and get a plan to win press coverage: who to
-  contact, what to say and what to put in your press kit."
+subhead: "Tell it your news and get a plan to win press coverage: who to contact, what to say and what to put in your press kit."
 explain: |
   Tell it your news and get a plan to win press coverage: who to contact, what to say and what to put in your press kit.
 
@@ -16,6 +15,10 @@ when:
   - A news story in your field gives you something to say.
   - You have original data nobody has published.
   - You are unsure whether PR is worth your time yet.
+not_for:
+  - "You want to be listed on startup or AI directories: use a directory submissions step, not press pitches."
+  - "Your news is a product launch plan across many channels: use a launch plan, since this covers press only."
+  - "You want cold emails to sales prospects: use a cold email tool, because journalists need a different pitch."
 you_give:
   - Your news or announcement
   - Product and audience
@@ -27,7 +30,31 @@ you_get:
   - Press kit outline
   - Advice on timing and follow-up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell it your news, your product and who it is for. Add any data or customer results you have.
+  - Say who can give quotes or do interviews, and when they are free.
+  - Read the story check first. If it says you have no real story yet, fix that before you send anything.
+  - Ask your AI to check each journalist's last 5 articles. This needs web access. If yours has none, open their pages yourself and paste the links.
+  - Edit each pitch email, then send it. Follow up once, as the advice says.
+output_sample:
+  input:
+    - Your news or announcement
+    - Your product and who it is for
+    - Who can speak to the press, and when
+    - Your own data or customer results (optional)
+    - Your product marketing notes, if you have them (optional)
+  prerequisites:
+    - An AI that can browse the web, to check journalists' recent articles. Without it, read their last 5 articles yourself and paste the links.
+  output:
+    - name: Story check
+      contains: "Says whether you have a real story and which angle fits: founding story, David vs Goliath, or an enemy."
+    - name: Media target list
+      contains: Journalists, podcasts and newsletters that cover your topic, ranked by how well they fit your story.
+    - name: Pitch emails
+      contains: One short pitch per target, under 150 words, with a clear hook and a clear ask.
+    - name: Press kit outline
+      contains: The sections of your press page, such as company summary, bios, logos, screenshots, coverage and contact email.
+    - name: Timing and follow-up advice
+      contains: When to send, when to follow up, and when to wait or skip PR.
+    - name: Measurement list
+      contains: What to track after coverage lands, such as placements, referral traffic and brand searches.

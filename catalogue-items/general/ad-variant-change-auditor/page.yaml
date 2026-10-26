@@ -1,28 +1,59 @@
 new_slug: ad-variant-change-auditor
 name: Ad variant change auditor
-summary: Compare a control ad and variants with the agreed test. Find unintended changes, unclear comparisons and the smallest repairs before testing.
+summary: Check your control ad and variants against the test you planned. Find hidden changes and get the smallest fixes before you launch an ad test.
 job: plan-ad-tests
 headline: Ad variant change auditor
-subhead: Compare a control ad and variants with the agreed test. Find unintended changes, unclear comparisons and the smallest repairs before testing. Supply the records and asset versions to review.
+subhead: Give it your control ad, your variants and the one thing you want to test. It lists every change it finds and marks which ones you did not plan. You get a ready or not-ready verdict for each variant, with the smallest fixes.
 explain: |-
   Audit the differences in actual control/variant drafts against a predeclared experiment question. This checks implementation of the test contract; it does not generate variants, plan a test from scratch or infer causal results.
 
   Checks actual variation against an already specified experiment and returns a confound/repair matrix; not creative generation, outcome analysis or blind prompt scoring.
 when:
-  - You need the stated review outcome from existing records.
-  - You want unknowns and proposed repairs separated from completed actions.
+  - You have a control ad and variants ready, and want to check them before you launch a test.
+  - A teammate edited a variant and you want to know if more than one thing changed.
+  - You changed a price, proof point or landing page and need to know which comparisons are now affected.
+  - You want a second look to confirm each variant tests only the thing you meant to test.
+not_for:
+  - "You need new ad variants written: ask your AI to draft them first, then bring them here to check."
+  - "You have no test plan yet: write down the one thing you want to test, then come back with your control and variants."
+  - "You want to read results from a test that already ran: use your ad platform's reports or a person who knows your numbers."
 you_give:
-  - brief
-  - copy draft
-  - static ads (optional)
+  - Your test question and the one thing you want to change
+  - Your control ad text and version
+  - Your variant ad texts and versions
+  - Images or video for each ad (optional)
+  - Audience, placement and landing page for each ad (optional)
 you_get:
-  - A control-to-variant matrix of actual changes
-  - Hidden extra changes, unknown media and the smallest repairs
-  - A version-bound readiness decision for each comparison
+  - A list of every change between the control and each variant
+  - "A label on each change: planned, unplanned or could not check"
+  - A ready or not-ready verdict for each variant
+  - The smallest fix for each problem, such as undoing a change or splitting it into its own test
+  - A list of what is still unknown
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code or paid tool is needed.
+  - Paste your test question, then the control ad, then each variant. Add the version for each.
+  - Add images, video, audience and landing page if you have them. Anything you leave out is marked NOT CHECKED.
+  - Read the verdict for each variant. Check each unplanned change against your own ad.
+  - Make the fixes yourself, then paste the new versions and ask for a recheck of the affected variants.
+  - Launch only after every variant you plan to run comes back clean. The audit does not launch or change anything.
+output_sample:
+  input:
+    - Your test question and the one thing you plan to change
+    - Your control ad text, with its version
+    - Your variant ad texts, with their versions
+    - Images or video for each ad (optional)
+    - Your audience, placement and landing page for each ad (optional)
+  prerequisites:
+    - An AI that can read pasted text or your files; add images only if your AI can view them
+  output:
+    - name: TEST CONTRACT
+      contains: Your test question, control version, the one thing meant to change, and what must stay the same.
+    - name: OBSERVED DIFFERENCES
+      contains: "Each change found in each variant, with the evidence and a label: intended, unintended or unknown."
+    - name: READINESS MATRIX
+      contains: "A verdict per variant: clean for what was checked, needs repair, or incomplete."
+    - name: REPAIR AND RECHECK
+      contains: The smallest fix for each problem, who owns it, and which checks are still not done.
 how_it_works:
   - title: Define the review
     text: Read the supplied test question, control ID/version, intended changed variable, invariants, audience/placement, destination and observation plan. If no comparison contract exists, list the missing decisions rather than inventing a post-hoc hypothesis.

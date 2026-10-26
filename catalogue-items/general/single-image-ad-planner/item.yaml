@@ -23,6 +23,8 @@ inputs:
     required: false
   - type: product_photos
     required: false
+  - type: shortlist
+    required: false
 outputs:
   - {type: ad_copy}
   - {type: image_prompt}

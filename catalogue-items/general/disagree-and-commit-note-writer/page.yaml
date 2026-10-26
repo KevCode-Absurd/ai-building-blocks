@@ -1,35 +1,46 @@
 new_slug: disagree-and-commit-note-writer
 name: Disagree-and-commit note writer
-summary: Paste a decision and who disagrees. Get the dissent on record, who decides and a note that commits the team.
+summary: "Turn a stuck decision and each person's view into one fair dissent line each, a named decider and a note that closes the debate."
 job: lead-people
 thinking: medium
 thinking_why: It separates two kinds of disagreement, but the note format and steps are fixed.
-headline: Disagree-and-commit note writer
-subhead: Paste the decision and each person's view. It writes each dissent in one honest line, tests whether it is a real difference of view or a clash of aims, names who decides and writes the commit line each person will say. You get a short note that closes the debate and records the doubts.
+headline: "Disagree-and-commit note writer"
+subhead: "Paste the decision and each person's view and reason. It writes each doubt as one fair line and tests whether it is a different guess or a clash of aims. You get who decides, a commit line for each person and a short team note with a review date."
 explain: |
-  Debate has to end. When it does not, the default winner is whoever has the most stamina. A team that cannot disagree and then act together either argues forever or complies in silence and drags its feet.
+  Debate has to end. When it does not, the default winner is the person with the most stamina. A team that cannot disagree and then act together either argues forever, or goes along in silence and drags its feet.
 
-  This skill writes the dissent down in one fair line per person. It tests whether the disagreement is about what will happen (a difference of view) or about what to aim for (a clash of aims). Differences of view are settled by asking people to gamble with you and commit. Clashes of aims need a decision from above, quickly. The note names the owner, the review date and the signal that would show the decision is wrong.
+  This disagree and commit note writer puts each doubt on record in one fair line per person. Then it asks two questions. Do both sides want the same outcome? Would new facts change this person's mind? If yes to both, it is a difference of view, and you ask people to gamble with you and commit. If not, it is a clash of aims, and one named person decides, fast.
+
+  The note names the owner, the review date and the signal that would show the decision is wrong. The boss writes a dissent and a commit line too. The method comes from Jeff Bezos's 2016 letter to shareholders.
 when:
-  - A decision has been argued in three meetings with no end.
-  - One person keeps reopening a call after it was made.
-  - You are the boss and you disagree with a call your team wants to make.
+  - "A decision has been argued in three meetings with no end."
+  - "One person keeps reopening a call after it was made."
+  - "You are the boss and you disagree with a call your team wants to make."
+  - "Two people want different things, such as speed against quality, and more talk is not fixing it."
+not_for:
+  - "You are still choosing between options and nobody is arguing. Use the Decision evidence bar setter first."
+  - "You want views weighed by track record to pick the call. Use the Believability-weighted decision helper."
+  - "You need to name one owner before the debate starts. Use the Informed captain decision planner."
+  - "You need to give one person hard feedback. Use the Hard feedback message writer."
 you_give:
-  - The decision and the options
-  - Each person's view and reason, in a line or two
-  - Who owns the decision and any deadline
+  - "The decision and the options"
+  - "Each person's view, with their reason, in a line or two"
+  - "Who owns the decision (optional)"
+  - "The deadline (optional)"
+  - "Notes from the meetings where it was argued (optional)"
 you_get:
-  - One honest line of dissent per person
-  - A sort of each dissent as view or aims
-  - Who decides, if the aims clash, and what to bring them
-  - The commit line each person says back
-  - A short note for the team
+  - "One fair line of dissent per person, including the boss if they disagree"
+  - "Each dissent sorted as a difference of view or a clash of aims"
+  - "A named decider, a time limit and what each side brings, if the aims clash"
+  - "A commit line each person says back, with an action in it"
+  - "A signal that would show the decision is wrong, and a review date"
+  - "A short note for the team"
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the decision and each person's view.
-  - Say who owns the decision.
-  - Check each dissent line with the person it names.
-  - Send the note, then hold the review date.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no tools."
+  - "Paste the decision, the options and each person's view with the reason. If you leave out the decision or the views, it asks for them and stops. If a view is only a position, it asks for the reason."
+  - "Say who owns the decision and when it must be made."
+  - "Show each person their dissent line and ask if it is fair. Fix any line they would not accept."
+  - "Send the team note, then hold the review date."
 how_it_works:
   - title: Records each dissent
     text: "One fair line per person: what they fear will go wrong, and why."
@@ -55,8 +66,8 @@ output_shape: |
   VIEW OR AIMS
   <name | view / aims | test result>
 
-  ESCALATE (only if aims clash)
-  <who decides | what each side brings | by when>
+  ESCALATE
+  <who decides | what each side brings | by when> or "none: no clash of aims"
 
   COMMIT LINES
   <name: "I disagree because ... I will ... fully ... we look at ... on ...">
@@ -72,6 +83,28 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+output_sample:
+  input:
+    - "The decision and the options"
+    - "Each person's view, with their reason"
+    - "Who owns the decision and any deadline (optional)"
+  output:
+    - name: "DECISION"
+      contains: "The decision, its owner and the review date."
+    - name: "DISSENT ON RECORD"
+      contains: "One fair line per person: what they think will go wrong, and why."
+    - name: "VIEW OR AIMS"
+      contains: "Each dissent sorted as a difference of view or a clash of aims, with the two-question test."
+    - name: "ESCALATE"
+      contains: "For a clash of aims: who decides, what each side brings and a two-day limit. Otherwise none."
+    - name: "COMMIT LINES"
+      contains: "One line per person saying why they disagree, what they will do and when the team looks again."
+    - name: "SIGNAL THAT IT IS WRONG"
+      contains: "What the team would see, and by when, that shows the decision is wrong."
+    - name: "NOTE TO THE TEAM"
+      contains: "Five to eight lines: decision, owner, review date, signal, dissents on record and thanks."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "What you did not give, and any of its own checks it missed."
 tweaks:
   - what: Each person's reason
     how: Give a line or two each. A fair dissent needs the real reason, not just the position.

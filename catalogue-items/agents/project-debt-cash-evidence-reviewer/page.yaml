@@ -1,51 +1,120 @@
 new_slug: project-debt-cash-evidence-reviewer
 name: Project debt cash evidence reviewer
 headline: Project debt cash evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Work out yearly cash available for project debt, a repayment plan and loan-life cover. Redone when cash records or loan terms change.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: "A linked project cash, debt repayment and loan-life cover schedule. Share three annual project operating cash records or approved scenarios, financing CFADS definition, loan opening balance, fixed rate, target service cover and contractual loan-life rate. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter. Include the prior dated review and source versions when available."
-explain: |-
-  A linked project cash, debt repayment and loan-life cover schedule.
+subhead: Give it three years of project cash, your lender's definition of cash available for debt, the loan balance, the rate, the cover target and the loan-life rate. It builds the cash available each year, plans repayments around your cover target, then checks the loan-life cover. You get all three schedules, linked.
 
-  Project finance coverage schedules. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  Lenders to a project look at three things. How much cash is left each year after running costs, taxes and upkeep? How should repayments be shaped to that cash? And is all the cash left until the loan ends enough to repay what is owed? This agent builds those three in order, from your dated records, so each one feeds the next. The cash left for the lender each year is called CFADS, short for cash flow available for debt service.
+
+  The first thing it settles is the basis of your records. If they are accrual figures, it takes off the working-capital movement. If they are real cash receipts and payments, they already include that movement, so it does not take it off again. Mixing the two counts the same money twice. It then plans repayments around your cover target, with interest first and principal from what is left. Last, it discounts the cash left until the loan ends at the rate in your loan agreement and compares it with what you owe. Cash after the loan ends is left out.
+
+  It keeps a record of the last review and runs the pack again when a cash source, the cash definition or a loan term changes. If the changed receipt is an availability payment, which is a fixed fee for keeping an asset ready for use, and you supply the signed deduction certificate, it reconciles the deduction first. Without the certificate, it keeps the payment evidence marked MISSING.
+
 when:
-  - You need a linked project cash, debt repayment and loan-life cover schedule.
-  - You work on project finance coverage schedules and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A new year of operating results or a revised forecast arrives.
+  - Your lender changes how cash available for debt is defined.
+  - You receive an availability payment certificate with deductions for downtime or poor performance.
+  - You want to see how much a project can repay each year at a target cover.
+
+not_for:
+  - You need to test a signed covenant, such as minimum cash cover in each period. Use the Debt service covenant evidence reviewer.
+  - Your project earns from road tolls or traffic and you need a traffic scenario. Use the Connect toll cash to debt repayment workflow.
+  - You need the reserve account and who gets paid first. Use the Project reserve evidence reviewer.
+  - You have no signed loan terms. The rate and loan-life rate stop and show MISSING, because a guessed rate changes every number.
+
 you_give:
-  - "Three annual project operating cash records or approved scenarios, financing CFADS definition, loan opening balance, fixed rate, target service cover and contractual loan-life rate. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter. Include the prior dated review and source versions when available."
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Three years of operating cash records or approved scenarios, with dates (from the project model or accounts)
+  - Whether your records are accrual figures before working-capital settlement, or actual cash receipts and payments (from your accounts)
+  - The lender's definition of cash available for debt, with what the contract excludes (from the loan agreement)
+  - Cash taxes, upkeep spending and working-capital movements for each year (from the project model)
+  - The opening loan balance, the fixed interest rate and the target cover, which is the cash needed per unit of debt payment (from the loan agreement)
+  - The loan-life discount rate the agreement defines, and the loan end date (from the loan agreement)
+  - The signed deduction certificate, the contract deduction cap and other approved charges (optional, only if a receipt is an availability payment)
+  - The last review's record and the earlier source versions (optional, needed to show what changed)
+
 you_get:
-  - A linked project cash, debt repayment and loan-life cover schedule.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Cash available for debt in each of the three years, built from the declared basis
+  - A repayment schedule with target payment, interest, principal and balance left, and any year where cash cannot cover interest
+  - The loan-life cover, with the present value of the cash left, the cover ratio and the cushion over the debt
+  - An availability payment line with deductions above the cap shown as exceptions, only when that branch runs
+  - What changed since the last review, a record for the next one, MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Build a project debt service cash pack workflow and the Availability payment deduction checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
+  - Say if this is the first run. If not, paste last time's record. Then attach the loan agreement, the three years of cash records and any payment certificate.
+  - State the basis of your cash records once, accrual or actual cash. Check that the result uses one route and does not deduct working capital twice.
+  - Check that the debt balance rolls forward cleanly and that no cash after the loan ends sits in the loan-life cover. Any year where cash cannot cover interest should be shown, not hidden.
+  - Fix every MISSING line and run it again when a cash record, the cash definition or a loan term changes. Adding it sets up no schedule.
+
 how_it_works:
-  - title: Build a project debt service cash pack
-    text: Run the governing workflow when A project operating cash source, financing definition or annual loan-service assumption changes.
-  - title: Availability payment deduction checker
-    text: If the changed receipt is an availability payment and the actual contract deduction certificate is supplied, reconcile that certified deduction before revising the affected CFADS period. Otherwise preserve the missing payment evidence. Any changed receipt or cost source must preserve the declared accrual-versus-cash basis; do not deduct working-capital settlement twice.
-output_shape: |-
-  A linked project cash, debt repayment and loan-life cover schedule.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this project, or sets a first baseline. It compares the cash definition version, the annual source dates, the debt balance, the repayment series and the discount basis. If nothing changed and no review is due, it says so and stops.
+  - title: Builds cash available for debt
+    text: Runs the Project cash available bridge step for each of the three years. It declares the source basis first. Accrual figures get the signed working-capital adjustment. Actual cash receipts and payments do not. It never mixes the two routes, and keeps debt service below the bridge.
+  - title: Plans repayments
+    text: Runs the Debt repayment sculpting planner step. It turns each year's cash into target payment capacity using your cover target, charges interest on the opening balance, and puts what remains into principal. It shows any year where cash cannot cover interest, and the balance left at the end.
+  - title: Checks loan-life cover
+    text: Runs the Loan life cash cover checker step. It takes the same eligible cash, drops anything after the loan ends, discounts at the agreement's rate and divides by the opening balance. It shows the cushion over the debt. It never uses a company's cost of capital.
+  - title: Checks a payment deduction only if needed
+    text: If a changed receipt is an availability payment and you give the signed certificate, it runs the Availability payment deduction checker. It applies the contract cap to the approved deduction, lists any excess as an exception, and hands the cash into the first step. Without the certificate it stays MISSING.
+  - title: Checks and saves
+    text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, which steps ran or were skipped, and the new record. It keeps the old record.
+
+output_shape: |
+  REVIEW DATE <date>, <project>, <currency>, <scale>   LAST REVIEW <date or first run>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  SOURCE BASIS  <accrual before working capital | actual cash receipts and payments>
+  CASH FOR DEBT <year 1, 2, 3>: <revenue or receipts> - <costs> - <taxes>
+                - <upkeep> +/- <working capital, accrual route only> = <n>
+  REPAYMENT     <year>: target payment <n>; interest <n>; principal <n>;
+                closing balance <n>; interest gap <n> (if any)
+  LOAN-LIFE COVER  present value of cash <n> / opening loan <n> = <n>x;
+                   cushion <n>; rate <n> from the agreement
+  PAYMENT LINE  certified <n> - approved deduction <n> (cap <n>) - charges <n>
+                = cash <n>; excess over cap <n> (only if run)
+  RECORD FOR NEXT REVIEW  project ID, cash-definition version, annual source dates,
+                          debt balance, repayment series, discount basis, gaps
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Three years of project operating cash records, or approved scenarios
+    - The loan agreement with the cash definition, rate, cover target and loan-life rate
+    - The opening loan balance
+    - The availability payment certificate, if a receipt is one (optional)
+    - The last review's record (optional)
+  prerequisites:
+    - An AI that can read files and build a spreadsheet
+    - The Build a project debt service cash pack workflow and the Availability payment deduction checker skill, added with the agent
+  output:
+    - name: Changed since last review
+      contains: Each cash record, definition or loan term that moved, with old and new value and source date.
+    - name: outputs/step-1-project-cash-available-bridge.md
+      contains: Cash available for debt for each of the three years, built from the declared basis, with exclusions, taxes, upkeep and working capital shown.
+    - name: outputs/step-2-debt-repayment-sculpting-planner.md
+      contains: Target payment, interest, principal and closing balance for each year, the balance left at the end, and any year where cash cannot cover interest.
+    - name: outputs/step-3-loan-life-cash-cover-checker.md
+      contains: The present value of eligible cash until the loan ends, the cover ratio against the opening balance, and the cushion over the debt.
+    - name: Availability payment deduction line
+      contains: The certified payment less the capped deduction and other charges, with any deduction over the cap listed as an exception. Only when that branch ran.
+    - name: Record and MISSING lines
+      contains: The record for the next review, every gap with the line it stops, and CHECKS MISSED.
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: All annual cash is rebuilt from dated sources; principal rollforward ties; cash beyond maturity and financing proceeds are excluded from loan-life cover. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished. Preserve changed-source evidence; no external transaction is authorized.
+  - what: A higher cover target
+    how: Raise the target cover and run it again. The target payment each year falls, principal falls with it, and more debt is left at the end.
+  - what: Cash records on a different basis
+    how: Say your records are actual cash, not accrual. The working-capital line drops out of the cash for debt, because those records already include it.
+  - what: A shorter loan
+    how: Move the end date earlier. Cash after the new end date leaves the loan-life cover, and the cover ratio falls.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with linked schedules and a checks tab, and tells you what it could not verify.
+
 judge:
   - All annual cash is rebuilt from dated sources; principal rollforward ties; cash beyond maturity and financing proceeds are excluded from loan-life cover. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished. Preserve changed-source evidence; no external transaction is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +125,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each year's source file with its date, and the version of the lender's cash definition. A changed definition is a visible change.
+  - Write your source basis, accrual or actual cash, once in the agent's file so every run uses the same route.
+  - Keep the signed certificate for every availability payment. A payment with no certificate stays MISSING.
+  - Pair it with the Project reserve evidence reviewer when the question moves to the reserve account and the payment order.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds linked schedules for cash, repayment and cover, and saves the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your loan agreement
+      why: The cash definition, cover target and loan-life rate are contract terms. Quote them, never guess them.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The project model or accounts for each of the three years.
+    - Any certificate or notice that changes a payment.
+    - A named person who owns the lender reporting and will check the definitions and the rates.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Cash available for debt service (CFADS)
+    meaning: The cash left each year after running costs, taxes and upkeep, which can go to the lender.
+  - term: Cover target
+    meaning: How many times the cash available must cover each debt payment, as your loan agreement sets it.
+  - term: Loan-life cover
+    meaning: The present value of the cash available until the loan ends, divided by the loan balance.
+  - term: Accrual basis
+    meaning: Figures recorded when earned or owed, not when cash moves.
+  - term: Availability payment
+    meaning: A fixed payment for keeping an asset ready to use, reduced if it is not.
+  - term: Working capital
+    meaning: Money tied up in the day-to-day business, such as unpaid invoices and unpaid bills.

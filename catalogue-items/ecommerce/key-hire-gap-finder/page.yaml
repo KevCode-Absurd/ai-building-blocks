@@ -1,6 +1,6 @@
 new_slug: key-hire-gap-finder
 name: "Key hire gap finder"
-summary: "Give your numbers and skills. Get the one hire that unblocks growth, how to pay them and a readiness score."
+summary: "Find the one hire that would unblock your store's growth. Give your numbers and skills. Get a hire brief, pay options and a readiness score."
 job: hire-people
 thinking: high
 thinking_why: "It weighs your numbers against your skills and the pay you can afford, so a stronger model reasons better."
@@ -17,6 +17,10 @@ when:
   - Revenue has stalled and you think you need a better media buyer or growth lead.
   - You are about to hire and want to be sure it is the right role and you can afford it.
   - You have a thin margin and want pay options that do not give away your profit.
+not_for:
+  - Your limit is stock, margin, cash or the product. A hire will not fix it, so settle that first with your accountant or supplier.
+  - You need contract, equity or tax advice. Ask a lawyer and an accountant, because this only gives pay options.
+  - Your store earns under about $500K a year. A part-time freelancer or an agency trial usually fits better than equity.
 
 you_give:
   - Revenue, net margin and your growth target with a time frame
@@ -37,6 +41,30 @@ how_to_use:
   - Rate yourself on each core job. If you hesitate on one, mark it weak.
   - Add your traffic sources and conversion rate, and what you can offer in pay.
   - Read the limiter first. If it is not traffic, fix that before you hire.
+output_sample:
+  input:
+    - Your revenue, net margin and growth target with a time frame
+    - Your honest rating on each core job, such as media buying and product
+    - What you think is limiting growth
+    - Your traffic sources and conversion rate (optional)
+    - What you can offer in pay (optional)
+  output:
+    - name: Hire readiness
+      contains: A score out of 100 with the five check scores added up and shown.
+    - name: Limiter
+      contains: What holds growth back, with your numbers, and whether traffic or conversion is the likelier cause.
+    - name: Skill map
+      contains: Your two strongest skills, your weakest key skill and the gap in one line.
+    - name: Size of the prize
+      contains: Profit now from revenue and margin, and what your target adds, with timing marked as a claim.
+    - name: Hire brief
+      contains: The role, the work and results the person must have done, and a 90-day result in numbers.
+    - name: Pay options
+      contains: Three pay plans with the yearly cost at your margin, with a note to check with a lawyer.
+    - name: Order of hires
+      contains: Which hire comes first and which skill comes next.
+    - name: Cash warning
+      contains: What to settle about cash after the hire and before spend rises.
 
 how_it_works:
   - title: Names the limiter

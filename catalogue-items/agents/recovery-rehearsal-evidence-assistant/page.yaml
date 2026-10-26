@@ -1,55 +1,115 @@
 new_slug: recovery-rehearsal-evidence-assistant
 name: Recovery rehearsal evidence assistant
 headline: Recovery rehearsal evidence assistant
-summary: A recovery evidence review, changed rehearsal plan and open remediation actions.
+summary: Check restore test evidence against your recovery targets. Get a gap table, a changed rehearsal plan and an owner for each open fix.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A recovery evidence review, changed rehearsal plan and open remediation actions. Share approved recovery targets, rehearsal records, system changes and the last recovery plan. Your AI prepares the work and marks any facts it cannot verify.
+subhead: "Give it your recovery targets, restore test records and a list of system changes. It builds a backup recovery test review: one row per system with the target, the last restore result and the gap. It updates the rehearsal plan and lists who owns each fix. A backup counts as recoverable only after a restore test."
 explain: |-
-  A recovery evidence review, changed rehearsal plan and open remediation actions.
+  A backup that has never been restored is a hope, not a plan. Many teams keep logs that say the backup job worked, and nothing about whether anyone got the data back in time. This agent reviews your restore test evidence and tells you which systems are proven, which failed and which were never tested.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Recovery is supported by restore evidence; unknown results stay unknown. Missing tools or evidence stay visible in the final summary.
+  For each system it compares the last restore result with your own targets: how long the system may be down, and how much recent data you can lose. A passing backup job is not a restore test. A system that changed since its last test is marked due. When a test failed or missed a target, the Incident postmortem writer reviews it and the rehearsal plan is updated.
+
+  It prepares documents only. It never runs a restore, touches a live system or changes a backup setting. Any test needs a scope you approved. A result you cannot show stays marked unknown.
 when:
-  - You need a recovery evidence review, changed rehearsal plan and open remediation actions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - Your last restore test was months ago and you cannot say if it passed.
+  - You moved to a new database, host or backup tool, and the old test no longer applies.
+  - A restore test ran, missed its target, and nobody wrote down the fix.
+  - An auditor, insurer or client asks you to show that you can recover.
+not_for:
+  - You have no backups or no test history yet. Use the Build a backup recovery rehearsal workflow to write the first plan.
+  - A system is down right now. Follow your incident runbook and call your technical lead first. Use the Incident postmortem writer afterwards.
+  - You want step-by-step instructions to restore a system. Use the Incident runbook writer.
+  - You need a formal sign-off for an auditor. This agent sorts your evidence, but a qualified person must approve it.
 you_give:
-  - Approved recovery targets, rehearsal records, system changes and the last recovery plan.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - "Recovery targets for each system, approved by its owner: how long it may be down and how much recent data can be lost (from your continuity plan)"
+  - "Restore test records: the date, what was restored, how long it took and the result (from test notes, tickets or logs)"
+  - Changes to each system since its last test, such as a new host or backup tool (from your change log)
+  - The last recovery plan or rehearsal plan (optional on a first run)
+  - "The test scope you approve: which systems may be tested, and where (needed only if a new test is proposed)"
+  - Last review's record (optional, from the second run on)
 you_get:
-  - A recovery evidence review, changed rehearsal plan and open remediation actions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - "A recovery evidence table, one row per system: target, last restore date, actual result, evidence reference, gap and status"
+  - A changed rehearsal plan saying which systems are due for a test, and why
+  - Open fixes, each with an owner, a due date and what proves it is fixed
+  - A short postmortem for each failed or missed test
+  - MISSING lines for results nobody wrote down, and a record to start the next review from
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent to Claude, ChatGPT or Gemini with its helpers, the Build a backup recovery rehearsal workflow and the Incident postmortem writer. Or download the pack and attach it.
+  - Paste your recovery targets, restore test records and change log. Say the review date. From the second review, paste last review's record too.
+  - Read the evidence table first. Check each Verified row against the real test record.
+  - Fill in each MISSING line, especially test results that were never written down.
+  - Approve any new test scope yourself and run the test yourself. The agent runs nothing.
+  - In a chat-only tool, copy the record it gives you and paste it in next time. Installing sets up no schedule, so you start each run.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep system ID, plan version, last restore date, actual result, evidence reference and next review date. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A restore test is due, its evidence is missing or the protected system changed.
-  - title: Choose the next step
-    text: Run the rehearsal planning workflow when due or changed. If test evidence exists, run incident-postmortem-writer on failed or missed targets and prepare remediation owners; never execute a restore without the approved test scope.
-  - title: Check and save evidence
-    text: Recovery is supported by restore evidence; unknown results stay unknown. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last review
+    text: "Loads the saved record: system ID, plan version, last restore date, result, evidence reference and next review date. A first run builds a baseline with you."
+  - title: Find what is due
+    text: Marks a system due when a test is overdue, its evidence is missing or the system changed since its last test.
+  - title: Grade each system
+    text: "Gives each system one status: Verified, Failed, Missed target, Not tested or Unknown. A backup job log alone reads as backup ran, restore not tested."
+  - title: Update the rehearsal plan
+    text: The Build a backup recovery rehearsal workflow updates the plan with the Backup and recovery planner, the Incident runbook writer and the Executive action register keeper. It proposes tests only inside your approved scope.
+  - title: Review failed tests
+    text: "The Incident postmortem writer reviews each failed or missed test: what happened, what was found and what to fix. Each fix gets an owner."
+  - title: Check and save
+    text: Checks that no restore result is invented. Saves the files, a run log and the new record, and keeps the old record.
 output_shape: |-
-  Scope and source coverage
-  A recovery evidence review, changed rehearsal plan and open remediation actions.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  RECOVERY REVIEW <date>, scope <systems>
+  <first review, or compared with <last review date>>
+
+  EVIDENCE TABLE
+  <system ID> | target <time down, data loss> | last restore <date> | result <actual> | evidence <reference> | gap | status <Verified, Failed, Missed target, Not tested or Unknown>
+
+  DUE FOR A TEST
+  <system ID> | why <overdue, no evidence or changed> | proposed scope <inside your approved scope, or MISSING>
+
+  POSTMORTEMS
+  <system ID> | what happened | what was found | fix
+
+  OPEN FIXES
+  <ID> | <fix> | owner <name or MISSING> | due <date> | closes when <proof>
+
+  MISSING  <each gap>
+  CHECKS MISSED  <one line each, or none>
+  RECORD FOR NEXT REVIEW  <system ID | plan version | last restore date | result | evidence reference | next review date>
+output_sample:
+  input:
+    - Recovery targets for each system
+    - Restore test records, with dates and results
+    - Changes to each system since its last test
+    - The last recovery plan (optional)
+    - The test scope you approve (optional)
+    - Last review's record (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - The helper skills added, or the pack attached
+    - Recovery targets that the system owner has approved
+  output:
+    - name: Evidence table
+      contains: One row per system with its target, last restore date, actual result, evidence reference, gap and status.
+    - name: Due for a test
+      contains: The systems that need a new test, why each one is due and the proposed scope inside the scope you approved.
+    - name: Changed rehearsal plan
+      contains: The updated plan from the Backup and recovery planner, with a safe rehearsal, stop points and rollback steps from the Incident runbook writer.
+    - name: Postmortems
+      contains: For each failed or missed test, what happened, what was found and what to fix.
+    - name: Open fixes
+      contains: Each fix with an owner, a due date and what proves it is done.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Every result nobody wrote down and every check that could not run.
+    - name: Record for the next review
+      contains: System ID, plan version, last restore date, result, evidence reference and next review date.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Recovery is supported by restore evidence; unknown results stay unknown.
+  - what: Recovery targets
+    how: Give a time and a data-loss limit for each system. Without them the agent cannot call a result a pass.
+  - what: What counts as a test
+    how: Say what you accept as proof, such as a restored copy that the system owner opened and checked.
+  - what: Scope of the review
+    how: Pick one group of systems at a time, so every row can be checked against its own record.
+  - what: Test windows
+    how: List the days a test may run, so the proposed plan stays inside them.
 judge:
   - Recovery is supported by restore evidence; unknown results stay unknown.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +122,26 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Give each system a fixed ID, so a renamed system is not read as a new one.
+  - Write down how you check a restored copy, such as who opens it and what they look for, so Verified means the same each time.
+  - List who owns the fix for each kind of gap, so owners stop coming out as MISSING.
+  - Record checks that need a person, such as an owner opening the restored copy, and finish them before you rely on the table.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Keeps the record between reviews. In a plain chat tool you paste the record in each time.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Backup tool reports or logs.
+    - Your change log or release notes.
+    - A list of your systems, with an owner for each.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Restore test
+    meaning: A real attempt to get data back from a backup, and a check that it works.
+  - term: Recovery target
+    meaning: How long a system may be down, and how much recent data you can lose.
+  - term: Rehearsal
+    meaning: A planned practice restore, inside a scope you approve.
+  - term: Remediation
+    meaning: A fix for a gap, with an owner and a due date.
+  - term: Baseline
+    meaning: The first review. Later reviews are compared with it.

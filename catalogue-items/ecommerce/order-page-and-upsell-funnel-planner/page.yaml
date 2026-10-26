@@ -1,6 +1,6 @@
 new_slug: order-page-and-upsell-funnel-planner
 name: "Order page and upsell funnel planner"
-summary: "Give it your product and margin. Get the page flow, order bump, one-time offers and what to measure."
+summary: "Plan an order page and upsell funnel that raises order value. Give it your product, price and cost. Get each offer with profit per step."
 job: make-offer
 thinking: high
 thinking_why: "It weighs offers against your margin and sets up a sequence where a wrong price or claim costs money, so a stronger model is safer."
@@ -13,6 +13,10 @@ when:
   - You sell a low-priced product and want to raise AOV so ads are easier to scale.
   - You use Shopify checkout and want to know what an order page tool would let you add.
   - You have an upsell idea and want to know whether it adds profit after cost of goods.
+not_for:
+  - "Your front-end product costs far more than about $50: use lower price multiples, or fix your sales page first, because this plan fits low-priced products best."
+  - "Your sales page is weak or your outcome is unclear: fix the page and offer first, then plan the funnel."
+  - "You only want to plan the bundle tiers on a product page: use the Bundle tier layout planner."
 you_give:
   - Your front-end product, its price and its cost
   - Your other products and what they cost you
@@ -29,6 +33,32 @@ how_to_use:
   - Add your AOV and conversion rate if you know them.
   - Build the order page first, then offer 1. Add the next step only after the earlier one is stable.
   - Check refunds and chargebacks after each change, and stop any step that raises them.
+output_sample:
+  input:
+    - Your front-end product, with its price and cost
+    - Your other products and what they cost you
+    - The funnel or checkout tool you use
+    - Your current average order value and conversion rate (optional)
+    - Take rates you have seen on offers (optional)
+  output:
+    - name: Funnel map
+      contains: The flow from ad to sales page, order page, offer 1, offer 2 or downsell, and confirmation.
+    - name: Order page
+      contains: Quantity breaks and one or two order bumps, each with price, cost to fulfil and expected take rate.
+    - name: Offer 1
+      contains: The product, the rule that chose it, its price against your front end, and profit per customer.
+    - name: Offer 2 or downsell
+      contains: A second offer or cheaper fallback for buyers who say no, with its price and profit.
+    - name: Offer page type
+      contains: Video or text sales letter, with a true top line for the page.
+    - name: Recovery
+      contains: Email and SMS plans for each step where buyers drop off.
+    - name: AOV math
+      contains: Front end plus bump plus offer 1 added up at the take rates shown.
+    - name: Measure and test order
+      contains: What to track after each change, and which step to test first.
+    - name: Limits and checks missed
+      contains: Checkout and processor limits, price caveats, and any checks the plan failed.
 how_it_works:
   - title: Maps the flow
     text: Ad, sales page that sells the outcome, order page for payment, one-time offer 1, offer 2, then confirmation. A buyer who declines offer 1 goes to a downsell.

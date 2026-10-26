@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It flags orders against set time limits.
 new_slug: where-is-my-order-risk-finder
 name: Where-is-my-order risk finder
-summary: Run it on open orders. Get shipped orders with stale tracking and late
-  unshipped ones, before customers ask.
+summary: "Find orders likely to trigger a where-is-my-order email: shipped orders with stale tracking and late unshipped ones, so you can write to customers first."
 job: run-your-store
 headline: Where-is-my-order risk finder
-subhead: A list of the orders most likely to trigger a "where is my order?"
-  email, found before the email arrives. You can message those customers first.
+subhead: A list of the orders most likely to trigger a "where is my order?" email, found before the email arrives. You can message those customers first.
 explain: |
   A list of the orders most likely to trigger a "where is my order?" email, found before the email arrives. You can message those customers first.
 
@@ -17,6 +15,10 @@ when:
   - You suspect a carrier has stopped scanning parcels.
   - Orders have sat unfulfilled and you want to know which ones.
   - You want to email affected customers before they complain.
+not_for:
+  - Your store is not on Shopify. Check order status in your own shop admin or ask your shipping provider for a late-parcel list.
+  - Your tracking lives in a helpdesk or shipping tool. Use that tool's own late-parcel report, because this skill only reads Shopify.
+  - You need to fix or hold an order. This skill only reads and reports, so make changes by hand in your Shopify admin.
 you_give:
   - Your store domain
   - Shopify admin login with read_orders access
@@ -28,8 +30,30 @@ you_get:
   - Order details for outreach
   - Report in readable or JSON form
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI that can run code and connect to Shopify, such as Claude Code. A plain chat window cannot run it.
+  - Sign in to your store with read_orders access. The skill only reads orders and changes nothing.
+  - Ask your AI to run the skill with your store domain. Add your own day limits if the defaults of 3 and 5 do not suit you.
+  - Open the report and sort the rows by days waiting, longest first.
+  - Check the tracking link for shipped orders. If a parcel has really stalled, email that customer first.
+output_sample:
+  input:
+    - Your store domain
+    - Days before an unfulfilled order counts as late (optional)
+    - Days before a shipped order counts as stale (optional)
+    - "Output style: readable report or JSON (optional)"
+  prerequisites:
+    - An AI that can run Shopify commands and save files, such as Claude Code
+    - Shopify login with read_orders access
+  output:
+    - name: Start banner
+      contains: The store name and the time the run began.
+    - name: Step log
+      contains: One line per search, with the settings used and how many orders it found.
+    - name: UNFULFILLED_OVERDUE
+      contains: Orders still unfulfilled after your limit, oldest first.
+    - name: SHIPPED_STALE_TRACKING
+      contains: Shipped orders whose last update is older than your limit. It checks days since the order last changed, not carrier scans.
+    - name: Outcome summary
+      contains: Counts of late orders, stale orders and all at-risk orders, plus any errors.
+    - name: wismo-report CSV file
+      contains: One row per order with customer email, order date, days waiting, tracking number, carrier and shipping city and country.

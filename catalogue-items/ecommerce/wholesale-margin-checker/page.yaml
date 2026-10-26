@@ -1,6 +1,6 @@
 new_slug: wholesale-margin-checker
 name: "Wholesale margin checker"
-summary: "Give it shelf price and costs. Get your margin per unit after retailer cut, promos and freight, scored."
+summary: "Check your wholesale margin before you sell to stores. Give it shelf price and costs. You get margin per unit after retailer cut, promos and freight."
 job: set-prices
 thinking: high
 thinking_why: "It chains several percentages and checks the sums, so a stronger model is less likely to slip on the arithmetic."
@@ -17,6 +17,10 @@ when:
   - A retailer or distributor asked for your wholesale price and you want to know what you would keep.
   - You sell online and are thinking about stores, and want to see if the margin holds first.
   - You are choosing between selling direct to stores and using a distributor.
+not_for:
+  - "You sell on Amazon or another marketplace: use the Amazon fee and margin checker."
+  - "You need to pitch a buyer: use the Retail buyer approach planner once the numbers hold."
+  - "You do not know your cost per unit yet: work out your landed cost first with the Landed cost calculator."
 
 you_give:
   - Your planned shelf price
@@ -36,6 +40,26 @@ how_to_use:
   - Add your promo plan and what you can supply.
   - Read the failed checks first, then change the price, the cost or the route and run it again.
   - Ask the retailer for the units per store per week they expect before you commit.
+output_sample:
+  input:
+    - Your planned shelf price
+    - Your landed cost per unit
+    - Retailer margin, distributor margin and freight quotes (optional)
+    - Your promo plan (optional)
+    - Your supply and cash for stock and promos (optional)
+  output:
+    - name: Waterfall
+      contains: Each step from shelf price to net price, then margin per unit and gross margin against the 50 percent target.
+    - name: Trade spend
+      contains: Margin per unit with trade spend taken off at 20 and at 30 percent of net sales.
+    - name: Promo plan
+      contains: Cost per unit of your promos across the year, and whether they fit inside trade spend.
+    - name: Routes side by side
+      contains: Margin per unit going direct and through a distributor, which to start with, and your anchor customer status.
+    - name: Velocity to track
+      contains: Units and dollars per store per week to ask the buyer about, and what to bring to the 30-day review.
+    - name: Score
+      contains: A readiness score out of 100 with the sum shown, the score after fixes, and any checks not run.
 
 how_it_works:
   - title: Builds the waterfall

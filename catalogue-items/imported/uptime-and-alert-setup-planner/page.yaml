@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It chooses what is worth an alert, which depends on your risks.
 new_slug: uptime-and-alert-setup-planner
 name: Uptime and alert setup planner
-summary: Describe your site. Get uptime checks, error tracking, targets, alert
-  rules and an on-call plan that avoids alert fatigue.
+summary: Plan uptime checks, alert rules and an on-call rota for your website, so the right person hears when it breaks and alerts stay quiet.
 job: ship-and-host
 headline: Uptime and alert setup planner
-subhead: A monitoring plan that tells the right person when your site breaks and
-  stays quiet when it does not. You get what to check, what to alert on and who
-  gets woken up, without a flood of noise.
+subhead: A monitoring plan that tells the right person when your site breaks and stays quiet when it does not. You get what to check, what to alert on and who gets woken up, without a flood of noise.
 explain: |
   A monitoring plan that tells the right person when your site breaks and stays quiet when it does not. You get what to check, what to alert on and who gets woken up, without a flood of noise.
 
@@ -18,6 +15,10 @@ when:
   - Your team gets so many alerts that people have stopped reading them.
   - An outage happened and nobody was told until a customer complained.
   - You need to decide who is on call and when.
+not_for:
+  - "Your site is down right now: use the incident-response skill, then come back to plan better alerts."
+  - "You need a written report on an outage that already happened: write a post-mortem with your team instead."
+  - "You want charts of sales, signups or other product numbers: use a product analytics tool, not this plan."
 you_give:
   - Your site address and the services it relies on
   - Monitoring tools you already use (optional)
@@ -29,7 +30,35 @@ you_get:
   - Alert rules split into page and quiet channel
   - An on-call rotation plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Collect your page and service addresses, your current alerts if you have any, and who is on call.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste your details and say what you want planned. No code or paid tool is needed.
+  - Check the alert tiers. Only problems that need action now should wake someone.
+  - Set up the checks and alerts in your own monitoring tools, then review them every three months.
+output_sample:
+  input:
+    - Your site address and the services it relies on
+    - Monitoring tools you use now (optional)
+    - Team size and time zones
+    - Who is on call or free to respond
+    - Targets you already promise customers (optional)
+  prerequisites:
+    - A list of your page and service addresses
+    - An export or list of your current alerts (optional)
+  output:
+    - name: System map
+      contains: Each part of your site and the services it relies on, listed as something to watch.
+    - name: SLOs
+      contains: Three to five reliability targets tied to what visitors see, each with a time window.
+    - name: Checks per layer
+      contains: Checks for being up, being correct, being fast and showing errors, for each part.
+    - name: Alert tiering
+      contains: Which problems wake someone, which go to a chat channel, and which are only logged.
+    - name: Routing
+      contains: Where each alert goes and who is told next if no one replies.
+    - name: Dashboards
+      contains: What each audience sees, from live health to long-term uptime.
+    - name: Runbooks
+      contains: A short list of steps linked to each alert that wakes someone.
+    - name: Audit cadence
+      contains: When you review alerts and targets, and what to check each time.

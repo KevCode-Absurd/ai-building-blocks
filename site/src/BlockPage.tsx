@@ -15,13 +15,15 @@ import type { Flow } from "./lib/store";
 import { Link, libraryReturnTo } from "./lib/router";
 import AddToFlow from "./AddToFlow";
 import Install from "./Install";
-import { Before, Next, WhatYouGet } from "./Needs";
+import { Before, Next } from "./Needs";
+import RunInAi from "./RunInAi";
 import { Gauge } from "./Gauge";
 import PixelFace from "./PixelFace";
 import { HelpedBy, MindSkills, WorkflowList, flowsUsing } from "./MindPack";
 import { LabelBadges } from "./MindLabel";
 import { useSeen, useTyped } from "./lib/typing";
 import "./task-simplicity.css";
+import "./block-flow.css";
 import { trackUxEvent } from "./lib/ux-events";
 import { usePersistence } from "./AccountPersistence";
 import { normalizeSkillHtml } from "./lib/skill-html.mjs";
@@ -118,20 +120,42 @@ export function Section({ id, title, lead, children, wide }: { id: string; title
   );
 }
 
-/** Keep detailed reference material available without crowding the task. */
-function TaskSection({ id, title, lead, children, wide }: Parameters<typeof Section>[0]) {
-  const [open, setOpen] = useState(() => location.hash === `#${id}`);
+/** One reference topic inside Details. A plain section: Details is the only disclosure. */
+function DetailSection({ id, title, lead, children }: { id: string; title: string; lead?: string; children: ReactNode }) {
+  return (
+    <section className="bp-sec bp-detail" id={id} aria-labelledby={`${id}-h`}>
+      <h3 className="bp-h3" id={`${id}-h`}>{title}</h3>
+      {lead && <p className="bp-note">{lead}</p>}
+      {children}
+    </section>
+  );
+}
+
+/** Everything that is not what you get, what to fill in or how to run it, behind one native disclosure.
+ *  It starts closed, its content stays in the page for search engines, and a link to anything inside it opens it. */
+function DetailsPanel({ children, watch }: { children: ReactNode; watch?: unknown }) {
+  const box = useRef<HTMLDetailsElement>(null);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
-    const reveal = () => { if (location.hash === `#${id}`) setOpen(true); };
+    const reveal = () => {
+      let id = "";
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (id === "details" || (target && box.current?.contains(target))) {
+        setOpen(true);
+        requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
+      }
+    };
     addEventListener("hashchange", reveal); reveal();
     return () => removeEventListener("hashchange", reveal);
-  }, [id]);
-  return <section className={`bp-sec task-reference${wide ? " wide" : ""}`} id={id} aria-labelledby={`${id}-h`}>
-    <details open={open} onToggle={e => setOpen(e.currentTarget.open)}>
-      <summary><h2 className="bp-h2" id={`${id}-h`}>{title}</h2></summary>
-      {lead && <p className="bp-note">{lead}</p>}{children}
+  }, [watch]);
+  return (
+    <details className="bp-details" id="details" data-testid="bp-details" ref={box} open={open} onToggle={e => setOpen(e.currentTarget.open)}>
+      <summary><h2 className="bp-h2">Details</h2><span className="bp-details-hint">The steps, what to have ready, checks and sources</span></summary>
+      {children}
     </details>
-  </section>;
+  );
 }
 
 type ComposerProps = { slug: string; skill: string | null; give: string[]; toast: (m: string) => void; example?: string; exampleLabel?: string; onTransfer: () => void };
@@ -208,6 +232,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const [copyFailed, setCopyFailed] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [reload, setReload] = useState(0);
+  const [showAllSample, setShowAllSample] = useState(false);
   const [downloading, setDownloading] = useState(false);
   const [downloadError, setDownloadError] = useState("");
   const { account } = usePersistence();
@@ -219,7 +244,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const biz = hasBusiness(useBusiness());
   useEffect(() => {
     let active = true;
-    setPage(undefined); setSkill(null); setLoadError(false); setTransferred(false); setUseful(false); setCopyFailed(false);
+    setPage(undefined); setSkill(null); setShowAllSample(false); setLoadError(false); setTransferred(false); setUseful(false); setCopyFailed(false);
     loadPage(slug).then(value => { if (active) { setPage(value); if (!value && b?.headline) setLoadError(true); } }).catch(() => { if (active) { setPage(null); setLoadError(true); } });
     loadSkillText(slug).then(value => { if (active) { setSkill(value); if (!value) setLoadError(true); } }).catch(() => { if (active) setLoadError(true); });
     markViewed(slug); trackUxEvent("task_started");
@@ -257,7 +282,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const required = [...new Set([...b.inputs.filter(x => x.required).map(x => c.portTypes[x.type] || x.type.replace(/_/g, " ")), ...(p?.plan?.needed.filter(x => x.required).map(x => x.label) ?? [])])];
   const bring = p?.you_give?.length ? p.you_give : required;
   const usefulChecks = p?.judge?.slice(0, 3) ?? [];
-  const sample = p?.example?.output || p?.output_shape;
   const starter = TASK_STARTERS.find(task => task.slug === b.slug);
   const workflowFlow = (): Flow => {
     const slugs = keepCoordinator ? [b.slug] : b.steps.map((s) => s.uses);
@@ -298,29 +322,55 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const showExplanation = !!p?.explain && p.explain.trim() !== (p.subhead || b.summary).trim();
   // The workflows this skill is a step in, or for a mind, the workflows from their work.
   const inFlows = b.type === "mind" ? (b.flows ?? []).map((f) => c.bySlug[f]).filter(Boolean) : isFlow ? [] : flowsUsing(c, b.slug);
-  const toc: [string, string, boolean][] = [
-    ["get", "What you'll get", !!p?.output_shape],
-    ["what", kindOf(b) === "mind" ? "Who they are" : "What it does", showExplanation || has(p?.when) || (!isFlow && has(p?.how_it_works))],
-    ["hire", `Hire ${b.name.split(" (")[0]}`, has(p?.hire?.jobs)],
-    ["skills", `Skills from ${b.name.split(" (")[0]}'s work`, b.type === "mind"],
-    ["flows", "Workflows from their work", b.type === "mind" && inFlows.length > 0],
-    ["ideas", "Their big ideas", has(p?.ideas)],
+  const mindName = b.name.split(" (")[0];
+  const isMind = b.type === "mind";
+  const shape = p?.output_shape;
+  const exampleOut = !shape ? p?.example?.output : undefined;
+  const hireJobs = isMind ? (p?.hire?.jobs ?? []).slice(0, 5) : [];
+  const getList = !shape && !exampleOut && !hireJobs.length && !p?.output_sample ? get : [];
+  // "Is it for you?": the first 3 situations to use it, and the situations to skip it. The full list stays in Details only when it is longer than 3.
+  const clean = (x?: unknown) => (Array.isArray(x) ? x : []).filter((v): v is string => typeof v === "string" && !!v.trim());
+  const useWhen = clean(p?.when).slice(0, 3);
+  const skipWhen = clean(p?.not_for);
+  const hasFit = useWhen.length > 0 || skipWhen.length > 0;
+  const showWhenDetail = clean(p?.when).length > 3;
+  // output_sample: what goes in and what comes out. When it exists it stands in for the plain you_get list and the open skeleton.
+  const os = p?.output_sample;
+  const sampleOut = (Array.isArray(os?.output) ? os!.output : []).filter(o => o && typeof o.name === "string" && o.name.trim() && typeof o.contains === "string" && o.contains.trim());
+  const sample = os && clean(os.input).length > 0 && sampleOut.length > 0 ? { input: clean(os.input), prerequisites: clean(os.prerequisites), output: sampleOut } : null;
+  const hasGet = hasFit || !!sample || !!shape || !!exampleOut || getList.length > 0 || hireJobs.length > 0 || !!(renders && b.look) || !!format || !!renders;
+  // What makes it better, kept short: extra material with a maker, and the tools it works best with.
+  const betterWith = [...(p?.plan?.needed.filter(x => !x.required) ?? []), ...(p?.plan?.helps ?? [])];
+  const betterTools = p?.works_best_with?.tools ?? [];
+  const hasCopyable = b.type === "skill" && !!p?.copyable;
+  const hasFill = textTask || bring.length > 0 || betterWith.length > 0 || betterTools.length > 0 || hasCopyable;
+  const noun = kind.name.toLowerCase();
+  const tested = b.tested?.result === "pass";
+  let part = 0;
+  const num = () => <span className="bp-n" aria-hidden="true">{++part}</span>;
+  const local = (url: string) => url.replace(/^https:\/\/useaiblocks\.com/, "");
+  const jump: [string, string][] = ([
+    ["what", isMind ? "Who they are" : "What it does", showExplanation || showWhenDetail || (!isFlow && has(p?.how_it_works))],
+    ["hire", `Hire ${mindName}`, has(p?.hire?.jobs)],
+    ["skills", "Their skills", isMind],
+    ["flows", isMind ? "Their workflows" : "Part of these workflows", inFlows.length > 0],
+    ["ideas", "Big ideas", has(p?.ideas)],
     ["seats", "On a council", has(p?.seats)],
-    ["io", "What you give it, what you get", give.length > 0 || get.length > 0 || !!renders],
+    ["io", "What goes in and out", give.length > 0 || get.length > 0],
     ["before", "Before you start", !!p?.plan && (has(p.plan.needed) || has(p.plan.helps))],
     ["steps", isAgent ? "What it runs" : "The steps", isFlow],
-    ["install", "Add it to your AI", !isFlow || isAgent],
-    ["helped", "Who can help with this", has(b.minds)],
-    ["flows", "Part of these workflows", b.type !== "mind" && inFlows.length > 0],
-    ["make", renders === "video" ? "Make the video" : "Make the picture", !!renders],
+    ["install", "Other ways to add it", !isFlow || isAgent],
+    ["helped", "Who can help", has(b.minds)],
+    ["make", renders ? makeTitle(renders) : "", !!renders],
     ["use", "How to use it", has(p?.how_to_use)],
-    ["most", "What changes the result most", has(p?.tweaks)],
-    ["test", "Test it", has(p?.judge) || has(p?.test)],
+    ["most", "What matters most", has(p?.tweaks)],
+    ["test", "Check the result", has(p?.judge) || has(p?.test)],
     ["best", "Works best with", has(p?.works_best_with?.tools) || has(p?.works_best_with?.inputs)],
     ["improve", "Make it fit your work", has(p?.improve)],
+    ["source", "Where it came from", b.origin === "imported" && !!b.source],
+    ["thinking", "Thinking it needs", !!b.thinking],
     ["file", isAgent ? "The agent file" : isFlow ? "The workflow file" : "The skill file", true],
-    ["next", "What to do next", has(p?.plan?.next)],
-  ];
+  ] as [string, string, boolean][]).filter(([, , show]) => show).map(([id, label]) => [id, label]);
 
   return (
     <main className="bp" data-testid="block-page" data-slug={b.slug}>
@@ -330,25 +380,19 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
       <header className="wrap bp-hero">
         <div className="bp-top">
           <Link to={libraryReturnTo()} className="back"><span aria-hidden="true">←</span> Back to results</Link>
-
         </div>
-        {b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={112} className="bp-face" />}
+        {isMind && <PixelFace face={b.face} area={b.area} slug={b.slug} size={112} className="bp-face" />}
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
         <h1 className="bp-h1">{p?.headline || b.name}</h1>
-        {b.type === "mind" && b.identity && <p className="bp-identity" data-testid="mind-identity">{b.identity}</p>}
+        {isMind && b.identity && <p className="bp-identity" data-testid="mind-identity">{b.identity}</p>}
         <p className="bp-sub">{p?.subhead || b.summary}</p>
-        <div className="task-primary" data-testid="task-primary">
-          <div className="task-primary-actions">
-            {(kind.id === "skill" || kind.id === "workflow") && <StarButton target={`catalogue:${b.slug}`} title={b.name} />}
-            <button className="btn btn-primary" disabled={!skill} onClick={() => void copySkill()} data-testid="copy-skill">Copy {kind.name.toLowerCase()}</button>
-            <button className="btn btn-line" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid="download-task">{downloading ? "Preparing download…" : `Download ${kind.name.toLowerCase()}`}</button>
-            {isFlow && <button className="btn btn-line" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)} data-testid="view-in-builder">View in builder</button>}
-          </div>
-          <p className="small">{isFlow ? "Download the complete files and open them in your AI. Copy gives you the main instructions." : `Copy the ${kind.name.toLowerCase()} into your AI, or download it and upload the files.`}{b.hasFiles && !isFlow && " Use the download to include supporting files."} <Link to="/how-it-works#use-in-ai">How to use</Link></p>
-          {downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}
-          {copyFailed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the instructions below.</p><textarea aria-label="Copy instructions manually" readOnly value={skill ? withBusiness(skill, getBusiness()) : ""} rows={6} onFocus={e => e.currentTarget.select()} /></div>}
-        </div>
-        {b.origin === "imported" && b.source && <Credit b={b} source={{ ...b.source, ...p?.source }} />}
+        <p className="bp-badges" data-testid="bp-badges">
+          <span>{cap(b.level)}</span>
+          {tested && <span className="is-tested" data-testid="tested" title="Passed our safety check, with a clear list of what goes in and what you get">Tested</span>}
+          {b.origin === "imported" && b.source?.by && <span>From {b.source.by}</span>}
+          {p?.added && <span data-testid="updated">Updated {new Date(`${p.added}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}</span>}
+        </p>
+        {isMind && <LabelBadges c={c} labels={b.labels} />}
         {b.warnings?.includes("scrapes") && (
           <p className="bp-warn" data-testid="scrapes-note" role="note">
             <b>This skill scrapes websites.</b> It collects data from web pages. Before you run it, check each site's terms, follow its robots.txt and go slowly so you don't overload it. Don't collect people's personal details.
@@ -359,142 +403,206 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             <b>You need a paid {paidService(b)} account.</b> This skill sends its work to {paidService(b)}, so it only runs once you add your own key. Check their prices before you start.
           </p>
         )}
-        {b.type === "mind" && <LabelBadges c={c} labels={b.labels} />}
-        {format && (
-          <p className="bp-format" data-testid="format-note">
-            <span className={`fmt fmt-${format}`}>{format === "image" ? "Image ad" : "Video ad"}</span>
-            {twin && formatOf(twin) && formatOf(twin) !== format
-              ? <>Want {format === "image" ? "a video" : "an image ad"} in the same look? <Link to={pathOf(twin)} data-testid="twin-link">{twin.name}</Link></>
-              : <>{format === "image" ? "Makes one still image ad, not a video." : "Makes a video ad, not a still."}</>}
-          </p>
-        )}
-        {renders && <MakeNote kind={renders} />}
-        <div className="task-start" id="task-start" data-testid="task-start">
-          {loadError && <p role="alert">The instructions could not load. Your draft is kept. <button className="link-btn" onClick={() => { trackUxEvent("task_retried"); setReload(n => n + 1); }}>Try again</button></p>}
-          {textTask && <h2 className="task-customize-title">Add your details <span className="small">(optional)</span></h2>}
-          <details className="task-action-help" data-testid="task-action-help"><summary>Where will I get the result?</summary><p>{textTask ? "Copy the request puts the instructions and your details on your clipboard. Paste the complete request into a new AI chat and send it." : "Download the complete files, unzip them and give them to your AI. Keep the instructions and supporting files together. Copying instructions alone leaves out the files."}</p><p>Your AI makes the result in your chat or workspace. Add any material it asks for, then check the result before using it.</p><a href="/how-it-works#use-in-ai" target="_blank" rel="noopener noreferrer">Read the steps in a new tab</a></details>
-          {bring.length > 0 && !textTask && <div><b>What to bring</b><ul className="task-materials">{bring.map((x, i) => <li key={i}>{x}</li>)}</ul><p className="small">You can add this material in your AI after downloading.</p></div>}
-          {!!p?.works_best_with?.tools?.length && <p className="small task-tool-note"><b>Tools: </b>{p.works_best_with.tools.map(t => t.name).join(", ")}. <a href="#best">Details</a></p>}
-          {sample && <details className="task-output-example" data-testid="task-example" onToggle={e => { if (e.currentTarget.open) trackUxEvent("request_previewed"); }}><summary>Example result</summary><pre>{sample}</pre><p className="small">This is an example, not work made from your details.</p></details>}
-          {textTask && <Composer key={b.slug} slug={b.slug} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />}
-          {b.type === "skill" && p?.copyable && <CopyableTask key={b.slug} c={c} b={b} recipe={p.copyable} skill={skill} toast={toast} />}
-          <details className="task-more" data-testid="task-more"><summary>More ways to use this</summary><div className="bp-actions">
-            {isFlow ? <button className="btn btn-ghost" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)}>Edit the steps</button> : <>
-              <a href="#install" className="btn btn-ghost" data-testid="add-to-ai">Save instructions in your AI</a>
-              <button className="btn btn-ghost" onClick={() => setAdding(true)} data-testid="add-to-workflow">Use in a multi-step task</button>
-            </>}
-            <KitMenu slug={b.slug} onChange={toast} />
-            <button className="link-btn" onClick={() => openTailor(b.name)}>Get help adapting this task</button>
-          </div><BusinessNote />{b.thinking && <Gauge level={b.thinking} why={p?.thinkingWhy ?? b.thinkingWhy ?? ""} />}{isFlow && <ExecutionPrompt name={b.name} />}</details>
-          {transferred && isFlow && <TransferGuide zip={zipName(b.name)} name={b.name} />}
-          {transferred && <div className="task-result-check" data-testid="task-result-check"><h3>Check the result in your AI</h3>{usefulChecks.length ? <ul>{usefulChecks.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul> : <p>Check that it uses your facts and gives you the result you asked for. Ask your AI to fix anything missing.</p>}<button className="btn btn-ghost btn-sm" onClick={() => { if (!useful) trackUxEvent("result_useful"); setUseful(true); }} data-testid="task-useful">{useful ? "Thanks for letting us know" : "I got a useful result"}</button><p className="small">Optional feedback. This site cannot check work done in another AI.</p>{useful && <div className="task-next-win"><p>Want to do this again?</p><KitMenu slug={b.slug} onChange={toast} /></div>}</div>}
-        </div>
-        <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span>{b.tested?.result === "pass" && <span data-testid="tested" title="Run on a real business's files and graded by a second AI against this page's checks">Tested</span>}</p>
       </header>
 
-      <div className="wrap bp-body">
-        <nav className="bp-toc" aria-label="On this page">
-          <details><summary>Task details</summary>
-          {toc.filter(([, , show]) => show).map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
-          <a href="#comments" data-testid="toc-comments">Questions and comments</a></details>
-        </nav>
+      <div className="wrap bp-flow">
+        {page === undefined && <p className="small" role="status">Loading…</p>}
+        {loadError && <p role="alert">The instructions could not load. Your draft is kept. <button className="link-btn" onClick={() => { trackUxEvent("task_retried"); setReload(n => n + 1); }}>Try again</button></p>}
 
-        <div className="bp-main">
-          {page === undefined && <p className="small">Loading…</p>}
+        {hasGet && (
+          <section className="bp-part bp-get" id="get" aria-labelledby="get-h">
+            <h2 className="bp-h2" id="get-h">{num()}What you get</h2>
+            {format && (
+              <p className="bp-format" data-testid="format-note">
+                <span className={`fmt fmt-${format}`}>{format === "image" ? "Image ad" : "Video ad"}</span>
+                {twin && formatOf(twin) && formatOf(twin) !== format
+                  ? <>Want {format === "image" ? "a video" : "an image ad"} in the same look? <Link to={pathOf(twin)} data-testid="twin-link">{twin.name}</Link></>
+                  : <>{format === "image" ? "Makes one still image ad, not a video." : "Makes a video ad, not a still."}</>}
+              </p>
+            )}
+            {renders && <MakeNote kind={renders} />}
+            {sample && (
+              <div className="bp-sample" data-testid="output-sample">
+                <h3 className="bp-h3">What goes in</h3>
+                <ul className="bp-getlist">{sample.input.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul>
+                {sample.prerequisites.length > 0 && <><h4 className="bp-sample-h">Before you start</h4><ul className="bp-getlist">{sample.prerequisites.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></>}
+                <h3 className="bp-h3">What comes out</h3>
+                <ul className="bp-sample-out" data-testid="you-get">
+                  {(showAllSample ? sample.output : sample.output.slice(0, 6)).map((o, i) => <li key={i}><b className={/^[\w\-./]+\.\w{2,5}$/.test(o.name.trim()) ? "mono" : undefined}>{o.name}</b><span>{txt(o.contains)}</span></li>)}
+                </ul>
+                {sample.output.length > 6 && <button className="link-btn" onClick={() => setShowAllSample(v => !v)} aria-expanded={showAllSample} data-testid="sample-toggle">{showAllSample ? "Show fewer" : `Show all ${sample.output.length}`}</button>}
+              </div>
+            )}
+            {shape && (sample ? (
+              <details className="bp-layout">
+                <summary>See the full layout</summary>
+                <p className="bp-note">Every run hands it back in this order. Your details fill each &lt;gap&gt;.</p>
+                <div data-testid="what-you-get"><Code name="what-you-get.txt" text={shape} toast={toast} /></div>
+              </details>
+            ) : (
+              <>
+                <p className="bp-note">Every run hands it back in this order. Your details fill each &lt;gap&gt;.</p>
+                <div data-testid="what-you-get"><Code name="what-you-get.txt" text={shape} toast={toast} /></div>
+              </>
+            ))}
+            {exampleOut && (
+              <details className="task-output-example" data-testid="task-example" open onToggle={e => { if (e.currentTarget.open) trackUxEvent("request_previewed"); }}>
+                <summary>Example result</summary><pre>{exampleOut}</pre><p className="small">This is an example, not work made from your details.</p>
+              </details>
+            )}
+            {getList.length > 0 && <ul className="bp-getlist" data-testid="you-get">{getList.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul>}
+            {!sample && hireJobs.length > 0 && <><p className="bp-note">What you can hire {mindName} for.</p><ul className="bp-getlist" data-testid="mind-gets">{hireJobs.map((x, i) => <li key={i}>{x.title}</li>)}</ul></>}
+            <Look b={b} kind={renders} />
+            {hasFit && (
+              <div className="bp-fit" data-testid="is-it-for-you">
+                <h3 className="bp-h3">Is it for you?</h3>
+                <div className="bp-fit-cols">
+                  {useWhen.length > 0 && <div><h4>Use it when</h4><ul>{useWhen.map((w, i) => <li key={i}>{txt(w)}</li>)}</ul></div>}
+                  {skipWhen.length > 0 && <div><h4>Skip it when</h4><ul>{skipWhen.map((w, i) => <li key={i}>{txt(w)}</li>)}</ul></div>}
+                </div>
+              </div>
+            )}
+          </section>
+        )}
 
-          {p?.output_shape && (
-            <TaskSection id="get" title="What you'll get" lead="Every run hands it back in this order. Your details fill each <gap>." wide>
-              <WhatYouGet plan={p.plan} tools={p.works_best_with?.tools ?? []}><Code name="what-you-get.txt" text={p.output_shape} toast={toast} /></WhatYouGet>
-            </TaskSection>
-          )}
+        {hasFill && (
+          <section className="bp-part task-start" id="task-start" data-testid="task-start" aria-labelledby="fill-h">
+            <h2 className="bp-h2" id="fill-h">{num()}Fill it in</h2>
+            <p className="bp-note">{textTask ? "Add what this task works from, then copy the request. Your details are optional but make the result yours." : bring.length > 0 ? "Gather these first. You add them in your AI after you download." : "Add these for a better result."}</p>
+            {bring.length > 0 && !textTask && <div><b>What to bring</b><ul className="task-materials">{bring.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
+            {textTask && <Composer key={b.slug} slug={b.slug} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />}
+            {hasCopyable && <CopyableTask key={b.slug} c={c} b={b} recipe={p!.copyable!} skill={skill} toast={toast} />}
+            {(betterWith.length > 0 || betterTools.length > 0) && (
+              <p className="small task-better" data-testid="better-with"><b>Better with: </b>
+                {[...betterWith.map(i => i.maker ? <Link key={i.key} to={local(i.maker.url)}>{i.label}</Link> : <span key={i.key}>{i.label}</span>), ...betterTools.map(t => <span key={t.name} title={t.why}>{t.name}</span>)]
+                  .flatMap((el, i) => i ? [", ", el] : [el])}.
+              </p>
+            )}
+            {!textTask && <BusinessNote />}
+          </section>
+        )}
 
-          {(showExplanation || has(p?.when) || (!isFlow && has(p?.how_it_works))) && (
-            <TaskSection id="what" title={kindOf(b) === "mind" ? "Who they are" : "What it does"}>
+        <section className="bp-part task-primary" id="run" data-testid="task-primary" aria-labelledby="run-h">
+          <h2 className="bp-h2" id="run-h">{num()}Run it</h2>
+          <p className="bp-note">{isFlow ? "Download the complete files and open them in your AI. Copy gives you the main instructions." : `Add the ${noun} to your AI to reuse it. Pasting it into a chat works too.`}{b.hasFiles && !isFlow && " Use the download to include supporting files."} <Link to="/how-it-works#use-in-ai">How to use</Link></p>
+          <div className="task-primary-actions">
+            {(kind.id === "skill" || kind.id === "workflow") && <StarButton target={`catalogue:${b.slug}`} title={b.name} />}
+            <button className="btn btn-primary" disabled={!skill} onClick={() => void copySkill()} data-testid="copy-skill">Copy {noun}</button>
+            <button className="btn btn-line" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid="download-task">{downloading ? "Preparing download…" : `Download ${noun}`}</button>
+            {isFlow && <button className="btn btn-line" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)} data-testid="view-in-builder">View in builder</button>}
+          </div>
+          {downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}
+          {copyFailed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the instructions below.</p><textarea aria-label="Copy instructions manually" readOnly value={skill ? withBusiness(skill, getBusiness()) : ""} rows={6} onFocus={e => e.currentTarget.select()} /></div>}
+          {!isFlow && <RunInAi noun={noun} hasFiles={!!b.hasFiles} />}
+          <div className="task-start-extras">
+            <details className="task-action-help" data-testid="task-action-help"><summary>Where will I get the result?</summary><p>{textTask ? "Copy the request puts the instructions and your details on your clipboard. Paste the complete request into a new AI chat and send it." : "Download the complete files, unzip them and give them to your AI. Keep the instructions and supporting files together. Copying instructions alone leaves out the files."}</p><p>Your AI makes the result in your chat or workspace. Add any material it asks for, then check the result before using it.</p><a href="/how-it-works#use-in-ai" target="_blank" rel="noopener noreferrer">Read the steps in a new tab</a></details>
+            {isMind && has(p?.seats) && <div className="bp-actions"><button className="btn btn-line" data-testid="start-council" onClick={() => {
+              const with_ = [b.slug, ...(p!.pairs ?? []).filter((s) => c.bySlug[s]).slice(0, 2)];
+              toBuilder([...with_, ...(c.bySlug["advisory-council"] ? ["advisory-council"] : [])], `Council: ${with_.map((s) => c.bySlug[s].name.split(" (")[0]).join(", ")}`);
+            }}>Start a council with {mindName}</button><Link to="/minds" className="btn btn-ghost">Pick other minds</Link></div>}
+            <details className="task-more" data-testid="task-more"><summary>More ways to use this</summary><div className="bp-actions">
+              {isFlow ? <button className="btn btn-ghost" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)}>Edit the steps</button> : <>
+                <button className="btn btn-ghost" onClick={() => setAdding(true)} data-testid="add-to-workflow">Use in a multi-step task</button>
+              </>}
+              <KitMenu slug={b.slug} onChange={toast} />
+              <button className="link-btn" onClick={() => openTailor(b.name)}>Get help adapting this task</button>
+            </div>{!hasFill && <BusinessNote />}{isFlow && <ExecutionPrompt name={b.name} />}</details>
+          </div>
+          {transferred && isFlow && <TransferGuide zip={zipName(b.name)} name={b.name} />}
+          {transferred && <div className="task-result-check" data-testid="task-result-check"><h3>Check the result in your AI</h3>{usefulChecks.length ? <ul>{usefulChecks.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul> : <p>Check that it uses your facts and gives you the result you asked for. Ask your AI to fix anything missing.</p>}<button className="btn btn-ghost btn-sm" onClick={() => { if (!useful) trackUxEvent("result_useful"); setUseful(true); }} data-testid="task-useful">{useful ? "Thanks for letting us know" : "I got a useful result"}</button><p className="small">Optional feedback. This site cannot check work done in another AI.</p>{useful && <div className="task-next-win"><p>Want to do this again?</p><KitMenu slug={b.slug} onChange={toast} /></div>}</div>}
+        </section>
+
+        {has(p?.plan?.next) && (
+          <section className="bp-next" id="next" aria-labelledby="next-h">
+            <h2 className="bp-h2" id="next-h">What to do next</h2>
+            <p className="bp-note">When it's done, the skill asks what you want to do next and offers these. You can also ask for something else.</p>
+            <Next plan={p!.plan!} />
+          </section>
+        )}
+
+        <DetailsPanel watch={p}>
+          <nav className="bp-jump" aria-label="In the details">
+            {jump.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
+            <a href="#comments" data-testid="toc-comments">Questions and comments</a>
+          </nav>
+
+          {(showExplanation || showWhenDetail || (!isFlow && has(p?.how_it_works))) && (
+            <DetailSection id="what" title={isMind ? "Who they are" : "What it does"}>
               {showExplanation && <div className="prose big" dangerouslySetInnerHTML={{ __html: p!.html.explain }} />}
-              {has(p?.when) && (
+              {showWhenDetail && (
                 <div className="when-box">
-                  <h3>Reach for it when</h3>
+                  <h4>Reach for it when</h4>
                   <ul>{p!.when.map((w, i) => <li key={i}>{txt(w)}</li>)}</ul>
                 </div>
               )}
               {!isFlow && has(p?.how_it_works) && (
                 <>
-                  <h3 className="sub-h">Step by step, here's what your AI does</h3>
+                  <h4 className="sub-h">Step by step, here's what your AI does</h4>
                   <ol className="how-list">{p!.how_it_works.map((s, i) => <li key={i}><span className="n">{String(i + 1).padStart(2, "0")}</span><div><b>{s.title}</b><p>{s.text}</p></div></li>)}</ol>
                 </>
               )}
-            </TaskSection>
+            </DetailSection>
           )}
 
           {has(p?.hire?.jobs) && (
-            <TaskSection id="hire" title={`Hire ${b.name.split(" (")[0]}`} lead={`Bring a real problem from your business, your work or your life. This is how ${b.name.split(" (")[0]} would take it on.`}>
+            <DetailSection id="hire" title={`Hire ${mindName}`} lead={`Bring a real problem from your business, your work or your life. This is how ${mindName} would take it on.`}>
               <ul className="ideas" data-testid="mind-hire">{p!.hire!.jobs.map((x, i) => <li key={i}><b>{x.title}</b>{x.text && <p>{x.text}</p>}</li>)}</ul>
               {has(p!.hire!.steps) && (
                 <>
-                  <h3 className="sub-h">How they'd take on your problem</h3>
+                  <h4 className="sub-h">How they'd take on your problem</h4>
                   <ol className="how-list">{p!.hire!.steps.map((s, i) => <li key={i}><span className="n">{String(i + 1).padStart(2, "0")}</span><div><b>{s.title}</b><p>{s.text}</p></div></li>)}</ol>
                 </>
               )}
               {has(p!.hire!.questions) && (
                 <>
-                  <h3 className="sub-h">First questions they'd ask you</h3>
+                  <h4 className="sub-h">First questions they'd ask you</h4>
                   <ul className="ideas">{p!.hire!.questions.map((q, i) => <li key={i}><p>{q}</p></li>)}</ul>
                 </>
               )}
-            </TaskSection>
+            </DetailSection>
           )}
 
-          {b.type === "mind" && (
-            <TaskSection id="skills" title={`Skills from ${b.name.split(" (")[0]}'s work`} lead={`Each skill does one job, and you can use it alone. Pick the ones you want and download them with ${b.name.split(" (")[0]} as one pack, so each job is done the way ${b.name.split(" (")[0]} would do it.`}>
+          {isMind && (
+            <DetailSection id="skills" title={`Skills from ${mindName}'s work`} lead={`Each skill does one job, and you can use it alone. Pick the ones you want and download them with ${mindName} as one pack, so each job is done the way ${mindName} would do it.`}>
               <MindSkills c={c} mind={b} toast={toast} />
-            </TaskSection>
+            </DetailSection>
           )}
 
-          {b.type === "mind" && inFlows.length > 0 && (
-            <TaskSection id="flows" title="Workflows from their work" lead="Whole jobs built from their method. Each runs several skills in order, and each skill's result feeds the next.">
+          {isMind && inFlows.length > 0 && (
+            <DetailSection id="flows" title="Workflows from their work" lead="Whole jobs built from their method. Each runs several skills in order, and each skill's result feeds the next.">
               <WorkflowList c={c} flows={inFlows} testid="in-workflows" />
-            </TaskSection>
+            </DetailSection>
           )}
 
           {has(p?.ideas) && (
-            <TaskSection id="ideas" title="Their big ideas" lead={`What it draws on when it answers. Each comes from ${b.name.split(" (")[0]}'s own work, with sources at the end of the skill file.`}>
+            <DetailSection id="ideas" title="Their big ideas" lead={`What it draws on when it answers. Each comes from ${mindName}'s own work, with sources at the end of the skill file.`}>
               <ul className="ideas" data-testid="mind-ideas">{p!.ideas!.map((x, i) => <li key={i}><b>{x.title}</b>{x.text && <p>{x.text}</p>}</li>)}</ul>
-            </TaskSection>
+            </DetailSection>
           )}
 
           {has(p?.seats) && (
-            <TaskSection id="seats" title="On a council" lead="Put them on an advisory council with other minds, and they argue your decision. These are the seats we suggest. You can give them any role.">
+            <DetailSection id="seats" title="On a council" lead="Put them on an advisory council with other minds, and they argue your decision. These are the seats we suggest. You can give them any role.">
               <ul className="seats">{p!.seats!.map((s, i) => <li key={i}><b>{s.seat}</b><span>Always asks: “{s.asks}”</span></li>)}</ul>
-              <div className="bp-actions">
-                <button className="btn btn-primary" data-testid="start-council" onClick={() => {
-                  const with_ = [b.slug, ...(p!.pairs ?? []).filter((s) => c.bySlug[s]).slice(0, 2)];
-                  toBuilder([...with_, ...(c.bySlug["advisory-council"] ? ["advisory-council"] : [])], `Council: ${with_.map((s) => c.bySlug[s].name.split(" (")[0]).join(", ")}`);
-                }}>Start a council with {b.name.split(" (")[0]}</button>
-                <Link to="/minds" className="btn btn-dark">Pick other minds</Link>
-              </div>
-            </TaskSection>
+            </DetailSection>
           )}
 
-          {(give.length > 0 || get.length > 0 || !!renders) && (
-            <TaskSection id="io" title="What you give it, what you get">
-              {(give.length > 0 || get.length > 0) && (
-                <div className="give-get">
-                  {give.length > 0 && <div><h3>You give it</h3><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
-                  {get.length > 0 && <div><h3>You get</h3><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
-                </div>
-              )}
-              <Look b={b} kind={renders} />
-            </TaskSection>
+          {(give.length > 0 || get.length > 0) && (
+            <DetailSection id="io" title="What you give it, what you get">
+              <div className="give-get">
+                {give.length > 0 && <div><h4>You give it</h4><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
+                {get.length > 0 && <div><h4>You get</h4><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
+              </div>
+            </DetailSection>
           )}
 
           {p?.plan && (has(p.plan.needed) || has(p.plan.helps)) && (
-            <TaskSection id="before" title="Before you start" lead="Check what is required for this task. Extra material can help when it is relevant.">
+            <DetailSection id="before" title="Before you start" lead="Check what is required for this task. Extra material can help when it is relevant.">
               <Before plan={p.plan} />
-            </TaskSection>
+            </DetailSection>
           )}
 
           {isFlow && (
-            <TaskSection id="steps" title={isAgent ? "What it runs" : "The steps"} lead={isAgent ? "It chooses the skills needed for your goal and current state. The agent file sets the conditions, checks and action limits." : "Each step is a skill. It saves its result, and the next step picks it up."}>
+            <DetailSection id="steps" title={isAgent ? "What it runs" : "The steps"} lead={isAgent ? "It chooses the skills needed for your goal and current state. The agent file sets the conditions, checks and action limits." : "Each step is a skill. It saves its result, and the next step picks it up."}>
               <ol className="flow-steps">
                 {b.steps.map((s, i) => {
                   const sb = c.bySlug[s.uses];
@@ -511,112 +619,118 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
                   );
                 })}
               </ol>
-            </TaskSection>
+            </DetailSection>
           )}
 
           {(!isFlow || isAgent) && (
-            <TaskSection id="install" title="Save the instructions in your AI" lead="Optional setup for work you want to repeat.">
+            <DetailSection id="install" title={isFlow ? "Get the complete pack" : "Other ways to add it to your AI"} lead={isFlow ? undefined : "Download the files and follow the steps for a chat, a coding assistant or a saved AI project."}>
               {isFlow ? <><p>The pack includes the complete selected skills, their supporting files and the execution rules. Give the whole folder to your AI and start with START_HERE.txt.</p><button className="btn btn-primary" onClick={handoff}>{isAgent ? "Get the complete agent pack" : "Download the workflow"}</button></> : <Install b={b} skill={skill} toast={toast} onPrepared={() => setTransferred(true)} />}
-            </TaskSection>
+            </DetailSection>
           )}
 
           {has(b.minds) && (
-            <TaskSection id="helped" title="Who can help with this" lead="This skill comes from these people's work. In the builder, put one on the step to have it done their way, or download them together from their page.">
+            <DetailSection id="helped" title="Who can help with this" lead="This skill comes from these people's work. In the builder, put one on the step to have it done their way, or download them together from their page.">
               <HelpedBy c={c} b={b} />
-            </TaskSection>
+            </DetailSection>
           )}
 
-          {b.type !== "mind" && inFlows.length > 0 && (
-            <TaskSection id="flows" title="Part of these workflows" lead="This skill is a step in these workflows. Each one runs several skills in order, so the whole job gets done in one run.">
+          {!isMind && inFlows.length > 0 && (
+            <DetailSection id="flows" title="Part of these workflows" lead="This skill is a step in these workflows. Each one runs several skills in order, so the whole job gets done in one run.">
               <WorkflowList c={c} flows={inFlows} testid="in-workflows" />
-            </TaskSection>
+            </DetailSection>
           )}
 
           {renders && (
-            <TaskSection id="make" title={makeTitle(renders)} lead={renders === "image"
+            <DetailSection id="make" title={makeTitle(renders)} lead={renders === "image"
               ? "Claude writes the prompt but can't draw it. Finish it in a tool you already have."
               : "Claude writes the prompts but can't make video. Finish it in a tool you already have."}>
               <MakeIt kind={renders} />
-            </TaskSection>
+            </DetailSection>
           )}
 
           {has(p?.how_to_use) && (
-            <TaskSection id="use" title="How to use it">
+            <DetailSection id="use" title="How to use it">
               <ol className="num-list">{p!.how_to_use.map((s, i) => <li key={i}><span className="n">{i + 1}</span><span>{txt(s)}</span></li>)}</ol>
               {textTask && <a href="#task-start">Add your details above</a>}
-            </TaskSection>
+            </DetailSection>
           )}
 
           {has(p?.tweaks) && (
-            <TaskSection id="most" title="What changes the result most" lead="Get these parts of your input right and every run gets better.">
+            <DetailSection id="most" title="What changes the result most" lead="Get these parts of your input right and every run gets better.">
               <dl className="tweaks">{p!.tweaks.map((t, i) => <div key={i}><dt>{t.what}</dt><dd>{t.how}</dd></div>)}</dl>
-            </TaskSection>
+            </DetailSection>
           )}
 
           {(has(p?.judge) || has(p?.test)) && (
-            <TaskSection id="test" title="Test it">
+            <DetailSection id="test" title="Test it">
               {has(p?.judge) && (
                 <>
-                  <h3 className="sub-h">Is the output good? Check these first</h3>
+                  <h4 className="sub-h">Is the output good? Check these first</h4>
                   <ul className="checks">{p!.judge.map((j, i) => <li key={i}>{txt(j)}</li>)}</ul>
                 </>
               )}
               {has(p?.test) && (
                 <>
-                  <h3 className="sub-h">Try it on your own work before you rely on it</h3>
+                  <h4 className="sub-h">Try it on your own work before you rely on it</h4>
                   <ol className="num-list">{p!.test!.map((s, i) => <li key={i}><span className="n">{i + 1}</span><span>{txt(s)}</span></li>)}</ol>
                 </>
               )}
-            </TaskSection>
+            </DetailSection>
           )}
 
           {(has(p?.works_best_with?.tools) || has(p?.works_best_with?.inputs)) && (
-            <TaskSection id="best" title="Works best with" lead="Check which tools and extra files suit this task.">
+            <DetailSection id="best" title="Works best with" lead="Check which tools and extra files suit this task.">
               {has(p!.works_best_with!.tools) && (
                 <dl className="best-tools">{p!.works_best_with!.tools!.map((t, i) => <div key={i}><dt>{t.name}</dt><dd>{txt(t.why)}</dd></div>)}</dl>
               )}
               {has(p!.works_best_with!.inputs) && (
                 <>
-                  <h3 className="best-h3">Add these for a better result</h3>
+                  <h4 className="best-h3">Add these for a better result</h4>
                   <ul className="plain-list">{p!.works_best_with!.inputs!.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul>
                 </>
               )}
-            </TaskSection>
+            </DetailSection>
           )}
 
           {has(p?.improve) && (
-            <TaskSection id="improve" title="Make it fit your work" lead="The skill is a plain text file. Change it once and every run after that fits you better.">
+            <DetailSection id="improve" title="Make it fit your work" lead="The skill is a plain text file. Change it once and every run after that fits you better.">
               <ul className="plain-list">{p!.improve.map((j, i) => <li key={i}>{txt(j)}</li>)}</ul>
-            </TaskSection>
+            </DetailSection>
           )}
 
           {has(p?.terms) && (
-            <section className="bp-sec terms" aria-label="Words on this page">
-              <h3>Words on this page</h3>
+            <section className="bp-sec bp-detail terms" aria-label="Words on this page">
+              <h3 className="bp-h3">Words on this page</h3>
               <dl>{p!.terms.map((t, i) => <div key={i}><dt>{t.term}</dt><dd>{t.meaning}</dd></div>)}</dl>
             </section>
           )}
 
+          {b.origin === "imported" && b.source && (
+            <DetailSection id="source" title="Where it came from">
+              <Credit b={b} source={{ ...b.source, ...p?.source }} />
+            </DetailSection>
+          )}
+
           {has(p?.credits) && (
-            <section className="bp-sec terms credits" aria-label="Built with ideas from">
-              <h3>Built with ideas from</h3>
+            <section className="bp-sec bp-detail terms credits" aria-label="Built with ideas from">
+              <h3 className="bp-h3">Built with ideas from</h3>
               <ul className="plain-list">{p!.credits!.map((c, i) => <li key={i}>{c.url ? <a href={c.url} target="_blank" rel="noopener noreferrer">{c.title}</a> : c.title}{c.by && <>, {c.by}</>}{c.used && <><br /><span className="small">{c.used}</span></>}</li>)}</ul>
             </section>
           )}
 
-          <TaskSection id="file" title={isAgent ? "The agent file" : isFlow ? "The workflow file" : "The skill file"} lead={`This is what your AI follows. It's saved as ${b.slug}/SKILL.md, the name Claude, Claude Code and our workflows call it by.`}>
+          {b.thinking && (
+            <DetailSection id="thinking" title="How much thinking it needs">
+              <Gauge level={b.thinking} why={p?.thinkingWhy ?? b.thinkingWhy ?? ""} />
+            </DetailSection>
+          )}
+
+          <DetailSection id="file" title={isAgent ? "The agent file" : isFlow ? "The workflow file" : "The skill file"} lead={`This is what your AI follows. It's saved as ${b.slug}/SKILL.md, the name Claude, Claude Code and our workflows call it by.`}>
             <details className="skill-file" open={!p}>
               <summary>Read the full {isAgent ? "agent" : isFlow ? "workflow" : "skill"}</summary>
               {p ? <div className="prose" dangerouslySetInnerHTML={{ __html: normalizeSkillHtml(p.html.skill, b.slug, p.files ?? []) }} /> : skill ? <pre className="prose">{skill}</pre> : <p className="small">Loading…</p>}
             </details>
-          </TaskSection>
-
-          {has(p?.plan?.next) && (
-            <TaskSection id="next" title="What to do next" lead="When it's done, the skill asks what you want to do next and offers these. You can also ask for something else.">
-              <Next plan={p!.plan!} />
-            </TaskSection>
-          )}
-        </div>
+          </DetailSection>
+        </DetailsPanel>
       </div>
     </main>
   );

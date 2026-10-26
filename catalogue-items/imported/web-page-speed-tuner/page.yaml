@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads clear speed signals and ranks well-known fixes.
 new_slug: web-page-speed-tuner
 name: Web page speed tuner
-summary: Give it a slow site. Get fixes for network, loading and rendering,
-  ranked by gain. Uses High Performance Browser Networking.
+summary: Find why your slow website is slow. Give it your site and speed numbers. You get a ranked list of fixes, best gain first, plus a score out of 10.
 job: build-websites
 headline: Web page speed tuner
-subhead: "A ranked list of fixes that make your slow site faster, starting with
-  the ones that gain the most. It is grounded in one idea: delay, not bandwidth,
-  is what slows most pages."
+subhead: "A ranked list of fixes that make your slow site faster, starting with the ones that gain the most. It is grounded in one idea: delay, not bandwidth, is what slows most pages."
 explain: |
   A ranked list of fixes that make your slow site faster, starting with the ones that gain the most. It is grounded in one idea: delay, not bandwidth, is what slows most pages.
 
@@ -18,6 +15,10 @@ when:
   - Your speed score is poor and you do not know why.
   - You want to get faster on mobile networks.
   - You are choosing between many small fixes and need an order.
+not_for:
+  - You want to change how the page looks. Use a design guide or ask a designer, since this only covers speed.
+  - You want better fonts or type choices. Ask for a typography review, since this only covers how fonts load.
+  - You have no speed numbers yet. Run a free PageSpeed or Lighthouse test first, then come back.
 you_give:
   - Your site address or code
   - Speed test results or numbers (optional)
@@ -29,7 +30,30 @@ you_get:
   - A score on eight checks
   - Config or code changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Run a free speed test on your key pages, such as PageSpeed Insights, and copy the numbers.
+  - Paste your site address or code, the numbers, and what feels slow.
+  - Read the score and the failed checks first. Any number you did not give is marked unknown.
+  - Start with the top fix on the ranked list, then test again.
+output_sample:
+  input:
+    - Your site address or code
+    - Your PageSpeed or Lighthouse numbers (optional)
+    - Your hosting and tools (optional)
+    - The pages that matter most
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Speed test numbers, or your AI will mark them unknown
+  output:
+    - name: Score
+      contains: A score out of 10 based on how many of the eight diagnostic checks pass.
+    - name: Failed checks
+      contains: Which of the eight checks failed, so you see where the problems are.
+    - name: Ranked fixes
+      contains: Each fix in order of expected gain, with the reason it helps.
+    - name: Network fixes
+      contains: Changes to protocol version, connections, and round trips between the browser and your server.
+    - name: Loading and caching fixes
+      contains: Changes to resource order, caching rules, compression and files that block the first paint.
+    - name: Config or code changes
+      contains: Settings or code you can apply to make each fix.

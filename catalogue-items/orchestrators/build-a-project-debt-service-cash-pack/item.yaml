@@ -1,15 +1,13 @@
 slug: build-a-project-debt-service-cash-pack
 name: Build a project debt service cash pack
-summary: A linked project cash, debt repayment and loan-life cover schedule
+summary: "Turn three years of project cash into a loan repayment schedule and a loan-life cover check, using your lender's own cash definition and rate."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - project-cash-available-bridge
   - debt-repayment-sculpting-planner

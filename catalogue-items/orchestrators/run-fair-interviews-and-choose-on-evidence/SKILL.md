@@ -44,13 +44,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the stages.** Use the skill `interview-process-planner`. The stages for this role and level, who runs each one and what it checks, so no stage repeats another.
-2. **Write the scorecards.** Use the skill `interview-scorecard-builder`. Give it the stage plan. One scorecard per stage: the set questions, what a strong and a weak answer sound like, and a rating guide every interviewer uses.
-3. **Design a work test.** Use the skill `work-sample-test-designer`. Give it the role brief and the stage plan. A short task taken from the real job, a scoring guide and fairness checks, so candidates are judged on work.
+1. **Plan the stages.** Use the skill `interview-process-planner`. The stages for this role and level, who runs each one and what it checks, so no stage repeats another. Hand steps 2 and 3 the stage plan.
+2. **Write the scorecards.** Use the skill `interview-scorecard-builder`. Give it the stage plan. One scorecard per stage: the set questions, what a strong and a weak answer sound like, and a rating guide every interviewer uses. Hand step 4 the scorecards.
+3. **Design a work test.** Use the skill `work-sample-test-designer`. Give it the role brief, the stage plan from step 1 and the scorecards from step 2. A short task taken from the real job, a scoring guide and fairness checks, so candidates are judged on work.
 
 Pause here: Run the interviews and the work test. Every interviewer fills in their scorecard before they talk to anyone else about a candidate.
 
-4. **Compare on evidence.** Use the skill `fair-candidate-comparer`. Give it the scorecards and any transcripts. Candidates compared on the scorecards alone, with a flag on any note that rests on feel or on something unrelated to the job. You make the call.
+4. **Compare on evidence.** Use the skill `fair-candidate-comparer`. Give it the filled-in scorecards and test results you bring after the pause, and any transcripts, rated against step 2's scorecards and step 3's scoring guide. Hand step 5 the comparison. Candidates compared on the scorecards alone, with a flag on any note that rests on feel or on something unrelated to the job. You make the call.
 5. **Draft every reply.** Use the skill `candidate-message-drafter`. Give it your decision and the comparison. The offer call for the person you chose and a clear, kind reply for everyone else, with the real reason where you can give one. Nothing is sent until you say so.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

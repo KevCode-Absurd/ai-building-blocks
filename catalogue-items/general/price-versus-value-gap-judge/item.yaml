@@ -1,6 +1,6 @@
 slug: price-versus-value-gap-judge
 name: "Price versus value gap judge"
-summary: "Paste your value range, asset floor and the price. Get whether there is a real margin of safety and what removes it."
+summary: "See if a price leaves a real margin of safety against your value range and asset floor, and what caused and could close the gap."
 category: general
 type: skill
 role: check
@@ -10,6 +10,9 @@ inputs:
   - {type: audit_report, required: true}
 outputs:
   - {type: audit_report}
+needs_mode: manual
+before: [earnings-value-range-builder, asset-floor-estimator]
+next: [sit-still-rule-writer, holding-value-change-checker]
 origin: rebuilt
 version: 1.0.0
 minds: [benjamin-graham, warren-buffett]

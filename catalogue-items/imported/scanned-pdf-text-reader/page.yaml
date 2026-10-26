@@ -2,36 +2,63 @@ thinking: low
 thinking_why: It runs a parser and returns text with little judgement.
 new_slug: scanned-pdf-text-reader
 name: Scanned PDF text reader
-summary: Give it PDFs, Office files or scans. Get text with page positions, read
-  with OCR when needed, all on your computer.
+summary: Turn scanned PDFs, Office files and images into text with page positions. Runs on your computer, with OCR for scans. A PDF text reader that keeps layout.
 job: work-with-files
 headline: Scanned PDF text reader
-subhead: Text out of PDFs, Office files and scanned images, with the position of
-  every line on the page, all processed on your own computer. Nothing goes to a
-  cloud service.
+subhead: Give it PDFs, Office files or scanned images. It reads the text and keeps the position of each line on the page. Files stay on your computer unless you set up an HTTP OCR server. The first time you use a language, its OCR files download from GitHub.
 explain: |
   Text out of PDFs, Office files and scanned images, with the position of every line on the page, all processed on your own computer. Nothing goes to a cloud service.
 
   A tool called LiteParse reads the file and returns layout-aware text, structured JSON or rough markdown. For scans it runs OCR with a bundled engine, so pages with no real text still come out. Each piece of text carries a bounding box, so you can cite exactly where something was found. It can also save page images so another model can look at charts or handwriting, and it runs on whole folders. You need Python, and LibreOffice for Office formats.
 when:
-  - You have scanned contracts and need searchable text.
-  - You want to feed a folder of papers into a search tool and keep page
-    locations.
-  - Your documents are private and must not leave your machine.
-  - You need to cite the exact spot on a page.
+  - You have scanned contracts and need text you can search.
+  - You want to feed a folder of papers into a search tool and keep page positions.
+  - Your documents are private and you want them read on your own computer.
+  - You need to point to the exact spot on a page.
+not_for:
+  - "You need clean tables or handwriting read well: use LlamaParse, a cloud service you sign up for separately."
+  - "You want to merge, split or rotate PDFs: use a PDF library such as pypdf."
+  - "You want simple Markdown from web pages, EPUB or audio: use the MarkItDown skill."
 you_give:
-  - PDFs, Office files or images
-  - Whether pages are scans
-  - Output type, such as text or JSON
-  - OCR language (optional)
+  - Your PDFs, Office files or images, or a folder of them
+  - "The output you want: text, JSON or Markdown"
+  - Which pages to read (optional)
+  - The OCR language (optional)
+  - The PDF password (optional)
 you_get:
-  - Text from every page
-  - Bounding box positions
+  - Text from every page you chose
+  - The box position of each piece of text, in JSON
   - OCR text for scanned pages
-  - Page images (optional)
+  - Page images for charts or handwriting (optional)
+  - A list of any pages that failed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and save files.
+  - Open an AI that can run Python code and save files, such as Claude with code tools. Paste this skill in.
+  - "Ask it to run: uv pip install liteparse==2.15.0. For Word, Excel or PowerPoint files, install LibreOffice too."
+  - "Upload your file and ask it to run: lit parse yourfile.pdf --format json -o out.json."
+  - For a scan in another language, add --ocr-language with the language code, such as fra.
+  - Ask it to check the total page count and any page errors, so you know no pages were skipped.
+  - Compare one page image with the text to check columns and tables.
+output_sample:
+  input:
+    - Your PDF, Office file or image, or a folder of them
+    - "The output you want: plain text, JSON with positions, or Markdown"
+    - Which pages to read (optional)
+    - The OCR language, such as French (optional)
+    - The PDF password (optional)
+  prerequisites:
+    - An AI that can run Python code and save files
+    - Python 3.10 or newer, with liteparse installed
+    - LibreOffice, only for Word, Excel and PowerPoint files
+  output:
+    - name: Layout text
+      contains: The text of each page, laid out as it appears on the page.
+    - name: JSON file
+      contains: Each piece of text with its page number and box position, so you can cite where it was found.
+    - name: Markdown file
+      contains: A rough Markdown version with headings, tables and links, guessed from the layout.
+    - name: OCR text
+      contains: Text read from scanned pages that had no real text.
+    - name: Page images
+      contains: PNG pictures of chosen pages, so another AI can look at charts or handwriting.
+    - name: Folder of parsed files
+      contains: One result file per document when you run a whole folder.

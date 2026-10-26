@@ -16,6 +16,29 @@ use_cases:
   - "Find people who don't buy anything in your category yet, and what a simple version would need to do for them"
   - "Ask which theory sits behind a plan before you act on a single success story"
   - "Look at where your time and energy go each week, and whether that matches what matters most to you"
+not_for:
+  - "You need a measurable goal system or a plan to track a business threat: hire Andy Grove, not this one."
+  - "You want to know what keeps a lasting edge over rivals: use Hamilton Helmer, who tests the benefit a business earns."
+  - "You want advice on team trust or honest feedback at work: use Amy Edmondson or Kim Scott."
+output_sample:
+  input:
+    - A real purchase story or a customer who switched
+    - A cheap or simple rival you are worried about (optional)
+    - A product choice, feature list or new idea you must decide on (optional)
+    - What your customers did before they bought from you (optional)
+  output:
+    - name: The puzzle and the theory
+      contains: The question behind your problem, the plain theory he would use and one ordinary story that makes it clear.
+    - name: Job statement
+      contains: One sentence in the buyer's words, with the practical, social and emotional sides of the job.
+    - name: Rivals list
+      contains: Everything the buyer could hire for that job, including doing nothing, with a short line on each.
+    - name: Questions for you
+      contains: First questions about the facts that do not fit, such as what the buyer had to stop doing.
+    - name: What to watch and test
+      contains: Who to talk to, what to observe and what to test next, with the fitting workflow named.
+    - name: Where the theory is weak
+      contains: A plain note when the theory does not apply, such as when there is no real struggle.
 seats:
   - {seat: "Disruption and jobs to be done", asks: "What job is the customer hiring this to do, and who at the low end is getting that job done more cheaply?"}
   - {seat: "Theory checker", asks: "What theory are we using to make that statement, and what case would it fail to explain?"}

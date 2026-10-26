@@ -85,3 +85,29 @@ improve:
   - Add your real return and refund rates to the guarantee skill after one quarter.
   - Save the winning offer and its stop rule in your brand file for your ad and email skills.
   - Re-run step 4 before every sale, with that sale's discount and costs.
+not_for:
+  - You already have an offer and only want to test a discount against your profit goal. Use the Discount impact checker.
+  - You have not set your price yet. Use Price a product so it pays after every cost.
+  - You only want bundles, a free-shipping line and an after-sale offer. Use Raise order value with bundles and add-ons you can check.
+output_sample:
+  input:
+    - Your product, its price and your buyer's biggest doubt in their own words
+    - Your cost per unit, shipping, fulfilment and payment fees
+    - Your average order value, return rate and guarantee terms
+    - The discount you are thinking of and your target ad return
+    - Your current offer's sessions and orders (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, makes the offer more specific)
+  output:
+    - name: Step 1 offer
+      contains: The buyer doubt, the offer with its terms, a profit check and five checks.
+    - name: Step 2 gift or tier
+      contains: A gift pick, two to four spend tiers, margin and break-even per tier, store lines and a stop rule.
+    - name: Step 3 guarantee
+      contains: Net sales and profit before and after, the terms, a name and where to show it.
+    - name: Step 4 discount test
+      contains: The ad return you must hit for a low and a high case, a score out of 100 and a verdict.
+    - name: Step 5 profit per visitor
+      contains: Profit per order and per session for each offer, a winner and a trust score out of 100.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every missing input in one list.

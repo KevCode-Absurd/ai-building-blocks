@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches a promotion type to your goal and words it well.
 new_slug: promotion-idea-planner
 name: Promotion idea planner
-summary: Say what you want to launch or clear. Get a gift, bundle or pre-order
-  promotion that avoids plain price cuts.
+summary: Plan a promotion that isn't a price cut. Give your product and goal, and get a gift, bundle or pre-order offer with wording to match.
 job: make-offer
 headline: Promotion idea planner
-subhead: A promotion that gets sales without teaching customers to wait for a
-  markdown. You get a clear pick between a gift, bundle, pre-order incentive or
-  limited offer, with the wording to match.
+subhead: A promotion that gets sales without teaching customers to wait for a markdown. You get a clear pick between a gift, bundle, pre-order incentive or limited offer, with the wording to match.
 explain: |
   A promotion that gets sales without teaching customers to wait for a markdown. You get a clear pick between a gift, bundle, pre-order incentive or limited offer, with the wording to match.
 
@@ -18,6 +15,10 @@ when:
   - You want a Black Friday hook that is not just 20 percent off.
   - You are deciding whether to offer a free gift or a discount.
   - You need to word a free bonus so it feels like a real prize.
+not_for:
+  - "You only want to size or word a plain price cut: use a discounts guide or work it out yourself, since this tool avoids price cuts."
+  - "You need to set your everyday price: use a pricing guide or a simple cost-plus check, not a promotion."
+  - "You want ad copy for the offer: write the offer here first, then ask a copywriter or your AI for the ad text."
 you_give:
   - Product and price
   - Complementary products you sell (optional)
@@ -30,7 +31,27 @@ you_get:
   - Urgency and cap suggestions
   - Mistakes to avoid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code, files or paid tools are needed.
+  - Tell your AI what you sell, the price and your goal, such as pre-orders or clearing stock.
+  - Add your launch date and today's date. Say if buyers usually take one item or a basket.
+  - Add a product that pairs well with it, if you have one.
+  - Read the result. Check the offer wording and the deadline before you publish.
+  - Run the suggested split test, then track pre-order count and returns.
+output_sample:
+  input:
+    - Your product and its price
+    - A product you sell that goes well with it (optional)
+    - Your goal, such as pre-orders or clearing stock
+    - Your launch date and today's date
+    - Whether buyers usually take one item or a basket
+  output:
+    - name: Mechanic
+      contains: The promotion type to use, such as a pre-order gift or a bundle, and how to set it up.
+    - name: Headline
+      contains: Ready-to-use offer wording, with a deadline and a timezone.
+    - name: Why
+      contains: The reasons this mechanic fits your product type and launch distance.
+    - name: Avoid
+      contains: Offer tactics that tend to backfire for your case, such as unit caps or the word free.
+    - name: Test
+      contains: A simple split test to run so you can compare the offer against a discount.

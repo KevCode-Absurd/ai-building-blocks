@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: feedback_notes, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: copy_draft}
 origin: rebuilt

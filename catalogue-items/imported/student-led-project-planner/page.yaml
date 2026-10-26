@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It must respect student choice and still meet goals.
 new_slug: student-led-project-planner
 name: Student-led project planner
-summary: Describe a student's project idea. Get a plan with mentor check-ins,
-  links to your curriculum goals and reflection.
+summary: Turn a student's project idea into a doable plan with mentor check-ins, links to your curriculum goals and a reflection step. Student-led project planner.
 job: teach-and-train
 headline: Student-led project planner
-subhead: A student has a project idea. You need to turn it into something
-  doable, checked along the way, and tied to what the curriculum asks for.
+subhead: A student has a project idea. You need to turn it into something doable, checked along the way, and tied to what the curriculum asks for.
 explain: |
   A student has a project idea. You need to turn it into something doable, checked along the way, and tied to what the curriculum asks for. This skill drafts that plan.
 
@@ -17,6 +15,10 @@ when:
   - You need to show how a passion project meets curriculum goals.
   - You mentor several independent projects and want one common structure.
   - A project drifted and you want clearer check-in points.
+not_for:
+  - "The project fits in one session: just set the task and a clear finish line yourself, no plan needed."
+  - "Your curriculum targets do not exist yet: write them first with the learning target authoring guide, then come back."
+  - "You need a marking guide for the finished work: build one with a rubric tool, not this plan."
 you_give:
   - The student's project idea
   - Year level
@@ -30,7 +32,32 @@ you_get:
   - A tracking sheet
   - A feasibility check for the scope
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather first: the student's year level, their weekly time, your curriculum targets and any work they have done in this area."
+  - Open a chat with your AI and paste the skill text from the download.
+  - Paste the student's idea and the details above. Say how much you know about the topic (optional).
+  - Read Phase 1 first. If the scope is too big, ask your AI to narrow it before you read the rest.
+  - Share the plan and tracking sheet with the student. Next, run the learning target authoring guide and the coherent rubric logic builder to set targets and marking.
+output_sample:
+  input:
+    - The student's project idea, however rough
+    - The student's year level and age
+    - Total time and weekly hours available
+    - Your curriculum targets, if they exist (optional)
+    - Your own knowledge of the topic and what the student has done before (optional)
+  output:
+    - name: "Phase 1: Ideation and Feasibility"
+      contains: The student's idea in their words, a reality check on scope, and ways to widen or narrow it.
+    - name: "Phase 2: Knowledge Gap Analysis"
+      contains: What the project needs, what the student knows, what they do not, and an honest readiness view.
+    - name: "Phase 3: Planning"
+      contains: Milestones across the time available, linked to the curriculum targets.
+    - name: "Phase 4: Execution and Monitoring"
+      contains: Mentor check-in points and what to look for at each one.
+    - name: "Phase 5: Completion and Defence"
+      contains: How the student presents and defends the finished work, with reflection on what they learned.
+    - name: Tracking System Specification
+      contains: A sheet layout to track milestones, check-ins and progress against the targets.
+    - name: Educator Feasibility Calibration Guide
+      contains: Questions to judge whether the scope is realistic for this student and time.
+    - name: Known Limitations
+      contains: Where the plan may fall short and what the mentor should check by hand.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must choose and size levers for a business.
 new_slug: value-creation-plan-builder
 name: Value creation plan builder
-summary: Give it a company's numbers. Get revenue, cost and operating levers
-  mapped to profit, with 100 day priorities.
+summary: Build a value creation plan after a deal closes. Give it your numbers. You get profit levers, an EBITDA bridge and a 100 day plan.
 job: plan-strategy
 headline: Value creation plan builder
-subhead: A plan for how a company you just bought will make more profit, with
-  each idea tied to a number and an owner. You get a profit bridge and a clear
-  list of what to do in the first 100 days.
+subhead: A plan for how a company you just bought will make more profit, with each idea tied to a number and an owner. You get a profit bridge and a clear list of what to do in the first 100 days.
 explain: |
   A plan for how a company you just bought will make more profit, with each idea tied to a number and an owner. You get a profit bridge and a clear list of what to do in the first 100 days.
 
@@ -18,6 +15,10 @@ when:
   - You run a company and want to show lenders how profit will grow.
   - An operating partner wants the first 100 days laid out.
   - You need to rank ideas by size, cost and confidence.
+not_for:
+  - "You have not yet reviewed the company's books and risks: finish diligence first, or use a simple budget for now."
+  - "You have no planned holding period: a plan needs an end date, so set one with your partners before you start."
+  - "You only need a one page summary of a deal: write a short memo with the diligence findings instead."
 you_give:
   - Current revenue, profit and margins
   - Findings from diligence
@@ -29,7 +30,31 @@ you_get:
   - A 100 day priority list
   - KPI targets with owners
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Paste your numbers: revenue, EBITDA, margins, diligence findings and the holding period. Add team notes if you have them."
+  - Ask for the plan. Your AI works through the baseline, the levers, the EBITDA bridge, the 100-day plan and the KPIs.
+  - Check the timing and the dollar effects. Most gains take 12 to 24 months to show, so push back on anything faster.
+  - Ask your AI to make the Excel model. This needs an AI that can create files.
+output_sample:
+  input:
+    - Current revenue, EBITDA and margins
+    - Findings and quick wins from your diligence
+    - Notes on the team and each function (optional)
+    - How many years you plan to hold the company
+  prerequisites:
+    - An AI that can write a document. Making the Excel model needs one that can create files.
+  output:
+    - name: Executive summary
+      contains: A one page view of the plan, the main levers and the profit target.
+    - name: EBITDA bridge
+      contains: A year by year walk from today's EBITDA to the target, lever by lever.
+    - name: Value creation levers detail
+      contains: One page per lever with start point, target, dollar effect, timing, cost and confidence.
+    - name: 100-day plan
+      contains: Tasks for days 1 to 30, 31 to 60 and 61 to 100.
+    - name: KPI dashboard
+      contains: Each key metric with its current value, year one target, owner and how often it is reported.
+    - name: Accountability matrix
+      contains: Who owns each lever and each KPI.
+    - name: Excel model
+      contains: The numbers behind the EBITDA bridge.

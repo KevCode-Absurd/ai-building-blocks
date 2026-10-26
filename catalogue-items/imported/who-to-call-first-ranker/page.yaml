@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It weighs several signals and explains the order.
 new_slug: who-to-call-first-ranker
 name: Who to call first ranker
-summary: Give it your new leads. Get them ranked by fit and urgency, with
-  talking points and follow-up drafts.
+summary: Rank your new HubSpot leads to see who to call first. Get a scored list with talking points, follow-up drafts and call times to approve.
 job: sell-and-negotiate
 headline: Who to call first ranker
-subhead: A ranked call list for today, taken from the new leads sitting in your
-  HubSpot. You know who to ring first, what to say and what to send to the rest.
+subhead: A ranked call list for today, taken from the new leads sitting in your HubSpot. You know who to ring first, what to say and what to send to the rest.
 explain: |
   A ranked call list for today, taken from the new leads sitting in your HubSpot. You know who to ring first, what to say and what to send to the rest.
 
@@ -17,6 +15,10 @@ when:
   - You have two hours for calls and want the best ones first.
   - You want ready follow-up drafts for the leads you cannot reach today.
   - You are asked for a quick read on your pipeline.
+not_for:
+  - "You want a pipeline overview or deal report: ask your AI for a pipeline summary in HubSpot instead."
+  - "You want to update CRM records or change lead stages: use crm-autopilot, since this skill only reads leads."
+  - "You want to write outreach for one person: use outreach-composer."
 you_give:
   - HubSpot access
   - Scope such as leads only or pipeline
@@ -28,10 +30,29 @@ you_get:
   - Follow-up email drafts
   - Proposed call times
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open your AI tool and paste in the skill instructions, or add the skill folder if your tool allows files.
+  - Connect HubSpot. If you do not use it, upload a CSV export or paste a rough list of leads.
+  - Say "prioritize my leads". If you only say "pipeline", it will ask whether you want an overview or a call list.
+  - Read the ranked list and talking points. If it says the scores did not separate, the order comes from CRM facts, so check it yourself.
+  - Ask for follow-up drafts or call slots for the leads you want. Read each draft and approve any slot before anything is sent or booked.
+output_sample:
+  input:
+    - Access to your HubSpot, or a CSV export or pasted lead list if you do not use HubSpot
+    - What counts as a good fit for you, such as industry and company size (optional)
+    - Access to your calendar (optional)
+    - Your past emails, so drafts sound like you (optional)
+  prerequisites:
+    - An AI that can connect to HubSpot, or a lead list you can paste or upload
+  output:
+    - name: Ranked lead list
+      contains: Leads sorted by score, each with name, company, score and a summary of their last activity.
+    - name: Talking points
+      contains: A short paragraph for each ranked lead on what to say when you call.
+    - name: Stale signal flag
+      contains: A warning when a lead's activity is over 30 days old, so you treat it as cold outreach.
+    - name: Follow-up drafts
+      contains: One email draft per lead you pick, in your voice. Nothing is sent.
+    - name: Call slot options
+      contains: Two open 30-minute windows per lead in the next two business days. Nothing is booked until you approve.
+    - name: Triage board
+      contains: A web page with the ranked table, an urgency tag for each lead and the talking points.

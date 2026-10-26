@@ -2,34 +2,99 @@ thinking: medium
 thinking_why: It picks a model, fits it and checks the fit.
 new_slug: regression-and-forecast-modeller
 name: Regression and forecast modeller
-summary: Give it a data table. Get a fitted regression or time series model with
-  checks and a plain read of the results.
+summary: Find which factors move your numbers, or forecast the next months with a range. Get a fitted model, checks and a plain-words summary.
 job: track-numbers
 headline: Regression and forecast modeller
-subhead: A fitted model for your data table, with the checks that show whether
-  you can trust it, and a plain reading of what the numbers mean.
+subhead: Give it a CSV and say what you want to explain or predict. Your AI fits a regression or time series forecasting model, checks whether you can trust it and writes up what the numbers mean in plain words.
 explain: |
-  A fitted model for your data table, with the checks that show whether you can trust it, and a plain reading of what the numbers mean.
+  A regression model shows how much each factor moves a result, such as how price, ad spend and season each affect sales. A forecast model uses past months to estimate the next ones, with a low and high range.
 
-  It uses Python and the statsmodels library. You describe the question, such as what drives sales or what next quarter looks like. It picks a fit: ordinary regression, logistic or count models, mixed models, or time series like ARIMA. Then it tests the assumptions, looks for outliers and compares candidate models. A good fit only proves the maths ran, so it separates correlation from cause and warns you about both. It needs Python and a few packages installed.
+  This skill picks a model that fits your outcome. A yes or no result gets a logistic model. Counts get a count model. Numbers over time get a time series model. It then tests whether the model's assumptions hold, looks for odd rows that pull the answer, and compares candidates.
+
+  A model that fits can still be wrong. The skill separates what moves together from what causes a change, and it tells you when you cannot claim cause. Your AI needs to run Python with the statsmodels library.
 when:
-  - You want to know which factors really move your sales or conversion numbers.
-  - You need a forecast from monthly figures with a clear range of uncertainty.
-  - A model gave odd results and you need to find out why.
-  - You must compare two models and choose one.
+  - You want to know which factors really move your sales, sign-ups or conversion rate.
+  - You have monthly figures and need a forecast with a low and high range, not one number.
+  - A model gave odd results and you need to find out which rows or assumptions caused it.
+  - You have two candidate models and need to compare them and pick one.
+not_for:
+  - You only want averages, spread or a quick test of two weeks. Use the Statistics helper or the Research test picker and reporter.
+  - You want a fast forecast with no model fitting. Use the Quick time series forecaster or the Trend and forecast analyst.
+  - You want to prove one thing caused another. A model on past data cannot do that. You need a planned test.
+  - You have fewer than about 30 rows. The results will swing too much to use.
 you_give:
-  - Data table as a CSV
-  - What you want to explain or predict
-  - Time column for forecasts (optional)
-  - Python set up with statsmodels
+  - Your data as a CSV with column names in the first row
+  - What you want to explain or predict, as one column name
+  - The factors you think matter, if you have a view (optional)
+  - A date column, evenly spaced, if you want a forecast (optional)
+  - How far ahead to forecast (optional)
 you_get:
-  - Fitted model with coefficients
-  - Assumption and outlier checks
-  - Forecast with ranges (optional)
-  - Plain language reading of results
+  - A plain choice of model and why it fits your data
+  - A table of each factor's effect, with a range of doubt
+  - Pass or fail checks for assumptions, odd rows and overlapping factors
+  - A forecast table with low and high ranges, tested on held-back months (optional)
+  - A plain summary with what the model cannot show
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Save your data as a CSV with column names in row 1. Write one line on what you want to explain or predict, and name the result column.
+  - For a forecast, check that one column holds dates and the rows are evenly spaced, such as one per month.
+  - Use an AI that can run Python, such as Claude Code or ChatGPT with data analysis. It sets up statsmodels in its own environment. A plain chat can write the code, but you must run it.
+  - Paste the skill, attach the CSV and give your question. Ask for the plan first, with the model, the rows used and any rows dropped. Check it makes sense.
+  - Read the checks before the effects table. If a check fails, ask your AI to fix it or try another model before you trust the numbers.
+  - For a forecast, look at the test on held-back months and use the range, not one number.
+how_it_works:
+  - title: Check the data
+    text: It looks for missing values, column types and units, and records every row it drops.
+  - title: Pick the model
+    text: It matches the model to the result you want, whether a number, a yes or no, a count or a series over time.
+  - title: Fit and read the effects
+    text: It fits the model and reports each factor's effect with a range, not just a p-value.
+  - title: Test the assumptions
+    text: It checks residuals, uneven spread, overlap between factors, odd rows and whether the fit converged.
+  - title: Compare and validate
+    text: It compares models on the same rows and tests on held-back data, in date order for time series.
+  - title: Report with limits
+    text: It writes the plain summary and says where a causal claim would go too far.
+output_shape: |
+  QUESTION     <what is explained or predicted, and which column>
+  DATA         <rows used, rows dropped and why, columns used>
+  MODEL        <model type and why it fits>
+  EFFECTS      <factor> | <effect> | <range> | <what it means>
+  CHECKS       <assumption, outlier and overlap checks: pass or fail>
+  COMPARISON   <models tried and which won, or none>
+  FORECAST     <period> | <expected> | <low> | <high>
+  HELD-BACK    <how far off the forecast was on months it did not see>
+  SO WHAT      <plain reading, and what the model cannot show>
+  MISSING      <inputs not given, or none>
+output_sample:
+  input:
+    - Your data as a CSV with column names in the first row
+    - The column you want to explain or predict
+    - The factors you think matter (optional)
+    - A date column and how far ahead to forecast (optional)
+  prerequisites:
+    - An AI that can run Python, or a person who can run it
+    - Python 3.12 or newer with statsmodels 0.15.0, which the skill installs
+  output:
+    - name: Data check
+      contains: Rows used, rows dropped and why, and how columns were read.
+    - name: Model choice
+      contains: The model type picked for your result column and the reason.
+    - name: Effects table
+      contains: Each factor's effect, a range of doubt and a plain reading.
+    - name: Assumption checks
+      contains: Pass or fail for residuals, uneven spread, overlapping factors, odd rows and convergence.
+    - name: Forecast table
+      contains: Expected value with low and high range for each future period, tested on held-back months.
+    - name: Plain summary
+      contains: What the numbers mean, what they cannot prove and what to try next.
+terms:
+  - term: Regression
+    meaning: A method that shows how much a result changes when each factor changes.
+  - term: Coefficient
+    meaning: The size of one factor's effect on the result, holding the others fixed.
+  - term: Residuals
+    meaning: What the model got wrong on each row. Patterns in them show a poor fit.
+  - term: ARIMA
+    meaning: A common time series model that forecasts from a series' own past values.
+  - term: Held-back data
+    meaning: Rows kept out of fitting, then used to test how well the model predicts.

@@ -2,36 +2,66 @@ thinking: high
 thinking_why: Judging which links harm you takes careful weighing of the data.
 new_slug: backlink-profile-auditor
 name: Backlink profile auditor
-summary: Connect Ahrefs. Get a backlink health report with anchor text spread,
-  toxic links, lost links to win back and rival gaps.
+summary: Run a backlink audit on your site with Ahrefs data. Get a health report, toxic links, lost links to win back and gaps against rivals.
 job: get-found-in-search
 headline: Backlink profile auditor
-subhead: "A health check of the sites linking to you, built from live Ahrefs
-  data. Connect Ahrefs to your AI, name your domain and rivals, and the AI looks
-  at five things: link quality, how fast links are arriving, anchor text mix,
-  link types and gaps against competitors."
+subhead: "Give your AI your domain and a few rivals. It reads your link data from Ahrefs, a paid SEO tool. You get a clear report on link quality, risks and chances."
 explain: |
   A health check of the sites linking to you, built from live Ahrefs data. Connect Ahrefs to your AI, name your domain and rivals, and the AI looks at five things: link quality, how fast links are arriving, anchor text mix, link types and gaps against competitors.
 
   It flags toxic links, lists links you lost and could win back, and shows where rivals have links you lack. If you are scoping a disavow file, recovering from a manual action or reviewing a site before buying it, it gives a baseline and next steps. It points out common failure patterns too. You need an Ahrefs account connected to your AI.
 when:
-  - Rankings dropped and you suspect lost links.
-  - Google sent an unnatural links warning.
-  - You are buying a site and need to check its link health.
-  - You want a baseline before starting a link campaign.
+  - Your rankings dropped and you think you lost links.
+  - Google sent you an unnatural links warning.
+  - You are buying a site and want to check its links.
+  - You want a starting point before a link building campaign.
+not_for:
+  - "You want to build new links: this skill only audits. Use a link building plan or an outreach person instead."
+  - "You want a general SEO check of your whole site: use a broad SEO audit, not a link-only review."
+  - "You have no Ahrefs plan or cannot connect it: the skill will state the data gap and cannot fill in numbers, so pull the link data first."
 you_give:
   - Your domain
-  - Competitor domains (optional)
-  - A connected Ahrefs account
-  - The reason for the audit, such as a drop or a purchase
+  - 3 to 5 competitor domains
+  - The time window to check, such as the last 12 to 24 months
+  - The reason for the audit, such as a drop, a warning or a purchase (optional)
 you_get:
-  - A profile health score by dimension
-  - Toxic link candidates
-  - Lost links to reclaim
-  - A competitor gap list
+  - A health verdict for your link profile, split into five areas
+  - A list of links that may be toxic, only if you need one
+  - A list of lost links you could win back
+  - A list of sites that link to your rivals but not to you
+  - Clear next steps, including whether to disavow
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to Ahrefs.
+  - Use an AI that can connect to Ahrefs. Ahrefs is a paid tool, so you need an active plan.
+  - Connect Ahrefs to your AI in its settings, and check it can see your site.
+  - Paste in this skill, then add your domain, your rivals and the time window.
+  - Tell your AI why you want the audit, such as a drop or a warning.
+  - Read the summary first. Check the toxic list by hand before you disavow anything.
+  - If Ahrefs data is missing, the report will say what is missing. Do not fill the gaps with guesses.
+output_sample:
+  input:
+    - Your domain, such as a root domain, subdomain or URL prefix
+    - 3 to 5 competitor domains
+    - The time window to look at, usually the last 12 to 24 months
+    - The reason for the audit, such as a ranking drop or a Google warning (optional)
+    - Recent SEO history, such as site moves or link campaigns (optional)
+  prerequisites:
+    - An AI that can connect to Ahrefs
+    - An active paid Ahrefs plan with access to your site
+    - Search Console manual action status, if you have one (optional)
+  output:
+    - name: Executive summary
+      contains: The health verdict for your link profile and the top risks.
+    - name: Profile snapshot
+      contains: "Key numbers: referring domains, quality bands, anchor mix and link speed, or a stated data gap."
+    - name: 5-dimension analysis
+      contains: One section each for link quality, speed, anchor text, link types and the gap with rivals.
+    - name: Toxic link list
+      contains: Links that look harmful, laid out in a disavow file format, only if needed.
+    - name: Reclamation list
+      contains: Lost links worth winning back, with ways to contact the site owners.
+    - name: Gap list
+      contains: Up to 50 domains that link to your rivals but not to you.
+    - name: Recommendations
+      contains: Whether to disavow, a plan for winning back links, and link building targets.
+    - name: Methodology
+      contains: Where the data came from, when it was pulled and which rules were used.

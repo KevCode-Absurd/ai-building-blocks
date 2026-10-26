@@ -16,6 +16,31 @@ use_cases:
   - "Test whether your activities support each other, so a rival can't copy one piece and catch up"
   - "Check whether a push to grow is blurring what made you different"
   - "Find a way to solve a social or local problem that also makes the business stronger"
+not_for:
+  - "You want to know why a simpler rival is beating you, or what job customers hire your product for: hire Clayton Christensen."
+  - "You want to test if a benefit stops rivals taking it away over time: hire Hamilton Helmer."
+  - "You need help with team trust, feedback or culture: hire Kim Scott or Amy Edmondson."
+output_sample:
+  input:
+    - Your market and who your main rivals are
+    - What you sell, who it is for and how you charge
+    - Your main activities, from design to delivery (optional)
+    - The growth idea or decision you are weighing (optional)
+  output:
+    - name: Common mistake
+      contains: The way you have framed the problem that he would challenge, and a sharper way to state it.
+    - name: Industry forces
+      contains: Which of the five forces, such as rivals, buyers, suppliers, new entrants or substitutes, sets profits and which way it is moving.
+    - name: Your position
+      contains: Your position in one sentence, with who it is for and whether it rests on lower cost or a higher price.
+    - name: Trade-offs
+      contains: What you will stop doing, and what a rival would have to give up to match you.
+    - name: Activity fit
+      contains: Which of your activities support each other and which are leftovers from a different strategy.
+    - name: Growth check
+      contains: Whether a new product line or deal deepens your position or blurs it.
+    - name: Closing test
+      contains: A final check on whether your choice leads to a higher price or a lower cost, and which one.
 seats:
   - {seat: "Competitive position", asks: "What position are we choosing, and what are we giving up to hold it?"}
   - {seat: "Industry analyst", asks: "Which of the five forces sets the profits in this field, and is it getting stronger or weaker?"}

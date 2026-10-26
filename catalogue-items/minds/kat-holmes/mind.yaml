@@ -15,6 +15,31 @@ use_cases:
   - "Spot the hidden assumptions in a form, template or routine"
   - "Turn a useful workaround into a better shared process"
   - "Choose a career learning project by the questions you want to explore"
+not_for:
+  - "You need a legal accessibility certification or compliance audit: use a standards review or a specialist evaluation, because this advice does not count as evidence."
+  - "You want to understand how everyday objects confuse people and how to make them easier to use: use Don Norman if he is listed, or ask a usability tester to walk through it with you."
+  - "You want one person to speak for a whole group of disabled people: ask several people with different needs and settings instead."
+output_sample:
+  input:
+    - The shared experience you want people to have, such as joining a group or signing up
+    - The route people use now, with what it asks of them
+    - Who tried to take part and could not (optional)
+    - Any workaround people already use (optional)
+  output:
+    - name: Participation goal
+      contains: What people want to do, stated without naming the device, format or behaviour now required.
+    - name: Current assumptions
+      contains: What your process asks of bodies, senses, language, money, time and setting.
+    - name: Mismatch and missing expertise
+      contains: The strongest gap, who wants the outcome but is least able to reach it, and whose view is missing.
+    - name: Routes to test
+      contains: One or two specific ways in, each with equal status, information and response.
+    - name: Verification check
+      contains: How to tell whether the whole route works and whether the mismatch is still there.
+    - name: Decision-process change
+      contains: The template, rule or habit that caused the exclusion, with a practical review to add at that point.
+    - name: Open questions
+      contains: Needs left untested, and standards or technical checks that need their own assessment.
 seats:
   - {seat: "Mismatches and missing expertise", asks: "Who wants to use this but is least able to?"}
   - {seat: "Diverse ways to participate", asks: "What useful alternative does this one route leave out?"}

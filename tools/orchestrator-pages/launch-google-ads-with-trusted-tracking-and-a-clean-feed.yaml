@@ -1,6 +1,6 @@
 new_slug: launch-google-ads-with-trusted-tracking-and-a-clean-feed
 name: Launch Google Ads with trusted tracking and a clean feed
-summary: Give it your Shopify setup and Merchant Center issues. Get tracking proof, ranked feed fixes and a launch order.
+summary: Launch Google Ads with tracking you can trust. Give it your Shopify setup and Merchant Center issues. Get proof, ranked feed fixes and a launch plan.
 job: run-google-ads
 thinking: high
 thinking_why: Four skills run in a row, two of them score your setup and one does budget sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to spend on Google Ads for the first time and want to know sales are counted once and your products are approved.
   - Google reports more purchases than your Shopify orders, and you do not trust the numbers.
   - Merchant Center shows disapproved products or warnings and you want to know which to fix first.
+not_for:
+  - "Your store is not on Shopify: use a person who knows your platform, or set up tracking by hand with your platform's own guide."
+  - "You have not placed a test order yet: place one first, because the tracking check needs screenshots from a real order."
+  - "You already run campaigns and want to read results: use the Ad results report writer."
 you_give:
   - What you have now, such as the Google and YouTube app, GA4, Tag Manager and your current conversion actions
   - Your store country and the checkout details you collect, such as email and phone
@@ -31,6 +35,28 @@ how_to_use:
   - Tell it what tracking you already have, even if it is a mess. It builds on what exists.
   - When it pauses, add the tags, place one real test order and save screenshots before you continue.
   - Fix the tracking faults, then export your Merchant Center issues list for the feed step.
+output_sample:
+  input:
+    - What tracking you have now, such as GA4, Tag Manager and current conversion actions
+    - "Screenshots from a test order: the Google Ads conversion page and Tag Assistant"
+    - Your Merchant Center issues list and product count
+    - Your monthly Google budget, average order value and margin
+    - Your break-even cost per sale (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Admin access to your Shopify store, Google Ads and Merchant Center
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Tracking build"
+      contains: A numbered build checklist, which ID goes where, conversion actions, enhanced conversions and a test plan.
+    - name: "Step 2: Tracking check"
+      contains: Three rule results, Google's count against your store orders, the primary purchase action, fix steps and a score out of 100.
+    - name: "Step 3: Feed check"
+      contains: Disapproved, warning and limited items, issues ranked by sales lost, a fix list, a feed score and a pass gate.
+    - name: "Step 4: Launch plan"
+      contains: Readiness, a budget check, three stages with budget and bid strategy, settings for each campaign and a bid ladder.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the tracking
     text: Gives a numbered checklist to link GA4, turn on enhanced conversions, set one primary purchase action and add the Shopify pixel, plus a test plan.

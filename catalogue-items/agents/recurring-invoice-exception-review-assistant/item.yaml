@@ -22,9 +22,9 @@ uses:
   - invoice-totals-checker
 steps:
   - uses: check-supplier-invoices-before-approval
-    note: "Run when: A new invoice ID appears, supporting evidence changes or an unresolved exception reaches its review date."
+    note: "Run when a new invoice ID appears, supporting evidence changes or an open exception reaches its review date. Checks duplicates, sums, orders, receipts and vendors."
   - uses: invoice-totals-checker
-    note: Run the invoice workflow for new or changed records. Use invoice-totals-checker to revisit arithmetic exceptions only. If source records conflict, leave the invoice blocked for the responsible reviewer; never release payment.
+    note: "Run on open arithmetic exceptions only, when a corrected invoice or credit note arrives. If records still conflict, the invoice stays blocked for the responsible reviewer. Never release payment."
 schedule: When a new invoice batch is supplied or at the owner agreed review interval.
 asks_before:
   - Sending or submitting any message or form

@@ -22,7 +22,7 @@ Comprehensive market sizing methodologies for calculating Total Addressable Mark
 
 ## Instructions
 
-- Clarify goals, constraints, and required inputs.
+- Clarify goals, constraints, and required inputs. A plain question about a market or product idea is enough to start: ask for the buyer, the price and the region.
 - Apply relevant best practices and validate outcomes.
 - Provide actionable steps and verification.
 - Use the examples below; no separate implementation playbook is bundled.

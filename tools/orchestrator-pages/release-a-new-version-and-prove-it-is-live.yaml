@@ -1,6 +1,6 @@
 new_slug: release-a-new-version-and-prove-it-is-live
 name: Release a new version and prove it is live
-summary: Give it your project. Get a version, changelog, go or no-go call and proof it is live.
+summary: "Release a new version and prove it is live: get a version, changelog, go or no-go call and a check that visitors see the new build."
 job: ship-and-host
 thinking: medium
 thinking_why: Each step is a defined check or command. A mid-size model does it well.
@@ -14,6 +14,10 @@ when:
   - You are releasing a new version and cannot afford a bad deploy.
   - You have shipped, then found the old version still live.
   - Your release notes and version numbers are guesses, not worked out from the commits.
+not_for:
+  - "You have no git tags yet: do a first release by hand, so the steps have a commit range to read."
+  - "You only want to check a site that is already live: use a person or a simple page check, not this release workflow."
+  - "You host on something other than Vercel: swap step 3 for a Netlify or Cloudflare publisher, or deploy by hand."
 you_give:
   - Your project (a folder or repo with its git history and tags)
   - Your Vercel account, signed in on your computer
@@ -28,6 +32,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Sign in to Vercel first. The deploy step asks for a preview first and production only after you agree.
   - Do your two steps, which are to merge and tag, then to fix blockers.
+output_sample:
+  input:
+    - Your project, as a folder or repo with its git history and tags
+    - Your Vercel account, signed in on your computer
+    - Your build and test commands (optional)
+  prerequisites:
+    - An AI that can open your project files and run commands, such as Claude Code
+    - A Vercel account you are signed in to
+  output:
+    - name: Release preparer result
+      contains: The version bump with the reason, a changelog grouped into added, changed and fixed, and the tag to use.
+    - name: Ship readiness gate result
+      contains: The checks that ran, each blocker listed, and a go or no-go verdict.
+    - name: Vercel publisher result
+      contains: A preview link first, then the live link once you agree to go to production.
+    - name: Deploy verifier result
+      contains: The build the live site shows, your tag, and whether they match.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Set the version and write the changelog
     text: Finds your version files, reads the commits since the last tag, picks the bump and writes the changelog.

@@ -1,6 +1,6 @@
 new_slug: woocommerce-store-setup-planner
 name: "WooCommerce store setup planner"
-summary: "Give it your products and country. Get a WooCommerce build plan from hosting to first test order."
+summary: "Plan your WooCommerce store setup from hosting to first test order. Give it your products and country. You get ordered steps and a settings sheet."
 job: set-up-store
 thinking: medium
 thinking_why: "It orders known steps and fills in settings values, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You are about to start a WooCommerce store on WordPress and want the steps in the right order.
   - Your store is half built and you are not sure which settings you skipped.
   - You want a test-order script, so your first real order is not your first attempt.
+not_for:
+  - "You have no one to handle updates, security and backups: use a hosted store platform instead."
+  - "You sell on Shopify or another store that is not WordPress: use that platform's own setup guide."
+  - "You need tax rates, shipping rates or payment setup in detail: this plan points to those jobs but does not do them, so ask a tax adviser or your payment provider."
 
 you_give:
   - What you sell, how many products and variants, and who buys
@@ -36,6 +40,31 @@ how_to_use:
   - Add your store address and your refund text, and say how much upkeep you can take on.
   - Work through the plan one phase at a time. Do the check at the end of each phase before moving on.
   - Run the test-order script, then switch the store from Coming Soon to Live.
+output_sample:
+  input:
+    - What you sell, how many products and variants, and who buys
+    - Your home country, currency and the countries you sell and ship to
+    - Your store address and your refund and return text
+    - Your budget and who handles updates, security and backups (optional)
+    - Your current theme and plugin list (optional)
+  prerequisites:
+    - A WordPress site, or a plan to start one with WooCommerce
+    - A payment tool with a test mode, such as Stripe, for the test order
+  output:
+    - name: Build plan
+      contains: Ordered phases from hosting and domain to going live, each with a check you can see.
+    - name: Settings sheet
+      contains: One line per setting with the value to enter and why, all set before products.
+    - name: Site title and tagline
+      contains: A title built around what buyers search, then your brand, and a tagline on what you deliver and where.
+    - name: Cleanup list
+      contains: Spare plugins to remove, sample content to delete and comments to turn off.
+    - name: Emails
+      contains: Which order emails to turn on, who gets each one, and a step to test sending.
+    - name: Test order
+      contains: A numbered script to run with a test card before you switch the site to Live.
+    - name: Not covered and missing
+      contains: Tax, shipping and payment jobs to do elsewhere, plus any facts you still need to give.
 
 how_it_works:
   - title: Plans hosting and domain

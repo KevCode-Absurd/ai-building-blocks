@@ -1,6 +1,6 @@
 new_slug: complaint-reply-promise-checker
 name: "Complaint reply promise checker"
-summary: "Paste the complaint and your draft reply. Get each promise checked, tone flags and a repaired draft."
+summary: "Check your reply to an angry customer before you send it. Find promises you can't back and lines that sound defensive, then get a repaired draft."
 job: help-customers
 thinking: low
 thinking_why: "It checks a draft against rules you supply."
@@ -17,6 +17,10 @@ when:
   - "A customer is angry and you have drafted a reply."
   - "You are unsure if your reply sounds defensive."
   - "A new support hire wants a second check before sending."
+not_for:
+  - "You face a legal threat or a safety incident: pass it to a person with the right training, such as a lawyer or your safety lead."
+  - "You want the full set of checks on a reply: use the Angry customer reply checker."
+  - "You need to decide if the customer gets a refund: that choice is yours, so check your policy or ask your manager."
 
 you_give:
   - "The customer's message"
@@ -33,6 +37,25 @@ how_to_use:
   - "Paste the customer's message in full, then your draft."
   - "Paste your policy text or list what you can offer."
   - "Fill in each [CONFIRM] before you send."
+output_sample:
+  input:
+    - The customer's message, in full
+    - Your draft reply
+    - Your policy text or a list of what you may offer
+    - Case facts such as dates and amounts (optional)
+  output:
+    - name: VERDICT
+      contains: Send, send after fixes, or do not send, with the main reason.
+    - name: ANSWERS
+      contains: Each point the customer raised, marked Answered, Dodged or Missed.
+    - name: PROMISES
+      contains: Each promise or offer in your draft, marked Backed or Not backed by your policy.
+    - name: TONE FLAGS
+      contains: Quoted lines that blame the customer, use jargon, apologise emptily or sound defensive, with the reason.
+    - name: REPAIRED DRAFT
+      contains: "A new reply that answers first and keeps only backed promises, with [CONFIRM: ...] marks for the rest."
+    - name: BEFORE YOU SEND
+      contains: What you must confirm before the reply goes out.
 
 how_it_works:
   - title: "Check it answers them"

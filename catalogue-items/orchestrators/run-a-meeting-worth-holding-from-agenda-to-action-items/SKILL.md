@@ -39,12 +39,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Decide if the meeting is worth holding.** Use the skill `meeting-agenda-and-cost-planner`. Starts from your idea for a meeting. Makes a go or no-go call and a timed agenda.
-2. **Write the pre-read.** Use the skill `meeting-pre-read-writer`. Give it the meeting notes from the steps before. Builds on the agenda from the step before. Needs your Notion pages connected to pull in background.
+1. **Decide if the meeting is worth holding.** Use the skill `meeting-agenda-and-cost-planner`. Starts from your idea for a meeting. Makes a go or no-go call and a timed agenda. Hand step 2 the call and the agenda.
+2. **Write the pre-read.** Use the skill `meeting-pre-read-writer`. Give it the meeting notes from the steps before. Builds on the agenda from the step before. Needs your Notion pages connected to pull in background. Hand step 3 the agenda it follows.
 
 Pause here: Send the pre-read, hold the meeting and record it.
 
-3. **Turn the recording into action items.** Use the skill `meeting-notes-maker`. Starts from the recording. Check each decision and action against the agenda you wrote at the start.
+3. **Turn the recording into action items.** Use the skill `meeting-notes-maker`. Starts from the recording, with the agenda from steps 1 and 2 as the meeting header. Check each decision and action against the agenda you wrote at the start.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

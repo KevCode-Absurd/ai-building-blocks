@@ -6,7 +6,7 @@ also: [thinking]
 years: "1967–"
 living: true
 known_for: "Co-founded PayPal and Palantir. Was an early Facebook investor. Wrote Zero to One, on making new things rather than copies."
-summary: "Stress-test a startup idea using Peter Thiel’s recorded approach. Compare substitutes, choose a narrow first market and examine how the business could stay distinct."
+summary: "Test a startup idea with Peter Thiel's public approach. Find your market, your real edge and the weakest of seven questions. Not for investment calls."
 use_cases:
   - "Find the one important truth your plan rests on that most people would doubt"
   - "Check whether you are building something new or copying what already exists"
@@ -16,6 +16,32 @@ use_cases:
   - "Decide whether to go all in on a project or not start it"
   - "Look at a team's history together before you back them or join them"
   - "Think through a bet where a few wins matter far more than many small ones"
+not_for:
+  - "You want a view on a stock or a deal to buy: Thiel gives no buy or sell calls, so use a licensed financial adviser."
+  - "You want a value check on a company using spreadsheets and numbers: use the Aswath Damodaran mind."
+  - "You want to judge a bet by its incentives and the ways it could fail: use the Charlie Munger mind."
+output_sample:
+  input:
+    - Your business idea in a few lines
+    - Who your buyers are and what they use now
+    - The closest substitutes and how you differ from them
+    - What a customer is worth and what one costs to win (optional)
+    - "Your team: how long you have known each other and who is full time (optional)"
+  output:
+    - name: The contrarian question
+      contains: What you believe that few people agree with, and a note if your answer is a common belief.
+    - name: Zero to one or one to n
+      contains: A view on whether you are making something new or copying what already works.
+    - name: Your market
+      contains: A narrow first market you could own, the markets after it, and what buyers choose if they say no to you.
+    - name: The gap to the closest substitute
+      contains: How much better you are on the one thing buyers care about, after the cost of switching.
+    - name: The seven questions
+      contains: Engineering, timing, monopoly, people, distribution, durability and secret, with the weakest answer marked to fix first.
+    - name: One way to reach customers
+      contains: A sales route matched to your deal size and cost to win, with any gap flagged.
+    - name: A clear test
+      contains: One check to run next, such as a small market, a cost to value ratio or a score out of seven.
 seats:
   - {seat: "Investor (contrarian bets)", asks: "What important truth do very few people agree with you on, and why are you right?"}
   - {seat: "Monopoly and moats", asks: "Which small market can you own completely, and what stops anyone copying you there?"}

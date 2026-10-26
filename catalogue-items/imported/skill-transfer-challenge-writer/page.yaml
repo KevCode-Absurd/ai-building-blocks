@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must design tasks at two distances.
 new_slug: skill-transfer-challenge-writer
 name: Skill transfer challenge writer
-summary: Give it something a learner has mastered. Get near and far challenges
-  that show if it carries to new tasks.
+summary: Test if a learner can use an idea in a new setting. Give it a concept they know and get a near and a far skill transfer challenge.
 job: teach-and-train
 headline: Skill transfer challenge writer
-subhead: Two challenges that show whether a learner truly understands an idea or
-  only knows the one example they practised. After someone shows they have
-  grasped a concept, you get a near challenge and a far challenge to test it.
+subhead: "Give it a concept a learner has just shown they understand. It writes two tasks: one close to what they learned and one far from it. The tasks show if the idea carries over or only works for the first example."
 explain: |
   Two challenges that show whether a learner truly understands an idea or only knows the one example they practised. After someone shows they have grasped a concept, you get a near challenge and a far challenge to test it.
 
@@ -18,6 +15,10 @@ when:
   - You teach one method and want proof it works outside the textbook example.
   - You are writing follow-up tasks for a lesson plan.
   - A learner gets the worked example right but fails when it looks different.
+not_for:
+  - You want to build a skill like arithmetic or grammar. These carry over through practice, so use practice drills from your teacher or a workbook.
+  - You still need to check if the learner understands the idea at all. Ask a few plain quiz questions first, then come back here.
+  - You want a full lesson plan or a graded test. Write those yourself or with a teacher, then use this for the follow-up task.
 you_give:
   - The concept the learner just showed they understand
   - The context where they learned it
@@ -29,7 +30,25 @@ you_get:
   - A note on what a successful answer looks like
   - Guidance on what a miss tells you
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat with your AI. No code, files or paid tools are needed.
+  - Paste the system prompt from the SKILL.md file into the chat.
+  - Type the concept the learner just understood and where they learned it.
+  - Add a near domain, a far domain and the learner's age or stage if you want to choose them (optional).
+  - Give the two challenges to the learner. Paste their answers back into the chat to see what they show.
+  - Next, pair it with the Retrieve first gate or the Unassisted evidence checkpoint to check the idea again later.
+output_sample:
+  input:
+    - The concept the learner just showed they understand
+    - Where they first learned it, such as the subject and the examples used
+    - A domain for the near challenge (optional)
+    - A domain for the far challenge (optional)
+    - The learner's age or stage (optional)
+  output:
+    - name: Near-transfer challenge
+      contains: A task with the same principle but a slightly different surface, set in a close topic.
+    - name: Far-transfer challenge
+      contains: A task with the same principle in a different surface and setting, so the learner must spot the pattern.
+    - name: What a good answer looks like
+      contains: A short note on what a successful response shows about the learner's grasp of the idea.
+    - name: What a miss tells you
+      contains: Guidance on what a failed attempt means, such as the idea still being tied to its first context.

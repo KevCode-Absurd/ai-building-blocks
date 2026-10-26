@@ -2,24 +2,23 @@ thinking: high
 thinking_why: Modelling a domain needs real judgment about where concepts split.
 new_slug: business-model-code-designer
 name: Business model code designer
-summary: Describe your business rules. Get a glossary, a map of business areas
-  and the data that belongs together.
+summary: Turn your business rules into a shared glossary, a map of business areas and groups of data. Use it for domain-driven design and splitting a big system.
 job: build-software
 headline: Business model code designer
-subhead: Describe your business rules and the words your team uses. It splits
-  the business into separate areas, each with its own border in the code, so one
-  team's change does not break another's. You get a shared glossary, a map of
-  the areas and the groups of data that change together.
+subhead: Describe your business rules and the words your team uses. It splits the business into separate areas, each with its own border in the code, so one team's change does not break another's. You get a shared glossary, a map of the areas and the groups of data that change together.
 explain: |
   Your code starts to match how your business really talks. Describe your rules, and you get a map of the separate areas of the business, the exact words each area uses, and the clusters of data that must change together. Each area becomes its own boundary in the code, so one team's change does not break another's.
 
   The method is domain-driven design. It begins with a shared vocabulary that you and the code both use. Then it finds the boundaries, picks the core area worth the most effort, and sets how areas talk to each other. It ends with a score out of 10 and a list of the checks that failed.
 when:
   - Your code uses technical names and nobody in the business recognises them.
-  - You need to split a big system into smaller services and do not know where
-    the lines go.
+  - You need to split a big system into smaller services and do not know where the lines go.
   - Business rules are scattered across many files and keep going out of sync.
   - You want a plain check of how well your model fits the business.
+not_for:
+  - You have one small app or a plain create, read, update, delete tool. Skip this and keep the code simple.
+  - You want to design the layers of your code, such as where the database and screens sit. Use clean-architecture instead.
+  - You want to cut complexity inside one module or class. Use software-design-philosophy instead.
 you_give:
   - A description of your business rules and processes
   - The words your team uses for key things
@@ -32,7 +31,28 @@ you_get:
   - The core area to focus on
   - A score out of 10 with failing checks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the skill text into the chat.
+  - Write your business rules in plain words. Add the terms your team uses and, if you have it, your current code layout.
+  - Say which part of the business matters most, if you know.
+  - Read the glossary first and check each term with someone from the business.
+  - Use the area map to plan where to split your system. Then fix the checks that failed.
+output_sample:
+  input:
+    - Your business rules and processes, in plain words
+    - The words your team uses for key things
+    - Your current code or system layout (optional)
+    - Which part of the business matters most (optional)
+  output:
+    - name: Ubiquitous language
+      contains: A glossary of the business terms your team and your code should both use.
+    - name: Bounded contexts and context map
+      contains: The separate business areas, the border around each, and how the areas talk to each other.
+    - name: Entities, value objects and aggregates
+      contains: The groups of data that must change together, with the rules each group protects.
+    - name: Domain events
+      contains: The business events that pass news from one group of data to another.
+    - name: Core domain
+      contains: The one area worth the most design effort, and what can stay simple.
+    - name: Score and failing checks
+      contains: A score out of 10 and each Quick Diagnostic row that failed.

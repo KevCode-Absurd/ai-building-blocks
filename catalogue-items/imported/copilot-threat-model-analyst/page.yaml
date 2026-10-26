@@ -2,18 +2,63 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-threat-model-analyst
 name: STRIDE system threat analyst
-summary: Share your system or change. Get threats, trust boundaries and
-  safeguards, with a record of new risks.
+summary: Run a STRIDE threat model on your code repository. Get diagrams, ranked findings and a report that shows new, fixed and open threats.
 job: secure-code
 headline: STRIDE system threat analyst
-subhead: Share your system or change. Get threats, trust boundaries and
-  safeguards, with a record of new risks. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: "Point it at your code repository. It maps the parts of the system and how data moves between them, finds threats of each STRIDE type and ranks them. It writes a set of report files, and on a later run it shows which threats are new, fixed or still open."
+explain: |
+  A threat model asks what could go wrong before an attacker does. This STRIDE threat model analyst reads your repository, draws the parts, trust boundaries and data flows, and checks each one for spoofing, tampering, repudiation, information disclosure, denial of service, elevation of privilege and abuse.
+
+  Findings are ranked by severity and mapped to CWE and OWASP, with a fix for each. A short assessment for leaders sits first, so the main risks and what to fix first are clear.
+
+  It saves a threat inventory. On the next run you give it that folder and it compares, so you see what changed since last time.
+when:
+  - "You are about to ship a new service and need a security review."
+  - "A customer asks for your threat model."
+  - "You made big changes and want to know what new risks they added."
+  - "You want a list of what to fix first, ranked."
+not_for:
+  - "You want a quick review of one file: ask your AI for a plain code review, or run a code scanner."
+  - "You need a full penetration test on a live system: hire a security tester."
+  - "You have no code or system design to share: write down how the system works first, then come back."
+you_give:
+  - "Your code repository or system files"
+  - "The branch or commit to check (optional)"
+  - "A folder from an earlier threat model, to compare against (optional)"
+you_get:
+  - "0-assessment.md: a short summary of the main risks and what to fix first"
+  - "0.1-architecture.md: the system parts and how they connect"
+  - "1-threatmodel.md: the data flow diagram with trust boundaries"
+  - "2-stride-analysis.md: threats for each part, sorted by STRIDE type"
+  - "3-findings.md: ranked findings with severity, CWE and OWASP mappings and fixes"
+  - "threat-inventory.json, and on update runs a comparison of new, fixed and open threats"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI in a tool that can read your code folder and write files. A chat with no file access will not do the full job.
+  - Add this skill, or paste its instructions into the chat.
+  - Tell it the repository path and the branch or commit to check. For an update, also name the earlier threat-model folder.
+  - Ask it to run a threat model analysis. For an update, say 'update the threat model using this folder as the baseline'.
+  - Read 0-assessment.md first. Then check 3-findings.md and fix the highest-ranked items.
+  - "Example request: 'Run a threat model analysis on ./my-app'. You get a new threat-model folder with the files listed above."
+output_sample:
+  input:
+    - Your code repository or system files
+    - The branch or commit to check (optional)
+    - A folder from an earlier threat model, to compare against (optional)
+  prerequisites:
+    - An AI that can read your repository files and write files back
+    - An earlier threat-model folder, only for an update run
+  output:
+    - name: 0.1-architecture.md
+      contains: A plain overview of the system parts and how they connect.
+    - name: 1-threatmodel.md
+      contains: The data flow diagram with trust boundaries and a list of system elements.
+    - name: 2-stride-analysis.md
+      contains: Threats for each part and data flow, sorted by the STRIDE-A types.
+    - name: 3-findings.md
+      contains: Ranked security findings with severity scores, CWE and OWASP mappings, and fixes.
+    - name: 0-assessment.md
+      contains: "A short summary for leaders: the main risks and what to fix first."
+    - name: threat-inventory.json
+      contains: A saved list of threats and findings, used as the baseline for later updates.
+    - name: Comparison report (update runs only)
+      contains: Which threats are new, fixed or still open, with a STRIDE heatmap and findings diff.

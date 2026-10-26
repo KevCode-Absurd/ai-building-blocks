@@ -46,11 +46,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Thumbnail and title planner.** Use the skill `thumbnail-and-title-planner`. Starts from your video idea and channel and makes the pairs to choose from.
-2. **Headline cover test ranker.** Use the skill `headline-cover-test-ranker`. Give it the hooks from the steps before. Reads the titles from the step before and cuts them to three that are different enough to test.
+2. **Headline cover test ranker.** Use the skill `headline-cover-test-ranker`. Give it the hooks from the steps before. Reads the titles from the step before and cuts them to three that are different enough to test. You publish the top pair.
 
 Pause here: Publish the top pair. After a week or more, export the audience retention report from YouTube Studio for that video. You publish and export.
 
-3. **YouTube transcript and channel reader.** Use the skill `youtube-transcript-reader`. Fresh start after publishing: gets the words of the live video so the drop-off points can be matched to what you said. You can paste the captions instead.
+3. **YouTube transcript and channel reader.** Use the skill `youtube-transcript-reader`. Uses the link to the video you published with step 2's top pair, not step 2's output. Gets the words of the live video so the drop-off points can be matched to what you said. You can paste the captions instead.
 4. **YouTube retention reader.** Use the skill `youtube-retention-reader`. Give it the transcript from the steps before. Reads the transcript from the step before, so each drop shows what you were saying then.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

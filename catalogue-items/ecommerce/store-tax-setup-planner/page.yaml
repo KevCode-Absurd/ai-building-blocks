@@ -1,6 +1,6 @@
 new_slug: store-tax-setup-planner
 name: "Store tax setup planner"
-summary: "Say where and what you sell. Get tax settings, rate rows to enter and a test plan."
+summary: "Plan your store tax setup: price settings, rate rows with priority, product classes and test addresses. Not tax advice, so check with an accountant."
 job: set-up-store
 thinking: high
 thinking_why: "A wrong tax setting is costly and the rules differ by place, so a stronger model is worth it."
@@ -17,6 +17,10 @@ when:
   - You are setting up tax for a new store and do not know which settings matter.
   - Your product prices look wrong at checkout, or tax differs from what you expected.
   - You are starting to sell in a new state or country and need the rows and tests.
+not_for:
+  - "You want to know where you must collect or register for tax: ask a qualified accountant or a tax service."
+  - "You sell in many states and entering rows by hand is too much work: use an automated tax service or plugin."
+  - "You need to file returns or keep tax records: use your accountant or your accounting software."
 
 you_give:
   - Your platform (WooCommerce, Shopify or other)
@@ -36,6 +40,27 @@ how_to_use:
   - Paste current rates from an official or tax-service table. Do not use the example rates in tutorials.
   - Enter the settings and rows in the order it gives, then test every address it lists.
   - Take its questions to a qualified accountant before you rely on the setup.
+output_sample:
+  input:
+    - Your platform (WooCommerce, Shopify or other)
+    - The country and state of your business, stock and staff
+    - Where you ship, and what you sell
+    - Current rates from an official or tax-service table (optional)
+  output:
+    - name: PRICE SETTINGS
+      contains: Whether prices are entered with or without tax, and how the shop, cart and checkout show them.
+    - name: TAX BASE
+      contains: Whether tax is worked out from the customer's shipping address or your store address, with the reason.
+    - name: CLASSES
+      contains: Each tax class, the product types in it, and a rate marked as a placeholder to verify.
+    - name: RATE ROWS
+      contains: "One row per place you charge: country, state, four-decimal rate, name, priority and shipping tax on or off."
+    - name: PRODUCT SETTINGS
+      contains: For each product type, taxable status and the class to pick.
+    - name: TEST ADDRESSES
+      contains: Addresses to try in the cart, with the tax and total you should see for each.
+    - name: QUESTIONS FOR A TAX PROFESSIONAL
+      contains: Questions to take to an accountant, plus a note that this is not tax advice and any gaps marked MISSING.
 
 how_it_works:
   - title: Turns tax on

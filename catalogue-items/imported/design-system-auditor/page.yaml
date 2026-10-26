@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares parts to find mismatches.
 new_slug: design-system-auditor
 name: Design system auditor
-summary: Point it at your components. Get naming and hardcoded value problems,
-  docs for variants, or a new pattern.
+summary: Check your design system for naming clashes and hardcoded values, write up a component, or design a new one that fits. Free design system audit skill.
 job: design-work
 headline: Design system auditor
-subhead: A check of how consistent your components are, in one of three modes.
-  Audit finds naming problems and hardcoded values. Document writes up a
-  component with its variants.
+subhead: A check of how consistent your components are, in one of three modes. Audit finds naming problems and hardcoded values. Document writes up a component with its variants.
 explain: |
   A check of how consistent your components are, in one of three modes. Audit finds naming problems and hardcoded values. Document writes up a component with its variants. Extend designs a new pattern that fits what you already have.
 
@@ -18,6 +15,10 @@ when:
   - You need documentation for a component developers keep rebuilding.
   - You want to find hardcoded colours that should be tokens.
   - You need a new component and want it to match the system.
+not_for:
+  - "You have no components yet and want a brand-new system: start by listing your colours, type sizes and spacing in a simple token list."
+  - "You want to judge how a single screen looks or feels: ask a design lead or run a usability test with real users."
+  - "You need the code changed across your product: ask a developer, since this skill only finds problems and writes up fixes."
 you_give:
   - Components, styles or Figma file
   - "Mode: audit, document or extend"
@@ -28,8 +29,31 @@ you_get:
   - Design for a new pattern
   - Fixes for naming and tokens
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open Figma or code files.
+  - "Collect what you want checked: a Figma link, or the code or styles for your components."
+  - Open Claude, ChatGPT or Gemini and paste in this skill. Add your files or link. Figma access or file upload works best.
+  - "Say which mode you want: audit, document or extend. Add a component name if you only need one."
+  - For an audit, read the Priority Actions first. Then check the naming and token tables.
+  - Fix the top three actions, then run the audit again to see what changed.
+  - For document or extend, read the result with your team and settle the open questions before you build.
+output_sample:
+  input:
+    - Your components, styles or a Figma link
+    - "The mode you want: audit, document or extend"
+    - The component or pattern name (optional)
+  prerequisites:
+    - An AI that can open Figma or read your code files gives the best audit. Without it, paste the component details into the chat.
+  output:
+    - name: Design System Audit
+      contains: A summary with components reviewed, issues found and a score out of 100.
+    - name: Naming Consistency
+      contains: A table of naming clashes, the components affected and the standard to adopt.
+    - name: Token Coverage
+      contains: For colours, spacing and type, how many tokens exist and how many hardcoded values were found.
+    - name: Component Completeness
+      contains: Each component rated for states, variants and docs, with a score.
+    - name: Priority Actions
+      contains: The three changes that would help most, in order.
+    - name: Component documentation
+      contains: "In document mode: description, variants, properties, states, accessibility notes, do's and don'ts, and a code example."
+    - name: New Component proposal
+      contains: "In extend mode: the problem, related components, proposed props, variants, states, tokens used and open questions."

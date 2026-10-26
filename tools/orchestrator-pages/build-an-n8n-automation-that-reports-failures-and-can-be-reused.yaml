@@ -1,6 +1,6 @@
 new_slug: build-an-n8n-automation-that-reports-failures-and-can-be-reused
 name: Build an n8n automation that reports failures and is reusable
-summary: Describe the task. Get an n8n workflow that retries, alerts you on failure and splits into reusable parts.
+summary: Get an n8n automation that retries, alerts you when it fails and splits into reusable parts, from a plain description of the task.
 job: connect-tools
 thinking: medium
 thinking_why: Each step reshapes the same workflow. A mid-size model does it well.
@@ -14,10 +14,17 @@ when:
   - You are building an n8n automation that will run without you watching it.
   - An n8n workflow fails quietly or sends no alert.
   - Your workflow has grown long and you copy parts of it into other workflows.
+  - An AI agent needs to call parts of your automation as tools.
+not_for:
+  - The task runs once, or you watch it every time. A plain n8n workflow without error handling is enough.
+  - You want an AI agent inside n8n that decides what to do. Use the n8n AI agent builder.
+  - Your workflow already exists and only fails quietly. Use the n8n failure handler.
+  - You want a person to test a new automation before you rely on it. Use Check a new automation before relying on it.
 you_give:
-  - A plain description of the task (what starts it, what it reads, what it should do)
-  - The services it touches
+  - "A plain description of the task: what starts it, what it reads, what it should do"
+  - The services it touches, such as Gmail, Slack, Shopify or a database
   - Who should be told when it fails, and how (optional)
+  - Which steps are safe to repeat and which charge or send (optional)
 you_get:
   - An n8n workflow laid out step by step, with the right pattern
   - Retries, error paths, clear error replies and a catch-all alert
@@ -26,8 +33,9 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Build on a test copy in n8n. Do not point it at live data until the run is clean.
-  - Say where failure alerts should go, such as email or chat.
+  - Describe the task and say where failure alerts should go, such as email or chat. Say which steps charge a card or send a message, so they are not repeated blindly.
+  - You need n8n, in the cloud or on your own server, to run the result. In plain chat you get the layout as text. If your AI is connected to your n8n, it can build on a test copy. Never point it at live data until the run is clean.
+  - In n8n, open the workflow's settings and pick the catch-all workflow as its Error Workflow. Your AI cannot do this step for you.
 how_it_works:
   - title: Lay out the workflow
     text: Picks the pattern that fits (webhook, request, database, AI agent or schedule), lays out trigger, data, change and output, and lists the nodes in order.
@@ -47,6 +55,23 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+output_sample:
+  input:
+    - A plain description of the task
+    - The services it touches
+    - Who should be told when it fails (optional)
+  prerequisites:
+    - An n8n account or your own n8n install, to run the result
+    - An AI connected to your n8n, if you want it built for you (optional)
+  output:
+    - name: Step 1 workflow layout
+      contains: The pattern chosen and why, the trigger, the nodes in order and the checks on the data.
+    - name: Step 2 failure handling
+      contains: Retries, error paths, plain error replies and a catch-all workflow that alerts you.
+    - name: Step 3 sub-workflows
+      contains: The parts split out, each with typed inputs, a clear return and a name an agent can find.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 tweaks:
   - what: How you want to be told
     how: Say email, chat or a ticket in step 2, so the alert goes where you look.
@@ -70,3 +95,18 @@ improve:
   - Read the alerts for a week and add retries or checks where they repeat.
   - Move each fix into the shared sub-workflow, so every workflow gets it.
   - Keep a short list of your sub-workflows with what each takes and returns.
+terms:
+  - term: n8n
+    meaning: A tool for building automations that connect apps, in the cloud or on your own server.
+  - term: Trigger
+    meaning: What starts a workflow, such as a web request, a schedule or a new row.
+  - term: Error workflow
+    meaning: A separate n8n workflow that runs when another one fails, and can alert you.
+  - term: Retry
+    meaning: Trying a failed step again, a set number of times, before calling it a failure.
+  - term: Sub-workflow
+    meaning: A part of an automation with its own inputs and result, which other workflows can call.
+before: []
+next:
+  - check-a-new-automation-before-relying-on-it
+  - n8n-ai-agent-builder

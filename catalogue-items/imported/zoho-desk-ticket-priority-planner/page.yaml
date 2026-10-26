@@ -2,31 +2,93 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: zoho-desk-ticket-priority-planner
 name: Zoho Desk ticket priority planner
-summary: Connect Zoho Desk. Get waiting tickets grouped by urgency, department, and issue type.
+summary: Sort your open Zoho Desk tickets by urgency. Get a ranked support queue with department, age and issue type, plus next steps for urgent ones.
 job: help-customers
 headline: Zoho Desk ticket priority planner
-subhead: Connect Zoho Desk and ask for a review of waiting tickets. It reads open tickets and up to fifteen full threads. You get a queue grouped by urgency, with the department, customer, age, issue type, and suggested next steps.
+subhead: Connect Zoho Desk and ask your AI which waiting tickets to answer first. It reads your open tickets and up to 15 full message threads. You get a ranked support queue with department, contact, age, issue type and next steps.
+explain: |
+  Your Zoho Desk queue fills up and everything looks urgent. This Zoho Desk ticket sorter reads the open tickets, opens the 15 newest ones in full, and ranks them so an outage does not sit behind a feature request.
+
+  Each ticket gets a priority from P0 (critical) to P3 (low) and a type: bug, billing, question, feature request, account or other. The list is grouped by priority, and every row shows the department, the contact and how long the ticket has waited. It ends with next steps for the urgent ones.
+
+  The skill only reads. It does not reply to, close or change any ticket. It reaches Zoho Desk through Composio, a separate service, so the ticket text passes through it.
 when:
-  - You use this tool for customer support and need help with this task.
+  - You start the support day and want a ranked list of waiting tickets.
+  - The queue grew over a weekend and you need to know what cannot wait.
+  - A manager asks which Zoho Desk tickets are urgent right now.
+  - You want to hand tickets to the right department and need each one tagged.
+not_for:
+  - "You use Zendesk, Freshdesk or Gorgias: use the Zendesk ticket priority planner, the Freshdesk ticket priority planner or the Gorgias ticket priority planner."
+  - "Your tickets are not in Zoho Desk, or you cannot link it: paste a batch of tickets into the Support ticket sorter."
+  - "One ticket needs to go to engineering: use the Escalation brief writer for that ticket."
 you_give:
-  - Open Zoho Desk tickets and full message threads.
-  - The ticket departments, contacts, dates, and issue details.
+  - Your Zoho Desk account, linked through Composio
+  - Your open tickets, which your AI reads for you
+  - A department to focus on (optional)
 you_get:
-  - List tickets by urgency with department, age, customer, and suggested next actions.
+  - A queue grouped from P0 critical to P3 low
+  - Each ticket tagged as bug, billing, question, feature request, account or other
+  - Department, contact and age for every ticket
+  - A short list of next steps for the urgent tickets
+how_to_use:
+  - Check you have a Zoho Desk account and a Composio account with its command line tool. Composio is a separate service, so check its current plan and what it costs.
+  - Open an AI that can run commands and read skill files, such as Claude Code. Add the downloaded folder.
+  - Ask it to run the Zoho Desk ticket priority planner.
+  - If it says Zoho Desk is not connected, run composio link zoho-desk in your terminal and ask again.
+  - Open the P0 and P1 tickets in Zoho Desk and check them against the list before you act.
+  - No command tool? Paste up to 15 tickets with their threads into your AI and ask for the same grouping.
 how_it_works:
-  - title: Read open tickets
-    text: Fetch open tickets and read full details and message threads for up to fifteen.
-  - title: Classify the issues
-    text: Separate serious problems, billing issues, questions, feature requests, and account issues.
-  - title: Show team priorities
-    text: List tickets by urgency with department, age, customer, and suggested next actions.
+  - title: Find the right tools
+    text: Your AI searches Composio for the Zoho Desk actions that list tickets and read one ticket with its threads.
+  - title: Fetch open tickets
+    text: It pulls your open tickets, newest first, and tells you to link Zoho Desk if it is not connected.
+  - title: Read 15 in full
+    text: It opens the full thread for up to 15 tickets so it judges the message, not just the subject.
+  - title: Rank and tag
+    text: Each ticket gets a priority from P0 to P3 and a type such as bug, billing or question.
+  - title: Show the queue
+    text: It lists tickets by priority with department, contact and age, then adds next steps for urgent ones.
+output_shape: |
+  ## Zoho Desk Triage Dashboard
+  ### P0 - Critical (<count> tickets)
+  | # | Ticket ID | Subject | Category | Contact | Department | Age | Summary |
+  ### P1 - High (<count> tickets)
+  ### P2 - Medium (<count> tickets)
+  ### P3 - Low (<count> tickets)
+  ### Recommended Actions
+  - <next step for each urgent ticket>
+output_sample:
+  input:
+    - Your Zoho Desk account, linked through Composio
+    - Your open tickets, which your AI reads for you (up to 15 in full)
+    - A department to focus on (optional)
+  prerequisites:
+    - A Zoho Desk account
+    - A Composio account and its command line tool, with Zoho Desk linked
+    - An AI that can run commands
+    - Ticket text goes through Composio, so check this fits your privacy rules
+  output:
+    - name: P0 - Critical
+      contains: Tickets about outages, data loss or security, with ID, subject, type, contact, department, age and summary.
+    - name: P1 - High
+      contains: Tickets about broken features, billing problems or angry escalations, in the same table.
+    - name: P2 - Medium
+      contains: Everyday questions and small bugs, in the same table.
+    - name: P3 - Low
+      contains: Feature requests and general feedback, in the same table.
+    - name: Recommended Actions
+      contains: A next step for each urgent ticket, such as who should answer and what to check first.
 works_best_with:
   tools:
     - name: Zoho Desk
-      why: Live lookups need Composio CLI access and connected accounts for these services.
-how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for zoho desk ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Open Zoho Desk tickets and full message threads.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+      why: The skill reads your tickets from it. Composio links your AI to it, and live lookups need Composio set up.
+    - name: Claude Code
+      why: It can run the Composio commands and read this skill's folder.
+  inputs:
+    - A note on which tickets count as urgent for your business
+    - Your response-time targets per department
+terms:
+  - term: Composio
+    meaning: A separate service that links your AI to apps such as Zoho Desk. Your ticket text passes through it.
+  - term: Command line tool
+    meaning: A program you control by typing commands, not by clicking.

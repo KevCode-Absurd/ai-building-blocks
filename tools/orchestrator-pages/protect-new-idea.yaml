@@ -1,6 +1,6 @@
 new_slug: protect-new-idea
 name: Protect a rough new idea until it is ready
-summary: Describe your new idea and the pressure on it. Get a verdict on early or broken, and a plan that shields it.
+summary: Protect a rough new idea from deadlines and doubters. Learn if it is early or broken, then get a plan for who sees it and who pays.
 job: lead-people
 thinking: high
 thinking_why: It weighs weak signs of progress and morale and can end a project, so give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A promising idea looks rough and someone wants to judge it as if it were finished.
   - Deadlines or sales targets are pulling a new project off course.
   - You can't tell if a struggling project needs patience or a hard decision.
+not_for:
+  - "Your work is finished and ready to ship: use a standard project review with your team instead."
+  - "You have a single task to check, not an idea under pressure: use the Advice credibility checker to test the advice you were given."
+  - "The idea has no history and no people on it yet: write a short brief first, then come back once there is a first version to judge."
 you_give:
   - The idea, who leads it and how long it has run
   - The groups that need output or approval from it
@@ -27,6 +31,23 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give step 1 the idea and the groups around it. Give step 2 the version history if you have it.
   - If the call is not keep protecting, step 3 still runs but says the plan only applies if you choose to carry on.
+output_sample:
+  input:
+    - Your idea, who leads it and how long it has run
+    - The groups that need output or approval from it
+    - Its versions so far, with dates and what changed (optional, but it helps a lot)
+    - How the team feels about it (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, to follow the handoff pack
+  output:
+    - name: "Step 1: Who pulls on the idea"
+      contains: A table of each group, what it wants, how it pulls and where it steers the idea.
+    - name: "Step 2: Early or broken"
+      contains: A timeline, a test of how notes changed the idea, a read on team belief, then the call and a date to look again.
+    - name: "Step 3: The plan that shields it"
+      contains: What is protected, who sees it, which questions are allowed, who pays and the date and test for the hand-off.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Maps the pull
     text: Lists every group that needs something from the idea, what each wants, and where a schedule or target has started to decide what the idea becomes.

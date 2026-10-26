@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans ahead and writes in your voice.
 new_slug: standing-social-calendar-maker
 name: Standing social calendar maker
-summary: Give it your brand and products. Get a rolling post calendar, captions
-  in your voice and posts ready for approval.
+summary: Plan a month of social media posts with a standing content calendar. Give it your brand and past posts. You get captions in your voice.
 job: grow-social
 headline: Standing social calendar maker
-subhead: A rolling social media calendar that always has the next few weeks
-  already drafted. It starts by learning how you write, using your past posts,
-  newsletters and emails, and confirms the voice with you before writing a word.
+subhead: A rolling social media calendar that always has the next few weeks already drafted. It starts by learning how you write, using your past posts, newsletters and emails, and confirms the voice with you before writing a word.
 explain: |
   A rolling social media calendar that always has the next few weeks already drafted. It starts by learning how you write, using your past posts, newsletters and emails, and confirms the voice with you before writing a word.
 
@@ -18,6 +15,10 @@ when:
   - You want a month of posts planned in one go.
   - AI captions never sound like you and you want that fixed.
   - One photo needs to become posts for several channels.
+not_for:
+  - You want an email design in Canva. This tool writes email text only, so make the design in Canva yourself.
+  - You need one graphic and no plan. Open a Canva template and edit it directly.
+  - You want posts published for you. This tool only stages posts, so you press go in your own scheduling tool.
 you_give:
   - Your brand and products
   - Past posts, newsletters or sent emails
@@ -30,10 +31,36 @@ you_get:
   - Posts staged for your approval
   - Asset briefs for graphics
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text, or upload the skill folder if your AI accepts files.
+  - Share your brand, your products and some past posts, newsletters or sent emails. Say which goals or promotions matter this period.
+  - Check the voice summary it gives you and fix anything that sounds wrong. It will not write until you agree.
+  - Approve the calendar. Then approve the generation budget if you use Canva.
+  - Read each caption and pick one design per row. Fix anything that is wrong, especially prices.
+  - Import the staged posts or CSV into your scheduling tool and post when you are ready. Canva, Shopify and HubSpot Marketing Hub Professional may need paid plans or keys. Without them you get the calendar, captions and asset briefs to post by hand.
+output_sample:
+  input:
+    - Your brand and products
+    - Past posts, newsletters or sent emails
+    - Goals or promotions for the period (optional)
+    - Your Canva account (optional)
+    - Your Shopify store (optional)
+  prerequisites:
+    - An AI that can read your files and past posts
+    - Canva, Shopify, HubSpot or Mailchimp connected (optional, for graphics, product data and staging)
+  output:
+    - name: Voice profile
+      contains: A short description of how you write, built from your past posts, and checked with you before any caption.
+    - name: content-calendar.md
+      contains: The standing calendar with date, channel, theme and path for each post, plus a Home line showing where it lives.
+    - name: Generation budget
+      contains: A count of designs and calls for your approval, before anything is made in Canva.
+    - name: Canva designs
+      contains: Candidate graphics for each social post row, checked by eye, with one picked per row.
+    - name: Captions
+      contains: Each caption has a hook, one benefit, one call to action and a few hashtags, written in your voice.
+    - name: Repurposed formats
+      contains: The approved design resized for each channel, with caption length changed per channel.
+    - name: Staged posts
+      contains: Posts queued in HubSpot or a scheduling CSV for you to approve, never published.
+    - name: Email copy
+      contains: Subject, preheader and plain body text for each email row, with no design made.

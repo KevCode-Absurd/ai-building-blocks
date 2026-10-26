@@ -2,35 +2,92 @@ thinking: low
 thinking_why: It applies set thresholds.
 new_slug: customer-spend-tier-tagger
 name: Customer spend tier tagger
-summary: Set your spend levels. Get each customer tagged Bronze, Silver, Gold or
-  Platinum from lifetime spend. Changes live customer tags.
+summary: Tag every Shopify customer Bronze, Silver, Gold or Platinum by lifetime spend. You set the limits and check a preview before any tag changes.
 job: run-your-store
 headline: Customer spend tier tagger
-subhead: Every customer in your store gets a Bronze, Silver, Gold or Platinum
-  tag based on what they have spent over their lifetime. That gives you VIP
-  groups for offers and support without a loyalty app.
+subhead: Give it your spend limits for each tier. It reads each customer's lifetime spend in Shopify and shows how many land in each tier. After you approve, it writes the tier tags to your customer records.
 explain: |
-  Every customer in your store gets a Bronze, Silver, Gold or Platinum tag based on what they have spent over their lifetime. That gives you VIP groups for offers and support without a loyalty app.
+  A loyalty app is a lot to set up just to know who your best customers are. This skill gives you the same groups with plain Shopify tags: Bronze, Silver, Gold and Platinum, based on what each person has spent in total.
 
-  The skill pulls customers and their orders, adds up lifetime spend, and places each person in a band. You set the band limits, or use the defaults of 250, 1,000 and 5,000. It runs as a preview first and shows how many customers land in each tier. Only after you approve does it write tags, and it can clear old tier tags so nobody holds two. Your AI needs access to your Shopify store.
+  It reads every customer and their lifetime spend, and puts each one in a band. You set the limits or use the starting ones. It shows a preview first, with counts per tier and a few sample customers. It changes nothing until you say go ahead.
+
+  After that it adds the new tier tag and removes the old tier tag if it no longer fits. It touches only tags that start with your tier prefix. You can then use those tags to build segments in Shopify for offers and support.
 when:
-  - You want to send a special offer only to your biggest spenders.
-  - You need support to know which customers are VIPs at a glance.
-  - You are starting a loyalty program and have no app for it yet.
-  - Your old tier tags are out of date and need a clean reset.
+  - You want to send an offer only to your biggest spenders.
+  - Your support team needs to see at a glance who the VIPs are.
+  - You want a loyalty ladder but have no loyalty app yet.
+  - Old tier tags are out of date and you want a clean reset.
+not_for:
+  - You only want a list of top spenders and no tags written. Use the VIP customer finder.
+  - You want to group by how recently and how often people buy, not just spend. Use the Customer segment builder.
+  - Your tags already drive live automations. Ask whoever set them up first, because new tags could set off emails or discounts.
 you_give:
-  - Your store address
-  - Spend limits for each tier (optional)
-  - Tag naming style (optional)
-  - Go-ahead after the preview
+  - Your store address, such as mystore.myshopify.com
+  - The spend limit for each tier (optional, a starting set is used if you do not say)
+  - A tag prefix, such as tier (optional)
+  - Your go-ahead after you read the preview
 you_get:
-  - Preview count of customers per tier
-  - Lifetime spend per customer
-  - Tier tags written to customer records
-  - Old tier tags removed
+  - A preview with the number of customers in each tier
+  - A sample of customers with their spend and old and new tags
+  - A list of customers skipped, such as those with no orders
+  - Tier tags written to customer records, after you approve
+  - Old tier tags removed when a customer moves tier
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
+  - Sign in to your store with Shopify CLI. Your sign-in needs permission to read and write customers.
+  - Give your AI the skill and your store address. Say your tier limits, or ask it to use the starting set and then change them after the preview.
+  - Read the preview. If one tier holds nearly everyone, move the limits and ask for a new preview.
+  - Check that no automation or email flow reacts to these tags. Then say go ahead.
+  - Open two or three customers in Shopify and check that their tag matches their total spent.
+how_it_works:
+  - title: Ask for the limits
+    text: It asks once for the tier limits, the tag prefix and whether to tag customers with no orders.
+  - title: Read lifetime spend
+    text: It pulls every customer and their total spent, page by page, using Shopify's own figure.
+  - title: Place each customer
+    text: Each customer goes into one tier. Customers in a different currency are listed and left alone.
+  - title: Show the preview
+    text: Counts per tier, how many tags change and ten sample rows. It stops until you say go ahead.
+  - title: Remove old tier tags
+    text: If a customer has a different tier tag already, only that tag is removed. No other tag is touched.
+  - title: Add the new tag
+    text: One tier tag per customer, then a summary and a CSV of every change.
+output_shape: |
+  Preview: <count and percent per tier, tags to add, tags to remove, 10 sample rows>
+  Skipped: <customers with no orders or another currency>
+  After go ahead:
+    OUTCOME SUMMARY: <customers read, per tier, tags removed, tags added, errors>
+    CSV: <customer, name, email, lifetime spend, tier, previous tags, new tags>
+output_sample:
+  input:
+    - Your store address
+    - Spend limits for each tier (optional)
+    - A tag prefix (optional)
+    - Your go-ahead after the preview
+  prerequisites:
+    - An AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in to your store
+    - Permission to read and write customers
+  output:
+    - name: Preview
+      contains: How many customers fall in each tier, how many tags will change, and ten sample rows.
+    - name: Skipped list
+      contains: Customers left out because they have no orders or spend in another currency.
+    - name: Outcome summary
+      contains: Counts of customers read, tags removed, tags added and errors.
+    - name: tier_tagging CSV
+      contains: One row per customer with spend, tier, previous tags and new tags.
+works_best_with:
+  tools:
+    - name: Claude Code, Cursor, Codex or Gemini CLI
+      why: They can run Shopify CLI on your machine, which a chat window cannot.
+  inputs:
+    - A rough idea of what a good customer spends in a year, to set sensible limits.
+    - A Shopify segment ready to use each tag for offers or support.
+terms:
+  - term: Lifetime spend
+    meaning: The total a customer has spent with you across all orders, as Shopify shows it.
+  - term: Tag
+    meaning: A short label on a customer record that staff, segments and automations can use.
+  - term: Dry run
+    meaning: A preview that shows what would change, without changing anything.

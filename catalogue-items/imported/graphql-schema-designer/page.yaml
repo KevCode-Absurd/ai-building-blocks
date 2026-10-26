@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies known patterns to your data shape.
 new_slug: graphql-schema-designer
 name: GraphQL schema designer
-summary: Describe your data. Get a GraphQL schema with fast resolvers, paging
-  and performance patterns.
+summary: Design a GraphQL schema from your data. Get types, resolvers that avoid slow repeat queries, cursor paging and limits on costly queries.
 job: build-software
 headline: GraphQL schema designer
-subhead: Describe your data and get a GraphQL API plan you can build from. You
-  receive a full schema, plus resolver code that avoids the slow trap of one
-  database call per item.
+subhead: Describe your data and get a GraphQL API plan you can build from. You receive a full schema, plus resolver code that avoids the slow trap of one database call per item.
 explain: |
   Describe your data and get a GraphQL API plan you can build from. You receive a full schema, plus resolver code that avoids the slow trap of one database call per item.
 
@@ -18,6 +15,10 @@ when:
   - Your API is slow because each list item triggers its own query.
   - You need cursor paging for long lists.
   - You need to stop expensive queries from overloading the server.
+not_for:
+  - "You only need a REST API: use a plain REST design with your web framework, since GraphQL adds work you won't use."
+  - "You want to run queries against a GraphQL API that already exists: use the API's own docs and a client such as Apollo Studio."
+  - "You need to tune a slow database: look at your indexes and query plans first, as the schema may not be the cause."
 you_give:
   - Your entities and how they relate
   - The reads and writes you need
@@ -29,7 +30,31 @@ you_get:
   - Paging for list fields
   - Depth and cost limits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Describe your data: the things you store, how they link, and the reads and writes you need."
+  - Name your server, such as Apollo Server, and say if you want schema-first or code-first output (optional).
+  - Add your auth rules, such as who may edit or delete (optional).
+  - Read the schema first. Check which fields can be empty and that the names fit your data.
+  - Copy the code into your project to run it. Your AI chat can't run it for you. Test it in Apollo Studio.
+output_sample:
+  input:
+    - Your entities and how they relate
+    - The reads and writes you need
+    - Your server framework (optional)
+    - Your auth rules (optional)
+  prerequisites:
+    - Any AI chat is enough to get the schema and resolver code
+    - A Node.js project and database if you want to run the code
+  output:
+    - name: schema.graphql
+      contains: Types, enums, inputs, queries, mutations, subscriptions and paging types for each list, written in GraphQL schema language.
+    - name: resolvers.js
+      contains: Resolver code for each field, with batched lookups so a list and its authors need only two database calls.
+    - name: Pagination module
+      contains: Reusable cursor paging code that returns edges, nodes and page info, and caps the page size.
+    - name: Subscriptions
+      contains: Live event fields, such as new comments, with advice to refetch data when a client reconnects.
+    - name: Security and limits
+      contains: Query depth and cost limits, field-level access checks and notes on persisted queries.
+    - name: Federation notes
+      contains: Advice on splitting the schema across services, only if your API spans more than one.

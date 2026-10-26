@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: clay-town-image-ad-maker
 name: "Clay town image ad maker"
-summary: "Paste your idea, attach photos. Get a clay-town image prompt, the ad words and a layout."
+summary: "Make a clay town image ad from your selling idea. You get an image prompt, the ad words and a layout, with a clay crowd that never counts as proof."
 job: make-image-ads
 
 headline: "Clay town image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your buyer's problem happens around other people, like a commute, an office or a family dinner.
   - You run a clay-town video and want a still that matches it.
   - You want a playful image ad without hiring a cast or building a set.
+not_for:
+  - "You need an ad that proves a claim: use a plain product photo with your approved claim on it."
+  - "You want a video, not a still: use the clay town ad script skill."
+  - "Your buyer's problem happens alone, with no other people around: use a plain product photo or a simple lifestyle shot."
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea
@@ -35,6 +39,31 @@ how_to_use:
   - Attach the product photos and type out every label line. It won't invent label words.
   - Make the image, then lay the real label and the words on it in your editor.
   - Show it to someone for 2 seconds. If they can't say what it's for, ask for fewer figures in focus.
+output_sample:
+  input:
+    - Your selling idea in one sentence
+    - Your brand file, with label text, approved claims and offer
+    - Photos of your product from the front, side and top (optional)
+    - Where the ad runs
+  prerequisites:
+    - An AI that can make images, or an image tool you can paste the prompt into
+  output:
+    - name: Moment plan
+      contains: The shared hassle, the moment, the show job, and the sentence the picture implies with its source.
+    - name: Set card and cast
+      contains: Scale, finish, stand-in materials and light, plus the lead in full and the crowd figures.
+    - name: Layout
+      contains: Size (4:5 or 1:1) and a top to bottom map of picture, quiet area and product in percent.
+    - name: Words on the image
+      contains: A headline of 7 words or fewer and up to 3 more things to read.
+    - name: Image prompt
+      contains: Camera, lead, crowd, place, product label in quotes, set card and colours, plus an avoid field.
+    - name: Post words
+      contains: Primary text, headline field and button label for the ad.
+    - name: Edit step
+      contains: How to lay your real label and words over the picture, and the contrast check.
+    - name: CHECKS MISSED
+      contains: One line for each check the skill could not meet, or none.
 
 how_it_works:
   - title: Checks the fit

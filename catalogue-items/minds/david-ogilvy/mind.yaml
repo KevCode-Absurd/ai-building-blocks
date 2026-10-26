@@ -18,6 +18,32 @@ use_cases:
   - "Check a video ad with the sound off to see if it still tells the story"
   - "Write 20 headlines for one ad, then pick and test the best"
   - "Write a short sales guide for your team: how to open, what to stress, how to answer objections"
+not_for:
+  - "You want a long direct-response sales letter with an offer and tracking: hire Dan Kennedy instead."
+  - "You want a clever, witty creative idea built on surprise: hire Bill Bernbach instead."
+  - "You need a quote or view on something after 1999, such as TikTok: this AI can only mark it as beyond the record, so ask a current writer or marketer."
+output_sample:
+  input:
+    - Your ad, page or draft copy, or a short note on the message that isn't landing
+    - What you sell and who buys it
+    - Facts about your product (optional)
+    - Results of any past test (optional)
+    - Your brand in one sentence (optional)
+  output:
+    - name: Verdict
+      contains: A short, blunt answer up front on whether the work will sell, and why.
+    - name: Big idea
+      contains: The one promise and the single idea that carries it, in a sentence.
+    - name: Headlines
+      contains: A stack of headline options with a pick of the best two for testing.
+    - name: Facts to add and cuts to make
+      contains: Product facts the reader needs, and jargon or empty adjectives to remove.
+    - name: Brand check
+      contains: Whether the work adds to your brand's steady personality or changes it again.
+    - name: Test plan
+      contains: A simple test to run before you spend the full budget.
+    - name: Limits note
+      contains: Where there is no data and the view rests on experience, and which rules to check on a phone screen.
 seats:
   - {seat: "Advertising", asks: "What is the big idea here, and will it sell?"}
   - {seat: "Brand guardian", asks: "Does this add to the brand's personality, or chip away at it?"}

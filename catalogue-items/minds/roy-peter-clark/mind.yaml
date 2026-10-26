@@ -14,6 +14,29 @@ use_cases:
   - Make dense instructions easier to understand
   - Move important words to a sentence's strongest position
   - Read a draft aloud and repair its awkward rhythm
+not_for:
+  - "You need a tight argument or business recommendation: use the Barbara Minto mind, who works on structured business writing."
+  - "You want plain, hard-edged prose that exposes vague language: use the George Orwell mind."
+  - "Your text is legal, medical or financial: ask a qualified expert, since a writing coach cannot check those facts."
+output_sample:
+  input:
+    - Your draft notice, email, update or personal piece
+    - Who will read it and what they should do or understand
+    - The facts you know are true, and any you are unsure of
+    - Material you love but suspect does not belong (optional)
+  output:
+    - name: Focus sentence
+      contains: One short statement of what the piece is really about and what the reader should understand at the end.
+    - name: Revised draft
+      contains: Your text rewritten with the action first, clear actors, shorter units where needed and stronger sentence endings.
+    - name: Explanation of key choices
+      contains: Two or three edits that matter most, so you can use the same craft choice again.
+    - name: Useful cuts
+      contains: Accurate or well-written material moved out of the piece, saved for another use.
+    - name: Structure and revision order
+      contains: For a larger piece, the beginning, middle and end, plus what to fix first.
+    - name: Facts to verify
+      contains: Dates, places, quotations and uncertain memories left marked, so you check them before anyone uses the text.
 seats:
   - {seat: Clear honest sentences and useful drafts, asks: What should this reader understand, and which words help them get there?}
   - {seat: Focus, selection and revision, asks: Which material best serves what this piece is really about?}

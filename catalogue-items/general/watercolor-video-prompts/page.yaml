@@ -1,6 +1,6 @@
 new_slug: watercolor-video-prompts
 name: "Watercolor video clip prompt writer"
-summary: "Paste your watercolor script and photos. Get every painted image and clip prompt, plus an edit list."
+summary: "Turn a watercolor ad script into painted image prompts, clip prompts and an edit list, with three stops for your OK before video credits are spent."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have a watercolor ad script and need it made with AI image and video tools.
   - Earlier tries looked like a filter, or the paint and the figure kept changing.
   - You want to approve each step before you spend credits on video.
+not_for:
+  - "You want an ad without a painted look, or a photo-style product video: use a standard video ad skill instead."
+  - "You have no script yet: write one first with the Video ad script writer from customer quotes."
+  - "You want a finished video file: this writes prompts and an edit list, so use your own image and video tools to make the clips."
 
 you_give:
   - The script with narration and picture notes (and its show plan and cast note, if you have them)
@@ -35,6 +39,32 @@ how_to_use:
   - Approve the avatar card, then make the reference images and pick one.
   - Make the sheets and approve them with the lock lines, then approve the storyboard.
   - Make the clips from the approved frames, record the narration, and cut the edit from the edit list.
+output_sample:
+  input:
+    - Your narrated watercolor ad script, with its show plan and cast note if you have them
+    - Clean photos of your product's front, side and top
+    - The label text on your pack, word for word
+    - Your video tool and clip length (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Image and video tools to run the prompts, such as the ones listed on this page
+  output:
+    - name: "Stage 0: Script in"
+      contains: The show job and paint technique, and where the change starts, stops and must never cross.
+    - name: "Stage 1: Avatar card"
+      contains: "Who or what carries the ad: role, age, look, clothes, props, voice and what never changes. You approve it."
+    - name: "Stage 2: Reference images"
+      contains: Prompts for three or four painted images of the avatar, plus a pick and the reason.
+    - name: "Stage 3: Sheets and lock lines"
+      contains: Character, product and set sheets, plus the material sentence and figure and product lines every prompt repeats. You approve them.
+    - name: "Stage 4: Storyboard"
+      contains: A frame prompt and a shot card for every shot, with continuity notes. You approve the whole board.
+    - name: "Stage 5: Clip prompts"
+      contains: One prompt per clip that describes only the paint change, with the camera move, what stays fixed and the end state.
+    - name: Edit list
+      contains: Order of clips, captions, overlay, end card and safe zone, with a note of any missing facts.
+    - name: Checks missed
+      contains: One line for each check the result failed, or none.
 
 how_it_works:
   - title: Takes in the script

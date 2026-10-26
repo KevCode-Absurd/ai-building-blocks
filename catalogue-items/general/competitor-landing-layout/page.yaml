@@ -1,6 +1,6 @@
 name: Competitor landing page layout planner
 new_slug: competitor-landing-layout
-summary: Attach a page screenshot and facts. Get its layout filled with your own words and facts.
+summary: Turn a landing page screenshot into your own page layout plan. Get a section map and slot-by-slot copy built from your facts, not theirs.
 job: write-landing-page
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You've found a competitor's or another brand's page with a structure you'd like to follow.
   - You're briefing a designer and want a clear section-by-section plan, not "make it like this".
   - You want to test a new page layout without copying anyone's content.
+not_for:
+  - "You want to write the page copy first: use the Ad-matched landing page writer, then place the copy in your layout."
+  - "You want to score a page you already built: use the Landing page 30-point checker."
+  - "You want to copy another business's words, photos or reviews: this is the wrong tool, so write your own or hire a designer."
 you_give:
   - A screenshot of the reference page, desktop and phone if you have both (attach it; your AI can see pictures)
   - Your brand facts, such as colours, fonts, voice, product, prices, offers, guarantee, delivery, real reviews and photos
@@ -31,6 +35,29 @@ how_to_use:
   - Paste your brand facts, real reviews with sources, your rating if you have one, and the list of photos you have.
   - Paste the ad that will send people to the page, so the first screen carries on from it.
   - Read the "removed" rows in the slot map. Those are the things you'd need real proof for before adding them back.
+output_sample:
+  input:
+    - A screenshot of the page whose layout you like, desktop and phone if you have both
+    - "Your brand facts: colours, fonts, voice, product, prices, offers and guarantee"
+    - Your real reviews with sources, and your photos (optional)
+    - The ad that sends people to the page (optional)
+    - Whether your product is bought again or bought once (optional)
+  prerequisites:
+    - An AI that can read images, so it can see the screenshot
+    - An AI that can write files, only if you want the HTML skeleton (optional)
+  output:
+    - name: Layout map
+      contains: A table of every section with its order, height, columns, background and block type, marked keep, change or remove.
+    - name: Layout rules
+      contains: A short list of width, spacing, corners, button style and type feel.
+    - name: Slot map
+      contains: Each slot, where its fact comes from, and your text for it or MISSING.
+    - name: Not sourced list
+      contains: Missing photos, removed fact slots, undefined colour jobs, and missing logo or contact details.
+    - name: Skeleton
+      contains: An optional plain HTML page with your colours as variables and empty image slots.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 how_it_works:
   - title: Reads the image first
     text: Logs each section's order, share of page height, columns, image side, background and type of block, before designing anything.

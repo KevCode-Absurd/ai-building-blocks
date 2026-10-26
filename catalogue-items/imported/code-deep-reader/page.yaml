@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It reads code closely and builds one mental model.
 new_slug: code-deep-reader
 name: Code deep reader
-summary: Point it at code you need to understand. Get a line-by-line map of how
-  it works before you hunt bugs.
+summary: Read unfamiliar code line by line before a security review. Get a clear map of what each function does and assumes. No bug hunting yet.
 job: secure-code
 headline: Code deep reader
-subhead: Before you hunt for bugs, you get a slow, line-by-line understanding of
-  what the code does. That cuts guessing, mixed-up facts and lost context in the
-  later audit.
+subhead: Before you hunt for bugs, you get a slow, line-by-line understanding of what the code does. That cuts guessing, mixed-up facts and lost context in the later audit.
 explain: |
   Before you hunt for bugs, you get a slow, line-by-line understanding of what the code does. That cuts guessing, mixed-up facts and lost context in the later audit.
 
@@ -18,6 +15,10 @@ when:
   - You keep misreading how two modules talk to each other.
   - You are preparing a security review or threat model.
   - You want facts about the code, not high-level guesses.
+not_for:
+  - "You want vulnerabilities found, fixes proposed or severity rated: run a separate bug-hunting or audit step after this one."
+  - "You only need a quick summary of what a file does: ask your AI for a short summary, or read the project's own docs."
+  - "You have no code to share and only a description: ask a developer on your team to walk you through it."
 you_give:
   - The code or module to study
   - The area you care about most (optional)
@@ -28,8 +29,29 @@ you_get:
   - A map of how functions and modules connect
   - A list of spots that look risky to read
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool and paste the skill text, or upload the skill folder if your tool allows files.
+  - Share the code or module. Say which area matters most, if you have one.
+  - Ask for the orientation map first. Check that the modules and entry points match what you know.
+  - Ask your AI to go function by function. It asks why each block exists (5 Whys) and how it works (5 Hows).
+  - Ask for a final summary of purpose, assumptions, rules that must hold and spots that are risky to read.
+  - Keep the result. Use it as the starting point for a separate bug-hunting or audit step.
+output_sample:
+  input:
+    - The code or module you want to understand
+    - The area you care about most (optional)
+    - Any docs or notes on what the code should do (optional)
+  prerequisites:
+    - An AI that can read your project files, or code pasted into the chat
+  output:
+    - name: Initial orientation
+      contains: The main modules and files, public entry points, likely actors and key stored data, with no assumed behavior.
+    - name: Function micro-analysis
+      contains: "For each non-trivial function: purpose, inputs and assumptions, outputs and effects, and a block-by-block walk through the logic."
+    - name: Cross-function and external flow
+      contains: How data and assumptions pass between functions, and how calls to code outside the project are treated as untrusted.
+    - name: Global system understanding
+      contains: Which functions touch which state, end-to-end workflows, who can call what, and the rules that must always hold.
+    - name: Fragile spots
+      contains: Functions with many assumptions, heavy branching or linked state changes, listed as places to read closely later.
+    - name: Corrections and anchors
+      contains: Earlier guesses that proved wrong, stated plainly, plus a short summary of the key facts so far.

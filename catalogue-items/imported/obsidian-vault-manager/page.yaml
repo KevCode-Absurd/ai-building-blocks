@@ -2,36 +2,97 @@ thinking: low
 thinking_why: It runs one command per step from a reference list.
 new_slug: obsidian-vault-manager
 name: Obsidian vault manager
-summary: Tell it what to find, add or change in your vault. Get notes read,
-  created and searched from the command line.
+summary: Run your Obsidian vault in plain words. Say what to find, create or change and get the exact commands, with the right vault named first.
 job: organise-work
 headline: Obsidian vault manager
-subhead: Run your Obsidian vault from the command line, in plain words. You say
-  what to find, create or change, and the skill turns it into the right command
-  for the running app.
+subhead: "Tell it what to find, add or change in your Obsidian vault. It turns your request into the right command for the Obsidian app you have open, names the vault first, and asks before it deletes or overwrites. You get the commands and a check of the result."
 explain: |
-  Run your Obsidian vault from the command line, in plain words. You say what to find, create or change, and the skill turns it into the right command for the running app.
+  Obsidian is a note app that keeps your notes as plain files in a folder called a vault. This skill lets an AI work on that vault from the command line, so you can say "make ten notes from this list" or "find every note that mentions a phrase" instead of clicking.
 
-  It uses the Obsidian command line tool, which talks to a copy of Obsidian that is already open. Commands take values like name or content, and flags such as silent to avoid overwriting. You can aim a command at a note by name, which works like a link, or by exact path from the vault root. When you have more than one vault, it names the vault first so nothing lands in the wrong place. It can also help you develop and debug plugins and themes.
+  It uses the Obsidian command line tool, which talks to the copy of Obsidian you already have open. It can aim at a note by name, which works like a link, or by exact path. If you keep more than one vault, it names the vault first so a note never lands in the wrong place.
+
+  Be aware that some commands change or delete notes, and one runs code inside the app. The skill checks the vault and asks before it deletes, overwrites or runs that code.
 when:
-  - You want to create ten notes from a list without clicking through the app.
+  - You want ten notes created from a list without clicking through the app.
   - You need to search your vault for a phrase and see which notes match.
-  - You are building an Obsidian plugin and want to reload and test it from the
-    terminal.
+  - You are building an Obsidian plugin and want to reload and test it from the terminal.
   - You keep several vaults and need to be sure a change goes into the right one.
+not_for:
+  - "You want one well-formed note with links and callouts: use the Obsidian note writer."
+  - "You want a mind map or flowchart file: use the Obsidian canvas maker."
+  - "You want a table or card view of your notes: use the Obsidian database view builder."
+  - "You want to sync or back up a vault: use Obsidian's own sync or a backup tool."
 you_give:
   - What you want to find, add or change
   - The vault name, if you have more than one
   - The note names or paths involved (optional)
-  - Obsidian installed and open on your computer
-you_get:
-  - The exact commands to run
-  - Notes created or edited in the right vault
-  - Search results from your vault
-  - Plugin and theme debugging steps
+  - Obsidian installed and open on your computer, with its command line tool
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands on your computer.
+  - Use an AI that can run commands on your computer, such as Claude Code. A plain chat window can write the commands but cannot run them. Open Obsidian first.
+  - Add the skill, then say what you want and which vault. Example, "In my Work vault, find notes that mention onboarding."
+  - Check the vault name and the commands before it runs them. Back up the vault before large changes.
+  - Say yes only for deletes, overwrites, plugin reloads and anything that runs code in the app.
+  - Open the notes in Obsidian to check the result. Ask it to read the changed notes back too.
+  - To write the note content itself, use the Obsidian note writer first, then this skill to add it to the vault.
+you_get:
+  - The exact commands to run, with the vault named
+  - Search results as note names and paths
+  - Notes created or changed, with their paths
+  - Errors found and fixes, if you are testing a plugin or theme
+  - A short check list of what to look at in Obsidian
+how_it_works:
+  - title: Check the tool
+    text: Reads the command help for your version, since commands differ between versions.
+  - title: Confirm the vault
+    text: Names the vault and the note paths before any write.
+  - title: Build the command
+    text: Writes the command with the right values and flags, such as silent to keep existing notes.
+  - title: Run with limits
+    text: Runs reads freely and asks before it deletes, overwrites or runs code in the app.
+  - title: Read it back
+    text: Reads changed notes back to confirm and leaves other notes alone.
+output_shape: |
+  Vault: <vault name>
+  Commands:
+  <command 1>
+  <command 2>
+
+  Result:
+  <search hits as note name and path, or note paths created or changed>
+
+  Check in Obsidian: <one thing to look at>
+output_sample:
+  input:
+    - What you want to find, add or change
+    - The vault name, if you have more than one
+    - Note names or paths (optional)
+  prerequisites:
+    - Obsidian open on your computer, with its command line tool installed
+    - An AI that can run commands on your computer
+  output:
+    - name: Commands
+      contains: The exact commands, with the vault named first, shown before they run.
+    - name: Search hits
+      contains: Note names and paths that matched your search, with a count if you ask.
+    - name: Notes created or changed
+      contains: The path of each note and what was written, read back to confirm.
+    - name: Plugin check
+      contains: Errors from reloading a plugin or theme, and what to fix.
+    - name: Check in Obsidian
+      contains: One thing to look at in the app to confirm the change.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the commands on your computer and read the notes back.
+    - name: Obsidian with its command line tool
+      why: The skill needs the app open and the tool installed.
+  inputs:
+    - The exact vault name
+    - A list of notes to create, one per line
+terms:
+  - term: Vault
+    meaning: The folder where Obsidian keeps all your notes.
+  - term: Command line
+    meaning: A text window where you type commands for the computer to run.
+  - term: eval
+    meaning: A command that runs code inside the app. It needs your clear yes.

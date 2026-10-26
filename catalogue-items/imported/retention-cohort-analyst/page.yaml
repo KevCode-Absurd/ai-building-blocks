@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The steps are set, but reading the patterns takes judgment.
 new_slug: retention-cohort-analyst
 name: Retention cohort analyst
-summary: Give it user activity data. Get retention curves by sign-up group,
-  feature adoption trends and what they suggest.
+summary: Find which sign-up groups stay and which leave. Give it your user activity file and get retention charts, adoption trends and next steps.
 job: track-numbers
 headline: Retention cohort analyst
-subhead: A clear picture of which sign-up groups stay and which leave, with
-  charts and a short list of what to look into next. You see where the drop-off
-  happens and who it happens to.
+subhead: A clear picture of which sign-up groups stay and which leave, with charts and a short list of what to look into next. You see where the drop-off happens and who it happens to.
 explain: |
   A clear picture of which sign-up groups stay and which leave, with charts and a short list of what to look into next. You see where the drop-off happens and who it happens to.
 
@@ -18,6 +15,10 @@ when:
   - You need to show whether a new feature helped people stay.
   - You want to compare cohorts from different months or campaigns.
   - You are planning user interviews and need to know whom to ask.
+not_for:
+  - "You have fewer than three cohorts: compare the groups by hand in a spreadsheet, or wait until you have more data."
+  - "You only want to know where people drop out of a sign-up or buying flow: use a funnel analysis in your analytics tool."
+  - "You want to know which ads or channels bring in users: check your ad platform reports, because this skill looks at what users do after they join."
 you_give:
   - A data file with cohort, period and activity columns
   - The question you want answered
@@ -30,7 +31,32 @@ you_get:
   - A list of patterns and surprises
   - Suggested follow-up research and tests
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Pick a mode that can read files and run code if you want charts.
+  - Paste the skill text into the chat.
+  - Attach your data file. Say what a cohort is in your data, such as sign-up month.
+  - Ask your question, for example why one group stays less than another. Add any launches or changes in that period.
+  - Check the Data Summary first. Fix any gaps it finds, then read the patterns.
+  - Ask for the Python script if you want to rerun it later.
+output_sample:
+  input:
+    - A CSV, Excel or JSON file with cohort, period, user ID and activity columns
+    - The question you want answered
+    - Feature usage columns (optional)
+    - Notes on product changes or launches in the period (optional)
+  prerequisites:
+    - An AI that can read your data file and draw charts (needs code running for charts and scripts)
+  output:
+    - name: Data Summary
+      contains: Cohort sizes, date ranges, the metrics found and any gaps or data quality problems.
+    - name: Quantitative Findings
+      contains: Retention rates by cohort, period-over-period change and feature adoption rates.
+    - name: Visualizations
+      contains: A retention heatmap, cohort progression lines and feature adoption comparison charts.
+    - name: Pattern Identification
+      contains: Two or three key patterns, such as early churn, late changes or odd spikes.
+    - name: Research Recommendations
+      contains: Interviews, surveys, session replays and A/B tests to explain what the numbers show.
+    - name: Analysis Scripts
+      contains: Python code you can rerun on new data. Only included if you ask for it.
+    - name: Next Steps
+      contains: A ranked list of actions based on the findings.

@@ -1,6 +1,6 @@
 new_slug: long-term-partner-screener
 name: "Long-term partner screener"
-summary: "Describe a partner, client or hire. Get a check on intelligence, energy and integrity, and whether it is worth repeating."
+summary: "Check a partner, client or hire before you commit. Get scores for integrity, intelligence and energy, and a keep, test-first or walk-away call."
 job: lead-people
 thinking: medium
 thinking_why: "It scores people on three traits from evidence, which takes careful reading but follows a fixed frame."
@@ -17,6 +17,10 @@ when:
   - "You are about to sign a long contract or take on a co-founder."
   - "A client is great on revenue but you have a bad feeling about them."
   - "You are choosing between two hires or two vendors."
+not_for:
+  - "You are judging a seller's advice or pitch: use the Advice skin-in-the-game checker."
+  - "You are making a one-off, low-stakes purchase: a quick look at reviews or a short chat is enough."
+  - "You have no firsthand dealings with the person yet: meet them or run a small paid trial first, then come back."
 
 you_give:
   - "Who the person is and the game you would play together"
@@ -35,6 +39,29 @@ how_to_use:
   - "Add anything from other people who have dealt with them."
   - "Read integrity first, then the other two."
   - "Use the test-first plan if it says so, then bring back what happened."
+output_sample:
+  input:
+    - Who the person is and what you would do together
+    - What you have seen them do, with dates if you can
+    - How long and how often you would deal with them
+    - What other people say about them (optional)
+  output:
+    - name: The game
+      contains: What you would do together, for how long, and how often you would deal with each other.
+    - name: Scores
+      contains: Integrity, intelligence and energy rated low, medium or high, each with something you have seen.
+    - name: Flags
+      contains: Habits like cynicism that tend to repeat, with what you saw.
+    - name: History test
+      contains: Who rounds in whose favour, who pays small costs, and what they did when fairness cost them.
+    - name: One-off win risk
+      contains: Whether a quick win in this deal could cost the relationship over time.
+    - name: Call
+      contains: Keep, test first or walk away, with a reason, a small test if needed, and what would change it.
+    - name: What is unknown
+      contains: The facts about the person you still do not have.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 
 how_it_works:
   - title: "State the game"

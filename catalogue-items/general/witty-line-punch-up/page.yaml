@@ -1,6 +1,6 @@
 new_slug: witty-line-punch-up
 name: "Witty line punch-up"
-summary: "Paste a toast, speech or bio. Get a few turned sayings that are sharp and true, with the rest left plain."
+summary: "Punch up a toast, speech or bio with two or three sharp turned lines. Each stays true, and the rest of your text stays plain."
 job: speak-and-persuade
 thinking: low
 thinking_why: "It finds a few lines to turn and reverses them by a fixed method."
@@ -17,6 +17,10 @@ when:
   - Your toast or speech is correct but flat.
   - Your bio or intro reads like everyone else's.
   - You want one or two lines people will quote.
+not_for:
+  - "You want a whole funny speech from scratch: use the Funny speech planner."
+  - "Your text is about grief, illness or someone who is absent: keep it plain and edit it by hand, or ask a friend to read it."
+  - "Your text must stay formal, such as a legal or board note: use a plain proofread instead."
 
 you_give:
   - Your text, such as a toast, speech, bio or short piece
@@ -34,6 +38,24 @@ how_to_use:
   - Mark any part that must stay serious, such as a mention of someone who died.
   - Read the new lines aloud, and cut any that do not sound like you.
   - Keep no more than three per page.
+output_sample:
+  input:
+    - Your toast, speech, bio or short text
+    - Who will read or hear it
+    - Any parts that must stay serious (optional)
+  output:
+    - name: Turned lines
+      contains: Each kept line with the saying behind it, the true point it holds, and where it sits in your text.
+    - name: Rejected
+      contains: Lines it tried and dropped, each with the reason it failed.
+    - name: Left plain
+      contains: Passages it did not touch, with why, such as serious or sad parts.
+    - name: Your text, revised
+      contains: Your full text with the two or three turned lines in place.
+    - name: Missing
+      contains: Facts you did not give, marked so nothing is made up.
+    - name: Checks missed
+      contains: One line for each check it could not pass, or none.
 
 how_it_works:
   - title: Finds the obvious line

@@ -1,6 +1,6 @@
 slug: check-capacity-before-promising-a-delivery-date
 name: Check capacity before promising a delivery date
-summary: Share the source files. Get a capacity view, delivery options and a draft commitment to review.
+summary: Check if your team can take new work. Get a capacity view, delivery date options with their risks and a draft reply to review before you promise.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,9 +8,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: question
+    required: true
+  - type: spreadsheet
     required: false
 outputs:
   - type: plan
@@ -21,11 +21,12 @@ uses:
   - stakeholder-update-writer
 steps:
   - uses: team-capacity-planner
-    note: Calculate available capacity from actual staffing and commitments in the requested window.
+    note: Works out available hours per person in the window against work already committed. Hands the capacity table and the overloaded list to the risk step.
   - uses: project-risk-portfolio
-    note: Compare the new work with existing priorities and flag shared dependencies and schedule risks.
+    note: "Uses step 1's capacity table and overloaded list, plus your other jobs and what each waits on. Sets the new request against your other work and flags shared people, waiting dates and the jobs most likely to slip. Hands the risks to the writer."
   - uses: stakeholder-update-writer
-    note: Draft feasible timing options and explain the trade-offs before anyone promises a date.
+    note: "Uses step 1's capacity view and step 2's risks, with the requester as the audience. Turns them into delivery date options with trade-offs, then drafts a short reply for review. It sends nothing."
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

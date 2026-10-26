@@ -7,6 +7,18 @@ description: 'Generate a complete Go MCP server project with proper structure, d
 
 Generate a complete, production-ready Model Context Protocol (MCP) server project in Go.
 
+## Before you generate
+
+Ask once for what you do not have. Never invent it.
+
+- Project name (used for the module, folder and server name).
+- Go module path. If the person has none, use `github.com/yourusername/<name>` and say it is a placeholder.
+- The tools wanted: for each, a name, its inputs and what it returns. If none are given, build two sample tools and label them SAMPLE so they are replaced.
+- Where the data comes from (file, database, API). If it needs a key or password, read it from an environment variable. Never write a secret into a file.
+- The Go version installed, if known. The template uses 1.23.
+
+This skill needs a Go install and a way to create files and run commands. If the AI cannot run commands, write each file out in full, then give the person the commands to run (below) and ask them to paste any error back.
+
 ## Project Requirements
 
 You will create a Go MCP server with:
@@ -332,3 +344,11 @@ When generating a Go MCP server:
 - Keep main.go minimal, logic in packages
 - Write tests for tool handlers
 - Document all exported functions
+
+## After you generate
+
+1. Run `go mod tidy`, then `go test ./...`, then `go build`. Read the output.
+2. The template pins an SDK version in go.mod. If the code does not compile against the version `go mod tidy` picks, change the code to match that version's API, and tell the person what you changed. Do not claim the project works unless the build and tests passed. If you could not run them, say "not built or tested".
+3. Finish with a short note: what each tool does, the commands to run, what is still a placeholder, and how to add the server to an MCP client (give the path to the built program). If you are not sure of a client's setting names, say so and point to that client's own docs.
+
+Do not use this skill to change an existing server, or to write a Python or TypeScript server.

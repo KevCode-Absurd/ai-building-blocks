@@ -2,37 +2,96 @@ thinking: high
 thinking_why: Fair splits and model choice need careful judgement.
 new_slug: molecule-property-predictor
 name: Molecule property predictor
-summary: Give it molecules and measured results. Get a tested model that
-  predicts a property, with fair train and test splits.
+summary: Predict a molecule property such as solubility from your lab results. Get scaffold-split test scores and predictions, using DeepChem and Python.
 job: research-topics
 headline: Molecule property predictor
-subhead: Give it molecules and measured results. Get a tested model that
-  predicts a property, with fair train and test splits. Bring molecules as
-  SMILES strings. Use the result to plan your next step.
+subhead: Give it molecules as SMILES strings with measured values. It trains a model on a split that keeps test molecules truly new, and prints test scores and predictions in your own units. It needs Python.
 explain: |
-  A tested model that predicts a property of a molecule, such as solubility or toxicity, with fair splits so the score means something.
+  A molecule property predictor is only useful if its test score is honest. This skill builds one with DeepChem and splits your molecules by scaffold, so the test set holds shapes the model has not seen.
 
-  The skill uses DeepChem. It first cleans your data: it parses molecule strings, records rejected rows and checks duplicate structures and repeated measurements. It trains a simple number-based baseline before any neural network. It splits by molecular scaffold or by time, so test molecules are truly new, and fits preprocessing on training data only. Settings are chosen on validation data and the final test is run once. The report shows per-task counts and warns that a good fit is not proof for new chemistry.
+  It starts by checking your data: SMILES strings that parse, repeated structures and repeated measurements. It fits a simple fingerprint model before any neural network. It fits scaling on the training set only, then turns results back into your original units, such as log solubility.
+
+  The bundled scripts print test scores and predictions for the molecules you name. They use fixed training lengths and do not tune settings or save a table of rejected rows. A good fit does not prove the model is right for new chemistry, and the skill says so.
 when:
-  - You have lab results for a few thousand compounds and want to predict the
-    rest.
-  - Your model looks great and you worry about leakage between train and test.
-  - You need a baseline before trying a graph neural network.
-  - You want results in the original units, not scaled numbers.
+  - You have measured values for a few thousand compounds and want to predict the rest.
+  - Your model scores well and you worry that train and test molecules are too alike.
+  - You need a fingerprint baseline before you try a graph neural network.
+  - You want predictions in the units you measured, not scaled numbers.
+not_for:
+  - You need to claim a result for brand new chemistry. Test the predictions in the lab first. A model score is not proof.
+  - Your labels are sparse across many tasks, or mix assay units. The custom scripts need one complete target in one unit, so clean the data first.
+  - You cannot run Python 3.11 with RDKit on your own machine. Ask a colleague who runs chemistry data work to run it for you.
 you_give:
-  - Molecules as SMILES strings
-  - Measured values or labels
-  - Units and assay conditions
-  - The deployment question, such as new scaffolds (optional)
+  - A CSV with a SMILES column and a column of measured values
+  - The units and assay conditions for those values
+  - A few SMILES you want predictions for (optional)
+  - What you will use the model for, such as new scaffolds (optional)
 you_get:
-  - A cleaning report with rejected rows
-  - A baseline and a tuned model
-  - A scaffold or time split
-  - Test scores with counts per task
-  - Limits on where to trust it
+  - Test scores in your original units
+  - The count of molecules in each split
+  - Predictions for the SMILES you name
+  - Notes on repeated structures and scaffold overlap
+  - A plain statement of where not to trust the model
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Set up Python 3.11 with DeepChem and RDKit in an isolated environment. The skill lists the exact packages. Your AI cannot do this inside a plain chat window.
+  - Open Claude, ChatGPT or Gemini with a tool that can run code. Give it the skill and your CSV. Say which column holds the SMILES and which holds the value.
+  - Tell it the units and how the values were measured. If you skip this, the report will mark them as missing.
+  - Ask it to check your data first and show the repeated structures, before it trains anything.
+  - Run the model. Read the test score next to the count of test molecules. Be wary of a high score on a small test set.
+  - If you need split IDs, rejected rows or a saved prediction file, ask your AI to add that code. The bundled scripts only print.
+how_it_works:
+  - title: Define what is measured
+    text: It pins down compound identity, units, assay conditions and missing labels, and parses every SMILES string.
+  - title: Fit a simple baseline
+    text: It trains a fingerprint model first, so you can see if a graph network adds anything.
+  - title: Split by scaffold
+    text: Molecules are split by core shape, so the test set holds shapes the model has not seen.
+  - title: Fit scaling on training only
+    text: Scaling is learned from the training set, then undone so scores come back in your units.
+  - title: Train for a fixed number of rounds
+    text: The scripts train for a set number of epochs and print metrics. They do not tune settings or stop early.
+  - title: Report with limits
+    text: It reports scores with counts and says a good fit is not proof for new chemistry.
+output_shape: |
+  Data check: <rows read, rows rejected and why, repeated structures>
+  Split: <scaffold split, molecules in train, validation and test>
+  Scores: <metrics in original units, count per task>
+  Predictions: <SMILES, predicted value, units>
+  Limits: <where the model should not be trusted>
+output_sample:
+  input:
+    - A CSV with a SMILES column and a column of measured values
+    - The units and how the values were measured
+    - SMILES you want predictions for (optional)
+  prerequisites:
+    - An AI that can run Python code, or a person who can run commands
+    - Python 3.11 with DeepChem and RDKit installed
+    - Internet access, only if you use a built-in dataset or a downloaded model
+    - DGL and DGL-LifeSci, only for the GCN, GAT, AttentiveFP and MPNN models
+  output:
+    - name: Data check
+      contains: Rows read, rows the loader stopped on, and notes on repeated structures.
+    - name: Split summary
+      contains: How many molecules landed in train, validation and test after the scaffold split.
+    - name: Test scores
+      contains: Error or accuracy measures in your original units, with the count of molecules scored.
+    - name: Predictions
+      contains: A predicted value in your units for each SMILES you named.
+    - name: Limits
+      contains: Where the model should not be trusted, and a reminder that a good fit is not proof.
+works_best_with:
+  tools:
+    - name: A chat AI that can run Python
+      why: The scripts need to run. A chat AI that cannot run code can only give you the commands.
+  inputs:
+    - Assay conditions for each value, so mixed assays are not blended.
+    - A held-out set of new molecules you measure later, to check the model for real.
+terms:
+  - term: SMILES
+    meaning: A line of text that writes out a molecule, like CCO for ethanol.
+  - term: Scaffold split
+    meaning: A split that keeps molecules with the same core shape on the same side.
+  - term: Fingerprint
+    meaning: A string of numbers that stands for which parts a molecule contains.
+  - term: Leakage
+    meaning: When test molecules are so like training ones that the score looks better than it is.

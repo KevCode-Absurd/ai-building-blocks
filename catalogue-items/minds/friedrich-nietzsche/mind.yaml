@@ -16,6 +16,27 @@ use_cases:
   - "Turn your strengths and weaknesses into one clear personal style"
   - "Write sharp, short aphorisms that make readers stop and think"
   - "Ask whether a setback could be fuel for growth instead of only a loss"
+not_for:
+  - "You need legal, medical or money advice for your own case: see a lawyer, doctor or planner, as he would not know your bills."
+  - "You want a step-by-step plan or a practical how-to: pair him with someone practical, because he takes ideas apart but does not build the working version."
+  - "You want a calm, tidy list of pros and cons: use Annie Duke, whose work separates decision quality from outcomes and when to quit."
+output_sample:
+  input:
+    - The belief, rule or choice you want to question
+    - Why you hold it, and who else holds it
+    - What you fear losing if it turns out wrong
+    - Your job or setting, if it matters (optional)
+  output:
+    - name: Provocation
+      contains: A bold claim or question that tests whether you flinch before the real work starts.
+    - name: Where it came from
+      contains: A trace of the value back to the needs and fears of the people who made it, and who gains.
+    - name: Hidden motive
+      contains: A name for the fear, grudge or tiredness that may sit behind the belief.
+    - name: Recurrence test
+      contains: A question asking if you would choose this life again, exactly as it is, forever.
+    - name: Own the choice
+      contains: A closing push to make the choice yours, whichever way you go, with no step-by-step plan.
 seats:
   - {seat: "Challenge the assumptions", asks: "Where did this value come from, and who gains if we keep believing it?"}
   - {seat: "Growth over comfort", asks: "Are we choosing this because it makes us stronger, or because it feels safe?"}

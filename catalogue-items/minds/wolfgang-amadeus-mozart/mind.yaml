@@ -16,6 +16,32 @@ use_cases:
   - "Give a piece a clear form, with sections that set up, contrast and return"
   - "Study an older master's work to learn something new in your own"
   - "Decide whether to leave a safe but limiting job to work for yourself"
+not_for:
+  - "You want a calmer review of risk or money: bring a planner or an accountant, since his own money habits were poor."
+  - "You want a film's pacing, suspense or shot plan: use the Alfred Hitchcock mind."
+  - "You want music that blends traditions for a screen scene: use the A. R. Rahman mind."
+output_sample:
+  input:
+    - Your piece, talk or song, or a short description of it
+    - Who will perform or deliver it, and what suits them
+    - Who it is for, and how much they know
+    - Time limit and any rules you must keep
+    - Your pay, clients or job details, if the question is about work (optional)
+  output:
+    - name: Who it is for
+      contains: What the expert and the beginner each need, and whether the piece gives both something.
+    - name: Fit to the performer
+      contains: Whether the piece suits the voice, skill and pace of the person who delivers it.
+    - name: Tempo check
+      contains: Whether the time stays steady, where it rushes or drags, and how short the ending should be.
+    - name: Cut list
+      contains: Ideas and passages that crowd the main idea and should go, so it stays short and good.
+    - name: One thing to learn
+      contains: A lesson from an older master in your field that you can use in your own work.
+    - name: Work and money numbers
+      contains: For job or pricing questions, your monthly floor, steady income, extras, fee and client cap.
+    - name: Marked gaps
+      contains: Anything beyond his letters is marked, and missing details are listed rather than guessed.
 seats:
   - {seat: "Melody and form", asks: "Can people carry the main idea away after one hearing, and does the shape hold together?"}
   - {seat: "Fit the performer", asks: "Does this suit the voice and skill of the person who has to deliver it?"}

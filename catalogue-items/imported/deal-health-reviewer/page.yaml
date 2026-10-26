@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It must judge risk from partial and mixed signals.
 new_slug: deal-health-reviewer
 name: Deal health reviewer
-summary: Name a deal. Get a health score, ranked risks, qualification gaps and
-  next actions.
+summary: Review one sales deal and see its real health. You get a score with reasons, ranked risks, gaps in qualification and next steps.
 job: sell-and-negotiate
 headline: Deal health reviewer
-subhead: Name a deal and paste the CRM record, recent emails or call notes. It
-  checks the signals against your stage rules and qualification method. You get
-  a health score with the reasons behind it, a ranked list of risks, the gaps in
-  qualification and the next actions worth taking.
+subhead: Name a deal and paste the CRM record, recent emails or call notes. It checks the signals against your stage rules and qualification method. You get a health score with the reasons behind it, a ranked list of risks, the gaps in qualification and the next actions worth taking.
 explain: |
   One deal, one honest read. You get a health score, a list of risks, the gaps in how the deal was qualified, and the next actions worth taking. It shows where the deal really stands, not just the stage your CRM claims.
 
@@ -19,6 +15,10 @@ when:
   - A deal has gone quiet and you need to see what changed.
   - Your manager asks for a deal review and you have an hour to prepare.
   - You suspect the CRM stage is ahead of what the buyer has actually agreed to.
+not_for:
+  - You have a brand-new lead with no emails, calls or CRM history. Qualify it first with a short discovery call, then review it.
+  - You want a forecast across your whole pipeline. Use a pipeline review in your CRM or a spreadsheet instead of one deal at a time.
+  - You need to write the follow-up email or a proposal. Ask your AI to draft it after you read the risks and next actions.
 you_give:
   - Deal or account name
   - CRM record, export or pasted deal details
@@ -30,8 +30,34 @@ you_get:
   - Qualification gaps
   - Recommended next actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Say which deal to review. Name the account or the opportunity.
+  - If your AI has CRM, email or call transcript tools connected, turn them on so it can read them. If not, paste the CRM record, recent emails and call notes into the chat.
+  - Add your stage rules and qualification method if you have them. If not, your AI will ask once or use a labelled default.
+  - Read the score and the math. The probability changes are default weights, so adjust them to your own win data.
+  - Check each risk against what you know. Then pick the next actions and accept or skip the CRM updates. The skill only reads, so you make the changes yourself.
+output_sample:
+  input:
+    - The deal or account name
+    - Your CRM record, export or pasted deal details
+    - Recent emails or call notes (optional)
+    - Your stage rules and qualification method, such as BANT or MEDDIC (optional)
+  prerequisites:
+    - A CRM, email or call tool your AI can read, or deal details you paste in
+  output:
+    - name: Health verdict
+      contains: A colour and score for the deal, with one sentence on why.
+    - name: The numbers
+      contains: Stage, amount, close date and age, plus your CRM probability next to the adjusted one, with the math shown.
+    - name: Qualification table
+      contains: Each element marked confirmed, assumed or unknown, with the evidence behind it.
+    - name: Activity timeline
+      contains: Recent touches and the gap since the last one.
+    - name: Strengths and risks
+      contains: What is going well, and each risk with its evidence and a way to reduce it.
+    - name: What's missing
+      contains: Facts the review could not find or see.
+    - name: Recommended next actions
+      contains: Steps in order of impact, each with who does it and by when.
+    - name: Suggested CRM updates
+      contains: Changes to stage, next step or close date, for you to accept or skip.

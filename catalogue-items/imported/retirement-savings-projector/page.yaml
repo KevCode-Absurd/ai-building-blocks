@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It runs compound growth maths on your inputs.
 new_slug: retirement-savings-projector
 name: Retirement savings projector
-summary: Give it your age, savings and goals. Get a projected nest egg and the
-  gap to your target.
+summary: Find out if you are on track to retire. Give it your age, savings and goal. You get a retirement savings projection and the monthly amount to close the gap.
 job: money-and-investing
 headline: Retirement savings projector
-subhead: A projected retirement pot and the exact gap between it and the amount
-  you need. You also see the monthly saving that would close that gap.
+subhead: A projected retirement pot and the exact gap between it and the amount you need. You also see the monthly saving that would close that gap.
 explain: |
   A projected retirement pot and the exact gap between it and the amount you need. You also see the monthly saving that would close that gap.
 
@@ -17,6 +15,10 @@ when:
   - You are deciding how much extra to save each month.
   - You are curious what retiring early would take.
   - You want to see how a higher return or lower spending changes the answer.
+not_for:
+  - "You need advice on tax, a pension transfer or an annuity: talk to a licensed financial adviser."
+  - "Your pension has a complex benefit formula, such as a final salary scheme: ask the scheme provider or an adviser for a statement."
+  - "You only want to plan your monthly spending today: make a simple budget in a spreadsheet first."
 you_give:
   - Your age and target retirement age
   - Current savings and monthly contribution
@@ -29,7 +31,27 @@ you_get:
   - The shortfall or surplus
   - The monthly saving needed to close the gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Type your age, target retirement age, savings, monthly saving and the yearly income you want.
+  - Add any pension or state benefit, plus your return and inflation guesses, if you have them.
+  - Ask your AI to run the maths with the included script. This needs an AI that can run Python code.
+  - Check the gap and the monthly saving first, then look at the sensitivity table.
+  - Treat the 4% rule as a rule of thumb, not a promise. Retiring early may need a lower rate.
+output_sample:
+  input:
+    - Your age and the age you want to retire
+    - Your current retirement savings and monthly contribution
+    - The yearly income you want in retirement, in today's money
+    - Your expected pension or state benefit (optional)
+    - Your return and inflation guesses (optional)
+  prerequisites:
+    - An AI that can run Python code, if you want it to use the included calculation script
+  output:
+    - name: Retirement Snapshot
+      contains: Your target nest egg, projected nest egg, the gap, years left and the monthly saving needed to close it.
+    - name: Projection Chart Data
+      contains: The year-by-year balance from today until your retirement age.
+    - name: Withdrawal Plan
+      contains: A safe yearly and monthly withdrawal amount, and when the pot runs out under different return cases.
+    - name: Sensitivity Table
+      contains: How the result changes if you retire 2 years earlier or later, or earn 1% more or less.

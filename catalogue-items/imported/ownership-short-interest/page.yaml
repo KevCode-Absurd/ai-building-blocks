@@ -2,35 +2,79 @@ thinking: low
 thinking_why: It looks up facts and lists them clearly.
 new_slug: ownership-short-interest
 name: Ownership and short interest lookup
-summary: Ask about a stock. Get short interest, big fund owners, insider
-  filings, analyst targets and dividend dates from Fintel.
+summary: Ask about a US stock. Get short interest, borrow rates, big fund owners, insider filings, analyst targets and dividend dates from Fintel.
 job: money-and-investing
 headline: Ownership and short interest lookup
-subhead: Facts on who owns a stock and who is betting against it, from Fintel
-  data in one answer. You see short interest, big fund holders, insider filings,
-  analyst targets and dividend dates.
+subhead: Give it a stock ticker and your Fintel API key. Your AI pulls short interest, borrow rates, fund holders, insider filings, analyst targets and dividend dates into one answer, with the source and date on each part. It needs a paid Fintel plan.
 explain: |
-  Facts on who owns a stock and who is betting against it, from Fintel data in one answer. You see short interest, big fund holders, insider filings, analyst targets and dividend dates.
+  This is a stock ownership and short interest lookup. It answers the fact questions that come up when a stock moves: who owns it, who is betting against it, are insiders buying, and when is the next dividend.
 
-  You ask about a ticker. The skill checks for your Fintel API key, then calls read-only endpoints for borrow rates, short volume, fails to deliver, institutional holdings from 13F filings and insider trades. It never uses the write endpoints that create lists or alerts. Results are summarised so you can quickly see crowded shorts, rising fund ownership or insiders buying. Needs a paid Fintel API key. This is research, not personal investment advice.
+  You give it a ticker. It checks for your Fintel key, then makes read-only calls for short interest, borrow rates, daily short volume, fails to deliver, fund holdings from 13F filings and insider trades. It never uses the calls that create lists or alerts. Each answer shows where the data came from and its date.
+
+  It reports facts and does not call a squeeze or give a buy or sell view. Fintel is a paid service, and short interest must be switched on for your account. If you have no key, the skill says so and points to free public sources such as SEC EDGAR for 13F holders and insider filings.
 when:
-  - A stock is moving and you want to know if shorts are involved.
+  - A stock is moving and you want to know whether short sellers are involved.
   - You want to see which funds bought or sold last quarter.
-  - You are checking insider buying before a decision.
+  - You are reading insider buying and selling before a decision.
   - You need the next dividend date and analyst targets in one place.
+not_for:
+  - You have no Fintel plan. Use SEC EDGAR for 13F holders and Form 4 insider filings, which are free.
+  - You want company results and a valuation view. Use the Equity research and valuation report builder.
+  - The stock is not listed in the US. Several datasets here are US only.
+  - You want a buy or sell call. This gives data only and it is not investment advice.
 you_give:
-  - A stock ticker
-  - A Fintel API key
+  - A stock ticker, such as AAPL
+  - A Fintel API key from a paid plan, kept in your own settings
   - The question you want answered (optional)
 you_get:
-  - Short interest and borrow rates
-  - Major institutional owners
-  - Insider transaction filings
+  - Short interest and borrow rates, with dates
+  - Big fund owners and their recent changes
+  - Insider filings, with buys and sells kept apart
   - Analyst price targets
   - Dividend dates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can use your Fintel API key or MCP connection.
+  - Get a Fintel API key from your paid plan. Put it in your computer's settings as FINTEL_API_KEY. Do not paste it into the chat.
+  - Use an AI that can run commands, such as Claude Code. A plain chat cannot call the API.
+  - Open the skill and give it a ticker and your question, for example "short interest and top holders for AAPL".
+  - Read the "Not available" line first. A 403 usually means a dataset is not switched on for your account.
+  - Check the dates on each table. Short data comes out on a delay.
+  - Open the original filings before you act. Pair this with an earnings or dividend calendar if timing matters.
+output_sample:
+  input:
+    - A stock ticker, such as AAPL
+    - The question you want answered (optional)
+  prerequisites:
+    - A Fintel API key from a paid plan
+    - An AI that can run commands
+  output:
+    - name: Header
+      contains: The ticker, the country and the date the data was pulled.
+    - name: Short interest and borrow
+      contains: Short interest as a share of float, days to cover and borrow fee trend, with dates.
+    - name: Top holders
+      contains: Funds from 13F filings with shares, change and date filed.
+    - name: Insider filings
+      contains: Recent Form 3, 4 and 5 trades, with buys, sells and option exercises kept apart.
+    - name: Analyst targets
+      contains: High, low, mean and median price targets, with the ratings mix.
+    - name: Dividend dates
+      contains: The next dividend date and past dividends.
+    - name: Not available
+      contains: Any dataset that returned an error or was empty, and why.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Runs curl for the API calls, or uses Fintel's own MCP server.
+  inputs:
+    - A ticker in the form country and symbol, such as us/AAPL
+    - A date range, if you care about one quarter
+    - A second ticker to compare, asked in a separate run
+terms:
+  - term: Short interest
+    meaning: How many shares investors have borrowed and sold, betting the price will fall.
+  - term: Days to cover
+    meaning: How many days of normal trading it would take short sellers to buy their shares back.
+  - term: 13F
+    meaning: A quarterly filing in which large US funds list the shares they hold.
+  - term: Form 4
+    meaning: A filing in which company insiders report buying or selling their own shares.

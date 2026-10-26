@@ -119,9 +119,10 @@ that contain a FAQ section.
 
 ## Rich Result Eligibility Rules
 
-Google requires specific fields to be present for each 
-schema type to qualify for rich results. 
-Missing required fields disqualifies the page entirely.
+Google asks for specific fields for each schema type 
+before a page can qualify for rich results. 
+A missing required field can stop that type from qualifying. 
+Valid markup never guarantees a rich result: Google decides.
 
 ### FAQPage
 | Field          | Status      | Notes                                    |
@@ -322,7 +323,10 @@ replaces all placeholders with the values from `page_data`.
 9. List all issues with severity and exact fix instructions
 10. Write Implementation Instructions 
     and Testing Checklist
-11. Populate the selected reference template from supplied page data, validate required fields, and show unresolved placeholders as blocking issues. Use a project-provided schema helper only as a supplementary check; never emit fabricated review, rating, or product claims.
+11. Fill the `{{placeholders}}` in each template by hand from the supplied page data. No script is needed; do the mapping yourself in the chat. Any `{{placeholder}}` you cannot fill is a blocking issue: list it under Issues Found and write MISSING in its place. Never invent a value.
+12. Reviews, ratings, prices and stock status must come only from details the user supplied, and the user must confirm they show on the visible page. If the user supplies none, leave Review and AggregateRating out and say so. Never write fake reviews or ratings.
+13. If a required input is missing (for example no image URL for Article or Product), ask for it once. If the user cannot supply it, mark it MISSING and carry on with the other types.
+14. If the user cannot run Google's tests, say the markup is unchecked by Google and suggest a developer test it before publishing.
 
 ---
 

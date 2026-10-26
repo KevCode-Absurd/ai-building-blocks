@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It weighs a question against what it will draw out.
 new_slug: history-inquiry-question-checker
 name: History inquiry question checker
-summary: Paste your main history question. Get a verdict on whether it drives
-  real inquiry, with sharper rewrites.
+summary: Check your history inquiry question before you teach it. Paste your draft and sources. You get a verdict, the weak spots and a sharper rewrite.
 job: teach-and-train
 headline: History inquiry question checker
-subhead: A verdict on whether your main history question will make students
-  think or just look things up. Paste the question you drafted. The skill tests
-  whether it has more than one reasonable answer, needs evidence to settle, and
-  fits the sources you have.
+subhead: A verdict on whether your main history question will make students think or just look things up. Paste the question you drafted. The skill tests whether it has more than one reasonable answer, needs evidence to settle, and fits the sources you have.
 explain: |
   A verdict on whether your main history question will make students think or just look things up. Paste the question you drafted. The skill tests whether it has more than one reasonable answer, needs evidence to settle, and fits the sources you have.
 
@@ -19,18 +15,44 @@ when:
   - Student answers to your last question were thin or all the same.
   - Your sources do not seem to match the question.
   - You are planning a document-based lesson from scratch.
+not_for:
+  - "You want to check a whole unit plan or lesson plan: ask a colleague, or check one question at a time with this tool."
+  - "You need a question for a topic you have not chosen yet: brainstorm a few drafts yourself first, then bring the best one here."
+  - "You want a fact quiz or a test question: this checks open questions that need evidence and argument."
 you_give:
-  - Your draft central question
-  - The topic and age group
-  - The sources you plan to use (optional)
-  - What happened last time you taught it (optional)
+  - Your draft central history question
+  - The sources students will use, with how many and what kinds
+  - Your students' year or age, and how much document work they have done
+  - The topic or unit (optional)
+  - Your last few central questions (optional)
 you_get:
   - A verdict on the question
   - Strengths and threats listed
   - A check of question against sources
   - A rewritten question and teaching notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page. No code, files or paid tools are needed.
+  - Paste your draft question.
+  - Add your sources and your students' year, with a line on their past document work.
+  - Ask for the full verdict and a rewritten question.
+  - Read the threats first. Check that the rewrite still fits your sources before you plan the lesson.
+output_sample:
+  input:
+    - Your draft central history question
+    - A short description of the sources students will use
+    - Your students' year or age, and their past document work
+    - The topic or unit (optional)
+    - Your last few central questions (optional)
+  output:
+    - name: Question Evaluation
+      contains: A verdict on whether the question will drive real inquiry or draw shallow answers.
+    - name: Strengths
+      contains: What the question already does well, such as room for more than one reasonable answer.
+    - name: Threats
+      contains: Problems like wording that points to one answer, a yes or no trap, or a scope too big.
+    - name: Source-Question Fit
+      contains: Whether your sources can support an argument on more than one side.
+    - name: Revised Question
+      contains: A rewritten question that fixes the threats and fits your sources.
+    - name: Teaching Notes
+      contains: Short advice on how to launch the question with your class.

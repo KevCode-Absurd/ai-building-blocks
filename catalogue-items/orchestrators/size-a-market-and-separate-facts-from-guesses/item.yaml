@@ -1,25 +1,24 @@
 slug: size-a-market-and-separate-facts-from-guesses
 name: "Size a market and separate the facts from the guesses"
-summary: "Give it the market and your idea. Get a size estimate, the facts behind it and a report."
+summary: Size a market from the bottom up and see which numbers are facts and which are guesses. You get an estimate range and a report with every number labelled.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: research
 level: intermediate
 inputs:
-  - {type: brief, required: true}
   - {type: question, required: true}
   - {type: spreadsheet, required: false}
+  - {type: source_text, required: false}
 outputs:
   - {type: plan}
   - {type: document}
-  - {type: audit_report}
 uses: [market-size-estimator, public-database-fact-finder, findings-and-guesses-separator, market-research-report-writer]
 steps:
-  - {uses: market-size-estimator, note: "The market built from who has the problem, how many could buy and what they would pay, with every input and assumption shown."}
-  - {uses: public-database-fact-finder, note: "For each input, the public data that bears on it: census, trade and official statistics, filings, with the source and date for each."}
-  - {uses: findings-and-guesses-separator, note: "Each input marked as a finding with its source or a guess with its reasoning, in the manner of Newton and Darwin, and the guesses that move the total most."}
-  - {uses: market-research-report-writer, note: "The market report with every number labelled fact or guess, a range rather than one figure, and what to test next."}
+  - {uses: market-size-estimator, note: "The market built from who has the problem, how many could buy and what they would pay, with every input and assumption shown. Hands the list of inputs to step 2."}
+  - {uses: public-database-fact-finder, note: "For each input, the public data that bears on it: census, trade and official statistics, filings, with the source and date for each. Hands the facts, and the inputs with none, to step 3."}
+  - {uses: findings-and-guesses-separator, note: "Each input marked as a finding with its source or a guess with its reasoning, in the manner of Newton and Darwin, and the guesses that move the total most. Takes the estimate from step 1 and the facts from step 2, and hands the labelled inputs to step 4."}
+  - {uses: market-research-report-writer, note: "The market report with every number labelled fact or guess, a range rather than one figure, and what to test next. Takes the estimate, the facts and the labels from the steps before."}
 origin: own
 version: 1.0.0
 minds: [isaac-newton, charles-darwin, carl-sagan]

@@ -1,30 +1,26 @@
 new_slug: traction-search-engine-marketing
 name: Search ads experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a search ads test for your product. Paste your link and get one capped pilot with a keyword map, ad drafts, tracking checks and stop rules.
 job: run-google-ads
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Search ads experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused search engine marketing plan for your product. It reads the buyer
-  and offer, checks why this channel might work and writes a small test. The
-  default is SaaS; you can ask for general-business mode.
+  A focused search engine marketing plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Draft a tightly capped campaign around one intent group and a small set of ad
-  variants. Verify conversion tracking before any approved spend.
+  Draft a tightly capped campaign around one intent group and a small set of ad variants. Verify conversion tracking before any approved spend.
 
 
-  Cost per trial is not CAC. Historical examples in the book do not establish
-  today's bids, platform settings or expected returns.
+  Cost per trial is not CAC. Historical examples in the book do not establish today's bids, platform settings or expected returns.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare all 19 ways to find customers: use the Traction workflow."
+  - "You have no real buying searches for what you sell, such as a local shop that sells by word of mouth: ask your AI for general-business mode first, or talk to ten customers instead."
+  - "You want live ads built and launched for you: this plan spends nothing, so set up the campaign yourself in Google Ads after you approve it."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -38,18 +34,42 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash cap, hours and deadline (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can browse the web, or product page text you paste in
+  output:
+    - name: Recommendation
+      contains: Whether to test search ads now, later, or not at all, with the reason.
+    - name: Evidence
+      contains: Each fact with its source link, the date you read it and what it means.
+    - name: Buyer and useful action
+      contains: Who buys and the first useful thing they do in your product.
+    - name: Channel mechanism
+      contains: How a searcher moves from an ad to getting value.
+    - name: Pilot
+      contains: "One small test: the idea, audience, offer, deliverable and owner, with a keyword map, ad drafts and landing page brief."
+    - name: Limits
+      contains: Cash, hours and end date, marked as proposed or approved.
+    - name: Measurement
+      contains: Which events to track, which groups to compare and how to count results.
+    - name: Decision
+      contains: The rule for when to continue, change or stop.
+    - name: Risks and next action
+      contains: What could go wrong, what to do next and what needs your approval.
+    - name: MISSING
+      contains: The facts the plan still needs from you.
 how_it_works:
   - title: Check 1
-    text: Group queries by the buyer's job and buying intent. Separate branded
-      demand from non-brand discovery and competitor terms.
+    text: Group queries by the buyer's job and buying intent. Separate branded demand from non-brand discovery and competitor terms.
   - title: Check 2
-    text: Map each group to one relevant product promise, landing page and
-      activation or qualified-demo event. Draft exclusions for clearly
-      irrelevant searches.
+    text: Map each group to one relevant product promise, landing page and activation or qualified-demo event. Draft exclusions for clearly irrelevant searches.
   - title: Check 3
-    text: Work backwards from paid conversion rate and an affordable customer cost
-      to a provisional click-cost ceiling. Mark auction prices and search volume
-      unknown without dated tool evidence.
+    text: Work backwards from paid conversion rate and an affordable customer cost to a provisional click-cost ceiling. Mark auction prices and search volume unknown without dated tool evidence.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -63,21 +83,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Spend is 300 and there are 30 trials but no known paid customers. Cost per
-    trial is 10; CAC is unknown, not 10.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - Spend is 300 and there are 30 trials but no known paid customers. Cost per trial is 10; CAC is unknown, not 10.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

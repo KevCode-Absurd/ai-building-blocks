@@ -2,31 +2,87 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: intercom-conversation-action-planner
 name: Intercom conversation action planner
-summary: Connect Intercom. Get waiting chats grouped by next action, with reply drafts to review.
+summary: Sort your open Intercom conversations by what each needs next, and get reply drafts to review. Nothing is sent without your yes.
 job: help-customers
 headline: Intercom conversation action planner
-subhead: Connect Intercom and ask for a review of open conversations. It reads recent threads and decides which need a reply, more facts, another team, a pause, or closure. You get a clear queue and reply drafts to review before changes.
+subhead: Link your Intercom account and ask for a review of open chats. It reads up to fifteen full threads and decides which need a reply, more facts, an engineer, a pause, or closing. You get a queue and reply drafts.
+explain: |
+  An Intercom inbox with a long list of open chats is hard to read in order. This planner reads them for you and puts each one in a group by its next action: reply now, ask for more info, escalate, snooze or close.
+
+  The groups come as tables with the person, the subject, the last message and how long they have waited. For every chat that is ready for a reply, it writes a draft. If a draft needs a fact the thread does not hold, it leaves a marked gap instead of making one up.
+
+  It asks before it sends any reply or changes any status. It reads the 15 most recent chats, so on a big inbox you run it again for the rest.
 when:
-  - You use this tool for customer support and need help with this task.
+  - You start your day with a long list of open Intercom chats.
+  - You came back from a day off and need to know where to start.
+  - You want drafts ready for chats where the customer just needs an answer.
+  - You need to find chats that are done and can be closed.
+not_for:
+  - You have fewer than five open chats. Read them yourself in Intercom.
+  - You use Gorgias, Zendesk, Freshdesk or Zoho Desk. Use the Gorgias support queue action planner, the Zendesk ticket priority planner, the Freshdesk ticket priority planner or the Zoho Desk ticket priority planner.
+  - You want a first reply to a WhatsApp chat. Use the WhatsApp support reply assistant.
+  - You have a pasted batch of tickets and no Intercom link. Use the Support ticket sorter.
 you_give:
-  - Open or paused Intercom conversations.
-  - Full message history and facts needed for replies.
+  - Your Intercom account, linked through Composio
+  - Open and snoozed conversations, read for you
+  - Facts the replies need, such as your refund rules or product details (optional)
 you_get:
-  - Show a dashboard and reply drafts. Ask before sending replies or changing conversation status.
+  - Chats grouped as reply now, needs info, escalate, close, or snoozed
+  - A table for each group with the person, subject, last message and wait time
+  - A reply draft for each chat that is ready to answer
+  - A marked gap wherever a draft needs a fact you did not give
+how_to_use:
+  - Check you have an Intercom account, and a Composio account with its command line tool. Ask your admin if you are not sure about the costs for your plan.
+  - Open an AI that can run commands and read skill files, such as Claude Code, and add the downloaded folder.
+  - Ask it to run the Intercom conversation action planner. If it says Intercom is not connected, run composio link intercom and ask again.
+  - Read the Needs Immediate Reply group first. Check each draft for facts that are not in the thread.
+  - Say which drafts to send and which chats to close or snooze. It asks before each change.
+  - No AI that can run commands? Paste up to fifteen threads into your AI instead. You get the same groups and drafts, and you send them yourself.
+output_sample:
+  input:
+    - Your Intercom account, linked through Composio
+    - Open and snoozed conversations, read for you (up to 15 in full)
+    - Facts the replies need, such as policy or product details (optional)
+  prerequisites:
+    - An AI that can run commands, with Composio CLI installed
+    - An Intercom account linked in Composio
+    - Chat text is sent through Composio, so check this suits your privacy rules
+  output:
+    - name: Needs Immediate Reply
+      contains: Chats with a clear question, with user, subject, last message, wait time and suggested action.
+    - name: Needs More Info
+      contains: Chats where you need more facts from the customer before you can resolve them.
+    - name: Needs Escalation
+      contains: Bugs and technical issues that need an engineer.
+    - name: Can Be Closed
+      contains: Resolved chats, spam and duplicates.
+    - name: Snoozed / Waiting
+      contains: Chats waiting on something outside your team, to check later.
+    - name: Quick Reply Drafts
+      contains: A reply for each chat that needs one now, with gaps marked where facts are missing.
 how_it_works:
-  - title: Read recent conversations
-    text: Fetch open and paused conversations, then read up to fifteen full threads.
-  - title: Choose the next step
-    text: Separate clear questions, missing facts, technical issues, waiting cases, and resolved chats.
-  - title: Review proposed actions
-    text: Show a dashboard and reply drafts. Ask before sending replies or changing conversation status.
+  - title: Find the Intercom tools
+    text: It searches Composio for the tools that list chats, read threads and reply.
+  - title: List open chats
+    text: It pulls open and snoozed conversations, newest activity first.
+  - title: Read each thread
+    text: It reads up to fifteen full threads and picks one status for each.
+  - title: Build the dashboard
+    text: It groups chats by status and fills a table for each group.
+  - title: Draft and ask
+    text: It writes a draft for each reply-now chat, and asks before sending or changing anything.
 works_best_with:
   tools:
     - name: Intercom
-      why: Live lookups need Composio CLI access and connected accounts for these services.
-how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for intercom conversation action planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Open or paused Intercom conversations.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+      why: It reads your open chats and, with your yes, replies or changes status.
+    - name: Composio CLI
+      why: It links your AI to Intercom. Your AI must be able to run commands.
+    - name: Claude Code or another AI that can run commands
+      why: The live lookup needs a command line. In a plain chat, paste your threads instead.
+terms:
+  - term: Snooze
+    meaning: Hide a chat for a while, and bring it back when the wait is over.
+  - term: Escalate
+    meaning: Pass a chat to another team, such as engineering, because you cannot fix it yourself.
+  - term: Composio
+    meaning: A tool that links your AI to apps such as Intercom.

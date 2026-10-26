@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a short connect routine.
 new_slug: matlab-camera-capture-helper
 name: MATLAB camera capture helper
-summary: Say which camera. Get it connected and images or video captured in MATLAB.
+summary: Connect a USB, webcam or GigE camera in MATLAB and capture images or video. Get listing, connect and capture code, plus what to install.
 job: build-software
 headline: MATLAB camera capture helper
-subhead: Tell it the camera type and model, your operating system and whether
-  you want stills or video. It lists the devices, connects through MATLAB's
-  video input object, sets exposure and frame rate and grabs frames. You get
-  listing, setup and capture code plus the support packages to install.
+subhead: Tell it the camera type and model, your operating system and whether you want stills or video. It lists the devices, connects through MATLAB's video input object, sets exposure and frame rate and grabs frames. You get listing, setup and capture code plus the support packages to install.
 explain: |
   A camera connected and capturing in MATLAB, whether it is a laptop webcam, a USB camera or an industrial GigE model. You get code that finds the device, sets it up and grabs a still image or video.
 
@@ -18,6 +15,10 @@ when:
   - You need to grab a series of frames at a set rate for analysis.
   - You work with an industrial GigE camera and the setup fails.
   - You want a quick webcam snapshot in a script.
+not_for:
+  - "You want the webcam support package, or you use MATLAB Online: ask for the webcam function instead, since the video input tools are not there."
+  - "You already have image files and only need to process them: use your usual MATLAB image tools, no camera code needed."
+  - "You work with non-camera hardware such as oscilloscopes or data boards: use that device's own MATLAB toolbox or vendor guide."
 you_give:
   - Camera type and model
   - Operating system
@@ -29,8 +30,32 @@ you_get:
   - Working capture code
   - A list of support packages to install
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and reach a camera.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell it your camera type and model, your operating system, and whether you want stills or video.
+  - If you use CoaXPress or Camera Link, name your frame grabber. Your AI needs it to pick the right adaptor.
+  - Install the support packages it lists. GigE, USB3 Vision and CoaXPress cameras also need the vendor's .cti file.
+  - Run the listing code in MATLAB first. Check your camera appears, then run the connect and capture code.
+  - Your AI can only test the code if it can run MATLAB and reach your camera. Otherwise, run it yourself and report any errors back.
+output_sample:
+  input:
+    - Your camera type and model
+    - Your operating system
+    - Whether you want still images or video
+    - Your MATLAB release (optional)
+    - Your frame grabber name, if you use CoaXPress or Camera Link
+  prerequisites:
+    - MATLAB with Image Acquisition Toolbox installed
+    - The matching support package, such as OS Generic Video Interface or GenICam Interface
+    - For GigE, USB3 Vision and CoaXPress cameras, the vendor's GenTL producer (a .cti file)
+    - An AI that can run MATLAB and reach your camera, if you want it to test the code
+  output:
+    - name: Device listing
+      contains: Code that lists installed adaptors and the cameras MATLAB can see on each one.
+    - name: Connect script
+      contains: Code that opens the camera with the right adaptor for your system, with colour and region settings.
+    - name: Capture script
+      contains: Code that shows a live preview and grabs one snapshot or a set number of frames with timestamps.
+    - name: Clean-up code
+      contains: Lines that stop the preview and acquisition, then delete the camera object.
+    - name: Support packages to install
+      contains: The support packages and vendor producer files your camera type needs before the code will work.

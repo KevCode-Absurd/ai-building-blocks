@@ -2,35 +2,112 @@ thinking: medium
 thinking_why: It follows known pipeline patterns with checks.
 new_slug: data-pipeline-builder
 name: Data pipeline builder
-summary: Describe your data sources and goal. Get a working pipeline with
-  checks, scheduling and fixes for common faults.
+summary: Describe where your data starts and who uses it. Get a data pipeline design, load code, quality checks and a run schedule.
 job: build-software
 headline: Data pipeline builder
-subhead: A plan and working code for moving data from where it starts to where
-  people use it, with checks along the way. You also get advice on choices such
-  as batch versus streaming.
+subhead: Tell it where your data starts, where it must end up and how fresh it needs to be. It plans the data pipeline, writes the load code, adds checks and sets a schedule. It also helps you choose batch or streaming.
 explain: |
-  A plan and working code for moving data from where it starts to where people use it, with checks along the way. You also get advice on choices such as batch versus streaming.
+  A data pipeline moves data from where it starts, such as an app, a database or a spreadsheet, to one place where people use it. This skill builds that data pipeline with you. You get a design, the code, checks and a schedule, not just advice.
 
-  You describe your sources, volume and goal. The skill designs the flow using tools like Python, SQL, Spark, Airflow, dbt and Kafka, and picks between ETL and ELT. It builds the data model, such as a star schema, sets up scheduling, and adds data quality checks. It deals with late arriving records and weighs designs like Lambda against Kappa. A troubleshooting section covers common faults such as stalled jobs and duplicates. Expect to run code on your own systems and need access to your sources.
+  It starts with your sources, your volume and how fresh the data must be. From those it picks batch or streaming, and ETL or ELT. Then it lays out the tables for reporting, writes the load steps and adds checks for gaps, repeats and late records.
+
+  What sets it apart is the second half. It adds quality checks and a troubleshooting guide for the faults that bite most often, such as stalled jobs and duplicate rows. A plain "write me an ETL script" prompt skips both.
+
+  Many tools it names, such as Airflow, Spark and Kafka, are open source. Some it mentions need a paid account, such as Snowflake, Databricks, Monte Carlo and Datadog. It tells you when your plan needs one.
 when:
   - You need to load data from an app and a spreadsheet into one warehouse.
-  - You are deciding between batch and streaming for a new feature.
-  - A nightly job keeps failing and you need a fix.
-  - You want a star schema for reporting.
+  - You are choosing between batch and streaming for a new feature.
+  - A nightly data job keeps failing or filling your tables with repeats.
+  - You want a star schema so reports run fast and match.
+not_for:
+  - You want data pulled from one website or API into a single file. Use the Data extraction pipeline builder.
+  - You only need the table design for an app database. Use the Database schema designer.
+  - You are building a machine learning pipeline you can rerun. Use the Machine learning pipeline builder.
+  - You have a one-off export that fits in a spreadsheet. Skip the pipeline and use the spreadsheet.
 you_give:
-  - Data sources and their format
-  - Where the data should end up
-  - How fresh it must be
-  - Tools you already use (optional)
+  - Your data sources and their format, such as a Postgres database, a CSV export or a sales app
+  - Where the data should end up, such as BigQuery, Snowflake or a Postgres reporting database
+  - How fresh the data must be, such as once a night or within a minute
+  - The size of the data, such as rows per day (optional)
+  - The tools you already use, such as Airflow or dbt (optional)
 you_get:
-  - Pipeline design
-  - Working extraction and load code
-  - Data quality checks
-  - Scheduling setup and fixes
+  - A written pipeline design with the reasons for each choice
+  - Extract and load code for each source
+  - A reporting data model, such as a star schema
+  - Data quality checks for gaps, repeats and late records
+  - A schedule and fixes for common faults
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste in this skill, or add it if your tool lets you add skills.
+  - Paste your sources, your destination, how fresh the data must be and the tools you already use. If you do not know a detail, say so.
+  - Read the design first. Check the batch or streaming choice and the table layout before you ask for code.
+  - Ask for the code and the quality checks. This step needs an AI that can run Python and SQL, or a person who can run them. Test on a small copy of your data first.
+  - Run the checks. Fix any that fail before you turn on the schedule. Warehouses such as Snowflake or Databricks need your own account and may cost money.
+how_it_works:
+  - title: Picks the pipeline style
+    text: Weighs batch against streaming and Lambda against Kappa using how fresh and how large your data is.
+  - title: Designs the flow
+    text: Maps each source to the destination and chooses ETL or ELT and the tools to use.
+  - title: Models the data
+    text: Builds the tables for reporting, such as a star schema, and handles slowly changing records.
+  - title: Writes the code
+    text: Builds extract and load steps in Python, SQL and dbt, with Airflow, Prefect or Dagster for scheduling.
+  - title: Adds quality checks
+    text: Tests freshness, completeness and uniqueness, and plans for late records.
+  - title: Fixes common faults
+    text: Uses the troubleshooting notes for stalled jobs, duplicates and slow queries.
+output_shape: |
+  PIPELINE DESIGN
+  Sources: <list> | Destination: <where> | Freshness: <target>
+  Style: <batch or streaming> because <reason>
+  DATA MODEL
+  <tables and how they link>
+  CODE
+  <file name>: <what it does>
+  QUALITY CHECKS
+  <check>: <what fails it>
+  SCHEDULE
+  <when it runs> | <what to do if it fails>
+  OPEN QUESTIONS
+  <anything you did not give>
+output_sample:
+  input:
+    - Your data sources and their format
+    - Where the data should end up
+    - How fresh the data must be
+    - The tools you already use (optional)
+  prerequisites:
+    - An AI that can run Python and SQL, or a person who can
+    - Access to your sources and a test copy of your data
+    - A warehouse account if you use Snowflake, BigQuery or Databricks
+  output:
+    - name: Pipeline design
+      contains: The flow from each source to your destination, with the batch or streaming choice explained.
+    - name: Data model
+      contains: The tables for reporting and how they link, such as a star schema.
+    - name: Extract and load code
+      contains: Python, SQL and dbt files that move the data, plus a scheduling file.
+    - name: Quality checks
+      contains: Tests for freshness, gaps and repeat rows, with what happens when one fails.
+    - name: Schedule
+      contains: When the pipeline runs and what to do when a run fails.
+    - name: Fix list
+      contains: Steps for the faults seen most, such as stalled jobs and duplicate records.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the Python scripts and read your project files.
+    - name: Any good chat AI
+      why: It can plan the design and write the code, but you run the code yourself.
+  inputs:
+    - A sample of each source file or a few rows from each table
+    - Your current table names and how they link
+    - The reports people need from this data
+terms:
+  - term: ETL and ELT
+    meaning: Both move data. ETL changes it before it lands. ELT loads it first and changes it inside the warehouse.
+  - term: Batch and streaming
+    meaning: Batch moves data in chunks on a schedule. Streaming moves each record as it arrives.
+  - term: Star schema
+    meaning: A table layout for reports. One central table of facts links to smaller tables of details.
+  - term: Warehouse
+    meaning: A database built for reports and big queries, such as BigQuery or Snowflake.

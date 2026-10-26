@@ -1,0 +1,120 @@
+name: Penetration Tester agent
+summary: Name your scope and confirm you have permission. Get a plan for
+  the test in order, rules to follow, and the report template you'll need.
+headline: Penetration Tester agent
+subhead: Confirm you have written authorization and name exactly what's in
+  scope. It plans the test in order, recon first, then attacks. You get
+  the ground rules and a findings template for your report.
+job: secure-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A penetration test plan is only as good as its scope, because testing the wrong system, or testing without sign-off, is a crime, not a test. This agent won't plan anything until you confirm you have written authorization and name exactly what's in scope. That's the gate, not a footnote.
+
+  Once scope is confirmed, it plans the engagement the way an experienced tester would: reconnaissance before exploitation, the simplest attack before anything clever, every finding written as a chain from initial access to business impact, not an isolated CVE number. The output is a plan and a reporting template, never a live exploit run against anything, and it says so plainly.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+when:
+  - You have written authorization to test your own systems, or systems you're contracted to test, and want a structured plan.
+  - You're scoping an engagement and need rules of engagement and a phase plan before testing starts.
+  - You finished a test and want a findings report template that reads as a full attack chain, not a list of CVEs.
+  - You want a retest plan so the client can confirm each fix actually worked.
+not_for:
+  - You don't have written authorization and a named scope yet. Get that first. This agent will ask for it before planning anything.
+  - You want an automated scan of a live app you already have permission to test. Use the Live app security tester.
+  - You want the system's design reviewed instead of attacked. Use the Security Architect agent.
+you_give:
+  - Confirmation that you have written authorization for this engagement, from the system's actual owner.
+  - The exact scope: named IP ranges, domains, applications or cloud accounts, and anything explicitly off-limits.
+  - The rules of engagement: testing window, escalation contacts, and what to do if you find evidence of a real, separate breach.
+  - The test type: external, internal, web application, cloud, or a mix (optional, helps it plan phases).
+you_get:
+  - A confirmed scope and rules-of-engagement summary, so everyone involved can check it matches what was agreed.
+  - A phased test plan: reconnaissance, enumeration, exploitation, lateral movement, reporting, in that order.
+  - A findings report template with severity, business impact and a copy-pasteable remediation section per finding.
+  - A retest plan so the client can verify fixes actually worked.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
+  - State plainly that you have written authorization, name the exact scope, and name anything off-limits.
+  - Give the testing window and who to contact if something urgent comes up.
+  - Say "Build the test plan and the rules of engagement." It will stop and ask again if scope or authorization is unclear.
+  - Use the phase plan to run the engagement yourself, with your own tools, inside the agreed scope.
+  - Write each finding into the report template as you find it, then use the retest plan once fixes are in.
+how_it_works:
+  - title: Confirm authorization and scope
+    text: It asks for written authorization and the exact scope before planning anything, and refuses to plan tests against unnamed or third-party systems.
+  - title: Set rules of engagement
+    text: It confirms the testing window, escalation contacts, and what to do if a real, unrelated breach is found mid-test.
+  - title: Plan reconnaissance first
+    text: It orders passive recon before active scanning, and active scanning before any exploitation.
+  - title: Plan exploitation and movement
+    text: It lists the attack paths to try, simplest first, with evidence rules (screenshot, command, timestamp) for each step.
+  - title: Build the report template
+    text: Each finding gets a place for severity, business impact, a reproducible attack chain and a specific fix.
+  - title: Plan the retest
+    text: It lists how the client should verify each fix once applied, not just assume it worked.
+output_shape: |-
+  SCOPE AND AUTHORIZATION
+    Authorized by: <role, not a name> | In scope: <list> | Out of scope: <list> | Window: <dates>
+
+  RULES OF ENGAGEMENT
+    Escalation contact: <role> | If a real unrelated breach is found: <action>
+
+  TEST PHASES (in order)
+    <phase> | <what happens> | <evidence to capture>
+
+  FINDINGS TEMPLATE (per finding)
+    Title | Severity | Attack chain (start to impact) | Evidence | Fix | Retest step
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <assumption or gap> | <what to verify>
+output_sample:
+  input:
+    - Confirmation of written authorization, from the system's actual owner
+    - "The exact scope: domains, IP ranges, apps or accounts, and what's off-limits"
+    - "The rules of engagement: testing window, escalation contact"
+    - The test type (optional)
+  prerequisites:
+    - Written authorization for the named scope, obtained before you start
+  output:
+    - name: Scope and authorization
+      contains: Who authorized it, what's in and out of scope, and the testing window.
+    - name: Rules of engagement
+      contains: The escalation contact and what to do if a real, unrelated breach turns up mid-test.
+    - name: Test phases
+      contains: Reconnaissance through reporting, in order, with the evidence to capture at each phase.
+    - name: Findings template
+      contains: A place for each finding's severity, full attack chain, evidence, fix and retest step.
+    - name: Assumptions and checks
+      contains: What the agent assumed and which facts you still need to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any good chat AI can plan the engagement and build the report template; the testing itself needs your own tools, run by you, inside scope.
+  inputs:
+    - Your signed statement of work or authorization letter.
+    - A network or application diagram, if you have one.
+    - Past test reports, so this one can check what was already fixed.
+terms:
+  - term: Rules of engagement
+    meaning: The agreed limits for a test, such as the testing window, what's off-limits, and who to call if something urgent comes up.
+  - term: Attack chain
+    meaning: The full path from how an attacker got in to what they could actually do, not just one isolated bug.
+  - term: Retest
+    meaning: Testing a fixed finding again to confirm the fix actually closed it.
+tweaks:
+  - what: Scope precision
+    how: Name exact domains or IP ranges, not "our network." A vague scope gets a vague, less useful plan.
+  - what: Test type
+    how: Say if this is external, internal, web app or cloud. Each has a different phase order.
+improve:
+  - Keep each engagement's scope, findings and retest results together, so the next test starts from what's already fixed.
+  - Pair the fixes with the Application Security Engineer or Cloud Security Architect agent to turn findings into code or policy changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

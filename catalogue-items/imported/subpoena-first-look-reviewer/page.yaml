@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Deadlines are short and a wrong move is costly.
 new_slug: subpoena-first-look-reviewer
 name: Subpoena first-look reviewer
-summary: Give it a subpoena. Get what it asks for, the deadline and a plan for
-  your lawyer. Not legal advice.
+summary: Check a subpoena your company received. You get what it asks for, the deadlines and a plan to hand your lawyer. Not legal advice.
 job: check-contracts
 headline: Subpoena first-look reviewer
-subhead: A first read of a subpoena your company has received, so you know what
-  it wants and when before you call your lawyer. It is a triage aid, not legal
-  advice.
+subhead: A first read of a subpoena your company has received, so you know what it wants and when before you call your lawyer. It is a triage aid, not legal advice.
 explain: |
   A first read of a subpoena your company has received, so you know what it wants and when before you call your lawyer. It is a triage aid, not legal advice.
 
@@ -18,6 +15,10 @@ when:
   - You need a summary to give outside counsel on day one.
   - You want to know which teams and systems might hold the records.
   - Several matters overlap and you need to see how this one fits.
+not_for:
+  - "You got a grand jury subpoena: stop and call criminal counsel at once, because this skill stops there."
+  - "You need legal advice or a court filing: use your lawyer, since this only gives a first read."
+  - "The subpoena is a party subpoena in a matter you already track: run it through that matter's own workflow instead."
 you_give:
   - The subpoena document
   - The jurisdiction
@@ -30,12 +31,44 @@ you_get:
   - An objections framework
   - A deadline calendar and compliance plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved legal setup notes and your
-    files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Before you start, gather the subpoena file, your litigation setup notes (CLAUDE.md) and your matter log (_log.yaml).
+  - Open the skill in an AI that can read files and look things up online. Paste the subpoena or give its file path.
+  - Say where the subpoena was issued. Add your other open matters and your systems list if you have them.
+  - Read the result. Check the deadlines and the rule it found before you rely on them.
+  - If the subpoena is from a grand jury, the skill stops. Call criminal counsel at once.
+  - Hand the triage to your lawyer. Next, start a legal hold with /legal-hold if none is in place, or open a matter with /matter-intake.
+output_sample:
+  input:
+    - The subpoena document, as a file or pasted text
+    - Where it was issued (the court or agency)
+    - Your list of open matters (optional)
+    - Notes on your company, teams and systems (optional)
+  prerequisites:
+    - An AI that can read your files, including your saved legal setup notes
+    - Your litigation setup notes (CLAUDE.md) and your matter log (_log.yaml)
+    - Web access to look up the rule for where the subpoena was issued
+  output:
+    - name: Key fields
+      contains: Who issued it, who it was served on, what it asks for, where to comply and the dates.
+    - name: Categories sought (summary)
+      contains: A short list of the kinds of records the subpoena asks for.
+    - name: Custodians / systems likely implicated
+      contains: The people, teams and systems that may hold the records.
+    - name: Portfolio cross-check
+      contains: How this subpoena overlaps with your other open matters.
+    - name: Scope & burden analysis
+      contains: Where the requests look too broad or too costly to answer.
+    - name: Privilege analysis
+      contains: Which records may be protected and need care before anything is handed over.
+    - name: Objections framework
+      contains: Possible objections to raise, for your lawyer to confirm.
+    - name: Compliance plan (if responding)
+      contains: Steps to gather and produce records if you respond.
+    - name: Deadlines (calendar these)
+      contains: Each date you must meet, ready to put in a calendar.
+    - name: Immediate actions
+      contains: What to do first, such as starting a legal hold.
+    - name: Recommendation
+      contains: A suggested next move to bring to counsel.
+    - name: Citation verification
+      contains: A check that the rules and cases cited are real and current.

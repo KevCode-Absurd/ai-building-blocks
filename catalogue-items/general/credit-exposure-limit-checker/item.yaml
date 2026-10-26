@@ -1,15 +1,13 @@
 slug: credit-exposure-limit-checker
 name: Credit exposure limit checker
-summary: A connected credit exposure bridge and limit gap
+summary: "Check a borrower group's total credit exposure against your limit: loans, weighted undrawn lines and other group debt. Get headroom or excess."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - debt-maturity-funding-ladder
+  - lender-safety-verdict-writer
+  - review-maturity-funding-and-credit-limits
 origin: own
 version: 1.0.0
 added: 2026-10-22

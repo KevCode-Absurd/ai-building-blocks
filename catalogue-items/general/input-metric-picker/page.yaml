@@ -1,6 +1,6 @@
 new_slug: input-metric-picker
 name: Input metric picker
-summary: Paste the numbers you report. Get the inputs you control, a proxy test for each and one output to check them.
+summary: Pick input metrics you control from the numbers you report. Get three to six inputs, a proxy test for each and one output to check them.
 job: plan-strategy
 thinking: high
 thinking_why: It traces cause from outputs back to inputs and judges which metrics stand in for the real goal.
@@ -14,6 +14,10 @@ when:
   - Your reports show results but nobody knows what to do about them.
   - You suspect a metric is being gamed or has stopped meaning what it did.
   - You are setting goals for next year and want them to be about things you control.
+not_for:
+  - "You have one fixed target with nothing you can change to move it: use a simple tracker or ask the person who set it."
+  - "You want to compare cash against profit: use the Cash versus earnings checker."
+  - "You need to know if an idea will sell: run a small test with real customers instead."
 you_give:
   - The numbers you report, with periods
   - Your goals for the year (optional)
@@ -30,6 +34,28 @@ how_to_use:
   - Say what a good year looks like for your customer.
   - Read the proxy tests. Change any metric you could game.
   - Put the owners and dates into your plan.
+output_sample:
+  input:
+    - The numbers you report, with their periods
+    - Your goals for the year (optional)
+    - Your long-term principles (optional)
+  output:
+    - name: Outputs today
+      contains: Each result you report, with its latest value and period.
+    - name: Inputs that cause them
+      contains: For each output, the things you control that cause it.
+    - name: Chosen inputs
+      contains: Three to six inputs that touch the customer, each with an owner, target and review date.
+    - name: Proxy test
+      contains: For each input, how it could rise while the goal falls, and a guard where needed.
+    - name: Output kept as a check
+      contains: One result that shows whether the inputs were the right ones.
+    - name: Goal split
+      contains: How many of your goals name inputs, outputs or both.
+    - name: Missing
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check still failed, or none.
 how_it_works:
   - title: Lists the outputs
     text: Everything you report that is a result, not a cause.

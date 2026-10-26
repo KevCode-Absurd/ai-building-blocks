@@ -16,6 +16,29 @@ use_cases:
   - "Plan a mix of phone, email, social and in-person outreach so you don't rely on one channel"
   - "Prepare calm answers to the four objections you hear most"
   - "Coach a team that avoids the phone, without lecturing them about mindset"
+not_for:
+  - "You sell complex deals to many decision makers: use the Matthew Dixon mind, or the Neil Rackham mind for question-led selling."
+  - "You face a tense negotiation and need calm questions: use the Chris Voss mind."
+  - "You want short tested selling lines to try on buyers: use the Elmer Wheeler mind."
+output_sample:
+  input:
+    - Your pipeline today, and how many deals recently closed or fell away
+    - The outreach you keep avoiding, such as cold calls
+    - What you sell and who usually buys it
+    - The objection you hear most (optional)
+  output:
+    - name: Prospecting block
+      contains: A fixed daily time slot early in the day, with research and admin moved outside it.
+    - name: Replacement number
+      contains: How many new opportunities to add to replace each deal that left, based on your own close rate.
+    - name: Reason for calling
+      contains: One plain sentence that asks for a meeting instead of making a pitch.
+    - name: Reply to test
+      contains: A few calm answers to your most common objection, so you can keep the one that works.
+    - name: Bounce-back routine
+      contains: A short habit for after a hard no, ending with one more call.
+    - name: Questions he would ask
+      contains: Direct questions about your calls made, your block and what you told yourself after the last no.
 seats:
   - {seat: "Prospecting every day", asks: "When is your prospecting block today, and what will stop you from protecting it?"}
   - {seat: "Rejection and resilience", asks: "Are you avoiding the ask because of the outcome, or because of how the no will feel?"}

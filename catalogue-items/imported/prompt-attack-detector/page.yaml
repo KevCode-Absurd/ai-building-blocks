@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It adds a ready-made detector and checks its scores.
 new_slug: prompt-attack-detector
 name: Prompt attack detector
-summary: Point it at your AI app's inputs. Get a small filter that flags tricks
-  and hidden instructions before they land.
+summary: Build a prompt injection detector that flags jailbreaks and hidden instructions in text before it reaches your AI app. Get working Python code.
 job: build-software
 headline: Prompt attack detector
-subhead: A small filter that checks text before it reaches your AI app and flags
-  tricks like "ignore previous instructions" or commands hidden inside
-  documents. Bad input gets caught before it does damage.
+subhead: A small filter that checks text before it reaches your AI app and flags tricks like "ignore previous instructions" or commands hidden inside documents. Bad input gets caught before it does damage.
 explain: |
   A small filter that checks text before it reaches your AI app and flags tricks like "ignore previous instructions" or commands hidden inside documents. Bad input gets caught before it does damage.
 
   It uses Meta's Prompt Guard, a compact classifier that labels text as normal, injection or jailbreak. You set a threshold, and anything over it is blocked or sent for review. Use it on user messages, and on third-party content such as web pages or search results that feed a retrieval system. It handles several languages and runs fast, including in batches. You need Python with transformers and torch, and model access on Hugging Face.
 when:
   - Your chatbot takes free text from the public and you worry about jailbreaks.
-  - Your app reads web pages or emails and someone could hide instructions in
-    them.
+  - Your app reads web pages or emails and someone could hide instructions in them.
   - You want a quick check on documents before they enter your search index.
   - You need a log of suspicious inputs for review.
+not_for:
+  - "You need to block violent, hateful or criminal content: use LlamaGuard, which is made for content moderation."
+  - "You want rules about what actions your AI app may take: use NeMo Guardrails instead."
+  - "You cannot run Python or download a model: ask a developer to set it up, or add a simple human review step."
 you_give:
   - The inputs or documents to screen
   - Score threshold you want to use (optional)
@@ -30,8 +30,30 @@ you_get:
   - Block or allow decisions
   - Batch screening script
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code, or plan to run the code yourself.
+  - Paste the skill text. Say whether you are screening user messages, third-party content such as web pages, or both.
+  - Add a few sample texts and your score cutoff if you have one (optional).
+  - Accept Meta's terms for the Prompt Guard model on Hugging Face. Install transformers and torch.
+  - Run the code on your sample texts. Check that blocked and allowed results look right, then adjust the cutoff.
+  - "Know the limits: the code is MIT, but the model uses the Llama 3.1 Community License. Scores shown in the skill are examples, so test on your own text."
+output_sample:
+  input:
+    - The text you want to screen, such as user messages, web pages or search documents
+    - Whether the text comes from a user or from a third party
+    - Your score cutoff for blocking (optional)
+  prerequisites:
+    - An AI that can run Python code, or a computer with Python, transformers and torch installed
+    - A Hugging Face account with Meta's terms accepted for the Prompt Guard model
+  output:
+    - name: Single text checker
+      contains: Python code that scores one user message for jailbreak attempts and returns a safe or blocked decision.
+    - name: Third-party data filter
+      contains: Code that scores web pages and API replies for hidden instructions, with a lower cutoff than user messages.
+    - name: Batch screening script
+      contains: Code that checks a list of documents in groups and returns each text with its score and decision.
+    - name: Labels and scores
+      contains: Each text is labelled benign, injection or jailbreak, with a score between 0 and 1.
+    - name: Long text checker
+      contains: Code that splits texts over 512 tokens into overlapping chunks so hidden commands at the end are not missed.
+    - name: Threshold guide
+      contains: A table of cutoffs for high security, balanced and low friction use.

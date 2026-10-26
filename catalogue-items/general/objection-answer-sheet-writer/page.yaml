@@ -1,6 +1,6 @@
 new_slug: objection-answer-sheet-writer
 name: "Objection answer sheet writer"
-summary: "List the doubts buyers raise. Get an answer sheet that turns each into a yes-question and brings proof."
+summary: "Turn the doubts buyers raise into an objection answer sheet. Each doubt gets a yes-question, an honest reply and proof you can show."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It sorts each doubt and matches fitting proof, but the order is fixed."
@@ -17,6 +17,10 @@ when:
   - "Buyers keep raising the same doubts and you answer differently each time."
   - "You are writing a page or a script and want the answers ready."
   - "You lose deals to a doubt you never planned for."
+not_for:
+  - "You want the question that closes the talk: use the Ask-which closing planner."
+  - "You have one sale and no doubts that repeat: write a plain FAQ page or just answer the buyer in person."
+  - "You need to find why people buy in the first place: use the Customer buying reasons finder."
 
 you_give:
   - "The doubts buyers raise, or reviews and messages to find them in"
@@ -34,6 +38,27 @@ how_to_use:
   - "Add any proof you have: numbers, photos, quotes."
   - "Read each answer out loud and cut anything that sounds like arguing."
   - "Gather new doubts after a week and run it again."
+output_sample:
+  input:
+    - The doubts buyers raise, or reviews and messages to find them in
+    - Product facts and proof you have (optional)
+    - Your ranked reasons to buy (optional)
+    - Your brand brain (optional)
+  output:
+    - name: PLAN
+      contains: One line that tells the reader the order of the sheet.
+    - name: NOT BELIEVED
+      contains: Doubts about the claim, each with a yes-question, an honest agreement, a fact, proof and a test.
+    - name: NO USE FOR ME
+      contains: Doubts about need or fit, written in the same layout.
+    - name: CHEAPER IS AS GOOD
+      contains: Doubts that something else does the same for less, in the same layout.
+    - name: DOUBTS STILL NEEDING PROOF
+      contains: The doubts where you have no proof you can show yet.
+    - name: MISSING
+      contains: Any fact or proof you did not give, marked so nothing is made up.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed and why, or none.
 
 how_it_works:
   - title: "Collects every doubt"

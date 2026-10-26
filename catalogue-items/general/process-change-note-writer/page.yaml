@@ -1,6 +1,6 @@
 new_slug: process-change-note-writer
 name: "Process change note writer"
-summary: "Paste what is changing and why. Get the note that tells the team what to do differently, from when."
+summary: "Write a process change note that tells your team what to do differently and from when. Paste the old way, new way, date and reason."
 job: document-work
 thinking: low
 thinking_why: "It arranges given facts into one short note."
@@ -17,6 +17,10 @@ when:
   - "You changed how refunds, orders or handovers work and need everyone doing it the new way from Monday."
   - "A mistake happened and the fix is a new step."
   - "A new tool replaces an old one and people need to know what to do on day one."
+not_for:
+  - "You need to check a written procedure for gaps: use the SOP and runbook checker."
+  - "You want to update the step-by-step how-to the change affects: use the Repeat task how-to writer."
+  - "You have a one-off message with no change in how work is done: write it yourself in a few lines."
 
 you_give:
   - "The old way and the new way"
@@ -33,6 +37,26 @@ how_to_use:
   - "Add the date, the reason and the roles affected."
   - "Read the first line. If someone reading only that would still do the wrong thing, fix your input."
   - "Send the note, post the chat line, and pin the old-versus-new table where the work happens."
+output_sample:
+  input:
+    - The old way and the new way of doing the work
+    - The date the change starts
+    - The honest reason for the change
+    - The roles affected and who owns the change (advised)
+    - What happens to work already started (optional)
+  output:
+    - name: SUBJECT
+      contains: An email subject line under twelve words.
+    - name: CHAT LINE
+      contains: A one-line post for your team chat, under twelve words, with the date.
+    - name: NOTE
+      contains: The change and date first, the reason once, a block for each affected role, work in flight, and who to ask.
+    - name: OLD v NEW
+      contains: A table of each step that changes, with the old way and the new way.
+    - name: MISSING
+      contains: Any date, owner or fact you did not give, marked instead of guessed.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Writes old and new side by side"

@@ -2,38 +2,58 @@ thinking: low
 thinking_why: It filters by one date rule.
 new_slug: lapsed-customer-finder
 name: Lapsed customer finder
-summary: Get a list of customers who stopped ordering, tagged for your win-back
-  campaign. Adds tags to live customer records.
+summary: Find customers who stopped ordering and tag them for a win-back campaign. Preview first with a dry run, then get a CSV list.
 job: run-your-store
 headline: Lapsed customer finder
-subhead: A list of customers who bought once and then went quiet, already tagged
-  so you can send a win-back campaign. The skill reads your Shopify store and
-  finds customers whose last order is older than your cutoff, 90 days by
-  default.
+subhead: Give it your Shopify store and a cutoff, 90 days by default. It finds customers whose last order is older than the cutoff. It tags them and saves a CSV list for your win-back email.
 explain: |
   A list of customers who bought once and then went quiet, already tagged so you can send a win-back campaign. The skill reads your Shopify store and finds customers whose last order is older than your cutoff, 90 days by default. You can also require a minimum number of past orders.
 
   It then adds a tag, win-back by default, to each customer record, up to a cap of 500 per run. A dry run mode shows who would be tagged without changing anything, so try that first. Because it writes tags to live customer data, you need Shopify CLI access with customer read and write permissions.
 when:
   - You want to email customers who have not ordered in three months.
-  - You need a Klaviyo or Shopify segment for a win-back campaign.
-  - You want to check how many customers have gone quiet before you plan.
+  - You need a group of lapsed customers to use in Klaviyo or Shopify.
+  - You want to know how many customers have gone quiet before you plan a campaign.
   - You want repeat buyers only, not people who bought once.
+not_for:
+  - "You don't want to change live store data: pull a customer report from your Shopify admin instead."
+  - "You need to send the emails: use your email tool, such as Klaviyo, because this only finds and tags customers."
+  - "You want customers who opted out of email: filter them out first, and only email people who agreed."
 you_give:
   - Your store domain
-  - Days without an order that counts as lapsed
+  - Days without an order that counts as lapsed (optional)
   - Minimum past orders (optional)
   - Tag name (optional)
-  - Shopify CLI login with customer permissions
 you_get:
-  - A list of lapsed customers
-  - Tags added to their records
-  - A dry run preview
-  - A count and summary of who was tagged
+  - A list of lapsed customers as a CSV file
+  - A tag added to each of their customer records
+  - A dry run preview that changes nothing
+  - A count of customers found, tagged and failed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Use an AI that can run code and the Shopify CLI, such as Claude Code. A plain chat window cannot do this.
+  - Log in to your store first with the Shopify CLI. Your login needs permission to read and change customers.
+  - Paste the skill and give your store domain. Turn dry run on.
+  - Check the count and the preview. Change the cutoff or minimum orders if the list looks wrong.
+  - Run it again with dry run off. It tags up to 500 customers per run.
+  - Before you email the CSV, confirm each person agreed to get marketing email.
+output_sample:
+  input:
+    - Your store domain
+    - Days without an order that counts as lapsed (optional, 90 by default)
+    - Minimum past orders (optional, 1 by default)
+    - Tag name (optional, win-back by default)
+    - Dry run on or off (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A Shopify CLI login with permission to read and change customers
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step with what was asked and how many customers or results came back.
+    - name: Dry run preview
+      contains: If dry run is on, shows who would be tagged and changes nothing.
+    - name: Outcome summary
+      contains: Counts of lapsed customers found, customers tagged and errors, plus the file name.
+    - name: winback_<date>.csv
+      contains: One row per customer with ID, email, name, order count, last order date and the tag applied.

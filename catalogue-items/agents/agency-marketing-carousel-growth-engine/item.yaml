@@ -1,0 +1,44 @@
+slug: agency-marketing-carousel-growth-engine
+name: Carousel content agent
+summary: Get a carousel content plan with hooks and slide sequence. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: web_page
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: copy_draft
+  - type: image_prompt
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-carousel-growth-engine.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-carousel-growth-engine.md
+  licence: MIT
+  original_name: Carousel Growth Engine
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 42a36a3ca0a11b6adc57eb3277dda7628a4db80169b5ea69c5262b7e85d7c06f
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Carousel Growth Engine
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Carousel Growth Engine
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-carousel-growth-engine.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

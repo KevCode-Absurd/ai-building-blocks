@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It computes standard ratios, then interprets them.
 new_slug: company-financial-health
 name: Company financial health reviewer
-summary: Give it a company's filings. Get ratios, cash flow and balance sheet
-  health explained in plain words.
+summary: Check a company's financial health from its income statement, balance sheet and cash flow. Get ratios, flagged oddities and a plain summary.
 job: money-and-investing
 headline: Company financial health reviewer
-subhead: A plain reading of a company's financial health from its statements,
-  with the ratios worked out and the odd numbers flagged. You learn whether the
-  business makes money, can pay its bills and is using its assets well.
+subhead: A plain reading of a company's financial health from its statements, with the ratios worked out and the odd numbers flagged. You learn whether the business makes money, can pay its bills and is using its assets well.
 explain: |
   A plain reading of a company's financial health from its statements, with the ratios worked out and the odd numbers flagged. You learn whether the business makes money, can pay its bills and is using its assets well.
 
@@ -18,6 +15,10 @@ when:
   - You are about to invest in, buy from or lend to a business.
   - Revenue is growing but you suspect cash is not.
   - You want a quick liquidity and debt check before a board meeting.
+not_for:
+  - "You want to value a company or pick a price to pay: use investment-analysis, which is a separate skill and not yet in this library."
+  - "You have no statements, such as a private firm that only shares talk and not accounts: ask the owner or the finance team for the three statements first."
+  - "You want a forecast of future results: use budget-forecast, which is a separate skill and not yet in this library."
 you_give:
   - Income statement, balance sheet and cash flow
   - The reporting period and currency
@@ -29,7 +30,31 @@ you_get:
   - Flagged oddities and red flags
   - A plain-words summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your income statement, balance sheet and cash flow statement. Say the period and currency.
+  - Say what you want to learn, such as debt, profit or cash. Add the industry if you know it.
+  - Read the Executive Summary first, then the Anomalies list.
+  - Check every figure against the original filing before you act. This is a general reading of the numbers you supply, not investment, lending or legal advice.
+  - The ratio script needs code running. Without it, your AI works the ratios out in the chat.
+output_sample:
+  input:
+    - Income statement, balance sheet and cash flow statement
+    - The reporting period and currency
+    - What you want to learn, such as debt, profit or cash (optional)
+    - Industry (optional)
+  prerequisites:
+    - Statements you can paste or upload as text, a table or a file
+    - An AI that can run code, only if you want the ratio script used (optional)
+  output:
+    - name: Executive Summary
+      contains: An overall health rating of strong, stable or concerning, and the top three findings.
+    - name: Profitability
+      contains: Gross, operating and net margins and return on equity, with a view on how good the earnings are.
+    - name: Liquidity
+      contains: Current ratio, quick ratio and days sales outstanding, and what they say about short-term cash.
+    - name: Solvency
+      contains: Debt against equity and interest cover, and what they say about long-term debt.
+    - name: Anomalies
+      contains: Lines that moved over 15 percent without a footnote, and profit that cash does not back up.
+    - name: Recommendations
+      contains: Operational fixes, any money structure needs, and questions to ask management.

@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: student-coding-project-review
 name: Student coding project review
-summary: Share a learning project and its goal. Get specific strengths, priority
-  fixes and questions that deepen your understanding.
+summary: "Get a student coding project review: specific strengths, up to five ranked fixes with code references, and a next step for each."
 job: study-and-practice
 headline: Student coding project review
-subhead: Share your project, requirements and what you hoped to learn. It starts
-  with your own review, then checks the work and the learning behind it. You get
-  specific strengths, up to five priority issues and a next step for each.
-explain: Share your project, requirements and what you hoped to learn. It starts
-  with your own review, then checks the work and the learning behind it. You get
-  specific strengths, up to five priority issues and a next step for each.
+subhead: Share your project, requirements and what you hoped to learn. It starts with your own review, then checks the work and the learning behind it. You get specific strengths, up to five priority issues and a next step for each.
+not_for:
+  - "You are stuck on a bug right now: ask your AI to help you debug it step by step, then come back for a review."
+  - "You need a concept explained first: ask your AI to teach that idea, then share your project."
+  - "You want your code rewritten for you: this review points to issues and leaves the fixing to you."
+explain: Share your project, requirements and what you hoped to learn. It starts with your own review, then checks the work and the learning behind it. You get specific strengths, up to five priority issues and a next step for each.
 you_give:
   - Project code, notes and original requirements.
   - Your learning goals and your own view of the work.
@@ -27,9 +26,25 @@ how_it_works:
   - title: Step 3
     text: Name strengths, rank at most five issues and ask what you learned.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your project code, the original requirements and your learning goals.
+  - "Answer the first two questions honestly: what went well, and what you would change."
+  - Read the praise and the ranked issues. Fix them yourself, starting with the top one.
+  - Answer the closing question and keep your answer as a note. Other skills it names are optional, so you can skip them.
+output_sample:
+  input:
+    - Your project code and any notes
+    - The original requirements or assignment
+    - Your learning goals (optional)
+    - Your own view of what went well and what you would change
+  output:
+    - name: Self-assessment prompt
+      contains: "Two questions asked before any feedback: what went well, and what you would change."
+    - name: Praise
+      contains: Two or three strengths that point to real choices in your code.
+    - name: Critique
+      contains: Up to five issues in priority order, each with its area, how serious it is and a code reference.
+    - name: Grow
+      contains: One concrete next action for each major issue, plus a skill or idea to revisit.
+    - name: Retrospective question
+      contains: One closing question about the most important thing you learned from building this.

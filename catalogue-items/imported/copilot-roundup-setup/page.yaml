@@ -2,17 +2,59 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-roundup-setup
 name: Status briefing preference setter
-summary: Describe your readers and work sources. Get saved briefing preferences
-  for future status updates.
+summary: Set up status briefing preferences once. Share your role and past updates, and get a saved config your AI uses to draft briefings.
 job: organise-work
 headline: Status briefing preference setter
-subhead: Describe your readers and work sources. Get saved briefing preferences
-  for future status updates. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Tell your AI about your role, your readers and the places your work happens. Paste in a couple of updates you have already written. It saves your preferences so the roundup skill can draft status briefings in your style.
+not_for:
+  - "You want a briefing written now: set this up first, then use the separate roundup skill to draft it."
+  - "You only need a one-off update: write it yourself or ask your AI in a plain chat."
+  - "You have no way to run the full chat flow: this setup asks questions one at a time and saves a file."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Install the roundup skill and this setup skill in Copilot CLI. This setup needs the ask_user tool and the ability to create files.
+  - Start a chat and ask your AI to run the roundup setup.
+  - Answer the questions one at a time. Paste in a past status update or two when asked.
+  - Check the style playback and fix anything that is wrong.
+  - Say yes to the test run and read the draft briefing.
+  - Later, ask the roundup skill for a briefing. Re-run this setup if your tools or readers change.
+output_sample:
+  input:
+    - A short description of your role
+    - One or two status updates you have already written
+    - The people who read your updates
+    - Where your team's work and conversations happen
+  prerequisites:
+    - An AI that can ask questions one at a time and create files, such as Copilot CLI
+    - The separate roundup skill installed, which writes the briefings
+    - Optional connections to GitHub or Microsoft 365, if you want your AI to read them
+  output:
+    - name: Role
+      contains: Your role and what you are responsible for, learned from a short chat.
+    - name: Style analysis
+      contains: What your AI noticed about the tone, length and layout of your past updates, played back for you to confirm.
+    - name: Audiences
+      contains: Who reads your updates and what each group needs from them.
+    - name: Information sources
+      contains: Where your work and conversations happen, and which ones your AI can read or needs pasted in.
+    - name: Preferences and guardrails
+      contains: Your rules for what to include, what to leave out and how to word things.
+    - name: Configuration file
+      contains: A saved file of all the above that the roundup skill reads when it drafts a briefing.
+    - name: Test run
+      contains: An optional first draft briefing so you can check the setup works.
+when:
+  - You write the same weekly status update and want it to sound like you.
+  - You report to different groups, such as your boss and your team, and each needs a different view.
+  - You are starting to use the roundup skill and need to set it up first.
+  - Your tools have changed and you want to update your saved preferences.
+you_give:
+  - A short description of your role
+  - One or two status updates you have already written (optional)
+  - The groups of people who read your updates
+  - Where your team's work happens, such as GitHub, project boards or shared documents
+  - Where key conversations happen, such as email, Teams or Slack
+you_get:
+  - A saved configuration file with your style, readers and sources
+  - A short playback of how your AI reads your writing style
+  - A clear note on which sources your AI can reach and which you must paste in
+  - An optional test briefing to check the setup

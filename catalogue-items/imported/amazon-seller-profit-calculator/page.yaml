@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows set cost formulas on your numbers.
 new_slug: amazon-seller-profit-calculator
 name: Amazon seller profit calculator
-summary: Give it your product cost and price. Get fees, profit margin,
-  break-even point and a price to charge.
+summary: Work out your Amazon FBA profit per sale. Give it your price and costs. You get fees, margin, break-even and a price for your target margin.
 job: run-your-store
 headline: Amazon seller profit calculator
-subhead: Know what you really keep on each Amazon FBA sale before you buy stock.
-  Enter your price and costs and get the full cost breakdown, profit margin,
-  break-even point and a suggested price for the margin you want.
+subhead: Know what you really keep on each Amazon FBA sale before you buy stock. Enter your price and costs and get the full cost breakdown, profit margin, break-even point and a suggested price for the margin you want.
 explain: |
   Know what you really keep on each Amazon FBA sale before you buy stock. Enter your price and costs and get the full cost breakdown, profit margin, break-even point and a suggested price for the margin you want.
 
@@ -18,6 +15,10 @@ when:
   - A product sells well but you suspect you make no money on it.
   - You want to know the lowest price you can charge and still profit.
   - You need to compare margins across all your SKUs.
+not_for:
+  - "You ship orders yourself (FBM) or sell on eBay, Etsy or Shopify: use a simple spreadsheet with your own shipping and fee costs."
+  - "You need today's exact Amazon fees: check Amazon's own fee preview in Seller Central, then type those numbers in."
+  - "You want keyword research or listing help: use a tool made for that job, not a margin calculator."
 you_give:
   - Selling price
   - Product cost and shipping to FBA
@@ -31,8 +32,29 @@ you_get:
   - A price for your target margin
   - A comparison table across SKUs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into the chat.
+  - Type your price, product cost, FBA fee and shipping. Add storage, ad share and category if you know them.
+  - For many products, paste one line per SKU or a CSV. Code running helps here but is not needed for small lists.
+  - Check the referral rate and FBA fee against Amazon's current fee schedule, since the skill uses the numbers you give it.
+  - Read the status. If your margin is under 20%, cut costs or raise your price, then run it again.
+  - Run it again whenever fees, ad spend or your price change.
+output_sample:
+  input:
+    - Your selling price
+    - Your product cost, shipping to FBA and FBA fulfilment fee
+    - Monthly storage and ad spend as a share of sales (optional)
+    - Your product category, so it can pick a referral fee rate
+    - Return rate and other fees such as packaging (optional)
+  prerequisites:
+    - An AI that can run code, if you want the saved script and batch results (a chat alone can do single products)
+  output:
+    - name: Cost breakdown
+      contains: Each cost per unit and its share of the price, ending in total cost and net profit.
+    - name: Break-even analysis
+      contains: The lowest price where you make no loss, and how far your price sits above it.
+    - name: Pricing recommendations
+      contains: A table of prices and profit per unit for several target margins.
+    - name: Profitability status
+      contains: A label of healthy, warning, danger or loss based on your net margin.
+    - name: Batch comparison table
+      contains: Several SKUs side by side with their costs, profit and margin, when you give more than one product.

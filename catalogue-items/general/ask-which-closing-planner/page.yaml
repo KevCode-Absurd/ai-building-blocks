@@ -1,57 +1,69 @@
 new_slug: ask-which-closing-planner
 name: "Ask-which closing planner"
-summary: "Paste your offer and where buyers stall. Get closing questions that offer two ways to say yes."
+summary: "Turn yes-or-no closing questions into either-or choices so fewer buyers stall. Get the questions, their order and a line for the undecided buyer."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It rewrites questions to a fixed pattern from a list of real choices."
 
 headline: "Ask-which closing planner"
-subhead: "Give it your offer and the point where buyers stall. It lists the real choices, turns every yes-or-no ask into a which-or-when question and orders them as small agreements. You also get a list of buying signals and a line for buyers on the fence."
+subhead: "Give it your offer and the point where buyers stall. It lists the real choices you can give, then turns each yes-or-no ask into a which-or-when question and puts them in order as small agreements. You also get a list of buying signals and a line for a buyer on the fence."
 
 explain: |
-  "Do you want it?" invites a quick no. Buyers who like the offer still refuse, because refusing is the easiest answer to give.
+  "Do you want it?" invites a quick no. Buyers who like the offer still refuse, because refusing is the easiest answer to give. Closing questions that offer a choice, such as "Tuesday or Thursday?", make a yes one of the ways to answer.
 
-  This skill lists the real choices you can offer and rewrites each ask as a question with two ways to say yes. It orders the questions as small agreements and lists the signs a buyer is ready, so you stop explaining and ask. For a buyer on the fence it writes a pick with a reason. It checks that both choices are real and that nothing hides terms.
+  This skill lists the real choices you can offer today and rewrites each ask with two ways to say yes. It puts the questions in order as small agreements: colour, then size, then date. It lists the signs a buyer is ready, so you stop explaining and ask.
+
+  For a buyer who cannot choose, it writes a pick with a reason. It checks that both choices are real and that no terms are hidden. A buyer who says no still gets a calm reply.
 
 when:
-  - "Buyers say they will think about it and vanish."
-  - "Your closing question is a yes-or-no."
-  - "You keep talking after the buyer is ready."
+  - Buyers say they will think about it, and then vanish.
+  - Your closing question is a yes-or-no, such as "Do you want to go ahead?"
+  - You keep explaining after the buyer is ready to decide.
+  - You sell in person, by phone or by message and want a set order of questions to ask.
+
+not_for:
+  - "Buyers still have doubts about the offer itself. Use the objection answer sheet writer first, then come here to close."
+  - "You want the first line of a talk. Use the ten-second opener writer."
+  - "A quiet deal has stalled for weeks. Use the stalled deal indecision checker."
+  - "You are asking for something that is not a sale, such as a favour or a decision. Use the yes-ladder question writer."
+  - "The offer is free or has only one option. There are no real choices to put in a question."
 
 you_give:
-  - "Your offer, price and options"
-  - "Where buyers stall (optional)"
-  - "Your current closing lines (optional)"
+  - Your offer, with price, terms and every option you can really give (sizes, colours, dates, payment plans)
+  - Where buyers stall, or the objection map from the objection answer sheet writer (optional)
+  - Your current closing lines (optional)
+  - Where you close: in person, by phone or by message (optional)
 you_get:
-  - "Closing questions with two honest ways to say yes"
-  - "The order to ask them in"
-  - "A list of buying signals and what to do on each"
-  - "A line for the buyer on the fence"
+  - A list of the real choices you can offer
+  - Closing questions with two honest ways to say yes, each next to the old version
+  - The order to ask them in
+  - Buying signals, and what to do on each
+  - A line for the buyer on the fence, and a calm way to take a no
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste your offer and its options."
-  - "Say where buyers stall, or paste the objection map from the step before."
-  - "Pick the sequence that matches your setting: in person, phone or message."
-  - "Use it in the next real talk and tell the skill what happened."
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer and every option you can give today. Include dates and stock you can keep to.
+  - Say where buyers stall and where you close: in person, by phone or by message. Wording differs for each.
+  - Check that every choice is one you would honour at the stated price. Cut any that are not.
+  - Try the sequence in your next real talk, then tell the skill what happened and ask for a change.
 
 how_it_works:
-  - title: "Lists real choices"
-    text: "Everything you can honestly offer today."
-  - title: "Rewrites the ask"
-    text: "Turns yes-or-no into which-or-when."
-  - title: "Orders small agreements"
-    text: "Easiest first, each assuming the last."
-  - title: "Adds leading questions"
-    text: "A yes-expected question on points that are true."
-  - title: "Lists signals"
-    text: "Signs a buyer is ready, and what to do on each."
-  - title: "Writes the fence line"
-    text: "A pick, a reason and a question."
-  - title: "Plans more asks"
-    text: "Later asks and a calm way to take a no."
-  - title: "Checks the set"
-    text: "Runs its own checks and names any it missed."
+  - title: Lists real choices
+    text: Lists every choice you can honestly give today and cuts the rest.
+  - title: Rewrites the ask
+    text: Turns each yes-or-no into a which-or-when question with two honest options.
+  - title: Orders small agreements
+    text: Puts the easiest first, each question assuming the last answer.
+  - title: Adds leading questions
+    text: Writes one or two yes-expected questions on points that are true, each followed by a which-question.
+  - title: Lists signals
+    text: Names the signs a buyer is ready and what to do on each.
+  - title: Writes the fence line
+    text: Gives a pick, a reason and a question for a buyer who cannot choose.
+  - title: Plans more asks
+    text: Plans later asks and a calm way to take a no, at most three asks in one talk.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
 
 output_shape: |
   REAL CHOICES
@@ -65,7 +77,7 @@ output_shape: |
   1. <question> -> 2. <question> -> ...
 
   LEADING QUESTIONS
-  <question>
+  <question, then the which-question that follows>
 
   READY-TO-BUY SIGNALS
   <signal> | Then: <stop and ask what>
@@ -81,6 +93,32 @@ output_shape: |
 
   CHECKS MISSED
   <one line each, or none>
+
+output_sample:
+  input:
+    - "Your offer, with price, terms and every option you can really give"
+    - "Where buyers stall (optional)"
+    - "Your current closing lines (optional)"
+    - "Where you close: in person, by phone or by message (optional)"
+  prerequisites:
+    - "An objection map from the objection answer sheet writer, if buyers still have doubts (optional)"
+  output:
+    - name: "REAL CHOICES"
+      contains: "Each choice you can give today at the stated price, marked real."
+    - name: "CLOSING QUESTIONS"
+      contains: "Each old yes-or-no ask next to its which-or-when version."
+    - name: "ORDER OF SMALL AGREEMENTS"
+      contains: "The questions from easiest to biggest, with the line that links each step."
+    - name: "LEADING QUESTIONS"
+      contains: "One or two yes-expected questions on true points, each followed by a which-question."
+    - name: "READY-TO-BUY SIGNALS"
+      contains: "Signs a buyer is ready, with the next which-question for each."
+    - name: "FOR A BUYER ON THE FENCE"
+      contains: "A pick, a one-sentence reason and a question that ends in the choice."
+    - name: "LATER ASKS"
+      contains: "Two later asks shaped differently, and a calm way to take a no."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check it could not pass."
 
 tweaks:
   - what: "The choices you can give"
@@ -111,6 +149,9 @@ improve:
   - "Save the question that worked best in a notes file."
   - "Pair it with \"Ten-second opener writer\" for the start of the talk."
 
+before: [objection-answer-sheet-writer]
+next: [one-ask-email-tightener, call-to-action-writer]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Rewriting questions to a pattern is simple text work."}
@@ -125,3 +166,5 @@ terms:
     meaning: "An easy yes on a small point, such as colour, that leads toward the larger decision."
   - term: "Ready-to-buy signal"
     meaning: "A question or action that shows a buyer is close to deciding."
+  - term: "Leading question"
+    meaning: "A question that expects a yes, used only on points that are true."

@@ -1,6 +1,6 @@
 slug: blame-free-review-agenda-writer
 name: "Blame-free review agenda writer"
-summary: "Paste your review themes. Get a timed agenda with no-blame wording rules, a slot for old hurts and next-time questions."
+summary: "Turn your project review themes into a timed agenda with no-blame wording rules, a slot for old hurts and questions for next time."
 category: general
 type: skill
 role: make
@@ -13,6 +13,7 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
+needs_mode: manual
 minds: [ed-catmull]
 credits:
   - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace, Random House, 2014", used: "Asking whose fault it was as the sign of a culture that punishes failure, letting people express frustrations about past mistakes respectfully, time-limiting topics, balancing good with bad, and ending a review with the questions the next project should ask"}

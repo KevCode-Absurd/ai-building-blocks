@@ -1,58 +1,65 @@
 new_slug: shortlist-running-order
 name: "Shortlist and running-order planner"
-summary: "Paste a long list of ideas, songs, headlines or slides. Get a cut shortlist and an order that reads as one flow."
+summary: Cut a long list of ideas or slides to the best few. Get a reason for every cut and a running order that holds attention.
 job: think-and-decide
 thinking: medium
 thinking_why: "It ranks and orders items by judgment, but each step has a fixed rule."
 
 headline: "Shortlist and running-order planner"
-subhead: "Paste a long list of ideas, songs, headlines or slides, and say how many slots you have. It cuts to a shortlist with a reason for every cut, tests the weakest pick against the best leftover, and orders the set by contrast."
+subhead: Paste a long list of ideas, songs, headlines or slides and say how many slots you have. The skill cuts to a shortlist and gives a reason for every cut. It tests the weakest pick against the best leftover, then orders the set so neighbours differ.
 
-explain: |
-  When you have thirty ideas and room for eight, it is tempting to keep your favourites and order them by when you thought of them. The result is a set where the weak items hide among the good ones and every item sounds like the one before it.
+explain: |-
+  With thirty ideas and room for eight, it is easy to keep your favourites and order them by when you thought of them. The weak items hide among the good ones, and every item sounds like the one before it.
 
-  This skill starts with far more candidates than slots, scores each on whether the core idea is strong on its own, and cuts to finalists. It then names the weakest finalist and tests it against the strongest unused candidate, whoever made it. It orders the finalists by contrast so the set holds attention, checks that it rewards a second look, and asks you to re-read it after a break. Every cut has a one-line reason.
+  This skill wants far more candidates than slots, at least three for each. It scores every candidate on one test: does the core idea hold up with no polish around it? Then it cuts to the number of slots and writes a one-line reason for every cut. The reason names a weakness, not a taste.
+
+  Next it picks the weakest finalist and tests it against the strongest unused item, whoever made it. It orders the finalists by contrast, checks that the set rewards a second look and asks you to re-read it after a break. The method draws on public interviews with Quincy Jones about choosing and ordering songs. This version is ours, not his.
 
 when:
-  - "You have a list of ad angles, headlines or talk topics and room for only a few."
-  - "You are putting together a playlist, a deck, a newsletter or a product range."
-  - "A team brought many ideas and you need to cut fairly."
+  - You have a list of ad angles, headlines or talk topics and room for only a few.
+  - You are building a playlist, a deck, a newsletter or a product range.
+  - A team brought many ideas and you need to cut fairly, with reasons.
+  - Your set feels flat and you suspect the order is the problem.
+not_for:
+  - You have only a handful of ideas. With fewer than three for each slot, get more ideas first.
+  - You are choosing between two options. Use the Pros and cons decision planner.
+  - You want to make the items themselves better. Use the Honest draft feedback giver on the ones you keep.
 
 you_give:
-  - "The full list of candidates, as long as you have it"
-  - "How many slots there are"
-  - "What the set is for and who will see it"
-  - "Who made each item (optional)"
+  - Every candidate, even rough ones
+  - How many slots you have
+  - What the set is for and who will see it (optional, but it changes what counts as strong)
+  - Anything that must open or close the set (optional)
+  - Limits such as length, time or format (optional)
 you_get:
-  - "A shortlist with a one-line reason for every cut"
-  - "The weakest finalist, tested against the best unused item"
-  - "A running order, with the reason for each placement"
-  - "A re-read date"
+  - Each candidate scored strong, fair or weak
+  - A one-line reason for every cut
+  - The weakest finalist tested against the best unused item
+  - A running order with a reason for each place
+  - A note on the second look, and a time to re-read
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste every candidate, even rough ones, and say how many slots you have."
-  - "Say what the set is for and who will see it."
-  - "Read the cut reasons. Argue with any you disagree with."
-  - "Re-read the final set after a break, as the last line tells you."
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste every candidate, even rough ones. Say how many slots you have and what the set is for.
+  - Say who will see it, and name anything that must open or close the set.
+  - Read each cut reason. Argue with any you disagree with, then run it again.
+  - Leave the final set for a night. Re-read it, as the last line tells you to.
 
 how_it_works:
-  - title: "Count candidates against slots"
-    text: "Checks there are at least three candidates for every slot."
-  - title: "Test each core idea"
-    text: "Scores each on whether the core idea stands alone."
-  - title: "Cut to finalists"
-    text: "Cuts to the number of slots, with a reason for each cut."
-  - title: "Challenge the weakest finalist"
-    text: "Tests the weakest finalist against the best unused item."
-  - title: "Order by contrast"
-    text: "Orders the finalists so neighbours differ."
-  - title: "Check the second look"
-    text: "Checks the set rewards a second look."
-  - title: "Set a re-read"
-    text: "Sets a re-read after a break before locking."
-  - title: "Check it"
-    text: "Runs its own checks, fixes what it can and names any it missed."
+  - title: Counts candidates against slots
+    text: Checks you have at least three candidates for every slot. If not, it asks for more before cutting.
+  - title: Tests each core idea
+    text: Scores each candidate strong, fair or weak on whether the idea stands alone, with no polish or framing.
+  - title: Cuts to finalists
+    text: Keeps the strong ones up to your slot count. Every cut gets a one-line reason that names the weakness.
+  - title: Challenges the weakest finalist
+    text: Compares it with the strongest unused item on the same test and swaps if the unused one wins. It ignores who made each item.
+  - title: Orders by contrast
+    text: Places finalists so neighbours differ in pace, size, tone or type. It opens with a hook and keeps a strong one near the end.
+  - title: Checks the second look and sets a re-read
+    text: Asks if the set rewards a second viewing, then sets a time to re-read after a break.
+  - title: Checks its own work
+    text: Runs its own checks, fixes what it can and names any it missed.
 
 output_shape: |
   THE BRIEF
@@ -82,14 +89,14 @@ output_shape: |
   <one line per check still missed, or none>
 
 tweaks:
-  - what: "Number of slots"
-    how: "Give the real number. A tighter limit forces harder cuts."
-  - what: "The purpose and the audience"
-    how: "State both. Strong for a client pitch is not strong for a social post."
-  - what: "Who made each item"
-    how: "Include it only if you want the swap test to show how often it is ignored."
-  - what: "Order rules you already have"
-    how: "Say if an item must open or close. It places the rest around it."
+  - what: Number of slots
+    how: Give the real number. A tighter limit forces harder cuts.
+  - what: The purpose and the audience
+    how: State both. Strong for a client pitch is not strong for a social post.
+  - what: Limits
+    how: Give the length, time or format. It stops the set running past what fits.
+  - what: Order rules you already have
+    how: Say if an item must open or close. It places the rest around it.
 
 judge:
   - "At least three times as many candidates as slots were considered."
@@ -111,14 +118,39 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Structuring decisions and writing plans is text work any strong chat AI does well with this skill."}
-    - {name: "A spreadsheet or cards", why: "Lets you move items around and see the order, which helps with step 5."}
+    - name: Any good chat AI
+      why: Scoring ideas and ordering them is text work. Claude, ChatGPT and Gemini all do it with this skill.
+    - name: A spreadsheet or cards
+      why: Lets you move items around and see the order, which helps with the running order.
   inputs:
-    - "Past sets and which items worked"
-    - "The audience and where they will see it"
-    - "Limits such as length, time or format"
-    - "Notes on what you tried before"
+    - Past sets and which items worked
+    - The audience and where they will see it
+    - Limits such as length, time or format
+    - Notes on what you tried before
 
 terms:
   - {term: "Running order", meaning: "The order in which items appear, such as songs on an album or slides in a deck."}
   - {term: "Finalist", meaning: "An item that survived the first cut and is competing for a slot."}
+output_sample:
+  input:
+    - Your full list of candidates
+    - How many slots you have
+    - What the set is for and who will see it
+    - Order rules, such as an item that must open (optional)
+  output:
+    - name: THE BRIEF
+      contains: Slots, number of candidates and the purpose of the set.
+    - name: SCORED
+      contains: Each candidate marked strong, fair or weak, with a short reason.
+    - name: CUTS
+      contains: Every item cut, with a one-line reason that names the weakness.
+    - name: WEAKEST FINALIST
+      contains: The weakest pick tested against the best unused item, kept or swapped.
+    - name: RUNNING ORDER
+      contains: The finalists in order, with the contrast reason for each place.
+    - name: SECOND LOOK
+      contains: What rewards a second viewing, or which item to sharpen.
+    - name: RE-READ ON
+      contains: When to look again, and one question to ask.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts you did not give, and any of its own checks it could not pass, or none.

@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It follows set steps and checks each page.
 new_slug: pdf-maker-and-reader
 name: PDF maker and reader
-summary: Give it a PDF or a brief. Get the text pulled out or a new PDF with its
-  layout checked.
+summary: Read a PDF or make a new one, then check every page as an image. Catch cut-off text and layout slips in your PDF before you send it.
 job: work-with-files
 headline: PDF maker and reader
-subhead: Read a PDF without trusting raw text alone, or make a new one and see
-  for yourself that it looks right. The key habit is rendering pages to images
-  and looking at them after every change, because text extraction cannot tell
-  you about layout.
+subhead: Read a PDF without trusting raw text alone, or make a new one and see for yourself that it looks right. The key habit is rendering pages to images and looking at them after every change, because text extraction cannot tell you about layout.
 explain: |
   Read a PDF without trusting raw text alone, or make a new one and see for yourself that it looks right. The key habit is rendering pages to images and looking at them after every change, because text extraction cannot tell you about layout.
 
@@ -19,18 +15,41 @@ when:
   - You want to check that a generated PDF has no cut-off text.
   - You need quick text from a PDF and a look at how it is laid out.
   - A PDF output keeps shifting and you need a render-and-fix loop.
+not_for:
+  - "You need to edit a PDF in place, such as changing a line in a signed contract: use the original file or a PDF editor."
+  - "Your PDF is a scan or a photo of paper: use an OCR tool first, because this skill reads real text only."
+  - "You need a Word or slide file: ask your AI for that format instead, or export from your own app."
 you_give:
   - A PDF to read, or a brief for a new one
   - Content and layout wishes for a new file
   - Output file name (optional)
 you_get:
-  - Extracted text from a PDF
-  - Page images to review
-  - A new PDF made with reportlab
-  - A layout check after each update
+  - The text pulled out of your PDF.
+  - A PNG image of each page, so you can see the layout.
+  - A new PDF saved in output/pdf/, if you asked for one.
+  - A layout check after each change, with any problems named.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run code, such as Claude with code tools. Paste in the skill text.
+  - Upload your PDF, or describe the PDF you want. Give the content, layout and file name.
+  - Let your AI install the tools it needs. If it can't, it will tell you what is missing.
+  - Ask it to render each page to an image and check it.
+  - Read the page images and the check notes. Ask for fixes until no page has a defect.
+  - Take the final file from output/pdf/.
+output_sample:
+  input:
+    - A PDF to read, or a short brief for a new PDF
+    - The content and layout you want in a new file
+    - The file name you want (optional)
+  prerequisites:
+    - An AI that can run code and use files
+    - Python packages reportlab, pdfplumber and pypdf
+    - Poppler, a free tool that turns PDF pages into images
+  output:
+    - name: Extracted text
+      contains: The text pulled from your PDF with pdfplumber or pypdf, for quick checks only.
+    - name: Page images
+      contains: One PNG image of each page, made with pdftoppm, so the layout can be seen.
+    - name: New PDF
+      contains: A PDF made with reportlab, saved in output/pdf/ with a stable, clear file name.
+    - name: Layout check
+      contains: A look at each re-rendered page for clipped text, overlaps, broken tables and hard-to-read type.

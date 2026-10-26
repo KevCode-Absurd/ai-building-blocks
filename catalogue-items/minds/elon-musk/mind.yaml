@@ -15,6 +15,29 @@ use_cases:
   - "Plan a staged launch: an expensive first version that pays for a cheaper one"
   - "Decide if a long-shot project is worth it, and how much you can afford to lose"
   - "Find what to build in-house versus buy, based on cost and control"
+not_for:
+  - "You want a calm view on staff morale, customer feelings or design: use the Brian Chesky mind, who works from the customer's experience and trust."
+  - "You need to judge a stock, a price against value or your own money: use the Benjamin Graham mind, or a licensed financial adviser."
+  - "You want to know what Musk thinks about today's news or plans next year: no mind can speak for him, so ask a news source."
+output_sample:
+  input:
+    - Your problem, with a cost, a deadline or a process on it
+    - The parts, steps or tools involved, and what each costs
+    - Who asked for each rule or step, if you know (optional)
+    - How much you can afford to lose, if it is a risky bet (optional)
+  output:
+    - name: Sharp questions
+      contains: Challenges to your idea and timeline, such as what physics allows and who asked for each requirement.
+    - name: Cost number
+      contains: What the thing costs now, built up from raw parts, and what it should cost.
+    - name: Cut list
+      contains: "Steps in order: question, delete, simplify, speed up, automate last."
+    - name: Staged plan
+      contains: A sequence where each step pays for the next, with a test for each.
+    - name: Risk call
+      contains: The main way it could fail, and how much you can afford to lose.
+    - name: Beyond the record notes
+      contains: Marks where the advice goes past what he said, so you can tell the two apart.
 seats:
   - {seat: "First principles and speed", asks: "What does physics say this should cost, and why are we paying ten times that?"}
   - {seat: "Delete the requirement", asks: "Who asked for this step, by name, and what breaks if we remove it?"}

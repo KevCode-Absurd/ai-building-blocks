@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scans with set rules, then fixes and rechecks.
 new_slug: wcag-accessibility-fixer
 name: WCAG accessibility fixer
-summary: Point it at your site code. Get WCAG 2.2 problems found, fixed and
-  checked again.
+summary: Find and fix WCAG 2.2 accessibility problems in your website code, then scan again to check the fixes. Works with React, Vue, Angular and plain HTML.
 job: build-websites
 headline: WCAG accessibility fixer
-subhead: A website with its accessibility problems found, fixed and checked
-  again, against WCAG 2.2 levels A and AA. That makes it usable for people with
-  screen readers, keyboards or low vision, and lowers your legal risk.
+subhead: Give it your website code. It finds accessibility problems against WCAG 2.2 levels A and AA, fixes them, and scans again. The scan is pattern-based, so a clean result does not prove your site is compliant.
 explain: |
   A website with its accessibility problems found, fixed and checked again, against WCAG 2.2 levels A and AA. That makes it usable for people with screen readers, keyboards or low vision, and lowers your legal risk.
 
@@ -18,6 +15,10 @@ when:
   - You want to fix accessibility issues before launch.
   - Your team keeps adding new problems with each release.
   - You need a plain report for managers.
+not_for:
+  - "You need proof of full WCAG compliance: the scan is pattern-based and cannot check every rule, so hire an accessibility auditor for a formal audit."
+  - "You want to test with a screen reader or keyboard by hand: use the manual testing checklist in the skill's references folder, or ask a person who uses assistive tools."
+  - "You have no access to the site code, for example a hosted builder with no code view: use the builder's own accessibility settings or ask its support team."
 you_give:
   - Your site code or the project folder
   - The framework in use (optional)
@@ -30,8 +31,32 @@ you_get:
   - A report for managers
   - A pipeline check to stop new issues
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and change your project files.
+  - Save your project in version control first, such as Git. The fix step edits your files directly.
+  - Open an AI that can read and change your project files. Add this skill and point it at your project folder.
+  - Ask it to scan first. Read the list of issues before you let it change anything.
+  - Ask it to apply the fixes, then review the changes it made to your files.
+  - Ask it to scan again and compare with the first scan. Then test by hand with a keyboard and a screen reader.
+  - Ask for the manager report or the pipeline check if you need them. The scanner scripts need Python.
+output_sample:
+  input:
+    - Your website code or project folder
+    - Your framework, such as React, Vue or plain HTML (optional)
+    - The folders or pages to check first (optional)
+    - Your pipeline tool, such as GitHub Actions, if you want an automatic check (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - Python on your computer, if you want to run the scanner scripts yourself
+    - A saved copy of your code in version control before any fixes
+  output:
+    - name: Scan results
+      contains: Each issue with its WCAG rule, a severity of Critical, Major or Minor, and where it sits in your code.
+    - name: Before and after fixes
+      contains: The old code and the fixed code for each issue, written for your framework.
+    - name: Colour contrast check
+      contains: Text and background colour pairs that fail, with the ratio needed and a safer colour to use.
+    - name: Re-check
+      contains: A second scan that shows which issues are gone and whether the fixes caused new ones.
+    - name: Stakeholder report
+      contains: A plain pass and fail summary that managers and compliance staff can read without code.
+    - name: Pipeline config
+      contains: Settings for GitHub Actions, GitLab CI or Azure DevOps that flag new accessibility problems on each release.

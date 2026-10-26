@@ -1,46 +1,125 @@
 new_slug: receivables-allowance-movement-bridge
 name: Receivables allowance roll-forward
 headline: Receivables allowance roll-forward
-summary: Reconcile credit-loss expense, write-offs and recoveries to the reported closing allowance.
+summary: Roll the allowance for doubtful accounts from opening to closing using expense, write-offs and recoveries, then see what is left unexplained.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A signed allowance roll-forward, coverage ratio and unexplained closing residual. Share opening/closing allowance, credit-loss expense, gross write-offs, recoveries credited to allowance, FX/other movements and gross receivables.
-explain: |-
-  A signed allowance roll-forward, coverage ratio and unexplained closing residual.
+subhead: Give it the opening and closing allowance, the credit-loss expense, write-offs, recoveries, other movements and gross receivables. It rolls the allowance forward and compares it with the reported closing figure. You get any gap and the allowance as a share of receivables.
 
-  Issuer revenue and cash-flow reconciliation. Illustrative figures.10+8+1-1-5=13 allowance, or13/200=6.5% gross receivable coverage. Expense10 produces15, a negative2 residual against reported13, and7.5% computed coverage.
+explain: |-
+  The allowance for credit losses, also called the bad debt allowance, is the amount a company sets aside for receivables it may not collect. Over a year it grows when the company books a loss expense and shrinks when it writes off a bad account. A roll-forward shows each of those steps on one page.
+
+  This skill starts at the opening allowance. It adds the credit-loss expense and any recoveries, applies signed other movements such as currency effects, and takes off the write-offs. That gives a computed closing allowance. It compares this with the closing figure the company reported. The difference is shown, not hidden. Then it divides the allowance by gross receivables to get the coverage percentage.
+
+  A higher coverage figure does not prove the allowance is enough. Enough depends on the age of the debts, who owes them, and what the company expects to lose. This roll-forward does not estimate that. It only checks that the reported movements add up.
+
 when:
-  - You need a signed allowance roll-forward, coverage ratio and unexplained closing residual.
-  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - An annual report shows the allowance and the expense, and you want to see if the movement adds up.
+  - Write-offs jumped this year and you want to see what that did to the allowance.
+  - An analyst asks how much of the closing allowance came from new expense and how much from other changes.
+  - A lender asks for the allowance movement and the coverage on gross receivables.
+
+not_for:
+  - "You want to know whether the allowance is big enough. That needs aging, loss rates and collateral that this roll-forward does not use."
+  - "You want to size how much a lender will advance against invoices. Use the Receivables borrowing base builder."
+  - "You want to check how much customer credit you are exposed to. Use the Credit exposure limit checker."
+  - "You want to see whether profit turned into cash. Use the Cash versus earnings checker."
+
 you_give:
-  - Opening/closing allowance, credit-loss expense, gross write-offs, recoveries credited to allowance, FX/other movements and gross receivables.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The allowance at the start and at the end of the year, from the receivables note"
+  - "The credit-loss expense for the year, from the income statement or the note"
+  - "Write-offs charged against the allowance"
+  - "Recoveries credited to the allowance (optional)"
+  - "Currency effects and other movements, with signs (optional)"
+  - "Gross receivables at the end of the year"
+  - "The currency, scale and period"
+
 you_get:
-  - A signed allowance roll-forward, coverage ratio and unexplained closing residual.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "A computed closing allowance, built step by step from the opening one"
+  - "The gap between it and the reported closing allowance"
+  - "The allowance as a percentage of gross receivables"
+  - "A note on what the coverage figure can and cannot show"
+  - "A list of anything missing, and what it held back"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach the receivables note if your AI reads files."
+  - "Give the figures with the currency and the year. Say if a recovery is booked in the allowance or in income."
+  - "Check the inputs table first. Each figure should match a line in the note."
+  - "Read the gap against the reported closing allowance. A gap means a movement is missing, such as an acquisition or a transfer."
+  - "Add the missing movement and run it again, or leave the gap listed as unexplained."
+  - "Have a qualified accountant review the result before anyone uses it in a report."
+
 how_it_works:
-  - title: 1. Confirm allowance perimeter and the posting convention for recoveries; separate gross receivable changes from loss-allowance changes
-    text: Confirm allowance perimeter and the posting convention for recoveries; separate gross receivable changes from loss-allowance changes.
-  - title: 2. Roll opening allowance through expense, recoveries and signed noncash movements, deduct gross write-offs and reconcile reported closing allowance
-    text: Roll opening allowance through expense, recoveries and signed noncash movements, deduct gross write-offs and reconcile reported closing allowance.
-  - title: 3. Divide the reconciled allowance by matching gross receivables and explain movements without claiming that a higher coverage ratio proves adequate provisioning
-    text: Divide the reconciled allowance by matching gross receivables and explain movements without claiming that a higher coverage ratio proves adequate provisioning.
+  - title: Fixes the scope
+    text: Confirms which receivables the allowance covers and how recoveries are posted.
+  - title: Rolls the allowance forward
+    text: Adds expense, recoveries and signed other movements to the opening allowance, then takes off write-offs.
+  - title: Compares with the reported figure
+    text: Subtracts the computed closing allowance from the reported one and shows the gap.
+  - title: Works out coverage
+    text: Divides the computed allowance by gross receivables for the same date.
+  - title: Adds the caution
+    text: States that a higher coverage figure does not show the allowance is enough.
+  - title: Lists the gaps
+    text: Names every figure it was missing and every check that did not run.
+
 output_shape: |-
-  A signed allowance roll-forward, coverage ratio and unexplained closing residual.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES
+  <figure> | <source> | <date> | <currency, scale, period>
+
+  INPUTS AND ASSUMPTIONS
+  Opening allowance: <n> | Expense: <n> | Write-offs: <n> | Recoveries: <n> | Other (signed): <n> | Reported closing: <n> | Gross receivables: <n>
+
+  ALLOWANCE ROLL-FORWARD
+  Opening allowance: <n>
+  + Credit-loss expense: <n>
+  + Recoveries: <n>
+  +/- Other movements: <n>
+  - Write-offs: <n>
+  Computed closing allowance: <n>
+  Reported closing allowance: <n>
+  Unexplained gap: <reported - computed>
+  Coverage: <computed closing / gross receivables>
+
+  WHAT COVERAGE CANNOT SHOW
+  <one or two plain lines>
+
+  CHECKS RUN
+  <check> | <result>
+
+  MISSING
+  <figure and what it held back>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Opening and closing allowance, from the receivables note"
+    - "Credit-loss expense, write-offs and recoveries for the year"
+    - "Currency effects and other movements (optional)"
+    - "Gross receivables at the end of the year"
+  prerequisites:
+    - "The company's receivables or credit-loss note for the year"
+  output:
+    - name: "SCOPE AND SOURCES"
+      contains: "Each figure with the note it came from, its date, currency, scale and period."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "The seven figures used, with signs."
+    - name: "ALLOWANCE ROLL-FORWARD"
+      contains: "The opening allowance moved line by line to a computed closing figure, the gap and the coverage."
+    - name: "WHAT COVERAGE CANNOT SHOW"
+      contains: "A plain caution that a higher ratio does not prove the allowance is enough."
+    - name: "CHECKS RUN"
+      contains: "Each tie-out and its result."
+    - name: "MISSING"
+      contains: "Any figure it could not find, and which result it held back."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [receivables-borrowing-base-builder, credit-exposure-limit-checker, cash-versus-earnings-checker]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -48,29 +127,40 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: Gross write-offs and recoveries are not both netted and separately deducted.
+
 judge:
   - Gross write-offs and recoveries are not both netted and separately deducted.
   - The supplied recovery amount is actually credited to the allowance under the applicable accounting policy.
   - Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
   - Preserve reported measures beside analytical measures and retain unexplained residuals.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The receivables note for both years, with the allowance table.
+    - A named reviewer and an explicit question, such as "why did the allowance rise?"
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Allowance for credit losses
+    meaning: Money set aside for receivables a company expects it may not collect. Also called the bad debt allowance.
+  - term: Write-off
+    meaning: Removing a receivable from the books because it will not be paid.
+  - term: Recovery
+    meaning: Money collected later on an account that was already written off.
+  - term: Gross receivables
+    meaning: What customers owe before the allowance is taken off.
+  - term: Coverage
+    meaning: The allowance divided by gross receivables.

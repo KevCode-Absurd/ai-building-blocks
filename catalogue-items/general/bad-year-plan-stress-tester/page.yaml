@@ -1,6 +1,6 @@
 new_slug: bad-year-plan-stress-tester
 name: Bad year plan stress tester
-summary: Paste a budget or plan. Get three bad-year tests, your breaking point and a survival score.
+summary: Test your budget or business plan against a bad year. See where it breaks, how much cushion you need and a survival score out of 100.
 job: money-and-investing
 thinking: medium
 thinking_why: It works sums under stress and has to choose sensible failures.
@@ -11,6 +11,10 @@ when:
   - You are about to commit to a budget or a business plan.
   - You borrow money against a plan that must work.
   - You want to know how big a cushion to keep.
+not_for:
+  - "You have no cash or must-pay cost figures yet: work those out first, or the sums will have gaps."
+  - "Your plan has many debts or complex terms: use the Room for error plan checker for the full version."
+  - "You want advice on what to buy, sell or borrow: ask a licensed financial adviser."
 you_give:
   - "Your plan: income, costs and debts"
   - Cash and monthly must-pay costs
@@ -25,6 +29,29 @@ how_to_use:
   - Under it, paste your plan, your cash and your must-pay costs.
   - Send it and read the result.
   - Use your own bad-year number if you have one.
+output_sample:
+  input:
+    - "Your plan: income, costs and debts"
+    - Your cash on hand
+    - Your monthly must-pay costs
+    - Borrowing terms such as rate and due dates (optional)
+  output:
+    - name: MUST GO RIGHT
+      contains: Five to ten things your plan relies on, each with its figure or a MISSING note.
+    - name: THREE FAILURES
+      contains: A bad year, a forced cut or sale, and one more, each with timing, size and cash left.
+    - name: BREAKING POINT
+      contains: The gap after which you cannot carry on, as a number and a share of cash or income.
+    - name: BORROWING RISK
+      contains: Each debt marked low, medium or high risk of being called in or repriced.
+    - name: CUSHION
+      contains: How many months of fixed costs you should hold.
+    - name: PANIC RULE
+      contains: One short rule you can remember to stop rushed decisions.
+    - name: SURVIVAL SCORE
+      contains: A score out of 100 with the points taken off and the sums shown.
+    - name: MISSING
+      contains: Any figure you did not give, listed so you can fill the gap.
 how_it_works:
   - title: List the bets
     text: What must go right for the plan to work.

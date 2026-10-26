@@ -1,6 +1,6 @@
 slug: ten-principles-review
 name: "Review a product against ten principles, then cut extras"
-summary: "Describe your product or page. Get a ten-principle review and a keep, cut and merge plan for its features."
+summary: "Review your product against ten design principles. Describe it; get a score for each principle and a list of what to keep, cut and merge."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -9,13 +9,12 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: web_page, required: false}
-  - {type: product_data, required: false}
 outputs:
   - {type: plan}
 uses: [design-ten-principles-reviewer, feature-cutting-planner]
 steps:
-  - {uses: design-ten-principles-reviewer, note: "A review against ten principles of good design, with what to remove"}
-  - {uses: feature-cutting-planner, note: "What to keep, cut and merge so the product explains itself. Reads the audit report from the step before"}
+  - {uses: design-ten-principles-reviewer, note: "A review against ten principles of good design, with what to remove. Hands the scores, the parts list and the proposed cuts to step 2."}
+  - {uses: feature-cutting-planner, note: "What to keep, cut and merge so the product explains itself. Reads the review from the step before"}
 origin: rebuilt
 version: 1.0.0
 minds: [dieter-rams]

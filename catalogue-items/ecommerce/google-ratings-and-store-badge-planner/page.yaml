@@ -1,6 +1,6 @@
 new_slug: google-ratings-and-store-badge-planner
 name: "Google ratings and store badge planner"
-summary: "Tell it your reviews and policies. Get a score and a plan for star ratings and the top store badge."
+summary: "Check if your store can show Google star ratings, then get a plan and a score out of 100 for the top store badge."
 job: run-google-ads
 thinking: low
 thinking_why: "It compares your numbers with a short list of thresholds, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You want star ratings on your Google Shopping ads and don't know where to start.
   - You have reviews on your site but none show on Google.
   - You want to work toward the top store badge and need to know which gaps to close first.
+not_for:
+  - "You need to know why Google suspended your account: ask Google Merchant Center support and read their policy page."
+  - "You have no real customer reviews yet: collect reviews from buyers first, then come back."
+  - "You want ad copy or a launch plan: use the Google Ads launch planner."
 
 you_give:
   - Your review app, and review counts in total and per product
@@ -36,6 +40,26 @@ how_to_use:
   - Paste your shipping, return and payment details as they really are.
   - Do the easy fixes first, such as images, speed, matching promotions and payment options.
   - Check the figures on Google's current help page before you act on them.
+output_sample:
+  input:
+    - Your review app, and your review counts in total and per product
+    - Your page load time and images per product
+    - Your shipping times and costs, and your return window and cost
+    - Your payment options at checkout
+    - Your country, and whether you collect store reviews (optional)
+  output:
+    - name: Product ratings eligibility
+      contains: Your total reviews against the 50 needed, and which products have fewer than 3.
+    - name: Route and steps
+      contains: The way to send reviews to Google, written as numbered steps.
+    - name: Store quality
+      contains: A result for browsing, purchase, shipping, returns and store ratings.
+    - name: Fix first and later
+      contains: Easy fixes listed first, then fixes that depend on shipping or returns.
+    - name: Score
+      contains: A score out of 100 on the checks run, with the sum shown.
+    - name: Not run and missing
+      contains: Checks it could not run and facts that would sharpen the result.
 
 how_it_works:
   - title: Checks eligibility

@@ -1,25 +1,21 @@
 slug: earnout-payout-checker
 name: Earnout payout checker
-summary: Check one linear earnout payout between its signed threshold and cap.
+summary: "Check one linear earnout: the share earned and the payout between the zero-payment threshold and the full-payment cap."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
 origin: own
 version: 1.0.0

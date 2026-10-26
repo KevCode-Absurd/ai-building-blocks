@@ -2,31 +2,90 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: delighted-and-satismeter-survey-assistant
 name: Delighted and Satismeter survey assistant
-summary: Connect your survey tool. Get a satisfaction report, or review a recipient list before sending surveys.
+summary: Get an NPS and CSAT report from your Delighted or Satismeter responses, or check a recipient list before you send a survey.
 job: help-customers
 headline: Delighted and Satismeter survey assistant
-subhead: Connect Delighted or Satismeter and choose to read results or send surveys. It groups responses and calculates the available scores. You get trends, reasons for low ratings, positive themes, and next steps, or an approved survey send report.
+subhead: Link your Delighted or Satismeter account, then pick a task. It can read your responses and work out your NPS and CSAT scores. Or it can check a recipient list and send surveys after you say yes.
+explain: |
+  If you already collect NPS or CSAT scores in Delighted or Satismeter, this skill turns the raw answers into a report. It works out the score, splits promoters, passives and detractors, and shows the trend across periods.
+
+  It also reads the comments. You get the top reasons for low scores, with word-for-word quotes and counts, and what promoters say they love.
+
+  The second job is sending. It builds your recipient list, shows you the count and the first few names, and waits for your yes before anything goes out. It sends at most 50 in one run. It needs a linked account in one of the two tools, which may be a paid plan.
 when:
-  - You use this tool for customer support and need help with this task.
+  - It is the end of the month and you want your NPS and CSAT numbers in one place.
+  - Your score dropped and you want to know what detractors wrote.
+  - You just solved a batch of tickets and want to ask those customers for a rating.
+  - You need a short report for your team with real customer quotes.
+not_for:
+  - You want themes from comments across several survey tools. Use the Customer feedback report from survey tools, which also reads GatherUp, Gleap and Simplesat.
+  - You want to write a new survey from scratch. Use the Post-purchase survey builder.
+  - You have one angry message to rate. Use the Customer message tone and urgency review.
+  - You do not use Delighted or Satismeter. Export your responses to a sheet and paste it in for the report only.
 you_give:
-  - Survey service access and dates for a results review.
-  - A recipient list and approved survey if you want to send one.
+  - Your choice of task, either "analyze" or "send"
+  - A date range for the report, such as the last 30 days
+  - Your Delighted or Satismeter account, linked through Composio
+  - A recipient list and a survey you have already set up, to send surveys (optional)
 you_get:
-  - Show scores, response counts, trends, reasons for low ratings, positive comments, and next actions.
+  - Your NPS score, with promoter, passive and detractor shares
+  - Your CSAT score, response rate and number of responses
+  - A table of scores by period
+  - Top reasons for low scores and what promoters love, with quotes
+  - A short list of actions
+how_to_use:
+  - Check you have a Delighted or Satismeter account, and a Composio account with its command line tool. These services may cost money, so check your plan first.
+  - Open an AI that can run commands and read skill files, such as Claude Code, and add the downloaded folder.
+  - Ask it to run the survey assistant. Say "analyze" and give a date range, or say "send" and give your list.
+  - If it says a tool is not connected, run composio link delighted or composio link satismeter, then ask again.
+  - To send, read the count and the first names it shows you, and say yes only if they are right.
+  - For the report, check a few quotes against the raw responses before you share it.
+output_sample:
+  input:
+    - Your choice of task, "analyze" or "send"
+    - A date range for the report
+    - Your Delighted or Satismeter account, linked through Composio
+    - A recipient list and a ready survey, to send (optional)
+  prerequisites:
+    - An AI that can run commands, with Composio CLI installed
+    - A Delighted or Satismeter account, which may be a paid plan
+    - Survey answers are read through Composio, so check this suits your privacy rules
+  output:
+    - name: Scores
+      contains: NPS with promoter, passive and detractor shares, plus CSAT, response rate and total responses.
+    - name: Trend
+      contains: A table of NPS, CSAT and response counts by period.
+    - name: Detractor Analysis
+      contains: The top reasons for low scores, with counts and word-for-word quotes.
+    - name: Promoter Highlights
+      contains: What happy customers say they love, with counts and quotes.
+    - name: Action Items
+      contains: What to fix from detractor comments and what to keep doing.
+    - name: Send report
+      contains: How many surveys were sent and which failed. Only when you chose "send".
 how_it_works:
-  - title: Choose the survey task
-    text: Ask to review existing responses or prepare surveys for a chosen customer list.
-  - title: Read or send surveys
-    text: Read available results. If sending, confirm the recipient list before any survey goes out.
-  - title: Report the findings
-    text: Show scores, response counts, trends, reasons for low ratings, positive comments, and next actions.
+  - title: Find the right tools
+    text: It searches Composio for the send and read tools for your survey service.
+  - title: Pick the task
+    text: It reads "send" or "analyze" from your request. With no task, it analyzes.
+  - title: Read or send
+    text: To analyze, it fetches recent responses. To send, it shows your list and waits for your yes.
+  - title: Work out the scores
+    text: It counts promoters, passives and detractors, then works out NPS, CSAT and trend.
+  - title: Write the report
+    text: It groups comments into reasons, adds quotes, and lists actions.
 works_best_with:
   tools:
     - name: Delighted or Satismeter
-      why: Live lookups need Composio CLI access and connected accounts for these services.
-how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for delighted and satismeter survey assistant by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Survey service access and dates for a results review.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+      why: It reads and sends through your own account. A paid plan may be needed.
+    - name: Composio CLI
+      why: It links your AI to your survey account. Your AI must be able to run commands.
+    - name: Gorgias or HubSpot (optional)
+      why: Can supply the list of customers to survey, such as solved tickets or contacts.
+terms:
+  - term: NPS
+    meaning: Net Promoter Score. The share of customers who would recommend you, minus the share who would not.
+  - term: CSAT
+    meaning: Customer satisfaction score. How happy customers say they are with one experience.
+  - term: Detractor
+    meaning: A customer who scores you 0 to 6 on the NPS question.

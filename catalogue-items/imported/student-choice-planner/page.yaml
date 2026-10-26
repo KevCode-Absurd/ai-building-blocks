@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It must raise student ownership in small steps.
 new_slug: student-choice-planner
 name: Student choice and ownership planner
-summary: Give it a task students rely on you for. Get steps that hand over more
-  choice and voice over time.
+summary: Plan how to give students more choice in a task they rely on you for. Get a step-by-step student choice and ownership plan, with safety nets.
 job: teach-and-train
 headline: Student choice and ownership planner
-subhead: A plan for moving students from 'tell me what to do' to choosing and
-  owning their work, one small release at a time. It works for classes that lean
-  hard on teacher direction.
+subhead: A plan for moving students from 'tell me what to do' to choosing and owning their work, one small release at a time. It works for classes that lean hard on teacher direction.
 explain: |
   A plan for moving students from 'tell me what to do' to choosing and owning their work, one small release at a time. It works for classes that lean hard on teacher direction.
 
   You give the task, the students' level, and how much say they have now. The skill builds a progressive release, with steps that hand over a bit more voice each time, such as picking a topic, then a format, then a way to show learning. It sets out the choices you offer, so options stay meaningful and not overwhelming. It adds safety nets for students who flounder, lists common pitfalls, and shows how your own role shifts at each stage.
 when:
   - Your students wait for instructions on every step of a task.
-  - You want to offer choice in an essay or project without losing control of
-    quality.
+  - You want to offer choice in an essay or project without losing control of quality.
   - You need a way to build independence over a term, not in one lesson.
   - Some students freeze when given open choices.
+not_for:
+  - "You need to teach brand new content to the whole class: use direct instruction first, then come back to this plan."
+  - "Students have never met the subject: teach the basics yourself before you offer any choice."
+  - "You want a single lesson plan for tomorrow: write a normal lesson plan, as this plan builds over a term."
 you_give:
   - The task students do now
   - Year level and subject
@@ -32,7 +32,29 @@ you_get:
   - Your changing role at each stage
   - Common pitfalls to avoid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page's download.
+  - Type the task students do now, their year level, and how much say they have today.
+  - Add the subject and learning goal if you have them. Add notes on certain students if it helps (optional).
+  - Send it. No code, files or paid tools are needed.
+  - Read the choices and safety nets. Cut any step that does not fit your class.
+  - Start with the first step only. Check how students cope before you release more.
+output_sample:
+  input:
+    - The task students do now
+    - Year level
+    - How much say students have today
+    - Subject (optional)
+    - The learning goal (optional)
+  output:
+    - name: Progressive Release Scaffold
+      contains: Named steps that move from teacher-directed work to student-directed work, with a little more choice each time.
+    - name: Choice Architecture
+      contains: The set of choices students can pick from at each step, starting narrow and growing more open.
+    - name: Safety nets
+      contains: What to do when a student makes a poor choice or freezes, without taking their say away.
+    - name: Teacher role shifts
+      contains: How your own role changes at each stage, from director to guide.
+    - name: Common Pitfalls
+      contains: Mistakes that often make choice fail in class, and how to avoid them.
+    - name: Building Toward Independence
+      contains: What to do next so students keep growing in ownership after the plan ends.

@@ -1,6 +1,6 @@
 new_slug: store-keyword-map-builder
 name: "Store keyword map builder"
-summary: "Give it your catalogue and keywords. Get one topic per page, typed collection, product or blog."
+summary: "Turn your product list and keywords into a store keyword map: one topic per page, a page type for each, a clash list and a build order."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It sorts many keywords into groups and weighs a few rules, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You are planning new collections or a rebuild and want to know what each page should target.
   - Your pages seem to compete, or traffic is flat after you added more pages.
   - You have a long keyword export and no order to work through it.
+not_for:
+  - "You have no product list yet: write one first, or use the Store keyword validator once you have a rough list of terms."
+  - "You run a single-product site: one page and a short keyword list is enough, so skip the map."
+  - "You only want to clean a raw keyword list: use the Store keyword validator, then come back."
 
 you_give:
   - Your product categories and top product names
@@ -34,6 +38,28 @@ how_to_use:
   - Add your Search Console pages sorted by impressions, and the names of three to five competitor stores, if you can.
   - Read the clash list first and fix those pages before you build anything new.
   - Build in the order it gives you, and rerun it when you add a new range.
+output_sample:
+  input:
+    - Your product categories and top product names
+    - A keyword export with volume and difficulty (optional)
+    - Your Search Console pages and queries (optional)
+    - Three to five competitor stores (optional)
+  prerequisites:
+    - An AI chat tool where you can paste text
+    - Live search results, if you want the page type checked (the skill marks it not checked otherwise)
+  output:
+    - name: STORE SIZE
+      contains: How many products and collections you have, and whether the map is short or full.
+    - name: KEYWORD MAP
+      contains: One row per topic with main keyword, extra keywords, page type, URL, volume, status and why that type.
+    - name: CLASHES
+      contains: Pages that go after the same search, which page to keep, and whether to merge, redirect or retarget the other.
+    - name: BUILD ORDER
+      contains: Pages in the order to build them, with a reason each, money pages before blog posts.
+    - name: KEPT ON JUDGEMENT
+      contains: Terms with low tool volume that stayed in the map, and why.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none, plus anything marked MISSING.
 
 how_it_works:
   - title: Sizes the job

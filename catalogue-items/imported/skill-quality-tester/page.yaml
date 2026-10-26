@@ -2,11 +2,10 @@ thinking: medium
 thinking_why: It runs checks and scores results.
 new_slug: skill-quality-tester
 name: Skill quality tester
-summary: Give it a skill. Get its structure checked, scripts run and a score with fixes.
+summary: Check a skill's structure, run its Python scripts and get a quality score with a to-do list of fixes before you ship it.
 job: make-skills
 headline: Skill quality tester
-subhead: A score and a to-do list for a skill, after its structure is checked
-  and its scripts are run. You find weak spots before you ship it.
+subhead: A score and a to-do list for a skill, after its structure is checked and its scripts are run. You find weak spots before you ship it.
 explain: |
   A score and a to-do list for a skill, after its structure is checked and its scripts are run. You find weak spots before you ship it.
 
@@ -16,6 +15,10 @@ when:
   - You want a letter grade and a list of what to improve.
   - You need a score gate in your build pipeline.
   - You review a library of skills and want to rank them.
+not_for:
+  - "You are writing a new skill: follow the write-a-skill guide in the claude-skills repo instead, since this tester's line minimums suit older skills."
+  - "Your skill has no Python scripts: the script tests have nothing to run, so a careful read-through by a person is simpler."
+  - "You want to check many skills at once: this tool checks one skill folder per run, so loop over your folders in a script."
 you_give:
   - A skill folder
   - Python 3
@@ -27,8 +30,31 @@ you_get:
   - An improvement road map
   - A security score
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read files.
+  - Check that your skill folder sits in the claude-skills repo, for example at engineering/skills/your-skill. The commands expect this layout.
+  - Open a terminal in the repo root, or use an AI that can run code and read files. Python 3 is all you need.
+  - Run the structure check on your skill folder with the skill_validator.py script. Add the JSON flag if you want results a program can read.
+  - Run the script_tester.py script on the same folder, then the quality_scorer.py script. Add a minimum score if you want it to fail below a bar.
+  - Work through the improvement roadmap from the top. Fix one item, then run all three checks again.
+  - Stop when the structure check passes, every script passes and the score meets your target.
+output_sample:
+  input:
+    - A skill folder inside the claude-skills repo, such as one under engineering/skills
+    - Python 3 on your computer
+    - A minimum score to pass (optional)
+    - "A tier to check against: BASIC, STANDARD or POWERFUL (optional)"
+  prerequisites:
+    - An AI that can run code and read files, or a terminal you run the commands in yourself
+    - The claude-skills repo layout, with the skill folder at engineering/skills/<name>
+  output:
+    - name: Structure check
+      contains: Pass or fail on front matter, required sections, folder layout and line counts, with an overall score and compliance level.
+    - name: Script test results
+      contains: "For each Python script: syntax, imports, a timeout-protected run, help text and output compared with expected files."
+    - name: Quality score
+      contains: A score from 0 to 100 and a letter grade across documentation, code quality, completeness and usability.
+    - name: Tier recommendation
+      contains: Whether the skill reads as BASIC, STANDARD or POWERFUL, based on its size and features.
+    - name: Improvement roadmap
+      contains: A ranked list of fixes to work through from the top, then re-run until you reach your target score.
+    - name: Security score
+      contains: A risk rating for the skill, which can also be added into the quality score.

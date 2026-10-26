@@ -1,6 +1,6 @@
 new_slug: raise-order-value-with-bundles-and-add-ons-you-can-check
 name: Raise order value with bundles and add-ons you can check
-summary: Give it your sales export and product list. Get a free-shipping line, bundles and an after-sale offer that keeps profit.
+summary: Raise your average order value with a free-shipping line, bundles and an after-sale offer, all checked so profit per visitor does not fall.
 job: make-offer
 thinking: high
 thinking_why: It runs five skills in a row and does profit sums on each offer. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your average order has stayed flat for months and ad costs leave little room to grow.
   - You offer free shipping or a bundle and are not sure it makes money.
   - You sell something people use more than once and want a bigger first order.
+not_for:
+  - "Your store has too few orders to show where they cluster: do a plain pricing review by hand first, then come back."
+  - "You do not know your shipping cost per order: work that out first, because the sums depend on it."
+  - "You only want to check one discount for margin: use the Discount margin and ad-cost checker."
 you_give:
   - An export of your orders with order values and dates
   - Your product list with prices, costs and shipping costs
@@ -33,6 +37,29 @@ how_to_use:
   - Start with your order export and product costs. Say which shipping cost you pay on each order.
   - Check each bundle's margin against your floor before you publish any of it.
   - Run the offers for two to four weeks. Then export orders and profit for the same dates and give them to the last step.
+output_sample:
+  input:
+    - Your order export with order values and dates
+    - Your product list with prices, costs and shipping costs
+    - Your current offers and free-shipping rule (optional)
+    - Session and conversion numbers for the same dates (optional)
+    - Orders and profit after your test, given halfway through
+  prerequisites:
+    - An AI that can read files, such as Claude with a Project or Claude Code
+    - Your brand brain from the Website brand brain builder (optional, makes results better)
+  output:
+    - name: "Step 1: Thresholds"
+      contains: Where your orders cluster, a free-shipping or gift line above each peak, and a multipack ladder with profit per order.
+    - name: "Step 2: Bundles"
+      contains: A tier table with price, price per unit, shipping and margin, plus a default tier.
+    - name: "Step 3: After-sale offers"
+      contains: What buyers need next, offers with the ask and extra profit per order, and a follow-up message.
+    - name: "Step 4: Profit per session"
+      contains: A variant table, flags for offers that lower profit per visitor, a winner and a score out of 100.
+    - name: "Step 5: Test verdict"
+      contains: A call to keep, change or stop, a trust score, the result range and a log entry.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Set the threshold
     text: Order threshold planner puts your orders in value buckets and sets one line just above each peak. It builds a multipack ladder for your hero product and shows the profit change per order at each tier.

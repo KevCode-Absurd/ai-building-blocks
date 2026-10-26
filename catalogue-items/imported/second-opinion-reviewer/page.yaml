@@ -2,13 +2,10 @@ thinking: high
 thinking_why: A fresh reviewer must attack the work, then the findings must be weighed.
 new_slug: second-opinion-reviewer
 name: Second-opinion reviewer
-summary: Give it a plan or change you feel sure about. Get a fresh reviewer's
-  hardest objections, sorted by what matters.
+summary: Get a second opinion on a plan or code change you feel sure about. A fresh reviewer lists the hardest objections, sorted by how much they matter.
 job: think-and-decide
 headline: Second-opinion reviewer
-subhead: A set of the hardest objections to a plan or change you feel sure
-  about, sorted by how much each one matters. In a long session, guesses quietly
-  turn into facts.
+subhead: A set of the hardest objections to a plan or change you feel sure about, sorted by how much each one matters. In a long session, guesses quietly turn into facts.
 explain: |
   A set of the hardest objections to a plan or change you feel sure about, sorted by how much each one matters. In a long session, guesses quietly turn into facts. This skill breaks that by handing your work to a fresh reviewer who has not seen your reasoning and is told to find what is wrong.
 
@@ -16,10 +13,12 @@ explain: |
 when:
   - You are about to commit a change that touches logic you only half understand.
   - You made an architecture choice under uncertainty and want it challenged.
-  - You are about to say "this scales" and want someone to try to prove
-    otherwise.
-  - A plan has run for many messages and you suspect your assumptions have
-    hardened.
+  - You are about to say "this scales" and want someone to try to prove otherwise.
+  - A plan has run for many messages and you suspect your assumptions have hardened.
+not_for:
+  - "You want a quick verdict on a finished piece of work: ask your AI for a normal review instead."
+  - "You are making a small change, like a rename, a typo fix or a file move: skip the review and just do it."
+  - "You need speed more than checking, or the step is clear and has one right answer: do the task without a review."
 you_give:
   - The plan, code change or claim
   - What it must achieve
@@ -30,8 +29,28 @@ you_get:
   - Which points to fix and which to dismiss
   - A revised decision
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run subagents and read your project files.
+  - Open your AI in a chat where it can start a second, fresh reviewer and read your files. If it can't, paste the work into a new chat to act as the reviewer.
+  - Paste the skill's instructions into your AI.
+  - Add your plan, change or claim, and what it must achieve. Add limits you already know (optional).
+  - Ask your AI to follow the skill. It writes down your claim, picks the smallest piece to review, and sends it to the fresh reviewer.
+  - Read the objections. Mark each one fix or dismiss, and give a reason.
+  - Use the revised decision. The skill stops after a set number of rounds, so it does not loop forever.
+output_sample:
+  input:
+    - Your plan, code change or claim
+    - What it must achieve
+    - Limits and things you already ruled out (optional)
+  prerequisites:
+    - An AI that can start a second, fresh reviewer and read your project files
+    - A paid account or API key for another AI tool, only if you want a second AI to review (optional)
+  output:
+    - name: Claim
+      contains: What you are about to treat as true, written down plainly, with the assumptions behind it.
+    - name: Reviewable unit
+      contains: The smallest piece of your work, plus what it must achieve, handed to the fresh reviewer.
+    - name: Reviewer objections
+      contains: The strongest reasons the work may be wrong, from a reviewer who has not seen your reasoning.
+    - name: Reconciliation
+      contains: Each objection marked as fix or dismiss, with a short reason for the call.
+    - name: Revised decision
+      contains: Your updated plan or change after the objections you accepted, or a note that it stands.

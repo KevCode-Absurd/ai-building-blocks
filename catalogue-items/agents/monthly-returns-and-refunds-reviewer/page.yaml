@@ -1,6 +1,6 @@
 new_slug: monthly-returns-and-refunds-reviewer
 name: Monthly returns and refunds reviewer
-summary: Run it monthly. Get the products driving refunds, why, what returns cost and the one fix to make first.
+summary: Run this monthly returns and refunds review to find the products behind your refunds, why they come back, and the one fix to make first.
 job: run-your-store
 thinking: medium
 thinking_why: It runs several read-only reports and sorts causes from counts. A mid-range model is enough.
@@ -14,6 +14,10 @@ when:
   - Refunds are a visible cost and you do not know which products cause them.
   - You think a listing or a size guide misleads, but cannot prove it.
   - You want to check refunds are paid on time and the exchange share is not falling.
+not_for:
+  - "Your store has only a few returns a month: read each return by hand, since rates on so few orders mean little."
+  - "You need to settle one refund dispute with a customer: handle that order yourself in your store admin and talk to the customer."
+  - "You want to refund, cancel or edit orders for you: do that yourself in your store admin, since this agent only reads and reports."
 you_give:
   - A connection to your Shopify store, or exports of refunds and returns
   - Product costs, so written-off stock is priced (strongly advised)
@@ -29,6 +33,30 @@ how_to_use:
   - Read the fix to make first. Check the listing, size guide or packaging it names.
   - Tell the agent what you changed. It saves that next to the product's rate.
   - Run it again next month. It shows whether the rate fell.
+output_sample:
+  input:
+    - A connection to your Shopify store, or exports of your refunds and returns
+    - Your return reasons list (optional)
+    - Product costs, so written-off stock is priced (strongly advised)
+    - What changed last month, such as a new supplier or listing (optional)
+  prerequisites:
+    - An AI that can keep files in a folder, such as Claude Code
+    - Read access to your store's orders, refunds and returns
+  output:
+    - name: This month in one line
+      contains: Your overall refund rate and return count against last month, plus the share of exchanges.
+    - name: Make this first
+      contains: The one fix to make first, with the product, the reason and what it cost.
+    - name: Standout products
+      contains: Each product with its rate against the store's, main reason, likely cause and 90-day cost.
+    - name: Late refunds
+      contains: How many refunds ran past your limit and the longest wait.
+    - name: Patterns to look at
+      contains: Orders with several partial refunds, each with a plain reason it was flagged.
+    - name: Watch next month
+      contains: One to three products or numbers that decide the next run.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Read last month
     text: Opens the saved refund rates by product, or marks this as the baseline run.

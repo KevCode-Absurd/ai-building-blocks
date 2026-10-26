@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Wrong statistics lead to wrong launches, so each check needs care.
 new_slug: a-b-test-verdict-maker
 name: A/B test verdict maker
-summary: Give it your A/B test data. Get a split check, results with confidence
-  ranges and a ship call.
+summary: Check your A/B test data for a bad split, see each version's result with a 95% range, and get a clear ship, stop or extend call.
 job: track-numbers
 headline: A/B test verdict maker
-subhead: Give it your test plan, the data with user, version and outcome, and
-  your main and guard metrics. It checks that traffic split as planned, works
-  out each version's result with a 95 percent range and looks for side effects.
-  You get a report and a ship, stop or keep running call.
+subhead: Give it your test plan, the data with user, version and outcome, and your main and guard metrics. It checks that traffic split as planned, works out each version's result with a 95 percent range and looks for side effects. You get a report and a ship, stop or keep running call.
 explain: |
   Your A/B test ends with a clear ship, don't ship or keep running call, backed by the numbers.
 
@@ -19,6 +15,10 @@ when:
   - The result looks positive but you doubt it is real.
   - A test has run for weeks with no clear winner.
   - You want to size a test before you start it.
+not_for:
+  - "Your test has not reached its planned sample size yet: wait until it does, or ask a data analyst before you call it."
+  - "You have no data, only an idea: plan the sample size with a simple online sample size calculator first."
+  - "You need to compare more than two versions or run tests over time: ask a statistician, as this skill covers one test against a control."
 you_give:
   - Your test plan or hypothesis
   - Data with user ID, version and outcome
@@ -31,8 +31,27 @@ you_get:
   - A ship, stop or extend call
   - A written test report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files, as the checks need it.
+  - Paste in this skill and your test plan, with the main metric, guard metrics and planned split.
+  - Upload your data file with user ID, version and outcome for each user.
+  - Read the split check first. If the split is off, stop and fix how users were assigned before you trust any result.
+  - Read the guard metric checks, then the ship, stop or extend call and the expected impact.
+  - Save the filled-in report to share with your team.
+output_sample:
+  input:
+    - Your test plan or hypothesis
+    - Your test data with user ID, version and outcome
+    - Your main metric and any guard metrics
+    - Your planned traffic split, such as 50/50
+    - The smallest gain that is worth shipping (optional)
+  prerequisites:
+    - An AI that can run code and read a CSV file works best
+  output:
+    - name: scripts/ab_test_analyzer.py
+      contains: A script that checks the split, runs the significance test, checks power and tests guard metrics from a CSV or summary numbers.
+    - name: references/statistical_tests_reference.md
+      contains: A short guide on which test to use and when.
+    - name: references/ab_test_design_guide.md
+      contains: Notes on why splits go wrong, how to plan sample size, and the risks of peeking and testing many things.
+    - name: assets/ab_test_report_template.md
+      contains: "The report: test design, results, checks, the ship, stop or extend call, and expected impact."

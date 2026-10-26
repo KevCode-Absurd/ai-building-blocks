@@ -68,20 +68,20 @@ How to start:
    | The offer | States the terms plainly |
    | The occasion | Gives the date |
 
-3. **Match the depth to what the buyer knows.** New: the situation first, the product second. Warm: what's different, and the proof. Ready: the offer and the action. Urgency appears only with a real date.
+3. **Match the depth to what the buyer knows.** Unaware and problem-aware buyers are New, so never mark them Warm. New: the situation first, the product second. Warm: what's different, and the proof. Ready: the offer and the action. Urgency appears only with a real date.
 4. **Write versions that test one appeal each.** Draw on Caples' three headline appeals, plus one from the buyer:
    - **Self-interest**: what they get, said plainly.
    - **News**: something true and new: a launch, a test result, a change.
    - **Curiosity**: an honest gap that the ad itself closes. No bait.
    - **Their words**: a phrase buyers use in reviews, kept as they say it.
    When testing words, keep the picture, product, offer and point the same. A natural sentence beats a forced fragment.
-5. **Use only real proof.** No figures, comparisons, credentials, quotes or guarantees taken from examples. No made-up customer and no invented history (first try, a friend's tip, failed treatments, personal results). Without a real, sourced quote, write as the brand, or in "If your mornings start with..." form. A founder speaks in first person only with a named person and their own facts. Offer terms are exact, with every condition kept. Every time the offer or guarantee appears, in any field or version, it carries its limit (such as "first order only" or "with text sign-up"). Never say what other products or a whole category do or fail to do unless the proof says it; name the old way by how it feels to use, not by a result.
+5. **Use only real proof.** No figures, comparisons, credentials, quotes or guarantees taken from examples. No made-up customer and no invented history (first try, a friend's tip, failed treatments, personal results). Without a real, sourced quote, write as the brand, or in "If your mornings start with..." form. A founder speaks in first person only with a named person and their own facts. Offer terms are exact, with every condition kept. Health, digestion and body claims must use only approved wording, and the ad must follow the ad platform's rules for them. If the wording is not approved, write around it and add `MISSING: approved claim wording`. Every time the offer or guarantee appears, in any field or version, it carries its limit (such as "first order only" or "with text sign-up"). Never say what other products or a whole category do or fail to do unless the proof says it; name the old way by how it feels to use, not by a result.
 6. **Write a story in the main text, only if allowed.** One reader, one problem, one tense. Open on the picture's moment, then what they tried and why it fell short, then the product as one option, described by its checked facts, then the offer terms, then a next step. Short paragraphs, each adding something new. Explain a cause only where the proof supports it. The story ends on a step the reader could take, never on a result achieved.
-7. **Run the checks.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. List any check still missed, and why, on a `CHECKS MISSED:` line, or write "none".
+7. **Run the checks.** Compare the main text with the on-image headline and support line, and cut any fact they both state. Count the sentences in the main text against the limit given, and cut any extra. Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. List any check still missed, and why, under `CHECKS MISSED`, or write "none".
 8. **Hand back only the fields and versions asked for.**
 
 ## What you hand back
-For each version: headline on the image, support line, main text, headline under the image, description, button, each within its limit and with its count. A note line names the code, what the buyer knows and the appeal each version tests. Then the story, if asked. Last, a `CHECKS MISSED:` line, one line per check still missed, or none.
+For each version: headline on the image, support line, main text, headline under the image, description, button, each within its limit and with its count. A note line names the code, what the buyer knows and the appeal each version tests. Then the story, if asked. Last, `CHECKS MISSED`, one line per check still missed, or none.
 
 Count words and characters one by one, exactly, before you write the count. A headline over 7 words (12 for a real quote) fails and gets cut. Be honest: a check you can't pass goes on the CHECKS MISSED line.
 
@@ -118,7 +118,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 - The headline and the picture make the same point.
-- The main text doesn't repeat the image's words.
+- The main text doesn't repeat the image's words, and stays within its sentence limit.
+- Any health or body claim uses approved wording.
 - Every number, offer term and condition traces to the proof.
 - No invented customer, quote, guarantee or credential.
 - Each version tests a different appeal.

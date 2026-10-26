@@ -1,32 +1,65 @@
 new_slug: convertible-eps-inclusion-test
 name: Convertible EPS inclusion test
 headline: Convertible EPS inclusion test
-summary: Compare incremental convertible earnings with basic EPS before deciding whether to include dilution.
+summary: Check if a convertible adds or cuts your diluted EPS. Compare basic EPS with incremental EPS to decide whether to include the dilution.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A single-instrument if-converted comparison showing basic EPS, candidate EPS and incremental EPS. Share continuing profit attributable to ordinary holders, basic weighted shares, after-tax numerator adjustment and weighted conversion shares from instrument terms.
+subhead: Give it your profit, share counts and the convertible's terms. It compares basic EPS with the extra earnings per extra share from conversion. You get a clear call on whether to include the dilution.
 explain: |-
   A single-instrument if-converted comparison showing basic EPS, candidate EPS and incremental EPS.
 
   Public equity and share counts. Illustrative figures. Basic EPS is 100/100 = $1. Incremental EPS is 2/50 = $0.04 and candidate EPS is 102/150 = $0.68. A $60 million adjustment instead raises EPS to $1.066667 and fails the profitable anti-dilution test.
 when:
-  - You need a single-instrument if-converted comparison showing basic EPS, candidate EPS and incremental EPS.
-  - You work on public equity and share counts and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You have one convertible bond or note and need to know if it dilutes EPS.
+  - You are building a diluted EPS schedule and want each number traced to a source.
+  - A reviewer asks you to show how the result ties back to the inputs.
+  - You want an editable workbook that shows the basic, candidate and incremental EPS.
+not_for:
+  - "You have a loss, several convertibles, contingent settlement, cash elections or participating securities: ask an accountant for a full IAS 33 analysis."
+  - "You want to check a fund or investor statement: use a plain review by your fund administrator or accountant instead."
+  - "You need to know if a contract allows conversion: read the contract with your lawyer first, then come back."
 you_give:
-  - Continuing profit attributable to ordinary holders, basic weighted shares, after-tax numerator adjustment and weighted conversion shares from instrument terms.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Profit from continuing operations for ordinary shareholders.
+  - Basic weighted average shares.
+  - The after-tax change to profit if the convertible converts, such as saved interest.
+  - Extra weighted shares from conversion, from the instrument terms.
+  - Reporting date, currency, scale and accounting basis.
 you_get:
-  - A single-instrument if-converted comparison showing basic EPS, candidate EPS and incremental EPS.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A comparison of basic EPS, candidate EPS and incremental EPS.
+  - A dilutive or anti-dilutive label, given only after the checks pass.
+  - An editable workbook with an input schema and test cases.
+  - A list of missing inputs and checks that could not run.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the full pack and open your AI tool. Use one that can make spreadsheet files.
+  - Share the filing pages or numbers for profit, shares and the convertible's terms.
+  - Say the reporting date, currency and scale.
+  - Ask your AI to follow SKILL.md and mark any gap as MISSING instead of guessing.
+  - Check the assumptions, the conversion date match and CHECKS MISSED before you rely on the result.
+  - To run the bundled calculation on your own numbers, use Node.js 20 or later.
+output_sample:
+  input:
+    - Profit from continuing operations for ordinary holders
+    - Basic weighted average shares
+    - After-tax change to profit if the convertible converts
+    - Extra weighted shares from conversion
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later to run the bundled calculation (optional)
+  output:
+    - name: Single-instrument if-converted comparison
+      contains: Basic EPS, candidate EPS and incremental EPS side by side, with a dilutive or anti-dilutive label.
+    - name: Scope and dated sources
+      contains: The sources, dates, currency and scale the calculation relies on.
+    - name: Inputs and assumptions
+      contains: Every input and assumption, kept apart from reported facts.
+    - name: Model calculations and reconciliations
+      contains: The EPS formulas and checks that the numbers tie out.
+    - name: Actual file verification
+      contains: Which workbook checks ran, such as recalculation, a changed input and reopening the file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not supplied and checks that failed or could not run.
 how_it_works:
   - title: 1. Extract the conversion ratio, timing, interest and tax effects from the contract; verify that if-converted treatment applies
     text: Extract the conversion ratio, timing, interest and tax effects from the contract; verify that if-converted treatment applies.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It traces many hidden risks across files and settings.
 new_slug: release-readiness-reviewer
 name: Release readiness reviewer
-summary: "Point it at a release. Get a read-only report of real deploy risks:
-  migrations, config, order and rollback."
+summary: "Check a release for deploy risks before you ship. Get a read-only report on migrations, config, secrets, rollout order and rollback."
 job: ship-and-host
 headline: Release readiness reviewer
-subhead: "A short report listing the real reasons a release could fail on
-  deploy. You find the missing migration, the absent setting or the wrong
-  rollout order before users do."
+subhead: "A short report listing the real reasons a release could fail on deploy. You find the missing migration, the absent setting or the wrong rollout order before users do."
 explain: |
   A short report listing the real reasons a release could fail on deploy. You find the missing migration, the absent setting or the wrong rollout order before users do.
 
@@ -18,6 +15,10 @@ when:
   - A pull request touches database tables and config together.
   - You need a go or no-go list for a launch meeting.
   - You want to know if a rollback would actually work.
+not_for:
+  - "You need proof of what is live in production: check a staging environment or follow the service owner's runbook."
+  - "You want someone to approve a high-risk change: ask the service owner to sign off, as this report cannot replace that."
+  - "You want your AI to run migrations, deploy or fix the code: do that yourself or with your pipeline, as this review only reads."
 you_give:
   - Release branch, tag or git range
   - Deploy notes or pipeline files (optional)
@@ -29,8 +30,31 @@ you_get:
   - Recommended fix for each item
   - Questions to confirm before release
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI in a project where it can read your files and git history. Paste the skill text into the chat if it is not installed.
+  - "Tell it what to review: a pull request link, a tag range like v1.2.3..HEAD, or nothing to use the last release tag."
+  - Add deploy notes or pipeline files if you have them (optional).
+  - Read the conclusion first, then the P0 and P1 findings.
+  - Confirm each P2 item with its likely owner before you deploy.
+  - If your AI cannot read files, paste the diff into the chat. Expect more items under Unable to verify.
+output_sample:
+  input:
+    - A pull request link, a release tag or a git range (optional, it picks a default range if you give none)
+    - Access to your project files and git history
+    - Deploy notes or pipeline files (optional)
+    - Project guidance files such as AGENTS.md or CLAUDE.md (optional)
+  prerequisites:
+    - An AI that can read your repository and run read-only git commands
+    - The GitHub command line, signed in, if you want it to read a pull request (optional)
+  output:
+    - name: Reviewed range
+      contains: The base and head it compared, whether your working copy had unsaved changes, and any fallback it had to use.
+    - name: Conclusion
+      contains: One of BLOCKED, NEEDS_CONFIRMATION or NO_BLOCKER_FOUND.
+    - name: P0 and P1 findings
+      contains: Each blocker or serious risk with its module, evidence, likely owner, risk and recommended action.
+    - name: P2 confirmation items
+      contains: Lower risks and open questions you should confirm before release, listed after the serious findings.
+    - name: Service deployment order
+      contains: The safe order to roll out services, workers, migrations and queues. Only shown when the change touches several of them.
+    - name: Unable to verify
+      contains: Neutral limits, such as no access to production systems, that stopped it from checking something.

@@ -1,6 +1,6 @@
 new_slug: page-usability-review
 name: "Review a page's ease of use, then plan a test"
-summary: "Give it a page or screen. Get its usability problems, every unclear choice rated, and a one-morning test plan for three people."
+summary: "Find where visitors get lost on a page. Get its usability problems, every unclear choice rated, and a one-morning test plan for three people."
 job: audit-landing-page
 thinking: high
 thinking_why: "It runs three skills in a row and has to judge a page the way a first-time visitor would. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - Visitors reach your page but don't do the thing it is for, and you can't see why.
   - You are about to pay for a redesign and want to know which problems are real before you do.
   - You have changed a page or screen and want a quick check with real people before it goes live.
+not_for:
+  - Your page has no clear goal for visitors yet. Decide what a visitor should do first, then run this review.
+  - You want to know why an ad is not getting responses. Use the Ad response troubleshooter.
+  - You want to check a page against 30 sales checks or pricing questions. Ask a person who knows your market, or run a tool built for that job.
 
 you_give:
   - The page or screen to review (a link, a screenshot or the text)
@@ -38,6 +42,24 @@ how_to_use:
   - Give it the page and say what a visitor should be able to do on it.
   - It works step by step and saves each result. Read the choice ratings before you plan the test, since they tell you which tasks to give people.
   - Run the test with three people, then fix the worst problems first.
+output_sample:
+  input:
+    - The page or screen to review (a link, a screenshot or the text)
+    - What a visitor should be able to do on it
+    - A short description of your typical visitor (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - A morning and three people to test with, for the last step
+  output:
+    - name: Usability heuristic reviewer result
+      contains: Problems found against ten usability rules, ordered by what each costs the visitor, with a fix for each.
+    - name: Click choice clarity checker result
+      contains: Each choice a visitor faces, rated obvious or needs thought, with a plain rewrite for the hard ones.
+    - name: Small usability test planner result
+      contains: "A one-morning test plan: who to ask, the tasks, a read-aloud script, a notes sheet and a fix list."
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Review against ten rules

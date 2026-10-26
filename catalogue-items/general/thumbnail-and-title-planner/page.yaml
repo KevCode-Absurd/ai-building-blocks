@@ -1,6 +1,6 @@
 new_slug: thumbnail-and-title-planner
 name: Thumbnail and title planner
-summary: Paste your video idea and channel. Get title and thumbnail pairs to test, with the first minute written to pay them off.
+summary: Plan your video title and thumbnail pairs before the shoot. Get a dozen test pairs that change one thing each, plus a first minute that pays off.
 job: grow-social
 thinking: medium
 thinking_why: It judges what a single clear promise is and designs fair tests.
@@ -14,6 +14,10 @@ when:
   - You have a video idea and have not yet chosen the title or the thumbnail.
   - Your views are low and you think people are not clicking.
   - You want to test, but your tests change too many things at once.
+not_for:
+  - You make Shorts or live streams, where you do not pick a thumbnail before you publish. Use your platform's own tools instead.
+  - You already shot the video and need a shot-by-shot plan. Ask a person on your team or write a simple shot list by hand.
+  - You need a finished thumbnail image. This plan describes each thumbnail in words, so use a design tool or a designer to make it.
 you_give:
   - The video idea and what the viewer gets out of it
   - Your channel, your audience and your usual style
@@ -30,6 +34,27 @@ how_to_use:
   - Paste past results if you have them.
   - Make the thumbnails and test them one pair at a time.
   - After publishing, note where viewers left and bring the numbers back.
+output_sample:
+  input:
+    - Your video idea and what the viewer gets from it
+    - Your channel, your audience and your usual style
+    - Your past results with views and click rates (optional)
+    - Notes on what worked or failed before (optional)
+  output:
+    - name: The promise
+      contains: One line that the title and the thumbnail both make.
+    - name: Base pair
+      contains: A plain title and a one-idea thumbnail with one colour scheme and three words of text or fewer.
+    - name: Pairs to test
+      contains: At least twelve pairs, each with the one thing that changed from the base pair.
+    - name: Reads at feed size
+      contains: A yes or no for each pair on whether it stays clear at phone feed size, with a reason.
+    - name: The first minute
+      contains: Three beats for 0 to 10, 10 to 30 and 30 to 60 seconds that pay off the promise.
+    - name: Result log
+      contains: An empty table for click rate, where viewers left and what to try next.
+    - name: Missing and checks missed
+      contains: Facts you did not give, and any of its own checks that still failed, or none.
 how_it_works:
   - title: Writes the promise
     text: Puts the video's single promise in one line, before the shoot.

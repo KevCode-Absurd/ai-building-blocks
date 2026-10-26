@@ -1,18 +1,20 @@
 slug: knock-on-effects-tracer
 name: "Knock-on effects tracer"
-summary: "Paste a change you plan to make. Get what it causes, what that causes, and what to watch."
+summary: "Paste a planned change, such as a price, rule or bonus. Get what it causes, what that causes next, and three signs to watch."
 category: general
 type: prompt
 role: check
 job: strategy
 level: beginner
 inputs:
-  - {type: plan, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: audit_report}
+  - {type: plan}
 uses: []
 origin: own
 version: 1.0.0
 example_pending: true
 credits:
   - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Peter D. Kaufman (editor), with talks by Charles T. Munger", url: "https://en.wikipedia.org/wiki/Charlie_Munger", used: "Following the consequences of the consequences, and the warning that a forecast from past numbers fails when new rewards change behaviour"}
+next: [second-order-effects-tracer, incentive-checker, plan-inversion-checker]

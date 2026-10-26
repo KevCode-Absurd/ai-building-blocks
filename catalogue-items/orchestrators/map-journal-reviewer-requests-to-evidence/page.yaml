@@ -1,52 +1,89 @@
 new_slug: map-journal-reviewer-requests-to-evidence
 name: Map journal reviewer requests to evidence
 headline: Map journal reviewer requests to evidence
-summary: Share the source files. Get a response matrix, revision tasks and unresolved evidence requests.
+summary: Map each journal reviewer comment to your manuscript and evidence, once. Get a response matrix, revision tasks and the requests you cannot answer yet.
 job: research-topics
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A response matrix, revision tasks and unresolved evidence requests. Share actual reviewer comments, manuscript version, relevant analysis files, author decisions and existing response drafts when available. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the reviewer comments, your manuscript and any decisions you have made. It quotes each comment, ties it to the section it concerns and the evidence you hold, and lists the work. You get a response matrix, a task list with owners and dates, and the requests that still lack evidence.
 explain: |-
-  A response matrix, revision tasks and unresolved evidence requests.
+  A revise-and-resubmit letter can bury you in comments. Each one touches a different section. Some need new analysis. Some need one sentence. A week later nobody is sure which comments have evidence behind them, which are only planned, and which nobody owns. This workflow builds a response matrix for your journal reviewer comments so you can see all of it on one page.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed. Missing tools or evidence stay visible in the final summary.
+  Step 1 reads the comments and the manuscript. Each comment is quoted word for word, tied to the section it concerns, and matched to the evidence you already have, such as a table, an analysis file or a paragraph. Step 2 turns your explicit decisions into a task list. It keeps work you have agreed to apart from work that is only suggested, and it shows every missing owner and date. Step 3 is optional. If you already wrote a response draft, it checks the tone, the comment numbers and the manuscript references.
+
+  Planned work is never shown as done. The workflow does not write results you do not have, does not write the response letter for you, and does not contact the journal.
 when:
-  - You need a response matrix, revision tasks and unresolved evidence requests.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You got a decision letter with reviewer comments and a deadline for your response.
+  - Co-authors are splitting the revision and you need one list of who does what.
+  - You are not sure which reviewer requests you can answer with data you already have.
+  - An editor asks where each reviewer request is addressed in the revised manuscript.
+not_for:
+  - You want the response letter written for you. This workflow maps and checks, and never invents results. Use the Proofreader to polish a draft you wrote.
+  - You track tasks that are not tied to reviewer comments. Use the Executive action register keeper.
+  - You want a matrix that updates over weeks as you revise. Use the Reviewer response progress assistant.
+  - You have one comment and no manuscript. Answer it directly. A matrix adds nothing.
 you_give:
-  - Actual reviewer comments, manuscript version, relevant analysis files, author decisions and existing response drafts when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The reviewer comments, word for word as the journal sent them, with the response deadline
+  - Your manuscript, with its version or date
+  - Your decisions on each comment, such as accept, partly accept or rebut (optional)
+  - The analysis files or tables that bear on the comments (optional)
+  - A response draft you already wrote (optional)
 you_get:
-  - A response matrix, revision tasks and unresolved evidence requests.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A response matrix with each quoted comment, the manuscript section, the evidence you hold and its status
+  - A revision task list with owner, due date and whether the work is agreed or only suggested
+  - A list of requests that still lack evidence, each with what is needed
+  - Missing owners and dates, marked MISSING
+  - A check of your response draft, if you supplied one
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini.
+  - Attach the reviewer comments and the manuscript. Add your decisions on each comment, if you have made them, and any analysis files.
+  - After step 1, check that each quote matches the journal's letter word for word and that each section reference is right.
+  - After step 2, fill in every owner and due date marked MISSING. Check that nothing planned is marked done.
+  - If you supplied a response draft, read the step 3 notes. Edit the letter yourself. Send nothing to the journal until your co-authors agree.
 how_it_works:
   - title: Source note summariser
-    text: Read the reviewer comments and manuscript; map each comment to the relevant section and available evidence without claiming a revision has been made.
+    text: "Reads the reviewer comments and the manuscript, quotes each comment, and ties it to the section it concerns and the evidence you hold. Does not claim any revision has been made. Hands step 2 the matrix."
   - title: Executive action register keeper
-    text: Turn explicit author commitments into a versioned response register. Separate proposed work from accepted tasks and retain missing owners and dates.
+    text: "Turns your explicit decisions into a task list with owners and dates. Keeps agreed work apart from suggestions, and shows missing owners and dates. Hands step 3 the task list."
   - title: Proofreader
-    text: If an actual response draft was supplied, check respectful wording, consistent comment numbering and manuscript references. If no draft exists, explicitly skip this optional proofreading step and return the response matrix and tasks; do not invent experimental findings.
+    text: "Runs only if you gave a response draft. It checks your draft, not the task list. Checks respectful wording, consistent comment numbers and manuscript references. Without a draft it is skipped, and the matrix and task list are the result."
 output_shape: |-
-  Scope and source coverage
-  A response matrix, revision tasks and unresolved evidence requests.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  RESPONSE MATRIX  <comment ID | reviewer's words | manuscript section | evidence you hold | your decision | status>
+  REVISION TASKS   <task | comment ID | owner | due | agreed or suggested | status>
+  EVIDENCE REQUESTS <comment ID | what is needed | why it cannot be answered yet>
+  DRAFT CHECK      <only if a draft was supplied: issue | where | suggested fix>
+  FILES            <each saved file>
+  MISSING          <each gap and the line it stops>
+  CHECKS MISSED    <one line each, or none>
+  NEXT STEP        <one step>
+output_sample:
+  input:
+    - The reviewer comments, as the journal sent them
+    - Your manuscript, with its version or date
+    - Your decisions on each comment (optional)
+    - A response draft (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Response matrix
+      contains: Each comment quoted, with its manuscript section, the evidence you hold, your decision and its status.
+    - name: Revision tasks
+      contains: Each task with owner and due date, marked agreed or only suggested, with gaps left as MISSING.
+    - name: Evidence requests
+      contains: Comments you cannot answer yet, and the data or analysis each one needs.
+    - name: Draft check
+      contains: Notes on tone, comment numbering and manuscript references in your response draft, if you gave one.
+    - name: Hand-back summary
+      contains: Each saved file, MISSING lines, checks that did not run and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Decisions
+    how: Say accept, partly accept or rebut for each comment, with a reason. Comments without a decision stay marked as needing one.
+  - what: People
+    how: Name the co-authors and who owns which section. Tasks get owners instead of MISSING.
+  - what: Deadline
+    how: Give the journal's response date. Tasks without a due date are flagged against it.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed.
+    how: Attach the tables and analysis files. Without them, a request is shown as needing evidence, not as answered.
 judge:
   - Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +96,23 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the matrix and attach it each time you revise, so the next run starts from what is already done.
+  - Mark a comment done only once you can point to the revised text or result.
+  - Share the task list with co-authors in a spreadsheet and update owners and dates there.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Reads the comments, the manuscript and your analysis files in one run.
+    - name: A spreadsheet
+      why: Holds the matrix and task list so co-authors can update status and owners.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The journal's decision letter, not a summary of it.
+    - Your analysis files or tables.
+    - A named co-author who signs off the final response.
 terms:
+  - term: Response matrix
+    meaning: A table with one row per reviewer comment, showing where and how you answer it.
+  - term: Revise and resubmit
+    meaning: A journal decision that asks you to change the manuscript and send it back for another review.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

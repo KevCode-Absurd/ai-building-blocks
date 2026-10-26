@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It has to judge quality fairly and back each point with evidence.
 new_slug: scholarly-work-reviewer
 name: Scholarly work reviewer
-summary: Give it a paper or thesis. Get a fair review of what is strong, what is
-  weak and what to fix next.
+summary: Get a fair, evidence-based review of your paper, thesis or research idea. See what is strong, what is weak and what to fix next, with no verdict.
 job: research-topics
 headline: Scholarly work reviewer
-subhead: Honest feedback on a paper, thesis, protocol or research idea, so you
-  know what is strong, what is weak and what to fix next. The review is written
-  in words first, with evidence for each point.
+subhead: Honest feedback on a paper, thesis, protocol or research idea, so you know what is strong, what is weak and what to fix next. The review is written in words first, with evidence for each point.
 explain: |
   Honest feedback on a paper, thesis, protocol or research idea, so you know what is strong, what is weak and what to fix next. The review is written in words first, with evidence for each point.
 
@@ -18,6 +15,10 @@ when:
   - Your thesis chapter feels weak and you cannot say where.
   - You review a protocol and want comments tied to evidence.
   - Your group uses a rubric and you want to check it is applied fairly.
+not_for:
+  - "You need a decision on hiring, tenure, admissions, funding or awards: the skill refuses this, so use your own committee and its formal process."
+  - "You want a verdict on whether to publish or accept the work: ask the journal's editor or a trusted senior colleague instead."
+  - "You want a quick proofread for spelling and grammar: use a simple editing step or a human copy editor."
 you_give:
   - The paper, draft or idea
   - The field and your target readers
@@ -29,7 +30,31 @@ you_get:
   - Optional rubric notes with limits stated
   - A check of an assessment process (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder, or paste the contents of SKILL.md into a chat with your AI.
+  - Tell your AI to follow SKILL.md and start at step 1. It will ask for your purpose, the type of work and who reads it.
+  - Paste your paper, draft or idea. Add your field, your readers, your rubric and your worries if you have them.
+  - Read the findings one criterion at a time. Check each evidence reference against your own text.
+  - Pick the next steps you agree with and revise your work.
+  - Python 3.11 or newer is needed only for the optional scripts. A plain chat review needs no code running.
+output_sample:
+  input:
+    - Your paper, draft, protocol or research idea (or the part you want reviewed)
+    - Your field and your target readers
+    - A rubric you want applied (optional)
+    - Specific worries you have about the work (optional)
+  prerequisites:
+    - An AI that can read your text, or one you can paste it into
+    - Python 3.11 or newer, only if you want the optional scoring and checking scripts
+  output:
+    - name: Criterion-level findings
+      contains: One section per criterion, with references to the place in your work that backs each point.
+    - name: Status for each criterion
+      contains: Whether the criterion is rated, missing or not applicable, so gaps are never counted as zero.
+    - name: Strengths and limits
+      contains: What the work does well and where the evidence is thin, with notes on any disagreement or context.
+    - name: Next steps
+      contains: Improvement options you can choose from, written as suggestions and not orders.
+    - name: Rubric scores and uncertainty (optional)
+      contains: Bounded scores for rated criteria only, with a stated range and a note on what they cannot show.
+    - name: Process audit (optional)
+      contains: A check of a low-stakes assessment process for rater agreement, fairness, privacy and human oversight.

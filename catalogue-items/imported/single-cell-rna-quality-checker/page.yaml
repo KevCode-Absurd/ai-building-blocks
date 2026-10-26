@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies set filter rules and shows plots.
 new_slug: single-cell-rna-quality-checker
 name: Single-cell RNA quality checker
-summary: Give it an h5ad or h5 file. Get low-quality cells filtered and plots
-  showing data quality.
+summary: Check single-cell RNA quality and filter weak cells. Give it an h5ad or 10X h5 file. You get a clean file and before and after plots.
 job: test-and-fix-code
 headline: Single-cell RNA quality checker
-subhead: Low-quality cells filtered out of your single-cell file, plus plots
-  that show how good the data is. It sets thresholds from your own data instead
-  of a fixed number.
+subhead: Low-quality cells filtered out of your single-cell file, plus plots that show how good the data is. It sets thresholds from your own data instead of a fixed number.
 explain: |
   Low-quality cells filtered out of your single-cell file, plus plots that show how good the data is. It sets thresholds from your own data instead of a fixed number.
 
@@ -18,6 +15,10 @@ when:
   - Dead or broken cells may be skewing your clusters.
   - You want the same QC across many samples.
   - A reviewer asks you to follow scverse practice.
+not_for:
+  - "You have bulk RNA-seq data: this tool is built for single cells, so use a bulk RNA-seq workflow or ask a bioinformatician."
+  - "Another pipeline already filtered your cells: skip this step and go on to doublet checks or normalization."
+  - "You need different rules for different cell types: ask your AI to use the small building-block functions in the skill instead of the one-command run."
 you_give:
   - An h5ad or 10X h5 file
   - Python with scanpy
@@ -28,8 +29,27 @@ you_get:
   - Per-cell quality metrics
   - A summary of cells removed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python code, and make sure scanpy is installed.
+  - Upload the skill folder and your .h5ad or 10X .h5 file.
+  - Ask your AI to run the quality check on your file. Add your own limits if you have them.
+  - Look at the three plots first. Check that the cut-offs make sense for your tissue.
+  - Use the filtered .h5ad file for the next steps, such as doublet checks.
+output_sample:
+  input:
+    - Your single-cell file, either .h5ad or a 10X Cell Ranger .h5
+    - Custom filter limits (optional)
+    - Gene name patterns for your species (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python with anndata, scanpy, scipy, matplotlib, seaborn and numpy installed
+  output:
+    - name: qc_metrics_before_filtering.png
+      contains: Plots of counts, genes and mitochondrial share for every cell before any filtering.
+    - name: qc_filtering_thresholds.png
+      contains: The same plots with the outlier limits drawn on top, so you can see what gets cut.
+    - name: qc_metrics_after_filtering.png
+      contains: Quality plots for the cells that remain after filtering.
+    - name: <input_basename>_filtered.h5ad
+      contains: The cleaned dataset, ready for the next analysis steps.
+    - name: <input_basename>_with_qc.h5ad
+      contains: Your original data with the quality numbers added to each cell, nothing removed.

@@ -1,53 +1,110 @@
 new_slug: working-capital-true-up-checker
 name: Working capital true-up checker
 headline: Working capital true-up checker
-summary: Isolate the actual post-close settlement from working capital already reflected in price.
+summary: Work out who pays whom after a business sale when final working capital differs from the estimate. Get the signed true-up amount, with gaps marked.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Peg-to-estimate-to-final bridge with signed seller settlement. Share contractual peg, estimate paid at closing, final agreed working capital, accounting hierarchy and exclusions.
+subhead: Give it the working capital target in the contract (the peg), the estimate used at closing and the final agreed figure. It shows the adjustment already paid and the one still owed. You get the true-up and who pays it.
 explain: |-
-  Peg-to-estimate-to-final bridge with signed seller settlement.
+  When a business is sold, the price assumes a normal level of working capital, called the peg. At closing the parties use an estimate and adjust the price. Later the final figure is agreed, and the price is adjusted again. This working capital true-up checker finds what is still owed after closing.
 
-  Acquisition closing. Illustrative figures only. Estimate12 versus peg11 paid1; final10 needs-1, so seller returns2. Final14 yields another2 to seller.
+  It works out the closing adjustment (estimate less peg) and the final adjustment (final less peg). The part already paid at closing is taken off the final adjustment. What is left is the true-up. A positive number means the buyer pays the seller. A negative number means the seller pays the buyer.
+
+  The classic error is charging the final difference from the peg a second time. The skill avoids it by taking off what was already paid. It handles plain dollar-for-dollar adjustments only. Caps, collars and baskets change the answer, so it asks about them first.
 when:
-  - You need peg-to-estimate-to-final bridge with signed seller settlement.
-  - You work on acquisition closing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - The final closing statement arrives and you want to know what is still owed.
+  - A buyer or seller sends a true-up number and you want to check it.
+  - The estimate at closing was far from the peg and you want to see the effect on the final payment.
+  - A finance lead asks for a bridge from peg to estimate to final.
+not_for:
+  - The purchase agreement has a cap, a collar or a basket on the adjustment. Ask a lawyer or accountant. This is plain dollar-for-dollar only.
+  - The final working capital is still in dispute. Use the figure only once it is agreed, or label it proposed.
+  - You want what the seller receives at closing in total. Use the Closing equity proceeds checker.
+  - You want to release escrow after the true-up. Use the Escrow release checker.
 you_give:
-  - Contractual peg, estimate paid at closing, final agreed working capital, accounting hierarchy and exclusions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The working capital peg (from the purchase agreement)
+  - The estimated working capital used at closing (from the closing statement)
+  - The final working capital, agreed (from the final statement or settlement notice)
+  - The accounting rules and exclusions that define working capital (from the purchase agreement)
+  - The currency, units and dates
+  - Your own closing spreadsheet (optional)
 you_get:
-  - Peg-to-estimate-to-final bridge with signed seller settlement.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The closing adjustment: estimate less peg"
+  - "The final adjustment: final less peg"
+  - "The true-up: final adjustment less closing adjustment"
+  - Who pays whom, and how much
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the peg, the estimate and the final figure. Say where each came from, and give the currency, units and dates.
+  - Say if the agreement has a cap, collar or basket. If it does, the skill will stop and tell you.
+  - "Check one line yourself: the true-up is final less estimate. For 10 and 12, that is minus 2, so the seller pays 2."
+  - Read who pays whom, then MISSING and CHECKS MISSED. Have your lawyer or accountant confirm before you pay.
 how_it_works:
-  - title: 1. Reconcile all three stages to identical contractual account definitions and cutoff rules
-    text: Reconcile all three stages to identical contractual account definitions and cutoff rules.
-  - title: 2. Calculate closing adjustment as estimate minus peg and final adjustment as final minus peg
-    text: Calculate closing adjustment as estimate minus peg and final adjustment as final minus peg.
-  - title: 3. Subtract adjustment already paid from final adjustment; tie settlement to final minus estimate and name the payer
-    text: Subtract adjustment already paid from final adjustment; tie settlement to final minus estimate and name the payer.
+  - title: Lists the sources
+    text: Writes each figure with its source, date, currency and units. Confirms the peg, estimate and final use the same account definitions.
+  - title: Finds the closing adjustment
+    text: Estimate less peg. This is what was already paid or taken off at closing.
+  - title: Finds the final adjustment
+    text: Final less peg. This is what the price should have moved in the end.
+  - title: Finds the true-up
+    text: Final adjustment less closing adjustment, which equals final less estimate.
+  - title: Names the payer
+    text: A positive true-up means the buyer pays the seller. A negative one means the seller pays the buyer.
 output_shape: |-
-  Peg-to-estimate-to-final bridge with signed seller settlement.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Closing adjustment <amount> | Final adjustment <amount> | True-up <amount> | Payer <buyer or seller>
+
+  SCOPE AND SOURCES
+  <currency, units, dates; source for the peg, estimate and final figure; account definitions used>
+
+  INPUTS AND ASSUMPTIONS
+  <peg, estimate, final working capital; any cap, collar or basket found>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <closing adjustment; final adjustment; true-up; the check that true-up equals final less estimate>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The working capital peg
+    - The estimate used at closing
+    - The final agreed working capital
+    - The accounting rules that define working capital
+  prerequisites:
+    - The purchase agreement, closing statement and final statement
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The closing adjustment, the final adjustment, the true-up and who pays.
+    - name: SCOPE AND SOURCES
+      contains: The currency, units and dates, and the source of the peg, estimate and final figure.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Your three figures and any cap, collar or basket found in the agreement.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each adjustment in order, and a check that the true-up equals final less estimate.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Never charge final minus peg a second time after an estimate adjustment.
+  - what: Final figure
+    how: Mark the final figure as agreed or proposed. A proposed figure gives a proposed true-up only.
+  - what: Definitions
+    how: Quote the working capital definition from the agreement so all three figures use the same accounts.
+  - what: Sign
+    how: Say which way you want the result shown. By default, positive means the buyer pays the seller.
 judge:
   - Never charge final minus peg a second time after an estimate adjustment.
   - Caps, collars and baskets must be identified before using uncapped algebra.
@@ -62,15 +119,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The purchase agreement and its working capital schedule
+    - The closing statement with the estimate
+    - The final working capital statement
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Working capital
+    meaning: Current assets less current liabilities, as the agreement defines them.
+  - term: Peg
+    meaning: The working capital level the price assumes. Above or below it moves the price.
+  - term: True-up
+    meaning: The payment after closing that corrects the estimate to the final figure.
+  - term: Collar
+    meaning: A band around the peg inside which the price does not change.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+next:
+  - closing-equity-proceeds-checker
+  - escrow-release-checker

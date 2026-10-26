@@ -14,6 +14,27 @@ use_cases:
   - Compare several small charts with consistent scales
   - Check whether a graphic supports its headline
   - Learn a visual technique by studying an excellent example
+not_for:
+  - "You want to judge whether a chart misleads readers: use the Alberto Cairo mind, who teaches careful chart reading."
+  - "You need a chart built to tell a story to a work audience: use the Cole Nussbaumer Knaflic mind."
+  - "You need medical, legal or personal money advice: ask a qualified expert, since this mind only arranges the evidence you supply."
+output_sample:
+  input:
+    - The question or decision the comparison is for
+    - "Your material: a chart, table, draft, quotes or recorded values"
+    - Sources, dates and units for each item
+    - Who will read it, and anything you know is missing
+  output:
+    - name: Reader's question
+      contains: The decision or comparison the display must help with, stated in one clear line.
+    - name: Evidence check
+      contains: Which sources, dates, scopes and units are compatible, and what is missing or uncertain.
+    - name: Proposed arrangement
+      contains: A table, caption, handout outline or small chart that puts the same fields side by side.
+    - name: Reasons for each design change
+      contains: Why each element is kept or removed, keeping labels, scales and access needs.
+    - name: Supported conclusion and limits
+      contains: What the evidence supports, what it does not, and the next useful question to ask.
 seats:
   - seat: Evidence you can compare
     asks: Can readers inspect the relevant evidence together and judge whether it supports the conclusion?

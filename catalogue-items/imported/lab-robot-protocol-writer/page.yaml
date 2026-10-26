@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows the robot's rules and checks the protocol in a simulator.
 new_slug: lab-robot-protocol-writer
 name: Lab robot protocol writer
-summary: Describe the liquid handling you need. Get an Opentrons protocol that
-  is simulated, reviewed and ready to run.
+summary: Write an Opentrons protocol for your Flex or OT-2 robot. It is simulated and checked, but live runs need App analysis and a dry run first.
 job: build-software
 headline: Lab robot protocol writer
-subhead: A liquid handling protocol for an Opentrons robot that has been
-  simulated and checked before it touches real reagents. Describe the transfers,
-  plates, tips and modules you need.
+subhead: A liquid handling protocol for an Opentrons robot that has been simulated and checked before it touches real reagents. Describe the transfers, plates, tips and modules you need.
 explain: |
   A liquid handling protocol for an Opentrons robot that has been simulated and checked before it touches real reagents. Describe the transfers, plates, tips and modules you need. The skill writes Python Protocol API code for a Flex or OT-2, sets up the deck layout, and chooses an API level the robot actually supports.
 
@@ -18,6 +15,10 @@ when:
   - You have an OT-2 protocol that needs updating to a newer API level.
   - You want to test a protocol in simulation before using real samples.
   - You are adding a heater-shaker or thermocycler step to a run.
+not_for:
+  - "You want to build a protocol without code: use Opentrons Protocol Designer, the free no-code tool from Opentrons."
+  - "One workflow must run on robots from several makers: use PyLabRobot, which works across robot vendors."
+  - "You want to run a protocol on a live robot today: simulation is not enough, so import it into the Opentrons App and have a person check it first."
 you_give:
   - Which robot you have, Flex or OT-2
   - Plates, tubes and tip types
@@ -29,8 +30,27 @@ you_get:
   - A deck and labware list
   - A pre-run safety check list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini with a setup that can run code. Simulation needs Python 3.10 or newer and uv on your computer.
+  - Paste the skill, then tell your AI your robot model, plates, tips, transfers and volumes. Add modules if you use any.
+  - Answer any question your AI asks. It will ask once if a key detail is missing.
+  - Read the simulation result and the deck list. Check they match your bench setup.
+  - Import the protocol into the Opentrons App and make sure analysis passes. Then work through the safety list and do a dry run before real samples.
+output_sample:
+  input:
+    - Your robot model, Flex or OT-2
+    - Your plates, tubes and tip types
+    - The transfers and volumes you need
+    - Modules you use, such as a heater-shaker or thermocycler (optional)
+  prerequisites:
+    - An AI that can run code
+    - Python 3.10 or newer and uv installed on your computer
+    - The Opentrons App, for the check before a live run
+  output:
+    - name: Protocol file
+      contains: Python code for the Opentrons Protocol API, with the right API level for your robot and the deck laid out in full.
+    - name: Simulation result
+      contains: What the local simulator reported when it ran the protocol, with any errors or warnings read out.
+    - name: Deck and labware list
+      contains: Where each plate, tip rack, tube rack and module sits on the deck.
+    - name: Pre-run safety check list
+      contains: "Steps to finish before a live run: deck, labware, volumes, pipettes, modules and hardware limits."

@@ -2,31 +2,101 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: dialpad-and-leexi-call-summarizer
 name: Dialpad and Leexi call summarizer
-summary: Choose a call. Get the main points, promises, owners, and next steps from its transcript.
+summary: Summarize a Dialpad or Leexi call from its transcript. Get the main points, who promised what by when, next steps and red flags.
 job: work-with-audio
 headline: Dialpad and Leexi call summarizer
-subhead: Give it a call number or ask for recent calls in Dialpad or Leexi. It reads the call records and transcripts. You get a short summary, key decisions, promises, next steps, and warning signs worth checking.
+subhead: Give it a call ID, or ask for your recent calls, from Dialpad or Leexi. Or paste a transcript. It writes a short call brief with the main points, promises, owners, deadlines and warning signs. Several calls also get an overview table.
+explain: |
+  A call summary from Dialpad or Leexi saves you from replaying the recording. Support and sales calls hide small promises, such as "we will send that Friday", that are easy to lose.
+
+  The skill finds the call, reads its transcript and writes a fixed brief. It has the date and length, a two-sentence summary, the topics and what was decided, the customer's mood, a table of who committed to what, action items with owners and anything that looks like a churn or escalation risk.
+
+  It uses only what was said. When a date, name or deadline is missing from the transcript, it writes "not stated". Live lookups need the Composio command line and your own Dialpad or Leexi account. Without them, you can paste a transcript.
 when:
-  - You use this tool for customer support and need help with this task.
+  - You manage a support team and want the promises from yesterday's calls in one list.
+  - A rep finished a long customer call and needs the next steps written down.
+  - You want a quick scan of your last ten calls to spot unhappy customers.
+  - A customer says "you promised us" and you need to see what was said.
+not_for:
+  - "You want an email to the customer and CRM updates, not a summary: use the Call follow-up drafter."
+  - "You have an audio file, not a call record: use the Audio meeting notes writer to get the text first."
+  - "The call was not recorded, or the person did not agree to it: do not use it. Write your own notes."
 you_give:
-  - A call number or a request for recent calls.
-  - Dialpad or Leexi call records and transcripts.
+  - A call ID, or the word "recent" for your last 5 to 10 calls
+  - Composio command line linked to your Dialpad or Leexi account (optional)
+  - Or a pasted transcript, with date and names if you have them (optional)
 you_get:
-  - Return a short summary for each call, plus an overview table when several calls were reviewed.
+  - A two-sentence summary for each call
+  - Key discussion points and what was decided
+  - A table of commitments with who and by when
+  - Action items with owners, and what to follow up
+  - Customer mood and red flags, with the words they are based on
+how_to_use:
+  - "Pick your route. For live lookups, use an AI that can run commands, such as Claude Code, with the Composio command line installed and your Dialpad or Leexi account linked. Check Composio's own plans first."
+  - "No Composio? Open Claude, ChatGPT or Gemini, paste in the skill text, then paste the call transcript."
+  - Give a call ID, or say "recent". Add the date, length and names if you have them.
+  - Read the commitments table first. Check two promises against the transcript. Each must be something someone really said.
+  - Look at any "not stated" fields. Fill them from your own records before you share the brief.
+  - Treat mood and red flags as a prompt to listen to that part of the call. Do not act on them alone.
 how_it_works:
-  - title: Fetch call records
-    text: Find the chosen call or a small set of recent calls and read the transcripts.
+  - title: Find the tools
+    text: It searches Composio for the right call tool for Dialpad or Leexi, and asks you to link the account if it is not linked.
+  - title: Fetch the call
+    text: It gets the call you named, or the latest 5 to 10 calls, with their transcripts.
   - title: Pull out commitments
-    text: Separate topics, decisions, promised work, owners, and due dates from the conversation.
+    text: It separates topics, decisions, promises, owners and deadlines, using only what was said.
   - title: Write the call brief
-    text: Return a short summary for each call, plus an overview table when several calls were reviewed.
+    text: It writes a fixed brief for each call, and an overview table when you asked for several.
+output_shape: |
+  ## Call Summary
+  Date, duration, participants, type of call
+  ### TL;DR
+  ### Key Discussion Points
+  ### Customer Sentiment
+  ### Commitments Made
+  Table of <who>, <committed to>, <deadline>
+  ### Action Items
+  ### Follow-Up Needed
+  ### Red Flags
+  ### Recent Calls Overview (several calls only)
+  Table of <date>, <contact>, <duration>, <type>, <sentiment>, <key outcome>
+output_sample:
+  input:
+    - A call ID, or "recent" for your latest calls
+    - Or a pasted call transcript
+    - The date, length and names of the people (optional)
+  prerequisites:
+    - Composio command line with Dialpad or Leexi linked, for live lookups
+    - Or a transcript you can paste, with no tools
+  output:
+    - name: TL;DR
+      contains: A two-sentence summary of the call.
+    - name: Key Discussion Points
+      contains: Each topic and what was decided about it.
+    - name: Commitments Made
+      contains: A table of who promised what and by when.
+    - name: Action Items
+      contains: Tasks with an owner and a due date, as a checklist.
+    - name: Red Flags
+      contains: Signs of churn or the need to escalate, with the words behind them.
+    - name: Recent Calls Overview
+      contains: When you ask for several calls, one table row for each, with mood and outcome.
 works_best_with:
   tools:
     - name: Dialpad or Leexi
-      why: Live lookups need Composio CLI access and connected accounts for these services.
-how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for dialpad and leexi call summarizer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide a call number or a request for recent calls.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+      why: Live lookups read call records and transcripts from these services.
+    - name: Composio command line
+      why: It is the connector this skill uses to reach Dialpad or Leexi. It has its own account and plans.
+    - name: Claude Code
+      why: It can run the Composio commands for you.
+  inputs:
+    - Your CRM or ticket number for the customer
+    - Your own list of terms the customer cares about
+    - The follow-up promises your team made last time
+terms:
+  - term: Transcript
+    meaning: A written copy of what was said on the call.
+  - term: Composio
+    meaning: A service that connects your AI to tools like Dialpad and Leexi.
+  - term: Red flag
+    meaning: A sign the customer may leave or need a manager.

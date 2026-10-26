@@ -1,6 +1,6 @@
 new_slug: outside-view-timeline-estimator
 name: "Outside view timeline estimator"
-summary: "Paste your project and your estimate. Get the estimate corrected by how projects like it really went."
+summary: "Check your project timeline against how similar projects really went. Give it your plan and estimate. You get a number you can promise."
 job: think-and-decide
 thinking: medium
 thinking_why: "It has to build a reference class from history and resist the plan's own optimism."
@@ -17,6 +17,10 @@ when:
   - "You are about to promise a launch date to a customer, a board or your team."
   - "Your last three projects all ran late and this estimate looks like the last three."
   - "Someone says 'this time is different' and you want to check."
+not_for:
+  - You have no past projects of the same kind and no way to find any. Ask a peer who has run one for their real dates.
+  - The date is fixed by a customer or contract. Plan what to cut to fit it instead.
+  - You need a task list or a work schedule. Use a plain project plan or a spreadsheet.
 
 you_give:
   - "The project and your estimate, with the plan's reasoning"
@@ -33,6 +37,28 @@ how_to_use:
   - "Dig out three to five past projects with their estimates and actuals."
   - "Read THIS TIME IS DIFFERENT. Argue only with the ACCEPT lines."
   - "Promise the PROMISE number, not the inside one."
+output_sample:
+  input:
+    - Your project plan and your time or cost estimate
+    - Past projects of the same kind, with estimate and actual for each (advised)
+    - Why you think this time is different (optional)
+  output:
+    - name: INSIDE ESTIMATE
+      contains: Your estimate as given, with the reasoning the plan uses for it.
+    - name: REFERENCE CLASS
+      contains: What kind of project this is and what makes a past one comparable.
+    - name: THE RECORD
+      contains: Estimate, actual and ratio for each past project, with the median and range, or a labelled guess.
+    - name: OUTSIDE ESTIMATE
+      contains: Your estimate times the median ratio, with the range and the arithmetic shown.
+    - name: THIS TIME IS DIFFERENT
+      contains: Each reason you gave, rated accept, discount or reject, with an adjusted estimate.
+    - name: WATCH THESE STEPS
+      contains: The steps that usually run longer than planned in projects like this.
+    - name: PROMISE
+      contains: The number to promise, its range and one sentence to say to whoever is waiting.
+    - name: MISSING
+      contains: Any history or facts you did not give.
 
 how_it_works:
   - title: "Writes the inside estimate"

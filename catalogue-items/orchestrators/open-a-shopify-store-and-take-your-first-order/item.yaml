@@ -18,11 +18,11 @@ outputs:
 uses: [shopify-store-setup-planner, product-and-variant-setup-planner, collections-and-menu-planner, shipping-rate-planner, store-tax-setup-planner, store-go-live-checker]
 steps:
   - {uses: shopify-store-setup-planner, note: "Starts the flow. Gives the build order that the steps after it follow."}
-  - {uses: product-and-variant-setup-planner, note: "Turns the products you list into set-up sheets that the rest of the store uses."}
-  - {uses: collections-and-menu-planner, note: "Groups the finished products into collections, filters and a menu."}
-  - {uses: shipping-rate-planner, note: "Uses product weights and sizes from the setup sheets to set zones, rates and a free-shipping line."}
-  - {uses: store-tax-setup-planner, note: "Sets the tax status and class for each product from the setup sheets, then gives test carts."}
-  - {uses: store-go-live-checker, note: "Checks the finished store against the earlier plans and ends with a score, blockers and a test-order plan."}
+  - {uses: product-and-variant-setup-planner, note: "Uses your own product list, not step 1's plan. Hands the finished product sheets to every step after it."}
+  - {uses: collections-and-menu-planner, note: "Takes the product sheets from step 2. Hands a collections and menu plan to the store you build."}
+  - {uses: shipping-rate-planner, note: "Uses your own countries and carrier costs (not step 3's menu plan) plus weights and sizes from the step 2 sheets. Hands the next step the zones, rates and free-shipping line."}
+  - {uses: store-tax-setup-planner, note: "Takes the shipping zones from step 4 as where you ship, and the product sheets from step 2. Hands the next step the tax settings and test carts."}
+  - {uses: store-go-live-checker, note: "Checks the finished store against the tax, shipping and setup plans before it. Ends with a score, blockers and a test-order plan."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/open-a-shopify-store-and-take-your-first-order/skeleton.yaml

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks natural questions that expose gaps.
 new_slug: teach-back-practice-partner
 name: Teach-back practice partner
-summary: Teach an idea to your AI, which plays a curious beginner. Get the gaps
-  shown by its honest questions.
+summary: Test your understanding by teaching an idea to your AI, which plays a curious beginner. Its questions show the gaps in what you know.
 job: teach-and-train
 headline: Teach-back practice partner
-subhead: A way to find out what you do not really know. You explain an idea to
-  your AI, which plays a curious beginner, and its honest questions show where
-  your understanding is thin.
+subhead: A way to find out what you do not really know. You explain an idea to your AI, which plays a curious beginner, and its honest questions show where your understanding is thin.
 explain: |
   A way to find out what you do not really know. You explain an idea to your AI, which plays a curious beginner, and its honest questions show where your understanding is thin.
 
@@ -19,6 +16,10 @@ when:
   - You want to find the weak spots in a concept before a presentation.
   - Re-reading notes is no longer helping.
   - You need a practice listener who never gets bored.
+not_for:
+  - "You want to learn a calculation or code routine: work through worked examples instead, since this method suits ideas better than step-by-step skills."
+  - "You have not studied the topic yet: read or watch a lesson first, because a beginner AI cannot teach you the basics."
+  - "You want the AI to explain the idea to you: ask your AI for a plain explanation instead."
 you_give:
   - The concept you will teach
   - Your course and level
@@ -29,7 +30,25 @@ you_get:
   - Parts you explained well
   - A short plan for what to revisit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the system prompt from the skill file into the chat.
+  - Type the idea you want to teach and your course and level. Add what you feel sure of if you like.
+  - Explain the idea in your own words. Answer each question the beginner asks, and do not look at your notes.
+  - Read the gap list at the end. Study those parts, then teach the idea again.
+  - Next, pair the gap list with the Explain-first interrogator or the Transfer bridge.
+output_sample:
+  input:
+    - The idea you will teach
+    - Your course and level
+    - How well you think you know it (optional)
+  output:
+    - name: Beginner questions
+      contains: Natural questions from a curious peer, asked one at a time as you explain, such as why a step happens.
+    - name: Gap list
+      contains: The places where you stalled, repeated a textbook line, or left a term unexplained.
+    - name: Well explained parts
+      contains: The points you made clearly, so you know what you can already trust.
+    - name: Reflection
+      contains: A short prompt asking you to think about what felt hard to explain.
+    - name: What to revisit
+      contains: A short plan for what to study next, based on the gaps.

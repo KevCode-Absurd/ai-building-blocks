@@ -2,35 +2,94 @@ thinking: medium
 thinking_why: Good copy needs a clear view of the reader.
 new_slug: job-ad-campaign-planner
 name: Job ad campaign planner
-summary: Give it a role and who you want to reach. Get job ad copy, a content
-  calendar and a test plan.
+summary: "Plan a recruiting campaign for one role: channels and budget, job ad copy, a 4-week content calendar and an A/B test plan."
 job: hire-people
 headline: Job ad campaign planner
-subhead: A recruiting campaign that earns applications instead of just posting a
-  job. Tell it the role, how many people you need, the time you have and who you
-  want to reach.
+subhead: Tell it the role, how many hires you need, your time and budget, and who you want to reach. It plans a job ad campaign. You get channels, ad copy with headline options, a content calendar and a test plan.
 explain: |
-  A recruiting campaign that earns applications instead of just posting a job. Tell it the role, how many people you need, the time you have and who you want to reach. It builds a plan with channels, a budget split, a content calendar for your careers pages and social feeds, and messages for each candidate type, including active seekers and people who are not looking.
+  A job ad campaign planner helps when one posting is not enough. You need many hires, or your posts get views but few applications. This skill plans a recruiting marketing campaign with channels, copy and a way to test what works.
 
-  It writes job ad copy for conversion: clear, free of jargon and not stuffed with impossible requirements. It also drafts several headlines to test against each other and sets measures from impressions to applications to hires, so you can show what worked.
+  It splits the people you want to reach into those who are job hunting and those who are not. It writes job ad copy that is clear and free of jargon. It drafts three headlines that each test one idea. It builds a four-week calendar for your careers page and social posts.
+
+  It gives a formula for each funnel measure but no market rates. You fill in the numbers from your own past campaigns. For one hire, use the Candidate sourcing planner instead.
 when:
   - You must fill many roles within a few months.
   - Your job posts get views but few applications.
-  - You want to reach passive candidates who are not job hunting.
-  - You need to report recruiting results to leadership.
+  - You want to reach people who are not job hunting.
+  - Leadership asks what your recruiting spend produced.
+not_for:
+  - "You are hiring one person: use the Candidate sourcing planner, then the Candidate outreach drafter."
+  - "You only need the job post itself: use the Job post writer or the Inclusive job post writer."
+  - "You want a rebuild of your careers site or employer brand: this plan covers a campaign, not a brand."
 you_give:
-  - The role and number of hires
-  - Your timeline and budget
-  - The kind of candidate you want
-  - Your current channels and results (optional)
+  - The role, the number of hires and the start date
+  - Your time left and budget
+  - Who you want to reach and where they spend time
+  - Your current channels and how they did, in your own numbers (optional)
+  - Your tone and any rules on what ads may say (optional)
 you_get:
-  - A campaign plan with channels and budget
-  - Job ad copy and headline variations
-  - A content calendar
-  - An A/B test plan
-  - Funnel measures from view to hire
+  - A channels and budget table
+  - Job ad copy and three headline options
+  - A four-week content calendar
+  - A test plan with what to change and measure
+  - A funnel report layout from views to hires
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload the skill folder if your tool allows it.
+  - Paste the role, number of hires, start date, time and budget.
+  - Describe who you want to reach. Add past channel results if you have them. Do not guess numbers.
+  - Read the budget table. Treat each split as a starting guess and change it after week one.
+  - Post the ad with one headline per channel, as the test plan says.
+  - After a week, fill in the funnel report with your real numbers and keep the best headline.
+how_it_works:
+  - title: Describe the readers
+    text: It writes one or two candidate types and splits job seekers from people not looking.
+  - title: Pick channels and budget
+    text: It lists channels and a starting split, each labelled a guess to adjust.
+  - title: Write the ad
+    text: It writes clear ad copy with no jargon and no impossible requirements.
+  - title: Write headline options
+    text: It drafts three headlines, each testing one idea.
+  - title: Build the calendar
+    text: It plans four weeks of posts for your careers page and social channels.
+  - title: Plan the test
+    text: It sets what you change, what you measure and how long you run it. It leaves result cells empty.
+output_shape: |-
+  Campaign summary: <goal | timeline | candidate types>
+  Channels and budget: <channel | share of budget | why>
+  Ad copy: <main copy>
+  Headline options: <3 headlines, one idea each>
+  Content calendar: <week | channel | post idea>
+  Test plan: <idea tested | measure | run time | how to decide>
+  Funnel report: <views | clicks | applications | interviews | hires, blank for your numbers>
+output_sample:
+  input:
+    - The role, number of hires and start date
+    - Your time left and budget
+    - Who you want to reach
+    - Your past channel results (optional)
+  output:
+    - name: Campaign summary
+      contains: Goal, timeline and one or two candidate types.
+    - name: Channels and budget table
+      contains: Each channel, its starting share of budget and why it is there.
+    - name: Ad copy and headline options
+      contains: The main job ad and three headlines that each test one idea.
+    - name: Content calendar
+      contains: Four weeks of post ideas by channel.
+    - name: Test plan
+      contains: What you change, what you measure and how you decide the winner.
+    - name: Funnel report layout
+      contains: A blank table from views to hires for your own results.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can plan and write all of it. It cannot run your ads or read your ad accounts.
+  inputs:
+    - Your last campaign's numbers
+    - Your careers page link
+    - Three things current staff like about working there
+terms:
+  - term: Passive candidate
+    meaning: A person who is not looking for a job now but may move for the right one.
+  - term: A/B test
+    meaning: Showing two versions to see which one works better.

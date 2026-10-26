@@ -1,36 +1,120 @@
 new_slug: making-your-agent-talk-back-implementation-planner
 name: Agent response and Slack format builder
-summary: Build a checked response with message blocks and failure handling.
+summary: Turn your AI agent's output into a safe Slack message with leak checks, size limits and a plan for each failure, before it posts to a client channel.
 job: build-software
 headline: Agent response and Slack format builder
-subhead: Share agent output, evidence, client scope and slack destination. Get a checked response with message blocks and failure handling.
+subhead: Give it a sample of what your AI agent writes, the data it was given and which client owns the Slack channel. It plans the Slack message format, 12 checks that run before posting, and test cases. You get code changes to review, not a posted message.
 explain: |-
-  Share agent output, evidence, client scope and slack destination. Get a checked response with message blocks and failure handling.
+  An AI agent that posts to Slack can leak things you never meant to share. It can name another client, repeat an API key, quote your margin or state a number it made up. A Slack message builder alone does not stop that. The checks have to run between the agent and the channel.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill treats the agent's answer and the Slack message as two separate things. The agent writes a structured answer: a header, some sections and optional buttons. A formatter turns that into Slack Block Kit blocks. Before that, a validator runs 12 checks in a set order, cheap ones first. Each check has one planned result: refuse to post, strip the bad part, mark it, cut it short or rewrite it.
+
+  It works from a starter formatter and a checklist of filter examples that come with the skill. It adapts them to your codebase and your clients. It does not post anything or run any code. You review the changes and test them yourself.
 when:
-  - You need a checked response with message blocks and failure handling.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - Your agent writes to client Slack channels and you want a check between its answer and the post.
+  - An agent once named the wrong client, showed a token or promised a follow-up it could never send.
+  - Slack rejected a message because a header or section was too long.
+  - You have a formatter already and want to compare it with a checked starter.
+not_for:
+  - You only want help wording a Slack message. Paste it into any AI chat. You do not need this skill or a codebase.
+  - You have no agent code yet. Start with the Scoped base agent builder, then come back here.
+  - You need to find out why Slack or Meta calls fail. Use the Meta API access troubleshooter for Meta errors.
+  - You want it to send messages. It never posts. You send through your own Slack app, with your own permissions.
 you_give:
-  - Agent output, evidence, client scope and Slack destination
+  - A sample of what your agent writes today (3 to 5 real answers, with client names removed if you like)
+  - The data the agent was given for each answer, so numbers can be checked
+  - Your client list, and which Slack channel belongs to which client
+  - Your current Slack formatting code or a link to the file (optional)
+  - Words and topics that must never reach a client, such as your margin or fees (optional)
 you_get:
-  - A checked response with message blocks and failure handling
-  - A failure checklist and synthetic test cases
+  - The response shape and the Slack blocks it becomes, with the size limits applied
+  - A 12-check validator plan in a fixed order, with the result of each failure
+  - A list of changes to make to the starter formatter for your project
+  - A failure checklist saying who is alerted and what is logged
+  - Synthetic test cases to run before you turn it on
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in your AI. Use an AI that can read your code files, such as Claude Code or Codex. A plain chat works if you paste the code in.
+  - Paste 3 to 5 real agent answers, the data behind them, and your client and channel list. Never paste a Slack token or API key.
+  - Say which channels are strict, meaning one client only. Check that every channel has exactly one client.
+  - Read the CHECKS table first. Make sure each check's result fits your rules. A leaked key should refuse to post.
+  - Run the test cases in your own project. The skill reads code but does not run it.
+  - Before turning it on, check the list in MISSING and fill each gap yourself.
 how_it_works:
-  - title: Step 1
-    text: Validate the client destination and authorized audience.
-  - title: Step 2
-    text: Check for keys, personal data, other-client facts and unsupported numerical claims.
-  - title: Step 3
-    text: Build concise message blocks.
-  - title: Step 4
-    text: Attach findings and next actions.
-  - title: Step 5
-    text: Send only within current authorization and record the response ID for duplicate handling.
+  - title: Checks who is allowed to hear it
+    text: Matches the channel to one client and lists the people who may read the post. A channel with two clients is flagged, not guessed.
+  - title: Scans for things that must not leave
+    text: Looks for keys, personal data, other clients' names, internal money talk and numbers that are not in the data the agent had.
+  - title: Plans the checks in order
+    text: Puts size limits and name checks first and the costly number check last, so cheap checks stop bad posts early.
+  - title: Builds the message blocks
+    text: Maps header, sections and buttons to Slack blocks. It cuts long text with an ellipsis and checks every button ID has a handler.
+  - title: Sets one result per failure
+    text: Refuse to post, strip the part, mark it, cut it, or rewrite it. It never rewrites the meaning to hide a leak.
+  - title: Writes the failure checklist and tests
+    text: Lists what is logged and who is alerted, and saves each Slack message ID so a retry can't post twice. Test cases show before and after, using placeholder clients.
+output_shape: |-
+  BASIS
+  <what was read: agent answers, data given, client list, channel list>
+  MISSING: <anything not given and which check it stops>
+
+  RESPONSE SHAPE
+  <header, sections, buttons and the Slack blocks they become, with limits>
+
+  CHECKS (in run order)
+  <check number> | <what it looks for> | <result if it fails>
+
+  FORMATTER CHANGES
+  <file> | <change> | <why>
+
+  FAILURE CHECKLIST
+  <failure> | <what is logged> | <who is alerted> | <what is posted>
+
+  TEST CASES
+  <name> | <raw agent text> | <expected result>
+
+  NEXT STEP
+  <the smallest useful thing to do now>
+output_sample:
+  input:
+    - Three to five real agent answers
+    - The data the agent was given for each answer
+    - Your client list and which Slack channel belongs to which client
+    - Your current Slack formatting code (optional)
+  prerequisites:
+    - An AI that can read your code files, or code pasted into the chat
+    - A Slack app you control, if you plan to post later
+  output:
+    - name: BASIS
+      contains: What was read and what was left out, with every missing input named.
+    - name: RESPONSE SHAPE
+      contains: How a header, sections and buttons become Slack blocks, with the header and section size limits.
+    - name: CHECKS
+      contains: The 12 checks in run order, each with what it looks for and what happens when it fails.
+    - name: FORMATTER CHANGES
+      contains: Changes to the starter formatter for your project, such as dropping em dashes or fixing table output.
+    - name: FAILURE CHECKLIST
+      contains: For each failure type, what is logged, who is alerted and what, if anything, is posted.
+    - name: TEST CASES
+      contains: Before and after cases for leaks, keys, long text, made-up numbers and promises of follow-up.
+    - name: NEXT STEP
+      contains: The one smallest step to take next, such as running the tests against your formatter.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your formatter files and the starter side by side and can propose exact edits.
+    - name: Slack
+      why: Block Kit Builder in Slack's developer tools lets you preview the blocks before you send anything.
+  inputs:
+    - Your list of all client names, so other-client leaks can be caught
+    - Past agent answers that went wrong, to turn into test cases
+terms:
+  - term: Block Kit
+    meaning: Slack's format for rich messages, built from blocks such as a header, a text section and buttons.
+  - term: Strict channel
+    meaning: A channel that belongs to one client. Any other client's name in it counts as a leak.
+  - term: Validator
+    meaning: A set of checks that run on the agent's answer before it is posted.
+  - term: Message ID
+    meaning: The number Slack gives every message it posts. Saving it stops a retry from posting the same message twice.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

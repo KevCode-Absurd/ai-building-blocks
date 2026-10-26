@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a scene from set parts.
 new_slug: drone-scenario-builder
 name: Drone scenario builder
-summary: Describe the terrain, buildings and sensors. Get a drone simulation
-  scene you can fly in MATLAB.
+summary: Build a drone simulation in MATLAB with real terrain, buildings, and GPS and IMU sensors. Get a 3D flight you can watch and sensor readings.
 job: build-software
 headline: Drone scenario builder
-subhead: A drone simulation you can watch fly. Describe the terrain, buildings
-  and sensors, and you get a UAV scene in MATLAB with a drone that moves through
-  it and reports what its sensors read.
+subhead: A drone simulation you can watch fly. Describe the terrain, buildings and sensors, and you get a UAV scene in MATLAB with a drone that moves through it and reports what its sensors read.
 explain: |
   A drone simulation you can watch fly. Describe the terrain, buildings and sensors, and you get a UAV scene in MATLAB with a drone that moves through it and reports what its sensors read.
 
@@ -18,6 +15,10 @@ when:
   - You need simulated GPS and IMU readings for an algorithm.
   - You want a 3D view of a flight for a demo.
   - You are setting up a UAV simulator for the first time.
+not_for:
+  - You need to design the flight path itself, such as waypoints or smooth routes. Ask your AI for a trajectory design step, or plan the path by hand first.
+  - You want a Simulink drone model. Use the UAV Toolbox Simulink blocks instead, since this skill only writes MATLAB code.
+  - You only need to convert map coordinates, such as latitude and longitude to local meters. Use the MATLAB functions ned2lla and lla2ned directly.
 you_give:
   - Location and area to simulate
   - Terrain and building files (optional)
@@ -29,8 +30,32 @@ you_get:
   - A simulation loop that returns sensor readings
   - A 3D flight animation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with UAV Toolbox.
+  - Check you have MATLAB with UAV Toolbox and Navigation Toolbox. The GPS and INS sensors come from Navigation Toolbox.
+  - "Gather your inputs: a latitude and longitude, the area size, and the drone's waypoints. Add an OpenStreetMap file for buildings and a DTED file for finer terrain if you have them."
+  - Paste the skill into Claude, ChatGPT or Gemini. Then paste your inputs and ask it to build the scenario.
+  - Run the code in MATLAB. Your AI can only run it itself if it has MATLAB access. Otherwise copy the code across.
+  - Check the 3D view and the sensor readings. If no buildings show, ask your AI to check the latitude and longitude settings.
+  - Feed the GPS and IMU readings into your own navigation or estimation code.
+output_sample:
+  input:
+    - The place to simulate, as a latitude and longitude
+    - The area size, in degrees or in meters
+    - An OpenStreetMap file for the buildings (optional)
+    - A terrain elevation file (optional)
+    - The drone's waypoints and the sensors to attach
+  prerequisites:
+    - MATLAB with UAV Toolbox and Navigation Toolbox
+    - An AI that can run MATLAB code, or you run the code yourself
+  output:
+    - name: Scenario
+      contains: A uavScenario with a reference location, update rate and stop time.
+    - name: Terrain and buildings
+      contains: Terrain and building meshes added with addMesh, each with a color.
+    - name: Drone platform
+      contains: A uavPlatform that follows your waypoints, with a quadrotor or fixed-wing body.
+    - name: Sensors
+      contains: GPS and INS sensors bound to the drone with uavSensor.
+    - name: Simulation loop
+      contains: Code that steps time, updates sensors and reads timestamps, GPS fields and drone motion.
+    - name: 3D flight view
+      contains: A show3D animation of the flight, with an optional path trail and body marker.

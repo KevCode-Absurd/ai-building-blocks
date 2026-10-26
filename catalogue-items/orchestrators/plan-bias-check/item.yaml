@@ -14,7 +14,7 @@ uses: [decision-bias-pileup-checker, incentive-checker, failure-first-plan-check
 steps:
   - {uses: decision-bias-pileup-checker, note: "The pressures bending your judgment, and a calmer version of the choice"}
   - {uses: incentive-checker, note: "Who is rewarded for what, where it pulls the wrong way, and a fix. Reads the plan from the step before"}
-  - {uses: failure-first-plan-check, note: "A list of the ways it could fail, and the changes that avoid them. Reads the plan from the step before"}
+  - {uses: failure-first-plan-check, note: "A list of the ways it could fail, and the changes that avoid them. Reads the plan from step 1 and the incentive findings from step 2"}
 origin: rebuilt
 version: 1.0.0
 minds: [charlie-munger]

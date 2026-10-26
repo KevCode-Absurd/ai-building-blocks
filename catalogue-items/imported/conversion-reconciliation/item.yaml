@@ -1,7 +1,7 @@
 slug: conversion-reconciliation
 renamed_from: cross-platform-conversion-reconciler
 name: "Cross-platform conversion reconciler"
-summary: "Give it your Meta and Google conversion reports. Get why the numbers differ and a plan to make them match."
+summary: "See why Meta, Google and GA4 report different conversions. Get a side-by-side table, the reason for each gap and a fix plan."
 category: general
 boards: []
 type: skill

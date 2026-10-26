@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: job-reference-list-builder
 name: Job reference list builder
-summary: Share possible references and the role. Get a reference list, permission request and briefing drafts.
+summary: "Build a job reference list: pick the right referees, check permission, and get request and briefing drafts for each person. Missing details are marked."
 job: find-a-job
 headline: Job reference list builder
 subhead: Share the role and people who can speak about your work. It helps choose relevant references and formats their details. You get a reference list, permission-request drafts and short briefings about the role for each person to review.
+not_for:
+  - You need to share references now, before anyone asks. Wait for the final round, and send the list only when the employer requests it.
+  - Your referee has left, said no or may give a lukewarm review. Pick someone else who saw your work, such as a senior colleague or client.
+  - You need a CV or cover letter. Write those first, then come back here to build the list.
 explain: Share the role and people who can speak about your work. It helps choose relevant references and formats their details. You get a reference list, permission-request drafts and short briefings about the role for each person to review.
 you_give:
   - The target role and possible professional references.
@@ -22,6 +26,30 @@ how_it_works:
   - title: Step 3
     text: Format the list and draft requests, briefings and thank-you notes.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied notes and ask follow-up questions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI the role and company. Then list each person who could be a reference.
+  - Add their titles, contact details and how you worked together. Say who has already agreed.
+  - Answer any questions it asks. It will mark missing details instead of guessing.
+  - Check the list and drafts. Ask people before you send anything, then send the list only when the employer asks for it.
+  - After the check, send your thank-you notes and tell each referee the result.
+output_sample:
+  input:
+    - The role you are applying for, and the company
+    - Names of people who could speak for your work
+    - Their job titles, contact details and how you worked together
+    - Whether each person has agreed to be a reference (optional)
+  output:
+    - name: Reference Strategy
+      contains: The target role and company, so every choice of referee ties back to the job.
+    - name: Recommended References
+      contains: Primary referees with title, company, contact, relationship, why they fit and what to highlight.
+    - name: Backup References
+      contains: Extra referees in the same format, in case a main referee drops out.
+    - name: Briefing Notes
+      contains: A checklist of what to send each referee and the key points each should mention.
+    - name: Permission Request Script
+      contains: A short message asking each person if they will speak for you, tailored to the role.
+    - name: Briefing Email
+      contains: A draft email giving each referee the role, your key points and the work they may be asked about.
+    - name: Thank You Template
+      contains: A short note to send your referees after the check, whatever the result.

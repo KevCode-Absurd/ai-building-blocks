@@ -1,6 +1,6 @@
 slug: prepare-a-small-team-offsite
 name: Prepare a small team offsite
-summary: Share the source files. Get an outcome-led agenda, pre-read request and follow-up plan.
+summary: Plan a small team offsite. Check if a meeting is worth its cost, then get a decision-first agenda, a pre-read request and an action register.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -22,11 +22,11 @@ uses:
   - executive-action-register
 steps:
   - uses: executive-meeting-brief
-    note: Prepare a standalone brief of the decision, supported facts and questions participants need to consider.
+    note: "Prepare a standalone brief of the decision, supported facts and questions participants need to consider. Hands step 2 the brief."
   - uses: meeting-agenda-and-cost-planner
-    note: Run the ASYNC, NOT-READY or MEET gate. When a meeting is justified, use actual duration, attendee count and cost assumptions to plan decision sessions, breaks and an action recap.
+    note: "Run the ASYNC, NOT-READY or MEET gate on step 1's brief. When a meeting is justified, use your actual duration, attendee count and cost assumptions to plan decision sessions, breaks and an action recap. Hands step 3 the agenda."
   - uses: executive-action-register
-    note: Create a register for decisions and commitments to capture during the event and review afterward.
+    note: "Create a register for decisions and commitments to capture during the event and review afterward. Starts from step 2's agenda, then takes your notes after the event."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

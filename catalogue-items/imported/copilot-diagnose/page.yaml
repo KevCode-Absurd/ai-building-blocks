@@ -2,17 +2,57 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-diagnose
 name: AI workflow quality investigator
-summary: Share a workflow that disappoints. Get its weak points ranked, with
-  causes and practical fixes.
+summary: Check an AI workflow for weak spots before it goes live. Get five scores, the worst problems ranked, and clear fixes for each.
 job: set-up-ai
 headline: AI workflow quality investigator
-subhead: Share a workflow that disappoints. Get its weak points ranked, with
-  causes and practical fixes. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Share a workflow that gives poor results. Your AI scores it from 1 to 5 on prompts, memory use, tools, structure and safety. You get the worst problems ranked, with a fix for each.
+not_for:
+  - "You want to test one prompt's answers: build a small set of test questions with expected answers and compare the results."
+  - "Your workflow is not built yet: sketch the steps and the tools first, then come back to check it."
+  - "You need a real security review or a legal check: ask a security expert or a lawyer."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill text. No code or paid tool is needed.
+  - Paste your workflow description and your prompt text.
+  - Add your tool list, your settings and two or three bad results if you have them. More detail gives better findings.
+  - Ask your AI to run the five checks and give the report.
+  - Read the three serious problems first. Fix the top one, then run the check again.
+output_sample:
+  input:
+    - Your workflow description
+    - Your prompt text
+    - Your list of tools (optional)
+    - Your agent or workflow settings (optional)
+    - Two or three examples of bad results (optional)
+  output:
+    - name: Score box
+      contains: A score from 1 to 5 for each of the five areas, plus a total out of 25.
+    - name: Prompt Quality
+      contains: Findings on structure, clear output format, instruction clarity, edge cases and common prompt mistakes.
+    - name: Context Efficiency
+      contains: Findings on how the workflow uses its memory space, where key facts sit and how it tracks state.
+    - name: Tool Health
+      contains: Findings on tool count, descriptions, error handling and whether a retry is safe.
+    - name: Architecture Fitness
+      contains: Findings on single or multiple agents, clear roles, handoffs, logging and cost control.
+    - name: Safety & Reliability
+      contains: Findings on input checks, output filtering, cost limits, recovery from errors and testing.
+    - name: Critical findings
+      contains: The three most serious problems, worst first.
+    - name: Recommended actions
+      contains: One specific fix for each critical finding.
+when:
+  - An AI workflow gives uneven results and you do not know why.
+  - You are about to put an AI agent into real use and want to find weak spots first.
+  - You changed a prompt or added tools and want a health check.
+  - You inherited a workflow and want to know how sound it is.
+you_give:
+  - Your workflow description
+  - Your prompt text
+  - Your list of tools (optional)
+  - Your agent or workflow settings (optional)
+  - Two or three examples of bad results (optional)
+you_get:
+  - A score from 1 to 5 in five areas, and a total out of 25.
+  - Findings for each area, based on what you shared.
+  - The three most serious problems, ranked.
+  - One specific fix for each serious problem.

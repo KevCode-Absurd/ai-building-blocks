@@ -1,15 +1,13 @@
 slug: build-a-clean-surplus-residual-income-model
 name: Build a clean-surplus residual income model
-summary: Link common equity movements to residual income and a separate stable price-to-book scenario.
+summary: "Build a residual income model for a listed company from its book equity, earnings and cost of equity, with dividends and OCI reconciled."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - book-value-per-share-rollforward
   - one-period-residual-income-bridge

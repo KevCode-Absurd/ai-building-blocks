@@ -1,55 +1,111 @@
 new_slug: pilot-customer-promise-review-assistant
 name: Pilot customer promise review assistant
 headline: Pilot customer promise review assistant
-summary: A customer promise register, conflicting commitments and update drafts.
+summary: Track every promise made to a pilot customer, spot conflicts and see what is proved delivered. Get update drafts for what changed.
 job: help-customers
 thinking: high
-thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A customer promise register, conflicting commitments and update drafts. Share actual pilot agreements, consented customer conversations, deliverable evidence, owners, dates and approved product limits. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+thinking_why: It must tell an accepted promise from a request, hold delivery to dated proof, and keep customer updates inside what you approved.
+subhead: Give it your pilot agreement, notes of what customers were told, and proof of what shipped. It lists each promise with its owner and due date. It flags conflicts and promises beyond your product limits. It drafts updates for only what changed.
 explain: |-
-  A customer promise register, conflicting commitments and update drafts.
+  Pilot customers hear a lot of "yes". Someone says "we can do that by March" on a call. A founder agrees to a feature over email. Three months later nobody knows what was promised, who owns it, or whether it shipped. This agent keeps a pilot customer promise register, so you know what you owe each customer and what you can prove.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A request or sales statement is not an accepted delivery commitment; completion needs actual delivery evidence. Missing tools or evidence stay visible in the final summary.
+  When an accepted commitment changes, or proof of delivery arrives, it runs the Track promises made to pilot customers workflow. That lists each explicit commitment with its source, owner and due date, then drafts updates for what changed. A request or a sales line is not a commitment. A promise counts as delivered only when a dated delivery record is attached. If a promise changes hands, it writes a handover note with the Handover note writer.
+
+  It never tells a customer that something is delivered without proof. It never offers a feature or date you have not approved. It sends nothing.
 when:
-  - You need a customer promise register, conflicting commitments and update drafts.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A customer asks "did we ship what you promised in March?" and the answer is spread across calls and emails.
+  - A new account manager takes over a pilot and needs to know what was promised.
+  - A feature just shipped and you want to close the matching promises with proof.
+  - Two customers were promised the same thing for different dates, or a promise goes beyond what the product can do.
+not_for:
+  - The promise was never written down or recorded anywhere. Write it down first. This tracks promises that have a source.
+  - You only need to pass work to a new owner. Use the Handover note writer.
+  - You want to reply to a customer's support message. Use the Customer inbox triage and reply drafter.
+  - You want to track actions from your own team meetings. Use the Executive action register keeper.
+  - You want customers messaged for you. It drafts and stops.
 you_give:
-  - Actual pilot agreements, consented customer conversations, deliverable evidence, owners, dates and approved product limits. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The pilot agreement or order form, and any written scope (from your contract folder)
+  - Emails or messages where promises were made
+  - Notes or transcripts of customer calls, only where the customer agreed to them being kept
+  - Proof of delivery, such as release notes, a shipped link or a delivery email, each with its date
+  - The owner and due date you agreed inside your team for each promise
+  - Your approved product limits, which means what you can and cannot promise (from your product lead)
+  - The last review's record (optional, needed to see what changed)
 you_get:
-  - A customer promise register, conflicting commitments and update drafts.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A register with one row per promise, listing what was promised, who accepted it, the owner, the due date, the source, the status and the delivery proof
+  - A list of promises that conflict, or go beyond your product limits, with both sources shown
+  - A draft update for each customer, covering only what changed
+  - A handover note when an owner changes
+  - A short record for the next review
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent with the pieces it uses, the Track promises made to pilot customers workflow and the Handover note writer. If your AI cannot open them, paste both in with the agent.
+  - Attach or paste your agreement, the messages and call notes, the delivery proof and your product limits. If this is a repeat, paste last time's record. Take out personal details your AI does not need.
+  - Read the conflicts and the promises beyond your limits first. Settle those with your product lead before anything goes to a customer.
+  - Check that every promise marked delivered has a dated proof. A promise with none moves to "claimed, not proved".
+  - Edit the update drafts and send them yourself. In plain chat it cannot save files, so keep the record it hands back.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep pilot ID, commitment IDs, accepted owner, due date, delivery source and customer update version. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: An accepted pilot commitment changes or actual delivery evidence arrives.
-  - title: Choose the next step
-    text: Run track-promises-made-to-pilot-customers for changed evidence or a due review. If responsibility transfers, prepare the new owner handover and preserve unaccepted assignments as proposals. Do not tell customers an unverified promise is delivered.
-  - title: Check and save evidence
-    text: A request or sales statement is not an accepted delivery commitment; completion needs actual delivery evidence. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Reads the last record
+    text: Uses the saved record or sets a first baseline. The record holds the pilot ID, promise IDs, accepted owner, due date, delivery source and customer update version.
+  - title: Checks the trigger
+    text: An accepted promise changed, or proof of delivery arrived. If neither, it says so and stops.
+  - title: Lists the promises
+    text: The Executive action register keeper pulls each explicit commitment with its source, owner and due date. A request or a sales line is listed as asked, not accepted.
+  - title: Checks limits and conflicts
+    text: Compares each promise with your approved product limits and with the others. A promise beyond your limits, or two that clash, is flagged with both sources.
+  - title: Sets each status
+    text: Marks each promise asked, accepted, delivered, claimed not proved or blocked. Delivered needs a dated record.
+  - title: Drafts changed-only updates
+    text: The Stakeholder update writer drafts a short update for each customer that covers only what changed. It names no feature or date you have not approved.
+  - title: Hands over when an owner changes
+    text: The Handover note writer lists what is promised, what is due and where proof lives. An owner who has not accepted stays marked as proposed.
 output_shape: |-
-  Scope and source coverage
-  A customer promise register, conflicting commitments and update drafts.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  REVIEW <date>, pilot <ID, customer>   LAST REVIEW <date or first baseline>
+
+  CHANGED  <promise ID, old status, new status, why>
+  REGISTER
+    <ID> | <what was promised> | <accepted by, date> | <owner> | <due> | <source> | <asked | accepted | delivered | claimed, not proved | blocked> | <delivery proof, date>
+  CONFLICTS AND LIMITS  <promise ID> vs <promise ID or product limit>, sources <...>
+  CUSTOMER UPDATE DRAFTS (not sent)  <customer>: <only what changed>
+  HANDOVER NOTE  <only if an owner changed: promised, due, where proof lives, proposed owner>
+
+  RECORD FOR NEXT REVIEW  <pilot ID, promise IDs, accepted owner, due date, delivery source, update version>
+  MISSING  <each gap and the promise it affects>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The pilot agreement or order form and any written scope
+    - Emails or messages where promises were made
+    - Notes of customer calls, where the customer agreed to them being kept
+    - Dated proof of delivery
+    - The owner and due date you agreed for each promise
+    - Your approved product limits
+  prerequisites:
+    - An AI that can read pasted text or uploaded files, such as Claude, ChatGPT or Gemini
+    - The two pieces it uses, the Track promises made to pilot customers workflow and the Handover note writer
+  output:
+    - name: Promise register
+      contains: One row per promise with its ID, what was promised, who accepted it, owner, due date, source, status and delivery proof.
+    - name: What changed
+      contains: Each promise whose status, owner or due date moved since the last review, and why. A first run says first baseline.
+    - name: Conflicts and limits
+      contains: Promises that clash with each other or go beyond your approved product limits, with both sources shown side by side.
+    - name: Customer update drafts
+      contains: A short draft for each customer covering only what changed. It names no feature or date you have not approved. Marked not sent.
+    - name: Handover note
+      contains: Only when an owner changes. What is promised, what is due, where proof lives and who is proposed. A proposed owner has not accepted.
+    - name: Record for next review
+      contains: A small block to paste next time with pilot ID, promise IDs, accepted owner, due date, delivery source and update version.
+    - name: Saved files
+      contains: The register, the drafts and a run log in a dated folder under reviews/pilot-customer-promise-review-assistant/, when your AI can save files.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: A request or sales statement is not an accepted delivery commitment; completion needs actual delivery evidence.
+  - what: One pilot per run
+    how: Review one customer or one pilot at a time. Mixed customers get mixed promises.
+  - what: What counts as accepted
+    how: Say who can accept a promise for you. A promise a junior rep made on a call stays asked until the right person confirms it.
+  - what: Product limits
+    how: Give a real list of what you can and cannot promise. Without it, the limits check is marked unverified.
+  - what: Update tone
+    how: Say how formal your customer updates are and who signs them.
 judge:
   - A request or sales statement is not an accepted delivery commitment; completion needs actual delivery evidence.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +118,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep a short list of product limits and update it each release, so the limits check stays true.
+  - Add a rule for who can accept a promise, and what proof closes each kind of promise.
+  - Save each review's record in a folder named by date, so the next run starts from the true earlier state.
+  - Pair it with the Customer inbox triage and reply drafter so new promises in replies get logged.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads uploaded files
+      why: Claude, ChatGPT and Gemini can read your agreement, messages and the pack. In plain chat you save the record yourself.
+    - name: Your contract and release notes folders
+      why: The agreement gives the written scope. Release notes give dated proof of delivery.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The customer's own written success criteria for the pilot.
+    - A named person who can accept promises for your team.
+    - Your product roadmap with what is approved.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Pilot customer
+    meaning: A customer who tries your product early, often on special terms.
+  - term: Accepted promise
+    meaning: A commitment that someone allowed to make it agreed to, with a source you can point to.
+  - term: Delivery proof
+    meaning: A dated record that the promised thing reached the customer, such as a release note or a delivery email.

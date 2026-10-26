@@ -1,6 +1,6 @@
 new_slug: one-line-position-writer
 name: One-line position writer
-summary: Paste your product and rivals. Get the one word to own, one plain line and a stretch limit.
+summary: Find the one word to own in your market. Paste your product and rivals, get a one-line position and a limit on how far to stretch it.
 job: plan-strategy
 thinking: medium
 thinking_why: Picking one word to own takes judgement about what is true.
@@ -14,6 +14,10 @@ when:
   - Buyers cannot say what you stand for.
   - A bigger rival leads your category.
   - You are writing a website, deck or ad and need one clear line.
+not_for:
+  - "Your brand already has a clear, tested position: keep it, and check it with your buyers instead."
+  - "You want the full version with every check: use the Positioning statement writer."
+  - "You have no rivals to name yet: first list the brands a buyer would compare you with, then come back."
 you_give:
   - Your product and who it is for
   - Your main rivals and what each is known for
@@ -28,6 +32,30 @@ how_to_use:
   - Include what buyers say about each rival.
   - Mark guesses. They will be flagged.
   - Read the final line to someone who does not know your business.
+output_sample:
+  input:
+    - Your product and who it is for
+    - Your main rivals and what each is known for
+    - Facts you can back up, such as tests or firsts (optional)
+  output:
+    - name: LADDER
+      contains: The categories a buyer would put you in, who comes to mind first and second, and where you sit.
+    - name: WHAT RIVALS OWN
+      contains: The one word each rival owns, and where that word comes from.
+    - name: WEAK SPOT TO USE
+      contains: A true weak spot of the leader, with a way for a buyer to check it.
+    - name: CATEGORY TO LEAD
+      contains: A narrower category, named in a short phrase, where you can truthfully be first.
+    - name: ONE ATTRIBUTE
+      contains: The one open, true and wanted word for you, plus what you drop.
+    - name: POSITION
+      contains: One plain line about what only you stand for.
+    - name: STRANGER TEST
+      contains: Whether a stranger could say the line back without a second sentence.
+    - name: STRETCH LIMIT
+      contains: Where the line stays true and where it stops being true.
+    - name: BRIEF
+      contains: Audience, position, proof and what not to say, in one short block.
 how_it_works:
   - title: Build the ladder
     text: Who comes to mind first in each category.

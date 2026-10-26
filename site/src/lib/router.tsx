@@ -66,7 +66,7 @@ function libraryUrl(value: unknown) {
     const url = new URL(value, location.origin);
     if (url.origin !== location.origin || url.pathname !== "/") return "/#library";
     const query = new URLSearchParams();
-    for (const key of ["q", "kind", "area", "fn", "job", "audience", "starred"]) {
+    for (const key of ["q", "kind", "area", "fn", "job", "audience", "starred", "scope"]) {
       const text = url.searchParams.get(key);
       if (text) query.set(key, text);
     }

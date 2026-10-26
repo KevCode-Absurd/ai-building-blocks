@@ -1,7 +1,6 @@
 slug: review-revised-excel-and-powerpoint-files
 name: Review revised Excel and PowerPoint files
-summary: Share old and new workbooks and decks. Get a version-change register
-  and checks that the new slides match the new workbook.
+summary: Compare old and new Excel and PowerPoint files. Get a change register and a check that every number on the new slides matches the new workbook.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -26,14 +25,11 @@ uses:
 execution: coordinator
 steps:
   - uses: excel-workbook-change-reviewer
-    note: Compare baseline and revised workbook using stable record keys and the
-      intended change list; retain formula and feature differences.
+    note: Compare the old and revised workbook by row ID, not by position. Keep formula and file-feature changes. Hand step 3 the list of changed cells with sheet, cell, old value and new value.
   - uses: powerpoint-deck-change-reviewer
-    note: Compare baseline and revised deck by slide identity, including visible
-      content, notes, hidden slides and embedded data.
+    note: Compare the old and revised deck by slide, including text, notes, hidden slides and chart data. Hand step 3 the list of changed slides and every number on them. Uses your old and revised decks and your brief, not step 1's output; the two reviews run side by side.
   - uses: excel-powerpoint-number-checker
-    note: Check the revised deck against the revised workbook, preserving the
-      prior-version review as a separate source of evidence.
+    note: Check each number on the revised slides against the revised workbook. Use steps 1 and 2 as separate evidence of what changed. Flag stale numbers and changed cells that no slide shows. Uses your revised workbook and deck, plus the two change reports from steps 1 and 2. Hands you the number check.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -42,8 +38,6 @@ example_pending: true
 credits:
   - title: Original Excel and PowerPoint workflow methods
     by: AI Blocks
-    used: Original intake, file-preservation, execution and acceptance rules written
-      for this task.
+    used: Original intake, file-preservation, execution and acceptance rules written for this task.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.

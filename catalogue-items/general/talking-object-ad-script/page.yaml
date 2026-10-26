@@ -1,6 +1,6 @@
 new_slug: talking-object-ad-script
 name: "Talking object video ad script writer"
-summary: "Paste your buyer's moment and product. Get a talking-object video script and a cast note."
+summary: "Write a talking object video ad script: one everyday object speaks in 8 to 30 seconds, with a cast note and a source for every fact it states."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,11 @@ when:
   - Your buyer doesn't talk about the problem, but something in their home sees it every day.
   - Your product replaces an old thing people keep and feel a bit silly about.
   - You want a funny ad that makes no claim your facts can't back.
+  - You have review lines that name an object in your buyer's home.
+not_for:
+  - "You need to prove a result or explain how the product works: use a testimonial ad or a product demo, not a talking object."
+  - "You want to sell an offer in the spoken words: put the offer in on-screen text, or write a plain direct-response script."
+  - "You want a single picture, not a video: use the Talking object image ad maker."
 
 you_give:
   - The problem, how much the buyer already knows, and the length
@@ -36,6 +41,28 @@ how_to_use:
   - Describe where the problem happens, for example "at the kitchen sink, 7 am". Name any object your customers mention.
   - Say the length, for example "20 seconds", and how dry or silly your humour can be.
   - Read the last line to someone who hasn't seen the script. If they can't repeat it, ask for three more endings.
+output_sample:
+  input:
+    - Your problem, how much the buyer knows, and the length
+    - "Your buyer's moment: the room, the time and what they tried before"
+    - Your product facts, plus a photo of the product and pack (recommended)
+    - Your voice, how far a joke can go, your approved claims and your offer
+  prerequisites:
+    - Your brand brain from the Brand profile builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: NARRATOR
+      contains: The chosen object, whether it is a witness, has-been or culprit, its four test results and its visible state.
+    - name: MOOD
+      contains: One mood from sore, sheepish, worried or deadpan, with the reason it fits your brand.
+    - name: CLIP
+      contains: Each clip's first-person lines with picture notes, the turn marked, plus seconds, word count and on-screen offer.
+    - name: FACTS THE OBJECT STATES
+      contains: Every fact the object says, its source, and what the object could not have seen.
+    - name: CAST NOTE
+      contains: The narrator, its material, where its face goes, its mood, its voice and why it suits the buyer.
+    - name: CHECKS MISSED
+      contains: One line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: Checks the fit

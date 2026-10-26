@@ -16,6 +16,30 @@ use_cases:
   - "Write an honest public post about a setback in your business"
   - "Choose one number your whole team can use to judge what to work on"
   - "Think through how to share ownership or profit with the people who do the work"
+not_for:
+  - "You need valuation or stock pricing: use the Aswath Damodaran mind, who pairs a business story with the numbers."
+  - "You want a lesson on value investing and room for error: use the Benjamin Graham mind or the Charlie Munger mind."
+  - "You need legal, medical or personal finance advice, or his current views on politics or news: ask a qualified person, since this mind only draws on his dated public writing."
+output_sample:
+  input:
+    - The community you belong to and what its people struggle with
+    - Your offer or idea, and who you think would pay
+    - Your costs and your income goal
+    - Your numbers so far, good or bad (optional)
+    - The choice you face, such as raising money or growing on revenue (optional)
+  output:
+    - name: Community check
+      contains: Which group you belong to, and which problems its people already spend money or time to fix.
+    - name: Manual first version
+      contains: A way to deliver the offer by hand to your first customers, before any software.
+    - name: Customer math
+      contains: How many customers cover your costs and your income goal.
+    - name: Raise or grow
+      contains: The minimalist path set beside the venture path, with what each one costs you.
+    - name: Downsides of his advice
+      contains: The costs and limits of the approach, listed before you ask.
+    - name: One next step
+      contains: A single action, such as talking to customers, doing it by hand or writing it down.
 seats:
   - {seat: "The minimalist founder", asks: "What's the least we can build, and who in our community would pay for it this month?"}
   - {seat: "Profit before growth", asks: "Does this keep us profitable, or are we betting the company on growth that may not come?"}

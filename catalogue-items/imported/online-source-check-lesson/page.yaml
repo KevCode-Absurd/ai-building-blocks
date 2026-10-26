@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adapts a known method to your learners.
 new_slug: online-source-check-lesson
 name: Online source checking lesson builder
-summary: Describe your learners. Get a lesson that teaches them to check
-  websites and posts by reading across other sources.
+summary: Build an online source checking lesson for your class. Teach learners to check a website or post by reading what other sources say about it.
 job: teach-and-train
 headline: Online source checking lesson builder
-subhead: Describe your learners. Get a lesson that teaches them to check
-  websites and posts by reading across other sources. Bring age or level of your
-  learners. Use the result to plan your next step.
+subhead: Describe your learners. Get a lesson that teaches them to check websites and posts by reading across other sources. Bring age or level of your learners. Use the result to plan your next step.
 explain: |
   A lesson that teaches students to judge a website or post by leaving it and checking what others say, the way professional fact checkers do. Reading the page harder does not work. Looking across other sources does.
 
@@ -18,6 +15,10 @@ when:
   - You teach media literacy and need a hands-on activity.
   - A class has to judge a viral post for a project.
   - You want a simple routine learners can repeat on any website.
+not_for:
+  - "You need to assess university-level sources or run primary research: use a subject-specific method or ask a librarian."
+  - "You want to check one claim yourself right now: search the claim in a new tab and read two trusted sources."
+  - "You need a full unit across many weeks: use this for one lesson, then plan the rest with your own team."
 you_give:
   - Age or level of your learners
   - The type of source to study
@@ -29,7 +30,27 @@ you_get:
   - Practice sources and prompts
   - A way to check understanding
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather three things: the age or year group of your learners, the type of source, and why they are checking it."
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
+  - Type your three details. Add the topic and any mistakes you have seen, if you like (optional).
+  - "Read what comes back: the steps, a script for you to model, red and green flags, and a student checklist."
+  - Check the example source in the script. If it names a real group, check the facts before you teach them.
+  - Print the checklist. Model the steps on one source, then let learners try it on their own.
+output_sample:
+  input:
+    - The age or year group of your learners
+    - The type of source they will check, such as a website or social post
+    - Why they are checking it, such as a class project
+    - The topic or a short description of the source (optional)
+    - Mistakes you have seen in your class (optional)
+  output:
+    - name: Source Evaluation Protocol
+      contains: A short set of steps for checking this type of source by leaving the page and reading other sources.
+    - name: Teacher Modelling Script
+      contains: Words you can say aloud while you show the steps on one example source.
+    - name: Red Flags and Green Flags
+      contains: Signs that a source may be weak, and signs that it may be sound.
+    - name: Student Checklist
+      contains: A short list learners tick off as they check a source on their own.
+    - name: Known Limitations
+      contains: Where the method falls short, so you know when to add something else.

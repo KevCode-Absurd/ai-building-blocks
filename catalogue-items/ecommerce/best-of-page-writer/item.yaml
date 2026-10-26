@@ -11,6 +11,7 @@ inputs:
   - {type: competitor_set, required: true}
   - {type: product_data, required: true}
   - {type: brand_brain, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: brief}
   - {type: copy_draft}

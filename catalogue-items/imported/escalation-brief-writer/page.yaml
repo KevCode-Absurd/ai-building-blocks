@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It pulls scattered facts into one brief a busy person can act on.
 new_slug: escalation-brief-writer
 name: Escalation brief writer
-summary: Give it a stuck customer issue. Get a clear escalation brief for
-  engineering or leadership, with impact and what was tried.
+summary: Turn a stuck customer issue into an escalation brief for engineering or leadership, with impact, what was tried and a clear ask.
 job: help-customers
 headline: Escalation brief writer
-subhead: Give it a stuck customer issue. Get a clear escalation brief for
-  engineering or leadership, with impact and what was tried. Bring short
-  description of the issue. Use the result to plan your next step.
+subhead: Give it a stuck customer issue and what you know so far. It checks whether the issue needs escalating, then writes one brief for the right team. The brief shows impact, what was tried and what you need.
 explain: |
   One page that gets a stuck customer issue noticed by engineering, product or leadership, with everything they need so nobody has to come back with questions.
 
@@ -17,21 +14,53 @@ when:
   - A bug has gone past normal support and engineers need the full picture.
   - Several customers report the same fault and you need to show the pattern.
   - A key account threatens to leave and leadership must decide fast.
-  - You keep sending escalations that bounce back for missing detail.
+  - Your escalations keep bouncing back for missing detail.
+not_for:
+  - "The issue has a known workaround or is a setup problem: solve it in support first, and share the fix with the customer."
+  - "The customer only needs guidance or training: answer in the ticket, with no escalation."
+  - "You suspect a data leak or unauthorized access: tell your security team right away, then write the brief."
 you_give:
-  - Short description of the issue
-  - Customer or account name (optional)
+  - A short description of the issue
+  - The customer or account name (optional)
   - Ticket history and fixes already tried
   - Revenue or contract at risk (optional)
+  - Error messages, screenshots or logs (optional)
 you_get:
-  - Escalation brief with a clear ask
-  - Reproduction steps
-  - Impact summary with numbers
-  - Recommended owner or team
-  - Next steps and timeline
+  - An escalation brief that opens with a clear ask
+  - Reproduction steps for bugs
+  - An impact summary covering who is hit, how badly and for how long
+  - A suggested team to send it to
+  - A deadline and next steps
+  - Offers to draft a customer update or set a follow-up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your help desk, chat or tickets.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Copy the skill instructions and paste them into a new chat.
+  - Paste your issue description, ticket history and anything you already tried.
+  - Add the customer name and revenue at risk if you have them. If a detail is missing, your AI should ask or mark it missing.
+  - Check the brief for facts and numbers. Fix anything wrong, then send it to the team it names.
+  - Ask for a customer update or a follow-up reminder if you want one.
+output_sample:
+  input:
+    - A short description of the issue
+    - The customer or account name (optional)
+    - Ticket history and fixes already tried
+    - Revenue or contract at risk (optional)
+  prerequisites:
+    - "Optional: an AI that can read your help desk, chat or CRM. Without one, paste the details in yourself."
+  output:
+    - name: Header
+      contains: A one-line summary, severity, target team, who reported it and the date.
+    - name: Impact
+      contains: Who is affected, what they cannot do, revenue at risk and how long it has gone on.
+    - name: Issue Description
+      contains: A short, clear account of the problem in 3 to 5 sentences.
+    - name: What's Been Tried
+      contains: Each troubleshooting step and what happened.
+    - name: Reproduction Steps
+      contains: Numbered steps for a bug, with expected result, actual result and environment.
+    - name: Customer Communication
+      contains: The last update sent, what the customer expects and the risk of further escalation.
+    - name: What's Needed
+      contains: The specific ask and the deadline for an answer or update.
+    - name: Supporting Context
+      contains: Related tickets, internal threads, logs and documents.

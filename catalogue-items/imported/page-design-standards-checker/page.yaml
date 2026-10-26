@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It runs a fixed list of design checks.
 new_slug: page-design-standards-checker
 name: Page design standards checker
-summary: Give it a page or component. Get checks on colour contrast, spacing,
-  hierarchy and mobile, with fixes.
+summary: Check your page design for low contrast, uneven spacing, weak hierarchy and mobile problems. Get a fix for each one, plus a pre-ship checklist.
 job: design-work
 headline: Page design standards checker
-subhead: "A review of your page or component against six design standards, with
-  a fix for each problem found. It catches the usual causes of a page that feels
-  off: low contrast, uneven spacing, weak hierarchy and layouts that break on a
-  phone."
+subhead: "A review of your page or component against six design standards, with a fix for each problem found. It catches the usual causes of a page that feels off: low contrast, uneven spacing, weak hierarchy and layouts that break on a phone."
 explain: |
   A review of your page or component against six design standards, with a fix for each problem found. It catches the usual causes of a page that feels off: low contrast, uneven spacing, weak hierarchy and layouts that break on a phone.
 
@@ -19,6 +15,10 @@ when:
   - You are about to ship a section and want a quality pass.
   - Buttons and forms differ from page to page.
   - You are starting a project and need colour and spacing rules first.
+not_for:
+  - "You need a brand look from scratch: build the brand identity first with a brand designer or a brand identity skill, then come back to check pages."
+  - "You need a full accessibility audit against legal rules: use a dedicated accessibility audit with a specialist, as this checks contrast only."
+  - "You need a full component library: use a design system skill or ask a designer, as this only reviews single pages and parts."
 you_give:
   - The page, component or code to check
   - Brand colours, fonts and spacing (optional)
@@ -29,7 +29,28 @@ you_get:
   - A starter set of design tokens if you had none
   - Pre-ship checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste your page code or text, or attach a screenshot. Say which screen sizes matter most.
+  - Add your brand colours, fonts and spacing if you have them. If not, ask your AI to make a starter set first.
+  - Read the findings. Fix the contrast and mobile problems first.
+  - Ask your AI to run the pre-ship checklist before you publish.
+output_sample:
+  input:
+    - Your page, component or code to check
+    - Your brand colours, fonts and spacing (optional)
+    - The phones and screen widths you design for
+  prerequisites:
+    - An AI that can read your page text, code or a screenshot
+  output:
+    - name: Design tokens
+      contains: A starter set of colours, type sizes, spacing steps and corner radius, made only if you had none.
+    - name: Review notes
+      contains: Findings scored against the six standards, each with a fix.
+    - name: Contrast check
+      contains: Text and button colours compared with the 4.5:1 and 3:1 contrast limits.
+    - name: Hierarchy and spacing findings
+      contains: Where the eye goes first, where items compete, and where gaps break the spacing scale.
+    - name: Mobile findings
+      contains: Tap target size, text size, sticky bars and anything that breaks on a 375 to 390 pixel screen.
+    - name: Pre-ship checklist results
+      contains: A pass or fail line for each final design check, with notes.

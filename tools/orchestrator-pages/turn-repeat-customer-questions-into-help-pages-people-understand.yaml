@@ -1,6 +1,6 @@
 new_slug: turn-repeat-customer-questions-into-help-pages-people-understand
 name: Turn repeat customer questions into help pages people understand
-summary: Give it the questions you answer every week. Get checked help pages a stranger can follow.
+summary: Turn repeat customer questions into help pages anyone can follow. Give it the questions you answer each week. You get checked, plain-English pages.
 job: help-customers
 thinking: high
 thinking_why: It turns scattered answers into pages that must be accurate and easy to read. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Ten questions make up most of your support inbox.
   - Your help pages exist but customers write in anyway, because they could not follow them.
   - You are training someone new and want the answers written down once, correctly.
+not_for:
+  - "You have one odd question from a single customer: reply to them directly, or ask a teammate who knows the answer."
+  - "The problem is a product bug: send it to your developer or open a support ticket with the tool's maker."
+  - "You want to clear your whole support inbox first: use the Customer inbox priorities and reply drafts."
 you_give:
   - The questions you answer every week, and how you answer them today
   - Your current docs, FAQ or help pages (optional)
@@ -24,11 +28,33 @@ you_get:
   - A reading-level check and a plain rewrite of any page that reads hard
   - An accuracy check on every page, with the fixes applied
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste the questions, how you answer them and any docs you have. It writes a page per question.
-  - Read the reading-level report and the plain rewrites. Confirm the button names and steps are right.
+  - "Gather first: your list of weekly questions, your real reply to each one, and the exact names of your screens and buttons."
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Upload the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md". It works from files, so use a tool that can read them.
+  - Paste your questions, replies and any docs. It saves one file per step.
+  - Read the reading-level report and the plain rewrites. Check every button name and step against your app.
   - Publish the checked pages and link them in your replies.
+output_sample:
+  input:
+    - The questions you answer every week, and how you answer them today
+    - Your current docs, FAQ or help pages (optional)
+    - Who your readers are and what they already know
+    - The exact names of your screens and buttons (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: "Step 1: What is known"
+      contains: For each question, the answer your records give today, the source, and any gap or contradiction.
+    - name: "Step 2: Help pages"
+      contains: One help page per question, with ordered steps, what you should see after each, and what to do if it fails.
+    - name: "Step 3: Reading level"
+      contains: Each page's grade, the hard sentences and words, and which pages need a rewrite.
+    - name: "Step 4: Plain rewrites"
+      contains: Each flagged page rewritten in plain English, with a note on what changed and why.
+    - name: "Step 5: Accuracy check"
+      contains: Missing steps, wrong screen or button names and unbacked promises, with fixes applied to the final pages.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Gather what is known
     text: Finds the answer your docs and tickets already give for each question, names the sources and marks gaps.

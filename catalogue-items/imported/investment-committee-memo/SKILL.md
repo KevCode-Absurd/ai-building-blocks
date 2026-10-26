@@ -15,12 +15,19 @@ most Indian errors:
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
   Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format shows
+  **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
 never substitute a proxy and present it as the real thing.
+
+## Before you start
+
+- **Files this skill names.** `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not included in this folder. If you cannot load them, use the two rules above, and take every figure from what the user gives you. Say in your reply that the fuller guides were not loaded.
+- **Needs.** Your AI must be able to write a Word file for the default format. If it cannot, write Markdown and say so.
+- **This skill writes up the facts it is given.** It does no research. Never invent a financial, a deal term, a returns figure, a market size or a management name. Mark any missing item `MISSING` in the memo and list it in the open questions.
+- **Not advice.** The memo supports a human decision. It does not replace a legal, tax or accounting review.
 
 ## Workflow
 
@@ -29,6 +36,7 @@ never substitute a proxy and present it as the real thing.
 Collect from the user (or from prior analysis in the session):
 
 - Company overview and business description
+- A screening memo or diligence review already in the chat: use it for the findings and the call, and a valuation range for the price view. Ask only for what they leave out.
 - Industry/market context
 - Historical financials (3-5 years)
 - Management assessment
@@ -102,6 +110,13 @@ Standard IC memo format:
 - Don't minimize risks. IC members will find them anyway; credibility matters
 - Use the firm's standard memo template if the user provides one
 - Financial tables should tie — check that EBITDA bridges, S&U balances, and returns math is consistent
-- Ask for missing inputs rather than making assumptions on deal terms or returns
+- Ask for missing inputs once, in one list, rather than making assumptions on deal terms or returns. If the user cannot supply them, write `MISSING` and carry on.
+- Returns: show IRR and MOIC only if the user gave you the cases or the inputs to work them out. Show the working. Do not make up a case.
+- Put the units in every table header, for example `Revenue (₹ Cr)`, and label periods `FY25`, not `2025`.
+- Add an open questions list at the end of the memo, with one line per missing or weak item.
+
+## What you hand back
+
+The memo in sections I to IX, then a list of open questions, then one line on what to do next: take the memo to the committee, or fill the open questions first.
 
 - **Runbook:** [`references/runbook-ic-memo.md`](references/runbook-ic-memo.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).

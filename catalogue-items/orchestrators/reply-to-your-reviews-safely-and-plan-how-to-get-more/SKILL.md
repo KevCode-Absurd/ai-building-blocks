@@ -22,12 +22,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Read the reviews and draft a reply to each.** Use the skill `customer-review-reply-writer`. Starts from your reviews and makes the themes and the draft replies the next step checks.
-2. **Check the angry replies before you post.** Use the skill `angry-customer-reply-checker`. Give it the copy draft and the voc reviews from the steps before. Reads the drafts and the reviews from step 1 and repairs any reply that promises too much or sounds defensive.
+1. **Read the reviews and draft a reply to each.** Use the skill `customer-review-reply-writer`. Starts from your reviews and makes the themes and the draft replies the next step checks. It hands over both.
+2. **Check the angry replies before you post.** Use the skill `angry-customer-reply-checker`. Give it the copy draft and the voc reviews from the steps before. Reads the drafts and the reviews from step 1 and repairs any reply that promises too much or sounds defensive. It hands over the repaired replies and notes on the tone.
 
 Pause here: Post the checked replies, and make the decisions the checker marked for you.
 
-3. **Plan how to ask for more reviews.** Use the skill `review-request-and-reply-planner`. Give it the voc reviews from the steps before. Uses the themes from step 1 and the tone settled in step 2 to set the ask and the reply templates.
+3. **Plan how to ask for more reviews.** Use the skill `review-request-and-reply-planner`. Give it the voc reviews from the steps before. Uses the themes from step 1 and the tone notes from step 2 to set the ask and the reply templates. It hands over the plan.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

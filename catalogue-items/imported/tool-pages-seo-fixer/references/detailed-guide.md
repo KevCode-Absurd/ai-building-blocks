@@ -61,7 +61,7 @@ as duplicate pages and demotes all of them.
 - ≤ 60 characters total
 - Primary keyword in the first 40 characters
 - Every tool has a **unique** title — no two tools share the same one
-- Include "Free" where accurate — measurably improves CTR
+- Include "Free" where accurate (it can help clicks, so test it)
 
 ### Meta description formula
 
@@ -114,8 +114,8 @@ print(f"✅ All {len(tools)} tools passed meta validation")
 
 ## Phase 2 — Content Registry (The Highest-Leverage Fix)
 
-**Root cause of poor rankings on tool sites:** 80–95% of tool pages share identical
-template prose. Google sees them as thin, near-duplicate pages and ranks none well.
+**A common cause of poor rankings on tool sites:** many tool pages share identical
+template prose. Google can see them as thin, near-duplicate pages and rank none well.
 Fix this before anything else.
 
 ### Diagnosis
@@ -159,8 +159,8 @@ how_to_steps:
 
 faqs:
   - q: "Does Google always use my meta description?"
-    a: "No — Google rewrites descriptions ~63% of the time. Write them anyway for
-       social shares and some SERPs."
+    a: "No. Google often rewrites descriptions to match the search. Write them anyway for
+       social shares and for the times Google keeps yours."
   - q: "What happens if my title is over 60 characters?"
     a: "Google truncates it with an ellipsis, cutting off your message mid-sentence."
 

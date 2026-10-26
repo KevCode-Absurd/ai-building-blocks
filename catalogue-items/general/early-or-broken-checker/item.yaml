@@ -1,6 +1,6 @@
 slug: early-or-broken-checker
 name: "Early or broken checker"
-summary: "Describe an unfinished project. Get a call: keep protecting it, change the approach, change the lead or stop."
+summary: "Find out if your rough project is just early or truly stuck. Get a call: keep protecting it, change the approach, change the lead or stop."
 category: general
 type: skill
 role: check
@@ -13,6 +13,7 @@ outputs:
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0
+needs_mode: manual
 minds: [ed-catmull]
 credits:
   - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace, Random House, 2014", used: "Early versions are expected to be bad, so judge a project against its own earlier versions; step in when the crew loses confidence in the lead or when work returns unchanged after notes; the options are keep going, change the lead, or shut it down"}

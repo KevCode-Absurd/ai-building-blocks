@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It chooses how deep to go.
 new_slug: data-question-answerer
 name: Data question answerer
-summary: Ask a data question. Get a quick lookup or a full analysis with the
-  numbers and what they mean.
+summary: Ask a data question in plain words. Get a quick number or a full analysis, with the query used and checks on the data.
 job: track-numbers
 headline: Data question answerer
-subhead: Ask a data question. Get a quick lookup or a full analysis with the
-  numbers and what they mean. Bring your question. Use the result to plan your
-  next step.
+subhead: Ask a data question. Get a quick lookup or a full analysis with the numbers and what they mean. Bring your question. Use the result to plan your next step.
 explain: |
   Ask a question about your data in plain words and get an answer sized to the question: a quick number, a full analysis, or a formal report with caveats.
 
@@ -18,6 +15,10 @@ when:
   - Conversion dropped and you want to know why.
   - A comparison of customer groups over time is due.
   - You must prepare a quarterly review with numbers and caveats.
+not_for:
+  - "You need live alerts when a number changes: set up alerts in your analytics or monitoring tool instead."
+  - "You need audited figures for a regulator or an auditor: ask your finance lead or an analyst to sign off the numbers."
+  - "You have no data to hand over, no file, no pasted rows and no connected database: collect the data first, then come back."
 you_give:
   - Your question
   - Data access or a file
@@ -29,8 +30,31 @@ you_get:
   - The query used
   - Caveats and next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and connect to your data.
+  - Open your AI and paste this skill, or add the skill folder if your AI takes files.
+  - Type your question in plain words. Add the time range and the groups you care about.
+  - Connect your data warehouse with read-only access if your AI supports it. If not, upload a CSV or Excel file, or paste rows.
+  - Say if you want a quick answer, a full analysis or a formal report. If you do not, the skill picks one.
+  - Read the caveats first, then the answer. Check the query if the number looks off.
+  - Ask a follow-up question to dig into any part of the result.
+output_sample:
+  input:
+    - Your question, in plain words
+    - A file or pasted rows of data, or a connected data warehouse
+    - The time range or customer group you care about (optional)
+    - Table names, if you know them (optional)
+  prerequisites:
+    - Either a data warehouse connected to your AI, or a CSV, Excel file or pasted rows
+    - An AI that can run code, if you want a chart
+  output:
+    - name: Direct answer
+      contains: The number or finding that answers your question, with a line of context.
+    - name: Query used
+      contains: The SQL that was run, so you can check it or run it again.
+    - name: Supporting table or chart
+      contains: The figures behind the answer, shown as a table or a chart when a chart helps.
+    - name: Caveats
+      contains: Data gaps, odd values and limits you should know before you act on the answer.
+    - name: Follow-up questions
+      contains: Next questions worth asking, given what the data showed.
+    - name: Formal report sections
+      contains: "For big questions only: executive summary, methodology, detailed findings, limits and recommendations."

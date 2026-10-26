@@ -10,17 +10,16 @@ inputs:
   - {type: document, required: true}
   - {type: product_photos, required: true}
   - {type: spreadsheet, required: false}
-  - {type: product_data, required: false}
 outputs:
   - {type: audit_report}
-  - {type: brief}
+  - {type: document}
 uses: [sample-approval-gatekeeper, product-tech-pack-writer, landed-cost-calculator, pre-shipment-inspection-brief-writer, factory-shortlist-vetter]
 steps:
-  - {uses: sample-approval-gatekeeper, note: "Every sample round: your tech pack checked line by line against the sample, scored, with a go or hold."}
-  - {uses: product-tech-pack-writer, note: "Only when a failed line is vague, missing or measured two ways in the pack: the pack is tightened before the next round."}
-  - {uses: landed-cost-calculator, note: "Once, when a pre-production or production sample gets a go: margin re-checked with the real quote and the defect rate seen so far."}
-  - {uses: pre-shipment-inspection-brief-writer, note: "Only when the production sample gets a go: the inspector's brief, pass rule and payment terms."}
-  - {uses: factory-shortlist-vetter, note: "Only when a third round still fails a critical line: the shortlist is re-scored to pick the next factory to try."}
+  - {uses: sample-approval-gatekeeper, note: "Every sample round: your tech pack checked line by line against the sample, scored, with a go or hold. Hands the failed lines and the decision to the next steps."}
+  - {uses: product-tech-pack-writer, note: "Only when a failed line is vague, missing or measured two ways in the pack: the pack is tightened before the next round. Uses the failed lines from step 1 and your product photos and facts. Hands the tightened pack back to step 1 for the next round."}
+  - {uses: landed-cost-calculator, note: "Once, when a pre-production or production sample gets a go: margin re-checked with the real quote and the defect rate seen so far. Uses your quote and freight and the current tech pack. Hands the margin check to you; it does not feed step 4."}
+  - {uses: pre-shipment-inspection-brief-writer, note: "Only when the production sample gets a go: the inspector's brief, pass rule and payment terms. Uses your purchase order, the approved tech pack and the sample you kept, not step 3's margin report."}
+  - {uses: factory-shortlist-vetter, note: "Only when a third round still fails a critical line: the shortlist is re-scored to pick the next factory to try. Runs instead of step 4, not after it. Uses your shortlist, the factory answers and the earlier rounds' reports."}
 schedule: "Each time a new sample arrives"
 asks_before: [sending anything to a factory, paying a deposit or balance, placing or changing an order, approving mass production, switching suppliers]
 origin: own

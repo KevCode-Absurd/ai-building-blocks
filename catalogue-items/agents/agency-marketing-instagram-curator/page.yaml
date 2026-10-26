@@ -1,0 +1,141 @@
+name: Instagram Curator agent
+summary: Get a 30-day Instagram plan with a look guide, a 9-post grid, Reels and Stories ideas and hashtags. Bring your brand and goal.
+headline: Instagram Curator agent
+subhead: Tell it about your brand, your buyer and the photos or video you can make each week. It plans a look for your feed, a 9-post grid and a 30-day calendar of posts, Reels and Stories. You get an Instagram content plan you can start this week.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Many small brands post whatever they have and hope. The feed looks random, so a visitor can't tell what you sell or why to follow you. This Instagram content planner starts with the look and the mix, then fills a 30-day calendar.
+
+  It sets your look in words: colours, type, photo style and simple graphic rules. It plans your first nine posts so the grid reads as one brand. Then it spreads feed posts, carousels, Reels and Stories over 30 days. It uses the profile's one-third rule: a third about your brand, a third that teaches and a third about your community. It adds a hashtag mix, a reply routine and ideas for customer photos and creator partners. If you sell products, it notes where shopping tags fit.
+
+  It can't see your account, today's trends or hashtag numbers. It works from what you give it and lists what to check in Instagram Insights. It describes images in words and does not draw them. The targets in the original profile, such as a 3.5 percent engagement rate, are the author's goals, not results from AI Blocks.
+when:
+  - Your Instagram feed looks random and you want one clear look.
+  - You are starting a business account and need a first month of posts.
+  - You post often but get few saves, replies or visits to your link.
+  - You sell products and want posts, Stories and shopping tags planned together.
+not_for:
+  - You want to run paid Instagram ads. Use the Meta test campaign planner or the Meta account structure planner.
+  - You only want next week's posts, planned from last week's numbers. Use the Weekly social content planner.
+  - You want one idea written for several platforms. Use the Social post planner or the Content Creator agent.
+  - You need a logo or brand colours designed. Plan the brand with the Brand Guardian agent, then hire a designer.
+you_give:
+  - What you sell and who buys it
+  - Your goal on Instagram, such as sales, leads or followers
+  - What you can photograph or film each week, and how much time you have
+  - Your handle, or a short note on what your feed looks like now (optional)
+  - Instagram Insights numbers for your last 10 posts (optional)
+  - Your brand colours, logo or photos you like (optional)
+you_get:
+  - A look guide in words, with colours, type, photo style and graphic rules
+  - A 9-post grid plan so your profile reads as one brand
+  - A 30-day calendar with the format, topic and call to action for each post
+  - Ideas for Stories, Reels and carousels that match your goal
+  - A hashtag mix in three groups, for you to check in Instagram search
+  - A reply routine, plus ideas for customer photos and creator partners
+  - A review plan that names the Insights numbers to read each week
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste what you sell, who buys it, your goal and how much you can make each week.
+  - Add your handle or a note on your feed now. Paste your Insights numbers for the last 10 posts if you have them.
+  - "Say: \"Make my 30-day Instagram plan. Don't invent trends or numbers. Mark anything you can't check as a check for me.\""
+  - Read the look guide and the first nine grid posts. Change anything that doesn't feel like your brand before you make a single post.
+  - Check each hashtag in Instagram search. Post for two weeks, then bring your Insights numbers back to adjust the plan.
+how_it_works:
+  - title: Confirm the brand and goal
+    text: It confirms what you sell, who buys, your goal and your weekly capacity. Missing items are asked for once, then marked MISSING.
+  - title: Set the look
+    text: It writes colours, type, photo style and graphic rules in words, from your brand facts and any photos you describe.
+  - title: Plan the grid
+    text: It plans nine posts in order, so the profile page looks like one brand and says what you sell.
+  - title: Build the 30-day mix
+    text: It spreads posts, carousels, Reels and Stories over 30 days, using the one-third split of brand, teaching and community.
+  - title: Plan community and shop
+    text: It adds a hashtag mix, a reply routine, customer photo ideas and creator partner ideas. It adds shopping tag notes if you sell products.
+  - title: Plan the review
+    text: It names the Insights numbers to read each week and what to change if they are low.
+output_shape: |-
+  ASSUMPTIONS AND MISSING
+    ASSUMED: <list> | MISSING: <list>
+
+  LOOK GUIDE
+    colours <names and roles> | type <headline and body style> | photo style <light, angle, props> | graphic rules <do and don't>
+
+  GRID PLAN (9 POSTS)
+    <position 1 to 9> | <format> | <what the picture shows> | <job it does for the profile>
+
+  30-DAY CALENDAR
+    <day> | <format: post, carousel, Reel, Story> | <share: brand, teach, community> | <topic> | <caption direction> | <call to action>
+
+  HASHTAG MIX
+    popular <list> | niche <list> | branded <list> | CHECK: <how to confirm each in Instagram search>
+
+  COMMUNITY AND SHOP
+    reply routine <who, how fast> | customer photo ideas <list> | creator partner ideas <list> | shopping tags <which posts, if you sell products>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+output_sample:
+  input:
+    - What you sell, who buys it and your goal
+    - What you can photograph or film each week
+    - Your handle or a note on your feed now (optional)
+    - Instagram Insights numbers for your last 10 posts (optional)
+  prerequisites:
+    - An Instagram business or creator account, or a plan to open one
+    - Instagram Insights, to read your own numbers (optional)
+  output:
+    - name: Look guide
+      contains: Colours, type, photo style and graphic rules, written in words.
+    - name: Grid plan
+      contains: Nine posts in order, with what each picture shows and the job it does.
+    - name: 30-day calendar
+      contains: A format, topic and call to action for each post, with the brand, teach and community split.
+    - name: Hashtag mix
+      contains: Popular, niche and branded groups, with a way to check each one in Instagram search.
+    - name: Community and shop plan
+      contains: A reply routine, customer photo ideas, creator partner ideas and shopping tag notes.
+    - name: Review plan
+      contains: The Insights numbers to read each week and what to change if they are low.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Length
+    how: Ask for 14 days instead of 30 if you post fewer than three times a week.
+  - what: Focus
+    how: Ask for the look guide and grid plan only if you don't need a calendar yet.
+  - what: Formats
+    how: Name the formats you can make, such as photos only or short video, so the calendar doesn't plan what you can't produce.
+improve:
+  - Save the approved look guide and reuse it every month.
+  - After two weeks, paste your Insights numbers and ask what to change in weeks three and four.
+terms:
+  - term: Grid
+    meaning: The pictures on your profile page, shown in rows of three. It is what a new visitor sees first.
+  - term: Reel
+    meaning: A short vertical video on Instagram.
+  - term: Story
+    meaning: A photo or short video that disappears after 24 hours.
+  - term: Carousel
+    meaning: One post with several pictures a viewer swipes through.
+  - term: Shopping tag
+    meaning: A tag on a post that links to a product page in your Instagram shop.
+  - term: Insights
+    meaning: Instagram's own stats page for business and creator accounts.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three read screenshots, so you can show your feed and your Insights page instead of typing numbers.
+    - name: The Instagram app
+      why: You check hashtags in search and read Insights there. Your AI can't see them.
+  inputs:
+    - Screenshots of your last 10 posts with their Insights numbers.
+    - Three accounts whose feed look you like.
+    - Your product photos, so the look guide matches what you can really shoot.

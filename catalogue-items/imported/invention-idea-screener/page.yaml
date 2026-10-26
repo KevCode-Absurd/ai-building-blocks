@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It tests the idea on several patent hurdles.
 new_slug: invention-idea-screener
 name: Invention idea screener
-summary: Describe your invention. Get a first screen on novelty, deadlines and
-  value, and whether to see a patent lawyer. Not legal advice.
+summary: Screen your invention idea before you pay a patent lawyer. Get a green, amber or red mark on six checks and a pursue, investigate or decline verdict.
 job: check-contracts
 headline: Invention idea screener
-subhead: A quick first look at your invention that tells you whether it is worth
-  paying a patent professional. Describe what it is, the problem it solves, how
-  it differs from what exists, who invented it, and whether it has been shown in
-  public.
+subhead: A quick first look at your invention that tells you whether it is worth paying a patent professional. Describe what it is, the problem it solves, how it differs from what exists, who invented it, and whether it has been shown in public.
 explain: |
   A quick first look at your invention that tells you whether it is worth paying a patent professional. Describe what it is, the problem it solves, how it differs from what exists, who invented it, and whether it has been shown in public. The skill runs six checks: novelty, obviousness, whether the idea is the kind that can be patented at all, public disclosure deadlines, how easy infringement would be to spot, and business value.
 
@@ -19,6 +15,10 @@ when:
   - You showed your idea at a talk or on a site and fear a deadline has started.
   - Your team has several ideas and needs to pick which to take to a lawyer.
   - You want to arrive at a patent attorney meeting with the facts organized.
+not_for:
+  - "You have a trademark or copyright question: ask a trademark or copyright lawyer, because this screen only covers patents."
+  - "You want a prior-art search or a legal opinion: hire a registered patent attorney or agent, because this screen does neither."
+  - "You only want to protect a secret recipe or process: ask a lawyer about trade secrets, which need no patent."
 you_give:
   - A description of the invention
   - The problem it solves and how it differs from existing options
@@ -31,10 +31,35 @@ you_get:
   - A deadline warning if one applies
   - Next steps, such as a prior-art search or attorney review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /ip-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code, files or paid tools are needed.
+  - If you do not have the ip-legal plugin, paste a short profile of your role and practice in the chat. Say if you are a lawyer or not.
+  - Paste your invention description, or give just the title and let your AI ask its seven questions in one go.
+  - Answer the questions. Say clearly if the invention was ever shown in public, and when.
+  - Read the deadline warning first. Then read the six marks and the verdict.
+  - Take the result to a patent attorney or agent. They decide if it can be patented.
+output_sample:
+  input:
+    - Your description of the invention
+    - The problem it solves and how it differs from what exists
+    - Who invented it
+    - Where and when it was shown in public, if at all
+    - Your technology area (optional)
+  prerequisites:
+    - The ip-legal practice profile, or the same details pasted into the chat if you do not have the plugin
+  output:
+    - name: Time-sensitive flag
+      contains: A warning at the top if a public disclosure may have started a filing deadline.
+    - name: Novelty signals
+      contains: A mark and one line on whether the idea looks new compared with what you described.
+    - name: Obviousness flags
+      contains: A mark and one line on whether the idea looks like a plain next step.
+    - name: Subject-matter eligibility
+      contains: A mark and one line on whether this kind of idea can be patented at all.
+    - name: Public disclosure and bar dates
+      contains: A mark and one line on deadlines linked to any talk, site or sale.
+    - name: Detectability
+      contains: A mark and one line on how easy it would be to spot someone copying it.
+    - name: Strategic value
+      contains: A mark and one line on whether the idea matters enough to the business.
+    - name: Bottom-line verdict
+      contains: Pursue, investigate or decline, with the reason and next steps such as a prior-art search or attorney review.

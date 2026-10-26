@@ -1,6 +1,6 @@
 slug: hand-over-founder-dependent-operations
 name: Hand over founder dependent operations
-summary: Share the source files. Get a founder dependency map, readiness gaps and operating handover.
+summary: Find the work only the founder does, see who can take it on, and get a handover note for each deputy with gaps and deadlines marked.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -22,7 +22,7 @@ uses:
   - handover-note-writer
 steps:
   - uses: succession-plan-builder
-    note: Use critical role coverage and readiness evidence methods to map founder-held operations to available deputies, retaining training and capacity gaps.
+    note: Use critical role coverage and readiness evidence methods to map founder-held operations to available deputies, retaining training and capacity gaps. Hands step 2 each deputy's rows and the gaps.
   - uses: handover-note-writer
     note: Prepare the supported deputy handover with deadlines, source locations, escalation and leave-alone rules. Propose access requests without granting access.
 origin: rebuilt

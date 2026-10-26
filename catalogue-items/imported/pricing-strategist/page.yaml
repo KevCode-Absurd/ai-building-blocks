@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Pricing choices carry big money risk.
 new_slug: pricing-strategist
 name: Pricing strategist
-summary: Describe your product and buyers. Get tiers, a value metric and a test
-  plan for your prices.
+summary: Plan your SaaS pricing with a value metric, good-better-best tiers and a price test plan. Give it your product, buyers and competitors.
 job: set-prices
 headline: Pricing strategist
-subhead: Describe your product and buyers. Get tiers, a value metric and a test
-  plan for your prices. Bring product and target market. Use the result to plan
-  your next step.
+subhead: Describe your product and buyers. Get tiers, a value metric and a test plan for your prices. Bring product and target market. Use the result to plan your next step.
 explain: |
   A pricing plan for your product: tiers, the unit you charge on and a way to test prices without guessing.
 
@@ -18,6 +15,10 @@ when:
   - You think your price is too low but have no proof.
   - You are adding a free or enterprise plan.
   - You need to plan a price rise.
+not_for:
+  - "You want to fix an in-app upgrade screen: use a paywall skill, not this one."
+  - "You sell services, courses or coaching and need bonuses, guarantees or naming: use an offer-building skill instead."
+  - "You want to improve how your pricing page converts: use a conversion-rate review, or ask a person who runs page tests."
 you_give:
   - Product and target market
   - Current pricing (optional)
@@ -29,7 +30,27 @@ you_get:
   - Packaging and feature split
   - Price test plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Describe your product, your buyers and how you sell. Add competitor prices.
+  - Add your current price, conversion rate, churn and revenue per customer if you have them.
+  - Answer any questions your AI asks. It asks once, so say so if you do not know a number.
+  - Read the value metric first. Check that it grows as your customers get more value.
+  - Run the price test on new customers before you change prices for existing ones.
+output_sample:
+  input:
+    - Your product type and who it is for
+    - Your current pricing (optional)
+    - How competitors charge
+    - Your conversion rate, churn and revenue per customer (optional)
+    - "Your goal: growth, revenue or profit (optional)"
+  output:
+    - name: Value metric
+      contains: The one thing your price should grow with, and why it matches the value buyers get.
+    - name: Pricing tiers
+      contains: Good, better and best plans with price points and who each plan is for.
+    - name: Packaging and feature split
+      contains: Which features, limits and support levels go in each tier, and where a free plan fits.
+    - name: Price test plan
+      contains: What to measure, how long to run the test and how to roll out a change.
+    - name: Price rise plan (if needed)
+      contains: Steps to raise prices, including what to do for existing customers and how to tell them.

@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: copy_draft
     required: true
+  - type: email_flow
+    required: false
 outputs:
   - type: copy_draft
   - type: feedback_notes

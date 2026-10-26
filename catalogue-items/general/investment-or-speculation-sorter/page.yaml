@@ -1,6 +1,6 @@
 new_slug: investment-or-speculation-sorter
 name: "Investment or speculation sorter"
-summary: "Paste a purchase you are weighing and why. Get it sorted as investment or speculation, with the questions a careful buyer asks."
+summary: "Paste a purchase you are weighing and why. This investment or speculation sorter labels it and lists the questions a careful buyer asks."
 job: money-and-investing
 thinking: high
 thinking_why: "It must separate what is known from what is hoped, state a value range with its assumptions and avoid giving advice. That needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - Someone told you an asset is a sure thing and you want to test the claim.
   - You are about to buy something because its price has been rising.
   - You want a clear label and a list of questions before you put money in.
+not_for:
+  - "You must decide within weeks: talk to a licensed financial adviser, since this skill needs time to check facts."
+  - "You need a personal, tax or retirement decision: ask a licensed adviser or accountant, because this skill gives no advice."
+  - "You want to know if you should buy or sell: this skill never says that, so use a licensed adviser for any large amount."
 
 you_give:
   - What you are thinking of buying and the price
@@ -35,6 +39,31 @@ how_to_use:
   - Paste any figures you have, such as yearly profit, rent or what it owns.
   - Read the label and the missing-facts list before you decide anything.
   - Take the questions to a licensed adviser if the amount is large.
+output_sample:
+  input:
+    - What you are thinking of buying, and the price
+    - Why you think it is a good idea
+    - Facts you have, such as earnings, rent, assets or debts (optional)
+    - How much you can afford to lose, and how much time you have (optional)
+  output:
+    - name: The purchase
+      contains: What you would buy, the price and your reason, in brief.
+    - name: Label
+      contains: Investment or speculation, with the reasons from the safety and return test.
+    - name: What you would own
+      contains: A plain description of what you hold and what it earns, or MISSING.
+    - name: Rough value
+      contains: A low and high value, the assumptions, how unsure it is, and where the price sits.
+    - name: Room for error
+      contains: How wrong the value could be before you are hurt, set against what you can lose.
+    - name: Which buyer are you
+      contains: Defensive or enterprising, and whether you have the time and temper.
+    - name: In one line
+      contains: What is known and what is not known.
+    - name: Missing
+      contains: Facts that would change the label.
+    - name: Checks missed
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Applies the test

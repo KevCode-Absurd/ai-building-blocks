@@ -2,25 +2,23 @@ thinking: low
 thinking_why: It finds disputes and adds a fixed tag.
 new_slug: chargeback-customer-tagger
 name: Chargeback customer tagger
-summary: Find customers with disputed orders. Get their records tagged so you
-  review their next orders. Changes live customer tags.
+summary: Find customers who lost you a dispute and tag them in Shopify, so you can review their next orders. Starts in preview mode, so nothing changes first.
 job: run-your-store
 headline: Chargeback customer tagger
-subhead: Customers who have lost you a dispute get a tag on their record, so you
-  can review or hold their next orders. This one writes to your live Shopify
-  store, so it starts in preview mode and shows you who would be tagged before
-  anything changes.
+subhead: Customers who have lost you a dispute get a tag on their record, so you can review or hold their next orders. This one writes to your live Shopify store, so it starts in preview mode and shows you who would be tagged before anything changes.
 explain: |
   Customers who have lost you a dispute get a tag on their record, so you can review or hold their next orders. This one writes to your live Shopify store, so it starts in preview mode and shows you who would be tagged before anything changes.
 
   It scans orders from the last two years (you can change that) and finds every order linked to a dispute. It groups them by customer and skips anyone already tagged. By default it skips customers whose disputes you won. Then it adds a tag, named chargeback-history unless you pick another. You need the Shopify command line signed in with read and write access to orders and customers.
 when:
-  - You keep getting repeat disputes from the same buyers and want a flag on
-    their account.
+  - You keep getting repeat disputes from the same buyers and want a flag on their account.
   - You want to hold new orders from past dispute customers for a manual look.
-  - You need a list of every customer who has filed a dispute in the past year
-    or two.
+  - You need a list of every customer who has filed a dispute in the past year or two.
   - You want to build a Shopify customer segment around risky buyers.
+not_for:
+  - "You want to block a customer from ordering at all: use Shopify's own fraud and order-hold tools, since this only adds a tag."
+  - "Your disputes come from guest checkouts: this cannot tag guests, so review those orders by hand or ask your payment provider for the list."
+  - "You do not have the Shopify command line signed in, or your AI cannot run commands: ask a developer to set it up first."
 you_give:
   - Your store domain
   - How far back to scan (optional)
@@ -33,8 +31,30 @@ you_get:
   - A count of skipped and already tagged customers
   - Any errors Shopify returned
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Open your AI tool with the skill and sign in to the Shopify command line for your store. This skill needs a tool that can run commands.
+  - Give your AI your store domain. Add how far back to scan, the tag name, or whether to include won disputes if you want to change them.
+  - Run the preview first. Nothing changes on your store in preview mode.
+  - Open the CSV and check each customer. Look for people you would not want tagged.
+  - When the list looks right, tell your AI to turn off preview mode and run it again. It then adds the tag to each customer.
+  - Check the summary for errors. Then use the tag in a Shopify customer segment or an order hold rule.
+output_sample:
+  input:
+    - Your store domain
+    - How far back to scan (optional)
+    - The tag name you want (optional)
+    - Whether to include disputes you won (optional)
+    - A go-ahead to leave preview mode
+  prerequisites:
+    - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - The Shopify command line signed in with read access to orders and customers, and write access to customers
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step lines
+      contains: One line per step showing what was checked and the count or outcome.
+    - name: Human summary block
+      contains: Counts of disputed orders, unique customers, lost or open disputes, won disputes left out, already tagged, customers to tag, tags applied and errors.
+    - name: chargeback_watchlist_<date>.csv
+      contains: One row per customer with email, name, dispute count, latest status, amount disputed, current tags, the tag to add and the action.
+    - name: Skipped guest rows
+      contains: Disputed guest orders that cannot be tagged, marked as skipped in the CSV.

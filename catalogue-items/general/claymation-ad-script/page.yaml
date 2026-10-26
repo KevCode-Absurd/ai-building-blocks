@@ -1,6 +1,6 @@
 new_slug: claymation-ad-script
 name: "Claymation video ad script writer"
-summary: "Paste your idea and product facts. Get a claymation video shot table and a cast note."
+summary: "Write a claymation video ad script from your idea and product facts. You get a shot table with narration and a cast note for one silent clay character."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your product's benefit is real but invisible, and talking-head ads about it fall flat.
   - You want a gentle, eye-catching way to show a problem to people who haven't thought about it much yet.
   - You want a script your video tool can follow shot by shot, with one clay set that never changes.
+not_for:
+  - You only need to sell on price. Use a plain offer line or a simple price card, since clay needs a story to show.
+  - Your proof needs a real face, such as a customer talking. Film that person, since a clay character cannot give a testimonial.
+  - You want one still picture, not a video. Use the Clay scene image ad maker.
 
 you_give:
   - The selling idea, or a script you already have
@@ -39,6 +43,33 @@ how_to_use:
   - Say the length, such as "30 seconds", and paste your real offer terms if you want one.
   - Check the changing object first. If a stranger couldn't tell what changed with the sound off, ask for a different object.
   - Take the script and cast note to "Claymation video clip prompt writer". It takes it from there, with the avatar, sheets, storyboard and clips.
+output_sample:
+  input:
+    - Your selling idea, or a script you already have
+    - Your product facts, approved claims and banned claims
+    - Who the buyer is and the moment the problem hits
+    - A photo of your product
+    - Your offer and the video length (optional)
+  prerequisites:
+    - An AI that can read pictures, so it can check your product photo
+    - Your brand brain from the Brand profile builder (optional)
+  output:
+    - name: Fit
+      contains: Why clay suits this idea and buyer, or what format to use instead.
+    - name: Changing object
+      contains: The one clay object that changes shape, with its before, changing and after states.
+    - name: Character
+      contains: One sentence describing the clay character, reused unchanged in every shot.
+    - name: Set
+      contains: The set pieces, the finish, the model-maker stand-ins and two colour palettes.
+    - name: Shot table
+      contains: Each shot with seconds, narration, picture, what moves, its state and on-screen text, plus the word count.
+    - name: Notes
+      contains: Each claim used and its source, what was left out on purpose, and anything missing.
+    - name: Cast note
+      contains: Who carries the ad, why, the narrator's voice and what never changes.
+    - name: CHECKS MISSED
+      contains: One line for each check the script still misses, or none.
 
 how_it_works:
   - title: Checks clay fits

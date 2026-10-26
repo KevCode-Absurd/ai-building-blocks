@@ -15,12 +15,12 @@ outputs:
   - {type: plan}
 uses: [rule-origin-tracer, handbook-change-checker, policy-removal-test-planner, policy-handbook-writer, company-policy-explainer, change-announcement]
 steps:
-  - {uses: rule-origin-tracer, note: "Every change that touches an existing rule: where the rule came from, who it served and whether it earns its place."}
-  - {uses: handbook-change-checker, note: "Every change: what it affects elsewhere in the handbook, including place-by-place differences. A first check, not legal advice."}
-  - {uses: policy-removal-test-planner, note: "Only when the change removes or loosens a rule: a small, dated test in one team and what to measure."}
-  - {uses: policy-handbook-writer, note: "Only when the change adds a rule or rewrites a section: the new wording, drafted for counsel."}
-  - {uses: company-policy-explainer, note: "Every change, once wording exists: the rule explained in plain words as a worker would ask about it, to test that it is clear."}
-  - {uses: change-announcement, note: "Only when the change is approved: the announcement, FAQ, manager talking points and send plan."}
+  - {uses: rule-origin-tracer, note: "Every change that touches an existing rule: where the rule came from, who it served and whether it earns its place. Hands the origin to the removal test, or the writer when the rule stays."}
+  - {uses: handbook-change-checker, note: "Every change: what it affects elsewhere in the handbook, including place-by-place differences. A first check, not legal advice. Uses the proposed change and your handbook, not the origin report, and hands the affected sections to whichever of steps 3 and 4 applies."}
+  - {uses: policy-removal-test-planner, note: "Only when the change removes or loosens a rule: a small, dated test in one team and what to measure. Uses the origin from step 1 and the checker's legal and safety flags, and hands the test plan on for the announcement once the test is approved."}
+  - {uses: policy-handbook-writer, note: "Only when the change adds a rule or rewrites a section: the new wording, drafted for counsel. Runs instead of step 3, not after it: it uses the change and the affected sections from step 2, and hands the new wording to step 5."}
+  - {uses: company-policy-explainer, note: "Every change, once wording exists: the rule explained in plain words as a worker would ask about it, to test that it is clear. Uses the new wording and your handbook, and hands the plain explanation to the announcement."}
+  - {uses: change-announcement, note: "Only when the change is approved: the announcement, FAQ, manager talking points and send plan. Uses the approved wording and the plain explanation."}
 schedule: "Each time a policy or handbook change is proposed, plus a sweep of all rules once a quarter"
 asks_before: [changing the live handbook or any policy, announcing or sending anything to the team, removing a rule for everyone at once, applying a rule to a specific person, sharing the handbook outside the company, treating a legal question as settled]
 minds: [patty-mccord]

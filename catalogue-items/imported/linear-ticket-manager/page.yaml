@@ -2,11 +2,10 @@ thinking: low
 thinking_why: It turns a request into a few ticket changes.
 new_slug: linear-ticket-manager
 name: Linear ticket manager
-summary: Tell it the work. Get Linear issues read, created or updated for you.
+summary: Turn your meeting notes or task list into Linear issues, or update many tickets in one request. Your AI reads, creates and updates them for you.
 job: organise-work
 headline: Linear ticket manager
-subhead: Tell your AI what work needs tracking and it reads, creates or updates
-  the Linear issues for you. No tab switching, no copying details by hand.
+subhead: Tell your AI what work needs tracking and it reads, creates or updates the Linear issues for you. No tab switching, no copying details by hand.
 explain: |
   Tell your AI what work needs tracking and it reads, creates or updates the Linear issues for you. No tab switching, no copying details by hand.
 
@@ -16,6 +15,10 @@ when:
   - You need to triage a pile of new issues quickly.
   - You want to update many ticket statuses in one request.
   - You are planning a sprint and want the backlog read back to you.
+not_for:
+  - "You only want to read Linear without changing anything: ask for a read-only list, or open the Linear app."
+  - "You need to change a single ticket: use the Linear app directly, it is faster."
+  - "You do not have a Linear account or cannot log in: set that up first, or track the work in a simple list."
 you_give:
   - The work to create or change
   - Team and project
@@ -27,8 +30,28 @@ you_get:
   - A summary of issues you asked about
   - Setup steps for the Linear connection
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your Linear workspace.
+  - Open your AI tool and paste in this skill. It needs a Linear account and a way to reach Linear.
+  - If Linear is not connected yet, your AI shows the setup steps. Follow them, log in once, then restart and try again.
+  - Tell your AI the work to track. Name the team and project. Add priority, labels and due dates if you have them.
+  - Your AI reads your Linear workspace first. For bulk changes, it explains how it will group them before it applies them.
+  - Check the summary at the end. Ask for follow-up changes, such as more labels or comments.
+output_sample:
+  input:
+    - The work to track, such as meeting action items or a list of bugs
+    - Your team and project in Linear
+    - Priority, labels and due dates (optional)
+  prerequisites:
+    - A Linear account
+    - An AI tool that can connect to Linear, set up with a one-time login
+    - The Codex command line tool, if you use the setup steps in SKILL.md
+  output:
+    - name: Setup steps
+      contains: How to connect Linear and log in, shown only when the connection is not set up yet.
+    - name: Plan check
+      contains: Your goal, team, project, priority, labels and due dates, confirmed before any change is made.
+    - name: Read results
+      contains: The issues, projects or comments your AI looked up first to understand what already exists.
+    - name: Created or updated issues
+      contains: The new or changed tickets, with the fields you asked for filled in.
+    - name: Summary
+      contains: What changed, what is still blocked or missing, and suggested next actions.

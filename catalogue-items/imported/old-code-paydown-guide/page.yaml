@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It chains many code methods and the risks grow with the size of the code.
 new_slug: old-code-paydown-guide
 name: Old code paydown guide
-summary: Give it a large old codebase. Get a safe plan to make it legible,
-  bounded and resilient, step by step.
+summary: Plan a safe cleanup of an old codebase nobody dares touch, with no rewrite. You get eight phases and a tracker you can resume.
 job: test-and-fix-code
 headline: Old code paydown guide
-subhead: A safe plan for fixing an old codebase that everyone is afraid to
-  touch, without a rewrite. The old system keeps shipping while you improve it
-  in place.
+subhead: A safe plan for fixing an old codebase that everyone is afraid to touch, without a rewrite. The old system keeps shipping while you improve it in place.
 explain: |
   A safe plan for fixing an old codebase that everyone is afraid to touch, without a rewrite. The old system keeps shipping while you improve it in place.
 
@@ -18,6 +15,10 @@ when:
   - Your team wants to rewrite and you need a safer alternative.
   - You must split a monolith but do not know where to cut.
   - You want one plan and tracker for a long cleanup spread over months.
+not_for:
+  - "You have a fresh prototype built quickly with AI: use improve-code-quality instead."
+  - "You are starting a new project from scratch: use design-code-architecture for the structure."
+  - "Your code is small enough to paste into one chat: ask your AI to fix it directly, or ask a developer to review it."
 you_give:
   - Access to the codebase or a description of it
   - The areas that hurt most
@@ -29,7 +30,36 @@ you_get:
   - A tracker you can resume
   - Architecture notes with suggested boundaries
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Use an AI coding agent that can read and write files in your git repo and run your tests. A plain chat will not do.
+  - "Add the skill to your agent, then say: Use the remove-technical-debt skill on this project."
+  - Answer the questions it asks before each phase. It will not skip ahead without your answers.
+  - Check that the Phase 1 tests pass before you accept any later change.
+  - Review the files in your docs/ folder after each phase. They hold your progress.
+  - To resume later, start a new session and ask it to continue from REMOVE-TECHNICAL-DEBT-PLAN.md.
+output_sample:
+  input:
+    - Access to your codebase (or a description of it)
+    - The parts that hurt most
+    - Your team size and release schedule
+    - Your existing tests or docs (optional)
+  prerequisites:
+    - An AI coding agent that can read and write files in your git repo
+    - A docs/ folder in your project
+    - A way to run your tests
+  output:
+    - name: TESTING.md
+      contains: "The safety net: where tests were added around the code you plan to change, and what each test checks."
+    - name: TECH-DEBT.md
+      contains: A running log of debt found in each phase, what was fixed, and what was left.
+    - name: REMOVE-TECHNICAL-DEBT-PLAN.md
+      contains: The tracker for all eight phases, with your answers and progress, so you can stop and resume later.
+    - name: Phase 1 safety net map
+      contains: Where to start, which change points need tests first, and the first test for each.
+    - name: Phase 2 to 4 changes
+      contains: Named refactorings, readability fixes and simpler modules, done on the code you touch.
+    - name: Phase 5 dependency boundary
+      contains: A line between your business rules and your frameworks, with notes on what to move.
+    - name: Phase 7 integration point review
+      contains: The places where your code talks to other systems, and how to make each safer under stress.
+    - name: Phase 8 bounded contexts
+      contains: Suggested areas to split a large monolith into, with the reason for each cut.

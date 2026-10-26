@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts many messages and drafts replies.
 new_slug: inbox-triager
 name: Inbox triager
-summary: Run it on your recent email. Get messages sorted, senders checked and
-  reply drafts. It never sends.
+summary: "Triage your inbox with AI: sort recent email, check new senders and get reply drafts in your voice. It never sends a thing."
 job: organise-work
 headline: Inbox triager
-subhead: Your recent email sorted by what needs you, with new senders checked
-  and reply drafts waiting. It never sends anything, so you stay in control of
-  every message.
+subhead: Your recent email sorted by what needs you, with new senders checked and reply drafts waiting. It never sends anything, so you stay in control of every message.
 explain: |
   Your recent email sorted by what needs you, with new senders checked and reply drafts waiting. It never sends anything, so you stay in control of every message.
 
@@ -19,6 +16,10 @@ when:
   - You want reply drafts in your voice to approve or edit.
   - You want a short morning summary of what matters.
   - You need pitches and requests judged against your own rules.
+not_for:
+  - You have not run the inbox setup yet. Run the inbox setup skill first, because this skill stops without its files.
+  - You share an inbox with a team. Use a plain triage prompt in your AI and go through the messages by hand.
+  - You want email sent for you. This skill only writes drafts, so send them yourself or ask a person to help.
 you_give:
   - Access to your recent emails
   - The setup files from the inbox rules interviewer
@@ -30,8 +31,35 @@ you_get:
   - Draft replies, never sent
   - A short report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your email and save files.
+  - Check first that your AI is connected to your email (Gmail, Outlook or IMAP). The skill stops if it is not.
+  - Check that your Email folder has the sorting scheme and reply voice files from the inbox setup skill.
+  - Paste the skill into your AI, or upload the skill folder.
+  - Say "triage my inbox". Add how far back to look if you want.
+  - Read the report first, then open your reply drafts. Edit and send the ones you want yourself.
+output_sample:
+  input:
+    - Access to your recent email through an email connector
+    - Your sorting scheme and reply voice files from the inbox setup
+    - Your rate card and evaluation rules (optional)
+    - How far back to look (optional)
+  prerequisites:
+    - An AI that can read your email, such as through a Gmail, Outlook or IMAP connector
+    - The files made by the inbox setup skill, saved in your Email folder
+    - An AI that can save files
+  output:
+    - name: Overview
+      contains: Two or three sentences on what came in and whether anything is urgent.
+    - name: Stats
+      contains: Counts of emails processed, drafts made, items that need action and items skipped.
+    - name: Action Needed
+      contains: Overdue items, decisions, drafts to review and deadlines.
+    - name: Quick Reference
+      contains: One line per email, in order by sender, with a short summary and a recommendation.
+    - name: Detailed Cards
+      contains: Opportunities, active threads and flags, each with the sender, subject, category, advice and key context.
+    - name: Footer
+      contains: When the report was made and a summary of what changed in your files.
+    - name: Reply drafts
+      contains: Replies in your voice saved in your email app, never sent.
+    - name: Triage log
+      contains: A dated file in your Email folder that records this run.

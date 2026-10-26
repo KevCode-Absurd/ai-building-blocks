@@ -1,6 +1,6 @@
 new_slug: launch-scope-halver
 name: "Launch scope halver"
-summary: "Paste your launch list, date and budget. Get the same date with half the scope: a core and a parked list."
+summary: "Cut your launch scope in half without moving the date or budget. Paste your list and get a ranked core plus a parked list."
 job: build-product
 thinking: medium
 thinking_why: "It needs judgement about what a first customer truly needs."
@@ -17,6 +17,10 @@ when:
   - "The launch is slipping and the list keeps growing."
   - "You have more items than the team has hours."
   - "You need to tell a partner what ships on the date."
+not_for:
+  - "Your scope is fixed by a contract: talk to the client and agree a change, since this tool cuts scope."
+  - "Both the date and the budget can move: set a priority between them first, then come back to cut the list."
+  - "You want the full version with every check: use the Launch scope cutter."
 
 you_give:
   - "Your launch list, with small items too"
@@ -34,6 +38,25 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - Your launch list, with small items too
+    - Your date and budget
+    - Hours or people available (optional)
+    - Promises you have already made (optional)
+  output:
+    - name: DATE AND BUDGET
+      contains: Both numbers, marked as fixed so only the scope changes.
+    - name: HEART
+      contains: One sentence on who the product helps and what it helps them do.
+    - name: CORE (ranked)
+      contains: The items that stay, in order of first customer need, with a line where time or money runs out.
+    - name: PARKED
+      contains: Every cut item, each with what would bring it back.
+    - name: PROMISES AT RISK
+      contains: Any promise that needs a cut item, and whether to keep the item or change the promise.
+    - name: MISSING
+      contains: Gaps in what you gave, marked so nothing is made up.
 
 how_it_works:
   - title: "Lock the date and budget"
@@ -97,8 +120,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "Hours for each item"
-  - "Every promise made to customers or partners"
+    - "Hours for each item"
+    - "Every promise made to customers or partners"
 
 terms:
   - term: "Parked list"

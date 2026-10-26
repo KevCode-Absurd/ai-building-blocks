@@ -1,6 +1,6 @@
 new_slug: commodity-trap-checker
 name: Commodity trap checker
-summary: Paste your offer and the options buyers compare it with. Get a verdict on price comparison and the first thing to change.
+summary: Check if buyers see your offer as a commodity. Paste your offer and rivals, get a verdict, a price-war sum and the first row to change.
 job: make-offer
 thinking: medium
 thinking_why: It compares your offer with others on fixed rows and does a short sum. It needs the buyer's view, so reviews help.
@@ -14,6 +14,10 @@ when:
   - Buyers keep asking for a discount or quote you against someone cheaper.
   - Your page reads like everyone else's in your field.
   - You are about to cut your price to win business.
+not_for:
+  - "You have no offer written down yet: use the Hidden offer finder first, then come back."
+  - "You sell in a market where only price matters and you cannot change the offer: this will only confirm that, so work on your costs instead."
+  - "You want to know if your market is worth entering: use the Starving crowd market scorer."
 you_give:
   - "Your offer: what is included, price, terms, how you sell it"
   - The options a buyer might compare you with, or let it find the common ones (optional)
@@ -28,6 +32,29 @@ how_to_use:
   - Paste your offer and the names or pages of two to four alternatives, including doing it themselves.
   - Add reviews that say why buyers chose you, or what else they looked at.
   - Pick the row to change and take it to Offer trim and stack builder or Value equation scorer.
+output_sample:
+  input:
+    - "Your offer: what is included, price and terms"
+    - The options buyers compare you with (optional)
+    - Reviews or sales call notes (optional)
+    - Your price and cost per sale (optional)
+  output:
+    - name: The options
+      contains: You and the two to five options a buyer sets beside you, including doing nothing and doing it themselves.
+    - name: Side by side
+      contains: A table of rows like price, proof, time and risk, marked same or different and seen in 30 seconds or not.
+    - name: Verdict
+      contains: The count of visible differences and a call of commodity, weak or distinct.
+    - name: What they will compare
+      contains: The thing buyers fall back on when the rows match.
+    - name: Price war sum
+      contains: Price, cost, margin and the margin left if you match a cut.
+    - name: First row to change
+      contains: The one row to change, what it costs and why rivals will not copy it fast.
+    - name: Missing
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the result failed, or none.
 how_it_works:
   - title: Lines up the options
     text: Puts you beside two to five alternatives, including doing nothing.

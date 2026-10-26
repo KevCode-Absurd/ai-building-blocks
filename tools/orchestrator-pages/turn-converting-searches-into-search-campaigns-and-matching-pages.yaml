@@ -1,6 +1,6 @@
 new_slug: turn-converting-searches-into-search-campaigns-and-matching-pages
 name: Turn converting searches into Search campaigns and matching pages
-summary: Give it your Google search terms and products. Get winners and negatives sorted, new Search campaigns with ads, and page plans.
+summary: Turn your Google Ads search terms into Search campaigns. Sort winners from waste, get ads written, and plan the page each ad group lands on.
 job: run-google-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your Shopping campaigns convert, and you want to win the same buyers on Search.
   - Your search terms report is long and you do not know which terms to keep or block.
   - You are starting non-brand Search and want to begin from terms that already sell.
+not_for:
+  - "Your account has no Shopping or Performance Max sales yet: fix your product feed and conversion tracking first, then come back."
+  - "You only want to check if a drop in sales came from your ads: use the Ad sales drop analyst."
+  - "You want a plain write-up of how your ads did: use the Ad results report writer."
 you_give:
   - Search terms reports from Shopping, Performance Max and Search, with clicks, conversions and cost
   - Your break-even cost per sale, or your order value and margin
@@ -30,6 +34,27 @@ how_to_use:
   - Export your search terms reports and paste them in, with your break-even cost per sale.
   - When it pauses, add the negatives in Google Ads and save the winning terms in a sheet with your products and offer. Then tell it to carry on.
   - Check the headlines against Google's 30 character limit, then build the pages in the order it gives.
+output_sample:
+  input:
+    - Search terms reports from Shopping, Performance Max and Search, with clicks, conversions and cost
+    - Your break-even cost per sale, or your order value and margin
+    - Your product list with key benefits
+    - Your brand name and its misspellings
+    - Your offer and your buyer (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Search term sorter
+      contains: Winning terms with match types, a negative keyword list with levels, feed fixes and a waste score out of 100.
+    - name: Your pause
+      contains: The point where you add the negatives in Google Ads and save the winners in a sheet with products and offer.
+    - name: Non-brand Search campaign builder
+      contains: Keyword groups, ad groups with headlines and descriptions, a category plan and free assets to add.
+    - name: Page type and layout planner
+      contains: A page type for each ad group, section order, proof placement and the pages to build first.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Search term sorter
     text: Tags every term by what the searcher wants and what it earned. It picks winners, builds negatives at the right level, and flags brand terms in cold campaigns.

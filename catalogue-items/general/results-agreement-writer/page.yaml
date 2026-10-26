@@ -1,6 +1,6 @@
 new_slug: results-agreement-writer
 name: "Results agreement writer"
-summary: "Describe a job to hand off or a deal to settle. Get a one-page agreement on results, limits, help, review and consequences."
+summary: "Write a results agreement for a job you hand off or a deal you settle. You get one page on results, limits, help, review and what follows."
 job: lead-people
 thinking: medium
 thinking_why: "It turns your description into five fixed parts and scans for lines that tell people how to work."
@@ -14,6 +14,10 @@ when:
   - You are handing a job to a team member, a child, a contractor or a volunteer.
   - Two sides are about to agree on a deal and want the same picture of success.
   - A past handoff went wrong because nobody agreed what done meant.
+not_for:
+  - You need people to follow set steps, such as safety rules or training. Use a step-by-step procedure your team signs off.
+  - You need a legal contract. Ask a lawyer, because this page is not a contract.
+  - You only want to sort out what to do first. Use the Urgent versus important sorter, then come back.
 you_give:
   - The job or deal, with what, who and when
   - How experienced the owner is, or what the other side cares about (optional)
@@ -29,6 +33,30 @@ how_to_use:
   - Read the results line first. If you could not check it by looking, counting or reading, ask for a rewrite.
   - Go through the agreement with the owner. Ask them to say it back using the card.
   - Hold the review date. Offer help only the way you agreed.
+output_sample:
+  input:
+    - "The job or deal: what needs doing, who is involved and by when"
+    - How experienced the owner is, or what the other side cares about (optional)
+    - An earlier plan or sorted task list (optional)
+  output:
+    - name: Agreement type and final say
+      contains: Whether it is a handoff or a two-sided deal, and who decides if people disagree.
+    - name: Results
+      contains: What must be true by when, written so someone can check it by looking, counting or reading.
+    - name: Guidelines
+      contains: The few real limits, plus the known traps in plain words.
+    - name: Resources
+      contains: The people, money, tools and access on offer, and the rule for asking for help.
+    - name: Accountability
+      contains: Review dates, the measure, and the owner judging their own work first.
+    - name: Consequences
+      contains: What follows good results and poor results, in money, recognition, opportunity or responsibility.
+    - name: Exit and trust clauses
+      contains: "For two-sided deals only: how to part without damage and how to flag trouble early."
+    - name: Say-it-back card
+      contains: Five short lines the owner can answer without notes.
+    - name: Checks missed
+      contains: One line for each check the draft still misses, or none.
 how_it_works:
   - title: Picks the type
     text: One person owns a job, or two sides share a deal, with the final say named.

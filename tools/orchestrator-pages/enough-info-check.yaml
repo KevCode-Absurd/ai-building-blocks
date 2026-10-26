@@ -1,6 +1,6 @@
 new_slug: enough-info-check
 name: Check you know enough before you act
-summary: Describe what you are about to do. Get what you know tested with hard questions, and a learn, borrow or pass plan.
+summary: Check what you know before you act. Get hard questions, an honest score and a learn, borrow, start small or pass plan for the first week.
 job: think-and-decide
 thinking: high
 thinking_why: It has to test your claims honestly, including the ones you feel sure about. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to act in a field you have mostly read about.
   - You are thinking of hiring an expert and want to do it safely.
   - You want to know which areas are worth building real skill in over the next few years.
+not_for:
+  - "You face a routine choice with a clear precedent or a small choice you can undo: just check the fact directly or ask one expert."
+  - "You only want to judge one adviser's advice: use the Advice credibility checker."
+  - "You want to test a business idea with real people: use the Smallest test picker."
 you_give:
   - What you are about to do and the field it sits in
   - What you have done, studied or read about it
@@ -29,6 +33,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Answer the hard questions from memory. Say so when you are guessing.
   - Do the first week of the plan and book the retest.
+output_sample:
+  input:
+    - What you are about to do and the field it sits in
+    - What you have done, studied or read about it
+    - Your answers to the hard questions, from memory
+    - The adviser you would rely on and how they are paid (optional)
+  prerequisites:
+    - An AI that can work through steps in order and save a file for each step, such as Claude with the handoff pack files
+  output:
+    - name: outputs/step-01-circle-of-competence-mapper.md
+      contains: Each part of the topic rated known, partly known or not known, with your edge named.
+    - name: outputs/step-02-real-knowledge-tester.md
+      contains: Six hard questions, your answers marked real, partial or only talk, and the gaps as questions.
+    - name: outputs/step-03-advice-skin-in-the-game-checker.md
+      contains: Who pays if your adviser is wrong, who gains, and how far to trust the advice.
+    - name: outputs/step-04-learn-borrow-or-pass-planner.md
+      contains: Your path (learn, borrow, start small or pass), a first-week plan and a retest date.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Maps your circle
     text: Splits the topic into parts, rates each by evidence and names the edge.

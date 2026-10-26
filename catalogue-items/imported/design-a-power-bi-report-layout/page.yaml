@@ -1,26 +1,105 @@
-new_slug: design-a-power-bi-report-layout
-name: Design a Power BI report layout
-summary: Plan Power BI charts, filters and pages. Help people find the facts they need.
-job: design-work
-headline: Design a Power BI report layout
-subhead: Share your report goals, fields and users. Match each question to a chart and page. Get a layout and test plan.
-explain: Share your report goals, fields and users. Match each question to a chart and page. Get a layout and test plan.
-when:
-  - You want to design a Power BI report layout.
-you_give:
-  - The audience, decisions, fields, KPI definitions, brand rules and accessibility requirements.
-you_get:
-  - A report layout and interaction specification with desktop, mobile and usability checks.
-how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
-how_it_works:
-  - title: Define decisions and data
-    text: Connect the audience’s questions to metric definitions, data grain and report constraints.
-  - title: Choose visuals and interactions
-    text: Specify chart roles, filter scope, drill-through, navigation and mobile stacking.
-  - title: Specify validation
-    text: Check readable labels, alternative text, keyboard use and realistic user tasks.
 thinking: medium
 thinking_why: It weighs your evidence and follows a specific method.
+new_slug: design-a-power-bi-report-layout
+name: Design a Power BI report layout
+summary: Plan your Power BI report layout. Match each question to a chart and page, set filters and phone views, and get a test plan.
+job: design-work
+headline: Design a Power BI report layout
+subhead: Tell your AI who reads the report, what they decide and which numbers matter. It matches each question to a chart, lays out each page, sets filters and drill-through, and plans the phone view and a user test.
+explain: |
+  A report built chart by chart ends up with twenty visuals and no clear answer. This skill starts from the questions people ask. It picks one visual for each question and drops any chart that answers none. The result is a Power BI report layout your builder can follow.
+
+  Your AI uses plain chart rules: bars to compare, lines for trends, stacked bars or treemaps for parts of a whole. It sets KPI cards, a main visual and supporting visuals for each page. Then it covers slicers, page and report filters, drill-through, navigation and how visuals stack on a phone.
+
+  It designs the report. It does not build it, write DAX or fix a slow model. You build from the layout in Power BI Desktop, then run the test tasks it writes with two or three real users.
+when:
+  - You are about to build a Power BI report and want the layout agreed first.
+  - Your current report has too many charts and nobody finds the answer.
+  - An executive wants a one-page view and an analyst wants drill-down from the same data.
+  - People will open the report on a phone.
+not_for:
+  - "Your report is slow to open or refresh: use the Diagnose a slow Power BI report."
+  - "Your tables, links or storage modes look wrong: use Review a Power BI data model."
+  - "You first need to decide which metrics matter, or want a dashboard outside Power BI: use the KPI dashboard designer."
+  - "You want the finished report file: this gives a layout to build from, not the Power BI file itself."
+you_give:
+  - Who reads the report and what decisions it supports
+  - The key numbers (KPIs) and how each is worked out
+  - The main fields in your data, and how often they refresh
+  - How people open it, such as desktop, phone or a meeting screen
+  - Brand colours and accessibility needs (optional)
+you_get:
+  - A table that matches each question to a measure, a chart and a page
+  - A layout for each page, with KPI cards, main visual and filters
+  - Rules for filters, drill-through and navigation
+  - A phone layout that says what stacks and what is dropped
+  - A test plan with tasks and a quality checklist
+how_to_use:
+  - Open Claude, ChatGPT or Gemini. Paste the skill into a new chat, or add it to your AI first.
+  - Describe who reads the report and the decisions they make. List your KPIs, main fields and where people open it.
+  - Answer the one round of questions it asks. Anything you skip is marked MISSING, and it names the choices that depend on it.
+  - Check the question table first. Delete any chart that answers no question.
+  - Build the report in Power BI Desktop from the layout, then run the test tasks with two or three real users.
+how_it_works:
+  - title: Gather the brief
+    text: It asks once for the decisions, audience, KPIs, fields, devices and brand rules, and marks gaps as MISSING.
+  - title: Map questions to visuals
+    text: It picks one chart type per question, with a one-line reason, and tags each to a page.
+  - title: Lay out each page
+    text: It places the title, KPI cards, main visual, supporting visuals and filters, and cuts what answers no question.
+  - title: Specify filters and navigation
+    text: It sets slicers, filter levels, cross-filtering, drill-through targets, the back button and page order.
+  - title: Specify the phone layout
+    text: It says which visuals stack, which are dropped and how big tap targets are.
+  - title: Write the test plan
+    text: It turns your questions into test tasks and adds a checklist for clarity, access and speed.
+output_shape: |-
+  1. Summary: <purpose, audience, main design choices>
+  2. Question map
+     | Question | Measure | Chart and why | Page |
+     | <what people ask> | <KPI> | <type, one-line reason> | <page> |
+  3. Page layouts
+     Page <n>: <title>
+       KPI cards: <list>   Main visual: <type, story>   Supporting: <2 to 3 visuals>   Filters: <slicers>
+  4. Filters and navigation: <slicers, filter levels, drill-through, back button, page order>
+  5. Phone layout: <what stacks, what is dropped, tap size>
+  6. Test plan: <task list> and <checklist>
+  Next step: <build, then test with real users>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - Who reads the report and what they decide
+    - Your key numbers and how each is worked out
+    - Your main data fields and refresh rate
+    - How people open the report
+  output:
+    - name: Question map
+      contains: Each question matched to a measure, a chart type with its reason, and a page.
+    - name: Page layouts
+      contains: For each page, the title, KPI cards, main visual, supporting visuals and filters.
+    - name: Filters and navigation
+      contains: Slicers, filter levels, cross-filtering, drill-through targets, back button and page order.
+    - name: Phone layout
+      contains: Which visuals stack, which are dropped and the tap size.
+    - name: Test plan
+      contains: Test tasks drawn from your questions, plus a checklist for clarity, access and speed.
+    - name: Next step
+      contains: Build the report in Power BI Desktop, then test with two or three real users.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code, files or paid tools are needed.
+  inputs:
+    - A list of the questions people ask today, in their own words
+    - Your brand colours as hex codes
+    - A screenshot of your current report
+    - A short list of your fields and their types
+terms:
+  - term: KPI
+    meaning: A key number you track, such as monthly sales or on-time delivery.
+  - term: Slicer
+    meaning: A control on the page that lets people filter the visuals, such as a date or region picker.
+  - term: Drill-through
+    meaning: Clicking a value to open a detail page filtered to that value.
+  - term: Cross-filtering
+    meaning: Clicking one chart to filter the other charts on the page.

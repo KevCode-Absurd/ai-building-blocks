@@ -1,6 +1,6 @@
 new_slug: best-offer-page-and-ad
 name: "Find your best offer and write the page and ad"
-summary: "Give it your brand file and live prices. Get an offer to try, an article-style page, a check and a matching ad."
+summary: "Find the offer worth testing, then get an article-style page, a 30-point check and a matching ad. Built from your brand file and live deals."
 job: make-offer
 
 headline: "Find the offer worth testing and sell it with a page and ad that read like an article"
@@ -15,6 +15,10 @@ when:
   - Your site and ads show different deals and you're not sure which one is real.
   - You want to test a new offer but don't know which one to try.
   - Readers click through to your page from an ad that reads like a news story.
+not_for:
+  - You have no live deals to check. Skip the offer step and start with the Article-style landing page writer.
+  - You already chose your offer. Use the Article-style landing page writer, then the 30-point landing page checker.
+  - You only need to review a page you already have. Use the Landing page conversion reviewer.
 
 you_give:
   - Your brand file, with prices, deals and terms
@@ -29,11 +33,33 @@ you_get:
   - An article-style ad with one claim, and an image brief
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Your brand file, and a list of every deal live right now, with where you saw it.
-  - It works step by step and saves each result. Fix any clash it finds before you launch. Check the offer's price and terms against your own records.
-  - Make the five fixes from the check, then use the ad and image brief.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md". This needs an AI that can read and save files.
+  - Add your brand file and a list of every deal live now, with where you saw each one.
+  - Let it work step by step. Fix any clash it finds before you launch, and check the price and terms against your own records.
+  - Make the five fixes from the 30-point check. Make sure the ad and page both carry a clear Ad or Sponsored label, and check your platform's ad rules.
+  - Use the ad copy and the image brief to build your ad.
+output_sample:
+  input:
+    - Your brand file, with prices, deals and terms
+    - Everything live now, such as ads, pop-ups and site offers, and where you saw each
+    - Who the offer is for (optional)
+    - Customer reviews (optional)
+    - Your costs and margin floor (optional)
+  prerequisites:
+    - An AI that can read files, so it can follow HANDOFF.md and save each step's result
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: step-01-hidden-offer-finder.md
+      contains: Your live deals, the clashes between them, and three offers to try first, each worded three ways.
+    - name: step-02-article-landing-page.md
+      contains: An article-style page labelled as an ad, with ten sections and an offer block showing price and terms.
+    - name: step-03-landing-page-30-point-checker.md
+      contains: Thirty yes-or-no checks with quoted evidence, five ranked fixes and a score out of 100.
+    - name: step-04-article-style-image-ad-writer.md
+      contains: The ad headline, main text, one claim and an image brief that sends people to the checked page.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Finds the offer
@@ -74,16 +100,16 @@ example:
   output: |
     LIVE DEALS
     Ad: 61% off | Pop-up: 55% off | Clash: two discounts
-    
+
     OFFERS TO TRY FIRST
     1 First box $29.99, then $49.99 every 4 weeks, said plainly | Buyer: the price doubter
-    
+
     ARTICLE-STYLE PAGE
     Label: Advertisement | Offer block: $29.99 first box, renews at $49.99
-    
+
     30-POINT CHECK
     No 27 (deal-breaker): pop-up says 55%. Fix: one figure everywhere. Score: 68/100
-    
+
     ARTICLE-STYLE AD
     Claim: the first box is $29.99 | Image brief: a torn pack on a kitchen table
 

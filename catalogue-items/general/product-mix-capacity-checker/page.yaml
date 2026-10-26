@@ -1,55 +1,110 @@
 new_slug: product-mix-capacity-checker
 name: Product mix capacity checker
 headline: Product mix capacity checker
-summary: A proposed product mix contribution and capacity check
+summary: Check if a plan for two products fits your tightest machine or team. Get hours needed, hours short or spare, and total contribution.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A proposed product mix contribution and capacity check. Share owner-selected quantities for two products, verified unit contributions, bottleneck hours per unit and available qualified bottleneck hours.
+subhead: Give it the units you plan to make of two products, the contribution on each unit, the hours each unit takes on your tightest machine or team, and the hours you have. It adds up the hours needed and tells you if you are over or under. You also get the total contribution.
 explain: |-
-  A proposed product mix contribution and capacity check.
+  Most plants and teams have one resource that runs out first. It might be one machine, an oven, a packing line or a skilled person. If your plan needs more hours on it than you have, the plan cannot be done as written, however good the margins look. This product mix capacity checker tests one plan against that limit.
 
-  Manufacturing contribution plans. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+  For each product it multiplies units by hours per unit. It adds the two, then compares the total with the hours you have. A negative result means overload. A positive result is spare time. It also adds up contribution, which is price less the cost that changes with each unit. Fixed costs stay out, so they are not counted twice. Total contribution is not profit.
+
+  The skill tests the mix you pick. It does not search for the best mix. Practice numbers, not a real plant: 30 units of product A at 10 contribution and 2 hours each, and 10 units of B at 15 and 5 hours. That needs 60 + 50 = 110 hours. With 100 hours available, the plan is 10 hours over. Total contribution is 300 + 150 = 450. Cut B to 5 units and you need 85 hours, with 15 to spare, and contribution is 375.
 when:
-  - You need a proposed product mix contribution and capacity check.
-  - You work on manufacturing contribution plans and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are deciding whether to add a second product to a line that is already busy.
+  - A customer asks for a big order, and you want to know if your tightest machine can take it.
+  - A sales plan promises more units of one product, and you want to check the hours it needs.
+  - You want to see how much contribution you give up if you cut back one product to fit the hours.
+not_for:
+  - You want the best mix. This tests a mix you choose. It does not find the best one.
+  - You have more than two products, or more than one limit, such as a machine and a material. This covers two products and one bottleneck, so other limits stay open questions.
+  - You want cost per good unit after waste. Use the Manufacturing yield cost bridge first, then bring the contribution here.
+  - Your limit is billable staff hours in a service team. Use the Service utilization margin builder.
 you_give:
-  - Owner-selected quantities for two products, verified unit contributions, bottleneck hours per unit and available qualified bottleneck hours.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The units you plan to make of each of two products in the period (your plan)
+  - The contribution per unit for each, which is price less the costs that change with each unit (from your costing)
+  - The hours each unit takes on your tightest machine or team (from routing sheets, time logs or the floor)
+  - The hours you have on that machine or team in the period, after breaks, setup and repairs
+  - Your own planning spreadsheet (optional)
 you_get:
-  - A proposed product mix contribution and capacity check.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Hours needed for each product and in total
+  - Hours short or spare against the hours you have
+  - Contribution for each product and in total
+  - A clear note when the plan is over capacity, so it is not called feasible
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the units, the contribution per unit, the hours per unit and the hours available. Say what the period is, such as one week, and the currency. Name the bottleneck, such as the packing line.
+  - Ask in plain words, such as does this plan fit in 100 hours, and what if we make fewer of product B?
+  - Check one line yourself. Units times hours per unit, added up, is the hours needed. Hours available less hours needed is the headroom.
+  - Read MISSING and CHECKS MISSED before you use any figure. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
-    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
-  - title: 2. Source unit contributions and avoid including the same shared fixed costs in both unit margin and period overhead
-    text: Source unit contributions and avoid including the same shared fixed costs in both unit margin and period overhead.
-  - title: 3. Multiply proposed units by bottleneck hours and contribution, then sum across the two products
-    text: Multiply proposed units by bottleneck hours and contribution, then sum across the two products.
-  - title: 4. Compare required versus available hours, report unused capacity or overload and retain the selected mix as an owner proposal
-    text: Compare required versus available hours, report unused capacity or overload and retain the selected mix as an owner proposal.
+  - title: Sets the limit
+    text: Confirms both products use the same bottleneck and the same hour definition and period. Other limits are listed as open.
+  - title: Checks unit contribution
+    text: Confirms contribution is price less costs that change with each unit, with shared fixed costs left out so they are not counted twice.
+  - title: Adds up hours and contribution
+    text: Multiplies your units by hours and by contribution for each product, then adds the two products together.
+  - title: Compares with hours available
+    text: Subtracts hours needed from hours available. A negative result is an overload, and a positive one is spare capacity.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given. It never fills a gap with zero or a guess.
 output_shape: |-
-  A proposed product mix contribution and capacity check.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Hours needed <hours> | Hours available <hours> | Headroom <hours, negative if over> | Total contribution <amount>
+
+  SCOPE AND SOURCES
+  <period, bottleneck, currency and units; source and date for each input>
+
+  PLAN TABLE
+  <product | units | contribution per unit | contribution total | hours per unit | hours needed>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures; hours and contribution added across both products>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The units you plan to make of each of two products
+    - The contribution per unit for each product
+    - The hours each unit takes on your tightest machine or team
+    - The hours you have on it in the period
+    - Your own planning spreadsheet (optional)
+  prerequisites:
+    - Your costing, so you can find price less the cost that changes with each unit
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Hours needed, hours available, headroom (negative if over) and total contribution.
+    - name: SCOPE AND SOURCES
+      contains: The period, bottleneck, currency and units, with the source of each input.
+    - name: PLAN TABLE
+      contains: One row per product with units, contribution and hours needed.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the hours and contribution added across both products.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Each material input is sourced with currency, scale, sign and period.
+  - what: Fewer units of one product
+    how: Lower the units for one product. You see the hours you free up and the contribution you give up.
+  - what: More hours available
+    how: Add a shift or overtime hours. The skill shows the new headroom, but not the extra labour cost unless you give it.
+  - what: A different period
+    how: Switch from a week to a month. Change the units and the hours available to the same period.
 judge:
   - Each material input is sourced with currency, scale, sign and period.
   - Actual records and scenarios remain separate; missing evidence is not zero.
@@ -64,15 +119,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your costing for each product, showing price and the costs that change with each unit
+    - Routing sheets or time logs that show hours per unit on the bottleneck
+    - The shift plan or maintenance calendar that sets the hours available
 terms:
+  - term: Bottleneck
+    meaning: The machine, line or team that runs out of hours first and limits what you can make.
+  - term: Contribution
+    meaning: Price less the costs that change with each unit. It is what each unit adds toward fixed costs and profit.
+  - term: Headroom
+    meaning: Hours available less hours needed. Below zero means the plan does not fit.
+  - term: Fixed costs
+    meaning: Costs that stay the same however many units you make, such as rent.
+  - term: Qualified hours
+    meaning: Hours when the machine or team can actually do the work, after breaks, setup and repairs.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real plant.

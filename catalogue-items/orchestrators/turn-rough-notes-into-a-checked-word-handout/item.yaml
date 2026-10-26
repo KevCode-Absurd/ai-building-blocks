@@ -1,6 +1,6 @@
 slug: turn-rough-notes-into-a-checked-word-handout
 name: Turn rough notes into a checked Word handout
-summary: Share the source files. Get an edited handout and a document quality review.
+summary: Turn rough notes into a clean Word handout and a PDF copy, with a page-by-page check for cut-off text and broken tables before you print or send.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -16,10 +16,8 @@ inputs:
     required: false
 outputs:
   - type: copy_draft
-  - type: feedback_notes
   - type: document
-  - type: slide_deck
-  - type: spreadsheet
+  - type: audit_report
 uses:
   - plain-english-editor
   - document-file-generator
@@ -27,13 +25,13 @@ uses:
   - pdf-maker-and-reader
 steps:
   - uses: plain-english-editor
-    note: Organize the notes around what the reader needs to understand or do.
+    note: Rewrite the notes in plain words, organised around what the reader must understand or do. Hand step 2 the edited text (the content of the handout) and a list of every change, with the note behind each claim.
   - uses: document-file-generator
-    note: Create a new Word handout using the approved content and reference style; preserve the source notes.
+    note: Create a new Word handout from step 1's edited text, with your brief saying the layout and audience, in the style of your reference document if you gave one. Keep your source notes unchanged. Hand step 3 the .docx file to convert.
   - uses: libreoffice-document-builder
-    note: Use the installed converter to export the actual Word handout to a new PDF review copy. Check the conversion result without overwriting the Word source.
+    note: Convert step 2's Word file to a PDF review copy with LibreOffice (your brief says the format), without overwriting the Word file. Hand step 4 the PDF and the conversion result.
   - uses: pdf-maker-and-reader
-    note: Render and inspect every page of the converted review PDF, checking for missing text, tables, fonts and clipping; keep the actual Word and PDF linked by source version.
+    note: Draw every page of the PDF as a picture and look for missing text, broken tables, font problems and clipped lines. Log each page, and keep the Word and PDF files tied to the same version. Hands back the page-by-page log with the final files.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

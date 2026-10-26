@@ -1,6 +1,6 @@
 new_slug: founder-ad-shoot-planner
 name: "Founder ad shoot planner"
-summary: "Give it your hooks and story bank. Get a hook-by-body matrix and a shoot list."
+summary: "Plan a founder ad shoot that makes a month of ads in one day. Give it your hooks and story bank. You get a hook-by-body matrix and a shoot list."
 job: make-video-ads
 thinking: low
 thinking_why: "It arranges hooks, bodies and locations into a list, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You have a founder who will go on camera, and want a month of ads from one shoot day.
   - Your founder ads are tiring and you need fresh versions without new scripts.
   - You keep running out of things to say and need a way to collect story material.
+not_for:
+  - "Your founder will not go on camera: use the Video ad script writer from customer quotes to write ads with other speakers."
+  - "You have no hooks, bodies or story material yet: write the scripts first with the Video ad script writer from customer quotes."
+  - "You need the shot-by-shot plan for one ad: use the Video ad shot list maker."
 
 you_give:
   - A list of scripts or story ideas, or hooks and bodies from the founder ad script builder
@@ -35,6 +39,31 @@ how_to_use:
   - List the locations and outfits you can use, and who edits.
   - Film the shoot list in order, one location at a time, and give the editor the matrix.
   - Collect new story material all month in one place, and run the planner again next month.
+output_sample:
+  input:
+    - Your hooks and bodies, or story ideas for the scripts
+    - "Your story bank: reviews, support emails, supplier calls, one-star reviews, complaints"
+    - The places you can film, and who edits
+    - How many ads you want each month (optional)
+  prerequisites:
+    - Hooks and bodies from your own scripts, or from the Video ad script writer from customer quotes (optional)
+  output:
+    - name: MATRIX
+      contains: Your hooks times your bodies, with the total ad count and a second call-to-action count only if needed.
+    - name: SHOOT LIST
+      contains: Takes grouped by location and outfit, each with the hook or body, the line and the framing.
+    - name: FIXED STORY PARTS
+      contains: The parts of your story that stay the same, such as origin, founding and the personal problem.
+    - name: RENEWABLE STORY PARTS
+      contains: The sources of new story material, such as reviews, support emails and supplier updates.
+    - name: MONTHLY COLLECTION CHECKLIST
+      contains: What to collect each month and where it is saved.
+    - name: EDIT NOTES
+      contains: Advice on cuts, a second camera, overlays and movement so the video does not tire viewers.
+    - name: PARTNERSHIP AD
+      contains: Whether to run through the founder's handle, and the condition that makes it worth it.
+    - name: REFRESH PLAN
+      contains: Which hooks to reshoot first to refresh a winning ad.
 
 how_it_works:
   - title: Builds the matrix

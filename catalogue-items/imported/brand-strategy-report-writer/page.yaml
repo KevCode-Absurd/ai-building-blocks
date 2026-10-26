@@ -2,25 +2,23 @@ thinking: high
 thinking_why: It joins many answers into one strategy that must hold together.
 new_slug: brand-strategy-report-writer
 name: Brand strategy report writer
-summary: Answer a set of brand questions. Get a full brand strategy report for
-  your business or your client.
+summary: Answer a set of brand questions and get a full brand strategy report for your business or your client, with positioning, audience and voice.
 job: plan-strategy
 headline: Brand strategy report writer
-subhead: A finished brand strategy report for your own business or a client,
-  built from answers instead of guesswork. Without a clear strategy, every logo,
-  post and ad pulls in a different direction.
+subhead: A finished brand strategy report for your own business or a client, built from answers instead of guesswork. Without a clear strategy, every logo, post and ad pulls in a different direction.
 explain: |
   A finished brand strategy report for your own business or a client, built from answers instead of guesswork. Without a clear strategy, every logo, post and ad pulls in a different direction.
 
   The skill first hands you a questionnaire, grouped into sections such as the basics, the audience and the competition. You fill it in, or paste in one a client already completed. It then acts as a senior brand strategist and turns the answers into a structured report with positioning, audience, personality and messaging. If your answers are thin, it says where the gaps are before it writes.
 when:
-  - You have a new branding client and need a discovery questionnaire to send
-    them.
+  - You have a new branding client and need a discovery questionnaire to send them.
   - A client filled in a brief and you need to turn it into a polished report.
-  - You are launching your own business and want your positioning written down
-    before you design anything.
-  - Your team keeps disagreeing about who the brand is for and needs one shared
-    document.
+  - You are launching your own business and want your positioning written down before you design anything.
+  - Your team keeps disagreeing about who the brand is for and needs one shared document.
+not_for:
+  - "Your brand already has a strategy and you only need a name or key messages: use a naming or messaging step instead."
+  - "You are not sure what is wrong with your current brand: review it first with a brand audit, then come back here."
+  - "You need logos, colors or fonts: hire a designer, and give them this report as the brief."
 you_give:
   - Brand name and what it sells
   - Answers to the questionnaire, or a completed client brief
@@ -33,7 +31,31 @@ you_get:
   - Personality and messaging direction
   - A list of gaps in your answers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Say "I have a new branding client" to get the questionnaire. Or paste a filled brief to skip to the report.
+  - Fill in the questionnaire, or send it to your client. Paste the answers back into the chat.
+  - Read the report. Check anything the AI guessed, since thin answers lead to guesses.
+  - Edit the personas and taglines, then share the report with your team or client.
+output_sample:
+  input:
+    - Your brand name and what it sells
+    - Your answers to the questionnaire, or a client's filled brief
+    - Your audience and competitors, if you know them (optional)
+    - Links to mood boards or reference images (optional)
+  output:
+    - name: Brand strategy questionnaire
+      contains: Five groups of questions on basics, audience, values, personality sliders and goals, to send to a client.
+    - name: 01 What is the brand
+      contains: Two paragraphs on the brand story and what it does, opened by a short pull-quote.
+    - name: 02 to 05 Vision, mission, values and goals
+      contains: A vision statement, a mission statement, four or five values and five or six goals.
+    - name: 06 Target audience
+      contains: An audience statement, a data row and two or three personas with goals and challenges.
+    - name: 07 and 08 Personality and voice
+      contains: A personality summary from your sliders, then a voice headline and six or seven voice qualities.
+    - name: 09 Competitor analysis
+      contains: "For each competitor: overview, strengths, weaknesses and how your brand differs."
+    - name: 10 and 11 Positioning and standing out
+      contains: A positioning narrative, a positioning statement, map axes in words and a short note on what sets you apart.
+    - name: 12 Tagline suggestions
+      contains: Three to five tagline options, each with a one-line reason.

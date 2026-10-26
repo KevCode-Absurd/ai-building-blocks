@@ -1,6 +1,6 @@
 new_slug: speed-report-translator
 name: "Speed report translator"
-summary: "Paste your PageSpeed report. Get what passes, what causes the slowness and three fixes."
+summary: "Paste your PageSpeed Insights report and get a speed report translator verdict: pass or fail per page, the slow element, and three fixes."
 job: speed-up-store
 thinking: low
 thinking_why: "It reads a report against fixed bands."
@@ -17,11 +17,15 @@ when:
   - "You ran PageSpeed and do not know what matters."
   - "Your score changes every time you test."
   - "A developer or app says your store is slow."
+not_for:
+  - "Your store is brand new and has no real-user data yet: run a lab-only check, or wait about 28 days and test again."
+  - "You want the actual fix made: use the Self-hosted store speed fixer, which takes the audit report."
+  - "You want every check in full detail: use the Store speed report reader."
 
 you_give:
   - "PageSpeed Insights results (required): the text for your homepage, one collection page and one product page. Mobile first."
-  - "Which panel is which (advised): note if the real-user panel says \"this URL\" or \"origin\"."
-  - "Three lab runs per page (optional)."
+  - A note of which panel is which, this URL or origin (optional)
+  - Three lab runs per page (optional)
 you_get:
   - "A pass, fail or cannot judge call for each page"
   - "A field score out of 100 with the sum"
@@ -33,6 +37,22 @@ how_to_use:
   - "Under it, paste your details: pagespeed insights results; which panel is which; three lab runs per page."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - PageSpeed Insights text for your homepage, one collection page and one product page
+    - "A note of which panel is which: this URL or origin"
+    - Three lab runs per page (optional)
+  output:
+    - name: FIELD SCORE
+      contains: A score out of 100 with the sum shown, and a list of pages that could not be measured.
+    - name: PAGE lines
+      contains: For each page, the LCP, INP and CLS values with their bands, and a pass, fail or cannot judge verdict.
+    - name: CAUSE
+      contains: The element that loads last and the elements that shift while the page loads.
+    - name: FIRST THREE FIXES
+      contains: Three fixes, each naming the page, the element, and whether you or a developer does it.
+    - name: RECHECK
+      contains: "When to test again: lab at once, real-user data after about 28 days."
 
 how_it_works:
   - title: "Split the report"

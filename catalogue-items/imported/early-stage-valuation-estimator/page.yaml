@@ -2,34 +2,56 @@ thinking: medium
 thinking_why: It applies several methods to thin data.
 new_slug: early-stage-valuation-estimator
 name: Early-stage valuation estimator
-summary: Give it a young company's facts. Get a value range from methods such as
-  Berkus, scorecard and the VC method.
+summary: Estimate a startup valuation range for a young company. Give it stage, traction, team and market. You get a pre-money range from two methods.
 job: money-and-investing
 headline: Early-stage valuation estimator
-subhead: A pre-money value range for a young company, with the working shown.
-  Give it the stage, traction, team and market, and you get a range built from
-  several methods, not a single guess.
+subhead: Give it your stage, traction, team and market. It values the company with the Berkus method and the VC method. You get a pre-money range with the working shown.
 explain: |
   A pre-money value range for a young company, with the working shown. Give it the stage, traction, team and market, and you get a range built from several methods, not a single guess.
 
   It first asks a few questions: pre-seed, seed or Series A, whether there is a working product, growth rate, founder track record and market size. Then it scores the company with the Berkus method, which gives up to $500k per risk area, and with a scorecard. It adds the VC method, which works backwards from a target exit value and the return investors need. It checks similar deals and combines everything into one range with reasons. Treat it as a starting point, not a verdict.
 when:
   - You are raising a seed round and need a sensible ask.
-  - You are an angel deciding what to offer.
-  - You want to compare three valuation methods side by side.
+  - You are an angel deciding what to offer a founder.
+  - You want to see two valuation methods side by side.
   - You need a range you can explain to a co-founder.
+not_for:
+  - "Your company has steady revenue and a track record: use the investment-analysis skill, which values mature companies."
+  - "You need a final price for a deal: ask an adviser or lawyer, and read the term sheet. This gives a starting range only."
+  - "You want to know if the raise fits your cash needs: use the predictive-burn-rate skill."
 you_give:
   - Stage and funding round
-  - Traction and growth rate
+  - Traction and monthly growth rate
   - Team background
+  - Amount you want to raise
   - Market size and similar deals (optional)
 you_get:
-  - A Berkus method breakdown
-  - A VC method calculation
-  - A comparison with similar deals
-  - A final valuation range with reasons
+  - A Berkus method breakdown across five risk areas
+  - A VC method calculation from exit value to pre-money value
+  - A suggested equity stake and post-money value
+  - A final pre-money range with reasons
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - "Paste your company facts: stage, traction, team, market and the amount you want to raise."
+  - Add similar deals if you have them, and say where they came from.
+  - Read the memo. Check each assumption, especially the exit value and target return.
+  - Change any input you disagree with and ask for the memo again.
+  - Use the range as a starting point for talks, not as a final price.
+output_sample:
+  input:
+    - Stage and funding round (pre-seed, seed or Series A)
+    - Traction, such as users or revenue, and monthly growth rate
+    - Team background, including any technical co-founder and past exits
+    - Market size and recent valuations of similar startups (optional)
+    - Amount of money you want to raise
+  prerequisites:
+    - Similar-deal valuations come from you, for example from a database you use. Your AI cannot check them itself.
+  output:
+    - name: Executive Summary
+      contains: The recommended pre-money valuation and the main strengths of the opportunity.
+    - name: Berkus Scorecard
+      contains: A value from $0 to $500k for each of five risk areas, with a short reason.
+    - name: VC Method
+      contains: Your exit value and target return, the math behind them, and the pre-money value that results.
+    - name: Deal Terms
+      contains: The equity stake for the money asked and the post-money valuation.

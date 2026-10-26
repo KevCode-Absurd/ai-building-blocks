@@ -1,0 +1,129 @@
+name: Feedback Synthesizer agent
+summary: Turn reviews, support tickets and survey answers into ranked themes with real quotes and clear product fixes, so you know what to build next.
+headline: Feedback Synthesizer agent
+subhead: Paste feedback from reviews, tickets, surveys or interviews. The agent cleans it, groups it into themes, counts each one and picks quotes. You get a ranked list of what users want fixed, with the evidence behind each item.
+job: understand-customers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Feedback arrives in many places and in many styles. Reviews say one thing, support tickets say another, and the loudest voice wins the meeting. This feedback synthesizer agent puts it all in one pile, groups it into themes and counts how often each theme comes up, so the decision rests on more than one angry email.
+
+  It cleans first: it removes duplicates and marks each item by source and user type. Then it tags themes, counts them and picks quotes that show each theme in the customer's own words. It also keeps rare but serious items, such as a security worry or a billing error, because a count alone would bury them. It can rank requests with a simple scoring method (RICE, which stands for reach, impact, confidence and effort).
+
+  It reads what you paste. It does not pull from review sites or connect to your help desk. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its speed and accuracy targets are not results measured by AI Blocks.
+when:
+  - Your app store reviews, support tickets and survey answers all point somewhere, and you need to see where.
+  - You are planning what to build next and need more than the loudest request to go on.
+  - Ratings dropped and you need to know which complaint is behind it.
+  - You have a list of feature requests and no way to rank them.
+not_for:
+  - "You want the reasons people buy, in their own words, from reviews or emails: use the Review reason spotter."
+  - "You want to mine social media comments: use the Comment mining analyst."
+  - "You want to plan interviews or usability tests before you collect feedback: use the UX Researcher agent."
+  - "You want each month's new reviews tracked against your last list: use the Monthly customer voice keeper."
+  - "You have fewer than about 10 pieces of feedback. Read them yourself."
+you_give:
+  - The feedback, pasted as text or CSV, from reviews, tickets, surveys or interviews
+  - Where each piece came from, such as app store, email or survey (optional but helpful)
+  - The decision it must help with, such as what goes on next quarter's roadmap
+  - Who each user is, such as free or paid, and when they wrote (optional)
+  - Your product and any ratings or score data you already have (optional)
+you_get:
+  - A cleaned count of items, with duplicates removed and the sources named
+  - Themes ranked by how many people raised them, each with 2 or 3 real quotes
+  - A short list of rare but serious items that a count would hide
+  - Feature requests scored by reach, impact, confidence and effort, if you ask
+  - Product fixes, support actions and questions to ask users next
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your feedback as plain text or CSV, with its source on each line if you can. For a big set, paste it in batches and say how many items there are.
+  - Say the decision it should help with. Add "Do not invent quotes or counts."
+  - Check the count and the themes first. Ask the AI to move any item it put in the wrong theme.
+  - Read the quotes against your own list. Every quote must appear in what you pasted.
+  - Pick the top two themes. Hand them to your team with the quotes, or run the UX Researcher agent to find out why.
+how_it_works:
+  - title: Set the question
+    text: It confirms the decision and asks once for sources, dates and user types that are missing.
+  - title: Clean the pile
+    text: It removes duplicates, tags each item by source and user, and reports the final count.
+  - title: Tag the themes
+    text: It groups items into themes and flags items that fit none, so nothing is forced into a theme.
+  - title: Count and quote
+    text: It counts each theme by items and by source, and picks quotes that appear in your text.
+  - title: Check for bias
+    text: It notes where one source or one loud user is skewing the count, and keeps rare serious items.
+  - title: Rank and recommend
+    text: It scores requests if asked, then lists fixes, support actions and the next questions.
+output_shape: |-
+  FEEDBACK SET
+    Items <count after duplicates removed> | Sources <list> | Period <dates>
+    Gaps <missing source or user type>
+
+  THEMES (ranked)
+    <theme> | <count> of <total> | sources <list>
+    Quotes "<quote>" | "<quote>"
+    Why it matters <effect on users or business>
+
+  RARE BUT SERIOUS
+    <item> | <why it counts despite low volume>
+
+  PRIORITIES (if asked)
+    <request> | reach <n> | impact <n> | confidence <n> | effort <n> | score <n>
+
+  RECOMMENDATIONS
+    Product <fix> | Support <action> | Ask users next <question>
+
+  OPEN CHECKS
+    <bias or gap> | <what to confirm>
+output_sample:
+  input:
+    - Your feedback, pasted as text or CSV, from reviews, tickets or surveys
+    - The decision it must help with
+    - The source of each item, and user type (optional)
+  prerequisites:
+    - An AI that reads pasted text or a CSV file, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Feedback set
+      contains: How many items remain after cleaning, the sources, the period and any gaps.
+    - name: Themes
+      contains: Themes ranked by count, with quotes taken from your text and why each matters.
+    - name: Rare but serious
+      contains: Low-volume items that still need attention, such as billing errors or safety worries.
+    - name: Priorities
+      contains: Feature requests scored by reach, impact, confidence and effort, when you ask for it.
+    - name: Recommendations
+      contains: Product fixes, support actions and questions to ask users next.
+    - name: Open checks
+      contains: Where one source or user type may skew the result, and what to confirm.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Ranking method
+    how: Ask for RICE, or for a plain high, medium, low rating if you want it simpler.
+  - what: Segments
+    how: Ask for the themes split by paid and free users, or by new and long-time users.
+  - what: Output for others
+    how: Ask for a one-page note for your team, or response templates for your support staff.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Theme
+    meaning: A group of feedback items that make the same point, such as "checkout is slow".
+  - term: Verbatim
+    meaning: A quote in the customer's exact words.
+  - term: RICE
+    meaning: A scoring method that rates a request on reach, impact, confidence and effort.
+  - term: NPS
+    meaning: Net Promoter Score. A survey score for how likely people are to recommend you.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Pasted text or a CSV is all it needs. An AI with a large reading window handles bigger sets in one go.
+  inputs:
+    - A date and a source on each item.
+    - Your ratings or NPS, if you have them.

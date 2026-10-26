@@ -1,6 +1,6 @@
 new_slug: sticky-note-image-ad-maker
 name: "Sticky-note image ad maker"
-summary: "Paste your story ad. Get a sticky-note photo brief, an image prompt and a blank version."
+summary: "Turn your story ad into a sticky-note image ad: a photo brief, an image prompt and a blank version, built on the rule your buyer wrote down."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your story has a house rule, reminder or workaround the narrator wrote down.
   - The problem lives on one thing at home or at a desk.
   - You want a picture with words that still looks like a normal photo.
+not_for:
+  - "You need a longer note or a list: use the handwritten note image ad maker."
+  - "The reminder lives on a phone, not on paper: use the ignored reminders image ad maker."
+  - "Your story has no rule, reminder or workaround in it: use the Problem-moment image ad maker."
 
 you_give:
   - Your approved story ad, with any rule, reminder or workaround in it
@@ -30,10 +34,44 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad. If it quotes the note, those exact words are used.
-  - Write the note yourself in thick marker, stick it where the brief says and photograph it. Or paste the prompt into your image tool.
-  - Read the note in the result letter by letter. One wrong letter makes it look fake.
-  - Look at it on your phone at arm's length. If you can't read it, use fewer words.
+  - Paste your story ad. It must be a real customer's approved account. If the story quotes a note, those exact words are used.
+  - Say if you want a real photo or a generated picture. Claude cannot draw images unless an image tool is connected. ChatGPT and Gemini can.
+  - Write the note yourself in thick marker, stick it where the brief says and photograph it. Or paste the image prompt into your image tool.
+  - Read the note letter by letter. One wrong letter makes it look fake.
+  - Check the picture on your phone at arm's length. If you cannot read it, use fewer words. Label the ad as staged or an illustration if you made the scene.
+output_sample:
+  input:
+    - Your approved story ad, with any rule, reminder or workaround in it
+    - How your buyer writes notes, such as capitals or short forms (optional)
+    - Your brand brain or ad copy from an earlier step (optional)
+  prerequisites:
+    - A real, approved customer account behind the story. Do not invent a review, quote or note.
+    - An image tool in your chat, or a phone and marker, to make the picture
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: Where and when
+      contains: The place, time, light and camera spot for the photo.
+    - name: The rule
+      contains: Whether it is a reminder, a ban or a workaround, and where in the story it comes from.
+    - name: Where it's stuck
+      contains: The thing the note is on and what is nearby.
+    - name: The note
+      contains: The colour, the pen and how many notes.
+    - name: Words on the image
+      contains: The two to eight words exactly as written, with the word count.
+    - name: Blank version
+      contains: The same scene with the note left blank.
+    - name: Line under the image
+      contains: A short plain caption of about 27 characters.
+    - name: Flags
+      contains: Any words written for the image or inferred, to read before it runs.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt with the note words in quotes once.
+    - name: How to make it
+      contains: "One line: real note, generated, or blank plus handwriting."
+    - name: Checks missed
+      contains: One line per check that failed or could not run, or none.
 
 how_it_works:
   - title: Sets the house rules

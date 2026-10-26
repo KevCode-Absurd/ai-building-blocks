@@ -1,6 +1,6 @@
 new_slug: three-look-product-photos
 name: "Get product photos in three looks from phone photos"
-summary: "Give it your website and product photos. Get a styled photo set, flash snapshots and a copy of a look you like."
+summary: "Turn phone photos into product photos for ads and your shop: a styled set, flash snapshots and a copy of a look you like. Prompts for your image tool."
 job: product-photos
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You only have phone photos and need many more for ads and your shop.
   - You like the look of someone else's photo and want that feel for your product.
   - Your product photos all look alike and you need some variety.
+not_for:
+  - "You need real customer pictures: the flash snapshots are staged, so use photos from your own customers instead."
+  - "You only want one plain studio photo set: use the Product image ad prompt writer."
+  - "You want to fix flaws in pictures you already made: use the AI visual feedback editor."
 
 you_give:
   - Your website, as a link or saved pages
@@ -31,11 +35,34 @@ you_get:
   - A check list for every picture at full size
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Your website link, your phone photos, and one photo whose look you like.
-  - Make frame 1 of each look and check it against your real photo before you make the rest.
-  - Look at every finished picture at full size, next to your real product.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
+  - "Have your inputs ready: your website link, your phone photos and one photo whose look you like."
+  - Take the prompts to your image tool. You need a tool or account that makes images, and it may be paid.
+  - Make frame 1 of each look first and check it against your real product before you make the rest.
+  - Look at every finished picture at full size. Treat the flash snapshots as staged images, not real customer photos.
+output_sample:
+  input:
+    - Your website, as a link or saved pages
+    - Photos of your real product, from the front, back and in use
+    - A photo whose look you like (optional)
+    - Customer reviews or your ad results (optional)
+  prerequisites:
+    - An image tool to run the prompts, such as GPT Image or Nano Banana, which may need a paid account
+    - An AI that can open files, so it can follow the handoff pack
+  output:
+    - name: Brand file
+      contains: Your colours, look, prices and product details, each tagged with where it came from.
+    - name: Styled photo set
+      contains: A style sheet and nine frames on a grid, each with a prompt for your image tool.
+    - name: Flash snapshots
+      contains: The flash look, one real occasion in time order, and six prompts.
+    - name: Reference look
+      contains: What is kept, swapped and dropped from your reference photo, one prompt, and the pictures ranked.
+    - name: Checks
+      contains: A list for looking at each picture at full size next to your real product.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Builds your brand file

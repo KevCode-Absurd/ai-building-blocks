@@ -1,6 +1,6 @@
 new_slug: expert-content-format-planner
 name: "Expert content format planner"
-summary: "Give it your products and what you know. Get a positioning line, 2 to 3 formats and a 4-week schedule."
+summary: "Plan expert content for your store. Give it your products and what you know. You get a positioning line, 2 to 3 formats and a 4-week schedule."
 job: grow-social
 thinking: medium
 thinking_why: "It joins your facts, a stance and a schedule into one plan. A mid-size model keeps the plan consistent."
@@ -17,6 +17,10 @@ when:
   - You sell a product with a taste, material or know-how story and you want a steady content plan.
   - You post at random and want a simple four-week plan to test.
   - You can put one person on camera, or you can make carousels without a camera.
+not_for:
+  - "You sell low-price items with no taste, material or know-how story: use a plain product feed or paid ads instead."
+  - "You want ad copy, not a posting plan: use the Story image ad writer."
+  - "You want a check of an account you already run: use the Brand social account checker."
 
 you_give:
   - Your products and category
@@ -36,6 +40,33 @@ how_to_use:
   - Search three broad buyer phrases yourself on Instagram, TikTok and YouTube. Paste the top videos you find, with topic and hook. Do this by hand once, so the pattern is clear to you.
   - Read the positioning line and fix any proof that isn't true.
   - Post the plan for four weeks before you judge anything.
+output_sample:
+  input:
+    - Your products and category
+    - What you know first-hand, or what you are still learning
+    - Who will be on camera, if anyone (optional)
+    - Hours you have free each week
+    - Top videos or carousels in your category (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Search results you gather by hand on Instagram, TikTok or YouTube (optional, but the research sheet needs them)
+  output:
+    - name: POSITIONING
+      contains: One line saying who you are, what you do, who it is for and why to listen to you.
+    - name: CORE BUYER and STANCE
+      contains: One narrow viewer, and whether you speak as the expert or as a student.
+    - name: FORMATS
+      contains: Two or three of the four formats, each with a video or carousel shape and a reason.
+    - name: RESEARCH SHEET
+      contains: Topic, hook and pattern for each top post you pasted, plus what is missing that you can add.
+    - name: 20 IDEAS
+      contains: Twenty one-line post ideas, each tied to a format and each able to work for a stranger.
+    - name: 4-WEEK SCHEDULE
+      contains: Four to six posts a week, matched to the hours you have.
+    - name: BATCH DAY
+      contains: A script day and a film day, with notes on your set and light.
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that failed and any input you did not give.
 
 how_it_works:
   - title: Writes the positioning line

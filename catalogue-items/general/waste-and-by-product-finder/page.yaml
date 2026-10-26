@@ -1,60 +1,68 @@
 new_slug: waste-and-by-product-finder
 name: "Waste and by-product finder"
-summary: "List what you throw away, leave idle or redo. Get each item priced as a possible product, reuse or saving."
+summary: "Find the money in what you throw away, leave idle or redo. Get each waste item priced, a buyer or reuse for it, and your first three actions."
 job: plan-strategy
 thinking: medium
 thinking_why: "It values each waste item and ranks them, with judgement about buyers and reuse, but the steps are fixed."
 
 headline: "Waste and by-product finder"
-subhead: List what your process throws away, leaves idle or does twice. It puts a monthly number on each item, asks who would buy it or what it could feed, and ranks the items by money recovered against effort. You get a priced list, the first three actions with owners and a re-count date.
+subhead: "Describe your process and what gets thrown away, left idle or redone. It puts a monthly number and a labour value on each item, looks for a buyer or reuse, and ranks them. You get a priced waste list, three first actions with owners and dates, and a re-count date."
 
 explain: |
-  Every process leaves something behind: scrap, offcuts, unsold stock, idle hours, repeat work. It stays hidden because it is spread across the week and nobody adds it up. Waste is also worth more than its material price, because labour went into it.
+  Every process leaves something behind: scrap, offcuts, unsold stock, idle hours, repeat work. It stays hidden because it is spread across the week and nobody adds it up. Waste is also worth more than its material price, because people spent time on it. This waste and by-product finder adds it up and asks what each item could earn.
 
-  This skill walks the whole process and lists everything thrown away, left idle or redone. It measures each in units, hours or money per month, values it by the labour that went into it as well as its price, and asks who would buy it or what it could feed. It asks what a rival wastes that you could buy cheaply, and ranks items by money recovered against effort. It notes what you already reclaim and what that costs.
+  It walks your process step by step and lists everything thrown away, left idle or redone. It gives each item a monthly figure and a labour value, then asks who would buy it or what it could feed. It also asks what a rival wastes that you could buy cheaply, and notes what you already recover and what that costs.
+
+  The last step is a ranking by money recovered against effort. A reuse that costs more than it brings back shows up as a loss, not a win.
 
 when:
-  - You throw away material, time or stock and suspect some of it has value.
-  - A step is done twice or redone because of mistakes.
-  - You have found a drain in your costs and want to turn it into money.
+  - Scrap, offcuts or unsold stock pile up and you think some of it could sell.
+  - Staff redo work or wait around, and you want to know what that costs each month.
+  - A disposal or storage bill keeps growing and nobody can say what is in it.
+  - You costed your steps and found a drain you now want to turn into money.
+
+not_for:
+  - "Your process is slow, not wasteful. Use the process waste finder to mark each step value or waste and find the waiting."
+  - "You do not know what each step costs yet. Run the step cost tracker first, then bring its report here."
+  - "You are clearing out one pile of stock once. This is built for waste that comes back every month."
+  - "The waste may be hazardous or regulated. It will flag this, but check the disposal and resale rules yourself before you act."
 
 you_give:
-  - A description of your process, from input to finished product
-  - What you throw away, leave idle or redo, with any amounts you know
-  - A cost report or plan from "Step cost tracker" (optional)
-  - A sales or cost sheet (optional)
+  - Your process in steps, from raw input to finished product or service
+  - What you throw away, leave idle or redo, with amounts per week or month if you know them
+  - Your labour rate per hour (optional)
+  - A cost report from the step cost tracker, disposal bills, scrap records or a sales sheet (optional)
+  - Who you already sell to, and any rules on resale or disposal (optional)
 you_get:
-  - A list of every waste item with a monthly number
-  - A value for each item, counted in labour as well as material
-  - A buyer or reuse for each, or "no use" marked
-  - The first three actions with owners and dates, and a re-count date
+  - Every waste item listed with a monthly number
+  - A value for each, counting labour as well as material
+  - A buyer or reuse for each, or "no use" where nothing fits
+  - The first three actions with an owner and a date
+  - A re-count date, 30 days away unless you set one
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe your process and walk through it from start to end.
-  - List what you throw away, leave idle or redo, with amounts if you have them.
-  - Paste any cost report from "Step cost tracker".
-  - Assign owners to the first three actions and put the re-count date in your calendar.
+  - Describe your process from start to end. Then list what you throw away, leave idle or redo. Rough amounts are fine. Say which are guesses.
+  - Add your labour rate per hour. Without it, the result counts hours and marks the money value MISSING.
+  - Paste any cost report, disposal bills or scrap records. It works from text, so you do not need to attach files.
+  - Check the ranked list against what you know. Ask one real buyer if they would take the top item, and at what price, before you spend anything.
+  - Keep the three actions or change the owners. Put the re-count date in your calendar.
 
 how_it_works:
   - title: Walks the process
-    text: Lists everything thrown away or left idle along the way.
-  - title: Lists scrap and offcuts
-    text: Counts all materials, scrap and offcuts per job.
+    text: Lists everything thrown away, left idle or redone at each step, not only what goes in the bin.
   - title: Measures each item
-    text: Puts a unit, hour or money figure per month on each.
+    text: Puts a unit, hour or money figure per month on each. It never invents a figure you did not give.
   - title: Values by labour
-    text: Values each item by the labour that went into it, not only its price.
+    text: Counts the work that went into each item as well as the material price.
   - title: Finds a buyer or reuse
-    text: Asks who would buy it or what it could feed, or marks it no use.
-  - title: Looks at rivals
-    text: Asks what a rival wastes that you could buy cheaply.
-  - title: Notes what is reclaimed now
-    text: Records what you already reclaim and what it costs.
-  - title: Ranks and assigns
-    text: Ranks by money recovered against effort and sets the first three actions.
-  - title: Checks the list
-    text: Runs its own checks and names any it missed.
+    text: Names who would buy it or what it could feed, labels ideas as ideas, or marks it no use.
+  - title: Looks at rivals and what you recover
+    text: Notes what a rival wastes that you could buy cheaply, and what you already reclaim and at what cost.
+  - title: Ranks by money against effort
+    text: Orders the items by money recovered minus the effort to recover it. Estimates are marked.
+  - title: Sets actions and a re-count
+    text: Gives the top three items an action, an owner and a date, sets the re-count date, then runs its own checks.
 
 output_shape: |
   WASTE LIST
@@ -67,22 +75,48 @@ output_shape: |
   <item> | Recovered: <figure> | Cost: <figure>
 
   WHAT RIVALS WASTE
-  <what you could buy cheaply, from the input>
+  <what you could buy cheaply, from the input, or "not known">
 
   RANKED
   1. <item> | Recovered minus effort: <figure>
 
   FIRST THREE ACTIONS
-  <action> | Owner: <name> | Date: <date>
+  <action> | Owner: <name, or "you"> | Date: <date, or "within 7 days">
 
   RE-COUNT
-  <date>
+  <date, or "30 days from today">
 
   MISSING
   <figures not given>
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your process, step by step, from raw input to finished product"
+    - "What you throw away, leave idle or redo, with amounts if you know them"
+    - "Your labour rate per hour (optional)"
+    - "A cost report, disposal bills, scrap records or a sales sheet (optional)"
+  prerequisites:
+    - "A cost report from the step cost tracker, if you have already costed each step (optional)"
+  output:
+    - name: "WASTE LIST"
+      contains: "Each item with its source step, monthly amount, the labour in it and its value."
+    - name: "BUYER OR REUSE"
+      contains: "Who would buy each item or what it could feed, or no use, with the cost to reclaim it."
+    - name: "WHAT YOU RECLAIM NOW"
+      contains: "What you already recover and what that costs you."
+    - name: "WHAT RIVALS WASTE"
+      contains: "Cheap material or goods others throw away, taken only from what you gave it."
+    - name: "RANKED"
+      contains: "Items in order of money recovered minus effort, with estimates marked."
+    - name: "FIRST THREE ACTIONS"
+      contains: "Three actions, each with an owner and a date."
+    - name: "RE-COUNT"
+      contains: "The date to measure the same items again."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Figures you did not give, and any check it could not pass."
 
 tweaks:
   - what: Amounts
@@ -122,8 +156,15 @@ works_best_with:
     - "Disposal bills or scrap records"
     - "A list of customers or neighbours who might buy"
 
+before: [step-cost-tracker]
+next: [yes-no-too-hard-call-writer, process-waste-finder]
+
 terms:
   - term: By-product
     meaning: Something left over from making your main product that has a use or a buyer.
   - term: Idle
     meaning: People, space or stock that sit unused while you pay for them.
+  - term: Offcut
+    meaning: A piece left over after you cut material to size.
+  - term: Re-count
+    meaning: Measuring the same waste items again later to see if they changed.

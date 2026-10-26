@@ -1,6 +1,6 @@
 new_slug: star-rating-review-miner
 name: "Star-rating review miner"
-summary: "Paste rivals' reviews by star. Get broken trust markers, product gaps and hot-lead phrases."
+summary: "Paste rival reviews with star ratings. Get a star rating review miner's three lists: broken trust markers, product gaps and hot-lead phrases."
 job: understand-customers
 thinking: medium
 thinking_why: "It reads reviews you paste, one star level at a time, and sorts them into three lists. A mid-size model does this well."
@@ -17,6 +17,10 @@ when:
   - You are about to write a product page and want to know what promises buyers no longer believe in your category.
   - You are choosing or improving a product and want to know what rivals' products leave out.
   - You are looking for ad hook lines from buyers who have already tried something and are still stuck.
+not_for:
+  - "You have fewer than about 100 reviews: read them yourself and treat each point as a lead, not a pattern."
+  - "You want to scrape or count reviews with a script: use a scraping tool or ask a developer, as this skill reads pasted text by hand."
+  - "You want the story behind a complaint: use the Forum and review avatar digger, which reads forum threads and reviews for buyer stories."
 
 you_give:
   - Reviews of rival products, pasted with the star rating on each and the names removed
@@ -35,6 +39,26 @@ how_to_use:
   - Paste them in groups. First all the 1-star reviews, then the 3-star, then some 5-star.
   - Tell it who you sell to, in one line, so it can tell which complaints matter to you.
   - Read the three lists. Use the first on your page, the second in your product and offer, and the third in your hooks.
+output_sample:
+  input:
+    - Rival product reviews, pasted with the star rating on each and reviewer names removed
+    - A one-line note on who you sell to
+    - Your own 1-star and 3-star reviews (optional)
+  output:
+    - name: REVIEWS READ
+      contains: Counts of reviews by star level, and whether there are enough to see repeats.
+    - name: BROKEN TRUST MARKERS
+      contains: Promises buyers no longer believe, in their exact words, with a count and how to answer each on your page.
+    - name: PRODUCT GAPS
+      contains: What rival products leave out, with exact words, a count, and whether the reviewer is in your market.
+    - name: HOT-LEAD PHRASES
+      contains: Lines from buyers who tried and failed and are still looking, ready to shape ad hooks.
+    - name: SPLITS NOTED
+      contains: Places where reviews disagree, and which buyer group you pick.
+    - name: SET ASIDE
+      contains: Complaints from reviewers outside your market that you should not build for.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none.
 
 how_it_works:
   - title: Keeps star levels apart

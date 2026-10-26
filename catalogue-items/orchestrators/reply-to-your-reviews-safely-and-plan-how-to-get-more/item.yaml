@@ -13,9 +13,9 @@ outputs:
   - {type: plan}
 uses: [customer-review-reply-writer, angry-customer-reply-checker, review-request-and-reply-planner]
 steps:
-  - {uses: customer-review-reply-writer, note: "Starts from your reviews and makes the themes and the draft replies the next step checks."}
-  - {uses: angry-customer-reply-checker, note: "Reads the drafts and the reviews from step 1 and repairs any reply that promises too much or sounds defensive."}
-  - {uses: review-request-and-reply-planner, note: "Uses the themes from step 1 and the tone settled in step 2 to set the ask and the reply templates."}
+  - {uses: customer-review-reply-writer, note: "Starts from your reviews and makes the themes and the draft replies the next step checks. It hands over both."}
+  - {uses: angry-customer-reply-checker, note: "Reads the drafts and the reviews from step 1 and repairs any reply that promises too much or sounds defensive. It hands over the repaired replies and notes on the tone."}
+  - {uses: review-request-and-reply-planner, note: "Uses the themes from step 1 and the tone notes from step 2 to set the ask and the reply templates. It hands over the plan."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/reply-to-your-reviews-safely-and-plan-how-to-get-more/skeleton.yaml

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set format but tailors each message.
 new_slug: cold-email-writer
 name: Cold email writer
-summary: Name your buyer and offer. Get cold emails, follow-ups and a sending
-  setup that gets replies.
+summary: Write cold emails, follow-ups and a safe sending setup. Give it your buyer and offer, and get a cold email sequence built to win replies.
 job: write-emails
 headline: Cold email writer
-subhead: Cold emails that read like a sharp person wrote them, plus follow-ups
-  and a sending setup that keeps you out of spam. The goal is replies that turn
-  into meetings.
+subhead: Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings.
 explain: |
   Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings.
 
@@ -18,6 +15,10 @@ when:
   - Your emails get opens but no replies.
   - You have a buyer list and a clear offer.
   - You need follow-ups that do not sound pushy.
+not_for:
+  - "You write emails to customers or sign-ups you already have: use the emails skill, which covers lifecycle email."
+  - "You need a list of prospects first: use the prospecting skill to build and check the list, then come back."
+  - "You want a call script or voicemail: use the sales-enablement skill."
 you_give:
   - Who you are writing to
   - Your offer and proof
@@ -29,7 +30,34 @@ you_get:
   - Subject line options
   - Sending setup advice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If you have a product marketing notes file, add it too.
+  - Tell your AI who you are writing to, what you want, your offer and your proof.
+  - Add any signals about the prospect, like funding, hiring or a recent post (optional).
+  - Read the emails aloud. Cut any line that sounds like marketing copy.
+  - Before you send, set up a separate sending domain and check your list. This needs a paid sending tool such as Instantly, lemlist or Outreach.
+  - Turn off open tracking and watch replies. When someone replies, stop every other message to them.
+output_sample:
+  input:
+    - Who you are writing to, with their role and company
+    - What you want from them, such as a reply or a meeting
+    - Your offer and the problem it solves for them
+    - Your proof, such as a result or case study
+    - Signals about the prospect, like funding or hiring (optional)
+  prerequisites:
+    - A tool to send the emails, such as Instantly, lemlist or Outreach. These are paid tools, so check their plans.
+    - A separate sending domain, set up before the first send
+  output:
+    - name: Cold email
+      contains: A short first email in a peer voice, with one personal opening tied to the problem and one easy ask.
+    - name: Subject lines
+      contains: A few short, lowercase subject lines that look like they came from a colleague.
+    - name: Follow-up sequence
+      contains: Three to five emails with growing gaps, each adding a new angle, ending in a breakup email.
+    - name: Sending setup advice
+      contains: Steps for secondary domains, list checks, tracking off, and an opt-out line with your postal address.
+    - name: Channel plan
+      contains: How LinkedIn, calls and email fit together, with all channels stopping once the prospect replies.
+    - name: Reply handling guide
+      contains: How to sort replies, answer fast, and book a meeting with two proposed times.
+    - name: Gaps note
+      contains: What extra detail would make the emails stronger, if you gave little to start with.

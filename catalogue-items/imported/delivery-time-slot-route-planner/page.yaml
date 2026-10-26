@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Time windows make the route puzzle much harder.
 new_slug: delivery-time-slot-route-planner
 name: Delivery time slot route planner
-summary: Give it stops with promised delivery windows. Get routes that hit each
-  window with the fewest vehicles.
+summary: Plan delivery routes that arrive inside each customer's time window. Give it your stops and slots. You get a timed route per driver.
 job: plan-supply-chain
 headline: Delivery time slot route planner
-subhead: Delivery routes that arrive inside each customer's promised window,
-  using as few vehicles as possible. Give it stops with their time slots and you
-  get a timed route for every driver.
+subhead: Delivery routes that arrive inside each customer's promised window, using as few vehicles as possible. Give it stops with their time slots and you get a timed route for every driver.
 explain: |
   Delivery routes that arrive inside each customer's promised window, using as few vehicles as possible. Give it stops with their time slots and you get a timed route for every driver.
 
@@ -18,6 +15,10 @@ when:
   - You offer two-hour windows and keep missing some.
   - You want to know how many vans you need for tomorrow's bookings.
   - Drivers must take breaks and the plan has to allow for them.
+not_for:
+  - "You only need the shortest route and have no time slots: use a plain vehicle routing step, or a map app for a handful of stops."
+  - "You need a plan for live dispatch today: treat this as a draft to check, then have your dispatcher confirm it against real traffic."
+  - "You have one driver and a few stops: sort them by slot time by hand, or use a free map app."
 you_give:
   - Stops with time windows
   - Service time at each stop
@@ -30,8 +31,29 @@ you_get:
   - Number of vehicles needed
   - Stops that miss their window
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Gather your stops with their earliest and latest delivery times, and how long each stop takes.
+  - Add travel times between stops, or the addresses. Add your vehicle count, capacity and shift hours.
+  - Say whether windows are hard (must be met) or soft (late is allowed with a penalty).
+  - Open your AI, paste the skill, then paste your stops and details. Use an AI that can run Python for larger jobs.
+  - Check the stops that miss their window and call those customers early.
+  - Treat the result as a plan to check. Confirm it before you dispatch drivers.
+output_sample:
+  input:
+    - Your stops, each with its earliest and latest delivery time
+    - How long each stop takes
+    - Travel times between stops, or the addresses
+    - Number of vehicles, their capacity and shift hours
+    - Whether windows are hard or soft (optional)
+  prerequisites:
+    - An AI that can run Python code is best, especially for more than about 25 stops
+  output:
+    - name: Problem instance
+      contains: A short recap of your customers, time horizon, vehicles, capacity and average window width.
+    - name: Solution quality table
+      contains: Total distance, total time, vehicles used, route length, window violations and average waiting time.
+    - name: Route schedule
+      contains: For each vehicle, every stop with arrival, time window, wait, service time and departure.
+    - name: Route totals
+      contains: Distance, duration and load for each vehicle route.
+    - name: Statistics
+      contains: Share of on-time arrivals, share of early arrivals that wait, and average slack in the windows.

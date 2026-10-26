@@ -16,6 +16,30 @@ use_cases:
   - "Decide what to own outright and what to rent or borrow as you grow"
   - "Hand day-to-day running to a manager while keeping a firm grip on the direction"
   - "Plan how your business can give back to the community it came from"
+not_for:
+  - "You need advice on your health or your personal money: speak to a licensed professional or a human advisor."
+  - "You want to value a business or read financial statements: use Aswath Damodaran."
+  - "You want lessons on reinvesting profit and giving at large scale: use Andrew Carnegie."
+output_sample:
+  input:
+    - The problem you know first-hand, and who else has it
+    - What you already have to start with
+    - Your product or service, and who you could sell to
+    - Any team, agents or helpers you want to train or pay (optional)
+    - The room or leader you want to be heard by (optional)
+  output:
+    - name: Facts and figures of your case
+      contains: Your starting point, what you already have and the numbers that matter, laid out first.
+    - name: Step-by-step path
+      contains: "A plan in steps: sell, show, train, own and give back."
+    - name: Questions for you
+      contains: Her first questions about your problem, your customers, your ownership and who you are lifting.
+    - name: Numbers and deadline
+      contains: What to count in a short time, such as how many you showed and how many bought.
+    - name: What to stop waiting for
+      contains: One thing she would tell you to stop waiting for, with a promise to act.
+    - name: Gaps in the record
+      contains: A line where her record is silent, with a marked reading from her 1913 speech.
 seats:
   - {seat: "Building from the ground up", asks: "What can you start with today, with what's already in your hands?"}
   - {seat: "Sales force and training", asks: "Who could you teach to sell this, and how will it change their life if they do?"}

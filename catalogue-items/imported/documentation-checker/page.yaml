@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares each claim to the real code.
 new_slug: documentation-checker
 name: Documentation checker
-summary: Give it a README or doc. Get false claims, drift from the code and weak
-  spots listed before you publish.
+summary: Check your README or docs against your code. Find false claims, broken code samples and drift before you publish.
 job: test-and-fix-code
 headline: Documentation checker
-subhead: A fact check for docs before they ship. It finds claims that do not
-  match your code, which is the typical failure when an AI writes docs from
-  memory of how APIs usually look.
+subhead: A fact check for docs before they ship. It finds claims that do not match your code, which is the typical failure when an AI writes docs from memory of how APIs usually look.
 explain: |
   A fact check for docs before they ship. It finds claims that do not match your code, which is the typical failure when an AI writes docs from memory of how APIs usually look.
 
@@ -18,6 +15,10 @@ when:
   - You changed an API and worry that the docs are out of date.
   - A code sample in the docs might not run.
   - You want a final review before a release.
+not_for:
+  - "You want the code itself reviewed: ask a developer, or use a code review tool. This checks what the docs say about the code."
+  - "You need docs written from scratch: write a first draft with your AI, then run this check on it."
+  - "You have no access to the code the docs describe: it cannot check claims it cannot see."
 you_give:
   - The README or doc to review
   - Access to the code it describes
@@ -29,8 +30,30 @@ you_get:
   - Places where docs and code disagree
   - Fixes for each issue
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat.
+  - Add the README or doc you want checked.
+  - Give your AI the code it describes. Use a tool that can read your project files, or paste the key files.
+  - 'Say: "Review this doc and report findings." It will list problems and not rewrite the doc.'
+  - Fix the false claims first. Then fix drift and filler. Run the check again after your changes.
+output_sample:
+  input:
+    - Your README or doc to review
+    - The code the doc describes
+    - Your project's own AI instructions or docs style guide (optional)
+    - Which versions you support (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - An AI that can run code, if you want code samples tested
+  output:
+    - name: False claim findings
+      contains: Each named function, flag, endpoint, config key or file path that does not exist in the code, with the real value.
+    - name: Code sample findings
+      contains: Samples whose imports, names or settings do not match the code, so they would fail on a clean machine.
+    - name: Drift findings
+      contains: Places where the README, docstrings, changelog and examples disagree with each other or with the code.
+    - name: Unsupported claims
+      contains: Speed, scale or compatibility claims that have no source in your project.
+    - name: Fix line per issue
+      contains: One sentence for each finding on how to correct it.
+    - name: Clean verdict
+      contains: A one-line note when a doc has no problems.

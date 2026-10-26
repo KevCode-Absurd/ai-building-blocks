@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It looks up official docs and reports them.
 new_slug: openai-docs-guide
 name: OpenAI docs guide
-summary: Ask how to build with OpenAI. Get current answers with citations and
-  the right model for the job.
+summary: Ask how to build with OpenAI and get current answers with links to the official docs, plus the right model for your job.
 job: build-software
 headline: OpenAI docs guide
-subhead: Current, cited answers about building with OpenAI, pulled from the
-  official developer docs at the moment you ask. Models and APIs change fast, so
-  answers from memory go stale.
+subhead: Current, cited answers about building with OpenAI, pulled from the official developer docs at the moment you ask. Models and APIs change fast, so answers from memory go stale.
 explain: |
   Current, cited answers about building with OpenAI, pulled from the official developer docs at the moment you ask. Models and APIs change fast, so answers from memory go stale.
 
@@ -18,19 +15,42 @@ when:
   - An API call fails and you want to check required fields.
   - You plan to move to a newer model and need the migration steps.
   - You want to build a ChatGPT app and need the right starting point.
+not_for:
+  - "You use another AI provider such as Anthropic or Google: read that provider's own developer docs instead."
+  - "You have no internet and no docs server: ask a developer on your team, or check the docs later when you are online."
+  - "You want someone to write and run your whole app: use a developer or a coding assistant, and use this only to check facts."
 you_give:
   - Your question about OpenAI products or the API
+  - What you are building (your use case)
   - The model you use now or want (optional)
-  - Your use case
-  - The docs server connected
 you_get:
   - An answer based on current official docs
   - Links to the pages used
   - A model recommendation
   - Migration and prompt upgrade steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web or reach the OpenAI docs.
+  - Use an AI agent that can run tools and reach the OpenAI developer docs server, such as Codex. A plain chat window cannot run the lookup tools.
+  - Connect the OpenAI docs server in your agent's settings. Check your tool's own guide for the exact steps.
+  - Add this skill to your agent, or paste its text into the chat.
+  - Ask your question. Say what you are building and which model you use now, if any.
+  - Check the links in the answer. Open the main page to confirm it matches what you asked.
+  - If you cannot connect the docs server, ask your AI to search only official OpenAI sites. Treat the answer with more care.
+output_sample:
+  input:
+    - Your question about OpenAI products or the API
+    - What you are building (your use case)
+    - The model you use now or want (optional)
+  prerequisites:
+    - An AI agent that can reach the OpenAI developer docs server
+    - Web access to official OpenAI sites, as a fallback
+  output:
+    - name: Answer
+      contains: A plain answer to your question, based on the official OpenAI docs read at the time you ask.
+    - name: Citations
+      contains: Links to the official doc pages the answer came from.
+    - name: Model recommendation
+      contains: The model that fits your use case, read from the latest model guide. A model you name is kept.
+    - name: API check
+      contains: The fields and parameters an API call needs, checked against the official API spec.
+    - name: Upgrade steps
+      contains: What to change to move to a newer model, including changes to your prompts.

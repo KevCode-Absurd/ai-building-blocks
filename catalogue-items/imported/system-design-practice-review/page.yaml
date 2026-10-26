@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: system-design-practice-review
 name: System design practice review
-summary: Share a system design. Explain your choices, compare fixes and leave
-  with a clear revision checklist.
+summary: Get a system design review that asks first, then ranks risks and gives a revision checklist. Share your design and see where it may break.
 job: study-and-practice
 headline: System design practice review
-subhead: Share your design, expected load and learning goal. It names what
-  works, then asks questions that test your assumptions. You compare options for
-  the biggest risks and get a checklist of the changes you choose to make.
-explain: Share your design, expected load and learning goal. It names what
-  works, then asks questions that test your assumptions. You compare options for
-  the biggest risks and get a checklist of the changes you choose to make.
+subhead: Share your design, expected load and learning goal. It names what works, then asks questions that test your assumptions. You compare options for the biggest risks and get a checklist of the changes you choose to make.
+not_for:
+  - "You have no design yet: use the Build with me skill to shape one first, then come back for the review."
+  - "You do not know a core idea in your design, such as caching or queues: ask your AI to teach that idea first."
+  - "Your design is a simple script with no real choices to weigh: a quick read from a teammate is enough."
+explain: Share your design, expected load and learning goal. It names what works, then asks questions that test your assumptions. You compare options for the biggest risks and get a checklist of the changes you choose to make.
 you_give:
   - A system design as a diagram, description or code.
   - Expected load, reliability needs, team limits and learning goal.
@@ -27,9 +26,28 @@ how_it_works:
   - title: Step 3
     text: Compare options, ask for your choice and record the agreed changes.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Paste your design, or describe it. Add your expected load, uptime needs and team limits.
+  - Answer the probe questions in your own words. The AI waits for your reasoning before it lists issues.
+  - Pick an option for each major issue and say why.
+  - Use the final checklist to revise your design yourself. This skill needs no code running, files or paid tools.
+output_sample:
+  input:
+    - Your system design as a diagram, a written description or code
+    - Expected load, reliability needs and team limits
+    - Your learning goal (optional)
+  output:
+    - name: Design summary
+      contains: A short restatement of your design so you and your AI agree on what is being reviewed.
+    - name: Strengths
+      contains: Two or three things your design does well, stated before any criticism.
+    - name: Probe questions
+      contains: Two or three questions that test your weakest assumptions, asked before any issues are shown.
+    - name: Issues
+      contains: Problems ordered from critical to minor, each with its area and how serious it is.
+    - name: Alternatives
+      contains: Two options for each critical or major issue, with the tradeoffs of each.
+    - name: Choice prompt
+      contains: A question asking you to pick an option and give your reason.
+    - name: Revision checklist
+      contains: Short, concrete next steps based on the changes you chose.

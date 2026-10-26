@@ -2,35 +2,57 @@ thinking: medium
 thinking_why: It orders tasks by what must finish first.
 new_slug: month-end-close-day-planner
 name: Month-end close day planner
-summary: Give it your close tasks. Get a day by day schedule and what is
-  blocking. Review with your accountant.
+summary: Plan your month-end close day by day. Give it your tasks and owners. You get a close schedule, task order and a list of what is blocking.
 job: track-numbers
 headline: Month-end close day planner
-subhead: A day-by-day schedule for closing the books, with each task in order
-  and the blockers flagged before they delay you. Review it with your
-  accountant, since it is a planning aid and not financial advice.
+subhead: Give your AI your close tasks, owners and cut-off times. It puts the tasks in order by day and shows what must finish first. It also flags blockers. Review the plan with your accountant. It is a planning aid, not financial advice.
 explain: |
   A day-by-day schedule for closing the books, with each task in order and the blockers flagged before they delay you. Review it with your accountant, since it is a planning aid and not financial advice.
 
   The plan starts in the last two or three days of the month with cut-off checks and preliminary bank work. Day 1 covers accruals, payroll, cash and depreciation. Day 2 covers revenue entries, remaining accruals, subledger reconciliations, inventory and currency revaluation. It sorts what you give it into those days, marks which tasks wait on others, and shows who is holding things up.
 when:
-  - Your close takes eight days and you want it down to five.
-  - A new finance hire needs the close order written out.
+  - Your close takes eight days and you want it shorter.
+  - A new finance hire needs the close order written down.
   - You keep finding accrual errors because tasks ran out of order.
-  - You need a status list to show who still owes what.
+  - You need a status list that shows who still owes what.
+not_for:
+  - "You need audit work, tax filing or financial advice: ask your accountant, since this only plans the order of tasks."
+  - "Your business has no monthly close: use a simple monthly spreadsheet check or ask your bookkeeper."
+  - "You want the books reconciled or the entries posted: do that in your accounting software or with your accountant."
 you_give:
   - Your list of close tasks
   - Who owns each task
   - Your accounting systems and cut-off times
   - Your target close length (optional)
 you_get:
-  - A pre-close and day-by-day checklist
-  - Task dependencies
-  - A blocker list
-  - A status tracker
-  - Questions for your accountant
+  - A pre-close checklist and a day-by-day close checklist
+  - Which tasks depend on others
+  - A list of blocked and at-risk tasks
+  - A status tracker you can update each day
+  - Ideas to make the close shorter
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full text of SKILL.md into the chat.
+  - Type your close tasks, who owns each one, your systems and your cut-off times. Add your target close length if you have one.
+  - Ask for a day-by-day plan and a status table with blockers marked.
+  - Check that the task order makes sense for your business. Fix any task that is in the wrong place.
+  - Review the plan with your accountant before you use it.
+output_sample:
+  input:
+    - Your list of close tasks
+    - Who owns each task
+    - Your accounting systems and cut-off times
+    - Your target close length (optional)
+  output:
+    - name: Pre-close checklist
+      contains: Cut-off checks and early bank work to finish in the last two or three days of the month.
+    - name: Day-by-day close checklist
+      contains: Tasks sorted into days one to five, from accruals and payroll to hard close and period lock.
+    - name: Task dependency map
+      contains: Which tasks must finish before others can start, grouped in levels, with the critical path that sets close length.
+    - name: Status tracker
+      contains: A table with task, owner, deadline, status, blocker and notes, with a status marked for each task.
+    - name: Blocker list
+      contains: Tasks that are stuck or at risk, and what is holding each one up.
+    - name: Ways to shorten the close
+      contains: Fixes for common slow spots, plus what a faster three-day close needs.

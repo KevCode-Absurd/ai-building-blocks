@@ -9,6 +9,7 @@ level: advanced
 inputs:
   - {type: spreadsheet, required: true}
   - {type: question, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 uses: []

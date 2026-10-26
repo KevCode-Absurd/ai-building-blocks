@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes prompts from one clear situation.
 new_slug: teaching-reflection-prompts
 name: Teaching reflection prompt writer
-summary: Give it a lesson or a challenge. Get questions that help you reflect on
-  it and decide what to change.
+summary: Get teaching reflection prompts written for one lesson you taught. They take you from what happened to why, and to one small change to try.
 job: teach-and-train
 headline: Teaching reflection prompt writer
-subhead: Questions written for the exact lesson you taught, that take you from
-  what happened to why it happened and what to change. Generic prompts like "how
-  did it go?" get a shrug.
+subhead: Tell your AI about one lesson or challenge. It writes questions for that exact lesson. They lead you from what happened to why, and to what you will change. Generic prompts like "how did it go?" get a shrug. These do not.
 explain: |
   Questions written for the exact lesson you taught, that take you from what happened to why it happened and what to change. Generic prompts like "how did it go?" get a shrug. These get insight you can use next week.
 
@@ -17,20 +14,44 @@ when:
   - A group activity went badly and you do not know why.
   - You want to reflect on a lesson but a blank page stops you.
   - You are keeping a reflective log for a course or appraisal.
-  - A class you teach is stuck and you need fresh angles.
   - You have ten minutes and want a short, focused set of prompts.
+not_for:
+  - "You need a formal appraisal judgement of your teaching: ask your line manager or an appraiser, since this tool only writes questions."
+  - "You want to reflect on a student's personal situation: follow your school's safeguarding route instead."
+  - "You want a coaching chat with a colleague: use the instructional-coaching-conversation-guide, which is not on this site yet."
 you_give:
   - What happened in the lesson or event
-  - What you want to understand
-  - How you felt (optional)
-  - Time you have (optional)
+  - What you want to understand from it
+  - How you felt about it (optional)
+  - Your subject and how long you have taught (optional)
+  - How much time you have (optional)
 you_get:
-  - Layered reflection questions
-  - Prompts from student and colleague views
-  - A small action to try next
-  - A short version for limited time
+  - "Questions in four layers: describe, analyse, question your assumptions, act"
+  - Prompts that show the lesson through your students' eyes and a colleague's
+  - One small action to try next
+  - A short five-minute version
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Describe the lesson in a few sentences. Say what you want to understand.
+  - Add how you felt and how much time you have, if you like.
+  - Answer the questions in a journal or out loud. Start with the first layer and work down.
+  - Check any named research against the source before you quote it to colleagues or in an appraisal log.
+output_sample:
+  input:
+    - What happened in the lesson or event
+    - What you want to learn from it
+    - How you felt about it (optional)
+    - Your subject and how long you have taught (optional)
+    - How much time you have, such as 5 minutes or a longer journal entry (optional)
+  output:
+    - name: "Layer 1: Description"
+      contains: Questions that help you say what happened, step by step, before you judge it.
+    - name: "Layer 2: Analysis"
+      contains: Questions that look for the causes of what happened, and how it looked to students and a colleague.
+    - name: "Layer 3: Critical Reflection"
+      contains: Questions that test the beliefs and assumptions you brought to the lesson.
+    - name: "Layer 4: Action"
+      contains: Questions that lead to one small change to try in your next lesson.
+    - name: Quick Reflection Option
+      contains: A short set of prompts for when you have about five minutes.

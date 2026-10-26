@@ -2,26 +2,23 @@ thinking: high
 thinking_why: It must stay true to the evidence while writing clearly.
 new_slug: scientific-manuscript-drafter
 name: Scientific manuscript drafter
-summary: Give it your results and notes. Get manuscript sections with sources
-  tracked, guideline gaps flagged and references checked.
+summary: Draft manuscript sections from your results and notes. Every claim links to a source, and missing details and guideline gaps are flagged.
 job: research-topics
 headline: Scientific manuscript drafter
-subhead: Manuscript sections you can trust because every claim points back to
-  something you supplied. You hand over results, notes and sources, and get
-  Introduction, Methods, Results or Discussion drafts in clear scientific prose.
+subhead: Manuscript sections you can trust because every claim points back to something you supplied. You hand over results, notes and sources, and get Introduction, Methods, Results or Discussion drafts in clear scientific prose.
 explain: |
   Manuscript sections you can trust because every claim points back to something you supplied. You hand over results, notes and sources, and get Introduction, Methods, Results or Discussion drafts in clear scientific prose.
 
   The rules are strict. Nothing is invented: no references, numbers, sample sizes, approvals or funding lines. Where a detail is missing, the draft says so in plain view instead of filling it with boilerplate. Drafting, checking evidence and final sign-off are kept as separate stages, and you stay the author who approves the text. It checks your draft against reporting guidelines, flags gaps, and verifies references. Small offline helper tools are included, and nothing leaves your computer without your say.
 when:
-  - You have results and lab notes and need a first draft of the Methods and
-    Results.
-  - You want to know which reporting checklist items your paper does not yet
-    cover.
-  - You need to check that every reference in a draft is real and says what you
-    claim.
-  - You are preparing a manuscript for submission and want missing details
-    listed, not guessed.
+  - You have results and lab notes and need a first draft of the Methods and Results.
+  - You want to know which reporting checklist items your paper does not yet cover.
+  - You need to check that every reference in a draft is real and says what you claim.
+  - You are preparing a manuscript for submission and want missing details listed, not guessed.
+not_for:
+  - You would send unpublished or restricted data to an outside AI service without a confidentiality check. Keep it local and ask your institution or journal first.
+  - You have a finished manuscript that only needs copy-editing. Use a human editor or a plain proofreading step.
+  - You want your AI to find or invent references. It never does. Bring your own sources and open each one yourself.
 you_give:
   - Your results, tables and figures
   - Notes on methods and decisions
@@ -35,7 +32,33 @@ you_get:
   - A reference check
   - A trail from each claim to its source
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool. Use one that can read files if you have tables or papers to share. Check your journal and institution rules before you share unpublished work.
+  - Paste the skill instructions, or upload the skill folder.
+  - Add your results, method notes and source papers. Name your target journal or reporting guideline if you have one.
+  - Ask for one section at a time, such as Methods or Results.
+  - Read the missing-detail flags and fill each gap yourself. Do not let your AI fill them.
+  - Open every source and confirm it says what the draft claims. The reference check only covers format and duplicate IDs. You approve the final text.
+output_sample:
+  input:
+    - Your results, tables and figures
+    - Your notes on methods and decisions
+    - Your source papers or reference list
+    - Your target journal or reporting guideline (optional)
+  prerequisites:
+    - An AI that can read your files
+    - Python 3.11 or newer, only if you want to run the optional offline check tools
+  output:
+    - name: Evidence record
+      contains: Each fact, number and source you supplied, with an ID so claims can be traced back.
+    - name: Evidence outline
+      contains: The planned points for each section, tied to the evidence IDs they rest on.
+    - name: Manuscript draft
+      contains: Introduction, Methods, Results or Discussion text, with claim and evidence markers and missing details shown in plain view.
+    - name: Reporting guideline coverage
+      contains: A non-scoring list of checklist items your draft covers and items still missing.
+    - name: Consistency check
+      contains: Mismatches between repeated numbers or between methods and results, for you to resolve by hand.
+    - name: Reference check
+      contains: Checks reference format and duplicate IDs only. You open each source and confirm the claim before marking it verified.
+    - name: Authorship and disclosure review
+      contains: A list of authorship, funding, conflict and AI disclosure items that are missing or unconfirmed.

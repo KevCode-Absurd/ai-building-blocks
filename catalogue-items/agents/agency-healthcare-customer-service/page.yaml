@@ -1,0 +1,140 @@
+name: Healthcare Customer Service agent
+summary: "Draft patient service replies for bills, appointments and insurance, with emergency and privacy checks. Remove patient names and record numbers first."
+headline: Healthcare Customer Service agent
+subhead: Privacy first. Remove names, dates of birth and record numbers before you paste. Give it a patient's question about a bill, an appointment or insurance. It checks for an emergency or a clinical question, then drafts a kind, plain reply and the steps for your staff.
+job: help-customers
+thinking: high
+thinking_why: A patient message can hide an emergency or private health details. Use a model that reads closely, checks safety first and keeps to the limits you set.
+explain: |-
+  A patient message can carry private health details. It can also hide an emergency. This agent treats both as step one. Before it writes any reply, it looks for emergency signs and for clinical questions. Then it drafts a warm, plain reply for billing, appointment and insurance questions, with the steps your staff must take.
+
+  It follows the original profile. Acknowledge the person before any process. Never give clinical advice, and send clinical questions to clinical staff. Explain a bill in plain words, charge by charge. Never answer a worry with "that's our policy". Hand a case up by how urgent it is. The profile has US examples, such as 911, 988, HIPAA and set dollar and day figures. Treat those as examples. Use your own organisation's rules, and where it has none, the draft shows MISSING.
+
+  Using this agent does not make your AI tool safe for patient data. Use a tool and plan your organisation has approved for health data. If you are not sure, remove every name, date of birth, record number, phone number and address, and write "the patient". The agent cannot check who someone is, look up a bill or send a message. It is not legal advice. Its targets, such as first-contact resolution, are goals and not results.
+when:
+  - A patient asks why a bill is so high and needs a plain explanation and a kind reply.
+  - A patient wants to move or cancel an appointment and needs clear next steps.
+  - Insurance denied a claim, or needs approval first, and the patient wants to know what happens next.
+  - A patient complains about waiting time or staff and you need a reply and a handover.
+not_for:
+  - A patient describes chest pain, trouble breathing, stroke signs, heavy bleeding or thoughts of self-harm. Follow your emergency steps first. In the US that means 911, or 988 for a crisis line. Elsewhere use your local number.
+  - A patient asks what a symptom means, whether to take a drug or what a test result says. Send it to clinical staff. This agent never gives clinical advice.
+  - You want to check an app or data use against health privacy rules. Use the Health data privacy checker.
+  - The customer is not a patient, such as an online shopper. Use the Customer Service agent.
+  - You would have to paste identifiable patient data into a tool your organisation has not approved. Remove the identifiers first.
+you_give:
+  - The patient's message, with names, dates of birth, record numbers, phone numbers and addresses removed
+  - What it is about, such as billing, an appointment, insurance or a complaint
+  - Where it came in, such as a portal message, email, letter or phone note
+  - Your organisation's rules for the case, such as payment plans, financial help, cancellation times and who handles appeals
+  - Bill or claim figures you looked up, without identifiers (optional)
+  - Your tone and sign-off (optional)
+you_get:
+  - A safety screen for emergencies, clinical questions and legal or safety incidents
+  - A privacy check on what you pasted
+  - A reply draft in plain words, with empathy first
+  - The steps for your staff and who to hand the case to
+  - A record note with no private details
+  - A list of facts still missing
+how_to_use:
+  - Check that your AI tool is approved by your organisation for patient data. If it is not, or you are unsure, remove every name, date of birth, record number, phone number and address before you paste. Write "the patient".
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste the message and your organisation's rules for that case. Add bill or claim figures without identifiers.
+  - 'Say: "Check for emergencies and clinical questions first. Then draft my reply. Use only the facts I gave. Put MISSING where a fact is needed."'
+  - Read the safety screen first. If it flags an emergency or a clinical question, follow your own steps before you send any reply.
+  - A staff member checks every fact and sends the reply. File the record note with no identifiers.
+how_it_works:
+  - title: Screen for safety
+    text: Before anything else, it looks for emergency signs, thoughts of self-harm, clinical questions, legal threats and injuries.
+  - title: Check privacy
+    text: It lists any identifiers in your paste and says what to remove. It tells staff to confirm identity the way your organisation requires.
+  - title: Sort the request
+    text: It sorts the message as billing, appointment, insurance, complaint or clinical routing.
+  - title: Draft the reply
+    text: It writes in plain words, puts the person first and explains charges clearly. It never answers with policy alone or with clinical advice.
+  - title: Set the handover
+    text: It says if the case must go up now, the same day or the next business day, and writes a handover note.
+  - title: Write the note and checks
+    text: It writes a record note with no private details and lists every fact still missing.
+output_shape: |-
+  SAFETY SCREEN
+    Emergency <yes or no> | Clinical question <yes or no> | Legal threat or injury <yes or no> | First action <what staff must do before anything else>
+
+  PRIVACY CHECK
+    Identifiers found in your paste <list, or none> | Remove before use <list> | Confirm identity by <your organisation's way, or MISSING>
+
+  REPLY DRAFT
+    <channel> | <reply text, with MISSING where a fact is needed>
+
+  STEPS FOR STAFF
+    <number> | <action> | <owner> | <by when>
+
+  HANDOVER
+    <who> | <how soon: now, same day, next business day> | <note with no identifiers>
+
+  RECORD NOTE
+    Issue <one line> | What we promised <list> | Follow-up <date or MISSING>
+
+  MISSING AND CHECKS
+    <facts to fill in> | <promises and figures to confirm before you send>
+output_sample:
+  input:
+    - The patient's message, with identifiers removed
+    - What it is about and where it came in
+    - Your organisation's rules for the case
+    - Bill or claim figures without identifiers (optional)
+  prerequisites:
+    - An AI tool your organisation has approved for patient data, or a message with every identifier removed
+    - A staff member to check and send the reply
+  output:
+    - name: Safety screen
+      contains: Whether the message shows an emergency, a clinical question or a legal threat, and the first action.
+    - name: Privacy check
+      contains: Identifiers found in your paste, what to remove and how staff confirm identity.
+    - name: Reply draft
+      contains: A plain, kind reply with MISSING where a fact is needed.
+    - name: Steps for staff
+      contains: The actions to take next, each with an owner and a time.
+    - name: Handover
+      contains: Who takes the case, how soon and a note with no identifiers.
+    - name: Record note
+      contains: The issue, what was promised and the follow-up date, with no private details.
+    - name: Missing and checks
+      contains: Facts to fill in and figures to confirm before you send.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Your rules
+    how: Paste your real rules for payment plans, financial help and appeals. The reply then keeps to them.
+  - what: Region
+    how: Say where you work. Emergency numbers and privacy law differ, and the profile uses US examples.
+  - what: Channel
+    how: Say portal message, email, letter or phone. A phone script is short and has a hold and transfer note.
+  - what: Tone
+    how: Paste two past replies you liked. The draft then sounds like your practice.
+improve:
+  - Keep a list of your common questions with exact approved answers, free of patient details. The agent can then use them word for word.
+  - Add your own escalation rules to the brief, such as which billing disputes go to a specialist the same day.
+  - Review each draft with your privacy or compliance lead before you rely on this at scale.
+terms:
+  - term: PHI
+    meaning: Protected health information. Details that link a person to their health, care or payment for care.
+  - term: HIPAA
+    meaning: The US law on the privacy of patient health information. Other countries have their own laws.
+  - term: Prior authorization
+    meaning: Approval from an insurer that a service must get before it is done.
+  - term: Escalate
+    meaning: Pass a case to someone with more power or skill to solve it.
+works_best_with:
+  tools:
+    - name: An AI tool approved by your organisation for patient data
+      why: Only then can you paste real messages. Otherwise remove every identifier first.
+  inputs:
+    - Your payment plan and financial help rules, as text.
+    - Your list of when to hand a case to a nurse, a billing specialist or a manager.
+    - Two or three past replies you are proud of, with identifiers removed.

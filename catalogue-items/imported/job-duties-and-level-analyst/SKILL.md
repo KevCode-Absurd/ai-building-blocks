@@ -10,6 +10,55 @@ metadata:
 
 Conduct rigorous job analysis and design accurate job content — from gathering task and competency data and documenting job requirements to evaluating job complexity, supporting job classification decisions, and connecting job analysis to compensation and workforce planning.
 
+## When to use it
+
+Use it to write down what a role really involves and to suggest a fair level.
+
+Skip it when:
+
+- You only need a job post. Use the Job post writer.
+- You need a pay range. Use the Pay band builder after this.
+- You need skills and levels for many roles. Use the Role skills framework builder.
+- You need a legal decision on overtime pay or disability accommodation. Ask an employment lawyer. This skill gathers the facts. It does not decide.
+
+## What to gather first
+
+Ask for anything missing once, in one message. Mark what you still lack as MISSING. Never invent duties, hours or requirements.
+
+1. Role title and department.
+2. Notes from people who do the job and from their manager (interview notes, task lists).
+3. An existing job description (optional).
+4. Your level or pay structure (optional).
+5. Your country, if a legal question is involved.
+
+## Steps
+
+1. Plan the analysis in brief: which methods suit this role (interviews, questionnaire, task list, watching the work) and who to ask.
+2. List the duties found in the notes, most important first. Mark any duty you inferred as INFERRED.
+3. Give each duty a share of time. Say these are estimates from the notes, and make them add up to 100 percent.
+4. Mark each duty essential or marginal, with a one-line reason.
+5. List the knowledge, skills, abilities and other needs (KSAOs), taken from the duties.
+6. Rate how complex the job is. Use the user's level structure if given. If not, use a plain scale and say so.
+7. List what to check with the people doing the job, and what to take to HR or legal.
+
+## Output format
+
+1. Analysis plan (methods, people to ask, time needed)
+2. Duties table (duty, share of time, essential or marginal, source)
+3. KSAO table (need, type, linked duty)
+4. Complexity rating and suggested level, with the reasons
+5. Gaps and things to check
+
+## Rules
+
+- Describe the job, not the person who holds it.
+- Say that the record supports a decision and is not legal advice.
+- If asked about overtime exemption or accommodation, list the facts that matter and tell the user to check with an employment lawyer in their country.
+
+## After you run it
+
+Check the duties list with two people who do the job. Then feed it to the Pay band builder or the Job post writer.
+
 ## Supported tasks
 
 - Planning and conducting structured job analysis projects
@@ -23,7 +72,7 @@ Conduct rigorous job analysis and design accurate job content — from gathering
 - Connecting job analysis to competency frameworks and job architectures
 - Running job audits to validate whether job content reflects actual work
 - Using job analysis data for workforce planning and skills gap analysis
-- Building defensible job content documentation for legal compliance
+- Building clear job content documentation that HR or legal can review
 
 ## Key prompts
 
@@ -62,7 +111,9 @@ Conduct rigorous job analysis and design accurate job content — from gathering
 
 ### Compliance and legal
 
-1. "How do we ensure our job analysis process produces legally defensible documentation for [hiring / accommodation / classification] decisions?"
+These prompts gather facts. They are not legal advice. Check with an employment lawyer in your country before you classify a role.
+
+1. "How do we make sure our job analysis process produces documentation that HR or legal can review for [hiring / accommodation / classification] decisions?"
 2. "What job content elements are required to support FLSA exempt or non-exempt classification for [role type]?"
 3. "How do we document essential functions for ADA reasonable accommodation purposes?"
 4. "Design a job audit process to verify that existing job descriptions accurately reflect current job content."

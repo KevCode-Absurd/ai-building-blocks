@@ -1,6 +1,6 @@
 slug: prepare-a-restaurant-shift-handover
 name: Prepare a restaurant shift handover
-summary: Share the source files. Get a shift handover, unresolved issue register and escalation notes.
+summary: Brief the next shift lead in minutes. Get a restaurant shift handover with food safety issues first, an open-issue list and who to call.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - executive-action-register
 steps:
   - uses: handover-note-writer
-    note: Organize the actual service state, time-critical orders, equipment issues and approved escalation contacts for the incoming shift. Preserve the stated food safety limits without creating new ones.
+    note: "Organize the actual service state, time-critical orders, equipment issues and approved escalation contacts for the incoming shift. Preserve the stated food safety limits without creating new ones. Hands step 2 the full note."
   - uses: executive-action-register
-    note: Extract explicitly agreed follow-ups from the shift notes, keeping unresolved safety issues separate from completed work and proposed assignments.
+    note: "Extract explicitly agreed follow-ups from the shift notes, keeping unresolved safety issues separate from completed work and proposed assignments. Uses step 1's note with your original shift notes."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

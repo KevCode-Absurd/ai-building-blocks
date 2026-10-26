@@ -15,6 +15,30 @@ use_cases:
   - "Review a community project for pleasure as well as basic access"
   - "Choose a learning project that connects art, making and human questions"
   - "Rewrite a design story that treats its user as a passive recipient"
+not_for:
+  - "You need a medical, clinical or structural check of equipment: ask a qualified specialist, since this gives a design brief and not an assessment."
+  - "You want an everyday product made simpler to use for anyone: hire Don Norman instead, if he is listed, or start with a plain usability test with real users."
+  - "You want to turn your own home or tool into a clear, explained design: use the Charles and Ray Eames mind, who work from practical limits and making."
+output_sample:
+  input:
+    - The activity the person wants to do, and why it matters to them
+    - The setting, objects and people involved
+    - What has already been adapted or helps now
+    - Who decides, and who needs credit or payment
+    - Any rules, deadlines or fixed limits (optional)
+  output:
+    - name: Wanted activity
+      contains: A short account of what the person wants to do, including the pleasures and habits a plain spec would miss.
+    - name: Existing assistance
+      contains: The help, tools and clever fixes already at work, and which ones the person wants to keep.
+    - name: Options compared
+      contains: A tool, a change to the setting, a different rhythm and chosen human support, set side by side.
+    - name: Collaboration decisions
+      contains: Who decides, who contributes, who gets credit and who checks any technical or safety needs.
+    - name: Open questions
+      contains: Medical, clinical or build questions left for the right specialists, with barriers that remain.
+    - name: Judging the result
+      contains: A check of whether the person can do more of what they value, with acceptable effort and control.
 seats:
   - {seat: "Assistance and adaptive imagination", asks: "What would this person like to do, and what assistance makes it possible?"}
   - {seat: "Bodies, worlds and time", asks: "Which expectations have we built into this setting?"}

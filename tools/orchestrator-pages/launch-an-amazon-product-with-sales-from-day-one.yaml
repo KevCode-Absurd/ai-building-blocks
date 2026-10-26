@@ -1,6 +1,6 @@
 new_slug: launch-an-amazon-product-with-sales-from-day-one
 name: Launch an Amazon product with sales from day one
-summary: Give it product facts and keywords. Get a listing, launch ads, a stock order and a launch week.
+summary: Plan an Amazon product launch from your product facts and keywords. You get a listing, launch ads, a stock order and a launch week plan.
 job: sell-on-amazon
 thinking: high
 thinking_why: Five skills run in a row, and the ad and stock steps do money sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have chosen a private-label product and want the listing, ads, stock and launch plan ready together before you press go.
   - Your last launch had no early sales, or ran out of stock after a few weeks.
   - You have at least eight weeks before launch and can post short videos to build a wait list.
+not_for:
+  - "You have no unit profit figure yet: work it out first with a fee and margin check, or ask your accountant, then come back."
+  - "You already have a live listing and only want better ads: run the Amazon PPC launch builder on its own."
+  - "You sell on your own website or another marketplace: this plan is built for Amazon only, so use a simpler launch checklist."
 you_give:
   - Your product facts, benefits and any proof you can show, such as certificates or test numbers
   - A keyword export from your seed phrases and from two or three rival listings
@@ -31,6 +35,29 @@ how_to_use:
   - Have your keyword export and your unit profit ready before you start. Without unit profit it will not set an ad budget.
   - After the ads, it stops and asks you to place the stock order. Come back with your maker's lead time and capacity.
   - After the stock is sent, it stops again. Use that wait to post videos and send samples, then carry on with launch week.
+output_sample:
+  input:
+    - Your product facts, benefits and proof
+    - A keyword export from your seed phrases and rival listings
+    - Your price, unit profit and daily ad budget
+    - Your maker's lead time and monthly capacity
+    - Your audience size and launch date (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with a Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Keyword shortlist
+      contains: Your main phrase, phrases in tiers, the phrases you dropped, and the phrases saved for ads.
+    - name: Listing
+      contains: A title, five bullets, a description and backend keywords, with a price and launch date check.
+    - name: Launch ads
+      contains: A budget from unit profit, three campaigns with bids, negative keywords and a stop rule.
+    - name: Stock plan
+      contains: Order size, re-order point, a shipment checklist, a tracking sheet and a storage watch.
+    - name: Launch week plan
+      contains: A week-by-week plan, launch-day run sheet, offer and its cost, and a review plan.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Pick the keywords
     text: Filters your export for a new brand, drops phrases that are too broad, a brand name or not true, and ranks the rest in tiers with a main phrase.

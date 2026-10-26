@@ -40,6 +40,12 @@ When arguments are provided (`$ARGUMENTS`), interpret them flexibly:
 - `--rubric <path>` → PaperBench rubric for coverage mapping
 - Anything else → treat as context or ask the user for clarification
 
+### What you need to work
+
+This skill writes about 20 files into a folder, so it needs an AI that can read and write files (for example Claude Code or another file-capable agent). Fetching a URL or cloning a repo also needs web access. If you only have a plain chat window, do not pretend to write files. Ask for the text to be pasted, then give the person each file as a separate block with its path as a heading, and say that the check in Step 5 was done by reading, not by running anything.
+
+If the input is only a single short paper or a page of notes, say the full folder is more than they need and offer the two files that matter most: `logic/claims.md` and `evidence/README.md`.
+
 ### Input Reading Strategy
 
 Adapt to whatever you receive:

@@ -1,51 +1,117 @@
 new_slug: fund-fee-revision-assistant
-name: Fund fee revision assistant
-headline: Fund fee revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+name: Fund fee and credit reviewer
+headline: Fund fee and credit reviewer
+summary: Check a private fund's management fee, stepdown and fee offset credits for one invoice period. You get the net fee due and the open questions.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Fee-basis bridge, offset use, invoice and carryforward reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked. Share lPA rates and basis definitions, stepdown date, comparable-period eligible bases, received eligible portfolio fees and prior offset credits. Include actual call notices and the commitment ledger only when the administrator funds fees through a capital call. Supply the previous approved review and actual changed source files with dates.
+subhead: Give it the fee clauses from the fund agreement, the fee base, the fees the manager received and last period's credit. It works out the fee for the invoice period after the stepdown and applies the offset credits. You get the net fee due and a list of open questions.
 explain: |-
-  Fee-basis bridge, offset use, invoice and carryforward reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked.
+  A private fund manager's fee changes when the investment period ends. After the stepdown date, the rate often drops and the fee is charged on a different base, such as money invested instead of money promised. The manager may also earn fees from the companies the fund owns. The fund agreement usually passes part of those back as a credit against the management fee. Unused credit may carry to the next period. One wrong date or base makes the invoice wrong, and the credit balance carries the mistake forward.
 
-  Private fund fees. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This fund fee reviewer keeps a short record of the last accepted review. It holds the fund and period, the clause versions, the fee chosen, the portfolio fees counted, the credit carried forward and the invoice status. When a clause, a fee receipt or a credit changes, it first prices the fee on both sides of the stepdown. Then it picks the one fee that applies to the invoice period. Fees for two comparison periods are never added into one invoice. Next it runs the Private fund fee and offset checker to apply the eligible fees and credits and tie the closing credit.
+
+  Only when the fee is paid through a capital call does it check the call against the commitment ledger. A calculated invoice is not treated as a call. It does not read the law, send an invoice or pay anything. It uses only the documents you give it, and a person who knows the fund checks the result.
 when:
-  - You need fee-basis bridge, offset use, invoice and carryforward reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on private fund fees and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - The investment period just ended and you need to check the first invoice at the new rate and fee base.
+  - The manager received a monitoring or deal fee from a company the fund owns, and you want to know how much should reduce the fee.
+  - Last quarter left an unused fee credit, and you need to know if it carries forward and by how much.
+  - A side letter or amendment changed the fee rate or the offset share, and your fee schedule is out of date.
+not_for:
+  - You only want to compare one quarter's fee before and after a rate change. Use the Fund management fee change checker.
+  - You only need the offset and carryforward sums for one period. Use the Fund management fee offset checker.
+  - Your question is about unfunded commitments or one investor's capital call. Use the Fund commitments and capital call reviewer.
+  - You want to check an investor's capital account or NAV. Use the Investor statement NAV checker.
+  - You want to know what the fund agreement means in law. It works from the clauses you paste and gives no legal advice.
 you_give:
-  - LPA rates and basis definitions, stepdown date, comparable-period eligible bases, received eligible portfolio fees and prior offset credits. Include actual call notices and the commitment ledger only when the administrator funds fees through a capital call. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The fee clauses from the fund agreement (the LPA): rates, what each rate applies to, the stepdown date, the offset share and whether unused credit carries forward"
+  - The fee base before the stepdown, such as commitments, and after it, such as invested cost, for the invoice period (from the fund administrator's statements)
+  - The fees the manager received from portfolio companies in the period, with the type of each (from the manager's fee ledger)
+  - The offset credit brought forward from last period (from the last invoice or review)
+  - The invoice period dates, and the currency and scale you report in, such as thousands of dollars
+  - The invoice you want checked (optional)
+  - A capital call notice and the commitment ledger (optional, only if the fee is paid through a capital call)
+  - Your last accepted review and the record it left (optional on a first run)
 you_get:
-  - Fee-basis bridge, offset use, invoice and carryforward reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The management fee for the invoice period, with the fee on each side of the stepdown date shown side by side
+  - "An offset schedule: opening credit, new eligible fees, credit used, closing credit and net fee due"
+  - A list of what changed since the last review, and the source of each change
+  - A capital call check, only when a call notice is supplied
+  - Questions for your reviewer on anything missing, plus MISSING lines, checks that could not run and a record for next time
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, pick one that can create spreadsheets. In plain chat it returns the same tables as text.
+  - Say whether this is the first run. If not, paste the record from last time and attach last period's review. Then attach the fee clauses, the fee ledger and the administrator's statements.
+  - Read "changed since last review" first. Check each changed rate, date or fee against the clause or statement it came from.
+  - "Check the fee for the invoice period by hand: base times annual rate times the part of the year. If the stepdown date falls inside the period, check that the period was split on that date."
+  - "Check the credit: opening credit plus new eligible fees times the offset share, less the credit used, equals the closing credit. Then check that net fee due is the gross fee less the credit used."
+  - Answer the questions or leave them marked MISSING. Nothing is sent, invoiced or paid.
 how_it_works:
-  - title: Reconcile private fund fee charges
-    text: Run the governing workflow when A fee basis, stepdown date, eligible fee receipt, offset allocation or carryforward credit changes.
-  - title: Unfunded commitment checker
-    text: If an actual approved fee capital call is supplied, reconcile its effect on the callable commitment ledger independently. A computed invoice is not automatically a call or a contribution; if no call evidence exists, skip the commitment branch and preserve only the fee proposal.
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this fund, or sets a first baseline. Compares the clause versions, the dates and the fee receipts with the record. If nothing changed and no review is due, it says so and stops.
+  - title: Prices both sides of the stepdown
+    text: Works out the fee on the old base and rate, and on the new base and rate, for the same part of the year. Waivers are kept on their own line.
+  - title: Picks the fee for the invoice period
+    text: Only the fee that applies to the invoice period moves forward. The other is a comparison. If the stepdown date falls inside the period, it splits the period on that date and prices each part on its own base.
+  - title: Applies the offset
+    text: Matches each received fee to the kinds the agreement lets count, applies the offset share and adds the opening credit. Credit is used only up to the gross fee. Unused credit carries forward only if the agreement says so.
+  - title: Checks any capital call
+    text: Only when an approved call notice is supplied, it runs the Remaining fund commitment checker on the callable commitment. A fee invoice is not a call. With no notice, it skips this step and says why.
+  - title: Saves the record
+    text: Writes the short record for next time and lists what is still MISSING. It keeps the old record.
 output_shape: |-
-  Fee-basis bridge, offset use, invoice and carryforward reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+  INVOICE PERIOD <start> to <end>   STEPDOWN DATE <date>
+
+  CHANGED SINCE LAST REVIEW  <clause, base, fee receipt or credit that changed>
+  FEE BEFORE STEPDOWN   <base> x <rate> x <part of year> = <n>
+  FEE AFTER STEPDOWN    <base> x <rate> x <part of year> = <n>
+  FEE FOR THIS INVOICE  <which one applies and why; split on <date> if needed>
+  OFFSET SCHEDULE       opening credit <n> + eligible fees <n> x <offset share> = <available>
+                        used <n>; closing credit <n>; net fee due <n>
+  CAPITAL CALL CHECK    <callable commitment before and after, or "skipped: no call notice">
+  REVIEWER QUESTIONS    <one per gap>
+
+  RECORD FOR NEXT REVIEW  fund and period, clause versions, fee chosen,
+                          eligible receipts, credit carried, invoice status
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The fee clauses from your fund agreement (rates, what each rate applies to, stepdown date, offset share)
+    - The fee base before and after the stepdown, for the invoice period
+    - The fees the manager received from portfolio companies in the period, with the type of each
+    - The offset credit brought forward from last period
+    - Your last accepted review and its record (optional on a first run)
+    - A capital call notice and the commitment ledger (optional)
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can create spreadsheets.
+    - A named person who knows the fund and will check the result
+  output:
+    - name: Changed since last review
+      contains: Each clause, base, fee receipt or credit that is new or different, with its source and date.
+    - name: Fee for the invoice period
+      contains: The fee before and after the stepdown, side by side. It marks which applies and splits the period on the date if needed.
+    - name: Offset schedule
+      contains: Opening credit, new eligible fees, the offset share, credit used, closing credit and the net fee due.
+    - name: Capital call check
+      contains: The callable commitment before and after, only if a call notice was supplied. Otherwise one line saying it was skipped and why.
+    - name: Reviewer questions
+      contains: One question for each missing clause, date or receipt.
+    - name: Record for next review
+      contains: The fund and period, clause versions, fee chosen, eligible receipts counted, credit carried forward and invoice status.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap, and the line it stops. Each check that failed or could not run, or "none".
+    - name: Workbook (if your AI can make one)
+      contains: Inputs, formulas and a checks tab, so you can click into each figure.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Apply the charge for the actual selected period; comparison-period charges are never added together as one invoice. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - what: A stepdown inside the period
+    how: Give the exact date. The period is split there and each part is priced on its own base and rate.
+  - what: A new side letter
+    how: Paste the new clause. The fee is priced again, and the register shows how far the invoice moved.
+  - what: No carryforward
+    how: Say the agreement does not let unused credit carry. The unused part is shown as not carried, and your reviewer is asked to confirm.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - Apply the charge for the actual selected period; comparison-period charges are never added together as one invoice. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +122,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
+  - Paste the fee clauses once into a clause sheet with clause numbers, and reuse it, so every figure points to a clause.
+  - Keep one list of portfolio fees by type, with the date each was received, so eligibility can be checked line by line.
+  - Pair it with the Fund commitments and capital call reviewer when the fee is paid through a call.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The fund administrator's statements
+      why: Hold the fee base and the fee receipts with dates, so each input has a source.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed fund agreement and any side letters, not a summary of them.
+    - The manager's fee ledger with the type of each fee.
+    - A named reviewer who knows the fund and will answer the questions it raises.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: LPA
+    meaning: The limited partnership agreement. The signed contract that sets the fund's fees and rules.
+  - term: Stepdown
+    meaning: The date the management fee changes, usually when the investment period ends. The rate falls or the fee is charged on a different base.
+  - term: Fee offset
+    meaning: A share of the fees the manager earns from portfolio companies that is taken off the management fee.
+  - term: Carryforward
+    meaning: Credit that was not used this period and moves to the next one, if the agreement allows it.
+  - term: Capital call
+    meaning: A request to investors to send in part of the money they promised. A fee invoice is not a call.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

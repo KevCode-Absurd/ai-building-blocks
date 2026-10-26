@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows a set method but depends on your setup.
 new_slug: ai-agent-monitoring-planner
 name: AI agent monitoring planner
-summary: Describe your AI agent. Get a plan to trace its steps, costs and errors
-  without logging private data.
+summary: "Plan how to monitor your AI agent: trace each step, cost and error, and keep private customer text out of your logs."
 job: build-software
 headline: AI agent monitoring planner
-subhead: "A plan to see what your AI agent is doing: each step, how long it
-  took, what it cost and where it failed. Nobody's private text gets stored."
+subhead: "A plan to see what your AI agent is doing: each step, how long it took, what it cost and where it failed. Nobody's private text gets stored."
 explain: |
   A plan to see what your AI agent is doing: each step, how long it took, what it cost and where it failed. Nobody's private text gets stored.
 
@@ -16,8 +14,11 @@ when:
   - Your agent sometimes runs slowly and you cannot tell which step is the cause.
   - The bill for your agent rose and you need to know why.
   - You need audit evidence of what the agent did without keeping customer text.
-  - Different tools and frameworks log in different ways and you want one
-    standard.
+  - Different tools and frameworks log in different ways and you want one standard.
+not_for:
+  - "You run a single prompt with no tools or retries: plain request logs are enough."
+  - "You need the agent built or fixed: ask a developer, because this item only plans the monitoring."
+  - "You want to set up a live dashboard tool: your monitoring vendor's own setup guide does that part."
 you_give:
   - A description of the agent's workflow
   - Questions you want answered
@@ -30,7 +31,31 @@ you_get:
   - Privacy and retention settings
   - An investigation runbook
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - "Describe your agent: what it does, which tools it calls, and where it runs."
+  - Add the questions you need answered, your logging tools (optional) and your privacy and retention rules.
+  - Read the plan. Check that the trace fields hold no private text and each alert has an owner.
+  - "Optional: if your AI can run Python 3, give it a normalized spans.jsonl file and ask it to run scripts/summarize_traces.py to check the trace structure."
+  - Share the plan with the person who sets up your logging, then test it with one sample request.
+output_sample:
+  input:
+    - A description of your agent's workflow and the tools it calls
+    - The questions you want answered, such as why cost rose
+    - Your logging or monitoring tools (optional)
+    - Your privacy and retention rules
+    - Spans file called spans.jsonl (optional, only for the trace check script)
+  prerequisites:
+    - An AI that can run Python 3 and read files, only if you want the optional trace check script
+  output:
+    - name: Observability objective and system boundary
+      contains: What you want to learn, which parts of the agent are covered, and what cannot be seen.
+    - name: Trace and event schema
+      contains: Identifiers, step types, fixed fields, and rules for leaving out or masking private content.
+    - name: Metrics
+      contains: Each measure with its definition, unit, dimensions and owner, such as task success, latency and cost per task.
+    - name: Dashboard and alert specs
+      contains: Views from user outcome down to tool detail, and alerts tied to user impact with an owner.
+    - name: Sampling, retention, access and cost plan
+      contains: What to keep, for how long, who can see it, and how to control storage cost.
+    - name: Investigation runbook and verification results
+      contains: Steps to find the cause of a problem, plus checks that traces and masking work.

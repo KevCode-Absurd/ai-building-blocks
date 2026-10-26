@@ -1,6 +1,6 @@
 new_slug: values-to-week-planner
 name: "Values-to-week planner"
-summary: "Share your roles, values and calendar. Get a plan from values to quarter, week and day, with protected hours for hard work."
+summary: "Turn your roles, values and calendar into a values-based weekly plan with quarter goals, protected hours for hard work and set times for messages."
 job: plan-strategy
 thinking: low
 thinking_why: "It follows a fixed order of steps and fits your calendar, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - You are busy every day but cannot name what you finished this month.
   - Your hardest work keeps getting pushed to evenings or weekends.
   - You are starting a new quarter and want your goals to show up in your week.
+not_for:
+  - You have one task to finish. Break it into steps yourself, or ask your AI for a simple to-do list.
+  - You need a calendar for a whole team. Plan it with your team, since this plans one person's week.
+  - Too many projects is the real problem. Use the Money-first business cut planner first, then come back here.
 
 you_give:
   - Your roles and what you value, in a few lines (required)
@@ -35,6 +39,29 @@ how_to_use:
   - Say how fast people expect a reply, so the message checks are realistic.
   - Try the week for two weeks, then tell the skill what broke and ask for a fix.
   - Review at the end of the quarter by what you finished, not by how busy you were.
+output_sample:
+  input:
+    - Your roles and what you value in each, in a few lines
+    - Your calendar for a normal week, with fixed meetings and duties
+    - Projects and goals already on your plate (optional)
+    - How fast people expect a reply (optional)
+  output:
+    - name: Roles and values
+      contains: A short statement of each role you hold, what you value in it, and what a good year looks like.
+    - name: Quarter goals
+      contains: One to three finished things per active role for the next three months, each tied to a value.
+    - name: This week
+      contains: Two to four projects for the week, the next step for each, and what was left out.
+    - name: Your week
+      contains: A day-by-day view with protected hard-work blocks, message check times and your fixed meetings.
+    - name: Quiet seasons
+      contains: A no-meeting day, a lighter month or a day off work, placed on the calendar with a date.
+    - name: How to judge it
+      contains: What you should have finished by the end of the quarter, plus a short Friday question.
+    - name: Missing
+      contains: Lines marking any input you did not give, so the plan can be sharpened.
+    - name: Checks missed
+      contains: One line for each of the skill's own checks that still fails, or none.
 
 how_it_works:
   - title: Roles and values

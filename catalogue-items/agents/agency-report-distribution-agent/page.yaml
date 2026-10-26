@@ -1,0 +1,131 @@
+name: Report Distribution agent
+summary: Decide who gets which sales report and when. Get a recipient table by territory, cover emails, a send checklist and a blank delivery log.
+headline: Report Distribution agent
+subhead: Give it your report, your list of reps and managers, and how you send. It sorts out who should get which version, drafts the cover notes and lists the checks to run before and after each send. It plans the send. You or your own tool does the sending.
+job: organise-work
+thinking: high
+thinking_why: Sending the wrong report to the wrong person is costly. Use a model that follows rules exactly and flags any recipient it is unsure about.
+explain: |-
+  A sales report distribution plan answers three questions. Who gets the report? Which version of it? And how will you know it arrived? This agent writes that plan for a team that sends sales reports to reps and managers, such as one report per territory.
+
+  The method is simple. Each rep sees only their own territory. Managers and admins see the company-wide roll-up. Every send is logged with a status, so a failed email is found and fixed, not lost. The agent turns those rules into a recipient table, cover messages, a before-and-after checklist and a log you fill in as you send.
+
+  This is a chat agent. It cannot send email, run on a schedule or read your report tool. The original profile describes a system that does those things, such as sending at 8:00 on weekdays. Here those times are only examples of a schedule. Use your own, and use your email or report tool's scheduler to run the plan.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You send a sales report each week and want each rep to get only their own territory.
+  - A new rep or manager joins and you need to know which reports they should receive.
+  - A report went to the wrong person and you want rules and checks so it does not happen again.
+  - You are setting up scheduled sends in your CRM or reporting tool and need the rules written first.
+not_for:
+  - You want it to send the emails or run on a schedule. A chat cannot. Use your CRM, report tool or email scheduler, with this plan as the setup guide.
+  - You need the report numbers built from raw sales data. Use the Data Consolidation agent first.
+  - You want a short written summary of a long report. Use the Executive summary generator agent.
+  - You plan to send reports outside your company. It will mark each outside recipient as needing your approval before anything goes.
+you_give:
+  - The report or reports to send, and what each one contains (a sample or the column names is enough)
+  - Your recipients, each with a role and a territory (names and email addresses only as you need them)
+  - How you send today, such as email, Slack or your CRM's report tool
+  - The schedule you want, such as daily or weekly, and the time zone (optional)
+  - Who must approve a send, and what should happen if a send fails (optional)
+you_get:
+  - A table of who gets which report, in what channel, and when
+  - Plain rules for who sees what, so a rep never gets another territory
+  - Cover email drafts for reps and for managers
+  - A checklist to run before and after each send
+  - A blank delivery log, and a plan for failed sends
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste your recipient list with roles and territories. Describe each report, and say how you send it today. No code or web access is needed.
+  - Say if any recipient is outside your company or on a team that needs sign-off.
+  - Check the routing rules first. Read each rep's row and confirm they get only their territory. Fix any mistake before you use the plan.
+  - Set up the sends in your own tool. Copy the cover emails, run the before-send checklist, and fill in the delivery log as you go.
+how_it_works:
+  - title: Set the task
+    text: It confirms the reports, recipients, channel, schedule and approvers. Gaps are asked once, then marked MISSING.
+  - title: Write the routing rules
+    text: It states who sees what, such as reps their own territory and managers the roll-up. It lists any rule it could not apply.
+  - title: Build the recipient table
+    text: Each recipient gets a row with report, channel, send time and whether approval is needed.
+  - title: Draft the cover messages
+    text: It writes a short note for reps and one for managers, with a placeholder for the report link or file.
+  - title: List the checks
+    text: It writes checks to run before sending, such as a test send to yourself, and after, such as confirming each recipient got it.
+  - title: Plan for failures
+    text: It sets what to log, who to tell and how to retry when a send fails, so no report is dropped quietly.
+output_shape: |-
+  ROUTING RULES
+    <who> sees <what> | <exceptions or MISSING>
+
+  RECIPIENT TABLE
+    <recipient> | <role> | <territory> | <report> | <channel> | <send time> | <approval needed: yes or no>
+
+  COVER MESSAGES
+    FOR REPS: <subject> | <body with {{report link}} placeholder>
+    FOR MANAGERS: <subject> | <body with {{report link}} placeholder>
+
+  SEND CHECKLIST
+    BEFORE: <check>
+    AFTER: <check>
+
+  DELIVERY LOG (blank, fill as you send)
+    <recipient> | <report> | <date and time> | <sent or failed> | <error note>
+
+  OPEN QUESTIONS AND FAILURE PLAN
+    <question or risk> | <what to do>
+output_sample:
+  input:
+    - Your report or reports, and what each contains
+    - Your recipients with their roles and territories
+    - How you send reports today
+    - Your schedule and who must approve a send (optional)
+  prerequisites:
+    - A way to send, such as your email, CRM or report tool
+    - The report itself, built before you plan its delivery
+  output:
+    - name: Routing rules
+      contains: Who sees which report, in plain words, with any gaps marked.
+    - name: Recipient table
+      contains: One row per person with report, channel, send time and whether approval is needed.
+    - name: Cover messages
+      contains: Short email drafts for reps and for managers, with a placeholder for the report link.
+    - name: Send checklist
+      contains: Checks to run before each send and after it, such as a test send.
+    - name: Delivery log
+      contains: A blank table to record each send, its time, its status and any error.
+    - name: Open questions and failure plan
+      contains: What is still unclear, and what to do when a send fails.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a recipient spreadsheet and check each row against your routing rules.
+  inputs:
+    - A spreadsheet of reps, managers, roles and territories.
+    - A sample of the report, with real numbers removed.
+    - The name of the tool that will send, so the checklist matches it.
+terms:
+  - term: Territory
+    meaning: The region or account group a rep is responsible for. A rep should see only their own.
+  - term: Roll-up
+    meaning: A report that adds all territories together, for managers and admins.
+  - term: Delivery log
+    meaning: A record of every send with its time and result, so you can prove who got what.
+tweaks:
+  - what: Recipients
+    how: List people by role and territory, not only by name. A clear role lets it spot a wrong match.
+  - what: Schedule
+    how: Give your own times. If you give none, it will show the original profile's times, marked as examples.
+  - what: Privacy
+    how: Paste only the names and emails you need. Use a sample report with the figures removed.
+improve:
+  - After each real send, paste the delivery log back in and ask it to find failures and patterns.
+  - Keep the recipient table as a file you update when people join, leave or change territory.
+  - Pair it with the Data Consolidation agent so the report and its delivery are planned together.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

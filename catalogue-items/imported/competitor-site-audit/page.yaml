@@ -2,22 +2,23 @@ thinking: high
 thinking_why: It compares many sites and finds patterns.
 new_slug: competitor-site-audit
 name: Competitor site experience auditor
-summary: Name your market. Get what leading sites do well and badly, and the bar
-  your own site must meet.
+summary: Run a competitor website audit for your market. You get what leading sites do well and badly, and the experience bar your own site must meet.
 job: study-competitors
 headline: Competitor site experience auditor
-subhead: Name your market. Get what leading sites do well and badly, and the bar
-  your own site must meet. Bring the market or vertical. Use the result to plan
-  your next step.
+subhead: Name your market. Get what leading sites do well and badly, and the bar your own site must meet. Bring the market or vertical. Use the result to plan your next step.
 explain: |
   A picture of what the best websites in a field do well, where they fall short, and the experience level your own site must reach to be taken seriously. It also shows a gap that even the leaders share, which could become your edge.
 
-  You list three to six leading sites in the market. Claude views each in a real browser, not just the page code, and notes shared patterns in brand, layout, navigation, trust cues and key journeys. It separates what the leaders all do, which is the minimum bar, from what only some do. It then names recurring weaknesses. It is a design and experience review, so pair it with a technical check for search or accessibility.
+  You list three to six leading sites in the market. Claude views each in a real browser, not just the page code, and notes shared patterns in brand, layout, navigation, trust cues and key paths through the site. It separates what the leaders all do, which is the minimum bar, from what only some do. It then names recurring weaknesses. It is a design and experience review, so pair it with a technical check for search or accessibility.
 when:
   - You are building a site in a market you do not know yet.
   - You need to know what buyers expect before you design anything.
   - You want a positioning angle that none of the leaders cover.
   - A strategy review needs the design side of the field, not just search.
+not_for:
+  - "You want technical checks like search ranking or accessibility errors: use a technical SEO or accessibility audit instead."
+  - "You only have your own site and no rivals to compare: ask a designer or a few customers for feedback instead."
+  - "You need a finished design or brand direction: this gives the bar to meet, so hand it to a designer to build from."
 you_give:
   - The market or vertical
   - Three to six leading sites
@@ -29,8 +30,30 @@ you_get:
   - Common weaknesses
   - A shared gap you could own
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open web pages in a browser.
+  - Open your AI tool. Use Claude, ChatGPT or Gemini with web browsing turned on if you can.
+  - Paste the skill text into the chat.
+  - Add your market, your site type and three to six leading sites in that market.
+  - If your AI cannot open pages in a browser, paste screenshots of each site. Static page text alone will miss layout and design.
+  - Read the experience bar first. Then check the gaps for an angle your own site could own.
+  - Hand the bar to your designer or to a design planning step before you build.
+output_sample:
+  input:
+    - Your market or vertical
+    - Three to six leading sites in that market
+    - Your site type, such as a catalogue or booking site
+    - A way to view the sites as a visitor sees them, in a browser or with screenshots
+  prerequisites:
+    - An AI that can open web pages in a real browser, or screenshots of each site if it cannot
+  output:
+    - name: Vertical and field surveyed
+      contains: The market, the sites assessed, and any site that could not be viewed properly.
+    - name: Score per dimension
+      contains: How the field does on each of seven experience areas, such as navigation, layout and trust cues.
+    - name: Cross-site patterns
+      contains: The habits the leading sites share, which buyers in this market now expect.
+    - name: Gaps
+      contains: Where even the leaders fall short, which could become your edge.
+    - name: The experience bar
+      contains: A short summary of what a credible site in this market must do.
+    - name: Not assessable items
+      contains: What could not be judged, and why.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a fixed ticket format from what you give it.
 new_slug: work-ticket-writer
 name: Work ticket writer
-summary: Give it a bug, task or idea. Get a complete Jira, Linear or GitHub
-  ticket with fields and a clear done test.
+summary: Turn a bug report, spec or loose idea into a work ticket for Jira, Linear or GitHub, with every field filled and a done test someone can check.
 job: build-software
 headline: Work ticket writer
-subhead: A ticket someone can pick up and start without asking you a single
-  question. It works in Jira, Linear or GitHub, and fills the fields your
-  tracker needs.
+subhead: A ticket someone can pick up and start without asking you a single question. It works in Jira, Linear or GitHub, and fills the fields your tracker needs.
 explain: |
   A ticket someone can pick up and start without asking you a single question. It works in Jira, Linear or GitHub, and fills the fields your tracker needs.
 
@@ -18,6 +15,10 @@ when:
   - You are filing a bug that another person will fix.
   - Developers keep asking what a ticket means.
   - Your backlog has vague items nobody can start.
+not_for:
+  - "You need the spec or PRD itself written first: use a spec writing step before this, then bring the spec here."
+  - "You want to decide what ships this quarter: use a roadmap planning step, not tickets."
+  - "You want to hand a whole plan to a coding agent to run alone: use a task brief for that agent instead."
 you_give:
   - Spec, bug or request
   - Ticket type (optional)
@@ -31,7 +32,29 @@ you_get:
   - Epic goal and metric
   - Backlog readiness audit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini in a new chat. No code running or paid tool is needed.
+  - Paste the full text of the skill's SKILL.md file into the chat as your first message.
+  - Paste your spec, bug report or request in a second message. Add your tracker name and any required fields.
+  - Say which ticket type you want, or let the AI pick one. If something is vague, answer its questions.
+  - Check each ticket against its done test. Fix any field marked none that should have an answer.
+  - Copy each ticket into Jira, Linear or GitHub. For a backlog audit, paste your existing tickets and ask which are not ready.
+output_sample:
+  input:
+    - Your spec, bug report or loose request
+    - Ticket type (optional)
+    - Your tracker's required fields (optional)
+    - Parent epic or story (optional)
+    - Your capitalisation policy, if you capitalise software costs (optional)
+  output:
+    - name: Summary table
+      contains: One row per ticket with type, title, parent, estimate, capitalisation stage and whether it is ready to pull.
+    - name: Epic
+      contains: Goal, success metric with baseline and target, kill criteria, owner and where it fits on the roadmap.
+    - name: Story
+      contains: The user story line, links to the spec, checkable acceptance criteria, non-goals, analytics events and QA notes.
+    - name: Task
+      contains: What changes, the touches list of files and services in scope, an estimate and a definition of done.
+    - name: Spike
+      contains: One question, a timebox in days, exit criteria and a decision memo as the required result.
+    - name: Bug
+      contains: Title, numbered repro steps, environment, observed versus expected, severity, priority and how the fix is verified.

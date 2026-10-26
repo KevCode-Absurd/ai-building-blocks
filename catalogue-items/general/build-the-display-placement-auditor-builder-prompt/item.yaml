@@ -1,6 +1,6 @@
 slug: build-the-display-placement-auditor-builder-prompt
 name: Display placement review coding prompt
-summary: Get a coding brief to review Display ad sites. Find signs of waste and list proposed blocks with proof.
+summary: "Get a coding brief that finds Google Ads Display placements wasting spend, with proposed exclusions and the numbers behind each. Read-only."
 category: general
 type: prompt
 role: make

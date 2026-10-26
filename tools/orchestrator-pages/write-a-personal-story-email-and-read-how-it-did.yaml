@@ -1,6 +1,6 @@
 new_slug: write-a-personal-story-email-and-read-how-it-did
 name: Write a personal story email and read how it did
-summary: Give it a true story. Get a clean email to send, then a read of results.
+summary: Turn one true story into a personal story email, then see if it beat your usual sends. You get three drafts, a clean final and a results read.
 job: write-emails
 thinking: medium
 thinking_why: It writes, then edits and scores a short email. A mid-size model does it well.
@@ -14,6 +14,10 @@ when:
   - Your emails all sound like promotions and you want one that sounds personal.
   - You have a true story about why you started, a customer or a mistake, and don't know how to turn it into an email.
   - You want to know if a story email beats your usual sends before you write more.
+not_for:
+  - "You have no past sends to compare against: use the Email draft readiness checker to score the draft, and skip the results step."
+  - "You want a plain promo or sale email: use the Campaign email writer."
+  - "You only want to fix the wording of an email you already wrote: use the Email call to action editor."
 you_give:
   - Your brand file with voice, products and what you can claim
   - One true story you can tell, in rough notes
@@ -29,6 +33,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Tell it the story as you would to a friend. Don't polish it first.
   - Pick one draft, take the cuts, then send it to part of your list next to your usual emails. Export the numbers after a few days.
+output_sample:
+  input:
+    - Your brand file with voice, products and what you can claim
+    - One true story, in rough notes
+    - A short brief with the goal of the email (optional)
+    - Your campaign numbers a few days after sending, and your usual-send numbers to compare
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff folder
+    - A sent email and its exported campaign numbers before the last step
+  output:
+    - name: "Step 1 file: three drafts"
+      contains: Who is on the list, three story drafts in different shapes, which to send first, and a claims check.
+    - name: "Step 2 file: review"
+      contains: Cuts to make, a pacing map, subject line fixes, a score out of 100 and a verdict.
+    - name: "Step 3 file: clean draft"
+      contains: The final email with small errors fixed in your voice.
+    - name: "Step 4 file: results read"
+      contains: Ranked diagnosis of your numbers, what to repeat, one fix to test and a score out of 100.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write three drafts
     text: Decides the reaction and the one takeaway first, answers the buyer's main doubts, and writes three drafts in different shapes with a call to action and a P.S.

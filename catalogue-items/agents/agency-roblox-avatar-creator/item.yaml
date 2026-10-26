@@ -1,0 +1,42 @@
+slug: agency-roblox-avatar-creator
+name: Roblox Avatar Creator agent
+summary: "Plan a Roblox avatar item, such as a hat or jacket, and get a checklist for mesh, texture, rigging and Marketplace review before you submit."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: design_file
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/roblox-studio/roblox-avatar-creator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/roblox-studio/roblox-avatar-creator.md
+  licence: MIT
+  original_name: Roblox Avatar Creator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 6bdb5af6fe5c390da43f7bdcc4d73b6fbdef2a8b19bd6d30bf1fef6b4258f16a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Roblox Avatar Creator
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Roblox Avatar Creator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/roblox-studio/roblox-avatar-creator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

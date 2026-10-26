@@ -1,6 +1,6 @@
 new_slug: network-effect-claim-tester
 name: "Network effect claim tester"
-summary: "Describe your product's network effect claim. Get who gains, whether price or cost moves and a call."
+summary: "Test your network effect claim. Find who gains from each new user, whether price or cost moves, and get a clear call on real network power."
 job: plan-strategy
 thinking: medium
 thinking_why: "The test is a fixed list of questions, but it needs careful reading of your numbers to avoid counting a big user base as a network effect."
@@ -17,6 +17,10 @@ when:
   - You or a co-founder say you have a network effect and nobody has checked it against numbers.
   - You are building community features and want to know if they will protect your margins.
   - You are judging a rival's claim that its large audience makes it hard to beat.
+not_for:
+  - "You want a full strategy review across all seven powers: use the Seven powers scorecard builder."
+  - "Your product has no user-to-user effect, such as a tool one person uses alone: skip this and test demand with the Seven-question startup scorer."
+  - "You only want to know how to grow your audience: ask a marketing person, since this test checks if growth protects your margin."
 
 you_give:
   - What the product does and who uses it
@@ -35,6 +39,29 @@ how_to_use:
   - Paste any figures that compare small and large groups, such as retention by group size or prices by region.
   - Read the call first. If it says no, read the cheapest next test.
   - If the call is real network power, take it to "Seven powers scorecard builder".
+output_sample:
+  input:
+    - What your product does and who uses it
+    - Why you think more users make it better
+    - Retention, price or cost by group size, city or cohort (optional)
+    - A rival network you compete with (optional)
+  output:
+    - name: The network
+      contains: Who is on each side and what one more user adds for whom.
+    - name: Where the gain stops
+      contains: The number of users at which extra users add little, or a MISSING line.
+    - name: Reach and escape
+      contains: Whether the network is local or global, and whether users can join a rival at no cost.
+    - name: The money link
+      contains: How price, cost and churn compare between small and large groups, and whether the effect is big enough to matter.
+    - name: Call
+      contains: Network power, useful feature or no network effect, with the reason in two lines.
+    - name: Cheapest next test
+      contains: A test using data you already have, with a pass line, or none needed.
+    - name: Missing
+      contains: Facts that would change the call.
+    - name: Checks missed
+      contains: One line for each check the skill failed, or none.
 
 how_it_works:
   - title: Maps the sides

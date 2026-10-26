@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs mixed evidence and must not overclaim.
 new_slug: gene-variant-evidence-checker
 name: Gene variant evidence checker
-summary: Name a gene variant. Get public evidence, expert gene-disease ratings
-  and papers, each with its source.
+summary: Check a gene variant against public evidence. You get expert gene-disease ratings, linked papers and a source link for every claim.
 job: research-topics
 headline: Gene variant evidence checker
-subhead: Name a gene variant. Get public evidence, expert gene-disease ratings
-  and papers, each with its source. Bring a variant name or identifier. Use the
-  result to plan your next step.
+subhead: Name a gene variant. Get public evidence, expert gene-disease ratings and papers, each with its source. Bring a variant name or identifier. Use the result to plan your next step.
 explain: |
   Name a gene variant and get back what public sources say about it, with a link for every claim. It looks up variant evidence, automated classification support under the ACMG/AMP rules, expert gene-disease ratings from ClinGen, and linked papers.
 
@@ -18,19 +15,49 @@ when:
   - You need a gene-disease rating from an expert panel.
   - You want papers about one variant in a single list.
   - You are preparing notes for a clinician to review.
+not_for:
+  - "You have patient records, family history or symptoms to interpret: ask a clinician or genetic counsellor, because this tool takes no private case data."
+  - "You have a VCF file, a batch of variants, or somatic or structural variants: use a variant annotation tool built for files."
+  - "You want a broad search across many databases like ClinVar, dbSNP or gnomAD: query those databases directly."
 you_give:
-  - A variant name or identifier
-  - The gene (optional)
-  - The genome build (optional)
-  - Network access to the public service
+  - One public variant name or ID, such as an rsID or HGVS name
+  - The genome build, which must be GRCh38
+  - A gene symbol or disease name (optional, for gene-disease ratings)
+  - A public science question to narrow the papers (optional)
 you_get:
-  - Public evidence for the variant
-  - ACMG/AMP decision support notes
-  - Gene-disease validity ratings
-  - Linked papers with sources
+  - A status that says if the variant was resolved, ambiguous, not found, invalid, unsupported or unavailable
+  - For a resolved variant, public evidence and ACMG/AMP decision support with sources
+  - Gene-disease ratings from ClinGen, with dates and source links
+  - Linked papers, marked as exact, alias or gene-level matches
+  - A note that a qualified professional must review the result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach public web data services.
+  - Use an AI that can reach the web, such as Claude, ChatGPT or Gemini with web tools. No account or key is needed for the service.
+  - Paste the skill text into your chat, or upload the skill folder if your AI takes files.
+  - Give one public variant, such as an rsID or HGVS name, and say the build is GRCh38. Add no patient details.
+  - Read the status first. If it says ambiguous, pick one candidate yourself and ask again.
+  - If it resolved, ask for linked papers or gene-disease ratings.
+  - Check the sources, then pass the result to a clinician or qualified reviewer.
+output_sample:
+  input:
+    - One public variant name or ID, such as an rsID or HGVS name
+    - The genome build, which must be GRCh38
+    - A public science question to narrow the papers (optional)
+    - A gene symbol or disease name, for a gene-disease rating lookup
+  prerequisites:
+    - An AI that can reach the web, or can run a curl command
+    - No account or key is needed
+  output:
+    - name: Status
+      contains: "One of six outcomes: resolved, ambiguous, not found, invalid, unsupported or unavailable. It tells you what to do next."
+    - name: Variant identity
+      contains: The resolved variant and its canonical key, which you reuse for the paper search.
+    - name: ACMG/AMP decision support
+      contains: The automated variant-level result, kept apart from any ClinVar assertions, with the sources behind it.
+    - name: Gene-disease assertions
+      contains: ClinGen ratings with disease, inheritance, evidence assessment, source link, date and snapshot version.
+    - name: Variant-linked literature
+      contains: Papers marked as exact variant, alias or gene-level match, with PubMed links.
+    - name: Publication details
+      contains: "For a returned PMID: PubMed link, DOI or PMCID when present, and retraction status."
+    - name: Report notes
+      contains: Your exact query, access date, limits found, and a line saying a qualified professional must review it.

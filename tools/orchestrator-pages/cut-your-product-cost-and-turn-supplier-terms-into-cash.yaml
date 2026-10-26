@@ -1,6 +1,6 @@
 new_slug: cut-your-product-cost-and-turn-supplier-terms-into-cash
 name: Cut your product cost and turn supplier terms into cash
-summary: Give it your product and quote. Get a cost sheet, terms to ask for, a talk plan and a cash check.
+summary: Cut your product cost per unit. Give it a factory quote and get a cost sheet, terms to ask for, a talk plan and a cash check.
 job: plan-supply-chain
 thinking: high
 thinking_why: It runs four skills in a row, with cost and cash sums that each step relies on. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You buy stock from a factory and your cost per unit is too high.
   - Stock uses up your cash before it sells, and growth means ordering more.
   - You have a bigger order coming and want price breaks or better payment terms before you commit.
+not_for:
+  - "You sell services or resell stock with no factory quote: ask your accountant to review your cash flow instead."
+  - "You only want to know your total cost to land goods at your door: work from your freight and duty bills with a simple spreadsheet."
+  - "You need tax, loan or legal advice: ask your accountant or a lawyer. This plans your talks and cash, it is not financial advice."
 you_give:
   - Your product, with a photo or spec sheet
   - The factory's quote, the volume it is for and the units you buy a year
@@ -32,6 +36,28 @@ how_to_use:
   - Attach a photo or spec sheet of the product, along with the quote and your yearly volume.
   - When it pauses, run the talks with the factory and write down the new prices, price breaks and payment terms they agree to.
   - Bring those figures back for the final cash check. Ask whoever handles your finances for stock and debt numbers if you do not have them.
+output_sample:
+  input:
+    - Your product, with a photo or spec sheet
+    - The factory's quote, the volume it covers and your yearly units
+    - Your payment terms, production days and shipping days
+    - Your stock, debt, cash and 12-month growth plan
+    - Part prices and other factory quotes (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack with HANDOFF.md and the skill files
+    - A brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Cost sheet"
+      contains: One row per part, labour, overhead and factory margin, with a question to ask and the return risk of cutting it.
+    - name: "Step 2: Terms"
+      contains: Your float in days, a ladder of terms to ask for, and cash by month with and without them.
+    - name: "Step 3: Negotiation"
+      contains: An opening call, asks by line, what you give back, the factory's likely margin range and a fallback.
+    - name: "Step 4: Cash limit"
+      contains: Your cash cycle, a grade per product, a stockout test, your growth plan against cash and debt, and a score out of 100.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Break down the quote
     text: Builds the cost sheet with one row per part, labour, overhead, factory margin and extras. Writes price-break questions for each row.

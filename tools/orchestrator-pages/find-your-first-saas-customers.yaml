@@ -55,3 +55,26 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+
+not_for:
+  - "Your product already has steady customers and you want to grow: use the Self serve product growth planner."
+  - "You sell to large companies through long deals: use the Enterprise account deal planner."
+  - "You only need the pricing: use the Pricing model designer."
+output_sample:
+  input:
+    - What your product does, in a sentence or two
+    - Who the buyer is, by role or kind of person
+    - Your price or plan, or "not set"
+    - Your rivals, or the tools people use today (optional)
+    - Hours a week you can give to the launch (optional)
+  output:
+    - name: Market position and messages
+      contains: A position rivals do not hold, the reasons buyers would pick you and messages to test.
+    - name: Pricing trade-offs
+      contains: Seat, usage or outcome pricing for your product, where the free tier ends and the risks.
+    - name: Buyer targets
+      contains: The first groups to contact, their pain, the channel and why they come first.
+    - name: Launch sequence
+      contains: Week by week actions, each with an owner and a done-when line.
+    - name: First-customer launch tests
+      contains: Two-week tests with one change, a success line and a kill rule.

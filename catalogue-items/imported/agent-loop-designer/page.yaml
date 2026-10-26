@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It must set safe stop rules for an agent that repeats work.
 new_slug: agent-loop-designer
 name: Agent loop designer
-summary: Say the job you want repeated. Get a bounded AI loop with checks, stop
-  rules and handoffs.
+summary: Turn a job you want repeated into an agent loop with checks, stop rules and a handoff. Find a published loop or design your own.
 job: set-up-ai
 headline: Agent loop designer
-subhead: A repeating job for an AI agent with clear checks, a point where it
-  must stop, and a handoff to you when it is stuck.
+subhead: A repeating job for an AI agent with clear checks, a point where it must stop, and a handoff to you when it is stuck.
 explain: |
   A repeating job for an AI agent with clear checks, a point where it must stop, and a handoff to you when it is stuck. Without those, a loop either quits too soon or runs all night.
 
@@ -17,6 +15,10 @@ when:
   - You want something to run on a schedule, like a daily review.
   - You have a loop idea but no stop rule, so you fear it will run forever.
   - You want to copy a loop someone else already proved works.
+not_for:
+  - "You have a one-off task that will not repeat: use a single prompt in your AI chat instead."
+  - "You want an agent to run forever with no limits: this tool will not design that, so set your own stop rule first."
+  - "You want the loop switched on or run for you: this skill only writes the loop, so set up the schedule yourself or ask your AI to do it."
 you_give:
   - The job you want repeated
   - How often it should run
@@ -28,7 +30,25 @@ you_get:
   - Checks and stop rules for each round
   - A handoff step for when it gets stuck
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat and paste the skill text, or add the skill folder if your AI tool takes files.
+  - Say what you want the agent to get done. If you want published loops, say so.
+  - Answer the short questions one at a time. Say what it may touch and when it should stop.
+  - Read the loop and its prompt. Check the stop rule and the approval limits fit your job.
+  - Paste the prompt into your AI tool when you are ready. Setting up a schedule is a separate step.
+output_sample:
+  input:
+    - The job you want the agent to get done
+    - "When it should run: on request, on a schedule, or after an event"
+    - What it can look at or change, and what is off-limits
+    - How you will know it worked (optional)
+    - When it should stop or ask you for help (optional)
+  prerequisites:
+    - A chat AI is enough to design a loop
+    - Web access, only if you ask for the latest published loops
+  output:
+    - name: Matching published loops
+      contains: Up to three loops from the Loop Library with their exact titles, links, why each fits and the smallest change needed.
+    - name: Loop name and summary
+      contains: One sentence on what the loop does and when it stops.
+    - name: Prompt
+      contains: One short paragraph you can paste into your AI, with the task, the check after each change, the stop rule and what needs your approval.

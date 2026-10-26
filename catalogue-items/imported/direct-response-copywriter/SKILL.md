@@ -3,9 +3,10 @@ name: direct-response-copy
 description: "Write sales copy that converts — landing pages, VSLs, emails, headlines, CTAs, Meta ads, upsell sequences, and anything persuasive. Use this skill whenever the user asks to write, rewrite, punch up, or critique sales copy, direct response copy, VSLs, TSLs, email sequences, ad creative, headlines, CTAs, or landing pages. Also trigger for requests like 'write copy for my offer', 'improve my headline', 'write a subject line', 'help me sell X', or any task involving persuasive writing for commercial purposes. Applies the proven frameworks of Schwartz, Hopkins, Ogilvy, Halbert, Caples, Sugarman, and Collier."
 ---
 
-> Created by **Rob Palmer** — direct-response copywriter ($523M+ tracked).
+> Created by **Rob Palmer**, direct-response copywriter.
 > Source & updates: https://github.com/robpalmer99/claude-code-copywriting-skills
 > Free under CC-BY-4.0. Attribution requested when redistributed.
+> Adapted by AI Blocks: honesty rules, an output format and next steps added, and unsourced figures removed. The method is unchanged.
 
 # Direct Response Copy
 
@@ -19,19 +20,28 @@ Write like you're explaining to a smart friend who's skeptical but curious. Back
 
 That's it. Everything else flows from there.
 
+
+## Rules for proof (read first)
+
+- Use only real numbers, testimonials, results, names and sources from the user's own records. Every figure and quote in the examples below shows the shape only. Never reuse it as a claim.
+- If the user gave no proof for a line, write `[PLACEHOLDER: what is needed]` and list it at the end. Never invent a figure, a customer quote, a revenue claim or a study.
+- Urgency and scarcity only when true (a real deadline, a real stock limit).
+- If the offer needs medical, financial or legal claims, or the user cannot back a claim with evidence, say the copy needs compliance review first and stop short of those claims.
+- If the offer, the buyer or the format is missing, ask once. Do not guess.
+
 ---
 
 ## Headlines
 
-The headline does 80% of the work. One headline can outpull another by 19.5x. Same product, same offer, different headline.
+The headline does most of the work. Same product, same offer, different headline can mean very different results, so write several and test them.
 
 ### The master formula
 
 > **[Action verb] + [specific outcome] + [timeframe or contrast]**
 
 * "Ship your startup in days, not weeks"
-* "Save 4 hours per person every single week"
-* "Build a $10K/month business in 90 days"
+* "Save [REAL HOURS] per person every single week"
+* "Build [REAL RESULT] in [REAL TIME]"
 
 The contrast version ("days, not weeks") creates before/after in six words.
 
@@ -92,7 +102,7 @@ Stops the scroll. Creates tension. Self-selects readers who suspect you might be
 
 ### The story opening
 
-> "Last Tuesday, I opened my laptop and saw a number I couldn't believe: $47,329 in one day."
+> "Last Tuesday, I opened my laptop and saw a number I couldn't believe: [REAL NUMBER] in one day."
 
 The reader is IN the scene before they know they're reading sales copy.
 
@@ -104,7 +114,7 @@ Vulnerability disarms skepticism. They think "they're like me."
 
 ### The specific result
 
-> "In 9 months, we did $400k+ on a vibe-coded website using these exact methods."
+> "In [REAL TIME], we did [REAL RESULT] using these exact methods."
 
 Specific numbers create credibility. Reader wants to know how.
 
@@ -150,7 +160,7 @@ TV shows end every episode with a cliffhanger. You can't NOT watch the next one.
 
 **Weak (no gap):** "10 Tips for Better Writing"
 
-**Strong (gap):** "I tested 47 headlines. One pattern beat everything else by 3x."
+**Strong (gap):** "I tested [REAL NUMBER] headlines. One pattern beat the rest by [REAL MARGIN]."
 
 The weak version tells you exactly what you'll get. The strong version creates a question: which pattern?
 
@@ -263,7 +273,7 @@ Don't just describe the pain. Do the math:
 >
 > There's an easier way."
 
-When readers see "22+ hours," they calculate whether that's worth paying to eliminate. You've turned abstract frustration into a number they can weigh against your price.
+(Use the user's real hours. The figures here are only an illustration.) When readers see "22+ hours," they calculate whether that's worth paying to eliminate. You've turned abstract frustration into a number they can weigh against your price.
 
 Another approach: the scenario that makes them feel it:
 
@@ -341,9 +351,8 @@ Generic testimonials ("Great product!") carry zero persuasive weight. Structure 
 
 Examples:
 
-* "I shipped in 6 days as a noob coder. It would have taken me months. I wanna cry 🥲"
-* "I managed to exit and sell for 5 figures in a few weeks. Best investment I've made in so long."
-* "We were able to buy our first business within 4 months of joining."
+* "[REAL BEFORE STATE], then [REAL ACTION], and in [REAL TIME] [REAL RESULT]. [REAL REACTION]."
+* Only use quotes the customer really gave, with permission. Never write one for them.
 
 The specifics are everything. "4 months" is believable. "Helped me succeed" is not.
 
@@ -378,7 +387,7 @@ Weak CTAs command action. Strong CTAs describe the benefit:
 
 Below the CTA, add friction reducers:
 
-> "$199 once. Join 2,600+ marketers. 2 minutes to install."
+> "[REAL PRICE] once. Join [REAL NUMBER] customers. [REAL TIME] to set up."
 
 Pattern: **[Risk reversal] + [Social proof] + [Speed/ease]**
 
@@ -388,7 +397,7 @@ Pattern: **[Risk reversal] + [Social proof] + [Speed/ease]**
 
 Patterns that signal "written by someone who lives online, not a marketing team":
 
-* Revenue transparency: Specific numbers that would make corporate uncomfortable
+* Revenue transparency: real, specific numbers, only when the user provides them
 * Honest limitations: Acknowledging imperfection builds authenticity
 * Strategic emoji: Use sparingly but deliberately
 * In-group language: Words your audience uses with each other
@@ -495,6 +504,25 @@ The goal isn't to hide that you're selling. It's to sell like a human, with hone
 
 ---
 
+# Output format and next steps
+
+Deliver in labelled parts, in the format the user asked for:
+
+- **Headlines:** 10 options grouped by formula (action + outcome, story, specific fact, question, transformation), with a one-line reason each, and one pick marked.
+- **Email:** subject line, preview text, body, one call to action, each as a labelled part.
+- **Page or sales copy:** the sections from "The full sequence", each labelled.
+- **Call to action set:** 3-5 button lines, benefit-led, with the line under the button.
+
+After the copy, add:
+
+1. **Placeholders to fill:** every `[PLACEHOLDER]`, and where the real fact lives.
+2. **Claims to check:** any line that needs proof or review.
+3. **How to test:** change one thing at a time (headline first), run each version to the same size of audience, and keep the one that gets more of the action you care about.
+
+Not for: regulated claims (medical, financial, legal) without compliance review.
+
+---
+
 # Classic Direct Response Frameworks
 
 ## Eugene Schwartz: The 5 Levels of Awareness
@@ -524,7 +552,7 @@ They know your product and want it. Just need a push. Lead with the deal.
 
 * Advertising is salesmanship in print — the only purpose is to make sales
 * Reason-why copy: Don't just claim. Explain WHY your product works
-* Specificity creates believability: "Cleans 99.6% of bacteria" beats "Cleans almost all bacteria"
+* Specificity creates believability: a tested, sourced figure beats "almost all" (only when the figure is real)
 * Test everything — use coupons, codes, split tests
 * Headlines do the heavy lifting
 
@@ -551,10 +579,10 @@ They know your product and want it. Just need a push. Lead with the deal.
 
 ## John Caples: Tested Advertising Methods
 
-* One headline can outpull another by 19.5x — same product, same offer, different headline
+* Headlines differ a lot in results, so test them
 * Self-interest beats cleverness
 * Specifics beat generalities
-* Test at least 5 headlines — one will be 2-10x better than the rest
+* Test at least 5 headlines — one often beats the rest
 
 ---
 

@@ -1,6 +1,6 @@
 new_slug: live-auction-show-planner
 name: "Live auction show planner"
-summary: "Give it your stock, costs and show length. Get a run order, promotion schedule and profit sheet."
+summary: "Plan a live auction show from your stock list. Get a run order, start prices, a promotion schedule and a profit sheet before you go live."
 job: run-your-store
 thinking: medium
 thinking_why: "It builds a schedule and a profit sheet from a stock list, which a mid-size model handles well."
@@ -17,6 +17,10 @@ when:
   - You want to run your first live auction and do not know how to size it.
   - You are planning a big show and want to promote it and check it will break even.
   - You have a pile of low-cost stock and want to turn it into a run order and a profit sheet.
+not_for:
+  - "You sell your own branded products, not resale stock: the item sums differ, so plan with a simple margin sheet in a spreadsheet."
+  - "Your items are niche and few people want them: sell them in bulk lots or to other resellers instead."
+  - "You want a plain product page or store layout: ask a web designer or use your store builder's own tools."
 
 you_give:
   - Your items with cost and expected resale value (a stock list with a lowest price you accept)
@@ -38,6 +42,25 @@ how_to_use:
   - Say how long the show is and when. Add your platform fee rates and any helper cost.
   - List the places you can promote the show and how many followers you have.
   - Check the platform's current rules and bonuses before you rely on the plan.
+output_sample:
+  input:
+    - Your stock list with your cost and the lowest price you accept for each item
+    - The show length and date
+    - Your platform fee rates and the cost of help with shipping
+    - Where you can promote the show and how many followers you have
+  output:
+    - name: Show plan
+      contains: The show type, length, number of items, seconds per item and total run time.
+    - name: Promotion schedule
+      contains: Three post times, your channels and the words for the show thumbnail.
+    - name: Run order
+      contains: Anchor items, core items and a buyer giveaway with the extra bid needed per item.
+    - name: Start prices and floors
+      contains: Each item with its cost, start price and the lowest price you accept.
+    - name: Profit sheet
+      contains: Sales, fees, stock, prize and helper wages, then profit and break-even sales.
+    - name: Checks missed and missing
+      contains: Any check that failed and any facts you did not give.
 
 how_it_works:
   - title: Sizes the show

@@ -1,51 +1,117 @@
 new_slug: production-contribution-evidence-reviewer
 name: Production contribution evidence reviewer
 headline: Production contribution evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: See each product's profit per good unit after scrap, and whether your planned mix fits the bottleneck hours. Redone when yield or input price changes.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A yield-linked product contribution and capacity comparison. Share measured batch input/good/scrap quantities and recovery cash for each proposed product, proposed output units, selling prices and verified bottleneck hours. Include the previous dated review and source versions when available.
-explain: |-
-  A yield-linked product contribution and capacity comparison.
+subhead: Give it your measured batch quantities, the scrap you recovered and sold, input prices, selling prices, planned units and the hours your bottleneck has. It works out the true cost of each good unit, then what each product adds to profit, then whether the plan fits the hours. You get a contribution table and a capacity check.
 
-  Manufacturing finance planning. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A batch of raw material does not all become product you can sell. Some of it becomes scrap. So the cost of a good kilogram is higher than the cost of a kilogram you put in, and the gap changes which product earns the most. If you price a product from the wrong cost, your product mix is wrong too.
+
+  This agent starts from measured input, good output and scrap for each batch. It takes off only the scrap value you can prove, divides the net batch cost by the good output, and converts the answer into the unit you sell. It then works out each product's contribution, which is what one sale adds after its direct costs. Last, it checks your planned units against the hours your bottleneck can supply. A bottleneck is the machine or step that limits how much you can make. The plan stays your proposal. The agent does not call it the best mix.
+
+  It keeps a record of the last review. When a yield, a scrap recovery, an input price or a planned quantity changes, it runs again. If a supplier invoice raises an input price, it works out the extra cost per unit, passes on only the share your customers agreed to pay, and rebuilds the contribution. It does not guess demand, and it does not say the plant can make the plan.
+
 when:
-  - You need a yield-linked product contribution and capacity comparison.
-  - You work on manufacturing finance planning and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A new batch comes in with a lower yield than the last one.
+  - You sell scrap and want its value counted correctly, with proof.
+  - A supplier invoice raises the price of a main input, and part of the rise can go to customers.
+  - You are choosing how many units of two products to make, and the bottleneck may not have enough hours.
+
+not_for:
+  - You make one product with no scrap. A simple margin sum in a spreadsheet is enough.
+  - You want the best mix. It checks the mix you propose and does not search for a better one. Ask your finance lead or use an optimiser.
+  - You have no measured batch quantities. The yield lines stop and show MISSING, because a guessed yield changes every later number.
+  - You want a forecast of demand or sales. It uses your planned units and does not predict what will sell.
+
 you_give:
-  - Measured batch input/good/scrap quantities and recovery cash for each proposed product, proposed output units, selling prices and verified bottleneck hours. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - For each product, the measured input, good output and scrap quantities for a batch, in the same unit (from your production records)
+  - Cash received for scrap, with proof such as a buyer's invoice (optional per batch; with no proof it counts no scrap value)
+  - The batch's input cost and the cash cost of making it (from supplier invoices and your cost records)
+  - Selling prices and the unit you sell in (from your price list)
+  - Planned units for each product (from your plan)
+  - Bottleneck hours needed per unit, and hours available in the same period (from routing sheets or the machine schedule)
+  - The new invoice price and the share your customers agreed to pay (optional, only if an input price changed)
+  - The last review's record and the earlier source versions (optional, needed to show what changed)
+
 you_get:
-  - A yield-linked product contribution and capacity comparison.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The real cost per good unit for each product, after scrap recovery
+  - A contribution table with profit per unit and for the planned volume
+  - A capacity check with hours needed against hours available, and any unused hours or overload
+  - A cost bridge for an input price change, showing the part recovered from customers and the part you absorb
+  - What changed since the last review, a record for the next one, MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Connect production yield to mix contribution workflow and the Commodity pass through cost bridge skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
+  - Say if this is the first run. If not, paste last time's record. Then attach batch records, price lists, supplier invoices and the machine schedule.
+  - Say which unit you sell in. Check that costs per good unit and planned quantities use that same unit.
+  - Check that the input weight equals good output plus scrap. Check that scrap value appears only where you gave proof.
+  - The capacity step covers two products at a time. If you have more, say which two to compare, or run it again for the others.
+  - Fix every MISSING line and run it again when a yield, an invoice price or a plan changes. Adding it sets up no schedule.
+
 how_it_works:
-  - title: Connect production yield to mix contribution
-    text: Run the governing workflow when A measured yield, scrap recovery, input price or proposed product quantity changes.
-  - title: Commodity pass through cost bridge
-    text: If an input invoice price changes, bridge commodity intensity and only the approved customer pass-through assumption before rebuilding product contribution. Preserve the original stock cost vintage and do not infer demand or production feasibility.
-output_shape: |-
-  A yield-linked product contribution and capacity comparison.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to these products and this period, or sets a first baseline. It compares batch IDs, measured yield, input price dates, the agreed pass-through share, the bottleneck scope and the plan version. If nothing changed and no review is due, it says so and stops.
+  - title: Reconciles each batch
+    text: Runs the Manufacturing yield cost bridge step. It ties input weight to good output and scrap, values only scrap you can prove, and subtracts that from input plus conversion cash. It divides by good output and converts to your selling unit, keeping the evidence for the conversion.
+  - title: Builds contribution and checks capacity
+    text: Runs the Product mix capacity checker step. It builds each product's contribution from that cost and your selling price, multiplies by planned units, and compares the hours needed with the hours the bottleneck has. It reports unused hours or overload and lists other limits it did not test.
+  - title: Bridges an input price change only if needed
+    text: If a supplier invoice changes an input price, it runs the Commodity pass through cost bridge. It works out the extra input cost per unit, applies only the agreed pass-through share to the price, and rebuilds contribution. Old stock keeps its original cost date.
+  - title: Checks and saves
+    text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, which steps ran or were skipped, and the new record. The old record is kept, and planned volume is never raised on its own.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <unit>   LAST REVIEW <date or first run>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  BATCH YIELD   <product, batch>: input <n> = good <n> + scrap <n>
+                net batch cost <n> after scrap recovery <n>
+                cost per good <unit> <n>
+  CONTRIBUTION  <product>: price <n> - cost <n> = <n> per unit;
+                planned units <n>; total <n>
+  CAPACITY      hours needed <n> against available <n>;
+                unused <n> or overload <n>
+  PRICE BRIDGE  extra input cost <n> per unit; passed on <n>; absorbed <n>
+                (only if an input price changed)
+  RECORD FOR NEXT REVIEW  product units, batch IDs, measured yield, input price dates,
+                          approved pass-through, bottleneck scope, plan version
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Measured input, good output and scrap quantities for each batch
+    - Scrap sale records, input invoices and your conversion costs
+    - Selling prices and your planned units for two products
+    - Bottleneck hours per unit and hours available
+    - The last review's record (optional)
+  prerequisites:
+    - An AI that can read files and build a spreadsheet
+    - The Connect production yield to mix contribution workflow and the Commodity pass through cost bridge skill, added with the agent
+  output:
+    - name: Changed since last review
+      contains: Each yield, scrap, price or quantity that moved, with its old and new value and source date.
+    - name: outputs/step-1-manufacturing-yield-cost-bridge.md
+      contains: Input weight tied to good output and scrap, net batch cost after proven scrap recovery, cost per good unit, and a lost-yield sensitivity.
+    - name: outputs/step-2-product-mix-capacity-checker.md
+      contains: Contribution per unit and for the planned volume, bottleneck hours needed against available, and unused hours or overload. The mix stays your proposal.
+    - name: Commodity pass-through bridge
+      contains: Extra input cost per unit, the share passed on to customers, the share you absorb, and the rebuilt contribution. Only when an input price changed.
+    - name: Record and MISSING lines
+      contains: The record for the next review, every gap with the line it stops, and CHECKS MISSED.
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Per-good-unit costs and product mix quantities use identical physical units; planned volume is not increased automatically from contribution rankings. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: A lower yield
+    how: Lower the good output for one batch and run it again. Scrap rises, cost per good unit rises, and that product's contribution and planned total fall.
+  - what: A bigger pass-through share
+    how: Raise the share customers agree to pay. The absorbed cost falls, and the contribution moves back toward where it was before the price rise.
+  - what: More bottleneck hours
+    how: Change the hours available. Overload turns into unused hours, or the other way round. Contribution per unit does not change.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Per-good-unit costs and product mix quantities use identical physical units; planned volume is not increased automatically from contribution rankings. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +122,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each batch record with its date and ID, so a changed yield is a visible change.
+  - Write your selling unit once in the agent's file, such as kilograms or boxes, so every run converts the same way.
+  - Keep the buyer's invoice for each scrap sale. Scrap with no invoice is counted at zero value.
+  - Check the other limits it lists, such as labour or storage, yourself before you commit to a plan.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and saves the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your batch and machine records
+      why: Measured weights and hours are facts. Estimates change the answer, so use records where you have them.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Supplier invoices dated to the stock that was used.
+    - The agreement or email that sets the pass-through share with customers.
+    - A named person who owns the plan and will check the yield and the hours.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Yield
+    meaning: The share of the material you put in that comes out as good product.
+  - term: Scrap
+    meaning: Material that is left over and not sold as the product. Some scrap can be sold for a lower price.
+  - term: Contribution
+    meaning: What one sale adds after its direct costs, before fixed costs like rent.
+  - term: Bottleneck
+    meaning: The machine or step that limits how much you can make.
+  - term: Pass-through
+    meaning: The share of an input price rise that you pass on to customers in your price.

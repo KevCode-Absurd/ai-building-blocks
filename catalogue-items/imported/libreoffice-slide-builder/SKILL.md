@@ -22,6 +22,20 @@ Use this skill when:
 - Batch processing presentation operations
 - Creating presentation templates
 
+## What you need first
+
+- LibreOffice installed. Check with `soffice --version`. On Windows, `soffice` may not be on the PATH: use the full path, such as `"C:\Program Files\LibreOffice\program\soffice.exe"`.
+- An AI that can run commands and save files. Without that, give the user the commands to run themselves and say what each one does.
+- Python 3 for the UNO and template methods (optional).
+
+## If something is missing
+
+- No outline, topic or slide text: ask for it. Do not invent facts, figures or quotes for the slides.
+- No format named: ask which one (ODP, PPTX or PDF).
+- Converting a file the user did not attach or name: ask for the path.
+- LibreOffice not found: stop and say so. Do not pretend a file was made.
+- Charts, animations, transitions and speaker notes: this skill gives no tested steps for them. Say so and offer to do them by hand in Impress. Do not claim they are done.
+
 ## Core Capabilities
 
 ### 1. Presentation Creation
@@ -62,24 +76,44 @@ soffice --impress template.odp
 ```
 
 #### Method 2: Python with UNO
+
+Start LibreOffice in listening mode first, in a separate terminal, and leave it running:
+```bash
+soffice --headless --accept="socket,host=localhost,port=8100;urp;"
+```
+Then run this with the Python that ships with LibreOffice (or one with `python3-uno` installed). If the connection is refused, the listener is not running: start it and retry.
 ```python
 import uno
+from com.sun.star.beans import PropertyValue
+from com.sun.star.awt import Point, Size
 
-def create_presentation():
+def create_presentation(out_path, slides):
+    """slides is a list of (title, body) pairs. out_path is like file:///path/to/deck.odp"""
     local_ctx = uno.getComponentContext()
     resolver = local_ctx.ServiceManager.createInstanceWithContext(
-        "com.sun.star.bridge.UnoUrlResolver", local_ctx
-    )
+        "com.sun.star.bridge.UnoUrlResolver", local_ctx)
     ctx = resolver.resolve(
-        "uno:socket,host=localhost,port=8100;urp;StarOffice.ComponentContext"
-    )
-    smgr = ctx.ServiceManager
-    doc = smgr.createInstanceWithContext("com.sun.star.presentation.PresentationDocument", ctx)
-    slides = doc.getDrawPages()
-    slide = slides.getByIndex(0)
-    doc.storeToURL("file:///path/to/presentation.odp", ())
+        "uno:socket,host=localhost,port=8100;urp;StarOffice.ComponentContext")
+    desktop = ctx.ServiceManager.createInstanceWithContext(
+        "com.sun.star.frame.Desktop", ctx)
+    hidden = PropertyValue()
+    hidden.Name, hidden.Value = "Hidden", True
+    doc = desktop.loadComponentFromURL("private:factory/simpress", "_blank", 0, (hidden,))
+    pages = doc.getDrawPages()
+    for i, (title, body) in enumerate(slides):
+        if i >= pages.getCount():
+            pages.insertNewByIndex(i)
+        page = pages.getByIndex(i)
+        for text, y, h in ((title, 1500, 3000), (body, 5000, 8000)):
+            shape = doc.createInstance("com.sun.star.drawing.TextShape")
+            page.add(shape)
+            shape.setSize(Size(24000, h))
+            shape.setPosition(Point(2000, y))   # units are 1/100 mm; a slide is 28000 x 15750
+            shape.setString(text)
+    doc.storeToURL(out_path, ())
     doc.close(True)
 ```
+This makes plain text slides. Open the result and check it before calling it done. Do not describe it as styled or branded.
 
 ### Converting Presentations
 
@@ -100,20 +134,29 @@ done
 ```
 
 ### Template-Based Generation
+
+Put placeholders such as `${title}` in the template text. Check them first: Impress can split a placeholder across XML pieces (for example if it was typed with mixed formatting), so a replacement may miss. After building, open the result or convert it to PDF and confirm no `${...}` is left.
+
+An ODP file is a zip. The `mimetype` file must be the first entry and stored uncompressed, or the file will not open. The function below does that.
 ```python
-import subprocess
-import tempfile
-from pathlib import Path
+import zipfile
 
 def generate_from_template(template_path, content, output_path):
-    with tempfile.TemporaryDirectory() as tmpdir:
-        subprocess.run(['unzip', '-q', template_path, '-d', tmpdir])
-        content_file = Path(tmpdir) / 'content.xml'
-        content_xml = content_file.read_text()
-        for key, value in content.items():
-            content_xml = content_xml.replace(f'${{{key}}}', str(value))
-        content_file.write_text(content_xml)
-        subprocess.run(['zip', '-rq', output_path, '.'], cwd=tmpdir)
+    with zipfile.ZipFile(template_path) as zin, zipfile.ZipFile(output_path, "w") as zout:
+        # mimetype first and uncompressed, as the ODF format requires
+        zout.writestr("mimetype", zin.read("mimetype"), compress_type=zipfile.ZIP_STORED)
+        for item in zin.infolist():
+            if item.filename == "mimetype":
+                continue
+            data = zin.read(item.filename)
+            if item.filename == "content.xml":
+                text = data.decode("utf-8")
+                for key, value in content.items():
+                    # escape &, < and > so the XML stays valid
+                    safe = str(value).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                    text = text.replace("${" + key + "}", safe)
+                data = text.encode("utf-8")
+            zout.writestr(item.filename, data, compress_type=zipfile.ZIP_DEFLATED)
     return output_path
 ```
 
@@ -152,6 +195,9 @@ pip install odfpy     # ODF manipulation
 
 ## Troubleshooting
 
+### Conversion does nothing or hangs
+A leftover LibreOffice process is the usual cause. Close LibreOffice, then check for a stuck process (`ps aux | grep soffice` on Mac and Linux, Task Manager on Windows) and stop it. Run the command again.
+
 ### Cannot open socket
 ```bash
 killall soffice.bin
@@ -171,6 +217,13 @@ soffice --headless --accept="socket,host=localhost,port=8100;urp;"
 - base
 - pptx-official
 - workflow-automation
+
+## What you hand back
+
+- The finished file or files, with full paths (ODP, plus any PPTX or PDF copies asked for) and the slide count.
+- For a batch: the count of files made and a list of any that failed.
+- The exact commands you ran, so the user can repeat them.
+- A list of checks you did not run (for example, "did not open the PPTX in PowerPoint").
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

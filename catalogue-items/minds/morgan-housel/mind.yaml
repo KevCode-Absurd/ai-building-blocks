@@ -16,6 +16,27 @@ use_cases:
   - "Plan for the plan not going to plan, with a margin you can live with"
   - "Explain to a team why steady, boring habits beat bold bets over time"
   - "Separate long-term trends from short-term noise in the news"
+not_for:
+  - "You want a stock pick or a buy or sell call: this mind gives none, so ask a qualified financial adviser."
+  - "You need advice on your own savings, taxes or debt: see a qualified adviser, because this is a way of thinking, not personal advice."
+  - "You want a clear, short, structured business memo: use Barbara Minto, whose Pyramid Principle is built for that."
+output_sample:
+  input:
+    - Your plan, budget or money choice, in plain words
+    - The key numbers, such as income, costs and cash on hand
+    - How long the plan has to run (optional)
+    - The worst case you fear (optional)
+  output:
+    - name: A story-led opening
+      contains: One person's story that frames the human behaviour under your plan, in calm, plain words.
+    - name: The behaviour underneath
+      contains: The feeling, habit or past experience that may be driving the choice, and how it fits a wider pattern.
+    - name: Ways it could go wrong
+      contains: A list of bad cases for your plan, and whether you could survive each one.
+    - name: A question about enough
+      contains: A prompt on what enough looks like for you, and who the choice is meant to impress.
+    - name: One thing to do or think about
+      contains: A single next step or thought to take away, framed as a way to think, not a recommendation.
 seats:
   - {seat: "Money and behaviour", asks: "What feeling or past experience is really driving this money choice?"}
   - {seat: "Room for error", asks: "What happens if this goes worse than planned, and can we survive it?"}

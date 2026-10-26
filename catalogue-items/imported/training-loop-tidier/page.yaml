@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Moving old code across needs care so results stay the same.
 new_slug: training-loop-tidier
 name: Training loop tidier
-summary: Give it a messy training script. Get a clean one with checkpoints,
-  logging and multi-GPU support built in.
+summary: Turn a messy PyTorch training script into a clean one with checkpoints, logging and multi-GPU settings. Give it your script and your hardware.
 job: build-software
 headline: Training loop tidier
-subhead: A messy PyTorch training script becomes a clean one with checkpoints,
-  logging and multi-GPU support already in place. You stop rewriting the same
-  boilerplate for every project.
+subhead: A messy PyTorch training script becomes a clean one with checkpoints, logging and multi-GPU support already in place. You stop rewriting the same boilerplate for every project.
 explain: |
   A messy PyTorch training script becomes a clean one with checkpoints, logging and multi-GPU support already in place. You stop rewriting the same boilerplate for every project.
 
@@ -18,19 +15,46 @@ when:
   - You want to move from one GPU to several without a rewrite.
   - You need checkpoints and early stopping you can trust.
   - You are handing code to a teammate who must read it.
+not_for:
+  - "Your code is not PyTorch, or the script is a tiny one-off: keep it as it is, or use the framework you already have."
+  - "You want the smallest possible change to your existing loop: use Accelerate, a separate library that adds multi-GPU support with few edits."
+  - "You need to run many nodes and tune settings at scale: use Ray Train, a separate tool for that job."
 you_give:
   - Your current PyTorch training script
-  - Your hardware, such as number of GPUs
+  - Your hardware, such as how many GPUs you have
   - What you want to log or save (optional)
-  - Distributed strategy preference (optional)
+  - Your preferred way to run on many GPUs (optional)
+  - Whether results must match your old script (optional)
 you_get:
-  - A cleaned LightningModule
-  - A configured Trainer
-  - Checkpoint and logging callbacks
-  - Settings for multi-GPU runs
+  - A clean model class with training and validation steps
+  - A Trainer set up for your hardware
+  - Callbacks that save the best models and stop early
+  - Settings to move from one GPU to many
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Paste your training script into your AI. Add how many GPUs you have.
+  - Say whether the new script must give the same results as the old one.
+  - Ask your AI to move the script into PyTorch Lightning, using this skill.
+  - Run the new script and your old one for a few epochs. Check the loss curves look the same.
+  - Fix any gaps, then switch on multi-GPU by changing one Trainer setting.
+  - Your AI needs to run Python to test the result. If it cannot, run the script yourself.
+output_sample:
+  input:
+    - Your current PyTorch training script
+    - Your hardware, such as how many GPUs you have
+    - What you want to log or save (optional)
+    - Your preferred way to run on many GPUs (optional)
+    - Whether results must match your old script (optional)
+  prerequisites:
+    - An AI that can run Python code, to test the new script
+    - Python with the lightning and torch packages installed
+  output:
+    - name: LightningModule
+      contains: Your model wrapped in one class, with training and validation steps and the optimizer set up.
+    - name: Data loaders
+      contains: Your training and validation data passed to the Trainer, with no manual device moves.
+    - name: Trainer config
+      contains: Settings for epochs, GPU count, precision and the multi-GPU method you picked.
+    - name: Callbacks
+      contains: Best model saving, early stopping and learning rate logging, set to watch your validation loss.
+    - name: Run command
+      contains: The one command to start training on your laptop or your GPUs.

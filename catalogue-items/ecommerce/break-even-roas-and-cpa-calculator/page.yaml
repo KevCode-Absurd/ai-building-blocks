@@ -1,6 +1,6 @@
 new_slug: break-even-roas-and-cpa-calculator
 name: Break-even ROAS and CPA calculator
-summary: Share order value, costs and ad data. Get ad-cost thresholds, matching comparisons and missing checks before you decide what to test.
+summary: Work out your break-even ROAS and CPA from order value and costs. Get an ad allowance per order and a list of what is still missing.
 job: run-google-ads
 thinking: medium
 thinking_why: The sums are simple, but it has to catch weak inputs and judge whether the numbers can pay for ads.
@@ -14,6 +14,10 @@ when:
   - You need an ad-cost threshold with its cost assumptions shown.
   - Reported ad returns and store results use different definitions.
   - You want to check a repeat-buyer case without treating future revenue as profit.
+not_for:
+  - "You want proof that ads caused your sales: this tool does not show that, so run a controlled test or ask an analyst."
+  - "You need total business profit: use your accounting tool or ask your accountant, since this covers only the costs you name."
+  - "You want your AI to change live ad accounts: it only proposes a next check, so make changes yourself in your ad platform."
 you_give:
   - Average order value for the stated orders and period
   - Variable costs before ads, including applicable product, delivery, payment and refund costs
@@ -31,6 +35,26 @@ how_to_use:
   - Add matching click cost and purchase rate if you want a cost-per-order comparison.
   - For repeat buying, give measured cohort contribution, dates and cash timing.
   - Check omitted costs and unresolved evidence before approving any test or account change.
+output_sample:
+  input:
+    - Your average order value for a set period
+    - Your costs before ads, like product, delivery, payment and refunds
+    - Your click cost and purchase rate (optional)
+    - Your measured repeat-buyer profit per customer (optional)
+    - Your cash timing and customer groups (optional)
+  output:
+    - name: Basis
+      contains: The period, currency, customer group, sources, and which costs are in or out.
+    - name: Thresholds
+      contains: The break-even ROAS and the ad allowance per order, with the formulas shown.
+    - name: Cost comparison
+      contains: Your expected cost per order against the allowance, or a note that it cannot be judged yet.
+    - name: Repeat case
+      contains: Repeat-buyer profit and cash timing if you gave measured data, or a note that it is unresolved.
+    - name: Custom checklist
+      contains: Checklist points, the checked maximum and the evidence still missing.
+    - name: Next check
+      contains: A test or evidence request for you to approve, with no live changes.
 how_it_works:
   - title: Checks the basis
     text: Checks finite values, positive denominators, matching periods and which costs are included.

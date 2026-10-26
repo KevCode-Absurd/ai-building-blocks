@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans how much help to remove at each step.
 new_slug: online-worked-example-builder
 name: Online worked example builder
-summary: Give it a skill. Get step-by-step worked examples for online lessons,
-  with help that fades as students learn.
+summary: Build online worked examples for any skill. Help fades step by step, so learners move from full solutions to solving alone.
 job: teach-and-train
 headline: Online worked example builder
-subhead: A set of worked examples for an online lesson, where the help shrinks
-  as students get better. Students first see a full solution, then solutions
-  with a step missing, then try alone.
+subhead: A set of worked examples for an online lesson, where the help shrinks as students get better. Students first see a full solution, then solutions with a step missing, then try alone.
 explain: |
   A set of worked examples for an online lesson, where the help shrinks as students get better. Students first see a full solution, then solutions with a step missing, then try alone.
 
@@ -18,6 +15,10 @@ when:
   - Learners copy the answer without understanding it.
   - You need examples that fit a screen-based lesson.
   - You want to move students from guided to independent work.
+not_for:
+  - "You only need single-answer quiz questions or a topic with no set steps: use a plain question bank."
+  - "You want a plain list of solved examples with no fading: write a simple worked-example list by hand."
+  - "You need a teacher to mark student work or give live feedback: use a person, such as a tutor or the class teacher."
 you_give:
   - The skill to teach
   - Your learners' level
@@ -29,7 +30,33 @@ you_get:
   - Fill-in-the-blank practice steps
   - Self-explanation prompts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down the skill you want to teach, in one line.
+  - Note where the lesson will run, such as an LMS, an app or a web page.
+  - Add your learners' level, and a sample problem if you have one (optional).
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste your notes under it and ask for the example sequence. No code or paid tool is needed.
+  - Check that each faded example removes only one or two steps, then load the examples into your platform.
+output_sample:
+  input:
+    - The skill you want to teach
+    - The platform where the examples will be used, such as an LMS, app or web page
+    - Your learners' age or level (optional)
+    - How many examples you want (optional)
+    - What the platform can do, such as fill-in blanks or clickable steps (optional)
+  output:
+    - name: Sequence Overview
+      contains: The skill, the learner level and how the examples move from full help to working alone.
+    - name: "Example 1: Full"
+      contains: A complete solution with the reasoning explained at every step.
+    - name: Faded examples
+      contains: Solutions with one or more steps removed, so learners fill the gaps themselves.
+    - name: Independent problem
+      contains: A problem with no help, so learners show they can work alone.
+    - name: Self-explanation prompts
+      contains: Questions at each step that ask learners to explain why the step works.
+    - name: Fading Schedule
+      contains: Which steps are removed in which example, and why.
+    - name: Digital Design Specifications
+      contains: How to show each screen, such as revealing steps one at a time and giving feedback.
+    - name: Adaptation Notes
+      contains: How to adjust the sequence for weaker or stronger learners.

@@ -1,33 +1,26 @@
 slug: refinancing-payoff-revision-assistant
 name: Refinancing payoff revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: Check a refinancing raises enough cash to repay the old loan and close the deal. Get the payoff and funding gap, redone on updates.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - check-acquisition-refinancing-funds
   - cash-and-pik-interest-checker
 steps:
   - uses: check-acquisition-refinancing-funds
-    note: Run the governing workflow when A lender sends revised issue proceeds, a payoff letter, fee invoice or confirmed closing date.
+    note: Run the governing workflow when a lender sends revised issue proceeds, a payoff letter, a fee invoice or a confirmed closing date. It hands back the new loan's cash, the payoff and the closing funding gap.
   - uses: cash-and-pik-interest-checker
-    note: If a capitalized PIK interval explains changed old principal, verify the supported single-period cash/PIK calculation and then obtain the actual revised payoff letter. Never add illustrative accrual to a legally binding payoff amount or count the same charge again as a closing fee.
+    note: If a capitalised PIK interval explains why old principal changed, check the single-period cash and PIK interest, then ask for the actual revised payoff letter. Never add illustrative interest to a binding payoff amount or count the same charge again as a closing fee.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It moves no money and gives no market quote for a new loan. Check the payoff and fees against the signed documents.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

@@ -1,0 +1,41 @@
+slug: agency-marketing-china-ecommerce-operator
+name: China E-Commerce Operator agent
+summary: "Get a China ecommerce plan for Taobao, Tmall, JD, Pinduoduo or Douyin Shop, with margin checks, ad plans and a 618 or Double 11 countdown."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-china-ecommerce-operator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-china-ecommerce-operator.md
+  licence: MIT
+  original_name: China E-Commerce Operator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: aa6743c68cce9dd00fd31751e9e3c2bea3987857cad332c68c7f68e683e98ba7
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - China E-Commerce Operator
+  - Agency Agents
+  - Marketing
+credits:
+  - title: China E-Commerce Operator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-china-ecommerce-operator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

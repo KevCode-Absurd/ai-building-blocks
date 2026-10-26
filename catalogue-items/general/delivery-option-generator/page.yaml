@@ -1,32 +1,53 @@
 new_slug: delivery-option-generator
 name: Delivery option generator
-summary: Paste your buyer's problems and promises. Get many ways to deliver each one, rated for your cost and their value.
+summary: "List many ways to deliver each promise, from one-to-one to one-to-many, rated by your cost and the buyer's value, with the best marked."
+
 job: make-offer
 thinking: medium
 thinking_why: It needs many different ideas, then a plain rating of each. The ideas are open, the rating rules are fixed.
 headline: Delivery option generator
-subhead: Give it the list of buyer problems and promises. For each one it writes many ways you could deliver it, from one-to-one to one-to-many, rates each on what it costs you and what it is worth to the buyer, and marks the best few.
-explain: |-
-  Most owners pick the first way they thought of to solve a problem, and it is usually the one they already do. That way may cost a lot and be worth little. Better ways sit one or two ideas further out.
+subhead: "Give it the problems your buyer has and the promises you make to solve them. For each promise it writes many ways to deliver it, in three groups by how many people you serve at once. It rates each on your cost and the buyer's value, and marks the best two or three."
 
-  This skill forces the further ideas. It changes one thing at a time: how many people you serve at once, how much work you ask of the buyer, the medium, the format and how fast you reply. It then asks what you would add if the price were ten times higher, and how you would still deliver if it were a tenth. Each option gets a cost and a value rating so the next step can cut with a rule instead of a feeling.
+explain: |
+  Most owners pick the first way they thought of to deliver a promise, and it is usually the way they already work. That way may take many hours and be worth little to the buyer. Better ways sit one or two ideas further out.
+
+  This delivery option generator pushes you to those ideas. It groups options into one-to-one, small group and one-to-many, so you can see which ones scale. It changes one thing at a time: how much of your attention each buyer gets, how much work the buyer does, the medium, the format and how fast you reply.
+
+  It also asks two questions. What would you add if the buyer paid ten times the price? How would you still get them the result at a tenth of the price? Each option is then rated on build hours, hours per buyer, cash cost and what it does for the buyer. The next step can cut the list by a rule instead of by feel.
+
 when:
-  - You have a list of buyer problems and one default way to solve each.
-  - Your delivery costs too much time for what the buyer values.
-  - You want to turn a service into something that sells many times from one build.
+  - "You have a list of buyer problems and only one default way to solve each one."
+  - "Delivery takes most of your week, and buyers do not seem to value it that much."
+  - "You sell a service, such as coaching or design, and want a version that sells many times from one build."
+  - "You are about to trim your offer and want a long list of ways to deliver it before you cut."
+
+not_for:
+  - "You have no list of buyer problems yet. Build it first with the Buyer problem list builder."
+  - "You already have your options and need to cut and bundle them. Use the Offer trim and stack builder."
+  - "You want extras to answer doubts at the point of sale. Use the Bonus stack builder."
+  - "You want to lay out a free first step and rising paid steps. Use the Value ladder planner."
+
 you_give:
-  - The buyer problems and promises from Buyer problem list builder, or your own list
-  - Your product facts (optional)
-  - What you can and cannot deliver, such as hours per week (optional)
+  - "Your buyer problems and the promises you make to solve them, from the Buyer problem list builder or your own list"
+  - "Your product facts (optional)"
+  - "Your limits, such as hours per week, tools you have and things you will not do (optional)"
+  - "The two or three promises that matter most (optional)"
+
 you_get:
-  - Five to ten delivery options for each promise, in three groups by size of audience
-  - A rating on cost to you and the value drivers each option moves
-  - The best two or three options per promise marked as candidates
+  - "Five to ten delivery options for each promise, in three groups by audience size"
+  - "Stretch options you may never use, labelled as stretch"
+  - "A rating for each option: build hours, hours per buyer, cash cost and what it does for the buyer"
+  - "The best two or three options per promise marked as candidates"
+  - "One shortlist table of every candidate"
+
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the problems and promises. Say how many hours a week you could give.
-  - Skim the stretch options. Keep any that make you think, even if you would not do them.
-  - Take the shortlist to Offer trim and stack builder.
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start a chat with it. If not, copy it and paste it in."
+  - "Paste your buyer problems and promises. If you do not have them yet, paste your product facts and it drafts three to five for you to check."
+  - "Say how many hours a week you could give, and what tools and assets you already have."
+  - "Skim the stretch options. Keep any that make you think, even if you would not do them."
+  - "Check the ratings. If a build or hour figure looks wrong, correct it and ask it to redo the candidates."
+  - "Take the shortlist to the Offer trim and stack builder."
+
 how_it_works:
   - title: Groups by audience size
     text: One-to-one, small group and one-to-many, so you see which ones scale.
@@ -55,6 +76,25 @@ output_shape: |-
 
   CHECKS MISSED
   <one line per check missed, or none>
+output_sample:
+  input:
+    - "Your buyer problems and the promises you make"
+    - "Your product facts (optional)"
+    - "Your weekly hours, tools and things you will not do (optional)"
+  prerequisites:
+    - "The problem list from the Buyer problem list builder (optional)"
+  output:
+    - name: "Options for each promise"
+      contains: "Options in three groups: one to one, small group and one to many, each with effort, hours and cash."
+    - name: "Stretch options"
+      contains: "Ideas you would not do today, written down to push your thinking past the default."
+    - name: "Candidates"
+      contains: "The best two or three options for each promise, picked by value for cost, with the reason."
+    - name: "Shortlist"
+      contains: "Every candidate in one table, ready for the next step."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and one line per check still missed."
+
 tweaks:
   - what: Your limits
     how: Say how many hours a week, what tools you have and what you refuse to do. Options that break a limit are marked and kept as stretch ideas.

@@ -1,18 +1,17 @@
 slug: shared-want-hook-mapper
 name: "Shared want hook mapper"
-summary: "Describe your product and its buyers. Get the one want they share, its smaller parts and a hook for each."
+summary: "Find the one want your buyers already share, split it into smaller wants and get a hook for each, in running order, with a test plan."
 category: general
 type: skill
 role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: angle_library, required: true}
+  - {type: angle_library, required: false}
   - {type: persona, required: false}
   - {type: voc_reviews, required: false}
   - {type: product_data, required: true}
 outputs:
-  - {type: angle_library}
   - {type: hooks}
 origin: rebuilt
 version: 1.0.0

@@ -1,6 +1,6 @@
 new_slug: landing-page-30-point-checker
 name: "Landing page 30-point checker"
-summary: "Paste your page and ad. Get 30 yes-or-no checks, five fixes and a score out of 100."
+summary: "Check your landing page with 30 yes-or-no questions. Paste the page and your ad. You get the five fixes to make first and a score out of 100."
 job: audit-landing-page
 thinking: high
 thinking_why: "It judges work against many checks, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - A page is about to go live and you want a last check before you spend on ads.
   - A page just had a bad week and you want a quick read on why, before a deeper review.
   - You're giving feedback on someone else's page and want a fair, structured way to do it.
+not_for:
+  - "You want a deeper review ranked by how bad each problem is: use the Landing page auditor."
+  - "You have sales numbers and want to find where buyers leave your funnel: use the Sales funnel drop-off finder."
+  - "You have no page yet, only an idea: write the page first, then run this check on it."
 
 you_give:
   - The page text, plus phone screenshots of the first screen and the buy area (attach them; your AI can see pictures)
@@ -36,6 +40,27 @@ how_to_use:
   - Paste the ad word for word and attach its image. Without it, the first three checks are marked can't tell.
   - Paste your real terms and claims, so it can spot where the page says something different.
   - Make the five fixes, then run it again on the new page. The deal-breakers should be gone.
+output_sample:
+  input:
+    - Your page text, plus phone screenshots of the first screen and the buy area
+    - The ad that sends people to the page, with its image (optional)
+    - Your real prices, offer terms and allowed claims (optional)
+    - A phone speed report for the page (optional)
+  prerequisites:
+    - An AI that can read images, if you want the screenshot checks judged
+  output:
+    - name: Verdict
+      contains: Two lines naming the stop where the page loses buyers and the check that shows it.
+    - name: The checks
+      contains: All 30 checks, grouped by stop, each with a result, a deal-breaker or drag tag, evidence and a fix.
+    - name: No's by stop
+      contains: A count of no's at each of the five stops, so you see where trouble clusters.
+    - name: First five fixes
+      contains: The five fixes to make first, deal-breakers on top, each with its check number and place on the page.
+    - name: Checks score
+      contains: The share of checks passed now and with the five fixes made, plus any deal-breaker left.
+    - name: Can't tell
+      contains: The checks it could not judge and what you would need to add to judge them.
 
 how_it_works:
   - title: Arrive

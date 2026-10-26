@@ -8,6 +8,8 @@ job: ops
 level: beginner
 inputs:
   - {type: question, required: true}
+  - {type: audit_report, required: false}
+  - {type: document, required: false}
 outputs:
   - {type: document}
 uses: []

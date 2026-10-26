@@ -1,7 +1,7 @@
 new_slug: restaurant-portion-cost-builder
 name: Restaurant portion cost builder
 headline: Restaurant portion cost builder
-summary: A batch yield, portion cost and service contribution schedule
+summary: Work out the cost per portion and contribution for one batch of one dish, from real weights, yield, cash costs and price. Built for restaurant portion costing.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a batch yield, portion cost and service contribution schedule.
   - You work on food service operating finance and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You want a full venue profit and loss with rent and wages: use a restaurant P&L in your accounting tool or ask your accountant."
+  - "You want to set menu prices that cover fixed costs: use a menu pricing sheet in Google Sheets or Excel."
+  - "You need food safety, allergen or tax stock valuation advice: ask a qualified food safety or accounting professional."
 you_give:
   - Purchased batch weight, observed edible yield, actual portion weight, same-batch ingredient/labor/energy cash, confirmed selling price and served demand.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,27 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Purchased batch weight and the edible weight you measured after prep
+    - The portion weight you serve
+    - Ingredient, labor and energy cash spent on that same batch
+    - Your confirmed selling price and how many portions were served
+    - Reporting date, currency and who will review it
+  prerequisites:
+    - An AI that can create spreadsheet files
+    - Node.js 20 or later, only if you want the bundled calculation script run
+  output:
+    - name: Scope and dated sources
+      contains: What the schedule covers and where each input came from, with dates.
+    - name: Inputs and assumptions
+      contains: Every number you supplied and any assumption, kept apart from actual records.
+    - name: Model calculations and reconciliations
+      contains: Yield, theoretical portions, served portions, cost per portion and contribution, tied back to batch cash.
+    - name: Actual file verification
+      contains: "The workbook checks that ran: recalculation, a changed input test, rendering and reopening the file."
+    - name: "MISSING: and CHECKS MISSED"
+      contains: Inputs you did not supply and any check that failed or could not run, or none.
 how_it_works:
   - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
     text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.

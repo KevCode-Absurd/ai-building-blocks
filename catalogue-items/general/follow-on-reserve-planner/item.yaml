@@ -1,15 +1,13 @@
 slug: follow-on-reserve-planner
 name: Follow-on reserve planner
-summary: Compare documented participation plans with the fund approved follow-on reserve.
+summary: "Work out the cash you need to keep your ownership share in each company's next round, and whether your reserve covers it or falls short."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before:
+  - pro-rata-allocation-checker
+next:
+  - milestone-tranche-funding-checker
+  - check-staged-follow-on-commitments
 origin: own
 version: 1.0.0
 added: 2026-10-22

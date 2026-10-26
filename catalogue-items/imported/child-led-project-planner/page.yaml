@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It turns loose observations into a workable plan.
 new_slug: child-led-project-planner
 name: Child-led project planner
-summary: Describe what young children keep asking about. Get a project plan that
-  follows their interests into deeper inquiry.
+summary: Turn what children keep asking about into a child-led project plan. You get four phases, hands-on ideas and a plan to record their work.
 job: teach-and-train
 headline: Child-led project planner
-subhead: When young children keep asking about the same thing, like worms,
-  shadows or bridges, you get a project plan that grows from their questions.
-  Instead of a fixed unit, it starts from what you saw and heard and moves
-  toward deeper inquiry.
+subhead: When young children keep asking about the same thing, like worms, shadows or bridges, you get a project plan that grows from their questions. Instead of a fixed unit, it starts from what you saw and heard and moves toward deeper inquiry.
 explain: |
   When young children keep asking about the same thing, like worms, shadows or bridges, you get a project plan that grows from their questions. Instead of a fixed unit, it starts from what you saw and heard and moves toward deeper inquiry.
 
@@ -19,6 +15,10 @@ when:
   - You have notes of children's questions and need a next step.
   - You want to work in the project style but do not know where to start.
   - You need ways to show families what the children are learning.
+not_for:
+  - "You need a fixed topic unit with set lessons: use a unit planner you already trust, or plan it by hand."
+  - "The children have not shown a shared interest yet: spend a week watching and noting their questions first, then come back."
+  - "You want a single lesson plan for tomorrow: write a short lesson plan yourself, since this builds a project over weeks."
 you_give:
   - The interest the children have shown
   - Your observations of their questions and theories
@@ -31,7 +31,31 @@ you_get:
   - A plan for recording their work
   - Ways to involve families
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into the chat.
+  - Describe the interest, then paste your notes on what the children asked, said and tried.
+  - "Add any optional details: age group, materials, space, time and local help."
+  - Read the four phases. Check the Decision Points and change the plan to fit your children.
+  - Ask your AI to tighten any phase that is too big for your time or space.
+output_sample:
+  input:
+    - The interest the children have shown
+    - Your notes on their questions, theories and experiments
+    - Age group (optional)
+    - Materials, spaces and local help you have (optional)
+    - How long the project could run (optional)
+  output:
+    - name: "Phase 1: Launching the Investigation"
+      contains: How to start the project from what the children said and did, and what to ask them first.
+    - name: "Phase 2: Provocations and Investigations"
+      contains: Materials, questions and experiences that push the children's thinking further and let them try things out.
+    - name: "Phase 3: Deepening and Representing"
+      contains: Ways children show what they have learned through drawing, building, talking and making.
+    - name: "Phase 4: Sharing and Concluding"
+      contains: Ideas for sharing the work with others and bringing the project to a close.
+    - name: Curriculum Connections
+      contains: Where the project touches the subjects and areas you must cover.
+    - name: Decision Points
+      contains: Moments to stop and choose which way the project goes next, based on the children.
+    - name: Documentation Plan
+      contains: How you will record the children's work and thinking, and share it with families.

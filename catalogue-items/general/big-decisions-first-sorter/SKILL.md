@@ -7,21 +7,27 @@ description: Use when someone faces a big, messy problem or plan with dozens of 
 
 A large problem feels impossible because every question seems open at once. Most are not. When the goal is clear, a handful of big choices follow almost automatically, and each one removes many smaller questions. This skill finds those choices and settles them first. It works for a new business, a product, a career move or a project, and it is a way of thinking, not an investment recommendation.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+**Not for:** a goal that is still unclear (sharpen it first, or use the Big problem splitter when the real trouble is that the whole thing feels too big), one choice you are stuck on that can be undone (use the Reversible decision sorter), or questions that come down to taste. It cannot settle those, because no goal forces an answer.
 
-**Works best with** (or they can paste their own instead):
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+<!-- needs: hand-written (needs_mode: manual in item.yaml). Keep this section in step with the page. -->
+## Before you start
+This skill runs in any chat AI. It needs no files, web access or paid tools.
+
+**What you need:**
+- **A goal with a size or a date** (yours): for example "10,000 users by next spring". A goal like "do well" gives nothing to test against.
+
+**Makes it better (optional):**
+- **A list of the questions you have not settled** (yours): write every one, even the small ones. With none, the skill draws up 15 to 30 itself.
+- **Limits you cannot change** (yours): money, time, people or rules. A fixed limit often forces a choice.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too.
+2. **If there is no goal, stop and ask.** Without a goal nothing can be called forced. Reply with only a short request: "What do you want to reach, by when, and what decision are you stuck on? For example: 10,000 paying users by next spring." Do not fill out the output sections with empty headings. Once a goal arrives, do the whole job.
+3. **If the goal is vague but present,** write the sharpest version you can, flag it as vague, and go on. Mark each gap with `MISSING:` and never settle a choice on a fact the person has not given. Say each point once. In CHECKS MISSED, name only the checks that failed, or write "none".
 
 **Tools that do this best:**
-- **Any good chat AI:** Sorting questions against a stated goal is text work any strong chat AI does well.
-- **A whiteboard or index cards:** Writing each open question on a card lets you move settled ones aside.
+- **Claude, ChatGPT or Gemini:** sorting questions against a stated goal is text work.
+- **Index cards or a whiteboard:** one question per card lets you move the settled ones aside.
 <!-- /needs -->
 
 ## What you need
@@ -45,14 +51,12 @@ How to start:
 
 The goal in one line. The settled choices, each with its one-line reason and what it rules out. The shorter list of open questions, ordered, with the first to work on. A note on any question marked UNKNOWN and what would settle it. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: hand-written (needs_mode: manual in item.yaml). -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
-- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
+- **To check the size of the goal** with the [Target size back-solver](https://useaiblocks.com/skills/target-size-back-solver). It takes the goal and the settled choices.
+- **To see how the settled choices could fail** with the [Failure-first plan check](https://useaiblocks.com/skills/failure-first-plan-check). It takes the settled choices as a plan.
+- **To test the first hard question cheaply** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the ordered list of open questions.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -67,7 +71,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> for <question>`. With no goal, ask for one before sorting; without it nothing can be called forced. Never settle a choice on a fact the person has not given.
+Write `MISSING: <what> for <question>`. With no goal, reply with only the short request in "Before you start" and nothing else. Never settle a choice on a fact the person has not given.
 
 ## Avoid
 

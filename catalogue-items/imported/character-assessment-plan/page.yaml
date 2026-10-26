@@ -2,25 +2,23 @@ thinking: high
 thinking_why: Judging softer traits fairly is hard and needs care.
 new_slug: character-assessment-plan
 name: Character and habits assessment planner
-summary: Name a trait like curiosity. Get a plan to gather evidence from several
-  people. Not medical advice.
+summary: Plan how to assess a trait like curiosity or resilience. You get an observation guide, a student reflection tool and feedback wording.
 job: teach-and-train
 headline: Character and habits assessment planner
-subhead: A plan for judging a personal quality, like curiosity or persistence,
-  without turning it into a grade that hurts the learner. You name the trait and
-  the age band, and you get a way to collect evidence from several angles.
+subhead: A plan for judging a personal quality, like curiosity or persistence, without turning it into a grade that hurts the learner. You name the trait and the age band, and you get a way to collect evidence from several angles.
 explain: |
   A plan for judging a personal quality, like curiosity or persistence, without turning it into a grade that hurts the learner. You name the trait and the age band, and you get a way to collect evidence from several angles.
 
   The skill writes a plain definition of the trait, then lists what an adult would actually see when it shows up. It picks who should give evidence: the teacher, the student, a parent or a peer. It spreads observations across different settings and times, so one bad day cannot decide the result. It also drafts feedback wording that supports growth and keeps the learner's motivation intact. It is a teaching aid and gives no medical or psychological advice.
 when:
-  - You teach a trait like resilience and have no fair way to see whether
-    students are growing in it.
-  - Your report cards need a note on curiosity or teamwork, and you want proof
-    behind it.
+  - You teach a trait like resilience and have no fair way to see whether students are growing in it.
+  - Your report cards need a note on curiosity or teamwork, and you want proof behind it.
   - You want students to reflect on a trait without feeling judged.
-  - Several staff observe one class and need a shared way to record what they
-    see.
+  - Several staff observe one class and need a shared way to record what they see.
+not_for:
+  - "You need a grade for a school subject: use a criterion rubric, which scores skills that build step by step."
+  - "You want one test score for a trait: this plan gathers evidence from several people over time, so it will not give one number."
+  - "You need a medical or psychological assessment: ask a qualified professional. This plan is a teaching aid only."
 you_give:
   - The trait you want to assess
   - A one sentence definition of it
@@ -33,7 +31,33 @@ you_get:
   - Prompts for student self-reflection
   - Feedback wording that keeps motivation up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Pick one trait and one age band. Write a one sentence definition that starts with "The ability to".
+  - Gather the band descriptors for that trait first. These are the "I can" statements for the age band.
+  - Open your AI in Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - Paste your trait, definition, age band, band descriptors and when assessment happens. Add your school's feedback setup if you have one (optional).
+  - Read the plan. Check that each thing to look for is something an adult can really see, then change any that are vague.
+  - Use the plan over several weeks and in more than one setting. Then use the Synthesis Guide to bring the evidence together.
+output_sample:
+  input:
+    - The trait you want to assess, such as agency or curiosity
+    - A one sentence definition that starts with "The ability to"
+    - The age band of your learners
+    - 'The band descriptors: the "I can" statements for that band'
+    - When and how assessment happens, such as an end of term review
+  prerequisites:
+    - The band descriptors for your trait and age band, written before you start
+  output:
+    - name: Observation Protocol
+      contains: What to look for in class, who watches, and in which settings and times, so one bad day does not decide.
+    - name: Student Self-Reflection Tool
+      contains: Prompts that help the learner look at their own growth in the trait, without feeling judged.
+    - name: Parent/Caregiver Input Guide (Optional)
+      contains: Questions for a parent or caregiver about what they see at home.
+    - name: Synthesis Guide
+      contains: How to bring evidence from teacher, student and family together into one fair picture.
+    - name: Developmental Conversation Guide
+      contains: How to talk with the learner about the result in a way that supports growth.
+    - name: Integration with Feedback Structures
+      contains: How the plan fits into your school's existing review or feedback session.
+    - name: Time and Workload Estimate
+      contains: A rough view of the time the plan asks of teachers, students and families.

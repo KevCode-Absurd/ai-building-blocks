@@ -1,29 +1,30 @@
 slug: capstone-commitment-review-assistant
 name: Capstone commitment review assistant
-summary: A team working agreement, task register and handover rules.
+summary: Keep your capstone team agreement current. Compare new commitments with the last review and get a task register and handover rules.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: question
-    required: false
   - type: meeting_notes
+    required: false
+  - type: question
     required: false
 outputs:
   - type: document
   - type: plan
+needs_mode: manual
 uses:
   - set-up-a-capstone-team-agreement
   - handover-note-writer
 steps:
   - uses: set-up-a-capstone-team-agreement
-    note: "Run when: A team milestone is due or an accepted commitment or assignment requirement changes."
+    note: Run this when a team milestone is due or an accepted commitment or the assignment rules change. Update the team agreement and the task register from the real notes. Hands the handover step the agreement and the register, so it can list the absent person's live tasks.
   - uses: handover-note-writer
-    note: Run set-up-a-capstone-team-agreement for changed evidence or a due review. If a contributor becomes unavailable, prepare a handover from actual work state. Do not assign a replacement or infer peer agreement.
+    note: Run this only when a team member becomes unavailable. Write the handover from the real state of their work, using the agreement and task register from step 1 and your notes on what that person was doing. Do not name a replacement or assume the team agreed to a new share of the load.
 schedule: At a team-requested milestone review. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

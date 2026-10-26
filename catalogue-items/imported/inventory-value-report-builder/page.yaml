@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It multiplies quantity by cost.
 new_slug: inventory-value-report-builder
 name: Inventory value report builder
-summary: Get what your stock is worth, by location and by supplier, ready for
-  your books and insurance.
+summary: "Get an inventory value report for your Shopify store: stock value by location and by supplier, ready for your accountant or insurance renewal."
 job: run-your-store
 headline: Inventory value report builder
-subhead: A clean answer to what your stock is worth, split by location and by
-  supplier. Connect your Shopify store with read-only access. The skill pulls
-  every active location, then every variant with its stock and unit cost, and
-  multiplies quantity by cost for each variant at each location.
+subhead: A clean answer to what your stock is worth, split by location and by supplier. Connect your Shopify store with read-only access. The skill pulls every active location, then every variant with its stock and unit cost, and multiplies quantity by cost for each variant at each location.
 explain: |
   A clean answer to what your stock is worth, split by location and by supplier. Connect your Shopify store with read-only access. The skill pulls every active location, then every variant with its stock and unit cost, and multiplies quantity by cost for each variant at each location.
 
@@ -19,6 +15,10 @@ when:
   - You need a number for an insurance claim or renewal.
   - You hold stock in several places and want to see value in each.
   - You want to know how much money is tied up with each supplier.
+not_for:
+  - "You need FIFO or average cost values for your books: ask your accountant, because this report multiplies stock by the unit cost saved in Shopify."
+  - "You need a replacement value set by your insurer: check their rules first, then use this total as a starting point."
+  - "Your store is not on Shopify: use the stock and cost columns in your own spreadsheet or accounting tool."
 you_give:
   - Your Shopify store domain
   - Read access to products and inventory
@@ -30,8 +30,29 @@ you_get:
   - Value by supplier
   - A list of variants with no cost set
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI tool that can run code and the Shopify command line, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Sign in to your store with read-only access to products and inventory.
+  - Paste the skill and give your store domain. Pick a breakdown by location, vendor or both if you want one.
+  - Check the count of items with no cost. Add those costs in Shopify and run it again for a firmer total.
+  - Compare the total with your accounting system, then send the CSV to your accountant or insurer.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - Read access to products and inventory
+    - "Breakdown choice: location, vendor or both (optional)"
+    - Whether to include items with no cost (optional)
+    - "Output style: readable summary or JSON (optional)"
+  prerequisites:
+    - An AI that can run code and the Shopify command line tool
+    - A signed-in Shopify session with read access to products and inventory
+  output:
+    - name: Total inventory value
+      contains: One total for all stock on hand, with the number of SKUs counted and how many have no cost.
+    - name: By Location
+      contains: The value of stock held at each active location.
+    - name: By Vendor
+      contains: The value of stock tied up with each supplier.
+    - name: inventory_valuation_<date>.csv
+      contains: One row per variant and location with SKU, vendor, quantity on hand, unit cost, total value and currency.
+    - name: No-cost variants
+      contains: The count of variants with no unit cost, counted at zero, so you can fill them in.

@@ -1,6 +1,6 @@
 new_slug: cut-risky-apps-and-scripts-from-your-store
 name: Cut risky apps and scripts from your store
-summary: Give it your app list. Get keep, swap or cut for each app, then the scripts left ranked by risk.
+summary: "Cut risky apps and scripts from your store: get keep, swap or cut for each app, then the scripts left ranked by risk, with a clean-up list."
 job: protect-your-store
 thinking: medium
 thinking_why: It sorts lists and scores them with set rules. A mid-range model is enough.
@@ -14,6 +14,10 @@ when:
   - You have years of installed apps and cannot say what each one does.
   - You want to know which scripts can read what a customer types at checkout.
   - A vendor was sold or an extension changed hands and you want to check what it can do now.
+not_for:
+  - "You only need a verdict on each app: use the Store app stack picker on its own."
+  - "You have no app list and no way to view your page scripts: ask your developer or your store's support team to list them first."
+  - "Your store has a fully custom checkout with no app list: ask a developer for a code review instead."
 you_give:
   - Your installed apps with monthly cost and what each is used for
   - Which pages take card, address or login details
@@ -30,6 +34,28 @@ how_to_use:
   - Export your reviews and email flows before you cut a review or email app. Removing one can break both.
   - After step 1, remove the cuts, then collect the script list for the pause.
   - Never paste passwords or API keys. The steps do not need them.
+output_sample:
+  input:
+    - Your installed apps, with monthly cost and what each is used for
+    - Which pages take card, address or login details
+    - The scripts each page loads, saved after you cut apps (from the network tab or page source)
+    - Staff browser extensions in use (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Your cuts made in your store before step 2
+  output:
+    - name: "Step 1: App stack"
+      contains: Each app with its cost, use, a keep, swap or cut verdict and reason, plus a score out of 100.
+    - name: Export before you cut
+      contains: What to save from each app you remove, such as reviews or email flows, and the install order.
+    - name: "Step 2: Script and app risk"
+      contains: Each script and app with its owner, where it loads, a High, Medium or Low risk and an action.
+    - name: Clean-up list
+      contains: What to remove, which keys and staff seats to revoke, and which widgets to move off checkout.
+    - name: Notes for a developer
+      contains: Points on pinned versions and a content security policy for your developer to act on.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every missing item in one list.
 how_it_works:
   - title: Sort your apps into keep, swap or cut
     text: Lists each app with its cost and use, marks the dead ones, checks free built-in tools first, vets what stays and scores the stack out of 100.

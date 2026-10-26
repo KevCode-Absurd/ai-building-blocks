@@ -2,23 +2,23 @@ thinking: high
 thinking_why: The risky wording is easy to miss.
 new_slug: ai-vendor-terms-checker
 name: AI vendor terms checker
-summary: Give it an AI tool's terms or addendum. Get data-training, liability
-  and model-change risks flagged. A first check, not legal advice.
+summary: Check AI vendor terms before you sign. Get data-training, liability and model-change risks flagged, with redline ideas. A first check, not legal advice.
 job: check-contracts
 headline: AI vendor terms checker
-subhead: Spot the risky clauses in an AI vendor's contract before you sign. You
-  get the key issues first, then a clause by clause review and suggested wording
-  changes.
+subhead: Spot the risky clauses in an AI vendor's contract before you sign. You get the key issues first, then a clause by clause review and suggested wording changes.
 explain: |
   Spot the risky clauses in an AI vendor's contract before you sign. You get the key issues first, then a clause by clause review and suggested wording changes. It is a first pass and is not legal advice.
 
   You supply the AI addendum, the main agreement or the terms of service. It checks whether your inputs can be used to train the vendor's models, how confidential your data stays, what happens when the vendor changes the model, who owns outputs, liability limits, incident notice, your right to human review, and use limits. It also compares the terms with your own AI policy and notes where they disagree. A missing AI addendum is flagged.
 when:
-  - You are about to sign with an AI tool and want to know what you are agreeing
-    to.
+  - You are about to sign with an AI tool and want to know what you are agreeing to.
   - A vendor's terms bury the data-training rules and you cannot find them.
   - You want to see where their terms break your own AI policy.
   - You need redline suggestions to send to the vendor.
+not_for:
+  - "You are about to sign a high-value or regulated contract: have a lawyer review it, and use this check only to prepare your questions."
+  - "You need to review a data processing agreement on its own: ask your lawyer or your privacy lead, as this tool covers AI terms only."
+  - "You only have an acceptable use policy: get the vendor's full terms first, because this check needs the agreement, addendum or terms of service."
 you_give:
   - The vendor's AI addendum, agreement or terms
   - Your AI policy or stated positions
@@ -29,10 +29,32 @@ you_get:
   - Suggested redlines
   - What to do if the vendor will not change the terms
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /ai-governance-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste the vendor's AI addendum, agreement or terms of service. If you only have an acceptable use policy, ask the vendor for the full terms.
+  - Paste your AI policy. If you have none, say so and accept provisional mode, where the check runs on common positions.
+  - Ask your AI to review the terms. Read the bottom line first, then the term-by-term review.
+  - Check the redlines and the policy differences. Take the summary to a lawyer before you sign anything important.
+  - If a step mentions the setup interview, use the setup-interview folder inside the skill. It is copied in so the skill works alone.
+output_sample:
+  input:
+    - The vendor's AI addendum, main agreement or terms of service
+    - Your AI policy or your stated positions on AI vendors
+    - A data processing agreement you already have (optional)
+  prerequisites:
+    - An AI that can read pasted text or uploaded files
+    - Your AI policy, or willingness to run in provisional mode without one
+  output:
+    - name: Bottom line
+      contains: A short summary of the overall risk and the main issues to deal with before you sign.
+    - name: Term-by-term
+      contains: A review of each key term, such as data training, confidentiality, model changes, output ownership, liability and incident notice.
+    - name: AI addendum status
+      contains: Whether a data processing agreement exists without an AI addendum, which is flagged as a gap.
+    - name: AI policy consistency
+      contains: Where the vendor's terms agree or clash with your own AI policy.
+    - name: Recommended redlines
+      contains: Suggested wording changes you can send to the vendor.
+    - name: If they won't move
+      contains: What to do if the vendor refuses to change the terms.
+    - name: Practical notes
+      contains: Extra points to keep in mind, plus next steps after the review.

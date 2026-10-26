@@ -1,6 +1,6 @@
 new_slug: launch-risk-check
 name: Check a launch for weak joints and plan its recovery
-summary: Describe your launch or release. Get the weak joints, what wins when things pile up, and a recovery plan.
+summary: Find where your launch could break and plan the recovery. Give it your release details. You get weak joints, priorities and alarm text.
 job: build-software
 thinking: high
 thinking_why: It checks many parts and joins and then plans for mistakes people say can't happen. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A release or migration is coming and you want to know where it could fail before it does.
   - Your last launch went wrong at a handoff between teams or tools, and you want to stop that happening again.
   - You are adding a new system to a busy one and need to know what happens when everything runs at once.
+not_for:
+  - "You change one system with one owner: use a plain test plan and a rollback note instead."
+  - "You need a project schedule or task list: use a project planning tool or ask a project manager."
+  - "You want to design code changes after the check: use the Structure and behaviour change splitter once you have the plan."
 you_give:
   - What is launching, the date and what success looks like
   - The parts, teams and suppliers involved, as far as you know them
@@ -30,6 +34,29 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the launch and list the parts you know about. It works step by step and saves each result.
   - Do the run-through with a person in the loop before the real launch, and fix what it finds.
+output_sample:
+  input:
+    - What is launching, the date and what success looks like
+    - The parts, teams and suppliers involved, as far as you know them
+    - Change records, plans or earlier problems (optional)
+    - Mistakes your team says can't happen (optional)
+  prerequisites:
+    - An AI that can read the handoff folder, such as Claude Code or a Claude Project with files
+  output:
+    - name: Parts and joins
+      contains: Every part with its owner, and each join between parts with what passes across it.
+    - name: Priorities and overload plan
+      contains: A rank for each job, and what the system drops or must never drop when overloaded.
+    - name: Readiness score
+      contains: A score out of 100 with the working shown, based on written reasons and approvals for each change.
+    - name: Run-through plan
+      contains: The steps for a full rehearsal, and who reads the final package.
+    - name: Mistakes said to be impossible
+      contains: Each mistake, how it would be detected, and what the system does in response.
+    - name: Alarms and safe restart
+      contains: Alarm text, the go or no-go decision and who makes it, plus the safe restart point.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Maps parts and joins
     text: Lists every part, including people and plans, and marks each join and what passes across it.

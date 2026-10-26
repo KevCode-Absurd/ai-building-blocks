@@ -1,6 +1,6 @@
 new_slug: eulogy-values-finder
 name: "Eulogy values finder"
-summary: "Say where you are in life. Get the five values you most want remembered for, and which you are not living yet."
+summary: "Find your top five values with a eulogy values exercise. Tell it your stage in life. You get a ranked list and the one gap to close this month."
 job: think-and-decide
 thinking: medium
 thinking_why: "It sorts what you write and spots patterns and gaps, but the steps are fixed and the facts come from you."
@@ -14,6 +14,10 @@ when:
   - You are busy all the time and cannot say what it is for.
   - You are about to write a mission statement and want real material for it.
   - A change of job, move or life stage has made your old goals feel wrong.
+not_for:
+  - "You are grieving or in a crisis right now: talk to a person you trust first, such as a friend, a counsellor or a doctor."
+  - "You want to turn your values into roles and long-term goals: use the Roles and long-term goals mapper after this."
+  - "You want a written mission statement: use the Personal mission statement writer once you have your top five."
 you_give:
   - Your age or stage in life, and what is on your mind
   - A day to picture, such as retirement or a memorial (optional)
@@ -30,6 +34,27 @@ how_to_use:
   - Answer for each of the four speakers. Give a moment, not a title.
   - Give one real example from the last month for each value when it asks.
   - Take the top five to "Roles and long-term goals mapper".
+output_sample:
+  input:
+    - Your age or stage in life, and what is on your mind
+    - A day to picture, such as retirement or a memorial (optional)
+    - Anything you already know you value (optional)
+    - One real example from the last thirty days for each value, when it asks
+  output:
+    - name: Frame
+      contains: The day you picked to picture, or the gentler one-more-year version.
+    - name: What they would say
+      contains: Three sentences each from a family member, a friend, a colleague and a group member, in your words.
+    - name: Being and doing lists
+      contains: The ideas that repeat, sorted into who you want to be and what you want to do.
+    - name: Your top five
+      contains: Each value with who said it, a score from 0 to 3 for now, and one step for this month.
+    - name: Biggest gap
+      contains: The value you call vital but live least, with its score and why it matters.
+    - name: Missing
+      contains: Lines for anything left out that would sharpen the list.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 how_it_works:
   - title: Sets the scene
     text: Picks the day and the four speakers, or a gentler one-more-year frame.

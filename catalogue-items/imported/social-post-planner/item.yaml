@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: brief
     required: true
+  - type: copy_draft
+    required: false
 outputs:
   - type: plan
   - type: copy_draft

@@ -1,6 +1,6 @@
 new_slug: riskiest-guess-test
 name: Find the riskiest guess in your plan and test it
-summary: Paste your plan. Get the guesses it rests on as numbers, the smallest test for the riskiest and pass lines set first.
+summary: Test your business idea by finding the riskiest guess in your plan. Get ranked guesses, the cheapest test for the top one and pass lines set first.
 job: test-an-idea
 thinking: high
 thinking_why: It ranks risk across a whole plan and designs a test from it. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a plan and sense that part of it is a bet, but cannot say which part.
   - You are about to spend months building and want proof of the shakiest part first.
   - Your last test left you with praise and no facts.
+not_for:
+  - "Your plan already has sales or usage data behind it: test the change directly with your own numbers, or use the Ad meaning test planner if the doubt is about an ad."
+  - "You still need to learn what buyers worry about: use the Buyer problem list builder, or talk to five customers first."
+  - "You need to find where your buyers gather online: use the Customer community finder."
 you_give:
   - "Your plan (what you make, for whom, how they find it and what you expect back)"
   - Your biggest worry (optional)
@@ -28,6 +32,22 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your plan as it stands, comparisons and all. Say what worries you most.
   - Agree the pass numbers before you run the test, then bring back the results.
+output_sample:
+  input:
+    - "Your plan: what you make, for whom, how they find it and what you expect back"
+    - Your biggest worry (optional)
+    - What you can spend and who you can reach this week (optional)
+  prerequisites:
+    - An AI that can read the handoff folder, such as Claude Code or a Claude Project with files
+  output:
+    - name: step-01-leap-of-faith-assumption-finder.md
+      contains: The few guesses your plan rests on, each with a predicted number, ranked with the riskiest first.
+    - name: step-02-smallest-test-picker.md
+      contains: The cheapest kind of test for the top guess, who to try it on and what to leave out.
+    - name: step-03-mvp-experiment-planner.md
+      contains: Pass, fail and in-between numbers set before the run, a run plan and a rule for what to do next.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Finds the guesses
     text: Rewrites comparisons as plain facts, splits the plan into a value guess and a growth guess, adds a number to each and ranks them.

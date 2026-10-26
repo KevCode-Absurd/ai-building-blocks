@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must prove a rewrite is needed and keep old behaviour.
 new_slug: careful-rewrite-guard
 name: Careful rewrite guard
-summary: Name a file too rotten to patch. Get a justified delete and rebuild
-  that keeps the behaviour that worked.
+summary: Check if a file needs a full rewrite. Get a rewrite plan that lists every behavior to keep, then a rebuild checked against that list.
 job: build-software
 headline: Careful rewrite guard
-subhead: When a file is too broken to patch, you get a deletion that is
-  justified and a rebuild that keeps every behaviour that worked. Name the file,
-  and the AI must make its case before it removes a single line.
+subhead: When a file is too broken to patch, you get a deletion that is justified and a rebuild that keeps every behaviour that worked. Name the file, and the AI must make its case before it removes a single line.
 explain: |
   When a file is too broken to patch, you get a deletion that is justified and a rebuild that keeps every behaviour that worked. Name the file, and the AI must make its case before it removes a single line.
 
@@ -18,6 +15,10 @@ when:
   - You want to rewrite a file but fear losing behaviour nobody wrote down.
   - A reviewer asks you to justify a full rewrite.
   - An AI assistant suggests deleting a file and you want proof first.
+not_for:
+  - "You only want to clean up a messy file or fix one function: ask your AI for a small, targeted edit instead."
+  - "You want new features added: ask your AI for a normal change request, because this rebuild adds nothing new."
+  - "You have no backup or version history: save a copy of the file with a person or tool you trust first, then come back."
 you_give:
   - The file or module to rewrite
   - What it should do
@@ -29,8 +30,31 @@ you_get:
   - The rebuilt code
   - A check that each behaviour still works
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write your project files.
+  - Open your AI in a tool that can read and edit your project files, such as Claude Code. A plain chat can plan but cannot change files.
+  - Save a copy of the file first, or commit it in git. Keep the commit name or backup location.
+  - Paste the skill into your AI. Name the file to rewrite and say what it should do. Add tests and known bugs if you have them.
+  - Read the justification. If the AI cannot make a clear case, it will suggest small edits instead.
+  - Check the erasure plan and preservation list. Add anything missing, then reply "confirmed". Nothing is deleted before that.
+  - Review the verification report. Fix any file marked as a follow-up before you merge.
+output_sample:
+  input:
+    - The file or module you want to rewrite
+    - What it should do
+    - Existing tests (optional)
+    - Known bugs and pain points (optional)
+  prerequisites:
+    - An AI that can read and edit your project files
+    - A backup or saved copy of the file
+  output:
+    - name: Justification
+      contains: The specific problems that make patching fail, why small edits would make it worse, and the cost of keeping the code.
+    - name: Erasure plan
+      contains: The target, the reason, the preservation list, the files that depend on it, the rebuild plan and what will be dropped.
+    - name: Preservation list
+      contains: Every interface, working behavior and odd edge case the new code must keep, and who depends on each.
+    - name: Rebuilt code
+      contains: The new file, written to match your codebase style, with no extra features added.
+    - name: Rebuild progress
+      contains: A checklist showing which items on the preservation list are done and which are still pending.
+    - name: Verification report
+      contains: A check of each dependent file against the new code, any new issues found, and a clean or follow-up status.

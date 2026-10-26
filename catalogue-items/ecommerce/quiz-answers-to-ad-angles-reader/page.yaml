@@ -1,6 +1,6 @@
 new_slug: quiz-answers-to-ad-angles-reader
 name: "Quiz answers to ad angles reader"
-summary: "Paste your quiz answers. Get who buys, how aware they are and ranked ad angles."
+summary: "Read your quiz answers to see who buys and what they fear. Get ranked ad angles from your own quiz data, with counts, quotes and a data strength score."
 job: understand-customers
 thinking: medium
 thinking_why: "It counts shares and reads patterns in answers, so a mid-size model works if you check the counts."
@@ -13,6 +13,10 @@ when:
   - Your quiz has reached about 100 submissions and you have not read the answers as a whole.
   - Your ads are not landing and you do not know which pain or goal to lead with.
   - You want to update your brand file with what buyers actually said.
+not_for:
+  - "You have fewer than about 100 quiz submissions: wait and collect more, or treat the result as a rough guide and rerun it later."
+  - "Your quiz has no pain question or no question about what people tried: add those questions first, because the awareness read and pain ranking need them."
+  - "You want to plan a test or check one ad: use the Ad test brief writer or the Campaign keep-or-change checker."
 you_give:
   - The quiz submissions export (one row per person, one column per question)
   - The ad sets that sent the traffic (optional)
@@ -28,6 +32,32 @@ how_to_use:
   - Say which ad sets sent the traffic, if you know.
   - Pick the top two angles and write one test ad for each, using the buyers' own words.
   - Add the report to your brand file and run it again each month, as the mix changes with the ads.
+output_sample:
+  input:
+    - Your quiz answers export (one row per person, one column per question)
+    - What each quiz question asks, if column names are short codes
+    - Which ad sets sent the traffic (optional)
+    - Whether you have a real expert or real proof to use in ads (optional)
+  prerequisites:
+    - A quiz that has about 100 submissions or more
+    - A quiz that asks about pains and what people tried before
+  output:
+    - name: Data check
+      contains: How many submissions, from which ad sets and dates, and whether the sample is big enough to trust.
+    - name: Report
+      contains: Share and count for age mix, top pains, past solutions and goals.
+    - name: Awareness read
+      contains: Whether buyers sit at the top, middle or bottom of the funnel, with the answers behind the read.
+    - name: Ranked angles
+      contains: Each ad angle with its evidence, buyer words, a frame to test and the proof you need.
+    - name: Changes to the quiz or offer
+      contains: Weak questions, missing answer options and gaps between what buyers want and what you offer.
+    - name: For your brand file
+      contains: What to update in your brand file, plus a note to rerun monthly.
+    - name: Data strength
+      contains: A score out of 100 showing how solid the data is, with the sum shown.
+    - name: Checks missed
+      contains: Any check that failed, or none.
 how_it_works:
   - title: Checks the sample
     text: Waits for about 100 submissions. Under that, the shares are not steady and the skill says so.

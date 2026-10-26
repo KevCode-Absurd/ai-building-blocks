@@ -2,34 +2,104 @@ thinking: high
 thinking_why: It scores ten threats and turns them into a ranked plan.
 new_slug: ai-disruption-risk-checker
 name: AI disruption risk checker
-summary: Name your business or industry. Get your exposure to AI on ten points
-  and a 90-day plan to defend.
+summary: See where AI could hurt your business first. Get scores on ten pressure points, a rival takeover story and a 90-day plan to defend your position.
 job: plan-strategy
 headline: AI disruption risk checker
-subhead: A score for how exposed your business is to AI, on ten points, and a
-  90-day plan to defend it. It finds where pressure from AI breaks your model
-  first.
-explain: |
-  A score for how exposed your business is to AI, on ten points, and a 90-day plan to defend it. It finds where pressure from AI breaks your model first.
+subhead: Give it your industry and type of business, and a company name if you like. It scores ten pressure points from 0 to 10, tells the story of how an AI-first rival would win your customers, and sets out a 90-day plan.
+explain: |-
+  An AI disruption risk check shows where AI puts the most pressure on your business and where your advantages hold. Most owners know AI matters. Few know which part of their model it hits first.
 
-  Tell it your industry, your type of business and, if you like, a named company. Each point is scored from 0 to 10: jobs AI can replace, how customers reach you, whether your expertise becomes free, pricing pressure, supply chain change, your data advantage, trust with customers, and more. A strong moat shows up as a low score. The result ranks your weakest spots and sets out an action plan for the next three months. It is strategy for planning, not audited research or investment advice.
+  You give your industry and business type. The skill scores ten points: jobs AI can do, how customers reach you, whether your expertise gets cheap, pricing pressure, supply chain change, your data advantage, customer loyalty, new channels, rules, and decision speed. Higher means more pressure, so a strong advantage scores low. Each score comes with its reason, and a guess is labelled as a guess.
+
+  It then writes a six-step story of how an AI-first rival would win your customers, and a plan for days 0 to 30, 31 to 60 and 61 to 90. It is a thinking tool, not audited research or investment advice. For a named company it will not state facts it cannot source. The original author also offers a hosted tool. You do not need it.
 when:
   - You want to know where AI could hurt your business first.
-  - You are checking a company before you invest or partner.
+  - You are sizing up a company before you talk to it as a partner, and want a first view.
   - You want to picture how an AI-first rival would take your customers.
-  - You need a plan for the next 90 days.
+  - You need a 90-day plan to protect what makes you hard to replace.
+not_for:
+  - "You need research you can rely on for an investment, a loan or a deal: ask a qualified analyst or a market research firm."
+  - "A cheaper rival has already shown up and you want to judge that one rival: use the Disruption risk checker."
+  - "You want a full plan to enter a new market: use the Go-to-market positioning planner."
 you_give:
-  - Your industry
-  - Your type of business
-  - A company name (optional)
+  - Your industry, such as real estate or law
+  - Your type of business, such as a solo practice or a regional chain
+  - A company name, for a named analysis (optional)
   - What you think protects you today (optional)
+  - Public facts or notes you want it to use (optional)
 you_get:
-  - A score from 0 to 10 on ten points
-  - A ranked list of weak spots
-  - Where your advantages hold
-  - A 90-day defence plan
+  - A score from 0 to 10 on ten pressure points, each with a reason
+  - An overall score, and the points that are critical (7 or more)
+  - Your top weak spots, and where your advantages hold
+  - A six-step story of how an AI-first rival would win
+  - A 90-day plan in three tracks
+  - A list of limits and facts to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down your industry, your type of business and what you think protects you. A short note is enough.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code or paid tools are needed. Web access helps if you name a company.
+  - Paste your notes. If you name a company, add any facts you know. Expect your AI to mark anything it can't source.
+  - Read the pressure map. Challenge any score marked ASSUMED and correct it with what you know.
+  - Pick the three actions in the 90-day plan you can start this month.
+  - Run it again in a few months, or when something big changes in your market.
+how_it_works:
+  - title: Gather the basics
+    text: It asks for your industry and business type, and a name if you want a named analysis. Gaps are marked ASSUMED.
+  - title: Score ten points
+    text: It scores each pressure point from 0 to 10, with a headline, a 12-month view, a 3-year view and the basis for the score.
+  - title: Find the critical ones
+    text: It averages the ten scores and flags any point at 7 or more as critical.
+  - title: Tell the takeover story
+    text: It writes six steps, from the entry point to the survivor profile, for your industry. It is a scenario, not a forecast.
+  - title: Build the 90-day plan
+    text: It sets actions for days 0 to 30, 31 to 60 and 61 to 90, each tied to a critical point.
+  - title: State the limits
+    text: It lists assumptions and facts to check, so you know what the scores rest on.
+output_shape: |-
+  AI disruption pressure: <entity or industry>
+  Overall pressure score: <average> / 10   Critical points (7+): <list or none>
+  Based on: <your description, public sources, assumptions>
+  Pressure map
+  | # | Point | Score | Headline | 12 months | 3 years | Basis |
+  Top weak spots: 1. <point>: <why it breaks first>
+  Where your moat holds: <point>: <why>
+  How an AI-first rival would win: <six steps>
+  90-day plan: Days 0-30 / 31-60 / 61-90
+  Limits of this analysis: <assumptions and facts to check>
+output_sample:
+  input:
+    - Your industry
+    - Your type of business
+    - A company name for a named analysis (optional)
+    - What you think protects you today (optional)
+  prerequisites:
+    - An AI that can browse the web, if you name a company and want it to check public facts (optional)
+  output:
+    - name: Pressure map
+      contains: Ten scores from 0 to 10, each with a headline, a 12-month and 3-year view, and its basis.
+    - name: Overall score
+      contains: The average of the ten scores, and the points scored 7 or more.
+    - name: Top weak spots
+      contains: The points that break first, and why.
+    - name: Where your moat holds
+      contains: The advantages that protect you, and how long they may last.
+    - name: Rival takeover story
+      contains: Six steps showing how an AI-first rival would win your customers.
+    - name: 90-day plan
+      contains: Actions for days 0 to 30, 31 to 60 and 61 to 90.
+    - name: Limits of this analysis
+      contains: Assumptions and facts you should check before you act.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search
+      why: Web search helps it check public facts when you name a company. Without it, it uses only your notes.
+  inputs:
+    - Your price list and how you earn money
+    - Your main customer types and why they stay
+    - Rivals or new tools you already worry about
+terms:
+  - term: Moat
+    meaning: What makes your business hard to copy or replace.
+  - term: Pressure point
+    meaning: One way AI could hurt your business, scored from 0 to 10.
+  - term: Critical
+    meaning: A pressure point scored 7 or more.

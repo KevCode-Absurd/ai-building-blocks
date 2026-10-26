@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It sizes pools and judges competitors from patchy public facts.
 new_slug: talent-pool-mapper
 name: Talent pool mapper
-summary: Describe who you need. Get target companies, pool sizes and ways in.
-  Reads public web pages.
+summary: Map where the people you want to hire work. Get a ranked company list, talent pool sizes and ways in, from public web pages.
 job: hire-people
 headline: Talent pool mapper
-subhead: Describe the role you need, your industry and where you can hire. It
-  sorts target companies into three circles, from direct competitors outward,
-  and reads public web pages to size each pool. You get a ranked company list,
-  pool sizes, how hard each is to reach and suggested ways in.
+subhead: Describe the role you need, your industry and where you can hire. It sorts target companies into three circles, from direct competitors outward, and reads public web pages to size each pool. You get a ranked company list, pool sizes, how hard each is to reach and suggested ways in.
 explain: |
   A map of where the people you want to hire work today, how many of them exist, and how hard they are to reach. Recruiters stop guessing and start with a ranked list of companies and a view of the rivals competing for the same people.
 
@@ -20,6 +16,10 @@ when:
   - You want to know which companies compete with you for the same hires.
   - A competitor just had layoffs and you want to know whom to approach.
   - You are choosing a hiring location and want to compare cities.
+not_for:
+  - "Your role has few public profiles, or the search is confidential: use your own candidate list or ask for referrals."
+  - "You need exact headcounts: use a paid data tool or ask a recruiter, because this gives estimates only."
+  - "You already know the person you want: contact them directly or ask a mutual contact for an intro."
 you_give:
   - The role or skill set you need
   - Your industry and company stage
@@ -31,8 +31,28 @@ you_get:
   - Competition and move likelihood per pool
   - Suggested ways in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini. Turn on web search if your AI offers it.
+  - Paste the skill text from this page into the chat.
+  - Describe the role, your industry, your company size and the places you can hire. Add your known competitors if you have them.
+  - Read the company list. Check that every pool size is marked as an estimate, and check the sources it names.
+  - Pick the top companies and channels. Then start your outreach, or ask your AI to draft the first messages.
+output_sample:
+  input:
+    - The role or skill set you need to hire
+    - Your industry and company size
+    - Places you can hire in
+    - Your known competitors (optional)
+  prerequisites:
+    - An AI that can search the web, or pages you paste in yourself
+    - Check each site's terms before you collect data from it. Some sources need a login or a paid plan, such as LinkedIn, PitchBook and BuiltWith.
+  output:
+    - name: Executive summary
+      contains: The total estimated talent pool, the top 5 target companies with reasons, and the main advice.
+    - name: Target company matrix
+      contains: A table of each company with its circle, estimated pool size, seniority fit, how reachable it is and priority.
+    - name: Geographic distribution
+      contains: Where the talent sits by city or region, plus remote work policies and rising talent hubs.
+    - name: Competitive landscape
+      contains: Who else is hiring for this profile, pay ranges by company group and how each employer presents itself.
+    - name: Recommended sourcing channels
+      contains: A ranked list of channels, events, communities and referral ideas for reaching each pool.

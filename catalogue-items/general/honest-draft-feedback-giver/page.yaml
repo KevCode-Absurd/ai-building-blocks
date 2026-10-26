@@ -1,6 +1,6 @@
 new_slug: honest-draft-feedback-giver
 name: "Honest draft feedback giver"
-summary: "Paste a draft. Get feedback that names the weak lines, asks if you are fine with them and says what to keep."
+summary: "Get honest feedback on a draft: paste it and see what works, which lines to question and what to leave alone, without being told what to change."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It reads closely and writes notes line by line, which takes taste, within a fixed method."
@@ -17,6 +17,10 @@ when:
   - "You wrote a script, page or story and want honest notes."
   - "You are reviewing someone else's draft and want to be useful without taking over."
   - "A draft feels flat and you cannot say why."
+not_for:
+  - "You want to know if the draft will sell. This skill does not judge that."
+  - "You want the wording tidied. Use the Plain English editor."
+  - "You have several drafts and need to pick one. Use the Shortlist and running-order planner."
 
 you_give:
   - "The draft, pasted whole"
@@ -53,6 +57,30 @@ how_it_works:
     text: "Points at weak lines as questions and drops defended ones."
   - title: "Check it"
     text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_sample:
+  input:
+    - "Your draft, pasted whole"
+    - "What it is for and who reads it"
+    - "What you love in it (optional)"
+    - "A brief or character notes (optional)"
+  output:
+    - name: "What you love"
+      contains: Your own words on what excites you about the piece, so the notes stay on track.
+    - name: "The whole"
+      contains: One sentence on what the draft does and what it wants the reader to feel or do.
+    - name: "What is working"
+      contains: A few quoted words from each good part, with the reason it works.
+    - name: "Leave alone"
+      contains: Parts that work and should not change, each with a reason.
+    - name: "Where the reader leans in or drifts"
+      contains: The places a reader pays more attention, and the places their mind wanders.
+    - name: "What each scene carries"
+      contains: The one idea each scene or section holds, or a note that it holds none or two.
+    - name: "Character check"
+      contains: Each action a person takes, with a question on whether they would do it.
+    - name: "Questions about weak lines"
+      contains: Each weak line as a question, with the reason, so the choice stays yours.
 
 output_shape: |
   WHAT YOU LOVE

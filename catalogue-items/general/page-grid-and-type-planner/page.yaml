@@ -1,6 +1,6 @@
 new_slug: page-grid-and-type-planner
 name: "Page grid and type planner"
-summary: "Paste your content and page type. Get a grid, a short type list and a white-space plan."
+summary: "Plan a page grid and type list for your report, menu or poster set. Give your content and page type. You get margins, columns and a white-space plan."
 job: design-work
 thinking: medium
 thinking_why: "It makes layout choices by fixed rules, with judgement on type and white space."
@@ -17,6 +17,10 @@ when:
   - "You are laying out a report, site, menu, poster set or catalogue and want a system."
   - "Your pages look busy and nobody can say what to look at first."
   - "You need pages by several people to look like one set."
+not_for:
+  - "You want colour and sign rules for a whole brand: use the Visual system rules writer."
+  - "You need a logo checked for strength: use the Logo strength tester."
+  - "You need one ad or a single image made: ask a designer, or work in your design tool without a grid system."
 
 you_give:
   - "Your content, or a list of what each page holds"
@@ -36,6 +40,27 @@ how_to_use:
   - "Paste your brand file or sizes already in use, if any."
   - "Lay out one page on the grid and check the order reads at a glance."
   - "Apply the grid to the rest of the pages."
+output_sample:
+  input:
+    - Your content, or a list of what each page holds
+    - The page type and size, such as web, A4 or poster
+    - Your brand file or current look (optional)
+    - The image shapes you must fit (optional)
+  output:
+    - name: Meaning and reader
+      contains: One line on what the page says, who reads it and what they should do.
+    - name: Grid
+      contains: Margins, columns, modules and gutter, with a reason for tight or wide margins.
+    - name: Type
+      contains: One or two typefaces from a short list, one or two sizes, and the weights used.
+    - name: Order and white space
+      contains: What is seen first, second and third, and which areas stay empty on purpose.
+    - name: Pages
+      contains: For each page, which columns and modules each element covers, plus changes with no reason.
+    - name: MISSING
+      contains: Facts that are not known yet and would change the grid.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Asks what it means"

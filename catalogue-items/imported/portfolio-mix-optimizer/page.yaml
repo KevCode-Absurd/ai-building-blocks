@@ -2,35 +2,101 @@ thinking: medium
 thinking_why: It sets up a standard method and checks the answer.
 new_slug: portfolio-mix-optimizer
 name: Portfolio mix optimizer
-summary: Give it asset returns. Get the best mix by risk and return, with an
-  efficient frontier chart.
+summary: Turn asset returns into the best weights for your risk level, with an efficient frontier chart and MATLAB code. Needs MATLAB.
 job: money-and-investing
 headline: Portfolio mix optimizer
-subhead: Find the mix of assets that gives the most return for the risk you
-  accept, and see it on an efficient frontier chart. Works in MATLAB with the
-  Financial Toolbox, which is a paid product.
+subhead: Give it past returns or expected returns for your assets, and any limits such as a cap per asset. It finds the lowest-risk mix, the best risk-adjusted mix or a mix for a target return. You get a weights table, risk and return figures, a frontier chart and working MATLAB code.
 explain: |
-  Find the mix of assets that gives the most return for the risk you accept, and see it on an efficient frontier chart. Works in MATLAB with the Financial Toolbox, which is a paid product.
+  A portfolio mix optimizer finds how much to put in each asset so you get the most return for the risk you accept. This one uses the Portfolio tools built into MATLAB's Financial Toolbox, which is a paid MathWorks product. You need MATLAB to run the code it writes.
 
-  You provide the expected returns and covariances of your assets. The skill builds a Portfolio object and sets the limits you care about, such as weight bounds, group caps, turnover and number of holdings. It then solves for minimum risk, best Sharpe ratio or a target return, and draws the frontier. It insists on the built-in Portfolio tools instead of hand-coded solvers, and helps fix errors from the estimate methods.
+  You give it expected returns and how the assets move together, or a table of past returns it can work these out from. It sets your limits, such as weight caps, group caps, turnover and number of holdings. It then solves for minimum risk, the best Sharpe ratio or a target return, and draws the efficient frontier.
+
+  It insists on the built-in tools instead of hand-coded solvers, which often give odd weights. It also helps fix errors from the estimate methods. The licence file in this folder limits use to MathWorks products.
 when:
   - You want the lowest-risk blend of ten funds.
   - You need the best risk-adjusted weights with a cap per sector.
   - You must limit how much a rebalance trades.
-  - Your hand-coded optimiser keeps failing or giving odd weights.
+  - Your own optimiser code keeps failing or giving odd weights.
+not_for:
+  - You do not have MATLAB with the Financial Toolbox. The code will not run. Use the Stock and bond split planner for a plain split with no code.
+  - You want CVaR or other risk measures that are not mean-variance. This skill does not cover them.
+  - You want to review bonds you already hold. Use the Bond portfolio reviewer.
 you_give:
-  - Asset returns or return estimates
-  - Constraints such as weight limits (optional)
-  - Target return or risk level (optional)
-  - MATLAB with Financial Toolbox
+  - A table of past returns for each asset, or expected returns and a covariance matrix
+  - Limits such as a cap per asset or sector (optional)
+  - A target return or risk level (optional)
+  - A risk-free rate (optional)
+  - MATLAB R2021a or later with the Financial Toolbox
 you_get:
-  - Optimal asset weights
-  - Efficient frontier chart
-  - Max Sharpe and minimum variance portfolios
-  - Working MATLAB code
+  - A weights table for each portfolio it solves
+  - Risk and return figures for each one
+  - An efficient frontier chart
+  - Minimum-risk and best-Sharpe portfolios
+  - MATLAB code you can paste and run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Financial Toolbox.
+  - Open Claude, ChatGPT or Gemini with this skill added, or paste SKILL.md into a new chat. If your AI is connected to MATLAB, it can run the code. If not, it writes it and you run it.
+  - Paste your return table or your expected returns and covariance matrix. Say which result you want, such as minimum risk, best Sharpe or a target return.
+  - List your limits, such as no more than 15% in one asset. If you give none, it uses fully invested and no short selling, and says so.
+  - Run the code in MATLAB and paste back any error. Your AI will fix it.
+  - Check that the weights add up to 100% and obey your limits. Then test a tighter cap to see if the mix is stable before you act on it.
+how_it_works:
+  - title: Choose the method
+    text: It matches your goal to minimum risk, target return, best Sharpe ratio or the full frontier.
+  - title: Check your data
+    text: It asks whether you have past returns or ready-made expected returns and covariances, and what risk-free rate to use.
+  - title: Build the portfolio
+    text: It creates a Portfolio object from your numbers in MATLAB.
+  - title: Set the limits
+    text: It adds fully invested and no short selling by default, plus any caps or turnover limits you gave.
+  - title: Solve
+    text: It calls the built-in estimate methods rather than a hand-coded solver.
+  - title: Report and draw
+    text: It reads risk and return from built-in methods, draws the frontier and lists the setup it used.
+output_shape: |
+  Setup used: <method>, <data source>, <risk-free rate>, <limits>
+  Weights table: <asset> | <weight> for <each portfolio>
+  Risk and return: <portfolio> | <risk> | <return> | <period>
+  Frontier chart: <efficient frontier with special portfolios marked>
+  MATLAB code: <script that reproduces it>
+  Checks: <weights sum to 1, limits met, code ran>
+output_sample:
+  input:
+    - A table of past returns for each asset, or expected returns and a covariance matrix
+    - Limits such as a cap per asset or sector (optional)
+    - A target return or risk level (optional)
+    - A risk-free rate (optional)
+  prerequisites:
+    - MATLAB R2021a or later with the Financial Toolbox, which is a paid product
+    - An AI that can write MATLAB code, and ideally run it
+  output:
+    - name: Setup used
+      contains: The method, data source, risk-free rate and each limit, with defaults marked.
+    - name: Weights table
+      contains: One weight per asset for each portfolio solved, such as minimum risk and best Sharpe.
+    - name: Risk and return
+      contains: Risk and return for each set of weights, with the period stated.
+    - name: Frontier chart
+      contains: The efficient frontier with the special portfolios marked.
+    - name: MATLAB code
+      contains: The full script that makes the numbers and chart, ready to paste into MATLAB.
+    - name: Checks
+      contains: Whether weights sum to 1, limits are met and the code ran.
+works_best_with:
+  tools:
+    - name: Claude with the MathWorks MATLAB tools
+      why: It can run the code itself and fix errors in the same chat.
+    - name: Any good chat AI
+      why: It can write the MATLAB script, which you then run yourself.
+  inputs:
+    - Return figures for 3 or more years, if you use past data
+    - Your current weights, to limit turnover
+    - Your own forecast of returns instead of past averages
+terms:
+  - term: Efficient frontier
+    meaning: The set of mixes that give the most return for each level of risk.
+  - term: Sharpe ratio
+    meaning: Return above the risk-free rate, divided by risk. Higher is better.
+  - term: Covariance matrix
+    meaning: A table of how each pair of assets moves together.
+  - term: Financial Toolbox
+    meaning: An add-on for MATLAB, sold by MathWorks, that holds the Portfolio tools.

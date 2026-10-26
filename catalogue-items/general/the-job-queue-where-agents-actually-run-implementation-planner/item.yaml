@@ -1,6 +1,6 @@
 slug: the-job-queue-where-agents-actually-run-implementation-planner
 name: Recoverable agent job queue builder
-summary: Build a scoped job queue with repeat-safe work, retries, recovery and a clear path for failed jobs.
+summary: "Plan an AI agent job queue that survives crashes, with no repeated paid work, capped retries, lost-job recovery and a safe path for failed jobs."
 category: general
 type: skill
 role: make

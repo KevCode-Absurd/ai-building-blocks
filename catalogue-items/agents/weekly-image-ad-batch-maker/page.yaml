@@ -1,11 +1,11 @@
 new_slug: weekly-image-ad-batch-maker
 name: Weekly image ad batch maker
-summary: Give it last week's ad results. Get a checked batch of new image ad plans, words and prompts to approve.
+summary: "Weekly image ad batch maker: turn last week's results and product photos into a checked batch of new image ads with picture prompts."
 job: make-image-ads
 thinking: high
 thinking_why: It picks its path from your data, runs up to seven skills, and fixes and re-checks each ad. Give it your strongest model.
 headline: Weekly image ad batch maker
-subhead: Give it last week's image ad results and your product photos. It keeps what your winners share, plans new ads that each change one thing, writes the words and picture prompts, checks every ad before you see it, and holds back the ones that fail.
+subhead: Give it last week's image ad results, your product facts and your product photos. It finds what your best image ads share, plans new ads that each change one thing, and writes the words and picture prompts. It checks every ad before you see it and holds back the ones that fail.
 explain: |
   Most image ad batches start from a blank page and a hunch. Last week's winners sit in a spreadsheet nobody reads, and the new ads copy their words instead of what made them work. Then a picture comes back with the wrong pack on it and a week is lost.
 
@@ -16,23 +16,51 @@ when:
   - You run image ads every week and want a new batch ready each Monday.
   - You have results on past ads but no time to work out what the winners share.
   - Your pictures keep coming back with the wrong product, and you want it caught before you pay for them.
+not_for:
+  - You run video ads. Use the Video ad script and prompt writer.
+  - You have no ad results yet and want one image ad now. Use the Single image ad planner.
+  - The product is out of stock, the offer is about to change, or there is no budget to test a batch. Wait until it is settled.
+  - You want one finished ad checked before launch. Use the Meta ad policy checker on its own.
 you_give:
-  - An export of your image ads with the image, dates, spend and your result (cost per purchase, return on ad spend or click rate)
-  - The product this batch is for, with its facts and current offer
-  - Clear photos of the exact product
+  - An export of your image ads from Meta Ads Manager or Google Ads, with the image, dates, spend and your result (cost per purchase, return on ad spend or click rate)
+  - The product this batch is for, with its facts and current offer (paste them, or use your brand brain's products file)
+  - Clear photos of the exact product, one per angle (pack as sold, in a hand, in use, close-up)
   - Customer reviews, if you have them (needed when fewer than six ads are measured)
-  - Your brand brain (optional)
+  - Your brand brain, if you have one (optional; without it, paste the claims you may and may not make)
 you_get:
   - What last week's ads taught, one line each
   - A batch of about 5 ads, each changing one thing, with image words, feed text and a picture prompt
   - A pre-launch result for every ad, and the reasons for any held out
   - How to get the pictures made, and what it costs
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to make this week's batch.
+  - Open the agent in Claude, ChatGPT or Gemini, or paste it into a new chat. In Claude Code, add it as a skill or save it in .claude/agents so it can keep a memory folder.
   - Attach last week's export, the product photos and the product name. The first time, add reviews too.
-  - Read the batch. Say yes or no to each ad.
-  - If you want pictures made, pick a tool. The agent asks before it uses any credits.
+  - Read the batch. Check that each ad changes one thing, and that each picture prompt names your real pack. Say yes or no to each ad.
+  - Claude cannot draw. To get the pictures, paste a prompt into ChatGPT or Gemini, or use an image tool you pay for. The agent asks before it uses any credits.
   - Run it again next Monday. It reads its memory folder to see what last week's changes taught.
+output_sample:
+  input:
+    - Last week's image ad export from Meta Ads Manager or Google Ads, with dates, spend and results
+    - The product for this batch, with its facts and current offer
+    - Clear photos of the exact product, one per angle
+    - Customer reviews (needed when fewer than six ads are measured)
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI that can read your files, or the export pasted into the chat
+    - An image tool you pay for, only if you want the pictures made
+  output:
+    - name: Path
+      contains: Whether the batch builds from a winners' style or from reviews, and how many ads have enough results.
+    - name: What last week taught
+      contains: "One line per ad from last week: the one change it tested and what happened, or too early."
+    - name: The batch
+      contains: About five ads, each changing one thing, with image words, feed text, a picture prompt and a pre-launch result.
+    - name: Held out
+      contains: Any ad that still failed the pre-launch check after two fix rounds, with the reason and the smallest fix.
+    - name: How the pictures get made
+      contains: The tools you can use, what each costs and the first step. Nothing is made without your yes.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Read the memory
     text: Opens last week's style traits, the change each ad tested and the never-again list.

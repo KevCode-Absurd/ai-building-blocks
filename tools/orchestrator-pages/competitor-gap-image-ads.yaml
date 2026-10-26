@@ -1,6 +1,6 @@
 new_slug: competitor-gap-image-ads
 name: Turn competitor gaps into image ad copy that passes Meta
-summary: Give it competitor ads. Get their gaps, image ad copy for each gap, and a Meta rules check.
+summary: Find what competitors miss, then get image ad copy for each gap and a Meta ad rules check. Rewrites any line that would be rejected.
 job: study-competitors
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your category's ads all look and sound the same.
   - You want image ads that say something the others do not.
   - You have been rejected on Meta before and want a check before you launch.
+not_for:
+  - "You have no saved competitor ads yet: start with the Competitor ad swipe file builder, then come back."
+  - "You only want the gaps and no copy: use the Competitor ad opportunity finder."
+  - "You have no proof for your claims: the copy step marks each missing line, so gather your proof first or ask a person on your team."
 you_give:
   - Competitor ads you saved from the public Ad Library, with library ID, brand, start date and screenshot
   - Your brand file (optional)
@@ -28,6 +32,26 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. It works step by step and saves each result.
+output_sample:
+  input:
+    - Competitor ads you saved from the public Ad Library, with ID, brand, start date and screenshot
+    - Your brand file (optional)
+    - The competitors that matter to you (optional)
+    - Your customer reviews (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional, makes the copy better)
+  output:
+    - name: Swipe file
+      contains: Competitor ads sorted by type, with three ads from different brands for each type.
+    - name: Gaps
+      contains: The crowded types, repeated claims and open questions nobody answers, with a brief for your version of each.
+    - name: Image ad copy
+      contains: A headline and text for each gap, with one appeal tested in each version.
+    - name: Meta check
+      contains: A verdict and score, the rules each line breaks, and a rewrite of any line that would fail.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Builds the swipe file
     text: Uses the swipe file skill to merge duplicates, file each ad under one type and keep three per type from different brands.

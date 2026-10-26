@@ -16,6 +16,29 @@ use_cases:
   - "Describe a place so readers can see, hear and smell it"
   - "Read your work aloud and fix the parts that don't play to a live room"
   - "Write a holiday message or toast with warmth and a little humour"
+not_for:
+  - "You need a plain, factual report or a short post with no story in it: use the Barbara Minto mind (the Barbara Minto mind) for clear, structured business writing."
+  - "You want spare, plain sentences with feeling left under the surface: use the Ernest Hemingway mind."
+  - "You need legal, medical or money advice: ask a qualified person, because a storyteller's habits will not answer those questions."
+output_sample:
+  input:
+    - Your story idea, draft, series plan or cause
+    - Three people you have seen this week, one short paragraph each (optional)
+    - Your planned ending and main turns, if you have them (optional)
+    - Who will read it, and where
+  output:
+    - name: Marked-up draft
+      contains: Your draft or plan with notes on where people, the laugh or the tear are missing.
+    - name: The face you need
+      contains: The one person at the centre, and the name or habit that should change to make them stick.
+    - name: Place note
+      contains: Where the setting needs a sight, sound or smell so readers can picture it.
+    - name: Part endings
+      contains: Where each part should end, and the open question that makes readers want the next one.
+    - name: Laugh and tear
+      contains: Where humour goes, where feeling goes, and whether the feeling is earned.
+    - name: Short note
+      contains: A plain summary of what to fix first, and a warning if your problem sits far from storytelling.
 seats:
   - {seat: "Serial stories and cliffhangers", asks: "Where does this part end, and why will they come back for the next one?"}
   - {seat: "Character and voice", asks: "Who is the one person in this that readers will still talk about next week?"}

@@ -1,6 +1,6 @@
 slug: prepare-a-construction-defects-handover
 name: Prepare a construction defects handover
-summary: Share the source files. Get a defect register, remedial handover and missing acceptance evidence.
+summary: Turn inspection records into a construction defects register with owners and closure evidence, plus a handover note that shows what is still open.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: meeting_notes
+  - type: document
     required: false
 outputs:
   - type: plan
@@ -20,9 +20,9 @@ uses:
   - handover-note-writer
 steps:
   - uses: executive-action-register
-    note: Extract the accepted defect actions with inspection source IDs, owners, dates and evidence needed for closure; missing acceptance remains open.
+    note: Extract the accepted defects with inspection source IDs, location, owner, date and the evidence needed to close each. Missing acceptance stays open. Hand step 2 the open defects and missing signoffs.
   - uses: handover-note-writer
-    note: Prepare the responsible contractor or facilities handover with location, access rules, dependencies and unresolved signoffs; do not infer completion from a promised date.
+    note: "Write the handover note for the contractor or facilities team: location, access rules, dependencies and unresolved signoffs. Never infer completion from a promised date. Uses the open defects and missing signoffs from step 1."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

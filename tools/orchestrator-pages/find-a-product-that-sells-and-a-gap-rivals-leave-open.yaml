@@ -1,6 +1,6 @@
 new_slug: find-a-product-that-sells-and-a-gap-rivals-leave-open
 name: "Find a product that sells in a gap rivals miss"
-summary: Give it your market. Get proven products, a gap rivals leave open, a score out of 100 and a small first test.
+summary: "Find a product that sells: get proven products, a gap rivals leave open, a score out of 100 and a small first test with a pass number."
 job: find-products
 thinking: high
 thinking_why: It runs five skills in a row, with margin sums and a score that decide if you order stock. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want a product to sell and need proof of demand, room to win and a margin before you order stock.
   - You are eyeing a crowded category and want to know if a gap is really open.
   - You have a product idea and want a cheap test with a clear pass or fail.
+not_for:
+  - You sell a service or a digital product. Use the Best customer finder to learn who wants it, then test it with a plain offer.
+  - You already have a product and need to know why buyers hold back. Use the Customer objection coverage checker.
+  - You want to study rival ads, not pick a product. Use the Competitor ad opportunity finder.
 you_give:
   - Your market or buyer, such as adults over 50
   - Which tool you have for ads, such as the free Facebook Ad Library or a paid ad spy tool
@@ -32,6 +36,27 @@ how_to_use:
   - Tell it the market, your tool and your margin rules. It checks ad lengths and repeats, which you read and paste in.
   - When it pauses, pick one product from the shortlist, get a supplier quote, work out landed cost per unit and decide the price you would charge.
   - Set the pass number for the test before you run it, and keep to it.
+output_sample:
+  input:
+    - Your market or buyer
+    - Which ad tool you have, free or paid
+    - Your price and margin rules
+    - Your strengths, such as price or taste (optional)
+    - "After the pause: supplier quote, landed cost and planned price"
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff folder
+    - A Brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Proven product scout file
+      contains: Five to ten candidate products with proof checks, supplier cost and a winner or fluke call for each.
+    - name: Crowded category white space file
+      contains: Rivals compared, ranked gaps, a position for each gap and a short test.
+    - name: Winning product scorer file
+      contains: Margin sums, checks by area, a score out of 100, a verdict and the first fix.
+    - name: MVP experiment planner file
+      contains: The riskiest guess, the smallest test, pass numbers set before it runs and a pivot or persevere rule.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find proven products
     text: Gives you filter settings or free Ad Library searches, a routine for reading each ad and checks for proof. Lists five to ten candidates with a winner or fluke call.

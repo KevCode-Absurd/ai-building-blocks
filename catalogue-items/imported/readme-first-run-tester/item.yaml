@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
+  - type: document
+    required: false
 outputs:
   - type: test_report
 uses: []

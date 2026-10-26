@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It uses your attempts to shape the teaching.
 new_slug: try-first-problem-tutor
 name: Try-first problem tutor
-summary: Try a hard problem two ways before any teaching. Your AI then builds
-  the lesson from your attempts.
+summary: Learn a hard problem by trying it two ways first. Your AI then teaches the idea from your attempts, so this problem-solving tutor sticks better.
 job: teach-and-train
 headline: Try-first problem tutor
-subhead: A lesson built on your own attempts. You try a hard problem two
-  different ways before anyone explains it, and the teaching then starts from
-  what you tried.
+subhead: Try a hard problem two different ways before anyone explains it. Your AI then teaches the idea by building on what you tried. This method is called productive failure, and it helps ideas stick.
 explain: |
   A lesson built on your own attempts. You try a hard problem two different ways before anyone explains it, and the teaching then starts from what you tried. The method is called productive failure, and it helps ideas stick.
 
@@ -18,18 +15,44 @@ when:
   - You usually read the answer first and forget it a week later.
   - A teacher wants to set a problem before a lesson.
   - You want a study method that builds on your own thinking.
+not_for:
+  - "You need a fixed rule, a made-up convention or a rote procedure: ask your AI for a worked example or direct teaching instead."
+  - "The topic has a safety risk: learn it from a teacher or a trusted guide, not by trial and error."
+  - "You are already stuck on one step of a problem: ask a teacher or tutor for a hint, then try again."
 you_give:
-  - A challenging problem
-  - The idea or rule behind it
-  - Your course and level
+  - A hard problem you have not learned how to solve yet
+  - The idea or rule behind the problem
+  - Your course, level and what you already know
   - Your two attempts, once you have made them
+  - How much time you have to explore (optional)
 you_get:
-  - A two-attempt exploration task
+  - A task that asks for two different attempts
   - Feedback on what each attempt shows
-  - A short lesson linked to your attempts
-  - A check of what you learned
+  - A short lesson built on your own attempts
+  - A new problem to check what you learned
+  - A short summary of the session
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Give your AI the hard problem, the idea behind it, and your course and level.
+  - Make two different attempts yourself. Both can be wrong. Do not ask for the answer yet.
+  - Send your attempts to your AI and read its feedback on each one.
+  - Read the short lesson it builds from your attempts, then try the transfer problem.
+  - Finish with the session summary. For more help, pair it with the Progressive hint ladder or the Transfer bridge.
+output_sample:
+  input:
+    - A hard problem you have not learned how to solve yet
+    - The idea or rule behind the problem
+    - Your course, level and what you already know
+    - How much time you have to explore (optional)
+    - Your age or stage (optional)
+  output:
+    - name: Exploration task
+      contains: The problem set up so you can try it, with a request to make two different attempts.
+    - name: Feedback on your attempts
+      contains: What each attempt got close to, what was missing, and what kind of mistake it was.
+    - name: Consolidation
+      contains: A short lesson on the idea that builds on your two attempts and shows why the right method works.
+    - name: Transfer check
+      contains: A new problem to see if you can use the idea, marked passed, failed or skipped.
+    - name: Evidence summary
+      contains: A short record of your attempts, your reflection and how the session went.

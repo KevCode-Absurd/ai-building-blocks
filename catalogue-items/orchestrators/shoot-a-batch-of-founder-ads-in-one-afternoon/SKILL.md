@@ -43,10 +43,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Ad concept matrix builder.** Use the skill `ad-concept-matrix-builder`. Picks the problems and angles the founder will talk about.
-2. **Founder ad script builder.** Use the skill `founder-ad-script-builder`. Give it the angle library from the steps before. Writes founder scripts for the top angles from the matrix.
-3. **Video hook scorer.** Use the skill `video-hook-scorer`. Give it the hooks and the script from the steps before. Scores the hooks from the scripts and picks which to film.
-4. **Video script bridge checker.** Use the skill `video-ad-bridge-checker`. Give it the script from the steps before. Checks each script holds from the hook to the offer before anyone films it.
+1. **Ad concept matrix builder.** Use the skill `ad-concept-matrix-builder`. Picks the problems and angles the founder will talk about. Hands the angle library to step 2.
+2. **Founder ad script builder.** Use the skill `founder-ad-script-builder`. Give it the angle library from the steps before. Writes founder scripts for the top angles from the matrix. Hands the scripts and hooks to steps 3 to 5.
+3. **Video hook scorer.** Use the skill `video-hook-scorer`. Give it the hooks and the script from the steps before. Scores the hooks from the scripts and picks which to film. Hands the chosen hooks to step 4.
+4. **Video script bridge checker.** Use the skill `video-ad-bridge-checker`. Give it the script and the hooks from the steps before. Checks each script holds from the chosen hook to the offer before anyone films it, using the scripts from step 2 and the hooks picked in step 3. Hands the fixed scripts to step 5.
 5. **Founder ad shoot planner.** Use the skill `founder-ad-shoot-planner`. Give it the script and the hooks from the steps before. Turns the approved scripts and hooks into one shoot list for the afternoon.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

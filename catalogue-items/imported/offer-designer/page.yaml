@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It builds an offer in set parts.
 new_slug: offer-designer
 name: Offer designer
-summary: Say what you sell. Get an offer with value framing, bonuses, guarantee,
-  name and payment terms.
+summary: Build a stronger offer for your course, service or coaching. Get bonuses, a guarantee, a name and payment terms from your offer design notes.
 job: make-offer
 headline: Offer designer
-subhead: A stronger offer for the thing you sell, so people say yes before you
-  touch the sales page. Better copy on a weak offer helps slowly.
+subhead: A stronger offer for the thing you sell, so people say yes before you touch the sales page. Better copy on a weak offer helps slowly.
 explain: |
   A stronger offer for the thing you sell, so people say yes before you touch the sales page. Better copy on a weak offer helps slowly. A better offer works at once.
 
@@ -15,9 +13,12 @@ explain: |
 when:
   - Your sales page is fine but people still do not buy.
   - You are launching a course and need to decide what to bundle.
-  - You offer a service and want a guarantee that builds trust without risking
-    your margin.
+  - You offer a service and want a guarantee that builds trust without risking your margin.
   - Your offer has no clear name and sounds like everyone else's.
+not_for:
+  - "You only need a better sales page for an offer that is already strong: ask your AI to write the page, or hire a copywriter."
+  - "You sell self-serve software with monthly plans: work out your plan tiers and price first, since bonuses and guarantees matter less there."
+  - "You want to know if a price is right: compare it with what rivals charge and what your buyers say, then test it."
 you_give:
   - What you sell and who buys it
   - Your price and what is included
@@ -29,7 +30,25 @@ you_get:
   - A clear offer name
   - Payment term choices
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Tell your AI what you sell, who buys it, your price and what is included.
+  - Add the reasons people say no. Add your costs and margin if you want a guarantee that protects your profit.
+  - Read the value scores first. Fix the weakest lever before you change anything else.
+  - Pick one change, such as a bonus or guarantee. Use it for a while, then compare results before you change more.
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your price and what is included
+    - Common reasons people say no
+    - Your costs and margin (optional)
+  output:
+    - name: Current offer in plain words
+      contains: Your name, price, what buyers get, guarantee and deadline, written down in one place.
+    - name: Value score
+      contains: A score from 1 to 10 for each of the four value levers, with the weakest one marked.
+    - name: Offer anatomy check
+      contains: "Which of the six parts are missing or weak: deliverable, bonuses, guarantee, urgency, name, price and payment."
+    - name: Changed component
+      contains: A new bonus, guarantee, urgency reason, name or payment plan that fixes the weakest lever.
+    - name: Honest lift estimate
+      contains: A rough guess of the gain from the change, framed as an assumption to test, not a promise.

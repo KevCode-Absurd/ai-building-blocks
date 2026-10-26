@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It reorders a plan while keeping coverage.
 new_slug: mixed-practice-unit-planner
 name: Mixed practice unit planner
-summary: Paste a topic order. Get a plan that mixes related topics through the
-  unit for stronger recall.
+summary: Turn a blocked topic order into a mixed practice unit plan. Paste your topics, subject and length. You get a lesson plan that mixes related topics.
 job: teach-and-train
 headline: Mixed practice unit planner
-subhead: A unit plan that mixes related topics through the weeks instead of
-  teaching each one in a block, so pupils remember more later. Paste your topic
-  order, subject and length, and get the reshuffled plan.
+subhead: A unit plan that mixes related topics through the weeks instead of teaching each one in a block, so pupils remember more later. Paste your topic order, subject and length, and get the reshuffled plan.
 explain: |
   A unit plan that mixes related topics through the weeks instead of teaching each one in a block, so pupils remember more later. Paste your topic order, subject and length, and get the reshuffled plan.
 
   Research shows that practising different but related kinds of problems together improves later recall, even though it feels harder in the moment. The plan keeps a short focused block of one or two lessons to teach each topic first. Mixing then starts with two topics and adds more as pupils cope. Hard prerequisites stay in order, and any set sequence from your school is respected, with deviations explained. Weaker groups can get gentler mixing.
 when:
-  - Your fractions unit goes addition, then subtraction, then multiplication,
-    one block each.
+  - Your fractions unit goes addition, then subtraction, then multiplication, one block each.
   - Pupils do well on the unit test and forget by the exam.
   - You are planning a 12-lesson unit over four weeks.
   - You need to keep a mandated order but still add mixing.
+not_for:
+  - "You only want practice on one skill with nothing to tell apart: keep simple blocked practice, or ask your AI for a set of practice questions."
+  - "Pupils have not yet understood each topic: teach each one first, then plan the mixing."
+  - "Your topics build on each other in a strict chain: keep that chain in order and mix only the topics that sit beside it."
 you_give:
   - Your current topic order
   - Subject and year group
@@ -31,7 +31,27 @@ you_get:
   - How mixing builds up
   - Notes explaining any change to your order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Type your topics as a comma-separated list in the order you teach them now.
+  - Add your subject, year group and number of lessons.
+  - Say which topics must stay in order, and any order your school sets.
+  - Read the plan. Check that each topic is taught on its own first, and that the order rules are kept.
+  - Next, plan review with the spaced-practice-scheduler and the retrieval-practice-generator.
+output_sample:
+  input:
+    - Your topics, in the order you teach them now
+    - Your subject and year group
+    - How many lessons or weeks the unit runs
+    - Topics that must come first (optional)
+    - Notes on your class (optional)
+  output:
+    - name: Original Blocked Sequence vs. Interleaved Sequence
+      contains: Your old order next to the new mixed order, so you can see what changed.
+    - name: Interleaved Lesson Sequence
+      contains: A lesson-by-lesson plan showing where each topic is first taught and when mixing begins.
+    - name: Interleaving Rationale
+      contains: Why these topics gain from mixing, and why any change to your order was made.
+    - name: Student Briefing Script
+      contains: Words you can use to tell pupils why mixed practice feels harder.
+    - name: Practice Task Examples
+      contains: Sample tasks that mix the topics so pupils must choose the right method.

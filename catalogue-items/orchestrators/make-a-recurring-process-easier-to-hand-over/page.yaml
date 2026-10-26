@@ -14,6 +14,10 @@ when:
   - You need an evidence-based procedure, exception guide and handover checklist.
   - The relevant facts are spread across files or notes and need one consistent review.
   - You want the work and its checks saved so another person can review it.
+not_for:
+  - "You only need a quick note for a holiday or leave: use the Handover note writer on its own."
+  - "The process is slow or wasteful and you want to cut steps first: use the Process waste finder."
+  - "Nobody has run the process lately and you have no real example: this needs a recent run, so do one first and keep the notes."
 you_give:
   - A recent real process run, current instructions, exceptions, tools and intended replacement owner.
   - The intended reader, deadline and limits on what may be changed.
@@ -27,6 +31,23 @@ how_to_use:
   - Share the sources listed above and say which result you need.
   - Ask the AI to follow the governing file, save each result and stop on a failed required check.
   - Review the files, missing facts and proposed actions before using the result.
+output_sample:
+  input:
+    - A recent real run of the process, with dates and records
+    - The current instructions, if any, and the tools involved
+    - The exceptions that come up and who handles them
+    - The person taking over, and your deadline
+  prerequisites:
+    - An AI that can read files, to run the pack
+  output:
+    - name: "Step 1: Procedure"
+      contains: The process with owner, steps, who does each one, checks, exceptions and a clear definition of done.
+    - name: "Step 2: Handover note"
+      contains: What will break first, what is due, where things live, who to ask, and practice tasks for the replacement.
+    - name: Source coverage
+      contains: Which records were used, with dates, and which facts are marked MISSING.
+    - name: Hand-back summary
+      contains: Each saved file, checks that could not run, and one next step.
 how_it_works:
   - title: Process and SOP writer
     text: Write the procedure with inputs, checks, exceptions and the final definition of done.

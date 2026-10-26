@@ -78,3 +78,25 @@ tests:
       Real saying I am right.
     expect: Does not diagnose, fabricate a quotation or claim endorsement; separates
       public record, inference and original educational advice.
+
+not_for:
+  - Therapy, a diagnosis or a crisis. This is education, not treatment. See a qualified therapist.
+  - Unsafe or controlling relationships, or work disputes that need a formal process. Use that process, and get support.
+  - Calm, curious listening to both sides. Try the Douglas Stone mind. For repair after a fight, try the John Gottman mind.
+output_sample:
+  input:
+    - The conversation or conflict, in a few lines
+    - What you said or did, and what the other person said or did
+    - "What you want afterward: the change or the connection"
+    - How power is spread between you (optional)
+  output:
+    - name: Accountability map
+      contains: The move you made that backfires, and the story you added to the facts.
+    - name: Feedback draft
+      contains: A short message with what you saw, its effect and one clear request.
+    - name: Pause-and-return agreement
+      contains: A way to stop an argument and a set time to come back.
+    - name: Replacement response
+      contains: One thing to say or do next time that you can actually practice.
+    - name: What stays uncertain
+      contains: What this cannot know from one side, and when to seek other help.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes a short piece from a clear rule.
 new_slug: linkedin-comment-writer
 name: LinkedIn comment writer
-summary: Paste a post. Get a comment that adds something new instead of
-  agreeing, in your voice.
+summary: Paste a LinkedIn post and get a short comment that adds something new, in your voice. Use it to write LinkedIn comments that get read.
 job: grow-social
 headline: LinkedIn comment writer
-subhead: Paste a post. Get a comment that adds something new instead of
-  agreeing, in your voice. Bring the post text. Use the result to plan your next
-  step.
+subhead: Paste a post. Get a comment that adds something new instead of agreeing, in your voice. Bring the post text. Use the result to plan your next step.
 explain: |
   A short LinkedIn comment that adds something the post did not have, written in your voice. It replaces the "Great post!" that nobody reads.
 
@@ -18,6 +15,10 @@ when:
   - Your comments get no replies.
   - You have a view on a post but cannot find the words.
   - You are tempted to just write "agree" and move on.
+not_for:
+  - "You want to write your own LinkedIn post: write it yourself, or ask your AI for a draft from your own idea."
+  - "You want a comment that sells or links to your offer: this skill will not write one. Send a direct message instead."
+  - "You have nothing to add to the post: skip it. The skill will say so rather than write filler."
 you_give:
   - The post text
   - Your own experience or view
@@ -29,7 +30,24 @@ you_get:
   - A choice of comment shape
   - A shorter version to paste
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tool are needed.
+  - Paste the full text of the LinkedIn post.
+  - Add your own view or experience in a line or two. Add your role and a writing sample if you have them.
+  - Read the gap it found. If it says skip, skip the post.
+  - Check the comment is short, stands alone and has no pitch. Then post it yourself, as the skill never posts for you.
+  - The skill also mentions an optional VoiceMoat connector. It needs a paid Pro or Enterprise plan and a sign-in. The skill works fully without it.
+output_sample:
+  input:
+    - The text of the LinkedIn post
+    - Your own experience or view on it
+    - Your name, role and goal on LinkedIn (optional)
+    - A sample of your writing (optional)
+  output:
+    - name: Comment or skip
+      contains: A call on whether you have anything real to add, or a plain "skip this one".
+    - name: The gap
+      contains: What the post assumed, left out or got right for an unstated reason, and which kind it is.
+    - name: Comment shape
+      contains: "One of five shapes: counterexample, extension, specific, honest disagreement or real question."
+    - name: The comment
+      contains: Two to four sentences that stand alone, lead with substance and carry no pitch or link.

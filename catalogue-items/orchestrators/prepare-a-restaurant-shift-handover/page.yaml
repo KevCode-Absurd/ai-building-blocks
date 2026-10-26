@@ -1,50 +1,91 @@
 new_slug: prepare-a-restaurant-shift-handover
 name: Prepare a restaurant shift handover
 headline: Prepare a restaurant shift handover
-summary: Share the source files. Get a shift handover, unresolved issue register and escalation notes.
+summary: Brief the next shift lead in minutes. Get a restaurant shift handover with food safety issues first, an open-issue list and who to call.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A shift handover, unresolved issue register and escalation notes. Share actual shift notes, bookings, outstanding orders, equipment issues, approved food safety procedures and the incoming lead. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the shift notes, tonight's bookings, outstanding orders, equipment problems and your food safety procedure. It writes a handover for the incoming lead and a list of open issues. Food safety issues come first and stay apart from finished work.
 explain: |-
-  A shift handover, unresolved issue register and escalation notes.
+  At shift change, the key facts sit in someone's head or in a messy group chat. The next lead hears about a broken fridge or a late delivery at the worst moment. This restaurant shift handover turns your notes into one clear page.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Safety issues follow the approved procedure; no temperature, inspection result or resolution is invented. Missing tools or evidence stay visible in the final summary.
+  The Handover note writer puts safety issues first, then what is due next shift by time, then bookings, equipment and who to call. The Executive action register keeper then pulls out the follow-ups the notes agreed. It keeps open issues, finished work and proposed assignments in three lists.
+
+  The pack uses your approved food safety procedure and adds no limits of its own. It never makes up a temperature, an inspection result or a fix. Anything with no reading is marked reported, not recorded.
 when:
-  - You need a shift handover, unresolved issue register and escalation notes.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You close the evening shift and a different lead opens in the morning.
+  - A manager is off and the deputy needs to know what is half done.
+  - A fridge, oven or dishwasher is playing up and the next shift must know what was tried.
+  - A large booking or a late delivery lands on the next shift.
+not_for:
+  - "You want repeat problems found across several shifts: use the Restaurant shift exception review assistant."
+  - "You want to build next week's rota: use the Shift schedule planner."
+  - "A food safety incident needs a written procedure: use Turn an incident into a safer procedure."
+  - "You are handing over a customer support queue, not a kitchen or floor: use the Gorgias shift handover writer."
 you_give:
-  - Actual shift notes, bookings, outstanding orders, equipment issues, approved food safety procedures and the incoming lead.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your shift notes, in any order
+  - Tonight's bookings and any large parties
+  - Outstanding orders and deliveries, with times
+  - Equipment problems, and what was tried
+  - Your approved food safety procedure (optional, but safety issues need it)
+  - The incoming lead, and who to call for what
 you_get:
-  - A shift handover, unresolved issue register and escalation notes.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - Food safety issues first, each with who to call
+  - What is due next shift, in time order
+  - Bookings, orders and equipment problems in one place
+  - An open-issue list, kept apart from finished work and proposed assignments
+  - A list of gaps, such as readings the notes never gave
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste your shift notes, bookings, orders and equipment issues. Add your food safety procedure and the incoming lead's name.
+  - Read the safety section first. Check that every reading in it came from your notes.
+  - Fix each line marked reported, not recorded by adding the real reading or time.
+  - Give the handover to the incoming lead before you leave. Nothing is sent for you.
 how_it_works:
   - title: Handover note writer
-    text: Organize the actual service state, time-critical orders, equipment issues and approved escalation contacts for the incoming shift. Preserve the stated food safety limits without creating new ones.
+    text: Puts safety issues first, then what is due next shift by time, then equipment, bookings and who to call. Keeps your food safety limits as written. Hands step 2 the full note. Check before moving on, every safety issue in the notes appears and no reading was added.
   - title: Executive action register keeper
-    text: Extract explicitly agreed follow-ups from the shift notes, keeping unresolved safety issues separate from completed work and proposed assignments.
+    text: Reads step 1's note and your shift notes. Extracts only the follow-ups the notes agreed, with an owner and time if stated. Keeps unresolved safety issues, finished work and proposed assignments in separate lists.
+  - title: Check and hand back
+    text: Joins both files, checks that safety issues follow your procedure, and lists every gap and every check that did not run.
 output_shape: |-
-  Scope and source coverage
-  A shift handover, unresolved issue register and escalation notes.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SAFETY FIRST <issue | what the notes say | approved procedure step | who to call | status: open>
+  DUE NEXT SHIFT <time | what | who is waiting>
+  BOOKINGS AND ORDERS <booking or order | time | notes>
+  EQUIPMENT <item | problem | what was tried | reported, not recorded if no proof>
+  OPEN ISSUES <issue | owner if stated | source line>
+  DONE THIS SHIFT <follow-up | done by>
+  PROPOSED ASSIGNMENTS <task | suggested owner | proposed, not agreed>
+  WHO TO CALL <name or role | for what>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - Your shift notes, in any order
+    - Tonight's bookings, orders and equipment problems
+    - Your approved food safety procedure (optional)
+    - The incoming lead and who to call
+  prerequisites:
+    - An AI that can read files or long pasted text
+    - The two component skills, which come in the pack
+  output:
+    - name: Safety first
+      contains: Each food safety issue from the notes, the procedure step that applies and who to call.
+    - name: Due next shift
+      contains: Bookings, orders and deliveries in time order, with who is waiting.
+    - name: Equipment
+      contains: Each problem and what was tried, marked reported, not recorded where there is no proof.
+    - name: Open issues
+      contains: Unresolved items with an owner only where the notes named one.
+    - name: Who to call
+      contains: Each contact and what to call them about.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Safety issues follow the approved procedure; no temperature, inspection result or resolution is invented.
+  - what: One shift
+    how: Run one shift change at a time. Use the last handover as the starting point for the next.
+  - what: Safety procedure
+    how: Paste your own food safety steps. The handover then quotes your limits instead of general ones.
+  - what: Incoming lead
+    how: Say who is coming on. The note is written to them and drops what they already know.
 judge:
   - Safety issues follow the approved procedure; no temperature, inspection result or resolution is invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +98,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep your food safety procedure with the pack so every handover uses the same limits.
+  - Ask the team to note a time and a reading with every safety check, so fewer lines read reported, not recorded.
+  - Run the pack at every shift change for a week and see which issues keep coming back.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads messy notes and a procedure together. Voice-to-text notes from your phone work too.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your approved food safety procedure.
+    - Last shift's handover.
 terms:
+  - term: Open issue
+    meaning: A problem that is not fixed yet.
+  - term: Escalation
+    meaning: Calling a named person when a problem is too big for the shift lead.
+  - term: Reported, not recorded
+    meaning: Someone said it happened, but the notes give no reading, time or proof.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

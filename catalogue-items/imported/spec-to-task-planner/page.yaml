@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It breaks a spec into ordered steps.
 new_slug: spec-to-task-planner
 name: Spec to task planner
-summary: Point it at a spec in Notion. Get an implementation plan and tracked tasks.
+summary: Turn a spec in Notion into a clear implementation plan and linked tasks, with gaps and assumptions listed before work starts.
 job: organise-work
 headline: Spec to task planner
-subhead: An implementation plan and a set of linked tasks, built straight from a
-  spec that lives in Notion. The skill finds your spec, reads it, and notes gaps
-  and assumptions before anything is planned.
+subhead: An implementation plan and a set of linked tasks, built straight from a spec that lives in Notion. The skill finds your spec, reads it, and notes gaps and assumptions before anything is planned.
 explain: |
   An implementation plan and a set of linked tasks, built straight from a spec that lives in Notion. The skill finds your spec, reads it, and notes gaps and assumptions before anything is planned.
 
@@ -17,6 +15,10 @@ when:
   - You want tasks created in your Notion task board without typing them.
   - A spec has unclear points you want listed before work starts.
   - You want spec, plan and tasks to stay linked as work progresses.
+not_for:
+  - "Your spec is not in Notion: write the plan by hand, or paste the spec into a chat and ask your AI for a step list."
+  - "You only have a quick one-off note: a short to-do list is faster than a full plan."
+  - "Your AI cannot connect to Notion: copy the spec text into a chat and ask for a plan, then add tasks yourself."
 you_give:
   - The name or link of the Notion spec
   - Access to your Notion workspace
@@ -28,8 +30,28 @@ you_get:
   - Links between spec, plan and tasks
   - Status updates as work moves
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your Notion workspace.
+  - Check first that your AI can reach Notion. The setup in this skill uses the Codex CLI and the Notion MCP connection. In other AI tools, look for a Notion connection in the tool's settings.
+  - If you use Codex, add the Notion connection and log in with OAuth when asked. Then restart Codex.
+  - Give your AI the skill and the name or link of your spec. If several pages match, pick the right one when asked.
+  - Read the gaps and assumptions it lists. Answer them or fix the spec before you accept the plan.
+  - Check the plan page and the new tasks in Notion. Edit anything that looks wrong.
+  - As work moves, ask your AI to update statuses and post progress notes.
+output_sample:
+  input:
+    - The name or link of your spec in Notion
+    - Access to your Notion workspace
+    - The name of your task database (optional)
+  prerequisites:
+    - An AI tool that can connect to Notion (the Notion MCP connection)
+    - A Notion workspace with a task database
+  output:
+    - name: Clarifications block
+      contains: Gaps, unclear points and assumptions found in the spec, listed before any planning starts.
+    - name: Implementation plan page
+      contains: Overview, spec link, requirements summary, phases, dependencies, risks and success criteria, in a quick or full layout.
+    - name: Tasks in your database
+      contains: Tasks sized for one to two days, each with context, objective, acceptance criteria and dependencies.
+    - name: Links between spec, plan and tasks
+      contains: The plan links to the spec. Each task links to both the plan and the spec.
+    - name: Status updates
+      contains: Progress notes and milestone summaries, with plan and task statuses kept in step as work moves.

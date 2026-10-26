@@ -1,6 +1,6 @@
 new_slug: creative-portfolio-mix-planner
 name: "Creative portfolio mix planner"
-summary: "Give it your live ads. Get a target mix across sources, stages and formats."
+summary: "Plan your ad mix: give it your live ads and get a target split by source, stage and format, plus which formats to add or retire."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It sorts a list of ads into groups and sets targets, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Most of your spend sits on two or three ads and you want to spread the risk.
   - You have only made variants of your best ad and want new kinds of ad.
   - "You are deciding where to put your team's time: AI, creators or in-house."
+not_for:
+  - You have a small store with little budget. Start with 3 core concepts and test them one at a time instead.
+  - You want to know how many ads to make in total. Ask a person on your team to set the volume, as this plan does not count it.
+  - You want to test one ad concept with many hooks. Use a concept matrix builder and keep one concept per ad set.
 
 you_give:
   - A list of live ads with format, source, stage and spend
@@ -35,6 +39,29 @@ how_to_use:
   - Say what your team can make and what it costs. Small stores should say so.
   - Add the story assets you have, such as a founder or behind-the-scenes footage.
   - Fill the gaps in order, and check again after a month.
+output_sample:
+  input:
+    - Your live ads, with format, source, stage and spend for each
+    - Your team capacity and budget
+    - Your founder or behind-the-scenes assets (optional)
+    - What buyers already know about your problem and product (optional)
+  prerequisites:
+    - An export of your live ads from Meta Ads Manager, or a list you type yourself
+  output:
+    - name: Current spread
+      contains: The share of spend held by your top two or three ads, and how many distinct formats are live.
+    - name: Target mix
+      contains: A starting split by source, stage, pain versus desire, and production type, each adding up to 100 percent.
+    - name: Format and angle slots
+      contains: 10 to 15 slots, each with a source, a stage and a status of live, add or retire.
+    - name: Add and retire
+      contains: The formats to add and the ones to retire, with a reason for each.
+    - name: Ad set layout
+      contains: How to place all stages in one ad set, with names.
+    - name: AI use
+      contains: Where AI helps and where to be careful.
+    - name: Checks missed and missing
+      contains: Any check that could not run, and any input you did not give.
 
 how_it_works:
   - title: Reads the spend spread

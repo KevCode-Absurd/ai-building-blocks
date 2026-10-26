@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Async C++ has subtle traps that need careful thought.
 new_slug: c-network-code-helper
 name: C++ network code helper
-summary: Describe the networking job. Get C++ Boost.Asio code that compiles on
-  your version of Boost.
+summary: Describe your C++ networking job and get Boost.Asio code that builds on your Boost version, in the async style your compiler supports.
 job: build-software
 headline: C++ network code helper
-subhead: Describe the networking job, such as a server, client, timer or secure
-  connection, and name your Boost version and C++ standard. It picks the async
-  style your setup can build, since most online examples are old. You get
-  working C++ code, notes on the style chosen and build hints.
+subhead: Describe the networking job, such as a server, client, timer or secure connection, and name your Boost version and C++ standard. It picks the async style your setup can build, since most online examples are old. You get working C++ code, notes on the style chosen and build hints.
 explain: |
   C++ network code that actually compiles on your version of Boost. Describe the job, such as a server, client, timer or secure connection, and you get working asynchronous code in the style your setup supports.
 
@@ -19,6 +15,10 @@ when:
   - You need a timer or client in C++ that fits an older Boost version.
   - You want to add TLS to a connection and are not sure which API to use.
   - You are reviewing async network code that mixes old and new styles.
+not_for:
+  - "You write networking code in Python, Node or another language: use that language's own socket or async library."
+  - "Your Boost is older than 1.62: upgrade Boost first, or ask a C++ developer to port the code by hand."
+  - "You need only a quick blocking socket with no async: use a plain socket library or the simple synchronous calls in your OS."
 you_give:
   - The networking job you want done
   - Your Boost or Asio version
@@ -30,8 +30,28 @@ you_get:
   - Notes on why that style was chosen
   - Build hints for your setup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill text, or upload the skill folder.
+  - Describe the job, for example a TCP echo server.
+  - Add your Boost version and C++ standard. If you are unsure, say so and your AI will ask.
+  - Paste any existing code you want reviewed (optional).
+  - Build the code you get back. Your AI cannot compile it for you unless it can run code.
+  - If the build fails, paste the error back and ask for a fix.
+output_sample:
+  input:
+    - The networking job, such as a TCP server, client, timer or secure connection
+    - Your Boost or standalone Asio version
+    - Your C++ standard and build tool (optional)
+    - Existing Asio code to review (optional)
+  prerequisites:
+    - A C++ compiler and build setup to test the code you get back
+  output:
+    - name: Style choice
+      contains: The async style picked from your Boost version and C++ standard, with the reason.
+    - name: Source code
+      contains: Working async C++ code for your job, in the chosen style.
+    - name: CMakeLists.txt
+      contains: Build settings for your standard, including coroutine and header-only flags where needed.
+    - name: Version notes
+      contains: Which features your Boost version can and cannot use.
+    - name: Done checklist
+      contains: Checks for buffer lifetime, write order, error handling and shutdown, applied to the code.

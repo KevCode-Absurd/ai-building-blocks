@@ -18,9 +18,9 @@ uses: [customer-buying-reasons-finder, customer-quote-image-ad, complaint-review
 steps:
   - {uses: customer-buying-reasons-finder, note: "Rank the reasons in your reviews with the exact phrases, so the quote ads use real ones."}
   - {uses: customer-quote-image-ad, note: "Build the quote ads from the ranked reasons and their exact phrases."}
-  - {uses: complaint-review-image-ad-maker, note: "Add one plain review card whose small grumble works as a reason to buy, in copy that matches the quote ads."}
-  - {uses: meta-ads-compliance-checker, note: "Check the quote ads and the feed text against Facebook and Instagram ad rules."}
-  - {uses: image-ad-gap-finder, note: "Code the ads from this run, find the types the set leaves out and brief the next three."}
+  - {uses: complaint-review-image-ad-maker, note: "Add one plain review card whose small grumble works as a reason to buy, in copy that matches the quote ads. Uses your reviews and step 2's ad copy; hands the review card prompt to step 4."}
+  - {uses: meta-ads-compliance-checker, note: "Check the quote ads, the review card and the feed text against Facebook and Instagram ad rules. Takes step 2's ad copy and ads plus step 3's review card prompt; hands the rules report to the hand-back."}
+  - {uses: image-ad-gap-finder, note: "Code the ads from this run, find the types the set leaves out and brief the next three. Uses step 2's ads and your reviews, not step 4's rules report; hands the brief for the next three ads back to you."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-turn-customer-quotes-into-image-ads-that-quote-them/skeleton.yaml

@@ -1,37 +1,109 @@
 thinking: medium
-thinking_why: It follows a set loop of test, code and tidy.
+thinking_why: It follows a set loop of failing test, then code.
 new_slug: test-first-coach
 name: Test-first coach
-summary: Say what to build or fix. Get it done test first, in small steps from
-  failing test to clean code.
+summary: Build a feature or fix a bug test first. Get one failing test, then the smallest code that passes it, repeated in small steps, plus a test report.
 job: test-and-fix-code
 headline: Test-first coach
-subhead: Say what to build or fix. Get it done test first, in small steps from
-  failing test to clean code. Bring the feature or bug in plain words. Use the
-  result to plan your next step.
+subhead: Describe the feature or bug and point it at your code. It agrees what to test with you, then works in small steps. Each step is one failing test, then just enough code to pass it.
 explain: |
-  A feature or bug fix built test first, in small steps from a failing test to clean code, so each test you keep describes real behaviour and survives refactoring. You avoid piles of tests that break whenever you change a variable name.
+  Test-driven development, or TDD, means you write a failing test first, then write only enough code to make it pass. This test-first coach runs that loop for you, one small slice at a time, so the tests you keep describe real behavior and survive a refactor.
 
-  The skill runs the red then green loop with firm rules. Before any test it agrees the seams with you: the public boundaries where behaviour can be seen. It writes one failing test, adds only enough code to pass it, then refactors. It rejects tests that mock internals, repeat the code's own logic or are written in bulk before any code. It reads the project's glossary so names match your domain.
+  Before any test, it agrees the seams with you. A seam is a public boundary where you can see what the code does without looking inside. It refuses tests that mock internals, repeat the code's own math, or get written in bulk before any code. It reads your project glossary so test names match your words.
+
+  Tidying is a separate step, after the slices. You get a test report of what is covered and what was left out on purpose.
 when:
-  - You want to build a feature test first and are unsure how to start.
-  - Your tests break every time you refactor.
-  - You need to fix a bug and prove it stays fixed.
-  - An AI wrote many tests that check nothing real.
-  - You want to agree what to test before writing any code.
+  - You want to build a feature test first and are not sure how to start.
+  - Your tests break every time you rename or move code.
+  - You are fixing a bug and want a test that proves it stays fixed.
+  - An AI wrote a pile of tests that check nothing real.
+not_for:
+  - You already have working code and only want more tests. Use the Test plan writer to plan them, or the Change test prover to check your change is really covered.
+  - Your test suite is already failing and you just need it green. Use the Failing test fixer.
+  - The code cannot run tests, or it is a one-off script. Skip test-first work there.
 you_give:
   - The feature or bug in plain words
-  - Access to the code
-  - Your test framework
-  - Project glossary (optional)
+  - Access to your code, pasted or in a project folder
+  - Your test framework and the command that runs tests
+  - A project glossary of your own terms (optional)
 you_get:
-  - Agreed test boundaries
-  - "One slice at a time: a failing test, then a passing one"
-  - Clean code after each step
-  - Tests that describe behaviour
+  - A short list of seams, with what each one catches and misses
+  - One failing test, then a passing one, for each behavior
+  - The smallest code change for each step
+  - A test report of what is covered and what was left out
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and tests.
+  - Open Claude, ChatGPT or Gemini and paste the skill. For code you want changed, use an AI that can read your files and run tests, such as Claude Code.
+  - Describe the feature or bug. Give your test command, such as npm test or pytest.
+  - Check the seams it proposes. Say yes only to the ones that match how your users or other code really call this.
+  - Read each failing test before the code is written. It should fail because the behavior is missing, not because of a typo.
+  - Approve each step before the next one starts. After the last one, run your whole test suite.
+  - Ask for a review of the change as a separate step. Tidy-up is not part of the loop.
+how_it_works:
+  - title: Read the code
+    text: It reads the area, the existing tests and your glossary before changing anything.
+  - title: Agree the seams
+    text: It proposes where to test, notes what each seam catches, and waits for your yes.
+  - title: List behaviors
+    text: It writes the behaviors to build in order, and you can reorder or cut them.
+  - title: Red
+    text: It writes one failing test, runs it and checks it fails for the right reason.
+  - title: Green
+    text: It writes only enough code to pass that test, then runs the file again.
+  - title: Report
+    text: It stops after each slice and ends with a table of behaviors, tests and results.
+output_shape: |
+  Slice <number>
+  Behavior: <one line>
+  Seam: <agreed boundary>
+  Red: <test code and the failure message>
+  Green: <code change and the passing run>
+
+  Test report
+  | behavior | seam | test name | result |
+  <one row per slice>
+
+  Seams agreed
+  <list>
+
+  Left out on purpose
+  <list>
+
+  Next steps
+  <review and full test run>
+output_sample:
+  input:
+    - The feature or bug, in plain words
+    - Your code and the command that runs your tests
+    - Your project glossary (optional)
+  prerequisites:
+    - A test framework that already runs in your project
+    - An AI that can run your tests, or you run them and paste the result back
+  output:
+    - name: Seams
+      contains: The boundaries to test at, with a line on what each one catches and misses.
+    - name: Behavior list
+      contains: The behaviors to build, in order, for you to reorder or cut.
+    - name: Red and green for each slice
+      contains: A failing test with its failure message, then the smallest code change and the passing run.
+    - name: Test report
+      contains: A table of behavior, seam, test name and result for every slice.
+    - name: Left out on purpose
+      contains: What was not tested and why, so gaps are known.
+    - name: Next steps
+      contains: A review of the change, then a full test run.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your repo, run your tests and show real failures and passes.
+    - name: Any good chat AI
+      why: Works if you run the tests yourself and paste back the result after each step.
+  inputs:
+    - A GLOSSARY.md or list of your project's terms
+    - Any written design decisions for the area you are changing
+terms:
+  - term: Seam
+    meaning: A public boundary of your code where you can see what it does without looking inside.
+  - term: Red then green
+    meaning: Red is a test that fails. Green is the same test passing after you add code.
+  - term: Mock
+    meaning: A stand-in for a part of your system, used so a test does not call the real thing.

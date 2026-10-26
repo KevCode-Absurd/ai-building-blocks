@@ -22,6 +22,28 @@ Use this skill when the request involves:
 - Enabling validity checks or extended metadata checks
 - Scanning local code changes for secrets before committing (via MCP / AI coding agent) — see the **Pre-Commit Scanning via AI Coding Agents** section below for the recommended plugin
 
+## What this skill does and does not do
+
+This skill gives step-by-step guidance. It does **not** change GitHub settings. A person with the right access clicks each setting. The AI cannot turn anything on for you, unless it has a GitHub tool that you set up and approved. Never say a setting is on until the user confirms it, or you have read it from GitHub.
+
+## When not to use
+
+- A secret has already leaked in a public repo or in history. Rotate the credential first, today, and follow your incident process. The Incident Responder agent can help. Setting up scanning does not fix a leak that has already happened.
+- You want to scan your own live website for exposed keys. Use the Exposed secrets finder.
+- You want to tidy `.env` files and plan key rotation across a project. Use the Secrets hygiene checker.
+- Your code is not on GitHub. These settings are GitHub features.
+
+## Inputs (ask once, never guess)
+
+Ask for these before the steps. If an answer is missing, write `MISSING` and say what it changes.
+
+1. **Access.** Are you a repo admin, or an org owner? Org-wide settings need an org owner.
+2. **Where the code lives.** Public repo, private repo owned by an organization, or user-owned. This decides what is free and what is paid (see Availability).
+3. **GitHub plan.** Free, Team or Enterprise Cloud. Private and internal repos need GitHub Secret Protection, a paid add-on on Team and Enterprise Cloud. Check GitHub's own pricing page for the current cost. Do not quote a price.
+4. **Copilot.** Do you have GitHub Copilot? AI-powered detection and Copilot pattern generation need it.
+5. **The repo or organization name**, and any existing `.github/secret_scanning.yml` or custom pattern files (optional).
+6. **Your goal:** turn it on, block pushes, add a custom pattern, or clean up alerts.
+
 ## How Secret Scanning Works
 
 Secret scanning automatically detects exposed credentials across:
@@ -140,7 +162,7 @@ git push
 2. Select a bypass reason:
    - **It's used in tests** — alert created and auto-closed
    - **It's a false positive** — alert created and auto-closed
-   - **I'll fix it later** — open alert created
+   - **I'll fix it later** — open alert created. Warning: a real credential stays exposed until it is rotated. Pushing it does not make it safe. Rotate it the same day.
 3. Click **Allow me to push this secret**
 4. Re-push within 3 hours
 
@@ -202,7 +224,7 @@ Use Copilot secret scanning to generate regex from a text description of the sec
 1. **Rotate the credential immediately** — this is the critical action
 2. Review the alert for context (location, commit, author)
 3. Check validity status: `active` (urgent), `inactive` (lower priority), `unknown`
-4. Remove from Git history if needed (time-intensive, often unnecessary after rotation)
+4. Remove from Git history if needed (time-intensive, often unnecessary after rotation). Removing a secret from history does not protect you. Anyone who cloned the repo, and any fork, may still have it. Only rotation does.
 
 ### Dismissing Alerts
 
@@ -229,6 +251,24 @@ For scanning code changes for secrets inside an AI coding agent before committin
 See: [Advanced Security Plugin — Secret Scanning Skill](https://github.com/github/copilot-plugins/blob/main/plugins/advanced-security/skills/secret-scanning/SKILL.md)
 
 > Announced in [Secret scanning in AI coding agents via the GitHub MCP Server](https://github.blog/changelog/2026-03-17-secret-scanning-in-ai-coding-agents-via-the-github-mcp-server/) (March 2026)
+
+## Output Format
+
+Deliver a **Secret Protection Plan** in this order.
+
+1. **Your setup.** The answers to the inputs above, with `MISSING` where unknown. State what the plan assumes.
+2. **What is free and what is paid for you.** For your repo type and plan, say what needs GitHub Secret Protection or Copilot. Say "check GitHub's current pricing" instead of quoting a price.
+3. **Settings to turn on.** Numbered steps with the exact menu path, in order. Mark each `Do now`, `Optional` or `Needs an org owner`. Add one line each on what it does.
+4. **Exclusions and custom patterns** (only if asked): the `secret_scanning.yml` file, or the custom pattern, with a test string and the dry run step.
+5. **If a push is blocked:** the steps to take for your case (remove it, bypass with a reason, or request bypass).
+6. **If an alert appears:** the response order. Rotate first, check the validity status, review where it was used, then dismiss with a reason or remove it from history.
+7. **Dated rotation plan.** A table. Leave the owner and date blank for the user to fill in. Do not invent names or dates.
+
+   | Secret or alert | Priority | Owner | Rotate by | Done? |
+   |-----------------|----------|-------|-----------|-------|
+
+8. **Check it worked.** Tell the user to open Settings, then Advanced Security, and confirm each setting shows as enabled. Never test with a real credential.
+9. **Next steps.** The three actions to do this week.
 
 ## Reference Files
 

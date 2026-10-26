@@ -1,6 +1,6 @@
 new_slug: store-security-checkup
 name: "Store security checkup"
-summary: "Describe your admin team and apps. Get a ranked security fix list, a score out of 100 and a quarterly routine."
+summary: "Run a store security checkup: share your admin team and apps, get a score out of 100, ranked fixes and a quarterly routine to repeat."
 job: protect-your-store
 thinking: medium
 thinking_why: "It weighs many small facts about people and apps, then ranks the fixes. A mid-size model does this well."
@@ -17,6 +17,10 @@ when:
   - You run a store with up to 20 people in admin and have never reviewed who can do what.
   - Someone just left the team or an agency just finished a project, and you want to be sure their access is gone.
   - You installed a lot of apps over the years and want to know which ones to remove.
+not_for:
+  - "Your store was already breached: contact your platform's support and a qualified security professional first."
+  - "You want a deeper review of logins only: use the Sign-in security checker."
+  - "You need a team sheet on spotting fake emails: use the Staff phishing rules briefer."
 
 you_give:
   - Your platform (Shopify or another hosted platform, or a self-hosted store)
@@ -36,6 +40,26 @@ how_to_use:
   - Say who works on your code and where backups live, if you know.
   - Do the "today" fixes straight away, then book the "this month" and "this quarter" ones.
   - Run it again in three months and compare the score.
+output_sample:
+  input:
+    - Your platform (Shopify, other hosted, or self-hosted)
+    - Each person with admin access, their role, and staff or contractor
+    - Your installed apps with their permissions
+    - Whether a developer edits your code (optional)
+    - Where your backups live (optional)
+  output:
+    - name: PLATFORM SPLIT
+      contains: What your platform secures and what you must secure yourself.
+    - name: CHECKS
+      contains: Points earned for each of the 8 checks, with what was found.
+    - name: SCORE
+      contains: Your points added up on the checks that apply, scaled to 100.
+    - name: DO TODAY, DO THIS MONTH, DO THIS QUARTER
+      contains: Fixes ranked by speed, each tied to a check, with minutes for the today list.
+    - name: QUARTERLY ROUTINE
+      contains: A short list of 5 to 8 lines to repeat every three months.
+    - name: CHECKS NOT RUN
+      contains: Any check skipped for missing information, and what is needed to run it.
 
 how_it_works:
   - title: Splits the job

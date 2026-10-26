@@ -1,6 +1,6 @@
 new_slug: offer-profit-per-session-checker
 name: "Offer profit-per-session checker"
-summary: "Paste offer variants, costs and sessions. Get profit per visitor, a winner and a trust score."
+summary: "Check your offer profit per session. Give it variants, costs and sessions. You get profit per visitor, a winner and a trust score out of 100."
 job: make-offer
 thinking: high
 thinking_why: "It builds cost tables and checks many numbers against each other, so a stronger model makes fewer sum errors."
@@ -17,6 +17,10 @@ when:
   - You tested two or more offers and need to know which one actually earns more per visitor.
   - You added a bigger pack or a gift and revenue went up, but you are not sure profit did.
   - You want to check an offer before spending more on ads for it.
+not_for:
+  - You run one offer and have no test to compare. Work out your own profit per order in a sheet first.
+  - You have no unit costs yet. Gather product cost, shipping and fees first, or the check can only show revenue.
+  - You only want to know if a discount pays off. Use a discount impact checker, or ask a person who knows your margins.
 
 you_give:
   - Each offer variant (tiers, price, gifts and discount)
@@ -37,6 +41,28 @@ how_to_use:
   - Paste sessions and orders for each variant, and note the dates and traffic source.
   - Read the table first, then the flags, then the trust score.
   - Check 90-day repeat revenue before you roll out the winner.
+output_sample:
+  input:
+    - Each offer variant with price, gifts and discount
+    - "Cost per unit and per order: product, shipping, handling, fees"
+    - Sessions and orders for each variant
+    - Your target CAC or MER (optional)
+    - Notes on dates, traffic and ads for each variant (optional)
+  output:
+    - name: Variant table
+      contains: Price, units, total cost, margin, break-even ROAS and break-even CPA for each variant, plus sessions, orders, conversion, AOV and profit per session.
+    - name: Flags
+      contains: Offers that raise order value but lower profit per session, offers that use a discount, and the order value times conversion check.
+    - name: Winner
+      contains: The variant with the highest profit per session, with a note to confirm it with 90-day repeat revenue.
+    - name: Next test
+      contains: One test to run next.
+    - name: Score
+      contains: A trust score out of 100 with the sum shown and what it measures.
+    - name: Not run
+      contains: Checks it could not run and what it needs to run them.
+    - name: Missing
+      contains: Anything you did not give, such as costs, sessions, dates or ad notes.
 
 how_it_works:
   - title: Builds the cost table

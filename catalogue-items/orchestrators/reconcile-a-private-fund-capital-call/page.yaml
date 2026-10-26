@@ -1,44 +1,80 @@
 new_slug: reconcile-a-private-fund-capital-call
 name: Reconcile a private fund capital call
 headline: Reconcile a private fund capital call
-summary: Carry the actual callable commitment ledger into one eligible LP call allocation.
+summary: Check how much a fund investor can still be called, then split an approved capital call and show any shortfall. Get a balance check and call allocation.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A commitment roll-forward, allocated call and unresolved shortfall. Share lPA and side letters, original and recall calls, restoration eligibility, commitment changes, approved call budget, excused investors and current eligible denominator.
+subhead: Give it the fund agreement, call notices and commitment records for one investor. It works out what that investor can still be called to pay, then splits the approved call by eligible commitments. You get a commitment roll-forward, the allocated call and any shortfall.
 explain: |-
-  A commitment roll-forward, allocated call and unresolved shortfall.
+  An investor in a private fund promises a total amount, the commitment, and the fund calls it in pieces. The callable balance moves over time. Past calls reduce it, some distributions can be called back and add to it, and approved reductions take it down. It is easy to get wrong when recall calls and original calls sit in the same list.
 
-  Private fund calls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 builds that balance for one investor from the signed commitment, with each change tied to a dated notice. Step 2 takes the approved call budget and splits it by each investor's share of eligible commitments, then caps the result at what the investor can still be called. If the split is more than the cap, the gap shows as a shortfall. It is not moved to other investors.
+
+  It keeps four things apart: fund value (NAV), commitment, recallable capital and the call itself. It checks figures you give it. It does not issue a notice, ask anyone for money or read the fund agreement for you.
 when:
-  - You need a commitment roll-forward, allocated call and unresolved shortfall.
-  - You work on private fund calls and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A call is due and you need to know whether one investor still has enough left to pay it.
+  - The fund recalled money and you are not sure the recall was counted against the commitment twice.
+  - Commitments changed after a new investor joined or an investor was excused, and the shares of the call need redoing.
+  - An investor or auditor asks how the callable balance was worked out.
+not_for:
+  - "You want to check an investor statement against fund value: use the Investor statement NAV checker."
+  - "You are working out how a distribution splits between investors and the manager: use the No-catchup fund payout checker."
+  - "You are checking management fees or fee offsets: use the Private fund fee and offset checker."
 you_give:
-  - LPA and side letters, original and recall calls, restoration eligibility, commitment changes, approved call budget, excused investors and current eligible denominator.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The limited partnership agreement and any side letters, for the rules on calls, recalls and excused investors
+  - The investor's signed commitment and any approved changes to it
+  - The original call notices and any recall notices, kept apart
+  - Distributions the agreement lets the fund call back, with dates
+  - The approved call budget, and each investor's eligible commitment for this call
+  - Reporting date, currency and scale
 you_get:
-  - A commitment roll-forward, allocated call and unresolved shortfall.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "A commitment roll-forward for the investor: commitment, calls, restored amounts, recalls and the callable balance"
+  - The investor's share of this call and the amount allocated
+  - The amount that can actually be collected, and any shortfall
+  - A list of gaps and anything the notices do not support
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the workflow pack to Claude, ChatGPT or Gemini. Use an AI that can read PDFs and spreadsheets.
+  - Attach the agreement pages, the call notices and the commitment register. Say which investor you are working on. For several investors, run it once for each.
+  - After step 1, check that original calls leave out the recall calls, and that only distributions the agreement lets the fund call back were added.
+  - After step 2, check that excused investors are left out of the eligible commitments and that the shares add up to 100%.
+  - Read the shortfall line. Do not move it to other investors unless the agreement and the manager allow it. No notice is issued and no money is requested.
 how_it_works:
   - title: Unfunded commitment checker
-    text: Reconcile the subject LP actual remaining callable balance, excluding recall calls from the original-call input and including only valid restoration.
+    text: Starts from the signed commitment. Takes off original calls and approved reductions, adds distributions the agreement lets the fund call back, and takes off later recalls. Ties each change to a dated notice. Hands step 2 the callable balance.
   - title: Capital call allocation checker
-    text: Pass the reconciled balance as subjectUnfunded and use the actual transaction-specific eligible commitments. If allocation exceeds callable balance, preserve the shortfall instead of reallocating it without approval.
+    text: Divides the investor's eligible commitment by the total eligible commitments and applies that share to the call budget. Caps it at the callable balance from step 1. Shows the allocated amount, the collectible amount and any shortfall.
 output_shape: |-
-  A commitment roll-forward, allocated call and unresolved shortfall.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  CAPITAL CALL CHECK  <investor>, <currency>, <scale>, date <date>
+
+  1 CALLABLE BALANCE  commitment <n> - original calls <n> + restored <n>
+                      - recalls <n> - approved reductions <n> = callable <n>
+  2 ALLOCATION        investor's eligible commitment <n> of total <n> = share <%>
+                      call budget <n>, allocated <n>
+                      collectible <n> (lower of allocated and callable)
+                      shortfall <n or none>
+
+  SOURCES         <each input, its source and date>
+  MISSING         <each gap and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - The fund agreement, side letters and the investor's commitment
+    - Original call notices and recall notices
+    - Distributions the fund can call back, and approved commitment changes
+    - The approved call budget and eligible commitments for this call
+  prerequisites:
+    - An AI that can read PDFs and spreadsheets
+  output:
+    - name: Commitment roll-forward
+      contains: Commitment, calls, restored amounts, recalls and the callable balance, each tied to a notice.
+    - name: Call allocation
+      contains: The investor's share of the call budget and the amount allocated.
+    - name: Collectible amount and shortfall
+      contains: The lower of the allocation and the callable balance, and any gap.
+    - name: Sources and gaps
+      contains: Each input's source, each gap and any check that could not run.
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -58,15 +94,27 @@ test:
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a roll-forward you can click into and recalculates it. In plain chat you get the same tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed agreement and side letters, not a summary
+    - A notice log with the date and amount of every call and recall
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Commitment
+    meaning: The total amount an investor has agreed to put into the fund.
+  - term: Callable balance
+    meaning: What the fund can still ask this investor to pay, after calls, restored amounts and reductions.
+  - term: Recall
+    meaning: A call for money the fund already returned to the investor, when the agreement allows it.
+  - term: Excused investor
+    meaning: An investor who is not asked to join a particular call, for a reason in the agreement.
+  - term: Side letter
+    meaning: A private agreement that changes the terms for one investor.
+  - term: NAV
+    meaning: "Net asset value: what the investor's stake in the fund is worth. It is not the same as the commitment."
+next:
+  - investor-statement-nav-checker
+  - reconcile-private-fund-fee-charges

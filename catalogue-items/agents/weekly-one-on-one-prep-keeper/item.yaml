@@ -12,16 +12,15 @@ inputs:
   - {type: plan, required: false}
 outputs:
   - {type: plan}
-  - {type: copy_draft}
   - {type: feedback_notes}
-uses: [one-on-one-meeting-planner, feedback-request-script-writer, feedback-conversation-planner, small-win-praise-planner, behaviour-and-fix-notes-writer, weekly-status-update-writer]
+uses: [one-on-one-meeting-planner, feedback-request-script-writer, small-win-praise-planner, behaviour-and-fix-notes-writer, feedback-conversation-planner, weekly-status-update-writer]
 steps:
-  - {uses: one-on-one-meeting-planner, note: "Once per person, and again when their job changes: the meeting rhythm, agenda rules and follow-up for that person."}
-  - {uses: feedback-request-script-writer, note: "Once per person, then every quarter: your go-to question for asking them what you should change, and how to handle silence."}
-  - {uses: small-win-praise-planner, note: "Every week, for each person: the specific win to praise and when, from last week's notes."}
-  - {uses: behaviour-and-fix-notes-writer, note: "Only when the same problem showed up in two weeks of notes: one watchable behaviour and its likely reason."}
-  - {uses: feedback-conversation-planner, note: "Only when a behaviour note exists for this week: what to praise, what to say and how to say it."}
-  - {uses: weekly-status-update-writer, note: "Only when you ask for one: a one-page update for your own manager from the week's notes."}
+  - {uses: one-on-one-meeting-planner, note: "Once per person, and again when their job changes: the meeting rhythm, agenda rules and follow-up for that person. Hands on: the plan, which sets how often step 2's question is asked."}
+  - {uses: feedback-request-script-writer, note: "Once per person, then every quarter: your go-to question for asking them what you should change, and how to handle silence. Uses what you tell it about you and this person, not step 1's plan."}
+  - {uses: small-win-praise-planner, note: "Every week, for each person: the specific win to praise and when, from last week's notes. Uses last week's notes you give, not step 2's question."}
+  - {uses: behaviour-and-fix-notes-writer, note: "Only when the same problem showed up in two weeks of notes: one watchable behaviour and its likely reason. Uses the repeat problem from the notes you give. Hands on: the behaviour note, for step 5."}
+  - {uses: feedback-conversation-planner, note: "Only when a behaviour note exists for this week: what to praise, what to say and how to say it, built on step 4's note."}
+  - {uses: weekly-status-update-writer, note: "Only when you ask for one: a one-page update for your own manager from the week's notes. Uses the week's notes you give, not the people plans, which stay private."}
 schedule: "Every Monday morning, before the first one-on-one of the week"
 asks_before: [sending any message to the person or anyone else, changing their goals, pay, title or role, sharing their notes with anyone, recording anything in an HR system, cancelling or moving a meeting]
 minds: [andy-grove, kim-scott]

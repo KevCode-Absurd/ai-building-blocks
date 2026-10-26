@@ -9,6 +9,7 @@ job: video
 level: beginner
 inputs:
   - {type: script, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: script}
 uses: [anti-ai-slop-copy-editor]

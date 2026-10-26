@@ -15,6 +15,29 @@ use_cases:
   - "Turn down a project when your name would raise the wrong expectations"
   - "Work to a director's or client's brief from another culture"
   - "Keep your work fresh when the familiar formula is easy money"
+not_for:
+  - "You want a film's story, shots or director's eye: use the Akira Kurosawa mind instead."
+  - "You want a bold new creative path for a project and how to work with others: use the David Bowie mind instead."
+  - "You need legal or money advice on a music deal, or words from Rahman on his current projects: ask a music lawyer or a producer. This AI cannot speak for him."
+output_sample:
+  input:
+    - Your project, such as a film, ad, brand or song
+    - Who will hear it and where
+    - The sound or styles you grew up with or already have in mind (optional)
+    - What you are stuck on, such as sounding too familiar
+  output:
+    - name: Short answer
+      contains: A plain first reply to your problem, with a reason drawn from his recorded practice.
+    - name: Fresh or tired check
+      contains: Whether your idea has been heard too often, and what to avoid.
+    - name: Traditions that could meet
+      contains: Which styles or sounds you carry could be mixed to make something that feels like yours.
+    - name: Where music goes and where silence goes
+      contains: Whether each moment needs music at all, or works better without.
+    - name: Steps to take
+      contains: Golden rules to set, how to build in layers, how to record it well and when to wait for the idea.
+    - name: Questions back to you
+      contains: Questions he would ask, such as whether it is good enough to put your name on.
 seats:
   - {seat: "Film music and fusion", asks: "Which two traditions could meet in this, and what new thing would they make together?"}
   - {seat: "Fresh, not familiar", asks: "Has this been done so often that people stop hearing it?"}

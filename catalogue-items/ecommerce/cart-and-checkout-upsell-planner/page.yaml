@@ -1,22 +1,30 @@
 new_slug: cart-and-checkout-upsell-planner
 name: "Cart and checkout upsell planner"
-summary: "Give it products and margins. Get cart and checkout offers, ranked by profit added per order."
+summary: "Rank cart and checkout upsells by profit added per order. Get one offer per slot, a cart layout and exit offers by stage."
 job: make-offer
 thinking: medium
 thinking_why: "It ranks options with one formula and some layout rules, so a mid-size model is enough."
 
 headline: "Cart and checkout upsell planner"
-subhead: Give it your products with price and margin, and what is usually bought together. It ranks every upsell and cross-sell by the profit it adds per order, gives each slot one offer in the cart, at checkout and after exit, and sets up how to measure it.
+subhead: Give it your products with price and margin, and what people often buy together. It ranks each upsell and cross-sell by the profit it adds per order. You get one offer for the cart, one for checkout, offers for people who leave, and a plan to measure it.
 
 explain: |
-  Most stores add upsells by feel and judge them by AOV. AOV can rise while profit falls. A cheap add-on with a high take rate can add less profit than a pricier one with a lower take rate, and only the maths shows which. Each place in the buying path also behaves differently. In the cart the buyer is still deciding. At checkout they have committed, so a new product gets in the way.
+  Most stores add upsells by feel and judge them by average order value (AOV). AOV can rise while profit falls. A cheap add-on that many people take can add less profit than a pricier one fewer people take. Only the maths shows which. Each step of the buying path also behaves differently. In the cart the buyer is still deciding. At checkout they have committed, so a new product gets in the way.
 
-  This skill scores each candidate with one formula: take rate x add-on price x gross margin. It gives each slot one offer, lays out the cart from top to bottom, and picks one low-friction item for checkout. It also sets offers for people who leave at each stage, and a plan to measure take rate, revenue per visit and margin lift. The post-purchase step is handed to the upsell and downsell sequencer.
+  This cart upsell planner scores each option with one formula: take rate x add-on price x gross margin. That gives the profit it adds per order. Then it gives each slot one offer, lays out the cart from top to bottom and picks one low-friction add-on for checkout. It also sets offers for people who leave at each stage, and a plan to measure take rate, revenue per visit and margin lift.
+
+  Take rates in the cart come from your own store. If you have none, the plan uses labelled example rates and says the order may change once you have real ones. The step after payment goes to the Upsell and downsell sequencer.
 
 when:
   - You want to add upsells to your cart or checkout and want to pick the ones that add the most profit.
   - Your AOV rose after a change but your profit did not, and you want to see why.
   - You want a clear offer for people who leave your site at the browsing, cart or checkout stage.
+
+not_for:
+  - "You want offers shown after payment. Use the Upsell and downsell sequencer."
+  - "You want to set free-shipping or bundle thresholds. Use the Order threshold planner."
+  - "You sell one product with no add-ons and no products bought together. Start with the Bundle and quantity-break builder."
+  - "You want to check whether a live offer made money. Use the Offer profit-per-session checker."
 
 you_give:
   - Products with price and gross margin, and which ones are bought together
@@ -29,11 +37,11 @@ you_get:
   - A plan to measure take rate, revenue per visit and gross margin lift
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your products with price and margin, and the pairs customers buy together.
-  - Say what platform and apps you use for the cart and checkout.
-  - Read the ranking first, then the slot plan. Pick one change and run it as a test with a holdout.
-  - Pass the post-purchase slot to the upsell and downsell sequencer.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code or web access.
+  - Paste your products with price and margin, and the pairs customers buy together. Add real take rates if you have them.
+  - Say what platform and apps run your cart and checkout. Some checkouts cannot show a second step.
+  - Read the ranking first. Check that the highest profit per order is at the top, then read the slot plan.
+  - Pick one change and run it as a test with a holdout group. Send the step after payment to the Upsell and downsell sequencer.
 
 how_it_works:
   - title: Score every candidate
@@ -71,6 +79,28 @@ output_shape: |
   MEASURE  take rate, revenue per visit, gross margin lift per slot
   MISSING: <margins | pairs | platform | take rates>
 
+output_sample:
+  input:
+    - Your products with price and gross margin
+    - Which products are bought together, from your order history
+    - Your cart and checkout platform and apps
+    - Orders per month, current AOV and take rates you already have (optional)
+  prerequisites:
+    - An order export from your store, if you want the bought-together pairs read for you (optional)
+  output:
+    - name: Ranking
+      contains: Every upsell and cross-sell with take rate x price x margin shown, sorted from most to least profit added per order.
+    - name: Slot plan
+      contains: One offer for the cart, one low-friction add-on for checkout, and the step after payment handed to the Upsell and downsell sequencer.
+    - name: Cart layout
+      contains: The cart from top to bottom, such as progress bar, up to two one-click add-ons, subscribe upgrade and a sticky checkout button.
+    - name: Exit offers
+      contains: One offer each for people who leave while browsing, at the cart and at checkout, plus a holdout share.
+    - name: Measurement plan
+      contains: Take rate, revenue per visit and margin lift for each slot, one change at a time.
+    - name: Missing list
+      contains: Margins, pairs, platform or take rates you did not give, so no number is guessed.
+
 tweaks:
   - what: Take rates
     how: Paste your real take rates if you have them. Without them, the skill uses a labelled range and ranks on that.
@@ -102,15 +132,17 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Its checkout and cart settings, and its order export, give you the pairs and take rates."}
-    - {name: "Aftersell", why: "A post-purchase and cart offer app for Shopify that can charge the stored card in one click."}
-    - {name: "ReConvert", why: "Another Shopify app for post-purchase and thank-you page offers."}
+    - {name: "Shopify", why: "Its order export shows which items are bought together. Cart and checkout options depend on your plan."}
+    - {name: "Aftersell", why: "A paid Shopify app for cart and post-purchase offers. It can charge the stored card in one click. Check its current price."}
+    - {name: "ReConvert", why: "Another paid Shopify app for post-purchase and thank-you page offers. Check its current price."}
   inputs:
     - "An order export showing which items are bought together"
     - "Your current take rates by slot"
     - "Refund and chargeback rates, so you can watch for annoyed buyers"
 
 terms:
+  - term: AOV
+    meaning: Average order value. The average amount a customer spends in one order.
   - term: Take rate
     meaning: The share of buyers who say yes to an offer.
   - term: Upsell and cross-sell

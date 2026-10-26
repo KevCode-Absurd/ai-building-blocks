@@ -1,22 +1,55 @@
 new_slug: enterprise-transition-architect
 name: Plan enterprise architecture changes
-summary: Link business goals, systems and owners to a phased change plan. State what each step needs to prove.
+summary: "Plan enterprise architecture changes: link goals, systems and owners to a phased roadmap, with clear proof needed at each step."
 job: plan-strategy
 headline: Plan enterprise architecture changes
-subhead: Bring goals and a system list. Map what each one serves, then plan changes with owners and exit checks.
+subhead: Bring your goals and a list of your systems. Your AI maps what each system serves, then builds a phased change plan. Each step has an owner and a check that shows it is done.
 explain: Bring goals and a system list. Map what each one serves, then plan changes with owners and exit checks.
 when:
-  - You want to plan enterprise architecture changes.
+  - You must plan enterprise architecture changes across many systems and teams.
+  - You need to see which systems serve which capabilities, and where they overlap.
+  - A leader asks how you get from today's setup to the target, step by step.
+  - You need to say who decides what, and who settles conflicts.
+not_for:
+  - "You need the design of one system or its parts: ask a software architect, or use a solution design step instead of this plan."
+  - "You need an org chart, team structure or pay design: work with your HR lead or an organization design specialist."
+  - "You need to coordinate delivery across many projects: use a program manager and a delivery plan once this roadmap is approved."
 you_give:
-  - Enterprise goals, scope, time horizon and accountable stakeholders.
-  - Current capability/application/data portfolio, constraints, costs and evidence gaps.
+  - Your business goals, scope and time horizon.
+  - The people who own decisions and sign off.
+  - Your list of capabilities, applications and data, with costs and limits.
+  - Known gaps in your evidence (optional).
 you_get:
-  - An evidence-labeled capability and application portfolio view.
-  - A current/target/transition roadmap with ownership, conflict escalation and exit evidence.
+  - A portfolio view that links capabilities to applications, owners and risks.
+  - A current, target and transition plan with each claim marked as fact, assumption, decision or open question.
+  - A record of who decides what, with a path for conflicts.
+  - A phased roadmap with dependencies, owners and the proof each step needs.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Add the whole skill folder to your AI tool, including the references and templates. The steps rely on those files.
+  - If your tool cannot take a folder, paste the main instructions and each reference and template file into the chat.
+  - Paste your goals, scope, time horizon and system list. Name who decides.
+  - Ask your AI to follow the skill and plan your enterprise architecture changes.
+  - Check the claims marked as assumptions or open questions. Fill the gaps with real facts.
+  - Hand the approved roadmap to your delivery team for a detailed plan.
+output_sample:
+  input:
+    - Your business goals, scope and time horizon
+    - The people who own decisions and sign off
+    - Your list of capabilities, applications and data, with costs and known limits (optional)
+    - Known gaps in your evidence (optional)
+  prerequisites:
+    - The full skill folder, with its reference and template files, added to your AI tool
+  output:
+    - name: Enterprise context brief
+      contains: The goal, scope, time horizon, stakeholders, limits and evidence gaps, each marked as fact, assumption, decision or open question.
+    - name: Capability and application portfolio view
+      contains: Capabilities and value streams linked to applications, information, owners, costs, risks, duplication and lifecycle status.
+    - name: Current, target and transition assessment
+      contains: The current state from evidence, a target state from stated principles, and what makes a direct jump unsafe.
+    - name: Operating model and decision rights record
+      contains: Central, federated or hybrid options compared, with named roles for decisions, exceptions and conflict escalation.
+    - name: Transition architecture roadmap
+      contains: Phased steps with dependencies, investment assumptions, accountable owners and the evidence that shows each step is done.
 how_it_works:
   - title: Map outcome to portfolio
     text: Connect value-stream stages and capabilities to applications, authoritative information, dependencies and owners.

@@ -16,6 +16,31 @@ use_cases:
   - "Spot the 'so what?' headlines in a batch of ads, emails or posts"
   - "Plan a simple split test of two headlines and decide how to count the winner"
   - "Make a curiosity headline that stays tied to what the product does"
+not_for:
+  - "You want a big brand idea or a witty campaign line: hire Bill Bernbach instead."
+  - "You want the product facts and a market-first brand image behind an ad: hire David Ogilvy instead."
+  - "You need legal, medical or pricing-policy copy checked: ask a compliance reviewer, not this AI."
+output_sample:
+  input:
+    - Your current headline, ad, email or page text
+    - What you sell and who you want to reach
+    - Any proof you have, such as reviews or results
+    - What your last version pulled, if you tracked it (optional)
+  output:
+    - name: Verdict on your headline
+      contains: Who the line picks out, what reward it promises, and whether a busy reader would say so what.
+    - name: Ten new headlines
+      contains: Five that promise a gain and five that warn of a loss, with numbers or times where true.
+    - name: Opening paragraph
+      contains: A first paragraph that pays off the headline at once, with warm-up lines cut.
+    - name: Subhead ladder
+      contains: A run of subheads that carries a skimmer down the page in order.
+    - name: Proof and ask check
+      contains: Which claims need proof, and one clear next step for the reader.
+    - name: Keyed test plan
+      contains: Which versions to run side by side, how to code replies and how to count a winner.
+    - name: So What pile
+      contains: Weak lines from your copy, each with a short note on why it fails.
 seats:
   - {seat: "Copy that pulls replies", asks: "Who exactly does this headline pick out, and what reward does it promise them for reading on?"}
   - {seat: "Headlines and openings", asks: "Is it harder to pass this up than to read it? If not, what would change that?"}

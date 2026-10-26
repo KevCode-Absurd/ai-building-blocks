@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches kinds of proof to specific doubts.
 new_slug: social-proof-placer
 name: Social proof placer
-summary: Describe your buyer's doubts. Get which testimonials, numbers or case
-  studies to use and where to place them.
+summary: Match your testimonials, numbers and case studies to your buyer's doubts. Get a social proof plan that shows what to use and where to place it.
 job: write-landing-page
 headline: Social proof placer
-subhead: A plan for which proof to show and where, matched to the doubts your
-  buyer has. You describe what holds buyers back, and the skill picks the right
-  testimonial, number, logo or case study for each doubt.
+subhead: A plan for which proof to show and where, matched to the doubts your buyer has. You describe what holds buyers back, and the skill picks the right testimonial, number, logo or case study for each doubt.
 explain: |
   A plan for which proof to show and where, matched to the doubts your buyer has. You describe what holds buyers back, and the skill picks the right testimonial, number, logo or case study for each doubt.
 
@@ -18,6 +15,10 @@ when:
   - Buyers hesitate at price and you need proof for that moment.
   - You have logos, numbers and quotes and no plan for using them.
   - You want to know which case study fits which visitor.
+not_for:
+  - "You have no real proof yet: collect customer quotes, results or reviews first, then come back."
+  - "You want to build brand awareness, not remove doubt at a buying step: talk to a marketer or write a brand story instead."
+  - "You need the full page copy written: use your AI with the page text, or ask a copywriter. This plan only covers proof."
 you_give:
   - Who your buyer is
   - Their main doubts
@@ -29,7 +30,26 @@ you_get:
   - Placement advice for the page
   - Flags on weak or unverifiable claims
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe your buyer and how well they know you. Say what you want them to do.
+  - List the doubts that hold them back, such as price, fit or trust.
+  - "Paste the proof you have: quotes, numbers, logos and case studies. Only real proof."
+  - Read the plan. Check every flag on weak claims before you change your page.
+  - Move or add proof on your page, placing each piece next to the doubt it answers.
+output_sample:
+  input:
+    - Who your buyer is and how much they trust you now
+    - The doubts that hold them back
+    - "The proof you have: quotes, numbers, logos, case studies"
+    - The page, email or deck you want to improve (optional)
+  output:
+    - name: Trust gap
+      contains: The main thing buyers doubt, such as results, honesty, fit or whether others use you.
+    - name: Proof type for each doubt
+      contains: "Which kind of proof answers each doubt: peer story, expert source, usage numbers, certificate or case study."
+    - name: Placement advice
+      contains: Where on the page each piece of proof goes, right before the point where the doubt peaks.
+    - name: Weak proof flags
+      contains: Claims that are vague, cherry-picked or cannot be checked, with a note to fix or drop them.
+    - name: Quality check
+      contains: A short check that the proof is real, fits the buyer and does not feel forced.

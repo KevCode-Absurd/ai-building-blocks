@@ -16,6 +16,29 @@ use_cases:
   - "Write a clear guide for readers with no special training"
   - "Use one trusted friend as a sounding board for a new idea"
   - "Weigh a decision that is useful now but may cost you later"
+not_for:
+  - "You need medical, legal or personal money advice, or current science facts: ask a doctor, lawyer, financial adviser or a specialist in that field instead."
+  - "You want to check a claim by watching and measuring what really happens: use Galileo Galilei."
+  - "You want to see a claim tested against evidence and scale, with a public-teaching tone: use Carl Sagan."
+output_sample:
+  input:
+    - Your plan, claim or idea, written in one paragraph
+    - Any numbers you already have (optional)
+    - The decision you must make and when (optional)
+    - Words in your plan that your team may read in different ways (optional)
+  output:
+    - name: Picture
+      contains: A simple scene of your situation, told from the point of view of someone inside it.
+    - name: Assumptions
+      contains: The things your plan takes for granted that you may not have noticed.
+    - name: Principles
+      contains: The one or two ideas the plan stands on, with extra steps cut.
+    - name: Test to run
+      contains: A check that could prove you wrong, and how you would know within a set time.
+    - name: Logic versus bets
+      contains: Which parts of your plan are certain by logic and which are guesses about the world.
+    - name: First thing to measure
+      contains: The one measure to start with, plus a one-line note on any guess outside what he knew.
 seats:
   - {seat: "Thought experiments", asks: "If you pictured yourself riding alongside this problem, what would you actually see?"}
   - {seat: "Test the definition", asks: "How would we check, in a real case, whether this word applies?"}

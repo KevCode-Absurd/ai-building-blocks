@@ -1,6 +1,6 @@
 new_slug: seven-powers-scorecard-builder
 name: "Seven powers scorecard builder"
-summary: "Paste your business facts. Get seven powers scored on benefit and barrier, sorted into held, buildable or out of reach."
+summary: "Check your business against all seven powers. Paste your facts and get each scored on benefit and barrier, then sorted into held, buildable or out of reach."
 job: plan-strategy
 thinking: high
 thinking_why: "It holds seven separate tests against one set of facts and has to resist giving credit for features that only look like power. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You believe you have a moat but can only name a list of strengths.
   - You named one advantage and want to check the other six before you put money behind it.
   - A backer, partner or buyer asked what protects your margin and you had no clear answer.
+not_for:
+  - "You have a new business with no sales yet and want a first read on one edge: start with the Business power tester, then come back here."
+  - "You want to know if your edge will last ten years: use the Ten-year durability checker once you have your scores."
+  - "You want advice on which shares to buy or sell: ask a licensed financial adviser. This skill gives no investment advice."
 
 you_give:
   - What the business sells, to whom, and the price and cost per sale
@@ -34,6 +38,24 @@ how_to_use:
   - Add real numbers where you have them, such as prices, unit costs, churn and repeat rate.
   - Read the held and buildable lists first. Then go and find each fact it marked as missing.
   - Bring the result to "Ten-year durability checker" and "Power build-order planner".
+output_sample:
+  input:
+    - What your business sells, to whom, and the price and cost per sale
+    - The result of a first power test from the Business power tester (optional)
+    - Numbers such as margin, repeat rate or churn (optional)
+    - Your main rivals and what they do (optional)
+    - "Your stage: new market, fast growth or settled (optional)"
+  output:
+    - name: The business in three lines
+      contains: Who pays, what for, and what is left after cost.
+    - name: Scorecard
+      contains: Seven rows, one per power, each with benefit, barrier, the fact behind it, a score from 0 to 3 and a reason.
+    - name: Held, buildable and out of reach
+      contains: Your powers sorted into three lists, with a first step for each buildable one and a reason for each out of reach.
+    - name: MISSING
+      contains: The facts you still need, listed in the order they would change a score most.
+    - name: CHECKS MISSED
+      contains: One line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: Writes the two tests for each power

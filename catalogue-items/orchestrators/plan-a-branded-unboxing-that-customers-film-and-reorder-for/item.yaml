@@ -16,9 +16,9 @@ outputs:
 uses: [website-brand-brain-builder, brand-ritual-designer, sensory-unboxing-planner, unboxing-insert-and-gift-planner]
 steps:
   - {uses: website-brand-brain-builder, note: "Reads your store and reviews into a brand file the later steps work from."}
-  - {uses: brand-ritual-designer, note: "Designs one customer ritual around the product. Reads the brand file from the step before."}
-  - {uses: sensory-unboxing-planner, note: "Matches weight, colour, sound and smell to the ritual. Reads the brand file from the first step."}
-  - {uses: unboxing-insert-and-gift-planner, note: "Chooses the inserts and gifts that carry the plan, within your margin. Reads the brand file from the first step."}
+  - {uses: brand-ritual-designer, note: "Designs one customer ritual around the product. Reads the brand file from the step before and hands the ritual to step 3."}
+  - {uses: sensory-unboxing-planner, note: "Reads the ritual from step 2 and the brand file from step 1. Matches weight, colour, sound and smell to the ritual and hands the unboxing plan to step 4."}
+  - {uses: unboxing-insert-and-gift-planner, note: "Reads the unboxing plan from step 3 and the brand file from step 1, with your order value and margin. Chooses the inserts and gifts that carry the plan, within your margin."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/plan-a-branded-unboxing-that-customers-film-and-reorder-for/skeleton.yaml

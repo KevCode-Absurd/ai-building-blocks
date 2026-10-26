@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scans cells by rule, then judges what is wrong.
 new_slug: spreadsheet-formula-auditor
 name: Spreadsheet formula auditor
-summary: Give it a spreadsheet. Get formula errors, broken links and model
-  checks such as balance sheet tie-out listed.
+summary: Find formula errors, broken links and balance sheet gaps in your spreadsheet before anyone else does. Pick a range, a sheet or the whole model.
 job: work-with-files
 headline: Spreadsheet formula auditor
-subhead: "A list of formula errors, broken links and model problems found in
-  your spreadsheet before someone else finds them. You choose the depth: a
-  selected range, a sheet, or the whole model."
+subhead: "A list of formula errors, broken links and model problems found in your spreadsheet before someone else finds them. You choose the depth: a selected range, a sheet, or the whole model."
 explain: |
   A list of formula errors, broken links and model problems found in your spreadsheet before someone else finds them. You choose the depth: a selected range, a sheet, or the whole model.
 
@@ -18,6 +15,10 @@ when:
   - You are about to send a model to a client or investment committee.
   - Numbers in a sheet look off and you want a second check.
   - You use Indian fiscal years or crore units in your reports.
+not_for:
+  - "You have one formula that will not work: ask your AI to fix that single formula in chat."
+  - "Your file has no formulas, only typed numbers: use a quick read-through by a person, or ask your AI to summarise it."
+  - "You want the model changed for you: this skill reports first and only fixes when you ask."
 you_give:
   - The workbook to audit
   - "The scope: selection, sheet or whole model"
@@ -28,7 +29,29 @@ you_get:
   - Balance sheet and cash tie-out results
   - Unit and fiscal period warnings
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool and paste the skill, or upload the skill folder. It needs an AI that can read spreadsheet files.
+  - Upload your workbook.
+  - "Say the scope: selection, sheet or whole model. Add your currency and fiscal year if you have them."
+  - Read the findings table. Start with the critical rows, and check the balance sheet first.
+  - Tell your AI which fixes to make. It will not change anything until you ask.
+output_sample:
+  input:
+    - Your spreadsheet file
+    - "The scope: selection, sheet or whole model"
+    - Your currency and fiscal year (optional)
+  prerequisites:
+    - An AI that can open spreadsheet files
+    - Indian market rules from the india-market-conventions skill, if you want the April to March year and lakh and crore checks
+  output:
+    - name: Summary line
+      contains: "For model scope only: the model type, an overall rating, and the count of critical, warning and info findings."
+    - name: Findings table
+      contains: One row per issue with sheet, cell, severity, category, the problem and a suggested fix.
+    - name: Formula checks
+      contains: Errors, hardcoded numbers in formulas, pattern breaks, short ranges, pasted-over values, circular and broken links.
+    - name: Balance sheet and cash checks
+      contains: Whether assets equal liabilities plus equity and cash ties out, with the gap shown per period.
+    - name: Model-type checks
+      contains: Common mistakes for DCF, LBO, merger and three-statement models, plus growth, margin and edge-case flags.
+    - name: Unit and fiscal warnings
+      contains: Flags for mixed units, wrong fiscal period labels and lakh or crore formats that show a 100 times error.

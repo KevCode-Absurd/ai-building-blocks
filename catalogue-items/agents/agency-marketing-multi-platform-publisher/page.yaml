@@ -1,0 +1,133 @@
+name: Multi-Platform Publisher agent
+summary: Turn one article into drafts for Zhihu, Xiaohongshu, Bilibili, WeChat and more, with a fit check and a draft-only publishing plan.
+headline: Multi-Platform Publisher agent
+subhead: Give it one article or topic and the Chinese platforms you want. It checks where the piece fits, rewrites it for each place and checks title and length limits. You get one draft per platform and a draft-only publishing plan.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Posting the same text on every platform backfires. Zhihu readers want depth, Xiaohongshu wants a short, picture-led note, and Bilibili wants a clear cover and title. This multi-platform publisher agent is for people who write once and publish on several Chinese platforms, such as Zhihu, Xiaohongshu, CSDN, Bilibili, WeChat Official Accounts and Juejin.
+
+  It first asks where the piece fits and drops the poor matches. A deep technical tutorial suits Zhihu and CSDN, not Xiaohongshu. Then it rewrites the article for each platform you keep, with the right voice, title length, cover and call to action. It lists each platform's limits so you can check them. It ends with a plan to post every draft as a draft, never as a live post.
+
+  In a chat, the agent writes and plans only, and you paste each draft into the platform yourself. The original profile also describes tools that sync drafts for you, such as Wechatsync. Those need installs and your own logged-in accounts, and they are third-party tools. The agent never asks for your passwords or cookies, and it never publishes. The profile's targets, such as a 95 percent sync rate, are the author's goals, not results from AI Blocks.
+when:
+  - You wrote one article and want it on three or four Chinese platforms.
+  - You are not sure which platforms suit a technical post, a review or an opinion piece.
+  - Your posts keep getting cut or flagged because of title length or missing fields.
+  - You already use a draft sync tool and want a checked plan around it.
+not_for:
+  - You post to LinkedIn, X or Instagram. Use the Multi-platform post planner or the Cross-platform post writer.
+  - You want a deep plan for one platform. Use the Zhihu Strategist agent, the Xiaohongshu Specialist agent or the Bilibili Content Strategist agent.
+  - You need the article written first. Use the Content Creator agent.
+  - You want posts published for you without a review. This agent stops at drafts, by design.
+you_give:
+  - Your article, pasted or as a file, or a topic if you need it written first
+  - The platforms you want, or "choose for me"
+  - Whether the piece is your own work, a translation or a repost
+  - A cover image, tags and a category (optional)
+  - The tools you have installed, if you use a draft sync tool (optional)
+you_get:
+  - A fit check for each platform, with a reason for each yes or no
+  - A table of the details used: topic, platforms, original or repost, tags
+  - One draft per platform you keep, in that platform's voice
+  - A limits check on title length, body length and images, for you to confirm in each editor
+  - A draft-only publishing plan, with the steps in order and a place for each draft link
+  - A review list to complete before you press publish
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your article, the platforms you want and whether it is original, a translation or a repost. Say if you want the drafts in Chinese.
+  - Read the fit check. Drop any platform the agent marks as a poor match.
+  - Copy each draft into that platform's editor and save it as a draft. Check the title, length, cover and tags in the editor.
+  - Have a native Chinese reader check the wording and the facts. Then publish each post yourself, a few hours apart.
+  - Never paste passwords, cookies or tokens into your chat. If you use a sync tool, run it on your own computer.
+how_it_works:
+  - title: Collect the details
+    text: It lists the article, platforms, original or repost status and tags in a table and asks for anything missing.
+  - title: Check the fit
+    text: It rates each platform for your content type and drops poor matches, so you don't post where it won't work.
+  - title: Write a master draft
+    text: If you gave a topic, it writes the master article. If you gave an article, it uses yours.
+  - title: Adapt for each platform
+    text: It rewrites voice, title, length, cover note and call to action for each platform you keep.
+  - title: Check the limits
+    text: It lists each platform's known limits, such as title length, and flags any draft over them. You confirm them in the editor.
+  - title: Plan the draft-only publishing
+    text: It gives steps to save every draft without publishing, a pacing plan and a list to review before going live.
+output_shape: |-
+  DETAILS USED
+    topic or article <name> | platforms <list> | status <original, translation, repost> | tags <list> | ASSUMED: <list> | MISSING: <list>
+
+  FIT CHECK
+    <platform> | <fit: yes, needs rewrite, no> | <reason>
+
+  DRAFTS (one per platform you keep)
+    <platform> | title <text> | body <draft> | cover note <text> | tags <list> | call to action <text>
+
+  LIMITS CHECK
+    <platform> | <limit to confirm in the editor> | <draft within it: yes or no>
+
+  DRAFT-ONLY PUBLISHING PLAN
+    <step> | <platform> | <how to save as draft> | <draft link or MISSING>
+
+  REVIEW BEFORE PUBLISHING
+    <item> | <who checks>
+output_sample:
+  input:
+    - Your article, pasted or as a file, or a topic
+    - The platforms you want, or "choose for me"
+    - Whether the piece is original, a translation or a repost
+    - A cover image, tags and a category (optional)
+  prerequisites:
+    - An account on each platform you want to post to
+    - A native Chinese reader to check wording before you publish
+    - A sync tool such as Wechatsync, if you want drafts sent for you (optional)
+  output:
+    - name: Fit check
+      contains: Each platform rated for your content type, with a reason for each yes or no.
+    - name: Drafts
+      contains: One rewritten draft per platform, with title, body, cover note, tags and a call to action.
+    - name: Limits check
+      contains: The title, body and image limits to confirm in each editor, and whether the draft fits.
+    - name: Draft-only publishing plan
+      contains: Ordered steps to save each draft without publishing, with a place for each draft link.
+    - name: Review list
+      contains: The checks to finish before you publish, such as facts, wording and source credit.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Platforms
+    how: Name the two or three platforms you care most about, so the fit check and drafts stay short.
+  - what: Language
+    how: Say whether drafts should be in Chinese, English or both.
+  - what: Mode
+    how: Say "chat only" for a plan and drafts you paste yourself, or say which sync tool you use for a plan around it.
+improve:
+  - After each post, note which platform did best and what you changed in the draft. Add that to your next request.
+  - Keep your list of platform limits up to date as the editors change.
+terms:
+  - term: Draft-first
+    meaning: Saving a post as a draft so a person reads it before it goes live.
+  - term: Wechatsync
+    meaning: A free tool from another author that sends one article to many Chinese platforms as drafts. You install and run it yourself.
+  - term: Zhihu
+    meaning: A Chinese question and answer site where long, careful answers do well.
+  - term: Xiaohongshu
+    meaning: A Chinese app for short notes with pictures, also called RED.
+  - term: Original, translation, repost
+    meaning: The credit status many Chinese platforms ask you to mark. Mark it truthfully.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three read and write Chinese and can adapt one article into several drafts. A native reader should check the final text.
+    - name: Wechatsync (optional)
+      why: A third-party tool that saves drafts to many platforms. It needs an install and your own logged-in browser, so read its page and decide for yourself.
+  inputs:
+    - Your finished article with its images.
+    - A cover image sized for each platform.
+    - Your tags and the category for each platform.

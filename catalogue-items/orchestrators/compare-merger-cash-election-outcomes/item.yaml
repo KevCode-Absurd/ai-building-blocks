@@ -1,15 +1,13 @@
 slug: compare-merger-cash-election-outcomes
 name: Compare merger cash election outcomes
-summary: Compare fixed-ratio market value with the documented cash-election proration branch.
+summary: "Compare a fixed-ratio merger offer with the cash election, and see what one holder gets when cash requests exceed the cash pool."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - fixed-exchange-consideration-checker
   - cash-stock-election-checker

@@ -1,20 +1,47 @@
 new_slug: check-translation-parity-across-three-languages
 name: Check translation parity across three languages
-summary: Check RU, EN and PT-BR chapters for drift. Flag changed facts, names, terms and fixed quotes.
+summary: Check translation parity across RU, EN and PT-BR chapters. Find changed numbers, names, terms and quotes before you publish. Nothing is edited.
 job: write-and-tell-stories
 headline: Check translation parity across three languages
 subhead: Share the three texts, term list and house rules. Compare matching lines. Get a report of drift with cited text; the files stay unchanged.
 explain: Share the three texts, term list and house rules. Compare matching lines. Get a report of drift with cited text; the files stay unchanged.
 when:
   - You want to check translation parity across three languages.
+not_for:
+  - "You edit text in one language only: use a plain proofreader instead."
+  - "You want a machine translation or a new translation: use a human translator, since this only checks existing text."
+  - "You have no matching RU, EN and PT-BR passages yet: finish the translations first, then run this check."
 you_give:
   - Matching RU, EN and PT-BR passages plus the author’s term registry, fixed quotations and house typography rules.
 you_get:
   - A read-only parity report with passage evidence, rule references, severity and unresolved canon questions.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - "Gather your files first: the three matching passages, your term registry, your fixed quotations and your typography rules."
+  - Open your AI tool and paste the skill, or add the skill folder. Use an AI that can read files if you have whole chapters.
+  - Paste or attach the three texts and your rule files. Say which chapter or file to check.
+  - Read the report. Fix every blocking finding before you publish or commit.
+  - If the report flags a term that is not in your registry, decide the right translation yourself and add it to terminology.md. Then run the check again.
+output_sample:
+  input:
+    - The matching RU, EN and PT-BR passages or chapter files
+    - Your term registry (terminology.md)
+    - Your fixed quotations (anchor-quotes.md)
+    - Your typography rules and name table (optional)
+  prerequisites:
+    - An AI that can read your files. Git is needed only for staged or commit range checks.
+  output:
+    - name: Typography findings
+      contains: Wrong quote marks, dash spacing, ellipsis or number style for each language, with line numbers.
+    - name: Terminology findings
+      contains: Registered terms that changed between languages, with the registry row each one breaks.
+    - name: Anchor quote findings
+      contains: Fixed quotations that were reworded, shown next to the approved form.
+    - name: Names and realia findings
+      contains: Wrong name forms, mixed short names, and place or brand names missing a first-mention footnote.
+    - name: No smoothing findings
+      contains: Exact numbers, dates, streets or brands that were made vague in translation.
+    - name: Summary
+      contains: Counts of findings by type, each marked blocking, warning or info.
 how_it_works:
   - title: Load the author’s canon
     text: Match corresponding passages and use supplied terminology, quotations and typography rules; keep sample registries as examples.

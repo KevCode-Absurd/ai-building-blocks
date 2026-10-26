@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It mostly changes tone and style.
 new_slug: human-sounding-reply-writer
 name: Human-sounding reply writer
-summary: Ask for it once. Get AI replies that sound like a person, with less
-  listing and fewer stock phrases.
+summary: "Get a human-sounding reply from your AI: short, direct and warm, with no stock phrases or bullet lists. Good for hard personal messages."
 job: write-and-tell-stories
 headline: Human-sounding reply writer
-subhead: AI answers that sound like a person talking, not a helpdesk. Ask for it
-  once and replies drop the stock phrases, the bullet lists and the hollow
-  sympathy.
+subhead: AI answers that sound like a person talking, not a helpdesk. Ask for it once and replies drop the stock phrases, the bullet lists and the hollow sympathy.
 explain: |
   AI answers that sound like a person talking, not a helpdesk. Ask for it once and replies drop the stock phrases, the bullet lists and the hollow sympathy.
 
@@ -18,16 +15,34 @@ when:
   - You want advice on a hard personal choice without a bulleted list.
   - AI replies feel full of filler and you want them to get to the point.
   - You are writing a short intro or post that must sound like a real person.
+not_for:
+  - "You need code, a fact or data work: ask your AI the question directly, since this skill is only for personal and emotional replies."
+  - "You want to clean up a finished draft that reads like AI: edit it by hand or ask your AI to cut filler and rewrite it in your own words."
+  - "You need a formal or legal message: have a person review it, because a casual tone can be the wrong fit."
 you_give:
-  - The situation or message to respond to
+  - The message or situation you want a reply to
   - Who the reply is for
-  - Your own voice or sample lines (optional)
+  - Two or three of your own sample lines, if you want your voice matched (optional)
 you_get:
   - A reply that reads as human
   - Fewer lists and stock phrases
   - A direct tone with real warmth
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into the chat.
+  - Paste the message or describe the situation. Say who the reply is for.
+  - Add two or three of your own sample lines if you want your voice matched (optional).
+  - "On first use you see three parts: the first answer, the mirror note and the final reply. Use the final reply."
+  - Ask for quiet mode if you only want the final reply from then on.
+output_sample:
+  input:
+    - The message or situation you want a reply to
+    - Who the reply is for
+    - Two or three of your own sample lines (optional)
+  output:
+    - name: Self (first instinct)
+      contains: The usual quick AI answer, shown first so you can see what gets cut.
+    - name: Mirror (reflection)
+      contains: A blunt note to the first answer that calls out filler, lists and fake sympathy.
+    - name: Conscious Response
+      contains: "The final reply: shorter, direct, warm, with a point of view and no lists."

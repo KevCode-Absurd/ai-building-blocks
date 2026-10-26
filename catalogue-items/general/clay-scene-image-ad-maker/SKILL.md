@@ -7,6 +7,11 @@ description: Use when you want one claymation-style image ad: a photographed han
 
 You plan one still image ad of a small handmade clay set. Its star is one clay object that stands for the problem or for how the product works: a tower of tubs, a knot of cables, a pale patch under a pan. A still can't show the clay changing, so it shows one state, or the before and after side by side on one set. It uses the same set plan and look as the claymation video.
 
+## When not to use this
+- The proof rests on a real person, such as a review or a founder: use the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad).
+- The offer is only a price or a discount, with nothing that changes: use the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
+- You want a crowd of people sharing one hassle: use the [Clay town image ad maker](https://useaiblocks.com/skills/clay-town-image-ad-maker).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -56,10 +61,10 @@ If an image tool is connected, offer to make the picture with it, and ask before
 1. **Check clay fits.** It suits a cause the camera can't see, or a small everyday problem. It has no face people believe, so proof that rests on a real person needs another format. Say so.
 2. **Pick the changing object** and write its three states: before, changing, after. It changes by clay moves only (it squashes, flattens, unknots, straightens, takes on colour). Test it: could a stranger say what changed, and what changed it, from the picture alone?
 3. **Pick the frame.** One state (the before, for buyers who don't see the problem yet; the after, for buyers comparing fixes), or a **split set**: the same set left and right, the left greyed and cool, the right in the brand colours. One moment only.
-4. **Keep the picture inside the claims.** The change on the set is a claim. Show only what the approved claims say. Never a body getting better, an organ, or a symptom going away. Keep a metaphor plainly a metaphor, and show a real function the way it really happens.
+4. **Keep the picture inside the claims.** The change on the set is a claim. Show only what the approved claims say. Never a body getting better, an organ, or a symptom going away. Keep a metaphor plainly a metaphor, and show a real function the way it really happens. For a food, supplement or health product, the before state must not suggest the product replaces another product or a treatment, unless an approved claim says so.
 5. **Plan the set**, the same as the video would. One small tabletop set from the buyer's moment, 3 or 4 pieces, no words anywhere. One finish: crisp (fine tool lines), handled (some thumbprints) or rough (big thumbprints, lumpy shapes). Stand-ins for hard materials: water as clear gel, steam as cotton wool, glass as clear acrylic. Before palette greyed and cool; after palette in the brand colours.
 6. **Cast one clay character, or none.** A clay adult who looks like the buyer by build and clothes, in one sentence: height in heads, body shape, clay colour, hair as one shape, two clothing colours, bead eyes, one mark. The pose carries the feeling. Never a child, a real person, a known character or another brand's mascot, and no speech bubble.
-7. **Place the product.** Either a clay prop at its true shape and colours wrapped in a printed label made from the real artwork, or the real product photo lit to match the set's key light. No clay letters. It stands within reach, front to camera, or is left out of the before side.
+7. **Place the product.** Either a clay prop at its true shape and colours wrapped in a printed label made from the real artwork, or the real product photo lit to match the set's key light. No clay letters. It stands within reach, front to camera, or is left out of the before side. If what is inside the product (its colour, shape or count) is not in the facts or a photo, write `MISSING:` for it and leave it out of the prompt. Do not pick a colour or shape for it.
 8. **Lay out the frame.** 4:5 (1080 x 1350) or 1:1 (1080 x 1080). The changing object is the largest or brightest thing. Keep the top band of backdrop plain for the headline. Write a zone map in percent.
 9. **Write the words** and run the image-ad rules below. Words are set in a design tool, never sculpted.
 10. **Write the image prompt.** A photographed handmade stop-motion tabletop set, matte modelling clay in the chosen finish, simple bead eyes, one soft key light from a named side and a fill, shallow focus so it reads as miniature, a plain backdrop, the stand-ins named, the object in its state (or both states, split), the product from the attached photo with its label as printed, and no text anywhere.
@@ -103,7 +108,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No clay letters; the product's label is exactly as printed.
 
 ## If something is missing
-Write `MISSING: <what>`. No "how it works": show the routine or a plain metaphor, never an invented process. No label lines: the product turns its label away until they're given. No product photo: plan the set and write the prompt from the facts, mark `MISSING: product photo`, and say to attach the photo before making the image so the product comes out exact.
+Write `MISSING: <what>`. No "how it works": show the routine or a plain metaphor, never an invented process. No label lines: the product turns its label away until they're given. Contents of the product not given (colour, shape, count): `MISSING: what the product looks like inside`, and keep it out of the picture. No product photo: plan the set and write the prompt from the facts, mark `MISSING: product photo`, and say to attach the photo before making the image so the product comes out exact.
 
 ## Avoid
 - A clay mascot beside the pack with nothing changing.

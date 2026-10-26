@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a set recipe to turn text into audio.
 new_slug: multilingual-narrator
 name: Multilingual narrator
-summary: Give it your text. Get spoken audio in a natural voice in 90+
-  languages, saved as a sound file.
+summary: Turn your text into spoken audio in a natural voice, in 90+ languages. Use this text to speech narrator to get an MP3 for videos or courses.
 job: work-with-audio
 headline: Multilingual narrator
-subhead: Spoken audio of your text in a natural voice, in over 90 languages,
-  saved as a sound file you can use in videos, courses or apps.
+subhead: Spoken audio of your text in a natural voice, in over 90 languages, saved as a sound file you can use in videos, courses or apps.
 explain: |
   Spoken audio of your text in a natural voice, in over 90 languages, saved as a sound file you can use in videos, courses or apps.
 
@@ -17,19 +15,44 @@ when:
   - You want your course lessons read aloud in Spanish and French.
   - An app should read alerts aloud.
   - You want to hear a draft before recording yourself.
+not_for:
+  - "You need a live voice agent that answers in a split second: use the streaming guide in the skill, or a real-time voice tool."
+  - "Your text must not leave your own systems: it is sent to ElevenLabs, so ask a person to record it instead."
+  - "You want a human voice with real emotion for a big launch: hire a voice actor."
 you_give:
   - The text to read aloud
-  - The language
-  - A voice choice (optional)
-  - An ElevenLabs account and API key
+  - The language, if it is not English (optional)
+  - A voice you like (optional)
+  - Your ElevenLabs account and API key
 you_get:
-  - An audio file of your text
-  - Code to repeat the job
-  - A voice and model recommendation
-  - Setup steps for your key
+  - An MP3 file of your text, saved as output.mp3 by default
+  - Code you can run again for the next piece of text
+  - A voice and model suggestion for your job
+  - Setup steps for your ElevenLabs key
+  - The character count used by each request
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own ElevenLabs API key.
+  - Make an ElevenLabs account and open a chat with an AI that can run code and use the internet.
+  - Paste the skill into the chat, then paste the text you want read aloud.
+  - Tell your AI the language and any voice you like. If you have no key yet, let it walk you through sign-in.
+  - Play the MP3 and check numbers, dates and names sound right. Ask for another voice or model if not.
+  - Drop the file into your video editor or course platform. Each request uses character credits on your ElevenLabs plan.
+output_sample:
+  input:
+    - The text you want read aloud
+    - The language, if it is not English (optional)
+    - A voice you like, or let your AI pick one (optional)
+    - Your ElevenLabs account and API key
+  prerequisites:
+    - An AI that can run code and reach the internet
+    - An ElevenLabs account, which may cost money for each request
+  output:
+    - name: Setup steps
+      contains: How to sign in and store your ElevenLabs key for the project, if it is not set yet.
+    - name: Voice and model pick
+      contains: A voice and a model chosen for your text, with the trade-off between quality and speed.
+    - name: Narration code
+      contains: Short Python, JavaScript or command line code that sends your text and saves the sound.
+    - name: output.mp3
+      contains: The spoken audio of your text, saved as an MP3 by default.
+    - name: Character count
+      contains: How many characters the request used, so you can watch your plan credits.

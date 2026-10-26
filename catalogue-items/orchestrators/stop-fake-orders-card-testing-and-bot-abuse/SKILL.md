@@ -26,7 +26,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Turn the rules on and run them for two to four weeks. Export blocked, held and disputed orders, failed sign-ins and repeated small card charges.
 
-2. **Bot and AI agent access planner.** Use the skill `bot-and-ai-agent-access-planner`. Uses the results of the fraud rules to separate people, bots and AI agents and set what each may do.
+2. **Bot and AI agent access planner.** Use the skill `bot-and-ai-agent-access-planner`. Give it step 1's fraud rules as the rules already in place, and the export you pull after running them for two to four weeks. Uses them to separate people, bots and AI agents and set what each may do.
 3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

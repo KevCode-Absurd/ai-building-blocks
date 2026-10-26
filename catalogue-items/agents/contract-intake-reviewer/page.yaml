@@ -1,6 +1,6 @@
 new_slug: contract-intake-reviewer
 name: Contract intake reviewer
-summary: Give it each new contract. Get a risk rating, clauses to question and questions to ask. A lawyer still checks.
+summary: Check a new contract before you sign. Get a green, yellow or red rating, the clauses to question and draft questions to ask. A lawyer still checks.
 job: check-contracts
 thinking: high
 thinking_why: It sorts the document, picks the right checks, compares clauses with your rules and rates the risk. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A new contract, NDA, subscription terms or amendment has arrived and you need a first read.
   - You want every contract checked against the same rules, not the mood of the day.
   - You lose track of renewal and notice dates.
+not_for:
+  - "The contract is worth a lot of money or could put the whole business at risk: have a qualified lawyer read it first."
+  - "You want legal advice or a view on what a court would do: ask a qualified lawyer."
+  - "You only need to know what changed in a new version: ask a person on your team to compare the two copies, or give the agent the amendment alone."
 you_give:
   - The full contract, and any attached terms or amendment
   - Which side you are on, and the country or state if the contract names one
@@ -31,6 +35,28 @@ how_to_use:
   - Read the rating and the clauses to question. Send the questions you agree with yourself.
   - Take anything yellow or red to a qualified lawyer, with the agent's notes.
   - Run it on every new contract. It keeps the register up to date.
+output_sample:
+  input:
+    - The full contract, with any attached terms or amendment
+    - Which side you are on, and the country or state if named
+    - Your own rules, such as no automatic renewal (the first time)
+    - Price, length and sign-by date (optional)
+  prerequisites:
+    - An AI that can read your contract text or files
+    - A contracts folder the agent can save to, if you want the register kept between runs
+  output:
+    - name: Type and rating
+      contains: What kind of contract it is, a green, yellow or red rating, and the clause that set it.
+    - name: Clauses to question
+      contains: Each flagged clause in plain words, what it could cost you, and whether it breaks your rules.
+    - name: Questions for the other side
+      contains: A plain question or edit request for each yellow or red clause. Drafted, not sent.
+    - name: Dates that matter
+      contains: Start, end, renewal, notice period and any deadline to sign.
+    - name: Summary
+      contains: A two-minute plain summary, made for yellow or red contracts.
+    - name: Register and files
+      contains: The row added to your register, the saved files and every MISSING line.
 how_it_works:
   - title: Check the register
     text: Looks for the other party in your register. An amendment to a listed contract gets a change trace first.

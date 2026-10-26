@@ -2,17 +2,52 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-scaffolding-oracle-to-postgres-migration-test-project
 name: Oracle migration test project builder
-summary: Share your .NET solution. Get an xUnit test project with database
-  rollback and migration test setup.
+summary: Build an xUnit test project for your Oracle .NET solution, with rollback after each test and a seed data manager. It has no test cases yet.
 job: build-software
 headline: Oracle migration test project builder
-subhead: Share your .NET solution. Get an xUnit test project with database
-  rollback and migration test setup. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI the .csproj file of the .NET project you plan to test. It builds an empty xUnit test project for Oracle. The project rolls back every test and has a place to load test data.
+not_for:
+  - "You need the PostgreSQL test project: copy and migrate the Oracle test project this skill made. Do not run this skill again."
+  - "You want the actual Oracle test cases written: write them by hand or with your AI after this empty project builds."
+  - "Your solution is not .NET, or does not use Oracle: ask a developer for a test setup that fits your stack."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can read and edit your solution files and run a build. Open your solution in it.
+  - Paste the skill text and share the .csproj file of the project you want to test.
+  - Say you are in Phase 3, the Oracle baseline phase. Add your Oracle connection details, kept out of source control.
+  - Let it create the project, the base class and the seed manager.
+  - Check that the build has zero errors and the project has no test cases.
+  - Write your Oracle baseline tests next. Run this skill once per project.
+output_sample:
+  input:
+    - Your target project's .csproj file
+    - Your Oracle connection details for appsettings.json (keep them out of source control)
+    - Your .NET solution files
+  prerequisites:
+    - An AI that can read and edit your solution files
+    - A way to build the project, such as the .NET SDK
+    - You are in Phase 3 of the migration, before any Oracle baseline tests exist
+  output:
+    - name: xUnit test project
+      contains: An empty test project on the same .NET version as your app, with Oracle and xUnit packages and one reference to your target project.
+    - name: appsettings.json
+      contains: Settings for connecting the tests to your Oracle database.
+    - name: Transaction-rollback base class
+      contains: A base test class that opens a transaction before each test and rolls it back after, even on errors.
+    - name: Seed data manager
+      contains: A global manager that loads test data inside the transaction, never commits it, and sets a naming rule for seed files.
+    - name: Build check
+      contains: A build of the new project that finishes with zero errors.
+when:
+  - You are starting Phase 3 of an Oracle to PostgreSQL move and need a test project first.
+  - You want every Oracle test to leave your database unchanged.
+  - You need one shared way to load seed data before you write baseline tests.
+you_give:
+  - The .csproj file of the project you want to test
+  - Your Oracle connection details for appsettings.json (keep them out of source control)
+  - Your solution files, so your AI can match the .NET version
+you_get:
+  - An xUnit test project that builds with zero errors
+  - A base test class that rolls back each test
+  - A seed data manager with a file naming rule
+  - An appsettings.json for the Oracle connection
+  - No test cases yet, so you write the Oracle baseline tests next

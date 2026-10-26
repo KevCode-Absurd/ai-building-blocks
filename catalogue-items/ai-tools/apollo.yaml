@@ -2,30 +2,31 @@ slug: apollo
 name: Apollo
 maker: Apollo.io
 url: https://www.apollo.io
-promise: "Find work contacts by role and company, then send follow-up emails."
+promise: "Find work contacts by role and company, then email them from the same account."
 use_cases: [find-leads]
 categories: [sales-and-support]
 what_it_does:
-  - Searches a large database of people and companies by role, size and place.
-  - Shows emails and phone numbers for the people you find.
-  - Sends email sequences from the same account.
-  - Records calls and uses AI to help write messages on higher plans.
-  - "Shares contact updates with tools such as Salesforce and HubSpot."
+  - "Searches a large database of people and companies. Apollo's own site claims 240M contacts and 30M companies (vendor claim, checked 26 Oct 2026)."
+  - "Shows verified emails and phone numbers for the people you find (checked 26 Oct 2026)."
+  - "Sends email sequences from the same account. Basic includes email sequencing, and the site lists domain warming and inbox rotation (checked 26 Oct 2026)."
+  - "Higher plans add AI features and call recording. A Parallel Dialer is listed too (checked 26 Oct 2026)."
+  - "Connects to your customer records. Apollo lists 200+ integrations, and its pricing page mentions advanced CRM links on Professional (checked 26 Oct 2026)."
 benefits:
-  - "Build a contact list using job and company filters."
-  - Start contacting them without moving data between apps.
-  - Keep outreach and contact details in one place.
+  - "Build a contact list from job title, company size and place filters."
+  - "Start contacting people without moving data between apps."
+  - "Keep outreach and contact details in one place."
 best_for:
-  - "Solo sellers and small teams contacting new business prospects."
+  - Solo sellers and small teams contacting new business prospects.
   - Founders who need a first list of buyers.
   - Recruiters and agencies that source contacts.
 not_for:
-  - Teams with a strict monthly bill, since credits for phones and exports add up.
-  - Lists you plan to use without checking the contact details first.
+  - "Lists you plan to email without checking each contact first. Use the prospect list builder to check fit, then verify every address."
+  - "Sending sequences without checking the email rules where your contacts live, such as CAN-SPAM in the US or GDPR in the EU. Confirm consent and opt-out handling first."
+  - "Deep research on one account at a time. Use Clay for that."
 pricing:
   model: freemium
   from: Check the maker's site
-  note: Free, Basic, Professional and Custom plans. Credits are pooled across the team and do not roll over. Third-party pages from 2026 list Basic near US$49 per user per month on yearly billing, but the maker's page showed no figure.
+  note: "Four plans are listed: Free, Basic, Professional and Custom. The pricing page showed no prices or credit counts on 26 Oct 2026. It says credits are pooled across the team, granted at the start of each billing cycle and do not roll over. Yearly billing is cheaper per month than monthly billing. A third-party page (docket.io) listed Basic near US$49 per user per month on yearly billing. We could not confirm that."
 works_with:
   - Salesforce
   - HubSpot
@@ -40,7 +41,30 @@ blocks:
   - own-voice-outreach-writer
   - lead-handoff-designer
 alternatives: [clay, hubspot-breeze]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  web:
+    - "Create an Apollo account on apollo.io. The pricing page lists a Free plan (it also calls it a Starter plan in one place). Sign-up steps were not checked here."
+    - "Open the people search and set 3 filters: job title, company size and country or city."
+    - "Save the results as a list. Look at a few rows and check each person is a real fit."
+    - "Before you export or email, open your plan's credit page to see what an export or phone number costs."
+    - "Write one short email with the prospect outreach drafter, send it to a handful of contacts, and read the replies before you scale up."
+needs:
+  - "An Apollo account. Which plan you need depends on credits and email sending, and the vendor page showed no numbers."
+  - "Your ideal buyer in one line: job title, company size and place."
+  - "A sending email address you are allowed to use. Apollo lists domain warming for deliverability."
+  - "A plan for consent and opt-outs before you send to people who have not asked to hear from you."
+example:
+  task: "Find sales leaders at UK software companies with 50 to 200 staff, and send a first email."
+  cost: "Credits pay for emails, phone numbers and exports. We could not confirm how many each costs. Check your plan's credit page before a big export."
+  reply: "A list of people with job title, company and, where available, a verified email or phone. The exact columns depend on your plan and were not checked here. Verify each contact before you email."
+not_verified:
+  - "Prices and credit counts for every plan. The vendor's pricing page showed none."
+  - "Whether the free plan includes email sending and how many exports it allows."
+  - "How current or accurate the contact data is. Apollo's numbers are its own claims."
+  - "Whether call recording and AI writing are on Professional only."
 sources:
   - https://www.apollo.io/pricing
+  - https://www.apollo.io
   - https://docket.io/resources/research/apollo-pricing

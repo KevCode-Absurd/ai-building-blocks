@@ -1,70 +1,65 @@
 new_slug: powerpoint-slide-size-converter
 name: PowerPoint slide size converter
-summary: Share your deck and target size. Get a reflowed PowerPoint copy with
-  layout checks.
+summary: "Change a deck from 4:3 to 16:9 or any size. Get a reflowed PowerPoint copy with no stretched images and a list of layouts to check."
 job: work-with-files
 thinking: high
 thinking_why: Native file features, source meaning and check evidence must
   survive the workflow.
 headline: PowerPoint slide size converter
-subhead: Share a deck and target slide size. Get a reflowed PowerPoint copy with
-  checked text, charts and image crops. Work on a copy of your file. Get a clear
-  record of what passed and what still needs checking.
-explain: >-
-  Share a deck and target slide size. Get a reflowed PowerPoint copy with
-  checked text, charts and image crops.
+subhead: Give it your deck and the slide size you want. It reflows each slide instead of stretching it, keeps picture shapes and chart values, and checks every slide for overlaps and cut-off text. You get a resized copy, before and after previews, and a list of layouts that need your decision.
 
+explain: |
+  Changing a deck from 4:3 to 16:9 often stretches pictures, pushes text off the edge and leaves charts half cut. This PowerPoint slide size converter works on a copy and reflows each slide to the new size. Text and the objects around it move to fit. Nothing is stretched across the whole slide.
 
-  It works with the actual PowerPoint files and follows a specific method for
-  this task. Your source files stay intact. The method starts by checking what
-  your AI already knows and which files it can read. It asks only for missing
-  facts that change the work.
+  It keeps pictures in proportion and checks their crops. It moves charts and tables without changing their values, labels or legends, and picks font sizes that suit the new size. When you give it your template rules for margins, headers and footers, it follows them.
 
+  It then draws every changed slide next to the original and looks for overlaps, clipped text, lost labels and anything outside the slide. Slides it cannot settle go on a list for you to decide.
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  It needs an AI that can open and save .pptx files. A chat without file access cannot resize your deck. It gives you a plan for each slide to follow by hand in PowerPoint, and marks the file checks not run.
+
 when:
-  - Share a deck and target slide size. Get a reflowed PowerPoint copy with
-    checked text, charts and image crops.
-  - Actual PPTX, target dimensions, fixed branding requirements, images and the
-    original layout or template.
-  - You need a checked copy while keeping your original files intact.
+  - A deck built in 4:3 must go on a widescreen screen or into a 16:9 template.
+  - A deck must be resized for print, a projector or a custom size you can state in width and height.
+  - An earlier resize left pictures stretched or text cut off and you want it done properly.
+  - A long deck needs resizing and you do not want to fix every slide by hand.
+
+not_for:
+  - "You have one slide to change once: resize it in PowerPoint (Design, then Slide Size) and check it by eye."
+  - "You want to pour new content into a brand template: use the PowerPoint template populator."
+  - "You want picture charts turned into editable charts: use the PowerPoint editable chart rebuilder."
+  - "Your AI cannot open .pptx files. It can plan each layout, but it cannot make the resized file."
+
 you_give:
-  - Actual PPTX, target dimensions, fixed branding requirements, images and the
-    original layout or template.
-  - The app and file tools your AI can use for the requested work
+  - Your deck as a .pptx file
+  - The size you want, such as 16:9 widescreen, or an exact width and height
+  - Your branding rules, such as logo place, margins, fonts and footers (optional)
+  - The original template or layout file (optional)
+  - The original image files, if pictures in the deck are small or low quality (optional)
 you_get:
-  - resized-deck.pptx, before/after previews and a layout-change register.
-  - A record of source files, changes and check results
-  - Missing facts and any checks that could not run
+  - A resized copy of your deck (resized-deck.pptx), with your original left alone
+  - Before and after pictures of the slides that changed
+  - A layout-change register that says what moved on each slide and why
+  - A list of checks that passed, failed or did not run, and the slides that need your decision
+
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Open the skill in Claude, ChatGPT or Gemini with file tools on, or in a coding assistant that can edit files. Attach the deck.
+  - Say the size you want. Add your branding rules and the template if you have them.
+  - If your AI cannot open files, you get a layout plan for each slide and steps to follow by hand in PowerPoint. The file checks are marked not run.
+  - Open the before and after pictures. Look at slides with charts, tables and full-width photos first.
+  - Decide the slides on the open list, then open the new deck in PowerPoint and page through it once before you share it.
+
 how_it_works:
-  - title: Step 1
-    text: 1. Record original slide dimensions, masters, safe margins, object bounds,
-      image crops and editable chart/table requirements.
-  - title: Step 2
-    text: 2. Set the intended new canvas in a copy and choose a layout rule for each
-      slide. Reflow text and related objects rather than uniformly stretching
-      the whole slide.
-  - title: Step 3
-    text: 3. Preserve image aspect ratios and inspect crops. Reposition native
-      charts and tables while preserving values, labels, legends and font sizes
-      appropriate to the new canvas.
-  - title: Step 4
-    text: 4. Review every slide for overlaps, out-of-bounds elements, clipped text,
-      orphaned labels and inconsistent headers or footers. Use the template
-      rules where they exist.
-  - title: Step 5
-    text: 5. Render every changed slide and compare it with the original. Verify
-      saved dimensions and editable objects after reopening; report layouts that
-      need a human decision.
+  - title: Records the deck as it is
+    text: Notes the slide size, masters, safe margins, where each object sits, how pictures are cropped, and which charts and tables must stay editable.
+  - title: Sets the new size on a copy
+    text: Picks a layout rule for each slide and reflows text and nearby objects, rather than stretching the whole slide.
+  - title: Protects pictures, charts and tables
+    text: Keeps picture proportions and checks crops. Moves charts and tables while keeping values, labels, legends and readable font sizes.
+  - title: Checks every slide
+    text: Looks for overlaps, objects outside the slide, clipped text, lost labels and headers or footers that no longer match. It uses your template rules where they exist.
+  - title: Draws and reopens
+    text: Renders each changed slide against the original, then reopens the saved file to confirm the size and that objects are still editable. Layouts that need a human choice go on the list.
+
 output_shape: |-
   FILES
   resized-deck.pptx, before/after previews and a layout-change register.
@@ -77,6 +72,30 @@ output_shape: |-
 
   OPEN ITEMS
   <missing fact or unsupported check> | <next action>
+
+output_sample:
+  input:
+    - Your deck as a .pptx file
+    - The size you want, such as 16:9 or an exact width and height
+    - Your branding rules or template (optional)
+    - The original image files (optional)
+  prerequisites:
+    - An AI that can open and save .pptx files, such as Claude with file tools or a coding assistant
+    - PowerPoint on your computer, to page through the result
+  output:
+    - name: resized-deck.pptx
+      contains: A copy of your deck at the new size, reflowed slide by slide, with pictures in proportion.
+    - name: Before and after previews
+      contains: A picture of each changed slide beside the original, so you can see what moved.
+    - name: Layout-change register
+      contains: For each slide, what moved or shrank and why, and whether it needs your decision.
+    - name: Source map
+      contains: Which file and slide each finding comes from.
+    - name: Checks
+      contains: Size, picture shape, text fit and editability, each marked passed, failed or not run, with evidence.
+    - name: Open items
+      contains: Layouts that need a human choice and checks that could not run, each with the next action.
+
 tweaks:
   - what: Your source files
     how: Actual PPTX, target dimensions, fixed branding requirements, images and the
@@ -87,6 +106,25 @@ tweaks:
   - what: The app used to check it
     how: Say which Excel or PowerPoint version you will use. Your AI must name any
       check it cannot run.
+
+works_best_with:
+  tools:
+    - name: Claude with file tools, or a coding assistant
+      why: It can open the .pptx, set the new size, draw each slide and reopen the saved file to check it.
+    - name: PowerPoint on your computer
+      why: It is the last check. Page through the new deck once to catch anything the AI could not draw.
+  inputs:
+    - Your brand template or style guide, so margins, logos and footers land where they belong
+    - The original photos, so crops are made from full-size pictures
+
+terms:
+  - term: Reflow
+    meaning: Move and resize things on a slide so they fit a new shape, instead of stretching the whole slide.
+  - term: Aspect ratio
+    meaning: The shape of the slide, such as 4:3 (squarer) or 16:9 (wide).
+  - term: Slide master
+    meaning: The layout behind your slides that holds the logo, footer and text styles.
+
 judge:
   - Dimensions match the requested canvas.
   - Images are not stretched.

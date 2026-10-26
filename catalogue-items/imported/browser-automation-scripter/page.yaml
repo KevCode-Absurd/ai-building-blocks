@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes and runs code, then fixes what breaks.
 new_slug: browser-automation-scripter
 name: Browser automation scripter
-summary: Say what to do in a web browser. Get Playwright code written and run
-  for it, with results and screenshots.
+summary: Tell your AI what to click or check in a web browser. It writes and runs Playwright code, then gives you results and screenshots.
 job: test-and-fix-code
 headline: Browser automation scripter
-subhead: Say what you want done in a web browser and get working Playwright
-  code, run for you, with the results and screenshots. Good for checking a site,
-  filling forms or testing a page.
+subhead: Say what you want done in a web browser and get working Playwright code, run for you, with the results and screenshots. Good for checking a site, filling forms or testing a page.
 explain: |
   Say what you want done in a web browser and get working Playwright code, run for you, with the results and screenshots. Good for checking a site, filling forms or testing a page.
 
@@ -18,6 +15,10 @@ when:
   - You need to fill the same web form many times.
   - You want screenshots of a page at different screen sizes.
   - You need to check that your local site loads without errors.
+not_for:
+  - "You want to scrape other people's websites: use a manual check or ask the site owner for the data."
+  - "You would fill a live form that sends real emails or messages: test on a staging copy or check it by hand."
+  - "You want a full test suite for your developers: ask your developer to set up tests in your site's own code."
 you_give:
   - A plain description of what to do in the browser
   - The web address, or a local site running
@@ -28,8 +29,26 @@ you_get:
   - A report of what happened
   - Screenshots of the result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Use an AI that can run code on your computer, such as Claude Code. A plain chat window cannot run it.
+  - Install the skill and run its setup step once. This installs Playwright and a browser.
+  - Tell your AI what to do in the browser and give the web address. If you have a local site running, say so.
+  - If it finds more than one local site, pick the one to use.
+  - Watch the browser window while the script runs. Then read the results and open the screenshots.
+  - Change the web address at the top of the script if you want to run it on another page.
+output_sample:
+  input:
+    - What you want done in the browser, in plain words
+    - The web address, or a local site that is running
+    - Form values or test login details (optional)
+  prerequisites:
+    - An AI that can run code on your computer
+    - Node.js and Playwright installed on your computer (the skill has a setup step)
+  output:
+    - name: Playwright script
+      contains: A fresh script saved in a temporary folder, with the web address at the top so you can change it.
+    - name: Visible browser run
+      contains: The script runs in a browser window you can watch.
+    - name: Results report
+      contains: What happened during the run, including any errors your AI saw.
+    - name: Screenshots
+      contains: Images of the page saved during the run, such as at different screen sizes.

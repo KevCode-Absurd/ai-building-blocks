@@ -1,0 +1,45 @@
+slug: agency-marketing-instagram-curator
+name: Instagram Curator agent
+summary: Get an Instagram content plan with visual themes and posting choices.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: brand_brain
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+  - type: design_direction
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-instagram-curator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-instagram-curator.md
+  licence: MIT
+  original_name: Instagram Curator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: bab95910975a95409eca10e28c44cf762cd46f9d8b7d551bcb347ef0f39e68fd
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Instagram Curator
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Instagram Curator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-instagram-curator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -2,34 +2,62 @@ thinking: high
 thinking_why: Code generation settings and model limits need careful choices.
 new_slug: ai-model-code-generator
 name: AI model code generator
-summary: Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it
-  inside your app.
+summary: Turn a PyTorch or LiteRT model into C, C++ or CUDA code with MATLAB Coder. Get an entry function, a tested MEX build and code for your app.
 job: build-software
 headline: AI model code generator
-subhead: Turn a trained AI model into C, C++ or CUDA code that runs inside your
-  own product or on hardware. The model stays the same.
+subhead: Give it a trained PyTorch or LiteRT model file. It writes the code that runs the model inside your own app or on hardware. It tests a MEX build first, so you can trust the numbers before you build the final code.
 explain: |
   Turn a trained AI model into C, C++ or CUDA code that runs inside your own product or on hardware. The model stays the same. You just stop needing the original framework to run it.
 
   You start with a PyTorch .pt2 file or a LiteRT .tflite file. The steps: load the model into MATLAB and inspect its inputs and outputs, write an entry function, build a MEX file, check that its results match the original framework, then generate the production code. It can also place the model in Simulink. This needs MATLAB with Coder tools, which is paid software, and it covers running models only, not training them.
 when:
-  - You have a trained model and need to run it on embedded hardware.
-  - You want faster inference than your Python setup gives.
+  - You have a trained model and need it to run on embedded hardware.
+  - You want faster results than your Python setup gives.
   - You need GPU code for a model you already trained.
   - You want a PyTorch or TFLite model inside a Simulink design.
+not_for:
+  - "You want to train or fine-tune a model: use your usual training tool, because this only makes code for running a finished model."
+  - "You need to compress a model with quantization or pruning first: use the MathWorks skill matlab-deploy-embedded-ai, then come back."
+  - "You do not have MATLAB with Coder products: ask your team for a licence or use the runtime that ships with your model's own framework."
 you_give:
-  - A model file (.pt2 or .tflite)
+  - Your model file (.pt2 or .tflite)
   - A sample input to test with
-  - Your target, such as C, C++ or a GPU
-  - A MATLAB licence with Coder products
+  - Your target, such as C, C++ or CUDA
+  - Your MATLAB Coder licence, plus GPU Coder for CUDA
 you_get:
   - An entry function that wraps the model
   - A MEX build for quick testing
-  - A numbers check against the source framework
+  - A check that results match the source framework
   - Production C, C++ or CUDA code
+  - A Simulink setup, if you ask for one
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with MATLAB Coder.
+  - Check you have MATLAB R2026a or later, MATLAB Coder and the support package for PyTorch and LiteRT models.
+  - Open your AI and paste the skill text. Say whether your model is .pt2 or .tflite.
+  - Share the model file, a sample input and your target. This needs an AI that can run MATLAB code, or you run each step yourself.
+  - Ask it to inspect the model, write the entry function and build the MEX file first.
+  - Check the number comparison against the source framework before you ask for the final C, C++ or CUDA code.
+  - If the other MathWorks skills are not installed, skip the embedded hardware step or do it by hand.
+output_sample:
+  input:
+    - Your model file (.pt2 from PyTorch or .tflite from LiteRT)
+    - A sample input with the right shape and type
+    - "Your target: C, C++, CUDA, a MEX file or a Simulink model"
+    - Your MATLAB licence details (MATLAB Coder, plus GPU Coder for CUDA)
+  prerequisites:
+    - MATLAB R2026a or later with MATLAB Coder (paid software)
+    - The MATLAB Coder Support Package for PyTorch and LiteRT Models
+    - GPU Coder and an NVIDIA GPU, only if you want CUDA code
+    - An AI that can run MATLAB code, or you run the steps yourself
+  output:
+    - name: Model inspection
+      contains: The model's input and output shapes and types, read after loading it into MATLAB.
+    - name: Entry-point function
+      contains: A MATLAB function that loads the model from a fixed file path, runs it on an input and returns the result.
+    - name: MEX build
+      contains: A test build of the entry function, in CPU or CUDA form, that runs on your own machine.
+    - name: Numeric check
+      contains: A comparison of MATLAB, MEX and source framework results, judged against a stated tolerance.
+    - name: Generated code
+      contains: Production C, C++ or CUDA code as a static library, dynamic library or executable.
+    - name: Simulink model (optional)
+      contains: The model placed in a Simulink block so you can simulate it and build code from it.

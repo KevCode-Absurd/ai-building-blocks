@@ -1,33 +1,107 @@
 new_slug: build-the-quality-score-triage-module-builder-prompt
 name: Quality Score review coding prompt
-summary: Get a coding brief to review Quality Score. Rank keyword fixes and show the data behind each one.
+summary: "Build a read-only Google Ads Quality Score review in your code. Get a prompt that groups keywords by cause and ranks fixes by spend."
 job: build-software
 headline: Quality Score review coding prompt
-subhead: Get a coding brief to review Quality Score. Rank keyword fixes and show the data behind each one.
+subhead: "Paste one prompt into a coding AI such as Claude Code. It builds a read-only module that sorts your Google Ads keywords by what is dragging Quality Score down. You get groups by ad group and cause, one fix per group, ranked by spend, and keywords with no data listed apart."
 explain: |-
-  Share your project and the required feature. Get a coding brief for the quality score triage module, with setup and test steps.
+  Quality Score is Google's 1 to 10 rating of a keyword. A low score can make clicks cost more. The score has three parts: expected click rate, ad relevance and landing page experience. The fix for each part is different, so you need to know which part is weak before you change anything.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This prompt briefs your coding AI to build a Quality Score review. It reads keyword rows, drops the tiny ones, and sorts the rest with an eight-row table that covers every mix of weak and fine parts. It then groups them by ad group and cause, so thirty keywords with the same problem become one action.
+
+  A keyword with no part ratings is listed as not evaluated, never as healthy. All the cost bands and the spend floor are settings you set. The module only reads and recommends. It never changes a keyword or an ad.
 when:
-  - You need a coding brief for the quality score triage module.
-  - You need build the quality score triage module prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are building your own Google Ads review tool and want a clear Quality Score step in it.
+  - Your keywords are costing more than they should and you want to know whether the ads or the landing pages are the problem.
+  - A developer needs a complete brief for a Quality Score module, including the full diagnosis table.
+  - You want one fix per ad group, not a long list of single keywords.
+not_for:
+  - "You only want a review of your own numbers, not software: use the Google Ads store account auditor or the Google Ads report auditor."
+  - "You have no way to read Google Ads data yet: set up access first with the Google Ads token and access check planner."
+  - "Your account has a handful of keywords and no coding project: the numbers will not give a clear picture, so check them by hand in Google Ads."
+  - "You want a full audit engine with many checks: use the Google Ads audit engine builder."
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - A code project and a coding AI, such as Claude Code, that can edit it
+  - Keyword rows with cost, Quality Score and its three part ratings, from the Google Ads API or sample rows
+  - The date range and account currency
+  - Your spend floor and cost bands for severity (optional, the prompt gives starting values)
 you_get:
-  - A coding brief for the quality score triage module
-  - Required files, setup gaps and test cases
+  - A prompt that builds one read-only review function with typed input and output
+  - An eight-row table that diagnoses every mix of weak and fine parts
+  - One finding per ad group and cause, ranked by spend, with a fix for each
+  - A summary with the share of spend on low Quality Score, and keywords listed as not evaluated
+  - Tests on sample rows, with no real account used
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Decide where keyword data comes from. If you have code that fetches it, tell the AI where it is. If not, the prompt builds the function to take typed rows.
+  - Copy the prompt from the skill and fill in the angle brackets, including your spend floor and cost bands. Paste it into your coding AI with your project open.
+  - Read what the AI says about your project first. If it lists missing pieces, decide whether to add them or build without them.
+  - Check the thresholds it lists, then run the tests on sample rows.
+  - Run it on a live account only when you decide to, read-only. Review monthly, not weekly.
+  - Use the fixes as a to-do list for your ads and landing pages. Nothing is changed for you.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project
+    text: "Finds your language, test setup and any existing fetch code or result type, and reports what is missing."
+  - title: Drops the small and the unrated
+    text: "Removes keywords below your spend floor. Keywords with no part ratings are counted as not evaluated."
+  - title: Diagnoses each keyword
+    text: "Uses an eight-row table of expected click rate, ad relevance and landing page. An average rating counts as not flagged."
+  - title: Groups by ad group and cause
+    text: "Makes one finding per group, with the affected keywords listed, ranked by total cost."
+  - title: Sets severity and a fix
+    text: "Maps cost to severity with your bands and gives a starting fix for each cause."
+  - title: Writes the summary and tests
+    text: "Gives the spend share on low Quality Score with its sums, and tests every row of the table."
+output_shape: |-
+  Function: reviewQualityScore(input) -> DiagnosticOutput
+  Findings (one per ad group and cause):
+    checkId: qs-<diagnosis> | severity | ad group | keywords | cost | fix
+  Summary:
+    distribution: <count per diagnosis, healthy, below spend floor, not evaluated>
+    spendShareLowQs: <low-QS spend> of <evaluated spend>
+    topGroups: <ad group, diagnosis, cost, keyword count>
+  Thresholds and assumptions to review: <list>
+  Tests: <results, or "not run">
+output_sample:
+  input:
+    - Your code project, open in a coding AI
+    - Keyword rows with cost, Quality Score and its three part ratings
+    - The date range and account currency
+    - Your spend floor and cost bands (optional)
+  prerequisites:
+    - Google Ads API read access, or typed sample rows to start with
+    - A coding AI that can read and edit your project
+  output:
+    - name: reviewQualityScore function
+      contains: One read-only function with typed input and output, in your project's language and style.
+    - name: Diagnosis table
+      contains: Eight rows covering every mix of weak and fine parts, with a cause name for each.
+    - name: Findings
+      contains: One per ad group and cause, with affected keywords, cost, severity and a starting fix.
+    - name: Summary block
+      contains: The count per diagnosis, the share of spend on low Quality Score with its sums, and the top groups.
+    - name: Not evaluated list
+      contains: Keywords with no part ratings, with the spend they hold, so none count as healthy.
+    - name: Tests and assumptions
+      contains: Tests for every table row and the thresholds you need to review.
+tweaks:
+  - what: Your spend floor
+    how: Set it near what a keyword must cost before it is worth fixing. A floor that is too low fills the report with dust.
+  - what: Your cost bands
+    how: Set them in your own currency and for your account size. The starting values are only a guide.
+  - what: Your date range
+    how: Use at least a few weeks. Quality Score changes slowly, so short ranges show little.
+  - what: Part ratings
+    how: Keywords with no ratings are listed as not evaluated. More data in the range means fewer of them.
+terms:
+  - term: Quality Score
+    meaning: Google's 1 to 10 rating of a keyword, based on three parts.
+  - term: Expected click rate
+    meaning: How likely your ad is to be clicked for this keyword, compared with others.
+  - term: Ad relevance
+    meaning: How well your ad matches what the person searched for.
+  - term: Landing page experience
+    meaning: How useful and fast the page is for someone who clicks your ad.
+  - term: Read-only
+    meaning: The code can look at data but cannot change keywords, ads or accounts.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

@@ -1,6 +1,6 @@
 ---
 name: moe-training
-description: Train Mixture of Experts (MoE) models using DeepSpeed or HuggingFace. Use when training large-scale models with limited compute (5× cost reduction vs dense models), implementing sparse architectures like Mixtral 8x7B or DeepSeek-V3, or scaling model capacity without proportional compute increase. Covers MoE architectures, routing mechanisms, load balancing, expert parallelism, and inference optimization.
+description: Train Mixture of Experts (MoE) models using DeepSpeed or HuggingFace. Use when training large-scale models with limited compute, implementing sparse architectures like Mixtral 8x7B or DeepSeek-V3, or scaling model capacity without proportional compute increase. Covers MoE architectures, routing mechanisms, load balancing, expert parallelism, and inference optimization.
 version: 1.0.0
 author: Orchestra Research
 license: MIT
@@ -13,7 +13,7 @@ dependencies: [deepspeed, transformers, torch, accelerate]
 ## When to Use This Skill
 
 Use MoE Training when you need to:
-- **Train larger models** with limited compute (5× cost reduction vs dense models)
+- **Train larger models** with limited compute (check the savings on your own setup before you plan around them)
 - **Scale model capacity** without proportional compute increase
 - **Achieve better performance** per compute budget than dense models
 - **Specialize experts** for different domains/tasks/languages
@@ -21,6 +21,25 @@ Use MoE Training when you need to:
 - **Implement SOTA models** like Mixtral 8x7B, DeepSeek-V3, Switch Transformers
 
 **Notable MoE Models**: Mixtral 8x7B (Mistral AI), DeepSeek-V3, Switch Transformers (Google), GLaM (Google), NLLB-MoE (Meta)
+
+## When Not to Use This Skill
+
+- You have one GPU or a small dataset: use a dense model, or fine-tune an existing MoE model instead
+- You only want to run or serve a finished MoE model: use an inference tool, not training code
+- You need a first working model fast: MoE adds routing, balancing and multi-GPU setup that dense training does not
+
+## Output Format
+
+Give the user, in order:
+
+1. **Recommended setup**: framework (plain PyTorch, DeepSpeed, Megatron-DeepSpeed or Hugging Face), expert count, top-k, and why it fits their budget and data.
+2. **Code**: the sparse layer and the training script or config for that framework, taken from this file and its references.
+3. **Settings to check**: learning rate, auxiliary loss weight, router z-loss weight, capacity factor. Label each as a starting point, not a proven value.
+4. **Install steps**: exact commands and versions to confirm.
+5. **What to watch**: expert usage balance, loss, gradient size, dropped tokens.
+6. **Open questions**: anything missing, marked MISSING.
+
+If the compute budget, GPU count or goal is missing, ask once, then mark it MISSING. Never invent budgets, model sizes or speed-up figures. Say that code here is a starting sketch: the user must run it on their own GPUs and check flags against the version of DeepSpeed or Megatron-DeepSpeed they install.
 
 ## Installation
 
@@ -104,6 +123,8 @@ class MoELayer(nn.Module):
 
 ### DeepSpeed MoE Training
 
+Flag names below follow the Megatron-DeepSpeed examples. They change between versions, so check them against the repo you install.
+
 ```bash
 # Training script with MoE
 deepspeed pretrain_gpt_moe.py \
@@ -162,16 +183,16 @@ expert_idx = torch.argmax(gate_logits, dim=-1)  # Hard routing
 
 **Top-2 Routing (Mixtral):**
 ```python
-# Top-2: two experts per token
+# Top-2: two experts per token (a sketch of the weights only.
+# For the full dispatch of tokens to experts, see MoELayer above.)
 gate_scores = torch.softmax(router(x), dim=-1)
 top2_scores, top2_indices = torch.topk(gate_scores, k=2, dim=-1)
 
 # Normalize scores
 top2_scores = top2_scores / top2_scores.sum(dim=-1, keepdim=True)
 
-# Combine expert outputs
-output = (top2_scores[:, :, 0:1] * expert_outputs[top2_indices[:, :, 0]] +
-          top2_scores[:, :, 1:2] * expert_outputs[top2_indices[:, :, 1]])
+# Combine: for each token, add (score x output of its chosen expert).
+# Only the chosen experts run for that token, not all of them.
 ```
 
 **Expert Choice Routing:**
@@ -207,7 +228,7 @@ total_loss = language_model_loss + 0.01 * load_balancing_loss(...)
 **Router Z-Loss (Stability):**
 ```python
 def router_z_loss(logits):
-    """Encourage router to have lower entropy (more decisive)."""
+    """Penalise large router logits to keep training stable."""
     z_loss = torch.logsumexp(logits, dim=-1).pow(2).mean()
     return z_loss
 
@@ -384,7 +405,8 @@ class MixtralMoEBlock(nn.Module):
 ### PR-MoE (Pyramid-Residual-MoE)
 
 ```bash
-# DeepSpeed PR-MoE: 3x better parameter efficiency
+# DeepSpeed PR-MoE (Pyramid-Residual MoE): fewer experts in early layers, more in later ones.
+# See the DeepSpeed MoE paper for its measured efficiency gains.
 deepspeed pretrain_gpt_moe.py \
   --num-layers 24 \
   --hidden-size 1024 \
@@ -408,9 +430,9 @@ deepspeed pretrain_gpt_moe.py \
 # - Large models (30B+): 64-256 experts
 
 # Example: Mixtral 8x7B
-# Total params: 47B (8 experts × 7B each)
-# Active params: 13B (2 experts × 7B, top-2 routing)
-# Efficiency: 47B capacity with 13B compute
+# Total params: about 47B (the experts share the attention layers)
+# Active params: about 13B per token (2 experts, top-2 routing)
+# Result: 47B of capacity with about 13B of compute per token
 ```
 
 ### 2. Capacity Factor Tuning
@@ -431,13 +453,14 @@ expert_capacity = int((seq_len * batch_size / num_experts) * capacity_factor)
 ### 3. Learning Rate Guidelines
 
 ```python
-# MoE models need lower LR than dense models
+# A common starting point: MoE models often need a lower LR than dense models.
+# Treat these as example values, and tune on your own runs.
 # - Dense model: lr = 6e-4
-# - MoE model: lr = 1e-4 (3-6× lower)
+# - MoE model: lr = 1e-4
 
-# Also extend decay schedule
+# A longer decay schedule is also common
 dense_lr_decay_iters = 300000
-moe_lr_decay_iters = 500000  # 1.5-2× longer
+moe_lr_decay_iters = 500000
 ```
 
 ### 4. Loss Coefficient Tuning
@@ -463,6 +486,8 @@ if grad_norm > 10.0:
 optimizer = Adam(model.parameters(), lr=6e-4)
 
 # ✅ Good: Lower LR for MoE
+# You define these two lists: put the router and expert weights in moe_params
+# and everything else in non_moe_params (split model.named_parameters() by name).
 optimizer = Adam([
     {'params': model.non_moe_params, 'lr': 6e-4},
     {'params': model.moe_params, 'lr': 1e-4}
@@ -489,7 +514,9 @@ num_experts = 8  # Better for small datasets
 # Only activate top-k experts (huge memory savings)
 @torch.no_grad()
 def moe_inference(x, model, top_k=2):
-    """Sparse MoE inference: only load k experts."""
+    """Sparse MoE inference sketch: only load k experts.
+    model.load_expert is NOT a real API. You must write it yourself
+    (for example, load expert weights from disk or CPU memory on demand)."""
     # Router
     gate_logits = model.gate(x)
     topk_scores, topk_indices = torch.topk(

@@ -1,6 +1,6 @@
 new_slug: plan-inversion-checker
 name: "Plan inversion checker"
-summary: "Paste a plan. Get every way it fails, ranked, with the guard for each and the ones you cannot guard."
+summary: "Paste a plan you are about to commit to. Get a plan inversion check: ten to fifteen ways it fails, ranked, with a guard for each."
 job: think-and-decide
 thinking: high
 thinking_why: "It has to imagine failures across five groups and rate them honestly from thin input."
@@ -17,6 +17,10 @@ when:
   - "You are about to sign, hire, launch or spend on something you cannot easily undo."
   - "The plan feels exciting and nobody in the room is arguing against it."
   - "The last plan like this failed and you want to be sure this one fails differently, if at all."
+not_for:
+  - "The choice is small or easy to undo: just make it, or ask a friend for one quick what-could-go-wrong round."
+  - "You need to test the money side of a plan: use the Bad-year break-even tester."
+  - "You want real buyers to react to an idea: use the Seven-question startup scorer."
 
 you_give:
   - "The plan: what, by when, with what, and what success looks like"
@@ -34,6 +38,27 @@ how_to_use:
   - "Add what the plan depends on and what went wrong before."
   - "Read UNGUARDABLE first. Decide whether you can live with those."
   - "Put the guards for ruin-level and high-likelihood failures in place before you start."
+output_sample:
+  input:
+    - "Your plan: what, by when, with what, and what success looks like"
+    - What the plan depends on (advised)
+    - What went wrong last time (optional)
+    - The loss you cannot afford (optional)
+  output:
+    - name: THE FAILURE
+      contains: One line that says what is true on a set date if the plan has failed.
+    - name: WAYS IT FAILS
+      contains: Ten to fifteen failures in five groups, each rated for likelihood and damage, with history marked.
+    - name: GUARDS
+      contains: The cheapest guard for each failure, with who does it and by when. Dropped guards are noted.
+    - name: UNGUARDABLE
+      contains: Failures no guard can cover, the early sign of each, and whether the plan is still worth it.
+    - name: INCENTIVES
+      contains: Who gains if the plan fails or stalls, and who is paid either way.
+    - name: VERDICT
+      contains: Go, go with guards first, or do not go, with one reason.
+    - name: MISSING
+      contains: Assumptions, past plans or limits you did not give.
 
 how_it_works:
   - title: "States the failure"

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set recipe for each language.
 new_slug: dev-container-setup-builder
 name: Dev container setup builder
-summary: Name your project and language. Get a ready dev container with tools
-  and saved volumes, so setup is the same each time.
+summary: Set up a dev container for your project. Give it your project folder. You get a .devcontainer folder with tools for your languages and saved settings.
 job: build-software
 headline: Dev container setup builder
-subhead: Name your project and language. Get a ready dev container with tools
-  and saved volumes, so setup is the same each time. Bring your project folder.
-  Use the result to plan your next step.
+subhead: Give your AI your project folder. It finds your project name and languages, then writes the dev container files. You get a workspace that sets up the same way each time.
 explain: |
   A .devcontainer folder that opens your project in the same clean, sandboxed workspace every time, with Claude Code and the right language tools already installed. No more "works on my machine".
 
@@ -17,8 +14,11 @@ when:
   - You want a safe sandbox for running an AI coding agent on your code.
   - New teammates lose a day installing tools before they can run the project.
   - Your project uses more than one language and the setup is fiddly.
-  - You need your shell history and settings to survive when the container is
-    rebuilt.
+  - You need your shell history and settings to survive when the container is rebuilt.
+not_for:
+  - "You already have a working dev container and only need a small change: edit the files by hand."
+  - "You want to deploy your app to production: use your hosting provider's container steps, as this is for development only."
+  - "You have a general Docker question: ask your AI directly or read the Docker docs."
 you_give:
   - Your project folder
   - The languages or tools you use (optional)
@@ -30,8 +30,29 @@ you_get:
   - Saved volumes for history and settings
   - A short note on how to open it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your project folder in an AI that can read and write files, such as Claude Code. A plain chat can only give you the file text to copy.
+  - "Paste the skill and say: set up a devcontainer for this project. Add any languages or ports you need."
+  - Before you accept the files, read them. The container gets extra network rights (NET_ADMIN), it installs plugins from other people, and one setup step deletes your existing .venv folder.
+  - Check that the base template files exist. If they are missing, ask your AI to say which ones it needs before it writes anything.
+  - Open the project in VS Code and choose Reopen in Container. Or run devcontainer up --workspace-folder . in your terminal.
+output_sample:
+  input:
+    - Your project folder, with files like package.json, pyproject.toml, Cargo.toml or go.mod
+    - Languages or tools you want added (optional)
+    - Ports your app needs open (optional)
+  prerequisites:
+    - An AI that can read your project files and write new files
+    - VS Code with the Dev Containers extension, or the devcontainer command line tool, and Docker to open the result
+  output:
+    - name: Dockerfile
+      contains: The build steps for the container, with Python and Node tools plus the helper tools your project needs.
+    - name: devcontainer.json
+      contains: "The container settings: editor add-ons, saved volumes, and the setup commands that run after the container is created."
+    - name: post_install.py
+      contains: The script that finishes setup once the container is created.
+    - name: .zshrc
+      contains: Your shell settings inside the container.
+    - name: install.sh
+      contains: A helper that adds the devc command for managing the container.
+    - name: Start instructions
+      contains: A short note on how to open the project in the container.

@@ -2,37 +2,109 @@ thinking: high
 thinking_why: The numbers must tie together across years.
 new_slug: startup-financial-model-builder
 name: Startup financial model builder
-summary: Give your numbers and plans. Get a 3 to 5 year model with revenue,
-  costs, cash flow and scenarios.
+summary: Turn your pricing, customer and hiring plans into a 3 to 5 year startup financial model with cash, runway and three scenarios.
 job: money-and-investing
 headline: Startup financial model builder
-subhead: A three to five year model for your startup, built so you can change
-  one assumption and watch cash, profit and runway move. It matters when you
-  pitch investors or plan hires, because every number traces back to a stated
-  input.
+subhead: Give it your pricing, new customers per month, churn, team plan and cash. It builds revenue by customer group, costs by type, cash flow and runway, then runs a cautious, a likely and an optimistic case. You get a model where each number traces back to a stated assumption.
 explain: |
-  A three to five year model for your startup, built so you can change one assumption and watch cash, profit and runway move. It matters when you pitch investors or plan hires, because every number traces back to a stated input.
+  A startup financial model builder turns your plans into a 3 to 5 year forecast you can change. Change one assumption and watch cash, profit and runway move. It matters when you pitch investors or plan hires, because every number traces back to an input you stated.
 
-  Revenue is built by cohort: new customers each month, how many stay, and what each pays, with upsell on top. Costs are split into cost of goods, sales and marketing, product, and admin. The model then rolls into cash flow and a runway line, and runs best, base and worst cases. Hosting, payment fees and support are treated as costs that grow with customers, while salaries step up with hiring plans.
+  Revenue is built by cohort: the customers you add each month, how many stay, and what each pays, with upsell on top. Costs split into cost of goods, sales and marketing, product, and admin. Hosting, payment fees and support grow with customers, while salaries step up with your hiring plan. The model rolls into cash flow and one runway figure, defined the same way everywhere, and runs conservative, base and optimistic cases.
+
+  Benchmark ranges in the skill are rules of thumb with no source. Treat them as prompts to check, not facts.
 when:
   - You are preparing a pitch and investors will ask for a multi-year forecast.
   - You need to see whether a planned hire still leaves enough cash.
   - You want to compare a cautious plan with an aggressive growth plan.
-  - Your current spreadsheet is one growth percentage applied to every month.
+  - Your current spreadsheet applies one growth percentage to every month.
+not_for:
+  - You want advice on a raise, dilution or a board pack. Use the Startup finance advisor.
+  - You only need the month your cash runs out from past cash data. Use the Startup runway forecaster.
+  - You need tax, audited accounts or a model an investor has signed off. Use an accountant or finance lead.
 you_give:
   - Pricing and plan tiers
   - Expected new customers per month
   - Retention or churn rates
-  - Team size and hiring plan
+  - Team size, pay and hiring plan
   - Current cash and funding (optional)
 you_get:
-  - A cohort-based revenue forecast
-  - A cost structure by category
-  - A cash flow and runway view
-  - Three scenarios side by side
-  - A list of the assumptions that move the result most
+  - A revenue forecast built by customer group
+  - Costs split by type
+  - Cash flow and one runway figure
+  - Three cases side by side
+  - The assumptions that move the result most
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste the text of SKILL.md into a new chat. If it can make an Excel file, ask for one with live formulas.
+  - Say what kind of business it is and paste your pricing, new customers per month, churn, hiring plan and cash.
+  - Mark which inputs are real and which are guesses. It will label the guesses as assumptions.
+  - Check that cash rolls forward each month and that the runway figure matches the cash table.
+  - Look at the list of assumptions that move the result most. Test each one against what you know.
+  - Ask an accountant or finance lead to check the model before an investor sees it.
+how_it_works:
+  - title: Set the business model
+    text: It picks the revenue logic for subscription, marketplace, e-commerce or services work, and confirms your pricing.
+  - title: Build revenue by cohort
+    text: It tracks each month's new customers, how many stay and what they pay, plus upsell.
+  - title: Model the costs
+    text: It splits costs into cost of goods, sales and marketing, product and admin, and treats fixed and variable costs differently.
+  - title: Plan the hires
+    text: It adds each role with full pay cost and a delay for hiring and ramp-up.
+  - title: Roll up cash and runway
+    text: It builds monthly cash flow and one runway figure from the next three months of burn.
+  - title: Run three cases
+    text: It changes customer growth, churn, price and acquisition cost for cautious and optimistic cases, keeping the rest fixed.
+  - title: Check and report
+    text: It checks totals tie, lists the assumptions that move the result most and marks benchmarks as unsourced.
+output_shape: |
+  Assumptions table: <input> | <value> | <from you or an assumption>
+  Revenue by cohort: <month> | <new customers> | <retained customers> | <revenue>
+  Costs: <month> | <cost of goods> | <sales and marketing> | <product> | <admin>
+  Cash and runway: <month> | <beginning cash> | <net burn> | <ending cash> | <runway>
+  Key metrics: <MRR or ARR> | <CAC> | <LTV> | <payback> | <burn multiple>
+  Scenarios: <metric> | <conservative> | <base> | <optimistic>
+  Biggest movers: <assumption 1>, <assumption 2>, <assumption 3>
+output_sample:
+  input:
+    - Pricing and plan tiers
+    - Expected new customers per month
+    - Retention or churn rates
+    - Team size, pay and hiring plan
+    - Current cash and any funding coming in (optional)
+  prerequisites:
+    - An AI that can make an Excel file, if you want a workbook with live formulas (optional)
+  output:
+    - name: Assumptions table
+      contains: Every input, its value and whether it came from you or is a guess.
+    - name: Revenue by cohort
+      contains: New customers, customers kept and revenue for each month.
+    - name: Cost structure
+      contains: Cost of goods, sales and marketing, product and admin costs for each month.
+    - name: Cash flow and runway
+      contains: Beginning cash, burn, ending cash and runway each month, with the cash-out month if any.
+    - name: Key metrics
+      contains: Recurring revenue, acquisition cost, customer lifetime value, payback and burn multiple.
+    - name: Scenario comparison
+      contains: Cautious, likely and optimistic cases side by side.
+    - name: Biggest movers
+      contains: The assumptions that change cash or runway the most, with checks that totals tie.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It can build an Excel workbook with live formulas when file tools are on.
+    - name: ChatGPT
+      why: Its data analysis tool can build and test a spreadsheet from your inputs.
+  inputs:
+    - Your last 6 months of actual revenue and costs
+    - Quotes for the roles you plan to hire
+    - Your payment terms with customers
+terms:
+  - term: Cohort
+    meaning: A group of customers who signed up in the same month.
+  - term: Runway
+    meaning: How many months your cash lasts at the coming burn.
+  - term: ARPU
+    meaning: Average revenue per user. What one customer pays in a month.
+  - term: CAC
+    meaning: Customer acquisition cost. What you spend to win one customer.
+  - term: Burn multiple
+    meaning: Cash burned divided by new yearly revenue added.

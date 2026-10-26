@@ -1,6 +1,6 @@
 new_slug: youtube-readiness-checker
 name: "YouTube readiness checker"
-summary: "Tell it your AOV, ad stack and Meta winners. Get a yes or wait on YouTube, with a score out of 100."
+summary: "Check if your store is ready for YouTube ads. Give it your AOV, Google setup and Meta winners. You get a YES or WAIT and a score out of 100."
 job: run-google-ads
 thinking: medium
 thinking_why: "It checks ten facts against fixed rules and explains the call, so a mid-size model does it well."
@@ -17,6 +17,10 @@ when:
   - You have winning video ads on Meta or TikTok and wonder if YouTube is next.
   - Someone says to put most of your Google budget into YouTube and you want to check the logic.
   - Your Google budget is mostly brand and Shopping and you want to know if it is time to add video.
+not_for:
+  - "Your store has no proven video ad yet: test creative on Meta or TikTok first, then come back."
+  - "Your AOV is under $50 and you cannot raise it: fix your offer and order value first, or stay on Shopping and brand Search."
+  - "You want to read results from a YouTube test already running: use the YouTube results reader, or ask a person who runs your Google Ads."
 
 you_give:
   - Your AOV and margin
@@ -36,6 +40,37 @@ how_to_use:
   - Say your budget, and how many weeks you can wait before judging.
   - If the call is WAIT, fix the checks that failed first and run it again.
   - If it is YES, start with the setup it gives, and use the results reader to judge the ads.
+output_sample:
+  input:
+    - Your AOV and margin
+    - Your winning video ads on Meta or TikTok, with spend and results
+    - Your current Google campaigns and brand share
+    - Your budget and how many weeks you can wait
+    - How risky your claims are, and whether people search for your category (optional)
+  prerequisites:
+    - Your results from Meta Ads Manager or Google Ads, for set dates (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Call and readiness score
+      contains: A YES or WAIT call and a score out of 100, with the sum of passed checks shown.
+    - name: Fit checks
+      contains: Pass or fail for AOV, video fit, budget and patience, and how well you know your customer.
+    - name: Timing checks
+      contains: Pass or fail for Meta winners, working Shopping and brand Search, and whether the money comes from something that works.
+    - name: Page and claims checks
+      contains: Pass or fail for your page and offer, claim risk, and whether you can fund the daily budget.
+    - name: Hard stops
+      contains: Any problem that forces a WAIT, whatever the score, or none.
+    - name: Start with
+      contains: The Demand Gen setup to begin with, plus the agency's starting budget figure.
+    - name: Audiences to test
+      contains: Three audiences to try with the same best ads, and who to exclude.
+    - name: Creative
+      contains: The video format and hook rules for Shorts.
+    - name: Weeks 1 to 6 signals
+      contains: Early numbers to watch before purchases show up.
+    - name: Budget split and skip list
+      contains: How to split spend by role, and what to leave out.
 
 how_it_works:
   - title: Checks fit

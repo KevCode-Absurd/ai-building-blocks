@@ -1,15 +1,13 @@
 slug: connect-production-yield-to-mix-contribution
 name: Connect production yield to mix contribution
-summary: A yield-linked product contribution and capacity comparison
+summary: "Turn measured batch yield into cost per good unit, then check whether your planned product mix fits the bottleneck hours you have."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - manufacturing-yield-cost-bridge
   - product-mix-capacity-checker

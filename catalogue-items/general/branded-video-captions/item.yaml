@@ -11,6 +11,7 @@ inputs:
   - {type: video_ads, required: true}
   - {type: script, required: true}
   - {type: brand_brain, required: false}
+  - {type: edit_plan, required: false}
 outputs:
   - {type: video_ads}
 uses: [pre-launch-ad-checker]

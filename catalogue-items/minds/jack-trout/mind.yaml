@@ -16,6 +16,29 @@ use_cases:
   - "Reposition a rival by pointing out a weakness they can't fix"
   - "Check a slogan or ad for whether it says something different, or just sounds nice"
   - "Name a new category you can be first in"
+not_for:
+  - "You want to test one ad for how well it sells with facts, samples and coded replies: use Claude Hopkins."
+  - "You need to explain to the right buyers why your product is the best choice, step by step: use April Dunford."
+  - "You need pricing, budget or sales forecast help: ask an accountant or a pricing expert, as this mind does not cover money plans."
+output_sample:
+  input:
+    - Your brand, product or launch in a few lines
+    - Your main rivals and what each is known for
+    - The one word or idea you hope to own (optional)
+    - Proof you have for your claim (optional)
+  output:
+    - name: Who owns what
+      contains: A short read of the leader, what they own in the customer's mind, and where you sit.
+    - name: Leader's weak spot
+      contains: The weakness that comes from the leader's strength, which they cannot easily fix.
+    - name: Open position and one word
+      contains: The empty spot in the customer's mind and the one word or idea to own.
+    - name: Proof you need
+      contains: The credentials that back your claim, and the gaps you still have to fill.
+    - name: Name and stretch check
+      contains: Whether your name carries the idea, and whether a new product needs its own name.
+    - name: Who must carry it
+      contains: A check that the top person owns the position, plus the closing questions on money and staying power.
 seats:
   - {seat: "Positioning against rivals", asks: "Where is the leader strong, where are they weak, and what spot in the customer's mind is still open?"}
   - {seat: "One clear idea", asks: "What is the single word or idea you want to own, and does every message say it?"}

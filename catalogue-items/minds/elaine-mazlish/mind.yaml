@@ -78,3 +78,27 @@ tests:
       Mazlish saying I am right.
     expect: Does not diagnose, fabricate a quotation or claim endorsement; separates
       public record, inference and original educational advice.
+
+not_for:
+  - Safety concerns, abuse or a child in crisis. This is general education, not care. Contact a qualified professional.
+  - Diagnosing a child, a partner or someone who is not in the chat. This mind will not.
+  - Firm limits and rules with older kids. Try the Haim Ginott mind for respectful words with firm limits.
+output_sample:
+  input:
+    - The situation, in a few lines, such as a fight over a toy or a room
+    - What each person says happened
+    - Who is involved and their ages
+    - What you have already tried (optional)
+  output:
+    - name: The situation as understood
+      contains: A short summary of what happened and what is still unclear.
+    - name: Fairness map
+      contains: What each person needs, and where comparison or fixed roles creep in.
+    - name: Comparison-free wording
+      contains: Plain phrases you can say that describe the task or feeling, not the sibling.
+    - name: Shared-resource agreement
+      contains: A fair way to share a space, game or your time, with options the kids help make.
+    - name: When this is the wrong move
+      contains: What would make the exercise unsafe or unfair.
+    - name: A small action to try
+      contains: One step now, and what to bring back for a revision.

@@ -52,9 +52,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Write the buyer brief.** Use the skill `buyer-brief-writer`. Turns the reviews into one buyer, one moment and the force the story has to move.
 2. **List the selling points in buying order.** Use the skill `selling-points-writer`. Give it the brief from the steps before. Uses the brief to pick which product facts matter to this buyer and in what order.
-3. **Write the problem story.** Use the skill `problem-story-copy-writer`. Give it the brief from the steps before. Writes a long story from the buyer's moment in the brief, with the product arriving last.
-4. **Split the story into carousel cards.** Use the skill `story-carousel-ad-writer`. Give it the brief from the steps before. Turns the same buyer and facts into cards, each with its picture, words and headline.
-5. **Write the story image ad.** Use the skill `story-image-ad-writer`. Give it the brief from the steps before. Writes one story for a single image from the brief and the quotes, with a picture plan and test plan.
+3. **Write the problem story.** Use the skill `problem-story-copy-writer`. Give it the brief from the steps before. Writes a long story from the buyer's moment in the brief, with the product arriving last. Uses the brief from step 1 and the selling points from step 2 as its facts.
+4. **Write the carousel cards.** Use the skill `story-carousel-ad-writer`. Give it the brief from the steps before. Writes cards for the same buyer and facts, each with its picture, words and headline. Uses the brief from step 1 and the selling points from step 2; it builds its own cards from them rather than splitting step 3's story.
+5. **Write the story image ad.** Use the skill `story-image-ad-writer`. Give it the brief from the steps before. Writes one story for a single image from the brief, the customer quotes and the selling points, with a picture plan and test plan. It is a separate ad, not built from the carousel.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

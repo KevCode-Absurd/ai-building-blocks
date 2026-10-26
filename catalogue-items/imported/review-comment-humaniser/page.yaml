@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It rewrites short comments.
 new_slug: review-comment-humaniser
 name: Review comment humaniser
-summary: Give it a code review comment. Get a direct version that reads like a
-  teammate wrote it.
+summary: Turn a wordy code review comment into a short, direct one with the line, a severity label and a fix. A code review comment rewriter for teammates.
 job: write-and-tell-stories
 headline: Review comment humaniser
-subhead: Give it a code review comment. Get a direct version that reads like a
-  teammate wrote it. Bring one or more code review comments. Use the result to
-  plan your next step.
+subhead: Give it a code review comment. Get a direct version that reads like a teammate wrote it. Bring one or more code review comments. Use the result to plan your next step.
 explain: |
   Code review comments rewritten to sound like a teammate: short, direct and with a fix. They get read and acted on, not skimmed past.
 
@@ -18,6 +15,10 @@ when:
   - Teammates ignore your long feedback.
   - You want to paste a draft review and tighten it.
   - A new reviewer needs a clear format to follow.
+not_for:
+  - You are writing about a security finding, such as auth or secrets. Write it in full sentences yourself, or ask a human reviewer.
+  - You need to argue an architecture choice or welcome a new contributor. These need a real conversation, so talk to a person.
+  - You want your AI to review the code and find the bugs. Ask your AI for a plain code review first, then paste its comments here.
 you_give:
   - One or more code review comments
   - The line numbers or files they refer to (optional)
@@ -27,7 +28,25 @@ you_get:
   - Severity labels for each
   - A shorter review that is easier to act on
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code running, files or paid tools are needed.
+  - Paste one review comment. Add its file name and line number if you have them.
+  - Add the code snippet if the fix is not clear from the comment (optional).
+  - "Read the reply. Each comment should look like: L42: bug: problem. Fix."
+  - Check that the label is honest. A real bug must not be called a nit.
+  - Paste the result into your pull request. Keep security and design comments in full sentences.
+output_sample:
+  input:
+    - One or more code review comments
+    - The file name and line numbers they refer to (optional)
+    - The code snippet for context (optional)
+  output:
+    - name: Rewritten comments
+      contains: One comment per line in the shape line number, label, what is wrong, and the fix, ready to paste into your pull request.
+    - name: Severity labels
+      contains: Each comment starts with bug, risk, nit or q, so the reader knows how urgent it is.
+    - name: Multi-file and range format
+      contains: File name before the line number when comments span files, and a line range when the issue covers several lines.
+    - name: LGTM line
+      contains: If the change is solid and you have nothing concrete to add, the review is just LGTM.
+    - name: Full prose note
+      contains: For security, architecture or onboarding comments, a short paragraph instead of a one-liner.

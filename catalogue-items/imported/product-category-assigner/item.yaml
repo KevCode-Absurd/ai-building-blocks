@@ -11,7 +11,7 @@ inputs:
   - type: tool_connection
     required: true
 outputs:
-  - type: audit_report
+  - type: spreadsheet
 uses: []
 origin: imported
 source:

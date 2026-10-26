@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must catch subtle mistakes.
 new_slug: analysis-checker
 name: Analysis checker
-summary: Give it an analysis before you share it. Get a check of the method, the
-  math and any bias.
+summary: Check your analysis for math errors, bias and weak method before you share it. Get a confidence rating and fixes.
 job: track-numbers
 headline: Analysis checker
-subhead: Give it an analysis before you share it. Get a check of the method, the
-  math and any bias. Bring the analysis as a report, file, query or description.
-  Use the result to plan your next step.
+subhead: Give it an analysis before you share it. Get a check of the method, the math and any bias. Bring the analysis as a report, file, query or description. Use the result to plan your next step.
 explain: |
   Catch errors in your analysis before anyone else does. It checks the method, the maths and bias, then gives a confidence rating and fixes.
 
@@ -18,6 +15,10 @@ when:
   - A chart looks too good and you want to know why.
   - You inherited someone else's analysis and do not trust it yet.
   - You want to be sure your comparison is fair.
+not_for:
+  - "You need to clean raw data first: fix the file in your spreadsheet or ask a data person, then check the analysis."
+  - "You want a dashboard built: use a dashboard tool such as Google Sheets or Looker Studio."
+  - "You want a new analysis from scratch: ask your AI to run it, then bring the result here."
 you_give:
   - The analysis as a report, file, query or description
   - The question it was meant to answer (optional)
@@ -28,8 +29,31 @@ you_get:
   - Any pitfalls found
   - A confidence rating and fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your analysis below it. This can be a report, a query with its results, a chart with its data, or a short description.
+  - Add the question it should answer and who will read it, if you know.
+  - Read the overall verdict first, then the issues found.
+  - Fix the issues, or add the caveats it lists, before you share.
+  - If you can, use an AI that runs code. It can then recalculate your key numbers.
+output_sample:
+  input:
+    - Your analysis as a report, file, query with results, chart or short description
+    - The question it was meant to answer (optional)
+    - Who will read it (optional)
+  prerequisites:
+    - An AI that can run code helps with recalculating numbers, but it is not required
+  output:
+    - name: Overall Assessment
+      contains: "One verdict: ready to share, share with caveats, or needs revision."
+    - name: Methodology Review
+      contains: Whether the question, data, population, metric definitions and comparison are sound.
+    - name: Issues Found
+      contains: Each problem found, such as join explosion or survivorship bias, and how serious it is.
+    - name: Calculation Spot-Checks
+      contains: Key numbers recalculated on their own, with totals and percentages checked.
+    - name: Visualization Review
+      contains: Notes on charts that mislead or hide detail.
+    - name: Suggested Improvements
+      contains: Changes that would make the analysis stronger before you share it.
+    - name: Required Caveats for Stakeholders
+      contains: Limits your readers should be told about up front.

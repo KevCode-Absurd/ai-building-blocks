@@ -1,6 +1,6 @@
 new_slug: store-revenue-forecast-builder
 name: "Store revenue forecast builder"
-summary: "Give it past spend, cohorts and a calendar. Get daily new and returning revenue and the target gap."
+summary: "Build a store revenue forecast from your spend, repeat customers and sales calendar. See the gap to your target and the actions to close it."
 job: track-numbers
 thinking: high
 thinking_why: "It fits two models and layers events on top, so a stronger model keeps the steps straight and flags weak data."
@@ -17,6 +17,10 @@ when:
   - You must give your board or team a revenue number for next quarter.
   - You are deciding how much to spend to hit a target.
   - You want to find out on day 5, not day 22, that you are behind.
+not_for:
+  - "You have under 12 months of daily data: use a plain guess of spend times return, marked weak, or ask your accountant."
+  - "You want a forecast for one campaign only: use a simple sheet of spend, expected sales and your break-even point."
+  - "You want profit, not revenue: pair this with the daily contribution margin tracker, as no sibling here covers it yet."
 
 you_give:
   - 12 to 36 months of daily ad spend and new-customer revenue
@@ -37,6 +41,33 @@ how_to_use:
   - Paste the calendar of what you plan to launch, discount and send.
   - Ask for the spend needed to reach your target, then ask if you can really spend that much.
   - Compare daily actuals to the forecast every day.
+output_sample:
+  input:
+    - 12 to 36 months of daily ad spend and new-customer revenue
+    - Your monthly customer groups with repeat rates by age
+    - Your returning customer order value
+    - A calendar of launches, sales and emails (optional)
+    - Your revenue target
+  prerequisites:
+    - An AI that can read attached files or pasted tables
+    - Your own sales exports, for example from Shopify
+  output:
+    - name: DATA USED
+      contains: How many months of daily data and customer groups were used, and which days were dropped and why.
+    - name: NEW-CUSTOMER MODEL
+      contains: The line fitted to spend and efficiency, and the new revenue expected at your planned daily spend.
+    - name: RETURNING MODEL
+      contains: Each monthly customer group, its repeat rate at its age, and the returning revenue it brings.
+    - name: SEASONALITY and EVENTS
+      contains: Seasonal patterns from past years and each planned event with an effect sized from a past one.
+    - name: FORECAST
+      contains: "Daily and monthly revenue: new customers, plus returning customers, plus events."
+    - name: TARGET and GAP
+      contains: Your target, the gap to the forecast, and sized actions to close it.
+    - name: DAILY CHECK
+      contains: A comparison of actual to forecast, flagged if you are off by day 5.
+    - name: CHECKS MISSED and MISSING
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Splits the forecast

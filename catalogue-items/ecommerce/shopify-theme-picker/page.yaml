@@ -1,6 +1,6 @@
 new_slug: shopify-theme-picker
 name: "Shopify theme picker"
-summary: "Describe your store. Get a theme shortlist, each scored out of 100 on your must-haves."
+summary: "Find the right Shopify theme for your store. Give your must-have features and budget, and get a shortlist of 3 to 5 themes, each scored out of 100."
 job: set-up-store
 thinking: medium
 thinking_why: "It weighs a few options against your list, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You are starting a Shopify store and need to choose a theme.
   - You are thinking of changing theme and want to know what you would lose.
   - You have found a theme you like and want it checked against your needs.
+not_for:
+  - "Your live theme works and you plan no change: skip this and check one theme by hand in the Shopify theme store."
+  - "You want a custom design built from scratch: hire a Shopify developer or designer instead."
+  - "You want to judge a theme you have not seen: open its demo page first, as this skill cannot score what it has not read."
 
 you_give:
   - What you sell and how many products
@@ -36,6 +40,28 @@ how_to_use:
   - Paste what you sell, your product count and your budget.
   - Look at each theme's demo on your phone, then check the table.
   - Try your top pick free before you pay. Back up your live theme before big changes.
+output_sample:
+  input:
+    - What you sell and how many products you have
+    - Your must-have features, such as swatches or a size guide
+    - Your budget (optional)
+    - Stores you admire (optional)
+    - Links or screenshots of themes you are weighing (optional)
+  output:
+    - name: Must-haves
+      contains: Your list of features every theme must have, built from your answers and competitor stores.
+    - name: Store filters
+      contains: The industry, catalogue size and feature filters to apply in the Shopify theme store.
+    - name: Theme table
+      contains: 3 to 5 themes with a pass or fail on features, plus developer, mobile demo and cost.
+    - name: Score
+      contains: A score out of 100 for each theme, with the points shown for each check.
+    - name: Free or paid
+      contains: Both views on free and paid themes, and which one fits you.
+    - name: Trial plan
+      contains: Steps to try your top pick free, including a backup of your live theme.
+    - name: Not run
+      contains: Any check it could not do, and what it needs from you to do it.
 
 how_it_works:
   - title: Lists features first

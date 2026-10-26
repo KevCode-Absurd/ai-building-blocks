@@ -1,6 +1,6 @@
 slug: plan-a-manual-first-customer-delivery
 name: Plan a manual first customer delivery
-summary: Share the source files. Get a delivery procedure, capacity options and unresolved handoff checks.
+summary: Write down how you will deliver to your first customer by hand, check your team has the hours, and see what is still unsettled.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - team-capacity-planner
 steps:
   - uses: process-and-sop-writer
-    note: Document the real manual delivery path, customer inputs, owners, exceptions, acceptance evidence and escalation. Do not describe unbuilt automation as available.
+    note: "Write the real manual delivery path: owners, what the customer sends, done checks, exceptions and who to tell. Leave out anything not built yet. Hand step 2 the steps with their effort."
   - uses: team-capacity-planner
-    note: Check the initial delivery workload against actual available roles, effort and fixed commitments; return feasible options and missing estimates for review.
+    note: Check the procedure's effort against the real roles, hours and other duties. Return feasible options and any missing estimates for review.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -1,7 +1,7 @@
 slug: problem-story-copy-writer
 renamed_from: tell-the-problem-so-buyers-see-themselves
 name: "Problem story copy writer"
-summary: "Paste your buyer and product facts. Get a long problem story with your product arriving last."
+summary: "Write a long problem story for buyers who do not know an answer exists, with your product arriving late and every fact from your own notes."
 category: general
 type: skill
 role: make
@@ -11,6 +11,7 @@ inputs:
   - {type: brief, required: true}
   - {type: product_data, required: true}
   - {type: brand_brain, required: false}
+  - {type: ad_copy, required: false}
 outputs:
   - {type: ad_copy}
 uses: [buyer-brief-writer]

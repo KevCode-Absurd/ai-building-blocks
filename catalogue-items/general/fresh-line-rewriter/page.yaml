@@ -1,6 +1,6 @@
 new_slug: fresh-line-rewriter
 name: "Fresh line rewriter"
-summary: "Paste your main claim and rival ads. Get fresh ways to say the same true claim, with a swap test."
+summary: "Rewrite an ad line that sounds like every rival's. Give it your claim and get fresh ways to say it, each checked with a swap test."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It must judge which versions keep the claim unchanged and which a rival could also say."
@@ -17,6 +17,10 @@ when:
   - Your ad says what every rival's says, in the same words.
   - You have a claim that is true and tested, but it reads like wallpaper.
   - A line performed once and is now tired.
+not_for:
+  - Your claim is untested or not yet true. Test it first, because this only rewords a claim that is already true.
+  - The best angle is an honest drawback. Use the Flaw-first ad writer instead.
+  - You need the final lines checked against proof. Use the Claim and proof matcher instead.
 
 you_give:
   - The ad copy or main claim you want to say better
@@ -34,6 +38,26 @@ how_to_use:
   - Paste three or more rival ads if you have them.
   - Read each fresh version against the flat claim. Make sure nothing was added.
   - Test the picked line against your current one.
+output_sample:
+  input:
+    - Your ad copy or main claim
+    - Rival ads or lines (optional)
+    - A brief with your buyer and the point to make (optional)
+  output:
+    - name: Flat claim
+      contains: Your claim as one plain, true sentence with no style, used to check every fresh version.
+    - name: How rivals say it
+      contains: The words, images and structures rivals use for the same claim, so you know what to avoid.
+    - name: Fresh versions
+      contains: Five to eight new lines, each with a same-claim check, a swap-test result and the feeling it leaves.
+    - name: Picked line
+      contains: The best version that passed the swap test, trimmed, with one line on why it won.
+    - name: Picture note
+      contains: One sentence on what the picture should show so it makes the same point as the words.
+    - name: MISSING
+      contains: Any facts the skill needed but did not have, marked instead of invented.
+    - name: Checks missed
+      contains: One line for each check still failing and why, or none.
 
 how_it_works:
   - title: States the claim flat

@@ -1,6 +1,6 @@
 slug: check-a-conference-abstract-against-results
 name: Check a conference abstract against results
-summary: Share the source files. Get a source-linked abstract revision and overclaim list.
+summary: Check your conference abstract against your study results. Get an overclaim list with table references and a plain revision that fits the word limit.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,30 +8,26 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
-    required: false
+    required: true
   - type: copy_draft
-    required: false
-  - type: brand_brain
+    required: true
+  - type: question
     required: false
 outputs:
-  - type: document
   - type: audit_report
   - type: copy_draft
-  - type: feedback_notes
 uses:
   - source-note-summariser
   - unsupported-claim-spotter
   - plain-english-editor
 steps:
   - uses: source-note-summariser
-    note: Extract located methods, population, outcomes and limitations from the supplied completed study; retain table and page references.
+    note: Extract located methods, population, outcomes and limitations from the supplied completed study; retain table and page references. Hands step 2 the study record.
   - uses: unsupported-claim-spotter
-    note: Check the existing abstract against that evidence and list unsupported numbers, causal assertions and claimed novelty.
+    note: Uses your abstract, not step 1's output, as the text to check, and step 1's record as the evidence. Lists unsupported numbers, causal assertions and claimed novelty, and hands step 3 that overclaim list.
   - uses: plain-english-editor
-    note: Edit the supplied abstract for the stated audience and word limit, preserving verified results and retaining unresolved claims as marked gaps.
+    note: Edits your supplied abstract (not step 2's output) for the stated audience and word limit, using step 2's overclaim list. Preserves verified results and keeps unresolved claims as marked gaps.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

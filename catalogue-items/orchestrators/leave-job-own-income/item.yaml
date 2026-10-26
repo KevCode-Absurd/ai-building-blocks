@@ -1,29 +1,47 @@
 slug: leave-job-own-income
-name: "Leave a steady job and earn from your own work"
-summary: "Give it your job, pay and skills. Get an income floor, fees, a safety plan and a way to leave."
+name: Leave a steady job and earn from your own work
+summary: Plan your move from salary to your own clients. Get an income floor, fees, a safety plan and an exit plan, with the sums checked.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: strategy
 level: intermediate
 inputs:
-  - {type: question, required: true}
-  - {type: persona, required: false}
-  - {type: brief, required: false}
+  - type: question
+    required: true
 outputs:
-  - {type: plan}
-uses: [income-floor-calculator, client-fee-and-cap-setter, first-customers-by-hand-planner, ruin-risk-stress-tester, lean-year-cash-rules-writer, buy-in-conversation-planner, job-exit-plan-writer]
+  - type: plan
+uses:
+  - income-floor-calculator
+  - client-fee-and-cap-setter
+  - first-customers-by-hand-planner
+  - ruin-risk-stress-tester
+  - lean-year-cash-rules-writer
+  - buy-in-conversation-planner
+  - job-exit-plan-writer
 steps:
-  - {uses: income-floor-calculator, note: "A monthly floor, the steady streams that cover it and what stops if you are ill."}
-  - {uses: client-fee-and-cap-setter, note: "A fee, billing terms and a client cap that cover the floor."}
-  - {uses: first-customers-by-hand-planner, note: "A hand-won first client plan, using the question from step one."}
-  - {uses: ruin-risk-stress-tester, note: "The worst case for the plan and a version that survives it."}
-  - {uses: lean-year-cash-rules-writer, note: "A cash buffer, a trigger, who to ask early and how."}
-  - {uses: buy-in-conversation-planner, note: "A plan for the talk with family or partners before you hand in notice."}
-  - {uses: job-exit-plan-writer, note: "The notice, the order of conversations and the first-quarter income to line up."}
+  - uses: income-floor-calculator
+    note: "A monthly floor, the steady streams that cover it and what stops if you are ill. Hands the floor and the gap to step 2."
+  - uses: client-fee-and-cap-setter
+    note: "A fee, billing terms and a client cap that cover the floor. Hands the fee to step 3."
+  - uses: first-customers-by-hand-planner
+    note: "Uses your own service, the fee from step 2 and the question from step 1. Hands a plan to win your first clients by hand to the stress test."
+  - uses: ruin-risk-stress-tester
+    note: "The worst case for the plan and a version that survives it. Hands the capped plan to step 5."
+  - uses: lean-year-cash-rules-writer
+    note: "A cash buffer, a trigger, who to ask early and how. Hands the cash rules to step 6."
+  - uses: buy-in-conversation-planner
+    note: "Uses what you want your family or partner to agree to, plus the cash rules from step 5. Hands a plan for the talk to step 7."
+  - uses: job-exit-plan-writer
+    note: "The notice, the order of conversations and the first-quarter income to line up. Uses every earlier result."
 origin: rebuilt
 version: 1.0.0
-minds: [wolfgang-amadeus-mozart]
+minds:
+  - wolfgang-amadeus-mozart
 credits:
-  - {title: "The Letters of Wolfgang Amadeus Mozart (1769-1791), Volume II", by: "Wolfgang Amadeus Mozart, collected by Ludwig Nohl, translated by Lady Wallace", url: "https://archive.org/details/lettersofwolfgan02moza", used: "The order of the steps: work out the monthly income you need, set your fees and how many clients to take, win your first paying clients before you leave, stress-test the plan, write your rules for thin months, plan the talk with the people who rely on you, plan how you leave"}
+  - title: The Letters of Wolfgang Amadeus Mozart (1769-1791), Volume II
+    by: Wolfgang Amadeus Mozart, collected by Ludwig Nohl, translated by Lady Wallace
+    url: https://archive.org/details/lettersofwolfgan02moza
+    used: "The order of the steps: work out the monthly income you need, set your fees and how many clients to take, win your first paying clients before you leave, stress-test the plan, write your rules for thin months, plan the talk with the people who rely on you, plan how you leave"
 generated_from: intake/mozart-letters-go-independent/skeleton.yaml
+needs_mode: manual

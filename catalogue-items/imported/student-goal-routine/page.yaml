@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adapts a goal-setting method to your class.
 new_slug: student-goal-routine
 name: Student goal-setting routine builder
-summary: Give it a unit or project. Get a routine where students set clear goals
-  and plan to reach them.
+summary: Build a student goal-setting routine for any unit or project. You get weak and strong goal examples, checkpoints and a fill-in template.
 job: teach-and-train
 headline: Student goal-setting routine builder
-subhead: A goal-setting routine students can actually follow, with checkpoints
-  that keep goals alive after day one. Vague goals like 'do better' are swapped
-  for ones students can measure and plan around.
+subhead: A goal-setting routine students can actually follow, with checkpoints that keep goals alive after day one. Vague goals like 'do better' are swapped for ones students can measure and plan around.
 explain: |
   A goal-setting routine students can actually follow, with checkpoints that keep goals alive after day one. Vague goals like 'do better' are swapped for ones students can measure and plan around.
 
@@ -18,6 +15,10 @@ when:
   - Students write goals like 'try harder' that never get checked.
   - You want a short routine you can repeat every term.
   - A project runs for weeks and students lose focus midway.
+not_for:
+  - "You want goals for a single lesson: set one simple aim aloud with the class instead, because this routine needs a few weeks of checkpoints."
+  - "Your students have very low belief in themselves as learners: start with small daily goals first, then use this routine later."
+  - "You need a full plan for helping students manage their own learning: use a self-regulation scaffold tool instead, since this one only covers goal setting."
 you_give:
   - The unit or project
   - Year level
@@ -31,7 +32,28 @@ you_get:
   - Checkpoints through the unit
   - A student template to fill in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI the unit or project, the year level and how long it runs.
+  - Add the goal type and your success criteria if you have them.
+  - Read the weak and strong examples. Check they fit your subject and your students.
+  - Print or share the student template. Use the checkpoints to plan your check-in lessons.
+output_sample:
+  input:
+    - Your unit or project
+    - Your students' year level and goal-setting experience
+    - How long the goals will run
+    - Type of goal, such as process, outcome or both (optional)
+    - Success criteria or rubric for the task (optional)
+  output:
+    - name: "Step 1: Teacher Modelling"
+      contains: A short script for setting a goal aloud in front of the class.
+    - name: "Step 2: Weak vs. Strong Goal Examples"
+      contains: Paired goals for your unit, with a note on what makes the strong one work.
+    - name: "Step 3: Goal-Setting Framework"
+      contains: A clear goal frame and an if-then plan for when things get hard.
+    - name: "Step 4: Monitoring Checkpoints"
+      contains: Set points through the unit where students check progress on their goals.
+    - name: "Step 5: Reflection and Revision"
+      contains: Questions students answer at the end to review the goal and choose the next one.
+    - name: Student Template
+      contains: A fill-in sheet with goal lines, weekly check-ins and an end-of-unit reflection.

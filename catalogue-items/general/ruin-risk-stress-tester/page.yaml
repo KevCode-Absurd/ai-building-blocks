@@ -1,6 +1,6 @@
 new_slug: ruin-risk-stress-tester
 name: "Ruin risk stress tester"
-summary: "Paste a plan with money, time or your name at stake. Get the outcome that could ruin it and a capped-downside version."
+summary: "Check your plan for ruin risk. Paste it in and find the one outcome you could not recover from, plus a version with the downside capped."
 job: think-and-decide
 thinking: high
 thinking_why: "It must separate unrecoverable outcomes from ordinary loss and reason about hidden dependencies without odds."
@@ -17,6 +17,10 @@ when:
   - You are about to put savings, a deposit or your reputation into one plan.
   - Your business depends on one customer, supplier, platform or person.
   - A plan looks safe because nothing has gone wrong yet.
+not_for:
+  - "You have no money, time or name at stake: skip it, a simple to-do list is enough."
+  - "You need a full list of every way a plan can fail: use the Failure-first plan check."
+  - "You need a month-by-month cash forecast: use a spreadsheet or ask your accountant."
 
 you_give:
   - The plan, and what is at stake (money, time, the business, your name)
@@ -34,6 +38,29 @@ how_to_use:
   - Read the unrecoverable outcome first. Check it matches what you fear most.
   - Choose which cap or backup to use, and check what each costs.
   - Write down the early-warning trigger it gives, and decide who watches it.
+output_sample:
+  input:
+    - Your plan, in a few sentences
+    - "What is at stake: money, time, your name or other people's money"
+    - What the plan depends on, such as customers, suppliers or loans (optional)
+    - Your debts, fixed costs and slack (optional)
+  output:
+    - name: The plan and what is at stake
+      contains: A short restatement of your plan and what you stand to lose.
+    - name: Dependencies and what could go wrong
+      contains: Each dependency marked as a yes-or-no matter or a size-of-loss matter, and whether one case can dominate.
+    - name: The unrecoverable outcome
+      contains: The result you could not come back from, apart from ordinary losses, and why it cannot be undone.
+    - name: Ordinary losses
+      contains: Losses that hurt but can be recovered from.
+    - name: Errors and calm
+      contains: Whether mistakes help or hurt you, and whether a quiet record is being read as safety.
+    - name: The capped-downside version
+      contains: Slack, backups, a cap on exposure, and a safe part with small bold bets, plus what each fix costs.
+    - name: Act early if
+      contains: One or two signs that mean you should act before the worst arrives.
+    - name: Missing and checks missed
+      contains: What is unknown, and any check the answer did not pass.
 
 how_it_works:
   - title: Lists dependencies

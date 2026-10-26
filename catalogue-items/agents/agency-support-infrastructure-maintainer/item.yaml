@@ -1,0 +1,42 @@
+slug: agency-support-infrastructure-maintainer
+name: Infrastructure Maintainer agent
+summary: "Check your servers and cloud setup for gaps. Get alerts to set, backup and restore checks, patch and access fixes and a ranked to-do list."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: support/support-infrastructure-maintainer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-infrastructure-maintainer.md
+  licence: MIT
+  original_name: Infrastructure Maintainer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 982365c821220e6b47f08d54013af20d0ff2b58fc8d38a7639e2eb8b18d0872b
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Infrastructure Maintainer
+  - Agency Agents
+  - Support
+credits:
+  - title: Infrastructure Maintainer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-infrastructure-maintainer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

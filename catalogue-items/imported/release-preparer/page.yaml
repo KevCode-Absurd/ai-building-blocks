@@ -2,35 +2,63 @@ thinking: medium
 thinking_why: It reads your changes, sorts them, then follows set release steps.
 new_slug: release-preparer
 name: Release preparer
-summary: Point it at your project. Get the version bumped, a changelog written
-  and a tagged release ready to publish.
+summary: "Prepare a software release: bump the version, write the changelog and tag it. Give it your project folder and it does the steps."
 job: ship-and-host
 headline: Release preparer
-subhead: "Everything needed to ship a version in one pass: the number bumped,
-  the changelog written and a tagged release ready to publish. You skip the
-  manual file editing that people forget."
+subhead: "Give it your project folder. It finds the version file, reads your commits since the last tag and suggests a version bump. After you confirm, it writes the changelog, makes the release commit and adds the tag."
 explain: |
   Everything needed to ship a version in one pass: the number bumped, the changelog written and a tagged release ready to publish. You skip the manual file editing that people forget.
 
   It looks at your project and finds the version file by itself, whether that is package.json, pyproject.toml, Cargo.toml or a plain version file. It reads the commits since the last tag, suggests a major, minor or patch bump, and asks you to confirm. Then it updates the files, writes the changelog and creates the tag. A dry run shows the changes first. It can also add missing GitHub release pages for old tags, and handle changelogs in more than one language.
 when:
-  - You are ready to publish a new version and want the steps done right.
-  - Your project has several files that all hold the version number.
-  - Old tags have no GitHub release pages.
+  - You are ready to publish a new version and want the steps done in order.
+  - Your project has several files that hold the version number.
+  - Old tags have no GitHub release pages and you want them filled in.
   - You want to preview a release before anything changes.
+not_for:
+  - Your project has no earlier tag or has uncommitted work. Commit or tag first, then run it.
+  - You only want release notes. Edit your changelog by hand or ask your AI to draft the notes.
+  - You want to publish with no review. It makes local commits before it asks you to confirm, so check each step.
 you_give:
-  - Your project folder
-  - Bump type to force (optional)
-  - Confirmation of the suggested version
-  - Changelog languages (optional)
+  - Your project folder, a git repo with at least one tag
+  - "A forced bump size: major, minor or patch (optional)"
+  - Your changelog languages (optional)
+  - A .releaserc.yml settings file (optional)
 you_get:
-  - Updated version files
-  - Written changelog entry
-  - Tagged release
-  - Preview of changes in dry run
+  - The version number updated in your version files
+  - A changelog entry grouped into Features, Fixes and Documentation
+  - A release commit and an annotated tag
+  - A GitHub Release page, if you ask for one
+  - A dry-run preview of every change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in a tool that can run code and read your project folder. Git must be installed.
+  - "Paste the skill, or load its folder, and say: run the release preparer on this project."
+  - Add --dry-run first. Read the preview of the version bump and changelog.
+  - If you use a .releaserc.yml file, read its hooks first. Hooks run commands on your computer.
+  - Run it again without --dry-run. It makes local commits before it asks you to confirm, so check each step.
+  - For a GitHub Release, sign in to the gh tool first. Add --backfill-releases to fill in old tags.
+output_sample:
+  input:
+    - Your project folder, a git repo with at least one tag
+    - "A forced bump size: major, minor or patch (optional)"
+    - Your changelog languages (optional)
+    - A .releaserc.yml settings file (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Git installed on your computer
+    - The gh command line tool, signed in, if you want a GitHub Release
+  output:
+    - name: Version file update
+      contains: The new version number written to package.json, pyproject.toml, Cargo.toml, marketplace.json or a VERSION file.
+    - name: Change summary
+      contains: Your commits since the last tag, grouped by skill or module, with a suggested major, minor or patch bump.
+    - name: Changelog entry
+      contains: A dated section with Features, Fixes and Documentation, written for each changelog file and language.
+    - name: Release commit
+      contains: A commit that holds the version change and changelog, made after you confirm.
+    - name: Annotated tag
+      contains: A git tag for the new version, such as v1.3.0.
+    - name: GitHub Release
+      contains: A release page built from the changelog section, published when you confirm.
+    - name: Dry-run preview
+      contains: A list of the changes it would make, shown with --dry-run before anything is touched.

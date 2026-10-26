@@ -1,29 +1,28 @@
 slug: catering-order-change-review-assistant
 name: Catering order change review assistant
-summary: An order discrepancy table, service checklist and owner questions.
+summary: Check a catering order change against the confirmed order. Get a discrepancy table, a service checklist and owner questions before service.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: document
-    required: false
+    required: true
   - type: question
     required: false
 outputs:
   - type: audit_report
   - type: document
+needs_mode: manual
 uses:
   - check-a-catering-order-before-service
   - handover-note-writer
 steps:
   - uses: check-a-catering-order-before-service
-    note: "Run when: The customer-approved headcount, dietary requirements, timing or quoted charges change."
+    note: Run this when the approved headcount, dietary requirements, timing or quoted charges change. Recompute the totals and write the order-to-service checklist. Hands step 2 the discrepancy table, the totals check and the checklist.
   - uses: handover-note-writer
-    note: Run check-a-catering-order-before-service for changed evidence or a due review. If a confirmed requirement changes, prepare a service lead handover highlighting exactly what changed; unresolved dietary facts stop the affected preparation path.
+    note: Run this to write the service lead handover. Uses the discrepancy table, totals check and checklist from step 1 as its source material, and shows exactly what changed. Unresolved dietary facts stop the affected dish and go to the named dietary reviewer.
 schedule: When the user supplies an approved order change. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

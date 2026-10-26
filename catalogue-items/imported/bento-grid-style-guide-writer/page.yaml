@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: bento-grid-style-guide-writer
 name: Bento grid style guide writer
-summary: Describe your product. Get a style guide for a tidy card-grid look,
-  with tokens, states and checks.
+summary: Describe your product and get a Bento grid style guide for card-based layouts, with tokens, states, accessibility rules and a code review checklist.
 job: design-work
 headline: Bento grid style guide writer
-subhead: A design-system guide for a Bento look, the tidy layout of cards in
-  different sizes that you see on many modern product pages. Describe your
-  product, and the AI writes guidance engineers and designers can use directly.
+subhead: A design-system guide for a Bento look, the tidy layout of cards in different sizes that you see on many modern product pages. Describe your product, and the AI writes guidance engineers and designers can use directly.
 explain: |
   A design-system guide for a Bento look, the tidy layout of cards in different sizes that you see on many modern product pages. Describe your product, and the AI writes guidance engineers and designers can use directly.
 
@@ -18,6 +15,10 @@ when:
   - Developers and designers keep guessing at spacing and colours.
   - You need accessibility rules written into your design system.
   - You want a reusable style guide to hand to a new team member.
+not_for:
+  - "You need a guide for a text-heavy site or a single-page form: ask a designer for a simple type and spacing sheet instead."
+  - "You want a guide for a page built to sell with one main button: use a conversion page style guide, not a card grid guide."
+  - "You want finished page designs or code: hire a designer or developer, because this skill writes rules only."
 you_give:
   - A description of your product and brand
   - Colours and fonts you already use (optional)
@@ -29,7 +30,30 @@ you_get:
   - Component rules with states
   - Do and don't lists and quality gates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the full skill text into a new chat.
+  - Describe your product, your brand and who uses the page.
+  - Add the colours and fonts you already use, if you have them. Say which components you need rules for.
+  - Say the accessibility level you need. The skill starts from WCAG 2.2 AA.
+  - Read the tokens first. Change any default, such as the Inter font or the peach and blue colours, to match your brand.
+  - Hand the finished guide to your designers and developers. Use the QA checklist in code review.
+output_sample:
+  input:
+    - A short description of your product and brand
+    - Colours and fonts you already use (optional)
+    - The components you need rules for
+    - The accessibility level you must meet (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the design intent, then the goals the rules serve.
+    - name: Design tokens and foundations
+      contains: Type scale, colour tokens, spacing scale and fonts, with defaults you can change.
+    - name: Component-level rules
+      contains: Anatomy, variants, states and responsive behavior for each component, including long labels, empty states and overflow.
+    - name: Accessibility requirements
+      contains: Testable criteria for WCAG 2.2 AA, keyboard use and visible focus.
+    - name: Content and tone standards
+      contains: Rules for interface text, with examples.
+    - name: Anti-patterns
+      contains: Things the team must not build, each paired with a do rule.
+    - name: QA checklist
+      contains: Checks a team can run during code review.

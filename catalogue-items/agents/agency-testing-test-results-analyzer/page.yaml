@@ -1,0 +1,137 @@
+name: Test Results Analyzer agent
+summary: Paste your test run results and get failures grouped by cause, coverage gaps, risks and a go or no-go call on the release.
+headline: Test Results Analyzer agent
+subhead: Paste the output of a test run, and a coverage report if you have one. The agent groups the failures by cause, flags the files with thin coverage and says whether the release looks ready. You get a short list of what to check next, in order.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  After a test run you may have hundreds of lines and no clear answer. Are these 14 failures one problem or 14? Is the code that handles payments covered? Can we ship? This test results analyzer reads the run and answers in plain words.
+
+  It starts by checking the data. Is the file complete? Are the counts right? Then it groups failures by error message and area, so you can see the one broken thing behind many red marks. It lists files below your coverage limit (the original uses 80 percent of lines), and ranks them by how much it matters, using what you say is critical. If you give it earlier runs, it shows the trend.
+
+  Its go or no-go call comes with its reasons, how sure it is and what data would change the call. It does not make up percentages, "industry averages" or dollar savings. The original profile also describes machine learning models that predict where bugs will appear. That needs a history of defects and code you run yourself. A chat reading one test run cannot do it, so this page does not promise it.
+
+  The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its success numbers are role language, not results measured by AI Blocks.
+when:
+  - A test run has many failures and you do not know where to start.
+  - You need to tell your boss or client whether a release is ready, and why.
+  - Your coverage report is green overall but you worry about key files.
+  - Tests that pass or fail at random are making your reports hard to trust.
+not_for:
+  - "You want the failing tests fixed or new tests written: use the Test Automation Engineer agent."
+  - "You want a review of whether a finished build matches its spec: use the Reality Checker agent."
+  - "You ran an A/B test of a store change: use the Test result trust checker."
+  - "You want to check a machine learning model's accuracy: use the Model QA Specialist agent."
+  - "You have only a vague 'tests are slow' feeling and no results: run the tests first, then bring the output here."
+you_give:
+  - The test run output. Paste the summary, a JUnit XML file, JSON or the console log.
+  - A coverage report with line, branch and function numbers per file (optional).
+  - Results from earlier runs, such as pass counts from the last few builds (optional).
+  - What must work for this release, such as sign-in and payments.
+  - Known flaky tests or open bugs (optional).
+you_get:
+  - The counts of passed, failed and skipped tests, and the pass rate, worked out from your data.
+  - Failures grouped by error message and area, with the likely shared cause for each group.
+  - Files below your coverage limit, ranked by how critical they are.
+  - A trend against earlier runs, if you gave them.
+  - A go or no-go call with its reason, how sure it is and what data is missing.
+  - The next checks, in order.
+how_to_use:
+  - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - "Paste the raw test output first. Then say what must work for this release. Add a coverage report if you have one."
+  - "Say: Group the failures by cause. Do not guess at numbers you were not given."
+  - Check the counts it reports against your own test tool. Fix any mismatch before you read the rest.
+  - Take the top failure group to your developer or to the Test Automation Engineer agent.
+  - Run the tests again after the fixes. Paste the new output with the old analysis for a trend.
+how_it_works:
+  - title: Check the data
+    text: It confirms the file is complete and the counts add up. It marks gaps as MISSING.
+  - title: Group the failures
+    text: It sorts failures by error message, test area and time. It points to the shared cause behind each group.
+  - title: Read the coverage
+    text: It lists files under your coverage limit. It says which gaps touch what must work, using only what you told it.
+  - title: Compare with earlier runs
+    text: It checks pass rate and failures against earlier runs you gave it. With only one run, it makes no trend claim.
+  - title: Judge the release
+    text: It weighs pass rate, open critical failures, coverage gaps and flaky tests against what must work, and gives a go or no-go call.
+  - title: List the next checks
+    text: It orders the next steps by risk reduced per hour of effort, and says which result would change the call.
+output_shape: |-
+  SUMMARY
+    Release call <GO or NO-GO or NOT ENOUGH DATA> | Sure <high, medium or low> | Reason <one line>
+    Passed <n> | Failed <n> | Skipped <n> | Pass rate <worked out from your data>
+
+  FAILURE GROUPS
+    <error message or area> | Count <n> | Likely cause <cause> | Tests <names>
+
+  COVERAGE GAPS
+    <file> | Lines <percent> | Matters because <your critical area, or unknown>
+
+  TREND
+    <metric> | Earlier <number> | Now <number>   (or "No earlier run given")
+
+  DATA GAPS
+    MISSING <list> | Would change the call <yes or no, how>
+
+  NEXT CHECKS
+    1. <check> | Why first <reason>
+output_sample:
+  input:
+    - Your test run output, pasted as text, XML or JSON
+    - What must work for this release
+    - A coverage report with per-file numbers (optional)
+    - Earlier run results for a trend (optional)
+  prerequisites:
+    - A finished test run with failure messages, not only a pass or fail total
+  output:
+    - name: Summary
+      contains: The go or no-go call, how sure it is, and the counts and pass rate from your data.
+    - name: Failure groups
+      contains: Failures grouped by error message and area, each with a likely shared cause.
+    - name: Coverage gaps
+      contains: Files under your limit, ranked by how much they matter for what must work.
+    - name: Trend
+      contains: Pass rate and failures compared with earlier runs, or a note that none were given.
+    - name: Data gaps
+      contains: What was missing from your files and whether it could change the call.
+    - name: Next checks
+      contains: The next steps in order, with the reason each one comes first.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Coverage limit
+    how: Give your own limit, such as 90 percent for payment code, in place of the original 80 percent.
+  - what: Audience
+    how: Ask for a short note for a manager, or a longer one for developers.
+  - what: Focus
+    how: Name one area, such as sign-in, and ask it to look only at those failures.
+improve:
+  - Keep each analysis with the build number. Paste the last one into the next chat so it can show the trend.
+terms:
+  - term: Pass rate
+    meaning: The share of tests that passed, out of those that ran.
+  - term: Coverage
+    meaning: How much of your code the tests run. High coverage does not prove the tests check the right things.
+  - term: Flaky test
+    meaning: A test that passes on some runs and fails on others with no code change.
+  - term: JUnit XML
+    meaning: A common file format that test tools use to save their results.
+  - term: Go or no-go
+    meaning: A yes or no on whether to ship the release.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They can read pasted test output and coverage tables and group the failures. Large logs may need to be trimmed to the failure lines.
+    - name: Claude Code or Codex
+      why: They can read the result files from your project and run your test command to get fresh results.
+  inputs:
+    - The failure messages in full, not only the test names.
+    - A list of the features that bring in money or cannot fail.

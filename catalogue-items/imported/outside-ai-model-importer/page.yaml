@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows set import routes and fixes input format errors.
 new_slug: outside-ai-model-importer
 name: Outside AI model importer
-summary: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and
-  ready to run.
+summary: Import a PyTorch, ONNX or Keras model into MATLAB and check it gives the same answers as the original. Fixes common import errors.
 job: build-software
 headline: Outside AI model importer
-subhead: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and
-  ready to run. Bring the model file. Use the result to plan your next step.
+subhead: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and ready to run. Bring the model file. Use the result to plan your next step.
 explain: |
   A trained model from PyTorch, ONNX or Keras, loaded into MATLAB as a network you can run, and checked against the original so you know the results match.
 
@@ -17,6 +15,10 @@ when:
   - Your import throws unsupported operator warnings.
   - The imported network shows zero learnables.
   - You must prove the imported model gives the same answers.
+not_for:
+  - "You want to send a MATLAB network out to ONNX or PyTorch: use exportONNXNetwork or exportNetworkToPyTorch in MATLAB."
+  - "You want to train or fine-tune the model after import: use a MATLAB training step, such as the matlab-train-network skill."
+  - "You want to put the model on embedded hardware: use MATLAB's embedded deployment tools, such as the matlab-deploy-embedded-ai skill."
 you_give:
   - The model file
   - Input size and data format
@@ -28,8 +30,31 @@ you_get:
   - A match check against the source model
   - Notes on unsupported parts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and Python.
+  - Open Claude, ChatGPT or Gemini. Paste this skill, or upload its folder if your AI takes files.
+  - Add your model file and say what format it is. For a .pt file, give the exact input size.
+  - Say which MATLAB release you use. Keras models need it to pick the right route.
+  - Let your AI run the import. This needs MATLAB with Deep Learning Toolbox, and Python for some routes.
+  - Check the layer count, the learnables count and the difference from the source model.
+  - If the check passes, move on to training or deployment.
+output_sample:
+  input:
+    - Your model file (.pt2, .pt, .onnx or .keras folder)
+    - The input size of your model (needed for .pt files)
+    - The input data format, such as batch, channel, height, width (optional)
+    - A sample input to compare the two models (optional)
+  prerequisites:
+    - MATLAB with Deep Learning Toolbox
+    - An AI that can run MATLAB code
+    - Python with torch 2.8 to export PyTorch models
+    - Python with onnxruntime to compare ONNX results (optional)
+  output:
+    - name: Imported network
+      contains: Your model loaded in MATLAB as a dlnetwork, ready to run with predict.
+    - name: Import route
+      contains: Which route was used for your file type, and the exact import command.
+    - name: Fixes for import errors
+      contains: Steps for unsupported operators, uninitialised networks and zero learnable parameters, if any came up.
+    - name: Network check
+      contains: The number of layers and learnable parameters, so you can see the import worked.
+    - name: Numeric validation
+      contains: The largest difference between your imported network and the source model on the same input.

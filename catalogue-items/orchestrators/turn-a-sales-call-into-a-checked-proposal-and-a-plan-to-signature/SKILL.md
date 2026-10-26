@@ -49,13 +49,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Write the follow-up.** Use the skill `call-follow-up-drafter`. The follow-up email in your voice, a summary for your team and the CRM updates, from the call.
-2. **Draft the proposal.** Use the skill `sales-proposal-writer`. Give it the call summary and your offer. The proposal: the buyer's needs in their words, the value, the price, the timeline and proof, in your template if you have one.
-3. **Check margin and terms.** Use the skill `deal-desk-reviewer`. Give it the proposal and your price and discount rules. Margin after any discount, every term against your standards, and a clear yes, no or counter with what to change.
+1. **Write the follow-up.** Use the skill `call-follow-up-drafter`. The follow-up email in your voice, a summary for your team and the CRM updates, from the call. Hands the call summary to step 2.
+2. **Draft the proposal.** Use the skill `sales-proposal-writer`. Give it the call summary and your offer. The proposal: the buyer's needs in their words, the value, the price, the timeline and proof, in your template if you have one. Uses your brief, offer and step 1's call summary, and hands the proposal to step 3.
+3. **Check margin and terms.** Use the skill `deal-desk-reviewer`. Give it the proposal and your price and discount rules. Margin after any discount, every term against your standards, and a clear yes, no or counter with what to change. Hands the verdict and the checked proposal to step 4.
 
 Pause here: Send the follow-up and the corrected proposal yourself.
 
-4. **Plan the path to signature.** Use the skill `mutual-action-plan-builder`. Give it the checked proposal and the call. The why-buy case in the buyer's words and a dated plan to signature with tasks for both sides, written to share with the buyer.
+4. **Plan the path to signature.** Use the skill `mutual-action-plan-builder`. Give it the checked proposal and the call. The why-buy case in the buyer's words and a dated plan to signature with tasks for both sides, written to share with the buyer. Uses the checked proposal, the deal desk verdict and the call. A CRM link is optional.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

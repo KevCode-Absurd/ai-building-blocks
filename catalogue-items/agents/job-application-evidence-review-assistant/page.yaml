@@ -1,55 +1,108 @@
 new_slug: job-application-evidence-review-assistant
 name: Job application evidence review assistant
 headline: Job application evidence review assistant
-summary: A tailored application draft, unsupported claim list and submission checklist.
+summary: Tailor your resume and answers to a job using only what your record proves. See every claim it can't support, plus a submission checklist.
 job: find-a-job
 thinking: high
-thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A tailored application draft, unsupported claim list and submission checklist. Share the target role, current application draft, your verified work record and prior corrections. Your AI prepares the work and marks any facts it cannot verify.
+thinking_why: It must tie each claim to your real record, ask for proof or cut the line, and never add experience you do not have.
+subhead: Give it a job post, your current draft and your real work record. It tailors the draft to the role and links every claim to a line in your record. You get the draft, a list of claims it cannot support, and a checklist to finish by hand.
 explain: |-
-  A tailored application draft, unsupported claim list and submission checklist.
+  A tailored resume is only as good as what you can prove. AI tools will gladly add a skill you never used, or turn a team of three into "led a team of ten". Then an interviewer asks about it. This agent tailors your resume and application answers to one job, and checks each claim against your real work record before you send anything.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every claim maps to your real record and employer-specific details come from supplied sources. Missing tools or evidence stay visible in the final summary.
+  When you give it a new role, or change your draft, it runs the Tailor a job application to real evidence workflow. That matches the role to your actual experience, edits the wording to be plain, and proofreads. Every claim is linked to a line in your record. A claim with no support is listed. You either supply the proof or the line comes out. The Proofreader then runs, at most two passes.
+
+  It never submits an application, sends an email or fills a form on a job site. It keeps only the small record the next run needs, with no extra personal details.
 when:
-  - You need a tailored application draft, unsupported claim list and submission checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - You found a job post and want your resume and cover letter matched to it without adding anything untrue.
+  - You apply to several roles and keep one record of your real work to reuse each time.
+  - You rewrote lines of your resume and want to know which ones your record backs up.
+  - A recruiter sent short application questions and you want each answer tied to something you did.
+not_for:
+  - You want a quick resume rewrite with no check against your record. Use the Resume tailor agent.
+  - You want to see how a resume reads to applicant tracking software. Use the ATS resume checker agent.
+  - You only want spelling and grammar fixed. Use the Proofreader.
+  - You have no job post yet. It tailors to the real words of one role, so find the post first.
+  - You want applications sent for you. It never submits.
 you_give:
-  - The target role, current application draft, your verified work record and prior corrections.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The job post, pasted in full, with its date or link
+  - Your current resume or application draft
+  - Your real work record, with roles, dates, projects, numbers and where each can be proved (reviews, portfolio, offer letters)
+  - The application's questions and limits, such as word counts (optional)
+  - Corrections from earlier runs (optional)
+  - Today's date
 you_get:
-  - A tailored application draft, unsupported claim list and submission checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A tailored resume or set of answers that uses only claims your record supports
+  - A list of every claim it could not support, with the proof that would settle it
+  - A match of what the role asks for against your real experience
+  - Proofreading notes on names, dates, spelling and format
+  - A checklist to finish by hand before you submit
+  - A short record to reuse for the next role
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent with the two pieces it uses, the Tailor a job application to real evidence workflow and the Proofreader. If your AI cannot open them, paste both in with the agent.
+  - Paste the job post, your draft and your work record. If this is a repeat, paste last time's record and corrections too.
+  - Read the list of unsupported claims first. For each one, give the proof or let the line come out.
+  - Read the tailored draft with your record beside it. Check every number and every date yourself.
+  - Work through the checklist and submit the application yourself. In plain chat it cannot save files, so keep the record it hands back.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep role ID, job source date, draft version, evidence references and unresolved claims; exclude unnecessary personal data. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A new role is supplied or the resume draft changes.
-  - title: Choose the next step
-    text: Run the application workflow. If an assertion lacks support, ask for the actual evidence or remove it; use proofreader for at most two revision passes, then list any remaining issues. Never submit the application from this review alone.
-  - title: Check and save evidence
-    text: Every claim maps to your real record and employer-specific details come from supplied sources. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Reads the last record
+    text: Uses the saved record or sets a first baseline. The record holds the role ID, the date of the job post, the draft version, where your evidence lives and unresolved claims.
+  - title: Checks the trigger
+    text: A new role was supplied or your draft changed. If neither, it says so and stops.
+  - title: Matches the role to your record
+    text: The Resume and job application builder lists what the role asks for and which of your real experiences meet each ask. Asks you cannot meet are listed.
+  - title: Links every claim to proof
+    text: Each claim in the draft is tied to a line in your record. With no support, it asks for the proof or removes the claim.
+  - title: Makes it plain, then proofreads
+    text: The Plain English editor tightens the wording. The Proofreader checks names, dates and format, for at most two passes, then lists what is left.
+  - title: Saves the record
+    text: Writes the new record and keeps the old one. Lists MISSING lines and CHECKS MISSED. It does not submit anything.
 output_shape: |-
-  Scope and source coverage
-  A tailored application draft, unsupported claim list and submission checklist.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ROLE <title, employer, post date>   DRAFT VERSION <n>   LAST RUN <date or first baseline>
+
+  ROLE MATCH  <what the role asks> | <your experience that meets it> | <met | partly | not met>
+  TAILORED DRAFT  <resume or answers, each line marked with its record reference>
+  CLAIM CHECK  <claim> | <record line that backs it | MISSING: proof needed> | <kept | removed | needs proof>
+  PROOFREADING  <fix, reason>; still open after two passes: <list>
+  SUBMISSION CHECKLIST (you do these)
+    [ ] <file name and format> [ ] <required questions answered> [ ] <attachments> [ ] <numbers and dates checked by you>
+
+  RECORD FOR NEXT ROLE  <role ID, post date, draft version, evidence references, unresolved claims>
+  MISSING  <each gap and the claim it affects>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The job post, pasted in full
+    - Your current resume or application draft
+    - Your real work record with roles, dates, numbers and where each can be proved
+    - The application's questions and limits (optional)
+    - Corrections from earlier runs (optional)
+  prerequisites:
+    - An AI that can read pasted text or uploaded files, such as Claude, ChatGPT or Gemini
+    - The two pieces it uses, the Tailor a job application to real evidence workflow and the Proofreader
+  output:
+    - name: Role match
+      contains: What the job post asks for, set against your real experience, marked met, partly met or not met. Asks you cannot meet are listed.
+    - name: Tailored draft
+      contains: Your resume or application answers rewritten for the role. Each line carries a reference to the record line that supports it.
+    - name: Claim check
+      contains: Each claim beside the record line that backs it. Claims with no support are marked MISSING with the proof that would settle them.
+    - name: Proofreading notes
+      contains: Fixes to names, dates, spelling and format, plus anything still open after two passes.
+    - name: Submission checklist
+      contains: The steps you do by hand before you submit, such as file name, required questions, attachments and a final check of numbers.
+    - name: Record for next role
+      contains: A small block to paste next time with role ID, post date, draft version, where your evidence lives and unresolved claims.
+    - name: Saved files
+      contains: The step files and run log in a dated folder under reviews/job-application-evidence-review-assistant/, when your AI can save files.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every claim maps to your real record and employer-specific details come from supplied sources.
+  - what: One role at a time
+    how: Run one job post per pass. Two roles in one run mix up which requirements each line answers.
+  - what: How much proof you give
+    how: A work record with dates, numbers and links to proof lets more lines stay. Thin records lead to more cuts.
+  - what: Limits
+    how: Give the word count, page limit and file type. Without them it follows the job post only.
+  - what: Corrections
+    how: Paste what you changed last time, such as a number you fixed. It will not bring the old figure back.
 judge:
   - Every claim maps to your real record and employer-specific details come from supplied sources.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +115,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep one master work record with dates, numbers and links to proof, and reuse it for every role.
+  - Add a line to your record each time you finish something, with where it can be proved, so later runs have more to draw on.
+  - Save corrections with the record. A number you fixed once stays fixed.
+  - Keep each version you submit, so you can see later which claims each employer saw.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads uploaded files
+      why: Claude, ChatGPT and Gemini can read your resume, the job post and the pack. In plain chat you save the record yourself.
+    - name: Your own documents
+      why: Old performance reviews, offer letters and a portfolio give each claim a place to be proved.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A past performance review or a reference's note.
+    - Links to published work.
+    - The employer's own values or about page.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Work record
+    meaning: Your own list of roles, dates, projects and results, with where each can be proved.
+  - term: Unsupported claim
+    meaning: A line in your draft that your record does not back up.
+  - term: Applicant tracking software
+    meaning: The tool many employers use to collect and sort applications.

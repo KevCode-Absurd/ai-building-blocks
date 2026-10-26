@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It makes design choices, then sets rules around them.
 new_slug: logo-and-brand-kit-designer
 name: Logo and brand kit designer
-summary: Describe your brand. Get logo directions with colors, type, file
-  formats and usage rules.
+summary: Describe your brand and get logo design directions with colors, fonts, file sizes and usage rules, ready to hand to a designer or image tool.
 job: design-work
 headline: Logo and brand kit designer
-subhead: A logo brief and two or three distinct logo directions, each with
-  colors, fonts, file formats and rules for using it. You can hand it to a
-  designer or an image tool and know what to ask for.
+subhead: A logo brief and two or three distinct logo directions, each with colors, fonts, file formats and rules for using it. You can hand it to a designer or an image tool and know what to ask for.
 explain: |
   A logo brief and two or three distinct logo directions, each with colors, fonts, file formats and rules for using it. You can hand it to a designer or an image tool and know what to ask for.
 
@@ -18,6 +15,10 @@ when:
   - You have a logo but no rules for color, spacing or small sizes.
   - You need a favicon and social avatar that match your main logo.
   - You want to compare several logo ideas before you pay for artwork.
+not_for:
+  - "You need final artwork or a trademark check: hire a professional designer and ask a trademark lawyer."
+  - "You already have a logo you like and only want to redraw it: ask the designer who made it for the original files."
+  - "You want a full brand voice, not just a visual look: write a short voice guide yourself or work with a brand writer."
 you_give:
   - Your brand name and what you do
   - Your audience and rivals (optional)
@@ -31,7 +32,29 @@ you_get:
   - Export sizes and file formats
   - Usage rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Type your brand name, what you do, the feel you want and where the logo will appear. Add your rivals, colors or fonts if you have them.
+  - Read the two or three directions. Pick one and ask your AI to refine it.
+  - Before you commit, search your chosen name and symbol on the web and in trademark databases.
+  - Ask for the final file list and the brand guide. This needs no code or paid tool. Your AI writes specs in words and does not draw the files.
+  - Hand the brief and guide to a designer, or paste the directions into an image tool. Then test the logo at small sizes.
+output_sample:
+  input:
+    - Your brand name and what you do
+    - Your audience and rivals (optional)
+    - Words that describe the feel you want
+    - Existing colors or fonts to keep (optional)
+    - Where the logo will be used, such as a site, app, packaging or signs
+  output:
+    - name: Design brief
+      contains: Brand values, look and feel keywords, color wishes, must-have limits and the logo types you need.
+    - name: Concept directions
+      contains: Two or three different logo ideas, each with the reason it fits, a symbol or letter idea, colors and a font pair.
+    - name: Refined concept
+      contains: Your chosen direction adjusted for spacing, weight and color balance, and checked at favicon, app icon, web and print sizes.
+    - name: Deliverables specification
+      contains: The file formats and sizes to export, plus light, dark and single-color versions and a minimum size.
+    - name: Brand mark usage guide
+      contains: Clear space, minimum size and where each color goes, in one page.
+    - name: Brand guidelines
+      contains: Exact color values, font names and weights, the safe zone around the logo, and examples of misuse.

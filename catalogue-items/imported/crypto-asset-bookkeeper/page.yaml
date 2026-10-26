@@ -2,34 +2,112 @@ thinking: medium
 thinking_why: It applies standards to unusual assets.
 new_slug: crypto-asset-bookkeeper
 name: Crypto asset bookkeeper
-summary: Describe your coin or NFT holdings. Get them classified, valued and
-  recorded under accounting standards.
+summary: Get your Bitcoin, Ether, NFTs or tokens classified, valued and booked under US GAAP or IFRS, with a ledger summary for your accountant to review.
 job: track-numbers
 headline: Crypto asset bookkeeper
-subhead: Crypto holdings need a clear place in your books. Describe your coins,
-  NFTs or tokens and you get them classified, valued and recorded under standard
-  accounting rules such as ASC 350 or IAS 38.
+subhead: Give it your coin or NFT holdings, your transactions and the accounting standard you use. It decides how to classify and measure each asset, works out gains, losses and rewards, and hands back a ledger summary for your accountant to review.
 explain: |
-  Crypto holdings need a clear place in your books. Describe your coins, NFTs or tokens and you get them classified, valued and recorded under standard accounting rules such as ASC 350 or IAS 38.
+  Crypto accounting trips up small teams because the rules changed. For many US companies, Bitcoin and Ether are now measured at fair value, with every gain and loss going through net income. NFTs, most stablecoins and tokens you created do not follow that rule. IFRS has its own path.
 
-  It starts by deciding the category: usually an intangible asset for things you hold, inventory if you deal in them. Then it sets the measurement approach, cost with impairment testing or fair value where allowed. It covers cost basis tracking, impairment at the quarter's lowest price, income from staking, mining or airdrops at receipt value, and how to treat gas fees. It ends with a ledger summary and a reconciliation to your general ledger. It is not tax or legal advice.
+  This crypto asset bookkeeper starts with the scope test, one asset at a time. It then picks the measurement model and tracks cost basis lot by lot. Where the older cost model still applies, it tests for impairment. It books staking, mining and airdrop rewards at their value when you got control. It treats gas fees as a cost of the deal or an expense.
+
+  It ends with a ledger summary and a check of your wallet balance against your general ledger. It is a draft for an accountant to review. It is not tax advice, and it will not call anything audit-ready.
+
+  This skill comes from the financeskills collection by GAJETOso, shared under MIT. The download includes a script for the sums and the FASB and IFRS notes.
 when:
-  - Your company holds Bitcoin or Ether and the auditor wants proper treatment.
-  - You received staking rewards and need to know how to book them.
-  - The price dropped and you need to know if you must write down value.
-  - On-chain activity does not match your ledger.
+  - Your company holds Bitcoin or Ether and your accountant or auditor asks how it is treated.
+  - You got staking rewards, mining income or an airdrop and need to know how to book it.
+  - The price moved a lot this quarter and you need to know whether to write value up or down.
+  - Your wallet balance does not match your general ledger.
+not_for:
+  - You need to file taxes or work out what you owe. Ask a tax adviser. This is accounting only.
+  - You want a signed audit sign-off or legal advice. A qualified accountant or lawyer must give that.
+  - You only want to match bank lines to your ledger. Use the Bank and ledger matcher.
+  - You want ratios or a valuation from finished statements. Use the Financial statement analyst.
 you_give:
-  - Assets held with quantities and purchase dates
-  - "Transactions: buys, sells, rewards, fees"
-  - Accounting standard in use (GAAP or IFRS)
-  - Custody details (optional)
+  - Your assets held, with units and the date of each purchase
+  - Your transactions, such as buys, sells, rewards and fees
+  - The standard you use, US GAAP or IFRS, and your reporting date
+  - The price at your reporting date and where it came from
+  - Where the assets are kept, such as an exchange or your own wallet (optional)
 you_get:
-  - Asset classification and measurement choice
-  - Impairment calculation
-  - Income recognition entries
-  - A digital asset ledger summary
+  - Each asset classified, with the measurement model and why
+  - Cost basis by lot, and the gain or loss on each sale
+  - The fair value change or impairment, depending on the model
+  - Staking, mining and airdrop income entries
+  - A ledger summary with a wallet to ledger check and open questions for your accountant
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Add this skill to your AI, or paste SKILL.md into a new chat.
+  - Paste your holdings and transactions as a table, then name your standard (US GAAP or IFRS) and your reporting date.
+  - Add the price at your reporting date and where it came from. Without a price, you get the classification and method, but no values.
+  - Read the top line first. It says which standard and model were used. Then check each asset's "in scope" answer against your own records.
+  - Send the ledger summary and the open items list to your accountant before you book anything.
+  - If you can run code, ask your AI to use scripts/calculate.py for the sums. If not, ask it to show each step.
+how_it_works:
+  - title: Classify each asset
+    text: It decides if each asset is an intangible, inventory or, rarely, a financial asset, and if it is in scope of the new US fair value rule.
+  - title: Pick the measurement model
+    text: US GAAP assets in scope go to fair value. Others use cost less impairment. IFRS uses IAS 38 or IAS 2.
+  - title: Track cost basis
+    text: It follows each lot, by FIFO or specific lot, from purchase to sale.
+  - title: Measure and test
+    text: It books the fair value change, or tests for impairment on the older cost model.
+  - title: Book rewards and fees
+    text: Staking, mining and airdrops are booked at fair value when you got control. Gas fees are a cost or an expense.
+  - title: Check against the ledger
+    text: It compares wallet balances with your general ledger and lists breaks and open items for review.
+output_shape: |-
+  Draft for accountant review. Standard: <US GAAP or IFRS>. Model: <fair value or cost>. Date: <reporting date>.
+
+  CLASSIFICATION AND MODEL
+    <asset> | <in scope: yes, no, unsure> | <classification> | <measurement model>
+
+  INVENTORY TABLE
+    <asset> | <quantity> | <cost basis> | <fair value> | <carrying value>
+
+  ACTIVITY LOG
+    <staking income> | <realized gains and losses> | <fair value change or impairment>
+
+  WALLET RECONCILIATION
+    <wallet balance> | <ledger balance> | <difference and likely cause>
+
+  OPEN ITEMS FOR THE ACCOUNTANT
+    <anything missing, any judgment call>
+output_sample:
+  input:
+    - Your holdings, with units and purchase dates
+    - Your transactions, such as buys, sells, rewards and fees
+    - Your standard (US GAAP or IFRS) and reporting date
+    - The price at your reporting date (optional, but needed for any value)
+  prerequisites:
+    - An accountant to review the result before you book anything
+  output:
+    - name: Classification and model
+      contains: For each asset, whether it is in scope of the fair value rule, how it is classified and why.
+    - name: Inventory table
+      contains: Quantity, cost basis, fair value and carrying value for each asset.
+    - name: Activity log
+      contains: Rewards income, realized gains and losses, and the fair value change or impairment.
+    - name: Wallet reconciliation
+      contains: Wallet balance against ledger balance, with each difference and its likely cause.
+    - name: Open items for the accountant
+      contains: Missing facts, judgment calls and assets where the model is unsure.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read a pasted table and follow the rules. One that can run Python can use the script for the sums.
+  inputs:
+    - A wallet or exchange export of every transaction for the period
+    - Your general ledger balance for the digital assets line
+    - Your accountant's note on which standard and adoption date apply
+terms:
+  - term: Fair value
+    meaning: What the asset would sell for at the reporting date, using a stated market price.
+  - term: Impairment
+    meaning: A write-down when an asset on the cost model is worth less than its book value.
+  - term: Cost basis
+    meaning: What you paid for the asset, including fees that count as part of the purchase.
+  - term: Lot
+    meaning: One purchase of an asset, tracked on its own by date and price.
+  - term: Gas fee
+    meaning: The network fee you pay to move or buy an asset on a blockchain.

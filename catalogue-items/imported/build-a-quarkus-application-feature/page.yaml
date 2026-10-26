@@ -1,20 +1,44 @@
 new_slug: build-a-quarkus-application-feature
 name: Build a Quarkus application feature
-summary: Build a feature in your Quarkus app. Keep its versions and test the change.
+summary: Add a feature to your existing Quarkus app. Your AI keeps your versions, makes a small change and runs the tests it can.
 job: build-software
 headline: Build a Quarkus application feature
 subhead: Share your Quarkus code and feature brief. Check versions, make a scoped change and run tests when the tools are available.
 explain: Share your Quarkus code and feature brief. Check versions, make a scoped change and run tests when the tools are available.
 when:
   - You want to build a Quarkus application feature.
+not_for:
+  - "You need a brand new project: use create-quarkus-project, or generate one at code.quarkus.io."
+  - "You want to set up Dev Services or write tests only: use quarkus-dev-services-and-testing."
+  - "You want native builds or container images: use quarkus-native-and-container."
 you_give:
   - An existing Quarkus project and the feature’s required behavior and constraints.
 you_get:
   - Scoped application changes with configuration, relevant tests and an honest verification report.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open your AI tool in a way that lets it read your Quarkus project files. It also needs to run commands for the test step.
+  - Add the skill, or paste its instructions into the chat.
+  - "Describe the feature: what it should do and any limits. Example: add a POST endpoint that checks its input and saves a record."
+  - Say yes or no when your AI asks about new extensions. It must ask before adding Kafka, OIDC or Keycloak.
+  - Read the changed files and the verification report. Check which tests ran and which did not.
+  - Run ./mvnw verify yourself if the report says a check was skipped.
+output_sample:
+  input:
+    - Your existing Quarkus project (its build file and code)
+    - "A short brief of the feature: what it should do and any limits"
+    - Your Quarkus and Java versions (optional, your AI can read them from the build file)
+  prerequisites:
+    - An AI that can read your project files and run commands such as ./mvnw verify
+    - Docker running, if the feature uses a database, Kafka or Keycloak in dev and test
+  output:
+    - name: Code changes
+      contains: "A small, scoped change to your project: resource, service, config and any new extensions, in the style you already use."
+    - name: Configuration
+      contains: New settings added to application.properties, with secrets kept out of source and set by environment variables.
+    - name: Tests
+      contains: A @QuarkusTest for the new feature, written to match the behavior in your brief.
+    - name: Verification report
+      contains: Each check that ran with pass or fail, then each check not run and why, such as no Docker.
 how_it_works:
   - title: Inspect versions and extensions
     text: Read the build files and preserve the project’s platform, Java target and existing conventions.

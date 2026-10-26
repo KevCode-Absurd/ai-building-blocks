@@ -22,14 +22,37 @@ This skill helps you build and manage developer communities on Discord, Slack, f
 
 ## Before You Start
 
-**Load your audience context first.** Read `.agents/developer-audience-context.md` to understand:
+**Load your audience context first.** If the user pasted an audience description, or `.agents/developer-audience-context.md` exists and you can read files, use it. It should say:
 
 - Who your developers are (role, seniority, interests)
 - Where they already hang out (to avoid competing platforms)
 - What problems they discuss (community topic focus)
 - How they communicate (formal vs. casual tone)
 
-If the context file doesn't exist, run the `developer-audience-context` skill first.
+If there is no context, ask once for these four things plus the product and what it does, how many hours a week the team can spend on moderation, and whether the community is new or existing. If an answer is missing, write MISSING in the plan and give your best option with the assumption stated. Never invent member counts or numbers about the user's community.
+
+## Run order
+
+1. Confirm the audience, the product, the goal and the team's moderation time.
+2. Pick a platform from the matrix and say why. Name the second choice and when it would win.
+3. Lay out channels, each with a one-line purpose. Start small: fewer channels with traffic beat many empty ones.
+4. Write the welcome message and the new-member path.
+5. Write the rules and a moderation plan sized to the team's time.
+6. Plan a 90-day calendar of prompts and events. Keep effort within what the team can do.
+7. Choose 3 to 5 health numbers to watch.
+
+## Output format
+
+Return these sections in order:
+
+1. **Platform pick**: the choice, the reasons, the runner-up.
+2. **Channel map**: each channel with its purpose and posting rule.
+3. **Welcome and onboarding**: the welcome text, the new-member path and the roles.
+4. **Rules and moderation**: a short code of conduct and how to handle common problems.
+5. **90-day calendar**: weekly prompts and monthly events, with the effort for each.
+6. **Health numbers**: what to track, and how to read it.
+
+If the community already exists, add a short **What to fix first** list before the channel map, based only on what the user told you.
 
 ---
 
@@ -343,6 +366,8 @@ Identify and empower super-users:
 ## Community Metrics
 
 ### Health Dashboard
+
+The thresholds below are the original author's starting points, not industry standards. Tell the user to adjust them to their own community.
 
 | Metric | Healthy | Warning | Action Needed |
 |--------|---------|---------|---------------|

@@ -1,50 +1,110 @@
 new_slug: plan-an-internship-learning-review
-name: Plan an internship learning review
-headline: Plan an internship learning review
-summary: Share the source files. Get a role evidence map, learning plan and supervisor review guide.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A role evidence map, learning plan and supervisor review guide. Share the internship role, host-approved tasks, learning goals, supervisor evidence, review dates and available development time. Your AI prepares the work and marks any facts it cannot verify.
+name: Plan an internship learning review
+headline: Plan an internship learning review
+summary: Plan an internship around real learning. Get a skills evidence map, a supervised learning plan and review questions for the supervisor.
+subhead: Give it the internship role, the tasks the host has approved, the learning goals, your review dates and the time set aside for development. Your AI lists the skills to build and what each looks like on the job, plans supervised practice and writes a guide for each review.
 explain: |-
-  A role evidence map, learning plan and supervisor review guide.
+  An internship can be busy and still teach little. This internship learning plan ties each task to a skill the intern should build and to evidence a supervisor can see.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Learning tasks fit the actual role and supervision; completing time is distinct from demonstrating a skill. Missing tools or evidence stay visible in the final summary.
+  First it names the skills for the role and what each one looks like at work, with a milestone for each review date. It describes what people do, such as "checks a figure against the source", and not traits like "a natural leader". Then it builds a plan: real tasks, practice with feedback and the proof to collect, all inside the time the host can give.
+
+  The review guide gives the supervisor questions for each review date and says what evidence to bring. It plans learning. It does not rate the intern, predict a job offer or judge their potential.
 when:
-  - You need a role evidence map, learning plan and supervisor review guide.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A host organisation is taking an intern and wants a plan before day one.
+  - A school or university asks for an internship plan that links tasks to learning goals.
+  - A placement lead has reviews coming and nobody has agreed what to look at.
+  - A mid-point review is due and the tasks have drifted away from the goals.
+not_for:
+  - You need to decide whether to hire or pass on someone. This plans learning, not selection.
+  - A course has already run and you want to know what stuck. Use the Check training transfer after a course workflow.
+  - You are planning one training session for a team. Use the Staff training session planner.
+  - You want skills for a whole company, not one role. Use the Role skills framework builder on its own.
 you_give:
-  - The internship role, host-approved tasks, learning goals, supervisor evidence, review dates and available development time.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The internship role and the tasks the host has approved
+  - The learning goals, from the intern, the school or the host
+  - Your review dates, such as week 3 and the final week
+  - The time the supervisor and intern can set aside for development each week
+  - Examples of good work the supervisor has seen in this role (optional)
+  - Limits from the host, such as tasks the intern may not do (optional)
 you_get:
-  - A role evidence map, learning plan and supervisor review guide.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A list of skills for the role, each with what you can see when it is done well
+  - A milestone for each skill at each review date
+  - A learning plan with tasks, supervised practice, feedback points and evidence to collect
+  - A supervisor review guide with questions and evidence to bring to each review
+  - A list of gaps and missing facts, with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the role, the approved tasks, the learning goals, your review dates and the weekly time available.
+  - Show the skills list to the supervisor before the plan is written. Remove any skill the host cannot give practice in.
+  - Share the plan with the intern. Take the review guide to each review and fill in the evidence.
 how_it_works:
   - title: Role skills framework builder
-    text: Use role-specific behavioral evidence to define the internship skills and observable development milestones; do not infer aptitude from personal traits.
+    text: Defines the skills for the internship from the role's own work, with observable milestones for each review date. It hands the skills and milestones to the plan step.
   - title: Training program builder
-    text: Build a supervised learning plan with real work practice and evidence checks, using the host constraints and agreed development time.
+    text: Builds a supervised plan with real work practice and evidence checks, inside the host's limits and the time set aside. It hands the plan to the review guide.
+  - title: Supervisor review guide
+    text: Writes questions and evidence to bring for each review date, from the skills and the plan.
 output_shape: |-
-  Scope and source coverage
-  A role evidence map, learning plan and supervisor review guide.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ROLE EVIDENCE MAP
+    Skill | what it looks like on the job | milestone at <review date>
+
+  LEARNING PLAN
+    Week or task | skill practised | who supports | feedback point | evidence to collect
+
+  SUPERVISOR REVIEW GUIDE
+    Review <date> | questions to ask | evidence to bring | what to decide next
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - The internship role and the tasks the host has approved
+    - The learning goals
+    - Your review dates
+    - The weekly time set aside for development
+  prerequisites:
+    - A supervisor at the host who will give feedback and sign off the plan
+  output:
+    - name: Role evidence map
+      contains: Each skill, what it looks like on the job and the milestone at each review date.
+    - name: Learning plan
+      contains: Tasks, supervised practice, feedback points and the evidence to collect for each skill.
+    - name: Supervisor review guide
+      contains: For each review date, the questions to ask and the evidence to bring.
+    - name: Hand-back summary
+      contains: Files saved, facts missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read a role description or task list as pasted text or a file. None of them can watch the intern work.
+  inputs:
+    - The role description or a task list from the host.
+    - Written goals from the intern or the school.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Plan one internship at a time. Different roles need different skills.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Use real tasks from the host, not a general list of what interns do.
   - what: Acceptance
-    how: Learning tasks fit the actual role and supervision; completing time is distinct from demonstrating a skill.
+    how: Say what the supervisor will accept as evidence, such as a finished task with feedback.
+improve:
+  - After each review, add what the supervisor actually saw and update the next milestones.
+  - Keep the plan for the next intern and mark what you would change.
+  - Move a task up or down when the host's work changes.
+next:
+  - check-training-transfer-after-a-course
+  - skill-progression-map-builder
+terms:
+  - term: Milestone
+    meaning: A mark of progress the intern should reach by a set date.
+  - term: Evidence
+    meaning: Something you can see or read that shows a skill in use, such as a finished task.
+  - term: Supervisor
+    meaning: The person at the host who guides the intern from day to day.
 judge:
   - Learning tasks fit the actual role and supervision; completing time is distinct from demonstrating a skill.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -56,17 +116,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

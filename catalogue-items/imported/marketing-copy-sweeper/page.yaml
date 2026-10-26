@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It runs fixed edit passes on text.
 new_slug: marketing-copy-sweeper
 name: Marketing copy sweeper
-summary: Paste your copy. Get it tightened in set passes for clarity, voice,
-  proof and calls to action.
+summary: Edit your marketing copy in seven passes for clarity, voice, proof and calls to action. Get the edited copy and a reason for every change.
 job: write-landing-page
 headline: Marketing copy sweeper
-subhead: Paste the copy you want to improve, plus the goal and any brand notes.
-  It runs seven set passes, one each for clarity, voice, proof, calls to action
-  and more. You get the edited copy, a reason for every change and the result of
-  each pass.
+subhead: Paste the copy you want to improve, plus the goal and any brand notes. It runs seven set passes, one each for clarity, voice, proof, calls to action and more. You get the edited copy, a reason for every change and the result of each pass.
 explain: |
   Your copy, tightened in seven set passes, each on one thing: clarity, voice, proof, calls to action and more. One focused pass at a time catches problems that a single read-through misses.
 
@@ -19,6 +15,10 @@ when:
   - You want a final polish on email copy before sending.
   - You only need one headline fixed and nothing else touched.
   - Your copy sounds generic and you want your voice back.
+not_for:
+  - "You need new copy written from scratch: use the copywriting skill, or write a first draft with your AI."
+  - "You want to invent testimonials, numbers or proof: it will not. It marks a gap as [NEED: ...] and you fill it with real facts."
+  - "You only want one line changed: ask for a single-line edit, and it skips the passes and returns just that line."
 you_give:
   - The copy to edit
   - Brand voice or product notes (optional)
@@ -30,7 +30,26 @@ you_get:
   - Results of each pass
   - Only the changed lines for a small edit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste the copy you want edited.
+  - Say the goal of the copy, such as a landing page or a sales email.
+  - Add your brand voice notes if you have them (optional).
+  - Say if you want a full edit or just one line changed.
+  - "Read the change table, then check any [NEED: ...] gaps and fill them with real facts."
+output_sample:
+  input:
+    - The copy you want edited
+    - The goal of the copy
+    - Your brand voice or product notes (optional)
+    - Whether you want a full edit or one line changed
+  output:
+    - name: Edited copy
+      contains: Your full text with the changes made, and your core message kept as written.
+    - name: Change table
+      contains: One row per edit, showing the pass, the change and the reason for it.
+    - name: Results of each pass
+      contains: What each of the seven passes found and fixed, from clarity to zero risk.
+    - name: Gaps to fill
+      contains: "Any [NEED: ...] notes where proof or facts are missing and you must add them."
+    - name: Changed lines only
+      contains: For a one-line edit, just the lines changed, each with a short reason.

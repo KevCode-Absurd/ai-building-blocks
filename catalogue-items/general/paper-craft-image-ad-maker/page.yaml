@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: paper-craft-image-ad-maker
 name: "Paper craft image ad maker"
-summary: "Paste your idea, attach photos. Get a paper-craft image prompt, a layout and the ad words."
+summary: "Plan one paper-craft image ad from your selling idea, brand file and product photos. You get an image prompt, a layout and the ad words."
 job: make-image-ads
 
 headline: "Paper craft image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your product fixes a small everyday problem you can show in one picture.
   - You run a paper-craft video and want a still that matches it.
   - You want a reveal that feels like a gift, with your pack rising from the page.
+not_for:
+  - "You need a video, not a still: use the paper world ad script skill."
+  - "Proof, fabric, food or a real face is the point, so a picture could mislead: use a plain product photo."
+  - "You have no brand file or approved claims yet: use the Website brand brain builder first."
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea
@@ -34,6 +38,30 @@ how_to_use:
   - Read the moment plan. If the implied sentence isn't something you can say, ask for another show job.
   - Check every object in the prompt names its paper. Anything without it will come out real.
   - Make the image, then lay the real label and the words on it in your editor.
+output_sample:
+  input:
+    - Your selling idea, what the buyer knows and why they buy
+    - Your brand file with label text, approved claims and offer
+    - Photos of your product's front, side and top (optional)
+  prerequisites:
+    - An AI that can read attached photos, if you add product photos
+    - An image tool to make the picture from the prompt
+    - An image editor to lay your real label on the result
+  output:
+    - name: Moment plan
+      contains: The moment, the show job, the paper mechanism, the build and the sentence the picture implies, with its source.
+    - name: Layout
+      contains: The 4:5 or 1:1 size and where the plain card, the picture and the product sit.
+    - name: Words on the image
+      contains: A headline of 7 words or fewer and up to 3 more short lines, each with a source.
+    - name: Image prompt
+      contains: What to ask your image tool for, with the paper named on every object, plus a list of things to avoid.
+    - name: Post words
+      contains: The primary text, the headline field and the button text for the ad.
+    - name: Edit step
+      contains: How to lay your real label and the words over the picture, and check contrast.
+    - name: Checks
+      contains: Results of the glance test, word count, type size, contrast and size, plus any missed checks and missing facts.
 
 how_it_works:
   - title: Checks the fit

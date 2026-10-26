@@ -1,6 +1,6 @@
 new_slug: culture-fit-hiring-planner
 name: "Culture-fit hiring planner"
-summary: "Paste your team's values and the role. Get hire-and-fire values, a two-part interview and a paid exit offer."
+summary: "Plan culture-fit hiring that tests behaviour, not gut feel. Give it your values and the role. You get a two-round interview and a paid exit offer."
 job: lead-people
 thinking: medium
 thinking_why: "It must turn vague values into behaviours and guard against bias."
@@ -10,13 +10,17 @@ subhead: "Paste your team's values and the role. It turns each value into a beha
 
 explain: |
   Hiring on skill alone brings in people who do the job and damage the team. Hiring on fit alone can bring in people who think like you. The fix is to define fit as behaviours and test it on its own.
-  
+
   This skill turns each value into a behaviour you would hire for and one you would let someone go for. It plans two interview rounds, one for skills and one for culture, and a candidate must pass both. It adds questions about how people treat those who cannot help them, a paid offer to leave during training, a review section on the values and a plan to promote from within. Check employment law before using it.
 
 when:
   - "You are about to make a first or tenth hire and want a clear bar."
   - "A skilled person joined and the team got worse."
   - "You say you have values but nobody hires by them."
+not_for:
+  - "You hire only on a fixed skills test: skip this and use your own test, with a second person to score it."
+  - "You need legal advice on a paid exit offer: ask an employment lawyer, because this plan is not a legal opinion."
+  - "You want a note to explain your culture to the team: write it by hand or pair this plan with the Team culture memo writer."
 
 you_give:
   - "Your team's values or ways of working"
@@ -33,6 +37,26 @@ how_to_use:
   - "Describe the role and who it works with."
   - "Add what you can pay for an exit offer."
   - "Ask someone outside the team to read the questions for bias."
+output_sample:
+  input:
+    - Your team's values or ways of working
+    - The role and the team it joins
+    - Your pay limits and team size (optional)
+  output:
+    - name: Values as behaviours
+      contains: A table with one behaviour to hire for and one to let someone go for, per value.
+    - name: Interview
+      contains: A skills round and a culture round run by different people, with a pass needed on both.
+    - name: Culture questions
+      contains: Six to eight questions about past behaviour, plus a way to ask others who met the candidate.
+    - name: Exit offer
+      contains: A paid, optional offer to leave during training, with timing and a reminder to check employment law.
+    - name: Reviews
+      contains: A share of each review on living the values, who rates it and what evidence is used.
+    - name: Growth from within
+      contains: A rule for which roles go to internal people first and when to post outside.
+    - name: Missing and checks missed
+      contains: Gaps it could not fill and any of its own checks it failed, or none.
 
 how_it_works:
   - title: "Turn each value into a behaviour"
@@ -53,27 +77,27 @@ how_it_works:
 output_shape: |
   VALUES AS BEHAVIOURS
   <value> | Hire for: <behaviour> | Let go for: <behaviour>
-  
+
   INTERVIEW
   Round 1 (skills): <who, what>
   Round 2 (culture): <who, what>
   Pass needed: both
-  
+
   CULTURE QUESTIONS
   <6 to 8 questions> | How others who met them are asked: <method>
-  
+
   EXIT OFFER
   <sum, timing, optional> | Check: local employment law
-  
+
   REVIEWS
   <values share, who rates, evidence>
-  
+
   GROWTH FROM WITHIN
   <rule>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

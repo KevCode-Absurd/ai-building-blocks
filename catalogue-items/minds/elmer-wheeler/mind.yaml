@@ -16,6 +16,29 @@ use_cases:
   - "Answer the common objections, and tell an honest one from a stall"
   - "Present a price so it feels small next to what the buyer gets"
   - "Rewrite a flat script so the words, the tone and the action all match"
+not_for:
+  - "You need to understand the buyer's problem through questions first: use the Neil Rackham mind."
+  - "You want a calm way to handle a hard negotiation: use the Chris Voss mind."
+  - "You need long-form copy, fake reviews or regulated claims: use a specialist writer and check the claims yourself."
+output_sample:
+  input:
+    - The exact line you use on customers now, word for word
+    - What you sell and what it does for the buyer
+    - Who the buyer is and where you say the line (shop, email, call)
+    - Any common objections you hear (optional)
+  output:
+    - name: Sizzle
+      contains: The one thing the buyer will see, hear, feel or picture, found from what your product does for them.
+    - name: Rewritten line
+      contains: A better version of your line, with the benefit in the first ten words, word for word.
+    - name: Choice question
+      contains: Your yes-or-no question turned into a choice between two good options.
+    - name: Demonstration idea
+      contains: A short way to let the buyer hold, try or watch the product work.
+    - name: Objection and price replies
+      contains: Short answers that tell honest objections from stalls, and a price line that feels small.
+    - name: Test plan
+      contains: A simple way to try old and new lines on the next ten customers and count.
 seats:
   - {seat: "Sell the sizzle", asks: "What is the sizzle here, the thing the buyer will feel, hear or picture, and are we leading with it?"}
   - {seat: "Tested words", asks: "Have we tried this line on real customers, and did it sell more than the old one?"}

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It ranks videos by a number, then looks for what they share.
 new_slug: youtube-viral-video-finder
 name: YouTube viral video finder
-summary: Name your niche. It reads public YouTube pages and ranks videos that
-  beat their channel's usual views.
+summary: Find YouTube viral videos in your niche. It ranks videos by how far they beat their own channel's usual views, so you see ideas that worked.
 job: grow-social
 headline: YouTube viral video finder
-subhead: Name your niche. It reads public YouTube pages and ranks videos that
-  beat their channel's usual views. Bring a list of channels in your niche. Use
-  the result to plan your next step.
+subhead: Name your niche. It reads public YouTube pages and ranks videos that beat their channel's usual views. Bring a list of channels in your niche. Use the result to plan your next step.
 explain: |
   A ranked list of videos in your niche that beat their own channel's usual views, so you copy ideas, not channel size.
 
@@ -18,6 +15,10 @@ when:
   - You are choosing a topic and want proof it can outperform.
   - You want to learn which title patterns lift views in your niche.
   - You need to pick between several competitor videos to study.
+not_for:
+  - "Your channel has fewer than four public videos, or you need private numbers: use your own YouTube Studio data instead."
+  - "You want to know why your own video did well or badly: use your own YouTube Studio data, since this reads public pages only."
+  - "You want a list of channels to study: ask a person in your niche or search YouTube by hand first, then bring the list here."
 you_give:
   - A list of channels in your niche
   - Titles, views and links for at least four videos per channel
@@ -29,8 +30,28 @@ you_get:
   - The one thing they share
   - The ones you could make this week
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and read public YouTube pages.
+  - Pick five or more channels in your niche. Open each channel's public video list.
+  - "Collect at least four videos per channel: the title, views, link and length. Use yt-dlp, copy them by hand, or ask your AI to help."
+  - Paste the skill into a chat with an AI that can run Python code, then add your list. Add a minimum multiple such as 2x if you want one.
+  - Check the top five and their multiples. Remember the title formula is a guess about the title, not proof of why it worked.
+  - "Pick the video you could make this week. Then answer the last question: ship it, or change it?"
+  - Read only public pages, never log in. Check YouTube's terms of service and keep your requests few and slow.
+output_sample:
+  input:
+    - A list of channels in your niche
+    - Titles, views and links for at least four public videos per channel
+    - A minimum multiple, such as 2x (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - A way to collect public channel listings, such as yt-dlp, the public page or a hand-made list
+  output:
+    - name: Top five videos
+      contains: The five videos that beat their own channel's median views by the most, each with its multiple.
+    - name: Title formula
+      contains: The title pattern each video used, matched against a set of 21 formulas. It is a guess about the title, not proof.
+    - name: Shared trait
+      contains: The one structural thing the top videos have in common.
+    - name: Make this week
+      contains: Which of these you could make this week, in your voice, with what you have.
+    - name: Ship or change
+      contains: A last question asking whether you want to use the result or change it.

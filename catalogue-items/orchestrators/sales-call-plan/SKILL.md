@@ -51,10 +51,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Buyer-matched argument planner.** Use the skill `buyer-matched-argument-planner`. Which argument leads for each and what to ask first
-2. **Ten-second opener writer.** Use the skill `ten-second-opener-writer`. Give it the angle library from the steps before. A ten-second opener and two spares, as short honest questions. Reads the angle library from the step before
-3. **Objection answer sheet writer.** Use the skill `objection-answer-sheet-writer`. Give it the angle library from the steps before. An answer sheet that agrees where true, restates each doubt as a yes-question and brings proof. Reads the angle library from the step before
-4. **Ask-which closing planner.** Use the skill `ask-which-closing-planner`. Give it the objection map from the steps before. Closing questions that offer two ways to say yes. Reads the objection map from the step before
+1. **Buyer-matched argument planner.** Use the skill `buyer-matched-argument-planner`. Which argument leads for each buyer and what to ask first. Hands the angle library to steps 2 and 3
+2. **Ten-second opener writer.** Use the skill `ten-second-opener-writer`. Give it the angle library from the steps before. A ten-second opener and two spares, as short honest questions. Built from the angle library in step 1. The opener goes to you, not to the next step
+3. **Objection answer sheet writer.** Use the skill `objection-answer-sheet-writer`. Give it the angle library from the steps before. An answer sheet that agrees where true, restates each doubt as a yes-question and brings proof. Uses the angle library from step 1, plus your own objections and customer words, not the openers from step 2. Hands the objection map to step 4
+4. **Ask-which closing planner.** Use the skill `ask-which-closing-planner`. Give it the objection map from the steps before. Closing questions that offer two ways to say yes. Built from the objection map in step 3
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

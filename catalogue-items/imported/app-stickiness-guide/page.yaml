@@ -2,34 +2,57 @@ thinking: high
 thinking_why: It chains several methods and relies on your answers at each step.
 new_slug: app-stickiness-guide
 name: App stickiness guide
-summary: Describe your app. Get a retention plan with a habit loop, a better
-  first run and one metric to watch.
+summary: "Build an app retention plan: a habit loop, a better first run and one metric your team trusts. Give it your app and sign-up numbers."
 job: understand-customers
 headline: App stickiness guide
-subhead: "People sign up for your app, then quietly drift away. This skill gives
-  you a retention plan: a habit loop that brings people back, a better first
-  run, and one number your team agrees to watch."
+subhead: "People sign up for your app, then quietly drift away. Describe your app and your numbers, and your AI walks you through eight steps. You get a habit loop, a better first run and one number to watch."
 explain: |
   People sign up for your app, then quietly drift away. This skill gives you a retention plan: a habit loop that brings people back, a better first run, and one number your team agrees to watch.
 
   It works in eight phases and puts leaks before growth. First it studies why users come back unprompted, then why new users never reach that loop. It talks with you about what your own users need, shapes the product around that, picks a single metric, adds small touches that make the app feel alive, and looks at what motivates people. It saves choices in docs files so you can pick up later. Fix broken experience first. Retention tricks cannot hide it.
 when:
   - Many people sign up and are gone within a week.
-  - Your onboarding funnel loses people at the same step.
-  - Daily active users stay flat.
-  - You want a single retention metric the team trusts.
+  - Your sign-up flow loses people at the same step each time.
+  - Daily active users stay flat and nothing looks broken.
+  - You want one retention number your whole team trusts.
+not_for:
+  - "Your app has broken screens or slow load times: fix those first, because no retention trick can cover them up. Ask a developer or designer."
+  - "You have no app yet: build a first version before you plan retention. Start with a simple prototype or a person who builds apps."
+  - "You only need one method, like habit design or a single metric: ask your AI for that one step instead of running all eight."
 you_give:
-  - A description of your app and its users
-  - Current sign-up and return numbers
-  - Where the onboarding funnel leaks
-  - Your docs folder (optional)
+  - A short description of your app and its users
+  - Your sign-up and return numbers, if you have them
+  - The step in sign-up where people drop off
+  - Your project docs folder (optional)
 you_get:
-  - A habit loop design
-  - A better first-run plan
-  - One chosen retention metric
-  - Saved plan files for later sessions
+  - A habit loop that gives people a reason to come back
+  - A plan for a better first run
+  - One retention number for your team to watch
+  - Saved plan files, so you can stop and pick up later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Check that your AI can read and write files, and that your project has a docs folder. Create one if it does not.
+  - "Install the eight companion skills this one runs: hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions and drive-motivation. Use the install steps for your AI tool."
+  - Open the Grow an App skill in your AI and paste in your app description and numbers.
+  - Answer the questions at each of the eight phases. Your AI asks before every choice.
+  - Read the saved plan files after each phase and fix anything that is wrong.
+  - Come back later and ask your AI to continue from the plan file.
+output_sample:
+  input:
+    - A short description of your app and who uses it
+    - Your sign-up and return numbers, such as how many come back after day 1, day 7 and day 30
+    - The step in sign-up where people drop off
+    - Your project docs folder (optional)
+  prerequisites:
+    - An AI that can read and write files, so it can save the plan in a docs folder
+    - "The eight companion skills it runs: hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions and drive-motivation"
+  output:
+    - name: docs/PRODUCT.md
+      contains: Your habit loop, the first-run fixes and what your product needs to do, built up phase by phase.
+    - name: docs/CUSTOMER.md
+      contains: What your own users need, drawn from the talks and questions in the discovery phase.
+    - name: docs/EXPERIMENTS.md
+      contains: The small, cheap tests chosen to find which bet is worth building.
+    - name: docs/METRICS.md
+      contains: The one retention number your team agrees to watch, and why it was chosen.
+    - name: docs/GROW-APP-PLAN.md
+      contains: A progress tracker for all eight phases, so you can stop and pick up later.

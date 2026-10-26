@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It balances challenge against skill.
 new_slug: task-engagement-tuner
 name: Task engagement tuner
-summary: Describe a dull or stressful class task. Get changes to challenge,
-  goals and feedback that restore focus.
+summary: Fix a dull or stressful class task with a task engagement tuner. Give it the activity and year group. You get a tuned task and signs to watch.
 job: teach-and-train
 headline: Task engagement tuner
-subhead: Describe the activity, the year group and what you see, such as boredom
-  or stress. It checks whether the challenge matches students' skill, then
-  adjusts goals, feedback and sense of control. You get a diagnosis, a tuned
-  version of the activity and signs to watch for in class.
+subhead: Describe the activity, the year group and what you see, such as boredom or stress. It checks whether the challenge matches students' skill, then adjusts goals, feedback and sense of control. You get a diagnosis, a tuned version of the activity and signs to watch for in class.
 explain: |
   A learning task rebalanced so students are neither bored nor overwhelmed, leaving them focused and absorbed. You get specific changes to try in your next lesson, not general advice to motivate them.
 
@@ -20,6 +16,10 @@ when:
   - Fast students finish in five minutes and then disrupt others.
   - You want a quick way to see if students are engaged.
   - A good activity feels flat and you cannot say why.
+not_for:
+  - "You want to check recall or knowledge, where the challenge must stay fixed: keep the task as it is and use a simple quiz."
+  - "Students are acting out or breaking rules: use your school behaviour policy, not a change to the task."
+  - "You need a whole lesson plan from scratch: write the plan first, then bring one activity here."
 you_give:
   - The learning activity
   - Year group
@@ -31,7 +31,25 @@ you_get:
   - A tuned version of the activity
   - Signs to watch for in class
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill's prompt from the SKILL.md file into a new chat.
+  - Replace {{lesson_activity}} with your task and {{student_level}} with your year group. Fill in the optional details if you have them.
+  - Send it. No code, files or paid tools are needed.
+  - "Read the four sections you get: Flow Analysis, Redesigned Activity, Differentiated Challenge Map and Flow Killers to Avoid."
+  - Try the redesigned task in class. Watch for the signs listed, then adjust the challenge on the spot.
+  - After the lesson, note what worked and pair it with the Motivation diagnostic task redesign or the Practice problem sequence designer.
+output_sample:
+  input:
+    - The learning activity you want to improve
+    - Year group
+    - Subject (optional)
+    - How engaged students are now, such as bored or stressed (optional)
+    - Lesson length or limits such as space and tech (optional)
+  output:
+    - name: Flow Analysis
+      contains: A table showing how well the task balances challenge and skill, and meets clear goals and fast feedback.
+    - name: Redesigned Activity
+      contains: Your task rewritten so goals are clear, feedback comes quickly and the challenge fits your students.
+    - name: Differentiated Challenge Map
+      contains: How to raise or lower the challenge so students of different ability can all stay focused.
+    - name: Flow Killers to Avoid
+      contains: Common things that break focus in this kind of task, and how to avoid them.

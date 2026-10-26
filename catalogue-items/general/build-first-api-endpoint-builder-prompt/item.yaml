@@ -1,11 +1,11 @@
 slug: build-first-api-endpoint-builder-prompt
-name: First API Endpoint coding prompt
-summary: Get a coding brief for your first API endpoint, with request checks, error responses and a focused test plan.
+name: First API endpoint prompt for Next.js
+summary: "Build your first API endpoint. Paste one prompt into Claude Code to make two small Next.js routes and learn how a server works."
 category: general
 type: prompt
 role: make
 job: ops
-level: intermediate
+level: beginner
 inputs:
   - type: codebase
     required: true

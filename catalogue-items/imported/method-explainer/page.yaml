@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: Pitching the depth to each reader takes judgment.
 new_slug: method-explainer
 name: Method explainer
-summary: Tell it how you did your analysis and who reads it. Get a plain
-  how-we-did-this section with limits.
+summary: Explain how you did your analysis in plain words. Give it your method and your reader. You get a clear method section with limits.
 job: document-work
 headline: Method explainer
-subhead: A plain write-up of how you got your answer, so readers trust it. Tell
-  it the method and who reads it, and you get a short section that says what was
-  asked, what data was used, what was done, what was assumed, and where it falls
-  short.
+subhead: A plain write-up of how you got your answer, so readers trust it. Tell it the method and who reads it, and you get a short section that says what was asked, what data was used, what was done, what was assumed, and where it falls short.
 explain: |
   A plain write-up of how you got your answer, so readers trust it. Tell it the method and who reads it, and you get a short section that says what was asked, what data was used, what was done, what was assumed, and where it falls short.
 
@@ -19,6 +15,10 @@ when:
   - Your forecast needs a plain-language method section.
   - An attribution model is questioned and you need to explain it simply.
   - You must present the same analysis to executives and to analysts.
+not_for:
+  - "You only want to share results from a routine dashboard: send a short results summary instead, with no method section."
+  - "Nobody has questioned the method and the result needs no proof: skip it and share the findings alone."
+  - "You need the analysis done, not explained: ask an analyst or run the analysis first, then come back."
 you_give:
   - The method, data and steps you used
   - Who will read it
@@ -29,7 +29,27 @@ you_get:
   - A filled write-up or slide template
   - Business-word swaps for technical terms
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions, or upload the skill folder if your AI accepts files.
+  - "Describe your method: the technique, the data and the steps you took."
+  - "Say who will read it: executive, business analyst or technical peer."
+  - Add your assumptions and known limits if you have them (optional).
+  - Check the limits paragraph. Make sure it says what the limit means for your conclusion.
+  - Paste the write-up into your report. If you will present the method, ask for the slide version too.
+output_sample:
+  input:
+    - "How you did the analysis: the method, the data and the steps"
+    - "Who will read it: executive, business analyst or technical peer"
+    - Assumptions and known limits (optional)
+  prerequisites:
+    - An AI that can read the skill files, or paste the skill instructions into a chat
+  output:
+    - name: Methodology write-up
+      contains: A short plain section on what was asked, what data was used, what was done and what was assumed.
+    - name: Limitations section
+      contains: At least one honest limit and what it means for the conclusions.
+    - name: Plain-language swaps
+      contains: Statistical terms replaced with business words using the translation table.
+    - name: methodology_writeup_template.md
+      contains: The write-up filled in, ready to paste into your report.
+    - name: methodology_slide_template.md
+      contains: A slide version, made when you will present the method.

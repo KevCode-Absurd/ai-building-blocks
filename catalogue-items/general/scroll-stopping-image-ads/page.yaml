@@ -1,6 +1,6 @@
 new_slug: scroll-stopping-image-ads
 name: Buyer research image-ad set builder
-summary: Share brand facts, customer evidence and exact product photos. Get varied ad arguments, concepts, image files or prompts and a check record.
+summary: Build a set of image ads from your buyer research and product photos. You get varied ad arguments, concepts, finished images or prompts, and a check.
 job: make-image-ads
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You're launching to a new audience and need a first set that tests real differences, not six colours of one ad.
   - Your best ads open on the product or a discount and strangers scroll past them.
   - You have lots of reviews but no clear idea which reasons to buy are worth an ad.
+not_for:
+  - You have no customer reviews, survey answers or product photos yet. Gather those first, or build your brand facts with the Website brand brain builder.
+  - You only need the words for one ad. Ask your AI for headline options, or use the image-ad-copy-writer.
+  - You want to check an ad you already made. Use the Pre-launch ad checker.
 you_give:
   - Your brand facts, approved claims, voice, colours and never-say list
   - Customer reviews, comments or survey answers, with where each came from
@@ -31,6 +35,33 @@ how_to_use:
   - List the product photos you actually have and what each one shows. Say plainly if you only have one or two.
   - Say how many ads and which sizes, for example "4 ads, 4:5 and 9:16".
   - It pauses twice so you can pick the reasons and approve the concepts. Say "go ahead" at the start and it does both stops for you, marking each one (approve).
+output_sample:
+  input:
+    - Your brand facts, approved claims, voice, colours and never-say list
+    - Customer reviews, comments or survey answers, with where each came from
+    - Your product photos, named by what each shows
+    - How many ads you want and which sizes
+    - Past ad results with cost per sale (optional)
+  prerequisites:
+    - An AI that can make images, if you want finished ad files instead of prompts
+    - Real photos of your product, from more than one angle, for best results
+  output:
+    - name: Sources
+      contains: What counts as a source for this run, so every claim can be traced back.
+    - name: Buyer sheet
+      contains: Each buyer's insights with their sources, and the hunches left out because too few buyers said them.
+    - name: Reasons to buy
+      contains: Each reason with buyer, problem, what only this product does and proof, plus the ones cut or merged.
+    - name: Stop 1
+      contains: A pause where you pick which reasons to turn into ads.
+    - name: The set on the map
+      contains: Each ad placed by ad type and look, with a note on how varied the set is.
+    - name: Concepts
+      contains: "For each ad: the picture, which product photo it uses, headline options with word counts, and a support line."
+    - name: Stop 2
+      contains: A pause where you approve the concepts and the first picture of each look, and see what is missing.
+    - name: Finished ads and check record
+      contains: The final ads, sizes, a table of what each one tests, and the result of the checks.
 how_it_works:
   - title: Builds the buyer sheets
     text: Uses this workflow's own research step. An insight needs three separate buyers, or one buyer and a past ad that beat your usual cost per sale.

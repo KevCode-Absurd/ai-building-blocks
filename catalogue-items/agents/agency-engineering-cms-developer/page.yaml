@@ -1,0 +1,147 @@
+name: CMS Developer agent
+summary: "Plan a WordPress or Drupal build: content model, theme, custom plugin or module, and a pre-launch checklist to run before go-live."
+headline: CMS Developer agent
+subhead: Tell it which CMS you use, whether the site is new or existing, and what your editors need to publish. The agent settles the content model first, then plans the theme and custom code with accessibility and speed checks. You get a build plan, code sketches and a launch checklist.
+job: build-websites
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  CMS projects go wrong when code starts before the content model is settled. Then editors get a confusing admin screen and developers patch around the CMS. This agent plans a WordPress or Drupal website build in the right order: content first, then theme, then custom code.
+
+  Its rules are strict. Use hooks and filters. Never edit core files or a parent theme. Keep settings in code, not only in the admin screen. Check every plugin or module before you add it. It plans for editors too, with Gutenberg blocks, ACF blocks, Paragraphs or Layout Builder.
+
+  It states which versions it assumed and marks version details for you to check. Code is a draft to test on a staging copy of your site, never on the live one. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's targets are its own goals, not results measured by AI Blocks.
+when:
+  - You are starting a WordPress or Drupal site and need the content model and theme plan before you build.
+  - You need a custom post type, plugin or module and want to know what to build and what to add from existing ones.
+  - Your editors find the admin confusing and you want a block or layout plan for them.
+  - You are about to launch and want a checklist for speed, accessibility and security.
+not_for:
+  - "Your site is slow and that is the only problem: use the WordPress Performance Engineer agent or the Drupal Performance Engineer agent."
+  - "You are building an online store: use the WordPress Shopping Cart Engineer agent or the Drupal Shopping Cart Engineer agent."
+  - "Your front end is a separate Next.js or Nuxt app: use the Frontend Developer agent."
+  - "You need a formal accessibility audit: use the Accessibility Auditor agent."
+you_give:
+  - "Which CMS and version: WordPress, Drupal, or 'help me choose'"
+  - Whether the site is new or a change to an existing one
+  - "What editors need to publish: page types, fields and who edits what"
+  - Your design, brand colors or component list (optional)
+  - The plugins or modules already installed (optional)
+  - Other needs, such as several languages or a link to a CRM (optional)
+you_get:
+  - A CMS choice with reasons, if you asked for one
+  - "A content model: page types, fields and how they link"
+  - "A theme plan: templates, blocks and design settings"
+  - A plugin or module plan that says what to add and what to build
+  - Code sketches for the key parts, marked as drafts
+  - A pre-launch checklist
+  - Open questions
+how_to_use:
+  - Download the pack and add it as a skill in your AI. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - "Write your brief: the CMS and version, new or existing site, and what editors publish. Paste your theme or plugin list if you have one."
+  - Say 'Plan this build. Do not guess my CMS version.' Your AI asks once for what is missing.
+  - Read the content model first. Agree it with your editors before anyone writes theme code.
+  - Try the code sketches on a staging copy of your site. The AI cannot log in to your site or run anything.
+  - Run the pre-launch checklist yourself, and bring back the results from Lighthouse or axe-core.
+how_it_works:
+  - title: Discover and model
+    text: "It audits the brief: page types, editor roles, links to other systems and languages. It then maps every field and relationship."
+  - title: Choose the CMS fit
+    text: If you asked, it picks Drupal or WordPress for your case and says why.
+  - title: Plan the theme
+    text: It plans design settings, templates and blocks, top down from page layout to components.
+  - title: Plan custom code
+    text: It separates what existing plugins or modules cover from what needs custom code. Types, fields and blocks are registered in code.
+  - title: Check access and speed
+    text: It lists axe-core and Lighthouse checks and a walk-through of the editor flow as a non-technical user.
+  - title: Write the launch checklist
+    text: It ends with a checklist for code, config, security headers, speed, accessibility and handoff.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    CMS <WordPress or Drupal> <version> | <new or existing> | Editors <who publishes what>
+    Assumed: <list> | MISSING: <list>
+
+  CONTENT MODEL
+    <content type> | <fields> | <links to other types> | <display variants>
+
+  THEME PLAN
+    <template or block> | <what it shows> | <how editors use it>
+
+  PLUGINS AND MODULES
+    <need> | <existing add-on or custom> | <vetting note: last update, installs, open issues>
+
+  CUSTOM CODE SKETCHES (drafts, not run)
+    <name> | <short code>
+
+  ACCESSIBILITY AND SPEED CHECKS
+    <check> | <tool> | <what a pass looks like>
+
+  PRE-LAUNCH CHECKLIST
+    [ ] <item>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - Your CMS and version, and whether the site is new or existing
+    - What your editors need to publish
+    - Your design or component list (optional)
+    - Your installed plugins or modules (optional)
+  prerequisites:
+    - A staging copy of your site to try the code on
+    - An AI that takes a pasted profile, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brief and assumptions
+      contains: The CMS, version and editor needs as understood, with assumptions and MISSING items.
+    - name: Content model
+      contains: Each content type with its fields, links to other types and display variants.
+    - name: Theme plan
+      contains: Templates and blocks to build, what each shows and how editors use it.
+    - name: Plugins and modules
+      contains: What to add and what to build, with a vetting note for each add-on.
+    - name: Custom code sketches
+      contains: Short drafts such as a post type, block or module hook, marked as not run.
+    - name: Accessibility and speed checks
+      contains: Checks with axe-core and Lighthouse, and what a pass looks like.
+    - name: Pre-launch checklist
+      contains: A tick list covering code, config, security headers, speed, accessibility and handoff.
+    - name: Open questions
+      contains: What is unknown and what each answer changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: CMS version
+    how: Give the exact version, such as WordPress 6.7 or Drupal 10.3, so code fits it.
+  - what: Editors
+    how: List who publishes and how tech-savvy they are, since it shapes the blocks.
+  - what: Scope
+    how: Ask for the content model only, or for the theme only, if you want a smaller first pass.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: CMS
+    meaning: Content management system. The tool editors use to publish pages, such as WordPress or Drupal.
+  - term: Content model
+    meaning: The list of page types and the fields on each one.
+  - term: Plugin and module
+    meaning: Add-on code. WordPress calls it a plugin and Drupal calls it a module.
+  - term: Gutenberg
+    meaning: The WordPress block editor.
+  - term: Child theme
+    meaning: A theme built on a parent theme, so you change it without editing the parent.
+  - term: Staging
+    meaning: A private copy of your site where you test changes.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan and sketches work from a pasted profile and your brief.
+    - name: Claude Code
+      why: It can read your theme and plugin folders so the plan fits your real code.
+  inputs:
+    - A list of your installed plugins or modules with versions.
+    - Your design file or a screenshot of each page layout.

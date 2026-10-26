@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It runs many code variants and judges which results matter.
 new_slug: test-suite-auditor
 name: Test suite auditor
-summary: Point it at a Python project. Get a list of weak, flaky, slow and
-  useless tests, checked by mutation.
+summary: Find weak, flaky, slow and useless tests in your Python project. This test suite audit uses mutation testing to show if your tests catch broken code.
 job: test-and-fix-code
 headline: Test suite auditor
-subhead: A verdict on whether your Python tests would actually catch broken
-  code, with the weak, flaky, slow and useless tests listed. A passing suite
-  stops being a comfort and becomes a number you can trust.
+subhead: A verdict on whether your Python tests would actually catch broken code, with the weak, flaky, slow and useless tests listed. A passing suite stops being a comfort and becomes a number you can trust.
 explain: |
   A verdict on whether your Python tests would actually catch broken code, with the weak, flaky, slow and useless tests listed. A passing suite stops being a comfort and becomes a number you can trust.
 
@@ -17,8 +14,12 @@ when:
   - Your tests pass but bugs still reach production.
   - The test run takes so long that people skip it.
   - Some tests fail at random and you cannot say which.
-  - You want to prune tests that add cost but no safety.
-  - You let AI write tests and need to check their value.
+  - You want to cut tests that add cost but no safety.
+  - You let AI write tests and need to check how useful they are.
+not_for:
+  - Your project is not written in Python or does not use pytest. Use the test tools for your own language, or ask a developer.
+  - You only want to check one code change. Use agentic-verify, a separate skill that runs every mutant of the changed lines.
+  - You want your tests fixed or deleted for you. This audit only reports, so ask your AI for a specific change after you read the report.
 you_give:
   - Your Python project
   - pytest set up
@@ -30,8 +31,33 @@ you_get:
   - A list of slow tests
   - Tests that add no detection
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Check that your project uses Python 3.12 or newer and pytest. Add the pytest-cov add-on first.
+  - Review the runner before you first use it. It is fetched from GitHub at tag v0.3.0, commit 07608b3, and it runs code on your machine.
+  - Open your AI in a tool that can run code and read your project files. Paste this skill and say quick or deep.
+  - Quick takes about 5 minutes. Deep takes 30 minutes by default and runs the mutation checks. Say how long you can spare.
+  - Read report.md first. A surviving mutant is a gap to look at, not proof of a bug.
+  - If the deep audit lists tests to remove, ask for the removal check before you delete anything.
+output_sample:
+  input:
+    - Your Python project folder
+    - "Mode: quick or deep"
+    - Time budget in minutes (optional)
+    - A test-suite-audit.toml settings file (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Python 3.12 or newer and pytest in your project
+    - The pytest-cov add-on in your project
+    - The pytest-randomly add-on, if you want order checks
+  output:
+    - name: report.md
+      contains: A readable summary of what the audit found, with each finding labelled and the next step to check it.
+    - name: report.json
+      contains: The full evidence behind every finding, including mutant results, timings and coverage.
+    - name: Does it catch broken code?
+      contains: Surviving mutants, weak tests, code no test covers, and whether property-based tests exist.
+    - name: Can an agent run it on every change?
+      contains: How long the suite takes, the slowest tests, and any flaky or order-dependent tests.
+    - name: Is it bloated?
+      contains: Tests proposed for removal, whether the removal check refuted them, and the time they would save.
+    - name: Reproduction command
+      contains: A command to replay at least one mutant finding so you can see it yourself.

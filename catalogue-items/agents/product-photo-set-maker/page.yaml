@@ -1,6 +1,6 @@
 new_slug: product-photo-set-maker
 name: Product photo set maker
-summary: Give it photos of one real product. Get a planned photo set, checked frame by frame, with every failed frame redone.
+summary: Check AI product photos against your real product. Get a planned photo set, each frame checked, and failed frames redone with the exact fix.
 job: product-photos
 thinking: high
 thinking_why: It reads every picture against your real product, decides what to redo and loops until each frame passes. Give it your strongest model.
@@ -16,6 +16,10 @@ when:
   - You are making product photos with AI and need them to match the real product.
   - You need a matching set for a product page, a marketplace listing, or ads and social.
   - Your last AI set had a wrong label, a warped pack or odd hands, and you do not want that again.
+not_for:
+  - "You have no photos of the product yet: take real photos first, because every check depends on them."
+  - "You only want a plan for a product page with no checks: use the Product page gallery planner."
+  - "You want the agent to draw the pictures itself: it cannot, so make them in ChatGPT, Gemini or Higgsfield and bring them back."
 you_give:
   - Clear photos of the exact product, from more than one side
   - The product's facts, such as size, variant and what is in the box
@@ -30,10 +34,36 @@ you_get:
   - A list of faults to add to your prompts next time
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask for a photo set.
-  - Attach the product photos and say where the set goes.
+  - Attach clear photos of your real product and say where the set goes.
   - Read the plan. For a product page, say yes before it writes the prompts.
-  - Make the pictures with the tool you choose. The agent asks before it uses any credits. Attach the pictures back.
-  - Read the results. Redo what it sends back, or take a real photo for frames it drops.
+  - Make the pictures in a tool you pick, such as ChatGPT, Gemini or Higgsfield. The agent cannot draw, and asks before anything uses credits.
+  - Attach the pictures back so the agent can check each one at full size.
+  - Redo the frames it sends back. For frames it drops, take a real photo.
+output_sample:
+  input:
+    - Clear photos of your real product from more than one side
+    - Your product facts, such as size, variant and what is in the box
+    - Your brand brain
+    - "Where the set goes: a product page, a marketplace, or ads, social and email"
+    - Your customer reviews (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder
+    - An image tool you choose to make the pictures, such as ChatGPT, Gemini or Higgsfield
+  output:
+    - name: Truth sheet
+      contains: What your product really looks like, with the lock lines every prompt repeats and the shots still missing.
+    - name: The set
+      contains: Each passing picture in upload order, with its job and check result.
+    - name: Redone
+      contains: Each frame that was redone, its fault, the fix line and how many rounds it took.
+    - name: Dropped
+      contains: Frames that failed twice, with the fault and the real photo to take.
+    - name: Pattern found
+      contains: Any fault on three or more frames, and the lock line change that fixes it.
+    - name: Marketplace result
+      contains: Pass or reject for the main image, if you sell on a marketplace.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Get the truth sheet
     text: Writes what your product really looks like from your photos, with the lock lines every prompt repeats. Reuses it next time. Lists the shots it cannot make yet.

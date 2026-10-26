@@ -1,6 +1,6 @@
 new_slug: direct-selling-model-check
 name: "Direct selling model check"
-summary: "List your channels and margins. Get a sell-direct verdict, what to build to order and a score out of 100."
+summary: "Check if your shops, agents or platforms earn their cut. List channels and margins, get a direct selling plan and a score out of 100."
 job: plan-strategy
 thinking: high
 thinking_why: "It weighs what each middleman adds, then does cash timing arithmetic, where a wrong figure flips the advice."
@@ -17,6 +17,10 @@ when:
   - A large part of your price goes to shops, agents or platforms.
   - You hold stock for weeks before it sells and cash is tight.
   - You want to test selling direct to a group of customers.
+not_for:
+  - "You sell through one channel with no middlemen: there is nothing to compare, so talk to a few customers about what they want."
+  - "You need to choose what to give up between two good options: use a Strategy trade-off planner or sit down with a partner or adviser."
+  - "You need a legal view on selling direct against a contract: ask a lawyer, because this check does not give legal advice."
 
 you_give:
   - Your sales channels with what each costs and the margin you keep
@@ -34,6 +38,31 @@ how_to_use:
   - List your channels, margins, stock days and payment timing. Add your customer groups.
   - Read the middleman table first, then the cash timing.
   - Run the small direct test it proposes before you change the main channel.
+output_sample:
+  input:
+    - Your sales channels, what each costs and the margin you keep
+    - Days of stock you hold, when you pay suppliers and when customers pay you
+    - Your customer groups and what you know about them (optional)
+    - The question you want answered
+  output:
+    - name: Commodity test
+      contains: "Whether price and delivery now decide the sale: yes, partly or no, with the evidence."
+    - name: What each middleman adds
+      contains: Each channel with its cost, what it adds, and a keep, change or cut call.
+    - name: Build to order
+      contains: Which products could be made after the order, your stock days now and what is possible.
+    - name: Cash timing
+      contains: The day customers pay, the day you pay suppliers, and the gap in days.
+    - name: Customer groups
+      contains: Each group with margin, needs and fit, and the group to serve first.
+    - name: New channel to be early on
+      contains: One new channel and a small test with a cost, a time and a success signal.
+    - name: Review date
+      contains: A date within a year and the question to ask about the model.
+    - name: Score
+      contains: A score out of 100 built from six pass or fail checks.
+    - name: Missing and checks missed
+      contains: What you did not give, and one line for each check that failed, or none.
 
 how_it_works:
   - title: Tests for commodity

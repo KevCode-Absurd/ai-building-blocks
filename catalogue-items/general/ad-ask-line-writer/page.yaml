@@ -1,6 +1,6 @@
 new_slug: ad-ask-line-writer
 name: Ad ask line writer
-summary: Paste your ad and offer. Get two clear asks, each with a true reason to act and the doubts removed.
+summary: Write the closing line of your ad two ways, with a true reason to act and every doubt answered from your own offer terms.
 job: write-ad-copy
 thinking: low
 thinking_why: It rewrites the ending of your ad from facts you gave.
@@ -14,6 +14,10 @@ when:
   - Your ad is good but the last line is weak.
   - You get clicks but few people finish.
   - You want a gentler second version for colder buyers.
+not_for:
+  - "You have no offer yet: set the price, trial and guarantee first, then come back with your terms."
+  - "You want a full set of checks on a call to action: use the Call-to-action writer."
+  - "You need the whole ad written, not just the ending: use the Ad opening writer and reviewer for the first line, then bring your draft here."
 you_give:
   - Your ad draft
   - Your offer terms, exactly as you state them
@@ -28,6 +32,24 @@ how_to_use:
   - Under the prompt, paste your ad, then your offer terms, then how people act.
   - Check the reason to act now. If it says none, do not add one.
   - Run version A and version B as two ads and compare.
+output_sample:
+  input:
+    - Your ad draft
+    - Your offer terms, exactly as you state them (price, guarantee, trial, dates, limits)
+    - The link, phone number or form people use to act
+  output:
+    - name: KIND OF ASK
+      contains: Whether the ask should be to buy, try or reply, with one line on why.
+    - name: REASON TO ACT NOW
+      contains: A date, limit, bonus or trial from your offer, or "none in the facts" when your offer has no deadline.
+    - name: BARRIERS
+      contains: Each doubt a willing buyer might have, matched to the term in your offer that answers it.
+    - name: VERSION A
+      contains: "The full ask: one action, what they get and what happens next."
+    - name: VERSION B
+      contains: A smaller first step with less risk, such as a sample or a question.
+    - name: MISSING
+      contains: Any offer terms you did not give, so nothing is made up.
 how_it_works:
   - title: Picks the kind of ask
     text: Buy, try or reply, based on the price and the trust needed.

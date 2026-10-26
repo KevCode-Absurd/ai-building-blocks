@@ -1,6 +1,6 @@
 new_slug: unboxing-card-and-note-planner
 name: "Unboxing card and note planner"
-summary: "Paste your order value and margin. Get an insert card, note and gift rule with a cost check."
+summary: "Plan the card, note and gift in your parcels. Give your order value and margin. You get the wording and a cost and payback check."
 job: keep-customers
 thinking: low
 thinking_why: "It follows fixed rules and simple sums."
@@ -17,6 +17,10 @@ when:
   - "You want to add a card or gift to your parcels."
   - "You are not sure what you can afford per order."
   - "You want repeat orders, not just a nice unboxing."
+not_for:
+  - "Your parcels often arrive late or returns are hard: fix delivery and returns first, since a nice card will not win back those customers."
+  - "You sell on a marketplace that limits what goes in the box: check its rules first, or ask the marketplace support team."
+  - "You want every check on inserts and gifts: use the Unboxing insert and gift planner."
 
 you_give:
   - "Average order value and margin per order"
@@ -32,6 +36,25 @@ how_to_use:
   - "Paste your numbers under the prompt."
   - "Add a few lines your brand has written, so the card sounds like you."
   - "Test the plan on a part of your orders and keep some without it."
+output_sample:
+  input:
+    - Your average order value and margin per order
+    - Your orders per month and packaging cost per order
+    - Your product (optional)
+    - A few lines written in your brand voice (optional)
+  output:
+    - name: CARD
+      contains: "The words for your insert card: a thank-you, a link or QR code to a short how-to video, and one next step."
+    - name: NOTE RULE
+      contains: Who gets a signed note and what it says.
+    - name: GIFT RULE
+      contains: What small gift to send, to whom, with no strings attached.
+    - name: COSTS
+      contains: Your monthly cost and the repeat orders needed per 100 customers to pay it back, with both sums shown.
+    - name: WHAT TO MEASURE
+      contains: Repeat rate by group, with some orders left out as a test group.
+    - name: MISSING
+      contains: Any number you did not give.
 
 how_it_works:
   - title: "Fix the base first"

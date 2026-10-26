@@ -2,23 +2,26 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: technical-topic-explainer
 name: Technical topic explainer
-summary: Name a concept and a familiar field. Get an everyday analogy, its
-  limits and a next step.
+summary: Explain a hard concept with an everyday analogy from a field you know. You get the analogy, where it breaks, and a check question.
 job: study-and-practice
 headline: Technical topic explainer
-subhead: Share the concept that feels too abstract and a field you know well. It
-  chooses one familiar analogy, explains where it stops working and checks your
-  understanding. You then learn the correct terms one layer at a time.
-explain: Share the concept that feels too abstract and a field you know well. It
-  chooses one familiar analogy, explains where it stops working and checks your
-  understanding. You then learn the correct terms one layer at a time.
+subhead: Tell your AI the concept that feels too abstract and a field you know well. It picks one analogy, shows where it fails, and asks you to explain it back. Then it adds the correct terms one at a time.
+not_for:
+  - "You already understand the basics and want more depth: ask your AI for a deep dive on the topic instead."
+  - "Your confusion comes from a belief that is wrong: ask your AI to find and fix that belief first."
+  - "You need a quick definition of one term: look it up or ask your AI in one line."
+explain: Share the concept that feels too abstract and a field you know well. It chooses one familiar analogy, explains where it stops working and checks your understanding. You then learn the correct terms one layer at a time.
 you_give:
-  - The concept and the part that confuses you.
-  - A familiar field it can use for examples.
+  - The concept you want explained.
+  - The part that confuses you.
+  - A field you know well, for the analogy.
+  - Where your understanding broke down (optional).
 you_get:
-  - One grounded analogy with clear limits.
+  - One analogy from your own field, with its limits stated.
   - A plain explanation at your current level.
-  - A question that bridges the analogy to the real terms.
+  - A check question that asks you to explain it back.
+  - The correct technical terms, added one at a time.
+  - A next step so you do not stay at the simple level.
 how_it_works:
   - title: Step 1
     text: Find whether the gap is in words, purpose or how things work.
@@ -27,9 +30,33 @@ how_it_works:
   - title: Step 3
     text: Check your explanation before adding the correct technical terms.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text, then name the concept and the part that confuses you.
+  - Tell your AI which field you know well, so it picks an analogy from it.
+  - Read the analogy and its limits. Then answer the check question in your own words.
+  - If your answer is off, let it try a different analogy.
+  - Keep going until you can use the correct terms, then ask for the next step.
+output_sample:
+  input:
+    - The concept that feels too abstract
+    - The part of it that confuses you
+    - A field you know well (for the analogy)
+    - Where your understanding broke down (optional)
+  output:
+    - name: Context
+      contains: The concept, how lost you are, your background and the starting level of explanation.
+    - name: Analogy
+      contains: One analogy from your field, with a clear note on where it stops working.
+    - name: Simplified explanation
+      contains: The idea in small steps, one core idea each, using the analogy.
+    - name: Intuition check
+      contains: A prompt asking you to say the idea back in your own words.
+    - name: Complexity re-injection steps
+      contains: Correct technical terms added one at a time, replacing the analogy words.
+    - name: Handoff plan
+      contains: What to study next once you can use the correct terms.
+when:
+  - A concept in a course or work document makes no sense to you.
+  - An earlier explanation used too much jargon and you got lost.
+  - You are switching fields and want to link a new idea to what you know.
+  - You can repeat a definition but cannot say what it means.

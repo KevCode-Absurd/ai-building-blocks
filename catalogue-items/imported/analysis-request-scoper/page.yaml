@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Good questions depend on what the requester really needs.
 new_slug: analysis-request-scoper
 name: Analysis request scoper
-summary: Give it a vague request for data work. Get the right questions asked
-  and a clear brief ready to hand over.
+summary: Turn a vague data request into a clear analysis brief. Ask the right questions, agree the scope in writing, then hand it to your analyst.
 job: track-numbers
 headline: Analysis request scoper
-subhead: Give it a vague request for data work. Get the right questions asked
-  and a clear brief ready to hand over. Bring the original request, however
-  vague. Use the result to plan your next step.
+subhead: Give it a vague request for data work. Get the right questions asked and a clear brief ready to hand over. Bring the original request, however vague. Use the result to plan your next step.
 explain: |
   Turn a vague "can you look into this?" into a clear brief an analyst can start on, after the right questions are asked and the requester signs off. It saves the rework that comes from guessing what someone meant.
 
@@ -18,6 +15,10 @@ when:
   - Several people want different things from one piece of analysis.
   - You often redo work because the request changed halfway.
   - You need agreed scope in writing before you start.
+not_for:
+  - "You need one known number or a quick lookup: send a direct data request to your analyst instead."
+  - "You already have a clear question and agreed scope: go straight to the analysis, no scoping needed."
+  - "You need the analysis itself done: this only writes the brief, so give that brief to an analyst or your AI as a next step."
 you_give:
   - The original request, however vague
   - Who asked and who else cares about the result
@@ -28,7 +29,28 @@ you_get:
   - A signed-off scope
   - An analysis brief for the analyst
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste the original request, however vague. Add who asked, who else cares, and the deadline.
+  - Answer the interview questions your AI asks. Say so when you don't know, so it doesn't guess.
+  - Check the requirements document. Fix anything that is wrong or missing.
+  - Send it to the person who asked and get a clear yes in writing. Then ask your AI for the final analysis brief.
+output_sample:
+  input:
+    - The original request, however vague
+    - Who asked, and who else cares about the result
+    - The deadline or how urgent it is
+  prerequisites:
+    - A way to send the requirements document to the person who asked, so they can confirm it
+  output:
+    - name: Interview questions
+      contains: Questions that find the decision being made, who will use the result, what done looks like, and the limits.
+    - name: Decision type
+      contains: Whether the decision is strategic, operational or tactical, which sets how deep and formal the work needs to be.
+    - name: Requirements document
+      contains: The business question, success criteria, what is in and out of scope, data sources and timeline.
+    - name: Answers to unclear points
+      contains: Follow-up questions and priorities for anything still vague after the interview.
+    - name: Analysis brief
+      contains: The approved requirements turned into the final scope document the analyst works from.
+    - name: Interview notes (optional)
+      contains: A record of the answers, kept for complex projects.

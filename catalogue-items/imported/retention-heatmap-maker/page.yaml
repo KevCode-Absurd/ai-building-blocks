@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The maths is set, but reading the pattern takes some thought.
 new_slug: retention-heatmap-maker
 name: Retention heatmap maker
-summary: Give it signup and activity dates. Get retention by group over time, as
-  a colour-coded grid with a plain reading.
+summary: Give it signup and activity dates. Get a retention heatmap that shows how many customers come back each period, with a plain reading.
 job: track-numbers
 headline: Retention heatmap maker
-subhead: A colour-coded grid that shows, for each sign-up group, how many people
-  come back in each following period, with a plain-language reading underneath.
-  One glance tells you if you are keeping people better than last quarter.
+subhead: A colour-coded grid that shows, for each sign-up group, how many people come back in each following period, with a plain-language reading underneath. One glance tells you if you are keeping people better than last quarter.
 explain: |
   A colour-coded grid that shows, for each sign-up group, how many people come back in each following period, with a plain-language reading underneath. One glance tells you if you are keeping people better than last quarter.
 
@@ -18,6 +15,10 @@ when:
   - You want to compare channels or plans by how long customers stay.
   - You need to find the month when most people leave.
   - You are building a report for a board or client.
+not_for:
+  - Your business sells one-off purchases, so nobody is meant to come back. Count active users each month in a spreadsheet instead.
+  - Your groups have under about 100 people each. The rates will jump around, so wait for more data or look at a longer time group.
+  - You have no way to run code in your AI. Ask a data person to run the scripts, or work through a small sample by hand.
 you_give:
   - Event data with user ID, sign-up date and activity date
   - What counts as a returning user
@@ -30,8 +31,27 @@ you_get:
   - Retention curves for each group
   - A plain-English report of what it shows
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run code and read files, such as Claude or ChatGPT with code tools on.
+  - Paste the skill, then upload your event data with a user ID, signup date and activity date.
+  - Tell it what counts as coming back, and whether to group by day, week or month.
+  - Check the report header to confirm it used your groups and your definition of active.
+  - Look at the heatmap and the plain reading. Note any group under about 100 people, since its numbers are noisy.
+  - Share the report with your manager, or run it again each quarter to compare.
+output_sample:
+  input:
+    - "Your event data: a user ID, a signup date and an activity date for each row"
+    - What counts as coming back, such as a login or a purchase
+    - "Group size: day, week or month"
+    - Number of periods to track (optional)
+    - Segments such as channel or plan (optional)
+  prerequisites:
+    - An AI that can run code and read your files
+  output:
+    - name: Cohort table
+      contains: A file with each user's signup group and the period of each activity, built from your event data.
+    - name: Retention matrix CSV
+      contains: The share of each group that came back in each period, ready to reuse elsewhere.
+    - name: Retention heatmap
+      contains: A colour-coded grid of groups by period, plus a retention curve for each group.
+    - name: Cohort report
+      contains: A plain-language reading of the pattern, with the group and event definitions in the header.

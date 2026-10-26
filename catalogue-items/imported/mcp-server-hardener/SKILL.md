@@ -28,6 +28,30 @@ to agents in production.
 
 ---
 
+## Before you start
+
+Gather these. If one is missing, write MISSING next to it in your report and give advice that holds either way. Never invent a detail about the user's server.
+
+1. How the server connects: local stdio, or Streamable HTTP or SSE over a network.
+2. How users and agents sign in today: none, a shared key, per-user keys or OAuth.
+3. The tool list, with what each tool can touch (files, database, outside web, shell).
+4. Server config or code (optional) and where it runs (optional).
+
+Work through sections 2 to 11 in order. Rank each finding critical, high, medium or low. Sample code in this skill is a starting point to adapt and test in a non-production copy, not a drop-in fix. This skill cannot test a live server. List what it could not check.
+
+## Report format
+
+End with these sections, in this order:
+
+1. Threats that apply: the threats from section 2 that fit this setup, one line each.
+2. Fixes, highest risk first. Each has a priority, a layer (connection, sign-in, access, input, limits, logging, deployment), the finding, and the fix with the section to adapt.
+3. Tool access plan: per role, the tools allowed, denied and needing approval.
+4. Not checked: anything it could not judge from the details given.
+
+Suggest next: run the checklist in section 11 against a test copy, then send the fix list to whoever owns the server.
+
+---
+
 ## 2. MCP Threat Model
 
 Before hardening, understand what you are defending against.
@@ -358,5 +382,7 @@ logging still apply.
 # Read-only first: inventory before any active step.
 which <tool> && <tool> --help | head -n 20
 ```
+
+Licence note: the original skill by BagelHole is MIT licensed. It reaches us through sickn33's collection, which is CC BY 4.0, so both credits are kept. See LICENSE-CONTENT.
 
 > Adapted from [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: helper scripts and templates not bundled.

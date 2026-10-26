@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: texture-style-guide
 name: Real-world texture style guide writer
-summary: Describe your product. Get a style guide that copies real objects and
-  textures, with rules for each part.
+summary: Write a real-world texture style guide for your app or site. Get color, type, spacing and part rules for a leather, paper or glass look.
 job: design-work
 headline: Real-world texture style guide writer
-subhead: "A style guide for an app or site that looks like real things: leather,
-  paper, glass, brushed metal, buttons that seem to press down. It gives your
-  designers and developers one shared rulebook instead of guesses."
+subhead: "A style guide for an app or site that looks like real things: leather, paper, glass, brushed metal, buttons that seem to press down. It gives your designers and developers one shared rulebook instead of guesses."
 explain: |
   A style guide for an app or site that looks like real things: leather, paper, glass, brushed metal, buttons that seem to press down. It gives your designers and developers one shared rulebook instead of guesses.
 
@@ -18,6 +15,10 @@ when:
   - Your team keeps making buttons and cards that do not match.
   - You need design rules written down before developers start building.
   - You are updating an older screen and want clear before-and-after guidance.
+not_for:
+  - "You want a flat or minimal look: ask a designer for a flat design style guide, or write a short token list by hand."
+  - "You need finished screens or mockups: use a design tool such as Figma, since this only writes rules."
+  - "You want a retro look instead: use the Retro style guide writer if it fits, or ask your AI for a retro rulebook."
 you_give:
   - A description of your product
   - The mood you want, such as playful or calm
@@ -29,7 +30,30 @@ you_get:
   - Accessibility requirements
   - A review checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into the chat.
+  - Describe your product and the mood you want. Add brand colors, fonts and the parts you must cover if you have them.
+  - Read the first section. Check that the design intent matches what you meant.
+  - Check the accessibility rules and the QA checklist. Ask your AI to fix any rule that sounds vague.
+  - Share the guide with your designers and developers.
+output_sample:
+  input:
+    - A description of your product
+    - The mood you want, such as playful or calm
+    - Brand colors and fonts (optional)
+    - Screens or parts you must cover (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the design intent, then the goals the style must meet.
+    - name: Design tokens and foundations
+      contains: Color, type size, spacing and font rules, each tied to a named token.
+    - name: Component-level rules
+      contains: Parts such as buttons, cards and inputs, with states, variants, touch behavior and small-screen notes.
+    - name: Accessibility requirements
+      contains: Rules your team can test, based on WCAG 2.2 AA, keyboard use and visible focus.
+    - name: Content and tone standards
+      contains: How the words in your interface should sound, with examples.
+    - name: Anti-patterns and prohibited implementations
+      contains: What not to build, plus notes on moving older screens to the new rules.
+    - name: QA checklist
+      contains: A list your team can run through during code review.

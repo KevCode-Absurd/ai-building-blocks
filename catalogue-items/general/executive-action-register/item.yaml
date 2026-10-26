@@ -12,6 +12,14 @@ level: intermediate
 inputs:
   - type: meeting_notes
     required: true
+  - type: plan
+    required: false
+  - type: document
+    required: false
+  - type: audit_report
+    required: false
+  - type: spreadsheet
+    required: false
 outputs:
   - type: plan
 uses: []

@@ -1,0 +1,913 @@
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-donor-pipeline:
+  slug: nonprofit-donor-relationship-planner
+  name: Nonprofit donor relationship planner
+  summary: Share donor records and your goal. Get clear stages, next steps, owners, and review dates.
+  subhead: Share your donor records, fundraising goal, and team capacity. It places each prospect at a clear stage and checks for stalled relationships. You get a stage guide, next-step plans, owners, review dates, and a view of where progress slows.
+  task: organise-work
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Donor records, giving history, relationship notes, fundraising goal, and available staff time.
+  you_get:
+    - A donor stage guide, next-step table, and review schedule.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Set clear stages
+      text: Define what must happen before a donor moves from a new lead to a gift and follow-up care.
+    - title: Check stalled relationships
+      text: Review records for missing next steps, unclear owners, and long gaps between contacts.
+    - title: Plan the next contact
+      text: Write each action with its purpose, owner, and date. Show stage counts and gaps against your goal.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Moves management runs on donor records and personal information.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-grant-research:
+  slug: nonprofit-grant-funder-researcher
+  name: Nonprofit grant funder researcher
+  summary: Share your program, location, and funding need. Get a funder shortlist, fit checks, and grant dates.
+  subhead: Share your program, service area, funding need, and eligibility details. It checks funder rules and past giving before ranking possible matches. You get a shortlist with fit reasons, funder briefs, and a grant calendar. Funding rules draw mainly on US sources.
+  task: research-topics
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: audit_report
+      required: true
+  you_give:
+    - Program description, service area, funding range, charity status, and any current funders.
+  you_get:
+    - A funder shortlist, fit ratings with reasons, funder briefs, and grant calendar.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Define the search
+      text: Confirm the program, place, funding range, and which rules limit who can apply.
+    - title: Check real funder fit
+      text: Read funder rules and past grants. Check location, goals, grant size, dates, and any known links to the funder.
+    - title: Build the grant calendar
+      text: List due dates, reports, and renewal dates. Flag busy writing periods and pass good matches to a proposal writer.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Prospect research and calendars; a wrong entry costs a look.
+  needs: read current funder rules, public grant records, and any funder databases you choose to use
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-grant-writing:
+  slug: nonprofit-grant-proposal-writer
+  name: Nonprofit grant proposal writer
+  summary: Share funder rules, program facts, and budget. Get a proposal draft matched to the required sections.
+  subhead: Share the funder's rules, your program plan, and the approved budget. It matches the required sections, checks the figures, and trims to the limits. You get a proposal, inquiry letter, or grant report draft for program and finance review.
+  task: document-work
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: copy_draft
+      required: true
+    - type: document
+      required: false
+  you_give:
+    - Funder guidelines, existing program design, local evidence, approved budget, and required limits.
+  you_get:
+    - A proposal, inquiry letter, budget narrative, or grant report matched to the funder's rules.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Read the funder rules
+      text: Extract required sections, length limits, attachments, deadlines, and submission details.
+    - title: Draft from verified facts
+      text: Write the need, program, intended changes, measurement plan, and budget story from the supplied materials.
+    - title: Reconcile and review
+      text: Check totals, section limits, and missing attachments. Route facts, costs, and promises to the right internal reviewers.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Proposals are binding representations to a funder about what you will deliver.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-annual-appeals:
+  slug: nonprofit-annual-appeal-planner
+  name: Nonprofit annual appeal planner
+  summary: Share donor groups and giving history. Get appeal copy, gift amounts, a schedule, and measures to track.
+  subhead: Share your donor groups, giving history, campaign goal, and channels. It plans suitable gift amounts and writes a clear fundraising ask. You get appeal letters or emails, matching reply wording, a send calendar, and measures for reviewing results.
+  task: write-emails
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+    - type: copy_draft
+      required: true
+  you_give:
+    - Donor groups, past gift amounts, verified impact facts, campaign goal, channel, and key dates.
+  you_get:
+    - An appeal plan, draft messages, suggested gift amounts, and results measures.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Group donors by history
+      text: Separate new, returning, lapsing, and larger donors so each group receives a fitting ask.
+    - title: Write a clear appeal
+      text: Use a specific story, verified gift impact, suggested amounts, deadline, and one next step.
+    - title: Plan dates and review
+      text: Match reply amounts across channels, space appeals sensibly, and define response and cost measures for review.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Solicitation copy goes to your whole donor file at once.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-donor-retention:
+  slug: nonprofit-donor-thank-you-and-renewal-planner
+  name: Nonprofit donor thank-you and renewal planner
+  summary: Share giving history and current follow-ups. Get thank-you steps, welcome messages, and plans for lapsed donors.
+  subhead: Share your giving records, thank-you process, and recent donor messages. It checks where follow-ups stop and which donors do not return. You get a thank-you plan, first-gift welcome steps, renewal timing, and separate plans for lapsed donors. US receipt rules need local review.
+  task: keep-customers
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+    - type: copy_draft
+      required: false
+  you_give:
+    - Dated giving records, current thank-you process, receipt wording, and donor contact preferences.
+  you_get:
+    - A thank-you guide, donor contact plan, retention measures, and lapsed-donor campaign outline.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Measure returning donors
+      text: Compare repeat gifts and first-year donors over clear yearly periods. Keep the groups and rate definitions consistent.
+    - title: Fix the first follow-up
+      text: Review receipt speed and personal thanks. Plan a welcome sequence after the first gift.
+    - title: Plan renewals and returns
+      text: Map later contacts to giving dates and separate recently lapsed donors from longer-lapsed supporters.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Acknowledgment processes carry tax-receipt language donors rely on.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-corporate-sponsorships:
+  slug: nonprofit-sponsor-package-planner
+  name: Nonprofit sponsor package planner
+  summary: Share your event, audience, and benefits. Get sponsor tiers, pitch copy, and a promise-tracking checklist.
+  subhead: Share your event or program, audience facts, available benefits, and sponsorship goal. It builds clear price tiers and a pitch for each prospect. You get a sponsor package, tailored pitch, delivery checklist, and renewal plan. Finance reviews any tax questions.
+  task: sell-and-negotiate
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+    - type: copy_draft
+      required: false
+  you_give:
+    - Event or program facts, audience evidence, benefits available, existing sponsor promises, and funding goal.
+  you_get:
+    - Sponsor tiers, pitch copy, a benefits checklist, and a renewal outline.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Build the tier grid
+      text: List real benefits and price each tier. Reserve scarce benefits such as naming rights and category exclusivity.
+    - title: Tailor the sponsor pitch
+      text: Connect the audience and mission to the prospect's business. Make one clear tier request.
+    - title: Track the promises
+      text: List every benefit, owner, date, and proof to collect. Use delivery records to prepare renewal asks.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Benefit tiers touch the sponsorship-vs-advertising line and UBIT.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-fundraising-events:
+  slug: nonprofit-fundraising-event-planner
+  name: Nonprofit fundraising event planner
+  summary: Share your event goal and costs. Get a budget, income scenarios, auction tracker, and event-day schedule.
+  subhead: Share your event goal, expected attendance, costs, and planned income sources. It works back from the money left after expenses. You get a full budget, cautious and stretch scenarios, auction tracker, event-day schedule, and staffing plan.
+  task: organise-work
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Net fundraising goal, attendance assumptions, cost estimates, income sources, timing, and available staff.
+  you_get:
+    - An event budget, income scenarios, auction tracker, event-day schedule, and staffing plan.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Plan the money left
+      text: Build all costs and income lines, then show gross income, expenses, and money left after expenses.
+    - title: Prepare event delivery
+      text: Assign auction item requests, fair-value checks, event segments, and staff or volunteer duties.
+    - title: Plan the final review
+      text: Compare actuals with budget, calculate fundraising cost, and record lessons and receipt work for the next cycle.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Auctions and raffles are state-regulated and budgets commit real money.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/volunteer-people/nonprofit-volunteer-management:
+  slug: nonprofit-volunteer-program-planner
+  name: Nonprofit volunteer program planner
+  summary: Share volunteer roles and current issues. Get clear roles, screening steps, training, shift plans, and follow-ups.
+  subhead: Share the work volunteers will do, who they serve, and where your current process breaks down. It plans recruitment, risk-based screening, training, shifts, and recognition. You get clear roles and practical steps for keeping volunteers active, with staff review of screening and safety.
+  task: hire-people
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Volunteer roles, time needs, people served, risk limits, current intake steps, and any attendance records.
+  you_get:
+    - Role descriptions, screening and welcome steps, scheduling guidance, and follow-up measures.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Define the volunteer roles
+      text: Write duties, hours, supervision, skills, and support before choosing recruitment channels.
+    - title: Match screening to risk
+      text: Choose checks that fit each role's risk. Plan a welcome session, task training, and a buddy for the first shift.
+    - title: Support and retain people
+      text: Plan reminders, check-ins, recognition, and measures showing where volunteers drop out.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Screening and onboarding volunteers touches background checks and duty of care.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/volunteer-people/nonprofit-board-recruitment:
+  slug: nonprofit-board-recruitment-planner
+  name: Nonprofit board recruitment planner
+  summary: Share board skills and open seats. Get candidate profiles, a recruitment plan, and new-member welcome steps.
+  subhead: Share your board roster, skills, strategy, and upcoming vacancies. It identifies the gaps before suggesting how to find candidates. You get seat profiles, a recruitment tracker, a candidate packet, and a first-meeting welcome plan for board review.
+  task: hire-people
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Current board skills, strategy, upcoming seat dates, bylaws, and expected member duties.
+  you_get:
+    - Board skills table, target seat profiles, candidate process, expectation letter, and welcome plan.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Find the board gaps
+      text: Compare current skills and community links with the strategy. Check which seats will open soon.
+    - title: Define and find candidates
+      text: Write each seat profile before choosing names. Plan a first chat, a chance to see the work, and a formal invitation.
+    - title: Prepare the first meeting
+      text: Prepare the candidate papers, written duties, and voting steps. Plan support through the new member's first meeting.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Board composition is a governance decision with fiduciary consequences.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/volunteer-people/nonprofit-succession-planning:
+  slug: nonprofit-leadership-handover-planner
+  name: Nonprofit leadership handover planner
+  summary: Share leadership risks and departure dates. Get emergency cover, search steps, and a clear handover plan.
+  subhead: Share your leadership roles, key risks, and any planned departure date. It separates sudden absence cover from a planned leadership change. You get acting-role limits, a search timeline, internal development steps, and a relationship handover plan for the board to review.
+  task: lead-people
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Leadership roles, existing backup plan, board decision rules, key relationships, and departure timing if known.
+  you_get:
+    - An emergency cover plan and, when needed, a planned search and leadership handover.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Check emergency cover
+      text: Name the acting role, board contact, decision limits, and secure location of access records. Do not collect passwords.
+    - title: Plan the longer change
+      text: Review money, staff readiness, search choices, and risks tied to the founder. Define a temporary leader's role if needed.
+    - title: Design a bounded handover
+      text: Set dates for knowledge transfer and donor introductions, then define the outgoing leader's future authority.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Emergency and long-term ED succession is a board responsibility.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/programs-impact/nonprofit-needs-assessment:
+  slug: community-needs-research-planner
+  name: Community needs research planner
+  summary: Share your community and service idea. Get a research plan, provider map, and gaps to investigate.
+  subhead: Share the people, area, and need you want to understand. It combines public evidence, community listening, and a map of existing services. You get a research plan or findings report showing specific gaps and whether to build, partner, refer, or reconsider.
+  task: research-topics
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: audit_report
+      required: true
+  you_give:
+    - Population, area, proposed need, existing evidence, research budget, and access or consent limits.
+  you_get:
+    - A needs research plan or report, interview or survey questions, provider table, and gap summary.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Define the community
+      text: Set a precise population, area, and question, then review what reliable public evidence already shows.
+    - title: Listen and map services
+      text: Plan accessible surveys and interviews. Map providers, capacity, local strengths, and barriers to access.
+    - title: Explain the actual gap
+      text: Compare need with current capacity and access. State limits and give leaders clear options.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Primary data collection involves human participants and consent.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/programs-impact/nonprofit-program-design:
+  slug: nonprofit-program-outcome-planner
+  name: Nonprofit program outcome planner
+  summary: Share your program and intended change. Get a clear activity-to-outcome map, assumptions, and evidence gaps.
+  subhead: Share your program, resources, community need, and intended change. It maps how each activity could lead to results and checks the links. You get a one-page program model, a plain explanation of the change, and assumptions or evidence gaps to review.
+  task: plan-strategy
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Confirmed community need, resources, program activities, intended participant changes, and supporting evidence.
+  you_get:
+    - A program model table, change explanation, assumptions list, and notes for measurement or grant writing.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Start with the change
+      text: Define the long-term aim, then work backward to the smaller changes needed along the way.
+    - title: Connect activities to results
+      text: Map resources, activities, counts of work delivered, and changes for people. Keep counts separate from outcomes.
+    - title: Check the assumptions
+      text: Test why each link should hold, name outside factors, and identify missing evidence or delivery knowledge.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Logic models set what the program promises to achieve.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/programs-impact/nonprofit-outcomes-measurement:
+  slug: nonprofit-program-measurement-planner
+  name: Nonprofit program measurement planner
+  summary: Share your program goals and records. Get measures, tracking dates, owners, and clear rules for reports.
+  subhead: Share the changes your program aims to make and the records you can collect. It chooses useful measures and a realistic way to track them. You get an evaluation plan, collection calendar, and report structure that keeps missing data and limits visible.
+  task: track-numbers
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: audit_report
+      required: true
+  you_give:
+    - Program model or outcome list, available records, budget, staff time, and existing baselines.
+  you_get:
+    - Outcome measures with targets, a collection calendar, an evaluation approach, and a results report outline.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Choose useful measures
+      text: Match each intended change to a clear measure that your team can afford to collect.
+    - title: Set the collection plan
+      text: State the baseline, target, method, timing, owner, and minimum response level before collecting data.
+    - title: Report with clear limits
+      text: Show the group behind each rate, sample sizes, missing follow-ups, and what the design can or cannot prove.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Reported outcomes go to funders and the board as fact.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/programs-impact/nonprofit-program-scaling:
+  slug: nonprofit-program-expansion-planner
+  name: Nonprofit program expansion planner
+  summary: Share program evidence and growth plans. Get a readiness review, expansion options, and a pilot plan.
+  subhead: Share evidence that your program works, your growth goal, and staff and funding limits. It checks readiness before choosing an expansion route. You get a readiness brief, parts that must stay fixed, possible local changes, and a measured pilot plan.
+  task: plan-strategy
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Outcome evidence, delivery method, staff capacity, reserves, growth funding, and the proposed new community.
+  you_get:
+    - A readiness memo, fixed-versus-flexible component table, expansion route, pilot, and monitoring plan.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Check readiness first
+      text: Review outcome evidence, model clarity, staff capacity, funding, and demand in the new area.
+    - title: Protect what makes it work
+      text: Separate essential program parts from details that can change for a new location or group.
+    - title: Pilot before wider growth
+      text: Choose a delivery route, plan staff and systems, and set checks and correction rules for a first new site.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Replication decisions commit multi-site budgets and staff.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/governance-compliance/nonprofit-board-governance:
+  slug: nonprofit-board-meeting-and-role-planner
+  name: Nonprofit board meeting and role planner
+  summary: Share board issues and current rules. Get clearer roles, meeting agendas, committee duties, and review tools.
+  subhead: Share your board's rules, meeting habits, and the decisions that keep getting stuck. It separates board oversight from staff work. You get clearer roles, timed agendas, committee duties, and review tools suited to your board's way of making decisions.
+  task: lead-people
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Board rules, current agenda and packets, committee duties, meeting problems, and leadership review process.
+  you_get:
+    - A meeting agenda, role boundaries, committee charter, or board self-review tool matched to the task.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Clarify who decides
+      text: Identify how the board works. Separate oversight from day-to-day staff work.
+    - title: Design useful meetings
+      text: Group routine votes, put key decisions early, and set time limits. Check the board's real voting rules.
+    - title: Set committee and review duties
+      text: Write who each committee answers to and when it reports. Set review steps for the board and chief executive.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Internal process design; consequential but not externally filed.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/retail-operations/nonprofit-donation-intake-grading:
+  slug: donated-goods-intake-planner
+  name: Donated goods intake planner
+  summary: Share donated items and intake issues. Get acceptance rules, grading steps, routing lanes, and receipt wording.
+  subhead: Share the goods you accept, intake space, staff, and current bottlenecks. It separates acceptance, sorting, grading, and routing for a resale store. You get clear intake steps, grading rules, safe handling checks, and receipt wording that leaves value decisions to the donor.
+  task: organise-work
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Accepted goods, intake space, staffing, disposal routes, current grading rules, and the main bottleneck.
+  you_get:
+    - Acceptance list, intake layout, grading guide, routing plan, basic receipt template, and tracking measures.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Define what you accept
+      text: Write what goods you accept. Plan staffed drop-offs or booked pickups.
+    - title: Sort, test, and grade
+      text: Sort goods into groups and use clear grades for their condition. Test electrical items and send high-value goods for review.
+    - title: Route and record goods
+      text: Choose shop floor, online sale, recycling, or discard. Plan basic receipts without assigning a donor tax value.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - At-donation receipts are tax documents for the donor.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/retail-operations/nonprofit-retail-pricing-merchandising:
+  slug: resale-store-pricing-and-layout-planner
+  name: Resale store pricing and layout planner
+  summary: Share item grades and sales records. Get price bands, markdown dates, display zones, and a stock rotation plan.
+  subhead: Share your donated goods, condition grades, sales records, and shop layout. It checks category prices, slow stock, and display choices. You get price bands, premium-item rules, a markdown calendar, floor zones, and seasonal changes to review with your store team.
+  task: set-prices
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Item categories, condition grades, sales and aging records, local price evidence, and available shop space.
+  you_get:
+    - Price bands, premium criteria, markdown calendar, floor zones, seasonal plan, and sales-through measures.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Set clear price bands
+      text: Use category and condition grades to make consistent price ranges, with separate criteria for premium items.
+    - title: Plan stock aging
+      text: Date or color-tag goods and set clear markdown and clearance stages so old stock does not pile up.
+    - title: Arrange and review the floor
+      text: Plan category zones and seasonal displays, then review how much stock sells before changing prices broadly.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Pricing and floor layout for donated goods; adjust and move on.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/retail-operations/nonprofit-retail-store-operations:
+  slug: resale-store-daily-procedure-planner
+  name: Resale store daily procedure planner
+  summary: Share till issues and store rules. Get opening, closing, cash checks, and stock-loss procedures for review.
+  subhead: Share your store setup, register records, cash issues, and approved financial rules. It maps daily tasks and checks where money or stock can go missing. You get opening and closing lists, cash-count steps, deposit checks, and loss-prevention procedures for review.
+  task: organise-work
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Register setup, daily sales and cash records, store roles, approved review thresholds, and current procedures.
+  you_get:
+    - Opening and closing lists, cash variance template, deposit checks, and stock-loss control steps.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Map the daily records
+      text: Check that the register reports sales by item group and payment type. Check it supports the store's price rules.
+    - title: Write cash checks
+      text: Plan opening and closing counts by two people, variance records, deposits, and review by a separate person.
+    - title: Set store safeguards
+      text: Plan stock checks, receipts, access rules, and staff training. Keep these in line with approved store policies.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Cash handling, reconciliation and loss prevention are financial controls.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/retail-operations/nonprofit-online-resale:
+  slug: donated-goods-online-resale-planner
+  name: Donated goods online resale planner
+  summary: Share item details and condition. Get listing fields, photo needs, pricing research, and shipping steps.
+  subhead: Share the donated item, condition, measurements, and the marketplace you use. It checks whether online sale is suitable and uses sold-item evidence for pricing. You get listing fields, a photo checklist, shipping steps, and a review plan for returns and costs.
+  task: run-your-store
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Item details, condition and flaws, measurements, photos, target marketplace, sold-price evidence, and shipping limits.
+  you_get:
+    - Online selection rules, a truthful listing template, photo needs, packing standards, and review measures.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Research suitable items
+      text: Check what the item is. Look at prices from past sales before choosing online sale or the shop floor.
+    - title: Prepare an honest listing
+      text: Specify needed photos, dimensions, condition, and flaws. Choose a sale format based on the available price evidence.
+    - title: Plan safe delivery
+      text: Include packaging and shipping costs, handling dates, buyer-message steps, and a monthly returns and margin review.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Marketplace listings and photos; mistakes are relisted.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/strategy-growth/nonprofit-revenue-diversification:
+  slug: nonprofit-earned-income-planner
+  name: Nonprofit earned income planner
+  summary: Share your funding mix and income ideas. Get risk checks, break-even math, and a small pilot plan.
+  subhead: Share your funding mix, costs, and ideas for fees, sales, rentals, or other income. It checks demand, mission fit, and break-even needs. You get a business case and pilot plan, with US tax questions flagged for an accountant before a board decision.
+  task: plan-strategy
+  thinking: high
+  thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
+  author: Brendon Connelly
+  author_url: https://brendonconnelly.com
+  inputs:
+    - type: question
+      required: true
+    - type: document
+      required: false
+  outputs:
+    - type: plan
+      required: true
+  you_give:
+    - Revenue by source, income idea, demand evidence, full costs, available capital, and mission limits.
+  you_get:
+    - A funding-risk review, idea screen, break-even model, expert-review questions, and board pilot brief.
+  when:
+    - You need this task done for a nonprofit, community program, or donated-goods store.
+  how_it_works:
+    - title: Check funding dependence
+      text: Show how much income depends on single funders or types, then decide which risk a new income stream should address.
+    - title: Test the business case
+      text: Review demand and mission fit, include overhead, and calculate the sales volume needed to cover costs.
+    - title: Plan a limited pilot
+      text: Flag legal and tax questions for qualified review. Set funding, decision dates, and financial and mission checks for board approval.
+  works_best_with:
+    tools:
+      - name: A chat AI that can read your files
+        why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+    inputs:
+      - Earned-income and social-enterprise models raise unrelated business income tax questions.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/advocacy-policy/nonprofit-coalition-building:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/advocacy-policy/nonprofit-grassroots-mobilization:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/advocacy-policy/nonprofit-legislative-advocacy:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/advocacy-policy/nonprofit-policy-analysis:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/advocacy-policy/nonprofit-voter-engagement:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-advocacy-land-use:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-affordable-rental-operations:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-community-ownership:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-construction-volunteers:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-continuum-planning:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-development-finance:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-fair-housing:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-homelessness-services:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-homeownership-programs:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-lihtc-hud-compliance:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-permanent-supportive-housing:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-rapid-rehousing-transitional:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/affordable-housing/nonprofit-housing-repair-preservation:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-ad-ed-partnership:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-box-office-subscriptions:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-commissioning-new-work:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-education-programs:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-grant-writing:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-membership-program:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-performance-licensing:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-season-planning:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-season-sponsorship:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-union-agreements-visas:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/arts-culture/nonprofit-arts-venue-rental-earned-income:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/communications-marketing/nonprofit-annual-report:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/communications-marketing/nonprofit-brand-messaging:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/communications-marketing/nonprofit-donation-page-copy:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/communications-marketing/nonprofit-email-newsletter:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/communications-marketing/nonprofit-media-relations:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/communications-marketing/nonprofit-social-media:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/communications-marketing/nonprofit-storytelling:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/community-development-finance/nonprofit-cdfi-finance:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/community-development-finance/nonprofit-community-facilities-finance:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/community-development-finance/nonprofit-disaster-recovery-finance:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/community-development-finance/nonprofit-nmtc-deals:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/community-development-finance/nonprofit-opportunity-zones:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/executive-leadership/nonprofit-ceo-board-partnership:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/executive-leadership/nonprofit-executive-communications:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/executive-leadership/nonprofit-executive-dashboard:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/executive-leadership/nonprofit-executive-search:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/executive-leadership/nonprofit-executive-transitions:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-990-exemption:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-church-governance:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-communications-pastoral:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-employment-ministerial-exception:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-facilities-sanctuary:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-finance-clergy-comp:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-programs-social-services:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-religious-liberty-compliance:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-stewardship-giving:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/faith-based/nonprofit-faith-volunteer-lay-leadership:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/finance-operations/nonprofit-budgeting:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/finance-operations/nonprofit-cost-allocation:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/finance-operations/nonprofit-financial-controls:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/finance-operations/nonprofit-financial-statements:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/finance-operations/nonprofit-hr:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/finance-operations/nonprofit-reserves-cash-flow:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/finance-operations/nonprofit-vendor-facilities:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-capital-campaigns:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-major-gifts:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-peer-to-peer-fundraising:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/fundraising-development/nonprofit-planned-giving:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/governance-compliance/nonprofit-bylaws-policy:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/governance-compliance/nonprofit-c3-c4-structure:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/governance-compliance/nonprofit-charitable-registration:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/governance-compliance/nonprofit-form-990:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/governance-compliance/nonprofit-risk-management:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/retail-operations/nonprofit-in-kind-gift-acceptance:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/retail-operations/nonprofit-retail-staffing:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/strategy-growth/nonprofit-change-management:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/strategy-growth/nonprofit-eos-traction:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/strategy-growth/nonprofit-mergers-fiscal-sponsorship:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/strategy-growth/nonprofit-strategic-planning:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/technology-data/nonprofit-data-privacy:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/technology-data/nonprofit-digital-fundraising-tools:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/technology-data/nonprofit-donor-crm:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.
+sector-skills/nonprofit-skills:nonprofit-skills-library/skills/volunteer-people/nonprofit-staff-retention:
+  skip: Outside this reviewed core batch; reserve for a later domain-specific review.

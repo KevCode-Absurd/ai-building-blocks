@@ -2,13 +2,10 @@ thinking: high
 thinking_why: The physics assumptions need careful thought before and after the run.
 new_slug: quantum-system-simulator
 name: Quantum system simulator
-summary: Describe a quantum system. Get a simulation with stated assumptions and
-  checks that the numbers have settled.
+summary: Run a quantum system simulation in Python with QuTiP. You get stated assumptions and checks that the numbers have settled before you trust them.
 job: research-topics
 headline: Quantum system simulator
-subhead: Describe a quantum system. Get a simulation with stated assumptions and
-  checks that the numbers have settled. Bring description of the quantum system.
-  Use the result to plan your next step.
+subhead: Describe a quantum system. Get a simulation with stated assumptions and checks that the numbers have settled. Bring description of the quantum system. Use the result to plan your next step.
 explain: |
   A working simulation of a small quantum system, with the assumptions written down and checks that the answer is stable and not an artefact of the setup. It covers things like qubits in a noisy environment, light in a cavity, and open system dynamics.
 
@@ -18,6 +15,10 @@ when:
   - You are checking a quantum optics idea before building it.
   - Your simulation gives numbers and you doubt they have converged.
   - You want a reproducible setup you can share with a colleague.
+not_for:
+  - "You need to run on real quantum hardware: use the hardware maker's own tools, because this skill only simulates on your computer."
+  - "You want quantum circuits, gates or optimal control: use the separate QuTiP family packages for those, not this skill."
+  - "You cannot install Python 3.11 or newer: ask a colleague who can run code, or use a lab tool you already trust."
 you_give:
   - Description of the quantum system
   - Quantities you want to measure
@@ -29,8 +30,32 @@ you_get:
   - Convergence and sanity checks
   - Plots of the dynamics (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open a chat with an AI that can run code, such as Claude with code tools, and paste in this skill.
+  - Describe your quantum system in plain words. Say which quantities you want, and any noise or loss rates you know.
+  - Check that Python 3.11 or newer and uv are installed. Your AI will set up QuTiP 5.3.1 in its own environment.
+  - Read the model assumptions first. Fix anything that does not match your physics.
+  - Check the convergence results. If the numbers shift when the settings change, ask for a larger state space or a finer step.
+  - Compare the result with a measured dataset or a trusted case before you use it.
+output_sample:
+  input:
+    - A description of your quantum system
+    - The quantities you want to measure
+    - Noise or loss rates (optional)
+    - The time range to simulate (optional)
+  prerequisites:
+    - An AI that can run code
+    - Python 3.11 or newer and uv installed on your computer
+    - Graphics add-on for plots (optional)
+  output:
+    - name: Model assumptions
+      contains: The physical choices made, such as units, state space size, and how noise and loss are treated.
+    - name: Simulation code
+      contains: A runnable QuTiP script that builds the model and solves it, with the setup pinned so others can repeat it.
+    - name: Results
+      contains: The measured quantities over time, from the solver you asked for.
+    - name: Convergence checks
+      contains: Tests that the numbers hold when you grow the state space, tighten solver settings or change the time step.
+    - name: Plots
+      contains: Charts of how the system changes over time, if you ask for them.
+    - name: Completion checklist
+      contains: A final pass confirming dimensions, assumptions and convergence were all checked before you rely on the result.

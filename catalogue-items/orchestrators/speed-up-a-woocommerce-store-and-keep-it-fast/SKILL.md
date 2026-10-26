@@ -23,8 +23,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Read the speed report.** Use the skill `store-speed-report-reader`. Reads your pasted PageSpeed report and names what is slow and why.
-2. **Order the WooCommerce fixes.** Use the skill `self-hosted-store-speed-fixer`. Give it the audit report from the steps before. Uses the report from step 1 to put hosting, caching, plugin and image fixes in order.
-3. **Set a speed budget.** Use the skill `speed-budget-and-sale-check`. Give it the audit report from the steps before. Sets limits from the step 1 numbers so the store stays as fast as the fixes make it.
+2. **Order the WooCommerce fixes.** Use the skill `self-hosted-store-speed-fixer`. Give it the audit report from step 1. Uses it to put hosting, caching, plugin and image fixes in order.
+3. **Set a speed budget.** Use the skill `speed-budget-and-sale-check`. Give it the audit report from step 1, not step 2's plan. Sets limits from its numbers so the store stays as fast as the fixes make it, and hands back the budget, test routine and sale checklist.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

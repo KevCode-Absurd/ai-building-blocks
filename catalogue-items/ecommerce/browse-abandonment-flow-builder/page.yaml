@@ -1,6 +1,6 @@
 new_slug: browse-abandonment-flow-builder
 name: "Browse abandonment flow builder"
-summary: "Give it your best sellers and proof. Get a site-visit email and a browse flow that offers a discount last."
+summary: "Build a browse abandonment email flow for shoppers who view products and leave. You get triggers, timing and email outlines, with any discount last."
 job: write-emails
 thinking: medium
 thinking_why: "It follows set filters and timings, and writes short outlines. A mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You have cart and checkout flows but nothing for people who only browse.
   - Your browse flow opens well but few people click, and it sends a discount too early.
   - You want to know how long to wait before the first browse email.
+not_for:
+  - Your store cannot send product-viewed events to your email tool. Fix the tracking first, or the flow cannot run.
+  - Shoppers already added to cart or started checkout. Use a cart recovery flow builder, not this one.
+  - You sell B2B with long buying cycles. A person on your sales team following up will work better than a short email flow.
 
 you_give:
   - Your best sellers and main categories
@@ -37,6 +41,32 @@ how_to_use:
   - Check that your store sends product-viewed and active-on-site events to your email tool.
   - Build the flows, save the product block once and reuse it in every email.
   - Test the delay on email 1 first, then judge by revenue per recipient over a month.
+output_sample:
+  input:
+    - Your best sellers and main categories
+    - Reviews, guarantee and shipping facts
+    - Your discount policy, and whether a flash offer is allowed
+    - Your margin (optional)
+    - Your current browse flow results (optional)
+  prerequisites:
+    - An email tool that gets product-viewed and active-on-site events, such as Klaviyo with Shopify (both are paid)
+  output:
+    - name: Site abandon
+      contains: The trigger, send delay, exit rules and an outline for one email to visitors who saw no product.
+    - name: Browse abandon
+      contains: The viewed-product trigger, filters and a 30-day re-entry block so nobody is in two flows.
+    - name: Emails 1 to 5
+      contains: Send time, purpose, sections, subject ideas and product block for each email, with any discount late.
+    - name: Split rule
+      contains: Whether to treat new and returning buyers differently, and the margin condition that decides it.
+    - name: SMS
+      contains: One text about 60 minutes after the view, for shoppers who gave consent.
+    - name: Tests
+      contains: The delay to test first and how to judge results by revenue per recipient.
+    - name: Checks missed
+      contains: Any check the flow failed, or the word none.
+    - name: Missing
+      contains: Anything you did not give, such as reviews, left as a clear gap.
 
 how_it_works:
   - title: Builds the site abandon email

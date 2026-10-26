@@ -3,34 +3,78 @@ thinking: medium
 thinking_why: It applies a fixed list of rules, then judges the fit.
 new_slug: india-modeling-rules-checker
 name: India modeling rules checker
-summary: Give it an Indian company model. Get April to March years, crore units,
-  Ind AS and listing rules checked.
+summary: Check an Indian company model for wrong crore units, April to March year labels, Ind AS and listing mistakes. You get a fault list with the fix for each.
 job: money-and-investing
 headline: India modeling rules checker
-subhead: "Your Indian company model checked for the quiet mistakes that make
-  numbers wrong: fiscal years, crore units, accounting standards and listing
-  rules. You get a list of faults and the fix for each."
+subhead: Paste your Indian company model or its key sheets. Your AI checks units, fiscal year labels, accounting basis and listing rules. You get a verdict, a table of faults with the exact fix, and a list of what it could not check.
 explain: |
-  Your Indian company model checked for the quiet mistakes that make numbers wrong: fiscal years, crore units, accounting standards and listing rules. You get a list of faults and the fix for each.
+  This is an Indian financial model checker. It finds the quiet mistakes that make numbers wrong in a model of an Indian listed company, before you send the file to a client or an investor.
 
-  The biggest trap is units. In Excel, each trailing comma in a number format divides by a thousand, so no comma pattern gives crore. Two commas scale to millions; under a crore heading, the displayed value is ten times the correct crore figure. The skill checks for that and for bare calendar years where April to March years belong. It also reviews Ind AS conventions and listing-related expectations. Items with no Indian equivalent, like some consensus data, are named as missing, never replaced by a look-alike.
+  The biggest trap is units. In Excel, each trailing comma in a number format divides by a thousand. No comma pattern gives crore, so the common format for crore shows millions. The number on screen is 10 times the real crore figure, and the formula bar looks fine. The check looks for this, and for crore or lakh made by typing a pre-divided number instead of a live formula.
+
+  It also checks that years run April to March and are labelled that way, that peers are not mixed across accounting bases without a label, that the index and the stock exchange are named, and that promoter pledging and related-party deals show in the risk section. Where Indian data does not exist, such as analyst consensus, it names the gap and does not fill it with a look-alike.
 when:
   - A colleague built a model and the figures look off by a large factor.
   - You are about to send a model to a client or investor.
-  - You need to confirm fiscal year labels are right.
   - You are moving a model from a US layout to an Indian one.
-  - You want a review checklist for Indian financial files.
+  - You want a review list for an Indian company model in Excel or Google Sheets.
+not_for:
+  - You need the model filled in, not checked. Use the Statement model template filler for India.
+  - You want a valuation. Use the DCF model builder for India, then run this check on the result.
+  - The company is not Indian, or the file is US-GAAP only.
+  - You want live prices, consensus or buy and sell advice. Use a licensed data provider.
 you_give:
-  - The model file or its key sheets
-  - The company and reporting periods
-  - The intended audience (optional)
+  - The model file, or its key sheets pasted as text
+  - The company name and the periods it covers
+  - The stock exchange the company trades on, NSE or BSE (optional)
+  - Who the file is going to, such as a client or a committee (optional)
 you_get:
-  - A list of unit and label errors
-  - Fixes for number formats
-  - Ind AS and listing checks
-  - A list of data that has no Indian equivalent
+  - A verdict: pass, pass with fixes, or fail
+  - A table of faults with sheet, cell and fix
+  - Unit and number format errors with the right formula
+  - A list of items it could not check
+  - A list of data with no Indian equivalent
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open the skill in your AI and paste the model sheets as text, or upload the file if your AI can read it.
+  - Say which company and which periods the file covers. Add the stock exchange if you know it.
+  - Read the verdict, then fix the unit rows first, because they can be wrong by 10 times.
+  - For each fix in the table, check the cell yourself. Do not accept a change you cannot trace.
+  - Re-run the check after your fixes to confirm the faults are gone.
+  - Check any circuit limit or market-cap band it quotes against the NSE, BSE or SEBI site. These change.
+output_sample:
+  input:
+    - The model file, or its key sheets pasted as text
+    - The company name and the periods covered
+    - The stock exchange (optional)
+  output:
+    - name: Verdict
+      contains: One line saying pass, pass with fixes or fail, with the count of faults by type.
+    - name: Fault table
+      contains: Each fault with sheet and cell, type, what is wrong and the exact fix.
+    - name: Unit and format errors
+      contains: Crore or lakh columns that use a number format or a typed number, with the live formula to use.
+    - name: Cannot check
+      contains: Anything it could not judge from what you pasted, and what it would need.
+    - name: Gaps with no Indian equivalent
+      contains: Data the model uses that has no free Indian source, named and not replaced.
+    - name: Next step
+      contains: One line on what to fix first and when to re-run the check.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A pasted sheet is enough for the checks. It does not need to run code.
+    - name: Claude Code
+      why: Can open the Excel file itself and read the formulas in each cell.
+  inputs:
+    - The sources for each figure, such as Screener.in or the company filing
+    - The date each figure was pulled
+    - A US-layout version of the model, if you are converting it
+terms:
+  - term: Crore and lakh
+    meaning: Indian units. One lakh is 100,000. One crore is 10,000,000.
+  - term: Ind AS
+    meaning: The accounting standards Indian listed companies use. They follow IFRS, not US GAAP.
+  - term: Fiscal year
+    meaning: In India it runs April to March. FY2025 ends 31 March 2025.
+  - term: Promoter pledging
+    meaning: Company founders using their shares as security for a loan. It can force a sale.

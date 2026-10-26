@@ -1,6 +1,6 @@
 new_slug: offer-trim-and-stack-builder
 name: Offer trim and stack builder
-summary: Paste your delivery options and promises. Get named bundles, a value for each and a total.
+summary: Cut a long list of delivery options down to named bundles, each with a value and a total, so you can price your offer with confidence.
 job: make-offer
 thinking: high
 thinking_why: It weighs cost against value across many items and must keep every buyer problem answered. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have far more ideas than you can deliver.
   - You are not sure which parts of your offer the buyer values.
   - Your price feels too high next to what the buyer sees you do.
+not_for:
+  - "You have one buyer and one doubt and need a single offer: use the Offer builder that answers buyer doubts."
+  - "You have no rated delivery options yet: make them first with the Delivery option generator."
+  - "You only want to check your price: use the Pricing decision planner."
 you_give:
   - Promises from Buyer problem list builder
   - Rated delivery options from Delivery option generator
@@ -29,6 +33,29 @@ how_to_use:
   - Paste the promises and the rated options. Add your planned price.
   - Fix any value figure that looks too high to you. A value you cannot defend hurts the offer.
   - Take the result to Value equation scorer, then to Pricing decision planner.
+output_sample:
+  input:
+    - Your buyer promises and problems
+    - Your rated delivery options, with cost and value
+    - Your planned price and cost per buyer (optional)
+    - Your product facts (optional)
+  prerequisites:
+    - Rated options from the Delivery option generator, or your own list with a cost and value for each
+  output:
+    - name: Cut and keep
+      contains: Each option with its cost, value, a cut or keep verdict and the reason.
+    - name: Problem check
+      contains: Each promise next to the kept option that answers it.
+    - name: The stack
+      contains: Named bundles that state a benefit, with what is inside, a value and how it was worked out.
+    - name: Numbers
+      contains: Total value, price, value to price ratio, cost to deliver per buyer and margin.
+    - name: Done by hand at first
+      contains: Pieces you deliver live until sales justify building an asset.
+    - name: Missing
+      contains: Any gap, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 how_it_works:
   - title: Cuts by a rule
     text: High cost and low value goes first, then low cost and low value.

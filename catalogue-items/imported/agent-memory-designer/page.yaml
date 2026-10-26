@@ -2,34 +2,100 @@ thinking: high
 thinking_why: It compares memory designs and trade-offs before it picks one.
 new_slug: agent-memory-designer
 name: Agent memory designer
-summary: Describe what your agent must remember. Get a memory design for
-  short-term, long-term and graph storage.
+summary: Design how your AI agent remembers across sessions. Get a layered memory plan, a storage pick, save-and-drop rules and a plan to load memories back.
 job: build-software
 headline: Agent memory designer
-subhead: A plan for what your AI agent remembers, where each memory is kept, and
-  how it gets back into the conversation. Without memory, an agent forgets
-  everything when the session ends.
+subhead: Describe what your AI agent must remember and the questions it must answer. You get a memory plan that shows which layers it needs, where each memory lives, what to save or drop, and how memories come back into the chat.
 explain: |
-  A plan for what your AI agent remembers, where each memory is kept, and how it gets back into the conversation. Without memory, an agent forgets everything when the session ends.
+  An AI agent forgets everything when a session ends, unless you build it a memory. AI agent memory is the set of choices about what to keep, where to keep it and how to bring it back at the right moment. This skill makes those choices for your agent.
 
-  The skill lays memory out in layers. Working memory is the live conversation. Short-term memory lasts across a session. Long-term memory lasts for good. Then it matches your needs to a storage type. A plain vector store suits simple lookups. A knowledge graph keeps how things relate, such as which customer owns which order. A time-aware graph also tracks when facts were true. You get a pick based on your queries, limits and accuracy needs.
+  It lays memory out in layers. Working memory is the live conversation. Short-term memory lasts for one session. Long-term memory lasts across sessions. It then matches your questions to a storage type. A file store suits simple notes. A vector store finds text by meaning. A knowledge graph keeps how things relate, such as which customer owns which order. A time-aware graph also tracks when each fact was true.
+
+  It picks the simplest storage that can answer your real questions, and says plainly when your agent does not need long-term memory at all. It does not quote speed or accuracy figures for any product.
 when:
   - Your agent forgets customers and decisions between sessions.
   - You need the agent to keep names and facts consistent across many chats.
   - You are choosing between a vector store and a knowledge graph.
   - Facts change over time and the agent must know which version is current.
+not_for:
+  - "Your agent works inside a single session, or has no state: a plain notes file is enough, and this skill will say so."
+  - "You want ChatGPT or Claude to remember things about you in your own chats: use the AI memory habit setter."
+  - "You want search over your documents, not memory of past chats: use the RAG pipeline designer."
 you_give:
-  - What the agent has to remember
-  - How the agent is used
-  - Storage tools you already have (optional)
-  - How accurate recall needs to be (optional)
+  - What your agent does and who uses it
+  - What it must remember, such as people, preferences, decisions or task state
+  - The questions it must answer from memory
+  - How long each memory must last, and whether facts change over time
+  - Storage tools you already use, and any privacy limits (optional)
 you_get:
-  - A layered memory design
-  - A storage choice with reasons
-  - Rules for what to save and what to drop
-  - A plan for retrieving memory into context
+  - A layer table showing what is kept in each layer and for how long
+  - A storage choice with reasons, and a runner-up
+  - Rules for what to save, merge, expire and delete
+  - A plan for loading memories back into the conversation
+  - Privacy and backup notes, and a list of open questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down what your agent does and five questions it should answer from memory, such as "What did this customer order last month?"
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code runs and no paid tool is needed.
+  - Paste your notes. Answer any question your AI asks. Skipped inputs are marked as open questions, not guessed.
+  - Check the storage pick against your five questions. Can it answer each one? If not, ask your AI why it chose that store.
+  - Check the save and delete rules for personal data. Remove any detail your agent should not keep.
+  - Give the plan to the engineer who builds it. Pair it with the Agent context setter or the AI agent architecture planner.
+output_shape: |
+  Memory needs: <what the agent must remember and the questions it must answer>
+  Layer table: <layer> | <what it holds> | <how long> | <where it lives>
+  Storage choice: <file / vector / graph / time-aware graph> and <reasons>. Runner-up: <option>
+  Save and drop rules: <what to save, merge, expire, delete, and how often to clean up>
+  Retrieval plan: <by meaning, entity or time>, <how many to load>, <what happens on failure>
+  Privacy and safety: <what is kept, who can read or delete it, backups>
+  Open questions: <inputs not given>
+output_sample:
+  input:
+    - What your agent does and who uses it
+    - What it must remember and for how long
+    - The questions it must answer from memory
+    - Existing storage tools and privacy limits (optional)
+  output:
+    - name: Memory needs
+      contains: One paragraph on what the agent must remember and the questions it must answer.
+    - name: Layer table
+      contains: Each layer you need, what it holds, how long it lasts and where it lives.
+    - name: Storage choice
+      contains: A file, vector, graph or time-aware graph store, with reasons tied to your questions, plus a runner-up.
+    - name: Save and drop rules
+      contains: What to save, merge, expire and delete, and how often to clean up.
+    - name: Retrieval plan
+      contains: How memories return to the chat, how many to load and what happens if retrieval fails.
+    - name: Privacy and safety
+      contains: What personal data is kept, who can read or delete it, and how it is backed up.
+    - name: Open questions
+      contains: Inputs you did not give and how that limits the design.
+how_it_works:
+  - title: List what must be remembered
+    text: It asks what the agent keeps and the questions it must answer from memory.
+  - title: Choose the layers
+    text: It picks from working, short-term, long-term, entity and time-aware layers, and drops any you do not need.
+  - title: Pick the storage
+    text: It matches your questions to the simplest store that can answer them, and gives a runner-up.
+  - title: Set save and drop rules
+    text: It sets how memories are saved, merged, expired and cleaned up so the store does not grow without end.
+  - title: Plan the retrieval
+    text: It plans how memories come back by meaning, entity or time, and what happens when a lookup fails.
+  - title: Check privacy
+    text: It notes what personal data is kept, who can read or delete it, and how it is backed up.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT
+      why: Either can compare the options and write the plan. Neither can build or run the store for you.
+    - name: A developer or a coding assistant
+      why: The plan is a design. Someone still has to build the store and test it on your own questions.
+  inputs:
+    - Examples of real conversations the agent should remember
+    - Rough count of customers or records the agent will hold
+    - Your privacy and data-retention rules
+terms:
+  - term: Vector store
+    meaning: A database that finds text with a similar meaning to your question.
+  - term: Knowledge graph
+    meaning: A store of things and how they relate, such as customers and their orders.
+  - term: Context window
+    meaning: The text an AI can read at one time during a chat.

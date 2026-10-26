@@ -15,11 +15,11 @@ outputs:
   - { type: document }
 uses: [ supplier-contract-manager, contract-change-tracer, saas-terms-check, contract-plain-summary, supplier-payment-terms-planner ]
 steps:
-  - { uses: supplier-contract-manager, note: "Every month: the renewal calendar, the terms worth pushing for and the broken promises tracked, across every supplier and vendor deal." }
-  - { uses: contract-change-tracer, note: "Only when a vendor sent new terms, an amendment or a price notice: what changed and each clause's latest wording." }
-  - { uses: saas-terms-check, note: "Only for a software subscription renewing within 90 days: renewal traps, price rises, uptime and data terms flagged." }
-  - { uses: contract-plain-summary, note: "Only for a contract renewing within 60 days, or one you plan to renegotiate: a two-minute summary to read before the call." }
-  - { uses: supplier-payment-terms-planner, note: "Only for a supplier renewal where cash timing matters: the float, the terms to ask for and the cost split." }
+  - { uses: supplier-contract-manager, note: "Every month: the renewal calendar, the terms worth pushing for and the broken promises tracked, across every supplier and vendor deal. Passes on the calendar, so the next steps know which contracts to open first." }
+  - { uses: contract-change-tracer, note: "Only when a vendor sent new terms, an amendment or a price notice: what changed and each clause's latest wording. Uses the signed contract and the vendor's new paper, not step 1's calendar. Passes on the changed clauses." }
+  - { uses: saas-terms-check, note: "Only for a software subscription renewing within 90 days: renewal traps, price rises, uptime and data terms flagged. Uses the contract as it stands now, with any change step 2 traced, not step 2's report. Passes on the flags." }
+  - { uses: contract-plain-summary, note: "Only for a contract renewing within 60 days, or one you plan to renegotiate: a two-minute summary to read before the call. Uses the flags from step 3 where there are any. Passes on the summary and the terms to push for." }
+  - { uses: supplier-payment-terms-planner, note: "Only for a supplier renewal where cash timing matters: the float, the terms to ask for and the cost split. Uses your cash picture and the payment terms in the contract, not step 4's summary. Passes on the terms to ask for." }
 schedule: "On the first Monday of each month"
 asks_before: [ renewing, cancelling or sending notice on any contract, contacting a vendor or supplier, agreeing to new terms or a price, paying anything, signing anything, sharing a contract outside your team ]
 origin: own

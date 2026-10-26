@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows four fixed steps across your system.
 new_slug: ai-risk-framework-planner
 name: AI risk framework planner
-summary: Describe your AI system. Get risks mapped, measured and managed under
-  the NIST AI framework, with a plan.
+summary: Plan your AI risk process under the NIST AI risk framework. Give it your AI system. You get a status table, a risk register and an action plan.
 job: check-contracts
 headline: AI risk framework planner
-subhead: Your AI system's risks, laid out under the NIST AI Risk Management
-  Framework, with owners and next steps. NIST is the US standards body, and the
-  framework is voluntary, so this is a way to organise your thinking, not a
-  compliance badge.
+subhead: Your AI system's risks, laid out under the NIST AI Risk Management Framework, with owners and next steps. NIST is the US standards body, and the framework is voluntary, so this is a way to organise your thinking, not a compliance badge.
 explain: |
   Your AI system's risks, laid out under the NIST AI Risk Management Framework, with owners and next steps. NIST is the US standards body, and the framework is voluntary, so this is a way to organise your thinking, not a compliance badge.
 
@@ -19,6 +15,10 @@ when:
   - A customer asks how you manage AI risk and you have no document.
   - You need an owner and a priority for each AI risk.
   - You want to compare your practice with the NIST framework.
+not_for:
+  - "You need a legal opinion or formal sign-off: ask a qualified lawyer or an accredited auditor, because this is a planning aid, not a certification."
+  - "You need to meet EU AI Act rules on their own: ask counsel, because this skill follows the NIST framework and only maps loosely to other laws."
+  - "You have no AI system yet and want general advice: read the NIST AI RMF 1.0 document first, then come back with a real system."
 you_give:
   - A description of your AI system and how it is used
   - Your current policies and roles (optional)
@@ -30,7 +30,28 @@ you_get:
   - A prioritised action plan
   - Policy text you can paste and edit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - "Describe your AI system in a few lines: what it does, who it affects and who runs it."
+  - Add your current policies, role names and the list of outside AI vendors. Say so if you have none.
+  - Ask for the status table first. Check that each red, yellow or green rating matches what you know.
+  - Then ask for the risk register and action plan. Fix any owner or priority that looks wrong.
+  - Take the register to your next governance or leadership review, and ask for policy text for the biggest gaps.
+output_sample:
+  input:
+    - A description of your AI system and how it is used
+    - Your current AI policies and who owns them (optional)
+    - Third-party models or vendors you rely on
+    - Your industry (optional)
+  output:
+    - name: Status table
+      contains: Each function and category rated red, yellow or green, with notes on the gaps.
+    - name: Action plan
+      contains: Suggested actions for each category, with an owner and a priority.
+    - name: Risk register
+      contains: One row per risk with lifecycle stage, test activity, trust trait at risk, likelihood and impact, treatment and owner.
+    - name: Third-party model rows
+      contains: Separate register rows for outside vendors' models, with contract and monitoring steps.
+    - name: Policy text
+      contains: A structured draft policy with section headers and a purpose statement, ready to edit.
+    - name: Framework references
+      contains: Every item cites the exact NIST reference, such as MAP 1.5, so others can trace it.

@@ -45,7 +45,7 @@ Pause here: Send the form, gather the two lists from every person and pull the n
 
 Pause here: Hold the review and write down what was said and decided.
 
-4. **Turn each lesson into a rule for next time.** Use the skill `mistake-to-principle-writer`. Each lesson written as a rule the next team can check.
+4. **Turn each lesson into a rule for next time.** Use the skill `mistake-to-principle-writer`. Give it your notes from the review meeting and the agenda from step 3. Each lesson written as a rule the next team can check.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

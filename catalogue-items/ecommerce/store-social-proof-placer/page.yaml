@@ -1,6 +1,6 @@
 new_slug: store-social-proof-placer
 name: "Store social proof placer"
-summary: "Give it buyer doubts and reviews. Get which proof to show, from whom and where."
+summary: "Find which reviews and press quotes to show your store buyers, and where to place them on the page. Get a proof list, a layout map and a drop list."
 job: write-landing-page
 thinking: medium
 thinking_why: "It matches proof to doubts and places it by clear rules, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Your product page has reviews but visitors still leave before buying.
   - You are rebuilding a page and need to decide where each review and press quote goes.
   - You want to use an expert or press quote and need to check it is honest.
+not_for:
+  - "Your store has no reviews yet: collect real reviews first, then come back."
+  - "You need the words for the top of your page: use the Store hero section writer."
+  - "You need new reviews written for you: ask real customers. This skill never writes or invents proof."
 
 you_give:
   - Reviews, video testimonials, press quotes and counts, each with its source
@@ -35,6 +39,31 @@ how_to_use:
   - List the doubts buyers raise and the pages where they hesitate.
   - Place the proof as the layout map shows, and drop what the skill drops.
   - Add the real rating spread and test one change at a time.
+output_sample:
+  input:
+    - Your reviews, press quotes and video testimonials, each with its source
+    - The main doubts your buyers have
+    - Your buyer groups (optional)
+    - The pages where visitors hesitate most (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Proof matched to doubts
+      contains: A table that links each doubt and buyer group to a real proof item, its type, source and place.
+    - name: Layout map
+      contains: "Where proof sits: first screen, under add-to-cart, between sections, press logos, review grid and videos."
+    - name: Hot-spots
+      contains: The moments where buyers are unsure, such as a new product, a high price or a size choice.
+    - name: Authority check
+      contains: "For each expert: real expert on this exact topic, what they gain, and whether it is shown."
+    - name: Rating spread shown
+      contains: Whether the real count at each star level is shown, with the numbers.
+    - name: Honest steer or drawback line
+      contains: A true note on who the product is not right for, or one small drawback.
+    - name: Dropped
+      contains: Proof left out because it is not real, has no source or does not match the buyer, with the reason.
+    - name: Checks missed
+      contains: Any check that failed or was not run, or none.
 
 how_it_works:
   - title: Ties proof to a doubt

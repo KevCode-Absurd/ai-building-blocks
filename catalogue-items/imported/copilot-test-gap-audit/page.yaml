@@ -2,17 +2,57 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-test-gap-audit
 name: Test coverage gap investigator
-summary: Share your repo or change. Get missing, weak and stale tests ranked by
-  the behavior at risk.
+summary: Find missing and weak tests in your code. Give it your repo or one change. You get gaps ranked by risk, with the exact tests to add.
 job: test-and-fix-code
 headline: Test coverage gap investigator
-subhead: Share your repo or change. Get missing, weak and stale tests ranked by
-  the behavior at risk. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI a local copy of your repo, or name one route, feature or pull request. It compares your code with your tests. You get missing, weak and stale tests ranked by the risk to your users.
+not_for:
+  - "You want to find bugs in the code itself: ask your AI for a plain code review, as this only checks tests."
+  - "You want a security review: use a security audit with a person who knows your stack, as this only checks test coverage."
+  - "You have no local copy of the code: pasting text into a chat gives no repo evidence, so share the files you want checked."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your repo in an AI tool that can read files and run shell commands, such as Claude Code. Pasting the skill text into a chat alone gives no repo evidence.
+  - 'Add the skill to your AI tool, or paste its text in, then ask: "Run the test gap audit on this repo."'
+  - To narrow the job, name one scope, such as "audit test gaps for POST /orders" or "for this PR".
+  - Install Python 3 if you can. The skill uses it to run scripts/coverage_map.py and match code to tests. Without it, your AI checks by hand.
+  - Read the P0 and P1 findings first. Open each path:line to confirm it before you act.
+  - Ask your AI to write the tests for the top gaps. It stays read-only until you ask.
+output_sample:
+  input:
+    - "The part to check: a route, feature, pull request or branch (optional, it audits the whole repo if blank)"
+    - A local copy of your repo
+    - Your test command and CI config path (optional)
+  prerequisites:
+    - An AI that can read your files and run shell commands
+    - Python 3 to run the coverage map script (optional, it falls back to manual checks)
+  output:
+    - name: Header
+      contains: The scope reviewed, what was checked, and how many P0 gaps were found.
+    - name: Ranked findings
+      contains: Each gap with a P0 to P3 rating, what is not covered, current tests, a path:line citation and a suggested test.
+    - name: Suggested Test Plan
+      contains: An ordered list of the tests to add first.
+    - name: Untested Or Weakly Tested Areas
+      contains: Routes, features or services with no proper tests, with brief evidence.
+    - name: Existing Coverage Worth Keeping
+      contains: Current tests that already protect important behavior.
+    - name: Surveyed But Not Deeply Inspected
+      contains: Areas listed but not checked in depth this pass, for full-repo audits only.
+    - name: Checks Run and Not Tested
+      contains: Commands that ran with their results, and what could not be checked and why.
+when:
+  - Before you merge a pull request and want to know what tests it needs.
+  - After a bug fix, to learn which test would stop it coming back.
+  - You inherit a codebase and want to see which important parts have no tests.
+  - Before a release, to check that billing, login or delete paths are covered.
+you_give:
+  - A local copy of your repo, opened in an AI that can read files and run commands.
+  - The feature, route, pull request or branch to check (optional, it checks the whole repo if blank).
+  - Your test command, such as the one in your package scripts (optional).
+  - The path to your CI config (optional).
+you_get:
+  - A list of test gaps ranked from P0 (most serious) to P3.
+  - For each gap, the code and test locations as path:line.
+  - A specific test to add for each gap, with the scenario to check.
+  - A short plan that says which tests to write first.
+  - A list of checks that ran and checks that were skipped.

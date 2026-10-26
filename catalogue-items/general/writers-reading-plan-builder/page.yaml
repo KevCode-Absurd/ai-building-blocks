@@ -114,3 +114,27 @@ terms:
     meaning: "A short gap in the day that can be used for reading."
   - term: "Merely fine"
     meaning: "A book that is competent but not remarkable, useful for seeing how an ordinary book works."
+
+not_for:
+  - "You want a daily word count for your own draft. Use the Daily word quota planner."
+  - "You want a writing routine with set sessions. Use the Daily writing session planner."
+  - "You want a plan for a book you are writing, such as an outline. Use the Book writing project coach."
+output_sample:
+  input:
+    - "Your goal in books a year, or the minutes a day you can spare"
+    - "A normal week: where you wait, travel or have spare minutes"
+    - "Your reading speed in pages an hour (optional)"
+    - "What you write and what you like to read (optional)"
+  output:
+    - name: "The sums"
+      contains: "Pages a year, pages a day and minutes a day for your goal, and whether your week fits."
+    - name: "The week"
+      contains: "A day-by-day schedule that puts a book or audio book into each spare pocket."
+    - name: "The mix"
+      contains: "Three kinds of book to start with, each with one thing to look for."
+    - name: "Carry rule"
+      contains: "One rule for where your book lives so no spare minute is wasted."
+    - name: "What to cut"
+      contains: "Time you named that could go, and how many minutes a day it frees."
+    - name: "Checks missed"
+      contains: "One line for each check the plan failed, or none."

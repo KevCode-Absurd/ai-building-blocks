@@ -28,21 +28,15 @@ uses:
   - claim-and-proof-matcher
 steps:
   - uses: survey-ready-order-finder
-    note: "Every month, if the store is connected read-only: the buyers 7 to 14 days
-      after delivery who could be asked for a review, minus refunds. A list to
-      approve, never a send."
+    note: "Every month, if the store is connected read-only: the buyers 7 to 14 days after delivery who could be asked for a review, minus refunds. A list to approve, never a send. Passes on nothing until you approve and ask. The answers come back as next month's reviews."
   - uses: feedback-theme-finder
-    note: "Every month: the themes in the month's new reviews, with quotes, compared
-      with last month's themes."
+    note: "Every month: the themes in the month's new reviews, with quotes, compared with last month's themes. Uses the reviews you paste, not step 1's order list. Passes on the themes with counts."
   - uses: four-kind-proof-finder
-    note: "Every month: each claim on your pages paired with its strongest proof
-      from the reviews, and the claims that have none."
+    note: "Every month: each claim on your pages paired with its strongest proof from the reviews, and the claims that have none. Uses your page claims, your product facts and the new reviews. Passes on each claim with its proof."
   - uses: proof-spot-mapper
-    note: "Every month: which proof to show, where it goes on the page, and what to
-      drop, from the new reviews and the buyer doubts."
+    note: "Every month: which proof to show, where it goes on the page, and what to drop, from the new reviews and the buyer doubts. Uses the new reviews and the doubts. Passes on the proof map."
   - uses: claim-and-proof-matcher
-    note: "Only for a page whose proof changed, or a claim the new reviews no longer
-      back: the page checked line by line against the proof you have."
+    note: "Only for a page whose proof changed, or a claim the new reviews no longer back: the page checked line by line against the proof you have. Uses the page text and the proof on file. Passes on each mismatch for the page owner."
 schedule: On the first working day of each month, after last month's reviews are in
 asks_before:
   - asking any customer for a review

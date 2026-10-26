@@ -13,7 +13,7 @@ outputs:
 uses: [activity-digest-writer, weekly-review-guide, deep-work-day-planner]
 steps:
   - {uses: activity-digest-writer, note: "Starts from your connected tools. Makes a short digest of mentions, decisions and action items."}
-  - {uses: weekly-review-guide, note: "Uses the action items and decisions from the digest as the loops to close."}
+  - {uses: weekly-review-guide, note: "Uses the action items and decisions from the digest as the loops to close. Hands step 3 a plan for next week."}
   - {uses: deep-work-day-planner, note: "Takes the tasks from the digest and the top items from the weekly plan, and puts the important ones first."}
 origin: rebuilt
 version: 1.0.0

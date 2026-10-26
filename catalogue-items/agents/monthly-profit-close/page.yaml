@@ -1,6 +1,6 @@
 new_slug: monthly-profit-close
 name: Monthly profit close
-summary: Give it the month's sales and costs. Get a P&L set against last month and what to fix first.
+summary: Close your month with a monthly profit and loss report set against last month, plus a short list of fixes to approve. Give it sales and costs.
 job: track-numbers
 thinking: high
 thinking_why: It runs up to nine skills, chooses its path from the month's numbers and does margin sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want to know your real profit each month, not only your sales.
   - Margin or profit slipped and you don't know which cost line did it.
   - You want to see whether new customers pay for themselves, month after month.
+not_for:
+  - "You only need a one-off P&L: build it with a single skill like the Store P&L builder instead of running the whole close."
+  - "Your store has no full month of real sales and costs yet: wait a month, or ask your accountant for a simple profit check."
+  - "You need tax or filing advice: ask your accountant, because this agent does not do tax."
 you_give:
   - The month's costs and invoices, or a ledger export
   - Orders, discounts, refunds, shipping collected and ad spend for the month
@@ -30,6 +34,29 @@ how_to_use:
   - From the second month, put the new exports in the same folder. It compares against last month's files.
   - Read the list. Make the changes you agree with yourself, and have your accountant check the cost lines it flagged.
   - Run it again on the 5th of next month.
+output_sample:
+  input:
+    - The month's costs and invoices, or a ledger export
+    - Orders, discounts, refunds, shipping collected and ad spend for the month
+    - Last month's P&L (not needed in the first month)
+    - Your profit target and what changed this month (optional)
+  prerequisites:
+    - An AI that can read your files, such as Claude Code, so it can keep the close folder
+  output:
+    - name: The month
+      contains: Net revenue, gross margin and net profit, each against last month, with the sums.
+    - name: What moved, and why
+      contains: The lines that moved past the limit, each with a reason and a note on whether it is a one-off or a trend.
+    - name: Path taken
+      contains: Which checks ran, such as a sales drop split or a margin re-check, and why.
+    - name: Fix first
+      contains: Up to 7 changes to approve, each with its money size, the step behind it and the reason.
+    - name: Watch next month
+      contains: One to three numbers that decide what the next close looks into.
+    - name: Files and missing
+      contains: The P&L file, each step's file, and every item that was missing.
+    - name: Checks missed
+      contains: Any check that failed or could not run, or the word none.
 how_it_works:
   - title: Set the rules once
     text: In the first month it works out true unit costs, picks the cost of goods rule and saves the P&L layout.

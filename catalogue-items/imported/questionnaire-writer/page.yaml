@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It finds the knowledge gap before it writes questions.
 new_slug: questionnaire-writer
 name: Questionnaire writer
-summary: Tell it who you need answers from. Get a questionnaire aimed at what
-  they know and you do not.
+summary: Write a questionnaire for an expert who knows what you don't. Give it who you need answers from and what you need back. You get a ready document.
 job: organise-work
 headline: Questionnaire writer
-subhead: When you need answers only one person has, you get a ready document to
-  send them. It is built so they can reply on their own time, or you can fill it
-  in together in a meeting.
+subhead: When you need answers only one person has, you get a ready document to send them. It is built so they can reply on their own time, or you can fill it in together in a meeting.
 explain: |
   When you need answers only one person has, you get a ready document to send them. It is built so they can reply on their own time, or you can fill it in together in a meeting.
 
@@ -18,6 +15,10 @@ when:
   - You are taking over a project and must learn what others know.
   - A new client holds facts you need before you can start.
   - You want a meeting to run from a prepared list of questions.
+not_for:
+  - You can make the decision alone. Just decide, or write down the open points yourself.
+  - The person can answer in one message. Send a short email or make a quick call instead.
+  - You need answers from many people at once. Use a survey tool, since this writes one document for one person.
 you_give:
   - Who the questionnaire goes to and their role
   - The facts or decisions you need back
@@ -28,7 +29,27 @@ you_get:
   - Why each question matters
   - How-to-answer note and catch-all question
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code, files or paid tools are needed.
+  - "Answer the first question: who the questionnaire goes to, their role and how you know them."
+  - "Answer the second question: what facts or decisions you need back from them."
+  - Read the questionnaire it writes. Check that every item you named has a question.
+  - Copy the text into an email or document and send it, or fill it in with the person in a meeting.
+  - When answers come back, note which decision each answer feeds and what is still open.
+output_sample:
+  input:
+    - Who the questionnaire goes to, their role and how you know them
+    - The facts or decisions you need back from them
+    - A deadline (optional)
+  output:
+    - name: to-questionnaire-<slug>.md
+      contains: One Markdown file you can send to the recipient or fill in together in a meeting.
+    - name: Purpose and header
+      contains: Why the questionnaire exists, who it is from and to, and how the answers will be used.
+    - name: Context
+      contains: One short paragraph that gives the recipient enough background to answer well.
+    - name: How to answer
+      contains: The deadline, the rough effort, and a note that partial answers and "I don't know" help.
+    - name: Theme sections
+      contains: Questions grouped by theme, most important first, each with one idea, an optional reason it matters and an empty answer space.
+    - name: Anything else?
+      contains: A closing catch-all question for anything you did not think to ask.

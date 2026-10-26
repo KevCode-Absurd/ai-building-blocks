@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It writes level descriptions that stay distinct from each other.
 new_slug: marking-rubric-writer
 name: Marking rubric writer
-summary: Describe the task and its goal. Get a rubric with clear descriptions
-  for each level of work.
+summary: Write a marking rubric with clear level descriptions. Give it your task and learning goal. You get a grid, a student version and marking notes.
 job: teach-and-train
 headline: Marking rubric writer
-subhead: Give it the learning goal, the task, the year group and subject, and
-  how many criteria and levels you want. It describes each level in words a
-  student can act on. You get the rubric grid, criteria matched to your goal and
-  wording at the right reading level.
+subhead: Give it the learning goal, the task, the year group and subject, and how many criteria and levels you want. It describes each level in words a student can act on. You get the rubric grid, criteria matched to your goal and wording at the right reading level.
 explain: |
   A marking rubric where each level of work is described in words a student can read and act on, not just labelled good or poor. You give the task and what it should show, and get a grid ready to hand out.
 
@@ -19,6 +15,10 @@ when:
   - Your old rubric uses words like good and weak that students cannot act on.
   - You teach several classes and want marking to match across them.
   - You want students to see what a top response looks like.
+not_for:
+  - "You run a Manning programme where Competent means success: use the coherent-rubric-logic-builder instead."
+  - "You want to improve the comments you write on student work: use the feedback-quality-analyser instead."
+  - "You still need to plan the whole unit: use the backwards-design-unit-planner instead, then come back for the rubric."
 you_give:
   - The learning goal
   - A description of the task
@@ -31,7 +31,25 @@ you_get:
   - Wording at the right reading level
   - Ready to print or share
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste in the skill's instructions from the skill file.
+  - Add your learning goal, your task, and the year group. Add subject, number of criteria and levels, or your own criteria if you want.
+  - "Ask for all four parts: the rubric, the design rationale, the student version and the calibration notes."
+  - Read each level description. Check that two teachers would mark the same piece of work the same way, and edit any that overlap.
+  - Print the rubric, or share the student version before students start the task.
+output_sample:
+  input:
+    - The learning goal the rubric should check
+    - A description of the task students will do
+    - Year group
+    - Subject (optional)
+    - Number of criteria and levels, or criteria you already use (optional)
+  output:
+    - name: Rubric
+      contains: A grid of criteria and levels, with each level described by what the work looks like, plus scoring guidance.
+    - name: Design Rationale
+      contains: Why these criteria were chosen and how the level descriptions were kept clearly different.
+    - name: Student-Friendly Version
+      contains: A simpler version students can use to check their own work and each other's.
+    - name: Calibration Notes
+      contains: Tips to help teachers mark the same way across classes.

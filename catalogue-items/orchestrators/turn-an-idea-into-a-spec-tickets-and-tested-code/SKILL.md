@@ -22,14 +22,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Write the spec.** Use the skill `spec-writer`. Turns your idea into a spec with user stories and testing decisions.
-2. **Split the spec into tickets.** Use the skill `ticket-planner`. Give it the document from the steps before. Reads the spec from the step before and cuts it into small tickets with blocking order.
-3. **Build the tickets.** Use the skill `spec-builder`. Give it the document from the steps before. Builds the spec and tickets from the steps before into one reviewed change.
-4. **Find the missing tests.** Use the skill `test-gap-finder`. Give it the code change from the steps before. Reads the change from the build and marks what no test checks.
+1. **Write the spec.** Use the skill `spec-writer`. Turns your idea into a spec with user stories and testing decisions, and hands the spec to step 2.
+2. **Split the spec into tickets.** Use the skill `ticket-planner`. Give it the document from the steps before. Reads the spec from the step before and cuts it into small tickets with blocking order, and hands the tickets to step 3.
+3. **Build the tickets.** Use the skill `spec-builder`. Give it the document from the steps before. Builds the spec from step 1 and the tickets from step 2 into one reviewed change, and hands that change to step 4.
+4. **Find the missing tests.** Use the skill `test-gap-finder`. Give it the code change from the steps before. Reads the change from the build and marks what no test checks, and hands the test report to step 5.
 
 Pause here: Add the tests it proposes for the riskiest gaps and run the suite.
 
-5. **Write the pull request.** Use the skill `pull-request-writer`. Give it the code change from the steps before. Describes the change, with proof from the tests you added, for the reviewer.
+5. **Write the pull request.** Use the skill `pull-request-writer`. Give it the code change from the steps before. Describes the change, with proof from the tests in step 4's report, for the reviewer. Uses the change from step 3.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

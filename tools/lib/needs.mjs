@@ -7,6 +7,8 @@
 // Used by tools/add-needs.mjs (the "Before you start" and "After this" sections in each SKILL.md) and by
 // site/scripts/build-index.mjs (the same chain on each block page and in workflow packs).
 
+import { GENERIC_PORTS, nextSteps, sameFamily, subjectSimilarity, workflowPredecessors } from "../../site/src/lib/next-steps.mjs";
+
 export const SITE = "https://useaiblocks.com";
 export const BRAND_BRAIN = "website-brand-brain-builder";
 
@@ -103,7 +105,10 @@ export function needsOf(b, bySlug, describe = (t) => ({ label: t, what: t })) {
     // A transformation may take and return the same type (notes, drafts, tables).
     // outsideInputs already tracks what earlier workflow steps have made; a
     // later output must not erase material needed to start the job.
-    const info = INPUTS[p.type] ?? describe(p.type);
+    let info = INPUTS[p.type] ?? describe(p.type);
+    // A generic hand-off (a brief, a shortlist, a draft) is only made by our named maker inside that maker's line of
+    // work: a finance check's brief is not a buyer brief.
+    if (info.maker && GENERIC_PORTS.has(p.type) && bySlug[info.maker] && !sameFamily(b.task, bySlug[info.maker].task)) info = describe(p.type);
     if (info.maker === b.slug) continue; // a block never needs what it makes (the brand file builder needs no brand brain)
     if (b.steps?.some((st) => st.uses === info.maker)) continue; // a workflow whose own step makes it
     const maker = info.maker && bySlug[info.maker] ? bySlug[info.maker] : null;
@@ -122,8 +127,13 @@ export function needsOf(b, bySlug, describe = (t) => ({ label: t, what: t })) {
  * those need in turn. Each step says what the person brings to it. Only steps for things this block needs, plus the
  * brand brain whenever any step reads it.
  */
-export function chainOf(b, bySlug, describe) {
+export function chainOf(b, bySlug, describe, { before, all } = {}) {
   const order = [];
+  // A reviewed per-item list (page.yaml or item.yaml `before:`) replaces the worked-out chain.
+  if (Array.isArray(before)) return before.map((slug) => bySlug[slug]).filter((x) => x && x.slug !== b.slug).map((x) => {
+    const own = needsOf(x, bySlug, describe);
+    return { ...ref(x), label: x.name, bring: [...own.needed, ...own.helps].filter((i) => !i.maker).map((i) => `${lower(i.label)}${i.required ? "" : " (optional)"}`), uses: [...own.needed, ...own.helps].filter((i) => i.maker).map((i) => i.label) };
+  });
   const seen = new Set([b.slug, ...(b.steps ?? []).map((st) => st.uses)]); // a workflow's own steps aren't steps before it
   // What's needed brings its own steps before it; an optional extra is one step (its own needs show as "It uses").
   const visit = (block, depth, onlyNeeded) => {
@@ -138,6 +148,20 @@ export function chainOf(b, bySlug, describe) {
     }
   };
   visit(b, 0, false);
+  // Reviewed workflows show what usually comes first: a block that ran straight before this one, does the same line of
+  // work and hands over something it reads. Used when the inputs alone name no maker.
+  if (all && order.length < 2) {
+    const reads = new Set((b.inputs ?? []).map((p) => p.type));
+    for (const { x } of workflowPredecessors(b, all)) {
+      if (order.length >= 2) break;
+      if (seen.has(x.slug) || x.type === "mind" || x.category === "orchestrator" || !sameFamily(b.task, x.task)) continue;
+      const hands = (x.outputs ?? []).map((o) => o.type).filter((t) => reads.has(t));
+      if (!hands.length || (hands.every((t) => GENERIC_PORTS.has(t)) && subjectSimilarity(b, x, all) < 0.05)) continue;
+      seen.add(x.slug);
+      const own = needsOf(x, bySlug, describe), info = INPUTS[hands[0]] ?? describe(hands[0]);
+      order.push({ ...ref(x), label: info.label, bring: [...own.needed, ...own.helps].filter((i) => !i.maker).map((i) => `${lower(i.label)}${i.required ? "" : " (optional)"}`), uses: [...own.needed, ...own.helps].filter((i) => i.maker).map((i) => i.label) });
+    }
+  }
   return order.sort((x, y) => (y.slug === BRAND_BRAIN) - (x.slug === BRAND_BRAIN));
 }
 
@@ -171,22 +195,7 @@ export const NEXT_JOB = {
   "think-and-decide": "Decide what to do",
   "money-and-investing": "Check the money",
 };
-/** Families of jobs (everything not listed is marketing), and the result types broad enough to feed any job. */
-const FAMILY = {
-  "test-an-idea": "business", "plan-strategy": "business", "build-product": "business", "money-and-investing": "business", "think-and-decide": "business",
-  "lead-people": "people", "speak-and-persuade": "people", "sell-and-negotiate": "people",
-  "write-and-tell-stories": "craft", "design-work": "craft", "build-software": "software",
-};
-const MARKETING_TASKS = new Set([
-  "check-ads", "write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "read-ad-results",
-  "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file",
-  "study-competitors", "make-offer", "grow-social", "write-emails", "get-found-in-search",
-  "launch-and-scale-ads", "run-google-ads", "keep-customers",
-]);
-// An unclassified task must not inherit the marketing family. Broad results such
-// as a report or plan need a known shared job before they become a useful link.
-const familyOf = (task) => FAMILY[task] ?? (MARKETING_TASKS.has(task) ? "marketing" : task);
-const BROAD = new Set(["audit_report", "plan", "brief", "question", "feedback_notes", "shortlist", "copy_draft"]);
+/** Families of jobs now come from the site taxonomy (site/src/lib/next-steps.mjs: familiesOf). */
 const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "quote-video-ad-script", "meta-ads-compliance-checker", "buyer-brief-writer", "hidden-offer-finder"];
 
 /**
@@ -201,45 +210,26 @@ const NEXT_CHOSEN = {
   "rough-notes-to-minutes-writer": ["weekly-meeting-actions-keeper", "board-minutes-drafter"],
 };
 
-export function nextOf(b, all, max = 5) {
+export function nextOf(b, all, max = 5, override) {
   const outs = new Set((b.outputs ?? []).map((o) => o.type));
-  if (!outs.size) return [];
   if (outs.has("brand_brain")) { outs.add("product_data"); outs.add("persona"); } // its products and buyers parts
   // Results no block takes by name still go somewhere: opening lines are ad copy, a theme is a page, and so on.
   for (const t of [...outs]) if (LIKE[t]) outs.add(LIKE[t]);
-  if (NEXT_CHOSEN[b.slug]) {
-    return NEXT_CHOSEN[b.slug].map((slug) => all.find((x) => x.slug === slug)).filter(Boolean)
-      .map((x) => ({ job: x.task, label: NEXT_JOB[x.task] ?? x.name, ...ref(x), takes: [...new Set(x.inputs.filter((p) => outs.has(p.type)).map((p) => bare(INPUTS[p.type]?.label ?? p.type)))] }));
-  }
-  const fit = (x) => x.inputs.filter((p) => outs.has(p.type)).reduce((s, p) => s + (p.required ? 3 : 1), 0)
-    + (START_HERE.includes(x.slug) ? 2 : 0) + (x.usedIn?.length ? 1 : 0) - (x.inputs.filter((p) => p.required && !outs.has(p.type)).length * 0.5)
-    // A skill tested on a real business comes before a newer one for the same job.
-    + (x.tested?.result === "pass" ? 3 : 0);
-  // A check comes next only after something people will see: an ad, a script, a page.
-  const creative = [...outs].some((t) => ["hooks", "ad_copy", "script", "static_ads", "video_ads", "landing_page", "copy_draft", "pdp_copy", "email_flow", "image_prompt", "video_prompt"].includes(t));
-  // A report, a plan or a brief can feed almost anything. A match on one of those only counts within the same family
-  // of jobs, so a product page audit doesn't lead to a hiring plan.
-  const sameFamily = (x) => familyOf(b.task) === familyOf(x.task);
-  const linked = (x) => x.inputs?.some((p) => outs.has(p.type) && (!BROAD.has(p.type) || (b.task !== "set-up-ai" && sameFamily(x))));
-  const best = new Map();
-  for (const x of all) {
-    if (x.slug === b.slug || x.category === "orchestrator" || x.twin === b.slug || !linked(x)) continue;
-    if (!creative && (x.task === "check-ads" || x.task === "audit-landing-page")) continue;
-    const score = fit(x);
-    const job = x.task;
-    if (!best.has(job) || best.get(job).score < score) best.set(job, { x, score });
-  }
-  return [...best.entries()]
-    .sort(([ja, a], [jb, c]) => (creative ? (jb === "check-ads") - (ja === "check-ads") : 0) || (jb === b.task) - (ja === b.task) || c.score - a.score)
-    .slice(0, max)
-    .map(([job, { x }]) => ({ job, label: NEXT_JOB[job] ?? x.name, ...ref(x), takes: [...new Set(x.inputs.filter((p) => outs.has(p.type)).map((p) => bare(INPUTS[p.type]?.label ?? p.type.replace(/_/g, " "))))] }));
+  const link = (x) => ({ job: x.task, label: NEXT_JOB[x.task] ?? x.name, ...ref(x), takes: [...new Set((x.inputs ?? []).filter((p) => outs.has(p.type)).map((p) => bare(INPUTS[p.type]?.label ?? p.type.replace(/_/g, " "))))] });
+  // A reviewed per-item list (page.yaml or item.yaml `next:`), then the chosen lists below, beat the worked-out paths.
+  const chosen = Array.isArray(override) ? override : NEXT_CHOSEN[b.slug];
+  if (chosen) return chosen.map((slug) => all.find((x) => x.slug === slug)).filter((x) => x && x.slug !== b.slug).slice(0, Math.max(max, chosen.length)).map(link);
+  if (!outs.size) return [];
+  // Reviewed workflows, specific hand-offs and the same subject decide (site/src/lib/next-steps.mjs). A check comes
+  // first after something people will see; a generic report or brief only links within the same job and subject.
+  return nextSteps(b, all, { max, outs: [...outs], startHere: START_HERE }).map(({ x }) => link(x));
 }
 
 /** Everything the page and the SKILL.md show: the needs, the chain before, the brand brain files and the next steps. */
-export function planOf(b, bySlug, all, describe) {
+export function planOf(b, bySlug, all, describe, links = b.links ?? {}) {
   const { needed, helps } = needsOf(b, bySlug, describe);
   const usesBrain = [...needed, ...helps].some((i) => i.key === BRAND_BRAIN);
-  return { needed, helps, chain: chainOf(b, bySlug, describe), brain: usesBrain ? brainUse(b) : null, next: nextOf(b, all) };
+  return { needed, helps, chain: chainOf(b, bySlug, describe, { before: links.before, all }), brain: usesBrain ? brainUse(b) : null, next: nextOf(b, all, 5, links.next) };
 }
 
 const itemLine = (i) => {

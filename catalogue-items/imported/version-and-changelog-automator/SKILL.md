@@ -10,9 +10,8 @@ source_type: community
 date_added: '2026-09-20'
 license: MIT
 license_source: https://github.com/BagelHole/DevOps-Security-Agent-Skills/blob/main/LICENSE
-compatibility: Requires the relevant platform CLIs (kubectl, helm, terraform, git,
-  CI runners) and authorized access to the target environment. Docs-only; helper scripts
-  and templates not bundled.
+compatibility: Requires git and Node.js, and a CI runner such as GitHub Actions for
+  the automatic release. Docs-only; helper scripts and templates not bundled.
 metadata:
   author: devops-skills
   version: '1.0'
@@ -27,6 +26,39 @@ Automate version management and changelog generation following SemVer principles
 - Git repository with commit history
 - Node.js (for most tools)
 - Conventional commits (recommended)
+
+## What to ask for first
+
+If one of these is missing, ask once. If it is still missing, write MISSING and say what you assumed. Never invent commits, versions or tokens.
+
+1. The release branch name (required).
+2. Recent commit messages, or the repo (required, to work out the next version).
+3. The current version, from package.json or the last tag (required; if there is no tag, treat it as a first release).
+4. Whether the project publishes to npm (required before you set npmPublish).
+5. Whether commits use the conventional style. If not, say the tools will not bump versions until they do.
+
+## Steps
+
+1. Read the commit messages. Map each to a bump with the table below. Name the commits that cause the highest bump.
+2. State the next version, for example "1.4.2 to 1.5.0 because of feat: add search". If no commit triggers a release, say so.
+3. Ask which tool: semantic-release for fully automatic releases from CI, standard-version for a command the user runs.
+4. Write the config and, for semantic-release, the workflow file. Keep npmPublish false unless the user said they publish to npm.
+5. Write the commit message guide.
+6. Tell the user to run a dry run first. Never run a real release for them.
+
+## Output
+
+Return these sections in this order:
+
+- **Assumptions and MISSING items**
+- **Next version**: current version, next version, and the commits that decided it.
+- **Release config**: the file name and contents.
+- **Release workflow**: the file name and contents (semantic-release only).
+- **CHANGELOG.md format**: the section names and one example entry built from the user's real commits.
+- **Commit guide**: commit types and what each one does to the version.
+- **Next step**: run the dry run, read the output, then push to the release branch.
+
+Use the user's real commits in every example. Never invent commits.
 
 ## Semantic Versioning Basics
 
@@ -90,6 +122,8 @@ npm install --save-dev semantic-release \
 
 ### Configuration
 
+This config does not publish to npm (npmPublish is false). Set it to true only if you publish packages, and then add an NPM_TOKEN secret to your CI. The release workflow below passes that token, so it does publish once npmPublish is true.
+
 ```json
 // .releaserc.json
 {
@@ -101,7 +135,7 @@ npm install --save-dev semantic-release \
       "changelogFile": "CHANGELOG.md"
     }],
     ["@semantic-release/npm", {
-      "npmPublish": true
+      "npmPublish": false
     }],
     ["@semantic-release/git", {
       "assets": ["CHANGELOG.md", "package.json", "package-lock.json"],
@@ -421,14 +455,10 @@ Use this skill when:
 
 ## Limitations
 
-- Guidance executes against real environments: confirm target, blast radius, and rollback plan before applying anything.
+- A release is real. It creates a tag, a GitHub release and possibly an npm package. Run the dry run first, and never release without the user's say-so.
 - Never deploy to production without explicit approval. Docs-only import: upstream scripts and templates not bundled.
-
-### Example
-
-```bash
-git status && git diff --stat
-kubectl diff -f manifest.yaml
-```
+- Without conventional commit messages the tools cannot work out a bump. Say so rather than guessing.
 
 > Adapted from [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: helper scripts and templates not bundled.
+
+Licence note: the original skill by BagelHole is MIT licensed. sickn33 shares it in a collection whose written content is CC BY 4.0. Credit both when you reuse it.

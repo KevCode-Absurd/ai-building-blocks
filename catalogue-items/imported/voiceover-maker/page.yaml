@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a set tool on text you provide.
 new_slug: voiceover-maker
 name: Voiceover maker
-summary: Give it your text. Get spoken audio in a built-in voice, for narration,
-  voiceovers or batches.
+summary: Turn your text into spoken audio with a built-in voice. Make one voiceover or a whole batch of clips in a single run.
 job: work-with-audio
 headline: Voiceover maker
-subhead: Spoken audio from your text, in a built-in voice, ready for narration,
-  product demos, phone menus or accessibility reads. You can make one clip or a
-  whole batch in one run.
+subhead: Give your AI the exact text you want read aloud. It makes spoken audio files in a built-in voice, for narration, demos, phone menus or accessibility reads. You can make one clip or many in one run.
 explain: |
   Spoken audio from your text, in a built-in voice, ready for narration, product demos, phone menus or accessibility reads. You can make one clip or a whole batch in one run.
 
@@ -17,20 +14,43 @@ when:
   - You need narration for a video or slide deck.
   - You want to record a set of phone menu prompts.
   - You need an audio version of an article.
-  - You want to hear several voices or speeds before choosing.
+  - You want to compare a few voices or paces before you pick one.
+not_for:
+  - You want a cloned or custom voice. This skill only uses built-in voices, so hire a voice actor instead.
+  - You want an AI to write the script. This skill reads your exact words aloud, so draft the text first in your chat AI.
+  - You have no OpenAI API key or cannot run code. Ask a voice actor, or use a recording app on your phone.
 you_give:
   - The exact text to speak
-  - A voice and delivery style
-  - File format and where to save it (optional)
-  - An OpenAI API key
+  - A voice, such as cedar or marin (optional)
+  - The delivery style, such as calm or upbeat (optional)
+  - The file format and where to save it (optional)
 you_get:
-  - One or more audio files
-  - A record of text, voice and settings used
-  - A check of pacing and pronunciation
-  - A re-run with one tweak if needed
+  - One or more audio files, saved in output/speech/
+  - A short list of the text, voice and settings used
+  - A re-run with one change if you ask for it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the OpenAI Audio API.
+  - Open an AI that can run Python code. Paste in this skill.
+  - Set your OpenAI API key on your computer. Never paste the key into the chat.
+  - Paste your exact text. Add the voice, style and file format you want.
+  - Let your AI make the audio files. For many lines, it runs them as one batch.
+  - Listen to each clip before you use it. Check pacing and how names and acronyms sound.
+  - Ask for one change at a time, such as a slower pace. Then drop the clip into your video or phone system. Tell listeners the voice is AI-made.
+output_sample:
+  input:
+    - The exact text to speak, line by line if you want many clips
+    - The voice you want (optional)
+    - The delivery style, such as calm or upbeat (optional)
+    - The file format, such as mp3 or wav (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - An OpenAI API key set on your computer
+    - The openai Python package installed
+  output:
+    - name: Audio files in output/speech/
+      contains: One clip per line of text, with stable, descriptive file names, in the format you chose.
+    - name: Instruction spec
+      contains: A short labeled brief for the voice, such as tone, pacing and emphasis, with your words left unchanged.
+    - name: Batch file (temporary)
+      contains: One job per line for many clips. It lives in tmp/speech/ and is deleted after the run.
+    - name: Run record
+      contains: The final text, instructions and settings used, so you can repeat the run.

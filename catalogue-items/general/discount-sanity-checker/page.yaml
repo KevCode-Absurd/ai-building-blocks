@@ -1,6 +1,6 @@
 new_slug: discount-sanity-checker
 name: "Discount sanity checker"
-summary: "Paste every discount you show. Get a consistency score out of 100, each clash, and one true offer line."
+summary: "Check your discounts for clashes. Paste every price and offer a buyer sees. Get a score out of 100 and one offer line that is true everywhere."
 job: set-prices
 thinking: medium
 thinking_why: "It recomputes every percent and compares many lines against each other."
@@ -17,6 +17,10 @@ when:
   - "Your ads, badges and banners were written at different times by different people."
   - "A customer wrote in asking which discount is the real one."
   - "You are about to launch a sale and want every number to agree before it goes live."
+not_for:
+  - "You have one price and no discount: no check is needed, so just state the price plainly."
+  - "Your ads may break Meta rules: use the Meta ads compliance checker for that."
+  - "You want to pick a new price or discount level: talk it through with your accountant or a pricing adviser first."
 
 you_give:
   - "Every price and discount shown, quoted, with where it appears"
@@ -33,6 +37,27 @@ how_to_use:
   - "Under it, quote every discount line you can find and say where each appears."
   - "Add the real prices: list, first order, renewal, shipping, and every condition."
   - "Fix the severe clashes first, then paste the ONE TRUE LINE where the CHANGE WHERE list says."
+output_sample:
+  input:
+    - Every price and discount a buyer sees, with where each one appears
+    - "Your real prices: list, first order, renewal and shipping"
+    - Any conditions, like sign-up or first order only
+    - Footers and terms (optional)
+  output:
+    - name: Offer lines
+      contains: "A table with one row per offer line: where it shows, the words, the claim and the maths it implies."
+    - name: True discounts
+      contains: The real percent for each case, worked out from your prices with the arithmetic shown.
+    - name: Clashes
+      contains: Each pair of lines that disagree, rated severe, medium or minor, with why it matters to the buyer.
+    - name: Consistency score
+      contains: A score out of 100 with the sum shown, and the score again after every fix.
+    - name: One true line
+      contains: One offer line in a short ad version and a full page version, with the condition and renewal price.
+    - name: Change where
+      contains: One line per place with the new words to use there.
+    - name: Missing
+      contains: Any prices or conditions you did not give, so those lines are marked as not checked.
 
 how_it_works:
   - title: "Builds the table"

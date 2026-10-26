@@ -22,8 +22,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Break the job into tasks.** Use the skill `role-task-breakdown-for-ai-help`. Lists the tasks and which ones AI could take on.
-2. **Check what each task quietly does.** Use the skill `hidden-value-check`. Give it the plan from the steps before. Looks at each task chosen for AI in the plan before it goes, and flags what must be kept or replaced.
-3. **Plan the handoffs between steps.** Use the skill `ai-workflow-handoff-planner`. Give it the plan from the steps before. Turns the task plan into step cards that carry forward what the hidden-value check said to keep.
+2. **Check what each task quietly does.** Use the skill `hidden-value-check`. Give it the plan from the steps before. Looks at each task chosen for AI in the plan before it goes, and flags what must be kept or replaced. Hands the handoff planner that list of what to keep.
+3. **Plan the handoffs between steps.** Use the skill `ai-workflow-handoff-planner`. Give it the task plan from step 1 and the keep-or-replace list from step 2. Turns the task plan into step cards that carry forward what the hidden-value check said to keep.
 4. **Try to break the plan.** Use the skill `failure-first-plan-check`. Give it the plan from the steps before. Reads the handoff plan from the step before and lists how it could fail, with fixes.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

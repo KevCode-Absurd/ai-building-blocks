@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches code smells to known moves and you review the changes.
 new_slug: code-refactor-planner
 name: Code refactor planner
-summary: Give it messy code. Get named refactoring moves to apply in small safe
-  steps, without changing what it does.
+summary: "Find code smells and get a code refactor plan: named moves to apply in small safe steps, with tests passing and behavior unchanged."
 job: test-and-fix-code
 headline: Code refactor planner
-subhead: Messy code turns into a list of named moves you can apply one at a
-  time, with tests passing after each. Nothing about what the code does should
-  change.
+subhead: Messy code turns into a list of named moves you can apply one at a time, with tests passing after each. Nothing about what the code does should change.
 explain: |
   Messy code turns into a list of named moves you can apply one at a time, with tests passing after each. Nothing about what the code does should change.
 
@@ -18,6 +15,10 @@ when:
   - You need to improve code without risking new bugs.
   - A review said the code smells but gave no steps.
   - You want a clear before-and-after quality score.
+not_for:
+  - Your code has no tests and you can't add any. Write a few basic tests first, or ask a developer to review it by hand.
+  - The code will be deleted soon. Leave it alone, it is not worth the time.
+  - You want to change what the code does or add a feature. Do that as a separate step, not in a refactor.
 you_give:
   - The code to improve
   - Your test command (optional)
@@ -28,7 +29,27 @@ you_get:
   - A step-by-step order
   - A quality score out of ten
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the skill instructions into the chat.
+  - Paste the code you want to improve. Add your test command and any parts that must not change (optional).
+  - Read the smells and score first. Check that each named move fits your code.
+  - Apply one move at a time. Run your tests after each move, and stop if one fails.
+  - Ask for a new score when you finish.
+output_sample:
+  input:
+    - The code you want to improve
+    - Your test command (optional)
+    - Parts that must not change (optional)
+  prerequisites:
+    - Tests that pass before you start, or a way to add a few
+  output:
+    - name: Current score
+      contains: A quality score out of ten, based on eight quick checks, with the smells pulling it down.
+    - name: Code smells
+      contains: Each smell found in your code, with where it sits.
+    - name: Named moves
+      contains: The matching refactoring move for each smell, such as extracting a function or removing duplication.
+    - name: Step order
+      contains: The moves in a safe order, one small change at a time, with a test run after each.
+    - name: Path to 10/10
+      contains: The specific moves needed to raise the score to ten.

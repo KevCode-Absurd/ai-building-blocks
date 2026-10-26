@@ -1,38 +1,128 @@
 new_slug: the-monitoring-loop-always-watching-implementation-planner
 name: Agent anomaly monitoring builder
-summary: Build checks for unusual changes in your data. Set local baselines, quiet periods, alert rules and next checks.
+summary: "Plan checks that spot unusual changes in your numbers. Set baselines, quiet periods and alert rules so you get few, useful alerts. Draft only."
 job: build-software
 headline: Agent anomaly monitoring builder
-subhead: Build checks for unusual changes in your data. Set local baselines, quiet periods, alert rules and next checks.
+subhead: "Give it the numbers you watch, their history and what counts as unusual. It plans a check for each one with a fair baseline, a confirmation count and a quiet period. You get a check table, an alert record, tuning rules and tests. Nothing is run."
 explain: |-
-  Share metric history, baselines, thresholds, schedule and cooldowns. Get a scoped anomaly detector and a quiet alert policy.
+  An alert that fires on every wobble gets ignored. An alert that never fires is no help. Most anomaly detection fails in one of those two ways, and the fix is in the rules around the math, not the math itself.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill plans anomaly detection for the numbers your agents watch. For each number, it sets a baseline from like-for-like history: same weekday, same hour, same client or team. It treats missing data as its own alert, not as a breach. It asks for more than one bad reading before it fires, and it stays quiet for a set time after an alert. Each alert is saved as a finding with the reading, the baseline and a next check. An alert is never an approved change.
+
+  It also reads a starter detector and a threshold file and lists what they get wrong. One rule can stop a check from ever firing. Others are described in notes but not in code. The skill drafts the fixes. It does not run code or read your data.
 when:
-  - You need a scoped anomaly detector and a quiet alert policy.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - "Your dashboards are full of alerts and your team has stopped reading them."
+  - "You want an agent to watch spend, orders, sign-ups or error counts and tell you only when it matters."
+  - "A real drop went unnoticed for days and you want a check that would have caught it."
+  - "You have a starter detector and need to know what it misses before you rely on it."
+not_for:
+  - "A number with no history, or a one-time event. Use a plain fixed-limit alert in your own dashboard tool."
+  - "You want to catch tired ads from a pasted list of results twice a week. Use the Ad fatigue watcher."
+  - "You want to judge how right your agent's past calls were. Use the Agent prediction review builder."
+  - "You want one daily brief that joins alerts from many agents. Use the Multi-agent findings brief builder."
+  - "You want it to pause anything or change an account. It only plans alerts. A person decides what to do."
 you_give:
-  - Metric history, baselines, thresholds, schedule and cooldowns
+  - "The numbers to watch, with where each comes from and how often it updates"
+  - "History for each, at least 7 data points and ideally 2 weeks or more"
+  - "What counts as unusual for each, such as a percent change or a fixed limit"
+  - "How often to check each, and how long to stay quiet after an alert"
+  - "Who is told, and at which level"
+  - "Your detector code and threshold file (optional)"
 you_get:
-  - A scoped anomaly detector and a quiet alert policy
-  - A failure checklist and synthetic test cases
+  - "A check table: baseline window, detector, warning and critical levels, confirmation count and quiet period for each number"
+  - "Rules for missing or late data"
+  - "The fields of an alert record, with a next check"
+  - "Tuning rules for too many or too few alerts"
+  - "A list of gaps in the starter files, and test cases"
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open the skill in an AI. A chat AI works if you paste your numbers and history in. Claude Code or Codex works better if you want it to read your code."
+  - "Paste the list of numbers, a sample of history for each and your levels. Remove client names first."
+  - "Read GAPS IN THE STARTER first. One of them may mean a check never fires."
+  - "Check the CHECK TABLE. For each number, ask: would this have caught the last real problem, without waking anyone for nothing?"
+  - "Check MISSING DATA RULES. A feed that stops should raise its own alert."
+  - "Run the test cases on a copy of your history before any alert goes to a person."
 how_it_works:
-  - title: Step 1
-    text: Load the approved metric checks and account scope.
-  - title: Step 2
-    text: Compare like-for-like time windows.
-  - title: Step 3
-    text: Distinguish missing data from a threshold breach.
-  - title: Step 4
-    text: Require configured confirmation checks.
-  - title: Step 5
-    text: Deduplicate alerts with a cooldown.
-  - title: Step 6
-    text: Store findings and proposed follow-up; do not treat an alert as an approved account change.
+  - title: Picks a fair baseline
+    text: Compares like with like, such as Monday morning with past Monday mornings for the same client or team.
+  - title: Separates missing from bad
+    text: No data, or stale data, raises a data alert. It never counts as a drop.
+  - title: Chooses a detector
+    text: Uses a spread test for steady numbers and a limit test for numbers with a clear line, and says why.
+  - title: Asks for confirmation
+    text: Fires only after the number stays unusual for the count of checks you set.
+  - title: Stays quiet after an alert
+    text: Keeps one open alert per number and scope until it clears or the quiet period ends.
+  - title: Saves a finding
+    text: Records the reading, the baseline, the level, the confidence and the next check to run.
+  - title: Plans tuning and tests
+    text: Sets how to loosen or tighten levels after a review, and writes test cases on made-up history.
+output_shape: |-
+  BASIS
+  <what was read; nothing was run>
+  MISSING: <inputs and what each stops>
+
+  CHECK TABLE
+  <number> | <scope> | <how often> | <baseline window> | <detector> | <warn at> | <critical at> | <confirm after> | <quiet for> | <who is told>
+
+  MISSING DATA RULES
+  <number> | <what counts as missing> | <alert raised> | <who is told>
+
+  ALERT RECORD
+  <field> | <meaning>
+
+  TUNING PLAN
+  <signal> | <change> | <how often to review>
+
+  GAPS IN THE STARTER
+  <#> | <what it does> | <why it matters> | <fix>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <one smallest useful step>
+output_sample:
+  input:
+    - "The numbers you watch and where they come from"
+    - "History for each number"
+    - "What counts as unusual, how often to check and how long to stay quiet"
+    - "Your detector code and threshold file (optional)"
+  prerequisites:
+    - "A place where history for each number can be read"
+    - "A person or channel to receive alerts"
+  output:
+    - name: "Check table"
+      contains: "One row per number: baseline, detector, warning and critical levels, confirmation and quiet period."
+    - name: "Missing data rules"
+      contains: "What counts as missing or late data, the alert it raises and who is told."
+    - name: "Alert record"
+      contains: "The fields saved for each alert, including the reading, baseline, level, confidence and next check."
+    - name: "Tuning plan"
+      contains: "How to loosen or tighten a level when alerts are too many or too few."
+    - name: "Gaps in the starter"
+      contains: "What the starter detector and threshold file miss or get wrong, and the fix for each."
+    - name: "Test cases"
+      contains: "Made-up history that checks a spike, a slow drift, a missing feed and a repeat alert."
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your detector, your threshold file and your history query together and proposes exact edits.
+    - name: Any good chat AI
+      why: Enough if you paste in a sample of history and want the check table only.
+  inputs:
+    - "A month of real history for each number, so levels come from your own data"
+    - "A list of past real problems and the date each began, to use as test cases"
+    - "A note on known events such as sales or holidays that move the numbers"
+terms:
+  - term: Baseline
+    meaning: What the number normally looks like, from like-for-like history.
+  - term: Anomaly
+    meaning: A reading that is unusual compared with its baseline.
+  - term: Confirmation count
+    meaning: How many checks in a row must look unusual before an alert fires.
+  - term: Quiet period
+    meaning: The time after an alert when the same alert is not sent again.
+  - term: Finding
+    meaning: A saved note of an alert, with the reading, the baseline and the next check.
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It compares supplied history and follows a set method, so it needs care but not deep reasoning.

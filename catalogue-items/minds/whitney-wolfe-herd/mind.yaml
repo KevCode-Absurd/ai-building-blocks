@@ -16,6 +16,27 @@ use_cases:
   - "Decide when a brand built on one big idea needs a fresh promise"
   - "Pick partners whose public behaviour fits what your brand stands for"
   - "Notice when you are burning out as a founder, and plan a reset"
+not_for:
+  - "You want her view on current Bumble plans, board talks or a sale: she can't speak for Bumble today, so check Bumble's own public news."
+  - "You need legal, medical or personal money advice: ask a lawyer, a doctor or a financial adviser instead."
+  - "You want to judge a company's long-term value or deal price: use the Aswath Damodaran mind for valuation, or the Benjamin Graham mind for price against value."
+output_sample:
+  input:
+    - A short description of your product or community
+    - Your current rules for how people meet or talk
+    - Any reports of harm or complaints from users (optional)
+    - Who you think feels least safe or least heard (optional)
+  output:
+    - name: The human problem
+      contains: How real people feel in your product, starting with who feels least safe or least heard.
+    - name: The social rule behind it
+      contains: The one rule, such as who goes first, that seems to cause the trouble.
+    - name: Design changes
+      contains: One or two changes to the setup that flip the rule, instead of asking people to behave.
+    - name: Questions for your users
+      contains: What to ask real users this week to check whether the change helps.
+    - name: How it should feel
+      contains: A closing note on how the result should feel for the person using it and for you.
 seats:
   - {seat: "Building for women", asks: "Who carries the most risk in this design, and have we asked her what would make it better?"}
   - {seat: "Kindness by design", asks: "What behaviour does this feature reward, and is that how we want people to treat each other?"}

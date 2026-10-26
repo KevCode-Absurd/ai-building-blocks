@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It chains diagnosis, operations and pricing and needs your numbers.
 new_slug: business-turnaround-guide
 name: Stalled business turnaround guide
-summary: Describe your stalled business. Get a diagnosis, a weekly rhythm and
-  offers repriced to real value.
+summary: Fix a stalled business with this turnaround guide. Describe your business. Get a diagnosis, a weekly rhythm and offers repriced to real value.
 job: plan-strategy
 headline: Stalled business turnaround guide
-subhead: Describe a business that has stopped growing, your team and your
-  numbers. It works through eight layers in order, from strategy to pricing,
-  asking you to decide at each step. You get a written diagnosis, a strategy
-  note for your team, a weekly operating rhythm and repriced offers.
+subhead: Describe a business that has stopped growing, your team and your numbers. It works through eight layers in order, from strategy to pricing, asking you to decide at each step. You get a written diagnosis, a strategy note for your team, a weekly operating rhythm and repriced offers.
 explain: |
   A business that has stopped growing gets a diagnosis first and a plan second. You work through eight layers in order: strategy, weekly execution, management, structure, motivation, metrics, margin and pricing. Each step asks you to decide something, and your choices are saved in a docs folder so you can stop and pick up later.
 
@@ -19,6 +15,10 @@ when:
   - You tried several tactics and none of them moved the numbers.
   - You are the bottleneck and your team waits on you for decisions.
   - Your prices have not changed in years and margins feel thin.
+not_for:
+  - "You have no customers yet: use the Create business skill to build the first version of your business."
+  - "Your business already works and you want to expand: use the Grow business skill."
+  - "You want one method on its own, such as pricing: run that single skill directly, or ask a trusted adviser."
 you_give:
   - A description of the business, customers and revenue
   - Your team size and how decisions get made
@@ -30,7 +30,28 @@ you_get:
   - A weekly operating rhythm
   - Repriced offers tied to real value
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Check that your AI can read and write files, and that the eight linked skills are installed or can run from their briefs.
+  - Paste the skill into a chat, or load it in your AI tool.
+  - Describe your business, your customers, your team and your numbers when it asks.
+  - Answer each question and confirm the diagnosis in phase 1 before it moves on.
+  - Stop any time. Your choices are saved in the docs folder, so you can pick up in a later session.
+  - Share the strategy note with your team when the plan is done.
+output_sample:
+  input:
+    - A description of your business, your customers and your revenue
+    - Your team size and how decisions get made
+    - Key numbers such as margin and pricing (optional)
+    - Your last two weeks of calendar and the tasks you keep taking back (optional)
+  prerequisites:
+    - An AI that can read and write files in a docs folder
+    - The eight linked skills installed, or run from their short briefs
+    - Time for several sessions, since your choices are saved between them
+  output:
+    - name: STRATEGY.md
+      contains: The one challenge capping growth, and the plan to deal with it, written after you confirm the diagnosis.
+    - name: OPERATIONS.md
+      contains: Your weekly rhythm, plus a management section with 1:1 timing and tasks to hand off.
+    - name: METRICS.md
+      contains: The one number that tells you the truth about how the business is doing.
+    - name: IMPROVE-BUSINESS-PLAN.md
+      contains: A tracker of all eight phases, with your choices and what is done.

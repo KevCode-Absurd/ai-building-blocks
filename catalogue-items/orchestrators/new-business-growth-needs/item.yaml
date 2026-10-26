@@ -12,11 +12,11 @@ outputs:
   - {type: plan}
 uses: [big-decisions-first-sorter, target-size-back-solver, buying-habit-stack-designer, incentive-checker, failure-first-plan-check]
 steps:
-  - {uses: big-decisions-first-sorter, note: "The few big choices that are already decided by the goal"}
-  - {uses: target-size-back-solver, note: "The sum that links the goal to buyers, volume, share and profit. Reads the big choices"}
-  - {uses: buying-habit-stack-designer, note: "How the product becomes a repeat habit, using many forces at once. Reads the sized plan"}
-  - {uses: incentive-checker, note: "Who you depend on and whether the deal pulls them the right way. Reads the plan"}
-  - {uses: failure-first-plan-check, note: "What to avoid, such as losing the name, a sudden big product change or earning envy"}
+  - {uses: big-decisions-first-sorter, note: "The few big choices that are already decided by the goal. Hands the big choices to the size sum"}
+  - {uses: target-size-back-solver, note: "The sum that links the goal to buyers, volume, share and profit. Reads the big choices. Hands the sized plan to the habit design"}
+  - {uses: buying-habit-stack-designer, note: "How the product becomes a repeat habit, using many forces at once. Reads the sized plan. Hands the habit plan to the incentive check"}
+  - {uses: incentive-checker, note: "Who you depend on and whether the deal pulls them the right way. Reads the plan from step 3. Hands the findings on who you depend on to the failure check"}
+  - {uses: failure-first-plan-check, note: "What to avoid, such as losing the name, a sudden big product change or earning envy. Reads the plan from step 3 and the dependency findings from step 4. Hands back the failure list and the changes to the plan"}
 origin: rebuilt
 version: 1.0.0
 minds: [charlie-munger]

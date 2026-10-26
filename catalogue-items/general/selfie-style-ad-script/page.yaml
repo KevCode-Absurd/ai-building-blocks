@@ -1,6 +1,6 @@
 new_slug: selfie-style-ad-script
 name: Selfie-style video ad script writer
-summary: Paste your buyer's doubt and facts. Get a selfie-style video script, shot list and two other openings.
+summary: Write a selfie-style video ad script from your buyer's doubt and product facts. Get five timed beats, a shot list and two other openings.
 job: make-video-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You want an ad that feels like a post, filmed by a creator or made with an AI presenter.
   - Your current phone-style ads sound read, not said.
   - Your buyers have one doubt, such as "is this just candy?", that seeing the product in a hand can settle.
+not_for:
+  - "Your product's benefit can't be seen in a hand, like software or a service: use a plain narrated video with diagrams, or a short screen recording."
+  - 'You need the AI presenter clips made from the script: use "Turn your selfie-style script into consistent clips" after this one.'
+  - 'You want a brief for a real creator to film: use "Creator filming brief writer" with this script.'
 you_give:
   - Why people buy, how much your buyer knows already, and the length if you have one
   - Who is on camera (a real creator, a founder or customer on their own footage, or an AI presenter)
@@ -33,6 +37,37 @@ how_to_use:
   - Name the doubt to answer, in your buyer's words if you have them.
   - Read it aloud standing up, at speaking pace. Rewrite any line you stumble on, and check beat 4 claims less than your facts allow.
   - For an AI presenter, take the script and cast note to "Turn your selfie-style script into consistent clips". For a real creator, turn it into a filming brief with "Creator filming brief writer".
+output_sample:
+  input:
+    - Your buyer's doubt, moment and own words, with sources
+    - "Who is on camera: a real creator, a founder or customer, or an AI presenter"
+    - How the product opens and is used, step by step, plus handling rules
+    - Your approved and banned claims and the offer as you state it
+    - The length you want (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder (optional, but it supplies facts and claims)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: Spine
+      contains: "The story in one line: what was going on, what got in the way, and what they did."
+    - name: Beat table
+      contains: Five timed beats, each with what is said, on-screen text and a picture note.
+    - name: Anchor and length
+      contains: The one detail shown on screen, the length worked out from the use steps, and a matching word count.
+    - name: Disclosure
+      contains: The AI label and on-screen line, if the presenter is made by AI.
+    - name: Shot list
+      contains: One action per shot, saying which hand holds what.
+    - name: How to say it
+      contains: Tone, pace, place, clothes, phone and face notes for the speaker.
+    - name: Other openings
+      contains: Two different ways to start the video, each with its first line.
+    - name: Cast note
+      contains: Who should carry the ad, why, and which skill to use next.
+    - name: Claims, numbers and quotes
+      contains: Every claim with its source, plus anything it needed and did not get.
+    - name: Checks missed
+      contains: One line for each of its own checks the script still misses, or none.
 how_it_works:
   - title: Checks a phone video fits
     text: One person with a phone is good at a shared problem and a product shown in a hand. It says so when your point can't be seen.

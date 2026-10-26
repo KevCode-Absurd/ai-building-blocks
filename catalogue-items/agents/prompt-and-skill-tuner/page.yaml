@@ -1,6 +1,6 @@
 new_slug: prompt-and-skill-tuner
 name: Prompt and skill tuner
-summary: Give it a prompt or skill and test cases. It tests, fixes and re-tests until the checks pass, within four rounds.
+summary: Tune a prompt or skill file against your own test cases. It changes one thing per round, keeps only what helps, and stops at four rounds.
 job: set-up-ai
 thinking: high
 thinking_why: It changes one thing, tests, judges and decides to keep or undo, for several rounds. Weak judging here makes a prompt worse. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A prompt gives weak or uneven answers and you want fixes that are tested, not guessed.
   - You wrote a skill and want it checked, fixed and checked again before you use it.
   - You are about to share a skill, or add one from someone else, and want a safety check first.
+not_for:
+  - "You want a one-off piece of writing: ask your AI directly, no tuning needed."
+  - "Your prompt already works well: leave it alone, or fix one weak spot by hand with a quick edit."
+  - "You only want a single check of one prompt: run it through the Prompt tester and tuner instead."
 you_give:
   - The prompt text, or the skill folder with its SKILL.md
   - 10 to 20 real test cases, each with what a good answer looks like
@@ -30,6 +34,30 @@ how_to_use:
   - Confirm the pass line it proposes, or give your own.
   - Read the hand-back. Your original is untouched. Copy over the new version yourself, or say yes and it saves it where you say.
   - Run it again whenever you change the prompt or skill.
+output_sample:
+  input:
+    - Your prompt text, or your skill folder with its SKILL.md
+    - 10 to 20 real test cases, each with what a good answer looks like
+    - Your pass line (optional)
+    - Examples of answers you did not like (optional)
+  prerequisites:
+    - A chat with your AI where you can paste text or add files
+    - Claude Code or similar file access, if you tune a whole skill folder (optional)
+  output:
+    - name: RESULT
+      contains: "One line: passed or not passed, rounds used out of four, and the score before and after."
+    - name: NEW VERSION
+      contains: The tuned prompt or skill folder, saved as a copy beside your original.
+    - name: WHAT CHANGED
+      contains: One line per kept change, with the check it fixed and the score move.
+    - name: UNDONE
+      contains: Each change that made things worse, and why it was undone.
+    - name: STILL FAILING
+      contains: Checks still below your pass line, and the next change to try.
+    - name: SAFETY
+      contains: The safety check result for a skill, or not run for a prompt.
+    - name: FILES AND MISSING
+      contains: Each round's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Set the pass line
     text: Agrees what counts as done, and the cap of four rounds, before any change is made.

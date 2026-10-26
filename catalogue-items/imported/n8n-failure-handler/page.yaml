@@ -2,33 +2,103 @@ thinking: medium
 thinking_why: It adds error paths and checks each step.
 new_slug: n8n-failure-handler
 name: n8n failure handler
-summary: Give it an n8n workflow that breaks quietly. Get clear errors, retries
-  and alerts so you see and fix failures.
+summary: Add error paths, retries and alerts to an n8n workflow so failures show up and get fixed, not lost. Works for webhooks and scheduled jobs.
 job: connect-tools
 headline: n8n failure handler
-subhead: Workflows that fail loudly instead of dying in silence. When an n8n
-  node breaks, the default is to halt the whole run, and nobody finds out.
+subhead: "Give it an n8n workflow that fails without telling anyone. You get error paths on the risky steps, limited retries that cannot send twice, a catch-all alert workflow, and clear error replies for webhook callers."
 explain: |
-  Workflows that fail loudly instead of dying in silence. When an n8n node breaks, the default is to halt the whole run, and nobody finds out. That is fine when you are watching, and a problem when it runs alone at night.
+  By default, when one step in an n8n workflow breaks, the whole run stops and nobody finds out. That is fine when you watch it. It is a problem when the workflow runs alone at night, or answers a webhook for another system. This n8n error handling skill makes failures visible.
 
-  The skill adds two layers. First, each node that can fail gets its own error path, so one bad call does not kill the run. Second, a catch-all error workflow sends an alert for anything that slips through. It also sets limited retries for network calls, makes sure a retry cannot double-send an email or payment, and strips private details from alerts and API replies.
+  It works in two layers. First, each step that can fail gets its own error path, so one bad call does not kill the run. Second, a catch-all error workflow sends an alert for anything that slips through. It also adds a few retries for network calls, so brief blips fix themselves before anyone is told.
+
+  A retry must never send an email or take a payment twice. The skill checks every retried step for that, and it keeps passwords, personal data and system details out of alerts and replies.
 when:
   - A webhook workflow returns an empty error and you cannot tell why.
   - A scheduled workflow stopped weeks ago and no one noticed.
   - You want a Slack or email alert whenever a workflow breaks.
   - Calls to a flaky API fail now and then and should retry on their own.
+not_for:
+  - "You run and watch the workflow yourself and re-run it when it fails: the default behavior is fine, so skip this."
+  - "You need to design a whole new workflow: use the n8n workflow designer, then come back to harden it."
+  - "You need to split a big workflow into parts: use the n8n sub-workflow builder."
+  - "You want to build an AI agent in n8n: use the n8n AI agent builder."
 you_give:
-  - The n8n workflow that breaks (JSON or a description)
-  - Where alerts should go
-  - Which steps are safe to retry (optional)
+  - Your n8n workflow, as exported JSON or a clear description of its steps
+  - Where alerts should go, such as a Slack channel or an email address
+  - Which steps are safe to retry and which send or charge (optional)
+  - Whether the workflow answers a webhook (optional)
 you_get:
-  - Error paths wired on risky nodes
-  - A shared error workflow with alerts
-  - Retry settings that cannot double-send
-  - Safe error replies for callers
+  - An error path on every step that can fail
+  - A catch-all error workflow that sends an alert with the real error message
+  - Retry settings for network steps, checked so nothing sends twice
+  - Error replies for webhook callers, with the right status code and no private detail
+  - The one setting you must switch on yourself in the n8n screen
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can use the n8n MCP tools.
+  - Open an AI that can use n8n tools, such as Claude Code with the n8n MCP set up. Without it, the AI can write the changes for you to make in n8n by hand.
+  - Paste the skill and your workflow JSON. Say where alerts should go, and which steps send emails or take payments.
+  - Read the list of risky steps it found. Check the retry plan, and confirm nothing that sends or charges will run twice.
+  - Let it make the changes, or follow its edit list in n8n. Then ask it to read the workflow back and confirm each error path is both switched on and wired.
+  - Open the workflow settings in n8n and choose the new error workflow. The AI cannot do this step for you.
+  - Run a test that fails on purpose, and check the alert and the reply you get.
+how_it_works:
+  - title: Find the risky steps
+    text: It lists each step that calls the network, writes data or sends something.
+  - title: Add retries first
+    text: It sets up to 3 tries for network steps, so short blips fix themselves.
+  - title: Wire the error paths
+    text: It switches on the error output for each risky step and connects it to a handler.
+  - title: Shape the replies
+    text: For webhooks, it maps each cause to a status code and a short error message.
+  - title: Build the catch-all
+    text: It makes an error workflow that sends an alert with the workflow name, failed step and real error.
+  - title: Read it back
+    text: It reads the saved workflow and checks that every error path is switched on and connected.
+output_shape: |
+  Risky steps found: <list>
+  Retries: <step, tries, safe to repeat: yes or no, why>
+  Error paths: <step -> handler>
+  Webhook replies: <cause -> status code -> error code>
+  Error workflow: <name, alert channel, fields in the alert>
+  Check by hand: set the error workflow in the n8n workflow settings
+  Test: <how to fail it on purpose, what you should see>
+output_sample:
+  input:
+    - Your n8n workflow, as exported JSON or a description of its steps
+    - Where alerts should go, such as Slack or email
+    - Which steps send emails or take payments (optional)
+  prerequisites:
+    - An n8n instance you can edit
+    - An AI that can use n8n tools, or willingness to make the edits yourself
+  output:
+    - name: Risky steps list
+      contains: Every step that can fail, with what it does and whether repeating it is safe.
+    - name: Retry settings
+      contains: Tries and wait time for each network step, and a note where a retry could send or charge twice.
+    - name: Error paths
+      contains: For each risky step, the switched-on error output and the handler it connects to.
+    - name: Webhook error replies
+      contains: A status code and a short error body for each cause, with no stack traces or private data.
+    - name: Error workflow
+      contains: A separate workflow that sends an alert with the workflow name, failed step and real error message.
+    - name: Manual step note
+      contains: The exact setting you must change in n8n yourself to attach the error workflow.
+works_best_with:
+  tools:
+    - name: Claude Code with the n8n MCP
+      why: It can edit the workflow, read it back and check each error path.
+    - name: Chat AI without n8n tools
+      why: It can write the edit list and the error workflow JSON for you to import and set by hand.
+  inputs:
+    - A past failed run, such as the error text from the execution list.
+    - The alert channel, plus a second channel for the error workflow to use if the first is down.
+terms:
+  - term: Error output
+    meaning: A second exit on a step that the workflow takes only when that step fails.
+  - term: Error workflow
+    meaning: A separate workflow that n8n starts when another workflow fails.
+  - term: Retry
+    meaning: Trying the same step again after a short wait.
+  - term: Idempotent
+    meaning: Safe to repeat. Running it twice gives the same result as once.
+  - term: Webhook
+    meaning: A web address that starts a workflow when another system calls it.

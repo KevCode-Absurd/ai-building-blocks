@@ -2,34 +2,68 @@ thinking: medium
 thinking_why: It follows set steps to pull the data out of pages.
 new_slug: web-page-data-extractor
 name: Web page data extractor
-summary: Give it page links. Get tables, lists and prices as a CSV or JSON file.
-  Collects data from websites.
+summary: Turn web page tables, lists and prices into a CSV or JSON file for your spreadsheet, with a confidence rating on every pull. Checks site rules first.
 job: work-with-files
 headline: Web page data extractor
-subhead: Tables, lists and prices pulled from web pages into a CSV or JSON file
-  you can open in a spreadsheet. It saves hours of copying and pasting.
+subhead: Give it page links and say what data you want, such as product names and prices. It reads each page, follows the page numbers, and hands back a CSV or JSON file you can open in a spreadsheet.
 explain: |
-  Tables, lists and prices pulled from web pages into a CSV or JSON file you can open in a spreadsheet. It saves hours of copying and pasting.
+  Copying a long table or price list off a website by hand takes hours, and you miss rows. This web page data extractor does the reading for you. You name the links and the fields. It returns one row per item.
 
-  You give the page links and say what data you want. The skill tries more than one approach to read each page, so it copes with different layouts. It follows page numbers to collect every result, not just the first page, and can re-run the job to watch for changes such as price moves. It exports to CSV or JSON. It collects data from websites, so check the site's terms and robots rules first, and go slowly. It runs as a script and may need Python.
+  It works in set phases: ask what you want, look at the page, pick the best way to read it, pull the data, clean it, check it, then hand it over. If a page loads its content with scripts, it switches to a browser. If results run over many pages, it follows the page numbers until it has them all.
+
+  It rates every pull High, Medium or Low, so you know whether to trust the file. It reads page text as data only. If a page says "ignore your instructions", it flags that and carries on.
+
+  You need an AI that can open web pages. It must stay within the site's rules: it waits between requests and stops at login walls and CAPTCHAs.
 when:
-  - You want a price list from several product pages.
-  - A table on a site is too long to copy by hand.
-  - You track a competitor's prices over time.
-  - You need a list of items in a clean file.
+  - You want one price list from 10 product pages on a supplier's site.
+  - A table on a site is too long to copy and paste by hand.
+  - You want a competitor's prices in a sheet, so you can compare them next month.
+  - You need every job, event or listing from a results page in one clean file.
+not_for:
+  - "The site has an official API or a download button: use that, it is faster and allowed."
+  - "You want the brand voice and product facts from one page: use the product page brand profile extractor."
+  - "Your file is already on your computer and is messy: use the data file clean-up loop."
+  - The data is behind a login, or the site blocks bots. It will stop and tell you, not work around it.
 you_give:
-  - One or more page links
-  - The data you want, such as name and price
-  - Number of pages to follow (optional)
-  - How often to re-run (optional)
+  - One or more page links, such as a category page or a results page
+  - The data you want, such as name, price and link (the fields you want as columns)
+  - How many result pages to follow (optional)
+  - Your last file, if you want to see what changed since then (optional)
+  - Where to save the file, and CSV or JSON (optional)
 you_get:
-  - A CSV or JSON file
-  - One row per item found
-  - Data from all result pages
-  - A re-run script for tracking changes
+  - A CSV or JSON file with one row per item and one column per field
+  - Data from every result page you asked for, not just the first
+  - A High, Medium or Low confidence rating, with the item count and any empty fields
+  - A list of changes since your last file, when you give one
+  - Notes on anything it could not read
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the web.
+  - Open Claude, ChatGPT or Gemini in a mode that can browse the web or run code. A plain chat that cannot open links will not work.
+  - Paste this skill, then your links and the fields you want. For example "name, price and link for every product".
+  - Before it starts, check the site's terms and robots.txt allow it. Say so if you are unsure and ask your AI to check.
+  - Read the confidence line first. If it says Low or Medium, ask it to retry the pages with gaps.
+  - Spot-check three rows against the live page, then open the file in Google Sheets or Excel.
+output_sample:
+  input:
+    - One or more page links
+    - The fields you want as columns, such as name and price
+    - Number of result pages to follow (optional)
+    - Your previous file, to compare changes (optional)
+  prerequisites:
+    - An AI that can open web pages or run code
+    - Permission from the site's terms and robots.txt
+  output:
+    - name: Results table
+      contains: One row per item found, with a column for each field you asked for.
+    - name: CSV or JSON file
+      contains: The same rows saved in the format you pick, ready for a spreadsheet.
+    - name: Confidence rating
+      contains: High, Medium or Low, with the item count and how many fields came back empty.
+    - name: Changes since last run
+      contains: New, removed and changed rows compared with your earlier file, when you give one.
+    - name: Delivery notes
+      contains: Pages it could not read, recovery steps tried, and the source link for each row.
+works_best_with: Claude with web access or Claude Code, ChatGPT with browsing, or Gemini CLI. It helps to give an example row of what you expect.
+terms:
+  - robots.txt: A file on a website that says which pages bots may read.
+  - Pagination: Results split across page 1, page 2, page 3 and so on.
+  - Confidence rating: A High, Medium or Low mark for how complete the pull looks.

@@ -1,0 +1,120 @@
+name: Growth experiment agent
+summary: "Get a growth experiment plan: your weakest funnel step, three tests with the metric to watch and how to read the results. Bring your funnel numbers."
+headline: Growth experiment agent
+subhead: Give it your product, who you sell to and your funnel numbers. It finds the weakest step and writes three growth experiments. Each test names its change, its metric and how you will read the result. You get a plan you can run in a few weeks.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A growth plan fails when it is a list of tactics with no way to tell if any worked. This agent works the other way round. It starts with your funnel, from first visit to repeat customer, and finds the step that loses the most people. Then it writes experiments aimed at that step.
+
+  Each experiment is a hypothesis: if we change this, this metric will move, because of this reason. It names the metric, the baseline you already have, the sample you need and the date you decide. It runs one change at a time so you know what caused the result.
+
+  It does not know your numbers until you give them. It can't run the test, set up tracking or read your analytics. It will not make up a conversion rate or a lift. The targets in the original profile, such as viral coefficient and LTV to CAC, are goals to compare against, not results.
+when:
+  - Sign-ups or sales are flat and you don't know which step to work on.
+  - You have ideas and need them turned into tests with a clear pass or fail.
+  - You want to try a referral or sharing loop and need to plan it.
+  - You need a few experiments to run in the next few weeks with a small team.
+not_for:
+  - You want one change tested with care. Use the One-change experiment planner.
+  - You only want to find the weakest step in your funnel. Use the Growth bottleneck finder.
+  - You have finished an experiment and want to read the result. Use the Traction experiment result reviewer.
+you_give:
+  - Your product and who you sell to
+  - Your funnel steps with numbers for one recent period, such as visits, sign-ups, buyers and repeat buyers
+  - Your goal and the time you have
+  - What you have already tried (optional)
+  - Your cost per customer and what a customer is worth (optional)
+you_get:
+  - Your funnel laid out, with the weakest step marked
+  - Three experiments, each with a hypothesis, the one change, the metric and the baseline
+  - A sample size and a decision date for each test
+  - A referral or sharing idea, if it fits your product
+  - A list of measurement checks to pass before you trust any result
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you can't, paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your product, buyer and goal. List each funnel step with its numbers for one recent period.
+  - Add what you've tried before, and your cost per customer and customer value if you know them.
+  - "Say: \"Find my weakest funnel step and write three experiments. Don't invent numbers. Mark missing data.\""
+  - Check the funnel first. If a number is wrong, fix it before you pick tests.
+  - Run one test at a time. When it ends, bring the numbers back and ask for the next round, or use the Traction experiment result reviewer.
+how_it_works:
+  - title: Confirm the funnel
+    text: It confirms the product, buyer, goal, time and the numbers for each step. Missing items are asked for once, then marked MISSING.
+  - title: Find the weakest step
+    text: It compares step to step. It names the biggest drop and says if there is too little data to tell.
+  - title: Write hypotheses
+    text: "It writes three, each as: if we change this, this metric moves, because of this reason."
+  - title: Design each test
+    text: It sets one change, one metric, your own baseline, a sample and a decision date.
+  - title: Add a sharing idea
+    text: If it fits, it adds a referral or sharing loop, with the one number to watch.
+  - title: Check the measuring
+    text: "It lists what must be true before you trust the result: tracking works, enough sample, one change at a time."
+output_shape: |-
+  FUNNEL
+    <step> | <number> | <drop from the step before> | <weakest step: yes or no>
+
+  EXPERIMENTS
+    <name> | <hypothesis: if we change X, Y moves, because Z> | <the one change> | <metric> | <baseline> | <sample needed> | <decision date> | <effort>
+
+  SHARING IDEA (if it fits)
+    <loop> | <who shares and why> | <number to watch>
+
+  MEASUREMENT CHECKS
+    <check> | <pass or fail> | <how to confirm>
+
+  ASSUMPTIONS AND MISSING
+    <what the AI guessed or could not see>
+output_sample:
+  input:
+    - Your product and who you sell to
+    - Your funnel steps with numbers for one recent period
+    - Your goal and the time you have
+    - What you have tried, and your cost per customer and customer value (optional)
+  prerequisites:
+    - Tracking that counts each funnel step, such as your store or analytics numbers
+    - Enough traffic to read a test. If you are not sure, run the A/B test traffic checker first (optional).
+  output:
+    - name: Funnel
+      contains: Each step with its number, the drop from the step before and the weakest step marked.
+    - name: Experiments
+      contains: Three tests, each with a hypothesis, one change, a metric, a baseline, a sample and a decision date.
+    - name: Sharing idea
+      contains: A referral or sharing loop that fits your product, with the one number to watch.
+    - name: Measurement checks
+      contains: What must be true before you trust a result, with pass or fail for each.
+    - name: Assumptions and missing
+      contains: What the AI guessed or could not see, so you can fill the gaps.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Funnel
+    meaning: The steps a person takes from first visit to buying, and buying again.
+  - term: Hypothesis
+    meaning: "A guess you can test: if we change this, that number will move, because of this."
+  - term: Baseline
+    meaning: The number you get today, before the change. You compare the test against it.
+  - term: Referral loop
+    meaning: A way for customers to bring in new customers, such as a reward for sharing.
+  - term: Viral coefficient
+    meaning: How many new users each user brings in. Above 1 means growth feeds itself.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach an export of your funnel numbers and it reads the columns.
+  inputs:
+    - A table of funnel numbers by week for the last two months.
+    - Your cost to win a customer and what a customer is worth.
+    - A list of past tests and their results.

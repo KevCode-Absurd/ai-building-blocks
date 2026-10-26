@@ -1,321 +1,174 @@
 ---
 name: gtm-0-to-1-launch
-description: Launch new products from idea to first customers. Use when launching products, finding early adopters, building launch week playbooks, diagnosing why adoption stalls, or learning that press coverage does not equal growth. Includes the three-layer diagnosis, the 2-week experiment cycle, and the launch that got 50K impressions and 12 signups.
+description: Launch new products from idea to first customers. Use when launching products, finding early adopters, building launch week playbooks, diagnosing why adoption stalls, or learning that press coverage does not equal growth. Includes the three-layer diagnosis and the 2-week experiment cycle.
 license: MIT
 metadata:
   author: Smit Patel (https://linkedin.com/in/smitkpatel)
-  source: https://github.com/beingsmit/technical-product-gtm
+  source: https://github.com/github/awesome-copilot/tree/main/skills/gtm-0-to-1-launch
 ---
 
 # 0-to-1 Launch
 
-Launch new products from idea to first customers. The goal isn't headlines — it's finding 10 customers who can't live without you.
+Plan how a new product reaches its first customers. The goal is not headlines. It is finding the first 10 customers who can't live without you. Based on the gtm-0-to-1-launch skill by Smit Patel, shared in github/awesome-copilot (MIT).
 
-## When to Use
+## When to use
 
-**Triggers:**
 - "How do we launch this product?"
-- "First customer acquisition strategy"
-- "We launched but nobody's using it"
-- "Product Hunt vs direct outreach?"
-- "We have awareness but no conversion"
-- "How do I know if this is working?"
+- "How do we get our first 10 customers?"
+- "We launched but nobody is using it."
+- "Product Hunt or direct outreach?"
+- "We have awareness but no sign-ups, or sign-ups but no use."
 
-**Context:**
-- New product launches
-- Feature launches that feel like new products
-- Finding first 10-50 customers
-- Validating product-market fit
-- Diagnosing why early traction stalls
+## When not to use
 
----
+- Your product already has steady customers and you want to scale. Use the Self serve product growth planner.
+- You want a market position, not a launch plan. Use the SaaS market position adviser or the Positioning statement writer.
+- You sell to large companies through long deals. Use the Enterprise account deal planner.
+- You want a launch checklist for a physical product or a store. Use the Thirty day launch planner.
 
-## Core Frameworks
+## Inputs to gather first
 
-### 1. Press ≠ Growth (The Launch That Got 12 Signups)
+Ask once, in one message, for what is missing. If the user can't answer, write `MISSING: <item>` and carry on. Never invent customers, numbers or competitors.
 
-**The Pattern:**
+1. **Product** (required): what it does, in a sentence or two.
+2. **Target buyer** (required): the role or kind of person who has the problem.
+3. **Price or plan** (optional): what you will charge, or "not set".
+4. **Existing users or waitlist** (optional): how many, and where they came from. Zero is a fine answer.
+5. **Channels you can use** (optional): personal network, email, communities, LinkedIn, events.
+6. **Competitors or tools people use today** (optional): names, if known.
+7. **Team time** (optional): hours per week the team can give to the launch.
 
-Coordinated a feature launch with full press tour. TechCrunch, VentureBeat, product blogs. Big announcement day.
+If the product is live, also ask what has happened so far: sign-ups, activations, replies. Use only the numbers the user gives.
 
-**Result:**
-- 50K impressions
-- 12 signups
-- 2 conversions
+## Steps
 
-**Why It Failed:**
+1. **Pick the situation.** Not launched yet, launched with no traction, or launched with sign-ups but weak use.
+2. **If it has stalled, run the three-layer diagnosis** (framework 2) before proposing anything else.
+3. **Build the buyer target list** (framework 3): who to contact first, and why them.
+4. **Write the launch sequence** by week, using direct outreach before press (framework 1).
+5. **Write two to four two-week experiments** (framework 4), each with success criteria and a kill rule.
+6. **Add partner-led entry** (framework 5) only if the user has no distribution of their own.
+7. **Set the signals to watch** (framework 6) and say what would mean "not yet".
+8. **Check your work.** Every number comes from the user. Every example figure is labelled "illustrative". Unknowns are marked `MISSING`.
 
-Optimized for media buzz, not user value. The feature wasn't ready for self-serve. It needed education, context, hand-holding. Press gives you eyeballs. But eyeballs without activation = vanity.
+## Core frameworks
 
-**What Works Better:**
+### 1. Press is not growth
 
-Email 50 target customers directly. "We built [feature] because teams like yours struggle with [problem]. Want early access?" Walk them through setup personally. Get feedback, iterate.
+The author reports a press-heavy feature launch that brought many impressions but few sign-ups, because the feature needed education and hand-holding that press can't give. We have not verified those figures, so treat the story as the author's account, not a benchmark. The lesson: early customers usually come from direct outreach, not press.
 
-**Result:** 50 emails → 15 replies (30% reply rate) → 8 trials → 4 conversions (50% trial-to-paid).
+What to do instead: email a short list of target customers, say what you built and the problem it solves for teams like theirs, offer early access, and walk them through setup yourself. Press matters later, at a funding round or a major milestone.
 
-**The Lesson:**
+### 2. The three-layer diagnosis (why launches stall)
 
-Early customers come from direct outreach, not press coverage. Press matters later (Series A announcement, major milestone). For 0-to-1, it's distraction.
+Find which layer is broken before spending on a fix.
 
----
+**Layer 1: Positioning.** Symptoms: your message sounds like your competitors'. Buyers see you as interchangeable. Sales calls drift into feature comparisons. Fix: claim a position rivals can't easily copy. Test new messaging in outreach before changing the product.
 
-### 2. The Three-Layer Diagnosis (Why Launches Stall)
+**Layer 2: Experience.** Symptoms: people sign up but never finish the first task. Too many entry points. Help pages describe features, not outcomes. Fix: pick two or three "undeniable use cases" that give value fast. Limit onboarding to those. Put advanced features behind a later step. Rewrite help around the job the user wants done.
 
-**The Pattern:**
-
-You launched. You have some awareness. But conversion is weak. The problem lives in one of three layers, and each requires a different intervention.
-
-**Layer 1: Positioning Problem**
-
-Symptoms:
-- Messaging sounds like competitors
-- Differentiation requires explaining complex technical details
-- Buyers see you as interchangeable with alternatives
-- Sales conversations get derailed by comparison questions
-
-Diagnosis: You're "fighting an asymmetric war on the wrong front" — competing on features against better-funded companies. Map where competitors claim unique value. Find the position they can't easily copy.
-
-Fix: Stake a claim you can own structurally (not just through product features). Test with outbound messaging before committing product resources.
-
-**Layer 2: Experience Problem**
-
-Symptoms:
-- Strong awareness but weak activation
-- Users sign up but don't complete first workflow
-- Multiple entry points creating decision paralysis
-- Documentation is feature-centric, not outcome-centric
-
-Diagnosis: Flexibility without opinionated defaults is a liability, not a feature. Users face the "paradox of choice" — too many options, not enough guidance to the aha moment.
-
-Fix: Identify 2-3 "undeniable use cases" that deliver immediate value. Restrict onboarding to those specific use cases. Gate advanced features behind a mastery path. Rewrite help content around jobs-to-be-done, not feature lists.
-
-**Layer 3: Alignment Problem**
-
-Symptoms:
-- Team reports being "out of bandwidth" for customers
-- Different functions optimize for different metrics
-- Every idea has equal weight (no tiebreaker)
-- No clear north star connecting activities to outcomes
-
-Diagnosis: "Exploratory mode" — where every initiative has equal priority — becomes destructive when resources are constrained.
-
-Fix: Define a single shared north star. Use it as tiebreaker for every decision: "Does this help us win a customer?" Cut activities that don't ladder up. Make progress visible weekly, not quarterly.
-
-**How to Use This:**
-
-When a launch stalls, diagnose which layer is broken before throwing resources at it. Fixing experience when the problem is positioning wastes engineering time. Fixing positioning when the problem is internal alignment wastes marketing spend.
-
----
-
-### 3. The First 10 Customers Framework
-
-**Principle:** First 10 customers are not for revenue. They're for learning.
-
-**What You're Learning:**
-1. Does the product actually solve the problem?
-2. What's the activation flow? (How do they get value?)
-3. What objections come up? (Price, features, integrations?)
-4. Who's the real buyer? (Title, role, budget authority?)
-5. What's the sales cycle? (Days, weeks, months?)
-
-**How to Find Them:**
-
-**Channel 1: Personal Network (first 2-3)**
-- "I'm building [X], can I get your feedback?"
-- Convert to paying customers (don't give away for free — free users give different feedback than paying ones)
-
-**Channel 2: Direct Outreach (customers 3-20)**
-- Build list of 100 target accounts
-- Personalize to their specific pain
-- Test messaging variants — which angle gets replies?
-
-**Channel 3: Ceiling Moment Targeting (highest-intent)**
-- The highest-intent prospects are people who've already adopted a comparable solution and hit its limits
-- They've invested in learning a tool, hit its ceiling, and have low switching costs
-- Craft outreach around the limitation: "We see teams that outgrow [incumbent] when they need [capability]. That's what we built."
-- These convert 3-5x better than cold outreach because they already understand the problem
-
-**Channel 4: Community (developer products)**
-- "Built [X] to solve [problem], looking for early users"
-- Offer white-glove onboarding
-- Best for products where users congregate in Slack/Discord/forums
-
----
-
-### 4. The 2-Week Experiment Cycle
-
-**The Pattern:**
-
-Speed in early stages matters more than perfection. The constraint isn't whether you're right — it's how quickly you can test assumptions and iterate.
-
-**How to Execute:**
-
-- Frame every test with clear success criteria before starting
-- Test one variable per experiment (messaging, channel, pricing, feature)
-- Run for 2 weeks maximum — if it's not showing signal by then, it won't
-- If it works, allocate 3x resources within a week
-- If it doesn't, kill it and move to the next test
-- Document what you learned regardless of outcome
-
-**The Playbook Rule:**
-
-Every successful experiment must become a playbook before scaling. Structure: Goal → Steps → Expected output → Metrics → Risks. If someone unfamiliar can't execute the playbook, it's not documented well enough.
-
-**Why This Matters:**
-
-One-off wins don't compound. Systematized experiments do. The goal isn't a single launch — it's building a repeatable machine for testing assumptions at speed.
-
-**Common Mistake:**
-
-Over-planning before testing. Waiting for "perfect" conditions before launching. Staying with failing experiments too long because you've invested emotional energy. Make decisions with 70% information.
-
----
-
-### 5. Partner-Led Market Entry (When You Don't Have Distribution)
-
-**The Pattern:**
-
-Rather than entering new markets through direct sales alone, use partnerships with established players to accelerate.
-
-**How to Execute:**
-
-1. Identify market leaders in your target segment
-2. Approach with customer problem, not partnership pitch — "What if your users could access [capability]?" shifts from your need to their need
-3. Start small: Help them solve one specific problem (narrow integration, not full partnership)
-4. Prove value with a 3-6 month pilot before asking for broader commitment
-5. Build reference customers together — reduces their risk
-6. Leverage their GTM: once integrated, they market to their base
-
-**The Supernode Pattern:**
-
-Position yourself as the integration hub that other tools naturally connect through. You own critical data or workflows that other platforms need. This compounds — each new partner makes you more valuable to the next.
-
-**Category Sequencing:**
-
-Don't pursue partnerships everywhere. Dominate 2-3 categories per quarter:
-1. Lead with genuine use cases: "Our users ask for [partner] integration 50x per month"
-2. Once you partner with a top player, competitors feel urgency to work with you too
-3. After 2-3 successful partnerships in a category, create joint customer stories
-
-**Common Mistake:**
-
-Launching partnerships without clear integration pathways. Expecting partners to drive awareness without support. Treating partnerships as a sales channel rather than platform expansion.
-
----
-
-### 6. PMF Validation Checklist
-
-**Product-market fit is when customers pull you forward, not when you push them.**
-
-**Retention:**
-- [ ] 40%+ of Week 1 users return Week 4
-- [ ] Usage increasing over time
-- [ ] Customers renewing without sales push
-
-**Organic Growth:**
-- [ ] Word-of-mouth referrals happening
-- [ ] Customers asking "can I add my team?"
-- [ ] Inbound interest without paid marketing
-
-**Sales Velocity:**
-- [ ] Sales cycles shortening
-- [ ] Win rates >30% of trials
-- [ ] Customers saying "we need this now"
-
-**Qualitative:**
-- [ ] >40% very disappointed if product went away (Sean Ellis test)
-- [ ] Customers can articulate what it's for (clear use case)
-- [ ] Customers advocating publicly
-
-**If you don't have these, you don't have PMF yet. Don't scale marketing/sales.**
-
----
-
-## Decision Trees
-
-### Why Is Our Launch Stalling?
+**Layer 3: Alignment.** Symptoms: the team says it has no time for customers. Each function chases a different metric. Every idea has equal weight. Fix: set one shared north star and use it as a tiebreaker: "Does this help us win a customer?" Cut what doesn't. Show progress weekly.
 
 ```
 Do prospects understand what you are?
-├─ No → Layer 1: Positioning problem
-│         Fix: Test new messaging before changing product
-└─ Yes → Continue...
-    │
-    Do users activate after signing up?
-    ├─ No → Layer 2: Experience problem
-    │         Fix: Restrict onboarding to 2-3 use cases, guide to aha moment
-    └─ Yes → Continue...
-        │
-        Is the team aligned on what matters?
-        ├─ No → Layer 3: Alignment problem
-        │         Fix: Single north star, weekly visibility, cut non-essential
-        └─ Yes → Keep iterating, you're on the right track
+  No  -> Layer 1: positioning. Test new messaging first.
+  Yes -> Do users finish their first task after signing up?
+           No  -> Layer 2: experience. Limit onboarding to 2-3 use cases.
+           Yes -> Is the team aligned on what matters?
+                    No  -> Layer 3: alignment. One north star, weekly review.
+                    Yes -> Keep iterating.
 ```
 
-### Press Launch or Direct Outreach?
+### 3. The first 10 customers
 
+The first 10 customers are for learning, not revenue. You learn: does the product solve the problem, how people reach value, what objections come up, who the real buyer is, and how long a sale takes.
+
+Where to find them:
+- **Your personal network (the first two or three).** Ask for feedback, then ask them to pay. Free users give different feedback from paying ones.
+- **Direct outreach (next customers).** Build a list of about 100 target accounts. Personalise each message to their pain. Test two or three message angles and see which gets replies.
+- **People who hit a limit.** The strongest prospects have already used a similar tool and outgrown it. Write outreach around that limit. The author says these convert better than cold outreach. We haven't verified a figure, so measure it yourself.
+- **Communities** (for developer products). Say what you built and for whom, ask for early users, and offer hands-on onboarding.
+
+### 4. The two-week experiment cycle
+
+Speed beats polish at this stage.
+- Write the success criteria before you start.
+- Test one thing at a time: message, channel, price or feature.
+- Run it for two weeks at most. If there is no signal by then, stop.
+- If it works, put more time into it the following week. If not, drop it.
+- Write down what you learned either way.
+
+When an experiment works, turn it into a playbook before you scale it: goal, steps, expected result, metrics, risks. If a stranger could not run it, it is not written well enough.
+
+### 5. Partner-led entry (when you have no distribution)
+
+1. Name the market leaders in your segment.
+2. Approach them with a problem their users have, not a partnership pitch.
+3. Start with one narrow integration that solves one problem.
+4. Run a pilot of a few months before asking for more.
+5. Build reference customers together.
+6. Once integrated, they can reach their own base.
+
+Don't chase partners everywhere. Pick two or three categories at a time. Don't expect partners to promote you without support.
+
+### 6. Signals that you have fit
+
+Product-market fit means customers pull you forward. Look for:
+- **Retention:** people come back in week 4 after joining in week 1, and usage grows.
+- **Organic growth:** referrals, "can I add my team?", inbound interest without paid ads.
+- **Sales:** shorter sales cycles, a rising share of trials that convert, customers who say "we need this now".
+- **Words:** when asked, many users say they would be very disappointed if the product went away (a well-known survey test by Sean Ellis uses 40% as a rule of thumb). Customers can say what it is for, and speak about it publicly.
+
+The thresholds people quote (such as 40% retention) are rules of thumb, not laws. Ask the user to set their own targets. If these signals are absent, don't scale spending yet.
+
+## Output format
+
+Return a plan in this layout. Keep each section short.
+
+```markdown
+# First-customer launch plan: <product>
+
+**Where you are:** <not launched / launched with no traction / traction but weak use>
+**Main bet:** <one sentence>
+
+## Diagnosis (if launched)
+| Layer | Evidence from you | Verdict (ok / broken / unknown) |
+|---|---|---|
+| Positioning | | |
+| Experience | | |
+| Alignment | | |
+
+## Buyer targets
+| Segment | Pain | Channel | Contacts to reach | Why first |
+|---|---|---|---|---|
+
+## Launch sequence
+| Week | Action | Owner | Done when |
+|---|---|---|---|
+
+## Experiments (two weeks each)
+| # | Test | One thing changed | Success criteria | Kill rule |
+|---|---|---|---|---|
+
+## Signals to watch
+- <metric>, the user's target: <number or MISSING>
+
+## Missing or unverified
+- <each MISSING input, and each figure the user must supply>
 ```
-Self-serve ready? (Users get value in <10 min)
-├─ No → Direct outreach only (press won't convert)
-└─ Yes → Do you have >$1M funding to announce?
-    ├─ Yes → Both (press for awareness, outreach for conversion)
-    └─ No → Direct outreach first, press later
-```
 
----
+## Common mistakes
 
-## Common Mistakes
+1. Aiming for headlines instead of use.
+2. No target customer list before launch. Build the list first.
+3. Too many options and no defaults. Pick two or three use cases and guide hard.
+4. Giving the product away free to everyone. Free users give polite feedback.
+5. Scaling before you learn.
+6. Planning for weeks, testing for days.
+7. Fixing the wrong layer.
 
-**1. Optimizing for headlines instead of activation**
-50K impressions and 12 signups. Press ≠ growth.
+## Related items
 
-**2. No target customer list before launch**
-Spray-and-pray doesn't work at 0-to-1. Build the list of 100 accounts first.
-
-**3. Flexibility without defaults**
-Giving users every option paralyzes them. Pick 2-3 undeniable use cases and guide hard.
-
-**4. Giving product away for free**
-Free users give polite feedback. Paying users give honest feedback.
-
-**5. Scaling before learning**
-First 10 customers are for learning, not revenue. Document everything.
-
-**6. Over-planning, under-testing**
-2-week experiments with clear kill criteria. Move fast, document learnings.
-
-**7. Diagnosing the wrong layer**
-Positioning fix when the problem is experience = wasted marketing. Experience fix when the problem is positioning = wasted engineering.
-
----
-
-## Quick Reference
-
-**Three-layer diagnosis:**
-Layer 1: Positioning (messaging sounds like competitors) → Test new messaging
-Layer 2: Experience (awareness but no activation) → Guide to aha moment
-Layer 3: Alignment (team scattered) → Single north star, weekly visibility
-
-**First 10 customers:**
-Personal network (2-3) → Direct outreach (3-20) → Ceiling moment targeting (highest intent) → Community (developer products)
-
-**2-week experiment cycle:**
-Hypothesis → Success criteria → Test (2 weeks max) → Kill or 3x → Document playbook
-
-**PMF signals:**
-40%+ Week 1→4 retention + word-of-mouth + shortening sales cycles + >40% very disappointed
-
-**Partner-led entry:**
-Customer problem first → Narrow pilot → Reference customers together → Leverage their GTM
-
----
-
-## Related Skills
-
-- **product-led-growth**: Scaling after initial traction
-- **positioning-strategy**: Positioning for launch
-- **partnership-architecture**: Partner-led market entry
-
----
-
-*Based on launching features that optimized for press and got 12 signups from 50K impressions, diagnosing launch stalls across three companies using the three-layer model, and building the 2-week experiment cycle that turned ad hoc testing into a repeatable machine. Also draws on partner-led market entry across multiple geographies and segments. Not theory — lessons from mistaking vanity metrics for growth and learning to diagnose the actual problem.*
+- Self serve product growth planner (scale after first traction)
+- SaaS market position adviser (position before launch)
+- Revenue partnership program planner (partner-led entry in depth)

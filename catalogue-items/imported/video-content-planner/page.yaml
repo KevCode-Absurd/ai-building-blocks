@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It plans content and writes scripts in set formats.
 new_slug: video-content-planner
 name: Video content planner
-summary: Give it your channel goal. Get a video plan, scripts and ways to turn
-  one long video into short clips.
+summary: "Plan your video content: pick a niche, write YouTube and short video scripts, and turn one long video into clips. Give it your goal and audience."
 job: grow-social
 headline: Video content planner
-subhead: "A video plan you can start this week: what to make, for whom, and how
-  to get several clips out of each long video. The skill first asks about your
-  goal, audience, team size and what you already have, such as blog posts,
-  webinars or demos."
+subhead: "A video plan you can start this week: what to make, for whom, and how to get several clips out of each long video. The skill first asks about your goal, audience, team size and what you already have, such as blog posts, webinars or demos."
 explain: |
   A video plan you can start this week: what to make, for whom, and how to get several clips out of each long video. 
   The skill first asks about your goal, audience, team size and what you already have, such as blog posts, webinars or demos. It sets up a channel with a clear niche, content pillars and search keywords. It writes scripts with a strong opening and a clear structure. It plans a pipeline that cuts one long video into many short clips. It also gives ideas to improve YouTube titles, descriptions and thumbnails for search. If you have a brand voice file, it reads that first so the video sounds like you.
@@ -18,6 +14,10 @@ when:
   - You have a podcast or webinar that could become a month of short clips.
   - You need a script for a tutorial or product video.
   - Your videos get few views and you want to fix titles and keywords.
+not_for:
+  - "You want written blog posts: use content-production, not this skill."
+  - "You want social captions with no video: use social-media-manager."
+  - "You only want to audit your site's search ranking: use seo-audit, then come back for video keywords."
 you_give:
   - Your main goal, such as leads or authority
   - Your audience
@@ -29,7 +29,27 @@ you_get:
   - A repurposing plan from long to short
   - Title and search tips
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Answer the questions it asks: your goal, platform, audience, team size and what content you already have."
+  - "Pick one job: channel plan, script, or turning a long video into clips."
+  - Paste your blog post, podcast notes or webinar transcript if you want clips made from it.
+  - Check each hook and call to action in the result, then change anything that does not sound like you.
+  - Treat the figures about views and drops in reach as rules of thumb, not proven facts.
+output_sample:
+  input:
+    - Your main goal, such as leads, authority or product education
+    - Your audience and the problem they have
+    - Your existing content, such as blog posts, podcasts or webinars (optional)
+    - Your team size and budget for video
+    - Your brand voice file (optional)
+  output:
+    - name: Channel strategy
+      contains: Your niche, 3 to 4 content pillars, a list of keyword targets and a 90-day launch calendar.
+    - name: Long-form video script
+      contains: A full script with hook, chapters with timestamps, B-roll notes and one call to action.
+    - name: Short-form video script
+      contains: A 60-second script, second by second, with notes for each platform.
+    - name: YouTube search pack
+      contains: Title options to test, a description template, tags and a thumbnail brief.
+    - name: Repurposing plan
+      contains: A map that turns one long source into 10 or more video pieces across platforms.

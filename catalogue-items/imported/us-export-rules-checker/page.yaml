@@ -2,24 +2,22 @@ thinking: high
 thinking_why: Classing items and buyers takes careful step by step logic.
 new_slug: us-export-rules-checker
 name: US export rules checker
-summary: Describe your product and buyer. Get its export class, whether you need
-  a licence and which exceptions fit.
+summary: Check your US export rules before you ship. Give it your product and buyer. You get the export class, whether you need a licence, and exceptions.
 job: check-contracts
 headline: US export rules checker
-subhead: "Before you ship a product, share code or send a technical file abroad,
-  you need to know if US export rules apply. This skill walks you to an answer:
-  the product's export class, whether you need a licence, and which exceptions
-  might cover you."
+subhead: "Before you ship a product, share code or send a technical file abroad, you need to know if US export rules apply. This skill walks you to an answer: the product's export class, whether you need a licence, and which exceptions might cover you."
 explain: |
   Before you ship a product, share code or send a technical file abroad, you need to know if US export rules apply. This skill walks you to an answer: the product's export class, whether you need a licence, and which exceptions might cover you.
   Then it searches the Commerce Control List for a matching code, or lands on EAR99 if none fits. Next it checks the destination against the country chart and screens the buyer against restricted party lists. It tests the available licence exceptions one by one and flags rules such as deemed exports and the foreign direct product rule. It is guidance, not legal advice, so confirm with counsel.
 when:
-  - You plan to sell hardware, software or encryption products to a buyer
-    outside the US.
+  - You plan to sell hardware, software or encryption products to a buyer outside the US.
   - A foreign engineer joins your team and will see controlled technology.
-  - A distributor wants to resell your product in a country you have not shipped
-    to.
+  - A distributor wants to resell your product in a country you have not shipped to.
   - You need to write or review your export compliance program.
+not_for:
+  - "Your item is a defence article or on the US Munitions List: ask the State Department's export office (DDTC) or an export lawyer."
+  - "You need a binding ruling on your product's class: ask BIS for a formal classification (CCATS) or advisory opinion. This gives guidance only."
+  - "You need legal advice on a penalty, a past breach or a self-disclosure: talk to an export control lawyer."
 you_give:
   - A description of the product, software or technology
   - The destination country and the buyer
@@ -31,7 +29,32 @@ you_get:
   - Licence exceptions that may apply
   - Red flags about the buyer or use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. If your AI takes files, upload the skill folder instead.
+  - Describe your product, the destination country, the buyer and how they will use it.
+  - Add any earlier export class you were given (optional).
+  - Read the jurisdiction and export class first. Check they match your product before you trust the rest.
+  - Check the buyer against the official Consolidated Screening List yourself. Web access helps your AI do this, but confirm it.
+  - Take the result to your export counsel before you ship. This is guidance, not legal advice.
+output_sample:
+  input:
+    - A description of your product, software or technology
+    - The destination country and the buyer
+    - How the buyer will use it
+    - Any earlier export class you were given (optional)
+  prerequisites:
+    - An AI that can search the web if you want it to check current rules and lists
+  output:
+    - name: Jurisdiction check
+      contains: Whether your item falls under the Commerce rules (EAR) or the State Department's defence rules (ITAR).
+    - name: Export class
+      contains: The matching Commerce Control List code, or EAR99 if no code fits, with the steps that led there.
+    - name: Licence check
+      contains: Whether the destination country needs a licence for that class, based on the country chart.
+    - name: Licence exceptions
+      contains: Each exception that might apply, with the conditions you must meet.
+    - name: Buyer and use screening
+      contains: Restricted party list checks, red flags about the buyer, and banned end uses.
+    - name: Special rules
+      contains: Notes on deemed exports, the foreign direct product rule and the de minimis rule where they apply.
+    - name: Next steps
+      contains: What to do next, such as applying for a licence, keeping records or asking counsel.

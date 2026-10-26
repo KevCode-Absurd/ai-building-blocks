@@ -17,7 +17,8 @@ test.beforeEach(async ({ page }: { page: Page }) => {
     const response = await route.fetch({ url: home, headers: stagingHeaders(home, route.request().headers()) });
     return route.fulfill({ response });
   });
-  await page.route("**/data/blocks.json", async (route) => {
+  // Home lists cards from the small index; block pages read the full file. Patch both.
+  await page.route("**/data/blocks{,-index}.json", async (route) => {
     const res = await route.fetch({ headers: stagingHeaders(route.request().url(), route.request().headers()) });
     const data = await res.json();
     const base = data.blocks.find((b: { origin: string; type: string }) => b.type === "skill" && b.origin !== "imported");

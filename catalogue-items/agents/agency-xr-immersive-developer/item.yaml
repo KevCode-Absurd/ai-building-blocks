@@ -1,0 +1,42 @@
+slug: agency-xr-immersive-developer
+name: XR Immersive Developer agent
+summary: "Plan a browser-based AR or VR app with WebXR. Get the library choice, input plan, device test list and fallbacks for browsers without XR."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: spatial-computing/xr-immersive-developer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-immersive-developer.md
+  licence: MIT
+  original_name: XR Immersive Developer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: a9aa13187bfb774f3eb734ae9869ef249ec3290674f0bb3c1368b69bfa25a2b0
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - XR Immersive Developer
+  - Agency Agents
+  - Spatial Computing
+credits:
+  - title: XR Immersive Developer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-immersive-developer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

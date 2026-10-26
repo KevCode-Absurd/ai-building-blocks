@@ -1,0 +1,138 @@
+name: WebAssembly Engineer agent
+summary: Find out if WebAssembly will speed up your web app or plugin system, then plan the port, the file size and the safe limits.
+headline: WebAssembly Engineer agent
+subhead: Give it the slow code, the language it is in and where it runs. It checks if WebAssembly is a good fit before you port anything, then plans the benchmark, the boundary with JavaScript, the file size and the sandbox. You get a go or no-go call and a plan.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Many teams port code to WebAssembly (Wasm) and find it is slower. The usual cause is not Wasm. It is the cost of passing data between JavaScript and Wasm, called the boundary. This agent checks the fit first. Heavy number crunching with few calls across the boundary can win. Code that touches the page all the time usually loses.
+
+  Its method comes from the Agency Agents profile. Measure the current version first, so "faster" has a number to beat. Design the boundary before the algorithm: send big batches of data, not one value per call. Keep the loop inside the module. Watch memory, because a Wasm module's memory grows but does not shrink. Ship a small file that loads while it downloads. On servers, give a module only the access it needs, which is the real reason to run untrusted code in Wasm.
+
+  This is an AI role profile shared under MIT. It writes a plan and code outlines. It cannot run your benchmark, so it marks speed claims as unmeasured until you paste real numbers. Its targets, such as every port beating its baseline, are goals and not results measured by AI Blocks.
+when:
+  - A browser feature, such as image work, a parser or a codec, is too slow in JavaScript.
+  - You want to run other people's plugins on your server without giving them your files or network.
+  - Someone says "let's rewrite it in Rust and compile it to Wasm" and you want proof first.
+  - Your Wasm file is several megabytes and slows the first page load.
+not_for:
+  - Your slow part is page layout, DOM work or network calls. Use the Frontend Developer agent.
+  - You want to clean up Rust code, not compile it to Wasm. Use the Rust Refactoring Specialist agent.
+  - You need to measure the speed of a whole site or API. Use the Performance Benchmarker agent.
+  - You need a security review of your sandbox setup. Use the Security Architect agent.
+you_give:
+  - The task or code you want to speed up or isolate, in plain words
+  - The language it is written in, such as Rust, C++ or Go
+  - Where it will run, such as the browser, a server or the edge
+  - Your current speed on real data, such as 40 milliseconds per image (optional)
+  - Browsers or runtimes you must support, and your file size limit (optional)
+  - The code itself, if you can share it (optional)
+you_get:
+  - A fit verdict on whether Wasm helps, with the reason
+  - A benchmark plan to measure the current version first
+  - A boundary design that lists what crosses to Wasm, in what batches, and who owns the memory
+  - A toolchain choice by language, with the size and start-up cost
+  - A plan to shrink and stream the file
+  - A sandbox and fallback plan, plus the open questions
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then references/source-agent.md.
+  - Describe the task, the language, where it runs and any timing you have. Paste the code if you can.
+  - Say "Write the WebAssembly plan. Tell me first if Wasm is the wrong choice. Ask me once if anything is missing."
+  - Read the fit verdict first. If it says no, stop there and fix the real bottleneck.
+  - Run the benchmark it plans on your own data and paste the numbers back. Until you do, speed claims stay marked as not measured.
+  - Port the smallest hot loop first, and compare against the baseline before you port more.
+how_it_works:
+  - title: Check the fit
+    text: It asks whether the work is heavy computing with few crossings, or glue code that only feels slow.
+  - title: Plan the baseline
+    text: It plans a timing of your current code on real data, so a port has a number to beat.
+  - title: Design the boundary
+    text: It decides what crosses between JavaScript and Wasm, in big batches, and who owns the memory.
+  - title: Pick the toolchain
+    text: It picks by language and target, and counts the size and start-up cost of each.
+  - title: Plan size and loading
+    text: It plans a size budget, smaller builds and loading while the file downloads.
+  - title: Plan the sandbox and fallback
+    text: On servers it plans the least access a module needs. In browsers it plans a fallback for missing features.
+output_shape: |-
+  WEBASSEMBLY PLAN: <project or task name>
+
+  FIT VERDICT
+    <go, no-go or maybe> | <reasons> | <what would change the answer>
+
+  BASELINE TO MEASURE
+    <what to time> | <on what data> | <current value or NOT MEASURED>
+
+  BOUNDARY DESIGN
+    <what crosses> | <batch shape> | <who owns the memory> | <cost note>
+
+  TOOLCHAIN
+    <language and target> | <tool> | <size and start-up cost>
+
+  SIZE AND LOADING
+    <step> | <expected effect> | <how to check>
+
+  SANDBOX AND FALLBACK
+    <access given or feature checked> | <fallback or limit>
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - The task or code you want to speed up or isolate
+    - The language and where it runs
+    - Your current timing on real data (optional)
+    - The browsers or runtimes you must support (optional)
+  prerequisites:
+    - A way to time your current code, so you can paste real numbers back
+  output:
+    - name: Fit verdict
+      contains: Go, no-go or maybe for Wasm, with the reasons and what would change the answer.
+    - name: Baseline to measure
+      contains: What to time, on what data, and the current value or NOT MEASURED.
+    - name: Boundary design
+      contains: What crosses between JavaScript and Wasm, in what batches, and who owns the memory.
+    - name: Toolchain
+      contains: The language and tool choice, with its file size and start-up cost.
+    - name: Size and loading
+      contains: The steps to shrink the file and load it while it downloads.
+    - name: Sandbox and fallback
+      contains: The least access a server module needs, and fallbacks for missing browser features.
+    - name: Assumptions and open questions
+      contains: What the agent had to guess and what you still need to confirm.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Where it runs
+    how: Say browser, server or both. The sandbox and size advice differs for each.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: WebAssembly (Wasm)
+    meaning: A compact code format that browsers and servers can run at close to native speed.
+  - term: Boundary
+    meaning: The point where JavaScript and Wasm pass data to each other. Each crossing has a cost.
+  - term: Linear memory
+    meaning: The block of memory a Wasm module owns. It can grow but does not shrink.
+  - term: WASI
+    meaning: A standard for Wasm running outside the browser, with permissions given one at a time.
+  - term: Sandbox
+    meaning: A closed space where code can only use the access you give it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat can write the plan and outlines. Run your own timing and builds, because the agent cannot.
+  inputs:
+    - A sample of real data that the slow code handles, so the baseline is honest.
+    - The slowest device you must support, for timing and file size limits.

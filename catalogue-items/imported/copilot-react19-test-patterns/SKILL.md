@@ -79,7 +79,7 @@ fireEvent.keyDown(element, { key: 'Enter', keyCode: 13 });
 
 ## 4. StrictMode Call Count Fixes
 
-React 19 StrictMode no longer double-invokes `useEffect` in development. Spy assertions counting effect calls must be updated.
+React 19 StrictMode still double-invokes effects in development, so effect spy counts usually do not drop from 2 to 1 just because of the upgrade. Do not lower a count on that assumption. Some counts can still change, so update an assertion only from the real number in your failing test output. Check the React 19 upgrade notes if you are unsure what StrictMode now does.
 
 **Strategy  always measure, never guess:**
 ```bash
@@ -88,14 +88,61 @@ npm test -- --watchAll=false --testPathPattern="[filename]" --forceExit 2>&1 | g
 ```
 
 ```jsx
-// Before (React 18 StrictMode  effects ran twice):
-expect(mockFn).toHaveBeenCalledTimes(2);  // 1 call × 2 (strict double-invoke)
+// Pattern only. Use the numbers from your own failing test output, never these placeholders:
+// Before:
+expect(mockFn).toHaveBeenCalledTimes(<old count>);
 
-// After (React 19 StrictMode  effects run once):
-expect(mockFn).toHaveBeenCalledTimes(1);
+// After (the "Received" number printed by the failing test):
+expect(mockFn).toHaveBeenCalledTimes(<measured count>);
 ```
+
+If a count did not change, leave it. If you cannot explain why a count changed, mark that test "CHECK" in your report instead of editing the number to make it pass.
+
+---
+
+## 5. Async act Wrapping
+
+If React still warns "not wrapped in act" after steps 1 to 4, wrap the update that triggers it:
 
 ```jsx
-// Render-phase calls (component body)  still double-invoked in React 19 StrictMode:
-expect(renderSpy).toHaveBeenCalledTimes(2);  // stays at 2 for render body calls
+import { act } from 'react';
+
+await act(async () => {
+  // the click, timer or promise that updates state
+});
 ```
+
+Prefer Testing Library's `findBy` queries or `waitFor` when you are waiting for something to appear on screen. Use `act` only for updates your test starts itself.
+
+---
+
+## 6. Custom Render Helper
+
+If your project has one shared render helper (for example `customRender` or `renderWithProviders`), check it once:
+
+- It imports `act`, `render` and `fireEvent` from the right places (see steps 1 to 3).
+- It does not use `renderIntoDocument` or any other `react-dom/test-utils` call.
+
+Fix the helper once. Do not change it test by test.
+
+
+## Inputs, guard rails and what to return
+
+Added by AI Blocks. The method above is unchanged.
+
+**You need:** at least one failing test file. The error output helps most.
+
+**If something is missing:**
+- No test code pasted: ask once for the file and its error output. Do not write test code from memory.
+- No error output: apply steps 1 to 3 from the code alone. For step 4, ask the user to run the test and paste the real count. Never choose a number yourself.
+- Testing Library version unknown: tell the user to check that their version supports React 19. Do not state a version number.
+- A count changed and you cannot explain why: mark that test "CHECK". Do not change the number just to make it pass.
+- If there is nothing from `react-dom/test-utils` and no failing counts, say so and stop.
+
+**Return in this order:**
+1. **Changes by step**: step number, file, before and after code.
+2. **Call counts**: test name, old count, measured count.
+3. **Flagged**: tests marked CHECK, with the reason.
+4. **Render helper**: what changed, or "no change needed".
+
+You cannot run the tests from a chat window. Tell the user to run the full suite on their own machine.

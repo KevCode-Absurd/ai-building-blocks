@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It runs several review rounds with set roles.
 new_slug: design-review-panel
 name: Design review panel
-summary: Give it a design or plan. Get it tested by reviewers in turn for hidden
-  assumptions and ways it could fail.
+summary: Run a design review before you build. Give it your plan and get hidden assumptions, likely failures and a revised design, tested by reviewers in turn.
 job: think-and-decide
 headline: Design review panel
-subhead: A design that has survived a proper review before anyone builds it.
-  Hand over a plan and it is tested by reviewers in turn, each with a fixed job,
-  so hidden assumptions and likely failures come out early.
+subhead: A design that has survived a proper review before anyone builds it. Hand over a plan and it is tested by reviewers in turn, each with a fixed job, so hidden assumptions and likely failures come out early.
 explain: |
   A design that has survived a proper review before anyone builds it. Hand over a plan and it is tested by reviewers in turn, each with a fixed job, so hidden assumptions and likely failures come out early.
 
@@ -18,6 +15,10 @@ when:
   - A single idea is stuck and you need structured pushback.
   - You want a record of which risks were raised and how they were handled.
   - Your team tends to agree too fast and miss problems.
+not_for:
+  - "You are making a small change that is easy to undo: ask your AI for one quick review pass instead."
+  - "You want new ideas or options, not a stress test: brainstorm with your AI first, then bring the plan back here."
+  - "You need legal, safety or security sign-off: ask a qualified person, because this review does not replace expert checks."
 you_give:
   - Design or plan to review
   - Goals and constraints
@@ -29,7 +30,32 @@ you_get:
   - Decision log
   - Revised design
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Paste your plan. Add your goals and limits, and any reviewer roles you want.
+  - Answer the first questions until your AI confirms the Understanding Lock, the short summary of what you are building.
+  - "Let each reviewer go in turn: skeptic, constraint checker, then user advocate. Read each objection and the designer's reply."
+  - Check the Decision Log and the final verdict. If it says REVISE, fix the open objections and run it again.
+  - Build only after the verdict is APPROVED. Keep the Decision Log with your project.
+output_sample:
+  input:
+    - Your design or plan, in a few paragraphs
+    - Your goals and limits, such as speed, cost and safety
+    - The reviewer roles you want (optional)
+  prerequisites:
+    - An AI chat that can hold a long back-and-forth
+    - The standard brainstorming skill, or your AI can ask the first questions itself
+  output:
+    - name: Understanding Lock
+      contains: A short confirmed summary of what you are building, for whom and under which limits, before any review starts.
+    - name: Initial design
+      contains: The first version of the plan, written by the lead designer.
+    - name: Skeptic review
+      contains: Weak spots, edge cases and overconfident claims, with no new features or redesign.
+    - name: Constraint Guardian review
+      contains: Problems with performance, scale, reliability, security, privacy, upkeep and running cost.
+    - name: User Advocate review
+      contains: Confusing flows, poor defaults and gaps between what users want and what they get.
+    - name: Decision Log
+      contains: Each decision, the options considered, the objections raised, and how each was resolved and why.
+    - name: Final verdict
+      contains: The arbiter's ruling on each objection and a result of APPROVED, REVISE or REJECT with a short reason.

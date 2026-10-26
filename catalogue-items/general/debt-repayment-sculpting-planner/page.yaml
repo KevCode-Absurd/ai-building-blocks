@@ -1,55 +1,84 @@
 new_slug: debt-repayment-sculpting-planner
 name: Debt repayment sculpting planner
 headline: Debt repayment sculpting planner
-summary: A three-period sculpted debt schedule and residual balance
+summary: Plan a three-year debt repayment sized to your cash flow and target cover. Get interest, principal and the balance left at the end.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A three-period sculpted debt schedule and residual balance. Share opening loan, three annual CFADS amounts, fixed annual loan rate, target service cover and permitted principal rules.
+subhead: Give it the opening loan, three years of cash flow available for debt service, the loan rate and the cover ratio your lender wants. It sets each year's repayment so that cash flow covers debt service by that ratio. You get interest, principal and closing balance for each year, and any balance left at the end.
 explain: |-
-  A three-period sculpted debt schedule and residual balance.
+  A sculpted loan is repaid in uneven amounts. Each year's payment is sized to the cash the project makes that year, not split into equal parts. Lenders like it because the cash cushion stays the same every year. This debt repayment sculpting planner builds that three-year schedule.
 
-  Project debt service. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+  For each year, it divides the cash flow by the target cover. The answer is the most debt service that year can carry. Interest on the opening balance comes off first. What remains goes to principal, and principal can never be more than the debt still owed. The closing balance becomes the next year's opening balance.
+
+  The hard cases are shown, not hidden. If a year's capacity cannot even cover interest, the skill shows the shortfall in a separate line and does not add it to the loan. If debt remains after year three, that balance is shown as a final payment due. It is a planning schedule, not a financing offer or a covenant test.
 when:
-  - You need a three-period sculpted debt schedule and residual balance.
-  - You work on project debt service and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender wants the cash cover to stay at 1.2 times every year and you need the repayment amounts.
+  - Your project cash flow rises over three years and equal repayments would leave the early years thin.
+  - A new cash forecast arrives and you want to see how it changes the schedule.
+  - You are comparing a sculpted schedule with a level one before talking to a lender.
 you_give:
-  - Opening loan, three annual CFADS amounts, fixed annual loan rate, target service cover and permitted principal rules.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The opening loan balance (from the loan agreement or term sheet)
+  - Cash flow available for debt service for each of three years (from your project forecast)
+  - The fixed yearly interest rate (from the loan agreement)
+  - The target cover ratio, such as 1.2 times (from the loan agreement)
+  - Any rule that limits principal, such as a minimum or maximum repayment (from the loan agreement)
+  - The currency, units and start date
+  - Your own loan spreadsheet (optional)
 you_get:
-  - A three-period sculpted debt schedule and residual balance.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The most debt service each year can carry at your target cover
+  - Interest, principal and closing balance for each of the three years
+  - Any balance left after year three, shown as a final payment due
+  - A shortfall line for any year where cash flow cannot cover interest
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the opening loan, the three yearly cash flow figures, the interest rate and the target cover. Say where each came from, and give the currency and units. Write the rate as a number, such as 10%.
+  - Say if the loan has any rule on minimum or maximum principal. If you do not know, the result says so and applies none.
+  - "Check one line yourself: most debt service in a year is cash flow divided by target cover. For 132 at 1.2 that is 110."
+  - Read the shortfall lines, the balance left at the end, MISSING and CHECKS MISSED before you share anything. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
-    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
-  - title: 2. Translate each period CFADS into target debt-service capacity using the supplied contractual coverage assumption
-    text: Translate each period CFADS into target debt-service capacity using the supplied contractual coverage assumption.
-  - title: 3. Accrue interest on opening debt, allocate remaining service capacity to principal capped at outstanding debt and roll closing debt forward
-    text: Accrue interest on opening debt, allocate remaining service capacity to principal capped at outstanding debt and roll closing debt forward.
-  - title: 4. Expose any period where target capacity cannot cover interest and any residual maturity balance; do not capitalize shortfalls silently
-    text: Expose any period where target capacity cannot cover interest and any residual maturity balance; do not capitalize shortfalls silently.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. Loan terms and forecast figures are kept apart.
+  - title: Sets each year's limit
+    text: Divides that year's cash flow by the target cover. This is the most debt service the year can carry.
+  - title: Charges interest
+    text: Multiplies the opening balance by the yearly rate. Year two and three start from the year before's closing balance.
+  - title: Sets the principal
+    text: Takes the limit less interest, never below zero and never more than the debt still owed.
+  - title: Rolls the balance
+    text: Closing balance is opening balance less principal. It becomes the next year's opening balance.
+  - title: Shows the gaps
+    text: Any year where the limit is below interest gets its own shortfall line. Any balance left after year three is shown. Nothing is added to the loan silently.
 output_shape: |-
-  A three-period sculpted debt schedule and residual balance.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Total interest <amount> | Total principal <amount> | Total debt service <amount> | Balance left after year 3 <amount>
+
+  SCOPE AND SOURCES
+  <currency, units; source and date for each input; the loan clauses on rate, cover and principal>
+
+  INPUTS AND ASSUMPTIONS
+  <opening loan, yearly cash flow, rate, target cover, principal rules>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <one row per year: debt service limit, interest, principal, closing balance, shortfall; opening debt less total principal ties to the final balance>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Actual records, contractual terms and scenarios remain distinguishable.
+  - what: Cover ratio
+    how: Use the cover your lender sets in the agreement. Ask for a second run at a different ratio to see how the schedule moves.
+  - what: Cash flow definition
+    how: Say how the loan defines cash flow available for debt service, so the forecast you paste matches the contract.
+  - what: Timing
+    how: This version assumes one payment at the end of each year. Say so if your loan pays more often, and treat the result as rough.
 judge:
   - Actual records, contractual terms and scenarios remain distinguishable.
   - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
@@ -64,15 +93,57 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the loan agreement with the rate, the cover ratio and any principal rules
+    - Your dated project cash flow forecast for three years
+    - The lender's term sheet
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Sculpted repayment
+    meaning: A repayment plan where each year's payment is sized to that year's cash flow.
+  - term: Cash flow available for debt service
+    meaning: The cash left after running costs that can be used to pay interest and principal.
+  - term: Cover ratio
+    meaning: Cash flow divided by debt service. A ratio of 1.2 means 20% more cash than the payment.
+  - term: Principal
+    meaning: The part of a payment that reduces the loan itself, not the interest.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+not_for:
+  - You have fees, a grace period, a cash sweep or repayments that are not once a year. This version has none of those.
+  - You want to test whether a loan limit is met on actual results. Use the Debt service covenant headroom checker.
+  - You want the loan sized from cash flow over its whole life. Use the Loan life cash cover checker.
+  - You want to split one period's cash across senior and junior lenders. Use the Project payment waterfall builder.
+output_sample:
+  input:
+    - Your opening loan balance and the yearly interest rate
+    - Cash flow available for debt service for each of three years
+    - The target cover ratio from your loan terms
+    - Any rule on minimum or maximum principal (optional)
+  prerequisites:
+    - A dated cash flow forecast for the three years
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Total interest, total principal, total debt service and any balance left after year three.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, with the source and date of each input and the loan clauses behind them.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each figure you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: A row per year with limit, interest, principal, closing balance and any shortfall, tied back to the opening loan.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
+next:
+  - debt-service-covenant-headroom-checker
+  - loan-life-cash-cover-checker

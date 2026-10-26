@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It asks one question and adds your answer to the file.
 new_slug: strategy-doc-interviewer
 name: Strategy doc interviewer
-summary: Name the doc you want. Get it written from your own answers, one
-  question at a time.
+summary: Write your strategy doc in your own words. This strategy doc interviewer asks one question at a time and adds each answer to the file.
 job: think-and-decide
 headline: Strategy doc interviewer
-subhead: A strategy or planning document written in your own words, because you
-  answer and the AI only asks. You name the document, such as principles,
-  priorities, a vision or a ranked list.
+subhead: A strategy or planning document written in your own words, because you answer and the AI only asks. You name the document, such as principles, priorities, a vision or a ranked list.
 explain: |
   A strategy or planning document written in your own words, because you answer and the AI only asks. You name the document, such as principles, priorities, a vision or a ranked list. It makes a skeleton file and asks one question at a time.
 
   After each answer it patches your words into the right section, never rewriting the whole file, then asks the next question or a follow-up if the answer was thin. It will not suggest content for you. That keeps the document honest, because the thinking is yours. It is a good fit for quarterly reviews or notes you will return to for years. It is not for day planning or task lists.
 when:
-  - You need to write down your priorities but staring at a blank page stalls
-    you.
+  - You need to write down your priorities but staring at a blank page stalls you.
   - You want a quarterly review that reflects your real thinking.
   - You are defining your team's principles and want them in your voice.
   - You have tried AI drafts and found they sound like someone else.
+not_for:
+  - "You want a plan for today: use a day planner or a simple to-do list instead."
+  - "You want the AI to draft the document for you: ask your AI to write a first draft, then edit it yourself."
+  - "You need to sort a pile of tasks: use a task list tool or ask your AI to sort them by hand."
 you_give:
   - The name or topic of the document
   - Answers to questions, one at a time
@@ -29,8 +29,27 @@ you_get:
   - Your answers placed in the right sections
   - A finished document in your words
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can save and edit files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. A tool that can save and edit files works best.
+  - Tell it which document you want, such as principles, priorities, a vision or a ranked list.
+  - Answer each question in your own words. It asks only one at a time.
+  - After each answer, check that the file now holds what you said. Ask for a fix if it does not.
+  - If you list items, say which one is first. The AI will not guess the order.
+  - When the file is full, read it once through and fix any line that does not sound like you.
+output_sample:
+  input:
+    - The name or topic of the document, such as principles or priorities
+    - Your answers, one question at a time
+    - A skeleton file you already started (optional)
+  prerequisites:
+    - An AI that can create and edit files works best. In a plain chat, ask it to show the updated file after each answer.
+  output:
+    - name: Skeleton file
+      contains: A new document with a header, empty sections and placeholders marked to be filled in.
+    - name: One question at a time
+      contains: A single, specific question after each answer, or a follow-up if your answer was thin.
+    - name: Patched sections
+      contains: Your answer placed in the right section in your own words, with earlier content left alone.
+    - name: Ranked list entries
+      contains: For ranked lists, one rank added at a time, only after you confirm the order.
+    - name: Finished document
+      contains: A complete strategy document made only from your answers, with nothing added by the AI.

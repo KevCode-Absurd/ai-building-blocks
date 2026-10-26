@@ -1,6 +1,6 @@
 new_slug: discount-and-price-change-checker
 name: Discount and price change checker
-summary: Give it a planned sale or price change. Get the deepest discount your margin allows and the wording to use.
+summary: Check a planned sale or price change against your real margin. Get the deepest discount that keeps your floor, plus the wording to use.
 job: set-prices
 thinking: high
 thinking_why: It loops on discount depth with margin sums, picks a path by job and prepares live price changes. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You plan a sale, a discount code or a clearance and want to know it still pays.
   - You want to raise prices and need a test you can undo.
   - You think old strikethrough prices are sitting on your product pages.
+not_for:
+  - "You sell one product on a one-off whim: work out the margin by hand in a spreadsheet instead."
+  - "Your prices are fixed by a supplier or a retailer: there is no price for this agent to test, so skip it."
+  - "You need tax or legal advice on sale claims: ask an accountant or a lawyer who knows your country's rules."
 you_give:
   - Your plan, with the products, the change, how long it runs and why
   - Selling price, unit cost, freight, shipping out, fees and your 90-day refund rate, the first time
@@ -30,6 +34,32 @@ how_to_use:
   - Read the margin table and the depth that holds. Change the plan if you want a deeper cut and accept the lower margin yourself.
   - Approve the price list in clear words if you want it to make the change. Otherwise, change prices yourself.
   - After the sale, tell it the result so the log can use it next time.
+output_sample:
+  input:
+    - "Your plan: the products, the change, how long it runs and why"
+    - Selling price, unit cost, freight, shipping out, fees and your 90-day refund rate
+    - Your margin floor for sale prices
+    - Stock levels and past sale results (optional)
+  prerequisites:
+    - An AI chat where you can paste your costs. Claude Code helps if you want the pricing folder saved and the monthly clean-up run on a schedule.
+    - A store export or connection only if you want it to make a change you approve
+  output:
+    - name: Job and verdict
+      contains: Says if this is a sale, clearance, price rise or clean-up, and whether to go, fix or stop.
+    - name: Margin
+      contains: Gross margin and break-even ROAS for each product at the current price and the planned price, against your floor.
+    - name: Depth that holds
+      contains: The first tested discount that keeps your floor and how many rounds it took, or a plain no.
+    - name: Stock and timing
+      contains: Extra stock to have ready, or clearance stages, with start and end dates.
+    - name: Wording
+      contains: The offer form, the sale price display and the banner text.
+    - name: Price list to approve
+      contains: Each product with its old price and new price, shown as a preview.
+    - name: Tell me later
+      contains: What to report after the sale, such as units, margin and ad spend.
+    - name: Files and missing
+      contains: Each step's saved file and one list of every MISSING line.
 how_it_works:
   - title: Name the job
     text: Decides if this is a sale, a clearance, a price rise or the monthly clean-up of old strikethrough prices.

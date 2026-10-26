@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Finding the real driver means testing several causes against the data.
 new_slug: metric-drop-investigator
 name: Metric drop investigator
-summary: Tell it which number moved. Get the change confirmed, split by group,
-  the main driver ranked and next steps.
+summary: Find out why a number dropped or spiked. Give it your metric history and splits. You get the real driver, ranked, with next steps.
 job: track-numbers
 headline: Metric drop investigator
-subhead: An answer to why a number dropped or spiked, with evidence you can
-  show. Tell it which metric moved and it works out if the change is real, when
-  it began and which part of the business caused it.
+subhead: An answer to why a number dropped or spiked, with evidence you can show. Tell it which metric moved and it works out if the change is real, when it began and which part of the business caused it.
 explain: |
   An answer to why a number dropped or spiked, with evidence you can show. Tell it which metric moved and it works out if the change is real, when it began and which part of the business caused it.
 
@@ -18,6 +15,10 @@ when:
   - Sign-ups spiked and you are not sure it is real.
   - You need a post-mortem after an outage hit your numbers.
   - A trend changed weeks ago and nobody knows why.
+not_for:
+  - "You only need a quick before and after check with no split data: compare the two periods on your dashboard or in a spreadsheet."
+  - "You have under 30 days of history for the metric: collect more data first, or ask a colleague who knows the business."
+  - "You want to forecast next month's number: use a simple trend line in your spreadsheet instead."
 you_give:
   - The metric and 30 or more days of history
   - Data split by region, platform, channel or segment
@@ -30,8 +31,28 @@ you_get:
   - Accepted and rejected theories
   - A root cause report with next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run code and read files. Paste in or upload the skill.
+  - Upload your data as a spreadsheet or CSV. It needs a date column, a metric column and one column for each split, such as region or channel.
+  - Tell your AI which metric moved and the date you noticed it. Add your release or outage log if you have one.
+  - Check the first result. If the change is within normal range, the skill stops and says so.
+  - Read the ranked drivers and the accepted and rejected theories. Check them against what you know.
+  - Use the report's next steps. Share it with the people asking why.
+output_sample:
+  input:
+    - Your metric name and its daily or weekly history, at least 30 days before the change
+    - Your data split by region, platform, channel, product or segment
+    - The date you first noticed the change
+    - A log of releases, campaigns or outages (optional)
+    - What decisions depend on this number (optional)
+  prerequisites:
+    - An AI that can run code, so the script can do the maths
+    - Your data as a spreadsheet or CSV with a date column and one column for each split
+  output:
+    - name: scripts/drilldown_analyzer.py
+      contains: A script that checks the change is real, splits it by group and ranks what drove it.
+    - name: references/rca_framework.md
+      contains: The five-step method for finding a root cause, with rules for when to accept or reject a finding.
+    - name: references/hypothesis_testing_guide.md
+      contains: A checklist of common causes, such as lower volume, mix shift or bad data, and how to test each.
+    - name: assets/rca_report_template.md
+      contains: "The report: what changed, when, the main driver, evidence, timeline and next steps."

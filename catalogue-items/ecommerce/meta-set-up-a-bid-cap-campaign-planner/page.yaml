@@ -1,37 +1,115 @@
 new_slug: meta-set-up-a-bid-cap-campaign-planner
 name: Meta bid cap launch planner
-summary: Plan a Meta bid-cap campaign. Set the bid limit, budget, business goals and checks for delivery.
+summary: "Plan a Meta bid cap campaign before you spend. Get a settings table, launch checks and stop rules, built from your own results."
 job: launch-and-scale-ads
 headline: Meta bid cap launch planner
-subhead: Plan a Meta bid-cap campaign. Set the bid limit, budget, business goals and checks for delivery.
+subhead: "Give it your last 30 to 60 days of Meta results, your target cost per purchase and your budget. It plans a Meta bid cap campaign: one ad set, a bid amount, the ads to use and a reason for each setting. You also get launch checks and stop rules."
 explain: |-
-  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+  A bid cap tells Meta the most it may bid in an ad auction. Many owners read it as a limit on what each sale costs. It is not. Your real cost per purchase can still land above your target, and a low cap can make Meta spend little or nothing.
 
-  A bid cap is an auction constraint. Realized CPA, delivery and contribution can change; none is guaranteed by the cap.
+  This planner starts from your target and your budget, not from your past average cost. It checks that you have enough purchases to judge a bid, picks ads with proven results, and sets one clean ad set. If you test more than one bid, it limits the number to what your budget can feed.
+
+  Every setting comes with a reason and a point to review it. The plan ends with stop rules and a note on what to save so you can go back to your old settings.
 when:
-  - You need a campaign plan with proposed settings and review points.
+  - You have a target cost per purchase and want to try a bid cap campaign on Meta (Facebook and Instagram).
+  - Your Meta ads spend freely but your cost per purchase keeps rising, and you want a harder limit on bids.
+  - A teammate or agency says "put a bid cap on it" and you want the settings and risks written down first.
+  - You plan to test two or three bid amounts and need to know how many your budget can support.
+not_for:
+  - "You have only a few sales or unreliable purchase tracking: check your tracking with the Meta server tracking checker first, then come back."
+  - "Your bid caps already run and you want to raise, lower or scale them: use the Meta bid cap adjustment planner."
+  - "You want to test new ads before you choose a bid: use the Meta creative test campaign planner or the Meta test campaign planner."
+  - "You do not know your break-even cost per sale yet: the Meta scaling campaign planner works out your break-even ROAS."
 you_give:
-  - Campaign settings, dated results, target economics and budget limits
-  - The exact change you want and actions you authorize
+  - Your goal and the sale or event you track, such as purchases
+  - 30 to 60 days of results from Ads Manager, with dates, spend, purchases and cost per purchase by ad or ad set
+  - Your approved target cost per purchase and how you worked it out
+  - Your daily budget and the most the test may spend in total
+  - What you want done, and what the AI may and may not do
+  - Your current settings and ad post IDs (optional)
 you_get:
-  - A campaign plan with proposed settings and review points
-  - Missing inputs and a bounded verification plan
+  - A settings table with the value, the reason and a review trigger for each setting
+  - A verdict, either ready to plan or hold the bid cap, with the reason
+  - A checklist to run before launch
+  - Stop rules, a review date and a rollback note
+  - A list of anything missing or not checked
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Export 30 to 60 days of results from Meta Ads Manager. Include dates, spend, purchases and cost per purchase.
+  - Write down your target cost per purchase, your daily budget and your total test limit.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your results and numbers, then say what you want planned. Say "plan only, change nothing".
+  - Read the verdict first. If it says hold, collect what it lists before you set up anything.
+  - Run the launch checks yourself in Ads Manager before you publish. The AI does not change your account.
 how_it_works:
-  - title: Step 1
-    text: Confirm the selected account, objective, conversion event, supported bid strategies, approved budget and business target using the current interface. Explain that a bid cap constrains auction bidding, not the final realized CPA. If the account does not support the requested strategy, report the gap rather than substitute silently.
-  - title: Step 2
-    text: Read a representative historical window and evaluate purchase volume, tracking quality, CPA, contribution and conversion delay. Use the approved acquisition target as a constraint; historical average CPA alone is not a profitability target or a universally valid bid amount.
-  - title: Step 3
-    text: Choose creatives with relevant, sufficiently observed performance and approved claims. Where permitted and appropriate, record existing post IDs and verify the actual post, identity and destination. Do not install an unneeded extension or assume preserved social engagement guarantees stronger performance.
-  - title: Step 4
-    text: Draft the campaign and one checked ad set with deliberate objective, location, audience, event, budget and bid settings. Special ad categories must reflect the actual subject; never copy a default of none without checking. The exact structure follows current account capabilities and the test question.
-  - title: Step 5
-    text: Add the chosen creatives and names, then propose only the number of bid variants the spend cap and experiment design can support. Keep control variables stable and note that overlapping ad sets can compete or confound a comparison. Verify every budget, bid, post, URL and placement preview.
-  - title: Step 6
-    text: Leave the setup in draft for any outstanding review. Publish only within existing authorization, confirm the actual submitted status, and monitor spend, realized CPA, conversion volume and contribution. Predefine pause or rollback limits; no cap setting promises a CPA ceiling or profitable delivery.
+  - title: Checks the basics
+    text: "Confirms your goal, sale event, budget and target. Notes that a bid cap limits the auction bid, not your final cost per purchase."
+  - title: Reads your history
+    text: "Looks at purchase count, tracking and cost per purchase over the window, plus how long purchases take to show up. With too few purchases it stops and says to hold."
+  - title: Picks the ads
+    text: "Chooses ads with enough results and approved claims, and lists the post IDs and where each one sends people."
+  - title: Drafts one ad set
+    text: "Proposes location, audience, event, budget, bid amount and special ad category, with a reason for each."
+  - title: Limits the bid variants
+    text: "Suggests only as many bid amounts as your test budget can feed, and flags ad sets that compete for the same people."
+  - title: Sets checks and stop rules
+    text: "Lists what to verify before launch, when to review and what spend or cost means pause, and what to save for a rollback."
+output_shape: |-
+  BID CAP LAUNCH PLAN: <account or product> | <date range> | <currency>
+  VERDICT: <Ready to plan | Hold the bid cap, with the reason>
+
+  PROPOSED SETTINGS
+  | Setting | Value | Reason | Review trigger |
+
+  CHECKS BEFORE LAUNCH
+  1. <check, and where to look>
+
+  STOP RULES
+  - Review on <date> after <days to wait for late purchases>
+  - Pause if <spend or cost level>
+
+  ROLLBACK: <settings and files to keep>
+  MISSING: <input, or none>
+  ASSUMPTIONS: <each one, or none>
+  NOT RUN: <check and why, or none>
+output_sample:
+  input:
+    - Your last 30 to 60 days of Meta results, with dates, spend, purchases and cost per purchase
+    - Your approved target cost per purchase and daily budget
+    - Your total test limit and what the AI may do
+    - Your current settings and post IDs (optional)
+  prerequisites:
+    - Purchase tracking you trust, such as the Meta pixel or server tracking
+    - A target cost per purchase that you or your team already approved
+  output:
+    - name: Verdict
+      contains: Ready to plan, or hold the bid cap with the reason, such as too few purchases.
+    - name: Proposed settings
+      contains: A table of objective, location, audience, budget, bid amount and ads chosen, each with a reason and a review trigger.
+    - name: Checks before launch
+      contains: What to verify in Ads Manager, such as budget, bid, post IDs, links and previews.
+    - name: Stop rules
+      contains: A review date, a wait for late purchases, and the spend or cost level that means pause.
+    - name: Rollback note
+      contains: The old settings and files to keep so you can undo the change.
+    - name: Missing and not run
+      contains: Any input you did not give and any check that could not be done.
+tweaks:
+  - what: Your target cost per purchase
+    how: Work it out from your margin before you start. A target taken from past average cost gives a weak bid.
+  - what: Length of your results window
+    how: Give 30 to 60 days. A short window with few purchases will make the plan say hold.
+  - what: Your test budget
+    how: A small budget supports one bid amount, not three. The plan trims the variants to fit.
+  - what: What the AI may do
+    how: Say "plan only". The plan then never reads as if a setting is already live.
+terms:
+  - term: Bid cap
+    meaning: The most Meta may bid for one auction. It does not fix what you pay per sale.
+  - term: Cost per purchase
+    meaning: What you spend on ads divided by the number of purchases they brought.
+  - term: Ad set
+    meaning: The group inside a campaign that holds the audience, budget, bid and ads.
+  - term: Post ID
+    meaning: The number that names an existing Facebook or Instagram post, so an ad can reuse it.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

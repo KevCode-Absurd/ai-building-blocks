@@ -1,7 +1,7 @@
 new_slug: gross-to-net-revenue-bridge
 name: Gross-to-net revenue bridge
 headline: Gross-to-net revenue bridge
-summary: Reconcile gross billings to reported revenue using evidenced deductions and presentation policies.
+summary: Build a gross-to-net revenue bridge. Give it billings, returns and rebates. You get a check against your reported net revenue, with gaps flagged.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a billings-to-revenue bridge with deduction and presentation checks.
   - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - Your returns and rebates are already taken out of the gross figure. Fix the input first, or the bridge counts them twice.
+  - You need to decide if you are principal or agent. Ask your accountant or auditor to review the contract and revenue policy.
+  - You need a legal or investment opinion. Use a qualified adviser, because this only checks the arithmetic and your sources.
 you_give:
   - Gross billings, returns, rebates, excluded collected taxes, pass-through amounts and principal-versus-agent policy evidence.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -23,10 +27,34 @@ you_get:
   - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
   - Reconciliation results, unresolved inputs and actual checks completed.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open your AI tool and add the skill file. Use one that can make spreadsheet files if you want a workbook.
+  - Add your gross billings, returns, rebates, collected taxes, pass-through amounts and your reported net revenue. Include the date, currency and scale.
+  - Add your contract or revenue policy notes, so your AI can tell which deductions are valid.
+  - Ask your AI to build the bridge. If you have Node.js 20 or later, it can also run node scripts/run-model.mjs references/model.json inputs.json, where inputs.json holds your numbers.
+  - Read the gap between the bridge and your reported figure. Check every item in MISSING and CHECKS MISSED before you rely on it.
+output_sample:
+  input:
+    - Your gross billings for the period
+    - Returns, rebates, taxes collected for others and pass-through amounts
+    - Your contract or revenue policy notes on principal versus agent
+    - Your reported net revenue, with date, currency and scale
+    - Your spreadsheet tool (optional)
+  prerequisites:
+    - An AI that can create and reopen spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, scale and the dated sources each figure came from.
+    - name: Inputs and assumptions
+      contains: Each gross figure and deduction with its sign, source and any assumption made.
+    - name: Model calculations and reconciliations
+      contains: Each deduction taken once from gross billings, the net result, and the gap to reported revenue.
+    - name: Editable workbook
+      contains: A spreadsheet of the bridge with inputs, formulas and checks, if you ask for one.
+    - name: Actual file verification
+      contains: What was recalculated, rendered and reopened in the saved file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Read contract and revenue policies to identify which deductions are valid; do not infer principal-versus-agent status from a numeric margin
     text: Read contract and revenue policies to identify which deductions are valid; do not infer principal-versus-agent status from a numeric margin.

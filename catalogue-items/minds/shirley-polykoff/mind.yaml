@@ -16,6 +16,30 @@ use_cases:
   - "Keep a long campaign fresh with new lines on one big idea"
   - "Write warm, upbeat body copy that sounds like a friend talking"
   - "Use a trusted expert (the hairdresser, the mechanic) as quiet proof"
+not_for:
+  - "You need clinical, legal or price claims: ask a product-facts specialist or your own expert, because this mind writes tone and wording only."
+  - "You want proof from tests, coded replies and sales data: use the Claude Hopkins mind."
+  - "You want research-led brand building with product facts and a steady image: use the David Ogilvy mind."
+output_sample:
+  input:
+    - What your product is and who buys it
+    - What you think the buyer asks herself in private
+    - Your current line or headline, if you have one (optional)
+    - What worries the buyer, such as cost, effort or time
+    - Anyone the buyer already trusts on this topic (optional)
+  output:
+    - name: The private question
+      contains: The worry or wish your buyer keeps to herself, named in plain words.
+    - name: Headline options
+      contains: A handful of short lines you can say in one breath, with the question and the promise.
+    - name: Fears to answer
+      contains: The doubts about ease, comfort and time, each with a plain answer for the body copy.
+    - name: Trusted person
+      contains: Who the buyer already trusts, and how the copy can borrow that trust honestly.
+    - name: Reader test
+      contains: A short set of questions to ask real readers, with a result you commit to before you look.
+    - name: Idea to run for years
+      contains: One big theme that can carry new lines over a long campaign.
 seats:
   - {seat: "The line people repeat", asks: "Would someone say this line out loud to a friend, and would it mean something to them?"}
   - {seat: "The private question", asks: "What is the buyer secretly asking herself, and does our line answer it?"}

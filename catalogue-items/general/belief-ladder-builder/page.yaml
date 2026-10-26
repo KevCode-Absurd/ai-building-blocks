@@ -1,6 +1,6 @@
 new_slug: belief-ladder-builder
 name: "Belief ladder builder"
-summary: "Paste a draft with a big claim. Get the claims reordered into small accepted steps, each scored, and a redraft."
+summary: "Make a big claim believable. Paste your draft and get the claims reordered into small steps your reader accepts, each scored, plus a redraft."
 job: write-ad-copy
 thinking: high
 thinking_why: "It has to judge how readily a doubtful reader accepts each claim and rebuild the order. Use your strongest model."
@@ -17,6 +17,10 @@ when:
   - Readers drop out right where you make your biggest claim.
   - Your headline promise sounds too good to be true.
   - You sell something that asks the reader to change a belief, such as "I could never do this".
+not_for:
+  - Your big claim has no evidence behind it. Get the proof first, or use the Claim and proof matcher to find what backs it.
+  - Your claim is about health, money or medicine and is regulated. Have a qualified person review it before you publish.
+  - You want to fix typos or tone only. Edit the draft by hand or ask your AI for a plain line edit.
 
 you_give:
   - A draft with its big claim
@@ -33,6 +37,22 @@ how_to_use:
   - Paste your draft. Add customer words or a brief if you have them.
   - Read the scores. If you think a claim is easier or harder to believe, change the score and ask it to rebuild.
   - Read the redraft aloud. Every step should feel like a small nod.
+output_sample:
+  input:
+    - Your draft with its big claim
+    - What your reader believes about this kind of product (optional)
+    - Customer words about their doubts (optional)
+  output:
+    - name: Goal claim
+      contains: The one claim that ruins the copy if rejected, and the beliefs it runs against.
+    - name: Ladder
+      contains: Each step in order, the tool used, its score from 1 to 5, and the jump from the step before.
+    - name: Redraft
+      contains: Your copy in the new order, with only linking text added and marked.
+    - name: Missing
+      contains: Facts or beliefs a step would need, marked so you can fill them in.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: Finds the goal claim

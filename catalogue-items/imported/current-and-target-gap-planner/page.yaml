@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: current-and-target-gap-planner
 name: Current and target gap planner
-summary: Share your current results and target. Get evidence-backed gaps, priorities, owners, and checks for closing them.
+summary: Plan how to close the gap between where you are and your target. Get a gap analysis table with priorities, owners and closure checks.
 job: think-and-decide
 headline: Current and target gap planner
 subhead: Share the current state, the target you need to reach, and evidence for both. It compares like with like and separates gaps from guesses about causes. You get a clear gap table, priorities, owners, and a plan for proving each chosen gap is closed.
+not_for:
+  - "You need to find why something went wrong: ask the person who owns that area, or run a root-cause review first."
+  - "You need a legal opinion, audit sign-off or certification: ask a qualified lawyer or auditor, who works from the governing standard."
+  - "You only want a list of strengths and weaknesses: a simple SWOT list is faster and fits better."
 you_give:
   - The decision, scope, target and its source, current evidence, limits, and responsible owner.
 you_get:
@@ -24,5 +28,37 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text into a new chat. If your AI accepts files, upload the skill folder instead.
+  - Add the decision you need to make, your target and where it comes from, and your current results with units and time period.
+  - Add your limits and the person responsible for the result (optional).
+  - Ask your AI to run the gap analysis. If it says a result is missing, give it the number or ask it to mark the gap as unknown.
+  - Check that each gap has an owner and a closure test, then set a date to measure again.
+output_sample:
+  input:
+    - The decision you need to make and what is in scope
+    - Your target, and where it comes from (a rule, goal or stated wish)
+    - Your current results, with units and time period
+    - Limits such as budget, time or staff (optional)
+    - Who is responsible for the outcome
+  prerequisites:
+    - A chat AI that can read pasted text or uploaded files
+  output:
+    - name: Executive decision
+      contains: The decision in one short section, with the answer your evidence supports.
+    - name: Scope and method
+      contains: What is in and out of scope, and how current and target were compared.
+    - name: Target and criteria register
+      contains: Each target, the measure and unit used, and the source that justifies it.
+    - name: Current-state evidence
+      contains: The facts, reports and assumptions behind each current result, with missing or conflicting evidence marked.
+    - name: Gap register
+      contains: "One row per gap: current, target, difference, confidence, consequence, cause guess, owner and closure test."
+    - name: Prioritization logic
+      contains: Why some gaps come first, based on impact, cost, urgency, dependencies and confidence.
+    - name: Action roadmap
+      contains: Actions for the chosen gaps, with owners, dependencies and dates or review triggers.
+    - name: Assumptions and unknowns
+      contains: What is not yet known and the next step to find out.
+    - name: Follow-up measure
+      contains: When to recheck, and the new evidence needed to call a gap closed.

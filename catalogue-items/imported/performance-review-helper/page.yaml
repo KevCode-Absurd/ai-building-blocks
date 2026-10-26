@@ -2,34 +2,94 @@ thinking: medium
 thinking_why: Fair reviews need careful, specific wording.
 new_slug: performance-review-helper
 name: Performance review helper
-summary: Pick your review cycle. Get a self-review template, a manager review
-  draft and calibration prep with specific examples.
+summary: "Write a performance review fast: a self-assessment, a manager review or calibration prep, built on real examples instead of vague praise."
 job: hire-people
 headline: Performance review helper
-subhead: Pick your review cycle. Get a self-review template, a manager review
-  draft and calibration prep with specific examples. Bring the review period.
-  Use the result to plan your next step.
+subhead: "Pick one of three modes: self-assessment, manager review or calibration prep. Add your notes on the work done. You get a filled-in review document with a named example behind every point."
 explain: |
-  Review season without the blank page. Pick your mode and get a self-assessment, a manager review draft or a calibration prep document, each built around specific examples instead of vague praise.
+  Review season often starts with a blank page and a vague memory of the year. This performance review helper gives you a set layout for each kind of review, then fills it only with the facts you give it.
 
-  The self-assessment asks for three to five accomplishments, each with situation, what you did and the result, then goals met or missed with evidence, growth areas, challenges and next goals. The manager review gives structure to feedback on a named person. The calibration mode prepares the comparison across the team. If you do not name a mode, it asks which you need.
+  In self-assessment mode, you list three to five wins. Each one gets a situation, what you did and the result. In manager mode, you write a review for one named person, with strengths, development areas and goal results. In calibration mode, you prepare to compare ratings across your team in a meeting with other managers.
+
+  It does not make up examples. If a detail is missing, it marks the gap so you can fill it. If you do not name a mode, it asks which one you need.
 when:
-  - It is review time and you need to list your wins with proof.
-  - You are a manager who must write a review for one person.
-  - You are about to join a calibration meeting and need prep.
-  - You want feedback to be specific and fair rather than general.
+  - It is review time and you need to list your own wins with proof.
+  - You are a manager and must write a review for one direct report.
+  - You are about to sit in a calibration meeting and want your cases ready.
+  - You want your feedback to be specific and fair, not "great job".
+not_for:
+  - "You need to warn, discipline or dismiss someone: use your HR team and your company policy, not a review template."
+  - "You are building the whole review process, forms and rating scale: use the Review cycle form builder."
+  - "You need a plan for someone who is falling behind: use the Review cycle form builder, which covers improvement plans."
 you_give:
-  - "The review mode: self, manager or calibration"
-  - The review period
-  - Notes on accomplishments or goals
-  - The employee name, for manager reviews (optional)
+  - "The mode: self-assessment, manager review or calibration"
+  - The review period, such as Jan to Jun
+  - Your notes on accomplishments, goals and how each went
+  - The employee name and role, for a manager review (optional)
+  - Your company's rating targets, for calibration (optional)
 you_get:
-  - A self-review template filled with your examples
-  - A manager review draft
-  - A calibration prep document
-  - A next-period goals list
+  - A self-assessment with your wins, each backed by an example
+  - A manager review with strengths, growth areas and a development plan
+  - A calibration prep sheet with a rating table and discussion points
+  - A list of goals for the next period
+  - A short list of things to check before you use it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. Paste the skill text into the chat.
+  - Say which mode you want and the review period.
+  - Paste your notes in any order, such as project names, results, feedback you received and last period's goals.
+  - Read the result for any line marked MISSING and add the detail. Remove anything that is not true.
+  - For a manager review, check that each rating matches the examples. Share the main points with the person before the review meeting.
+  - For calibration, type in your own company's rating targets. The tool does not know them.
+output_sample:
+  input:
+    - "The mode: self-assessment, manager review or calibration"
+    - The review period
+    - Your notes on accomplishments, goals and results
+    - The employee name and role, for a manager review (optional)
+    - Your company's rating targets, for calibration (optional)
+  prerequisites:
+    - Last period's goals, if you have them
+  output:
+    - name: Key accomplishments
+      contains: Three to five wins, each with the situation, what you did and the result.
+    - name: Goals review
+      contains: Each goal from last period, marked met, exceeded or missed, with the proof.
+    - name: Manager review
+      contains: Overall rating, summary, strengths and development areas, each tied to a named example.
+    - name: Development plan
+      contains: Skills to build, the target level and the actions to get there.
+    - name: Calibration prep
+      contains: A team table with proposed ratings, rating counts and the cases that need discussion.
+    - name: Promotion and pay notes
+      contains: Candidates for promotion or pay changes, with evidence for each. These are suggestions, not decisions.
+how_it_works:
+  - title: Choose the mode
+    text: It asks which review you need if you did not say. Each mode has its own set layout.
+  - title: Collect your facts
+    text: It lists what that mode needs and asks for any missing items in one message.
+  - title: Fill the layout
+    text: It uses only your notes. Anything missing is marked, not guessed.
+  - title: Make it specific
+    text: It turns vague praise into what the person did and what changed.
+  - title: Give a check list
+    text: It ends with what to confirm before the review is used or shared.
+output_shape: |
+  Self-assessment: <period>
+  Key accomplishments: <situation>, <what you did>, <result>
+  Goals review: <goal> | <met, exceeded or missed> | <proof>
+  Growth areas, challenges, goals for next period
+  Manager review: <name>, <rating>, <strengths>, <development areas>, <plan>
+  Calibration: <team table>, <rating counts>, <discussion points>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a writing job. Claude, ChatGPT and Gemini all handle it well.
+  inputs:
+    - Your own project list or ticket export for the period
+    - Written feedback you received from peers or customers
+    - Your company's rating scale and level names
+terms:
+  - term: Calibration
+    meaning: A meeting where managers compare ratings across teams so the same standard is used for everyone.
+  - term: Self-assessment
+    meaning: A review of your own work, written by you.

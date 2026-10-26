@@ -8,6 +8,9 @@ job: ops
 level: beginner
 inputs:
   - {type: question, required: true}
+  - {type: plan, required: false}
+  - {type: audit_report, required: false}
+  - {type: lessons_register, required: false}
 outputs:
   - {type: lessons_register}
 origin: rebuilt

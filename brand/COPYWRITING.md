@@ -143,3 +143,13 @@ Everything a visitor reads stays at a grade 10 reading level or below. The `plai
 Kevin's latest review takes priority over the mechanical job-title formula above. Use the familiar name of the job: “Landing page audit”, “Ad hook writer”, “Brand profile builder”. A role suffix is optional when it makes the name harder to say. Avoid stacks of internal nouns such as “ad claim proof gap finder” and vague roles such as “keeper”. Keep the meaningful difference between similar jobs.
 
 A card description says what the person provides and what useful result they get. Keep specialist names when they identify the actual tool or method the reader needs. Never imply a draft was sent, a live account changed, or an outcome proved unless the skill actually does that. Approved display edits live in `catalogue-items/display-copy.yaml`; the build applies them across cards, pages, packs and search metadata while preserving licensed skill source files and stable URLs.
+
+## Catalogue clarity update (23 October 2026)
+
+Kevin's latest instructions take priority over the older word limits above. Apply them to skills, prompts, agents, routines, workflows, tools and minds.
+
+- Use a familiar, specific job name. Examples include Account balance change tracker, Team routines and ownership planner, Indian company profile writer, and Book value per share calculator. Keep the words that tell similar jobs apart. Keep people's names for minds and product names for named tools.
+- Aim for grade 8–9 reading. Grade 10 is acceptable when the wording reads naturally. Keep a needed coding, marketing or other task term when a simpler substitute would hide the job. Explain it briefly where that helps.
+- Card descriptions can use up to 25 words. Say what the reader brings and what useful result they get. Crisp and clear matters more than filling the word count.
+- Introductions can exceed 50 words when the detail helps explain the inputs, process, result or limits. Cut repetition and generic filler.
+- Keep licensed source instructions intact. A copy review is separate from a runtime test; award a Tested badge only under the existing evidence rules.

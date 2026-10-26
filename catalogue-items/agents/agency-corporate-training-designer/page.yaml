@@ -1,0 +1,147 @@
+name: Corporate Training Designer agent
+summary: Plan staff training from a real work problem. Get measurable goals, a module outline, practice exercises and a way to check behavior changed.
+headline: Corporate Training Designer agent
+subhead: Describe a work problem and the group that needs training. It checks that training is the right fix, then sets goals you can measure. You get a module outline, practice exercises to build and a plan to check that people work differently afterwards.
+job: teach-and-train
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A staff training plan (also called a training program design or learning plan) goes wrong when it starts from the course and not from the problem. Someone books a workshop, people enjoy it, and nothing changes at work. This agent starts with the problem. What do people do now? What should they do instead? Is the cause really a skill gap, or is it a broken process, a missing tool or a weak reason to change?
+
+  If training is the right fix, it writes goals as things you can see, such as "a new hire sends a client proposal alone within three months". It then plans modules that put practice first and lecture last. It lists the real cases, exercises and expert interviews you must collect to build the content. For each level of results it names a measure: how people rated it, what they learned, what they do at 30, 60 and 90 days, and what changed in the business.
+
+  The original role was written for large companies in China. Its methods work anywhere, but its examples name tools used there, such as DingTalk and WeCom. This agent keeps the method and asks which tools you use. It will not invent your results or success rates. It writes a plan. It does not build slides, set up a learning site or contact anyone.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A manager says "my team needs training" and you have to turn that into a real plan.
+  - New hires take too long to do the job alone and you want a program that shortens that.
+  - You are promoting people to team lead and need a way to build the skills they lack.
+  - You ran training before and cannot show that anything changed afterwards.
+not_for:
+  - You teach a school or college class. Use the Direct teaching lesson builder.
+  - You only need a first-90-days plan for new hires. Use the 30-60-90 day onboarding planner.
+  - You only need a one-page handout or guide for a session you already planned. Use the Training handout writer.
+  - The training is legally required or leads to a certificate. Ask a qualified trainer or your regulator to sign off the plan.
+you_give:
+  - The work problem in a few lines, and what you want people to do differently
+  - Who needs the training, how many people, and what they already know
+  - What you have tried already, and any numbers on how they perform now
+  - Limits on time, budget and tools, and where the training will run (in person, online or mixed)
+  - Experts inside the company who could share their know-how (optional)
+you_get:
+  - A check of whether training is the right fix, with other causes named
+  - Learning goals written as things you can observe
+  - A module outline with format and length for each part
+  - A build list of cases, exercises and expert interviews to collect
+  - A measure plan for reaction, learning, behavior and business results
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write the work problem in plain words. Add who needs the training, how many people and what they do now.
+  - Add your limits (time, budget, tools) and any numbers on current performance. If you have none, say so. No code running or web access is needed.
+  - Type "Plan this training. First tell me if training is the right fix. Mark anything I did not give you as MISSING."
+  - Read the first section before the rest. If it names a process or tool problem, fix that before you build any content.
+  - Take the build list to your experts, then ask the AI to turn each item into the content. Ask a trainer to check the plan before you launch.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the problem, the learners and the limits. Anything missing is asked once, then marked MISSING.
+  - title: Test the need
+    text: It checks whether the cause is a skill gap or something else, such as a process, tool or incentive. If it is not training, it says so.
+  - title: Write the goals
+    text: It turns the problem into goals you can see and measure, one per skill.
+  - title: Design the program
+    text: It picks a format, splits the content into modules and puts practice first, with breaks to keep attention.
+  - title: List what to build
+    text: It lists the real cases, exercises, expert interviews and tests to collect before any slide is made.
+  - title: Plan the measures
+    text: It sets what to measure at each level, and when to check behavior after the training ends.
+output_shape: |-
+  PROBLEM AND LEARNERS
+    Problem <what goes wrong> | Learners <who, how many> | Today <what they do now> | Wanted <what they should do>
+
+  IS TRAINING THE FIX?
+    <possible cause> | <training, process, tool or incentive> | <evidence or MISSING>
+
+  LEARNING GOALS
+    <goal as an observable action> | <how you will see it> | <by when>
+
+  PROGRAM OUTLINE
+    <module> | <goal it serves> | <format> | <length> | <practice activity>
+
+  BUILD LIST
+    <case, exercise or interview> | <who supplies it> | <used in module>
+
+  MEASURE PLAN
+    <level: reaction, learning, behavior, results> | <measure> | <when> | <who collects it>
+
+  FOLLOW-UP
+    <30, 60 or 90 days> | <check> | <owner>
+
+  ASSUMPTIONS AND CHECKS MISSED
+    <assumption> | <check that could not run>
+output_sample:
+  input:
+    - The work problem and what you want people to do differently
+    - Who needs the training and how many people
+    - Your limits on time, budget and tools
+    - Numbers on how people perform now (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Someone to carry out the plan, such as a trainer or a manager
+  output:
+    - name: Problem and learners
+      contains: The problem, who needs training, what they do now and what they should do.
+    - name: Is training the fix?
+      contains: Each possible cause marked training, process, tool or incentive, with the evidence.
+    - name: Learning goals
+      contains: Goals written as actions you can see, with how and when you will see them.
+    - name: Program outline
+      contains: Each module with its goal, format, length and practice activity.
+    - name: Build list
+      contains: The cases, exercises and expert interviews to collect, and who supplies each.
+    - name: Measure plan
+      contains: What to measure at each of four levels, when, and who collects it.
+    - name: Follow-up
+      contains: Checks at 30, 60 and 90 days, with an owner for each.
+    - name: Assumptions and checks missed
+      contains: What the AI assumed and what it could not check.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a job description, a past training outline or a performance report next to your description.
+  inputs:
+    - The job description or a list of the tasks the learners must do.
+    - Current performance numbers, such as time to first solo task or error counts.
+    - Feedback from the last training, if you ran one.
+terms:
+  - term: Learning goal
+    meaning: A sentence that says what a learner will be able to do, in words you can see or count.
+  - term: Needs analysis
+    meaning: The step where you find out what is going wrong and whether training can fix it.
+  - term: Four levels of results
+    meaning: A way to judge training in four steps. Did people like it, did they learn, did they change what they do, did the business improve? It is also called the Kirkpatrick model.
+  - term: Blended learning
+    meaning: A mix of online study and in-person practice.
+  - term: Train the trainer
+    meaning: A short program that teaches your own experts how to teach what they know.
+tweaks:
+  - what: Scope
+    how: Plan one skill for one group at a time, such as "run a one-to-one meeting for new team leads".
+  - what: Tools
+    how: Name your learning platform or say "none". The original names China-based tools, so state yours.
+  - what: Length
+    how: Give the hours people can spare. A two-hour limit gives a very different plan from a two-day one.
+improve:
+  - Keep the plan with the results you measure. Share them next time so the goals get sharper.
+  - Add your real job tasks and company cases to the pack, so each plan starts from them.
+  - Pair it with the Training handout writer once the outline is set, to make the learner handouts.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

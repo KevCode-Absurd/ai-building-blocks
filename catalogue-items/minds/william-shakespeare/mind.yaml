@@ -16,6 +16,27 @@ use_cases:
   - "Punch up a toast, a eulogy or a big moment so the key line lands"
   - "Read your dialogue aloud and fix the lines that don't sound spoken"
   - "Find the moment where the audience knows more than the characters, and use it"
+not_for:
+  - "You need plain, clear business writing or a recommendation in a tight structure: use the Barbara Minto, not a stage-style speech."
+  - "You want writing that avoids vague language and says things straight: use the George Orwell."
+  - "You want a quiet, compressed poem or a short poem with a gentle twist: use the Emily Dickinson or the Billy Collins."
+output_sample:
+  input:
+    - The speech, scene, story or poem you want help with, or just the idea
+    - Who the audience or characters are, and what each one wants
+    - What you want to happen at the end
+    - Your draft so far (optional)
+  output:
+    - name: People and wants outline
+      contains: A short list of each person, what they want, and who or what stands in their way.
+    - name: Developed scene, speech or poem
+      contains: One drafted piece with the turn marked, where the argument flips or the speaker decides.
+    - name: Read-aloud notes
+      contains: Lines to say out loud, where the stress falls, and which sentences to fix or cut.
+    - name: Poem turn note
+      contains: For a poem, one line saying where it turns. Included only if you ask for a poem.
+    - name: Reading flags
+      contains: Anything beyond the plays and sonnets is marked as our reading, not Shakespeare's own words.
 seats:
   - {seat: "Drama and language", asks: "Where is the conflict, and what does each person in this scene want?"}
   - {seat: "Speechwriter", asks: "How will this land when it's spoken aloud to a crowd that doesn't agree with you yet?"}

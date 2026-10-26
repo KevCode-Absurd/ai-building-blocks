@@ -1,46 +1,59 @@
 new_slug: check-a-safe-into-priced-financing
 name: Check a SAFE into priced financing
 headline: Check a SAFE into priced financing
-summary: Reconcile a cap-only SAFE stake, pre-round reserve change and eligible participation.
+summary: Check the stake a cap-only post-money SAFE gives before a priced round, the option pool top-up, and the pro rata cash your side letter allows.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Share executed cap-only post-money SAFE, full capitalization definitions, funded amounts, before-top-up denominator and reserve, pre-cash pool target, later round terms and actual participation side letter.
+subhead: Give it your signed SAFE, the share count before the round and the new round terms. Your AI shows the stake the SAFE holds, the added option pool on its own, and the cash you can invest to keep your share.
 explain: |-
-  A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation.
+  A post-money SAFE with a cap promises a share of the company, set by the cap and the cash put in. Then a priced round adds new shares, and often a bigger option pool. These effects get mixed up in cap tables, so the SAFE holder's real stake is hard to see. This workflow separates them, which helps when you check a SAFE conversion before a financing.
 
-  Venture financing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 checks that the cap applies and finds the stake before the priced round. Step 2 shows the option pool top-up on its own, using the share count from before the top-up. If the approved dilution already includes the pool, it does not count it twice. Step 3 uses your side letter to work out the pro rata cash, and ties it back to the full round.
+
+  It stops if the share count behind your pro rata right cannot be shown. It never treats practice figures as deal facts, and it does not read your legal documents for you.
 when:
-  - You need a sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A priced round is coming and you hold a post-money SAFE.
+  - A founder wants to see what SAFE holders will own before the round closes.
+  - Your lawyer's cap table and your own do not match.
+  - You hold a side letter with pro rata rights and need to know how much cash to bring.
+not_for:
+  - "Your instrument is a convertible note with interest, or has a discount: use the Check a convertible note conversion workflow."
+  - "Your SAFE is pre-money, or has no cap: this workflow covers cap-only post-money SAFEs. Ask your lawyer."
+  - "You hold pro rata rights in several companies: use the Check staged follow-on commitments workflow."
 you_give:
-  - Executed cap-only post-money SAFE, full capitalization definitions, funded amounts, before-top-up denominator and reserve, pre-cash pool target, later round terms and actual participation side letter.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed post-money SAFE, with its cap and its definition of company capitalization
+  - The cash you funded and the date (from your bank record or the SAFE)
+  - The share count before the round, and the option pool already reserved (from the cap table)
+  - The option pool size the new investors want before their cash goes in (from the term sheet)
+  - "The new round's terms: size, price or valuation, and who invests what"
+  - Your pro rata side letter
 you_get:
-  - A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Whether the cap applies, and the stake the SAFE gives before the priced round
+  - The option pool top-up shown as its own line, not mixed into the round dilution
+  - The pro rata cash you can invest, outside the round and as part of it
+  - A tie between your pro rata cash and the full round
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the SAFE, side letter, cap table and term sheet. Say the date of the round, the currency and whether figures are in thousands.
+  - Ask your AI to follow the pack and save each step's file.
+  - After step 1, check the cap, the cash funded and the share count against the SAFE.
+  - After step 2, check the option pool is counted once. After step 3, check your pro rata cash against the side letter before you send a commitment.
 how_it_works:
   - title: Post-money SAFE ownership checker
-    text: Verify the cap binds and establish the contractual pre-priced-round stake from actual funded cash and cap. Preserve the supplied financing dilution as a separately dated assumption.
+    text: Confirms the cap is the price that applies. Works out the stake from the funded cash and the cap. Keeps the round dilution as a separate, dated assumption. Hands step 2 the share count before the top-up.
   - title: Option pool top-up checker
-    text: Use the actual before-top-up share denominator and pre-cash reserve target. Show the incremental reserve separately; do not apply the factor again if it is already embedded in the approved financing dilution.
+    text: Uses the share count before the top-up and the pool target. Shows the extra reserve on its own. If the approved round dilution already includes it, the pool is not applied again. Hands step 3 the reserve treatment.
   - title: Pro rata allocation checker
-    text: Use the side-letter eligible stake after the applicable documented reserve treatment and an outside-only cash allocation. Reconcile it to the inclusive round; stop if the rights denominator cannot be evidenced.
+    text: Uses the stake your side letter makes eligible, after the pool treatment, and cash allocated outside the round. Ties it to the full round. Check before you rely on it, the side letter's share count can be shown from a document.
 output_shape: |-
-  A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <SAFE, side letter, cap table, round terms and dates>
+  SAFE STAKE              <cap | cash funded | stake before the round>
+  OPTION POOL TOP-UP      <shares before | target | extra reserve | counted once?>
+  PRO RATA                <eligible stake | cash outside the round | tie to the full round>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,13 +75,40 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A spreadsheet tool and an AI that reads files
+      why: Share counts and percentages must be recalculated, not estimated. The AI should reopen the saved workbook.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The lawyer's draft cap table for the round.
+    - The term sheet, so the pool target and round size are not guessed.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Post-money SAFE
+    meaning: An agreement where money now buys a set share of the company, counted after all SAFE money is included.
+  - term: Cap
+    meaning: The highest company value used to set the SAFE's share. It protects the SAFE holder if the company is later worth more.
+  - term: Option pool top-up
+    meaning: More shares set aside for future employees, added before a new round.
+  - term: Pro rata right
+    meaning: Your right to invest in a later round to keep your percentage.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A comparison that explains any difference between two sets of figures that should match.
+output_sample:
+  input:
+    - The signed SAFE and your pro rata side letter
+    - The cap table before the round and the term sheet
+    - The cash you funded and its date
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-1-post-money-safe-ownership-checker.md
+      contains: Whether the cap applies and the stake the SAFE holds before the priced round.
+    - name: outputs/step-2-option-pool-top-up-checker.md
+      contains: The extra option pool reserve, shown separately from the round dilution.
+    - name: outputs/step-3-pro-rata-allocation-checker.md
+      contains: Your eligible pro rata cash outside the round, tied to the full round.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines, checks missed and one suggested next step.
+next:
+  - check-staged-follow-on-commitments
+  - check-a-convertible-note-conversion
+  - review-a-down-round-rights-change
+before: []

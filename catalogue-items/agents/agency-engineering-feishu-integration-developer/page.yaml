@@ -1,0 +1,139 @@
+name: Feishu Integration Developer agent
+summary: Plan a Feishu (Lark) bot, approval flow or data sync. Get the app plan, permission list, event setup and a launch test list.
+headline: Feishu Integration Developer agent
+subhead: Describe the job you want done in Feishu or Lark, such as sending alerts, running approvals or syncing a table. It plans the app, lists the permissions to ask for and sets the build order. You get flows, security notes and a launch test list.
+job: connect-tools
+thinking: high
+thinking_why: It must match each feature to the right Feishu capability, token type and permission, and mark anything to check in the current docs. Use a model that reasons carefully about systems.
+explain: |-
+  A Feishu (Lark) integration looks easy until launch. Then the usual failures show up. The wrong kind of access token is used. The same event arrives twice and does the job twice. A message card does not display. The app asked for more permission than it needs, and the admin says no. This agent plans around those failures before any code is written.
+
+  You describe the work to automate and the other systems involved. It maps the work to Feishu parts: bots and message cards, approval flows, Bitable (Feishu's spreadsheet-style database) and sign-in. It then builds the plan in the profile's order of priority: bot first, then notifications, then approvals, then data sync. For each part it lists the permissions needed, the events to subscribe to, what to do when a call fails and how to test it.
+
+  It writes plans, flows and test lists. If you ask for code, it gives a sketch for your developer to check against Feishu's current docs. It cannot create the app, approve permissions or touch your Feishu account. Your admin does that.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your team works in Feishu or Lark and you want alerts or approvals to run there, not by email.
+  - You need orders or records from another system to appear in a Feishu table.
+  - A developer needs a clear list of permissions to request before asking the admin.
+  - A bot or message card is failing and you want a checklist of the usual causes.
+not_for:
+  - You want changes made in your Feishu account now. This agent writes plans and code sketches. Your admin must create the app and approve its permissions.
+  - You want an API or webhook design for another system. Use the API Platform Engineer agent.
+  - You are deciding which workflows to automate first, and who owns them. Use the Automation Governance Architect agent.
+you_give:
+  - The job you want done, such as alerts to a group, an approval for expenses or a sync from your order system
+  - Whether you use Feishu or Lark, and whether the app is for your own company or one you will sell to others
+  - The other systems it must connect to, such as your database, CRM or order tool
+  - The language your developer uses, such as Node.js or Python (optional)
+  - Any code or error messages you already have (optional)
+you_get:
+  - A scope note with the parts to build, in priority order
+  - A permission list with the reason for each and a mark on the ones an admin must approve
+  - A flow for each part, from trigger to result
+  - Security and setup notes on tokens, secrets and event checks
+  - A build order and a launch test list
+  - Open questions to settle before you build
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the job in plain words. Say who triggers it, who sees the result and which other systems are involved.
+  - Say if you use Feishu or Lark, and if the app is for your own company only. Add any code or error messages you have.
+  - Type "Plan this integration. List each permission with a reason. Mark anything I should check in the current Feishu docs."
+  - Read the permission list and the open questions first. Ask your admin whether each permission can be granted.
+  - Give the build order and the launch tests to your developer. Ask for code sketches only if they need them.
+how_it_works:
+  - title: Map the job
+    text: It splits your job into Feishu parts, such as bot, message card, approval, Bitable or sign-in, and sets the order to build them.
+  - title: List the permissions
+    text: It lists each scope the app needs with a reason, asks for the least access that works and marks the ones an admin must approve.
+  - title: Design each flow
+    text: For each part it writes the trigger, what the app sends, who approves, what is stored and which systems are called.
+  - title: Set the access and security
+    text: It picks the right token type, keeps secrets out of code, and plans checks on incoming events and on HTTPS.
+  - title: Plan for failure
+    text: It adds retries for busy or failing calls, a friendly message when a call fails and a rule so a repeated event does not run twice.
+  - title: Set the launch tests
+    text: It lists tests for repeated, late and out-of-order events, for card display and for removing extra permissions.
+output_shape: |-
+  SCOPE
+    Job <what> | Platform <Feishu or Lark> | App type <own company or for others> | Parts in build order <list> | Connected systems <list>
+
+  PERMISSIONS
+    <scope> | <why the app needs it> | <admin approval needed: yes, no or to check>
+
+  FLOWS
+    <part> | <trigger> | <what the app sends or stores> | <who approves or sees it> | <systems called> | <what happens on failure>
+
+  SECURITY AND SETUP
+    Tokens <which type for what> | Secrets <where they live> | Event checks <how incoming events are verified> | Repeated events <how they are handled>
+
+  BUILD ORDER
+    <step> | <depends on> | <done when>
+
+  LAUNCH TESTS
+    <test> | <how to run it> | <pass looks like>
+
+  OPEN QUESTIONS
+    <question> | <who can answer> | <check in the current Feishu docs: yes or no>
+output_sample:
+  input:
+    - The job you want done in Feishu or Lark
+    - Whether the app is for your own company or for others
+    - The other systems it must connect to
+    - Code or error messages you already have (optional)
+  prerequisites:
+    - A Feishu or Lark admin who can create the app and approve permissions
+    - A developer who can host a web address for events
+  output:
+    - name: Scope
+      contains: The job, the platform, the app type, the parts to build in order and the systems connected.
+    - name: Permissions
+      contains: Each permission the app needs with its reason, and whether an admin must approve it.
+    - name: Flows
+      contains: For each part, the trigger, what is sent or stored, who approves and what happens on failure.
+    - name: Security and setup
+      contains: Which token to use where, where secrets live, how events are checked and how repeats are handled.
+    - name: Build order
+      contains: The steps in order, what each depends on and when each is done.
+    - name: Launch tests
+      contains: Tests for repeated and late events, card display and extra permissions, with what a pass looks like.
+    - name: Open questions
+      contains: What to settle before building, who can answer and what to confirm in the current docs.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can plan the flows. One with file upload can also read your existing code or error logs.
+  inputs:
+    - A screenshot or copy of the current approval form or card you want to rebuild.
+    - A sample of the records you want to sync, with the field names.
+    - The list of groups and people who should get alerts.
+terms:
+  - term: Feishu (Lark)
+    meaning: A workplace chat and tools app. It is called Lark outside China.
+  - term: Bot
+    meaning: An app that posts or answers in Feishu chats on its own.
+  - term: Message card
+    meaning: A chat message with buttons, fields and layout, so people can act without leaving the chat.
+  - term: Bitable
+    meaning: Feishu's spreadsheet-style database.
+  - term: Permission scope
+    meaning: One permission the app asks for, such as reading messages. An admin may need to approve it.
+tweaks:
+  - what: Job size
+    how: Start with one part, such as a bot that sends alerts. Add approvals and sync after the first part works.
+  - what: App type
+    how: Say if the app is for your own company or for others. It changes how it is set up and published.
+  - what: Systems to connect
+    how: Name each one and say who owns it. A sync needs field names from both sides.
+improve:
+  - Save each plan with the permission list, so the next app can reuse approved scopes.
+  - Add your company's naming and approval rules to the pack, so flows match how your team works.
+  - Pair it with the API Platform Engineer agent when the other system needs its own API plan.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

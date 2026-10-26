@@ -1,6 +1,6 @@
 new_slug: decision-checklist
 name: Build a checklist for a decision you keep making
-summary: Name a decision you repeat. Get your mistakes logged, a one-page checklist, a run on a live case, and upkeep.
+summary: Build a decision checklist from your past mistakes. Get a one-page list of 12 questions or fewer, tested on your own cases and run on a live call.
 job: think-and-decide
 thinking: high
 thinking_why: It has to judge how past decisions were made and turn them into short testable questions. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You make the same kind of decision often, such as hiring, pricing or taking on clients.
   - You keep paying for the same mistake in a different form.
   - A team needs a shared list so that its decisions do not depend on who is in the room.
+not_for:
+  - "You face a one-off decision with no repeats: ask a trusted adviser or write a simple pros and cons list instead."
+  - "You have no past cases to look back on: start by writing down your next few decisions and what you knew at the time, then come back."
+  - "You only want a quick opinion on a single choice today: ask your AI directly rather than build a full list."
 you_give:
   - The kind of decision you keep making
   - Three or more past cases of yours, with what you chose and what happened
@@ -29,6 +33,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give the first two steps your honest past cases, including the ones you would rather forget. Then print the checklist.
   - Use the list on your next real decision. When the result is known, bring the saved record back for the last step.
+output_sample:
+  input:
+    - The kind of decision you keep making
+    - Three or more of your past cases, with what you chose, what happened and what you knew then
+    - Cases from other people in your field (optional)
+    - Later, a live decision to run and the result once it is known
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack from this page, with HANDOFF.md and the skill files
+  output:
+    - name: "Step 1: Mistake log"
+      contains: Every past case sorted as good call, bad luck, lucky win or mistake, with causes, catching questions and repeat offenders.
+    - name: "Step 2: The checklist"
+      contains: A one-page list of twelve questions or fewer, each with a pass line, tested on two past mistakes.
+    - name: "Step 3: The live run"
+      contains: Each item answered with a fact and marked pass, fail or unknown, then a call and a record to judge later.
+    - name: "Step 4: Upkeep"
+      contains: The call judged by its process, an edited checklist, a version log, practice cases and review dates.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Logs the mistakes
     text: Sorts past cases into good call, bad luck, lucky win or mistake, names the cause of each mistake and counts the repeats.

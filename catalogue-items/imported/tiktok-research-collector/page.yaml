@@ -2,36 +2,60 @@ thinking: low
 thinking_why: It fetches public posts and lists them.
 new_slug: tiktok-research-collector
 name: TikTok research collector
-summary: Give it a hashtag or account. Get public videos, comments and stats.
-  Collects data from websites.
+summary: Collect public TikTok videos, comments and stats for a hashtag, account or keyword into a sortable table. Needs an Apify account and token.
 job: grow-social
 headline: TikTok research collector
-subhead: Public TikTok videos, comments and stats for a hashtag or account,
-  pulled into a table you can sort. No TikTok login is needed, but the
-  collection runs through a paid Apify scraper, so you need an Apify account and
-  token.
+subhead: Give it a hashtag, account, keyword or video link. It collects public TikTok videos, comments and stats into a table you can sort. No TikTok login is needed, but it runs on a paid Apify scraper, so you need an Apify account and token.
 explain: |
   Public TikTok videos, comments and stats for a hashtag or account, pulled into a table you can sort. No TikTok login is needed, but the collection runs through a paid Apify scraper, so you need an Apify account and token.
 
   The skill picks the right input for your question: profiles, hashtags, search terms, video links, sounds, comments or followers. It sets limits such as the date range, minimum likes and exact tag match, then runs the scraper and returns the data with views, likes and shares. Typical uses are checking the last 20 videos of a creator, finding top videos for a phrase, or exporting a comment thread. It only reads public data.
 when:
-  - You want to see what is working under a hashtag in your niche.
-  - You are checking whether a creator's last videos look brand safe.
-  - You need comments from one video exported for analysis.
-  - You want a list of top videos for a keyword over the past week.
+  - You want to see which videos do best under a hashtag in your niche.
+  - You are checking if a creator's last 20 videos look safe for your brand.
+  - You need the comments from one video for review.
+  - You want the top videos for a keyword from the past week.
+not_for:
+  - "You want to post, like or comment on TikTok: do it in the TikTok app, this tool only reads public data."
+  - "You need private accounts or stories: they need a login, so ask the account owner to share them with you."
+  - "You want TikTok Shop products or TikTok ads: use a TikTok Shop or ads scraper from the Apify Store."
 you_give:
   - A hashtag, account, search phrase or video link
-  - "Limits: dates, likes, number of results"
-  - An Apify account and token
-  - Budget for paid results
+  - Limits such as dates, minimum likes and number of videos (optional)
+  - Your Apify token
+  - A spending limit for paid results
 you_get:
-  - A table of videos with stats
-  - Exported comments (if asked)
-  - A short read on patterns
-  - A note on cost and result count
+  - A table of videos with views, likes, comments and shares
+  - Exported comments and replies (if you ask)
+  - A short read on which videos stand out
+  - A cost estimate before the run and a result count after
+  - "Next steps: turn the top-video table into a content plan, or export comments to a sheet to sort and code them"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Apify token.
+  - Open an AI that can run code and connect to Apify, and paste the skill. Add your Apify token in its settings or environment.
+  - Tell it your hashtag, account, keyword or video link. Add dates, minimum likes and how many videos you want.
+  - Read the cost estimate. Any run over $2 needs your yes before it starts. Say yes only if the cost is fine.
+  - Check the failed inputs first, then the counts and the top-video table.
+  - Ask for comments, subtitles or AI extras only if you need them, as these cost more.
+output_sample:
+  input:
+    - A hashtag, account, search phrase, sound or video link
+    - Limits such as dates, minimum likes and number of videos (optional)
+    - Your Apify token
+    - A yes to the cost estimate, if the run costs over $2
+  prerequisites:
+    - An Apify account and token
+    - An AI that can run code or connect to Apify
+    - Credit on your Apify account, because results are paid
+  output:
+    - name: Failed inputs
+      contains: Any account or link that did not work, with the error message. These rows cost nothing.
+    - name: Video rows
+      contains: Each video with its link, text, date, views, likes, comments, shares, creator and hashtags.
+    - name: Comment rows
+      contains: Comments and replies for a video, with likes and a link to the parent comment so threads can be rebuilt.
+    - name: Profile and follower rows
+      contains: Creator details, and follower or following accounts, when you ask for them.
+    - name: Summary
+      contains: Counts by type, whether a limit cut the set, and a table of top videos by views or likes.
+    - name: Cost note
+      contains: The estimate before the run and the result count after.

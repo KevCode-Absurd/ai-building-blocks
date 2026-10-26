@@ -1,0 +1,144 @@
+name: AI browsing agent readiness checker
+summary: Check if an AI browsing agent can book, buy or sign up on your site. Get a task scorecard, the steps where it gets stuck and fixes.
+headline: AI browsing agent readiness checker
+subhead: Name the 3 to 5 tasks that matter on your site, such as book, buy, sign up or contact. The agent walks each task step by step and finds where an AI browsing agent could fail. It gives a fix for each stuck point, with WebMCP form markup where it fits.
+job: get-found-in-search
+thinking: high
+thinking_why: It has to trace each task step by step and say which findings come from code and which need a real test.
+explain: >-
+  There are three kinds of AI traffic. Search engines rank your pages. AI
+  answer tools cite your pages. And AI browsing agents carry out a task for a
+  person, such as booking a room. This checker is about the third. A page can
+  describe your booking well and still be a page an agent cannot finish.
+
+
+  It audits tasks, not pages. For each task it asks if an agent can find the
+  action, start it and finish it. Where it fails, it names the cause: a custom
+  date picker, a CAPTCHA on the first field, a forced sign-up, a file upload, or
+  labels that exist only as grey placeholder text. Then it gives the fix. That
+  can include WebMCP markup on your forms. WebMCP is a draft browser idea, not a
+  finished standard, and support differs by browser.
+
+
+  A chat AI that reads your pasted page cannot act as a browsing agent. It
+  reviews the code and steps you give it and marks each finding "from the code,
+  not tested". To measure real completion you run each task with a real agent
+  yourself. The agent gives you a test sheet for that. This is a role profile
+  from Agency Agents, shared under MIT. Its success targets describe the
+  intended work, not measured results from AI Blocks.
+when:
+  - You want AI browsing agents to be able to book, order or sign up on your site.
+  - Your booking or checkout uses a custom date picker, a pop-up widget or a single-page app.
+  - You added a CAPTCHA or forced sign-up and wonder what it does to AI agents.
+  - You were told to prepare for WebMCP and want a plain list of what to change.
+not_for:
+  - You want AI tools to mention your brand in their answers. Use the AI citation audit agent.
+  - You want AI crawlers allowed and an llms.txt file. Use the AI crawler and llms.txt setup agent.
+  - You want to see how people, not agents, struggle with a form. Use the UX Researcher agent.
+  - You need your live site changed for you. This writes the markup and fixes. You or your developer apply them.
+you_give:
+  - The 3 to 5 tasks that matter most, such as book, buy, register, subscribe or contact.
+  - For each task, the starting address and the steps a person takes.
+  - The page code of each form or step, from view source (optional, needed for markup fixes).
+  - Your own test results with a browsing agent, if you ran one (optional).
+  - Your site platform, such as Shopify or WordPress (optional).
+you_get:
+  - A scorecard per task that shows if an agent can find it, start it and finish it, and where it drops.
+  - A step-by-step friction map marked Pass, Degraded or Fail, with the cause of each failure.
+  - A fix list, each tied to a stuck point. Fixes are form markup, field changes or flow changes.
+  - WebMCP markup for forms that fit it, or a script outline for dynamic actions.
+  - A test sheet to run with a real browsing agent before and after your changes.
+how_to_use:
+  - Add the pack to your AI as a skill. In a plain chat, paste SKILL.md first.
+  - List your 3 to 5 tasks with the start address and steps. Paste the form code for each if you can.
+  - Say "Audit these tasks for AI browsing agents."
+  - Read the scorecard. Anything marked "from the code, not tested" needs a real test.
+  - Run each task with a real browsing agent, such as Claude in Chrome. Write down where it stops. Do this before you change anything, so you have a baseline.
+  - Apply the fixes, or hand them to your developer, then run the same tests again. Keep your normal checks and sign-in rules. Markup does not replace them.
+how_it_works:
+  - title: List the tasks
+    text: It picks the 3 to 5 tasks of most value and maps each from start address to success page.
+  - title: Check each step
+    text: It reads your code and steps for named fields, labels, native inputs, walls such as CAPTCHAs and sign-ups, and any WebMCP markup.
+  - title: Map the friction
+    text: For each task it marks every step Pass, Degraded or Fail, and names the cause.
+  - title: Draft the fixes
+    text: It picks form markup where a plain form exists and a script where the action is dynamic, and swaps blocking widgets for plain inputs.
+  - title: Plan the retest
+    text: It writes a test sheet so you measure before and after with real agents. Completion rate is counted only from real tests.
+output_shape: |-
+  AI BROWSING AGENT READINESS: <site> | <date>
+  | Task | Findable | Startable | Finishable | Where it drops | Priority | Source (code or real test) |
+
+  FRICTION MAP: <task>
+  Step 1 <name>: <Pass, Degraded or Fail>
+    Observation: <what was seen>
+    Cause: <missing declaration, hostile widget, sign-up wall, dynamic-only content>
+    Fix: <specific change>
+  Step 2 ...
+
+  FIXES (in order)
+  <fix> | <task it unblocks> | <markup or code> | <how to retest>
+
+  TEST SHEET
+  <task> | <agent used> | <result before> | <result after>
+output_sample:
+  input:
+    - Your 3 to 5 key tasks, each with a start address and steps
+    - The page code for each form or step (optional)
+    - Results from your own test with a browsing agent (optional)
+  prerequisites:
+    - A browsing agent to run the real test, such as Claude in Chrome (optional)
+    - Someone who can edit your pages, or a developer
+  output:
+    - name: Task scorecard
+      contains: One row per task showing if an agent can find, start and finish it, and where it drops.
+    - name: Friction map
+      contains: Each step of each task marked Pass, Degraded or Fail, with the cause.
+    - name: Fix list
+      contains: Changes in order of value, each linked to the task it unblocks.
+    - name: Form markup draft
+      contains: Your forms with tool name, description and field labels added, ready for your developer to review.
+    - name: Test sheet
+      contains: A before and after table to fill in when you run each task with a real agent.
+works_best_with:
+  tools:
+    - name: A real browsing agent, such as Claude in Chrome
+      why: Only a real agent can show if a task can be finished. The chat AI reviews code and cannot.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read your form code and write the fixes.
+  inputs:
+    - The visible text and the code of each form.
+    - A screen recording of your own test run.
+    - A list of steps that need sign-in or payment, since agents should not do these alone.
+terms:
+  - term: AI browsing agent
+    meaning: An AI that uses a web browser to do a task for a person, such as booking or buying.
+  - term: WebMCP
+    meaning: A draft browser proposal that lets a page tell AI agents which actions it offers.
+  - term: Declarative markup
+    meaning: Labels added to an ordinary HTML form so an agent can see what it does.
+  - term: Imperative registration
+    meaning: A script that tells the browser which actions the page offers, used when the action changes with the user.
+  - term: Friction map
+    meaning: A step-by-step list showing where a task works and where it breaks.
+  - term: Task completion rate
+    meaning: The share of tested tasks an agent finished from start to end.
+tweaks:
+  - what: Which tasks you pick
+    how: Choose the tasks that earn money or leads. The agent audits tasks, so a vague list gives vague fixes.
+  - what: Form code
+    how: Paste the real code. Without it, fixes are general and not marked up for your fields.
+  - what: A real test
+    how: Run one real agent test first. It turns "from the code" findings into proven ones.
+improve:
+  - Keep your test sheet and rerun the same tasks after every major site change.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -14,6 +14,30 @@ use_cases:
   - Make speech bubbles easier to read in order
   - Plan a first comic without expensive drawing tools
   - Compare a printed page with a phone-sized version
+not_for:
+  - "You want film shots, suspense or camera planning: hire Alfred Hitchcock instead."
+  - "You want to learn to draw heads and figures with construction lines: hire Andrew Loomis instead."
+  - "You need legal, medical or financial advice, or proof that one event caused another: ask a specialist, because a picture order only shows what a reader infers."
+output_sample:
+  input:
+    - A story, task or slide deck you want to turn into a sequence
+    - Who will read it and what they should understand at the end
+    - Whether it is true, an instruction or fiction
+    - Your photos or slides, if you have them (optional)
+    - Where it will be read, such as print or phone (optional)
+  output:
+    - name: Reader goal
+      contains: Who the reader is and what they should understand or do at the end.
+    - name: Rough sequence
+      contains: A panel-by-panel plan with the moments chosen and a note on what was left out.
+    - name: Image and word roles
+      contains: What each picture shows, what the words say, and where the words sit.
+    - name: Key choices
+      contains: A short account of framing and order choices, with two options and their tradeoffs where useful.
+    - name: Fact check note
+      contains: Which parts need real verification and which parts are invented.
+    - name: Reader test and next revision
+      contains: A question to ask a new reader and the next change to make.
 seats:
   - {seat: Clear visual storytelling, asks: What must the reader infer between these two pictures?}
   - {seat: Sequences that explain, asks: Which moments and words will make the intended relationship visible?}

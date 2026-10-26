@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adds reflection and transfer around the experience.
 new_slug: field-trip-learning-plan
 name: Field trip learning cycle planner
-summary: Describe a trip, simulation or practical. Get the before, during and
-  after steps that turn it into lasting learning.
+summary: Turn a field trip, simulation or practical into lasting learning. Get a before, during and after plan for your field trip lesson.
 job: teach-and-train
 headline: Field trip learning cycle planner
-subhead: A before, during and after plan that turns a trip, simulation or
-  practical activity into learning that sticks. Students come back with
-  understanding, not just a good day out.
+subhead: A before, during and after plan that turns a trip, simulation or practical activity into learning that sticks. Students come back with understanding, not just a good day out.
 explain: |
   A before, during and after plan that turns a trip, simulation or practical activity into learning that sticks. Students come back with understanding, not just a good day out.
 
@@ -18,6 +15,10 @@ when:
   - You plan a role play or simulation and need a debrief.
   - A practical lesson ends in a fun mess with nothing learned.
   - You need a plan that fits a short time slot.
+not_for:
+  - "You only run a short activity with no time after it: use a simple five-minute debrief instead."
+  - "You want a long community project with real service: use the service-learning-project-designer."
+  - "You want a run of lessons held outdoors: use the outdoor-learning-sequence-designer."
 you_give:
   - The learning objective
   - The type of experience, such as a trip or simulation
@@ -30,7 +31,27 @@ you_get:
   - A reflection and debrief plan
   - A check of what was learned
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down your learning objective in one or two sentences.
+  - Note the kind of experience, such as a trip, role play or simulation.
+  - Add the class age, subject and time slot if you know them (optional).
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your notes. No code or files are needed.
+  - Check that each phase fits your time. Ask your AI to shorten any phase that runs long.
+  - Print the plan and take it with you on the day.
+output_sample:
+  input:
+    - Your learning objective
+    - The kind of experience, such as a trip or simulation
+    - Student age or year (optional)
+    - Time available (optional)
+    - Subject and what students already know (optional)
+  output:
+    - name: Phase 1 Experience
+      contains: What students do, see and record during the activity, with set tasks and timing.
+    - name: Phase 2 Reflection
+      contains: Questions that help students think about what happened and why.
+    - name: Phase 3 Conceptualisation
+      contains: How students link what they saw to the key ideas in your objective.
+    - name: Phase 4 Application
+      contains: A task that uses the lesson in a new case, plus a check of what was learned.
+    - name: Transitions Between Phases
+      contains: Short notes on how to move students from one phase to the next.

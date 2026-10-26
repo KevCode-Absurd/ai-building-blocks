@@ -1,6 +1,6 @@
 new_slug: five-forces-industry-checker
 name: "Five forces industry checker"
-summary: "Name your industry and buyers. Get a five-force read of where profit comes from and a score out of 100."
+summary: "Check your industry with a five forces analysis. Name your industry and buyers. You get a rating for each force and a profit call."
 job: plan-strategy
 thinking: medium
 thinking_why: "It judges five forces from facts you give, and weak evidence changes the answer, but the frame is fixed."
@@ -17,6 +17,10 @@ when:
   - You are choosing a market or deciding whether to enter one.
   - Margins are thin and you do not know whether it is you or the industry.
   - You want to know which force to work on first.
+not_for:
+  - "You want to fix your own costs or cash flow: review your own accounts, or ask your accountant."
+  - "Your market is brand new and you have no facts about rivals or buyers: do some customer and market research first, then come back."
+  - "You already know the deciding force and want to act on it: use the Strategy trade-off planner."
 
 you_give:
   - Your industry or category, and who you sell to
@@ -33,6 +37,29 @@ how_to_use:
   - Say what you sell and to whom. Add what you know about each force.
   - Read the call on profit potential, then the deciding forces.
   - Rerun it in six or twelve months or after a big change.
+output_sample:
+  input:
+    - Your industry, as narrow as your buyers are
+    - Who you sell to, split into buyer types
+    - What you know about rivals, suppliers, buyers and substitutes
+    - Your list of rivals (optional)
+  output:
+    - name: Industry and buyers
+      contains: The industry in one line and the buyer segments you sell to.
+    - name: The five forces
+      contains: A rating and the evidence for new entrants, suppliers, buyers by segment, substitutes and rivalry.
+    - name: Profit potential
+      contains: A high, medium or low call for the industry, plus where your firm sits in it.
+    - name: Deciding forces
+      contains: The one or two forces that decide the answer and what could shift each one.
+    - name: Rerun when
+      contains: A date or an event that should make you run the read again.
+    - name: Score
+      contains: A score out of 100 for how complete the read is, with six pass or fail checks.
+    - name: Missing
+      contains: Each fact you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check still missed and why, or none.
 
 how_it_works:
   - title: Checks new entrants

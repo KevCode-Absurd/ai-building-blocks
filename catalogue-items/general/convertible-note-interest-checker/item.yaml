@@ -1,15 +1,13 @@
 slug: convertible-note-interest-checker
 name: Convertible note interest checker
-summary: Check simple accrued interest and the balance converting into shares.
+summary: "Work out the simple interest on a convertible note, the balance that converts and the shares it becomes. Missing facts are flagged."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,12 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - cap-and-discount-conversion-checker
+  - check-a-convertible-note-conversion
 origin: own
 version: 1.0.0
 added: 2026-10-22

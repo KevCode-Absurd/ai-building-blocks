@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a set script to capture each screen.
 new_slug: app-screenshot-maker
 name: App screenshot maker
-summary: Point it at your running app. Get sharp, high-resolution screenshots
-  ready for Product Hunt, social or your site.
+summary: Capture sharp, high-resolution screenshots of your running app for Product Hunt, social posts or your site. Give it your app address.
 job: make-images
 headline: App screenshot maker
-subhead: Sharp, high-resolution screenshots of your running app, ready for
-  Product Hunt, social posts, a landing page or docs. You point it at your local
-  or live app address and pick how many shots you need.
+subhead: Sharp, high-resolution screenshots of your running app, ready for Product Hunt, social posts, a landing page or docs. You point it at your local or live app address and pick how many shots you need.
 explain: |
   Sharp, high-resolution screenshots of your running app, ready for Product Hunt, social posts, a landing page or docs. You point it at your local or live app address and pick how many shots you need.
 
@@ -18,19 +15,43 @@ when:
   - Your landing page still shows blurry or outdated screens.
   - Your docs need fresh pictures after a redesign.
   - You want social images of key screens without a manual capture.
+not_for:
+  - "You have only a mockup or a design file and no running app: use a design tool such as Figma to export images."
+  - "You want one quick shot of a single screen: use your computer's own screenshot tool."
+  - "Your app has no test account and the screens sit behind a login you can't share: ask a teammate to capture them by hand."
 you_give:
   - Your app address
   - How many screenshots you need
   - What they are for
   - Login details for a test account (optional)
 you_get:
-  - High-resolution PNG screenshots
-  - Shots of the screens you choose
-  - Files sized for your purpose
-  - A repeatable capture script
+  - High-resolution PNG screenshots, each 2880x1800 pixels
+  - Shots of the screens you choose, one file per screen
+  - Files with numbered, readable names
+  - A capture script you can run again after a redesign
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Start your app, or have its live address ready. Use an AI that can run code and open a browser.
+  - Paste the skill into your chat, or open its folder in your AI tool.
+  - Give your app address. Say how many shots you need and what they are for.
+  - Share test account login details only if the screens need them. Use a test account, never a real one.
+  - Check the list of screens your AI suggests. Remove or add any before it captures.
+  - Open the screenshots folder and check each image. Then upload them to Product Hunt, your landing page, your docs or your social posts.
+output_sample:
+  input:
+    - Your app address, local or live
+    - How many screenshots you need
+    - What the screenshots are for
+    - Login details for a test account (optional)
+  prerequisites:
+    - An AI that can run code and open a browser
+    - Playwright installed (a free browser tool; your AI will tell you how)
+    - Your app running, if you use a local address
+  output:
+    - name: Feature list
+      contains: The screens your AI found in your project files and README, for you to confirm or change.
+    - name: screenshot-script.mjs
+      contains: The capture script that logs in if needed and visits each page.
+    - name: screenshots folder
+      contains: One numbered PNG per screen, named after the feature, such as 01-dashboard-overview.png.
+    - name: Summary
+      contains: A list of the files, their size on disk and their resolution, plus follow-up ideas.

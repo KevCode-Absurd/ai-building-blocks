@@ -1,6 +1,6 @@
 new_slug: category-and-trend-risk-checker
 name: "Category and trend risk checker"
-summary: "Name a category to enter. Get a score out of 100 on market size, trend risk and fit."
+summary: "Check a product category before you enter it. Get a score out of 100 on fit, demand and trend risk, with weak spots named and a go, hold or drop call."
 job: find-products
 thinking: medium
 thinking_why: "It follows a scoring sheet, but it must read trend data with care and avoid false certainty."
@@ -17,6 +17,10 @@ when:
   - You are about to choose a category and want to know if it is worth entering.
   - A product is trending and you need to know if it is a fad before you buy stock.
   - You sell one hot product and want to know how to widen your range.
+not_for:
+  - "You need to pick the right product inside a category: use a product-level check, or ask a buyer who knows the niche."
+  - "You sell a service or a made-to-order product: the fit list will fail items for good reasons, so use your own simple demand check."
+  - "You want a sales forecast: free trend data only shows relative interest, so use your own sales numbers and test ads."
 
 you_give:
   - The category or product idea, and the exact product term people search
@@ -36,6 +40,36 @@ how_to_use:
   - "Paste what you can: the 12-month and five-year Google Trends view, monthly search volume, and Amazon best-seller ranks."
   - Read the score and the weak spots. Check the numbers you can with your own search.
   - Act on go, hold or drop, and run the product-level checks next.
+output_sample:
+  input:
+    - The category or product idea, and the exact search term
+    - Your expected price and margin
+    - Your target country
+    - Whether buyers come back to buy again
+    - Google Trends, search volume and best-seller data (optional)
+  prerequisites:
+    - Your AI cannot browse these tools, so paste the trend and search data yourself
+  output:
+    - name: Header
+      contains: The category, the exact search term and the country that were scored.
+    - name: Fit
+      contains: Seven lines, each scored out of 5, with a short reason.
+    - name: Demand
+      contains: Points for search volume, social mentions and where buyers live.
+    - name: Trend health
+      contains: Points for the 12-month line, the multi-year shape and seasonality.
+    - name: Copy and one-trend risk
+      contains: Points for how fast a rival can copy you and how much rests on one trend.
+    - name: Score
+      contains: The total out of 100, with the sum shown and the checks it covers.
+    - name: Weak spots
+      contains: The parts of the score that pulled it down, tied to the facts you gave.
+    - name: Call
+      contains: Go, hold or drop, with the reason.
+    - name: Widen your range
+      contains: A way to move beyond one trend if your range rests on it.
+    - name: Checks missed and Missing
+      contains: Checks that lacked data, and the inputs still needed.
 
 how_it_works:
   - title: Scores the fit

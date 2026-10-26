@@ -1,6 +1,6 @@
 new_slug: zero-click-content-planner
 name: "Zero-click content planner"
-summary: "Paste what your buyers ask and where they hang out. Get a content plan that helps them without a click."
+summary: "Plan zero-click content from the questions your buyers ask. Get complete answers matched to the places they read, plus six weeks of pieces."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It matches questions to places and designs native answers, which takes judgement about each platform."
@@ -17,6 +17,10 @@ when:
   - "Your blog traffic is falling and your posts get read in the feed instead."
   - "You want AI assistants and search snippets to quote your answers."
   - "You have expertise your buyers need and no plan for giving it away."
+not_for:
+  - "You need pages that make people click through to buy: write the page yourself, or use the Keyword to post outline writer for pieces that must earn a click."
+  - "You have no facts, numbers or experience to share: gather those first, because the memory hooks need them."
+  - "You do not know where your buyers spend time: ask five recent customers first, then come back."
 
 you_give:
   - "The questions buyers ask, as written"
@@ -33,6 +37,27 @@ how_to_use:
   - "List the places with evidence, such as where your customers say they found you."
   - "Read QUESTIONS CHOSEN. Swap any that are sales questions in disguise."
   - "Publish week one's pieces and track the MEASURE signals, not clicks."
+output_sample:
+  input:
+    - The questions your buyers ask, as written
+    - Where they spend time, with proof such as where customers say they found you
+    - What you know that they do not (advised)
+    - Your claims and voice (optional)
+  output:
+    - name: QUESTIONS CHOSEN
+      contains: Eight to twelve questions worth answering in full, each with its evidence, its place and why that place.
+    - name: PIECES
+      contains: A complete answer for each question in the form of its place, under 120 words, with the brand named once.
+    - name: MEASURE
+      contains: For each place, the signals that show it worked, such as saves, shares and replies, with clicks last.
+    - name: SIX WEEKS
+      contains: The order to publish the pieces, two a week at most, starting with the most asked and cheapest.
+    - name: EARNS A CLICK
+      contains: The few pieces that will earn a visit anyway, and the link each one carries.
+    - name: MISSING
+      contains: Facts, places or evidence you did not give, marked so nothing is made up.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: "Picks the questions"

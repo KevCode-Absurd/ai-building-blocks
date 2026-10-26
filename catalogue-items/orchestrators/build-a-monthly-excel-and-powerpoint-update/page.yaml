@@ -1,117 +1,125 @@
 new_slug: build-a-monthly-excel-and-powerpoint-update
 name: Build a monthly Excel and PowerPoint update
-summary: Share dated records and a template. Get a monthly workbook, editable
-  deck and checks linking their numbers.
+headline: Build a monthly Excel and PowerPoint update
+summary: Turn your dated records and slide template into a monthly workbook, an editable update deck and a check that every slide number matches.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
-headline: Build a monthly Excel and PowerPoint update
-subhead: Share dated records and a slide template. Get a monthly workbook,
-  editable update deck and source-number checks. Work on a copy of your file.
-  Get a clear record of what passed and what still needs checking.
-explain: >-
-  Share dated records and a slide template. Get a monthly workbook, editable
-  update deck and source-number checks.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
+subhead: Give it your dated records for the month and your real slide template. It builds a monthly summary workbook, fills your template with those numbers and checks every number on every slide against the workbook. Then it adds speaker notes. Work on copies of your files.
+explain: |-
+  Most monthly updates are rebuilt by hand. Someone copies numbers from Excel into slides, and one stale figure or swapped label gets to the board. This workflow builds a monthly Excel and PowerPoint update in one chain, so the slides come from the workbook and the numbers are checked before anyone sees them.
 
+  Step 1 builds the monthly summary from your records and writes down what each measure means. Step 2 fills your own template with those results and keeps charts and tables editable. Step 3 matches every number on the slides to the workbook and fails stale months, swapped categories and mixed units. Step 4 adds speaker notes, each linked to its source, with a time budget. Each step hands its files to the next, and your original files stay untouched.
 
-  This workflow runs the full component methods in order and checks each handoff
-  before continuing. Your source files stay intact. The method starts by
-  checking what your AI already knows and which files it can read. It asks only
-  for missing facts that change the work.
-
-
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  This one needs an AI that can create and open .xlsx and .pptx files. If yours cannot, it gives you formulas, a slide plan and the checks to run by hand, and it marks the files as not made. A saved file is not proof that its formulas, links or layout work, so any check it could not run stays on the list.
 when:
-  - You need the connected deliverables described above.
-  - You want the sources and checks carried through the handover.
-  - You need to see which steps still need your input.
+  - You rebuild the same monthly update every month and copy the numbers by hand.
+  - A number on a slide did not match the spreadsheet last time.
+  - You must use the company template, with charts and tables that stay editable.
+  - You present each month to a board, a client or a team and want speaker notes too.
+not_for:
+  - Your records are not clean yet. Check them first with the Check a spreadsheet before sharing the results workflow.
+  - You have a report, not records, and want slides. Use Turn a report into an editable briefing deck.
+  - You have a messy sheet and no template and want a deck fast. Use Turn a messy spreadsheet into a clean slide deck.
+  - You only want to check numbers on an existing deck. Use the Excel to PowerPoint number checker.
 you_give:
-  - Dated operational records, grain and metric definitions, reporting
-    period/timezone, actual slide template and approved audience/talk
-    requirements.
-  - The app and file tools your AI can use for the requested work
+  - Your dated records for the month, as a spreadsheet or CSV export
+  - What each measure means, and what one row stands for, such as one order
+  - The reporting month, timezone and how you set month ends
+  - Your real slide template (.pptx), with your layouts
+  - Who the audience is and how long the talk is
+  - Last month's workbook and deck (optional)
 you_get:
-  - The native files and reports produced by the component methods, plus a run
-    register and unresolved-input list.
-  - A record of source files, changes and check results
-  - Missing facts and any checks that could not run
+  - monthly-summary.xlsx with a summary for each month, and metric-definitions.md
+  - A copy of your template filled in, with charts and tables you can still edit
+  - "slide-number-checks.csv and number-review.md: each slide number matched to the workbook"
+  - deck-with-notes.pptx with speaker notes and a timing sheet
+  - A source map, a run record and a list of open items
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach your records and your template. Say the month, the audience and the talk length.
+  - Read metric-definitions.md first. If a measure is defined wrongly, say so before the deck is built.
+  - Open number-review.md before you open the slides. Fix every failed or stale number.
+  - Open the deck in PowerPoint yourself and check layout and charts, since your AI may not be able to.
 how_it_works:
-  - title: Step 1
-    text: 1. Read `skills/excel-monthly-rollup-builder/SKILL.md` completely and run
-      its full method. Create monthly summaries from the actual reporting
-      population and preserve record IDs, month boundaries and rate definitions.
-  - title: Step 2
-    text: 2. Read `skills/powerpoint-template-populator/SKILL.md` completely and run
-      its full method. Populate the actual supplied template with the checked
-      monthly outputs, keeping charts and tables editable.
-  - title: Step 3
-    text: 3. Read `skills/excel-powerpoint-number-checker/SKILL.md` completely and
-      run its full method. Match every displayed monthly metric to the delivered
-      workbook and fail stale periods, swapped categories or inconsistent units.
-  - title: Step 4
-    text: 4. Read `skills/powerpoint-speaker-note-builder/SKILL.md` completely and
-      run its full method. Add source-linked speaking notes and an estimated
-      timing budget without altering verified figures.
-output_shape: >-
+  - title: Excel monthly rollup builder
+    text: Builds the monthly summaries from your real records. Keeps record IDs, month boundaries and rate definitions. Hands the workbook and the metric definitions to the next step.
+  - title: PowerPoint template populator
+    text: Fills your supplied template with the checked monthly results. Keeps charts and tables editable. Hands the deck and a source map to the number checker.
+  - title: Excel to PowerPoint number checker
+    text: Matches every number on the slides to the workbook. Fails stale periods, swapped categories and mixed units. Hands a clean deck to the notes step.
+  - title: PowerPoint speaker notes builder
+    text: Adds speaker notes linked to their sources, with a time budget. It does not change a checked figure.
+output_shape: |-
   FILES
-
-  The native files and reports produced by the component methods, plus a run
-  register and unresolved-input list.
-
+    monthly-summary.xlsx | metric-definitions.md | populated-template.pptx | slide-number-checks.csv | number-review.md | deck-with-notes.pptx | timing sheet
 
   SOURCE MAP
-
-  <file and version> | <sheet, cell or slide> | <what it supports>
-
+    <file and version> | <sheet, cell or slide> | <what it supports>
 
   CHECKS
-
-  <check> | <passed, failed or not run> | <evidence>
-
+    <check> | <passed, failed or not run> | <evidence>
 
   OPEN ITEMS
-
-  <missing fact or unsupported check> | <next action>
+    <missing fact or unsupported check> | <next action>
+output_sample:
+  input:
+    - Your dated records for the month
+    - What each measure means and the reporting month
+    - Your real slide template
+    - The audience and the talk length
+  prerequisites:
+    - An AI that can create and open .xlsx and .pptx files
+    - PowerPoint or Excel on your side to check layout and charts
+  output:
+    - name: monthly-summary.xlsx
+      contains: A summary for each month, built from your records with IDs and month ends kept.
+    - name: metric-definitions.md
+      contains: What each measure means and how it is worked out.
+    - name: populated-template.pptx
+      contains: Your template filled with the monthly results, with editable charts and tables, plus a source map.
+    - name: slide-number-checks.csv
+      contains: Every slide number matched to the workbook, marked pass or fail.
+    - name: number-review.md
+      contains: What failed, why, and what to fix before you present.
+    - name: deck-with-notes.pptx
+      contains: The checked deck with speaker notes and a timing sheet.
 tweaks:
   - what: Your source files
-    how: Dated operational records, grain and metric definitions, reporting
-      period/timezone, actual slide template and approved audience/talk
-      requirements.
+    how: Give records with dates, a note on what each measure means, the reporting month and timezone, and your real template.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the file format and the audience. Say which parts must stay editable and any slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - All required source versions and their meanings are identified.
-  - Every component method ran, or the workflow stopped with its exact missing
-    prerequisite.
+  - Every component method ran, or the workflow stopped with its exact missing prerequisite.
   - Workbook results, slide evidence, periods and units agree where they connect.
   - The result names its sources and keeps unrun checks visible.
 test:
   - Try the workflow on copies of files where you know the right result.
-  - Check each step against its full skill file and keep the source map with the
-    result.
-  - Reopen the saved files and check the reported figures, links and layout
-    before relying on them.
+  - Check each step against its full skill file and keep the source map with the result.
+  - Reopen the saved files and check the reported figures, links and layout before relying on them.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Keep metric-definitions.md and reuse it next month so the numbers mean the same thing.
+  - Save your confirmed field names and template rules with the pack.
+  - Keep last month's files so the AI can compare this month against them.
+works_best_with:
+  tools:
+    - name: An AI that can create Excel and PowerPoint files
+      why: The result is real .xlsx and .pptx files. A chat that can only paste text gives you a plan and formulas, not files.
+  inputs:
+    - Last month's workbook and deck.
+    - A named person who checks the numbers before you present.
+next:
+  - prepare-a-powerpoint-deck-for-presenting-and-sharing
+terms:
+  - term: Rollup
+    meaning: A summary that adds many rows into one figure for each month.
+  - term: Source map
+    meaning: A list showing which file, sheet or cell each slide number comes from.
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.

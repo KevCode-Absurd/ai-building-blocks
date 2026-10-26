@@ -1,46 +1,79 @@
 new_slug: review-a-fund-bridge-and-hurdle
 name: Review a fund bridge and hurdle
 headline: Review a fund bridge and hurdle
-summary: Separate subscription-line return timing from the actual preferred-return start convention.
+summary: See what a capital call bridge does to LP returns, then check the preferred return and the carry split. Get linked checks with gaps listed.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Levered/unlevered periodic return comparison and a separately sourced no-catchup distribution scenario. Share a two-year investment with exact annual dates, one-year simple bridge, actual financing cost, LPA hurdle start clause, eligible capital basis and final distribution cash.
+subhead: Give your AI two annual investment dates, the bridge cost, the fund agreement's hurdle clause and the cash to distribute. It compares LP returns with and without the bridge, builds the preferred return from the date your agreement sets, then splits the cash with no GP catch-up.
 explain: |-
-  Levered/unlevered periodic return comparison and a separately sourced no-catchup distribution scenario.
+  A fund can borrow on a credit line and call its investors' money a year later. That lifts the return as a percent, because the investors' money is in for less time. It also adds interest cost. A separate question is when the preferred return (the hurdle) starts to build. Many people assume it starts when the money is called. The fund agreement decides.
 
-  Private fund performance. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 compares the return with and without the bridge, over whole annual periods. Step 2 finds where the agreement starts the hurdle, which capital counts and the year fraction, then builds the preference. Step 3 splits the cash in order: capital back, then the preference, then carry, with no catch-up.
+
+  The bridge cost is counted once. The return comparison stays apart from the cash split. If the dates are not annual, the AI stops and says so, since that case needs an XIRR.
 when:
-  - You need levered/unlevered periodic return comparison and a separately sourced no-catchup distribution scenario.
-  - You work on private fund performance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A fund used a subscription line, and you must show investors what it did to returns.
+  - You need to find out when the preferred return starts under the fund agreement.
+  - A distribution is due, and you must split it between LPs and the GP with no catch-up.
+  - A reviewer asks why returns with and without the line differ.
+not_for:
+  - "Cash flows fall on irregular dates: run an XIRR in a spreadsheet first. This covers two annual periods only."
+  - "Your agreement has a GP catch-up: this does not fit. Use your fund administrator's waterfall."
+  - "You only need to split one distribution: use the Check a no-catchup fund distribution workflow."
+  - "You want to check a capital call notice: use the Reconcile a private fund capital call workflow."
 you_give:
-  - A two-year investment with exact annual dates, one-year simple bridge, actual financing cost, LPA hurdle start clause, eligible capital basis and final distribution cash.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The investment amounts and exit cash, with exact annual dates over two years
+  - "The bridge: one year long, a simple annual cost, and a call at the first anniversary"
+  - "The fund agreement's hurdle clause: the rate, when it starts and which capital counts"
+  - The cash available to distribute, after financing costs
+  - The carry share, such as 20 percent, from the agreement
+  - The currency, scale and reporting date
 you_get:
-  - Levered/unlevered periodic return comparison and a separately sourced no-catchup distribution scenario.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - LP returns with and without the bridge, the financing cost and both money multiples
+  - The preferred return for the period and the total unpaid
+  - "A split of the cash: capital returned, preference paid, GP carry and LP cash"
+  - Any shortfall left in the first tier
+  - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the fund agreement pages, the investment and exit dates and the bridge terms. Say the reporting date and currency.
+  - Ask your AI to follow the pack, save a file for each step and stop a step when an input is missing.
+  - After step 2, check the hurdle start date against the clause. It is not always the call date.
+  - After step 3, check that capital, preference and carry add up to the cash you had. A spreadsheet tool is needed for the workbook. Without one, your AI gives the tables in chat.
 how_it_works:
   - title: Subscription line timing checker
-    text: Calculate the supported exact annual call-delay comparison using actual investment, exit and simple bridge cost. Label periodic IRRs and stop for irregular dates requiring XIRR.
+    text: Compares periodic IRR and money multiples with and without a one-year bridge, using the simple bridge cost. Labels each IRR as periodic and stops for irregular dates. Hands step 3 the financing cost, so it is counted once.
   - title: Preferred return accrual checker
-    text: Independently locate the LPA hurdle start, eligible capital and year fraction. Use draw date or call date only when the actual clause specifies it; do not copy an IRR holding period into accrual automatically.
+    text: Finds the hurdle start, the eligible capital and the year fraction from the agreement's own clause. Accrues the simple preference and never copies the return holding period into it. Hands step 3 the unpaid preference.
   - title: No-catchup waterfall checker
-    text: Use verified eligible unreturned LP capital and the separate accrued preference against actual cash after financing obligations. Reconcile bridge cost once and keep the periodic-return comparison distinct from the distribution allocation.
+    text: "Splits the cash after financing: unreturned eligible capital first, then the accrued preference, then carry on what is left. Keeps the return comparison apart from the split. Check before you finish: the parts add up to the cash."
 output_shape: |-
-  Levered/unlevered periodic return comparison and a separately sourced no-catchup distribution scenario.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES   <dates, agreement clauses used, currency, scale>
+  BRIDGE COMPARISON         <unbridged IRR | bridged IRR | financing cost | both money multiples>
+  HURDLE ACCRUAL            <start date | eligible capital | rate | year fraction | preference | unpaid total>
+  WATERFALL                 <capital returned | preference paid | GP carry | LP cash | first-tier shortfall>
+  RECONCILIATION            <parts equal cash available: yes or no; bridge cost counted once>
+  MISSING                   <inputs not given>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - Investment and exit amounts, with exact annual dates
+    - The bridge length, cost and call date
+    - The hurdle clause and the carry share
+    - The cash available to distribute
+  prerequisites:
+    - An AI that can read files
+    - The fund agreement pages that define the hurdle
+  output:
+    - name: outputs/step-1-subscription-line-timing-checker.md
+      contains: Returns and money multiples with and without the bridge, plus the financing cost.
+    - name: outputs/step-2-preferred-return-accrual-checker.md
+      contains: The hurdle start, eligible capital, year fraction, preference and unpaid total.
+    - name: outputs/step-3-no-catchup-waterfall-checker.md
+      contains: Capital returned, preference paid, GP carry, LP cash and any shortfall.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,13 +95,25 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads long documents
+      why: The hurdle clause decides the answer. In plain chat, paste the exact wording.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The last fund statement, to check the capital balances.
+    - The credit line terms for the bridge cost.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Subscription line
+    meaning: A loan to the fund that lets it pay for deals before it calls money from investors.
+  - term: Preferred return
+    meaning: The yearly return investors get first, before the GP takes carry. Also called the hurdle.
+  - term: Carry
+    meaning: The share of profit the fund manager keeps after investors get their capital and preference.
+  - term: Catch-up
+    meaning: A step that lets the GP take extra profit until it has its full share. This workflow has none.
+  - term: LP and GP
+    meaning: LPs put in the money. The GP runs the fund.
+before: []
+next:
+  - check-a-no-catchup-fund-distribution
+  - reconcile-private-fund-fee-charges
+  - reconcile-a-private-fund-capital-call
+  - investor-statement-nav-checker

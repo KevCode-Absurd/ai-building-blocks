@@ -1,6 +1,6 @@
 new_slug: pre-shipment-inspection-brief-writer
 name: "Pre-shipment inspection brief writer"
-summary: "Give it your order and tech pack. Get an inspector's brief, a pass rule and payment release terms."
+summary: "Write a pre-shipment inspection brief for your factory order. Get an inspector's checklist, a pass or reject rule and a plan to pay the balance after."
 job: plan-supply-chain
 thinking: low
 thinking_why: "It turns your order and pack into a checklist and a rule. A fast model is enough, and you review the brief before you send it."
@@ -17,6 +17,10 @@ when:
   - Your order is nearly finished and you are about to pay the balance.
   - You are about to ship from a new factory and have never seen the goods.
   - You are weighing whether an inspection is worth the cost for a small order.
+not_for:
+  - "You only have a tiny order or standard stock goods: skip the inspection and order at least 10 percent extra, or ask your bank or an accountant about the risk."
+  - "You have not approved a sample yet: sort the sample first, because the inspector needs it as the standard to check against."
+  - "You need ad copy, image ads or a landing page: this skill does not write them, so use a copywriter or your usual ad tool."
 
 you_give:
   - Your purchase order with quantities and cartons
@@ -35,6 +39,32 @@ how_to_use:
   - Ask two or three inspection companies for quotes and their sampling standard.
   - Send the brief to the inspector and agree the pass rule with the factory before the check.
   - When the report arrives, follow the rule. Release the balance only on a pass, and save the report.
+output_sample:
+  input:
+    - Your purchase order with quantities and cartons
+    - Your tech pack and the approved sample
+    - "Your payment terms: deposit and balance"
+    - The inspection company's price quote (optional)
+  prerequisites:
+    - An approved sample and a tech pack from the factory
+    - A third-party inspection company to do the check
+  output:
+    - name: Inspection brief
+      contains: Where and when to check, total units and cartons, and the sample size your inspector says they will use.
+    - name: Check each sampled unit
+      contains: Each measure, weight, color code and label with a target and an allowed gap.
+    - name: Check packaging and cartons
+      contains: Packaging, labels, carton weight, carton count and barcodes to check, plus the photos required.
+    - name: Decision rule
+      contains: What counts as pass, rework or reject, written before the report arrives.
+    - name: Payment plan
+      contains: The deposit now and the balance paid only when the report passes.
+    - name: Payment route
+      contains: Two views on how to pay, laid out so you can choose.
+    - name: If you skip inspection
+      contains: How many extra units to order, at least 10 percent more than you need.
+    - name: Missing and checks missed
+      contains: What you did not give, and any checks that failed, or none.
 
 how_it_works:
   - title: Sets the timing

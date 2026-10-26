@@ -1,6 +1,6 @@
 new_slug: reference-product-photos
 name: Reference-style product photo maker
-summary: Attach your product and a photo you like. Get a matching prompt and ranked pictures.
+summary: Make product photos that match a look you like. Attach your product and one reference photo. Get an image prompt and ranked pictures.
 job: product-photos
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a few pack shots and need more photos for ads, emails or your product page.
   - You've seen a photo whose light and mood you want on your own product.
   - You want a bold camera look, such as blind shadows or tilt-shift, for a feed ad.
+not_for:
+  - "You need one single hero shot for a product page: make that one picture by hand, or use a photographer."
+  - "Your product has no true photo yet: take clear photos of the real product first, because this skill never invents the product."
+  - "You want a finished ad with words and a logo: use a design tool, then add the words to the photo this skill makes."
 you_give:
   - Real photos of the exact product and variant
   - One photo whose look you want to copy (your own, a past ad, or any photo you like), or the name of a camera look
@@ -32,6 +36,28 @@ how_to_use:
   - Attach the photo whose look you want, and say what the new picture is for, such as "email header, words added later".
   - Read the reading. If a line is wrong (the sun comes from the right, not the left), correct it before you use the prompt.
   - Make one picture first (ChatGPT and Gemini can make images; with Claude, paste the prompt into your image tool). Compare it with your real photo at full size before making more.
+output_sample:
+  input:
+    - Real photos of your exact product and variant
+    - One photo whose look you want to copy, or the name of a camera look
+    - What the picture is for and where it will go
+    - Your brand colours and what you never show (optional)
+  prerequisites:
+    - An AI that can read attached photos
+    - An AI or image tool that can make pictures, if you want ranked results (optional)
+  output:
+    - name: Reading
+      contains: Light, camera, set, frame and finish of your reference photo, each described the way a photographer would rebuild it.
+    - name: Keep / Swap / Drop
+      contains: A line for each part of the reading, plus how the product is shown, its size, angle and quiet area.
+    - name: Prompt
+      contains: The image prompt with roles for each attached photo, the scene, your product, camera, light, finish and what must stay the same.
+    - name: Ranked
+      contains: Your made pictures scored out of 100 for a feed ad or a page or email, with the job of each.
+    - name: Rejects
+      contains: Pictures that failed a gate, with the gate each one failed.
+    - name: Checks missed
+      contains: When no pictures were made, any of the four checks the prompt still missed.
 how_it_works:
   - title: Writes down your product
     text: Records exactly how your product looks, so it knows the shape, colours, printed words and how the product is used.

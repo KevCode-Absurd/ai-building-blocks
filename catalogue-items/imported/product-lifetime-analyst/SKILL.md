@@ -12,6 +12,44 @@ metadata:
 Fit and evaluate probability distributions for use in reliability workflows in MATLAB using the recommended APIs and probability distribution framework 
 (`fitdist`, `makedist`, `pdf`, `icdf`, `cdf`, `probplot`, `bootci`, `fitacclife`, `meanfailtime`).
 
+## What you need
+
+- Failure or test times, one per unit, in one unit of time (hours, cycles, days). Say which.
+- Which units had not failed when the test or observation ended (optional). These are "censored" and must be marked, or the life estimate comes out too short.
+- Stress levels per unit, for accelerated tests (optional), such as temperature or voltage, and the normal operating level you want to predict for.
+- MATLAB with the Statistics and Machine Learning Toolbox (paid software). `fitacclife` and `meanfailtime` need MATLAB R2026a or later. Everything else here needs an earlier release.
+
+MATLAB has to run the code. If you are in a chat that cannot run MATLAB, write the code, say it is untested, and ask the user to run it and paste back the numbers and any error.
+
+If the failure times are missing, ask once. If it is still unclear which units were censored, ask once, then write `MISSING: censoring flags` and treat all units as failed only if the user says so. Never invent failure times or sample data for the user's answer.
+
+## Steps
+
+1. Check the data: number of units, number failed, number censored, and the time unit. Say so back in one line.
+2. Fit the candidate distributions (Weibull, lognormal, exponential at least) with `fitdist`, passing `Censoring=cens` when any unit is censored.
+3. Compare the fits with AIC (and BIC if asked), then probability plots, PDF and CDF overlays. Run goodness-of-fit tests only on uncensored data.
+4. Pick the best fit and say why in one or two sentences. If two fits are close, say so and show both.
+5. Compute the figures asked for: mean time to failure (MTTF), B10 life (time by which 10 percent have failed), failure rate, survival curve. Use bootstrap intervals (`bootci`) for each, refitting with the censoring flags.
+6. For accelerated tests, fit with `fitacclife`, then report mean life at the normal operating level with `meanfailtime`.
+7. Save the code as a script file the user can rerun.
+
+## Output
+
+Return, in this order:
+
+1. **Data check**: units, failed, censored, time unit.
+2. **Fit comparison table**: distribution, number of parameters, AIC, fitted parameters, sorted by AIC. A one-line pick and the reason.
+3. **Life figures table**: MTTF and B10 (and any others asked for), each with a bootstrap confidence interval and the number of resamples used.
+4. **Plots**: probability plots, a survival curve (Kaplan-Meier when censored), and the PDF or CDF overlay. Name each figure.
+5. **Script**: the MATLAB code, ready to rerun.
+6. **Cautions**: for example few failures, heavy censoring, or fits that are close.
+
+## Checks
+
+- The code uses the distribution objects and the functions named below, and uses `cdf(pd, x, "upper")` for survival, never `1 - cdf(...)`.
+- Censoring is passed to every fit and every bootstrap refit when the data has censored units.
+- No figure is quoted that the code did not produce. If the user has not run the code, label numbers as not yet computed.
+
 ## When to Use
 
 Activate this skill when a user asks to:
@@ -77,6 +115,7 @@ When determining the best life distribution for failure data, fit multiple candi
 **Step 1: Fit multiple candidates**
 ```matlab
 % Fit candidate life distributions
+% If any unit is censored, add Censoring=cens to each fitdist call below.
 pdWeibull = fitdist(failureTimes, "weibull");
 pdLognormal = fitdist(failureTimes, "lognormal");
 pdExponential = fitdist(failureTimes, "exponential");
@@ -114,7 +153,7 @@ figure
 tiledlayout(1, numel(distributions))
 for i = 1:numel(distributions)
     nexttile
-    probplot(distNames[i],failureTimes)
+    probplot(distributions{i})
     title(distNames(i))
 end
 ```
@@ -263,3 +302,7 @@ If `fitacclife` emits convergence warnings, try providing initial parameter esti
 Copyright 2026 The MathWorks, Inc.
 
 ----
+
+## Credit and licence
+
+Written by MathWorks (matlab-agentic-toolkit). The files in this folder are under the BSD 2-Clause licence in `LICENSE.md`. The front matter above points to MathWorks' own licence page for the same toolkit. Keep the credit to MathWorks when you reuse it. The MATLAB software itself is a separate paid product with its own licence.

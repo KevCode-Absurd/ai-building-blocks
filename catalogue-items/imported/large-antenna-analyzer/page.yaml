@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Large structures need careful solver choices.
 new_slug: large-antenna-analyzer
 name: Large antenna analyzer
-summary: Describe a dish or reflector antenna. Get a built model with patterns
-  and performance checked.
+summary: Design a dish or reflector antenna in MATLAB and check its gain and radiation pattern. Give it the antenna type and frequency. You get a built model.
 job: build-software
 headline: Large antenna analyzer
-subhead: Describe a dish or reflector antenna. Get a built model with patterns
-  and performance checked. Bring antenna type and frequency. Use the result to
-  plan your next step.
+subhead: Describe a dish or reflector antenna. Get a built model with patterns and performance checked. Bring antenna type and frequency. Use the result to plan your next step.
 explain: |
   A working model of a dish or reflector antenna, with the radiation pattern and performance checked. Describe what you need: a parabolic dish, a Cassegrain or Gregorian pair, an offset reflector, a reflectarray, or an antenna mounted on a vehicle, ship or satellite. It can also compute radar cross section.
 
@@ -18,6 +15,10 @@ when:
   - You want to compare a Cassegrain setup with an offset-fed one.
   - You need to know how a vehicle body changes your antenna pattern.
   - You must estimate radar cross section for a shape.
+not_for:
+  - "You want a single antenna element or a small array with no dish or platform: use matlab-design-antenna, which is a separate MATLAB skill."
+  - "You need impedance matching, measured antenna data, radio propagation or SAR: use matlab-integrate-antenna, which is a separate MATLAB skill."
+  - "You have no MATLAB with Antenna Toolbox: ask an RF engineer, or use a simple dish calculator for a rough gain figure."
 you_give:
   - Antenna type and frequency
   - Dish size and focal setup
@@ -29,8 +30,30 @@ you_get:
   - Solver choice with a reason
   - Performance numbers such as gain
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Antenna Toolbox.
+  - Open an AI that can run MATLAB code, and make sure MATLAB has the Antenna Toolbox licence.
+  - Paste the skill text into the chat, or add the skill folder if your AI accepts files.
+  - "Say what you need: antenna type, frequency, dish size and focal setup. Add a platform file if the antenna sits on a vehicle, ship or satellite."
+  - Let your AI write and run the MATLAB scripts. Ask it to show each plot in its own figure.
+  - Check the gain, beamwidth and solver reason in the result. Ask for changes to size or feed, then run again.
+output_sample:
+  input:
+    - Antenna type, such as parabolic dish, Cassegrain, offset reflector or reflectarray
+    - Your frequency
+    - Dish size and focal setup, if you have them (optional)
+    - A platform file in STL, STEP or IGES format (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the Antenna Toolbox licence
+  output:
+    - name: Antenna model
+      contains: The reflector, reflectarray or platform antenna built with your type, frequency, size and feed.
+    - name: Solver choice
+      contains: Which solver was used, such as MoM-PO, PO, MoM or FMM, and why it suits the size.
+    - name: Mesh settings
+      contains: The mesh detail used for the chosen solver, set before the analysis runs.
+    - name: Pattern plots
+      contains: Radiation pattern plots so you can check beam shape and sidelobes.
+    - name: Metrics report
+      contains: Key results with units, such as gain, beamwidth, f/D ratio and aperture size in wavelengths.
+    - name: RCS result
+      contains: Peak radar cross section in dBsm, where it occurs and the polarization, when you ask for it.

@@ -1,6 +1,6 @@
 new_slug: brain-dump-sorter
 name: Brain dump sorter
-summary: Paste everything on your mind. Get tasks, ideas and notes sorted with nothing lost.
+summary: Sort your brain dump into tasks, ideas, notes and questions. Your words stay, you get a top three, and a count shows nothing was lost.
 job: organise-work
 thinking: low
 thinking_why: It sorts what you pasted into fixed groups with few judgement calls.
@@ -11,6 +11,10 @@ when:
   - Your head is full and you cannot tell where to start.
   - You have a long list of notes from the week.
   - You want to act on a list, not rewrite it.
+not_for:
+  - "You have one choice to make: write down the options and talk it through with your AI or a trusted person."
+  - "You need a formal project plan with dates and owners: use a project planning tool or a plain spreadsheet."
+  - "You want a tidy rewrite of your notes: ask your AI to edit them. This prompt keeps your own words."
 you_give:
   - Your dump, in any order
   - What matters this week (optional)
@@ -23,6 +27,25 @@ how_to_use:
   - Under it, paste everything on your mind, as it is.
   - Send it and read the result.
   - Run it again each Friday with the week's loose notes.
+output_sample:
+  input:
+    - Your brain dump, pasted as it is, in any order
+    - What matters this week (optional)
+  output:
+    - name: TASKS
+      contains: One clear next action per task, each starting with a verb, in your own words.
+    - name: PROJECTS AND IDEAS
+      contains: Related items grouped under a short title.
+    - name: NOTES
+      contains: Facts to keep, with no action attached.
+    - name: QUESTIONS
+      contains: Things you need to decide or find out.
+    - name: TOP THREE
+      contains: The three items to act on this week, picked from what matters or from dates.
+    - name: COUNT
+      contains: How many items went in and how many came out, which must match.
+    - name: MISSING
+      contains: Any gap, such as what matters this week if you gave none.
 how_it_works:
   - title: Split
     text: Every thought becomes one item, in your words.

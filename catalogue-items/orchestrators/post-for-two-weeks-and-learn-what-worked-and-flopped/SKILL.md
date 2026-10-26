@@ -48,12 +48,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Social post planner.** Use the skill `social-post-planner`. Starts from your platforms and goal and writes the posts you will publish.
-2. **Shareable content checker.** Use the skill `shareable-content-checker`. Give it the copy draft from the steps before. Reads the posts from the step before, so you fix the weakest before they go out.
+2. **Shareable content checker.** Use the skill `shareable-content-checker`. Give it the copy draft from the steps before. Reads the posts from step 1. You fix the weakest ones with its report, then publish; the report is not read again after the two weeks.
 
 Pause here: Post for two weeks, then export your post numbers: reach, likes, comments, shares and clicks. You post and export.
 
-3. **Social media results analyst.** Use the skill `social-media-results-analyst`. Fresh start after the two weeks: reads your real numbers and ranks the posts.
-4. **Flop post diagnoser.** Use the skill `flop-post-diagnoser`. Give it the copy draft from the steps before. Takes the worst post from the ranking, which started as one of the drafts from step one, and says why it failed.
+3. **Social media results analyst.** Use the skill `social-media-results-analyst`. Fresh start after the two weeks: uses the numbers you export, not step 2's report. It ranks the posts and hands step 4 the ranking and the weakest post.
+4. **Flop post diagnoser.** Use the skill `flop-post-diagnoser`. Give it the copy draft and the audit report from the steps before. Takes the weakest post and its numbers from step 3's ranking, and its text from the drafts in step 1, and says why it failed.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -1,6 +1,6 @@
 new_slug: bestseller-shopping-campaign-builder
 name: "Bestseller Shopping campaign builder"
-summary: "Give it your bestsellers and brand name. Get Shopping settings, product group steps and brand negatives."
+summary: "Build a Google Shopping campaign around your 5 to 10 bestsellers. Get settings, product group steps and brand negatives in one sheet."
 job: run-google-ads
 thinking: low
 thinking_why: "It follows a fixed setup with a short product list, so a small, fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You are starting Google Shopping for the first time and your account has no data.
   - Your Shopping spend is spread over many products and few of them sell.
   - You want a cold-traffic Shopping campaign that leaves brand searches to the branded campaigns.
+not_for:
+  - "Your account already has Shopping data and you want to tune it: use the Shopping campaign tuner."
+  - "You want a feed-only setup with less control: use the Feed-only Performance Max builder."
+  - "You want ads for brand searches: use the Branded Search and Shopping builder."
 
 you_give:
   - Your list of 5 to 10 bestsellers with prices
@@ -36,6 +40,31 @@ how_to_use:
   - Give your brand name with its misspellings and product-line names.
   - Build the campaign, then check the menu names against your live account, since Google and Shopify move them.
   - Every week, exclude products that took clicks and spend and did not sell.
+output_sample:
+  input:
+    - Your 5 to 10 bestsellers with prices
+    - Your brand name, misspellings and product-line names
+    - Your daily budget and average order value
+    - Whether Merchant Center is connected and products approved
+    - Your Shopping export (optional)
+  prerequisites:
+    - A Google Ads account linked to Merchant Center with approved products
+    - Your store connected to Google, such as Shopify with the Google and YouTube app
+  output:
+    - name: FIT
+      contains: Whether your feed and tracking are ready, and a note on your budget against your price.
+    - name: SETTINGS
+      contains: Objective, goal, campaign type, name, bidding steps, CPC cap, networks, location, devices and priority.
+    - name: PRODUCT GROUPS
+      contains: Click-by-click steps to split by Item ID, pick your bestsellers and exclude everything else.
+    - name: BRAND NEGATIVES
+      contains: Exact-match negative keywords for your brand name, misspellings and product lines.
+    - name: WEEKLY RULE
+      contains: A rule to exclude products that get clicks and spend but no sales.
+    - name: NEXT CAMPAIGNS
+      contains: When to add an all-products campaign to find winners, and a branded Shopping campaign.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none, plus anything missing from your inputs.
 
 how_it_works:
   - title: Checks the setup

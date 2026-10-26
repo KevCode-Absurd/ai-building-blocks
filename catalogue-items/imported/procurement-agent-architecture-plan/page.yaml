@@ -2,19 +2,58 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: procurement-agent-architecture-plan
 name: Procurement agent architecture plan
-summary: Share your buying process and rules. Get a plan for AI roles, supplier
-  checks and human approval of awards.
+summary: Plan procurement automation for your RFP and vendor process. Get six AI agent roles, checks on suppliers, and human sign-off on awards.
 job: plan-supply-chain
 headline: Procurement agent architecture plan
-subhead: Use this reference pattern to plan procurement automation around your
-  own systems and approval rules. It describes agent roles and connections. It
-  needs implementation, access controls and testing before it can run; the
-  source links to an optional commercial blueprint service.
+subhead: Give your AI your buying process and rules. It adapts a six-agent plan to your setup, with people approving the key steps. It is a plan to build from. It does not run purchases for you.
 when:
-  - You are designing procurement automation and need an architecture pattern to
-    adapt.
+  - You want to automate how your team handles RFPs, RFQs or RFIs.
+  - You need a clear way to split supplier checks, scoring and messages between AI roles.
+  - You must decide where people approve work before it moves on.
+  - You are comparing automation ideas before you ask a developer to build.
+not_for:
+  - "You have one RFP and no plans to automate: score the bids by hand in a sheet, or ask a colleague to review them."
+  - "You need a build-ready plan with a business case and costs: use the full Agent Blueprint service, or ask your internal team for a review."
+  - "You want an AI to pick the winning supplier: this plan only recommends. People must approve every award."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather the items in the list above. Missing items are fine, but say so.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - Paste your documents and rules. Ask your AI to adapt the six agent roles to your process.
+  - Check that people approve the requirements, shortlist, award and outside messages.
+  - Share the plan with your team or a developer. They must build, secure and test it before use.
+output_sample:
+  input:
+    - Your RFx documents, such as the scope of work, specs and past contracts
+    - Your approval limits and buying rules
+    - Your current supplier list (optional)
+    - The systems you use to buy, such as your procurement or document tools (optional)
+  prerequisites:
+    - You must build and test any agents yourself. This page gives a plan, not working software.
+  output:
+    - name: Intake Agent
+      contains: Reads the request and documents, builds the RFx record, and sends work to the other agents.
+    - name: Requirements Agent
+      contains: Checks requirements for gaps and conflicts, and builds a weighted requirements matrix and scoring rubric.
+    - name: Vendor Matching Agent
+      contains: Suggests a supplier shortlist with reasons, past results, and a list of suppliers left out and why.
+    - name: Compliance Agent
+      contains: Checks policy, rules and insurance needs, and keeps a record of every check.
+    - name: Evaluation Agent
+      contains: Scores supplier answers, compares them, recommends an award, and notes where the pick is not the strongest.
+    - name: Communication Agent
+      contains: Drafts invitations, question replies, award and regret notices, and deadline reminders.
+    - name: Human approval points
+      contains: Where people confirm requirements, the shortlist, the award and every message sent outside.
+    - name: Connections and metrics
+      contains: The systems each agent needs, plus measures such as cycle time and compliance pass rate.
+you_give:
+  - Your RFx documents, such as the scope of work, specs and past contracts.
+  - Your approval limits and buying rules.
+  - Your current supplier list (optional).
+  - The systems you use to buy, such as your procurement or document tools (optional).
+you_get:
+  - Six agent roles, each with its inputs, results and decision rules.
+  - A map of which agent hands work to which.
+  - Four points where a person must approve before work moves on.
+  - A list of systems each agent needs to connect to.
+  - Measures to track and common mistakes to avoid.

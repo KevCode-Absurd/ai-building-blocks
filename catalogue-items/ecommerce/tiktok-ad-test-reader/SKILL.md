@@ -30,7 +30,7 @@ How to start:
 ## What you need
 - **Numbers per ad** (required): spend, impressions, click-through rate (CTR), watch time (as the share of the video people watch, as TikTok reports it), CPM, CPC, cost per add to cart and cost per purchase. Ask for what they have.
 - **Time since launch** (required): hours or days each ad has run.
-- **Audience used** (required): broad, interest, lookalike or retargeting, for each ad group.
+- **Audience used** (required): broad, interest, lookalike or retargeting, for each ad group. If the starter campaign plan is here, take the audiences, budgets and cost target from it.
 - **Break-even cost per sale** (strongly advised): the most they can pay for one purchase. Without it, the $30 line below is only the source's number.
 - **Price and consideration time** (optional): a high price or long buying time changes how long to wait.
 

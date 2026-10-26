@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It walks eight stages in order with sign-offs.
 new_slug: toolbox-packager
 name: Toolbox packager
-summary: Give it MATLAB code. Get a published toolbox file, built in checked
-  stages from scope to release.
+summary: Turn your MATLAB code into an installable toolbox file. Your AI guides you through eight checked stages, from scope to release.
 job: ship-and-host
 headline: Toolbox packager
-subhead: A folder of MATLAB code turned into a toolbox file that others can
-  install in one click. Instead of guessing what a clean release needs, you move
-  through checked stages and approve each before the next begins.
+subhead: A folder of MATLAB code turned into a toolbox file that others can install in one click. Instead of guessing what a clean release needs, you move through checked stages and approve each before the next begins.
 explain: |
   A folder of MATLAB code turned into a toolbox file that others can install in one click. Instead of guessing what a clean release needs, you move through checked stages and approve each before the next begins.
 
   First it defines the public functions you offer. It then maps dependencies, optionally sets up a MATLAB project, and writes documentation: a readme, function hints, a getting-started guide and examples. Next comes a build plan with code checks, tests and coverage, followed by a readiness check that ends in a go or no-go list. Only then does it build the .mltbx file. It does not compile standalone apps or package a single script.
 when:
   - You want to share your MATLAB code as an installable toolbox.
-  - Colleagues keep asking for your scripts and you are tired of emailing
-    folders.
+  - Colleagues keep asking for your scripts and you are tired of emailing folders.
   - You need to know if your code is ready for release.
   - Your toolbox lacks documentation and examples.
+not_for:
+  - "You want a standalone app or a web app from your MATLAB code: use MATLAB Compiler, which is made for that."
+  - "You only need docs or a MATLAB project, not a toolbox file: ask your AI to write those directly."
+  - "You want to share one script or function: send the file itself, no toolbox needed."
 you_give:
   - The folder with your MATLAB code
   - What the toolbox does and who it is for
@@ -30,8 +30,34 @@ you_get:
   - A readiness punch list
   - A built .mltbx toolbox file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open an AI that can run MATLAB on your computer. This skill needs a MATLAB licence and a link between your AI and MATLAB.
+  - Paste the skill into the chat, or add its folder to your AI tool.
+  - Tell your AI the path to your code folder and what the toolbox is for.
+  - Work through each stage. Read what it made and say yes before it moves on.
+  - Fix anything on the readiness list, then let it build the toolbox file.
+  - After release, install the file on a clean copy of MATLAB to check it works.
+output_sample:
+  input:
+    - The folder with your MATLAB code
+    - What the toolbox does and who it is for
+    - Your yes or no at each checkpoint
+  prerequisites:
+    - An AI that can run MATLAB on your computer
+    - A MATLAB licence (a paid product from MathWorks)
+  output:
+    - name: Interface Spec
+      contains: The public functions your toolbox offers, for you to review and approve.
+    - name: Dependency Manifest
+      contains: The files and products your code needs to run.
+    - name: MATLAB project
+      contains: An optional project set up for your toolbox folder.
+    - name: Documentation
+      contains: A readme, function hints, a getting-started guide, examples and a demos file.
+    - name: Build plan
+      contains: The steps for code checks, tests, coverage and packaging.
+    - name: Readiness punch list
+      contains: A go or no-go list of what to fix before release.
+    - name: Toolbox file
+      contains: The built .mltbx file that others can install.
+    - name: Pipeline Complete summary
+      contains: A closing note on what was built and published.

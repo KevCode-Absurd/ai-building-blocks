@@ -1,6 +1,6 @@
 new_slug: brand-social-account-checker
 name: "Brand social account checker"
-summary: "Give it your accounts and posts. Get a score out of 100 and a fix per rule."
+summary: "Check your social media account setup against eight rules. Get a pass or fix for each, a score out of 100 and the order to fix them in."
 job: grow-social
 thinking: low
 thinking_why: "It compares a short list of facts to a short list of rules. A small, fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You started a store account and you are not sure it is set up the right way.
   - Your posts get few views and you want to rule out setup problems first.
   - You post to five or six platforms and wonder where to focus.
+not_for:
+  - You have no live posts or accounts yet. Start with one creator account and come back once you have posted about 20 times.
+  - You want to judge video quality, hooks or scripts. Ask a person you trust for a creative review, because this checks setup only.
+  - You want to know why one ad failed. Look at the ad in your ads manager instead, as this does not read ad results.
 
 you_give:
   - The list of your accounts and their type (creator, business or shop)
@@ -36,6 +40,38 @@ how_to_use:
   - Paste the topics of your last 20 posts, one line each.
   - Fix the first item in the order it gives. Change one thing at a time.
   - Test the bigger changes, such as country or scheduler, on one account before you change them all.
+output_sample:
+  input:
+    - Your list of accounts and their type (creator, business or shop)
+    - The country each account was made in, and where your customers are
+    - How you publish posts (by hand, scheduler or the app's own scheduling)
+    - The topics of your last 20 posts
+    - Your team size (optional)
+  output:
+    - name: R1 account type
+      contains: Pass or fix on whether your videos go out from a creator account, with a reason.
+    - name: R2 country
+      contains: Pass or fix on whether the account country matches the country you sell to.
+    - name: R3 posting method
+      contains: Pass or fix on whether you post by hand, with a note to test it first.
+    - name: R4 platforms
+      contains: Pass or fix on whether TikTok and Instagram lead and any other platform has a reason.
+    - name: R5 one hero platform
+      contains: Pass or fix on whether you focus on one main platform plus email.
+    - name: R6 topic discipline
+      contains: Pass or fix on how many of your last 20 posts share one topic and one buyer.
+    - name: R7 outbound links
+      contains: Pass or fix on whether any post sends people to another social platform.
+    - name: R8 on-target ideas
+      contains: Pass or fix on whether your posts are things your core buyer would value.
+    - name: Score
+      contains: Your points out of 100 now, the sum shown, and the score after the fixes.
+    - name: Fix order
+      contains: Each fix in order, with one change and which account to test it on first.
+    - name: Keep for 6 months
+      contains: The one platform to focus on, plus email.
+    - name: Not checked
+      contains: Any rule it could not check, and what it needs to check it.
 
 how_it_works:
   - title: Checks account type

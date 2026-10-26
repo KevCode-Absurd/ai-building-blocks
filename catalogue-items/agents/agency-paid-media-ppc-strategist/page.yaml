@@ -1,0 +1,150 @@
+name: PPC Campaign Strategist agent
+summary: Plan or rebuild a Google Ads search account. Get a campaign structure, bid strategy, budget split and test plan to review before you spend.
+headline: PPC Campaign Strategist agent
+subhead: Give it your goal, budget, sales results and current campaigns if you have them. It plans how to split campaigns, which bid strategy fits your data and where the money should go. You get a written plan, a test list and the checks to run before you change anything.
+job: run-google-ads
+thinking: high
+thinking_why: It weighs structure, bids and budget against how much data you have, and a wrong call costs real money. Use a model that reasons well and says when data is too thin.
+explain: |-
+  A PPC campaign plan (also called a Google Ads account structure or paid search strategy) is where most spend is won or lost. Structure decides what each campaign can learn, which budget it gets and which keywords compete with each other. This agent treats structure as the strategy, not as a filing system.
+
+  It starts with your goal and your numbers. What is a sale or lead worth, and what can you pay for one? How many conversions did the account get in the last month? That count decides which bid strategy is safe. With few conversions, an automated target can stall. With plenty, it can work well. The agent says which side you are on and why.
+
+  Then it designs the structure. It separates brand searches from non-brand ones, so cheap brand clicks do not hide weak results elsewhere. It picks campaign types such as Search, Shopping or Performance Max only where they fit, and says how they could overlap. It sets a budget split, lists the negative keywords to block and names the conversion actions the account should count.
+
+  It ends with a test list. Each test has one change, one measure and a rule for when to stop. It does not make changes in your account. The plan is for you to review, and a person approves any spend.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to launch Google Ads for a shop, service or app and need a structure before you spend.
+  - Your account has grown messy, with overlapping campaigns, and you need a cleaner layout.
+  - Costs per sale rose and you want to know if structure, bids or budget is the cause.
+  - You want to add Shopping or Performance Max and need to know how it affects your Search campaigns.
+not_for:
+  - You want a review of an account that is already running. Use the Paid Media Auditor agent.
+  - You want to sort one search terms report into winners and junk. Use the Search Query Analyst agent or the Search term sorter.
+  - You want to change the live account. It prepares a plan only, and a person must approve and make changes in Google Ads.
+  - You want plans for Meta or TikTok ads. Use the Paid Social Strategist agent.
+you_give:
+  - Your goal and what a sale or lead is worth, with the cost per sale you can pay
+  - Your monthly budget and the countries or areas you sell in
+  - What you sell, with your main products or services and your site link
+  - Account results for the last one to three months, such as spend, clicks, sales and sales value (optional)
+  - Your current campaign list or an export of it (optional)
+you_get:
+  - A campaign structure with a reason for each campaign
+  - A bid strategy choice for each campaign, based on how much data you have
+  - A budget split across campaigns, with the thinking behind it
+  - A keyword and negative keyword plan
+  - A test list with one change, one measure and a stop rule for each test
+  - A list of checks to run before you launch or change anything
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Tell it your goal, budget, what you sell, where you sell and what a sale is worth. Paste your results and campaign list if you have them.
+  - Type "Make the plan. Say which numbers you used and which you assumed. Do not change anything."
+  - Read the bid strategy section first. Check that the conversion counts it used match your Google Ads report.
+  - Fix any numbers it marked MISSING, then ask it to run the plan again.
+  - Make the changes in Google Ads yourself, one at a time, starting with the first test.
+how_it_works:
+  - title: Set the goal and limits
+    text: It confirms what a sale is worth, the cost you can pay and the budget. Missing numbers are asked once, then marked MISSING.
+  - title: Read your data
+    text: It reads the results you gave and counts conversions to see how much the account can learn.
+  - title: Choose the structure
+    text: It splits brand from non-brand, picks campaign types that fit and notes where they could overlap.
+  - title: Pick the bid strategy
+    text: It matches each campaign to a bid strategy by conversion volume, and says when to stay manual or move to a target.
+  - title: Split the budget
+    text: It shares the budget across campaigns, with room to move money after the first results.
+  - title: Plan tests and checks
+    text: It lists tests with one change, one measure and a stop rule, then the checks to finish before launch.
+output_shape: |-
+  PLAN BASIS
+    Goal <what> | Value of a sale or lead <amount or MISSING> | Cost you can pay <amount or MISSING> | Budget <amount per month> | Areas <list> | Conversions last month <number or MISSING>
+
+  CAMPAIGN STRUCTURE
+    <campaign> | <type> | <what it covers> | <why it exists> | <risk of overlap>
+
+  BID STRATEGY
+    <campaign> | <strategy> | <target if any> | <why this fits the data> | <when to change it>
+
+  BUDGET SPLIT
+    <campaign> | <share of budget> | <reason> | <what would move it>
+
+  KEYWORDS AND NEGATIVES
+    <campaign> | <keyword themes> | <match approach> | <negatives to start with>
+
+  CONVERSIONS TO COUNT
+    <action> | <primary or secondary> | <why>
+
+  TEST LIST
+    <test> | <one change> | <one measure> | <stop rule>
+
+  CHECKS BEFORE LAUNCH
+    <item> | <owner>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <item>
+output_sample:
+  input:
+    - Your goal, what a sale or lead is worth and the cost you can pay
+    - Your monthly budget and the areas you sell in
+    - What you sell and your site link
+    - Results for the last one to three months (optional)
+    - Your current campaign list (optional)
+  prerequisites:
+    - A Google Ads account, or a plan to open one
+  output:
+    - name: Plan basis
+      contains: The goal, value of a sale, budget, areas and conversion count the plan rests on.
+    - name: Campaign structure
+      contains: Each campaign with its type, what it covers and why it exists.
+    - name: Bid strategy
+      contains: A bid strategy for each campaign, matched to your conversion volume, with when to change it.
+    - name: Budget split
+      contains: Each campaign's share of budget, the reason and what would move it.
+    - name: Keywords and negatives
+      contains: Keyword themes and starting negative keywords for each campaign.
+    - name: Test list
+      contains: Tests with one change, one measure and a stop rule each.
+    - name: Checks before launch
+      contains: What to finish and confirm before you spend, and who does it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a campaign export or a results report next to your goals. No Google Ads connection is needed.
+  inputs:
+    - A campaign settings export from Google Ads.
+    - A list of your best-selling products or services, with margins.
+    - Your last season's results, if sales rise and fall through the year.
+terms:
+  - term: Account structure
+    meaning: How campaigns, ad groups and keywords are laid out, which decides how budget and learning are shared.
+  - term: Bid strategy
+    meaning: The rule Google uses to set your bids, such as aiming for a cost per sale or a return on spend.
+  - term: Negative keyword
+    meaning: A word or phrase that stops your ad from showing on searches that contain it.
+  - term: Performance Max
+    meaning: A Google campaign type that shows ads across Search, YouTube, Shopping and more from one setup.
+  - term: Conversion
+    meaning: An action you count as a win, such as a sale or a form sent.
+tweaks:
+  - what: Scope
+    how: Ask for one part at a time, such as structure first, then bids. A full rebuild in one go can be vague.
+  - what: Platforms
+    how: Say which ad platforms you use. The plan stays on Google Ads unless you ask for Microsoft or Amazon.
+  - what: Risk
+    how: Say how much you can lose while testing. It will size the tests and budget to match.
+improve:
+  - Keep the plan with your results and note what each test showed, then ask for the next round.
+  - Add your real margins and sales rules so cost targets stay accurate.
+  - Pair it with the Search Query Analyst agent after a month of data to trim waste.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

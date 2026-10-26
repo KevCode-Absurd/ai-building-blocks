@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It has to judge patterns and keep facts apart from guesses.
 new_slug: competitor-ad-teardown-writer
 name: Competitor ad teardown writer
-summary: Name your rivals. Get a report on their public ads and landing pages,
-  with proof apart from guesses. Collects data from websites.
+summary: Name your rivals and get a competitor ad teardown of their public Meta and Google ads and landing pages, with proof kept apart from guesses.
 job: study-competitors
 headline: Competitor ad teardown writer
-subhead: A report on what your rivals are running in ads and where those ads
-  send people, with what you can prove kept apart from what you are guessing.
+subhead: A report on what your rivals are running in ads and where those ads send people, with what you can prove kept apart from what you are guessing.
 explain: |
   A report on what your rivals are running in ads and where those ads send people, with what you can prove kept apart from what you are guessing. A long-running ad hints at money being spent on it, but the public library cannot confirm that.
 
@@ -17,6 +15,10 @@ when:
   - A rival's ads changed and you want to see the new angle.
   - You need fresh hook ideas based on what is running now.
   - You want to find the weak spots in a competitor's funnel.
+not_for:
+  - Your market is new and rivals run no public ads. Talk to customers or ask sales people instead.
+  - You need real spend or sales numbers. Public ad libraries do not show them, so use your own sales data or customer interviews.
+  - You only want to fix your own ad before it runs. Check it with a person who knows the ad platform's rules.
 you_give:
   - Competitor names and websites
   - Your product and category
@@ -29,8 +31,41 @@ you_get:
   - Evidence marked apart from guesses
   - Gaps and counter ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can browse the web.
+  - Open Claude, ChatGPT or Gemini and turn on web search. This skill needs it to find ad pages.
+  - Paste the skill text into the chat, or upload the skill file.
+  - Add your rivals' names and websites, your product, and the channels to check. Say standard or deep.
+  - Add any landing page links you already found (optional).
+  - Read Coverage first to see what was found. Then check that each claim has a link to an ad or page.
+  - Treat anything marked as a guess as an idea to test, not a fact.
+output_sample:
+  input:
+    - Your rivals' names and websites
+    - Your product and category
+    - "Channels to check: Meta, Google or both"
+    - "Depth: standard or deep"
+    - Landing page links you already spotted (optional)
+  prerequisites:
+    - An AI that can search the web
+  output:
+    - name: Coverage
+      contains: Which rivals, channels and ads were checked, and what could not be found.
+    - name: Executive Summary
+      contains: The main findings on rival ads in a few lines.
+    - name: Meta Ad Analysis
+      contains: Hook patterns, formats and the longest-running ads, marked as performance unknown.
+    - name: Google Ad Analysis
+      contains: Common headline patterns and calls to action in rival search and display ads.
+    - name: Campaign Breakdown
+      contains: Ads grouped into inferred campaigns, each with its visible landing page and funnel steps.
+    - name: Funnel Map
+      contains: The steps a visitor sees from ad to landing page to offer.
+    - name: Budget Allocation Evidence
+      contains: Signs of where a rival may spend, labelled as guesses, not facts.
+    - name: Creative Gap Analysis
+      contains: Angles nobody runs, crowded angles to avoid, and formats left open.
+    - name: Vulnerability Report
+      contains: Weak spots in a rival's ads or funnel, each with its evidence.
+    - name: Recommended Counter-Plays
+      contains: Ideas for how you could answer back (deep pass only).
+    - name: Limitations
+      contains: What public ad libraries cannot show, such as spend and results.

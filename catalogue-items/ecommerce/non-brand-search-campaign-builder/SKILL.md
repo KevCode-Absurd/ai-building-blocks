@@ -40,7 +40,7 @@ How to start:
 This skill runs on its own. All it needs to start is a list of products and what makes them worth buying; everything else makes the result better. If something is missing, ask once in one short message for what you can't work without, then carry on and mark each gap `MISSING:`.
 
 - **Products and key benefits** (required).
-- **Converting search terms** from Shopping or Performance Max (strongly advised). Terms with sales behind them beat terms from a planner.
+- **Converting search terms** from Shopping or Performance Max (strongly advised). Terms with sales behind them beat terms from a planner. If a Search term sorter has already run, use its winners list and negatives as this input.
 - **Offers and landing pages** (advised): free shipping, discount, guarantee, collection page URLs.
 - **Daily budget and bidding stage** (advised).
 - **Brand name and spellings** (advised) to keep brand traffic out.

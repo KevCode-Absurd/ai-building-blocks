@@ -1,0 +1,164 @@
+name: Recruitment Specialist agent
+summary: Plan hiring in China, from job post and Boss Zhipin or Liepin channels to interviews, offer and a labour law check. Give it the role, city and budget.
+headline: Recruitment Specialist agent
+subhead: Give it the role, the city, the number of hires and your budget. It builds a China recruitment plan with a job brief, the hiring sites that fit the level, a screening scorecard, an interview plan and an offer and onboarding checklist. It also lists labour law points to check before you hire.
+job: hire-people
+thinking: high
+thinking_why: The plan mixes channel choices, scoring and labour rules that change by city. Use a model that keeps these apart and marks every rule you must confirm.
+explain: >-
+  Hiring in China works differently from hiring in the US or Europe. Most
+  candidates look for work on local platforms such as Boss Zhipin, Lagou,
+  Liepin, Zhaopin, 51job and Maimai. Each one suits different levels and
+  roles. Labour rules on contracts, probation and social insurance also add
+  traps. This China recruitment agent puts these in one plan, so you pick the
+  right channels and avoid the common mistakes.
+
+
+  It follows the original profile. Agree the role with the hiring manager,
+  and split must-have from nice-to-have so the post does not ask for a
+  unicorn. Choose channels by role level and cost per hire. Score resumes
+  with a fixed scorecard, and use structured interviews so each candidate is
+  judged the same way. It adds an offer and onboarding checklist, and a funnel
+  to track what each channel really delivers.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It is built for
+  hiring in mainland China. It is not legal advice, and the rules it lists
+  can be out of date or differ by city. Check each one with a local adviser.
+  The profile's success targets are goals and not results from AI Blocks.
+when:
+  - You are opening your first office or team in China and need a hiring plan by role, level and city.
+  - A mid-level or senior role is not getting good applicants on Boss Zhipin, and you want to know where else to look.
+  - You need a scorecard and set questions so three interviewers score candidates the same way.
+  - You are planning campus hiring or a management trainee programme and want a calendar.
+not_for:
+  - You hire outside China. Use the Candidate sourcing planner or the New country hiring planner.
+  - You need legal advice on a contract, a probation term or a dismissal. Ask a labour lawyer in your city. Use the Offer letter and non-compete checker for a first read of a letter.
+  - You only want a job post written. Use the Job post writer or the Inclusive job post writer.
+  - You want a stack of real resumes sorted. Use the Applicant shortlist builder, and check your data privacy rules before you paste in candidate details.
+  - You hire a handful of people through friends. A full plan is more than you need. Use the Interview scorecard builder.
+you_give:
+  - The role, its level, the city and the number of people to hire
+  - What the job does and the must-have skills (optional but best), plus your salary range
+  - Your hiring budget and the date you need people to start
+  - Channels you already use and the results you have, such as applicants and hires (optional)
+  - Whether it is campus, experienced or senior hiring, and whether you work with recruiters
+you_get:
+  - A job brief that splits must-haves from nice-to-haves and avoids requirements that exclude people unfairly
+  - A channel plan that matches sites to the level, with a way to compare cost per hire
+  - A resume scorecard, an interview plan and a question set for the level
+  - An offer and onboarding checklist with the dates a person must confirm
+  - A labour law checklist of points to verify, and a list of open questions
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief with the role, level, city, number of hires, salary range, budget and start date. Add what you have tried.
+  - Say which kind of help you need first, such as channels, the job brief, interview design or the offer steps.
+  - Read the channel plan. Check the platform names and rules on each site, because they change.
+  - Send the labour law checklist to a local adviser. Do not rely on the dates and limits until they confirm them.
+  - Use the scorecard on your first five candidates. Ask it to adjust the scorecard from what you see.
+how_it_works:
+  - title: Agree the role
+    text: It turns your brief into a job profile with must-haves, nice-to-haves and a salary check, and lists what is missing.
+  - title: Pick the channels
+    text: It matches hiring sites to the role level and gives you a way to compare cost per resume and cost per hire.
+  - title: Set the screen
+    text: It builds a resume scorecard and a structured interview plan, with behaviour questions for the level.
+  - title: Plan the offer
+    text: It lists offer steps, approvals, a reference or background check that needs the candidate's written consent, and onboarding tasks.
+  - title: Check the rules
+    text: It lists labour and data points from the profile as items to confirm for your city, and does not state them as current law.
+  - title: Track the funnel
+    text: It lists the numbers to track from views to hires, so you can see which channel works.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    role <title> | level <junior | mid | senior | campus> | city <city> | hires <number> | budget <amount> | start <date> | MISSING: <list> | ASSUMED: <list>
+
+  JOB BRIEF
+    purpose <line> | must-haves <list> | nice-to-haves <list> | salary range <as given> | wording to avoid <list>
+
+  CHANNEL PLAN
+    <platform or route> | suits <level> | why <reason> | what to track <number> | check on the site <rules to confirm>
+
+  SCREEN AND INTERVIEWS
+    scorecard <skills | general ability | culture fit, each with a 1 to 5 anchor>
+    stages <list> | questions <list, grouped by skill> | who scores <role>
+
+  OFFER AND ONBOARDING
+    <step> | owner <role> | timing <when> | needs <approval, written consent or form>
+
+  LABOUR AND DATA POINTS TO CONFIRM
+    <rule or topic> | why it matters <line> | confirm with <local adviser> | status <to confirm>
+
+  FUNNEL TO TRACK
+    <stage> | <number> | <how to calculate it>
+
+  OPEN QUESTIONS
+    <item>
+output_sample:
+  input:
+    - The role, level, city and number of hires
+    - Your salary range, budget and start date
+    - What the job does and the skills it needs (optional)
+    - Channels you have tried and the results (optional)
+  prerequisites:
+    - A hiring manager who can agree the must-haves
+    - A local adviser to confirm labour rules before you rely on them
+  output:
+    - name: Job brief
+      contains: The purpose of the role, must-haves, nice-to-haves and wording to avoid.
+    - name: Channel plan
+      contains: Which hiring sites suit the level, why, and what to track on each.
+    - name: Screen and interviews
+      contains: A scorecard with anchors, interview stages and questions grouped by skill.
+    - name: Offer and onboarding
+      contains: Offer steps, approvals, consent for checks and onboarding tasks with owners and timing.
+    - name: Labour and data points to confirm
+      contains: Contract, probation, insurance and data points to check with a local adviser.
+    - name: Funnel to track
+      contains: The numbers from job views to probation passed, with how to work each out.
+    - name: Open questions
+      contains: What you still need to tell it, so nothing is guessed.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can build the plan. Check that it handles Chinese site names and terms well if you work in Chinese.
+    - name: Boss Zhipin, Liepin, Lagou or Maimai
+      why: These are the sites it plans for. Read each site's own posting rules and fees before you spend.
+  inputs:
+    - A job description you already use
+    - Your past hiring numbers, such as views, applicants, interviews and hires by channel
+    - Pay data for the same role in your city
+terms:
+  - term: Boss Zhipin
+    meaning: A Chinese job site where the employer and candidate chat directly.
+  - term: Liepin
+    meaning: A Chinese job site used a lot for mid-level and senior roles and recruiters.
+  - term: Scorecard
+    meaning: A fixed list of skills, each scored 1 to 5, so every candidate is judged the same way.
+  - term: STAR
+    meaning: A way to ask about the past. Ask for the situation, the task, the action and the result.
+  - term: Social insurance
+    meaning: The employer and employee payments for pension, health and similar cover in China.
+judge:
+  - The channels fit the level and city you gave, and each has a reason.
+  - Must-haves and nice-to-haves are split, and no wording excludes people by age, gender or similar.
+  - Each labour rule is marked "to confirm" with a local adviser and is not stated as current law.
+  - Background checks and candidate data use are tied to the candidate's written consent.
+  - Missing facts are listed as open questions. No salary, fee or platform rule is made up.
+test:
+  - Run it for a role you filled last year. See if the channels match where you found the person.
+  - Give two interviewers the scorecard and one candidate. Compare their scores.
+  - Leave out the city. It should ask, since pay and rules vary by city.
+tweaks:
+  - what: City and level
+    how: Name both. Pay, platform choice and rules differ between a first-tier city and a smaller one.
+  - what: Role detail
+    how: Paste a real job description. It sharpens the must-haves and the interview questions.
+  - what: Budget
+    how: Give a number per hire or a total. Without it the channel plan has no way to rank cost.
+  - what: Past data
+    how: Add your funnel numbers from past hires. It can say where candidates drop out.
+improve:
+  - Put your approved salary bands and job levels in SKILL.md so every brief starts with them.
+  - Add your own interview questions for each skill and keep the ones that predict good hires.
+  - Keep a note of each channel's real cost per hire, and paste it in next quarter.

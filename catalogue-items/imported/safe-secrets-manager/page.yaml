@@ -2,34 +2,56 @@ thinking: medium
 thinking_why: It follows strict rules around secrets.
 new_slug: safe-secrets-manager
 name: Safe secrets manager
-summary: Get API keys and env variables checked and loaded without ever showing
-  the values in logs or chat.
+summary: Check that your API keys and env variables are set and loaded, without showing the secret values in chat, logs or shell history.
 job: secure-code
 headline: Safe secrets manager
-subhead: Check that your API keys and environment variables are set, valid and
-  loaded, without any secret ever appearing in chat, logs or command history.
-  The point is that Claude never sees the values.
+subhead: Check that your API keys and environment variables are set and valid, without any secret showing in chat, logs or command history. Your AI reads a schema file with names and types only. It never reads the values.
 explain: |
   Check that your API keys and environment variables are set, valid and loaded, without any secret ever appearing in chat, logs or command history. The point is that Claude never sees the values.
 
   It works on four rules. Never print a secret with echo or env commands. Never open the .env file directly. Use a tool called Varlock to validate and show only masked values. Never place a key inside a command, use variables instead. Claude reads the schema file, which lists names and types but no values, and runs a load check that reports pass or fail. You can also run other commands through the tool so keys are filled in out of sight. You need to install Varlock.
 when:
-  - You want Claude to help debug a failing app without seeing your keys.
-  - A new teammate needs to confirm all required variables are set.
+  - Your app fails to start and you want help debugging without sharing your keys.
+  - A new teammate needs to confirm every required variable is set.
   - You worry a key leaked into logs or shell history.
-  - You need a schema that says which variables the app needs.
+  - You need a schema file that lists which variables your app needs.
+not_for:
+  - "You need to store or rotate the secrets themselves: use your secrets manager, such as 1Password or AWS Secrets Manager, directly."
+  - "You want to change a secret value: edit your .env file yourself, because this skill never touches the values."
+  - "Your AI cannot run commands on your computer: ask a developer to run the checks, or read the schema file by hand."
 you_give:
   - Your project folder
-  - A list of required variables (optional)
+  - A list of the variables your app needs (optional)
   - Which keys are sensitive (optional)
 you_get:
-  - A schema file listing variables without values
-  - A pass or fail check on loaded secrets
-  - Commands that keep keys hidden
+  - A schema file that lists your variables with no values
+  - A pass or fail check on your loaded secrets
+  - Commands that run your app with keys kept hidden
   - Fixes for missing or invalid variables
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run commands and read your project files, such as Claude Code. A plain chat window cannot run the checks.
+  - Install the Varlock tool on your computer. The skill shows the install steps, and you should read the installer before you run it.
+  - Add the skill to your AI, then ask it to set up or check your secrets with Varlock.
+  - Let it create or read the .env.schema file, then run varlock load to check your variables.
+  - Fix any missing or invalid variables yourself in your .env file. Your AI will not edit secret values.
+  - Only use the 1Password or AWS examples if you have those accounts and their command line tools.
+output_sample:
+  input:
+    - Your project folder
+    - A list of the variables your app needs (optional)
+    - Which keys are sensitive (optional)
+  prerequisites:
+    - An AI that can run commands and read your project files, such as Claude Code
+    - The Varlock command line tool installed on your computer
+    - A 1Password or AWS account and its command line tool, only if you pull secrets from them
+  output:
+    - name: .env.schema
+      contains: Each variable your app needs, with its type and whether it is sensitive, but no values.
+    - name: Load check
+      contains: A pass or fail result from varlock load, with sensitive values shown as masked blocks.
+    - name: Safe run commands
+      contains: Commands that start your app through varlock run, so keys are filled in out of sight.
+    - name: Fixes for missing or invalid variables
+      contains: Plain notes on which variables are missing or the wrong type, and how to correct them.
+    - name: Security checklist
+      contains: Steps for a new project, such as marking secrets sensitive and keeping .env out of git.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It turns a brief into prompts and sizes.
 new_slug: marketing-image-maker
 name: Marketing image maker
-summary: Say what the image is for. Get a prompt to paste, exact size and a file plan.
+summary: Plan a marketing image before you make it. Say what it is for and get the tool, a prompt to paste, the exact pixel size and a file name.
 job: make-images
 headline: Marketing image maker
-subhead: Tell it what the image is for, where it will sit and any brand colours
-  or size limits. It picks between an AI image model and a design tool, then
-  writes the prompt. You get the tool to use, a prompt to paste, exact pixel
-  size and a file name.
+subhead: Tell it what the image is for, where it will sit and any brand colours or size limits. It picks between an AI image model and a design tool, then writes the prompt. You get the tool to use, a prompt to paste, exact pixel size and a file name.
 explain: |
   Tell it what the picture is for and it hands back a ready plan: the tool to use, the prompt to paste, the exact pixel size and the file name to save it under.
 
@@ -17,8 +14,11 @@ when:
   - You need a hero image for a blog post and do not know what size to ask for.
   - You want a set of social graphics that all match one brand look.
   - You are choosing between an AI image tool and a design tool for a job.
-  - You need an image with readable text in it and your first tries came out
-    garbled.
+  - You need an image with readable text in it and your first tries came out garbled.
+not_for:
+  - "You need paid ad images with each platform's ad specs: use the ad-creative skill from the same source, or the ad rules on the platform itself."
+  - "You need a video: use a video tool or a person who edits video, because this plan covers still images only."
+  - "You want a full brand look from scratch: ask a designer for a logo and style guide first, then bring it here."
 you_give:
   - What the image is for
   - Where it will be shown
@@ -30,8 +30,30 @@ you_get:
   - Exact dimensions and file format
   - A file naming and saving plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can call an image tool.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Say what the image is for and where it will be shown.
+  - Add your brand colours, fonts or size limits if you have them (optional).
+  - Check the tool it picks. Some tools need a paid plan or API key.
+  - Paste the prompt into that tool, set the size it gave you, and save the file under the name it suggests.
+  - If your AI can make images itself, ask it to run the prompt for you.
+output_sample:
+  input:
+    - What the image is for, such as a blog hero or social graphic
+    - Where it will be shown, such as your website, social feed or email
+    - Brand colours, fonts or logo (optional)
+    - Size limits or file format needs (optional)
+    - Whether you have an image tool or API key (optional)
+  prerequisites:
+    - An AI that can generate images, or a design tool like Canva or Figma, to make the final image
+    - Some image tools need a paid plan or API key, so check the vendor's page for current prices and model names
+  output:
+    - name: Tool choice
+      contains: Whether to use an AI image model or a design tool such as Canva or Figma, and why.
+    - name: Prompt
+      contains: A ready prompt to paste into the image tool, written for your goal and style.
+    - name: Size and format
+      contains: The exact width and height in pixels and the best file format for where the image will sit.
+    - name: File name and save plan
+      contains: A clear file name and where to save the image so you can find and reuse it.
+    - name: Optimization tips
+      contains: Steps to shrink the file for the web, and share image tags if the image is a link preview.

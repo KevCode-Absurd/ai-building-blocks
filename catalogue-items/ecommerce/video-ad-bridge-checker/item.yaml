@@ -10,6 +10,7 @@ inputs:
   - {type: script, required: true}
   - {type: persona, required: false}
   - {type: product_data, required: false}
+  - {type: hooks, required: false}
 outputs:
   - {type: audit_report}
   - {type: script}

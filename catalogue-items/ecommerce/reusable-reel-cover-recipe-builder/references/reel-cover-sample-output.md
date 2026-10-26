@@ -1,93 +1,33 @@
-# Sample output: `/reel-cover`
+# Result layout
 
-Batch of 5 Reel covers for a week of content. Output descriptions (since this is markdown, not image).
+This is a layout with placeholders, not a result. Titles, colors and claims come from you.
 
----
+```
+## Title lines
+<line 1>
+<line 2>
+<line 3>
+Accent word: <word> (why: <one line>)
 
-## Cover 1
+## Cover recipe card
+Canvas: 1080 x 1920 (9:16), sRGB
+Background: <color>, flat, light grain, no gradient or vignette
+Portrait: bottom 40%, right-aligned, chest up, clean cutout
+Title: top 55%, left-aligned, <font style>, <text color>
+Accent: <accent color> on the accent word only
+Logo: <bottom-left, small, 80% opacity, or none>
 
-**Title:** "I Built a $10M Agency With AI"
-**Accent word:** Agency
-**Composition:**
-- Dark charcoal grain background
-- Headshot (Chris), bottom-right, from chest up, natural warm tone
-- Text top-left, 4 visual lines:
-  - Line 1: "I BUILT"
-  - Line 2: "A $10M"
-  - Line 3: "**AGENCY**" (turquoise)
-  - Line 4: "WITH AI"
-- logo bug bottom-left
+## Image prompt
+<one block of text for an image tool: size, background, portrait used as supplied, title lines and accent word, placement, font style, what to leave out>
+Attach: <portrait, logo>
 
-[ANNOTATION: Accent word is the subject of the claim, not the qualifier.]
+## Checks
+<each check: pass or fix made>
 
----
+## Reuse notes
+Changes each time: title, accent word
+Stays fixed: everything on the recipe card
 
-## Cover 2
-
-**Title:** "This AI Wrote Ads That Outperformed Mine"
-**Accent word:** Outperformed
-**Composition:**
-- Same background + headshot placement
-- Text top-left, 4 visual lines:
-  - Line 1: "THIS AI WROTE"
-  - Line 2: "ADS THAT"
-  - Line 3: "**OUTPERFORMED**" (turquoise)
-  - Line 4: "MINE"
-
-[ANNOTATION: Payoff word (outperformed) earns the accent. Highest emotional punch.]
-
----
-
-## Cover 3
-
-**Title:** "3 Agents Every Founder Needs"
-**Accent word:** 3
-**Composition:**
-- Text top-left, 3 visual lines:
-  - Line 1: "**3**" (turquoise, enlarged 1.5x)
-  - Line 2: "AGENTS EVERY"
-  - Line 3: "FOUNDER NEEDS"
-
-[ANNOTATION: When title leads with a number, accent the number. Double-sized for emphasis.]
-
----
-
-## Cover 4
-
-**Title:** "The Hook That Broke Our CPA"
-**Accent word:** Broke
-**Composition:**
-- Text top-left, 4 visual lines:
-  - Line 1: "THE HOOK"
-  - Line 2: "THAT"
-  - Line 3: "**BROKE**" (turquoise)
-  - Line 4: "OUR CPA"
-
-[ANNOTATION: Verb with surprise/negative charge = the accent target.]
-
----
-
-## Cover 5
-
-**Title:** "Stop Running Ads. Do This Instead."
-**Accent word:** Stop
-**Composition:**
-- Text top-left, 3 visual lines:
-  - Line 1: "**STOP**" (turquoise)
-  - Line 2: "RUNNING ADS"
-  - Line 3: "DO THIS INSTEAD"
-
-[ANNOTATION: Command-word at front of title earns accent when it's the pattern interrupt.]
-
----
-
-## Batch Consistency Check
-
-All 5 covers share:
-- Same headshot crop and placement
-- Same font, weight, left-alignment
-- Same dark charcoal + grain background
-- One turquoise accent per cover
-- logo bug placement identical
-
-Result: scroll-past-able feed signature. Viewers recognize the brand before reading the title.
+## Missing and checks missed
+<list or none>
+```

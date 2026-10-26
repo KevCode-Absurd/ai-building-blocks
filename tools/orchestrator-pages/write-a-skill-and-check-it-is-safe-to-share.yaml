@@ -1,6 +1,6 @@
 new_slug: write-a-skill-and-check-it-is-safe-to-share
 name: Write a skill and check it is safe to share
-summary: Give it a job you repeat. Get a written skill that is scored, tested for triggering and checked for risk.
+summary: Write a skill for a job you repeat, then score it, test when it fires and scan it for risk before you share it. Checks it loads in other AI tools.
 job: make-skills
 thinking: medium
 thinking_why: Most steps read files against a checklist. A mid-size model handles that. Use your strongest one for the safety scan.
@@ -14,6 +14,10 @@ when:
   - You repeat a job and want your AI to do it your way each time.
   - You are about to share a skill with a team or post it for others.
   - A skill you wrote never seems to fire, or breaks in another tool.
+not_for:
+  - "You have a one-off task: just ask your AI directly, no skill needed."
+  - "You will never share the skill and only want a draft: use the Skill writer on its own."
+  - "You want to review someone else's skill for safety only: use the Skill safety checker."
 you_give:
   - The job you repeat, what a good result looks like and when it should start
   - A sample of the job done well (optional)
@@ -30,6 +34,29 @@ how_to_use:
   - Describe the job in a few lines and say when it should start.
   - When it pauses, fix the skill files using the score and the trigger grade. Then tell it to carry on.
   - Read the risk report before you share anything.
+output_sample:
+  input:
+    - The job you repeat
+    - What a good result looks like
+    - When the skill should start
+    - Skills you already have installed (optional)
+    - A sample of the job done well (optional)
+  prerequisites:
+    - An AI that can read your skill files
+    - Code running is only needed if the skill ships scripts, and it is blocked until the safety review passes
+  output:
+    - name: "Step 1: The skill"
+      contains: A skill folder with test prompts, and a note on what it does and when it fires.
+    - name: "Step 2: Quality score"
+      contains: A score, what is missing, and fixes in order of value.
+    - name: "Step 3: Trigger grade"
+      contains: A grade for the description, prompts that should and should not fire it, and skills that block it.
+    - name: "Step 4: Risk report"
+      contains: Risky code, data leaks and hidden code found in the fixed files, ranked, with what to remove or keep.
+    - name: "Step 5: Portability"
+      contains: Problems that stop the skill loading in each named tool, with a fix for each.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the skill
     text: Turns your job into a skill folder with clear steps, a description that says when to use it, and a few test prompts.

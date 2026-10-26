@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It merges sources and rewrites to fit the job.
 new_slug: cv-writer
 name: CV writer
-summary: Give it your background and a job post. Get a paste-ready CV that
-  passes applicant filters, plus a flaw report.
+summary: Turn your LinkedIn, old CVs and a job post into a CV tailored to that job, ready to paste, with a report on what could trip applicant filters.
 job: work-with-files
 headline: CV writer
-subhead: A CV you can paste straight into FlowCV, Canva, Google Docs or Word,
-  aimed at one specific job post. It comes with a report of anything that could
-  trip up applicant tracking filters.
+subhead: A CV you can paste straight into FlowCV, Canva, Google Docs or Word, aimed at one specific job post. It comes with a report of anything that could trip up applicant tracking filters.
 explain: |
   A CV you can paste straight into FlowCV, Canva, Google Docs or Word, aimed at one specific job post. It comes with a report of anything that could trip up applicant tracking filters.
 
@@ -18,6 +15,10 @@ when:
   - Your CV lives in three places and needs to become one clean version.
   - You are changing careers and need your past work reframed.
   - You want to know why your CV keeps getting auto-rejected.
+not_for:
+  - "You need a cover letter: write it by hand or ask your AI for one in a separate chat, since this skill only makes the CV."
+  - "The job needs a portfolio or a formal application form: build the portfolio yourself or fill in the form by hand."
+  - "You want to add skills or jobs you do not have: this skill will not invent them, so gain the experience first."
 you_give:
   - Your background, CV or profile links
   - The job description
@@ -29,7 +30,27 @@ you_get:
   - Missing information checklist
   - Notes on any reworded lines
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your background in one place: LinkedIn text, old CVs, and links to your GitHub or portfolio. Paste the text if your AI cannot open links."
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions. Then add your background.
+  - Paste the job post and say which tool you will use, such as FlowCV, Canva, Google Docs or Word.
+  - Answer the questions about real figures. If you do not know a number, say so. The skill will not make one up.
+  - Check the change notes and the flaw report. Approve or undo each reworded line.
+  - Paste the final CV into your chosen tool. Next, write a cover letter for the same job post in a separate chat.
+output_sample:
+  input:
+    - "Your background: LinkedIn text, GitHub or portfolio links, or old CVs"
+    - The job post you are applying for
+    - The tool you will paste into, such as FlowCV, Canva, Google Docs or Word (optional)
+    - Real figures for your results, such as sales growth (optional)
+  prerequisites:
+    - An AI chat that can read pasted text or uploaded files
+    - Web access if you want it to read links (otherwise paste the text)
+  output:
+    - name: Paste-ready CV
+      contains: Plain text CV in the layout of your chosen tool, matched to the wording of the job post.
+    - name: ATS flaw report
+      contains: Anything in the CV that could trip up applicant tracking filters, with a fix for each.
+    - name: Missing-info checklist
+      contains: Details the skill needs from you, such as real figures, dates or titles it could not find.
+    - name: Change notes
+      contains: Every line that was materially reworded, so you can approve or undo it.

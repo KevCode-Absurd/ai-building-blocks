@@ -1,6 +1,6 @@
 new_slug: store-test-program-runner
 name: Store test program runner
-summary: Give it your store numbers and test results. It ranks ideas, plans one test, reads it, and picks the next.
+summary: "Run a store test program: give it your orders and test results. It reads finished tests, ranks ideas and plans the next test. You approve every change."
 job: test-store-changes
 thinking: high
 thinking_why: It keeps a test log, picks its path from the state of your testing and reads statistics. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run tests on your store and want a log, a ranked list and one test at a time.
   - A test just ended and you want to know if you can trust it before you ship the change.
   - You are not sure if your store gets enough orders to test, or what to test first.
+not_for:
+  - Your store gets under about 30 orders a month. Do research and known fixes first, or ask a person who knows your store to review it.
+  - You want to start, stop or publish a test for you. It never does this. Set it up in your own testing tool.
+  - You only need a one-off check of a single result. Read it with a simple sample size and range check, or ask a person who knows testing.
 you_give:
   - Orders, sessions, conversion rate, average order value and gross margin for the page and the store
   - Your Shopify plan, who builds changes, and the ideas you have
@@ -30,6 +34,30 @@ how_to_use:
   - Set up the test it plans in your testing tool. Tell it the start date.
   - When the test ends, bring the numbers and anything that happened during the run. It reads the result and picks the next test.
   - Run it again every two weeks. It reads its own log.
+output_sample:
+  input:
+    - Orders, sessions, conversion rate, average order value and gross margin for the page and store
+    - Your Shopify plan, who builds changes, and your test ideas
+    - Numbers from a finished test, with planned sample, dates and what else happened (optional)
+    - Heatmap notes, recordings, survey answers or review quotes (optional)
+  prerequisites:
+    - An AI that can keep a tests folder and read it each run, such as Claude Code
+    - The skills it calls, such as the Test idea ranker, installed or readable from the library
+  output:
+    - name: State
+      contains: Whether no test is running, one is running, or one just ended, and what was done about it.
+    - name: Result
+      contains: The call on a finished test, trust score, lift as a range and monthly gain in profit.
+    - name: Next test
+      contains: The idea, page, smallest lift worth shipping, sample, weeks, main metric and guardrails.
+    - name: Fix list
+      contains: Broken things to repair instead of test.
+    - name: Backlog
+      contains: The top five ranked ideas, and parked ideas with the reason.
+    - name: Look again on
+      contains: The date to check back and the numbers to bring.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line in one list.
 how_it_works:
   - title: Read the folder
     text: Finds out if no test is running, one is running, or one just ended. A running test is left alone.

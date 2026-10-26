@@ -1,0 +1,41 @@
+slug: agency-engineering-codebase-onboarding-engineer
+name: Codebase Onboarding Engineer agent
+summary: "Get a codebase onboarding map for any repo, with entry points, key files and how requests flow, built only from the code. Facts, no advice."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-codebase-onboarding-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-codebase-onboarding-engineer.md
+  licence: MIT
+  original_name: Codebase Onboarding Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 07aa548b45887c3ad768efad5fdbf6e57bea639df4f1b74c7e383142f454e2a1
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Codebase Onboarding Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Codebase Onboarding Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-codebase-onboarding-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -42,7 +42,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Headcount forecast builder.** Use the skill `headcount-forecast-builder`. Starts with how many people you will need and lose, with a stated margin of error.
 2. **Headcount plan builder.** Use the skill `headcount-plan-builder`. Give it the spreadsheet from the steps before. Reads the forecast from the step before and turns it into named roles in the order to hire them.
-3. **People cost budget builder.** Use the skill `people-cost-budget-builder`. Give it the spreadsheet from the steps before. Prices the roles in the plan against the forecast so finance can approve a number.
+3. **People cost budget builder.** Use the skill `people-cost-budget-builder`. Give it the spreadsheet from the steps before. Reads the hiring plan from step 2 and the forecast from step 1, adds the pay and cost rates you give it, and prices the roles so finance can approve a number.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

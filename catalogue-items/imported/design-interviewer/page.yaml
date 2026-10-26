@@ -2,33 +2,112 @@ thinking: high
 thinking_why: It probes every branch of a plan.
 new_slug: design-interviewer
 name: Design interviewer
-summary: Give it a plan. Get tough questions until it holds, plus a glossary and
-  decision records.
+summary: Share a plan or design. Get tough questions, one at a time, until it holds, plus a glossary, decision records and a list of open problems.
 job: think-and-decide
 headline: Design interviewer
-subhead: Your plan, questioned until it holds. Give it a design or proposal and
-  it asks hard questions one at a time, branch by branch, until the weak parts
-  show.
+subhead: Give it a design, proposal or plan. It asks hard questions one at a time, branch by branch, with its own suggested answer each time. You end with a glossary, written decisions and open problems.
 explain: |
-  Your plan, questioned until it holds. Give it a design or proposal and it asks hard questions one at a time, branch by branch, until the weak parts show. You finish with a shared glossary and written records of the decisions you made.
+  Plans often sound fine until someone asks a hard question. This design interviewer asks those questions first. It reads your plan, finds the decisions in it, and works through them in order, so the big choices are settled before the small ones.
 
-  It combines two methods. The grilling part pushes on every choice: why this, what if that fails, what are you assuming. The domain-modelling part pins down the words your project uses, so each term means one thing and everyone uses it the same way. As answers settle, it records them as short decision notes. You end up with a plan that has been argued with, not just written down.
+  It asks one question at a time and gives its own suggested answer, so you can say yes and move on. It looks in your code and documents before asking you anything they can answer. It pushes on each choice: why this one, what if it fails, and what are you assuming.
+
+  As answers settle, it writes things down. Words used two ways get one meaning each in a shared glossary. Hard or surprising choices become short decision records, so nobody has to ask why later. What is left unanswered goes on an open problems list.
 when:
-  - You have a plan that sounds good but has never been challenged.
-  - Your team uses the same word for different things.
-  - You want your reasoning written down before you build.
-  - You need to prepare for tough questions from a reviewer.
+  - You have a plan that sounds good but nobody has challenged it.
+  - Your team uses one word for two different things.
+  - You want your reasons written down before you build.
+  - You need to prepare for hard questions from a reviewer or client.
+not_for:
+  - The plan is decided and you want it built. Use a builder skill for that.
+  - You want to attack one business bet with evidence. Use the Business assumption stress tester.
+  - You want to test a claim or question until it breaks. Use the Claim stress tester.
+  - The choice is small and easy to undo. Just decide.
 you_give:
-  - Your plan, design or proposal
-  - "Context: who it is for and why"
-  - Existing terms or glossary (optional)
+  - Your plan, design or proposal, even a rough paragraph
+  - Who it is for, why now, and what done looks like
+  - Your existing glossary or term list (optional)
+  - Your existing decision records (optional)
+  - Access to the code or documents behind the plan (optional)
 you_get:
-  - Sequence of tough questions
-  - Shared glossary of terms
-  - Decision records
-  - List of open problems
+  - A log of the questions asked and the answers you gave
+  - A glossary where each word has one meaning
+  - A short decision record for each hard choice
+  - A list of open problems, with who or what could settle each
+  - The edits your plan needs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill. Use an AI that can read your files if the plan lives in a project folder.
+  - Paste your plan with who it is for and why now. Add your glossary if you have one.
+  - Answer one question at a time. Say yes to its suggested answer when it is right, and correct it when it is not.
+  - When it asks what a word means, answer with one clear meaning, even if your team used it two ways.
+  - At the end, check the glossary and decision records. Fix anything that is wrong before you share them.
+  - Save the glossary as CONTEXT.md and the records in a docs/adr folder, so they stay with the project.
+how_it_works:
+  - title: Read and map
+    text: It reads the plan and lists the decisions it makes and the ones it skips.
+  - title: Order the decisions
+    text: It puts the choices others depend on first, so a detail is never debated before its parent.
+  - title: Ask one question
+    text: It asks one thing at a time and offers its own suggested answer.
+  - title: Check what it can
+    text: It reads your code and documents instead of asking when they hold the answer.
+  - title: Write it down
+    text: It adds settled words to the glossary and writes a record for each hard decision.
+  - title: Close out
+    text: It stops when every branch is settled or listed as open, then gives you the full set of files.
+output_shape: |
+  Questions and answers
+  1. <question> / <your answer>
+
+  Glossary
+  | word | meaning | what it is not |
+  <one row per term>
+
+  Decision records
+  # <number>. <title>
+  Status, Context, Decision, Options considered, Consequences
+
+  Open problems
+  <question, why it matters, who could settle it>
+
+  Changes to the plan
+  <edits>
+
+  Next steps
+  <first action>
+output_sample:
+  input:
+    - Your plan, design or proposal
+    - Who it is for, why now, and what done looks like
+    - Your glossary or existing decision records (optional)
+  prerequisites:
+    - Time to answer the questions in one sitting
+    - Access to the code or documents behind the plan, if any (optional)
+  output:
+    - name: Questions and answers
+      contains: A one line log of each question and the answer you gave.
+    - name: Glossary (CONTEXT.md)
+      contains: Each key word with one meaning and a note on what it does not mean.
+    - name: Decision records (docs/adr)
+      contains: One short record for each hard choice, with context, options and consequences.
+    - name: Open problems
+      contains: Each unresolved question, why it matters and who could settle it.
+    - name: Changes to the plan
+      contains: The edits your plan needs, based on your answers.
+    - name: Next steps
+      contains: The first thing to do and whether another review is needed.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your project and save the glossary and decision records as files.
+    - name: Any good chat AI
+      why: Works well as a conversation. Copy the glossary and records into your project at the end.
+  inputs:
+    - A short note on what would make the plan fail
+    - Past decisions your team already made
+terms:
+  - term: Decision record
+    meaning: A short note that says what was decided, what else was considered, and why.
+  - term: Glossary
+    meaning: A list of the key words in your project, each with one agreed meaning.
+  - term: Open problem
+    meaning: A question the plan depends on that nobody has answered yet.

@@ -2,34 +2,118 @@ thinking: medium
 thinking_why: It balances more bookings against better-qualified ones.
 new_slug: booking-page-designer
 name: Booking page designer
-summary: Describe your calls or appointments. Get a booking flow with open
-  times, qualifying questions, prep emails and follow-up.
+summary: "Design a booking page that gets you better calls. Get a short question set, routing rules, a prep brief and reminder emails."
 job: sell-and-negotiate
 headline: Booking page designer
-subhead: A booking flow that sets up good calls instead of cold demos. You get
-  open times, a short set of questions, prep emails for your team and a
-  follow-up sequence, all matched to who is booking.
+subhead: "Tell it what your calls are for and who books them. It designs the booking flow: three to five questions, who takes which booking, a prep brief for your rep and the reminder and follow-up emails."
 explain: |
-  A booking flow that sets up good calls instead of cold demos. You get open times, a short set of questions, prep emails for your team and a follow-up sequence, all matched to who is booking.
+  Most booking pages fail in one of two ways. A bare link gives your team calls with people they know nothing about. A long form scares people off before they book. This booking page designer aims between the two: just enough questions to set up a good call.
 
-  The skill argues for three to five well-chosen form fields, since long forms lose most people before they book. It routes high-fit leads to senior people and sends others down a lighter path. It briefs the rep before each call so no one starts blind. It also tells you when a booking page is the wrong tool. It suits a first scheduler or a rebuild of a weak one.
+  It asks what each question is for. A question stays if it sends the booking to the right person or gives your rep context for the call. Otherwise it goes. Then it designs who sees which times, how bookings are routed, what your rep sees before the call, and the emails around it.
+
+  It also checks whether you need a booking page at all. If your goal is a download or a signup, a form fits better. You get a plan to build in your own booking tool. It does not set up the tool for you.
 when:
-  - You are setting up a scheduler for the first time.
-  - Your booking form is too long and people drop off.
-  - Reps join calls knowing nothing about the lead.
-  - You want good leads routed to your best people.
+  - You are setting up a scheduler or demo booking page for the first time.
+  - Your booking form is long and you think people give up on it.
+  - Your team joins calls knowing nothing about the person.
+  - You want the best-fit leads to book with your best people.
+not_for:
+  - "Your goal is a download or a signup, not a call: use the Lead magnet planner or the Multi-step form designer."
+  - "You only need to find one meeting time across time zones: use the Meeting scheduler."
+  - "You get a handful of bookings a month: a plain contact form or a simple link is enough."
+  - "You want to find the weak step in your whole funnel: use the Funnel flow planner or the Leaky funnel fixer."
 you_give:
-  - What the calls are for
-  - Who books and how you tell good fits
-  - Your team's availability
-  - Your current booking tool (optional)
+  - What the calls are for, such as demos, consults or intro calls
+  - Who books them and how you tell a good fit from a poor one
+  - Your team, with who takes which calls and when they are free
+  - Your booking tool, such as Calendly or Cal.com (optional)
+  - Your current form or booking page (optional)
 you_get:
-  - A booking flow with availability rules
-  - Three to five qualifying questions
-  - Prep briefs for the rep
-  - Reminder and follow-up emails
+  - A booking flow from first click to reminder emails
+  - Three to five questions, each with the reason it is there
+  - Routing rules that send each booking to the right person
+  - A prep brief your rep sees before the call
+  - Confirmation, reminder, no-show and follow-up emails
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed.
+  - Paste the skill text into the chat.
+  - "Under it, paste your details: what the calls are for, who books, your team and your booking tool."
+  - Read the questions first. Cut any you cannot link to a routing rule or a prep note.
+  - Build the flow in your own booking tool. Ask your AI for the email text or the form wording if you need it.
+  - After a month, compare the calls you book against the calls that turn into sales, and ask your AI to tune the questions.
+output_sample:
+  input:
+    - What the calls are for
+    - Who books them and how you tell a good fit
+    - Your team and when they are free
+    - Your booking tool (optional)
+    - Your current form or page (optional)
+  output:
+    - name: Do you need a booking page
+      contains: A yes or no check, with the reason and a simpler option if the answer is no.
+    - name: Booking flow
+      contains: The steps from landing on the page to a confirmed time, with availability rules.
+    - name: Qualifying questions
+      contains: Three to five fields, each with the reason it earns its place.
+    - name: Routing rules
+      contains: Which bookings go to which person, and the default for a lead that fits no rule.
+    - name: Prep brief
+      contains: What your rep sees before the call, and where it shows up.
+    - name: Email sequence
+      contains: Confirmation, reminders, reschedule, no-show and follow-up emails with timing.
+    - name: Checks after launch
+      contains: What to track, such as booking rate and calls that become sales.
+how_it_works:
+  - title: Check you need a booking page
+    text: It tests whether your goal is a meeting, whether people will give time, and whether your team has the capacity for it.
+  - title: Pick the question set
+    text: It keeps three to five fields. Each must route the booking or brief the rep. The rest are cut.
+  - title: Set availability and routing
+    text: It picks one pattern, such as round-robin, fit-based or a mix, and sets a default for leads that fit no rule.
+  - title: Plan the prep brief
+    text: It decides how the answers reach the rep, such as the calendar invite, the CRM record or a message.
+  - title: Plan the emails
+    text: It plans confirmation, reminder, reschedule, no-show and follow-up messages, with limits so they do not turn into spam.
+  - title: Set the success measure
+    text: It tracks calls that turn into sales, not only bookings made.
+output_shape: |
+  BOOKING PAGE PLAN: <call type>
+
+  DO YOU NEED ONE: <yes | no, use <simpler option>> <reason>
+
+  FLOW
+  1. <step>
+
+  QUESTIONS (3 to 5)
+  1. <question>: <routes to whom, or what the rep learns>
+
+  ROUTING
+  <lead type> goes to <person or team>. Default: <rule>.
+
+  PREP BRIEF
+  <fields the rep sees>, shown in <place>
+
+  EMAILS
+  <email>: <when sent>, <what it says>
+
+  TRACK
+  <measures>
+
+  MISSING
+  - <anything you did not give>
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Planning needs only plain chat. Your booking tool, such as Calendly or Cal.com, is where you build it.
+  inputs:
+    - Your current form or booking page
+    - A few past leads marked as good or poor fits
+terms:
+  - term: Routing
+    meaning: Sending each booking to the right person based on the answers.
+  - term: Round-robin
+    meaning: Giving bookings to each team member in turn.
+  - term: Prep brief
+    meaning: A short note your rep reads before the call, built from the form answers.
+  - term: No-show
+    meaning: A person who books and does not turn up.

@@ -2,17 +2,50 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-react18-enzyme-to-rtl
 name: Enzyme test migration helper
-summary: Share your Enzyme tests. Get React Testing Library replacements suited
-  to a React 18 upgrade.
+summary: Rewrite your Enzyme tests for React 18. Get React Testing Library tests that check what users see, not internal state, for your upgrade.
 job: test-and-fix-code
 headline: Enzyme test migration helper
-subhead: Share your Enzyme tests. Get React Testing Library replacements suited
-  to a React 18 upgrade. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Paste your Enzyme tests into your AI. It rewrites them with React Testing Library, which works with React 18. Tests of internal state are rebuilt to check what the user sees.
+not_for:
+  - "You want to keep Enzyme on React 18: this is not possible, as Enzyme has no React 18 adapter. Plan to rewrite the tests with this skill."
+  - "Your tests already use React Testing Library: keep them, or ask a teammate to review them for the React 18 upgrade."
+  - "You need to fix the app code, not the tests: use your own developer or a code review step, as this skill only rewrites test files."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste your Enzyme test file. Add your React version and any provider setup or customRender helper.
+  - Ask your AI to rewrite the tests and list any it could not translate.
+  - Run the new tests in your project. This step needs your own machine, not the chat.
+  - Review each dropped state or instance check before you merge into your React 18 branch.
+output_sample:
+  input:
+    - Your Enzyme test files
+    - Your React version
+    - Whether your project has a customRender helper (optional)
+    - Your provider setup, such as Apollo or theme providers (optional)
+  prerequisites:
+    - An AI that can read your test files, or the test code pasted into the chat
+    - A project with React Testing Library installed to run the new tests
+  output:
+    - name: Rewritten test file
+      contains: Each Enzyme test rebuilt with render, screen queries and userEvent, checking what the user sees.
+    - name: Old call to new call table
+      contains: A short list matching each Enzyme call, like find or simulate, to its React Testing Library replacement.
+    - name: Tests that cannot be translated
+      contains: Tests on internal state or instance methods, with a visible outcome to check instead.
+    - name: Provider wrapping
+      contains: How to wrap the component with your Apollo or theme providers, or use your customRender helper.
+when:
+  - Your React 18 upgrade is blocked because Enzyme has no React 18 support.
+  - Your tests use shallow, mount, find or simulate and need a new home.
+  - Tests check state or instance methods and break when you refactor.
+  - Your tests wrap components in Apollo or theme providers and need a new setup.
+you_give:
+  - Your Enzyme test files
+  - Your React version
+  - Your customRender helper, if you have one (optional)
+  - Your Apollo or theme provider setup (optional)
+you_get:
+  - A rewritten test file using React Testing Library
+  - A short table matching each old Enzyme call to its replacement
+  - A list of tests that cannot be translated, with a visible check to use instead
+  - Queries picked in order of preference, with test IDs last

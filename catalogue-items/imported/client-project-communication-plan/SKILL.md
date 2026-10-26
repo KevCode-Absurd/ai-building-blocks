@@ -12,6 +12,30 @@ metadata:
 ---
 # Client Collaboration — Under 100 People
 
+## How to run this skill in a chat
+
+Added by AI Blocks. The method below is the original. This part tells you how to run it with no tools.
+
+**Use it when:** a team under 100 people works with clients (5 to 30 at a time) and needs one clear way to talk, update and sign off.
+**Skip it when:** the client is a large company with 1,000+ staff and a dedicated account team, or you only need a single status email.
+
+**Ask for these first (ask once, in one message).** Mark anything still unknown as MISSING. Never invent a client, tool, name or date.
+1. The client projects, and the client-side people on each (1 to 5 people).
+2. How you talk to them today (email, chat, calls, a shared board).
+3. Who approves work on each side, and where documents live now.
+4. What has gone wrong: late approvals, "we never agreed that", surprises, too many channels.
+
+**Then produce this plan, in this order:**
+1. **Client table.** One row per client: stakeholders, main channel, shared document home, update day and format.
+2. **Update calendar.** Weekly status, monthly review, quarterly review for key accounts. Say who sends each one.
+3. **Decision log format.** The fields: decision, who decided, date, why, what it changes. Add one blank row.
+4. **Approval roles.** Who signs off each type of deliverable, how they sign (email reply, board tick, e-signature), and the backup if they go quiet.
+5. **Escalation path.** Who raises a delay or a risk, to whom, within how many days, and what happens when a client contact changes.
+6. **Open questions.** The MISSING items you need answered.
+
+**Rules:** Pick one main channel per client. Recommend only tools the team already uses unless asked. Several tools named below (Slack Connect, Basecamp, Asana, Notion, client portals) may need a paid plan, so say to check the plan before you suggest one. Draft only. Never send a message or change a live system. Keep the plan to two pages.
+
+
 ## What This Process Does
 
 Client collaboration at this size is **the discipline of working with clients in a way that's transparent, productive, and relationship-strengthening.** You're managing 5–30 active client relationships across project + retainer work. Tools: Slack Connect (cross-org Slack), shared Google Drive / Dropbox / Notion, simple client portals (Basecamp, Asana guest access, FreshBooks projects, ClientPortal.io), formal touchpoints (weekly status, monthly business reviews, quarterly strategic reviews). Client team typically 1–5 stakeholders per project.

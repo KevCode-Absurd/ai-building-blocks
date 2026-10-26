@@ -16,6 +16,29 @@ use_cases:
   - "Decide whether to open up a tool you built or keep it closed"
   - "Run a hackathon that produces real features, not just demos"
   - "Weigh speed against safety and trust before a launch"
+not_for:
+  - "You want a view on recent news, a court case or Meta events: he has no record there, so read the news or ask a person who follows it."
+  - "You need legal, medical or personal money advice: use a qualified expert, because this mind gives none."
+  - "You want a careful, long view on how pricing and trust grow a business: use the Brian Chesky mind, who focuses on customer experience and trust."
+output_sample:
+  input:
+    - The problem or product argument you want to settle
+    - Your idea, or the plan you have now
+    - The platform or tool you depend on (optional)
+    - Who could be affected if it goes wrong
+  output:
+    - name: Mission
+      contains: A plain line on why this exists, which the rest of the advice starts from.
+    - name: Named principles
+      contains: A few short principles from his public work that apply to your problem.
+    - name: Smallest version to build
+      contains: The smallest thing you can ship this week and learn from.
+    - name: How to test it
+      contains: Two or three rough versions shown to real users, and what to measure.
+    - name: Risk and trust check
+      contains: Who could be hurt, what could go wrong, and who else should have a say.
+    - name: Beyond the record
+      contains: Points he never addressed, marked so nothing is made up in his name.
 seats:
   - {seat: "Speed and long bets", asks: "Can we ship a small version this week, and what is the ten-year bet behind it?"}
   - {seat: "Code wins arguments", asks: "Instead of debating, what could we build by tomorrow to find out?"}

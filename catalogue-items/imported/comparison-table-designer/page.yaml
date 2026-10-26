@@ -2,34 +2,68 @@ thinking: medium
 thinking_why: It chooses what to compare and how to guide the choice.
 new_slug: comparison-table-designer
 name: Comparison table designer
-summary: Give it your products or plans. Get a comparison page that helps people
-  choose, with a fair default pick.
+summary: Turn a long feature grid into a comparison page that helps people choose. Get the 8 to 12 rows to keep, a default view and a pick per buyer type.
 job: build-websites
 headline: Comparison table designer
-subhead: "A comparison page that helps a visitor choose, not one that dumps 160
-  cells on them. The key is a fair like-for-like grid plus a clear pick for each
-  type of buyer, such as: if you are a small team, choose this."
+subhead: Give it the plans or products you want to compare and who is choosing. It cuts the grid to the rows that matter, sets a fair default view and writes a pick for each type of buyer. You get a page layout spec to hand to a builder.
 explain: |
-  A comparison page that helps a visitor choose, not one that dumps 160 cells on them. The key is a fair like-for-like grid plus a clear pick for each type of buyer, such as: if you are a small team, choose this.
+  This is a comparison table designer for pricing pages, versus pages and vendor shortlists. Most comparison pages list every feature in a grid, and visitors leave without choosing. This skill designs a page that helps them decide.
 
-  Claude helps you decide which few rows matter, which option shows by default, and how filters and toggles should behave. It writes the recommendation logic so the page says who each choice suits and why, in an honest voice. It also reviews an existing feature grid that is not lifting sign-ups and points out what to cut. It is made for plan pages, product versus product pages and vendor shortlists, and it leaves the coding to you.
+  It picks the few rows that change a decision, and cuts rows that every option ticks. It sets which options show first and says why. Then it writes a line for each type of buyer: "If you are a small team, choose this, because of that." It also says where a rival is stronger, which keeps the page honest.
+
+  You can also give it a comparison page that gets views but no sign-ups. It reviews the page and lists what to cut. It designs the page and its wording. It does not write the code.
 when:
   - Your pricing page lists every feature and visitors still do not pick a plan.
-  - You are building a versus page against a rival.
-  - You need a quiz or table to steer people to the right product.
-  - A comparison tool you built gets views but no sign-ups.
+  - You are building a "us versus a rival" page and want it to read as fair.
+  - You want a table or filter that steers each buyer to the right product.
+  - A comparison page gets traffic but few sign-ups.
+not_for:
+  - "You want a calculator that gives one number: use the Online calculator designer."
+  - "You want a quiz that sorts people into a type: use the Quiz and recommender designer."
+  - "You are comparing vendor proposals for your own buying decision: use the Vendor comparison writer."
 you_give:
-  - The options to compare
-  - Your audience and what they care about
+  - The options to compare, with real prices and features, or links to their pages
+  - Who is choosing and what they care about
+  - Your goal, such as sign-ups or demo requests
   - Your current table (optional)
-  - The goal, such as sign-ups
+  - Whether you are one of the options or a neutral guide
 you_get:
-  - A shortlist of rows that matter
-  - A default view
-  - Recommendation rules by buyer type
-  - Notes on filters and layout
+  - A short list of 8 to 12 rows to keep
+  - A default view and the reason for it
+  - One recommendation line per buyer type
+  - Notes on filters, toggles and what stays fixed
+  - A cut list and a list of facts that need checking
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and add this skill, or paste it into the chat.
+  - Paste the options with their real prices and features, or links to their pages. Say who is choosing and what you want them to do.
+  - Add your current table if you have one. Say whether you are one of the options.
+  - Read the Gaps list first. Check each fact against the option's own page before it goes live.
+  - Give the layout spec to your developer or page builder. Check the live page on a phone.
+  - After launch, watch how many visitors choose a plan. Ask for a revised spec if few do.
+output_sample:
+  input:
+    - The options to compare, with real prices and features
+    - Who is choosing and what they care about
+    - Your goal, such as sign-ups
+    - Your current table (optional)
+  output:
+    - name: Decision
+      contains: Whether a table, a quiz or a written page fits best, with one line of why.
+    - name: Rows to keep
+      contains: Eight to twelve rows that change the choice, with a value for each option.
+    - name: Default view
+      contains: Which options and rows show first, and the reason in the buyer's terms.
+    - name: Recommendations
+      contains: One line per buyer type, with the reason and how a buyer can pick another option.
+    - name: Filters and toggles
+      contains: What the buyer can change, and what stays fixed.
+    - name: Trust notes
+      contains: How you compared, your sources, the check date and where a rival is stronger.
+    - name: Cut list and gaps
+      contains: Rows removed and why, plus facts it could not confirm.
+works_best_with: Any chat AI. Paste real option data, because it does not guess prices or features. Add a screenshot of your current page and your sign-up numbers if you have them.
+terms:
+  axis: One row of the table, such as price or support hours.
+  default view: What a visitor sees before they change anything.
+  buyer type: A group of buyers with the same needs, such as a small team.
+  layout spec: A written plan of the page that a builder can follow.

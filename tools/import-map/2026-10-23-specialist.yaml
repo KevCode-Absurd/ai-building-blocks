@@ -1,0 +1,854 @@
+yugash007/edu-agent-skills:skills/assessment/interview-mode:
+  slug: technical-interview-practice
+  name: Technical interview practice
+  summary: Choose a topic and pressure level. Practice interview answers, then get scores and focused next steps.
+  subhead: Share your interview topic, current level and time limit. It runs a warm-up, core questions and follow-ups before giving feedback. You get scores for your answers, clear gaps and a focused practice plan.
+  task: find-a-job
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: feedback_notes
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share your interview topic, current level and time limit. It runs a warm-up, core questions and follow-ups before giving feedback. You get scores for your answers, clear gaps and a focused practice plan.
+  you_give:
+    - Your interview topic and type, such as coding or system design.
+    - Your current level, time limit and areas you want to test.
+  you_get:
+    - A practice interview with questions and follow-ups.
+    - Scores from one to five for correctness, clarity, tradeoffs and edge cases.
+    - Specific gaps and the next topic to practice.
+  how_it_works:
+    - title: Step 1
+      text: Set the interview scope and start with an easier warm-up.
+    - title: Step 2
+      text: Ask core questions and follow-ups while you explain your reasoning.
+    - title: Step 3
+      text: End the interview, score four areas and suggest practice for weak answers.
+yugash007/edu-agent-skills:skills/assessment/misconception-detector:
+  slug: learning-mistake-coach
+  name: Learning mistake coach
+  summary: Share a repeated mistake. Get a clear correction, a fresh example and a question that checks your understanding.
+  subhead: Share the explanation you keep getting wrong and what you have already tried. It checks the belief behind the mistake, then chooses a matching correction. You get a clearer model, a worked example and a fresh question to try.
+  task: study-and-practice
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: feedback_notes
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share the explanation you keep getting wrong and what you have already tried. It checks the belief behind the mistake, then chooses a matching correction. You get a clearer model, a worked example and a fresh question to try.
+  you_give:
+    - Your incorrect answer or explanation in your own words.
+    - The topic and examples of the same mistake happening again.
+  you_get:
+    - A named mistake type with evidence from your answer.
+    - A corrected explanation and example.
+    - A fresh question and a plan for more practice.
+  how_it_works:
+    - title: Step 1
+      text: Classify the mistake and check that the stated belief matches yours.
+    - title: Step 2
+      text: Find the cause and choose a definition, worked trace or guided question.
+    - title: Step 3
+      text: Explain the corrected idea and test it in a new case.
+yugash007/edu-agent-skills:skills/memory/weak-area-tracker:
+  slug: study-gap-tracker
+  name: Study gap tracker
+  summary: Share repeated mistakes and past checks. Get a short list of learning gaps and what to practice first.
+  subhead: Give it your error notes, past checks and learning goal. It groups repeated mistakes, ranks the gaps and chooses what to revisit. You get a short active list, the next practice task and clear rules for closing each gap.
+  task: study-and-practice
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: feedback_notes
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Give it your error notes, past checks and learning goal. It groups repeated mistakes, ranks the gaps and chooses what to revisit. You get a short active list, the next practice task and clear rules for closing each gap.
+  you_give:
+    - Error notes with topic, date and repeated attempts.
+    - Your learning goal and any earlier gap list.
+  you_get:
+    - An active gap table with scores and evidence.
+    - One or two topics to focus on next.
+    - Progress states tied to repeated clean checks.
+  how_it_works:
+    - title: Step 1
+      text: Add each observed mistake to the existing gap list.
+    - title: Step 2
+      text: Rank gaps using their type, repeat count and time since practice.
+    - title: Step 3
+      text: Pick at most two focus areas and keep at most five active gaps.
+yugash007/edu-agent-skills:skills/memory/learning-memory:
+  slug: learning-session-handoff
+  name: Learning session handoff
+  summary: Share session notes. Get an updated learner profile and a clear place to resume next time.
+  subhead: Share your last learner profile and notes from the current session. It checks what is still current, records what you showed and updates open gaps. You get a compact profile and a handoff that says where to resume.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share your last learner profile and notes from the current session. It checks what is still current, records what you showed and updates open gaps. You get a compact profile and a handoff that says where to resume.
+  you_give:
+    - Your previous learner profile, if one exists.
+    - Topics covered, answers checked and current learning goal.
+  you_get:
+    - An updated learner profile.
+    - A record of covered topics and open gaps.
+    - A short handoff for the next session.
+  how_it_works:
+    - title: Step 1
+      text: Restore the prior profile and check old or changed details.
+    - title: Step 2
+      text: Record learning outcomes from observed answers.
+    - title: Step 3
+      text: Write the resume point, next priorities and topics to skip.
+yugash007/edu-agent-skills:skills/onboarding/find-your-level:
+  slug: learning-level-check
+  name: Learning level check
+  summary: Choose a technical topic. Answer short questions to find a useful starting point for your lessons.
+  subhead: Share the technical topic you want to learn and your goal. It asks questions that rise in difficulty and stops when the gaps are clear. You get a suggested level, reasons for that choice and a starting point to confirm.
+  task: study-and-practice
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: feedback_notes
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share the technical topic you want to learn and your goal. It asks questions that rise in difficulty and stops when the gaps are clear. You get a suggested level, reasons for that choice and a starting point to confirm.
+  you_give:
+    - A technical topic and the outcome you want.
+    - Your self-reported level and any relevant project.
+  you_get:
+    - A short topic-specific level check.
+    - An explained starting-level estimate.
+    - A recommended first lesson.
+  how_it_works:
+    - title: Step 1
+      text: Ask about your goal and current confidence.
+    - title: Step 2
+      text: Use short topic questions to check vocabulary, examples and tradeoffs.
+    - title: Step 3
+      text: Suggest a starting level and confirm it with you.
+yugash007/edu-agent-skills:skills/onboarding/repo-understand:
+  slug: codebase-learning-map
+  name: Codebase learning map
+  summary: Share a code folder. Get an ordered learning map, key prerequisites and paths that fit your goal.
+  subhead: Give it a code folder, its main guide and your learning goal. It maps the lessons and features, checks what you need to know first and suggests routes. You get an ordered study map and a choice of starting paths.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: codebase
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Give it a code folder, its main guide and your learning goal. It maps the lessons and features, checks what you need to know first and suggests routes. You get an ordered study map and a choice of starting paths.
+  you_give:
+    - A repository and its main guide or course outline.
+    - Your goal and current level.
+  you_get:
+    - An ordered map of learning phases.
+    - A list of prerequisites and likely sticking points.
+    - Two or three study paths with tradeoffs.
+  how_it_works:
+    - title: Step 1
+      text: Identify whether the repository teaches lessons or holds a working project.
+    - title: Step 2
+      text: Map phases, outcomes and the knowledge each phase needs.
+    - title: Step 3
+      text: Offer different learning paths and ask you to choose.
+yugash007/edu-agent-skills:skills/productivity/revision-mode:
+  slug: study-revision-coach
+  name: Study revision coach
+  summary: Share covered topics, mistakes and your deadline. Get a focused review session that starts with your weakest topics.
+  subhead: Share the topics you covered, past mistakes and time before your exam or interview. It ranks what needs review and tests recall before teaching again. You get a focused session plan, practice questions and an honest list of remaining gaps.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share the topics you covered, past mistakes and time before your exam or interview. It ranks what needs review and tests recall before teaching again. You get a focused session plan, practice questions and an honest list of remaining gaps.
+  you_give:
+    - Covered topics, recurring errors and confidence notes.
+    - Your deadline and time available for review.
+  you_get:
+    - A ranked revision plan with clear priorities.
+    - Recall prompts and practice exercises.
+    - A summary of passed checks and topics still needing review.
+  how_it_works:
+    - title: Step 1
+      text: Rank topics by gaps, time since review and deadline value.
+    - title: Step 2
+      text: Review at most five topics through recall and short exercises.
+    - title: Step 3
+      text: Record clean passes and choose what needs another round.
+yugash007/edu-agent-skills:skills/productivity/spaced-repetition:
+  slug: study-review-scheduler
+  name: Study review scheduler
+  summary: Share due study cards. Get a recall session and updated review dates based on how well you remember.
+  subhead: Give it study cards with due dates and recent recall results. It reviews the most overdue items first and adjusts each interval after your answer. You get updated dates, failed items to retry and a view of the coming week.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Give it study cards with due dates and recent recall results. It reviews the most overdue items first and adjusts each interval after your answer. You get updated dates, failed items to retry and a view of the coming week.
+  you_give:
+    - Understood study items with due dates and current intervals.
+    - Your recall result for each item.
+  you_get:
+    - A review session capped at fifteen items.
+    - Updated intervals and next review dates.
+    - Failed-item retries and a seven-day review view.
+  how_it_works:
+    - title: Step 1
+      text: Find due items and rank overdue ones first.
+    - title: Step 2
+      text: Show each question before its answer and record recall quality.
+    - title: Step 3
+      text: Update intervals, retry failed items and show the next review dates.
+yugash007/edu-agent-skills:skills/projects/debug-teacher:
+  slug: debugging-practice-coach
+  name: Debugging practice coach
+  summary: Share a bug and what you tried. Learn to gather evidence, test causes and verify your own fix.
+  subhead: Share the code, error and result you expected. It helps you gather evidence, form possible causes and test them one at a time. You work out the fix and explain why it works, then choose a check that proves it.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: codebase
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share the code, error and result you expected. It helps you gather evidence, form possible causes and test them one at a time. You work out the fix and explain why it works, then choose a check that proves it.
+  you_give:
+    - The code, error and expected result.
+    - Your environment and fixes already tried.
+  you_get:
+    - A guided debugging session.
+    - An explanation of the cause in your own words.
+    - A fix proposal and a verification test.
+  how_it_works:
+    - title: Step 1
+      text: State the expected and actual result, then gather evidence.
+    - title: Step 2
+      text: Ask you to propose causes and a test for each.
+    - title: Step 3
+      text: Check your explanation, fix and a test that would catch the bug again.
+yugash007/edu-agent-skills:skills/projects/build-with-me:
+  slug: coding-project-coach
+  name: Coding project coach
+  summary: Describe a learning project. Get small build milestones, hints and checks while you write the code.
+  subhead: Describe the project you want to learn by building, your level and your tools. It breaks the work into small milestones and explains the choices. You write the code, get hints and feedback, and pass each check before moving on.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: codebase
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Describe the project you want to learn by building, your level and your tools. It breaks the work into small milestones and explains the choices. You write the code, get hints and feedback, and pass each check before moving on.
+  you_give:
+    - Your project goal, technical tools and current level.
+    - The existing code and your time or resource limits.
+  you_get:
+    - A small milestone plan with clear checks.
+    - Hints and design explanations for the current step.
+    - Feedback on the code you wrote.
+  how_it_works:
+    - title: Step 1
+      text: Agree on a small project scope and three to five milestones.
+    - title: Step 2
+      text: Explain the basic design and coach one milestone at a time.
+    - title: Step 3
+      text: Review your code against each milestone check before continuing.
+yugash007/edu-agent-skills:skills/projects/project-review:
+  slug: student-coding-project-review
+  name: Student coding project review
+  summary: Share a learning project and its goal. Get specific strengths, priority fixes and questions that deepen your understanding.
+  subhead: Share your project, requirements and what you hoped to learn. It starts with your own review, then checks the work and the learning behind it. You get specific strengths, up to five priority issues and a next step for each.
+  task: study-and-practice
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: codebase
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: feedback_notes
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share your project, requirements and what you hoped to learn. It starts with your own review, then checks the work and the learning behind it. You get specific strengths, up to five priority issues and a next step for each.
+  you_give:
+    - Project code, notes and original requirements.
+    - Your learning goals and your own view of the work.
+  you_get:
+    - Specific strengths tied to your project.
+    - Up to five ranked issues with code references.
+    - Next steps and a reflection question.
+  how_it_works:
+    - title: Step 1
+      text: Ask what you think went well and what you would change.
+    - title: Step 2
+      text: Review scope, correctness, code quality, tests and learning.
+    - title: Step 3
+      text: Name strengths, rank at most five issues and ask what you learned.
+yugash007/edu-agent-skills:skills/projects/architecture-review:
+  slug: system-design-practice-review
+  name: System design practice review
+  summary: Share a system design. Explain your choices, compare fixes and leave with a clear revision checklist.
+  subhead: Share your design, expected load and learning goal. It names what works, then asks questions that test your assumptions. You compare options for the biggest risks and get a checklist of the changes you choose to make.
+  task: study-and-practice
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: feedback_notes
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share your design, expected load and learning goal. It names what works, then asks questions that test your assumptions. You compare options for the biggest risks and get a checklist of the changes you choose to make.
+  you_give:
+    - A system design as a diagram, description or code.
+    - Expected load, reliability needs, team limits and learning goal.
+  you_get:
+    - A question-led review of your design.
+    - Ranked risks and alternatives with tradeoffs.
+    - A revision checklist based on your choices.
+  how_it_works:
+    - title: Step 1
+      text: Name design strengths and ask questions about weak assumptions.
+    - title: Step 2
+      text: After your answers, rank the main risks by severity.
+    - title: Step 3
+      text: Compare options, ask for your choice and record the agreed changes.
+yugash007/edu-agent-skills:skills/teaching/deep-dive:
+  slug: technical-topic-deep-dive
+  name: Technical topic deep dive
+  summary: Choose a topic you know partly. Practice explaining how it works, its tradeoffs and where it can fail.
+  subhead: Choose a technical topic whose basics you already know. It checks your starting point, then explores how it works, tradeoffs and failure cases. You explain each step back and finish with a short account of the idea in your own words.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Choose a technical topic whose basics you already know. It checks your starting point, then explores how it works, tradeoffs and failure cases. You explain each step back and finish with a short account of the idea in your own words.
+  you_give:
+    - A technical topic and what you already understand.
+    - The interview, design choice or bug that makes it useful.
+  you_get:
+    - A guided path from the basics to real failure cases.
+    - Questions and worked traces at your current level.
+    - A final explain-it-back task.
+  how_it_works:
+    - title: Step 1
+      text: Check your current depth and skip basics you can already explain.
+    - title: Step 2
+      text: Use worked traces, choices and edge cases to test deeper understanding.
+    - title: Step 3
+      text: Finish with an explanation written in your own words.
+yugash007/edu-agent-skills:skills/teaching/simplify-topic:
+  slug: technical-topic-explainer
+  name: Technical topic explainer
+  summary: Name a concept and a familiar field. Get an everyday analogy, its limits and a next step.
+  subhead: Share the concept that feels too abstract and a field you know well. It chooses one familiar analogy, explains where it stops working and checks your understanding. You then learn the correct terms one layer at a time.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share the concept that feels too abstract and a field you know well. It chooses one familiar analogy, explains where it stops working and checks your understanding. You then learn the correct terms one layer at a time.
+  you_give:
+    - The concept and the part that confuses you.
+    - A familiar field it can use for examples.
+  you_get:
+    - One grounded analogy with clear limits.
+    - A plain explanation at your current level.
+    - A question that bridges the analogy to the real terms.
+  how_it_works:
+    - title: Step 1
+      text: Find whether the gap is in words, purpose or how things work.
+    - title: Step 2
+      text: Use one familiar analogy and say where it breaks down.
+    - title: Step 3
+      text: Check your explanation before adding the correct technical terms.
+yugash007/edu-agent-skills:skills/teaching/socratic-mode:
+  slug: guided-reasoning-tutor
+  name: Guided reasoning tutor
+  summary: Bring a problem you want to understand. Work through focused questions, hints and a small practice task.
+  subhead: Bring a concept or problem and explain your current thinking. It asks focused questions, gives hints when needed and corrects gaps along the way. You finish by restating the idea and applying it to a small new task.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Bring a concept or problem and explain your current thinking. It asks focused questions, gives hints when needed and corrects gaps along the way. You finish by restating the idea and applying it to a small new task.
+  you_give:
+    - A concept or problem you want to reason through.
+    - Your current explanation and any recurring mistakes.
+  you_get:
+    - A guided question-and-hint session.
+    - A corrected explanation in your own words.
+    - One small task to apply the idea.
+  how_it_works:
+    - title: Step 1
+      text: Agree on the reasoning goal and hear your current explanation.
+    - title: Step 2
+      text: Probe with concrete questions and offer hints when you get stuck.
+    - title: Step 3
+      text: Correct gaps, ask for a restatement and set one practice task.
+Mohamed-El-Sharqawy/agent-tutor:skills/agent-tutor:
+  slug: personal-study-notebook
+  name: Personal study notebook
+  summary: Choose a subject and note folder. Get a study plan, lesson notes, quizzes and a progress dashboard.
+  subhead: Choose a subject, goal and folder for your notes. It learns your preferences, plans short lessons and checks your answers. You get lesson notes, quiz feedback, review dates and a dashboard that keeps the next study step visible.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read and write local notes
+  explain: Choose a subject, goal and folder for your notes. It learns your preferences, plans short lessons and checks your answers. You get lesson notes, quiz feedback, review dates and a dashboard that keeps the next study step visible.
+  you_give:
+    - Your subject, goal, current level and weekly study time.
+    - A local folder for notes and any source materials.
+  you_get:
+    - A personal study plan and lesson notes.
+    - Quiz reports and review dates.
+    - A progress dashboard in Markdown or static HTML.
+  how_it_works:
+    - title: Step 1
+      text: Ask about your learning goal, preferred explanations and note format.
+    - title: Step 2
+      text: Plan phases and write source-based lesson notes.
+    - title: Step 3
+      text: Quiz each topic and update review dates, logs and the dashboard.
+Mohamed-El-Sharqawy/agent-tutor:skills/agent-tutor-review:
+  slug: study-notebook-review
+  name: Study notebook review
+  summary: Share due lesson notes. Recall each topic, get honest feedback and update your next review dates.
+  subhead: Give it the lesson notes and review dates from your study notebook. It asks what you recall before showing the notes, then checks the gaps. You get feedback, fresh review dates and a mixed quiz across the topics you revisited.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read and write local study notes
+  explain: Give it the lesson notes and review dates from your study notebook. It asks what you recall before showing the notes, then checks the gaps. You get feedback, fresh review dates and a mixed quiz across the topics you revisited.
+  you_give:
+    - Lesson notes with review intervals, due dates and key takeaways.
+    - Your study notebook dashboard and recall answers.
+  you_get:
+    - Recall feedback for each reviewed topic.
+    - Updated note review dates.
+    - A mixed quiz and an updated session log.
+  how_it_works:
+    - title: Step 1
+      text: Read the due-note queue and ask for recall before revealing takeaways.
+    - title: Step 2
+      text: Judge recall and adjust the interval for each note.
+    - title: Step 3
+      text: Run a mixed quiz and update notes, dashboard and session log.
+Mohamed-El-Sharqawy/agent-tutor:skills/agent-tutor-visualize:
+  slug: study-note-diagrams
+  name: Study note diagrams
+  summary: Share a lesson concept. Get a clear diagram or table placed where it helps the explanation.
+  subhead: Share the lesson section and the idea readers need to see. It chooses a table, flowchart or simple drawing to match the idea. You get a compact visual with a caption, ready to place beside the explanation in your notes.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share the lesson section and the idea readers need to see. It chooses a table, flowchart or simple drawing to match the idea. You get a compact visual with a caption, ready to place beside the explanation in your notes.
+  you_give:
+    - A lesson section and the concept to explain.
+    - Your note folder and the learner level.
+  you_get:
+    - A compact Mermaid diagram, SVG drawing or table.
+    - A caption saying what to notice.
+    - An embed path suited to your local lesson notes.
+  how_it_works:
+    - title: Step 1
+      text: Choose the simplest visual form for the concept.
+    - title: Step 2
+      text: Build a small diagram or static drawing with readable labels.
+    - title: Step 3
+      text: Check the visual and add a caption beside the relevant explanation.
+dinqe/language-tutor:.:
+  slug: spanish-and-turkish-writing-tutor
+  name: Spanish and Turkish writing tutor
+  summary: Share a paragraph or study goal. Get clear corrections, grammar practice and a record of recurring mistakes.
+  subhead: Share a Spanish or Turkish text, or your study goal and deadline. It corrects your writing, explains each change and tags repeated errors. For ongoing study, it can keep a local mistake log and plan focused practice with your consent.
+  task: study-and-practice
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read the bundled Spanish or Turkish pack; local files are optional
+  explain: Share a Spanish or Turkish text, or your study goal and deadline. It corrects your writing, explains each change and tags repeated errors. For ongoing study, it can keep a local mistake log and plan focused practice with your consent.
+  you_give:
+    - A Spanish or Turkish text, or a language goal and deadline.
+    - Your target level and Spanish variety when relevant.
+  you_get:
+    - A corrected text with reasons for changes.
+    - Error tags and one grammar rule to focus on.
+    - An optional local study plan, mistake log and practice notes.
+  how_it_works:
+    - title: Step 1
+      text: Choose a one-off correction or an ongoing study workspace.
+    - title: Step 2
+      text: Use the matching language pack to explain corrections and error tags.
+    - title: Step 3
+      text: For ongoing lessons, revisit open mistakes before teaching one new structure.
+  when:
+    - Use it for written Spanish or Turkish practice.
+    - The bundled language guides have not had a native-speaker review. Check surprising corrections against your course or teacher.
+    - Text alone cannot prove speaking or listening skill.
+davila7/claude-code-templates:cli-tool/components/skills/career/academic-cv-builder:
+  slug: academic-cv-builder
+  name: Academic CV builder
+  summary: Share your research and teaching record. Get a CV draft ordered for the academic role you want.
+  subhead: Share your degrees, publications, research, grants and teaching record. It orders the sections for your target academic role and formats each part. You get a CV draft, field-specific layout notes and a checklist of missing details to confirm.
+  task: find-a-job
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share your degrees, publications, research, grants and teaching record. It orders the sections for your target academic role and formats each part. You get a CV draft, field-specific layout notes and a checklist of missing details to confirm.
+  you_give:
+    - Your degrees, publications, grants and teaching history.
+    - The academic role and field you are applying to.
+  you_get:
+    - A structured academic CV draft.
+    - Notes on section order and field conventions.
+    - A list of missing or unconfirmed details.
+  how_it_works:
+    - title: Step 1
+      text: Choose section order for a research, teaching or other academic role.
+    - title: Step 2
+      text: Format the supplied academic record into consistent sections.
+    - title: Step 3
+      text: Check dates, publication status and missing details.
+davila7/claude-code-templates:cli-tool/components/skills/career/resume-version-manager:
+  slug: resume-version-organizer
+  name: Resume version organizer
+  summary: Share your resume files and applications. Get a master-copy plan, clear file names and a version tracker.
+  subhead: Share your resume versions, recent changes and application list. It separates the master record from copies tailored for each role. You get a folder and naming plan, a tracker showing which copy went where and a queue of updates.
+  task: find-a-job
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share your resume versions, recent changes and application list. It separates the master record from copies tailored for each role. You get a folder and naming plan, a tracker showing which copy went where and a queue of updates.
+  you_give:
+    - Your resume files and the roles each one targets.
+    - Application records and new achievements to add.
+  you_get:
+    - A master-and-tailored-copy structure.
+    - Clear file naming rules and a version tracker.
+    - An update queue with old copies kept for reference.
+  how_it_works:
+    - title: Step 1
+      text: Identify the master record and the purpose of each tailored copy.
+    - title: Step 2
+      text: Set a clear folder layout and file naming pattern.
+    - title: Step 3
+      text: Track applications by version and list updates or copies to archive.
+davila7/claude-code-templates:cli-tool/components/skills/career/reference-list-builder:
+  slug: job-reference-list-builder
+  name: Job reference list builder
+  summary: Share possible references and the role. Get a reference list, permission request and briefing drafts.
+  subhead: Share the role and people who can speak about your work. It helps choose relevant references and formats their details. You get a reference list, permission-request drafts and short briefings about the role for each person to review.
+  task: find-a-job
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share the role and people who can speak about your work. It helps choose relevant references and formats their details. You get a reference list, permission-request drafts and short briefings about the role for each person to review.
+  you_give:
+    - The target role and possible professional references.
+    - Known contact details, working relationships and permission status.
+  you_get:
+    - A formatted reference list with missing details marked.
+    - Draft permission requests and reference briefings.
+    - A checklist for sharing and follow-up.
+  how_it_works:
+    - title: Step 1
+      text: Choose people who can give first-hand evidence for the role.
+    - title: Step 2
+      text: Check permission and current contact details before sharing.
+    - title: Step 3
+      text: Format the list and draft requests, briefings and thank-you notes.
+davila7/claude-code-templates:cli-tool/components/skills/career/creative-portfolio-resume:
+  slug: creative-resume-layout-planner
+  name: Creative resume layout planner
+  summary: Share your creative role and portfolio. Get separate resume layouts for job portals and direct sharing.
+  subhead: Share your creative field, resume and portfolio style. It plans a plain version for job portals and a designed version for direct sharing. You get layout, type and colour choices, plus clear links between your resume and your work samples.
+  task: find-a-job
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share your creative field, resume and portfolio style. It plans a plain version for job portals and a designed version for direct sharing. You get layout, type and colour choices, plus clear links between your resume and your work samples.
+  you_give:
+    - Your resume, creative field and target application route.
+    - Your portfolio link and existing style choices.
+  you_get:
+    - A plan for plain and designed resume versions.
+    - Type, colour and layout specifications.
+    - Portfolio-link guidance and a readability checklist.
+  how_it_works:
+    - title: Step 1
+      text: Choose when a plain or designed resume is appropriate.
+    - title: Step 2
+      text: Set type, colour, spacing and section rules for both versions.
+    - title: Step 3
+      text: Link the resume to relevant work samples and check readability.
+davila7/claude-code-templates:cli-tool/components/skills/career/portfolio-case-study-writer:
+  slug: portfolio-case-study-writer
+  name: Portfolio case study writer
+  summary: Share project notes and results. Get a case study that explains your role, choices, work and lessons.
+  subhead: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
+  task: find-a-job
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
+  you_give:
+    - Project notes with your role, decisions and constraints.
+    - Real results, dates and available screenshots or work samples.
+  you_get:
+    - A structured portfolio case study draft.
+    - A results section based on supplied evidence.
+    - A visual asset list and lessons learned.
+  how_it_works:
+    - title: Step 1
+      text: Set the project context, problem and your specific role.
+    - title: Step 2
+      text: Describe the work, choices and solution from your notes.
+    - title: Step 3
+      text: Present known results, lessons and the visuals readers need.
+davila7/claude-code-templates:cli-tool/components/skills/career/resume-formatter:
+  slug: resume-layout-editor
+  name: Resume layout editor
+  summary: Share your resume layout. Get clearer sections, consistent type and fixes for text that is hard to read.
+  subhead: Share your resume and the way you plan to apply. It checks section order, spacing, fonts and details that may confuse hiring software. You get layout changes, a cleaner text structure and a checklist to review before sharing the file.
+  task: find-a-job
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set method and adapts its questions or draft to your evidence.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: false
+  outputs:
+    - type: document
+    - type: plan
+  needs: read your supplied notes and ask follow-up questions
+  explain: Share your resume and the way you plan to apply. It checks section order, spacing, fonts and details that may confuse hiring software. You get layout changes, a cleaner text structure and a checklist to review before sharing the file.
+  you_give:
+    - Your resume file or its current layout details.
+    - The role, career stage and how you will submit it.
+  you_get:
+    - A list of specific layout fixes.
+    - Recommended type, spacing and section order.
+    - A final readability and file-format checklist.
+  how_it_works:
+    - title: Step 1
+      text: Review page length, margins, text size and section order.
+    - title: Step 2
+      text: Find tables, columns or hidden details that may hinder reading.
+    - title: Step 3
+      text: Suggest a cleaner layout and a final file checklist.

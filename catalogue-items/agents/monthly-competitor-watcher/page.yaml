@@ -1,6 +1,6 @@
 new_slug: monthly-competitor-watcher
 name: Monthly competitor watcher
-summary: Give it this month's rival ads and pages. Get what changed since last month and the one or two moves worth answering.
+summary: Watch your rivals every month. Give it their ads and pages. Get what changed since last month and the one or two moves worth answering.
 job: study-competitors
 thinking: medium
 thinking_why: It counts, compares with last month and runs deeper checks only where a rival moved. A mid-size model works. Use a stronger one if you watch more than six rivals.
@@ -14,6 +14,10 @@ when:
   - You have three to six rivals you want to keep an eye on without a big monthly project.
   - You want to know when a rival changes its offer, message or ad mix.
   - You need a reason to act, or a reason to leave things alone.
+not_for:
+  - "You want a one-off study of rival ads: use the Competitor ad swipe file builder instead."
+  - "You cannot collect rival ads on the same day each month: months will not compare well, so start with a one-time look by hand."
+  - "You want to know what a rival spends or sells: no ad tool shows that, and this agent never guesses it."
 you_give:
   - Your three to six rivals, with their sites, the first time
   - This month's ads from each rival, collected by hand from the public ad library, with the date
@@ -31,6 +35,30 @@ how_to_use:
   - The first run builds the base for each rival and compares nothing. The second run is the first real comparison.
   - Read the hand-back. Act on a move you agree with yourself, or ask for a brief for it.
   - Run it again next month. It reads each rival's history file.
+output_sample:
+  input:
+    - Your three to six rivals, with their sites (first run only)
+    - This month's ads from each rival, collected by hand from the public ad library, with the date
+    - Your brand file, for your claims and proof (optional)
+    - Your customer reviews (optional)
+  prerequisites:
+    - Last month's history file for each rival, which the first run builds
+    - An AI that can read and save files in a watch folder, such as Claude Code
+  output:
+    - name: This month
+      contains: Which rivals moved and which did not.
+    - name: What changed, per rival
+      contains: Live ad counts, format mix, new offers or prices and new landing pages, set against last month.
+    - name: Gaps you can fill
+      contains: Ad gaps your rivals leave open, each with the proof you have for it.
+    - name: Newcomers
+      contains: Any cheaper or simpler new rival, with a call of nuisance or real threat and why.
+    - name: Moves worth answering
+      contains: Up to two moves, each tied to a rival's change, or a clear none this month.
+    - name: What would change the call
+      contains: One to three signals that would turn a watch into an action next month.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Count the ads
     text: Counts each rival's ads by format, age, landing page and ad type.

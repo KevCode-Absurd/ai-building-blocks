@@ -19,6 +19,38 @@ metadata:
 
 # Startup IT Troubleshooting
 
+## How to run this skill in a chat
+
+Added by AI Blocks. The runbooks below are the original. This part adds the safety steps and the shape of the answer, and some commands below have been made safer (marked "AI Blocks").
+
+**Use it when:** you are the person who ends up fixing IT for a small team, and you need steps for a lockout, a network drop, a slow laptop, a new hire or a leaver.
+**Skip it when:** a server or product is down for customers (use the Outage incident leader), you suspect a data breach (use the Security incident triager), or you need a long-term IT process (use the IT Service Manager agent).
+
+**Ask once, in one message:**
+1. What is wrong, and what you see on screen (the exact error).
+2. How many people it affects, and whether money or customers are hit.
+3. Your systems (for example Google Workspace, Microsoft 365, Okta, Mac, Windows, Linux).
+4. Whether you have admin rights. Mark anything unknown as MISSING. Never guess a command for a system you were not told about.
+
+**Rank first.** 1) Company-wide outage. 2) Boss or customer-facing blocker. 3) Team-wide slowdown. 4) One person's machine.
+
+**Safety rules (AI Blocks):**
+- Commands here run with admin power on live accounts. Show each command and what it changes, and wait for a yes before you run it.
+- Use the least risky fix first. Try a restart or a permissions check before a reset or a wipe.
+- Before anything that deletes, resets, locks out or lowers security (docker prune, firewall rules, turning off two-step sign-in, removing accounts, remote wipe), confirm the target, take a backup, and get the owner's approval.
+- Never use a shared or fixed password. Make a random one, send it by a safe route and force a change at next sign-in.
+- Admin tokens and API keys in the examples are placeholders. Never paste a real one into a chat. Keep them in your password manager.
+- Some tools here need paid plans or admin roles: Google Workspace admin, Okta, Slack admin, 1Password, Tailscale, GitHub org admin, AWS IAM. Say which one a step needs.
+
+**Answer in this shape:**
+1. **Impact and priority.** One line.
+2. **Most likely cause.** One or two lines. Say if it is a guess.
+3. **Steps to fix.** Numbered, safest first. Each step shows the command (if any) and what it changes.
+4. **How to check it worked.** One check.
+5. **Log it.** One line for your incident notes: who, what, when, what you changed.
+6. **If it fails.** The next step, or who to call.
+
+
 Runbooks for startups and small teams where engineers double as the IT department.
 
 ## When to Use
@@ -34,14 +66,16 @@ You are the "accidental IT person." Nobody has IT in their title, but laptops fr
 ### Google Workspace via GAM
 
 ```bash
-curl -s -S -L https://gam-shortn.appspot.com/gam-install -o /tmp/gam-install.sh && bash /tmp/gam-install.sh && rm /tmp/gam-install.sh  # install GAM
+# AI Blocks: install GAM from the official GAM project on GitHub (GAM-team/GAM) by following its install guide.
+# Do not run a script from the web without reading it first.
 gam oauth create                                                     # authorize
 
-gam update user jane@company.com password "TempPass123!" changepassword on  # reset password
+# AI Blocks: make a random password, share it safely, and force a change at next sign-in
+gam update user jane@company.com password "$(openssl rand -base64 16)" changepassword on  # reset password
 gam update user jane@company.com suspended off       # unsuspend locked-out user
 gam user jane@company.com signout                    # force sign-out all sessions
 gam user jane@company.com update backupcodes         # new MFA backup codes
-gam user jane@company.com turnoff2sv                 # disable 2SV (re-enable within 24h)
+gam user jane@company.com turnoff2sv                 # disable 2SV. AI Blocks: only after you verify identity and the owner approves. Re-enable within 24h
 ```
 
 ### Okta API
@@ -121,7 +155,7 @@ networkQuality -s              # macOS 12+ bufferbloat test
 df -h                                    # volume overview
 du -sh ~/* | sort -rh | head -15         # biggest dirs in home
 docker system df                         # Docker disk usage (common culprit)
-docker system prune -a --volumes         # reclaim Docker space
+docker system prune -a --volumes         # reclaim Docker space. AI Blocks: this deletes unused images, containers and volumes. Check what is unused and back up data first
 brew cleanup --prune=all                 # macOS Homebrew cleanup
 ```
 
@@ -165,7 +199,7 @@ powercfg /batteryreport /output "$env:USERPROFILE\Desktop\battery.html"
 
 ```bash
 profiles status -type enrollment          # MDM enrollment check
-sudo systemsetup -setremotelogin on       # enable SSH for remote admin
+sudo systemsetup -setremotelogin on       # enable SSH for remote admin. AI Blocks: this opens a way in, so turn it on only if you need it
 
 # Homebrew fleet setup — standard Brewfile
 cat > Brewfile <<'EOF'
@@ -194,6 +228,7 @@ Install-Module PSWindowsUpdate -Force -Scope CurrentUser
 Install-WindowsUpdate -AcceptAll -AutoReboot
 # If stuck: reset update components
 Stop-Service wuauserv,cryptSvc,bits,msiserver -Force
+# AI Blocks: this deletes the Windows Update cache. Run it only if updates are stuck, and not during an update
 Remove-Item "C:\Windows\SoftwareDistribution" -Recurse -Force
 Start-Service wuauserv,cryptSvc,bits,msiserver
 
@@ -202,6 +237,7 @@ manage-bde -status C:
 Enable-BitLocker -MountPoint "C:" -EncryptionMethod XtsAes256 -UsedSpaceOnly -TpmProtector
 
 # Remote Desktop
+# AI Blocks: Remote Desktop opens a way in. Turn it on only if you need it, and never expose it straight to the internet
 Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name "fDenyTSConnections" -Value 0
 Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 ```
@@ -269,7 +305,7 @@ dig TXT _dmarc.company.com                       # DMARC
 ```bash
 # 1. Google Workspace account
 gam create user newhire@company.com firstname "Jane" lastname "Smith" \
-  password "Welcome2Company!" changepassword on org "/Engineering"
+  password "$(openssl rand -base64 16)" changepassword on org "/Engineering"  # AI Blocks: random password, forced change at first sign-in
 gam update group engineering@company.com add member newhire@company.com
 
 # 2. 1Password
@@ -305,7 +341,7 @@ sudo fdesetup enable
 
 ## Offboarding Checklist
 
-Run these **immediately** when someone departs. Speed matters for security.
+Run these **immediately** when someone departs. Speed matters for security. AI Blocks: confirm the person and the date with HR or the owner first. Some steps (delete AWS keys, remove from GitHub) cannot be undone.
 
 ```bash
 gam update user departed@company.com suspended on             # 1. block all access
@@ -377,6 +413,7 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
 # Linux
+# AI Blocks: deny-incoming can cut off your own SSH session. Allow SSH first (sudo ufw allow OpenSSH) and keep a second session open
 sudo ufw enable && sudo ufw default deny incoming && sudo ufw default allow outgoing
 ```
 
@@ -391,7 +428,7 @@ Get-NetFirewallProfile | Select Name, Enabled
 ```bash
 gam update user compromised@company.com password "$(openssl rand -base64 16)" changepassword on
 gam user compromised@company.com signout             # kill sessions
-gam user compromised@company.com turnoff2sv          # reset MFA
+gam user compromised@company.com turnoff2sv          # reset MFA. AI Blocks: only with the owner's approval, then make the user re-enrol at once
 gam user compromised@company.com show tokens         # check rogue OAuth apps
 gam user compromised@company.com show forwarding     # check attacker persistence
 ```

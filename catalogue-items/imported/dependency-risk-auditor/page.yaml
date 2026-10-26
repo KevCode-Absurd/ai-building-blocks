@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It scans manifests and ranks what it finds.
 new_slug: dependency-risk-auditor
 name: Dependency risk auditor
-summary: Point it at your project. Get risky packages, licence clashes and a
-  safe order to upgrade.
+summary: Run a dependency risk audit on your project. Find risky packages and licence clashes, and get a safe order to upgrade.
 job: secure-code
 headline: Dependency risk auditor
-subhead: A check of every package your project uses, with risky ones named,
-  licence clashes listed and a safe order to upgrade. It runs three small
-  scripts that read your manifest and lock files.
+subhead: A check of every package your project uses, with risky ones named, licence clashes listed and a safe order to upgrade. It runs three small scripts that read your manifest and lock files.
 explain: |
   A check of every package your project uses, with risky ones named, licence clashes listed and a safe order to upgrade. It runs three small scripts that read your manifest and lock files. They work offline and give the same result every time.
 
   The scanner flags known weak versions from a built-in pattern set. The licence checker compares each licence to your policy and calls out conflicts. The upgrade planner takes the scan and orders changes by risk across a timeline you pick. It reads files from JavaScript, Python, Go, Rust, Ruby and more. After you upgrade, you rerun the scan to confirm no high-severity findings remain. It needs Python.
 when:
-  - A customer asks for proof that your dependencies are safe.
+  - You want a fast offline first screen of your packages before a release.
   - You inherit an old project and fear what is in it.
   - You plan a big upgrade and want to avoid breaking things.
   - Legal asks whether any package has a licence you cannot ship.
+not_for:
+  - "You need proof your code is safe or current CVE coverage: run npm audit, pip-audit or cargo audit, because this check works offline from a small built-in list."
+  - "You need a legal ruling on a licence: ask a lawyer, because this only flags conflicts for review."
+  - "Your AI cannot run code or read your project files: ask a developer to run the three scripts and share the results."
 you_give:
   - Path to your project
   - "Licence policy: strict or relaxed"
@@ -29,8 +30,27 @@ you_get:
   - Upgrade plan in safe order
   - Re-scan to confirm fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run Python and read files, such as Claude with code running. Chat-only AI cannot run the scripts.
+  - Give your AI the skill folder and the path to your project.
+  - Tell it your licence policy, strict or permissive. Add a timeline in days and a risk level if you want.
+  - Ask it to run the scan, the licence check and the upgrade plan, then read the three results.
+  - Apply the upgrades in the order given, then run the scan again. Aim for no high-severity findings.
+  - Run npm audit, pip-audit or cargo audit too, for current known problems.
+output_sample:
+  input:
+    - The path to your project folder
+    - "Licence policy: strict or permissive"
+    - Upgrade timeline in days (optional)
+    - Lowest risk level to plan for (optional)
+  prerequisites:
+    - An AI that can run Python and read your project files
+    - Python 3 installed
+  output:
+    - name: scan.json
+      contains: Packages with known weak versions, matched against a small built-in list, with a severity for each.
+    - name: licenses.json
+      contains: Each package licence, sorted by type, with conflict pairs and ways to fix them.
+    - name: plan.json
+      contains: Upgrades in order of risk, with a testing checklist, rollback notes and a timeline.
+    - name: Re-scan result
+      contains: A second scan after you upgrade, to confirm no high-severity findings remain.

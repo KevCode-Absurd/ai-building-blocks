@@ -9,6 +9,10 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: audit_report
+    required: false
+  - type: copy_draft
+    required: false
 outputs:
   - type: ad_copy
     required: true

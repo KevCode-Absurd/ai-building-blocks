@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Live control and sensor setup need careful ordering.
 new_slug: driving-scenario-simulator
 name: Driving scenario simulator
-summary: Give it a RoadRunner scenario. Get it simulated step by step, with
-  sensors attached and logs read back.
+summary: Run a RoadRunner scenario simulation from MATLAB or Simulink, step through it, add sensors and read the logs. Needs MATLAB with RoadRunner.
 job: build-software
 headline: Driving scenario simulator
-subhead: Run a RoadRunner scenario from MATLAB or Simulink and read back exactly
-  what happened. You can play it in one go, step through it frame by frame, and
-  pull the logs when it ends.
+subhead: Run a RoadRunner scenario from MATLAB or Simulink and read back exactly what happened. You can play it in one go, step through it frame by frame, and pull the logs when it ends.
 explain: |
   Run a RoadRunner scenario from MATLAB or Simulink and read back exactly what happened. You can play it in one go, step through it frame by frame, and pull the logs when it ends.
 
@@ -18,6 +15,10 @@ when:
   - You want to step through a simulation and check each frame.
   - You need an external controller to drive one vehicle during a run.
   - You want sensor readings and logs after a test.
+not_for:
+  - "You need to launch RoadRunner or connect to it: set that up first with the MATLAB commands from MathWorks, as this skill starts after RoadRunner is running."
+  - "You want to build scenes or add actors and paths in the editor: do that by hand in RoadRunner, then come back to run it."
+  - "You use drivingScenario from Automated Driving Toolbox: that is a different product, so use its own MathWorks guides."
 you_give:
   - A RoadRunner scenario
   - What to control, watch or measure
@@ -29,8 +30,31 @@ you_get:
   - Sensor readings and simulation logs
   - Co-simulation setup with Simulink (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with RoadRunner and Simulink.
+  - Check you have MATLAB with RoadRunner and RoadRunner Scenario. Add Simulink if you want co-simulation. All are paid tools.
+  - Open or save your RoadRunner scenario, and note your MATLAB release.
+  - Open a chat with an AI that can run MATLAB code. Paste the SKILL.md text from the skill folder into the chat.
+  - Tell your AI what to run, control or measure. Add any sensors or scenario variables you want.
+  - Run the code it writes in MATLAB. Check the simLog and sensor readings.
+  - To export vehicle paths to CSV, use exportActorTrajectoryToCSV in MATLAB.
+output_sample:
+  input:
+    - Your RoadRunner scenario, open or saved
+    - What you want to control, watch or measure
+    - Sensors to attach (optional)
+    - Scenario variable values to change (optional)
+  prerequisites:
+    - MATLAB with RoadRunner and RoadRunner Scenario, which are paid licensed tools
+    - Simulink, only if you want co-simulation
+    - A RoadRunner scenario that is open or saved
+    - "Your release: R2024a and R2025a or later assign behaviours in different ways"
+  output:
+    - name: Simulation code
+      contains: MATLAB code that runs the scenario to the end, or steps through it frame by frame.
+    - name: simLog
+      contains: A MATLAB struct with the time and pose of each actor over the run.
+    - name: Saved log file
+      contains: A .mat file holding the simulation log so you can load and plot it later.
+    - name: Sensor readings
+      contains: Target poses and lane boundaries that your attached sensors report during the run.
+    - name: Co-simulation setup
+      contains: A MATLAB System object or Simulink blocks that control one vehicle from outside (optional).

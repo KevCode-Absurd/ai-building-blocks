@@ -1,6 +1,6 @@
 new_slug: podcast-style-video-prompts
 name: Podcast-style video clip prompt writer
-summary: Share your script and product photo. Get cast cards, reference prompts, a storyboard and clip prompts, with approval stops.
+summary: "Turn your Host and Guest script into podcast-style video clip prompts: two distinct cast cards, sheets, a storyboard and timed clips."
 job: make-video-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a podcast-style script and need prompts for an AI image and video tool.
   - Earlier attempts had the wrong person talking, drifting faces or a moving camera.
   - You want the product in every frame without anyone holding it up to the camera.
+not_for:
+  - "You need real customer testimonials or live-action footage: ask your customers to film themselves, or hire a person to shoot it."
+  - "You only want a simple UGC brief: write a plain brief for a creator by hand, with the product, the buyer and the one point to make."
+  - "You have no script yet: write the Host and Guest lines first, or use the Video ad script writer from customer quotes."
 you_give:
   - The script, with lines labelled Host and Guest and the clip plan
   - A front photo of your product, its height against a mug or glass, and how it's held
@@ -30,6 +34,32 @@ how_to_use:
   - Approve the two cast cards, make the reference images and pick one of each. Check the cast picture at thumbnail size.
   - Approve the sheets and lock lines, then the storyboard.
   - Make each clip from its prompt, continuing from the last if your tool allows. Edit with the finishing notes.
+output_sample:
+  input:
+    - Your script, with lines labelled Host and Guest, and a clip plan
+    - A front photo of your product
+    - Your video tool's clip lengths (optional)
+    - Your buyer's room and how your brand name is said (optional)
+  prerequisites:
+    - An AI that can read an attached photo
+    - An AI image and video tool to make the pictures and clips from the prompts
+  output:
+    - name: Stage 0 Script check
+      contains: A pass, or the lines to send back before anything is made.
+    - name: Stage 1 Cast
+      contains: Two cast cards for Host and Guest, plus a voice for each, for you to approve.
+    - name: Stage 2 Reference images
+      contains: Prompts for a few images of each person, your picks, and a cast picture to check them side by side.
+    - name: Stage 3 Sheets
+      contains: Views of both people, the product and the room, with one locked camera and lock lines.
+    - name: Stage 4 Storyboard
+      contains: An opening frame and each clip as timed turns, with the line in quotes and one listener reaction.
+    - name: Stage 5 Clips
+      contains: One prompt per clip, with attachments, lock lines, timed beats, end frame and sound.
+    - name: Finishing notes
+      contains: Cuts, captions, punch-in, the disclosure line, the offer as text and the voice route.
+    - name: Missing and checks missed
+      contains: Anything you did not supply, and any check the run could not pass.
 how_it_works:
   - title: Checks the script
     text: One speaker and one fact per turn, no personal results or titles, no spoken offer, and each clip ending where a turn ends.

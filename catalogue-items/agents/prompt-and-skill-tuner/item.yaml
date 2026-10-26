@@ -16,14 +16,14 @@ outputs:
   - {type: skill_files}
 uses: [prompt-tester-and-tuner, prompt-fixer, marketing-prompt-tester, skill-file-validator, skill-quality-tester, skill-trigger-auditor, skill-writer-and-reviewer, skill-safety-checker]
 steps:
-  - {uses: prompt-tester-and-tuner, note: "Prompts: sets the baseline score on your test cases, and scores every round after."}
-  - {uses: marketing-prompt-tester, note: "Only for prompts that write ads, emails, pages or posts: compares versions on the test cases and keeps the version history."}
-  - {uses: prompt-fixer, note: "Prompts, each round the checks fail: one change at a time to the prompt."}
-  - {uses: skill-file-validator, note: "Skills, first and each round: structure, wording and naming problems, scored out of 100."}
-  - {uses: skill-quality-tester, note: "Skills, after the validator has no critical problems: a quality score and the fix list."}
-  - {uses: skill-trigger-auditor, note: "Skills, when it has a description: whether the skill fires when it should and whether another skill blocks it."}
-  - {uses: skill-writer-and-reviewer, note: "Skills, each round the checks fail: one change at a time to the skill."}
-  - {uses: skill-safety-checker, note: "Skills, once, on the final version before you keep or share it: risky code, data leaks and hidden payloads."}
+  - {uses: prompt-tester-and-tuner, note: "Prompts: sets the baseline score on your test cases, and scores every round after. Hands the baseline scores and failing cases to the next prompt steps."}
+  - {uses: marketing-prompt-tester, note: "Only for prompts that write ads, emails, pages or posts: compares versions on the test cases and keeps the version history. Uses your prompt and test cases with step 1's baseline scores. Hands the version scores and history to the prompt fixer."}
+  - {uses: prompt-fixer, note: "Prompts, each round the checks fail: one change at a time to the prompt. Uses the failing checks from steps 1 and 2. Hands the changed prompt back to step 1 to test again. The skill steps start from your skill folder, not from this prompt."}
+  - {uses: skill-file-validator, note: "Skills, first and each round: structure, wording and naming problems, scored out of 100. Starts from your skill folder, not from the prompt steps. Hands its problem list to the skill writer and to the tests after it."}
+  - {uses: skill-quality-tester, note: "Skills, after the validator has no critical problems: a quality score and the fix list. Uses the skill folder as it stands after step 4's fixes. Hands the score and fix list to the skill writer."}
+  - {uses: skill-trigger-auditor, note: "Skills, when it has a description: whether the skill fires when it should and whether another skill blocks it. Uses the skill's description and the skills around it, not step 5's score. Hands its grade and blockers to the skill writer."}
+  - {uses: skill-writer-and-reviewer, note: "Skills, each round the checks fail: one change at a time to the skill. Uses the problem lists and scores from steps 4 to 6 and your brief for what the skill must do. Hands the changed skill back to the checks, then to step 8."}
+  - {uses: skill-safety-checker, note: "Skills, once, on the final version before you keep or share it: risky code, data leaks and hidden payloads. Uses the final skill folder from step 7."}
 schedule: "Each time the prompt or skill is changed, and before you share it"
 asks_before: [overwriting your original prompt or skill file, sharing or publishing a skill, adding a tuned prompt or skill to a live tool or a customer-facing flow, running test cases through a paid API key, running scripts that come with a skill you did not write]
 origin: own

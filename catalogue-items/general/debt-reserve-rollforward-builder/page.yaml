@@ -1,55 +1,85 @@
 new_slug: debt-reserve-rollforward-builder
 name: Debt reserve rollforward builder
 headline: Debt reserve rollforward builder
-summary: A debt reserve rollforward and unfunded requirement
+summary: Roll a debt service reserve forward for one period. Get the required balance, the top-up, the ending balance and any gap left unfunded.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A debt reserve rollforward and unfunded requirement. Share opening debt reserve, authorized draw, next annual debt service, required coverage months and cash actually available for reserve funding.
+subhead: Give it the reserve balance at the start, any draw your lender approved, next year's debt service, the number of months the reserve must cover and the cash you can put in. It works out the balance the loan requires. You get the top-up, the ending balance and any amount still short.
 explain: |-
-  A debt reserve rollforward and unfunded requirement.
+  Many loans make a borrower hold a debt service reserve: a cash account that can pay the next few months of loan payments. The agreement sets the size, such as six months of debt service. Each period the account must be checked again. It may have been drawn on, next year's payments may be different, and the borrower may not have enough cash to top it up. This debt reserve rollforward builder does that check for one period.
 
-  Project debt reserves. Illustrative USD reserve rollforward. Required reserve uses annual debt service120 divided by12 times6 coverage months=60, explicitly assuming uniform monthly service. Opening40 plus available deposit10 leaves50 and requirement gap10. An uneven actual repayment calendar requires the actual contractual future-service window instead of the uniform monthly shortcut. Draws and modeled releases require supplied authorizations.
+  It starts with the opening balance and takes off any draw your lender has approved, never more than the account holds. It then works out the required balance from next year's debt service. If the account is short, it adds cash, but only up to the cash you say is available. If the account holds too much, the excess is shown as a possible release. Whatever cannot be funded is shown as a gap.
+
+  It does not decide that a draw or release is allowed. You supply the approval, and the skill only does the sums. It also assumes payments fall evenly across the months unless you give the real calendar.
 when:
-  - You need a debt reserve rollforward and unfunded requirement.
-  - You work on project debt reserves and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A period has ended and your loan agreement asks you to check the reserve account again.
+  - The reserve was drawn on and you need to see how much must go back in.
+  - Next year's debt service changes and you want the new required balance.
+  - A lender asks why the reserve is short and you need the sums written down.
 you_give:
-  - Opening debt reserve, authorized draw, next annual debt service, required coverage months and cash actually available for reserve funding.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The reserve account balance at the start of the period (from the bank statement)
+  - Any draw your lender approved this period (from the lender's written approval)
+  - Next year's debt service (from the loan repayment schedule)
+  - The number of months of debt service the reserve must cover (from the loan agreement)
+  - Cash you can put into the reserve now (from your cash forecast)
+  - The currency and units, such as USD in thousands
+  - Your own loan spreadsheet (optional)
 you_get:
-  - A debt reserve rollforward and unfunded requirement.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The reserve balance the loan requires
+  - The draw applied, capped at what the account holds
+  - The top-up deposit, limited to the cash you can put in
+  - Any excess that could be released, shown as a scenario only
+  - The ending reserve balance and any gap left unfunded
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the opening balance, the approved draw (or say none), next year's debt service and the coverage months. Say where each came from, and give the currency and units.
+  - Say how much cash you can put into the reserve now. If the figure is not known, the top-up is marked MISSING.
+  - "Check one line yourself: the required balance is next year's debt service, divided by 12, times the months. For 120 and 6 months that is 60."
+  - Read the gap line, MISSING and CHECKS MISSED before you share anything. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
-    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
-  - title: 2. Source the agreement coverage window, reserve-eligible assets and permitted draw/release conditions
-    text: Source the agreement coverage window, reserve-eligible assets and permitted draw/release conditions.
-  - title: 3. Apply only the supplied authorized draw capped at opening reserve, then compute required reserve from the upcoming service profile
-    text: Apply only the supplied authorized draw capped at opening reserve, then compute required reserve from the upcoming service profile.
-  - title: 4. Fund the shortfall only from available cash, release excess only as a modeled authorized scenario and reconcile ending reserve to opening plus deposits less draws and releases
-    text: Fund the shortfall only from available cash, release excess only as a modeled authorized scenario and reconcile ending reserve to opening plus deposits less draws and releases.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. Loan terms and approvals are kept apart from your assumptions.
+  - title: Applies the draw
+    text: Takes off the draw you supply, never more than the opening balance. It does not decide that a draw is allowed.
+  - title: Works out the requirement
+    text: Divides next year's debt service by 12, then multiplies by the coverage months. This assumes even monthly payments.
+  - title: Tops up the account
+    text: If the balance after the draw is short, it adds cash, up to the cash you say is available.
+  - title: Looks for excess
+    text: If the balance is above the requirement, the excess is shown as a possible release. It is only a scenario until you have approval.
+  - title: Ties the balances
+    text: Ending reserve is opening balance, less draw, plus deposit, less release. Any amount still short is shown as the gap.
 output_shape: |-
-  A debt reserve rollforward and unfunded requirement.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Required reserve <amount> | Draw applied <amount> | Deposit <amount> | Possible release <amount> | Ending reserve <amount> | Gap <amount>
+
+  SCOPE AND SOURCES
+  <currency, units; source and date for each input; the loan clause that sets the reserve and the draw and release rules>
+
+  INPUTS AND ASSUMPTIONS
+  <opening reserve, approved draw, next annual debt service, coverage months, cash available; even monthly payments noted as an assumption>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <each sum with its figures; ending reserve ties to opening less draw plus deposit less release; remaining gap>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Actual records, contractual terms and scenarios remain distinguishable.
+  - what: Uneven payments
+    how: Paste the real payment for each of the next months so the requirement uses them. Without that, even payments are assumed.
+  - what: Reserve assets
+    how: Say what counts toward the reserve, such as cash only or a letter of credit too, so the balance is the right one.
+  - what: Release
+    how: If you want to see a release, say the loan allows it and give the approval. It is shown as a scenario only.
 judge:
   - Actual records, contractual terms and scenarios remain distinguishable.
   - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
@@ -64,15 +94,57 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The reserve account bank statement
+    - The loan repayment schedule for the next year
+    - The page of the loan agreement that sets the reserve and its draw and release rules
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Debt service reserve
+    meaning: A cash account a loan requires, held to pay the next few months of loan payments.
+  - term: Debt service
+    meaning: The interest and principal due on a loan.
+  - term: Draw
+    meaning: Money taken out of the reserve account to pay a loan payment.
+  - term: Rollforward
+    meaning: A schedule that starts at an opening balance and shows each change to the closing balance.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+not_for:
+  - Your loan has no reserve requirement. There is nothing to roll forward.
+  - You want to split a period's cash between lenders and the reserve in the order the loan sets. Use the Project payment waterfall builder.
+  - You want to test a cash covenant. Use the Debt service covenant headroom checker.
+  - Your payments are uneven across the year and you only have the yearly total. Give the real months, or treat the result as rough.
+output_sample:
+  input:
+    - Your reserve balance at the start of the period
+    - Any draw your lender approved
+    - Next year's debt service and the months the reserve must cover
+    - Cash you can put into the reserve now
+  prerequisites:
+    - The loan agreement page that sets the reserve and when it can be drawn or released
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Required reserve, draw, deposit, possible release, ending reserve and any gap left unfunded.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, with the source and date of each input and the loan clause behind the reserve.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each figure you gave it and each assumption, including the even monthly payment assumption.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum shown, and the tie from opening reserve to ending reserve.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
+next:
+  - project-payment-waterfall-builder
+  - debt-service-covenant-headroom-checker

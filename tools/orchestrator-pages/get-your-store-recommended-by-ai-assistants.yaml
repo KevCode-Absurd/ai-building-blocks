@@ -1,6 +1,6 @@
 new_slug: get-your-store-recommended-by-ai-assistants
 name: Get your store recommended by AI assistants
-summary: Give it your products and rivals. Get a baseline of who AI names, the gaps, and product pages rewritten to be quoted.
+summary: Find out which stores ChatGPT, Gemini and Perplexity name for your products, see why you are left out, and get product pages rewritten to be quoted.
 job: get-found-in-search
 thinking: high
 thinking_why: It maps questions, compares assistants and rewrites pages across four skills. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Shoppers ask ChatGPT, Gemini or Perplexity what to buy and you want your store in the answers.
   - A rival is named in AI answers and you cannot tell why you are not.
   - Your product pages describe the product in marketing words, with the plain facts missing.
+not_for:
+  - "You have no product pages yet: build them first, then come back. For the facts to put on them, use the Website brand brain builder."
+  - "You sell to other businesses and want lead lists: use a simple prospect list in a spreadsheet, or ask a sales person to build one."
+  - "You only want one product page rewritten: use the AI-ready product page editor on its own."
 you_give:
   - Your products and collections with prices
   - The page address and text of the product pages you want rewritten
@@ -27,11 +31,33 @@ you_get:
   - A gap list with fix, build or influence on each item, quick wins first, and a topic coverage score out of 100
   - Rewritten product pages with a plain first screen, spec table, short FAQ, title and a markup checklist
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Give it your products with prices, and any reviews or customer emails. Real customer words make better questions.
-  - Run the questions it writes in each AI assistant you can use and paste the answers back. It cannot run them for you.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
+  - Give it your products with prices. Add reviews or customer emails if you have them, because real customer words make better questions.
+  - Run the questions it writes in each AI assistant you can use, then paste the answers back. The workflow only records and scores them. It cannot run them for you.
   - Give it the page text and facts for the product pages to rewrite. Check every fact before you publish.
+output_sample:
+  input:
+    - Your products and collections, with prices
+    - The address and text of the product pages you want rewritten
+    - Specs, materials, sizing, shipping and returns
+    - Reviews and customer questions (optional)
+    - Your closest rivals (optional)
+  prerequisites:
+    - Access to at least one AI assistant, such as ChatGPT, Gemini or Perplexity, to run the questions yourself
+    - An AI that can read files, to run the handoff pack
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Shopper questions"
+      contains: 30 to 60 questions shoppers ask about your category, in topic groups, with the ones your store does not answer marked.
+    - name: "Step 2: AI panel log"
+      contains: For each question, which stores each assistant named, linked or left out, with your share of voice and sources cited.
+    - name: "Step 3: Gap list"
+      contains: The gaps that keep you out of answers, each tagged fix, build or influence, with quick wins first.
+    - name: "Step 4: Rewritten pages"
+      contains: Product pages with plain facts up top, a spec table, a short FAQ, a title and a markup checklist.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Map shopper questions
     text: Starts from money terms and adds the long tail and the sub-questions assistants run. Groups them into topics and marks the ones no page of yours answers.

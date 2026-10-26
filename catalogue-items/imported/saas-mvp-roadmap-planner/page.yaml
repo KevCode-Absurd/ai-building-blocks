@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It walks a fixed roadmap and makes a few stack choices.
 new_slug: saas-mvp-roadmap-planner
 name: SaaS MVP roadmap planner
-summary: Give it your SaaS idea. Get a stack choice, build order and launch
-  checklist you can follow.
+summary: "Plan your SaaS MVP roadmap: give it your idea and get a stack choice, build order and launch checklist you can follow step by step."
 job: build-product
 headline: SaaS MVP roadmap planner
-subhead: "A clear route from idea to first paying customers: which tools to use,
-  what to build in which order and what to check before going live."
+subhead: "A clear route from idea to first paying customers: which tools to use, what to build in which order and what to check before going live."
 explain: |
   A clear route from idea to first paying customers: which tools to use, what to build in which order and what to check before going live. It is for building the first version of a software product.
 
@@ -17,6 +15,10 @@ when:
   - You cannot decide between tools for sign-in, database and payments.
   - You want a checklist before launching to real users.
   - An early product needs a technical check.
+not_for:
+  - "You sell a physical product or a service, not software: use a simple plan on paper or ask a business advisor."
+  - "You want to review a mature SaaS with real users: ask an engineer for a full code and security review."
+  - "You only want help writing the code for one feature: ask your AI directly, with your own files pasted in."
 you_give:
   - Your product idea
   - Who the customer is
@@ -28,7 +30,30 @@ you_get:
   - A project structure
   - A launch checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code needs to run for the plan.
+  - Write your idea in one sentence and name your exact customer. Add your team size and favourite tools if you have them.
+  - Ask your AI to start with the validation checklist. Answer its questions honestly. If you cannot find 3 people willing to pre-pay, hold off on building.
+  - Read the stack table and folder layout. Ask it to swap any tool you dislike.
+  - Build in the order it gives you. You need your own code editor and accounts, such as Stripe and hosting, for the build itself.
+  - Before you launch, go through the pre-launch checklist and tick off each item.
+output_sample:
+  input:
+    - Your SaaS idea in one sentence
+    - Who your exact customer is
+    - Your coding skills or team size (optional)
+    - Tools you already prefer (optional)
+  prerequisites:
+    - Accounts for tools you pick, such as Stripe for payments, a sign-in service and hosting. Some of these are paid.
+  output:
+    - name: Validation checklist
+      contains: Questions about the problem, the customer and what they pay now, plus a rule on whether to build yet.
+    - name: Tech stack table
+      contains: A tool for each layer, such as frontend, database, sign-in, payments and email, with a reason for each.
+    - name: Project structure
+      contains: A folder layout for the app, with places for sign-in pages, the dashboard, marketing pages and the API.
+    - name: Core database schema
+      contains: Tables for users, workspaces and subscriptions, so many teams can share one app.
+    - name: Sign-in and Stripe setup
+      contains: Example code to protect pages and start a paid subscription checkout.
+    - name: Pre-launch checklist
+      contains: Checks for technical, product and marketing tasks to finish before real users arrive.

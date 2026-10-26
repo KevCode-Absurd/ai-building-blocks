@@ -2,35 +2,68 @@ thinking: medium
 thinking_why: It picks a solver, runs it and checks the answers are sound.
 new_slug: trade-off-optimizer
 name: Trade-off optimizer
-summary: Describe goals that pull against each other. Get a set of best
-  trade-off answers, checked against known test problems.
+summary: Find the best compromises when goals conflict, such as cost against speed. Get a Python script, a table of options and a trade-off chart.
 job: build-software
 headline: Trade-off optimizer
-subhead: When two goals fight each other, such as lower cost and higher speed,
-  there is no single best answer. This skill finds the set of best compromises
-  and shows them side by side so you can pick one on purpose.
+subhead: Give it two or more goals that pull against each other, the settings you can change and a way to score a design. It runs a multi-objective optimizer and returns a table of the best compromises, a chart and a test-problem check.
 explain: |
-  When two goals fight each other, such as lower cost and higher speed, there is no single best answer. This skill finds the set of best compromises and shows them side by side so you can pick one on purpose.
+  This is a multi-objective optimization tool for engineers and analysts. When two goals fight, such as lower cost and higher speed, no single answer wins on both. The skill finds the set of best compromises, called a Pareto front, so you pick one on purpose.
 
-  It writes Python using the pymoo library. It sets up your goals and limits, picks a suitable method such as NSGA-II or NSGA-III, runs it, and draws the trade-off curve. It also checks the method against known test problems, so you know the setup works before you trust it on yours. It needs Python 3.10 or newer and pymoo installed. It suits engineers and analysts who can run a script.
+  It writes Python using the pymoo library. It sets up your goals, settings and limits, picks a method such as NSGA-II or NSGA-III, runs it and draws the curve. It also runs the same method on a known test problem first, so you can tell the setup works before you trust it on yours.
+
+  You need a way to score a design, as formulas or as code. It does not guess your model. Without that, it stops and asks.
 when:
-  - You want to cut cost and raise quality at once and need to see the options.
+  - You want to cut cost and raise quality at once and need to see every good option.
   - You have an engineering design with several competing targets and limits.
-  - You need to compare optimisation methods on a known benchmark first.
-  - You have a few good solutions and need a way to choose between them.
+  - You want to try different optimization methods on a known test problem before using your own.
+  - You already have a few good designs and need a fair way to compare them.
+not_for:
+  - "You have one clear goal: use a normal single-goal solver or a spreadsheet instead."
+  - "You are weighing business options with no formulas, such as which market to enter: use the Strategy trade-off planner."
+  - "Scoring one design takes hours: the method needs thousands of scores, so build a faster stand-in model first."
 you_give:
-  - The goals you want to improve
-  - The settings you can change and their ranges
-  - Any hard limits (optional)
-  - A way to score a design, or the formulas
+  - The goals you want to improve, each marked lower or higher
+  - The settings you can change, with a range for each
+  - Hard limits, such as a maximum weight (optional)
+  - The formulas or code that score a design
 you_get:
-  - Python code for the optimisation
-  - A set of best trade-off solutions
+  - A Python script that runs the optimization
+  - A table of the best trade-off solutions
   - A chart of the trade-off curve
-  - A benchmark check of the setup
+  - A test-problem check with a one-line verdict
+  - A note on which solution suits which priority
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run Python 3.10 or newer, such as Claude Code or Codex. Add this skill or paste it into the chat.
+  - Write down your goals and which way is better for each, your settings and their ranges, and any hard limits.
+  - Paste the formulas that score a design, or point your AI at your code. Without them it must stop and ask.
+  - Ask your AI to set up pymoo and run the optimization. It saves the chart as an image file.
+  - Open the table and chart. Read the note on which solution suits which priority, and pick one.
+  - Check that no solution breaks your hard limits. Then test your pick in your normal tools before you use it.
+output_sample:
+  input:
+    - Your goals, each marked lower or higher is better
+    - Your settings and their ranges
+    - Hard limits (optional)
+    - Formulas or code that score a design
+  prerequisites:
+    - An AI that can run Python 3.10 or newer
+    - The pymoo library, which your AI can install
+  output:
+    - name: Python script
+      contains: The goals, settings, limits, chosen method and stopping rule, with a fixed random seed.
+    - name: Trade-off table
+      contains: One row per best compromise, with its settings and goal values.
+    - name: Trade-off chart
+      contains: A picture of the curve, saved as an image file.
+    - name: Test-problem check
+      contains: The same method run on a known test problem, with a one-line verdict.
+    - name: How to choose
+      contains: Which solutions suit which priority, and what each one gives up.
+    - name: Not checked
+      contains: Limits that were missed or tests not repeated, so you know what to verify.
+works_best_with: Claude Code or Codex, because they can install pymoo and run the script. Share your scoring code or formulas up front to save a round of questions.
+terms:
+  Pareto front: The set of designs where you cannot improve one goal without making another worse.
+  NSGA-II: A common method that evolves a group of designs over many rounds toward the best compromises.
+  pymoo: A free Python library for this kind of optimization.
+  benchmark: A known test problem with a known best answer, used to check the setup works.

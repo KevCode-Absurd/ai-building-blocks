@@ -15,10 +15,10 @@ outputs:
   - {type: plan}
 uses: [hero-product-repositioner, offer-checklist-reviewer, offer-profit-per-session-checker, offer-test-planner]
 steps:
-  - {uses: hero-product-repositioner, note: "Starts the chain: one angle and one offer per buyer type."}
-  - {uses: offer-checklist-reviewer, note: "Reads the angles and offers from the step before and returns a stronger offer with its three best changes."}
-  - {uses: offer-profit-per-session-checker, note: "Checks the revised offers from the step before against your costs and visit numbers."}
-  - {uses: offer-test-planner, note: "Turns the winning offers into a funded test with a control and a spend rule."}
+  - {uses: hero-product-repositioner, note: "Starts the chain: one angle and one offer per buyer type. Hands step 2 the angles and offers."}
+  - {uses: offer-checklist-reviewer, note: "Reads the angles and offers from the step before and returns a stronger offer with its three best changes. Hands step 3 the revised offers."}
+  - {uses: offer-profit-per-session-checker, note: "Checks the revised offers from the step before against your costs and visit numbers. Hands step 4 the profit check for each offer."}
+  - {uses: offer-test-planner, note: "Turns the winning offers into a funded test with a control and a spend rule. Reads the revised offers from step 2, step 3's profit check and the visits and orders you exported."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-offers-for-each-buyer-type-and-pick-the-best/skeleton.yaml

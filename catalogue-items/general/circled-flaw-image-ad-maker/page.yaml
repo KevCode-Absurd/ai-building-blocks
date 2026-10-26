@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: circled-flaw-image-ad-maker
 name: "Circled flaw image ad maker"
-summary: "Paste your story ad. Get a flaw photo prompt and the one rough mark to draw on it."
+summary: "Make a circled flaw image ad: get a phone-photo prompt for one visible flaw, plus the one rough circle or arrow to draw on it. Paste your story ad."
 job: make-image-ads
 
 headline: "Circled flaw image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your story is about one flaw a camera can see, like a split seam, a stain or a box of pills nobody took.
   - You're showing ads to people who don't know you and need the eye to land in the right place fast.
   - Your plain photo ads get seen, but people don't know what to look at.
+not_for:
+  - "The flaw is on a body, such as skin or a rash: use the Visible symptom image ad maker, which never marks the body."
+  - "The problem is a feeling or a moment, not something a camera can see: use the Problem moment image ad maker."
+  - "You have no story ad yet: write one first with the Fact-based ad copy writer, then come back."
 
 you_give:
   - Your approved story ad and the flaw it describes
@@ -34,6 +38,35 @@ how_to_use:
   - Add your buyers' own phrase for the flaw if you have one, from reviews or messages.
   - Make the photo from the prompt, then draw the mark on it in your phone's photo editor.
   - Show it to someone for two seconds. If they can't say what was marked, ask for a closer framing.
+output_sample:
+  input:
+    - Your approved story ad, with the flaw it describes
+    - How your buyers describe the flaw, in their words (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI that can make images, or an image tool, to turn the photo prompt into a picture
+    - A phone photo editor to draw the mark by hand
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: Where and when
+      contains: The place, time of day, what is within reach and where the camera stands.
+    - name: The flaw
+      contains: What the flaw is, its real size and where it sits in the frame.
+    - name: The mark
+      contains: Circle or arrow, its colour and why, and where it goes.
+    - name: Words on the image
+      contains: Nothing, or up to three words from your buyers, with their source.
+    - name: Blank version
+      contains: The photo with the mark and no words, and the photo with neither.
+    - name: Line under the image
+      contains: A short headline of about 27 characters, with the count.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt for the plain photo, ready to paste.
+    - name: Mark step
+      contains: How to draw the mark by hand, or a fallback line for the prompt.
+    - name: Checks missed
+      contains: Any of the five checks that still fail, one line each, or none.
 
 how_it_works:
   - title: Sets the house rules

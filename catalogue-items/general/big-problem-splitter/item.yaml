@@ -1,6 +1,6 @@
 slug: big-problem-splitter
 name: "Big problem splitter"
-summary: "Describe a problem that feels too big. Get it split into small steps, each with a test and a clear next move."
+summary: "Split a problem that feels too big into small steps. Get the root cause, a test for each step and your first move this week."
 category: general
 type: skill
 role: make
@@ -19,3 +19,7 @@ credits:
   - {title: "Design for a Better World teacher toolkit and How I taught DBW", by: "Don Norman, 2025", used: "Asking why five times to reach the root problem before choosing what to do"}
   - {title: "The Tim Ferriss Show: Anne Lamott", by: "Tim Ferriss with Anne Lamott, 2021", used: "Shrinking a dreaded project to one small piece you can do today"}
   - {title: "Anne Lamott's Battle Against Writer's Block", by: "The New Republic", url: "https://newrepublic.com/article/203899/anne-lamott-battle-writer-block", used: "Naming the fear that makes a project feel too big"}
+
+before: []
+next: [work-backwards-plan-checker, failure-first-plan-check]
+needs_mode: manual

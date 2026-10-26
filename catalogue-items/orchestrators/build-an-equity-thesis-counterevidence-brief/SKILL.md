@@ -1,17 +1,32 @@
 ---
 name: build-an-equity-thesis-counterevidence-brief
-description: "Use when you need to build an equity thesis counterevidence brief. A thesis claim ledger, contradictory evidence and open research questions."
+description: "Use when you have an equity research thesis and dated filings and want each claim tested: a claim ledger, the evidence that cuts against it and open questions. Not for university dissertations, valuations or buy and sell calls."
 ---
 
 # Build an equity thesis counterevidence brief
 
-A thesis claim ledger, contradictory evidence and open research questions.
+Test an equity research thesis against its own filings. Three steps run in order: list each claim and the proof it needs, read the filings for evidence on both sides, then draft a committee outline. It builds no target price and makes no buy or sell call.
+
+## Before you start
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a filing, figure or date.
+
+**What you need:**
+- **The thesis draft** (yours): a memo, note or list of points.
+- **The filings** (yours): dated annual and quarterly reports and their exhibits, in full.
+- **The as-of date and horizon** (yours): the date the facts are true to, and how long you plan to hold.
+
+**Makes it better (optional):** who reads the outline and by when, and your earlier notes on the company.
+
+**Tools that do this best:**
+- **A chat AI that can read files:** it reads the full filings. A pasted summary can hide the clauses that cut against a claim.
 
 ## What you need
 
-- An existing research thesis draft, dated filings, source exhibits, current as-of date and the stated investment horizon.
-- The reader, desired outcome, deadline and permission limits.
-- Any approved earlier work or examples, with dates and versions.
+- Your research thesis draft, the dated filings and exhibits behind it, the as-of date and the investment horizon.
+- The reader of the outline, the deadline and any limits on what may be changed (optional).
+- Earlier notes on the company, with dates (optional).
+
+If the filings are missing, still run step 1 and mark every claim's evidence MISSING. Ask once, in one short message, for only what you cannot work without.
 
 The pack includes the governing file you are reading and all named component skills. Read each component's full instructions before using it. If a component is absent, retrieve its public page at https://useaiblocks.com/skills/<slug> when browsing is available, or ask for the missing pack file. Never silently replace an unavailable skill with invented instructions. Tool-specific skills require their own supported tools; when those tools are absent, provide a clearly labeled plan or stop at that step.
 
@@ -25,17 +40,17 @@ Create a short brief for each step: the requested result, original source refere
 
 ## Steps
 
-1. **Unsupported claim spotter.** Use `unsupported-claim-spotter`. Inventory the draft thesis claims and the exact evidence needed to support each, treating financial assertions as high risk. Run the component checks and save `outputs/step-01-unsupported-claim-spotter.md` before continuing.
+1. **Unsupported claim spotter.** Use `unsupported-claim-spotter`. Inventory the draft thesis claims and the exact evidence needed to support each, treating financial assertions as high risk. Run the component checks and save `outputs/step-01-unsupported-claim-spotter.md` before continuing. **Gate before step 2:** every claim in the draft is on the list, including the ones that seem obvious, each with the exact evidence it needs and a risk level. Hand step 2 the claim list as a ledger with one row per claim: claim, evidence needed, source and date (blank for now), and a status column.
 
-2. **Source note summariser.** Use `source-note-summariser`. Read supplied filings and exhibits for evidence that supports or challenges each claim. Preserve source dates and explicitly state the coverage limits. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Run the component checks and save `outputs/step-02-source-note-summariser.md` before continuing.
+2. **Source note summariser.** Use `source-note-summariser`. Read supplied filings and exhibits for evidence that supports or challenges each claim. Preserve source dates and explicitly state the coverage limits. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Run the component checks and save `outputs/step-02-source-note-summariser.md` before continuing. Run it once for each filing. Fill the ledger's status column for each claim with supports, contradicts or silent, with the source, its date and a short quote. Keep the evidence that cuts against a claim in its own list. **Gate before step 3:** supporting and adverse evidence come from comparable periods, a claim with no evidence is marked silent and not supported, and the coverage limits of each filing are stated.
 
-3. **Presentation builder.** Use `presentation-builder`. Prepare an investment committee discussion outline that presents the thesis, counter-case and unanswered questions without inventing a target price. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Run the component checks and save `outputs/step-03-presentation-builder.md` before continuing.
+3. **Presentation builder.** Use `presentation-builder`. Prepare an investment committee discussion outline that presents the thesis, counter-case and unanswered questions without inventing a target price. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Run the component checks and save `outputs/step-03-presentation-builder.md` before continuing. **Gate before the hand back:** the outline shows the thesis, the counter-case and one open question for each claim with no proof, and it contains no target price.
 
 4. **Check and hand back.** Check the combined result against the acceptance rules below. Hand back the files, source coverage and one proposed next step.
 
 ## What you hand back
 
-A thesis claim ledger, contradictory evidence and open research questions.
+Lead with the claim ledger: each claim, its status and its source. Then give the counter-case, the open research questions and the committee outline.
 
 Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, all MISSING: lines and CHECKS MISSED. If a tool created a native file, include that file and its actual verification result. An outline is not a finished document, a render is not a verified render, and a plan is not a completed external action.
 
@@ -57,7 +72,10 @@ Write MISSING: <what> next to the affected result. Continue independent work tha
 
 ## After this
 
-Offer one next step based on the result and the user's goal. When that step changes something outside the working files, state the concrete action and use only the authorization already given for it.
+Suggest one next step in a short question, and say they can type their own:
+- **Stress the assumptions** with the [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow, once the claims hold up.
+- **Close the gaps** by finding the filings for each open question, then run this workflow again with the new files.
+Nothing here sends or publishes anything. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
 
 ## Avoid
 

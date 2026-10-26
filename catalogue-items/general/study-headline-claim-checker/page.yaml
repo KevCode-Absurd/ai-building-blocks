@@ -1,6 +1,6 @@
 new_slug: study-headline-claim-checker
 name: "Study headline claim checker"
-summary: "Paste a news item or study claim. Get what it really shows, how strong it is, and what to ask."
+summary: "Check a study claim before you trust it. Paste a headline or article and get what the study showed, how strong it is, and three questions."
 job: research-topics
 thinking: medium
 thinking_why: "It must read a claim against its evidence and judge how strong it is."
@@ -17,6 +17,10 @@ when:
   - "A study claim is about to shape a choice you make."
   - "You are sharing an article and want to be sure it holds up."
   - "You read a post that cites a study but gives no detail."
+not_for:
+  - "You need a full review of many studies or a medical, legal or money decision: ask a qualified person, or use the full Study claim checker."
+  - "You want to check a product or ad claim, not a study: check the seller's proof directly or ask a person who knows the field."
+  - "You want to find new studies on a topic: use a search tool such as Google Scholar, then paste what you find here."
 
 you_give:
   - "The claim and the text around it"
@@ -33,6 +37,25 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - The claim and the text around it, such as a headline, abstract or article
+    - Why you care about it (optional)
+  output:
+    - name: CLAIM
+      contains: The claim written as one plain sentence, exactly as it was made.
+    - name: WHAT WAS STUDIED
+      contains: Who or what was studied, how many, for how long, and how it was measured.
+    - name: STUDY TYPE
+      contains: The kind of study, and what that kind can and cannot show.
+    - name: GAPS
+      contains: Where the claim goes further than the evidence, such as link versus cause.
+    - name: RATING
+      contains: Strong, fair, weak or cannot tell, with the reason in two lines.
+    - name: THREE QUESTIONS
+      contains: Three questions to ask before you rely on the claim.
+    - name: MISSING
+      contains: Facts the text did not give, marked so nothing is guessed.
 
 how_it_works:
   - title: "Write the claim plainly"

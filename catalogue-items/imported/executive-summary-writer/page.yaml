@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Cutting to what matters takes judgment about your reader.
 new_slug: executive-summary-writer
 name: Executive summary writer
-summary: Give it a long analysis. Get a one-page summary with the answer first,
-  the impact in numbers and the decision needed.
+summary: Turn a long report into a one-page executive summary. Put the answer first, add the impact in numbers, and state the decision you need.
 job: write-and-tell-stories
 headline: Executive summary writer
-subhead: Give it a long analysis. Get a one-page summary with the answer first,
-  the impact in numbers and the decision needed. Bring full analysis or report.
-  Use the result to plan your next step.
+subhead: Give it a long analysis. Get a one-page summary with the answer first, the impact in numbers and the decision needed. Bring full analysis or report. Use the result to plan your next step.
 explain: |
   A one or two page summary a busy executive can read in ten minutes and act on, with the answer first, the impact in numbers and the exact decision needed.
 
@@ -18,6 +15,10 @@ when:
   - A board deck needs a section that sums up weeks of analysis.
   - Your weekly report lists data but never states the point.
   - A decision is due today and you need the bottom line.
+not_for:
+  - "You need a full methods review or every data point shown: send the full report instead."
+  - "Your numbers are not ready yet: finish the analysis first, or ask the analyst for the missing figures."
+  - "You want a short note for a friend or a customer: write a few plain lines yourself."
 you_give:
   - Full analysis or report
   - Who will read it and what they decide
@@ -30,7 +31,23 @@ you_get:
   - Decision block
   - Template to reuse
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your full report. Say who will read the summary and what they must decide.
+  - Add the impact number for each finding. Give your length limit, such as one page.
+  - Ask your AI to write the summary using the template, with the answer first.
+  - Check every number against your report. Fix any figure your AI guessed.
+  - Send the decision block to the person who must approve.
+output_sample:
+  input:
+    - Your full analysis or report
+    - Who will read it and what they decide
+    - The business impact of each finding
+    - Actions you already plan to recommend
+    - Your length limit, such as one page or two
+  output:
+    - name: executive_summary_template.md
+      contains: A one to two page layout with the situation, key insights with impact, recommendations with outcomes, and the decision needed.
+    - name: pyramid_principle_guide.md
+      contains: How to lead with the answer, then the proof, then the detail, and how to turn a bottom-up draft around.
+    - name: executive_communication.md
+      contains: How to match tone to the reader, cut jargon, put a number on each point and avoid hedging.

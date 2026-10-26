@@ -1,6 +1,6 @@
 new_slug: repeat-one-product-photo-in-new-colours-as-ads
 name: Repeat one product photo in new colours as ads
-summary: Give it one product photo. Get matching image ads with exact words, checked, then sized up.
+summary: Turn one product photo into a set of matching image ads with exact words, checked before you spend, then sized up to full size.
 job: make-image-ads
 thinking: medium
 thinking_why: Each step is short and well defined. A mid-size model handles it, but check the words in the prompts yourself.
@@ -14,6 +14,10 @@ when:
   - You have one clean photo of your product and no budget for a shoot.
   - You want ads that look like one family and are easy to add to later.
   - Your last AI images had garbled words or a product that did not look like yours.
+not_for:
+  - "You have no clean photo of your product: take one first, or use the Product image ad prompt writer to describe the product in words."
+  - "You want a single ad, not a matching set: use the Product image ad prompt writer."
+  - "Your product is mostly small label text and you need every word perfect: check the images by eye and fix the words in a simple editor."
 you_give:
   - One clear photo of your product (more angles help)
   - The words each ad should carry, or your offer and price
@@ -26,11 +30,35 @@ you_get:
   - A check of the set against your proof and ad rules, with a verdict
   - Upscale settings and a change check for the images you pick
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
   - Attach your product photo and say what the ads must say.
-  - When it pauses, paste each prompt into your image tool, set the size and quality there, and pick the images you approve.
+  - When it pauses, paste each prompt into your image tool, such as ChatGPT or Gemini. Set the size and quality there, then pick the images you approve.
   - Attach the picked images and ask for the last step.
+  - Check the full-size images by eye before you publish them.
+output_sample:
+  input:
+    - One clear photo of your product
+    - The words each ad should carry, or your offer and price
+    - Your brand file or your colours and voice (optional)
+    - The size you need the final images (optional)
+  prerequisites:
+    - An AI that can read files and follow HANDOFF.md, such as Claude Code or a Claude Project
+    - An image tool such as ChatGPT or Gemini, to make the pictures at the pause
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Set plan"
+      contains: What repeats, what changes, how many pieces, and the colour for each piece.
+    - name: "Step 2: Prompts"
+      contains: One image prompt per piece, with every word in quotes, tool settings and a fix for each common fault.
+    - name: "Step 3: Check"
+      contains: Findings on the prompts against your proof and ad rules, versions that are too alike, and a verdict.
+    - name: "Pause: make and pick images"
+      contains: You paste the prompts into your image tool and approve the images you want.
+    - name: "Step 4: Upscale"
+      contains: Upscale settings for the size you need, a change check on your picks, and the full-size image.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the set
     text: Picks what buyers already know on sight, uses your one photo as the only source and lays out the set so only the colour changes.

@@ -20,7 +20,7 @@ The cure. Add 3-5 qualification fields; route to right rep tier; deliver prep to
 
 The pattern. 12-field qualification form before booking.
 
-The signal. 90 percent drop-off at the form.
+The signal. Heavy drop-off at the form.
 
 The cost. Lose conversions from would-be buyers; only the most committed survive the form.
 

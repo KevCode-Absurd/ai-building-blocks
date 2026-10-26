@@ -1,46 +1,30 @@
 ---
 name: explain-inventory-accounting-margin-effects
-description: "Reconcile inventory reserve movements and charges before comparing margins and cash investment."
+description: "Use when a company's gross margin or inventory cash needs LIFO reserves, write-downs and noncash movements pulled apart. Three steps run in order from filed disclosures. Not for valuing stock or IFRS reporters without LIFO."
 ---
 
 # Explain inventory accounting margin effects
 
-A linked inventory-accounting margin and cash-investment workbook.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Explain how inventory accounting changes margin and cash. Three steps run in order: restate LIFO to FIFO where it applies, bridge inventory charges to margin, then find the operating cash invested in inventory. Each step hands the next its adjusted figures.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **The inventory note** (yours): LIFO inventory, opening and closing reserves and the tax effect, where LIFO applies.
+- **The income statement** (yours): reported revenue and cost of goods sold.
+- **Charges and reversals** (yours): inventory write-downs and reversals, and the line they sit in.
+- **Balances** (yours): opening and closing inventory from the balance sheet.
+- **Noncash notes** (yours): acquisitions, currency and other noncash movements, with dates, currency and scale.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** two or more years of the same company, and the full inventory and cash flow notes.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-LIFO disclosures where applicable, reported COGS, inventory charges/reversals, inventory balances and noncash movement notes.
+The items under "Before you start", as of one reporting date, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without. If the company does not use LIFO under US GAAP, say so, skip step 1 and state that in the hand back. Never apply LIFO as an IFRS method. If the filings are not provided, say what you cannot finish.
 
 ## Governing scope
 
@@ -50,11 +34,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **LIFO reserve earnings bridge** (`lifo-reserve-earnings-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. For an actual LIFO issuer, reconcile the reserve to FIFO inventory and COGS; document FX, acquired reserves and liquidation effects before using the movement. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-lifo-reserve-earnings-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **LIFO reserve earnings bridge** (`lifo-reserve-earnings-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. For an actual LIFO issuer, reconcile the reserve to FIFO inventory and COGS; document FX, acquired reserves and liquidation effects before using the movement. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-lifo-reserve-earnings-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** reserve changes from acquisitions, currency and method changes are taken out of the operating movement, and any liquidation is flagged. If not, stop and say which line is off.
 
-2. **Inventory charge margin bridge** (`inventory-charge-margin-bridge`). Attribute disclosed inventory charges to the same COGS period. Keep permitted reversals and LIFO effects distinct, identify overlap and prevent two adjustments to the same expense. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-inventory-charge-margin-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Inventory charge margin bridge** (`inventory-charge-margin-bridge`). Attribute disclosed inventory charges to the same COGS period. Keep permitted reversals and LIFO effects distinct, identify overlap and prevent two adjustments to the same expense. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-inventory-charge-margin-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** each charge sits in the selected cost of goods sold line, reported margin stays primary, and no expense is adjusted twice.
 
-3. **Noncash working-capital bridge** (`noncash-working-capital-bridge`). Use original reported inventory balances and separately identified noncash write-downs/reserve changes to derive operating cash investment; analytical FIFO values must not silently replace statutory cash-flow inputs. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-noncash-working-capital-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Noncash working capital bridge** (`noncash-working-capital-bridge`). Use original reported inventory balances and separately identified noncash write-downs/reserve changes to derive operating cash investment; analytical FIFO values must not silently replace statutory cash-flow inputs. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-noncash-working-capital-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** noncash movements are taken out, the sign is reversed for the cash flow effect, and no restated FIFO balance is used for the cash result.
 
 ## Workbook checks
 
@@ -71,4 +55,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with three results: FIFO comparable cost of goods sold and earnings effect, margin as reported and excluding charges, and operating cash invested in inventory. Flag any reserve liquidation. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that this explains filed disclosures, that it is not a valuation or advice on reserves, and that a person who knows the company's accounting must review it before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **See the wider cash picture** with the [Reconcile working capital and tax cash](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash) workflow.
+- **Explain a revenue change** with the [Reconcile revenue presentation and perimeter](https://useaiblocks.com/workflows/reconcile-revenue-presentation-and-perimeter) workflow, if sales moved too.
+If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

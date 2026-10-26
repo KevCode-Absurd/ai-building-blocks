@@ -15,10 +15,10 @@ outputs:
   - {type: brand_brain}
 uses: [customer-buying-reasons-finder, wrong-buyer-review-checker, buyer-identity-segment-finder, trust-barrier-fixer]
 steps:
-  - {uses: customer-buying-reasons-finder, note: "Every month, on the new batch only: the reasons people bought, in their exact words, each with a source ID."}
-  - {uses: wrong-buyer-review-checker, note: "Only when low reviews rose or at least five came in: which ones are wrong-job buyers, plus not-for lines."}
-  - {uses: buyer-identity-segment-finder, note: "Only every third month, or when the batch holds at least 50 reviews: whether a new kind of buyer is showing up."}
-  - {uses: trust-barrier-fixer, note: "Only when a new doubt passes the bar: the proof that settles it, checked against your current page or ad message."}
+  - {uses: customer-buying-reasons-finder, note: "Every month, on the new batch only: the reasons people bought, in their exact words, each with a source ID. Passes on the reasons, marked known, growing or new."}
+  - {uses: wrong-buyer-review-checker, note: "Only when low reviews rose or at least five came in: which ones are wrong-job buyers, plus not-for lines. Uses the month's low reviews and your current page or ad message, not step 1's reasons. Passes on the wrong-job groups."}
+  - {uses: buyer-identity-segment-finder, note: "Only every third month, or when the batch holds at least 50 reviews: whether a new kind of buyer is showing up. Uses the whole review batch, not step 2's report. Passes on any new buyer group."}
+  - {uses: trust-barrier-fixer, note: "Only when a new doubt passes the bar: the proof that settles it, checked against your current page or ad message. Uses your page or ad message and the new doubts, not the buyer groups. Passes on the proof for each doubt."}
 schedule: "On the first working day of each month, after last month's reviews are in"
 asks_before: [changing your brand file, changing live page, ad or email copy, replying to or contacting customers, adding a not-for line to a live page]
 origin: own

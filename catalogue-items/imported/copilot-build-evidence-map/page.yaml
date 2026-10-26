@@ -2,18 +2,60 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-build-evidence-map
 name: Technical decision evidence mapper
-summary: Share a disputed choice and sources. Get claims linked to evidence,
-  counterarguments and the facts still missing.
+summary: Build an evidence map for a disputed technical choice. Link each claim to its source, keep the counterarguments and list the facts still missing.
 job: plan-strategy
 headline: Technical decision evidence mapper
-subhead: Share a disputed choice and sources. Get claims linked to evidence,
-  counterarguments and the facts still missing. Share your goal and the files
-  you already have. The skill file sets out the steps and the tools needed for
-  this job.
+subhead: Give your AI one disputed technical choice and the sources you have. It builds a map that links each claim to the exact passage behind it. You also see the counterarguments and the facts still missing.
+not_for:
+  - "You only need to check one simple fact: use a fact-checking step such as doublecheck, or search the source yourself."
+  - "You want a quick pros and cons list with no sources: ask your AI for a plain list instead."
+  - "You have no sources yet and only an idea: gather two or three sources first, then come back."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Write your question and your current position in one sentence each. Gather your sources with links or paths, dates and the passages to quote.
+  - Open an AI that can create files and run code. Node.js 18 or newer must be available for the check step.
+  - Paste the skill, then paste your question, position and sources.
+  - Let it build the map and run the check. It should only say the map is valid if the check prints VALID and a receipt.
+  - Read the counterevidence and the unknowns first. Fix any source or note you disagree with.
+  - "Only if you already installed doubt-ai@0.8.0: ask for the web page view. Ask for online source checks only if you allow web access."
+output_sample:
+  input:
+    - The disputed choice, written as one question
+    - Your current position on it, in one sentence
+    - "Your sources: link or file path, date, and the exact passage to quote"
+    - Any facts you know are missing (optional)
+  prerequisites:
+    - An AI that can create files and run code, to save and check the map
+    - Node.js 18 or newer, for the check step
+    - The doubt-ai@0.8.0 package, only if you want a web page view or online source checks (optional)
+  output:
+    - name: decision.doubt.json
+      contains: "The editable map: one position, claims, evidence, unknowns, and notes on how each link bears on the verdict."
+    - name: Position
+      contains: The single current verdict, worded no broader than the evidence allows.
+    - name: Evidence nodes
+      contains: Each source passage with its link or path, dates, and location, such as page, section or line.
+    - name: Counterevidence and qualifications
+      contains: Sources that disagree with the position or limit it, kept in the map instead of removed.
+    - name: Unknowns
+      contains: Specific missing facts that could change the verdict.
+    - name: Validation result
+      contains: The check reports VALID with a receipt, or lists each problem to fix.
+    - name: decision.html
+      contains: A shareable view of the map, made only if doubt-ai is already installed.
+when:
+  - Your team disagrees on a tool, a design or a vendor, and you need to show why.
+  - You are reviewing a proposal and want to see what really backs its claims.
+  - You have mixed research and need to see where sources agree and clash.
+  - A big decision needs a record that someone else can check later.
+you_give:
+  - The disputed choice, written as one question
+  - Your current position on it, in one sentence
+  - "For each source: its link or file path, and its publication date"
+  - "For each source: the exact passage to quote"
+  - Facts you know are missing (optional)
+you_get:
+  - A map file (.doubt.json) linking claims to exact source passages
+  - Counterarguments and limits kept in the map, not dropped
+  - A list of unknowns that could change the answer
+  - A check result that says VALID with a receipt, or lists what to fix
+  - A shareable web page of the map (optional, needs doubt-ai)

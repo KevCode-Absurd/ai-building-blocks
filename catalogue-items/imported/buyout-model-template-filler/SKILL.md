@@ -1,24 +1,33 @@
 ---
-
-## India
-
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
-
-- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
-  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
-  Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
-  formula and label the column `Total Revenue (₹ Cr)`.
-
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
 name: lbo-model
 description: This skill should be used when completing LBO (Leveraged Buyout) model templates in Excel for private equity transactions, deal materials, or investment committee presentations. The skill fills in formulas, validates calculations, and ensures professional formatting standards that adapt to any template structure.
 ---
+
+# LBO model template filler
+
+## Before you start
+
+You need:
+
+1. **A blank LBO template** (Excel), or the user's say-so to use the standard four-section layout described below.
+2. **Deal facts**: purchase price or entry multiple, debt tranches with amount, rate and fees, and the exit year and multiple.
+3. **Operating assumptions**: revenue and margin forecast, tax rate, capital spending, working capital.
+4. **Currency and units**: take them from the template. If the template has none, ask: dollars, rupees (₹ crore) or other. The `$` number formats below are defaults for a dollar model only. Switch the symbol and unit label to match.
+
+Ask once for anything missing. Never invent a deal fact. Mark any input you had to assume as `ASSUMED` in a note cell and list it in your report.
+
+**Tools.** This skill builds the workbook with the `officecli` command line tool, so it needs an AI that can run commands and write files. If you cannot run it, say so. Fall back to giving the user the model as a cell-by-cell table (cell, label, formula) for them to type into their template. Do not claim a checked file exists when you could not build one.
+
+**Not covered.** A full three-statement build or a non-LBO deal. Say so and stop.
+
+## If the deal is Indian
+
+The companion files this skill once pointed to (`india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`, `xlsx-author`, `officecli-xlsx`) are not in this folder. Use these two rules for an Indian company, and ignore them otherwise.
+
+- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` = Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year. Never annualise a quarter without stating the fiscal offset.
+- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: each trailing comma divides by 1,000, so it shows lakh under a crore label (a 100× error). Divide by `10000000` in a live formula and label the column `Total Revenue (₹ Cr)`.
+
+If something has no Indian equivalent, say so. Never put in a stand-in and present it as the real thing.
 
 ---
 
@@ -28,8 +37,8 @@ description: This skill should be used when completing LBO (Leveraged Buyout) mo
 
 Before starting any LBO model:
 1. **If a template file is attached/provided**: Use that template's structure exactly - copy it and populate with the user's data
-2. **If no template is attached**: Ask the user: *"Do you have a specific LBO template you'd like me to use? If not, I can use the standard template which includes Sources & Uses, Operating Model, Debt Schedule, and Returns Analysis."*
-3. **If using the standard template**: Copy `examples/LBO_Model.xlsx` as your starting point and populate it with the user's assumptions
+2. **If no template is attached**: Ask the user: *"Do you have a specific LBO template you'd like me to use? If not, I can build the standard layout, which has Sources & Uses, Operating Model, Debt Schedule, and Returns Analysis."*
+3. **If using the standard layout**: The sample file `examples/LBO_Model.xlsx` is not included in this folder. Build a new workbook with those four sections as tabs or blocks, in that order, and tell the user it is a standard layout built fresh, not their firm's template.
 
 **IMPORTANT**: When a file like `LBO_Model.xlsx` is attached, you MUST use it as your template - do not build from scratch. Even if the template seems complex or has more features than needed, copy it and adapt it to the user's requirements. Never decide to "build from scratch" when a template is provided.
 
@@ -55,7 +64,7 @@ The examples below use officecli syntax; see `xlsx-author` for the full build lo
 
 ### Core Principles
 * **Every calculation must be an Excel formula** - NEVER pre-compute a value and write it into a cell. Write `--prop formula="B5*B6"`, NOT `--prop value=1250`. The model must be dynamic and update when inputs change.
-* **Use the template structure** - Follow the organization in `examples/LBO_Model.xlsx` or the user's provided template. Do not invent your own layout.
+* **Use the template structure** - Follow the organization in the user's provided template, or the standard four-section layout if they have none. Do not invent your own layout.
 * **Use proper cell references** - All formulas should reference the appropriate cells. Never type numbers that should come from other cells.
 * **Maintain sign convention consistency** - Follow whatever sign convention the template uses (some use negative for outflows, some use positive). Be consistent throughout.
 * **Work section by section, verify with user at each step** - Complete one section fully, show the user what was built, run the section's verification checks, and get confirmation BEFORE moving to the next section. Do NOT build the entire model end-to-end and then present it — later sections depend on earlier ones, so catching a mistake in Sources & Uses after the returns are already built means rework everywhere.
@@ -291,3 +300,13 @@ Must report `count: 0`.
 **This skill produces investment banking-quality LBO models by filling templates with correct formulas, proper formatting, and validated calculations. The skill adapts to any template structure while ensuring financial accuracy and professional presentation standards.**
 
 - **Runbook:** [`references/runbook-lbo.md`](references/runbook-lbo.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+
+## Hand back
+
+When the last section is signed off, report:
+
+- The file name and where it is saved.
+- The checks run, each passed or failed (sources equal uses, debt balances never negative, sensitivity centre cell equals the model's IRR and MOIC, `officecli view model.xlsx issues` shows count 0).
+- Every `ASSUMED` input.
+- The headline IRR and MOIC, framed as the result of the user's assumptions, not a forecast.
+- A next step: change one assumption (exit multiple or leverage) and check that returns move in the expected direction.

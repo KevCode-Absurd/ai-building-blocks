@@ -2,36 +2,96 @@ thinking: medium
 thinking_why: It gathers public figures, then weighs which creators fit.
 new_slug: influencer-shortlist-builder
 name: Influencer shortlist builder
-summary: Give it a niche. Get creators with follower counts, engagement and fit
-  notes. Collects data from websites.
+summary: Build an influencer shortlist for your niche, ranked with follower counts, engagement rates and fit notes. Collects public data with a paid Apify account.
 job: grow-social
 headline: Influencer shortlist builder
-subhead: Give it a niche. Get creators with follower counts, engagement and fit
-  notes. Collects data from websites. Bring your niche and target platforms. Use
-  the result to plan your next step.
+subhead: Give it your niche, the platforms you care about and what a good fit looks like. It collects public creator data, works out engagement, flags what to check by hand, and returns a ranked shortlist with a note on each creator.
 explain: |
-  A shortlist of creators in your niche, with follower counts, engagement rates and notes on fit, so you can pick people to contact without scrolling for days. It pulls data from social sites using Apify tools, which needs an Apify account and token.
+  Picking creators by follower count alone is how brands end up paying for people whose posts nobody reacts to. This influencer shortlist builder ranks creators in your niche by how much their audience engages and how well they fit, so you can find influencers worth contacting without scrolling for days.
 
-  The skill follows a checklist. It picks the data source for the platform you care about, reads that source's input format, runs the collection, and then reviews what came back. It looks at engagement against audience size, signs of fake followers, how well each creator's topic matches yours, and audience signals. The final output is a ranked list with a line on each person. It collects data from websites.
+  It collects public data from Instagram, Facebook, YouTube or TikTok using Apify, a paid service you set up yourself. Then it works out engagement for each creator from the likes and comments it found, and shows its sums. It flags odd patterns for you to check by hand. It never calls anyone fake.
+
+  It cannot see who a creator's audience really is. Ask each creator for their own audience stats before any deal.
 when:
   - You need creators to promote a product in a specific niche.
-  - You want to know if a creator's followers are real.
-  - You are planning a campaign and need a list to approach.
-  - You want engagement compared across several platforms.
-  - Your team keeps picking creators by follower count alone.
+  - You want a list of creators ranked by engagement, not only follower count.
+  - You are planning a campaign and need a list of people to approach.
+  - You want to compare creators across Instagram, YouTube and TikTok.
+not_for:
+  - You have no Apify account and do not want one. You can still paste public numbers for each creator and ask for the ranking.
+  - You want a full plan for deals, pay and briefs. Use the creator partnership planner.
+  - You only want TikTok creators and an outreach plan. Use the TikTok creator outreach planner.
 you_give:
-  - Your niche and target platforms
-  - What a good fit looks like
-  - An Apify token in a local settings file
-  - Budget or follower limits (optional)
+  - Your niche and the platforms you care about
+  - What a good fit looks like, in a few lines
+  - An Apify account and token, kept in a local file and never pasted into the chat
+  - Follower or budget limits (optional)
+  - How many creators you want and whether you want a CSV file (optional)
 you_get:
   - A ranked creator shortlist
-  - Follower and engagement figures
-  - Authenticity signals
-  - Fit notes for each creator
+  - Follower counts and an engagement rate for each creator, with the sums shown
+  - Warnings to check by hand, such as likes that are low next to followers
+  - A fit note and link for each creator
+  - A note on what the data cannot tell you
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Apify token.
+  - Open Claude or another AI that can run code. This skill runs scripts and needs Node.js, a tool called mcpc, and an Apify token. Apify is a paid service, so check its current pricing first.
+  - Put your Apify token in a local file called .env. Never paste it into the chat. Platform terms apply, so collect only public data.
+  - Add this skill and tell your AI your niche, platforms and what a good fit looks like.
+  - Pick a quick answer in chat, or a CSV or JSON file. Start with a small number of creators to keep the cost low.
+  - Read the ranked table. Open the top creators' profiles yourself and look at recent posts before you reach out.
+  - No code or no Apify account? Paste each creator's public numbers into the chat instead, and ask for the same ranking.
+how_it_works:
+  - title: Pick the data source
+    text: It picks the Apify tool that fits your platform, such as an Instagram profile scraper or a TikTok scraper.
+  - title: Read the input rules
+    text: It fetches that tool's input format so the search is built correctly.
+  - title: Ask your preferences
+    text: It asks whether you want a quick answer or a file, and how many creators.
+  - title: Run the collection
+    text: It runs a script that collects public data and saves or shows it.
+  - title: Work out engagement
+    text: It divides average likes and comments by followers for each creator and shows the sums.
+  - title: Rank and flag
+    text: It ranks creators by fit and engagement, and flags odd patterns for you to check by hand.
+output_shape: |
+  | Rank | Creator | Platform | Followers | Engagement rate | Flags | Fit note | Link |
+  <one row per creator, best first>
+  Notes on the top three
+  What this data cannot tell you
+output_sample:
+  input:
+    - Your niche and the platforms you care about
+    - What a good fit looks like
+    - Your Apify token, kept in a local .env file
+    - How many creators you want, and a file format (optional)
+  prerequisites:
+    - An AI that can run code, with Node.js and the mcpc tool installed
+    - A paid Apify account. Check its current pricing first
+    - Permission under each platform's terms to collect public data
+  output:
+    - name: Ranked shortlist table
+      contains: Each creator with platform, followers, engagement rate, flags, fit note and link, best first.
+    - name: Engagement sums
+      contains: The likes, comments and followers used for each rate, so you can check the work.
+    - name: Flags
+      contains: Patterns to check by hand, such as low likes next to followers. Never a verdict.
+    - name: Notes on the top three
+      contains: A short reason each of the top creators fits your niche.
+    - name: CSV or JSON file (optional)
+      contains: The full data collected, saved with today's date in the file name.
+works_best_with:
+  tools:
+    - {name: "Claude Code or an AI with a terminal", why: "It can run the script and save a CSV for you."}
+    - {name: "Claude, ChatGPT or Gemini in a chat window", why: "Works if you paste each creator's public numbers in. It cannot collect data itself."}
+  inputs:
+    - "A written description of your ideal creator and audience"
+    - "A few creators you already like, to show what a good fit looks like"
+terms:
+  - term: Apify
+    meaning: A paid service that collects public data from websites. You set up your own account and token.
+  - term: Engagement rate
+    meaning: Average likes and comments on recent posts, divided by followers.
+  - term: Token
+    meaning: A secret key that lets this skill use your Apify account. Keep it in a file, never in chat.
+  - term: Scraping
+    meaning: Collecting public data from a website by program.

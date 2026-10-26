@@ -1,0 +1,1533 @@
+{
+ "version": 1,
+ "created": "2026-10-26",
+ "notes": "Tuning half of recommendation-holdout.json (odd positions). The other half is recommendation-holdout-test.json and must not be read while tuning. Hold-out set, labelled by hand from the catalogue itself (blocks.json names and summaries, plus a read of each candidate's summary) before any search or ranking code was looked at. No query was chosen, tuned or re-labelled by running site search or the evaluation script. Queries are new: none is copied or paraphrased from recommendation-eval.json. Mix: 40 vague outcome goals (area vague), 30 beginner phrasings, 20 typos or bad grammar, 30 outside marketing (finance and accounting, HR, teaching and study, software and data, legal paperwork, personal habits, design), 20 that name a tool (Shopify, QuickBooks, Excel, Notion, Google Ads, Slack, WordPress, GA4, Zapier, Stripe, Meta, Zendesk), 20 about AI itself. search.expect: any of these in the top 5 is a hit; the first listed is the best single answer; every listed item is one a careful person would be happy to land on. Tool-named queries whose tool is not named in the catalogue (for example QuickBooks) are labelled with the generic job item that does the work. goals.steps: each inner list is one needed step, satisfied by any slug in it. next.good: links a careful person would follow next; next.goodTasks: jobs where a next link is acceptable even if not listed. gaps: queries a visitor could plausibly type where the catalogue has no good item (checked by searching names and summaries for the topic); use them to test that weak matches are shown honestly, not to score hits. Use this file only to check that ranking changes generalise, not to tune against.",
+ "financeTasks": [
+  "money-and-investing",
+  "plan-budgets-and-cash",
+  "manage-accounting",
+  "manage-tax",
+  "track-numbers",
+  "raise-funding",
+  "manage-personal-finances",
+  "check-contracts",
+  "work-with-files"
+ ],
+ "search": [
+  {
+   "id": "h001",
+   "q": "i want my business to make more money",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "growth-lever-audit",
+    "growth-idea-ranker",
+    "hidden-offer-finder",
+    "after-sale-offer-planner",
+    "growth-bottleneck-finder"
+   ]
+  },
+  {
+   "id": "h003",
+   "q": "make my emails better",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "email-draft-reviewer",
+    "email-send-readiness-scorer",
+    "one-ask-email-tightener",
+    "plain-english-editor",
+    "email-mistake-fixer"
+   ]
+  },
+  {
+   "id": "h005",
+   "q": "people visit my shop but nobody buys",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "store-page-conversion-reader",
+    "checkout-page-auditor",
+    "store-funnel-benchmark-checker",
+    "trust-barrier-fixer",
+    "landing-page-auditor"
+   ]
+  },
+  {
+   "id": "h007",
+   "q": "help me choose between two options",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "stuck-decision-guide",
+    "constrained-decision-auditor",
+    "third-option-finder",
+    "no-good-options-decider",
+    "decision-checklist-builder"
+   ]
+  },
+  {
+   "id": "h009",
+   "q": "get people to buy from me a second time",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "reorder-and-second-order-planner",
+    "repeat-order-bottleneck-finder",
+    "post-purchase-flow-builder",
+    "loyalty-and-vip-program-designer",
+    "send-reorder-emails-that-fit-each-buyer-then-read-results"
+   ]
+  },
+  {
+   "id": "h011",
+   "q": "what do my customers actually want",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "customer-buying-reasons-finder",
+    "buyer-brief-writer",
+    "customer-research-analyst",
+    "feedback-theme-finder",
+    "customer-discovery-plan"
+   ]
+  },
+  {
+   "id": "h013",
+   "q": "i'm launching something next month and have no plan",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "brand-launch-planner",
+    "launch-channel-picker",
+    "publicity-first-launch-planner",
+    "go-or-no-go-launch-checker",
+    "launch-task-force-planner"
+   ]
+  },
+  {
+   "id": "h015",
+   "q": "i need a plan for the next three months",
+   "audience": "manager",
+   "area": "vague",
+   "expect": [
+    "90-day-plan-builder",
+    "check-your-strategy-then-turn-it-into-a-90-day-plan",
+    "okr-goal-writer",
+    "quarterly-roadmap-builder"
+   ]
+  },
+  {
+   "id": "h017",
+   "q": "my posts get no engagement",
+   "audience": "marketer",
+   "area": "vague",
+   "expect": [
+    "post-flop-reason-finder",
+    "flop-post-diagnoser",
+    "shareable-content-checker",
+    "social-content-results-reader",
+    "content-pillar-finder"
+   ]
+  },
+  {
+   "id": "h019",
+   "q": "keep track of what my team is working on",
+   "audience": "manager",
+   "area": "vague",
+   "expect": [
+    "weekly-status-update-writer",
+    "status-report-writer",
+    "executive-action-register",
+    "turn-meetings-into-owned-actions"
+   ]
+  },
+  {
+   "id": "h021",
+   "q": "make complicated numbers easy for my boss to understand",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "figures-to-plain-pictures-writer",
+    "number-to-picture-translator",
+    "insight-brief-writer",
+    "executive-summary-writer",
+    "data-story-writer"
+   ]
+  },
+  {
+   "id": "h023",
+   "q": "make customers happier after they buy",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "post-purchase-experience",
+    "customer-wow-budget-planner",
+    "first-use-gap-checker",
+    "new-customer-onboarding-sequence-writer",
+    "post-purchase-flow-builder"
+   ]
+  },
+  {
+   "id": "h025",
+   "q": "should i quit my job and work for myself",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "leave-job-own-income",
+    "job-exit-plan-writer",
+    "income-floor-calculator",
+    "fear-setting-planner"
+   ]
+  },
+  {
+   "id": "h027",
+   "q": "use my week better",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "weekly-time-audit-planner",
+    "make-a-realistic-plan-for-a-busy-week",
+    "week-priority-picker",
+    "deep-work-day-planner",
+    "weekly-review-guide"
+   ]
+  },
+  {
+   "id": "h029",
+   "q": "make my business run without me",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "hand-over-founder-dependent-operations",
+    "hand-off-the-work-only-you-do-and-keep-it-handed-off",
+    "process-and-sop-writer",
+    "founder-leadership-coach"
+   ]
+  },
+  {
+   "id": "h031",
+   "q": "know whether my marketing is actually working",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "marketing-results-reporter",
+    "marketing-performance-report",
+    "incrementality-test-planner",
+    "social-media-results-analyst"
+   ]
+  },
+  {
+   "id": "h033",
+   "q": "selling to other countries",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "overseas-market-planner",
+    "new-country-expansion-planner",
+    "overseas-listing-localizer",
+    "agency-marketing-cross-border-ecommerce"
+   ]
+  },
+  {
+   "id": "h035",
+   "q": "what should i work on next",
+   "audience": "manager",
+   "area": "vague",
+   "expect": [
+    "week-priority-picker",
+    "weekly-big-task-sorter",
+    "urgent-versus-important-sorter",
+    "big-decisions-first-sorter"
+   ]
+  },
+  {
+   "id": "h037",
+   "q": "help my team work better together",
+   "audience": "manager",
+   "area": "vague",
+   "expect": [
+    "write-your-team-culture-memo-and-make-it-real-in-daily-habits",
+    "company-operating-system-setter",
+    "one-on-one-meeting-planner",
+    "turn-employee-feedback-into-owned-actions"
+   ]
+  },
+  {
+   "id": "h039",
+   "q": "i dont know if my business is doing well",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "business-snapshot-writer",
+    "company-financial-health",
+    "company-health-scorer"
+   ]
+  },
+  {
+   "id": "h041",
+   "q": "i have an idea but no clue how to start a business",
+   "audience": "anyone",
+   "area": "strategy",
+   "expect": [
+    "startup-business-planner",
+    "lean-canvas-builder",
+    "idea-to-business-guide",
+    "five-day-idea-test-planner",
+    "thirty-day-launch-planner"
+   ]
+  },
+  {
+   "id": "h043",
+   "q": "i dont understand my google analytics",
+   "audience": "owner",
+   "area": "data",
+   "expect": [
+    "google-analytics-reader",
+    "ga4-store-setup-checker",
+    "store-page-conversion-reader",
+    "shopify-dashboard-reader"
+   ]
+  },
+  {
+   "id": "h045",
+   "q": "what do i say on a sales call if i have never sold anything",
+   "audience": "sales",
+   "area": "sales",
+   "expect": [
+    "sales-call-plan",
+    "sales-call-question-planner",
+    "agency-sales-discovery-coach",
+    "sales-opener-trio-writer"
+   ]
+  },
+  {
+   "id": "h047",
+   "q": "how do i make a spreadsheet to track my business expenses",
+   "audience": "owner",
+   "area": "finance",
+   "expect": [
+    "empty-workbook-builder",
+    "expense-sorter",
+    "excel-input-form-builder"
+   ]
+  },
+  {
+   "id": "h049",
+   "q": "how do i start investing with a little money",
+   "audience": "anyone",
+   "area": "personal",
+   "expect": [
+    "investor-type-quiz",
+    "stock-and-bond-split-planner",
+    "investing-policy-page-writer"
+   ]
+  },
+  {
+   "id": "h051",
+   "q": "i have to write a report for my boss and dont know where to start",
+   "audience": "anyone",
+   "area": "writing",
+   "expect": [
+    "status-report-writer",
+    "executive-summary-writer",
+    "insight-brief-writer",
+    "weekly-status-update-writer"
+   ]
+  },
+  {
+   "id": "h053",
+   "q": "i want to build an app but i cant code",
+   "audience": "anyone",
+   "area": "dev",
+   "expect": [
+    "new-project-planner",
+    "wireframe-drafter",
+    "single-file-app-builder"
+   ]
+  },
+  {
+   "id": "h055",
+   "q": "i want to learn python from scratch",
+   "audience": "student",
+   "area": "study",
+   "expect": [
+    "topic-learning-roadmap",
+    "coding-project-coach",
+    "skill-teacher",
+    "technical-topic-deep-dive"
+   ]
+  },
+  {
+   "id": "h057",
+   "q": "how do i stop my emails going to spam",
+   "audience": "owner",
+   "area": "email",
+   "expect": [
+    "inbox-delivery-fixer",
+    "inbox-placement-recovery-planner"
+   ]
+  },
+  {
+   "id": "h059",
+   "q": "how do i make a video of my product without filming anything",
+   "audience": "owner",
+   "area": "video",
+   "expect": [
+    "product-photo-to-clip-maker",
+    "product-video-ad-producer",
+    "marketing-video-producer",
+    "video-route-picker"
+   ]
+  },
+  {
+   "id": "h061",
+   "q": "how do i make a powerpoint from my notes",
+   "audience": "anyone",
+   "area": "writing",
+   "expect": [
+    "editable-slide-deck-builder",
+    "html-slide-deck-maker",
+    "storyboard-to-powerpoint-deck-builder",
+    "powerpoint-template-populator"
+   ]
+  },
+  {
+   "id": "h063",
+   "q": "how do i start a blog for my business",
+   "audience": "owner",
+   "area": "seo",
+   "expect": [
+    "blog-post-producer",
+    "content-strategy-planner",
+    "content-topic-planner"
+   ]
+  },
+  {
+   "id": "h065",
+   "q": "how do i ask for a raise",
+   "audience": "anyone",
+   "area": "career",
+   "expect": [
+    "negotiation-prep-coach"
+   ]
+  },
+  {
+   "id": "h067",
+   "q": "how can i use ai to help with my small business",
+   "audience": "owner",
+   "area": "ai",
+   "expect": [
+    "daily-ai-help-discovery-guide",
+    "role-task-breakdown-for-ai-help",
+    "claude-power-user-coach",
+    "hand-tasks-to-ai-without-losing-what-the-job-quietly-does"
+   ]
+  },
+  {
+   "id": "h069",
+   "q": "what is customer lifetime value and how do i work mine out",
+   "audience": "owner",
+   "area": "finance",
+   "expect": [
+    "customer-value-spend-limit",
+    "store-ltv-payback-reader",
+    "ltgp-to-cac-checker"
+   ]
+  },
+  {
+   "id": "h071",
+   "q": "employe handbok for a small company",
+   "audience": "manager",
+   "area": "hr",
+   "expect": [
+    "policy-handbook-writer",
+    "hr-policy-drafter"
+   ]
+  },
+  {
+   "id": "h073",
+   "q": "refrel program ideas",
+   "audience": "owner",
+   "area": "customers",
+   "expect": [
+    "referral-program-designer",
+    "word-of-mouth-planner"
+   ]
+  },
+  {
+   "id": "h075",
+   "q": "inventry managment for my shop",
+   "audience": "ops",
+   "area": "supply",
+   "expect": [
+    "stock-and-reorder-planner",
+    "stock-count-program-planner",
+    "inventory-value-report-builder",
+    "days-of-stock-calculator"
+   ]
+  },
+  {
+   "id": "h077",
+   "q": "tik tok shop afiliate",
+   "audience": "marketer",
+   "area": "store",
+   "expect": [
+    "tiktok-shop-affiliate-planner",
+    "tiktok-shop-launch-planner",
+    "tiktok-shop-content-planner"
+   ]
+  },
+  {
+   "id": "h079",
+   "q": "lesson plan for 5th grade scence",
+   "audience": "teacher",
+   "area": "study",
+   "expect": [
+    "phenomenon-unit-planner",
+    "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+    "direct-teaching-lesson-builder",
+    "backwards-unit-planner"
+   ]
+  },
+  {
+   "id": "h081",
+   "q": "return polcy for online shop",
+   "audience": "owner",
+   "area": "store",
+   "expect": [
+    "returns-policy-designer",
+    "store-policy-checker",
+    "store-guarantee-planner"
+   ]
+  },
+  {
+   "id": "h083",
+   "q": "pdf to excell",
+   "audience": "anyone",
+   "area": "data",
+   "expect": [
+    "pdf-converter",
+    "scanned-pdf-text-reader",
+    "web-page-data-extractor"
+   ]
+  },
+  {
+   "id": "h085",
+   "q": "cold call scrpt for b2b",
+   "audience": "sales",
+   "area": "sales",
+   "expect": [
+    "sales-opener-trio-writer",
+    "agency-sales-outreach",
+    "sales-call-plan",
+    "stranger-first-message-writer"
+   ]
+  },
+  {
+   "id": "h087",
+   "q": "amazone listing keywords",
+   "audience": "marketer",
+   "area": "store",
+   "expect": [
+    "amazon-keyword-picker",
+    "amazon-listing-first-draft-writer"
+   ]
+  },
+  {
+   "id": "h089",
+   "q": "scholorship essay help",
+   "audience": "student",
+   "area": "career",
+   "expect": [
+    "check-scholarship-application-evidence"
+   ]
+  },
+  {
+   "id": "h091",
+   "q": "draft journal entries for month end accruals",
+   "audience": "finance",
+   "area": "finance",
+   "expect": [
+    "accrual-schedule-drafter",
+    "journal-entry-drafter",
+    "journal-entry-preparer"
+   ]
+  },
+  {
+   "id": "h093",
+   "q": "convertible note or safe what happens to my ownership",
+   "audience": "owner",
+   "area": "finance",
+   "expect": [
+    "post-money-safe-ownership-checker",
+    "check-a-safe-into-priced-financing",
+    "check-a-convertible-note-conversion",
+    "cap-and-discount-conversion-checker"
+   ]
+  },
+  {
+   "id": "h095",
+   "q": "explain why actuals are different from budget",
+   "audience": "finance",
+   "area": "finance",
+   "expect": [
+    "variance-commentary",
+    "close-the-month-and-explain-every-line-that-moved",
+    "budget-and-forecast-builder"
+   ]
+  },
+  {
+   "id": "h097",
+   "q": "is this person an employee or a contractor",
+   "audience": "hr",
+   "area": "hr",
+   "expect": [
+    "employee-or-contractor-checker",
+    "contractor-program-setup-guide"
+   ]
+  },
+  {
+   "id": "h099",
+   "q": "two people on my team keep clashing",
+   "audience": "manager",
+   "area": "hr",
+   "expect": [
+    "conflict-mediation-guide",
+    "prepare-a-confidential-conflict-discussion",
+    "anger-pause-and-repair-planner",
+    "workplace-investigation-guide"
+   ]
+  },
+  {
+   "id": "h101",
+   "q": "how do i remember what i read",
+   "audience": "student",
+   "area": "study",
+   "expect": [
+    "turn-saved-reading-into-notes-you-can-use",
+    "recall-first-study-tutor",
+    "study-revision-coach"
+   ]
+  },
+  {
+   "id": "h103",
+   "q": "how can students use ai without cheating",
+   "audience": "teacher",
+   "area": "study",
+   "expect": [
+    "assignment-ai-boundaries",
+    "teach-a-class-to-check-ai-answers-and-set-fair-ai-rules",
+    "ai-use-understanding-check"
+   ]
+  },
+  {
+   "id": "h105",
+   "q": "clean up a csv with duplicate rows",
+   "audience": "anyone",
+   "area": "data",
+   "expect": [
+    "data-file-clean-up-loop",
+    "data-cleaner",
+    "data-quality-auditor",
+    "dataset-profiler"
+   ]
+  },
+  {
+   "id": "h107",
+   "q": "predict next months sales from past numbers",
+   "audience": "owner",
+   "area": "data",
+   "expect": [
+    "quick-time-series-forecaster",
+    "trend-and-forecast-analyst",
+    "regression-and-forecast-modeller"
+   ]
+  },
+  {
+   "id": "h109",
+   "q": "set up alerts so i know when my site goes down",
+   "audience": "developer",
+   "area": "dev",
+   "expect": [
+    "uptime-and-alert-setup-planner",
+    "monitoring-planner",
+    "cloud-monitoring-setter"
+   ]
+  },
+  {
+   "id": "h111",
+   "q": "i got a legal threat letter what do i do",
+   "audience": "owner",
+   "area": "legal",
+   "expect": [
+    "incoming-demand-letter-reviewer",
+    "legal-inquiry-reply-drafter",
+    "quick-legal-sanity-checker"
+   ]
+  },
+  {
+   "id": "h113",
+   "q": "write a demand letter to someone who owes me money",
+   "audience": "owner",
+   "area": "legal",
+   "expect": [
+    "demand-letter-drafter",
+    "turn-a-dispute-into-a-checked-demand-letter-draft"
+   ]
+  },
+  {
+   "id": "h115",
+   "q": "i spend too much time on my phone",
+   "audience": "anyone",
+   "area": "personal",
+   "expect": [
+    "digital-tool-audit-planner",
+    "not-to-do-list-builder",
+    "habit-plan-builder"
+   ]
+  },
+  {
+   "id": "h117",
+   "q": "pick colours for my brand",
+   "audience": "owner",
+   "area": "design",
+   "expect": [
+    "five-colour-feeling-palette-picker",
+    "mood-colour-palette-planner",
+    "brand-stylescape-planner"
+   ]
+  },
+  {
+   "id": "h119",
+   "q": "write a remote work policy for my team",
+   "audience": "manager",
+   "area": "hr",
+   "expect": [
+    "hr-policy-drafter",
+    "policy-handbook-writer"
+   ]
+  },
+  {
+   "id": "h121",
+   "q": "best shopify theme for a clothing store",
+   "audience": "owner",
+   "area": "store",
+   "expect": [
+    "shopify-theme-picker"
+   ]
+  },
+  {
+   "id": "h123",
+   "q": "duplicate pages hurting my shopify seo",
+   "audience": "owner",
+   "area": "seo",
+   "expect": [
+    "shopify-duplicate-page-fixer",
+    "store-seo-fix-prioritiser"
+   ]
+  },
+  {
+   "id": "h125",
+   "q": "combine several excel sheets into a monthly summary",
+   "audience": "ops",
+   "area": "data",
+   "expect": [
+    "excel-monthly-rollup-builder",
+    "build-a-monthly-excel-and-powerpoint-update",
+    "excel-table-join-reconciler"
+   ]
+  },
+  {
+   "id": "h127",
+   "q": "build a team wiki in notion",
+   "audience": "manager",
+   "area": "ops",
+   "expect": [
+    "notion-wiki-writer",
+    "company-wiki-planner",
+    "notes-wiki-builder"
+   ]
+  },
+  {
+   "id": "h129",
+   "q": "google ads search terms wasting my budget",
+   "audience": "marketer",
+   "area": "ads",
+   "expect": [
+    "search-term-sorter",
+    "search-term-junk-sorter",
+    "google-ads-store-account-auditor"
+   ]
+  },
+  {
+   "id": "h131",
+   "q": "google merchant center account suspended",
+   "audience": "owner",
+   "area": "ads",
+   "expect": [
+    "merchant-center-suspension-checker"
+   ]
+  },
+  {
+   "id": "h133",
+   "q": "build a slack bot",
+   "audience": "developer",
+   "area": "dev",
+   "expect": [
+    "slack-bot-builder",
+    "build-first-slack-bot-builder-prompt"
+   ]
+  },
+  {
+   "id": "h135",
+   "q": "woocommerce checkout not working",
+   "audience": "owner",
+   "area": "store",
+   "expect": [
+    "agency-engineering-wordpress-shopping-cart",
+    "woocommerce-code-checker",
+    "woocommerce-store-setup-planner"
+   ]
+  },
+  {
+   "id": "h137",
+   "q": "zapier automation for new leads",
+   "audience": "owner",
+   "area": "ops",
+   "expect": [
+    "no-code-automation-planner",
+    "automation-flow-sketcher"
+   ]
+  },
+  {
+   "id": "h139",
+   "q": "meta pixel not firing",
+   "audience": "marketer",
+   "area": "ads",
+   "expect": [
+    "meta-pixel-capi-fix",
+    "meta-server-tracking-checker"
+   ]
+  },
+  {
+   "id": "h141",
+   "q": "prompt to make chatgpt sound less robotic",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "anti-ai-slop-copy-editor",
+    "brand-voice-guide-builder",
+    "brand-voice-rewriter",
+    "ai-writing-workflow-planner"
+   ]
+  },
+  {
+   "id": "h143",
+   "q": "my ai forgets everything between chats",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "ai-memory-habit-setter",
+    "project-memory-builder",
+    "handoff-note-writer",
+    "long-chat-summariser"
+   ]
+  },
+  {
+   "id": "h145",
+   "q": "can i trust what chatgpt tells me",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "ai-answer-doubt-check",
+    "ai-answer-fact-checker",
+    "answer-double-checker"
+   ]
+  },
+  {
+   "id": "h147",
+   "q": "save my process so ai can repeat it for me",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "repeat-job-skill-drafter",
+    "skill-builder",
+    "repeated-work-skill-finder",
+    "ai-instruction-writer"
+   ]
+  },
+  {
+   "id": "h149",
+   "q": "is it worth paying for ai tools at my company",
+   "audience": "manager",
+   "area": "ai",
+   "expect": [
+    "assess-ai-workflow-value",
+    "prepare-an-ai-pilot-go-decision",
+    "ai-build-or-buy-advisor"
+   ]
+  },
+  {
+   "id": "h151",
+   "q": "write a policy for how staff can use ai",
+   "audience": "manager",
+   "area": "ai",
+   "expect": [
+    "team-ai-use-policy-drafter"
+   ]
+  },
+  {
+   "id": "h153",
+   "q": "teach chatgpt to write like me",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "voice-matched-post-writer",
+    "brand-voice-guide-builder",
+    "brand-voice-rewriter",
+    "own-voice-outreach-writer"
+   ]
+  },
+  {
+   "id": "h155",
+   "q": "build an ai agent that does my weekly reporting",
+   "audience": "developer",
+   "area": "ai",
+   "expect": [
+    "agent-loop-designer",
+    "ai-agent-workflow-designer",
+    "recurring-kpi-report-maker",
+    "agent-goal-writer"
+   ]
+  },
+  {
+   "id": "h157",
+   "q": "make claude ask me questions before it starts",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "requirements-question-asker",
+    "intent-interviewer",
+    "request-clarifier"
+   ]
+  },
+  {
+   "id": "h159",
+   "q": "check ai written content before i publish it",
+   "audience": "marketer",
+   "area": "ai",
+   "expect": [
+    "pre-publish-content-checker",
+    "anti-ai-slop-copy-editor",
+    "claim-fact-checker"
+   ]
+  }
+ ],
+ "goals": [
+  {
+   "id": "hg01",
+   "goal": "run a sale without wrecking my margin",
+   "steps": [
+    [
+     "sale-break-even-and-cac-allowance-modeler",
+     "discount-impact-checker"
+    ],
+    [
+     "pick-a-sale-offer-check-profit-set-an-honest-deadline",
+     "sale-offer-ladder-planner"
+    ],
+    [
+     "sale-price-wording-picker",
+     "discount-wording-planner"
+    ],
+    [
+     "plan-a-sale-across-email-and-sms",
+     "campaign-email-writer"
+    ]
+   ]
+  },
+  {
+   "id": "hg03",
+   "goal": "offer a free guide to collect emails and follow up with sign-ups",
+   "steps": [
+    [
+     "lead-magnet-planner",
+     "lead-offer-planner",
+     "free-giveaway-designer"
+    ],
+    [
+     "signup-popup-builder"
+    ],
+    [
+     "welcome-flow-builder",
+     "email-sequence-writer"
+    ],
+    [
+     "email-send-readiness-scorer",
+     "email-draft-reviewer"
+    ]
+   ]
+  },
+  {
+   "id": "hg05",
+   "goal": "turn a recorded podcast into social posts",
+   "steps": [
+    [
+     "recording-transcriber",
+     "whisper-speech-transcriber",
+     "subtitle-and-transcript-maker"
+    ],
+    [
+     "content-repurposer"
+    ],
+    [
+     "long-form-post-repurposer",
+     "cross-platform-post-writer",
+     "linkedin-post-writer"
+    ],
+    [
+     "social-post-planner",
+     "standing-social-calendar-maker"
+    ]
+   ]
+  },
+  {
+   "id": "hg07",
+   "goal": "send my books to the accountant in good shape",
+   "steps": [
+    [
+     "expense-sorter",
+     "prepare-expenses-for-your-bookkeeper"
+    ],
+    [
+     "bank-and-ledger-matcher",
+     "reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l",
+     "account-reconciler"
+    ],
+    [
+     "financial-statement-preparer",
+     "p-l-and-balance-sheet-writer"
+    ]
+   ]
+  },
+  {
+   "id": "hg09",
+   "goal": "write a cited research report i can trust",
+   "steps": [
+    [
+     "research-brief-writer",
+     "research-question-outliner"
+    ],
+    [
+     "cited-research-report-writer",
+     "research-a-question-and-write-a-cited-report"
+    ],
+    [
+     "claim-fact-checker",
+     "study-claim-checker"
+    ],
+    [
+     "executive-summary-writer"
+    ]
+   ]
+  },
+  {
+   "id": "hg11",
+   "goal": "build and sell a short online course",
+   "steps": [
+    [
+     "course-scope-sequence"
+    ],
+    [
+     "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+     "direct-teaching-lesson-builder"
+    ],
+    [
+     "retrieval-quiz-writer",
+     "recall-quiz-writer"
+    ],
+    [
+     "mini-course-builder"
+    ],
+    [
+     "price-a-course-or-ebook-and-write-its-launch-emails",
+     "digital-product-pricer"
+    ]
+   ]
+  },
+  {
+   "id": "hg13",
+   "goal": "run a fair performance review round for my team",
+   "steps": [
+    [
+     "review-cycle-form-builder"
+    ],
+    [
+     "performance-review-helper",
+     "quarterly-performance-review-keeper"
+    ],
+    [
+     "feedback-conversation-planner",
+     "ask-for-feedback-then-give-it",
+     "give-criticism-well"
+    ],
+    [
+     "turn-employee-feedback-into-owned-actions"
+    ]
+   ]
+  },
+  {
+   "id": "hg15",
+   "goal": "cut returns at my store",
+   "steps": [
+    [
+     "return-reason-finder",
+     "refund-rate-analyzer"
+    ],
+    [
+     "return-cost-calculator"
+    ],
+    [
+     "product-page-doubt-mapper",
+     "first-use-gap-checker"
+    ],
+    [
+     "returns-policy-designer"
+    ]
+   ]
+  },
+  {
+   "id": "hg17",
+   "goal": "win a freelance client from first call to proposal",
+   "steps": [
+    [
+     "sales-call-question-planner",
+     "sales-call-plan"
+    ],
+    [
+     "quote-and-proposal-builder",
+     "sales-proposal-writer"
+    ],
+    [
+     "negotiation-prep-coach"
+    ],
+    [
+     "call-follow-up-drafter"
+    ]
+   ]
+  },
+  {
+   "id": "hg19",
+   "goal": "start a youtube channel for my business",
+   "steps": [
+    [
+     "youtube-channel-growth-kit"
+    ],
+    [
+     "youtube-script-writer"
+    ],
+    [
+     "thumbnail-and-title-planner",
+     "youtube-title-thumbnail-check"
+    ],
+    [
+     "youtube-upload-planner"
+    ],
+    [
+     "youtube-title-and-tags-writer",
+     "youtube-description-tags"
+    ]
+   ]
+  },
+  {
+   "id": "hg21",
+   "goal": "get my week under control",
+   "steps": [
+    [
+     "brain-dump-sorter",
+     "brain-dump-organizer"
+    ],
+    [
+     "urgent-versus-important-sorter"
+    ],
+    [
+     "week-plan-from-task-list-maker",
+     "make-a-realistic-plan-for-a-busy-week"
+    ],
+    [
+     "weekly-review-guide"
+    ]
+   ]
+  },
+  {
+   "id": "hg23",
+   "goal": "launch a referral program",
+   "steps": [
+    [
+     "referral-program-designer"
+    ],
+    [
+     "discount-impact-checker"
+    ],
+    [
+     "campaign-email-writer",
+     "email-sequence-writer"
+    ],
+    [
+     "split-run-test-planner"
+    ]
+   ]
+  },
+  {
+   "id": "hg25",
+   "goal": "apply for a grant for my nonprofit",
+   "steps": [
+    [
+     "nonprofit-grant-funder-researcher"
+    ],
+    [
+     "nonprofit-grant-proposal-writer"
+    ],
+    [
+     "nonprofit-operating-budget-planner"
+    ],
+    [
+     "nonprofit-program-measurement-planner"
+    ]
+   ]
+  }
+ ],
+ "next": [
+  {
+   "slug": "cash-forecast-builder",
+   "good": [
+    "cash-lever-ranker",
+    "cash-tied-up-finder",
+    "weekly-invoice-and-cash-chaser",
+    "budget-and-forecast-builder",
+    "lean-year-cash-rules-writer",
+    "bad-year-plan-stress-tester",
+    "startup-runway-forecaster"
+   ],
+   "goodTasks": [
+    "plan-budgets-and-cash",
+    "manage-accounting"
+   ]
+  },
+  {
+   "slug": "lead-magnet-planner",
+   "good": [
+    "signup-popup-builder",
+    "welcome-flow-builder",
+    "email-sequence-writer",
+    "lead-offer-tuner",
+    "funnel-flow-planner",
+    "free-giveaway-designer"
+   ],
+   "goodTasks": [
+    "write-emails",
+    "make-offer"
+   ]
+  },
+  {
+   "slug": "price-rise-readiness-checker",
+   "good": [
+    "price-rise-letter-writer",
+    "price-test-planner",
+    "price-sensitivity-analyst",
+    "pricing-decision-planner",
+    "objection-answer-sheet-writer"
+   ],
+   "goodTasks": [
+    "set-prices"
+   ]
+  },
+  {
+   "slug": "plan-pre-mortem-runner",
+   "good": [
+    "plan-stress-tester",
+    "failure-first-plan-check",
+    "decision-tripwire-planner",
+    "bold-bet-downside-checker",
+    "ruin-risk-stress-tester",
+    "second-order-effects-tracer"
+   ],
+   "goodTasks": [
+    "think-and-decide"
+   ]
+  },
+  {
+   "slug": "new-hire-first-week-planner",
+   "good": [
+    "30-60-90-day-onboarding-planner",
+    "one-on-one-meeting-planner",
+    "new-hire-plan-builder"
+   ],
+   "goodTasks": [
+    "hire-people",
+    "lead-people"
+   ]
+  },
+  {
+   "slug": "privacy-policy-drafter",
+   "good": [
+    "terms-of-service-drafter",
+    "policy-page-drafter",
+    "privacy-policy-drift-checker",
+    "privacy-impact-assessment-writer",
+    "new-data-use-screener",
+    "dpa-review"
+   ],
+   "goodTasks": [
+    "check-contracts"
+   ]
+  },
+  {
+   "slug": "marking-rubric-writer",
+   "good": [
+    "single-point-rubric-builder",
+    "task-rubric-drafter",
+    "written-feedback-checker",
+    "mark-student-work-against-a-rubric-and-sharpen-your-feedback",
+    "success-criteria-writer",
+    "assessment-fairness-check"
+   ],
+   "goodTasks": [
+    "teach-and-train"
+   ]
+  },
+  {
+   "slug": "quick-time-series-forecaster",
+   "good": [
+    "trend-and-forecast-analyst",
+    "regression-and-forecast-modeller",
+    "budget-and-forecast-builder",
+    "store-revenue-forecast-builder",
+    "insight-brief-writer",
+    "data-chart-drawer"
+   ],
+   "goodTasks": [
+    "analyse-data",
+    "track-numbers",
+    "plan-budgets-and-cash"
+   ]
+  },
+  {
+   "slug": "shopify-theme-picker",
+   "good": [
+    "shopify-store-setup-planner",
+    "store-app-stack-picker",
+    "collections-and-menu-planner",
+    "product-page-section-planner",
+    "store-go-live-checker",
+    "ai-store-build-planner"
+   ],
+   "goodTasks": [
+    "set-up-store"
+   ]
+  },
+  {
+   "slug": "search-console-quick-win-finder",
+   "good": [
+    "title-and-meta-tag-writer",
+    "old-content-refresher",
+    "internal-link-mapper",
+    "on-page-seo-tuner",
+    "organic-search-report-builder",
+    "search-title-and-snippet-writer"
+   ],
+   "goodTasks": [
+    "get-found-in-search"
+   ]
+  },
+  {
+   "slug": "prompt-fixer",
+   "good": [
+    "prompt-tester-and-tuner",
+    "prompt-improver",
+    "rough-prompt-rebuilder",
+    "marketing-prompt-tester",
+    "prompt-change-manager",
+    "tune-a-prompt-with-real-tests-then-ship-it-with-versions"
+   ],
+   "goodTasks": [
+    "set-up-ai"
+   ]
+  },
+  {
+   "slug": "five-colour-feeling-palette-picker",
+   "good": [
+    "mood-colour-palette-planner",
+    "brand-style-guide-writer",
+    "colour-contrast-checker",
+    "design-token-builder",
+    "logo-and-brand-kit-designer"
+   ],
+   "goodTasks": [
+    "design-work",
+    "brand-file"
+   ]
+  },
+  {
+   "slug": "invoice-checker",
+   "good": [
+    "check-supplier-invoices-before-approval",
+    "invoice-totals-checker",
+    "recurring-invoice-exception-review-assistant",
+    "vendor-bill-coder",
+    "journal-entry-drafter",
+    "account-reconciler"
+   ],
+   "goodTasks": [
+    "manage-accounting"
+   ]
+  },
+  {
+   "slug": "interview-scorecard-builder",
+   "good": [
+    "structured-interview-guide",
+    "interview-question-set-maker",
+    "candidate-comparison-table-builder",
+    "fair-candidate-comparer",
+    "reference-check-question-writer",
+    "job-offer-planner"
+   ],
+   "goodTasks": [
+    "hire-people"
+   ]
+  },
+  {
+   "slug": "review-request-and-reply-planner",
+   "good": [
+    "customer-review-reply-writer",
+    "review-reply-batch-writer",
+    "review-insight-finder",
+    "public-review-reply-drafter",
+    "customer-buying-reasons-finder"
+   ],
+   "goodTasks": [
+    "help-customers",
+    "understand-customers"
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "q": "file my self assessment tax return",
+   "why": "manage-tax holds only cash-tax and deferred-tax reconcilers and one tax planning brief; nothing helps prepare or file a return."
+  },
+  {
+   "q": "mortgage affordability calculator",
+   "why": "No mortgage or home-loan item; personal-finance items cover budgets, debt payoff and retirement only."
+  },
+  {
+   "q": "set up payroll for my first employee",
+   "why": "Payroll appears only as a line inside the cash forecast builder; no payroll setup item."
+  },
+  {
+   "q": "how to register an llc",
+   "why": "No company formation item; only a company filing deadline tracker for companies that already exist."
+  },
+  {
+   "q": "help me write my will",
+   "why": "No estate planning or personal legal documents."
+  },
+  {
+   "q": "visa application checklist for working abroad",
+   "why": "Only a study-abroad advisor; no work visa or immigration item."
+  },
+  {
+   "q": "design an instagram post in canva",
+   "why": "Canva is not covered; image items are AI image prompt and generator skills, not template design."
+  },
+  {
+   "q": "pinterest strategy for my shop",
+   "why": "No Pinterest item; social planning covers other platforms."
+  },
+  {
+   "q": "open an etsy shop",
+   "why": "Only an Etsy search results collector; no Etsy shop setup or listing item."
+  },
+  {
+   "q": "start a dropshipping business",
+   "why": "No dropshipping item; supplier and store setup items assume you hold or make the product."
+  },
+  {
+   "q": "excel vba macro to automate my report",
+   "why": "The only VBA mention is a MATLAB bridge; no Excel macro writer."
+  },
+  {
+   "q": "google sheets formulas and apps script",
+   "why": "No Google Sheets or Apps Script item."
+  },
+  {
+   "q": "build a tableau dashboard",
+   "why": "Dashboard items cover Power BI, Plotly and offline HTML; Tableau and Looker are not covered."
+  },
+  {
+   "q": "what business insurance do i need",
+   "why": "No business insurance item; the only insurance items are claims reserves and a patient service writer."
+  },
+  {
+   "q": "plan a wedding",
+   "why": "No wedding or private event planning item."
+  },
+  {
+   "q": "weekly meal plan and grocery list",
+   "why": "Cooking minds teach technique and plan single meals; no meal planning or shopping list item."
+  },
+  {
+   "q": "workout plan for beginners",
+   "why": "No fitness or exercise item."
+  },
+  {
+   "q": "tips to sleep better",
+   "why": "No sleep or health advice item; habit planners exist but do not cover sleep."
+  },
+  {
+   "q": "guitar lessons for beginners",
+   "why": "No music practice or instrument learning item; the audio items make music and voiceovers."
+  },
+  {
+   "q": "which ai tool should i use for my task",
+   "why": "No AI tools directory or tool chooser yet; items cover setting up and using one assistant."
+  },
+  {
+   "q": "chatgpt vs claude vs gemini",
+   "why": "No comparison of AI assistants; the catalogue is about using them, not ranking them."
+  },
+  {
+   "q": "invoice template for my small business",
+   "why": "Invoice items check and chase invoices; none generate an invoice or template."
+  },
+  {
+   "q": "make a gantt chart for my project",
+   "why": "No Gantt or schedule chart item; project items cover plans, status and risks."
+  },
+  {
+   "q": "design a flyer for my shop",
+   "why": "Poster items exist but no flyer, brochure or print layout item."
+  },
+  {
+   "q": "design a business card",
+   "why": "No business card or stationery item."
+  },
+  {
+   "q": "set up asana for my team",
+   "why": "No Asana, Trello, Monday or ClickUp item; only Jira, Linear and Notion project helpers."
+  },
+  {
+   "q": "choose a web host for my site",
+   "why": "Deploy items cover Vercel, Netlify, Render and Cloudflare for developers; no web host chooser for non-developers."
+  },
+  {
+   "q": "set up xero for my small business",
+   "why": "No Xero, FreshBooks or accounting software setup item; accounting items are generic."
+  },
+  {
+   "q": "meditation routine for stress",
+   "why": "No meditation or stress management item; wellbeing items are for staff programmes and lessons."
+  }
+ ]
+}

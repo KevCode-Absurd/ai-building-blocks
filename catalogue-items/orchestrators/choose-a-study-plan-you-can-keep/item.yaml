@@ -21,11 +21,11 @@ uses:
   - study-session-planner-and-review
 steps:
   - uses: topic-learning-roadmap
-    note: Map the topic boundaries, prerequisites, deadline, current gaps and available hours without assuming a score improvement.
+    note: "Maps the topic boundaries, prerequisites, deadline, current gaps and available hours without assuming a score improvement. Hands the roadmap to the strategy step."
   - uses: study-strategy-picker
-    note: Choose suitable practice methods for the topics and available materials.
+    note: "Uses step 1's roadmap and your study material. Chooses suitable practice methods for the topics and the available materials. Hands the method plan to the session step."
   - uses: study-session-planner-and-review
-    note: Prepare opening, middle and closing review prompts for the planned sessions. Run them only with learner responses and mark unrun phases not yet observed.
+    note: "Uses step 2's method plan and your session dates. Prepares opening, middle and closing review prompts for the planned sessions. Runs them only with learner responses and marks unrun phases not yet observed."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

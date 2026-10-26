@@ -1,46 +1,29 @@
 ---
 name: build-a-clean-surplus-residual-income-model
-description: "Link common equity movements to residual income and a separate stable price-to-book scenario."
+description: "Use when you want a residual income model for a listed company: book equity rolled forward and tied to the balance sheet, each period's equity charge, and a labelled price-to-book scenario. Not for cash flow valuations or buy or sell calls."
 ---
 
 # Build a clean-surplus residual income model
 
-A linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Build a residual income model from a company's book equity, earnings and cost of equity, with dividends and other comprehensive income reconciled. Three steps run in order: roll book equity forward, charge each period, then build a price-to-book scenario.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **Equity history** (yours): common equity at the start and end of each period, parent shareholders only, from the balance sheet.
+- **Earnings and movements** (yours): ordinary earnings, dividends, buybacks, share issues and other comprehensive income.
+- **Share counts** (yours): opening and closing shares.
+- **Your assumptions** (yours): cost of equity with its date and source, and forward return on equity.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** a spreadsheet of your own history, so the AI can keep your layout.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Common equity history, ordinary earnings, distributions, OCI, capital movements, forward ROE and cost-of-equity assumptions.
+The items under "Before you start", as of one reporting date, with the currency and scale stated once. Parent common equity only, not total equity. If the cost of equity has no date or source, ask for it before step 2. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,11 +33,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Book value per share roll-forward** (`book-value-per-share-rollforward`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove beginning and ending common book equity; identify OCI and capital movements so reported book changes are not assumed to equal retained earnings. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-book-value-per-share-rollforward.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Book value per share roll-forward** (`book-value-per-share-rollforward`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove beginning and ending common book equity; identify OCI and capital movements so reported book changes are not assumed to equal retained earnings. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-book-value-per-share-rollforward.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** opening book equity plus earnings, OCI and issues, less dividends and buybacks, equals closing book equity on the balance sheet with no plug. The figure is parent common equity only, and closing shares give book value per share.
 
-2. **One-period residual income bridge** (`one-period-residual-income-bridge`). Use each period beginning common book balance and matching ordinary income for the equity charge. Reconcile dirty-surplus items separately and do not sum the illustration as a full valuation. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-one-period-residual-income-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **One-period residual income bridge** (`one-period-residual-income-bridge`). Use each period beginning common book balance and matching ordinary income for the equity charge. Reconcile dirty-surplus items separately and do not sum the illustration as a full valuation. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-one-period-residual-income-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** each period's charge uses that period's opening book equity and the same cost of equity, dirty-surplus items are listed apart, and one period is not presented as a valuation.
 
-3. **Justified price-to-book scenario** (`justified-price-book-scenario`). Build a distinct stable-state forward ROE/growth/required-return case only after documenting clean surplus and feasible retention; label it a scenario rather than the historical residual-income result. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-justified-price-book-scenario.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Justified price-to-book scenario** (`justified-price-book-scenario`). Build a distinct stable-state forward ROE/growth/required-return case only after documenting clean surplus and feasible retention; label it a scenario rather than the historical residual-income result. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-justified-price-book-scenario.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** the price-to-book case is labelled a scenario, its retention rate fits the return on equity and growth, and every forecast input has a source or is marked an assumption.
 
 ## Workbook checks
 
@@ -71,4 +54,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the roll-forward tie and the residual income by period, then the scenario, clearly labelled as one. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that nothing was paid, sent or filed, and that a person who knows the agreement must check the definitions before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Stress the assumptions** with the [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow.
+- **Explain a gap between net asset value and book value** with the [Reconcile property NAV and book value](https://useaiblocks.com/workflows/reconcile-property-nav-and-book-value) workflow, if the company holds property.
+Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

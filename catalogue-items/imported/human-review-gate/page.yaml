@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It builds the review page and tracks the sign-off.
 new_slug: human-review-gate
 name: Human review gate
-summary: Finish AI work. Get a one-page review you sign off before anything
-  counts as done, with proof it happened.
+summary: "Get a human review gate for AI work: a one-page review, saved feedback, and a sign-off record before anything counts as done."
 job: test-and-fix-code
 headline: Human review gate
-subhead: A sign-off step that stops AI work from counting as done until a named
-  person has looked at it. Finish a plan or document and get a one-page review
-  the reviewer marks up, with a record that proves it happened.
+subhead: A sign-off step that stops AI work from counting as done until a named person has looked at it. Finish a plan or document and get a one-page review the reviewer marks up, with a record that proves it happened.
 explain: |
   A sign-off step that stops AI work from counting as done until a named person has looked at it. Finish a plan or document and get a one-page review the reviewer marks up, with a record that proves it happened.
 
   Machine tests answer whether checks pass. This answers whether a person looked and whether their objections are settled. Comments pin to exact text and carry a severity grade. Feedback saves into a file that scripts can read, so every item is countable. A gate closes only when no objections are open, and it refuses if the reviewer is a vague team rather than a person. It needs Python.
 when:
-  - An AI agent finished a plan and you want a person to approve it before it
-    ships.
+  - An AI agent finished a plan and you want a person to approve it before it ships.
   - You need proof that someone reviewed a document, for audit or compliance.
   - Reviewers give feedback in chat and items get lost.
   - You work over a server connection and need review without a web app.
+not_for:
+  - "You want AI text to sound more human: use content-humanizer or behuman."
+  - "You want a code diff reviewed: use md-review or code-reviewer."
+  - "You need no proof of review and the work is easy to undo: ask a colleague to read it in chat."
 you_give:
   - The plan or document to review (Markdown or HTML)
   - The name of the reviewer
@@ -30,8 +30,29 @@ you_get:
   - A pass or fail gate status
   - A record that the review took place
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool with code running and file access. Add the skill folder and your plan or document.
+  - Tell your AI the reviewer's name and whether the work can be undone.
+  - "Ask it to run: python3 engineering/human-gate/skills/human-gate/scripts/human_gate.py open plan.md --launch. Use your own file name. It builds the page and your AI stops."
+  - Open the page and add comments. Save the feedback file next to your document.
+  - Ask your AI to run the collect step, apply every item, then run close. If close fails, fix what it names.
+  - Check the result. Only call the work done when the gate passes.
+output_sample:
+  input:
+    - The plan or document to review (Markdown or HTML)
+    - The name of one reviewer, a person and not a team
+    - Whether the work can be undone
+    - Whether the reviewer is free to look at it now
+  prerequisites:
+    - An AI that can run Python code and read your files
+    - Python 3 on your computer
+  output:
+    - name: Review page
+      contains: A single HTML page of your document where the reviewer can pin comments to exact text.
+    - name: Feedback file (<artifact>.review.md)
+      contains: "The reviewer's name and each comment with a severity: BLOCKER, MAJOR, MINOR, NIT, NOTE, APPROVE or EDIT."
+    - name: Batch (batch.v1)
+      contains: Every feedback item as data, with its severity, quoted text, reviewer and round, ready for the AI to apply.
+    - name: Status
+      contains: A non-blocking check that says if the review is clear, blocked, waiting to be collected, or not started.
+    - name: Gate result
+      contains: Pass, or a refusal that names what is still open, such as a blocker, no reviewer or no review.

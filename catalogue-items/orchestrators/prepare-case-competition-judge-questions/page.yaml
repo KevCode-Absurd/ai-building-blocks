@@ -1,52 +1,94 @@
 new_slug: prepare-case-competition-judge-questions
 name: Prepare case competition judge questions
 headline: Prepare case competition judge questions
-summary: Share the source files. Get a judge question bank, sourced answer notes and backup slide briefs.
+summary: Prepare for the Q&A at a case competition. Get practice judge questions, answer notes tied to your exhibits and briefs for backup slides.
 job: speak-and-persuade
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A judge question bank, sourced answer notes and backup slide briefs. Share the team deck, case exhibits, judging rubric, known unresolved assumptions and actual presentation duration. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your team deck, the case exhibits and the judging rubric. It finds the weakest spots in your recommendation, writes tough practice questions and ties each answer to an exhibit. You also get a brief for each backup slide.
 explain: |-
-  A judge question bank, sourced answer notes and backup slide briefs.
+  Judges at a case competition rarely ask about your best slide. They ask about the number you cannot source, the assumption you passed over, or what happens if sales come in lower. A team that only rehearses the talk gets caught here. This workflow helps you prepare case competition judge questions before the final.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Answers point to the case or an explicit assumption; rehearsal outcomes are recorded only after a real rehearsal. Missing tools or evidence stay visible in the final summary.
+  It reads your deck and exhibits first and lists the weak spots. For each one it writes practice questions, with an answer note that points to a slide or an exhibit. If an answer rests on a guess, the note says so. Then it writes a short brief for each backup slide you may need, and checks that terms, currencies and periods match everywhere.
+
+  The questions are practice, not the judges' real ones. The workflow never records how a rehearsal went unless you tell it.
 when:
-  - You need a judge question bank, sourced answer notes and backup slide briefs.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your case competition final is a week or two away and the deck is nearly done.
+  - Your team can argue the recommendation, but nobody has tried to attack it.
+  - You want to know which numbers you cannot defend before a judge asks.
+  - You need backup slides ready for the Q&A round.
+not_for:
+  - "You have no deck or exhibits yet: use the Case competition slide deck builder first."
+  - "You want the deck and its numbers checked, not practice questions: use the Stress test a case competition recommendation workflow."
+  - "You want a person to play the judge live: this workflow writes the questions, and a teammate has to ask them."
 you_give:
-  - The team deck, case exhibits, judging rubric, known unresolved assumptions and actual presentation duration.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your team deck, as slides or the text of each slide
+  - The case brief and every exhibit the judges can see
+  - The judging rubric (optional, but it lets each question point to a criterion)
+  - Your presentation time and Q&A time (optional)
+  - Weak points you already worry about (optional)
 you_get:
-  - A judge question bank, sourced answer notes and backup slide briefs.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A list of the weakest spots in your recommendation, each with where it sits
+  - Practice judge questions for each spot, marked as practice
+  - An answer note for each question that cites a slide or exhibit, or says it is an assumption
+  - "A brief for each backup slide: title, chart, point and source"
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini. Use your strongest model.
+  - Attach or paste the deck, the case exhibits and the rubric. Add your presentation and Q&A times.
+  - "Say: Follow the workflow, and mark any fact you cannot find in the files as MISSING."
+  - Read the weak-spot list first. Correct anything the AI got wrong before you read the questions.
+  - Rehearse out loud. A teammate reads each question and judges your answer against its note.
+  - Tell your AI how each rehearsal went so it can update the notes. It never records one on its own.
+output_sample:
+  input:
+    - Your team deck
+    - The case brief and exhibits
+    - The judging rubric (optional)
+    - Your presentation and Q&A times (optional)
+    - Weak points you already worry about (optional)
+  prerequisites:
+    - An AI that can read files, or the text of each slide and exhibit pasted in
+  output:
+    - name: Weak spots
+      contains: The five to eight weakest points in your recommendation, each with the slide or exhibit it sits in.
+    - name: Question bank
+      contains: Practice judge questions grouped by weak spot, each with a rubric point and a source-backed answer note.
+    - name: Backup slide briefs
+      contains: "For each likely slide: a full-sentence title, the chart or table, the one point and its exhibit."
+    - name: Fact check
+      contains: A check that terms, currencies, periods and figures match the exhibits, with any mismatch listed.
+    - name: Hand-back summary
+      contains: Every file, the sources used, each MISSING line and the checks that could not run.
 how_it_works:
-  - title: Source note summariser
-    text: Extract the recommendation, economics, constraints and weakest assumptions from the actual deck and case exhibits with locations.
-  - title: Presentation builder
-    text: Prepare practice question prompts and backup-slide outlines around trade-offs, feasibility and financial sensitivities; label these as practice, not actual judge questions.
-  - title: Proofreader
-    text: Check prepared answer notes for consistent terms, currencies, periods and support from the indexed exhibits.
+  - title: Find the weak spots
+    text: Reads the deck and exhibits, lists the recommendation, the main numbers and the assumptions it leans on, and ranks the weakest.
+  - title: Write questions and answer notes
+    text: Writes tough practice questions for each spot. Each answer note cites a slide or exhibit, or says assumption, and is rated solid, partial or open.
+  - title: Brief the backup slides
+    text: Outlines a backup slide for the questions that need a chart or table, with its title, point and source. It does not build a file.
+  - title: Check the facts match
+    text: Checks terms, currencies, periods and figures against the exhibits. A mismatch is listed, never quietly fixed.
 output_shape: |-
-  Scope and source coverage
-  A judge question bank, sourced answer notes and backup slide briefs.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  WEAK SPOTS
+    <n> <spot> | Where: <slide or exhibit> | Why a judge would push
+
+  QUESTION BANK (practice, not the judges' real questions)
+    Q<n>: <question> | Spot: <n> | Rubric point: <criterion or MISSING>
+      Answer note: <plain answer> | Source: <slide or exhibit, or ASSUMPTION> | Strength: <SOLID, PARTIAL or OPEN>
+
+  BACKUP SLIDE BRIEFS
+    Slide <n>: <full-sentence title> | Show: <chart or table> | Point: <one line> | Source: <exhibit>
+
+  HAND-BACK SUMMARY
+    Files | Sources used | MISSING lines | CHECKS MISSED
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Answers point to the case or an explicit assumption; rehearsal outcomes are recorded only after a real rehearsal.
+  - what: The rubric
+    how: Paste it in full. Each question then points to the criterion a judge would score it against.
+  - what: Your Q&A time
+    how: Say how long it is. It limits how many backup slides are worth briefing.
+  - what: Weak points you know about
+    how: Name them. They go to the top of the list instead of being found late.
 judge:
   - Answers point to the case or an explicit assumption; rehearsal outcomes are recorded only after a real rehearsal.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +101,25 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Rehearse with a teammate, then tell your AI which answers failed so the notes get fixed.
+  - After any change to the deck or an exhibit, run the workflow again on the new version.
+  - Keep the question bank from each round. Judges in later rounds often press the same points.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that can read files
+      why: It reads the full deck and every exhibit in one run. Without file support, paste the text of each slide and exhibit.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A teammate to play the judge
+    - Feedback from earlier rounds, if you have it
+next:
+  - stress-test-a-case-competition-recommendation
+  - case-competition-evidence-review-assistant
+before:
+  - case-competition-slide-deck-builder
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Exhibit
+    meaning: A chart, table or data page that comes with the case.
+  - term: Backup slide
+    meaning: A slide you hold back and show only if a judge asks about it.
+  - term: Assumption
+    meaning: A number or fact the case does not give, so your team chose it.

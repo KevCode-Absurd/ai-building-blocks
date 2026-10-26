@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks code against a known list and ranks what it finds.
 new_slug: code-security-reviewer
 name: Code security reviewer
-summary: Point it at your Python, JavaScript, TypeScript or Go code. Get a
-  ranked list of security gaps, each with a fix.
+summary: Check your Python, JavaScript, TypeScript or Go code for security gaps. Get a ranked code security review with a fix for each gap.
 job: secure-code
 headline: Code security reviewer
-subhead: A ranked list of security gaps in your Python, JavaScript, TypeScript
-  or Go code, each with a fix. You can also use it to write new code that is
-  safe from the start.
+subhead: A ranked list of security gaps in your Python, JavaScript, TypeScript or Go code, each with a fix. You can also use it to write new code that is safe from the start.
 explain: |
   A ranked list of security gaps in your Python, JavaScript, TypeScript or Go code, each with a fix. You can also use it to write new code that is safe from the start.
 
@@ -18,6 +15,10 @@ when:
   - You want new code written with safe defaults.
   - You use a framework and are unsure of its security traps.
   - You need a short report of what to fix first.
+not_for:
+  - "You want a general code review or help fixing a bug: ask your AI directly, as this skill only covers security."
+  - "You need proof your app is safe before it handles sensitive data: hire a professional penetration tester."
+  - "Your code is in a language other than Python, JavaScript, TypeScript or Go: ask a developer who knows that language."
 you_give:
   - Your code or project folder
   - The frameworks in use (optional)
@@ -28,8 +29,28 @@ you_get:
   - A fix for each gap
   - Safer code for new work
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini. Use a tool that can read your project files, or paste the code you want checked.
+  - Paste the skill text from this page into the chat.
+  - Say that you want a security review. Add your project folder or code, and name your frameworks if you know them.
+  - Say where the report file should be saved, or let your AI pick a place.
+  - Read the report. The most serious findings come first.
+  - Ask your AI to fix one finding at a time. Run your tests after each fix.
+output_sample:
+  input:
+    - Your code or project folder
+    - The frameworks you use (optional)
+    - Whether you want a full written report (optional)
+    - Where to save the report (optional)
+  prerequisites:
+    - An AI that can read your project files, or code pasted into the chat
+  output:
+    - name: Languages and frameworks found
+      contains: The languages and frameworks your project uses, front end and back end, with the evidence for each.
+    - name: security_best_practices_report.md
+      contains: A written report with a short summary at the top and findings grouped by how serious they are.
+    - name: Numbered findings
+      contains: Each gap has a number and the file and line numbers where it appears. Critical ones add a one-sentence impact.
+    - name: Suggested fixes
+      contains: One fix per finding, with a short comment on why the safer way matters, offered after you read the report.
+    - name: Secure-by-default code
+      contains: New code written with safe defaults, when you ask for new work instead of a review.

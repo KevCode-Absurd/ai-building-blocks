@@ -1,6 +1,6 @@
 new_slug: direct-mail-package-reviewer
 name: "Direct mail package reviewer"
-summary: "Paste your mailing, envelope line and letter. Get a review of the envelope, offer, copy and look, with fixes."
+summary: "Check your direct mail package before it prints. Paste the envelope line and letter. Get a score out of 100 and a fix for each problem."
 job: check-ads
 thinking: medium
 thinking_why: "It judges each part of the package against fixed checks and weighs what a reader would do."
@@ -17,6 +17,10 @@ when:
   - You are about to print a mailing, postcard or letter and want a second look.
   - Your mailing gets few opens and you don't know whether the envelope or the letter is the problem.
   - You write an email series styled as a letter and want it to hold a reader.
+not_for:
+  - "You want a line-by-line pass on the letter copy: use the Slippery slide copy checker."
+  - "You only send email with no letter or envelope: ask a colleague to read it aloud, or check your subject line by hand."
+  - "You need legal or postal sign-off on prizes or mail rules: ask your printer, mailing house or a lawyer."
 
 you_give:
   - "Your mailing: envelope line, letter and any offer, prize or reply card"
@@ -33,6 +37,28 @@ how_to_use:
   - Attach pictures of the pieces if you can.
   - Make the fixes the review lists, starting with the envelope.
   - Run it again on the fixed version to see the score.
+output_sample:
+  input:
+    - Your envelope line or outer look
+    - Your letter text
+    - Your offer, prize, gift or reply card
+    - Pictures or scans of the pieces (optional)
+    - A short brief on who it is for (optional)
+  output:
+    - name: Score
+      contains: A number out of 100 with the working, showing checks passed out of checks counted.
+    - name: Checks
+      contains: Pass, fail or not known for envelope, savings, voice, prize, read-aloud, length, signature and type, each with a note.
+    - name: Read-aloud stumbles
+      contains: The places where the letter repeats, sounds like a brochure or loses the thread.
+    - name: Fixes
+      contains: One fix for each problem, with new text where it applies.
+    - name: Score after fixes
+      contains: The score again, worked out the same way.
+    - name: MISSING
+      contains: Anything you did not give, so no part is judged blind.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed and why, or none.
 
 how_it_works:
   - title: Checks the team

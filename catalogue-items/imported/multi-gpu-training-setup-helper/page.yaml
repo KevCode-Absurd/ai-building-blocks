@@ -2,13 +2,10 @@ thinking: low
 thinking_why: The change is small and follows a known pattern.
 new_slug: multi-gpu-training-setup-helper
 name: Multi-GPU training setup helper
-summary: Give it a training script. Get it running on one GPU, many GPUs or
-  several machines with a few added lines.
+summary: Give it your PyTorch training script. Get a multi-GPU training setup with the few added lines, a launch command and a config for your hardware.
 job: build-software
 headline: Multi-GPU training setup helper
-subhead: Your training script running on one GPU, several GPUs or several
-  machines, with only a handful of added lines. The same script works in all
-  three setups.
+subhead: Your training script running on one GPU, several GPUs or several machines, with only a handful of added lines. The same script works in all three setups.
 explain: |
   Your training script running on one GPU, several GPUs or several machines, with only a handful of added lines. The same script works in all three setups.
 
@@ -18,6 +15,10 @@ when:
   - You want to try mixed precision without rewriting the loop.
   - Training must run across two machines.
   - Your model is too big for one GPU's memory.
+not_for:
+  - Your script runs on one GPU with no speed or memory problem. Leave it as it is.
+  - You need callbacks and high-level training tools. Use PyTorch Lightning instead.
+  - You need to manage many machines or tune settings across runs. Use Ray Train instead.
 you_give:
   - Your PyTorch training script
   - How many GPUs and machines you have
@@ -29,8 +30,29 @@ you_get:
   - A config file for your setup
   - Memory-saving options for large models
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Paste your training script into Claude, ChatGPT or Gemini.
+  - Say how many GPUs and machines you have, and whether the model fits on one GPU.
+  - Add your precision choice if you have one (optional).
+  - Ask your AI to add the Accelerate lines, mark them, and give you a launch command and a config.
+  - Check that the old lines moving data to the GPU are gone.
+  - Run the script on your own machines. Your AI can only test it if it can run Python code.
+output_sample:
+  input:
+    - Your PyTorch training script
+    - How many GPUs and machines you have
+    - Whether the model fits on one GPU
+    - Your precision choice (optional)
+  prerequisites:
+    - An AI that can run Python code, if you want it to test the script
+    - The accelerate, torch and transformers packages installed
+    - DeepSpeed installed with pip, only if you pick DeepSpeed
+    - PyTorch 1.12 or newer, only if you pick FSDP
+  output:
+    - name: Marked script
+      contains: Your script with the added Accelerate lines marked and the manual move-to-GPU lines removed.
+    - name: Launch command
+      contains: One command to run the script on one GPU, many GPUs or several machines.
+    - name: Config file
+      contains: "Answers to the setup questions: machine type, machine count, precision and whether to use DeepSpeed."
+    - name: Memory option notes
+      contains: Choices such as DeepSpeed ZeRO or FSDP for models too big for one GPU.

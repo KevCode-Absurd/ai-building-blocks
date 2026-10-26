@@ -1,0 +1,127 @@
+name: Playful design agent
+summary: Get three to five playful touches for your product, such as 404 pages, loading lines and button labels, with accessibility and speed checks.
+headline: Playful design agent
+subhead: Share your product, who uses it and how your brand sounds. The agent suggests a few playful touches that each have a job. You get the exact words or motion for each one, plus checks for access, speed and the moments to keep serious.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A playful touch works when it helps. A light loading line can calm a wait. The same joke on a payment error can annoy someone who is already stuck. This agent only suggests playful ideas that serve a purpose, and it names the moments where your product should stay serious.
+
+  It sorts ideas into four kinds. Small touches, such as hover and loading effects. Touches the user sets off, such as a celebration when a task is done. Hidden finds, such as Easter eggs. And touches tied to a moment, such as a 404 page or an empty cart. For each idea it gives the exact text or motion, the reason it helps, and checks for reduced motion, screen readers, page speed and cultural fit.
+
+  The source profile has sample lines and sample code. Those are examples, not your voice, so the agent rewrites them to match your brand. The profile also quotes gains in engagement and calmer users. Those are not results, and the agent promises none. Any code it writes is marked untested.
+when:
+  - Your error, 404 or empty pages feel cold and you want better words.
+  - Waiting or loading screens make people worry or leave.
+  - Your brand voice is friendly, but the product text reads like a tax form.
+  - You want a small celebration for a finished task, or a hidden surprise for curious users.
+not_for:
+  - You only want clearer, plainer error wording. Use the Plain error message writer.
+  - You want all the labels and messages for one screen. Use the Interface microcopy writer.
+  - You want the rules and feedback for small moments, not personality. Use the Small interface details designer.
+you_give:
+  - What the product is, who uses it and the tone people expect, such as serious, friendly or quirky
+  - Your brand voice notes or a few lines of your own text (optional)
+  - The moments to improve, such as a 404 page, an empty cart, loading, success or errors
+  - Limits to respect, such as no animation, no jokes near payments or the languages you serve (optional)
+  - Your tech setup, if you want code (optional)
+you_get:
+  - Three to five numbered ideas, each tied to one moment in your product
+  - The exact words or motion for each idea, and the reason it helps
+  - Each idea marked as small, user-triggered, hidden or tied to a moment
+  - Access and speed checks for each idea, including a reduced-motion option
+  - A list of the moments where your product should stay serious
+  - Sample code if you ask for it, marked untested
+how_to_use:
+  - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe your product, your users and the tone. Paste any brand voice notes or example text.
+  - List the moments you want to improve. Or say "find the best three moments" and let it choose.
+  - Read the "keep serious" list first. Drop any idea that clashes with how your users feel at that moment.
+  - Check each idea's access note. Ask for a reduced-motion version of any animation.
+  - Try one idea with real users or teammates. Keep it only if it helps people finish what they came to do.
+how_it_works:
+  - title: Read the brand and the moment
+    text: It confirms the product, the users, the tone and the moments in scope. Missing facts are asked once, then marked MISSING.
+  - title: Choose where playfulness helps
+    text: It picks moments where a touch has a job, and marks moments to keep serious.
+  - title: Write each idea
+    text: Each gets the exact words or motion, its kind and the reason it helps the user.
+  - title: Check access, speed and fit
+    text: It checks reduced motion, screen readers, load cost and cultural sense for each idea.
+  - title: Mark what is untested
+    text: Any code, and any claim about how users will feel, goes in the open checks for real users to confirm.
+output_shape: |-
+  BRAND AND CONTEXT
+    Product <what> | Users <who> | Tone <serious, friendly or quirky> | Keep serious <moments>
+
+  IDEAS (3 to 5)
+    <number> | moment <where> | kind <small, user-triggered, hidden or tied to a moment> | words or motion <exact text or behaviour> | purpose <what it helps> | access check <result> | speed check <result>
+
+  SAMPLE CODE (only if asked)
+    <snippet, marked untested>
+
+  OPEN CHECKS
+    <what real users must confirm>
+output_sample:
+  input:
+    - What your product is, who uses it and the tone people expect
+    - The moments to improve, such as a 404 page or loading
+    - Your brand voice notes (optional)
+    - Limits to respect, such as no animation (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brand and context
+      contains: Your product, users and tone, and the moments to keep serious.
+    - name: Playful ideas
+      contains: Three to five numbered ideas, each with a moment, a kind, exact words or motion and a purpose.
+    - name: Access checks
+      contains: Reduced motion, screen reader and cultural fit notes for each idea.
+    - name: Speed checks
+      contains: What each idea adds to load time and how to keep it light.
+    - name: Sample code
+      contains: Optional animation or script, marked untested.
+    - name: Open checks
+      contains: What real users or your developer must confirm.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Brand tone
+    how: Paste a few lines in your own voice. Otherwise it guesses a tone and marks the guess.
+  - what: Moments
+    how: Name the two or three screens that feel coldest. A short list gives better ideas than a broad one.
+  - what: Limits
+    how: Say what is off limits, such as jokes near payments, health or legal text.
+  - what: Audience
+    how: Say who they are and where. Humour travels badly across cultures and ages.
+improve:
+  - Keep the lines you approve as a voice sheet, and give it back on the next run so the tone stays the same.
+  - Add your own banned moments to the brief, such as "never joke on a failed payment".
+  - Pair it with the Interface microcopy writer for the plain text and the Small interface details designer for the rules.
+terms:
+  - term: Microcopy
+    meaning: The small words in a product, such as button labels and error messages.
+  - term: Easter egg
+    meaning: A hidden surprise that users can find.
+  - term: Micro-interaction
+    meaning: A small animation or reaction after a click or tap.
+  - term: Reduced motion
+    meaning: A device setting for people who want less animation.
+  - term: Empty state
+    meaning: What a screen shows when there is nothing in it yet.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good at wording ideas in your voice. Paste examples of your tone.
+    - name: Claude Code
+      why: Can add the code to your project, so you can try it in a real page.
+  inputs:
+    - Your brand voice guide, if you have one.
+    - Screenshots of the screens to improve.
+    - Support messages that show where users get frustrated.

@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It has to play a hostile board and judge your answers.
 new_slug: hard-questions-board-prep-coach
 name: Hard-questions board prep coach
-summary: Give it your board update. Get the toughest questions, number drills
-  and a story that owns the weak spots.
+summary: Prepare for a tough board meeting. Give it your agenda and misses. You get the hardest questions, numbers to know cold and a story that owns weak spots.
 job: speak-and-persuade
 headline: Hard-questions board prep coach
-subhead: Give it the agenda, your deck and where you missed targets. It prepares
-  you for the sharp meeting, not the friendly one. You get the numbers to know
-  cold, hard questions for each agenda item, answer outlines that own the weak
-  spots and a story line for the whole meeting.
+subhead: Give it the agenda, your deck and where you missed targets. It prepares you for the sharp meeting, not the friendly one. You get the numbers to know cold, hard questions for each agenda item, answer outlines that own the weak spots and a story line for the whole meeting.
 explain: |
   The hardest questions your board could ask, plus the answers you need ready. Most board prep rehearses the friendly meeting. This one prepares for the sharp one, where members have seen dozens of companies and can tell when a deck hides something.
 
@@ -19,6 +15,10 @@ when:
   - You want to rehearse the questions you hope nobody asks.
   - You are pitching for funding and need every figure ready.
   - You want to present a miss without spinning it.
+not_for:
+  - "You only need a routine status update: send a plain pre-read email with your numbers and one short note on what changed."
+  - "You have no real numbers yet: pull them from your accounts or finance tool first, then come back."
+  - "You want a friendly investor update or a pitch deck: ask a person you trust to read it, or write it yourself first."
 you_give:
   - Your meeting agenda
   - Your deck or key numbers
@@ -30,7 +30,30 @@ you_get:
   - Answer outlines that own the weak spots
   - A narrative for the whole meeting
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your agenda, your deck text or key numbers, and where you missed targets.
+  - Add who is on the board and what each one cares about (optional).
+  - Read the numbers list first. Check each figure against your real source before the meeting.
+  - Ask your AI to play the hardest director. Answer out loud without the deck, then ask which answers were weak.
+  - Fix the weak answers, then ask for the final story for the whole meeting.
+output_sample:
+  input:
+    - Your board meeting agenda
+    - Your deck or key numbers
+    - Where you missed targets
+    - Who is in the room (optional)
+  output:
+    - name: Numbers you must know cold
+      contains: A list of the figures to say from memory, such as revenue, burn, runway, churn, headcount and pipeline.
+    - name: Hard questions by agenda item
+      contains: The sharp version of the question a director could ask for each item on your agenda.
+    - name: Answer outlines
+      contains: A short outline for each hard question that owns the weak spot and points to a plan.
+    - name: Meeting narrative
+      contains: "A story for the whole meeting: where you are, what you learned, what went wrong, your fix and your ask."
+    - name: Mock board meeting
+      contains: A practice round where you answer without the deck, and note which questions made you pause.
+    - name: Director-by-director prep
+      contains: What each director cares about, the metric they watch and what could cost you their trust.
+    - name: Pre-meeting and after-meeting checklists
+      contains: Steps for 48 hours before, the day of, and the 24 hours after the meeting.

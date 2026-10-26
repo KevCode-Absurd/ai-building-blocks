@@ -16,13 +16,13 @@ outputs:
   - {type: plan}
 uses: [monthly-store-seo-planner, organic-search-report-builder, fix-a-drop-in-search-traffic-and-check-it-recovers, search-console-traffic-drop-diagnoser, search-console-quick-win-finder, store-seo-fix-prioritiser, product-page-seo-builder]
 steps:
-  - {uses: monthly-store-seo-planner, note: "Once, then again only if your monthly hours change: the four-job monthly cycle and how many hours each gets."}
-  - {uses: organic-search-report-builder, note: "Every month: non-branded clicks against the last period, so the path is chosen on data."}
-  - {uses: fix-a-drop-in-search-traffic-and-check-it-recovers, note: "Only when non-branded clicks fell sharply and you can share your theme files: the cause, the fix order and proof the clicks return."}
-  - {uses: search-console-traffic-drop-diagnoser, note: "Only when clicks fell sharply and you have no theme files to share: the pages that lost clicks and the likely cause."}
-  - {uses: search-console-quick-win-finder, note: "Only when nothing is broken: the pages to push this month, capped at five."}
-  - {uses: store-seo-fix-prioritiser, note: "Only when you add a crawl or indexing report: the fixes that matter and the ones to ignore."}
-  - {uses: product-page-seo-builder, note: "Only for product pages the quick-win finder marks as needing new copy, up to three a month."}
+  - {uses: monthly-store-seo-planner, note: "Once, then again only if your monthly hours change: the four-job monthly cycle and how many hours each gets. Hands the cycle and hours to the later steps, which size each month's work to them."}
+  - {uses: organic-search-report-builder, note: "Every month: non-branded clicks against the last period, so the path is chosen on data. Uses your Search Console export and brand terms, not step 1's plan. Hands the result to the path choice: a sharp fall goes to step 3 or 4, otherwise to step 5."}
+  - {uses: fix-a-drop-in-search-traffic-and-check-it-recovers, note: "Path A, only when non-branded clicks fell sharply and you can share your theme files: the cause, the fix order and proof the clicks return. Uses your export and theme files. Run it instead of step 4."}
+  - {uses: search-console-traffic-drop-diagnoser, note: "Path B, only when clicks fell sharply and you have no theme files to share: the pages that lost clicks and the likely cause. Uses your export alone. Run it instead of step 3, and push no new pages this month beyond the fixes it names."}
+  - {uses: search-console-quick-win-finder, note: "Only when nothing is broken: the pages to push this month, capped at five. Uses your export, not a drop report. Hands the pushed pages to the page-copy step."}
+  - {uses: store-seo-fix-prioritiser, note: "Only when you add a crawl or indexing report: the fixes that matter and the ones to ignore. Uses your crawl report. Hands the top fixes that fit your hours to the hand-back."}
+  - {uses: product-page-seo-builder, note: "Only for product pages the quick-win finder marks as needing new copy, up to three a month. Uses those pages from step 5 and your product facts, not step 6's fix list. Hands the page copy back for your yes."}
 schedule: "On the second working day of each month, once last month's Search Console data is final"
 asks_before: [publishing page, title or description changes, editing theme files, changing redirects, robots.txt or noindex settings, ordering links or paid content]
 origin: own

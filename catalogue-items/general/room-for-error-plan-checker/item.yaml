@@ -8,6 +8,7 @@ job: analysis
 level: intermediate
 inputs:
   - {type: plan, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

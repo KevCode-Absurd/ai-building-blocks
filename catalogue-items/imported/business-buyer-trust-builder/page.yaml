@@ -2,36 +2,106 @@ thinking: medium
 thinking_why: It fits a trust plan to a long sales cycle.
 new_slug: business-buyer-trust-builder
 name: Business buyer trust builder
-summary: Say who buys from you. Get a plan for thought leadership and trust with
-  slow, careful business buyers.
+summary: Plan how to earn trust from careful business buyers. Get positioning, a message for each buyer role, a content plan and the proof to build first.
 job: plan-strategy
 headline: Business buyer trust builder
-subhead: Say who buys from you. Get a plan for thought leadership and trust with
-  slow, careful business buyers. Bring your product or service. Use the result
-  to plan your next step.
-explain: |
-  A brand plan for selling to companies, where buyers are careful, slow and spending money that is not theirs. Trust matters more than hype.
+subhead: Tell it what you sell, who buys and who sits on the buying committee. It builds a plan for slow, careful business buyers. You get positioning, a message for each role, a thought leadership plan, a trust proof list and ways to measure it.
+explain: |-
+  When you sell to companies, the buyer spends someone else's money and can be blamed if it goes wrong. Trust counts for more than hype. This business buyer trust builder gives you a brand plan for that kind of sale.
 
-  You describe your product, ideal customer, the people on the buying committee, your sales cycle, your current presence and competitors. The skill builds a system for each kind of buyer in the group, from the champion who wants to try it to the one who signs the cheque and the one who checks security. It covers positioning, thought leadership, proof and staying visible during cycles that can last over a year. The plan combines logical reasons with the reassurance buyers need.
+  You describe your product, ideal customer, the people on the buying committee, your sales cycle and your rivals. It writes your positioning, a message and proof list for each person who has a say, a plan for thought leadership and LinkedIn, and a content plan for each stage of the deal.
+
+  It does not invent proof. Customer counts, reviews, certifications and press mentions must be real. Where you have none, it lists what to earn first. Posting rates and content mixes are starting points to test, not proven benchmarks, and paid tools are marked.
 when:
-  - You sell to businesses and deals take months.
+  - You sell to companies and deals take months.
   - Several people must agree before anyone buys from you.
-  - You want to build authority in a crowded category.
-  - You need content that keeps you visible during a long sales cycle.
+  - You want to build a name in a crowded category.
+  - You need content that keeps you in view during a long sales cycle.
+not_for:
+  - "You sell to consumers or to one person who decides alone: use the Positioning statement writer or the Customer buying reasons finder."
+  - "You want to win one large deal and need to map the people in it: use the Deal stakeholder mapper or the Enterprise account deal planner."
+  - "You want your first customers, not a brand plan: use the First customer launch planner."
 you_give:
-  - Your product or service
-  - Your ideal customer profile
-  - The roles on the buying committee
-  - Sales cycle length
-  - Competitors you face
+  - What you sell and who buys it
+  - "Your ideal customer: company size, industry and buyer role"
+  - Who is on the buying committee
+  - How long a sale takes
+  - Your rivals and your current brand presence (optional)
 you_get:
-  - A B2B brand positioning
-  - Messages for each buyer role
-  - A thought leadership plan
-  - Proof and trust assets
-  - A plan to stay visible during long cycles
+  - A positioning statement for the category and for the buyer
+  - A message map for each buying role
+  - A thought leadership plan with 3 to 5 points of view
+  - A trust proof list, with where each item goes
+  - A content plan for each stage of the deal
+  - Measures to track, with free options first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - List what you sell, your ideal customer, the buying committee, your sales cycle and your rivals. Add your brand brain files if you have them.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code is needed.
+  - Paste your notes. Say which roles you meet most often in deals.
+  - Check each trust signal. Remove or fix any customer number, review or award that is not true today.
+  - Treat posting rates and content mixes as tests. Replace them with your own results after a few weeks.
+  - Start with the 30-day actions at the end of the plan.
+how_it_works:
+  - title: Read your inputs
+    text: It checks for brand notes, then asks once for any missing facts about product, buyers, committee and sales cycle.
+  - title: Write positioning
+    text: It writes a category position and a buyer position, and one positioning statement.
+  - title: Map each role
+    text: It lists the concern, key message and proof for each person on the buying committee.
+  - title: Plan thought leadership
+    text: It picks formats you can keep up and 3 to 5 points of view you can defend, plus a LinkedIn plan.
+  - title: Build the trust map
+    text: It lists proof you have and proof you still need, and where each goes on your site. Nothing is made up.
+  - title: Plan content and measures
+    text: It sets content for awareness, evaluation and decision, an account-based layer if needed, and metrics to track.
+output_shape: |-
+  1. Brand positioning: <category position, buyer position, statement>
+  2. Buying committee message map
+  | Role | Main concern | Key message | Proof they need |
+  3. Thought leadership plan: <formats, rhythm, 3 to 5 points of view>
+  4. LinkedIn plan: <company page, leader profile, team sharing>
+  5. Trust signal map: <signal, have it or not, where it goes>
+  6. Content by deal stage: <awareness, evaluation, decision>
+  7. Account-based brand layer (if you sell large deals)
+  8. Measures: <metric, what it shows, where to get it>
+  First 30 days: <five actions>
+  Missing or unverified: <list>
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your ideal customer
+    - The people on the buying committee
+    - How long a sale takes
+    - Your brand brain files or brand notes (optional)
+  output:
+    - name: Brand positioning
+      contains: A category position, a buyer position and one positioning statement.
+    - name: Buying committee message map
+      contains: For each role, the main concern, the key message and the proof they need.
+    - name: Thought leadership and LinkedIn plan
+      contains: Formats, rhythm and 3 to 5 points of view you can defend.
+    - name: Trust signal map
+      contains: Real proof you have, proof to earn, and where each belongs on your site.
+    - name: Content by deal stage
+      contains: What to publish for awareness, evaluation and decision.
+    - name: Account-based brand layer
+      contains: A sequence of touches for named target companies, if you sell large deals.
+    - name: Brand measures
+      contains: Metrics to track, what each shows and where to get it.
+    - name: First 30 days
+      contains: Five actions to do first, and a list of anything missing or unverified.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is a planning task with text in and text out.
+  inputs:
+    - Your brand brain files, if you have built them
+    - Two or three customer case studies you can share
+    - Notes from lost deals, to find the doubts buyers had
+terms:
+  - term: Buying committee
+    meaning: The group of people who must agree before a company buys.
+  - term: Thought leadership
+    meaning: Sharing ideas that show you know the field, so buyers trust you before they talk to sales.
+  - term: Account-based marketing
+    meaning: Marketing aimed at a named list of target companies, not a wide crowd.

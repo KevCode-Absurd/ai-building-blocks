@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It plans lessons around your goal and tracks progress.
 new_slug: skill-teacher
 name: Skill teacher
-summary: Say what you want to learn. Get lessons and cheat sheets that build
-  over many sessions toward your goal.
+summary: Learn a new skill over many sessions. Give it your topic and goal. You get short lessons, cheat sheets and a resource list that build on each other.
 job: think-and-decide
 headline: Skill teacher
-subhead: A learning folder that grows with you, so a topic you want to learn
-  gets taught across many sessions instead of in one long answer.
+subhead: Tell your AI what you want to learn and why. It teaches you in short lessons over many sessions. Each lesson ends with a cheat sheet you can print.
 explain: |
   A learning folder that grows with you, so a topic you want to learn gets taught across many sessions instead of in one long answer. You start by saying what you want to learn and why. The skill writes that reason into a mission file and uses it to keep every lesson on target.
 
@@ -15,9 +13,12 @@ explain: |
 when:
   - You want to learn a new subject slowly over weeks, not in one chat.
   - You keep forgetting what you learned and want cheat sheets to look back at.
-  - You have a real goal, like a promotion or a project, and want lessons tied
-    to it.
+  - You have a real goal, like a promotion or a project, and want lessons tied to it.
   - You want an AI tutor that remembers where you left off.
+not_for:
+  - "You want a quick fact or a one-off answer: ask a normal chat with your AI instead."
+  - "You need a fixed schedule, a teacher's marking or a certificate: join a course."
+  - "You only want to learn something in one sitting: ask your AI for a short summary, no folder needed."
 you_give:
   - The topic you want to learn
   - Why you want to learn it
@@ -29,8 +30,33 @@ you_get:
   - Printable cheat sheets for quick reference
   - A list of resources to explore next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can save files.
+  - Make an empty folder on your computer for this topic, like "learn-spanish".
+  - Open your AI in that folder. Use an AI that can save files, such as Claude Code or another AI coding tool. A plain chat window cannot keep the folder.
+  - Add the skill to your AI, then run it with the topic you want to learn.
+  - Answer its questions about why you want to learn it. It writes this into MISSION.md.
+  - Open the first lesson and do the quiz. Ask your AI about anything unclear.
+  - Come back to the same folder next time. Your AI reads your notes and picks up where you stopped.
+output_sample:
+  input:
+    - The topic you want to learn
+    - Why you want to learn it
+    - What you already know (optional)
+    - An empty folder to keep your lessons in
+  prerequisites:
+    - An AI that can save files into a folder on your computer
+    - An AI that can open files for you (helpful, not required)
+  output:
+    - name: MISSION.md
+      contains: Your reason for learning the topic, which every lesson is tied back to.
+    - name: RESOURCES.md
+      contains: High-trust books, videos and communities your AI found to ground the lessons.
+    - name: lessons/0001-<name>.html
+      contains: One short, interactive lesson that teaches a single skill tied to your goal, with a quiz.
+    - name: reference/<name>.html
+      contains: A printable cheat sheet that boils the lesson down for quick look-up.
+    - name: learning-records/0001-<name>.md
+      contains: A short note on what you learned, used to pick your next lesson.
+    - name: assets/
+      contains: Shared styles and quiz parts that make every lesson look the same.
+    - name: NOTES.md
+      contains: Your teaching preferences, so the next session fits how you like to learn.

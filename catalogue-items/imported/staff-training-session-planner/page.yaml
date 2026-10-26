@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It balances time, activities and goals.
 new_slug: staff-training-session-planner
 name: Staff training session planner
-summary: Give it a training goal. Get a session plan for teachers that uses
-  adult learning methods.
+summary: Plan a staff training session for teachers. Give it your topic, group and time. You get a timed plan with hands-on tasks and follow-up.
 job: teach-and-train
 headline: Staff training session planner
-subhead: A teacher training session plan built on how adults actually learn.
-  Give it the topic, who is attending and how long you have. The skill draws on
-  research on effective teacher development, including work by Timperley,
-  Darling-Hammond and Desimone.
+subhead: A teacher training session plan built on how adults actually learn. Give it the topic, who is attending and how long you have. The skill draws on research on effective teacher development, including work by Timperley, Darling-Hammond and Desimone.
 explain: |
   A teacher training session plan built on how adults actually learn. Give it the topic, who is attending and how long you have. The skill draws on research on effective teacher development, including work by Timperley, Darling-Hammond and Desimone.
 
@@ -19,6 +15,10 @@ when:
   - A new initiative needs staff buy-in, not just a talk.
   - You have only one hour and want it to count.
   - You want training to lead to real classroom change.
+not_for:
+  - You only need to share information once. Send a short briefing note or email instead.
+  - You need a lesson plan for pupils. Ask your AI for a lesson plan, because this plans sessions for adults.
+  - You need to check if training worked. Use classroom observation or a short staff survey.
 you_give:
   - The teaching practice or topic
   - Who is attending and their experience
@@ -32,7 +32,29 @@ you_get:
   - A follow-up plan
   - Evidence behind the design
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Copy the Prompt section from the skill file and paste it into a new chat.
+  - Replace the placeholders {{pd_topic}}, {{audience}} and {{session_duration}} with your topic, your group and your time.
+  - "Add the optional details if you have them: why the session is happening, current practice, school priorities and follow-up plans."
+  - Read the plan and check the timings fit your room and your staff.
+  - Change any task that does not suit your school, then share the plan with whoever is leading the session.
+output_sample:
+  input:
+    - The teaching practice or topic for the session
+    - Who is attending, how many, and their experience
+    - How long the session lasts
+    - Why the session is happening and what teachers do now (optional)
+    - Your school priorities and any follow-up plans (optional)
+  output:
+    - name: Session Overview
+      contains: The aim of the session, who it is for, and what teachers should be able to do after it.
+    - name: Session Plan
+      contains: A timed run of the session, with each part matched to how adults learn.
+    - name: Active Learning Tasks
+      contains: Hands-on tasks where teachers do the work, instead of only listening.
+    - name: Practice Application
+      contains: Ways teachers use the ideas in their own classrooms.
+    - name: Follow-Through Plan
+      contains: What happens after the session, such as coaching, peer observation or more sessions.
+    - name: Facilitator Notes
+      contains: Tips for the person leading the session, including what to watch for and the research behind the design.

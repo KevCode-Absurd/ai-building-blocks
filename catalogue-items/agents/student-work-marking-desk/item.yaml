@@ -15,10 +15,10 @@ outputs:
   - {type: document}
 uses: [task-rubric-drafter, mark-student-work-against-a-rubric-and-sharpen-your-feedback, honest-draft-feedback-giver, good-note-sharpener]
 steps:
-  - {uses: task-rubric-drafter, note: "Once per task: the rubric with clear wording at each level, saved and used for every piece in every batch. Skipped if a rubric exists."}
-  - {uses: mark-student-work-against-a-rubric-and-sharpen-your-feedback, note: "Every batch, for each piece: the gaps against the rubric and the feedback, with the two or three pieces at the edges of a level marked for the teacher."}
-  - {uses: honest-draft-feedback-giver, note: "Only for written work such as essays and stories: feedback that names the weak lines and asks whether the student is fine with them."}
-  - {uses: good-note-sharpener, note: "Every batch, last: each feedback note rewritten as a note on the problem, not a fix, so the student does the thinking."}
+  - {uses: task-rubric-drafter, note: "Once per task: the rubric with clear wording at each level, saved and used for every piece in every batch. Skipped if a rubric exists. Hands the rubric to step 2 as the learning goal it marks against."}
+  - {uses: mark-student-work-against-a-rubric-and-sharpen-your-feedback, note: "Every batch, for each piece: the gaps against the rubric and the feedback, with the two or three pieces at the edges of a level marked for the teacher. Uses the task's learning goal and the student work you paste, together with step 1's rubric as its starting point, and hands step 4 the draft feedback."}
+  - {uses: honest-draft-feedback-giver, note: "Only for written work such as essays and stories: feedback that names the weak lines and asks whether the student is fine with them. Uses the student's written piece itself, not step 2's report, so its weak lines sit beside the gaps from step 2."}
+  - {uses: good-note-sharpener, note: "Every batch, last: each feedback note rewritten as a note on the problem, not a fix, so the student does the thinking. Uses the feedback from steps 2 and 3."}
 schedule: "Each time a batch of student work is handed in"
 asks_before: [sending feedback or grades to any student, recording a grade, contacting a parent or guardian, changing the rubric after marking has started, sharing one student's work with another, flagging a student for misconduct]
 minds: [ed-catmull]

@@ -16,6 +16,29 @@ use_cases:
   - "Turn readers into email subscribers, then into buyers"
   - "Pick one traffic channel to master before you add another"
   - "Test a new channel small, and scale it only once it proves itself"
+not_for:
+  - "You want a paid ads plan or a technical SEO audit: use a specialist or an audit tool, since this mind covers content, outreach and lead tracking."
+  - "You need a clear market position or product pitch: use the April Dunford mind."
+  - "You want help with clear, human writing for one reader: use the Ann Handley mind."
+output_sample:
+  input:
+    - Your website or blog topic and who you want to reach
+    - The questions your customers ask, in their own words (optional)
+    - How often you publish now and how many people you have
+    - Your sign-up, lead and sales numbers, if you track them (optional)
+  output:
+    - name: Questions to write about
+      contains: The customer questions to answer first, picked for how closely they tie to what you sell.
+    - name: Page depth check
+      contains: How your page compares with the top results, and what to add to make it more useful.
+    - name: Publishing rhythm
+      contains: A schedule your team can keep for months, scaled to the people you have.
+    - name: Outreach list
+      contains: Who to ask to share the piece and how to word each personal note.
+    - name: Numbers to track
+      contains: The sign-ups, leads and costs to watch, and the vanity numbers to ignore.
+    - name: What he doesn't know
+      contains: Caveats on dated search advice, the offer behind the traffic, and what to test before you commit.
 seats:
   - {seat: "Search and traffic", asks: "What are people typing into the search box, and is our page the most useful answer to it?"}
   - {seat: "Content volume and consistency", asks: "Can we publish this well, every week, for a year?"}

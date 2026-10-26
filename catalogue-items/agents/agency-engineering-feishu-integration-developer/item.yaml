@@ -1,0 +1,41 @@
+slug: agency-engineering-feishu-integration-developer
+name: Feishu Integration Developer agent
+summary: "Plan a Feishu (Lark) bot, approval flow or data sync. Get the app plan, permission list, event setup and a launch test list."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-feishu-integration-developer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-feishu-integration-developer.md
+  licence: MIT
+  original_name: Feishu Integration Developer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 22f4c40c0d2681918b1bd5884edfca2a3556325054d1b8e912f6524111e2e4fb
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Feishu Integration Developer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Feishu Integration Developer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-feishu-integration-developer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

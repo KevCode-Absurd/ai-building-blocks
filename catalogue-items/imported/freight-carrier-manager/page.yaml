@@ -2,35 +2,121 @@ thinking: high
 thinking_why: It balances cost, service and carrier relationships.
 new_slug: freight-carrier-manager
 name: Freight carrier manager
-summary: Describe your shipping lanes and carriers. Get a bid plan, rate talking
-  points and a carrier scorecard.
+summary: "Run your trucking carriers better. Get a freight carrier scorecard, a bid plan, rate talking points and a routing guide per lane."
 job: sell-and-negotiate
 headline: Freight carrier manager
-subhead: Describe your shipping lanes and carriers. Get a bid plan, rate talking
-  points and a carrier scorecard. Bring lanes with volumes and spend. Use the
-  result to plan your next step.
+subhead: "Tell it your lanes, volumes, spend and carriers. It builds a bid plan, rate talking points for each cost part, a five-measure carrier scorecard and a routing guide. Its numbers are starting defaults you check against your own rates."
 explain: |
-  A plan for running your carrier network: how to bid out freight, what to say when negotiating rates and a scorecard that actually gets used.
+  If you ship full truckloads or LTL freight, you buy from a handful of carriers and re-bid now and then. Most shippers negotiate one headline rate and miss where the money goes. This freight carrier manager splits the rate into parts you can negotiate, and shows which carriers earn more of your freight.
 
-  It breaks a freight rate into base haul, fuel surcharge, extra charges like detention and liftgate, and minimums, so you can negotiate each part. It builds a scorecard with five measures: on-time delivery, tender acceptance, claims, invoice accuracy and pickup time. It sets a three-deep routing guide per lane, balances large and small carriers, and lays out an 8 to 12 week RFP with data prep, bids and awards.
+  It breaks a rate into base haul, fuel surcharge, extra charges such as detention and liftgate, and minimums. It scores carriers on five measures: on-time delivery, tender acceptance, claims, invoice accuracy and pickup time. For each lane it sets a primary, backup and last-resort carrier, and it lays out an 8 to 12 week bid.
+
+  The numbers inside are starting defaults from the original author, not current market data. It marks each one so you can check it. It is built around US freight rules.
 when:
-  - You are about to run a freight bid and need the plan.
+  - You are about to run a freight bid and need the plan and timeline.
   - Your carriers keep rejecting loads or billing wrong.
-  - You need talking points for a rate renewal.
-  - You want to see which carriers deserve more volume.
+  - You need talking points for a rate renewal or a rate cut.
+  - You want to see which carriers deserve more of your freight and which to drop.
+not_for:
+  - "You ship parcels or a single one-off load: ask a broker for a quote, or use the Shipping cost analyzer for parcel costs."
+  - "You want the cheapest mix of shipping modes for your shipments: use the Freight mode and carrier picker."
+  - "You ship from a Shopify store and want a default carrier per route: use the Carrier performance comparer."
+  - "Your freight is outside the US: the rules in this skill are US rules, so use a local expert."
 you_give:
-  - Lanes with volumes and spend
-  - Current carriers and rates
-  - Performance data (optional)
-  - Service requirements
+  - Your lanes, with origin, destination, loads per week and spend
+  - Your carriers and the rates they charge now
+  - Carrier performance data such as on-time rate, rejected loads, claims and billing errors (optional)
+  - Your service needs, such as delivery windows and equipment
+  - A market rate source such as DAT or Greenscreens, or your own recent quotes (optional)
 you_get:
-  - Bid timeline and steps
-  - Rate negotiation points by cost part
-  - Five-measure carrier scorecard
-  - Routing guide per lane
-  - Carrier mix advice
+  - A bid timeline from data prep to award
+  - Rate talking points for each cost part
+  - A five-measure carrier scorecard with target, warning and exit lines
+  - A routing guide per lane with primary, backup and last-resort carriers
+  - Advice on which carriers to add, keep or drop
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code is needed. A spreadsheet of your lanes and carriers helps.
+  - Paste the skill text into the chat.
+  - "Under it, paste your lanes and carriers. Say what you need: a bid plan, talking points, a scorecard or a routing guide."
+  - Check every number marked as a default against your own rates. DAT and Greenscreens are paid, so use your own quotes if you have no account.
+  - Use the scorecard at your next carrier review. Share the red-flag lines with the carriers first.
+  - Check carrier insurance and authority on the FMCSA site yourself before you award a lane.
+output_sample:
+  input:
+    - Your lanes, with loads per week and spend
+    - Your carriers and current rates
+    - Carrier performance data (optional)
+    - Your service needs
+    - Market rates from DAT, Greenscreens or your own quotes (optional)
+  prerequisites:
+    - Twelve months of shipment data, for a full bid (optional)
+  output:
+    - name: Summary
+      contains: Your lanes, spend and carriers, and what the skill assumed.
+    - name: Bid plan
+      contains: The steps and weeks from data prep to award, and which lanes to bid.
+    - name: Rate talking points
+      contains: What to say on base rate, fuel, extra charges and minimums, with a fallback for each.
+    - name: Carrier scorecard
+      contains: Five measures per carrier with target, warning and exit lines.
+    - name: Routing guide
+      contains: Primary, backup and last-resort carrier for each lane, with load shares.
+    - name: Carrier mix advice
+      contains: Where to add, keep or cut carriers, and why.
+    - name: Next steps
+      contains: Three actions, each with an owner.
+how_it_works:
+  - title: Split the rate
+    text: It separates base haul, fuel surcharge, extra charges and minimums so you can negotiate each part.
+  - title: Score each carrier
+    text: It scores five measures and sets three lines for each, the target, the red flag that starts a fix, and the exit line.
+  - title: Build the routing guide
+    text: For each lane it sets a primary, backup and last-resort carrier, and limits how much one carrier holds.
+  - title: Plan the bid
+    text: It lays out an 8 to 12 week bid, with data prep, lane-by-lane bids, scoring and awards in waves.
+  - title: Check carrier compliance
+    text: It lists the authority, insurance and safety checks to run on the FMCSA site before each award.
+  - title: Mark the numbers
+    text: It labels every default figure, so you know which to check against your own rates.
+output_shape: |
+  SUMMARY
+  <lanes, spend, carriers, assumptions>
+
+  BID PLAN (if asked)
+  Week <n>: <step>
+
+  RATE TALKING POINTS (if asked)
+  <cost part>: open with <line>, fall back to <line>
+
+  SCORECARD
+  | Carrier | On-time | Tender acceptance | Claims | Invoice accuracy | Status |
+
+  ROUTING GUIDE
+  <lane>: primary <carrier> (<share>), backup <carrier>, last resort <carrier>
+
+  CARRIER MIX
+  <advice>
+
+  NEXT STEPS
+  1. <action> (owner)
+
+  MISSING
+  - <anything you did not give>
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: It works from a pasted table. An AI that reads a spreadsheet file can score many carriers at once.
+  inputs:
+    - A spreadsheet with a row per lane and per carrier
+    - A DAT or Greenscreens rate check, if you have a subscription
+terms:
+  - term: Lane
+    meaning: One route from an origin to a destination, such as Chicago to Dallas.
+  - term: Tender
+    meaning: Offering a load to a carrier. The carrier can accept or reject it.
+  - term: Fuel surcharge
+    meaning: An extra charge that moves with the price of diesel.
+  - term: Accessorial
+    meaning: An extra charge on top of the base rate, such as detention or liftgate.
+  - term: Routing guide
+    meaning: The ranked list of carriers you offer each lane to, in order.

@@ -7,6 +7,31 @@ Reference for writing any document an agent consumes: a skill, an `AGENTS.md` / 
 
 When the document you're writing is a skill, read [`SKILL-MECHANICS.md`](SKILL-MECHANICS.md) for frontmatter, invocation choice, and router skills.
 
+## How to run this reference on a real file
+
+This guide is a reference. When someone gives you a skill or instruction file to fix, run it like this.
+
+**What to ask for first.** Collect the file in full, the cases it should handle, and, if they exist, the times it failed. Ask once if the file or the cases are missing. If still missing, write `MISSING: <what>`. Never guess what the file is meant to do.
+
+**Steps.**
+
+1. Sort the document into steps and reference. Note repeated meanings, lines that never bear on the task, and lines your AI already follows by default.
+2. Fix the context pointer first: front-load the leading word, give each distinct case one trigger, and cut identity the body already carries.
+3. Decide what stays loaded and what moves behind a pointer, using the two loads and the information hierarchy below.
+4. Check that every step ends on a clear completion criterion.
+5. Prune: single source of truth, no repeats, no no-ops, rules stated as the positive target.
+
+**What to hand back.** Return these sections, in this order:
+
+1. **Rewritten pointer**: the always-loaded line or skill description, ready to paste.
+2. **Keep loaded or link**: two short lists.
+3. **Trigger table**: one row per case, with the one trigger for it.
+4. **Tighter document**: the full revised file.
+5. **Cuts and reasons**: each line removed or moved, with a one-line reason.
+
+Keep every rule the person relies on. If a cut might change behaviour, flag it as "check this" rather than deleting it silently. Do not invent cases, tools or file names the person did not give you.
+
+
 ## Context pointers
 
 A **context pointer** is a reference held in the agent's context that names some out-of-context material and encodes the condition for reaching it. A skill's description is one; a line in `AGENTS.md` naming a doc is the same object. The pointer's _wording_, not its target, decides when the agent reaches the material, and how reliably. A must-have target behind a weakly worded pointer is a variance bug: sharpen the wording first, and inline the material only if sharpening fails.

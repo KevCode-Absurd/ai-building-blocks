@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Rating gaps against audit rules takes careful judgement.
 new_slug: it-controls-audit-planner
 name: IT controls audit planner
-summary: Describe your finance systems. Get controls matrix rows, test steps and
-  a rating for any IT control gaps.
+summary: Plan an IT controls audit for SOX. Give it your finance systems and get a risk and control matrix, test steps and a rating for any gaps.
 job: check-contracts
 headline: IT controls audit planner
-subhead: Control matrix rows, test steps and a rating for the IT systems that
-  feed your financial statements. Describe your finance applications and how
-  they are run.
+subhead: Control matrix rows, test steps and a rating for the IT systems that feed your financial statements. Describe your finance applications and how they are run.
 explain: |
   Control matrix rows, test steps and a rating for the IT systems that feed your financial statements. Describe your finance applications and how they are run. The skill starts from the financial statements and works down to the systems that matter, then covers the four control areas: access, program changes, computer operations and system development.
 
@@ -18,6 +15,10 @@ when:
   - You must document who can change your finance systems.
   - An auditor found an IT control gap and you must rate it.
   - You need test steps for user access reviews and change approvals.
+not_for:
+  - "You need a legal opinion on SOX duties: use qualified counsel."
+  - "You need an audit sign-off or an official opinion on your controls: use an accredited assessor or your external auditor."
+  - "You want to review a contract or a vendor agreement: use a lawyer, as no item here covers that yet."
 you_give:
   - A list of finance systems and who runs them
   - Your company size or filer status
@@ -30,7 +31,30 @@ you_get:
   - A note on which SOX rules apply to you
   - A fix plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your list of finance systems, who runs each one, and your company size or filer status.
+  - Add your current controls, policies and any test exceptions if you have them.
+  - Ask for the system inventory first. Check it matches your real systems before you go on.
+  - Then ask for the risk and control matrix, test scripts and a rating for any gaps.
+  - Check the rules and dates against official sources before you rely on them. The skill was last checked on 14 Sep 2026.
+output_sample:
+  input:
+    - Your list of finance systems and who runs them
+    - Your company size or filer status
+    - Your existing IT controls and policies (optional)
+    - Test results or exceptions you found (optional)
+  output:
+    - name: System inventory
+      contains: Each finance system, the account or process it supports, its layers, why it is in scope and any outside report relied on.
+    - name: Risk and control matrix
+      contains: "For each system and control area: the risk, the control, how often it runs, its owner, the evidence and the test approach."
+    - name: Control narratives
+      contains: Plain write-ups of who does what, what triggers it, what evidence it leaves and what happens when it fails.
+    - name: Test scripts
+      contains: A design walkthrough and an operating check for each control, with sample sizes labelled as audit habit, not rules.
+    - name: Deficiency rating
+      contains: Each gap walked through and rated as a deficiency, significant deficiency or material weakness, with the rule cited.
+    - name: Remediation plan
+      contains: Root cause, fix, owner, dates and a re-test window that ends before year-end.
+    - name: SOX applicability note
+      contains: Whether the auditor attestation applies to your filer status, with pending rule changes flagged but not applied.

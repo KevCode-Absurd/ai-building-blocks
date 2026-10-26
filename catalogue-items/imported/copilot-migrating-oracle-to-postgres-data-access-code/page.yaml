@@ -2,17 +2,60 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-migrating-oracle-to-postgres-data-access-code
 name: Oracle to Npgsql code migrator
-summary: Share your .NET data access code. Get PostgreSQL changes for drivers,
-  queries and database calls.
+summary: Move your .NET code from Oracle to PostgreSQL. Get Npgsql swaps for packages, queries, parameters and stored procedure calls in the data layer.
 job: build-software
 headline: Oracle to Npgsql code migrator
-subhead: Share your .NET data access code. Get PostgreSQL changes for drivers,
-  queries and database calls. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI your .NET project copy and the migration checklist. It swaps the Oracle driver for Npgsql, fixes types and queries, and updates stored procedure calls. You get changed code, a ticked checklist and a list of behaviour differences.
+not_for:
+  - "You need to move the database schema or DDL: use a database schema conversion tool or ask your database admin."
+  - "Your app is not written in .NET or C#: use a migration guide for your own language and database driver."
+  - "You have not made the .Postgres project copy or the MigrationChecklist.md yet: finish that setup first, then come back."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open an AI that can read and edit your project files and run dotnet build, such as Claude Code. A plain chat can work on pasted files, but cannot build.
+  - Make sure the .Postgres project copy, MigrationChecklist.md and OracleRiskAnalysis.md exist. If they do not, make them first. Do not guess the changes without them.
+  - Paste the skill, then give your AI the project folder and the config files that hold your connection string.
+  - Ask it to work through MigrationChecklist.md one item at a time, in the .Postgres copy only.
+  - Check that dotnet build passes and no Oracle names are left in the code.
+  - Read the list of behaviour differences and log each one as a bug report. Do not change them silently.
+output_sample:
+  input:
+    - Your .NET project source folder (the .Postgres copy)
+    - Your Oracle connection string settings, such as appsettings.json or web.config
+    - MigrationChecklist.md from the earlier setup step
+    - OracleRiskAnalysis.md from the earlier setup step
+  prerequisites:
+    - An AI that can read and edit your project files and run dotnet build
+    - The .Postgres project copy, made in the earlier Phase 5 setup
+    - Reports/{ProjectName}/MigrationChecklist.md and OracleRiskAnalysis.md already written
+  output:
+    - name: Updated .csproj
+      contains: Oracle packages removed and Npgsql packages added, kept at versions that fit your solution.
+    - name: Updated connection strings
+      contains: Npgsql-style connection strings in your config files, using the same settings method you already use.
+    - name: Updated C# data access files
+      contains: Oracle types swapped for Npgsql types, fixed parameter types, :param changed to @param, and stored procedure calls reworked.
+    - name: Rewritten SQL
+      contains: Oracle-only SQL such as ROWNUM, NVL, DECODE, DUAL, CONNECT BY and MERGE changed to PostgreSQL forms.
+    - name: MigrationChecklist.md
+      contains: The same checklist with each finished item ticked off.
+    - name: Build result
+      contains: A dotnet build run and a search showing no Oracle references remain.
+    - name: Behaviour differences list
+      contains: Places where Oracle and PostgreSQL act differently, noted as bug reports instead of being changed silently.
+when:
+  - Your .NET app talks to Oracle and you are moving the database to PostgreSQL.
+  - You have a list of changes to make and want your AI to work through it item by item.
+  - Your code uses OracleConnection, OracleCommand or Oracle.EntityFrameworkCore and must use Npgsql.
+  - Your SQL strings use ROWNUM, NVL, DUAL or :param names that PostgreSQL will not accept.
+you_give:
+  - Your .NET project source folder (the .Postgres copy, not the original)
+  - The files that hold your Oracle connection string, such as appsettings.json or web.config
+  - MigrationChecklist.md from the earlier setup step
+  - OracleRiskAnalysis.md from the earlier setup step
+you_get:
+  - Changed .csproj and C# files that use Npgsql
+  - Connection strings in the Npgsql format
+  - SQL rewritten for PostgreSQL, for example ROWNUM <= 10 becomes LIMIT 10
+  - Stored procedure calls updated, with :id changed to @id
+  - A ticked checklist
+  - A separate list of behaviour differences to log as bug reports

@@ -2,35 +2,54 @@ thinking: medium
 thinking_why: It follows syntax rules with a few edge cases.
 new_slug: function-argument-checker-writer
 name: Function argument checker writer
-summary: Give it a MATLAB function. Get its inputs checked with a clean
-  arguments block, replacing older checks.
+summary: Check your MATLAB function inputs with a clean arguments block. Get a rewritten function that rejects bad inputs and warns about silent changes.
 job: build-software
 headline: Function argument checker writer
-subhead: A MATLAB function whose inputs are checked with a clean arguments
-  block, replacing older checks like inputParser. Bad inputs are rejected with
-  clear errors instead of silently reshaped.
+subhead: Paste a MATLAB function and say what each input should be. Your AI rewrites it with an arguments block, in place of older checks like inputParser. Bad inputs then fail with clear errors.
 explain: |
   A MATLAB function whose inputs are checked with a clean arguments block, replacing older checks like inputParser. Bad inputs are rejected with clear errors instead of silently reshaped.
 
   It writes the block with the right size, class and validator for each input. It handles repeating arguments, name-value options, and copying properties into class constructors. It also warns about quiet conversions where MATLAB changes the size or class of what you pass in, and tightens rules so a scalar means a scalar. It leaves ordinary guard checks inside the function body alone.
 when:
-  - You want to replace inputParser or validateattributes with an arguments
-    block.
-  - Your function accepts wrong types and fails far down the code.
+  - You want to replace inputParser or validateattributes with an arguments block.
+  - Your function accepts wrong types and only fails far down the code.
   - You need name-value options passed on to another function.
-  - You are tightening a function's inputs before sharing it.
+  - You are tightening a function's inputs before you share it.
+not_for:
+  - "You only want guard checks inside the function body: leave the if and error lines as they are."
+  - "Your function lives in a .mlx Live Script or .mlapp file: export it to a plain .m file first, then use this."
+  - "You want unit tests for the function: use a testing tool such as matlab-write-tests, not this."
 you_give:
-  - MATLAB function or class
-  - Expected types, sizes and ranges for each input
-  - Defaults for optional inputs (optional)
+  - Your MATLAB function or class
+  - The expected size, type and range of each input
+  - Default values for optional inputs (optional)
 you_get:
-  - Rewritten function with an arguments block
-  - Validators for each input
+  - Your full function, rewritten with an arguments block
+  - A validator for each input
   - Handling for repeating and name-value arguments
-  - Warnings on silent conversions
+  - A list of inputs that changed
+  - Warnings about silent conversions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your MATLAB function below it.
+  - "List what each input should be: size, type and range. Add defaults if you have them."
+  - Ask your AI to rewrite the function with an arguments block.
+  - Read the warnings on silent conversions and fix any input rules that are too loose.
+  - Run the new function in MATLAB on good and bad inputs. Then write tests with matlab-write-tests.
+output_sample:
+  input:
+    - Your MATLAB function or class, pasted as text
+    - "What each input should be: its size, type and range"
+    - Default values for optional inputs (optional)
+  prerequisites:
+    - Output checks need MATLAB R2022b or newer
+    - Input arguments blocks need MATLAB R2019b or newer
+  output:
+    - name: Rewritten function
+      contains: Your function with an arguments block that sets size, class and validators for each input.
+    - name: Repeating and name-value arguments
+      contains: Blocks for repeating inputs and name-value options, including options passed on to another function.
+    - name: Output arguments block
+      contains: A block that checks outputs, including outputs whose count depends on how many the caller asks for.
+    - name: Silent conversion warnings
+      contains: Notes on places where MATLAB would quietly change the size or class of an input.

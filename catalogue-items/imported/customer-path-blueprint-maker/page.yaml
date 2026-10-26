@@ -32,3 +32,26 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - You want a quick seven-stage map with no behind-the-scenes layer. Use the Customer path mapper.
+  - You want to map your own staff's experience, like onboarding or exit. Use the Employee experience map builder.
+  - You want to see what your best customers did before they bought. Use the Buying path rebuilder.
+output_sample:
+  input:
+    - The customer type you want to map, and what they want to achieve
+    - Research on that customer, such as interviews, tickets, survey results or analytics
+    - Notes on what each team does at each step (optional)
+  prerequisites:
+    - One customer type per map, not all customers at once
+    - Someone from support, operations or engineering to check the behind-the-scenes steps
+  output:
+    - name: Path map
+      contains: Each phase and step with its touchpoint, goal, thoughts, emotion, pain points and opportunities.
+    - name: Service blueprint additions
+      contains: For each phase, what staff do in view, what happens out of view and which systems are involved.
+    - name: Critical friction
+      contains: The moments where the experience keeps failing, each with the evidence behind it.
+    - name: Quick wins and strategic bets
+      contains: Low-effort fixes and bigger changes, each with effort and impact.
+    - name: Cross-team disconnects
+      contains: Places where what customers see and what happens behind the scenes do not match.

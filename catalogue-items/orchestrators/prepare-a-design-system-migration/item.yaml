@@ -25,11 +25,11 @@ uses:
   - change-rollout-planner
 steps:
   - uses: design-system-auditor
-    note: Inventory inconsistent components and distinguish deliberate exceptions from accidental drift.
+    note: "Inventory inconsistent components and distinguish deliberate exceptions from accidental drift. Hands step 2 the inventory: each component, where it is used and whether it is on purpose, drift or ask owner."
   - uses: design-rules-file-writer
-    note: Document the agreed target patterns and replacement rules from actual components without silently removing variants.
+    note: "Document the agreed target patterns and replacement rules from actual components without silently removing variants. Uses your code or component list with step 1's inventory. Hands step 3 the rules and the breaking changes."
   - uses: change-rollout-planner
-    note: Plan adoption of the approved patterns, with training, owners and acceptance checks. Keep implementation dependencies from the audit visible.
+    note: "Plan adoption of the approved patterns, with training, owners and acceptance checks. Uses your brief of the move (dates, freezes, owners) and step 2's rules as the list of what changes. Keep implementation dependencies from the audit visible."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

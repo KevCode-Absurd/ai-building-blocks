@@ -1,6 +1,6 @@
 slug: turn-a-customer-interview-into-a-case-outline
 name: Turn a customer interview into a case outline
-summary: Share the source files. Get a sourced case outline, evidence gaps and a customer approval checklist.
+summary: Turn one customer interview into a case study outline, a list of gaps in the evidence and a checklist of what the customer must approve before you publish.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,17 +10,13 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: voc_reviews
-    required: false
-  - type: question
-    required: false
+  - type: source_text
+    required: true
   - type: copy_draft
     required: false
 outputs:
-  - type: audit_report
-  - type: brief
   - type: copy_draft
-  - type: feedback_notes
+  - type: audit_report
   - type: document
 uses:
   - customer-interview-synthesizer
@@ -28,11 +24,11 @@ uses:
   - draft-proofreader
 steps:
   - uses: customer-interview-synthesizer
-    note: Separate the problem, actions and observed outcomes while preserving source references. One interview is one case, not evidence of a repeated customer pattern.
+    note: Split the interview into the problem, what the customer did and what they say changed. Keep a pointer to the moment in the interview for each point. Treat it as one case, not a pattern. Hand step 2 the tagged points.
   - uses: case-first-story-builder
-    note: Build the case around the actual decision and change, marking unsupported outcomes.
+    note: Build the case around the real decision and the change that followed. Mark any outcome the customer stated without evidence as unsupported. Hand step 3 the outline.
   - uses: draft-proofreader
-    note: Edit the outline wording without inventing a finished case study. Preserve source locators and the separate factual and consent checks in the hand-back acceptance rules.
+    note: Edit the outline wording without writing the case study itself. Keep the source pointers. Hand back the outline and the approval checklist of every quote, number and detail the customer must OK.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

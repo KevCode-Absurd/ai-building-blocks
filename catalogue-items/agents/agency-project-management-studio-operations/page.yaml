@@ -1,0 +1,140 @@
+name: Studio Operations agent
+summary: Write step-by-step procedures and an operating plan for your small studio or team. Get who owns what, your tools and vendors, and a support routine.
+headline: Studio Operations agent
+subhead: Describe how your studio or small team runs day to day, and pick one process to write down. Your AI writes a step-by-step procedure for it, then an operating plan for your tools, vendors and equipment. With your own numbers, it also writes an operations report.
+job: organise-work
+thinking: high
+thinking_why: It turns loose habits into written steps and must not invent metrics. Use a model that writes precise procedures and says when it lacks the data.
+explain: |-
+  In a small studio or team, much of the work lives in people's heads. One person knows how files get named, who renews the software and what to do when the printer or the server stops. When that person is away, things break. This studio operations agent gets those habits written down, so the team runs the same way every day.
+
+  It works in three layers. First, a written procedure (also called an SOP, or standard operating procedure) for one process, with the steps, the tools needed, a check at each step and what to do when it goes wrong. Second, an operating plan: a list of the processes you run, who owns each one, which tools, equipment and vendors support them, and when each is next reviewed. Third, a simple support routine: where requests go, who answers and how fast.
+
+  It asks you for real figures before it writes a report. It does not claim "95 percent efficiency" or "costs cut by 15 percent" on its own. Those numbers in the source profile are targets, not facts about your studio.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Only one person knows how a job is done, and you want it written down before they go on leave.
+  - A new hire asks how things work here, and the answer is "just ask around".
+  - Your tool subscriptions, equipment and vendors are tracked in several places, or nowhere.
+  - You run a design, video, photo or marketing studio and need a simple, shared way of working.
+not_for:
+  - You want to find which step in a slow process wastes the most time. Use the Operations Manager agent.
+  - You already have a written process and need it kept up to date each month. Use the Process doc freshness keeper.
+  - You want an IT help desk, ticket priorities and a change process. Use the IT Service Manager agent.
+  - You want a plan for several creative projects at once, with budget and team time. Use the Studio Producer agent.
+you_give:
+  - How your studio or team works today, in plain words, with who does what and which tools you use
+  - The one process you want written down first, such as how a job is briefed, how files are saved or how a client approves work
+  - Your tools, equipment and vendors, with who owns each and when each renews (optional)
+  - Any numbers you track, such as turnaround times, errors or support requests, for an operations report (optional)
+you_get:
+  - A step-by-step procedure for the process you picked, with a check at each step
+  - A process list showing who owns each one, how often it runs and when to review it
+  - A list of tools, equipment and vendors with an owner and a review date for each
+  - A simple routine for support requests, with a proposed response time to agree
+  - An operations report from your own numbers, when you give them
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe how the studio runs today. Say which process you want written first. If you want the whole operating plan, say that.
+  - Paste your tool and vendor list and any numbers you track. If you do not have a list, say so and it will leave them as gaps.
+  - Ask the person who does the job to read the procedure and correct each step. They know what really happens.
+  - Save the final version in a shared place. Put a review date on it.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms which process or which part of the plan you want, and asks once for what is missing. Gaps are marked MISSING.
+  - title: Write down how it works now
+    text: It lists the steps as people really do them today, with who does each one and which tool they use.
+  - title: Write the procedure
+    text: It turns that into steps with an input, an action, an output and a check for each, plus common problems and when to escalate.
+  - title: Build the operating plan
+    text: It lists processes, owners and review dates, and the tools, equipment and vendors behind them.
+  - title: Set the support routine
+    text: It names where requests go, who answers and a proposed response time.
+  - title: Report on your numbers
+    text: If you gave figures, it writes a short report and flags any it could not check. It adds no figures of its own.
+output_shape: |-
+  SCOPE
+    Process picked <name> | Part of plan wanted <procedure, operating plan or report> | Team size <n>
+
+  PROCEDURE: <process name>
+    Purpose <why> | Scope <when it applies> | Who does it <roles> | How often <frequency>
+    Needs first: <tools> | <permissions> | <earlier steps>
+    STEPS
+      1. <step name> | Input <what is needed> | Action <what to do> | Output <result> | Check <how to know it worked>
+    CHECKS: <how to know the whole process succeeded> | <common problems and fixes> | <when to escalate and to whom>
+    RECORDS: <what to keep> | Review date <when>
+
+  PROCESS LIST
+    <process> | <owner> | <how often> | <written down: yes or no> | <next review>
+
+  TOOLS, EQUIPMENT AND VENDORS
+    <item> | <what it supports> | <owner> | <renews or next check> | <backup if it fails>
+
+  SUPPORT ROUTINE
+    <where requests go> | <who answers> | <proposed response time> | <what counts as urgent>
+
+  OPERATIONS REPORT (only with your numbers)
+    <measure> | <this period> | <last period> | <source>
+
+  ASSUMPTIONS AND CHECKS NOT DONE
+output_sample:
+  input:
+    - How your studio or team works today, with who does what and which tools you use
+    - The one process to write down first
+    - Your tools, equipment and vendors, with owners and renewal dates (optional)
+    - Numbers you track, for a report (optional)
+  prerequisites:
+    - Someone who does the job and can check the steps
+  output:
+    - name: Scope
+      contains: The process picked, which part of the plan you asked for and your team size.
+    - name: Procedure
+      contains: Purpose, who does it, steps with input, action, output and check, common problems and review date.
+    - name: Process list
+      contains: Every process you run with an owner, how often it runs, if it is written down and its review date.
+    - name: Tools, equipment and vendors
+      contains: Each item with what it supports, an owner, a renewal or check date and a backup.
+    - name: Support routine
+      contains: Where requests go, who answers, a proposed response time and what counts as urgent.
+    - name: Operations report
+      contains: Your own measures this period against last period, with the source of each.
+    - name: Assumptions and checks not done
+      contains: What the AI assumed and which checks it could not run.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can turn a spoken description of how you work into steps. Voice dictation helps if typing is slow.
+  inputs:
+    - A recent example of the process done well, such as a job folder or an approved brief.
+    - Your current tool and subscription list, even a messy one.
+    - Where things went wrong last time, so the checks target real problems.
+terms:
+  - term: SOP
+    meaning: Short for standard operating procedure. A written set of steps so anyone can do a job the same way.
+  - term: Process owner
+    meaning: The person who is responsible for how a process runs and for keeping it up to date.
+  - term: Vendor
+    meaning: A company you pay for a service or supplies, such as a software maker or a print shop.
+  - term: Escalate
+    meaning: Pass a problem to someone with more authority when you cannot fix it at your level.
+  - term: Operations report
+    meaning: A short note on how well the day-to-day work is running, based on numbers you track.
+tweaks:
+  - what: Process
+    how: Pick one process at a time. A procedure for "how we run the studio" is too broad. Try "how a client job is briefed".
+  - what: Detail
+    how: Say if the readers are new hires or experts. New hires need more steps and fewer assumptions.
+  - what: Scope
+    how: Ask for only the procedure, or only the tools and vendors list, if that is all you need now.
+improve:
+  - Keep the procedure with a review date, and ask the AI to update it when a step changes.
+  - Have each new hire follow the procedure once and note every step that was unclear.
+  - Add your real tool and vendor list to the pack so you do not retype it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

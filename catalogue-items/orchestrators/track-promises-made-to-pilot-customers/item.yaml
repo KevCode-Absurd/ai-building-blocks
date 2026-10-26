@@ -1,6 +1,7 @@
 slug: track-promises-made-to-pilot-customers
 name: Track promises made to pilot customers
-summary: Share the source files. Get a customer promise register, conflicting commitments and update drafts.
+summary: List what you promised each pilot customer, who owns it and the proof
+  it is done. Get a promise register, clashes and update drafts.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -12,19 +13,25 @@ inputs:
     required: true
   - type: meeting_notes
     required: false
-  - type: question
+  - type: document
     required: false
 outputs:
   - type: plan
+  - type: copy_draft
   - type: document
 uses:
   - executive-action-register
   - stakeholder-update-writer
 steps:
   - uses: executive-action-register
-    note: Extract explicit accepted customer commitments with source IDs, owner and due-date gaps, dependencies and evidence needed for completion.
+    note: Extract explicit accepted customer commitments with source IDs, owner and
+      due-date gaps, dependencies and evidence needed for completion. Hands step 2 the promise register (a plan).
   - uses: stakeholder-update-writer
-    note: Draft changed-only customer or internal updates using the actual commitment status and approved product scope; avoid promising unapproved features or dates.
+    note: Draft changed-only customer or internal updates using the actual
+      commitment status and approved product scope; avoid promising unapproved
+      features or dates. Uses step 1's register for each promise's status, with
+      the customer messages and what changed since the last update as its
+      source.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -34,9 +41,13 @@ credits:
   - title: Executive action register keeper
     by: AI Blocks
     url: https://useaiblocks.com/skills/executive-action-register
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Stakeholder update writer
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

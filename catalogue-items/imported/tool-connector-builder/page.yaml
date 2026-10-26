@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It plans the tools, builds a server and tests it.
 new_slug: tool-connector-builder
 name: Tool connector builder
-summary: Name the service. Get an MCP server that lets your AI use its tools,
-  built and ready to test.
+summary: Build an MCP server that lets your AI use a service's tools. Name the service, get tested server code and 10 test questions.
 job: connect-tools
 headline: Tool connector builder
-subhead: Give your AI access to a service by building an MCP server, a small
-  program that exposes the service's actions as tools the AI can call.
+subhead: Give your AI access to a service by building an MCP server, a small program that exposes the service's actions as tools the AI can call.
 explain: |
   Give your AI access to a service by building an MCP server, a small program that exposes the service's actions as tools the AI can call. Done well, the AI picks the right action and gets useful answers back.
 
@@ -17,6 +15,10 @@ when:
   - Your internal API should be usable by an AI assistant.
   - An existing connector returns too much text and wastes context.
   - You want questions that test whether your connector works.
+not_for:
+  - "The service already has an official connector: install that connector instead of building a new one."
+  - "You have no API access to the service: ask the service's owner or support team for API keys first."
+  - "You only need to send data to a service once: export the file by hand or use the service's own import page."
 you_give:
   - The name of the service and its API docs
   - API keys for testing
@@ -29,8 +31,30 @@ you_get:
   - Test questions
   - Setup steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the service's API docs.
+  - Open an AI that can run code and read web pages. Paste in this skill.
+  - Tell it the service name, the link to its API docs and the tasks the AI should handle.
+  - Say TypeScript or Python if you have a preference. TypeScript is the default.
+  - Give it test API keys when it asks. Use keys with limited access, not your main ones.
+  - Let it build the server, then check the Inspector test result and the tool list.
+  - Ask it to write the 10 test questions, then run them to see if your AI can use the tools.
+output_sample:
+  input:
+    - The name of the service and a link to its API docs
+    - API keys for testing
+    - Your language choice, TypeScript or Python (optional)
+    - The tasks you want your AI to handle
+  prerequisites:
+    - An AI that can run code and read web pages
+    - Node and npm installed if you pick TypeScript, or Python if you pick that
+    - API access to the service
+  output:
+    - name: Implementation plan
+      contains: The list of service actions to offer as tools, starting with the most common ones.
+    - name: MCP server code
+      contains: A project with an API client, sign-in, error handling, paging and one tool per action.
+    - name: Tool names and descriptions
+      contains: Clear action names with short descriptions, input rules and hints that mark each tool as read-only or not.
+    - name: Build and test result
+      contains: Whether the server builds, plus what the MCP Inspector showed when each tool was tried.
+    - name: Evaluation file
+      contains: An XML file with 10 hard, read-only questions, each with one answer you can check.

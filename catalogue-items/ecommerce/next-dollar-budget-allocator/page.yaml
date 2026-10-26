@@ -1,6 +1,6 @@
 new_slug: next-dollar-budget-allocator
 name: "Next-dollar budget allocator"
-summary: "Give it spend and new-customer returns by channel. Get where the next $10,000 goes and a test plan."
+summary: "Find where your next $10,000 of ad budget should go. Give it spend and new-customer revenue by channel. You get a ranking, stop points and a test plan."
 job: launch-and-scale-ads
 thinking: high
 thinking_why: "It weighs weak evidence across channels and must say how sure it is, so a stronger model reasons more carefully."
@@ -17,6 +17,10 @@ when:
   - You can add budget next month and are not sure which channel should get it.
   - One platform shows a great return and you suspect it is mostly claiming sales that were coming anyway.
   - Your product ads or retargeting hold most of the spend and the account feels like it is slowly declining.
+not_for:
+  - You have one channel and under a few hundred orders a month. Run a single holdout test instead, where one region sees your ads and a matched region does not.
+  - You want to size spend on past buyers only. Use the Existing-customer ad budget sizer.
+  - You want to judge a platform's reported return. Use the Platform return reality check.
 
 you_give:
   - Monthly spend by channel, and new-customer revenue by channel
@@ -36,6 +40,26 @@ how_to_use:
   - Add your break-even return on new customers. If you do not have it, say so and the skill will mark it MISSING.
   - Read the ranking, then run the test plan before moving more than a small share of budget.
   - Come back with the test results and ask it to update the ranking.
+output_sample:
+  input:
+    - Your monthly spend by channel
+    - Your new-customer revenue by channel, and where each number comes from
+    - Your break-even return on new customers (optional)
+    - Your lift test or holdout results (optional)
+    - Your spend by ad type, such as product ads and retargeting (optional)
+  output:
+    - name: Next-dollar ranking
+      contains: Each channel ranked by new-customer revenue from the next $10,000, with the evidence behind it and a move test.
+    - name: Stop point per channel
+      contains: The extra new-customer return at which you stop adding to each channel, and where each one stands now.
+    - name: Funnel and product-ad check
+      contains: The share of spend on product ads and retargeting, a verdict, and how new ad creative is split.
+    - name: Existing customers
+      contains: Monthly spend on past buyers worked out from customer count, views a month and your CPM, with current frequency.
+    - name: Test plan
+      contains: For each channel, the test to run, how long it takes, and what result would change the ranking.
+    - name: Guardrails
+      contains: How to judge success, a loss limit, a review date and a fallback, plus any checks missed and missing inputs.
 
 how_it_works:
   - title: Asks the marginal question

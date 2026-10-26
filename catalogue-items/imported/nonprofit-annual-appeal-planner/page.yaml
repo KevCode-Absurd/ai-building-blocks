@@ -2,16 +2,32 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-annual-appeal-planner
 name: Nonprofit annual appeal planner
-summary: Share donor groups and giving history. Get appeal copy, gift amounts, a schedule, and measures to track.
+summary: Plan your nonprofit annual appeal. Share donor groups and gift history, and get appeal letters, gift amounts, a send calendar and results measures.
 job: write-emails
 headline: Nonprofit annual appeal planner
 subhead: Share your donor groups, giving history, campaign goal, and channels. It plans suitable gift amounts and writes a clear fundraising ask. You get appeal letters or emails, matching reply wording, a send calendar, and measures for reviewing results.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - You are planning a year-end or giving-season appeal for a nonprofit.
+  - You need to split your donor list before a mail or email send.
+  - You want an appeal letter and reply card that use the same gift amounts.
+  - An appeal did poorly and you want to check response rates by group.
+not_for:
+  - "You need to set up donor records or segment tools in your database: use your donor database's own help or a database admin."
+  - "You are running a walk, run or team fundraiser where supporters raise money from friends: plan that as a separate peer-to-peer campaign."
+  - "You want a general newsletter with no fundraising ask: write it as a plain newsletter, not an appeal."
 you_give:
-  - Donor groups, past gift amounts, verified impact facts, campaign goal, channel, and key dates.
+  - Donor counts for each group (new, renewing, lapsing, mid-level, prospects).
+  - Each donor's last gift and highest gift.
+  - Past appeal response rates and average gifts (optional).
+  - Your campaign goal and the channel, mail or email.
+  - Your send dates and key deadlines.
+  - Verified cost data for what a gift pays for.
 you_get:
-  - An appeal plan, draft messages, suggested gift amounts, and results measures.
+  - A plan that splits your donors into groups, each with its own message.
+  - Suggested gift amounts for each group, based on past giving.
+  - An appeal letter or email with a P.S. and matching reply wording.
+  - A dated send calendar that spaces out your asks.
+  - A scorecard to track response rate, average gift and cost to raise a dollar.
 how_it_works:
   - title: Group donors by history
     text: Separate new, returning, lapsing, and larger donors so each group receives a fitting ask.
@@ -26,5 +42,29 @@ works_best_with:
   inputs:
     - Solicitation copy goes to your whole donor file at once.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste your donor group counts, gift history, goal, channel and send dates. Remove donor names if you can.
+  - Give real cost data for what a gift pays for. If you have none, your AI will leave a bracketed blank to fill in.
+  - Check the gift amounts, the impact lines and the story before anything goes out.
+  - Have a person review the full appeal, because it goes to your whole donor list at once.
+  - After the appeal closes, paste in the results and ask for the scorecard.
+output_sample:
+  input:
+    - Number of donors in each group (new, renewing, lapsing, mid-level, prospects)
+    - Each donor's last gift and highest gift
+    - Past appeal response rates and average gifts (optional)
+    - Your campaign goal, channel and send dates
+    - Verified cost data for what a gift pays for
+  output:
+    - name: Segmentation plan
+      contains: Each donor group with its own message angle and ask logic.
+    - name: Appeal letter
+      contains: A story opening, the ask, what a gift does, a deadline, one call to action and a P.S.
+    - name: Reply device
+      contains: Reply card or donation page wording that matches the letter's gift amounts exactly.
+    - name: Ask string
+      contains: Suggested gift amounts for each group, based on past giving, with a higher top option.
+    - name: Appeal calendar
+      contains: Dated drops by channel, group and theme, spaced to avoid donor fatigue.
+    - name: Performance scorecard
+      contains: Response rate, average gift and cost to raise a dollar for each appeal, by group.

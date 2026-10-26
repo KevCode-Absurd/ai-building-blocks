@@ -1,6 +1,6 @@
 new_slug: fix-api-security-gaps-with-tests-and-a-clear-pull-request
 name: Fix API security gaps with tests and a pull request
-summary: Give it your API code. Get gaps fixed, tests for each fix and a reviewed pull request.
+summary: Fix API security gaps with tests. Give it your API code and get fixes for each gap, tests that guard them and a reviewed pull request.
 job: secure-code
 thinking: high
 thinking_why: It reads routes, writes fixes and reviews its own change. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A scan or audit found gaps in your API and you need to merge fixes this week.
   - You added routes fast and never checked who may call them.
   - You want the fixes to stay fixed, with tests that fail if someone removes them.
+not_for:
+  - "You only want to review one file or a codebase that is not an API: use the API security checker on its own."
+  - "You want a security scan with no code changes: use the API security checker and stop after step 1."
+  - "You need to review a pull request someone else wrote: use the Pull request risk reviewer on its own."
 you_give:
   - Your API code (a folder or repo the AI can open)
   - Your test folder, so it can see what is already covered
@@ -28,6 +32,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Point it at the API folder and the tests. Use a test copy, not production data.
   - After step 2, add the tests and run your suite before you continue.
+output_sample:
+  input:
+    - Your API code, as a folder or repo your AI can open
+    - Your test folder, so it can see what is already covered (optional)
+    - Who calls your API and how they sign in (optional)
+  prerequisites:
+    - An AI that can open and read your code files, such as Claude Code or a Claude Project with files
+    - A test copy of your project, not production data
+  output:
+    - name: "Step 1: API security gaps"
+      contains: Each route and who may call it, the gaps ranked by how serious they are, and a fix for each.
+    - name: "Step 2: Test gaps"
+      contains: Which new behaviours your tests cover, miss or leave unknown, with test cases to add for the gaps.
+    - name: "Step 3: Change review"
+      contains: Issues in the fixes and new tests together, ranked by severity, with review comments.
+    - name: "Step 4: Pull request"
+      contains: A summary, before and after evidence, whether the merge can be undone and what else it could touch.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the routes and write the fixes
     text: Lists each route and who may call it, checks sign-in, access rules and input handling, ranks the gaps and writes a fix for each.

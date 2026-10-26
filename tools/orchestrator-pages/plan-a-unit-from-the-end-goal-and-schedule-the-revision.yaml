@@ -14,6 +14,10 @@ when:
   - You are planning a new unit or a term from standards.
   - Students do well at the end of a topic and forget it by the next one.
   - Revision is a rush before the exam instead of something built in.
+not_for:
+  - "You need one lesson, not a whole unit: use the Direct teaching lesson builder."
+  - "You have no standards yet and need to decide what a course covers: use the Course scope and sequence planner."
+  - "You only want a quiz to check recall after teaching: use the Recall quiz writer."
 you_give:
   - The standards or goals for the unit
   - The number of lessons and the dates, or the term length
@@ -28,6 +32,23 @@ how_to_use:
   - Paste your standards and say how many lessons and weeks you have.
   - Read the proof of learning in step one. Change it now, because the later steps are built on it.
   - Check the revision dates against your real school calendar before you share them.
+output_sample:
+  input:
+    - The standards or goals for the unit
+    - The number of lessons and the dates, or the term length
+    - Your current topic order (optional)
+    - Two topics students tend to mix up (optional)
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+  output:
+    - name: "Step 1: Unit plan"
+      contains: The end goal, the proof of learning, lessons in order and how each lesson serves the goal.
+    - name: "Step 2: Mixed practice plan"
+      contains: The same lessons, with where old topics return and related topics practised together.
+    - name: "Step 3: Revision schedule"
+      contains: Each topic, the dates it returns, the gap between returns and a retrieval task for each.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Plan backwards
     text: Writes what students should be able to do at the end, decides what proof you will accept, then plans the lessons that lead to the proof.

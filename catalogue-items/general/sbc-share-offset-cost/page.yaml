@@ -1,32 +1,65 @@
 new_slug: sbc-share-offset-cost
 name: Share compensation cash-offset cost
 headline: Share compensation cash-offset cost
-summary: Estimate cash needed to offset actual employee share issuance without confusing it with reported compensation expense.
+summary: Estimate the cash needed to offset the shares you actually issued to staff, and compare it with reported share compensation expense.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A share-issuance cash-offset scenario and comparison with reported compensation expense. Share net employee shares issued, matched repurchase price, employee exercise proceeds and reported share-based compensation expense.
+subhead: Give it the shares your company issued to employees, a repurchase price to test, and what employees paid. It works out the cash needed to offset those shares. It then compares that cost with reported share compensation expense.
 explain: |-
   A share-issuance cash-offset scenario and comparison with reported compensation expense.
 
   Issuer accounting and earnings. Illustrative figures.Three million issued shares×$20 cost60 to offset; employee proceeds10 reduce net cash to50,10 above reported expense40. Price15 makes gross45, net35 and a negative5 comparison.
 when:
-  - You need a share-issuance cash-offset scenario and comparison with reported compensation expense.
-  - You work on issuer accounting and earnings and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want to know what it would cost in cash to buy back the shares you issued to staff.
+  - You need to explain why that cash cost differs from reported share compensation expense.
+  - You want to test a few repurchase prices side by side.
+  - A reviewer needs to trace each number back to its source.
+not_for:
+  - "You need the fair value of grants: ask an accountant or valuation adviser, because this does not value awards."
+  - "You need diluted earnings per share: use your accounting team's EPS workings, because this uses actual issued shares only."
+  - "You want to decide on or run a share buyback: talk to your finance lead and legal adviser, because this only models cost."
 you_give:
-  - Net employee shares issued, matched repurchase price, employee exercise proceeds and reported share-based compensation expense.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Net employee shares issued, from your share ledger
+  - The repurchase price you want to test
+  - Cash employees paid to exercise their awards
+  - Reported share-based compensation expense
+  - Reporting date, currency and scale
+  - Your spreadsheet tool and the file format you need (optional)
 you_get:
-  - A share-issuance cash-offset scenario and comparison with reported compensation expense.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The cash needed to offset the issued shares, before and after employee payments
+  - A side-by-side comparison with reported compensation expense, with reasons for the gap
+  - An editable workbook, if your AI can build files
+  - A list of missing inputs and checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open your AI and upload the pack, or paste SKILL.md into the chat.
+  - Add your share ledger figures, repurchase price, exercise proceeds and reported expense, with dates, currency and scale.
+  - Ask for the cash-offset comparison. If you want a workbook, use an AI that can make and open files.
+  - "Check the MISSING: lines and CHECKS MISSED before you use any number."
+  - Confirm employee payments are subtracted only once.
+output_sample:
+  input:
+    - Net employee shares issued, checked against your share ledger
+    - Matched repurchase price you want to test
+    - Cash employees paid to exercise their awards
+    - Reported share-based compensation expense
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files (optional, for the workbook)
+    - Node.js 20 or later (optional, to run the bundled calculation)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, accounting basis and the dated records each figure comes from.
+    - name: Inputs and assumptions
+      contains: Every input and the repurchase price scenario, kept apart from reported facts.
+    - name: Model calculations and reconciliations
+      contains: Gross offset cost, cash after employee proceeds, and the comparison with reported expense.
+    - name: Actual file verification
+      contains: Which workbook checks ran, such as recalculation, a changed-input test and reopening the saved file.
+    - name: "MISSING: lines"
+      contains: Each input that was not supplied, so no number is guessed or set to zero.
+    - name: CHECKS MISSED
+      contains: Either none, or the exact checks that failed or could not run.
 how_it_works:
   - title: 1. Reconcile vested/issued employee shares, forfeitures and net settlements to the share ledger; distinguish actual issuance from accounting diluted shares
     text: Reconcile vested/issued employee shares, forfeitures and net settlements to the share ledger; distinguish actual issuance from accounting diluted shares.

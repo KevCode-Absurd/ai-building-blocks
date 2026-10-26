@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks chart types and builds clean figures.
 new_slug: research-paper-figure-maker
 name: Research paper figure maker
-summary: Give it your results or a method section. Get charts and architecture
-  diagrams that look ready for a paper.
+summary: Turn your results or method section into clean paper charts and architecture diagrams. Make research paper figures without hours in a drawing tool.
 job: research-topics
 headline: Research paper figure maker
-subhead: "Figures that look ready for a conference paper: charts from your
-  results and architecture diagrams from your method section. You describe the
-  work and skip the hours in a drawing tool."
+subhead: "Figures that look ready for a conference paper: charts from your results and architecture diagrams from your method section. You describe the work and skip the hours in a drawing tool."
 explain: |
   Figures that look ready for a conference paper: charts from your results and architecture diagrams from your method section. You describe the work and skip the hours in a drawing tool.
 
@@ -18,6 +15,10 @@ when:
   - Your method needs an architecture figure and you cannot draw well.
   - Reviewers asked for clearer plots.
   - You want figures that match a conference's look.
+not_for:
+  - "You need exact values read from raw data: chart them with matplotlib or a spreadsheet, not a drawn diagram."
+  - "You cannot check the figure against your own method text: ask a co-author to review it first."
+  - "Your venue bans AI-made figures: check its policy first, or draw the diagram by hand."
 you_give:
   - Results data or method text
   - Figure type wanted
@@ -30,9 +31,28 @@ you_get:
   - Figure files ready for LaTeX
   - Plot code you can edit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and use a Gemini API key for
-    diagrams.
+  - Open an AI chat that can run Python code. Paste in this skill.
+  - Paste your method section or your results data. Say if you want a chart or a diagram, and name your venue if you have one.
+  - For a diagram, add your Gemini API key in the AI's code setup. Charts do not need it.
+  - Check every box, arrow and label against your paper text. Ask for a redo if anything is wrong.
+  - Save the final file in your LaTeX project, add it with \includegraphics, and have your co-authors review it before you submit.
+output_sample:
+  input:
+    - Your method section or a short description of your system
+    - Your results as a table, CSV or JSON (optional)
+    - The figure type you want, such as a chart or a diagram (optional)
+    - Your target venue, such as NeurIPS, ICML or ICLR (optional)
+  prerequisites:
+    - An AI that can run Python with matplotlib and seaborn
+    - A Gemini API key, only for architecture and workflow diagrams
+  output:
+    - name: Context extraction
+      contains: The parts of your system, how they link, or the metrics and methods in your data.
+    - name: Architecture or workflow diagram
+      contains: A boxes-and-arrows figure drawn by Gemini from a six-part prompt, in one of four visual styles.
+    - name: Data chart
+      contains: A bar, line, scatter, heatmap or training curve made with matplotlib and seaborn in a paper style.
+    - name: Plot script
+      contains: Python code you can edit and rerun to change the chart.
+    - name: Figure files
+      contains: Image files named by a simple convention, ready to place in your LaTeX project.

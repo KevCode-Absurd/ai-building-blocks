@@ -1,6 +1,6 @@
 new_slug: set-your-price-from-what-buyers-say-then-test-it-safely
 name: Set your price from what buyers say, then test it
-summary: Give it your product. Get a pricing survey, a price model with tiers and an undoable price test.
+summary: Set prices from what buyers say. Give it your product. You get a pricing survey, a price model with tiers and a price test you can undo.
 job: set-prices
 thinking: high
 thinking_why: The survey sums and the test cases must be exact. Use your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to launch and have no real price evidence.
   - You suspect you charge too little but fear losing sales.
   - You want tiers, not one flat price.
+not_for:
+  - "You have no buyers to survey yet: run a simple market check by hand first, or ask a few people you know to talk through what they would pay."
+  - "You cannot change the price of the product, such as a fixed contract or set fee: skip the test and use only the survey to guide your next offer."
+  - "You want ad copy or an offer, not a price: use a copywriting step instead, then come back to set the price."
 you_give:
   - Your product facts and what it does for buyers
   - People you can send a short survey to
@@ -30,6 +34,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - At the first pause, send the survey and collect at least 30 answers per price. Fewer will mislead you.
   - At the second pause, export 90 days of sales and your cost for each product.
+output_sample:
+  input:
+    - Your product facts and what it does for buyers
+    - People you can send a short survey to (at least 30 per price)
+    - Your last 90 days of sales
+    - Your cost for each product
+    - Your rivals' prices (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Survey answers in a sheet, collected at the first pause
+  output:
+    - name: Pricing survey
+      contains: A ladder of seven prices, an open question, a price-ladder question, the sample size and the sums to read answers.
+    - name: Price model
+      contains: The pricing model that fits, the fair price range, price points and good, better and best tiers.
+    - name: Price test
+      contains: A data check, unit costs and cost floor, candidate prices, three outcome cases and a controlled test.
+    - name: Roll-back rule
+      contains: The point at which you undo the test price and return to the old one.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the pricing survey
     text: Builds a ladder of seven prices, writes an open question and a price-ladder question, sets the sample size and gives the sums.

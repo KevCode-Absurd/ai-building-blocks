@@ -1,6 +1,6 @@
 new_slug: ai-coding-agent-rules-writer
 name: "AI coding agent rules writer"
-summary: "Describe your project. Get a plan file and agent rules for working one test at a time."
+summary: "Set up an AI coding agent rules file and plan file so your agent works one test at a time and cannot delete tests to pass."
 job: set-up-ai
 thinking: medium
 thinking_why: "It turns known rules into files for your project, which needs care but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You are starting a project with an AI coding agent and want it kept on a short lead.
   - An agent keeps adding things you did not ask for.
   - You found it disabled or deleted a test to make a run pass.
+not_for:
+  - "You have no test list yet: write it first with the Test list writer, then come back here."
+  - "You are building a quick prototype with no tests: skip this and review the agent's work by hand."
+  - "You want to split one change into tidy commits after the fact: use the Structure and behaviour change splitter."
 
 you_give:
   - A description of the project and the language or tools
@@ -34,6 +38,31 @@ how_to_use:
   - Save the plan file and the rules in your project, in the place your agent reads rules from.
   - Start the agent with the one-word command and watch the first run closely.
   - After a few tests, check the commit history against the rules and tighten any that were missed.
+output_sample:
+  input:
+    - A description of your project, its language and tools
+    - Your ordered test list or plan, if you have one
+    - Your current commit or review rules (optional)
+    - The agent you use and where it reads rules (optional)
+  prerequisites:
+    - An AI coding agent that can read a rules file, such as Claude Code, to put the rules to use
+  output:
+    - name: Plan file
+      contains: The goal in one line, then the ordered tests with a mark for done, one test in progress at a time.
+    - name: The command
+      contains: "A one-word command and exactly what it makes the agent do: take the next unmarked test and stop."
+    - name: Standing rules
+      contains: Rules for the agent, each with a way to check it from the commit history.
+    - name: Commits
+      contains: What a structure commit holds, what a behaviour commit holds, and when a commit is allowed.
+    - name: Warning signs
+      contains: Signs the agent has drifted, such as loops or deleted tests, and what you do for each.
+    - name: When to take the design back
+      contains: The situations where you decide the shape yourself before the agent goes on.
+    - name: MISSING
+      contains: Anything the rules still need, such as the test command.
+    - name: CHECKS MISSED
+      contains: One line for each check the rules still fail, or none.
 
 how_it_works:
   - title: Writes the plan file

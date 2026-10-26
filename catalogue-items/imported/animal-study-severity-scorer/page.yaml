@@ -2,36 +2,62 @@ thinking: medium
 thinking_why: It combines measures with a set formula and a basic forecast.
 new_slug: animal-study-severity-scorer
 name: Animal study severity scorer
-summary: Give it welfare readings from an animal study. Get one severity score
-  over time and an early forecast.
+summary: Combine welfare readings from an animal study into one severity score per animal per day, plus an early forecast of the score at a future day.
 job: track-numbers
 headline: Animal study severity scorer
-subhead: Lab studies often track many welfare signs at once, like weight,
-  temperature and activity. This skill folds them into one severity score for
-  each animal on each day, so you can see who is struggling and who is likely to
-  be next.
+subhead: Lab studies often track many welfare signs at once, like weight, temperature and activity. This skill turns them into one severity score for each animal on each day. It also forecasts the score at a future day, so you can see who may struggle next.
 explain: |
   Lab studies often track many welfare signs at once, like weight, temperature and activity. This skill folds them into one severity score for each animal on each day, so you can see who is struggling and who is likely to be next.
 
   It uses the RELSA method. Each reading is compared with a reference group, set so that worse always points the same way, and scaled to that group's range. The scaled values are combined into a single number. An ARIMA forecast then estimates the score at a chosen future day and shows its likely range. Forecasts are exploratory and never replace your approved endpoint rules.
 when:
   - You track several welfare measures and want one score per animal per day.
-  - You want an early warning of which animals may be worse at the next check.
-  - You need to set attention and danger zones on a severity scale.
-  - You are writing up severity for an ethics or refinement report.
+  - You want an early warning of which animals may score worse at the next check.
+  - You need attention and danger zones on a severity scale.
+  - You are writing a severity section for an ethics or refinement report.
+not_for:
+  - "You need to forecast general time series that are not animal data: use a general forecasting tool such as statsmodels in Python."
+  - "You want to decide when to end a study for an animal: follow your approved humane endpoint rules and ask your study vet or ethics lead."
+  - "You want to rank animals from different studies by raw score: score them against one shared reference group first, or compare them with a statistician."
 you_give:
-  - Daily readings per animal, such as weight and temperature
-  - A reference group of animals for comparison
-  - Which readings get worse when they go up or down
-  - The future day to forecast
+  - Daily readings for each animal in a CSV, such as weight, temperature, clinical score or a biomarker
+  - Which readings get worse when they go up and which when they go down
+  - A reference group of animals to score against
+  - The future day to forecast (optional)
 you_get:
   - One severity score per animal per day
-  - A forecast score with a prediction range
-  - Suggested attention and danger zones
+  - A forecast score for your chosen day, with a prediction range
+  - Suggested attention and danger zones on the score scale
   - Charts and accuracy checks for the forecast
+  - A checklist of what to state when you report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python 3.12 or later. The skill needs numpy, pandas, scipy, statsmodels and matplotlib installed.
+  - Give your AI the skill file and your CSV. Use one row per animal per day, with the baseline day coded as -1.
+  - Tell it which readings get worse when they go up, and which animals are your reference group.
+  - Ask it to compute the scores first. Check that the directions and the reference group look right.
+  - Then ask for the forecast for your chosen day, and for the zones if you want them.
+  - Read the result as an extra aid only. Your approved humane endpoint rules always come first.
+output_sample:
+  input:
+    - A CSV with one row per animal per day, with readings like weight, temperature, clinical score or a biomarker
+    - Which readings get worse when they go up, such as clinical scores, fever or biomarkers
+    - A reference group of animals to score against
+    - The future day you want a forecast for (optional)
+  prerequisites:
+    - An AI that can run Python 3.12 or later
+    - The Python packages numpy, pandas, scipy, statsmodels and matplotlib
+  output:
+    - name: RELSA scores
+      contains: One severity score for each animal on each day, scaled to your reference group.
+    - name: Reference file
+      contains: A saved copy of the reference group and settings, so later cohorts use the same scale.
+    - name: Forecast
+      contains: The expected score at your chosen future day for each animal, with a prediction range.
+    - name: Forecast accuracy checks
+      contains: RMSE, PICP and MPIW, which show how close and how wide the forecasts are.
+    - name: Severity zones
+      contains: Suggested attention and danger levels on the score scale, found with kernel density estimation.
+    - name: Charts
+      contains: Plots of scores over time and of the forecasts.
+    - name: Reporting checklist
+      contains: The choices you must state in a report, such as directionality, baseline and reference group.

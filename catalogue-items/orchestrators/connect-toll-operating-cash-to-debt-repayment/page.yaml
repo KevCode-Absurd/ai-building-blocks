@@ -1,53 +1,98 @@
 new_slug: connect-toll-operating-cash-to-debt-repayment
 name: Connect toll cash to debt repayment
 headline: Connect toll cash to debt repayment
-summary: A traffic cash scenario and linked debt repayment profile
+summary: Turn chargeable road passages into toll cash, cash for debt service and a debt repayment profile you can test against traffic changes.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: "A traffic cash scenario and linked debt repayment profile. Share three annual paid traffic/collection assumptions with sources, operating cost, project cash adjustments, opening debt and financing service-cover terms. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter. Road passages are chargeable units before collection loss."
+subhead: Give it three years of chargeable passages, the toll, how much is collected, operating costs, the lender's cash definition and the loan terms. Step 1 builds toll cash. Step 2 turns it into cash available for debt service. Step 3 sets debt service and shows any shortfall or residual.
 explain: |-
-  A traffic cash scenario and linked debt repayment profile.
+  A toll road's income starts with traffic. A traffic study counts passages. Cash arrives only after tolls are billed and collected, and the lender counts only what its own definition allows. This toll road debt repayment calculator keeps those layers apart.
 
-  Transport project finance. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 multiplies chargeable passages before collection losses by the toll, then by the share collected in cash, and takes off operating costs. It never cuts a passage count that already reflects payment. Step 2 converts that cash to cash available for debt service. Operating costs came off in step 1, so it records the basis and does not take them off again. Step 3 sets the target debt service from your cover ratio, charges interest on the opening debt, applies the rest to principal and rolls the balance forward.
+
+  Traffic is shown as a sourced assumption, with sensitivities on separate lines. If cash cannot cover interest, the shortfall is shown. A forecast never proves repayment.
 when:
-  - You need a traffic cash scenario and linked debt repayment profile.
-  - You work on transport project finance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A traffic study gives yearly passages and you need to know how much debt the cash can carry.
+  - A lender asks for repayments sized to a cover ratio on toll cash.
+  - You want to see what a traffic or collection drop does to the repayment profile.
+  - You are unsure whether operating costs are being taken off twice between your model and the lender's definition.
+not_for:
+  - The project is paid a fixed availability payment. Use the Bridge availability payments into project cash workflow.
+  - You already have cash for debt service and only need repayments and cover. Use the Build a project debt service cash pack workflow.
+  - You want covenant headroom tested period by period. Use the Review contractual debt service cash tests workflow.
+  - You want a traffic forecast. This takes a traffic study as an assumption and does not produce one.
+  - You have fewer or more than three years. This is built for three annual periods.
 you_give:
-  - "Three annual paid traffic/collection assumptions with sources, operating cost, project cash adjustments, opening debt and financing service-cover terms. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter. Road passages are chargeable units before collection loss."
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Chargeable passages for each of three years, before collection losses, marked as study assumptions or measured (from the traffic study and tolling records)
+  - The toll per passage and the share collected in cash (from the tariff schedule and collection data)
+  - Operating cash costs for each year (from your budget or accounts)
+  - The lender's definition of cash for debt service, with tax, capital and working capital (from the financing agreement)
+  - The opening debt, the loan rate, the target service cover and the principal rules (from the loan agreement)
+  - Whether operating figures are accrual or actual cash, and the reporting date, currency and scale
 you_get:
-  - A traffic cash scenario and linked debt repayment profile.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Toll receipts and operating cash for each of three years
+  - Cash available for debt service for each year, with the basis stated
+  - Target debt service, interest, principal and the closing balance each year
+  - Any year where cash cannot cover interest, and any residual left at maturity
+  - Traffic and collection cases on separate lines, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach the traffic study, toll tariffs, collection records and loan terms. Paste the lender's cash definition. Say whether your operating figures are accrual or actual cash.
+  - After step 1, check passages are before collection loss and that receipts equal passages times toll times the cash share collected.
+  - After step 2, check operating costs come off once and the basis matches your figures.
+  - After step 3, check interest comes first and that any shortfall or residual is shown. Fill every MISSING line. A person who knows the loan agreement should confirm the terms.
 how_it_works:
   - title: Toll revenue ramp model builder
-    text: Build annual toll cash from the supplied chargeable passages before collection loss, realized tariff and collection assumptions. Hand annual operating cash and excluded tax/capital/working-capital items into the qualification bridge. Use chargeable passages before collection loss, not passage counts already paid in cash.
+    text: "Separates study assumptions from measured passages, multiplies chargeable passages by the toll and the cash share, and takes off operating cash. Hands step 2 annual operating cash and the tax, capital and working capital items left out. Check before moving on: no passage count is cut twice."
   - title: Project cash available bridge
-    text: Convert each annual toll operating cash result into financing-defined CFADS. Since operating costs were already deducted upstream, record that source basis and avoid deducting them twice. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+    text: Converts each year's operating cash to cash available for debt service under the lender's definition. Records that operating costs came off upstream, so none is taken twice. Declares accrual or cash and never mixes them. Hands step 3 one qualifying cash figure per year.
   - title: Debt repayment sculpting planner
-    text: Use the resulting annual eligible cash series to calculate debt service and principal. Preserve traffic sensitivity as a scenario, show interest gaps and maturity residual and never claim a forecast proves repayment.
+    text: Turns each year's cash into target debt service using your cover ratio, charges interest on the opening debt, puts the rest to principal, and rolls the balance forward. Shows any interest gap and the residual at maturity. Keeps traffic sensitivity apart.
 output_shape: |-
-  A traffic cash scenario and linked debt repayment profile.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  TOLL CASH       year 1 <n> | year 2 <n> | year 3 <n>
+                  (passages x toll x cash share collected - operating cash)
+
+  CASH FOR DEBT   basis <accrual or actual cash>
+  SERVICE         year 1 <n> | year 2 <n> | year 3 <n>
+
+  REPAYMENT       year: target service <n>, interest <n>, principal <n>, closing debt <n>
+                  interest gap <year, amount, or none>
+                  residual at maturity <n or none>
+
+  SENSITIVITY     <traffic or collection case: its cash and residual>
+  SOURCES         <each input, its source, date, currency and scale>
+  MISSING         <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Three years of chargeable passages, the toll and the share collected in cash
+    - Operating costs and the lender's cash definition
+    - The opening debt, loan rate, target cover and principal rules
+  prerequisites:
+    - A traffic study and the toll tariff schedule
+    - The loan agreement and financing cash definition
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: TOLL CASH
+      contains: Yearly toll receipts after collection loss, less operating cash.
+    - name: CASH FOR DEBT SERVICE
+      contains: Each year's cash under the lender's definition, with the basis stated.
+    - name: REPAYMENT
+      contains: Target service, interest, principal and closing debt each year, with any gap or residual.
+    - name: SENSITIVITY
+      contains: Any traffic or collection case you gave, shown apart from the base.
+    - name: SOURCES, MISSING and CHECKS MISSED
+      contains: Each input's source, each gap, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Traffic is explicitly sourced actuals or assumptions; operating cash is converted to contract-qualified CFADS before sculpting debt. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+  - what: Traffic
+    how: Lower one year's chargeable passages. Cash, service capacity and principal fall, and the page shows any interest gap.
+  - what: Collection share
+    how: Lower the share collected in cash. Billing stays the same, but cash falls, so the page keeps gross billing and cash apart.
+  - what: Target cover
+    how: Raise the cover ratio. Target debt service falls and the residual at maturity grows.
+  - what: The accounting basis
+    how: Switch operating figures between accrual and actual cash. The working capital line changes to 'not applied' on a cash basis and the page says why.
 judge:
   - Traffic is explicitly sourced actuals or assumptions; operating cash is converted to contract-qualified CFADS before sculpting debt. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +103,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the traffic study and tariff schedule together and attach both each run, so passages stay tied to their source.
+  - Paste the lender's cash definition into every run, so each period uses the same rules.
+  - Add your downside traffic case to your copy of the skill, so it runs each time.
+  - Run the Review contractual debt service cash tests workflow next to test cover period by period.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and a checks tab you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The traffic study's own tables, not a summary of them.
+    - Billing and collection records from the toll operator.
+    - A named reviewer who knows the financing agreement.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Chargeable passage
+    meaning: A vehicle trip that owes a toll, counted before any collection loss.
+  - term: Cash share collected
+    meaning: The part of billed tolls that arrives as cash.
+  - term: Cash available for debt service
+    meaning: Cash left after operating costs, taxes and capital spending that can go to lenders. Often shortened to CFADS.
+  - term: Debt sculpting
+    meaning: Setting each year's repayment from the cash available that year.
+  - term: Service cover
+    meaning: Cash available divided by debt service. A higher number means more room.
+before: []
+next:
+  - review-contractual-debt-service-cash-tests
+  - review-leverage-headroom-and-cure

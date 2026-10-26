@@ -40,6 +40,7 @@ How to start:
 - **Products with margin and stock depth, graded A, B or C** (required).
 - **Sale goal**: maximise profit or move inventory (required).
 - **Sale dates and planned sitewide discount** (required).
+- **Break-even and CAC limit** (advised): the report from the Sale break-even and CAC allowance modeler. Discount only down to what that limit can carry.
 - **Current offer and pages** (advised).
 - **Creative, email and ad capacity** (advised).
 - **Subscriber count, current subscribe discount, subscription products and margins** (if the store sells subscriptions).

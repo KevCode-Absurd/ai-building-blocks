@@ -1,6 +1,6 @@
 slug: read-any-file-in-plain-english-builder-prompt
 name: Read Any File in Plain English coding prompt
-summary: Get a coding brief for a file reader that turns supported uploads into plain text, with format checks and clear failures.
+summary: "Name a code file in your project. Claude Code explains it block by block in plain English, then sums up what the file does in one paragraph."
 category: general
 type: prompt
 role: make
@@ -10,7 +10,7 @@ inputs:
   - type: codebase
     required: true
 outputs:
-  - type: code_change
+  - type: document
     required: true
 uses: []
 package_files: all

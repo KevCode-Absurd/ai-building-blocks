@@ -2,35 +2,103 @@ thinking: low
 thinking_why: It follows your column list and invents plausible values.
 new_slug: sample-data-file-maker
 name: Sample data file maker
-summary: Say which columns and rules you need. Get a realistic fake dataset as
-  CSV, JSON, SQL or a script.
+summary: Make fake test data in CSV, JSON or SQL from your columns and rules, plus a Python script to remake it. No real customer data needed.
 job: test-and-fix-code
 headline: Sample data file maker
-subhead: Realistic fake data for testing, in the shape and size you need. Tell
-  it the columns and rules and get a dataset as CSV, JSON, SQL inserts or a
-  script that makes it.
+subhead: Tell it your columns, row count and rules, such as "ship date after order date". It makes a fake dataset in CSV, JSON or SQL, checks it, and can give you a Python script that makes more.
 explain: |
-  Realistic fake data for testing, in the shape and size you need. Tell it the columns and rules and get a dataset as CSV, JSON, SQL inserts or a script that makes it.
+  Testing an app, a report or a demo needs rows that look real. Real customer records are the wrong thing to use, and typing 100 rows by hand takes hours. This sample data maker builds fake test data that follows your own columns and rules.
 
-  You name the product, the type of data such as orders or user profiles, the row count (100 by default), the columns and any business rules. It plans each column with a type and range, uses realistic patterns for names, emails and dates, and applies your rules so rows stay consistent, for example a ship date after an order date. It can write the data out or give you a Python script to rerun with more rows. A last check looks for gaps and invalid values.
+  You say what each row is (orders, user profiles, feedback), which columns it has and how many rows you want. It plans each column first and shows you the plan. It uses safe fake values, such as reserved example email domains, so nobody real is contacted. Then it applies your rules, so rows stay consistent, for example a ship date never before its order date.
+
+  Last, it checks the data for blank cells, repeated IDs and broken rules. For bigger sets it hands you a short Python script that makes the same data again, or a bigger set, whenever you need it.
 when:
-  - You are building an app and need sample records to try it.
-  - A demo needs data that looks real but is not.
-  - You want to load a test database with orders and customers.
-  - You need a repeatable script to refresh test data.
+  - You are building an app and need 100 sample orders or users to click through.
+  - A demo needs data that looks real without using a customer's details.
+  - You want to fill a test database before you try a new report.
+  - A teammate asks for a file they can reload every time tests run.
+not_for:
+  - You need real data with names removed. Use an export from your own system and mask it, not made-up rows.
+  - You want to find made-up numbers on a live page. Use the Fake data finder instead.
+  - You need millions of rows for a load test. The script will help, but your database tool will do it faster.
 you_give:
-  - The type of data and product name
-  - Column names or fields
-  - Number of rows
-  - Output format
-  - Business rules (optional)
+  - What each row is, such as orders or user profiles
+  - The column names, with an example value for each
+  - How many rows you want (100 if you do not say)
+  - The format you want, CSV, JSON, SQL or a Python script
+  - Rules the data must follow (optional)
 you_get:
-  - A dataset in your chosen format
-  - A Python script that regenerates it
-  - Consistent, realistic values
-  - A quality check of the output
+  - A fake dataset in the format you chose
+  - A short column plan you can check first
+  - A Python script that makes the same data again
+  - A check for blank cells, repeated IDs and broken rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Paste the skill into Claude, ChatGPT or Gemini, or add it as a skill.
+  - Tell it what each row is, your columns and how many rows you want.
+  - Add your rules in plain words, such as "ratings skew toward 5 stars".
+  - Read the column plan it shows you and fix anything that is off before it builds.
+  - Check the report at the end. Every rule should say passed.
+  - For a script, save it as a .py file and run it with Python 3. Your AI needs to run code to run it for you.
+output_sample:
+  input:
+    - What each row is, such as orders or customer feedback
+    - Your column names, with a type or example for each
+    - The row count and the format you want
+    - Your business rules (optional)
+  prerequisites:
+    - Python 3, only if you want to run the script yourself
+  output:
+    - name: Column plan
+      contains: Each column with its type and allowed values, plus the rules applied.
+    - name: Dataset
+      contains: Your rows as CSV, JSON or SQL INSERT statements, matching your columns.
+    - name: Python script
+      contains: A script with a fixed seed that makes the same rows again.
+    - name: Checks
+      contains: Row count, blank cells, repeated IDs, and a pass or fail for each rule.
+    - name: How to use it
+      contains: Two or three lines on loading the file into a spreadsheet or test database.
+how_it_works:
+  - title: Plan the columns
+    text: It turns your list into a table of columns, types and allowed values, and asks about anything missing.
+  - title: Pick safe values
+    text: It uses fake names, reserved example email domains and fake phone numbers, so no real person is involved.
+  - title: Apply your rules
+    text: It builds each row so your rules hold, such as a ship date after an order date.
+  - title: Deliver the data
+    text: Small sets come as text. Larger sets come as a Python script with a fixed seed.
+  - title: Check the result
+    text: It counts rows, looks for blanks and repeated IDs, and tests every rule.
+output_shape: |
+  Column plan
+  | column | type | allowed values |
+  <table of columns, then the rules applied>
+
+  Data (<format>)
+  <your rows, or the first 5 rows and the file name>
+
+  Script
+  <Python script, when you asked for one or the set is large>
+
+  Checks
+  - Rows: <count> (passed or failed)
+  - Blank cells: <count>
+  - Repeated IDs: <count>
+  - <rule>: <passed or failed>
+
+  How to use it
+  <two or three lines>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Small sets and the column plan work in any chat. Claude, ChatGPT and Gemini all do this well.
+    - name: Claude or ChatGPT with code running
+      why: It can run the Python script for you and give you the finished file to download.
+  inputs:
+    - A real column list from your app or database table
+    - One example row you made by hand, so the format matches
+terms:
+  - term: Seed
+    meaning: A starting number that makes the random values come out the same each time you run the script.
+  - term: INSERT statement
+    meaning: A line of SQL that adds one row to a database table.

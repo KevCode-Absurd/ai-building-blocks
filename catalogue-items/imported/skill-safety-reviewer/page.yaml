@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must trace code and spot hidden risks.
 new_slug: skill-safety-reviewer
 name: Skill safety reviewer
-summary: Point it at a skill, MCP server or add-on. Get a read-only safety
-  review before you install it.
+summary: Check a skill, MCP server or add-on for safety before you install it. You get a read-only review, a clear verdict and proof from the files.
 job: secure-code
 headline: Skill safety reviewer
-subhead: A read-only safety review of a skill, MCP server, connector or desktop
-  extension before you install it, ending in one of three clear verdicts. You
-  see what it can touch before it touches anything.
+subhead: A read-only safety review of a skill, MCP server, connector or desktop extension before you install it, ending in one of three clear verdicts. You see what it can touch before it touches anything.
 explain: |
   A read-only safety review of a skill, MCP server, connector or desktop extension before you install it, ending in one of three clear verdicts. You see what it can touch before it touches anything.
 
@@ -18,6 +15,10 @@ when:
   - A desktop extension asks for broad permissions.
   - A skill pulls and runs a remote installer.
   - You must justify an install decision to your security team.
+not_for:
+  - "You already installed it and want to watch what it does now: use a sandbox or ask your security team."
+  - "You need proof of how it behaves when running: a read-only review cannot show that, so test it in a disposable account."
+  - "You want a legal or compliance sign-off: ask your security or legal team."
 you_give:
   - The skill, server or extension link or folder
   - Which accounts or data you would connect
@@ -29,8 +30,31 @@ you_get:
   - Findings with file proof
   - A safe test proposal
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read files without running them.
+  - Open Claude, ChatGPT or Gemini. Use one that can read files, and do not let it run any code.
+  - Paste the skill text, or upload the skill folder.
+  - Add the link or folder of the item you want to check.
+  - Say which accounts or data you would connect to it. Add your risk tolerance if you have one.
+  - Read the verdict first. Then check the findings and open questions before you decide to install.
+  - Run the test plan only with throwaway data or accounts.
+output_sample:
+  input:
+    - The link or folder of the skill, server or extension
+    - Which accounts or data you would connect to it
+    - Your risk tolerance (optional)
+  prerequisites:
+    - An AI that can read the project files without running them
+  output:
+    - name: Verdict
+      contains: "One of three results: lower observed risk, review required, or high observed risk, next to the name and version reviewed."
+    - name: Scope and limitations
+      contains: The repo, version, licence, files reviewed and anything your AI could not check.
+    - name: Capability and permission table
+      contains: What it can do with files, commands, network, browser, accounts, deletion, payment and credentials.
+    - name: Data-flow table
+      contains: Where sensitive data starts and where it ends up, such as logs, servers or other network places.
+    - name: Findings
+      contains: Problems ordered by severity, each with file proof, impact and a fix.
+    - name: Unanswered questions
+      contains: Things the files do not make clear, listed as open questions and not as safe.
+    - name: Minimal-permission test plan
+      contains: A small test using throwaway data or accounts, which your AI will not run without your approval.

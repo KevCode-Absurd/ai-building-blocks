@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies known layout patterns for each industry.
 new_slug: industry-look-site-composer
 name: Industry-look site composer
-summary: Name your industry, such as store, restaurant or manufacturer. Get page
-  layouts that look like that kind of site.
+summary: Make your site look like your industry. Give it your type of site and get composition notes for a store, restaurant or maker site.
 job: build-websites
 headline: Industry-look site composer
-subhead: Name your industry, such as store, restaurant or manufacturer. Get page
-  layouts that look like that kind of site. Bring your industry or type of site.
-  Use the result to plan your next step.
+subhead: Name your industry, such as store, restaurant or manufacturer. Get page layouts that look like that kind of site. Bring your industry or type of site. Use the result to plan your next step.
 explain: |
   Page layouts that look like they belong to your type of business, so a shop looks like a shop and a restaurant looks like a restaurant, not a generic software landing page. A site can be clean and still feel off for its field.
 
@@ -19,6 +16,10 @@ when:
   - You have a competitor review and need to turn it into a layout.
   - You are building a demo that must look like a real store or firm.
   - Visitors expect certain sections and yours lacks them.
+not_for:
+  - "You want to tweak colours, fonts or spacing: use design-standards, which sets day-to-day visual choices."
+  - "You need to build one button, card or form: use frontend-component-build, which writes single parts."
+  - "You want to judge your competitors first: run competitor-experience-audit, then bring its result here."
 you_give:
   - Your industry or type of site
   - A competitor audit (optional)
@@ -30,7 +31,28 @@ you_get:
   - Navigation and merchandising rules
   - A list of what visitors expect to see
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
+  - Say what kind of site you are building, for example a small restaurant, a store or a parts maker.
+  - Add your competitor audit if you have one, plus the size of your catalogue or menu. Say so if you have neither.
+  - Read the notes it writes. Check the checklist for conventions marked absent, and add them to your plan.
+  - Pass the hand-off list to your designer, or to the design and component skills, to build the pages.
+output_sample:
+  input:
+    - Your industry or type of site, such as store, restaurant or maker
+    - A competitor audit result (optional)
+    - How big your product list or menu is
+    - Your brand direction (optional)
+  prerequisites:
+    - Competitor-experience-audit result, if you want to build to a measured standard (optional)
+    - An AI that can write a markdown file, or just paste the notes from chat
+  output:
+    - name: Site shape and experience bar
+      contains: Which type of site you are building and which audit, if any, the notes follow.
+    - name: Dimension-by-dimension build decisions
+      contains: Choices for the main task, layout and density, product or menu display, navigation, brand tone and trust signals.
+    - name: Synthesis checklist
+      contains: Each expected convention for your type of site, marked present, absent or handed to another skill.
+    - name: The wedge
+      contains: The gap in your field's sites that your build can use to stand out, if the audit found one.
+    - name: Hand-off list
+      contains: What the component, design and creative skills need from these notes to build the pages.

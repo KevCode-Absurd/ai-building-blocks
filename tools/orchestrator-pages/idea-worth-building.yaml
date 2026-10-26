@@ -1,6 +1,6 @@
 new_slug: idea-worth-building
 name: "Find out if your idea is worth building"
-summary: "Give it your idea. Get who to talk to, what to ask, and a keep, change or stop call."
+summary: "Find out if your idea is worth building. Get who to talk to, what to ask and a keep going, change or stop call based on what people did."
 job: test-an-idea
 thinking: high
 thinking_why: "It runs six skills and has to tell real interest from polite praise. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You have an idea and want to know if it's worth building before you spend time or money on it.
   - You've talked to people, everyone liked the idea, and you still don't know if anyone will pay.
   - You're choosing between two ideas, or two groups of customers, and want evidence instead of a hunch.
+not_for:
+  - "Your idea is already proven and people pay for it: use the Seven-question startup scorer to test the next step."
+  - "You have no customers to talk to yet: use the Customer community finder to find where they gather, then come back."
+  - "You want to learn why past buyers chose you: use the Customer purchase interview script writer."
 
 you_give:
   - Your idea in a sentence or two, and who you think it's for
@@ -35,6 +39,29 @@ how_to_use:
   - Describe your idea in a sentence or two. It runs the first half and stops.
   - Send the messages and have five to ten conversations. Write notes straight after each one, as close to their words as you can.
   - Bring the notes back and say "carry on from step 4". Read the call last, with the evidence it rests on.
+output_sample:
+  input:
+    - Your idea in a sentence or two, and who you think it's for
+    - A customer group you already have in mind (optional)
+    - "Your notes from each talk, for the second half: date, their words, what they did, what they offered"
+  prerequisites:
+    - An AI that can work with files, such as Claude Code or a Claude Project
+    - Five to ten real conversations with customers, held between the two halves
+  output:
+    - name: First customer group
+      contains: The group to talk to first, and where you could reach them this week.
+    - name: Question guide
+      contains: Questions about their life, the big three unknowns and a plan for the scary question.
+    - name: Interview messages
+      contains: A warm-intro message and a cold message that ask for help, not a sale.
+    - name: Sorted notes
+      contains: Each talk split into what they did, what it cost them and what they committed to, with weak signals flagged.
+    - name: Ask plan
+      contains: The next step to ask each person for in time, reputation or money.
+    - name: Idea evidence review
+      contains: A keep going, change or stop call, the reason, and the next three talks.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 
 how_it_works:
   - title: Picks who to talk to

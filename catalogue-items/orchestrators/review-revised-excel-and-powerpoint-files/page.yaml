@@ -1,112 +1,114 @@
 new_slug: review-revised-excel-and-powerpoint-files
 name: Review revised Excel and PowerPoint files
-summary: Share old and new Excel and PowerPoint files. Get change reports and
-  checks that revised figures match.
+headline: Review revised Excel and PowerPoint files
+summary: Compare old and new Excel and PowerPoint files. Get a change register and a check that every number on the new slides matches the new workbook.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
-headline: Review revised Excel and PowerPoint files
-subhead: Share old and new workbooks and decks. Get a version-change register
-  and checks that the new slides match the new workbook. Work on a copy of your
-  file. Get a clear record of what passed and what still needs checking.
-explain: >-
-  Share old and new workbooks and decks. Get a version-change register and
-  checks that the new slides match the new workbook.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
+subhead: Give it the old and new workbook and the old and new deck. Your AI lists every change in each file, then checks the numbers on the new slides against the new workbook and flags each mismatch.
+explain: |-
+  When someone sends back a revised workbook and deck, you cannot see what changed without opening both versions side by side. Worse, a number can change in the workbook and stay old on a slide. This workflow compares the old and new files, then checks the new deck against the new workbook.
 
+  It runs three reviews. The first finds changed values, formulas and file features in the workbook, with the cell for each. The second finds changed text, numbers, notes, hidden slides and moved slides in the deck. The third matches every number on the new slides to a cell and flags the ones that do not agree.
 
-  This workflow runs the full component methods in order and checks each handoff
-  before continuing. Your source files stay intact. The method starts by
-  checking what your AI already knows and which files it can read. It asks only
-  for missing facts that change the work.
-
-
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  Your original files stay as they are. Any check your AI cannot run, such as a recalculation in Excel, is marked "not run" so you know what to check by hand before you share.
 when:
-  - You need the connected deliverables described above.
-  - You want the sources and checks carried through the handover.
-  - You need to see which steps still need your input.
+  - A colleague returns a revised workbook and deck and you must say what changed before you sign off
+  - The monthly report went out and someone fixed a number late. You need to know the slide matches the sheet
+  - You are about to send a board or client deck and want proof that each figure comes from the final workbook
+  - Two people edited the same files and you must merge the changes with confidence
+not_for:
+  - You have one workbook and one deck and no earlier versions. Use the Excel to PowerPoint number checker.
+  - You want to build this month's workbook and deck from records. Use Build a monthly Excel and PowerPoint update.
+  - You only want the numbers in a deck refreshed from new figures. Use the Deck number refresher.
+  - You only compare two workbooks, or two decks. Use the Excel workbook change reviewer or the PowerPoint deck change reviewer on its own.
 you_give:
-  - Both baseline and revised workbooks and PowerPoint decks, intended changes,
-    record/slide mappings, period and rounding tolerances.
-  - The app and file tools your AI can use for the requested work
+  - The old workbook and the revised workbook (.xlsx)
+  - The old deck and the revised deck (.pptx)
+  - What you meant to change, in a few lines (optional)
+  - Which column or ID names each row, and which slide shows which cell (optional)
+  - How much rounding is fine, and the period the numbers cover (optional)
 you_get:
-  - The native files and reports produced by the component methods, plus a run
-    register and unresolved-input list.
-  - A record of source files, changes and check results
-  - Missing facts and any checks that could not run
+  - "A workbook change register (workbook-change-review.xlsx and change-register.md): each changed value, formula and feature with its cell"
+  - "A deck change register (deck-change-register.md): each changed message, number, note, hidden slide and slide move"
+  - "A number check (slide-number-checks.csv and number-review.md): each slide figure matched to a workbook cell, or flagged"
+  - A source map and a list of open items, including every check that did not run
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md". Use an AI that can open .xlsx and .pptx files.
+  - Attach both versions of the workbook and the deck. Add what you meant to change, if you know it.
+  - Read the number check first. Open the slides and cells it flags and fix each mismatch in your own file.
+  - If your AI says a check did not run, such as a recalculation or a slide picture, do that check in Excel or PowerPoint before you share.
 how_it_works:
-  - title: Step 1
-    text: 1. Read `skills/excel-workbook-change-reviewer/SKILL.md` completely and
-      run its full method. Compare baseline and revised workbook using stable
-      record keys and the intended change list; retain formula and feature
-      differences.
-  - title: Step 2
-    text: 2. Read `skills/powerpoint-deck-change-reviewer/SKILL.md` completely and
-      run its full method. Compare baseline and revised deck by slide identity,
-      including visible content, notes, hidden slides and embedded data.
-  - title: Step 3
-    text: 3. Read `skills/excel-powerpoint-number-checker/SKILL.md` completely and
-      run its full method. Check the revised deck against the revised workbook,
-      preserving the prior-version review as a separate source of evidence.
-output_shape: >-
-  FILES
+  - title: Excel workbook change reviewer
+    text: Compares the old and new workbook by stable row ID and your change list. It keeps formula and feature changes and hands step 3 the changed cells.
+  - title: PowerPoint deck change reviewer
+    text: Compares the old and new deck by slide, including notes, hidden slides and chart data. It hands step 3 the changed slides and their numbers.
+  - title: Excel to PowerPoint number checker
+    text: Matches every number on the new slides to the new workbook. It uses steps 1 and 2 as separate proof of what changed, and flags stale numbers.
+output_shape: |-
+  WORKBOOK CHANGES
+  Sheet | Cell or row ID | Old | New | Kind (value, formula, feature) | Intended or not
 
-  The native files and reports produced by the component methods, plus a run
-  register and unresolved-input list.
+  DECK CHANGES
+  Slide | What changed | Before | After | Match confidence
 
-
-  SOURCE MAP
-
-  <file and version> | <sheet, cell or slide> | <what it supports>
-
-
-  CHECKS
-
-  <check> | <passed, failed or not run> | <evidence>
-
+  NUMBER CHECKS
+  Slide number | Workbook cell | Slide shows | Workbook shows | Result (match, mismatch, not found)
 
   OPEN ITEMS
-
-  <missing fact or unsupported check> | <next action>
+  Missing fact or check not run | Next action
+output_sample:
+  input:
+    - Your old and revised workbook (.xlsx)
+    - Your old and revised deck (.pptx)
+    - What you meant to change (optional)
+    - Which column or ID names each row, and which slide shows which cell (optional)
+  prerequisites:
+    - An AI that can open and read .xlsx and .pptx files
+  output:
+    - name: workbook-change-review.xlsx and change-register.md
+      contains: Every changed value, formula and file feature in the workbook, with the cell and what was intended.
+    - name: deck-change-register.md
+      contains: Each changed message, number, note, hidden slide and slide move, with before and after.
+    - name: slide-number-checks.csv and number-review.md
+      contains: Each number on the new slides matched to a workbook cell, with every mismatch flagged.
+    - name: Open items
+      contains: Missing facts and checks that did not run, each with the next action.
 tweaks:
   - what: Your source files
-    how: Both baseline and revised workbooks and PowerPoint decks, intended changes,
-      record/slide mappings, period and rounding tolerances.
+    how: Name the old and new version of each file clearly, such as Q3-v1 and Q3-v2.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Say whether you want the change lists only, or also fixes. Fixes are made on copies.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will open the files in. Your AI must name any check it cannot run.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file and code tools
+      why: They can open .xlsx and .pptx files and compare them. A plain chat that cannot open the files can only review pasted exports and must say so.
+  inputs:
+    - The change request or email that asked for the revision.
+    - A short list of which slide figure comes from which cell.
 judge:
   - All required source versions and their meanings are identified.
-  - Every component method ran, or the workflow stopped with its exact missing
-    prerequisite.
+  - Every component method ran, or the workflow stopped with its exact missing prerequisite.
   - Workbook results, slide evidence, periods and units agree where they connect.
   - The result names its sources and keeps unrun checks visible.
 test:
   - Try the workflow on copies of files where you know the right result.
-  - Check each step against its full skill file and keep the source map with the
-    result.
-  - Reopen the saved files and check the reported figures, links and layout
-    before relying on them.
+  - Check each step against its full skill file and keep the source map with the result.
+  - Reopen the saved files and check the reported figures, links and layout before relying on them.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Add your confirmed field names, file rules and target app version to the required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same meanings and checks.
+next:
+  - deck-number-refresher
+  - build-a-monthly-excel-and-powerpoint-update
+terms:
+  - term: Change register
+    meaning: A list of every change with its place, the old value and the new value.
+  - term: Row ID
+    meaning: A column that names each row, such as an order number, so rows can be matched even after sorting.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.

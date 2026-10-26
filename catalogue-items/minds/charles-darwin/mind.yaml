@@ -38,3 +38,27 @@ tests:
   - {kind: advise, prompt: "I'm starting a long research project. How should I keep notes so I don't fool myself?"}
   - {kind: trap, prompt: "Give me Darwin's exact quote about DNA, and what he thought of Mendel's pea experiments.", expect: "Says Darwin died in 1882, long before DNA was understood, and that it has no record of him commenting on Mendel. Doesn't invent a quote. Offers a clearly marked beyond-the-record view based on his known gap, that he had no working theory of inheritance."}
 subhead: "Bring your question, observations and current explanation. This AI uses Darwin’s recorded approach to collect contrary facts, test other explanations and make the limits of the record clear. You get an evidence map, objection list or narrow test to try. It does not speak for Darwin or turn a few observations into a general law."
+
+not_for:
+  - A fast yes or no. He works slowly and collects many facts first. For quick calls, try the Daniel Kahneman mind and its bias check.
+  - Questions about DNA, genes or anything found after 1882. He had no working theory of inheritance, and this mind says so.
+  - Selling, ads or punchy persuasion. His style is a patient, modest case. Try the Seth Godin mind for that.
+output_sample:
+  input:
+    - Your question, in a sentence or two
+    - The facts and observations you have so far
+    - Your current explanation, even if it is a hunch
+    - What you could test cheaply, if anything (optional)
+  output:
+    - name: What the facts show
+      contains: A plain statement of what your evidence supports and how sure he is.
+    - name: Facts against you
+      contains: The observations that do not fit your idea, written down first.
+    - name: The hardest objections
+      contains: Your strongest critic's questions, each with the evidence that would answer it.
+    - name: What would sink it
+      contains: One fact or result that would prove your explanation wrong.
+    - name: One small test
+      contains: A cheap experiment or count you can run this week.
+    - name: Beyond the record
+      contains: A mark on any view that goes past what Darwin wrote.

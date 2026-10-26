@@ -52,12 +52,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Find what the reader wants.** Use the skill `buyer-wants-finder`. The one want to lead with, and the reward it promises.
-2. **Write the headlines.** Use the skill `ad-headline-writer`. Give it the brief from the steps before. Headlines for the chosen want.
-3. **Check the headline promise.** Use the skill `headline-promise-checker`. Give it the ad copy from the steps before. Keeps only a headline that picks its reader and promises a reward.
-4. **Gather the proof.** Use the skill `four-kind-proof-finder`. Give it the brief from the steps before. Each claim paired with the strongest proof, and the claims left bare.
-5. **Write the body with proof beside each claim.** Use the skill `proof-backed-sales-copy-writer`. Give it the brief from the steps before. The body that pays off the headline and backs it up.
-6. **Sum up and move the reader.** Use the skill `summing-up-paragraph-writer`. Give it the ad copy and the objection map from the steps before. The short stretch between proof and ask that breaks inertia.
+1. **Find what the reader wants.** Use the skill `buyer-wants-finder`. Makes the brief: the one want to lead with, and the reward it promises. Steps 2 and 4 build on it.
+2. **Write the headlines.** Use the skill `ad-headline-writer`. Give it the brief from step 1. Headlines for the chosen want, handed to step 3 to check.
+3. **Check the headline promise.** Use the skill `headline-promise-checker`. Give it the headlines from step 2. Keeps only a headline that picks its reader and promises a reward.
+4. **Gather the proof.** Use the skill `four-kind-proof-finder`. Give it the brief from step 1 and your product facts, not the step 3 check. Each claim paired with the strongest proof, and the claims left bare.
+5. **Write the body with proof beside each claim.** Use the skill `proof-backed-sales-copy-writer`. Give it the kept headline from step 3 as its opening, the proof map from step 4 and the brief from step 1. The body that pays off the headline and backs it up.
+6. **Sum up and move the reader.** Use the skill `summing-up-paragraph-writer`. Give it the body from step 5 and the proof map from step 4. The short stretch between proof and ask that breaks inertia.
 7. **Ask for the action.** Use the skill `call-to-action-writer`. Give it the copy draft from the steps before. A clear ask with a real reason to act now.
 8. **Check all five parts.** Use the skill `five-part-ad-checker`. Give it the ad copy and the brief from the steps before. Pass or fail on attention, advantage, proof, persuasion and action.
 9. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.

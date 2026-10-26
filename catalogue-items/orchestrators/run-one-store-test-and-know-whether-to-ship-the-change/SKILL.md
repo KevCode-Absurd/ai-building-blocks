@@ -22,17 +22,17 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Store test readiness checker.** Use the skill `store-test-readiness-checker`. Checks your traffic can prove a test at all and how long it takes.
-2. **Big swing test picker.** Use the skill `big-swing-test-picker`. Give it the audit report from the steps before. Picks the tests your readiness result says you can prove.
+1. **Store test readiness checker.** Use the skill `store-test-readiness-checker`. Checks your traffic can prove a test at all and how long it takes. Hands the readiness report to step 2.
+2. **Big swing test picker.** Use the skill `big-swing-test-picker`. Give it the audit report from the steps before. Picks the tests your readiness result says you can prove. Hands the five tests to step 3 and the plan to step 4.
 
 Pause here: Choose the one test you will run first.
 
-3. **Shopify test setup picker.** Use the skill `shopify-test-setup-picker`. Picks how to run the chosen test on your Shopify plan without flicker or speed cost.
-4. **One-change experiment planner.** Use the skill `one-change-experiment-planner`. Give it the plan from the steps before. Turns the picked test into a one-change plan with dates and decision rules.
+3. **Shopify test setup picker.** Use the skill `shopify-test-setup-picker`. Give it the shortlist from the steps before. Takes the test you chose from step 2 and picks how to run it on your Shopify plan without flicker or speed cost. Hands the setup report to step 4.
+4. **One-change experiment planner.** Use the skill `one-change-experiment-planner`. Give it the plan and the audit report from the steps before. Turns the picked test into a one-change plan with dates and decision rules. Hands the plan to step 5.
 
 Pause here: Run the test to the planned sample and dates without stopping early, and export the numbers.
 
-5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan from the steps before. Judges the finished test against the plan, then gives the call and a log entry.
+5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan and the audit report from the steps before. Judges the finished test against the plan, then gives the call and a log entry.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

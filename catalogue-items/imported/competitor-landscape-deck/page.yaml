@@ -3,8 +3,7 @@ thinking: medium
 thinking_why: It compares peers and pulls out a view.
 new_slug: competitor-landscape-deck
 name: Competitor landscape deck
-summary: Compare companies in the user’s chosen market. Build a sourced slide outline, then create the approved deck.
-  side comparison and what it means.
+summary: Build a competitor landscape deck for your market. Get an approved slide outline first, then a sourced, side by side comparison deck.
 job: plan-strategy
 headline: Competitor landscape deck
 subhead: A clear competitor comparison with matched metrics, dated sources and an approved slide plan.
@@ -17,6 +16,10 @@ when:
   - You need a side by side view of three to six rivals.
   - A deal team wants to see the competitive field before a decision.
   - You want the deck outline approved before the slides are made.
+not_for:
+  - "You only need one number, such as a rival's revenue: look it up in the company's filings or ask your AI a plain question."
+  - "You want a written memo, not slides: ask your AI for a short memo with the same sourced comparison."
+  - "You have no list of rivals and no market in mind: pick the market and the companies first, then come back."
 you_give:
   - The target company
   - The competitors in scope
@@ -28,7 +31,34 @@ you_get:
   - Side by side comparison slides
   - A closing slide on what it means
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, or upload the skill folder if your AI takes files.
+  - Name the company or the group to compare, the competitors, your market and who the deck is for.
+  - Answer the scope questions, then read the outline. Ask for changes until you approve it.
+  - Check that every number has a dated source and that all companies use the same period.
+  - Say yes to build the deck. This needs an AI that can make a PowerPoint file, or the PowerPoint add-in.
+  - Open the deck and check titles, charts and tables before you share it.
+output_sample:
+  input:
+    - The company you want to place among rivals, or the group to compare as equals
+    - The competitors in scope, or a request to suggest a set
+    - Who the deck is for and how deep it should go
+    - Your market or country, if it matters
+    - Your PowerPoint template or competitor data file (optional)
+  prerequisites:
+    - An AI that can make a PowerPoint file, or a PowerPoint add-in
+    - Web access or your own sources for company numbers
+  output:
+    - name: Scope answers
+      contains: Your choices on scope, competitor set, audience and depth, and whether you need investment scenarios.
+    - name: Slide outline
+      contains: Proposed slide titles with one-line notes on what each slide holds, for you to approve before any slides are built.
+    - name: Market context slides
+      contains: Market size, growth and drivers, each with a dated source.
+    - name: Target company and competitor profiles
+      contains: A metrics table and a short strengths, weaknesses and strategy table for each company.
+    - name: Positioning slide
+      contains: A 2x2 matrix, radar chart or tier diagram that shows where each company sits.
+    - name: Comparison slide
+      contains: Matched metrics for every competitor in one table, with the same period and definition.
+    - name: Strategic synthesis
+      contains: Moat ratings, lasting strengths, weak spots, and bull, base and bear cases if you asked for them.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Sizes and labels differ by country, so each market needs checking.
 new_slug: overseas-listing-localizer
 name: Overseas listing localizer
-summary: Give it your product images and copy. Get versions for other countries
-  with local language, sizes and required labels.
+summary: Localize your product listing for other countries. Get local-language copy, converted sizes, image checks and label reminders for each market.
 job: run-your-store
 headline: Overseas listing localizer
-subhead: Your product listing rewritten for each country you sell in, not just
-  translated. You get local-language copy, converted sizes, correct image rules
-  and reminders about labels the market expects.
+subhead: Your product listing rewritten for each country you sell in, not just translated. You get local-language copy, converted sizes, correct image rules and reminders about labels the market expects.
 explain: |
   Your product listing rewritten for each country you sell in, not just translated. You get local-language copy, converted sizes, correct image rules and reminders about labels the market expects.
 
@@ -18,6 +15,10 @@ when:
   - Your listing was rejected for text on the main image.
   - You need size charts for European and Japanese buyers.
   - You want to know which labels each region may require.
+not_for:
+  - "You sell in one country and need no translation: you don't need this, just edit your own listing."
+  - "You need a legal ruling on labels: ask a local compliance advisor, because this gives hints only."
+  - "You need final copy in a language you can't read: have a native speaker check it before you publish."
 you_give:
   - Product images
   - Product copy
@@ -30,9 +31,30 @@ you_get:
   - Platform image specs
   - Label reminders
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Open your AI. Paste or upload the skill, then add your product images and copy.
+  - Tell it which countries and platforms you sell on. Don't say "worldwide".
+  - Add your size chart if you have one. It adds centimeters to every size.
+  - Let it make the text-free main image first. Then ask for each country's version.
+  - Check all foreign text with a native speaker. Confirm current platform rules and label rules before you upload.
+  - Image making and checks need an AI that can run code and your own image model key (OpenAI, Gemini, fal or Replicate). Copy and size tables work in any chat.
+output_sample:
+  input:
+    - Your product images
+    - Your product copy
+    - The countries and platforms you sell in
+    - Your size chart (optional)
+  prerequisites:
+    - An AI that can run code and make images, with your own image model key, for the main images and image checks
+  output:
+    - name: Localized copy
+      contains: Product text rewritten for each country in local style, not a word-for-word translation.
+    - name: Size table
+      contains: Your sizes shown in CN, US, UK, EU and JP charts, with measurements in centimeters.
+    - name: Main image without text
+      contains: A clean base image that most marketplaces accept, such as a white-background Amazon main image.
+    - name: Regional images with local text
+      contains: Detail images with local-language text, where the platform allows it. Check the text by hand.
+    - name: Image check report
+      contains: A pass or fail check of each image against the platform's picture rules.
+    - name: Label reminders
+      contains: Labels the region often requires, such as materials, origin and certifications. Hints only, not legal advice.

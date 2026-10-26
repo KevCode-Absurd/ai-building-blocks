@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It groups orders by size, weight and place.
 new_slug: truck-load-builder
 name: Truck load builder
-summary: Give it your orders and truck sizes. Get orders grouped into full truck
-  loads that cost less to ship.
+summary: Group your orders into full truck loads with a truck load builder. Give it orders and trailer sizes. You get loads that fill space and weight.
 job: plan-supply-chain
 headline: Truck load builder
-subhead: Orders grouped into full truck loads, so you ship fewer trucks and pay
-  less per delivery. You see how full each trailer is by space and weight before
-  anything is loaded.
+subhead: Orders grouped into full truck loads, so you ship fewer trucks and pay less per delivery. You see how full each trailer is by space and weight before anything is loaded.
 explain: |
   Orders grouped into full truck loads, so you ship fewer trucks and pay less per delivery. You see how full each trailer is by space and weight before anything is loaded.
 
@@ -18,6 +15,10 @@ when:
   - You have mixed pallets with different temperatures and delivery stops.
   - You need to decide which orders ride together.
   - You want to compare your current fill rate with a better plan.
+not_for:
+  - "You only need to stack one pallet: use a pallet loading tool or ask your warehouse lead."
+  - "You are packing a shipping container: use a container loading tool built for that job."
+  - "You need a final, legal axle weight sign-off: ask a trained load planner to check it before loading."
 you_give:
   - Trailer types, sizes and weight limits
   - Your shipments with sizes and weights
@@ -29,8 +30,33 @@ you_get:
   - A stop-order plan
   - Ideas to cut truck count and cost
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your trailer types, sizes and weight limits.
+  - Paste your orders with sizes, weights, stops and any rules on cold or fragile goods.
+  - Ask for a load plan for each truck. Large lists work best when your AI can run code.
+  - Check the fill figures and axle weights. Have a planner approve the plan before anything is loaded.
+output_sample:
+  input:
+    - Your trailer types, sizes and weight limits
+    - Your shipments with sizes and weights
+    - Delivery stops and order (optional)
+    - Rules on stacking, cold goods or goods that cannot mix (optional)
+  prerequisites:
+    - An AI that can run code helps for large order lists
+  output:
+    - name: Truck Specifications
+      contains: The trailer type, weight limit, volume and inside size for each truck.
+    - name: Load Summary
+      contains: Total weight, volume, pallets, shipments and stops, with how full the truck is by weight and space.
+    - name: Shipments Included
+      contains: A table of each shipment with its customer, stop, weight, volume and size.
+    - name: Load Sequence
+      contains: Which shipments go in which zone of the trailer, so the first drop comes off first.
+    - name: Weight Distribution
+      contains: An axle weight check against each limit, with a compliant or not result.
+    - name: Load Diagram
+      contains: A simple front to back picture of where each stop's pallets sit.
+    - name: Performance vs. Alternative Plans
+      contains: A comparison of truck count, fill and cost against other ways of loading.
+    - name: Recommendations
+      contains: Short notes on spare room, weak spots and what to watch while loading.

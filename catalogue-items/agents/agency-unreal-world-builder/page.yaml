@@ -1,0 +1,126 @@
+name: Unreal World Builder agent
+summary: "Plan an Unreal Engine 5 open world: World Partition grid, landscape layers, HLOD and PCG population, with a streaming and frame budget check."
+headline: Unreal World Builder agent
+subhead: Give it your world size, platform and what fills the world. It plans the streaming grid, the landscape, distant-view meshes and plant or rock placement. You get a world plan, a budget for each part and a performance check list.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  An open world in Unreal Engine 5 fails in ways you see late. A hitch when a new area loads. Objects that pop in at a distance. A landscape material that grows too heavy. This agent plans the world around those risks from day one, starting with scale and grid size.
+
+  It picks World Partition cell sizes for each kind of content. It keeps key quest items away from cell edges. It plans the landscape layers, HLOD for distant views, and PCG graphs for trees and rocks with keep-out zones for roads and water. Then it gives you a check list to run on a real build.
+
+  It follows the Unreal World Builder profile from Agency Agents. It cannot open Unreal or profile your build. The cell sizes and limits in the profile are starting values. Epic changes World Partition settings between versions, so check each one in the docs for yours.
+when:
+  - You are starting an open-world level and need the grid and layers planned first.
+  - Players see hitches or empty spots while running through the map.
+  - Far-away objects pop in, and you want to know if HLOD is the cause.
+  - You need to fill a large area with trees or rocks without placing them by hand.
+not_for:
+  - You need one material or Niagara effect planned. Use the Unreal Technical Artist agent.
+  - You need gameplay code or systems. Use the Unreal Systems Engineer agent.
+  - You need the fights and pacing of one level. Use the Level Designer agent.
+you_give:
+  - World size, such as kilometres by kilometres, and how fast the player moves
+  - Your Unreal Engine 5 version, platforms and frame rate target
+  - "What fills the world: terrain types, props, characters and effects"
+  - Your zone or biome layout, in words or as a map sketch
+  - Your current World Partition setup or a profiler result (optional)
+you_get:
+  - A World Partition plan with grids, cell sizes, loading range and data layers
+  - A landscape plan with layer count, a size check and the virtual texture choice
+  - A HLOD plan with when to rebuild it and how to check it by eye
+  - A PCG plan with keep-out zones, and whether to bake it
+  - A performance check list for streaming, frame time and memory
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md, then references/source-agent.md, then your brief into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your world size, platform, engine version and player speed first. Then add what fills the world.
+  - Say "Plan the world. Mark any number you cannot tie to my platform." Answer its one round of questions.
+  - Read the grid and data layer tables first. Settle the Always Loaded list before anyone adds content.
+  - "Build in Unreal in the order given: landscape, population, HLOD, then profiling."
+  - Run the performance check list on your build. Paste the results back and ask for the top fixes.
+how_it_works:
+  - title: Fix the world brief
+    text: It confirms size, platform, frame rate target, player speed and engine version. Gaps are asked once, then marked MISSING.
+  - title: Plan the grid
+    text: It picks cell sizes and loading ranges per content type, and lists what must always be loaded.
+  - title: Plan the landscape
+    text: It checks the size rule, limits layers per region and says when to use runtime virtual textures.
+  - title: Plan the population
+    text: A PCG graph with keep-out zones. Large areas are baked ahead. Small zones can run at play time.
+  - title: Plan HLOD
+    text: Distant geometry gets generated HLOD meshes, with a rebuild rule and a visual check from far away.
+  - title: Write the check list
+    text: Streaming hitches, frame time, instance counts and memory, each with how to measure it.
+output_shape: |-
+  WORLD BRIEF
+    Size <> | Platform <> | Frame rate target <> | Player speed <> | Engine version <>
+  WORLD PARTITION PLAN
+    <grid name> | <cell size> | <loading range> | <content type>
+    Data layers <name | type | contents> | Always Loaded list <>
+  LANDSCAPE PLAN
+    Size check <> | Layers per region <> | Virtual texture choice <> | Holes <>
+  HLOD PLAN
+    <layer> | <method> | <draw distance> | <included and left out> | <rebuild trigger>
+  PCG POPULATION PLAN
+    <step> | <setting> | Keep-out zones <> | <bake or runtime, with the reason>
+  PERFORMANCE CHECK LIST
+    <check> | <how to measure> | <budget> | <status>
+  RISKS AND OPEN QUESTIONS
+    <risk, such as very large world coordinates or team editing> | <what to do>
+  CHECKS NOT RUN
+output_sample:
+  input:
+    - Your world size, platform and player speed
+    - Your Unreal Engine 5 version and frame rate target
+    - What fills the world and how the zones are laid out
+    - Your current setup or a profiler result (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Unreal Engine 5, to build and measure the plan (the AI does not open it)
+  output:
+    - name: World Partition plan
+      contains: Grids with cell size and loading range, data layers and the Always Loaded list.
+    - name: Landscape plan
+      contains: Size check, layers per region, virtual texture choice and how to handle holes.
+    - name: HLOD plan
+      contains: Method, draw distance, what is included, when to rebuild and how to check by eye.
+    - name: PCG population plan
+      contains: Steps, keep-out zones and whether each area is baked ahead or runs at play time.
+    - name: Performance check list
+      contains: Streaming, frame time, instance count and memory checks, each with how to measure it.
+    - name: Risks and open questions
+      contains: Large world coordinates, team editing and anything the AI could not confirm.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: World type
+    how: Say if it is dense city, open terrain or sparse desert, so cell sizes fit the content.
+  - what: Speed
+    how: Include your fastest travel speed so the loading range is checked against it.
+improve:
+  - After a traversal run, paste the hitch times back and ask which grid or HLOD setting to change first.
+terms:
+  - term: World Partition
+    meaning: Unreal's system that splits a big world into cells and loads them as the player moves.
+  - term: HLOD
+    meaning: Simple stand-in meshes for far-away objects, so the game draws fewer things.
+  - term: PCG
+    meaning: Procedural Content Generation. A graph that places trees and rocks by rules.
+  - term: Data layer
+    meaning: A group of world content you can load or hide together.
+  - term: Streaming hitch
+    meaning: A brief freeze when new world cells load.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can plan the grid and tables. Pick one that can read a map sketch or profiler screenshot.
+  inputs:
+    - A map sketch with zones and towns marked
+    - An Unreal Insights capture of a traversal run
+    - Your fastest player move speed, including vehicles

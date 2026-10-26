@@ -1,6 +1,6 @@
 new_slug: store-test-readiness-checker
 name: "Store test readiness checker"
-summary: "Paste your orders, visits and the page to test. Get test, research or fix, plus a readiness score."
+summary: "Check if your store can run an A/B test. Give your orders, visits and the change. Get a verdict, weeks needed and a readiness score."
 job: test-store-changes
 thinking: medium
 thinking_why: "It follows set rules and does the sums, so a mid-size model is enough. Check the sample size with a calculator."
@@ -17,6 +17,10 @@ when:
   - You have a test idea and want to know if your traffic can prove it.
   - An agency or app shows you a winning test after two weeks on a page with few orders.
   - You are choosing between a small tweak and one big change on your busiest page.
+not_for:
+  - "You have fewer than 30 orders a month: do research and known fixes first, then test later."
+  - "You want to rank many test ideas: use the Test idea ranker."
+  - "You have a finished test and want to read the result: use a sample size calculator or ask a person who runs tests."
 
 you_give:
   - Orders per month, sessions per month and conversion rate for the page to test
@@ -37,6 +41,28 @@ how_to_use:
   - Say what you want to change and whether anything is broken.
   - Tell it the smallest gain that would be worth the work, if you know it.
   - Do the one next step it names before you start any test.
+output_sample:
+  input:
+    - Your orders per month, sessions per month and conversion rate for the page
+    - The change you plan and why you think it helps
+    - Whether anything on the page is broken today
+    - The smallest gain worth shipping (optional)
+    - Planned sales, email sends or ad changes (optional)
+  output:
+    - name: VERDICT
+      contains: "One call: repair first, research only, big swings, regular tests or full testing."
+    - name: STAGE and REPAIRS
+      contains: Your band by orders per month, and any broken things to fix before testing.
+    - name: TEST and SIZE
+      contains: The page, the change, the smallest gain worth shipping, and visitors and conversions needed per version.
+    - name: WEEKS
+      contains: How many weeks the test needs at your weekly traffic, never under two.
+    - name: METRIC and WATCH
+      contains: The main number to judge by, guardrails, and sales or emails that could spoil the test.
+    - name: SCORE
+      contains: A readiness score out of 100, with the sum shown, now and after the fixes.
+    - name: NEXT, NOTES and MISSING
+      contains: The one thing to do first, figures to check in a calculator, and inputs you did not give.
 
 how_it_works:
   - title: Sorts repair from test

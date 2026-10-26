@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a task around known AI weak spots.
 new_slug: spot-ai-mistakes-activity
 name: Spot the AI mistakes activity planner
-summary: Give it a subject students know well. Get an activity where they catch
-  what AI gets wrong or leaves out.
+summary: Plan a classroom activity where students catch what AI gets wrong about a subject they know well. Name the topic and age group to start.
 job: teach-and-train
 headline: Spot the AI mistakes activity planner
-subhead: A classroom activity where students test AI on a subject they know well
-  and catch what it gets wrong or leaves out. Name the subject, such as a sport,
-  a local place or a school topic, and the students' age and level.
+subhead: A classroom activity where students test AI on a subject they know well and catch what it gets wrong or leaves out. Name the subject, such as a sport, a local place or a school topic, and the students' age and level.
 explain: |
   A classroom activity where students test AI on a subject they know well and catch what it gets wrong or leaves out. Name the subject, such as a sport, a local place or a school topic, and the students' age and level.
 
@@ -18,6 +15,10 @@ when:
   - Students know a topic better than an AI tool does.
   - You want pupils to question AI answers, not accept them.
   - You need a plan for discussing what students found.
+not_for:
+  - "Students only know the subject a little: use a simple fact-check task, where they check a few AI claims against a trusted book or website."
+  - "You need a full lesson plan for a whole unit: ask your AI for a lesson planner, or plan it with your teaching team."
+  - "You want to test AI on a topic nobody in the room knows well: ask a subject expert to review the answers instead."
 you_give:
   - The subject students know well
   - Their age or year group and depth of knowledge
@@ -30,7 +31,26 @@ you_get:
   - A discussion plan
   - Reflection questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the full text of the skill's SKILL.md. No code or paid tool is needed.
+  - Fill in the subject your students know well and their age or year group. Add the optional details if you have them.
+  - Read the activity your AI writes. Check that the questions fit what your students really know.
+  - Give students the activity. Ask them to write down what they know first, then question the AI.
+  - Compare what students found with their own notes. Use the discussion guide to share the results.
+output_sample:
+  input:
+    - The subject your students know well, such as a sport, a hobby or a local place
+    - Your students' age or year group and how deep their knowledge goes
+    - How deep to check, surface or deep (optional)
+    - "How to share findings: alone, in pairs or as a class (optional)"
+    - The AI tool students will use (optional)
+  output:
+    - name: Expertise Activation Protocol
+      contains: A short task where students write down what they already know before they ask the AI anything.
+    - name: Interrogation Questions
+      contains: Questions for students to ask the AI, from simple facts to harder points that need real knowledge.
+    - name: Distortion Annotation Protocol
+      contains: Steps for marking each wrong, missing or overconfident part of the AI's answers.
+    - name: Distortion Taxonomy
+      contains: A checklist of the kinds of error to look for in an answer.
+    - name: Discussion Guide
+      contains: A plan for sharing what students found, plus reflection questions on trusting AI.

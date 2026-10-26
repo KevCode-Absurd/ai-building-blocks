@@ -1,6 +1,6 @@
 new_slug: first-customers-by-hand-planner
 name: First customers by hand planner
-summary: Paste your product and the first customers you want. Get a plan to win them one by one and what to learn.
+summary: Plan how to get your first customers by hand. Give it your product and who you want. You get a narrow group, named places and a to-do plan.
 job: grow-social
 thinking: medium
 thinking_why: It judges who to approach first and what to do by hand, but the steps are clear.
@@ -14,6 +14,10 @@ when:
   - You have a product and no customers yet.
   - You are about to launch and have no way to find the first ten buyers.
   - You think you need software or a team before you can serve anyone.
+not_for:
+  - "You already have paying customers: ask them for referrals, or write to them directly instead."
+  - "You need the questions to ask in customer talks: use the Customer interview question writer."
+  - "You want a big launch or ad campaign: this plan avoids those, so hire a marketer or run a small ad test instead."
 you_give:
   - Your product or service in a few lines
   - The kind of customer you want first
@@ -30,6 +34,29 @@ how_to_use:
   - Name any community you belong to and the income you need.
   - Contact the first five people this week, using the plan.
   - Write down what each says and bring the notes back.
+output_sample:
+  input:
+    - Your product or service in a line or two
+    - The kind of customer you want first
+    - A community you belong to (optional)
+    - The income you need (optional)
+  output:
+    - name: The first group
+      contains: A narrow group of people you can reach, and why you can reach them.
+    - name: Where they gather
+      contains: Places and named people to contact, how to reach each, and why they would care.
+    - name: How to win each one
+      contains: A short first message, how you set them up yourself, and the extra service you give.
+    - name: Done by hand
+      contains: Each manual step marked keep or automate later, with a reason.
+    - name: Your community
+      contains: A community you belong to that trusts you, and why.
+    - name: The number
+      contains: Income needed divided by price, with the sum shown, to give a customer count.
+    - name: What to record
+      contains: What each user said, what they did and what stopped them.
+    - name: Checks missed
+      contains: One line for each check the plan failed, or none.
 how_it_works:
   - title: Picks a narrow group
     text: Chooses a group you can reach in person or by message.

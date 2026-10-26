@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Food safety and freshness limits shape every step.
 new_slug: food-supply-chain-planner
 name: Food supply chain planner
-summary: Describe your food business. Get a plan for shelf life, safe handling,
-  tracing and cold storage.
+summary: Plan shelf life, safe handling, tracing and cold storage for your food or drink business. Give it your products and sales channels to get a ranked plan.
 job: plan-supply-chain
 headline: Food supply chain planner
-subhead: A supply chain plan for a food or drink business that covers shelf
-  life, safe handling, traceability and cold storage. It aims to cut waste while
-  keeping to food safety rules.
+subhead: A supply chain plan for a food or drink business that covers shelf life, safe handling, traceability and cold storage. It aims to cut waste while keeping to food safety rules.
 explain: |
   A supply chain plan for a food or drink business that covers shelf life, safe handling, traceability and cold storage. It aims to cut waste while keeping to food safety rules.
 
@@ -18,6 +15,10 @@ when:
   - You need a recall tracing process that works in hours.
   - You are adding cold storage or a new distribution centre.
   - A retailer is asking for certifications and you need a plan.
+not_for:
+  - "You need a food safety audit or legal sign-off: use a certified food safety consultant or your regulator."
+  - "You want to decide how much stock each shop gets: this plan does not cover that, so ask your retail or planning lead."
+  - "You run a non-food supply chain with no spoilage or safety rules: use a general supply chain review with your logistics team."
 you_give:
   - Product list and shelf life
   - Temperature needs
@@ -31,7 +32,27 @@ you_get:
   - Waste reduction steps
   - Priority list of changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Answer the questions about your products, shelf life, temperatures, sales channels and rules. Skip what you do not know.
+  - Read the plan. Check each limit and shelf-life figure against FDA, FSMA, GFSI or your retailer's own specification.
+  - Start with the top items on the ranked change list.
+  - Have a certified food safety consultant or your regulator review the plan before you rely on it for compliance.
+output_sample:
+  input:
+    - Your product list with shelf life and temperature needs
+    - Your sales channels, such as shops, restaurants or online
+    - Certifications or rules you must meet
+    - Your current waste levels (optional)
+  output:
+    - name: Executive Summary
+      contains: Your product groups, key supply chain measures, food safety status and the main changes planned.
+    - name: Freshness & Waste Metrics
+      contains: A table by product group of shelf life, days of stock, waste, near-expiry value and first-expired-first-out use.
+    - name: Supply Chain Performance
+      contains: On-time, in-full delivery, stock turns, waste rate, fill rate and cold chain checks against your targets.
+    - name: Food Safety Status
+      contains: Hazard plan status, mock recall time, supplier audits, certifications and inspection results.
+    - name: Promotional Performance
+      contains: Promotions by month with forecast accuracy, stockouts and excess stock.
+    - name: Action Items
+      contains: A ranked list of changes to make first, such as cutting waste or fixing cold chain gaps.

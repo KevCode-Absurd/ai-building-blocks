@@ -1,26 +1,25 @@
 slug: rollover-equity-ownership-checker
 name: Rollover equity ownership checker
-summary: Reconcile a seller rollover amount with cash proceeds and same-class post-close ownership.
+summary: "Work out a seller's cash and ownership share after rolling part of the sale proceeds into the buyer's new equity, with every sum shown."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
+before: []
+next: [closing-equity-proceeds-checker, management-equity-hurdle-checker]
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

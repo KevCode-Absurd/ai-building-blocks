@@ -2,17 +2,58 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-creating-oracle-to-postgres-migration-integration-tests
 name: Oracle behavior baseline test writer
-summary: Share your Oracle data access code. Get tests that record what the code
-  does before you change databases.
+summary: Write Oracle to PostgreSQL migration tests that record how your .NET data access code behaves on Oracle, before you switch databases.
 job: build-software
 headline: Oracle behavior baseline test writer
-subhead: Share your Oracle data access code. Get tests that record what the code
-  does before you change databases. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: "Share the data access code of one .NET project and your existing test setup. It writes seed data and tests that record how the code behaves on Oracle. Those results become the baseline you compare against after the switch."
+explain: |
+  After a database move, you need proof the code still returns the same answers. This Oracle baseline test writer captures what your code does on Oracle first, while Oracle is still the source of truth.
+
+  It follows your own test base class and seed file style, so the new tests look like the ones you have. Each test uses a specific value from the seed data. It then checks that every assertion depends only on that seed data and not on whatever is in the database.
+
+  Use it only before any PostgreSQL work starts. After the move, the same tests are ported to PostgreSQL by migrating the test project.
+when:
+  - "You are about to move a .NET project from Oracle to PostgreSQL and have no safety net."
+  - "Your data access code has no integration tests."
+  - "You want proof of what Oracle returns before you change the database."
+  - "You are preparing the baseline step of a larger migration plan."
+not_for:
+  - "You have already moved to PostgreSQL or started Phase 6: run the migrated test project instead, as this skill only targets Oracle."
+  - "You have no test project yet: ask a developer to set one up first, because this skill needs one that already compiles."
+  - "You want tests for code outside one project: run this once per project, or write those tests by hand."
+you_give:
+  - "Your data access code, such as repositories, DAOs and stored procedure callers"
+  - "Your existing base test class"
+  - "Your seed manager and seed file conventions"
+  - "Your Oracle connection settings"
+  - "A .NET test project that already builds"
+you_get:
+  - "Small seed data records for each scenario, in your project's style"
+  - "A LookupConstants class with stable IDs and codes"
+  - "Test classes that cover each database method with specific, repeatable checks"
+  - "A review that confirms every check holds against the seed data alone"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can read your project files, such as Claude with file access. Add the skill and your .NET test project.
+  - Tell your AI which project to cover. Point it to your data access files, base test class and seed manager.
+  - Ask it to follow this skill. It reads your test conventions, then writes seed data and tests.
+  - Read the tests and check each assertion uses a specific value from the seed data.
+  - Run the suite against Oracle yourself and fix any failures. Do this before Phase 6 starts to lock in the baseline.
+output_sample:
+  input:
+    - Your data access code, such as repositories, DAOs and stored procedure callers
+    - Your existing base test class
+    - Your seed manager and seed file conventions
+    - Your Oracle connection settings
+  prerequisites:
+    - A .NET test project that already exists and compiles
+    - An AI that can read your project files
+    - An Oracle database you can run the tests against
+  output:
+    - name: Seed data
+      contains: Small, collision-safe seed records for each scenario, kept in your project's seed file location and style.
+    - name: LookupConstants class
+      contains: Stable lookup IDs and codes used by the seed builders and the assertions.
+    - name: Integration test classes
+      contains: Tests that inherit your base class and cover each database method with specific, repeatable assertions.
+    - name: Determinism review
+      contains: A check that every assertion holds against the seeded data and not outside database state.

@@ -1,0 +1,155 @@
+name: API Tester agent
+summary: Turn your API spec into a test plan with edge cases, auth checks and failure cases, plus starter test code to run on a test server.
+headline: API Tester agent
+subhead: Paste your endpoint list or OpenAPI spec, how login works and a sample request and reply. It writes the test cases, the expected results and the failure checks, and gives starter code to run against a test environment you control.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Most API bugs are not on the happy path. A bad email gets a 500 instead of a
+  400. A user reads another user's record. A list endpoint slows to a crawl with
+  one more filter. This API tester agent plans the tests that find those faults
+  before your users do, from your own spec, one endpoint at a time.
+
+
+  For each endpoint it writes cases in a set order. First a valid request. Then
+  bad input and missing fields. Then no login, the wrong role and someone else's
+  data. Then limits, such as page size and rate limits, and failure of a service
+  your API relies on. Each case has an expected status code and body. It then
+  gives starter code from the profile, in the Playwright style, which you adapt
+  and run.
+
+
+  This is a role profile from Agency Agents, shared under MIT. A chat AI cannot
+  call your API, so every case is marked not run until you run it. Test only
+  systems you own or have written permission to test. The 95 percent coverage and
+  200 ms goals in the original are goals, not results from AI Blocks.
+when:
+  - You are about to ship a new API or a change to one, and want a test plan before launch.
+  - A partner will call your API, and you want to know it handles bad input and failures well.
+  - You have a spec or Postman collection but no tests, and need a place to start.
+  - A bug report says "it returned 500", and you want the cases around it written down.
+not_for:
+  - You want a real load test with traffic at scale. Use the Performance Benchmarker agent.
+  - You want a deep security test or attack simulation. Use the Penetration Tester agent, and only with written permission.
+  - You want to test a screen or a button in a web app. Use the Test Automation Engineer agent.
+  - You only have a public third-party API you do not control. Do not run stress or injection tests on it. Test your own code that calls it.
+you_give:
+  - The API spec or a list of endpoints with method and path, pasted as text (OpenAPI is best)
+  - How login works, such as a bearer token, and what roles exist
+  - A sample request and reply for one or two endpoints
+  - The expected status codes and error format (optional)
+  - The test environment address and your test tool, such as Playwright or Postman (optional)
+you_get:
+  - A list of the endpoints, with which are risky and why
+  - Test cases for each endpoint, with the expected status code and body
+  - Auth and access cases, such as no token, wrong role and another user's data
+  - Edge cases and failure cases, such as bad input, empty lists, limits and a failing dependency
+  - Starter test code you adapt and run, marked as not run
+  - Open questions, where the spec does not say what should happen
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your spec or endpoint list, the login method and one sample request and reply. Remove real keys, passwords and customer data first.
+  - Read the open questions. Answer them, or write down the answer your team wants, so each test has a clear expected result.
+  - Ask for starter code in the tool you use. Set the test address, test login and keys in settings, not in the code.
+  - Run the tests on a test environment you own, never on production. Paste back any failures and ask for the cause.
+  - Add the passing tests to your build pipeline, so they run on every change.
+how_it_works:
+  - title: List the endpoints
+    text: It builds an inventory from your spec, with method, path, who may call it and what it changes. It flags risky ones.
+  - title: Write the cases
+    text: For each endpoint it writes valid, invalid, edge and failure cases, each with an expected status and body.
+  - title: Add auth and access checks
+    text: It adds cases for no login, a bad token, the wrong role and another user's data.
+  - title: Plan the limits
+    text: It plans checks for rate limits, page size, big payloads and slow replies, and says which need a real load tool.
+  - title: Write starter code
+    text: It writes test code in the style of the profile, with no secrets in it, marked as not run.
+  - title: Report and ask
+    text: It gives a report layout to fill in after the run, and lists the questions the spec leaves open.
+output_shape: |-
+  API AND SCOPE
+    name <API> | environment <test address> | login <method> | ASSUMED: <list> | MISSING: <list>
+
+  ENDPOINTS
+    <method and path> | purpose | who may call | changes data <yes or no> | risk <low, medium, high>
+
+  TEST CASES
+    <endpoint> | <case name> | type <valid, invalid, edge, auth, failure> | request <what to send> | expected <status and body> | status NOT RUN
+
+  STARTER CODE
+    <file name> | <code> | NOT RUN, adapt before use
+
+  OPEN QUESTIONS
+    <what the spec does not say> | why it matters
+
+  REPORT TO FILL AFTER THE RUN
+    pass <count> | fail <count> | not run <count> | issues <list> | release call <go or no-go, with reasons>
+output_sample:
+  input:
+    - The API spec or a list of endpoints, as text
+    - How login works and which roles exist
+    - A sample request and reply for one or two endpoints
+    - Expected status codes and your test tool (optional)
+  prerequisites:
+    - A test environment you own, with a test account
+    - A test tool such as Playwright or Postman, to run the cases
+  output:
+    - name: API and scope
+      contains: What is under test, the test address, the login method and what is missing.
+    - name: Endpoints
+      contains: Each endpoint with purpose, who may call it, whether it changes data and its risk.
+    - name: Test cases
+      contains: Valid, invalid, edge, auth and failure cases, each with request and expected result.
+    - name: Starter code
+      contains: Test code to adapt, with no secrets inside, marked as not run.
+    - name: Open questions
+      contains: Where the spec is silent on what should happen, and why it matters.
+    - name: Report to fill after the run
+      contains: A layout for pass, fail and not run counts, issues and a go or no-go call.
+works_best_with:
+  tools:
+    - name: Playwright or Postman
+      why: Playwright runs the starter code. Postman can hold the same cases as a saved collection.
+    - name: Claude Code or another AI that can run code
+      why: It can write the test files into your project and run them against your test server, then read the results.
+    - name: k6
+      why: A free load testing tool. Use it for the speed and traffic checks a chat AI can only plan.
+  inputs:
+    - The OpenAPI file or a Postman collection export.
+    - Real error replies from your API, so cases match what it returns.
+    - A list of the roles and what each may see.
+terms:
+  - term: Endpoint
+    meaning: One address on your API that you call to do one thing, such as "get a user".
+  - term: OpenAPI
+    meaning: A standard file format that describes an API's endpoints, inputs and replies.
+  - term: Status code
+    meaning: The number a server sends back to say what happened, such as 200 for OK or 401 for not logged in.
+  - term: Auth
+    meaning: Proving who you are (login) and checking what you may do (access).
+  - term: Rate limit
+    meaning: A cap on how many calls one user can make in a set time.
+  - term: Contract test
+    meaning: A test that checks the API still returns the shape other programs expect.
+tweaks:
+  - what: Depth
+    how: Ask for "happy path and errors only" for a fast first pass, or "full plan" with auth, limits and failures.
+  - what: Tool
+    how: Name your tool, such as Playwright or Postman. The cases stay the same, and the code changes to fit.
+  - what: Risk focus
+    how: Say what worries you most, such as "users seeing each other's data". It puts those cases first.
+improve:
+  - Add your API's error format and naming rules to SKILL.md, so every case expects the same shape.
+  - After each real bug, add a test for it so it cannot return unseen.
+  - Pair it with the Performance Benchmarker agent for load, and the Test Automation Engineer agent to run the tests on every change.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

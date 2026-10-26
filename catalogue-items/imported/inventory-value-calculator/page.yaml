@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It applies set costing formulas.
 new_slug: inventory-value-calculator
 name: Inventory value calculator
-summary: Give it your stock purchases and counts. Get inventory valued by FIFO
-  or average cost, with write-downs flagged.
+summary: Value your inventory with FIFO or weighted average cost. Get cost of goods sold, closing stock and write-downs for slow or damaged items.
 job: run-your-store
 headline: Inventory value calculator
-subhead: Stock that is valued the way an auditor expects, with the maths shown.
-  Give it your purchases, counts and costs. You pick or confirm a cost method,
-  FIFO or weighted average, and it works out the cost of goods sold and the
-  closing stock.
+subhead: Give it your purchases, stock counts and costs. It values your stock with FIFO or weighted average cost and shows the maths. You get cost of goods sold, closing stock and a list of write-downs.
 explain: |
   Stock that is valued the way an auditor expects, with the maths shown. Give it your purchases, counts and costs. You pick or confirm a cost method, FIFO or weighted average, and it works out the cost of goods sold and the closing stock. It adds freight, duties and a fair share of production overhead, and leaves out waste and selling costs.
 
@@ -17,21 +13,45 @@ explain: |
 when:
   - You are closing the year and must value your stock.
   - You think some items are worth less than you paid for them.
-  - Prices rose and you need to see how FIFO changes your profit.
-  - Book stock and the physical count do not match.
+  - Prices rose and you want to see how FIFO changes your profit.
+  - Your book stock and your physical count do not match.
+not_for:
+  - "You file tax returns or need audited accounts: ask a qualified accountant to review the result first."
+  - "You run a services business with no stock: use your normal bookkeeping or ask your accountant."
+  - "You want to track stock levels day to day: use your store's stock system or a simple spreadsheet."
 you_give:
   - Purchase records with quantities and costs
   - Opening stock and current counts
-  - Your cost method, if you have one (optional)
+  - Your cost method, FIFO or weighted average (optional)
   - Selling prices and costs to sell (optional)
+  - Freight and import duty paid on purchases (optional)
 you_get:
   - A stock valuation schedule by category
-  - Cost of goods sold
+  - Cost of goods sold for the period
   - A list of items to write down
-  - A slow-stock provision table
+  - A slow-stock provision table by age and movement
   - Adjusting journal entries
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code, so the maths is checked by script.
+  - Paste the skill text into the chat, then add your purchase records, opening stock and counts.
+  - Say which cost method you use, FIFO or weighted average. If you are unsure, ask your AI to compare both.
+  - Add selling prices and costs to sell if you have them, so it can test for write-downs.
+  - Check the schedule and journal entries against your own records.
+  - Ask your accountant to review the result before you use it in your books.
+output_sample:
+  input:
+    - Your purchase records with quantities and costs
+    - Your opening stock and current counts
+    - Your cost method, FIFO or weighted average (optional)
+    - Selling prices and costs to sell (optional)
+  prerequisites:
+    - An AI that can run code, so the maths is checked by script
+  output:
+    - name: Method & Inputs
+      contains: The cost method, how overhead is added to stock, and the normal capacity used.
+    - name: Computation
+      contains: A stock valuation schedule by category, with the maths checked by code.
+    - name: NRV/Obsolescence
+      contains: Items tested against selling price less costs to finish and sell, with write-downs and a slow-stock provision table.
+    - name: Entries
+      contains: Adjusting journal entries for write-downs and count differences.

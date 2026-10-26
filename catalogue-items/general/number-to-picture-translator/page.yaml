@@ -1,6 +1,6 @@
 new_slug: number-to-picture-translator
 name: "Number-to-picture translator"
-summary: "Paste your key figures and audience. Get each number turned into a picture the room can feel."
+summary: "Turn your key figures into pictures an audience can feel. Give it your numbers and your listeners. You get each one as a comparison or a count of people."
 job: speak-and-persuade
 thinking: low
 thinking_why: "It turns each figure into a comparison with a few fixed moves."
@@ -17,6 +17,10 @@ when:
   - You must explain results to people who do not read spreadsheets.
   - A report is accurate and nobody remembers it.
   - You are pitching and want one number the room will repeat.
+not_for:
+  - "You must file exact wording for a legal or financial filing: use the report itself, and ask your accountant or lawyer to check the text."
+  - "You want a chart or graph of your data: use a spreadsheet or a data chart tool."
+  - "You need to place your strongest picture in a talk: use the Talk tension planner."
 
 you_give:
   - The figures you want to share, with what each measures
@@ -34,6 +38,27 @@ how_to_use:
   - Say who will hear them and where.
   - Read each new version aloud. Replace any that feel stretched.
   - Test the final set on one person outside your field.
+output_sample:
+  input:
+    - Your figures, with what each one measures and its period
+    - Who will hear them and what they already know
+    - Where you will use them, such as a slide, speech or email (optional)
+    - The total count behind each percentage (optional)
+  output:
+    - name: Figures kept
+      contains: The two to five figures that carry your message, with what each measures and why it matters.
+    - name: Figures set aside
+      contains: The figures that do not change a decision, each with a reason.
+    - name: Pictures
+      contains: "For each kept figure: the original, a familiar comparison, a count of people, the human side and a line to say."
+    - name: One vivid image
+      contains: A single picture to spark curiosity, marked as an illustration and not a fact.
+    - name: Test with a non-expert
+      contains: A question to ask a listener outside your field, and the answer that shows it worked.
+    - name: Missing
+      contains: Facts it needs to check a comparison, such as a total or a unit.
+    - name: Checks missed
+      contains: One line for each check it could not pass, or none.
 
 how_it_works:
   - title: Picks the figures

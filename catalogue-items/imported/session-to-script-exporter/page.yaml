@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It gathers working code and tidies it.
 new_slug: session-to-script-exporter
 name: Session to script exporter
-summary: Ask to save your session. Get one clean MATLAB script that reruns the
-  work from start to end.
+summary: Turn your MATLAB session into one clean .m script. Ask to export it and get a file that reruns your work from start to end.
 job: build-software
 headline: Session to script exporter
-subhead: One clean MATLAB script that reruns your whole session from start to
-  finish. Ask to export it and Claude walks back through the conversation,
-  collects each MATLAB block that ran, and builds a single .m file.
+subhead: One clean MATLAB script that reruns your whole session from start to finish. Ask to export it and Claude walks back through the conversation, collects each MATLAB block that ran, and builds a single .m file.
 explain: |
   One clean MATLAB script that reruns your whole session from start to finish. Ask to export it and Claude walks back through the conversation, collects each MATLAB block that ran, and builds a single .m file.
 
@@ -18,6 +15,10 @@ when:
   - You need a script to hand to a colleague after a MATLAB session.
   - Your session had many failed attempts and you want only the working code.
   - You want parameters collected at the top so you can change them.
+not_for:
+  - "You want new MATLAB code written from scratch: ask your AI to write the code directly."
+  - "You need a Live Script (.mlx): this makes plain .m files only, so convert the result in MATLAB."
+  - "Your session used Python or shell scripts: copy that code out by hand, because this only exports MATLAB."
 you_give:
   - A MATLAB session with code that ran
   - A script name (optional)
@@ -28,8 +29,29 @@ you_get:
   - Parameters gathered at the top
   - A saved file in the Results folder
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Finish your MATLAB work in a chat with an AI that can run MATLAB code.
+  - Paste the skill text into the chat, or add the skill in your AI tool.
+  - "Say: export this session as a script. Add a script name if you want one."
+  - Open the new file in the Results folder and check the toolboxes listed at the top.
+  - Run it in the MATLAB Editor, or with matlab -batch, to confirm it works from start to end.
+output_sample:
+  input:
+    - A chat session where MATLAB code already ran
+    - A script name (optional)
+    - A working folder you can save files in
+  prerequisites:
+    - An AI that can run MATLAB code, for example through MCP or matlab -batch
+    - A working folder where a Results folder can be created
+  output:
+    - name: Header section
+      contains: A title, a short description of the work and the MATLAB toolboxes the script actually used.
+    - name: Setup section
+      contains: Paths, file locations and all the values you may want to change, gathered in one place.
+    - name: Step sections
+      contains: One %% section per step, each with a one-line comment, holding only the final working version of each code block.
+    - name: Plots and results section
+      contains: Figure code with the hidden-window settings removed, so figures show when you run it by hand.
+    - name: Results/<descriptive_name>.m
+      contains: The saved script, named after your main task in lowercase with underscores.
+    - name: Closing message
+      contains: The file name and path, how many sections and lines it has, and a note that it is ready to run.

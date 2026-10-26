@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Standards give exact settings.
 new_slug: wi-fi-waveform-generator
 name: Wi-Fi waveform generator
-summary: Pick an 802.11 format. Get a standard-compliant Wi-Fi waveform ready
-  for link tests.
+summary: Build a Wi-Fi waveform generator output for any 802.11 format. Get IQ samples and a plot for link tests, using MATLAB with WLAN Toolbox.
 job: build-software
 headline: Wi-Fi waveform generator
-subhead: A standard-compliant Wi-Fi transmit waveform, ready to feed into a link
-  test or simulation. You choose the 802.11 format and get time-domain IQ
-  samples you can plot or send to hardware.
+subhead: A standard-compliant Wi-Fi transmit waveform, ready to feed into a link test or simulation. You choose the 802.11 format and get time-domain IQ samples you can plot or send to hardware.
 explain: |
   A standard-compliant Wi-Fi transmit waveform, ready to feed into a link test or simulation. You choose the 802.11 format and get time-domain IQ samples you can plot or send to hardware.
 
@@ -18,6 +15,10 @@ when:
   - You are building the transmit side of a link simulation.
   - You want an OFDMA packet with specific resource units.
   - You need a waveform of a set duration with a given frame type.
+not_for:
+  - "You need channel models, receiver processing or EVM and spectral mask checks: use MATLAB WLAN Toolbox receiver functions or a lab signal analyzer."
+  - "You need 5G NR, LTE or Bluetooth signals: use the matching MATLAB toolbox for that standard."
+  - "You have no MATLAB or no WLAN Toolbox licence: ask an RF engineer or use a lab signal generator."
 you_give:
   - Wi-Fi standard and format
   - Bandwidth and modulation settings
@@ -31,8 +32,33 @@ you_get:
   - Plots of the signal
   - Multi-packet waveform (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with WLAN Toolbox.
+  - Check you have MATLAB with the WLAN Toolbox. Wi-Fi 8 (802.11bn) needs MATLAB R2026a or later.
+  - "Gather your numbers: 802.11 format, channel bandwidth, MCS, number of streams, and payload size or target duration."
+  - Open an AI that can run MATLAB code. Paste the skill, then give it your numbers.
+  - Ask for the waveform and a plot. Check the packet length and shape match what you asked for.
+  - If you need MAC frames or OFDMA, say which frame type or resource unit layout you want.
+  - Send the IQ samples to your simulation or hardware.
+output_sample:
+  input:
+    - Your 802.11 format, such as 802.11n, ac, ax, be or bn
+    - Channel bandwidth, MCS and number of streams
+    - Payload size or a target packet duration
+    - Frame type, if you want MAC frames (optional)
+    - OFDMA resource unit layout (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the WLAN Toolbox licence
+    - MATLAB R2026a or later, only if you want Wi-Fi 8 (802.11bn)
+  output:
+    - name: Config object
+      contains: The Wi-Fi format settings you chose, such as bandwidth, MCS, streams and antennas.
+    - name: Payload bits
+      contains: Random bits or a MAC frame such as Data, Block Ack or Beacon, sized to your length or duration.
+    - name: Waveform
+      contains: The time-domain IQ samples from the WLAN waveform generator, ready for a link test or hardware.
+    - name: Time plot
+      contains: A plot of signal magnitude over time, so you can check the packet looks right.
+    - name: Allocation plot
+      contains: A view of the resource unit layout, for OFDMA formats such as HE, EHT and UHR.
+    - name: Multi-packet waveform
+      contains: Several packets joined into one longer waveform, when you ask for it.

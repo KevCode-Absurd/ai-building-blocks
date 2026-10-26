@@ -1,6 +1,6 @@
 slug: extract-a-scanned-document-and-verify-key-facts
 name: Extract a scanned document and verify key facts
-summary: Share the source files. Get extracted text, a page-linked fact table and uncertain readings.
+summary: Pull key facts out of a scanned document and check them against the page. Get the text, a fact table with page numbers and uncertain readings.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,27 +8,23 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: document
-    required: false
-  - type: spreadsheet
-    required: false
+    required: true
 outputs:
   - type: source_text
-  - type: document
   - type: spreadsheet
+  - type: document
 uses:
   - scanned-pdf-text-reader
   - pdf-maker-and-reader
   - spreadsheet-checker
 steps:
   - uses: scanned-pdf-text-reader
-    note: Extract the relevant text while keeping page references and uncertain readings.
+    note: Reads the scan with OCR. Keeps page numbers and marks readings it doubts. Hands the text and the doubtful readings to step 2.
   - uses: pdf-maker-and-reader
-    note: Inspect the original pages around each important fact rather than trusting extraction alone.
+    note: Renders the original pages and checks each important fact on the page image, not only in the extracted text. Uses the original scan and step 1's text. Saves the fact table as a CSV or workbook and hands confirmed facts and open readings to step 3.
   - uses: spreadsheet-checker
-    note: Check the field table for missing records, inconsistent formats and arithmetic issues.
+    note: Takes step 2's fact table (the CSV or workbook) and checks it for missing records, mixed formats and totals that do not add up.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

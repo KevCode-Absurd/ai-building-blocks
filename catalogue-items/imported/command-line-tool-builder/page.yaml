@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set build method but must fit the API.
 new_slug: command-line-tool-builder
 name: Command-line tool builder
-summary: Give it an API doc or script. Get a command-line tool that returns
-  clean JSON and handles sign-in.
+summary: Turn an API doc or script into a command-line tool you can run from any folder. It gives clean JSON and handles sign-in.
 job: build-software
 headline: Command-line tool builder
-subhead: A real command-line tool you can run by name from any folder. Give it
-  an API doc, a script or a few curl examples, and get a tool that returns clean
-  JSON and handles sign-in.
+subhead: A real command-line tool you can run by name from any folder. Give it an API doc, a script or a few curl examples, and get a tool that returns clean JSON and handles sign-in.
 explain: |
   A real command-line tool you can run by name from any folder. Give it an API doc, a script or a few curl examples, and get a tool that returns clean JSON and handles sign-in.
 
@@ -18,6 +15,10 @@ when:
   - You want your AI to call a service through one simple command.
   - You have an API doc and need a tool for it.
   - A script in your shell history deserves to become a real tool.
+not_for:
+  - "You need a one-off task: write a short script in your current folder instead."
+  - "The service already has its own official command-line tool: use the vendor's tool instead of building a new one."
+  - "You want a web page or app for people to click: ask a developer or a site builder instead."
 you_give:
   - An API doc, script or curl examples
   - The first jobs the tool must do
@@ -29,8 +30,31 @@ you_get:
   - Sign-in handling
   - Install steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read API docs.
+  - Open an AI that can run code and save files, such as Claude Code or Codex. A plain chat window cannot install the tool.
+  - Paste this skill into the chat or add it as a skill.
+  - Paste your API doc, script or curl examples. Say the first jobs it should do and the install name you want.
+  - Check the command plan your AI shows you. Fix any command names before it builds.
+  - Let it build and install the tool. Then run the help and doctor commands from another folder to check it works.
+  - Next, ask it to write the companion skill, so your AI knows how to use the tool safely.
+output_sample:
+  input:
+    - An API doc, OpenAPI file, script or curl examples
+    - The first jobs the tool must do, such as list drafts
+    - A short install name for the tool (optional)
+    - Your sign-in token for the service
+  prerequisites:
+    - An AI that can run code and save files on your computer
+    - Rust, Node or Python installed, or your OK to install one
+  output:
+    - name: Command plan
+      contains: The tool name, its commands, how sign-in works and where it installs, shown in chat before any code.
+    - name: The command-line tool
+      contains: Working code with help text, a doctor check, lookup commands, read commands and a raw request command.
+    - name: JSON output notes
+      contains: A README that explains the success shape, the error shape and one example for each group of commands.
+    - name: Install step
+      contains: A command that puts the tool on your path so it runs from any folder.
+    - name: Smoke test results
+      contains: "Checks run outside the source folder: help, doctor and at least one read-only call."
+    - name: Companion skill
+      contains: A short skill that tells your AI how to use the tool, what is safe and gives three example commands.

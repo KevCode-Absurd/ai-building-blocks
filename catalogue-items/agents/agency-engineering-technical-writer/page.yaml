@@ -1,0 +1,113 @@
+name: Technical Writer agent
+summary: Get developer docs drafted from your code and notes, such as a README, API reference or tutorial, plus a list of claims to verify.
+headline: Technical Writer agent
+subhead: Give your AI the feature, code or rough notes, and say who will read the docs. It drafts the right type of page, such as a README, API reference, tutorial or how-to. You also get a list of claims and code examples to check before you publish.
+job: document-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Developer docs fail in two ways. They fall behind the code, or they skip the step where the reader gets stuck. This technical writing agent writes for one reader and one purpose per page, and it marks anything it could not confirm from your material.
+
+  It keeps four kinds of page apart: tutorials that teach, how-to guides for a task, references that list facts, and explanations of why. It does not mix them on one page. A README must pass a five-second test: what is this, why should I care, how do I start.
+
+  A chat AI cannot run your code unless you give it a tool that can. So the agent marks every code example as run or not run. You check the "not run" ones first.
+when:
+  - You shipped a feature and the README still describes last year's version.
+  - You have an API and need a reference page with request, response and error examples.
+  - New users keep asking the same setup question, and you want a tutorial that answers it.
+  - An engineer sends rough notes, and you need a clean how-to for other developers.
+not_for:
+  - You need release notes, a changelog or a decision record. Use the Technical writer.
+  - You already have a doc and want its false claims and drift from the code found. Use the Documentation checker.
+  - You want docstrings and a README written straight from a repo by a tool that reads the code. Use the Code documentation writer.
+you_give:
+  - What you are documenting, such as a feature, API endpoint, library or setup process
+  - Who will read it and what they already know, for example new users or experienced developers
+  - The type of doc you want, such as README, API reference, tutorial or how-to guide
+  - Source material, such as code, an OpenAPI file, a spec, issue threads or an engineer's notes
+  - Your docs tool, such as Docusaurus or MkDocs (optional)
+you_get:
+  - A draft in the right format for the doc type, in plain second-person voice
+  - Code examples, each marked run or not run
+  - A list of every claim, number and example to check against the code
+  - A list of gaps, marked MISSING, where your material did not say enough
+  - A suggested page structure if you asked for a set of docs
+how_to_use:
+  - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Paste your source material first, then say what to write. For example, "Write a README for this library. Readers are developers new to it."
+  - Check the list of gaps and ask the engineer who built it to fill them, or paste the answers back.
+  - Go through the claims list. Run each code example yourself, or give your AI a tool that can run code.
+  - Keep the docs in the same pull request as the code change, so they do not fall behind.
+how_it_works:
+  - title: Fix the reader and the purpose
+    text: It confirms who reads the page and whether it should teach, guide a task, list facts or explain why.
+  - title: Read your material
+    text: It reads the code, spec or notes and lists what it knows and what it cannot confirm.
+  - title: Outline before writing
+    text: It sets the headings and order, one idea per section, before it writes any prose.
+  - title: Draft in plain voice
+    text: It writes in second person, present tense and active voice, with the outcome first and the failure cases named.
+  - title: Mark what is unchecked
+    text: It labels each code example run or not run, and lists claims that need an engineer's check.
+output_shape: |-
+  # <Doc title>
+  Doc type: <README, API reference, tutorial, how-to or explanation>
+  Reader: <who it is for and what they already know>
+
+  <the draft, in the structure for that doc type>
+
+  ## Accuracy checks
+  - <claim, number or code example> | <where it comes from> | <run or not run> | <who should confirm>
+
+  ## Gaps (MISSING)
+  - <what the material did not say> | <who can answer>
+
+  ## Suggested next pages
+  - <related doc worth writing>
+output_sample:
+  input:
+    - The feature, API or library you are documenting
+    - Who will read the docs and the type of page you want
+    - Code, specs or notes as source material
+  output:
+    - name: The draft doc
+      contains: A README, API reference, tutorial or how-to guide, in the standard layout for that type.
+    - name: Code examples
+      contains: Each snippet marked as run or not run, so you know which to test first.
+    - name: Accuracy checks
+      contains: Every claim and number tied to its source, with who should confirm it.
+    - name: Gaps
+      contains: Facts your material left out, marked MISSING instead of guessed.
+    - name: Suggested next pages
+      contains: Related docs the reader will probably need, such as a migration guide.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can read the repo and run your examples, so the code samples get tested.
+    - name: Claude, ChatGPT or Gemini
+      why: They draft well from pasted code and notes, but cannot run anything without a code tool.
+  inputs:
+    - Support tickets or GitHub issue titles that show where readers get stuck.
+    - An existing README or style guide, so the new draft matches your house style.
+terms:
+  - term: README
+    meaning: The first page of a project. It says what the project is and how to start.
+  - term: API reference
+    meaning: A page that lists every endpoint, input, output and error for an API.
+  - term: Docs as code
+    meaning: Keeping docs in the same repo as the code and building them with the same tools.
+tweaks:
+  - what: Doc type
+    how: Ask for one type per run. A tutorial and a reference page are different jobs, so run them as two drafts.
+  - what: Reader level
+    how: Say if readers are beginners or experts. It changes how much setup the page explains.
+improve:
+  - Paste the questions users still ask after reading the docs, and ask the AI to add the missing steps.
+  - Keep the accuracy checks list. Tick items off as an engineer confirms them, and rerun after each release.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

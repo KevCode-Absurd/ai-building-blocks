@@ -1,6 +1,6 @@
 new_slug: sales-route-picker
 name: "Sales route picker"
-summary: "Paste your product, price and buyer. Get customer value, cost to win and the one route to use."
+summary: "Find the one sales route that pays for itself. Give it your product, price and buyer. You get customer value, cost to win and a clear pick."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It needs a few sums and a choice between routes, which takes some careful reasoning."
@@ -17,6 +17,10 @@ when:
   - "You have a product and no clear way to reach buyers."
   - "You are spending on several channels and can't tell which works."
   - "Your price sits between what a salesperson and an ad can handle."
+not_for:
+  - "Your product already sells well through a channel that works: keep that channel and skip a route check."
+  - "You want a step-by-step plan for a route you have chosen: use a sales plan from a person or a plain checklist, as this only picks the route."
+  - "You need ad copy or a pitch written: use a copywriter or your own draft, as this does not write sales messages."
 
 you_give:
   - "What you sell, the price and the buyer"
@@ -33,6 +37,30 @@ how_to_use:
   - "Paste your product, price and buyer. Add your spend and how many customers it brought, if you have them."
   - "Give your best guess for customer stay and mark it. It shows a low and high case."
   - "Stop the routes it tells you to stop, and take the chosen route to the next step to plan it."
+output_sample:
+  input:
+    - What you sell, the price and who buys it
+    - Your sales and ad spend (optional)
+    - How long customers stay or how often they buy (optional)
+  output:
+    - name: Customer value
+      contains: The sum for what an average customer is worth, with any guesses marked.
+    - name: Cost to win
+      contains: The sum for what one new customer costs, including salaries and tools, with guesses marked.
+    - name: Ratio
+      contains: Cost to win against customer value, with a pass or fail on the safe margin.
+    - name: Route by deal size
+      contains: The route that fits your deal size and why.
+    - name: Dead zone check
+      contains: Whether your price falls between routes, and ways out if it does.
+    - name: Sharing check
+      contains: How many new users each user brings, and the time between users, if sharing is a candidate.
+    - name: The one route
+      contains: The single route picked and a reason each other route loses.
+    - name: Stop doing
+      contains: The routes and habits to drop now.
+    - name: Missing and checks missed
+      contains: Facts that would firm up the sums, and any check the answer still misses.
 
 how_it_works:
   - title: "Works out customer value"

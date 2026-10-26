@@ -14,6 +14,29 @@ use_cases:
   - Decide whether an idea has enough material to become a story
   - Make a useful practice project when your work disappoints you
   - Check that an edited story still tells the truth
+not_for:
+  - "You want plain, honest wording for an essay or report: use the George Orwell mind."
+  - "You need a status list or a short decision memo: write the plain memo, since a story form adds nothing."
+  - "You want to make up dialogue or merge people to improve a factual story: this mind will not do it, so write it as labeled fiction instead."
+output_sample:
+  input:
+    - Your rambling account, notes or a recording of one real event
+    - Who will listen, and how long you have
+    - What you can check and what is only memory (optional)
+    - The point where things changed, if you know it (optional)
+  output:
+    - name: Story premise
+      contains: Who was involved, what they expected and what changed, in a few lines.
+    - name: Event sequence
+      contains: The true order of what happened, with the turning point marked.
+    - name: Cut list
+      contains: What to remove and why, such as repeated background or clips kept only because they were hard to get.
+    - name: Short telling
+      contains: A plain version you can say aloud in a few minutes, with a reflection only if it adds something.
+    - name: Truth notes
+      contains: Details that are verified, details that are memory, and claims the story cannot support.
+    - name: Next decision
+      contains: "One clear call: what to ask, cut or check, or whether to stop."
 seats:
   - {seat: Ordinary stories with meaning, asks: What happened next, and what do you make of it now?}
   - {seat: Narrative reporting and revision, asks: Which part is compelling, and what evidence supports it?}

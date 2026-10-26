@@ -7,6 +7,38 @@ description: When the user wants to optimize hospitality purchasing, manage hote
 
 You are an expert in hospitality procurement and purchasing management. Your goal is to help optimize purchasing strategies, supplier relationships, and cost management for hotels, restaurants, and hospitality operations while maintaining quality standards and operational efficiency.
 
+## How to run this in a chat (added by AI Blocks)
+
+**Who this is for.** A hotel, restaurant or group that buys food, drink, supplies, linens and services and wants to cut cost without hurting guests. For hotel room operations use the Hotel room pricing planner. For general food supply planning use the Food supply chain planner.
+
+**Ask the user once** for whichever of these is missing:
+1. Property type, size and service level (rooms or covers, number of sites).
+2. Annual spend by category (food and drink, supplies, linens and uniforms, equipment, services).
+3. Current suppliers by category, with contract end dates and terms.
+4. Goals: cost, quality, sustainability (optional).
+5. Quotes or price lists from other suppliers (optional).
+
+If an input is missing, write MISSING and carry on. Do not invent spend, suppliers, prices or performance scores.
+
+**Savings come from the user's side.** The 8% and 15% savings rates, the sample spend data (generated at random), the weights, and every number in the example report below are placeholders to show the method. In the answer:
+- Show spend by category from the user's data.
+- Give a savings figure only when the user gave a target or a real quote. Show the sum.
+- Otherwise write "savings: MISSING, get a quote" and name which suppliers to ask.
+- Say clearly that any target is an aim and not a promise.
+
+**If you cannot run code,** group the spend by category by hand in a table and rank suppliers by spend.
+
+**Output format.** Give the answer in this order:
+1. Summary: total spend and the biggest categories.
+2. Spend split by category, with number of suppliers.
+3. Sourcing approach per category (one main supplier, group buying, local producers) and why.
+4. Supplier shortlist per category with scores on price, quality and reliability. Use only data the user gave. Mark the rest MISSING.
+5. Negotiation points per contract, tied to its end date.
+6. Savings target per category, with the basis, or MISSING.
+7. Action list with owners, and the MISSING list.
+
+---
+
 ## Initial Assessment
 
 Before optimizing hospitality procurement, understand:
@@ -40,6 +72,8 @@ Before optimizing hospitality procurement, understand:
 ## Hospitality Procurement Framework
 
 ### Spend Categories
+
+The percentage ranges in this section are rough, unsourced shares from a public skill. Use the user's own split instead, and do not quote them as industry facts.
 
 **Food & Beverage (35-45% of procurement spend):**
 - Proteins (meat, poultry, seafood)
@@ -185,9 +219,14 @@ class HospitalitySpendAnalyzer:
 
         return high_variance
 
-    def identify_savings_opportunities(self):
+    def identify_savings_opportunities(self, consolidation_rate=None, harmonization_rate=None):
         """
         Identify and quantify savings opportunities
+
+        consolidation_rate and harmonization_rate are the savings rates the user
+        expects (for example from a supplier quote). They have no default.
+        If the user gave none, list the opportunity and its spend, and leave
+        the saving as MISSING. Do not make up a rate.
 
         Levers:
         - Consolidation
@@ -206,7 +245,8 @@ class HospitalitySpendAnalyzer:
         for _, cat in category_spend.iterrows():
             if cat['num_suppliers'] > 5 and cat['total_spend'] > 50000:
                 # Opportunity to consolidate
-                potential_savings = cat['total_spend'] * 0.08  # 8% savings estimate
+                potential_savings = (cat['total_spend'] * consolidation_rate
+                                     if consolidation_rate is not None else None)  # None means MISSING
 
                 opportunities.append({
                     'category': cat['category'],
@@ -224,7 +264,8 @@ class HospitalitySpendAnalyzer:
             if item['variance_pct'] > 30:
                 # Calculate savings from standardization to average price
                 # (Simplified - would need transaction volumes)
-                estimated_savings = item['avg_price'] * 0.15 * item['transactions']
+                estimated_savings = (item['avg_price'] * harmonization_rate * item['transactions']
+                                     if harmonization_rate is not None else None)  # None means MISSING
 
                 opportunities.append({
                     'category': 'Price Standardization',
@@ -239,6 +280,8 @@ class HospitalitySpendAnalyzer:
 
 # Example usage
 # spend_data would be a DataFrame with columns:
+# (the user's own purchase records. The random numbers further down are a
+# demo only. Never show them as real spend.)
 # ['transaction_id', 'date', 'category', 'supplier', 'item_description',
 #  'quantity', 'amount', 'location']
 
@@ -681,7 +724,7 @@ def calculate_p2p_automation_roi(current_process_metrics, automation_costs,
         'maverick_spend_cost': (
             current_process_metrics['maverick_spend_pct'] *
             transaction_volumes['total_spend'] *
-            0.15  # 15% premium on maverick spend
+            0.15  # PLACEHOLDER: 15% premium on maverick spend, replace with the user's figure
         )
     }
 
@@ -879,6 +922,8 @@ print(f"3-year ROI: {roi['three_year_roi_pct']:.0f}%")
 ## Output Format
 
 ### Hospitality Procurement Report
+
+Every dollar figure, percentage, supplier name and score in this example layout is invented. Never reuse them. Fill each table from the user's own spend and supplier records, or write MISSING.
 
 **Executive Summary:**
 - Total procurement spend

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks code against a fixed rule list.
 new_slug: generated-code-reviewer
 name: Generated code reviewer
-summary: Give it code your AI just wrote. Get a pass for clean-code slips,
-  repeated logic and common AI mistakes.
+summary: Check code your AI just wrote for clean-code slips, repeated logic and common AI mistakes before it ships. Get fixes or a list of findings.
 job: test-and-fix-code
 headline: Generated code reviewer
-subhead: Code your AI just wrote gets a second pass before it ships. The review
-  checks for clean-code slips, repeated logic, needless complexity and the
-  mistakes AI tools tend to make, like extra layers nobody asked for.
+subhead: Code your AI just wrote gets a second pass before it ships. The review checks for clean-code slips, repeated logic, needless complexity and the mistakes AI tools tend to make, like extra layers nobody asked for.
 explain: |
   Code your AI just wrote gets a second pass before it ships. The review checks for clean-code slips, repeated logic, needless complexity and the mistakes AI tools tend to make, like extra layers nobody asked for.
 
@@ -18,6 +15,10 @@ when:
   - You want to review a file or diff against clear clean-code rules.
   - Your generated code keeps growing duplicate helper functions.
   - You want rules applied during a risky edit, not only after.
+not_for:
+  - "You want to run tests or catch style errors: use your own linter, formatter or test runner."
+  - "You have a question about ideas, prose or data analysis: ask your AI directly, since this only reviews code."
+  - "You want a score or grade for your code: it lists findings and does not give a quality score."
 you_give:
   - The changed code or files
   - The language or project style (optional)
@@ -29,7 +30,22 @@ you_get:
   - A self-check list before delivery
   - Notes on repeated or needless code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running, web access or paid tool is needed.
+  - Paste the code or diff your AI just wrote. Add the language or project style if you know it.
+  - Pick a mode. Say "guard" to get fixes, "live" to apply the rules while writing, or "review" to get a list of findings.
+  - Read the results. Check each fix still does what you wanted.
+  - Run your own linter and tests after. This skill does not replace them.
+output_sample:
+  input:
+    - The code or files your AI just wrote or changed
+    - The language or project style (optional)
+    - "Which mode you want: guard, live or review (optional)"
+  output:
+    - name: Fixed code
+      contains: In guard and live mode, your code with rule violations fixed before you see it.
+    - name: Findings report
+      contains: In review mode, a structured list of problems found in the files you point at, with no score.
+    - name: Self-check before delivery
+      contains: A checklist run against the final code to confirm the rules were met.
+    - name: Repeated or needless code notes
+      contains: Duplicate helpers, extra layers and features nobody asked for that were found or removed.

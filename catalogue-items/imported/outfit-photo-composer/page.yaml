@@ -2,36 +2,58 @@ thinking: medium
 thinking_why: Each item must stay true to your photo, so it checks them one by one.
 new_slug: outfit-photo-composer
 name: Outfit photo composer
-summary: Give it up to eight single items. Get one photo of a model wearing the
-  full outfit. Your image model draws it.
+summary: Turn up to eight single item photos into one outfit photo on a model. Your image model draws it, and each item keeps its colour and pattern.
 job: product-photos
 headline: Outfit photo composer
-subhead: One photo of a model wearing a complete outfit, built from up to eight
-  separate item pictures. Skip the studio and the model fee when you want to
-  show how pieces look together.
+subhead: Give it up to eight single item photos. It writes the prompt for your image model. You get one photo of a model wearing the full outfit, without a studio or a model fee.
 explain: |
   One photo of a model wearing a complete outfit, built from up to eight separate item pictures. Skip the studio and the model fee when you want to show how pieces look together.
 
   You supply single items such as a sweater, hat, necklace, trousers, bag and shoes. The skill writes the prompt that tells an image model to keep each item exactly the same in colour, weave, pattern and material, and to add any missing basics. It sets the model pose, background, lighting and frame for a clean shop photo with no text or watermark. Claude does not draw the picture, so your image model or the dlazy tool does that step. It needs an image service account.
 when:
-  - You sell clothing and want styled outfit photos without a shoot.
-  - You want to show how a hat, top and necklace work together.
-  - You need a lookbook image from product flat shots.
-  - You are testing outfits before ordering photography.
+  - You sell clothes and want outfit photos without a shoot.
+  - You want to show how a hat, top and necklace look together.
+  - You need a lookbook image made from flat item photos.
+  - You want to test outfit ideas before you pay for photography.
+not_for:
+  - "You need buyers to see exact fit or fabric detail: use a real photo shoot or flat shots, and say any AI image is AI-made."
+  - "You have more than eight items: split them into two outfits, then add the rest with the wear-everything skill."
+  - "You want to use someone's real face to endorse your shop: ask that person for a signed photo shoot instead."
 you_give:
-  - Up to eight item photos
-  - Model and style preference (optional)
-  - Background and lighting choice (optional)
-  - An image model or dlazy account
+  - Up to eight photos, one item in each
+  - Model look and style (optional)
+  - Background and light you want (optional)
+  - A pose photo or model face photo (optional)
+  - An image model account, such as dlazy
 you_get:
-  - A finished prompt for the image model
-  - One full outfit photo
-  - Items kept true to your pictures
-  - Size options for shop use
+  - A list of what each item is and where it is worn
+  - A finished prompt for your image model
+  - One full outfit photo, with items kept true to your photos
+  - Two to four versions to choose from
+  - A short check of the result before you publish
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - List every item in the outfit. Remove repeats, such as two tops. Keep it to eight or fewer.
+  - "Put the photos in order: top, bottoms, coat, shoes, bag, extras. Use one item per photo, on a plain background."
+  - Ask your AI to name each item and where it is worn. Fix any layer order, such as a coat open over a top.
+  - Fix the model, pose, background and light. Reuse the same words for every outfit so a set looks alike.
+  - Run a test first to see the cost. Then run it for real and ask for two to four versions. This needs code running and an image model account, and each run costs credits.
+  - Check item count, colours, layers and patterns. Review every photo before you publish, and say it is AI-made.
+output_sample:
+  input:
+    - Up to eight photos, one item in each (sweater, hat, necklace, trousers, bag, shoes)
+    - Your choice of model look, pose, background and light (optional)
+    - A pose photo or a model face photo (optional)
+  prerequisites:
+    - An image model account, such as dlazy, that can take reference photos
+    - An AI that can run a command, or you paste the prompt into your image tool yourself
+  output:
+    - name: Item list
+      contains: Each photo matched to where it is worn, with basics added for any missing trousers or shoes.
+    - name: Image prompt
+      contains: One prompt that names every item and tells the image model to keep colour, weave, pattern and material unchanged.
+    - name: Outfit photo
+      contains: One photo of a model wearing the full outfit, with no text or watermark.
+    - name: Extra picks
+      contains: Two to four versions of the same outfit so you can choose the best one.
+    - name: Check list
+      contains: A review of item count, colour mix-ups, layer order and pattern position.

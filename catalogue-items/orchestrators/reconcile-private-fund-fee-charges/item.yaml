@@ -1,14 +1,12 @@
 slug: reconcile-private-fund-fee-charges
-name: Reconcile private fund fee charges
-summary: Carry a documented stepdown charge into the actual fee-offset ledger.
+name: Private fund fee and offset checker
+summary: Share fund fee terms, dates, eligible receipts and prior credits. Get the applicable gross fee, offset use, net invoice and remaining credit.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: source_text
     required: true
   - type: spreadsheet
@@ -18,8 +16,9 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+next:
+  - reconcile-a-private-fund-capital-call
+  - check-a-no-catchup-fund-distribution
 uses:
   - management-fee-stepdown-checker
   - transaction-fee-offset-checker

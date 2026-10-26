@@ -17,10 +17,10 @@ outputs:
   - {type: brief}
 uses: [youtube-readiness-checker, demand-gen-cold-campaign-builder, youtube-ad-results-reader, google-remarketing-campaign-builder]
 steps:
-  - {uses: youtube-readiness-checker, note: "Decides if YouTube is worth trying now and what to hold back."}
-  - {uses: demand-gen-cold-campaign-builder, note: "Builds the cold campaign around the readiness call and the videos you made."}
-  - {uses: youtube-ad-results-reader, note: "Scores each ad against the plan so you know which to scale."}
-  - {uses: google-remarketing-campaign-builder, note: "Adds a layer for people who watched or visited, using the plan and the winning videos."}
+  - {uses: youtube-readiness-checker, note: "Decides if YouTube is worth trying now and what to hold back. Hands step 2 the yes-or-wait call and what to hold back."}
+  - {uses: demand-gen-cold-campaign-builder, note: "Builds the cold campaign around the readiness call and the videos you made. Uses your cut videos and landing page from the pause. Hands step 4 the campaign plan."}
+  - {uses: youtube-ad-results-reader, note: "Scores each ad so you know which to scale. Uses your results export by ad and placement, from the pause. Step 2's plan tells you which ad groups to export. Hands step 4 the scale, keep or pause call for each video."}
+  - {uses: google-remarketing-campaign-builder, note: "Adds a layer for people who watched or visited, using the plan and the winning videos. Uses step 2's plan, your offer and the ads step 3 marked scale."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays/skeleton.yaml

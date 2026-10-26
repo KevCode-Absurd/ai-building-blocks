@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Solver choice and result checks need careful judgment.
 new_slug: optimization-problem-solver
 name: Optimization problem solver
-summary: Describe what to minimise and your limits. Get the problem set up,
-  solved and the result checked.
+summary: Set up and solve a MATLAB optimization problem with the right solver, then check the result. Give it your goal and limits. Needs Optimization Toolbox.
 job: build-software
 headline: Optimization problem solver
-subhead: MATLAB code for an optimisation problem that is set up properly, solved
-  with a suitable solver and checked before you trust it. It avoids common traps
-  like the wrong method or a bad stop.
+subhead: MATLAB code for an optimisation problem that is set up properly, solved with a suitable solver and checked before you trust it. It avoids common traps like the wrong method or a bad stop.
 explain: |
   MATLAB code for an optimisation problem that is set up properly, solved with a suitable solver and checked before you trust it. It avoids common traps like the wrong method or a bad stop.
 
@@ -18,20 +15,47 @@ when:
   - Your solver stops with an odd exit flag and you do not know why.
   - You are unsure which solver or algorithm suits your problem.
   - Your code loops over variables and runs far too slowly.
+not_for:
+  - "You only need the smallest value in a list or table: use MATLAB's min function, no solver needed."
+  - "You want to solve equations with symbols, ODEs or a linear system: use MATLAB's solve, ode45 or the backslash operator."
+  - "You use a non-MathWorks optimization toolbox: use that tool's own guide, because this skill only covers MathWorks solvers."
 you_give:
-  - What to minimise or maximise
-  - Variables and bounds
-  - Constraints
-  - Any existing MATLAB code (optional)
-  - MATLAB with Optimization Toolbox
+  - What you want to minimise or maximise
+  - Your variables and their bounds
+  - Your constraints
+  - Your existing MATLAB code (optional)
 you_get:
   - The problem class and solver choice
   - Working MATLAB code
   - The solution
   - A check of convergence and constraint satisfaction
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Optimization Toolbox.
+  - Check that you have MATLAB with Optimization Toolbox. It is a paid licence and you need it before you start.
+  - Paste this skill into your AI chat, or add it to your AI tool.
+  - Tell your AI what to minimise or maximise, your variables, bounds and constraints. Paste any existing code.
+  - Run the MATLAB code it writes. Your AI can run it only if it has MATLAB access. Otherwise run it yourself.
+  - Check the exit flag and constraint violations in the result. Paste any warning back to your AI so it can debug.
+output_sample:
+  input:
+    - What you want to minimise or maximise
+    - Your variables and their bounds
+    - Your constraints
+    - Your existing MATLAB code (optional)
+  prerequisites:
+    - MATLAB with Optimization Toolbox, which is a paid licence
+    - An AI that can run MATLAB code, or you run the code yourself
+  output:
+    - name: Problem class and solver choice
+      contains: The type of problem, such as linear or nonlinear, and the narrowest solver that fits it.
+    - name: Problem setup code
+      contains: MATLAB code that defines variables, objective and constraints, plus an initial guess.
+    - name: Start point check
+      contains: A test that the objective and constraints give finite, correctly sized values before solving.
+    - name: Solver call and options
+      contains: The solve call with options checked against your installed MATLAB version.
+    - name: Solution
+      contains: The solution values and the objective value.
+    - name: Result check
+      contains: Exit flag, iterations, constraint violations and an optimality check where the solver supports it.
+    - name: Debugging steps
+      contains: If the solve fails, fixes to formulation, scaling, algorithm or start point, one change at a time.

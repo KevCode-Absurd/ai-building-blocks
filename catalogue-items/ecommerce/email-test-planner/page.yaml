@@ -1,41 +1,52 @@
 new_slug: email-test-planner
 name: "Email test planner"
-summary: "Give it your flows and send volumes. Get a ranked test queue with sample sizes and win rules."
+summary: "Plan email and popup A/B tests that can finish. Get a ranked test queue with sample sizes, run times and rules for calling a winner."
 job: write-emails
 thinking: medium
 thinking_why: "It ranks tests and does sample size sums from your volumes. A mid-size model handles this well."
 
 headline: "Email test planner"
-subhead: Give it your monthly revenue, list size, flows with their monthly recipients and your send history. It builds a ranked queue of email and popup tests, each with a hypothesis, a sample size, a run time, the winning metric and a rule for when to call it.
+subhead: Give it your monthly revenue, list size, flows with their monthly recipients and your send history. It builds a ranked queue of email and popup tests. Each one has a hypothesis, a sample size, a run time, the metric that decides it and a rule for when to call it.
 
 explain: |
-  Most email tests teach nothing. A store changes two things, picks a winner on open rate after a few hours and moves on. The email with more opens often earns fewer orders. In one test the source reports, two subject lines had 68 and 69 percent opens but 11.6 and 3.8 percent placed-order rates.
+  Most email A/B tests teach nothing. A store changes two things, picks a winner on open rate after a few hours and moves on. The email with more opens often earns fewer orders. In one test the source reports, two subject lines had 68 and 69 percent opens but 11.6 and 3.8 percent placed-order rates.
 
-  This skill plans tests the way a careful buyer would. It writes a hypothesis first and picks tests where your volume is, so a test can finish. It sets the sample size and the winning metric, which is placed orders or revenue and not opens. It sets campaigns to a manual 50/50 split, and tells you when your list is too small to test a given thing. It ranks tests by likely impact so you start with the biggest.
+  This email test planner works the way a careful buyer would. It writes a hypothesis first. It picks tests where your volume is, so a test can finish. It sets the sample size and the winning metric, which is placed orders or revenue and not opens. It sets campaigns to a manual 50/50 split.
+
+  It also tells you what not to test yet. If a flow reaches too few people, the test goes on a skip list with the reason. It ranks the rest by likely impact, so you start with the biggest.
 
 when:
-  - You want to test your emails but do not know where to start.
-  - You ran an A/B test and are not sure the winner is real.
+  - You want to test your emails and popups but do not know where to start.
+  - You ran an email A/B test and are not sure the winner is real.
   - You have a small list and need to know what you can test and what you cannot.
+  - You want a steady testing routine for Klaviyo, one test at a time.
+
+not_for:
+  - "You want to read how your last emails performed: use the Email and SMS performance reader."
+  - "You want to find missing flows or timing gaps: use the Email automation gaps and trigger reviewer."
+  - "You need popup offers to test, ranked by cost: use the Welcome pop-up offer tester."
+  - "Your flows reach only a few hundred people a month in total: a test can't finish yet, so grow the list first."
 
 you_give:
   - Monthly revenue and email list size
-  - Your flows with recipients per month and revenue per flow
-  - Campaign send history, with revenue per send if you have it
+  - Your flows, with recipients per month and revenue per flow
+  - Your last 8 or more campaigns, with revenue per send if you have it
   - Your current popup signup rate (optional)
+  - Your email tool (optional)
 
 you_get:
   - A ranked test queue, each test with a hypothesis
-  - Sample size and run time for every test
+  - A sample size and run time for every test
   - Set-up notes, the winning metric and the rule for calling a result
-  - A list of tests to skip for now, and why
+  - A skip list of tests your volume can't support, with the reason
+  - A test cadence and what to record after each result
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your monthly revenue, list size, flows with recipients and your last 8 or more campaigns.
-  - Pick the first test from the queue and set it up with the notes in the plan.
-  - Wait for the sample size before you read the result.
-  - Record each result, then ask the skill to update the queue.
+  - Open the skill in your AI. Claude, ChatGPT and Gemini all work. Add it to your AI, or copy it and paste it into a new chat.
+  - Paste your monthly revenue, list size, flows with recipients, and your last 8 or more campaigns. A results export from your email tool works.
+  - Read the skip list first. It shows what your volume can't test yet.
+  - Pick the first test from the queue and set it up with the notes in the plan. Check that your email plan includes A/B testing.
+  - Wait for the full sample size before you read the result. Record the result, then ask the skill to update the queue.
 
 how_it_works:
   - title: Writes a hypothesis
@@ -43,13 +54,13 @@ how_it_works:
   - title: Finds where the volume is
     text: The first email in each flow has the most impact. It does not plan tests on emails that reach 100 people a month.
   - title: Sets sample sizes
-    text: Popups need 3,000 to 5,000 impressions per variant and at least 15 days. Flows need at least 1,000 recipients per variant. Campaigns use a manual 50/50 split.
+    text: Rules of thumb from the sources. Popups need 3,000 to 5,000 impressions per variant and at least 15 days. Flows need at least 1,000 recipients per variant. Campaigns use a manual 50/50 split.
   - title: Picks the winning metric
-    text: Placed orders or revenue per recipient. Not opens or clicks, except clicks in send-time tests.
+    text: Placed order rate or revenue per recipient. Not opens or clicks, except clicks in send-time tests.
   - title: Ranks the tests
     text: Popup, flow and campaign tests each have an order of impact, based on the sources.
   - title: Sets the rule for calling it
-    text: One change per test, a win probability to reach and what to do if the overall result and version A disagree.
+    text: One change per test, and no early winner on a small list. If the overall result and version A disagree, run it again with more people.
   - title: Plans the cadence
     text: One test a week for stores that can, or one every 2 to 4 weeks for others, and a record of every result.
 
@@ -66,11 +77,28 @@ output_shape: |
   <placed order rate | revenue per recipient>; clicks only for <send-time tests>
 
   SKIP FOR NOW
-  <test> | why: <volume too small | gain too small>
+  <test> | why: <volume too small | gain too small | flow recipients MISSING>
 
   CADENCE
   <one test every n weeks> | record each result in <place>
+
+  CHECKS MISSED: <checks it could not run, or none>
   MISSING: <list size | flow recipients | revenue | send history>
+
+output_sample:
+  input:
+    - "Your monthly revenue and email list size"
+    - "Your flows, with recipients per month and revenue per flow"
+    - "Your last 8 or more campaigns, with revenue per send (optional)"
+    - "Your current popup signup rate (optional)"
+  prerequisites:
+    - "An email tool with A/B testing, such as Klaviyo"
+  output:
+    - {name: "Test queue", contains: "Ranked tests, each with a hypothesis, sample size, run time, set-up notes and a rule for calling it."}
+    - {name: "Winning metric", contains: "Placed order rate or revenue per recipient, and when clicks are allowed instead."}
+    - {name: "Skip for now", contains: "Tests your volume can't support yet, each with the reason."}
+    - {name: "Cadence", contains: "How often to test and where to record each result."}
+    - {name: "Checks missed and missing", contains: "Any check it could not run and the numbers that would sharpen the plan."}
 
 tweaks:
   - what: Recipients per flow
@@ -105,7 +133,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its A/B tests show win probability and placed order rate, and flows can split into paths for timing tests."}
+    - {name: "Klaviyo", why: "Its A/B tests show win probability and placed order rate, and flows can split into paths for timing tests. Check that your plan includes A/B testing."}
     - {name: "Google Sheets", why: "A test log with one row per test keeps hypothesis, sample, result and the next step in one place."}
   inputs:
     - "Revenue per recipient for each flow and campaign"
@@ -121,3 +149,5 @@ terms:
     meaning: How likely it is that one version really beat the other, shown by your email tool.
   - term: Variant
     meaning: One version of the thing you are testing.
+  - term: Manual 50/50 split
+    meaning: You send version A to half your list and version B to the other half, and read the result yourself.

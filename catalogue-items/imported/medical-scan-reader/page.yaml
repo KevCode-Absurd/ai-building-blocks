@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows set read and write calls.
 new_slug: medical-scan-reader
 name: Medical scan reader
-summary: Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to
-  use in MATLAB.
+summary: Read DICOM, NIfTI or NRRD scans into MATLAB with the right spacing and orientation. Needs MATLAB. NRRD and slices need a paid add-on.
 job: build-software
 headline: Medical scan reader
-subhead: Scan files from DICOM, NIfTI or NRRD loaded into MATLAB as clean
-  volumes with the right voxel size, orientation and patient coordinates. It
-  saves you from hand-rolling the reading code and getting the geometry wrong.
+subhead: Scan files from DICOM, NIfTI or NRRD loaded into MATLAB as clean volumes with the right voxel size, orientation and patient coordinates. It saves you from hand-rolling the reading code and getting the geometry wrong.
 explain: |
   Scan files from DICOM, NIfTI or NRRD loaded into MATLAB as clean volumes with the right voxel size, orientation and patient coordinates. It saves you from hand-rolling the reading code and getting the geometry wrong.
 
@@ -18,6 +15,10 @@ when:
   - You need to list the series inside a DICOM study.
   - You want a slice in a set orientation, such as coronal.
   - You must remove patient details from DICOM files before sharing.
+not_for:
+  - "You want to view or display a 3D volume: use the matlab-display-volume skill, as this one only reads and writes the data."
+  - "You want to show a 2D medical image with notes on it: use the matlab-display-image skill."
+  - "You have normal photos or graphics such as PNG, TIFF or JPEG: use imread in MATLAB. This skill is also not a stand-in for a clinician reviewing the scans."
 you_give:
   - Paths to your DICOM, NIfTI or NRRD files
   - The MATLAB toolboxes you have installed (optional)
@@ -28,8 +29,34 @@ you_get:
   - A list of DICOM series
   - Anonymised DICOM files when asked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Medical Imaging Toolbox.
+  - Check that you have MATLAB and which toolboxes are installed. Type ver in MATLAB to see the list.
+  - Know that the Medical Imaging Toolbox is a paid MathWorks add-on. NRRD reading, extractSlice and updateOrientation need it. Without it you can only read DICOM and NIfTI.
+  - Paste this skill into Claude, ChatGPT or Gemini, or load it in an AI tool that can run MATLAB.
+  - Give your AI the file path, your toolbox list and what you want out, such as a volume, a slice or contours.
+  - Run the MATLAB code it writes. Check the size, spacing and orientation it prints against what you expect.
+  - If you share DICOM files, ask for anonymising and open a copy to confirm patient details are gone.
+output_sample:
+  input:
+    - The path to your DICOM folder, NIfTI file or NRRD file
+    - Which MATLAB toolboxes you have (optional)
+    - What you want out, such as a volume, a slice, a series list or contours
+    - The slice number and view you want, such as coronal (optional)
+  prerequisites:
+    - MATLAB with the Image Processing Toolbox
+    - The Medical Imaging Toolbox, a paid MathWorks add-on, for NRRD reading, extractSlice and updateOrientation
+    - An AI that can run MATLAB, or you run the code it writes
+  output:
+    - name: Volume read code
+      contains: MATLAB code that loads your folder or file with medicalVolume, or with dicomreadVolume or niftiread if you lack the add-on.
+    - name: Voxel array
+      contains: A 3D array of scan values, rescaled where the file allows, such as Hounsfield units for CT.
+    - name: Spacing and orientation
+      contains: The voxel size in mm and the orientation as text, such as transverse, coronal or sagittal.
+    - name: Spatial referencing
+      contains: Volume size, patient coordinate system and slice positions, taken from medicalref3d or imref3d.
+    - name: Series table
+      contains: A table from dicomCollection with one row per series, showing modality, description and size.
+    - name: Oriented slice
+      contains: One slice in the view you chose, with its position and spacing, from extractSlice.
+    - name: Anonymised DICOM files
+      contains: Copies of your DICOM files with patient details removed, made only when you ask.

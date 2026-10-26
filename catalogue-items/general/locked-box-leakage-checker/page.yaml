@@ -1,53 +1,116 @@
 new_slug: locked-box-leakage-checker
 name: Locked-box leakage checker
 headline: Locked-box leakage checker
-summary: Find unrecovered nonpermitted leakage still reducing the locked-box equity price.
+summary: Find money that left the company for the seller after the locked-box date, and see how much it cuts the equity price at closing.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Leakage ledger and seller price after unrecovered deductions. Share signed locked-box price, identified seller transfers, documented permitted leakage and distinct confirmed repayments.
+subhead: Give it the signed locked-box price, the transfers to the seller since the locked-box date, the ones the deal allows and any the seller has paid back. It sorts the transfers into allowed, repaid and leakage. You get the leakage total and the price after it.
 explain: |-
-  Leakage ledger and seller price after unrecovered deductions.
+  In a locked-box deal the buyer pays a fixed price. The price is based on the company's accounts at a past date, the locked-box date. From that date, the seller promises that no value leaks out of the company. If money does leak out to the seller or its related parties, the price falls by the same amount. This locked-box leakage checker adds that up.
 
-  Acquisition closing. Illustrative figures only. 8 identified less2 permitted and3 repaid leaves3; price100 becomes97. Without repayment price is94.
+  Not every transfer is leakage. The deal lists what is permitted, such as agreed salaries. Anything the seller has paid back also comes off. What is left is unrecovered leakage. It is taken off the fixed price once. If a transfer is already recovered through another line at closing, it is not counted again. Disputed items go in their own list until someone settles them.
+
+  Practice numbers: the price is 100 and 8 of transfers were found. 2 are permitted and 3 have been repaid. That leaves 3 of leakage and a price of 97. With no repayment the leakage is 6 and the price is 94. The allowed and repaid parts together can never be more than the transfers.
 when:
-  - You need leakage ledger and seller price after unrecovered deductions.
-  - You work on acquisition closing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are a buyer and the closing is near, and you want to know how much leakage to take off the price.
+  - You are a seller and want to check a buyer's leakage claim against the permitted list.
+  - A bank statement shows payments to the seller's group since the locked-box date and you need to sort them.
+  - The seller has repaid some of the money and you need to show what is still owed.
+not_for:
+  - You are on a completion accounts deal, where the price is set after closing. Leakage rules for a locked box do not apply.
+  - "You want to work out what sellers receive at closing after debt and costs: use the Closing equity proceeds checker."
+  - "A ticking fee for delay is also in play: use the Deal ticking fee checker."
+  - You want a ruling on a legal claim, a liability cap or a tax gross-up. A deal lawyer or accountant must confirm those.
 you_give:
-  - Signed locked-box price, identified seller transfers, documented permitted leakage and distinct confirmed repayments.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed locked-box price (from the share purchase agreement)
+  - The locked-box date and the closing date
+  - A ledger of transfers to the seller or its related parties since the locked-box date, with date and amount (from bank or accounts records)
+  - The list of permitted leakage in the agreement
+  - Proof of any repayment, kept separate from the permitted items (optional)
+  - The currency and units, such as USD millions
 you_get:
-  - Leakage ledger and seller price after unrecovered deductions.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A leakage ledger that sorts each transfer as permitted, repaid or leakage
+  - Your total unrecovered leakage
+  - The price after leakage
+  - A check that the permitted and repaid parts do not overlap or exceed the transfers
+  - A list of disputed items and missing facts
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste the price, the two dates and the transfer ledger. Add the permitted list from the agreement and any proof of repayment."
+  - Say which transfers are disputed. They will be listed on their own and left out of the total until you decide.
+  - Check the result by hand. Leakage is transfers less permitted less repaid. The new price is the signed price less leakage.
+  - Have your deal lawyer or accountant confirm the price change before you rely on it.
+  - Read MISSING and CHECKS MISSED first.
 how_it_works:
-  - title: 1. Tag actual transfers within the contractual period and locate consent or permitted-leakage schedule
-    text: Tag actual transfers within the contractual period and locate consent or permitted-leakage schedule.
-  - title: 2. Remove documented permitted transfers and distinct confirmed repayments from identified gross transfers; separate disputed items
-    text: Remove documented permitted transfers and distinct confirmed repayments from identified gross transfers; separate disputed items.
-  - title: 3. Deduct unrecovered leakage from fixed equity price and eliminate amounts already recovered through another closing line
-    text: Deduct unrecovered leakage from fixed equity price and eliminate amounts already recovered through another closing line.
+  - title: Tags the transfers
+    text: Picks out the real transfers inside the period between the locked-box date and closing, and finds the permitted-leakage list.
+  - title: Removes allowed and repaid parts
+    text: Takes permitted transfers and confirmed repayments off the gross transfers, and lists disputed items apart.
+  - title: Avoids counting twice
+    text: Drops any amount already recovered through another line at closing.
+  - title: Prices the leakage
+    text: Takes the unrecovered leakage off the fixed equity price. It never goes below zero.
+  - title: Marks the gaps
+    text: Writes MISSING for any number you did not give and lists any check it could not run. It never fills a gap with zero.
 output_shape: |-
-  Leakage ledger and seller price after unrecovered deductions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Price <amount> | Leakage <amount> | Price after leakage <amount>
+
+  LEAKAGE LEDGER
+  <one row per transfer: date | payee | amount | permitted, repaid, leakage or disputed>
+
+  SCOPE AND SOURCES
+  <locked-box date, closing date, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <signed price, transfers, permitted list, repayments, treatment of disputed items>
+
+  CALCULATIONS AND TIES
+  <leakage = transfers - permitted - repaid; the check that permitted plus repaid does not exceed transfers>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The signed locked-box price
+    - A ledger of transfers to the seller since the locked-box date
+    - The permitted-leakage schedule from the agreement
+    - Proof of any repayment (optional)
+  prerequisites:
+    - The share purchase agreement with the locked-box date and permitted list
+    - Bank or accounts records for the period
+  output:
+    - name: RESULT
+      contains: The signed price, the total unrecovered leakage and the price after leakage.
+    - name: LEAKAGE LEDGER
+      contains: Each transfer marked as permitted, repaid, leakage or disputed.
+    - name: SCOPE AND SOURCES
+      contains: The locked-box and closing dates, currency and units, with the source of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, including how disputed items are treated.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that nothing is counted twice.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Permitted and repaid subsets must not overlap or exceed transfers.
+  - what: No repayment yet
+    how: Set repaid to zero only if none was paid. Leakage rises by that amount and the price falls.
+  - what: A disputed transfer
+    how: Move it to the disputed list. It stays out of the total until it is settled.
+  - what: A different permitted list
+    how: Paste the amended schedule. Only transfers on it come off as permitted.
 judge:
   - Permitted and repaid subsets must not overlap or exceed transfers.
   - Prior recovery evidence prevents collecting the same item twice.
@@ -62,15 +125,24 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed share purchase agreement pages on the locked box and permitted leakage
+    - Bank statements or a ledger for the period
+    - A named reviewer, such as your deal lawyer or accountant
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Locked box
+    meaning: A deal where the price is fixed from the accounts at a past date, with no changes after closing.
+  - term: Locked-box date
+    meaning: The date the price is based on. From then on, value must not leak out to the seller.
+  - term: Leakage
+    meaning: Value that goes from the company to the seller or its related parties after the locked-box date.
+  - term: Permitted leakage
+    meaning: Transfers the agreement lets the seller take without a price cut.
+  - term: Disputed item
+    meaning: A transfer where the buyer and seller disagree on whether it counts as leakage.

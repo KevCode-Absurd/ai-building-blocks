@@ -1,0 +1,42 @@
+slug: agency-engineering-wordpress-performance
+name: WordPress Performance Engineer agent
+summary: "Find why your WordPress site is slow. Get ranked fixes for plugins, caching, the database, images and hosting, each with a before and after check."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-wordpress-performance.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wordpress-performance.md
+  licence: MIT
+  original_name: WordPress Performance Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 58ed429ace903aac3a2c9e190ecae5b61966b7330e9e51ea66aa03eb4112854f
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - WordPress Performance Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: WordPress Performance Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wordpress-performance.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

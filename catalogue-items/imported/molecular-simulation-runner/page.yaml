@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Setup choices change results and need expert care.
 new_slug: molecular-simulation-runner
 name: Molecular simulation runner
-summary: Give it a protein or molecule. Get a simulation run and an analysis of
-  how it moves.
+summary: Run a molecular dynamics simulation of your protein and see which parts stay rigid and which flex. Get RMSD and RMSF plots and a plain reading.
 job: research-topics
 headline: Molecular simulation runner
-subhead: A simulation of how your protein or molecule moves, followed by a clear
-  analysis of that motion. You can see which parts stay rigid, which flex, and
-  how a mutation or a drug changes it.
+subhead: A simulation of how your protein or molecule moves, followed by a clear analysis of that motion. You can see which parts stay rigid, which flex, and how a mutation or a drug changes it.
 explain: |
   A simulation of how your protein or molecule moves, followed by a clear analysis of that motion. You can see which parts stay rigid, which flex, and how a mutation or a drug changes it.
 
@@ -18,8 +15,12 @@ when:
   - You need the motion of a ligand inside a binding pocket.
   - You are studying a protein in a membrane.
   - You have a trajectory file and need the analysis.
+not_for:
+  - "You need binding free energy or how long a ligand stays bound from one run: use a dedicated free-energy method or lab data instead."
+  - "You have not checked the protonation and the ligand setup: ask a structural biologist to review them first."
+  - "You only want a quick guess at a protein's shape: use a structure prediction tool instead of a full simulation."
 you_give:
-  - A protein or molecule structure file
+  - A cleaned protein or molecule structure file (PDB)
   - The question, such as stability or binding
   - Your hardware, CPU or GPU
   - Temperature and run length (optional)
@@ -30,8 +31,37 @@ you_get:
   - A plain reading of the motion
   - Notes on what the run cannot show
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and use computing power.
+  - Check you have Python 3.11 or newer with OpenMM and MDAnalysis installed. A GPU is optional.
+  - Clean your structure file first. PDBFixer can fix a raw PDB file.
+  - Paste the skill into your AI, or upload the skill folder. Use an AI that can run Python code.
+  - Add your structure file and say what you want to learn, such as stability or binding.
+  - Check the RMSD plot first. If it keeps drifting, the run may need more time.
+  - Read the notes on what the run cannot show before you use the result.
+output_sample:
+  input:
+    - Your protein or molecule structure file, cleaned of errors
+    - The question you want answered, such as stability or binding
+    - Your hardware, CPU or GPU
+    - Temperature and run length (optional)
+  prerequisites:
+    - An AI that can run Python 3.11 or newer code
+    - OpenMM and MDAnalysis installed, plus matplotlib for plots
+    - PDBFixer to clean a raw PDB file (optional, installed separately)
+    - A GPU is optional, a CPU works but runs slower
+  output:
+    - name: System preparation
+      contains: Your structure loaded with a force field, water added, and the system ready to simulate.
+    - name: Energy minimization
+      contains: A relaxed starting structure with strain removed before any motion is run.
+    - name: NVT equilibration
+      contains: A short run that brings the system to your chosen temperature.
+    - name: NPT equilibration and production
+      contains: The main run at steady temperature and pressure, saved as a trajectory file.
+    - name: RMSD analysis
+      contains: A plot of how far the structure drifts from its starting shape over time.
+    - name: RMSF analysis
+      contains: A per-residue plot showing which parts of the protein move the most.
+    - name: Protein-ligand contacts
+      contains: Which residues touch the ligand during the run, when you have a ligand.
+    - name: Validation and provenance
+      contains: Notes on software versions and what the run cannot prove.

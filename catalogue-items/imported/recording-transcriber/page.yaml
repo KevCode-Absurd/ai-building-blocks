@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It runs a set tool and tidies the result.
 new_slug: recording-transcriber
 name: Recording transcriber
-summary: Give it audio or video. Get the words written out, with each speaker labelled.
+summary: Turn a recording into a written transcript you can search and quote. Give it audio or video. You get text, with each speaker labelled if you ask.
 job: work-with-audio
 headline: Recording transcriber
-subhead: Your audio or video turned into written words, with each speaker
-  labelled if you want. You get a clean text file or structured data you can
-  search, quote or summarise.
+subhead: Your audio or video turned into written words, with each speaker labelled if you want. You get a clean text file or structured data you can search, quote or summarise.
 explain: |
   Your audio or video turned into written words, with each speaker labelled if you want. You get a clean text file or structured data you can search, quote or summarise.
 
@@ -17,18 +15,40 @@ when:
   - You have an interview and want quotes with names attached.
   - You need subtitles or searchable text for a video.
   - You have many audio files to process in one go.
+not_for:
+  - "You need live captions while people speak: use your meeting app's built-in captions."
+  - "You need a record for court or other legal use: use a human transcriber, or have a person check every line."
+  - "You have no OpenAI API key or cannot run code: ask a person or a transcription service to type it up."
 you_give:
-  - Audio or video file or files
-  - Language hint (optional)
-  - Known speaker names (optional)
-  - OpenAI API key set on your machine
+  - Your audio or video file, or several files
+  - Language of the recording (optional)
+  - A short clean audio sample of each known speaker, up to 4 (optional)
+  - Your OpenAI API key, saved on your machine
 you_get:
   - Transcript in text or JSON
   - Speaker labels (optional)
   - Output in a folder per job
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the OpenAI Audio API.
+  - Save your OpenAI API key on your machine as OPENAI_API_KEY. Never paste it into the chat.
+  - Open an AI that can run code and has Python. Give it this skill and your audio or video files.
+  - Say if you want speaker labels. If you do, add a short clean audio sample for each known speaker.
+  - Check the transcript for wrong words, wrong speakers and odd segment breaks. Ask for one fix if needed.
+  - Find your results in the output/transcribe folder, in one folder per job. Then ask your AI to turn the transcript into minutes or a summary.
+output_sample:
+  input:
+    - Your audio or video file, or several files
+    - "The output you want: plain text or labelled speakers"
+    - Language of the recording (optional)
+    - A short clean audio sample of each known speaker, up to 4 (optional)
+  prerequisites:
+    - An AI that can run code and use Python
+    - An OpenAI API key saved on your own machine, not pasted in chat
+  output:
+    - name: Transcript text file
+      contains: The spoken words written out as plain text, made with the fast model by default.
+    - name: Diarized JSON
+      contains: The words split into segments, each with a speaker label, when you ask for speakers.
+    - name: Job folder
+      contains: One named folder per job under output/transcribe, so many files do not overwrite each other.
+    - name: Quality check
+      contains: A check of wording, speaker labels and segment edges, with one targeted retry if something is off.

@@ -1,6 +1,6 @@
 new_slug: plain-english-editor
 name: "Plain English editor"
-summary: "Paste a draft. Get it back in plain words, with each cut explained and a check that you would still say it."
+summary: "Paste a draft and get it back in plain English, with every cut explained and a read-aloud check. Edit stiff emails, reports and pages."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It follows a fixed list of moves and explains each one."
@@ -17,6 +17,10 @@ when:
   - "An email, report or page you wrote sounds stiff or padded."
   - "A draft is full of jargon and you want a stranger to follow it."
   - "You want to cut length without losing what you mean."
+not_for:
+  - "You want to smooth machine-sounding ad copy: use the Anti-AI-slop copy editor."
+  - "You are editing legal or contract wording where exact terms must stay: ask a lawyer or the person who owns the contract."
+  - "You want to turn a flat story scene into a vivid one: use the Show-don't-tell scene rewriter."
 
 you_give:
   - "Your draft"
@@ -34,6 +38,22 @@ how_to_use:
   - "Say who reads it and what you want them to do."
   - "Go through the list of changes and put back any you disagree with."
   - "Read the result aloud. If you would not say a line, change it."
+output_sample:
+  input:
+    - Your draft, pasted as it is
+    - Who will read it and what they should do (optional)
+    - Your brand file or voice notes (optional)
+  output:
+    - name: THE POINT
+      contains: One sentence on what the piece is trying to say and who it is for.
+    - name: EDITED TEXT
+      contains: Your draft rewritten in short, plain sentences with a named actor in each one.
+    - name: CHANGES
+      contains: Each cut or swap shown as original and new, with the reason for the change.
+    - name: QUESTIONS
+      contains: Gaps marked MISSING, such as who did something, for the line where it matters.
+    - name: CHECKS MISSED
+      contains: One line for each check the edit still misses and why, or none.
 
 how_it_works:
   - title: "States the point"

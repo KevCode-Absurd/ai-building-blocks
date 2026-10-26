@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Grouping orders well needs careful math.
 new_slug: picking-batch-planner
 name: Picking batch planner
-summary: Give it a day of orders. Get groups to pick together so pickers walk
-  less, with the expected distance saved.
+summary: Group a day of orders into picking batches so pickers walk less. You get the batches, the walking distance saved and the sort steps after picking.
 job: plan-supply-chain
 headline: Picking batch planner
-subhead: Group a day of orders so pickers pick them together and walk less, with
-  the expected distance saved. Fewer trips mean faster orders and lower labour
-  cost.
+subhead: Group a day of orders so pickers pick them together and walk less, with the expected distance saved. Fewer trips mean faster orders and lower labour cost.
 explain: |
   Group a day of orders so pickers pick them together and walk less, with the expected distance saved. Fewer trips mean faster orders and lower labour cost.
 
@@ -18,6 +15,10 @@ when:
   - Your daily orders have lots of repeated items.
   - You have urgent orders that cannot wait for a batch.
   - You want to test a cart size before buying.
+not_for:
+  - Your orders are high-value or complex, so pick them one at a time. Batching adds sorting and more mispick risk.
+  - You have no space or staff to sort orders after picking. Use cluster picking with a multi-order cart, or pick one order at a time.
+  - You need to time when groups of orders are released to the floor. Use wave-planning-optimization for that.
 you_give:
   - A list of the day's orders with items
   - Warehouse layout and pick locations
@@ -29,8 +30,28 @@ you_get:
   - Sort steps after picking
   - Risks such as mispicks flagged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code (Python).
+output_sample:
+  input:
+    - Your day's orders, with the items on each line
+    - Your warehouse layout and pick locations
+    - Your cart size, in orders and units
+    - Order priorities and cut-off times (optional)
+    - Your current picks per hour and walking distance per order (optional)
+  prerequisites:
+    - An AI that can run code (Python) for the best results
+  output:
+    - name: Performance comparison
+      contains: A table comparing single-order picking, your current batching and the planned batching on travel, picks per hour and cycle time.
+    - name: Batch details
+      contains: For each batch, the orders, line count, shared items, estimated travel, pick time, sort time and any priority orders.
+    - name: Batching statistics
+      contains: Total orders, number of batches, average batch size and how many batches are of each size.
+    - name: Travel savings
+      contains: Walking distance with single-order picking against batched picking, and the distance saved.
+    - name: Productivity impact
+      contains: Picker hours with and without batching, and the labour hours saved.
+    - name: Recommendations
+      contains: Next steps such as extra sort stations, express batches for priority orders and cart size changes.

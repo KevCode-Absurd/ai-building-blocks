@@ -1,15 +1,13 @@
 slug: clinic-claims-collections-bridge
 name: Clinic claims collections bridge
-summary: A claims receivable and remittance settlement bridge
+summary: "Roll a clinic's claims receivable forward and match insurer payments to the bank deposit, using totals only. Any gap is listed, never hidden."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -33,3 +31,6 @@ credits:
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
 package_files: all
+before: []
+next: [receivables-allowance-movement-bridge, bank-fee-reconciliation-checker, noncash-working-capital-bridge]
+needs_mode: manual

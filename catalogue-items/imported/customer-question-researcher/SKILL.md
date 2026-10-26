@@ -6,7 +6,13 @@ argument-hint: "<question or topic>"
 
 # /customer-research
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+## Before you start
+
+- Required: the question or topic. If it is missing, ask for it once and stop.
+- Optional: the account or customer name, and who the answer is for (your team, the customer, leadership).
+- Where to search: your AI can only search tools you have connected, such as a help center or knowledge base, cloud files, a CRM, a support desk, chat and email. Check which are connected before you start and name them in the brief.
+- If nothing is connected, ask the user to paste the docs, past ticket replies or notes that matter. Search only those, then say that is all you used.
+- Never invent a source, a quote, a date or a policy. If you did not find it, write it under Gaps & Unknowns.
 
 Multi-source research on a customer question, product topic, or account-related inquiry. Synthesizes findings from all available sources with clear attribution and confidence scoring.
 
@@ -37,18 +43,18 @@ Before searching, clarify what you're actually trying to find:
 Search systematically through the source tiers below, adapting to what is connected. Don't stop at the first result — cross-reference across sources.
 
 **Tier 1 — Official Internal Sources (highest confidence):**
-- ~~knowledge base (if connected): product docs, runbooks, FAQs, policy documents
-- ~~cloud storage: internal documents, specs, guides, past research
+- Knowledge base (if connected): product docs, runbooks, FAQs, policy documents
+- Cloud storage (if connected): internal documents, specs, guides, past research
 - Product roadmap (internal-facing): feature timelines, priorities
 
 **Tier 2 — Organizational Context:**
-- ~~CRM notes: account notes, activity history, previous answers, opportunity details
-- ~~support platform (if connected): previous resolutions, known issues, workarounds
+- CRM notes (if connected): account notes, activity history, previous answers, opportunity details
+- Support desk (if connected): previous resolutions, known issues, workarounds
 - Meeting notes: previous discussions, decisions, commitments
 
 **Tier 3 — Team Communications:**
-- ~~chat: search for the topic in relevant channels; check if teammates have discussed or answered this before
-- ~~email: search for previous correspondence on this topic
+- Chat (if connected): search for the topic in relevant channels; check if teammates have discussed or answered this before
+- Email (if connected): search for previous correspondence on this topic
 - Calendar notes: meeting agendas and post-meeting notes
 
 **Tier 4 — External Sources:**
@@ -60,6 +66,8 @@ Search systematically through the source tiers below, adapting to what is connec
 - Similar situations: how similar questions were handled before
 - Analogous customers: what worked for comparable accounts
 - General best practices: industry standards and norms
+
+Tier 4 and Tier 5 are never enough for a customer-ready answer on their own. If the answer rests only on them, label it "Not confirmed", set confidence to Low, and say the user must check it with a named owner before it goes to a customer. Mark every inference as inference.
 
 ### 3. Synthesize Findings
 
@@ -108,7 +116,7 @@ If no connected sources yield results:
 - Perform web research on the topic
 - Ask the user for internal context:
   - "I couldn't find this in connected sources. Do you have internal docs or knowledge base articles about this?"
-  - "Has your team discussed this topic before? Any ~~chat channels I should check?"
+  - "Has your team discussed this topic before? Any chat channels I should check?"
   - "Is there a subject matter expert who would know the answer?"
 - Be transparent about limitations:
   - "This answer is based on web research only — please verify against your internal documentation before sharing with the customer."

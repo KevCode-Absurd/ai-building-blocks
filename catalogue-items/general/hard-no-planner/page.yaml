@@ -1,63 +1,74 @@
 new_slug: hard-no-planner
 name: "Hard no planner"
-summary: "Paste the request you must turn down and why. Get a word-for-word no that keeps trust and points to another path."
+summary: "Turn down a request without losing trust. Get a clear, respectful no with your real reasons, a fairness check and another way forward."
 job: lead-people
 thinking: low
 thinking_why: "It follows a short fixed pattern and writes a few lines."
 
 headline: "Hard no planner"
-subhead: Paste a request you must turn down, who asked and why you cannot say yes. It restates what they asked, lists your real reasons, writes a clear no and offers another route to what they want. You get the exact words to say or send.
+subhead: Paste a request you must turn down, who asked and why you cannot say yes. It says the request back, keeps only your true reasons, writes the no in one plain sentence and offers another way to reach what they want. You get words you can say or send.
 
 explain: |
-  A no that is vague or hidden behind policy makes people feel brushed off. A no that is harsh makes them feel small. In both cases they leave without a path forward and trust drops.
+  A no that hides behind policy makes people feel brushed off. A harsh no makes them feel small. Either way they leave with no way forward, and trust drops. Most people also put the answer off for days because they dread it.
 
-  This skill starts from how you would want to be treated in their place. It restates their request so they know you understood it, lists the reasons that are really true, and says no in one plain sentence. It then offers another route to the goal behind the request. It checks that the no is fair to the company and to everyone else who might ask, and that you are not using "policy" to avoid saying why.
+  This skill writes how to say no to a request, such as a raise, a refund or a favour. It starts from how you would want to be treated in their place. It says their request back so they know you listened. Then it tests each reason you give: is it the true one, or a cover for another? True reasons stay. "Policy" stays only when the policy really is the reason. Then comes the no in one sentence, with no softening in front of it, and a route to the goal behind the request.
+
+  It also asks if you would give the same answer to anyone who asked, and if the company can afford the opposite. The method follows the golden-rule leadership in Mary Kay Ash's writing. For a quicker one-paste version, see the word-for-word no writer.
 
 when:
   - Someone asks for a raise, a favour, a refund or an exception you cannot give.
   - You keep putting off an answer because you do not want to disappoint them.
-  - You are about to write "unfortunately due to policy" and know it will land badly.
+  - You are about to write 'unfortunately, due to policy' and know it will land badly.
+  - A client asks for more scope than the deal covers and you need to hold the line kindly.
+
+not_for:
+  - "You must tell someone they are being let go or have broken a rule: use the layoff plan writer for cuts, and HR or a lawyer for discipline or legal disputes."
+  - "You want to give feedback on someone's work or behaviour, not decline a request: use the hard feedback message writer."
+  - "You want a quick one-paste version with no setup: use the word-for-word no writer. This skill adds the true-reason test and the fairness check."
+  - "You are too angry or hurt to write calmly: start with the Anger pause and repair planner."
 
 you_give:
-  - The request and who made it
-  - Your real reasons for saying no
-  - What the person is trying to achieve (optional)
-  - What you can offer instead (optional)
+  - "The request, who made it and when"
+  - "Your real reasons for saying no, even if they feel awkward"
+  - "What you think they are trying to achieve (optional)"
+  - "What you can honestly offer instead (optional)"
+  - "Whether you will say it out loud or send it in writing (optional)"
 you_get:
-  - A restatement of their request in your words
-  - A clear no in one sentence
-  - The real reasons, in plain words
-  - Another route to their goal, and the words to offer it
+  - "Their request said back in your words"
+  - "A guess at the goal behind it, marked as a guess"
+  - "Your real reasons, in plain words"
+  - "The no in one sentence, and the words to offer another route"
+  - "A fairness check, and the whole message in under 150 words"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the request and say who asked and what they probably need.
-  - List your true reasons, even if they feel awkward.
-  - Say what you can offer instead, or ask the skill to suggest options.
-  - Read the words aloud and change any that do not sound like you.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Paste the request and say who asked and when. Add what you think they really need.
+  - List your true reasons, even the awkward ones. If a reason is private, say so and the skill will say you cannot share it. It will not invent a cover story.
+  - Say what you can offer instead, or ask it to suggest options for you to consider. Say whether you will speak it or write it.
+  - Read the no out loud. Change any line you would not say to their face, then send it.
 
 how_it_works:
   - title: Takes their seat
-    text: Writes how you would want to be treated if you were asking.
+    text: Writes one or two lines on how you would want to be treated if you were asking. That sets the tone.
   - title: Restates the request
-    text: Says what they asked so they know you listened.
-  - title: Lists real reasons
-    text: Writes the reasons that are true, and drops the ones that hide behind policy.
-  - title: Says no plainly
-    text: One direct sentence that cannot be misread.
-  - title: Offers another route
-    text: Suggests a path to the goal behind the request.
-  - title: Checks fairness
-    text: Checks the no is fair to the company and others, and that nothing blames the person.
-  - title: Checks the draft
-    text: Runs its own checks and names any it missed.
+    text: Says what they asked in your own words, with what they said they need, so they know you listened.
+  - title: Tests each reason
+    text: Keeps the true reasons and drops cover stories. 'Policy' stays only if it really is the reason.
+  - title: Says the no
+    text: One sentence in the first person, with no softening word in front of it.
+  - title: Finds the goal and a route
+    text: Guesses what they are after and offers one to three routes you said you can do. With none, it marks it MISSING.
+  - title: Checks fairness and blame
+    text: Asks if you would say the same to anyone and removes any line that blames the person for asking.
+  - title: Fits the setting
+    text: Short lines if you will say it, an ordered note if you will send it. Under 150 words.
 
 output_shape: |
   WHAT THEY ASKED
   <request restated>
 
   WHAT THEY MAY BE AFTER
-  <the goal behind it>
+  <the goal behind it, marked as a guess>
 
   THE NO, WORD FOR WORD
   <opening restatement>
@@ -73,6 +84,24 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check missed, or none>
+
+output_sample:
+  input:
+    - "The request, who made it and when"
+    - "Your real reasons for saying no"
+    - "What they are trying to achieve (optional)"
+    - "What you can honestly offer instead (optional)"
+  output:
+    - name: "WHAT THEY ASKED"
+      contains: "Their request said back in your own words, so they know you understood it."
+    - name: "WHAT THEY MAY BE AFTER"
+      contains: "The goal behind the request, marked as a guess unless they said it."
+    - name: "THE NO, WORD FOR WORD"
+      contains: "The restatement, your true reasons, the no in one sentence and another route, in under 150 words."
+    - name: "FAIRNESS CHECK"
+      contains: "One line on whether you would say the same to anyone, and one on whether the company can afford the opposite."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Any reason, option or fact you did not give, and any check it could not pass."
 
 tweaks:
   - what: Your real reasons
@@ -105,11 +134,11 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Restating a request and writing a short reply is text work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Restating a request and writing a short reply is text work. No files, web access or paid tools needed."}
     - {name: "Your email or chat app", why: "Check the length and tone in the place the message will be read."}
   inputs:
     - "The original message asking for the request"
-    - "The policy or limit you are working under"
+    - "The policy or limit you are working under, in plain words"
     - "Options you can honestly offer"
 
 terms:
@@ -117,3 +146,5 @@ terms:
     meaning: To say what someone asked in your own words so they know you understood.
   - term: Hide behind policy
     meaning: To cite a rule as the reason when the real reason is something else.
+  - term: Fairness check
+    meaning: Asking if you would give the same answer to anyone who asked in the same spot.

@@ -1,6 +1,6 @@
 new_slug: hero-image-loading-fixer
 name: "Hero image loading fixer"
-summary: "Give it your slow-LCP page and theme. Get the hero image set to load first, with code."
+summary: "Fix a slow hero image on your store. Give it your PageSpeed result and theme code. You get edited image code, a preload line and size targets."
 job: speed-up-store
 thinking: medium
 thinking_why: "It edits a small amount of theme code with clear rules. A mid-size model handles it well when it can see the section file."
@@ -17,6 +17,10 @@ when:
   - "PageSpeed shows LCP above 2.5 seconds."
   - "The first product image appears late or after a slideshow loads."
   - "Your hero is lazy loaded or fades in."
+not_for:
+  - The slow part of your page is text, not an image. Your page is already fine for this measure, so leave the images alone.
+  - Your server is slow (over 0.8 seconds to respond). Ask your host or a developer first, since image fixes alone will not be enough.
+  - Your hero file is far too big. Resize and compress it first with the store image prep checker, then come back.
 
 you_give:
   - "The PageSpeed LCP element and the page address"
@@ -35,6 +39,30 @@ how_to_use:
   - "Paste the PageSpeed LCP element, the section file for the hero or gallery, and attach the image."
   - "Apply the edits on the copy, then test on slow 3G and slow 4G with the cache switched off in your browser."
   - "Run PageSpeed three times and compare LCP with before."
+output_sample:
+  input:
+    - The slow image named in your PageSpeed result, and the page address
+    - The code for your hero or product gallery section
+    - The image file, or its size and format (optional)
+    - Your server response time from the PageSpeed report (optional)
+  prerequisites:
+    - A duplicate of your theme to edit, not your live one
+    - Access to your theme code, or a developer who has it
+  output:
+    - name: Header summary
+      contains: The store and page, the slow image, the current load time, the target and the likely cause.
+    - name: Code changes
+      contains: Each file with the original code, the new code and the reason for the change.
+    - name: Liquid loop
+      contains: Code so only the first item in a slider loads at once and the rest load later.
+    - name: Preload line for the head
+      contains: A line for each page type that tells the browser to fetch the first image early.
+    - name: Image targets
+      contains: Maximum width, file format, file size goal and the widths to serve.
+    - name: Test list
+      contains: Slow network checks with the cache off, three PageSpeed runs, on mobile and desktop.
+    - name: Checks missed and missing
+      contains: Any checks that failed, and any input you did not give.
 
 how_it_works:
   - title: Reads the LCP element

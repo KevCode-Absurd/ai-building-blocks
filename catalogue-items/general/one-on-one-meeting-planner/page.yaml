@@ -1,6 +1,6 @@
 new_slug: one-on-one-meeting-planner
 name: "One-on-one meeting planner"
-summary: "Name who reports to you and their job. Get a meeting plan with agenda rules, timing and follow-up."
+summary: "Plan a one-on-one meeting with someone who reports to you. Get how often to meet, an outline they write, meeting rules and follow-up."
 job: lead-people
 thinking: low
 thinking_why: "It sets a schedule and agenda from a clear set of rules."
@@ -17,6 +17,10 @@ when:
   - "You manage someone new and have no regular meeting."
   - "Your current one-on-ones feel like status updates."
   - "A person's work is slipping and you want a regular place to catch it."
+not_for:
+  - "You need to run a performance review or a termination talk: use your company's HR process and talk to HR first."
+  - "You want to set goals and numbers for the quarter: use the Objectives and key results writer, then bring them here."
+  - "You want a one-off team meeting agenda: write a short agenda by hand, because this plan is for one person over time."
 
 you_give:
   - "Who the person is and what job they do"
@@ -35,6 +39,29 @@ how_to_use:
   - "Add where you can meet and any numbers they track."
   - "Send them the outline and ask them to fill it in before the meeting."
   - "Check last meeting's actions at the start of the next one."
+output_sample:
+  input:
+    - Who the person is and what job they do
+    - How experienced they are at the task they do now
+    - Where and when you can meet (optional)
+    - The numbers they track (optional)
+  output:
+    - name: The person and the task
+      contains: Their name or role, the task, and a judgment of their experience at it with the evidence.
+    - name: Rhythm
+      contains: How often you meet, how long each meeting lasts, and where it happens.
+    - name: Outline they write
+      contains: Warning indicators, what happened since last time, nagging worries, and their own topics.
+    - name: Your rules
+      contains: Ask one more question when they stop, take notes on the shared outline, and keep a hold file.
+    - name: Actions
+      contains: Each action with an owner and a date, checked first at the next meeting.
+    - name: Weekly hours
+      contains: Your total hours a week across everyone, and what to trim if it is too much.
+    - name: Missing
+      contains: Facts that would change the plan, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Judge their task experience"

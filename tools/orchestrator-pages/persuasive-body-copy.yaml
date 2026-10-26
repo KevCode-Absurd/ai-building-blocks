@@ -1,6 +1,6 @@
 new_slug: persuasive-body-copy
 name: "Build body copy that deepens desire and earns belief"
-summary: "Give it your brief and product facts. Get body copy that sharpens the want, earns belief and shows how it works."
+summary: "Turn your buyer brief and product facts into body copy that sharpens the want, earns belief and checks every claim has proof."
 job: write-ad-copy
 thinking: high
 thinking_why: "It writes, reorders and checks long copy across four steps. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - Your headline gets read, but the copy underneath does not convince.
   - Readers drop out at your biggest claim.
   - Buyers like the idea but say the price is too high or ask how it can work.
+not_for:
+  - "Your headline is not being read yet: use the Ad headline writer first, then come back here."
+  - "You only want to reorder claims you already wrote: use the Sales argument order editor."
+  - "You want to check claims against proof in finished copy: use the Ad claims checker."
 
 you_give:
   - "Your brief: the buyer, the one want and how aware they are"
@@ -35,6 +39,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your brief and product facts. Add your headline and customer words if you have them.
   - It works step by step and saves each result. Read the ladder before you read the finished copy.
+output_sample:
+  input:
+    - "Your buyer brief: who it is for, the one want and how aware they are"
+    - Your product facts, with exact numbers and the proof you can use
+    - Your headline (optional)
+    - Your offer (optional)
+    - Customer words from reviews, tickets or calls (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project, to run the handoff pack
+    - A buyer brief from the Buyer brief writer (optional, you can paste your own)
+  output:
+    - name: "STEP 1: The want section"
+      contains: One block for each move your facts support, with the strongest last, plus the moves kept and dropped.
+    - name: "STEP 2: The belief ladder"
+      contains: Your goal claim, the rungs with a score for each jump, and the copy redrafted in the new order.
+    - name: "STEP 3: How it works"
+      contains: A short chain of cause and effect that explains the result, and the draft with that passage added.
+    - name: "STEP 4: Claims and proof"
+      contains: Each claim paired with its proof, any gap, and a fix for claims that outrun the proof.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Sharpen the want

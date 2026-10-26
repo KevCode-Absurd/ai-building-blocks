@@ -1,22 +1,59 @@
 new_slug: assess-ai-workflow-value
 name: Check AI workflow value
-summary: Compare a pilot's results, costs and harms. Decide whether to grow it, limit it, change it or stop it.
+summary: Check AI workflow value from your pilot data. See the full costs, gains and harms, then decide to grow, limit, change or stop it.
 job: think-and-decide
 headline: Check AI workflow value
 subhead: Use pilot data to check full costs and tradeoffs, then name the next step and its owner.
 explain: Use pilot data to check full costs and tradeoffs, then name the next step and its owner.
 when:
-  - You want to check AI workflow value.
+  - Your team ran an AI pilot and someone asks if it should grow.
+  - You need to say yes or no to a wider rollout, with proof.
+  - A tool saves time, but you worry about quality, privacy or extra review work.
+  - You want to decide who owns the next step and when to review it.
+not_for:
+  - "You only need a spreadsheet of costs or a financial model: build it in Google Sheets or ask your finance lead."
+  - "You want to design tests that score an AI agent's answers: use an evaluation tool or a technical teammate instead."
+  - "You have no pilot yet and no baseline numbers: run a small pilot first, then come back with the results."
 you_give:
-  - The workflow, population, baseline and decision owner.
-  - Pilot outcomes, review effort, costs and known quality or privacy limits.
+  - The workflow, who uses it, and who decides what happens next.
+  - The pilot period and the pilot results.
+  - Your before numbers (baseline) for the same work.
+  - "Cost lines: tools, review time, setup and support."
+  - Known quality, privacy or worker concerns (optional).
 you_get:
-  - An evidence ledger separating observations, assumptions and causal claims.
-  - A bounded decision with full costs, missing evidence, owner and reversal trigger.
+  - A claim ledger that separates what you saw from what you assume.
+  - A full cost view, not only the tool price.
+  - Results split by user or task type.
+  - "One decision: grow, limit, change or stop."
+  - The decision owner, missing evidence and a trigger to reverse it.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Download the whole skill folder, not only SKILL.md. It points to reference and template files that hold the detailed method.
+  - Open an AI that can read files, such as Claude, and add the folder. No code running or paid tool is needed.
+  - "Gather your inputs first: pilot dates, baseline numbers, cost lines and quality measures."
+  - Paste or upload them and ask your AI to run the AI operating economics skill on your pilot.
+  - Check the claim ledger and the missing evidence list before you trust the decision.
+  - Share the decision record with its owner and set the review date.
+output_sample:
+  input:
+    - The workflow, who uses it, and who decides what happens next
+    - Your before numbers (baseline) and the pilot results
+    - "Cost lines: tools, review time, setup and support"
+    - Quality, privacy or worker concerns you already know about (optional)
+  prerequisites:
+    - An AI that can read the full skill folder, including its references and templates
+  output:
+    - name: Claim ledger
+      contains: Each claim marked as an observation, an assumption or a cause, so you see what the data really shows.
+    - name: Outcome and countermetric map
+      contains: The result you want to move, and the quality or harm measures that could get worse.
+    - name: Full cost view
+      contains: All running costs of the workflow, including review effort, not only the tool price.
+    - name: Segment check
+      contains: Results split by user or task type, so averages do not hide problems.
+    - name: Decision record
+      contains: "One choice: grow, limit, change or stop, with its limits, owner and review trigger."
+    - name: Missing evidence and reversal trigger
+      contains: What you still need to know, and what result would make you roll the decision back.
 how_it_works:
   - title: Define the comparison
     text: Specify the changed work, baseline, population, measurable outcome and countermetrics.

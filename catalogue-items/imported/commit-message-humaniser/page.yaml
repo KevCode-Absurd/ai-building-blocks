@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It rewrites a short line.
 new_slug: commit-message-humaniser
 name: Commit message humaniser
-summary: Give it a commit message. Get a plain version that sounds like a
-  careful engineer, with no AI filler.
+summary: Rewrite a commit message so it sounds like a careful engineer wrote it. Cuts AI filler and keeps the Conventional Commits format.
 job: write-and-tell-stories
 headline: Commit message humaniser
-subhead: A commit message that reads like a careful engineer wrote it at the end
-  of a real day, with no AI filler. It keeps the Conventional Commits format.
+subhead: A commit message that reads like a careful engineer wrote it at the end of a real day, with no AI filler. It keeps the Conventional Commits format.
 explain: |
   A commit message that reads like a careful engineer wrote it at the end of a real day, with no AI filler. It keeps the Conventional Commits format.
 
@@ -17,6 +15,10 @@ when:
   - You want messages in Conventional Commits style.
   - A subject line runs far past 72 characters.
   - You want your history to read like a person wrote it.
+not_for:
+  - "You need a squash-merge title for a pull request: write it by hand from the PR summary, since this skill works on one commit."
+  - "You have no diff and no idea why the change was made: ask your AI to read the diff first, or write the body yourself."
+  - "You want your AI to run git commit for you: copy the result and run the command yourself, as this skill only writes the text."
 you_give:
   - The commit message to rewrite
   - The staged changes (optional)
@@ -27,7 +29,24 @@ you_get:
   - Conventional Commits format
   - Filler words removed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill instructions. No code running or files are needed.
+  - Paste the commit message you want to fix.
+  - Add the staged diff and your casing rule if you have them.
+  - Ask for a subject-only rewrite first. Ask for a body only if the why is still unclear.
+  - Check the result. If it is missing the why, add it or answer your AI's question.
+  - Copy the message into git commit, or save it to a file and use git commit -F.
+output_sample:
+  input:
+    - The commit message you want to rewrite
+    - The staged changes or diff (optional)
+    - Your project's casing or style rule (optional)
+    - The issue number to link (optional)
+  output:
+    - name: Subject line
+      contains: One line in type, optional scope and a short command form, aimed at 50 characters and never past 72.
+    - name: Body
+      contains: "Only when needed: the why, breaking changes, migrations or security notes, wrapped at 72 characters."
+    - name: Refs line
+      contains: An issue link such as Closes or Refs, added at the end when you give a number.
+    - name: Breaking change note
+      contains: A BREAKING CHANGE line, written out only when the change really breaks users.

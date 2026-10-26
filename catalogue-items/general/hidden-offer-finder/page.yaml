@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: hidden-offer-finder
 name: "Hidden offer finder"
-summary: "Paste your prices and deals. Get clashes flagged and new offers to try first."
+summary: "Find hidden offers in your own prices and deals. Get live offers listed, clashes flagged and three new offers to try first."
 job: make-offer
 
 headline: "Hidden offer finder"
@@ -17,6 +17,10 @@ when:
   - You're setting up your brand file and need a list of offers to work from.
   - You're writing an ad and need an honest offer to end on.
   - Your deals have piled up and different pages now say different things.
+not_for:
+  - "You have no written price list or brand file: write down your prices, guarantee and current deals first, then run it."
+  - "You want one offer built around a single buyer's doubt with a profit check: use the Commodity trap checker."
+  - "You only want a discount code or a sale price: set that in your shop settings, no skill needed."
 
 you_give:
   - Your brand file (products, sizes and prices, guarantee, delivery and cancel terms, current deals, buyers and their main doubts)
@@ -36,6 +40,30 @@ how_to_use:
   - Name one buyer if you want the list built around them.
   - Fix the clashes first. Pick one figure for each deal and change every page that disagrees.
   - Start with the three marked "try first", and check each one's "must arrange" line before you promise it anywhere.
+output_sample:
+  input:
+    - Your brand file with products, sizes, prices, guarantee, delivery and cancel terms
+    - Every deal you run today on your site, ads, emails and pop-ups
+    - One buyer to focus on (optional)
+    - Anything you can't do, such as no new pack sizes (optional)
+    - Your cost per order (optional)
+  prerequisites:
+    - A brand file, or a Brand brain from the Brand profile builder
+  output:
+    - name: LIVE
+      contains: Every deal you run today, quoted in your own words, with the buyer and stage each suits.
+    - name: CLASHES
+      contains: Each deal that two pages state differently, where it shows, and the smaller figure used for now.
+    - name: STOCK
+      contains: "A short list of what you already own: sizes, prices, guarantee, delivery, extras, past buyers and real dates."
+    - name: NEW
+      contains: New offers built from your stock, each with terms, buyer, what changes, what to arrange and cost to you.
+    - name: TRY FIRST
+      contains: The three offers to start with, with one line of reason for each.
+    - name: MISSING
+      contains: Facts that would change the list if you added them.
+    - name: CHECKS MISSED
+      contains: Any honesty check that failed or could not run, one line each, or none.
 
 how_it_works:
   - title: Quotes what's live

@@ -44,10 +44,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Define each metric.** Use the skill `metric-definition-writer`. For each metric: what it counts, what it excludes, where it comes from, how often it updates and who owns it, so every report means the same thing.
-2. **Log the assumptions.** Use the skill `analysis-assumptions-logger`. Give it the definitions and this week's numbers. Every assumption behind this week's analysis, in one place: time windows, exclusions, estimates and anything taken for granted.
-3. **Write the weekly update.** Use the skill `weekly-status-update-writer`. Give it the definitions, the log and the numbers. The update in a fixed shape: what changed, why, what we do about it, what we are watching, with each number tied to its definition.
-4. **Turn figures into pictures.** Use the skill `number-to-picture-translator`. Give it the update's key numbers. The two or three figures that matter most, translated into pictures a reader can hold in their head, in the manner of Chip Heath, and placed at the top of the update.
+1. **Define each metric.** Use the skill `metric-definition-writer`. For each metric: what it counts, what it excludes, where it comes from, how often it updates and who owns it, so every report means the same thing. Hands the definitions to steps 2 and 3.
+2. **Log the assumptions.** Use the skill `analysis-assumptions-logger`. Give it the definitions and this week's numbers. Every assumption behind this week's analysis, in one place: time windows, exclusions, estimates and anything taken for granted. Hands the log to step 3.
+3. **Write the weekly update.** Use the skill `weekly-status-update-writer`. Give it the definitions, the log and the numbers. The update in a fixed shape: what changed, why, what we do about it, what we are watching, with each number tied to its definition. Hands the update to step 4.
+4. **Turn figures into pictures.** Use the skill `number-to-picture-translator`. Give it the update's key numbers. The two or three figures that matter most, taken from the update and your numbers, translated into pictures a reader can hold in their head, in the manner of Chip Heath, and placed at the top of the update.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

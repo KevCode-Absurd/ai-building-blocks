@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It plans and writes working code for your own tools.
 new_slug: support-desk-automation-builder
 name: Support desk automation builder
-summary: Tell it your help desk and tools. Get scripts, reply templates and a
-  triage routine that drafts replies.
+summary: Build your own support desk automation. Give it your help desk and billing tools. You get scripts, reply templates and a triage routine that drafts replies.
 job: help-customers
 headline: Support desk automation builder
-subhead: Tell it which help desk and billing tools you use and your common
-  ticket types. It plans the connections, writes the scripts and a config file,
-  and sets up reply templates. You get a triage routine that drafts answers for
-  you to approve. Nothing is sent without you.
+subhead: Tell it which help desk and billing tools you use and your common ticket types. It plans the connections, writes the scripts and a config file, and sets up reply templates. You get a triage routine that drafts answers for you to approve. Nothing is sent without you.
 explain: |
   A working support automation made for your company: scripts that read your help desk, templates for common replies and a triage routine that drafts answers for you to approve. Nothing is sent without you.
 
@@ -19,6 +15,10 @@ when:
   - You want ticket drafts that check billing details first.
   - You use a help desk with an API and want to build on it.
   - You need replies written in a consistent tone.
+not_for:
+  - "Your help desk has no API access: use the macros or saved replies built into your help desk instead."
+  - "You want refunds or cancellations made with no human check: do those by hand, or have a person approve each one."
+  - "You only need a few reply drafts today: ask your AI to write them in chat, with no code."
 you_give:
   - Your help desk platform
   - Your billing tool (optional)
@@ -32,9 +32,34 @@ you_get:
   - A triage workflow that drafts for approval
   - A reusable skill definition
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your help desk and billing
-    API keys.
+  - Open an AI that can run code and work with files in your project, such as Claude Code.
+  - Paste this skill into the chat and say you want to build a support automation.
+  - Answer the questions about your help desk, billing tool, database and common ticket types. Check the summary it gives back.
+  - Add your API keys when asked. Keep them in environment variables, never in the chat.
+  - Run the setup check, then try the triage on a few real tickets. Read each drafted reply before you approve it.
+  - Check that any action that changes a ticket or a payment asks for your approval first.
+output_sample:
+  input:
+    - Your help desk platform, such as Zendesk, HelpScout or Intercom
+    - Your billing tool, such as Stripe (optional)
+    - Your database type, for customer lookups (optional)
+    - Your most common ticket types
+    - Your API keys for these tools
+  prerequisites:
+    - An AI that can run code and create files in your project
+    - API keys for your help desk and billing tool
+  output:
+    - name: config.ts
+      contains: Loads your keys and settings from environment variables so every script shares one setup.
+    - name: lib/ helper files
+      contains: Small helpers that talk to your help desk and billing tool, such as a HelpScout or Stripe helper.
+    - name: scripts/
+      contains: The core scripts that list tickets, gather customer details and draft replies.
+    - name: references/common-responses/
+      contains: Reply templates for refunds, bugs, feature requests and billing, plus ones for your own common cases.
+    - name: skill.md
+      contains: The skill definition that sets the triage workflow, priority rules and approval steps.
+    - name: check-setup.ts
+      contains: A script that checks your keys and connections work before you run the workflow.
+    - name: README.md
+      contains: Plain documentation on how to set up and run the automation.

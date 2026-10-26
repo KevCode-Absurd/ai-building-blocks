@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It walks through the same steps each week.
 new_slug: weekly-review-guide
 name: Weekly review guide
-summary: Run it each week. Get open loops closed, stalled projects found and a
-  clear plan for next week.
+summary: Run a weekly review that closes open loops, flags stalled projects and ends with a clear plan for next week. Based on the Getting Things Done method.
 job: organise-work
 headline: Weekly review guide
-subhead: A weekly review that ends with your open loops closed and next week
-  planned. It refuses to call the review done until the required steps are
-  accounted for.
+subhead: A weekly review that ends with your open loops closed and next week planned. It refuses to call the review done until the required steps are accounted for.
 explain: |
   A weekly review that ends with your open loops closed and next week planned. It refuses to call the review done until the required steps are accounted for.
 
@@ -18,6 +15,10 @@ when:
   - You want a fixed Friday routine to close the week.
   - Projects have stalled and you cannot tell which ones.
   - Your notes folder is full of half-finished items.
+not_for:
+  - "You want a team sprint retro: run a retro with your team instead, since this is a personal review."
+  - "You want to reflect on one finished chat or piece of work: use a plain reflection prompt in your AI, or write a short note yourself."
+  - "You only want to dump ideas out of your head once: write a simple brain dump list, then come back for the review."
 you_give:
   - Your notes folder or task lists
   - Calendar for last and next week
@@ -30,8 +31,32 @@ you_get:
   - Waiting-for follow-ups
   - Plan for next week
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run code and attach your notes folder, or paste your task lists into the chat.
+  - "Paste this skill and say: run my weekly review."
+  - Add your calendar for last and next week, and your waiting-for list.
+  - Let it scan your notes first, then answer its questions step by step.
+  - Check the gate result. If it says INCOMPLETE, finish the named steps.
+  - End with the one next action it gives you.
+output_sample:
+  input:
+    - Your notes folder or task lists
+    - Your calendar for last week and next week
+    - Your waiting-for list
+    - Your commitments list, one line per project or promise (optional)
+    - How many days before a file counts as stale (optional)
+  prerequisites:
+    - An AI that can run code, to scan your notes folder and run the three scripts
+    - A folder of notes saved as text files
+  output:
+    - name: Open loop inventory
+      contains: Counts and file locations of unchecked boxes, TODO and FIXME markers, and stale files in your notes folder.
+    - name: Sorted loops
+      contains: "Each open loop placed on a list: next action, waiting-for, someday or maybe, or trash."
+    - name: Review checklist gate
+      contains: A ten-step checklist with a completion percentage, named gaps, and a verdict of COMPLETE or INCOMPLETE.
+    - name: Commitment audit
+      contains: Stalled projects, projects with no next action and someday candidates, flagged one by one.
+    - name: Health score
+      contains: A score from 0 to 100 with the formula shown, and a status of HEALTHY, DRIFTING or OVERCOMMITTED.
+    - name: Next action
+      contains: One named next action to end the review on.

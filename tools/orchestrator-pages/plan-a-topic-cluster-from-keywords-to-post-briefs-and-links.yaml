@@ -1,6 +1,6 @@
 new_slug: plan-a-topic-cluster-from-keywords-to-post-briefs-and-links
 name: Plan a topic cluster from keywords to briefs and links
-summary: Give it your topic and site. Get keyword research, a cluster plan, post briefs and links.
+summary: "Plan a topic cluster for your site: get keyword research, a main page with supporting posts, a brief for each post and an internal link map."
 job: get-found-in-search
 thinking: high
 thinking_why: It judges what searchers want and plans a set of pages that must fit together. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have twenty posts on a topic and none of them rank.
   - You are starting a blog and want a plan, not a list of ideas.
   - Two of your pages compete for the same search.
+not_for:
+  - "You only want keyword ideas for one post: use the Keyword to post outline writer instead."
+  - "You want to compare your product with rivals: use the Comparison page set planner."
+  - "You want a search plan for a product category, not a blog topic: use the Category search plan builder."
 you_give:
   - The topic you want to own and who searches for it
   - Your site and the pages you already have on the topic
@@ -25,11 +29,33 @@ you_get:
   - A brief for every post with the search, the questions, the length and the proof
   - An internal link map for the cluster
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste the topic, your site and your pages on it. It researches the keywords and maps the intent.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to your AI and say "Follow HANDOFF.md". It needs a tool that can read files, such as Claude Code or a Claude Project.
+  - Paste your topic, your site link and the pages you already have on it. Add a keyword tool export if you have one.
   - Read the cluster plan. Strike any post you would not want to publish.
-  - Give the briefs to whoever writes, and the link map to whoever publishes.
+  - Give the briefs to your writer and the link map to whoever publishes.
+output_sample:
+  input:
+    - The topic you want to own and who searches for it
+    - Your site link and the pages you already have on the topic
+    - Your product or service, so the cluster leads somewhere
+    - A keyword tool export (optional)
+  prerequisites:
+    - An AI chat tool that can read pasted text or files
+    - Your keyword tool export, if you want real search numbers (optional)
+  output:
+    - name: "Step 1: Keywords"
+      contains: Searches around your topic, grouped, with monthly searches and difficulty. Figures are marked as estimates without a tool export.
+    - name: "Step 2: Intent"
+      contains: What the searcher wants behind each keyword, such as learn, compare, buy or fix, and the page type that fits.
+    - name: "Step 3: Cluster"
+      contains: One main page, its supporting posts, and what happens to each page you already have.
+    - name: "Step 4: Briefs"
+      contains: One brief per post with the search it answers, questions to cover, length, proof and links.
+    - name: "Step 5: Link map"
+      contains: Which page links to which, with the anchor text for each link.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Research the keywords
     text: Finds the searches around your topic, how often and how hard, grouped so the pattern shows.

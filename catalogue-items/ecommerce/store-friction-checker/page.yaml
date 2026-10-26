@@ -1,6 +1,6 @@
 new_slug: store-friction-checker
 name: "Store friction checker"
-summary: "Attach screenshots of your store pages. Get a ranked cut list and a score out of 100."
+summary: "Check your store pages for friction. Attach phone screenshots and get a ranked cut list, a test order and a score out of 100."
 job: audit-landing-page
 thinking: high
 thinking_why: "It judges many page elements against many rules, and a stronger model sees more in screenshots."
@@ -13,6 +13,10 @@ when:
   - Your store has grown over the years and you suspect it is cluttered.
   - Shoppers reach product pages but few add to cart.
   - You are planning a redesign and want to know what to cut before you add anything.
+not_for:
+  - Your store has one product page only. Use a landing page audit instead, since the homepage and menu checks will not apply.
+  - You have no screenshots or product photos yet. Get a few phone screenshots first, or ask a developer or designer to review the live pages.
+  - You only want to fix a collection page or lay out bundle tiers. Use the collection page fixer or the bundle tier layout planner.
 you_give:
   - "Screenshots from a phone: menu, homepage, collection page, product page with bundles, and the cart"
   - Number of products and your mobile share of traffic
@@ -29,6 +33,29 @@ how_to_use:
   - Tell it how many products you have, your mobile share and your bundle prices.
   - Pick the top item on the cut list and change only that. Wait for enough orders to compare.
   - Run the skill again on new screenshots and compare the score.
+output_sample:
+  input:
+    - Phone screenshots of your menu, homepage, collection page, product page and cart
+    - How many products you sell and your mobile share of traffic
+    - Your bundle options and prices
+    - Heatmap, scroll or click data (optional)
+  prerequisites:
+    - An AI that can read image files
+  output:
+    - name: Pages seen and not seen
+      contains: Which pages the check was judged from, and which pages were missing.
+    - name: Cut list
+      contains: Ranked changes, each with the page, the reason to expect a lift and the evidence.
+    - name: Keep list
+      contains: What already works on your pages and why it should stay.
+    - name: Checks
+      contains: Ten checks scored 10, 5 or 0 each, from homepage job to cart.
+    - name: Score
+      contains: A score out of 100 with the sum shown, and a re-score after the fixes.
+    - name: Test order
+      contains: One change at a time, with what to measure and what each needs.
+    - name: Checks missed
+      contains: Any check that could not run, or none.
 how_it_works:
   - title: Judges the homepage by its job
     text: The homepage gets shoppers to a product page. Each block is judged on that, as if you started from a blank page and added back only what is needed.

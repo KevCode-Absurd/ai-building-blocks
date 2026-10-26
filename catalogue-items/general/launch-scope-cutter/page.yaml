@@ -1,6 +1,6 @@
 new_slug: launch-scope-cutter
 name: "Launch scope cutter"
-summary: "Paste your launch plan, date and budget. Get the same date with half the scope, the core first and the rest parked."
+summary: "Cut your launch scope without moving the date. Paste your plan, date and budget. You get a smaller core launch and a parked list for later."
 job: build-product
 thinking: medium
 thinking_why: "It cuts and ranks a list against one rule, and checks no promise depends on a cut item. The method is fixed."
@@ -17,6 +17,10 @@ when:
   - A launch is slipping and the date matters more than the extras.
   - Your plan has fifty items and your team has time for twenty.
   - You must ship something real, not something late and perfect.
+not_for:
+  - "Your date or budget can still move: build a full project plan instead, or ask a project manager."
+  - "You want to judge new feature requests from customers: use the Feature request screener."
+  - "You have not decided what the product is: talk to your customers first, then come back with a plan."
 
 you_give:
   - Your launch plan or list of features and tasks
@@ -35,6 +39,31 @@ how_to_use:
   - List anything you have promised to people outside the team.
   - Read the core sentence and fix it if it is not what you are making.
   - Take the smaller list to your team and ask who sees a promise at risk.
+output_sample:
+  input:
+    - Your launch plan, with every feature and task
+    - Your launch date and your budget, in plain numbers
+    - Rough effort for each item (optional)
+    - Promises you made to customers, partners or press (optional)
+  output:
+    - name: Locked
+      contains: Your date and budget, with a note that only scope can move.
+    - name: The heart
+      contains: One sentence on who the product helps and what they can do.
+    - name: The full list
+      contains: Every item in your plan, numbered, with effort where you gave it.
+    - name: Cut in rounds
+      contains: What was cut in each half-cut round, and the core that is left.
+    - name: Ranked core
+      contains: The core items in order of first-customer need, with the line where time runs out.
+    - name: Parked for later
+      contains: Each cut item with why it can wait and what would bring it back.
+    - name: What the smaller launch promises
+      contains: Each promise, the items it needs, and whether any were cut.
+    - name: Missing
+      contains: Facts that would change the cut, if you left them out.
+    - name: Checks missed
+      contains: One line for each check that still failed, or none.
 
 how_it_works:
   - title: Locks date and budget

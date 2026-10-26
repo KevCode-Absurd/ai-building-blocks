@@ -13,6 +13,28 @@ metadata:
 
 Entry point for all Bluetooth system-level simulation. All Bluetooth simulations use `sim = wirelessNetworkSimulator.init` and follow the workflow defined in `matlab-simulate-wireless-network` (simulator init, traffic, mobility, instrumentation, addNodes, run).
 
+## Inputs to Gather First
+
+Ask once for anything missing. Do not invent devices, data rates or run times.
+
+- The devices and how they connect (one link, a star, a mix of types).
+- The Bluetooth type: BLE data, LE Audio, GAP connection setup, classic BR/EDR, or BLE plus classic together.
+- The traffic: data rate (in Kbps) and packet size, and whether it runs all the time or in bursts.
+- Distances or movement between nodes (optional).
+- How long to simulate.
+
+This skill needs MATLAB R2026a or later with the Bluetooth Toolbox, which are paid MathWorks products. If the AI cannot run MATLAB, write the script and tell the person to run it, then ask them to paste back the output.
+
+## What You Hand Back
+
+1. Setup: Bluetooth type, nodes and roles, traffic, run time.
+2. The MATLAB script.
+3. Results: throughput, latency and loss per link, read from the layer in the kpi table below.
+4. Reading the numbers: one short paragraph on what they mean for the person's case.
+5. Next change to try: one setting to change and compare.
+
+If the companion `matlab-simulate-wireless-network` skill is not available, follow its order: init the simulator, set traffic, set mobility, add statistics, addNodes, run.
+
 ## When to Use
 
 - BLE ACL point-to-point or star network connections

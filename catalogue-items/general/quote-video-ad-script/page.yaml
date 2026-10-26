@@ -1,12 +1,12 @@
 name: "Video ad script writer from customer quotes"
 new_slug: quote-video-ad-script
-summary: "Paste real customer quotes and facts. Get a sourced video script, checked openings and a first test plan."
+summary: "Write a video ad script from real customer quotes: nine beats with a source for every line, checked openings and a first test plan."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Video ad script writer from customer quotes"
-subhead: Give it real customer quotes, your facts and the buyer you want. It names the one belief the ad must shift and writes nine beats with a source for every line. You get the script, 4 to 6 checked openings and a first test plan.
+subhead: Give it real customer quotes, your product facts and the buyer you want. It names the one belief the ad must change, then writes nine beats with a source for every line. You get the video ad script, 4 to 6 checked openings and a first test plan.
 
 explain: |
   Most weak scripts fail before the first line. Nobody pinned down the buyer, checked the offer or asked what can be proved. Ads written from the product outwards sound like the product page with an opening stuck on, and ads copied from a rival's structure sound like the rival. The quickest way to an ad only you could run is what your customers already said: their word for the problem, what they tried first, the doubt that nearly stopped them.
@@ -17,12 +17,19 @@ explain: |
 
 when:
   - You have reviews, survey answers or support tickets and want an ad built from them.
-  - Your current scripts could be about any brand in your category, or one has stopped working and you want to know which beat is broken.
+  - Your current scripts could be about any brand in your category.
+  - A script has stopped working and you want to know which beat is broken.
   - You need a 15-second or 60-second version of a script that works at 30.
 
+not_for:
+  - You have no real customer words and no product facts. It will mark the whole buyer map as assumed. Use the Video ad script angle chooser to get four script ideas to test first.
+  - You already have a script and only want it checked line by line. Use the Video ad script line checker.
+  - You want a founder speaking to camera or a phone-filmed ad. Use the Founder video ad script writer or the Phone video ad scriptwriter.
+  - You want a clay or paper look. Use the Clay town video ad script writer or the Paper craft video ad script writer.
+
 you_give:
-  - Customer research with real quotes and where each came from
-  - Your product facts, how it works, proof with sources, price, offer, guarantee and allowed claims
+  - 10 or more real customer quotes with where each came from, such as reviews, survey answers, support tickets or call notes
+  - Your product facts: how it works, proof with sources, price, offer, guarantee and allowed claims, from your product page
   - The buyer, the reason they buy and how much they already know (optional, it proposes them)
   - Length, speaker and script type (optional, 30 seconds and a creator by default)
   - Scripts you already have, an ad you'd like to borrow from, or a script and its results to fix (optional)
@@ -35,11 +42,12 @@ you_get:
   - Any of its own checks the script still misses, one line each
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It needs no tools or files.
   - Paste 10 or more real customer quotes with where each came from. Include a few 3-star reviews.
   - Paste your product facts, allowed claims and the real offer terms.
   - Say what you want, such as "a 45-second script", "three scripts to test" or "what's wrong with this script".
   - Read the "Assumed" line first. Each item there is something to find out before you spend on the ad.
+  - Check each quote against your reviews, word for word. Then run the script through the Video ad script line checker.
   - Test 3 to 5 openings on one body first, before you write new bodies.
 
 how_it_works:
@@ -184,6 +192,33 @@ example:
     7 stays out of the paid ad: one buyer's story would read as a
     promise.
     CHECKS MISSED: none
+
+output_sample:
+  input:
+    - "Real customer quotes, each with where it came from"
+    - "Your product facts, proof with sources, price, offer, guarantee and allowed claims"
+    - "The buyer, the reason they buy and the length (optional)"
+    - "An ad you want to borrow from, or a script and its results to fix (optional)"
+  prerequisites:
+    - "Your brand brain from the Website brand brain builder (optional)"
+    - "Your offer from the Hidden offer finder (optional)"
+  output:
+    - name: "Belief shift"
+      contains: "One sentence: what the buyer believes now, and what they believe after the ad."
+    - name: "Assumed"
+      contains: "Each thin or missing point on the buyer's timeline, and what was done about it."
+    - name: "Controls line"
+      contains: "The concept, awareness level, claim fatigue, length, word budget and spoken word count."
+    - name: "The nine beats"
+      contains: "Opening to call to action, each with the spoken line, screen text, picture and its source."
+    - name: "Openings"
+      contains: "4 to 6 openings from different sources, each marked pass or fail on four checks."
+    - name: "Test plan"
+      contains: "What to change first, what a win means and what to make next."
+    - name: "Placeholders and risky claims"
+      contains: "Every bracketed gap and any claim to check before it goes live."
+    - name: "Checks missed"
+      contains: "One line for each check the script still fails, or none."
 
 tweaks:
   - what: What you ask for

@@ -2,18 +2,102 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-developer-ecosystem
 name: Developer adoption program planner
-summary: Share your developer product. Get a plan for app links, outside coders
-  and wider use, with ways to track results.
+summary: Plan how outside developers build on your product. Get an open or curated choice, a developer path, docs order, support routes and metrics.
 job: plan-strategy
 headline: Developer adoption program planner
-subhead: Share your developer product. Get a plan for app links, outside coders
-  and wider use, with ways to track results. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Describe your developer product, who builds on it and your goal. It chooses open or curated, maps the developer path and sets docs, support and partner tiers. You get a plan with metrics and a 30, 60 and 90 day order of work.
+explain: |-
+  Developers pick tools that are easy to start with and that have people to ask. This developer adoption program planner helps you build the path from a first visit, to a working integration, to a developer who tells others.
+
+  You describe what developers can build on, who they are and what you want. The skill checks you are ready, helps you choose between an open or a curated marketplace, then maps the path from discovery to production. It sets the order of your docs, how questions go to community or paid support, and how to tier partners. It can add a student program for long-term reach.
+
+  It will not invent adoption numbers or case studies. The source skill holds the author's own stories about unnamed platforms. We treat those as one person's account, not proof.
+when:
+  - People ask how to build on your API and you have no program for them.
+  - Your developer community is not growing.
+  - You are deciding whether to open your marketplace or review each submission.
+  - You compete with a bigger platform and need a developer-first plan.
+not_for:
+  - You have no working product, API or plugin system yet. Fix the core product first.
+  - "You only need a plan for Discord or GitHub Discussions: use the Developer community builder agent."
+  - "You want tutorials and a monthly feedback report: use the Developer advocate agent."
+  - "You want deals with other companies: use the Revenue partnership program planner."
+you_give:
+  - "What developers can build on: an API, plugins, integrations or an SDK"
+  - Who your developers are and what they want to build
+  - Your goal, such as more integrations or more active developers
+  - Your current numbers, if any (optional)
+  - Team time for docs and support (optional)
+  - Limits on who may publish (optional)
+you_get:
+  - A readiness check with fixes to make first
+  - An open or curated choice, with reasons
+  - The developer path with a metric for each stage
+  - A docs order and a support route
+  - Partner tiers, and a student program if it fits
+  - A 30, 60 and 90 day plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Write what developers can build on, who they are and what you want from them. Add your current numbers if you have them.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code or paid tools are needed.
+  - Paste your notes. Say whether your marketplace is open or curated today.
+  - Check the readiness list first. Fix missing docs or API gaps before you start any program.
+  - Set your own target for each metric. The plan leaves them marked MISSING until you do.
+  - Start with the first 30 days. Review the plan after 90 days.
+how_it_works:
+  - title: Check readiness
+    text: It looks for a usable API and docs. If they are missing, it lists what to fix before any program.
+  - title: Choose open or curated
+    text: It weighs brand risk, how many builders you expect and whether you can review each one by hand.
+  - title: Map the developer path
+    text: It follows awareness, first call, integration, production and advocacy, and picks a metric for each stage.
+  - title: Order the docs
+    text: It puts quick starts first, then guides, then reference, then concepts.
+  - title: Route help
+    text: It sends common questions to community and paying customers or strategic partners to support.
+  - title: Tier partners and add students
+    text: It sets two partner tiers, and an optional three-year student program for long-term reach.
+output_shape: |-
+  Developer adoption plan: <product>
+  Goal: <your goal>   Readiness: <ready / gaps to fix first>
+  Open or curated: <choice and reasons>
+  App-link and integration program: <tiers, listing, trust signals>
+  Outside developer program: <path, docs order, community and support>
+  Wider use: <events, content, student program if it fits>
+  Metrics
+  | Stage | Metric | Today | Target |
+  30 / 60 / 90 days: <actions for each period>
+  Missing or unverified: <list>
+output_sample:
+  input:
+    - What developers can build on
+    - Who your developers are
+    - Your goal
+    - Your current numbers (optional)
+  output:
+    - name: Readiness check
+      contains: Whether your API and docs are ready, and what to fix first.
+    - name: Open or curated choice
+      contains: A recommendation with reasons from your own situation.
+    - name: Developer path and metrics
+      contains: Each stage from discovery to advocacy, with a metric and your target.
+    - name: Docs and support plan
+      contains: The order of docs, and when questions go to community or support.
+    - name: Partner tiers
+      contains: Self-serve and strategic tiers, and what each one gets.
+    - name: 30, 60 and 90 day plan
+      contains: Actions for each period, plus anything missing or unverified.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It plans from your notes. Paste in your docs outline if you have one.
+  inputs:
+    - Your docs outline or a link to your quick start
+    - Support questions developers ask most
+    - The names of integrations people ask for
+terms:
+  - term: API
+    meaning: A way for one piece of software to talk to another.
+  - term: Curated marketplace
+    meaning: A store where you review each submission before it goes live.
+  - term: SDK
+    meaning: A kit of code and tools that makes building on a product easier.

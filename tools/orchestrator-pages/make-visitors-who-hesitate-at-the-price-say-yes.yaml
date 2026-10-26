@@ -1,6 +1,6 @@
 new_slug: make-visitors-who-hesitate-at-the-price-say-yes
 name: Make visitors who hesitate at the price say yes
-summary: Give it your offer and what buyers say about price. Get a value case, a guarantee, honest urgency and a closing line.
+summary: Win buyers who balk at your price without a discount. Give it your offer and price doubts. Get a value score, guarantee, honest urgency and closing line.
 job: make-offer
 thinking: high
 thinking_why: Five skills run in a row, and the guarantee step does refund sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Visitors view your product page, add to cart or ask about price, but do not buy.
   - Buyers say it is too expensive, and a discount would eat your margin.
   - You want a guarantee and a deadline you can keep, without fake timers.
+not_for:
+  - "Your buyers never reach the offer or the product page: fix traffic and the page first, or run a simple discount test before you use this."
+  - "Nobody objects to your price: skip this and use the Split-run test planner to find what else holds sales back."
+  - "You need ad copy, not a closing line: use the Ad first line writer and scorer, then check it with the Meta ads compliance checker."
 you_give:
   - Your offer, with what is included, the price, the terms and how it is delivered
   - Your cost to deliver per buyer, in time and cash
@@ -31,6 +35,28 @@ how_to_use:
   - Paste your offer exactly as buyers see it, and add the price objections you hear.
   - Give your real cost to deliver and capacity. The guarantee and the limit rely on them.
   - Check the refund sums and every date before you publish.
+output_sample:
+  input:
+    - Your offer, with what is included, the price, the terms and how it is delivered
+    - Your cost to deliver per buyer, in time and cash
+    - What buyers say about price, from reviews, calls or surveys (optional)
+    - How many buyers you can serve well at once (optional)
+    - Your sales and refund history (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project with the handoff pack
+  output:
+    - name: Value score
+      contains: Scores for outcome, likelihood, delay and effort, the weakest part of the offer and the cheapest fixes.
+    - name: Price check
+      contains: A low, middle and high value with the sums, a walk-away price and a verdict on changing price or story.
+    - name: Guarantee
+      contains: Ranked buyer fears, the guarantee, refund sums using your delivery cost and a name for it.
+    - name: Honest urgency plan
+      contains: A real cap or date from your capacity, lines for each channel and an honesty check.
+    - name: Closing line
+      contains: Two versions of the ask that state the offer, the guarantee and the deadline, and the barriers removed.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Score the value
     text: Scores outcome, likelihood, time delay and effort as the buyer sees them, then names the weakest part and the cheapest fixes.
@@ -41,7 +67,7 @@ how_it_works:
   - title: Plan honest urgency
     text: Sets a real cap from your capacity, keeps supply a little under demand and writes true lines for each channel.
   - title: Write the closing line
-    text: Writes two versions of the ask that state the offer, the guarantee and the deadline together, and removes barriers to acting.
+    text: Writes two versions of the ask that state the offer, the guarantee and the deadline together, and removes barriers to acting. Uses the guarantee from step 3 and the limits from step 4.
 output_shape: |-
   STEP 1: VALUE SCORE
     Outcome, likelihood, delay and effort scores | value index | weakest part | cheapest fixes

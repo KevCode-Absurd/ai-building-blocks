@@ -1,6 +1,6 @@
 new_slug: speed-fix-ranker
 name: "Speed fix ranker"
-summary: "Give it your speed problems and store numbers. Get fixes ranked by orders gained per hour of work."
+summary: "Rank your store speed fixes by orders gained per hour of work. Give it your audit problems and sales numbers. You get a plan for this week and next month."
 job: speed-up-store
 thinking: medium
 thinking_why: "It does sums and weighs trade-offs across a list. A mid-size model handles that well when given the numbers."
@@ -17,6 +17,10 @@ when:
   - "An audit lists 20 problems and you don't know where to start."
   - "You need to explain speed work to a partner or developer in orders and revenue, not milliseconds."
   - "You have a small budget and a few hours to spend."
+not_for:
+  - "Your store already passes Google's mobile speed checks: work on your offer, page copy or ads instead, as speed is unlikely to be the problem."
+  - "Your store gets under about 1,000 visits a month: your own data is too thin to measure small gains, so fix the cheap no-code items and skip the sums."
+  - "You have no list of speed problems yet: run a speed audit in Google PageSpeed Insights first, then bring the results here."
 
 you_give:
   - "The speed problems you found (from an audit or the store speed report reader)"
@@ -36,6 +40,27 @@ how_to_use:
   - "Add monthly visits for your homepage, collections and product pages, plus conversion rate and order value."
   - "Say who will do the work and how many hours you have."
   - "Start with the top three. Do the three-run test on each page before and after."
+output_sample:
+  input:
+    - Your list of speed problems, with the page type where each one shows up
+    - Monthly visits by page type, your conversion rate and your average order value
+    - Who will do the work and how many hours you have
+    - Your mobile against desktop conversion and bounce numbers (optional)
+  prerequisites:
+    - A speed audit or a store speed report to take the problems from
+  output:
+    - name: Speed fix plan header
+      contains: The numbers the plan is based on, the money at stake as a range, and a note that effect figures are third-party.
+    - name: This week
+      contains: Your top three fixes, each with page, type of work, hours, risk, gain range, owner and how to measure.
+    - name: Next month
+      contains: The next five fixes in the same layout, shorter.
+    - name: Parked
+      contains: Every remaining fix with one reason it waits, such as small gain, high risk or needs a developer.
+    - name: Check against your own data
+      contains: What to compare, such as mobile against desktop conversion, before you trust a promised gain.
+    - name: Missing
+      contains: Any number you did not give, marked so nothing is guessed.
 
 how_it_works:
   - title: Applies the fix ladder

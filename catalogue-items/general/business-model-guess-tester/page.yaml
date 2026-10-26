@@ -1,6 +1,6 @@
 new_slug: business-model-guess-tester
 name: "Business model guess tester"
-summary: "Paste your plan. Get it rewritten as testable guesses on one page, with a test and a pass line for each."
+summary: "Test your business model before you spend on it. Paste your plan and get each part as a guess with a cheap test and a pass line."
 job: test-an-idea
 thinking: medium
 thinking_why: "It sorts fact from guess and ranks risk, but the layout is fixed."
@@ -17,6 +17,10 @@ when:
   - "You have a plan and want to know what is real and what is hope."
   - "You are about to hire sales or marketing staff."
   - "A test failed and you are not sure what to change."
+not_for:
+  - "You run a steady business with stable paid sales and want to grow it: use a pricing review or a growth review with your own sales numbers."
+  - "You only want to talk to customers: plan your interview questions first, with a person or a simple script."
+  - "You need a full financial forecast or tax advice: ask an accountant, or build a spreadsheet from your real invoices."
 
 you_give:
   - "Your plan or brief"
@@ -33,6 +37,28 @@ how_to_use:
   - "Paste your plan and what you know to be true."
   - "Agree the pass lines before you run any test."
   - "Update the change log after each test."
+output_sample:
+  input:
+    - Your business plan or brief
+    - What is already proven, such as paid customers (optional)
+    - The parts of the plan you doubt (optional)
+  output:
+    - name: CALL
+      contains: Whether you are still searching or ready to run, with the two facts behind that call.
+    - name: MODEL v1
+      contains: "A one-page model with five boxes: customers, value, channels, revenue and costs."
+    - name: GUESSES
+      contains: Each box as one sentence that could be wrong, marked fact or guess, with evidence and a risk score.
+    - name: TESTS
+      contains: A cheap test, a pass line, a cost and a number of days for the top guesses.
+    - name: HOLD BACK
+      contains: Spending to delay, such as a sales team, until the model is found.
+    - name: CHANGE LOG
+      contains: A table of date, guess tested, result and what changed in the model.
+    - name: MISSING
+      contains: Gaps in your plan that it would not fill with made-up facts.
+    - name: CHECKS MISSED
+      contains: One line for each self-check that failed, or the word none.
 
 how_it_works:
   - title: "Makes the call"

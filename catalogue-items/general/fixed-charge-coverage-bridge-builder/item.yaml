@@ -1,26 +1,25 @@
 slug: fixed-charge-coverage-bridge-builder
 name: Fixed charge coverage bridge builder
-summary: A fixed charge cash bridge and contractual headroom
+summary: "Work out your fixed charge coverage ratio and the cash above your lender's minimum, from cash, taxes, upkeep spending, interest, repayments and rent."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next: [debt-service-covenant-headroom-checker,lender-safety-verdict-writer]
 origin: own
 version: 1.0.0
 added: 2026-10-22

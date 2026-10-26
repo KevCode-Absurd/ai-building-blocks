@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a standard pipeline and reads the quality results.
 new_slug: crispr-screen-hit-ranker
 name: CRISPR screen hit ranker
-summary: Give it guide read counts. Get quality checks and a ranked gene hit
-  list with effect sizes.
+summary: Rank genes from your CRISPR screen with MAGeCK. Give it guide counts or reads. You get QC checks and a hit list with effect sizes and FDR.
 job: research-topics
 headline: CRISPR screen hit ranker
-subhead: A quality-checked ranked list of genes from a pooled CRISPR screen,
-  with effect sizes and false discovery rates. You see which genes truly rise or
-  fall between conditions and whether the data can be trusted.
+subhead: A quality-checked ranked list of genes from a pooled CRISPR screen, with effect sizes and false discovery rates. You see which genes truly rise or fall between conditions and whether the data can be trusted.
 explain: |
   A quality-checked ranked list of genes from a pooled CRISPR screen, with effect sizes and false discovery rates. You see which genes truly rise or fall between conditions and whether the data can be trusted.
 
@@ -18,6 +15,10 @@ when:
   - You need to check replicate quality before trusting hits.
   - You want to compare treated and control cells.
   - You have raw reads and must produce counts first.
+not_for:
+  - "You want to design guides or find what a gene does from one hit: this skill only analyzes screens, so use a guide design tool or lab follow-up."
+  - "You only need existing public dependency scores for a gene: use a DepMap lookup, which needs no new analysis."
+  - "You cannot run command line tools or install MAGeCK: ask a bioinformatics colleague to run it, or use a core facility."
 you_give:
   - Guide count matrix or FASTQ files
   - Guide library file
@@ -29,8 +30,32 @@ you_get:
   - Effect sizes and FDR
   - Commands used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run command line tools.
+  - Install MAGeCK 0.5.9.5 and Python on a computer your AI can use. Check that mageck --version works.
+  - Put your guide library, count table or FASTQ files, and sample names in one folder.
+  - Paste the skill into your AI. Say which samples are control and which are treated.
+  - Ask your AI to run the count step first if you only have reads, then the QC step.
+  - Read the QC flags before you trust any hits. Fix or explain weak replicates.
+  - Run the test step, then check that several guides agree for your top genes.
+output_sample:
+  input:
+    - Your guide count table, or FASTQ read files
+    - Your guide library file (guide ID, sequence, gene)
+    - Which samples are control and which are treated
+    - Your negative-control guide IDs (optional)
+  prerequisites:
+    - An AI that can run command line tools and Python 3.10 or newer
+    - MAGeCK 0.5.9.5 installed, with NumPy and SciPy
+    - Sequencing reads already collected from your pooled screen
+  output:
+    - name: counts.count.txt
+      contains: The guide count table made from your reads, only when you start from FASTQ files.
+    - name: qc.json
+      contains: Library representation, zero fractions, Gini values and replicate correlations, with flags to review.
+    - name: report.json
+      contains: File checksums, MAGeCK version, exact arguments, normalization used, warnings, and each gene's direction, FDR, log2 fold change and rank.
+    - name: screen.gene_summary.txt
+      contains: The full gene ranking from MAGeCK, for enriched and depleted genes.
+    - name: screen.sgrna_summary.txt
+      contains: Results for each guide, so you can check that guides for a top gene agree.
+    - name: Interpretation
+      contains: A short note on which genes rise or fall, and whether the data can be trusted.

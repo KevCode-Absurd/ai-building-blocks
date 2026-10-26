@@ -1,6 +1,7 @@
 slug: prepare-a-workplace-accommodation-conversation
 name: Prepare a workplace accommodation conversation
-summary: Share the source files. Get a confidential discussion guide, possible adjustments and a review plan.
+summary: Prepare for a workplace accommodation conversation. Get a discussion
+  guide, adjustment options and a review plan, with health details kept out.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -17,18 +18,23 @@ inputs:
 outputs:
   - type: plan
   - type: document
-  - type: audit_report
 uses:
   - accommodation-process
   - people-risk-register-builder
   - executive-action-register
 steps:
   - uses: accommodation-process
-    note: Identify the work barriers and a respectful process for considering adjustments.
+    note: Identifies the work barriers and a respectful process for considering
+      adjustments. Hands step 2 the plan and process document, with each barrier
+      tied to a job task.
   - uses: people-risk-register-builder
-    note: Record practical delivery and privacy risks without inferring health conditions.
+    note: Reads step 1's process and your job tasks. Records delivery and privacy
+      risks without inferring any health condition. Hands step 3 the risk
+      register with a suggested owner for each risk.
   - uses: executive-action-register
-    note: Prepare a restricted action plan with agreed owners, review dates and unanswered questions.
+    note: Reads step 1's plan and step 2's risks, plus your own notes of any meeting
+      held. Prepares a restricted action plan with agreed owners, review dates
+      and open questions.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -38,13 +44,19 @@ credits:
   - title: Workplace accommodation process builder
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-accessibility-accommodation
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: People risk register builder
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-risk-management
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Executive action register keeper
     by: AI Blocks
     url: https://useaiblocks.com/skills/executive-action-register
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

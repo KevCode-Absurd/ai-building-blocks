@@ -1,6 +1,6 @@
 new_slug: ad-results-brief-writer
 name: Ad results brief writer
-summary: Paste two periods of ad totals. Get a one-line answer, what changed and three ranked actions.
+summary: "Turn two periods of ad totals into a short ad results brief: a one-line answer, what changed and three ranked actions you can hand to a team."
 job: read-ad-results
 thinking: medium
 thinking_why: It does sums first and then has to rank actions by what is at stake.
@@ -14,6 +14,10 @@ when:
   - You owe someone a short update on ad results.
   - Your sales moved and you need to explain why.
   - You have a lot of numbers and no clear next step.
+not_for:
+  - "You want to read test results from two ad versions: use the Ad test brief writer to plan the test, or a plain side-by-side check of the two totals."
+  - "You have one campaign with under two weeks of data: wait for more days, or use the Campaign performance reviewer."
+  - "You need every check and a full written report: use the Ad results report writer."
 you_give:
   - Totals for two periods, with dates and definitions
   - Targets (optional)
@@ -28,6 +32,28 @@ how_to_use:
   - Under the prompt, paste totals for both periods.
   - Say what each column means and how long after an ad a sale counts.
   - Send only the first line and the three actions if the reader is short on time.
+output_sample:
+  input:
+    - Ad totals for this period and an earlier one, with dates and currency
+    - What each column means, and how long after an ad a sale still counts
+    - Your own sales totals for the same dates (optional)
+    - Your targets (optional)
+    - Who will read the brief (optional)
+  output:
+    - name: ANSWER
+      contains: One line a reader could act on if they read nothing else.
+    - name: PERIOD
+      contains: The dates, currency, how long after an ad a sale counts, and what data is missing.
+    - name: NUMBERS
+      contains: Each key metric for this period and the last, with the change and your target.
+    - name: WHAT CHANGED
+      contains: Two to four lines on what moved, each backed by a number.
+    - name: ONE OPEN WORRY
+      contains: One line on the biggest doubt the data cannot settle.
+    - name: ACTIONS
+      contains: Three actions ranked by money at stake, each with an owner, a done-when check and an approval flag.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
 how_it_works:
   - title: Works out the numbers
     text: From totals, not averages.

@@ -1,6 +1,6 @@
 new_slug: page-pull-scene-checker
 name: "Page-pull scene checker"
-summary: "Paste your scene. Get the paragraph where a reader would put it down, the fix, and a verdict on its pull."
+summary: "Find where readers would put your scene down. Paste it in and get the weakest paragraph, a fix for it, and a verdict on its pull."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It reads a draft the way a reader would and judges pull paragraph by paragraph, which takes close reading."
@@ -17,6 +17,10 @@ when:
   - Test readers say your scene is "fine" but nobody asks what happens next.
   - You cannot tell which part of your chapter drags.
   - You have drafted from a plan and want to check the pull before you polish.
+not_for:
+  - "You want to fix plot structure across a whole book: work with a developmental editor or a story structure guide."
+  - "You want your prose style, word choice or voice polished: use a line editor."
+  - "You have not drafted the scene yet: write a rough version first, then run this check."
 
 you_give:
   - Your scene
@@ -33,6 +37,27 @@ how_to_use:
   - Paste your scene as it is, with paragraph breaks.
   - Paste the plan if you have one. If not, it will work out the question itself.
   - Fix the lowest-pull paragraph, then run it again.
+output_sample:
+  input:
+    - Your scene, pasted as it is, with paragraph breaks
+    - Your hook plan from the Next-page hook planner (optional)
+  output:
+    - name: The question
+      contains: One sentence with a person in it, taken from your plan or worked out from the scene.
+    - name: Paragraph by paragraph
+      contains: Each paragraph numbered and marked raised, pressed, delayed or forgotten, with a short reason.
+    - name: Lowest pull
+      contains: The paragraph where a reader would stop, why they would stop, and one fix.
+    - name: Opening
+      contains: A yes or no on whether the first two lines put a person under pressure, with a fix.
+    - name: Last line
+      contains: A yes or no on whether the last line leaves the question open, with a fix.
+    - name: Verdict
+      contains: Strong, patchy or flat, and what would move the pull up one level.
+    - name: Notes for the rewrite
+      contains: Three changes in order of effect.
+    - name: Checks missed
+      contains: One line for each check it could not pass, or none.
 
 how_it_works:
   - title: States the question

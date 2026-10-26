@@ -1,6 +1,6 @@
 new_slug: before-you-meet-brief-writer
 name: "Before-you-meet brief writer"
-summary: "Name who you will meet and why. Get what they care about, what to admire and one question only they can answer."
+summary: "Write a before-you-meet brief: what the person cares about, two things to admire and one question only they can answer. Paste what you know."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It must read public material and judge what a person cares about, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "You are about to meet someone senior, new or hard to reach."
   - "You have a networking event and one person you want to speak to."
   - "You are going into a first sales call and want to start from their interests."
+not_for:
+  - You already know the person well. Skip the brief and write a few notes of your own.
+  - You are sending a cold message to a stranger. Use a short, simple intro note instead, since a full brief would feel like research on them.
+  - You need the plan for what to say once the talk starts. Use the Get-them-talking conversation planner.
 
 you_give:
   - "The person's name and role"
@@ -35,6 +39,29 @@ how_to_use:
   - "Paste anything public you have found about them."
   - "Read the brief once more the evening before."
   - "Take it to \"Get-them-talking conversation planner\"."
+output_sample:
+  input:
+    - The person's name and role
+    - Why you are meeting and what you hope for
+    - Public text about them, such as a bio, talk or posts (optional)
+    - What you have in common (optional)
+  output:
+    - name: Who and why
+      contains: The person, their role, your aim and what small good result would count.
+    - name: What they care about
+      contains: Their top topics, ranked, each with where it came from.
+    - name: The people around them
+      contains: Names and roles of assistants or hosts, and how to greet each one.
+    - name: Two things to admire
+      contains: Two specific points about their work that you could say with nothing to gain.
+    - name: Common ground
+      contains: One true overlap with them, or a note that there is none.
+    - name: The one question
+      contains: A question only this person can answer, easy for them to answer.
+    - name: The size of your ask
+      contains: Advice, a favour or a sale, whichever is smallest and still useful, and when to ask.
+    - name: Missing and checks missed
+      contains: What you could not find, and any checks the brief did not pass.
 
 how_it_works:
   - title: "Sets your goal"

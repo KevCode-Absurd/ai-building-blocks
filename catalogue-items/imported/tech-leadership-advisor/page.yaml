@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies known engineering frameworks to your case.
 new_slug: tech-leadership-advisor
 name: Tech leadership advisor
-summary: Describe your tech team and stack. Get a tech debt review, a hiring
-  plan and architecture calls.
+summary: Get a tech debt review, a hiring plan and build or buy calls for your engineering team. Works as a CTO advisor for founders with no tech peer.
 job: build-software
 headline: Tech leadership advisor
-subhead: Describe your tech team and stack. Get a tech debt review, a hiring
-  plan and architecture calls. Bring a description of your team and stack. Use
-  the result to plan your next step.
+subhead: Describe your tech team and stack. Get a tech debt review, a hiring plan and architecture calls. Bring a description of your team and stack. Use the result to plan your next step.
 explain: |
   The kind of advice a seasoned CTO gives: a view of your tech debt, a hiring and growth plan for engineering, and clear calls on architecture, build versus buy and cloud choices. It suits founders and leads who have no technical peer to ask.
 
@@ -19,6 +16,10 @@ when:
   - You are planning how many engineers to hire next year and what it costs.
   - Deployments are slow or risky and you want measures to improve.
   - A cloud migration is on the table and you need to weigh it.
+not_for:
+  - Your team already has a CTO or tech lead who makes these calls. Ask that person, or hire a fractional CTO for a second view.
+  - You need day-to-day sprint planning or task tracking. Use your team's own board and a delivery lead instead.
+  - You need a security audit or legal review. Hire a security specialist or a lawyer, as this gives general guidance only.
 you_give:
   - A description of your team and stack
   - Your business goals and constraints
@@ -30,7 +31,31 @@ you_get:
   - Build versus buy recommendations
   - Engineering health measures to track
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your facts first: team size and roles, your list of tools and systems, your top three pain points, and your budget range."
+  - Add any deploy or incident data you have (optional). It helps your AI rate your engineering health.
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your facts below it.
+  - "Say what you want: a tech debt review, a build or buy call, a hiring plan or a health check."
+  - Check each result with your lead engineer. Costs and dates are estimates, and your AI does not know your code.
+  - The two Python scripts are optional. They only run in an AI that can run code. Skip them in a plain chat.
+output_sample:
+  input:
+    - A description of your team and tech stack
+    - Your business goals and limits
+    - Your top pain points
+    - Team size and budget (optional)
+    - Deploy or incident data (optional)
+  prerequisites:
+    - Python is optional. Only the two helper scripts need an AI that can run code. The advice works in a normal chat.
+  output:
+    - name: Tech debt inventory
+      contains: Each debt item with a severity, a cost to fix, how many systems it touches and a priority order.
+    - name: Remediation plan
+      contains: Items grouped into this sprint, next quarter and a tracked backlog, with owners and dates to check.
+    - name: Build vs buy analysis
+      contains: Each option scored on fit, risk, three-year cost, vendor stability and effort, with a default to buy.
+    - name: Architecture decision record
+      contains: The problem, options, the choice, and what gets easier or harder, written so your team can file it.
+    - name: Hiring plan
+      contains: Roles, timing, ramp-up and budget for growing the engineering team.
+    - name: Engineering health dashboard
+      contains: Measures to track, such as deploy speed, failure rate, recovery time, debt ratio and team morale, with targets.

@@ -1,0 +1,42 @@
+slug: agency-unreal-multiplayer-architect
+name: Unreal Multiplayer Architect agent
+summary: "Plan Unreal Engine 5 multiplayer. Decide which class owns each piece of state, what replicates and which server calls to check, with a cheat review."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/unreal-engine/unreal-multiplayer-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-multiplayer-architect.md
+  licence: MIT
+  original_name: Unreal Multiplayer Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: c31c693ad7e34f9baa5b626565ac763f9fdfdb7f3e2d42f9e0bdddba9cd98b73
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Unreal Multiplayer Architect
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Unreal Multiplayer Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-multiplayer-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

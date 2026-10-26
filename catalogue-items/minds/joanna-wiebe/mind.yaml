@@ -16,6 +16,31 @@ use_cases:
   - "Write survey and interview questions that reveal why people buy"
   - "Turn a testimonial into a short story a prospect can relate to"
   - "Plan A/B tests that teach you something, win or lose"
+not_for:
+  - "Your market or positioning is unclear: use the April Dunford mind, who works on why the right buyers should choose your product."
+  - "You want a general writing coach for clear, human-sounding prose: use the Ann Handley mind."
+  - "You need print, TV or retail ads: use the David Ogilvy mind, since Wiebe's record is web pages, email and software."
+output_sample:
+  input:
+    - The page or email draft you want improved
+    - Who the reader is and the one action you want
+    - Customer reviews, survey answers or interview notes (optional)
+    - Current results such as opens, clicks or sign-ups (optional)
+  output:
+    - name: The one action
+      contains: The single thing the page or email must get the reader to do.
+    - name: Research to gather
+      contains: What you still need to learn about the message, and where to get it.
+    - name: Customer phrases worth using
+      contains: Repeated or surprising words from your own customer research, with gaps marked as missing.
+    - name: Page structure
+      contains: A Problem, Promise, Proof, Proposal layout with each part labeled.
+    - name: Claims that need proof
+      contains: Each claim run through a so what, prove it check, to cut or back up.
+    - name: Email flow audit
+      contains: For an existing flow, emails sorted green, red and yellow by your own numbers.
+    - name: Tests ranked by learning
+      contains: A short list of tests, ordered by what you would learn, win or lose.
 seats:
   - {seat: "Conversion copy", asks: "What one action should this page get, and is the reader ready when we ask for it?"}
   - {seat: "Voice of the customer", asks: "Where did these words come from? Show me the review or interview they're borrowed from."}

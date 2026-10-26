@@ -1,7 +1,7 @@
 new_slug: noncash-working-capital-bridge
 name: Noncash working-capital bridge
 headline: Noncash working-capital bridge
-summary: Separate operating cash investment from acquisition, currency and other noncash balance movements.
+summary: Find how much cash a business really put into working capital, after removing acquisitions, currency and write-offs from the balance change.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need an operating working-capital investment bridge with a signed cash-flow counterpart.
   - You work on issuer accounting and earnings and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - You have factoring, supplier finance or discontinued operations. These need their own schedules, so split them out first or ask your accountant.
+  - You only have two balances and no notes on acquisitions, currency or write-offs. Get the notes from the filing first, as this skill cannot guess them.
+  - You want a full cash-flow statement or a company valuation. Use a full model built with your finance team.
 you_give:
   - Opening and closing operating working capital plus signed acquisition, FX and other noncash movements on the same perimeter.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,27 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Opening and closing operating working capital
+    - Acquisition, currency and write-off movements, with signs, from the notes
+    - Reporting date, currency and scale
+    - Accounting basis and fiscal calendar
+    - Your spreadsheet tool and the file format you want (optional)
+  prerequisites:
+    - An AI that can create and open spreadsheet files
+    - Node.js 20 or later, only to run the bundled calculation check (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, scale and the dated sources used for each input.
+    - name: Inputs and assumptions
+      contains: Every opening, closing and noncash figure with its source, sign and any assumption made.
+    - name: Model calculations and reconciliations
+      contains: The bridge from balance change to operating investment and the signed cash-flow effect, with reconciliation results.
+    - name: Actual file verification
+      contains: "Which workbook checks ran: recalculation, changed-input test, rendering and reopening the saved file."
+    - name: "MISSING: and CHECKS MISSED"
+      contains: Inputs that could not be found and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Define operating working capital consistently, excluding cash, financing and tax balances unless explicitly part of the chosen measure
     text: Define operating working capital consistently, excluding cash, financing and tax balances unless explicitly part of the chosen measure.

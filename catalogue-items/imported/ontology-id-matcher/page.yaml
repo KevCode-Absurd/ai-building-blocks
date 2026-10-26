@@ -2,35 +2,60 @@ thinking: medium
 thinking_why: It matches terms by lookup and checks each match, so little judgment is needed.
 new_slug: ontology-id-matcher
 name: Science label to ontology ID matcher
-summary: Give it lab terms like tissue or disease names. Get the matching
-  ontology IDs, checked against the public lookup service.
+summary: Find the right ontology ID for each tissue, cell or disease name in your data. Every ID is checked against the public EBI lookup service.
 job: research-topics
 headline: Science label to ontology ID matcher
-subhead: Correct ontology IDs for the lab terms in your data, each one checked
-  against the public lookup service, not written from memory. A well-formed ID
-  can point to the wrong thing and nobody will notice.
+subhead: Give it the lab terms in your data, like tissue, cell type or disease names. It looks each one up in the public EBI lookup service and checks the ID it picks. It can also audit IDs already in a file. This is an upstream K-Dense skill, copied under the MIT license.
 explain: |
   Correct ontology IDs for the lab terms in your data, each one checked against the public lookup service, not written from memory. A well-formed ID can point to the wrong thing and nobody will notice. For example, one real code is the small intestine, not the liver.
 
   You give it free-text labels like a tissue, cell type or disease name. The skill searches the EBI ontology lookup service, picks the best match, and confirms the ID and its label. It can also check IDs already in a file to see if they are real and still current, and look up prefixes. Scripts use only the Python standard library, but you need Python 3.11 or later and internet access.
 when:
-  - You are filling a data submission and need ontology IDs for tissue terms.
+  - You are filling a data submission and need ontology IDs for tissue or cell terms.
   - Someone gave you a table of IDs and you do not trust them.
   - An old file may use IDs that have since been replaced.
-  - You need the correct prefix for a given ontology.
+  - You need the right prefix for an ontology.
+not_for:
+  - "You have free-text notes, not short labels: ask a data curator to read them, because this skill matches terms, not sentences."
+  - "Your file already has IDs checked against the archive's pinned release: use that archive's own validator instead."
+  - "You only need a plain-language definition of a term: search the term on the EBI Ontology Lookup Service website."
 you_give:
-  - Terms or a column of labels
+  - A list or column of terms
   - The ontology to use, such as anatomy or disease (optional)
-  - An existing file of IDs to audit (optional)
-  - Python 3.11 or later and internet access
+  - A file of existing IDs and labels to check (optional)
 you_get:
-  - Matching ontology IDs with labels
-  - IDs checked against the lookup service
-  - Flags for wrong or obsolete IDs
+  - The best matching ontology ID and label for each term
+  - Each ID checked against the lookup service
+  - Flags for wrong, mislabelled or obsolete IDs
+  - Terms with no match listed on their own
   - Ontology prefix lookups
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can call public web APIs and run code.
+  - Use an AI that can run code and reach the web. This skill needs Python 3.11 or later and internet access.
+  - Download the skill folder and give it to your AI, or upload its files to the chat.
+  - Start small. Ask your AI to run resolve_terms.py on one sample term, such as a tissue name, and show you the result.
+  - Then give it your full list, and name the ontology if you know it.
+  - Read the ID and label for each match. Check that the meaning fits your sample.
+  - For an old file, ask your AI to run validate_terms.py on your ID and label columns.
+output_sample:
+  input:
+    - A list or column of lab terms, such as tissue, cell type or disease names
+    - The ontology to search, such as anatomy or cell types (optional)
+    - A file of existing IDs and labels to check (optional)
+    - A prefix or compact ID to look up (optional)
+  prerequisites:
+    - An AI that can run Python 3.11 or later code
+    - Internet access to the public lookup services
+    - The skill files from this page
+  output:
+    - name: Resolved terms table
+      contains: Each input term with its chosen ontology ID, label and how it was matched.
+    - name: Unresolved terms
+      contains: Terms with no exact hit, listed on their own instead of filled with a near guess.
+    - name: Validation report
+      contains: For each existing ID, whether it exists, whether its label fits, and whether it is obsolete.
+    - name: Prefix and ID lookups
+      contains: What an ontology prefix means and where a compact ID points.
+    - name: Shorthand mappings
+      contains: Candidate terms for lab shorthand such as PBMC, with a confidence bucket to review by hand.
+    - name: Lookup record
+      contains: The lookup date and ontology version details when available, so you can show where each ID came from.

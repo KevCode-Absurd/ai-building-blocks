@@ -1,15 +1,13 @@
 slug: deal-funding-gap-checker
 name: Deal funding gap checker
-summary: Find the closing funding gap after cash sources and noncash rollover are classified consistently.
+summary: "Find the funding gap at deal closing: what must be paid, less the money lined up. Rollover counts once, so the gap is not doubled."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - refinancing-closing-cost-checker
+  - rollover-equity-ownership-checker
+  - check-acquisition-refinancing-funds
 origin: own
 version: 1.0.0
 added: 2026-10-22

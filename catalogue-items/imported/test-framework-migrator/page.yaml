@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a mapping table between frameworks.
 new_slug: test-framework-migrator
 name: Test framework migrator
-summary: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them
-  converted to the framework you choose.
+summary: Convert Selenium, Playwright, Puppeteer or Cypress tests to another framework. Get the new files and a list of what needs a manual check.
 job: test-and-fix-code
 headline: Test framework migrator
-subhead: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them
-  converted to the framework you choose. Bring the existing test files. Use the
-  result to plan your next step.
+subhead: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose. Bring the existing test files. Use the result to plan your next step.
 explain: |
   Your browser tests converted from one framework to another, Selenium, Playwright, Puppeteer or Cypress, so you can switch tools without rewriting every test by hand.
 
@@ -19,6 +16,10 @@ when:
   - You have hundreds of tests and cannot rewrite them manually.
   - Flaky waits in an old suite are the reason to switch.
   - You want to know what will not convert cleanly before committing.
+not_for:
+  - You have one small test. Rewrite it by hand, or read the docs of the framework you are moving to.
+  - Your tests stay in the same framework. Keep them as they are, or ask your AI for a plain code review.
+  - Your pair is not supported, such as WebdriverIO. Ask for the closest supported move, then adjust by hand.
 you_give:
   - The existing test files
   - The framework you want
@@ -30,8 +31,26 @@ you_get:
   - Items needing manual review
   - Notes on setup differences
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool and paste the skill instructions. If it can read files, point it at your test folder.
+  - Paste or attach the test files you want to convert.
+  - Say which framework you use now and which one you want. Add your language if it matters.
+  - Check the list of items for manual review first. Then run the converted tests in your own project.
+  - Note that the per-pair guide files come from the source repo. Your AI needs web access or a copy of them.
+output_sample:
+  input:
+    - Your existing test files
+    - The framework you want to move to
+    - The language you use (optional)
+    - Your project setup details (optional)
+  prerequisites:
+    - An AI that can read your project files, or a chat where you can paste the test code
+    - Access to the skill's per-pair guide files, which are fetched from the source repo and are not in this folder
+  output:
+    - name: Converted test files
+      contains: Your tests rewritten in the target framework, with locators, waits, actions and assertions mapped across.
+    - name: Changed patterns
+      contains: A list of the old calls that were swapped and what they became.
+    - name: Manual review list
+      contains: Features with no direct match in the target, so you can decide what to do.
+    - name: Setup and lifecycle notes
+      contains: How start-up and clean-up differ in the target, such as driver versus page.

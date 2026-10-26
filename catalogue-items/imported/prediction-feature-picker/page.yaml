@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It builds, scores and chooses among many candidate features.
 new_slug: prediction-feature-picker
 name: Prediction feature picker
-summary: Give it a data table and a target. Get the best input columns chosen,
-  tested and delivered as a clean table.
+summary: Pick the best columns to predict your target. Give it a data table and get a tested feature selection in MATLAB, plus a report.
 job: build-software
 headline: Prediction feature picker
-subhead: Choose the columns that best predict your target, test the choice and
-  receive a clean table ready for training. This is for MATLAB and needs a
-  licence.
+subhead: Choose the columns that best predict your target, test the choice and receive a clean table ready for training. This is for MATLAB and needs a licence.
 explain: |
   Choose the columns that best predict your target, test the choice and receive a clean table ready for training. This is for MATLAB and needs a licence.
 
@@ -18,6 +15,10 @@ when:
   - You want proof that your chosen features work.
   - Your model is slow and overfitting.
   - You must hand a clean feature table to another team.
+not_for:
+  - "You have more than one target column: split it into one run per target, since this skill handles a single response."
+  - "You want a trained and tuned model: use a model training workflow in MATLAB, because this skill stops once the features are chosen."
+  - "You have no MATLAB licence: pick features by hand in a spreadsheet, or ask a data analyst to help."
 you_give:
   - Data table
   - Target column
@@ -29,9 +30,32 @@ you_get:
   - Assessment results
   - Clean feature table and report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Statistics and Machine
-    Learning Toolbox.
+  - Set up MATLAB with the Statistics and Machine Learning Toolbox. Connect your AI to MATLAB through the MCP server, so it can run code.
+  - Load your data table in MATLAB. Note the target column name and whether you predict a category (classification) or a number (regression).
+  - "Give your AI the skill and say: use this skill to pick features for my table. Tell it the table, the target and the task type."
+  - Name a folder for the results when your AI asks. It will not write files until you do.
+  - Check the selected features and the assessment. Say if you want the report left out.
+  - Hand the result to a model training workflow, since this skill does not train the final model.
+output_sample:
+  input:
+    - Your data table, loaded in MATLAB
+    - The name of your target column
+    - Whether the task is classification or regression
+    - A folder where results can be saved
+  prerequisites:
+    - MATLAB with a licence
+    - The Statistics and Machine Learning Toolbox
+    - An AI that can run MATLAB commands for you
+  output:
+    - name: Intake summary
+      contains: A check of your table, your target and your task type before any work starts.
+    - name: Feature pool
+      contains: The candidate columns built from your data, with extra features made when the data is signals, images or text.
+    - name: Selected features
+      contains: The columns kept after several ranking methods vote, cut at the point where gains level off.
+    - name: Assessment results
+      contains: Tests that show whether the chosen features predict your target well.
+    - name: Delivered files
+      contains: The files saved to your chosen folder, with the feature table kept in your MATLAB session.
+    - name: Feature report
+      contains: A written report of each phase and its results, as a Markdown file and a PDF when available.

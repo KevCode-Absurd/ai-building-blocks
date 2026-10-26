@@ -1,6 +1,6 @@
 new_slug: training-handout-writer
 name: "Training handout writer"
-summary: "Paste your session notes or slides. Get a one-page handout people can use at their desk a month later."
+summary: "Turn your training slides or notes into a one-page handout with steps, common mistakes and an example that people can use at their desk."
 job: teach-and-train
 thinking: low
 thinking_why: "It condenses given material into a fixed one-page shape."
@@ -17,6 +17,10 @@ when:
   - "You ran a training and want people to remember it past Friday."
   - "New hires get the session once and then ask the same questions for a month."
   - "You are turning a recorded session into something searchable."
+not_for:
+  - "Your process has no fixed steps yet: write the steps down with the people who do the work first, then run this."
+  - "You need a full course, a lesson plan or quiz questions: ask a trainer or an instructional designer."
+  - "You want a long how-to guide for a task people repeat: use the Repeat task how-to writer."
 
 you_give:
   - "Slides, notes or a transcript"
@@ -33,6 +37,23 @@ how_to_use:
   - "Say the skill and when people will use it."
   - "Read CUT. If something cut belongs at the desk, say so and run again."
   - "Print it or pin it where the work happens."
+output_sample:
+  input:
+    - Slides, notes or a transcript from the session
+    - The skill people should have after it, in one line
+    - When people will use it at work (advised)
+    - Questions people asked in the session (optional)
+  output:
+    - name: MOMENT OF USE
+      contains: One line on when, where and with what problem someone opens the page.
+    - name: HANDOUT
+      contains: A one-page sheet under 350 words with a title, numbered steps, mistakes beside each step, checks, an example and a help line.
+    - name: CUT
+      contains: One line listing the warm-ups, discussion, history and stories that were left out.
+    - name: MISSING
+      contains: Steps or facts the material did not give, marked so you can fill them in.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
 
 how_it_works:
   - title: "Names the moment of use"

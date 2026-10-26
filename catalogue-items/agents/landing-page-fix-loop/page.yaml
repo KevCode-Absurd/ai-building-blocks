@@ -1,19 +1,26 @@
 new_slug: landing-page-fix-loop
 name: Landing page fix loop
-summary: Give it your page, ad and facts. It audits, rewrites what fails, checks again, and stops when the page passes.
+summary: "Fix your landing page copy, not just review it. Give it your page, ad and facts. It rewrites what fails and rechecks for up to three rounds."
 job: audit-landing-page
 thinking: high
 thinking_why: It judges a page, rewrites it from your facts and repeats up to three times. Give it your strongest model.
 headline: Landing page fix loop
 subhead: Give it your page, the ad that sends people to it, and your facts. It audits the page, rewrites only what fails, checks again, and repeats until there are no deal-breakers and the checks pass, or three rounds are used.
 explain: |
-  A page review ends with a list. Then the list sits there. Or someone rewrites the whole page, and a new problem appears where an old one was fixed. A review is a start, not a fix.
+  A landing page review ends with a list. Then the list sits there. Or someone rewrites the whole page, and a new problem appears where an old one was fixed. A review is a start, not a fix.
 
-  This agent does the fix, to a standard. It reads the page three ways and runs thirty yes-or-no checks. It rewrites only what failed: the first screen if it does not match your ad, the section with a deal-breaker, the answer to a doubt your customers raise. It uses only the facts you gave it. Then it runs the checks again and repeats, up to three rounds. If a check fails because a fact is missing, or because the problem is layout or speed, it says so and does not write around it. If the offer itself is the trouble, it stops and tells you which decisions are yours.
+  This agent does the landing page copy fix, to a standard. It reads the page three ways and runs thirty yes-or-no checks. It rewrites only what failed: the first screen if it does not match your ad, the section with a deal-breaker, the answer to a doubt your customers raise. It uses only the facts you gave it. Then it runs the checks again and repeats, up to three rounds. If a check fails because a fact is missing, or because the problem is layout or speed, it says so and does not write around it. If the offer itself is the trouble, it stops and tells you which decisions are yours.
 when:
   - Your page gets visits but few sales and you want it fixed, not just reviewed.
   - A new ad sends people to a page that does not pick up the ad's promise.
   - Customers keep asking questions the page should already answer.
+  - You ran a landing page audit last month, the list is still unread, and you want the fixes written for you.
+not_for:
+  - You only want a diagnosis and plan to make the changes yourself. Use the Landing page conversion reviewer or the 30-point landing page checker.
+  - The page gets almost no visits. The checks will pass, but you cannot test whether sales improve.
+  - You have not decided the offer, price or guarantee. It will stop and list the decisions that are yours.
+  - You need a new page from nothing. Use the Ad-matched landing page writer, or the Shopify landing page builder for Shopify files.
+  - Your problem is page speed, layout or images. It lists those for a designer or developer and does not fix them.
 you_give:
   - The page address, or its full text and phone screenshots
   - Your prices, offer names, guarantee, delivery and returns terms, and the claims you may make
@@ -31,6 +38,30 @@ how_to_use:
   - Add your real facts. It will not guess a price, a delivery time or a guarantee.
   - Read the change list, then paste the new text into your page yourself.
   - Test the page against the old one if you have the traffic. A score is not a sales result.
+output_sample:
+  input:
+    - Your landing page address, or its full text and phone screenshots
+    - Your prices, offer terms, delivery and returns, and the claims you may make
+    - The ad that sends people to the page (best)
+    - Customer reviews or questions, each with a source (optional)
+  prerequisites:
+    - An AI that can read screenshots and, ideally, keep files, such as Claude Code
+    - Your brand brain from the Brand profile builder (optional, it supplies your facts and voice)
+  output:
+    - name: Result
+      contains: Rounds used out of three, checks and coverage scores at the start and end, and any deal-breakers left.
+    - name: New page text
+      contains: The sections that changed, ready to paste, and a list of sections left as they were.
+    - name: Change list
+      contains: Each change, the check it fixes and the fact you gave that it rests on.
+    - name: For a designer or developer
+      contains: Problems that copy cannot fix, such as layout, images, speed or a pop-up.
+    - name: Facts I need
+      contains: Each missing fact and the check it blocks.
+    - name: Test next
+      contains: Up to three tests with a one-line guess for each, if your page has the visits.
+    - name: Files
+      contains: The page text and results saved for each round.
 how_it_works:
   - title: Audit the page
     text: Reads the page as a five-second glance, a skim and a doubter's full read, then runs thirty yes-or-no checks.
@@ -98,3 +129,12 @@ works_best_with:
   inputs:
     - Phone screenshots of the first screen, the buy area and the checkout
     - Your reviews and pre-sale questions, with sources and dates
+terms:
+  - term: Deal-breaker
+    meaning: A problem on the page that can stop a sale by itself, such as no price or no delivery terms.
+  - term: Checks score
+    meaning: The share of 30 yes-or-no checks the page passes. A pass means fewer things block a buyer. It does not prove more sales.
+  - term: First screen
+    meaning: What a visitor sees on a phone before they scroll. It should pick up the promise made by your ad.
+  - term: Coverage
+    meaning: The share of customer questions the page already answers. Only scored if you give it customer questions.

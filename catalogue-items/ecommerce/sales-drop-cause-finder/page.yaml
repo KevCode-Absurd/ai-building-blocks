@@ -1,6 +1,6 @@
 new_slug: sales-drop-cause-finder
 name: "Sales drop cause finder"
-summary: "Paste store numbers from before and after a drop. Get the lever that moved and the next check."
+summary: "Find why your store sales dropped. Paste numbers from before and after, and see which of traffic, conversion or order value moved."
 job: track-numbers
 thinking: medium
 thinking_why: "It has to reason about which cause fits the numbers."
@@ -17,6 +17,10 @@ when:
   - "Sales are down this week and you do not know why."
   - "You are about to pause a campaign or rebuild a page."
   - "A report shows a dip and you want to know if it is real."
+not_for:
+  - "You want to read a slow trend over many months: use a simple chart of monthly sales in your store reports, then ask again on one sharp drop."
+  - "You have no numbers from before the drop: pull the earlier period from your store reports first, because this needs two periods to compare."
+  - "You need the full version with every check: use the Store sales drop splitter."
 
 you_give:
   - "Two periods (required): net sales plus shipping, sessions, conversion rate and average order value, before and after the drop."
@@ -34,6 +38,25 @@ how_to_use:
   - "Under it, paste your details: two periods; ad numbers; refunds processed in each period; changes you made."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Store numbers for the period before the drop and the period after it
+    - Ad spend, CPM and CPC for both periods
+    - Refunds processed in each period (strongly advised)
+    - Changes you made, such as prices, pages, apps or campaigns (optional)
+  output:
+    - name: THREE LEVERS
+      contains: The change in sessions, conversion rate, order value and sales, each shown as a start, an end and a percent.
+    - name: REFUNDS
+      contains: Refunds processed in each period and how much they change the picture of the drop.
+    - name: WHICH LEVER
+      contains: The one lever that moved most and its share of the drop.
+    - name: CAUSE
+      contains: What changed, the likely reason, and where in your store or ad account to check it.
+    - name: NOISE CALL
+      contains: Whether to ignore the dip or investigate it, with the reason.
+    - name: MISSING
+      contains: Any detail you did not give, so you can add it and run it again.
 
 how_it_works:
   - title: "Fix the sales line"

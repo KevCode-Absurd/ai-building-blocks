@@ -1,6 +1,6 @@
 new_slug: stock-and-bond-split-planner
 name: "Stock and bond split planner"
-summary: "Paste your investor type and money facts. Get a stock and bond split with a range, a rebalancing rule and the reasons."
+summary: "Plan your stock and bond split. Give it your investor type and money facts. You get a split with a range, a rebalancing rule and reasons."
 job: money-and-investing
 thinking: medium
 thinking_why: "The sums are small and fixed. The care is in matching the split to the person and keeping to a range instead of a single figure."
@@ -17,6 +17,10 @@ when:
   - You are starting out and need a first split with a reason behind it.
   - Your stock share has crept up in a rising market and you wonder what to do.
   - You want a rule for when to rebalance so you stop deciding case by case.
+not_for:
+  - "You need the money within five years: keep it in cash or a savings account, outside the split."
+  - "You want to pick a fund, a bond or a company: this plan names none, so use a licensed financial adviser."
+  - "You still don't know your investor type: use the Defensive or enterprising investor sorter first, then come back."
 
 you_give:
   - Your investor type, from "Defensive or enterprising investor sorter"
@@ -35,6 +39,27 @@ how_to_use:
   - Paste your investor type and the facts on your money. Add what you can on yields and tax.
   - Say honestly how you would feel if your stocks halved.
   - Keep the split and the rule where you will see them when prices move.
+output_sample:
+  input:
+    - Your investor type, from the Defensive or enterprising investor sorter
+    - How much you plan to invest, and what you need within five years
+    - What stocks and good bonds pay now (optional)
+    - Your tax rate (optional)
+  output:
+    - name: Money in the split
+      contains: Your total, the money kept out because you need it within five years, and the amount left in the split.
+    - name: Your split
+      contains: Stock and bond shares, the range of a quarter to three quarters in stocks, and the reasons from your answers.
+    - name: Yield check
+      contains: What stocks pay against what good bonds pay, what that ratio says, and what it does not say.
+    - name: Rebalancing rule
+      contains: The drift that triggers a move, the exact move, and a worked sum with the new totals.
+    - name: Inflation check
+      contains: Bond yield after tax and after a stated yearly price rise, shown as a real yield.
+    - name: What would change the split
+      contains: Facts about you that would change the split, never a market forecast.
+    - name: Missing and checks missed
+      contains: Inputs you did not give and any checks the skill could not pass.
 
 how_it_works:
   - title: Sets money aside

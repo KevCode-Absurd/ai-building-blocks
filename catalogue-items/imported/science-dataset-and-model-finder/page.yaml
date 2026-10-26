@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It looks things up in a catalogue and lists them.
 new_slug: science-dataset-and-model-finder
 name: Science dataset and model finder
-summary: Name your science field and task. Get datasets, models and tools worth
-  trying, with notes on fit.
+summary: Find science datasets and models for your field and task, with notes on fit, runtime and access limits. Works for biology, chemistry, climate and more.
 job: research-topics
 headline: Science dataset and model finder
-subhead: A short list of datasets, models and tools for your science field and
-  task, with notes on which are worth trying. Name your area, such as protein
-  folding, weather or galaxy images, and the job you want done.
+subhead: A short list of datasets, models and tools for your science field and task, with notes on which are worth trying. Name your area, such as protein folding, weather or galaxy images, and the job you want done.
 explain: |
   A short list of datasets, models and tools for your science field and task, with notes on which are worth trying. Name your area, such as protein folding, weather or galaxy images, and the job you want done.
 
@@ -18,6 +15,10 @@ when:
   - You want a pretrained model to fine-tune for genomics or chemistry.
   - You need to compare a few candidate models before picking.
   - You want demos or posts that show how others use a model.
+not_for:
+  - "You need a model for a generic task like a chatbot, a recommender or everyday photo sorting: search the Hugging Face Hub directly."
+  - "You want a dataset or model that is not in the Hugging Science list: search the Hugging Face Hub directly, since the list is not complete."
+  - "You want your AI to run the model or train it for you: use a person or a coding AI with the right science tools set up."
 you_give:
   - Your science field
   - The task, such as classify or predict
@@ -29,8 +30,30 @@ you_get:
   - Runtime and access warnings
   - Links to demos and write-ups
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can browse the Hugging Face catalogue.
+  - Open an AI that can run Python and reach the web. Claude, ChatGPT and Gemini can do this in some plans.
+  - Paste the skill text into the chat, or upload the skill folder if your AI takes files.
+  - Tell it your science field and the task you want done. Add your data type, data size and computer power if you know them.
+  - Read the shortlist and the warnings first. Check which picks need their own software or a token.
+  - Before you use a pick, note its exact repository, version and licence. Then check it on its Hugging Face page.
+output_sample:
+  input:
+    - Your science field, such as protein design or climate
+    - The task you want done, such as classify or predict
+    - Your data type and size (optional)
+    - The computer power you have (optional)
+  prerequisites:
+    - An AI that can run Python 3.10 or newer and reach the web
+    - A Hugging Face token, only for gated resources (optional)
+  output:
+    - name: Domain match
+      contains: The science areas from the catalogue that fit your task, since some tasks span more than one.
+    - name: Shortlist
+      contains: The datasets, models and demos worth trying, each with its type and Hugging Face link.
+    - name: Fit notes
+      contains: For each pick, how well it matches your data type, task and size, and why one beats another.
+    - name: Runtime and access warnings
+      contains: Whether it needs its own software, a token, or a lot of memory, and any known limits.
+    - name: Method posts
+      contains: Links to catalogue blog posts that explain the thinking behind the approach, when one matches.
+    - name: Pinned details
+      contains: The exact repository, version, licence and data split to record before you use a pick.

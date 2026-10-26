@@ -1,6 +1,6 @@
 new_slug: funny-speech-planner
 name: "Funny speech planner"
-summary: "Give one true story and the room. Get a deadpan speech with the wander, the dropped remark and the pause marked."
+summary: "Turn one true story into a funny speech or toast. You get a deadpan script with the pause marked and a check on what your room can take."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It shapes timing and tone from one story, and judges what the room can take."
@@ -17,6 +17,10 @@ when:
   - You are giving a toast, retirement speech or after-dinner talk and want the room to laugh.
   - You have one good story from real life and no idea how to tell it in four minutes.
   - You want to open a talk with humour that does not feel forced.
+not_for:
+  - "You need a sincere tribute or a eulogy: write it plainly yourself, or use the Read-aloud speech shaper if the speech must also move people."
+  - "You have no true story yet: first pick one real moment from your life with a friend, then come back."
+  - "You want jokes at one person's expense in a mixed room: pick a safer target, such as yourself, or skip the humour."
 
 you_give:
   - One true story, in a few lines, about something that happened to someone
@@ -34,6 +38,27 @@ how_to_use:
   - Say who will be in the room and who is the subject, if anyone.
   - Practise the script aloud with the pause marked, and time it.
   - Cut anything that makes you laugh at your own joke.
+output_sample:
+  input:
+    - One true story, in a few lines
+    - Who will be in the room, and the occasion
+    - How many minutes you have
+    - A first draft (optional)
+  output:
+    - name: The story
+      contains: Your true story boiled down to one line.
+    - name: The room
+      contains: Who is there, who is safe to joke about, and who or what to leave alone.
+    - name: Script
+      contains: The speech told with a straight face, with the dropped remark and the pause length marked.
+    - name: Where the room laughs
+      contains: The lines that should get a laugh, each with a short reason.
+    - name: If time runs short, cut
+      contains: Two lines you can drop to fit your time.
+    - name: Missing
+      contains: Facts that would sharpen the story, marked where they belong.
+    - name: Checks missed
+      contains: One line for each check it could not pass, or none.
 
 how_it_works:
   - title: Picks the story

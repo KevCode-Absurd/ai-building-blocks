@@ -1,6 +1,6 @@
 new_slug: type-led-poster-planner
 name: "Type-led poster planner"
-summary: "Paste your event and where the poster hangs. Get a type-only poster plan that reads from far away."
+summary: "Plan a type-only poster that reads from across the street. Give it your event and where it hangs. You get the words, type feel and a test."
 job: design-work
 thinking: low
 thinking_why: "It follows fixed steps to turn words into a type plan."
@@ -17,6 +17,10 @@ when:
   - "You need a poster for an event, sale, cause or show and have no image."
   - "Your last poster looked busy and nobody read it."
   - "Details like the date may change, and you do not want to redo the design."
+not_for:
+  - "You need a photo or product image on the poster: ask a designer, or use a simple template tool."
+  - "You want rules for a whole brand look, not one poster: use the Visual system rules writer."
+  - "You need a logo, not a poster: ask a designer, since this skill plans words and type only."
 
 you_give:
   - "What the event or cause is, and the date and place"
@@ -36,6 +40,29 @@ how_to_use:
   - "Print the plan at poster size, even roughly, and tape it on a wall."
   - "Walk to the far end of the room or street and see what you can read."
   - "Change the date or name on the plan to check the swap works."
+output_sample:
+  input:
+    - What the event or cause is, with the date and place
+    - Where the poster hangs and how far away people see it
+    - The mood, in one or two words
+    - Your brand file (optional)
+  output:
+    - name: Viewer and place
+      contains: Who sees the poster, from where, from how far and for how long.
+    - name: The words
+      contains: The one or two words that carry the point, with the reason for each pick.
+    - name: Type feel and size
+      contains: A plain description of the letter shape and weight, and how much of the poster the main words fill.
+    - name: What was cut
+      contains: Everything removed from the big message, with the date, place and link kept as small print.
+    - name: The twist
+      contains: One joke or turn if the subject allows, or none with the reason.
+    - name: Swap points
+      contains: The word or line that can change if the date, name or price changes, and what stays fixed.
+    - name: Far-away test
+      contains: How to print the plan at size, stand at the stated distance and see what you can read.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts still needed, and one line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: "Finds the viewer"

@@ -1,0 +1,41 @@
+slug: agency-project-management-jira-workflow-steward
+name: Jira Workflow Steward agent
+summary: "Turn a Jira ticket into a Git branch name, commit messages and a pull request description. Every code change is traceable from ticket to release."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: project-management/project-management-jira-workflow-steward.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-jira-workflow-steward.md
+  licence: MIT
+  original_name: Jira Workflow Steward
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 1e63812bd80317f4f69403701b6e1ff28d2fcf61862288f93fa4e4676bf46e17
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Jira Workflow Steward
+  - Agency Agents
+  - Project Management
+credits:
+  - title: Jira Workflow Steward
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-jira-workflow-steward.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

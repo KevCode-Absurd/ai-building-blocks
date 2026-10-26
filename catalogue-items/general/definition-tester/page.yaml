@@ -1,56 +1,67 @@
 new_slug: definition-tester
 name: "Definition tester"
-summary: "Paste a claim that uses a big word like fair or loyal. Get tested definitions and the counter-cases that break them."
+summary: "Test a claim built on a word like fair or loyal. Get a plain definition tried against hard cases, and your claim reworded."
 job: think-and-decide
 thinking: high
 thinking_why: "It has to invent counter-cases that really break a definition, then repair it. That takes careful reasoning."
 
 headline: "Definition tester"
-subhead: "Give it a claim built on a big word such as fair, loyal or quality. It writes a definition in plain words, hunts for cases that break it, revises it and tests again. You get a definition that holds, the cases that failed, and what stays unclear."
+subhead: "Paste a claim that leans on a big word such as fair, loyal or quality. Your AI writes a plain definition, tries cases that could break it, and repairs it each time. You get a tested definition, your claim reworded, and the disputes still open."
 
 explain: |
   Teams argue for hours about whether a pay scheme is "fair" or a customer is "loyal", and never notice that each person means something different. The argument cannot end because the word has no test. A claim that rests on an untested word is a claim nobody can check.
 
-  This skill picks the key word, asks for the one feature all your examples share, and writes a first definition. It then looks for a clear counter-case, a real or made-up case that fits the words but plainly is not the thing, or the reverse. It revises and tests again, checks for circles where the definition uses the word itself, and says who or what would decide a disputed case, step by step.
+  This definition tester starts with the cases you are sure about. It asks what one feature the sure cases share and the others lack, then writes a definition in plain words without using the word itself. Next it tries to break the definition with two kinds of case: one that fits the words but is plainly not the thing, and one that is plainly the thing but does not fit the words. After each break it repairs the definition and runs the old cases again.
+
+  Unlike a dictionary lookup, it works from your cases and your setting. It also finds one real case people would dispute and says who or what would decide it, step by step. It makes your own wording testable. It does not rule on law or ethics.
 
 when:
-  - A decision or policy rests on a word like fair, risk, loyal or quality, and people disagree on it.
-  - You are about to write a rule, metric or contract term and need it to be clear.
-  - A claim sounds right, but you cannot say what would prove it wrong.
+  - "Your team argues about whether a pay plan or a policy is 'fair', and nobody can say what fair means."
+  - "You are writing a contract term, a survey question or a metric and need a word pinned down first."
+  - "A claim sounds right, but you cannot say what would prove it wrong."
+  - "Customers or staff keep using a word like 'quality' or 'loyal' and you suspect they mean different things."
+
+not_for:
+  - "You need a ruling on a legal term or an ethics question. Ask a lawyer or an expert in that field. This only tests your own wording."
+  - "You want to know if a claim is true, not what a word in it means. Use the Claim skepticism kit."
+  - "You want to test the sums behind a loyalty plan or loyalty claim. Use the Loyalty claim checker."
+  - "The word is already defined in your contract or law. Use that definition and skip this."
 
 you_give:
-  - The claim or sentence that uses the big word
-  - Two or three examples you are sure fit, and one or two you are sure do not (optional)
-  - Where people disagree about it (optional)
-  - Customer or staff comments that use the word (optional)
+  - "The claim or sentence that uses the big word"
+  - "Two or three cases you are sure fit the word, and one or two you are sure do not (optional)"
+  - "Where people disagree about it (optional)"
+  - "Customer or staff comments that use the word (optional)"
+  - "Where the definition will be used, such as a contract, a survey or a team rule (optional)"
 you_get:
-  - The key word and a tested definition in plain words
-  - The counter-cases tried, and which ones broke which version
-  - A real case where people disagree, and who or what would decide it
-  - The claim rewritten with the tested wording, and what is still unknown
+  - "The key word and a tested definition in plain words"
+  - "Each test case, with whether it broke the definition and why"
+  - "A real case people dispute, and who or what would decide it"
+  - "Your claim rewritten with the tested wording"
+  - "What is still unclear"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the claim as it stands. Add examples you are sure of.
-  - When it offers a counter-case, say whether it breaks the definition. Your reaction is the test.
-  - Use the final wording in your policy, metric or message.
-  - Hand the "who decides" step to the person it names.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. No files, web search or code needed."
+  - "Paste your claim as it stands. Add the cases you are sure about. If you send nothing, it asks for the claim and stops."
+  - "Read each test case it offers. Where it marks CONFIRM, say whether the case really breaks the definition. Your answer is the test."
+  - "Check the final definition. Could someone who was not in the room use it to sort five new cases?"
+  - "Put the new wording in your policy, contract line or message. Hand the 'who decides' steps to the person it names."
 
 how_it_works:
-  - title: Picks the word
-    text: Finds the one word the claim leans on most and says why.
-  - title: Finds the shared feature
-    text: Looks for the one feature all your examples share, not a list of them.
-  - title: Writes a first definition
-    text: States it in plain words that someone outside the room could follow.
-  - title: Hunts counter-cases
-    text: Builds cases that fit the words but not the meaning, or the reverse, and checks each.
-  - title: Revises and retests
-    text: Repairs the definition after each break and runs it again.
-  - title: Names the disputed case
-    text: Finds a real case where people disagree and says who or what would decide it.
-  - title: Checks for circles
-    text: Makes sure the definition does not lean on the word it defines.
+  - title: "Picks the word"
+    text: "Finds the one word the claim stands or falls on, and says why it matters."
+  - title: "Finds what examples share"
+    text: "Looks for the one feature your sure cases have and the others lack, not a list of them."
+  - title: "Writes a first definition"
+    text: "Uses plain words a stranger could follow, and never the key word itself."
+  - title: "Tries to break it"
+    text: "Builds cases that fit the words but not the meaning, and the reverse, and says which broke it."
+  - title: "Repairs and retests"
+    text: "Fixes the definition after each break and reruns the earlier cases, for up to four rounds."
+  - title: "Names a disputed case"
+    text: "Finds a real case people would argue over and says who or what would decide it."
+  - title: "Checks for circles"
+    text: "Makes sure the definition does not lean on the word it defines, then rewrites your claim."
 
 output_shape: |
   THE CLAIM
@@ -80,6 +91,29 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your claim, with the big word in it"
+    - "Two or three cases you are sure fit, and one or two you are sure do not (optional)"
+    - "Where people disagree, or comments that use the word (optional)"
+  output:
+    - name: "THE CLAIM"
+      contains: "Your claim, the one word it rests on, and why that word matters most."
+    - name: "FIRST DEFINITION"
+      contains: "A definition in plain words, and the one feature all your sure cases share."
+    - name: "COUNTER-CASES"
+      contains: "At least two cases that try to break it, each marked broken or not, with the reason."
+    - name: "REVISED DEFINITION"
+      contains: "The definition after repairs, and the cases it was tested against."
+    - name: "A CASE PEOPLE DISPUTE"
+      contains: "A real case people would argue over, who or what decides it, and the steps."
+    - name: "CIRCLE CHECK"
+      contains: "A check that the definition does not use the word it defines, and the fix if it did."
+    - name: "THE CLAIM, REWRITTEN"
+      contains: "Your original claim with the tested wording swapped in."
+    - name: "STILL UNKNOWN and CHECKS MISSED"
+      contains: "What stays unclear, and one line for each of its own checks it could not meet."
 
 tweaks:
   - what: Sure examples
@@ -124,3 +158,5 @@ terms:
     meaning: A case that fits your words but plainly is not the thing, or is the thing but does not fit your words.
   - term: Circle
     meaning: A definition that uses the word it is meant to define, so it explains nothing.
+  - term: Key word
+    meaning: The one word the whole claim stands or falls on.

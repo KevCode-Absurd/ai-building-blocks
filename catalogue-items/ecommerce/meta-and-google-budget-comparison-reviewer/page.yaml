@@ -1,45 +1,121 @@
 new_slug: meta-and-google-budget-comparison-reviewer
 name: Meta and Google budget comparison reviewer
-summary: Compare Meta and Google results on matched dates. Separate channel claims from store sales and propose a budget plan.
+summary: Compare Meta and Google ad results on matched dates next to your store sales, then get budget scenarios with the sums shown.
 job: read-ad-results
 headline: Meta and Google budget comparison reviewer
-subhead: Share meta and google exports, store sales, currency, dates and targets. Get a channel comparison, attribution caveats and budget proposals.
-explain: |-
-  Compare Meta and Google results on matched dates. Separate channel claims from store sales and propose a budget plan.
+subhead: Give it Meta and Google exports and your store sales for the same dates, plus your currency and targets. It puts the two channels side by side, shows where their numbers overlap and writes budget scenarios with the sums shown. It never adds the two channels' sales together.
+explain: |
+  Meta and Google can each claim credit for the same sale. Add their numbers and you get more sales than your store made. This Meta and Google budget comparison reviewer keeps three sources apart: what Meta says, what Google says and what your store recorded.
 
-  Share meta and google exports, store sales, currency, dates and targets. Get a channel comparison, attribution caveats and budget proposals.
+  It builds a side-by-side table of spend, reported revenue, ROAS (reported revenue divided by spend) and cost per sale. Every missing number is marked. It splits Google brand search from other search where it can. A higher ROAS on one channel can come from people who were going to buy anyway, so it does not call that profit.
+
+  If Meta spend and Google brand search rise together, it flags a pattern to test. That is not proof that Meta caused the searches. It then proposes a holdout or location test, and writes budget scenarios inside your approved total, with stop rules. What a shift would add stays "unknown" until a test shows it.
 when:
-  - You need a channel comparison, attribution caveats and budget proposals.
-  - You need meta and google budget comparison reviewer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - Both Meta and Google report strong ROAS, but your store sales do not add up.
+  - You are about to move budget between Meta and Google and want to know what the numbers can and cannot say.
+  - Google brand search goes up when Meta spend does, and you wonder if they are linked.
+  - Someone asks which channel is "better" and you need a fair answer.
+not_for:
+  - "You want to check one platform's ROAS against your store totals. Use the Platform ROAS reality check."
+  - "You only need a holdout test design. Use the Holdout test planner."
+  - "You want to know why Meta is not spending. Use the Meta delivery troubleshooter."
+  - "You run only one ad channel and want to find your growth bottleneck. Use the Ad account bottleneck auditor."
+  - "You want daily pacing or live changes. Use each platform's own reports. This is a review, not a monitor."
 you_give:
-  - Meta and Google exports
-  - Store sales
-  - Currency
-  - Dates and targets
+  - A Meta campaign export with spend, reported revenue and purchases for set dates
+  - A Google campaign export for the same dates, with brand search apart from other search if you can
+  - Your store sales for the same dates, and new customers if you have them
+  - Your currency, time zone and the attribution setting each platform uses
+  - Your total budget, and your margin or payback target
+  - Promotions or tests that ran in the period (optional)
 you_get:
-  - A channel comparison, attribution caveats and budget proposals
-  - The sources used, missing inputs and assumptions
+  - A side-by-side table of spend, reported revenue, ROAS and cost per sale, with your store sales next to it
+  - Notes on where the two platforms' numbers overlap and what each number means
+  - Patterns between Meta and Google brand search, flagged as things to test
+  - One or two proposed tests to learn what each channel adds
+  - Budget scenarios inside your total, with the sums shown
+  - A list of what is still unknown
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code or web access.
+  - Export Meta and Google results for the same dates. Check that both use the same currency and time zone.
+  - Paste both exports and your store sales. Add your total budget and your margin or payback target.
+  - Read the caveats before the table. Never add the two channels' sales to get a total.
+  - Run the proposed test before you move a large budget. Design it with the Holdout test planner.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm meta and google exports, store sales, currency, dates and targets. Mark facts that are missing.
-  - title: Collect Data
-    text: Follow the collect data section in the full method and keep its required fields and decision rules.
-  - title: Platform Comparison
-    text: Follow the platform comparison section in the full method and keep its required fields and decision rules.
-  - title: Cross-Platform Attribution
-    text: Follow the cross-platform attribution section in the full method and keep its required fields and decision rules.
-  - title: Budget Allocation Decision Matrix
-    text: Follow the budget allocation decision matrix section in the full method and keep its required fields and decision rules.
-  - title: Channel Strategy by Campaign Type
-    text: Follow the channel strategy by campaign type section in the full method and keep its required fields and decision rules.
-  - title: Deliver the Report
-    text: Follow the deliver the report section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a channel comparison, attribution caveats and budget proposals. Check facts, math and the decisions before any action.
+  - title: Line up the data
+    text: Same dates, currency and account scope. Brand search is split from other search where possible. Store sales stay separate.
+  - title: Build the comparison
+    text: Spend, reported value, ROAS, cost per sale and other numbers, with each division shown and unknowns marked.
+  - title: Explain the gap
+    text: Why platform numbers differ from store sales. Attribution windows, overlap and customer mix all play a part.
+  - title: Look for patterns
+    text: It compares Meta activity with Google brand search over time. A match is a lead, not proof. It lists other causes, such as promotions and seasons.
+  - title: Propose a test
+    text: A holdout, a location split or another fair design, with its limits. It does not invent a "true ROAS".
+  - title: Write budget scenarios
+    text: Inside your total, with margin or payback, saturation and stop rules. Extra sales stay unknown without a test.
+  - title: List the unknowns
+    text: The decisions this data cannot support yet, and what would settle them.
+output_shape: |
+  SCOPE: <dates, currency, time zone, attribution settings, total budget, targets>
+
+  COMPARISON (reported by each platform, not additive)
+               Spend | Reported value | Purchases | ROAS | Cost per sale | Share of spend | Share of reported value
+  Meta         <...>
+  Google brand <...>
+  Google other <...>
+  Store sales (your own records) <...> | Blended: store sales / total spend <...>
+
+  OVERLAP AND DEFINITION NOTES
+  <windows, shared customers, what each number counts>
+
+  PATTERNS TO TEST (not proof)
+  <pattern> | <time window and lag> | <other possible causes>
+
+  UNKNOWNS
+  <what the data cannot say yet>
+
+  PROPOSED TESTS
+  <design> | <what it would show> | <limits>
+
+  BUDGET SCENARIOS (approved total <amount>)
+  <scenario> | Meta <amount> | Google <amount> | Total <sum check> | Basis <margin or payback> | Stop rule <...>
+
+  MISSING: <...>
+output_sample:
+  input:
+    - A Meta campaign export with spend, reported revenue and purchases
+    - A Google campaign export for the same dates
+    - Your store sales for those dates
+    - Your currency, total budget and margin or payback target
+  prerequisites:
+    - Exports from Meta Ads Manager and Google Ads, and your store's sales report, all for the same dates
+  output:
+    - name: Comparison table
+      contains: Spend, reported value, ROAS and cost per sale for Meta and Google, with your store sales beside them.
+    - name: Overlap and definition notes
+      contains: Why the platform numbers cannot be added, and what each number counts.
+    - name: Patterns to test
+      contains: Links between Meta activity and Google brand search over time, with other possible causes. These are not proof.
+    - name: Unknowns
+      contains: What the data cannot say yet, such as what a shift in budget would add.
+    - name: Proposed tests
+      contains: A holdout or location split that could answer the open question, with its limits.
+    - name: Budget scenarios
+      contains: Splits of your approved total, with the sums shown, the basis used and a stop rule for each.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  inputs:
+    - Daily or weekly numbers, not one total, so patterns over time can be seen
+    - Your Google brand search split from other search
+    - Notes on promotions, email sends and price changes in the same dates
+terms:
+  - term: ROAS
+    meaning: Return on ad spend. The revenue a platform reports divided by what you spent.
+  - term: Attribution window
+    meaning: How long after an ad is seen or clicked a platform still counts a sale as its own.
+  - term: Brand search
+    meaning: Google searches that include your brand name. People searching it often already know you.
+  - term: Holdout test
+    meaning: A test where a share of people or places do not see your ads, so you can compare sales with and without them.

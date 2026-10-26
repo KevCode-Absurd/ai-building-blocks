@@ -1,6 +1,6 @@
 new_slug: ten-second-opener-writer
 name: "Ten-second opener writer"
-summary: "Paste what you sell and who you are about to meet. Get a ten-second opener and two spares, as short honest questions."
+summary: "Write a ten-second opener for a sales talk, door knock or stall. Give your buyer reasons. Get a ten-word question plus two spares."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It writes a few very short lines from a fixed pattern."
@@ -17,6 +17,10 @@ when:
   - "You are meeting buyers face to face and need a first line."
   - "Your cold messages get no replies."
   - "You have one opener and it fails on some people."
+not_for:
+  - "You need ad copy for mass ads or email blasts: use the Ad first line writer and scorer, since those lines must stand alone."
+  - "You want to plan how to end the talk: use the Ask-which closing planner."
+  - "You have no idea yet why people buy: use the Customer buying reasons finder first."
 
 you_give:
   - "Your ranked reasons people buy (angle library)"
@@ -33,6 +37,26 @@ how_to_use:
   - "Say who you meet and where: a doorstep, a stall, an inbox."
   - "Say each opener out loud before using it."
   - "Try them on real buyers and tell the skill which one worked."
+output_sample:
+  input:
+    - Your ranked reasons people buy (angle library)
+    - Who you will meet and where (optional)
+    - Your offer and product facts (optional)
+  output:
+    - name: Lead opener
+      contains: A question of about ten words that points at what the buyer gets, with its word count.
+    - name: Result it points at
+      contains: The plain thing the buyer will see, feel or save.
+    - name: Spare 1 and Spare 2
+      contains: Two more openers for other moods or settings, each about ten words, with word counts.
+    - name: Honest extra
+      contains: A true compliment or a free item you can give, or none.
+    - name: How to test
+      contains: Which opener to use first, how many buyers to try, and what counts as a win.
+    - name: Missing
+      contains: What you could add to sharpen the lines.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: "Picks a true reason"

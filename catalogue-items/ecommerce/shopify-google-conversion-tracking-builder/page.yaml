@@ -1,6 +1,6 @@
 new_slug: shopify-google-conversion-tracking-builder
 name: "Shopify Google tracking builder"
-summary: "Give it your Shopify and Tag Manager access. Get a build checklist for purchase tracking and enhanced conversions."
+summary: "Build Shopify Google Ads purchase tracking step by step. Get a checklist, an ID copy list and a test plan that proves each event fires once."
 job: run-google-ads
 thinking: medium
 thinking_why: "The settings are exact and one wrong choice double counts sales, so it needs to follow the steps closely."
@@ -17,6 +17,10 @@ when:
   - You are launching Google Ads and purchase tracking is not yet built.
   - Google shows far fewer purchases than your store, or more than your store.
   - You want enhanced conversions on and need the exact steps for Shopify.
+not_for:
+  - "Your store is not on Shopify: ask your platform for its own event code, because this build uses Shopify's custom pixel."
+  - "Your tracking already works and each order counts once: skip the rebuild and just compare Google Ads purchases with your store orders."
+  - "You spend above about $50,000 a month and want server-side tagging built: hire a developer or a tracking vendor, as this only outlines it."
 
 you_give:
   - Shopify admin access (Google and YouTube app, customer events)
@@ -36,6 +40,32 @@ how_to_use:
   - Give your country code and monthly ad spend.
   - Follow the checklist step by step. Write each ID in the copy list as you go.
   - Place one real test order and run the test plan. Do not start campaigns until every event fires once.
+output_sample:
+  input:
+    - "What you have now: Google and YouTube app, GA4, Tag Manager and any current conversion actions"
+    - Your store's country code
+    - Your monthly ad spend (optional)
+    - The checkout fields you collect, such as email, phone and address (optional)
+  prerequisites:
+    - Shopify admin, Google Ads and Tag Manager access, so you can make the changes yourself
+    - One real test order to confirm each event fires once
+  output:
+    - name: READY?
+      contains: What you already have and what is missing before the build starts.
+    - name: BUILD CHECKLIST
+      contains: Numbered steps, each with where to go and the setting to choose.
+    - name: COPY LIST
+      contains: Each ID or label, where it comes from and where it goes.
+    - name: CONVERSION ACTIONS
+      contains: The four actions, which one is primary, how each counts, its windows and attribution.
+    - name: ENHANCED CONVERSIONS
+      contains: Which checkout fields are mapped, plus a privacy and consent note.
+    - name: TEST PLAN
+      contains: Each event, how to trigger it and what you should see.
+    - name: SERVER-SIDE
+      contains: Says if it is not needed yet, or gives an outline for high spend.
+    - name: WHERE SOURCES DIFFER
+      contains: The gap between GA4 and tag code, and which action stays primary.
 
 how_it_works:
   - title: Links GA4

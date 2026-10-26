@@ -2,36 +2,63 @@ thinking: high
 thinking_why: It sets up a survey and corrects the answers with careful math.
 new_slug: willingness-to-pay-survey
 name: Willingness-to-pay survey designer
-summary: Tell it what you sell. Get two survey questions to send customers and a
-  way to turn answers into a best price.
+summary: Find the best price for your product with a willingness to pay survey. Give it your cost and price range. You get two surveys and the steps to a price.
 job: set-prices
 headline: Willingness-to-pay survey designer
-subhead: Two short surveys that give you a best price from real customer
-  answers, plus the steps to turn those answers into a number. It replaces
-  guessing and asking "how much would you pay?", which overstates by about half.
+subhead: Give it your product, your cost and your price range. It writes two short surveys and shows you how to turn the answers into a best price. Asking "how much would you pay?" alone makes people name prices that are too high.
 explain: |
   Two short surveys that give you a best price from real customer answers, plus the steps to turn those answers into a number. It replaces guessing and asking "how much would you pay?", which overstates by about half.
 
   You set seven prices at equal steps between your lowest and highest plausible price. Survey A asks an open price question. Survey B shows each person one price from the ladder and asks if they would buy. After cleaning absurd answers from A, the skill corrects the stated demand and works out the price that makes the most profit given your unit cost. You need about 500 responses, and the skill tells you how to test the survey before launch.
 when:
-  - You are about to launch and cannot decide the price.
-  - You want to know whether a rise would cost you sales.
-  - You have an audience of several hundred you can survey.
-  - You want to stop copying competitor prices.
+  - You are about to launch and cannot decide on a price.
+  - You wonder if a price rise would cost you sales.
+  - You have an audience of a few hundred people you can survey.
+  - You are tired of copying what competitors charge.
+not_for:
+  - "You already picked a price and only need to choose the digits or how it is shown: use the pricing skill."
+  - "You cannot reach about 500 people to answer: run a live price A/B test on your site instead."
+  - "You want a quick guess from a few friends: ask five customers in a short call, since this method needs volume."
 you_give:
-  - Product description and images
-  - Unit cost
-  - Lowest and highest price you can imagine
-  - Where you will find respondents
-  - "Goal: profit, reach or premium"
+  - Your product description and images
+  - Your unit cost
+  - The lowest and highest price you can imagine
+  - Where you will find people to answer
+  - "Your goal: profit, reach or premium (optional)"
 you_get:
-  - Seven-step price ladder
-  - Wording for both surveys
-  - Sample size and test checklist
-  - Cleaning and correction steps
-  - Profit-maximising price estimate
+  - A price ladder of seven prices in equal steps
+  - Word-for-word text for both surveys
+  - A sample size plan and a test checklist
+  - Steps to clean and correct the answers
+  - A profit-maximizing price, with close ties flagged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Paste the skill into Claude, ChatGPT or Gemini, then add your product, cost and price range.
+  - Ask for the price ladder and both surveys. Build them in a survey tool that can show each person one random price. Qualtrics does this but is paid, so check for a free plan that has random questions.
+  - Test both surveys before launch. Open the link a few times in a private window and check prices vary.
+  - Send the surveys to your audience and keep them open for 2 to 3 weeks, until you have about 500 answers.
+  - Export the answers as two files. Give them to an AI that can run code, or follow the math steps by hand.
+  - Read the profit table. If two prices are close, pick by your goal or run a live price test.
+output_sample:
+  input:
+    - Your product description and images
+    - Your unit cost and how many people will see the offer
+    - The lowest and highest price you can imagine
+    - Where you will find people to answer
+    - "Your goal: profit, reach or premium (optional)"
+  prerequisites:
+    - A survey tool that can show each person a random price
+    - An AI that can run a small script, for the final math (or do the steps by hand)
+    - About 500 survey answers, collected over 2 to 3 weeks
+  output:
+    - name: Price ladder
+      contains: Seven prices in equal steps from your lowest to your highest plausible price.
+    - name: Survey A and Survey B wording
+      contains: The exact text for the open price question and the yes or no question.
+    - name: Sample plan
+      contains: At least 30 answers per price, about 500 in total, plus where to recruit and how long to run.
+    - name: Correction constants
+      contains: The average open answer, the average closed answer, and the shift between them.
+    - name: Demand and profit table
+      contains: For each ladder price, the share willing to buy, the buyers and the profit.
+    - name: Recommended price
+      contains: The price with the most profit, close ties, and any change you make for your strategy.

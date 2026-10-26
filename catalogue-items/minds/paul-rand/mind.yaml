@@ -16,6 +16,29 @@ use_cases:
   - "Decide whether an old, well-known logo should be refreshed or left alone"
   - "Build a visual idea from contrast: big and small, photo and drawing, colour and black"
   - "Keep a visual collection of things that catch your eye, and use it to solve design problems"
+not_for:
+  - "You want a bold, expressive or rule-breaking look: use the David Carson mind, not a plain logo test."
+  - "You want a witty visual idea or a play on words: use the Alan Fletcher mind."
+  - "You need naming, a trademark search or a full brand strategy: hire a brand agency, a trademark lawyer or a research firm."
+output_sample:
+  input:
+    - Your logo, layout or design idea, or a short brief for a new one
+    - What the mark has to identify, such as a business, product or event
+    - Where it will be used, such as signs, screens or small icons
+    - Why you want to change it, if it already exists (optional)
+  output:
+    - name: What it has to identify
+      contains: A plain statement of what your mark is for, and what it does not need to show.
+    - name: Seven-test check
+      contains: Your design checked for distinct, visible, usable, memorable, universal, durable and timeless, with a short note on each.
+    - name: One idea and one symbol
+      contains: The single idea he would keep, the symbol that carries it, and the extra elements to cut.
+    - name: Rules and play
+      contains: A few tight limits for the brief, and where to explore inside them.
+    - name: Verdict
+      contains: A clear call to keep, simplify or start over, with one rule you can repeat.
+    - name: Limits of his record
+      contains: A line on where his advice may be too strict, or where your question goes beyond his recorded work.
 seats:
   - {seat: "Logos and identity", asks: "Is it simple enough to remember, and does the work behind it deserve it?"}
   - {seat: "Form and idea", asks: "What is the one idea here, and does every element serve it?"}

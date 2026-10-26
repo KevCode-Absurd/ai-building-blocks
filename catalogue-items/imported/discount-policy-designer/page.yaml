@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds set policy parts around your deal sizes.
 new_slug: discount-policy-designer
 name: Discount policy designer
-summary: Describe how you sell. Get a discount matrix, approval limits and a
-  clear route for exceptions.
+summary: "Build a discount policy for your sales team: a discount matrix, approval limits and a clear route for exceptions, based on your past deals."
 job: sell-and-negotiate
 headline: Discount policy designer
-subhead: Describe how you sell. Get a discount matrix, approval limits and a
-  clear route for exceptions. Bring closed won and lost deals from the last
-  year. Use the result to plan your next step.
+subhead: Describe how you sell. Get a discount matrix, approval limits and a clear route for exceptions. Bring closed won and lost deals from the last year. Use the result to plan your next step.
 explain: |
   A written discount policy your sales team can follow: who can offer what, when to ask for approval, and what happens when a request breaks the rules. It ends the habit of citing "last quarter's deal" as precedent.
 
@@ -18,6 +15,10 @@ when:
   - Margins are slipping and reps discount too freely.
   - Exceptions keep rising and you suspect the bands are wrong.
   - Your finance lead raised the margin floor and the policy must be rebuilt.
+not_for:
+  - "You need to rule on one live deal: use the Deal desk skill or ask your finance lead, since this item only writes the rules."
+  - "You are still choosing how to price your product: work on pricing first with a pricing strategist or a person who owns pricing."
+  - "You have no way to run code: this item needs Python 3, so write a short rule list by hand instead."
 you_give:
   - Closed won and lost deals from the last year
   - Your margin floor
@@ -30,7 +31,27 @@ you_get:
   - A lint report listing policy flaws
   - A short policy summary for your team
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open an AI that can run Python 3 code and read files. Paste in the skill instructions or upload the skill folder.
+  - Answer the eight questions the skill asks about your deals, your margin floor and your approvers. Say if you do not know one.
+  - Add your closed won and lost deals from the last year. Check the AI shows you the fields it read.
+  - Let the AI build the discount matrix, then run the exception router and the lint report.
+  - Fix every flaw in the lint report, then share the short policy summary with your sales team.
+output_sample:
+  input:
+    - Your closed won and lost deals from the last year
+    - Your margin floor
+    - Your sales team and who can approve deals
+    - Your contract sizes, terms and payment options
+    - Your business type, such as SaaS
+  prerequisites:
+    - An AI that can run Python 3 code and read files
+    - Your deal data saved as a file the AI can open
+  output:
+    - name: Discount matrix
+      contains: A maximum discount for each mix of contract size, term length, payment terms and strategic value, with the approver level.
+    - name: Exception route
+      contains: The named chain of approvers for a request outside the matrix, with the extra commitments and evidence needed.
+    - name: Lint report
+      contains: A list of flaws in the policy, such as reversed approvers, gaps, overlapping bands and margin floor breaches.
+    - name: Policy summary
+      contains: A short write-up of the rules your sales team can read and follow.

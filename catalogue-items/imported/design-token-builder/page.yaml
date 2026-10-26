@@ -2,25 +2,23 @@ thinking: medium
 thinking_why: It follows set rules but picks values.
 new_slug: design-token-builder
 name: Design token builder
-summary: Give it your brand colours and fonts. Get design tokens, component
-  notes, responsive sizes and a developer handoff.
+summary: "Turn one brand colour into a full set of design tokens: palette, type sizes, spacing and breakpoints, saved as CSS, SCSS or JSON files."
 job: design-work
 headline: Design token builder
-subhead: A full set of design tokens built from one brand colour, with the files
-  your developers can drop straight into code. It saves the hand work of picking
-  shades, sizes and gaps that all need to fit together.
+subhead: A full set of design tokens built from one brand colour, with the files your developers can drop straight into code. It saves the hand work of picking shades, sizes and gaps that all need to fit together.
 explain: |
   A full set of design tokens built from one brand colour, with the files your developers can drop straight into code. It saves the hand work of picking shades, sizes and gaps that all need to fit together.
 
   The skill runs in four passes. First, it turns your brand colour and style (modern, classic or playful) into a palette, a type scale and a spacing scale on an 8-point grid, and exports them as JSON, CSS variables or SCSS. Second, it sets up a component structure. Third, it works out responsive breakpoints. Fourth, it writes a handoff note. It also checks colour pairs against WCAG contrast rules. It uses small Python scripts, so it needs a place to run code.
 when:
-  - You have one brand colour and need a whole palette that passes contrast
-    checks.
-  - Your developers keep asking for exact spacing and type sizes you never wrote
-    down.
-  - You are setting up a design system for a new product and want a clean
-    starting point.
+  - You have one brand colour and need a whole palette that passes contrast checks.
+  - Your developers keep asking for exact spacing and type sizes you never wrote down.
+  - You are setting up a design system for a new product and want a clean starting point.
   - You need CSS or SCSS variables that match what is in your design file.
+not_for:
+  - "You already have a finished brand system with tokens in place: keep it, and ask your developer to sync it from your design file."
+  - "You only need one colour checked for contrast: use a free online contrast checker instead."
+  - "You want finished screens or logos: ask a designer, because this makes values, not visuals."
 you_give:
   - Your main brand colour as a hex code
   - "A style choice: modern, classic or playful"
@@ -33,8 +31,31 @@ you_get:
   - Responsive breakpoint values
   - A developer handoff note
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run Python code, or install Python 3 on your computer. Add the skill's generator script to your chat or folder.
+  - "Tell your AI your brand colour as a hex code, your style (modern, classic or playful) and the format you want: CSS, SCSS or JSON."
+  - "Ask it to run the generator with your colour, for example with #0066CC and modern, then save the CSS or JSON result."
+  - Check the palette for contrast. Text should pass WCAG AA, which means 4.5 to 1 for normal text and 3 to 1 for large text.
+  - Ask for the component map, the breakpoints and the handoff note. Send the files and the note to your developer.
+  - To sync with Figma, the skill suggests the Tokens Studio plugin. Check its current pricing yourself, as this skill does not say.
+output_sample:
+  input:
+    - Your main brand colour as a hex code
+    - "A style choice: modern, classic or playful"
+    - "The file format you need: JSON, CSS or SCSS"
+    - Fonts you want to use (optional)
+  prerequisites:
+    - An AI that can run Python code, or Python 3 on your own computer
+    - A place to save the files it makes
+  output:
+    - name: Design tokens file
+      contains: Colours, type sizes, spacing, borders, shadows, motion, breakpoints and layers, saved as CSS, SCSS or JSON.
+    - name: Colour palette
+      contains: Primary, secondary, neutral and status colours in steps from light to dark, with contrast colours.
+    - name: Type and spacing scales
+      contains: Font sizes on a 1.25 step ratio and spacing values on an 8-point grid.
+    - name: Component map
+      contains: A list of buttons, inputs, cards and more, with the tokens each one uses and its size and colour variants.
+    - name: Responsive breakpoints
+      contains: Screen widths from small phones to large screens, plus fluid font sizes and spacing that change by screen.
+    - name: Developer handoff
+      contains: Setup notes for React, Tailwind and styled-components, a Figma sync step and a checklist.

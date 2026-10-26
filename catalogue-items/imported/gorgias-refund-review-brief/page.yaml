@@ -2,17 +2,29 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-refund-review-brief
 name: Gorgias refund review brief
-summary: Share a ticket or customer email. Get refund facts, policy checks, a recommendation, and a reply draft.
+summary: "Turn a Gorgias refund request into a clear brief: facts, policy checks, a recommendation and a reply draft for a person to approve."
 job: help-customers
 headline: Gorgias refund review brief
 subhead: Give it a Gorgias ticket number or customer email and your refund policy. It checks the request against past tickets and HubSpot records. You get the facts, policy checks, a proposed decision, and a reply draft for a person to approve.
 when:
-  - You use this tool for customer support and need help with this task.
+  - A customer writes in asking for money back and you need the full picture fast.
+  - You want to check a refund request against your policy before you answer.
+  - A teammate asks you to review a refund and you need the facts in one place.
+  - You want a reply drafted for an approve or deny decision.
+not_for:
+  - "You face a chargeback or card dispute: handle it with your payment provider, such as Stripe or PayPal, and their dispute steps."
+  - "The customer only wants to cancel and has not asked for money back: reply yourself or use your billing tool's cancel step."
+  - "You cannot connect Gorgias and HubSpot: paste the ticket and customer details into your AI and ask for a simple summary, or ask a teammate to review it."
 you_give:
-  - The request or ticket, customer email, and refund policy.
-  - Gorgias and HubSpot records, including past refunds and usage if available.
+  - A Gorgias ticket number or the customer's email.
+  - Your refund policy, pasted in (optional).
+  - Access to Gorgias and HubSpot through the Composio CLI.
 you_get:
-  - Show the facts, recommendation, and reply draft. This skill does not issue the refund.
+  - A summary of the request and the customer's history.
+  - A table that checks the request against your refund rules.
+  - A recommendation with the reasoning and the risk of losing the customer.
+  - A draft reply to the customer for you to review.
+  - A flag when the refund is large enough to need manager approval.
 how_it_works:
   - title: Collect the refund facts
     text: Read the request, account details, past refunds, payment plan, and customer history.
@@ -25,8 +37,27 @@ works_best_with:
     - name: Gorgias and HubSpot
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias refund review brief by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide the request or ticket, customer email, and refund policy.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Add the downloaded folder to an AI that can read skill files and run commands.
+  - Link your accounts first. Run composio link gorgias and composio link hubspot if asked.
+  - Ask for the refund processor and give the ticket number or customer email.
+  - Read the eligibility table and the recommendation. Check them against your own policy.
+  - Edit the draft reply, then send it yourself. The skill never issues the refund.
+output_sample:
+  input:
+    - A Gorgias ticket number or the customer's email
+    - Your refund policy (optional)
+    - Your HubSpot customer record (read by the tool)
+  prerequisites:
+    - An AI that can run commands and read skill files
+    - The Composio CLI, with your Gorgias and HubSpot accounts linked
+  output:
+    - name: Request Details
+      contains: The ticket number, customer name and email, amount asked for, stated reason and date of the request.
+    - name: Customer Profile
+      contains: How long they have been a customer, their plan, lifetime value, past refunds, account status and open deals.
+    - name: Eligibility Check
+      contains: A table that marks the refund window, reason, refund history and account standing, with a note for each.
+    - name: Recommendation
+      contains: Full refund, partial refund, credit, or deny with an alternative, plus the reasoning and the risk of losing the customer.
+    - name: Draft Response to Customer
+      contains: A ready reply for either approval or denial, for a person to check before sending.

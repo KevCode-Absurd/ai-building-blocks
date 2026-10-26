@@ -1,6 +1,6 @@
 new_slug: operations-manual-writer
 name: "Operations manual writer"
-summary: "Paste your standards sheet. Get a job card for each role, a missed-standard rule and a day-one trial sheet."
+summary: "Turn your standards sheet into an operations manual: one job card per role, a missed-standard rule and a day-one trial sheet for a newcomer."
 job: plan-strategy
 thinking: medium
 thinking_why: "It turns a standards sheet into ordered steps and has to keep numbers exact, but the format is fixed. A mid-range model does it well."
@@ -17,6 +17,10 @@ when:
   - You have written standards but no step-by-step instructions anyone else could follow.
   - A new hire keeps asking you the same questions.
   - You plan to open a second location, hire a manager or hand the business to a partner.
+not_for:
+  - "You have no written standards yet: run the Repeatable standards sheet writer first, then come back here."
+  - "You need legal or food-safety sign-off: ask a qualified person or your local authority, because this does not certify anything."
+  - "You want to check if a second site is ready to open: use the Second location readiness checker with your trial notes."
 
 you_give:
   - Your standards sheet or a list of what good looks like
@@ -34,6 +38,28 @@ how_to_use:
   - List the roles and say what each person does from open to close.
   - Print the trial sheet and give it to someone who has never worked for you. Watch and write down where they stop.
   - Bring the trial notes to "Second location readiness checker".
+output_sample:
+  input:
+    - Your standards sheet or a list of what good looks like
+    - The roles in your business and what each person does in a shift
+    - What goes wrong when you are away (optional)
+  prerequisites:
+    - A standards sheet, for example one from the Repeatable standards sheet writer
+  output:
+    - name: Roles and what each owns
+      contains: Each role with the standards it is responsible for, and any standard with no owner flagged.
+    - name: Job card
+      contains: One card per role with numbered steps that start with a verb, carry a number and end with a done-when check.
+    - name: If a standard is missed
+      contains: The action to take at once for each key standard, and who is told.
+    - name: Fixed and local
+      contains: What stays the same everywhere, what a local owner may change, and how a good idea becomes a standard.
+    - name: Day-one trial sheet
+      contains: A line for each step to record if the newcomer did it alone, needed help, guessed or stopped.
+    - name: MISSING
+      contains: The numbers and steps you still need to supply, in the order they block the trial.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: Splits the work by role

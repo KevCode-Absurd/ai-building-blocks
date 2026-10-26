@@ -1,38 +1,50 @@
 new_slug: thought-experiment-planner
 name: "Thought experiment planner"
-summary: "Describe a plan or belief. Get a what-if scene to run in your head, and a check that could prove it wrong."
+summary: "Test a plan in your head first. Get a what-if scene, the odd differences it finds and one check that could prove you wrong."
 job: test-an-idea
 thinking: high
 thinking_why: "It reasons through scenes and spots differences with no cause, which needs careful thought."
 
 headline: "Thought experiment planner"
-subhead: "Describe a plan, design or belief. It builds a short what-if scene with named people, asks what each would observe, finds differences with no cause and runs the design through normal use and the worst case. You get a plan with a check that could fail."
+subhead: "Describe a plan, design or belief. The skill builds a short what-if scene with named people and asks what each would see. It finds differences that have no cause, then runs your design through normal use and the worst case. You get a plan with a check that could fail."
 
 explain: |
-  Many plans are never tested because testing costs money. But some flaws show up sooner if you picture the plan in a concrete scene and ask what each person in it would see. Differences that have no cause, or parts with no job, often hide there.
+  Many plans never get tested because testing costs money. But some flaws show up sooner if you picture the plan in a concrete scene and ask what each person in it would see. Differences with no cause, and parts with no job, often hide there.
 
-  This skill writes the scene with named people and objects, lists what each could observe, and pairs up cases the plan treats differently. For each pair it asks for a check that would tell them apart, and merges the pair if there is none. It then runs the full design through a normal use and the worst case, and ends with a check that could prove the idea wrong.
+  This skill writes the scene with named people and objects. It lists what each person could observe, and pairs up the cases your plan treats differently. For each pair it asks for a check that would tell them apart, and merges the pair into one case if there is none.
+
+  Then it runs the full design through a normal use and the worst case. It ends with one check that could prove the idea wrong. A scene in your head is not proof. It tells you what to test next.
 
 when:
   - "You are about to build something and want to find weak spots first."
   - "You hold a belief about your business and cannot say how you would know if it was wrong."
-  - "A plan has two rules for two cases and you doubt the difference matters."
+  - "A plan has two rules for two cases, such as new and old customers, and you doubt the difference matters."
+  - "A real test would be slow or costly, such as a new pricing rule for every customer."
+
+not_for:
+  - "You can test the plan for real this week at low cost: use the MVP experiment planner or the One-change experiment planner."
+  - "You want the strongest objections from a critic: use the Plan objection writer."
+  - "You want a list of ways the plan could fail, with no scene: use the Plan risk reviewer."
 
 you_give:
   - "The plan, design or belief, in plain words"
-  - "The scene: who is involved and what changes (optional)"
-  - "A sketch or brief (optional)"
+  - "Who is involved and what changes (optional)"
+  - "What you can count or measure, such as prices, loads or times (optional)"
+  - "A sketch of the design, attached as a picture (optional)"
 you_get:
   - "A short scene with named people and objects"
-  - "A list of differences that have no cause, and merged plans"
+  - "What each person would see, count or feel"
+  - "Pairs of cases your plan treats differently, with the cause or no cause shown"
+  - "A rewritten plan with the false differences merged"
   - "A part-by-part run through normal use and the worst case"
-  - "One check that could prove the idea wrong"
+  - "One check that could prove the idea wrong, and what you change if it does"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe the plan or belief and who is involved."
-  - "Check that each fact in the scene is true. Correct any that are not."
-  - "Run the check it names, and change the plan if it misses."
+  - "Open the skill in your AI, or copy it and paste it into Claude, ChatGPT or Gemini. It needs no files or tools."
+  - "Describe the plan or belief and who is involved. Add anything you can count."
+  - "Read the SCENE first. Check that each fact is true, and correct any that are not."
+  - "In PAIRED CASES, look at each line that says no cause shown. Ask whether the difference is real."
+  - "Run the CHECK THAT COULD FAIL in real life, then change the plan if it misses. To turn it into a live test, use the MVP experiment planner."
 
 how_it_works:
   - title: "Builds the scene"
@@ -83,6 +95,32 @@ output_shape: |
   CHECKS MISSED
   <lines or none>
 
+output_sample:
+  input:
+    - "Your plan, design or belief, in plain words"
+    - "Who is involved and what changes (optional)"
+    - "What you can count or measure (optional)"
+    - "A sketch of the design (optional)"
+  prerequisites:
+    - "Any chat AI. To use a sketch, attach it as a picture."
+  output:
+    - name: "SCENE"
+      contains: "Four to eight sentences with named people and objects in a specific place, and what changes."
+    - name: "WHAT EACH WOULD OBSERVE"
+      contains: "For each person or part, what they would see or count, and any claim that cannot be observed."
+    - name: "PAIRED CASES"
+      contains: "Cases the plan treats differently, the cause it gives or no cause shown, and a check that tells them apart."
+    - name: "REWRITTEN PLAN"
+      contains: "Your plan with the cases that no check can tell apart merged into one."
+    - name: "DESIGN"
+      contains: "Every part, its job and what it connects to. Parts with no job are marked."
+    - name: "NORMAL RUN and WORST CASE"
+      contains: "The design walked start to end twice, normal use and the heaviest case, and what breaks first."
+    - name: "CHECK THAT COULD FAIL"
+      contains: "One check that could prove the idea wrong, and what you will change if it misses."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check the answer failed, or none."
+
 tweaks:
   - what: "How concrete the scene is"
     how: "Real names and numbers give a sharper test than \"a customer\"."
@@ -110,7 +148,7 @@ improve:
   - "Add the real limits of your field (law, safety, budget) to step 8."
   - "Add your usual worst cases to a list in step 8."
   - "Keep the checks you run and results in a log."
-  - "Pair it with an MVP experiment planner to run the check as a live test."
+  - "Pair it with the MVP experiment planner to run the check as a live test."
 
 works_best_with:
   tools:

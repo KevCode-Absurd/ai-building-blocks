@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts issues into batches and fixes each one in order.
 new_slug: page-speed-fixer
 name: Page speed fixer
-summary: Paste your PageSpeed report. Get fixes for speed, access, best practice
-  and SEO scores, in ordered batches.
+summary: Fix your page speed from a PageSpeed or Lighthouse report. Get ordered fixes for speed, access, best practice and SEO scores.
 job: build-websites
 headline: Page speed fixer
-subhead: A faster, cleaner page, fixed in ordered batches from the report you
-  already have. Paste your PageSpeed or Lighthouse results and the work follows
-  the scores, not guesses.
+subhead: A faster, cleaner page, fixed in ordered batches from the report you already have. Paste your PageSpeed or Lighthouse results and the work follows the scores, not guesses.
 explain: |
   A faster, cleaner page, fixed in ordered batches from the report you already have. Paste your PageSpeed or Lighthouse results and the work follows the scores, not guesses.
 
@@ -18,6 +15,10 @@ when:
   - The main image takes seconds to appear.
   - The report lists dozens of issues and you do not know where to begin.
   - You need accessibility and meta tag fixes made along with speed.
+not_for:
+  - "Your slowness comes from the server, CDN or database: use your host's own tools or ask your developer."
+  - "You have no PageSpeed or Lighthouse report yet: run one on your page first, then come back."
+  - "You can't reach your site code: ask whoever built your site to apply the fixes."
 you_give:
   - PageSpeed or Lighthouse report, pasted
   - Your site code
@@ -28,7 +29,27 @@ you_get:
   - Re-test after each batch
   - Notes on what changed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Run your page through PageSpeed Insights or Lighthouse and copy the full report.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste your report.
+  - Add your site code. Use an AI that can read files, or paste the key files.
+  - Review the ranked issue list. Say which batch to start with.
+  - Apply each batch, run PageSpeed again, and paste the new scores before the next batch.
+output_sample:
+  input:
+    - Your PageSpeed or Lighthouse report, pasted
+    - Your site code
+    - Which pages matter most (optional)
+  prerequisites:
+    - An AI that can read and edit your site files
+    - Image tools such as cwebp, sharp or Pillow, only if you convert images
+  output:
+    - name: Score summary
+      contains: Your four scores and the metric that drags most, such as LCP.
+    - name: Risk report
+      contains: Issues ranked by priority, with the file and the fix for each.
+    - name: Fix Batch 1
+      contains: Code changes for the biggest speed problems, such as render-blocking CSS or a late hero image.
+    - name: Later batches
+      contains: Fixes for accessibility, best practice and SEO, one batch at a time.
+    - name: Re-test notes
+      contains: What to check after each batch before moving on, and what changed.

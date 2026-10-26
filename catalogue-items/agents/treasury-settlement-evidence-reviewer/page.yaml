@@ -1,51 +1,93 @@
 new_slug: treasury-settlement-evidence-reviewer
 name: Treasury settlement evidence reviewer
 headline: Treasury settlement evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Paste bank balances, restrictions and last forecast. Get cash you can really use, forecast drift and a day-by-day ladder that shows any funding gap.
+
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A dated settlement ladder, forecast drift and accessible cash reconciliation. Share dated bank cash and restrictions, frozen prior forecast and matching actual net flows, current confirmed bucketed receipts/payments and approved cash floor. Include the previous dated review and source versions when available.
-explain: |-
-  A dated settlement ladder, forecast drift and accessible cash reconciliation.
+subhead: Give it your dated bank balances, the restrictions on them, the forecast you froze last time with what actually happened, and the receipts and payments confirmed for the coming days. It works out how much cash you can really use, shows how far the old forecast drifted, and lays out each settlement day against your minimum cash. You get a ladder with any funding gap named, and a short record to start the next review from.
 
-  Treasury settlement controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A bank balance is not cash you can spend. Part of it may be restricted, part pledged, and part already committed to debits that haven't posted. A forecast can also drift a little each week and look fine until the lowest day lands under your minimum. Most teams find out when a payment is due.
+
+  This agent keeps a small record of the last review: the account, the currency, the source cutoff, the forecast version, the restriction IDs, the lowest bucket balance and whether it reconciled. Each time you run it, it compares the new evidence with that record. It rebuilds usable cash first, backtests the frozen forecast against what happened using that forecast's own opening balance, then builds the settlement ladder from today's usable cash. It checks a bank charge only when an unexplained fee is part of the gap.
+
+  It reviews and reports. It does not move money, trade, contact the bank, file anything or start a schedule. You run it when the evidence changes, and a person who owns the cash policy checks the sources and the floor.
+
 when:
-  - You need a dated settlement ladder, forecast drift and accessible cash reconciliation.
-  - You work on treasury settlement controls and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - Month end: the bank balance moved and you need to know how much is really spendable.
+  - The bank adds or lifts a restriction or a collateral block, and you want to see what it does to next week.
+  - Last week's cash forecast missed, and you want the drift explained before you update the next one.
+  - A payment run is due on Tuesday and you need the lowest balance before the receipts arrive.
+  - An unexpected bank charge turns up in your reconciliation.
+
 you_give:
-  - Dated bank cash and restrictions, frozen prior forecast and matching actual net flows, current confirmed bucketed receipts/payments and approved cash floor. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Bank balances by account, at a stated date and time (from your bank portal export or statements)
+  - Each restriction, pledge or pending debit, with an ID and amount (from loan agreements, bank letters and the payment run list)
+  - The approved minimum cash, in writing (from your cash policy or a board minute)
+  - The forecast you froze last time, with its version and date, and the actual net cash flow for the same periods
+  - Confirmed receipts and payments for the coming days, grouped by settlement day (from your payables and receivables lists)
+  - The last review's record, pasted in (optional on the first run)
+  - The bank fee statement and your fee schedule (optional, only needed if a fee is in question)
+  - The reporting date, the currency and the scale, such as thousands
+
 you_get:
-  - A dated settlement ladder, forecast drift and accessible cash reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - What changed since the last review, restriction by restriction
+  - Accessible cash: bank balance less restricted, pledged and pending amounts, with headroom over the floor
+  - Forecast drift: errors by period, average error and the closing-cash gap, tied back to the sum of errors
+  - A settlement ladder by day from today's accessible cash, with the lowest balance and any funding gap against the floor
+  - A bank fee check when a charge is in question, with the difference to query
+  - A short record to paste into the next review, plus MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. In a chat-only tool it still works, but cannot save files, so you keep the record it hands back.
+  - Say whether this is the first run. If not, paste the record from last time. Then attach or paste the bank balances, restrictions, the frozen forecast with actuals and the confirmed flows by day.
+  - Read "what changed" first. If a restriction is new or gone, check it against the bank letter before you go on.
+  - Check the ladder's lowest day against your own sheet. Then read the funding gap line: it is the floor less the lowest balance.
+  - Fix every MISSING line. Run it again whenever a balance, restriction, cutoff or confirmed payment changes. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Reconcile treasury settlement liquidity
-    text: Run the governing workflow when A bank balance, restriction, settlement cutoff or confirmed payment record changes.
-  - title: Bank fee reconciliation checker
-    text: If an unexpected bank charge explains a cash difference, reconcile only that statement fee against actual counts and contractual rates before changing the cash source map. Missing fee evidence stays unresolved.
-output_shape: |-
-  A dated settlement ladder, forecast drift and accessible cash reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this task, or sets a first baseline. Compares the account, currency, cutoff, forecast version and restriction IDs. If nothing changed and no review is due, it says so and stops.
+  - title: Builds accessible cash
+    text: Splits each balance into available, restricted, pledged and unverified, with no deduction counted twice. Shows gross and available cash side by side and the headroom over your floor. Hands the dated opening amount to the ladder.
+  - title: Backtests the frozen forecast
+    text: Matches each forecast period to actual net cash, works out the errors, and ties the closing-cash gap to their sum. Uses the forecast's own opening balance, so past errors are never added to today's cash.
+  - title: Builds the settlement ladder
+    text: Starts from accessible cash and rolls each day's closing balance into the next day's opening. Finds the lowest balance and the funding gap against the floor, and says that the order of flows inside a day is not modelled.
+  - title: Checks a bank fee only if needed
+    text: If an unexplained bank charge is part of a cash gap, it recomputes that one fee from the counts and contract prices and shows the difference to query. Missing fee evidence stays open.
+  - title: Saves the record
+    text: Writes the small record for next time and lists what is still MISSING. It proposes a state update and keeps the old one.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <new, lifted or changed restrictions, new forecast version>
+  ACCESSIBLE CASH   bank <n> - restricted <n> - pledged <n> - pending <n> = <n>
+                    floor <n>, headroom <n>
+  FORECAST DRIFT    errors <n>, <n>, <n>; bias <n>; mean absolute error <n>
+                    closing cash: actual <n> against forecast <n>, drift <n>
+  LADDER            opening <n>; <day> <n>; <day> <n>; <day> <n>
+                    lowest <n> (<day>); funding gap <n or none>
+  BANK FEE CHECK    expected <n>, billed <n>, difference <n>   (only if run)
+
+  RECORD FOR NEXT REVIEW  cutoff, forecast version, restriction IDs,
+                          lowest balance, status
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Forecast errors use the frozen prior version; current opening cash equals verified accessible cash; each ordered bucket reconciles and funding gaps remain explicit. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: A new restriction
+    how: Add a restriction ID and amount. Accessible cash falls by that amount, and the ladder and funding gap move with it.
+  - what: A different floor
+    how: Change the minimum cash and re-run. The funding gap is the floor less the lowest balance, so only that line changes.
+  - what: A bigger forecast miss
+    how: Change an actual flow. The drift changes by the same amount, and the average error shows which period caused it.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Forecast errors use the frozen prior version; current opening cash equals verified accessible cash; each ordered bucket reconciles and funding gaps remain explicit. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +98,64 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the record from each review in one folder, named by date, so the next run starts from the true prior state.
+  - Keep restriction IDs the same every time. Without stable IDs it can't tell a new restriction from a renamed one.
+  - Write your minimum cash and its source into the agent's file once, so every run uses the same floor.
+  - Pair it with the restricted cash availability checker when you only need the usable-cash step, and the settlement liquidity ladder builder when you only need the daily ladder.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your bank portal export
+      why: Gives dated balances and transactions, so the opening amount is a fact, not an estimate.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The loan or facility letters that define each restriction, so every restriction has a source.
+    - The frozen forecast file with its date, not a copy that was edited afterward.
+    - A named person who owns the cash policy and will check the floor.
+
 terms:
+  - term: Accessible cash
+    meaning: The part of your bank balance you can really spend, after restricted, pledged and pending amounts come off.
+  - term: Restriction
+    meaning: A rule that stops you using some of your cash, such as a customer deposit account or a lender's block.
+  - term: Settlement ladder
+    meaning: Cash laid out day by day, each day's closing balance becoming the next day's opening balance.
+  - term: Forecast drift
+    meaning: The gap between the closing cash you forecast and the closing cash you got, after a set of periods.
+  - term: Frozen forecast
+    meaning: The forecast saved before the results came in, so it cannot be changed to look right afterward.
+  - term: Funding gap
+    meaning: How far the lowest balance falls under your minimum cash. It is zero if the balance never falls under it.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the calculation works, with no claim about a real company.
+
+not_for:
+  - You want to move money, pay a supplier, trade or contact the bank. It prepares the review and takes no action.
+  - You need a forecast for next quarter. It tests last period's forecast and lays out the coming settlement days. It does not predict.
+  - You want it to replace a treasury or audit review. A qualified person must check the sources, the restrictions and the floor.
+  - You only have an undated balance summary. It stops the affected lines and marks them MISSING.
+
+output_sample:
+  input:
+    - "Bank balances by account at a stated date and time"
+    - "Each restriction, pledge or pending debit, with an ID and amount"
+    - "The approved minimum cash, in writing"
+    - "The forecast you froze last time, and the actual net cash flow"
+    - "Confirmed receipts and payments for the coming days"
+    - "The last review's record, and the bank fee statement if a fee is in question (both optional)"
+  output:
+    - name: "CHANGED SINCE LAST REVIEW"
+      contains: "New, lifted or changed restrictions, and the new forecast version."
+    - name: "ACCESSIBLE CASH"
+      contains: "Bank balance less restricted, pledged and pending amounts, with headroom over your floor."
+    - name: "FORECAST DRIFT"
+      contains: "Errors by period, bias, mean absolute error, and closing cash against forecast."
+    - name: "LADDER"
+      contains: "A day-by-day balance from today's accessible cash, with the lowest day and any funding gap."
+    - name: "BANK FEE CHECK"
+      contains: "Expected fee against billed, with the difference to query. Only when a fee is in question."
+    - name: "RECORD FOR NEXT REVIEW"
+      contains: "A short block to paste into your next review."
+    - name: "MISSING"
+      contains: "Each gap and the line it stops, plus any check that could not run."

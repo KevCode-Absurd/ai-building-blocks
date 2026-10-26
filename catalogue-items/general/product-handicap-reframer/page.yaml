@@ -1,6 +1,6 @@
 new_slug: product-handicap-reframer
 name: "Product handicap reframer"
-summary: "Paste your facts and the trait buyers dislike. Get a true new definition that turns it into a reason to buy."
+summary: "Fix the product handicap that puts buyers off. Paste your facts and the trait they dislike. Get a true new definition and a short passage."
 job: write-ad-copy
 thinking: high
 thinking_why: "It tests four ways of reframing against the facts and must reject any that would mislead. Use your strongest model."
@@ -17,6 +17,10 @@ when:
   - Buyers back away from something about your product before they read the benefits.
   - You sell something dearer than the alternatives and cannot lower the price.
   - Your product is hard to explain or seems made for too few people.
+not_for:
+  - "You want to hide a real defect: fix the product first, or state the flaw plainly and lead with another strength."
+  - "Your product has no honest strength to lead with: talk to a few buyers to find one before you write any copy."
+  - "You need a full ad or page: use the Sales copy editor on your draft once the new frame is set."
 
 you_give:
   - A brief with the buyer, the want and what rivals say
@@ -35,6 +39,30 @@ how_to_use:
   - Paste your brief and product facts. Add what buyers say about the trait, word for word.
   - Read the test results. If no fix passes, take the suggestion to lead with a different strength.
   - Show the passage to someone who has not heard of you. Ask whether they would feel misled when the product arrived.
+output_sample:
+  input:
+    - Your buyer brief (who it is for and what they want)
+    - "Your product facts: price, what it does, how it is used"
+    - What buyers dislike about the trait, in their own words
+    - Any good thing that comes with the trait (optional)
+    - The usual alternative and its cost (optional)
+  output:
+    - name: The handicap
+      contains: The trait in the buyer's own words, sorted as turn-off, too complex, too narrow or too dear.
+    - name: Fixes tried
+      contains: Each redefinition tested against your facts, with a pass or fail and the reason.
+    - name: New definition
+      contains: One line that makes the handicap part of the case for the product.
+    - name: The passage
+      contains: A 60 to 120 word passage that names the old view, gives the new one and shows the true link.
+    - name: If a rival is loved
+      contains: A 40 to 80 word passage from facts on where the rival's way falls short, or none.
+    - name: Truth test
+      contains: A pass, or what was cut back so the buyer is not misled.
+    - name: Missing
+      contains: Facts it needed and did not get, marked instead of invented.
+    - name: Checks missed
+      contains: One line for each check still failed, or none.
 
 how_it_works:
   - title: Names the handicap

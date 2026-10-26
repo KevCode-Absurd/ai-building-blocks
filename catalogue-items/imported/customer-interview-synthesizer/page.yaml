@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It groups raw notes into themes and decisions.
 new_slug: customer-interview-synthesizer
 name: Customer interview synthesizer
-summary: Paste interviews, tickets or survey notes. Get clear patterns and what
-  each means for your product.
+summary: Turn customer interview notes into clear patterns and product decisions. Paste interviews, tickets or survey answers and see what each pattern means.
 job: understand-customers
 headline: Customer interview synthesizer
-subhead: Piles of interview notes turn into a decision when they are sorted
-  properly. Paste interviews, support tickets, call notes or survey answers and
-  you get clear patterns with what each one means for your product.
+subhead: Piles of interview notes turn into a decision when they are sorted properly. Paste interviews, support tickets, call notes or survey answers and you get clear patterns with what each one means for your product.
 explain: |
   Piles of interview notes turn into a decision when they are sorted properly. Paste interviews, support tickets, call notes or survey answers and you get clear patterns with what each one means for your product.
 
@@ -18,6 +15,10 @@ when:
   - You are reviewing support tickets to plan next quarter.
   - Past research never led to a decision and you want to fix that.
   - You need a short readout for a product meeting.
+not_for:
+  - "You want to sort an always-on feed of support tickets, NPS or in-app comments: use user-feedback-aggregation, which is built for ongoing feedback."
+  - "You have only one or two conversations: read them yourself, or run more interviews first, because a few notes cannot show a pattern."
+  - "You have no decision in mind and want a pretty slide deck: write down the decision first, or ask a teammate to set the question."
 you_give:
   - Interview notes, transcripts, tickets or survey data
   - The decision the research should inform
@@ -28,7 +29,24 @@ you_get:
   - Product implications for each pattern
   - Decisions and open questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your notes in one place. About 8 to 15 interviews or 100 to 500 tickets work well. Plain text or a CSV of tickets is fine.
+  - Write down the one decision this research should inform.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste your notes and the decision. No code or web access is needed.
+  - Check each pattern. Look at its evidence strength and make sure you can find the quotes behind it.
+  - Ask your AI to challenge any weak pattern or fill a gap, then use the decision input in your team meeting.
+output_sample:
+  input:
+    - Your interview notes, call transcripts, support tickets or survey answers
+    - The product decision the research should inform
+    - Who the participants were (optional)
+  output:
+    - name: Tagged observations
+      contains: Each thing people said, marked with a short tag and the source it came from.
+    - name: Patterns
+      contains: Similar tags grouped and given a clear name, with a note on how strong the evidence is.
+    - name: Product implications
+      contains: What each pattern means for your product, and how you could prove it wrong.
+    - name: Decision input
+      contains: The choice each pattern supports, including the cost of acting on it or choosing not to act.
+    - name: Open questions
+      contains: Gaps where the notes are thin, and when to gather more data before you decide.

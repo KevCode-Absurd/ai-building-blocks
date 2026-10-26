@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It finds where AI use hides gaps and adds checks.
 new_slug: ai-use-understanding-check
 name: AI-use understanding check planner
-summary: Tell it how students use AI on a task. Get checkpoints that show
-  whether they really understand the work.
+summary: Plan checkpoints that check student understanding when they use AI. Tell it how they use AI on a task. You get recall prompts and class steps.
 job: teach-and-train
 headline: AI-use understanding check planner
-subhead: Students who use AI can feel they understand a topic because the answer
-  reads so smoothly. Checkpoints that expose the gap between what they think
-  they know and what they can do turn that into a lesson.
+subhead: Students who use AI can feel they understand a topic because the answer reads so smoothly. Checkpoints that expose the gap between what they think they know and what they can do turn that into a lesson.
 explain: |
   Students who use AI can feel they understand a topic because the answer reads so smoothly. Checkpoints that expose the gap between what they think they know and what they can do turn that into a lesson.
 
@@ -18,6 +15,10 @@ when:
   - You allow AI on a task and want to know what students really learned.
   - You need a quick check to run before an assessment.
   - You want to teach students to judge their own understanding.
+not_for:
+  - "You want to grade a single student on their own work: use a marking rubric or a short talk with that student."
+  - "You need a formal test or exam: write the assessment yourself, then use this to plan checks before it."
+  - "You want a loop of quizzes and feedback across a unit: use the formative assessment loop designer, which is not in this library yet."
 you_give:
   - How students use AI on the task
   - Your main concern about understanding
@@ -30,7 +31,27 @@ you_get:
   - Prompts for students to predict and compare
   - Guidance on running them in class
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Describe how your students use AI on the task. Add what worries you about their understanding.
+  - Add year group, subject, AI tool and how the work is assessed if you know them (optional).
+  - Run it and read the diagnosis first. Check it matches what you see in class.
+  - Pick one checkpoint and run it in your next lesson without AI on screen.
+  - Compare what students predicted with what they could do. Use the gap to plan your next lesson.
+output_sample:
+  input:
+    - How students use AI on the task
+    - The main worry about their understanding
+    - Year group and subject (optional)
+    - The AI tool they use (optional)
+    - How the work is assessed (optional)
+  output:
+    - name: Metacognitive Diagnosis
+      contains: How AI use in this task may make students feel they understand more than they do.
+    - name: Monitoring Interventions
+      contains: Checkpoints, predict-and-compare prompts and self-check tasks that make students recall or explain without the AI text.
+    - name: AI Usage Guidelines
+      contains: Simple rules for when and how students use AI during the task.
+    - name: Assessment Alignment
+      contains: How the checkpoints match the way the work will be assessed.
+    - name: Red Flags
+      contains: Signs in student work or talk that show a gap in real understanding.

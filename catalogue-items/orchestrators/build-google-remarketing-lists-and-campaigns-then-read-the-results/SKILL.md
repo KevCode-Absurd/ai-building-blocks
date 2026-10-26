@@ -42,12 +42,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Google Ads audience builder.** Use the skill `google-ads-audience-builder`. Decides which lists exist and how big they are.
-2. **Google remarketing campaign builder.** Use the skill `google-remarketing-campaign-builder`. Give it the plan from the steps before. Builds the campaigns on the lists the audience plan made.
+1. **Google Ads audience builder.** Use the skill `google-ads-audience-builder`. Decides which lists exist and how big they are. Hands step 2 the audience plan.
+2. **Google remarketing campaign builder.** Use the skill `google-remarketing-campaign-builder`. Give it the plan from the steps before. Builds the campaigns on the lists the audience plan from step 1 made. Hands you a plan with caps and five doubt-led ads to run.
 
 Pause here: Build the lists and campaigns, then run the five ads for three to four weeks. Export the Google Ads report by campaign and ad.
 
-3. **Google Ads report auditor.** Use the skill `google-ads-report-auditor`. Reads the first results so you know which doubt-led ad to keep.
+3. **Google Ads report auditor.** Use the skill `google-ads-report-auditor`. Give it the plan from the steps before. Uses the Google Ads report you export after running step 2's campaigns (your performance sheet), and step 2's plan to match rows to each doubt-led ad. Hands you which ad to keep.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -22,15 +22,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Store security checkup.** Use the skill `store-security-checkup`. Starts the flow. Finds the gaps and ranks the fixes.
+1. **Store security checkup.** Use the skill `store-security-checkup`. Starts the flow. Finds the gaps and ranks the fixes. Hands the findings, with who has admin access and how they sign in, to step 2.
 
 Pause here: Do the fixes marked today: turn on two-step sign-in for every admin, remove leavers and delete unused apps.
 
-2. **Sign-in security checker.** Use the skill `store-sign-in-security-checker`. Takes the checkup's sign-in and password findings and writes the policy for staff and customers.
+2. **Sign-in security checker.** Use the skill `store-sign-in-security-checker`. Takes the checkup's sign-in and password findings and writes the policy for staff and customers. Hands the sign-in policy to step 3.
 
 Pause here: Share the sign-in policy with your team and move everyone onto a password manager.
 
-3. **Staff phishing rules briefer.** Use the skill `staff-phishing-rules-briefer`. Builds the staff rule sheet and drill on top of the sign-in policy, closing the phishing gap the checkup found.
+3. **Staff phishing rules briefer.** Use the skill `staff-phishing-rules-briefer`. Builds the staff rule sheet and drill on top of the sign-in policy and the checkup's phishing gap, using your own list of accounts that matter.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

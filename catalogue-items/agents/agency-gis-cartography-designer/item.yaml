@@ -1,0 +1,42 @@
+slug: agency-gis-cartography-designer
+name: Cartography Designer agent
+summary: Get a map design with symbols, labels and readability checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: gis/gis-cartography-designer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-cartography-designer.md
+  licence: MIT
+  original_name: Cartography Designer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 2223d403dfdd863d42c0aa29c912cba0c91ffdc9ad8192630f7b08e4b4c7e804
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Cartography Designer
+  - Agency Agents
+  - GIS
+credits:
+  - title: Cartography Designer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-cartography-designer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

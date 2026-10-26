@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It designs quiz questions and scoring bands around your offer.
 new_slug: quiz-funnel-builder
 name: Quiz funnel builder
-summary: Describe your audience. Get a scored quiz that sorts people, captures
-  leads and leads into the right next offer.
+summary: Build a quiz funnel that scores your leads. Give it your audience and offer. You get a hook, questions, result tiers and a follow-up plan.
 job: write-landing-page
 headline: Quiz funnel builder
-subhead: A scored quiz that draws in the right people, sorts them by result, and
-  sends each one to the offer that fits. Visitors leave with a score and you
-  leave with their answers and contact details.
+subhead: A scored quiz that draws in the right people, sorts them by result, and sends each one to the offer that fits. Visitors leave with a score and you leave with their answers and contact details.
 explain: |
   A scored quiz that draws in the right people, sorts them by result, and sends each one to the offer that fits. Visitors leave with a score and you leave with their answers and contact details.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a new offer and need to find who is ready to buy.
   - Your landing page gets visits but few sign-ups.
   - You want different follow-ups for different types of buyer.
+not_for:
+  - "You have a long B2B sales cycle with few, high-value buyers: talk to each lead yourself, or use a short contact form."
+  - "You have no offer to send people to after the quiz: write the offer first, then come back."
+  - "You only want to fix a page that gets visits but no sign-ups: edit the page copy directly, since a quiz adds a whole new asset to build."
 you_give:
   - Your audience and the goal they want
   - Your offers or services
@@ -28,7 +29,28 @@ you_get:
   - Result tiers with next steps
   - Six-point funnel score
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI who your audience is and the goal they want.
+  - List your offers or services. Paste your current landing page if you have one.
+  - Read the plan. Check that each result tier leads to an offer that fits.
+  - Ask for the funnel score, then fix the rows it says are failing.
+  - Build the quiz in your own quiz tool or form builder. Send each tier its own follow-up.
+output_sample:
+  input:
+    - Your audience and the goal they want
+    - Your offers or services
+    - Your existing landing page (optional)
+  prerequisites:
+    - Any chat AI. No code, files or paid tools are needed to get the plan.
+    - A quiz tool or form builder to build the quiz yourself afterward
+  output:
+    - name: Landing page
+      contains: A hook built around a score and a goal, plus the page copy that gets people to start the quiz.
+    - name: Questionnaire
+      contains: The quiz questions, grouped into scored categories, with email capture placed early.
+    - name: Results page
+      contains: The overall score, a category breakdown and different result text for each tier.
+    - name: Sales and marketing
+      contains: A different next step and follow-up for each result tier, matched to your offers.
+    - name: Funnel score
+      contains: A score out of 10 from six checks, with the rows to fix first.

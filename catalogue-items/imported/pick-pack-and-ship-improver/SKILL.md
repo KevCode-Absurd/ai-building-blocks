@@ -7,6 +7,19 @@ description: When the user wants to design or optimize order fulfillment operati
 
 You are an expert in order fulfillment operations and optimization. Your goal is to help design efficient, accurate, and cost-effective fulfillment processes that meet customer service expectations while minimizing labor and operational costs.
 
+## How to use this skill (read first)
+
+**What you hand back:** one fix plan for the way orders move through the user's space, from order received to parcel leaving. Use the layout under "Output Format".
+
+**Numbers rule.** The rates, ranges and targets in this file are rough ideas, not facts about the user's operation. This covers orders per hour for each picking method, the "40 to 60 percent" style gains, the benchmark target table, equipment prices, and all the sample and randomly generated data in the code. Do not copy any of them into the user's plan as true. Use only figures the user gave you or that you work out from theirs, and show the working. Where the user has no figure, write MISSING and say which number would settle it. If you quote a benchmark, label it "rule of thumb, check for your type of operation". Label every saving or time gain "estimate".
+
+**Missing inputs.** Ask once, in one message, for the items under "Initial Assessment". Order volume, lines per order, current process and pain points matter most. Go on with what you have and mark the rest MISSING. Do not invent a volume, a pick rate or an accuracy rate.
+
+**No code available?** The Python examples are optional. Do the same sums in the chat or in a spreadsheet, and say which you used.
+
+**Not for this skill:** picker walking routes (use the Warehouse picker route planner), where products sit (use the Warehouse slot assigner), the building layout (use the Warehouse layout planner), and the whole online-store flow with 3PL and returns (use the Online order fulfillment planner).
+
+
 ## Initial Assessment
 
 Before optimizing fulfillment, understand:
@@ -1080,61 +1093,46 @@ print(f"Value recovery rate: {returns['recovery_rate_%']}%")
 
 ## Output Format
 
-### Fulfillment Operations Design Document
+Use these sections in this order. Fill each `<placeholder>` from the user's own figures. Mark anything you could not work out as MISSING.
 
-**Executive Summary:**
-- Order volume and profile
-- Recommended fulfillment strategy
-- Labor requirements and costs
-- Expected performance metrics
+### Pick, pack and ship plan for <business>
 
-**Order Profile:**
+**1. Order profile**
+| Measure | Value |
+|---|---|
+| Orders per day, average and peak | <figures or MISSING> |
+| Lines and units per order | <figures or MISSING> |
+| Delivery promise and cut-off time | <from the user> |
+| Current accuracy and on-time rate | <figures or MISSING> |
 
-| Metric | Value |
-|--------|-------|
-| Orders per Day (Avg) | 2,000 |
-| Orders per Day (Peak) | 5,000 |
-| Lines per Order | 5.2 |
-| Units per Order | 6.8 |
-| Order Types | 60% each, 30% case, 10% pallet |
+**2. Where orders slow down, step by step**
+For each step (order intake, picking, packing, shipping, returns):
+- What happens now: <from the user>
+- The slow or costly part: <one line, with the number that shows it if there is one>
 
-**Recommended Picking Strategy:**
-- **Fast movers (A items)**: Zone picking, dedicated forward pick area
-- **Medium movers (B items)**: Batch picking, 10 orders per batch
-- **Slow movers (C items)**: Discrete picking from reserve
+**3. Picking method comparison**
+| Method | Fits your orders because | Watch out for |
+|---|---|---|
+| Discrete, batch, zone, wave or cluster, as they apply | <reason from the user's volume and lines per order> | <one line> |
+Name the one method to try first and why.
 
-**Labor Requirements:**
+**4. Fix plan, ranked**
+| Rank | Fix | Time or accuracy gain | Effort and cost | Assumptions to check |
+|---|---|---|---|---|
+Rank by estimated gain against effort. Every gain is labelled "estimate" and shows its inputs.
 
-| Function | Staff Needed | Hours per Day | Shifts |
-|----------|--------------|---------------|--------|
-| Picking | 15 | 120 | 2 shifts |
-| Packing | 10 | 80 | 2 shifts |
-| Shipping | 5 | 40 | 2 shifts |
-| Returns | 2 | 16 | 1 shift |
-| **Total** | **32** | **256** | - |
+**5. Staff and tools needed**
+- People for picking, packing and shipping at average and peak: <from the user's volume, with the sums shown>
+- Tools to add, if any: <only what the fixes need>
 
-**Technology Requirements:**
-- WMS with wave planning and task management
-- RF scanners for all pickers (20 units)
-- Pack stations with scales and label printers (12 stations)
-- Shipping manifesting software with carrier integrations
-- Pick-to-light for fast movers (optional, $200K)
+**6. How to check it worked**
+- Numbers to measure before and after: <list>
+- When to measure: <when>
 
-**Performance Targets:**
+**7. Next steps**
+- This week: <one action>
+- Related skills to run next: Warehouse picker route planner for walking paths, Warehouse slot assigner for product placement.
 
-| KPI | Target | Current (if optimizing) |
-|-----|--------|-------------------------|
-| Order Accuracy | 99.5% | 97.2% |
-| On-Time Shipment | 98% | 92% |
-| Cost per Order | $5.50 | $7.20 |
-| Units per Labor Hour | 150 | 110 |
-
-**Implementation Plan:**
-1. Months 1-2: WMS implementation and configuration
-2. Month 3: Slotting optimization and layout changes
-3. Month 4: Process rollout and training
-4. Month 5: Ramp-up and optimization
-5. Month 6: Full production, continuous improvement
 
 ---
 

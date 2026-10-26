@@ -2,23 +2,25 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: study-gap-tracker
 name: Study gap tracker
-summary: Share repeated mistakes and past checks. Get a short list of learning
-  gaps and what to practice first.
+summary: Turn your repeated mistakes into a study gap tracker. Get a short ranked list of learning gaps and what to practice first.
 job: study-and-practice
 headline: Study gap tracker
-subhead: Give it your error notes, past checks and learning goal. It groups
-  repeated mistakes, ranks the gaps and chooses what to revisit. You get a short
-  active list, the next practice task and clear rules for closing each gap.
-explain: Give it your error notes, past checks and learning goal. It groups
-  repeated mistakes, ranks the gaps and chooses what to revisit. You get a short
-  active list, the next practice task and clear rules for closing each gap.
+subhead: Give it your notes on mistakes, your goal and any older gap list. It adds each mistake, scores the gaps and picks one or two to work on next. You get a short list and a clear rule for when a gap is closed.
+not_for:
+  - You hit a mistake once. Skip tracking until it repeats, and just fix it on the spot.
+  - You want a full study plan or lesson. Ask your AI for a plan, or a teacher or tutor, since this only ranks gaps.
+  - You have no notes on past mistakes. Write down a few errors first, because the list must come from real evidence.
+explain: Give it your error notes, past checks and learning goal. It groups repeated mistakes, ranks the gaps and chooses what to revisit. You get a short active list, the next practice task and clear rules for closing each gap.
 you_give:
-  - Error notes with topic, date and repeated attempts.
-  - Your learning goal and any earlier gap list.
+  - Your error notes, with topic, error type, date and how often it repeated
+  - Your learning goal
+  - Your earlier gap list (optional)
+  - How sure you feel about each topic (optional)
 you_get:
-  - An active gap table with scores and evidence.
-  - One or two topics to focus on next.
-  - Progress states tied to repeated clean checks.
+  - A table of up to five active gaps, each with a score and the evidence behind it.
+  - One or two topics to work on in your next session.
+  - The kind of practice to use for each gap.
+  - "A status for each gap: active, resolving or resolved, based on clean checks in a row."
 how_it_works:
   - title: Step 1
     text: Add each observed mistake to the existing gap list.
@@ -27,9 +29,33 @@ how_it_works:
   - title: Step 3
     text: Pick at most two focus areas and keep at most five active gaps.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste your error notes, your goal and your old gap list if you have one.
+  - Read the table and check each gap matches a mistake you really made.
+  - Do the practice it suggests for the top one or two gaps.
+  - Come back after practice, paste how it went, and let it update the list.
+  - Two clean checks in a row mean a gap is improving. Three mean it is closed.
+output_sample:
+  input:
+    - Your error notes, with topic, error type, date and how often it repeated
+    - Your learning goal
+    - Your earlier gap list (optional)
+    - How sure you feel about each topic (optional)
+  output:
+    - name: Event details
+      contains: The topic, the error type and where the mistake was seen.
+    - name: Action taken
+      contains: Whether the gap was added as new or its repeat count went up.
+    - name: Severity score
+      contains: A score for each gap, based on repeats, error type and time since practice.
+    - name: Active weak areas table
+      contains: Up to five gaps with topic, type, repeat count, score and the practice style to use.
+    - name: Session recommendation
+      contains: One or two gaps to work on next.
+    - name: Resolution updates
+      contains: Gaps that are improving, closed or re-opened after clean checks.
+when:
+  - You keep making the same mistake and want to know what to fix first.
+  - You are planning a study or revision session and need to pick topics.
+  - A topic you covered still feels unclear.
+  - You come back to studying and want to review your old gap list.

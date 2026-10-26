@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It plans many ad variations and a test order.
 new_slug: ad-creative-variation-planner
 name: Ad creative variation planner
-summary: Give it your offer and audience. Get hook ideas, format picks, a
-  variation plan and a fatigue watch.
+summary: Plan ad creative variations for your offer. Get hook ideas, format picks, a test plan and a fatigue watch so each new ad teaches you something.
 job: plan-ad-tests
 headline: Ad creative variation planner
-subhead: Give it your offer, audience, platforms and any current ads. It plans
-  the first three seconds, picks formats, sets video pacing and builds a
-  variation system so each new ad teaches you something. You get hook ideas,
-  format recommendations, a variation plan, a testing and fatigue-watch schedule
-  and notes for each platform.
+subhead: Give it your offer, audience and platforms. Add your current ads if you have them. It plans your hooks, picks formats and builds a set of ads that change one thing at a time. You also get a test calendar and a way to spot tired ads.
 explain: |
   Ad creative built to convert at scale needs a plan: hooks for the first three seconds, formats to use, and a testing method that spots tired ads before they cost you.
 
@@ -18,22 +13,50 @@ explain: |
 when:
   - Your ads work for a week and then fade.
   - You need hooks for a new video ad.
-  - You want to test creative without muddying the results.
+  - You want to test ad creative without muddying the results.
   - You run on several platforms and each one needs a different cut.
+not_for:
+  - "You need a media plan, budget split or audience targeting: ask a media buyer or work out your channel mix first, because this plan only covers the ads themselves."
+  - "You want to read results from ads already running: check your ad platform's reports or ask a person who knows your account, as this plan does not read results."
+  - "You need your brand voice written down first: write a short voice note yourself, with a few words you use and a few you never use, then bring it here."
 you_give:
-  - Your offer
-  - Your audience
-  - Your platforms
-  - Current ads or results (optional)
-  - Brand voice notes (optional)
+  - Your offer, in a few lines
+  - Your audience, and what they care about
+  - The platforms you run on
+  - Your current ads or results (optional)
+  - Your brand voice notes (optional)
 you_get:
-  - A set of hook ideas
-  - Format recommendations
-  - A variation plan
-  - A testing and fatigue-watch schedule
-  - Platform-specific notes
+  - A list of hook ideas for the first three seconds
+  - Format picks for each platform
+  - A table of ad variations that change one thing at a time
+  - A test calendar and a fatigue watch
+  - Notes on each platform's norms
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text, or upload the skill file if your AI takes files.
+  - Paste your offer, audience and platforms. Add current ads and voice notes if you have them.
+  - "Ask for the full plan: hooks, formats, variations, test calendar and fatigue watch."
+  - Check that every hook is true for your offer. Treat the fatigue numbers as rules of thumb and compare them to your own account.
+  - Make the first batch of ads and follow the test calendar.
+output_sample:
+  input:
+    - Your offer, in a few lines
+    - Your audience, and who buys
+    - The platforms you run on, such as Meta, TikTok or LinkedIn
+    - Your current ads or results (optional)
+    - Your brand voice notes (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  output:
+    - name: Hook ideas
+      contains: Ideas for the first three seconds of each ad, built from proven hook patterns.
+    - name: Format picks
+      contains: Which formats suit your audience and platform, such as static, carousel, UGC-style video or vertical video, and why.
+    - name: Variation plan
+      contains: A table of ads where each new ad changes one thing, so you can see what made the difference.
+    - name: Test calendar
+      contains: The order to test your ads in, how long each stage runs, and when a winner moves on.
+    - name: Fatigue checklist
+      contains: Early signs an ad is wearing out and when to swap it, as rules of thumb to check against your own account.
+    - name: Platform notes
+      contains: Shape, length and sound norms for each platform you named.

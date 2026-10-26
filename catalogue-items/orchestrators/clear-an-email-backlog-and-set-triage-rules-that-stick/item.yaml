@@ -14,9 +14,9 @@ outputs:
   - {type: copy_draft}
 uses: [inbox-rules-interviewer, email-backlog-clearer, email-mistake-fixer]
 steps:
-  - {uses: inbox-rules-interviewer, note: "An interview about your email: who your senders are, what you always say yes or no to, how you sound, what goes to someone else, saved as a guide you reuse."}
-  - {uses: email-backlog-clearer, note: "Every email given a call from the guide: a drafted reply, a forward with a note, a one-line decision or an archive, oldest first, with the ones only you can answer marked."}
-  - {uses: email-mistake-fixer, note: "Each draft checked for a wrong name, a promise you did not make, a date you cannot keep or a tone that is off, and fixed. Nothing is sent until you say so."}
+  - {uses: inbox-rules-interviewer, note: "An interview about your email: who your senders are, what you always say yes or no to, how you sound, what goes to someone else. Saves it as a guide you reuse and hands the guide to the clearer."}
+  - {uses: email-backlog-clearer, note: "Uses step 1's guide and your backlog. Gives every email a call from the guide: a drafted reply, a forward with a note, a one-line decision or an archive, oldest first, with the ones only you can answer marked. Hands the drafts to the fixer."}
+  - {uses: email-mistake-fixer, note: "Uses step 2's drafts. Checks each for a wrong name, a promise you did not make, a date you cannot keep or a tone that is off, and fixes it. Nothing is sent until you say so."}
 origin: own
 version: 1.0.0
 example_pending: true

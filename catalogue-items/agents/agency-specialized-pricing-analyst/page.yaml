@@ -1,0 +1,155 @@
+name: Pricing Analyst agent
+summary: "Set or review a price using your costs, competitor prices and customer value. Get a recommended price, a margin table and a small test plan."
+headline: Pricing Analyst agent
+subhead: "Give it one product or service with your costs, your competitors' prices and what customers gain from it. You get a recommended pricing model and price, a table showing what price changes of 10% and 20% do to your margin, discount rules and a small price test."
+job: set-prices
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Many prices come from a guess, a copy of a competitor or a markup on cost. A pricing analysis looks at four things together: what it costs you to deliver, what competitors and substitutes charge, what the customer gains, and how buyers reacted to past price changes. This agent works through all four and shows its math. It will not name a price until it knows your cost per unit.
+
+  It picks a pricing model that fits your product, such as value-based, tiered, usage-based or cost-plus, and says why it rejected the others. Then it sets price points and shows what moving the price up and down by 10% and 20% does to your margin. It adds discount rules, with who can approve what and what to offer instead of a price cut, and a small test to prove the price before you roll it out.
+
+  It works from your numbers. It can look up competitor prices only if your AI has web search, so otherwise paste them in. If you give no sales history, the table shows margin and leaves volume blank rather than guess it. It never changes a price anywhere. Prices set by law or by contract need a pricing or legal professional.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are launching a product or service and need a first price you can defend.
+  - Your margin is thin and you suspect discounts or hidden costs are the cause.
+  - A competitor changed its prices and you need to decide whether to follow.
+  - You want to design good, better, best tiers or a discount policy.
+not_for:
+  - You want one safe test price from your sales data. Use the Price test planner.
+  - You want to know which of your products sell more or less as the price moves. Use the Price sensitivity analyst.
+  - You need the letter or email that tells customers about a price rise. Use the Price rise letter writer.
+  - You want a quick three-tier price ladder for a software product. Use the Three-tier price ladder drafter.
+  - Your prices are set by law or by contract. Ask a pricing or legal professional.
+you_give:
+  - What you sell and who buys it.
+  - Your cost to deliver one unit: materials, labor, fees, hosting and support. A full list gives the best answer.
+  - Your current price and the discounts you give.
+  - Competitor and substitute prices, from their sites or your notes.
+  - What the customer gains, such as hours saved or money earned (optional)
+  - Past sales at each price, such as before and after a price change (optional)
+you_get:
+  - A cost summary with cost per unit, target margin and break-even volume
+  - A recommended pricing model and price points, with the reason the others were rejected
+  - A table showing what price changes of 10% and 20% do to your margin
+  - Tiers or bundles that fit your customer groups
+  - Discount rules showing who approves what, and what to offer instead of a price cut
+  - A small price test plan with the numbers to watch, and the checks to make first
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste what you sell, your cost per unit, your current price and discounts, and competitor prices. Add sales by price if you have it. A spreadsheet upload works well. Web search helps with competitor prices but is not required.
+  - Type "Review my pricing. Show the math. Do not guess any number I did not give you."
+  - Check the cost summary first. If a cost is wrong, every price after it is wrong. Fix it and ask again.
+  - Read the margin table and find where margin falls below what you can live with.
+  - Run the test on a small group before you change prices for everyone. Do not change live prices on the agent's word alone.
+how_it_works:
+  - title: Pin the decision
+    text: It restates what is being priced and what you want to achieve. It asks once for anything missing, then marks it MISSING.
+  - title: Build the cost floor
+    text: It adds up fixed and variable costs, and works out cost per unit, margin and break-even volume.
+  - title: Map the market
+    text: It lists competitor and substitute prices and where you sit among them.
+  - title: Check the customer value
+    text: It asks what the customer gains and what they would pay for the next best option.
+  - title: Choose a pricing model
+    text: It picks the model that fits and says why it rejected the others.
+  - title: Set prices and test the swing
+    text: It sets price points and shows margin at 10% and 20% above and below.
+  - title: Package, discount and test
+    text: It designs tiers, writes discount rules and plans a small test with the numbers to watch.
+output_shape: |-
+  PRICING DECISION
+    <product or service> | <goal> | MISSING <what was not given>
+
+  COST SUMMARY
+    Cost per unit <amount> | Fixed vs variable <split> | Target margin <percent> | Break-even volume <units>
+
+  MARKET CONTEXT
+    <competitor or substitute> | <price> | <how it compares> | <source>
+
+  RECOMMENDED MODEL AND PRICES
+    Model <name> | Price points <list> | Value metric <what you charge for> | Rejected <models and why>
+
+  MARGIN TABLE
+    Price <-20%, -10%, recommended, +10%, +20%> | Margin per unit <amount> | Volume <your estimate or MISSING> | Revenue <amount or MISSING>
+
+  PACKAGING
+    <tier or bundle> | <what is included> | <who it is for>
+
+  DISCOUNT RULES
+    <discount level> | <who approves> | <condition> | <offer instead>
+
+  PRICE TEST PLAN
+    <what to test> | <who sees it> | <how long> | <numbers to watch> | <stop rule>
+
+  ASSUMPTIONS AND CHECKS
+    <assumption> | <source: you, document or estimate>
+    Checks still needed: <list>
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your cost to deliver one unit
+    - Your current price, your discounts and competitor prices
+    - Past sales at each price (optional)
+  prerequisites:
+    - An AI that can read a pasted table or a spreadsheet. Web search is optional and helps with competitor prices.
+  output:
+    - name: Cost summary
+      contains: Cost per unit, target margin and break-even volume.
+    - name: Market context
+      contains: Competitor and substitute prices and where you sit among them.
+    - name: Recommended model and prices
+      contains: The pricing model, the price points and why other models were rejected.
+    - name: Margin table
+      contains: Margin at 10% and 20% above and below the recommended price, with volume only where you gave data.
+    - name: Packaging
+      contains: Tiers or bundles and who each is for.
+    - name: Discount rules
+      contains: Who can approve which discount, and what to offer instead of a price cut.
+    - name: Price test plan
+      contains: What to test, on whom, for how long and which numbers to watch.
+    - name: Assumptions and checks
+      contains: What the AI assumed and what you must confirm before you change a price.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: Your cost and sales spreadsheet goes in as a file, so the margin table uses your own figures.
+  inputs:
+    - A sales export that shows units sold at each price, so the table can use real volumes.
+    - Screenshots or text of competitor pricing pages, dated, so the comparison is checkable.
+    - Quotes from customers about why they bought or did not, to ground the value check.
+terms:
+  - term: Contribution margin
+    meaning: What is left of each sale after the costs that rise with each sale.
+  - term: Break-even volume
+    meaning: How many units you must sell to cover your costs.
+  - term: Value-based pricing
+    meaning: Setting the price from what the customer gains, not from your cost.
+  - term: Price sensitivity
+    meaning: How much sales change when the price changes.
+  - term: Packaging
+    meaning: How you group features into tiers or bundles.
+tweaks:
+  - what: Scope
+    how: Price one product or one tier at a time. A whole catalogue in one go gives vague answers.
+  - what: Margin floor
+    how: Tell it the lowest margin you accept. It then marks any price that falls below it.
+  - what: Competitors
+    how: Name the three to five you really lose deals to, not every company in your market.
+improve:
+  - Re-run the analysis when your costs change or a competitor moves.
+  - Keep each version with its date and the result of the test.
+  - When you move to a new price, use the Price rise letter writer to tell customers.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

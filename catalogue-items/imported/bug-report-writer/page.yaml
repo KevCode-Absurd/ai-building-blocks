@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts rough notes into a set template.
 new_slug: bug-report-writer
 name: Bug report writer
-summary: Paste error logs, notes or a screenshot. Get a clear GitHub issue with
-  steps to repeat, impact and proof.
+summary: Turn a messy error log, voice note or screenshot into a clear GitHub issue with steps to repeat, impact and proof, ready to file.
 job: build-software
 headline: Bug report writer
-subhead: Paste error logs, notes or a screenshot. Get a clear GitHub issue with
-  steps to repeat, impact and proof. Bring error logs, notes or a voice
-  transcript. Use the result to plan your next step.
+subhead: Paste your error log, notes or a voice transcript. Your AI turns it into a GitHub issue with steps to repeat, expected and actual results, and a severity rating. Anything it cannot tell from your notes is marked as unknown.
 explain: |
   A messy error log, a voice note or a screenshot becomes a clean GitHub issue someone can act on in minutes.
 
@@ -18,18 +15,48 @@ when:
   - A teammate sent a rambling voice note about a bug.
   - You have a screenshot of the problem and no write-up.
   - Your bug reports keep coming back with questions.
+not_for:
+  - "You want a new feature or have a how-to question: use your project's discussion board or a support ticket."
+  - "You need to find the cause of the bug: ask a developer to debug it, or paste the code and error into your AI."
+  - "You want the issue posted for you: this skill only saves a draft, so paste it into GitHub yourself."
 you_give:
   - Error logs, notes or a voice transcript
   - Screenshots or short recordings (optional)
-  - The product or version (optional)
+  - The product, region or version (optional)
 you_get:
-  - A structured issue draft
-  - Steps to repeat
-  - A severity rating with reason
-  - Placeholders for sensitive data
-  - A dated markdown file
+  - A GitHub issue draft with a one-line summary and steps to repeat
+  - Expected and actual results side by side
+  - A severity rating with a short reason
+  - Placeholders for sensitive details such as project names and user IDs
+  - A draft saved as a dated markdown file, if your AI can save files
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your error log, note or transcript. Add the product and version if you know them.
+  - Answer any questions about missing details. If you don't know, say so and it will mark them as unknown.
+  - Read the draft. Check the steps to repeat and the severity rating.
+  - Save the dated file. If your AI cannot save files, copy the text into one yourself.
+  - Paste the draft into your project's issue tracker yourself. Check the severity with your team before you file it.
+output_sample:
+  input:
+    - Error logs, rough notes or a voice transcript
+    - Screenshots or short recordings (optional)
+    - The product, region or version (optional)
+  output:
+    - name: Summary
+      contains: A one-line description of the bug.
+    - name: Environment
+      contains: Product, region or version, and browser or OS, with unknown details labeled as unknown.
+    - name: Reproduction Steps
+      contains: Numbered steps someone can follow to see the bug.
+    - name: Expected Behavior and Actual Behavior
+      contains: What should happen next to what really happens.
+    - name: Error Details
+      contains: The error message or code, copied as given.
+    - name: Visual Evidence
+      contains: Pointers to your screenshots or recordings, with no made-up links.
+    - name: Impact
+      contains: A severity of Critical, High, Medium or Low, with a short reason.
+    - name: Additional Context
+      contains: Any other useful detail from your notes.
+    - name: Dated markdown file
+      contains: The full draft saved as a file named with the date and a short description.

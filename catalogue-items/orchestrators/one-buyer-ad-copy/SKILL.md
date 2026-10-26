@@ -47,11 +47,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Write the buyer brief.** Use the skill `buyer-brief-writer`. Turns the reviews into one buyer, one moment and the force the ad has to move.
-2. **Choose how the ad opens and argues.** Use the skill `ad-angle-planner`. Give it the brief from the steps before. Reads the buyer brief and returns a short brief on how the ad opens, argues and asks.
-3. **Write ten first lines.** Use the skill `ad-first-line-writer-and-scorer`. Give it the brief from the steps before. Uses the angle brief to write first lines that name the buyer's moment, then scores them.
-4. **Write the ad on one real fact.** Use the skill `fact-based-ad-copy-writer`. Give it the brief from the steps before. Builds the ad body on one product fact that answers the doubt in the brief.
-5. **Write headlines to test.** Use the skill `ad-headline-writer`. Give it the brief from the steps before. Writes short headlines from the same brief and facts, and marks which to test first.
+1. **Write the buyer brief.** Use the skill `buyer-brief-writer`. Turns the reviews into one buyer, one moment and the force the ad has to move. Hands the buyer brief to the angle planner.
+2. **Choose how the ad opens and argues.** Use the skill `ad-angle-planner`. Give it the brief from the steps before. Reads the buyer brief and returns a short brief on how the ad opens, argues and asks. Hands that angle brief to the first-line writer.
+3. **Write ten first lines.** Use the skill `ad-first-line-writer-and-scorer`. Give it the brief from the steps before. Uses the angle brief to write first lines that name the buyer's moment, then scores them. Hands the best first line to the copy writer.
+4. **Write the ad on one real fact.** Use the skill `fact-based-ad-copy-writer`. Give it the buyer brief, your product facts and the best first line from step 3. Builds the ad body on one product fact that answers the doubt in the brief. Hands the ad body to the headline writer.
+5. **Write headlines to test.** Use the skill `ad-headline-writer`. Give it the buyer brief, your product facts and the ad body from step 4. Writes short headlines from the same brief and facts, so none repeats the body, and marks which to test first.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

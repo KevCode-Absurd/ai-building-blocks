@@ -1,33 +1,32 @@
 slug: sponsor-receipt-timing-review-assistant
 name: Sponsor receipt timing review assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: Recheck sponsor receipts and the management payout when a distribution, vesting or exit record changes. Get the payout and sponsor IRR for yearly dates.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: source_text
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - check-management-payout-and-sponsor-receipts
   - rollover-equity-ownership-checker
 steps:
   - uses: check-management-payout-and-sponsor-receipts
-    note: Run the governing workflow when Actual sponsor distribution, management vesting evidence, exit receipt or holder allocation changes.
+    note: Run this when a sponsor distribution, management vesting evidence, an exit receipt or a holder allocation changes. Work out the management payout from net equity proceeds, then the sponsor return.
   - uses: rollover-equity-ownership-checker
-    note: If another rollover holder appears, check same-class ownership but stop the sole-sponsor payout workflow until a complete holder allocation is supplied. Otherwise rerun only changed annual receipts. If dates are irregular, request a suitable XIRR engine instead of reporting the periodic fixture as annualized actual performance.
+    note: Run this only when another rollover holder appears. Check same-class ownership, then stop the sole-sponsor payout until a complete holder allocation is supplied. If cash dates are not exact years, give no annual IRR and say a date-based IRR tool is needed.
 origin: own
 version: 1.0.0
 added: 2026-10-22

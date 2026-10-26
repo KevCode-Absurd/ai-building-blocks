@@ -2,35 +2,66 @@ thinking: high
 thinking_why: Patent claims need close reading and judgement.
 new_slug: patent-prior-art-searcher
 name: Patent prior-art searcher
-summary: Describe your invention or rival. Get patents found for novelty,
-  freedom to operate or a landscape view.
+summary: Search for patent prior art before you file, launch or buy. Get a Word report with the closest patents, ranked, matched to one of five goals.
 job: study-competitors
 headline: Patent prior-art searcher
-subhead: Describe your invention or rival. Get patents found for novelty,
-  freedom to operate or a landscape view. Bring your invention, rival product or
-  target patent. Use the result to plan your next step.
+subhead: Describe your invention, a rival product or a patent you want to challenge. Your AI asks which of five goals you have, then searches patent sites for that goal. You get an editable Word report. It is search signal, not legal advice.
 explain: |
   A patent search report matched to your purpose: whether your idea is new, whether you can sell safely, who is filing in a field, or what to check before buying a company.
 
   It first asks which of five goals you have, because each needs a different search. Novelty searches focus on claim wording. Freedom to operate looks at active patents in your countries. Landscape reports map filers and trends. Diligence checks a seller's portfolio and ownership. Litigation work hunts for art that predates a target patent. It searches Google Patents, Espacenet and USPTO, cites only what it found, and builds a Word report. It is search signal, not legal advice.
 when:
-  - You want to file a patent and need to know if the idea is new.
-  - You need to see who files patents in a market.
-  - You are buying a company and want its patent portfolio checked.
-  - You must find older art to challenge a patent.
+  - You plan to file a patent and want to know if the idea is new.
+  - You want to sell a product and check that no active patent blocks it.
+  - You want to see who files patents in a market.
+  - You are buying a company and want to check its patents and who owns them.
+  - You need older art to challenge an existing patent.
+not_for:
+  - "You have a trademark, copyright or trade-secret question: ask a qualified lawyer, as this skill does not cover them."
+  - "You need a legal opinion before you file or license: hire a patent attorney, because this gives search results only."
+  - "You only want a quick look at what a rival sells: read their site and reviews first, with no patent search."
 you_give:
-  - Your invention, rival product or target patent
+  - Your invention, rival product or target patent, in a short description
   - Which of the five goals you have
   - Countries or dates that matter
-  - Web access for patent sites
+  - Patents you already know about (optional)
+  - A Lens.org API key for the citation step, free for 1,000 queries a month (optional)
 you_get:
-  - Ranked closest prior art
-  - Report in Word format
-  - Filer or landscape tables where relevant
-  - Source links for each patent
+  - A Word report with a verdict for your goal
+  - The closest patents, ranked, with the key claim text
+  - A map of who files in the field, where it applies
+  - Related patents grouped into families, with countries covered
+  - A source link for every patent cited
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Use an AI that can search the web and run code, such as Claude with web tools and code running turned on.
+  - Paste the skill into the chat, or upload the skill folder.
+  - Describe your invention, rival product or target patent.
+  - Answer the questions one at a time. Pick one of the five goals when asked.
+  - Check the ranked patents and their source links. Open the ones that matter.
+  - Take the report to a patent attorney before you file, license or buy.
+output_sample:
+  input:
+    - A short description of your invention, rival product or target patent
+    - "Which of the five goals you have: novelty, freedom to operate, landscape, diligence or litigation"
+    - Countries that matter (asked for freedom to operate, landscape and diligence)
+    - Prior art you already know (optional)
+    - Your risk tolerance, and whether an attorney is involved
+  prerequisites:
+    - An AI that can search the web and open Google Patents, Espacenet and USPTO pages
+    - An AI that can run code, with Node.js and the docx package, to build the Word report
+    - A Lens.org API key for the citation step (optional)
+  output:
+    - name: Verdict
+      contains: A plain call on the goal you chose, such as how new the idea looks or where the risk sits.
+    - name: Ranked closest art
+      contains: The nearest patents in order, with the claim text that matters and why each one ranks where it does.
+    - name: Landscape
+      contains: Who files in this field, grouped by patent class, with the main trends.
+    - name: Family and country coverage
+      contains: Related patents grouped as one family, and the countries where each one applies.
+    - name: Freedom-to-operate flags
+      contains: Active patents that could block your product, shown only when that is your goal.
+    - name: Strategy recommendations
+      contains: Suggested next steps based on what the search found.
+    - name: Audit log
+      contains: The searches that were run and the source link for each patent cited.

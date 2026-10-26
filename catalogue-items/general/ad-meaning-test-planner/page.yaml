@@ -1,6 +1,6 @@
 new_slug: ad-meaning-test-planner
 name: "Ad meaning test planner"
-summary: "Paste your ad and audience groups. Get a short test of whether each group reads it as you mean."
+summary: "Plan a short test of how each audience group reads your ad. Paste your ad and groups, and get questions that show where meanings split."
 job: check-ads
 thinking: high
 thinking_why: "It has to imagine readings you did not intend, then design fair questions around them."
@@ -17,6 +17,10 @@ when:
   - "You are about to run an ad in a new country, age group or community."
   - "Your ad uses a joke, a pun, a slang word or a picture that may land differently."
   - "Your team loves the ad but you have not heard from anyone outside it."
+not_for:
+  - "You want to check if your ad is clear, not how groups read it: ask your AI for a plain copy review."
+  - "You need to see real results from a live test: run the questions on real people first, then bring the answers back."
+  - "You have only one audience and the ad has no joke, slang or picture: skip the test and ask a colleague to read it."
 
 you_give:
   - "Your ad: the text, and the picture if it has one"
@@ -35,6 +39,32 @@ how_to_use:
   - "Name each audience group and where they live, work and spend time online."
   - "Say in one line what the ad should mean to them."
   - "Run the questions on five to ten people per group, then bring the answers back and ask it to read them by group."
+output_sample:
+  input:
+    - Your ad text, and the picture if it has one
+    - The groups of people who will see it
+    - One line on what the ad should make people think or feel
+    - Where the ad will run (optional)
+  prerequisites:
+    - An AI chat that can read images, if your ad has a picture
+    - People in each group to ask, once you have the plan
+  output:
+    - name: Ad parts that can be read more than one way
+      contains: Each slogan, joke, picture or word that carries extra meaning, with why it is open.
+    - name: Groups
+      contains: Each audience group described by culture, setting and the media they use.
+    - name: Readings
+      contains: For each open part, the reading you intend and the rival readings, with who might hold each.
+    - name: Test for each group
+      contains: One word-association prompt and one recognition question per group, with answer options.
+    - name: How to read results
+      contains: How to lay out answers by group and what counts as a mismatch.
+    - name: Limits
+      contains: How many people to ask and what a small test cannot show.
+    - name: Missing
+      contains: Facts that would sharpen the test, marked where they are needed.
+    - name: Checks missed
+      contains: One line for each quality check the plan still fails, or none.
 
 how_it_works:
   - title: "Lists meaning-heavy parts"

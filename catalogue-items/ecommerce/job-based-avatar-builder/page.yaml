@@ -1,6 +1,6 @@
 new_slug: job-based-avatar-builder
 name: "Job-based avatar builder"
-summary: "Paste buyer stories and reviews. Get avatar cards built on a job, a trigger and quoted proof."
+summary: "Turn 5 to 8 buyer stories into job-based avatar cards, each with a trigger moment and quoted proof. Know why people really buy."
 job: understand-customers
 thinking: medium
 thinking_why: "It sorts many stories into groups and checks each card against a fixed list of parts. A mid-range model does this well."
@@ -19,6 +19,10 @@ when:
   - Your avatar is a demographic list and your ads still miss.
   - You have a pile of reviews, support emails and survey answers, and no clear picture of why people buy.
   - You are about to brief a writer or a designer and want every claim about the buyer backed by a quote.
+not_for:
+  - "You have fewer than 5 buyer stories: collect more first, or treat the cards as guesses to check."
+  - "Buyers choose on price or habit alone, such as commodity top-ups: use a simple price comparison, not this skill."
+  - "You want to map one buyer's whole decision: use the Switch story mapper. To write one job in full, use the Job spec writer."
 
 you_give:
   - 5 to 8 recent buyer stories, such as interview notes, long reviews, support emails or post-purchase survey answers
@@ -38,6 +42,31 @@ how_to_use:
   - Add your product link and price. Add order data if you have it.
   - Read each card's quotes first. If a card rests on one story, treat it as a lead and go find more stories.
   - Hand the cards to your ad or page writer, or run the Job test product line cutter to sort your range.
+output_sample:
+  input:
+    - 5 to 8 recent buyer stories, such as long reviews, support emails or survey answers
+    - Your product link and price
+    - Order data, such as dates and items bought together (optional)
+    - Competitor reviews if you have no buyers yet (optional)
+  prerequisites:
+    - Stories with dates and source types, with names and contact details removed
+  output:
+    - name: Avatar card
+      contains: One card per job group, with a short tag, a confidence level and the job as one situation sentence.
+    - name: Level test
+      contains: Three things the buyer could hire instead, and whether the job is at the right level.
+    - name: Circumstance and sides
+      contains: Where and when the job happens, plus its practical, emotional and social sides.
+    - name: Four forces
+      contains: What pushed the buyer, what pulled them, their habit, their worries, and the worries that decide the sale.
+    - name: Stops using to buy us and timeline
+      contains: What they drop to buy from you, and the path from first thought to first use.
+    - name: Words they use
+      contains: At least three word-for-word quotes, each with source type and date.
+    - name: Not for and claims to prove
+      contains: Where the product will disappoint, and claims in the quotes that need proof.
+    - name: NOT ENOUGH TO CALL AN AVATAR
+      contains: Stories that fit no group, and what more to collect.
 
 how_it_works:
   - title: Groups stories by struggle

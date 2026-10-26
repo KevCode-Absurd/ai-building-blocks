@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tries preprocessing steps until the text reads well.
 new_slug: image-text-reader
 name: Image text reader
-summary: Give it a photo of a sign, meter or receipt. Get the text read out,
-  with cleanup for hard images.
+summary: Read text from a photo of a sign, meter or receipt with MATLAB. Hard images get cleaned up first. Needs paid MATLAB and the Computer Vision Toolbox.
 job: build-software
 headline: Image text reader
-subhead: The text from a sign, meter, label or receipt photo, read out in a form
-  you can copy. Hard images get cleanup first, so a glare-covered display or a
-  skewed label still gives usable words.
+subhead: The text from a sign, meter, label or receipt photo, read out in a form you can copy. Hard images get cleanup first, so a glare-covered display or a skewed label still gives usable words.
 explain: |
   The text from a sign, meter, label or receipt photo, read out in a form you can copy. Hard images get cleanup first, so a glare-covered display or a skewed label still gives usable words. It runs in MATLAB with the Computer Vision Toolbox.
 
@@ -19,6 +16,10 @@ when:
   - A photo of a sign has glare or a busy background that breaks reading.
   - You need text pulled from a whole folder of images.
   - You want text in more than one language read from the same picture.
+not_for:
+  - "You need to read handwriting, cursive, fancy lettering or CAPTCHAs: type it by hand, because this skill cannot read them."
+  - "You do not have MATLAB with the Computer Vision Toolbox: use a free phone scanner app or paste the photo into your AI chat to read it."
+  - "You need tables or full page layouts pulled from documents, or text from live video: use a dedicated document tool instead."
 you_give:
   - The image or a folder of images
   - Which part holds the text, if known (optional)
@@ -29,8 +30,32 @@ you_get:
   - Confidence checks on each result
   - MATLAB code to repeat the job
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Computer Vision Toolbox.
+  - Check you have paid MATLAB, the Computer Vision Toolbox, and the two support packages for text detection and OCR language data.
+  - Open an AI tool that can run MATLAB code and paste in this skill.
+  - Give it your image or folder. Add the text area and language if you know them (optional).
+  - Read the short plan it writes first. It looks at your image before any code runs.
+  - Type in what the text really says if you can. The error figures are only reliable against text you give.
+  - If it is unsure, it asks you to confirm the text. Answer so it can tune the cleanup.
+output_sample:
+  input:
+    - Your image, or a folder of images
+    - The part of the image that holds the text (optional)
+    - The language of the text (optional)
+    - The text you know the image should say (optional, to check accuracy)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - A paid MATLAB licence with the Computer Vision Toolbox
+    - The Text Detection Using Deep Learning and OCR Language Data support packages
+  output:
+    - name: OCR Plan
+      contains: Two lines on what the image shows and what makes it hard, plus the cleanup and reading strategy chosen.
+    - name: Preprocessing and detection
+      contains: The cleaned image and the text areas found, using the cleanup recipe that worked best.
+    - name: Recognised text
+      contains: The words read from the image, each with a confidence score so you can spot weak reads.
+    - name: Accuracy check
+      contains: Character and word error rates, which only mean something when compared with text you supply.
+    - name: MATLAB pipeline file
+      contains: Saved code that repeats the same steps on other images.
+    - name: Results block
+      contains: A success or failed summary shown after the files are saved to disk.

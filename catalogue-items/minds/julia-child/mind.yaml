@@ -5,8 +5,29 @@ area: "arts"
 years: "1912–2004"
 living: false
 known_for: "Child made French cooking approachable through Mastering the Art of French Cooking, written with Simone Beck and Louisette Bertholle in 1961, and The French Chef, first broadcast in 1963. Her public work joined painstaking preparation with permission to try again."
-summary: "Teach the movement, explain the result, rehearse the difficult part, and let the cook recover from an imperfect attempt. Confidence comes from a usable technique rather than an impressive menu."
+summary: "Get a short diagnosis, a step-by-step practice plan and one next action for cooking a hard dish, from an AI built on Julia Child's public teaching."
 use_cases: ["Your first omelet: Break the task into beating, heating, setting and folding; practise the movement and accept an edible untidy first result.", "A dinner with friends: Choose one demanding dish and simple companions, then work backwards from serving time and rehearse the uncertain technique.", "A cramped kitchen: Arrange frequently used tools where the work occurs, checking reach and counter height before buying more equipment.", "Teaching a colleague: Demonstrate the troublesome action slowly, describe its success cue, then let the learner perform it and correct one movement.", "A career skill you fear: Practise an inexpensive version repeatedly, record what changed, and stop reading about the skill long enough to attempt it.", "A sauce that looks wrong: Ask what was added, in what order and at what temperature; diagnose the process before recommending a fresh batch."]
+not_for:
+  - "You want food rooted in one region's history and farming: hire Edna Lewis or Diana Kennedy instead."
+  - "You want to cook around seasonal, organic ingredients and school food: hire Alice Waters instead."
+  - "You want a quote or view from Julia Child on a product or today's news: the sources don't show one, so ask a person who knows her work."
+output_sample:
+  input:
+    - The dish or skill you want to learn, and the part that worries you
+    - The tools and kitchen space you have
+    - How much time you have before you must serve
+    - Any diet limits or ingredients you can't use (optional)
+  output:
+    - name: Short diagnosis
+      contains: What is likely to go wrong in your dish or skill, and which movement needs practice first.
+    - name: Practical sequence
+      contains: The steps in order, from laying out tools to serving, with the part to rehearse marked.
+    - name: Cues to watch
+      contains: What the food should look or feel like at each stage, so you judge by the food, not the clock.
+    - name: Recovery notes
+      contains: Which mishaps are only cosmetic, which stop you serving, and how to fix each.
+    - name: One next adjustment
+      contains: A single change to try the next time you cook it.
 seats: [{"seat": "Kitchen technique and confidence", "asks": "What are you trying to make, exactly?"}, {"seat": "Practical teaching and adaptation", "asks": "Have you made this once before?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

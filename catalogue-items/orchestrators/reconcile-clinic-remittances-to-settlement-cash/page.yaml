@@ -1,51 +1,65 @@
 new_slug: reconcile-clinic-remittances-to-settlement-cash
-name: Reconcile clinic remittances to settlement cash
-headline: Reconcile clinic remittances to settlement cash
-summary: A clinic claims reconciliation and ordered settlement cash ladder
+name: Clinic claim cash reconciliation checker
+headline: Clinic claim cash reconciliation checker
+summary: Share claim records, offsets, bank receipts and payment timing. Get a claims reconciliation and a schedule of cash actually available for payments.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A clinic claims reconciliation and ordered settlement cash ladder. Share deidentified aggregate claims/remittance records, provider offsets, actual bank receipt times, opening accessible cash and confirmed administrative payment buckets.
+subhead: Share claim totals with no patient details, payer remittances, provider offsets, bank receipt times and your opening cash. Your AI matches claims to cash that reached the bank, then lines up confirmed cash against your payments in order. You get the timing gaps and a source for each figure.
 explain: |-
-  A clinic claims reconciliation and ordered settlement cash ladder.
+  A clinic bills payers, and payers pay later, in pieces. Some payments arrive after amounts are taken back from a provider. The claims your billing system calls paid, the remittances from payers and the cash in your bank rarely agree on one day.
 
-  Healthcare administration treasury. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow first rolls claims forward: the opening balance, new bills, approved adjustments and cash applied. It then ties remittance cash, less provider offsets, to what reached the bank. Only bank-confirmed cash, at the time it was available, moves on to the second step. That step lines up your payments in order against the cash on hand.
+
+  Remittances still pending stay out of the ladder until they land. It works from totals and deidentified records only, and it plans administrative cash. It does not approve a payment and it does not set clinical priorities.
 when:
-  - You need a clinic claims reconciliation and ordered settlement cash ladder.
-  - You work on healthcare administration treasury and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A payer says a claim was paid but the bank shows less.
+  - Your billing system and your bank statement disagree at month end.
+  - You need to know which bills you can pay this week from cash that has really arrived.
+  - A provider offset cut a remittance and nobody can explain the gap.
+not_for:
+  - "You only want the gaps between billed, paid and received: use the Clinic payment reconciliation reviewer."
+  - "You only want a cash timeline for payments, with no claims: use the Payment timing cash balance planner."
+  - "You need patient-level billing or coding review: this uses totals only. Use your billing system."
+  - "You want to choose which payments to make or which services come first: that stays with your team."
 you_give:
-  - Deidentified aggregate claims/remittance records, provider offsets, actual bank receipt times, opening accessible cash and confirmed administrative payment buckets.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Claim totals and payer remittances with no patient details, from your billing system
+  - Provider offsets taken back from payments, from the remittance advice
+  - Bank receipt dates and times, from your bank statement or portal
+  - Opening cash you can use, in the same account, on the start date
+  - The administrative payments you must make, in the order you have confirmed
 you_get:
-  - A clinic claims reconciliation and ordered settlement cash ladder.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "A claims roll-forward: opening balance, new bills, adjustments, cash applied and closing balance"
+  - A match of remittance cash, less offsets, to bank receipts, with unexplained gaps listed
+  - An ordered cash ladder showing when each payment can be met from confirmed cash
+  - A list of pending remittances kept out of the ladder
+  - A list of missing facts and checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Strip names, dates of birth and member numbers first. Attach totals and remittance records only.
+  - Say the account, the period, your opening cash and the order of the payments you must make.
+  - After step 1, compare the bank receipts with your statement. Every gap needs a reason or stays listed as unexplained.
+  - After step 2, check that no pending remittance counts as cash. Use the ladder to plan, not to approve payments.
 how_it_works:
-  - title: Clinic claims collections bridge
-    text: Reconcile opening claims, new billings, approved adjustments, applied cash and provider offsets. Pass actual reconciled bank receipts and their availability timestamps, not gross billings or claim-applied cash, downstream.
-  - title: Settlement liquidity ladder builder
-    text: Build the same-account ordered settlement ladder using verified opening accessible cash and actual bank receipts. Keep pending payer remittances outside confirmed inflows and preserve payment authorization and clinical independence.
+  - title: Clinic payment reconciliation reviewer
+    text: "Rolls claims forward from the opening balance, new bills, approved adjustments and cash applied. Ties remittance cash, less provider offsets, to the bank. Hands step 2 the bank receipts and the time each was available, not billed amounts or claim-applied cash. Check before moving on: every gap is explained or listed as unexplained."
+  - title: Payment timing cash balance planner
+    text: "Builds the ordered payment ladder for the same account from verified opening cash and the bank receipts. Keeps pending payer remittances out of confirmed inflows. Check before you use it: payments sit in the order you gave, and the ladder starts from the verified opening cash."
 output_shape: |-
-  A clinic claims reconciliation and ordered settlement cash ladder.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES    <files, dates, account, currency, period>
+  CLAIMS ROLL-FORWARD  <opening | new bills | adjustments | cash applied | closing>
+  REMITTANCE TO BANK   <remittance | provider offsets | bank receipt | difference>
+  CASH LADDER          <period | confirmed receipts | payments in order | cash left | gap>
+  PENDING REMITTANCES  <expected but not yet in the bank>
+  MISSING              <each gap and what it stops>
+  CHECKS MISSED        <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Claim-applied cash is reconciled to bank cash after provider offsets; receipts enter the liquidity ladder only at their actual bank availability time.
+  - what: Payment order
+    how: Give the order your team has confirmed. The ladder follows it and never reorders payments.
+  - what: Privacy
+    how: Send only totals and deidentified records. If a file holds patient details, remove them before you attach it.
+  - what: Several accounts
+    how: Run one bank account at a time. The ladder is for one account.
 judge:
   - Claim-applied cash is reconciled to bank cash after provider offsets; receipts enter the liquidity ladder only at their actual bank availability time.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -60,13 +74,36 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads files and builds spreadsheets
+      why: The ladder is dated cash against dated payments. A spreadsheet makes each line easy to check. In a plain chat it comes back as a table.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Remittance advice from your two largest payers (optional).
+    - Your bank's cut-off times for same-day credit (optional).
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Remittance
+    meaning: A payer's notice and payment that says which claims it is paying.
+  - term: Provider offset
+    meaning: An amount a payer takes back from a payment to recover an earlier overpayment.
+  - term: Cash ladder
+    meaning: A dated list that sets payments against the cash you can reach at each time.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains the difference between two records that should match.
+output_sample:
+  input:
+    - Claim totals and remittances with no patient details
+    - Provider offsets and bank receipt times
+    - Opening cash and your payments in order
+  prerequisites:
+    - An AI that can read files
+    - The account and period you are checking
+  output:
+    - name: outputs/step-1-clinic-claims-collections-bridge.md
+      contains: Claims roll-forward and the match of remittance cash, less offsets, to bank receipts.
+    - name: outputs/step-2-settlement-liquidity-ladder-builder.md
+      contains: The ordered ladder of payments against confirmed cash, with the largest gap.
+    - name: Pending remittances
+      contains: Payments expected from payers but not yet in the bank, kept out of the ladder.
+    - name: Workbook (optional)
+      contains: The schedules in one linked spreadsheet, if your AI can build files.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.

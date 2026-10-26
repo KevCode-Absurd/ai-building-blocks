@@ -1,52 +1,94 @@
 new_slug: prepare-a-design-system-migration
 name: Prepare a design system migration
 headline: Prepare a design system migration
-summary: Share the source files. Get a change inventory, replacement rules and a staged migration brief.
+summary: Plan a move to a new design system with a list of what changes, replacement rules for each old component and a staged rollout with owners and checks.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A change inventory, replacement rules and a staged migration brief. Share current component usage, proposed system changes, supported platforms and release constraints. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your current components, the changes you plan and the platforms and release dates you must meet. Your AI inventories what is used today, writes the rule for replacing each old pattern, and plans the rollout in stages. You get a change list, replacement rules and a migration brief.
 explain: |-
-  A change inventory, replacement rules and a staged migration brief.
+  A design system migration goes wrong when nobody knows what is in use today. Teams swap a button and find three other buttons, a custom copy and a version nobody owns. Then a deadline arrives and old and new styles ship side by side.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Breaking changes list affected components, migration owners and visual checks; old usage remains traceable. Missing tools or evidence stay visible in the final summary.
+  This workflow starts with an inventory. It finds the components in use, splits real exceptions from accidental drift, and notes what depends on each one. Then it writes the target patterns and a replacement rule for every old pattern. It does not drop a variant without saying so. Last it plans the rollout in stages, with owners, training, visual checks and a way to trace old usage.
+
+  It works from the files and lists you give it. It cannot see code it was not shown. Deciding what the target patterns are is a person's job. The AI proposes, and you confirm before the rollout is planned.
 when:
-  - You need a change inventory, replacement rules and a staged migration brief.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are moving from a home-grown set of styles to a shared design system and need a plan.
+  - A new brand look means changing buttons, forms and colors across several products.
+  - You are upgrading to a new major version of your component library and some parts will break.
+  - Two teams use different versions of the same components and need one agreed target.
+not_for:
+  - One component needs fixing and no migration is planned. Use the Design system auditor on its own.
+  - You need new tokens built from one brand color. Use the Design token builder.
+  - You want to watch for drift every month after the move. Use the Monthly design system keeper.
+  - The change is about people and process, not components. Use the Change rollout planner on its own.
 you_give:
-  - Current component usage, proposed system changes, supported platforms and release constraints.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your current components and where they are used, as code, a Figma file or a list
+  - The planned changes, such as the new system's component list or a changelog
+  - The platforms you support, such as web, iOS and Android
+  - Release dates and freeze periods you must work around
+  - Who owns each product or team (optional)
 you_get:
-  - A change inventory, replacement rules and a staged migration brief.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A change inventory listing each component, where it is used, and whether differences are on purpose or drift
+  - Target patterns and a replacement rule for every old pattern, with each variant kept or dropped on the record
+  - A list of breaking changes with the affected components and owners
+  - A staged migration brief with owners, training and visual checks for each stage
+  - Open questions that need a person's decision before work starts
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini. An AI that can read your code files gives the best inventory. Without it, paste component lists.
+  - Attach what you have: component files or list, the list of planned changes, platforms and release dates.
+  - After step 1, read the inventory with your team. Mark each difference as on purpose or drift.
+  - After step 2, confirm the target patterns and each dropped variant. The AI marks unconfirmed ones as proposed.
+  - After step 3, check each stage has an owner and a visual check. Fill every MISSING line before the plan goes out.
 how_it_works:
   - title: Design system auditor
-    text: Inventory inconsistent components and distinguish deliberate exceptions from accidental drift.
+    text: Lists the components and styles in use and finds near-copies and clashes. Separates deliberate exceptions from accidental drift. Hands step 2 the inventory. Check before moving on, each row names where the component is used.
   - title: Design rules file writer
-    text: Document the agreed target patterns and replacement rules from actual components without silently removing variants.
+    text: Writes the target patterns and the replacement rule for each old pattern, from your components and step 1's inventory. Keeps every variant unless the rule says it is dropped and why. Hands step 3 the rules and the breaking changes. Check before moving on, every old pattern has a rule or is marked MISSING.
   - title: Change rollout planner
-    text: Plan adoption of the approved patterns, with training, owners and acceptance checks. Keep implementation dependencies from the audit visible.
+    text: Takes step 2's rules as the list of what changes and plans the move in stages with owners, training and acceptance checks. Keeps the dependencies found in the audit in view, so a stage never needs something a later stage delivers. Hands back the migration brief. Check before moving on, each breaking change lands in a stage with an owner.
 output_shape: |-
-  Scope and source coverage
-  A change inventory, replacement rules and a staged migration brief.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE            <products and platforms>, <release dates and freezes>
+
+  CHANGE INVENTORY <component> | <where used> | <issue> | on purpose or drift | <target>
+
+  REPLACEMENT RULES <old pattern> -> <new pattern> | variants kept <list> | variants dropped <list and why> | status: proposed or confirmed
+
+  BREAKING CHANGES <component> | <what breaks> | <owner>
+
+  MIGRATION STAGES stage <n> | <what moves> | <owner> | <training> | <visual check> | <done when>
+
+  MISSING          <each gap, and who must decide>
+  CHECKS MISSED    <one line each, or none>
+  NEXT STEP        <one action for you>
+output_sample:
+  input:
+    - Your current components and where they are used
+    - The planned changes, such as the new system's component list
+    - The platforms you support and your release dates
+    - Product or team owners (optional)
+  prerequisites:
+    - An AI that can read your code or design files, or lists of components pasted in
+  output:
+    - name: Change inventory
+      contains: Each component in use, where, and whether a difference is deliberate or drift.
+    - name: Replacement rules
+      contains: A target pattern for each old one, with variants kept or dropped and why.
+    - name: Breaking changes
+      contains: What breaks for each affected component, and who owns the fix.
+    - name: Migration brief
+      contains: Stages with owners, training, visual checks and what done means for each stage.
+    - name: Open questions
+      contains: Decisions a person must make before work starts, such as which variants to drop.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Breaking changes list affected components, migration owners and visual checks; old usage remains traceable.
+  - what: One product first
+    how: Name the product to migrate first. The inventory and stages cover that product, with the rest listed for later.
+  - what: A freeze period
+    how: Give the dates when nothing may ship. The stages stay clear of them.
+  - what: A Figma file
+    how: Attach the Figma file as well as the code. Step 1 compares design to code and lists where they differ.
+  - what: A parallel run
+    how: Say old and new must run side by side for a time. Step 3 adds a rule for which one wins where they meet.
 judge:
   - Breaking changes list affected components, migration owners and visual checks; old usage remains traceable.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -70,5 +112,13 @@ works_best_with:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
 terms:
+  - term: Design system
+    meaning: The shared set of components, styles and rules a team builds screens from.
+  - term: Drift
+    meaning: Small differences that crept in by accident, such as five slightly different blues.
+  - term: Breaking change
+    meaning: A change that makes old usage stop working or look wrong until someone updates it.
+  - term: Variant
+    meaning: A version of a component, such as small or large, or primary or secondary.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result and file passed from one step to the next.

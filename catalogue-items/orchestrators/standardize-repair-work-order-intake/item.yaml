@@ -1,6 +1,6 @@
 slug: standardize-repair-work-order-intake
 name: Standardize repair work order intake
-summary: Share the source files. Get an intake procedure, missing-field checks and unresolved work register.
+summary: "Standardize how your shop takes in repair jobs. Share sample work orders. Get an intake procedure, missing-field checks and a list of unresolved jobs."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -24,7 +24,7 @@ steps:
   - uses: process-and-sop-writer
     note: Document intake, authorization evidence, asset identification, quote acceptance and escalation steps from the existing repair process; technical assessment stays with qualified staff.
   - uses: executive-action-register
-    note: Build the follow-up register from actual open work orders and explicit commitments, leaving missing authorization or customer decisions unresolved.
+    note: Build the follow-up register from actual open work orders and explicit commitments, leaving missing authorization or customer decisions unresolved. Uses step 1's field check and authorization rules together with your open work orders, which stand in for the meeting notes it normally reads.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

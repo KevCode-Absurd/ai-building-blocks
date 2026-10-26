@@ -1,0 +1,156 @@
+name: Accessibility Auditor agent
+summary: Audit a web page or app for accessibility barriers. Get findings tied to WCAG 2.2, a test plan for keyboard and screen readers, and a fix list.
+headline: Accessibility Auditor agent
+subhead: Share the pages or flows in scope, the code or screenshots, and the level you are aiming for. It reports barriers by WCAG rule and severity with a fix for each, and writes the keyboard and screen reader tests a person must run to confirm them.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A page can score well in a scanning tool and still be unusable with a screen
+  reader or only a keyboard. Scanners find only part of the problem. This
+  accessibility auditor agent looks for the rest. It checks your page against
+  WCAG 2.2 AA, the common web accessibility rulebook, and plans the manual tests
+  that scanners cannot do.
+
+
+  It reads the code or screenshots you give it, and for each barrier gives the
+  WCAG rule, how serious it is, who it affects, where it is and the fix. It
+  treats custom parts such as tabs, pop-ups, carousels and date pickers as
+  suspect until tested. Every rule gets one of four results: pass, fail, not
+  tested or not applicable. It will not say a page conforms until every rule in
+  scope was tested on the full pages.
+
+
+  This is a role profile from Agency Agents, shared under MIT. A chat AI cannot
+  run a screen reader or scanner. It tells you what to run and what to look for,
+  and marks each check as not run. It is not a legal certificate. For a
+  U.S. government site, use the Section 508 Accessibility Specialist agent.
+when:
+  - You are about to launch a site, app or feature and want an accessibility check first.
+  - A customer, school or partner asks for proof that your product is accessible.
+  - A scan came back clean, but a user says they could not use a form or menu.
+  - You built a custom tab, menu or pop-up, and want to know if it works for screen reader and keyboard users.
+not_for:
+  - You are a U.S. government body or contractor and need a Section 508 report. Use the Section 508 Accessibility Specialist agent.
+  - You need a legal certificate of conformance. Only a qualified auditor can give one.
+  - You want the page fixed and rebuilt. Take the findings to the Frontend Developer agent, or fix them yourself in your code.
+  - You want a general quality check of how a site looks and works. Use the Evidence Collector agent.
+you_give:
+  - The pages or flows in scope, such as "sign up and check out", as a link, HTML or screenshots
+  - The level you are aiming for, such as WCAG 2.2 AA (it assumes this if you do not say)
+  - The tools you can use, such as a scanner, a screen reader or just a keyboard
+  - Your tech stack, such as React or plain HTML (optional)
+  - Barriers users have already reported (optional)
+you_get:
+  - A list of barriers, each with the WCAG rule, severity, who it affects, location and fix
+  - A result for each rule in scope, either pass, fail, not tested or not applicable
+  - A plain verdict of does not conform, not determined or conforms, with what was left untested
+  - A keyboard test checklist and a screen reader test script for your key flows
+  - A fix order, with the quick wins marked
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - List the pages and flows in scope, say the level you are aiming for, and paste the code or screenshots. Say which tools you have. A chat AI cannot open your site, so paste what it should check.
+  - Read the plan. Run the scanner if it lists one, then the keyboard test. Use a screen reader for the key flows, such as NVDA on Windows or VoiceOver on Mac.
+  - Paste your results into the chat, one flow at a time. Ask the agent to update the findings and the verdict.
+  - Fix the critical and serious items in your code first. Run the same tests again to prove each fix.
+  - Keep the final report with your release notes. Plan a re-check after big changes.
+how_it_works:
+  - title: Set the scope
+    text: It lists the pages, flows and page states in scope, the standard and level, and what is out of scope.
+  - title: Plan the automated pass
+    text: It lists the scanner checks to run on each page, and notes that a scan covers only the rules a tool can test.
+  - title: Plan the manual tests
+    text: It writes a keyboard test, a screen reader test, a zoom and reflow test, and a reduced motion and contrast test.
+  - title: Review components
+    text: It looks at custom parts such as tabs, menus, pop-ups and forms for correct roles, keys and announcements.
+  - title: Write the findings
+    text: Each gets a WCAG rule by number and name, a severity, who it affects, the evidence, the current and fixed code, and how to verify.
+  - title: Give the verdict
+    text: It gives a result for each rule and a verdict, and lists what was not tested.
+output_shape: |-
+  SCOPE
+    product <name> | pages and flows <list> | standard <WCAG version and level> | tools used <list> | ASSUMED: <list> | MISSING: <list>
+
+  RESULTS BY RULE
+    <WCAG rule, number and name> | PASS, FAIL, NOT TESTED or NOT APPLICABLE | evidence
+
+  FINDINGS
+    <number> | <title> | WCAG <rule> | severity <critical, serious, moderate, minor>
+      who it affects <users> | location <page, part> | evidence <what> | current <code> | fix <code> | how to verify <test> | status <seen, to test>
+
+  VERDICT
+    <DOES NOT CONFORM, NOT DETERMINED or CONFORMS> | why | untested scope <list>
+
+  TESTS TO RUN
+    keyboard checklist | screen reader script | zoom and reflow | reduced motion and contrast
+
+  FIX ORDER
+    immediate <list> | next sprint <list> | ongoing <list> | what is working well <list>
+output_sample:
+  input:
+    - The pages or flows in scope, as a link, HTML or screenshots
+    - The standard and level you are aiming for
+    - The tools you can use for testing
+    - Your tech stack and reported barriers (optional)
+  prerequisites:
+    - A keyboard, and a screen reader such as NVDA or VoiceOver, for the manual tests
+    - A scanner such as axe or Lighthouse, if you want the automated pass
+  output:
+    - name: Scope
+      contains: The pages, flows, standard and tools, plus what was assumed or missing.
+    - name: Results by rule
+      contains: Pass, fail, not tested or not applicable for each WCAG rule in scope, with evidence.
+    - name: Findings
+      contains: Each barrier with rule, severity, who it affects, location, current code, fix and how to verify.
+    - name: Verdict
+      contains: Does not conform, not determined or conforms, and the scope left untested.
+    - name: Tests to run
+      contains: A keyboard checklist, a screen reader script, and zoom and motion checks for your flows.
+    - name: Fix order
+      contains: Items to fix now, next and later, plus the patterns worth keeping.
+works_best_with:
+  tools:
+    - name: axe, Lighthouse or WAVE
+      why: These free scanners find the barriers a tool can detect. Paste their output so the agent can sort it.
+    - name: NVDA, VoiceOver or JAWS
+      why: A screen reader is how you confirm what the AI can only predict. NVDA is free on Windows and VoiceOver is built into Mac and iPhone.
+    - name: Claude Code or another AI that can open your project
+      why: It can read your real components and suggest fixes in place. In a plain chat you paste the code.
+  inputs:
+    - The scan report for each page.
+    - A short list of the tasks users must finish.
+    - Your design system or component list, if you have one.
+terms:
+  - term: WCAG
+    meaning: The Web Content Accessibility Guidelines. The main rulebook for accessible web content.
+  - term: Screen reader
+    meaning: Software that reads a page aloud for people who cannot see it.
+  - term: ARIA
+    meaning: Extra code that tells assistive tools what a custom control is. Plain HTML is better when it works.
+  - term: Focus
+    meaning: The item that gets your next key press. Keyboard users need to see where it is.
+  - term: Conformance
+    meaning: Meeting every rule at a stated level. It needs testing of all rules in scope, not a sample.
+  - term: Assistive technology
+    meaning: Tools that help people use a device, such as screen readers, voice control and magnifiers.
+tweaks:
+  - what: Standard and level
+    how: Name the version and level, such as WCAG 2.2 AA. A different level changes which rules count.
+  - what: Scope
+    how: Name each page and each state, such as an open menu or an error. A rule can pass on one page and fail on the next.
+  - what: Test depth
+    how: Say what you can run. With only a keyboard, it gives the keyboard test and marks the rest not tested.
+improve:
+  - Add your design system's rules to SKILL.md, such as your focus style and your color contrast limits.
+  - After each fix, add a check to your build pipeline so the same barrier cannot return.
+  - Pair it with the Section 508 Accessibility Specialist agent for U.S. government work.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

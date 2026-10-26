@@ -1,6 +1,6 @@
 new_slug: best-customers-buying-path
 name: Find your best customers and rebuild how they buy
-summary: Paste your customer list with what each paid. Get your best customers and the steps every new lead should follow.
+summary: Find your best customers from a list of what each paid, then get the steps every new lead should follow before they buy.
 job: understand-customers
 thinking: high
 thinking_why: It has to find real patterns in your customer data and not invent them. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want more customers like your best ones and are not sure what makes them different.
   - Your best customers all seem to have read, watched or done something before they bought, and you want every lead to do it.
   - Your sales team picks which content to send by feel and you want a shortlist that is based on what worked.
+not_for:
+  - "You have fewer than about 20 customers or no record of what each paid: review your sales by hand, or talk to each customer."
+  - "You want to learn why customers bought in their own words: use the Customer purchase interview script writer."
+  - "You only want the best customer profile, with no buying path: use the Best customer finder."
 you_give:
   - A customer list with what each one paid and how long they stayed
   - A note on how good each one is to work with (optional)
@@ -32,6 +36,22 @@ how_to_use:
   - Share your customer list and their words. It finds your best customers and writes the profile.
   - Add what those customers did before buying. It builds the new path and the test.
   - Run the test for the number of weeks it sets, then compare leads who got the steps with leads who did not.
+output_sample:
+  input:
+    - Your customer list with what each one paid and how long they stayed
+    - Customer words such as surveys, reviews or emails
+    - What your top customers read, watched or did before buying (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack zip from this page
+  output:
+    - name: "Step 1: Best customer finder"
+      contains: Your top fifth of customers, the traits they share, a plain profile, who does not fit, and their channels.
+    - name: "Step 2: Buying path rebuilder"
+      contains: How many top customers did each step, the steps to add to every lead, a shortlist for sales, and a test.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find your best customers
     text: Sorts your customers, keeps the top fifth, finds the fewest traits they all share, and names who does not fit and where they came from.

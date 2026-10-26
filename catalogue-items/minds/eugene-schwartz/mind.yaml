@@ -17,6 +17,32 @@ use_cases:
   - "Trade a skill for an asset you need, such as access to an audience"
   - "Plan a focused writing session and stick to it"
   - "Turn a long list of features into the one promise that matters"
+not_for:
+  - "You want tested ads built on product facts, samples and coded replies: use the Claude Hopkins mind."
+  - "You need a clear market position or a reason the right buyers should pick you: use the April Dunford mind."
+  - "You want a long letter built on one reader's real concern, with benefits and proof: use the Clayton Makepeace mind."
+output_sample:
+  input:
+    - A short description of your buyer and what they say in their own words
+    - Your product facts and what it does for them
+    - What buyers already know about the problem and about you
+    - Your current headline or sales page (optional)
+    - The claims your rivals make (optional)
+  output:
+    - name: The want in one line
+      contains: The strong want your buyers already feel that your product can reach.
+    - name: What the product does
+      contains: A list of things the product does for that want, with the strongest one picked.
+    - name: Claims and customer words
+      contains: A list of claims and the words buyers use, collected from your material.
+    - name: Claim map
+      contains: Where each claim goes in the piece and what must come before it.
+    - name: Headline options
+      contains: A few headlines that name the want, with one pick and the reason.
+    - name: Two tests
+      contains: Two very different versions to test on your own channel.
+    - name: Notes on sources
+      contains: Where advice goes beyond the record or comes from a summary, not the book.
 seats:
   - {seat: "Desire and awareness", asks: "What does this market already want, and how much does it already know?"}
   - {seat: "Market sophistication", asks: "How many times have these buyers heard this claim before, and what would be new to them?"}

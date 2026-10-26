@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It combines account facts into talking points for one call.
 new_slug: customer-call-prep-writer
 name: Customer call prep writer
-summary: Name the company and who is on the call. Get a one-page brief with
-  signals and talking points. Needs Common Room.
+summary: Prepare for a customer call in five minutes. Name the company and who is on the line, and get a one-page brief with talking points.
 job: sell-and-negotiate
 headline: Customer call prep writer
-subhead: "One page you can scan five minutes before a customer call. Name the
-  company and who will be on the line, and you get a brief built from signals in
-  Common Room: recent product use, open deals, risks and news."
+subhead: "One page you can scan five minutes before a customer call. Name the company and who will be on the line, and you get a brief built from signals in Common Room: recent product use, open deals, risks and news."
 explain: |
   One page you can scan five minutes before a customer call. Name the company and who will be on the line, and you get a brief built from signals in Common Room: recent product use, open deals, risks and news.
 
@@ -18,6 +15,10 @@ when:
   - A new contact joined the thread and you know nothing about them.
   - You are running a demo and want to speak to what they actually use.
   - You need to spot risk signs like falling usage before you dial in.
+not_for:
+  - "You have no Common Room account or data: write your own call notes in a simple template, or ask a teammate who knows the account."
+  - "You are contacting a cold lead for the first time: research them on their website and LinkedIn first, since Common Room may hold nothing on them."
+  - "You need a full account review or a long strategy plan: this brief is one page for one call, so plan that work with your team."
 you_give:
   - The company name
   - Names of people on the call (optional)
@@ -29,9 +30,32 @@ you_get:
   - Three to five talking points with sources
   - Likely objections and how to reply
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to your Common Room account and your
-    calendar.
+  - Connect your AI to your Common Room account. Connect your calendar too if you can, so it can find who is on the call.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste its instructions into a chat. It needs a tool that can reach Common Room.
+  - Type the company name. Add the people on the call and the call type if you know them.
+  - Read the brief. Check that each talking point matches a signal it names.
+  - If it says data is thin, believe it. Look in Common Room yourself for what is missing.
+output_sample:
+  input:
+    - The company name
+    - Names of the people on the call (optional)
+    - Call type, such as discovery, demo or renewal (optional)
+    - Your calendar, if connected (optional)
+  prerequisites:
+    - A Common Room account your AI can connect to
+    - An AI that can search the web for recent news
+  output:
+    - name: Meeting Context
+      contains: Who is on the call, the call type and any known agenda.
+    - name: Company Snapshot
+      contains: Four to six bullets on account status, recent signals and activity.
+    - name: Attendee Profiles
+      contains: "For each person: role, recent activity, persona if available and a personal hook."
+    - name: Signal Highlights
+      contains: The three signals that matter most for this call, plus any big news from the last 14 days.
+    - name: Talking Points
+      contains: Three to five points, each tied to a real signal.
+    - name: Likely Topics / Objections to Prepare For
+      contains: Two or three topics the customer may raise, with a suggested reply for each.
+    - name: Recommended Call Outcome
+      contains: One or two sentences on what a good result looks like for this call.

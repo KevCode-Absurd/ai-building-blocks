@@ -1,6 +1,6 @@
 new_slug: partner-profit-tester
 name: Partner profit tester
-summary: Paste your offer, fees and partner costs. Get what the partner keeps, at forecast and weaker sales, and a call.
+summary: "Test your franchise or reseller deal: see what the partner keeps after your fees at forecast and weaker sales, and get a fair, thin or unfair call."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: The core is a set of sums on your numbers, with a clear pass line. A mid-range model does it well if the numbers are given.
@@ -14,6 +14,10 @@ when:
   - You are about to offer a franchise, reseller or licence deal and have not run the partner's numbers.
   - Partners are leaving or struggling and you are not sure if your fees are the reason.
   - A partner says the deal does not work and you need to see if they are right.
+not_for:
+  - "You run one company-owned site with no partner: use a simple profit and loss sheet in a spreadsheet instead."
+  - "You need legal or tax terms for the deal: ask a lawyer or an accountant."
+  - "You want to write the deal terms after the sums: use the Franchise and reseller terms writer."
 you_give:
   - Your offer and every fee, required purchase and cost the partner pays you or others you require
   - The partner's expected sales, costs and hours worked
@@ -30,6 +34,26 @@ how_to_use:
   - Give expected sales and costs for one location or one year, and how many hours the partner will work.
   - Read the call and the one change first. Then test the change in the table.
   - Bring the result to "Franchise and reseller terms writer".
+output_sample:
+  input:
+    - Your offer and every fee and required purchase the partner pays
+    - The partner's expected sales, costs and hours worked
+    - What a similar person could earn instead (optional)
+  output:
+    - name: Partner's year at your forecast
+      contains: Sales, each cost line, each fee you charge, and what is left for the partner.
+    - name: Weaker-sales case
+      contains: The same table with sales a fifth lower, with each cost and fee changing on its own basis.
+    - name: Pay per hour
+      contains: What is left divided by hours worked, set against a fair wage and the partner's other options.
+    - name: Call
+      contains: Fair, thin or unfair, plus the one change that helps most, with new numbers.
+    - name: Payback
+      contains: A simple payback estimate when start-up cost and yearly cash are given, or a note that it cannot be worked out.
+    - name: MISSING
+      contains: The numbers you still need to supply, with the one that would change the call most first.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 how_it_works:
   - title: Builds the partner's year
     text: Sales, then each cost, then what is left, with each line tied to a number you gave or a MISSING mark.

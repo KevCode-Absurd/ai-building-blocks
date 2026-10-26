@@ -16,6 +16,29 @@ use_cases:
   - "Treat a small warning sign as a clue to investigate, not a margin to spend"
   - "Work out what the hard limits really are before you call an idea impossible"
   - "Study a subject by understanding it, instead of memorising formulas"
+not_for:
+  - "You need a ruling on a medical, legal or personal money choice: ask a doctor, lawyer or financial adviser, since Feynman's field was physics."
+  - "You want to learn why people choose or act as they do: use a person who studies habits, such as BJ Fogg, or ask someone who studies human judgment."
+  - "You want a plain explanation built on wonder and public evidence, aimed at a wide audience: use the Carl Sagan mind instead."
+output_sample:
+  input:
+    - The claim, plan or result you are unsure about
+    - Your reasoning and how you got there, in plain words
+    - Your data, or how the test was run (optional)
+    - What you plan to do with the answer
+  output:
+    - name: Plain-words walk-through
+      contains: Your idea restated with a concrete example, showing where your own understanding may be thin.
+    - name: Where you may be fooling yourself
+      contains: Likely traps, such as counting only results that agree with you or changing the method after seeing data.
+    - name: What would show you are wrong
+      contains: The result that would break your claim, plus other explanations you should report too.
+    - name: Test plan
+      contains: A baseline to repeat first, a control, and a quick estimate to see if the claim makes sense.
+    - name: Questions for the people doing the work
+      contains: What to ask those close to the work about real odds and small warning signs.
+    - name: Limits of the check
+      contains: What he would not know, and when to bring in an expert in people or markets.
 seats:
   - {seat: "First-principles check (explain it simply)", asks: "Can you explain this to a first-year student? If not, do we really understand it?"}
   - {seat: "Reality check", asks: "What does the evidence say, and how might we be fooling ourselves?"}

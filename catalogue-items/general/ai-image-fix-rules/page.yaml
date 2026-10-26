@@ -1,6 +1,6 @@
 name: "AI image and video fix rule writer"
 new_slug: ai-image-fix-rules
-summary: "Paste feedback on AI work. Get each fix as a rule with a prompt line and a check line."
+summary: "Turn feedback on AI images and video into fix rules. Each rule gets a prompt line to paste and a check line, so the same mistake is not paid for twice."
 job: check-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Someone has just corrected an AI image or clip and you want the fix to stick.
   - You're about to brief, prompt or check AI ad work and want the known mistakes in front of you.
   - The same kind of mistake keeps coming back across jobs.
+not_for:
+  - "You have a one-off taste about one image and no rule behind it: just edit your prompt and run it again."
+  - "You have no finished piece or feedback yet and only need a brief: use the Product image ad prompt writer."
+  - "You need your brand facts, claims and voice in one place: use the Brand profile builder first."
 
 you_give:
   - The feedback on a finished piece, in the person's exact words (optional)
@@ -36,6 +40,23 @@ how_to_use:
   - Paste your product rules if you have them, and say what you're making next.
   - Paste the prompt lines into your next brief or image prompt, and check the results against the check lines.
   - Run it again every time someone corrects a finished piece.
+output_sample:
+  input:
+    - The feedback on a finished piece, in the person's exact words (optional)
+    - The finished image, or screenshots of the clip (optional)
+    - Your product rules list (optional)
+    - "What you are making next: copy, images or video (optional)"
+  output:
+    - name: Feedback sorted
+      contains: Each comment in the person's words, marked as a lasting rule or a one-off, with where the mistake slipped in.
+    - name: New or updated rule
+      contains: The rule name, a prompt line, a check line, a one-sentence reason, the work it covers and a count.
+    - name: Prompt lines for the next job
+      contains: Each rule that applies, ready to paste, plus any missing product facts.
+    - name: Retire
+      contains: Rules now fixed in the brand file with no failures in the last five jobs.
+    - name: Checks missed
+      contains: Any check the rules still miss, and each check line a finished piece fails, or none.
 
 how_it_works:
   - title: Sorts each comment

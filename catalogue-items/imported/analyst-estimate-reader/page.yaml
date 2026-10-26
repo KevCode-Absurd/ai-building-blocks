@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It reads trends across many periods and sources.
 new_slug: analyst-estimate-reader
 name: Analyst estimate reader
-summary: Give it a stock ticker. Get how analyst profit and sales forecasts are
-  changing and where they differ. Collects data from websites.
+summary: Check analyst estimates for a stock. Give it a ticker and see if profit and sales forecasts are rising or falling, and how far analysts differ.
 job: money-and-investing
 headline: Analyst estimate reader
-subhead: "Before you buy or hold a stock, you can see whether analysts are
-  getting more hopeful or more worried about it. Give a ticker and you get a
-  plain read on profit and sales forecasts: the average, the high and low calls,
-  and how far apart they sit."
+subhead: "Before you buy or hold a stock, you can see whether analysts are getting more hopeful or more worried about it. Give a ticker and you get a plain read on profit and sales forecasts: the average, the high and low calls, and how far apart they sit."
 explain: |
   Before you buy or hold a stock, you can see whether analysts are getting more hopeful or more worried about it. Give a ticker and you get a plain read on profit and sales forecasts: the average, the high and low calls, and how far apart they sit.
 
   The skill pulls public data from Yahoo Finance with a small Python library. It compares forecasts by period, then checks how they moved over the last 7, 30, 60 and 90 days and how many analysts raised or cut. It also sets expected growth against the industry, the sector and the wider market, and looks at how accurate past forecasts were. It is research only, not advice.
 when:
   - You are weighing a stock and want to know if forecasts are rising or falling.
-  - You hear a company beat estimates and want to know how big the gap between
-    analysts really is.
+  - You hear a company beat estimates and want to know how big the gap between analysts really is.
   - You need next quarter and full year forecasts side by side for a report.
   - You want to compare a company's expected growth with its sector.
+not_for:
+  - "You need live prices or trading signals: use your broker's tools or a paid market data service, because Yahoo Finance estimates can lag by hours or days."
+  - "You want a private company or a stock listed outside the US: check the company's own reports or ask a paid data provider, since coverage may be thin or missing."
+  - "You want advice on whether to buy or sell: talk to a licensed financial adviser, because this is research only."
 you_give:
   - A stock ticker
   - The periods you care about (optional)
@@ -31,8 +30,29 @@ you_get:
   - Growth compared with industry and market
   - Notes on past forecast accuracy
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open a chat with an AI that can run Python code and use the web, such as Claude or ChatGPT with code tools on.
+  - Paste in the skill text, or upload the skill folder if your AI accepts files.
+  - Type your ticker. Add the periods or a peer to compare against if you want them.
+  - Let your AI install yfinance when it asks. Then wait for the tables.
+  - Read the lead insight first. Then check key numbers on Yahoo Finance before you act on them.
+output_sample:
+  input:
+    - A stock ticker
+    - The periods you care about (optional)
+    - A peer or sector to compare against (optional)
+  prerequisites:
+    - An AI that can run Python code and reach the web, so it can install and use the yfinance library
+    - Data comes from Yahoo Finance, which yfinance is not affiliated with. It may change or limit access, so check key numbers before you rely on them.
+  output:
+    - name: Estimate overview
+      contains: Consensus, low, high, range width, analyst count and growth for each period, with flags for wide ranges and thin coverage.
+    - name: Revision trends
+      contains: Each period's profit forecast now against 7, 30, 60 and 90 days ago, and whether moves are speeding up.
+    - name: Revision breadth
+      contains: How many analysts raised or cut forecasts over 7 and 30 days, and the share who raised.
+    - name: Growth estimates
+      contains: Expected growth set against the industry, the sector and the S&P 500, plus past 5-year growth.
+    - name: Historical estimate accuracy
+      contains: Forecast against actual profit for the last four quarters, with beat rate and size of surprise.
+    - name: Lead insight and caveats
+      contains: A short plain read on the direction of forecasts, plus notes on limits and that this is not advice.

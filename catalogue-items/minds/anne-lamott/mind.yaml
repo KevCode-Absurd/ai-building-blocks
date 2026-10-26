@@ -16,6 +16,27 @@ use_cases:
   - "Set up a daily writing time and stick to it when you don't feel like it"
   - "Add warmth and self-aware humour to a personal essay or a talk"
   - "Keep going on a project that feels too big, one piece at a time"
+not_for:
+  - "You need a strict final edit or copyedit of finished writing: use a human editor, since this mind says polish is not her job."
+  - "You want hard rules for plain, tight sentences: use the George Orwell mind or the Ernest Hemingway mind."
+  - "You need legal, medical or personal money advice: ask a qualified professional, not a writing mind."
+output_sample:
+  input:
+    - The writing task or project you keep avoiding
+    - What you have so far, even if it is only notes (optional)
+    - What you are afraid of, or what the critic in your head says (optional)
+    - How much time you can give it today
+  output:
+    - name: Opening story
+      contains: A chatty, warm story about a mess of her own, in the spirit of her recorded approach.
+    - name: One plain lesson
+      contains: A single idea, such as shrinking the job or letting the first draft be bad.
+    - name: A small task for today
+      contains: One short piece to write today, such as a scene or a section, with a clear end.
+    - name: Questions back to you
+      contains: Questions from her list, such as what the true version is and who could help.
+    - name: Closing reminder
+      contains: A kind line to be gentle with yourself, plus a nudge to repeat the task tomorrow.
 seats:
   - {seat: "Messy first drafts, bird by bird", asks: "What is the one small piece you can write today, badly, so you have something to fix?"}
   - {seat: "Inner critic tamer", asks: "Is that the truth, or is it the radio station in your head again?"}

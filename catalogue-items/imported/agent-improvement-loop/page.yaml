@@ -2,36 +2,57 @@ thinking: high
 thinking_why: Self-improving loops need careful design and testing.
 new_slug: agent-improvement-loop
 name: Agent self-improvement loop builder
-summary: Give it an AI agent and a test set. Get a loop that rewrites its
-  prompts and skills until scores rise.
+summary: "Build an AI agent self-improvement loop: test your agent, rewrite its prompts and skills, keep only changes that raise the score."
 job: build-software
 headline: Agent self-improvement loop builder
-subhead: An AI agent that gets better on its own, because a loop keeps testing
-  it and rewriting its instructions until scores go up. Each round changes one
-  thing, and a change that makes results worse is rolled back.
+subhead: An AI agent that gets better on its own, because a loop keeps testing it and rewriting its instructions until scores go up. Each round changes one thing, and a change that makes results worse is rolled back.
 explain: |
   An AI agent that gets better on its own, because a loop keeps testing it and rewriting its instructions until scores go up. Each round changes one thing, and a change that makes results worse is rolled back.
 
   The agent's prompts, skills, memory and tools all live as plain files in one folder. The loop runs your agent on a set of test tasks, looks at where it failed, and asks a model to rewrite the files. It scores the new version, keeps it only if it wins, and saves every change in version history. This needs Python, a package install and model access, plus a test set that gives clear scores.
 when:
-  - You have an AI agent and a set of test tasks, and you want its score to
-    climb.
+  - You have an AI agent and a set of test tasks, and you want its score to climb.
   - You are tuning prompts by hand and keep breaking things that worked.
   - You want every change to the agent saved so you can undo a bad one.
   - You want to find which skills or notes help the agent most.
+not_for:
+  - "You want to build a team of agents from scratch: use CrewAI or LangGraph."
+  - "You only need to tune one prompt with no skills or memory: use DSPy."
+  - "You want to improve a document search setup: use LlamaIndex or Chroma."
 you_give:
   - Your AI agent, or its prompt and tool files
   - A set of test tasks with a way to score them
   - Model access and a Python setup
   - How many rounds to run (optional)
 you_get:
-  - A setup that runs the improve-test-keep loop
-  - Score results after each round
-  - Updated prompt, skill and memory files
-  - A saved history you can roll back
+  - A per-cycle score table showing how the agent did after each round
+  - A list of the prompt, skill and memory files that changed
+  - Saved versions with git tags (evo-1, evo-2 and so on) so you can roll back a bad change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and call an AI model.
+  - Install the package with pip install a-evolve. Add the Claude extra with pip install a-evolve[anthropic].
+  - Set your ANTHROPIC_API_KEY, or set up AWS credentials for Bedrock. Both are paid model services.
+  - Point the loop at your agent folder and your test tasks. Choose how many rounds to run.
+  - Run the loop with your AI or in a terminal. It needs Python and web access to the model.
+  - Read the score table, then check the git log to see which files changed in each round.
+  - Roll back to an earlier tag, such as evo-2, if a later round made things worse.
+output_sample:
+  input:
+    - Your AI agent, or the folder with its prompt, skill, memory and tool files
+    - A set of test tasks and a way to score each one
+    - A key for a paid AI model, such as Claude
+    - How many rounds to run (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - The a-evolve package installed with pip
+    - A model account such as Anthropic, or AWS credentials for Bedrock
+  output:
+    - name: Score history
+      contains: The score after each round, plus the final score and whether the loop stopped improving.
+    - name: Updated prompt files
+      contains: The agent's rewritten system prompt, kept only where the new version scored higher.
+    - name: Skill files
+      contains: New or refined reusable procedures the loop found while studying where the agent failed.
+    - name: Memory files
+      contains: Notes the agent keeps between tasks, updated after each round.
+    - name: Git history
+      contains: One saved version per round, with tags like evo-1 and evo-2 so you can roll back.

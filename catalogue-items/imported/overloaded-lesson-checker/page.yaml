@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must judge where working memory runs out.
 new_slug: overloaded-lesson-checker
 name: Overloaded lesson checker
-summary: Paste a task or handout. Get the places that overload learners, with
-  changes that lighten it.
+summary: Find where your task or handout overloads learners. Paste it in and get an overloaded lesson check, with edits that lighten it.
 job: teach-and-train
 headline: Overloaded lesson checker
-subhead: Paste a task or handout. Get the places that overload learners, with
-  changes that lighten it. Bring the task, handout or instructions. Use the
-  result to plan your next step.
+subhead: Paste a task or handout. Get the places that overload learners, with changes that lighten it. Bring the task, handout or instructions. Use the result to plan your next step.
 explain: |
   A diagnosis of where a task or handout asks too much of learners at once, with specific changes that lighten it without dumbing it down.
 
@@ -18,6 +15,10 @@ when:
   - A worksheet looks busy and you suspect it is too much.
   - You are adapting a resource for weaker or newer learners.
   - You want to check your own materials before teaching.
+not_for:
+  - "You want to know if learners understood the content: use a short quiz or watch them work."
+  - "You want to make a text easier to read: use a plain rewrite of the text, or ask a colleague to read it."
+  - "You want a full lesson plan: plan the lesson yourself first, then check the task with this skill."
 you_give:
   - The task, handout or instructions
   - Age and prior knowledge of learners
@@ -29,7 +30,28 @@ you_get:
   - Specific edits to try
   - A lighter version of the task
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste the full text of your task, handout or instructions.
+  - Say the year group and what learners already know. Add the learning aim and time if you have them.
+  - Ask your AI to return the load breakdown, the problem areas and a lighter version of the task.
+  - Read the problem areas first. Check each one against your own sense of the class.
+  - Try the lighter version, then use the Worked example fading designer or the Scaffolded task modifier to shape the next step.
+output_sample:
+  input:
+    - Your task, handout or instructions
+    - Year group and how much learners already know
+    - The text of your worksheets or slides (optional)
+    - What comes before and after this task (optional)
+  output:
+    - name: Task Summary
+      contains: A short restatement of the task and who it is for.
+    - name: Load Breakdown
+      contains: Ratings for how hard the content is, how much poor design adds, and how much useful effort is asked.
+    - name: Overall Assessment
+      contains: A plain verdict on whether the task is too heavy for these learners.
+    - name: Problem Areas
+      contains: The exact parts of the task that add unneeded load.
+    - name: Modification Suggestions
+      contains: Specific edits that lighten the task without making it easier to the point of emptiness.
+    - name: Expertise Reversal Check
+      contains: A note on whether these supports could slow down more advanced learners.

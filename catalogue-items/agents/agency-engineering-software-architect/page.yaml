@@ -1,0 +1,141 @@
+name: Software Architect agent
+summary: Choose how to structure your software, with at least two options, their trade-offs, a recommended design and a written decision record.
+headline: Software Architect agent
+subhead: Give it your goal, your team size, your stack and what must scale. It compares at least two ways to structure the system, names what each one costs, and recommends one. You get a design write-up and a decision record your team can sign off.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Teams often pick a structure because it is popular. Microservices, event-driven designs and layered code all help in some cases and hurt in others. This agent starts from your problem and limits, not from a favourite pattern. It always gives at least two options and names what each one gives up.
+
+  Its method comes from the Agency Agents profile. Understand the business problem first. Map the parts of the system by the business areas they serve. Prefer choices that are easy to undo. Add a pattern only if it solves a real problem, so a plain data-entry app is not forced into heavy design. It ends with a decision record: the context, the choice and what gets easier or harder.
+
+  This is an AI role profile shared under MIT. It gives advice from what you tell it. It cannot read your code unless you paste it, and it does not draw or build anything. Treat its design as a proposal for your team to challenge.
+when:
+  - You are starting a product and must choose between one app, a modular app or separate services.
+  - Your codebase is tangled and every change breaks something far away.
+  - A team argues about a technical choice and you need the trade-offs written down.
+  - A new feature, such as payments or a partner link, needs a clear boundary around it.
+not_for:
+  - You need an API and data layout for one backend. Use the Backend Architect agent.
+  - You want a bug fixed or a pull request reviewed. Use the Code Reviewer agent or the Minimal Change Engineer agent.
+  - You want a threat review of a design. Use the Security Architect agent.
+  - You want a quick test of an idea. Use the Rapid Prototyper agent.
+you_give:
+  - The goal of the system and who uses it
+  - Limits, such as team size, budget, deadlines and rules you must follow
+  - Your current stack and what hurts today (optional if new)
+  - What you expect to grow, such as users, data or features
+  - The decision you must make, if you have one (optional)
+  - A description of your code layout or a key folder tree (optional)
+you_get:
+  - A short problem statement with your limits written back to you
+  - A map of the main business areas and where the system splits
+  - At least two options, each with what it gives and what it costs
+  - A recommended design and the reasons for it
+  - A decision record with context, decision and consequences
+  - A growth path, so the system can change without a rewrite
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then references/source-agent.md.
+  - Describe the goal, the team, the stack and what will grow. Say what decision you need to make.
+  - Say "Write the architecture proposal. Ask me once if anything is missing."
+  - Read the options section first. Check each option's costs against what your team can actually run.
+  - Challenge the recommendation with the agent's own question, "What happens when this part fails?" Ask it to answer.
+  - Save the decision record in your project folder, and share it with your team before you build.
+how_it_works:
+  - title: State the problem and limits
+    text: It restates your goal and limits first and checks that it has them right.
+  - title: Map the business areas
+    text: It finds the main areas of the business and how they relate, and says if heavy domain design is worth it.
+  - title: Compare patterns
+    text: It weighs layered, modular monolith, microservices, event-driven and other patterns for your case.
+  - title: Check the qualities
+    text: It looks at scale, failures, upkeep and how you will see problems.
+  - title: Set boundary rules
+    text: It sets which parts may depend on which, so core rules do not depend on tools or databases.
+  - title: Record the decision
+    text: It writes the decision record and the path for how the system can grow.
+output_shape: |-
+  ARCHITECTURE PROPOSAL: <system name>
+
+  PROBLEM AND LIMITS
+    Goal: <goal> | Team: <size and skills> | Limits: <list> | Expected growth: <list>
+
+  BUSINESS AREAS
+    <area> | <what it owns> | <how it talks to others>
+
+  OPTIONS (at least two)
+    <option> | <what it gives> | <what it costs> | <when it fits>
+
+  RECOMMENDATION
+    <chosen option> | <reasons> | <what you give up>
+
+  BOUNDARY RULES
+    <rule> | <why>
+
+  QUALITY CHECKS
+    Scale: <note> | Failures: <note> | Upkeep: <note> | Visibility: <note>
+
+  DECISION RECORD
+    Status: Proposed | Context: <text> | Decision: <text> | Consequences: <text>
+
+  GROWTH PATH AND OPEN QUESTIONS
+    <step or question> | <trigger or how to settle it>
+output_sample:
+  input:
+    - Your goal and who uses the system
+    - Team size, limits and deadlines
+    - Your stack and what hurts today (optional)
+    - The decision you must make (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+  output:
+    - name: Problem and limits
+      contains: Your goal, team, limits and expected growth, written back so you can correct them.
+    - name: Business areas
+      contains: The main areas of the system, what each owns and how they talk to each other.
+    - name: Options
+      contains: At least two structures, each with what it gives, what it costs and when it fits.
+    - name: Recommendation
+      contains: The chosen option, the reasons and what you give up by choosing it.
+    - name: Boundary rules
+      contains: Which parts may depend on which, and why.
+    - name: Decision record
+      contains: Context, decision and consequences, in a form your team can sign off.
+    - name: Growth path and open questions
+      contains: How the system changes later without a rewrite, and what is still unsettled.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Options asked for
+    how: Name the two or three structures you are already weighing, so it compares those first.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Architecture
+    meaning: How the parts of a software system are split up and how they connect.
+  - term: Monolith
+    meaning: One program that holds all the parts of the system together.
+  - term: Microservices
+    meaning: Many small programs that each do one job and talk over a network.
+  - term: Domain-driven design
+    meaning: Structuring code around the real areas and rules of the business.
+  - term: Decision record
+    meaning: A short note that says what was decided, why, and what it changes.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat is enough for the proposal. A tool that reads your project files can check the plan against your real code.
+  inputs:
+    - A list of the changes that were hardest to make in the last year.
+    - Your expected users and data size in a year, even as a rough range.

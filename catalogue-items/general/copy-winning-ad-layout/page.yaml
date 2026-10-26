@@ -1,6 +1,6 @@
 new_slug: copy-winning-ad-layout
 name: "Copy an ad layout that works, using your product"
-summary: "Give it an ad or template you admire. You get your own version, in feed and story sizes."
+summary: "Copy an ad layout that works for your own product. Give it a reference ad and your photos. You get feed and story versions with claims you can back."
 job: study-competitors
 thinking: high
 thinking_why: "It runs several skills in a row. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You've saved ads from other brands, or bought templates, whose layout you like and want versions for your own product.
   - You want a comparison or labelled-product layout but aren't sure your facts can fill it.
   - You need the same ad in feed and story sizes, each composed properly, not cropped.
+not_for:
+  - "You can't show or describe the reference ad: describe what you want in a plain brief for a designer, or find an ad first in the Meta Ad Library."
+  - "Your product has no real photos: take clear photos of the product first, then come back."
+  - "You only want ad ideas, not a layout: ask your AI for a list of angles to test, then pick one."
 
 you_give:
   - Your brand file, with the figures you may quote, approved claims, never-say list, colours and typefaces
@@ -36,6 +40,32 @@ how_to_use:
   - Attach the reference ad or template image. If you can only describe it, say so, and check the plan against the real image later.
   - Write one sentence of direction, such as "use this to show what's in one pack, for people who quit greens powders" or "use this to compare our three sizes, for first-time buyers".
   - Read the dropped spots and the verdict first. Fix every MISSING line, approve the plan, then leave notes in the review deck until it's right.
+output_sample:
+  input:
+    - Your brand file, with approved claims, colours and typefaces
+    - Your real product photos and logo file
+    - The reference ad or template, as an image or a short description
+    - Customer quotes with their source (optional)
+    - "One sentence of direction: the buyer and their doubt (optional)"
+  prerequisites:
+    - An AI that can read images and make images, or a design tool to set type over the picture
+  output:
+    - name: KIT CHECK
+      contains: What is missing before anything is built, such as logo, typefaces, photos or sources, plus notes to check.
+    - name: REFERENCE
+      contains: The ad type, layout shape, eye path and the spot that carries the main point.
+    - name: SPOT BY SPOT
+      contains: For each spot, the proof it needs, what you have, and keep, change or drop, then a verdict.
+    - name: ZONES
+      contains: Where each thing sits in the 4:5 and 9:16 sizes, top to bottom, in percent.
+    - name: COPY AND CLAIMS
+      contains: Every line labelled as a fact, a customer's words or a line to test, with its source.
+    - name: ASSETS
+      contains: For each slot, a real file, a picture to generate, or MISSING.
+    - name: RISKS
+      contains: What could go wrong in the build, and what you need to send or approve.
+    - name: 4:5 and 9:16 images and review deck
+      contains: The finished ads in both sizes, with the reference beside your version, after you approve the plan.
 
 how_it_works:
   - title: Checks what you have

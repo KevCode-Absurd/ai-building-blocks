@@ -55,3 +55,22 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - "You want the bug fixed and a pull request written: use Fix a bug with proof and a clear pull request."
+  - "You can already repeat the bug and only need its cause: use Bug root cause finder."
+  - "You only need a clear ticket for a developer: use Bug report writer."
+output_sample:
+  input:
+    - The bug report as you received it
+    - Your repo, or the part of the code the bug touches
+    - Error messages or logs with secrets removed (optional)
+    - The fix and the checks you ran on it (optional, for the last step)
+  prerequisites:
+    - An AI that can read your repo and run commands, such as Claude Code, so it can repeat the bug
+  output:
+    - name: Reproduction brief
+      contains: Expected and actual behavior, the environment, the smallest failing case and what happened on repeat runs.
+    - name: Coverage gaps
+      contains: Missing, weak and stale tests, ranked from P0 to P3, each with a suggested test.
+    - name: Bug receipt
+      contains: One block marked VERIFIED, PARTIAL or BLOCKED, with problem, root cause, change, proof and gaps.

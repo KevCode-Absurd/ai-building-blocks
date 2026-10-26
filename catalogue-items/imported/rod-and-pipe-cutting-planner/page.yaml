@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tests many cut combinations.
 new_slug: rod-and-pipe-cutting-planner
 name: Rod and pipe cutting planner
-summary: Give it your stock lengths and cut list. Get cutting patterns that use
-  the fewest pieces and waste the least.
+summary: Plan rod and pipe cutting to waste less. Give it your stock lengths and cut list. You get cutting patterns and how many stock pieces to buy.
 job: plan-supply-chain
 headline: Rod and pipe cutting planner
-subhead: A cutting plan that tells you how to slice each rod, pipe or beam so
-  you buy fewer lengths and throw away less offcut. Give it your stock lengths
-  and the pieces you need.
+subhead: A cutting plan that tells you how to slice each rod, pipe or beam so you buy fewer lengths and throw away less offcut. Give it your stock lengths and the pieces you need.
 explain: |
   A cutting plan that tells you how to slice each rod, pipe or beam so you buy fewer lengths and throw away less offcut. Give it your stock lengths and the pieces you need.
 
@@ -18,6 +15,10 @@ when:
   - You have leftover offcuts and want to use them before buying new stock.
   - Your saw loses material on each cut and the plan has to count it.
   - A big order makes hand planning slow and costly.
+not_for:
+  - "You cut flat sheets, boards or panels in two directions: use a 2D cutting layout tool, since this plans single lengths only."
+  - "You have only a few cuts to make: work it out by hand or in a spreadsheet."
+  - "You want a general scrap-reduction review, not a cut plan: ask your AI for a simple waste audit of your process."
 you_give:
   - Stock lengths and cost per piece
   - List of needed lengths and quantities
@@ -30,8 +31,29 @@ you_get:
   - Waste per pattern and in total
   - A plan you can hand to the saw operator
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Add your stock lengths, the cost of each piece, and your cut list with quantities.
+  - "Add the optional details if you have them: saw cut width, smallest useful offcut and leftover pieces."
+  - For a big order, use an AI that can run code. Small jobs can run in a plain chat.
+  - Check the pattern table. Each pattern's pieces plus its waste should equal the stock length.
+  - Give the cutting list to your saw operator. After the run, note the real offcuts and add them to your next plan.
+output_sample:
+  input:
+    - Your stock lengths and the cost of each piece
+    - Your list of needed lengths and how many of each
+    - Saw cut width (optional)
+    - Smallest offcut worth keeping (optional)
+    - Leftover pieces you already have (optional)
+  prerequisites:
+    - An AI that can run code, for large orders or the best possible answer
+  output:
+    - name: Problem summary
+      contains: The material, stock length, saw cut width, number of pieces needed and total length needed.
+    - name: Solution
+      contains: The method used, how many stock pieces to buy, total material, and total waste as a length and a percentage.
+    - name: Cutting patterns
+      contains: A table of each pattern, how many times to use it, the pieces in it, its waste and its efficiency.
+    - name: Detailed cutting list
+      contains: A stock-by-stock list of which pieces to cut from each one, with the waste left on each.
+    - name: Material cost analysis
+      contains: Cost per stock piece, total material cost, the cost of the waste and the cost per piece.

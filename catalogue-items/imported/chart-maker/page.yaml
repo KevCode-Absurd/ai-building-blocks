@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It picks a chart type, then draws it with code.
 new_slug: chart-maker
 name: Chart maker
-summary: Give it your data. Get clear charts and dashboards made with
-  matplotlib, seaborn or plotly.
+summary: Turn your spreadsheet into a clear chart or small dashboard. Give it your data and question, and get a chart image or interactive chart.
 job: work-with-files
 headline: Chart maker
-subhead: Hand over a dataset and a question, and get back a clean chart or a
-  small dashboard you can drop into a report. The right chart type is chosen for
-  you, so a trend becomes a line, a comparison becomes bars and a spread becomes
-  a box plot.
+subhead: Hand over a dataset and a question, and get back a clean chart or a small dashboard you can drop into a report. The right chart type is chosen for you, so a trend becomes a line, a comparison becomes bars and a spread becomes a box plot.
 explain: |
   Hand over a dataset and a question, and get back a clean chart or a small dashboard you can drop into a report. The right chart type is chosen for you, so a trend becomes a line, a comparison becomes bars and a spread becomes a box plot.
 
@@ -19,6 +15,10 @@ when:
   - You want an interactive chart people can hover and zoom.
   - You are not sure which chart type fits your data.
   - You need a multi-panel sales dashboard from a CSV.
+not_for:
+  - "You need a live dashboard that updates by itself: use a business intelligence tool that connects to your data."
+  - "Your data sits in a large database: run a query there first, then bring the result here."
+  - "You only need a quick table of numbers: use a spreadsheet formula or pivot table."
 you_give:
   - Your data file or table
   - The question the chart should answer
@@ -30,8 +30,26 @@ you_get:
   - Labels, titles and highlights added
   - A short note on why that chart type was chosen
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - "Open an AI that can run code and save files, such as Claude or ChatGPT with code tools on. If you run Python yourself, install the tools first with: pip install pandas matplotlib seaborn plotly."
+  - Paste in the chart maker instructions, or upload the skill file.
+  - Upload your data file and say what question the chart should answer. Add chart type, colours or size if you care.
+  - Check the chart. Look at the title, the axis labels and whether the chart type fits your question. Ask for changes in plain words.
+  - Download the PNG, SVG or HTML file. Paste the picture into your slide deck, or ask your AI to write a short caption for it.
+output_sample:
+  input:
+    - Your data file or table, such as a CSV
+    - The question you want the chart to answer
+    - Chart type or colour wishes (optional)
+    - Output format and size (optional)
+  prerequisites:
+    - An AI that can run Python code and save files
+    - "Python packages installed: pandas, matplotlib, seaborn and plotly"
+  output:
+    - name: Chart file
+      contains: A styled chart saved as a PNG or SVG picture, or as an interactive HTML page.
+    - name: Python code
+      contains: The script that made the chart, so you can change it or run it again.
+    - name: Labels and highlights
+      contains: Axis labels with units, a clear title, and marks such as a median line or a flagged point.
+    - name: Chart type note
+      contains: A short reason why this chart type fits your data and question.

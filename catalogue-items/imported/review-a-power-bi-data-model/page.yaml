@@ -1,26 +1,90 @@
 new_slug: review-a-power-bi-data-model
 name: Review a Power BI data model
-summary: Find risks in Power BI tables and links. Get a ranked fix list.
+summary: Find risks in your Power BI tables, links and storage modes. Get a ranked fix list with tests to run before you change anything.
 job: track-numbers
 headline: Review a Power BI data model
-subhead: Share your Power BI tables, links and access rules. Check the model and get risks, fixes and tests to run.
-explain: Share your Power BI tables, links and access rules. Check the model and get risks, fixes and tests to run.
+subhead: Describe your Power BI model, with its tables, relationships, storage modes and access rules. Your AI reviews the design against good practice and hands back risks ranked by urgency, a fix for each and a test to run first.
+explain: |
+  A Power BI data model review checks the shape of the model behind your reports. Slow refreshes, wrong totals and confusing filters often start there, not in the charts.
+
+  The skill looks at four things in order. First, whether the tables follow a star layout: facts in the middle, descriptive tables around them. Second, whether each link between tables has the right type and filter direction. Third, whether each table uses the right storage mode. Fourth, access rules, size and upkeep.
+
+  It only judges what you show it. If it lacks a fact, it asks or marks it missing instead of guessing. Every fix comes with a test and a way to undo it.
 when:
-  - You want to review a Power BI data model.
+  - A report shows totals that do not match the source, and you suspect the links between tables.
+  - You inherited a model from someone else and want a second opinion before you build on it.
+  - Refresh is getting slow or the file keeps growing, and you want to know what to trim.
+  - You are about to share the model with more people and want to check it and its access rules first.
+not_for:
+  - One report page is slow and you do not know why. Use the Diagnose a slow Power BI report.
+  - You need to plan charts, filters and pages. Use the Design a Power BI report layout.
+  - You want one measure or formula written or fixed. This reviews the whole model, not a single measure.
+  - You want a new model built from scratch. This reviews one that already exists.
 you_give:
-  - Your table definitions, relationships, storage modes, measure context and reporting requirements.
+  - A list of your tables with the key columns and row counts, if you know them
+  - Your relationships, with each table pair, type and filter direction
+  - The storage mode of each table, and your refresh schedule
+  - Who uses the model and what questions it must answer
+  - Your access rules and any known problems (optional)
 you_get:
-  - A model review with evidence, priorities, validation steps and unresolved questions.
+  - A short summary of how the model is built
+  - Findings ranked by urgency, each with evidence and a fix
+  - A test to run before each change, and how to undo it
+  - A list of facts still missing
+  - A plan split into quick wins, short term and long term
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Gather what you can. Use the Model view to list your tables and links. Add storage modes, row counts, refresh schedule and access rules. Screenshots or a pasted list both work.
+  - Paste the skill, then your notes. Add one line on who uses the model and what they need to answer.
+  - Ask your AI to list what it still needs before it reviews. Fill the gaps, or tell it to mark them as missing.
+  - Read the top findings first. Check each against your model, because your AI can only judge what you showed it.
+  - Make one change at a time. Run the test that comes with the fix, and keep the undo step.
+  - If a report is still slow after the fixes, run the Diagnose a slow Power BI report next.
 how_it_works:
-  - title: Check the model shape
-    text: Identify fact-table grain, dimensions, keys, relationship cardinality and filter paths.
-  - title: Review performance and access
-    text: Assess storage choices, cardinality, refresh needs, row security and missing evidence.
-  - title: Prioritize changes
-    text: Separate correctness risks from tuning ideas and propose tests and rollback considerations.
-thinking: medium
-thinking_why: It weighs your evidence and follows a specific method.
+  - title: Collect the facts
+    text: It asks for tables, links, storage modes, refresh, access rules and use, and marks gaps as missing.
+  - title: Check the shape
+    text: It checks each fact table's grain, the keys, and whether the layout is a clean star.
+  - title: Check the links
+    text: It reviews link type, filter direction, missing matches and any loops between tables.
+  - title: Check storage and size
+    text: It reviews Import, DirectQuery and Dual choices, big columns and refresh needs.
+  - title: Check access and upkeep
+    text: It looks at row security, naming, documentation and how changes get tested.
+  - title: Rank the fixes
+    text: It splits wrong-answer risks from tuning ideas and gives each fix a test and an undo step.
+output_shape: |
+  MODEL        <name, purpose, users, size facts given>
+  SHAPE        <fact tables and grain, dimension tables, star or snowflake>
+  FINDINGS     1. <High / Medium / Low> <issue>
+                  Evidence: <what you showed>
+                  Risk: <wrong numbers, slow refresh, hard to maintain>
+                  Fix: <steps>   Test: <check first>   Undo: <how>
+  MISSING      <facts not given, or none>
+  ROADMAP      Quick wins <list>  Short term <list>  Long term <list>
+output_sample:
+  input:
+    - Your tables with key columns and row counts, if known
+    - Your relationships, with type and filter direction
+    - Storage mode of each table and your refresh schedule
+    - Who uses the model and what it must answer
+    - Your access rules and known problems (optional)
+  output:
+    - name: Model summary
+      contains: Purpose, users, fact tables and their grain, dimension tables, and whether the layout is a star.
+    - name: Ranked findings
+      contains: Each issue with priority, the evidence you gave, the risk and the fix.
+    - name: Test and undo steps
+      contains: A check to run before each change and a way to roll it back.
+    - name: Missing facts
+      contains: Anything the review could not judge because you did not supply it.
+    - name: Roadmap
+      contains: Fixes grouped as quick wins, short term and long term.
+terms:
+  - term: Star layout
+    meaning: Fact tables of events or sales in the middle, linked to small descriptive tables around them.
+  - term: Grain
+    meaning: What one row in a table stands for, such as one order line.
+  - term: Storage mode
+    meaning: Whether a table is loaded into Power BI (Import) or read live from the source (DirectQuery).
+  - term: Row-level security
+    meaning: Rules that show each person only the rows they may see.

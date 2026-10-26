@@ -2,17 +2,54 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-az-cost-optimize
 name: Azure resource cost reviewer
-summary: Share your Azure setup. Get waste findings and proposed fixes tied to
-  your app's resources.
+summary: Review your Azure resources and infrastructure files for wasted spend. Get cost savings findings and one GitHub issue per fix, plus a tracking issue.
 job: ship-and-host
 headline: Azure resource cost reviewer
-subhead: Share your Azure setup. Get waste findings and proposed fixes tied to
-  your app's resources. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI your Azure resource group and infrastructure files. It checks what you run, how much it is used and what it costs. You approve a summary, then it files one GitHub issue per saving.
+not_for:
+  - "Your app has no deployed Azure resources yet: wait until it is live, or ask an Azure architect to size it first."
+  - "You have no infrastructure files, such as Bicep or Terraform files: the skill stops without them, so write them first or use Azure Advisor for a quick check."
+  - "You want a fast look at spend with no GitHub issues: use Azure Advisor or Azure Cost Management in the Azure portal."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can run Azure and GitHub tools. Sign in to both first.
+  - Paste the skill into your AI. Give it your subscription, resource group and repository.
+  - Make sure your infrastructure files are in the repository. Without them it stops.
+  - Read the summary it shows. Check the costs and the fixes.
+  - Reply yes to create the issues. Reply no to stop.
+  - Test each fix outside production before you change live resources.
+output_sample:
+  input:
+    - Your Azure subscription and resource group
+    - Your infrastructure files, such as Bicep or Terraform
+    - The GitHub repository where issues should go
+    - Your Log Analytics workspace, so it can read usage (optional)
+  prerequisites:
+    - An AI that can run Azure and GitHub tools, with both accounts signed in
+    - Azure resources already deployed
+    - Infrastructure files in your repository
+  output:
+    - name: Optimization summary
+      contains: Resources checked, current monthly cost, possible savings and top fixes, shown for your approval before anything is created.
+    - name: Cost check
+      contains: Each resource with its current plan and estimated monthly cost, plus the pricing source used.
+    - name: Individual GitHub issues
+      contains: One issue per fix with savings, risk, effort, evidence, the change to make, checks and risks.
+    - name: Priority score
+      contains: A score on each fix from savings, value, risk and days of work, ranked high, medium or low.
+    - name: EPIC issue
+      contains: One tracking issue with an architecture diagram, fixes grouped by priority, progress and success checks.
+when:
+  - Your Azure bill went up and you do not know why.
+  - You are about to renew or resize a plan and want to check it first.
+  - You want a ranked list of cost fixes your team can assign.
+  - You need proof of usage and price behind each saving.
+you_give:
+  - Your Azure subscription and resource group
+  - Your infrastructure files, such as Bicep or Terraform
+  - The GitHub repository for the issues
+  - Access to your Log Analytics workspace (optional)
+you_get:
+  - A summary of current cost and possible savings for you to approve
+  - One GitHub issue per fix, with evidence, risks and checks
+  - A priority score so you start with the biggest savings
+  - A tracking issue with a diagram of your current setup

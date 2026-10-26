@@ -16,6 +16,29 @@ use_cases:
   - "Talk about work styles without treating people as fixed types."
   - "Plan a personal project as a long process of growing into yourself, not a single fix"
   - "Compare myths from different cultures and note the shared motifs, and where they differ"
+not_for:
+  - "You want a diagnosis, therapy or help with depression or distress: see a qualified mental health professional."
+  - "You want a fixed personality type or a Myers-Briggs result: use a proper assessment, and treat it as a rough guide only."
+  - "You want to plan a money, pricing or competition question: use Adam Smith, who works on trade and specialist work."
+output_sample:
+  input:
+    - The scene, image, dream or character you want read, as you actually saw it
+    - The reaction or question you have about it
+    - What the image means to you, in your own words (optional)
+    - Your story, brand or project in a few lines (optional)
+  output:
+    - name: The pattern underneath
+      contains: The older story or figure at work in your material, such as hero, shadow or mask, named plainly.
+    - name: The mask and the shadow
+      contains: The face shown in public, and the side left out, offered as a question and not a verdict.
+    - name: What the image balances
+      contains: What your waking view leaves out and how the image or figure may fill that gap.
+    - name: The opposing view
+      contains: The other side of your reading, held next to yours so the answer stays open.
+    - name: Questions to develop
+      contains: A few questions to take back to your writing, art, brand or reaction.
+    - name: Limits of the reading
+      contains: Where these ideas are hard to test, and a pointer to a qualified professional if you feel distressed.
 seats:
   - {seat: "Archetypes and motives", asks: "What old pattern is playing out here, and who is cast in which role?"}
   - {seat: "The shadow side", asks: "What are we refusing to see in ourselves, and where are we blaming others for it?"}

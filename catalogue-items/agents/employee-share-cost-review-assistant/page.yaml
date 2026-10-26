@@ -1,51 +1,123 @@
 new_slug: employee-share-cost-review-assistant
-name: Employee share cost review assistant
-headline: Employee share cost review assistant
-summary: Review employee award changes across actual issuance, diluted shares and cash-offset scenarios.
+name: Employee share award and dilution reviewer
+headline: Employee share award and dilution reviewer
+summary: Review share awards without mixing issued shares, possible dilution and cash costs. Show method choices and unresolved gaps.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An award-method exception table and linked dilution/cash-cost workbook. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-explain: |-
-  An award-method exception table and linked dilution/cash-cost workbook.
+subhead: Give it your last accepted share model and the new award note or share ledger. It picks the right method for each award, then rebuilds the share counts, the added diluted shares and the cash cost of offsetting them. You get a method table and linked calculations, with gaps left open.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  Employee share awards touch three different numbers. Shares already issued sit in the ledger. Shares that could be issued later feed diluted earnings per share. The cash it would take to buy shares back and offset them is a separate what-if. A common slip is to use one number for all three, or to count the cash employees paid to exercise twice.
+
+  This agent keeps a record of the last accepted review. It holds the terms of each award class, the weighted and the actual issued shares, the dates behind the average share price, the assumed proceeds, the exercise cash, the pay expense and any double-counting risk. A new award note, share ledger or pay reconciliation is compared with that record. If nothing changed, it says so and stops.
+
+  When something changed, it rebuilds the weighted share count, then the added diluted shares for options, then the cash offset. An award that needs the if-converted method goes to the Convertible earnings per share checker with its real terms. An award it cannot place stays unresolved. It is never forced into an option formula. The cash offset sits beside the pay expense and never replaces it. It places no buyback. A reviewer who knows the awards checks the result.
+
 when:
-  - You need an award-method exception table and linked dilution/cash-cost workbook.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A new annual report adds an award note, and you need to know whether your diluted share count still holds.
+  - The share ledger shows employees received more shares than your model expected.
+  - Your reviewer asks why diluted shares, issued shares and the cash cost of offsetting them are three different numbers.
+  - An award has terms that do not fit a plain option, such as a convertible feature.
+
+not_for:
+  - You want diluted earnings per share for the whole company, with every instrument. Use the EPS and share count reviewer.
+  - You only need the added diluted shares for one option class. Use the Employee option dilution calculator.
+  - You only want the cash cost of offsetting shares already issued. Use the Employee share dilution cash calculator.
+  - You want to value awards at grant, or to decide whether to buy back shares. It does neither, and it never places a buyback.
+
+output_sample:
+  input:
+    - Your last accepted share model and review log
+    - The new award note, share ledger or pay reconciliation, with dates
+    - The terms of each award class, average share prices and exercise cash
+    - The pay expense you reported, plus your size limit, currency and scale
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The pack's component files added to your AI
+    - A spreadsheet-capable AI if you want a workbook (optional)
+  output:
+    - name: Method table
+      contains: Each award class, the method it uses, the reason and the source. A class it cannot place is marked unresolved.
+    - name: Share counts
+      contains: Actual issued shares, basic weighted shares and possible new shares, kept as three separate lines.
+    - name: Option dilution
+      contains: Assumed proceeds divided by average price give shares bought back. Options less those shares give the added shares.
+    - name: Cash offset
+      contains: Net shares issued times a stated buyback price, less employee exercise cash, beside the reported pay expense.
+    - name: Convertible test
+      contains: Only if an award needs if-converted treatment. Basic, incremental and candidate earnings per share.
+    - name: Record for next review
+      contains: A short record to paste into your next run.
+    - name: Missing and checks missed
+      contains: Each gap, and each check that failed or could not run.
+
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your last accepted share model and review log (optional on a first run)
+  - The new award note, share ledger or pay reconciliation, with dates (from the annual report and the share register)
+  - The terms of each award class, with the exercise price and any convertible feature (from the award note)
+  - The average share price for the period, and the cash employees paid to exercise (from the filing and the ledger)
+  - The pay expense you reported, and your size limit for a material change
+  - The reporting date, currency and scale
+
 you_get:
-  - An award-method exception table and linked dilution/cash-cost workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A method table that says which method each award class uses, and why
+  - Share counts that keep issued, weighted and possible new shares apart
+  - The added diluted shares for options, and the effect on earnings per share
+  - A cash offset scenario beside the reported pay expense, with exercise cash counted once
+  - A linked workbook if you ask for one, plus MISSING lines and a record for next time
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Employee share dilution cash checker workflow and the Convertible earnings per share checker. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
+  - Say whether this is the first run. If not, paste the record from last time. Then attach the award note, the share ledger and your last model.
+  - Read the method table first. Check that each award class uses a method that fits its terms. Any class marked unresolved needs your decision.
+  - Check the share counts. Issued shares, weighted shares and possible new shares must be three separate figures.
+  - Check the cash offset by hand. Net shares times the buyback price, less exercise cash, should match the figure shown. Check the pay expense is shown beside it and not replaced by it.
+  - Fix every MISSING line. Run it again when a new note or ledger arrives. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Reconcile share compensation dilution and cash
-    text: Run the governing workflow when On a new user-supplied award note, share ledger or compensation reconciliation, compare award classes and settlement terms with the accepted model.
-  - title: Convertible EPS inclusion test
-    text: If an award-related instrument requires if-converted rather than treasury-stock treatment, route its actual terms to the inclusion test and apply the continuing-operations control. Unsupported hybrid awards remain unresolved rather than coerced into an option formula.
-output_shape: |-
-  An award-method exception table and linked dilution/cash-cost workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this company, or sets a first baseline. Compares award classes, settlement terms, dates, currency and scale. If nothing changed and no review is due, it says so and stops.
+  - title: Builds the share count
+    text: Separates ordinary shares from treasury shares and weights each issue or cancellation by the days it was outstanding. It keeps shares actually issued apart from shares that could be issued later. It hands the weighted count to the next step.
+  - title: Picks a method for each award
+    text: Options use the treasury-stock method. An award that needs the if-converted method goes to the Convertible earnings per share checker with its real terms. A hybrid award it cannot place stays unresolved.
+  - title: Adds the option shares
+    text: Divides assumed proceeds by the average share price to find shares bought back. Options above that number add shares. It uses the weighted option count, not the issued count, and tests for anti-dilution before including them.
+  - title: Prices the cash offset
+    text: Multiplies the net shares actually issued by a stated buyback price, and subtracts the cash employees paid once. It compares the result with the reported pay expense and keeps both. It places no buyback.
+  - title: Saves the record
+    text: Writes the small record for next time and lists what is still MISSING. It proposes a state update and keeps the old one.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <award class, source, old value, new value>
+  METHOD TABLE   award class | method | reason | source
+                 (UNRESOLVED for an award that fits no method)
+  SHARE COUNTS   issued <n> | basic weighted <n> | possible new <n>
+  OPTION DILUTION  options <n>; proceeds <n> / average price <n> = bought back <n>
+                   added shares <n>; earnings per share <basic> to <candidate>
+  CASH OFFSET    net shares <n> x price <n> - exercise cash <n> = <n>
+                 reported pay expense <n>; difference <n>
+  CONVERTIBLE TEST (only if run)  basic <n>; incremental <n>; candidate <n>;
+                 included or anti-dilutive
+
+  RECORD FOR NEXT REVIEW  award class terms, weighted and issued shares, price dates,
+                          assumed proceeds, exercise cash, pay expense, double-count risks
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Each instrument uses an applicable method, actual issuance remains distinct from potential dilution, and cash-offset scenarios neither replace accounting expense automatically nor trigger a buyback.
+  - what: A different buyback price
+    how: Change the price in the cash offset scenario. The cash offset moves with it. The added diluted shares do not, because they use the average share price.
+  - what: A higher average share price
+    how: Raise the average price. Fewer shares are assumed bought back, so more shares are added. An option priced above the average price adds none.
+  - what: A new award class
+    how: Add its terms. It gets its own line in the method table. A class the model cannot place stays unresolved.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Each instrument uses an applicable method, actual issuance remains distinct from potential dilution, and cash-offset scenarios neither replace accounting expense automatically nor trigger a buyback.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +128,34 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep one award note per period in one folder named by date, so the next run starts from the true earlier state.
+  - Use the same name for each award class every time. A renamed class looks like a new one.
+  - Write the buyback price you use for the cash offset once in the agent's file, so every run uses the same scenario.
+  - Pair it with the EPS and share count reviewer when the question is the whole company's earnings per share, and with the Share buyback and dividend reviewer when the question is buybacks that already happened.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The company's annual report and share register
+      why: Hold the award note, the issue dates and the exercise cash, each with a page you can cite.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The award note's own terms for each class, including exercise price and any conversion feature.
+    - A daily share ledger, so each issue is weighted by the days it was outstanding.
+    - A named reviewer who knows the awards and will check the method for each class.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Diluted shares
+    meaning: Ordinary shares plus extra shares that awards and other instruments could add later.
+  - term: Treasury-stock method
+    meaning: A way to count the extra shares from options. It assumes the cash from exercise buys back shares at the average price.
+  - term: If-converted method
+    meaning: A way to count the extra shares from a convertible. It assumes the instrument turns into shares at the start of the period.
+  - term: Weighted shares
+    meaning: The share count for the period, with each change weighted by the days it was in place.
+  - term: Cash offset
+    meaning: The cash it would take to buy back shares and cancel the dilution from awards. A what-if, not a buyback.
+  - term: Anti-dilutive
+    meaning: Counting an instrument would raise earnings per share. It is left out of the diluted figure.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

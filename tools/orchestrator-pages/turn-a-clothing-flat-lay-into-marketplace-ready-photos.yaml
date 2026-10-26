@@ -1,6 +1,6 @@
 new_slug: turn-a-clothing-flat-lay-into-marketplace-ready-photos
 name: Turn a clothing flat lay into marketplace-ready photos
-summary: Give it a garment phone photo. Get a clean photo, a worn-shape photo, fabric close-ups and a rules check.
+summary: "Turn a clothing flat lay phone photo into marketplace-ready photos: a clean shot, a worn-shape shot, fabric close-ups and a rules check."
 job: product-photos
 thinking: medium
 thinking_why: The checks look at pictures one at a time. A mid-level model is enough.
@@ -16,6 +16,10 @@ when:
   - You sell clothing and only have flat-lay photos.
   - You want fabric close-ups without a macro lens.
   - Your last listing photos were rejected or looked off.
+not_for:
+  - Your garment has a complex print or logo. Image models often warp these, so use a real photo shoot or a photographer instead.
+  - You have no flat-lay photo and only an idea of the garment. Take a plain phone photo first, because this workflow never invents the garment.
+  - You only need a single photo cleaned up. Use the Product photo retoucher on its own.
 you_give:
   - A flat-lay phone photo of your garment
   - The marketplace you list on
@@ -32,6 +36,27 @@ how_to_use:
   - Attach your flat-lay photo. Say which marketplace you list on.
   - At each pause, save the picture you like and attach it for the next step.
   - Claude writes the instructions. Your image model draws the pictures.
+output_sample:
+  input:
+    - A flat-lay phone photo of your garment, front only
+    - The marketplace you list on
+    - An image model that can draw and edit pictures, such as ChatGPT or Gemini
+  prerequisites:
+    - An image model that can edit pictures, which may need a paid plan
+    - An AI that can read your files, such as Claude, if you use the handoff pack
+  output:
+    - name: Cleaned flat lay
+      contains: A retouched photo with even light and a clean background, plus a note on what changed.
+    - name: Worn-shape photo
+      contains: Your garment shaped as if worn, with a note on what was kept unchanged.
+    - name: Fabric close-ups
+      contains: Close-ups of the weave and stitching, each with the area it shows.
+    - name: Fault report
+      contains: A risk rating per picture, eight checks, a use, retry or retouch call, and fix lines.
+    - name: Marketplace check
+      contains: A pass or reject for each marketplace rule, with a fix for every reject.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Clean the flat lay
     text: Presses out random wrinkles, squares up shoulders and sleeves, evens the light and cleans the background.

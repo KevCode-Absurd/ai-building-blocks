@@ -1,6 +1,6 @@
 new_slug: six-pattern-ad-performance-diagnoser
 name: Six-pattern ad performance diagnoser
-summary: Check six possible causes of an ad result change. Use local baselines first and explain confidence and missing evidence.
+summary: Find out why your ad results changed. Give it current and past numbers. You get a ranked cause, a confidence score and what to check next.
 job: read-ad-results
 headline: Six-pattern ad performance diagnoser
 subhead: Share current and baseline results, targets, margin and account change log. Get a ranked diagnosis with supporting signals and follow-up tests.
@@ -12,6 +12,10 @@ when:
   - You need a ranked diagnosis with supporting signals and follow-up tests.
   - You need six-pattern ad performance diagnoser for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "Your campaign is brand new with under two weeks of data: wait and collect more results first, since the baseline needs history."
+  - "Your conversions have fallen to zero: check your pixel and conversion tracking first, then come back here."
+  - "You need a full account review across many campaigns: ask a media buyer, since this checks one campaign at a time."
 you_give:
   - Current and baseline results
   - Targets
@@ -23,6 +27,25 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - Your campaign results for 7, 14 and 30 days (spend, revenue, ROAS, CPA, CTR, CPC, CPM)
+    - Frequency and reach for the last 7 days
+    - What changed and the date the problem started
+    - Your target CPA or target ROAS and business type
+  output:
+    - name: Primary diagnosis
+      contains: The main issue, its severity, a confidence score and which of the six patterns it matches.
+    - name: Trigger metrics
+      contains: A table of each metric now, against its baseline, with the gap and a status.
+    - name: Root cause
+      contains: Two or three sentences on why the results changed.
+    - name: Recommended actions
+      contains: Steps for now, the short term and the medium term, each with the expected effect.
+    - name: Do not list
+      contains: Actions to avoid, such as raising budget when creative is worn out.
+    - name: Monitoring
+      contains: Which metric to check again, when, and what to do if it does not improve.
 how_it_works:
   - title: Check the inputs
     text: Confirm current and baseline results, targets, margin and account change log. Mark facts that are missing.

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows a page format and must stay accurate.
 new_slug: alternative-page-writer
 name: Alternative page writer
-summary: Name a rival. Get a fair comparison or alternative page built to rank
-  and convince buyers.
+summary: Write a comparison or alternative page for a named rival. Fair, dated claims, built to rank for searches like "X alternative" and help buyers choose.
 job: write-landing-page
 headline: Alternative page writer
-subhead: A comparison or alternative page for a named rival, written so it ranks
-  for searches like "X alternative" and helps a buyer decide. It leads with
-  fairness, because readers check claims and trust fades fast when you misstate
-  a competitor.
+subhead: A comparison or alternative page for a named rival, written so it ranks for searches like "X alternative" and helps a buyer decide. It leads with fairness, because readers check claims and trust fades fast when you misstate a competitor.
 explain: |
   A comparison or alternative page for a named rival, written so it ranks for searches like "X alternative" and helps a buyer decide. It leads with fairness, because readers check claims and trust fades fast when you misstate a competitor.
 
@@ -19,6 +15,10 @@ when:
   - Sales keeps explaining the same comparison by hand.
   - You want to win people who are leaving a competitor.
   - You need an honest comparison that readers will trust.
+not_for:
+  - "You need internal battle cards or sales talk tracks: use sales-enablement, which is not in this library yet, or ask your sales lead."
+  - "You want a technical SEO check of pages you already have: use a site audit tool or an SEO specialist."
+  - "You have no rival in mind yet: pick one first, because this skill asks for a name and stops without it."
 you_give:
   - The competitor's name
   - Your product, price and differentiators
@@ -30,7 +30,26 @@ you_get:
   - Who-it-suits sections for each side
   - Headings and wording aimed at search
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. Add your product facts, price and honest weak spots.
+  - Name the rival. If you skip this, your AI will ask and stop.
+  - 'Pick a format: one "X alternative" page, an "X alternatives" roundup, "you vs X", or "X vs Y".'
+  - Ask for the draft. Check that each claim about the rival has an "as of" date.
+  - Verify pricing and features on the rival's own site before you publish. Your AI needs web access to check for you, so do it by hand if it has none.
+output_sample:
+  input:
+    - The rival's name
+    - Your product, price and main differences
+    - Your honest weak spots
+    - Your goal, such as search traffic or sales help (optional)
+    - Quotes from customers who switched (optional)
+  prerequisites:
+    - Web access helps, so your AI can check the rival's current pricing and features. Without it, you must check dated claims yourself.
+  output:
+    - name: Competitor data file
+      contains: "A profile of the rival in YAML: who it targets, pricing tiers, strengths, weaknesses and who it suits."
+    - name: Page content
+      contains: The URL, meta tags, full copy by section, comparison tables and calls to action for the chosen page format.
+    - name: Page set plan
+      contains: Which other comparison pages to write next, in priority order by search volume.
+    - name: Asset audit report
+      contains: "Only if you ask for a check of old pages: claims checked, status counts and a fix list with new wording."

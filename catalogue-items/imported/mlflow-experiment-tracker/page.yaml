@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It adds logging to code you already have.
 new_slug: mlflow-experiment-tracker
 name: MLflow experiment tracker
-summary: Give it your training code. Get every run logged, compared and
-  versioned, so you can repeat the best one.
+summary: Add MLflow experiment tracking to your training code. Every run is logged and compared, so you can repeat your best model.
 job: track-numbers
 headline: MLflow experiment tracker
-subhead: Every training run you do gets saved with its settings, scores and
-  files, so you can see which one won and repeat it. No more folders named
-  finalv2reallyfinal.
+subhead: Every training run you do gets saved with its settings, scores and files, so you can see which one won and repeat it. No more folders named finalv2reallyfinal.
 explain: |
   Every training run you do gets saved with its settings, scores and files, so you can see which one won and repeat it. No more folders named final_v2_really_final.
 
   The skill adds MLflow to your training code. It logs the settings you chose, such as learning rate and batch size, then the scores as training goes, then the finished model. Autologging covers common libraries in one line. After that you open the MLflow screen, sort runs by score, and compare two side by side. Good models can be named, versioned and moved from testing to production. It needs Python and a local install of MLflow.
 when:
-  - You have run the same model ten times and cannot remember which settings
-    gave the best score.
+  - You have run the same model ten times and cannot remember which settings gave the best score.
   - A teammate asks you to reproduce last week's result.
   - You want to compare two model versions on the same scores.
   - You need a record of which model went live and when.
+not_for:
+  - "You run one quick script or a notebook and will not compare runs: a simple note of your settings and scores is enough."
+  - "You have no Python setup on your machine or server: set that up first, or ask a developer to install it."
+  - "You want to deploy to AWS or Azure without an account: both need your own paid account and can cost money."
 you_give:
   - Your training script
   - The scores you care about
@@ -31,8 +31,33 @@ you_get:
   - A promotion path from test to production
   - Steps to repeat your best run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Pick a small training script you already have. Check that Python and MLflow are installed (pip install mlflow).
+  - Paste the skill into your AI, then paste your script. Say which scores you care about and which library you use.
+  - Ask your AI to add MLflow logging. It should name the experiment and give each run a clear name.
+  - Run the script a few times with different settings. This needs an AI that can run Python, or you run it yourself.
+  - Start the MLflow screen with the command mlflow ui and open http://localhost:5000. Sort runs by score and compare two.
+  - Only if you need it, ask for the registry or deploy steps. Cloud deploy needs your own AWS or Azure account and may cost money.
+output_sample:
+  input:
+    - Your training script
+    - The scores you care about, such as accuracy or loss
+    - The machine learning library you use
+    - Where to store runs, such as a folder or a shared server (optional)
+  prerequisites:
+    - An AI that can run Python code, or a Python setup you run yourself
+    - MLflow installed with pip
+  output:
+    - name: Tracked training script
+      contains: Your code with MLflow added, logging settings, scores and the finished model for each run.
+    - name: Autologging setup
+      contains: One line that logs settings, scores and the model for common libraries without extra code.
+    - name: Logged run record
+      contains: The settings, scores, files and model saved for each run, so you can compare them.
+    - name: MLflow screen
+      contains: The local web page where you sort runs by score and compare two side by side.
+    - name: Model registry steps
+      contains: Commands to name a model, give it a version number and move it from staging to production.
+    - name: Load and search commands
+      contains: Code to find past runs with filters and load a saved model version to reuse it.
+    - name: Deploy commands
+      contains: Optional commands to serve a model locally or send it to AWS or Azure.

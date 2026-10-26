@@ -1,39 +1,49 @@
 new_slug: skill-breakdown-teaching-planner
 name: "Skill breakdown teaching planner"
-summary: "Paste a skill you know well. Get it broken into teachable steps with the mistake and check for each."
+summary: "Break a skill into 4 to 8 steps a beginner can learn, with a common mistake and a self-check for each, plus a first-hour plan."
 job: teach-and-train
 thinking: medium
 thinking_why: "It has to find the steps the expert no longer notices, which takes reasoning about the description."
 
 headline: "Skill breakdown teaching planner"
-subhead: "Paste a description of something you do well and who you want to teach it to. The prompt finds the steps you no longer notice, orders four to eight steps for learning, gives each a common mistake, a quick check and a ready sign, marks the hard step and plans the first hour."
+subhead: "Paste how you do a skill and who you want to teach. It finds the steps you no longer notice and puts 4 to 8 in learning order. Each step gets a common mistake and a check the learner can run alone. You also get a plan for the first hour."
 
 explain: |
-  The person who does a thing best is often the worst at teaching it, because half the steps have become invisible to them. "You just know when it is ready" is true for them and useless to a beginner. The beginner needs that feeling turned back into something they can look at or measure.
+  The person who does a thing best is often the worst at teaching it. Half the steps have become invisible to them. "You just know when it is ready" is true for the expert and no help to a beginner. The beginner needs that feeling turned into something they can look at or count.
 
-  This prompt reads your description and hunts for those hidden steps, turning each one into an action a beginner can do on purpose. It orders four to eight steps for learning, not for doing, and gives each one the common mistake, a quick check the learner can run alone and the sign they are ready to move on. It marks the step where most people stall and what to do about it, and plans a first hour that ends with a small complete result.
+  This prompt reads how you do the skill and hunts for those hidden steps. It turns each one into an action a beginner can do on purpose. Then it breaks the skill into 4 to 8 steps. They follow the order to learn, which is not always the order you work. Each step gets the common mistake, a check the learner can run alone, and a sign they are ready to move on.
+
+  It marks the step where most people stall and says what to do when they do. It ends with a first hour that finishes on a small, complete result, even a rough one.
 
 when:
   - "You are training your replacement in something you have done for years."
   - "New hires keep failing at a task that feels obvious to you."
-  - "You are turning your know-how into a course or a how-to."
+  - "You want to turn what you know into a course, a how-to or a training day."
+  - "A teammate asks you to show them, and you realise you can't explain how you decide."
+
+not_for:
+  - "You want a one-page reference the learner keeps: use the Training handout writer."
+  - "You already have the steps and need a timed session: use the Timed practice session planner."
+  - "You are planning a school lesson for a class, not training one person on a task: use the Direct teaching lesson builder."
 
 you_give:
-  - "The skill, described in as much detail as you can"
-  - "The learner: who, what they know, how much time"
-  - "What beginners got wrong before (advised)"
-  - "A good and a poor example (optional)"
+  - "The skill, described the way you would explain it to a friend, including the parts you just know"
+  - "The learner: who they are, what they know already and how much time you have"
+  - "What beginners got wrong before (optional)"
+  - "One good result and one poor one (optional)"
 you_get:
-  - "The result stated and the hidden steps found"
-  - "Four to eight steps with mistake, check and ready sign"
+  - "What the learner will be able to do, and how you will judge it"
+  - "The hidden steps you do without noticing, written out"
+  - "4 to 8 steps in learning order, each with a common mistake, a self-check and a ready sign"
   - "The hard step and what to do when learners stall"
-  - "A first-hour plan"
+  - "A plan for the first hour"
 
 how_to_use:
-  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your description under it."
-  - "Describe the skill as if talking to a friend, including the parts you 'just know'."
-  - "Read HIDDEN STEPS FOUND. Correct any that are wrong and run again."
-  - "Teach the FIRST HOUR, then adjust the steps from what you saw."
+  - "Copy the prompt and paste it into Claude, ChatGPT or Gemini. It needs no files or tools."
+  - "Under it, type the skill, the learner and the time you have. Write as you would talk. Include things you just know."
+  - "Read HIDDEN STEPS FOUND first. If a step is wrong or missing, say so and run it again."
+  - "Check that every quick check is something the learner can do alone. If one needs a colleague, ask for a solo version."
+  - "Teach the FIRST HOUR and note where the learner stalls. To plan that hour minute by minute, take it to the Timed practice session planner."
 
 how_it_works:
   - title: "Names the result"
@@ -57,6 +67,30 @@ output_shape: |
   FIRST HOUR          <steps, reps, outcome>
   MISSING             <...>
   CHECKS MISSED       <one line each, or none>
+
+output_sample:
+  input:
+    - "A description of the skill, in your own words"
+    - "Who will learn it, what they know and how much time you have"
+    - "What beginners got wrong before (optional)"
+    - "One good and one poor result (optional)"
+  prerequisites:
+    - "Any chat AI. No files, tools or web access needed."
+  output:
+    - name: "THE RESULT"
+      contains: "One line on what the learner will be able to do and how you will judge it."
+    - name: "HIDDEN STEPS FOUND"
+      contains: "The things you do without noticing, each turned into a step a beginner can do on purpose."
+    - name: "STEPS"
+      contains: "4 to 8 steps in learning order. Each has what to do, a common mistake, a quick check and a ready sign."
+    - name: "THE HARD STEP"
+      contains: "The step where most beginners stall, why, and what to do when they do."
+    - name: "FIRST HOUR"
+      contains: "Which steps to teach, how many repetitions, and the small result the learner leaves with."
+    - name: "MISSING"
+      contains: "Facts you did not give, such as the learner or the time."
+    - name: "CHECKS MISSED"
+      contains: "Any quality check the plan failed, or none."
 
 example:
   business: sprout
@@ -104,7 +138,7 @@ test:
 improve:
   - "Add your examples of good and poor results so the checks are concrete."
   - "After each teaching session, paste in what went wrong and let the mistakes update."
-  - "Pair it with the Practice session minute planner to run the first hour."
+  - "Take the FIRST HOUR to the Timed practice session planner to run it."
 
 works_best_with:
   tools:

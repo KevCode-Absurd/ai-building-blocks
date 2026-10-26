@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It needs open ideas and fair pushback.
 new_slug: product-idea-brainstorm-partner
 name: Product idea brainstorm partner
-summary: Describe a problem. Get ideas explored, assumptions challenged and the
-  strongest options narrowed down.
+summary: Brainstorm product ideas with a sharp partner. Describe your problem and get ideas, tough questions and a short list of options to test.
 job: test-an-idea
 headline: Product idea brainstorm partner
-subhead: A sparring partner for the early stage of an idea, before you write a
-  spec. It pushes back, asks the hard questions and stops you settling on the
-  first answer.
+subhead: A sparring partner for the early stage of an idea, before you write a spec. It pushes back, asks the hard questions and stops you settling on the first answer.
 explain: |
   A sparring partner for the early stage of an idea, before you write a spec. It pushes back, asks the hard questions and stops you settling on the first answer.
 
@@ -18,6 +15,10 @@ when:
   - You want your plan challenged before you commit.
   - You need fresh angles on a product problem.
   - You are stuck between a few directions.
+not_for:
+  - "You need data or customer research first: talk to customers or run a survey, then come back with what you learn."
+  - "You already chose a direction to build: write the spec instead, since this partner is for the stage before that."
+  - "You want a finished document or plan: this is a live conversation, so ask your AI to draft one after the session."
 you_give:
   - The problem or opportunity you are exploring
   - Who you think has the problem
@@ -29,7 +30,25 @@ you_get:
   - Your weak assumptions called out
   - A short list of the strongest options
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions, then describe your problem and who has it.
+  - Answer the questions your AI asks. Say so when you disagree, since it is meant to push back.
+  - Ask it to switch mode if you need to, such as from ideas to stress testing.
+  - At the end, ask for the shortlist with the biggest unknown for each option, and pick one to test first.
+output_sample:
+  input:
+    - The problem or opportunity you are exploring
+    - Who you think has the problem
+    - What you have tried or learned so far (optional)
+    - Limits such as time or budget (optional)
+  output:
+    - name: Frame
+      contains: The problem, who has it, and what they do about it today, put in your own words.
+    - name: Diverge
+      contains: Many different ideas that vary in size, approach and timing, listed before any are judged.
+    - name: Provoke
+      contains: Hard questions and pushback that test your weak assumptions and the ideas so far.
+    - name: Converge
+      contains: The ideas narrowed down to the few strongest options, with reasons.
+    - name: Capture
+      contains: A shortlist of options with the biggest unknowns, assumptions to test, and ideas set aside.

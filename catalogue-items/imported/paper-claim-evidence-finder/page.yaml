@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It searches, then compares what each paper really shows.
 new_slug: paper-claim-evidence-finder
 name: Paper claim evidence finder
-summary: Name a topic or DOI. Get claims taken from full papers, with the
-  numbers, limits and source for each.
+summary: Find what research papers claim, with numbers, limits and DOI. Name a topic or DOI and get an evidence table to check before you cite it.
 job: research-topics
 headline: Paper claim evidence finder
-subhead: A table of what research papers actually claim, with the numbers, the
-  limits and the source for each claim. It reads full-text-derived records, not
-  just titles and abstracts.
+subhead: Give it a research topic or a DOI. It searches full-text-derived records through the BGPT service and builds a table of claims. Each row has the numbers, the limits and the source. Some records come back without claim-level evidence, so check each row against the paper before you use it.
 explain: |
   A table of what research papers actually claim, with the numbers, the limits and the source for each claim. It reads full-text-derived records, not just titles and abstracts.
 
@@ -18,17 +15,40 @@ when:
   - You are starting a literature review and want a traceable table.
   - You have a DOI and want what the paper really found.
   - You must cite sources and show where each fact came from.
+not_for:
+  - "You need a full systematic review or a bias rating of each study: use a trained researcher or a review method built for that."
+  - "You have no way to connect the BGPT service or reach the internet: read the papers yourself or search a free paper site."
+  - "You want a plain summary of one paper you already hold: paste it into your AI and ask for a summary."
 you_give:
   - Research topic or question, or a DOI
   - The BGPT service connected
   - Number of papers wanted (optional)
 you_get:
-  - Evidence table with claim, result and limits
-  - Source and DOI for each row
-  - Details of the experiment behind each claim
+  - "An evidence table with these columns: claim, result, sample size, limits, DOI and source section."
+  - "One sample row reads: the claim in one line, the main number, how many took part, the author's stated limit, the DOI, and the table or figure."
+  - A flag on any record that has no claim-level evidence.
+  - Details of the experiment behind each claim.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to the BGPT paper search service.
+  - Connect the BGPT service in your AI tool's settings for remote servers. Use the address https://bgpt.pro/mcp/stream. Free use needs no key.
+  - For paid use, add your BGPT API key as an Authorization header in that same connection. Never paste the key into the chat.
+  - Open a new chat and paste the skill text. Then type your topic or DOI, and how many papers you want.
+  - Read the result. Rows with no claim-level evidence are flagged. Do not trust those until you open the paper.
+  - Check sample sizes and numbers in the paper before you cite them. Run a second search with a reworded question to widen coverage.
+output_sample:
+  input:
+    - Your research topic or question, or a DOI
+    - How many papers you want (optional)
+    - A filter such as study type or last 90 days (optional)
+  prerequisites:
+    - An AI that can connect to the BGPT paper search service
+    - An internet connection
+    - A BGPT API key for paid use (free use needs no key)
+  output:
+    - name: Evidence table
+      contains: One row per claim with the result, sample size, limits, DOI and the section, table or figure it came from.
+    - name: Experiment details
+      contains: What was tested, the reported statistics and the scope the paper actually showed.
+    - name: Search record
+      contains: The query used, the number of results returned and which DOIs were found or not found.
+    - name: Check flags
+      contains: Rows that came back without claim-level evidence, so you know which ones to verify against the paper.

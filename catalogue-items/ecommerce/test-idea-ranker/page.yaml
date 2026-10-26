@@ -113,3 +113,29 @@ terms:
     meaning: One point for each different kind of proof behind an idea, such as a heatmap, a recording, a survey or a funnel drop.
   - term: Gross profit per conversion
     meaning: What you keep from one order after the cost of the goods, shipping and fees.
+
+not_for:
+  - "You have ideas but no research behind them. Use the Conversion research planner first, then come back."
+  - "You are not sure your store has enough orders to test. Use the Store test readiness checker."
+  - "A test already ran and you need to know if the result holds. Use the Store test verdict maker."
+output_sample:
+  input:
+    - "Your test ideas, each with the proof behind it (recording, heatmap, survey line or funnel drop)"
+    - "Traffic, conversion rate and gross profit per order for each page"
+    - "Build effort for each idea, in hours or low, medium or high"
+    - "Your monthly orders (optional)"
+  output:
+    - name: "Fix list"
+      contains: "Broken things to repair, kept off the test list."
+    - name: "Leaderboard"
+      contains: "Each idea as a hypothesis, with evidence points, yes or no points, effort and a profit range."
+    - name: "Run first"
+      contains: "The top test written in full, with its main metric and the smallest lift worth shipping."
+    - name: "Run next"
+      contains: "The second test to run, or none."
+    - name: "Parked"
+      contains: "Each waiting idea with the reason, and what would move it up."
+    - name: "Assumptions"
+      contains: "The win chance, time period, traffic and margin figures behind the profit numbers."
+    - name: "Checks missed"
+      contains: "One line for each check the list failed, or none."

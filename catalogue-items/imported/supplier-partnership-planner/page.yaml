@@ -2,35 +2,100 @@ thinking: medium
 thinking_why: It adapts a standard partnership method to your supplier.
 new_slug: supplier-partnership-planner
 name: Supplier partnership planner
-summary: Name a key supplier. Get what to share, a joint plan, meeting rhythm
-  and measures that show it is working.
+summary: "Get a plan to work with a key supplier as a partner: what to share, how to plan together, how often to meet, and the measures that show it works."
 job: plan-supply-chain
 headline: Supplier partnership planner
-subhead: Name a key supplier. Get what to share, a joint plan, meeting rhythm
-  and measures that show it is working. Bring the supplier and what you buy. Use
-  the result to plan your next step.
+subhead: Name a key supplier, what you buy and your goal. It places the relationship on a maturity scale and picks a model, such as the supplier holding stock for you. You get a data sharing list, a joint planning process, a meeting rhythm and measures to track.
 explain: |
-  A plan for working with a key supplier as a partner, covering what you share, how you plan together, how often you meet and how you know it is working.
+  Many companies only talk to a key supplier when something breaks. Forecasts differ every month, stock runs short, and each side blames the other. This supplier partnership planner turns that into a working routine.
 
-  Name the supplier and your goal. The skill places the relationship on a maturity scale, then picks a model that fits, such as vendor-managed inventory or collaborative planning, forecasting and replenishment. It lays out what data each side shares, sets up joint forecasts and exception handling, and defines the meeting rhythm. It also names common blockers, like trust and system gaps, and gives measures to track the benefit. Python examples simulate the effect.
+  Name the supplier and your goal. The skill places the relationship on a five-step maturity scale, from price-only deals to fully shared planning. Then it picks a model that fits, such as vendor-managed inventory (the supplier tops up your stock) or collaborative planning (you build forecasts together).
+
+  It lays out what data each side shares, how forecast gaps get settled, and how often you meet. It names common blockers, like trust and system gaps, and sets measures with a baseline from your own numbers. The plan runs on shared spreadsheets and a regular meeting. Paid portals are optional.
 when:
-  - A supplier is critical and you only talk when something breaks.
+  - A key supplier matters to you, and you only talk when something breaks.
   - You want the supplier to hold stock for you.
-  - Forecasts differ between you and the supplier every month.
-  - You need to show what a closer partnership would gain.
+  - Your forecast and the supplier's differ every month.
+  - You need to show what a closer partnership would gain before you ask for one.
+not_for:
+  - The buy is small or one-off. A plain purchase order is enough.
+  - You have not chosen a supplier yet. Use the supplier scorer first.
+  - Your worry is that a supplier might fail you. Use the supplier risk scorecard builder.
 you_give:
-  - The supplier and what you buy
-  - Your goal for the partnership
-  - Current forecast and delivery issues (optional)
+  - The supplier and what you buy from them
+  - Your goal: cost, service, innovation or lower risk
+  - Current forecast and delivery problems, from your orders and delivery notes (optional)
   - Systems each side uses (optional)
 you_get:
-  - A partnership model that fits
-  - A data sharing list
+  - A partnership model that fits your supplier
+  - A list of what each side shares
   - A joint planning process
   - A meeting rhythm
-  - Measures of success
+  - Measures of success with a baseline to fill in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Name the supplier and what you buy. Say your goal in one line.
+  - Add forecast and delivery problems you see, and the tools each side uses.
+  - Answer its questions. It marks missing numbers instead of guessing.
+  - Check the data list. Is each item something you can legally and safely share?
+  - Fill in the baseline for each measure from your own records. Take the plan to the supplier as a draft to talk through.
+how_it_works:
+  - title: Place the relationship
+    text: It rates the relationship from price-only deals up to shared planning, and says why.
+  - title: Choose a model
+    text: It picks supplier-held stock, joint planning, early design input, yearly business planning or co-innovation.
+  - title: Set what is shared
+    text: It lists the data each side shares, how often and how.
+  - title: Plan together
+    text: It sets joint forecast steps and how gaps between your forecast and theirs are settled.
+  - title: Set the rhythm
+    text: It sets meetings, who comes and what each one decides.
+  - title: Measure it
+    text: It names the blockers and the measures that show it is working, with a baseline from you.
+output_shape: |
+  Supplier Collaboration Plan
+  Summary: <supplier>, <goal>, <maturity level>, <model>
+  Data sharing: <data>, <from>, <to>, <how often>, <how>
+  Joint planning: <steps>, <owner>, <how gaps are settled>
+  Meetings: <meeting>, <how often>, <who>, <decides>
+  Measures: <measure>, <baseline>, <target>
+  Blockers: <blocker>, <fix>
+  First 90 days: <step>, <owner>, <week>
+output_sample:
+  input:
+    - The supplier and what you buy
+    - Your goal for the partnership
+    - Current forecast and delivery problems (optional)
+    - Systems each side uses (optional)
+  prerequisites:
+    - An AI that can run Python, if you want the stock simulation (optional)
+  output:
+    - name: Executive summary
+      contains: The supplier, your goal, the maturity level and the model it recommends.
+    - name: What each side shares
+      contains: Each data item, who sends it, who gets it, how often and how.
+    - name: Joint planning process
+      contains: The steps in order, who owns each, and how forecast gaps are settled.
+    - name: Meeting rhythm
+      contains: Each meeting, how often, who attends and what it decides.
+    - name: Measures of success
+      contains: Each measure with your baseline, a target and how it is counted.
+    - name: Blockers and first 90 days
+      contains: Likely obstacles with fixes, and the first steps with owners and weeks.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The plan is words and tables, so no code is needed.
+    - name: ChatGPT with data analysis, or Claude with code execution
+      why: They can run the stock simulation on your own demand figures.
+  inputs:
+    - Twelve months of your orders from this supplier
+    - Your forecast and any forecast the supplier gave you
+    - Delivery records showing late or short orders
+terms:
+  - term: Vendor-managed inventory
+    meaning: The supplier watches your stock and sends more when it runs low.
+  - term: CPFR
+    meaning: Collaborative planning, forecasting and replenishment. You and the supplier build the forecast together.
+  - term: Maturity scale
+    meaning: Five steps from price-only deals to fully shared planning.

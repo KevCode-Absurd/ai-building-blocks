@@ -1,0 +1,141 @@
+name: UX Architect agent
+summary: Get a page structure and CSS base for a new site, with section order, a layout grid, type and spacing scales and a light, dark and system theme toggle.
+headline: UX Architect agent
+subhead: Give it your site goal, your visitors and any brand colours. The agent plans the page order, the layout grid, the CSS variables and the file layout. You get a base a developer can build on, with a theme toggle included.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Developers lose time on a blank page. Which sections come first? How wide is the content? What do we call the CSS? This agent makes those choices before the build starts, so the visual work lands on a clear base.
+
+  It works in three layers. First the page structure: navigation, section order, heading levels and where each call to action goes. Then the CSS system: variables for colour, type and space, containers and grids, planned phone first. Last the handoff: a build order, a file layout and notes on keyboard use and contrast.
+
+  Every new site plan gets a light, dark and system theme toggle, unless you say no. It writes plans and sample code in chat. It does not run inside your project, and it sees only what you paste. The source profile mentions project files and other agents from its original setup. Those do not exist for you, so the agent asks you for the facts instead.
+when:
+  - You are about to build a site or landing page and need the structure before the visuals.
+  - A developer wants a CSS base with variables and a grid, not only a mockup.
+  - You are fixing a site where every page has its own spacing and widths.
+  - You need a plan for phone, tablet and desktop widths before you build.
+not_for:
+  - You want finished visual design, such as colours and how each part looks. Use the UI Designer agent.
+  - You want a text sketch of one page's layout. Use the Wireframe drafter.
+  - You want the steps a visitor takes through the site. Use the User flow designer.
+you_give:
+  - What the site is for and who visits it
+  - The pages or sections you need, even as a rough list
+  - Brand colours and fonts, or "none yet" (optional)
+  - The tools you build with, such as plain HTML and CSS, a framework or a site builder (optional)
+  - Your own page copy or task list (optional)
+you_get:
+  - A page structure with navigation, section order, heading levels and call to action spots
+  - A set of CSS variables for colour, type, space and widths, in light and dark
+  - Layout rules for phone, tablet and desktop
+  - A light, dark and system theme toggle, with HTML, CSS and JavaScript
+  - A file layout and a build order for developers
+  - Accessibility notes on keyboard use, focus and contrast
+how_to_use:
+  - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe the site goal and your visitors. List the pages or sections you want.
+  - Add brand colours and fonts if you have them. If not, say so. It marks any it picks as proposed.
+  - Check the page structure before the CSS. Is the order right for a visitor who knows nothing about you?
+  - Copy the CSS and toggle code into a test page and open it on a phone and on a desktop. A chat cannot test it for you.
+  - Give the plan to your developer, or to a coding AI, in the build order it lists.
+how_it_works:
+  - title: Read the brief
+    text: It confirms the goal, visitors, pages, brand and build tools. Missing facts are asked once, then marked MISSING.
+  - title: Plan the structure
+    text: It sets navigation, section order, heading levels and where calls to action go.
+  - title: Build the CSS system
+    text: It writes variables for colour, type, space and widths, plus containers and grids, phone first.
+  - title: Add the theme toggle
+    text: It writes a light, dark and system switch that remembers the choice and still works when storage is blocked.
+  - title: Write the handoff
+    text: It lists the file layout, the build order and notes on keyboard use, focus and contrast.
+output_shape: |-
+  UX FOUNDATION <project>
+
+  PAGE STRUCTURE
+    Navigation <items> | Sections in order <list> | Headings <H1, H2, H3 plan> | Call to action <where>
+
+  CSS SYSTEM
+    Colour variables <light and dark> | Type scale | Spacing scale | Container widths
+
+  LAYOUT
+    Phone <rule> | Tablet <rule> | Desktop <rule> | Grid patterns <list>
+
+  THEME TOGGLE
+    <HTML, CSS and JavaScript>
+
+  FILES AND BUILD ORDER
+    <file list> | <order of work>
+
+  ACCESSIBILITY
+    Keyboard <plan> | Contrast <plan> | Focus <rule>
+
+  OPEN CHECKS
+    <what you must test>
+output_sample:
+  input:
+    - What the site is for and who visits it
+    - The pages or sections you need
+    - Brand colours and fonts (optional)
+    - Your build tools (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A developer or coding AI to build from the plan
+  output:
+    - name: Page structure
+      contains: Navigation, section order, heading levels and where each call to action goes.
+    - name: CSS variables
+      contains: Colour, type, space and width values, in light and dark, with clear names.
+    - name: Layout rules
+      contains: How the grid and containers change on phone, tablet and desktop.
+    - name: Theme toggle
+      contains: A light, dark and system switch, with HTML, CSS and JavaScript.
+    - name: File layout and build order
+      contains: Which files to create, and what to build first.
+    - name: Accessibility notes
+      contains: Keyboard order, focus rules and contrast plans.
+    - name: Open checks
+      contains: What was not tested and how to test it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Page list
+    how: Give the pages and what each must do. A rough list is enough.
+  - what: Build tools
+    how: Name your stack, such as plain CSS, Tailwind or a site builder, so the code matches.
+  - what: Theme choice
+    how: Say if you want no dark mode. The toggle is on by default.
+  - what: Content
+    how: Paste real headings and copy. Real text shows where the layout will break.
+improve:
+  - Save the CSS variables as your base file and ask for changes to it, not a new set, each time.
+  - Add your own naming rules to the brief, such as your class naming style.
+  - Pair it with the Wireframe drafter for each page and the UI Designer agent for how each part looks.
+terms:
+  - term: CSS variable
+    meaning: A named value in your styles, such as a colour, that you reuse and change in one place.
+  - term: Breakpoint
+    meaning: A screen width where the layout changes.
+  - term: Information architecture
+    meaning: How pages and sections are grouped and ordered.
+  - term: Theme toggle
+    meaning: A switch between light, dark and the visitor's own device setting.
+  - term: Grid
+    meaning: A layout of rows and columns.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good for the structure and the CSS plan. You test the code yourself.
+    - name: Claude Code
+      why: Can create the files in your project, so you can open the page and check it yourself.
+  inputs:
+    - Your real headings and page copy.
+    - A site you like, as a link, to show the layout feel.
+    - Your brand colours as hex codes.

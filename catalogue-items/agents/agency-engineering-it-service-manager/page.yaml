@@ -1,0 +1,141 @@
+name: IT Service Manager agent
+summary: Set up an IT service desk process for your team. Get ticket priorities, a change approval path, response targets and a rollout order.
+headline: IT Service Manager agent
+subhead: Describe the IT services your team runs and how problems and changes get handled today. Your AI builds the service desk process around that, using ITIL, the standard way to run IT as a service. You get priorities, a change path, response targets and the order to roll them out.
+job: organise-work
+thinking: high
+thinking_why: It compares process choices against the size of your team and checks each rule for gaps. Use a model that reasons well and flags what it assumed.
+explain: |-
+  Most small IT teams fix problems well and still lose trust. Tickets sit with no owner. Changes go live with no warning. Nobody can say how fast a broken system should be fixed. This IT service management agent does not start with tools. It starts with the promises IT makes to the people who rely on it, and writes down how each one is kept.
+
+  It builds an IT service plan in five parts. First, how to rank a ticket by business impact, not by who shouts loudest. Second, who gets told and how often during a major outage. Third, which changes need approval and which are safe to pre-approve, with a backout plan for each. Fourth, response and fix targets for each service. Fifth, the order to roll it out, so a team of three is not asked to run a full change board on day one.
+
+  It will not call an old ITIL rule right for your team without checking your size and tools. Targets such as "first reply in 15 minutes" come from the source profile and are shown as starting values you agree with the people who depend on the service.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your team handles IT requests through email or chat, and tickets get lost or have no owner.
+  - A change broke something last month, and you want a written approval step before the next one.
+  - Your boss or a customer asks what your response and fix times are, and you have no answer.
+  - You are moving to Jira Service Management, Freshservice or ServiceNow and need the process rules first.
+not_for:
+  - You are in an outage right now. Use the Incident Response Commander agent, then come back to write the process.
+  - You need to plan a security breach response. Use the Incident Responder agent.
+  - You want reliability goals and alerts for a web app. Use the SRE (Site Reliability Engineer) agent.
+  - You want help writing ServiceNow code or fixing a ServiceNow error. Use the ServiceNow Developer & Mentor agent.
+you_give:
+  - The IT services your team runs, such as email, laptops, Wi-Fi, a web app or payroll software, and who relies on each
+  - How requests, problems and changes get handled today, even if it is just "people message us"
+  - Your team size and the tool you use for tickets, if any (optional)
+  - A month of ticket or incident notes, or an old outage write-up (optional)
+you_get:
+  - A ticket priority table that ranks by business impact, with who to tell and how often
+  - A change approval path with three types of change, a risk score and a backout plan to fill in
+  - A list of your services with an owner, hours and response and fix targets for each
+  - A rollout order, from what to do this week to what can wait
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Say which part you want first, such as the ticket process, the change process or the whole plan. Describe your services and how work gets done today, in plain words.
+  - Add your team size and ticket tool. Paste a month of ticket notes if you have them. No code or web access is needed.
+  - Read the assumptions and the targets. Change any target your business will not accept, then ask for the plan again.
+  - Share the incident steps and change path with your team before you roll them out. Authorise any change to a live system or ticket tool yourself.
+how_it_works:
+  - title: Fix the scope
+    text: It picks the one area to build first and asks once for what is missing. Anything still missing is marked MISSING.
+  - title: Read where you are now
+    text: It describes how tickets, outages and changes are handled today and where promises are being broken.
+  - title: Build the incident steps
+    text: It writes a priority table based on business impact, the first steps, who is told and how often, and what triggers a review afterward.
+  - title: Build the change path
+    text: It sorts changes into pre-approved, normal and emergency. Each gets an approver, a risk score and a backout plan.
+  - title: Set targets and owners
+    text: It gives each service an owner, support hours and starting response and fix times, labelled as targets to agree.
+  - title: Order the rollout
+    text: It ranks the steps by risk and effort, sized to your team, and lists what it could not check.
+output_shape: |-
+  SCOPE
+    Area <incident, change, service list or all> | Team size <n> | Tool <name or none>
+
+  WHERE YOU ARE NOW
+    <what happens today> | <where a promise is broken> | <evidence or MISSING>
+
+  INCIDENT STEPS
+    PRIORITY TABLE: <P1 to P4> | <what it means for the business> | <first reply target> | <fix target> | <who is told and how often>
+    FIRST STEPS: <who owns the ticket> | <when to escalate> | <when to call it a major incident>
+    UPDATE MESSAGE: <template for users>
+    AFTER A MAJOR INCIDENT: <review steps, no blame> | <problem record trigger>
+
+  CHANGE STEPS
+    CHANGE TYPES: <pre-approved, normal, emergency> | <example> | <approver> | <lead time>
+    CHANGE FORM: <fields to fill> | <risk score: impact x chance of failure> | <backout plan>
+    REVIEW MEETING: <who, how often, agenda> (or "one approver plus a backup" for a small team)
+
+  SERVICES, OWNERS AND TARGETS
+    <service> | <owner> | <hours> | <first reply target> | <fix target> | <status: proposed>
+
+  ROLLOUT ORDER
+    <step> | <why now> | <small, medium or large> | <owner>
+
+  ASSUMPTIONS AND CHECKS NOT DONE
+output_sample:
+  input:
+    - The IT services your team runs, and who relies on each
+    - How requests, problems and changes get handled today
+    - Your team size and ticket tool (optional)
+    - A month of ticket notes or an old outage write-up (optional)
+  prerequisites:
+    - An AI that can read files, if you attach ticket exports or notes
+  output:
+    - name: Scope
+      contains: The area built first, your team size and your tool, with anything missing marked.
+    - name: Where you are now
+      contains: How tickets, outages and changes are handled today and where promises are broken.
+    - name: Incident steps
+      contains: A priority table, first steps, an update message for users and a no-blame review after major outages.
+    - name: Change steps
+      contains: Three change types with approvers, a change form with a risk score, and a backout plan field.
+    - name: Services, owners and targets
+      contains: Each service with an owner, support hours and proposed response and fix times.
+    - name: Rollout order
+      contains: Steps in order, each marked small, medium or large, with an owner.
+    - name: Assumptions and checks not done
+      contains: What the AI assumed and which checks it could not run.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a ticket export or an old outage write-up next to your description and tie each rule to what actually happened.
+  inputs:
+    - A list of who needs each service and what a day without it costs them.
+    - Your last two or three big outages, with what went wrong and how long it took.
+    - Any service promise you have already given a customer or your boss.
+terms:
+  - term: ITIL
+    meaning: A widely used set of rules for running IT as a service. ITIL 4 is the current version.
+  - term: Incident
+    meaning: Something broken or slow right now that stops people working, such as email being down.
+  - term: Change
+    meaning: Any planned alteration to a live system, such as a patch, a new setting or a software upgrade.
+  - term: Service desk (ITSM)
+    meaning: The process and tool for handling IT requests, problems and changes. ITSM is short for IT service management.
+  - term: Response and fix time (SLA)
+    meaning: A written promise of how fast IT replies and how fast it fixes. SLA is short for service level agreement.
+  - term: Backout plan
+    meaning: The steps to undo a change if it goes wrong.
+tweaks:
+  - what: Team size
+    how: Say how many people work in IT. A team of two gets one approver and a short form, not a change board.
+  - what: Targets
+    how: Name any response or fix time you have already promised. The AI will use it instead of the starting values.
+  - what: Scope
+    how: Ask for the incident steps alone, or the change path alone, if the whole plan is too much to roll out at once.
+improve:
+  - Keep the plan with your IT notes and bring it back after the next major outage to see which rule failed.
+  - Add your real service list and owners to the pack so you do not retype them.
+  - After a month of tickets under the new rules, paste the counts and ask the AI to check each target against them.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

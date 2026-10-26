@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It loads or builds a known model type.
 new_slug: robot-arm-modeler
 name: Robot arm modeler
-summary: Name your robot arm. Get a MATLAB model ready for moves, reach checks
-  and drawing.
+summary: Name your robot arm and get a MATLAB robot arm model, with collision shapes and checked inverse kinematics, ready for moves and reach checks.
 job: build-software
 headline: Robot arm modeler
-subhead: A MATLAB robot arm model you can trust, so later moves and reach checks
-  do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and
-  it builds the model.
+subhead: A MATLAB robot arm model you can trust, so later moves and reach checks do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and it builds the model.
 explain: |
   A MATLAB robot arm model you can trust, so later moves and reach checks do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and it builds the model.
 
@@ -18,19 +15,47 @@ when:
   - You have a URDF file and want it loaded with meshes kept.
   - You want to attach a gripper and check that the arm can reach a target.
   - You solved inverse kinematics and want proof the answer is valid.
+not_for:
+  - "You need collision-free path planning with RRT or CHOMP: use a motion planning tool, since this only builds and checks the model."
+  - "You need a smooth trajectory between poses: use a trajectory tool, not this model builder."
+  - "You have a delta robot or Stewart platform with closed loops: this does not cover them, so ask your robot maker for a model."
 you_give:
   - The arm name or your URDF or DH parameters
   - Target poses to reach (optional)
   - Gripper details (optional)
   - What you plan to do next, such as animate or pick and place (optional)
 you_get:
-  - A MATLAB robot model ready to use
-  - Collision and visual shapes added where needed
-  - Checked inverse kinematics solutions
+  - A MATLAB robot model (rigidBodyTree) ready to use
+  - Collision and visual shapes added where they were missing
+  - A tool frame at the end of the arm, with your gripper attached if you gave details
+  - A table for each target pose with the solver exit flag, position error and largest joint jump
   - A note on any gaps in the model
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Robotics System Toolbox.
+  - Open an AI that can run MATLAB. You need MATLAB with Robotics System Toolbox.
+  - Paste the skill text into the chat.
+  - Give the arm name, or attach your URDF file or DH parameters.
+  - Add target poses and gripper details if you have them (optional).
+  - Say what you plan to do next, such as animate or pick and place.
+  - Read the checks table and gap notes before you use the model.
+output_sample:
+  input:
+    - The arm name, such as a UR5e, KUKA iiwa or Panda, or your URDF file or DH parameters
+    - Target poses to reach (optional)
+    - Gripper details (optional)
+    - What you plan to do next, such as animate or pick and place (optional)
+  prerequisites:
+    - An AI that can run MATLAB
+    - MATLAB with Robotics System Toolbox
+  output:
+    - name: Robot model
+      contains: A MATLAB rigidBodyTree for your arm, loaded from the library, a URDF file or DH parameters.
+    - name: Tool frame
+      contains: A tool0 frame at the end of the arm with Z pointing outward, so poses and grippers line up.
+    - name: Model setup
+      contains: Collision and visual shapes added where missing, plus your gripper attached if you gave details.
+    - name: Kinematics check
+      contains: A forward kinematics test that shows the model behaves as expected at a known pose.
+    - name: IK validation
+      contains: For each target, the solver exit flag, position error and largest joint jump, so you can trust each answer.
+    - name: Gap notes
+      contains: A short note on anything missing or uncertain in the model.

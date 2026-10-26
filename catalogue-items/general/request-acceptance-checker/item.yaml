@@ -1,29 +1,20 @@
-{
-  "slug": "request-acceptance-checker",
-  "name": "Request acceptance checker",
-  "summary": "Check generated files against every requirement, repair bounded failures and package an honest handoff.",
-  "category": "general",
-  "type": "skill",
-  "role": "check",
-  "job": "ops",
-  "level": "beginner",
-  "inputs": [
-    {
-      "type": "plan",
-      "required": true
-    },
-    {
-      "type": "document",
-      "required": true
-    }
-  ],
-  "outputs": [
-    {
-      "type": "audit_report"
-    }
-  ],
-  "uses": [],
-  "origin": "own",
-  "version": "1.0.0",
-  "example_pending": true
-}
+slug: request-acceptance-checker
+name: "Request acceptance checker"
+summary: "Check finished files against your original request. Get a pass or fail line for every requirement, fixes for small gaps and a README of what is left."
+category: general
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: document, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+before: [request-acceptance-brief, request-deliverable-drafter]
+next: [request-deliverable-drafter]
+needs_mode: manual

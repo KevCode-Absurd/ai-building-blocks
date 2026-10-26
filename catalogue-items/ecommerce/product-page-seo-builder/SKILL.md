@@ -38,6 +38,7 @@ How to start:
 ## What you need
 - **Product facts** (required): specs, ingredients or materials, how it is used, price, variants.
 - **Target keyword and its search volume** (helpful): for the product name or type.
+- **Pages to push** (optional): a shortlist from the Search Console quick-win finder. Take each product page and the search it should win.
 - **Customer questions** (helpful): for the FAQ.
 - **Product photos** (helpful): to name and describe. If an image is attached, read it directly.
 - **Real reviews** (optional).

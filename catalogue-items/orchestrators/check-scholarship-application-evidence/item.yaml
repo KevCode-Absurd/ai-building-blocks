@@ -1,6 +1,6 @@
 slug: check-scholarship-application-evidence
 name: Check scholarship application evidence
-summary: Share the source files. Get an eligibility evidence map, revised draft and missing documents list.
+summary: Check your scholarship application against the rules. Get an evidence map, a revised draft within the word limit and a list of documents you still need.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -24,11 +24,11 @@ uses:
   - proofreader
 steps:
   - uses: source-note-summariser
-    note: Map the supplied eligibility criteria and application claims to the actual records; label gaps and avoid retaining unnecessary identity data.
+    note: "Match each eligibility rule and each claim in the draft to a record you supplied, or mark it MISSING. Keep only the identity details the check needs. Hands step 2 the evidence map."
   - uses: unsupported-claim-spotter
-    note: Check the application draft for achievements, rankings, dates and personal claims without supplied support.
+    note: "Uses your draft together with step 1's evidence map. Checks it for achievements, ranks, dates and personal claims that no record supports. Hands step 3 the list of claims to cut, soften or back with a document."
   - uses: proofreader
-    note: Polish the real draft within the published word limit while preserving the applicant voice and factual boundaries.
+    note: "Polishes your real draft within the word limit, in your own voice, and applies step 2's cuts and softening only where you agreed. Changes no fact and adds no claim. Hands back the revised draft and the missing documents list."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

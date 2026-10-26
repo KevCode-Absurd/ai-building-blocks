@@ -1,6 +1,6 @@
 new_slug: market-stage-reader
 name: "Market stage reader"
-summary: "Paste product facts and rival claims. Get what buyers know, how worn claims are and a headline brief."
+summary: "Find out what your buyers already know and how many claims they have heard. Get a market stage brief for your headline writer."
 job: understand-customers
 thinking: medium
 thinking_why: "It has to weigh mixed evidence and decide between two stages. A mid-size model does it well."
@@ -17,6 +17,10 @@ when:
   - Your headline gets ignored or doubted, and you do not know if buyers know too little or have heard too much.
   - You are entering a market where rivals all say the same thing.
   - You want one clear read of your buyers before several people write copy.
+not_for:
+  - You have no product facts yet. Write down what it does and its price first, then come back.
+  - You want the headline itself. This only writes the brief, so pass it to the Ad headline writer.
+  - You have no rival claims and no customer words, and you want a stage call. Gather a few real lines first, or you get the awareness read only.
 
 you_give:
   - Your product facts, including what it does for the buyer and its price
@@ -34,6 +38,29 @@ how_to_use:
   - Paste your product facts. Add rival claims and customer words if you have them.
   - Read the claim timeline first and fix any claim that is tagged wrongly.
   - Hand the brief to the "Ad headline writer".
+output_sample:
+  input:
+    - Your product facts, including what it does for the buyer and its price
+    - Rival claims from their ads, pages or packs (optional)
+    - Customer words such as reviews or support emails (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: The want
+      contains: The want buyers already have in their words, what the product does for it, and scores for urgent, lasting and wide.
+    - name: Awareness
+      contains: Your main buyer place and a backup on the five-step scale, with a quote or phrase behind each call.
+    - name: Claim timeline
+      contains: Your market's claims, oldest first, each tagged as plain, bigger, new how, better how or identity.
+    - name: Claim-fatigue stage
+      contains: A stage from 1 to 5 and the latest kind of claim buyers have met.
+    - name: A headline may / may not
+      contains: What a headline can say and cannot say, given where your buyers and your market sit.
+    - name: What would change the call
+      contains: The new facts or tests that would move the awareness place or the stage.
+    - name: Missing
+      contains: Each gap marked with what is absent and the step that needed it.
+    - name: Checks missed
+      contains: One line for each self-check that still failed, or none.
 
 how_it_works:
   - title: Finds the want

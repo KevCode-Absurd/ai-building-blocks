@@ -1,6 +1,6 @@
 new_slug: get-a-quiet-deal-moving-again-without-pressure
 name: Get a quiet deal moving again without pressure
-summary: Give it notes on a stalled deal. Get the cause, a firm recommendation, easy-yes questions and calm replies.
+summary: Get a stalled deal moving again without pressure. Give it your deal notes. You get the cause, a firm advice line, easy-yes questions and calm replies.
 job: sell-and-negotiate
 thinking: medium
 thinking_why: Three skills in a row on text. A mid-size model is fine. Use your strongest one if the deal is large.
@@ -14,6 +14,10 @@ when:
   - A buyer keeps asking for more information, another demo or more time.
   - A deal went quiet after a good meeting and you do not know why.
   - You want to follow up without pushing or inventing urgency.
+not_for:
+  - The buyer has said no. Accept it and ask what would have changed their mind, or end the talk politely.
+  - The deadline is real and you only need to close. Send a direct, short ask yourself instead.
+  - You have no notes on the buyer's own words yet. Get a call or email first, then come back.
 you_give:
   - Your notes on the deal, what was said, asked for and left unanswered
   - What you offered and at what price (optional but helpful)
@@ -29,6 +33,24 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the buyer's own words from emails and calls, not your summary of them.
   - Say if a deadline is real. If it is not, the steps leave urgency out.
+output_sample:
+  input:
+    - "Your notes on the deal: what was said, asked for and left unanswered"
+    - What you offered and at what price (optional)
+    - What you want the buyer to decide, and whether the deadline is real
+    - Doubts the buyer has said out loud (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Your offer from the Hidden offer finder (recommended, not required)
+  output:
+    - name: "Step 1: Why it stalled"
+      contains: The signs, the cause, how deep it goes, a firm recommendation, what to stop offering and a safety net for each fear.
+    - name: "Step 2: The questions"
+      contains: The decision you are heading to, shared ground, four to seven easy-yes questions with a move for each no.
+    - name: "Step 3: The replies"
+      contains: "Short true lines for pushback: a welcome, a listening line, an agree line, owning your part and holding your view."
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Name the cause of the stall
     text: Reads your notes for repeated requests, vague worries and delays, sorts the cause, rates how deep it goes and writes a firm recommendation with a safety net for each fear.

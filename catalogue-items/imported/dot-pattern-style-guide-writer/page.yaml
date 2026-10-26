@@ -2,36 +2,107 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: dot-pattern-style-guide-writer
 name: Dot-pattern style guide writer
-summary: Describe your product. Get a style guide with a dithered,
-  limited-colour look and high-contrast rules.
+summary: Get a dot-pattern style guide for a dithered, retro look, with pattern rules, a limited palette and contrast checks for readable text.
 job: design-work
 headline: Dot-pattern style guide writer
-subhead: A style guide for a dithered look, where dot patterns fake shades and
-  colour from a small palette, giving interfaces a grainy, retro-digital feel.
-  It is written so designers and engineers can build from it.
+subhead: Tell your AI about your product. It writes a dithered style guide, where dot patterns fake shades from a small palette. You get pattern rules, colours, type, spacing and a contrast check your team can build from.
 explain: |
-  A style guide for a dithered look, where dot patterns fake shades and colour from a small palette, giving interfaces a grainy, retro-digital feel. It is written so designers and engineers can build from it.
+  Dithering fakes shades and colours with patterns of dots. It gives an interface a grainy, retro-digital feel. The trouble starts when text lands on a pattern, or when each designer picks a different dot size. This skill writes down which patterns are allowed and where, so the look holds across screens.
 
-  The guide fixes the basics: a type scale from 14 to 40 pixels, set fonts for body, display and code, a spacing scale in steps of four, and colour tokens for primary, neutral and status colours. It adds accessibility to WCAG 2.2 AA with keyboard use and visible focus. Do and don't lists cover tokens, hierarchy, states, contrast and spacing. The tone is concise and confident. Share your product, and it adapts the template to fit.
+  Your AI states the idea in one sentence, then sets a small palette, type sizes and spacing as named values. It names each pattern with a size in pixels, and says where it may go. After that it writes rules for each part, such as buttons and forms, with every state.
+
+  The key rule is that text never sits straight on a dot pattern. It goes on a solid panel, or it is tested against both the lightest and darkest dot colour. The guide also checks every colour pair and says where to darken a colour, so the grain stays readable.
 when:
-  - You want a retro, dot-pattern look for a product and need rules to keep it
-    consistent.
-  - Your team asks how the grain style should handle contrast.
-  - You need a design system file for engineers to follow.
-  - You want accessible rules for a stylised interface.
+  - You want a retro, grainy look for a product and need rules to keep it consistent.
+  - Your team asks how text should sit on a dot pattern.
+  - You need a design file that developers can follow, with pattern sizes and palette limits.
+  - You want an accessible rule set for a stylised interface.
+not_for:
+  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "You want a clean, flat or corporate look: use the Minimal style guide writer."
+  - "You want vintage type and bold colour pairs, not dot patterns: use the Retro throwback style guide writer."
+  - "You want a two-colour print look on warm paper: use the Risograph print style guide writer."
 you_give:
-  - A description of your product
-  - Brand colours and fonts (optional)
-  - The mood you want
-  - Accessibility needs beyond the default (optional)
+  - A description of your product and what it does
+  - Who uses it
+  - Brand colours and fonts you must keep (optional)
+  - Screens or parts to cover first (optional)
+  - Web, iOS or Android (optional)
 you_get:
-  - A style guide for the dithered look
-  - Type, colour and spacing tokens
-  - Accessibility rules
-  - Do and don't lists
-  - Notes on states such as empty and error
+  - A small named palette, type sizes and spacing, with a contrast ratio for each colour pair
+  - Pattern rules with names, sizes and where each may be used
+  - Rules for each part, such as buttons and forms, with every state
+  - Accessibility rules you can test, plus do and don't lists
+  - A review checklist your team can run before shipping
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill into a new chat, or add it to your AI first.
+  - Paste your product description and who uses it. Add any fonts or colours you must keep, and say if it is for web, iOS or Android.
+  - Answer the one round of questions it asks, or say "use the defaults". Anything you leave out is marked MISSING.
+  - Check the colour table and the pattern rules first. Make sure no text sits straight on a pattern.
+  - Hand the guide to your designer or developer, or paste it into your coding AI's project instructions.
+how_it_works:
+  - title: State the idea
+    text: It writes one sentence on the dithered look and who it is for, before it sets any rules.
+  - title: Set the foundations
+    text: It sets a limited palette as named tokens, fonts, type sizes and spacing steps.
+  - title: Write the pattern rules
+    text: It names each dot pattern with a size and where it may be used, and sets how text sits near it.
+  - title: Check the contrast
+    text: It tests each text and background pair, and flags any under 4.5 to 1 for normal text.
+  - title: Write part rules
+    text: For each part it covers anatomy, variants, states and how it works by keyboard, mouse and touch.
+  - title: End with a checklist
+    text: It adds tone examples and things to avoid, then a list your team can run in code review.
+output_shape: |-
+  1. Context and goals: <the dithered look in one sentence, the product, who uses it>
+  2. Design tokens
+     | Token | Value | Use | Contrast on surface |
+     | <primary> | <hex> | <where it goes> | <ratio, pass or fail> |
+     Patterns: <name = size in px, where it may be used>
+     Fonts: <display>, <body>, <code>   Type steps: <name = size>   Spacing: <steps>
+  3. Parts: <button, form, card> with anatomy, variants, states, small screens
+  4. Accessibility rules: <rule> and <how to test it>
+  5. Tone: <voice words>, then <before> and <after> examples
+  6. What not to do: <rule> and <example to avoid>
+  7. Review checklist: - [ ] <check>
+  Next step: <who gets the guide>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - Your product and what it does
+    - Who uses it
+    - Brand colours and fonts you must keep (optional)
+    - Screens or parts to cover first (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the dithered look, the product and who it is for.
+    - name: Design tokens and foundations
+      contains: A limited palette, fonts, type sizes and spacing, with a contrast ratio for each pair.
+    - name: Pattern rules
+      contains: Each dot pattern with a name and size, where it may go and how text sits near it.
+    - name: Component rules
+      contains: Anatomy, variants, states and small-screen behaviour for each part, such as buttons and forms.
+    - name: Accessibility requirements
+      contains: Testable rules for focus, contrast, keyboard use and touch size.
+    - name: Content and tone standards
+      contains: Voice words with before and after examples.
+    - name: Anti-patterns and QA checklist
+      contains: What not to build, each with an example, then a list your team can run in code review.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your logo colours as hex codes
+    - Two or three dithered images you like, described in a few words
+    - A screenshot of your current screens
+    - Your current CSS or Tailwind colour list
+terms:
+  - term: Dithering
+    meaning: Using patterns of dots from a few colours to fake more shades.
+  - term: Token
+    meaning: A named value, such as primary blue, used in place of a raw colour code.
+  - term: Contrast ratio
+    meaning: How far apart two colours are in brightness. Normal text needs at least 4.5 to 1.
+  - term: Palette
+    meaning: The small set of colours the design is allowed to use.

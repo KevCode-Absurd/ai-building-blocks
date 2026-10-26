@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks from known systems and fills in the parts.
 new_slug: company-operating-system-setter
 name: Company operating system setter
-summary: "Describe your company. Get a way of running it: scorecard,
-  accountability chart, meetings and 90-day goals."
+summary: "Describe your company and get a company operating system: an accountability chart, weekly scorecard, meeting plan and 90-day goals."
 job: organise-work
 headline: Company operating system setter
-subhead: "Describe your company. Get a way of running it: scorecard,
-  accountability chart, meetings and 90-day goals. Bring a description of your
-  company and team size. Use the result to plan your next step."
+subhead: "Tell your AI about your company, your team size and what goes wrong. It picks a way of running the company that fits. You get an accountability chart, a weekly scorecard, a meeting plan and 90-day goals."
 explain: |
   A written way of running your company: who owns what, which numbers you watch each week, how meetings run, and what the team commits to this quarter. Most repeated problems come from missing structure, not from people, so this fixes the structure.
 
@@ -18,19 +15,48 @@ when:
   - Nobody is sure who owns a given outcome.
   - Quarterly goals keep slipping and no one is held to them.
   - You are growing past ten people and the informal way has stopped working.
+not_for:
+  - Your team is very small and one weekly check-in already works. Start with a simple weekly scorecard and skip the rest.
+  - You want one product or engineering decision made. Talk it through with your team lead or a trusted adviser instead.
+  - You need a full strategy or vision for the next three years. Run a planning session with your leadership team first, then come back.
 you_give:
   - A description of your company and team size
-  - Your current meetings and goals
+  - Your current meetings and goals (optional)
   - The main problems you see
   - A framework you already like (optional)
 you_get:
-  - An accountability chart
-  - A weekly scorecard
-  - A meeting agenda
-  - Quarterly goals with owners
-  - A plan for the first 90 days
+  - An accountability chart with one owner per function, plus gaps and overlaps
+  - A weekly scorecard of 5 to 15 numbers
+  - A weekly meeting agenda and a meeting rhythm
+  - 3 to 7 goals for the next 90 days for each person
+  - A first 30 days plan to get started
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into the chat.
+  - "Describe your company: what it does, how many people, and what goes wrong now. Add your current meetings and goals if you have them."
+  - Name a framework such as EOS or OKRs if you already like one. If not, your AI will suggest one.
+  - Check the accountability chart first. Make sure each function has just one owner.
+  - Cut the scorecard to the numbers you can really track each week, then start the weekly meeting.
+output_sample:
+  input:
+    - A description of your company and team size
+    - Your current meetings and goals (optional)
+    - The main problems you see
+    - A framework you already like, such as EOS or OKRs (optional)
+  output:
+    - name: Operating system pick
+      contains: "Which framework fits your size and style: EOS, Scaling Up, OKRs, Holacracy or a mix, with a short reason."
+    - name: Accountability chart
+      contains: One owner for each function, plus gaps nobody owns and overlaps where two people think they own it.
+    - name: Scorecard
+      contains: 5 to 15 weekly numbers, each with an owner, a target and a red, yellow or green status.
+    - name: Meeting pulse
+      contains: The rhythm of daily, weekly, monthly, quarterly and yearly meetings, with a fixed agenda for the weekly leadership meeting.
+    - name: Issues list and IDS steps
+      contains: How to name an issue, talk it through and solve it with one owner, one action and one due date.
+    - name: Rocks
+      contains: 3 to 7 clear 90-day goals per person, each one done or not done.
+    - name: Communication cadence
+      contains: Who hears what, when, and in what form, from staff to board to customers.
+    - name: First 30 days plan
+      contains: "The steps to start with: the accountability chart, a short scorecard and the weekly meeting."

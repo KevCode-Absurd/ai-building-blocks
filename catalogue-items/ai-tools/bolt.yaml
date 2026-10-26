@@ -2,31 +2,32 @@ slug: bolt
 name: Bolt
 maker: StackBlitz
 url: https://bolt.new
-promise: "Build and publish sites or apps from a chat, with hosting and data storage."
+promise: "Build and publish a website or app by chatting, with hosting and a database."
 use_cases: [build-apps, code]
 categories: [coding]
 what_it_does:
-  - Builds websites, apps, slides and prototypes from a chat.
-  - Starts from scratch, a Figma design, a GitHub repo or a template.
-  - "Includes a place to host the app, store data, sign in users and view site stats."
-  - Publishes with a custom domain on paid plans.
-  - Builds with your own design system so the result matches your brand.
+  - "Builds websites, apps, slides and prototypes from a chat (checked 26 Oct 2026)."
+  - "Starts from a written prompt, a Figma design, a GitHub repo or a template (checked 26 Oct 2026)."
+  - "Includes hosting, databases, user sign-in and site analytics through Bolt Cloud (checked 26 Oct 2026)."
+  - "Publishes with a custom domain. The pricing page lists a custom domain on Pro and above, not on Free (checked 26 Oct 2026)."
+  - "Builds on your own design system so the result matches your brand (checked 26 Oct 2026)."
 benefits:
   - "Turn a Figma design into a page you can review and test."
   - "Publish a link so others can test your idea."
-  - Keep hosting and a database in the same account as the build.
-  - Start free before you commit to a plan.
+  - "Keep hosting and a database in the same account as the build."
+  - "Start on the free plan before you commit to a paid one."
 best_for:
   - Founders and marketers who need a quick site or prototype.
   - Designers who want to see a design running as an app.
   - Teams that want shared templates and a shared token pool.
 not_for:
-  - Big, complex products that need a full engineering team.
-  - Anyone who wants a firm monthly cost, since large builds use many tokens.
+  - Big, complex products that need a full engineering team. Use Cursor or Claude Code with a developer.
+  - "Anyone who wants a firm monthly cost. Large builds use many tokens, and a token is a small piece of text the AI reads or writes."
+  - "A site on your own domain with no Bolt badge, if you want to stay on the free plan. Free sites carry Bolt branding."
 pricing:
   model: freemium
-  from: US$18 per month
-  note: Free plan with 1 million tokens a month and a 300,000 daily limit. Pro is US$18 per month billed yearly for 10 million tokens, and Teams is US$27 per member per month billed yearly.
+  from: US$18 per month, billed yearly
+  note: "Free: US$0, 1 million tokens a month with a 300,000 daily limit, Bolt branding on sites, 333,000 web requests a month. Pro: US$18 a month billed yearly (US$216 a year), starts at 10 million tokens, no daily limit, custom domain, no Bolt branding, tokens roll over, up to 1 million web requests a month. Teams: US$27 per member a month billed yearly, adds central billing, access management and priority support. Enterprise: custom contract, billed by use. Checked 26 Oct 2026."
 works_with:
   - Figma
   - GitHub
@@ -34,7 +35,27 @@ works_with:
 runs_in: [web]
 blocks: []
 alternatives: [lovable, v0, replit, cursor]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  web:
+    - "Go to bolt.new and describe what you want in the prompt box, for example 'a landing page for a dog walking service with a booking form'. Sign-in steps were not checked here."
+    - "Choose Plan to talk it through first, or Build now to let Bolt start (both listed on bolt.new, checked 26 Oct 2026). Pick Website, App, Slides or Prototype."
+    - "Open the preview. Click every button and form. Ask for one change at a time in the chat, such as 'make the booking button green and move it above the fold'."
+    - "Publish it to get a link you can share. Add a custom domain only if you are on a paid plan."
+needs:
+  - "A Bolt account. The free plan gives 1 million tokens a month."
+  - "A short brief: what the page or app is for, who uses it and the one action you want them to take."
+  - "A Figma file link or a GitHub repo, if you want to start from one (optional)."
+  - "A Pro plan if you want your own domain with no Bolt branding."
+example:
+  task: "A landing page for a dog walking service with a booking form."
+  cost: "Free plan: counts against 1 million tokens a month and a 300,000 daily limit. How many tokens one page uses was not checked, so watch the counter on your first build."
+  reply: "A working page in the preview, with the form. You can publish it to a link and edit it by chatting. We did not test how well the form saves bookings, so submit a test entry before you share the link."
+not_verified:
+  - "How many tokens a simple page or a larger app uses."
+  - "Whether the free plan lets you publish and what the link looks like."
+  - "How well Bolt follows a Figma design. We did not test it."
 sources:
   - https://bolt.new/pricing
   - https://bolt.new

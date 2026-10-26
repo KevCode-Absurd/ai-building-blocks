@@ -15,8 +15,8 @@ steps:
   - {uses: no-brainer-question-settler, note: "The settled questions, a sum for your target and a smaller question to work on"}
   - {uses: mental-model-checklist-runner, note: "An answer from each field, where they agree and clash, and the facts still missing. Reads the plan from the step before"}
   - {uses: decision-bias-pileup-checker, note: "The pressures at work and a calmer version of the choice. Reads the sharper question from step one"}
-  - {uses: incentive-checker, note: "Who is rewarded for what, where it pulls the wrong way, and a fix. Reads the plan from the step before"}
-  - {uses: second-order-effects-tracer, note: "The effects of the effects, who keeps the gain, and a plan that allows for the reactions"}
+  - {uses: incentive-checker, note: "Who is rewarded for what, where it pulls the wrong way, and a fix. Reads the plan from the step before. Hands step 5 the incentive findings"}
+  - {uses: second-order-effects-tracer, note: "The effects of the effects, who keeps the gain, and a plan that allows for the reactions. Reads the plan from step 3 and the incentive findings from step 4"}
   - {uses: failure-first-plan-check, note: "The ways it could fail, survival risks first, and the changes that avoid them"}
   - {uses: case-against-writer, note: "The best case against the plan, what is still open, and a go, change or wait call"}
 origin: rebuilt

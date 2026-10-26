@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: persuasive-claim-truth-checker
 name: Persuasive claim truth checker
-summary: Share an article, pitch, or post. Get checked claims, missing context, evidence links, and clear uncertainty.
+summary: Check a persuasive article, pitch or post with this claim truth checker. Get each claim sorted as supported, false, misleading or unknown.
 job: research-topics
 headline: Persuasive claim truth checker
 subhead: Share the message and the decision it is trying to influence. It separates factual claims from hints, value judgments, and predictions, then checks authoritative sources. You get a claim-by-claim report showing what is supported, contradicted, misleading, unclear, or still unknown.
+not_for:
+  - "You want broad research on a whole topic, not one message: use research-methodology, or ask your AI to run a wider search first."
+  - "You need a medical, legal or technical claim settled: ask a doctor, lawyer or domain expert."
+  - "You want to know if a person is lying from their video, voice or body language: this tool does not do that."
 you_give:
   - The original message or source, its context, and the decision or claim to check.
 you_get:
@@ -24,5 +28,32 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open a chat AI that can search the web or read links. Paste in this skill.
+  - Paste the full article, pitch or post. Add its link if it has one.
+  - Say what decision it is trying to move, such as a purchase, a share or a vote.
+  - Read the Bottom line first. Then open the sources in the Authoritative-source check.
+  - Do the Decision-safe next step before you act on a high-stakes claim.
+output_sample:
+  input:
+    - The article, pitch or post you want checked
+    - Its link, if it has one
+    - The decision it is trying to move (buy, share, vote, act)
+  prerequisites:
+    - An AI that can search the web or open original sources such as official records and studies
+  output:
+    - name: Bottom line
+      contains: "One verdict for the message: supported, false, misleading, complicated, unsupported or unknown."
+    - name: What is true
+      contains: The parts that evidence supports, each linked to its source.
+    - name: What is false
+      contains: Only the claims that evidence directly contradicts, with that evidence.
+    - name: What is complicated, and why
+      contains: Qualifiers, mixed evidence, limits of scope and value judgments that are not facts.
+    - name: How the message steers perception
+      contains: The persuasion techniques used and the conclusion each one invites, without guessing intent.
+    - name: Authoritative-source check
+      contains: The direct source for each key claim, when it was opened, and whether it settles the claim.
+    - name: Evidence ledger
+      contains: Each claim with its source, source type, limits and confidence.
+    - name: Decision-safe next step
+      contains: The smallest action that would cut the remaining doubt.

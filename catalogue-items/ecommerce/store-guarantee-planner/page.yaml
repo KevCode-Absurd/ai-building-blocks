@@ -1,6 +1,6 @@
 new_slug: store-guarantee-planner
 name: "Store guarantee planner"
-summary: "Give it sales, refund rate and product type. Get guarantee settings, a net-sales test and placement."
+summary: "Plan a store guarantee that raises net sales. Give it sales, refund rate and return cost. Get settings, a name, wording and where to show it."
 job: make-offer
 thinking: medium
 thinking_why: "It runs a few sums and writes wording from your numbers. A mid-size model is enough; read any legal line with care."
@@ -17,6 +17,10 @@ when:
   - Shoppers hesitate at checkout and you think a guarantee would help.
   - You want to extend your return window and need to know if you can afford it.
   - Your guarantee is buried in a policy page and nobody sees it.
+not_for:
+  - "You only want a guarantee name and refund sums for any business: use the Guarantee designer."
+  - "You cannot afford more refunds at your current margin: fix price or product quality first, then test again."
+  - "You need legal wording you can publish as is: ask a qualified person in your market to check it."
 
 you_give:
   - Your current sales and refund rate
@@ -37,6 +41,32 @@ how_to_use:
   - Say how much extra sales you expect, or ask it to show a few cases.
   - Check the wording against consumer law in your market before you publish.
   - Show the guarantee in a visible box on the page, in the cart and in your ads.
+output_sample:
+  input:
+    - Your current sales and refund rate
+    - The extra sales you expect from a stronger guarantee
+    - Your product type and margin
+    - What a return costs you (optional for digital goods)
+    - Your current return policy and payment setup (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder helps, but is not required
+  output:
+    - name: Net test
+      contains: Sales, refunds, net sales and net profit for your current guarantee and the stronger one, with a verdict.
+    - name: Settings
+      contains: Length, conditions, coverage and start point, plus the guarantee type and why it fits your product.
+    - name: Name
+      contains: A plain, vivid name for the guarantee.
+    - name: Wording
+      contains: Plain text you can publish after a legal check.
+    - name: Placement
+      contains: Where to show the guarantee on the page, in the cart, in ads and in the headline.
+    - name: Second layer
+      contains: An optional try-before-you-pay idea, if your payment setup allows it.
+    - name: Checks missed
+      contains: Any checks that failed, or none.
+    - name: Missing
+      contains: Anything you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: Tests net sales

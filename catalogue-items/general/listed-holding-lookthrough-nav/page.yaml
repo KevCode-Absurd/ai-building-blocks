@@ -1,46 +1,119 @@
 new_slug: listed-holding-lookthrough-nav
 name: Listed holding look-through NAV
 headline: Listed holding look-through NAV
-summary: Reconcile quoted ownership stakes and holding-company costs to look-through value per share.
+summary: Find a holding company's look-through net asset value per share. Uses its listed stakes at market value, its own cash and debt, and its costs.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A look-through NAV table with ownership and double-count checks. Share dated quoted subsidiary equity values, economic stakes, parent-only cash/debt, holding-cost value and parent shares.
+subhead: Give it the quoted equity value of each listed company the parent owns, and the parent's stake in each. Add the parent's own cash and debt, the value of its costs and its share count. It adds up the stakes, adjusts for the parent's items and gives net asset value per share. It also checks for double counting.
 explain: |-
-  A look-through NAV table with ownership and double-count checks.
+  A holding company owns shares in other listed companies. A look-through net asset value (NAV) asks a simple question: if you add up what its stakes are worth at today's quoted prices, then add its own cash and take off its own debt and costs, what is each of its shares worth? This skill builds that sum in a table you can check.
 
-  Public equity valuation. Illustrative figures.200×20%+300×30%+20-50-10=90 NAV, or9 per share. Increasing A by100 adds20 to NAV and2 per share.
+  The traps are in the details. Quoted equity value already has each subsidiary's debt taken out, so subsidiary debt must not come off again. Only the parent's own cash and debt count in the adjustments. Stakes must be the share of the company the parent really owns, and all prices must be from one market date. The skill checks each of these and lists anything it left out, such as unlisted assets, tax on a sale or cross holdings.
+
+  The answer is a quoted value, not a sale price. A buyer of a large stake may pay more or less.
 when:
-  - You need a look-through NAV table with ownership and double-count checks.
-  - You work on public equity valuation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A holding company's shares trade below the market value of the listed stakes it owns, and you want to see the gap.
+  - A listed stake's share price moved and you want the new NAV per share.
+  - You are writing up a holding company and want a table where each step can be checked.
+  - You want to know how much of a parent's price is explained by its listed stakes.
+not_for:
+  - The parent owns private companies or other unlisted assets. This works only from quoted prices, so value those parts separately.
+  - The holding company owns property. Use the Property net asset value calculator.
+  - You want the cash you would get if you sold a stake, after tax and discounts. This shows quoted value, not sale proceeds.
+  - The subsidiaries also own shares in the parent (cross holdings). That needs separate work, and the skill will say so.
+  - You want to know whether a share is worth buying. Use the Stock valuation margin-of-safety reviewer for a method, not a recommendation.
 you_give:
-  - Dated quoted subsidiary equity values, economic stakes, parent-only cash/debt, holding-cost value and parent shares.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The quoted equity value of each listed holding on one market date (market value of its shares, not enterprise value)
+  - The parent's economic stake in each holding, as a percent
+  - The parent's own cash and the parent's own debt, kept apart from the group's figures
+  - The present value of the parent's running costs (optional if the parent has none)
+  - The parent's share count
+  - The date, the currency and whether figures are in units, thousands or millions
 you_get:
-  - A look-through NAV table with ownership and double-count checks.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A look-through table with each holding's value, the stake and the value attributed to the parent
+  - The parent's cash, debt and cost value, added or taken off once
+  - Net asset value in total and per parent share
+  - Double-count checks, including what was left out and why
+  - A list of every input marked MISSING and every check that could not run
+  - A workbook version of the same lines, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste the text of SKILL.md into a new chat.
+  - Paste each holding's quoted equity value and the parent's stake in it, from one market date. Add the parent's own cash, debt, costs and share count.
+  - Say where each number comes from, such as the exchange price and the annual report. Say whether the cash and debt are for the parent alone or the whole group.
+  - Check that every value uses equity value, not enterprise value, and that the date is the same for every holding.
+  - Read the double-count checks, then MISSING and CHECKS MISSED, before you use the per-share figure.
+  - Compare the NAV per share with the parent's own share price, if you want to see the discount or premium.
 how_it_works:
-  - title: 1. Use quoted equity rather than enterprise values, economic stakes and one consistent market date
-    text: Use quoted equity rather than enterprise values, economic stakes and one consistent market date.
-  - title: 2. Multiply each equity value by the parent stake; add parent-only nonoperating cash and deduct parent-only debt and independently valued holding costs
-    text: Multiply each equity value by the parent stake; add parent-only nonoperating cash and deduct parent-only debt and independently valued holding costs.
-  - title: 3. Divide by parent shares and reconcile excluded assets, tax leakage and cross holdings; separate quoted value from realizable proceeds
-    text: Divide by parent shares and reconcile excluded assets, tax leakage and cross holdings; separate quoted value from realizable proceeds.
+  - title: 1. Fix the basis
+    text: Uses quoted equity value, economic stakes and one market date. Marks any figure that does not fit.
+  - title: 2. Value each stake
+    text: Multiplies each holding's equity value by the parent's stake.
+  - title: 3. Add the parent's own items
+    text: Adds the parent's own cash, takes off its own debt and the value of its costs. Subsidiary debt is not taken off again.
+  - title: 4. Divide by shares
+    text: Divides NAV by the parent's share count to give NAV per share.
+  - title: 5. Check for double counts
+    text: Looks at excluded assets, tax on a sale and cross holdings. Keeps quoted value apart from what a sale might bring.
+  - title: 6. Report gaps
+    text: Lists missing inputs and checks that could not run.
 output_shape: |-
-  A look-through NAV table with ownership and double-count checks.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Look-through NAV: <amount> | NAV per parent share: <amount> | Market date: <date>
+
+  SCOPE AND DATED SOURCES
+  <market date, currency, units; each figure with its source and date>
+
+  INPUTS AND ASSUMPTIONS
+  <figures given, each assumption>
+
+  LOOK-THROUGH TABLE
+  <holding> | Quoted equity value: <amount> | Stake: <percent> | Attributed value: <amount>
+  Holdings total: <amount>
+
+  PARENT-ONLY ITEMS
+  Plus parent cash: <amount> | Less parent debt: <amount> | Less cost value: <amount>
+
+  NAV AND PER SHARE
+  NAV: <holdings total plus cash less debt less costs> | Parent shares: <number> | NAV per share: <NAV / shares>
+
+  DOUBLE-COUNT CHECKS
+  Subsidiary debt already inside quoted equity: <not deducted again>
+  Parent-only against group cash and debt: <how they were separated>
+  Cross holdings, excluded assets and tax on a sale: <found, none given, or listed>
+
+  RECONCILIATIONS
+  <each figure tied to a record, with differences explained>
+
+  FILE CHECK
+  <what was checked in the workbook or calculator, or that none was made>
+
+  MISSING
+  <inputs not given>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+output_sample:
+  input:
+    - The quoted equity value of each listed holding, on one market date
+    - The parent's stake in each holding, and the parent's own cash and debt
+    - The present value of the parent's costs, and the parent's share count
+  prerequisites:
+    - Prices from one market date, and an annual report that separates the parent's own cash and debt from the group's
+    - An AI that can make files, if you want the workbook (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The market date, currency and units, and the source and date of each figure.
+    - name: Look-through table
+      contains: Each holding's quoted value, the parent's stake and the value attributed to the parent.
+    - name: Parent-only items
+      contains: The parent's cash added, and its debt and cost value taken off, once each.
+    - name: NAV and per share
+      contains: Net asset value in total and per parent share.
+    - name: Double-count checks
+      contains: What was not deducted twice, what was left out and why, and cross holdings found.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not given, and every check that failed or could not run, or "none".
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,15 +135,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: It does the arithmetic and shows each line, so you can check it against your sources.
+    - name: A spreadsheet app and an AI that can make files
+      why: Builds, recalculates and reopens the workbook version of the table.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small calculator in the pack, which handles two holdings. For more, use the workbook or the reply.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Exchange prices from one date, the parent's stakes, and the parent-only balance sheet.
+    - The parent's own share price, to compare with NAV per share.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Look-through NAV
+    meaning: What the parent's stakes are worth at quoted prices, plus its own cash, less its own debt and costs.
+  - term: Quoted equity value
+    meaning: A listed company's share price times its shares. Its debt is already taken out of this number.
+  - term: Economic stake
+    meaning: The share of a company's profits and value the parent owns, which can differ from its voting share.
+  - term: Cross holding
+    meaning: Two companies that each own part of the other, which makes simple sums count the same value twice.
+  - term: Parent-only cash and debt
+    meaning: Cash and debt held by the holding company itself, not by its subsidiaries.

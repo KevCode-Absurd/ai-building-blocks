@@ -2,35 +2,91 @@ thinking: medium
 thinking_why: A fair test needs clear scoring tied to the job.
 new_slug: work-sample-test-designer
 name: Work sample test designer
-summary: Name the role. Get a work test, a scoring guide and fairness checks.
-  You make the hiring call, not the AI.
+summary: Design a work sample test for any role, with a scoring guide and fairness checks, so you hire on what candidates can actually do.
 job: hire-people
 headline: Work sample test designer
-subhead: A work test tied to the real job, with a scoring guide and fairness
-  checks. You hire on what candidates can do, not how well they interview.
+subhead: Tell it the role and how long candidates can spend. Your AI picks a test type, writes a task from the first 90 days of the job, and builds a scoring guide. You get fairness checks and a way to combine scores. You make the hiring call.
 explain: |
-  A work test tied to the real job, with a scoring guide and fairness checks. You hire on what candidates can do, not how well they interview. The final decision stays with you, not the AI.
+  A work sample test asks a candidate to do a small piece of the real job. It is a good way to design a hiring test when interviews alone do not tell you who will do the work well. This skill helps you build one for your role, and it keeps the test fair.
 
-  You name the role and level. The skill picks the right method: skills test, work sample, simulation or assessment centre. It writes a task based on what the person would do in their first 90 days, builds a rubric that limits rater opinion and sets up a calibration session for assessors. It balances rigor against candidate time to limit drop-off, checks for bias and adverse impact, and shows how to combine scores with interview notes.
+  You name the role and level. Your AI first picks the best fit: a skills test, a work sample, a simulation or an assessment centre. It then writes a task based on what the person would do in their first 90 days. It builds a scoring guide with plain examples at each rating, so two people marking the same answer give close scores.
+
+  It also weighs how hard the test is against candidate time, because a long test makes good people drop out. It checks the task for bias and for steps that block people for reasons unrelated to the job. The final hire stays your decision.
 when:
-  - You are hiring and interviews are not predicting performance.
-  - Your team scores candidates differently.
-  - You need a take-home task that is fair to candidates.
-  - You want to audit a test you already use.
+  - Your interviews are not telling you who will do the job well.
+  - Two people on your team score the same candidate very differently.
+  - You want a take-home task that is fair and takes a sensible amount of time.
+  - You already use a test and want it checked for bias.
+not_for:
+  - "You only need good interview questions: use the hiring interview designer or the interview scorecard builder."
+  - "You want to check a test for fairness only: use the assessment fairness check."
+  - "The job needs a licence or a portfolio you can simply look at: check those first, and skip a test."
 you_give:
-  - Role and level
-  - Key tasks in the first 90 days
-  - Time candidates can spend
-  - Current hiring process (optional)
-  - Past hires' results (optional)
+  - The role and level
+  - The main tasks of the first 90 days
+  - How much time a candidate can spend
+  - Your current hiring steps (optional)
+  - How past hires turned out (optional)
 you_get:
-  - Work sample or test design
-  - Scoring rubric
-  - Assessor calibration plan
-  - Bias and fairness checks
-  - Guide to combining scores
+  - A test type picked for your role, with the reason
+  - A task brief you can send to candidates
+  - A scoring guide with examples at each rating
+  - A short plan to get your markers scoring alike
+  - Bias and fairness checks on the task
+  - A way to combine test scores with interview notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file.
+  - Write out the role, the level, the main first-90-days tasks and how much time candidates have. Paste that in.
+  - Ask your AI to pick a test type first. Read its reason. Say so if it does not fit your role.
+  - Ask for the task brief, then the scoring guide. Check that every task step is something the person would really do on the job.
+  - Ask for the fairness checks and the marker plan. Fix any step that blocks people for reasons unrelated to the work.
+  - Try the test on a colleague first. Then use it with live candidates.
+how_it_works:
+  - title: Pick the method
+    text: It picks a skills test, work sample, simulation or assessment centre based on the role and level.
+  - title: Write the task
+    text: It builds a task from what the person would do in their first 90 days.
+  - title: Build the scoring guide
+    text: It writes a guide with plain examples at each rating level to cut marker opinion.
+  - title: Plan the marker session
+    text: It sets up a short session where markers score a sample answer together and agree.
+  - title: Check time and fairness
+    text: It weighs rigour against candidate time, then looks for bias and steps that block people unfairly.
+  - title: Combine the scores
+    text: It shows how to join test scores and interview notes into one view.
+output_sample:
+  input:
+    - The role and level you are hiring for
+    - The main tasks of the first 90 days
+    - How much time a candidate can spend
+    - Your current hiring steps (optional)
+  output:
+    - name: Test type and reason
+      contains: Which method fits your role and level, and why the others fit less well.
+    - name: Task brief
+      contains: The exercise, the time limit, what to hand in, and a job-linked scenario.
+    - name: Scoring guide
+      contains: Criteria with examples at each rating level, so markers score from the same standard.
+    - name: Marker calibration plan
+      contains: A short session where markers score a sample answer together before live candidates.
+    - name: Fairness and bias checks
+      contains: Steps that could block candidates for reasons unrelated to the job, with fixes.
+    - name: Combining scores
+      contains: How to weigh the test and interview notes in one hiring recommendation.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can all write the task and scoring guide from text. No code or files are needed.
+  inputs:
+    - A job description for the role
+    - Two or three examples of strong past work, with names removed
+    - Your company values, if you want them reflected in the scoring
+terms:
+  - term: work sample test
+    meaning: A small, real task from the job that candidates complete so you can see their work.
+  - term: scoring guide
+    meaning: A list of what to look for, with examples at each rating, used to mark every answer the same way.
+  - term: assessment centre
+    meaning: A day or half day of several exercises, used mostly for senior roles.
+  - term: adverse impact
+    meaning: When a test lowers the pass rate for one group, such as by age or gender, more than for others.

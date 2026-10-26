@@ -1,53 +1,88 @@
 new_slug: reconcile-share-compensation-dilution-and-cash
 name: Reconcile share compensation dilution and cash
 headline: Reconcile share compensation dilution and cash
-summary: Separate accounting diluted shares from actual employee issuance and a cash-offset scenario.
+summary: Separate accounting diluted shares from shares really issued to staff, and compare the cash cost of offsetting them with reported expense.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked award dilution and employee-share cash-offset workbook. Share share-based award notes, average market prices, assumed proceeds, actual vested/issued shares and compensation expense.
+subhead: Give it the share award notes, average share prices, assumed exercise proceeds, shares actually vested and issued, and the compensation expense. It builds weighted shares, works out option dilution, then prices a cash offset. You get three clean share counts and a cost comparison.
 explain: |-
-  A linked award dilution and employee-share cash-offset workbook.
+  Share awards show up in three different places. Shares actually issued to staff. Weighted average shares used for earnings per share. And extra shares from options that might still be exercised. They are often mixed into one number, and exercise proceeds get counted twice.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow keeps them apart. Step 1 builds weighted average shares from the real issuance dates and separates issued shares from future potential ones. Step 2 uses the terms of each award class and that weighted base to work out accounting dilution. Step 3 takes the net shares actually issued and the cash employees paid in, and prices an offset scenario: what it would cost in cash to buy the shares back.
+
+  It compares cash cost with reported compensation expense and keeps both. It does not claim they are equal. The offset is a scenario, not a trade, and nothing is bought.
 when:
-  - You need a linked award dilution and employee-share cash-offset workbook.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Diluted shares rose and you need to know what is real issuance and what is accounting.
+  - A board asks what it would cost in cash to offset the shares given to staff.
+  - Reported share compensation expense and the cash cost are far apart and you need to explain why.
+  - Option exercise proceeds may be counted in two places.
+not_for:
+  - You only need weighted shares and basic EPS. Use the Weighted-average share schedule on its own.
+  - You only need option dilution. Use the Treasury-stock option dilution skill on its own.
+  - You want basic and diluted EPS tested against reported EPS across several instruments. Use the Reconcile basic and diluted issuer EPS workflow.
+  - You want to link buybacks to owner cash. Use the Reconcile buybacks with owner cash workflow.
 you_give:
-  - Share-based award notes, average market prices, assumed proceeds, actual vested/issued shares and compensation expense.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Share-based award notes, with terms for each award class (from the annual report notes)
+  - Average market prices for each period (from your price source, with dates)
+  - Assumed exercise proceeds per award (from the award terms)
+  - Shares actually vested and issued, with issue dates (from the share ledger)
+  - Compensation expense for the period (from the income statement or notes)
 you_get:
-  - A linked award dilution and employee-share cash-offset workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A weighted-average share schedule, with issued and potential shares kept apart
+  - Accounting dilution from options, using your award terms
+  - A cash-offset cost for net shares actually issued, as a scenario
+  - A side-by-side of cash cost and reported compensation expense
+  - Every MISSING input and any check that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can build spreadsheets.
+  - Attach the award notes, share ledger and expense figures. Paste the average share prices with their dates. Say the period, currency and scale once.
+  - After step 1, check weighted shares against the filing. Issued shares and potential shares should be separate.
+  - After step 2, check the dilution uses your award terms and the weighted base from step 1.
+  - After step 3, read the offset as a scenario only. Fill every MISSING line before quoting a figure.
 how_it_works:
   - title: Weighted-average share schedule
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile actual employee issuance dates to basic weighted ordinary shares and distinguish issued shares from future potential shares.
+    text: Reconciles real employee issuance dates to weighted basic shares. Separates issued shares from future potential shares. Hands step 2 the weighted basic base. Check before moving on, weighted shares tie to the filing.
   - title: Treasury-stock option dilution
-    text: Use award-class terms and the verified weighted basic denominator to calculate accounting incremental shares; do not substitute actual issued-share counts for weighted options.
+    text: Uses each award class's terms and the weighted basic base to work out accounting incremental shares. Never swaps issued share counts in for weighted option shares. Check before moving on, exercise proceeds appear once.
   - title: Share compensation cash-offset cost
-    text: Use separately sourced net shares actually issued and employee cash proceeds for an explicit offset scenario. Compare cash cost with accounting compensation while retaining both and avoiding duplicate dilution deductions.
+    text: Uses net shares actually issued and the cash employees paid in to price an offset scenario. Compares cash cost with accounting expense and keeps both. Check before you rely on it, dilution is not taken off twice.
 output_shape: |-
-  A linked award dilution and employee-share cash-offset workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  PERIOD <dates>, <currency>, <scale>
+
+  1 WEIGHTED SHARES   basic weighted <n>, issued to staff <n>, potential shares <n>
+  2 OPTION DILUTION   by award class: incremental shares <n>, diluted weighted <n>
+  3 CASH OFFSET       net shares issued <n> x price <n> - employee proceeds <n> = <n>
+  COMPARE             reported compensation expense <n> vs cash offset cost <n>
+
+  SOURCES             <each input, its source, date and unit>
+  MISSING             <each gap and the line it stops>
+  CHECKS MISSED       <one line each, or none>
+output_sample:
+  input:
+    - Share award notes and terms for each class
+    - Average market prices with dates
+    - Shares vested and issued, with issue dates
+    - Compensation expense and employee exercise proceeds
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook
+  output:
+    - name: outputs/step-1-weighted-average-share-schedule.md
+      contains: Weighted basic shares, with issued and potential shares kept apart.
+    - name: outputs/step-2-treasury-stock-option-dilution.md
+      contains: Accounting incremental shares for each award class, on the weighted base.
+    - name: outputs/step-3-sbc-share-offset-cost.md
+      contains: The cash cost of offsetting issued shares, set against reported expense.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Actual issued, basic weighted and potential diluted shares remain separate; exercise proceeds appear once; reported compensation and cash offset are reconciled without claiming equivalence.
+  - what: A higher share price
+    how: Raise the average price. Option dilution and the cash offset both rise, and the gap to reported expense changes.
+  - what: Late-year issuance
+    how: Move issue dates later. Weighted shares fall even though issued shares stay the same.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and lists what it could not verify.
 judge:
   - Actual issued, basic weighted and potential diluted shares remain separate; exercise proceeds appear once; reported compensation and cash offset are reconciled without claiming equivalence.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +93,25 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a ledger of every issue with its date and award class, and paste it in every time.
+  - Save each period's average price and its source so next period's dilution is comparable.
+  - Pair it with the basic and diluted EPS workflow when you also hold convertibles.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The share-based pay note, not a summary.
+    - A share ledger with issue dates.
+    - The price source and the dates it covers.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Weighted average shares
+    meaning: Share count adjusted for how long each share was in issue during the period.
+  - term: Dilution
+    meaning: Extra shares that could exist if awards were exercised, which lower earnings per share.
+  - term: Treasury stock method
+    meaning: A way to count option dilution by assuming exercise cash buys back shares.
+  - term: Award class
+    meaning: A group of awards with the same terms, such as one grant year.
+  - term: Cash offset
+    meaning: A scenario that prices the cash needed to buy back the shares issued to staff.

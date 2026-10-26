@@ -2,16 +2,32 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: resale-store-pricing-and-layout-planner
 name: Resale store pricing and layout planner
-summary: Share item grades and sales records. Get price bands, markdown dates, display zones, and a stock rotation plan.
+summary: Plan resale store pricing and layout. Share your item grades and sales records. Get price bands, a markdown calendar and floor zones.
 job: set-prices
 headline: Resale store pricing and layout planner
 subhead: Share your donated goods, condition grades, sales records, and shop layout. It checks category prices, slow stock, and display choices. You get price bands, premium-item rules, a markdown calendar, floor zones, and seasonal changes to review with your store team.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - You need to price donated goods the same way on every shift.
+  - Old stock is piling up and crowding your shop floor.
+  - Your floor feels cluttered and you want a clearer layout.
+  - A season is coming and you want to plan the changeover early.
+not_for:
+  - "You want to list high-value items for online auction: use the online resale skill in your own library, or check recent sold listings by hand."
+  - "You need help grading new donations before they reach pricing: grade them with your intake team first, then come back here."
+  - "You need till setup, cash handling or theft prevention: ask your store operations lead or your point-of-sale provider."
 you_give:
-  - Item categories, condition grades, sales and aging records, local price evidence, and available shop space.
+  - Your item categories and condition grades
+  - Counts of items by grade (optional)
+  - Your sales records for the last 30, 60 and 90 days (optional)
+  - A sketch of your shop floor and display space
+  - Prices from other local resale shops (optional)
 you_get:
-  - Price bands, premium criteria, markdown calendar, floor zones, seasonal plan, and sales-through measures.
+  - A price-band table with category, condition grade, price range and a premium flag
+  - Rules for which items go in the boutique section
+  - A markdown calendar with tag colors, week thresholds and markdown percents
+  - A floor plan with category zones and where the boutique sits
+  - A seasonal rotation calendar
+  - A monthly sell-through check for each category
 how_it_works:
   - title: Set clear price bands
     text: Use category and condition grades to make consistent price ranges, with separate criteria for premium items.
@@ -26,5 +42,30 @@ works_best_with:
   inputs:
     - Pricing and floor layout for donated goods; adjust and move on.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Gather your category list, grade counts, sales records and a floor sketch.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste or upload your records. No code or paid tool is needed.
+  - Ask for the price-band table first. Check each range against what you really charge and what nearby shops charge.
+  - Ask for the markdown calendar, floor zones and seasonal plan next.
+  - Review the plan with your store team before you change any price tags.
+  - Repeat the sell-through check each month and adjust bands or space.
+output_sample:
+  input:
+    - Your item categories and condition grades
+    - Your 30, 60 and 90 day sales records (optional)
+    - Your sketch of the shop floor
+    - Prices from other local resale shops (optional)
+  prerequisites:
+    - Condition grades from your donation intake team, if you already grade items
+  output:
+    - name: Category price-band matrix
+      contains: A price or narrow range for each category and subcategory, so every shift prices the same way.
+    - name: Boutique-tier criteria and pricing guide
+      contains: Rules for brands, like-new condition and vintage signs that move an item to the premium section.
+    - name: Color-tag and markdown calendar
+      contains: Tag colors by intake week, with the week and markdown percent when each tag drops in price.
+    - name: Floor plan
+      contains: Category zones, sightlines from the door, checkout impulse spots and where the boutique section sits.
+    - name: Seasonal rotation calendar
+      contains: When to swap seasonal stock onto the floor and how to stage the change in backstock.
+    - name: Sell-through by category report
+      contains: The share of stock that sold in each time window, to show which categories need a price or space change.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sets up the browser list, runs tests and reads failures.
 new_slug: browserstack-test-runner
 name: BrowserStack test runner
-summary: Give it your Playwright tests. Get them run on many browsers and
-  devices, with a pass and fail report.
+summary: Run your Playwright tests on BrowserStack to check Chrome, Firefox and Safari. You get a pass and fail report for each browser.
 job: test-and-fix-code
 headline: BrowserStack test runner
-subhead: Give it your Playwright tests. Get them run on many browsers and
-  devices, with a pass and fail report. Bring your Playwright tests. Use the
-  result to plan your next step.
+subhead: Give it your Playwright tests. Get them run on many browsers and devices, with a pass and fail report. Bring your Playwright tests. Use the result to plan your next step.
 explain: |
   Run your Playwright tests on many browsers and phones in the cloud, and get a clear report of what passed and failed on each.
 
@@ -18,6 +15,10 @@ when:
   - You need to check your app on real phones and tablets.
   - A customer reports a bug on a browser you do not own.
   - You want a pass and fail table across browsers before a release.
+not_for:
+  - "You only need a quick check on your own computer: run Playwright locally, which is free and needs no account."
+  - "You have no Playwright tests yet: write a few first, or ask a developer to set them up, then come back."
+  - "You cannot enable the BrowserStack tool by hand: run your Playwright config with the BrowserStack link and read results in the terminal."
 you_give:
   - Your Playwright tests
   - A BrowserStack username and access key
@@ -28,9 +29,31 @@ you_get:
   - A pass and fail report
   - Failures grouped by browser
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use a BrowserStack tool you set
-    up yourself.
+  - Set BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY on your computer. You find both in your BrowserStack account settings.
+  - Turn on the BrowserStack tool by hand. The skill tells you where. Without it, the results step fails.
+  - "Open your project in an AI that can run code. Paste the skill and say: set up BrowserStack."
+  - Ask it to run your tests on BrowserStack. It checks your keys first and stops if they are missing.
+  - Ask for the results table. Read the failures for each browser and fix those first.
+  - If you cannot turn the tool on, run the tests with the BrowserStack config and read the results in the terminal.
+output_sample:
+  input:
+    - Your Playwright tests and config file
+    - Your BrowserStack username and access key
+    - The browsers and devices to cover (optional)
+  prerequisites:
+    - An AI that can run code and edit your project files
+    - A BrowserStack account, trial or paid
+    - The BrowserStack tool turned on by hand, as the skill explains
+  output:
+    - name: playwright.config.ts update
+      contains: New cloud projects for Chrome on Windows 11, Firefox on Windows 11 and Safari engine on macOS Ventura.
+    - name: Cloud test script
+      contains: An npm script that runs your tests on the BrowserStack projects.
+    - name: Test run
+      contains: Your tests run on the BrowserStack cloud, with progress checked as they go.
+    - name: Cross-browser results table
+      contains: One row per browser with its pass or fail status.
+    - name: Build results
+      contains: "For each session: browser, system, length of run, and links to video and logs."
+    - name: Browser-specific failures
+      contains: Failures that happen on one browser, called out so you can fix them.

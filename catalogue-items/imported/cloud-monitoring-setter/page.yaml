@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows monitoring patterns, tuned to your setup.
 new_slug: cloud-monitoring-setter
 name: Cloud monitoring setter
-summary: Name your app and cloud. Get metrics, logs, traces and alerts set up to
-  see health in real time.
+summary: "Set up cloud monitoring for your app: get metrics, logs, traces, dashboards and alert rules for your cloud, so you spot problems before users do."
 job: ship-and-host
 headline: Cloud monitoring setter
-subhead: "Know when your app is slow or broken before your users tell you. You
-  end up with a monitoring plan and the config to run it: metrics, logs, traces,
-  dashboards and alert rules for your cloud."
+subhead: "Know when your app is slow or broken before your users tell you. You end up with a monitoring plan and the config to run it: metrics, logs, traces, dashboards and alert rules for your cloud."
 explain: |
   Know when your app is slow or broken before your users tell you. You end up with a monitoring plan and the config to run it: metrics, logs, traces, dashboards and alert rules for your cloud.
 
@@ -18,6 +15,10 @@ when:
   - You are moving to a cloud provider and need monitoring from day one.
   - Your alerts fire all night and nobody trusts them any more.
   - You need a dashboard that shows whether your service is healthy.
+not_for:
+  - "You run one static site or need a one-off check: use a free uptime checker, not a full monitoring setup."
+  - "You have no one to run config files on your cloud: ask a developer, or use a hosted monitoring service that sets itself up."
+  - "You need to find why a past outage happened: read your logs with a person who knows the app, then come back to set up alerts."
 you_give:
   - Your app and cloud provider
   - What must stay fast and online
@@ -29,7 +30,32 @@ you_get:
   - Dashboards by service
   - Alert rules with fewer false alarms
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI your cloud provider, your app, and the services to watch.
+  - Say what must stay fast and online, such as response time and error rate. Add your alert tools and who gets alerts.
+  - Read the plan and config files your AI writes. Check that names and limits match your setup.
+  - Apply the config in your cloud, or hand it to a developer. Your AI cannot apply it for you in a plain chat.
+  - After two weeks, check which alerts fired. Ask your AI to remove or adjust the noisy ones.
+output_sample:
+  input:
+    - Your cloud provider, such as AWS, Google Cloud or Azure
+    - The services you want to watch
+    - What must stay fast and online, such as response time and error rate
+    - Tools you already use (optional)
+    - Who gets alerts and where, such as Slack or PagerDuty (optional)
+  prerequisites:
+    - Access to your cloud account, or a developer who has it, to apply the config files
+    - A paid account for some tools, such as PagerDuty, Opsgenie or Datadog, if you choose them
+  output:
+    - name: Monitoring goals
+      contains: The key services, the health targets for each, such as response time and error rate, and who owns them.
+    - name: Tool choices
+      contains: The monitoring tools that fit your cloud for metrics, logs and traces, and how your app sends data to them.
+    - name: Metrics setup and dashboards
+      contains: Config to collect metrics, plus dashboards for latency, traffic, errors and saturation, grouped by service.
+    - name: Alert rules
+      contains: Alerts that fire on real user-facing problems, with routing so urgent ones page someone and minor ones go to chat.
+    - name: Log and trace setup
+      contains: Central log collection in a set format, linked to traces so one alert leads to the exact request.
+    - name: Review plan
+      contains: A routine to prune noisy alerts, adjust limits and add new services over time.

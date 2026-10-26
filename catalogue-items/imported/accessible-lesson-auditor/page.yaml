@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It reviews a whole lesson against three principles.
 new_slug: accessible-lesson-auditor
 name: Accessible lesson auditor
-summary: Paste a lesson plan. Get the barriers it creates for some learners,
-  with fixes ranked by impact.
+summary: Check your lesson plan for barriers that shut some learners out. Get an accessible lesson audit with fixes ranked by impact, and what to keep.
 job: teach-and-train
 headline: Accessible lesson auditor
-subhead: Paste the lesson or unit plan, the learning goal and your class size
-  and age group. It reads the plan against the three Universal Design for
-  Learning ideas and finds choices that shut some learners out. You get the
-  barriers, fixes ranked by impact, what already works and what to leave alone.
+subhead: Paste the lesson or unit plan, the learning goal and your class size and age group. It reads the plan against the three Universal Design for Learning ideas and finds choices that shut some learners out. You get the barriers, fixes ranked by impact, what already works and what to leave alone.
 explain: |
   A lesson you already wrote can be checked for barriers, with the fixes that matter most listed first. It keeps your learning goal and works within limits you cannot change.
 
@@ -19,18 +15,42 @@ when:
   - You teach a mixed-ability class and want practical changes.
   - A colleague asked for feedback on a unit plan.
   - You want to improve a lesson without starting over.
+not_for:
+  - "You need to assess a named student with an IEP or a diagnosis: start with the specialist's report, then use this audit on the lesson."
+  - "You want a brand new lesson written from scratch: ask your AI to draft one first, then bring the plan here."
+  - "You want to watch how a lesson runs in the room: ask a colleague to observe, because this reads the plan only."
 you_give:
-  - The lesson or unit plan
-  - The learning goal
-  - Class size and age group
-  - Things you cannot change, such as time or room (optional)
+  - The lesson or unit plan, with goals, activities, materials and assessment
+  - A short description of your students, such as age, class size and the range of needs
+  - Things you cannot change, such as a set text or time limit (optional)
+  - Access worries you already have (optional)
 you_get:
   - A barrier check across the three UDL principles
   - Fixes ranked by impact
   - Things the lesson already does well
   - Notes on what to leave alone
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into the chat.
+  - Paste your lesson plan, then describe your students and any limits you cannot change.
+  - Read the priority changes first. Pick the ones that fit your class.
+  - Keep the parts listed under What to Keep. Check every idea against what you know about your students.
+output_sample:
+  input:
+    - Your lesson or unit plan, with goals, activities, materials and assessment
+    - A short note on your students, such as age and the range of needs
+    - Worries about access barriers (optional)
+    - Things you cannot change, such as a set text or time limit (optional)
+  output:
+    - name: "Principle 1: Multiple Means of Engagement"
+      contains: What works, the barriers to interest and effort, and specific changes.
+    - name: "Principle 2: Multiple Means of Representation"
+      contains: What works, the barriers in how information is shown, and specific changes.
+    - name: "Principle 3: Multiple Means of Action and Expression"
+      contains: What works, the barriers in how students respond, and specific changes.
+    - name: Priority Modifications
+      contains: The 3 to 5 changes with the biggest effect, and which learners each one helps.
+    - name: What to Keep
+      contains: Parts of your lesson that already help access and should stay.
+    - name: Facilitation Notes
+      contains: Cautions and checks that depend on how well you know your students.

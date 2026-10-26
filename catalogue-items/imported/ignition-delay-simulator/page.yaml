@@ -2,35 +2,63 @@ thinking: medium
 thinking_why: It follows set steps but must check conservation and settings.
 new_slug: ignition-delay-simulator
 name: Ignition delay simulator
-summary: Give it a fuel mix, heat and pressure. Get an ignition delay with
-  checks that the result is sound.
+summary: Find the ignition delay of a fuel mix at your heat and pressure, with checks on whether the result holds. Needs Python and Cantera.
 job: track-numbers
 headline: Ignition delay simulator
-subhead: Give it a fuel mix, heat and pressure. Get an ignition delay with
-  checks that the result is sound. Bring a reaction model file and its source.
-  Use the result to plan your next step.
+subhead: Give it a fuel mix, a starting heat and pressure, and a reaction model file. It runs a sealed gas mixture four ways and reports the ignition delay. It also checks that mass and energy are kept and that the delay holds when you refine the run.
 explain: |
   A calculated ignition delay for a fuel mix at a set temperature and pressure, with checks that show whether the number can be trusted. It simulates a closed, sealed, uniform gas mixture using the Cantera chemistry library.
 
   You pick the reaction model first and confirm it covers your fuel and conditions. Then you choose constant volume or constant pressure to match the real experiment and enter units in kelvin, pascals, seconds and mole amounts. A template file holds your conditions. The helper defines ignition by temperature rise and heating-rate peak, so the result is exact. A finished run proves only that the math ran, not that the model fits your fuel. It needs Python, Cantera and NumPy.
 when:
-  - You need the time a fuel mix takes to ignite at engine-like conditions.
-  - You are comparing simulation with shock tube measurements.
-  - You want to check that a reaction model suits your fuel.
-  - A result looks odd and you suspect two-stage ignition.
+  - You need the ignition delay of a fuel mix at engine-like conditions.
+  - You are comparing a simulation with shock tube measurements.
+  - A result looks odd and you want to see if it is two-stage ignition or unresolved.
+  - You want to see if a delay holds when you run it finer and longer.
+not_for:
+  - "You need a flame, a flow device or a surface reaction model: use a model built for that physics, as this tool does not cover them."
+  - "You need to include shock-tube heat loss or real-gas effects: use a model that adds that physics, or ask a combustion engineer."
+  - "You only want to know if a reaction model suits your fuel: check the model's source for its tested range first, then come back to run it."
 you_give:
-  - A reaction model file and its source
-  - Fuel and oxidizer mix in moles
-  - Starting temperature and pressure
-  - Constant volume or constant pressure choice
+  - A reaction model file (Cantera YAML) and where it came from
+  - Your fuel and oxidizer mix, in moles
+  - Your starting temperature in kelvin and pressure in pascals
+  - Constant volume or constant pressure, to match your experiment
+  - A run time and output spacing (optional)
 you_get:
-  - An ignition delay time
-  - The exact definition used for ignition
-  - The normalized starting mix
-  - Notes on whether the result is reliable
+  - An ignition delay time, or a clear note that none was found
+  - The exact definition of ignition used, the peak heating rate
+  - Your starting mix, scaled to mole fractions
+  - Four runs that test if the delay holds when refined
+  - Mass and energy checks, and a note on whether the result is resolved
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open an AI that can run Python code, such as Claude with code tools. Installing Cantera needs network access.
+  - Upload the skill folder, or paste in SKILL.md and the sample hydrogen-ignition.json file.
+  - Copy the sample file and change it to your mix, heat, pressure and reaction model.
+  - Ask your AI to run the ignition script with your file and a new output folder.
+  - Read report.json first. Check the delay is marked resolved and the conservation checks pass.
+  - Next, compare the delay with measured shock-tube data and check your model's tested range. A finished run shows the math ran, not that the model fits your fuel.
+output_sample:
+  input:
+    - Your reaction model file and its source
+    - Your fuel and oxidizer mix, in moles
+    - Your starting temperature and pressure
+    - Constant volume or constant pressure
+    - How long to run and how finely to record (optional, the sample file sets defaults)
+  prerequisites:
+    - An AI that can run Python code
+    - Python with Cantera and NumPy installed
+    - Your reaction model as a Cantera YAML file, or use the bundled hydrogen example
+  output:
+    - name: report.json
+      contains: Your settings, package versions, file hashes, the starting mix, four delay estimates, conservation checks and temperature limits.
+    - name: baseline.csv
+      contains: Time, temperature, pressure, volume, mass, energy and chosen species amounts for the run with your original settings.
+    - name: finer_output.csv
+      contains: The same history recorded at half the output spacing, to test the delay.
+    - name: tighter_solver.csv
+      contains: The same history with tighter solver settings, to test the delay.
+    - name: longer_horizon.csv
+      contains: The same history run for twice as long, to check the ignition peak is not near the end.
+    - name: mechanism.yaml
+      contains: A saved copy of the reaction model as loaded, so you can replay the run.

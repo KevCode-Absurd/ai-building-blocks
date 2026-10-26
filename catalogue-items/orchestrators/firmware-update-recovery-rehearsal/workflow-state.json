@@ -1,0 +1,60 @@
+{
+  "schema": "abb-task-stages/1",
+  "name": "Firmware update recovery rehearsal",
+  "governingInstruction": "SKILL.md",
+  "execution": "user-ai-environment",
+  "stages": [
+    {
+      "order": 1,
+      "id": "inventory",
+      "title": "Bind the hardware and update revision",
+      "needs": "Device matrix, bootloader/partition design, firmware revisions and update manifest.",
+      "work": "Record exact hardware, bootloader and firmware versions, supported paths, trust boundaries, required log/health signals and physical recovery access. Flag unknown compatibility or signing/boot-confirm assumptions without requesting secret key values.",
+      "hands": "Compatibility/recovery matrix and unresolved prerequisites.",
+      "gate": "Unknown required compatibility or recovery facts block affected test cases.",
+      "state": "NOT_STARTED",
+      "dependsOn": []
+    },
+    {
+      "order": 2,
+      "id": "fault-plan",
+      "title": "Specify the recovery rehearsal",
+      "needs": "Accepted inventory and the user's available lab capabilities.",
+      "work": "Plan interrupted download/write, truncated or wrong-target images, invalid signatures, failed first boot, watchdog/reset loops and missing healthy confirmation. Include stale/offline devices, duplicate or expired commands and each hardware revision. Define expected safe state and observable recovery evidence per case.",
+      "hands": "Test matrix with case ID, revision, expected transition, recovery path and evidence needed.",
+      "gate": "A case with no safe recovery path is BLOCKED. Planning is allowed without executing the lab.",
+      "state": "NOT_STARTED",
+      "dependsOn": [
+        "inventory"
+      ]
+    },
+    {
+      "order": 3,
+      "id": "evidence",
+      "title": "Run authorized lab checks or assess supplied evidence",
+      "needs": "The test matrix, a safe lab and applicable authorization, or actual supplied test records.",
+      "work": "Flash, fault-inject or change device state only when specifically authorized and the relevant lab/recovery tools are available. Otherwise assess supplied records or return the runnable plan. Never treat a simulation as proof of physical recovery. Reject incomplete/invalid images before marking bootable; assess rollback and boot-confirm results per hardware revision.",
+      "hands": "Revision-bound PASS/FAIL/NOT_RUN/BLOCKED register with actual logs/artifacts.",
+      "gate": "Unrun, failed or incomplete recovery evidence blocks a rollout-ready conclusion.",
+      "state": "NOT_STARTED",
+      "dependsOn": [
+        "fault-plan"
+      ]
+    },
+    {
+      "order": 4,
+      "id": "proposal",
+      "title": "Prepare a hardware-diverse canary proposal",
+      "needs": "Evidence register and user-defined rollout goals/thresholds.",
+      "work": "Propose representative cohorts, observation/health windows, offline-device handling and halt/rollback owners. Replace source example percentages and timings with fleet-specific values to agree. Widening a rollout, distributing firmware or changing policy is a separate authorized action.",
+      "hands": "Canary plan, acceptance/stop conditions, owners and unresolved decision list.",
+      "gate": "No rollout is described as approved or executed without applicable authorization and real evidence.",
+      "state": "NOT_STARTED",
+      "dependsOn": [
+        "evidence"
+      ]
+    }
+  ],
+  "actionsPerformed": [],
+  "completion": "All applicable stage inputs, outputs and blocking checks accepted with real evidence."
+}

@@ -8,6 +8,33 @@ license: Complete terms in LICENSE.txt
 
 Approach this as the design lead at a design studio known for giving every client a distinct visual identity that is not mistaken for anyone else's. This client has already rejected proposals that felt cliché or templated, and is paying for a distinctive point of view: make deliberate, opinionated choices about palette, typography, and layout that are specific to this brief, and take aesthetic risk if justified.
 
+## When not to use (added by AI Blocks)
+
+- The product already has a design system or component library. Use it, and keep the new screens consistent with it.
+- The screen is a data-heavy internal tool, such as an admin grid, where a familiar layout helps more than a distinct look.
+- You only need small spacing or type fixes on an existing page. Use the Interface polish checker instead.
+
+## Before you design (added by AI Blocks)
+
+Ask once for anything missing. Never invent it.
+
+1. What the page or app is for, and who uses it. If the brief leaves this out, propose one subject, one audience and one job, and wait for a yes.
+2. Real content, if the person has it: headings, product names, prices, quotes.
+3. Brand colours, fonts and the framework (optional). If no framework is given, build in plain HTML and CSS.
+
+Copy you write because the brief had none is placeholder text. Never invent testimonials, statistics, customer names, prices or awards. Mark every placeholder line clearly, for example with "[placeholder]", so it is replaced before publishing.
+
+## Output (added by AI Blocks)
+
+Return these parts, in this order:
+
+1. **Design plan.** Four to six named hex colours, the typefaces and their roles, a short layout concept with an ASCII wireframe, and the principles. Add what you changed after the review against the brief.
+2. **Built interface.** The code files for the page or app, ready to run.
+3. **Placeholder list.** Every line of invented copy, so the person knows what to replace.
+4. **Checks.** Whether you tested phone width, keyboard focus and reduced motion, or marked them "not run" if you could not.
+
+Then give one next step, such as testing on a real phone or swapping in the real copy.
+
 ## Ground your designs in the subject matter
 
 If the brief does not identify what the product or subject matter is, identify it yourself before designing, and confirm with the client. You can come up with one concrete subject, the design's audience, and the design's primary job, as a proposal. If there's any information in your memory about the client's preferences or context about what they're building, use that as a hint. The subject's industry, subject matter, materials, and vernacular are where distinctive visual choices come from — a design for a toy for girls aged 8–11 will be very aesthetically different from a dashboard for financial analysts. Build with the brief's real content and subject matter throughout.

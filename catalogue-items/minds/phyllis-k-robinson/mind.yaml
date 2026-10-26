@@ -16,6 +16,28 @@ use_cases:
   - "Speak to a younger audience in their own words without talking down"
   - "Hire or coach creative people by looking for potential, not polish"
   - "Run a creative review where every idea gets respect, even ones you dislike"
+not_for:
+  - "You need sharp proof, offers and tracked response: use the Claude Hopkins mind, or the Dan Kennedy mind for direct response copy."
+  - "You want a clear market position for your product: use the April Dunford mind or the Al Ries mind."
+  - "You need legal, medical or pricing copy, or a product claim with no test evidence: ask a compliance reviewer or use your own test data."
+output_sample:
+  input:
+    - Your draft copy, ad or brand voice sample
+    - Who the audience is, and who you wish to reach
+    - Your product facts, so claims stay true
+    - Your visual idea or designer notes (optional)
+    - A team or hiring problem, if that is the job (optional)
+  output:
+    - name: What is good first
+      contains: A kind note on what already works in your rough version, before any hard questions.
+    - name: Hard questions
+      contains: Is it good enough, is it surprising, has it been done, and would a real person say it.
+    - name: Plain-speech rewrite
+      contains: Your copy reworked to sound like a real person talking to someone they respect.
+    - name: Whose voice check
+      contains: A flag where your copy borrows another brand's style, and a nudge toward your own.
+    - name: Team next step
+      contains: A suggestion for who should work on the next round together, such as writer and designer.
 seats:
   - {seat: "Plain, human copy", asks: "Does this sound like a real person talking to someone they respect?"}
   - {seat: "Writer and art director", asks: "Have the words and the picture been worked out together, or bolted on?"}

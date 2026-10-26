@@ -2,17 +2,103 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-react18-legacy-context
 name: React legacy context migrator
-summary: Share old React context code. Get a migration to modern context with
-  the affected consumers checked.
+summary: Move React legacy context (contextTypes, getChildContext) to createContext. Get the provider and every consumer updated together.
 job: test-and-fix-code
 headline: React legacy context migrator
-subhead: Share old React context code. Get a migration to modern context with
-  the affected consumers checked. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Paste the component that provides old React context and the components that read it. Your AI makes a new context file, rewrites the provider, and updates each consumer. Nothing is left on the old API.
+explain: |
+  Old React context uses childContextTypes and getChildContext on the provider, and contextTypes on every component that reads it. React 18.3.1 warns about it, and React 19 removes it. Migrate it before that upgrade.
+
+  The trap is that this change spans several files. If you update the provider but miss one consumer, that consumer reads undefined and the app breaks at run time. If you update a consumer first, it reads from a context nobody fills. So this skill finds the provider and all consumers first, then changes them in a fixed order.
+
+  It follows six steps: find the provider, find every consumer, create the context file, update the provider, update each consumer, then check that no legacy warnings remain. Class consumers get contextType. Function components get useContext. Apps with several contexts are done one context at a time.
+when:
+  - Your console shows a legacy context warning after you moved to React 18.3.1.
+  - You plan to upgrade to React 19 and still have contextTypes in your code.
+  - A theme, login or language setting is passed through getChildContext.
+  - A search for contextTypes in your code returns hits in many files.
+not_for:
+  - "You already use createContext everywhere: skip this and run your own search for contextTypes to confirm."
+  - "You only have string refs or old lifecycle methods: use the React string ref migrator or the React unsafe lifecycle migrator."
+  - "You want the whole move to React 19 in one pass: use the React 19 source migration helper, which also covers legacy context in a short form."
+you_give:
+  - The component that provides the context
+  - Every component that reads it (the files that use contextTypes)
+  - The search results for childContextTypes and contextTypes in your src folder (optional)
+  - Your React version
+you_get:
+  - A new context file with the context object
+  - The provider rewritten to use it
+  - Each consumer updated, as a class with contextType or a function with useContext
+  - A final search list to confirm no old context is left
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page. If your AI takes file uploads, upload the whole skill folder.
+  - Run a search for childContextTypes, getChildContext and contextTypes in your src folder. Paste the file names and matches into the chat.
+  - Paste the provider file first, then every consumer file. Ask your AI to list the provider and all consumers before it changes anything.
+  - Check the list against your search results. If a consumer is missing, add it before you go on.
+  - Ask for the new context file, the provider, then each consumer. Copy them in together, not one by one.
+  - Run your app and tests on your own machine. Check that no legacy context warnings remain.
+how_it_works:
+  - title: Find the provider
+    text: It looks for childContextTypes and getChildContext to see what the context carries.
+  - title: Find every consumer
+    text: It looks for contextTypes and checks which uses of this.context are old and which are new.
+  - title: Create the context file
+    text: It makes a new file with createContext, using the standard template for the file layout.
+  - title: Update the provider
+    text: It swaps getChildContext for the new Provider with the same values.
+  - title: Update each consumer
+    text: Class components get static contextType. Function components get useContext.
+  - title: Verify
+    text: It gives the search to run again. It should return no legacy context hits.
+output_shape: |
+  Provider and consumers found
+  - Provider: <file>, passes <values>
+  - Consumers: <file list>
+  New context file
+  <file name and code>
+  Updated provider
+  <code>
+  Updated consumers
+  - <file>: <code or changes>
+  Check by hand
+  - <anything not found or unclear>
+  Verify
+  - <search commands that should return nothing>
+output_sample:
+  input:
+    - The provider component file
+    - Every consumer component file
+    - Search results for contextTypes and childContextTypes (optional)
+    - Your React version
+  prerequisites:
+    - Your code kept in version control, so you can undo the change
+    - An AI that can read your pasted code or uploaded files
+  output:
+    - name: Provider and consumer list
+      contains: The provider file and every consumer file, so you can check nothing is missed.
+    - name: Context file
+      contains: A new file that creates the context with createContext.
+    - name: Updated provider
+      contains: The provider rewritten to use the new context, with the same values.
+    - name: Updated consumers
+      contains: Each consumer using contextType in a class or useContext in a function.
+    - name: Verify list
+      contains: Search commands to run, which should show no old context left.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can plan the order of the change from pasted files. Upload the skill folder if it accepts files.
+    - name: An AI coding tool in your project
+      why: It can run the searches and change several files in one go.
+  inputs:
+    - The output of the search commands in the skill
+    - A note on which contexts exist, such as theme or login
+    - Your test results after the change
+terms:
+  - term: Legacy context
+    meaning: The old way to share values, with contextTypes and getChildContext.
+  - term: Provider
+    meaning: The component that holds a value and shares it with the ones below it.
+  - term: Consumer
+    meaning: A component that reads a shared value.

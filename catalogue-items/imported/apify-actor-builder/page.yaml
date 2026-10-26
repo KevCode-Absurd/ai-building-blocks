@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a template, then writes and tests the Actor code.
 new_slug: apify-actor-builder
 name: Apify Actor builder
-summary: Describe the task to automate. Get an Apify Actor project with inputs,
-  outputs and deploy steps. Needs a paid Apify account.
+summary: Build an Apify Actor for a task you want to automate, such as a scraper. You get a tested project with inputs, outputs and deploy steps.
 job: build-software
 headline: Apify Actor builder
-subhead: Describe the task to automate. Get an Apify Actor project with inputs,
-  outputs and deploy steps. Needs a paid Apify account. Bring the task to
-  automate. Use the result to plan your next step.
+subhead: Describe the task to automate. Get an Apify Actor project with inputs, outputs and deploy steps. Needs a paid Apify account. Bring the task to automate. Use the result to plan your next step.
 explain: |
   A ready Apify Actor project for a task you want to automate, such as scraping a site or processing data, with its inputs, outputs and deploy steps in place. You need an Apify account, which is paid.
 
@@ -18,6 +15,10 @@ when:
   - You need a repeatable task others can run with simple inputs.
   - You are not sure which Apify template fits your job.
   - Your Actor project fails at setup or login.
+not_for:
+  - "You need a one-off pull of data from a page: copy it by hand or ask a developer."
+  - "The site needs a login or its terms forbid scraping: use a managed scraping service or ask a developer."
+  - "You do not have a paid Apify account or cannot run code: use a developer who works with Apify."
 you_give:
   - The task to automate
   - Input options the user should set
@@ -29,8 +30,35 @@ you_get:
   - Run and test commands
   - Deploy steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use the Apify command line tool.
+  - Check that you have an Apify account. It is paid. Install the Apify command line tool with npm or brew.
+  - Create a token in the Apify Console under Settings, then Integrations. Save it as APIFY_TOKEN on your computer. Do not paste it into the chat.
+  - Open an AI that can run code and files, such as Claude Code. Paste the skill text. Say what task you want to automate.
+  - "Pick your language when your AI asks: JavaScript, TypeScript or Python."
+  - Review the input options and result fields. Then ask your AI to test with apify run and show you the local results.
+  - Deploy with apify push. Then schedule the Actor in the Apify Console, check the first run's results, and connect them to your sheet or tool.
+output_sample:
+  input:
+    - The task you want to automate, in one or two lines
+    - "Your language: JavaScript, TypeScript or Python"
+    - The options a user should be able to set
+    - The result format you want
+    - Your Apify token (optional until you deploy)
+  prerequisites:
+    - An AI that can run code and files on your computer
+    - The Apify command line tool, installed and signed in
+    - An Apify account, which is paid
+  output:
+    - name: .actor/actor.json
+      contains: The Actor name, version and settings, with a note on which AI tool and model wrote it.
+    - name: .actor/input_schema.json
+      contains: The options the Actor accepts, with sensible defaults, and the form shown in the Apify Console.
+    - name: .actor/output_schema.json
+      contains: How the results are stored and shown, such as in a dataset or key-value store.
+    - name: .actor/dataset_schema.json
+      contains: The fields in each result row and how they display.
+    - name: src/main file
+      contains: The Actor code in your chosen language, with input checks, error handling and safe logging.
+    - name: README.md
+      contains: Plain documentation for the Actor page on the Apify marketplace.
+    - name: Local test and deploy steps
+      contains: How to test with apify run, check the local storage folder, then publish with apify push.

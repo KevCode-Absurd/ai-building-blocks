@@ -1,6 +1,6 @@
 new_slug: ad-ab-test
 name: "Test two ads head to head and read the winner"
-summary: "Give it two ads. Get a fair split-run test, a reply offer that brings enough replies and a read of the result."
+summary: "Test two ads head to head with a fair split-run plan, a reply offer that brings enough replies, and a plain call on which ad won."
 job: plan-ad-tests
 thinking: high
 thinking_why: "It plans a fair test, then judges whether a result is real. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You have two ads, emails or pages and want to know which sells more before you put money behind one.
   - A past test gave a result nobody trusted.
   - You can send each version to a few thousand people, or run both at the same time on a platform.
+not_for:
+  - "You have one ad and nothing to compare it with: check it with the Reply-getting fix writer, or ask a customer to read it."
+  - "You only want to know if an ad's meaning lands: use the Ad meaning test planner."
+  - "Your channel cannot split an audience evenly or run both at once: compare before and after with the Campaign keep-or-change checker."
 
 you_give:
   - The two versions of the ad, email or page
@@ -36,6 +40,29 @@ how_to_use:
   - Give it both versions, your usual reply rate and the audience you can reach.
   - It plans the test and the reply offer. Put the same offer lines and the codes into both versions and launch them together.
   - When the read date arrives, count replies and sales by code and bring the counts back for step 3.
+output_sample:
+  input:
+    - Your two versions of the ad, email or page
+    - Your usual reply rate for the channel
+    - The size of the audience you can reach
+    - Your offer and what counts as a reply (optional)
+    - Replies and sales counted by code, after the test
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - Time to run both versions together and count replies
+  output:
+    - name: "Step 1: Fair split-run test plan"
+      contains: The one difference, what stays equal, a code for each version, the audience needed and the winner rule.
+    - name: "Step 2: Reply offer"
+      contains: A small offer, the same in both versions, with the ad line, reply form and thank-you lines.
+    - name: Pause
+      contains: You run both versions at the same time and count replies and sales by code.
+    - name: "Step 3: The result"
+      contains: The gap as a percentage, a luck check, a fairness check, cost per reply and sale, and a keep, rerun or stop call.
+    - name: Lesson record and next test
+      contains: What the test taught, with the date and audience, and the next test to run.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 
 how_it_works:
   - title: Plan a fair split-run test

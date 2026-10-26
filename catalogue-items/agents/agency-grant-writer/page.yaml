@@ -1,0 +1,159 @@
+name: Grant writer agent for proposals and letters of inquiry
+summary: Draft a grant proposal or letter of inquiry matched to the funder's rules, with a compliance checklist and a list of claims you must prove.
+headline: Grant writer agent for proposals and letters of inquiry
+subhead: Paste the funder's guidelines and the facts about your organization and program. It maps what the funder asks for, builds a compliance checklist, drafts each section and lists every claim you still need to prove. You review before you submit.
+job: write-and-tell-stories
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Most grant proposals lose on small things. A page limit is missed. A section
+  is left out. The budget pays for a role the story never mentions. This grant
+  writer agent starts from the funder's own rules and builds the proposal
+  around them, so the draft fits the funder before it tries to sound good.
+
+  It treats a proposal as an argument. The funder has a problem to solve, and
+  your job is to show you are the best way to solve it. So it leads with the
+  funder's priorities and need, not with your history. It uses the funder's own
+  words where they fit, keeps the budget and the narrative telling the same
+  story, and says plainly where you have no evidence yet. It can write a letter
+  of inquiry, a full proposal, a budget narrative, a federal compliance check
+  and a progress report.
+
+  It works only from what you paste. It will not invent your numbers, your
+  outcomes or a funder's rules. It cannot log in to a portal, submit anything
+  or know a funder's current deadlines. The win rates in the profile are
+  targets from its author, not promises. Every proposal still needs a human
+  check before it goes out.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide.
+when:
+  - A funder has sent a call for proposals and you need a first draft that follows its rules.
+  - A foundation asks for a letter of inquiry before it invites a full proposal.
+  - Your budget and your narrative do not match and you need them to tell one story.
+  - You owe a funder a progress report and want it structured the way they expect.
+not_for:
+  - You need to find funders that fit you. Use the Nonprofit grant funder researcher.
+  - You are writing a research grant with aims and a review panel. Use the Research grant proposal coach.
+  - You are answering a sales RFP or a business bid. Use the Proposal Strategist agent.
+  - You only need a draft that follows the funder's sections. The Nonprofit grant proposal writer is the shorter route.
+  - The funder has no written guidelines, or the award is federal and large. Get the guidelines first, and have your grants lead or finance team review the final version.
+you_give:
+  - The funder's call, guidelines or application form, pasted in full
+  - Facts about your organization, such as mission, programs, past results and who you serve
+  - The program or project you want funded, with the goal and the amount you plan to ask for
+  - The budget and the deadline, with page or word limits
+  - Past reports or data that prove your results (optional)
+  - Your funder history and any contact with their program officer (optional)
+you_get:
+  - A map of what the funder asks for, section by section, with limits
+  - A compliance checklist for pages, fonts, attachments and eligibility
+  - A draft letter of inquiry or proposal sections in the funder's own language
+  - A budget narrative that matches the story you tell
+  - A list of claims you must prove and facts still missing
+  - Questions to ask the program officer, and what to do before the deadline
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste the funder's guidelines first, then your organization and program facts. Say if you need a letter of inquiry or a full proposal.
+  - Type "Map the requirements and build the checklist", then "Draft the letter of inquiry".
+  - Check every number and claim against your own records. Fix anything marked MISSING or NEEDS PROOF.
+  - Ask your grants lead or finance team to review the budget, then submit through the funder's portal yourself.
+how_it_works:
+  - title: Read the rules
+    text: It reads the whole call first and lists every requirement, limit, attachment and scoring point.
+  - title: Check the fit
+    text: It tests whether your program matches the funder's priorities, place and size, and says so if it does not.
+  - title: Build the checklist
+    text: It turns the rules into a checklist you can tick before you submit.
+  - title: Draft the sections
+    text: It writes the letter of inquiry or each proposal section, funder's priorities first and your strengths second.
+  - title: Match budget and story
+    text: It writes the budget narrative and checks each cost against the program it supports.
+  - title: List what is unproven
+    text: It lists claims with no evidence and facts it needs, and never fills them in on its own.
+output_shape: |-
+  REQUIREMENTS MAP
+    <section or rule> | <limit> | <where in the call> | <scoring weight, if given>
+
+  FIT CHECK
+    <funder priority> | <your match> | <strong, partial or weak> | <gap>
+
+  COMPLIANCE CHECKLIST
+    [ ] <rule: pages, font, attachments, eligibility, deadline>
+
+  DRAFT
+    <letter of inquiry paragraph or proposal section> | <text>
+
+  BUDGET NARRATIVE
+    <cost line> | <calculation> | <why this program needs it>
+
+  CLAIMS TO PROVE AND MISSING FACTS
+    <claim or gap> | <evidence needed> | <who has it>
+
+  QUESTIONS FOR THE PROGRAM OFFICER
+    <question> | <why it matters>
+
+  NEXT STEPS
+    <step> | <owner> | <date>
+output_sample:
+  input:
+    - The funder's call or guidelines, pasted in full
+    - Facts about your organization and the program
+    - The amount, budget and deadline
+    - Past results or reports (optional)
+  prerequisites:
+    - Claude, ChatGPT or Gemini with room to paste long text
+    - Your own sign-off before anything goes to the funder
+  output:
+    - name: Requirements map
+      contains: Every section, limit and rule in the call, with where to find it.
+    - name: Fit check
+      contains: How your program matches each funder priority, and where it does not.
+    - name: Compliance checklist
+      contains: Tick boxes for page limits, fonts, attachments and eligibility.
+    - name: Draft
+      contains: A letter of inquiry or each proposal section, in the funder's own language.
+    - name: Budget narrative
+      contains: Each cost with its calculation and why the program needs it.
+    - name: Claims to prove and missing facts
+      contains: Statements with no evidence yet and the facts the AI could not fill in.
+    - name: Questions for the program officer
+      contains: Questions to ask the funder, and why each matters.
+    - name: Next steps
+      contains: What to do before the deadline, with an owner for each step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A long chat holds the whole call and your facts while it drafts each section, and lets you revise one at a time.
+  inputs:
+    - The funder's last annual report or a past funded proposal, to match its language.
+    - Your last two years of program results.
+    - Your budget as a sheet with each line and its basis.
+terms:
+  - term: Letter of inquiry
+    meaning: A short letter that asks a funder if they might fund your idea, before a full proposal.
+  - term: NOFO or RFP
+    meaning: The funder's call for proposals, which sets the rules and what they score.
+  - term: Logic model
+    meaning: A chart that links what you do to the results you expect.
+  - term: SMART objective
+    meaning: A goal that is specific, measurable, achievable, relevant and has a date.
+  - term: Indirect costs
+    meaning: Shared costs such as rent and admin that are not tied to one program line.
+  - term: Program officer
+    meaning: The funder's staff member who looks after a grant program.
+tweaks:
+  - what: Stage
+    how: Say which stage you are at, such as letter of inquiry, full proposal, budget narrative or progress report.
+  - what: Funder type
+    how: Say if the funder is a private foundation, a company or a government agency. Government funders have stricter rules.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

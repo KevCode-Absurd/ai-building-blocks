@@ -16,6 +16,27 @@ use_cases:
   - "Set a more natural pace for work, with quieter seasons built in"
   - "Decide when to use an AI tool and when to do the hard thinking yourself"
   - "Turn a vague wish for a calmer life into a clear, deliberate plan"
+not_for:
+  - "You want to build a clear business case or a structured recommendation: use the Barbara Minto mind."
+  - "You want to understand what motivates people or learn from a regret: use the Daniel Pink mind."
+  - "You need medical, legal or money advice, or news about AI companies: ask a doctor, a lawyer, a financial adviser or a news source."
+output_sample:
+  input:
+    - Your real calendar for the next week
+    - A list of your open projects and tasks
+    - The apps, email and chat tools you use every day
+    - What you value and the work that matters most to you (optional)
+  output:
+    - name: The problem, named
+      contains: A plain name for what is going wrong, such as busy but not finishing what matters.
+    - name: Two or three principles
+      contains: The ideas from his public work that apply to your case, shown as applied to you.
+    - name: Questions about your week
+      contains: Questions on quiet time, project count, tool value and whether you could keep this pace.
+    - name: One change to try
+      contains: A single change for a few weeks, such as a quiet block, a smaller project list or a tool cut.
+    - name: Who this fits less well
+      contains: A note on jobs or settings where you control less of your schedule, with smaller steps to try.
 seats:
   - {seat: "Deep work and focus", asks: "When, in this plan, does anyone get two quiet hours to do the hard part?"}
   - {seat: "Fewer, better things", asks: "If we did half as many projects at once, which ones would we keep?"}

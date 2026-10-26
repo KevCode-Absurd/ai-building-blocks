@@ -1,52 +1,92 @@
 new_slug: prepare-a-small-team-offsite
 name: Prepare a small team offsite
 headline: Prepare a small team offsite
-summary: Share the source files. Get an outcome-led agenda, pre-read request and follow-up plan.
+summary: Plan a small team offsite. Check if a meeting is worth its cost, then get a decision-first agenda, a pre-read request and an action register.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An outcome-led agenda, pre-read request and follow-up plan. Share the decision to resolve, prior notes, attendees, access needs, attendee cost assumptions, budget and available dates. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the decision the team must make, who is going and how long you have. It checks whether a meeting is worth its cost, then builds the agenda, a pre-read request and an action register. Access, travel and budget assumptions stay in view.
 explain: |-
-  An outcome-led agenda, pre-read request and follow-up plan.
+  Many offsites fail because nobody decided what they were for. This small team offsite workflow starts with one decision and checks whether a meeting is the right way to reach it.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Each session has a purpose and result; travel, accessibility and budget assumptions stay visible. Missing tools or evidence stay visible in the final summary.
+  The Executive meeting brief writer sets out the decision, the facts and the questions. The Meeting agenda and cost planner then runs a gate with three answers: ASYNC (write it up instead), NOT-READY (something is missing) or MEET. Only a MEET gets an agenda, with decision sessions, breaks and a closing actions recap. The Executive action register keeper then prepares the register for the day.
+
+  Costs come only from figures you give. If you give none, the pack shows the sum as a formula and marks the rates missing.
 when:
-  - You need an outcome-led agenda, pre-read request and follow-up plan.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your team of 4 to 12 wants a day away to settle one big decision.
+  - A boss says "let's do an offsite" and you want to know if it is worth it.
+  - Your last offsite ended with no clear actions.
+  - Someone on the team has access needs, and you want them planned in from the start.
+not_for:
+  - "You need an agenda for a regular weekly meeting: use the Meeting agenda and cost planner on its own."
+  - "Your event is open to the public or the community: use Prepare a community event access plan."
+  - You can settle the decision in writing. The gate will say so. For a decision that needs debate first, use the Debate then decide meeting planner.
+  - You want venues booked or invitations sent. This pack books and sends nothing.
 you_give:
-  - The decision to resolve, prior notes, attendees, access needs, attendee cost assumptions, budget and available dates.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The decision the offsite must reach (one or two lines)
+  - Who is going, and any access needs
+  - How long you have, and the dates people can do
+  - Notes from earlier meetings on the topic (optional)
+  - Each person's hourly cost, or a team average (optional)
+  - Budget, travel and venue costs (optional)
 you_get:
-  - An outcome-led agenda, pre-read request and follow-up plan.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A verdict: ASYNC, NOT-READY or MEET, with the reason"
+  - A brief of the decision, the facts and the questions
+  - If MEET, a timeboxed agenda with a purpose and a result for each session, and the meeting's cost
+  - A pre-read request for attendees
+  - An empty action register to fill in during the event, and notes on access, travel and budget
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste the decision, the attendee list, the length and any costs. Say if anyone has access needs.
+  - Read the verdict first. If it says ASYNC or NOT-READY, fix that before you plan more.
+  - Check that every session on the agenda has a result you can name.
+  - Send the pre-read request yourself. Bring the register to the event, then run the last step again with your notes.
 how_it_works:
   - title: Executive meeting brief writer
-    text: Prepare a standalone brief of the decision, supported facts and questions participants need to consider.
+    text: Writes a standalone brief of the decision, the facts that support it, what is still unknown and the questions people should think about. Hands step 2 the brief.
   - title: Meeting agenda and cost planner
-    text: Run the ASYNC, NOT-READY or MEET gate. When a meeting is justified, use actual duration, attendee count and cost assumptions to plan decision sessions, breaks and an action recap.
+    text: Runs the ASYNC, NOT-READY or MEET gate on step 1's brief. On MEET, builds decision sessions, breaks and an actions recap that fit the time, with the cost from your figures. Check before moving on, each session has a purpose and a result. If your AI cannot run code, it does the sums by hand.
   - title: Executive action register keeper
-    text: Create a register for decisions and commitments to capture during the event and review afterward.
+    text: Prepares, from step 2's agenda, a register for decisions and commitments, with owner, due date, source and status. You fill it in during the event, then run this step again with your notes.
+  - title: Check and hand back
+    text: Joins the files, shows the verdict first, and lists every assumption, gap and check that did not run.
 output_shape: |-
-  Scope and source coverage
-  An outcome-led agenda, pre-read request and follow-up plan.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  VERDICT <ASYNC, NOT-READY or MEET, with the reason>
+  DECISION BRIEF <decision | supporting facts | unknowns | questions for attendees>
+  COST <people | hours | rate | total, or the formula and MISSING: rates>
+  AGENDA <time | session | purpose | result wanted | lead>
+  PRE-READ REQUEST <what to read | by when | who sends it>
+  ACCESS AND TRAVEL NOTES <need or assumption | who it affects | source>
+  ACTION REGISTER <task | owner | due | source | status>, empty until the event
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - The decision the offsite must reach
+    - Who is going, and any access needs
+    - How long you have, and the dates people can do
+    - Earlier meeting notes, costs and budget (optional)
+  prerequisites:
+    - An AI that can read files or long pasted text
+    - The three component skills, which come in the pack
+  output:
+    - name: Verdict
+      contains: ASYNC, NOT-READY or MEET, with the reason and what would change it.
+    - name: Decision brief
+      contains: The decision, the facts behind it, what is unknown and the questions for attendees.
+    - name: Agenda
+      contains: Timeboxed sessions with a purpose and a result each, plus breaks and an actions recap.
+    - name: Pre-read request
+      contains: What attendees read first, by when, and who sends it.
+    - name: Action register
+      contains: An empty table for decisions and commitments, with owner, due date and status.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Each session has a purpose and result; travel, accessibility and budget assumptions stay visible.
+  - what: One decision
+    how: Plan the offsite around a single decision. Extra topics go on a later list.
+  - what: Costs
+    how: Add an hourly cost per person or a team average. The meeting's cost then shows as a number, not a formula.
+  - what: Access
+    how: List each person's access needs. The agenda and notes then carry them from the start.
 judge:
   - Each session has a purpose and result; travel, accessibility and budget assumptions stay visible.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +99,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep each offsite's brief and register together, so next time starts from what was decided last time.
+  - After the event, run the register step again with real notes and check every action has an owner and a date.
+  - Add your own budget limits to the pack so the cost line always uses the same rules.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads earlier notes and the brief together. An AI that can run code does the cost sums for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Notes or decisions from earlier meetings on the same topic.
+    - A list of attendees with hourly cost or a team average.
 terms:
+  - term: Pre-read
+    meaning: The short material people read before the meeting so the time is used to decide.
+  - term: ASYNC
+    meaning: A decision that can be made in writing, with no meeting.
+  - term: Actions recap
+    meaning: A closing slot where every action is read out with its owner and date.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

@@ -7,13 +7,55 @@ description: India-specific modelling conventions for listed-equity and macro wo
 
 > Adapted from the Apache-2.0 source: corrected Excel scale labels and the stated crore error factor.
 
-The mechanical conventions an Indian financial deliverable has to get right. Load this alongside
-`india-market-data` (where to get the numbers) and `xlsx-author` / `pptx-author` (how to build the
-artifact).
+The mechanical conventions an Indian financial deliverable has to get right. This file is both the
+rule book (sections 1 to 9) and the audit procedure (below).
 
-**What is genuinely absent — consensus estimates, a funding-round tape, swap curves, single-name
-bond pricing, historical vol surfaces — is recorded in `NOT-ADAPTABLE.md`. Read that too. The rule
-is the same everywhere: name the gap, never substitute a proxy and call it the real thing.**
+## Depends on (not included in this folder)
+
+| Named file or tool | Used for | If you do not have it |
+|---|---|---|
+| `india-market-data` | Where to get the numbers | Ask the user where each figure came from and mark the source "as stated by user". |
+| `xlsx-author`, `pptx-author`, `officecli` | Building or fixing files | Do not edit the file. Give each fix as text: the cell, the old value, the new formula. |
+| `NOT-ADAPTABLE.md` | Data with no Indian equivalent (consensus, funding rounds, swap curves) | Use the list in the next paragraph, and say the file was not loaded. |
+
+**What is genuinely absent: consensus estimates, a funding-round tape, swap curves, single-name
+bond pricing, historical vol surfaces. The rule is the same everywhere: name the gap, never
+substitute a proxy and call it the real thing.**
+
+## How to run the audit
+
+You need the model file or its key sheets pasted as text. If you only get a screenshot or a
+summary, say what you could not check. If the company, the periods or the listing venue are
+missing, ask once. Otherwise mark them `MISSING` and go on. Never invent a figure to make a check
+pass.
+
+1. **Map the file.** List each sheet, its unit (rupee, lakh, crore, US dollar) and its period
+   labels. Show this map to the user.
+2. **Units (section 1).** For every money column: is the unit in the header? Is crore or lakh made
+   by a live formula that divides the raw cell? Flag any format like `#,##0,," Cr"`. Flag columns
+   that mix sources with different units (for example yfinance in rupees and Screener.in in crore).
+3. **Fiscal labels (section 2).** Flag bare calendar years, bare `LTM`, a quarter multiplied by 4
+   with no note, and year-on-year compared against the wrong quarter.
+4. **Accounting basis (section 3).** Flag any peer table that mixes Ind AS and other bases with no
+   label per row.
+5. **Listing and market (sections 4 and 5).** Flag a missing index name, an unstated venue on a
+   dual-listed company, unadjusted prices, and circuit-bound prints used as prices.
+6. **Governance (sections 6 and 7).** Check promoter pledging and related-party transactions appear
+   in any risk section. If the model has no risk section, say so. Do not write the content for it.
+7. **Data honesty (section 9).** Flag any figure with no source or retrieval date.
+
+## Report format
+
+Return exactly these parts, in order:
+
+1. **Verdict.** One line: pass, pass with fixes, or fail, and the count of faults by type.
+2. **Fault table.** One row per fault: sheet and cell, type (Unit, Fiscal label, Ind AS basis,
+   Listing, Governance, Source), what is wrong, the fix (give the exact formula or label).
+3. **Cannot check.** Each item you could not check and what you would need.
+4. **Gaps with no Indian equivalent.** Data the model uses that has no free Indian source.
+5. **Next step.** One line: fix the Unit rows first, then re-run this check.
+
+This is a review aid. It does not give investment advice or replace a review by a qualified person.
 
 ---
 
@@ -76,8 +118,9 @@ and re-derive rather than guessing a scale factor.
 
 ### A second argument for crore: Excel's precision ceiling
 
-Raw rupee magnitudes for Indian large caps run to **14 digits** — Reliance FY26 revenue is
-`10572193000000` (₹1.06 lakh crore). Excel carries 15 significant digits, so that still stores
+Raw rupee magnitudes for Indian large caps run to **14 digits** — the original author's example
+is Reliance FY26 revenue of `10572193000000` (₹1.06 lakh crore); treat it as an illustration of
+size, not a figure to quote. Excel carries 15 significant digits, so that still stores
 exactly, but it sits at the edge and it **displays in scientific notation** under General format.
 `officecli view` reports it as `general_precision_loss`:
 
@@ -173,9 +216,10 @@ whole sets of companies between periods.
 
 ## 5. Price and trading mechanics
 
-- **Circuit limits.** Indian equities carry daily upper/lower circuit bands. The general level is
-  **20%**, raised to **25%** for stocks in the F&O segment, with 2% and 10%/15% bucket bands also in
-  use. A price series containing a circuit-bound print is **not a traded price** — it is a limit. A
+- **Circuit limits.** Indian equities carry daily upper/lower circuit bands. The original author
+  states the general level as **20%**, raised to **25%** for stocks in the F&O segment, with 2% and
+  10%/15% bucket bands also in use. These limits change: check the stock's current band on the NSE
+  or BSE site and state the date before you rely on the figure. A price series containing a circuit-bound print is **not a traded price** — it is a limit. A
   close on zero or near-zero volume is a point to exclude, not to chart. Sanity-check volume before
   trusting a return.
 

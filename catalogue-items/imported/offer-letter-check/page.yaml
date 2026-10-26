@@ -2,23 +2,23 @@ thinking: high
 thinking_why: Rules differ by place and are easy to get wrong.
 new_slug: offer-letter-check
 name: Offer letter and non-compete checker
-summary: Give it an offer letter and work location. Get risky terms and
-  non-compete limits flagged. Not legal advice.
+summary: Check an offer letter for risky terms and non-compete limits in the place your hire will work. Get a flagged list to review. Not legal advice.
 job: hire-people
 headline: Offer letter and non-compete checker
-subhead: Give it an offer letter and work location. Get risky terms and
-  non-compete limits flagged. Not legal advice. Bring the offer letter or a
-  description of the hire. Use the result to plan your next step.
+subhead: Give it an offer letter and work location. Get risky terms and non-compete limits flagged. Not legal advice. Bring the offer letter or a description of the hire. Use the result to plan your next step.
 explain: |
   A review of an offer letter before it goes out, focused on the two places trouble hides: where the person will work, and any promise not to compete. The rules differ by place, so the skill researches them for each hire instead of relying on a fixed list.
 
   It starts by confirming the work location and how the role is classed. Then it checks the non-compete and similar limits for whether they can be enforced there, looks at pay transparency and salary history rules, and covers background check steps. Anything that hits your escalation list is flagged for a lawyer. It cites what it found. It is a first pass, not legal advice.
 when:
-  - You are about to send an offer to someone in a different state and need to
-    know if the non-compete holds.
+  - You are about to send an offer to someone in a different state and need to know if the non-compete holds.
   - A candidate sent back an offer letter and asked about the restrictions.
   - You hire in several places and want one repeatable check.
   - You want risky terms flagged before legal reviews the letter.
+not_for:
+  - "You face a contested or high-value non-compete: take it to a lawyer, and use the short brief this skill writes for them."
+  - "You need the offer letter written: ask a lawyer or use your own template, since this only reviews a letter."
+  - "You need to decide whether to hire someone: this checks the paperwork, so use your own hiring process."
 you_give:
   - The offer letter or a description of the hire
   - The work location
@@ -30,11 +30,31 @@ you_get:
   - Pay and background check issues
   - A list of items to escalate to counsel
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can search the web for current local rules.
-  - Where the skill points to /employment-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+output_sample:
+  input:
+    - Your offer letter, or a short description of the hire
+    - The place the person will work, not where your head office is
+    - Your company's rules on non-competes (optional)
+    - The role and pay (optional)
+  prerequisites:
+    - An AI that can search the web, so it can look up current local rules
+    - A lawyer to check anything flagged before you send the offer
+  output:
+    - name: Overall
+      contains: "One call on the offer: clear to send, changes needed, or escalate to a lawyer."
+    - name: Jurisdiction
+      contains: Where the person works and any rule that triggers a lawyer review.
+    - name: Classification
+      contains: Whether the role is exempt or non-exempt from overtime, based on pay level and duties.
+    - name: Restrictive covenants
+      contains: Whether each non-compete or similar limit can be enforced there, with sources and any changes to make.
+    - name: Jurisdiction-specific requirements
+      contains: Pay transparency, salary history, background check timing and required notices, each with sources.
+    - name: Offer letter
+      contains: Problems in the letter itself, such as missing terms or wrong at-will language.
+    - name: Action items
+      contains: A checklist of changes to make before the offer goes out.

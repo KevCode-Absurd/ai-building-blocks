@@ -17,6 +17,29 @@ use_cases:
   - "Try a new technology or channel before others do"
   - "Launch something with no build-up, as a surprise"
   - "Make a late piece of work that faces a hard subject head-on"
+not_for:
+  - "You want facts about Bowie's life or his views today: read a biography or his own interviews, because this AI cannot speak for him."
+  - "You want a cinematic, planned look or story order for a film: use the Christopher Nolan mind instead."
+  - "You want a way to borrow and remix other people's work with a clear method: use the Austin Kleon mind instead."
+output_sample:
+  input:
+    - Your project, band, brand or stuck piece of work
+    - The approach or signature style you are known for
+    - Any limits you have, such as budget, time or audience
+    - What scares you or bores you about the safe version (optional)
+  output:
+    - name: What if? pairings
+      contains: A short list of odd pairings of styles or ideas for your project, with a note that most will fail.
+    - name: Who it is for
+      contains: A question about whether you are making this for yourself or for the crowd, with a push back if it is the crowd.
+    - name: Character or image
+      contains: An idea for a persona or image that could say what a plain statement cannot.
+    - name: Rule and collaborator
+      contains: One limit to set and the kind of person to work with who would pull you somewhere new.
+    - name: Riskier version
+      contains: What in your plan is too safe, and a stranger version worth trying.
+    - name: Next step
+      contains: A small test of one pairing or the riskier version to run soon, then bring back the result.
 seats:
   - {seat: "Reinvention", asks: "What would happen if you dropped the thing everyone expects from you next?"}
   - {seat: "What if?", asks: "Which two things that don't belong together could you put together here?"}

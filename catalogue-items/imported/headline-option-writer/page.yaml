@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It picks a mindset first, then drafts and compares angles.
 new_slug: headline-option-writer
 name: Headline option writer
-summary: Give it your reader and goal. Get several headline angles that earn the
-  click without clickbait or false promises.
+summary: Write headline options for your ad, email or page. Give it your reader and goal. You get several angles that earn the click without false promises.
 job: write-ad-copy
 headline: Headline option writer
-subhead: Tell it who the headline is for, what they should do next, the channel
-  and your provable facts. It writes several headlines for that reader, each
-  from a different angle. You get the headlines, why each should work, a pick,
-  and a check that no claim goes past your facts.
+subhead: Tell it who the headline is for, what they should do next, the channel and your provable facts. It writes several headlines for that reader, each from a different angle. You get the headlines, why each should work, a pick, and a check that no claim goes past your facts.
 explain: |
   A set of headline options aimed at one reader, each using a different angle, so you can pick or test the best. Good headlines get noticed because they feel relevant and leave a small gap the reader wants to close. Bad ones promise too much.
 
@@ -19,6 +15,10 @@ when:
   - You are writing a landing page hero and want several angles.
   - You want options for an A/B test.
   - You need a headline that fits a tight character limit.
+not_for:
+  - "You need long body copy reviewed or rewritten: ask a human editor, or use your AI as a plain copy reviewer on the full text."
+  - "You want to make legal, medical or financial claims you cannot prove: talk to a qualified professional first, because this skill only uses facts you give it."
+  - "You have one finished headline and just want it shortened: trim it by hand, it is faster than a full set of options."
 you_give:
   - Who the headline is for
   - What you want them to do
@@ -31,7 +31,25 @@ you_get:
   - A pick for the best fit
   - A check that no claim goes beyond your facts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. It needs no code, files or paid tools.
+  - Tell it who the headline is for, what you want them to do, and where it will run.
+  - Add the facts you can prove about your offer. Add your brand voice and length limit if you have them.
+  - Ask for headline options. If your goal or channel is unclear, it will ask you before it writes.
+  - Read the fact check for each headline. Drop any line that claims more than your facts show.
+  - Pick one, or test two or three against each other. Make sure the page or email delivers what the headline promises.
+output_sample:
+  input:
+    - Who the headline is for
+    - What you want them to do next
+    - Where it will run, such as an ad, email or page
+    - Facts you can prove about your offer
+    - Brand voice and length limit (optional)
+  output:
+    - name: Headline options
+      contains: Several headlines for your reader, each written from a different angle and fitted to your channel.
+    - name: Angle and reason
+      contains: For each headline, the angle used and a short note on why it should work for this reader.
+    - name: Fact check
+      contains: For each headline, a note on which of your proven facts backs it, so no claim goes too far.
+    - name: Best pick
+      contains: The headline that fits your reader, goal and channel best, with a short reason.

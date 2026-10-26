@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Jurisdiction and licence calls need careful reasoning.
 new_slug: defense-export-rules-checker
 name: Defense export rules checker
-summary: Describe your defense product or data. Get whether it is controlled,
-  which licences apply and how to stay compliant.
+summary: Check if your defense product or data is under ITAR, which licences you need and how to stay compliant. Describe the item and the buyer.
 job: check-contracts
 headline: Defense export rules checker
-subhead: Find out whether your product or data is controlled under US arms
-  export rules, and what you must do about it. Describe the item and who will
-  receive it, and you get a classification, the licences that apply and the
-  steps to stay compliant.
+subhead: Find out whether your product or data is controlled under US arms export rules, and what you must do about it. Describe the item and who will receive it, and you get a classification, the licences that apply and the steps to stay compliant.
 explain: |
   Find out whether your product or data is controlled under US arms export rules, and what you must do about it. Describe the item and who will receive it, and you get a classification, the licences that apply and the steps to stay compliant.
 
@@ -19,6 +15,10 @@ when:
   - A foreign national joins your team and will see technical data.
   - You need to know which licence form fits your deal.
   - You found a possible violation and need to know how to report it.
+not_for:
+  - "You need a final legal call or a formal Commodity Jurisdiction ruling: ask trade counsel, or file a request with the State Department's DDTC."
+  - "Your item is a normal commercial product with no military use: check the Commerce Department's export rules (EAR) with a trade adviser instead."
+  - "You need an official, current fee or country list: read the DDTC website and the Federal Register, because this skill may be out of date."
 you_give:
   - Description of the item or technical data
   - Destination country and end user
@@ -30,7 +30,26 @@ you_get:
   - Compliance checklist
   - Disclosure steps if relevant
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, web access or paid tool is needed.
+  - Describe your item or technical data. Say which country it goes to and who the end user is.
+  - Add your registration status and any foreign persons who will see the data, if you know them.
+  - Read the classification first. Check it names a category and rule section.
+  - Check any fees, country lists and recent rule changes on the official DDTC site and the Federal Register.
+  - Take the result to trade counsel before you ship, share data or file a disclosure.
+output_sample:
+  input:
+    - A description of your item or technical data
+    - The destination country and who will use it
+    - Your DDTC registration status (optional)
+    - Details of any foreign persons involved (optional)
+  output:
+    - name: Jurisdiction and classification
+      contains: Walks through the US Munitions List test, then the commercial rules fallback, with the rule section cited.
+    - name: Licence or agreement needed
+      contains: Names the form or agreement that fits your deal, such as an export licence or a technical assistance agreement.
+    - name: Registration guidance
+      contains: Says whether you must register with DDTC and the steps to do it.
+    - name: Compliance checklist
+      contains: Lists requirements, status and gaps, including foreign national access and a technology control plan.
+    - name: Disclosure steps
+      contains: Explains how to report a possible violation, with the factors that raise or lower penalties.

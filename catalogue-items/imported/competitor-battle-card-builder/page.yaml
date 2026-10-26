@@ -2,22 +2,23 @@ thinking: high
 thinking_why: It gathers many sources, then compares rivals with care.
 new_slug: competitor-battle-card-builder
 name: Competitor battle card builder
-summary: Name your market. Get each rival's product, pricing and customer views
-  with battle cards and a feature grid.
+summary: Run competitor research on your market. Get a battle card for each rival, plus a pricing comparison and feature grid built from live web data.
 job: study-competitors
 headline: Competitor battle card builder
-subhead: A set of battle cards and a pricing landscape for the rivals in your
-  market, built from three rounds of research. Sales gets a one-page answer to
-  each competitor, and you see where each one is weak.
+subhead: A set of battle cards and a pricing landscape for the rivals in your market, built from three rounds of research. Sales gets a one-page answer to each competitor, and you see where each one is weak.
 explain: |
   A set of battle cards and a pricing landscape for the rivals in your market, built from three rounds of research. Sales gets a one-page answer to each competitor, and you see where each one is weak.
 
   Claude takes a short intake first and reuses any earlier market work it finds in your folder. It then researches rivals in three waves, covering product, pricing and what customers say. It combines the findings into a feature grid and a list of strategic weak points. Each battle card then covers how to win, how to answer their strengths and what to ask a buyer. It saves progress so a long run can resume, and it takes roughly fifteen to twenty minutes.
 when:
   - You are entering a market and need to know who you face.
-  - Sales loses deals and has no answers to a particular rival.
-  - You want a pricing comparison across the whole field.
-  - You need to know where a competitor is open to attack.
+  - Sales keeps losing deals to one rival and has no answer.
+  - You want to compare prices across the whole field.
+  - You need to find where a rival is open to attack.
+not_for:
+  - "You have not defined your market or product yet: write a one-line description first, or list rivals by hand in a simple sheet."
+  - "You have no rivals to name and no category to search: talk to five likely buyers instead."
+  - "You need a quick answer in minutes: ask your AI for a short rival list, since this run takes 15 to 45 minutes."
 you_give:
   - Your product description
   - Known competitors
@@ -29,8 +30,29 @@ you_get:
   - A feature grid
   - A list of rival weak points
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and save files.
+  - Open Claude Code if you can. It runs rival research in parallel and saves files. Claude.ai also works, but it is slower.
+  - Add the skill to your AI, or paste its instructions into a new chat.
+  - Tell your AI your product, your target customers and any rivals you know. Add earlier market notes if you have them.
+  - Let it run the three research rounds. Expect 15 to 25 minutes in Claude Code and 30 to 45 minutes in Claude.ai.
+  - Read competitors-report.md first. Check the data gaps section, then share the battle cards with your sales team.
+output_sample:
+  input:
+    - Your product description
+    - Rivals you already know (optional)
+    - Your target customers
+    - Earlier market research (optional)
+  prerequisites:
+    - An AI that can search the web and save files, such as Claude Code, for the best results
+  output:
+    - name: intake.md
+      contains: A short summary of your product, your market and the rivals you already know.
+    - name: PROGRESS.md
+      contains: A checklist of finished phases so a long run can pick up where it stopped.
+    - name: competitors-report.md
+      contains: "The main report: market overview, key findings, risks, openings, moat check, data gaps and flags."
+    - name: competitive-matrix.md
+      contains: A feature grid with rivals in columns, each feature rated strong, adequate, weak or missing.
+    - name: pricing-landscape.md
+      contains: Price tiers side by side, what each rival charges for, room to position and switching costs.
+    - name: battle-cards/{competitor-name}.md
+      contains: "One page per rival: strengths, weak points, how to win, when they win and buyer objections."

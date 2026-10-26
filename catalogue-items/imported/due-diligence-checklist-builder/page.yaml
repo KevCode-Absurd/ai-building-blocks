@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tailors a standard list to the deal.
 new_slug: due-diligence-checklist-builder
 name: Due diligence checklist builder
-summary: Describe the deal and sector. Get a request list by workstream with
-  status tracking and red flag notes.
+summary: Build a due diligence checklist for your deal. Get a request list by workstream with status tracking and a red flag log, set for Indian deals.
 job: money-and-investing
 headline: Due diligence checklist builder
-subhead: A diligence request list shaped to your deal, split by workstream, with
-  a status column and a place for red flags. You describe the target and sector,
-  and you get a list you can send to the other side and track.
+subhead: A diligence request list shaped to your deal, split by workstream, with a status column and a place for red flags. You describe the target and sector, and you get a list you can send to the other side and track.
 explain: |
   A diligence request list shaped to your deal, split by workstream, with a status column and a place for red flags. You describe the target and sector, and you get a list you can send to the other side and track.
 
@@ -18,6 +15,10 @@ when:
   - You want one tracker the deal team can update.
   - You want sector-specific questions, not a generic list.
   - You need Indian fiscal year and currency handled right.
+not_for:
+  - "You only want a quick screen of a deal: ask your AI for a short list of top risks, or talk to your adviser first."
+  - "Your deal is already past diligence: use a plain tracker in a spreadsheet for the items still open."
+  - "Your target is outside India and you need US or UK rules: use a general checklist and add your own local tax and law items."
 you_give:
   - Target company, sector and model
   - Deal type and size
@@ -29,7 +30,31 @@ you_get:
   - Red flag notes
   - Priority items for your main concerns
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI the target company, sector, deal type, deal size, known worries and timeline.
+  - Say what file you want. A spreadsheet with one tab per workstream is the default. If your AI cannot make files, ask for tables.
+  - Check the top priority items first. Remove any that do not fit your deal.
+  - Send the list to the other side. Update the status column as items arrive, and log each red flag.
+output_sample:
+  input:
+    - Target company name, sector and business model
+    - Deal type, such as acquisition, add-on or growth equity
+    - Deal size
+    - Known worries, such as customer concentration (optional)
+    - Target date for the offer letter or close
+  prerequisites:
+    - An AI that can make a spreadsheet file, or one that can print tables you copy into Excel
+    - The India market rules named in the skill file, if your AI tool supports loading them
+  output:
+    - name: Workstream checklists
+      contains: Request items for financial, commercial, legal, operations, people, technology and environmental review, picked for your sector.
+    - name: Status tracker
+      contains: Each item with workstream, priority, status, owner and notes, moving from Not Started to Complete or Red Flag.
+    - name: Red flag summary
+      contains: Each problem found, its workstream, how serious it is, how to fix it and the effect on price or terms.
+    - name: Summary dashboard
+      contains: Percent complete by workstream, items still open and open red flags.
+    - name: Weekly status update
+      contains: A short update the deal team can send each week.
+    - name: Sector additions
+      contains: Extra items for your sector, such as recurring revenue quality for software or payor mix for healthcare.

@@ -3,13 +3,25 @@ name: "hard-call"
 description: "/em:hard-call — Framework for decisions with no good options. Use when every option is painful and a structured 10/10/10 + regret-minimization pass is needed — e.g. choosing between a layoff and a down round, or killing a beloved product line."
 ---
 
-# /em:hard-call — Framework for Decisions With No Good Options
+# Framework for Decisions With No Good Options
 
-**Command:** `/em:hard-call <decision>`
+**Use it as:** paste the decision and your options. The sections below are the order to work in.
 
 For the decisions that keep you up at 3am. Firing a co-founder. Laying off 20% of the team. Killing a product that customers love. Pivoting. Shutting down.
 
 These decisions don't have a right answer. They have a less wrong answer. This framework helps you find it.
+
+---
+
+## What to ask for first
+
+You need three things. If any is missing, ask for it once, in one message. If the user still does not have it, write MISSING next to that part and carry on with what you have. Never invent facts about people, money or contracts.
+
+1. **The decision**, in plain words.
+2. **The options.** At least two, including "do nothing" or "wait". If the user lists only one, add "wait three months" as the second and say you added it.
+3. **Who is affected**, and how long the user has been putting this off (optional).
+
+You are not a lawyer or HR adviser. If the decision touches a layoff, a co-founder exit or share ownership, tell the user to check the legal and contract points with a qualified person before acting. Do not state what the law says.
 
 ---
 
@@ -54,6 +66,10 @@ The 10-minute feeling is usually the least reliable guide. The 10-year view usua
 
 **Most hard decisions look obvious at 10 years. The question is whether you can tolerate the 10-minute pain.**
 
+### Step 2b: The Regret Check
+
+For each option, ask: **looking back at 80, which would I regret more, doing it or not doing it?** Write one line per option. Treat this as one more input, not a vote.
+
 ### Step 3: The Andy Grove Test
 
 Andy Grove's test for strategic decisions: "If we got replaced tomorrow and a new CEO came in, what would they do?"
@@ -91,7 +107,7 @@ Hard decisions almost always get harder if communication is bad. The decision it
 For every hard call, plan:
 - **Who needs to know first** (the person directly affected, before anyone else)
 - **How you'll tell them** (in person when possible, never via email for personal impact)
-- **What you'll say** (honest, direct, compassionate — see `../executive-mentor/references/hard_things.md`)
+- **What you'll say** (honest, direct, compassionate: say the decision in the first sentence, give the real reason, do not blame others, do not reopen the choice in the same conversation)
 - **What they can ask** (be ready for every question)
 - **What comes next** (give them a clear picture of what happens after)
 
@@ -100,8 +116,6 @@ For every hard call, plan:
 ## Decision-Specific Frameworks
 
 ### Firing a Co-Founder
-See `../executive-mentor/references/hard_things.md — Co-Founder Conflicts` for full framework.
-
 Key questions to answer first:
 - Is this a performance problem or a values/culture problem? (Different conversations)
 - Have you been explicit — not hinted, but direct — about the problem?
@@ -155,3 +169,21 @@ You know you've been avoiding a hard call if:
 Every month you wait, the problem compounds. The co-founder who's not working out becomes more entrenched. The product line that needs to die consumes more resources. The person who needs to be let go affects the people around them.
 
 Make the call. Make it clearly. Make it with dignity.
+
+---
+
+## Output format
+
+Reply with these sections, in this order. Keep each option to a few lines.
+
+1. **Reversibility rating.** Reversible, partially reversible or irreversible, with one line of reason.
+2. **10/10/10 table.** One row per option: how you will feel in 10 minutes, 10 months and 10 years.
+3. **Regret check.** One line per option.
+4. **Outside view.** What a new leader with no history here would do (the Andy Grove test), in two sentences.
+5. **Who is affected.** The stakeholder table, with only the rows that apply.
+6. **Avoiding-it check.** Which of the five signs show up in what the user wrote.
+7. **The less wrong option.** Name one option and say why in three sentences. If the facts given cannot support a pick, say so and name the one fact that would settle it.
+8. **First three steps.** Including the announcement or message to write first, and who hears it first.
+9. **Check with a professional.** One line, only when law, contracts or money are involved.
+
+Do not soften the pick to please the user. Do not claim the choice is safe. Say it is the less wrong one.

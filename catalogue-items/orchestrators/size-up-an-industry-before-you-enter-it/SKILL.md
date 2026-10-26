@@ -47,10 +47,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Read the five forces.** Use the skill `five-forces-industry-checker`. Buyer power, supplier power, ease of entry, substitutes and rivalry, each scored with the evidence, and where the profit in the industry sits.
-2. **Test the powers.** Use the skill `business-power-tester`. Give it the five forces read and your strengths. Which of Hamilton Helmer's seven powers you could build here, which you could not, and the one to aim for first.
+2. **Test the powers.** Use the skill `business-power-tester`. Give it the five forces read and your strengths. Hands the powers read to step 3. Which of Hamilton Helmer's seven powers you could build here, which you could not, and the one to aim for first.
 3. **Find the counter-position.** Use the skill `counter-positioning-finder`. Give it the forces and the powers. A way of operating that incumbents cannot copy without hurting their own business, or the honest finding that there is none here.
 4. **Pick the first market.** Use the skill `first-market-picker`. Give it the counter-position. The first small market to win, in Peter Thiel's manner: small enough to dominate, with buyers who feel the problem most, and the markets after it.
-5. **Make the call.** Use the skill `go-or-no-go-launch-checker`. Give it everything before. Go or no go, with the three facts the call rests on, the weak joints, and what would change the call, in Sun Tzu's manner of weighing the odds before the fight.
+5. **Make the call.** Use the skill `go-or-no-go-launch-checker`. Give it the first market and everything before. If you have no launch plan, it treats the first market and the counter-position as a thin plan and marks what is missing. Go or no go, with the three facts the call rests on, the weak joints, and what would change the call, in Sun Tzu's manner of weighing the odds before the fight.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

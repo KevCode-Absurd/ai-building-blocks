@@ -1,0 +1,156 @@
+name: AI crawler and llms.txt setup agent
+summary: Check if AI crawlers can find and read your site. Get a scorecard, a robots.txt for AI bots and an llms.txt file. Paste your robots.txt.
+headline: AI crawler and llms.txt setup agent
+subhead: Give it your site address, your robots.txt and a few key pages. The agent scores your site on discovery, readability and actions. It checks if AI crawlers are blocked. Then it writes a robots.txt policy and an llms.txt file for you to review and publish.
+job: get-found-in-search
+thinking: high
+thinking_why: It has to read your files closely and keep what is proven apart from what is only a new habit.
+explain: >-
+  AI answer tools can only use your site if they can reach it and read it. Many
+  sites block every AI crawler by accident through an old robots.txt file, or
+  hide their text behind JavaScript. This agent checks that groundwork first.
+  The trade name is AEO foundations. AEO means answer engine optimization,
+  which is getting found in AI answers.
+
+
+  It checks three layers. Discovery asks if AI crawlers are allowed, if you have
+  an llms.txt file and if your sitemap lists your pages. Readability asks if a
+  page can be read without JavaScript, how long it is, and if headings and FAQ
+  markup are clean. Actions asks if your site says what AI agents may do. Then
+  it gives fixes in order, starting with robots.txt.
+
+
+  Whether to allow or block AI crawlers is your decision. The agent lays out the
+  options and writes the file you choose. It also says that llms.txt is a
+  community habit, not an official standard, and that nobody can promise AI
+  tools will use it. This is a role profile from Agency Agents, shared under
+  MIT. Its success targets describe the intended work, not measured results from
+  AI Blocks.
+when:
+  - You never touched your robots.txt and wonder if ChatGPT or Perplexity can read your site.
+  - You want an llms.txt file and do not know what goes in it.
+  - Your site is built with JavaScript and the pages look empty without it.
+  - You plan to chase AI mentions and want the groundwork checked first.
+not_for:
+  - You only want the llms.txt file. Use the llms.txt writer.
+  - You want to know if AI tools mention you now and why rivals win. Use the AI citation audit agent.
+  - You want a full technical SEO crawl with every broken link. Use the Technical SEO auditor.
+  - You want to know if an AI browsing agent can book or buy on your site. Use the AI browsing agent readiness checker.
+you_give:
+  - Your site address.
+  - The text of your robots.txt. Open yoursite.com/robots.txt and copy it.
+  - The addresses or text of your 5 to 10 most important pages.
+  - Your choice on AI crawlers, such as allow all, allow search only or block training (optional).
+  - Server log lines that show AI crawler visits (optional).
+you_get:
+  - A scorecard for discovery, readability and actions, with pass, partial or fail on each check.
+  - A robots.txt block for AI crawlers that follows your allow or block choices.
+  - An llms.txt file that lists your key pages with one line each.
+  - A page-length worksheet that flags pages too long to read in one go, with a way to split them.
+  - A fix plan in five phases over about 30 days.
+  - A recheck list for after you publish.
+how_to_use:
+  - Add the pack to your AI as a skill. In a plain chat, paste SKILL.md first.
+  - Open yoursite.com/robots.txt and copy the text. Add your site address and your 5 to 10 key pages. An AI that can browse the web may fetch them itself. If not, paste them.
+  - Say what you want for AI training crawlers and AI search crawlers, or ask it to show the options.
+  - Say "Run the AEO foundations check."
+  - Read the scorecard, then review the robots.txt and llms.txt drafts. Nothing is published for you.
+  - Publish the files yourself, or hand them to your developer. A few weeks later, ask AI tools about your business, check your crawl logs and run the scorecard again.
+how_it_works:
+  - title: Check discovery
+    text: It reads your robots.txt for AI crawler rules, looks for llms.txt, and checks your sitemap and any crawl logs you share.
+  - title: Check readability
+    text: It tests if key pages work without JavaScript, estimates page length, and checks heading order and FAQ markup.
+  - title: Check actions
+    text: It looks for any file or markup that tells AI agents what they can do on the site. These are new ideas and marked as such.
+  - title: Write the fixes
+    text: It drafts the robots.txt block and the llms.txt file, and a plan to split pages that are too long.
+  - title: Plan and recheck
+    text: It orders the fixes by phase and lists how to confirm AI tools can now reach and read the site.
+output_shape: |-
+  AEO FOUNDATIONS CHECK: <site> | <date>
+  1. Discovery
+  | Check | Status (Pass, Partial, Fail, Not checked) | Detail |
+  2. Readability
+  | Check | Status | Detail |
+  3. Actions
+  | Check | Status | Detail |
+  Score: <passed> of <checks run>
+
+  ROBOTS.TXT FOR AI CRAWLERS
+  <draft, with your allow or block choices>
+
+  LLMS.TXT
+  # <Site name>
+  > <one-line description>
+  ## Key pages
+  - [<Page>](<url>): <one-line description>
+
+  PAGE LENGTH WORKSHEET
+  | Page type | Target | Estimated now | Status | Action |
+
+  FIX PLAN
+  Phase 1 robots.txt | Phase 2 llms.txt | Phase 3 page length | Phase 4 markup | Phase 5 actions
+
+  RECHECK
+  <what to test and when>
+output_sample:
+  input:
+    - Your site address
+    - The text of your robots.txt
+    - Your 5 to 10 most important pages
+    - Your choice on AI training and AI search crawlers (optional)
+  prerequisites:
+    - Access to your site's root files, or a developer who has it
+  output:
+    - name: Foundations scorecard
+      contains: Pass, partial or fail on discovery, readability and action checks, with the detail behind each.
+    - name: robots.txt for AI crawlers
+      contains: A ready draft with a rule for each AI crawler, following your allow or block choices.
+    - name: llms.txt
+      contains: A site name, a one-line description and your key pages with a line on each.
+    - name: Page-length worksheet
+      contains: Each page type with a size target, an estimate for now and what to split or trim.
+    - name: Fix plan
+      contains: Five phases in order, from robots.txt on day one to action files by about day 30.
+    - name: Recheck list
+      contains: How to confirm AI crawlers get a good response and how often to review the files.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web browsing
+      why: An AI that can open your robots.txt and pages checks them itself instead of from pasted text.
+  inputs:
+    - Your sitemap address.
+    - A week of server logs, to see which AI crawlers visit and what they are refused.
+    - Your site platform, such as Shopify or WordPress, so file steps fit.
+terms:
+  - term: AEO
+    meaning: Answer engine optimization. Making your site easy for AI answer tools to find and use.
+  - term: AI crawler
+    meaning: A bot that reads websites for AI tools, either to train them or to answer questions.
+  - term: robots.txt
+    meaning: A file at your site root that tells bots which pages they may read.
+  - term: llms.txt
+    meaning: A file that lists your key pages for AI tools. A community habit, not an official standard.
+  - term: Token
+    meaning: A small chunk of text an AI reads. Very long pages may be cut off.
+  - term: Schema markup
+    meaning: Hidden labels in a page, such as FAQ markup, that tell machines what each part is.
+tweaks:
+  - what: Your crawler choices
+    how: Decide on training crawlers and search crawlers first. The agent follows your choice and does not make it for you.
+  - what: Which pages you give
+    how: Pick your 5 to 10 most important pages. The llms.txt file lists only what you give.
+  - what: Pasted text or live pages
+    how: An AI that can browse checks real pages. Pasted text cannot show JavaScript problems.
+improve:
+  - Review llms.txt and robots.txt every quarter, so they do not point to dead pages.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

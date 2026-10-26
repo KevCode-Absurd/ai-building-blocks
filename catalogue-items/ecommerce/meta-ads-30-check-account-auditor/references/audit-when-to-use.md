@@ -39,7 +39,7 @@ Use the complete thirty-check registry and scoring procedure in SKILL.md. Missin
 **Creative Fatigue Detection Algorithm:**
 ```
 decayRate = 1 - (currentCTR / baselineCTR)
->25% decay = possible fatigue warning; validate evidence before a change
+>25% decay = FATIGUED (FAIL on C03); confirm with frequency, audience size and tracking before any change
 10-25%     = FATIGUING (refresh soon)
 <=10%      = HEALTHY
 ```

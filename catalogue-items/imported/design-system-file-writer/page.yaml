@@ -2,25 +2,23 @@ thinking: medium
 thinking_why: It makes many design choices but follows a set format.
 new_slug: design-system-file-writer
 name: Design system file writer
-summary: Describe your product's feel. Get a DESIGN.md with type, colour,
-  layout, motion and rules against generic UI.
+summary: Describe your product's feel and get a DESIGN.md design system file with colours, fonts, layout, motion and a ban list, ready for Google Stitch.
 job: design-work
 headline: Design system file writer
-subhead: One DESIGN.md file that tells an AI screen generator exactly how your
-  product should look, so the screens stop coming out generic. It is written for
-  Google Stitch, but the file reads fine as a plain style brief.
+subhead: One DESIGN.md file that tells an AI screen generator exactly how your product should look, so the screens stop coming out generic. It is written for Google Stitch, but the file reads fine as a plain style brief.
 explain: |
   One DESIGN.md file that tells an AI screen generator exactly how your product should look, so the screens stop coming out generic. It is written for Google Stitch, but the file reads fine as a plain style brief.
 
   You describe the feel you want. The skill sets three dials first: how dense the layout is, how much it breaks symmetry, and how much it moves. Then it names each colour with a hex code and a job, caps you at one accent, and bans the purple neon look. It picks fonts, spacing, and button and card behaviour, and ends with a list of banned clichés. Review the result against your real brand before you use it.
 when:
-  - You want AI-made screens to match one clear look instead of the default
-    template style.
-  - You are starting a new product and need a written design direction before
-    any screens exist.
-  - Your generated interfaces keep coming out with the same purple gradients and
-    rounded cards.
+  - You want AI-made screens to match one clear look instead of the default template style.
+  - You are starting a new product and need a written design direction before any screens exist.
+  - Your generated interfaces keep coming out with the same purple gradients and rounded cards.
   - You use Google Stitch and want a single file to paste in as the style source.
+not_for:
+  - "Your brand already has a design system or style guide: use that file instead, and paste it into your AI as the style source."
+  - "You need a fixed component library for a dashboard: pick a library such as Material UI or shadcn and follow its rules."
+  - "You want finished screens or code: this writes a style brief only, so use Google Stitch or a designer to build the screens."
 you_give:
   - A few lines on your product and its mood
   - Who the product is for
@@ -33,7 +31,32 @@ you_get:
   - Button, card and input behaviour notes
   - A list of banned design clichés
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code or files are needed.
+  - Describe your product, who it is for, and the mood you want. Add your colours, fonts or example sites if you have them (optional).
+  - Read the DESIGN.md you get. Check the colours and fonts against your real brand, and fix anything that does not fit.
+  - To make screens, sign in to Google Stitch at labs.google.com/stitch with a Google account. Access may depend on your region.
+  - Paste the DESIGN.md into Stitch as the style source, then ask for your first screen.
+output_sample:
+  input:
+    - A few lines on your product and its mood
+    - Who the product is for
+    - Colours or fonts you already use (optional)
+    - Apps or sites whose look you like (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Access to Google Stitch, only if you want to make screens from the file
+  output:
+    - name: 1. Visual Theme & Atmosphere
+      contains: A short description of the mood, how dense the layout is, how much it breaks symmetry and how much it moves.
+    - name: 2. Color Palette & Roles
+      contains: Each colour with a name, a hex code and its job. One accent at most.
+    - name: 3. Typography Rules
+      contains: Fonts for headlines, body text and numbers, with scale and line length rules.
+    - name: 4. Component Stylings
+      contains: How buttons, cards, inputs, loaders and empty states look and react.
+    - name: 5. Layout Principles
+      contains: Grid and spacing rules, and how the layout collapses to one column on phones.
+    - name: 6. Motion & Interaction
+      contains: How things move, in plain words, as notes for whoever builds the screens later.
+    - name: 7. Anti-Patterns (Banned)
+      contains: A list of design clichés to avoid, such as purple glows, pure black and filler text.

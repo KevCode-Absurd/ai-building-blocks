@@ -1,6 +1,6 @@
 new_slug: marketing-image-prompt-writer
 name: "Marketing image prompt writer"
-summary: "Paste what the image is for. Get one prompt, a size and a file name to paste into an image maker."
+summary: "Write an image prompt for a blog header or social post. Give it your brief. You get one prompt, a size and a file name to paste into an image maker."
 job: make-images
 thinking: low
 thinking_why: "It turns a short brief into one prompt using set rules."
@@ -17,6 +17,10 @@ when:
   - "You need a header or social image and no designer."
   - "Your image maker keeps giving you messy results."
   - "You want a few versions to test."
+not_for:
+  - "You need a logo or text-heavy banner: use a designer or a design tool, because image makers often garble words."
+  - "You need a photo of your real product: take the photo yourself or hire a photographer."
+  - "You want the full version with every check: use the Marketing image maker."
 
 you_give:
   - "What the image is for"
@@ -34,6 +38,27 @@ how_to_use:
   - "Add your colours or style."
   - "Paste the prompt it gives you into an image maker such as ChatGPT or Gemini."
   - "Try the variations if the first is not right."
+output_sample:
+  input:
+    - What the image is for, such as a blog header or social post
+    - What it should show, in one sentence
+    - Your colours or style (optional)
+    - Exact words on the image (optional)
+  prerequisites:
+    - An image maker such as ChatGPT or Gemini, if you want the picture drawn
+  output:
+    - name: PROMPT
+      contains: One image prompt in plain sentences, 60 to 120 words, with one subject, one setting, one mood and a style.
+    - name: SIZE
+      contains: The shape and pixel size that fits where the image will run.
+    - name: FILE NAME
+      contains: A lowercase file name with dashes.
+    - name: EMPTY SPACE NOTE
+      contains: Where you can add text later, or none.
+    - name: TWO VARIATIONS
+      contains: Two versions that change only the angle or the setting.
+    - name: AVOID
+      contains: A short list of things the picture should leave out.
 
 how_it_works:
   - title: "Pick the size"

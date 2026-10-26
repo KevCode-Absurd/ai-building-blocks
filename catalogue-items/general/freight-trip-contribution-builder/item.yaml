@@ -1,17 +1,15 @@
 slug: freight-trip-contribution-builder
 name: Freight trip contribution builder
-summary: A loaded and empty distance trip contribution bridge
+summary: Find what one freight trip earns after fuel, driver, tolls and maintenance, counting loaded and empty kilometers, with each cost on its own line.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

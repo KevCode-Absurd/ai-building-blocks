@@ -1,6 +1,6 @@
 new_slug: build-a-landing-page-fix-it-and-prove-the-top-change
 name: Build a landing page, fix it, prove the top change
-summary: Give it your offer and buyer. Get a page, a review, a test design and a ship or stop call.
+summary: Build a landing page that sells, review it, then test the top fix. Give it your offer and buyer. Get a page plan and a ship, wait or stop call.
 job: audit-landing-page
 thinking: high
 thinking_why: The test design and the result sums must be exact. Use your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to launch a page and want it right.
   - You have a list of page fixes and no way to tell which ones work.
   - You get enough visits to test (a few hundred a week or more).
+not_for:
+  - "You get under a few hundred visits a week: the test would take too long, so use the Landing page auditor on its own and fix the top items by hand."
+  - "You only want a review of a page you already have: use the Landing page auditor."
+  - "You want to read test counts you already have: use the A/B test verdict maker."
 you_give:
   - Your offer, price and buyer
   - What counts as success on the page (a sale, a signup or a call)
@@ -30,6 +34,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - At the first pause, publish the page and pick one change to prove.
   - At the second pause, let the test run its full time before you export the counts.
+output_sample:
+  input:
+    - Your offer, price and buyer
+    - What counts as success on the page (a sale, a signup or a call)
+    - Your brand file (optional)
+    - Visits and conversions for the last few weeks, at the first pause
+    - The counts for each version, at the second pause
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - A page tool where you can publish the page and run a two-version test
+  output:
+    - name: Page plan
+      contains: The page order, copy for each section, design rules and one clear button.
+    - name: Page review
+      contains: The page job, glance, skim and doubt notes, and a ranked list of fixes with a score.
+    - name: Test design
+      contains: The claim, the main, side and guard numbers, sample size, run time, and the control and new version.
+    - name: Result
+      contains: Setup and split checks, each rate with its range, the side numbers, and a ship, wait or stop call.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan and write the page
     text: Takes your offer, buyer and goal, sets the page order from headline to final call and writes the copy section by section.

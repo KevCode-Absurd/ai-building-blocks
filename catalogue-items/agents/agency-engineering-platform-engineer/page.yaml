@@ -1,0 +1,163 @@
+name: Platform Engineer agent
+summary: "Plan an internal developer platform with easy paths for new services, self-serve requests and adoption checks. Bring your team's pain points."
+headline: Platform Engineer agent
+subhead: Tell it where your developers lose time, such as waiting on tickets or setting up each new service by hand. It ranks what to fix first and designs a "golden path", one standard way to do the job. You get the path spec, the self-serve command, catalogue entries and adoption measures.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  In many teams, every new service is set up a different way. Developers file
+  tickets for a database or a domain and wait days. An internal developer
+  platform fixes this with standard roads, called golden paths. One command
+  creates a service with the right language, deploy setup, monitoring and
+  security from the start. This agent plans that platform from your own list of
+  pain points.
+
+
+  It follows the Platform Engineer profile. The standard way is the easy way,
+  and every default has its trade-off written down. Common requests become
+  self-serve, so nobody opens a ticket for them. It ranks work by how often a
+  task happens, how long it takes and what it is worth. It judges success by
+  adoption and developer experience, not by the number of features shipped.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its targets,
+  such as adoption and deploy rates, describe the intended work. They are not
+  measured results from AI Blocks. Your AI writes the plan. It can't build or
+  run your tooling.
+when:
+  - Developers wait on tickets for databases, domains, secrets or deploy setup.
+  - Every new service is set up differently, and no one knows which way is right.
+  - You are setting up Backstage or a service catalogue and need a plan for it.
+  - You built platform tools and want to know if teams use them.
+not_for:
+  - You need one build and deploy pipeline for one project. Use the DevOps Automator agent.
+  - You need to keep a live service up, with alerts and recovery goals. Use the SRE agent.
+  - You are designing the structure of a single app. Use the Software Architect agent.
+you_give:
+  - A short list of what slows your developers down, such as tickets and wait times
+  - How many teams and services you have, and the main languages
+  - The tools you use today, such as your cloud, CI and Backstage (optional)
+  - The five requests the platform team gets most often
+  - Security or compliance rules every service must meet (optional)
+you_get:
+  - A ranked list of what to pave first, with the reason for each
+  - A golden path spec for the top item, with its inputs, defaults and outputs
+  - A design for the self-serve command or form
+  - A service catalogue entry with owner, on-call and runbook
+  - Adoption and developer experience measures, with starting targets
+  - A rollout and retire plan, and the open questions
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your list of pain points and the five most common requests. Add your stack and team count.
+  - Read the ranked list first. Check that the top item is what your developers really lose time on.
+  - Share the golden path spec with two or three friendly teams before you build it.
+  - Treat the targets as starting points. Replace them with your own numbers once you have a baseline.
+  - After launch, track adoption each week and ask non-adopters why. Paste the answers back for the next round.
+how_it_works:
+  - title: Find the friction
+    text: It reads your pain points and request list, and finds the manual work developers do today that should become a standard road.
+  - title: Rank the candidates
+    text: It ranks them by how often they happen, how much time each costs and what they are worth.
+  - title: Spec the golden path
+    text: For the top item it writes the inputs, the defaults, the outputs and an ADR, a short note on the trade-offs.
+  - title: Design self-serve
+    text: It designs the one-command or form version, with sensible defaults and a file for power users to override them.
+  - title: Plan the pilot and rollout
+    text: It plans a pilot with two or three teams, a launch note, and weekly adoption tracking for the first 90 days.
+  - title: Plan upkeep
+    text: It plans a quarterly survey, a review of paved roads, and a 6-month warning before anything breaks.
+output_shape: |-
+  FRICTION LIST
+    <task> | <how often> | <time it costs> | <who does it today>
+
+  PAVED OR DIRT
+    <workflow> | <paved, dirt or missing> | <priority score from frequency, cost and value>
+
+  GOLDEN PATH SPEC
+    Name: <path> | Inputs: <list> | Defaults: <list> | Outputs: <list>
+    Trade-offs: <default> | <why chosen> | <what it costs>
+
+  SELF-SERVE INTERFACE
+    <command or form> | <options> | <override file>
+
+  CATALOGUE ENTRY
+    <service> | <owner> | <on-call> | <runbook> | <dependencies>
+
+  MEASURES
+    <measure> | <starting target to check> | <how to count it>
+
+  ROLLOUT PLAN
+    Pilot teams | Launch note | Adoption review at <day> | Retire or rebuild rule
+
+  ASSUMPTIONS AND GAPS
+    MISSING: <what> | <why it matters>
+output_sample:
+  input:
+    - A short list of what slows your developers down
+    - The five requests your platform team gets most often
+    - Your teams, services, languages and tools
+    - Security or compliance rules (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - A way to ask developers what annoys them, such as a short survey (optional)
+  output:
+    - name: Friction list
+      contains: Each manual task, how often it happens, what it costs and who does it today.
+    - name: Paved or dirt roads
+      contains: Each workflow marked supported, unsupported or missing, with a priority rank.
+    - name: Golden path spec
+      contains: The inputs, defaults and outputs of the top path, with the trade-off behind each default.
+    - name: Self-serve interface
+      contains: The command or form developers use, with its options and an override file.
+    - name: Catalogue entry
+      contains: Owner, on-call, runbook and dependencies for a service.
+    - name: Measures
+      contains: Adoption and developer experience measures with starting targets, and how to count them.
+    - name: Rollout plan
+      contains: The pilot, launch note, adoption review and the rule for retiring or rebuilding a path.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Your top five requests
+    how: Real ticket titles work best. They decide what is paved first.
+  - what: Team size and count
+    how: Give the number of developers and teams. A platform for 5 teams is smaller than one for 50.
+  - what: Existing tools
+    how: Name your cloud, CI and catalogue. The plan builds on them, not around them.
+improve:
+  - Keep a list of what developers still ask the platform team for, and paste it in each quarter.
+  - Save the trade-off notes for each default, so later changes know why it was chosen.
+  - Pair it with the DevOps Automator agent when a golden path needs a full deploy pipeline.
+terms:
+  - term: Internal developer platform
+    meaning: Shared tools that let developers set up and ship software without asking an infrastructure team.
+  - term: Golden path
+    meaning: The standard, supported way to do a common job, such as creating a new service.
+  - term: Self-serve
+    meaning: A task a developer can do alone, with no ticket.
+  - term: Backstage
+    meaning: A tool that lists every service with its owner and links.
+  - term: Adoption
+    meaning: The share of teams that really use a path.
+  - term: ADR
+    meaning: Architecture decision record. A short note on what was chosen, why and what it costs.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read your ticket lists and survey answers together.
+    - name: Backstage
+      why: The profile uses it as the front door for services and templates.
+  inputs:
+    - Last quarter's platform request tickets.
+    - Short interviews with five to eight developers.
+    - Your current deploy time for a new service.

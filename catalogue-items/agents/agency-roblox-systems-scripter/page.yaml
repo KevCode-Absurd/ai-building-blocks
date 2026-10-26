@@ -1,0 +1,145 @@
+name: Roblox Systems Scripter agent
+summary: Plan a Roblox game system in Luau with a server and client split, safe RemoteEvents and DataStore saves that do not lose player data.
+headline: Roblox Systems Scripter agent
+subhead: Tell it what your Roblox game system should do, or paste your scripts. It decides what the server owns and what the player's screen only shows. You get a RemoteEvent map, a save plan, a script layout and a security check.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  In Roblox, anything a player's device sends can be faked. If the client tells
+  the server "I hit that player for 500" and the server believes it, your game
+  is open to cheats. If a save fails once and the script writes default data over
+  the real data, a player loses their progress. This agent plans your system so
+  those two things cannot happen.
+
+
+  The rule it works from is simple. The server decides. The client asks and
+  shows. It lists every message between them, says what the server must check
+  before it acts, and plans saves with retries that also run when the server
+  shuts down. It follows the Roblox Systems Scripter profile by Agency Agents.
+
+
+  It plans and reviews. It cannot run Roblox Studio or test your game. Any Luau
+  it writes is a starter for you to test, not finished code. The profile's
+  numbers, such as save limits, are its own, so check them on the Roblox Creator
+  Documentation page.
+when:
+  - You are building a shop, combat, inventory, round or points system and want the structure right before you write it.
+  - Players lose coins or items when they leave, and you suspect your saving.
+  - You think a client could cheat by firing your RemoteEvents with fake values.
+  - Your scripts have grown messy and you want them split into ModuleScripts.
+not_for:
+  - You want to design the game itself, such as goals, rewards and levels. Use the Roblox Experience Designer agent.
+  - You are making avatar items, such as hats and clothes. Use the Roblox Avatar Creator agent.
+  - You need a bug fixed in a live game right now. Test any fix in Studio first.
+you_give:
+  - What the system should do, in a few plain sentences
+  - Your scripts or folder list, if the game already exists (optional)
+  - What must be saved for each player, such as coins, level or items
+  - Any problem you have seen, such as lost data or players cheating (optional)
+you_get:
+  - A list of what the server owns and what the client only shows
+  - A map of every RemoteEvent, with the checks the server must make
+  - A save plan with retries and a save on shutdown
+  - A script layout with ModuleScripts
+  - A security review of each server handler, and a test list
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe the system. If you have scripts, paste them. Say what must be saved.
+  - Say "Plan this first. Give me starter Luau only if I ask." Your AI asks once for anything missing.
+  - Read the RemoteEvent map first. For each row, ask what a cheater could send. Fix any row where the answer is "anything".
+  - Build in Roblox Studio. Run the tests from the list, including a player leaving mid-save.
+  - Paste your results or errors back and ask for a re-check.
+how_it_works:
+  - title: Split the work
+    text: It decides what the server owns, such as health, coins and items, and what the client only displays.
+  - title: Map the messages
+    text: It lists each RemoteEvent, who fires it, what it carries and what the server checks before acting.
+  - title: Plan the saving
+    text: It plans keys, default data, retries, a save when a player leaves and a save when the server shuts down.
+  - title: Lay out the scripts
+    text: It puts game logic in ModuleScripts and keeps the plain Scripts to a short start-up file.
+  - title: Review for cheats
+    text: For each handler it asks what happens if the client sends garbage, and notes the fix.
+  - title: Plan the tests
+    text: It lists tests for fake input, fast joins and leaves, and server shutdown.
+output_shape: |-
+  AUTHORITY SPLIT
+    Server owns: <list> | Client shows: <list>
+
+  REMOTE MAP
+    <remote name> | <direction> | <what it carries> | <checks the server makes>
+
+  DATASTORE PLAN
+    <key> | <default data> | <load failure plan> | <when it saves> | <retry rule>
+
+  MODULE LAYOUT
+    <folder> > <ModuleScript> | <its one job>
+
+  STARTER LUAU (only if you asked)
+    <short code block, marked untested>
+
+  SECURITY REVIEW
+    <handler> | <what a cheater could send> | <fix>
+
+  TESTS TO RUN
+    <test> | <expected result>
+
+  OPEN QUESTIONS
+    <what is missing or must be checked on the Roblox docs>
+output_sample:
+  input:
+    - What your system should do, in plain sentences
+    - Your existing scripts or folder list (optional)
+    - What must be saved for each player
+    - Any bug or cheat you have seen (optional)
+  prerequisites:
+    - Roblox Studio, to build and test what the agent plans
+  output:
+    - name: Authority split
+      contains: What the server owns and what the client only shows.
+    - name: Remote map
+      contains: Each RemoteEvent with its direction, its payload and the checks the server must make.
+    - name: DataStore plan
+      contains: Keys, default data, retry rule, and when data saves, including on shutdown.
+    - name: Module layout
+      contains: Folders and ModuleScripts, each with one job, and a start-up script that only wires them.
+    - name: Starter Luau
+      contains: Short code for the main module, marked untested. Only if you ask for it.
+    - name: Security review
+      contains: For each server handler, what a cheater could send and how to stop it.
+    - name: Tests to run
+      contains: Tests for fake input, fast joins and leaves, and server shutdown.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Luau
+    meaning: The coding language Roblox uses.
+  - term: Server and client
+    meaning: The server is Roblox's computer that runs the game. The client is each player's own device.
+  - term: RemoteEvent
+    meaning: A message that passes between a player's device and the server.
+  - term: DataStore
+    meaning: Roblox's way to save player data, such as coins, between visits.
+  - term: ModuleScript
+    meaning: A script that holds one piece of game logic and is used by other scripts.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read your scripts and review each handler. One that can browse can check current Roblox limits.
+  inputs:
+    - Your full script folder, pasted in or uploaded.
+    - The error messages from Studio's output window.

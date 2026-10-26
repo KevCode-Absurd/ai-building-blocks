@@ -2,37 +2,58 @@ thinking: high
 thinking_why: It splits stops across sites and then routes them.
 new_slug: multi-warehouse-route-planner
 name: Multi-warehouse route planner
-summary: Give it your warehouses and stops. Get which warehouse serves each stop
-  and the route for every truck.
+summary: Plan which warehouse serves each stop and the truck routes from every depot. Give it your depots and customers to cut total distance.
 job: plan-supply-chain
 headline: Multi-warehouse route planner
-subhead: Give it your warehouses and stops. Get which warehouse serves each stop
-  and the route for every truck. Bring depot locations and capacities. Use the
-  result to plan your next step.
+subhead: Give it your warehouses, trucks and customer stops. It decides which warehouse serves each stop. Then it builds the route for every truck.
 explain: |
   A decision on which warehouse serves each customer and the best truck routes out of every depot, to cut total distribution cost.
 
   The skill treats it as a multi-depot routing problem, which has two linked choices: who is assigned to which depot, and how each truck loops. It first asks about your depots, their capacity and fixed costs, whether trucks return to their own depot, and how many customers you serve. Size decides the method: exact solving for small cases, smart heuristics for medium ones and metaheuristics for large. It can balance workload between depots or minimize the longest route.
 when:
-  - You have three warehouses and customers that could be served by any of them.
+  - You have three warehouses and customers that any of them could serve.
   - Trucks from two depots overlap in the same areas.
-  - You are deciding whether to close or add a depot.
+  - You are weighing whether to close or add a depot.
   - Some depots are overloaded while others sit idle.
+not_for:
+  - "You have one warehouse only: use a basic vehicle routing tool or a simple map app to order the stops."
+  - "You need to choose where to build a new warehouse from scratch: use a site selection study with a planner or analyst."
+  - "You have under ten stops: sort them by area on a map by hand, no solver needed."
 you_give:
   - Depot locations and capacities
-  - Customer locations and demand
-  - Number of trucks per depot
-  - Your goal, such as least miles or balanced loads
+  - Customer locations and how much each one needs
+  - Number of trucks per depot and truck capacity
+  - Your goal, such as least distance or balanced loads
   - Time windows (optional)
 you_get:
-  - A depot assignment for each customer
+  - A depot assigned to each customer
   - A route for each truck
-  - Total distance and cost
-  - Workload by depot
-  - A method matched to your size
+  - Total distance and average route length
+  - Trucks used and average load by depot
+  - A solving method matched to your problem size
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run code, such as Claude or ChatGPT with code tools on. Paste in the skill text.
+  - Put your depots and customers in a table with coordinates. Add demand per customer and trucks per depot. Paste it as CSV.
+  - "Tell your AI your goal: least distance, balanced loads or shortest longest route. Say if trucks must return to their own depot."
+  - Ask it to run the solver and report the result. It may need to install OR-Tools and scikit-learn first.
+  - Check the depot loads. If one depot is overloaded, ask it to re-run with balanced workload as the goal.
+  - Use the routes to brief drivers. Re-run with a different depot count to compare options.
+output_sample:
+  input:
+    - Your depot locations, truck counts and capacities
+    - Your customer locations and how much each one needs
+    - Your goal, such as least distance or balanced loads
+    - Time windows or depot fixed costs (optional)
+  prerequisites:
+    - An AI that can run code, for the exact and heuristic solving steps
+  output:
+    - name: Problem summary
+      contains: Number of customers, depots, trucks and truck capacity as your AI understood them.
+    - name: Solution table
+      contains: Total distance, trucks used and average route length.
+    - name: Depot assignments
+      contains: For each depot, the customers served, trucks used, total distance and average load.
+    - name: Truck routes
+      contains: The stop order for each truck, starting and ending at its depot.
+    - name: Method used
+      contains: The solving approach chosen to fit the size of your problem.

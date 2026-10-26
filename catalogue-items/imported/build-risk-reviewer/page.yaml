@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It weighs several risks and picks a first test.
 new_slug: build-risk-reviewer
 name: Build risk reviewer
-summary: Describe what you plan to build. Get the biggest risks on demand and
-  switching, plus the smallest test to run first.
+summary: Check a product idea before you build it. Describe it and get the biggest risks, the smallest test to run first, and a clear continue or stop call.
 job: test-an-idea
 headline: Build risk reviewer
-subhead: Find out if what you plan to build is worth building, before you write
-  any code. You get the biggest risks named and the smallest test to try first.
+subhead: Find out if what you plan to build is worth building, before you write any code. You get the biggest risks named and the smallest test to try first.
 explain: |
   Find out if what you plan to build is worth building, before you write any code. You get the biggest risks named and the smallest test to try first.
 
@@ -17,6 +15,10 @@ when:
   - A feature sounds good but you cannot say why users would switch.
   - You have a side project idea and want a cheap way to test it.
   - You need to write down your assumptions before building.
+not_for:
+  - "You already have paying users or a clear written spec: skip the review and start building, or talk to your customers."
+  - "You need real market research or proof of demand: talk to buyers yourself or hire a researcher, because this only surfaces doubts."
+  - "You need legal, financial or expert advice on the idea: ask a qualified person."
 you_give:
   - What you plan to build
   - Who you think will use it
@@ -28,7 +30,23 @@ you_get:
   - The smallest validation test
   - A continue or stop call
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. It needs no code, files or paid tools.
+  - Describe what you plan to build and who it is for. Add what they use today and how you will reach them, if you know.
+  - Read the risks it names. Check that each one is a real doubt about your idea, not a generic list.
+  - Run the smallest test it suggests before you build anything.
+  - If it says stop, do the smaller test first. If it says continue, keep the written assumptions and start building.
+output_sample:
+  input:
+    - What you plan to build
+    - Who you think will use it
+    - What they use today (optional)
+    - How you plan to reach them (optional)
+  output:
+    - name: Build bet
+      contains: One sentence naming the user, the job they need done and what they use today.
+    - name: Main risks
+      contains: Specific doubts about demand, workflow fit, switching, reaching buyers, pricing, data access and running effort.
+    - name: Smallest test
+      contains: One cheap step to try before building, such as a buyer chat, landing page, manual version or paid pilot.
+    - name: Continue or stop call
+      contains: Build with your assumptions written down, or run a smaller test first if the risk is high.

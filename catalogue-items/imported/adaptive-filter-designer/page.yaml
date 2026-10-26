@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: Filter choice depends on the signal.
 new_slug: adaptive-filter-designer
 name: Adaptive filter designer
-summary: Describe the noise or echo to remove. Get MATLAB filter code, a
-  convergence check and a cleaned signal.
+summary: Remove echo or noise from a signal with an adaptive filter. You get MATLAB code, a convergence check, the final weights and a cleaned signal.
 job: build-software
 headline: Adaptive filter designer
-subhead: Give it your signal, a reference signal and a description of the noise
-  or echo, plus your sample rate and filter length goals. It picks the filter
-  type and update method, builds the filter in MATLAB and tests it on your
-  signal. You get the filter code, the reason for the choice, a convergence
-  check, the final weights and a cleaned signal.
+subhead: Give it your signal, a reference signal and a description of the noise or echo, plus your sample rate and filter length goals. It picks the filter type and update method, builds the filter in MATLAB and tests it on your signal. You get the filter code, the reason for the choice, a convergence check, the final weights and a cleaned signal.
 explain: |
   You get an adaptive filter built and tested on your own signal, ready to cancel noise or echo. The skill shows whether it settles on the right answer and gives you the final filter weights.
 
@@ -20,6 +15,10 @@ when:
   - Engine or fan noise is hiding your signal.
   - You want to model an unknown system from its input and output.
   - A long filter is too slow and you need a faster form.
+not_for:
+  - "You need a fixed filter that does not learn: use a plain digital filter design in MATLAB, or ask your AI for a standard FIR or IIR filter."
+  - "You want to track a moving state, like position or speed: use a Kalman filter from the Control System Toolbox."
+  - "You want to clean noise with a trained neural network: use the Deep Learning Toolbox instead."
 you_give:
   - Your signal and a reference signal
   - A description of the noise or echo
@@ -32,8 +31,31 @@ you_get:
   - The final filter weights
   - A cleaned signal
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with DSP System Toolbox.
+  - Open a chat with an AI that can run MATLAB code. You need MATLAB R2024b or newer with the DSP System Toolbox, which needs a MATLAB licence.
+  - Paste the skill into the chat, or upload the skill folder.
+  - Add your signal file, your reference signal, your sample rate and a short note on the noise or echo.
+  - Ask your AI to design and run the adaptive filter, then show the error curve and the final weights.
+  - Check that the error curve falls and levels off. If it does not, ask for a smaller step size or a different filter type.
+  - Apply the weights to new data, or keep the code to run the filter on live signals.
+output_sample:
+  input:
+    - Your signal, such as a recording with echo or noise
+    - A reference signal, such as the noise source or the original sound
+    - "A short note on the problem: noise, echo, or an unknown system to model"
+    - Your sample rate and the filter length you want (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB R2024b or newer with the DSP System Toolbox (needs a MATLAB licence)
+  output:
+    - name: Problem analysis
+      contains: The type of task, such as noise cancellation or system identification, and the limits on filter length and delay.
+    - name: Filter choice
+      contains: The chosen filter object and update method, with the reason it suits your signal.
+    - name: MATLAB code
+      contains: A script that builds the filter, sets a safe step size and runs it frame by frame.
+    - name: Convergence check
+      contains: A test that the error falls over time, so you can see the filter has settled.
+    - name: Final weights
+      contains: The learned filter coefficients, pulled out the right way for the filter type you used.
+    - name: Cleaned signal
+      contains: Your signal with the noise or echo removed.

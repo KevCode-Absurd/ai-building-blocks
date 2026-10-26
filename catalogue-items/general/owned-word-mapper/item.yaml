@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: competitor_set, required: true}
   - {type: voc_reviews, required: false}
+  - {type: ad_breakdowns, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

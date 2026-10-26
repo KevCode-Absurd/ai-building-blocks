@@ -1,6 +1,6 @@
 new_slug: keyed-headline-test-planner
 name: "Keyed headline test planner"
-summary: "Paste your offer and headline options. Get headlines sorted by appeal, a keyed small test and a rule for picking the winner."
+summary: "Plan a headline test that tells you which headline wins. Give it your offer and headline options. You get a shortlist, a keyed test plan and a winning rule."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It sorts and picks from your list, then writes a fixed test design."
@@ -17,6 +17,10 @@ when:
   - "You have several headline ideas and no fair way to choose."
   - "You are about to put money behind an ad and want a small test first."
   - "Your last test changed three things at once and told you nothing."
+not_for:
+  - "You have one headline and no others to compare: write more options first, or ask a colleague to review it."
+  - "You cannot give each version its own code, link or phone number: use a split-test tool in your ad platform, which tracks versions for you."
+  - "You want to review past sales calls to learn what buyers say: listen to the calls yourself and note the words buyers use."
 
 you_give:
   - "Your offer: what it is, the price or terms, who it is for"
@@ -35,6 +39,27 @@ how_to_use:
   - "Say where the test will run and what counts as a response."
   - "Create the keys it lists, such as codes or separate links."
   - "Run the small test, record the counts, and apply the winning rule."
+output_sample:
+  input:
+    - "Your offer: what it is, who it is for, price and terms"
+    - Your headline options, or the hooks from an earlier step
+    - Where the test will run and what counts as a response
+    - Your budget for the small test (optional)
+  output:
+    - name: Headlines by appeal
+      contains: Every headline tagged as self-interest, news or curiosity, with the promise each curiosity line points to.
+    - name: Shortlist
+      contains: Two or three headlines with different appeals, each with one line on why it was picked.
+    - name: Test plan
+      contains: What changes (the headline only), what stays fixed, each version's key, where it runs and the size of the run.
+    - name: Winning rule
+      contains: Responses per cost, a minimum count and a tie rule, all set before the test starts.
+    - name: Record
+      contains: What to write down after the test, such as counts, cost, dates and why you chose.
+    - name: Missing
+      contains: Each gap the skill found, so you can fill it in later.
+    - name: Checks missed
+      contains: One line for each check that failed, or the word none.
 
 how_it_works:
   - title: "Builds the list"

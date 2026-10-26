@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks 15 known spots and fixes each one.
 new_slug: lovable-project-cleaner
 name: Lovable project cleaner
-summary: Point it at a Lovable export. Get the Lovable tags, branding and filler
-  files removed so the project is yours.
+summary: Clean up your Lovable project export. It removes the Lovable tagger, branding and extra notes files, so the code ships as your own.
 job: build-software
 headline: Lovable project cleaner
-subhead: A project export with every trace of Lovable removed, so the code reads
-  as your own before you ship or open-source it. It covers fifteen places where
-  the tool leaves marks.
+subhead: A project export with every trace of Lovable removed, so the code reads as your own before you ship or open-source it. It covers fifteen places where the tool leaves marks.
 explain: |
   A project export with every trace of Lovable removed, so the code reads as your own before you ship or open-source it. It covers fifteen places where the tool leaves marks.
 
@@ -18,6 +15,10 @@ when:
   - Your page title and favicon are still the generic defaults.
   - You see extra summary markdown files in the project root.
   - You are about to open-source the code and want to audit for leftovers.
+not_for:
+  - "Your Lovable app uses Supabase or edge functions: have a developer review that backend code by hand, because this skill does not check it."
+  - "Your project is not Vite and React with shadcn components: ask a developer to clean it by hand."
+  - "You only want to remove the Lovable tagger: delete that one dev dependency and its call in the Vite config yourself."
 you_give:
   - The exported project folder
   - Your own name, title and icons (optional)
@@ -28,8 +29,23 @@ you_get:
   - Generated docs deleted
   - A final leftovers report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and change your project files.
+  - Open your AI tool with access to your project files, such as Claude Code or Cursor. A plain chat cannot change files.
+  - 'Add this skill, then say: "Clean up my Lovable project."'
+  - Tell your AI which package manager you use and give your own title and icons if you have them.
+  - Read the Cleaned list, then answer anything under Needs your input.
+  - Run your build to check the project still works before you ship it.
+output_sample:
+  input:
+    - Your exported Lovable project folder
+    - The package manager you use, such as npm, yarn or pnpm
+    - Your own name, page title and icons (optional)
+    - A Vercel account, only if you want the old favicon cache cleared (optional)
+  prerequisites:
+    - An AI that can read and change your project files and run commands
+  output:
+    - name: Cleaned
+      contains: Everything the skill removed or replaced, such as the tagger, config call, branding files and generated notes.
+    - name: Needs your input
+      contains: Items that need your choice, such as your own title, icons or any Lovable keys found.
+    - name: Deferred (safe to do later)
+      contains: Optional jobs that can wait, such as pruning unused packages or clearing old favicon caches.

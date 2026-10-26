@@ -1,33 +1,125 @@
 new_slug: reusable-skill-requirements-planner-builder-prompt
 name: Reusable skill brief coding prompt
-summary: Get a coding brief that turns a task into a reusable skill, with inputs, steps, output rules and checks.
+summary: "Fill in a short template and paste it into Claude Code. It writes a reusable skill file for any task you repeat, run with a slash command."
 job: build-software
 headline: Reusable skill brief coding prompt
-subhead: Get a coding brief that turns a task into a reusable skill, with inputs, steps, output rules and checks.
-explain: |-
-  Share your project and the required feature. Get a coding brief for reusable skill requirements planner, with setup and test steps.
+subhead: "Fill in a template with the skill's name, steps, what it needs, what it gives back and its rules. Paste it into Claude Code. It writes a skill file you can run again and again with a slash command, such as /weekly-review."
+explain: |
+  If you give your AI the same instructions every week, you are doing work a skill file can do for you. A skill is a saved set of instructions. Claude Code reads it when you type its command, so you stop retyping.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This Claude Code skill builder prompt is a template with six blanks: the name and command, what the skill does step by step, what it needs from you, what it hands back, its always and never rules, and its tone. You fill them in, and Claude Code turns them into a skill file with a fixed layout: a title and role, the steps, any scoring logic, the exact output format, the rules and what to do when information is unclear.
+
+  The template works for any repeat task, in any business. It does not need ads or any one field. Blanks you leave empty become MISSING in the file. Nothing is made up for you.
+
 when:
-  - You need a coding brief for reusable skill requirements planner.
-  - You need reusable skill requirements planner prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - "You paste the same long instructions into your AI every week or every client."
+  - "A teammate keeps doing a task differently and you want one saved way to do it."
+  - "You have a checklist in your head, such as a pre-launch check, and want it to run on command."
+  - "You know what the finished result should look like but not how to write a skill file."
+
+not_for:
+  - "You are in a chat AI and not in Claude Code, and want a draft from a job you repeat: use the Repeat job skill drafter."
+  - "You already have a skill file and want it checked: use the Skill file problem spotter."
+  - "You want to turn a whole book into skills: use the Book to skill converter."
+  - "The task happens once. Ask your AI directly. A skill only pays off when you repeat the work."
+
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - "The skill's name and the command you will type, such as /weekly-review"
+  - "What the skill does, step by step, in your own words"
+  - "What it needs from you each time, such as a spreadsheet, a client name or pasted text"
+  - "What the result should look like, such as a table with set columns or a numbered action list"
+  - "Rules it must always follow and things it must never do"
+  - "The tone it should write in (optional)"
+
 you_get:
-  - A coding brief for reusable skill requirements planner
-  - Required files, setup gaps and test cases
+  - "A skill file in your project at .claude/skills/<command>/SKILL.md"
+  - "A set layout: title and role, steps, scoring logic if you need it, output format, rules and how to handle unclear input"
+  - "Blanks you left empty marked MISSING, with a note on what to decide"
+  - "A short note on how to run the new skill and test it"
+
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open a folder in Claude Code. Claude Code runs on a paid Claude plan or an API account. Skills saved in a project folder work for that project."
+  - "Copy the template from the skill file. Fill every [BRACKET] with your own details and delete the example lines."
+  - "Paste it in. Claude Code may ask a question or two, then writes the skill file."
+  - "Open the new file. Check that it starts with a name and a description, that the steps are in order and that it says what to do when input is missing."
+  - "Type your command with a real input. Run it three times and check the layout stays the same."
+  - "Tell Claude Code what to change, such as 'add a rule that it never guesses a number', and run it again."
+
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: "Reads your six blanks"
+    text: "Takes the name, command, steps, input, output format, rules and tone you wrote. If a blank is unclear, it asks up to three questions first."
+  - title: "Marks gaps"
+    text: "Any blank you left empty becomes MISSING in the skill, and Claude Code tells you what to decide."
+  - title: "Writes the skill file"
+    text: "Saves it at .claude/skills/<command>/SKILL.md with a name and a description at the top, so Claude knows when to use it."
+  - title: "Builds the six parts"
+    text: "Title and role, process, scoring logic if any, output format, always and never rules, and how to handle unclear input."
+  - title: "Keeps it self-contained"
+    text: "The file works with no extra context. It adds no step that sends, posts or buys unless you wrote it."
+  - title: "Hands back how to test it"
+    text: "Says how to run the command and what to check: the layout, the rules and a steady result across three runs."
+
+output_shape: |
+  FILE: .claude/skills/<command>/SKILL.md
+
+  ---
+  name: <command>
+  description: <what it does and when to use it>
+  ---
+
+  # <Skill name>
+  ## Role: <who Claude acts as for this skill>
+  ## Process: <numbered steps, in order>
+  ## Scoring or sorting logic: <only if your task needs it>
+  ## Output format: <the exact layout you described>
+  ## Rules: <always list, never list>
+  ## If something is unclear: <ask once or write MISSING, never guess>
+
+  HOW TO RUN: <the command and what to give it>
+  TO DECIDE: <blanks left empty>
+
+output_sample:
+  input:
+    - "The skill's name and command"
+    - "The steps it should follow, in your words"
+    - "What it needs from you and what it should hand back"
+    - "Rules it always and never follows, and its tone (optional)"
+  prerequisites:
+    - "Claude Code installed and open in a folder"
+  output:
+    - name: "SKILL.md front matter"
+      contains: "The skill's name and a one-line description of what it does and when to use it."
+    - name: "Role and Process"
+      contains: "Who Claude acts as, and your steps in order."
+    - name: "Scoring or sorting logic"
+      contains: "The labels or scores your task needs and how each one is decided. Left out if not needed."
+    - name: "Output format"
+      contains: "The exact layout of the result, such as the table columns you asked for."
+    - name: "Rules"
+      contains: "What the skill always does and never does, in your words."
+    - name: "If something is unclear"
+      contains: "What to do when input is missing: ask once or mark MISSING, never guess."
+    - name: "How to run and test it"
+      contains: "The command to type, what to give it and what to check in the first three runs."
+
+works_best_with:
+  tools:
+    - name: "Claude Code"
+      why: "It writes the file straight into your project folder, and you run the new skill from the same place."
+  inputs:
+    - "One real example of a good result, pasted next to the output format"
+    - "The last time you did this task by hand, so the steps match what you really do"
+    - "A line on who reads the result, to set the tone"
+
+terms:
+  - term: "Skill"
+    meaning: "A saved set of instructions your AI follows when you type its command."
+  - term: "Slash command"
+    meaning: "A short word starting with / that runs a skill, such as /weekly-review."
+  - term: "Front matter"
+    meaning: "The name and description at the top of a skill file."
+  - term: "Claude Code"
+    meaning: "A coding tool from Anthropic that works inside your folder and can write files there."
+
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It turns your rough steps into a clear file, so it needs care but no deep reasoning.

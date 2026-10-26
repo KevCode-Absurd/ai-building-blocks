@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It questions its own thinking in the middle of work.
 new_slug: direction-check-in
 name: Direction check-in
-summary: Ask it to pause. Get an honest look at your direction, assumptions and
-  bias before you go on.
+summary: Pause a long chat and get a plain check on your direction, assumptions and bias, ending in Continue, Pivot or Pause. A direction check-in for your AI.
 job: think-and-decide
 headline: Direction check-in
-subhead: A pause in the middle of a long chat, when you want an honest look at
-  whether you are heading the right way. It tells you what the conversation has
-  actually been building and what you may have missed.
+subhead: A pause in the middle of a long chat, when you want an honest look at whether you are heading the right way. It tells you what the conversation has actually been building and what you may have missed.
 explain: |
   A pause in the middle of a long chat, when you want an honest look at whether you are heading the right way. It tells you what the conversation has actually been building and what you may have missed.
 
@@ -18,6 +15,10 @@ when:
   - You keep hitting dead ends and changing direction.
   - You worry you are solving the wrong problem.
   - You want a sanity check before committing to a plan.
+not_for:
+  - "You want a quick fact or a single-step task done: just ask your AI the question directly."
+  - "Your goal has changed, not just the path: start a new chat with the new goal instead."
+  - "You want a person's view on a big call, such as a hire or a loan: talk to a trusted advisor, then use this to test your own thinking."
 you_give:
   - The conversation so far
   - Your real goal in a sentence (optional)
@@ -28,7 +29,27 @@ you_get:
   - Possible bias or tunnel vision
   - Options for what to do next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open the chat where you have been working. This works best after a long back and forth.
+  - Paste the skill text into the chat if your AI does not have it yet.
+  - Type "step back" or "are we on track". Add your real goal in a sentence if you can.
+  - Read the reply. It is plain prose with no headings, and it ends with Continue, Pivot or Pause.
+  - Act on the last line. Answer the question it raises, switch course, or carry on. It needs no code, files or paid tools.
+output_sample:
+  input:
+    - Your current chat, where you have been working for a while
+    - A phrase such as "step back" or "are we on track"
+    - Your real goal in a sentence (optional)
+    - Any doubts you have (optional)
+  output:
+    - name: Where the chat has been heading
+      contains: A look back from your first goal to now, showing whether the work has narrowed or drifted.
+    - name: Gaps
+      contains: Things taken for granted, people or limits left out, and options you dropped too early.
+    - name: Right problem check
+      contains: Whether you are solving the right problem, and whether the path is too complex or too easy.
+    - name: Bias check
+      contains: Any tunnel vision found, such as sunk cost or anchoring, with evidence from the chat and a fix.
+    - name: Fit with your goals
+      contains: Whether this direction suits your real aims and is a good use of your time.
+    - name: Closing recommendation
+      contains: "One clear call: Continue, Pivot to something, or Pause for a named question, with the reason."

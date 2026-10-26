@@ -2,34 +2,66 @@ thinking: high
 thinking_why: It checks you against clauses and judges each answer.
 new_slug: iso-27001-audit-prep-coach
 name: ISO 27001 audit prep coach
-summary: Name your scope. Answer six questions and get gaps to fix before an
-  internal or outside ISO 27001 audit.
+summary: Get your ISO 27001 audit prep done before the auditor arrives. Name your scope, answer six questions, and get a verdict with your top 3 fixes.
 job: secure-code
 headline: ISO 27001 audit prep coach
-subhead: "Six hard questions that expose what an ISO 27001 auditor would pick
-  on, asked before they do. Name your scope and the audit type: an internal
-  review, a stage 1 or 2 certification, or a surveillance visit."
+subhead: "Give it your audit scope and audit type. Your AI asks six hard questions an ISO 27001 auditor would ask, and wants real samples, not claims. You get a verdict and your top 3 fixes."
 explain: |
   Six hard questions that expose what an ISO 27001 auditor would pick on, asked before they do. Name your scope and the audit type: an internal review, a stage 1 or 2 certification, or a surveillance visit. The coach works through each question and expects samples, not claims.
 
   It asks whether three-year audit coverage is on track and whether auditors are independent. It asks when the risk register was last refreshed and whether high risks link to controls. It asks you to show the last four quarters of access reviews, which is the most cited finding area. Each weak answer becomes a gap to fix before the audit.
 when:
-  - Your annual internal audit is coming up.
-  - A certification body will visit next month.
-  - You changed scope after adding a product or a new SaaS tool.
-  - You had a breach and need to check your management system.
+  - Your yearly internal audit is coming up.
+  - A certification body visits next month.
+  - You added a product, business unit or new SaaS tool and your scope changed.
+  - You had a breach and want to check your management system.
+not_for:
+  - "You need a full SOC 2 readiness check: use a SOC 2 audit tool, as this one covers ISO 27001 only."
+  - "You want an auditor to certify you: book a certification body, as this only helps you prepare."
+  - "You want help writing policies from scratch: ask your security lead or a consultant, as this checks evidence and does not write it."
 you_give:
   - Your audit scope
-  - The audit type
-  - Your risk register and access review records
-  - Policy and audit schedule documents (optional)
+  - "The audit type: internal, stage 1 or 2, or surveillance"
+  - Your risk register
+  - Your last four quarters of access review records
+  - Your supplier list and recent incident reviews (optional)
+  - Your management review notes (optional)
 you_get:
-  - Answers to six audit questions with gaps marked
+  - Answers to six audit questions, with gaps marked
   - A list of weak or missing evidence
-  - A priority fix list
-  - Hints on what auditors will ask next
+  - A pass or fail on the high-risk controls, with a sample for each
+  - "A verdict: ready, close criticals first, or not ready"
+  - Your top 3 actions with an owner and a timeline
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Type your scope and the audit type.
+  - Answer each of the six questions. Paste real records, like an access review export, not a summary.
+  - Say so when you have no evidence for a question. Your AI marks it as a gap.
+  - Read the verdict and the top 3 actions, then give each action to an owner.
+  - Treat the file paths and scripts named in the skill as optional. You can run every check by hand in chat.
+output_sample:
+  input:
+    - Your audit scope
+    - "The audit type: internal, stage 1 or 2, or surveillance"
+    - Your risk register and access review records
+    - Your supplier list and incident records (optional)
+    - Your management review notes (optional)
+  prerequisites:
+    - An AI chat tool. No code needs to run if you answer the checks by hand.
+  output:
+    - name: The Decision Being Made
+      contains: "Which kind of call this is: programme plan, finding severity, certification readiness or incident follow-up."
+    - name: Audit Programme Status
+      contains: Which clauses and Annex A controls are scheduled, whether three-year coverage is clean, and whether auditors are independent.
+    - name: Risk Register Health
+      contains: Date of the last refresh, high risks with no linked control, and whether residual risk sign-off is complete.
+    - name: High-Stakes Controls Status
+      contains: Pass or fail, with a sample, for access control, supplier management, incident response and logging.
+    - name: Management Review Status
+      contains: Last review date, whether required inputs are present, and how many action items are overdue.
+    - name: Cross-Framework Impact
+      contains: Which SOC 2, ISO 42001 and GDPR Article 32 controls the findings touch.
+    - name: Verdict
+      contains: Ready, close criticals first, or not ready.
+    - name: Top 3 Actions
+      contains: Three next steps, each with an owner and a fix timeline.

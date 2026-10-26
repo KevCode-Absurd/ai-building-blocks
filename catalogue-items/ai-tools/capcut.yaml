@@ -2,17 +2,17 @@ slug: capcut
 name: CapCut
 maker: ByteDance
 url: https://www.capcut.com
-promise: "Edit, caption and resize short videos on your phone or computer."
+promise: "Edit, caption and resize short videos on your phone, computer or in a browser."
 use_cases: [edit-video, make-video]
 categories: [video]
 what_it_does:
   - Cuts and arranges clips on a timeline.
-  - Adds captions to speech in your video automatically.
+  - "Adds captions to speech in your video automatically, in several languages (checked 26 Oct 2026)."
   - Resizes a video for TikTok, Reels and Shorts.
   - Offers templates, effects and music for short videos.
-  - Makes AI clips and images with its AI features.
+  - "Makes AI images and video clips, and turns text into speech, with its AI tools (checked 26 Oct 2026)."
 benefits:
-  - "Edit a short video from your phone or computer."
+  - "Edit a short video on your phone, in a browser or on a computer (CapCut lists Desktop, Online, Pad and Mobile; checked 26 Oct 2026)."
   - Add captions without typing every line.
   - Reuse one edit in several sizes for different feeds.
 best_for:
@@ -20,12 +20,13 @@ best_for:
   - Creators and small teams who edit their own footage.
   - Product reels with captions and text overlays.
 not_for:
-  - Long films or broadcast-level colour work.
-  - People who want every export free of a watermark on the free plan.
+  - "Long films or broadcast-level colour work. Use a full desktop editor."
+  - "People who need every export clean with no watermark and no paid items. CapCut's help page says a free export that uses Pro items can carry a watermark (checked 26 Oct 2026)."
+  - "Editing by changing the words in a transcript. Use Descript for that."
 pricing:
   model: freemium
-  from: Check the maker's site
-  note: A free plan covers core editing. Pro was listed at US$19.99 per month on the web in an October 2026 check. Prices differ by country and app store.
+  from: US$19.99 per month (Pro)
+  note: "CapCut says you can try it online free with no card (checked 26 Oct 2026). Pro is US$19.99 a month, or US$179.99 a year, on CapCut's own pricing and sale pages. Team plan figures differed between CapCut pages, so check before you buy. A 7-day Pro trial is listed for eligible new users in supported regions. Prices differ by country and app store."
 works_with:
   - kling
   - seedance
@@ -40,7 +41,31 @@ blocks:
   - motion-comic-video-prompts
   - marketing-video-producer
 alternatives: [descript, veed, opus-clip, canva]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  mobile-or-desktop:
+    - "Install CapCut on your phone or computer, or open CapCut Online in a browser. Sign-in steps were not checked here."
+    - "Start a new project and add your raw clips. Trim each one on the timeline."
+    - "Turn on auto captions and read every line. Fix names and product words by hand."
+    - "Set the shape to 9:16 for TikTok, Reels and Shorts. Add music and text overlays."
+    - "Export. Watch the whole file once, and check for a watermark before you post."
+needs:
+  - "A free CapCut account to start."
+  - "Your raw clips, with clear speech if you want automatic captions."
+  - "Music you have the right to use."
+  - "The text for any overlays, such as a price or a call to action."
+example:
+  task: "Turn 3 phone clips of a product into a 30-second 9:16 reel with captions."
+  cost: "Free to try. If you use Pro items, free exports can carry a watermark, so check the export. Pro is US$19.99 a month."
+  reply: "One vertical video file with your clips cut together, captions on screen and music. Export resolution and the free-plan limits were not listed on the pages we checked, so open the export options in the app."
+not_verified:
+  - "What the free plan limits are. CapCut's pricing page showed no plan table when we checked."
+  - "Whether free exports carry a watermark. The home page says exports have no watermark, and the help page says Pro items bring one."
+  - "Team plan prices. CapCut pages gave different figures."
+  - "Export resolution on the free plan."
 sources:
-  - https://www.capcut.com/pricing
-  - https://dupple.com/learn/is-capcut-free
+  - https://www.capcut.com/
+  - https://article.capcut.com/pricing
+  - https://www.capcut.com/help/join-capcut-pro-for-exporting
+  - https://www.capcut.com/help/capcut-pro-free-trail

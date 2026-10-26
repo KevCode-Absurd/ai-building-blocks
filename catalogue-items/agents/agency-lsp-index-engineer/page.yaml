@@ -1,0 +1,151 @@
+name: LSP/Index Engineer agent
+summary: Plan a code search tool that gives go-to-definition and find-references across many languages, with language servers, a code graph and an index file.
+headline: LSP/Index Engineer agent
+subhead: Tell it which languages and how big your codebase is. It plans which language servers to run, how to join their answers into one code graph, and how to keep it current. You get a design, draft code and tests to run.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Your editor can jump to a definition or list every use of a function because
+  a language server answers those questions. The server follows the Language
+  Server Protocol, or LSP. But each language has its own server, and none sees
+  the whole project. If you want one tool that answers across TypeScript, PHP,
+  Go, Python and more, you must join their answers into one index.
+
+
+  This agent plans that join. It chooses which server handles each language and
+  checks what each one can really do, because servers differ. It designs a
+  graph of files and symbols with strict rules, such as one definition per
+  symbol and no edge that points to nothing. It plans an index file where each
+  line is one complete record, and the updates that keep it correct when files
+  change.
+
+
+  It writes designs and draft code. It does not run servers or measure speed.
+  The speed numbers in the source profile, such as answers in under half a
+  second, are targets to test, not results. It is a role profile from Agency
+  Agents, shared under MIT.
+when:
+  - You want one go-to-definition and find-references tool across a codebase with several languages.
+  - Find-references in your editor is slow, wrong or missing on a large repository.
+  - You are building a code map or an AI coding helper that needs to know where each function is defined and used.
+  - You need an index that updates when files change, without a full rebuild.
+not_for:
+  - You are new to a codebase and want to understand it. Use the Codebase Onboarding Engineer agent or the Codebase Archaeologist agent.
+  - You want a code review of a change. Use the Code Reviewer agent.
+  - You want to build an editor plugin or command line tool for your team. Use the Developer Tooling Engineer agent.
+  - Your graph is about documents and facts, not code. Use the Knowledge Graph Engineer agent.
+you_give:
+  - The languages in your codebase, and the size of each in files or lines
+  - What the tool must answer, such as definitions, references, hover text or call links, and who will use it
+  - Where it runs, such as laptops, a server or CI, and its memory limit (optional)
+  - What is slow or wrong today, with an example (optional)
+  - Your repository layout, such as a monorepo or several roots (optional)
+you_get:
+  - A language server plan, one row per language, with what each can and cannot do
+  - A graph design with node and edge types and the rules that keep it consistent
+  - An index file format with one record per line
+  - An update plan using file watching, git hooks and caching
+  - Speed targets for you to test, clearly marked as targets
+  - Draft code or config for the parts you ask for, and a test list
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - List your languages, repository size and what the tool must answer. Say if some languages matter more than others.
+  - Type "Design the language server setup and index, then list how I test it." Your AI asks once for anything missing.
+  - Read the language server table first. Confirm each server exists for your language and your version before you build on it.
+  - Run the test list on a copy of your repository. Your AI cannot run servers or time them.
+  - Compare your measured times with the targets. Change the design only where the numbers say so.
+how_it_works:
+  - title: Set the goal
+    text: It states what the tool answers, for whom, and which languages come first. It asks once for missing facts, then marks them.
+  - title: Pick the language servers
+    text: It names a server per language and notes what each supports. It plans a check of each server's reported abilities, never an assumption.
+  - title: Design the graph and index
+    text: It sets node and edge types and the consistency rules. Each index line is one record that shares an ID with the graph node.
+  - title: Plan updates
+    text: It plans file watching, git hooks and caching, with updates that apply all at once or not at all.
+  - title: Plan tests and speed checks
+    text: It plans checks for consistency, server crashes and timing against targets you set.
+output_shape: |-
+  GOAL AND ASSUMPTIONS
+    <what the tool answers> | <users> | <language priority> | <limits> | <assumptions>
+
+  LANGUAGE SERVERS
+    <language> | <server> | <what it supports> | <known gaps> | <how to confirm>
+
+  GRAPH DESIGN
+    <node type> | <edge type> | <rule that keeps it consistent>
+
+  INDEX FORMAT
+    <record type> | <fields> | <shared ID rule>
+
+  UPDATE PLAN
+    <trigger> | <what is re-read> | <how the update is applied>
+
+  SPEED TARGETS (TO TEST)
+    <request> | <target> | <how to measure>
+
+  DRAFT CODE OR CONFIG (NOT RUN)
+    <file name> | <what it does>
+
+  TESTS AND NEXT STEP
+    <test> | <what a pass looks like> | <next action>
+output_sample:
+  input:
+    - Your languages and the size of your codebase
+    - What the tool must answer, and who uses it
+    - Where it runs and its memory limit (optional)
+    - What is slow or wrong today (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - A copy of your repository to test on
+  output:
+    - name: Goal and assumptions
+      contains: What the tool answers, for whom, which languages come first and what the design assumes.
+    - name: Language servers
+      contains: One row per language with the server, what it supports and how to confirm it.
+    - name: Graph design
+      contains: Node and edge types and the rules that keep the graph consistent.
+    - name: Index format
+      contains: The record types and fields, one record per line, sharing one ID with the graph.
+    - name: Update plan
+      contains: How file changes trigger updates and how each update applies without leaving a half-written graph.
+    - name: Speed targets
+      contains: Targets to test for each request type, and how to measure them.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your repository layout and config files and match them to a server for each language.
+  inputs:
+    - A list of the language servers your editors already use.
+    - A timed example of the slow request, so the design targets a real problem.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name two languages to start. Add the others once those two answer correctly.
+  - what: Speed targets
+    how: Give the response times your users will accept, so the targets are yours and not the profile's.
+improve:
+  - Keep a log of wrong or slow answers from your first runs and paste it in next time, so the design fixes those cases.
+terms:
+  - term: LSP
+    meaning: Language Server Protocol. The standard way an editor asks a language server for definitions and references.
+  - term: Language server
+    meaning: A program that understands one programming language and answers questions about your code.
+  - term: Symbol
+    meaning: A named thing in code, such as a function, class or variable.
+  - term: Index
+    meaning: A saved list of where each symbol is defined and used, so lookups are fast.
+  - term: Graph
+    meaning: Symbols and files as points, with lines between them for links such as calls and imports.
+  - term: LSIF
+    meaning: A file format for saving a language server's answers in advance.

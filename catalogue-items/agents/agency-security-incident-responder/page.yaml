@@ -1,0 +1,128 @@
+name: Incident Responder agent
+summary: Describe what you're seeing. Get a severity score, what to save
+  before you touch anything, and a step-by-step plan to contain it and recover.
+headline: Incident Responder agent
+subhead: Describe what you're seeing, such as a strange login or a locked
+  file. It rates how bad it is, says what to save first, then gives you
+  steps to contain it, look into it, and recover, in order.
+job: secure-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  The first mistake in most incidents happens in the first ten minutes: someone reboots the machine, deletes the suspicious file, or waits to "see if it's really something." Each one destroys evidence or gives an attacker more time. This agent starts by classifying what you're seeing, SEV1 (active data loss or ransomware) down to SEV4 (a policy question), because the right first move depends entirely on how bad this is.
+
+  Then it walks the order that holds under pressure: preserve volatile evidence first (what's running right now, who's connected), contain without destroying what you'll need later, investigate the full chain from first entry to now, then recover from a known-good state, not a patched one. It is built from what the user describes, not a live connection to systems, and it says so plainly.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+when:
+  - You're looking at something suspicious right now, a strange login, a locked file, an alert, and need to know how serious it is and what to do first.
+  - You contained an incident and need a plan for the investigation and recovery that follows.
+  - You need to write the post-mortem: the timeline, the root cause, and the fixes that would have stopped it.
+  - You want a severity framework and a response runbook in place before your next incident, not during it.
+not_for:
+  - This is a live, ongoing breach with data actively leaving right now. Call your incident response retainer and legal counsel immediately; use this agent's severity call and evidence list while you wait for them, not instead of them.
+  - You want a security design reviewed before anything happened. Use the Security Architect agent.
+  - You need day-to-day alert triage, not a structured incident. Use the Security incident triager.
+you_give:
+  - What you're observing: the alert, the symptom, or what someone reported, in your own words.
+  - What systems, accounts or data might be affected, as far as you know.
+  - Whether the activity is still happening now, or already stopped.
+  - Any logs, alerts or screenshots you have (optional, but they sharpen the severity call).
+you_get:
+  - A severity classification (SEV1 to SEV4) with the reasoning behind it.
+  - An evidence list: what to preserve right now, before you touch anything else.
+  - A containment plan that stops the spread without destroying what you'll need to investigate.
+  - An investigation and recovery plan in order, plus a post-mortem outline once it's over.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
+  - Describe what you're seeing in plain words: what happened, what system or account, whether it's still happening.
+  - Attach any logs, alerts or screenshots you have.
+  - Say "Classify this and tell me what to preserve before I do anything else."
+  - If it's SEV1 or SEV2, call your incident response retainer or legal counsel now. Use the plan while you wait, not instead of them.
+  - Once contained, ask it to build the investigation plan, then the post-mortem outline, from what you actually found.
+how_it_works:
+  - title: Classify severity
+    text: It rates what you're seeing from SEV1 (active data loss) to SEV4 (a policy question) and says why.
+  - title: List what to preserve
+    text: Before any containment step, it names what disappears on reboot or cleanup (memory, connections, logs) and should be kept.
+  - title: Plan containment
+    text: It proposes the stop-the-spread action that doesn't destroy evidence, such as isolating a host instead of wiping it.
+  - title: Plan the investigation
+    text: It lays out the order to reconstruct the timeline, from first access to what's affected now.
+  - title: Plan recovery
+    text: It separates "patch and hope" from rebuilding from a known-good state, and flags which one the situation needs.
+  - title: Write the post-mortem outline
+    text: Once it's over, it separates root cause from contributing factors and proposes the few fixes that would have stopped it.
+output_shape: |-
+  SEVERITY
+    Level: <SEV1-4> | Reason: <why>
+
+  PRESERVE BEFORE YOU TOUCH ANYTHING
+    <what> | <why it disappears if you wait>
+
+  CONTAINMENT PLAN
+    <action> | <what it stops> | <evidence risk if any>
+
+  INVESTIGATION PLAN (in order)
+    <step> | <what it should tell you>
+
+  RECOVERY PLAN
+    <action> | <patch-and-monitor or rebuild-from-known-good> | <why>
+
+  POST-MORTEM OUTLINE
+    Root cause: <...> | Contributing factors: <...> | Top 3-5 fixes: <...>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <assumption or gap> | <what to verify>
+output_sample:
+  input:
+    - What you're observing, in your own words
+    - What systems, accounts or data might be affected
+    - Whether the activity is still happening now
+    - Logs, alerts or screenshots (optional)
+  prerequisites:
+    - An AI that can read files, if you attach logs or screenshots
+  output:
+    - name: Severity
+      contains: The SEV1 to SEV4 rating and the reasoning behind it.
+    - name: Preserve before you touch anything
+      contains: What disappears on reboot or cleanup, and should be captured first.
+    - name: Containment plan
+      contains: The action that stops the spread without destroying evidence, and any evidence risk it carries.
+    - name: Investigation plan
+      contains: The ordered steps to reconstruct the timeline from first access to now.
+    - name: Recovery plan
+      contains: Whether to patch and monitor or rebuild from a known-good state, and why.
+    - name: Post-mortem outline
+      contains: Root cause, contributing factors, and the few fixes that would have stopped it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a log export, alert screenshot or timeline next to your description.
+  inputs:
+    - Any SIEM or EDR alert text you have.
+    - Your existing incident response plan or contacts, if you have one.
+    - A rough timeline of what you noticed and when.
+terms:
+  - term: SEV1-SEV4
+    meaning: A severity scale from SEV1 (active data loss, respond now) to SEV4 (a policy question, standard queue).
+  - term: Volatile evidence
+    meaning: Facts that disappear once a machine reboots or a process ends, such as running processes and open network connections.
+  - term: Containment
+    meaning: Stopping an incident from spreading, such as isolating a host, without destroying the evidence an investigation will need.
+tweaks:
+  - what: How much you know
+    how: Say plainly what's confirmed versus what you suspect. A guess treated as fact sends the plan down the wrong path.
+  - what: Is it still happening
+    how: This changes everything. Say clearly whether the activity is ongoing or already stopped.
+improve:
+  - Keep each incident's timeline and post-mortem on file, so the next one starts from what you already know about your own systems.
+  - Pair the post-mortem's fixes with the Security Architect agent to turn "add MFA here" into a real design change.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

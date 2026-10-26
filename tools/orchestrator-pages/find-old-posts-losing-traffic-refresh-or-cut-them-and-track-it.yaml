@@ -1,22 +1,30 @@
 new_slug: find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it
 name: Find old posts losing traffic and refresh or cut them
-summary: Give it your traffic by page. Get the decaying pages, keep or cut calls, refresh plans and tracking.
+summary: "Find old blog posts losing traffic and decide to refresh, merge or cut each. Give it traffic by page; get calls, refresh plans and tracking."
 job: get-found-in-search
 thinking: high
 thinking_why: It decides which pages live or die from data and must track whether it was right. Give it your strongest model.
 headline: Find old posts losing traffic and refresh or cut them
-subhead: Give it your site and traffic by page. It finds the pages losing traffic and the gaps rivals have filled, makes a keep, refresh, merge or cut call for each, plans the refresh for the keepers, writes new titles and snippets, and sets up tracking to show whether it worked.
+subhead: Give it your site and your traffic by page. It finds the old posts losing traffic and the topics rivals have taken. It makes a keep, refresh, merge or cut call for each page and plans the refresh for the keepers. Then it writes new titles and search snippets, and sets up tracking to show whether it worked.
 explain: |
-  Old content decays. A post that ranked two years ago has slipped to page two, a rival wrote a better one, and three of your posts now compete for one search. Most teams write new posts instead, because nobody is watching the old ones.
+  Why is my blog traffic falling? Old content decays. A post that ranked two years ago has slipped to page two, a rival wrote a better one, and three of your posts now compete for one search. Most teams write new posts instead, because nobody is watching the old ones.
 
   This workflow looks after the old ones. It finds the pages losing traffic and the topics where rivals now rank above you. It makes a call for each page: keep, refresh, merge with another or cut, with the reason and the numbers. For the refreshers, it plans what to update: facts, structure, the questions the page now misses. It writes new titles and search snippets for the refreshed pages. Then it sets up tracking so you can see, page by page, whether the refresh brought the traffic back.
 when:
   - Your blog traffic is slowly falling and you do not know which pages are to blame.
   - You have a hundred posts and suspect twenty do the work.
   - You refreshed posts last year and never checked whether it helped.
+  - Two or three of your posts answer the same search and none of them ranks.
+not_for:
+  - "Your traffic fell off a cliff across the whole site: use Fix a drop in search traffic and check it recovers."
+  - "You want to plan new posts, not rescue old ones: use Plan a topic cluster from keywords to briefs and links."
+  - "You want a full check of titles, tags and markup across the site: use Audit your site's SEO and fix what matters first."
+  - "Your site has less than twelve months of traffic. Decay only shows over time."
 you_give:
   - Your site address
-  - Traffic by page for the last twelve months or more
+  - Traffic by page for the last twelve months or more, from your analytics or Search Console
+  - Search Console searches by page (optional)
+  - Publish and last-updated dates for each post (optional)
   - Your competitors, if you know them (optional)
   - "What you can commit to: how many refreshes a month"
 you_get:
@@ -27,9 +35,9 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your site and your traffic by page. It finds the decaying pages and makes the calls.
-  - Read the calls. Change any you disagree with. Refresh the keepers as planned.
-  - Check the tracking after six to eight weeks.
+  - Paste your site address and attach your traffic by page. If your AI can reach Search Console or Ahrefs, say so. If not, it works from what you attach and marks what it could not check.
+  - Read the calls. Change any you disagree with. Refresh the keepers as planned, then publish the refreshes, merges and new titles.
+  - Give it the dates you changed each page. Check the tracking after six to eight weeks.
 how_it_works:
   - title: Find the decay
     text: Finds the pages losing traffic, the searches they are losing and where rivals now rank above you.
@@ -63,6 +71,22 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+output_sample:
+  input:
+    - "Your site address"
+    - "Traffic by page for the last twelve months or more"
+    - "Search Console searches by page, publish dates and rivals (optional)"
+    - "How many refreshes a month you can do"
+  prerequisites:
+    - "An AI that can read an attached spreadsheet"
+    - "Access to Search Console or Ahrefs if you want rival gaps checked (optional)"
+  output:
+    - {name: "Step 1 decay", contains: "Pages losing traffic, the searches they lost and where rivals now rank above you."}
+    - {name: "Step 2 calls", contains: "A keep, refresh, merge or cut call for each page, with the reason and the numbers."}
+    - {name: "Step 3 refresh plans", contains: "For each refresh: facts to update, structure to change and questions to add."}
+    - {name: "Step 4 titles and snippets", contains: "A new search title and snippet for each refreshed page, within length."}
+    - {name: "Step 5 tracking", contains: "Change date, searches to watch, a read date and a definition of worked, per page."}
+    - {name: "Hand-back summary", contains: "Each step's file and every MISSING line in one list."}
 example:
   business: sprout
   input: |
@@ -116,3 +140,8 @@ terms:
     meaning: A page slowly losing search traffic as it ages and rivals publish better pages.
   - term: Redirect
     meaning: Sending visitors and search engines from a cut page to the page that replaces it.
+  - term: Merge
+    meaning: Folding two posts on the same question into one page, and redirecting the other to it.
+  - term: Search Console
+    meaning: Google's free tool that shows which searches bring people to each of your pages.
+next: [plan-a-topic-cluster-from-keywords-to-post-briefs-and-links, audit-your-sites-seo-and-fix-titles-tags-and-markup-first]

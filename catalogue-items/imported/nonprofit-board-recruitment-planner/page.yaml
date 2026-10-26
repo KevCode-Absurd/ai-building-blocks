@@ -2,12 +2,16 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-board-recruitment-planner
 name: Nonprofit board recruitment planner
-summary: Share board skills and open seats. Get candidate profiles, a recruitment plan, and new-member welcome steps.
+summary: "Plan nonprofit board recruitment: find skill gaps, write seat profiles, track candidates, and get new members ready for their first meeting."
 job: hire-people
 headline: Nonprofit board recruitment planner
 subhead: Share your board roster, skills, strategy, and upcoming vacancies. It identifies the gaps before suggesting how to find candidates. You get seat profiles, a recruitment tracker, a candidate packet, and a first-meeting welcome plan for board review.
 when:
   - You need this task done for a nonprofit, community program, or donated-goods store.
+not_for:
+  - "You want to run board meetings, set up committees, or review how the board is doing: use a board governance guide, not this one."
+  - "You need unpaid volunteers for programs or events: use a volunteer plan or ask your volunteer lead."
+  - "You are planning for your executive director to leave: use a succession plan, not a board recruitment plan."
 you_give:
   - Current board skills, strategy, upcoming seat dates, bylaws, and expected member duties.
 you_get:
@@ -26,5 +30,33 @@ works_best_with:
   inputs:
     - Board composition is a governance decision with fiduciary consequences.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Gather your board roster and skills, your strategic plan, your bylaws, the dates seats open, and what you expect from members.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, or upload it with your files.
+  - Paste or upload your records. Say which seats are open or will open soon.
+  - Read the skills table and seat profiles first. Fix anything that does not match what you know.
+  - Ask for the candidate tracker, packet and welcome plan. Add real names yourself, and mark any missing facts.
+  - Share the plan with your board or governance committee. They decide who is asked and who is voted in.
+output_sample:
+  input:
+    - Your current board roster and the skills each member has
+    - Your strategic plan, or your top goals for the next few years
+    - Your bylaws and the dates when seats open
+    - What you expect from board members (time, giving, duties)
+  prerequisites:
+    - A chat AI where you can paste text or upload files
+    - A board or governance committee to review the plan before anyone is asked
+  output:
+    - name: Board skills table
+      contains: Each member rated against the skills, community links and representation the board needs, with the biggest gaps marked.
+    - name: Seat profiles
+      contains: For each open or soon-to-open seat, a short profile of the two or three gaps it must fill.
+    - name: Candidate list and tracker
+      contains: "Three to five possible names per seat, with where each person is: identified, cultivating, invited, seated or declined."
+    - name: Cultivation plan
+      contains: The steps from a first chat, to seeing the work, to a formal invitation from the chair.
+    - name: Candidate packet and expectation letter
+      contains: Written duties, time asks, term length, giving expectations and conflict-of-interest steps to share before the formal ask.
+    - name: Term and rotation notes
+      contains: A suggested way to stagger terms and set limits, to put in your bylaws or a board policy.
+    - name: Welcome plan
+      contains: The papers new members get, plus a 30, 60 and 90 day plan with a mentor, a talk with the director and a committee.

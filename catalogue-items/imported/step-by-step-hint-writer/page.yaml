@@ -2,36 +2,57 @@ thinking: medium
 thinking_why: It orders hints from light nudge to strong help.
 new_slug: step-by-step-hint-writer
 name: Step-by-step hint writer
-summary: Give it a problem type. Get hints that reveal help bit by bit without
-  giving away the answer.
+summary: Write step-by-step hints for a problem type, from a small nudge to near-full help, without giving away the answer. Ready for worksheets or tutoring.
 job: teach-and-train
 headline: Step-by-step hint writer
-subhead: Give it a problem type. Get hints that reveal help bit by bit without
-  giving away the answer. Bring the problem type students are solving. Use the
-  result to plan your next step.
+subhead: Give it a problem type and where students get stuck. It writes three to five hints that grow from a small nudge to strong help. You paste them into a worksheet, quiz or tutoring script.
 explain: |
   A set of hints for one kind of problem, written so a student can climb from a small nudge to a near-full solution without being handed the answer. You use it ahead of time to build worksheets, quizzes or tutoring scripts.
 
   You name the problem type and where students usually get stuck. The skill designs three to five levels, each tied to a specific stuck point, from a prompt to look again, to naming the idea needed, to showing a parallel example. You choose what happens at the end: reveal the answer, send them to a teacher or give a fresh task. It follows research on tutoring hints and scaffolding, and can be tuned to an age group and subject.
 when:
   - You are writing a worksheet and want built-in help for stuck students.
-  - You teach a topic where the same mistake appears every year.
+  - The same mistake shows up every year in one topic.
   - You are building a tutoring bot and need hint text for each problem.
-  - You want to stop hints from giving the answer too early.
+  - Your hints give the answer too early and you want to fix that.
+not_for:
+  - "You need a whole-class answer key: write the answers yourself, or ask your AI for a plain answer key."
+  - "Your subject has no fixed solution steps, such as essays or open debate: ask a teacher to write the hints by hand."
+  - "You want help on one single question right now: ask your AI to explain it in a chat, since this skill builds a set for a whole problem type."
 you_give:
   - The problem type students are solving
-  - Common sticking points
+  - Two or three places students usually get stuck
   - Student level and subject (optional)
-  - How hints will be delivered (optional)
-  - Number of hint levels (optional)
+  - "Who gives the hints: an AI, a teacher or the page (optional)"
+  - How many hint levels you want, 3 to 5 (optional)
+  - What happens after the last hint (optional)
 you_get:
-  - A hint sequence from light to strong
-  - Each hint linked to a sticking point
-  - A rule for what comes after the last hint
+  - A hint sequence from light nudge to strong help
+  - Each hint tied to one sticking point
+  - A plan for what happens after the last hint
   - Notes on when to show each hint
-  - A version matched to the learner's level
+  - A version matched to your students' level
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or paid tool is needed.
+  - Type the problem type, for example the kind of equation students solve, and add two or three sticking points.
+  - Add your student level and say how many levels you want, 3 or 4 works well. Say what should happen after the last hint.
+  - Read the hints in order. Check that none gives the answer too early, and ask your AI to soften any that do.
+  - Paste the final sequence into your worksheet, quiz or tutoring script.
+output_sample:
+  input:
+    - The problem type students are solving
+    - Where students usually get stuck
+    - Student level and subject (optional)
+    - "Who gives the hints: an AI, a teacher or the page (optional)"
+    - How many hint levels you want (optional)
+  output:
+    - name: Hint Architecture
+      contains: The plan for the hint levels and what each level is meant to do.
+    - name: Hint Sequence
+      contains: Each hint from light nudge to strong help, linked to a sticking point.
+    - name: Bottom-Out Strategy
+      contains: "What happens after the last hint: show the answer, send to a teacher or set a new task."
+    - name: Trigger Conditions Summary
+      contains: A short table of when each hint should appear.
+    - name: Adaptation Notes
+      contains: How to adjust the hints for age, level and the way hints are given.

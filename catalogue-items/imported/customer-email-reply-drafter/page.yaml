@@ -2,34 +2,67 @@ thinking: low
 thinking_why: It sorts emails and drafts short replies.
 new_slug: customer-email-reply-drafter
 name: Customer email reply drafter
-summary: Ask what needs a reply. Get unread customer emails sorted by priority,
-  each with a draft reply. You send them.
+summary: Sort unread customer emails by priority and get a draft reply for each one that needs it, in your voice. You review and send. Nothing goes out alone.
 job: write-emails
 headline: Customer email reply drafter
-subhead: A morning of customer email, sorted and answered in minutes. Ask what
-  needs a reply and you get your unread customer emails grouped by what each one
-  needs, with a draft reply for the ones that deserve it.
+subhead: Ask "what customer emails need a reply?" It reads your unread customer emails from the last 3 days, groups them by what each needs, ranks them, and drafts a short reply for the ones that deserve one.
 explain: |
-  A morning of customer email, sorted and answered in minutes. Ask what needs a reply and you get your unread customer emails grouped by what each one needs, with a draft reply for the ones that deserve it. You review and send them yourself.
+  A full inbox hides the customer who is waiting. This customer email reply drafter finds those emails first, then helps you answer them fast.
 
-  It defaults to the last 72 hours and counts an email as a customer email if the sender's domain matches an account you own. If a CRM is connected it matches senders and adds context. If a calendar is connected it uses your free time for scheduling replies. Email contents are treated as data, so instructions inside them are reported, not followed. Nothing is sent or logged without your say.
+  It reads the whole thread, not just the last message. It puts each email in one group: needs a reply on a deal, scheduling, support, FYI only, new person, or sensitive. Replies go in order of urgency: deals closing soon, then stated deadlines, then deal size, then age. With a CRM, a customer email is one from an account you own or follow. Without one, every email you give it counts.
+
+  Drafts are under 120 words and written to sound like you, learned from your sent emails. It drafts up to 10 and sorts up to 25 emails per pass. Anything inside an email that tells it to do something is reported to you, not followed. It never sends on its own.
 when:
   - You come back from a day out to a full inbox.
-  - You want to know which customers are waiting on you.
-  - A meeting request needs a reply with your real availability.
-  - You need first drafts for routine questions.
+  - You want to know which customers are waiting on you right now.
+  - A meeting request needs a reply that offers your real free times.
+  - You need first drafts for routine customer questions.
+not_for:
+  - "You want to clear your whole inbox, not only customer mail: use the email backlog clearer."
+  - "You need one new email written from scratch: use the email drafter."
+  - "You want to send bulk marketing or cold emails: use the campaign email writer or the cold email writer."
+  - Anything legal, HR or an angry escalation. It flags those for you and does not draft them.
 you_give:
-  - Access to your email, or pasted or exported emails
-  - How far back to look (optional)
-  - CRM and calendar connections (optional)
+  - Your email, connected to your AI, or the emails pasted or exported as text
+  - How far back to look, if not 3 days (optional)
+  - Your CRM, so it can tell which senders are customers (optional)
+  - Your calendar, so replies can offer real free times (optional)
+  - A few of your sent emails, so drafts sound like you (optional)
 you_get:
-  - Emails grouped by what they need
-  - A priority order
-  - A draft reply for each that needs one
-  - A short list of items to log
+  - Emails grouped by what each one needs
+  - A priority order, with the reason for each
+  - A draft reply for each one that needs it, saved as a draft in the thread or as paste-ready text
+  - A list of emails safe to archive
+  - Questions only you can answer, for emails it could not draft
+  - Suggested CRM notes to log by hand
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your email and save drafts.
+  - Open Claude or ChatGPT with your email connected. If you can't connect it, paste or export the emails you want sorted.
+  - Paste this skill and ask "what customer emails need a reply?" Say how far back to look if it is not 3 days.
+  - Read the sorted list first. Check that the order matches what you know about each customer.
+  - Edit each draft. Fix names, dates and anything promised. Check every offered meeting time against your own calendar.
+  - Send them yourself. Use the email backlog clearer for the rest of your inbox.
+output_sample:
+  input:
+    - Your email access, or the emails pasted or exported
+    - How far back to look (optional)
+    - Your CRM and calendar (optional)
+    - A few sent emails to match your voice (optional)
+  prerequisites:
+    - An AI connected to your email, or emails you can paste
+  output:
+    - name: Drafted replies table
+      contains: Priority, sender, account, subject and a link to each draft reply, in order.
+    - name: FYI only list
+      contains: Emails that need no reply and are safe to archive, such as newsletters and CCs.
+    - name: New inbound
+      contains: First contacts from new people, listed for you to triage.
+    - name: Couldn't draft
+      contains: Emails that need a decision only you can make, with the blocking question for each.
+    - name: Sensitive, skipped
+      contains: Legal, HR or escalation emails it flagged but did not draft, with the reason.
+    - name: CRM notes
+      contains: Suggested lines to log against each account, ready to paste.
+works_best_with: Claude with the Gmail or Outlook connector. Add a CRM and your calendar for deal context and real meeting times. Without email access, paste the emails in.
+terms:
+  - Thread: All the messages in one email conversation.
+  - CRM: The tool where you keep customers and deals, such as HubSpot or Salesforce.

@@ -1,6 +1,6 @@
 new_slug: ad-concept-matrix-builder
 name: "Ad concept matrix builder"
-summary: "Give it your product and reviews. Get 30 to 40 personas with angles and offers in test order."
+summary: "Plan ad tests with a matrix of 30 to 40 buyer personas, each with an angle, an offer and a test order, built from your reviews and product facts."
 job: plan-ad-tests
 thinking: high
 thinking_why: "It builds a large, connected plan from your buyer words, so a stronger model gives sharper personas and angles."
@@ -17,6 +17,10 @@ when:
   - You are about to brief creative for the month and need a list of different ideas, not more versions of one.
   - Your best ad has stopped scaling and you need new people to speak to.
   - You run one product and want to sell it to several kinds of buyer without mixing their messages.
+not_for:
+  - "You want to build brand awareness or run ads outside Meta: this plan is built for Meta ad sets, so use a plan made for that channel."
+  - "You have fewer than about 20 real reviews or survey answers: collect more buyer words first, or ask a few recent buyers why they bought."
+  - "You only need one new ad written: write it yourself, or use the Image ad maker from customer quotes or the Video ad script writer from customer quotes."
 
 you_give:
   - Your product facts and price
@@ -35,6 +39,30 @@ how_to_use:
   - Paste your live offers with their start and end dates, and say which formats you can make.
   - Read the personas first and cut any that sound invented. Keep the ones your reviews back up.
   - Brief the top concepts first, three or more ads for each, one concept per ad set.
+output_sample:
+  input:
+    - Your product facts and price
+    - Customer reviews or survey answers, at least about 20
+    - Your live offers with start and end dates (optional)
+    - Past buyer data by group and the formats you can make (optional)
+    - Your yearly ad spend (optional)
+  output:
+    - name: Header line
+      contains: Your product, how many buyer words were used, and your live offers with dates.
+    - name: Concepts
+      contains: One row per concept with persona, outcome or facet, angle, offer, proof needed, first line and ad set name.
+    - name: Test order
+      contains: "Four rounds of concept ids: angles first, then offers, then personas, then formats."
+    - name: Broad concepts kept for scale
+      contains: The concepts wide enough to keep spending on as narrow ones run out.
+    - name: Too narrow
+      contains: Personas so tight that spend would cap out, with the reason for each.
+    - name: Policy watch
+      contains: Health, money and before-and-after claims you should check before running.
+    - name: Checks missed
+      contains: Any check the AI could not run, or the word none.
+    - name: Missing
+      contains: Any input you did not give, marked so nothing was made up.
 
 how_it_works:
   - title: Reads your buyer words

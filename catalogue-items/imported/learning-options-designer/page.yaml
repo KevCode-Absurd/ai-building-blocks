@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must give practical options, not generic ones.
 new_slug: learning-options-designer
 name: Learning options designer
-summary: Give it a learning goal. Get specific ways to engage learners, present
-  content and let them show what they know.
+summary: Turn one learning goal into specific learning options for engagement, content and student responses, plus the one change to make first.
 job: teach-and-train
 headline: Learning options designer
-subhead: A set of specific choices for how learners take part, take in content
-  and show what they know, all for one learning goal. Give the goal and how you
-  plan to teach it now.
+subhead: Give your AI one learning goal and how you plan to teach it now. It suggests specific ways for students to engage, take in the content and show what they know. It also names the one change to make first.
 explain: |
   A set of specific choices for how learners take part, take in content and show what they know, all for one learning goal. Give the goal and how you plan to teach it now. The skill applies Universal Design for Learning from CAST and offers options in three groups: engagement, representation, and action and expression.
 
@@ -18,6 +15,10 @@ when:
   - Students with different needs struggle to show what they know.
   - You want choices for how students prove they met the goal.
   - You are planning a unit and want engagement ideas beyond a quiz.
+not_for:
+  - "You only teach a single fact to recall: use a short quiz or worksheet instead."
+  - "You want to check a finished lesson for barriers: ask a colleague to review it, or use the UDL lesson auditor."
+  - "You need a different version of a task for one student: use the differentiation adapter."
 you_give:
   - The learning goal
   - How you plan to teach it now
@@ -29,7 +30,26 @@ you_get:
   - Ways students can show learning
   - Notes on keeping the goal intact
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the prompt from the skill file into the chat.
+  - Fill in the learning goal and how you plan to teach it now.
+  - Add student age, language or known needs, and your tools, if you know them.
+  - Read each option and check it still aims at the same goal. Pick only a few to use.
+  - Start with the Minimum Viable UDL change if you have little time. Then use the UDL lesson auditor or the differentiation adapter to go further.
+output_sample:
+  input:
+    - Your learning goal
+    - How you plan to teach it now
+    - Student age, language or known needs (optional)
+    - Tools and materials you have (optional)
+  output:
+    - name: Multiple Means of Engagement
+      contains: Two or three specific ways to spark interest and keep effort up, with the learners each one helps.
+    - name: Multiple Means of Representation
+      contains: Two or three specific ways to present the content in more than one form, with why each helps.
+    - name: Multiple Means of Action and Expression
+      contains: Two or three specific ways students can show what they know, with the learners each suits.
+    - name: Minimum Viable UDL
+      contains: The one change with the most impact if you can only change one thing.
+    - name: Implementation Notes
+      contains: How to offer choices without overwhelming students, and cautions about keeping the goal as hard as intended.

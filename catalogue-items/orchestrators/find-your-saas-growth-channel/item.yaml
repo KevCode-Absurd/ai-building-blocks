@@ -19,6 +19,9 @@ inputs:
     required: false
 outputs:
   - type: plan
+  - type: business_profile
+  - type: channel_experiment
+  - type: traction_shortlist
 uses:
   - traction-business-profiler
   - traction-channel-ranker
@@ -44,70 +47,112 @@ uses:
   - traction-experiment-reviewer
 steps:
   - uses: traction-business-profiler
-    note: "First: build the profile in SaaS mode, with one goal and a source ledger."
+    note: "First: build the profile in SaaS mode, with one goal and a source ledger.
+      It hands step 2 business-profile.md."
   - uses: traction-channel-ranker
     note: "Then: brainstorm all 19 channels and select up to three small pilots
-      within the combined limits."
+      within the combined limits. It hands step 3 onward shortlist.md and
+      channel-matrix.csv."
   - uses: traction-viral-marketing
     note: "Only when Viral Marketing is selected in shortlist.md: prepare its pilot.
+      It reads business-profile.md and shortlist.md from steps 1 and 2, not the
+      previous channel's plan, and saves its pilot plan for the final review.
       Otherwise record skipped; do not run it."
   - uses: traction-public-relations
     note: "Only when Public Relations is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-unconventional-pr
     note: "Only when Unconventional PR is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-search-engine-marketing
     note: "Only when Search Engine Marketing is selected in shortlist.md: prepare
-      its pilot. Otherwise record skipped; do not run it."
+      its pilot. It reads business-profile.md and shortlist.md from steps 1 and
+      2, not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-social-and-display-ads
     note: "Only when Social and Display Ads is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-offline-ads
-    note: "Only when Offline Ads is selected in shortlist.md: prepare its pilot.
+    note: "Only when Offline Ads is selected in shortlist.md: prepare its pilot. It
+      reads business-profile.md and shortlist.md from steps 1 and 2, not the
+      previous channel's plan, and saves its pilot plan for the final review.
       Otherwise record skipped; do not run it."
   - uses: traction-search-engine-optimization
     note: "Only when Search Engine Optimization is selected in shortlist.md: prepare
-      its pilot. Otherwise record skipped; do not run it."
+      its pilot. It reads business-profile.md and shortlist.md from steps 1 and
+      2, not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-content-marketing
     note: "Only when Content Marketing is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-email-marketing
     note: "Only when Email Marketing is selected in shortlist.md: prepare its pilot.
+      It reads business-profile.md and shortlist.md from steps 1 and 2, not the
+      previous channel's plan, and saves its pilot plan for the final review.
       Otherwise record skipped; do not run it."
   - uses: traction-engineering-as-marketing
     note: "Only when Engineering as Marketing is selected in shortlist.md: prepare
-      its pilot. Otherwise record skipped; do not run it."
+      its pilot. It reads business-profile.md and shortlist.md from steps 1 and
+      2, not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-targeting-blogs
     note: "Only when Targeting Blogs is selected in shortlist.md: prepare its pilot.
+      It reads business-profile.md and shortlist.md from steps 1 and 2, not the
+      previous channel's plan, and saves its pilot plan for the final review.
       Otherwise record skipped; do not run it."
   - uses: traction-business-development
     note: "Only when Business Development is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-sales
-    note: "Only when Sales is selected in shortlist.md: prepare its pilot. Otherwise
+    note: "Only when Sales is selected in shortlist.md: prepare its pilot. It reads
+      business-profile.md and shortlist.md from steps 1 and 2, not the previous
+      channel's plan, and saves its pilot plan for the final review. Otherwise
       record skipped; do not run it."
   - uses: traction-affiliate-programs
     note: "Only when Affiliate Programs is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-existing-platforms
     note: "Only when Existing Platforms is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-trade-shows
-    note: "Only when Trade Shows is selected in shortlist.md: prepare its pilot.
+    note: "Only when Trade Shows is selected in shortlist.md: prepare its pilot. It
+      reads business-profile.md and shortlist.md from steps 1 and 2, not the
+      previous channel's plan, and saves its pilot plan for the final review.
       Otherwise record skipped; do not run it."
   - uses: traction-offline-events
     note: "Only when Offline Events is selected in shortlist.md: prepare its pilot.
+      It reads business-profile.md and shortlist.md from steps 1 and 2, not the
+      previous channel's plan, and saves its pilot plan for the final review.
       Otherwise record skipped; do not run it."
   - uses: traction-speaking-engagements
     note: "Only when Speaking Engagements is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-community-building
     note: "Only when Community Building is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+      pilot. It reads business-profile.md and shortlist.md from steps 1 and 2,
+      not the previous channel's plan, and saves its pilot plan for the final
+      review. Otherwise record skipped; do not run it."
   - uses: traction-experiment-reviewer
     note: "After measured results exist: review evidence and focus, revise, stop or
-      wait. Without results, return the review template as pending."
+      wait. Without results, return the review template as pending. It uses
+      business-profile.md and every pilot plan from steps 3 to 21, plus your
+      measured results."
 origin: rebuilt
 version: 1.0.0
 credits:

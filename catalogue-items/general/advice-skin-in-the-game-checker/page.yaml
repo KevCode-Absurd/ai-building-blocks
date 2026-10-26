@@ -1,6 +1,6 @@
 new_slug: advice-skin-in-the-game-checker
 name: "Advice skin-in-the-game checker"
-summary: "Paste advice or a pitch. Get who loses if it is wrong, who gains, and a trust level."
+summary: "Paste advice or a pitch and check the adviser's skin in the game. You get what they lose if wrong, what they gain, and how far to trust it."
 job: think-and-decide
 thinking: medium
 thinking_why: "It weighs motives and evidence in someone else's advice, but the questions are fixed."
@@ -17,6 +17,10 @@ when:
   - "A salesperson, agent or consultant is pushing you toward a purchase or a contract."
   - "A friend or colleague gives you strong advice about money, hiring or a career move."
   - "You are about to follow an expert's recommendation and want to know what they stand to lose."
+not_for:
+  - "You need medical, legal or tax advice: take it to a licensed doctor, lawyer or accountant, who can check your own facts."
+  - "You are picking a business partner for the long run: use the Long-term partner screener."
+  - "You want proof the advice works: test it yourself on a small scale, or ask the adviser for their past results."
 
 you_give:
   - "The advice or pitch, pasted as given"
@@ -35,6 +39,29 @@ how_to_use:
   - "Say what following it would cost you."
   - "Read the trust level and the missing facts. Ask the closing question before you act."
   - "If a fact is marked MISSING, find it first and run the skill again."
+output_sample:
+  input:
+    - The advice or pitch, pasted as it was given
+    - Who gave it and how they are paid (optional)
+    - What you would do or spend if you follow it
+    - How long the adviser or idea has been around (optional)
+  output:
+    - name: The advice
+      contains: One or two sentences on what was said, who said it, and what it asks of you.
+    - name: What they lose if wrong
+      contains: Each cost to the adviser, marked as seen or guessed.
+    - name: What they gain if right
+      contains: Each reward to the adviser, marked by whether it applies even if the advice fails.
+    - name: Hidden unevenness
+      contains: Setups where the adviser shares wins but not losses, and who carries the cost.
+    - name: How long it has lasted
+      contains: Years in use and what tested the adviser or idea.
+    - name: Skill and honesty of incentives
+      contains: Two separate low, medium or high ratings, each with evidence.
+    - name: Trust level and ask-them question
+      contains: One overall weight with the reason, and one question to put to the adviser.
+    - name: Missing and checks missed
+      contains: Facts that would change the rating, and any of its own checks it failed.
 
 how_it_works:
   - title: "Write down the advice"

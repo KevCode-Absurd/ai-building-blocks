@@ -2,35 +2,59 @@ thinking: medium
 thinking_why: It collects mentions and sorts them into themes.
 new_slug: social-listening-brief-writer
 name: Social listening brief writer
-summary: Name a brand or topic. Get what people say about it, grouped by theme,
-  with notable posts. Collects data from websites.
+summary: Name a brand or topic. Get a social listening brief of what people say, grouped by theme, with cited posts and tips on what to do next.
 job: research-topics
 headline: Social listening brief writer
-subhead: A brief on what people are saying about a brand, product or topic,
-  grouped by theme with real posts to back it up. You name the subject, and the
-  skill gathers public posts and comments across platforms.
+subhead: Give it a brand, product or topic. It reads public posts and comments on sites like Reddit, TikTok and YouTube. You get a brief with themes, real quotes and links.
 explain: |
   A brief on what people are saying about a brand, product or topic, grouped by theme with real posts to back it up. You name the subject, and the skill gathers public posts and comments across platforms.
 
   Sources include Reddit, TikTok, YouTube, Instagram, LinkedIn and Threads. It reads posts and comments, then groups them into themes such as praise, complaints and questions. Each theme carries cited examples and a note on how far to trust the sentiment, since it is a sample and not a poll. It uses the ScrapeCreators data service, so you need an API key and the service has costs. Use it for brand checks, product feedback and category research.
 when:
-  - You launched a product and want to know how it landed.
+  - You launched a product and want to know how people reacted.
   - You want the real complaints about a competitor.
   - You need a quick read on a topic before a campaign.
   - You are checking your brand's reputation before a meeting.
+not_for:
+  - "You need full, real-time social monitoring or alerts: use a paid social listening tool, since this only samples public posts."
+  - "You need posts from private groups, closed accounts or direct messages: ask the group owner or run a survey, because this cannot reach them."
+  - "You want a hard count of opinions, like a poll: run a customer survey instead, because this brief is a sample."
 you_give:
   - The brand, product or topic
+  - Other names it goes by, such as nicknames or competitors (optional)
   - The platforms to cover (optional)
-  - A time range (optional)
-  - A ScrapeCreators API key
+  - A time range, such as the last 30 days (optional)
+  - Your ScrapeCreators API key
 you_get:
   - Themes grouped by what people say
-  - Cited posts and comments for each theme
+  - Quotes and links for each theme
   - Praise and complaint patterns
-  - Notes on how reliable the sample is
+  - A note on how far to trust the sample
+  - Risks, openings and next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - Make a ScrapeCreators account and copy your API key. This is a paid data service.
+  - Use an AI that can run code and reach the web. Set the key as SCRAPECREATORS_API_KEY in that tool.
+  - Paste the skill into your AI. Then give it your topic, two or three platforms and a time range, such as the last 30 days.
+  - Read the Executive Summary first. Check the confidence line and the quotes before you trust a theme.
+  - Use the Recommended Actions in your next campaign plan or competitor review.
+output_sample:
+  input:
+    - The brand, product or topic (and any other names it goes by)
+    - The platforms to cover (optional)
+    - A time range (optional)
+    - Competitor names (optional)
+    - Your ScrapeCreators API key
+  prerequisites:
+    - An AI that can run code and reach the web
+    - A ScrapeCreators account and API key, which is a paid data service
+  output:
+    - name: Executive Summary
+      contains: The main takeaway, how much people are talking, the overall mood, and how sure the brief is.
+    - name: Top Themes
+      contains: A table of themes with mood, evidence and a representative quote and source for each.
+    - name: Notable Posts
+      contains: Links to the posts that matter most, each with a line on why it matters.
+    - name: Risks / Opportunities
+      contains: The threats and openings the conversation points to.
+    - name: Recommended Actions
+      contains: A numbered list of next steps based on the themes.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Sorting follows clear category rules.
 new_slug: expense-sorter
 name: Expense sorter
-summary: Give it transactions. Get each sorted by category, department and tax
-  treatment.
+summary: Sort your card or bank transactions by category, department and tax status. Paste a CSV and get a clean expense list with unsure items flagged.
 job: money-and-investing
 headline: Expense sorter
-subhead: Give it transactions. Get each sorted by category, department and tax
-  treatment. Bring transactions with date, amount and merchant. Use the result
-  to plan your next step.
+subhead: Give it transactions. Get each sorted by category, department and tax treatment. Bring transactions with date, amount and merchant. Use the result to plan your next step.
 explain: |
   A clean list of your transactions, each sorted by category, department and tax treatment, with a flag on anything the skill is unsure about.
 
@@ -18,6 +15,10 @@ when:
   - You need costs split by department for a budget review.
   - You are preparing for tax time and want deductible items marked.
   - You run a small team and have no accounting software rules yet.
+not_for:
+  - "You need tax advice or a filing sign-off: ask a qualified accountant, and show them the totals and uncertain items."
+  - "You need payroll or VAT across several countries: use accounting software or an accountant."
+  - "You want to change entries or pay bills: this only sorts and reports, so make those changes in your bookkeeping software."
 you_give:
   - Transactions with date, amount and merchant
   - Department list
@@ -30,7 +31,26 @@ you_get:
   - Totals by category and department
   - Uncertain items to review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill instructions into the chat.
+  - Paste your transactions under them. Add your department names, and any rules or tax country.
+  - Check the Items to review list first and confirm those lines.
+  - Treat the tax flags as a guide for US federal rules only. Have an accountant review them before you file.
+  - Load the sorted list into your bookkeeping software, or send the totals and uncertain items to your accountant.
+output_sample:
+  input:
+    - Your transactions as a CSV or bank statement text, with date, amount and merchant
+    - Your department names
+    - Your own category or department rules (optional)
+    - Your tax country, if it is not the US (optional)
+  output:
+    - name: Categorized transaction list
+      contains: Each transaction with a clean merchant name, category, department, tax-deductible flag and a short note.
+    - name: Department assignment
+      contains: Each cost routed by cardholder, project code in the description, or your own rules.
+    - name: Tax-deductible flags
+      contains: Likely deductible items marked, with notes on items that need a receipt or a business purpose memo.
+    - name: Summary totals
+      contains: Spend totals by category, department and tax status.
+    - name: Items to review
+      contains: Transactions the skill is less than 80 percent sure about, listed for you to confirm.

@@ -1,33 +1,26 @@
 slug: fund-fee-revision-assistant
 name: Fund fee revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: Check a private fund's management fee, stepdown and fee offset credits for one invoice period. You get the net fee due and the open questions.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - reconcile-private-fund-fee-charges
   - unfunded-commitment-checker
 steps:
   - uses: reconcile-private-fund-fee-charges
-    note: Run the governing workflow when A fee basis, stepdown date, eligible fee receipt, offset allocation or carryforward credit changes.
+    note: Run this when a fee clause, fee base, stepdown date, received fee or credit changes. Price the fee on both sides of the stepdown, pick the one that applies to the invoice period, then apply eligible fees and the opening credit. It hands step 2 the net fee due and the closing credit.
   - uses: unfunded-commitment-checker
-    note: If an actual approved fee capital call is supplied, reconcile its effect on the callable commitment ledger independently. A computed invoice is not automatically a call or a contribution; if no call evidence exists, skip the commitment branch and preserve only the fee proposal.
+    note: Run this only when an approved capital call notice is supplied for the fee. Check the call against the callable commitment. A calculated invoice is not a call. With no notice, skip it and say why.
 origin: own
 version: 1.0.0
 added: 2026-10-22

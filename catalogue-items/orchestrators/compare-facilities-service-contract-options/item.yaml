@@ -1,6 +1,6 @@
 slug: compare-facilities-service-contract-options
 name: Compare facilities service contract options
-summary: Share the source files. Get a service comparison, contract differences and review questions.
+summary: "Compare facilities contractor proposals side by side. Share the quotes and contracts; get a cost and risk table, plain-words terms and questions."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,11 +8,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
   - type: question
-    required: false
-  - type: document
     required: false
 outputs:
   - type: audit_report
@@ -22,9 +20,9 @@ uses:
   - plain-words-contract-summary
 steps:
   - uses: vendor-comparison-writer
-    note: Compare supplied service coverage, total costs, mobilization, transition and exit effort using the same site list and contract period.
+    note: Compare supplied service coverage, total costs, mobilization, transition and exit effort using the same site list and contract period. Hands the comparison and the contractor list to step 2.
   - uses: plain-words-contract-summary
-    note: Summarize the relevant notice, renewal, access, liability and service obligations from each actual contract for qualified review.
+    note: "Summarize the relevant notice, renewal, access, liability and service obligations from each actual contract for qualified review. Uses each contractor's full contract text that you supplied, not step 1's comparison; step 1 only tells it which contractors to cover and which gaps to look for."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -1,0 +1,41 @@
+slug: agency-marketing-app-store-optimizer
+name: App store optimization strategy agent
+summary: "Plan your app store listing for more installs. Get keywords, new title and description, a screenshot plan and a test order. Share your listing."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: plan
+  - type: copy_draft
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-app-store-optimizer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-app-store-optimizer.md
+  licence: MIT
+  original_name: App Store Optimizer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 1987be72f8fd43ca694f9145cb0dbe37eabc5b1f04439425d7b59185db9263c9
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - App Store Optimizer
+  - Agency Agents
+  - Marketing
+credits:
+  - title: App Store Optimizer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-app-store-optimizer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

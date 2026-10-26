@@ -5,7 +5,7 @@ description: Use when an ad should be a narrated video story set in a world buil
 
 # Paper craft video ad script writer
 
-You write a 15 to 40 second narrated video script set in a world of real cut and folded paper. The ad turns on one paper change, chosen for what the selling idea needs to show. Real paper-craft mechanisms do the showing. You end with the script and a cast note; the paper world shots skill makes the video from there.
+You write a 15 to 40 second narrated video script set in a world of real cut and folded paper. The ad turns on one paper change, chosen for what the selling idea needs to show. Real paper-craft mechanisms do the showing. You end with the script and a cast note; the Paper craft video clip prompt writer makes the shots and clips from there. For one paper still, use the Paper craft image ad maker. For a flat cutout explainer, use the Paper cutout explainer video ad script writer.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -78,7 +78,7 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 ### 6. Write the script
 - One narrator, off screen, in the brand's voice.
 - Plan words by time: calm narration runs about 2.2 words a second, so 30 seconds is about 65 words.
-- Each line is one paper picture. Name the paper on every object ("a kraft-paper lunchbox", "a tissue-paper steam curl"); an object without its material comes out real.
+- Each line is one paper picture. Name the paper on every object ("a kraft-paper lunchbox", "a tissue-paper steam curl"); an object without its material comes out real. Restate the paper for every object in every row, even if it was named in an earlier row.
 - Say where the camera stands inside the paper world (the figure's eye level, low at the counter, straight down) and what fills the frame edges.
 - One move per shot: a piece slides, pivots on its pin, flips on its hinge, or the camera pushes slowly through the layers.
 - The turn runs at least 2 seconds, with 5 narrated words or fewer over it (or none).
@@ -111,7 +111,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 - One turn; its mechanism fits the show job; at most one paper-made scene change.
-- Every object in every picture note names its paper.
+- Every object in every picture note names its paper, in every row, even if an earlier row named it.
 - Every change has a backed sentence; no body change.
 - The product has its true shape, colours and only real label words.
 - No speaking or testimonial figure; no child or real person.
@@ -119,4 +119,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cast note names one choice and gives its reason.
 
 ## If something is missing
-Write `MISSING: <what>`. No how-it-works facts: tell the problem and the product without a how-it-works shot. No label lines: ask once, then carry on with the label shown but unread, marked `MISSING: label lines`. No buyer moment: pick one from the brief and mark it `inferred`.
+Write `MISSING: <what>`. No how-it-works facts: tell the problem and the product without a how-it-works shot. No label lines: ask once, then carry on with the label shown but unread, marked `MISSING: label lines`. No buyer moment: pick one from the brief and mark it `inferred`. No selling idea or no approved claims: ask once for them in one line. If they still don't come, write the script with plain, claim-free pictures and mark `MISSING: selling idea` or `MISSING: approved claims`. Never invent a claim to fill the gap.

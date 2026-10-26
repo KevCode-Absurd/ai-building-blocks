@@ -1,52 +1,105 @@
 new_slug: build-a-practice-plan-from-common-mistakes
 name: Build a practice plan from common mistakes
 headline: Build a practice plan from common mistakes
-summary: Share the source files. Get an error map, focused practice and a later recall check.
+summary: Turn a learner's wrong answers into an error map, practice with one planted mistake each, and a mixed practice plan with a recall check.
 job: study-and-practice
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An error map, focused practice and a later recall check. Share recent anonymized answers, correct solutions, target concepts and available practice time. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Paste a learner's wrong answers, the correct solutions and the topics. Your AI sorts each mistake into a slip, a missing basic or a misunderstood idea. It then writes practice for those mistakes and a recall check for later.
 explain: |-
-  An error map, focused practice and a later recall check.
+  A learner who keeps losing marks needs practice on the cause of the mistake, not more questions of the same kind. This workflow builds a practice plan from common mistakes: it reads the real wrong answers, finds the pattern behind them and builds the practice around that pattern.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Mistakes are tied to evidence rather than learner labels; new problems have checked solutions. Missing tools or evidence stay visible in the final summary.
+  First it sorts each mistake. A slip is a careless step by someone who knew the method. A missing basic is a gap in an earlier topic. A misunderstood idea is a wrong rule in the learner's head. Each type needs different practice, so the sorting comes first. Every mistake points back to an answer you supplied. The AI does not label the learner, as in "weak at algebra".
+
+  Then it writes worked examples that look right but go wrong at one step, so the learner practises spotting and fixing that exact error. Last, it mixes the fixed topics with earlier ones in a plan that fits your weekly time, and sets a recall check for a later date.
 when:
-  - You need an error map, focused practice and a later recall check.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A student keeps making the same errors in homework or tests
+  - You have a marked set of answers and want to know why the marks were lost
+  - You are a tutor planning the next few weeks for one learner or a small group
+  - You want practice questions where a worked answer has one planted mistake to find
+not_for:
+  - You want one test marked or graded. Mark it yourself, or use the Study understanding check to talk through the answers.
+  - You need a plan for a whole exam, not for fixing mistakes. Use the Exam study roadmap builder.
+  - You have no real answers yet, only a topic. Use the Recall quiz writer to make questions first.
+  - You want to track progress over many weeks. Use the Study plan progress review assistant.
 you_give:
-  - Recent anonymized answers, correct solutions, target concepts and available practice time.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The learner's recent answers, with names removed. Typed text or photos both work
+  - The correct solutions or mark scheme for the same questions
+  - The topics the questions cover
+  - How many practice sessions a week the learner has, and how long each lasts
+  - The topics taught earlier, in the order they were taught (optional)
+  - How many practice sets you want (optional)
 you_get:
-  - An error map, focused practice and a later recall check.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "An error map: each mistake sorted as a slip, a missing basic or a misunderstood idea, with the answer it came from"
+  - Practice sets where each worked example has one planted mistake to find, explain and fix
+  - A teacher key, kept apart from the learner sheet
+  - A practice plan that mixes the fixed topics with earlier ones, within your weekly time
+  - A recall check with a date, its questions and what counts as a pass
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the wrong answers, the correct solutions, the topics and the weekly time. Take names out first.
+  - Read the error map before anything else. If a mistake sits in the wrong group, say so. The practice depends on it.
+  - Solve each practice example yourself or check the key. Then run the recall check on the date it names and bring the answers back.
 how_it_works:
   - title: Study understanding check
-    text: Separate slips, missing prerequisites and misunderstood concepts using the actual answers.
+    text: Reads each wrong answer next to the correct one and sorts the mistake as a slip, a missing basic or a misunderstood idea. It quotes the answer as proof and hands the error map to the next step.
   - title: Flawed example writer
-    text: Start from a verified correct example, introduce exactly one realistic target error and keep the teacher key separate from the learner task.
+    text: Takes a correct worked solution and plants one realistic mistake from the map. It keeps the teacher key apart from the learner sheet and hands the practice sets on.
   - title: Mixed practice unit planner
-    text: Use the prior taught topic and prerequisite order to mix corrected practice with earlier topics, then define a later retention check.
+    text: Mixes the fixed topics with earlier ones, missing basics first, inside your weekly time. It then sets a recall check for a later date and hands back the plan.
 output_shape: |-
-  Scope and source coverage
-  An error map, focused practice and a later recall check.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ERROR MAP
+    Mistake | Type (slip, missing basic, misunderstood idea) | Evidence (question and answer) | Topic | Times seen
+
+  PRACTICE SETS
+    Learner sheet: <worked example with one planted mistake> | find it, explain it, fix it
+    Teacher key: <correct solution> | <the planted mistake>
+
+  PRACTICE PLAN
+    Session | Topics mixed | Minutes | Practice task
+
+  RECALL CHECK
+    Date <suggested or given> | Questions | What counts as a pass
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - The learner's wrong answers, with names removed
+    - The correct solutions or mark scheme
+    - The topics, and the practice time each week
+    - The topics taught earlier, in order (optional)
+  prerequisites:
+    - An AI that can read pasted text, files or photos
+    - Someone who can check the solutions, such as the teacher or tutor
+  output:
+    - name: Error map
+      contains: Each mistake sorted by type, with the question, the learner's answer and the topic it belongs to.
+    - name: Practice sets
+      contains: Worked examples with one planted mistake each, and prompts to find, explain and fix it.
+    - name: Teacher key
+      contains: The correct solution for each example and the mistake that was planted.
+    - name: Practice plan
+      contains: Sessions that mix the fixed topics with earlier ones, within the weekly time you gave.
+    - name: Recall check
+      contains: Questions and a date for a later retest, with what counts as a pass.
+    - name: Hand-back summary
+      contains: Files saved, facts that were missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read the pasted text or files and keep each step's result as a file. None of them can run a lesson, a class or a check for you.
+  inputs:
+    - A photo or typed copy of the marked work, with the marker's comments.
+    - The teacher's own mark scheme rather than a solution the AI wrote.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Start with one test or one homework set. A small set shows the pattern more clearly than a term of work.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the learner's real answers, with the marker's comments. A memory of what went wrong is a weak source.
   - what: Acceptance
-    how: Mistakes are tied to evidence rather than learner labels; new problems have checked solutions.
+    how: Say what counts as a pass on the recall check, such as one new question solved and the fix explained.
 judge:
   - Mistakes are tied to evidence rather than learner labels; new problems have checked solutions.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +112,18 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - Keep the error map and compare it with the next test. Mistakes that vanish tell you the practice worked.
+  - Add a mistake type you spotted yourself and ask for one more practice set on it.
+  - Run the recall check, then bring the answers back to update the map.
+next:
+  - study-plan-progress-review-assistant
+  - recall-quiz-writer
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Error map
+    meaning: A list of the learner's mistakes, grouped by cause, with the answers they came from.
+  - term: Slip
+    meaning: A careless step by someone who knows the method.
+  - term: Planted mistake
+    meaning: One error placed on purpose in a worked example, for the learner to find.
+  - term: Recall check
+    meaning: A short test, set for a later date, that asks the learner to answer from memory.

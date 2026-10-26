@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It measures the image, builds, then compares.
 new_slug: screenshot-to-interface-builder
 name: Screenshot to interface builder
-summary: Give it a screenshot or mockup. Get matching UI built with your own
-  parts, compared side by side with the image.
+summary: Turn a screenshot into a working screen. Give it your mockup and get matching UI built from your own parts, checked side by side.
 job: build-websites
 headline: Screenshot to interface builder
-subhead: "A working screen that matches your screenshot or mockup, built from
-  your project's own components and colours, then compared against the image and
-  corrected. Pictures usually go wrong in the same ways: spacing close but off,
-  text sizes guessed, colours picked by eye, a missing state."
+subhead: "A working screen that matches your screenshot or mockup, built from your project's own components and colours, then compared against the image and corrected. Pictures usually go wrong in the same ways: spacing close but off, text sizes guessed, colours picked by eye, a missing state."
 explain: |
   A working screen that matches your screenshot or mockup, built from your project's own components and colours, then compared against the image and corrected. Pictures usually go wrong in the same ways: spacing close but off, text sizes guessed, colours picked by eye, a missing state. This skill measures first.
 
@@ -19,6 +15,10 @@ when:
   - You have a screenshot of a layout you like and want your own version.
   - Your first build looks close but the spacing and fonts feel wrong.
   - You want a screen to match a design export without inventing new styles.
+not_for:
+  - "You have no image and want a blank new layout: sketch it first, or ask your AI to plan the page in plain words."
+  - "You need a pixel-perfect print or email layout: use your design tool's export or a template tool made for email."
+  - "The image is blurry or cropped: get a clearer export from the designer first, or the build will be guesswork."
 you_give:
   - A clear screenshot or mockup
   - Your project or component library
@@ -30,8 +30,23 @@ you_get:
   - A list of differences fixed
   - Placeholders where assets are not yours to copy
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code and open a browser.
+output_sample:
+  input:
+    - A clear screenshot or mockup
+    - Your project or component library
+    - Whether to match it exactly or use it as direction
+    - Your brand colours and fonts (optional)
+  prerequisites:
+    - An AI that can run code and open a browser, so it can render the screen and compare it with your image
+  output:
+    - name: Image reading
+      contains: The regions, widths, text sizes, colours and components the AI saw in your image, matched to parts you already have.
+    - name: Built screen
+      contains: Code for the layout, type, spacing, colour and details, using your own components, with hover, focus, loading, empty and error states.
+    - name: Side-by-side check
+      contains: The result rendered at the image width and compared region by region, fixed over up to three rounds.
+    - name: Hand-off note
+      contains: What was built, which parts were reused, what was added, the widths compared and any differences kept.

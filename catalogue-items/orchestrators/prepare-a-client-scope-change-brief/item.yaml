@@ -1,6 +1,6 @@
 slug: prepare-a-client-scope-change-brief
 name: Prepare a client scope change brief
-summary: Share the source files. Get a scope comparison, delivery options and client decision draft.
+summary: Compare a client's change request with your signed scope, see what it does to your team's hours and get decision options and a draft reply.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -23,11 +23,11 @@ uses:
   - stakeholder-update-writer
 steps:
   - uses: plain-words-contract-summary
-    note: Locate deliverables, exclusions, change procedure, fee and notice provisions in the signed engagement with clause references.
+    note: Find the deliverables, exclusions, change procedure, fees and notice terms in the signed engagement, with clause references. Hand step 2 the baseline scope and change rules.
   - uses: team-capacity-planner
-    note: Check the requested change against real commitments, skills, effort ranges and available hours. Expose consequences for existing work.
+    note: Set the request against real commitments, skills, effort ranges and free hours, and show what happens to work already promised. Hand step 3 the effect on hours and dates.
   - uses: stakeholder-update-writer
-    note: Draft a client decision brief with options, supported cost and date implications, open questions and approval status.
+    note: "Draft the client decision brief: options, supported cost and date effects, open questions and approval status. Keep it as a draft."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

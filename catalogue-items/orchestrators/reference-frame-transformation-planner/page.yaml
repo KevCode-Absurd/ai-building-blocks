@@ -33,3 +33,26 @@ how_it_works:
     text: Check background drift, text damage, changed scale, float/contact errors and mismatched endpoints. Provide prompts and checks when tools are absent; perform no generation by implication.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You want a video from scratch with no before and after frames: use the Rapid-cut product video prompt."
+  - "You need a full storyboard with a character across many scenes: use the Video avatar and storyboard planner."
+  - "You need a 3D explainer of how something works: use the 3D how-it-works video prompt writer."
+output_sample:
+  input:
+    - Your idea for the before and after, in a few lines
+    - The before image you will start from (optional)
+    - Reference images for the look and the object (optional)
+    - Which change you want, drawing to 3D or mechanical object to toy
+  prerequisites:
+    - An image tool and a video tool to run the prompts
+  output:
+    - name: Endpoint lock table
+      contains: What the before and after frames share and what must not change.
+    - name: After-frame edit prompt
+      contains: One prompt that allows a single change to make the second image.
+    - name: Transition prompt
+      contains: A timed video prompt with the mechanics of the change and a short stable hold.
+    - name: Checks
+      contains: How to compare endpoints, contact points and the scene around the change.
+    - name: Not run
+      contains: Any image or video generation or inspection that was not done.

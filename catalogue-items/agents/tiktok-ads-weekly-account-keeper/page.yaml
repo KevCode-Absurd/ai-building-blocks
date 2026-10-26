@@ -1,6 +1,6 @@
 new_slug: tiktok-ads-weekly-account-keeper
 name: TikTok Ads weekly account keeper
-summary: Give it your weekly TikTok Ads exports. Get each ad called keep, fix or kill and a change list to approve.
+summary: Check your weekly TikTok Ads account with one run. Give it your export and costs. Get each ad called keep, fix or kill, plus changes to approve.
 job: launch-and-scale-ads
 thinking: high
 thinking_why: It runs up to seven skills, picks its own path ad by ad from the numbers and keeps a log from week to week. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run TikTok ads and want each ad judged the same way every week.
   - You have organic or creator posts and want to know which are worth boosting.
   - You want to raise your budget, but only when the numbers say it is safe.
+not_for:
+  - "You spend a few dollars a day or run about three ads or fewer: wait and gather more data, because the numbers are too thin to call."
+  - "You want a read on one ad only: use the TikTok ad test reader, one of the steps this agent runs."
+  - "You have not set up your pixel or events yet: fix tracking first, or use the TikTok Ads account setup checker."
 you_give:
   - A TikTok Ads export with one row per ad for the last 7 days
   - Your price, landed cost, shipping and fees, the first time
@@ -31,6 +35,30 @@ how_to_use:
   - The first time, give it your price and costs. It saves the break-even number and reuses it.
   - Read the change list. Make the changes you agree with in TikTok Ads, or say yes to each one and let it make only those if it is connected.
   - Run it again next Monday. It reads last week's ad log.
+output_sample:
+  input:
+    - Your TikTok Ads export, one row per ad for the last 7 days
+    - Your price, landed cost, shipping and fees (the first time)
+    - Your organic or creator posts with results (optional)
+    - Your store orders and revenue for the same days (optional)
+  prerequisites:
+    - An AI that can read files and keep a folder between runs, such as Claude Code
+    - The library skills this agent runs, or access to their pages
+  output:
+    - name: This week
+      contains: One line with spend, purchases, cost per purchase and return, set against your break-even.
+    - name: Ads called
+      contains: Counts of keep, fix, kill and too early, with each ad named and its one fix or reason.
+    - name: Spark picks
+      contains: Posts worth boosting as Spark ads, or a note that there are none this week.
+    - name: Changes to approve
+      contains: A ranked list of changes with where, size, which step proposed each and why.
+    - name: Scale call
+      contains: Raise, hold or cut on budget, with the gate that passed or failed.
+    - name: Watch next week
+      contains: One to three numbers that decide next week's path.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line in one list.
 how_it_works:
   - title: Get the base number
     text: Works out your break-even cost per sale once, then measures every ad against it.

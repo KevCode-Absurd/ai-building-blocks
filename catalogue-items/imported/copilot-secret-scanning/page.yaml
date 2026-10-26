@@ -2,18 +2,104 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-secret-scanning
 name: GitHub secret protection setter
-summary: Share your repo setup. Get secret scanning and push protection
-  configured, with an alert response plan.
+summary: Get a step-by-step plan to turn on GitHub secret scanning and push protection, and to respond when a key leaks. Includes what needs a paid plan.
 job: secure-code
 headline: GitHub secret protection setter
-subhead: Share your repo setup. Get secret scanning and push protection
-  configured, with an alert response plan. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Tell it your repo type, GitHub plan and role. It writes the exact settings to switch on, what is free and what is paid for you, and what to do when a push is blocked or an alert fires. You get a plan with a rotation table. You click the settings yourself.
+explain: |
+  Passwords and API keys end up in code more often than anyone admits. GitHub can catch them with secret scanning, and block them before they land with push protection. This GitHub secret protection setter walks you through setting up both, and plans what to do when one fires.
+
+  It starts with your situation, because it decides what you get. Public repos have scanning free. Private and organization repos need GitHub Secret Protection, a paid add-on, and some features need Copilot. The skill says which of these apply to you and tells you to check GitHub's pricing page for the cost.
+
+  Then it gives the exact menu steps, how to exclude folders, how to add a custom pattern, and how to handle a blocked push. It stresses one rule. When a real key leaks, rotating it is the fix. Removing it from history or bypassing the block does not make it safe.
+
+  The AI cannot change your GitHub settings. It writes the plan, and a person with admin access follows it.
+when:
+  - You want to stop API keys and passwords from being pushed to GitHub.
+  - A push was blocked and you need to know what to do next.
+  - You have a company key format that GitHub does not know, and want a custom pattern.
+  - You have open secret alerts and need a clear order to deal with them.
+not_for:
+  - "A key has already leaked in a public repo. Rotate it today and follow your incident process. The Incident Responder agent can help. Setting up scanning does not fix a past leak."
+  - "You want to check your live website for exposed keys: use the Exposed secrets finder."
+  - "You want to tidy .env files and plan key rotation across a project: use the Secrets hygiene checker."
+you_give:
+  - Whether your repo is public, or private under an organization
+  - Your GitHub plan (Free, Team or Enterprise Cloud), and whether you have Copilot
+  - Your role, repo admin or organization owner
+  - Your goal, such as turn it on, block pushes, add a pattern or clear alerts
+  - The names of your repo or organization (optional)
+you_get:
+  - A plan with the exact settings to switch on, in order
+  - A note on what is free and what needs a paid GitHub plan or Copilot
+  - Steps for a blocked push, and for each kind of alert
+  - A custom pattern or exclusion file, if you asked for one
+  - A dated rotation table with blank owner and date for you to fill in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Paste this skill into Claude, ChatGPT or Gemini. It needs no code access. It only needs your answers.
+  - Answer its questions about your repo type, plan, role and goal. Anything you skip is marked MISSING and the plan says what that changes.
+  - Open GitHub, go to Settings, then Advanced Security, and follow the numbered steps. An organization owner must do the org-wide steps.
+  - Check the plan note on cost. Look up the current price on GitHub's own pricing page before you switch on a paid feature.
+  - If any real key was ever pushed or alerted, rotate it first. Then fill in the rotation table with an owner and a date for each one.
+how_it_works:
+  - title: Ask your setup
+    text: It asks your repo type, plan, role, Copilot and goal, and marks what is missing.
+  - title: Show the costs
+    text: It says which features are free for you and which need a paid plan or Copilot.
+  - title: Switch on protection
+    text: It lists the settings in order, from secret scanning to push protection and options.
+  - title: Plan the responses
+    text: It sets steps for blocked pushes and alerts, with rotation before anything else.
+  - title: Build the rotation table
+    text: It leaves owner and date blank for you, and ends with three actions for this week.
+output_shape: |
+  Secret Protection Plan
+  Your setup: <repo type, plan, role, Copilot, goal, MISSING items>
+  Free and paid: <what needs a paid plan or Copilot, check GitHub pricing>
+  Settings to turn on: <numbered steps with menu path and a Do now / Optional / Needs an org owner tag>
+  Exclusions and custom patterns: <file or pattern, if asked>
+  If a push is blocked: <steps>
+  If an alert appears: <rotate first, then check, then close>
+  Rotation plan
+  | Secret or alert | Priority | Owner | Rotate by | Done? |
+  Check it worked: <where to look>
+  Next steps: <3 actions>
+output_sample:
+  input:
+    - Your repo type and GitHub plan
+    - Your role and whether you have Copilot
+    - Your goal for secret protection
+  prerequisites:
+    - Admin access to the repo, or an organization owner for org-wide settings
+    - A paid GitHub Secret Protection plan for private or organization repos
+  output:
+    - name: Your setup
+      contains: Your answers, with anything missing marked and what the plan assumes.
+    - name: Free and paid
+      contains: Which features need a paid plan or Copilot for you, with a pointer to GitHub pricing.
+    - name: Settings to turn on
+      contains: Numbered menu steps, each tagged Do now, Optional or Needs an org owner.
+    - name: Blocked push and alert steps
+      contains: What to do when a push is blocked or an alert appears, with rotation first.
+    - name: Rotation plan
+      contains: A table of secrets with priority, and blank owner and date columns for you to fill in.
+    - name: Next steps
+      contains: Three actions to do this week.
+works_best_with:
+  tools:
+    - name: GitHub Secret Protection
+      why: The paid add-on that turns on scanning and push protection for private repos.
+    - name: Any good chat AI
+      why: Writes the plan, regex for custom patterns and the exclusion file from your answers.
+  inputs:
+    - The key formats your company uses, with a made-up example string of each
+    - A list of current secret alerts, if you have any
+terms:
+  - term: Secret scanning
+    meaning: A GitHub feature that finds passwords and keys in your code and history.
+  - term: Push protection
+    meaning: A block that stops a push if it contains a secret.
+  - term: Rotate
+    meaning: Replace a key with a new one and turn off the old one.
+  - term: Custom pattern
+    meaning: Your own rule that tells GitHub what one of your secrets looks like.

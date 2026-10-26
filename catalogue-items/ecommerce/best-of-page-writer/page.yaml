@@ -1,6 +1,6 @@
 new_slug: best-of-page-writer
 name: "Best-of page writer"
-summary: "Give it a buyer question and your rivals. Get a fair best-of page with real numbers."
+summary: "Write a fair best-of page that includes your product. Give it a buyer question and your rivals' facts. You get a brief, a draft and a proof list."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It writes a long page from facts you give it, and balance and accuracy matter more than depth."
@@ -17,6 +17,10 @@ when:
   - Google shows list articles for the question your buyers search, and your product pages don't rank for it.
   - You want to be in a "best X" list without bending the truth.
   - You have a category page and want pages that support it with fair, useful comparisons.
+not_for:
+  - "You sell one product and have no rivals worth listing: write a plain product page, or ask a person who knows the market to help."
+  - "You want to review a single product: use a product review written by someone who has tested it, not a list."
+  - "The top results for your question are not list pages: this page type will not fit, so write a guide or category page instead."
 
 you_give:
   - The buyer question or "best X" term
@@ -36,6 +40,33 @@ how_to_use:
   - Paste your facts and your rivals' verified facts, and attach any photos and test notes.
   - Review the draft with someone who knows the products. Expect three to five rounds.
   - Replace every vague line with a real price or number before you publish.
+output_sample:
+  input:
+    - Your buyer question, such as a "best X for Y" search
+    - Your product and 4 to 8 rivals, with verified facts on each
+    - Your 5 to 10 real differences from rivals
+    - Photos, test notes and an author name (optional)
+    - Pages you want to link to, such as your category page (optional)
+  prerequisites:
+    - An AI chat tool. No code or paid tool is needed.
+    - Verified facts on each rival, such as price, size and what is included
+  output:
+    - name: PAGE TYPE CHECK
+      contains: Whether list articles rank for your question, and whether a best-of page is the right choice.
+    - name: BRIEF
+      contains: Title, meta description, URL, topics to cover, gaps rivals left, FAQ questions and internal links.
+    - name: DRAFT
+      contains: A summary at the top, a byline with dates, and the full page text.
+    - name: COMPARISON TABLE
+      contains: Each product with price, key facts and who it is best for.
+    - name: ITEM BLOCKS
+      contains: "The same block for every product: badge, description, picture, pros, cons, ideal use and proof."
+    - name: PROOF CHECKLIST
+      contains: The photos, screenshots, test notes and numbers you still need to add.
+    - name: HELD BACK
+      contains: Claims left out because nothing backs them, such as "we tested it" with no notes.
+    - name: REFRESH
+      contains: A plan to re-check rival facts every quarter.
 
 how_it_works:
   - title: Checks the page type

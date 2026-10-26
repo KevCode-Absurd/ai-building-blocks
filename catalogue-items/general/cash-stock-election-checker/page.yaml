@@ -1,53 +1,112 @@
 new_slug: cash-stock-election-checker
 name: Cash stock election checker
 headline: Cash stock election checker
-summary: Check holder cash and replacement shares when cash elections exceed the reserved pool.
+summary: "See how much cash and how many acquirer shares one holder gets in a merger when cash elections exceed the cash pool. Gaps are flagged."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Fulfillment fraction, holder cash and replacement acquirer shares. Share actual eligible cash-election shares, available pool after other election reservations, cash price, replacement ratio and holder shares.
+subhead: Give it the shares that chose cash, the cash left in the pool, the cash price, the share swap ratio and one holder's shares. It works out the share of cash requests the pool can pay. You get that holder's cash and replacement shares, and a list of missing facts.
 explain: |-
-  Fulfillment fraction, holder cash and replacement acquirer shares.
+  In some mergers, each holder of the target company picks cash or acquirer shares. If too many pick cash, the cash pool runs short. Everyone who chose cash is then paid in cash for only part of their shares. The rest turns into acquirer shares. This cash stock election checker shows what one holder ends up with.
 
-  Merger consideration. Illustrative figures only. 600 covers60% of100 shares at10; a10-share holder gets60 cash and2 replacement shares. Pool1000 fulfills all cash.
+  The sum has three steps. First it adds up the cash the elections ask for: elected shares times the cash price. Then it divides the cash left in the pool by that demand, and caps the answer at 100%. Last it applies that share to the holder. The part paid in cash is the holder's shares times that share, times the cash price. The rest is swapped at the signed replacement ratio.
+
+  The pool must be the cash left after other reservations, such as mixed and no-election holders. The skill asks you to confirm that, and it does not guess. Practice numbers, not a real deal: 100 shares chose cash at 10 each, so demand is 1000. The pool is 600, so 60% is paid in cash. A holder with 10 shares has 6 of them paid in cash, which is 60. The other 4 turn into 2 acquirer shares at a ratio of 0.5.
 when:
-  - You need fulfillment fraction, holder cash and replacement acquirer shares.
-  - You work on merger consideration and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A merger agreement says cash elections are cut back if the cash pool runs short, and you want to know one holder's result.
+  - You hold target shares and want to know how much cash you get if everyone picks cash.
+  - A deal team asks what share of cash requests the pool can pay.
+  - You are checking an exchange agent's allocation against the signed terms.
+not_for:
+  - Every target share is swapped at one fixed ratio, with no choice. Use the Fixed exchange consideration checker.
+  - The stock side is also oversubscribed, so both pools run short. This covers cash only, so ask the deal lawyers for the allocation rules.
+  - You need exact rounding and final share counts. The exchange agent's own rules decide those.
 you_give:
-  - Actual eligible cash-election shares, available pool after other election reservations, cash price, replacement ratio and holder shares.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The total target shares that chose cash (from the exchange agent report or the election results)
+  - The cash left in the pool after other reservations (from the merger agreement)
+  - The cash price per target share (from the merger agreement)
+  - The replacement ratio, in acquirer shares per target share (from the merger agreement)
+  - The target shares the holder owns
+  - The currency and units, such as USD thousands
+  - Your own election spreadsheet (optional)
 you_get:
-  - Fulfillment fraction, holder cash and replacement acquirer shares.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The share of cash requests the pool can pay
+  - The holder's cash payment
+  - The holder's replacement acquirer shares
+  - A check that the holder's shares sit inside the total elected
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the elected shares, the pool, the cash price, the ratio and the holder's shares. Say the currency and units. Attach the page of the merger agreement if you can.
+  - Ask in plain words, such as what cash and shares does a holder of 10 shares get?
+  - Check one line yourself. The cash share is the pool divided by elected shares times price, capped at 100%. Holder cash is shares times that share times price.
+  - Read MISSING and CHECKS MISSED before you use any figure. Confirm the pool is the amount left after other reservations.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Use the actual post-reservation cash pool and confirm the agreement cash-oversubscription branch
-    text: Use the actual post-reservation cash pool and confirm the agreement cash-oversubscription branch.
-  - title: 2. Divide available pool by aggregate cash demand, capped at100%
-    text: Divide available pool by aggregate cash demand, capped at100%.
-  - title: 3. Allocate holder cash proportionately and convert the unsatisfied target-share fraction at the signed replacement ratio
-    text: Allocate holder cash proportionately and convert the unsatisfied target-share fraction at the signed replacement ratio.
+  - title: Checks the pool
+    text: Confirms the cash pool is what is left after other reservations, and that the agreement cuts back cash elections when the pool is short.
+  - title: Finds the cash demand
+    text: Multiplies the elected shares by the cash price.
+  - title: Finds the cash share
+    text: Divides the pool by the demand and caps the answer at 100%.
+  - title: Splits the holder's shares
+    text: Pays the cash share of the holder's shares at the cash price. Swaps the rest at the replacement ratio.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given and lists checks it could not run. It never fills a gap with zero.
 output_shape: |-
-  Fulfillment fraction, holder cash and replacement acquirer shares.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Cash demand <amount> | Cash share paid <percent> | Holder cash <amount> | Replacement shares <number>
+
+  SCOPE AND SOURCES
+  <period, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <elected shares, pool after reservations, cash price, replacement ratio, holder shares>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of cash shares plus swapped shares to the holder's shares>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The total target shares that chose cash
+    - The cash left in the pool after other reservations
+    - The cash price and the replacement ratio
+    - The shares one holder owns
+    - Your own election spreadsheet (optional)
+  prerequisites:
+    - The merger agreement page that sets the price, the ratio and the cutback rule
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The cash demand, the share paid in cash, the holder's cash and the holder's replacement shares.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that cash shares plus swapped shares equal the holder's shares.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Holder shares must be a subset of aggregate election shares.
+  - what: A bigger pool
+    how: Change the cash pool. At or above the cash demand, the share paid in cash is 100% and no shares are swapped.
+  - what: A different ratio
+    how: Change the replacement ratio. Only the swapped part of the holder's shares moves.
+  - what: A different holder
+    how: Change the holder's shares. The cash share stays the same for every holder.
 judge:
   - Holder shares must be a subset of aggregate election shares.
   - Mixed and no-election reservations are deducted before available cash enters the model.
@@ -62,15 +121,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the merger agreement that sets the cash price, the ratio and the cutback rule
+    - The exchange agent's election results
+    - A named reviewer and the question you want answered
 terms:
+  - term: Cash election
+    meaning: A holder's choice to take cash for their target shares instead of acquirer shares.
+  - term: Cash pool
+    meaning: The total cash the deal sets aside to pay holders who choose cash.
+  - term: Replacement ratio
+    meaning: How many acquirer shares one target share turns into.
+  - term: Target company
+    meaning: The company being bought. Its holders get cash, acquirer shares or both.
+  - term: Exchange agent
+    meaning: The firm that collects elections and pays holders.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real deal.

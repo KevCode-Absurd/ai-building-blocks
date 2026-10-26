@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks one of a few known methods and writes code.
 new_slug: ai-data-extractor-builder
 name: AI data extractor builder
-summary: Say what data to pull from AI answers. Get code that returns checked,
-  typed results instead of free text.
+summary: Build an AI data extractor that turns a reply into checked, typed fields. Say what to pull. Get code that fits OpenAI, Anthropic or Google.
 job: build-software
 headline: AI data extractor builder
-subhead: Code that pulls specific facts out of an AI's reply and hands back
-  checked, typed data, not loose text. Your next step, like a database write or
-  a screen, can then rely on the shape.
+subhead: Code that pulls specific facts out of an AI's reply and hands back checked, typed data, not loose text. Your next step, like a database write or a screen, can then rely on the shape.
 explain: |
   Code that pulls specific facts out of an AI's reply and hands back checked, typed data, not loose text. Your next step, like a database write or a screen, can then rely on the shape.
 
@@ -18,6 +15,10 @@ when:
   - You want invoices, emails or reviews turned into clean fields.
   - The AI sometimes gives wrong types or leaves out fields.
   - You are feeding AI output straight into a database or app.
+not_for:
+  - "You want free-form text like a summary, essay or chat reply: ask your AI directly, no extractor needed."
+  - "You want to check web form or API input with Zod: use zod-validation-expert, which is not part of this skill."
+  - "You want better wording or quality in the AI's text: fix your prompt first, since this only fixes the shape."
 you_give:
   - The fields you need extracted
   - Sample text to pull them from
@@ -29,8 +30,29 @@ you_get:
   - Validation that catches bad output
   - Retry logic when a reply fails the check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Say which fields you need. Give each one a type, say if it is required, and list allowed values.
+  - Paste a sample of the text you want to pull the fields from.
+  - Say your AI provider and your language, Python or JavaScript.
+  - Run the code you get with your own API key. This needs a place to run code, so use a project on your computer or an AI that can run code.
+  - Test it on real inputs and fix the schema if a field comes back wrong.
+output_sample:
+  input:
+    - The fields you want pulled out, with type, required or optional, and allowed values
+    - A sample of the text to pull them from
+    - Your AI provider (OpenAI, Anthropic or Google) and your language (Python or JavaScript)
+    - An API key for that provider
+  prerequisites:
+    - An AI that can run code, or a project where you can run it yourself
+    - An API key from your AI provider
+  output:
+    - name: Schema
+      contains: Your fields set out with type, required or optional, and allowed values, as a Pydantic model or Zod schema.
+    - name: Extraction code
+      contains: A working call for your provider that forces the reply into your schema and returns typed data.
+    - name: Validation
+      contains: A check that catches wrong types, missing fields and bad values before they reach your database or screen.
+    - name: Retry logic
+      contains: When a reply fails the check, the error goes back to the AI and it tries again, up to a set cap.
+    - name: Edge case notes
+      contains: Known limits and things to avoid, so the code holds up with real inputs.

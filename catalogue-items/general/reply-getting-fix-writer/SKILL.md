@@ -83,7 +83,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> for <change>`. If the diagnosis is missing, ask for it or suggest "Ad pull diagnoser" first. Never invent a deadline, a stock limit, a price or a quote.
+Write `MISSING: <what> for <change>`. If the ad or the diagnosis is missing, still give every section of the shape (FIXED AD, CHANGES, KEPT, NOT TOUCHED, KEY, MISSING, CHECKS MISSED), each with a MISSING line, then ask for what is missing and suggest "Ad pull diagnoser" for the diagnosis. If the old ad's code is missing, write `MISSING: old ad's code` and give the fixed version a placeholder code such as `<old code>-B`. Never invent a deadline, a stock limit, a price or a quote.
 
 ## Avoid
 

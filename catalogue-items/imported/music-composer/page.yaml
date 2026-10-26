@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a set recipe to turn a description into a track.
 new_slug: music-composer
 name: Music composer
-summary: Describe the track you want. Get background music, a jingle or a song
-  with lyrics, as an audio file.
+summary: Turn a short description into original music. Get background music, a jingle or a song with lyrics as an MP3, made with ElevenLabs.
 job: work-with-audio
 headline: Music composer
-subhead: A finished audio file of original music, made from a plain description.
-  It can be a calm background loop, a short jingle or a full song with lyrics.
+subhead: A finished audio file of original music, made from a plain description. It can be a calm background loop, a short jingle or a full song with lyrics.
 explain: |
   A finished audio file of original music, made from a plain description. It can be a calm background loop, a short jingle or a full song with lyrics. You choose the length, from a few seconds to a few minutes.
 
@@ -16,8 +14,11 @@ when:
   - You need background music for a video and have no licence budget.
   - You want a short jingle for a podcast intro or an ad.
   - You have lyrics and want to hear them sung as a rough demo.
-  - You want a track with a set structure, such as a calm intro that builds to a
-    loud finish.
+  - You want a track with a set structure, such as a calm intro that builds to a loud finish.
+not_for:
+  - "You need licensed commercial tracks or a song in the style of a named artist: use a licensed music library, since this skill cannot name artists or copy lyrics."
+  - "You need a spoken voice-over or narration: use a text-to-speech tool, not a music maker."
+  - "You have no ElevenLabs account or API key: sign up with ElevenLabs first, or ask a musician or a stock music site."
 you_give:
   - A description of the mood, genre and instruments
   - The length you want
@@ -29,8 +30,28 @@ you_get:
   - A composition plan you can edit and rerun
   - Setup steps in Python, JavaScript or the command line
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own ElevenLabs API key.
+  - Get an ElevenLabs account and API key. Some features, such as streaming, need a paid plan.
+  - Open an AI that can run code. Paste this skill, then add your API key as ELEVENLABS_API_KEY.
+  - Describe the mood, genre, instruments and length. Add lyrics if you have them.
+  - For more control, ask for a composition plan first. Edit the sections, then ask for the audio.
+  - Listen to the MP3. Change the description or plan and run it again until it fits.
+output_sample:
+  input:
+    - A description of the mood, genre and instruments
+    - The length you want, from a few seconds to a few minutes
+    - Lyrics or notes for each section (optional)
+    - Video files to score (optional)
+  prerequisites:
+    - An ElevenLabs account and API key
+    - An AI that can run code, or the ElevenLabs command line tool
+  output:
+    - name: MP3 audio file
+      contains: The finished track, saved to your computer in the length and style you asked for.
+    - name: Composition plan
+      contains: An ordered list of sections, each with its own words, styles and length, which you can edit and rerun.
+    - name: Detailed result
+      contains: The audio plus its composition plan and metadata, when you ask for the detailed version.
+    - name: Streamed audio
+      contains: The track arriving in pieces while it renders, on paid plans.
+    - name: Video score
+      contains: Background music built from one or more video files you upload.

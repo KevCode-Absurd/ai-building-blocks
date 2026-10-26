@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It maps goals down and checks each link.
 new_slug: goal-cascade-checker
 name: Goal cascade checker
-summary: Give it company goals and team plans. Find orphan goals, silos and gaps
-  between strategy and work.
+summary: Check that team plans match company goals. Find orphan goals, clashes and gaps in your goal cascade, with a fix for each one.
 job: plan-strategy
 headline: Goal cascade checker
-subhead: Find where company strategy gets lost before it reaches the people
-  doing the work. Give it company goals and team plans and it flags orphan goals
-  with no link upward, goals that conflict, silos, and strategy gaps no team
-  owns.
+subhead: Find where company strategy gets lost before it reaches the people doing the work. Give it company goals and team plans and it flags orphan goals with no link upward, goals that conflict, silos, and strategy gaps no team owns.
 explain: |
   Find where company strategy gets lost before it reaches the people doing the work. Give it company goals and team plans and it flags orphan goals with no link upward, goals that conflict, silos, and strategy gaps no team owns.
 
@@ -19,6 +15,10 @@ when:
   - Two departments are chasing goals that clash.
   - You wrote company goals and want to see if teams picked them up.
   - People cannot say how their work ties to strategy.
+not_for:
+  - You have no written company goals yet. Write them first, then run this check.
+  - You only want to review one team's own goals. Ask a manager to check them by hand.
+  - You need to fix pay or bonus rules. Talk to your leadership team, since this only checks goals.
 you_give:
   - Company goals
   - Team goals or plans
@@ -30,7 +30,34 @@ you_get:
   - Coverage gaps against strategy
   - Steps to fix the cascade
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your company goals, one goal per line, with the owner and how it is measured.
+  - "Paste your team goals the same way: one per line, with the team, owner and measure."
+  - Add the five answers on top priority and your org chart, if you have them (optional).
+  - Ask your AI to run the check. The script step needs an AI that can run code. If yours cannot, it reads the goals and does the check itself.
+  - Read the orphan goals and conflicts first. Fix those before the rest.
+output_sample:
+  input:
+    - Your company goals
+    - Your team goals or plans, with the owner of each
+    - Answers from five people on the top priority (optional)
+    - Your org chart (optional)
+  prerequisites:
+    - An AI that can run code, only if you want the alignment script used. Without it, your AI checks the goals by reading them.
+  output:
+    - name: Strategy articulation test
+      contains: How well five people from different teams agree on the top priority, and whether the strategy is clear enough to cascade.
+    - name: Cascade map
+      contains: Each goal traced from company to department to team to person, showing which company goal it supports.
+    - name: Orphan goals
+      contains: Team goals with no link to a company goal, with the goal, the team and a connect-or-cut action.
+    - name: Conflicting goals
+      contains: Pairs of goals that hurt each other when both succeed, with the teams involved and a suggested fix.
+    - name: Coverage gaps
+      contains: Company goals that no team owns or supports, with a suggested owner.
+    - name: Silo signals
+      contains: Signs that teams chase local targets at the company's expense, and likely causes.
+    - name: Alignment score
+      contains: A score out of 50 across strategy clarity, cascade, conflicts, coverage and communication.
+    - name: Fix steps
+      contains: Next steps to repair the cascade, such as a workshop, shared goals and a quarterly check.

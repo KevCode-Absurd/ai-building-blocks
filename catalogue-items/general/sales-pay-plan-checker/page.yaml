@@ -1,6 +1,6 @@
 new_slug: sales-pay-plan-checker
 name: "Sales pay plan checker"
-summary: "Paste your commission plan and churn by rep. Get what it rewards and ignores, plus one change to test."
+summary: "Check your sales commission plan against churn by rep. See what it pays for, what it ignores, and one change to test."
 job: lead-people
 thinking: high
 thinking_why: "It reads a pay plan against data and must not overclaim from a small number of reps."
@@ -17,6 +17,10 @@ when:
   - Sales are up but customers keep leaving.
   - You are changing a commission plan and want to know what the old one rewarded.
   - You suspect your best earners are not your best keepers.
+not_for:
+  - "You want to hire salespeople, not review pay: use a plain scorecard of the skills you need, written before you interview."
+  - "You have no data on which customers stayed or left: the report can only describe the plan, so gather that list first."
+  - "You want to set a new plan from scratch: ask a finance lead or an adviser, because this tool tests one change to an existing plan."
 
 you_give:
   - Your pay plan in words or a table (rates, bonuses, targets)
@@ -35,6 +39,29 @@ how_to_use:
   - Say what behaviour you want more of.
   - Read the report and pick the change to test with one team or one quarter.
   - Come back after two quarters and compare.
+output_sample:
+  input:
+    - Your commission plan in words or a table
+    - Each rep's customers signed, customers who left, and earnings
+    - The period the figures cover
+    - The behaviour you want more of (optional)
+  output:
+    - name: What the plan pays for
+      contains: Each thing that earns money under the plan, one line each with its rate.
+    - name: What it ignores
+      contains: Things the plan does not pay for or penalise, such as customers who leave.
+    - name: Reps by churn
+      contains: Each rep ranked by churn with earnings beside it, and a warning if the team is small.
+    - name: The gap
+      contains: Whether top earners are also the reps with the highest churn, with figures.
+    - name: Test this one change
+      contains: A trial payout tied to churn bands, what each rep would have earned, and the cost against the old plan.
+    - name: How you will know
+      contains: The number that shows the change worked and when to check it, within two quarters.
+    - name: Guesses
+      contains: Which claims are worked out from data and which are guesses, and why.
+    - name: Missing and checks missed
+      contains: Data you did not give, and any quality checks the report failed.
 
 how_it_works:
   - title: States the plan

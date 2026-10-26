@@ -1,6 +1,8 @@
 slug: prepare-an-ai-pilot-go-decision
 name: Prepare an AI pilot go decision
-summary: Share the source files. Get a pilot evidence brief, data quality gaps and go stop checklist result.
+summary: Check your AI pilot results against the baseline and your go or stop
+  checklist. Get an evidence brief, the data gaps and a clear go, wait or stop
+  call.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -25,11 +27,18 @@ uses:
   - decision-checklist-runner
 steps:
   - uses: hypothesis-first-design-planner
-    note: Review the pilot as a testable hypothesis with predeclared observable signals; preserve actual baseline and avoid retrofitting success criteria.
+    note: Reviews the pilot as a testable hypothesis with signals declared before
+      the results. Preserves the real baseline. Hands step 2 the signals and
+      success criteria to check against.
   - uses: spreadsheet-checker
-    note: Inspect the actual evaluation case table, denominators, costs, failures and result calculations; distinguish measured performance from anecdotes.
+    note: Uses your own evaluation spreadsheet, not step 1's output. Takes step 1's
+      signals as the acceptance criteria. Inspects case counts, denominators,
+      costs, failures and result calculations, and separates measured results
+      from anecdotes. Hands step 3 the checked sheet and findings.
   - uses: decision-checklist-runner
-    note: Apply the existing ordered pilot approval checklist to the evidence. Retain unknown mandatory items and stop rules; no deployment or budget change occurs.
+    note: Applies your own approved pilot checklist to step 2's checked results and
+      findings as the facts. Keeps unknown mandatory items and stop rules. No
+      deployment or budget change occurs. Hands back the go, wait or stop call.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -39,13 +48,19 @@ credits:
   - title: Hypothesis-first design planner
     by: Wondel.ai
     url: https://github.com/wondelai/skills/tree/main/lean-ux
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Spreadsheet checker
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Decision checklist runner
     by: AI Blocks
     url: https://useaiblocks.com/skills/decision-checklist-runner
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

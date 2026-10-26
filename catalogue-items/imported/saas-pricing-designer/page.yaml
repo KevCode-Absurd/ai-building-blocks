@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It applies a pricing framework to your facts.
 new_slug: saas-pricing-designer
 name: SaaS pricing designer
-summary: Give it your product and customers. Get a value metric, tier layout and
-  pricing tests to run.
+summary: Set SaaS pricing with a clear value metric, a three-tier plan and pricing tests to run. Give it your product and buyers.
 job: set-prices
 headline: SaaS pricing designer
-subhead: "A price page you can defend: what to charge for, how many plans to
-  offer and which pricing tests to run next. Give it your product and your
-  customers."
+subhead: "A price page you can defend: what to charge for, how many plans to offer and which pricing tests to run next. Give it your product and your customers."
 explain: |
   A price page you can defend: what to charge for, how many plans to offer and which pricing tests to run next. Give it your product and your customers.
 
   First it finds your value metric, the thing you charge by. A good one grows with use, is easy to predict and needs no calculator. Next it finds a price range with the Van Westendorp survey, four questions that mark too cheap, a bargain, expensive and too expensive. Then it lays out good, better and best tiers and adds anchoring and plan naming. It ends with tests to run and a view of rival prices.
 when:
   - You are launching and have no idea what to charge.
-  - Customers say your price is fine but growth is flat, and you suspect it is
-    too low.
+  - Customers say your price is fine but growth is flat, and you suspect it is too low.
   - You want to add tiers and need to know what goes in each.
   - You plan a price rise and want to test it first.
+not_for:
+  - "You have no paying customers and no buyers to survey yet: talk to ten likely buyers first, then come back."
+  - "You are pricing one single job or one-off service: work out your hours and costs, then add a margin by hand."
+  - "You want a ready price from your AI alone: the price range step needs real survey answers from your buyers."
 you_give:
   - What your product does and who buys it
   - Current prices (optional)
@@ -30,7 +30,31 @@ you_get:
   - A three-tier plan layout
   - A list of pricing tests
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Describe your product and who buys it. Add your prices, rival prices and what it costs you to serve a customer, if you have them.
+  - For the price range, ask 10 or more real buyers the four price questions and paste their answers in. Without real answers, treat any range as a guess.
+  - Read the value metric first. Check that your customers would find it easy to understand.
+  - Pick one pricing test from the list. Run it for at least two billing cycles and set a stop limit before you start.
+output_sample:
+  input:
+    - What your product does and who buys it
+    - Your current prices (optional)
+    - Competitor prices (optional)
+    - Answers to the four price questions from real buyers (optional)
+  prerequisites:
+    - Survey answers from real target buyers, if you want the price range step
+  output:
+    - name: Value metric
+      contains: "What to charge by, checked against three tests: it grows with use, is easy to predict and is simple to explain."
+    - name: Price range
+      contains: The too cheap, bargain, expensive and too expensive curves from your survey, and the range between the two crossing points.
+    - name: Tier design
+      contains: A good, better and best plan layout, with what goes in each plan and which one is the target.
+    - name: Psychological pricing tactics
+      contains: Which price tricks fit your plans, such as charm pricing, anchoring and an annual discount.
+    - name: Competitive positioning matrix
+      contains: A price against features map showing where you sit next to your rivals.
+    - name: Pricing page copy
+      contains: A pricing table and page text you can adapt, with monthly and annual choices.
+    - name: Pricing experiments
+      contains: Tests to run, what to measure, how long to run them, a stop limit and a rollback plan.

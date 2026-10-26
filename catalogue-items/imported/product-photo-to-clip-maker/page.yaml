@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sends one photo to a set video recipe.
 new_slug: product-photo-to-clip-maker
 name: Product photo to clip maker
-summary: Give it a main product photo. Get a 3 to 5 second video for your
-  listing. Your video model makes it.
+summary: Turn one product photo into a 3 to 5 second clip for your listing's video slot. Give it the photo and a video model. You get an MP4 file.
 job: make-video-ads
 headline: Product photo to clip maker
-subhead: A 3 to 5 second video for the video slot on your listing, made from a
-  main product photo you already have. Many stores leave that slot empty because
-  filming feels like too much work.
+subhead: A 3 to 5 second video for the video slot on your listing, made from a main product photo you already have. Many stores leave that slot empty because filming feels like too much work.
 explain: |
   A 3 to 5 second video for the video slot on your listing, made from a main product photo you already have. Many stores leave that slot empty because filming feels like too much work.
 
@@ -18,20 +15,46 @@ when:
   - You want your main image to move.
   - You need a short clip without filming.
   - You want a batch of clips for several products.
+not_for:
+  - You need a clip over 8 seconds. Use a multi-shot video ad flow, or join several short clips yourself.
+  - You want a person talking to the camera. Use a UGC testimonial video skill, or film a real person.
+  - Your photo has wrinkles, blur or a bent shape. Fix the photo first, because video makes flaws worse.
 you_give:
-  - A clean main product photo
-  - The motion or camera move you want
-  - A video model ID you can use
-  - ffmpeg (optional)
+  - A clean, sharp main product photo
+  - The camera move you want, such as push in or orbit (optional)
+  - The ID of a video model your account can use
+  - Your brand file for colour and style (optional)
+  - ffmpeg, only for captions or joining clips (optional)
 you_get:
   - A 3 to 5 second product clip
   - A camera move and motion prompt
   - Setup steps for the video model
   - Notes on what the clip cannot do
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own video model key
-    (fal or Replicate). Add ffmpeg if you want captions.
+  - Check your photo first. Fix wrinkles, blur or flaws, because video makes them worse.
+  - Get a video model ID and a paid API key from fal or Replicate. Each clip costs much more than an image.
+  - Paste this skill into an AI that can run code. Add your photo, your camera move and your model ID.
+  - Run the dry run first. It shows what will be sent and costs nothing.
+  - Make one 3 second clip and check the motion. If the product bends, ask for slower, smaller movement.
+  - Only then make more clips. Check the video length, shape and file size against your store's rules by hand.
+output_sample:
+  input:
+    - Your main product photo, tall 3:4 or square, as sharp as you can get
+    - The camera move you want, such as push in, pull back, orbit or macro sweep
+    - The ID of a video model you can use
+    - Your brand file for colour and style (optional)
+  prerequisites:
+    - An AI that can run code
+    - A paid API key for a video model, such as fal or Replicate
+    - ffmpeg, only if you join clips or add captions (optional)
+  output:
+    - name: Video prompt
+      contains: One prompt with the camera move, how the product moves, how the scene moves, and a rule to keep the product identical.
+    - name: Dry run check
+      contains: A preview of what will be sent to the video model, with no charge.
+    - name: Test clip
+      contains: One 3 second clip made first, so you can check the camera move before spending more.
+    - name: Main image video (MP4)
+      contains: A 3 to 5 second MP4 saved at the path you choose, ready for your listing's video slot.
+    - name: Fix notes
+      contains: Short advice if the product bends, the image is blurry or a face breaks.

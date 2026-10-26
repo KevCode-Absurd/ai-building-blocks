@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It joins several large tables and reads them with care.
 new_slug: cancer-dependency-analyst
 name: Cancer dependency analyst
-summary: Name a gene or cell line. Get which cancers depend on it and which
-  drugs hit them.
+summary: Find which cancers depend on a gene and which drugs hit them. Give your AI a gene or cell line and run this cancer dependency analysis on DepMap data.
 job: research-topics
 headline: Cancer dependency analyst
-subhead: Name a gene or cell line and, if you like, a cancer type to compare. It
-  pulls the latest DepMap release, the public map of gene knockout screens in
-  cancer cells, and runs the statistics. You get ranked gene dependencies, cell
-  line group comparisons, genes that behave alike and drug response links.
+subhead: Name a gene or cell line and, if you like, a cancer type to compare. It pulls the latest DepMap release, the public map of gene knockout screens in cancer cells, and runs the statistics. You get ranked gene dependencies, cell line group comparisons, genes that behave alike and drug response links.
 explain: |
   Name a gene or cell line and see which cancers need it to survive and which drugs hit them. The skill works from DepMap, the public map of gene knockout screens in cancer cells, and gives you ranked lists you can take to the lab as ideas to test.
 
   It finds the latest data release first and checks which files are really available, since some links are blank. Then it ranks dependencies, compares groups defined before you look, checks genes that rise and fall together, and links them to drug response data. It is careful to say that results suggest targets and do not prove a drug works. You need data downloads and a way to run code.
 when:
   - You study a gene and want to know which cancer types rely on it.
-  - You need to pick cell lines for an experiment and want the ones most
-    sensitive to a knockout.
+  - You need to pick cell lines for an experiment and want the ones most sensitive to a knockout.
   - You are looking for drugs that match a known weakness in a tumour group.
   - You want to check if two genes share a dependency.
+not_for:
+  - "You need a treatment or clinical decision: use clinical trial or patient data, and talk to a doctor or trial team."
+  - "You want proof that a drug works or that two genes interact: test it in the lab with matched experiments."
+  - "You cannot run code or download files: ask a bioinformatics colleague, or browse the DepMap portal by hand."
 you_give:
   - A gene name or cell line
   - The cancer type or group to compare (optional)
@@ -31,8 +30,33 @@ you_get:
   - Related genes that behave alike
   - Drug response links with clear limits on what they mean
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and download public data.
+  - Open an AI that can run Python code and reach the internet. Paste in this skill.
+  - Tell it your gene or cell line. Add a cancer type to compare, if you have one.
+  - Let it find the latest DepMap release and list the files it needs.
+  - DepMap may show a browser check when you download files. Complete it yourself, and read DepMap's terms before you automate any download.
+  - Read the group sizes and q-values before the ranked lists. Treat every result as an idea to test in the lab.
+output_sample:
+  input:
+    - A gene name or cell line
+    - A cancer type or group to compare (optional)
+    - A DepMap release to use (optional)
+    - A table of your own gene status calls for biomarker tests (optional)
+  prerequisites:
+    - An AI that can run Python 3.10 or newer with numpy, pandas and scipy
+    - Internet access to find the latest DepMap release
+    - DepMap files downloaded from the portal, which may need a browser check you complete yourself
+  output:
+    - name: Release record
+      contains: The DepMap release, file names, checksums and retrieval date, so the work can be repeated.
+    - name: Gene dependency profile
+      contains: Chronos gene effect scores for your target across cancer models, with lineage and cell line names.
+    - name: Group comparison
+      contains: How dependency differs between your chosen cancer group and the others, with group sizes and effect size.
+    - name: Biomarker scan
+      contains: Ranked genes with group sizes, effect size, p-value and adjusted q-value for a prespecified biomarker.
+    - name: Co-essentiality list
+      contains: Genes whose effects rise and fall with your target, with pairwise sample counts, r, p-value and q-value.
+    - name: Drug response links
+      contains: PRISM compound response linked to your target, with the screen, dose and endpoint named.
+    - name: Limits and checks
+      contains: Missing data, confounders and a plain note that results suggest targets and do not prove them.

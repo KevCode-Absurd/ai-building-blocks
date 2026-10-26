@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It looks for patterns and root causes in mistakes.
 new_slug: student-mistake-analyser
 name: Student mistake analyser
-summary: Give it a set of student errors. Get the likely causes and the feedback
-  or teaching that fixes each one.
+summary: Find out why a student got answers wrong. Paste their work and get the likely cause of each mistake, plus feedback that fixes it.
 job: teach-and-train
 headline: Student mistake analyser
-subhead: A set of wrong answers becomes a list of causes and fixes. Instead of
-  marking 'incorrect', you learn whether the student slipped, misread, or holds
-  a wrong idea, and what to do about each.
+subhead: A set of wrong answers becomes a list of causes and fixes. Instead of marking 'incorrect', you learn whether the student slipped, misread, or holds a wrong idea, and what to do about each.
 explain: |
   A set of wrong answers becomes a list of causes and fixes. Instead of marking 'incorrect', you learn whether the student slipped, misread, or holds a wrong idea, and what to do about each.
 
@@ -18,6 +15,10 @@ when:
   - A student keeps losing marks on algebra and you cannot see the reason.
   - You want feedback that fixes the cause, not just the answer.
   - You want students to learn to review their own errors.
+not_for:
+  - "You only need to mark work right or wrong: use a rubric or your own mark scheme, as this tool explains causes and does not give grades."
+  - "You want to judge the quality of feedback you already wrote: use a feedback checking tool, or ask a colleague to review it."
+  - "You have one wrong answer and no working shown: ask the student to explain their steps first, then use this tool."
 you_give:
   - Samples of student work with errors
   - The task description
@@ -31,7 +32,26 @@ you_get:
   - A response plan for each error type
   - A self-analysis guide for students
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste the student's work, the task, the subject and year level.
+  - Add the correct response and any rubric if you have them (optional).
+  - Read the cause given for each error. Ask the student the diagnostic questions to check it.
+  - Use the response plan for your next lesson or feedback. Share the self-analysis guide with the student.
+output_sample:
+  input:
+    - Samples of student work with errors
+    - The task and what the student had to learn
+    - Subject and year level
+    - The correct response (optional)
+    - A rubric or how often the error happens (optional)
+  output:
+    - name: Error Identification
+      contains: Each error sorted as procedural, conceptual or careless, with the evidence for that label.
+    - name: Diagnostic Questions
+      contains: Questions you can ask the student to confirm the likely cause of each error.
+    - name: Targeted Response Plan
+      contains: A follow-up action for each type of error.
+    - name: Student Self-Analysis Guide
+      contains: A short guide students can use to check their own mistakes.
+    - name: Prevention Strategy
+      contains: Ideas to stop the same errors coming back.

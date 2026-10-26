@@ -1,6 +1,6 @@
 new_slug: review-reply-batch-writer
 name: "Review reply batch writer"
-summary: "Paste your store reviews. Get a specific public reply to each one and a list of the risky ones."
+summary: "Paste your store reviews and get a specific public reply to each one, plus a list of risky reviews that need you. A review reply writer for owners."
 job: help-customers
 thinking: low
 thinking_why: "Each reply follows fixed rules."
@@ -17,6 +17,10 @@ when:
   - "You have ten reviews waiting for a reply."
   - "Your replies all sound the same."
   - "You are worried about saying the wrong thing in public."
+not_for:
+  - "You already wrote a reply and want it checked for risky promises: use the Customer reply promise checker."
+  - "You need to answer a private support ticket or email: write it yourself or use your help desk, since this writes public replies only."
+  - "Your platform does not allow public replies to reviews: skip this and contact the customer another way."
 
 you_give:
   - "The reviews with name, stars and text"
@@ -32,6 +36,23 @@ how_to_use:
   - "Paste the reviews under the prompt."
   - "Add your support email and any remedies you approve."
   - "Read the flagged ones yourself before you reply."
+output_sample:
+  input:
+    - Your reviews, with the name, stars and text for each
+    - Your support email (advised)
+    - Remedies you have approved, such as a replacement window (optional)
+    - Your platform, such as Google or Trustpilot (optional)
+  output:
+    - name: Reply table
+      contains: One row per review with its number, reviewer, type, flag and a reply ready to paste.
+    - name: Review type
+      contains: Each review marked as praise, mixed, product problem, late, damaged or wrong item, preference, price or other.
+    - name: Flag
+      contains: Marks reviews with safety, legal, chargeback, scam, personal data or abuse issues, and gives them a short holding reply.
+    - name: NEEDS A HUMAN
+      contains: Each flagged review with the reason, so you can handle it yourself.
+    - name: PLACEHOLDERS TO FILL
+      contains: "Each [REMEDY: owner to choose] or other gap you need to fill before posting."
 
 how_it_works:
   - title: "Number and sort"

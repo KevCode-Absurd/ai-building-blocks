@@ -2,36 +2,59 @@ thinking: low
 thinking_why: It follows a set edit recipe for one photo.
 new_slug: product-photo-retoucher
 name: Product photo retoucher
-summary: Give it a phone photo of a product. Get a cleaner listing photo with
-  fewer wrinkles. Your image model edits it.
+summary: Retouch a product photo for your listing. Give it a phone shot and get an editing prompt that presses out wrinkles and evens the light.
 job: product-photos
 headline: Product photo retoucher
-subhead: Give it a phone photo of a product. Get a cleaner listing photo with
-  fewer wrinkles. Your image model edits it. Bring a phone photo of the product.
-  Use the result to plan your next step.
+subhead: Give it a phone photo of your product. It writes the edit prompt for your image model, which presses out wrinkles, evens the light and cleans the background. Your AI cannot edit pixels itself, so the image model does that step.
 explain: |
   A casual phone photo of a product turned into a clean listing photo: wrinkles pressed out, shape straightened and evened, light balanced, background cleaned up.
 
   Claude writes the editing prompt for an image model. It asks for specific fixes: remove random creases in the body and sleeves, square the shoulders, line up both sides, tidy the collar and hem, and remove hot spots. The prompt also tells the model to keep colors and details true. It focuses on how the item sits and how it is lit, not fabric texture. Claude cannot edit pixels itself. An image model does that step.
 when:
-  - Your product photos are wrinkled or crooked.
-  - Lighting in your shots is uneven.
-  - You want listing-ready photos without a studio.
-  - You need a quick clean-up before upload.
+  - Your product photos have wrinkles or look crooked.
+  - The light in your shots is uneven or has bright spots.
+  - You want clean listing photos without a studio.
+  - You need a quick clean-up before you upload to your shop.
+not_for:
+  - You want to hide holes, stains or damage. Do not retouch these out. Show the flaw in the listing or reshoot the item.
+  - You need to flatten pleats, gathers or drawstrings. This skill keeps them, so use a person or editor for that change.
+  - You have several products in one photo. Crop to one product per photo, or edit each one on its own.
 you_give:
-  - A phone photo of the product
+  - A phone photo of the product, 1 to 4 angles of the same item
   - What looks wrong with it
-  - Background preference (optional)
-  - Access to an image model
+  - Background colour you want (optional)
 you_get:
-  - An editing prompt for an image model
-  - A list of fixes to request
-  - Advice to keep true colors and details
-  - Tips to check the finished image
+  - An editing prompt for your image model
+  - A line that keeps colour, pattern and structure true
+  - A line for a clean white background with a soft shadow
+  - Extra lines to fix common problems in the result
+  - A checklist to compare the new image with the original
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - "Pick your edit: flat-lay retouch, wrinkle removal only, general clean-up or custom."
+  - Paste your photo or photos into your AI. Use one product only, at least 400 by 400 pixels, as jpg, png or webp.
+  - Tell your AI what looks wrong, then ask it to write the editing prompt using this skill.
+  - Run the prompt in your image model. The skill uses gpt-image-2 through the dLazy tool, which needs a dLazy account and costs credits. It needs an AI that can run commands.
+  - Compare the result with your original. Check that folds, hardware and colour match, and that no flaws were erased.
+  - If something is off, add the matching fix-up line and run it again.
+output_sample:
+  input:
+    - Your phone photo of the product (1 to 4 photos of the same item is best)
+    - What looks wrong, such as wrinkles, crooked shape or uneven light
+    - Background colour you want (optional)
+  prerequisites:
+    - An image editing model you can call, such as gpt-image-2 through the dLazy tool
+    - A dLazy account, since the model call is paid (the skill lists about 60 credits per image)
+    - An AI that can run commands, or you can copy the prompt into your image tool
+  output:
+    - name: Template choice
+      contains: "One of four edit types: flat-lay retouch, wrinkle removal only, general clean-up, or your own custom edit."
+    - name: Editing prompt
+      contains: A ready prompt that asks to press out creases, square the shape, even the light and clean the background.
+    - name: Keep-true line
+      contains: A sentence that locks style, pattern, hardware, structure and exact colour so the item does not change.
+    - name: Background line
+      contains: A line asking for a plain white background with a soft contact shadow.
+    - name: Fix-up lines
+      contains: Extra lines to add if the result flattens folds, smooths the surface, changes the style or erases flaws.
+    - name: Retouched image
+      contains: The edited photo your image model saves, ready to compare side by side with the original.

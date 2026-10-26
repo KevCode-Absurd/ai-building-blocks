@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs fixed git steps.
 new_slug: parallel-branch-manager
 name: Parallel branch manager
-summary: Start several tasks at once. Get a separate git worktree for each, with
-  its own ports and clean-up.
+summary: Set up a parallel branch manager for git. Each task gets its own worktree folder, free ports and clean-up, so branches stop clashing.
 job: build-software
 headline: Parallel branch manager
-subhead: A separate working copy of your code for each task, so several features
-  or fixes can run at once without stepping on each other. Each copy gets its
-  own folder, branch and ports.
+subhead: A separate working copy of your code for each task, so several features or fixes can run at once without stepping on each other. Each copy gets its own folder, branch and ports.
 explain: |
   A separate working copy of your code for each task, so several features or fixes can run at once without stepping on each other. Each copy gets its own folder, branch and ports.
 
@@ -18,6 +15,10 @@ when:
   - Several AI agents must work in the same project without clashing.
   - Two dev servers keep fighting for the same port.
   - Old branches pile up and you want safe cleanup.
+not_for:
+  - "You only want a quick look at a diff: stay on your current branch and use git diff."
+  - "You have no git repo yet: start one with git init first, then come back."
+  - "Your AI can't run git commands in a chat: ask a developer to run the steps, or run them yourself in a terminal."
 you_give:
   - A git repo
   - Branch names and task names
@@ -28,8 +29,31 @@ you_get:
   - Copied settings and installed dependencies
   - Safe cleanup of stale copies
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run git commands.
+  - Check that your AI can run git commands and Python scripts. This skill needs code running, so use a coding tool or a chat with a terminal.
+  - Download the skill folder and give it to your AI, or paste in the instructions.
+  - Tell your AI the branch name, a worktree name and the base branch. Ask it to install dependencies if you want that.
+  - Check the port list it gives you, then start your app on those ports.
+  - When a task is done, ask your AI to run the cleanup scan. Remove only worktrees that are merged and clean.
+output_sample:
+  input:
+    - Your git repo
+    - Branch names and a name for each worktree
+    - The base branch to start from, such as main
+    - Settings files to copy, such as .env files (optional)
+  prerequisites:
+    - An AI that can run git commands and Python scripts
+    - Python installed on your computer
+    - Git installed on your computer
+  output:
+    - name: Worktree folder
+      contains: A separate working copy of your code on its own branch, named like wt-auth.
+    - name: .worktree-ports.json
+      contains: The ports given to this worktree for the app, database and cache, saved so they stay the same.
+    - name: Copied settings files
+      contains: Your .env files copied from the main repo into the new worktree, with a warning for any that are missing.
+    - name: Installed dependencies
+      contains: Packages installed from your lock file, only if you ask for it.
+    - name: Cleanup report
+      contains: A list of worktrees that are old, have unsaved changes or are already merged.
+    - name: Safe removal
+      contains: Removal of worktrees that are merged and clean, or forced only when you say so.

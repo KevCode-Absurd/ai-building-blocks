@@ -2,20 +2,58 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: resume-job-application-builder
 name: Resume and job application builder
-summary: Share your real experience and a job description. Get a tailored
-  resume, cover letter and a check for unsupported claims.
+summary: Build a tailored resume and cover letter from your real work history and a job description. Checks every line for claims you can't back up.
 job: find-a-job
 headline: Resume and job application builder
-subhead: Start with your actual work, study or project history and the role you
-  want. Get tailored application drafts and a reusable profile template. File
-  rendering needs Python and the packages listed in the download; hiring results
-  are not guaranteed.
+subhead: "Share your real work, study or project history and the job you want. It builds a tailored resume, a cover letter if you ask, and a private profile you can reuse. It checks every line against your history and never adds an employer, title or number you did not give."
+explain: |
+  Most resume tools make claims you cannot defend in an interview. This resume and job application builder works from a master profile of your real roles, bullets and numbers, and builds each resume from that.
+
+  It writes a single-column resume that applicant tracking systems can read, with results-first bullets that use the job description's words where you qualify. It estimates keyword coverage and labels it an estimate, not an ATS score.
+
+  A truthfulness check confirms no employer, title, date or section was added or dropped. It can also write a cover letter and give LinkedIn advice. A PDF or Word file needs an AI that can run Python. Without it you get a text draft.
 when:
   - You are applying for a job or internship using your own experience.
+not_for:
+  - "You have no real work, study or project history yet: write down what you have done first with a friend or a career advisor, then come back."
+  - "You only want your LinkedIn page improved: this skill can do it, but you do not need a resume. Ask for LinkedIn mode only."
+  - "You want a made-up or inflated resume: this skill refuses to invent employers, dates, titles or numbers."
+you_give:
+  - "Your current resume, LinkedIn export or a plain list of your jobs, study and projects"
+  - "The job description for the role you want (optional for a general resume)"
+  - "Real numbers from your work, such as team size, volume or time saved (optional)"
+  - "The kind of role and your career stage, such as new grad or career changer"
+you_get:
+  - "A master profile that stores every role, bullet, metric and skill you have"
+  - "A tailored resume, single column and easy for tracking systems to read"
+  - "A PDF or Word file with text you can select, if your AI can run Python"
+  - "A labeled estimate of keyword coverage"
+  - "A truthfulness check against your source"
+  - "A cover letter or LinkedIn advice, when you ask"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python with the listed packages to render
-    files, or return a text draft when that is unavailable.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can run Python with the listed packages to render files, or return a text draft when that is unavailable.
+output_sample:
+  input:
+    - Your current resume, LinkedIn export or a plain list of your jobs, study and projects
+    - The job description for the role you want (optional for a general resume)
+    - Real numbers from your work, such as team size, volume or time saved (optional)
+    - The kind of role and your career stage, such as new grad or career changer
+  prerequisites:
+    - An AI that can run Python, only if you want a finished PDF or Word file. Without it you get a text draft.
+  output:
+    - name: Master Profile
+      contains: A private store of every role, bullet, metric and skill you have, used as the source for each resume.
+    - name: Tailored resume
+      contains: A single-column, ATS-safe resume with outcome-led bullets, using wording from the job description where you qualify.
+    - name: Rendered file
+      contains: A resume.json turned into a clean PDF or Word file with text you can select.
+    - name: Keyword coverage estimate
+      contains: A labeled estimate of how many job description keywords your resume covers, not a made-up ATS score.
+    - name: Truthfulness check
+      contains: A check that no employer, title, date or section was added or dropped from your source.
+    - name: Cover letter
+      contains: A tailored cover letter for the job, written when you ask for one.
+    - name: LinkedIn recommendations
+      contains: Advice for your headline, About, experience and skills, when you ask for LinkedIn mode.

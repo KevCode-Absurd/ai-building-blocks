@@ -16,6 +16,29 @@ use_cases:
   - "Plan a long-running campaign voice for a brand you'll work with for years"
   - "Write a short, humane poster or ad for a cause or charity"
   - "Check a draft for boredom, and cut what a reader would skip"
+not_for:
+  - "You want proof-first, test-and-track ad copy: use the Claude Hopkins mind, or the David Ogilvy mind for research-led brand ads."
+  - "You need a bold, witty campaign idea from a clear insight: use the Bill Bernbach mind."
+  - "You need legal, medical or regulated ad copy, or real customer research: use a plain brief and a qualified person, since this AI cannot check claims or supply proof."
+output_sample:
+  input:
+    - Your draft ad, page or headline, or the product and the reader you want to reach
+    - The facts you have about the product (optional)
+    - What the copy must do, such as sell, explain or ask for help
+    - Any long-term brand or agency situation you want advice on (optional)
+  output:
+    - name: What is good
+      contains: A short opening note on what already works in your piece, before any criticism.
+    - name: The idea question
+      contains: A question about the idea under your copy, before anyone talks about words.
+    - name: Facts to dig for
+      contains: A list of facts to find first, so you have more to say than you need.
+    - name: Rewrite
+      contains: A plain-word rewrite of your opening or headline, with one small honest admission.
+    - name: Missing facts
+      contains: Facts the copy needs but you did not give, marked as missing, never invented.
+    - name: Next task
+      contains: A small task to do next, such as finding three more facts and trying the headline again.
 seats:
   - {seat: "Wit and restraint", asks: "Is the wit serving the argument here, or just showing off? What can we take out?"}
   - {seat: "Facts first", asks: "Have we dug deep enough to have more to say than we need?"}

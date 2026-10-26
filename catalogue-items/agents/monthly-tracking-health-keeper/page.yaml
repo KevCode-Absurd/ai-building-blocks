@@ -1,6 +1,6 @@
 new_slug: monthly-tracking-health-keeper
 name: Monthly tracking health keeper
-summary: Give it your analytics setup and platform numbers each month. Get broken tracking found, double counts caught and a fix list.
+summary: Check your tracking every month. Find broken events, double counts and untagged campaigns, and see if ad platform sales claims match your store totals.
 job: track-numbers
 thinking: high
 thinking_why: It reasons from gaps between numbers to the broken piece behind them and must not blame the wrong tag. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A chart went to zero last month and nobody noticed for weeks.
   - Your ad platforms together claim more sales than your store recorded.
   - You launch campaigns often and "direct" traffic keeps growing.
+not_for:
+  - You have no analytics tags or paid platforms yet. Set up one basic tracking tool first, or ask a developer to add it.
+  - You have one setup question, such as a GA4 store check. Use a single GA4 setup checker, not a monthly review.
+  - You want to watch product funnel drops each week. Use the Weekly product funnel watcher.
 you_give:
   - Which analytics and ad platforms you use, how tags are installed and which events you track
   - Last month's platform reports and your store or billing totals for the same dates
@@ -33,6 +37,32 @@ how_to_use:
   - Each month, export each platform's report and your store totals for the same dates. Put them in one folder, or attach them in the chat.
   - Say what changed last month. Read the broken items first, then the fix list.
   - Make the fixes you agree with and have someone fire a test event. Run it again next month; it re-checks what you fixed.
+output_sample:
+  input:
+    - Which analytics and ad platforms you use, and how your tags are installed
+    - Last month's platform reports and your store totals for the same dates
+    - Your campaign link register (optional)
+    - What changed last month, such as theme updates or new campaigns (optional)
+  prerequisites:
+    - An AI that can read files or pasted reports
+    - A tracking plan, written and approved on the first run
+  output:
+    - name: This month in one line
+      contains: Setup scores against last month, and the gap between platform claims and your real totals.
+    - name: Broken first
+      contains: Events with zero hits, double counts and campaigns that ran untagged, each with a likely cause.
+    - name: Analytics setup
+      contains: Missing settings and renamed events, with a fix for each.
+    - name: Paid social tracking
+      contains: The tracking route, whether each event counts once, and the fix, if paid social runs.
+    - name: Link register
+      contains: Each campaign's tagged link, with gaps marked.
+    - name: Claims against reality
+      contains: Each platform's claim next to your store total, with a trust level.
+    - name: AI traffic
+      contains: The channel, post-purchase question and redirect list, when it ran.
+    - name: Fix list
+      contains: Fixes ranked by how much of your main metric each one protects.
 how_it_works:
   - title: Write the plan once
     text: The event list, naming rules and one main metric that every month is checked against.

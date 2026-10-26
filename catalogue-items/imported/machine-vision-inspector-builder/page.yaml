@@ -2,35 +2,117 @@ thinking: high
 thinking_why: Picking the right method for the problem takes care.
 new_slug: machine-vision-inspector-builder
 name: Machine vision inspector builder
-summary: Describe the inspection job. Get a system that finds defects, counts
-  parts or measures them.
+summary: Plan and code a camera inspection system that finds defects, counts parts or measures them in MATLAB, with a deploy path for your device.
 job: build-software
 headline: Machine vision inspector builder
-subhead: An inspection system that finds defects, counts parts or measures them
-  from camera images, matched to your problem. It runs in MATLAB with the Visual
-  Inspection Toolbox.
+subhead: Describe what you need to check and share sample photos of your parts. It picks rules, AI or both, writes the MATLAB code, and says how to run it on your device. It needs MATLAB with the Visual Inspection Toolbox, which are paid products.
 explain: |
-  An inspection system that finds defects, counts parts or measures them from camera images, matched to your problem. It runs in MATLAB with the Visual Inspection Toolbox.
+  This skill builds a machine vision inspection system: a program that looks at camera images and finds defects, counts parts or measures them. It is for MATLAB users who want a clear plan and working code, not a guess.
 
-  It first picks an approach: rule-based, AI-based or a mix. Rules suit measuring widths, gaps and angles in real units. AI suits defects, and it can learn from images of good parts only. Counting uses shape matching, or few-shot counting when parts vary. When you have few defect photos, it makes more by copy-paste augmentation. Last comes deployment as a standalone app, C code for edge devices, GPU code, ONNX export, or a Beckhoff PLC. Camera setup is out of scope.
+  First it picks the right kind of method. Rules suit measuring widths, gaps and angles in real units, and they need no training photos. AI suits scratches and dents that look different every time, and it can learn from photos of good parts only. Counting uses shape matching, or few-shot counting when parts vary. If you have few defect photos, it makes more by pasting defects onto clean images.
+
+  Last, it picks how to run the result: a standalone app, C code for small devices, GPU code, an ONNX file, or a Beckhoff PLC. Camera setup is out of scope. It does not run without MATLAB and the Visual Inspection Toolbox, so check you have both first.
 when:
-  - You need to catch scratches or dents on manufactured parts.
-  - You only have photos of good parts and no defect examples.
-  - You need to measure part dimensions from images in millimetres.
-  - You want to count identical parts on a belt.
+  - You need to catch scratches, dents or stains on manufactured parts.
+  - You only have photos of good parts and no photos of defects.
+  - You need to measure part widths, gaps or angles from images in millimetres.
+  - You want to count identical parts on a belt or tray.
+  - You must run the check on a small device, a GPU box or a PLC.
+not_for:
+  - You have no MATLAB licence or no Visual Inspection Toolbox. Both are paid, and the code needs them to run.
+  - You still need to connect the camera or read frames from it. That is the Image Acquisition Toolbox, not this skill.
+  - You want to send results to a PLC over OPC UA or MQTT. Use the Industrial Communication Toolbox for that part.
+  - Your images are medical scans or photo effects. This skill is for factory-style inspection only.
 you_give:
-  - The inspection task
-  - Sample images of parts
-  - Measurement units or tolerances (optional)
-  - The target device for running it
+  - What you need to check, in a few lines (defects, count or measure)
+  - 5 to 20 sample photos of your parts, good ones and any bad ones
+  - Units and tolerances, such as 10 mm plus or minus 0.2 (optional)
+  - Where it must run, such as a PC, a GPU, an embedded board or a PLC
+  - Your MATLAB release and installed toolboxes (optional)
 you_get:
-  - A recommended approach
-  - MATLAB code to build it
-  - Training data ideas
-  - Deployment steps for your target
+  - A short plan that says rules, AI or both, and why
+  - MATLAB code for each step of the check
+  - A list of training images you still need to collect
+  - Steps to run it on your chosen device
+  - A note on what can still go wrong
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Visual Inspection Toolbox.
+  - Make sure MATLAB and the Visual Inspection Toolbox are installed. Your AI can only write code in a chat. You must run it in MATLAB.
+  - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read files, give it the skill folder so it can load the reference files.
+  - Describe the job in plain words. Add your sample photos, the units you need and the device it must run on.
+  - Read the plan first. Check that the method fits your parts before you accept any code.
+  - Copy the code into MATLAB and run it on your own photos. Tell your AI what failed, and it will change the code.
+  - Collect the extra photos it asks for and run again, then follow the deploy steps for your device.
+how_it_works:
+  - title: Read the job
+    text: It reads what you need to check and what you have, such as good photos only, labelled defects or none.
+  - title: Pick the method
+    text: Rules for measuring and known shapes. AI for defects that vary. A mix when parts move.
+  - title: Fix the part position
+    text: If parts move, it finds each part by its edges and turns it to one pose before the AI looks at it.
+  - title: Write the code
+    text: It loads the matching reference file and writes MATLAB code for anomaly detection, YOLOX, counting or measuring.
+  - title: Fill gaps in training data
+    text: With few defect photos, it makes more by pasting defects onto clean images.
+  - title: Plan the deploy
+    text: It picks MATLAB Compiler, MATLAB Coder, GPU Coder with TensorRT, ONNX or TwinCAT for your device.
+output_shape: |
+  ## Approach
+  <rules, AI or mix, and why it fits your parts>
+
+  ## Pipeline
+  <fixture, inspect, decide steps in order>
+
+  ## MATLAB code
+  <code for each step>
+
+  ## Training data
+  <what to collect, how many images, what to label>
+
+  ## Deploy
+  <steps for your target device>
+
+  ## Open questions
+  <inputs it marked as missing>
+output_sample:
+  input:
+    - A short description of what to check, such as scratches, a part count or a gap width
+    - Sample photos of your parts, good ones and any with defects
+    - Units and tolerances (optional)
+    - The device it must run on
+  prerequisites:
+    - MATLAB with the Visual Inspection Toolbox, both paid
+    - An AI that can read the skill's reference files, or paste them in
+  output:
+    - name: Approach
+      contains: Rules, AI or a mix for your job, and the plain reason it fits.
+    - name: Pipeline
+      contains: The steps from locating the part to a pass or fail decision.
+    - name: MATLAB code
+      contains: Code for each step, using the Visual Inspection Toolbox functions that suit your job.
+    - name: Training data
+      contains: What photos to collect, and how to make more defect photos from few.
+    - name: Deploy
+      contains: How to run it as an app, on a small device, on a GPU or on a PLC.
+    - name: Open questions
+      contains: Any missing input it marked instead of guessing, such as tolerances or target device.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the reference files in the skill folder, where the code patterns live.
+    - name: MATLAB
+      why: The code needs MATLAB with the Visual Inspection Toolbox to run. Check the release the skill names.
+  inputs:
+    - Photos taken in steady light, with the part in view the same way each time
+    - A few photos of known good parts and known bad parts
+    - Your tolerances in millimetres or degrees
+terms:
+  - term: Anomaly detection
+    meaning: AI that learns what a good part looks like and flags anything different.
+  - term: YOLOX
+    meaning: An AI that finds and boxes defects in an image. It needs labelled examples.
+  - term: Fixturing
+    meaning: Finding where a part sits in the image so checks line up every time.
+  - term: ONNX
+    meaning: A file format that many chips and smart cameras can load.
+  - term: PLC
+    meaning: The industrial controller that runs a machine on a factory line.

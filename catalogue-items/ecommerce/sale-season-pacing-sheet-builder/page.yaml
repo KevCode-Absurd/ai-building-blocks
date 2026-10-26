@@ -1,6 +1,6 @@
 new_slug: sale-season-pacing-sheet-builder
 name: "Sale season pacing sheet builder"
-summary: "Give it last year's sale data and margin. Get a pacing sheet with scale, hold and cut rules."
+summary: "Build a sale season pacing sheet from last year's ad data. Get scale, hold and cut rules, base and stretch plans, and a Sept to Dec calendar."
 job: plan-strategy
 thinking: high
 thinking_why: "It builds rules from several linked numbers, and one wrong step in the maths spreads through the whole sheet."
@@ -17,6 +17,10 @@ when:
   - A big sale is two to four months away and you want rules written down before it starts.
   - Last year's sale looked weak early and strong late, and you want to know how to read that.
   - You have a media buyer and 100K or more a month in ad spend, and want pre-agreed rules for pushes and cuts.
+not_for:
+  - "Your store spends under 100K a month on ads: use day-level rules only, and skip the hourly pacing, or ask your media buyer for a simple plan."
+  - "You have not worked out break-even ROAS or your CAC limit yet: use the Sale break-even and CAC allowance modeler first, then come back."
+  - "You have no click-window exports from last year: this sheet cannot set the lag multiplier, so pull those from Meta Ads Manager first."
 
 you_give:
   - Last year's daily ad spend, revenue and orders, by hour if you have it
@@ -37,6 +41,33 @@ how_to_use:
   - Paste last year's daily spend and revenue, and the 1-day and 7-day click revenue for the 30 days before the sale.
   - Check the rules with your media buyer, then put them in a shared sheet before the sale starts.
   - After each sale day, add the new numbers and let the sheet say scale, hold or cut.
+output_sample:
+  input:
+    - Last year's daily ad spend, revenue and orders (by hour if you have it)
+    - 1-day click and 7-day or 30-day click revenue for the 30 days before last year's sale
+    - Your gross margin and discount depth
+    - Your break-even ROAS and CAC limit, from the sale break-even modeler
+    - Your budget ceiling and stretch target
+  prerequisites:
+    - Break-even ROAS and CAC limit from the Sale break-even and CAC allowance modeler (strongly advised)
+    - Ad exports from Meta Ads Manager, Google Ads or your store
+  output:
+    - name: LAG GAP
+      contains: The gap between 1-day and longer click revenue before the sale, and the ROAS multiplier to apply to early reads.
+    - name: RULES
+      contains: Break-even ROAS and the scale, hold and cut rules, read on a 3-day rolling average.
+    - name: SHEET COLUMNS
+      contains: The daily columns to fill in, from spend and revenue to marginal CAC, marginal ROAS and the action.
+    - name: HOUR MULTIPLIERS
+      contains: Spend share, revenue share and a multiplier for each hour band, if your spend is heavy enough.
+    - name: PLANS
+      contains: A base plan, a stretch plan and a pre-agreed push, with the budget treated as a ceiling.
+    - name: CALENDAR
+      contains: What to do from September to late December, from pre-spend to the cheap late December window.
+    - name: GOOGLE PREP
+      contains: Titles, assets, Merchant Center promotions and sale price lines to update before the sale.
+    - name: CHECKS MISSED and MISSING
+      contains: Any checks that failed and any inputs you did not give, so nothing is invented.
 
 how_it_works:
   - title: Measures the lag gap

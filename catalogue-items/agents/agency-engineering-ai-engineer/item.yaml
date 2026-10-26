@@ -1,0 +1,42 @@
+slug: agency-engineering-ai-engineer
+name: AI Engineer agent
+summary: Get a plan to add an AI feature to your product, from data check to launch, with bias tests, monitoring and a retraining trigger.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-ai-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-ai-engineer.md
+  licence: MIT
+  original_name: AI Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: f25a69aad25acd35dd1d62e33d5a814f4a26b075d90f968b4d778452e53924d8
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - AI Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: AI Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-ai-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

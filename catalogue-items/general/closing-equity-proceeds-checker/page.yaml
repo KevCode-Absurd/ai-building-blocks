@@ -1,53 +1,124 @@
 new_slug: closing-equity-proceeds-checker
 name: Closing equity proceeds checker
 headline: Closing equity proceeds checker
-summary: Reconcile enterprise value to seller equity proceeds under the signed closing definitions.
+summary: "Work out what sellers receive at closing: start from the deal price, add included cash, then take off debt, debt-like items and seller costs once."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A seller proceeds bridge with classification and double-count exceptions. Share signed price bridge, enterprise value, debt payoff, distinct debt-like items, included cash and unpaid seller expenses at one closing cutoff.
+subhead: Give it the deal price, the cash and debt at the closing date, and the seller costs not yet paid. It builds the bridge from deal price to what the sellers get, takes off each item once and flags any item counted twice. Escrow, rollover and price true-ups stay separate.
 explain: |-
-  A seller proceeds bridge with classification and double-count exceptions.
+  In a company sale, the headline deal price is not what the sellers get. The deal price is for the whole business, and it is called enterprise value. To reach the cash for the sellers, you add cash left in the company. Then you take off debt, other debt-like items and unpaid seller costs. This closing equity proceeds checker walks through that bridge, one line at a time.
 
-  Acquisition closing. Illustrative figures only. 100+10-30-5-3=72. Debt40 reduces proceeds to62.
+  The risk is counting an item twice. A debt-like item can also sit inside working capital or inside seller costs. The skill gives each item one bucket, takes it off once, and lists any item that shows up in two places.
+
+  It ties the result to the draft closing statement. It keeps escrow, rollover and working capital settlements apart, as their own steps. Practice numbers: a deal price of 100, cash of 10, debt of 30, other debt-like items of 5 and seller costs of 3 leave 72 for the sellers. If debt is 40 instead of 30, they get 62.
 when:
-  - You need a seller proceeds bridge with classification and double-count exceptions.
-  - You work on acquisition closing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A draft closing statement arrives and you want to check its seller proceeds line.
+  - The payoff letter changes the debt figure, and you need the new proceeds.
+  - Someone says debt was taken off twice, and you want to see where.
+  - You sold your company and want to follow each step from deal price to your cash.
+not_for:
+  - You need the later price change for working capital. Use the Working capital true-up checker.
+  - You want to know how much escrow can be released. Use the Escrow release checker.
+  - You want to see how adviser fee tiers change the proceeds. Use the Adviser fee tier checker, or run the Check adviser fees in seller proceeds workflow.
+  - You want to value the business. The deal price is an input here. This skill does not work it out.
 you_give:
-  - Signed price bridge, enterprise value, debt payoff, distinct debt-like items, included cash and unpaid seller expenses at one closing cutoff.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The deal price (enterprise value), the closing cutoff date and the currency and units, from the signed agreement
+  - Cash that counts under the agreement at that date (from the closing statement or bank balances)
+  - The debt payoff amount at that date (from the payoff letter)
+  - Other items the agreement treats like debt (from its definitions)
+  - Seller costs not yet paid, such as adviser fees (from invoices)
+  - The draft closing statement (optional)
 you_get:
-  - A seller proceeds bridge with classification and double-count exceptions.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - What the sellers receive at closing
+  - A bridge from deal price to that figure, each line with its source
+  - Each item in one bucket, with any item counted twice flagged
+  - A tie to the draft closing statement, with each difference explained
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same bridge, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the price terms, the closing date, the cash, the payoff amount, the debt-like items and the unpaid seller costs. Attach the draft closing statement if you have it.
+  - "Ask: bridge the deal price to seller proceeds at the closing cutoff."
+  - Check the bridge. Do cash and debt use the same date and units? Does any item appear on two lines?
+  - Compare its proceeds figure with the draft closing statement. Ask why for each difference.
+  - Read MISSING and CHECKS MISSED before you rely on the figure. Escrow, rollover and price true-ups are not in it.
 how_it_works:
-  - title: 1. Freeze the closing cutoff and locate definitions of cash, debt, working capital, debt-like items and seller expenses
-    text: Freeze the closing cutoff and locate definitions of cash, debt, working capital, debt-like items and seller expenses.
-  - title: 2. Add included cash to enterprise value; deduct debt, distinct debt-like items and seller expenses exactly once
-    text: Add included cash to enterprise value; deduct debt, distinct debt-like items and seller expenses exactly once.
-  - title: 3. Tie to the draft closing statement; identify escrow, rollover and working-capital settlements as separate allocations or adjustments
-    text: Tie to the draft closing statement; identify escrow, rollover and working-capital settlements as separate allocations or adjustments.
+  - title: Fixes the cutoff
+    text: Sets one closing date. Finds the agreement's definitions of cash, debt, working capital, debt-like items and seller costs.
+  - title: Builds the bridge
+    text: Adds included cash to the deal price. Takes off debt, debt-like items and seller costs, each once.
+  - title: Hunts for double counts
+    text: Checks that no debt-like item is also taken off through working capital or seller costs.
+  - title: Ties to the statement
+    text: Compares the result with the draft closing statement and explains each difference.
+  - title: Keeps other settlements apart
+    text: Shows escrow, rollover and working capital settlements as their own steps, not inside the bridge.
+  - title: Marks the gaps
+    text: Writes MISSING for any figure it was not given. It never fills a gap with zero.
 output_shape: |-
-  A seller proceeds bridge with classification and double-count exceptions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Seller proceeds <amount> = deal price <amount> + cash <amount> - deductions <amount>
+
+  BRIDGE
+  Deal price <amount> | source
+  + Included cash <amount> | source
+  - Debt payoff <amount> | source
+  - Debt-like items <amount> | source
+  - Seller costs <amount> | source
+  = Seller proceeds <amount>
+
+  CLASSIFICATION AND DOUBLE COUNTS
+  <each item, its bucket and source; any item found in two places>
+
+  TIE TO DRAFT CLOSING STATEMENT
+  <each line, the difference and the reason, or "no statement given">
+
+  SEPARATE FROM THIS BRIDGE
+  <escrow, rollover, working capital settlements: named, not included>
+
+  SOURCES AND ASSUMPTIONS
+  <closing cutoff, currency and units, source and date for each input, workbook check if any>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The deal price and the closing cutoff date
+    - Cash and the debt payoff amount at that date
+    - Other items the agreement treats like debt
+    - Seller costs not yet paid
+    - The draft closing statement (optional)
+  prerequisites:
+    - The signed agreement pages that define cash, debt and seller costs
+    - The payoff letter from the lender
+  output:
+    - name: RESULT
+      contains: The amount the sellers receive at closing, with the sum that gives it.
+    - name: BRIDGE
+      contains: Deal price, plus cash, minus debt, debt-like items and seller costs, each line with its source.
+    - name: CLASSIFICATION AND DOUBLE COUNTS
+      contains: Each item in one bucket, and a flag for any item taken off in two places.
+    - name: TIE TO DRAFT CLOSING STATEMENT
+      contains: Line by line comparison with the draft statement, and the reason for each difference.
+    - name: SEPARATE FROM THIS BRIDGE
+      contains: Escrow, rollover and working capital settlements, named but kept out of the figure.
+    - name: SOURCES AND ASSUMPTIONS
+      contains: The cutoff date, currency, units and the source and date of every input.
+    - name: MISSING
+      contains: Each figure it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: A debt-like item cannot also be deducted through working capital or expenses.
+  - what: Different cutoff date
+    how: Change the date, then update the cash and the payoff amount to match it. Both must use the same date.
+  - what: A disputed debt-like item
+    how: Tell it which bucket your agreement uses. It takes the item off once, in that bucket.
+  - what: Another currency
+    how: State the currency and units once. Every figure must match them.
 judge:
   - A debt-like item cannot also be deducted through working capital or expenses.
   - Debt payoff and cash balances share the closing cutoff and currency scale.
@@ -62,15 +133,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can build the bridge in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed agreement pages that define cash, debt, debt-like items and seller costs
+    - The payoff letter and the draft closing statement
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Enterprise value
+    meaning: The deal price for the whole business, before cash and debt are sorted out.
+  - term: Seller proceeds
+    meaning: The cash the sellers receive for their shares at closing.
+  - term: Debt-like item
+    meaning: A bill the agreement treats like debt, so it comes off the price.
+  - term: Closing cutoff
+    meaning: The date at which cash, debt and costs are counted.
+  - term: Payoff letter
+    meaning: A lender's letter that states the amount needed to clear a loan on a set date.
+  - term: Escrow
+    meaning: Money held back by a third party to cover claims after closing.
+  - term: Rollover
+    meaning: Sellers keep part of their stake instead of taking all of it in cash.

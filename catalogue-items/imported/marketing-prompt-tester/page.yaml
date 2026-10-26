@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It runs set tests and compares the results.
 new_slug: marketing-prompt-tester
 name: Marketing prompt tester
-summary: Give it your prompts and test cases. Get scored comparisons of each
-  version and a saved version history.
+summary: Test your marketing prompts on the same cases and see which version scores best. Get a winner, a version history and a change log.
 job: set-up-ai
 headline: Marketing prompt tester
-subhead: Give it two or more versions of a prompt, a set of test cases and any
-  words the answer must never contain. It runs every prompt on every case and
-  scores the results. You get the scores, a named winner with evidence, a saved
-  version history and a change log.
+subhead: Give it two or more versions of a prompt, a set of test cases and any words the answer must never contain. It runs every prompt on every case and scores the results. You get the scores, a named winner with evidence, a saved version history and a change log.
 explain: |
   Stop picking the prompt that looked best once. Give it two or more versions of a prompt and a set of test cases, and it scores each version, then tells you which wins and why.
 
@@ -19,19 +15,44 @@ when:
   - Your team shares prompts and nobody knows which version is current.
   - A prompt works on easy cases but fails on odd ones.
   - You are switching to a different AI model and need to check nothing broke.
+not_for:
+  - "You have one draft or one test case: read the result yourself, or ask a teammate to review it."
+  - "You cannot run Python scripts or save files: ask your AI to compare the prompts in a chat, and check the results by eye."
+  - "You want new marketing copy, not a test of your prompts: use your AI with the prompt that already scores best."
 you_give:
-  - Two or more prompt versions
-  - Test cases with expected results
-  - Words the answer must not contain (optional)
-  - A way to run Python scripts
+  - Two or more versions of your prompt
+  - Test cases, each with a sample input and the words the answer should include
+  - Words the answer must never contain (optional)
+  - A command that sends a prompt to your AI and returns the answer
 you_get:
   - Scores for each prompt on each case
   - A named winner with evidence
   - A saved version history
   - A change log between versions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Save each prompt version as its own text file, such as a.txt and b.txt.
+  - Write your test cases in one JSON file. Give each case an input, expected_contains words and forbidden_contains words.
+  - Set up a command that sends a prompt and an input to your AI model and prints the answer. This may need an API key and may cost money per run.
+  - Open an AI that can run code and save files. Paste this skill and your files, and ask it to run the A/B test.
+  - Read the report. Check that the winner has zero forbidden words, then save it as a new version with your name and a reason.
+  - After any later edit, run the same test cases again and compare the scores yourself before you switch prompts.
+output_sample:
+  input:
+    - Two or more versions of a prompt, saved as text files
+    - A test case file with the input, words the answer must include, and words it must not include
+    - A command that sends a prompt to your AI model and returns the answer
+    - Your name and a short reason for each change (optional)
+  prerequisites:
+    - An AI that can run Python scripts and save files
+    - A command-line tool or script that calls your AI model, which may need an API key or paid usage
+  output:
+    - name: Prompt A/B report
+      contains: Scores for each prompt on each test case, with a total for each version.
+    - name: Winner with evidence
+      contains: The higher-scoring prompt, with the checks that put it ahead, including any forbidden words that showed up.
+    - name: Version history
+      contains: Each prompt saved as a numbered version with its author and the reason for the change.
+    - name: Diff between versions
+      contains: A line-by-line view of what changed between two versions of a prompt.
+    - name: Change log
+      contains: A list of every saved version for one prompt, in order, with author and note.

@@ -28,11 +28,11 @@ how_to_use:
   - Review the result before approving external actions.
 how_it_works:
   - title: AI app evaluation planner
-    text: Share your AI app and goal. Get test cases and a way to compare changes with real results.
+    text: Share your AI app and goal. Get test cases and a way to compare changes with real results. Hands step 2 the success criteria and cases.
   - title: Agent answer feedback designer
-    text: Share an agent task. Get checks and feedback loops to improve the quality of its answers.
+    text: Share an agent task. Uses the success criteria from step 1 as the standard for a good answer. Get checks and feedback loops to improve the quality of its answers.
   - title: AI workflow quality investigator
-    text: Share a workflow that disappoints. Get its weak points ranked, with causes and practical fixes.
+    text: Reads your own workflow files and uses the test cases and checks from steps 1 and 2 to show where it disappoints. Get its weak points ranked, with causes and practical fixes.
 output_shape: |-
   Evaluation criteria and cases
   Feedback loop design
@@ -55,3 +55,25 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - You want to compare an old prompt with a new one on the same test cases. Use the Prompt change tester.
+  - Your app is not Python code, or your AI cannot run code. Use the AI agent tester for a test set and a ship or hold memo.
+  - You want one agent to check and fix its own answers. Use the Agent answer feedback designer.
+output_sample:
+  input:
+    - Your AI app's code, or a description of the job it does
+    - The change you want to make, and what a good answer looks like
+    - One agent task that gives weak answers (optional)
+    - A workflow that disappoints you (optional)
+  prerequisites:
+    - A Python 3.10 or newer app that calls an AI model
+    - An AI tool that can read your code and run commands, because the evaluation step runs the app
+  output:
+    - name: Evaluation criteria and cases
+      contains: Test cases, scoring rules and a repeatable pass or fail run, from the AI app evaluation planner.
+    - name: Feedback loop design
+      contains: A rewritten task prompt, a rubric, critique and refine prompts and stop rules, from the Agent answer feedback designer.
+    - name: Quality findings
+      contains: Five scores out of 5, the worst problems ranked, and a fix for each, from the AI workflow quality investigator.
+    - name: Next experiment
+      contains: The one change to try next, with source coverage, unresolved findings and missing facts.

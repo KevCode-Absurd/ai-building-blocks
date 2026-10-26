@@ -1,6 +1,6 @@
 new_slug: pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days
 name: Pre-sell to three buyers, then launch in thirty days
-summary: Give it your idea. Get a three-buyer test, a paid ask, a launch plan and a trial log.
+summary: Test your idea with three paying buyers before you build. Get a paid ask script, a thirty-day launch plan and a trial log of every attempt.
 job: test-an-idea
 thinking: high
 thinking_why: It must design an honest test and read a no as a no. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have an idea and have been thinking about it for months.
   - Friends say it is great and none of them has paid.
   - You want to ship something this month instead of planning something this year.
+not_for:
+  - "You can't deliver by the date you promise buyers, or the product is in a regulated category: run the Customer purchase interview script writer instead, since it tests the idea without taking any money."
+  - "You don't yet know who your buyers are: use the Best customer finder first, then come back with ten names."
+  - "You only want to know what buyers worry about: use the Buyer problem list builder."
 you_give:
   - The idea, in a few lines
   - Who it is for and how you can reach ten of them this week
@@ -30,6 +34,26 @@ how_to_use:
   - Paste the idea and who it is for. It plans the three-buyer test and the paid ask.
   - Run the ask over two days. Record every answer in the trial log.
   - If three pay, follow the thirty-day plan. If not, read the log and decide what to change.
+output_sample:
+  input:
+    - Your idea, in a few lines
+    - Who it is for and how you can reach ten of them this week
+    - What you could deliver in thirty days
+    - What you have tried before (optional)
+  prerequisites:
+    - An AI that can work from files, such as Claude with the handoff pack
+    - A payment link you can share with buyers
+  output:
+    - name: "Step 1: Three-buyer test"
+      contains: Who to ask first, in what order, the one-line pitch, and what counts as a real yes.
+    - name: "Step 2: Paid ask"
+      contains: The two-day message, price, how to take the money, what you promise and when, and what to say to a no.
+    - name: "Step 3: Thirty-day launch or the change"
+      contains: If three paid, the smallest version that works with a ship date. If not, what to change and whether to retry.
+    - name: "Step 4: Trial log"
+      contains: "One entry per attempt: what you expected, what happened and what it taught."
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Plan the three-buyer test
     text: Plans who to ask, in what order, and what counts as a real yes, in Noah Kagan's manner.

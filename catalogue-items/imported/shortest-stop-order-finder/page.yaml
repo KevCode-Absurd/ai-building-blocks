@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: One route, one clear answer, easy to check.
 new_slug: shortest-stop-order-finder
 name: Shortest stop order finder
-summary: Give it a list of stops. Get the shortest order to visit them all and
-  return, with the total distance.
+summary: Find the shortest order to visit your delivery or sales stops and return to the start. Get the route, total distance and how close it is to best.
 job: plan-supply-chain
 headline: Shortest stop order finder
-subhead: The shortest order to visit a list of stops and return to the start,
-  with the total distance. It cuts drive time and fuel on delivery rounds, site
-  visits or sales calls.
+subhead: The shortest order to visit a list of stops and return to the start, with the total distance. It cuts drive time and fuel on delivery rounds, site visits or sales calls.
 explain: |
   The shortest order to visit a list of stops and return to the start, with the total distance. It cuts drive time and fuel on delivery rounds, site visits or sales calls.
 
@@ -18,6 +15,10 @@ when:
   - You plan a sales rep's visits for the week.
   - You want to compare your current route with a shorter one.
   - You have a table of distances and want the best loop through it.
+not_for:
+  - "Your stops have time windows or vehicles with load limits: use a vehicle routing planner, as this tool plans one loop with no limits."
+  - "You have fewer than 4 stops: sort them by eye or in a maps app, as that is faster."
+  - "You need live traffic or real road times: use a maps or routing app, as this tool only works from the distances you give it."
 you_give:
   - The list of stops
   - Coordinates or a distance table
@@ -29,8 +30,27 @@ you_get:
   - How close it is to the best possible
   - The method used and code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Pick one that can run Python code, as it gives better results.
+  - Paste your stops as a table with coordinates, or paste a table of distances between stops.
+  - "Say where the route starts and ends. Say what to minimise: distance, time or cost."
+  - Add this skill's text to the chat, then ask for the stop order, the total and the gap from the best possible.
+  - Check the order on a map. Make sure no stop is missing and the loop ends at your start point.
+output_sample:
+  input:
+    - Your list of stops, with coordinates or a table of distances between them
+    - Your start point
+    - "What to minimise: distance, time or cost"
+    - Any fixed rules, such as a stop that must come first (optional)
+  prerequisites:
+    - An AI that can run Python code, for the best results
+  output:
+    - name: Problem summary
+      contains: Number of stops, how distance is measured, the method used and how long it took.
+    - name: Solution quality table
+      contains: Total distance or cost, solution status and the gap from the best possible route.
+    - name: Optimal tour
+      contains: The stops in visiting order, starting and ending at your start point.
+    - name: Statistics
+      contains: Average leg length, the longest leg and the shortest leg.
+    - name: Code
+      contains: The Python code used, so you can run it again.

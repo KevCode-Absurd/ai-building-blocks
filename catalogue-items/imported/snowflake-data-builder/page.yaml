@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies platform rules to your task.
 new_slug: snowflake-data-builder
 name: Snowflake data builder
-summary: Describe your data job. Get Snowflake SQL, pipelines and tuning that
-  follow good practice.
+summary: Describe your Snowflake data job and get SQL, pipeline code and tuning tips that follow Snowflake's own rules, ready to test in a dev schema.
 job: build-software
 headline: Snowflake data builder
-subhead: Snowflake SQL and data pipelines that follow the platform's own rules,
-  so they run the first time. You describe the data job, and the skill writes
-  the code and explains the choices.
+subhead: Snowflake SQL and data pipelines that follow the platform's own rules, so they run the first time. You describe the data job, and the skill writes the code and explains the choices.
 explain: |
   Snowflake SQL and data pipelines that follow the platform's own rules, so they run the first time. You describe the data job, and the skill writes the code and explains the choices.
 
@@ -18,6 +15,10 @@ when:
   - A stored procedure fails with an invalid identifier error.
   - You want to call Snowflake's AI functions on a column of text.
   - Your query is slow and you want tuning ideas.
+not_for:
+  - "You want a BI dashboard or report: use your BI tool, such as Tableau or Power BI, not this skill."
+  - "Your data lives in a warehouse that is not Snowflake: use that platform's own docs or a tool built for it."
+  - "You need the code checked against your live account: ask a Snowflake admin or an engineer to review it first."
 you_give:
   - A description of the data job
   - Table and column names
@@ -29,8 +30,31 @@ you_get:
   - Cortex AI or Snowpark code when needed
   - Performance and security tips
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Collect your table definitions and a few sample rows. Write down how fresh the data must be.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then describe the data job in plain words.
+  - Paste your table and column details. Say if you want SQL, Snowpark Python or dbt.
+  - Read the code and the pipeline choice. Ask your AI to explain anything you do not follow.
+  - Run the code in a dev schema in your own Snowflake account first. Your AI cannot run it for you in a chat.
+  - Check results and costs before you move the code to production.
+output_sample:
+  input:
+    - A plain description of the data job
+    - Table and column names, or the table definitions
+    - A few sample rows (optional)
+    - How fresh the data must be, such as every 5 minutes (optional)
+  prerequisites:
+    - A Snowflake account to run the code
+    - A dev schema to test in before production
+  output:
+    - name: SQL or Python code
+      contains: Snowflake SQL, Snowpark Python or dbt code that follows the skill's style and naming rules.
+    - name: Pipeline choice
+      contains: Whether to use Dynamic Tables, Streams and Tasks, or Snowpipe for your job.
+    - name: Cortex AI calls
+      contains: SQL that uses the current AI functions, such as classify, extract or filter, when your job needs them.
+    - name: Performance tips
+      contains: Advice on warehouse size, cluster keys and search optimization for slow queries.
+    - name: Security tips
+      contains: Access roles, masking policies and network rules that fit the job.
+    - name: Common errors check
+      contains: Fixes for known problems, like a missing colon in a stored procedure or a task you forgot to resume.

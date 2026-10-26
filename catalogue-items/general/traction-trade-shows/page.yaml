@@ -1,30 +1,26 @@
 new_slug: traction-trade-shows
 name: Trade show experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a trade show test for your product. Paste your link. Get a small pilot with a cost cap, measures and a clear continue or stop rule.
 job: sell-and-negotiate
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Trade show experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused trade shows plan for your product. It reads the buyer and offer,
-  checks why this channel might work and writes a small test. The default is
-  SaaS; you can ask for general-business mode.
+  A focused trade shows plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Attend or research a smaller relevant show and test pre-booked meetings before
-  committing to a major booth.
+  Attend or research a smaller relevant show and test pre-booked meetings before committing to a major booth.
 
 
-  Badge scans are not qualified opportunities. Published attendance claims
-  require source dates and do not prove buyer concentration.
+  Badge scans are not qualified opportunities. Published attendance claims require source dates and do not prove buyer concentration.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare all 19 growth channels: use the Traction workflow."
+  - "Your buyers do not go to trade shows or industry events: pick another channel and test that one instead."
+  - "You want to book a big booth today: this plan tests a small step first, so ask a trade show organizer for a quote."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -38,16 +34,42 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your product link or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and time limits (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can browse the web helps. Without it, paste your product page text.
+  output:
+    - name: Recommendation
+      contains: Whether to test now, later, or skip, with the reason.
+    - name: Evidence
+      contains: Each fact with its source link, access date and what it means for you.
+    - name: Buyer and useful action
+      contains: Who you want to reach and the first useful thing they do with your product.
+    - name: Channel mechanism
+      contains: How a buyer met at a show gets to value.
+    - name: Pilot
+      contains: The test idea, audience, offer, deliverable and owner.
+    - name: Limits
+      contains: Cash cap, hours and date, marked as proposed or approved.
+    - name: Measurement
+      contains: What you count, which group, and how you credit wins.
+    - name: Decision
+      contains: The rule for when to continue, revise or stop.
+    - name: Risks and next action
+      contains: What could go wrong and the one next step.
+    - name: MISSING
+      contains: The facts the plan still needs from you.
 how_it_works:
   - title: Check 1
-    text: "Research the show's actual audience, prior attendee evidence and buyer
-      roles. Choose one outcome: qualified customers, partners or press."
+    text: "Research the show's actual audience, prior attendee evidence and buyer roles. Choose one outcome: qualified customers, partners or press."
   - title: Check 2
-    text: Compare attending, a small sponsorship and exhibiting. Include travel,
-      staff time, booth materials, demos and follow-up cost.
+    text: Compare attending, a small sponsorship and exhibiting. Include travel, staff time, booth materials, demos and follow-up cost.
   - title: Check 3
-    text: Draft pre-booked meeting outreach, a short demonstration, lead
-      qualification questions and a dated follow-up plan.
+    text: Draft pre-booked meeting outreach, a short demonstration, lead qualification questions and a dated follow-up plan.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -61,21 +83,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - A booth collects many scans but no agreed next steps. Report contact volume
-    and missing qualification, not pipeline value.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - A booth collects many scans but no agreed next steps. Report contact volume and missing qualification, not pipeline value.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

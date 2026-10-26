@@ -1,51 +1,118 @@
 new_slug: operating-cash-financing-review-assistant
 name: Operating cash financing review assistant
 headline: Operating cash financing review assistant
-summary: Review factoring and supplier-finance evidence before interpreting changes in cash generation and leverage.
+summary: Separate factoring and supplier finance from operating cash flow, so cash generation and debt are read fairly. Redone when new filings arrive.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A cash/financing evidence exception table and linked analytical reconciliation workbook. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-explain: |-
-  A cash/financing evidence exception table and linked analytical reconciliation workbook.
+subhead: Give it the cash flow statement, the notes on invoice sales and supplier finance, and the factor's cash records. It compares them with your last accepted model. You get a table of exceptions and a workbook that shows reported and adjusted operating cash and debt side by side.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  Selling invoices to a factor, or paying suppliers through a bank programme, can raise operating cash flow and keep debt off the page. A company can seem to make more cash from its customers than it does. This review asks what operating cash and debt would look like once the timing and the labels are set aside.
+
+  The agent runs three checks in order. First it swaps the cash a factor advanced for the customer payments the factor later collected, so cash shows when customers paid. Then it moves supplier-finance balances into debt only where the evidence supports it. Last it separates other non-cash changes in working capital, without adjusting the same effect twice. Reported figures stay in view beside the adjusted ones. It makes no ruling on how the accounts should be kept.
+
+  It keeps a record of the last accepted model and runs again when new filings or notes arrive. Differences above your materiality threshold go in the exception table. If a gap between profit and cash may come from current taxes, it ties the tax payable movement to cash tax paid as a separate check. If factor payments cannot be matched, or supplier terms are missing, the affected adjustment stops and is marked MISSING.
+
 when:
-  - You need a cash/financing evidence exception table and linked analytical reconciliation workbook.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A company files a new report with notes on invoice sales or supplier finance, and you want to read its cash flow again.
+  - Operating cash jumped while profit did not, and you suspect timing, not trading.
+  - A lender or analyst asks for debt that includes supplier finance.
+  - Your own business sells invoices to a factor, and you need a clean view of cash from customers.
+
+not_for:
+  - You want to decide how the company should record factoring or supplier finance. This tests analysis only and gives no accounting ruling. Ask your auditor.
+  - You have no factor statements and no supplier terms. The affected adjustments stop and show MISSING, so the result is thin. Collect those records first.
+  - You want to test a loan covenant on net debt. This review fixes the debt figure only. Take its result to your covenant test.
+  - You want to check buybacks or dividends against cash flow. Use the Issuer capital distribution review assistant.
+
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The cash flow statement, balance sheet, debt and operating cash flow for each period (from the company's filing)
+  - The terms of the invoice sale or supplier finance programme, including who bears the loss on unpaid invoices (from the filing notes or the agreement)
+  - The factor's cash records, showing advances paid and customer payments it received (from the factor's statements)
+  - Supplier-finance balances with the evidence for how they are classified (from the notes)
+  - Your materiality threshold, the size of difference worth raising, in currency (you set it)
+  - The last accepted model and review log (optional, needed to show what changed)
+  - Current tax expense, tax payable balances and cash tax paid (optional, only if a tax gap is open)
+
 you_get:
-  - A cash/financing evidence exception table and linked analytical reconciliation workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - An exception table listing each place the cash and financing evidence differs from the last accepted model
+  - A reconciliation workbook with reported and adjusted operating cash and debt side by side
+  - The factor timing bridge, the supplier-finance debt bridge and the non-cash working-capital bridge
+  - A tax cash bridge, only when current taxes may explain a gap
+  - A record for the next review, MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Separate financing effects from operating cash workflow and the Current tax cash-payment bridge skill. An AI that reads files works best. A chat-only AI can still reason through the numbers, but it cannot save the workbook.
+  - Say if this is the first run. If not, paste last time's record and review log. Then attach the new filing, the notes, the factor statements and your materiality threshold.
+  - State the period and currency once. Check that every table uses them.
+  - Check that reported operating cash flow and fees still show in the result, and that no financing effect appears in both the factor bridge and the working-capital bridge.
+  - Fix every MISSING line. Run it again when new filings or notes arrive. It can suggest a quarterly review but sets none up.
+
 how_it_works:
-  - title: Separate financing effects from operating cash
-    text: Run the governing workflow when When the user supplies new cash-flow, receivable-transfer or supplier-finance records, compare cash timing and financing classifications with the accepted model.
-  - title: Current tax cash-payment bridge
-    text: If a cash-conversion residual is attributable to current taxes, reconcile tax payable movements to cash payments separately. Unmatched factor proceeds/collections or missing supplier terms stop the affected analytical recast.
-output_shape: |-
-  A cash/financing evidence exception table and linked analytical reconciliation workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last accepted model
+    text: Reads the saved record if it belongs to this company and period, or sets a first baseline. It compares reported operating cash flow and debt, factor cash records, supplier-finance balances, classifications and tax gaps. If nothing changed and no review is due, it says so and stops.
+  - title: Matches factor cash to customer payments
+    text: Runs the Factoring cash-flow timing bridge step. It takes out the factor advances counted in operating cash flow and puts in the customer payments the factor received for the same pool. Real fees stay, and reported operating cash flow stays visible.
+  - title: Maps supplier finance once
+    text: Runs the supplier finance debt bridge step. In a debt-like view, it adds only the identified balance to debt and takes it out of trade payables. The same cash is netted once, and the reported labels stay beside the adjusted ones.
+  - title: Separates other non-cash changes
+    text: Runs the Noncash working-capital bridge step. It starts from reported operating balances and removes financing and non-cash movements, so the final cash story does not adjust factoring or supplier finance a second time.
+  - title: Checks taxes only if a gap remains
+    text: If a leftover gap between cash and profit comes from current taxes, it runs the Current tax cash-payment bridge. It ties opening tax payable, tax expense and non-cash movements to cash paid, and explains the gap rather than plugging it.
+  - title: Checks and saves
+    text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, which steps ran or were skipped, and the new record. It keeps the old record.
+
+output_shape: |
+  REVIEW DATE <date>, <company>, <currency>, <scale>   LAST REVIEW <date or first run>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  EXCEPTION TABLE  <item, reported, analytical, difference, above or below threshold>
+  FACTORING   reported operating cash <n> - advances <n> + customer payments <n>
+              = analytical operating cash <n>; fees <n>
+  SUPPLIER FINANCE  reported debt <n> + identified balance <n> = analytical debt <n>;
+                    trade payables <n> - <n> = <n>; total liabilities unchanged
+  WORKING CAPITAL   reported change <n> - non-cash movements <n> = operating investment <n>
+  TAX CASH     opening payable <n> + expense <n> +/- non-cash <n> - closing <n>
+               = cash paid <n>; reported <n>; unexplained <n> (only if run)
+  RECORD FOR NEXT REVIEW  reported operating cash and debt, matched factor records, supplier
+                          balances, original and analytical classes, exclusions, tax residuals
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - The company's filing with its cash flow statement, balance sheet and notes
+    - The factor's statements of advances paid and customer payments received
+    - The supplier-finance terms and balances
+    - Your materiality threshold
+    - The last accepted model and review log (optional)
+  prerequisites:
+    - An AI that can read files and build a spreadsheet
+    - The Separate financing effects from operating cash workflow and the Current tax cash-payment bridge skill, added with the agent
+  output:
+    - name: Cash and financing exception table
+      contains: Each item where the new evidence differs from the last accepted model, with reported and adjusted figures, and whether it clears your threshold.
+    - name: Step 1 factoring cash timing bridge
+      contains: Reported operating cash flow set beside a view where factor advances give way to customer payments, with fees kept and differences explained.
+    - name: Step 2 supplier finance debt bridge
+      contains: Reported debt and trade payables beside the debt-like view, with the identified balance moved once and total liabilities unchanged.
+    - name: Step 3 non-cash working capital bridge
+      contains: Working capital investment after removing financing and non-cash movements, and the closing cash story with no effect adjusted twice.
+    - name: Current tax cash bridge
+      contains: Tax payable movements tied to cash tax paid, with an explained residual. It appears only when taxes may explain a gap.
+    - name: Record and MISSING lines
+      contains: The record for the next review, every gap with the line it stops, and CHECKS MISSED.
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Reported and analytical views reconcile, matched cash ledgers support timing changes, liabilities are conserved and no financing effect is adjusted twice or converted into an accounting ruling.
+  - what: A different materiality threshold
+    how: Change the threshold and run it again. Items move into or out of the exception table, and the figures behind them do not change.
+  - what: Supplier terms missing
+    how: Remove the programme terms. The supplier-finance step stops and shows MISSING, and the factoring step still runs.
+  - what: A debt view you do not want
+    how: Say that the supplier-finance balance should stay in payables. The reported view stands, and the debt-like view is shown only as a scenario.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with linked schedules and a checks tab, and tells you what it could not verify.
+
 judge:
   - Reported and analytical views reconcile, matched cash ledgers support timing changes, liabilities are conserved and no financing effect is adjusted twice or converted into an accounting ruling.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +123,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record and the filing version it used in one dated folder, so the next run starts from the true earlier state.
+  - Write your materiality threshold once in the agent's file, with the date you set it.
+  - Keep the factor's statements with their period. A factor payment with no matching period is treated as unmatched.
+  - Keep the covenant definition for any loan test that uses the debt figure, so the debt you test is the one the contract counts.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a linked workbook with reported and adjusted views, and saves the record file for next time. In plain chat it returns the same tables as text.
+    - name: The company's filing notes
+      why: The factor terms and supplier-finance notes decide what is a sale, what is debt-like and what stays as reported.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The factor's own statements, not only the company's note about them.
+    - Earlier periods from the same company, so a change is visible.
+    - A named person who owns the review and will check the classifications.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Factoring
+    meaning: Selling your unpaid invoices to a finance company for cash now.
+  - term: Supplier finance
+    meaning: A bank pays your suppliers early, and you pay the bank later.
+  - term: Operating cash flow
+    meaning: Cash from running the business, before investing and financing.
+  - term: Net debt
+    meaning: Debt less the cash you hold.
+  - term: Working capital
+    meaning: Money tied up in the day-to-day business, such as unpaid invoices, stock and bills.
+  - term: Materiality threshold
+    meaning: The size of difference you decide is worth raising.

@@ -11,6 +11,43 @@ metadata:
 
 Framework for building products customers love through empowered teams that own continuous discovery and delivery. The best product companies don't ship features -- they solve problems, and they give teams the autonomy and accountability to figure out how.
 
+## When to Use
+
+- A roadmap is a dated list of features that stakeholders handed over.
+- The team wants to test ideas with customers before engineering builds them.
+- Teams are being reorganised around results instead of output.
+- The team needs a product vision it can act on.
+
+## When Not to Use
+
+- You need to plan or run customer interviews: use the Customer interview question writer or the Customer discovery interview planner.
+- You need a routine for continuous weekly discovery: use the Opportunity solution tree builder.
+- You need to rank a backlog: use the Priority method picker.
+- The team has only one or two people. Say so, skip the dual-track structure, and give a one-person version: discovery on set days, delivery on the others.
+
+## Before You Start
+
+Ask once for anything missing. If the person cannot answer, mark it MISSING in the output and carry on. Never invent scores, team facts or customer findings.
+
+1. Who is on the team and what each person does (product manager, designer, engineers, others).
+2. How the roadmap is made today, and who decides what goes on it.
+3. The top 3 customer problems the team can name from direct contact, or a note that it cannot.
+4. Problems with stakeholders or leaders handing down solutions (optional).
+5. A draft product vision (optional).
+
+## Output
+
+Return these sections, in this order. Keep the whole answer under about 1,000 words.
+
+1. **Score**: a number from 0 to 7 using the Quick Diagnostic, the band it falls in, and the failed rows named one by one.
+2. **What the evidence says**: for each failed row, the answer the person gave that led to it. If an answer is MISSING, say so rather than assume.
+3. **90-day plan**: three steps of about 30 days each. Each step has the change to make, who owns it and how the team will know it worked.
+4. **First discovery experiments**: 2 or 3 tests for the team's current top ideas, each naming the risk it tests (value, usability, feasibility or viability), who to test with and what result would change the plan. Mark any numbers as rules of thumb.
+5. **Stakeholder script**: two or three lines the product manager can say when a stakeholder hands over a solution.
+6. **Missing**: every input marked MISSING and how it limits the plan.
+
+Rules: the iteration counts, user counts and thresholds in the reference files are the original author's rules of thumb, not research findings. Do not present them as proof. Report failed diagnostic rows honestly even when the person hoped for a higher score.
+
 ## Core Principle
 
 **Empowered product teams** = cross-functional groups given problems to solve (not features to build) who own discovery and delivery end-to-end.

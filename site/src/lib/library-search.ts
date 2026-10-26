@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Block, Catalogue } from "./data";
 import { buildLibrarySearchIndex, searchLibraryIndex, searchTokens, searchShardIds, validateLibrarySearchIndex } from "./library-search-core";
 import type { LibrarySearchIndex, SearchHit, SearchDocument } from "./library-search-core";
-import { searchIntentExclusions } from "./library-search-intents";
+import { makeSearchDocument } from "./search-document.mjs";
 export { searchTokens, searchLibraryIndex } from "./library-search-core";
 export type { SearchField, SearchHit, LibrarySearchIndex } from "./library-search-core";
 const loaded = new Map<string, LibrarySearchIndex>();
@@ -13,7 +13,8 @@ type ExtraText = ((block: Block) => string) | undefined;
 type MetadataEntry = { promise: Promise<LibrarySearchIndex>; index?: LibrarySearchIndex; readers: number; cancel: () => void };
 const metadataCache = new WeakMap<Catalogue, Map<ExtraText, MetadataEntry>>();
 export function publicSearchDocuments(catalogue: Catalogue, extraText?: ExtraText): SearchDocument[] {
-  return catalogue.blocks.map(block => ({ slug: block.slug, excludeIntents: searchIntentExclusions(block.task), title: `${block.name} ${block.headline} ${block.slug} ${(block.aliases ?? []).join(" ")}`, summary: block.summary, metadata: `${block.type} ${block.category} ${block.task} ${block.job} ${extraText?.(block) ?? ""}`, purpose: { title: [block.name, block.headline], summary: [block.summary], metadata: [block.type, block.category, block.task, block.job, extraText?.(block) ?? ""] } }));
+  const minds = new Map((catalogue.minds?.roster ?? []).map(mind => [mind.slug, mind]));
+  return catalogue.blocks.map(block => makeSearchDocument(block, block.type === 'mind' ? { when: minds.get(block.slug)?.useCases ?? [] } : {}, { extraText: extraText?.(block) ?? '' }));
 }
 /** Same deterministic wire index, yielding between small batches if Workers are unavailable. */
 export async function buildMetadataInSlices(documents: SearchDocument[], sourceHash: string, cancelled = () => false): Promise<LibrarySearchIndex> {

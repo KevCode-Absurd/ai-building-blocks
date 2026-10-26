@@ -15,9 +15,9 @@ outputs:
   - {type: plan}
 uses: [niche-readiness-checker, stranger-first-message-writer, sales-role-splitter]
 steps:
-  - {uses: niche-readiness-checker, note: "A niche verdict, a one-line niche statement and the next step"}
-  - {uses: stranger-first-message-writer, note: "A first message a stranger can read in seconds. Reads the plan from the step before"}
-  - {uses: sales-role-splitter, note: "Which job to split out first, who owns it and what to track. Reads the plan from the step before"}
+  - {uses: niche-readiness-checker, note: "A niche verdict, a one-line niche statement and the next step. Hands the niche plan to the message writer and the role splitter"}
+  - {uses: stranger-first-message-writer, note: "A first message a stranger can read in seconds. Reads the niche plan from step 1. Hands the message to step 3 as the outreach work to hand over"}
+  - {uses: sales-role-splitter, note: "Which job to split out first, who owns it and what to track. Reads the niche plan from step 1, your list of who does which sales job, and step 2's message as the work to hand over"}
 origin: rebuilt
 version: 1.0.0
 minds: [aaron-ross]

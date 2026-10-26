@@ -64,6 +64,11 @@ export type Block = {
   twin: string | null;
   usedIn: number;
   task: string;
+  /** Reviewed secondary use cases; job functions are independent of format. */
+  tasks?: string[];
+  jobFunctions?: string[];
+  /** Source-supported subject expertise, independent of display names. */
+  topics?: string[];
   headline: string;
   /** One finished picture made with a prompt like this block's, for visual blocks that have one. */
   look?: { src: string; alt: string };
@@ -84,6 +89,10 @@ export type Page = {
   /** Reviewed method adapters for this skill, generated from the published inputs and steps. */
   copyable?: ReturnType<typeof import('./copyable-task.mjs').makeTaskRecipe>;
   headline: string; subhead: string; explain: string; when: string[];
+  /** Situations where this item is the wrong tool, often naming a better one. */
+  not_for?: string[];
+  /** What goes in and what comes out, from SKILL.md. Not the same as `example`, the test input, which is never shipped. */
+  output_sample?: { input: string[]; prerequisites?: string[]; output: { name: string; contains: string }[] };
   you_give: string[]; you_get: string[]; how_to_use: string[];
   how_it_works: { title: string; text: string }[];
   /** A workflow's note for each step, in order (blocks.json sends only the step slugs). */
@@ -126,7 +135,8 @@ function unwire(w: Wire): Block {
     inputs: (inputs ?? []).map(port), outputs: (outputs ?? []).map(port), steps: (steps ?? []).map((s) => (typeof s === "string" ? { uses: s, note: "" } : { uses: s[0], note: s[1] })),
   } as Block;
 }
-export type Catalogue = { built: string; sourceHash?: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
+/** `index` is set on the small list catalogue (blocks-index.json): cards, filters and quick search only, no ports, uses or roster. */
+export type Catalogue = { built: string; sourceHash?: string; index?: true; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
   { id: "source", name: "Source", does: "Brings information in" },
@@ -151,14 +161,34 @@ export const portLabel = (t: string) => PORT_NAMES[t] ?? cap(t.replace(/_/g, " "
 
 let catalogue: Promise<Catalogue> | null = null;
 let resolvedCatalogue: Catalogue | null = null;
+let listIndex: Promise<Catalogue> | null = null;
+let resolvedIndex: Catalogue | null = null;
 let starter: Promise<Catalogue> | null = null;
 let resolvedStarter: Catalogue | null = null;
-function decodeCatalogue(d: Omit<Catalogue, "blocks" | "bySlug"> & { blocks: Wire[] }): Catalogue {
-  // Full and starter catalogues use the same wire records and decoder.
+function decodeCatalogue(d: Omit<Catalogue, "blocks" | "bySlug" | "portTypes"> & { portTypes?: Catalogue["portTypes"]; blocks: Wire[] }): Catalogue {
+  // Full, list and starter catalogues use the same wire records and decoder.
   const faces = new Map<string, Face | undefined>((d.minds?.roster ?? []).map((m: RosterMind) => [m.slug, m.face]));
   const blocks: Block[] = d.blocks.map(unwire);
   for (const b of blocks) if (b.type === "mind" && !b.face) b.face = faces.get(b.slug);
-  return { ...d, blocks, bySlug: Object.fromEntries(blocks.map(b => [b.slug, b])) };
+  return { ...d, portTypes: d.portTypes ?? {}, renamed: d.renamed ?? {}, blocks, bySlug: Object.fromEntries(blocks.map(b => [b.slug, b])) };
+}
+const pause = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+/** A public data file, retried once. The clock only covers the wait for the server to answer:
+ * a slow but moving download (a phone line, a background tab) is not cut off half way. */
+async function fetchData(url: string, { answerMs = 12000, totalMs = 60000, attempts = 2 } = {}): Promise<ArrayBuffer> {
+  for (let attempt = 1; ; attempt++) {
+    const controller = new AbortController();
+    const answer = setTimeout(() => controller.abort(), answerMs), total = setTimeout(() => controller.abort(), totalMs);
+    try {
+      const response = await fetch(url, { signal: controller.signal, ...(attempt > 1 ? { cache: "reload" as RequestCache } : {}) });
+      clearTimeout(answer);
+      if (!response.ok) throw Object.assign(Error(`${url}: ${response.status}`), { retry: response.status >= 500 || response.status === 429 });
+      return await response.arrayBuffer();
+    } catch (error) {
+      if (attempt >= attempts || (error as { retry?: boolean }).retry === false) throw error;
+      await pause(800 * attempt);
+    } finally { clearTimeout(answer); clearTimeout(total); }
+  }
 }
 export function loadStarterCatalogue(): Promise<Catalogue> {
   starter ??= fetch("/data/starter-blocks.json", { signal: AbortSignal.timeout(2000) })
@@ -173,10 +203,9 @@ export function loadStarterCatalogue(): Promise<Catalogue> {
   return starter;
 }
 export function loadCatalogue(): Promise<Catalogue> {
-  catalogue ??= fetch("/data/blocks.json", { signal: AbortSignal.timeout(15000) })
-    .then(async (r) => {
-      if (!r.ok) throw new Error(`Catalogue: ${r.status}`);
-      const bytes = await r.arrayBuffer(), digest = await crypto.subtle.digest("SHA-256", bytes);
+  catalogue ??= fetchData("/data/blocks.json")
+    .then(async (bytes) => {
+      const digest = await crypto.subtle.digest("SHA-256", bytes);
       return { ...JSON.parse(new TextDecoder().decode(bytes)), sourceHash: Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("") };
     })
     .then((d) => {
@@ -185,8 +214,25 @@ export function loadCatalogue(): Promise<Catalogue> {
     }).catch((e) => { catalogue = null; throw e; });
   return catalogue;
 }
-export function useCatalogueState(enabled = true, { starterFirst = false }: { starterFirst?: boolean } = {}) {
-  const [catalogue, setCatalogue] = useState<Catalogue | null>(resolvedCatalogue);
+/** The library list (scripts/build-list-index.mjs): what cards, filters and quick search need, about a third
+ * smaller over the wire than blocks.json. The full catalogue is used instead once it is here. */
+export function loadCatalogueIndex(): Promise<Catalogue> {
+  if (resolvedCatalogue) return Promise.resolve(resolvedCatalogue);
+  listIndex ??= fetchData("/data/blocks-index.json")
+    .then((bytes) => {
+      const d = JSON.parse(new TextDecoder().decode(bytes));
+      if (d.index !== true || !Array.isArray(d.blocks) || !/^[a-f\d]{64}$/.test(d.sourceHash ?? "")) throw Error("Invalid catalogue index");
+      migrateSlugs(d.renamed ?? {});
+      resolvedIndex = decodeCatalogue(d); return resolvedIndex;
+    })
+    // An older deployment without the list file still has the full catalogue.
+    .catch(() => loadCatalogue())
+    .catch((e) => { listIndex = null; throw e; });
+  return listIndex;
+}
+/** `tier: "index"` is enough for lists and cards; block pages, the builder and the composer need "full". */
+export function useCatalogueState(enabled = true, { starterFirst = false, tier = "full" }: { starterFirst?: boolean; tier?: "full" | "index" } = {}) {
+  const [catalogue, setCatalogue] = useState<Catalogue | null>(() => resolvedCatalogue ?? (tier === "index" ? resolvedIndex : null));
   const [starterCatalogue, setStarterCatalogue] = useState<Catalogue | null>(resolvedStarter);
   const [error, setError] = useState("");
   const [attempt, setAttempt] = useState(0);
@@ -195,18 +241,23 @@ export function useCatalogueState(enabled = true, { starterFirst = false }: { st
   useEffect(() => {
     if (!enabled) { setLoading(false); return; }
     let live = true;
+    const ready = resolvedCatalogue ?? (tier === "index" ? resolvedIndex : null);
+    if (ready) { setCatalogue(ready); setLoading(false); setError(""); return; }
+    // A list catalogue on screen is not enough for a page that needs the full one.
+    setCatalogue(current => tier === "full" && current?.index ? null : current);
     setLoading(true); setError("");
     // The starter is optional. A stalled starter must not hold the full library
     // behind its timeout; both public downloads can make progress independently.
     if (starterFirst && !resolvedCatalogue) {
       void loadStarterCatalogue().then(value => { if (live) setStarterCatalogue(value); }).catch(() => {});
     }
-    loadCatalogue().then(value => { if (live) setCatalogue(value); }).catch(() => {
+    (tier === "index" ? loadCatalogueIndex() : loadCatalogue()).then(value => { if (live) setCatalogue(value); }).catch(() => {
       if (live) setError("The task library could not load. Check your connection and try again.");
     }).finally(() => { if (live) setLoading(false); });
     return () => { live = false; };
-  }, [enabled, attempt, starterFirst]);
-  return { catalogue, starterCatalogue: starterFirst ? starterCatalogue : null, complete: catalogue !== null, loading, error, retry };
+  }, [enabled, attempt, starterFirst, tier]);
+  const shown = tier === "full" && catalogue?.index ? null : catalogue;
+  return { catalogue: shown, starterCatalogue: starterFirst ? starterCatalogue : null, complete: shown !== null, loading, error, retry };
 }
 export function useCatalogue(enabled = true) { return useCatalogueState(enabled).catalogue; }
 const textCache = new Map<string, Promise<string | null>>();
@@ -274,7 +325,7 @@ export function wireSteps(c: Catalogue, slugs: string[]): [number, number][] {
   return edges;
 }
 
-/** What a person sees: three kinds, in order of how much they do. */
+/** The five formats people can use, from one prompt to an expert's perspective. */
 export type Kind = "prompt" | "skill" | "workflow" | "agent" | "mind";
 export const KINDS: { id: Kind; name: string; plural: string; path: string; what: string }[] = [
   { id: "prompt", name: "Prompt", plural: "Prompts", path: "prompts", what: "One message you paste into your AI for a quick result." },
@@ -287,157 +338,13 @@ export const kindOf = (b: Block): Kind => (b.type === "mind" ? "mind" : b.type =
 export const kindInfo = (b: Block) => KINDS.find((k) => k.id === kindOf(b))!;
 export const pathOf = (b: Block) => `/${kindInfo(b).path}/${b.slug}`;
 
-/** The jobs people hire a block for. Every block is filed under one. */
-export const TASKS: { id: string; name: string }[] = [
-  { id: "study-and-practice", name: "Study and check your understanding" },
-  { id: "find-a-job", name: "Prepare job applications" },
-  { id: "write-ad-copy", name: "Write ad copy" },
-  { id: "make-image-ads", name: "Make image ads" },
-  { id: "make-video-ads", name: "Make video ads" },
-  { id: "plan-ad-tests", name: "Plan what ads to test" },
-  { id: "check-ads", name: "Check ads before they go live" },
-  { id: "read-ad-results", name: "Read your ad results" },
-  { id: "audit-landing-page", name: "Audit a landing page" },
-  { id: "write-landing-page", name: "Write and build a landing page" },
-  { id: "product-photos", name: "Make product photos" },
-  { id: "understand-customers", name: "Understand your customers" },
-  { id: "brand-file", name: "Set up your brand file" },
-  { id: "study-competitors", name: "Study competitor ads" },
-  { id: "make-offer", name: "Make an offer people want" },
-  { id: "grow-social", name: "Grow on social" },
-  { id: "set-up-ai", name: "Set up AI to work for you" },
-  { id: "think-with-minds", name: "Talk it through with great minds" },
-  { id: "test-an-idea", name: "Test an idea before you build it" },
-  { id: "plan-strategy", name: "Plan your strategy" },
-  { id: "build-product", name: "Build a product people want" },
-  { id: "build-software", name: "Build and ship software" },
-  { id: "sell-and-negotiate", name: "Sell and negotiate" },
-  { id: "lead-people", name: "Lead and manage people" },
-  { id: "speak-and-persuade", name: "Speak and persuade" },
-  { id: "write-and-tell-stories", name: "Write and tell stories" },
-  { id: "design-work", name: "Design things people love" },
-  { id: "think-and-decide", name: "Think it through and decide" },
-  { id: "money-and-investing", name: "Handle money and investing" },
-  { id: "work-with-files", name: "Make documents, sheets and slides" },
-  { id: "build-websites", name: "Build websites and web apps" },
-  { id: "test-and-fix-code", name: "Test and fix code" },
-  { id: "ship-and-host", name: "Ship and host your app" },
-  { id: "secure-code", name: "Keep your code secure" },
-  { id: "connect-tools", name: "Connect AI to your tools" },
-  { id: "make-skills", name: "Make your own skills" },
-  { id: "make-images", name: "Make images and art" },
-  { id: "organise-work", name: "Run meetings, notes and plans" },
-  { id: "work-with-audio", name: "Turn speech into text and back" },
-  { id: "run-your-store", name: "Run your online store" },
-  { id: "get-found-in-search", name: "Get found in search and AI answers" },
-  { id: "write-emails", name: "Write emails that get read" },
-  { id: "set-prices", name: "Set your prices" },
-  { id: "help-customers", name: "Help your customers" },
-  { id: "hire-people", name: "Hire and look after your people" },
-  { id: "check-contracts", name: "Check contracts and rules" },
-  { id: "track-numbers", name: "Track your numbers" },
-  { id: "document-work", name: "Write down how work gets done" },
-  { id: "research-topics", name: "Research a topic properly" },
-  { id: "teach-and-train", name: "Teach and train people" },
-  { id: "plan-supply-chain", name: "Plan stock, shipping and suppliers" },
-  { id: "find-products", name: "Find products worth selling" },
-  { id: "set-up-store", name: "Set up your online store" },
-  { id: "speed-up-store", name: "Make your store load fast" },
-  { id: "test-store-changes", name: "Test changes to your store" },
-  { id: "run-google-ads", name: "Run Google Ads" },
-  { id: "launch-and-scale-ads", name: "Launch and scale Meta and TikTok ads" },
-  { id: "keep-customers", name: "Keep customers coming back" },
-  { id: "sell-on-amazon", name: "Sell on Amazon" },
-  { id: "protect-your-store", name: "Keep your store safe" },
-];
-const TASK_BY_ID = new Map(TASKS.map((t) => [t.id, t]));
-export const taskOf = (b: Block) => TASK_BY_ID.get(b.task) ?? TASKS[0];
+export { TASKS, FUNCTIONS, AREAS, QUICK_JOB_IDS, taskOf, taskIdsOf, functionsOf, areasOf, availableTasks, availableFunctions, classificationText, FUNCTION_MOVED, formatOf, rendersOf } from "./catalogue-taxonomy.mjs";
 
 const pageCache = new Map<string, Promise<Page | null>>();
 export function loadPage(slug: string): Promise<Page | null> {
   if (!pageCache.has(slug)) pageCache.set(slug, fetch(`/data/pages/${slug}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null).then(page => { if (!page) pageCache.delete(slug); return page; }));
   return pageCache.get(slug)!;
 }
-
-/** The kinds of work, named by what gets done: the first way into the library.
- *  Each one groups a few jobs; a job can sit under more than one. */
-export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[] }[] = [
-  { id: "learner", name: "Study and practise", line: "Learning paths, papers and checks on what you understand", tasks: ["study-and-practice"] },
-  { id: "job-seeker", name: "Prepare a job application", line: "Your real experience, matched to a role", tasks: ["find-a-job"] },
-  { id: "copywriter", name: "Write copy that sells", line: "Ads, landing pages and offers", tasks: ["write-ad-copy", "write-landing-page", "make-offer", "write-emails"] },
-  { id: "media-buyer", name: "Run Meta ads", line: "Plan tests, get ads approved, read the results", tasks: ["plan-ad-tests", "launch-and-scale-ads", "check-ads", "read-ad-results", "study-competitors"] },
-  { id: "google-ads", name: "Run Google Ads", line: "Shopping, Performance Max, Search and your product feed", tasks: ["run-google-ads"] },
-  { id: "retention", name: "Keep customers buying", line: "Email, text messages, subscriptions and what happens after the order", tasks: ["keep-customers", "write-emails"] },
-  { id: "ads", name: "Create ads", line: "Image ads and video ads, each with its own skills", tasks: ["make-image-ads", "make-video-ads"] },
-  { id: "photos", name: "Make product photos", line: "Photos for your product pages", tasks: ["product-photos"] },
-  { id: "cro", name: "Turn visitors into buyers", line: "Check your landing pages and fix what loses sales", tasks: ["audit-landing-page", "write-landing-page", "test-store-changes", "speed-up-store"] },
-  { id: "strategist", name: "Know your market", line: "Your customers, your brand and your rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
-  { id: "social", name: "Grow on social", line: "Posts that build an audience", tasks: ["grow-social"] },
-  { id: "founder", name: "Set up AI for your work", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
-  { id: "minds", name: "Think with great minds", line: "Borrow one mind's thinking, or seat a council", tasks: ["think-with-minds"] },
-  { id: "validator", name: "Test your idea", line: "Talk to customers before you build", tasks: ["test-an-idea", "understand-customers"] },
-  { id: "strategy", name: "Plan your strategy", line: "Where to play, how to win, and the money", tasks: ["plan-strategy", "money-and-investing", "set-prices"] },
-  { id: "product", name: "Build a product", line: "Products and software people use", tasks: ["build-product", "build-software"] },
-  { id: "seller", name: "Sell more", line: "Sell, negotiate and win people over", tasks: ["sell-and-negotiate", "speak-and-persuade"] },
-  { id: "leader", name: "Lead people", line: "Run a team, a meeting or a company", tasks: ["lead-people", "speak-and-persuade"] },
-  { id: "writer", name: "Write and tell stories", line: "Books, essays, scripts and talks", tasks: ["write-and-tell-stories"] },
-  { id: "maker", name: "Design things", line: "Products, brands and pages people love", tasks: ["design-work", "make-images"] },
-  { id: "thinker", name: "Think it through", line: "Hard problems, big decisions, new ideas", tasks: ["think-and-decide"] },
-  { id: "developer", name: "Build and code", line: "Websites, apps and the code behind them", tasks: ["build-software", "build-websites", "test-and-fix-code", "ship-and-host", "secure-code"] },
-  { id: "files", name: "Work with files", line: "Documents, sheets, slides and PDFs", tasks: ["work-with-files"] },
-  { id: "connector", name: "Connect your tools", line: "Plug AI into the apps you use, or make your own skills", tasks: ["connect-tools", "make-skills", "set-up-ai"] },
-  { id: "office", name: "Run your work", line: "Meetings, notes, plans and audio", tasks: ["organise-work", "work-with-audio", "document-work"] },
-  { id: "store", name: "Run your store", line: "Orders, stock, prices and payouts", tasks: ["set-up-store", "run-your-store", "set-prices", "sell-on-amazon", "protect-your-store"] },
-  { id: "search", name: "Get found", line: "Search, AI answers and listings", tasks: ["get-found-in-search"] },
-  { id: "support", name: "Help your customers", line: "Replies, help pages and problems sorted fast", tasks: ["help-customers", "write-emails"] },
-  { id: "people", name: "Hire and look after people", line: "Job posts, interviews, pay and reviews", tasks: ["hire-people", "lead-people"] },
-  { id: "legal", name: "Check contracts and rules", line: "Contracts, NDAs and compliance, checked before a lawyer", tasks: ["check-contracts"] },
-  { id: "analyst", name: "Track your numbers", line: "Books, reports, dashboards and data", tasks: ["track-numbers", "read-ad-results", "money-and-investing"] },
-  { id: "researcher", name: "Research anything", line: "Sources found, read, checked and written up", tasks: ["research-topics"] },
-  { id: "teacher", name: "Teach and train", line: "Lessons, courses, quizzes and feedback", tasks: ["teach-and-train"] },
-  { id: "supply", name: "Run your supply chain", line: "Stock, suppliers, shipping and routes", tasks: ["find-products", "plan-supply-chain", "run-your-store"] },
-];
-
-/** The broad areas above the groups (docs/MINDS-PRD.md §3). A group can sit in more than one; a mind sits in its own areas. */
-export const AREAS: { id: string; name: string; fns: string[] }[] = [
-  { id: "learning-careers", name: "Learning and careers", fns: ["learner", "job-seeker"] },
-  { id: "marketing", name: "Marketing", fns: ["copywriter", "media-buyer", "google-ads", "ads", "cro", "retention", "strategist", "social", "search"] },
-  { id: "design", name: "Design", fns: ["ads", "photos", "maker", "product"] },
-  { id: "business", name: "Business", fns: ["strategist", "founder", "validator", "strategy", "product", "minds", "files", "office", "store", "support", "legal", "analyst", "supply"] },
-  { id: "sales", name: "Sales", fns: ["seller", "validator", "support"] },
-  { id: "leadership", name: "Leadership", fns: ["leader", "strategy", "people"] },
-  { id: "writing", name: "Writing", fns: ["copywriter", "writer"] },
-  { id: "arts", name: "Arts", fns: ["writer", "maker"] },
-  { id: "coding", name: "Coding", fns: ["product", "developer", "connector"] },
-  { id: "science", name: "Science", fns: ["thinker", "researcher"] },
-  { id: "teaching", name: "Teaching", fns: ["teacher", "researcher"] },
-  { id: "thinking", name: "Thinking", fns: ["thinker", "minds"] },
-];
-// Worked out once per job, not once per block per keystroke: the library asks these for every block, many times a second.
-const AREAS_BY_TASK = new Map<string, string[]>();
-export const areasOf = (b: Block): string[] => {
-  if (b.type === "mind") return [b.area ?? "", ...(b.also ?? [])].filter(Boolean);
-  let r = AREAS_BY_TASK.get(b.task);
-  if (!r) AREAS_BY_TASK.set(b.task, (r = AREAS.filter((a) => a.fns.some((f) => FUNCTIONS.find((x) => x.id === f)?.tasks.includes(b.task))).map((a) => a.id)));
-  return r;
-};
-/** Old links to the two functions that became "Create ads". */
-export const FUNCTION_MOVED: Record<string, string> = { designer: "ads", video: "ads" };
-/** Image or video: the two kinds of ad a block can make. Every ad-making block makes one, never both. */
-export const formatOf = (b: Block): "image" | "video" | null => (b.task === "make-image-ads" ? "image" : b.task === "make-video-ads" ? "video" : null);
-const VIDEO_OUT = new Set(["video_prompt", "video_ads"]);
-const IMAGE_OUT = new Set(["image_prompt", "avatar_sheet", "static_ads", "photo_set", "pdp_images", "upscaled_image"]);
-/** What a block needs a picture or video tool for, since Claude writes prompts but can't draw.
- *  Same rule as tools/add-making-it.mjs, which adds the matching note to the SKILL.md. */
-export const rendersOf = (b: Block): "image" | "video" | null =>
-  b.outputs.some((o) => VIDEO_OUT.has(o.type)) ? "video" : b.outputs.some((o) => IMAGE_OUT.has(o.type)) ? "image" : null;
-const FNS_BY_TASK = new Map<string, typeof FUNCTIONS>();
-export const functionsOf = (b: Block) => {
-  let r = FNS_BY_TASK.get(b.task);
-  if (!r) FNS_BY_TASK.set(b.task, (r = FUNCTIONS.filter((f) => f.tasks.includes(b.task))));
-  return r;
-};
-
 
 /** The paid service a block needs, from its "paid:<service>" warning, or "". */
 export const paidService = (b: { warnings?: string[] }) => b.warnings?.find((w) => w.startsWith("paid:"))?.slice(5) ?? "";

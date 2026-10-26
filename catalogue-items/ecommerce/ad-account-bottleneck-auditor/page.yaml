@@ -1,6 +1,6 @@
 new_slug: ad-account-bottleneck-auditor
 name: "Ad account bottleneck auditor"
-summary: "Give store and ad numbers. Get the growth bottleneck, a fix order and a score out of 100."
+summary: "Find what holds back your ad growth. Give your store and ad numbers. You get one bottleneck, a 90-day fix order and a score out of 100."
 job: read-ad-results
 thinking: high
 thinking_why: "It weighs store numbers against platform numbers and ranks fixes, so a stronger model reasons through it better."
@@ -17,6 +17,10 @@ when:
   - Your ad spend has grown but profit has not, and you can't say why.
   - An agency or freelancer gave you a list of fixes and you can't tell which one matters.
   - You are about to raise your ad budget and want to know what would break first.
+not_for:
+  - You only have ad platform numbers and no store numbers. Pull monthly store figures first, such as new customers and order value from Shopify, then run it.
+  - Your store makes under about $1M a year and you want a creative review. It skips creative at that size, so ask a person with ad experience to review your ads.
+  - You want a list of settings to change. This names one bottleneck and a fix order instead, so use your ad platform's own help pages for settings.
 
 you_give:
   - Monthly ad spend, new customers, order value and gross margin from your store, for up to 30 months
@@ -35,6 +39,30 @@ how_to_use:
   - Paste your monthly store numbers first. The skill will not audit from ad platform numbers alone.
   - Attach your ad exports, and paste your campaign list and the number of new ads you launch.
   - Read the bottleneck and the 90-day order. Fix them in that order, then run the audit again.
+output_sample:
+  input:
+    - "Your monthly store numbers: ad spend, new customers, order value and gross margin"
+    - Your ad exports from each platform, with the audience split if you have it
+    - Your campaign list with each one's purpose and budget (optional)
+    - How many new ads you launch each month (optional)
+    - Repeat purchase or cohort data (optional)
+  prerequisites:
+    - Store numbers for up to 30 months. Without them the skill will not audit or score.
+  output:
+    - name: BOTTLENECK
+      contains: "The one thing holding back growth: data, structure or creative, with the numbers that show it."
+    - name: TREND
+      contains: A month-by-month table of CAC, first-order gross profit and their ratio, with the date it changed.
+    - name: PILLARS
+      contains: Points and findings for data integrity out of 40, structure out of 30 and creative out of 30.
+    - name: 90-DAY ORDER
+      contains: Each fix ranked by impact, with its time and the next skill to use.
+    - name: RETENTION
+      contains: A read of repeat buying by customer group, or a note that cohort data is missing.
+    - name: TEST TO RUN
+      contains: A geo lift or brand holdout test if numbers will not reconcile, or a note that none is needed.
+    - name: SCORE
+      contains: A score out of 100 with the sum shown and a note that the weights are a starting point.
 
 how_it_works:
   - title: Starts from the store

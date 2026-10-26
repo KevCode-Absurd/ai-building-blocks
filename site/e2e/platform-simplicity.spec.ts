@@ -30,7 +30,8 @@ test("signed-in home shows its public first screen while private saved work is s
 test("a failed catalogue can be retried without a reload", async ({ page }) => {
   await page.route("**/api/auth*", route => route.fulfill({ json: { configured: false } }));
   let blocked = true;
-  await page.route("**/data/blocks.json", route => blocked ? route.fulfill({ status: 503, body: "Unavailable" }) : route.continue());
+  // Home reads the list index and falls back to the full file; both are down here.
+  await page.route("**/data/blocks{,-index}.json", route => blocked ? route.fulfill({ status: 503, body: "Unavailable" }) : route.continue());
   await page.goto("/", { waitUntil: "domcontentloaded" });
   await expect(page.getByText("The task library could not load. Check your connection and try again.", { exact: true })).toBeVisible();
   const pageStarted = await page.evaluate(() => performance.timeOrigin);
@@ -58,7 +59,7 @@ test("home shows every format while search waits for the complete library", asyn
   await page.route("**/api/auth*", route => route.fulfill({ json: { configured: false } }));
   let release!: () => void;
   const held = new Promise<void>(resolve => { release = resolve; });
-  await page.route("**/data/blocks.json", async route => { await held; await route.continue(); });
+  await page.route("**/data/blocks{,-index}.json", async route => { await held; await route.continue(); });
   try {
     await page.goto("/", { waitUntil: "domcontentloaded" });
     await expect(page.locator('.library-formats-loading a[href="/?kind=skill#library"]')).toBeVisible();

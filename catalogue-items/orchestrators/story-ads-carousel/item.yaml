@@ -17,9 +17,9 @@ uses: [buyer-brief-writer, selling-points-writer, problem-story-copy-writer, sto
 steps:
   - {uses: buyer-brief-writer, note: "Turns the reviews into one buyer, one moment and the force the story has to move."}
   - {uses: selling-points-writer, note: "Uses the brief to pick which product facts matter to this buyer and in what order."}
-  - {uses: problem-story-copy-writer, note: "Writes a long story from the buyer's moment in the brief, with the product arriving last."}
-  - {uses: story-carousel-ad-writer, note: "Turns the same buyer and facts into cards, each with its picture, words and headline."}
-  - {uses: story-image-ad-writer, note: "Writes one story for a single image from the brief and the quotes, with a picture plan and test plan."}
+  - {uses: problem-story-copy-writer, note: "Writes a long story from the buyer's moment in the brief, with the product arriving last. Uses the brief from step 1 and the selling points from step 2 as its facts."}
+  - {uses: story-carousel-ad-writer, note: "Writes cards for the same buyer and facts, each with its picture, words and headline. Uses the brief from step 1 and the selling points from step 2; it builds its own cards from them rather than splitting step 3's story."}
+  - {uses: story-image-ad-writer, note: "Writes one story for a single image from the brief, the customer quotes and the selling points, with a picture plan and test plan. It is a separate ad, not built from the carousel."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-get-story-ads-and-a-carousel-that-open-on-your-buyers-problem/skeleton.yaml

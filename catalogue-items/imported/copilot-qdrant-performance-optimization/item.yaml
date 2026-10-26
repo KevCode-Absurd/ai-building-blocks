@@ -1,6 +1,6 @@
 slug: copilot-qdrant-performance-optimization
 name: Qdrant search speed tuner
-summary: Share your search workload. Get index, query and hardware changes to test against a clear baseline.
+summary: Get a ranked list of Qdrant settings to change for faster search, faster uploads or lower memory, each with a test to run first.
 category: general
 boards: []
 type: skill
@@ -8,8 +8,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: brief
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: plan
 uses: []

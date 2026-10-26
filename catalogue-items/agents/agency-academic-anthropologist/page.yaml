@@ -1,0 +1,147 @@
+name: Anthropologist agent for worldbuilding
+summary: Design a believable culture for your story or game, or check one for clichés. Get kinship, rituals, beliefs and tensions that fit together.
+headline: Anthropologist agent for worldbuilding
+subhead: Describe your society, how it feeds itself and which real cultures inspired it. The agent builds or checks the family rules, customs and beliefs so each part fits the rest. You get a culture sheet, a fit check for each custom and a list of weak spots to fix.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  A culture built by picking cool parts looks fake. Feathers, drums and a
+  warrior code, pasted together, say nothing about how these people live. This
+  anthropologist agent for worldbuilding starts from one question for every
+  custom: what problem does it solve for these people? A ritual that does
+  nothing for the community is decoration.
+
+
+  It begins with how people eat, because that shapes the rest. Then it builds
+  how families are organised, who inherits, where couples live and who holds
+  power. Only then does it add beliefs, rituals and taboos. It checks each
+  layer against the one before, so the marriage rules match the economy and the
+  religion matches the danger people face.
+
+
+  It also looks for clichés, such as the noble savage or a mix of unrelated
+  cultures with no sense of what each part means. Every culture it builds has
+  inner tensions. No utopias. For real cultures it works from general
+  knowledge, not research, so it is a design and critique tool, not a source.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its thinkers
+  and examples describe the intended approach. They are not measured results
+  from AI Blocks.
+when:
+  - You are building a society for a novel, game or tabletop campaign, and its customs feel pasted together.
+  - You borrowed from real cultures and want to know whether the result reads as shallow or as a stereotype.
+  - You must decide how a family rule, such as who inherits or who marries whom, would change your plot.
+  - You added a new ritual or law and want to see whether it clashes with the rest of the culture.
+not_for:
+  - You need fieldwork, a study design or an ethics review for real research. Work with a qualified anthropologist.
+  - You want to check land, climate and trade routes. Use the Geographer agent for worldbuilding or the Fictional setting plausibility check.
+  - You want to check dates, technology and daily life of a real period. Use the Historian agent for period accuracy.
+  - You want story structure or what a character wants. Use the Narratologist agent or the Narrative Designer agent.
+you_give:
+  - Your project type, such as a novel, game, campaign or script, and the genre
+  - The facts about your world that are already fixed
+  - How this society gets its food, and the land it lives on
+  - What you want, such as design a new culture, check one, or test it under stress
+  - The real cultures that inspired it (optional)
+  - The customs, laws or rituals you want checked (optional)
+you_get:
+  - A culture sheet covering food and trade, family and power, beliefs and rituals, identity and inner tensions
+  - A fit check for each custom, with what it does, red flags and a keep, change or rethink call
+  - A list of clichés and shallow borrowing, with a deeper option for each
+  - Real-world parallels to read up on, marked to check
+  - A stress test showing how the culture copes with a crisis
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe your world, how this society feeds itself and what is fixed. Say if you want to design, check or stress test.
+  - Type "Design a culture for this setting", "Check these customs for fit and clichés" or "Stress test this culture with a long drought".
+  - Read the red flags and the tensions first. Change your world where the logic fails, then ask it to check again.
+  - If you base a culture on a living people, check the real-world parallels in books and with people from that culture. The AI works from general knowledge and cannot look anything up.
+how_it_works:
+  - title: Start with food
+    text: It sets how the people eat and what they trade, because this shapes family, power and belief.
+  - title: Build the social frame
+    text: It sets kinship, descent, where couples live and who holds power, and checks they suit the economy.
+  - title: Add meaning
+    text: It adds beliefs, rituals and taboos, each with a job for the community.
+  - title: Check the fit
+    text: It tests each custom against the others and marks any that clash, keep, change or rethink.
+  - title: Hunt for clichés
+    text: It flags shallow borrowing and stereotypes, and asks what each borrowed part means in its original setting.
+  - title: Stress test
+    text: It shows how the culture would change under a crisis, and lists the tensions that could split it.
+output_shape: |-
+  CULTURE SHEET: <society name>
+    Food and trade: <how people eat> | <how goods move> | <who controls key resources>
+    Family and power: <kinship> | <where couples live> | <what descent groups do> | <who rules>
+    Beliefs and rituals: <how they explain the world> | <ritual calendar and its jobs> | <taboos and why> | <specialists>
+    Identity: <who counts as us and them> | <rites of passage> | <status signs>
+    Inner tensions: <contradictions in this culture>
+
+  FIT CHECK (one per custom)
+    <custom> | <job it does> | <fits with> | <red flags> | <real-world parallel to check> | <keep, change or rethink>
+
+  CLICHÉ CHECK
+    <element> | <why it reads as a cliché> | <deeper option>
+
+  STRESS TEST
+    <crisis> | <how the culture responds> | <what could break>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your project type and the world facts that are already fixed
+    - How this society gets its food, and the land it lives on
+    - What you want, such as design, check or stress test
+    - The real cultures that inspired it (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Culture sheet
+      contains: Food and trade, family and power, beliefs and rituals, identity and inner tensions for your society.
+    - name: Fit check
+      contains: For each custom, the job it does, red flags, a real-world parallel and a keep, change or rethink call.
+    - name: Cliché check
+      contains: Parts that read as shallow or stereotyped, each with a deeper option.
+    - name: Stress test
+      contains: How the culture responds to one crisis, and what could break.
+    - name: Open questions and checks
+      contains: Facts you must settle and real-world parallels you should read up on.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A long chat lets it hold your world facts and flag any new idea that clashes with them.
+  inputs:
+    - A one-page sheet of your world's fixed facts, kept the same each time you ask.
+    - The names of two or three real cultures you drew from, with what you took from each.
+    - A list of the customs and laws you have already written.
+terms:
+  - term: Kinship
+    meaning: How a society counts who is family. It decides inheritance, marriage and who you owe loyalty to.
+  - term: Descent group
+    meaning: A group of people who trace their family back to one ancestor, such as a clan.
+  - term: Rite of passage
+    meaning: A ceremony that moves a person from one stage of life to another, such as coming of age.
+  - term: Reciprocity and redistribution
+    meaning: Two ways goods move without markets. People trade gifts back and forth, or a leader collects and shares out.
+  - term: Culture salad
+    meaning: Mixing parts of unrelated real cultures with no sense of what each part means.
+tweaks:
+  - what: Task
+    how: Ask for one thing at a time, such as only the kinship system, or only the stress test.
+  - what: Frame
+    how: Name an approach to use, such as the function of each custom, or the meaning each custom carries for its people.
+  - what: Tone
+    how: Say if the culture is for a gritty drama, a light adventure or a game with rules to track.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

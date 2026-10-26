@@ -1,6 +1,6 @@
 new_slug: what-you-really-sell-finder
 name: "What you really sell finder"
-summary: "Paste your product and buyer. Get ten or more reasons to buy, scored, and the best three as test angles."
+summary: "Find what you really sell. Paste your product and buyer, get ten or more reasons to buy, scored, and the best three as test angles."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It must push past obvious answers and drop the ones the product cannot honestly deliver."
@@ -18,6 +18,10 @@ when:
   - You need new angles to test and keep reusing the same one.
   - You are entering a new market or use for an existing product.
   - You are about to write headlines and have not chosen the one reason to lead with.
+not_for:
+  - "You have no product facts yet: build your brand brain first with the Website brand brain builder."
+  - "You want headlines for one angle you already chose: use the Typed headline batch writer."
+  - "You want one want to lead with and a list of claims to avoid: use the Lead want picker."
 
 you_give:
   - Your product facts
@@ -37,6 +41,29 @@ how_to_use:
   - Cross out any answer you couldn't honestly deliver.
   - Run the test for the three picks with the same offer, picture and audience.
   - Keep the losing angles in your angle library.
+output_sample:
+  input:
+    - "Your product facts: what it is, what it does, its price and its limits"
+    - Your buyer, or a short description of them (optional)
+    - Customer reviews or buyer words (optional)
+    - Ads or emails you have run, with results (optional)
+  output:
+    - name: Product and buyer
+      contains: The product in one plain sentence, the buyer, and a line starting with You get.
+    - name: What you are really selling
+      contains: At least ten answers, each pushed to a result, feeling or status, with a deliverable note and score.
+    - name: Dropped answers
+      contains: Answers the product can't deliver or that only help the seller, each with a one-line reason.
+    - name: New markets or uses
+      contains: Other buyers or uses that show up when you ask the question of the whole business.
+    - name: The three to test
+      contains: The three strongest answers, each with a reason and one test headline.
+    - name: Test plan
+      contains: What stays the same, that only the angle changes, the measure to watch and how long to run it.
+    - name: Missing
+      contains: Facts the AI needed and did not have.
+    - name: Checks missed
+      contains: One line for each check that still failed, or none.
 
 how_it_works:
   - title: States product and buyer

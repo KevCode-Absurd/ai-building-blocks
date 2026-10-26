@@ -1,15 +1,13 @@
 slug: investment-property-nav-bridge
 name: Investment property NAV bridge
-summary: Bridge supplied property valuations to equity NAV and a clearly defined market discount.
+summary: "Turn property valuations into net asset value per share, and see if the share price is a discount or a premium. Debt and tax are counted once."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,12 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - book-value-per-share-rollforward
+  - reconcile-property-nav-and-book-value
 origin: own
 version: 1.0.0
 added: 2026-10-22

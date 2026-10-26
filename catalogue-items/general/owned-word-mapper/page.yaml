@@ -1,6 +1,6 @@
 new_slug: owned-word-mapper
 name: "Owned word mapper"
-summary: "Paste your rivals and what buyers say. Get the word each rival owns, words nobody can own and the open ones."
+summary: "Map which word each rival owns in buyers' minds. Paste rival taglines and reviews. You get words marked taken, shared or open."
 job: study-competitors
 thinking: medium
 thinking_why: "It reads rivals' lines and reviews to find one word each, and a wrong guess is easy to spot, so medium effort is enough."
@@ -18,6 +18,10 @@ when:
   - You want to claim a word and need to know if a rival already has it.
   - Research tells you what buyers want, and you suspect a rival already owns it.
   - Every brand in your market sounds the same.
+not_for:
+  - "You are in a new category with no rivals yet: ask five likely buyers what word they link to the problem, then pick a word."
+  - "You only want your own tagline checked: ask a friend or a customer what one word it makes them think of."
+  - "You already have an open word and need to choose between options: use the Ownable word picker."
 
 you_give:
   - Your rivals, with their taglines or homepage lines
@@ -34,6 +38,29 @@ how_to_use:
   - Paste each rival's tagline and a few reviews that name them.
   - Ask five people to say the first brand and word that come to mind for your category. Paste their answers if you can.
   - Take the open words into "Ownable word picker".
+output_sample:
+  input:
+    - Your rivals, five to eight brands a buyer would compare
+    - Each rival's tagline, homepage headline or ad lines
+    - Reviews or survey answers that name the rivals (optional)
+    - Answers from five people to a word-association question (optional)
+  output:
+    - name: Word per rival
+      contains: One word for each rival, how sure the match is, and the signals behind it.
+    - name: Word association
+      contains: The first brand and first word buyers give for your category, and where that came from.
+    - name: Status of each word
+      contains: Every word marked taken, contested or open.
+    - name: Empty claims
+      contains: Words every rival claims, such as quality, which nobody can own.
+    - name: The leader and its opposite
+      contains: The leader's word and a wanted trait on the other side, with who wants it.
+    - name: Open words to test
+      contains: Three open words that buyers care about.
+    - name: Missing
+      contains: Signals that would settle any doubt.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Collects signals

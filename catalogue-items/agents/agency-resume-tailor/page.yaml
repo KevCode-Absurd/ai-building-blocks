@@ -1,0 +1,144 @@
+name: Resume tailor agent
+summary: Tailor your resume to one job post without inventing anything. Get new bullets, a keyword map and a list of claims to confirm. Paste both.
+headline: Resume tailor agent
+subhead: Paste your resume and the full job post. The agent matches your real experience to what the job asks for, then rewrites your summary, skills and bullets. It marks every gap and never adds a job, tool or number you did not give it.
+job: find-a-job
+thinking: high
+thinking_why: It has to match your evidence to each requirement and refuse claims you cannot back up.
+explain: >-
+  A general resume rarely fits one job. Recruiters scan fast, and hiring
+  software looks for the words in the post. This resume tailor agent reads the
+  post, ranks what the employer cares about most, and moves your best matching
+  proof to the top.
+
+
+  It works from evidence. Each requirement gets a mark: strong, partial,
+  unsupported or irrelevant. Bullets that list duties become bullets with an
+  action, a scope and a result. If a number is missing, it asks you for it.
+  Words from the post go in only when your experience backs them. Every big
+  change comes with a note on what changed and why.
+
+
+  It cannot promise interviews, offers or that a hiring system will pass your
+  resume. This is a role profile from Agency Agents, shared under MIT. Its
+  success targets describe the intended work, not measured results from AI
+  Blocks.
+when:
+  - You found a job you want and your resume is the general version.
+  - You are changing careers and want to show what carries over, without pretending you have done the job.
+  - You have a gap, a short job or no degree and want to explain it plainly.
+  - You keep one base resume and want a version for each kind of job.
+not_for:
+  - You want a score and a check of layout and parsing. Use the ATS resume checker agent.
+  - You want a cover letter and resume built together. Use the Resume and job application builder.
+  - You want to understand what a job post really asks for before you apply. Use the Job ad reader.
+  - You want a draft checked for claims you cannot back up. Use the Job application evidence review assistant.
+you_give:
+  - Your current resume. Paste the text.
+  - The full job post, not a summary.
+  - Achievements, numbers or projects that are not on your resume yet (optional).
+  - The company and the level of the job (optional).
+  - Worries, such as a career change, a gap, a short job or no degree (optional).
+you_get:
+  - A fit table with each job requirement, your evidence for it and the action to take.
+  - A keyword map with what is already backed, what to add and what not to claim yet.
+  - A bullet table with each original, the tailored version and why it is stronger.
+  - A tailored resume draft with summary, skills, experience and projects.
+  - A change log and open questions, such as numbers the AI needs before it can say more.
+  - Next steps for your cover letter, LinkedIn profile and interview talking points.
+how_to_use:
+  - Add the pack to your AI as a skill. In a plain chat, paste SKILL.md first.
+  - Paste your resume and the full job post. Add any achievements that are not on your resume.
+  - Say "Tailor my resume to this job." Your AI asks once for anything missing. The minimum is the resume text and the post text.
+  - Read the fit table first. If the job is a stretch, it says so and says what proof would help.
+  - Answer the open questions with real numbers or proof, then ask for an update.
+  - Check every line. You should be able to explain each claim in an interview. Then copy it into your own resume file.
+how_it_works:
+  - title: Read the job post
+    text: It splits must-haves from nice-to-haves and picks out tools, seniority and repeated words.
+  - title: Match your evidence
+    text: It marks each requirement strong, partial, unsupported or irrelevant, and decides what to move up, shrink or cut.
+  - title: Rewrite around proof
+    text: It rewrites the summary, skills, bullets and projects. Words from the post are used only where they are true for you.
+  - title: Check every claim
+    text: It traces each line to something you gave it. Anything it cannot trace is flagged, not kept.
+  - title: Deliver the package
+    text: It hands back the draft, the fit table, the keyword map, the change log and next steps.
+output_shape: |-
+  RESUME FIT ANALYSIS: <target role, company, level>
+  Fit: <strong, partial or stretch> | Main thing the employer values: <signal>
+  | Job requirement | Your evidence | Action (keep, strengthen, ask for proof, address gap) |
+
+  KEYWORD MAP
+  Already backed: <term> in <section>
+  Add or strengthen: <term> in <section> with <your evidence>
+  Do not claim yet: <term> because <missing evidence>
+
+  BULLET TABLE
+  | Original | Tailored (action, scope, result, context) | Why it is stronger |
+
+  TAILORED RESUME
+  <name, headline, contact>
+  Summary (2 to 4 lines) | Core skills | Experience | Projects, education, certifications
+
+  CHANGES MADE
+  Summary, Experience, Skills: <change> because <evidence used>
+  Open questions: <numbers or proof still needed>
+
+  NEXT STEPS
+  <cover letter angle, LinkedIn change, interview talking points>
+output_sample:
+  input:
+    - Your current resume as text
+    - The full job post
+    - Achievements and numbers not yet on your resume (optional)
+  prerequisites:
+    - An AI that can read long text, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Resume fit analysis
+      contains: Each job requirement beside your evidence and the action to take, plus an overall fit call.
+    - name: Keyword map
+      contains: Words from the post sorted into already backed, add or strengthen, and do not claim yet.
+    - name: Bullet table
+      contains: Your original bullets beside tailored ones and a reason each is stronger.
+    - name: Tailored resume
+      contains: A new summary, skills list, experience bullets and projects in plain, standard sections.
+    - name: Change log and open questions
+      contains: What changed and why, plus the numbers or proof you still need to supply.
+    - name: Next steps
+      contains: Cover letter angles, LinkedIn changes and interview talking points built from your evidence.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can match a long resume to a long post and keep your facts straight.
+  inputs:
+    - A list of your best results with numbers, such as sales, time saved or users reached.
+    - Your old performance reviews or thank-you notes, as proof.
+    - Two or three job posts for the same kind of role, to build a base resume.
+terms:
+  - term: ATS
+    meaning: Applicant tracking system. Software that employers use to collect and sort applications.
+  - term: Keyword map
+    meaning: A list of words from the job post and whether your real experience backs each one.
+  - term: Transferable experience
+    meaning: Skills from one field that still count in another.
+  - term: Achievement bullet
+    meaning: A bullet that shows an action, its size and its result, not just a duty.
+tweaks:
+  - what: The full job post
+    how: Paste all of it. Short posts give fewer matches and weaker keyword advice.
+  - what: Extra proof
+    how: Add numbers and projects not on your resume. Without them, bullets stay general and gaps stay open.
+  - what: One job at a time
+    how: Tailor for one post per run. Save each version with the job title in the file name.
+improve:
+  - Keep a list of your best results with numbers and paste it each time.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

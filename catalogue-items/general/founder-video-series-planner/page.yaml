@@ -1,6 +1,6 @@
 new_slug: founder-video-series-planner
 name: "Founder video series planner"
-summary: "Paste buyer questions. Get a ten-week founder video plan, a filming setup and three cuts."
+summary: "Plan a founder video series from real buyer questions. Get ten weekly videos, a one-phone filming setup and three cuts from your first shoot."
 job: grow-social
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You want the founder or owner to post regular videos as themselves.
   - You tried founder videos but ran out of ideas after two or three.
   - Buyers keep asking the same questions and you want to answer them in public.
+not_for:
+  - "Your founder will not appear on camera: use a short video series with your team, or written answers on your FAQ page."
+  - "You have no real buyer questions yet: first collect them from your support inbox, reviews and comments, then come back."
+  - "You only want to turn raw footage into one social post: use a simple edit in CapCut with captions."
 
 you_give:
   - What you make or offer, who it's for, and the founder's name and role
@@ -32,10 +36,33 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your facts, then ten or more real buyer questions in their own words.
-  - List what the founder can show on camera.
-  - The founder answers the questions in square brackets on camera, not in the script.
-  - Film week 1 with the setup, then make the three cuts.
+  - Paste your business facts, then ten or more real buyer questions in their own words.
+  - List what the founder can show on camera, such as a place, a test report or a message shared with permission.
+  - Read the plan. Check that every spoken line only states facts you gave it. Words like most people, every batch or always need a source, or should be cut.
+  - The founder answers the bracketed questions on camera, not in a script.
+  - Film week 1 with the filming setup, then make the three cuts.
+output_sample:
+  input:
+    - What you make or offer, who it is for, and the founder's name and role
+    - Ten or more real buyer questions, in the buyer's own words
+    - What the founder can show on camera (recommended)
+    - Your goal, trust or launch support (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Question bank
+      contains: Each question with its source, its thread, and what can be shown, or a note that it is parked.
+    - name: Ten-week plan
+      contains: "For each week: thread, question, first line, short answer, what is shown, what it means for you, and next week."
+    - name: Filming setup
+      contains: How to set up one phone and one room, with a card of three bullet points.
+    - name: Three cuts
+      contains: The full answer, one short clip, and the question and answer as text for your caption and FAQ.
+    - name: MISSING
+      contains: Facts only the founder can give, shown as questions instead of guesses.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Starts from real questions

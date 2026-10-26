@@ -55,6 +55,15 @@ Move from low-friction responses to higher-friction decisions.
 Make the final email simple, concrete, and autonomy-preserving.
 *Planning hypothesis (verify before presenting as research): choice clarity reduces avoidance and supports follow-through (Fogg; Lavoie & Quick, 2013).*
 
+## OUTPUT FORMAT
+
+Deliver a plan, not finished emails. Use this layout:
+
+| # | Send day | Emotional job | Open loop (opens / answers) | Value given | Ask |
+|---|---|---|---|---|---|
+
+Use 3-5 rows for a short sequence and more for a long one. Then add: an arc summary (3-4 lines), a loop schedule, a brief for the final email, and a "Claims to verify" list for any research idea you used. If the reader, goal or awareness stage is missing, ask once. Never invent audience facts, results or statistics; mark them MISSING.
+
 ## DECISION MATRIX
 
 ### Variable: sequence length
@@ -123,9 +132,9 @@ Before finalizing output, the agent asks:
 
 **User request:**
 
-> Rewrite this email sequence with a clearer step-by-step persuasion arc and credible transitions.
+> Plan a 5-email sequence for new trial users of a bookkeeping tool. The goal is to move them to a paid plan by day 30.
 
-**Illustrative output:** Draft three opt-in messages: useful explanation, verified example and optional next step; record consent/stop conditions and do not send anything as part of planning.
+**Illustrative output:** a five-row table (day 1 welcome and quick win, day 4 a common mistake and the fix, day 9 proof from real customers you supply, day 16 an objection answered, day 27 a clear choice to upgrade), each row naming its open loop, value given and ask. No emails are drafted and nothing is sent.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

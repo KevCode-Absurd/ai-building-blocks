@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It runs a tool and then reads the results.
 new_slug: library-change-finder
 name: Library change finder
-summary: Point it at a Python project. Get which library changes came after the
-  AI's training and where your code uses them.
+summary: Find which Python library changes came after your AI's training cutoff and where your code uses them. Get optional notes for AGENTS.md or CLAUDE.md.
 job: test-and-fix-code
 headline: Library change finder
-subhead: AI models write code from what they learned before a cutoff date. If
-  your project pins newer library versions, the model may use old methods.
+subhead: AI models write code from what they learned before a cutoff date. If your project pins newer library versions, the model may use old methods.
 explain: |
   AI models write code from what they learned before a cutoff date. If your project pins newer library versions, the model may use old methods. This finds the gap in your Python project and shows where your code is affected.
 
@@ -17,6 +15,10 @@ when:
   - You upgraded packages and want to know what the AI may get wrong.
   - You want a standing note in your repo about changed library behaviour.
   - You maintain a Python project and use a coding agent daily.
+not_for:
+  - "Your project is not written in Python: this tool only reads Python projects, so check the library release notes yourself."
+  - "You need to know if a library behaves differently behind the same function names: it only compares names and settings, so read the changelog and run your tests."
+  - "You want to fix broken code right now: this finds likely causes, so paste the error into your AI and ask for a fix."
 you_give:
   - A Python project with pinned dependencies
   - The AI model you use
@@ -28,8 +30,31 @@ you_get:
   - The files that use them
   - A previewed notes block for AGENTS.md or CLAUDE.md
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in your Python project folder. It needs to run commands and read files, as in Claude Code, Codex, Cursor or Gemini CLI.
+  - Paste this skill into the chat and tell your AI which model you use.
+  - Say yes when it asks to download the since-cutoff tool. It reads your files and does not run your code.
+  - Read the summary. Check each changed library and the files that use it.
+  - Ask for the notes preview if you want them. Read the diff, then say yes to write it into AGENTS.md or CLAUDE.md.
+output_sample:
+  input:
+    - Your Python project folder with pinned library versions
+    - The AI model you use, such as a Claude or OpenAI model
+    - Your OK to download and run the since-cutoff tool
+    - Your yes or no on writing notes into your project (optional)
+  prerequisites:
+    - An AI that can run commands and read your project files
+    - Internet access, so the tool can fetch library releases and model dates
+    - The uv tool, which runs since-cutoff for you
+  output:
+    - name: Model and cutoff
+      contains: The AI model name and the date its training knowledge ends.
+    - name: Changed libraries
+      contains: Each pinned library that changed its public interface since that date, with the old and new versions.
+    - name: Changed APIs your code uses
+      contains: The functions, classes or settings that were renamed, moved or removed, and that your code calls.
+    - name: Files that use them
+      contains: The files in your project that call each changed part.
+    - name: Notes preview
+      contains: A short diff of the notes block for AGENTS.md or CLAUDE.md, shown before anything is written.
+    - name: AGENTS.md or CLAUDE.md block
+      contains: One marked block of short notes on changed libraries, written only after you agree.

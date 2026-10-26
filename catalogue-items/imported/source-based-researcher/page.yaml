@@ -2,33 +2,61 @@ thinking: medium
 thinking_why: It reads sources and writes up what they say.
 new_slug: source-based-researcher
 name: Source-based researcher
-summary: Ask a question. Get answers from trusted primary sources, saved as a
-  Markdown file in your project.
+summary: Get an answer to a docs or API question from official sources, with a link beside every claim, saved as a Markdown file in your project.
 job: build-software
 headline: Source-based researcher
-subhead: A research note you can trust, saved as a Markdown file in your
-  project. Ask a question and the skill sends a background agent to read for you
-  while you carry on with other work.
+subhead: Ask one question about an API, library or standard. Your AI reads the official docs, source code and specs, not blog posts. You get a short answer, linked claims and a list of gaps, saved as a Markdown file.
 explain: |
-  A research note you can trust, saved as a Markdown file in your project. Ask a question and the skill sends a background agent to read for you while you carry on with other work.
+  This is a source-based research skill for developers. You ask a question and get a note where each claim points to the official source that owns it, such as the vendor docs, the source code or the spec.
 
-  The agent goes to primary sources only: official docs, source code, specs and first-party APIs. It does not lean on blog posts that summarise them. Every claim in the note is traced back to the source that owns it and cited. The file is saved where your repo already keeps notes, or in a sensible place if none exists, and you are told where.
+  Many answers online repeat each other and drift from the original. This skill goes past the summaries. It cites only pages your AI opened, and it lists what it could not confirm instead of filling the hole.
+
+  The work runs in a background agent, so you can keep coding while it reads. The note is saved where your project already keeps notes, and you are told where.
 when:
-  - You need facts about an API or library before you build with it.
-  - You want a topic researched while you keep coding.
-  - You do not trust second-hand summaries and want the original source.
-  - Your team keeps research notes in the repo and needs one more.
+  - You need to know how an API or library behaves before you build with it.
+  - A teammate quotes a blog post and you want to see what the official docs say.
+  - You want a topic read up while you keep working on something else.
+  - Your project keeps research notes in the repo and you need one more.
+not_for:
+  - "You want opinions, market views or customer research: use the Community evidence researcher or the Cited research report writer."
+  - "You want a long report with every quote checked: use the Cited research report writer."
+  - "You have no web access and no docs on hand: your AI cannot read sources, so it should stop and tell you."
 you_give:
-  - The question to research
-  - Where notes are kept in your repo (optional)
-  - Sources you already trust (optional)
+  - The question to research, in one or two sentences
+  - Where your project keeps notes (optional)
+  - Sources you already trust, such as a docs link (optional)
 you_get:
-  - A Markdown research file in your project
-  - Citations for every claim
-  - The file location
+  - A short answer at the top of the note
+  - Findings with a source link and read date beside each
+  - A Gaps list of anything it could not confirm
+  - A Markdown file saved in your project
+  - The file path in the reply
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and save files.
+  - Use an AI that can browse the web and save files, such as Claude Code or Codex. A plain chat can do it if you save the reply yourself.
+  - Add this skill to your AI, or paste the instructions into the chat.
+  - Type your question, for example "How does Stripe handle webhook retries?" Add any docs links you trust.
+  - Open the note. Check the short answer against the links, and read the Gaps list first.
+  - Fix any gap by finding the source yourself or asking a narrower follow-up question.
+output_sample:
+  input:
+    - One clear question about an API, library or standard
+    - A docs link you trust (optional)
+    - The folder where your project keeps notes (optional)
+  prerequisites:
+    - An AI that can open web pages
+    - A way to save a file, or you copy the reply yourself
+  output:
+    - name: Short answer
+      contains: Two to four sentences that answer the question, or say "not found".
+    - name: Findings
+      contains: One claim per line, each with its source link and the date it was read.
+    - name: Gaps
+      contains: What could not be confirmed and why, such as a page that was out of reach.
+    - name: Sources read
+      contains: Every page the agent opened, with link and read date.
+    - name: The saved file
+      contains: A Markdown note placed where your project already keeps notes, with its path in the reply.
+works_best_with: Claude Code or Codex, because they can browse and save the file. Add a docs link you trust to speed it up and keep it on topic.
+terms:
+  primary source: The page that owns a fact, such as official docs, source code or a spec. A blog post about it is a secondary source.
+  background agent: A helper your AI starts to do the reading while you carry on.

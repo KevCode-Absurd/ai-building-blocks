@@ -1,0 +1,42 @@
+slug: agency-engineering-incident-response-commander
+name: Incident Response Commander agent
+summary: Get an incident response plan with evidence, owners and recovery
+  checks. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-incident-response-commander.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-incident-response-commander.md
+  licence: MIT
+  original_name: Incident Response Commander
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 89b9c1294879dd24804c8b6d7805fde193e868a3c930a1ac515a36d527b8522a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Incident Response Commander
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Incident Response Commander
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-incident-response-commander.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

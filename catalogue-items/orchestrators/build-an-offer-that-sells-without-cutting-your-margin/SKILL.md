@@ -43,11 +43,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Offer builder that answers buyer doubts.** Use the skill `offer-builder`. Builds a first offer that answers the buyer's biggest doubts.
-2. **Gift-with-purchase planner.** Use the skill `gift-with-purchase-planner`. Give it the offer from the steps before. Adds a gift or tier to the offer and works out what each tier costs you.
-3. **Store guarantee planner.** Use the skill `store-guarantee-planner`. Give it the offer from the steps before. Adds a guarantee to the offer and counts what refunds would cost.
-4. **Discount impact checker.** Use the skill `discount-impact-checker`. Give it the offer from the steps before. Tests the offer against a plain discount and shows the return on ad spend it must hit.
-5. **Offer profit-per-session checker.** Use the skill `offer-profit-per-session-checker`. Give it the offer from the steps before. Compares the offer's profit per visitor with your current one before you launch it.
+1. **Offer builder that answers buyer doubts.** Use the skill `offer-builder`. Builds a first offer that answers the buyer's biggest doubts. Hands step 2 the offer.
+2. **Gift-with-purchase planner.** Use the skill `gift-with-purchase-planner`. Give it the offer from the steps before. Takes the offer from step 1 and adds a gift or tier, with what each tier costs you. Hands step 3 the updated offer.
+3. **Store guarantee planner.** Use the skill `store-guarantee-planner`. Give it the offer from the steps before. Takes the offer from step 2 and adds a guarantee, counting what refunds would cost. Hands steps 4 and 5 the finished offer.
+4. **Discount impact checker.** Use the skill `discount-impact-checker`. Give it the offer from the steps before. Tests the finished offer against a plain discount and shows the return on ad spend it must hit. Hands step 5 a report with the costs per order and the discount to compare against.
+5. **Offer profit-per-session checker.** Use the skill `offer-profit-per-session-checker`. Give it the offer and the audit report from the steps before. Uses the finished offer from step 3, the discount report from step 4 and your own sessions and orders (your performance sheet). Hands you the profit per visitor of each version, so you launch the winner.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

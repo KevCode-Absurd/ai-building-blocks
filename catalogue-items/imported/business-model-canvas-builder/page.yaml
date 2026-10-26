@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It asks questions and checks that every block fits the others.
 new_slug: business-model-canvas-builder
 name: Business model canvas builder
-summary: Describe your business. Get a nine-block canvas with the gaps between
-  customers, costs and revenue listed.
+summary: Build a business model canvas for your business. Give it your offer, customers and income. You get nine blocks and a list of gaps to fix.
 job: plan-strategy
 headline: Business model canvas builder
-subhead: Describe your business, who buys from you and how you earn money. It
-  fills the nine blocks of a Business Model Canvas, starting with the match
-  between your offer and your customers. You get the canvas, a cost and revenue
-  consistency check and a list of gaps to fix.
+subhead: Describe your business, who buys from you and how you earn money. It fills the nine blocks of a Business Model Canvas, starting with the match between your offer and your customers. You get the canvas, a cost and revenue consistency check and a list of gaps to fix.
 explain: |
   A nine-block Business Model Canvas for your business, checked so that customers, value, costs and revenue all line up.
 
@@ -19,6 +15,10 @@ when:
   - You want to check whether your costs and revenue really fit your customers.
   - You are thinking about a pivot and need to test the logic.
   - Your business feels fine but profit is thin and you cannot see why.
+not_for:
+  - "You need market proof that people will buy: talk to real customers or run a small test first."
+  - "You need a profit and loss forecast or cash plan: build it in a spreadsheet or ask an accountant."
+  - "You need legal advice on company structure: ask a lawyer or an accountant."
 you_give:
   - A description of your business
   - Who your customers are
@@ -30,7 +30,27 @@ you_get:
   - Cost and revenue consistency check
   - A list of gaps to fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Describe your business, who buys from you and how you earn money. Add your main costs if you know them.
+  - Answer any questions your AI asks. It works in steps, so expect a few rounds.
+  - "Check the first two blocks: does your offer really match your customers? Fix this before you go on."
+  - Read the consistency check and the gaps list. Fix each gap, then ask your AI to check again.
+output_sample:
+  input:
+    - A description of your business
+    - Who your customers are
+    - How you earn money
+    - Your main costs (optional)
+  output:
+    - name: Value proposition and customer segments
+      contains: What you offer and who it is for, checked so the two match before anything else is filled in.
+    - name: Channels and customer relationships
+      contains: How customers find you, buy from you and stay in touch with you.
+    - name: Key activities, resources and partners
+      contains: The work you must do, what you need to do it, and who helps you.
+    - name: Cost structure and revenue streams
+      contains: What you pay for and how you earn, with each key activity matched to a cost.
+    - name: Consistency check
+      contains: A check that costs, activities and income fit your customers and your offer.
+    - name: Gaps to fix
+      contains: A list of places where the nine blocks do not fit together.

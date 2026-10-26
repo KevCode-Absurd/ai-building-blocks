@@ -1,51 +1,91 @@
 new_slug: measure-a-clinic-administrative-queue
 name: Measure a clinic administrative queue
 headline: Measure a clinic administrative queue
-summary: Share the source files. Get an administrative delay map, capacity options and measurement gaps.
+summary: Find the admin step that slows your clinic queue. Get a delay map, staff capacity options and data gaps, using deidentified records only.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An administrative delay map, capacity options and measurement gaps. Share deidentified repeated administrative task records, stage owners, active and waiting P50 and P90 times, available staff and approved service targets. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it deidentified records of repeat admin tasks, such as referral letters or records requests, with the owner of each stage and its waiting and working time. It maps where tasks wait, then sets that load against the staff you have.
 explain: |-
-  An administrative delay map, capacity options and measurement gaps.
+  A slow clinic admin queue is easy to feel and hard to measure. Without stage times, each person blames a different step. This workflow finds the clinic queue bottleneck from your own records.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Only administrative stages are analyzed; task timing never determines clinical urgency or care priority. Missing tools or evidence stay visible in the final summary.
+  Step 1 uses small Python scripts from the Process bottleneck finder. For each stage they work out the typical time and the slow-case time, and how much of it is waiting. They rank the stages that hold work up. If you have no timings, you get a plan for what to start recording, not a made-up ranking. Step 2 sets the admin workload against the qualified staff you have and the duties they cannot drop.
+
+  Only admin stages are measured. Time in the queue never decides how urgent a patient is, and this workflow never ranks patients. Files must be deidentified before you share them. The checklist is in the how-to-use steps.
 when:
-  - You need an administrative delay map, capacity options and measurement gaps.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Referral letters or records requests take longer than your clinic promises.
+  - Your admin team is busy all day but the queue does not shrink.
+  - You are asked for evidence before adding a part-time admin role.
+  - A new process went in and you want to see if the waits changed.
+not_for:
+  - You need to decide who is seen first or how urgent a case is. That is a clinical decision for clinical staff.
+  - Your files still hold names, dates of birth or patient numbers. Remove them first. This workflow stops when it sees them.
+  - You want one slow process mapped, outside a clinic. Use the Process bottleneck finder.
+  - You only need staff hours set against workload, with no stage times. Use the Team capacity planner.
+  - Work keeps missing deadlines across a whole team. Use the Trace why work keeps missing deadlines workflow.
 you_give:
-  - Deidentified repeated administrative task records, stage owners, active and waiting P50 and P90 times, available staff and approved service targets.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: The bundled Python process tools."
+  - Deidentified task records, one row per task and stage (from your practice system or a log you keep)
+  - The role that owns each stage, such as front desk or referral coordinator
+  - Working time and waiting time for each stage, as minutes or days
+  - "The admin staff you have: roles, weekly hours and fixed duties"
+  - Your service target for the queue, such as referrals sent within 3 days (optional)
 you_get:
-  - An administrative delay map, capacity options and measurement gaps.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A delay map: each admin stage with typical and slow-case working and waiting time"
+  - The stage that holds work up most, with a likely cause
+  - Staff hours against admin workload, with options and their trade-offs
+  - A list of data gaps, with what to start recording
+  - A check of your files for names and numbers before any analysis
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Before you share anything, remove names, dates of birth, addresses, phone numbers, emails, patient or record numbers and free-text notes. Use a task ID and role names. Your clinic's privacy rules decide what counts as deidentified, so ask your privacy lead if unsure.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run Python code, since small scripts do the math.
+  - Add the workflow pack and your records, then say your service target and which roles are on the team.
+  - After step 1, check the delay map against what your staff say. Check that a stage ranked first really holds tasks up.
+  - After step 2, read the options with your clinic operations lead before changing any rota. Fill every MISSING line first.
 how_it_works:
   - title: Process bottleneck finder
-    text: Use the bundled deterministic process methods on actual repeated administrative stages and timing evidence. If timing is absent, return an instrumentation plan rather than a measured bottleneck ranking.
+    text: "Checks the files for names or numbers first and stops if it finds any. Then runs the stage math: typical time, slow-case time, waiting share and rework. Hands step 2 the stage workload and the ranked stages. If there are no timings, it hands over a plan for what to record. Check before moving on: every stage has an owner role and a unit."
   - title: Team capacity planner
-    text: Compare administrative workload and actual qualified staff availability, retaining fixed duties and uncertainty; propose options for the clinic operations owner.
+    text: "Sets the admin workload from step 1 against the staff you listed, keeping fixed duties and uncertainty visible. Returns options for the clinic operations owner to weigh. Check before moving on: staff hours come from your rota, not from a guess."
 output_shape: |-
-  Scope and source coverage
-  An administrative delay map, capacity options and measurement gaps.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  DATA CHECK         <rows, stages, period> | names or numbers found: <none, or the column>
+  DELAY MAP          <stage> | <owner role> | working <typical / slow> | waiting <typical / slow> | share of total
+  SLOWEST STAGE      <stage> | why it ranks first | likely cause | what to measure next
+  CAPACITY           <role> | admin hours needed | hours available | gap or spare
+  OPTIONS            <option> | what it frees | trade-off or risk
+  MEASUREMENT GAPS   <missing timing or owner> | how to start recording it
+  MISSING            <each gap, and what it stops>
+  CHECKS MISSED      <one line each, or none>
+output_sample:
+  input:
+    - Deidentified task records, one row per task and stage
+    - The owner role and the working and waiting time of each stage
+    - Your admin staff, their hours and fixed duties
+    - Your service target for the queue (optional)
+  prerequisites:
+    - Files with names, dates of birth and patient numbers removed
+    - An AI that can run Python code, since the stage math uses small scripts
+  output:
+    - name: Data check
+      contains: Whether your files still hold names or numbers, and which column, before anything else runs.
+    - name: Delay map
+      contains: Each admin stage with typical and slow-case working and waiting time.
+    - name: Slowest stage
+      contains: The stage that holds work up most, with a likely cause and what to measure next.
+    - name: Capacity table
+      contains: Admin hours needed against hours your staff have, by role, with gaps and spare time.
+    - name: Options
+      contains: Ways to close the gap, each with what it frees and what it risks.
+    - name: Measurement gaps
+      contains: Timings or owners you lack, and how to start recording them.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and each check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Only administrative stages are analyzed; task timing never determines clinical urgency or care priority.
+  - what: Without timings
+    how: Share stage names and owners only. You get a plan for what to record, not a ranking.
+  - what: A before and after
+    how: Run it on two periods, such as before and after a new process. Compare the two delay maps.
+  - what: A smaller scope
+    how: Pick one queue, such as referrals. Mixed queues blur the stage times.
 judge:
   - Only administrative stages are analyzed; task timing never determines clinical urgency or care priority.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,16 +98,27 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep a small log of stage start and end times, with a task ID only, so the next run has real timings.
+  - Write your service target once and paste it every run, so results stay comparable.
+  - Have a named person check each option before any rota changes.
 works_best_with:
   tools:
-    - name: The bundled Python process tools
-      why: Meaningful bottleneck estimates need measured stage owners, active/wait times and repeated-work evidence.
+    - name: A chat AI that can run Python code
+      why: The Process bottleneck finder uses small scripts for the stage math. Without code, the AI does the sums by hand and says so under CHECKS MISSED.
+    - name: Your practice management or task system
+      why: Export the task log from it, then remove identifiers before you share it.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A rota showing real staff hours, not contracted hours.
+    - A named reviewer from clinic operations.
 terms:
+  - term: Deidentified
+    meaning: Records with names, dates of birth, contact details and patient numbers removed, so no person can be picked out.
+  - term: Typical and slow-case time
+    meaning: The middle time for a task, and the time that nine in ten tasks beat. Experts call them P50 and P90.
+  - term: Bottleneck
+    meaning: The stage where work piles up and holds back everything after it.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+next:
+  - trace-why-work-keeps-missing-deadlines
+  - prepare-a-referral-administration-handover

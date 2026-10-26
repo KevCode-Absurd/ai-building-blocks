@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It turns a brand sound into rules with examples.
 new_slug: voice-and-tone-guide-writer
 name: Voice and tone guide writer
-summary: Describe how your brand talks. Get voice traits, tone by situation,
-  word lists and side-by-side examples.
+summary: Write a brand voice and tone guide your team or AI can follow. Get voice traits, tone by situation, word lists and before and after examples.
 job: brand-file
 headline: Voice and tone guide writer
-subhead: A voice and tone guide anyone can use, from a new writer to an AI
-  assistant. It tells people how your brand sounds and how that shifts from a
-  sales page to an apology email.
+subhead: A voice and tone guide anyone can use, from a new writer to an AI assistant. It tells people how your brand sounds and how that shifts from a sales page to an apology email.
 explain: |
   A voice and tone guide anyone can use, from a new writer to an AI assistant. It tells people how your brand sounds and how that shifts from a sales page to an apology email.
 
@@ -18,6 +15,10 @@ when:
   - You are handing writing to a freelancer or an AI tool and need rules.
   - Your brand has changed and the old voice no longer fits.
   - Your writing feels off but you cannot say why.
+not_for:
+  - "You need one piece of copy written now: use a copywriting skill or ask your AI to draft it with your finished voice guide."
+  - "You want logos, colors or fonts: use a brand identity tool or a designer, since this guide covers writing only."
+  - "You have a finished draft to check before it goes live: check it against your voice guide with an editing review, not this guide writer."
 you_give:
   - A short description of the brand and audience
   - Five to ten samples of your writing (optional)
@@ -29,7 +30,30 @@ you_get:
   - Words and phrases to use and avoid
   - Side-by-side before and after examples
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page. No code, files or paid tools are needed.
+  - Tell your AI about your brand and who you write for. Paste 5 to 10 writing samples if you have them.
+  - Name 3 to 5 brands whose voice you like, and any traits you already want.
+  - Read the voice traits first. Check that each one has a clear 'not' limit, and change any that sound like every other brand.
+  - Test the guide with a fresh writing task. Ask your AI to score the result against each trait, then fix the guide where it falls short.
+  - Save the result as voice.md. Share it with writers, freelancers and your AI tools.
+output_sample:
+  input:
+    - A short description of your brand and who it speaks to
+    - 5 to 10 samples of your current writing (optional)
+    - 3 to 5 brands whose voice you like
+    - Any voice traits you already want (optional)
+  output:
+    - name: Voice attributes
+      contains: Three to five traits, each paired with a 'we are not' limit that shows where the line is.
+    - name: Tone shifts by context
+      contains: How the same voice changes for situations like onboarding, errors, pricing, support and bad news.
+    - name: Vocabulary preferences
+      contains: Words and phrases the brand uses, avoids or has redefined, and whether to keep industry jargon.
+    - name: Grammar and style rules
+      contains: Choices on contractions, sentence length, pronouns, capitalization, numbers and the Oxford comma.
+    - name: Paired examples library
+      contains: At least 15 pairs of off-voice and on-voice copy, each with a short note on what changed.
+    - name: Anti-patterns
+      contains: Specific phrases and constructions your writers should avoid.
+    - name: References
+      contains: The brands and writers the voice draws from.

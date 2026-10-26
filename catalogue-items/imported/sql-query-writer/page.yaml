@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Turning a clear question into SQL is a standard task.
 new_slug: sql-query-writer
 name: SQL query writer
-summary: Describe what you want to know. Get a working SQL query, using joins,
-  groups, windows and CTEs as needed.
+summary: Turn a plain question into a working SQL query. Paste your table layout and get a clear, commented query with a plain explanation of how it works.
 job: track-numbers
 headline: SQL query writer
-subhead: A working SQL query built from a question like which customers spent
-  the most last quarter. The skill first works out what you want measured, which
-  things are involved and how to group or sort the result.
+subhead: A working SQL query built from a question like which customers spent the most last quarter. The skill first works out what you want measured, which things are involved and how to group or sort the result.
 explain: |
   A working SQL query built from a question like which customers spent the most last quarter. The skill first works out what you want measured, which things are involved and how to group or sort the result. It then maps your words to the tables and columns in your schema and finds the right join path, avoiding extra joins that inflate the numbers.
 
@@ -18,6 +15,10 @@ when:
   - You need a ranking or running total and are unsure how to write it.
   - A multi-step calculation needs to stay readable.
   - A query you wrote returns too many rows.
+not_for:
+  - "You already have a slow query and want it faster: use a query optimization skill, or ask your database admin to check indexes."
+  - "You have no table or column list to share: first export your schema from your database tool, or ask whoever manages the data."
+  - "You want charts or a finished report: run the query, then paste the results into a spreadsheet."
 you_give:
   - Your question in plain words
   - The table and column layout
@@ -29,7 +30,26 @@ you_get:
   - A plain explanation of how it works
   - Index or speed suggestions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste your table and column list. Add your database type if you know it.
+  - Write your question in plain words. Add any dates or filters.
+  - Read the explanation and assumptions. Fix anything that does not match your data.
+  - Run the query on a test copy of your data first. Check the result against a total you already know.
+output_sample:
+  input:
+    - Your question in plain words
+    - Your table and column layout
+    - Your database type, such as PostgreSQL or MySQL (optional)
+    - Any filters or time periods
+  prerequisites:
+    - A database you can run queries on, to test the result
+    - An AI that can reach your database, only if you want it to check the speed plan
+  output:
+    - name: SQL query
+      contains: A formatted query with clear names, indented clauses and comments on any tricky logic.
+    - name: Plain-language explanation
+      contains: What the query does, what columns and rows you will see, and how it reads your question.
+    - name: Assumptions
+      contains: Guesses made about your tables or data, so you can check them before you trust the result.
+    - name: Speed notes
+      contains: Index or rewrite ideas when the query may run slowly. Needs a database to check the plan.

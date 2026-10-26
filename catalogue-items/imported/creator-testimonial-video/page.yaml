@@ -2,38 +2,63 @@ thinking: medium
 thinking_why: The script must sound like a real person, and clips need a check.
 new_slug: creator-testimonial-video
 name: Creator-style testimonial video maker
-summary: Give it a product and a persona. Get a spoken recommendation script and
-  a handheld, creator-style video. Your video model makes it.
+summary: Make a creator-style testimonial video from a product and a persona. You get a spoken script and handheld clips in the look of real people filming themselves.
 job: make-video-ads
 headline: Creator-style testimonial video maker
-subhead: A spoken recommendation script and a handheld, creator-style video for
-  a product, built around a persona you choose. It looks like a real person
-  filming themselves, which is the style that often gets watched on social
-  feeds.
+subhead: Give it your product and the kind of person who would recommend it. It writes a short spoken script and a shot list. Your own video model then makes handheld clips that look like someone filming themselves.
 explain: |
   A spoken recommendation script and a handheld, creator-style video for a product, built around a persona you choose. It looks like a real person filming themselves, which is the style that often gets watched on social feeds.
 
   You give the product and describe the person speaking. The skill starts with a compliance note on what you may and may not claim, then writes the persona and script for a short talking video. It sets out how to call your video tool and the steps to run, and answers common problems. The video itself is made by your own video model, so you need access to one. Instructions are in Chinese.
 when:
   - You need a product video and have no creator to film it.
-  - You want to test several personas for the same product.
-  - You sell on a platform where authentic-style videos perform.
+  - You want to test two or three personas for the same product.
+  - You sell on a social platform where casual videos get watched.
   - You need a script that stays inside advertising rules.
+not_for:
+  - "You want real customer reviews: use a real video from a buyer, with their permission. This tool makes acted scenes, not real buyer reviews."
+  - "You need the speaker's lips to match the words: add a voiceover in a video editor, or use shots that do not show the face."
+  - "You have no video model account or key: write the script here, then ask a freelance creator to film it."
 you_give:
-  - Product and key points
-  - Persona of the speaker
-  - Platform and video length
-  - Access to a video model
+  - Your product and its key points
+  - The persona of the speaker (who they are and why they are credible)
+  - Your platform and video length
+  - A face image of the speaker (optional)
+  - Your video model account and key (fal or Replicate)
 you_get:
-  - Compliance notes
-  - Persona description
-  - Spoken script
-  - Video generation steps
+  - A note on what you may and may not claim
+  - A persona for the speaker
+  - A short spoken script
+  - A shot list with captions
+  - Steps to make the video with your video model
   - Fixes for common problems
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own video model key
-    (fal or Replicate). Add ffmpeg to join clips.
+  - Paste the skill into Claude, ChatGPT or Gemini. The skill text is in Chinese, so ask your AI to reply in English.
+  - Give it your product, key points, platform and the persona you want.
+  - Read the compliance note and the script. Edit the script until it sounds like a real person talking.
+  - To make video, you need an AI that can run code, plus your own paid fal or Replicate key. Each clip costs money, so run the dry run first.
+  - Add your own face image so every clip shows the same person. Join the clips with ffmpeg.
+  - Add captions and a voiceover, since lip sync is weak. Label the video as AI-made if the platform asks.
+output_sample:
+  input:
+    - Your product and its key selling points
+    - The persona of the speaker, such as who they are and why they can be trusted
+    - Your platform and video length
+    - A face image of the speaker (optional, keeps the same person in every clip)
+  prerequisites:
+    - An AI that can run code and files, for the video step
+    - Your own video model account and key, such as fal or Replicate
+    - ffmpeg, a free tool, to join the clips (optional)
+  output:
+    - name: Compliance note
+      contains: What you may and may not claim, and a reminder to label AI-made video where the platform asks.
+    - name: Persona
+      contains: Who is speaking, in what setting, and why a viewer would trust them.
+    - name: Spoken script
+      contains: A 15-second script with a hook, a turn, a product close-up and a casual closing reason.
+    - name: Storyboard
+      contains: A shot list that swaps talking shots with product close-ups, each with a prompt and a caption.
+    - name: Video generation steps
+      contains: The command to run your video model, with a dry run first, then the real run.
+    - name: Fixes for common problems
+      contains: Causes and fixes for ad-like looks, changing faces, lip mismatch and stiff expressions.

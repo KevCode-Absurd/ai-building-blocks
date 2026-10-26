@@ -1,6 +1,6 @@
 new_slug: rating-gap-product-finder
 name: "Rating gap product finder"
-summary: "Name a category. Get pain points ranked by urgency and sub-categories with weak ratings but strong search."
+summary: "Find product gaps where buyers search a lot but rate what exists low. Give it a category and get ranked pain points with proof links."
 job: find-products
 thinking: medium
 thinking_why: "It sorts many findings and must check each on two sources, which takes some care."
@@ -17,6 +17,10 @@ when:
   - You are choosing what to make or sell and want proof of unmet demand.
   - You see a crowded category and want to know where buyers are unhappy.
   - You have a product idea and want to know which pain to build it around.
+not_for:
+  - "You want a general check of demand for any idea: use the Product demand researcher, which skips the ranking and the rating gap rule."
+  - "You want to find the words buyers use or who to sell to: use the Buyer brief writer."
+  - "You want a final product design or a health, safety or legal check: ask a designer or a qualified person."
 
 you_give:
   - A product category
@@ -34,6 +38,27 @@ how_to_use:
   - Read the ranked pains and the proof links. Open a few to check they are real.
   - Check each gap on a second source, such as search volume, before you keep it.
   - Pick one gap and ask for a product concept for a narrow group.
+output_sample:
+  input:
+    - Your product category
+    - The buyer group you want to sell to
+    - Review or Q&A text you already have (optional)
+    - Search volume or sales numbers (optional)
+  prerequisites:
+    - An AI that can search the web, or review text you paste in
+  output:
+    - name: Top pain points
+      contains: Up to ten unmet pains, grouped by theme and ranked by urgency and willingness to pay, each with a link or quote.
+    - name: Willingness to pay
+      contains: Quotes from people who say they would pay more for a fix, or a note that none were found.
+    - name: Rating gaps
+      contains: Sub-categories with a low average rating and strong search, each confirmed on two kinds of evidence.
+    - name: Dropped
+      contains: Gaps that only had one source, so you can see what was left out.
+    - name: Concept
+      contains: A product idea for one narrow buyer group, shown as a mood board and not a design.
+    - name: Checks missed and missing
+      contains: What the AI could not check, and any search, sales or review data it lacked.
 
 how_it_works:
   - title: Asks for the top ten pains

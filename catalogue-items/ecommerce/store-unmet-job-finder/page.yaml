@@ -1,6 +1,6 @@
 new_slug: store-unmet-job-finder
 name: "Store unmet job finder"
-summary: "Paste reviews, tickets, returns and searches. Get ranked unmet-job leads in five groups, each with a test."
+summary: "Find unmet jobs in your store's reviews, tickets, returns and searches. Get ranked leads in five groups, each with a cheap test."
 job: understand-customers
 thinking: medium
 thinking_why: "It searches many messages for five kinds of clue and ranks leads by a fixed rule. A mid-range model does this well."
@@ -17,6 +17,10 @@ when:
   - Growth feels stuck and every idea is a tweak to the current range.
   - You have reviews, tickets and search terms, and no list of what people are trying to do that you do not serve.
   - You want a cheap test for a new angle or bundle before you order stock.
+not_for:
+  - "Your store has under 50 pieces of customer text, or a brand-new product with no buyers yet: use the Job hunting spot finder or ask buyers in a short survey."
+  - "You already know the job and want it written up in full: use the Job spec writer."
+  - "You want a rival's ad gaps, not gaps in your own data: use the Competitor ad gap finder."
 
 you_give:
   - Reviews, support tickets, returns notes, on-site search terms and abandoned checkout notes, pasted (at least 50 together)
@@ -34,6 +38,28 @@ how_to_use:
   - Read the leads from the top. Check the evidence quotes before you trust a rank.
   - "Take the top lead's cheapest test: build a page or ad angle, not the product."
   - Watch the result for a few weeks before you order samples or stock.
+output_sample:
+  input:
+    - Your reviews, support tickets, return notes, on-site search terms and abandoned checkout notes (50 or more items together)
+    - What you sell and who buys it today
+    - Wishlist or notify-me counts and photos customers send (optional)
+    - Your test budget (optional)
+  prerequisites:
+    - A chat AI that can read pasted text
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: DATA READ
+      contains: How many items you pasted from each source, and whether that reaches the 50 needed.
+    - name: RANKED LEADS
+      contains: Each lead with its group, evidence quotes, what buyers do now, how they feel, cheapest test and cash needed.
+    - name: GROUP NOTES
+      contains: "One line per group: own life, buys nothing, workarounds, hated tasks and unusual uses."
+    - name: TOO WEAK TO RANK
+      contains: Leads with only a practical reason or a single mention.
+    - name: MISSING
+      contains: Any data source, product detail or date you did not give.
+    - name: CHECKS MISSED
+      contains: Any check the result failed, or none.
 
 how_it_works:
   - title: Starts with your own life

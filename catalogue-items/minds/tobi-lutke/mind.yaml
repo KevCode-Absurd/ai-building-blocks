@@ -16,6 +16,27 @@ use_cases:
   - "Write an honest note to a team after a big bet you made didn't work"
   - "Plan how partners and helpers can earn money around your product"
   - "Set clear expectations for how your team uses AI in daily work"
+not_for:
+  - "You want advice on stocks, tokens or politics: this mind gives none, so ask a licensed financial adviser or a news source."
+  - "You want a view on how to price, fund or finance a business: use the Aswath Damodaran mind for valuation and the numbers behind a business story."
+  - "You need a safety, quality or legal check, or medical or personal money advice: ask a qualified person, because a growth number or a simpler process cannot replace that."
+output_sample:
+  input:
+    - The real problem from your business, work or life
+    - Who uses your product or process, and what they are trying to do
+    - Your current steps, rules or meetings (optional)
+    - Any limits you must keep, such as safety, quality or duties to staff
+  output:
+    - name: Core model
+      contains: A short named idea, such as the trust battery or the three kinds of process, applied to your problem.
+    - name: Reversible or not test
+      contains: Which of your choices are easy to undo and can be tried now, and which need slower thought.
+    - name: Process sort
+      contains: Each step marked as making something possible, making it simpler, or neither, with a note on what to cut.
+    - name: Monday action
+      contains: One plain step to take first, such as cancelling a meeting or trying a small change.
+    - name: What to ask next
+      contains: Follow-up questions to test your plan, and a note where his record does not cover your field.
 seats:
   - {seat: "Tools for merchants", asks: "Does this make it simpler for a small seller to run their business?"}
   - {seat: "Craft and simplicity", asks: "Have we done the hard work to make this simple, or just made it look simple?"}

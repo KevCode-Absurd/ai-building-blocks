@@ -1,6 +1,6 @@
 new_slug: write-an-ad-and-a-landing-page-that-keep-the-same-promise
 name: "Write an ad and a page with the same promise"
-summary: Give it your product facts and reviews. Get an ad and a matching page that repeat the promise, each checked.
+summary: Write an ad and a landing page that keep the same promise. Give it product facts and reviews. You get a checked ad and a matching page.
 job: write-ad-copy
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Paid clicks arrive but buyers bounce because the page does not match the ad that brought them.
   - You are launching a product and want the ad and page written together.
   - You have good reviews but your ad and page use none of the words in them.
+not_for:
+  - "You have no reviews yet or no paid traffic: first use the Buyer brief writer to learn what your buyers want."
+  - "You only need the page: use the Ad-matched landing page writer."
+  - "You only want to score a page you already have: use the 30-point landing page checker."
 you_give:
   - Product facts, such as what it does, price, offer, guarantee and delivery
   - Customer reviews or support questions, each with its source
@@ -21,8 +25,8 @@ you_give:
   - Rival products and the claims they make (optional)
   - Your brand file and buyer description (optional)
 you_get:
-  - A pain-point ad with a four-part check and a list of policy and truth flags
-  - A five-part check with a score out of 100 and fixes in order
+  - A pain-point ad with a check on the problem and a list of policy and truth flags
+  - A five-part ad check with a score out of 100 and fixes in order
   - Landing page copy whose first screen repeats the ad's promise, with the full cost stated
   - A map of which review answers which doubt on the page
   - A 30-point page check with a score out of 100 and the five fixes to make first
@@ -32,17 +36,39 @@ how_to_use:
   - Paste your product facts and reviews. Include the source of each review.
   - Read the checked ad after step 2. The page is built from it, so change it now if a line is wrong.
   - Make the five fixes the last check lists, then publish the ad and page together.
+output_sample:
+  input:
+    - Your product facts, such as price, offer, guarantee and delivery
+    - Customer reviews or support questions, each with its source
+    - The problem the product solves and proof the fix works
+    - Your brand brain, offer or buyer brief (optional)
+  prerequisites:
+    - An AI that can read files and save step results as files
+    - Your approval before anything is sent, published or paid for
+  output:
+    - name: Pain-point ad builder result
+      contains: A check of the problem, the ad in problem, fix, proof, step order, and policy and truth flags.
+    - name: Five-part ad checker result
+      contains: Pass or fail for each part, a score out of 100, a length verdict and fixes in order.
+    - name: Ad-matched landing page writer result
+      contains: A page brief, a first screen from the ad, doubts with answers, a cost block and missing facts.
+    - name: Store social proof placer result
+      contains: Reviews matched to doubts, a layout map, hesitation spots and reviews dropped.
+    - name: Landing page 30-point checker result
+      contains: A short verdict, 30 checks with evidence, a score out of 100 and the five fixes to make first.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Pain-point ad builder
     text: Checks the problem is real and the fix is provable, then writes the ad in problem, fix, proof, step order. It lists policy and truth flags.
   - title: Five-part ad checker
-    text: Finds the five parts of the ad, tests each against a pass line, scores the ad out of 100 and fixes the weak lines.
+    text: Finds the five parts of the ad, tests each against a pass line, scores the ad out of 100 and lists fixes for the weak lines, which you apply to the ad.
   - title: Ad-matched landing page writer
-    text: Opens the page where the checked ad left off, lists the buyer's doubts and answers each in its own section, and states the full cost.
+    text: Opens the page where the checked ad left off, lists the buyer's doubts and answers each in its own section, and states the full cost. It uses the ad with the fixes applied.
   - title: Store social proof placer
-    text: Matches each real review to a doubt on the page, puts proof where visitors hesitate and lists reviews it dropped as not real or not similar.
+    text: Matches each real review to a doubt on the page, puts proof where visitors hesitate and lists reviews it dropped as not real or not similar. You apply its proof map to the page.
   - title: Landing page 30-point checker
-    text: Runs 30 yes-or-no checks on the finished page at the five stops a buyer makes, and lists the five fixes to make first.
+    text: Runs 30 yes-or-no checks on the finished page at the five stops a buyer makes, and lists the five fixes to make first. It checks the page with the proof applied.
 output_shape: |-
   STEP 1: PAIN-POINT AD BUILDER
     Four-part check | ad in problem, fix, proof, step order | policy and truth flags

@@ -1,6 +1,6 @@
 slug: skill-breakdown-teaching-planner
 name: "Skill breakdown teaching planner"
-summary: "Paste a skill you know well. Get it broken into teachable steps with the mistake and check for each."
+summary: "Break a skill into 4 to 8 steps a beginner can learn, with a common mistake and a self-check for each, plus a first-hour plan."
 category: general
 boards: []
 type: prompt
@@ -8,10 +8,11 @@ role: plan
 job: ops
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
 uses: []
 origin: own
 version: 1.0.0
 example_pending: true
+needs_mode: manual

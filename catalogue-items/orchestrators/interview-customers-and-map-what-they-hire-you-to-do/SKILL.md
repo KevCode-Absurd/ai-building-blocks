@@ -43,9 +43,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Have five to ten conversations using the questions. Write or record notes straight after each one, and keep the exact words people used.
 
-2. **Customer research analyst.** Use the skill `customer-research-analyst`. Reads your interview notes and makes the buyer profile and the quote file the next steps use.
-3. **Customer job mapper.** Use the skill `customer-job-mapper`. Give it the persona from the steps before. Takes the buyer profile and writes the jobs they hire you for, with the trigger and rivals.
-4. **Customer path blueprint maker.** Use the skill `customer-path-blueprint-maker`. Give it the persona and the voc reviews from the steps before. Uses the buyer profile and the quote file to map each step they take and where it hurts.
+2. **Customer research analyst.** Use the skill `customer-research-analyst`. Give it your own interview notes from the talks, not step 1's questions. Makes the buyer profile and the quote file that steps 3 and 4 both use.
+3. **Customer job mapper.** Use the skill `customer-job-mapper`. Give it the buyer profile from step 2. Writes the jobs they hire you for, with the trigger and rivals. This is one of two final documents; step 4 does not need it.
+4. **Customer path blueprint maker.** Use the skill `customer-path-blueprint-maker`. Give it the buyer profile and the quote file from step 2, not step 3's jobs document. Maps each step they take and where it hurts. This is the second final document.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

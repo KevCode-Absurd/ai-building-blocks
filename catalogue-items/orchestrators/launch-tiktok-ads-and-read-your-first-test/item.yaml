@@ -16,10 +16,10 @@ outputs:
   - {type: plan}
 uses: [tiktok-ads-account-setup-checker, tiktok-starter-campaign-builder, tiktok-ad-test-reader, tiktok-spark-ad-picker]
 steps:
-  - {uses: tiktok-ads-account-setup-checker, note: "Starts by finding what is broken in the account before any money is spent."}
-  - {uses: tiktok-starter-campaign-builder, note: "Builds the starter campaign around the videos you picked."}
-  - {uses: tiktok-ad-test-reader, note: "Reads the first results against the plan and decides each ad."}
-  - {uses: tiktok-spark-ad-picker, note: "Picks which posts to boost, using what the test read showed works."}
+  - {uses: tiktok-ads-account-setup-checker, note: "Starts by finding what is broken in the account before any money is spent. Hands a setup report, with the pixel status, to step 2."}
+  - {uses: tiktok-starter-campaign-builder, note: "Builds the starter campaign around the videos you picked, using the pixel status from step 1. Hands the plan, with its audiences and cost target, to step 3."}
+  - {uses: tiktok-ad-test-reader, note: "Reads the first results you exported against the plan and decides each ad. Hands the keep, fix or cut calls to step 4."}
+  - {uses: tiktok-spark-ad-picker, note: "Picks which posts to boost, using your post stats and the best ad from the test read."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/launch-tiktok-ads-and-read-your-first-test/skeleton.yaml

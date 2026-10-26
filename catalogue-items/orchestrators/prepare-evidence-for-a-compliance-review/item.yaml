@@ -1,6 +1,7 @@
 slug: prepare-evidence-for-a-compliance-review
 name: Prepare evidence for a compliance review
-summary: Share the source files. Get an evidence index, gap list and owner-based preparation plan.
+summary: "Prepare evidence for a compliance review: get an evidence index, a gap
+  list and a plan with owners and due dates. Readiness, not certification."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,28 +9,33 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-  - type: meeting_notes
+  - type: brief
     required: false
 outputs:
   - type: audit_report
   - type: spreadsheet
   - type: plan
-  - type: document
 uses:
   - compliance-checklist
   - spreadsheet-checker
   - executive-action-register
 steps:
   - uses: compliance-checklist
-    note: Turn the supplied review scope into control questions and required evidence.
+    note: Turns the supplied review scope into control questions and the evidence
+      each needs. Hands step 2 the checklist of questions with proof types.
   - uses: spreadsheet-checker
-    note: Build a reviewable evidence register from the checklist and source records; verify IDs, scope, evidence dates and gaps without treating a populated cell as proof of compliance.
+    note: "Uses your own source records and takes step 1's checklist as the audit
+      report to check against. Builds a reviewable evidence register: verifies
+      IDs, scope, evidence dates and gaps, and never treats a filled cell as
+      proof of compliance. Hands step 3 the register and its gaps."
   - uses: executive-action-register
-    note: Create an evidence-gathering plan with owners, due dates and dependencies.
+    note: Reads step 2's register and gaps as its notes and creates an
+      evidence-gathering plan with owners, due dates and dependencies. Every
+      action stays proposed until an owner agrees.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -39,13 +45,19 @@ credits:
   - title: Compliance readiness checklist builder
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/legal-and-compliance/compliance-checklist-generation
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Spreadsheet checker
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Executive action register keeper
     by: AI Blocks
     url: https://useaiblocks.com/skills/executive-action-register
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

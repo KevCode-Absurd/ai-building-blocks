@@ -1,6 +1,6 @@
 new_slug: two-version-result-reader
 name: Two-version result reader
-summary: "Paste counts for two ad versions. Get the gap, a luck check and a call: keep, rerun or stop."
+summary: "Check two ad versions for luck. Paste your counts and get the gap, a luck check with the sum shown, and a call to keep, rerun or stop."
 job: read-ad-results
 thinking: low
 thinking_why: It is a few sums and a fixed decision rule.
@@ -14,6 +14,10 @@ when:
   - Your test has run and one version looks ahead.
   - You want to know if a gap is luck.
   - You need a short note on what the test taught.
+not_for:
+  - "You ran only one version: there is no gap to read, so wait until you have a second version to compare."
+  - "Your counts are very small, such as a handful of replies: the call will be rerun, so collect more replies first."
+  - "You want every check and a full report: use the Split-run result reader."
 you_give:
   - Audience, replies and (if you have them) sales and spend for each version
   - The test plan (optional)
@@ -28,6 +32,32 @@ how_to_use:
   - Under the prompt, write the counts for both versions.
   - Add the plan if you have one, so the prompt can check the test was fair.
   - Save the lesson with the date.
+output_sample:
+  input:
+    - Audience size for each version
+    - Replies for each version
+    - Sales and spend for each version (optional)
+    - Your test plan (optional)
+    - Notes on anything odd that happened (optional)
+  output:
+    - name: TABLE
+      contains: Audience, replies, reply rate, sales and spend for each version, side by side.
+    - name: GAP
+      contains: Which version leads, as a percentage of the lower version.
+    - name: LUCK CHECK
+      contains: The sum, and whether the gap is probably real, borderline or luck.
+    - name: FAIR?
+      contains: Whether the test was fair, or what broke it.
+    - name: SALES
+      contains: Sales per 100 replies and cost per sale, if you gave sales.
+    - name: CALL
+      contains: Keep, rerun or stop, with the reason.
+    - name: LESSON
+      contains: One line about what the test taught for this audience.
+    - name: NEXT TEST
+      contains: What to change in the next test.
+    - name: MISSING
+      contains: Anything you did not give that would change the result.
 how_it_works:
   - title: Sets out the table
     text: Rates for both versions.

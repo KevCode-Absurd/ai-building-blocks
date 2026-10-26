@@ -10,6 +10,8 @@ inputs:
   - {type: product_data, required: true}
   - {type: reference_set, required: false}
   - {type: store_capture, required: false}
+  - {type: plan, required: false}
+  - {type: page_layout_spec, required: false}
 outputs:
   - {type: plan}
 uses: []

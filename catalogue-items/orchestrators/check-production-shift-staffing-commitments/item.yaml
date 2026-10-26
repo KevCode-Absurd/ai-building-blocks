@@ -1,6 +1,6 @@
 slug: check-production-shift-staffing-commitments
 name: Check production shift staffing commitments
-summary: Share the source files. Get a shift staffing comparison, dependency gaps and handover options.
+summary: Check if a production shift has enough qualified people for its work orders. Get a staffing comparison, the gaps and a handover note.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,7 +8,7 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
   - type: question
     required: false
@@ -20,9 +20,10 @@ uses:
   - handover-note-writer
 steps:
   - uses: team-capacity-planner
-    note: Compare committed work and real available qualified hours, preserving maintenance, setup, leave and dependency constraints rather than treating every paid hour as production time.
+    note: "Compares work order hours with the qualified hours really available, after maintenance, setup, changeovers and leave, rather than treating every paid hour as production time. Hands the staffing comparison and the gaps to the handover step."
   - uses: handover-note-writer
-    note: Prepare the shift lead handover of supported delivery options, blockers, approved priorities and decisions needing the production owner.
+    note: "Uses step 1's comparison and gaps, plus the priorities you set. Writes the shift lead handover with the options your numbers support, the blockers and the decisions that need the production owner."
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

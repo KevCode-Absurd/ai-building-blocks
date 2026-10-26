@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It counts reasons and groups them.
 new_slug: return-reason-finder
 name: Return reason finder
-summary: Get return reasons counted by product, to find quality problems and
-  listings that mislead.
+summary: Find out why customers return products. Get return reasons counted by product and SKU, so you can spot quality problems and misleading listings.
 job: run-your-store
 headline: Return reason finder
-subhead: Get return reasons counted by product, to find quality problems and
-  listings that mislead. Bring your Shopify store address. Use the result to
-  plan your next step.
+subhead: Get return reasons counted by product, to find quality problems and listings that mislead. Bring your Shopify store address. Use the result to plan your next step.
 explain: |
   A count of why customers send things back, by reason, product and SKU, so you can tell a quality problem from a listing that misleads. Reading it takes minutes instead of scrolling return emails.
 
@@ -18,6 +15,10 @@ when:
   - You suspect a size chart or photo is misleading buyers.
   - A supplier says their quality is fine and you want evidence.
   - You are choosing which listing to rewrite first.
+not_for:
+  - "You want one order's return details: open that order in your Shopify admin."
+  - "You only need quick return totals: use the returns report in Shopify."
+  - "Your store has very few sales or returns: read the return emails yourself, as counts will be too small to trust."
 you_give:
   - Your Shopify store address
   - How many days back to look
@@ -28,8 +29,26 @@ you_get:
   - Share of returns per product
   - Clues pointing to quality or listing problems
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat can't read your store.
+  - Add the skill file, then sign in to your store with read access to orders and returns.
+  - Tell your AI your store address and how many days back to look. The default is 30.
+  - Read the top reasons and top products first. Then open the listings of the worst products.
+  - Check the photos, size chart and description. Rewrite the listing if buyers say not as described.
+output_sample:
+  input:
+    - Your Shopify store address
+    - How many days back to look (optional, 30 by default)
+    - Fewest returns a product needs to be shown (optional, 3 by default)
+    - "Output style: readable summary or JSON (optional)"
+  prerequisites:
+    - An AI tool that can run Shopify CLI commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Read access to your store's orders and returns, granted when you sign in
+  output:
+    - name: Summary block
+      contains: Total returns, total orders and your return rate for the chosen window.
+    - name: Top reasons
+      contains: Each return reason, such as wrong size or not as described, with its count and share.
+    - name: Top products by return volume
+      contains: The products with the most returns, shown with their SKU.
+    - name: return_reasons_<date>.csv
+      contains: "One row per returned item: return, order, product, SKU, quantity, reason, customer note and date."

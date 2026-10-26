@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Tracing how a model reaches an answer needs careful testing.
 new_slug: model-internals-inspector
 name: Model internals inspector
-summary: "Give it a language model and a question. Get a look inside it: which
-  parts pay attention to what, and why."
+summary: "Look inside a GPT-style language model with this model internals inspector. See which layers and attention heads shape one answer, using Python code."
 job: research-topics
 headline: Model internals inspector
-subhead: "Give it a language model and a question. Get a look inside it: which
-  parts pay attention to what, and why. Bring a GPT-style model name. Use the
-  result to plan your next step."
+subhead: "Give it a language model and a question. Get a look inside it: which parts pay attention to what, and why. Bring a GPT-style model name. Use the result to plan your next step."
 explain: |
   A look inside a language model that answers questions like which parts of it attend to which words, and which parts caused a specific answer. You get evidence, not guesses.
 
@@ -18,6 +15,10 @@ when:
   - You are tracing why a model gets one prompt right and a near copy wrong.
   - You study circuits, such as how a model copies earlier words.
   - You need to test one change inside a model and see the effect.
+not_for:
+  - "You have no Python setup or research background: ask a developer or ML researcher to run it, or read the model maker's own notes instead."
+  - "You want to train or study sparse autoencoders: use SAELens, a separate Python library, instead of this skill."
+  - "You want to look inside a model that is not GPT-style: use nnsight or pyvene, which handle other designs."
 you_give:
   - A GPT-style model name
   - Two prompts to compare, one right and one wrong (optional)
@@ -30,8 +31,32 @@ you_get:
   - A short reading of which layers matter
   - Next experiments to run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Check you have what it needs first. This skill needs Python, and a GPU for larger models. Some research background helps.
+  - Open an AI that can run code, or paste the skill into a chat and run the code on your own computer.
+  - Give your AI the model name, your prompts and your question about the model.
+  - Ask it to run the tests. Start with activation patching, then attention maps.
+  - Read the heatmap and the table of top layers and heads. Check the caveats before you trust the result.
+  - Pick one next experiment and run it to confirm what you found.
+output_sample:
+  input:
+    - The name of a GPT-style model
+    - A clean prompt and a changed prompt that differ a little (optional)
+    - The question you have about how the model behaves
+  prerequisites:
+    - An AI that can run Python code
+    - A GPU for larger models
+    - The transformer-lens and torch packages installed
+    - A Hugging Face token for gated models such as LLaMA
+  output:
+    - name: Model loading code
+      contains: Python that loads your model with hooks on every step inside it.
+    - name: Activation cache
+      contains: The saved values from each layer for your prompt, filtered to save memory.
+    - name: Activation patching heatmap
+      contains: A layer by position grid showing where swapping clean values into the changed run moves the answer.
+    - name: Head contribution map
+      contains: A score for each attention head showing how much it pushes the answer toward one word over another.
+    - name: Induction head scores
+      contains: Attention scores that point to heads which repeat a pattern seen earlier in the text.
+    - name: Caveats and next steps
+      contains: Notes on tokenization, LayerNorm and memory, plus the next tests worth running.

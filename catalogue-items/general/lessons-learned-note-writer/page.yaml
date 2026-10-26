@@ -1,6 +1,6 @@
 new_slug: lessons-learned-note-writer
 name: "Lessons learned note writer"
-summary: "Paste what happened on a finished project. Get a one-page note with what to repeat and what to change."
+summary: "Paste your notes from a finished project. Get a one-page lessons learned note with what to repeat, what to change and the one lesson that matters."
 job: document-work
 thinking: medium
 thinking_why: "It separates facts from judgements and traces causes before writing rules."
@@ -17,6 +17,10 @@ when:
   - "A launch just finished and you want to capture it before the details fade."
   - "The same problem happened on two projects in a row."
   - "A new team is about to run the same kind of project."
+not_for:
+  - "Your project is still running: wait until it ends, or ask your team for a quick check-in instead."
+  - "You did a one-off task with no team: a few lines in your own notes is enough."
+  - "An outside party caused the failure, such as a client: hold a post-mortem with that client instead."
 
 you_give:
   - "Notes on what happened, good and bad"
@@ -33,6 +37,31 @@ how_to_use:
   - "Add the goal and the result with the numbers you have."
   - "Read CHANGE. If a cause is wrong, say what the real one was and run again."
   - "File the note where the next project will start, and share the SUMMARY in chat."
+output_sample:
+  input:
+    - Your notes on what happened, good and bad
+    - The goal and the result, with numbers if you have them
+    - Planned versus actual dates (optional)
+    - The roles involved (optional)
+  output:
+    - name: SUMMARY
+      contains: Two lines for the top of the note and for sharing in chat.
+    - name: GOAL v RESULT
+      contains: What the project set out to do, what it achieved, and the gap between them.
+    - name: REPEAT
+      contains: Three to five things that worked, each with the fact behind it and a rule.
+    - name: CHANGE
+      contains: Three to five things that went wrong, each with the fact, a likely cause and a rule.
+    - name: THE ONE LESSON
+      contains: The single change that would matter most next time, and why.
+    - name: STILL UNKNOWN
+      contains: Questions nobody can answer yet, and who could find out.
+    - name: FEELINGS NOTED
+      contains: Judgements from the notes, kept as labelled context.
+    - name: MISSING
+      contains: Numbers, dates or facts you did not give.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or none.
 
 how_it_works:
   - title: "States goal and result"

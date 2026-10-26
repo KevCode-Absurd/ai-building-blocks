@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tries known prompt fixes and picks what fits.
 new_slug: prompt-fixer
 name: Prompt fixer
-summary: Give it a prompt that gives weak or uneven answers. Get a tighter
-  version that works more reliably.
+summary: Fix a prompt that gives vague or uneven answers. Paste it in with one bad reply and get a tighter version that works more reliably.
 job: set-up-ai
 headline: Prompt fixer
-subhead: A prompt that stops giving vague, wrong or uneven answers. You hand
-  over the weak one and get back a tighter version that behaves the same way run
-  after run.
+subhead: A prompt that stops giving vague, wrong or uneven answers. You hand over the weak one and get back a tighter version that behaves the same way run after run.
 explain: |
   A prompt that stops giving vague, wrong or uneven answers. You hand over the weak one and get back a tighter version that behaves the same way run after run.
 
@@ -18,6 +15,10 @@ when:
   - You need clean, structured output such as JSON and keep getting messy text.
   - The AI states wrong things with confidence.
   - Your prompt is long and costly and you want it shorter.
+not_for:
+  - You need live facts or data lookups. Add a search or fact-checking step first, then fix the prompt.
+  - You have no prompt yet and want to write one from scratch. Describe the task to your AI and ask for a first draft.
+  - The bad answers come from missing facts, not wording. Give your AI the facts to use, or ask a subject expert.
 you_give:
   - The weak prompt
   - An example of a bad answer
@@ -29,7 +30,23 @@ you_get:
   - Why each change helps
   - Tips to test it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text first. Then paste your weak prompt and one bad answer it gave.
+  - "Ask for the diagnosis as a table: the problem, the proof from the bad answer, and the fix. Then ask for the rewritten prompt in a code block."
+  - Run the new prompt on five different inputs. Include one odd or empty input.
+  - Note which answers still fail. Paste those back and ask your AI to fix the prompt again.
+output_sample:
+  input:
+    - Your weak prompt
+    - One example of a bad answer
+    - What a good answer looks like (optional)
+    - Which AI model you use (optional)
+  output:
+    - name: Diagnosis
+      contains: The problem found in your prompt, such as too vague, no format, made-up facts, uneven runs or too long.
+    - name: Rewritten prompt
+      contains: Your prompt rebuilt with a role, the situation, rules, clear instructions and the shape of the answer.
+    - name: Why each change helps
+      contains: A short reason for every edit, so you can keep what works and drop the rest.
+    - name: Testing tips
+      contains: A checklist to try the new prompt on varied inputs, including odd or empty ones.

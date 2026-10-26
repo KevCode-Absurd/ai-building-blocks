@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a fixed file format with clear rules.
 new_slug: obsidian-database-view-builder
 name: Obsidian database view builder
-summary: Say how you want your notes filtered and shown. Get a working Obsidian
-  Base file with views, formulas and summaries.
+summary: Build an Obsidian Base file for your notes. Say what to filter and show, and get table or card views with formulas and summaries.
 job: organise-work
 headline: Obsidian database view builder
-subhead: A working Obsidian Base file that turns your notes into a table or card
-  view, filtered and sorted the way you describe. No hand-written syntax needed.
+subhead: A working Obsidian Base file that turns your notes into a table or card view, filtered and sorted the way you describe. No hand-written syntax needed.
 explain: |
   A working Obsidian Base file that turns your notes into a table or card view, filtered and sorted the way you describe. No hand-written syntax needed.
 
@@ -17,6 +15,10 @@ when:
   - You keep book or project notes and want a card gallery with ratings.
   - You need a formula column that works out days left from a due date.
   - You want totals or averages shown under a column.
+not_for:
+  - "You only want a plain list of notes: write a manual list or use Obsidian's built-in search instead."
+  - "You already use Dataview queries and want to keep them: stay with Dataview, since this skill writes Bases files only."
+  - "Your notes have no tags, folders or properties to filter on: add those first, or ask a person who knows your vault."
 you_give:
   - Which notes to include, by tag, folder or property
   - The columns you want to see
@@ -28,7 +30,28 @@ you_get:
   - Formula columns
   - Table or card views with summaries
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of SKILL.md. If your AI accepts files, also upload the guide file in the skill folder.
+  - Tell your AI which notes to show, which columns you want and any calculations. Paste one sample note with its properties if you can.
+  - Ask for a .base file. Copy the result into a new file in your vault and name it with the .base ending.
+  - Open the file in Obsidian. Check that each view loads and that the filters match your notes.
+  - If a view fails or looks wrong, paste the error or a description back into the chat and ask for a fix. Then adjust columns or formulas and run it again.
+output_sample:
+  input:
+    - Which notes to include, by tag, folder or property
+    - The columns you want to see
+    - Any calculations you need, such as days until due (optional)
+    - A sample note with its properties (optional)
+  prerequisites:
+    - Obsidian with the Bases feature turned on
+    - An AI that can chat and write a text file
+  output:
+    - name: filters
+      contains: The rules that pick which notes appear, such as a tag, a folder or a status that is not done.
+    - name: formulas
+      contains: Calculated columns, such as days until due or an overdue flag, built from your note properties.
+    - name: properties
+      contains: Display names that give each column a clear label.
+    - name: views
+      contains: One or more table or card views, each with its own filters, column order, grouping and sorting.
+    - name: summaries
+      contains: Totals or averages shown at the bottom of a column.

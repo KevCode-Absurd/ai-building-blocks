@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes and edits to a known style guide and you review it.
 new_slug: developer-docs-writer
 name: Developer docs writer
-summary: Give it your product or draft docs. Get clear developer documentation
-  that follows Google's style guide.
+summary: Write or fix developer documentation your readers can follow. Give it your product, API or draft docs and get clear pages that match Google's style guide.
 job: document-work
 headline: Developer docs writer
-subhead: Give it your product or draft docs. Get clear developer documentation
-  that follows Google's style guide. Bring your product, API or draft docs. Use
-  the result to plan your next step.
+subhead: Give it your product or draft docs. Get clear developer documentation that follows Google's style guide. Bring your product, API or draft docs. Use the result to plan your next step.
 explain: |
   Developer documentation that a reader can follow to finish a task, written and checked to the standards of Google's developer style guide.
 
@@ -18,6 +15,10 @@ when:
   - You need to rewrite old docs so they match what the code does today.
   - Your team writes docs in different voices and wants one standard.
   - You want a score and a fix list for a page before you publish it.
+not_for:
+  - "You need marketing or landing-page copy: use the storybrand-messaging skill instead."
+  - "You want better code comments or variable names: use the clean-code skill instead."
+  - "You have no code or draft to work from and need the product built first: ask a developer on your team to explain how it works."
 you_give:
   - Your product, API or draft docs
   - The code the docs describe
@@ -29,7 +30,27 @@ you_get:
   - A score out of 10 with failed checks listed
   - Before and after rewrites of weak sentences
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions, or add the skill folder if your AI accepts files.
+  - Paste your draft docs or describe your product or API. Add the code paths or endpoints the docs cover.
+  - Say who will read the docs and how much they know. Add your own style guide if you have one.
+  - Ask for an audit, a rewrite or a new doc. For an audit you get a score out of 10 and a fix list.
+  - Check the result against your code, then pass it to a reviewer before you publish.
+output_sample:
+  input:
+    - Your product, API or draft docs
+    - The code the docs describe, such as file paths or endpoints
+    - Who will read the docs and how much they know
+    - Your own style guide (optional)
+  prerequisites:
+    - An AI chat where you can paste text or add files, so it can check the docs against your code
+  output:
+    - name: Reader and doc type
+      contains: Who the reader is, what they should be able to do afterwards, and which kind of document fits.
+    - name: Fact check
+      contains: Each claim in the docs checked against your code, with anything that does not match marked.
+    - name: Written or rewritten doc
+      contains: Task-based docs in second person, active voice and present tense, with prerequisites first and a check at the end of each how-to.
+    - name: Before and after rewrites
+      contains: Weak sentences shown next to the fixed version, such as cutting words like simply and just.
+    - name: Documentation Audit
+      contains: A score out of 10 against a short checklist, with each failed check and how to fix it.

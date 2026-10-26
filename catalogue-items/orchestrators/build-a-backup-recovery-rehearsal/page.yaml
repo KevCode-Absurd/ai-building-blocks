@@ -1,74 +1,124 @@
 new_slug: build-a-backup-recovery-rehearsal
 name: Build a backup recovery rehearsal
 headline: Build a backup recovery rehearsal
-summary: Share the source files. Get a recovery plan, rehearsal checklist and evidence log template.
+summary: Plan a safe restore test of your backups. Get a recovery plan, a rehearsal checklist and an evidence log to fill in as you test.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A recovery plan, rehearsal checklist and evidence log template. Share critical files and systems, current backup evidence, recovery targets and an approved test environment. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your list of systems, your backup records and how much downtime and data loss you can take. It ranks the systems, writes a safe restore test for each one and a log where you record the proof. You run the test yourself.
 explain: |-
-  A recovery plan, rehearsal checklist and evidence log template.
+  Most businesses have backups. Few know whether a restore works, or how long it takes. This workflow builds a backup recovery rehearsal: a plan to restore your systems from backup in a test, with a place to record what happened.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A backup is called recoverable only after a restore check; tests avoid production data changes. Missing tools or evidence stay visible in the final summary.
+  First it lists what must come back first and sets targets for time and data loss from your own numbers. Then it writes the rehearsal for each system, with what you need before you start, where to stop and how to undo. Last it turns every task and gap into one action list with an owner and a date.
+
+  A backup counts as recoverable only after a restore is checked. Every test runs in an approved test environment, never on live data. The AI plans the test. You or your team run it and record the result.
 when:
-  - You need a recovery plan, rehearsal checklist and evidence log template.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have backups but nobody has restored from them lately.
+  - An auditor, insurer or customer asks for proof that you can recover.
+  - You moved hosting, changed backup tools or lost a person who knew how it works.
+  - You want a written recovery plan before something goes wrong, with a checklist someone else could follow.
+not_for:
+  - Something is down right now. Follow your provider's incident process or call their support. This prepares ahead.
+  - You would restore over live production data. Do not run this. It is for an approved test environment only.
+  - You only want a general recovery plan with no test. Use the Backup and recovery planner.
+  - You only want a response guide for outages. Use the Incident runbook writer.
+  - Your device needs a safe update and rollback test. Use the Firmware update recovery rehearsal workflow.
 you_give:
-  - Critical files and systems, current backup evidence, recovery targets and an approved test environment.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - A list of your critical files and systems and where their data lives
+  - Your current backup records, such as the tool, how often it runs and the last successful date
+  - How much data loss and downtime you can take for each system
+  - Where a test restore is allowed, such as a spare server or test account
+  - Who owns each system, and your team size (optional)
+  - Meeting notes or earlier recovery plans (optional)
 you_get:
-  - A recovery plan, rehearsal checklist and evidence log template.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A list of your systems ranked by how fast you need them back
+  - Recovery targets for each rank, using your numbers
+  - A rehearsal checklist with prerequisites, stop points, rollback steps and one row per system
+  - An evidence log template to record what happened and where the proof is saved
+  - An action list with an owner and a date for each task and gap
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste your system list, backup records and targets. Say where a test restore is allowed.
+  - Read the ranking and targets first. Fix any number the AI got from you wrong before it writes the checklist.
+  - Run the rehearsal yourself, fill in the evidence log and bring the result back to close the gaps.
 how_it_works:
   - title: Backup and recovery planner
-    text: Map what must be restored, dependencies, responsible people and the stated recovery targets.
+    text: Lists each system, ranks it by how fast it must return and sets time and data-loss targets. It hands the ranked list and targets to the next step.
   - title: Incident runbook writer
-    text: Write a safe restore rehearsal with prerequisites, stop points and rollback steps.
+    text: Writes the safe restore test for each system, with prerequisites, stop points and rollback steps. It hands the checklist to the register.
   - title: Executive action register keeper
-    text: Track the rehearsal tasks, evidence to collect, owners and unresolved recovery gaps.
+    text: Turns tasks, evidence to collect and gaps into one action list with owners and dates. It never assigns work to a person without your say.
 output_shape: |-
-  Scope and source coverage
-  A recovery plan, rehearsal checklist and evidence log template.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
-tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: A backup is called recoverable only after a restore check; tests avoid production data changes.
-judge:
-  - A backup is called recoverable only after a restore check; tests avoid production data changes.
-  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
-  - The original source files stay intact, and revised files have distinct names or versions.
-  - Each required component check ran, or the run stopped and says which check could not pass.
-  - The summary names any work that could not be checked.
-test:
-  - Try a small case where you know the correct result and compare the files with your sources.
-  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
-  - Change a date, unit or version between two sources. The handoff should flag the conflict.
-  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  RECOVERY PLAN
+    Systems ranked | targets per rank | backup in place | last restore test
+
+  REHEARSAL CHECKLIST
+    Prerequisites | stop points | rollback steps
+    Table: System | Backup used (date) | Restore start and end | Time vs target | Data checked | Pass or fail | Evidence reference
+
+  EVIDENCE LOG TEMPLATE
+    Blank rows for what was tested, what broke, real recovery time, who checked, where proof is saved
+
+  ACTION REGISTER
+    action-register.csv | clarifications.md
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done
+output_sample:
+  input:
+    - A list of your critical files and systems and where their data lives
+    - Your backup records, with the tool, how often it runs and the last good date
+    - How much data loss and downtime you can take
+    - Where a test restore is allowed
+  prerequisites:
+    - An approved test environment, such as a spare server or test account
+    - Someone who can run the restore and read the result
+  output:
+    - name: Inventory and tiers
+      contains: Each system with its backup and last restore test, ranked by how fast it must come back.
+    - name: Recovery targets
+      contains: How much data loss and downtime you accept for each rank, using your own numbers.
+    - name: Rehearsal checklist
+      contains: Prerequisites, stop points, rollback steps and a row per system for time, data checked and pass or fail.
+    - name: Evidence log template
+      contains: Blank rows to record the backup date, restore times, who checked and where the proof is saved.
+    - name: action-register.csv
+      contains: One row per task or gap, with owner, due date and the source it came from.
+    - name: Hand-back summary
+      contains: Files saved, facts that could not be checked and the single next step.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read your backup records as pasted text or files. None of them can run a restore for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The last backup report or log from your backup tool, with dates.
+    - A named reviewer who signs off the test.
+tweaks:
+  - what: Scope
+    how: Pick one system or one site for the first rehearsal. A small test you finish beats a big one you do not.
+  - what: Evidence
+    how: Paste the real backup log with dates, not a summary from memory.
+  - what: Acceptance
+    how: Say what counts as a pass for each system, such as the site loads and last week's orders are present.
+judge:
+  - A backup is called recoverable only after a restore check, and tests avoid production data changes.
+  - Every figure and date traces to a source you gave or is labelled as an assumption.
+  - Each system has a row with a pass or fail slot and an evidence reference.
+  - Every unchecked fact appears as a MISSING line.
+test:
+  - Try a small case where you know the correct result and compare it with your sources.
+  - Remove the recovery targets. The AI should ask for them, not invent them.
+  - Change a backup date between two sources. The handoff should flag the conflict.
+improve:
+  - Keep the evidence log after each rehearsal and bring it to the next one.
+  - Add the systems you missed this time to the list.
+  - Repeat the rehearsal after any change to hosting or the backup tool.
+next:
+  - process-and-sop-writer
+  - turn-an-incident-into-a-safer-procedure
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Restore
+    meaning: Bringing data back from a backup so you can check that the backup works.
+  - term: Recovery target
+    meaning: How much data you can lose and how long you can be down before it hurts your business.

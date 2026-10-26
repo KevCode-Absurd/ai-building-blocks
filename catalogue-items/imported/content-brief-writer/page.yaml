@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It combines search intent and audience into an outline.
 new_slug: content-brief-writer
 name: Content brief writer
-summary: Give it a topic and keyword. Get a brief with search intent, outline,
-  key terms and links, ready for a writer.
+summary: Write a content brief for any topic and keyword. You get search intent, an outline, key terms and links, ready to hand to a writer.
 job: get-found-in-search
 headline: Content brief writer
-subhead: A brief that tells a writer exactly what to write, so the first draft
-  comes back close to done. It replaces the thin version of a keyword, a word
-  count and a deadline.
+subhead: A brief that tells a writer exactly what to write, so the first draft comes back close to done. It replaces the thin version of a keyword, a word count and a deadline.
 explain: |
   A brief that tells a writer exactly what to write, so the first draft comes back close to done. It replaces the thin version of a keyword, a word count and a deadline.
 
@@ -18,6 +15,10 @@ when:
   - You are handing a topic to a freelancer or an AI and need clear instructions.
   - You want content that matches what searchers actually want.
   - Your current briefs run long but still leave gaps.
+not_for:
+  - "You need a full content plan across many topics: ask a content strategist, or plan the topics before you brief each piece."
+  - "You want the finished article written: brief first, then give the brief to a writer or your AI to draft the piece."
+  - "You only want a list of keywords to target: use a keyword tool or search the topic yourself first, then come back with one keyword."
 you_give:
   - A topic and target keyword
   - The reader and goal of the piece
@@ -29,7 +30,31 @@ you_get:
   - A section-by-section outline
   - Key terms and links to use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your topic, target keyword, reader and goal. Add competing pages and links to include if you have them.
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your details below it. No code or paid tool is needed.
+  - Check the brief has all twelve fields filled in. Ask your AI to fix any that are thin or missing.
+  - Hand the brief to your writer, or paste it into a new chat and ask your AI to write the piece.
+  - To audit old briefs, paste them in and ask why they produce weak content.
+output_sample:
+  input:
+    - Your topic and target keyword
+    - Who the reader is and what the piece should achieve
+    - Pages that already rank for the keyword (optional)
+    - Pages on your site to link to (optional)
+    - Old briefs you want checked (optional)
+  prerequisites:
+    - Works in a plain chat with no extra tools
+    - Frase, AirOps or Surfer SEO are paid tools with their own account, and you do not need them
+  output:
+    - name: Target keyword and search intent
+      contains: The main keyword, the group of related keywords, and what searchers want when they type it.
+    - name: Reader and goal
+      contains: Who the piece is for, the job they want done, and what the piece should achieve.
+    - name: Heading outline
+      contains: A section-by-section list of headings, built from what searchers ask and what top pages cover.
+    - name: Key terms and topics to cover
+      contains: The names, terms and ideas the piece should include so AI answer engines can cite it.
+    - name: Internal links
+      contains: Pages on your site to link to from the piece, and pages that should link back.
+    - name: Angle and success criteria
+      contains: The point of view the writer should take and how you will judge the finished piece.

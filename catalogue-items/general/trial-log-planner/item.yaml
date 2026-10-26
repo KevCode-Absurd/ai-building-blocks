@@ -1,6 +1,6 @@
 slug: trial-log-planner
 name: "Trial log planner"
-summary: "Paste what you want to get working. Get many cheap trials, a log for each and what each failure ruled out."
+summary: "Plan many cheap trials for something that is not working yet. Get a trial log that shows what each failed try ruled out."
 category: general
 type: skill
 role: make
@@ -8,8 +8,7 @@ job: research
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: brief, required: false}
-  - {type: performance_sheet, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
   - {type: lessons_register}
@@ -21,3 +20,5 @@ credits:
   - {title: "The Perfected Phonograph, North American Review, 1888", by: "Thomas Edison", used: "Listing the many uses of an invention and selling the idea with the product"}
   - {title: "Edison: His Life and Inventions, 1910", by: "Frank Dyer and Thomas Martin", used: "Testing many materials, writing every trial down and building the system around the invention"}
   - {title: "The Sidereal Messenger, 1610", by: "Galileo Galilei", used: "Testing the power of the tool before use, recording each observation with date and sketch, and treating a first reading as provisional"}
+next: [one-change-experiment-planner, lessons-learned-note-writer]
+needs_mode: manual

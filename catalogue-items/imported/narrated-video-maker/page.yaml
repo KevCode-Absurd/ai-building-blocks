@@ -2,33 +2,86 @@ thinking: medium
 thinking_why: It follows a fixed pipeline from slides to speech to video.
 new_slug: narrated-video-maker
 name: Narrated video maker
-summary: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+summary: "Turn a Markdown document into narrated slides and a voiceover video. Get slide and script files, and an MP4 on a computer that can run code."
 job: make-video-ads
 headline: Narrated video maker
-subhead: Turn a Markdown document into a narrated slide video, with no screen
-  recording and no editing. You keep your original file untouched and get an MP4
-  you can share.
+subhead: Give it a Markdown document, such as a tutorial or report. Your AI cleans the text, builds slides, and writes a narration script that matches each slide. On a computer that can run code, it also makes a narrated MP4.
 explain: |
-  Turn a Markdown document into a narrated slide video, with no screen recording and no editing. You keep your original file untouched and get an MP4 you can share.
+  Many people will watch a short video but not read a long document. This skill turns a Markdown document into a narrated slide video, with no screen recording and no editing. Your original file stays untouched.
 
-  The skill first checks that the tools it needs are installed, and asks before adding anything. It rewrites your text into cleaner sections, then converts it into Marp slides, splitting any slide that would overflow. Next it writes a spoken script that lines up with the slides one to one, with symbols that should not be read aloud removed. A script then renders the slides, creates speech with Edge-TTS and joins them into the video. It runs on your computer and needs Python.
+  Your AI first checks that the tools it needs are installed and asks before adding anything. It rewrites your text into clean sections, then builds slides in Marp, a tool that makes slides from Markdown. Any slide that would overflow is split. Next it writes a narration script with one section per slide, with symbols removed that should not be read aloud.
+
+  The last step makes the video. A script renders the slides, creates speech with Edge-TTS and joins the two into an MP4. That step needs Python and other tools on your own computer, plus scripts from the original repo. It also sends your text to an online speech service, so skip it for confidential documents.
 when:
   - You wrote a tutorial in Markdown and want a video version.
   - You need a narrated report for people who will not read a long document.
   - You want a quick explainer video without recording your own voice.
-  - You have training notes and need a slide deck with audio.
+  - You have training notes and need a slide deck with a script to read aloud.
+not_for:
+  - "Your document is confidential: the speech step sends text to an online service. Use the slides and script only route, and read it aloud yourself."
+  - "You want a product demo from screenshots, with a scene plan: use the product demo video maker."
+  - "You only want your text read aloud as an audio file: use the multilingual narrator."
+  - "You need slides for a business talk in PowerPoint: use the storyboard to PowerPoint deck builder."
 you_give:
   - A Markdown document
-  - A slide style choice (optional)
-  - Python and the video tools installed on your computer
+  - A Marp slide style (optional)
+  - For the video step, a computer where your AI can run code, with Python, Marp, ffmpeg and Edge-TTS installed
 you_get:
-  - A cleaned-up copy of your text
-  - A slide file ready to present
-  - A narration script matched to each slide
-  - A narrated MP4 video
+  - A cleaned-up copy of your text, as a new file
+  - A slide file in Marp format
+  - A narration script with one section per slide
+  - A narrated MP4 video, if you run the full workflow
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Get your document into Markdown. A plain text file with headings works. Copy it into a new file so the original stays safe.
+  - Open Claude, ChatGPT or Gemini and paste the SKILL.md text from this item. This gives you the slides and the narration script in a chat. Stop here if you only need those, or if your document is confidential.
+  - For the MP4, use an AI that can run code on your computer, such as Claude Code. Get the three scripts from the original repo linked in the credits, and let your AI check that Python, Marp, ffmpeg and Edge-TTS are installed.
+  - Say yes or no before your AI installs anything. Answer any question the video script asks.
+  - Check that the slide file and the narration have the same number of slides. Watch the video once before you share it.
+how_it_works:
+  - title: Check the setup
+    text: It checks that the tools are installed and asks before it installs or changes anything.
+  - title: Clean the text
+    text: It writes a new Markdown file with better sections and smooth transitions, keeping your meaning.
+  - title: Build the slides
+    text: It makes Marp slides and splits any slide that would overflow.
+  - title: Write the narration
+    text: It writes a script with one section per slide, without symbols that should not be spoken.
+  - title: Make the video
+    text: A script renders the slides, makes speech with Edge-TTS and joins them into an MP4. A fallback script is tried if it fails.
+output_sample:
+  input:
+    - A Markdown document, such as a tutorial or report
+    - A Marp slide style (optional)
+  prerequisites:
+    - For the MP4, an AI that can run code on your computer
+    - Python, Marp, ffmpeg and Edge-TTS installed
+    - The three video scripts from the original repo
+    - A document that is safe to send to an online speech service
+  output:
+    - name: Cleaned Markdown
+      contains: A new copy of your text with better sections and transitions. Your original is unchanged.
+    - name: Presentation Markdown
+      contains: Marp slides separated by dashes, split so nothing overflows.
+    - name: Narration Markdown
+      contains: A spoken script with the same number of sections as slides.
+    - name: Narrated MP4
+      contains: The slides and speech joined into one video, made only in the full workflow.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the scripts, check your installs and save the files on your computer.
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can write the slides and narration, but cannot make the MP4 alone.
+  inputs:
+    - A short list of terms and names to read in a set way
+    - A chosen Marp style
+    - A rough target length for the video
+terms:
+  - term: Markdown
+    meaning: Plain text with simple marks for headings and lists, such as a hash for a title.
+  - term: Marp
+    meaning: A tool that turns Markdown into slides.
+  - term: Edge-TTS
+    meaning: A speech tool that turns text into a voice. It sends your text to an online service to do it.
+  - term: narration script
+    meaning: The words that will be spoken over each slide.

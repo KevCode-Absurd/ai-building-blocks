@@ -1,6 +1,6 @@
 name: "Conversational video ad script writer"
 new_slug: conversational-ad-script
-summary: "Paste your buyer and brand file. Get a natural-sounding ad built only on your facts."
+summary: "Write a video ad script that sounds like a person talking, built only on your buyer's words and your facts, with shot notes a crew can film."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -18,8 +18,14 @@ when:
   - A draft reads like AI wrote it and you want a review with plain replacements.
   - You need one ad that works across formats, from a phone video to an image ad.
 
+not_for:
+  - "You want a founder-led video built on a real decision: use the Founder video ad script writer."
+  - "You want every line tied to a customer quote with its source: use the Video ad script writer from customer quotes."
+  - "You only need a draft script's lines tightened for speaking: use the Ad script read-aloud editor."
+  - "Your buyer needs a spec sheet or a comparison table before they trust you. Write that as a page, not an ad story."
+
 you_give:
-  - The reason for the ad, who it's for, what they want, what they've tried, what stops them, and their own words
+  - Who the ad is for, what they want, what they have tried, what stops them, and their own words from reviews
   - The offer, the format and how much the buyer already knows
   - Your brand file, with voice, never-say list, facts and proof
   - A draft to review instead of write (optional)
@@ -166,6 +172,28 @@ improve:
   - Add your buyers' own words for the problem to step 4, so it borrows them without you pasting reviews each time.
   - Write your usual length for each kind of buyer into step 8, so it stops guessing.
   - Pair it with "Ad angle planner" to set the length and the ask, and run "Anti-AI-slop copy editor" on the result.
+
+output_sample:
+  input:
+    - Who the ad is for, what they want, what stops them, and their own words
+    - The offer, the format and how much the buyer already knows
+    - Your brand file, with voice, never-say list, facts and proof
+    - A draft to review instead of write (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini
+    - Your brand brain from the Brand profile builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: Thread
+      contains: One sentence naming the speaker, the scene they talk about and the point where the product arrives.
+    - name: Script
+      contains: Numbered spoken lines in story order, each with a shot note a crew could film, ending on one next step.
+    - name: Notes
+      contains: Placeholders used, facts held back and anything missing, such as a figure you did not supply.
+    - name: Review of a draft
+      contains: If you paste a draft, each failing line, the rule it breaks and a plain replacement.
+    - name: Checks missed
+      contains: Any of its own checks that failed, such as the read-aloud test, or none. For a draft, before and after.
 
 works_best_with:
   tools:

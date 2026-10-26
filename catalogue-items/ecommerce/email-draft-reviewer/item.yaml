@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: copy_draft, required: true}
   - {type: brand_brain, required: false}
+  - {type: email_flow, required: false}
 outputs:
   - {type: audit_report}
 uses: []

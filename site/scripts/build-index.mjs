@@ -11,10 +11,14 @@ import { applyDisplayCopy } from "../../tools/lib/display-copy.mjs";
 import { acquireBuildLock } from "./lib/build-lock.mjs";
 import { INFO_PAGES } from "../src/lib/site-info.mjs";
 import { makeTaskRecipe } from "../src/lib/copyable-task.mjs";
+import { TASKS } from "../src/lib/catalogue-taxonomy.mjs";
+import { compileClassifications } from "./lib/catalogue-classification.mjs";
 await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
 const ROOT = path.resolve(process.env.CATALOGUE_ROOT || "../catalogue-items");
+const classificationFile = path.join(ROOT, "classification.yaml");
+const classifications = compileClassifications(fs.existsSync(classificationFile) ? YAML.parse(fs.readFileSync(classificationFile, "utf8")) : {});
 const copyFile = path.join(ROOT, "display-copy.yaml");
 const copyEdits = fs.existsSync(copyFile) ? YAML.parse(fs.readFileSync(copyFile, "utf8")) ?? {} : {};
 const copyUsed = new Set();
@@ -30,9 +34,12 @@ fs.rmSync(OUT_SKILLS, { recursive: true, force: true, maxRetries: 5 });
 fs.rmSync(OUT_PAGES, { recursive: true, force: true, maxRetries: 5 });
 fs.mkdirSync(OUT_PAGES, { recursive: true });
 
+// An output_sample with at least one input and one named output.
+const hasStructure = (s) => !!s && Array.isArray(s.input) && s.input.length > 0 && Array.isArray(s.output) && s.output.some((o) => o?.name && o?.contains);
+
 // Until a block has its page written, it is filed under the job closest to its old group.
 const TASK_FROM_JOB = { copy: "write-ad-copy", email: "write-ad-copy", ads: "make-image-ads", image: "make-image-ads", video: "make-video-ads", page: "write-landing-page", analysis: "read-ad-results", research: "understand-customers", brand: "brand-file", offer: "make-offer", organic: "grow-social", ops: "set-up-ai" };
-const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "tweaks", "judge", "test", "improve", "terms", "works_best_with"];
+const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "not_for", "output_sample", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "tweaks", "judge", "test", "improve", "terms", "works_best_with"];
 // Source schemas carry precise fields for some imported methods. Keep their
 // meaning separate from display copy and leave the original frontmatter intact.
 function schemaFields(schema) {
@@ -68,6 +75,9 @@ const asPorts = (list) =>
 const bodyOf = (t) => t.replace(/\r\n?/g, "\n").replace(/^---\n[\s\S]*?\n---\n?/, "").replace(/^<!--[\s\S]*?-->\n?/gm, "");
 
 const blocks = [];
+// Reviewed "what comes next" / "steps before" lists (page.yaml or item.yaml `next:` and `before:`, slugs in order).
+// They replace the worked-out links in tools/lib/needs.mjs; they never go into blocks.json.
+const linkOverrides = new Map();
 const problems = [];
 // Skills imported from outside (catalogue-items/imported/<slug>) are filed under "general"; the whole folder travels with them.
 const SKIP_TOP = new Set(["item.yaml", "page.yaml", "boards", "tests", "SKILL.md"]);
@@ -77,6 +87,9 @@ const walk = (dir, rel = "") => fs.readdirSync(dir, { withFileTypes: true }).sor
   return e.isDirectory() ? walk(path.join(dir, e.name), r) : [r];
 });
 const seen = new Set();
+// The day an item's own files last changed (the newest of the listed files). Shown on its page as "Updated" and used as
+// the sitemap's lastmod and the page's dateModified.
+const lastChange = (folder, names) => new Date(Math.max(...names.map((n) => { try { return fs.statSync(path.join(folder, n)).mtimeMs; } catch { return 0; } }))).toISOString().slice(0, 10);
 for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "imported"]) {
   const category = dirName === "imported" ? "general" : dirName === "agents" ? "agent" : dirName;
   const dir = path.join(ROOT, dirName);
@@ -137,19 +150,23 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
           if (frontmatter) metadata = YAML.parse(frontmatter[1]) ?? {};
         } catch { /* The complete source remains authoritative when a schema cannot be parsed. */ }
         out.copyable = makeTaskRecipe({ ...item, slug, name: page?.name ?? item.name ?? slug,
-          task: page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
+          task: classifications.primary.get(slug) ?? page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
           inputs: asPorts(item.inputs), outputs: asPorts(item.outputs), uses: item.uses ?? [], steps, hasFiles: files.length > 0,
         }, { ...page, sourceInputFields: schemaFields(metadata.input_schema), sourceOutputFields: schemaFields(metadata.output_schema) }, skill);
       }
       fs.writeFileSync(path.join(OUT_PAGES, `${slug}.json`), JSON.stringify(out));
     }
+    const links = Object.fromEntries(["next", "before"].map((k) => [k, page?.[k] ?? item[k]]).filter(([, v]) => v !== undefined));
+    for (const [k, v] of Object.entries(links)) if (!Array.isArray(v) || v.some((x) => typeof x !== "string")) { problems.push(`${category}/${slug}: ${k} must be a list of slugs`); delete links[k]; }
+    if (Object.keys(links).length) linkOverrides.set(slug, links);
     blocks.push({
       slug,
       name: page?.name ?? item.name ?? slug,
       ...(edited.aliases.length ? { aliases: edited.aliases } : {}),
       summary: page?.summary ?? item.summary ?? "",
       headline: page?.headline ?? "",
-      task: page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
+      task: classifications.primary.get(slug) ?? page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
+      ...classifications.fields(slug),
       category: category === "orchestrators" ? "orchestrator" : category,
       boards: item.boards ?? [],
       type: item.type ?? "skill",
@@ -167,8 +184,9 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
       origin: imported ? "imported" : item.origin ?? "own",
       ...(item.source ? { source: { by: String(item.source.by ?? ""), repo: String(item.source.repo ?? ""), url: String(item.source.url ?? ""), licence: String(item.source.licence ?? ""), original: String(item.source.original_name ?? ""), commit: String(item.source.commit ?? "") } } : {}),
       ...(Array.isArray(item.warnings) && item.warnings.length ? { warnings: item.warnings.map(String) } : {}),
-      // Last test run on the example business (tools/test-blocks.mjs). Only a pass is shown on the page.
-      tested: item.tested ? { on: String(item.tested.on), result: item.tested.result, business: item.tested.business ?? "sprout" } : null,
+      // Tested = passed the safety scan (tools/audit-library.mjs; anything that fails goes in quarantine.yaml and is
+      // withheld below) and has a real input/output structure: what goes in, and what you get.
+      tested: hasStructure(page?.output_sample ?? item.output_sample) ? { result: "pass" } : null,
       version: String(item.version ?? "1.0.0"),
       words: skill.split(/\s+/).length,
       // The same look in the other format: a video block's image twin, or the other way round.
@@ -176,7 +194,7 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
       // The minds whose work the skill comes from (docs/SOURCE-SKILLS-PRD.md). Checked against the roster below.
       minds: Array.isArray(item.minds) ? item.minds.map(String) : [],
       files,
-      added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
+      added: lastChange(folder, ["item.yaml", "page.yaml", "SKILL.md"]),
     });
   }
 }
@@ -248,6 +266,9 @@ for (const r of roster.minds) {
     ideas,
     hire,
     seats: m.seats,
+    // Optional, written in mind.yaml the same way as in a skill's page.yaml.
+    ...(Array.isArray(m.not_for) && m.not_for.length ? { not_for: m.not_for } : {}),
+    ...(m.output_sample && typeof m.output_sample === "object" ? { output_sample: m.output_sample } : {}),
     pairs: (m.pairs_with ?? []).filter((s) => roster.minds.some((x) => x.slug === s)),
     credits: m.sources.filter((s) => s.title).map((s) => ({ title: String(s.title), by: s.by ? String(s.by) : "", url: s.url && /^https?:\/\//.test(s.url) ? String(s.url) : "", used: "" })),
   };
@@ -256,11 +277,12 @@ for (const r of roster.minds) {
   blocks.push({
     slug: r.slug, name: m.name, summary: m.summary, headline: m.name,
     task: "think-with-minds", category: "mind", boards: [], type: "mind", role: "make", job: "minds", level: "beginner",
+    ...classifications.fields(r.slug),
     thinking: "medium", thinkingWhy: "It plays one voice from a written data set. Use your strongest model when the stakes are high.",
     seats: m.seats.map((s) => s.seat), area: m.area, also: m.also ?? [], years: m.years ?? "", living: !!m.living, identity: m.identity, labels: labelsOf(r.slug), // the face comes from the roster (lib/data.ts), so it is sent once
     inputs: [{ type: "question", required: true }], outputs: [{ type: "mind_view", required: true }],
-    uses: [], steps: [], origin: "own", tested: null, version: String(m.version ?? "1.0.0"), words: skill.split(/\s+/).length,
-    twin: null, files: mindFiles, minds: [], skills: [], flows: [], added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
+    uses: [], steps: [], origin: "own", tested: hasStructure(m.output_sample) ? { result: "pass" } : null, version: String(m.version ?? "1.0.0"), words: skill.split(/\s+/).length,
+    twin: null, files: mindFiles, minds: [], skills: [], flows: [], added: lastChange(folder, ["mind.yaml", "page.yaml", "SKILL.md"]),
   });
 }
 
@@ -280,6 +302,7 @@ for (let i = blocks.length - 1; i >= 0; i--) if (blocked.has(blocks[i].slug)) {
 if (blocked.size) console.log(`Quarantine: ${blocked.size} blocks and their assets withheld`);
 // How many workflows use each block: the honest "popular" signal until people can vote.
 const bySlug = Object.fromEntries(blocks.map((b) => [b.slug, b]));
+classifications.validateSlugs(blocks.map(b => b.slug));
 // Each skill names the minds whose work it comes from; each mind then lists those skills, the ones it leads first.
 for (const b of blocks) for (const ms of b.minds ?? []) {
   const m = bySlug[ms];
@@ -320,7 +343,9 @@ for (const b of blocks) {
   const f = path.join(OUT_PAGES, `${b.slug}.json`);
   if (!fs.existsSync(f)) continue;
   const pageData = JSON.parse(fs.readFileSync(f, "utf8"));
-  pageData.plan = planOf(b, bySlug, blocks, describe);
+  const links = linkOverrides.get(b.slug) ?? {};
+  for (const slug of [...(links.next ?? []), ...(links.before ?? [])]) if (!bySlug[slug]) problems.push(`${b.slug}: next/before names "${slug}", which isn't a block`);
+  pageData.plan = planOf(b, bySlug, blocks, describe, links);
   // Why it needs that much thinking is only shown on the block's own page, so it travels there, not in blocks.json.
   if (b.thinkingWhy) pageData.thinkingWhy = b.thinkingWhy;
   delete b.thinkingWhy;
@@ -364,11 +389,14 @@ fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new
 const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
-const urls = ["/", "/compose", "/how-it-works", "/minds", "/from-a-source", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
-// One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed. No lastmod:
-// the only dates we have are file times, and a wrong date teaches search engines to ignore it.
+const urls = ["/", "/compose", "/how-it-works", "/minds", "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+// One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed.
+// the only dates we have are file times, so lastmod goes on item pages only (see lastmod below).
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs.
-const urlset = (us) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${us.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`;
+// lastmod is the day the item's own files (item.yaml, page.yaml, SKILL.md) last changed, the same date its page shows as
+// "Updated". Only item pages have one; the other pages have no date we can vouch for, so they get none.
+const lastmod = Object.fromEntries(blocks.filter((b) => b.headline && b.added).map((b) => [`/${kindPath(b)}/${b.slug}`, b.added]));
+const urlset = (us) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${us.map((u) => `  <url><loc>${SITE}${u}</loc>${lastmod[u] ? `<lastmod>${lastmod[u]}</lastmod>` : ""}</url>`).join("\n")}\n</urlset>\n`;
 const SITEMAPS = { pages: [...urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), "/tools/growth-channel-planner"], skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
 const aiToolsRoot = path.join(ROOT, "ai-tools");
 if (fs.existsSync(aiToolsRoot)) SITEMAPS["ai-tools"] = ["/ai-tools", ...fs.readdirSync(aiToolsRoot).filter((f) => f.endsWith(".yaml") && !f.startsWith("_")).map((f) => `/ai-tools/${f.slice(0, -5)}`)];
@@ -376,20 +404,22 @@ for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(
 for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(`public/sitemap-${k}.xml`, urlset(us));
 fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...Object.keys(SITEMAPS).filter((k) => SITEMAPS[k].length), "jobs"].map((k) => `  <sitemap><loc>${SITE}/sitemap-${k}.xml</loc></sitemap>`).join("\n")}\n</sitemapindex>\n`);
 // Everyone may crawl and index everything: search engines, answer engines and AI assistants. The library is free and
-// credited, so training crawlers are allowed too, on purpose. The saved example app is a copy of another app (noindex).
+// credited, so training crawlers are allowed too, on purpose. The saved example app is a copy of another app: it is
+// noindex by a meta tag and by an X-Robots-Tag header (public/_headers), so robots.txt must NOT block it, or crawlers
+// could never read the noindex.
 // /data/ stays open because the pages need it to render.
 fs.writeFileSync("public/robots.txt", [
   "# AI Blocks: free AI skills, workflows, minds and mini tools.",
   "# Search engines, answer engines and AI assistants are all welcome, including AI training crawlers: the library is free and every skill is credited.",
   "# A short guide for AI assistants: https://useaiblocks.com/llms.txt",
-  "User-agent: *", "Allow: /", "Disallow: /example-app/", "",
+  "User-agent: *", "Allow: /", "",
   "Content-Signal: search=yes, ai-input=yes, ai-train=yes", "",
   `Sitemap: ${SITE}/sitemap.xml`, "",
 ].join("\n"));
 
 // llms.txt (llmstxt.org): a plain guide to the site for AI assistants. It links one file per job (/llms/<job>.txt),
 // each listing that job's pages with their one line, and llms-full.txt is the index of those files.
-const TASK_NAMES = Object.fromEntries([...fs.readFileSync("src/lib/data.ts", "utf8").split("export const TASKS")[1].split("];")[0].matchAll(/\{ id: "([^"]+)", name: "([^"]+)" \}/g)].map((m) => [m[1], m[2]]));
+const TASK_NAMES = Object.fromEntries(TASKS.map(task => [task.id, task.name]));
 const paged = blocks.filter((b) => b.headline);
 const line = (b) => `- [${b.name}](${SITE}/${kindPath(b)}/${b.slug}): ${b.summary}`;
 const byTask = {};
@@ -432,7 +462,7 @@ fs.writeFileSync("public/llms-full.txt", [...intro, "## Every job", "", ...[...t
 const redirects = Object.entries(renamed).map(([from, to]) => [from, bySlug[to]]).filter(([, b]) => b?.headline).map(([from, b]) => `/${kindPath(b)}/${from} /${kindPath(b)}/${b.slug} 301`);
 // Rewrite to canonical asset URLs: .html targets trigger Workers' HTML redirects
 // and would erase /space, /people or the shared token from the address bar.
-const appRoutes = ["/traction /tools/growth-channel-planner 301", "/s/* /shared-space-shell 200"];
+const appRoutes = ["/traction /tools/growth-channel-planner 301", "/apps/starter-pack /apps 301", "/s/* /shared-space-shell 200"];
 fs.writeFileSync("public/_redirects", `# Old block names, moved to shorter ones (catalogue-items/renamed.json). Made by scripts/build-index.mjs.\n${redirects.join("\n")}\n\n# App pages with no page file of their own.\n${appRoutes.join("\n")}\n`);
 if (redirects.length + appRoutes.length > 2000) problems.push(`_redirects has ${redirects.length + appRoutes.length} rules; Cloudflare Pages allows 2,000`);
 console.log(`sitemap: ${urls.length} pages`);

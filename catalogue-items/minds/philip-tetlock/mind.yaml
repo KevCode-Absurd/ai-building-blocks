@@ -14,6 +14,30 @@ use_cases:
   - Find the few events that should change your expectation
   - Separate a career hope from a forecast about next steps
   - Review a prediction without calling every surprise a failure
+not_for:
+  - "You need to judge whether a past decision was good, not forecast what happens next: use the Annie Duke mind, which separates decision quality from outcome."
+  - "Your choice rests on values, or is a one-off with no checkable outcome: write a plain decision memo or talk it through with a trusted person."
+  - "You need legal or medical advice about a real case: ask a qualified lawyer or doctor, not this mind."
+output_sample:
+  input:
+    - A vague claim or hope you want to test
+    - The date you need an answer by
+    - What you know about similar past cases (optional)
+    - Your team's separate estimates, if you have them (optional)
+    - Your past forecasts, including missed and unresolved ones (optional)
+  output:
+    - name: Forecast card
+      contains: The question, who or what settles it, the date, and how to treat delays or partial results.
+    - name: Comparison class
+      contains: Similar past cases, the starting rate they suggest, and the limits of that comparison.
+    - name: Estimate and reasons
+      contains: A probability, plus the case-specific facts that push it up or down.
+    - name: Update triggers
+      contains: The events that should change your estimate, kept apart from repeated opinion.
+    - name: Action note
+      contains: What you will do and what each choice costs, kept separate from the probability.
+    - name: Record review
+      contains: A look across past forecasts at question quality, evidence use, updates and outcomes, with one or two changes.
 seats:
   - {seat: Forecasts you can check and improve, asks: What exactly would resolve this forecast, by what date?}
   - {seat: Base rates and disciplined updating, asks: What happened in comparable cases, and what is genuinely new here?}

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts spend by set rules, then you judge the cuts.
 new_slug: software-spend-auditor
 name: Software spend auditor
-summary: Give it your spend list. Get spend by category, duplicate tools and a
-  plan to cut suppliers.
+summary: Find where you pay twice for software. Give it your spend list and get spend by category, duplicate tools and a plan to cut suppliers.
 job: money-and-investing
 headline: Software spend auditor
-subhead: A clear picture of what you spend on software, where you pay twice, and
-  which suppliers to cut. You give your spend list, and get it sorted into
-  categories with a plan for fewer vendors.
+subhead: A clear picture of what you spend on software, where you pay twice, and which suppliers to cut. You give your spend list, and get it sorted into categories with a plan for fewer vendors.
 explain: |
   A clear picture of what you spend on software, where you pay twice, and which suppliers to cut. You give your spend list, and get it sorted into categories with a plan for fewer vendors.
 
@@ -18,6 +15,10 @@ when:
   - You suspect several teams pay for the same kind of tool.
   - You are preparing an annual vendor review.
   - You want to cut the number of suppliers you manage.
+not_for:
+  - "You want to review how one vendor is performing: use the vendor-management skill or ask the vendor's account owner for a review."
+  - "You have no spend list yet: export one from your accounting tool or card statements first, then come back."
+  - "You want to negotiate one renewal: ask your AI to help draft the email, or talk to the vendor directly."
 you_give:
   - A list of software spend lines with vendor and amount
   - Contract renewal dates (optional)
@@ -29,8 +30,29 @@ you_get:
   - Duplicate tool groups
   - A keep, merge or drop plan for suppliers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Download the skill folder and open your AI tool. Use one that can run Python 3 code, because the sorting scripts need it.
+  - Fill in your spend list using the intake template in the folder. Add one line per charge with vendor and amount.
+  - Tell your AI to follow the skill, and upload the folder and your spend list.
+  - Check the categories first. Fix any line that landed in the wrong group.
+  - Read the consolidation plan. Decide which cuts you accept before you talk to any supplier.
+  - If you cannot run code, paste the skill text and your list into a chat. Expect a rougher sort.
+output_sample:
+  input:
+    - Your software spend list, with vendor, amount and date for each line
+    - Contract renewal dates (optional)
+    - Who owns each tool (optional)
+    - Your savings goal (optional)
+  prerequisites:
+    - An AI that can run Python 3 code, for the sorting scripts
+    - Your spend list in the format of the intake template in the skill folder
+  output:
+    - name: Categorized spend
+      contains: Each spend line placed in a standard category, with totals for each category.
+    - name: Pareto breakdown
+      contains: The few categories that make up most of your cost, ranked by spend.
+    - name: Purchasing cycle analysis
+      contains: How long each category takes to buy, and which category slows things down most.
+    - name: Consolidation plan
+      contains: Duplicate tools grouped by job, with a keep, merge or drop call for each supplier.
+    - name: Procurement review
+      contains: A summary of findings, risk flags, renewal timing and next steps for your review.

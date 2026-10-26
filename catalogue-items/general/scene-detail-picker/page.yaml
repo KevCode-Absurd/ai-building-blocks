@@ -1,6 +1,6 @@
 new_slug: scene-detail-picker
 name: "Scene detail picker"
-summary: "Paste your story's key places. Get a few first-to-mind details for each, one fresh comparison and what to leave out."
+summary: "Pick the few details that make a place feel real before you draft. Give it your story's places. You get four details each, plus what to skip."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It follows a short fixed method for each place."
@@ -17,6 +17,10 @@ when:
   - "Your drafts open with a paragraph of scenery that goes nowhere."
   - "You are about to write a place you know only a little."
   - "A reader said they could not picture where it happened."
+not_for:
+  - "You want to fix scenes you already wrote: ask your AI to cut or tighten the draft instead, as this sheet is for before you write."
+  - "You are writing a report, guide or other non-fiction: this tool is built for stories, so describe the place in plain facts yourself."
+  - "You need a plot, characters or an outline: this only picks details for places, so work out the story first, then come back."
 
 you_give:
   - "Your situation or brief"
@@ -35,6 +39,27 @@ how_to_use:
   - "If a place is real, name it. It will use what is true about it and mark what it made up."
   - "Keep the sheet beside you while you draft."
   - "Use the details once each. Do not repeat them."
+output_sample:
+  input:
+    - Your situation or brief
+    - The places your first scenes happen in, in order
+    - Real places they resemble (optional)
+    - The mood or whose eyes we see through (optional)
+  output:
+    - name: Place block
+      contains: "One block per place: four first-to-mind details, with at least one that is not sight."
+    - name: Fresh comparison
+      contains: One comparison between two unlike things for each place, or a note that none was good enough.
+    - name: Skip
+      contains: A short list of things easy to describe that would slow the story.
+    - name: Leave to the reader
+      contains: One line on what the reader will fill in, such as faces or ordinary furniture.
+    - name: Made up, not known
+      contains: Any details the AI invented, so you can tell them from real ones.
+    - name: A word on length
+      contains: How many lines each place should get in your draft.
+    - name: Checks missed
+      contains: One line for each check that failed and why, or none.
 
 how_it_works:
   - title: "Lists the places"

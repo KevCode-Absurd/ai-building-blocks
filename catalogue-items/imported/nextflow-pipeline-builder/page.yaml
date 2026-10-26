@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes and debugs code with set conventions.
 new_slug: nextflow-pipeline-builder
 name: Nextflow pipeline builder
-summary: Describe your data steps. Get a Nextflow or nf-core pipeline built, run
-  and fixed when it fails.
+summary: Build, run and fix a Nextflow pipeline from a plain list of data steps, or run an nf-core pipeline on your own samples.
 job: build-software
 headline: Nextflow pipeline builder
-subhead: A Nextflow data pipeline that runs the same on your laptop, a computing
-  cluster or the cloud. You describe the steps, and the skill writes the
-  pipeline, runs it and fixes it when it fails.
+subhead: A Nextflow data pipeline that runs the same on your laptop, a computing cluster or the cloud. You describe the steps, and the skill writes the pipeline, runs it and fixes it when it fails.
 explain: |
   A Nextflow data pipeline that runs the same on your laptop, a computing cluster or the cloud. You describe the steps, and the skill writes the pipeline, runs it and fixes it when it fails.
 
@@ -18,6 +15,10 @@ when:
   - A run failed halfway and you want to resume it safely.
   - Your scripts work on one machine but must scale to a cluster.
   - You want to add tests to a pipeline module.
+not_for:
+  - "You have one small script or a simple shell job: run a plain script instead, as a pipeline adds setup you do not need."
+  - "You cannot install Java, Nextflow or a container tool: ask a developer or your IT team to set up the machine first."
+  - "You only want to read or explain existing code: paste it into your AI and ask for a plain summary."
 you_give:
   - The steps your data goes through
   - Your tools and input files
@@ -29,8 +30,35 @@ you_get:
   - Tests for your modules
   - A diagnosis for failed runs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Nextflow and containers.
+  - Open Claude, ChatGPT or Gemini. Use one that can run code and read files, because this skill runs Nextflow.
+  - Make sure Java, Nextflow and a container tool such as Docker are installed on your machine.
+  - Paste the skill into the chat. Then describe your data steps, your tools and your input files.
+  - "Say where it will run: laptop, cluster or cloud. Paste the error log too if a run failed."
+  - Read the pipeline and the config before you run it on real data. Try the small test run first.
+  - Ask your AI to add nf-test tests once the pipeline runs well.
+output_sample:
+  input:
+    - The steps your data goes through
+    - Your tools and input files
+    - "Where it will run: laptop, cluster or cloud"
+    - Error logs from a failed run (optional)
+  prerequisites:
+    - An AI that can run code in a terminal
+    - Java and Nextflow installed on your machine
+    - A container tool such as Docker or Singularity, for most pipelines
+    - Python 3.10 or newer, only if you use the nf-core tools
+  output:
+    - name: main.nf
+      contains: The pipeline script that links your processes and channels so data flows from one step to the next.
+    - name: modules
+      contains: One file per tool or step, written in DSL2 so each part can be reused and tested.
+    - name: nextflow.config
+      contains: Settings for containers, resources and software versions, so results can be repeated.
+    - name: Config profiles
+      contains: Named settings for laptop, cluster or cloud, so you change the profile and not the code.
+    - name: Samplesheet and params file
+      contains: The list of your samples and the settings used for a run.
+    - name: nf-test files
+      contains: Tests for your modules, subworkflows or pipeline, with checks on what each one should produce.
+    - name: Run diagnosis
+      contains: For a failed run, the cause found in the logs and the fix, with a safe way to resume.

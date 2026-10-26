@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It compares two ratings with the result.
 new_slug: confidence-check-coach
 name: Confidence check coach
-summary: Rate how sure you are before and after you try something. See where you
-  guess too high or too low.
+summary: Check if you guess too high or too low on what you know. Rate your confidence, try a question, and get a confidence check with a named pattern.
 job: teach-and-train
 headline: Confidence check coach
-subhead: A short exercise that shows whether you tend to be too sure or too
-  unsure about what you know. You rate your confidence, try the question, see
-  how you did, and then compare.
+subhead: A short exercise that shows whether you tend to be too sure or too unsure about what you know. You rate your confidence, try the question, see how you did, and then compare.
 explain: |
   A short exercise that shows whether you tend to be too sure or too unsure about what you know. You rate your confidence, try the question, see how you did, and then compare.
 
@@ -18,6 +15,10 @@ when:
   - You want to find topics where you guess too high.
   - A student needs to see their own study habits more clearly.
   - You are building a regular self-check into revision.
+not_for:
+  - "You need a graded exam or a high-stakes decision: use a real test or a person who can mark your work, not this self-check."
+  - "You only want to test if you can recall facts: use a plain quiz from your AI, with no confidence ratings."
+  - "You want a full study plan: ask your tutor or teacher, since this tool only compares your rating with your result."
 you_give:
   - A topic or question
   - Your confidence rating before and after
@@ -29,7 +30,26 @@ you_get:
   - A named pattern
   - Advice on what to do next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the instructions from the skill file. No code, files or paid tools are needed.
+  - Tell your AI the topic or question and your study setting. Add earlier results if you have them (optional).
+  - Give a gut confidence rating from 0 to 100 before you answer.
+  - Answer the question without notes, then read the feedback on your attempt.
+  - Rate your confidence again, then read the pattern your AI names and the next step it suggests.
+  - Run it again on another topic so your AI can compare patterns over time.
+output_sample:
+  input:
+    - A topic or question to test yourself on
+    - Your course or study setting
+    - Your gut confidence rating from 0 to 100, before you answer
+    - Earlier ratings and results (optional)
+  output:
+    - name: Confidence before
+      contains: The 0 to 100 rating you gave before you tried the question.
+    - name: Marked attempt
+      contains: Your answer marked as strong, partial, minimal or incorrect, with honest feedback.
+    - name: Confidence after
+      contains: The new 0 to 100 rating you give once you have seen the feedback.
+    - name: Calibration pattern
+      contains: A comparison of your ratings with the result, named as overconfident, underconfident or well calibrated.
+    - name: Next action
+      contains: One clear step to take next based on the pattern.

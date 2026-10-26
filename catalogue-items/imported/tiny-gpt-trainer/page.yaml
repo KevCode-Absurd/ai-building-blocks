@@ -2,36 +2,59 @@ thinking: low
 thinking_why: It follows a short, known set of steps.
 new_slug: tiny-gpt-trainer
 name: Tiny GPT trainer
-summary: Give it any text file. Get a small GPT trained from scratch that writes
-  in that style, plus how it works.
+summary: Train a tiny GPT on your own text file and see it write in that style. Runs on a laptop CPU, and shows how a GPT is built from scratch.
 job: build-software
 headline: Tiny GPT trainer
-subhead: Train your own small GPT from scratch on any text file and watch it
-  learn to write in that style. It is built for learning how language models
-  work, and it runs on a normal laptop for the small version.
+subhead: Give it a text file. It trains a small GPT from scratch, so you can see how a language model learns. The small version runs on a normal laptop.
 explain: |
   Train your own small GPT from scratch on any text file and watch it learn to write in that style. It is built for learning how language models work, and it runs on a normal laptop for the small version.
 
   The skill uses nanoGPT, a short and readable training codebase. It prepares your text, splits it into training and check sets, and runs the training script with a config sized to your computer. A character-level run on a small file finishes in about five minutes on CPU. You then sample text from the model and see how settings such as layers, size and training steps change the result.
 when:
-  - You want to understand how a GPT is built, not just use one.
-  - You have a text collection and want a tiny model that mimics it.
+  - You want to learn how a GPT is built, not just use one.
+  - You have a pile of text and want a tiny model that copies its style.
   - You are teaching a class how language models are trained.
-  - You want to test how model size affects output.
+  - You want to see how model size changes what the model writes.
+not_for:
+  - "You need a model for real products or production text writing: use HuggingFace Transformers or LitGPT instead."
+  - "You want a chatbot or writing help right now: use ChatGPT, Claude or Gemini directly, no training needed."
+  - "You want to train a large model across many computers: use Megatron-LM, since this tool is built for learning and small runs."
 you_give:
   - A plain text file
-  - Python with PyTorch
-  - A computer with CPU or graphics card
   - How long you can train
+  - Whether you have a CPU or a graphics card (optional)
 you_get:
-  - Prepared training data
-  - A trained small model
-  - Sample generated text
-  - Notes on how training works
-  - Settings to scale up
+  - Your text prepared for training
+  - A small trained model
+  - Sample text in the style of your file
+  - Notes on how the training works
+  - Settings to try for a bigger model
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Use an AI that can run Python code, or run the steps on your own computer. Install PyTorch and the other packages first.
+  - Get the nanoGPT code from GitHub and put your text file in a plain .txt file.
+  - Ask your AI to prepare your text, then write a config that fits your computer.
+  - Start training. A small text file takes about five minutes on a CPU.
+  - Ask your AI to make sample text from the trained model and read it.
+  - Change one setting, such as layers or training steps, and train again to compare.
+output_sample:
+  input:
+    - Your text file, as plain text
+    - How long you can let it train
+    - Whether you have a graphics card or only a CPU
+  prerequisites:
+    - An AI that can run Python code, or your own computer with Python
+    - PyTorch and the other Python packages the skill lists
+    - The nanoGPT code from GitHub
+  output:
+    - name: Prepared data
+      contains: Your text turned into a training file and a check file, split about 90 to 10.
+    - name: Config file
+      contains: Model size, layers, training steps and device settings that fit your computer.
+    - name: Trained model folder
+      contains: The saved model from the training run, ready to make new text.
+    - name: Sample text
+      contains: New writing from the model in the style of your text.
+    - name: Training notes
+      contains: A short note on how training works and what the loss and settings mean.
+    - name: Scale-up settings
+      contains: Changes to try for a bigger model, or a fix if you run out of memory.

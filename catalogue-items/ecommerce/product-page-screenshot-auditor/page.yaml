@@ -1,6 +1,6 @@
 new_slug: product-page-screenshot-auditor
 name: "Product page screenshot auditor"
-summary: "Attach product page screenshots. Get what blocks shoppers, changes to test and a score out of 100."
+summary: "Check your product page screenshots for what stops shoppers buying. Get an evidence table, changes to test and a score out of 100."
 job: audit-landing-page
 thinking: high
 thinking_why: "It judges work against many checks, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - Shoppers reach your product page but don't buy, and you want to know what's in their way.
   - You're about to brief a page redesign and want a list of problems backed by screenshots.
   - Someone reported "the page is broken" and you want to separate what's really wrong from what just looks odd.
+not_for:
+  - "You want to judge ad results: use the Campaign performance reviewer, which reads your ad numbers."
+  - "You need to know if checkout, payment or tracking works: run a test purchase in a real browser, or ask a developer."
+  - "You want a plan for what to A/B test: use the Ad test brief writer with this audit's report."
 
 you_give:
   - Screenshots on a phone and a desktop (attach them; your AI can see pictures), each with its date and the page address. The page text helps too.
@@ -34,6 +38,30 @@ how_to_use:
   - Attach them. Paste the page text as well, or instead of them only if your AI can't take images.
   - Write the shopper's question in one line, such as "Can a phone shopper see the price and the guarantee before tapping buy?".
   - Add your prices and policies so it can spot where the page disagrees with them.
+output_sample:
+  input:
+    - Phone and desktop screenshots of your product page, with dates and page address
+    - The one thing a shopper must do or understand on the page
+    - Your prices, policies and claims (optional)
+    - The page text (optional)
+  prerequisites:
+    - An AI that can read images, or the page text pasted in
+    - Your brand brain from the Brand profile builder (optional)
+  output:
+    - name: Shopper's question
+      contains: The one thing a shopper must do or understand, which the whole check is built around.
+    - name: Capture note
+      contains: Which captures were used and what in them could not be confirmed.
+    - name: Numbered observations
+      contains: Each entry gives what was seen, where, what it might mean, a change to try, what is unknown and a tag.
+    - name: What the captures couldn't show
+      contains: Anything that needs a click, a choice, a form or a purchase to check.
+    - name: Tests needed in a real browser
+      contains: The checks you must run yourself, such as picking an option and adding to cart.
+    - name: Task clarity score
+      contains: A score out of 100 for the page now, and again with the changes made.
+    - name: Next 3 steps
+      contains: Three actions to take after reading the report.
 
 how_it_works:
   - title: Keeps the scope small

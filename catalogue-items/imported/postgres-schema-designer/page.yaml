@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Schema choices are hard to undo, so it weighs each one.
 new_slug: postgres-schema-designer
 name: Postgres schema designer
-summary: Describe your data. Get a Postgres schema with the right types, keys,
-  indexes and rules for speed and safety.
+summary: Describe your data and get a Postgres schema design with the right types, keys, indexes and rules, ready to test before you ship.
 job: build-software
 headline: Postgres schema designer
-subhead: A Postgres schema designed for your data, with the right column types,
-  keys, indexes and rules so it stays fast and hard to corrupt as it grows.
+subhead: A Postgres schema designed for your data, with the right column types, keys, indexes and rules so it stays fast and hard to corrupt as it grows.
 explain: |
   A Postgres schema designed for your data, with the right column types, keys, indexes and rules so it stays fast and hard to corrupt as it grows.
 
@@ -17,6 +15,10 @@ when:
   - An existing schema is a mess of text columns.
   - You expect millions of rows and need partitions.
   - You need row-level rules so users see only their own data.
+not_for:
+  - "You use MySQL, SQLite or another database: ask your AI for a schema guide made for that database."
+  - "You only want a slow query made faster: run EXPLAIN on it, or ask your AI to tune that one query."
+  - "You need to change a live database today: write a migration, test it in staging and take a backup first."
 you_give:
   - Description of your data and entities
   - How you will query it
@@ -28,7 +30,25 @@ you_get:
   - Index plan
   - Notes on partitioning and safe migration
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code running or paid tool is needed.
+  - Describe your data, how you will read it, and your expected rows and traffic. Paste your current schema if you have one (optional).
+  - Read the table SQL and the index plan. Check that each rule matches how your business works.
+  - Run the SQL in a staging database first. Use EXPLAIN on your main queries to confirm the indexes help.
+  - If the schema must change later, write a migration, test it in staging and take a backup before you touch live data.
+output_sample:
+  input:
+    - A plain description of your data and the things it tracks
+    - How you will read and search that data
+    - How many rows and requests you expect
+    - Your current schema (optional)
+  output:
+    - name: Table definitions
+      contains: SQL that creates each table, with column types, primary keys, foreign keys and checks.
+    - name: Type and constraint choices
+      contains: Why each type and rule was picked, such as timestamps with time zone and exact numbers for money.
+    - name: Index plan
+      contains: Indexes for the queries you really run, including foreign key columns, with a reminder to confirm them using EXPLAIN.
+    - name: Partitioning and row-level security notes
+      contains: Whether your scale or access rules call for partitions or per-user row rules, and how to set them up.
+    - name: Safe migration notes
+      contains: Steps to apply changes with migrations, a staging test and backups before touching a live database.

@@ -1,0 +1,126 @@
+name: Bilibili Content Strategist agent
+summary: "Get a Bilibili content plan: channel positioning, video series, titles and covers, danmaku moments and a launch checklist. Bring your channel or brand."
+headline: Bilibili Content Strategist agent
+subhead: Give it your channel or brand, your content area and your audience. It plans what to post, how to package each video, and where to invite danmaku, the comments that scroll over the video. You get a Bilibili content plan with a launch checklist.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Bilibili viewers reject content that feels like an ad or a copy of another platform. They reward long, high-effort videos, good covers and a community that talks over the video. This agent plans for that, not for fast posting.
+
+  It starts with where your channel sits: the content area, the voice and why someone should follow. Then it plans a mix of videos, from deep pieces to topical ones, and script moments where viewers can add danmaku (弹幕, scrolling comments). It also plans titles, covers, tags and the first hour after you publish.
+
+  It works from the facts you give it. It cannot open Bilibili, see your stats or know what is trending today. Trends and platform rules change, so it lists what to check in your own creator dashboard. The targets in the original profile are goals, not measured results.
+when:
+  - You are starting a Bilibili channel for a brand or for yourself.
+  - Your Bilibili videos get views but few coins, favourites or follows.
+  - You want a sponsored video that Bilibili viewers will accept.
+  - You plan a video series and want moments that invite danmaku.
+not_for:
+  - You want short vertical videos for Douyin. Use the Douyin Strategist agent.
+  - You are bringing a whole brand to China across many platforms. Use the China Market Localization Strategist agent.
+  - You need help cutting and pacing the video itself. Use the Short-Video Editing Coach agent.
+you_give:
+  - Your channel name or link, or your brand and what you sell
+  - Your content area on Bilibili, such as knowledge, tech, food or gaming
+  - Who you want to reach
+  - "Titles and numbers for your last 5 to 10 videos: views, coins, favourites, follows (optional)"
+  - How many videos you can make each month
+  - A sponsor or product you need to feature (optional)
+you_get:
+  - "Channel positioning: area, voice and the reason to follow"
+  - A content mix and series ideas sized to your video count
+  - "A danmaku plan: moments in a video that invite comments, plus seed comments"
+  - Title options and a cover checklist, with a two-cover test
+  - "A launch checklist: tags, timing, the first hour and cross-posting"
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you can't, paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your channel or brand, your content area, your audience and how many videos you can make each month.
+  - Add your recent video titles with views, coins, favourites and follows from your Bilibili creator dashboard, if you have them. Add the sponsor brief if there is one.
+  - "Say: \"Make my Bilibili content plan. Mark anything about trends or stats you can't check as a check for me.\""
+  - Read the positioning first. If it doesn't sound like your channel, fix it before you plan videos.
+  - Pick one series and ask for its titles, cover options and danmaku moments. Check the facts in any script before you film. Run the two-cover test after you publish.
+how_it_works:
+  - title: Confirm the channel
+    text: It confirms your content area, audience, video capacity and goal. Missing items are asked for once, then marked MISSING.
+  - title: Position the channel
+    text: It states the area, the voice, what you offer viewers and what sets you apart.
+  - title: Plan the mix
+    text: It splits videos into deep pieces, topical ones, community ones and tests, following the profile's example split. You can change the split.
+  - title: Design danmaku moments
+    text: It picks moments in the script that invite scrolling comments and drafts seed comments to post after launch.
+  - title: Package each video
+    text: It writes title options with the profile's formula, a cover checklist and tag ideas.
+  - title: Plan launch and review
+    text: It plans the first hour after publishing, cross-posting and the numbers to review after each video.
+output_shape: |-
+  CHANNEL POSITIONING
+    Area <area> | Voice <voice and look> | Reason to follow <one line> | What sets it apart <one line>
+
+  CONTENT MIX
+    <type: deep, topical, community, test> | <share of videos> | <series idea> | <length>
+
+  DANMAKU PLAN
+    <timestamp> | <moment in the video> | <comment you hope to see> | <seed comment>
+
+  PACKAGING
+    <video> | <3 title options> | <cover idea> | <tags>
+
+  LAUNCH CHECKLIST
+    <before posting> | <first hour> | <cross-posting> | <what to review after 48 hours>
+
+  NUMBERS TO TRACK
+    <metric> | <your starting number or MISSING> | <what a good move looks like>
+output_sample:
+  input:
+    - Your channel or brand, and your content area on Bilibili
+    - Who you want to reach, and how many videos you can make each month
+    - Stats for your last 5 to 10 videos (optional)
+    - A sponsor brief (optional)
+  prerequisites:
+    - A native Chinese reader to check titles, covers and comments before you publish
+    - Access to your own Bilibili creator dashboard, to run the checks it lists (optional)
+  output:
+    - name: Channel positioning
+      contains: Your area, voice, reason to follow and what sets the channel apart.
+    - name: Content mix
+      contains: Deep, topical, community and test videos, with series ideas sized to your capacity.
+    - name: Danmaku plan
+      contains: Moments in a video that invite scrolling comments, with seed comments to post.
+    - name: Packaging
+      contains: Three title options, a cover idea and tags for each video.
+    - name: Launch checklist
+      contains: What to do before posting, in the first hour and after 48 hours.
+    - name: Numbers to track
+      contains: The metrics to watch after each video, with your starting figures.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: UP主
+    meaning: A creator who uploads videos to Bilibili.
+  - term: Danmaku (弹幕)
+    meaning: Comments that scroll across the video at the moment they were written.
+  - term: 三连
+    meaning: Liking, giving a coin and saving a video, all in one tap.
+  - term: 完播率
+    meaning: "Completion rate: the share of viewers who watch to the end."
+  - term: 恰饭
+    meaning: Slang for a sponsored video.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three read and write Chinese. Have a native reader check anything you publish.
+  inputs:
+    - Links to 3 channels in your area that you admire.
+    - Your last scripts or video outlines.
+    - Your brand guide, if a company runs the channel.

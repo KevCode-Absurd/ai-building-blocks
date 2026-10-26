@@ -1,4 +1,6 @@
 import { unzipSync } from "fflate";
+import { makeSearchDocument } from "../lib/search-document.mjs";
+import { buildLibrarySearchIndex, searchLibraryIndex, type LibrarySearchIndex } from "../lib/library-search-core.ts";
 import { inspectSkillArchive, safePackagePath, sha256, verifyLocalReferences } from "../lib/workflow-execution.ts";
 import { apiExecutionPolicy as executionPolicy } from "./api-execution.ts";
 
@@ -83,6 +85,7 @@ export class PublicCatalogueService {
   private fetchAsset: (path: string) => Promise<Response>;
   private baseUrl: string;
   private cataloguePromise?: Promise<Catalogue>;
+  private searchIndexes = new WeakMap<Catalogue, LibrarySearchIndex>();
   constructor(fetchAsset: (path: string) => Promise<Response>, baseUrl: string) {
     this.fetchAsset = fetchAsset;
     this.baseUrl = new URL(baseUrl).origin;
@@ -170,11 +173,15 @@ export class PublicCatalogueService {
     const query = string(args.query, "query", 300, true).trim().toLowerCase();
     const type = string(args.type, "type", 40, true); const category = string(args.category, "category", 40, true);
     const limit = integer(args.limit, "limit", 10, 1, 25), offset = integer(args.offset, "offset", 0, 0, 100000);
-    const c = await this.catalogue(); const words = query.split(/\s+/).filter(Boolean);
+    const c = await this.catalogue();
+    let index = this.searchIndexes.get(c);
+    if (!index) {
+      index = buildLibrarySearchIndex(c.items.map(item => makeSearchDocument(item, {}, { extraText: [...cataloguePorts(item.inputs), ...cataloguePorts(item.outputs)].map(p => p.type).join(' ') })), c.manifest.catalogue_sha256);
+      this.searchIndexes.set(c, index);
+    }
+    const hits = searchLibraryIndex(index, query);
     const ranked = c.items.filter(b => c.manifest.resources[b.slug] && (!type || b.type === type) && (!category || b.category === category)).map(item => {
-      const title = `${item.slug} ${item.name} ${(item.aliases ?? []).join(" ")}`.toLowerCase();
-      const text = `${title} ${item.summary} ${item.task ?? ""} ${cataloguePorts(item.inputs).map(p => p.type).join(" ")} ${cataloguePorts(item.outputs).map(p => p.type).join(" ")}`.toLowerCase();
-      return { item, score: words.length ? words.reduce((n, w) => n + (title.includes(w) ? 3 : text.includes(w) ? 1 : 0), 0) : 1 };
+      return { item, score: query ? hits.get(item.slug)?.score ?? 0 : 1 };
     }).filter(v => v.score > 0).sort((a, b) => b.score - a.score || a.item.slug.localeCompare(b.item.slug));
     return {
       schema: "abb-search/1", query, total: ranked.length, offset, next_offset: offset + limit < ranked.length ? offset + limit : null,

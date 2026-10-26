@@ -1,6 +1,6 @@
 new_slug: clean-up-your-meta-account-and-rebuild-it-to-scale
 name: Clean up your Meta account and rebuild it to scale
-summary: Give it your campaigns and results. Get campaigns kept or cut, a simpler layout and a spend ladder.
+summary: "Clean up your Meta ad account: give it your campaigns and results. Get each campaign kept, merged or cut, a simpler layout and a spend ladder."
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: Three skills run in a row, with simple break-even sums. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - Your account has many campaigns and you cannot say what each one is for.
   - Campaigns have few sales each and results swing from week to week.
   - You want to raise spend but do not trust the structure under it.
+not_for:
+  - "Your account is new and has little spend: start with one testing campaign and add more once sales come in."
+  - "You want to check ads against Meta's rules before you publish: use the Meta ad policy checker."
+  - "You only want to set a test budget for new ads: use the Ad test budget setter."
 you_give:
   - Your campaign list with spend, results and attribution settings
   - Screenshots of your settings (optional)
@@ -30,6 +34,24 @@ how_to_use:
   - Share your full campaign list, even the ones you think are dead.
   - When it pauses, pause or merge the flagged campaigns, then pull 30 days of data for what is left.
   - Run the new layout for four weeks before the last step.
+output_sample:
+  input:
+    - Your campaign list with spend, results and attribution settings
+    - Screenshots of your settings (optional)
+    - After the first pause, 30 days of spend, products and margins
+    - After the second pause, results by ad set, plus your cash and stock position
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1 file: Meta campaign purpose checker"
+      contains: A one-line purpose for each campaign, setup errors found, a score, and a keep, merge or cut call.
+    - name: "Step 2 file: Meta account structure planner"
+      contains: Your spend tier, a simpler layout of campaigns and ad sets, ads per ad set, KPIs and settings to switch off.
+    - name: "Step 3 file: Meta scaling campaign planner"
+      contains: Your break-even return, each ad set's ceiling, a spend ladder and a call on a separate scaling campaign.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check what each campaign is for
     text: Writes a one-sentence purpose for every campaign, checks frequency, attribution and testing, scans for common setup errors and marks each one keep, merge or cut.

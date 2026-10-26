@@ -1,6 +1,6 @@
 slug: copilot-react18-batching-patterns
 name: React batching regression fixer
-summary: Share a React class component. Get fixes for state updates that break under automatic batching.
+summary: Find and fix React 18 automatic batching bugs in class components, such as state read after await, without overusing flushSync.
 category: general
 boards: []
 type: skill
@@ -11,7 +11,7 @@ inputs:
   - type: codebase
     required: true
 outputs:
-  - type: test_report
+  - type: code_change
 uses: []
 origin: imported
 source:

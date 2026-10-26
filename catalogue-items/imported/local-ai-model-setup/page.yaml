@@ -2,36 +2,109 @@ thinking: medium
 thinking_why: It adapts a fixed setup to your machine.
 new_slug: local-ai-model-setup
 name: Local AI model setup
-summary: Say what hardware you have. Get Ollama and Open WebUI running local
-  models, tuned for your graphics card.
+summary: Run a private AI model on your own computer. Tell it your hardware and get Ollama and a browser chat screen set up step by step.
 job: set-up-ai
 headline: Local AI model setup
-subhead: Run AI models on your own computer, tuned for your graphics card, with
-  a chat screen in your browser. Say what hardware you have and get Ollama and
-  Open WebUI working together.
+subhead: "Tell it your operating system and graphics card. It picks a model that fits your memory, gives you the commands to install Ollama, and adds an optional browser chat screen with Open WebUI. Everything stays on your machine by default."
 explain: |
-  Run AI models on your own computer, tuned for your graphics card, with a chat screen in your browser. Say what hardware you have and get Ollama and Open WebUI working together.
+  A local AI model runs on your own computer, so your chats never leave it. Ollama is a free program that downloads and runs these models. Open WebUI gives you a chat screen in your browser, like ChatGPT, that talks to Ollama.
 
-  It starts with install steps for Ollama, then pulls a model sized to your memory and lists quantization choices. A model selection guide helps match a model to the card. Then it gives a full Docker Compose setup with Open WebUI, and optional LiteLLM proxy for one common address. It also shows chat, embeddings and Python calls. You need Docker for the full setup, and a GPU helps.
+  This skill starts from your hardware. Memory decides which model will run well, so it matches your graphics card or Mac chip to a model and says why. Then it gives the install and test commands for your system, a Docker file for the browser chat screen, and an optional proxy so apps can reach several models at one address.
+
+  It keeps everything private by default: the services listen on your machine only, and passwords are placeholders you set yourself. It also tells you how to back up, stop and remove the setup.
 when:
-  - You want a private chat with an AI that never leaves your machine.
-  - You have a gaming GPU and do not know which model fits.
-  - You want one screen for several local models.
-  - Your app needs a local model address to call.
+  - You want a private AI chat that never leaves your computer.
+  - You have a gaming graphics card and do not know which model fits it.
+  - You want one browser screen to switch between several local models.
+  - An app you are building needs a local model address to call.
+not_for:
+  - "You want a private chat but not the setup: use a hosted AI like Claude, ChatGPT or Gemini."
+  - "You need a shared server for many users or heavy traffic: this is a one-machine setup."
+  - "Your computer has under 8 GB of memory: only very small models will run."
+  - "You are not comfortable running commands: ask a technical friend to sit with you for the steps."
 you_give:
-  - Your computer and graphics card
-  - Operating system
-  - What you want to use the model for
-  - Docker installed (optional)
+  - Your operating system, such as Windows, Mac or Linux
+  - Your graphics card and its memory, or your Mac chip and total memory
+  - What you want the model for, such as chat, coding or searching your documents
+  - Whether Docker is installed (optional)
+  - Whether anyone else needs to reach it (optional)
 you_get:
-  - Install and start commands
-  - A model suited to your memory
-  - A Docker Compose setup with Open WebUI
-  - API call examples
-  - Optional proxy config
+  - A starter model matched to your memory, with the reason
+  - Install and test commands for your system
+  - A Docker file for the browser chat screen, with placeholders for your secrets
+  - Checks that show it works
+  - Notes on backup, stop and removal
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands on your computer.
+  - Open Claude, ChatGPT or Gemini. The plan is plain text, so no code runs on its own.
+  - Paste the skill text into the chat, or open the skill if you added it to your AI.
+  - Tell it your system, your graphics card and what you want the model for.
+  - If it asks for something you do not know, say so. It will mark the gap and not guess your hardware.
+  - Read the model choice first. Then run the commands yourself, one block at a time, in your terminal.
+  - Back up anything important before you start. Make up your own passwords for the secrets it lists.
+how_it_works:
+  - title: Read your hardware
+    text: It matches your memory to a model size and picks one starter model, with the reason.
+  - title: Install Ollama
+    text: It gives the installer steps for your system and leaves you to run them.
+  - title: Pull and test the model
+    text: It gives one command to download the model and one to ask it a short question.
+  - title: Add the chat screen
+    text: If Docker is installed, it adds Open WebUI that you open at localhost in your browser.
+  - title: Add the optional proxy
+    text: It adds one address for several models only if an app needs it.
+  - title: Lock it down
+    text: It keeps every service on your machine and puts your secrets in a file you make yourself.
+  - title: Check it works
+    text: It lists what you should see at each point, and how to back up and remove it.
+output_shape: |
+  Your setup: <hardware>, <starter model>, <why>
+  Install and start: <commands for your system>
+  Compose file: <Open WebUI setup with your secrets as placeholders>
+  How to know it works: <what you should see>
+  Backup and undo: <where data lives>, <how to stop and remove>
+  Gaps: <missing inputs> and <next step>
+output_sample:
+  input:
+    - Your operating system
+    - Your graphics card and memory, or your Mac chip and memory
+    - What you want to use the model for
+    - Whether Docker is installed (optional)
+  prerequisites:
+    - A computer with at least 8 GB of memory and about 20 GB of free disk space
+    - Docker, only for the browser chat screen
+  output:
+    - name: Your setup
+      contains: The hardware it read, your starter model and why it fits your memory.
+    - name: Install and start commands
+      contains: The steps for your operating system, to install Ollama and ask a first question.
+    - name: Compose file
+      contains: A Docker file for Open WebUI that listens on your machine only, with secrets as placeholders.
+    - name: How to know it works
+      contains: What you should see in the terminal and at localhost in your browser.
+    - name: Backup and undo notes
+      contains: Where your models and chats are stored, and how to stop and remove it all.
+    - name: Gaps and next steps
+      contains: Missing inputs and one next step, such as trying a second model.
+works_best_with:
+  tools:
+    - name: Ollama
+      why: Free program that downloads and runs local models. Get it from ollama.com.
+    - name: Open WebUI
+      why: Browser chat screen that works with Ollama.
+    - name: Docker Desktop
+      why: Runs the chat screen in a box so it stays separate from your system.
+  inputs:
+    - The exact name of your graphics card
+    - How much free disk space you have
+    - The apps you want to connect to the model
+terms:
+  - term: Local model
+    meaning: An AI that runs on your own computer, not on someone else's server.
+  - term: VRAM
+    meaning: The memory on your graphics card. It decides how large a model can run.
+  - term: Quantization
+    meaning: A way to shrink a model so it fits in less memory, with a small loss in quality.
+  - term: Docker
+    meaning: A tool that runs programs in sealed boxes, so setup is the same on every machine.
+  - term: Proxy
+    meaning: One address that passes your app's requests on to several models.

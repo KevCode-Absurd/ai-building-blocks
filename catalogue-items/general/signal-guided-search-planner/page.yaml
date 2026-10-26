@@ -1,38 +1,50 @@
 new_slug: signal-guided-search-planner
 name: "Signal-guided search planner"
-summary: "Describe a hunt for a cause or winner. Get a plan that splits the pile, measures one signal and follows it."
+summary: "Find the cause or the winner in a big pile of ads, customers or products. Get a plan that splits it and follows one signal."
 job: test-an-idea
 thinking: high
 thinking_why: "It has to judge whether an odd result is a real finding or a test error, and decide where to keep digging."
 
 headline: "Signal-guided search planner"
-subhead: Give it a pile to search, such as hundreds of ads, customers or products, and the one number that tells you a part is promising. It plans how to split the pile, measure every part the same way and keep digging where the signal is strongest. You get a search plan.
+subhead: "Describe a pile to search, such as your ads, customers or a year of orders, and what you want to find. Paste a results sheet. The skill picks one signal, splits the pile and measures every part the same way. You get a plan that keeps digging where the signal is strongest."
 
 explain: |
-  When you hunt for the cause of a problem or the one winner in a big pile, it is tempting to look at the top few and stop. That misses the part you didn't measure, and it mixes up a lucky result with a real one. Searching well means one signal, measured the same way every time, on every part.
+  You may be hunting for the cause of a problem, or the one winner in a big pile of results. It is tempting to look at the top few and stop. That misses the parts you never measured. It also mixes up a lucky result with a real one. Searching well means one signal, measured the same way on every part.
 
-  This skill picks that signal and checks your measuring setup on a case where you know the answer. It plans to split the pile by ordinary means, measure every part, and keep only the part where the signal is strongest. When a result is a surprise, it rules out a test error before calling it real. It stops when the signal stops concentrating.
+  This skill picks that signal and tests your measuring on a case where you already know the answer. It splits the pile by ordinary means, such as channel or month. It measures every part and keeps only the part where the signal is strongest. Then it splits that part again.
+
+  When a result is a surprise, it rules out a measuring mistake before calling it real. It stops when the signal stops concentrating, and lists what it dropped and why.
 
 when:
-  - You have a large pile of ads, products or customers and need to find where the good ones come from.
-  - A number is off and you need to find which part of the business causes it.
-  - Results look odd and you don't know if it is a real find or a measuring mistake.
+  - "You have a large pile of ads, products or customers and need to find where the good ones come from."
+  - "A number is off, such as margin or returns, and you need to find which part of the business causes it."
+  - "A result looks odd and you can't tell if it is a real find or a measuring mistake."
+  - "Someone says our best ads all share one thing, after looking at only the top five."
+
+not_for:
+  - "You have two periods of ad totals and want to know what changed: use the Ad sales drop analyst."
+  - "You want to compare two versions of one ad or page: use the A/B test results reader."
+  - "You think your tracking is broken, not your ads: use the Ad data quality checker first."
+  - "You have a short list you can sort by eye. Splitting a pile only pays off when it is too big to read."
 
 you_give:
-  - The pile you are searching and the thing you want to find
-  - A sheet with results per item, for a stated period
-  - Anything you can split the pile by, such as channel, product type or date (optional)
+  - "The pile you are searching and what you want to find"
+  - "A results sheet with one row per item, for a stated period, with units"
+  - "A case in the sheet where you already know the right answer (optional)"
+  - "Ways to split the pile, such as channel, product type or month (optional)"
 you_get:
-  - The one signal to follow, with how to measure it the same way every time
-  - A test of the measuring setup on a known case
-  - How to split the pile, and which part to keep at each round
-  - A write-up plan that lists what was thrown away and why
+  - "The one signal to follow, and how to measure it the same way every time"
+  - "A test of the measuring on a known case"
+  - "One table per round: every part, expected, measured and the gap"
+  - "Which part to keep each round, and a rule for when to stop"
+  - "A write-up of what was found and a list of what was dropped and why"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the pile and what you want to find. Paste the results sheet.
-  - Name any split you already know, such as by channel or month.
-  - Follow the rounds it sets. After each round, bring back the numbers for the next.
+  - "Open the skill in your AI, or copy it and paste it into Claude, ChatGPT or Gemini."
+  - "Describe the pile and what you want to find. Paste your results sheet, or export it first from Meta Ads Manager, Google Ads or your store."
+  - "Name a case where you know the answer, such as an ad you know did well. It tests the measuring first."
+  - "Check each round's table against your sheet. If the sheet runs past a few dozen rows, use an AI that can run code, or a spreadsheet, to do the sums."
+  - "Bring the next round's numbers back after each split. Once you find the part worth testing, take it to the One-change experiment planner."
 
 how_it_works:
   - title: Picks one signal
@@ -79,6 +91,28 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "The pile you are searching and what you want to find"
+    - "A results sheet, one row per item, for a stated period"
+    - "A case you already know the answer for (optional)"
+    - "Ways to split the pile (optional)"
+  prerequisites:
+    - "Your results, exported from your ad platform or store. A spreadsheet helps for long sheets."
+  output:
+    - name: "THE SIGNAL"
+      contains: "The one measure to follow, exactly how it is measured, and the check on a known case."
+    - name: "ROUND 1, ROUND 2 and on"
+      contains: "One table per round: each part, expected, measured, gap and whether a test error was ruled out, plus what you keep and drop."
+    - name: "STOP RULE"
+      contains: "What shows the signal has stopped concentrating, so you know when to stop."
+    - name: "WHAT WAS FOUND"
+      contains: "The result in plain words, and what you could not tell."
+    - name: "WHAT WAS THROWN AWAY AND WHY"
+      contains: "Each dropped part with the number or check that justified dropping it."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts that would sharpen the search, and any check that failed or could not run, or none."
+
 tweaks:
   - what: The signal
     how: Name one number, such as orders per 100 visits. A single measure keeps every part comparable.
@@ -103,10 +137,10 @@ test:
   - Check one dropped part by hand to confirm the signal really was weak there.
 
 improve:
-  - Add the splits that are normal in your field (channel, store, supplier) to step 3.
-  - Add your usual test errors, such as a tracking gap or a sale period, to the error check.
-  - Save each round's table so you can restart the search later.
-  - Pair it with "One-change experiment planner" once you have found the part worth testing.
+  - "Add the splits that are normal in your field (channel, store, supplier) to step 3."
+  - "Add your usual test errors, such as a tracking gap or a sale period, to the error check."
+  - "Save each round's table so you can restart the search later."
+  - "Pair it with the One-change experiment planner once you have found the part worth testing."
 
 works_best_with:
   tools:

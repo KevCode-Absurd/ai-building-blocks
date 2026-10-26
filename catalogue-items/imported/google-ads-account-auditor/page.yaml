@@ -2,40 +2,108 @@ thinking: high
 thinking_why: It weighs many settings at once and says where data is missing.
 new_slug: google-ads-account-auditor
 name: Google Ads account auditor
-summary: Give it your Google Ads exports. Get a checked audit of tracking,
-  search terms, Shopping, Performance Max, bids and budgets.
+summary: Audit your Google Ads account from your own exports. Get checked findings on tracking, search terms, Shopping, Performance Max, bids and budgets.
 job: read-ad-results
 headline: Google Ads account auditor
-subhead: A Google Ads audit where every claim traces back to your own export.
-  Give it your exports or screenshots and it checks tracking first, since bad
-  conversion data ruins everything after it.
+subhead: "Give it your Google Ads exports or screenshots, your goal and what counts as a conversion. It checks tracking first, then search terms, structure, keywords, assets, bids and budgets. Every finding names the number it came from, and no change is made to your account."
 explain: |
-  A Google Ads audit where every claim traces back to your own export. Give it your exports or screenshots and it checks tracking first, since bad conversion data ruins everything after it.
+  A Google Ads audit is only useful if you can trace each claim to your own data. This Google Ads account auditor reads your exports and ties every finding to the number behind it. It never edits your account.
 
-  Then it covers search terms and wasted spend, account structure, keywords, Shopping, Performance Max, Demand Gen, creative assets, bids, budgets and policy. It keeps observations, diagnoses and recommendations apart, and any account change stays a draft until you approve it. It will not suggest negative keywords without evidence, and it will not copy benchmarks that do not fit your goal or country. Final scores come from checked data only.
+  It checks tracking first, because bad conversion data weakens every later check. Then it covers search terms and wasted spend, account structure, keywords, Shopping, Performance Max, Demand Gen, assets, bids, budgets and policy. Each finding is labelled as an observation, a likely cause, a recommendation or a draft change.
+
+  It will not name negative keywords without a search terms report. It will not copy a benchmark that does not fit your goal or country. Anything it cannot check is listed as unknown, and it does not give a made-up score.
 when:
   - Your Google Ads spend is rising and results are not.
-  - You inherited an account and need to know its state.
-  - You suspect conversion tracking is broken.
-  - You want a list of search terms wasting budget.
+  - You inherited an account and need to know what state it is in.
+  - You think conversion tracking is broken or counted twice.
+  - You want a list of search terms that waste budget, backed by your own report.
+not_for:
+  - "You want a quick score and a few fixes from one export: use the Google Ads report auditor."
+  - "You want to build campaigns or change bids and budgets in the account. This audit is read-only, and every change stays a draft."
+  - "Your ads run on more than one platform and you want one report: use the Twelve-platform ad account auditor."
+  - "You only want to know why results dropped last week: use the Ad performance diagnoser."
 you_give:
-  - Google Ads exports or screenshots
-  - Your goal and conversion definition
-  - Account age and countries
-  - Spend and margin figures (optional)
+  - Google Ads exports or screenshots, such as campaigns, search terms, keywords and assets
+  - Your goal and what counts as a conversion
+  - Date range, currency, countries and spend
+  - Your target cost per lead or return on ad spend (optional)
+  - Read-only access to the live account, if you want your AI to read it (optional)
 you_get:
-  - Tracking and measurement check
-  - Search term waste findings
-  - Notes for Shopping and Performance Max
-  - Draft changes ranked by impact
+  - A tracking and measurement check, first
+  - Findings by area, each tied to a number in your export
+  - Search term waste findings, only where your report shows them
+  - Notes on Shopping, Performance Max and Demand Gen
+  - Ranked recommendations and draft changes held for your approval
+  - A list of what it could not check, and what to send next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your ad exports, and optionally read
-    your Google Ads account with your own read-only access. Changes stay as
-    drafts for your approval.
-  - Where the skill points to ads/references/, use the
-    ads/references/google-audit.md folder inside it. We copied it in so the
-    skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. If your AI can open files, give it the whole folder, so it can read the ads/references files inside.
+  - Export from Google Ads what you can. The search terms report, campaigns, keywords and conversion actions help the most. Screenshots work too.
+  - Tell your AI your goal, what counts as a conversion, the date range, currency and countries.
+  - Read the evidence coverage list first. It shows what was checked and what is unknown.
+  - Send the extra exports it asks for, then ask it to run the unknown areas again.
+  - Do not apply any draft change yourself until you have read its evidence. Make one change at a time, and check the result after the measurement window it names.
+how_it_works:
+  - title: Collect the basics
+    text: It asks for your goal, conversion definition, dates, countries, spend and targets, and marks anything missing.
+  - title: Open the control list
+    text: It reads the Google controls in ads/references, and the notes on how to count keywords and negatives.
+  - title: Record sources
+    text: Each number is tied to the export, screenshot or query it came from.
+  - title: Check the areas
+    text: It runs tracking first, then search terms, structure, keywords, assets, bidding, budgets and policy.
+  - title: Label each finding
+    text: It separates what the data shows, the likely cause, the advice and the draft change, and marks doubt.
+  - title: Write the report
+    text: It returns evidence coverage, findings, ranked recommendations, draft changes and unknowns.
+output_shape: |
+  Account and evidence: <goal, conversion, dates, data given>
+  Evidence coverage: <areas checked, partly checked, unknown>
+  Measurement findings: <tracking results>
+  Findings by area: <control ID, label, evidence and source, confidence>
+  Prioritised recommendations: <evidence, baseline, step, measurement window, rollback>
+  Draft changes (not applied): <each edit for approval>
+  Contradictions and unknowns: <conflicts, what to send next>
+output_sample:
+  input:
+    - Google Ads exports or screenshots, including the search terms report
+    - Your goal and what counts as a conversion
+    - Date range, currency, countries and spend
+    - Your target cost per lead or return on ad spend (optional)
+  prerequisites:
+    - An AI that can open files, if you want it to read the ads/references folder
+    - Read-only access to the live account, only if you want your AI to read it directly
+  output:
+    - name: Evidence coverage
+      contains: Which areas were checked, which were partly checked, and which are unknown.
+    - name: Measurement findings
+      contains: What your tracking data shows about conversions, tags and double counting.
+    - name: Findings by area
+      contains: Each finding with its control ID, label, source number and confidence.
+    - name: Prioritised recommendations
+      contains: Ranked advice with the evidence, a first step, a measurement window and a rollback.
+    - name: Draft changes
+      contains: Account edits written as drafts, not applied.
+    - name: Contradictions and unknowns
+      contains: Facts that conflict, and the exports to send next.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It handles long exports and can read the reference files in the folder.
+    - name: ChatGPT
+      why: It reads pasted tables and uploaded spreadsheets well.
+    - name: Gemini
+      why: It can take a long export or several screenshots in one go.
+  inputs:
+    - The search terms report for the last 30 to 90 days
+    - Your conversion actions list with the count setting for each
+    - Your profit per sale or value per lead
+    - A note on any account change you made in the date range
+terms:
+  - term: Search terms report
+    meaning: A list of the real searches that triggered your ads, with cost and results.
+  - term: Performance Max
+    meaning: A Google campaign type that runs across all Google channels from one set of assets.
+  - term: Negative keyword
+    meaning: A word that stops your ad from showing on searches that contain it.
+  - term: Read-only access
+    meaning: Access that lets a tool look at your account but not change it.

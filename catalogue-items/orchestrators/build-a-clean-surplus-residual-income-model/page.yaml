@@ -1,53 +1,99 @@
 new_slug: build-a-clean-surplus-residual-income-model
 name: Build a clean-surplus residual income model
 headline: Build a clean-surplus residual income model
-summary: Link common equity movements to residual income and a separate stable price-to-book scenario.
+summary: Build a residual income model for a listed company from its book equity, earnings and cost of equity, with dividends and OCI reconciled.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked common-equity and residual-income workbook with explicit clean-surplus exceptions. Share common equity history, ordinary earnings, distributions, OCI, capital movements, forward ROE and cost-of-equity assumptions.
-explain: |-
-  A linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
+subhead: Give it a company's common equity history, ordinary earnings, dividends, other comprehensive income, share counts, and your forward return on equity and cost of equity. It rolls book equity forward, charges each period for the equity used, and builds a labelled price-to-book scenario. You get one linked workbook and a list of where clean surplus breaks.
+explain: |
+  Residual income asks how much a company earns above what its shareholders' capital should cost. It starts from book equity. That only works if book equity moves by earnings less dividends. Often it does not: other comprehensive income, share issues and buybacks also change it. Accountants call the breaks dirty surplus.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow finds them first. Step 1 rolls parent common equity forward and ties it to the balance sheet, so every movement has a name. Step 2 charges each period for the opening book equity at your cost of equity and keeps the dirty-surplus items apart. Step 3 builds a stable price-to-book case, but only after clean surplus and a workable retention rate are shown.
+
+  The three steps use your sourced figures and label every forecast as an assumption. The result is a scenario for review. It is not a target price, and it does not say whether to buy or sell.
 when:
-  - You need a linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want a second view of a stock next to your cash flow model, anchored on book equity.
+  - Book equity moved by more than earnings less dividends and you need to know why.
+  - You need a price-to-book figure that follows from return on equity, growth and the return shareholders require.
+  - A reviewer asks where each equity movement came from.
+not_for:
+  - You value the company on its cash flows. Use the Link operating growth to terminal reinvestment workflow or the Challenge terminal value with excess returns workflow.
+  - You only need book value per share for one year. Use the Book value per share roll-forward.
+  - The company is a property group where reported net asset value and book value differ. Use the Reconcile property NAV and book value workflow.
+  - You want a buy or sell call or a target price. This builds a scenario for a person to review.
 you_give:
-  - Common equity history, ordinary earnings, distributions, OCI, capital movements, forward ROE and cost-of-equity assumptions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Common equity at the start and end of each period, for parent shareholders only (from the balance sheet)
+  - Ordinary earnings for each period (from the income statement)
+  - Common dividends, share issues, buybacks and other comprehensive income (from the cash flow and equity statements)
+  - Opening and closing share counts
+  - Your cost of equity with its date and source, and your forward return on equity, both labelled as assumptions
+  - The reporting date, currency, scale and fiscal calendar
 you_get:
-  - A linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Book equity rolled forward, with every movement named and tied to the balance sheet
+  - Book value per share from closing shares
+  - "Residual income for each period: earnings less the charge on opening book equity"
+  - Dirty-surplus items listed apart from earnings
+  - A justified price-to-book scenario, labelled as a scenario
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach the annual reports or filings for each period, and paste your cost of equity with its source and date. Say which figures are your own assumptions.
+  - After step 1, check that opening book equity plus the movements equals closing book equity on the balance sheet, with no plug.
+  - After step 2, check that each period's charge uses that period's opening book equity and the same cost of equity. Read the dirty-surplus list.
+  - After step 3, check that the price-to-book case is called a scenario and that its retention rate fits your return on equity and growth. Fill every MISSING line first.
 how_it_works:
   - title: Book value per share roll-forward
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove beginning and ending common book equity; identify OCI and capital movements so reported book changes are not assumed to equal retained earnings.
+    text: "Rolls parent common equity forward from opening to closing, naming each movement, and divides by closing shares. Hands step 2 each period's opening book equity and the dirty-surplus items. Check before moving on: the closing figure ties to the balance sheet."
   - title: One-period residual income bridge
-    text: Use each period beginning common book balance and matching ordinary income for the equity charge. Reconcile dirty-surplus items separately and do not sum the illustration as a full valuation.
+    text: Charges each period for its opening book equity at the cost of equity and subtracts it from ordinary earnings. Reconciles dirty-surplus items on their own. One period is an illustration, not a valuation.
   - title: Justified price-to-book scenario
-    text: Build a distinct stable-state forward ROE/growth/required-return case only after documenting clean surplus and feasible retention; label it a scenario rather than the historical residual-income result.
-output_shape: |-
-  A linked common-equity and residual-income workbook with explicit clean-surplus exceptions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Builds a stable-state case from forward return on equity, growth and the return shareholders require. Runs only after clean surplus and a workable retention rate are shown. Labelled a scenario, apart from the historical result.
+output_shape: |
+  PERIOD AND UNITS   <periods>, <currency>, <scale>
+
+  1 EQUITY ROLL-FORWARD   opening <n> + earnings <n> + OCI <n> + issues <n> - dividends <n> - buybacks <n> = <n>
+                          balance sheet closing <n>, difference <n or none>
+                          closing shares <n>, book value per share <n>
+
+  2 RESIDUAL INCOME       <per period: opening book | cost of equity | equity charge | earnings | residual income>
+                          dirty-surplus items <list, kept apart>
+
+  3 PRICE-TO-BOOK SCENARIO  return on equity <n>, growth <n>, required return <n>, retention <n> -> P/B <n>
+                            (a scenario, not a result)
+
+  SOURCES AND ASSUMPTIONS  <each input, its source and date; each assumption marked>
+  MISSING                  <each gap, and the line it stops>
+  CHECKS MISSED            <one line each, or none>
+output_sample:
+  input:
+    - Common equity at the start and end of each period
+    - Ordinary earnings, dividends, buybacks, share issues and OCI
+    - Opening and closing share counts
+    - Your cost of equity and forward return on equity, marked as assumptions
+  prerequisites:
+    - The company's annual reports or filings for the periods you model
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: 1 EQUITY ROLL-FORWARD
+      contains: Opening to closing book equity with each movement named, the tie to the balance sheet, and book value per share.
+    - name: 2 RESIDUAL INCOME
+      contains: For each period, the equity charge on opening book equity, earnings and residual income.
+    - name: Dirty-surplus list
+      contains: Equity movements that did not pass through earnings, kept apart from residual income.
+    - name: 3 PRICE-TO-BOOK SCENARIO
+      contains: A stable-state price-to-book case from return on equity, growth and required return, labelled a scenario.
+    - name: SOURCES, MISSING and CHECKS MISSED
+      contains: Where each figure came from, each gap and the line it stops, and checks that could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Beginning-book charges and equity rates match; all non-income equity changes are reconciled; historical residuals and stable-state assumptions stay separate and every forecast needs source evidence.
+  - what: A buyback
+    how: Add a share buyback in one period. Closing equity and shares both fall, and the movement shows by name.
+  - what: A higher cost of equity
+    how: Raise the cost of equity. The equity charge grows and residual income shrinks in every period.
+  - what: OCI that is not zero
+    how: Add other comprehensive income. It appears in the dirty-surplus list, not in residual income.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one linked workbook with inputs, formulas and a checks tab.
 judge:
   - Beginning-book charges and equity rates match; all non-income equity changes are reconciled; historical residuals and stable-state assumptions stay separate and every forecast needs source evidence.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +104,31 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a one-page note of how you pick the cost of equity, and paste it in every run, so models of different companies stay comparable.
+  - Save each model with its filing dates, so a restatement shows up as a change, not a surprise.
+  - Run the Review equity valuation sensitivity assumptions workflow on the result before it goes to a reviewer.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: The company's own filings
+      why: They give the real equity movements. A data-site summary often hides buybacks and OCI.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Three or more years of annual reports, so each roll-forward has a prior period.
+    - A dated, sourced cost of equity.
+    - A named reviewer who knows the company's accounting.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Residual income
+    meaning: Earnings left after charging for the shareholders' capital used. A positive figure means the company earned above that cost.
+  - term: Clean surplus
+    meaning: Book equity changes only by earnings less dividends. When anything else moves it, that is dirty surplus.
+  - term: OCI
+    meaning: Other comprehensive income. Gains and losses that change equity but skip the income statement, such as some currency effects.
+  - term: Cost of equity
+    meaning: The return shareholders require for the risk they take.
+  - term: Price-to-book
+    meaning: Share price divided by book value per share.
+before: []
+next:
+  - review-equity-valuation-sensitivity-assumptions
+  - reconcile-property-nav-and-book-value

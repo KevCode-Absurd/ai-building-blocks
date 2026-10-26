@@ -1,33 +1,45 @@
 new_slug: pivot-or-persevere-decider
 name: Pivot or persevere decider
-summary: Paste your progress and customer notes. Get a keep-going or change-course call, the type of change and a review date.
+summary: Decide whether to keep going or change course. Get a one-line call with facts for and against, the kind of pivot that fits and a review date.
 job: plan-strategy
 thinking: high
 thinking_why: It weighs mixed evidence for a costly decision and must separate signal from hope.
 headline: Pivot or persevere decider
-subhead: Paste your progress reading against the targets, and your customer notes if you have them. It counts the signs of being stuck, works out how many test cycles you can still afford and names the kind of change that fits. You get a call and a dated review.
-explain: |-
-  This is the call most teams put off. The numbers are mixed, someone is always sure the next release will fix it, and changing course feels like admitting failure. Many wish afterwards they had decided sooner.
+subhead: Paste your progress against your targets, by group of customers, and any customer notes. It counts six signs that you are stuck and works out how many more tests you can afford. You get a keep-going or change-course call, the kind of change that fits and a date to review it.
+explain: |
+  This is the call most teams put off. The numbers are mixed, someone is always sure the next release will fix it, and changing course feels like admitting failure. Many people wish afterwards that they had decided sooner.
 
-  This skill sets progress against the milestones you wrote, over several groups of customers. It counts six signs of being stuck, works out how many more tests you can afford, and states a call with the facts for and against. If the call is to change course, it names which of ten kinds of change fits what customers said, what you keep, and the new guess to test. It gives a judgment, not a formula, and a date to review it.
+  This skill sets progress against the milestones you wrote down, over several groups of customers. It counts six signs of being stuck and works out how many more tests you can afford. It states a call to persevere or pivot, with the facts for and against. If the call is to change course, it names which of ten kinds of change fits what customers said, what you keep, and the new guess to test.
+
+  It gives a judgment, not a formula, and a date to review it. The method draws on the pivot or persevere meeting in Eric Ries's Lean Startup. The six signs are rules of thumb, and the three-sign line is ours.
 when:
   - Your changes keep failing to move the key numbers.
   - Your team is split between giving up and one more try.
   - You are asked to justify another quarter of money or time.
+  - Your totals are rising, but the rates behind them are flat.
+not_for:
+  - "You have no milestones or targets yet: use the Seven-question startup scorer or the MVP experiment planner first."
+  - "You only have raw numbers by join date: run the Cohort funnel reader first, then bring its result here."
+  - "You already decided to pivot and need the cheapest first test: use the Smallest test picker."
+  - "You run an established business whose sales are falling: use the Market shift turnaround planner."
 you_give:
-  - Your progress against targets, by customer group
-  - Notes from customers, including those who left (optional)
-  - Your money, time and test rhythm (optional)
+  - Your progress against targets, by group of customers (the Cohort funnel reader gives you this, or paste your own table)
+  - Notes from customers, including those who left (optional, but they help most)
+  - Your money or time left, your spend per month and how long one test takes (optional)
+  - The milestones you set earlier, with their dates (optional)
 you_get:
-  - A call to keep going or change course, with facts for and against
-  - A count of stuck signs
-  - The kind of change that fits
-  - A new guess, a test and a review date
+  - A keep-going or change-course call in one line, with facts for and against
+  - A count of six stuck signs, each with its evidence
+  - How many more test cycles you can afford
+  - If changing course, the kind of change that fits, what you keep and a new guess to test
+  - A date for the next review and who should be there
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the Cohort funnel reader output, or your own table of rates against targets.
-  - Add notes from customers, especially those who left.
-  - Hold the review on the date it gives, with the people it lists.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it into a new chat. It needs no files, web access or paid tools.
+  - Paste your table of rates against targets. If you used the Cohort funnel reader, paste its result.
+  - Add notes from customers, especially those who left. Add your money and time left.
+  - Check the evidence next to each stuck sign that says yes.
+  - Treat the call as advice, not a formula. Argue with it using facts, with your team.
+  - Hold the review on the date it sets, with the people it lists.
 how_it_works:
   - title: Gathers the evidence
     text: Milestones, results and customer notes.
@@ -78,6 +90,27 @@ output_shape: |-
 
   CHECKS MISSED
   <lines or none>
+output_sample:
+  input:
+    - Your progress against targets, by group of customers
+    - Notes from customers, including those who left (optional)
+    - Your money or time left and how long one test takes (optional)
+    - The milestones you set earlier (optional)
+  output:
+    - name: EVIDENCE
+      contains: Each milestone with what you predicted and what happened.
+    - name: TREND
+      contains: Each key rate at the start, now and at target, and whether it is moving up, flat or down.
+    - name: STUCK SIGNS
+      contains: Six yes or no questions, each with its evidence, and a count out of six.
+    - name: RUNWAY
+      contains: How many more test cycles your money or time allows, and when the target is reached at today's pace.
+    - name: CALL
+      contains: PERSEVERE or PIVOT in one line, with three facts for, one against and what would change it.
+    - name: IF PIVOT
+      contains: The kind of change, what you keep and drop, the new guess with a number and the smallest test.
+    - name: NEXT REVIEW
+      contains: A date, who attends and what each person brings, plus MISSING and CHECKS MISSED lines.
 tweaks:
   - what: Customer notes
     how: Notes from people who left often say more than the numbers. Paste them.
@@ -121,3 +154,5 @@ terms:
     meaning: Keep going on the same plan because the rates are moving toward the target.
   - term: Runway
     meaning: How many more times you can test a guess before money or time run out.
+  - term: Group of customers
+    meaning: People who joined in the same week or month, so you can compare them with later groups.

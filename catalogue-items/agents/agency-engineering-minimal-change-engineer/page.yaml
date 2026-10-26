@@ -1,0 +1,146 @@
+name: Minimal Change Engineer agent
+summary: Get the smallest code fix that solves your bug or task, with the diff, the checks to run and the extra changes it left for later.
+headline: Minimal Change Engineer agent
+subhead: Paste the bug or task, the code involved and any error or failing test. It changes only what the task needs, shows the diff line by line, and lists nearby fixes it left alone for a separate change.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A bug fix that turns into a clean-up is hard to review and easy to get wrong.
+  Most people, and most AI coding tools, add a rename here and an extra check
+  there. This minimal change engineer agent does the opposite. It makes the
+  smallest code change that fixes the problem you named, and nothing more.
+
+
+  It reads your task word by word, finds the fewest files that must change, and
+  writes the plain fix. Then it checks every changed line against the task.
+  Anything extra, such as a rename, a new error check or a tidy-up, goes on a
+  follow-up list instead of into the diff. If your task could mean a small
+  change or a big one, it asks which you want before it writes anything.
+
+
+  This is a role profile from Agency Agents, shared under MIT. A chat AI cannot
+  run your tests, so it tells you which ones to run. The small-diff targets in
+  the original profile are goals, not results from AI Blocks.
+when:
+  - A bug has a clear cause, and you want a fix a teammate can review in minutes.
+  - A reviewer says your pull request is too big, and you need the core fix alone.
+  - You need one small feature, such as a flag or a field, with no redesign.
+  - Your AI coding tool keeps changing files you never asked about.
+not_for:
+  - You want to restructure or rename across many files. For Rust, use the Rust Refactoring Specialist agent, which is built for whole-repo changes.
+  - You want code that already exists checked for problems. Use the Code Reviewer agent.
+  - You want a new system designed or a rough app built fast. Use the Software Architect agent or the Rapid Prototyper agent.
+  - You can't say what is wrong or what you want. Tell the agent that, and expect questions, not a fix.
+you_give:
+  - The task in one or two sentences, worded as you would tell a teammate
+  - The code involved, pasted or attached, such as the function or file where the problem shows
+  - The error message, failing test or steps that show the bug (optional, but it helps most)
+  - The command you use to run your tests (optional)
+  - Files or areas it must not touch (optional)
+you_get:
+  - The diff, showing only the changed lines, each one tied to your task
+  - A list of the files it touched and why each had to change
+  - The tests or commands to run, marked as not run unless you ran them
+  - A follow-up list of nearby problems it saw and left alone
+  - A question first, if the task could mean a small or a large change
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your task, then the code involved. Add the error message or failing test if you have one.
+  - If your AI asks which size of change you mean, answer in one line. Fixing the symptom is a smaller change than fixing the root cause.
+  - Read the diff first. For each changed line, ask if the task needs it. Say "remove this line" for any that fail.
+  - Apply the change on a copy or a branch. Run your tests yourself and paste any failure back into the chat.
+  - Turn the follow-up list into separate tickets. Do not slip them into the same pull request.
+how_it_works:
+  - title: Read the task literally
+    text: It picks out the verbs in your task. "Fix" means fix, not improve. If the task is vague, it asks before it assumes the bigger job.
+  - title: Find the least to touch
+    text: It traces the smallest set of files and functions that must change. If it needs a fourth file, it stops and asks if that is really needed.
+  - title: Write the plain fix
+    text: It picks the boring, obvious change over the clever one. If two fixes work, it picks the one with fewer changed lines.
+  - title: Check every line
+    text: It asks of each changed line whether the task needs that exact line. Lines that fail the test come out of the diff.
+  - title: List what it left alone
+    text: Anything it noticed but did not change goes on a follow-up list, so nothing is lost and nothing sneaks in.
+output_shape: |-
+  TASK AND SCOPE
+    task as you stated it | verbs that set the scope | ASSUMED: <list> | MISSING: <list>
+
+  DIFF
+    <file> | <diff in before and after lines>
+
+  WHY EACH FILE
+    <file> | required because <reason>
+
+  LINE CHECK
+    changed lines <number> | lines I wanted to add but did not <list> | could it be smaller <yes or no>
+
+  CHECKS
+    <command to run> | what a pass looks like | RUN or NOT RUN
+
+  FOLLOW-UPS NOT DONE
+    <item> | where | why it was left out
+
+  QUESTIONS
+    <anything you must answer before the change is safe>
+output_sample:
+  input:
+    - The bug or task, in one or two sentences
+    - The code involved, pasted or attached
+    - The error message or failing test (optional)
+    - The command that runs your tests (optional)
+  prerequisites:
+    - A way to apply the change and run your tests, such as your editor or a terminal
+  output:
+    - name: Task and scope
+      contains: Your task in your own words, plus what it assumed and what it could not find.
+    - name: Diff
+      contains: Only the lines that change, before and after, for each file.
+    - name: Why each file
+      contains: One line per file on why the task cannot work without that change.
+    - name: Line check
+      contains: How many lines changed, what it chose not to add, and whether the diff could be smaller.
+    - name: Checks
+      contains: The tests to run and what a pass looks like, marked run or not run.
+    - name: Follow-ups not done
+      contains: Nearby problems it saw and left out, each ready to become its own ticket.
+works_best_with:
+  tools:
+    - name: Claude Code or another AI that can read your project and run tests
+      why: It can open the right files and run your tests, so the checks are real instead of left for you.
+    - name: Git
+      why: The diff shows the exact changed lines, so you can read them before you commit.
+  inputs:
+    - The failing test, or the exact steps that show the bug.
+    - The error message or stack trace.
+    - A list of files that must not change.
+terms:
+  - term: Diff
+    meaning: The lines added and removed by a change, shown side by side.
+  - term: Scope creep
+    meaning: Extra changes that were not part of the task.
+  - term: Pull request
+    meaning: A proposed change that teammates read and approve before it joins the code.
+  - term: Follow-up
+    meaning: A real problem that is saved for its own change instead of being fixed now.
+tweaks:
+  - what: Size of the fix
+    how: Say "symptom only" for the smallest patch, or "root cause" if you are fine with a slightly wider one. Name the limit, such as one file.
+  - what: Off-limits files
+    how: List files or folders it must not open. The agent treats them as out of scope even if they look related.
+  - what: Evidence
+    how: Paste the failing test or the error text. A fix tied to a failing case is easier to prove than one tied to a guess.
+improve:
+  - Keep the follow-up lists from each run. They show which parts of your code keep tempting changes.
+  - Add your team's rules to SKILL.md, such as "never edit generated files" or "one file per fix".
+  - Pair it with the Code Reviewer agent. Fix with this one, then have the reviewer check the diff.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

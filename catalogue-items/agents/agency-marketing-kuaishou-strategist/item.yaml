@@ -1,0 +1,45 @@
+slug: agency-marketing-kuaishou-strategist
+name: Kuaishou Strategist agent
+summary: Get a Kuaishou content plan with community and commerce choices. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: business_profile
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+  - type: script
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-kuaishou-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-kuaishou-strategist.md
+  licence: MIT
+  original_name: Kuaishou Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: d28742e505fa7bf6b39a88ccb6c2052ee5b4f569d17cebb81401fa8810a5ad49
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Kuaishou Strategist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Kuaishou Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-kuaishou-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

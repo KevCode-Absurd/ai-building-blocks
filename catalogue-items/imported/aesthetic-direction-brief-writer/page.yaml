@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It turns taste answers into usable design rules.
 new_slug: aesthetic-direction-brief-writer
 name: Aesthetic direction brief writer
-summary: Answer four questions about tone and feel. Get a brief that keeps copy,
-  design and images in one style.
+summary: Turn a vague feel into an aesthetic direction brief. Answer four questions on tone and style, and keep your copy, design and images in one voice.
 job: design-work
 headline: Aesthetic direction brief writer
-subhead: "Describe the project and audience, then answer four questions: how
-  formal or playful you sound, what style ideas guide the work, whether you
-  speak as expert, friend or peer, and how rich the feel should be. You get a
-  tone setting, a style direction, a defined audience relationship, a sensory
-  goal and a brief other tools can follow."
+subhead: "Describe the project and audience, then answer four questions: how formal or playful you sound, what style ideas guide the work, whether you speak as expert, friend or peer, and how rich the feel should be. You get a tone setting, a style direction, a defined audience relationship, a sensory goal and a brief other tools can follow."
 explain: |
   A vague feeling like "premium but warm" becomes a short brief that fixes the look and feel of your project, so your copy, design and images match.
 
@@ -20,6 +15,10 @@ when:
   - Different people write copy and design, and the style drifts.
   - You are starting a brand and want a clear mood.
   - You want one reference for an AI to follow in all outputs.
+not_for:
+  - "You need a kickoff brief with scope, deliverables and deadlines: use a creative brief, not this one."
+  - "You are briefing one shoot, illustration set or video: use an art direction brief, which builds on this one."
+  - "You want to write one tweet, one button label or a data table: skip the brief and just write it."
 you_give:
   - A description of the project
   - Your audience
@@ -32,7 +31,29 @@ you_get:
   - A sensory goal
   - A brief other tools can follow
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste this skill's text into the chat, then add your project description, audience and business goal.
+  - Add 2 to 4 links you admire and a line on what you like in each (optional).
+  - Answer the four questions one at a time. Say yes or no when your AI flags a hard combination.
+  - Read the brief. Check the rejection list first, then edit anything that feels wrong.
+  - Save the final brief as BRIEF.md. Paste it at the start of every later chat for copy, design or images.
+output_sample:
+  input:
+    - Your project name and a short description
+    - Your audience, even a rough idea
+    - What changes if the project works
+    - 2 to 4 links to brands or pieces you admire (optional)
+    - Rules you must keep, like a parent brand voice (optional)
+  output:
+    - name: Project header
+      contains: Your project name, a short description, your audience and your business goal.
+    - name: Four axis selections
+      contains: Your pick for tone, aesthetic, audience relationship and sensory ambition, each with one line of why.
+    - name: Synthesis paragraph
+      contains: A short paragraph in the present tense on what this mix of choices produces in practice.
+    - name: Inspiration references
+      contains: Each link you gave, with a note on what it shows.
+    - name: Rejection list
+      contains: What the brief says no to, such as stock photos or exclamation marks.
+    - name: Open questions
+      contains: Anything still unsettled that later work will need to know.

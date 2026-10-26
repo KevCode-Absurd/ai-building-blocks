@@ -1,6 +1,6 @@
 new_slug: tiktok-spark-ad-picker
 name: "TikTok Spark ad picker"
-summary: "Give your organic or creator posts and their results. Get which to boost as Spark ads, and how."
+summary: "Find which TikTok posts to boost as Spark ads. Give your posts and results. You get a shortlist, a creator request and a test plan."
 job: launch-and-scale-ads
 thinking: low
 thinking_why: "It ranks posts by a few numbers and writes a short request, so a fast model works."
@@ -17,6 +17,10 @@ when:
   - You have posted several TikTok videos, or creators did, and you aren't sure which deserve ad money.
   - You sent products to creators and want to use their best videos as ads.
   - Your made-for-ads videos aren't working and you want to try content that already won attention.
+not_for:
+  - "You only want to read the results of a test that is already running: use the TikTok ad test reader."
+  - "You have fewer than three posts, or your posts are under 5 days old: wait and post more first."
+  - "You want new ad ideas or scripts from scratch: write them with a person on your team, or use a creative brief, not this picker."
 
 you_give:
   - Each post with its views, likes, comments, shares, follows and sales, and who posted it
@@ -34,6 +38,27 @@ how_to_use:
   - Paste your posts with their numbers and how long ago each went up. Wait at least 5 days after posting.
   - Add what each creator agreed to, and your best ad's results.
   - Send the creator request it drafts, then add each code in Ads Manager under TikTok post.
+output_sample:
+  input:
+    - Your TikTok posts with views, likes, comments, shares, follows and sales
+    - Who posted each one and the date it went up
+    - What each creator agreed to, such as paid use and how long (optional)
+    - Your current best ad and its results (optional)
+  output:
+    - name: SPARK SHORTLIST
+      contains: The posts to boost, each with its numbers, the reason it was picked and whether it needs a creator code.
+    - name: Held back
+      contains: Posts left out, each with a reason such as too new, claim problem, no permission or weak results.
+    - name: CREATOR REQUEST
+      contains: A short draft message for the creator with the steps to turn on ad authorization and send the code.
+    - name: ADD IN ADS MANAGER
+      contains: The steps to add a post under TikTok post, paste the code and set the destination page.
+    - name: TEST
+      contains: "How the boosted post runs against your best ad: budget, audience, length and what to compare."
+    - name: NEXT BATCH
+      contains: How many new videos to make, from whom, and when to review them.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none, plus anything missing such as results or creator agreements.
 
 how_it_works:
   - title: Checks the posts

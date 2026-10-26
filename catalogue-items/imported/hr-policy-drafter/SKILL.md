@@ -8,19 +8,60 @@ metadata:
 
 # HR policy management
 
-Create, maintain, communicate, and govern HR policies and employee handbooks — ensuring policies are legally sound, clearly written, consistently applied, and regularly updated as business and regulatory requirements evolve.
+Create, maintain, communicate, and govern HR policies and employee handbooks — so policies are clearly written, consistently applied, ready for legal review, and regularly updated as business and regulatory requirements evolve.
+
+## Read this first
+
+You are not a lawyer and this is not legal advice. You do not know the person's local employment law or how current it is. Never state what a local law requires. Instead, list the points the person must check with a local employment adviser, in the "Check with an adviser" section. Do not call a draft "legally sound" or "compliant".
+
+Policies on dismissal, discipline, discrimination, data privacy and pay need an adviser to review them before use. Say this next to the draft, not only at the end.
+
+## Steps
+
+1. Ask for the policy topic, the country or state, the company size and industry, and the current policy text if there is one. If the country is missing, ask once. If it is still missing, write the draft with no country-specific wording and say so.
+2. If there is current policy text, list what it says now and what is missing or unclear. Keep wording that works.
+3. Write the draft in plain language at about a grade 8 reading level, with these sections: Purpose, Who it covers, The rule, How to follow it (steps), Who to ask, Exceptions, Owner, Approved by, Review date. Keep the rule separate from the procedure.
+4. Mark any place where the right wording depends on local law with [CHECK: topic] and list each in "Check with an adviser".
+5. Write a one-page manager guide: what changed, 3 to 5 talking points, 3 questions staff will ask with suggested answers, and what managers must not promise.
+6. Write a rollout checklist with dated steps: approval, announcement, manager briefing, staff acknowledgment, review date. Use relative dates (week 1, week 2) if the person gave no dates.
+7. If the policy changes an old one, write a short change summary: old rule, new rule, why.
+8. If the policy applies in several countries, write one core policy and a short local addendum per country, each with its own [CHECK] list. Do not guess local rules.
+
+## Output
+
+```markdown
+## <Policy name> — draft for review
+
+> Draft only. Not legal advice. Have a local employment adviser review before use.
+
+### Policy
+Purpose / Who it covers / The rule / How to follow it / Who to ask / Exceptions / Owner / Approved by / Review date
+
+### Manager guide
+<what changed, talking points, likely questions and answers, what not to promise>
+
+### Rollout checklist
+| Step | Who | When |
+|------|-----|------|
+
+### Change summary (if updating)
+| Old | New | Why |
+
+### Check with an adviser
+- [CHECK: <topic>] <what to confirm>
+```
 
 ## Supported tasks
 
 - Drafting new HR policies covering leave, conduct, performance, and workplace standards
-- Reviewing and updating existing policies for compliance and relevance
+- Reviewing and updating existing policies for clarity and relevance
 - Creating employee handbook structures and content
 - Designing policy communication and rollout plans
 - Building policy governance frameworks with review cadences
 - Writing manager and employee guides for understanding and applying policies
 - Developing policy exception request processes
 - Auditing policy libraries for consistency, gaps, and redundancies
-- Adapting policies for multi-country or multi-entity organizations
+- Adapting policies for multi-country or multi-entity organizations (structure only, local law to be checked by an adviser)
 - Creating policy acknowledgment and tracking processes
 
 ## Key prompts
@@ -29,7 +70,7 @@ Create, maintain, communicate, and govern HR policies and employee handbooks —
 
 1. "Write a [leave/remote work/code of conduct] policy for a [company size/industry] organization."
 2. "Draft a performance improvement policy with clear process steps and documentation requirements."
-3. "Create a disciplinary action policy covering verbal warning through termination."
+3. "Create a disciplinary action policy covering verbal warning through termination." (Adviser review needed before use.)
 4. "Write a flexible work arrangement policy balancing business needs and employee preferences."
 5. "Develop a social media and acceptable use policy for [company context]."
 
@@ -47,7 +88,7 @@ Create, maintain, communicate, and govern HR policies and employee handbooks —
 2. "Create a policy register template to track all HR policies, owners, and review dates."
 3. "Develop a policy exception handling process with escalation levels."
 4. "Write criteria for determining when a policy needs an update vs. full revision."
-5. "Build a policy audit checklist for annual compliance review."
+5. "Build a policy audit checklist for annual review."
 
 ### Communication and rollout
 

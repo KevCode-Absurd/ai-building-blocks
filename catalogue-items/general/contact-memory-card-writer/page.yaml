@@ -1,6 +1,6 @@
 new_slug: contact-memory-card-writer
 name: "Contact memory card writer"
-summary: "Paste your notes from a first meeting. Get a one-page card with name, facts, promises and the next contact date."
+summary: "Turn rough notes from a first meeting into a one-page contact memory card with the exact name, facts, promises and your next contact date."
 job: speak-and-persuade
 thinking: low
 thinking_why: "It sorts notes into a fixed card and sets dates. Little judgement is needed beyond what to leave out."
@@ -17,6 +17,10 @@ when:
   - "You just met someone and your notes are a mess."
   - "You meet many people and cannot keep track of what each told you."
   - "You owe someone a follow-up and want it to be about them."
+not_for:
+  - "You need to load hundreds of contacts at once: use a CRM import or your contact tool for bulk records."
+  - "You want to thank someone in writing: use the Honest appreciation note writer."
+  - "You want to keep private details someone told you in confidence: leave them out, or ask the person first."
 
 you_give:
   - "Your notes from the meeting, as rough as they are"
@@ -35,6 +39,31 @@ how_to_use:
   - "Add the date, the place and anything you promised."
   - "Save the card in a sheet or notes app, one card per person."
   - "Read the card before you contact them again."
+output_sample:
+  input:
+    - Your rough notes from the meeting
+    - The date and place you met
+    - What you promised (include it in your notes)
+    - A brief on the person (optional)
+  output:
+    - name: Name block
+      contains: The exact name as spelled, how to say it, how they like to be addressed, and their role.
+    - name: Met
+      contains: When and where you met, who introduced you and who else was there.
+    - name: What they shared
+      contains: Facts grouped under work, interests, people and what they are proud of, in their words.
+    - name: Asks and gaps
+      contains: What they asked for or lack, marked by what you can do and what you cannot.
+    - name: Promises
+      contains: Each promise with a date and an owner, with the ones you owe first.
+    - name: Next touch
+      contains: A date, a reason that is about them, and one follow-up question for next time.
+    - name: Dates for your calendar
+      contains: Birthdays or events they chose to share, with a reminder a few days before.
+    - name: Left out on purpose
+      contains: One line saying private items were dropped, with no detail.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: "Fixes the name"

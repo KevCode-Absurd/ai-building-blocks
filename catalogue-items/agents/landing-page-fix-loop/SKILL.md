@@ -101,7 +101,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Write `MISSING: <what>` and carry on. Without the ad, mark checks 1 to 3 "can't tell" and say they are open. Without customer words, skip the question finder and say coverage was not scored. Without the facts, stop after round one and give the audit only.
 
 ## Limits
-A rewritten page that passes the checks is not a proven winner. The checks measure how much gets in a buyer's way, not sales. Only a test shows the lift, and a page with few orders may not have the traffic for one. This is not worth running on a page that gets almost no visits, or one where the offer is still being decided.
+A rewritten page that passes the checks is not a proven winner. The checks measure how much gets in a buyer's way, not sales. Only a test shows the lift, and a page with few orders may not have the traffic for one. This is not worth running on a page that gets almost no visits, or one where the offer is still being decided. If the owner only wants a diagnosis, point them to `landing-page-auditor` or `landing-page-30-point-checker` on their own. If they need a page from nothing, point them to `ad-matched-landing-page-writer`.
 
 ## Avoid
 - Rewriting a page that is fine to fix a low score caused by a missing fact.

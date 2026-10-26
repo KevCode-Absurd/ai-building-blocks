@@ -1,15 +1,13 @@
 slug: availability-payment-deduction-checker
 name: Availability payment deduction checker
-summary: An availability payment bridge and deduction exceptions
+summary: Check an availability payment against its contract deduction cap. Get the applied deduction, any excess, net payment and operating cash.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - project-cash-available-bridge
+  - project-payment-waterfall-builder
+  - debt-service-covenant-headroom-checker
 origin: own
 version: 1.0.0
 added: 2026-10-22

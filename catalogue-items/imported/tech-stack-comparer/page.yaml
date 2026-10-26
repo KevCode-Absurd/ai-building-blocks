@@ -34,3 +34,29 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - "The choice is trivial or already made. If the tools are alike or a manager has set one, skip the analysis."
+  - "You are comparing vendor quotes or a contract renewal. Use the Vendor comparison writer."
+  - "You are settling a disputed technical choice by sourcing each claim. Use the Technical decision evidence mapper."
+output_sample:
+  input:
+    - The two or more options, such as React and Vue, or two cloud providers
+    - Your workload or use case
+    - What matters most, with weights if you have them
+    - Team size and skills, hosting spend and expected growth (optional)
+    - Codebase size, if you are weighing a move (optional)
+  prerequisites:
+    - Python 3 if you want the bundled scripts to run the numbers (optional)
+  output:
+    - name: Weighted comparison
+      contains: Each option scored against your priorities, side by side.
+    - name: Five-year cost
+      contains: Total cost over five years, including hiring, training and migration.
+    - name: Community health
+      contains: Signs of life such as repository activity, package use and community size.
+    - name: Security notes
+      contains: Known weak spots and how ready each option is for compliance rules you name.
+    - name: Migration estimate
+      contains: Effort, risk and timeline for moving between stacks, if asked.
+    - name: Recommendation
+      contains: A pick with reasons and a confidence level of high, medium or low.

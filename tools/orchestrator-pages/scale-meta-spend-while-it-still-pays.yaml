@@ -1,6 +1,6 @@
 new_slug: scale-meta-spend-while-it-still-pays
 name: Scale Meta spend while it still pays
-summary: Give it your ad results and costs. Get your true return, a spend ladder and a budget split.
+summary: "Scale Meta spend while it still pays: give it your ad results and costs, and get your true return, a spend ladder and a budget split."
 job: launch-and-scale-ads
 thinking: high
 thinking_why: It runs four skills in a row, and the scaling ladder depends on your break-even sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your Meta ads are profitable and you want to spend more without losing the profit.
   - Meta shows a strong return, but your bank balance does not match it.
   - You raised the budget, spend stalled or cost per sale jumped, and you do not know why.
+not_for:
+  - "Your Meta account is new and has no closed-date results yet: use the Ad test brief writer to gather data first."
+  - "Your campaigns are below break-even: fix the offer or ads first, then come back to scale."
+  - "You only want to know why sales dropped: use the Ad sales drop analyst."
 you_give:
   - Your Meta spend, platform return and 7-day click return for the dates you are checking
   - Store totals for the same dates (new-customer revenue, new-customer count and total ad spend)
@@ -33,6 +37,27 @@ how_to_use:
   - Paste your ad results and store totals for the same dates. Use dates that have closed.
   - Write down the return you need to break even, and pick the campaign to scale.
   - Scale in the steps of the ladder for one to two weeks. Export the results and bring them back for the delivery check.
+output_sample:
+  input:
+    - Your Meta spend, platform return and 7-day click return for closed dates
+    - "Store totals for the same dates: new-customer revenue, new-customer count and total ad spend"
+    - Your average order value, product cost, shipping, fees and returns rate
+    - Your daily sales and the cash you can put into ads
+    - Your Meta spend split by new, engaged and existing audiences (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Results from a scale test run by you, for the last step (the delivery check)
+  output:
+    - name: "Step 1: Platform ROAS reality check"
+      contains: Reported return set against your store totals, with the evidence, the limits and the traps found.
+    - name: "Step 2: Meta scaling campaign plan"
+      contains: Your break-even return, a scale or hold call, and spend steps with hold times and stop rules.
+    - name: "Step 3: Next-dollar budget split"
+      contains: A ranked split of the extra budget, a stop point for each channel and a retargeting check.
+    - name: "Step 4: Meta delivery check"
+      contains: Your stall or cost symptoms, the delivery step that is failing and what to change first.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find the real return
     text: Sets your store's own base, then steps each platform's return down from reported to 7-day click to new-customer. It also checks the top ad alone and looks for spend on existing customers.

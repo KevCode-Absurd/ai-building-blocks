@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It sets limits and judges search results.
 new_slug: pcb-design-optimizer
 name: PCB design optimizer
-summary: Set a goal such as wider bandwidth or smaller area. Get PCB sizes tuned
-  by search to meet it.
+summary: Tune your RF PCB filter or coupler in MATLAB for wider bandwidth, better return loss or smaller area, within the size limits you set.
 job: build-software
 headline: PCB design optimizer
-subhead: Set a goal such as wider bandwidth or smaller area. Get PCB sizes tuned
-  by search to meet it. Bring starting PCB design in MATLAB. Use the result to
-  plan your next step.
+subhead: Set a goal such as wider bandwidth or smaller area. Get PCB sizes tuned by search to meet it. Bring starting PCB design in MATLAB. Use the result to plan your next step.
 explain: |
   PCB dimensions tuned automatically to hit a goal such as wider bandwidth, better return loss or smaller area. It runs in MATLAB.
 
@@ -18,6 +15,10 @@ when:
   - You want a coupler shrunk without losing performance.
   - Return loss is too weak at the band edge.
   - You need a custom goal, not a standard one.
+not_for:
+  - "You have no starting design yet: build one first with the matlab-design-pcb skill for your part, such as the filter or coupler skill, then come back."
+  - "You only want to check how a design performs: use the matlab-analyze-em skill, which runs EM analysis with no search."
+  - "You only want to try a few sizes with no goal: loop over the S-parameter calls in MATLAB yourself."
 you_give:
   - Starting PCB design in MATLAB
   - Goal such as bandwidth, return loss or area
@@ -29,9 +30,33 @@ you_get:
   - Before and after response
   - Advice to validate the result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox and Global
-    Optimization Toolbox.
+  - Open an AI that can run MATLAB code. You need MATLAB with RF PCB Toolbox.
+  - Check your extra toolboxes. Pattern search and surrogate search need Global Optimization Toolbox. The SADEA methods need Antenna Toolbox.
+  - Paste this skill into your AI. Then add your starting design, your goal and the lower and upper limit for each size.
+  - Ask your AI to use the built-in optimize function first, not its own search loop.
+  - Compare the before and after results. Look at return loss, bandwidth and area.
+  - Check the final design with an EM analysis before you use it.
+output_sample:
+  input:
+    - Your starting RF PCB design in MATLAB, such as a filter or coupler
+    - "Your goal: bandwidth, return loss or area"
+    - Lower and upper limits for each dimension
+    - Extra limits on the response (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with RF PCB Toolbox
+    - Global Optimization Toolbox, for the pattern search and surrogate methods
+    - Antenna Toolbox, for the SADEA methods
+  output:
+    - name: Initial sizing
+      contains: A first design made at your centre frequency, used as the starting point.
+    - name: optimize() call
+      contains: The code that sets your goal, dimension bounds, any constraints and the search method.
+    - name: Optimised design
+      contains: The new dimensions found by the search, shown as a PCB layout.
+    - name: Before and after comparison
+      contains: Return loss, bandwidth and area for the starting design next to the optimised one.
+    - name: S-parameter plot
+      contains: The response curves of the optimised design.
+    - name: Validation advice
+      contains: A reminder to check the final design with a full EM analysis.

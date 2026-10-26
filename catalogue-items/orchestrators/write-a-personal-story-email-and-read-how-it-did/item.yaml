@@ -15,10 +15,10 @@ outputs:
   - {type: audit_report}
 uses: [story-email-writer, email-draft-reviewer, email-mistake-fixer, email-and-sms-performance-reader]
 steps:
-  - {uses: story-email-writer, note: "Starts from your brand file and one true story and writes three drafts."}
-  - {uses: email-draft-reviewer, note: "Reads the draft you picked from the step before and lists the cuts to make."}
-  - {uses: email-mistake-fixer, note: "Takes the draft after you apply the cuts and cleans up the small errors."}
-  - {uses: email-and-sms-performance-reader, note: "Fresh start after the send: reads the numbers so you can see if the story email beat your usual ones."}
+  - {uses: story-email-writer, note: "Starts from your brand file and one true story and writes three drafts. Hands step 2 the three drafts; you pick one."}
+  - {uses: email-draft-reviewer, note: "Reads the draft you picked from the step before and lists the cuts to make. Hands you the cuts to apply to that draft before step 3."}
+  - {uses: email-mistake-fixer, note: "Takes the draft after you apply the cuts and cleans up the small errors. Works on your draft from step 1 with step 2's cuts applied, not on the cuts list; hands you the final email to send."}
+  - {uses: email-and-sms-performance-reader, note: "Fresh start after the send: reads the numbers so you can see if the story email beat your usual ones. Uses the campaign numbers you export after the send, not step 3's draft."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-a-personal-story-email-and-read-how-it-did/skeleton.yaml

@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It plans in a set order and keeps each step linked.
 new_slug: backwards-unit-planner
 name: Backwards unit planner
-summary: Give it your standards. Get a unit planned from the end result, then
-  the proof of learning, then the activities.
+summary: Plan a teaching unit backwards from your standards. Get the final task, then a lesson-by-lesson plan, with a check that every part lines up.
 job: teach-and-train
 headline: Backwards unit planner
-subhead: A full teaching unit planned from the end result backwards. Give it the
-  standards or outcomes, the year group and how long the unit lasts.
+subhead: A full teaching unit planned from the end result backwards. Give it the standards or outcomes, the year group and how long the unit lasts.
 explain: |
   A full teaching unit planned from the end result backwards. Give it the standards or outcomes, the year group and how long the unit lasts. The AI fills in three stages from the Understanding by Design method.
 
@@ -17,6 +15,10 @@ when:
   - An old unit is a pile of activities with no clear point.
   - Students finish lessons but can't do the final task.
   - You need a unit plan to share with your department.
+not_for:
+  - "You need one lesson only: ask your AI for a single lesson plan, as this tool plans a whole unit."
+  - "You need the whole year mapped across units: use a scope and sequence planner first, then bring one unit here."
+  - "You already have a ready-made scheme of work and only want to teach it: follow your scheme as written."
 you_give:
   - Desired outcomes or standards
   - Year group
@@ -28,7 +30,24 @@ you_get:
   - A lesson-by-lesson learning plan
   - An alignment check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your inputs first. Copy the exact wording of your standards, note your class's prior attainment and gaps, and list the resources you have.
+  - Open Claude, ChatGPT or Gemini and paste the skill's instructions into a new chat.
+  - Paste your standards, year group and unit length. Add your subject, class notes and resources if you have them.
+  - Read stage one first. Check the lasting ideas and key questions fit your standards before you go on.
+  - Check the alignment check at the end. Fix any lesson that does not lead to the final task, then share the plan.
+output_sample:
+  input:
+    - Your standards or what students should learn by the end
+    - Your year group
+    - How many lessons or weeks the unit lasts
+    - Your subject (optional)
+    - Your class's prior attainment, known gaps and resources (optional)
+  output:
+    - name: "Stage 1: Desired Results"
+      contains: Two or three lasting understandings, open key questions, what students will know and what they will be able to do.
+    - name: "Stage 2: Assessment Evidence"
+      contains: The final task and other proof that students have learned, planned before any lessons.
+    - name: "Stage 3: Learning Plan"
+      contains: The learning activities in order, lesson by lesson, each leading toward the proof in stage two.
+    - name: Alignment Check
+      contains: A check that every activity and assessment serves a goal, and every goal is assessed.

@@ -1,6 +1,6 @@
 new_slug: offer-from-buyer-problems
 name: Build an offer from your buyer's problems
-summary: Give it your product and buyer. Get every problem they face turned into a stacked, scored, priced offer.
+summary: Build an offer from your buyer's problems. Give it your product and buyer. Get a stacked, scored and priced offer back in five steps.
 job: make-offer
 thinking: high
 thinking_why: It runs five skills in a row, and the trim, score and price steps do real sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your product sells like everyone else's and buyers compare you on price.
   - You have many ideas for what to include and cannot tell which to keep.
   - You are about to set or raise a price and want it tied to the value.
+not_for:
+  - "You have no buyer data yet: run the Website brand brain builder first, then come back."
+  - "You only want a bonus package on an offer you already have: use the Offer bonus package builder."
+  - "You only need to price a one-off discount: use the pricing planner step alone, or ask a person who knows your margins."
 you_give:
   - Who your buyer is and what they want, or a buyer profile
   - Your product facts (optional)
@@ -32,6 +36,28 @@ how_to_use:
   - Share your buyer and product. It lists the problems. Fix any that are wrong before it moves on.
   - Tell it the hours and cash you can give. It trims the offer to fit.
   - Check the worth figure in the price step. It uses your buyer's numbers, so correct any you doubt.
+output_sample:
+  input:
+    - Who your buyer is and what they want, or a buyer profile
+    - Your product facts (optional)
+    - Reviews or call notes in the buyer's words (optional)
+    - Your brand file (optional)
+    - Hours and cash you can spend delivering (optional)
+  prerequisites:
+    - A brand brain from the Website brand brain builder helps, but is not required
+  output:
+    - name: "Step 1: Problems and promises"
+      contains: A table of problems by stage, each with its driver, a promise and the evidence.
+    - name: "Step 2: Delivery options"
+      contains: Many ways to deliver each promise, rated for your cost and the buyer's value.
+    - name: "Step 3: The stack"
+      contains: What was cut and kept, named bundles with a value each, and the total.
+    - name: "Step 4: Value score"
+      contains: Four scores with evidence, the weakest part and the cheapest fixes.
+    - name: "Step 5: The price"
+      contains: What the result is worth, a price band and pick, a gap check and two price tests.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: List every problem and its solution
     text: Follows the buyer from today to the result, finds the reasons they might stall or quit at each stage, and turns each into a promise.

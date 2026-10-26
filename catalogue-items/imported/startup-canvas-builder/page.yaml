@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It joins strategy and money parts into one view.
 new_slug: startup-canvas-builder
 name: Startup canvas builder
-summary: Describe your new product. Get one canvas joining your strategy to
-  costs and revenue.
+summary: Plan a new product with a startup canvas. Give it your idea and customer. You get strategy, costs and revenue on one page.
 job: plan-strategy
 headline: Startup canvas builder
-subhead: "A one-page canvas for a new product that joins your strategy to its
-  costs and revenue. It uses the Startup Canvas by Paweł Huryn: nine strategy
-  sections plus cost structure and revenue streams."
+subhead: "A one-page canvas for a new product that joins your strategy to its costs and revenue. It uses the Startup Canvas by Paweł Huryn: nine strategy sections plus cost structure and revenue streams."
 explain: |
   A one-page canvas for a new product that joins your strategy to its costs and revenue. It uses the Startup Canvas by Paweł Huryn: nine strategy sections plus cost structure and revenue streams.
 
@@ -18,6 +15,10 @@ when:
   - You want to say what you will not do, not only what you will.
   - You need to show how costs and revenue fit your strategy.
   - Lean Canvas feels too thin for your idea.
+not_for:
+  - "You run an established business or need investor slides: use the Business Model Canvas, which suits that job better."
+  - "You only want a fast guess to test, with no time for strategy: use a Lean Canvas instead."
+  - "You want market research or real cost figures: ask an accountant or run customer interviews, since this canvas does not find facts."
 you_give:
   - Your product or startup idea
   - Who it is for
@@ -29,7 +30,41 @@ you_get:
   - Cost and revenue sections
   - Key metrics for the strategy
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full text of the skill into a new chat.
+  - Under it, add your product idea, who it is for, and any known costs or pricing ideas.
+  - Ask your AI to build your Startup Canvas. It should ask for anything missing.
+  - Check the Can't/Won't section and the list of hypotheses first. Fix anything that sounds untrue.
+  - Pick one or two low-effort experiments from the end and run them.
+output_sample:
+  input:
+    - Your product or startup idea
+    - Who it is for and the problems they have
+    - Rivals you know of (optional)
+    - Known costs and pricing ideas (optional)
+    - Your team size and limits (optional)
+  output:
+    - name: Vision
+      contains: A short statement of what you aim to achieve and the values you hold.
+    - name: Market Segments
+      contains: Two or three customer groups defined by their problems, with the first group to serve.
+    - name: Relative Costs
+      contains: Whether you aim for low cost or unique value.
+    - name: Value Proposition
+      contains: For each segment, the situation before, how you change it, the result after, and the alternatives.
+    - name: Trade-offs
+      contains: What you will not do, so your work stays focused.
+    - name: Key Metrics
+      contains: A North Star metric and one metric that matters this quarter.
+    - name: Growth
+      contains: Whether growth is led by product or sales, and the channels you prefer.
+    - name: Capabilities
+      contains: Skills and resources you need, and what to build or partner for.
+    - name: Can't/Won't
+      contains: Why rivals cannot or will not copy your whole strategy.
+    - name: Cost Structure
+      contains: Your main costs, which repeat, and how they grow.
+    - name: Revenue Streams
+      contains: Where money comes from, the pricing approach, and the biggest unknowns.
+    - name: Hypotheses and experiments
+      contains: What must be true for success, and low-effort tests for those guesses.

@@ -1,48 +1,114 @@
 new_slug: contracted-energy-cash-model
 name: Contracted energy cash model
 headline: Contracted energy cash model
-summary: A three-year contracted energy operating cash schedule
+summary: Turn three years of delivered MWh, one contract price and your cash costs into a year-by-year energy operating cash schedule you can trace.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A three-year contracted energy operating cash schedule. Share three annual delivered and accepted MWh, constant contract price, variable cash per delivered MWh and fixed annual operating cash.
-explain: |-
-  A three-year contracted energy operating cash schedule.
+subhead: Give it three years of delivered and accepted MWh, the contract price per MWh, the variable cash cost per MWh and the fixed yearly cash cost. It works out operating cash for each year and for the three years together. Every figure carries its source and date.
 
-  Energy operating finance. Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.
+explain: |-
+  A contracted energy cash model answers one narrow question. If a plant sells all the energy it delivers at one agreed price, how much operating cash is left each year? Cash per MWh is the price less the variable cost. Each year's cash is delivered MWh times that figure, less the fixed yearly cost.
+
+  The mistake to avoid is using what a plant could make in place of what the buyer accepted. This skill only takes delivered and accepted energy from meter or settlement records. If a figure is missing, that year stops. It is never filled with zero.
+
+  The result stops at operating cash. Capital spending, tax, reserves and debt payments stay out, so the schedule can feed a project finance review later. The pack also holds a small editable workbook and a script that checks the arithmetic.
+
 when:
-  - You need a three-year contracted energy operating cash schedule.
-  - You work on energy operating finance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender, partner or board member asks what a contracted plant earns in cash each year.
+  - You hold delivery statements and a contract price, and a reviewer needs a schedule they can trace.
+  - The contract price changed and you want to see the cash effect year by year.
+
+not_for:
+  - "You are deciding whether to build or buy the plant. This stops at operating cash. Once you have yearly cash, use the Project cash available bridge."
+  - "You need to size a loan or test debt cover. Use the Loan life cash cover checker."
+  - "The energy sells at changing market prices, or output is a forecast and not delivered. This needs one fixed price and accepted MWh."
+
 you_give:
-  - Three annual delivered and accepted MWh, constant contract price, variable cash per delivered MWh and fixed annual operating cash.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Delivered and accepted MWh for each of three years, from meter or settlement statements"
+  - "The contract price per MWh, and the currency"
+  - "Variable cash cost per MWh, such as fuel or per-unit fees"
+  - "Fixed operating cash per year, such as staff and site costs"
+  - "The date of each source and the period each year covers"
+  - "Curtailment or penalty amounts, if your contract has them (optional)"
 you_get:
-  - A three-year contracted energy operating cash schedule.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "Operating cash for each of the three years, and the three-year total"
+  - "Cash left per MWh (price less variable cost)"
+  - "A table of every input with its source, date and currency"
+  - "A check that each year ties back to your inputs"
+  - "A list of anything missing, and which results it blocked"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach your statements if your AI reads files."
+  - "Paste or attach the delivery statements and the price clause. Say the currency and which year each column covers."
+  - "Give your variable cost per MWh and fixed yearly cash cost, or attach the sheet that holds them."
+  - "Read the input table first. Check each MWh figure against your statement before you look at the results."
+  - "If a figure is missing, it names it and stops that year. Add it and run again."
+  - "A reviewer should check the sources before anyone uses the result for a loan, an investment or a filing."
+
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Source delivered accepted energy rather than installed capacity or unsupported generation forecasts; map actual contract settlement units
-    text: Source delivered accepted energy rather than installed capacity or unsupported generation forecasts; map actual contract settlement units.
-  - title: 3. Multiply each period metered MWh by the supplied price, then deduct same-unit variable cost and annual fixed cash
-    text: Multiply each period metered MWh by the supplied price, then deduct same-unit variable cost and annual fixed cash.
-  - title: 4. Reconcile annual energy receipts and operating cash totals and hand period cash into the relevant project financing definition
-    text: Reconcile annual energy receipts and operating cash totals and hand period cash into the relevant project financing definition.
+  - title: Maps your sources
+    text: Lists each figure with its date, unit, period and currency, and notes what is missing.
+  - title: Takes delivered, accepted energy
+    text: Uses what the buyer accepted at the delivery point, not plant size or a forecast.
+  - title: Works out cash per MWh
+    text: Subtracts the variable cash cost from the contract price.
+  - title: Builds each year
+    text: Multiplies each year's MWh by cash per MWh, then subtracts the fixed yearly cash.
+  - title: Adds up and ties out
+    text: Totals the three years and checks the totals against your inputs.
+  - title: Marks gaps
+    text: Writes a MISSING line for any absent figure and stops only the years it touches.
+
 output_shape: |-
-  A three-year contracted energy operating cash schedule.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES
+  <figure> | <source> | <date> | <currency, unit, period>
+
+  INPUTS AND ASSUMPTIONS
+  MWh year 1 / 2 / 3: <numbers> | price: <per MWh> | variable cash: <per MWh> | fixed cash: <per year>
+
+  OPERATING CASH SCHEDULE
+  Cash per MWh: <price less variable cost>
+  Year 1 / 2 / 3 cash: <MWh x cash per MWh, less fixed cash>
+  Three-year total: <sum>
+
+  CHECKS RUN
+  <each check> | <result>
+
+  MISSING
+  <figure and the year it blocked>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Delivered and accepted MWh for three years"
+    - "The contract price per MWh and the currency"
+    - "Variable cash cost per MWh and fixed cash cost per year"
+    - "The date and source of each figure"
+  prerequisites:
+    - "Meter or settlement statements for each year"
+    - "A person who can review the sources before anyone relies on the result"
+    - "A file-capable AI if you want the editable workbook (optional)"
+  output:
+    - name: "SCOPE AND SOURCES"
+      contains: "Each figure listed with where it came from, its date, currency, unit and the period it covers."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "The MWh, price, variable cash and fixed cash you gave, kept apart from any assumption."
+    - name: "OPERATING CASH SCHEDULE"
+      contains: "Cash per MWh, operating cash for each of the three years, and the three-year total."
+    - name: "CHECKS RUN"
+      contains: "Each tie-out the AI ran and its result, including whether the arithmetic script ran."
+    - name: "Workbook (optional)"
+      contains: "An editable spreadsheet with your inputs, the calculation rows and the checks, if your AI can make files."
+    - name: "MISSING"
+      contains: "Any figure it could not find, and the year it stopped."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [project-cash-available-bridge, loan-life-cash-cover-checker, debt-cash-sweep-checker]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -50,29 +116,38 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+
 judge:
   - Every material driver traces to a dated source; actuals and scenarios remain separate.
   - Missing evidence blocks the affected calculation instead of becoming a zero.
   - Accepted MWh and price use the same delivery point and currency; curtailment and penalties require separate evidenced rows.
   - Operating cash excludes capital spending, taxes, reserves and debt service unless separately bridged downstream.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
     - Dated primary financial records and the applicable contractual definitions.
     - A named reviewer and an explicit financial question.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: MWh
+    meaning: A megawatt-hour, the unit energy is sold in. One MWh is one megawatt of power for one hour.
+  - term: Delivered and accepted
+    meaning: Energy that reached the delivery point and that the buyer took, as shown in meter or settlement records.
+  - term: Operating cash
+    meaning: Cash from selling energy, less cash costs to run the plant. It leaves out capital spending, tax and debt payments.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A second check that compares two records or totals and explains any gap.

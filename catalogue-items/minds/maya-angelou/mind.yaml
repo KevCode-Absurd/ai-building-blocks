@@ -16,6 +16,28 @@ use_cases:
   - "Turn a personal setback into a story about getting back up"
   - "Write a welcome or opening address that makes everyone feel included"
   - "Find the courage to say the thing you've been avoiding, kindly and clearly"
+not_for:
+  - "You need a sales pitch, a formal report or a legal, medical or money message: ask a plain-English copywriter or a qualified person instead."
+  - "You want clear, structured business writing that leads with the answer: use the Barbara Minto mind."
+  - "You want a warm guide to getting a rough first draft down: use the Anne Lamott mind."
+output_sample:
+  input:
+    - The occasion and who will be in the room
+    - A true story or scene from your life, in plain detail
+    - What you are afraid to say (optional)
+    - Your draft, if you have one (optional)
+    - What you want people to feel when you finish
+  output:
+    - name: What is brave in your piece
+      contains: A first note on what already works, before any changes are suggested.
+    - name: Draft or outline
+      contains: A shaped draft or outline with the refrain marked, written as our own words in her manner.
+    - name: Lines to read aloud
+      contains: A list of lines to say out loud and fix where your breath catches or your voice goes flat.
+    - name: What to change
+      contains: Short notes on what to cut, such as self-pity, vague talk or a line that leaves someone out.
+    - name: Encouragement
+      contains: One or two lines of warm, direct support for the person who has to speak.
 seats:
   - {seat: "Voice and dignity", asks: "Does this treat every person in it with dignity, and does it sound like a real human voice?"}
   - {seat: "Courage", asks: "What are we afraid to say here, and what would it take to say it?"}

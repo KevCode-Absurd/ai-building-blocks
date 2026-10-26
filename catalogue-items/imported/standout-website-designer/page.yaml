@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Distinctive design needs taste and a lot of creative decisions.
 new_slug: standout-website-designer
 name: Standout website designer
-summary: Describe your site. Get a bold, award-level design plan with motion,
-  layout and effects.
+summary: Get a standout website design plan with a score out of 10, plus layout, type and motion changes to make your site memorable.
 job: design-work
 headline: Standout website designer
-subhead: A bold design plan for a site that people remember, with layout, type,
-  motion and effects spelled out. Describe your site and who it is for.
+subhead: A bold design plan for a site that people remember, with layout, type, motion and effects spelled out. Describe your site and who it is for.
 explain: |
   A bold design plan for a site that people remember, with layout, type, motion and effects spelled out. Describe your site and who it is for. The skill rates your design from 0 to 10, with 10 being award-level, and lists exactly what to change to get there.
 
@@ -17,6 +15,10 @@ when:
   - You are designing a portfolio or brand experience site.
   - You want scroll animations that feel purposeful.
   - You want to rate your current design and see what is missing.
+not_for:
+  - "You need clean forms, dashboards or standard app screens: use a basic UI design guide, or ask a designer for a simple layout."
+  - "You only need to pick fonts: use a type pairing guide or a font tool, then come back for the full plan."
+  - "You need working code or a built site: hire a web developer, or ask your AI to build from the plan."
 you_give:
   - A description of your site and audience
   - Your current page or design (optional)
@@ -28,7 +30,29 @@ you_get:
   - Performance guidance for animation
   - A list of changes to reach top level
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions, or upload the skill folder if your AI takes files.
+  - "Write a short brief: what your site is, who it is for, and your goal. Add your site link or screenshots and your brand mood if you have them."
+  - Say how you will build it, such as a site builder or custom code, so the motion advice fits.
+  - Ask your AI to follow the skill and score your design from 0 to 10.
+  - Check the list of changes at the end. Start with the top three, then work down.
+output_sample:
+  input:
+    - A short description of your site and who it is for
+    - Your site link or screenshots (optional)
+    - Your goal, such as sales, portfolio or brand
+    - Your brand look and mood (optional)
+  output:
+    - name: Design score
+      contains: Your current score from 0 to 10, with a score for each part of the design.
+    - name: Typography direction
+      contains: How to use type, size and spacing so the words carry the design.
+    - name: Layout and composition
+      contains: How to arrange sections, space and structure so the page feels intentional.
+    - name: Motion and scroll plan
+      contains: Where animation and scroll effects go, and what story each one tells.
+    - name: Color and contrast
+      contains: Colors and contrast choices that fit your mood and keep text easy to read.
+    - name: Performance guidance
+      contains: How to keep animation smooth and the page fast to load.
+    - name: Changes to reach 10
+      contains: A list of the specific fixes that would lift your score to top level.

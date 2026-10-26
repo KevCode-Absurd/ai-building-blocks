@@ -1,6 +1,6 @@
 new_slug: daily-word-quota-planner
 name: "Daily word quota planner"
-summary: "Say your length and writing days. Get a daily word count, a finish date and a closed-door routine for one first draft."
+summary: "Plan a daily word count for your first draft. Give your length and writing days, and get a finish date, a bad-day floor and a closed-door routine."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It is mostly sums and fixed rules."
@@ -17,6 +17,10 @@ when:
   - "You say you will write a book and have no plan beyond hoping."
   - "You wrote for a week and then missed three days and gave up."
   - "You want to know if a draft by summer is realistic."
+not_for:
+  - "You want to edit or rewrite a draft that already exists: work with a human editor or a trusted first reader."
+  - "You want the AI to write the story for you: use your AI chat directly and ask it to draft scenes."
+  - "You need a plan to keep writing for years, not one draft: use a simple weekly calendar and set a new target each draft."
 
 you_give:
   - "The length of the piece, in words or pages"
@@ -36,6 +40,23 @@ how_to_use:
   - "If you only know pages, say so. It will convert them and mark the guess."
   - "Check the daily count against your worst weekday. If you could not hit it then, lower it."
   - "Print the table and put it where you write."
+output_sample:
+  input:
+    - The length of your piece, in words or pages
+    - The days you can write and the minutes you have on each
+    - Your start date, or say today
+    - Your room and what interrupts you (optional)
+  output:
+    - name: The sums
+      contains: Daily count, days needed, weeks, finish date and a time check against your minutes, all shown step by step.
+    - name: The routine
+      contains: Your room, door, start time, stop rule, bad-day floor and who sees nothing until the draft is done.
+    - name: Next two weeks
+      contains: One row per writing day with the date, the day's word count and the running total.
+    - name: After the last word
+      contains: A rest period for the draft and something short to write while it rests.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Fixes the length"

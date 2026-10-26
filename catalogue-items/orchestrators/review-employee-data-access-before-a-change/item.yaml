@@ -1,6 +1,6 @@
 slug: review-employee-data-access-before-a-change
 name: Review employee data access before a change
-summary: Share the source files. Get an access and privacy issue list with a restricted action plan.
+summary: "Review employee data access before an HR system change: get an access and privacy issue list and a restricted action plan for your reviewer."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,9 +10,9 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: question
+  - type: document
     required: false
-  - type: meeting_notes
+  - type: spreadsheet
     required: false
 outputs:
   - type: audit_report
@@ -24,11 +24,11 @@ uses:
   - executive-action-register
 steps:
   - uses: employee-data-privacy-checker
-    note: Review the changed data flow and access scope without copying unnecessary employee records.
+    note: Review the changed data flow and access scope without copying unnecessary employee records. Hands step 2 the access and privacy issue list.
   - uses: people-risk-register-builder
-    note: Map supported privacy and operational risks to practical mitigations and responsible roles.
+    note: Map supported privacy and operational risks to practical mitigations and responsible roles. Hands step 3 the ranked risk list, each risk tied to a step 1 issue.
   - uses: executive-action-register
-    note: Prepare restricted reviewer actions and evidence requirements before access changes are made.
+    note: Prepare restricted reviewer actions and evidence requirements before access changes are made. Uses step 2's risk list in place of meeting notes, taking each risk's owner and gap as a proposed action.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

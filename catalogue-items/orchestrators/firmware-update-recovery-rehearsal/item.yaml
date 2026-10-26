@@ -1,0 +1,57 @@
+slug: firmware-update-recovery-rehearsal
+name: Firmware update recovery rehearsal
+summary: Share your device and update design. Plan failure tests, review
+  recovery evidence and prepare a gated rollout proposal.
+category: orchestrator
+boards: []
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: test_report
+uses: []
+steps: []
+execution: coordinator
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-iot-fleet-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-iot-fleet-engineer.md
+  licence: MIT
+  original_name: IoT Fleet Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 90cfb3b713d0cd11e9529f6158ed72ac99fe1d945a838d9d740009a51e9d3421
+  adapter: AI Blocks selective task adaptation
+  derived_from: &a1
+    - agency-engineering-iot-fleet-engineer
+    - agency-engineering-embedded-firmware-engineer
+credits:
+  - title: IoT Fleet Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-iot-fleet-engineer.md
+    used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
+      profile retained only as provenance/background.
+  - title: Embedded Firmware Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-embedded-firmware-engineer.md
+    used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
+      profile retained only as provenance/background.
+package_files: all
+version: 1.0.0
+example_pending: true
+agency_curated:
+  candidate: technical-ota-recovery-rehearsal
+  review: reports/2026-10-25-agency-curation-technical.json
+  formatReason: "A coherent cross-profile job: inventory the actual fleet, inspect
+    its update state machine, design controlled failure cases, review actual
+    test evidence, and prepare a canary decision. These artifacts depend on one
+    another and require clear stop/resume gates."
+  sourceProfiles: *a1

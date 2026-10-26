@@ -1,0 +1,146 @@
+name: Proposal Strategist agent
+summary: "Turn an RFP or buyer brief into a sales proposal plan with win themes, a one-page summary draft and an outline you can write from."
+headline: Proposal Strategist agent
+subhead: "Paste the buyer's RFP or your call notes. Add what you offer and the proof you really have. You get win themes, a one-page summary draft, an outline of each section and a check that every buyer request is answered."
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A sales proposal is a case for why this buyer should choose you. A proposal strategist plans that case before anyone writes the sections. When several bidders can do the job, the clearest story often wins, so this agent builds the story first. If the buyer's name and problems could be swapped for another client without changing the text, the proposal is generic and it will lose.
+
+  It starts with 3 to 5 win themes. Each theme names the buyer's own problem, ties one of your strengths to a result and has proof you can show. Then it plans three parts: show you understand their world, walk through your approach, and describe their life once it works. It drafts the executive summary first, because that is the page senior readers are most likely to read. It also maps every requirement in the RFP to a section, so nothing is missed, and adds the point each answer should reinforce.
+
+  It writes a plan and drafts, not the full proposal and not a price. It cannot invent proof. Where you gave no case study or number, it leaves a placeholder. Prices, contract terms and legal wording need your own judgment and, where it matters, a lawyer.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - An RFP has landed and you have a short deadline to respond.
+  - A buyer asked for a proposal after a good call and you need to turn your notes into an argument.
+  - Your last proposals lost and the feedback said they felt generic.
+  - Several people will write the sections and need one set of themes to follow.
+not_for:
+  - You need contract terms, a scope of work or NDA wording. Use the Contract and proposal drafter, and have a lawyer check it.
+  - You need the price set or your tiers worked out. Use the Pricing Analyst agent.
+  - You want to judge whether a deal is worth chasing. Use the Deal Strategist agent.
+  - You want short outreach emails, not a proposal. Use the Sales Outreach agent.
+  - You have no buyer requirements or call notes. Get them first. The plan is only as specific as what you give it.
+you_give:
+  - The RFP, or your notes from calls with the buyer, pasted as text. A long RFP can go in as an uploaded file.
+  - What you offer and how you would do the work, in a few lines.
+  - Proof you can really show, such as past projects and results you can back with numbers or a named reference.
+  - Who else may bid and what you know about them (optional)
+  - The deadline, page limits and how the buyer will score answers (optional)
+  - Your price range or the buyer's budget (optional)
+you_get:
+  - 3 to 5 win themes, each with the buyer's need, your answer and the proof
+  - A one-page executive summary draft in five parts
+  - A section-by-section outline showing which theme each section carries
+  - A table of every buyer requirement, where it is answered and what to add
+  - A list of weak spots, such as generic lines, empty adjectives and claims with no proof
+  - A short note on how you stand out from likely rival bids, without naming them
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste the RFP or call notes first. Then add what you offer and the proof you can really show. Add any page limits or scoring rules.
+  - Type "Plan the proposal. Use only the proof I gave. Put brackets where proof is missing."
+  - Check the win themes first. Each one must name this buyer's problem and be something you can prove. Cut any theme that would fit any buyer.
+  - Read the executive summary. Would a busy executive see in the first 100 words that you understand the problem? If not, ask for a rewrite.
+  - Fill each bracket with real proof, then write the sections one at a time from the outline. Ask someone outside your team to read it before you submit.
+how_it_works:
+  - title: Read the buyer
+    text: It pulls out what the buyer asked for, what they seem to prefer and how they will score answers.
+  - title: Draft win themes
+    text: It writes 3 to 5 candidate themes that link your strengths to the buyer's most urgent needs.
+  - title: Stress-test each theme
+    text: It asks whether the theme is specific to this buyer, provable, and hard for a rival to claim. Weak ones are cut.
+  - title: Plan the story
+    text: It splits the proposal into understanding, approach and outcome, and assigns each section a theme and a proof point.
+  - title: Draft the summary first
+    text: It writes the executive summary in five parts, so the argument is clear before the details pile up.
+  - title: Map the requirements
+    text: It lists every requirement with where it is answered and the extra point that answer should make.
+  - title: Flag weak spots
+    text: It marks generic lines, empty adjectives and claims with no proof, and says what to fix.
+output_shape: |-
+  WIN THEMES
+    Theme <n>: <statement in the buyer's words>
+      Buyer need <need> | Your answer <strength> | Proof <proof or MISSING> | Appears in <sections>
+
+  EXECUTIVE SUMMARY DRAFT
+    <their situation> / <the cost of doing nothing> / <your approach> / <one proof point> / <their life after>
+
+  PROPOSAL OUTLINE
+    Part 1 Understanding: <sections>
+    Part 2 Approach: <sections>
+    Part 3 Outcomes: <sections>
+    <section> | <main theme> | <second theme> | <evidence>
+
+  REQUIREMENT MAP
+    <requirement> | <answered in> | <point to add>
+
+  WEAK SPOTS
+    <line or section> | <problem> | <fix>
+
+  ASSUMPTIONS AND CHECKS
+    <assumption> | <source: you, document or estimate>
+    Checks still needed: <list>
+output_sample:
+  input:
+    - The RFP, or your notes from calls with the buyer
+    - What you offer and how you would do the work
+    - Proof you can really show, such as past projects and results
+    - Rival bidders and the buyer's scoring rules (optional)
+  prerequisites:
+    - An AI that can read a long pasted document or an uploaded file
+  output:
+    - name: Win themes
+      contains: Three to five themes, each with the buyer's need, your answer and the proof.
+    - name: Executive summary draft
+      contains: A one-page argument in five parts, written in the buyer's own words.
+    - name: Proposal outline
+      contains: The story in three parts, with a theme and a proof point for each section.
+    - name: Requirement map
+      contains: Every buyer requirement, where you answer it and the point to add.
+    - name: Weak spots
+      contains: Generic lines, empty adjectives and unproven claims, each with a fix.
+    - name: Assumptions and checks
+      contains: What the AI assumed and what you must confirm before you submit.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: A long RFP goes in as a file, so the requirement map covers every line.
+  inputs:
+    - A proposal of yours that won, so the new plan can reuse what worked.
+    - The buyer's own website or annual report text, so the summary uses their words.
+    - Written feedback from a lost bid, so the plan fixes what the buyer disliked.
+terms:
+  - term: RFP
+    meaning: Request for proposal. A document where a buyer lists what they want and how they will choose.
+  - term: Win theme
+    meaning: A short statement of why this buyer should pick you, backed by proof.
+  - term: Executive summary
+    meaning: The first page. It makes your whole case so a busy reader can stop there.
+  - term: Compliance
+    meaning: Answering every requirement the buyer listed, in full.
+  - term: Proof point
+    meaning: A fact, result or past project that backs up a claim.
+tweaks:
+  - what: Buyer's words
+    how: Paste text from the buyer's website. The themes and summary then use their language, not yours.
+  - what: Page limit
+    how: Give the limit up front so the outline fits it, with the summary at one page.
+  - what: Your own themes
+    how: Offer two or three strengths you think matter and ask the agent to test them against the buyer's needs.
+improve:
+  - After you win or lose, paste the buyer's feedback and ask which theme worked.
+  - Keep a list of proof points sorted by theme. Reuse it on the next bid.
+  - Ask a colleague to play the buyer and mark every line that would fit any client.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

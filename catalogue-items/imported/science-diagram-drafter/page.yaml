@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It drafts, reviews and improves in a short fixed loop.
 new_slug: science-diagram-drafter
 name: Science diagram drafter
-summary: Describe a diagram. Get a draft of a network, pathway or flowchart,
-  reviewed and refined once or twice.
+summary: Describe your science diagram and get a PNG draft of a network, pathway or flowchart, scored and redrawn once if it falls short.
 job: make-images
 headline: Science diagram drafter
-subhead: A draft figure of your network, pathway or flowchart, saved as a PNG
-  you can check label by label. You describe the parts and how they connect in
-  plain words, and an image model draws the first version.
+subhead: A draft figure of your network, pathway or flowchart, saved as a PNG you can check label by label. You describe the parts and how they connect in plain words, and an image model draws the first version.
 explain: |
   A draft figure of your network, pathway or flowchart, saved as a PNG you can check label by label. You describe the parts and how they connect in plain words, and an image model draws the first version.
 
   A second model then reviews the draft and gives it a score. The pass mark depends on where the figure is going: 8.5 out of 10 for a journal, 6.5 for slides. If the score falls short, the draft is redrawn once or twice, and a review log is saved with each attempt. The result is a raster image with no vector or print resolution control, so check it before it goes into a paper. It needs Python and an OpenRouter key.
 when:
-  - You need a first-draft pathway or workflow figure for a paper and have no
-    time to draw it.
+  - You need a first-draft pathway or workflow figure for a paper and have no time to draw it.
   - You are building a poster and want a clean flowchart of your method.
-  - You have a rough idea of a system diagram and want to see it on the page
-    before refining it.
+  - You have a rough idea of a system diagram and want to see it on the page before refining it.
   - You want a quality score on a figure before you send it to co-authors.
+not_for:
+  - "You need a final vector figure or print resolution for a journal: draw it in a vector tool such as Illustrator or Inkscape, because this makes a PNG only."
+  - "Your figure shows unpublished data, patient information or embargoed material: draw it by hand, since your text and images go to OpenRouter."
+  - "You want the score to prove the figure is correct: ask a co-author to check every label, because the score is only a rough guide."
 you_give:
   - A plain-language description of the diagram
   - Where it will be used (journal, poster, slides)
@@ -32,8 +31,28 @@ you_get:
   - A review log of each attempt
   - A refined second or third version if the first falls short
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Check your data first. Your text and images are sent to OpenRouter, so do not use unpublished, patient or embargoed material.
+  - Get an OpenRouter key at openrouter.ai/keys. Install Python 3.10 or newer and the requests package.
+  - "Set your key in the terminal: export OPENROUTER_API_KEY=your-key"
+  - 'Run one command with your description and document type, for example: python scripts/generate_schematic.py "your diagram description" -o figures/name.png --doc-type journal'
+  - Open the PNG and the review log. Check every label and arrow yourself.
+  - Remember the pass marks are local rules of this tool, not journal rules. Redraw the final figure in a vector tool if the journal needs it.
+output_sample:
+  input:
+    - A plain-language description of the diagram and how its parts connect
+    - Where it will be used, such as journal, poster or slides
+    - The labels and links that must appear
+    - Your OpenRouter API key
+  prerequisites:
+    - An AI that can run Python 3.10 or newer and save files
+    - Internet access
+    - A free or paid OpenRouter account and API key
+  output:
+    - name: Diagram PNG
+      contains: The draft figure, saved where you choose, such as figures/name.png, at the size the image model returns.
+    - name: Review score
+      contains: A score out of 10 compared with the pass mark for your document type.
+    - name: Review log
+      contains: Notes from each attempt on what the reviewing model liked and what it wanted changed.
+    - name: Refined draft
+      contains: A second version made when the first score is below the pass mark. There are at most two drafts.

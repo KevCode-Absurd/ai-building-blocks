@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps both sides of the contract, then writes targeted tests.
 new_slug: api-contract-tester
 name: API contract tester
-summary: Give it an API and its users. Get tests that catch breaking changes
-  between the two before they ship.
+summary: Check an API change against its contract before it ships. Give it the spec and callers. You get tests that flag breaking changes.
 job: test-and-fix-code
 headline: API contract tester
-subhead: Tests that catch the moment an API change would break the programs
-  using it, before it reaches anyone. Give it the API and a list of who calls
-  it, and you get a small test set that checks both sides.
+subhead: Tests that catch the moment an API change would break the programs using it, before it reaches anyone. Give it the API and a list of who calls it, and you get a small test set that checks both sides.
 explain: |
   Tests that catch the moment an API change would break the programs using it, before it reaches anyone. Give it the API and a list of who calls it, and you get a small test set that checks both sides.
 
@@ -18,6 +15,10 @@ when:
   - The build passes but the app and server disagree at runtime.
   - You need to prove a change is safe to ship.
   - A bug report needs a small reproduction between two systems.
+not_for:
+  - "You want to add rate limits or safe retries to API calls: use a developer to design retry rules, since this item only checks contracts."
+  - "You need to prove the API is secure or that access rules work: ask a security reviewer, because a passing contract test is not security proof."
+  - "You want to plan how clients move off an old version: write a migration plan with your team, as this item only flags what breaks."
 you_give:
   - The API spec or documented examples
   - The server and client code
@@ -29,8 +30,30 @@ you_get:
   - Sample data for success and failure cases
   - A list of untested gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste in the skill text. Use Claude, ChatGPT or Gemini.
+  - Paste your API spec or examples, then the server and client code that match.
+  - Say what change you plan to make and list the known callers.
+  - Read the change list first. Check that each breaking call makes sense for your clients.
+  - Run the tests. This needs an AI that can run code in your project, or you can run them yourself.
+  - Fix the gaps it lists, or plan a staged move if a change is breaking.
+output_sample:
+  input:
+    - Your API spec or documented examples
+    - The server code and the client code that use it
+    - A list of known callers (optional)
+    - The change you plan to make
+  prerequisites:
+    - An AI that can read your project files and run code, if you want the tests actually run
+  output:
+    - name: Change classification
+      contains: Each change marked breaking or compatible, with the versions and assumptions behind the call.
+    - name: Affected consumers
+      contains: Which clients and version pairings the change touches, and which callers are missing from the list.
+    - name: Test matrix
+      contains: Fake sample data for valid, missing, null, wrong-type, extra-field and error cases, with the checks for each.
+    - name: Observed failures
+      contains: What failed when the checks ran, with the exact commands used and what was not run.
+    - name: Minimal reproduction
+      contains: The smallest server and client case that shows the break.
+    - name: Coverage gaps
+      contains: Stale specs, unknown callers and boundaries that still need a live test.

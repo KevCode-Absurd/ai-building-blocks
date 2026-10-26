@@ -10,31 +10,26 @@ role: orchestrate
 job: ops
 level: intermediate
 execution: coordinator
+needs_mode: manual
 inputs:
-  - type: brief
+  - type: business_profile
     required: true
-  - type: brief
+  - type: spreadsheet
     required: false
 outputs:
-  - type: document
+  - type: plan
 uses:
   - copilot-gtm-developer-ecosystem
   - copilot-gtm-partnership-architecture
 steps:
   - uses: copilot-gtm-developer-ecosystem
-    note: 1. Read skills/copilot-gtm-developer-ecosystem/SKILL.md. Share your
-      developer product. Get a plan for app links, outside coders and wider use,
-      with ways to track results. Save the result with source references. Carry
-      the user's goal and all earlier findings into this step. If required
-      evidence or tool access is missing, mark this step blocked; do not
-      fabricate a result.
+    note: Plans how outside developers find, try and ship on your product, and
+      which numbers to track. Hands the developer path and those numbers to the
+      partnership step.
   - uses: copilot-gtm-partnership-architecture
-    note: 2. Read skills/copilot-gtm-partnership-architecture/SKILL.md. Share your
-      product and potential partners. Get partner types, incentives and a plan
-      to test shared revenue. Save the result with source references. Carry the
-      user's goal and all earlier findings into this step. If required evidence
-      or tool access is missing, mark this step blocked; do not fabricate a
-      result.
+    note: Uses step 1's developer plan, plus your product, goal and partner list.
+      Sets partner types, tiers, incentives and small tests of shared revenue.
+      Hands you the finished partner program.
 origin: rebuilt
 version: 1.0.0
 credits:

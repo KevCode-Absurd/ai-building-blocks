@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must link nine parts into one consistent plan.
 new_slug: product-strategy-canvas-writer
 name: Product strategy canvas writer
-summary: "Describe your product. Get a nine-part strategy: vision, customers,
-  trade-offs, metrics and what keeps you ahead."
+summary: "Turn your product description into a product strategy canvas: vision, customers, trade-offs, metrics, growth and what keeps rivals from copying you."
 job: plan-strategy
 headline: Product strategy canvas writer
-subhead: "A nine-part product strategy that shows how you will compete, win and
-  grow. It puts vision, customers, costs, value, trade-offs, metrics, growth,
-  skills and defensibility on one page."
+subhead: "A nine-part product strategy that shows how you will compete, win and grow. It puts vision, customers, costs, value, trade-offs, metrics, growth, skills and defensibility on one page."
 explain: |
   A nine-part product strategy that shows how you will compete, win and grow. It puts vision, customers, costs, value, trade-offs, metrics, growth, skills and defensibility on one page.
 
@@ -18,6 +15,10 @@ when:
   - Your roadmap is a feature list with no strategy behind it.
   - Leaders ask how you will beat competitors.
   - You are preparing a yearly planning cycle.
+not_for:
+  - "You need to decide on one feature: use a simple pros and cons list with your team, or a roadmap review."
+  - "You want a list of dated tasks and releases: write a roadmap instead, once the strategy is set."
+  - "You have no idea who your customers are yet: talk to a few customers first, then come back."
 you_give:
   - A description of the product and its position
   - Market, competitors and customer insight
@@ -30,7 +31,36 @@ you_get:
   - Metrics and growth plans
   - A view of how you stay ahead
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into the chat.
+  - Under them, write what your product is, who it is for, who you compete with and what limits you have.
+  - Add any numbers or customer notes you have (optional). If something is missing, say so.
+  - Read the nine sections. Check that they agree with each other, then test the hypotheses it lists.
+  - Ask your AI to fix any section that feels vague, and review the plan each quarter.
+output_sample:
+  input:
+    - Your product description and where it sits in the market
+    - Your market, rivals and what you know about customers
+    - Your company limits, such as team, budget and priorities
+    - Any business or market data you have (optional)
+  output:
+    - name: Vision
+      contains: What you aim to achieve, how you will inspire people and which values you hold.
+    - name: Market segments
+      contains: Two or three groups defined by customer problems and jobs to be done, with your first segment and why.
+    - name: Relative costs
+      contains: Whether you compete on low cost or unique value, and where you stand against rivals.
+    - name: Value proposition
+      contains: "For each segment: the situation before, how your product helps, the result after, and the alternatives."
+    - name: Trade-offs
+      contains: What you will not do, and how saying no keeps you focused.
+    - name: Key metrics
+      contains: One North Star metric and the one metric to improve this quarter.
+    - name: Growth
+      contains: Sales-led or product-led growth, main channels, how you scale and your unit economics.
+    - name: Capabilities
+      contains: Skills and resources you need, what to build and what to get from partners.
+    - name: Can't/Won't
+      contains: Why rivals cannot easily copy you, such as switching costs, network effects or barriers to entry.
+    - name: Hypotheses and experiments
+      contains: What must be true for the plan to work, plus low-effort tests for the key guesses.

@@ -2,16 +2,16 @@ slug: github-copilot
 name: GitHub Copilot
 maker: GitHub (Microsoft)
 url: https://github.com/features/copilot
-promise: "Get code suggestions, agent changes and pull request reviews in your development tools."
+promise: "Get code suggestions, background coding tasks and pull request reviews in your editor."
 use_cases: [code]
 categories: [coding]
 what_it_does:
-  - Suggests code as you type, and the next edit you are likely to make.
-  - Answers coding questions in chat and proposes changes to your code.
-  - Works through a GitHub issue in the background and opens the changes for review.
-  - Reviews pull requests on GitHub.
-  - "Links to outside apps your team has approved."
-  - Gathers docs and repositories into a shared reference for a team.
+  - "Suggests code as you type, and the next edit you are likely to make. On paid plans these are unlimited and use no credits (checked 26 Oct 2026)."
+  - "Answers coding questions in chat, on GitHub.com and in your editor (checked 26 Oct 2026)."
+  - "Takes a task you assign and works on it in the background, then opens a pull request for you to review. Paid plans only (checked 26 Oct 2026)."
+  - "Reviews pull requests. Pro and up (checked 26 Oct 2026)."
+  - "Connects to MCP servers and follows custom instructions and agents you set (checked 26 Oct 2026)."
+  - "Hands work to Claude or Codex agents on Pro+ and Max. The plans page marks this as Preview (checked 26 Oct 2026)."
 benefits:
   - Write routine code faster without leaving the editor you already use.
   - Assign a ticket to an agent and come back to a pull request.
@@ -19,15 +19,15 @@ benefits:
   - Keep your code, issues and AI help in one place.
 best_for:
   - Teams that already host their code on GitHub.
-  - Developers who use VS Code, JetBrains, Visual Studio or Xcode.
+  - Developers who use VS Code, Visual Studio, JetBrains, Eclipse or Xcode.
   - "Companies that need controls over staff access and AI use."
 not_for:
-  - Anyone who wants an app built from a description with no coding.
-  - Heavy agent users who want a flat, predictable bill, since agent work uses credits.
+  - "Anyone who wants an app built from a description with no coding. Lovable or Bolt are made for that."
+  - "Heavy agent users who want a flat bill. Chat and agent work use AI credits, so the cost moves with use. Cursor and Claude Code are other options to compare."
 pricing:
   model: freemium
   from: US$10 per month
-  note: Free plan with limited chat and 2,000 inline suggestions a month. Pro is US$10 and Pro+ is US$39 per month. Agent mode, chat and the command line use AI credits. Business and Enterprise prices are not listed on the page.
+  note: "Checked 26 Oct 2026. Free is US$0 with 2,000 inline suggestions a month and limited chat and agent use. Pro is US$10 a month and includes US$15 of AI credits. Pro+ is US$39 with US$70 of credits. Max is US$100 with US$200 of credits. One AI credit is US$0.01. Business is US$19 and Enterprise is US$39 per granted seat per month, per GitHub's docs. Free is only for individuals without Copilot through an organization. Verified students have a separate Student plan."
 works_with:
   - claude
   - codex
@@ -42,7 +42,30 @@ blocks:
   - mcp-config-version-checker
   - mcp-tool-set-designer
 alternatives: [cursor, claude-code, windsurf, codex]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Sign in to GitHub, or create an account. Open github.com/settings/copilot/features to see which Copilot features your account has."
+  - "Quickest start, with nothing to install: open a file in a repository on GitHub.com, click the Copilot icon at the top right, type a question and press Enter."
+  - "For suggestions as you type, install Copilot in your editor (VS Code, Visual Studio, JetBrains, Eclipse or Xcode) with GitHub's quickstart for IDEs. We did not check those steps."
+  - "For a background task, move to a paid plan, turn on the cloud agent in a repository where you have write access, and assign it one small task."
+  - "Read the pull request it opens line by line before you merge, as you would from a new teammate."
+needs:
+  - "A GitHub account."
+  - "A plan: Free for individuals, Pro, Pro+ or Max, or Business or Enterprise through your organization."
+  - "For inline suggestions, a supported editor."
+  - "For the cloud agent, a paid plan and a repository where you have write access."
+example:
+  task: "Ask a question about one file in your repository, on GitHub.com."
+  cost: "Chat and agent work use AI credits at US$0.01 each, and Pro includes US$15 a month of them. The page does not say how many credits one question uses."
+  reply: "An answer in a chat panel, with room for follow-up questions. How good it is depends on your question and your code, so check the answer against the file."
+not_verified:
+  - "Which features work in which editor. We did not read the feature matrix."
+  - "How many credits a chat question or an agent task uses."
+  - "Install steps for each editor, which sit in GitHub's IDE quickstart."
+  - "What Business and Enterprise include beyond the price. The plans page we read shows enterprise controls as not included on the four individual plans."
 sources:
   - https://github.com/features/copilot/plans
   - https://github.com/features/copilot
+  - https://docs.github.com/en/copilot/get-started/plans
+  - https://docs.github.com/en/copilot/get-started/quickstart

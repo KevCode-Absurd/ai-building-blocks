@@ -1,44 +1,77 @@
 new_slug: review-a-down-round-rights-change
 name: Review a down-round rights change
 headline: Review a down-round rights change
-summary: Check a qualifying price reset and the separately negotiated reserve expansion.
+summary: Check a down round's new conversion price and the extra option pool it needs. Get both results, kept apart, with gaps and checks listed.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A conversion-price reset, reserve change and unresolved capitalization interactions. Share current charter, qualifying issuance and exemptions, cash consideration, charter A and C share definitions, existing reserve and proposed pre-financing target.
+subhead: Give your AI the charter clause, the new share issue and its price, your cap table and the option pool target. It works out the new conversion price for the protected shares, then the shares to add to the pool. It marks any share class you did not share.
 explain: |-
-  A conversion-price reset, reserve change and unresolved capitalization interactions.
+  A down round sells shares at a lower price than an earlier round. Protected investors often get a lower conversion price, so each of their preferred shares turns into more common shares. At the same time, the new investor often asks for a bigger option pool before the money comes in. Both change who owns what.
 
-  Venture financing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 applies the charter's weighted-average formula, using its own definitions of old shares, new shares and exempt issues. Step 2 works out the extra pool shares needed to reach the target percent. If your term sheet says so, it must use a share count that already counts protected shares at their new conversion ratio.
+
+  The two results stay separate. The AI will not claim a full cap table unless you give it every security, and it flags classes that interact with the others. It does the arithmetic from the definitions you give. A lawyer should confirm what the charter means.
 when:
-  - You need a conversion-price reset, reserve change and unresolved capitalization interactions.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are raising a round below your last price, and earlier investors have anti-dilution rights.
+  - A term sheet asks for a bigger option pool before the new money comes in.
+  - A founder asks how much ownership a down round will cost.
+  - You need to check a conversion price that a lawyer or investor sent you.
+not_for:
+  - "You have no anti-dilution clause and only a pool request: use the Option pool top-up checker."
+  - "You only need the new conversion price: use the Weighted-average antidilution checker."
+  - "You want a legal reading of the charter: ask the company's lawyer. This only does the arithmetic from your definitions."
+  - "You need a full cap table after the round: bring every security to a cap table tool, since this covers two changes only."
 you_give:
-  - Current charter, qualifying issuance and exemptions, cash consideration, charter A and C share definitions, existing reserve and proposed pre-financing target.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The charter clause that sets the new conversion price, with its definitions of old shares, new shares and exempt issues
+  - The old conversion price for each protected series
+  - "The new issue: number of shares, price per share and cash received"
+  - Your cap table before the round, with options and the unissued pool
+  - The option pool target as a percent, before new money, from the term sheet
+  - The date of the cap table and the version of the charter
 you_get:
-  - A conversion-price reset, reserve change and unresolved capitalization interactions.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The new conversion price and ratio for each protected series, with rounding noted
+  - The extra pool shares needed to reach the target, never below zero
+  - The new pool size and the new fully diluted total
+  - A list of share classes that interact and were not supplied
+  - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the charter pages, the term sheet and your cap table. Say which series are protected and the date of the cap table.
+  - Ask your AI to follow the pack, save a file for each step and stop a step when an input is missing.
+  - After step 1, read each definition the AI used against the charter. A wrong definition gives a wrong price.
+  - After step 2, confirm the share count the term sheet means by fully diluted, then send both results to your lawyer. A spreadsheet tool is needed for the workbook. Without one, your AI gives the tables in chat.
 how_it_works:
   - title: Weighted-average antidilution checker
-    text: Use the actual charter A/B/C definitions to calculate the qualifying reset. Preserve new conversion ratio, rounding, exemptions and the document version used.
+    text: Applies the charter's formula with its own definitions of old shares, new shares and cash received. Keeps the new conversion ratio, rounding, exemptions and the charter version. Hands step 2 the new conversion ratios.
   - title: Option pool top-up checker
-    text: Require a freshly approved fully diluted denominator reflecting the actual protected conversion ratios where the term sheet requires them. Calculate only the separate pre-cash reserve top-up and flag missing interacting classes.
+    text: "Needs a freshly approved fully diluted count that uses the protected conversion ratios where the term sheet says so. Works out only the extra pool shares needed before the new money, and flags classes it was not given. Check before you finish: the new pool equals the target percent of the new total."
 output_shape: |-
-  A conversion-price reset, reserve change and unresolved capitalization interactions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES   <charter version, term sheet, cap table date>
+  CONVERSION PRICE RESET    <series | old price | new price | old ratio | new ratio | rounding>
+  DEFINITIONS USED          <old shares | new shares | cash received | exempt issues, with the charter wording>
+  POOL TOP-UP               <target | existing reserve | shares to add | new pool | new total>
+  INTERACTING CLASSES       <classes not supplied that could change either result>
+  MISSING                   <inputs not given>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - The charter clause and its definitions
+    - "The new issue: shares, price and cash received"
+    - Your cap table before the round
+    - The option pool target from the term sheet
+  prerequisites:
+    - An AI that can read files
+    - The charter version and cap table date
+  output:
+    - name: outputs/step-1-weighted-average-antidilution-checker.md
+      contains: The new conversion price and ratio for each protected series, with the definitions and rounding used.
+    - name: outputs/step-2-option-pool-top-up-checker.md
+      contains: The pool shares to add, the new pool and total, and the target proof.
+    - name: Interacting classes list
+      contains: Share classes or securities not supplied that could change the results.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,13 +93,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads long documents
+      why: Charters are long and the definitions matter. In plain chat, paste the exact clauses.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed term sheet page that sets the pool target.
+    - A list of all securities, including warrants and convertible notes.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Down round
+    meaning: A funding round that prices shares below the price of the last round.
+  - term: Conversion price
+    meaning: The price that sets how many common shares each preferred share turns into.
+  - term: Weighted-average antidilution
+    meaning: A protection that lowers the conversion price by an amount that depends on how many new shares sell and at what price.
+  - term: Fully diluted
+    meaning: All shares counted as if every option, warrant and convertible had been used.
+before: []
+next:
+  - option-pool-top-up-checker
+  - contract-and-term-sheet-reviewer
+  - compare-preferred-exit-payout-terms
+  - funding-round-multiple-analyst

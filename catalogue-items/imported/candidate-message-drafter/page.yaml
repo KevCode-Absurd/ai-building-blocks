@@ -2,35 +2,95 @@ thinking: low
 thinking_why: The messages follow set patterns and a kind, clear tone.
 new_slug: candidate-message-drafter
 name: Candidate message drafter
-summary: Say where the candidate is in your process. Get an email draft with one
-  clear next step.
+summary: Write the right email to a job candidate at any stage, from screening invite to offer or rejection, with one clear next step and a send time.
 job: hire-people
 headline: Candidate message drafter
-subhead: "Say who the candidate is, which role, where they are in your process
-  and what happens next. It drafts the message for that moment: a screening
-  invite, an update between rounds, an offer or a rejection. You get the email
-  draft, one clear call to action and a suggested send time."
+subhead: Tell your AI who the candidate is, the role, where they are in your hiring process and what happens next. It picks the matching email from 22 templates and fills it in. You get a draft, one clear ask and a suggested send time.
 explain: |
-  The right message for a candidate, at the right moment, ready for you to send. Say where the person is in your process, such as screening invite, post-interview update, offer or rejection, and you get an email draft with a clear next step.
+  A candidate waits for your email and you do not know what to write. This candidate email drafter has a template for 22 moments, from a screening invite to a welcome message, and a rule set for each. You say the stage, and it writes the message.
 
-  The drafts follow a few plain rules: reply within a day, give a real timeline, mention something specific about the person, ask for one action, and keep paragraphs short for phones. Tone shifts by stage, warmer early and more direct later, and rejections stay respectful. A stage map shows what to send, when and through which channel. You send the message yourself.
+  The rules are plain. Reply within a day. Give a real date, not "soon". Mention one thing from your conversation. Ask for one action. Keep paragraphs short for phones. Early messages are warmer, later ones more direct, and every rejection stays respectful.
+
+  Rejections follow a clear rule: say what the role needs, never share scores, interviewer comments or how others ranked. You always send the message yourself.
 when:
   - A candidate finished an interview and is waiting to hear back.
   - You need to turn down a finalist without damaging the relationship.
-  - You are inviting someone to a screening call and want a clear email.
-  - You want a welcome message for a new hire before day one.
+  - A candidate replied to you and you want to invite them to a screening call.
+  - Three days have passed with no news and you want to send an honest update.
+  - A candidate accepted and you want a welcome email before day one.
+not_for:
+  - "You are writing to someone who has not replied yet: use the Candidate outreach drafter."
+  - "You want one quick reply or rejection and nothing else: use the Candidate reply drafter."
+  - "You need the offer letter itself, with pay and terms: use the Offer letter drafter and have HR or a lawyer check it."
+  - "You need to turn down many candidates at once: send a merge email from your hiring tool, and have your HR lead check the wording."
 you_give:
-  - The candidate's name and role
-  - Where they are in the process
-  - Anything specific from your conversation (optional)
-  - The next step and date
+  - The candidate's first name and the role
+  - Where they are in your process, such as after the final round
+  - The next step and its date
+  - One real detail from your conversation (optional)
+  - Your name and company
+  - The reason for a rejection, in your own words (optional)
 you_get:
-  - An email or message draft
-  - A clear single call to action
+  - A subject line and email draft for that stage
+  - One clear ask for the candidate
   - A suggested send time
-  - Short alternative wording for tone
+  - A warmer and a more direct wording for the key lines
+  - A list of any gaps you still need to fill
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, and paste references/comms-templates.md after it if your AI cannot open files.
+  - Write the stage, the candidate's first name, the role, the next step with a date, and one detail from your talk.
+  - Ask for the email. If you give no date or detail, your AI marks the gap instead of inventing one.
+  - Read the draft. Fill every [BRACKET], check names and dates, and cut anything you cannot stand behind.
+  - Send it yourself within a day of your decision. Rejections go out within two days.
+how_it_works:
+  - title: Place the stage
+    text: Your AI finds the pipeline stage in the stage map and checks what to send, when and by which channel.
+  - title: Pick the template
+    text: It starts from the matching template in the reference file, such as screening invite or rejection after interview.
+  - title: Add your facts
+    text: It fills in the name, role, date and detail you gave, and marks anything missing.
+  - title: Apply the rules
+    text: It checks the draft for speed, a real timeline, one action and short paragraphs.
+  - title: Set the tone
+    text: It matches warmth to the stage. Rejections use the rule for what to share and what to keep private.
+output_shape: |
+  Stage: <stage>
+  Subject: <subject line>
+  <short email, two or three sentences per paragraph>
+  One ask for the candidate: <the single action>
+  Send: <when to send>
+  Tone options: <warmer line> / <more direct line>
+  Still to fill: <brackets or facts that are missing>
+output_sample:
+  input:
+    - The candidate's first name and the role
+    - Where they are in your hiring process
+    - The next step and its date
+    - One detail from your conversation (optional)
+  prerequisites:
+    - Any chat AI. The skill's template file helps if you can attach it.
+  output:
+    - name: Subject
+      contains: A short subject line that says why you are writing.
+    - name: Email draft
+      contains: A short message with your detail, a real date and a respectful tone for the stage.
+    - name: One ask
+      contains: The single thing the candidate should do next.
+    - name: Send time
+      contains: When to send, based on the timing rules for that stage.
+    - name: Tone options
+      contains: A warmer and a more direct version of the key lines.
+    - name: Still to fill
+      contains: Any date, reason or detail you did not give.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a writing job. Claude, ChatGPT or Gemini all do it well, with nothing to install.
+  inputs:
+    - The job post, so the role name matches
+    - How the candidate writes to you, so the tone matches
+terms:
+  - term: Pipeline stage
+    meaning: Where the candidate is in your hiring steps, such as screening, interview or offer.
+  - term: Silver medalist
+    meaning: A strong finalist you did not hire and may want to contact again later.

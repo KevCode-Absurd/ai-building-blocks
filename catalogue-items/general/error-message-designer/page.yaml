@@ -1,6 +1,6 @@
 new_slug: error-message-designer
 name: "Error warning and recovery designer"
-summary: "Describe a system and its operators. Get what the alarm says, what the person decides and how it recovers."
+summary: "Plan error alarms and safe restarts for a system run by people under pressure. You get the alarm text, the go or no-go choice and a recovery plan."
 job: build-software
 thinking: high
 thinking_why: "It must work through failure cases and the decisions people face under pressure, which needs careful reasoning."
@@ -17,11 +17,16 @@ when:
   - You run something where a mistake costs a lot and people work under pressure.
   - Your alerts are noisy and nobody knows what to do when one fires.
   - A readiness check found joins that could fail and you need to plan for them.
+not_for:
+  - "You run a single-user tool with no operators: a short checklist of what to test before release is enough."
+  - "You have no readiness findings yet and want to find weak joins first: use the Launch readiness seam checker, then come back."
+  - "You only need a one-line message for a form field: write it by hand with a person who knows the screen."
 
 you_give:
   - The system or process, and who operates it
-  - Findings from a readiness check or a past incident (optional)
-  - The mistakes people say cannot happen (optional)
+  - What operators see, and who watches from outside
+  - Findings from a readiness check or past incidents (optional)
+  - Mistakes your team says cannot happen (optional)
 you_get:
   - A list of can't-happen mistakes with how each is detected and what the system does
   - A safe restart point and the jobs kept running
@@ -34,6 +39,31 @@ how_to_use:
   - Add every "that can never happen" you have heard from the team.
   - Read the alarm texts out loud to someone who runs the system and fix the words they trip on.
   - Test the restart point on a small scale before you rely on it.
+output_sample:
+  input:
+    - Your system or process, and who operates it
+    - What operators see and who watches from outside
+    - Readiness findings or past incident notes (optional)
+    - Mistakes your team says cannot happen (optional)
+  prerequisites:
+    - Readiness findings from the Launch readiness seam checker, if you have them (optional)
+  output:
+    - name: The system and its people
+      contains: What the system does, who runs it, what they see and who watches from outside.
+    - name: Mistakes said to be impossible
+      contains: Each mistake with how the system detects it while running and what the system does next.
+    - name: Safe restart
+      contains: The restart point, the key jobs that keep running, the jobs dropped and who starts it.
+    - name: Alarms
+      contains: The alarm text for each trigger, the go or no-go decision and who decides.
+    - name: Same message for everyone
+      contains: What the operator sees and what the control room sees, rewritten until they match.
+    - name: Warnings where blocking is refused
+      contains: Plain warning text for risky actions the system allows, with what to check first.
+    - name: After an error
+      contains: Each kind of error and the change to the method that let it in.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps marked MISSING, and one line for each check that still failed, or none.
 
 how_it_works:
   - title: Lists the impossible

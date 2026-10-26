@@ -1,0 +1,139 @@
+name: Zhihu Strategist agent
+summary: "Get a Zhihu plan: topics you can speak on, how to pick questions, answer outlines and a column plan. Bring your field and your proof."
+headline: Zhihu Strategist agent
+subhead: Give it your field, what you really know and who you want to reach on Zhihu, China's question and answer site. It maps the topics you can speak on, how to pick questions, outlines for your best answers and a column plan. You get a Zhihu plan built on real expertise, not sales talk.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Zhihu readers trust people who know their subject. Follower counts and sales pitches count for little there. This agent plans for that. It starts with what you can really speak on, with proof, and picks three to five topics. Then it helps you choose the questions worth answering, and sets out how each answer should be built.
+
+  A good answer on this plan has a direct reply first, then evidence, an example and a line on who you are and why you know. The call to action is soft, such as a link to a useful guide. The agent also plans a column, which is a regular series that readers can follow. The profile suggests one or two posts a week. It plans how to meet other experts, and how answers lead to a sales talk.
+
+  It cannot open Zhihu. It does not know which questions exist or how well they do. You bring the questions, or it gives search phrases to try. It will not invent data, case studies or credentials. If you have none to give, it marks the gap. The upvote, lead and growth targets in the original profile are goals, not results. Chinese answers are drafts that a native reader should check.
+when:
+  - You sell expert work, such as software, consulting or training, and want trusted visibility in China.
+  - You can speak with authority on a few topics and need to choose which questions to answer.
+  - You want a column that builds a following over six months.
+  - You want answers that bring in qualified leads without sounding like an ad.
+not_for:
+  - You have no real expertise or proof to share. Zhihu readers notice. Build the proof first, or use the Social Media Strategist agent for a lighter channel.
+  - You want search ranking on Baidu. Use the Baidu SEO Specialist agent.
+  - You want quick short posts. Use the Weibo Strategist agent or the Xiaohongshu Specialist agent.
+  - You want English posts for LinkedIn. Use the LinkedIn Content Creator agent.
+you_give:
+  - Your field, what you sell and who you want to reach
+  - The topics you really know, with proof such as years of work, results you can show or published work
+  - Your goal, such as trust, leads or hiring
+  - Questions you already found on Zhihu, if any (optional)
+  - Facts, data or case studies you may use in answers (optional)
+  - How many hours a week you can spend (optional)
+you_get:
+  - A map of three to five topics where you can speak with authority
+  - A way to pick questions, with the checks to run on each
+  - An answer outline for each question you chose, with where to put your proof
+  - A column plan with themes and a posting rhythm
+  - A plan for meeting other experts and a path from answer to lead
+  - A review plan and a list of gaps and checks
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md. Claude, ChatGPT and Gemini all work.
+  - Paste your field, your goal and the topics you really know, with your proof for each.
+  - Search Zhihu for those topics. Paste three to ten questions you found, with their view and answer counts.
+  - 'Say: "Make my Zhihu plan. Do not invent data, case studies or credentials. Mark every gap as a check for me."'
+  - Read the topic map first. Cut any topic where your proof is thin.
+  - Write your first answer from an outline. Have a native Chinese reader check it, then bring back the upvotes and comments for the next round.
+how_it_works:
+  - title: Confirm the expertise
+    text: It confirms your field, goal and proof. Missing proof is asked for once, then marked MISSING. It will not invent it.
+  - title: Map the topics
+    text: It picks three to five topics where you have defensible expertise, and says what angle sets you apart.
+  - title: Choose the questions
+    text: It sets tests for a good question, such as fit with your goal and room for a deep answer. It applies them to the questions you pasted.
+  - title: Outline the answers
+    text: It writes an outline for each chosen question, with the direct answer, evidence, an example, your credential line and a soft call to action.
+  - title: Plan the column
+    text: It plans a column with a theme, a rhythm and a six-month list of topics.
+  - title: Plan people and leads
+    text: It plans how to meet other experts, and how a reader moves from your answer to a sales talk. Then it sets the numbers to review.
+output_shape: |-
+  TOPIC MAP
+    <topic> | your proof <what you gave, or MISSING> | angle <what sets you apart>
+
+  QUESTION PICKS
+    <question you pasted> | fit with goal <high, medium, low> | why answer or skip | evidence needed
+
+  ANSWER OUTLINES
+    <question> | direct answer <one line> | evidence <only what you gave> | example <your case or MISSING> | credential line <text> | soft call to action <one line>
+
+  COLUMN PLAN
+    Theme <line> | Rhythm <posts per week> | <month> | <topics>
+
+  EXPERTS AND LEADS
+    Who to look for <types, never named> | Path from answer to lead <steps>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+
+  GAPS AND CHECKS
+    <proof you still need, data to verify, text for a native reader>
+output_sample:
+  input:
+    - Your field, what you sell and who you want to reach
+    - The topics you really know, with your proof
+    - Your goal
+    - Questions you found on Zhihu, and facts or case studies you may use (optional)
+  prerequisites:
+    - A Zhihu account, or a plan to open one
+    - A native Chinese reader to check answers before you publish
+  output:
+    - name: Topic map
+      contains: Three to five topics, with your proof for each and the angle that sets you apart.
+    - name: Question picks
+      contains: Each question you pasted, rated for fit with your goal, with the reason to answer or skip.
+    - name: Answer outlines
+      contains: Direct answer, evidence, example, credential line and soft call to action for each pick.
+    - name: Column plan
+      contains: A theme, a posting rhythm and a six-month list of topics.
+    - name: Experts and leads
+      contains: The types of experts to meet and the steps from answer to sales talk.
+    - name: Review plan
+      contains: Monthly numbers to track and what to change if they are low.
+    - name: Gaps and checks
+      contains: Proof you still need, data to verify and text for a native reader.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Your proof
+    how: Give real years, results or published work for each topic. The outlines get stronger and the credential line is true.
+  - what: Questions
+    how: Paste real questions with their view and answer counts. Without them you get search phrases to try, not picks.
+  - what: Time per week
+    how: Say how many hours you have. A column needs a steady rhythm you can keep.
+  - what: Soft call to action
+    how: Say what a reader may do next, such as read a guide or join a talk. Keep it useful and low pressure.
+improve:
+  - Keep your best answers and the upvotes and comments they got. Paste them in next time and ask what they share.
+  - Save your topic map and credential line, so each answer stays consistent.
+  - Pair it with the Content Creator agent to turn answers into posts for other channels.
+terms:
+  - term: Zhihu
+    meaning: A Chinese site where people ask questions and experts write long answers.
+  - term: Column
+    meaning: A series of posts on one theme that readers can follow on Zhihu.
+  - term: Upvote
+    meaning: A vote a reader gives an answer. Many upvotes push the answer up the list.
+  - term: Zhihu Live
+    meaning: A live talk or Q and A on Zhihu.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: All three plan well and can draft in Chinese. A native reader must check any Chinese text.
+  inputs:
+    - A list of your own results, projects or published work, to use as proof.
+    - Ten Zhihu questions in your field with their view and answer counts.
+    - Three expert accounts on Zhihu whose answers you respect.

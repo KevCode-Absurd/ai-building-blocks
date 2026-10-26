@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sums up a chat in a set format.
 new_slug: spec-writer
 name: Spec writer
-summary: Talk through your idea. Get the conversation turned into a spec and
-  posted to your issue tracker.
+summary: Turn a chat about a new feature into a written spec and post it to your issue tracker, ready for an AI agent to build.
 job: build-software
 headline: Spec writer
-subhead: Talk through your idea. Get the conversation turned into a spec and
-  posted to your issue tracker. Bring the conversation about the feature. Use
-  the result to plan your next step.
+subhead: Talk through your idea. Get the conversation turned into a spec and posted to your issue tracker. Bring the conversation about the feature. Use the result to plan your next step.
 explain: |
   A feature spec written from the conversation you already had, then posted to your issue tracker and marked ready for an agent to pick up. It does not interview you. It uses what the chat and codebase have already shown.
 
@@ -18,18 +15,48 @@ when:
   - You need a spec in your issue tracker for an agent to build.
   - You want testing points chosen before building starts.
   - You would rather not answer a long list of questions again.
+not_for:
+  - "You need to fix a small bug: write a short ticket by hand or ask your AI for a quick plan in chat."
+  - "You have no issue tracker or no way to give your AI access to it: ask your AI to write the spec in chat and paste it in yourself."
+  - "You have not yet talked through the idea: have that chat first, since this skill does not ask you questions."
 you_give:
-  - The conversation about the feature
-  - Access to the codebase
-  - Your issue tracker and label setup
+  - The conversation about the feature, in the same chat
+  - Access to your codebase so your AI can read it
+  - The name of your issue tracker and a way for your AI to post to it
+  - A ready-for-agent label in your tracker
 you_get:
   - A spec with problem, solution and user stories
   - Implementation decisions
   - A testing plan with chosen test points
   - The spec posted to your tracker with a ready label
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your issue tracker.
+  - Talk through the feature with your AI first, in the same chat. Say what it should do and why.
+  - Paste in this skill, or add it to your AI tool as a skill. Make sure your AI can read your code and reach your issue tracker.
+  - Tell your AI the name of your tracker and that your ready-for-agent label exists.
+  - Ask your AI to write the spec. It will pick where to test the feature and ask you to confirm.
+  - Check the spec your AI posts. Fix anything wrong in the tracker before an agent picks it up.
+  - If your AI cannot reach your tracker, ask it to print the spec and paste it in yourself.
+output_sample:
+  input:
+    - Your chat about the feature
+    - Access to your code (so your AI can read it)
+    - Your issue tracker and its labels, including the ready-for-agent label
+  prerequisites:
+    - An AI that can read your codebase
+    - An AI that can post to your issue tracker
+    - A ready-for-agent label set up in your tracker
+  output:
+    - name: Problem Statement
+      contains: The problem the user faces, told from the user's side.
+    - name: Solution
+      contains: How the feature solves that problem, told from the user's side.
+    - name: User Stories
+      contains: "A long numbered list in the form: as an actor, I want a feature, so that a benefit."
+    - name: Implementation Decisions
+      contains: Modules, interfaces, schema changes, API contracts and other choices made, without file paths or code.
+    - name: Testing Decisions
+      contains: What makes a good test, which modules get tested, and similar tests already in the codebase.
+    - name: Out of Scope
+      contains: What this spec does not cover.
+    - name: Further Notes
+      contains: Anything else worth knowing about the feature.

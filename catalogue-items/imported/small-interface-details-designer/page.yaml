@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Small details need taste and context about how people use the screen.
 new_slug: small-interface-details-designer
 name: Small interface details designer
-summary: Give it a screen or feature. Get the triggers, rules, feedback and
-  loops for its small moments, so it feels polished.
+summary: Find what is missing in the small moments of your screen, like a toggle or loading state. Get a score out of ten and a ranked list of fixes.
 job: design-work
 headline: Small interface details designer
-subhead: The small moments in a screen, like a toggle, a loading spinner or a
-  like button, designed so they feel right. You name a screen or feature, and
-  get a plan for each tiny interaction.
+subhead: The small moments in a screen, like a toggle, a loading spinner or a like button, designed so they feel right. You name a screen or feature, and get a plan for each tiny interaction.
 explain: |
   The small moments in a screen, like a toggle, a loading spinner or a like button, designed so they feel right. You name a screen or feature, and get a plan for each tiny interaction.
 
@@ -18,6 +15,10 @@ when:
   - A loading state leaves people unsure if the page is stuck.
   - You are designing a toggle, a password field or pull to refresh.
   - A product feels rough and you cannot say why.
+not_for:
+  - "You want to improve the whole look of a screen: use a general UI polish guide such as Refactoring UI, or ask a designer for a full review."
+  - "You want to know if a control looks clickable: use a design guide on affordance, such as The Design of Everyday Things."
+  - "You need finished animation files or code: ask a developer or motion designer to build from the fixes this gives you."
 you_give:
   - The screen or feature to review
   - What the user is trying to do
@@ -28,7 +29,24 @@ you_get:
   - A short list of fixes in priority order
   - Ideas for motion and feedback
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
+  - Name the screen or feature, and say what the user is trying to do.
+  - Add a screenshot or a short description of the current design if you have one (optional).
+  - Ask your AI to review each small moment and give the score and fixes.
+  - Check the failed rows first. Fix the top item, then run it again to see the score change.
+output_sample:
+  input:
+    - The screen or feature to review
+    - What the user is trying to do
+    - A screenshot or description of the current design (optional)
+  output:
+    - name: Moment breakdown
+      contains: For each small moment, its trigger, rules, feedback and loop or mode, in that order.
+    - name: Quick Diagnostic table
+      contains: Eight rows, each marked pass or fail for the moment you gave it.
+    - name: Score
+      contains: A score out of ten, worked out from how many of the eight rows pass.
+    - name: Ranked fixes
+      contains: The failed rows, each with a specific fix, listed with the most important first.
+    - name: Motion and feedback ideas
+      contains: Short ideas for animation, colour, sound or touch that would make the moment feel right.

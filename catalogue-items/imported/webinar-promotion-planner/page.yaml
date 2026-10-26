@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It builds a plan from your topic and audience.
 new_slug: webinar-promotion-planner
 name: Webinar promotion planner
-summary: Give it your webinar topic and audience. Get a plan to promote it, run
-  it and follow up.
+summary: Plan your webinar promotion from topic to follow-up. Give it your topic and audience. You get a sign-up plan, a run-of-show and a follow-up plan.
 job: grow-social
 headline: Webinar promotion planner
-subhead: "A full webinar plan: how to get the right people to sign up, run the
-  session and follow up so attendees take the next step."
+subhead: "A full webinar plan: how to get the right people to sign up, run the session and follow up so attendees take the next step."
 explain: |
   A full webinar plan: how to get the right people to sign up, run the session and follow up so attendees take the next step. A webinar is a funnel, and most of the gain is in the parts people skip.
 
@@ -15,21 +13,51 @@ explain: |
 when:
   - You plan a webinar and need people to actually show up.
   - Your past webinars got sign-ups but few leads.
-  - You want a follow-up that turns attendees into buyers.
-  - You need a plan for a recurring virtual event.
+  - You want a follow-up that turns attendees and no-shows into buyers.
+  - You run a recurring or on-demand webinar and want it to keep bringing in leads.
+not_for:
+  - You plan an in-person event with room, travel or venue needs. Use a simple event checklist or an event planner instead.
+  - You want ongoing drip emails to your list. Use an email sequence tool or ask your AI for a lifecycle email plan instead.
+  - You only want ad copy to drive sign-ups. Ask your AI for a paid ads plan instead, then bring the results back here.
 you_give:
-  - Webinar topic and the one promise
-  - Target audience
+  - Your webinar topic and the one promise to attendees
+  - Your target audience
   - Date, length and platform
-  - The action you want afterwards
-  - Your list size and channels
+  - The action you want people to take afterwards
+  - Your list size and the channels you can use
+  - Your funnel numbers from a past webinar (optional)
 you_get:
-  - Promotion calendar
-  - Run-of-show outline
-  - Reminder and follow-up emails plan
-  - Metrics to track
+  - A promotion calendar with ready-to-send invite, reminder and social copy
+  - A run-of-show outline with a live-to-close moment
+  - A reminder and follow-up plan for attendees and no-shows
+  - Funnel targets worked backward from your goal
+  - A scorecard that shows the weakest stage of a past webinar (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - "Say what you need: plan a webinar, promote it, or fix one that did not convert."
+  - "Answer the questions one group at a time: event, audience and goal, then list size and runway."
+  - Check the funnel math first. If it needs more visits than your list can bring, change the goal or format.
+  - For a past webinar, add your numbers from sign-up to sale. The scorecard needs an AI that can run Python code and the skill files.
+  - Use the calendar and copy, and send the recording within 24 hours.
+output_sample:
+  input:
+    - Your webinar topic and the one promise to attendees
+    - Who it is for and the goal you want from it
+    - Date, length and platform
+    - Your list size, channels and runway before the date
+    - Your funnel numbers (optional, to find where a past webinar broke)
+  prerequisites:
+    - An AI that can run Python code, only if you want the funnel score (optional)
+  output:
+    - name: Webinar plan
+      contains: The promise, format, funnel targets worked backward from your goal, and the live structure.
+    - name: Promotion calendar
+      contains: What to send on each channel across the runway, with invite, reminder and social copy.
+    - name: Show-up sequence
+      contains: Reminders at one week, one day, one hour and live, plus a reason to attend live.
+    - name: Live-to-close moment
+      contains: How to move from teaching to one clear offer without it feeling like a bait-and-switch.
+    - name: Follow-up sequence
+      contains: Separate messages for engaged attendees, other attendees, no-shows and people who watch the recording later.
+    - name: Funnel scorecard
+      contains: A 0 to 100 score for each stage, with the weakest stage flagged and ranked fixes.

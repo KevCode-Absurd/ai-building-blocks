@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It picks from a set of ready starting points.
 new_slug: brand-style-starter-picker
 name: Brand style starter picker
-summary: Say what your business does. Get a ready style starting point with
-  colours, fonts, voice and image direction.
+summary: "Find a brand style starting point for your business: colours, fonts, voice lines and image notes you can change. Give it a short description."
 job: brand-file
 headline: Brand style starter picker
-subhead: "Skip the blank page. Describe what your business does and get a style
-  starting point you can change: colours, fonts, voice samples and image
-  direction."
+subhead: "Skip the blank page. Describe what your business does and get a style starting point you can change: colours, fonts, voice samples and image direction."
 explain: |
   Skip the blank page. Describe what your business does and get a style starting point you can change: colours, fonts, voice samples and image direction.
 
   The skill holds twelve style families, such as calm and clinical or bold and playful, with variations for eighteen kinds of business. It picks the closest family, or blends two neighbours, then rewrites the defaults to fit your brief. It tells you which choices it changed and why. It does not paste a stock palette on you. Treat the result as an anchor to refine, not a final brand. It works with any design tool and needs no code.
 when:
   - You are starting a brand and want a look to react to, not a blank canvas.
-  - You like a certain brand and want to design near its style without copying
-    it.
+  - You like a certain brand and want to design near its style without copying it.
   - You need to pick between several visual directions fast.
   - You want to see how your idea would look in a different style family.
+not_for:
+  - "You want to build a full brand from scratch with a clear method: use brand-identity."
+  - "You need ideas for what your brand should stand for: use brand-ideation."
+  - "You already have a brand and need to write down its voice or rules: use brand-voice or brand-style-guide."
 you_give:
   - A short description of your business and audience
   - A brand or style you admire (optional)
@@ -30,7 +30,27 @@ you_get:
   - Image direction notes
   - A list of what was adapted from the default
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill text. It needs no code, files or paid tools.
+  - Describe your business and who it serves in a few lines.
+  - Add a brand you admire, or colours and fonts you must keep (optional).
+  - Your AI picks the closest style family, or blends two, and adapts the defaults to your brief.
+  - Check the list of changes. Ask for another family if the look feels wrong.
+  - Next, refine the result with brand-identity, then write down the voice with brand-voice and the rules with brand-style-guide.
+output_sample:
+  input:
+    - A short description of your business and who it serves
+    - A brand or style you admire (optional)
+    - Colours or fonts you must keep (optional)
+  output:
+    - name: Matched style family
+      contains: The closest of the twelve style families, or a blend of two neighbouring ones, with a short reason.
+    - name: Colour starter
+      contains: Four to six colours with hex values, token names and why each one fits your brief.
+    - name: Font pairing
+      contains: A Google Fonts pairing with a size scale, adjusted to suit your kind of business.
+    - name: Voice samples
+      contains: Five to ten sample lines that show how your brand could sound.
+    - name: Image direction
+      contains: Notes on the kind of photos or art that fit this style.
+    - name: Changes from the default
+      contains: A list of what was adapted from the family default to fit your brief, and why.

@@ -1,6 +1,6 @@
 new_slug: build-a-monthly-p-and-l-and-know-your-real-margin
 name: Build a monthly P&L and know your real margin
-summary: Give it your invoices and sales. Get true unit costs, a monthly P&L, a new versus returning split and a daily margin.
+summary: Build a monthly P&L from your invoices and sales. Get true unit costs, a cost sort, a new versus returning split and a daily margin sheet.
 job: track-numbers
 thinking: high
 thinking_why: It runs five skills in a row and every step does money sums that feed the next. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your profit report looks fine but cash is tight, and you do not trust the margin it shows.
   - You import stock in shipments and cannot say what freight and duty add to each product.
   - You want to know whether your first orders pay for themselves or only your repeat buyers make money.
+not_for:
+  - "You sell one product and have no import costs: a simple P&L in a spreadsheet, or your bookkeeper, will do."
+  - "You only want to know what freight and duty add to each product: use the Landed cost allocator."
+  - "You only want to see what first-time buyers cost against returning ones: use the New and returning P&L splitter."
 you_give:
   - Supplier, freight, duty and other import invoices, with the purchase order lines
   - Your sales export with discounts, refunds and shipping charged
@@ -28,11 +32,34 @@ you_get:
   - A first-time and a returning P&L, and an acquisition health score out of 100
   - A daily margin sheet with returns set aside each day and checked against the month
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Gather the invoices and exports first. Tell it your sales model, such as own stock, dropship or 3PL, and who pays shipping.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md". Your AI needs to read and save files.
+  - Gather your invoices and exports first. Say how you sell, such as own stock, dropship or 3PL, and who pays shipping.
   - Say what profit you aim for, so the P&L can work back to the margin you need.
-  - Check each number it shows against your books before you rely on the next step.
+  - If you are there, it waits when it needs an answer only you know. If you are not, it writes MISSING and carries on.
+  - Check each number against your books before you rely on the next step.
+output_sample:
+  input:
+    - Your supplier, freight and duty invoices, with the purchase order lines
+    - Your sales export with discounts, refunds and shipping charged
+    - Your cost lines, with where they sit now in your books
+    - Your marketing spend by channel and your running costs
+    - A profit target (optional)
+  prerequisites:
+    - An AI that can read files, such as a spreadsheet, and save a file for each step
+  output:
+    - name: Landed cost allocator result
+      contains: The real cost of each product with freight and duty spread across it, and margin per unit.
+    - name: COGS line sorter result
+      contains: Every cost line sorted into cost of goods or expense by one rule, with a score out of 100.
+    - name: Store P&L builder result
+      contains: A monthly P&L in dollars, percent of sales and per order, with the line to fix first.
+    - name: New and returning P&L splitter result
+      contains: One P&L for first-time buyers, one for returning buyers, and an acquisition health score out of 100.
+    - name: Daily contribution margin tracker result
+      contains: A daily margin sheet with returns set aside each day and checked against the month. This file holds the spreadsheet.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Work out true unit cost
     text: Ties each invoice to its purchase and spreads each lump on a stated basis, never evenly. Divides by units received and shows margin per unit.

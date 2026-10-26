@@ -1,6 +1,6 @@
 new_slug: market-and-price-picker
 name: Pick a market worth selling to and its price
-summary: Give it your offer and who might buy. Get the best narrow market and a price that fits what it is worth.
+summary: Pick a market worth selling to and the price that fits it. Give it your offer and who might buy. You get a scored shortlist and a price.
 job: make-offer
 thinking: high
 thinking_why: It scores markets, rewrites an offer for several buyers and does price sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Buyers keep asking for a discount or quote you against someone cheaper.
   - You sell to anyone who will pay and want a group that can afford more.
   - You are unsure whether to go narrower or broader.
+not_for:
+  - "You have a brand-new offer with no buyers yet: build your brand facts first with the Website brand brain builder."
+  - "You want to add bonuses to an offer you already have: use the Offer bonus package builder."
+  - "You want to test a business idea or its risky guesses: use the Business model assumption tester."
 you_give:
   - Your offer and the price you charge now
   - The groups you could sell to, or what you can do so it can propose some
@@ -31,6 +35,26 @@ how_to_use:
   - Share your offer and the alternatives buyers weigh against it. Check the side-by-side before it moves on.
   - Add what you know about each group's size and growth. Guesses are marked as guesses.
   - Pick the tries you will commit to in the market it chooses, before you start selling.
+output_sample:
+  input:
+    - Your offer and the price you charge now
+    - The groups you could sell to, or what you can do so it can propose some
+    - Rivals and alternatives buyers mention (optional)
+    - Reviews or call notes (optional)
+    - Sales numbers (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project with the handoff pack uploaded
+  output:
+    - name: step-01-commodity-trap-checker.md
+      contains: A side-by-side with rivals, a verdict on price-only comparison, a price-war sum and the first row to change.
+    - name: step-02-starving-crowd-market-scorer.md
+      contains: Each group scored on pain, money, reach and growth, groups ruled out, the pick and the tries to commit to.
+    - name: step-03-niche-price-ladder-builder.md
+      contains: The offer rewritten for narrower buyers, with the worth of one result, a price band and a reach check at each level.
+    - name: step-04-pricing-decision-planner.md
+      contains: A price set from what the result is worth, a gap check, a cost multiple and two tests.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check whether buyers can compare you on price
     text: Lines you up against the alternatives, counts the differences a buyer can see in seconds and runs the price-war sum.

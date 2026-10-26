@@ -1,6 +1,6 @@
 new_slug: handbook-change-desk
 name: Handbook change desk
-summary: Give it each proposed rule change. Get where the rule came from, what it affects and a small test to approve.
+summary: Check a proposed handbook rule change before it goes live. Get the rule's origin, what it touches and a small test for you to approve.
 job: document-work
 thinking: high
 thinking_why: It must tell a real problem from one bad day, read how a change touches the rest of the handbook and know when to stop for counsel. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Someone has proposed dropping or adding a company rule and you want it done carefully.
   - Your handbook has rules nobody can explain.
   - You want a quarterly sweep that finds the rules that no longer earn their place.
+not_for:
+  - "You need a decision about one person's behavior: talk to your manager and counsel, because that is not a handbook change."
+  - "You need to track rules that change outside your company, like new laws: use the Rule change policy keeper."
+  - "You want legal advice or a final legal check: ask a lawyer, because every check here is a first pass."
 you_give:
   - Your current handbook or policies as text, with the places you operate
   - The proposed change, who asked and the problem they say it solves
@@ -33,6 +37,31 @@ how_to_use:
   - Read the problem line and the origin first. If the change solves nothing, stop there.
   - Take the counsel items to counsel. Approve the test or the wording.
   - Tell the agent it is approved. It then writes the announcement for you to send.
+output_sample:
+  input:
+    - Your current handbook or policies as text, with the places you operate
+    - The proposed change, who asked and the problem they say it solves
+    - How often the rule comes up and who it affects (optional)
+    - Headcount, places and whether you are remote (optional)
+    - Your change log, once it exists (optional)
+  prerequisites:
+    - An approval from you before it writes any announcement
+    - Your handbook as text the AI can read
+  output:
+    - name: The problem
+      contains: One line on the problem the change solves, who asked, and whether it is a real problem, one incident or none.
+    - name: Origin
+      contains: Where the existing rule came from, who it served and whether it earns its place.
+    - name: What it touches
+      contains: Each affected section and place difference, with pay, leave, safety and dismissal items marked for counsel.
+    - name: The path
+      contains: A dated test plan for a removal, wording for counsel for an addition, or a note that it is not a handbook change.
+    - name: Plain-words test
+      contains: A worker's question, the plain answer the rule gives, and whether the two matched.
+    - name: Announcement
+      contains: The announcement, FAQ, manager talking points and send plan, written only after you approve.
+    - name: Files and missing
+      contains: Each step's saved file and every line marked MISSING.
 how_it_works:
   - title: Name the problem
     text: Writes the problem the change solves in one line, or says the proposal has none behind it.

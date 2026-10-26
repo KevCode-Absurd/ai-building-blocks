@@ -1,6 +1,6 @@
 new_slug: monthly-skill-library-keeper
 name: Monthly skill library keeper
-summary: Point it at your skills folder each month. Get weak, clashing and unsafe skills found, and gaps worth a new skill.
+summary: Check your skills folder each month. Find skills that clash, fail tests or look unsafe, plus tasks that need a new skill.
 job: make-skills
 thinking: medium
 thinking_why: It runs up to seven checks and merges the findings, but each check is a read. A mid-level model is enough, and the safety step is explicit.
@@ -14,6 +14,10 @@ when:
   - You have more than a handful of skills and are not sure all of them still work.
   - You add skills from other people and want them checked before they run.
   - Your AI picks the wrong skill, or no skill, for jobs you do every week.
+not_for:
+  - "You want a one-off check of one new skill: use the Skill file validator, which covers that alone."
+  - "You have no skills yet: write your first skill by hand, then come back once you have a folder."
+  - "You want a failed skill fixed: use the Prompt and skill tuner, then run this agent again next month."
 you_give:
   - The folder of skills, each with its SKILL.md
   - Which ones came from outside (optional)
@@ -32,17 +36,44 @@ how_to_use:
   - Read the hand-back. Anything marked do not run goes first.
   - Say yes to the fixes you want, or make them yourself. For a skill that failed its test, use the Prompt and skill tuner.
   - Run it next month. It checks whether the fixes worked.
+output_sample:
+  input:
+    - Your folder of skills, each with its SKILL.md
+    - Which skills came from outside (optional)
+    - A project folder, to find skills the work needs (optional)
+    - Session or screen history, to find tasks you repeat (optional)
+    - Last month's folder, after the first run (optional)
+  prerequisites:
+    - An AI that can read your skills folder and save files, such as Claude Code
+    - "The skill checking items it runs: skill-trigger-auditor, skill-file-validator, skill-safety-checker and skill-quality-tester"
+  output:
+    - name: This month
+      contains: One line with the count of skills, and how many are new, changed, flagged and unsafe.
+    - name: Do not run
+      contains: Any skill that failed the safety check, with what was found. Empty if none.
+    - name: Fixes to approve
+      contains: Up to 15 ranked fixes, each with the skill, the problem, the step that found it and the fix.
+    - name: Clashes
+      contains: Pairs of skills that block or copy each other, which one to keep and why.
+    - name: Skills worth adding
+      contains: New skill ideas from your projects and history, each with the job it would do.
+    - name: Last month's fixes
+      contains: Each fix agreed last time, marked fixed or still open.
+    - name: Files and missing
+      contains: Each step's saved file, the inventory, and every MISSING line in one list.
 how_it_works:
   - title: Take stock
     text: Lists every skill and marks it new, changed or unchanged since last month.
   - title: Check the triggers
     text: Finds skills too vague to fire, too broad, or clashing with another.
-  - title: Check structure and quality
-    text: Validates new and changed skills, and tests those plus every flagged skill and a rotating sample of the rest.
-  - title: Check safety first
+  - title: Check structure
+    text: Validates each new and changed skill for structure, wording and naming problems.
+  - title: Check safety before any test
     text: Checks outside skills and new scripts. A skill that fails is marked do not run and is not tested or run.
-  - title: Check portability and gaps
-    text: If you use more than one AI tool, checks the skills load in each. If nothing is unsafe, looks for skills worth adding.
+  - title: Test quality and check portability
+    text: Tests the skills that passed, meaning new, changed and flagged ones plus a rotating sample, and checks they load in each AI tool you use.
+  - title: Look for gaps
+    text: If nothing is unsafe, looks in your project and history for skills worth adding.
   - title: Rank and hand back
     text: Puts every finding in one list, unsafe first, and stops for your yes.
 output_shape: |-

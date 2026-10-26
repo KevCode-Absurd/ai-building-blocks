@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores many signals and ranks the fixes.
 new_slug: ai-shopping-readiness-checker
 name: AI shopping readiness checker
-summary: Run it on your store. Get a score for how easily AI shoppers find your
-  products, plus the fix for each gap.
+summary: Check how easily AI shopping tools can find your Shopify products. Get a readiness score and a fix for each gap. It only reads your store.
 job: build-websites
 headline: AI shopping readiness checker
-subhead: A readiness score for how easily AI shoppers can find, read and trust
-  your products, with a fix for each gap. It reads straight from inside your
-  Shopify admin, so it sees more than an outside scan can.
+subhead: A readiness score for how easily AI shoppers can find, read and trust your products, with a fix for each gap. It reads straight from inside your Shopify admin, so it sees more than an outside scan can.
 explain: |
   A readiness score for how easily AI shoppers can find, read and trust your products, with a fix for each gap. It reads straight from inside your Shopify admin, so it sees more than an outside scan can.
 
@@ -18,6 +15,10 @@ when:
   - Your product pages have thin descriptions and gaps in product data.
   - You need a list of fixes your team can work through.
   - You want a repeatable check after each catalogue update.
+not_for:
+  - "Your store is not on Shopify: this checker reads the Shopify admin, so use a plain site audit or ask a web developer."
+  - "You cannot give read access to your store: ask the store owner to run it, or have your developer share the results."
+  - "You want the fixes done for you: this only reads and lists gaps, so make each change by hand or with the fix skills it names."
 you_give:
   - Your store domain
   - A Shopify CLI login with read access
@@ -28,8 +29,30 @@ you_get:
   - The product-level gaps found
   - A fix for each gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Log in to your store with the Shopify CLI. Use an account that can read products, files, themes and pages.
+  - Open an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. Paste this skill.
+  - Give it your store domain. Add the product sample size or the shortest description length if you want to change them (optional).
+  - Step 6 sends your store domain to audit.40rty.ai for an outside view. To skip it, tell your AI to skip step 6.
+  - Read the score and the gap table. Start with the gaps named highest impact.
+  - Run each fix skill it names, then run this check again to see what changed.
+output_sample:
+  input:
+    - Your store domain
+    - A Shopify CLI login with read access
+    - How many products to check (optional)
+    - The shortest description you accept (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Read access to products, files, themes and online store pages
+    - The fix skills it names, if you want to follow its fixes (optional)
+  output:
+    - name: Overall score
+      contains: One readiness score from 0 to 100 for how well AI shopping tools can find, read and recommend your products.
+    - name: Pillar results
+      contains: "A result for each of five areas: Discoverable, Trusted, Readable, Structured and Matchable."
+    - name: Gap table
+      contains: Each gap, how much it matters, and the fix skill to run for it.
+    - name: Product sample counts
+      contains: How many products were checked, and how many have thin descriptions, missing image alt text, barcodes or categories.
+    - name: Outside view (optional)
+      contains: What AI crawlers see on your live store, if you allow the optional scan of your domain.

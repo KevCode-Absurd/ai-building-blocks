@@ -2,27 +2,96 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: executive-office-work-planner
 name: Executive office work planner
-summary: Share leadership work and decision limits. Get clear priorities, briefs, handover notes, and questions for the right owner.
+summary: Prepare a leader's decision brief, triage list or handover note. You get facts, options and a recommendation marked as advice.
 job: organise-work
 headline: Executive office work planner
-subhead: Share the leadership task, decision limits, and relevant records. It sorts the facts, lays out choices, and checks who owns the next call. You get a brief, priority plan, or handover note that helps the leader decide.
+subhead: "Tell it who decides, what is at stake and which records you have. It separates facts from guesses, lays out the options and flags who owns the next call. You get a decision brief, triage list, calendar review or handover note for the leader."
+explain: |
+  A chief of staff or executive assistant often prepares the work, while the leader makes the call. This skill keeps those roles clear. It helps you build a decision brief for an executive, sort what reaches the leader's desk, and keep a record when the work changes hands.
+
+  Its main rule is to keep facts, reported concerns, assumptions and unknowns apart. A brief that hides what you do not know misleads the leader. The skill also never turns a recommendation into a decision, and never turns a loose idea into a task with a made-up date.
+
+  It will not build files on people or score their performance. Safety, legal, HR and fraud concerns go to the right owner, not through you.
+when:
+  - Your leader must pick between options and wants one page they can decide from.
+  - Too much lands on the leader's desk and you need a clear route for each item.
+  - A leader moves on and the decisions and open commitments must be written down.
+  - You are asked to cut the leader's calendar and want a reasoned list, not a guess.
+not_for:
+  - "You want action items from a meeting: use the Executive action register keeper."
+  - "You need a short prep sheet for one meeting: use the Executive meeting brief writer."
+  - "You want a one-page summary of a long report: use the Executive summary writer."
+  - "You want a steady weekly update to your boss: use the Weekly status update writer."
 you_give:
-  - The accountable leader, task, authority limits, relevant records, and any confirmed commitments.
+  - The leader who decides, and what they are deciding or reviewing
+  - What you may decide yourself, and what must go to them or others
+  - The records you have, such as notes, emails or numbers
+  - Commitments already agreed, with an owner and date (optional)
+  - The deadline for the decision (optional)
 you_get:
-  - A task-matched briefing, information route, calendar review, or decision and handover record.
+  - A decision brief with facts, assumptions, options and a marked recommendation
+  - Or a triage list with a route and owner for each item
+  - Or a calendar review with keep, shorten or drop calls
+  - Or a handover record of decisions and open commitments
+  - A list of what is missing before the leader can decide
+how_to_use:
+  - Open Claude, ChatGPT or Gemini. No code is needed, and the skill never changes your calendar or task tools.
+  - Paste the skill text. If you can add the skill folder, do so, so your AI can read its reference files.
+  - Say which task you need: a brief, triage, calendar review or handover. Paste what you have.
+  - Check the facts first. Anything you cannot source should be marked as an assumption or unknown.
+  - Give the draft to the leader to review. Share it only after a person approves it.
+  - Next, use the Executive action register keeper for commitments that have an owner and a date.
 how_it_works:
   - title: Name the accountable owner
-    text: Confirm who decides and what work has already been delegated.
+    text: Confirms who decides and what work has already been delegated.
   - title: Sort evidence and routes
-    text: Keep facts, reported concerns, assumptions, and unknowns separate. Send sensitive matters through protected channels.
+    text: Keeps facts, reported concerns, assumptions and unknowns separate. Sensitive matters go to protected channels.
   - title: Prepare options and records
-    text: Explain trade-offs and keep only decision-relevant records. A recommendation is not an approved decision.
+    text: Explains trade-offs and keeps only decision-relevant records. A recommendation is not an approved decision.
   - title: Check real commitments
-    text: Create tasks only for accepted actions with an owner and grounded due date. Review any external changes before making them.
+    text: Creates tasks only for accepted actions with an owner and a grounded due date.
+  - title: Hand back for review
+    text: Names who reviews the draft before it goes out as the leader's view.
+output_shape: |
+  DECISION BRIEF
+  Decision needed: <the call> | Decision-maker: <name>
+  Verified facts: <list with sources>
+  Assumptions and unknowns: <list>
+  Options: <option, benefit, cost, risk>
+  Recommendation (advice only): <view>
+  Review path and next action: <who, by when>
+  Prepared by: <name> | Reviewed by: <name>
+output_sample:
+  input:
+    - The leader and the decision they face
+    - The limits of what you may decide for them
+    - Your records, such as notes, emails and numbers
+    - Any commitments already agreed (optional)
+  output:
+    - name: Decision brief
+      contains: The call needed, verified facts, assumptions, unknowns, options with trade-offs, and a recommendation marked as advice.
+    - name: Triage list
+      contains: Each incoming item, its owner and whether to decide, delegate or escalate it.
+    - name: Calendar review
+      contains: Meetings to keep, shorten, delegate or drop, each with a reason.
+    - name: Handover record
+      contains: Decisions made, open commitments with owners and dates, and who to ask.
+    - name: Missing information
+      contains: What you still need before the leader can decide.
 works_best_with:
   tools:
-    - name: A chat AI that can read the bundled reference files
-      why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
-how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+    - name: Claude with the skill folder added
+      why: It can read the reference files in the skill when it prepares a brief or a handover.
+    - name: Any good chat AI
+      why: Paste the skill and your notes. The method works from text alone.
+  inputs:
+    - Last decision memo your leader liked
+    - Notes on what you may sign off yourself
+    - The calendar list for the period
+terms:
+  - term: Triage
+    meaning: Sorting items by who should handle them and how fast.
+  - term: Decision rights
+    meaning: Who has the power to make which call.
+  - term: Escalate
+    meaning: Pass a matter up to the person with authority.

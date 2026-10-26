@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It matches each requirement to content across long documents.
 new_slug: curriculum-gap-check
 name: Curriculum requirements gap checker
-summary: Give it your curriculum and a list of requirements. Get a table showing
-  what is covered, what is missing and a CSV.
+summary: "Give it your curriculum and a requirements list. You get a curriculum gap check: a table of what is covered, what is missing, and a CSV."
 job: teach-and-train
 headline: Curriculum requirements gap checker
-subhead: Give it your curriculum and a list of requirements. Get a table showing
-  what is covered, what is missing and a CSV. Bring your curriculum or
-  framework. Use the result to plan your next step.
+subhead: Give it your curriculum and a list of requirements. Get a table showing what is covered, what is missing and a CSV. Bring your curriculum or framework. Use the result to plan your next step.
 explain: |
   Before an inspection or accreditation, you need to know which requirements your curriculum actually meets. Give it your curriculum and the requirement list, and you get a table showing what is covered, what is only partly covered and what is missing, plus a CSV.
 
@@ -18,6 +15,10 @@ when:
   - You adopted a new standards list and need to see what your plan misses.
   - You merged two curricula and want to find overlaps and holes.
   - You want a clear list to take to your planning team.
+not_for:
+  - "You need proof of what is taught in class: gather classroom evidence such as lesson plans and student work, and ask a qualified reviewer."
+  - "You are sending an accreditation submission: have a qualified reviewer check the result first, because this only compares documents."
+  - "You want to build a new curriculum from scratch: start with a teacher or curriculum lead, not a gap check."
 you_give:
   - Your curriculum or framework
   - The requirements list in text, CSV or markdown
@@ -29,7 +30,25 @@ you_get:
   - A gap list
   - A CSV you can open in a spreadsheet
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste your curriculum. If it is long, upload it as a file.
+  - Paste your requirements list. Give each requirement a number or label.
+  - Add the framework name, the requirements source and the age bands to check, if you want to.
+  - Ask your AI to run the coverage audit and give you the table, the CSV and the gap summary.
+  - Check the rows marked partial or indirect against your own curriculum before you act on them.
+output_sample:
+  input:
+    - Your curriculum or framework, as text or markdown
+    - Your requirements list, as text, CSV or markdown
+    - The name of your framework (optional)
+    - The name of the body that sets the requirements (optional)
+    - The age bands to check (optional)
+  output:
+    - name: coverage_table
+      contains: One row per requirement, with the matching curriculum item, age band, match strength and a short note.
+    - name: coverage_csv
+      contains: The same rows as the table, in a format you can open in Google Sheets.
+    - name: gap_summary
+      contains: A short paragraph on requirements with no cover or only indirect cover.
+    - name: coverage_statistics
+      contains: Counts of requirements that are directly, partly, indirectly or not covered.

@@ -1,46 +1,115 @@
 new_slug: pension-service-financing-bridge
 name: Pension service and financing bridge
 headline: Pension service and financing bridge
-summary: Separate pension service cost, net interest, remeasurement and funding in a single reconciliation.
+summary: Split a company's pension cost into service cost, net interest and remeasurement, then roll the deficit forward after cash contributions (simple IAS 19 case).
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A pension expense and net-liability movement schedule with separate cash funding. Share opening net deficit, applicable discount rate, service cost, OCI remeasurement, contributions and reported pension expense.
-explain: |-
-  A pension expense and net-liability movement schedule with separate cash funding.
+subhead: Give it the opening pension deficit, the discount rate, service cost, the remeasurement amount, cash contributions and the pension expense the company reported. It splits the cost into what hits profit and what goes to other comprehensive income. You get the closing deficit and any gap against the reported expense.
 
-  Issuer accounting and earnings. Illustrative figures.20×5%=1 net interest; service5 makes6 P&L. Add OCI loss3 for9 total cost;20+9-4 funding=25 closing deficit. OCI loss8 raises the deficit to30 without changing P&L.
+explain: |-
+  A company's pension note can be hard to read. Cost, interest, gains and losses, and cash paid into the plan all move the same deficit. A pension expense reconciliation puts each one on its own line, so you can see why the deficit grew or shrank.
+
+  This skill follows a simple IAS 19 pattern. Net interest is the opening deficit times the discount rate. Service cost plus net interest is the pension cost in profit and loss. A remeasurement gain or loss goes to other comprehensive income (OCI), not to profit. Cash contributions reduce the deficit. They are funding, not expense.
+
+  It compares its profit and loss figure with the expense the company reported and shows any gap, rather than hiding it. It uses the simple pattern only. It does not handle mid-year payments, plan changes, settlements or an asset ceiling.
+
 when:
-  - You need a pension expense and net-liability movement schedule with separate cash funding.
-  - You work on issuer accounting and earnings and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You read an annual report and the pension cost in profit and loss does not match the change in the deficit.
+  - An analyst asks how much of the deficit change was cost, how much was a remeasurement and how much was cash.
+  - You want to check a reported pension expense against service cost and net interest.
+  - A reviewer wants every pension movement shown on its own line with its sign.
+
+not_for:
+  - "Your accounts do not follow IAS 19, such as US GAAP. The method here does not apply. Use your own standard's pension note."
+  - "You need the size of the obligation or the value of plan assets. That takes an actuary. This only reconciles figures you already have."
+  - "You want to explain how the funded status moved, split into contributions and everything else. Use the Pension funded-status change schedule."
+
 you_give:
-  - Opening net deficit, applicable discount rate, service cost, OCI remeasurement, contributions and reported pension expense.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The opening net pension deficit, from the prior year's pension note"
+  - "The discount rate at the start of the year, from the pension note"
+  - "Current service cost for the year"
+  - "The remeasurement gain or loss that went to OCI, with its sign"
+  - "Cash contributions paid into the plan by the employer"
+  - "The pension expense the company reported in profit and loss"
+  - "The currency, scale and period"
 you_get:
-  - A pension expense and net-liability movement schedule with separate cash funding.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "Net interest, and pension cost in profit and loss"
+  - "The gap between that cost and the reported expense"
+  - "Total cost: profit and loss plus remeasurement"
+  - "The closing deficit after contributions"
+  - "A list of anything missing, and what it blocked"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach the pension note if your AI reads files."
+  - "Give the six figures, with the currency and the year. Say if a number is a gain or a loss."
+  - "Check the input table first. Each figure should match a line in the pension note."
+  - "Read the gap against the reported expense. A gap means something is missing from the simple pattern, such as a past service cost."
+  - "If a figure is missing, it names it and stops the results that need it. Add it and run again."
+  - "A qualified accountant should review the result before anyone uses it in a report."
+
 how_it_works:
-  - title: 1. Verify the applicable accounting basis; for the simple IAS19 fixture apply the discount rate to the opening net deficit
-    text: Verify the applicable accounting basis; for the simple IAS19 fixture apply the discount rate to the opening net deficit.
-  - title: 2. Separate current service cost and net interest in P&L from remeasurement in OCI; identify settlements, plan changes and asset-ceiling adjustments separately
-    text: Separate current service cost and net interest in P&L from remeasurement in OCI; identify settlements, plan changes and asset-ceiling adjustments separately.
-  - title: 3. Roll opening net deficit through total recognized cost and cash contributions and reconcile to reported closing funded status
-    text: Roll opening net deficit through total recognized cost and cash contributions and reconcile to reported closing funded status.
+  - title: Checks the accounting basis
+    text: Confirms the figures follow IAS 19, since the simple pattern does not suit other standards.
+  - title: Works out net interest
+    text: Multiplies the opening deficit by the discount rate.
+  - title: Builds the profit and loss cost
+    text: Adds service cost and net interest, and compares the total with the reported expense.
+  - title: Adds the remeasurement
+    text: Puts the gain or loss in OCI and adds it to total cost without touching profit and loss.
+  - title: Rolls the deficit forward
+    text: Opening deficit plus total cost, less cash contributions, gives the closing deficit.
+  - title: Names the limits
+    text: Lists what the simple pattern leaves out, such as mid-year payments, settlements and an asset ceiling.
+
 output_shape: |-
-  A pension expense and net-liability movement schedule with separate cash funding.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES
+  <figure> | <source> | <date> | <currency, scale, period>
+
+  INPUTS AND ASSUMPTIONS
+  Opening deficit: <n> | Discount rate: <%> | Service cost: <n> | Remeasurement (+ loss / - gain): <n> | Contributions: <n> | Reported expense: <n>
+
+  PENSION BRIDGE
+  Net interest: <opening deficit x discount rate>
+  Cost in profit and loss: <service + net interest>
+  Gap to reported expense: <reported less computed>
+  Total cost: <profit and loss + remeasurement>
+  Closing deficit: <opening + total cost - contributions>
+
+  CHECKS RUN
+  <check> | <result>
+
+  MISSING
+  <figure and what it blocked>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Opening net pension deficit and the discount rate"
+    - "Current service cost and the remeasurement gain or loss"
+    - "Cash contributions paid in"
+    - "The pension expense the company reported"
+  prerequisites:
+    - "The company's pension note for the year and the year before"
+    - "A reviewer who can confirm the accounts follow IAS 19"
+  output:
+    - name: "SCOPE AND SOURCES"
+      contains: "Each figure with the note it came from, its date, currency, scale and period."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "The opening deficit, rate, service cost, remeasurement, contributions and reported expense, with signs."
+    - name: "PENSION BRIDGE"
+      contains: "Net interest, profit and loss cost, the gap to reported expense, total cost and closing deficit."
+    - name: "CHECKS RUN"
+      contains: "Each tie-out and its result, including whether the gap to reported expense is zero."
+    - name: "MISSING"
+      contains: "Any figure it could not find, and which result that stopped."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [pension-funded-status-change, cash-versus-earnings-checker]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -48,29 +117,40 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: Expected asset-return accounting from a different regime is not substituted for IAS19 net interest.
+
 judge:
   - Expected asset-return accounting from a different regime is not substituted for IAS19 net interest.
   - Contributions are funding movements and remeasurement is not silently moved into operating service cost.
   - Tie all inputs to source notes, dates, currency, scale and signs.
   - Retain reported figures beside analytical adjustments and list every unresolved source gap.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
     - Dated primary financial records and the applicable contractual definitions.
     - A named reviewer and an explicit financial question.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: IAS 19
+    meaning: The international accounting standard for employee benefits, including pensions.
+  - term: Net deficit
+    meaning: What the plan owes to members, less the plan's assets. A positive number means the plan is short.
+  - term: Remeasurement
+    meaning: A gain or loss from changed estimates, such as the discount rate. It goes to OCI, not to profit.
+  - term: OCI
+    meaning: Other comprehensive income, the part of a company's results that sits outside profit and loss.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A second check that compares two records or totals and explains any gap.

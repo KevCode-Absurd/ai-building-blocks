@@ -2,34 +2,56 @@ thinking: high
 thinking_why: It reads a lot of code and works out what it does.
 new_slug: code-to-requirements-writer
 name: Code to requirements writer
-summary: Point it at a codebase. Get a product requirements document built from
-  its screens, data and flows.
+summary: Turn an existing codebase into a product requirements document. Get one file per page, plus lists of statuses and API calls.
 job: build-product
 headline: Code to requirements writer
-subhead: A product requirements document built from the code you already have.
-  It is written in plain business language, yet detailed enough for an engineer
-  or an AI agent to rebuild each page and endpoint.
+subhead: Give it a project folder. It reads the routes, screens, data models and API calls. You get a requirements document in plain business language that an engineer or AI agent can use to rebuild each page.
 explain: |
   A product requirements document built from the code you already have. It is written in plain business language, yet detailed enough for an engineer or an AI agent to rebuild each page and endpoint.
 
   It works in three passes: a scan of the whole project, a page-by-page look at routes, components, models and APIs, then a structured write-up. It reads React, Vue, Angular, Next.js, Django, FastAPI, NestJS and others. It separates real API calls from mock data, lists every status code and constant, and pulls out data models. Two Python scripts help with scanning and folder setup, and a checklist tests the result for gaps.
 when:
-  - You inherited an app with no documentation.
-  - You want to rebuild a product on a new stack.
-  - A stakeholder needs to see what the app does without reading code.
-  - You must hand an AI agent a spec of an existing product.
+  - You inherited an app and nobody wrote down what it does.
+  - You want to rebuild a product on a new tech stack.
+  - A boss or client needs to know what the app does without reading code.
+  - You need to hand an AI agent a spec of a product that already exists.
+not_for:
+  - "You have no code yet and want to write requirements for a new idea: write them with your AI from a short brief, or ask a product manager."
+  - "You only have one file or a short snippet: ask your AI to explain it in a chat."
+  - "You want to check that an app works or find bugs: use a code review or testing tool instead."
 you_give:
-  - A codebase, front end, back end or both
-  - Python to run the helper scripts
-  - Pages to focus on (optional)
+  - Your project folder, front end, back end or both
+  - Pages or areas to focus on (optional)
+  - A name for the app (optional)
 you_get:
-  - A requirements document
-  - Page and endpoint descriptions
-  - Data model and status code lists
-  - Real versus mock API notes
+  - A README with the system overview and a list of all pages
+  - One document per page, with fields, actions and rules
+  - A list of every status code and constant
+  - A list of API calls that marks real ones and mock data
+  - A map of how pages link to each other
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Use an AI that can read your project files and run code. Install Python 3 first.
+  - Put the skill folder next to your project. Run codebase_analyzer.py on your project to make analysis.json.
+  - Run prd_scaffolder.py on analysis.json. It makes a prd/ folder with empty page files.
+  - Ask your AI to follow the skill and fill in each page file, one page at a time.
+  - Check the result with references/prd-quality-checklist.md. Fix gaps and anything marked as unsure.
+  - Give prd/README.md to your product lead, or to the AI agent that will rebuild the app.
+output_sample:
+  input:
+    - Your project folder, front end, back end or both
+    - Pages or areas to focus on (optional)
+    - A name for the app (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - Python 3, to run the two helper scripts
+  output:
+    - name: README.md
+      contains: System overview, module overview, page inventory, permission model and common interaction patterns.
+    - name: pages/ (one file per page)
+      contains: Overview, layout, fields, interactions, API calls, links to other pages and business rules for that page.
+    - name: appendix/enum-dictionary.md
+      contains: Every status code, type mapping and constant found in the code.
+    - name: appendix/page-relationships.md
+      contains: A map of how users move between pages.
+    - name: appendix/api-inventory.md
+      contains: The full list of API calls, with real ones kept apart from mock data.

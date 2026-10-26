@@ -1,6 +1,6 @@
 new_slug: motion-graphics-remake
 name: "Remake your best video ad as motion graphics"
-summary: "Give it the script of your best video ad. Get it remade with every word kept, and ready to build."
+summary: "Remake your best video ad as motion graphics with every word kept. Give it the script and get a plan, fixed lines and a build plan."
 job: make-video-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You have a video ad that works and want a version with no actors or filming.
   - You need a new format for the same message, such as a silent version for feeds.
   - You want the same ad in a look that is easy to update when a price changes.
+not_for:
+  - "You have no ad that works yet: write a new script first, such as with the Competitor-inspired video script writer."
+  - "You only want the remake plan, without the later steps: use the Video ad style remake planner on its own."
+  - "Your product needs a live demo on camera: keep the filmed ad, or use the Product claim demo planner to plan the demo."
 
 you_give:
   - The script of your best video ad, with its on-screen text
@@ -36,6 +40,28 @@ how_to_use:
   - Have your inputs ready. The script of the ad, the on-screen text, your product facts and your product photos.
   - Approve the product card, the sheets and the storyboard when it stops. Nothing moves on without your yes.
   - Build the final video in your editor or video tool from the build plan.
+output_sample:
+  input:
+    - The script of your best video ad, with its on-screen text
+    - Your product facts and photos
+    - Your brand file (optional)
+    - Your target countries, for the ad rules check (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+    - A video editor or video tool to build the final ad (After Effects or Remotion work well)
+  output:
+    - name: Remake plan
+      contains: The ad beat by beat, the beat that sells, a shot table, a cast note and a list of changes.
+    - name: Read-aloud fixes and final script
+      contains: Lines that sounded written, now fixed, with no claim or number changed, and the whole script.
+    - name: Format fit
+      contains: A score for each video format, to confirm motion graphics suits the remade script.
+    - name: Build plan
+      contains: Five stages from product card to render, with approval points before costly steps.
+    - name: Ad rules check
+      contains: A verdict on the script and on-screen words, with each flagged line quoted.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Plans the remake

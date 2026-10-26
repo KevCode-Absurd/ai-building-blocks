@@ -1,10 +1,10 @@
 new_slug: fix-inbox-placement-and-win-back-your-opens
 name: Fix inbox placement and win back your opens
-summary: Give it your sending setup and results. Get a recovery plan, a wider engaged list and a sunset flow.
+summary: Get your emails out of spam and your opens back. Share your email setup and 60 days of results. Get a recovery plan, engaged list and sunset flow.
 job: write-emails
 thinking: high
 thinking_why: Five steps carry a diagnosis through two waiting periods, and each one changes who you email. Give it your strongest model.
-headline: Get your emails out of spam and your opens back
+headline: Fix inbox placement and win back your opens
 subhead: Give it your email setup and 60 days of campaign results. It finds the setup faults that push mail to spam, builds a staged plan that emails your most engaged people first, widens the list as opens recover, writes a sunset flow for the quiet ones and reads the results.
 explain: |
   When emails land in spam, opens fall. Falling opens make it worse, because mailbox providers watch who opens and who complains, then send more of your mail to spam. Sending harder to the whole list digs the hole deeper. The way out is to fix the setup, send to the people who still open, and widen slowly.
@@ -20,6 +20,7 @@ you_give:
   - After the first pause, your last 60 days of campaign results
   - Your flows, and the offer you will use to win people back (optional)
   - After the second pause, the quiet subscribers and their open history
+  - Where your subscribers live and how they signed up (needed before any clean-out)
 you_get:
   - An email setup score out of 100, each failed check with the exact fix, and the DMARC records to add
   - An inbox health score out of 100, a diagnosis, and a staged recovery plan with gates at each stage
@@ -32,6 +33,7 @@ how_to_use:
   - Give it your sending domain settings and your platform's list and tracking settings.
   - When it pauses, fix the faults it found, export 60 days of campaigns and give them back.
   - Pause again after step 3. Send to the engaged group only for two weeks, then export the quiet subscribers.
+  - Before step 4, tell it where your subscribers live and how they opted in. Nothing is suppressed until you confirm both.
 how_it_works:
   - title: Check the email setup
     text: Checks your sending domain, DMARC, smart sending, attribution, tracking and list settings against a fixed list. It scores the setup and gives the exact fix for each fault.
@@ -44,7 +46,7 @@ how_it_works:
   - title: Send to the engaged only
     text: A pause. You send to the engaged group only for two weeks, then export the quiet subscribers and their open history.
   - title: Sunset the quiet ones
-    text: Defines unengaged with conditions, guards against false signals, writes a three-email sunset flow and sets a monthly rule that suppresses those who never answer.
+    text: First asks you to confirm how people opted in and where they live, and names the consent rule for that region. It is not legal advice, so a qualified person confirms. Then it defines unengaged with conditions, guards against false signals, writes a three-email sunset flow and sets a monthly rule that suppresses those who never answer.
   - title: Read the results
     text: Checks nothing is broken, then reads list growth, campaigns, flows and deliverability in order. It ranks the causes and scores channel health.
 output_shape: |-
@@ -94,3 +96,31 @@ improve:
   - Edit the sunset flow's emails to sound like your brand, and keep the notice true to what you do.
   - Add a monthly step that exports the quiet subscribers, so the clean-out runs without a new project.
   - Pair it with a welcome or win-back flow writer once opens have recovered.
+not_for:
+  - "You have not sent in the last 60 days, or you are a brand-new sender: use the Email setup health checker on its own first."
+  - "Your mail reaches the inbox and you only want lapsed buyers back: use the Win back lapsed buyers and clean out the rest workflow."
+  - "You only need a win-back email series: use the Win-back flow builder."
+  - "You want this month's email and SMS results read: use the Email and SMS performance reader."
+output_sample:
+  input:
+    - Your sending domain settings and your email platform's list and tracking settings
+    - Your last 60 days of campaign results, after the first pause
+    - Your flows and the offer for winning people back (optional)
+    - The quiet subscribers and their open history, after the second pause
+    - Where your subscribers live and how they signed up
+  prerequisites:
+    - An AI that can read files
+    - Admin access to your email platform and your domain settings
+  output:
+    - name: outputs/step-01-email-setup-health-checker.md
+      contains: A setup score out of 100, each failed check with its exact fix, and the DMARC records to add.
+    - name: outputs/step-02-inbox-placement-recovery-planner.md
+      contains: An inbox health score, a diagnosis and a staged send plan with a gate at each stage.
+    - name: outputs/step-03-engaged-list-expander.md
+      contains: Your engaged definition, the send split, a drip plan for quiet contacts and stop rules.
+    - name: outputs/step-04-sunset-flow-and-list-cleaner.md
+      contains: The unengaged segment, a three-email sunset flow, monthly suppression and a region check.
+    - name: outputs/step-05-email-and-sms-performance-reader.md
+      contains: Ranked causes, list growth, campaigns, flows, deliverability and a channel health score.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.

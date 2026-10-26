@@ -2,35 +2,108 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: frosted-glass-style-guide-writer
 name: Frosted glass style guide writer
-summary: Describe your product. Get a style guide for a frosted, see-through
-  look, with blur levels and contrast checks.
+summary: Get a frosted glass style guide with blur and layer levels, fallback rules and contrast checks that keep text readable on see-through cards.
 job: design-work
 headline: Frosted glass style guide writer
-subhead: A style guide for a frosted, see-through look, with blur levels,
-  layered surfaces and contrast rules that keep text readable. Designers and
-  engineers can use it straight away.
+subhead: Tell your AI about your product. It writes a glassmorphism style guide with three layer levels, blur and opacity values, a fallback for when blur is off, and a contrast check for text on see-through cards.
 explain: |
-  A style guide for a frosted, see-through look, with blur levels, layered surfaces and contrast rules that keep text readable. Designers and engineers can use it straight away.
+  Frosted glass looks good in a mockup and falls apart in a build. Text on a see-through card is only as readable as what sits behind it, and that changes from screen to screen. This skill writes the rules that keep the glass look and the text readable.
 
-  It sets colour and spacing tokens, a type scale, and how translucent cards and borders stack to create depth. Rules for do and don't are explicit: use named tokens not raw values, keep interaction states visible, avoid low-contrast text and don't mix different visual styles. Accessibility is built in, with WCAG 2.2 AA and keyboard focus. You give your product details and brand tone, and it adjusts the guide.
+  Your AI states the look in one sentence. It sets colours, type sizes and spacing as named values. Then it defines three layers (base, raised and overlay), each with a blur size, a background colour with its opacity, a light border and a shadow. It writes rules for each part, such as cards and menus, with every state.
+
+  The main test is the worst spot. Contrast is measured against the lightest and the darkest part of the background behind the glass, not the average. The guide also says what each layer looks like as a solid colour when blur is unavailable or a person turns on reduced transparency.
 when:
   - You want a glass-style interface and need rules to keep it consistent.
-  - Your frosted cards make text hard to read.
-  - You need design tokens a developer can implement.
-  - You are handing a visual style to a team.
+  - Text on your frosted cards is hard to read on some backgrounds.
+  - A developer needs exact blur, opacity and border values, not a screenshot.
+  - You are handing a visual style to a team and want a fallback for devices without blur.
+not_for:
+  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "You want a flat, solid look with no see-through layers: use the Minimal style guide writer."
+  - "You want soft raised and pressed-in surfaces: use the Soft shadow style guide writer. For chunky, puffy shapes use the Soft clay style guide writer."
+  - "Your layout is a grid of cards and you want that grid defined: use the Bento grid style guide writer."
 you_give:
-  - Product and audience
-  - Brand colours and fonts
-  - Tone of voice (optional)
-  - "Platforms: web, mobile or both (optional)"
+  - A description of your product and what it does
+  - Who uses it
+  - Brand colours and fonts you must keep (optional)
+  - Screens or parts to cover first (optional)
+  - Web, iOS or Android (optional)
 you_get:
-  - Style guide for the frosted look
-  - Colour, type and spacing tokens
-  - Blur and layer levels
-  - Contrast and accessibility rules
-  - Do and don't list
+  - Colours, type sizes and spacing as named values, with a contrast ratio for each colour pair
+  - Three glass layers with blur, opacity, border and shadow values
+  - A solid fallback for each layer
+  - Rules for each part, such as cards and menus, with every state
+  - Accessibility rules, do and don't lists and a review checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill into a new chat, or add it to your AI first.
+  - Paste your product description and who uses it. Add any fonts or colours you must keep, and say if it is for web, iOS or Android.
+  - Answer the one round of questions it asks, or say "use the defaults". The default colours and font are placeholders, not your brand.
+  - Check the layer table and the colour table first. Fix any text pair under 4.5 to 1.
+  - Hand the guide to your designer or developer, or paste it into your coding AI's project instructions.
+how_it_works:
+  - title: State the idea
+    text: It writes one sentence on the glass look and who it is for, before it sets any rules.
+  - title: Set the foundations
+    text: It sets colours as named tokens, fonts, type sizes and spacing steps.
+  - title: Define the glass layers
+    text: It sets base, raised and overlay layers, each with blur, opacity, border and shadow values.
+  - title: Check the contrast
+    text: It tests text against the lightest and darkest spot behind each layer and flags any pair under 4.5 to 1.
+  - title: Write part rules
+    text: For each part it covers anatomy, variants, states and how it works by keyboard, mouse and touch.
+  - title: Add fallbacks and a checklist
+    text: It sets a solid look for no-blur and reduced-transparency cases, then ends with a list for code review.
+output_shape: |-
+  1. Context and goals: <the glass look in one sentence, the product, who uses it>
+  2. Design tokens
+     | Token | Value | Use | Contrast on surface |
+     | <primary> | <hex> | <where it goes> | <ratio, pass or fail> |
+     Fonts: <display>, <body>, <code>   Type steps: <name = size>   Spacing: <steps>
+  3. Glass layers
+     | Layer | Blur | Background and opacity | Border | Shadow | Solid fallback |
+     | <base, raised, overlay> | <px> | <colour, %> | <colour> | <value> | <colour> |
+  4. Parts: <card, menu, button> with anatomy, variants, states, small screens
+  5. Accessibility rules: <rule> and <how to test it>
+  6. Tone and what not to do: <examples>
+  7. Review checklist: - [ ] <check>
+  Next step: <who gets the guide>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - Your product and what it does
+    - Who uses it
+    - Brand colours and fonts you must keep (optional)
+    - Screens or parts to cover first (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the frosted glass look, the product and who it is for.
+    - name: Design tokens and foundations
+      contains: Colours, fonts, type sizes and spacing, with a contrast ratio for each pair.
+    - name: Glass layer rules
+      contains: Base, raised and overlay layers with blur, opacity, border, shadow and a solid fallback.
+    - name: Component rules
+      contains: Anatomy, variants, states and small-screen behaviour for each part, such as cards and menus.
+    - name: Accessibility requirements
+      contains: Testable rules for focus, contrast against the worst background, keyboard use and touch size.
+    - name: Content and tone standards
+      contains: Voice words with before and after examples.
+    - name: Anti-patterns and QA checklist
+      contains: What not to build, each with an example, then a list your team can run in code review.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your logo colours as hex codes
+    - The backgrounds your glass cards will sit on, as screenshots
+    - Your current CSS or Tailwind colour list
+    - The oldest phone or browser you must support
+terms:
+  - term: Glassmorphism
+    meaning: A style with see-through, blurred layers that look like frosted glass.
+  - term: Blur radius
+    meaning: How much the background behind a layer is softened, in pixels.
+  - term: Token
+    meaning: A named value, such as primary blue, used in place of a raw colour code.
+  - term: Contrast ratio
+    meaning: How far apart two colours are in brightness. Normal text needs at least 4.5 to 1.

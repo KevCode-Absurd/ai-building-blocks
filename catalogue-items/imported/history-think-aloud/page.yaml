@@ -2,34 +2,55 @@ thinking: medium
 thinking_why: It needs to show real reasoning, not steps.
 new_slug: history-think-aloud
 name: History think-aloud script writer
-summary: Give it a source. Get a script for talking through your thinking so
-  learners see how a historian reads.
+summary: Write a history think-aloud script for any source. Give it a document and the skills to model. Learners see how a historian reads.
 job: teach-and-train
 headline: History think-aloud script writer
-subhead: A script for saying your thinking out loud as you read a history
-  source, so learners can see how a historian reads. Students often copy a
-  checklist without knowing why each step matters.
+subhead: Give your AI a history source and the thinking skills you want to show. It writes a short script you can say out loud as you read. Students hear why each step matters, not just the steps.
 explain: |
   A script for saying your thinking out loud as you read a history source, so learners can see how a historian reads. Students often copy a checklist without knowing why each step matters. A good think-aloud shows the reasoning behind it.
 
   You give the document and the thinking moves you want to model. The skill writes a short spoken script with pauses where you ask yourself who wrote this, when, why and for whom, what words stand out and what is missing. It labels each move so you know what you are showing. It lists pitfalls, like talking too long or giving away the answer, and ends with a handoff so learners try the same moves on their own source.
 when:
-  - You want to model historical reading before students try it alone.
-  - Students follow your checklist without understanding it.
+  - Students follow your checklist but do not know why each step matters.
+  - You want to show historical reading before students try it alone.
   - You are teaching sourcing or close reading for the first time.
-  - You need a ready script to rehearse before class.
+  - You want a script to rehearse before class.
+not_for:
+  - "You only need students to recall one fact: a short quiz or a plain fact sheet fits better."
+  - "You want a full lesson sequence on sourcing: plan the sequence yourself first, then use this for the modelling part."
+  - "You have no source in hand yet: find the document first, then come back."
 you_give:
-  - The source you will read
-  - The thinking moves to model
-  - Learners' age or level
-  - How long you have (optional)
+  - The source, with its author, date and where it was published
+  - A key passage from the source
+  - The thinking skills to model, such as sourcing or close reading
+  - Your students' age or year group and their experience so far
+  - A second source, if you want to model corroboration (optional)
+  - What your students struggle with now (optional)
 you_get:
-  - A spoken think-aloud script
-  - Notes naming each thinking move
-  - Common pitfalls
-  - A step to move students into practice
+  - A think-aloud script to say out loud
+  - Notes that name each thinking move in the script
+  - A list of common mistakes to avoid
+  - A way to move students into practice on their own
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tools are needed.
+  - Paste your source note and the key passage from the document.
+  - Say which skills to model and your students' year group.
+  - Add a second source if you picked corroboration. The skill needs it.
+  - Read the script aloud once. Change any line that does not sound like you.
+  - Use the practice step at the end to set students their own source.
+output_sample:
+  input:
+    - The document, with its source note (author, date, where it was published) and a key passage
+    - "The thinking skills to model: sourcing, close reading, contextualisation or corroboration"
+    - Your students' age or year group and how much they have done before
+    - A second document, only if you want to model corroboration
+    - What students struggle with now (optional)
+  output:
+    - name: Think-Aloud Script
+      contains: The words you say out loud as you read the source, with pauses where you ask yourself questions.
+    - name: Cognitive Moves Annotated
+      contains: A note beside each part of the script naming the thinking move you are showing.
+    - name: Common Pitfalls
+      contains: Mistakes teachers make when modelling, such as talking too long or giving away the answer.
+    - name: Transition to Practice
+      contains: How to hand over so students try the same moves on their own source.

@@ -1,0 +1,142 @@
+name: Twitter Engager agent
+summary: Get a week of X (Twitter) posts, one thread and reply drafts for your account, plus a crisis reply plan. Bring your topic and sample posts.
+headline: Twitter Engager agent
+subhead: Tell it your topic, your voice and the posts you have written before. It drafts a week of X posts, one teaching thread and replies to people who mention you. You also get a plan for a public complaint or crisis. You post everything yourself.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Accounts on X (formerly Twitter) that only broadcast get ignored. The ones that grow take part: they reply fast, say something useful and join conversations their buyers already have. This Twitter engager agent plans that daily habit and writes the drafts for it.
+
+  It starts from your topic, your voice and a few posts you wrote before. It plans a week with a mix of teaching, stories, comments on news in your field, replies to others and a small share of promotion. The profile's starting mix is 25 percent teaching threads, 20 percent personal stories, 20 percent industry comments, 15 percent replies, 10 percent promotion and 10 percent fun. It drafts the posts, one thread with a strong opening and replies to mentions you paste in. It also writes a short plan for what to do when a post goes wrong or a complaint turns public.
+
+  It drafts only. You post, and you decide when to reply. It can't see X, your mentions or what is trending, so you paste in what you want it to answer. It won't invent facts, quotes or customer stories. The profile's targets, such as answering 80 percent of mentions within two hours, are the author's goals, not results from AI Blocks.
+when:
+  - You want your account to grow by helping people, not by shouting.
+  - You get mentions and replies and don't know how to answer well.
+  - You want to turn one idea into a thread that teaches something.
+  - You worry about a public complaint and want a calm plan before it happens.
+not_for:
+  - You want only a reply to one post. Use the X reply writer.
+  - You want only a thread from one idea. Use the X thread writer.
+  - You want a growth plan built from your past tweets. Use the X growth writer.
+  - You want the same idea on X and LinkedIn. Use the X and LinkedIn post pair writer.
+  - You want it to post, schedule or reply for you. It writes drafts only.
+you_give:
+  - Your topic and who you want to reach
+  - What your account or brand is about, in a few lines
+  - Five or more of your own past posts, so it can match your voice
+  - Mentions, replies or posts you want answers for (optional)
+  - Facts, links or numbers you are allowed to share (optional)
+  - What counts as a crisis for you, and who decides what to say (optional)
+you_get:
+  - A one-week plan with a mix of teaching, stories, comments and replies
+  - A set of ready-to-edit posts, with a character count for each
+  - One thread draft with a strong first post
+  - Reply drafts for the mentions or posts you paste in
+  - A plan for a public complaint or crisis, with who decides and what to say first
+  - A list of facts and claims to check before you post
+  - A review plan with the numbers to read each week
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your topic, who you want to reach and five or more of your own posts.
+  - Paste the mentions or replies you want answered, and any facts you may share. Your AI can't see X.
+  - "Say: \"Plan my week on X and draft the posts, one thread and replies. Don't invent facts or quotes. Mark anything you can't check as a check for me.\""
+  - Read each draft aloud and cut anything that doesn't sound like you. Check every fact and link.
+  - Post and reply yourself. After a week, paste your numbers and ask what to keep.
+how_it_works:
+  - title: Confirm topic and voice
+    text: It reads your topic, reader and past posts, and asks once for anything missing. Gaps are marked MISSING.
+  - title: Plan the week
+    text: It sets a mix of teaching, stories, comments, replies and promotion for seven days.
+  - title: Draft the posts
+    text: It writes each post to your voice and to the length your account allows, and flags any claim to check.
+  - title: Draft the thread
+    text: It writes a strong first post and the posts that follow, each with one clear point.
+  - title: Draft the replies
+    text: It answers the mentions you paste in, helpfully and in your voice, and flags any that need a person to decide.
+  - title: Plan the crisis and review
+    text: It writes a short plan for a public complaint, then the numbers to read after a week.
+output_shape: |-
+  ASSUMPTIONS AND MISSING
+    ASSUMED: <list> | MISSING: <list>
+
+  VOICE NOTE
+    tone <3 words> | sounds like you <3 lines> | does not sound like you <3 lines>
+
+  WEEK PLAN
+    <day> | <type: teach, story, comment, reply, promotion, fun> | <topic> | <goal>
+
+  POST DRAFTS
+    <day> | <text> | <character count> | CHECK: <claim or link to confirm>
+
+  THREAD DRAFT
+    post 1 <opening> | posts 2 to <n> <one point each> | last post <call to action> | CHECK: <list>
+
+  REPLY DRAFTS
+    <mention or post pasted> | <reply> | <needs a person to decide: yes or no>
+
+  CRISIS PLAN
+    <what counts as a crisis> | <who decides> | <first public reply> | <what not to say> | <when to go quiet>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+output_sample:
+  input:
+    - Your topic and who you want to reach
+    - Five or more of your own past posts
+    - Mentions or posts you want answered (optional)
+    - Facts, links or numbers you may share (optional)
+  prerequisites:
+    - An X account you can post from
+  output:
+    - name: Voice note
+      contains: Three tone words, plus lines that sound like you and lines that don't.
+    - name: Week plan
+      contains: A post type, topic and goal for each day of the week.
+    - name: Post drafts
+      contains: Ready-to-edit posts with a character count and a line on what to check.
+    - name: Thread draft
+      contains: A strong first post, then one point per post and a call to action.
+    - name: Reply drafts
+      contains: A reply for each mention you pasted, with a flag when a person must decide.
+    - name: Crisis plan
+      contains: What counts as a crisis, who decides, a first public reply and what not to say.
+    - name: Review plan
+      contains: The numbers to read after a week and what to change if they are low.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scope
+    how: Ask for posts and replies only if you don't need a thread or a crisis plan this week.
+  - what: Pace
+    how: Say how many posts a day you can really send, so the week plan fits.
+  - what: Voice
+    how: Paste ten posts you like best, so the drafts sound closer to you.
+improve:
+  - Keep the posts and replies that got real conversation and add them to your sample posts.
+  - Update the crisis plan whenever your team or rules change.
+terms:
+  - term: Thread
+    meaning: A series of connected posts, read in order, where each post makes one point.
+  - term: Mention
+    meaning: A post where someone tags your account.
+  - term: Crisis plan
+    meaning: A short guide for what to do when a complaint or mistake spreads in public.
+  - term: Spaces
+    meaning: X's live audio rooms, covered in the original profile. This page does not plan them.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three can learn your voice from pasted posts and draft replies to pasted mentions.
+    - name: X itself and its analytics
+      why: You read mentions and your own numbers there. Your AI can't see them.
+  inputs:
+    - Your ten best past posts, with the ones that got replies marked.
+    - The last ten mentions or replies you got.
+    - Your list of facts and links you are allowed to share.

@@ -1,6 +1,6 @@
 new_slug: specific-knowledge-business
 name: Find your specific knowledge and build something you own
-summary: Tell it what you do well. Get your specific knowledge, a plan to earn without trading hours and a partner check.
+summary: Find your specific knowledge, see which income stops when you stop, and plan something you own. Includes a partner check before you commit.
 job: think-and-decide
 thinking: high
 thinking_why: It has to judge your own history and a real person with care. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You trade hours for pay and want to build something that earns while you are not working.
   - You are good at something but cannot say why people pay you for it and not someone else.
   - You are about to go into business with a person, client or hire for the long term and want a clear read before you commit.
+not_for:
+  - "You have no income history yet: start with the Business model assumption tester to check an idea before you build on it."
+  - "You have not seen your partner act over time: talk to people who worked with them first, then come back for the check."
+  - "You only want to know if a business idea is worth running: use the Seven-question startup scorer."
 you_give:
   - What came easily to you as a child or teenager, and what others noticed
   - What people ask you for now, what you are curious about, and what feels like play to you
@@ -34,13 +38,31 @@ how_to_use:
   - Answer its questions about your past and your work. It starts with your specific knowledge.
   - Run the small test it gives for each pick. Give it a few weeks before you decide anything.
   - If you have a person in mind, describe what you have seen them do. It checks them last.
+output_sample:
+  input:
+    - What came easily to you as a child or teenager, and what others noticed
+    - What people ask you for now, and what feels like play to you
+    - How you earn today, with clients, roles, products, hours and rates
+    - A sales or income sheet (optional)
+    - A person you would work with, and what you have seen them do (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude with files or Claude Code
+  output:
+    - name: "Step 1: Specific knowledge"
+      contains: Your knowledge picks, each traced to what you said, with the basics to learn and a cheap test with a date.
+    - name: "Step 2: Hours to assets"
+      contains: Each income line marked as tied to your hours or not, one route to build something you own, and a first step.
+    - name: "Step 3: Partner check"
+      contains: Scores for intelligence, energy and integrity with evidence, and a call to keep, test first or walk away.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find your knowledge
     text: Lists what you did easily and what people ask you for, marks what cannot be taught, picks one or two, and gives a cheap test for each.
   - title: Plan the move off hours
     text: Takes your picks from the step before, marks which income stops when you stop, and plans a product from one skill with a first step.
   - title: Check the partner
-    text: Takes the plan from the step before and scores any partner on intelligence, energy and integrity, with a call on whether to repeat the game.
+    text: Takes the product plan from step 2 as the game you would play together, adds the partner you describe, and scores them on intelligence, energy and integrity, with a call on whether to repeat the game.
 output_shape: |-
   STEP 1: YOUR SPECIFIC KNOWLEDGE
     Candidates, each traced to what you said | trainable or specific | one or two picks with the basics to learn | a cheap test and a date for each

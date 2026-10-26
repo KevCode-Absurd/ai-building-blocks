@@ -12,9 +12,9 @@ outputs:
   - {type: plan}
 uses: [rule-origin-tracer, hidden-value-check, second-order-effects-tracer, long-shot-bet-planner]
 steps:
-  - {uses: rule-origin-tracer, note: "Starts from the rule itself and its first reason"}
-  - {uses: hidden-value-check, note: "Reads the origin call and looks for jobs the rule does that nobody wrote down"}
-  - {uses: second-order-effects-tracer, note: "Follows the change from the origin call one step and then another"}
+  - {uses: rule-origin-tracer, note: "Starts from the rule itself and its first reason. Hands steps 2 and 3 the origin call as a plan"}
+  - {uses: hidden-value-check, note: "Reads the origin call and looks for jobs the rule does that nobody wrote down. Hands those hidden jobs to step 3"}
+  - {uses: second-order-effects-tracer, note: "Reads the origin call from step 1 and the hidden jobs from step 2, then follows the change one step and then another. Hands the revised plan to step 4"}
   - {uses: long-shot-bet-planner, note: "Turns the revised plan into a trial you can undo"}
 origin: rebuilt
 version: 1.0.0

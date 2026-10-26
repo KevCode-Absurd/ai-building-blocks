@@ -1,6 +1,6 @@
 new_slug: first-reader-question-writer
 name: "First reader question writer"
-summary: "Paste your draft. Get your ideal reader named and a short question sheet to send with it."
+summary: "Write the questions to send with your draft. Name your ideal reader and get a short first reader question sheet that shows where readers got lost."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It writes a short fixed kind of sheet from the draft."
@@ -17,6 +17,10 @@ when:
   - "You are about to send a draft to friends and want better answers than it was fine."
   - "You have a part you doubt and want to ask without leading."
   - "You want to know where readers got bored."
+not_for:
+  - "You want your draft proofread or fact-checked: use a copy editor, because this only writes questions."
+  - "You already have reader answers to sort: use the reader feedback sorter."
+  - "You have no readers you can ask: ask one trusted person to read it aloud to you instead."
 
 you_give:
   - "Your draft"
@@ -35,6 +39,29 @@ how_to_use:
   - "Say who you write for. If you cannot, it will ask."
   - "Pick the readers: four to eight people who read the kind of thing you wrote."
   - "Send the sheet with the draft. Ask them to mark where they stopped."
+output_sample:
+  input:
+    - Your draft, or its first pages and a summary
+    - Who you are writing it for
+    - The parts you doubt (optional)
+    - What you want a reader to feel at the end (optional)
+  output:
+    - name: Your ideal reader
+      contains: One line naming the person you write for and what you want them to feel.
+    - name: Questions for every reader
+      contains: Five to eight questions, such as where they stopped, got lost or got bored.
+    - name: Questions for the parts you doubt
+      contains: One neutral question for each part you doubt, up to three, that does not hint at an answer.
+    - name: Fact check request
+      contains: One line asking readers to mark any date, tool, place or job that looks wrong.
+    - name: Rules for readers
+      contains: "Three lines: read it in one or two sittings, mark where you stopped, hold comments until asked."
+    - name: Who to ask
+      contains: Four to eight kinds of reader, including your ideal reader and one with a good eye for facts.
+    - name: Note to send
+      contains: "A short message with the draft: what it is, how long, what to do and the return date."
+    - name: Checks missed
+      contains: One line for each check the sheet still fails, or none.
 
 how_it_works:
   - title: "Names your ideal reader"

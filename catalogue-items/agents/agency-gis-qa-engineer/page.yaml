@@ -1,0 +1,155 @@
+name: GIS QA Engineer agent
+summary: Check a map dataset before release. Get a pass or fail verdict, each problem with its location and likely cause, and checks to run in QGIS.
+headline: GIS QA Engineer agent
+subhead: Share your dataset's schema, a sample of its rows, its stated coordinate system and what it must match. It writes a QA report with a pass, conditional pass or fail verdict, each problem found, and the checks to run on the full file.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A map dataset can look fine and still be wrong. The coordinate system may not
+  match what the file says. Shapes may cross themselves, neighbors may leave
+  gaps, and fields may hold blanks. These errors reach users, and then the map,
+  the report or the service built on it is wrong. This GIS QA engineer agent is
+  the check you run before release.
+
+
+  It works from what you give it. It reads your schema, sample rows, metadata and
+  the spec you must meet. It finds the problems it can see, such as blank
+  required fields or a declared coordinate system that does not fit the values.
+  For what only the full file can show, such as overlapping shapes, it writes the
+  exact check to run in QGIS, GDAL or PostGIS. Each finding gets a severity, a
+  place and a likely cause.
+
+
+  This is a role profile from Agency Agents, shared under MIT. A chat AI cannot
+  open your map files, so it marks every unrun check as not run. It does not
+  replace a licensed surveyor or your data provider's own validation.
+when:
+  - A new dataset arrives from a vendor or another team, and you want to check it before you use it.
+  - You are about to publish a map layer or web service and need a go or no-go.
+  - Two layers do not line up, and you suspect a coordinate system mismatch.
+  - A grant, regulator or client asks for metadata and accuracy notes with the data.
+not_for:
+  - You need a map made or analysis run. Use the GIS Analyst agent.
+  - You need data cleaned, converted or moved into a pipeline. Use the Spatial Data Engineer agent.
+  - You need a survey-grade accuracy sign-off. Use a licensed surveyor or your data provider's validation process.
+  - You want it to open and test your files itself. A chat AI can't. Use QGIS or GDAL for the checks it lists, or an AI that can run code on your files.
+you_give:
+  - The dataset's name, format and what it is for, such as parcels in a shapefile for a public map
+  - The schema or field list, with a sample of rows (about 20, copied from the attribute table)
+  - The coordinate system the data says it uses, and the area it should cover
+  - The spec or rules it must meet, such as required fields and allowed values
+  - Metadata, row count you expect and control points for an accuracy check (optional)
+you_get:
+  - A verdict of pass, conditional pass or fail, with counts of critical, major and minor issues
+  - Each problem with its place, such as feature ID, the likely cause and a fix
+  - The checks it could not run, as commands or steps for QGIS, GDAL or PostGIS
+  - A metadata review that lists what is missing, such as source date, accuracy or contact
+  - A list of what to retest after the fixes
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste the schema, the sample rows, the stated coordinate system, the spec and what the data is for. For a big file, export the field list and 20 rows, not the whole table.
+  - Read the report. Anything marked "seen" came from your paste. Anything marked "to check" needs you to run the check on the full dataset.
+  - Run the listed checks in QGIS, GDAL or PostGIS, and paste the results back. Ask the agent to update the verdict.
+  - Fix the critical and major issues at the source, then run the same checks again. A fix only counts when the check passes.
+  - Add the report and the metadata notes to the dataset's record before you release it.
+how_it_works:
+  - title: Check the intake
+    text: It checks the stated coordinate system against sample values, the schema against the spec, and counts and extent against what you expect.
+  - title: Look at attributes
+    text: It looks for blanks, wrong types, values outside allowed lists and duplicate records in your sample.
+  - title: Plan the shape checks
+    text: For gaps, overlaps, self-crossing shapes and broken lines it writes the exact test to run on the full file, since a sample cannot show them.
+  - title: Review the metadata
+    text: It lists what is missing, such as lineage, accuracy, contact, use limits, datum and dates.
+  - title: Rate and locate
+    text: Each finding gets a severity, a feature ID or place, a likely cause and a fix.
+  - title: Give the verdict
+    text: It gives pass, conditional pass or fail, and names which checks still need to run before a pass can stand.
+output_shape: |-
+  DATASET
+    name <name> | format <format> | purpose <use> | coordinate system declared <CRS> | spec <rules> | ASSUMED: <list> | MISSING: <list>
+
+  VERDICT
+    <PASS, CONDITIONAL PASS or FAIL> | critical <count> | major <count> | minor <count> | why <one sentence>
+
+  FINDINGS
+    <ID> | severity <critical, major, minor, suggestion> | check <which>
+      where <feature ID or place> | evidence <what was seen> | likely cause <source data, tool, setup> | fix <step> | status <seen, to check>
+
+  CHECKS NOT RUN
+    <check> | how to run it <QGIS, GDAL or PostGIS step> | what a pass looks like
+
+  METADATA REVIEW
+    <item> | present, partial or missing | note
+
+  RETEST AFTER FIXES
+    <list>
+output_sample:
+  input:
+    - The dataset's name, format and what it is for
+    - The field list and about 20 sample rows
+    - The coordinate system it declares and the area it should cover
+    - The spec or rules it must meet (optional)
+    - Metadata and the row count you expect (optional)
+  prerequisites:
+    - QGIS, GDAL or PostGIS, to run the checks the AI lists on the full file
+  output:
+    - name: Dataset
+      contains: What was reviewed, what it is for, the declared coordinate system and what is missing.
+    - name: Verdict
+      contains: Pass, conditional pass or fail, with issue counts by severity.
+    - name: Findings
+      contains: Each problem with severity, place, evidence, likely cause, fix and whether it was seen or still to check.
+    - name: Checks not run
+      contains: Shape and map checks for QGIS, GDAL or PostGIS, with what a pass looks like.
+    - name: Metadata review
+      contains: Which metadata items are present, partial or missing.
+    - name: Retest after fixes
+      contains: The checks to repeat before the data ships.
+works_best_with:
+  tools:
+    - name: QGIS
+      why: Free desktop map software. Its topology checker finds gaps, overlaps and bad shapes.
+    - name: GDAL ogrinfo
+      why: A free command line tool that prints a file's coordinate system, fields and row count so you can paste them in.
+    - name: Claude Code or another AI that can run code on your files
+      why: It can run the checks itself. In a plain chat you run them and paste the results.
+  inputs:
+    - The output of ogrinfo for the layer.
+    - A few rows that you already know are wrong.
+    - The data provider's spec or documentation.
+terms:
+  - term: GIS
+    meaning: Geographic information system. Software and data for maps and places.
+  - term: Coordinate system (CRS)
+    meaning: The rule that turns numbers into places on Earth. If it is wrong, a layer lands in the wrong spot.
+  - term: Topology
+    meaning: How shapes sit next to each other. Good topology has no gaps or overlaps where there should be none.
+  - term: Sliver polygon
+    meaning: A thin, tiny shape left over where two layers almost meet.
+  - term: Metadata
+    meaning: Information about the data, such as source, date, accuracy and who to ask.
+  - term: Lineage
+    meaning: Where the data came from and how it was changed.
+tweaks:
+  - what: Spec
+    how: Paste the rules the data must meet. Without them, it checks only general good practice and says so.
+  - what: Strictness
+    how: Say what blocks a release, such as any wrong coordinate system or missing required field. It sorts findings by your rule.
+  - what: Sample
+    how: Include rows with blanks and odd values on purpose. A clean sample hides problems.
+improve:
+  - Add your own release rules to SKILL.md, such as required fields and what counts as critical.
+  - Keep each report with the dataset. Repeat problems from one vendor point to a fix at the source.
+  - Pair it with the Spatial Data Engineer agent to fix what it finds, and the GIS Analyst agent to use the clean data.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

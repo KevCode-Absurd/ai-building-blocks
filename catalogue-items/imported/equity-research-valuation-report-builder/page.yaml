@@ -1,26 +1,60 @@
 thinking: high
-thinking_why: It must distinguish reported facts, estimates and valuation
-  assumptions across several sources.
+thinking_why: It must distinguish reported facts, estimates and valuation assumptions across several sources.
 new_slug: equity-research-valuation-report-builder
 name: Equity research and valuation report builder
-summary: Share company reports and a dated share price. Get a stock research
-  report with value ranges, source checks and clear assumptions.
+summary: Build a stock research report with value ranges, source checks and clear assumptions from company filings and a dated share price.
 job: money-and-investing
 headline: Equity research and valuation report builder
-subhead: Supply the company, exchange, currency, research date and permitted
-  filings. Get a research report with traceable inputs and valuation scenarios.
-  An included English adapter runs the original calculation and provenance
-  checks. Source truth and investment conclusions still need human review.
+subhead: Supply the company, exchange, currency, research date and permitted filings. Get a research report with traceable inputs and valuation scenarios. An included English adapter runs the original calculation and provenance checks. Source truth and investment conclusions still need human review.
+explain: |
+  A stock research report is only as good as its sources and assumptions. This equity research and valuation report builder ties each fact to a filing and a date, and keeps reported facts, estimates and your assumptions apart.
+
+  It builds the thesis and the counter-evidence, compares periods and lays out discounted cash flow scenarios as ranges, with the inputs for each case shown. It then runs a strict check on structure, valuation and source trail.
+
+  The check passing means the report is built right. It does not prove your sources are independent or that the conclusion is correct. A person must read the filings behind each figure. The package has no market data feed, so you supply a dated share price.
 when:
-  - You are preparing company research and valuation with explicit assumptions
-    and an as-of date.
+  - You are preparing company research and valuation with explicit assumptions and an as-of date.
+not_for:
+  - "You want a live buy or sell call based on today's price: use a licensed research terminal or a qualified analyst."
+  - "Your sources are not filings or data you can check: get verified documents first, or ask an analyst to confirm them."
+  - "You need investment advice for your own money: speak to a licensed financial adviser, since this gives a research draft only."
+you_give:
+  - "The company name, stock exchange and currency"
+  - "Your research date and time horizon"
+  - "Company filings and financial data you are allowed to use"
+  - "A dated share price"
+  - "Your own valuation assumptions (optional)"
+you_get:
+  - "A research report in HTML with the thesis, counter-evidence, risks and what to monitor, each fact tied to a source"
+  - "Valuation scenarios with the inputs for each case shown"
+  - "Labels that separate reported facts, estimates and assumptions, with source dates"
+  - "A validator result on structure, valuation and source trail"
+  - "A PDF version of the report, if you ask for it"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Use launch-tools/USAGE.md for English rendering, the matching strict
-    validator and clearly labelled sample exhibits.
-  - It works best when your AI can run Python 3.9 or later and read supplied
-    filings or access permitted research sources; it includes no live
-    market-data feed.
+  - Download the skill folder and open it in an AI that can run Python 3.9 or later and read files.
+  - Tell your AI the company, exchange, currency, research date and horizon. Add the filings and the dated share price.
+  - Ask it to follow SKILL.md. For English output, it uses launch-tools/USAGE.md.
+  - Read the validator result. A pass checks structure only. It does not prove your sources are independent or the conclusion is right.
+  - Check every figure against the cited filing. Treat the report as a research draft, not investment advice.
+  - Next, ask a peer to review it and sign it off. You can also feed the scenarios into your own model.
+output_sample:
+  input:
+    - The company name, stock exchange and currency
+    - Your research date and time horizon
+    - Company filings and financial data you are allowed to use
+    - A dated share price
+    - Your own valuation assumptions (optional)
+  prerequisites:
+    - An AI that can run Python 3.9 or later and read your files
+    - Filings or permitted research sources you can verify
+  output:
+    - name: Research report (HTML)
+      contains: The company thesis, counter-evidence, period comparisons, risks and what to monitor, with each fact tied to a source.
+    - name: Valuation scenarios
+      contains: Discounted cash flow (DCF) ranges under different assumptions, with the inputs for each case shown.
+    - name: Source and assumption checks
+      contains: Labels that separate reported facts, estimates and assumptions, with source dates.
+    - name: Validator result
+      contains: The strict check on structure, valuation and source traceability. Read it before you share the report.
+    - name: PDF export (optional)
+      contains: A print version of the report, if you ask for it, checked page by page.

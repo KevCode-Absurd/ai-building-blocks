@@ -1,53 +1,94 @@
 new_slug: extract-a-scanned-document-and-verify-key-facts
 name: Extract a scanned document and verify key facts
 headline: Extract a scanned document and verify key facts
-summary: Share the source files. Get extracted text, a page-linked fact table and uncertain readings.
+summary: Pull key facts out of a scanned document and check them against the page. Get the text, a fact table with page numbers and uncertain readings.
 job: work-with-files
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: Extracted text, a page-linked fact table and uncertain readings. Share the scanned file, permission to process it and the exact facts or fields you need. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it a scanned PDF or photo and say which facts you need, such as names, dates and amounts. It reads the text, checks each fact against the original page and puts them in a table with page numbers. Anything unclear is flagged as uncertain.
 explain: |-
-  Extracted text, a page-linked fact table and uncertain readings.
+  A scan is a picture of text. Software reads most words right and some digits wrong, and a wrong digit in an amount or a date can do real harm. This workflow extracts text from a scanned document and verifies the key facts by looking at the page again, instead of trusting the first read.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Names, dates and numbers are checked against visible pages; unreadable text stays uncertain. Missing tools or evidence stay visible in the final summary.
+  Step 1 reads the scan with OCR, which is software that turns a picture of text into text, and keeps page numbers and doubtful readings. Step 2 goes back to the original page around each important fact and checks it against the page image. Step 3 checks the fact table for missing rows, mixed formats and totals that do not add up.
+
+  It works on the file you give it. If you have OCR tools on your computer, it can keep the document local, and you can say the document must not leave your machine. A reading it cannot confirm stays marked uncertain. It never guesses a digit.
 when:
-  - You need extracted text, a page-linked fact table and uncertain readings.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have a scanned contract, invoice, form or letter and need certain facts out of it.
+  - You need names, dates and amounts in a table, with the page each one came from.
+  - An earlier text copy of the scan has typos and you do not know where.
+  - Someone will rely on these facts, such as an auditor, a lawyer or a customer.
+not_for:
+  - The PDF is already text you can select and copy. Use the PDF maker and reader.
+  - You want a summary, not exact facts. For a contract, use the Plain-words contract summary prompt.
+  - The document is handwritten. OCR is weak on handwriting. Use this for a first reading and check each fact yourself.
+  - The document must not be uploaded anywhere. Say so at the start so the AI keeps the work on your computer, or do the reading yourself.
 you_give:
-  - The scanned file, permission to process it and the exact facts or fields you need.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: LiteParse and local OCR; A PDF renderer and Python PDF tools; A compatible spreadsheet engine."
+  - The scanned file (PDF or image)
+  - Permission to process it, and whether it must stay on your computer
+  - The exact facts or fields you need, such as names, dates, amounts and reference numbers
+  - The pages that matter (optional)
+  - The language of the document, if it is not English (optional)
 you_get:
-  - Extracted text, a page-linked fact table and uncertain readings.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - The extracted text, with page numbers
+  - "A fact table: each fact, its value, its page and whether it was confirmed on the page"
+  - A list of uncertain readings, with the page and what the text might say
+  - Checks on the table for missing rows, mixed formats and sums
+  - A hand-back summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the scan. List the facts you need and say whether the file must stay on your computer.
+  - Read the uncertain readings first. Open the original page and settle each one yourself.
+  - Check every amount and date in the fact table against the page before you use it.
+  - Without OCR tools, your AI reads the page images directly and marks each reading to check.
 how_it_works:
   - title: Scanned PDF text reader
-    text: Extract the relevant text while keeping page references and uncertain readings.
+    text: Reads the scan with OCR. Keeps page numbers and marks readings it doubts. Hands the text and the doubtful readings to step 2.
   - title: PDF maker and reader
-    text: Inspect the original pages around each important fact rather than trusting extraction alone.
+    text: Renders the original pages and checks each important fact on the page image, not only in the extracted text. Saves the fact table as a CSV or workbook and hands confirmed facts and open readings to step 3.
   - title: Spreadsheet checker
-    text: Check the field table for missing records, inconsistent formats and arithmetic issues.
+    text: Takes the saved fact table and checks it for missing records, mixed formats and totals that do not add up.
 output_shape: |-
-  Scope and source coverage
-  Extracted text, a page-linked fact table and uncertain readings.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  EXTRACTED TEXT
+    Page number | Text as read
+
+  FACT TABLE
+    Fact | Value | Page | Confirmed on the page (yes or uncertain)
+
+  UNCERTAIN READINGS
+    Page | What it looks like | What it might say | Who should check
+
+  TABLE CHECKS
+    Missing rows | Mixed formats | Sums
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | Checks not done | One next step
+output_sample:
+  input:
+    - Your scanned file
+    - Permission to process it, and any limit on where it can go
+    - The facts or fields you need
+  prerequisites:
+    - OCR software on your computer, or an AI that can read page images
+    - A way to open the original pages and check the uncertain readings
+  output:
+    - name: Extracted text
+      contains: The text of the scan, kept in page order with page numbers.
+    - name: Fact table
+      contains: Each fact you asked for, its value, its page and whether it was confirmed on the page.
+    - name: Uncertain readings
+      contains: Places where the text could not be read with confidence, with the page and likely options.
+    - name: Table checks
+      contains: Missing rows, mixed formats and sums that do not add up.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks that could not run and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Name the pages and facts that matter. Extracting a whole long file costs time and hides the facts you need.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Give the original scan, not a photo of a printout of it. Better scans give better readings.
   - what: Acceptance
-    how: Names, dates and numbers are checked against visible pages; unreadable text stays uncertain.
+    how: Names, dates and numbers are checked against the visible page. Unreadable text stays marked uncertain.
 judge:
   - Names, dates and numbers are checked against visible pages; unreadable text stays uncertain.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,20 +101,25 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Rescan poor pages at a higher quality and run them again.
+  - Keep the fact table with the scan so the next person sees which facts were confirmed.
+  - Add the field names you always need so the next run starts from them.
 works_best_with:
   tools:
-    - name: LiteParse and local OCR
-      why: Scans need the actual parser and appropriate OCR language data. Keep processing local unless another route is approved.
-    - name: A PDF renderer and Python PDF tools
-      why: Render the supplied PDF and inspect actual page images; text extraction alone cannot verify layout.
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: OCR software on your computer
+      why: Scans need an OCR tool and the right language data. Keeping it on your computer keeps private documents private.
+    - name: A PDF page renderer
+      why: Page images let the AI check each fact by sight. Text extraction alone cannot show layout or stamps.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A second copy of the document, such as a typed version, to compare against.
+    - A named person who confirms the uncertain readings.
+next:
+  - pdf-maker-and-reader
+  - check-a-spreadsheet-before-sharing-the-results
 terms:
+  - term: OCR
+    meaning: Software that turns a picture of text into text you can search and copy.
+  - term: Scan
+    meaning: A photo or picture of a paper page, saved as a PDF or image.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

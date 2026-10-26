@@ -16,8 +16,7 @@ license_source: https://github.com/uizze/uizze/blob/main/LICENSE
 
 # Stop Making UI Slop
 
-Build product-specific UI with 800,000+ real web and iOS screens via
-[UIZZE](https://uizze.com).
+Build product-specific UI. UIZZE (https://uizze.com), the author, says its catalogue holds 800,000+ real web and iOS screens. That figure is theirs and is not checked here.
 
 ## Overview
 
@@ -30,6 +29,23 @@ project.
 
 Use this skill when designing, implementing, redesigning, critiquing, or doing a
 pre-ship review of a web or iOS interface.
+
+## When NOT to Use
+
+- Android, desktop apps or print: this skill covers web and iOS.
+- A brand-new product with no design system, no components and no brief: write a style guide first, then come back.
+- Only the words on the screen: this skill does not review wording.
+- Backend, data or API work with no interface.
+
+## Inputs
+
+Ask once, in one message, for anything not given:
+- The product brief and the screen's purpose (required)
+- Web or iOS (required)
+- Access to the project's components, tokens and existing screens, as files or pasted code (strongly advised)
+- A reference or screenshot you like (optional)
+
+If there is no brief, ask for it and stop. If there is no design system or code to read, say so in the output, use plain defaults, and mark each choice as "chosen by me". Never invent users, metrics, testimonials or product data.
 
 ## Work From the Product
 
@@ -50,7 +66,7 @@ script, or executable. If a concrete unresolved visual question would benefit
 from evidence, use the smallest relevant set of screens or materials.
 
 The optional authenticated UIZZE MCP exposes exactly `find_ui_references` and
-`find_ui_materials`. Use it only when those tools are actually available. If a
+`find_ui_materials`. It needs a UIZZE account. Pricing is not stated in the source, so check uizze.com before relying on it. Use it only when those tools are actually available. If a
 search returns nothing, continue silently from repository evidence. Never claim
 an MCP-backed result that was not returned by the host.
 
@@ -59,7 +75,7 @@ hierarchy, density, navigation, controls, responsive behavior, and state
 handling; never copy another product's branding, proprietary text, imagery, or
 exact layout.
 
-Install the current free skill directly from its canonical source:
+Install the current free skill directly from its canonical source. This is optional and runs a command from uizze.com in a terminal on your computer. Read what it does first, and skip it if you only want the steps in this file:
 
 ```bash
 npx skills add https://uizze.com --skill anti-ui-slop
@@ -71,6 +87,29 @@ When the environment supports it, render and inspect the result once. Fix
 observable breakage such as clipping, overlap, distorted media, inaccessible or
 inert controls, missing required states, and unintentional responsive behavior.
 Run the project's normal checks and keep the handoff concise.
+
+If you cannot render or run anything, say so, and review the code or design by reading it only.
+
+## Output format
+
+```
+Screen job: <who uses it, their main action, the content needed>
+Design contract (new screens and big redesigns only)
+- Hierarchy: <what is first, second, third>
+- Workflow: <steps from start to done>
+- Parts reused: <components and tokens from your system>
+- New parts: <only if none fits, and why>
+- Small screens: <what changes>
+- Done when: <checks you can observe>
+States
+| State | Shown when | What the user sees | Next action |
+| loading, empty, error, success, disabled, permission | <trigger> | <content> | <button or link> |
+Built or changed: <files, or the design in words>
+Review of the rendered result: <what you checked, what was broken, what you fixed>
+Fix before shipping: 1. <fix> 2. <fix>
+References used: <UIZZE results, or "none">
+Assumed: <anything chosen without evidence>
+```
 
 ## Limitations
 

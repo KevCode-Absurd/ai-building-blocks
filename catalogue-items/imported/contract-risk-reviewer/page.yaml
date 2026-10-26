@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Spotting risky clauses takes close, careful reading.
 new_slug: contract-risk-reviewer
 name: Contract risk reviewer
-summary: Give it a contract. Get key clauses, duties and risks rated by
-  severity. Not legal advice.
+summary: Check a contract for risky clauses before you sign. Give it the text and your side. You get risks rated by severity and fixes. Not legal advice.
 job: check-contracts
 headline: Contract risk reviewer
-subhead: "A structured risk report on a contract: the key clauses, who owes
-  what, and every risk rated by how severe it is. You see the dangerous parts
-  first instead of finding them on page twelve."
+subhead: "A structured risk report on a contract: the key clauses, who owes what, and every risk rated by how severe it is. You see the dangerous parts first instead of finding them on page twelve."
 explain: |
   A structured risk report on a contract: the key clauses, who owes what, and every risk rated by how severe it is. You see the dangerous parts first instead of finding them on page twelve.
 
@@ -18,6 +15,10 @@ when:
   - You are about to renew a software agreement with auto-renewal terms.
   - You need a list of obligations and dates from a signed deal.
   - You want a second pair of eyes before paying for legal review.
+not_for:
+  - "You need a final sign-off or a legal opinion: use a qualified lawyer."
+  - "You need to know if a clause is enforceable where you live: ask a lawyer who knows your local law."
+  - "You only have a verbal deal or a short email: write down the terms yourself, or ask a lawyer to draft them."
 you_give:
   - The contract text
   - Which party you are
@@ -29,7 +30,25 @@ you_get:
   - Risks rated by severity
   - Suggested changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste the full contract text under the instructions. If it is long, paste it in parts.
+  - Say which side you are on, such as customer, vendor or freelancer. Add any worries you have.
+  - Read the Critical and High items first. Check each one against the contract yourself.
+  - Take those items to a lawyer, or raise them with the other side before you sign. Do not sign on the report alone.
+output_sample:
+  input:
+    - The full contract text, or the parts you want checked
+    - Which side you are on, such as customer, vendor or freelancer
+    - Clauses you worry about (optional)
+    - The deal size or length (optional)
+  output:
+    - name: Executive summary
+      contains: A short overview of how many serious issues were found and what to fix before signing.
+    - name: Overall risk score
+      contains: One score out of 10 with a plain label for how careful you should be.
+    - name: Clause risk table
+      contains: Each flagged clause with its section, the risk, a severity rating and a recommended change.
+    - name: Obligations summary
+      contains: What each party must do, by when, and what happens if they do not.
+    - name: Suggested changes
+      contains: Better wording for each Critical and High risk, with a short reason for the change.

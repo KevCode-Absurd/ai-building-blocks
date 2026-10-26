@@ -2,35 +2,105 @@ thinking: medium
 thinking_why: It gathers signals, then judges which trends will last.
 new_slug: rising-trend-spotter
 name: Rising trend spotter
-summary: Give it a topic. Get what is rising on Google Trends and social sites.
-  Collects data from websites.
+summary: Find what is rising for your topic on Google Trends, TikTok, Instagram, YouTube and Facebook. Needs an Apify account; scraping can cost credits.
 job: plan-strategy
 headline: Rising trend spotter
-subhead: A short report on what is rising for your topic across Google Trends,
-  Instagram, Facebook, YouTube and TikTok, so your content follows real
-  interest. It collects public data by running web scrapers.
+subhead: Give it a topic and the sites to scan. It runs ready-made Apify scrapers on Google Trends, Instagram, Facebook, YouTube and TikTok, then tells you what is climbing. You get a short summary and, if you ask, a saved CSV or JSON file.
 explain: |
-  A short report on what is rising for your topic across Google Trends, Instagram, Facebook, YouTube and TikTok, so your content follows real interest. It collects public data by running web scrapers.
+  A rising trend spotter answers one question: what are people searching for and watching more of right now in my topic? It checks public data on Google Trends and four social sites, so your content and product ideas follow real interest and not a guess.
 
-  You name the topic and platforms. The skill picks matching scrapers on the Apify service, for example Google search trends, hashtag content, trending sounds or short videos. It checks what each scraper needs, asks how you want the output saved, runs it and summarises what is climbing. This needs an Apify account and API token, Node.js and a command line tool. Scraping can use paid credits, so check your plan first.
+  You name a topic and the sites. The skill picks matching scrapers from Apify, a service that runs scrapers for you. Examples are Google search trends, Instagram hashtags, trending TikTok sounds and YouTube Shorts. It reads what each scraper needs, asks how you want the results saved, runs it and sums up what is climbing.
+
+  A trend is a change over time. The skill shows what moved up and says so when the data is too thin to call. It does not run in a plain chat. It needs code running on your computer, an Apify account with an API token, and a small command line tool.
 when:
-  - You plan content and want to know what is gaining interest now.
-  - You need hashtags or sounds that are on the rise.
-  - You are checking whether a product idea has growing search demand.
-  - You want a regular trend scan across several platforms.
+  - You plan next month's posts and want hashtags and sounds that are gaining ground.
+  - You wonder if search interest in a product idea is growing or fading.
+  - A topic keeps coming up and you want to see if it is real or one viral week.
+  - You want the same trend scan each month, saved to a file you can compare.
+not_for:
+  - "You want to know what a competitor posts: use the Competitor social strategy researcher."
+  - "You need a forecast of your own sales: use the Trend and forecast analyst or the Demand forecast planner."
+  - "You want a product's demand with no scraper setup: use the Product demand researcher."
+  - "You need live breaking news or data from private accounts. Scrapers only read public pages."
 you_give:
-  - A topic or niche
-  - The platforms to scan
-  - An Apify account and token
-  - Preferred file format (optional)
+  - Your topic or niche, such as "home coffee gear"
+  - The sites to scan (Google Trends, Instagram, Facebook, YouTube, TikTok)
+  - An Apify account and API token, saved in a .env file
+  - How you want the results shown, in chat, CSV or JSON (optional)
+  - How many results you want (optional)
 you_get:
-  - Rising searches and hashtags
-  - Trending content by platform
-  - A saved data file
-  - A summary of what is gaining ground
+  - A short summary of what is rising, by site
+  - The top hashtags, searches, sounds or videos found
+  - A saved CSV or JSON file with the full data, if you asked for one
+  - A count of results and the file name and location
+  - Next steps, such as which angles to test in content
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Apify token.
+  - "Check what you need first: an AI that can run code (Claude Code or a similar tool), Node.js 20.6 or newer, and a free Apify account. Say which sites you want to scan."
+  - "Create an Apify API token in your Apify account. Save it in a .env file as APIFY_TOKEN=your_token. Never paste the token into a chat."
+  - "Install the Apify command line tool the skill names (mcpc), or let your AI do it. Open the skill and tell your AI your topic and sites."
+  - "Answer the two questions it asks: how to show the results and how many. Pick a quick answer in chat the first time to keep costs low."
+  - "Check the plan before it runs. Scrapers on Apify can use paid credits, so look at your Apify plan and usage."
+  - "Read the summary. Check that it compares time periods and is not just a list of popular posts. Save the file for next month."
+how_it_works:
+  - title: Pick the scraper
+    text: Matches your topic and sites to an Apify scraper, such as Google Trends or the TikTok hashtag scraper.
+  - title: Read its settings
+    text: Fetches the scraper's inputs and output fields from Apify, so the run uses the right options.
+  - title: Ask how to save
+    text: Asks whether you want a quick answer in chat, a CSV or a JSON file, and how many results.
+  - title: Run it
+    text: Runs the scraper through a small script with your Apify token and waits for the results.
+  - title: Sum it up
+    text: Reports the number of results, the file location, the key trends and next steps.
+output_shape: |
+  Trend scan: <topic>, <date>
+
+  Sites scanned: <list>
+  Results found: <number>   File: <file name or "chat only">
+
+  Rising on <site>
+  - <hashtag, search, sound or video> : <what the data shows>
+
+  Not clear yet
+  - <anything the data was too thin to call>
+
+  Next steps
+  - <content or product angle to test>
+output_sample:
+  input:
+    - Your topic or niche
+    - The sites to scan
+    - Your Apify API token, saved in a .env file
+    - Output choice, such as chat, CSV or JSON (optional)
+  prerequisites:
+    - An AI that can run code, Node.js 20.6 or newer and the mcpc command line tool
+    - An Apify account (scrapers can use paid credits)
+  output:
+    - name: Scan summary
+      contains: Sites scanned, number of results, and the file name and location.
+    - name: Rising items by site
+      contains: The hashtags, searches, sounds or videos that are climbing, with the numbers from the data.
+    - name: Data file
+      contains: The full results as CSV or JSON, named with the date. Only if you ask for a file.
+    - name: Next steps
+      contains: Content or product angles worth testing, and what needs a deeper look.
+works_best_with:
+  tools:
+    - name: Claude Code or another AI that runs code
+      why: The skill runs a script and reads your token from a file, so it needs a tool that can do both.
+    - name: Apify
+      why: It runs the scrapers. Check your plan first, because large runs use paid credits.
+  inputs:
+    - A narrow topic. "Iced coffee at home" gives cleaner results than "coffee"
+    - Last month's saved file, so you can compare the two
+terms:
+  - term: Apify
+    meaning: A service that runs ready-made web scrapers for you and returns the results.
+  - term: Actor
+    meaning: Apify's word for one scraper, such as the Google Trends scraper.
+  - term: API token
+    meaning: A private key that lets the script use your Apify account. Keep it secret.
+  - term: Scraper
+    meaning: A tool that reads public web pages and collects the data into a table.
+  - term: .env file
+    meaning: A small text file on your computer that holds secrets such as your token.

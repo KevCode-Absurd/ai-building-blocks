@@ -1,6 +1,6 @@
 new_slug: breaking-change-reviewer
 name: "Breaking change reviewer"
-summary: "Paste a change you plan to ship. Get a safety score, who it breaks, what to keep and a safer rollout."
+summary: "Check a breaking change before you ship it. Get a safety score, who it breaks, what must keep working and a safer rollout."
 job: build-software
 thinking: medium
 thinking_why: "It checks a change against fixed questions and scores it, which takes care but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You plan to remove a feature, rename something or change a format that people use.
   - You are about to set a deadline after which the old way stops working.
   - A change already shipped and users are complaining it broke their work.
+not_for:
+  - "You are fixing a bug or making an internal change that no user relies on: just ship it and test it."
+  - "You want to remove a weak part of your product on purpose: use the Weak part design-out planner."
+  - "You need a code review or a test run: ask a developer, since this skill checks the plan and not the code."
 
 you_give:
   - The change you plan, with what it replaces
@@ -34,6 +38,30 @@ how_to_use:
   - Say whether any dates or announcements are part of the plan.
   - Read the verdict first, then the list of who it breaks.
   - Make the fixes it asks for, then run it again to see the new score.
+output_sample:
+  input:
+    - The change you plan, and what it replaces
+    - Who uses the old behaviour, and how you know (optional)
+    - Support tickets or complaints about it (optional)
+  output:
+    - name: The change
+      contains: What is removed, renamed or altered, and what replaces it.
+    - name: Who it breaks
+      contains: Each user group, what stops working for them, and the evidence or a MISSING line.
+    - name: What must keep working
+      contains: The behaviour to preserve for people who already use it.
+    - name: Dates and announcements
+      contains: Any plan that leans on a deadline or warning, and why it is rejected.
+    - name: Leftover options
+      contains: For each empty option, whether to make it work again or remove it with proof.
+    - name: Safety score
+      contains: A score out of 100 with the six check marks shown.
+    - name: Safer rollout
+      contains: The steps, the fix-on-report path and the revert path.
+    - name: Verdict
+      contains: One flat sentence the team can repeat.
+    - name: Checks missed
+      contains: One line per check still missed, or none.
 
 how_it_works:
   - title: Lists what changes

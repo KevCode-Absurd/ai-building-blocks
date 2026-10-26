@@ -55,3 +55,24 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - "You want to build the server, not check it: use Turn an API into a safe, installable MCP server."
+  - "You only want to run tests against a server: use MCP server test runner."
+  - "You want to fix the holes it finds in the server: use MCP server hardener."
+output_sample:
+  input:
+    - Your MCP server code
+    - Your MCP settings file, such as .mcp.json
+    - How the server is reached, on your machine only or over a network
+    - A way to start the server for a real test session (optional)
+  prerequisites:
+    - An AI that can run commands and start your server, or the test step is marked NOT RUN
+  output:
+    - name: Handler security review
+      contains: Risks traced through each tool handler, with file and line, evidence and a fix.
+    - name: Settings risk findings
+      contains: Findings rated CRITICAL, HIGH or MEDIUM, such as stored secrets or loose package versions.
+    - name: Protocol test report
+      contains: A real session check of tools, resources, prompts, error cases and advertised features.
+    - name: Release blockers and limits
+      contains: What must be fixed before release and what could not be checked.

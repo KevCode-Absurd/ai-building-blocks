@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: source_text
     required: true
+  - type: feedback_notes
+    required: false
 outputs:
   - type: plan
     required: true

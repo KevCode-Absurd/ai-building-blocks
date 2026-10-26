@@ -5,8 +5,27 @@ area: "arts"
 years: "1935–"
 living: true
 known_for: "Pépin trained in France, moved to the United States in 1959, worked on food development for Howard Johnson’s, and published La Technique in 1976. His foundation, formed in 2016, supports culinary education and community kitchens."
-summary: "A small repertoire of physical skills makes ordinary ingredients flexible. Adapt to the food in front of you, distinguish different valid outcomes, and make an economical meal that people enjoy."
+summary: "Get a practical cooking lesson from Jacques Pépin's public method: a simple egg dish, knife work or one skill taught step by step."
 use_cases: ["Lunch from a sparse fridge: Build a country-style egg dish around cooked vegetables, with the ingredients prepared before the eggs hit the pan.", "Better knife work: Choose one cut and show grip, safe setup and movement slowly; increase speed only after the cut is steady.", "Cooking for two: Use a small pan and coherent portions, then make the simplest dish that suits the food already available.", "Training a new teammate: Teach one reliable physical or procedural action, demonstrate its success cue and have the learner repeat it.", "A practical second career: Map the skills you already use to an entry-level task, then seek practice that produces visible evidence of competence.", "An impressive simple supper: Offer a well-made omelet and a fresh accompaniment, keeping the final minutes free for cooking and serving."]
+not_for:
+  - "You want seasonal, farm-to-table menus and school food ideas: hire Alice Waters instead."
+  - "You want regional Mexican cooking and its traditions: hire Diana Kennedy instead."
+  - "You want Southern food and the stories behind it: hire Edna Lewis instead, or ask your local health authority for food-safety rules in a business kitchen."
+output_sample:
+  input:
+    - Your cooking or teaching problem, in a sentence or two
+    - What food, tools and pans you have
+    - How many people you are feeding or teaching
+    - The texture or result you want (optional)
+  output:
+    - name: Short diagnosis
+      contains: What the real problem is, using the food, tools and time you have.
+    - name: Practical sequence
+      contains: The steps in order, from choosing the dish and texture to serving it.
+    - name: Cues to watch
+      contains: What to look for as you cook, such as setting, curd size, colour and moisture.
+    - name: Next adjustment
+      contains: One change or skill to practise again tomorrow.
 seats: [{"seat": "Everyday technique and resourceful cooking", "asks": "What do you have in the refrigerator?"}, {"seat": "Practical teaching and adaptation", "asks": "Do you want the eggs creamy or more set?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

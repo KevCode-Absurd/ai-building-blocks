@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set notice format and fills in your facts.
 new_slug: legal-hold-notice
 name: Records preservation notice drafter
-summary: Tell it about a dispute. Get a notice telling staff which records to
-  keep. A first draft, not legal advice.
+summary: Draft a legal hold notice that tells staff which records to keep when a dispute is likely. Also refresh or release it. A first draft for a lawyer.
 job: check-contracts
 headline: Records preservation notice drafter
-subhead: A notice telling staff which records they must keep when a dispute is
-  likely, written as a first draft for a lawyer to review. Tell it about the
-  matter.
+subhead: A notice telling staff which records they must keep when a dispute is likely, written as a first draft for a lawyer to review. Tell it about the matter.
 explain: |
   A notice telling staff which records they must keep when a dispute is likely, written as a first draft for a lawyer to review. Tell it about the matter. It captures the scope, the people who hold records, the date range and the systems involved, then drafts the notice in your house style.
 
@@ -18,23 +15,47 @@ when:
   - The scope of a case grew and staff need an updated notice.
   - An employee on the hold list has left the company.
   - The matter settled and you need to release the hold.
+not_for:
+  - "You need a records retention policy for the whole company: ask a lawyer or your records manager, since this only covers one matter."
+  - "The matter is not logged yet: add it to your matter log first, because the skill reads the matter before it drafts anything."
+  - "You plan to send the notice without review: have a lawyer check it first, since it is a draft and not legal advice."
 you_give:
-  - The dispute and key facts
-  - People and teams who hold records
-  - Date range and systems
-  - Your hold template and matter log
+  - The dispute and key facts, from the matter file
+  - The people and teams who hold records, from your team or HR
+  - The date range and systems involved, such as email or shared drives
+  - Your matter log, from your matter intake step
+  - Your house-style notes file, from your legal setup interview
 you_get:
   - A draft hold notice
   - Updated notices when scope changes
   - A release notice
   - A log entry for the matter
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved legal setup notes and make
-    Word files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Download the skill folder and add it to your AI tool. Your AI must be able to read files and make Word files.
+  - Make sure the matter is in your matter log and your house-style notes file is saved.
+  - Tell your AI to issue a hold, and name the matter. Add the facts, people, dates and systems.
+  - Read the draft notice and the log changes. Fix anything wrong before you confirm.
+  - Send the notice to a lawyer to review before it goes to staff.
+  - Later, ask for a refresh when scope changes, or a release when the matter ends.
+output_sample:
+  input:
+    - The matter name and the key facts of the dispute
+    - The people and teams who hold records
+    - The date range and the systems involved
+    - Your matter log and your house-style notes file
+    - "Which job to run: issue, refresh, release or status"
+  prerequisites:
+    - An AI that can read your saved legal setup files and make Word files
+    - A matter already added to your matter log
+    - Your house-style notes file with your hold template pointer
+  output:
+    - name: legal-hold-v1.docx
+      contains: The first hold notice, with scope, people, date range and systems, in your house style.
+    - name: Next version of the notice
+      contains: A refreshed notice with scope changes, and a flag on any person who has left.
+    - name: Release notice
+      contains: A notice ending the hold, with the release date and what to do with the records.
+    - name: Log update
+      contains: The hold fields in your matter log, with a history entry and the next refresh date.
+    - name: Legal Hold Status report
+      contains: "A report across all matters: active holds, holds needing attention and recently released holds."

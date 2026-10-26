@@ -1,0 +1,160 @@
+name: Game Economy Designer agent
+summary: Get a game economy plan with each currency's sources and sinks, a 90-day balance check for four player types, and the numbers to track.
+headline: Game Economy Designer agent
+subhead: Tell it about your game, its currencies and how it earns money. It maps where each currency comes from and where it goes, checks balance for four kinds of player over 90 days, and lists the numbers to watch after launch.
+job: build-software
+thinking: high
+thinking_why: It works through sums across several currencies and player types, then checks that every earn path ends in a sink. Use a model that can show its working.
+explain: >-
+  A game economy plan goes wrong when one currency gets earned faster than it
+  can be spent. Prices lose meaning and players lose a reason to play. This
+  game economy designer agent checks that before you ship. It gives every
+  currency a purpose, a way in and a way out, then tests the numbers for casual
+  players, regular players, no-spend grinders and spenders.
+
+
+  It works backward from how long each milestone should take. Costs and
+  rewards come from those targets, not from guesses. It also checks your
+  monetisation for pay-to-win gaps, hidden odds and fake urgency.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The method is
+  the original author's. AI Blocks adds a clear intake, a fixed answer layout
+  and review rules. Its success targets are goals, not measured results. In a
+  plain chat it does the sums by hand, so treat the output as a model to
+  playtest, not proof.
+when:
+  - You are designing the coins, gems and upgrade costs for a new mobile or PC game.
+  - Your game already has a currency that piles up unspent and prices feel meaningless.
+  - You plan a battle pass, shop or random rewards and want to check fairness first.
+  - Players can trade with each other and you need fees that work as sinks.
+not_for:
+  - You have live player data and want to find what went wrong. Paste your earn and spend export into this agent, or use a data analyst, because it only models assumed players.
+  - Your question is about business revenue per customer, such as lifetime value or payback. Use the Subscription unit economics analyst.
+  - You need the wider game design, such as levels or the core loop. Use the Game Designer agent. For game code, use the Unity Architect agent or the Godot Gameplay Scripter agent.
+  - You need legal advice on loot box or odds rules in your country. Ask a lawyer. This agent only designs odds to be shown.
+you_give:
+  - Your game type, platform and whether players trade with each other.
+  - How the game earns money, such as free to play, one-off price or subscription.
+  - Your currencies and resources, and what players spend them on. Say "not decided" if you have none yet.
+  - How long key milestones should take for a casual and a regular player.
+  - Your current costs, rewards and drop rates, from a sheet or notes (optional).
+  - Real earn and spend data from a live game (optional).
+you_get:
+  - A one-page spec for each currency, with its sources, sinks, cap and exchange rates.
+  - A flow map that shows where every currency enters and leaves.
+  - A balance table for four player types at day 30 and day 90, with problems flagged.
+  - A list of exploit risks, such as bots and duplication, each with a fix.
+  - A fairness check on your monetisation, with the power gap between spenders and non-spenders.
+  - A list of numbers to track after launch and the level that should trigger a balance pass.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Cover the game, how it earns, your currencies, your milestone targets and any numbers you already have.
+  - Say "Design the economy" for a new game, or "Review this economy" if you paste existing costs and rewards.
+  - Your AI asks once for anything missing. Anything still unknown is marked as an assumption you can change.
+  - Check the balance table first. Look for flagged rows, then confirm the earn rates match what your game really pays.
+  - Test the model in a playtest or a spreadsheet you control before you ship values. Keep the telemetry list for launch.
+how_it_works:
+  - title: Set the intent
+    text: It asks what choices the economy should create, such as saving against spending now. It keeps the fewest currencies that support those choices.
+  - title: Map sources and sinks
+    text: It lists every way each currency is earned and spent. It flags currencies with no sink and loops that never end in a sink or a cap.
+  - title: Design the curves
+    text: It sets the time each milestone should take per player type, then works backward to costs and rewards, with a reason for each curve.
+  - title: Simulate player types
+    text: It runs casual, regular, no-spend grinder and spender profiles for at least 90 days. In a plain chat this is hand arithmetic from your numbers, shown step by step.
+  - title: Red-team the economy
+    text: It assumes bots, extra accounts, duplication and trading tricks, and writes one fix for each.
+  - title: Check monetisation
+    text: It checks that core progress has an earnable path, odds are shown, bad luck is capped and nothing uses fake urgency.
+  - title: Plan live tuning
+    text: It lists the numbers to track, the trigger for a balance pass, and a rollback note for each change. It prefers adding sinks to cutting rewards.
+output_shape: |-
+  ECONOMIC INTENT AND ASSUMPTIONS
+    <the choices the economy should create> | <assumed numbers, marked ASSUMED>
+
+  CURRENCY SPEC (one per currency)
+    <name> | purpose <what decision it creates> | type <soft, hard, event> | sources <list with rate> | sinks <list with cost> | faucet to drain target <ratio> | cap <value, reason> | conversions <rates> | exploit risks <list>
+
+  FLOW MAP
+    <gameplay> --earn--> <currency> --spend--> <sink> --enable--> <content>
+
+  BALANCE TABLE
+    <player type> | sessions per day | earn per day | spend per day | day 30 balance | day 90 balance | flag
+
+  EXPLOIT AND MONETISATION REVIEW
+    <risk or pay-to-win gap> | <size> | <fix>
+
+  TELEMETRY AND ALERTS
+    <number to track> | <alert level> | <action>
+
+  LIVE TUNING PLAN
+    <change> | <expected effect> | <rollback>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your game type, platform and how it earns money
+    - Your currencies, what players spend them on and your milestone targets
+    - Current costs, rewards and drop rates (optional)
+    - Real earn and spend data from a live game (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Code running is optional and only needed for a simulation run by script
+  output:
+    - name: Economic intent and assumptions
+      contains: The choices the economy should create, plus every number the AI assumed, marked so you can replace it.
+    - name: Currency specs
+      contains: One block per currency with purpose, type, sources, sinks, cap, exchange rates and exploit risks.
+    - name: Flow map
+      contains: A diagram in text of how each currency enters, moves and leaves the game.
+    - name: Balance table
+      contains: Casual, regular, grinder and spender balances at day 30 and day 90, with problem rows flagged.
+    - name: Exploit and monetisation review
+      contains: Bot, duplication and trading risks, the spender power gap, odds and bad-luck protection, each with a fix.
+    - name: Telemetry and alerts
+      contains: The numbers to track after launch and the level that should start a balance review.
+    - name: Live tuning plan
+      contains: How to change values safely, with expected effect and a rollback step for each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your cost sheet and the AI can read it instead of retyping numbers.
+    - name: A spreadsheet such as Google Sheets or Excel
+      why: You can rebuild the balance table with formulas and change one number at a time.
+  inputs:
+    - Your milestone targets, such as days to reach level 10, for each player type.
+    - A list of every shop item with its price.
+    - Past earn and spend data if the game is live.
+terms:
+  - term: Source
+    meaning: A way players earn a currency, such as a quest reward. Also called a faucet.
+  - term: Sink
+    meaning: A way a currency leaves the game, such as an upgrade cost or a trade fee. Also called a drain.
+  - term: Soft and hard currency
+    meaning: Soft currency is earned by playing. Hard currency is usually bought with real money.
+  - term: Inflation
+    meaning: A currency piles up faster than it is spent, so prices feel too low.
+  - term: Pay-to-win gap
+    meaning: How much stronger a paying player is than a player who pays nothing.
+  - term: Monte Carlo run
+    meaning: Running a random event, such as a loot drop, many times to see worst-case luck.
+  - term: Telemetry
+    meaning: Numbers your game records about how players earn and spend.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Player types
+    how: Add or rename a player type, such as a "returning after a break" player, and give its sessions per day.
+  - what: Power gap limit
+    how: Tell it the largest gap between spenders and non-spenders you accept. Without one it asks.
+  - what: Game type
+    how: Say if the game is mobile free to play, premium, an online game with trading or seasonal. Each changes the sinks it picks.
+improve:
+  - Keep your corrected earn rates and costs with your brief, and reuse them in the next run.

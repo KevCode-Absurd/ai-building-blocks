@@ -17,10 +17,10 @@ outputs:
   - {type: copy_draft}
 uses: [buyer-matched-argument-planner, ten-second-opener-writer, objection-answer-sheet-writer, ask-which-closing-planner]
 steps:
-  - {uses: buyer-matched-argument-planner, note: "Which argument leads for each and what to ask first"}
-  - {uses: ten-second-opener-writer, note: "A ten-second opener and two spares, as short honest questions. Reads the angle library from the step before"}
-  - {uses: objection-answer-sheet-writer, note: "An answer sheet that agrees where true, restates each doubt as a yes-question and brings proof. Reads the angle library from the step before"}
-  - {uses: ask-which-closing-planner, note: "Closing questions that offer two ways to say yes. Reads the objection map from the step before"}
+  - {uses: buyer-matched-argument-planner, note: "Which argument leads for each buyer and what to ask first. Hands the angle library to steps 2 and 3"}
+  - {uses: ten-second-opener-writer, note: "A ten-second opener and two spares, as short honest questions. Built from the angle library in step 1. The opener goes to you, not to the next step"}
+  - {uses: objection-answer-sheet-writer, note: "An answer sheet that agrees where true, restates each doubt as a yes-question and brings proof. Uses the angle library from step 1, plus your own objections and customer words, not the openers from step 2. Hands the objection map to step 4"}
+  - {uses: ask-which-closing-planner, note: "Closing questions that offer two ways to say yes. Built from the objection map in step 3"}
 origin: rebuilt
 version: 1.0.0
 minds: [elmer-wheeler, david-ogilvy]

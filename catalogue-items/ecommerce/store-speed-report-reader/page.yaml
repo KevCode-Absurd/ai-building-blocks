@@ -1,6 +1,6 @@
 new_slug: store-speed-report-reader
 name: "Store speed report reader"
-summary: "Paste your PageSpeed report. Get a field score out of 100, each page read, three fixes."
+summary: "Paste your PageSpeed report and get a store speed report read page by page: a field score out of 100, the causes, and your first three fixes."
 job: speed-up-store
 thinking: medium
 thinking_why: "It reads a long report and sorts real-user numbers from lab numbers. A mid-size model does this well if it follows the steps."
@@ -17,6 +17,10 @@ when:
   - "Your store feels slow, or your mobile score is under 50."
   - "Google Search Console or Shopify flags Core Web Vitals on your store."
   - "You changed a theme or an app and want to know if it helped."
+not_for:
+  - "You have no PageSpeed report yet: run PageSpeed Insights on your homepage, a collection page and a product page first, then come back."
+  - "You want a developer to change your theme or code: hire a Shopify developer, since this only reads the report and lists fixes."
+  - "You want to know if speed changes cost or earn you sales: this reads results only and does not predict orders or money."
 
 you_give:
   - "PageSpeed Insights results for your homepage, one collection page and one product page (mobile first; paste the text or attach screenshots)"
@@ -35,6 +39,27 @@ how_to_use:
   - "Paste each report's text, mobile first, then desktop. Say how many product and collection templates your theme has."
   - "Read the verdict page by page, then do the first three fixes."
   - "Look again after 24 hours for Shopify's score and after 28 days for real-user data."
+output_sample:
+  input:
+    - PageSpeed Insights results for your homepage, a collection page and a product page (mobile first, then desktop)
+    - How many product and collection templates your theme uses
+    - Lab scores from three runs per page, a few minutes apart (optional)
+    - Earlier scores and notes on what you changed (optional)
+  prerequisites:
+    - PageSpeed Insights results you have already run, pasted as text or attached as screenshots
+  output:
+    - name: Field score
+      contains: A score out of 100 from the real-user results that pass, with the sum shown and any cells not measured.
+    - name: Page blocks
+      contains: "For each page and device: data source, LCP, INP and CLS with bands, lab average, slowest and shifting elements, and a verdict."
+    - name: Templates not tested
+      contains: The product and collection templates you have not yet tested.
+    - name: First three fixes
+      contains: Three fixes, each with the page, the cause and who does it, you or a developer.
+    - name: Retest
+      contains: What to run again, how, and when each number can change.
+    - name: Not run and missing
+      contains: Checks that could not be done and what is needed to do them.
 
 how_it_works:
   - title: Splits the report

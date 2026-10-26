@@ -16,6 +16,31 @@ use_cases:
   - "Set a tripwire so you know in advance when to stop a project"
   - "Design a first day, a launch or a farewell that people will remember"
   - "Translate a key number into a picture anyone in the room can grasp"
+not_for:
+  - "You need a brand position or a clear category for buyers: use the April Dunford mind instead."
+  - "You want long sales letters or direct response copy that asks for action now: use the Dan Kennedy mind instead."
+  - "You need legal, medical or personal money advice, or a pure data analysis: ask a qualified person or a data tool instead."
+output_sample:
+  input:
+    - The message, plan, pitch or decision that is not landing
+    - Who needs to hear it or act on it
+    - What you have tried so far (optional)
+    - The number you want people to grasp (optional)
+  output:
+    - name: The core idea
+      contains: The one point underneath your message or plan, in a single sentence a new hire could repeat.
+    - name: Curse of knowledge check
+      contains: Where your own expertise makes you hard to follow, and what an outsider hears instead.
+    - name: Rewritten message
+      contains: Your message made concrete, with a surprise or a short true story where it helps.
+    - name: Added options
+      contains: Two or three more choices beyond yes or no, if you came with a decision.
+    - name: Tripwire
+      contains: A stop line you write down now, so you know in advance when to rethink.
+    - name: Number as a picture
+      contains: A key figure turned into an everyday comparison, labelled as a new example and not a Heath quote.
+    - name: Next step
+      contains: One small action or test to try this week.
 seats:
   - {seat: "Ideas that stick", asks: "What is the one core idea here, and what concrete picture or story will make people remember it next week?"}
   - {seat: "Decision process", asks: "Are we stuck on whether or not? What are two other options we haven't put on the table?"}

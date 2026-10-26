@@ -13,9 +13,9 @@ outputs:
   - {type: plan}
 uses: [real-strategy-checker, marketing-plan-writer, 90-day-plan-builder]
 steps:
-  - {uses: real-strategy-checker, note: "Starts from your strategy and returns a diagnosis, a policy and the actions that hold up."}
-  - {uses: marketing-plan-writer, note: "Builds the plan from the fixed strategy brief you wrote after the check."}
-  - {uses: 90-day-plan-builder, note: "Takes the marketing plan from the step before and breaks it into weekly steps, owners and check-ins."}
+  - {uses: real-strategy-checker, note: "Starts from your strategy and returns a diagnosis, a policy and the actions that hold up, with what is hollow. You then write a half-page brief from it: the problem, the policy you chose, who you sell to and your budget."}
+  - {uses: marketing-plan-writer, note: "Uses the half-page brief you write after step 1's check, with the check's findings beside it. Builds the marketing plan on what held up, not on the hollow parts. Hands the plan to the 90-day step."}
+  - {uses: 90-day-plan-builder, note: "Uses step 2's marketing plan. Breaks it into weekly steps, owners and check-ins."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/check-your-strategy-then-turn-it-into-a-90-day-plan/skeleton.yaml

@@ -1,6 +1,6 @@
 new_slug: problem-aware-search-campaign-builder
 name: "Problem-aware Search campaign builder"
-summary: "Give it your product and the problem it solves. Get a problem-led Search campaign with matched ads."
+summary: "Build a problem-aware Google Search campaign for shoppers who type the problem, not your product. You get ad groups, matched ads and a page test plan."
 job: run-google-ads
 thinking: high
 thinking_why: "It must match settings, keywords, ad copy and pages to a cold buyer's search, and keep every claim within policy, so a stronger model is safer."
@@ -17,6 +17,10 @@ when:
   - Your product solves a problem people search for in plain words.
   - Your Shopping and brand campaigns work and you want to reach people earlier in their search.
   - You have an advertorial or education page and no Search campaign sending traffic to it.
+not_for:
+  - "You want to bring back people who already visited your site: use the Google remarketing campaign builder."
+  - "You sell an impulse item nobody searches for: this plan needs real search demand, so start with ads on social instead."
+  - "You want only ad copy checked for policy: use the Meta ads compliance checker for Meta ads, or read Google's ad policy for Search."
 
 you_give:
   - Your product and the problem it solves
@@ -35,6 +39,33 @@ how_to_use:
   - Add your break-even CPA and the pages you have. If a claim touches health or money, tell it what is allowed.
   - Check every ad against Google's ad policy before you submit it.
   - Build it, then review the search terms report and prune every week.
+output_sample:
+  input:
+    - Your product and the problem it solves
+    - Problem search terms or your converting queries (optional)
+    - Your advertorial or landing pages (optional)
+    - Your break-even CPA and daily budget (optional)
+    - Which claims you are allowed to make (optional)
+  prerequisites:
+    - A Google Ads account to build the campaign in
+    - A brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Settings
+      contains: Search network only, purchase goal, bid choice, presence location, brand excluded, daily budget and Display off.
+    - name: Ad groups
+      contains: Groups of 10 to 20 related problem terms, with exact and broad keywords and no phrase match.
+    - name: Ads
+      contains: A pinned keyword insertion headline with safe default text, plus other headlines and descriptions.
+    - name: Page plan
+      contains: An educational page for cold clicks, then a page matched to each top query.
+    - name: Page test
+      contains: Two pages per ad group, run for 30 to 60 days, with the winner picked by conversion rate.
+    - name: Prune rule
+      contains: Remove terms with clicks and no sales, and compare cost per click and cost per sale.
+    - name: Assets
+      contains: Price, snippets, callouts, sitelinks and logo to add to the campaign.
+    - name: Policy notes
+      contains: Claims to avoid, and a reminder to check health or money wording with a qualified person.
 
 how_it_works:
   - title: Sets cold settings

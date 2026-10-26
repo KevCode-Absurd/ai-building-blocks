@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It reproduces bugs, writes patches and has to judge its own work.
 new_slug: open-source-contribution
 name: Open-source contribution preparer
-summary: Point it at an open-source issue. Get a checked fix, rerun tests and a
-  drafted post held for your approval.
+summary: Prepare a fix for an open-source issue you don't own. Get a checked patch and a drafted pull request that waits for your approval.
 job: test-and-fix-code
 headline: Open-source contribution preparer
-subhead: A careful way to prepare a fix for someone else's open source project,
-  ending at a queue item that you approve. The agent never posts anything
-  itself.
+subhead: A careful way to prepare a fix for someone else's open source project, ending at a queue item that you approve. The agent never posts anything itself.
 explain: |
   A careful way to prepare a fix for someone else's open source project, ending at a queue item that you approve. The agent never posts anything itself.
 
@@ -18,6 +15,10 @@ when:
   - You need to know if a repo accepts AI-assisted pull requests first.
   - You want a ready draft but need to approve before anything is posted.
   - A maintainer has not replied to your pull request and you need a follow-up.
+not_for:
+  - "You maintain the repo and want a pull request reviewed: use a code review step or ask a teammate."
+  - "You want to update packages or lockfiles in your own project: use the dependency management skill, not this one."
+  - "You want to add a new feature or refactor code in someone else's repo: this skill refuses that, so open a discussion with the maintainer first."
 you_give:
   - The repo and the issue link
   - A bug you can reproduce, or permission to search open issues
@@ -29,8 +30,35 @@ you_get:
   - A tested patch
   - A pull request draft held for your approval
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read the repo.
+  - Download the skill folder, or paste the skill text into a chat with an AI that can run code and read the repo.
+  - Before you start, set up a private queue repo for approvals, a read-only token and a browser tool. These are not in the download.
+  - Tell your AI the repo, the issue link and where your queue lives. Add the project's disclosure wording if you have it.
+  - Let it work through each check in order. It stops at the first one that fails and tells you why.
+  - Read the queue item. Check the policy, the repro and the draft text.
+  - Post the text yourself once you approve. The AI never posts for you.
+output_sample:
+  input:
+    - The repo name and the issue link
+    - A bug your AI can reproduce, or a request to search open issues (one of these)
+    - Your approval queue details
+    - The project's disclosure wording for AI help (optional)
+  prerequisites:
+    - An AI that can run code and read the repo
+    - A private queue repo where drafts are filed for your approval
+    - A read-only access token for the repo
+    - A browser tool, if the bug only shows in a browser
+  output:
+    - name: Queue item
+      contains: One markdown item for your approval queue with the gate results, the disclosure note and the exact text to post.
+    - name: Policy check
+      contains: What the project says about AI-assisted pull requests, with a citation, and whether work may go ahead.
+    - name: Intake comment
+      contains: A short note asking the maintainer for a go-ahead before any patch is written, when the project wants one.
+    - name: Reproduction record
+      contains: The steps and result that show the bug is real, before any fix is written.
+    - name: Patch and test results
+      contains: A small fix, the repo's own checks, and an independent rerun by a second reviewer.
+    - name: Pull request draft
+      contains: The exact text to post, with the right AI disclosure, and a hash so you can tell if it changed.
+    - name: Stop report
+      contains: If a gate fails, the gate, the reason, the evidence link and what would clear it.

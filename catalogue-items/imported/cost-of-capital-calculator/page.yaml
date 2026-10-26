@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs the standard WACC formula steps.
 new_slug: cost-of-capital-calculator
 name: Cost of capital calculator
-summary: Give it a company's debt, equity and market inputs. Get its WACC with
-  cost of equity and debt shown.
+summary: Work out a company's WACC, or cost of capital, from its debt, equity and market rates. See the cost of equity, cost of debt and weights.
 job: money-and-investing
 headline: Cost of capital calculator
-subhead: Give it a company's debt, equity and market inputs. Get its WACC with
-  cost of equity and debt shown. Bring debt and equity values. Use the result to
-  plan your next step.
+subhead: Give it your debt, equity, tax rate and market rates. It works out your cost of equity, cost of debt and the weights. You get a short memo that shows every number.
 explain: |
   A company's weighted average cost of capital with every input shown, so you can use it in a valuation or a capital budget and defend it. You see the cost of equity, cost of debt and the weights that produce the final rate.
 
@@ -18,6 +15,10 @@ when:
   - A project needs a hurdle rate for approval.
   - You want to compare a company's beta to peers.
   - You need to explain how you got the rate to a reviewer.
+not_for:
+  - "You want a fast guess with no inputs: use a simple rule of thumb or ask a finance professional."
+  - "You have a private company and no peer betas: ask a finance professional, or read the CAPM guide in the skill's references first."
+  - "You need the full valuation or the project NPV: this gives only the discount rate, so build those with a finance professional or a spreadsheet."
 you_give:
   - Debt and equity values
   - Risk-free rate and market premium
@@ -29,7 +30,27 @@ you_get:
   - Beta adjustment steps
   - Computation memo
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather the market value of your equity and debt, your tax rate, and the cost of your debt.
+  - Find the risk-free rate (such as a 10-year Treasury yield), an equity risk premium and a beta. Use peer betas if the company is private.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. Then paste your numbers.
+  - Ask for the WACC memo with the sensitivity matrix. Python 3 is only needed if your AI runs the calculate.py script.
+  - Check the weights add up to 100% and that debt uses market value, or say if you used book value.
+  - Use the final WACC as the discount rate in your valuation or as a project hurdle rate.
+output_sample:
+  input:
+    - Market value of your equity (market cap)
+    - Value of your debt
+    - Risk-free rate, equity risk premium and beta
+    - Pre-tax cost of debt and tax rate
+    - Preferred stock value and cost (optional)
+  prerequisites:
+    - An AI that can run Python 3, only if you want the calculate.py script to do the math
+  output:
+    - name: Summary table
+      contains: The final WACC with the weight of equity and the weight of debt.
+    - name: Component detail
+      contains: The cost of equity from its CAPM inputs, and the cost of debt before and after tax.
+    - name: Beta workpaper
+      contains: The steps that unlever peer betas and relever them to your debt to equity mix, if needed.
+    - name: Sensitivity matrix
+      contains: How WACC changes under different beta and equity risk premium assumptions.

@@ -1,53 +1,88 @@
 new_slug: prepare-a-webinar-people-can-follow
 name: Prepare a webinar people can follow
 headline: Prepare a webinar people can follow
-summary: Share the source files. Get a webinar outline, slide brief and promotion draft.
+summary: Plan a webinar that teaches one clear result. Get a teaching outline, an editable slide deck brief and a promotion plan that matches the real session.
 job: speak-and-persuade
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A webinar outline, slide brief and promotion draft. Share the audience problem, supported claims, speaker notes, duration and intended next action. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the problem your audience has, what you can prove, your notes, the length and what you want people to do after. It builds a teaching outline, a slide brief for an editable deck, then a promotion plan that describes the session as it really is.
 explain: |-
-  A webinar outline, slide brief and promotion draft.
+  Most weak webinars have the same problem. The sign-up page promises one thing, the slides teach another, and the ending asks for something nobody was ready for. People leave in the middle, and the ones who stay do not know what to do next.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The session teaches the promised outcome; dates, claims and next steps match across materials. Missing tools or evidence stay visible in the final summary.
+  This workflow builds the session in an order that keeps all three in line. Step 1 writes the teaching outline: the one result people will leave with, the steps that get them there, an example for each and a level of detail that suits the audience. Step 2 turns the outline you approve into an editable slide deck brief, with a slide for each step and notes. Step 3 writes the promotion from the outline, so the invite, reminders and post-session note describe what is really taught.
+
+  It only uses claims you can support. Dates, speaker names and sign-up details must come from you. If you give none, the promotion says MISSING instead of making them up. A finished slide file needs a tool that can build and show a PowerPoint file. Without one, you get the brief to build from.
 when:
-  - You need a webinar outline, slide brief and promotion draft.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You plan a live webinar or online workshop and want a clear teaching sequence.
+  - You have notes or a talk and need them as slides and a promotion plan for the same session.
+  - Past webinars lost people halfway and you think the teaching order is the cause.
+  - You want an invite, reminders and a follow-up note that say what the session really covers.
+not_for:
+  - You want a live product demo. This plans a teaching session, not a demo script.
+  - You are recording a full course. This workflow plans one live session.
+  - You only need slides from an existing report. Use the Turn a report into an editable briefing deck workflow.
+  - You want to fix low sign-ups for a session you already ran. Use the Webinar promotion planner on its own, with your numbers.
 you_give:
-  - The audience problem, supported claims, speaker notes, duration and intended next action.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: An approved PPTX builder and renderer."
+  - The problem your audience has, in their words
+  - The claims you will make and what supports them, such as your own results or sources
+  - Your notes, an old talk or an outline (optional)
+  - The length, such as 45 minutes with 10 for questions
+  - What you want people to do after, such as book a call or try a tool
+  - The date, platform and sign-up link, when you have them (optional)
 you_get:
-  - A webinar outline, slide brief and promotion draft.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A teaching outline with one result people leave with, the steps, an example for each and timing
+  - A slide brief with one slide per step, speaker notes and a plan for an editable deck
+  - A promotion draft for the invite, reminders and the follow-up note
+  - A check that the dates, claims and next step match in all three
+  - A hand-back summary that names every gap
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini. For a finished slide file, use an AI that can make and show PowerPoint files. If yours cannot, you get the slide brief.
+  - Paste the audience problem, your claims and their support, the length and the next step. Add your notes if you have them.
+  - Read the teaching outline and say approve, change or start again. The slide brief builds on the outline you approve.
+  - Check the promotion draft for dates, names and claims. Fill every MISSING line before you send any of it.
+  - Say the outline aloud once with a timer. Move the times if it runs long. You send the invites. Nothing here sends them.
 how_it_works:
   - title: Presentation builder
-    text: Build a clear teaching sequence with examples and an audience-appropriate level of detail.
+    text: "Builds a clear teaching sequence: the one result people leave with, the steps, an example for each and the right level of detail. Hands step 2 the outline. Check before moving on: each step has an example and a time, and they add up."
   - title: Editable slide deck builder
-    text: Use the user-approved outline as the custom narrative framework, or ask when it is not approved. Build editable slides and notes in an approved environment and inspect every rendered slide; mark visual checks pending without a renderer.
+    text: "Asks you to approve the outline first. Then plans an editable deck with one slide per step, plus speaker notes. If it can build and show a PowerPoint file, it checks every slide. If not, it marks the visual check as pending."
   - title: Webinar promotion planner
-    text: Draft promotion that describes the real session and confirmed participation details.
+    text: "Writes the invite, reminders and follow-up from the approved outline. Uses only the date, speaker and sign-up details you gave. Marks anything missing."
 output_shape: |-
-  Scope and source coverage
-  A webinar outline, slide brief and promotion draft.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  RESULT          <what people can do after the session>
+  OUTLINE         <step | what you teach | example | minutes>, total <n>
+  SLIDE BRIEF     <slide | message | visual | speaker note>
+  PROMOTION       <invite | reminders | follow-up note | next step asked>
+  MATCH CHECK     <date | claims | next step | same in outline, slides, promotion>
+  MISSING         <each gap and the part it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - The problem your audience has, in their words
+    - The claims you will make and what supports them
+    - The length and what you want people to do after
+    - Your notes or an old talk (optional)
+  prerequisites:
+    - An AI that can read your notes, such as Claude, ChatGPT or Gemini
+    - A tool that can build and show a PowerPoint file, for a finished deck (optional)
+  output:
+    - name: Teaching outline
+      contains: The result people leave with, the steps, an example for each and the time for each step.
+    - name: Slide brief
+      contains: One slide per step with its message, its visual and a speaker note, ready to build as an editable deck.
+    - name: Promotion draft
+      contains: The invite, the reminders and the follow-up note, based on what the session teaches.
+    - name: Match check
+      contains: A check that dates, claims and the next step are the same in the outline, slides and promotion.
+    - name: Hand-back summary
+      contains: Each saved file, every MISSING line and the checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The session teaches the promised outcome; dates, claims and next steps match across materials.
+  - what: Length
+    how: Change the minutes. The outline cuts or merges steps, and each cut shows its reason.
+  - what: Audience level
+    how: Say if they are new or expert. The outline changes how much it explains and how many examples it uses.
+  - what: Next step
+    how: Change what you ask people to do. The ending of the outline and the promotion both change.
 judge:
   - The session teaches the promised outcome; dates, claims and next steps match across materials.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -65,11 +100,15 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: An approved PPTX builder and renderer
-      why: Choose the narrative framework with the user, create editable slides and inspect actual rendered previews.
+    - name: An AI that can make and show PowerPoint files
+      why: It can build the editable deck and check each slide as it looks. Check what your AI offers before you start. Otherwise you get the slide brief to build in your own slide tool.
+    - name: A webinar platform such as Zoom (optional)
+      why: You run the live session there. This workflow does not connect to it or send invites.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your own words from customer calls or emails, so the audience problem sounds real.
+    - A past webinar's questions, so examples answer what people ask.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Teaching sequence
+    meaning: The order of steps that takes people from the problem to the result.
+  - term: Editable deck
+    meaning: A slide file you can change, with real text and shapes, not flat pictures.

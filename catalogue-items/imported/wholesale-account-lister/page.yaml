@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It lists records and formats them.
 new_slug: wholesale-account-lister
 name: Wholesale account lister
-summary: Run it on your store. Get your B2B companies with locations, catalogs
-  and payment terms in one view.
+summary: Run it on your Shopify Plus store to list wholesale accounts with locations, price catalogs and payment terms in one CSV, read-only.
 job: run-your-store
 headline: Wholesale account lister
-subhead: "A single view of every wholesale customer in your Shopify store:
-  companies, their locations, price lists and payment terms. You stop clicking
-  through admin pages one account at a time."
+subhead: "A single view of every wholesale customer in your Shopify store: companies, their locations, price lists and payment terms. You stop clicking through admin pages one account at a time."
 explain: |
   A single view of every wholesale customer in your Shopify store: companies, their locations, price lists and payment terms. You stop clicking through admin pages one account at a time.
 
@@ -18,6 +15,10 @@ when:
   - A sales rep asks for the terms on an account.
   - You are cleaning up B2B accounts before a price change.
   - You want an export of all wholesale locations.
+not_for:
+  - "You run a store that is not on Shopify Plus or has no B2B turned on: it cannot read company accounts, so use your normal customer list in Shopify admin."
+  - "You need to look up one wholesale account: open the company list in your Shopify admin instead."
+  - "You want to change terms, price lists or locations: do it in Shopify admin, because this skill only reads data."
 you_give:
   - Your store domain
   - Shopify CLI login
@@ -30,8 +31,25 @@ you_get:
   - Payment terms
   - Readable table or JSON
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Check that your store is on Shopify Plus with B2B turned on.
+  - Log in with the Shopify CLI and allow the read_customers permission for your store.
+  - Open your AI tool with the skill loaded. Use one that can run commands and save files, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Give it your store domain. Say if you want JSON instead of the readable text.
+  - Open the CSV it saves. Look for accounts with no recent orders or with a missing catalog.
+output_sample:
+  input:
+    - Your store domain, like yourstore.myshopify.com
+    - "Output format: readable text or JSON (optional)"
+  prerequisites:
+    - A Shopify Plus store with B2B turned on
+    - A Shopify CLI login with the read_customers permission
+    - An AI that can run commands and save a file
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step with what was asked and how many results came back.
+    - name: Summary
+      contains: Totals for companies, locations, accounts with net terms and accounts with catalogs, plus each company's locations, last order date and payment terms.
+    - name: b2b_companies_<date>.csv
+      contains: One row per company with ID, name, location and contact counts, last order date and value, currency, payment terms and catalog flag.

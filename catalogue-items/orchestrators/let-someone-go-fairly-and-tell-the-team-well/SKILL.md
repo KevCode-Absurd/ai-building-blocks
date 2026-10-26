@@ -36,13 +36,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the exit.** Use the skill `layoff-plan-writer`. Who decides, the order of events, what the person is offered, where and when they hear it, and the plain words to use, in the order Ben Horowitz and Brian Chesky set out.
-2. **Flag the legal risks.** Use the skill `termination-risk-checker`. Give it the exit plan. Risk flags on notice, final pay timing, severance and release points, and anything in the reasons that could be read as unfair. A first check, not legal advice.
-3. **Build the handover.** Use the skill `offboarding-plan-builder`. Give it the exit plan and the risk flags. The handover checklist, the access and kit list with dates, and the exit interview questions.
+1. **Plan the exit.** Use the skill `layoff-plan-writer`. Who decides, the order of events, what the person is offered, where and when they hear it, and the plain words to use, in the order Ben Horowitz and Brian Chesky set out. Hands the exit plan to step 2.
+2. **Flag the legal risks.** Use the skill `termination-risk-checker`. Reads the exit plan for risk flags on notice, final pay timing, severance and release points, and anything in the reasons that could be read as unfair. A first check, not legal advice. Hands the flags to step 3.
+3. **Build the handover.** Use the skill `offboarding-plan-builder`. Takes the exit plan and the risk flags and builds the handover checklist, the access and kit list with dates, and the exit interview questions. Hands the handover plan to step 4.
 
 Pause here: Have a lawyer or HR check the plan and the flags. Hold the conversation yourself, in person, with the offer in writing. Only then go on.
 
-4. **Write the announcement.** Use the skill `staff-announcement-writer`. Give it the exit plan and what was agreed. The announcement for the rest of the team, a rollout order (who hears first) and honest answers to the questions they will ask. Nothing goes out until you say so.
+4. **Write the announcement.** Use the skill `staff-announcement-writer`. Uses the exit plan and the handover plan as the facts for the announcement to the rest of the team, a rollout order (who hears first) and honest answers to the questions they will ask. Nothing goes out until you say so.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

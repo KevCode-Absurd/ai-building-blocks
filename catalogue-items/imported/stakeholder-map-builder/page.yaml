@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It places people on a grid and applies a standard plan per box.
 new_slug: stakeholder-map-builder
 name: Stakeholder map builder
-summary: List the people affected by your project. Get a power and interest grid
-  with how to talk to each group.
+summary: Build a stakeholder map for your project. List who is affected and get a power and interest grid with a plan for how to talk to each group.
 job: organise-work
 headline: Stakeholder map builder
-subhead: A grid of who matters to your project and exactly how to talk to each
-  group. List the people and groups affected, or share an org chart or brief and
-  let the skill infer them.
+subhead: A grid of who matters to your project and exactly how to talk to each group. List the people and groups affected, or share an org chart or brief and let the skill infer them.
 explain: |
   A grid of who matters to your project and exactly how to talk to each group. List the people and groups affected, or share an org chart or brief and let the skill infer them. It rates each one on power and interest, then places them on a four-box grid.
 
@@ -18,6 +15,10 @@ when:
   - You are launching something and need leaders on side.
   - Teams across the company must line up behind a plan.
   - You are unsure who needs updates and how often.
+not_for:
+  - "You work alone or have one stakeholder: a simple list of who to update and when is enough."
+  - "You need to assign who does what on tasks: use a RACI chart, which this skill does not make."
+  - "You want to write the actual update message or email: ask your AI to draft it from the key message in the plan."
 you_give:
   - The project or initiative
   - A list of people and groups, or an org chart (optional)
@@ -29,7 +30,24 @@ you_get:
   - Key messages
   - Risks of ignoring each group
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Tell your AI what your project is. Add your list of people and groups if you have one.
+  - Attach an org chart, brief or team roster if you have one (optional). No code or web access is needed.
+  - Read the grid. Fix any person placed in the wrong box, then ask your AI to update the plan.
+  - Save the plan as a document and share it with your team.
+output_sample:
+  input:
+    - Your project or initiative, in a sentence or two
+    - A list of the people and groups affected (optional)
+    - An org chart, project brief or team roster (optional)
+  output:
+    - name: Stakeholder list
+      contains: The people and groups affected, such as executives, engineering, design, marketing, sales, support, legal, finance, partners and end users.
+    - name: Power and interest grid
+      contains: Each stakeholder rated high or low on power and interest, then placed in one of four boxes.
+    - name: Strategy for each box
+      contains: Manage closely, keep satisfied, keep informed or monitor, with how often to talk, which channel, key messages and risks if ignored.
+    - name: Communication plan table
+      contains: One row per stakeholder with role, power, interest, strategy, frequency, channel and key message.
+    - name: Conflicts and alignment
+      contains: Stakeholders with competing interests, and ideas for bringing them into line.

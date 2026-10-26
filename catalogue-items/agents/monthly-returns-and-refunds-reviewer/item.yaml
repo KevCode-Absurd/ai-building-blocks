@@ -14,12 +14,12 @@ outputs:
   - {type: plan}
 uses: [refund-rate-analyzer, return-reason-finder, exchange-or-refund-split-reader, refund-speed-checker, return-cost-calculator, repeat-partial-refund-spotter]
 steps:
-  - {uses: refund-rate-analyzer, note: "Every month: refund rate by product for the last 30 days, set against last month's saved rates."}
-  - {uses: return-reason-finder, note: "Every month: return reasons counted by product, so quality and misleading listings can be told apart."}
-  - {uses: exchange-or-refund-split-reader, note: "Every month: how many returns became exchanges, store credit or refunds, against the month before."}
-  - {uses: refund-speed-checker, note: "Every month: days from return request to refund, and the returns that ran late."}
-  - {uses: return-cost-calculator, note: "Only when a product's refund rate is far above the store's, or one reason dominates: the true cost over 90 days."}
-  - {uses: repeat-partial-refund-spotter, note: "Every month: orders with several partial refunds, which can point to fraud or a staff habit."}
+  - {uses: refund-rate-analyzer, note: "Every month: refund rate by product for the last 30 days, set against last month's saved rates. Passes on the standout products that the later checks look at first."}
+  - {uses: return-reason-finder, note: "Every month: return reasons counted by product, so quality and misleading listings can be told apart. Uses your store connection for the same 30 days, not step 1's report. Passes on the reasons for each product."}
+  - {uses: exchange-or-refund-split-reader, note: "Every month: how many returns became exchanges, store credit or refunds, against the month before. Uses your store connection, not step 2's reasons. Passes on the exchange share."}
+  - {uses: refund-speed-checker, note: "Every month: days from return request to refund, and the returns that ran late. Uses your store connection, not the exchange split. Passes on the list of late refunds."}
+  - {uses: return-cost-calculator, note: "Only when a product's refund rate is far above the store's, or one reason dominates: the true cost over 90 days. Uses your store connection and product costs for the standout products. Passes on the money lost per product, which ranks the fix."}
+  - {uses: repeat-partial-refund-spotter, note: "Every month: orders with several partial refunds, which can point to fraud or a staff habit. Uses your store connection over 90 days, not the cost report. Passes on the flagged orders for you to review."}
 schedule: "On the 3rd of each month, once last month's returns are closed"
 asks_before: [refunding or cancelling any order, tagging a customer, pausing or changing a product listing, contacting a supplier or a customer]
 origin: own

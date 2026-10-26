@@ -2,34 +2,54 @@ thinking: low
 thinking_why: It asks short questions after each answer.
 new_slug: ai-answer-doubt-check
 name: AI answer doubt check
-summary: After any AI explanation, you name one place it could be wrong, one
-  thing to check and one source to try.
+summary: Check any AI answer before you trust it. Name one place it could be wrong, one thing to check and one source to try. Good for learners.
 job: research-topics
 headline: AI answer doubt check
-subhead: A three-question habit that turns any AI answer into a claim to test,
-  not a fact to accept. After the AI explains something, the learner must say
-  where it could be wrong, what they would check, and which source they would
-  use.
+subhead: Give your AI an answer it wrote, plus the topic. It asks the learner three questions about it. The learner must say where it could be wrong, what to check and which source to use.
 explain: |
   A three-question habit that turns any AI answer into a claim to test, not a fact to accept. After the AI explains something, the learner must say where it could be wrong, what they would check, and which source they would use.
 
   A learning coach prompt runs the step each time. The learner cannot move on until all three are answered in their own words. The coach then helps with the weak spots, such as picking a better source, but does not give the answer. Over weeks the habit sticks: people begin asking "what would prove this wrong?" without being asked. It also teaches leaving the page to see what other sources say about a claim.
 when:
-  - Your students or team take AI answers at face value.
-  - You want a quick routine to use after every AI explanation.
-  - You teach research skills and need a simple, repeatable step.
-  - You want people to practise checking a claim against a second source.
+  - Your students or team accept AI answers without question.
+  - You want a short routine to run after every AI explanation.
+  - You teach research skills and need a simple step to repeat.
+  - You want learners to practise checking a claim against a second source.
+not_for:
+  - "The learner knows nothing about the topic yet: start with a teacher or a textbook explanation, then use this check."
+  - "You need a full fact-check of a long document: ask a subject expert or check each claim against the original source yourself."
+  - "You want the AI to give the right answer for you: this routine makes the learner do the checking, so it will not hand over answers."
 you_give:
-  - The learner's name or group (optional)
-  - The AI answer or topic being studied
-  - The age or level of the learner (optional)
+  - The AI answer or explanation to check
+  - The topic it covers
+  - The school subject (optional)
+  - The learner's age or level (optional)
 you_get:
-  - A coach prompt that asks the three questions
-  - Feedback on the learner's checks
-  - Tips for choosing a better source
-  - A routine that can run after every AI answer
+  - Three questions that make the learner doubt the answer
+  - A pause until the learner has answered all three in their own words
+  - Help with weak spots, such as picking a better source
+  - A routine you can repeat after every AI answer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini in a new chat. No code, files or paid tools are needed.
+  - Paste the System Prompt from this skill's SKILL.md file as your first message.
+  - Paste the AI answer you want checked, and say the topic. Add the learner's age if you know it.
+  - Let the learner reply to each of the three questions in their own words.
+  - Read the coach feedback and fix any weak source or check.
+  - Next, use the Explain-first interrogator or the Transfer bridge.
+output_sample:
+  input:
+    - The AI answer or explanation the learner should check
+    - The topic it is about
+    - The school subject (optional)
+    - The learner's age or level (optional)
+  output:
+    - name: Doubt question
+      contains: The coach asks where the answer could be wrong, and waits for the learner's own reply.
+    - name: Check question
+      contains: The coach asks what the learner would check to test the claim.
+    - name: Source question
+      contains: The coach asks which source the learner would use, such as a book, a site or an expert.
+    - name: Coach feedback
+      contains: Short help on weak spots, such as a better source, without giving the answer.
+    - name: Example Transcript
+      contains: A sample chat that shows how the three questions run from start to finish.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes questions from a clear topic.
 new_slug: retrieval-quiz-writer
 name: Retrieval quiz writer
-summary: Give it a topic. Get low-stakes recall questions at easy, medium and
-  hard levels for starters or revision.
+summary: Write a retrieval quiz for any topic. Get recall questions at easy, medium and hard levels, with answer notes, for lesson starters or revision.
 job: teach-and-train
 headline: Retrieval quiz writer
-subhead: A set of short recall questions on one topic, ready to use as a lesson
-  starter or revision task. Because they are low stakes, students practise
-  pulling facts from memory, which makes them stick better than re-reading.
+subhead: A set of short recall questions on one topic, ready to use as a lesson starter or revision task. Because they are low stakes, students practise pulling facts from memory, which makes them stick better than re-reading.
 explain: |
   A set of short recall questions on one topic, ready to use as a lesson starter or revision task. Because they are low stakes, students practise pulling facts from memory, which makes them stick better than re-reading.
 
@@ -18,6 +15,10 @@ when:
   - A class has forgotten last term's content before revision.
   - You want low-stakes testing that is not graded.
   - You are building a revision pack with mixed difficulty.
+not_for:
+  - "You need a graded test or exam: write it yourself or with your exam board's materials, since these questions are low stakes."
+  - "Your students know very little about the topic or have limited English: teach it again first with worked examples, then use this quiz."
+  - "You want to teach a topic for the first time: plan the lesson yourself first, then run the quiz later."
 you_give:
   - The topic or skill
   - Year group or age
@@ -30,7 +31,22 @@ you_get:
   - Answer notes
   - When to use the quiz after teaching
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Type your topic, your year group and how many questions you want. Add how long ago you taught it and any known misconceptions if you have them.
+  - Send it. You get a set of questions with a type and difficulty for each, then answer notes and a short plan for running the quiz.
+  - Check the questions match what you actually taught. Change or remove any that do not.
+  - Run the quiz as a low-stakes starter. Do not grade it. Use the answer notes to correct mistakes as a class.
+output_sample:
+  input:
+    - The topic or skill students need to recall
+    - Year group or age, and what they already know
+    - How many questions you want, usually 6 to 10
+    - How long ago they first learned it (optional)
+    - Misconceptions you have seen in the class (optional)
+  output:
+    - name: Questions
+      contains: Recall questions on your topic, each labelled free recall, cued recall or recognition, with a difficulty level.
+    - name: Answer Notes
+      contains: Key points a correct answer should include, plus common wrong answers to watch for.
+    - name: Implementation Script
+      contains: Short steps for running the quiz in class, including when to run it after first teaching.

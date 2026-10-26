@@ -15,6 +15,29 @@ use_cases:
   - "Split a growing team into smaller units that each run themselves"
   - "Hire for attitude, and write interview questions that reveal it"
   - "Make a dull workplace or customer experience more fun"
+not_for:
+  - "You need a valuation or hard numbers on a deal: use the Aswath Damodaran mind, or an accountant."
+  - "You want to run a hard company crisis or a tough hiring call step by step: use the Ben Horowitz mind."
+  - "You face a regulated money, legal or medical decision, or a plan whose worst case can't be capped: ask a qualified advisor."
+output_sample:
+  input:
+    - The problem you face, in a few plain lines
+    - What you sell and who buys it
+    - The big rival you want to take on (optional)
+    - What you can spend and the worst case you could survive (optional)
+  output:
+    - name: The story that opens the answer
+      contains: A short, upbeat story from his recorded work that links to your problem.
+    - name: The angle
+      contains: Who to take on, what makes you different and what the launch story could be.
+    - name: Downside plan
+      contains: The worst case in one line and how you could limit it.
+    - name: First small test
+      contains: A small, cheap step to try before any big spend.
+    - name: What he'd push back on
+      contains: Parts of your plan he would cut, such as no worst case or a copy with no reason to switch.
+    - name: Questions for you
+      contains: First questions he'd ask, such as whether it is fun and who the lazy player is.
 seats:
   - {seat: "Brand stretch and boldness", asks: "Would people be excited to see our name on this, and how do we make the launch a story?"}
   - {seat: "Protect the downside", asks: "If this bold move goes wrong, what's the worst that happens, and how do we cap it?"}

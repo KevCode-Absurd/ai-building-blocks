@@ -1,6 +1,6 @@
 new_slug: informed-captain-decisions
 name: "Informed captain decision planner"
-summary: "Paste a big decision and who is involved. Get one named owner, a plan to gather dissent, and a review date."
+summary: "Plan a big team decision with one named owner. Get a plan to hear the strongest case against, a decision date and a review date."
 job: lead-people
 thinking: medium
 thinking_why: "It sets a process for a decision, which needs judgment about people but follows a clear structure."
@@ -17,6 +17,10 @@ when:
   - "A team is stuck on a choice and no one owns it."
   - "A leader is about to decide alone and wants to hear the strongest objections first."
   - "A decision keeps being reopened after the meeting."
+not_for:
+  - "You are deciding a small choice you can easily undo: just make the call and tell the team."
+  - "You are arguing about whether you know enough yet: use the Decision evidence bar setter."
+  - "You want a vote or a group consensus: this plan gives one owner the final say, so pick another method."
 
 you_give:
   - "The decision, in a sentence, and why it matters now"
@@ -35,6 +39,33 @@ how_to_use:
   - "Name anyone who has already pushed back."
   - "Send the request for the strongest case against to each person before the meeting."
   - "Hold the meeting by the ground rules and write down who stayed silent."
+output_sample:
+  input:
+    - The decision, in one sentence, and why it matters now
+    - Who is involved and what each person knows
+    - Your deadline
+    - Who has already pushed back (optional)
+  output:
+    - name: The decision
+      contains: The choice in one sentence and the reason it needs an answer now.
+    - name: Captain
+      contains: The one person who owns the call, with two sentences on why.
+    - name: Who knows most
+      contains: The people closest to the work or the customer, and what each knows.
+    - name: Who disagrees
+      contains: Likely dissenters and their probable view, marked as inferred or told.
+    - name: Request for the strongest case against
+      contains: A short message to each dissenter asking for their best argument by a reply date.
+    - name: Decision date
+      contains: The day the captain decides, worked back from your deadline.
+    - name: Attendees
+      contains: Who joins the meeting, including one senior person who joins as an equal.
+    - name: Ground rules
+      contains: Everyone speaks before the room is read, silent people are asked directly, and there is no vote.
+    - name: After the call
+      contains: The disagree-then-commit rule and a review date with what to look at.
+    - name: Missing and checks missed
+      contains: Facts that would sharpen the plan, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Name the captain"

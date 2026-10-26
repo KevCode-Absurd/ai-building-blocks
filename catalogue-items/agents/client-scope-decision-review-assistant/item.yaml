@@ -1,31 +1,30 @@
 slug: client-scope-decision-review-assistant
 name: Client scope decision review assistant
-summary: A scope comparison, delivery options and client decision draft.
+summary: Compare a client change request with the signed scope. Get delivery options and a draft reply, with new work kept as proposed until the client accepts.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: document
+    required: true
+  - type: meeting_notes
     required: false
   - type: question
-    required: false
-  - type: meeting_notes
     required: false
 outputs:
   - type: document
   - type: plan
+needs_mode: manual
 uses:
   - prepare-a-client-scope-change-brief
   - executive-action-register
 steps:
   - uses: prepare-a-client-scope-change-brief
-    note: "Run when: A client changes scope or supplies an acceptance or rejection decision."
+    note: "Run this when a client changes scope or sends a decision. Compares the request with the signed engagement and the real hours, and drafts the options. Hands the options and the commitments so far to the action register."
   - uses: executive-action-register
-    note: Run prepare-a-client-scope-change-brief for changed evidence or a due review. If a client decision is explicit, record its accepted commitments and source. If the outcome is unknown, preserve prior commitments and return the open decision.
+    note: "Run this only when the client gives an explicit decision. Uses the client's reply or meeting notes, with step 1's commitments as the earlier ones. Records the accepted commitments with their source. If the outcome is unknown, keeps the earlier commitments and lists the open decision."
 schedule: At a requested engagement change review. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

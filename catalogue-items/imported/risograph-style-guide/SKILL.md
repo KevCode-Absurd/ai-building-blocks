@@ -5,6 +5,33 @@ metadata:
   author: typeui.sh
 ---
 
+## How to run this skill
+
+AI Blocks added these notes. The original skill below is unchanged. Where a note here disagrees with it, follow the note.
+
+### What you need
+- A short description of the product, and who it is for.
+- Optional: brand colours or fonts to keep, and the parts or pages the guide must cover.
+
+### If something is missing
+- Ask once for the product and the audience. If you still do not have them, write `MISSING: <what>` at the top and go on with clearly marked assumptions.
+- Never invent facts about the product, its customers or its claims.
+
+### Make the defaults fit the product
+- The values under Style Foundations are the original author's starting point. Swap in the person's brand colours and fonts when they gave any.
+- The Brand line asks for one warm off-white paper surface, but the surface token below is `#FFFFFF`. Choose a warm off-white for the paper, give it the surface token, and say which value you chose.
+- Pink is only for things people can click. If an example uses pink for anything else, change it.
+
+### Check contrast before you hand it back
+- For every text and background pair, work out the contrast ratio and write it next to the pair. Normal text needs 4.5 to 1. Large text and parts of the interface need 3 to 1.
+- With the original colours, white text on the pink `#F237A1` is about 3.6 to 1, which fails for normal text. Dark text `#111827` on that pink is about 4.9 to 1. Deep blue `#2C40A7` on white is about 8.8 to 1.
+- If you change a colour, work the ratio out again. Do not guess.
+
+### What you hand back
+- Open with the one-line design idea, then follow the Required Output Structure below.
+- Finish with `CHECKS MISSED:` and list any check you could not do, or write "none".
+- Say that the guide is rules only. A designer or developer builds the pages from it.
+
 <!-- TYPEUI_SH_MANAGED_START -->
 # Riso Design System Skill (Universal)
 

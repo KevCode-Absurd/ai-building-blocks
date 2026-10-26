@@ -1,0 +1,141 @@
+name: Agentic Identity & Trust Architect agent
+summary: Design how your AI agents prove who they are, what they may do and what they did, with a threat list, permission map and tamper-proof log.
+headline: Agentic Identity & Trust Architect agent
+subhead: Describe the AI agents in your system and what each one can do. It lists how an agent could be faked or overreach, then designs identity, permissions and an audit log. You get a design to review with a security engineer, not a live system.
+job: secure-code
+thinking: high
+thinking_why: It reasons about attackers, hand-offs between agents and failure cases, and must not call a design safe without proof. Use a model that reasons well and says when it is unsure.
+explain: |-
+  When AI agents act on their own, a simple question gets hard. How do you know an agent is who it says it is, that it was allowed to do what it did, and that nobody changed the record afterwards? Saying "the agent told me it was approved" proves nothing. An agent identity design has to replace every claim with something you can check.
+
+  This agent starts with the damage a fake or over-trusted agent could do: move money, deploy code, change data or send messages. Then it designs three things. First, how each agent proves its identity and how that proof expires or is cancelled. Second, what each agent may do, and how a hand-off from one agent to another can only narrow those powers, never widen them. Third, a log of each important action that cannot be quietly edited. Its default is to deny: if identity, permission or the log write cannot be confirmed, the action does not run.
+
+  It writes a design and, if you ask, sample code. It does not run anything. The profile's performance and success targets, such as response times and enforcement rates, are goals from the original author, not results.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your AI agents can spend money, send email, deploy code or call outside tools, and you need clear rules for who may do what.
+  - One agent hands work to another and you need proof that the first agent allowed it.
+  - An auditor, a customer or your boss asks how you know what an agent did and that the record was not changed.
+  - You are about to add agents to a product and want the identity design done before anyone writes code.
+not_for:
+  - You need to decide if two customer or company records are the same one. Use the Identity Graph Operator agent.
+  - You want sign-in, single sign-on or passkeys for human users. Use the Identity & Access Engineer agent.
+  - You want finished code checked for bugs. Use the Application Security Engineer agent.
+  - You want it to set up keys, servers or a live system. It writes the design. Your engineers build it and test it.
+you_give:
+  - A list of your agents and what each one can do, in plain words.
+  - The risky actions, such as moving money, deploying code, changing data or sending messages.
+  - How the agents talk to each other and which tools you use, such as MCP or a REST API (optional)
+  - Who needs proof of what happened, such as an auditor, a customer or a regulator (optional)
+  - Rules you must meet, such as SOC 2 or financial rules (optional)
+you_get:
+  - A threat list of how an agent could be faked, over-trusted or hide what it did
+  - An identity design for how each agent proves who it is, and how that proof ends or is cancelled
+  - A permission map showing what each agent may do and how a hand-off narrows it
+  - A design for an audit log that shows if anyone changed a record
+  - Deny rules and a list of tests that try to break the design
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - List your agents, what each can do and which actions are risky. Add how they talk to each other if you know. No code access is needed.
+  - Type "Design identity and trust for these agents. Threat list first. Do not write code unless I ask. Mark anything you assume."
+  - Read the threat list first. Say which threats matter most, then ask it to run the design again.
+  - Give the design to a security engineer. Ask them to check every cryptography choice against current standards before anything is built.
+  - Build it yourself and run the test list. The AI does not run or test anything.
+how_it_works:
+  - title: Build the threat model
+    text: It asks how many agents there are, whether they hand work on, what a forged identity could cost and who must trust the record.
+  - title: Design identity
+    text: It plans how each agent gets a proof of identity, how long it lasts, and how it is renewed or cancelled.
+  - title: Design permissions and hand-offs
+    text: It sets what each agent may do and makes sure a hand-off can only narrow those powers.
+  - title: Design the record
+    text: It plans what to log for each action, what the agent meant to do, what it was allowed to do and what happened, with a way to spot edits.
+  - title: Set the deny rules
+    text: It writes the rules that stop an action when identity, permission or the log cannot be confirmed.
+  - title: Write the tests
+    text: It lists attacks to try, such as a forged identity, a widened permission or an edited record.
+output_shape: |-
+  SCOPE
+    Agents <list> | Risky actions <list> | Who needs proof <list> | Rules <list>
+
+  THREAT LIST
+    <threat> | <what it could cost> | <how likely> | <which design part stops it>
+
+  IDENTITY DESIGN
+    <agent> | <how it proves identity> | <how long that lasts> | <how it is cancelled>
+
+  PERMISSION AND HAND-OFF MAP
+    <agent> | <actions allowed> | <what it may pass on, narrower only>
+
+  AUDIT LOG DESIGN
+    <what is recorded per action> | <how an edit would show> | <who can read it>
+
+  DENY RULES
+    <condition> | <result: deny> | <what to alert on>
+
+  TEST LIST
+    <attack to try> | <expected result>
+
+  GAPS AND CHECKS
+    <missing fact or choice> | <why it matters> | <who should decide>
+output_sample:
+  input:
+    - A list of your agents and what each can do
+    - The risky actions
+    - How the agents talk to each other and your tools (optional)
+    - Who needs proof, and any rules you must meet (optional)
+  output:
+    - name: Scope
+      contains: The agents, risky actions, readers of the record and rules the design was built for.
+    - name: Threat list
+      contains: Each way an agent could be faked, over-trusted or hide an action, with the cost and the fix.
+    - name: Identity design
+      contains: How each agent proves who it is, how long that lasts and how it is cancelled.
+    - name: Permission and hand-off map
+      contains: What each agent may do, and the rule that hand-offs can only narrow powers.
+    - name: Audit log design
+      contains: What is recorded for each action and how an edited record would be spotted.
+    - name: Deny rules
+      contains: Conditions that stop an action, and what should raise an alert.
+    - name: Test list
+      contains: Attacks to try against the built system, each with the result you should see.
+    - name: Gaps and checks
+      contains: Missing facts and open choices, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A strong reasoning model gives a better threat list. For sample code, use one that can also run code so you can try it.
+  inputs:
+    - A diagram or a short note on how your agents call each other.
+    - Your current list of keys, tokens or API credentials that agents use today.
+    - Any audit or security rules your customers have asked you to meet.
+terms:
+  - term: AI agent
+    meaning: An AI that can take actions on its own, such as calling a tool, sending a message or changing data.
+  - term: Delegation chain
+    meaning: The path of permission when one agent asks another to act for it. Each step should carry no more power than the one before.
+  - term: Scope
+    meaning: The set of actions an agent is allowed to take, such as "read the portfolio" but not "trade".
+  - term: Tamper-evident log
+    meaning: A record built so that any change to an old entry can be detected.
+  - term: Deny by default
+    meaning: If the system cannot confirm identity, permission or the log write, the action is blocked.
+tweaks:
+  - what: Scale
+    how: Say how many agents you have now and expect in a year. Two agents and two hundred need different designs.
+  - what: Blast radius
+    how: Say the worst thing a fake agent could do. That sets how strict the rules must be.
+  - what: Code
+    how: Ask for sample code only after you accept the design. Treat it as a sketch to test, not finished work.
+improve:
+  - Keep each design with your threat list. Add a new threat each time something goes wrong or nearly does.
+  - Rerun it when you add an agent or a new action that touches money or live data.
+  - Pair it with the Application Security Engineer agent to review the code once it is built.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

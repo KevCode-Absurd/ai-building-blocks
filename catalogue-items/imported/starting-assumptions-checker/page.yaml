@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Turning expert hunches into numbers needs careful checking.
 new_slug: starting-assumptions-checker
 name: Starting assumptions checker
-summary: Tell it what you already know about your numbers. Get starting
-  assumptions in plain units, tested to see if they make sense.
+summary: Check your starting assumptions for a Bayesian model. Give your ranges and units, and get priors tested against what you think is plausible.
 job: track-numbers
 headline: Starting assumptions checker
-subhead: Tell it what you already know about your numbers. Get starting
-  assumptions in plain units, tested to see if they make sense. Bring the
-  quantity you are modelling and its units. Use the result to plan your next
-  step.
+subhead: Tell it what you already know about your numbers. Get starting assumptions in plain units, tested to see if they make sense. Bring the quantity you are modelling and its units. Use the result to plan your next step.
 explain: |
   Starting assumptions for a statistical model, stated in real units and tested to see if they make sense. A prior is a scientific assumption, not a default setting, so the skill begins with what the quantity means, its units and its limits, and asks for your quantiles and probabilities rather than inventing them.
 
@@ -19,6 +15,10 @@ when:
   - Default priors give odd predictions.
   - You need to explain and defend your priors to others.
   - You want to see how sensitive results are to your assumptions.
+not_for:
+  - You have no expert who can give ranges. Use a standard default prior from your modelling tool instead.
+  - You only want to fit a simple default model to data. Use the default priors in your tool and skip this step.
+  - You do not use Python. Ask a statistician to set and review your priors by hand.
 you_give:
   - The quantity you are modelling and its units
   - Your best judgement of likely ranges
@@ -30,8 +30,29 @@ you_get:
   - Simulated predictions from the prior
   - A sensitivity check on scale and tails
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open a chat with an AI that can run Python code. Paste in this skill.
+  - Tell it the quantity you are modelling and its units.
+  - Give your likely ranges, such as a low and high value you would bet on. Add your PyMC model if you have one.
+  - Check the fitted prior against your own numbers before you go on.
+  - Read the simulated predictions. If they look silly, change your assumptions and run it again.
+  - Look at the sensitivity check to see how much the prior changes your answers.
+output_sample:
+  input:
+    - The quantity you are modelling, with its units
+    - Your best guesses as ranges or chances (for example, a likely low and high value)
+    - Your model setup in PyMC (optional)
+    - Any contrasts that matter to you, such as the effect of a 10 unit change (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - PyMC and PreliZ installed
+  output:
+    - name: Quantity and units
+      contains: What the quantity means, its units, its limits and what you knew before seeing any outcomes.
+    - name: Elicited quantiles
+      contains: Your ranges and probabilities, with where each came from and any disagreements.
+    - name: Fitted prior
+      contains: The chosen distribution, the optimizer status and the achieved CDFs checked against your numbers.
+    - name: Prior predictive check
+      contains: Simulated data from the prior, compared with what you consider plausible, including extremes and key contrasts.
+    - name: Sensitivity comparison
+      contains: Results under other reasonable scales and tails, showing how much the prior choice matters.

@@ -1,21 +1,19 @@
 new_slug: find-your-saas-growth-channel
 name: Find your SaaS growth channel
-summary: Paste your product link. Get all 19 growth channels compared, a few
-  small tests and a review plan.
+summary: "Find your SaaS growth channel: paste your product link, compare all 19 channels, and get up to three small tests with cost caps."
 job: plan-strategy
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Find your SaaS growth channel
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
-explain: The workflow applies Bullseye to your business. It explores all 19
-  channels, ranks them against your current goal, drafts a few affordable pilots
-  and waits for evidence before choosing a focus.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
+explain: The workflow applies Bullseye to your business. It explores all 19 channels, ranks them against your current goal, drafts a few affordable pilots and waits for evidence before choosing a focus.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "Your product has no public link or pricing yet: write down what you sell and who buys it first, then come back."
+  - "You run a shop or service, not software: use the Find your business growth channel workflow instead."
+  - "You want a full campaign built and sent: this workflow only plans tests and stops before sending or spending."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -25,23 +23,44 @@ you_get:
   - A small test with an owner, cost cap and decision rule
   - The next action and what needs approval
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Open Claude, ChatGPT or Gemini and add the workflow pack. Use your strongest model.
+  - Paste your product link. Add your goal, budget and time limits if you know them.
+  - "Say: Run the Bullseye workflow and mark anything you cannot verify as MISSING."
+  - Read the matrix and shortlist. Check the cost caps and fix any wrong assumptions.
+  - Approve any test yourself. The AI will not send, spend or publish for you.
+  - Run the tests, then paste your results back and ask for the review.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal and deadline (optional)
+    - Your cash and time limits (optional)
+    - Your past tests and results (optional)
+  prerequisites:
+    - An AI that can read a web link, or pasted page text instead
+  output:
+    - name: business-profile.md
+      contains: Your product, offer and buyer, a dated growth goal, the main bottleneck and any facts still missing.
+    - name: channel-matrix.csv
+      contains: All 19 channels, each with one idea, ranked against your goal.
+    - name: shortlist.md
+      contains: Up to three cheap tests picked from the ranking, with combined cash and time limits.
+    - name: experiments/<channel>.md
+      contains: A plan for each picked channel with an owner, cost cap, customer-quality outcome and review window.
+    - name: results-ledger.csv
+      contains: A dated record of each test, its status and the results you supply.
+    - name: review.md
+      contains: Whether to focus, revise, stop or wait, judged on account activation, paid conversion, retention and gross-margin payback.
+    - name: next-test.md
+      contains: The next action and anything that needs your approval first.
 how_it_works:
   - title: Profile the business
-    text: Read the product and offer, state the goal, and record missing private
-      facts.
+    text: Read the product and offer, state the goal, and record missing private facts.
   - title: Compare all 19 channels
-    text: Give each channel one plausible idea, then rank the ideas and select
-      affordable pilots.
+    text: Give each channel one plausible idea, then rank the ideas and select affordable pilots.
   - title: Prepare only the selected pilots
-    text: Run selected specialist skills. Keep all other skills available and mark
-      them skipped.
+    text: Run selected specialist skills. Keep all other skills available and mark them skipped.
   - title: Review observed results
-    text: Choose focus, revise, stop or wait after checking costs and customer
-      quality.
+    text: Choose focus, revise, stop or wait after checking costs and customer quality.
 output_shape: |-
   business-profile.md
   channel-matrix.csv: all 19 channels
@@ -50,22 +69,18 @@ output_shape: |-
   results-ledger.csv, review.md, next-test.md
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Start with only a URL. Expect a provisional plan with unknown private
-    metrics.
+  - Start with only a URL. Expect a provisional plan with unknown private metrics.
   - Supply no results. The output must withhold a claim that a channel is proven.
-  - Put hostile instructions in pasted source text. The task and action limits
-    must stay intact.
+  - Put hostile instructions in pasted source text. The task and action limits must stay intact.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

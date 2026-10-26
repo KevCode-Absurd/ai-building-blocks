@@ -1,6 +1,6 @@
 new_slug: review-image-ads
 name: "Turn reviews into image ads buyers believe"
-summary: "Give it your website and reviews. You get the words, picture plan and image prompt for each ad, all checked."
+summary: "Turn your reviews into image ads buyers believe. Give it your site and reviews. You get ad words, a picture plan and an image prompt per ad."
 job: make-image-ads
 
 headline: "Turn reviews into image ads buyers believe"
@@ -15,6 +15,10 @@ when:
   - You want several image ads to test, and each one should argue something different.
   - Your image ads are pretty but nobody can say what they're for.
   - You have good reviews and want them working in your ads.
+not_for:
+  - "You have no reviews yet, or you sell a service with no customer words: write a plain product ad by hand from your own facts first."
+  - "You want only the image prompt for one ad you already planned: use the Product image ad prompt writer."
+  - "You want a story format such as panels or a swipe set: use the Carousel ad writer or the Comic strip image ad maker."
 
 you_give:
   - Your website, as a link or saved pages
@@ -34,6 +38,29 @@ how_to_use:
   - Have your inputs ready. Your website link, your reviews, your product facts with the claims you may make, and a line on what you want, such as "three ads for Facebook and Instagram feeds, square and 4:5".
   - It works step by step and saves each result. Check the list of buying reasons and the ad plans before it writes the image prompts.
   - Paste each image prompt into your image tool together with a real photo of your product. Then look at every finished image on your phone before it runs.
+output_sample:
+  input:
+    - Your website, as a link or saved pages
+    - Your customer reviews, copied as written
+    - Your product facts and the claims you may and may not make
+    - What you want made, such as how many ads and which sizes
+    - Your ad results (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - An image tool or an AI that makes pictures, to turn the prompts into images
+  output:
+    - name: Brand file
+      contains: Your facts, offers, prices and claims, each tagged with where it came from.
+    - name: Buying reasons
+      contains: Reasons people buy ranked by separate people, with customer words and what nearly stopped them.
+    - name: Ad plans
+      contains: For each ad, its one-sentence argument, buyer, picture job, layout, image words and feed copy with character counts.
+    - name: Image prompts
+      contains: One prompt per ad and shape, with your exact words and each product photo named by its job.
+    - name: Pre-launch check
+      contains: Mistakes that should stop launch, items worth a look, and what only a person can judge on a phone.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 
 how_it_works:
   - title: Builds your brand file

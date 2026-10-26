@@ -1,6 +1,6 @@
 new_slug: run-fair-interviews-and-choose-on-evidence
 name: Run fair interviews and choose the candidate on evidence
-summary: Give it the role. Get an interview plan, scorecards, a work test, a fair comparison and the replies.
+summary: "Run fair interviews for any role: get a stage plan, scorecards, a work test, a fair candidate comparison and a reply for every person."
 job: hire-people
 thinking: high
 thinking_why: It designs a fair process and then weighs people against each other on evidence. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have four or more candidates for one role and the team disagrees about them.
   - Your last hire interviewed well and struggled in the job.
   - You want a process you can show a candidate who asks how the decision was made.
+not_for:
+  - "You have one candidate or fewer than four: use a plain scorecard of your own and a simple chat with your team."
+  - "You only need the job post and the offer letter: use the Hire fairly, from job post to a checked offer letter workflow."
+  - "You need to check a candidate's background or references: ask the candidate for referees and call them yourself."
 you_give:
   - The role, its level and what the person must be able to do
   - Who will interview and how much time you have
@@ -30,6 +34,29 @@ how_to_use:
   - Paste the role and what it needs. It plans the stages, the scorecards and the work test.
   - Run the interviews. Each interviewer fills in their scorecard before anyone discusses a candidate.
   - Paste the scorecards back. It compares the candidates and drafts the replies. You decide, then send.
+output_sample:
+  input:
+    - The role, its level and what the person must do
+    - The must-have list for the job
+    - Who will interview and how much time you have
+    - Every interviewer's filled-in scorecard, after the interviews
+    - Interview transcripts or recordings (optional)
+  prerequisites:
+    - A chat AI that can read pasted text or files
+    - Interviewers who can fill in a scorecard before the debrief
+  output:
+    - name: Interview plan
+      contains: Each stage, who runs it, how long it takes and what it checks, so no stage repeats another.
+    - name: Scorecards
+      contains: One per stage, with set questions, strong and weak answer signs and one rating scale.
+    - name: Work test
+      contains: A short task from the real job, with a scoring guide and fairness checks.
+    - name: Comparison
+      contains: Candidates compared on scorecard evidence, with flags on notes that rest on feel or unrelated traits.
+    - name: Replies
+      contains: The offer call for your pick and a clear, kind reply for every other candidate.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Plan the stages
     text: Sets the stages for the role and level, names who runs each and what it checks, so no two stages test the same thing.

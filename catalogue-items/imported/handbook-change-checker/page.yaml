@@ -2,25 +2,23 @@ thinking: medium
 thinking_why: One change can quietly clash with other rules.
 new_slug: handbook-change-checker
 name: Handbook change checker
-summary: Give it a proposed handbook change. Get the other policies it breaks
-  and state differences. Not legal advice.
+summary: Check a handbook change before you publish it. See the policies and state pages it breaks and any promised benefit it cuts. Not legal advice.
 job: hire-people
 headline: Handbook change checker
-subhead: Give it the handbook section, the new wording and your current
-  handbook. It finds other policies and state pages the change touches. You get
-  old and new side by side, cross-references that may break, a state by state
-  check and a flag if a promised benefit is cut.
+subhead: Give it the handbook section, the new wording and your current handbook. It finds other policies and state pages the change touches. You get old and new side by side, cross-references that may break, a state by state check and a flag if a promised benefit is cut.
 explain: |
   Before you change a line of your handbook, see what else it breaks. Change the paid leave policy and you may also affect final pay, the leave cross-reference and several state add-on pages. This skill finds those ripples while the change is still a draft.
 
   You give it the section, the new wording and the reason. It shows old and new side by side, then searches for other policies that point to that section and terms that depend on it. For each state supplement it asks whether the change makes it wrong, outdated or newly required. It also flags changes that cut something employees were promised, since some states treat handbooks as contracts. It is not legal advice.
 when:
   - You are about to edit the leave, pay or conduct section of your handbook.
-  - You have staff in several states and need to know if local add-on pages
-    still fit.
+  - You have staff in several states and need to know if local add-on pages still fit.
   - You want to know if a change reduces a benefit people were promised.
-  - You are doing a yearly handbook cleanup and want to catch broken
-    cross-references.
+  - You are doing a yearly handbook cleanup and want to catch broken cross-references.
+not_for:
+  - "You need a brand new policy written from scratch: ask your AI to draft it first, then run it through this checker."
+  - "You want to cut a benefit and need to know if it is allowed: ask an employment lawyer to review it before you publish."
+  - "You need to tell staff about the change or track who signed: use your HR system or send a plain notice yourself."
 you_give:
   - The handbook section that is changing
   - The new wording
@@ -33,10 +31,29 @@ you_get:
   - A state by state impact check
   - A flag if the change cuts a promised benefit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /employment-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code or paid tool is needed.
+  - Paste your current handbook, or attach it if your AI takes files. Add your list of state supplements if you have one.
+  - Tell it which section is changing, the new wording and why you are changing it.
+  - Read the cross-reference and state tables first. Fix each row marked with a warning.
+  - If the Promise check flags a benefit cut, have a lawyer review it before you publish.
+  - If your AI asks which matter this is for, say it is practice-level. In-house users can skip that step.
+output_sample:
+  input:
+    - The handbook section that is changing
+    - The new wording and the reason for it
+    - Your current handbook text
+    - Your list of state supplements (optional)
+  prerequisites:
+    - Your handbook text in a file or pasted into the chat
+    - A setup file with your handbook location and state supplement list (optional if you paste them in)
+  output:
+    - name: Change
+      contains: The old and new wording shown side by side as a diff.
+    - name: Cross-reference impact
+      contains: A table of other sections that cite the changed one, whether each is still accurate, and what to fix.
+    - name: State supplement impact
+      contains: A table by state showing what each supplement says now, how it fares after the change, and the action needed.
+    - name: Promise check
+      contains: A flag if the change cuts something the old version promised, with a note on state risk.
+    - name: Ready to publish
+      contains: "A checklist: cross-references, state pages, notice for benefit cuts, version date and acknowledgment."

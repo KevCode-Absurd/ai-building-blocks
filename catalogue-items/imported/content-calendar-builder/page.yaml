@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It mines customer words and rival posts, then builds the calendar.
 new_slug: content-calendar-builder
 name: Content calendar builder
-summary: Give it your product and platforms. Get topics from real customer
-  words, rival content gaps, and a ready calendar.
+summary: Plan a month of posts with this content calendar builder. Give it your product and platforms. You get topics from customer words and rival gaps.
 job: grow-social
 headline: Content calendar builder
-subhead: Give it your product and platforms. Get topics from real customer
-  words, rival content gaps, and a ready calendar. Bring your product and target
-  market. Use the result to plan your next step.
+subhead: Give it your product and platforms. Get topics from real customer words, rival content gaps, and a ready calendar. Bring your product and target market. Use the result to plan your next step.
 explain: |
   A ready content calendar for your online shop, with topics drawn from what your customers actually say and from gaps in what your rivals publish. You know what to post each week and on which platform.
 
@@ -18,6 +15,10 @@ when:
   - You are starting on TikTok or Pinterest and need a month of ideas.
   - Your posts get little reaction and you want to see why.
   - You want content topics based on rival gaps.
+not_for:
+  - "You have no product yet or no customer reviews to draw on: write down who you want to sell to first, then come back."
+  - "You only want a pricing or sales channel plan: use a simple pricing sheet or talk to an adviser, since this plans posts only."
+  - "You need posts scheduled or published for you: use a scheduling tool, because this only writes the plan."
 you_give:
   - Your product and target market
   - Platforms to use
@@ -29,8 +30,38 @@ you_get:
   - A week by week calendar
   - Format suggestions per platform
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and open pages.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Tell it your product, who buys it, your platforms, your goal and how many weeks to plan.
+  - Add links to rival accounts if you have them (optional).
+  - Paste in customer reviews you can access if your AI cannot open them. Web access helps but is not needed.
+  - Check the customer words and rival gaps first. Fix anything that does not match your shop.
+  - Put the calendar in your scheduling tool. Run the audit again after four weeks.
+output_sample:
+  input:
+    - Your product and who it is for
+    - The platforms you want to post on
+    - Your content goal and how long to plan for
+    - Links to rival accounts (optional)
+    - Links to your own content, if you want an audit (optional)
+  prerequisites:
+    - An AI that can search the web and open pages works best
+    - Customer reviews you can copy and paste, if the AI cannot reach them
+  output:
+    - name: Target Audience Profile
+      contains: Who you are speaking to and what they care about.
+    - name: Customer Voice Bank
+      contains: Pain points, uses and the words customers use, taken from reviews.
+    - name: Trend & Topic Opportunities
+      contains: Topics trending now and seasonal moments coming up.
+    - name: Competitor Content Analysis
+      contains: What rivals post and the gaps you can fill.
+    - name: SEO Content Keywords
+      contains: Search phrases worth writing blog posts or pins about.
+    - name: Content Pillars
+      contains: The main themes your posts will return to.
+    - name: Content Calendar
+      contains: A week by week plan of what to post and where.
+    - name: Visual Style Guide
+      contains: Simple rules for how your posts should look.
+    - name: Next Steps Checklist
+      contains: The actions to take once the plan is ready.

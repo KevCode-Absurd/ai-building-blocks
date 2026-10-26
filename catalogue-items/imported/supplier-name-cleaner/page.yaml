@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It groups near-matching names.
 new_slug: supplier-name-cleaner
 name: Supplier name cleaner
-summary: Get supplier name typos and case variants grouped, with one proper name
-  suggested for each.
+summary: Find supplier name typos and case variants in your Shopify store. Get groups of look-alike names and one clean name to use for each.
 job: run-your-store
 headline: Supplier name cleaner
-subhead: Messy supplier names grouped and fixed. 'Acme Co', 'ACME co.' and 'Acme
-  Co ' become one name, with a suggested clean version for each group.
+subhead: Messy supplier names grouped and fixed. 'Acme Co', 'ACME co.' and 'Acme Co ' become one name, with a suggested clean version for each group.
 explain: |
   Messy supplier names grouped and fixed. 'Acme Co', 'ACME co.' and 'Acme Co ' become one name, with a suggested clean version for each group. It only reads your store and changes nothing.
 
@@ -17,6 +15,10 @@ when:
   - You are about to run reports by supplier and the totals look split.
   - You inherited a catalogue and want to tidy it.
   - You want a merge list to apply by hand.
+not_for:
+  - "You need to change supplier names for you: this skill only reads. Apply the merges by hand in Shopify admin or ask a developer to run an update."
+  - "Two names may be different businesses, such as ABC Corp and ABC Co: check your supplier records and keep them apart by hand."
+  - "Your products are not in a Shopify store: export your product list and fix names in Google Sheets instead."
 you_give:
   - Access to your store's product data
   - A vendor field to check
@@ -27,8 +29,28 @@ you_get:
   - Product counts for each spelling
   - A read-only session log
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code and use the Shopify CLI, such as Claude Code. A plain chat window cannot reach your store.
+  - "Sign in to your store by running: shopify store auth --store your-store.myshopify.com --scopes read_products. This gives read-only access to products."
+  - Paste in the skill and give your store domain. Add the match strictness or company endings to ignore if you want to change them (optional).
+  - Read the report and open the CSV. Check each group by hand before you use it.
+  - Apply the merges yourself in Shopify admin, then run the skill again to confirm the groups are gone.
+output_sample:
+  input:
+    - Your store domain, such as mystore.myshopify.com
+    - "Which products to check: active, draft, archived or all (optional)"
+    - How strict the name matching should be (optional)
+    - Company endings to ignore, such as Inc or LLC (optional)
+  prerequisites:
+    - An AI that can run code and the Shopify CLI
+    - Shopify read access to your products (the read_products scope)
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step with the inputs used and how many results came back.
+    - name: Vendor consolidation report
+      contains: Counts of products scanned, distinct vendors, clusters found and products to move, plus the top clusters by impact.
+    - name: vendor_consolidation_<date>.csv
+      contains: One row per name spelling with cluster, suggested name, product count, and a sample product.
+    - name: JSON summary (optional)
+      contains: The same report as structured data, if you ask for json format.

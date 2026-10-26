@@ -10,10 +10,22 @@ date_added: "2026-02-27"
 
 # AWS Security Audit
 
-Perform comprehensive security assessments of AWS environments to identify vulnerabilities and misconfigurations.
+Perform a security check of an AWS environment to find vulnerabilities and misconfigurations. All commands below only read.
 
 ## When to Use
-Use this skill when you need to audit AWS security posture, identify vulnerabilities, or prepare for compliance assessments.
+Use this skill when you need to check AWS security posture, find vulnerabilities, or prepare for a compliance review.
+
+## When not to use
+- A formal audit, a compliance sign-off or a penetration test. This is a first-pass check by reading settings. It does not test attacks, and it does not replace AWS Security Hub, a licensed auditor or a security professional.
+- Only IAM policy review. Use the AWS access policy reviewer for that.
+- Cost, speed or design questions. Use the AWS workload practice reviewer.
+
+## Inputs (ask once, never guess)
+1. **AWS CLI access with read-only permissions** (for example the `SecurityAudit` and `ViewOnlyAccess` managed policies). Never ask for access keys in chat. If the AI cannot run commands, ask the user to run the commands and paste the output, with account IDs and names they do not want shared removed.
+2. **Region or regions to check.** EC2, RDS, KMS and many other services are per region. If not given, ask. If the user does not answer, check only the default region and say so in the report. IAM and S3 listing are global.
+3. **Compliance framework in scope** (optional): CIS, PCI-DSS or HIPAA.
+
+If a command fails with access denied, record the check as `NOT RUN (access denied)`. Never report a clean result for a check that did not run.
 
 ## Audit Categories
 
@@ -25,9 +37,8 @@ Use this skill when you need to audit AWS security posture, identify vulnerabili
 - Access key rotation
 
 **Network Security**
-- Open security groups (0.0.0.0/0)
+- Open security groups (0.0.0.0/0 and ::/0)
 - Public S3 buckets
-- Unencrypted data in transit
 - VPC flow logs disabled
 - Network ACL misconfigurations
 
@@ -35,332 +46,218 @@ Use this skill when you need to audit AWS security posture, identify vulnerabili
 - Unencrypted EBS volumes
 - Unencrypted RDS instances
 - S3 bucket encryption disabled
-- Backup policies missing
+- Public database snapshots
 - KMS key rotation disabled
 
 **Logging & Monitoring**
 - CloudTrail disabled
 - CloudWatch alarms missing
-- VPC Flow Logs disabled
 - S3 access logging disabled
 - Config recording disabled
 
 ## Security Audit Commands
+Each command is a lead. Read the output, and say which checks you ran and which you skipped.
 
 ### IAM Security Checks
 
 ```bash
-# List users without MFA
-aws iam get-credential-report --output text | \
-  awk -F, '$4=="false" && $1!="<root_account>" {print $1}'
+# Credential report: generate it, then read it. Columns are found by header name.
+aws iam generate-credential-report >/dev/null
+aws iam get-credential-report --query Content --output text | base64 --decode > credential-report.csv
 
-# Find unused IAM users (no activity in 90 days)
-aws iam list-users --query 'Users[*].[UserName]' --output text | \
-while read user; do
-  last_used=$(aws iam get-user --user-name "$user" \
-    --query 'User.PasswordLastUsed' --output text)
-  echo "$user: $last_used"
-done
+# Users with a console password and no MFA
+awk -F, 'NR==1{for(i=1;i<=NF;i++)c[$i]=i; next}
+         $c["password_enabled"]=="true" && $c["mfa_active"]=="false" {print $1}' credential-report.csv
 
-# List overly permissive policies (AdministratorAccess)
-aws iam list-policies --scope Local \
-  --query 'Policies[?PolicyName==`AdministratorAccess`]'
+# Root account: MFA status and whether it has access keys (both should be safe)
+awk -F, 'NR==1{for(i=1;i<=NF;i++)c[$i]=i; next}
+         $1=="<root_account>" {print "root mfa_active=" $c["mfa_active"], "key1=" $c["access_key_1_active"], "key2=" $c["access_key_2_active"]}' credential-report.csv
+aws iam get-account-summary --query 'SummaryMap.AccountAccessKeysPresent'
 
-# Find access keys older than 90 days
-aws iam list-users --query 'Users[*].UserName' --output text | \
-while read user; do
-  aws iam list-access-keys --user-name "$user" \
-    --query 'AccessKeyMetadata[*].[AccessKeyId,CreateDate]' \
-    --output text
-done
+# Users with no password use or key use for 90 days or more (read the dates, then decide)
+awk -F, 'NR==1{for(i=1;i<=NF;i++)c[$i]=i; next}
+         {print $1, "password_last_used=" $c["password_last_used"], "key1_last_used=" $c["access_key_1_last_used_date"]}' credential-report.csv
 
-# Check root account access keys
-aws iam get-account-summary \
-  --query 'SummaryMap.AccountAccessKeysPresent'
+# Access keys: when each was last rotated
+awk -F, 'NR==1{for(i=1;i<=NF;i++)c[$i]=i; next}
+         $c["access_key_1_active"]=="true" {print $1, "key1_last_rotated=" $c["access_key_1_last_rotated"]}' credential-report.csv
+
+# Who has the AdministratorAccess managed policy
+aws iam list-entities-for-policy --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
 ```
 
 ### Network Security Checks
 
 ```bash
-# Find security groups open to the world
+# Security groups open to the world (IPv4 and IPv6). Run once per region with --region.
 aws ec2 describe-security-groups \
-  --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`]]].[GroupId,GroupName]' \
+  --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`] || Ipv6Ranges[?CidrIpv6==`::/0`]]].[GroupId,GroupName]' \
   --output table
 
-# List public S3 buckets
-aws s3api list-buckets --query 'Buckets[*].Name' --output text | \
+# Public S3 buckets: check Block Public Access, the bucket policy status and the ACL
+aws s3api list-buckets --query 'Buckets[*].Name' --output text | tr '\t' '\n' | \
 while read bucket; do
-  acl=$(aws s3api get-bucket-acl --bucket "$bucket" 2>/dev/null)
-  if echo "$acl" | grep -q "AllUsers"; then
-    echo "PUBLIC: $bucket"
-  fi
+  pab=$(aws s3api get-public-access-block --bucket "$bucket" 2>&1)
+  pol=$(aws s3api get-bucket-policy-status --bucket "$bucket" --query 'PolicyStatus.IsPublic' --output text 2>&1)
+  acl=$(aws s3api get-bucket-acl --bucket "$bucket" 2>&1)
+  echo "$bucket | policy public: $pol"
+  echo "$pab" | grep -q "NoSuchPublicAccessBlockConfiguration" && echo "  no Block Public Access set: $bucket"
+  echo "$acl" | grep -q "AllUsers" && echo "  PUBLIC ACL: $bucket"
 done
 
-# Check VPC Flow Logs status
-aws ec2 describe-vpcs --query 'Vpcs[*].VpcId' --output text | \
+# VPC Flow Logs status
+aws ec2 describe-vpcs --query 'Vpcs[*].VpcId' --output text | tr '\t' '\n' | \
 while read vpc; do
-  flow_logs=$(aws ec2 describe-flow-logs \
-    --filter "Name=resource-id,Values=$vpc" \
-    --query 'FlowLogs[*].FlowLogId' --output text)
-  if [ -z "$flow_logs" ]; then
-    echo "No flow logs: $vpc"
-  fi
+  flow_logs=$(aws ec2 describe-flow-logs --filter "Name=resource-id,Values=$vpc" --query 'FlowLogs[*].FlowLogId' --output text)
+  [ -z "$flow_logs" ] && echo "No flow logs: $vpc"
 done
 
-# Find RDS instances without encryption
-aws rds describe-db-instances \
-  --query 'DBInstances[?StorageEncrypted==`false`].[DBInstanceIdentifier]' \
-  --output table
+# RDS instances that are publicly accessible
+aws rds describe-db-instances --query 'DBInstances[?PubliclyAccessible==`true`].[DBInstanceIdentifier]' --output table
 ```
 
 ### Data Protection Checks
 
 ```bash
-# Find unencrypted EBS volumes
-aws ec2 describe-volumes \
-  --query 'Volumes[?Encrypted==`false`].[VolumeId,Size,State]' \
-  --output table
+# Unencrypted EBS volumes
+aws ec2 describe-volumes --query 'Volumes[?Encrypted==`false`].[VolumeId,Size,State]' --output table
 
-# Check S3 bucket encryption
-aws s3api list-buckets --query 'Buckets[*].Name' --output text | \
+# RDS instances without encryption
+aws rds describe-db-instances --query 'DBInstances[?StorageEncrypted==`false`].[DBInstanceIdentifier]' --output table
+
+# S3 buckets with no default encryption
+aws s3api list-buckets --query 'Buckets[*].Name' --output text | tr '\t' '\n' | \
 while read bucket; do
-  encryption=$(aws s3api get-bucket-encryption \
-    --bucket "$bucket" 2>&1)
-  if echo "$encryption" | grep -q "ServerSideEncryptionConfigurationNotFoundError"; then
-    echo "No encryption: $bucket"
-  fi
+  aws s3api get-bucket-encryption --bucket "$bucket" 2>&1 | grep -q "ServerSideEncryptionConfigurationNotFoundError" \
+    && echo "No default encryption: $bucket"
 done
 
-# Find RDS snapshots that are public
-aws rds describe-db-snapshots \
-  --query 'DBSnapshots[*].[DBSnapshotIdentifier]' --output text | \
+# Public manual RDS snapshots
+aws rds describe-db-snapshots --snapshot-type manual --query 'DBSnapshots[*].DBSnapshotIdentifier' --output text | tr '\t' '\n' | \
 while read snapshot; do
-  attrs=$(aws rds describe-db-snapshot-attributes \
-    --db-snapshot-identifier "$snapshot" \
-    --query 'DBSnapshotAttributesResult.DBSnapshotAttributes[?AttributeName==`restore`].AttributeValues' \
-    --output text)
-  if echo "$attrs" | grep -q "all"; then
-    echo "PUBLIC SNAPSHOT: $snapshot"
-  fi
+  attrs=$(aws rds describe-db-snapshot-attributes --db-snapshot-identifier "$snapshot" \
+    --query 'DBSnapshotAttributesResult.DBSnapshotAttributes[?AttributeName==`restore`].AttributeValues' --output text)
+  echo "$attrs" | grep -qw "all" && echo "PUBLIC SNAPSHOT: $snapshot"
 done
 
-# Check KMS key rotation
-aws kms list-keys --query 'Keys[*].KeyId' --output text | \
+# KMS key rotation for customer-managed keys (AWS-managed keys return an error here; ignore those)
+aws kms list-keys --query 'Keys[*].KeyId' --output text | tr '\t' '\n' | \
 while read key; do
-  rotation=$(aws kms get-key-rotation-status --key-id "$key" \
-    --query 'KeyRotationEnabled' --output text 2>/dev/null)
-  if [ "$rotation" = "False" ]; then
-    echo "Rotation disabled: $key"
-  fi
+  rotation=$(aws kms get-key-rotation-status --key-id "$key" --query 'KeyRotationEnabled' --output text 2>/dev/null)
+  [ "$rotation" = "False" ] && echo "Rotation disabled: $key"
 done
 ```
 
 ### Logging & Monitoring Checks
 
 ```bash
-# Check CloudTrail status
-aws cloudtrail describe-trails \
-  --query 'trailList[*].[Name,IsMultiRegionTrail,LogFileValidationEnabled]' \
-  --output table
+# CloudTrail: list trails, then check each one is logging
+aws cloudtrail describe-trails --query 'trailList[*].[Name,IsMultiRegionTrail,LogFileValidationEnabled]' --output table
+aws cloudtrail describe-trails --query 'trailList[*].Name' --output text | tr '\t' '\n' | \
+while read trail; do
+  echo "$trail logging: $(aws cloudtrail get-trail-status --name "$trail" --query 'IsLogging' --output text)"
+done
+# If describe-trails returns nothing, CloudTrail is not set up in this region: report as Critical.
 
-# Verify CloudTrail is logging
-aws cloudtrail get-trail-status --name my-trail \
-  --query 'IsLogging'
+# AWS Config recorder
+aws configservice describe-configuration-recorders --query 'ConfigurationRecorders[*].[name,roleARN]' --output table
 
-# Check if AWS Config is enabled
-aws configservice describe-configuration-recorders \
-  --query 'ConfigurationRecorders[*].[name,roleARN]' \
-  --output table
-
-# List S3 buckets without access logging
-aws s3api list-buckets --query 'Buckets[*].Name' --output text | \
+# S3 buckets without access logging
+aws s3api list-buckets --query 'Buckets[*].Name' --output text | tr '\t' '\n' | \
 while read bucket; do
-  logging=$(aws s3api get-bucket-logging --bucket "$bucket" 2>&1)
-  if ! echo "$logging" | grep -q "LoggingEnabled"; then
-    echo "No access logging: $bucket"
-  fi
+  aws s3api get-bucket-logging --bucket "$bucket" 2>&1 | grep -q "LoggingEnabled" || echo "No access logging: $bucket"
 done
 ```
 
-## Automated Security Audit Script
+## One-run script (optional)
+Prints counts for a quick look. It changes nothing. Add `--region <region>` to the regional calls.
 
 ```bash
 #!/bin/bash
-# comprehensive-security-audit.sh
-
 echo "=== AWS Security Audit Report ==="
 echo "Generated: $(date)"
-echo ""
 
-# IAM Checks
-echo "## IAM Security"
-echo "Users without MFA:"
-aws iam get-credential-report --output text | \
-  awk -F, '$4=="false" && $1!="<root_account>" {print "  - " $1}'
+echo "## IAM"
+aws iam generate-credential-report >/dev/null
+aws iam get-credential-report --query Content --output text | base64 --decode | \
+  awk -F, 'NR==1{for(i=1;i<=NF;i++)c[$i]=i; next} $c["password_enabled"]=="true" && $c["mfa_active"]=="false" {print "  no MFA: " $1}'
+echo "Root account access keys present (0 is good): $(aws iam get-account-summary --query 'SummaryMap.AccountAccessKeysPresent' --output text)"
 
-echo ""
-echo "Root account access keys:"
-aws iam get-account-summary \
-  --query 'SummaryMap.AccountAccessKeysPresent' --output text
+echo "## Network"
+echo "Security groups open to 0.0.0.0/0: $(aws ec2 describe-security-groups --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`]]].GroupId' --output text | wc -w)"
 
-# Network Checks
-echo ""
-echo "## Network Security"
-echo "Security groups open to 0.0.0.0/0:"
-aws ec2 describe-security-groups \
-  --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`]]].GroupId' \
-  --output text | wc -l
+echo "## Data protection"
+echo "Unencrypted EBS volumes: $(aws ec2 describe-volumes --query 'Volumes[?Encrypted==`false`].VolumeId' --output text | wc -w)"
+echo "Unencrypted RDS instances: $(aws rds describe-db-instances --query 'DBInstances[?StorageEncrypted==`false`].DBInstanceIdentifier' --output text | wc -w)"
 
-# Data Protection
-echo ""
-echo "## Data Protection"
-echo "Unencrypted EBS volumes:"
-aws ec2 describe-volumes \
-  --query 'Volumes[?Encrypted==`false`].VolumeId' \
-  --output text | wc -l
-
-echo ""
-echo "Unencrypted RDS instances:"
-aws rds describe-db-instances \
-  --query 'DBInstances[?StorageEncrypted==`false`].DBInstanceIdentifier' \
-  --output text | wc -l
-
-# Logging
-echo ""
-echo "## Logging & Monitoring"
-echo "CloudTrail status:"
-aws cloudtrail describe-trails \
-  --query 'trailList[*].[Name,IsLogging]' \
-  --output table
-
-echo ""
-echo "=== End of Report ==="
+echo "## Logging"
+aws cloudtrail describe-trails --query 'trailList[*].[Name,IsMultiRegionTrail]' --output table
+echo "=== End of report ==="
 ```
+(`wc -w` counts the IDs on one line. `wc -l` would give 1 for any result.)
 
-## Security Score Calculator
+## Severity tally (replaces a numeric score)
+Do not compute a single security score. A score hides which gap matters. Instead, finish with a count by severity, such as "2 Critical, 3 High, 4 Medium, 1 check not run". Say that the counts show what this check found, and that a clean result for the checks run does not mean the account is secure.
 
-```python
-#!/usr/bin/env python3
-# security-score.py
+## Compliance Mapping (starting points only)
+Name the area a finding relates to. Give a control number only if you are sure of it for the current version of the framework, and tell the user to confirm it. Do not claim the account meets or fails a framework.
 
-import boto3
-import json
+**CIS AWS Foundations Benchmark**: root account use, IAM policies and MFA, logging (CloudTrail, Config, VPC Flow Logs), monitoring and alerting
 
-def calculate_security_score():
-    iam = boto3.client('iam')
-    ec2 = boto3.client('ec2')
-    s3 = boto3.client('s3')
-    
-    score = 100
-    issues = []
-    
-    # Check MFA
-    try:
-        report = iam.get_credential_report()
-        users_without_mfa = 0
-        # Parse report and count
-        if users_without_mfa > 0:
-            score -= 10
-            issues.append(f"{users_without_mfa} users without MFA")
-    except:
-        pass
-    
-    # Check open security groups
-    sgs = ec2.describe_security_groups()
-    open_sgs = 0
-    for sg in sgs['SecurityGroups']:
-        for perm in sg.get('IpPermissions', []):
-            for ip_range in perm.get('IpRanges', []):
-                if ip_range.get('CidrIp') == '0.0.0.0/0':
-                    open_sgs += 1
-                    break
-    
-    if open_sgs > 0:
-        score -= 15
-        issues.append(f"{open_sgs} security groups open to internet")
-    
-    # Check unencrypted volumes
-    volumes = ec2.describe_volumes()
-    unencrypted = sum(1 for v in volumes['Volumes'] if not v['Encrypted'])
-    
-    if unencrypted > 0:
-        score -= 20
-        issues.append(f"{unencrypted} unencrypted EBS volumes")
-    
-    print(f"Security Score: {score}/100")
-    print("\nIssues Found:")
-    for issue in issues:
-        print(f"  - {issue}")
-    
-    return score
+**PCI-DSS**: network security controls, secure configurations, access control and MFA, logging and monitoring
 
-if __name__ == "__main__":
-    calculate_security_score()
-```
+**HIPAA**: access controls (IAM), audit controls (CloudTrail), encryption (EBS, RDS, S3), transmission security (TLS)
 
-## Compliance Mapping
+## Remediation Priorities (suggested order)
 
-**CIS AWS Foundations Benchmark**
-- 1.1: Root account usage
-- 1.2-1.14: IAM policies and MFA
-- 2.1-2.9: Logging (CloudTrail, Config, VPC Flow Logs)
-- 4.1-4.3: Monitoring and alerting
-
-**PCI-DSS**
-- Requirement 1: Network security controls
-- Requirement 2: Secure configurations
-- Requirement 8: Access controls and MFA
-- Requirement 10: Logging and monitoring
-
-**HIPAA**
-- Access controls (IAM)
-- Audit controls (CloudTrail)
-- Encryption (EBS, RDS, S3)
-- Transmission security (TLS/SSL)
-
-## Remediation Priorities
-
-**Critical (Fix Immediately)**
+**Critical (fix first)**
 - Root account access keys
 - Public RDS snapshots
-- Security groups open to 0.0.0.0/0 on sensitive ports
+- Security groups open to 0.0.0.0/0 on sensitive ports (SSH, RDP, databases)
 - CloudTrail disabled
 
-**High (Fix Within 7 Days)**
+**High (fix within about a week)**
 - Users without MFA
 - Unencrypted data at rest
 - Missing VPC Flow Logs
 - Overly permissive IAM policies
 
-**Medium (Fix Within 30 Days)**
-- Old access keys (>90 days)
+**Medium (fix within about a month)**
+- Old access keys (more than 90 days)
 - Missing S3 access logging
 - Unused IAM users
 - KMS key rotation disabled
 
+These timeframes are a common starting rule, not a standard. The user should set their own. Every fix command goes to the user to review and run. Do not run fixes yourself.
+
+## Output Format
+Return in this order.
+
+1. **Scope.** Account (masked), regions checked, checks run, checks not run and why.
+2. **Findings, ranked.**
+
+   | # | Severity | Finding | Resource | Evidence (command and what it returned) | Fix | Framework area |
+   |---|----------|---------|----------|------------------------------------------|-----|----------------|
+
+   Fix is one specific command or console step the user can review. For a finding you could not confirm, write `UNCONFIRMED` and say how to confirm.
+3. **Severity tally.** Counts only, with the clean-result caveat above.
+4. **Fix order.** The top five actions, in order, with the effort for each (minutes, hours, days).
+5. **Next steps.** What to re-run after fixes, and what this check could not see (for example application code, data inside buckets, and other accounts).
+
 ## Example Prompts
 
-- "Run a comprehensive security audit on my AWS account"
+- "Run a security check on my AWS account"
 - "Check for IAM security issues"
 - "Find all unencrypted resources"
-- "Generate a security compliance report"
-- "Calculate my AWS security score"
+- "Make a security compliance summary"
 
 ## Best Practices
 
-- Run audits weekly
-- Automate with Lambda/EventBridge
+- Run the check regularly, for example every month
+- Automate with Lambda/EventBridge once you trust the commands
 - Export results to S3 for trending
-- Integrate with SIEM tools
 - Track remediation progress
-- Document exceptions with business justification
-
-## Kiro CLI Integration
-
-```bash
-kiro-cli chat "Use aws-security-audit to assess my security posture"
-kiro-cli chat "Generate a security audit report with aws-security-audit"
-```
+- Document exceptions with a business reason
 
 ## Additional Resources
 

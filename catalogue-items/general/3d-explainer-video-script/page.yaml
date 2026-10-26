@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: 3d-explainer-video-script
 name: "3D how-it-works video ad script writer"
-summary: "Paste how it works. Get a timed 3D explainer video script and a cast note."
+summary: "Turn how your product works into a timed 3D explainer video script, with a cast note. Each step is checked against your source before it is written."
 job: make-video-ads
 
 headline: "3D how-it-works video ad script writer"
@@ -17,6 +17,10 @@ when:
   - Your product's main benefit happens out of sight, and buyers doubt it does anything.
   - You have a sourced fact about how it works that a normal ad can't show.
   - You want a script your 3D video tool can follow, with every part in one fixed colour.
+not_for:
+  - Your product's result is easy to film. Film a real demo instead, since it is stronger and costs less.
+  - Your claim has no source for how it works. Get a source from your maker or lab first, because this skill cuts any step it cannot back.
+  - You want a single still picture instead of a film. Use the 3D cutaway image ad maker.
 
 you_give:
   - Your selling idea
@@ -37,6 +41,32 @@ how_to_use:
   - Say the length, such as "30 seconds".
   - Read the tests and the chain first. If a test fails, use a different format rather than stretch the claim.
   - Take the script and cast note to "3D how-it-works video clip prompt writer". It takes it from there, with the avatar, sheets, storyboard and clips.
+output_sample:
+  input:
+    - Your selling idea, or a script to test
+    - How your product works, step by step, each step with a source
+    - Your approved and banned claims
+    - The length you want, from 20 to 40 seconds (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: Tests
+      contains: Pass or fail for hidden, true and teaches, with a short reason for each.
+    - name: Chain
+      contains: The process as 2 to 4 links, each marked sourced, common knowledge or unsupported, plus dropped chains.
+    - name: Parts key
+      contains: One colour, shape and plain name for each part of the process, used in every shot.
+    - name: Honesty notes
+      contains: Which verbs, pictures and numbers to avoid so the film claims no more than your sources.
+    - name: Script table
+      contains: Each part with seconds, narration, picture and on-screen text, plus a four-box sketch check.
+    - name: Notes
+      contains: Links you should confirm and claims that were left out.
+    - name: Cast note
+      contains: What carries the ad, why, the narrator's voice and what must never change.
+    - name: Checks missed
+      contains: One line for each of the six checks that still fails, or none.
 
 how_it_works:
   - title: Runs three tests

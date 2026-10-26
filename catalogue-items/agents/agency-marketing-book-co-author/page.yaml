@@ -1,0 +1,145 @@
+name: Book co-author agent for thought-leadership books
+summary: Turn your voice notes and rough ideas into a book chapter in your own voice. Get a chapter blueprint, a versioned draft and notes on weak spots.
+headline: Book co-author agent for thought-leadership books
+subhead: Paste your voice notes, bullet points or interview transcript for one chapter, and say who the book is for. It plans the chapter, writes a first-person draft in your voice, and flags every claim that needs proof. You approve each version.
+job: write-and-tell-stories
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  A business book fails when it sounds like nobody wrote it. Smooth, generic
+  prose with the usual stock lines tells the reader that the
+  author was not there. This book co-author agent works the other way. It
+  builds each chapter from your own words, stories and opinions, so the draft
+  sounds like a person with something at stake.
+
+  It works one chapter at a time. First it tests your brief: who the reader is,
+  what the chapter must prove and how it fits the argument of the whole book.
+  Then it writes a short blueprint, drafts the chapter in first person, and
+  runs a pass to cut filler and sharpen the logic. Each draft is labelled with
+  a version, such as "Chapter 3, Version 2, ready for approval". Notes at the
+  end say what it assumed, where proof is thin and what only you can decide.
+
+  It writes only from what you give it. If a story, a date or a number is
+  missing, it marks the gap in the notes and does not invent one. It does not
+  manage a book contract, a publisher or a full manuscript. The profile's
+  success measures are goals from its author, not results from AI Blocks.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide.
+when:
+  - You are a founder or expert with voice notes and fragments and no chapter yet.
+  - You have a rough chapter that reads like a generic business book and needs your voice back.
+  - You wrote the first chapters and need the next one to follow the same argument.
+  - You want a sharp read on which claims in a chapter are soft or have no proof.
+not_for:
+  - You have no material yet and need a whole-book plan first. Use the Book writing project coach.
+  - You are writing fiction and want to test its structure. Use the Narratologist agent for story structure.
+  - You only need a short story about your brand for an About page. Use the Brand origin story writer.
+  - You want the AI to invent stories, clients or results for you. This agent will not. Bring real notes.
+  - You need proofreading, fact-checking or a layout for print. Ask a human editor.
+you_give:
+  - Your raw material for one chapter, such as voice notes, bullets, an interview transcript or a rough draft
+  - Who the book is for and what they should do or believe after reading it
+  - What the book argues overall, and the chapter's job in it
+  - A sample of your writing or speech, so it can match your voice (optional)
+  - Real stories, numbers and sources you want used (optional)
+  - Earlier chapters or a chapter list, and a length target (optional)
+you_get:
+  - A chapter blueprint with the chapter promise and the order of sections
+  - A first-person draft chapter with a version label
+  - Editorial notes listing assumptions, thin proof and credibility risks
+  - Decisions only you can make
+  - Three questions for your next review, and the exact next task
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste the book's reader and argument, then your notes for one chapter. Add a sample of your voice if you can.
+  - Type "Build the blueprint for Chapter 3" and approve it. Then type "Draft Chapter 3".
+  - Read the editorial notes before the draft. Fill each gap with a real story or source, and say which lines do not sound like you.
+  - Ask for the next version and repeat. Keep each version labelled.
+how_it_works:
+  - title: Test the brief
+    text: It checks the reader, the goal, how finished your notes are and where they contradict each other.
+  - title: Set the chapter promise
+    text: It states what the chapter proves, why the reader should care and its job in the book.
+  - title: Write the blueprint
+    text: It lays out the opening scene or tension, the core argument, the example, the shift in view and the takeaway.
+  - title: Draft in your voice
+    text: It writes first-person prose with one idea per section and scenes from your own notes.
+  - title: Revise the argument
+    text: It cuts filler, replaces vague lines with specific ones and flags claims with no source.
+  - title: Hand back a package
+    text: It returns the labelled draft, editorial notes and the next review questions.
+output_shape: |-
+  CHAPTER BLUEPRINT
+    Chapter promise: <what it proves> | Reader value: <why they care> | Role in book: <function>
+    Section logic: <opening> | <core argument> | <example or lesson> | <shift> | <takeaway>
+
+  CHAPTER DRAFT
+    Chapter <number> - Version <number> - <ready for review or ready for approval>
+    <first-person text>
+
+  EDITORIAL NOTES
+    Assumptions: <list>
+    Proof gaps: <claim> | <what is needed>
+    Tone or credibility risks: <list>
+    Decisions for you: <list>
+
+  NEXT REVIEW QUESTIONS
+    1. <which claim to expand>
+    2. <where it sounds unlike you>
+    3. <which example needs proof>
+    Next task: <exact next step>
+output_sample:
+  input:
+    - Your raw notes for one chapter
+    - Who the book is for and what it argues
+    - A sample of your voice (optional)
+    - Real stories, numbers and sources (optional)
+  prerequisites:
+    - Claude, ChatGPT or Gemini with room to paste long notes
+    - Your own say on every claim and story
+  output:
+    - name: Chapter blueprint
+      contains: The chapter promise, why the reader cares and the order of sections.
+    - name: Chapter draft
+      contains: A first-person draft with a version label, built only from your material.
+    - name: Editorial notes
+      contains: Assumptions made, claims with thin proof, tone risks and decisions that are yours.
+    - name: Next review questions
+      contains: Three questions that guide your next round of changes.
+    - name: Next task
+      contains: The one exact job for the next revision, not an open-ended offer.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A long chat keeps your voice markers, the book's argument and earlier chapters in view across versions.
+  inputs:
+    - A voice memo transcript of you explaining the chapter out loud.
+    - Two pages you wrote that you think sound most like you.
+    - The list of chapters, so each one builds on the last.
+terms:
+  - term: Thought-leadership book
+    meaning: A book that builds an author's name and ideas in a field.
+  - term: Voice
+    meaning: The rhythm, word choice and opinions that make writing sound like one person.
+  - term: Red thread
+    meaning: The one argument that runs through every chapter of the book.
+  - term: Positioning
+    meaning: The spot you want to hold in the reader's mind, compared with others in your field.
+  - term: Ghostwriting
+    meaning: Writing text that is published under someone else's name, from their ideas.
+tweaks:
+  - what: Stage
+    how: Say if you want only the blueprint, only a draft from your notes, or only a revision of your own draft.
+  - what: Length
+    how: Give a word target per chapter so it plans sections to fit.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

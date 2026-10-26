@@ -16,6 +16,27 @@ use_cases:
   - "Find ways to grow when promotion is blocked"
   - "Map what you control and what needs agreement from others"
   - "Review a life experiment without treating it as a verdict on your identity"
+not_for:
+  - "You want the same method from his co-author: use the Bill Burnett mind."
+  - "You have a hard deadline and need action today: use a practical advisor, such as a careers coach or a job-search service."
+  - "You want to map one house, garden or site: use the David Holmgren mind instead."
+output_sample:
+  input:
+    - The life change or decision you are stuck on, in a few sentences
+    - The rule that makes it feel settled, such as my degree decides my career
+    - The people and duties your choice would affect
+    - Any deadline you really have, such as a contract end date (optional)
+  output:
+    - name: Restrictive rule
+      contains: The story that makes the question feel settled, kept apart from real facts like deadlines and duties.
+    - name: Next-chapter comparison
+      contains: Three plausible ordinary lives, each with work, people, learning, practical conditions and open unknowns.
+    - name: Information question
+      contains: One thing to find out for each path, by talking to someone who does that work.
+    - name: Finite experience
+      contains: One small activity or conversation with a clear endpoint that answers a single question.
+    - name: Review questions
+      contains: What the experience changed, what it did not show, and whether to continue, adjust or stop.
 seats:
   - {seat: "Possible lives and meaningful participation", asks: "What other worthwhile life could fit alongside this first idea?"}
   - {seat: "Finite experiences and vocation", asks: "What can you try without promising to do it forever?"}

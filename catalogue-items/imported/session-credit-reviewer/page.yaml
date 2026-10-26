@@ -2,34 +2,100 @@ thinking: low
 thinking_why: It summarises one session against a simple rubric.
 new_slug: session-credit-reviewer
 name: Session credit reviewer
-summary: Finish a work session. Get a record of what you drove, what Claude did
-  and where you steered.
+summary: Turn a Claude Code session into a record of what you decided, what Claude did and where you steered, with a decisions log and work log.
 job: think-and-decide
 headline: Session credit reviewer
-subhead: A record of a work session that shows what you drove, what Claude did
-  and where you steered it. Much of your thinking never gets written down, such
-  as why you picked one option over another.
+subhead: Run it at the end of a Claude Code session in a git project. It reads your recent commits and the chat, rates how much happened, then writes a decisions log, a work log and a session summary. You see what you drove and what Claude did.
 explain: |
-  A record of a work session that shows what you drove, what Claude did and where you steered it. Much of your thinking never gets written down, such as why you picked one option over another.
+  Much of the thinking in a work session never gets written down: why you chose one option over another, or what really caused a bug. This skill captures it while you can still remember, so you have a session review and a work log without writing them by hand.
 
-  At the end it reads recent git history and file changes, then rates the session high, medium or low. High means a new file, four or more files, a compared choice, or a bug with a known root cause. High gets full notes: a decisions log, session history, a work log and an HTML summary. Medium gets a work log only. Low gets nothing. It scores four lenses together: technical difficulty, your doubt, your direction and your judgement.
+  It reads your recent git commits and the conversation, then rates the session high, medium or low. High means a new file, four or more files changed, two options compared, or a bug with a known cause. High gets a decisions log, a session history note, a work log line and an HTML summary. Medium gets one work log line. Low gets nothing, on purpose.
+
+  It also scores four things: how hard the code was, how unsure you were, whether you compared options, and what Claude added. These scores are the AI's judgement, not a measurement. It marks any reason it had to reconstruct with "inferred:" and writes nothing it cannot find in the session.
 when:
   - You finished a long coding session and want the key decisions written down.
   - You fixed a tricky bug and want the root cause on record.
   - You need to show what you decided versus what Claude generated.
-  - You want a work log without writing it by hand.
+  - You want a work log line for each session without writing it yourself.
+not_for:
+  - Your session was a typo fix or a quick rename. It rates it low and writes nothing, by design.
+  - The project has no git history. It can work from the chat alone, but the file-based checks are skipped.
+  - You want to grade the quality of an AI's work. Use the AI work grader.
+  - You want to hand a half-finished job to someone else. Use the AI workflow handoff planner.
 you_give:
-  - A finished work session
-  - Access to the git history
-  - The conversation context
+  - A git project with commits from the session
+  - The conversation from the session
+  - Permission to read your local Claude Code logs, for the token count (optional)
 you_get:
-  - A signal level for the session
-  - A decisions log
-  - A work log
-  - A session history
-  - An HTML summary (for high signal sessions)
+  - A signal rating of high, medium or low, with the reason
+  - Scores for the session on four frames
+  - Entries in DECISIONS.md for each real choice
+  - A line in WORKLOG.md
+  - A session history note and an HTML summary (high sessions only)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude Code in your project folder, at the end of your work session. Do this in the same chat you worked in, so it can see the conversation.
+  - Add this skill and say "run collab-proof" or "review this session".
+  - Say yes or no when it asks to read your local Claude Code logs for the token count. No is fine. That part is optional.
+  - Check the signal rating first. If it says low and you disagree, tell it which decision it missed.
+  - Open the decisions log and read each entry. Fix any reason marked "inferred:" before you rely on it.
+  - Open the HTML summary in your browser to see the full session on one page.
+how_it_works:
+  - title: Rates the signal
+    text: Reads git log and the changed files, then rates the session high, medium or low with a reason.
+  - title: Scores four frames
+    text: Scores technical difficulty, your uncertainty, option forks and Claude's contribution from 0 to 1.
+  - title: Prunes weak frames
+    text: Drops frames under 0.4, unless the session was a fast build with a big Claude contribution.
+  - title: Picks the intent
+    text: Calls the session feature building, bug fixing, refactoring, exploring or flow state.
+  - title: Writes the record
+    text: Adds to DECISIONS.md and WORKLOG.md, and writes a session note and an HTML page for high sessions.
+  - title: Merges earlier snapshots (optional)
+    text: If a PreCompact hook saved snapshots mid-session, it merges them so compacted talk is not lost.
+output_shape: |
+  Signal: <HIGH / MEDIUM / LOW> - <one-line reason>
+  Frames: technical <score>, uncertainty <score>, fork <score>, AI contribution <score>
+  Intent: <class> (runner-up: <class>)
+
+  Files written:
+  - DECISIONS.md  <one entry per real choice, with context, decision, alternatives, reasoning, AI contribution, outcome>
+  - WORKLOG.md  <date> | <intent> | <signal> | D:<score> | cache:<hit%> | tok:<total> | <what shipped>
+  - session-history/<date>-<time>.md
+  - session-history/<date>-<time>-proof.html
+output_sample:
+  input:
+    - A git project with commits from the session
+    - The conversation from the session
+    - Permission to read your local Claude Code logs for the token count (optional)
+  prerequisites:
+    - Claude Code in a project that uses git
+    - python3, only for the optional token count
+  output:
+    - name: Signal rating
+      contains: High, medium or low, with a one-line reason.
+    - name: Frame scores and intent
+      contains: Four scores from 0 to 1 and the kind of session, such as bug fixing.
+    - name: DECISIONS.md
+      contains: One entry for each real choice, with the options you weighed and what Claude added.
+    - name: WORKLOG.md
+      contains: One dated line for the session, with intent, signal, Claude score and token count.
+    - name: session-history note
+      contains: What shipped, what was figured out, where it got hard and next steps.
+    - name: Proof HTML page
+      contains: The whole session on one page, with frame scores, decisions and token use.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It reads your local git history and Claude Code session logs, and writes files into your project.
+  inputs:
+    - A PreCompact hook that saves snapshots, so long sessions keep their early decisions
+    - Short notes on why you made key choices, typed in the chat
+terms:
+  - term: Signal
+    meaning: How much worth recording the session holds, rated high, medium or low.
+  - term: Frame
+    meaning: One way to score the session, such as how hard the code was or how unsure you were.
+  - term: Root cause
+    meaning: The real reason a bug happened, not just what was changed to fix it.
+  - term: Git history
+    meaning: The saved list of changes to your project, with a note on each.

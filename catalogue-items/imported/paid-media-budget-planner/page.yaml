@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Spend choices depend on tradeoffs between channels and risk.
 new_slug: paid-media-budget-planner
 name: Paid media budget planner
-summary: Give it your goal and budget. Get a plan with test ideas, channel
-  picks, spend split, targeting and what not to buy.
+summary: "Plan your paid media budget: give your goal and spend, and get channel picks, a budget split, test ideas with stop and scale numbers, and what to skip."
 job: plan-ad-tests
 headline: Paid media budget planner
-subhead: A paid media plan built on testable bets instead of habit. It tells you
-  where your budget should go, what to test, and which spend to cut.
+subhead: A paid media plan built on testable bets instead of habit. It tells you where your budget should go, what to test, and which spend to cut.
 explain: |
   A paid media plan built on testable bets instead of habit. It tells you where your budget should go, what to test, and which spend to cut.
 
@@ -17,6 +15,10 @@ when:
   - You must split a budget across several platforms.
   - You are deciding whether to scale or kill a campaign.
   - You need a spend case to show your boss or investors.
+not_for:
+  - "You need ad copy or images made: use a creative writer or designer, since this plan does not produce ad creative."
+  - "You want a deep read of past campaign results: pull your own numbers from your analytics tool or ask a performance marketer."
+  - "You have no ad account or sales tracking yet: set up conversion tracking first, then come back to plan spend."
 you_give:
   - Goal and monthly budget
   - Product and buyer
@@ -29,7 +31,32 @@ you_get:
   - Audience and bid guidance
   - List of spend to avoid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your goal, monthly budget, target cost per customer, and what you sell and to whom.
+  - Add your current results from each ad platform if you have them (optional).
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your details. No code or paid tool is needed.
+  - Read the test table first. Check that each test has a stop number and a scale number you can measure.
+  - Compare any benchmarks in the plan with your own data. Treat them as rules of thumb.
+  - Start with one or two tests. Review them against the stop and scale numbers before you move more budget.
+output_sample:
+  input:
+    - Your goal and monthly budget
+    - Your product and who buys it
+    - Your target cost per customer
+    - Your current channels and results (optional)
+  prerequisites:
+    - Working sales or lead tracking in your analytics tool, so you can check results against your own numbers
+  output:
+    - name: Test hypotheses
+      contains: Each bet lists the audience, offer, channel, metric measured and size of change, with the numbers that mean stop or scale.
+    - name: Channel selection
+      contains: Search, shopping, Meta, TikTok, LinkedIn and others compared by fit with your buyer, with reasons for each pick.
+    - name: Budget allocation
+      contains: How to split spend between brand and performance, and between steady spend and tests.
+    - name: Audience targeting
+      contains: Who to reach with new audiences, who to retarget, and who to leave out.
+    - name: Bid strategy
+      contains: Which bid style fits your data today and when to change it.
+    - name: What not to spend on
+      contains: Spend to cut or avoid, with the reason for each.
+    - name: Attribution check
+      contains: Why platform reports overstate results and which number to trust when you decide.

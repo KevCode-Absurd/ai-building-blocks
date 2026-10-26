@@ -1,6 +1,6 @@
 new_slug: plan-your-store-pages-and-get-a-safe-ai-build-plan
 name: Plan store pages and get a safe AI build plan
-summary: Give it your products. Get variant tables, menus, page sections and a Claude Code build prompt.
+summary: Plan your Shopify store pages from your real products. Get variant tables, a menu, product page sections and a safe Claude Code build plan.
 job: set-up-store
 thinking: high
 thinking_why: It runs four skills in a row, and the last one needs the other three to be right. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want to try Claude Code on your Shopify theme but have never set up the products it would build around.
   - Your last theme edit looked generic, with made-up products and a menu that did not fit.
   - You are worried an AI edit could break the live store.
+not_for:
+  - "Your store already has its products and menu set up: use the Landing page design planner to plan a single page."
+  - "You need one small text change: use your store's own theme editor."
+  - "You want a page that matches one ad: use the Ad-matched landing page writer."
 you_give:
   - Your product list with prices, options, stock and what ships
   - Your catalogue size and platform
@@ -30,13 +34,33 @@ how_to_use:
   - Give real products with real prices. Without them, the build will invent some.
   - Before step 4, check that you have Claude Code, Node, Git and the Shopify CLI.
   - Run the build on a copy of your theme only. Publish it yourself after you check it on your phone.
+output_sample:
+  input:
+    - Your product list with prices, options, stock and what ships
+    - Your catalogue size and platform
+    - The doubts buyers have, and any proof you hold (optional)
+    - Your store domain, theme name and screenshots of sections you like (optional)
+  prerequisites:
+    - Claude Code, Node, Git and the Shopify CLI, for the build in step 4
+    - A brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Products and variants"
+      contains: Each product's type, shared options, a variant table and a list of what is still missing.
+    - name: "Step 2: Collections and menu"
+      contains: Tags, collections with rules, filters in order, a short menu and a click-depth check.
+    - name: "Step 3: Product page sections"
+      contains: Each buyer doubt matched to a section, the proof that settles it and the settings to switch on.
+    - name: "Step 4: AI build plan"
+      contains: A tools check, a safe theme copy, the Claude Code kickoff prompt, a section plan and publish steps.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and every MISSING line in one list.
 how_it_works:
   - title: Set up products and variants
     text: Picks a type for each product, builds the shared options, makes a variant table with price, stock, weight and photo, and lists what is still missing.
   - title: Plan collections, filters and the menu
     text: Fixes product type names and tags, makes a collection for each way shoppers look, picks the filters in order and checks every product is two or three clicks away.
   - title: Plan the product page sections
-    text: Lists each buyer doubt, matches it to a section and the proof that settles it, orders the page and lists the settings and proof still to collect.
+    text: Lists each buyer doubt, matches it to a section and the proof that settles it, uses the collections from step 2 to pick products to recommend, orders the page and lists the settings and proof still to collect.
   - title: Get the safe AI build plan
     text: Writes the Claude Code kickoff prompt, a section plan with a review after each, and steps that build on a copy of the theme and push it unpublished.
 output_shape: |-

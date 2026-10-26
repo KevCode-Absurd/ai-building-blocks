@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fetches public lists and shows them.
 new_slug: youtube-channel-browser
 name: YouTube channel browser
-summary: Give it a channel. Get its latest uploads and a search inside its
-  videos. Collects data from websites.
+summary: "Browse a YouTube channel: see its 15 latest uploads with views, or search inside its videos. Give it an @handle, link or ID."
 job: grow-social
 headline: YouTube channel browser
-subhead: Give it a channel. Get its latest uploads and a search inside its
-  videos. Collects data from websites. Bring a channel @handle, link or ID. Use
-  the result to plan your next step.
+subhead: Give it a YouTube channel as an @handle, link or ID. It lists the newest videos with view counts, or searches inside that channel for a topic. It needs a TranscriptAPI key. This is a copied third-party skill under the MIT licence, and its original author is credited.
 explain: |
   Point it at a YouTube channel and see its newest uploads with view counts, or search inside that channel's videos for a topic.
 
@@ -18,6 +15,10 @@ when:
   - You need to find which video in a big channel covers a specific topic.
   - You are researching a competitor's output and want view counts.
   - You want a list of videos to pull transcripts from later.
+not_for:
+  - "You want to create or manage your own channel: use YouTube Studio, which also shows your private stats."
+  - "You want the words spoken in a video: use a transcript tool. This page only lists videos and channel details."
+  - "You have no TranscriptAPI key and cannot run code: ask a person to pull the list by hand from the channel page."
 you_give:
   - A channel @handle, link or ID
   - A search phrase for inside the channel (optional)
@@ -28,8 +29,29 @@ you_get:
   - Search hits inside the channel
   - A full video list if you ask for it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your TranscriptAPI key.
+  - Get a free TranscriptAPI key at transcriptapi.com. It needs no card and comes with 100 credits.
+  - Open an AI that can run code and reach the web, such as Claude with code tools on.
+  - Paste the skill text into the chat and add your key when asked.
+  - Give it a channel @handle, link or ID. Ask for the latest uploads first, since that call is free.
+  - Add a search phrase if you want videos on one topic. Check the list before you use it.
+output_sample:
+  input:
+    - A channel @handle, link or ID
+    - A search phrase for inside the channel (optional)
+    - Your TranscriptAPI key
+  prerequisites:
+    - An AI that can run code and reach the web
+    - A TranscriptAPI key (a free account gives 100 credits)
+  output:
+    - name: Channel ID
+      contains: The channel's standard ID, worked out from the handle or link you gave.
+    - name: Latest uploads
+      contains: The 15 newest videos with title, view count, publish date and link. This call is free.
+    - name: Channel search results
+      contains: Videos in that channel that match your phrase. Each search costs 1 credit.
+    - name: Full video list
+      contains: Every video, page by page, newest, oldest or most viewed first. Each page costs 1 credit.
+    - name: Channel profile
+      contains: Title, handle, subscriber and video counts, description and tags. Costs 1 credit.
+    - name: Playlists and posts
+      contains: The channel's playlists and community posts, if you ask for them. Each page costs 1 credit.

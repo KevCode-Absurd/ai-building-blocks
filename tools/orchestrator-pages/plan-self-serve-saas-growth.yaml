@@ -13,6 +13,10 @@ explain: |-
 when:
   - You want the result described above from the files and facts you already have.
   - You need a repeatable process and a clear next action.
+not_for:
+  - "You do not know yet which growth channel to try: use Find your SaaS growth channel."
+  - "Your product needs a sales call to close, with large deals: use the Enterprise customer onboarding planner, or expect this to tell you self serve is a poor fit."
+  - "You only want to improve first-time use: use the First-use onboarding designer."
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits
@@ -26,11 +30,33 @@ how_to_use:
   - Share your goal and the files listed above.
   - Ask it to follow the steps and mark any missing facts.
   - Review the result before approving external actions.
+output_sample:
+  input:
+    - What your product does, who uses it and who pays
+    - The steps from sign-up to first use
+    - Spend, sign-ups, paying users and retention by channel (optional)
+    - Typical deal size and gross margin (optional)
+    - Your team size and goals, for the meeting rhythm
+  prerequisites:
+    - Nothing needed beyond a chat with your AI. A spreadsheet export helps if you have one.
+  output:
+    - name: Fit check
+      contains: Whether self serve, mixed or sales-led suits your product, with reasons from your answers.
+    - name: First-value audit
+      contains: The steps to first use, time to first value and the fixes to try.
+    - name: Growth equation and channel table
+      contains: For each channel, cost to win, conversion, retention, payback and a keep, optimize or kill call.
+    - name: Forecast and first test
+      contains: Baseline, upside and downside by channel, and a one-page playbook for the first test.
+    - name: Meeting rhythm and metric reviews
+      contains: Which meetings you need, the weekly numbers to review and who decides what.
+    - name: Missing list
+      contains: Every MISSING line in one list.
 how_it_works:
   - title: Self serve product growth planner
     text: Share your product funnel. Get activation and expansion changes, with tests to see whether self serve growth fits.
   - title: Company meeting rhythm designer
-    text: Share your team and goals. Get meeting rhythms, metric reviews and decision rules that fit your stage.
+    text: Share your team and goals. Get meeting rhythms, metric reviews and decision rules that fit your stage, built around the tests from step 1.
 output_shape: |-
   Growth motion choice
   Activation and expansion tests

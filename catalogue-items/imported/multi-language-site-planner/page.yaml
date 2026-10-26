@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares several set-up options and picks one for your case.
 new_slug: multi-language-site-planner
 name: Multi-language site planner
-summary: Tell it your site and target markets. Get a plan for language URLs,
-  hreflang, translation steps, currencies and right-to-left layouts.
+summary: "Plan a multi-language website: language URLs, hreflang tags, translation steps, currencies and right-to-left layouts, all in one plan for your markets."
 job: build-websites
 headline: Multi-language site planner
-subhead: A plan to launch your site in new languages and regions that people and
-  search engines can both follow. You decide URLs, translation steps, formats
-  and layout before building.
+subhead: A plan to launch your site in new languages and regions that people and search engines can both follow. You decide URLs, translation steps, formats and layout before building.
 explain: |
   A plan to launch your site in new languages and regions that people and search engines can both follow. You decide URLs, translation steps, formats and layout before building.
 
@@ -18,6 +15,10 @@ when:
   - Your German pages are not showing up for German searchers.
   - You must choose between subfolders, subdomains and separate domains.
   - You need layouts that work for Arabic or Hebrew.
+not_for:
+  - Your site has one language only. You do not need a plan, so keep your site as it is.
+  - You want to pick a domain name that is not tied to language. Ask your web developer or domain registrar.
+  - You want to write marketing copy for a new market. Write it with your AI or a native speaker, then use this plan to place it.
 you_give:
   - The languages and regions you want
   - Why each market matters
@@ -30,7 +31,34 @@ you_get:
   - Currency, date and number rules
   - Right-to-left layout notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather first: your list of languages and regions, traffic or sales per market if you have it, your current URLs, and who can translate."
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code running or paid tool is needed.
+  - Paste in your gathered details. If something is missing, your AI should ask you before it plans.
+  - Read the URL choice and the translation workflow first. Check that you can keep up with them.
+  - Give the plan to your web developer. Use it to build the site and to test each language before launch.
+output_sample:
+  input:
+    - The languages and regions you want, such as German for Germany
+    - Why each market matters to you
+    - Your current site set-up and URLs
+    - Who will translate, and how often your content changes
+    - Your current traffic or sales by market (optional)
+  output:
+    - name: Locale list
+      contains: Each language and region ranked by priority, with the reason it matters to your business.
+    - name: URL structure
+      contains: The URL pattern chosen (usually subfolders), why it fits, and whether to use language only or language plus region.
+    - name: Content structure
+      contains: Whether every page is translated, only some pages, or each market has its own content.
+    - name: hreflang plan
+      contains: How language tags tell Google which version fits which country, including the fallback version and matching page links.
+    - name: Translation workflow
+      contains: Who translates, the steps from source text to publish, the tools, and how updates reach each language.
+    - name: Localization checklist
+      contains: Currency, numbers, dates, units, address forms and right-to-left layout notes for each locale.
+    - name: Language switcher design
+      contains: Where the switcher sits, how it shows language names, and how it remembers the visitor's choice.
+    - name: Test plan
+      contains: What to check in each language before launch, such as tags, page links, currency and layout.
+    - name: Maintenance plan
+      contains: How often to update translations, review results per market, and when to close a language.

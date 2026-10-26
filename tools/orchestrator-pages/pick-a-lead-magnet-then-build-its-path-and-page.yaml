@@ -1,6 +1,6 @@
 new_slug: pick-a-lead-magnet-then-build-its-path-and-page
 name: Pick a lead magnet, then build its path and page
-summary: Give it your buyer. Get a lead magnet, its path to a sale, a signup page and a review.
+summary: Pick a lead magnet for your email list, then get its path to a sale, a signup page and a page review. Give it your buyer and what you sell.
 job: write-landing-page
 thinking: medium
 thinking_why: The steps are clear and short. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - You have traffic but no email list.
   - Your signup box says "subscribe" and few people use it.
   - You have a free offer in mind but no page or follow-up.
+not_for:
+  - "Your buyers will never trade an email for anything: add a plain newsletter signup box on your site instead."
+  - "You only need the signup page: use the Ad-matched landing page writer on its own."
+  - "You already have a live page and only want it checked: use the Landing page auditor on its own."
 you_give:
   - Who your buyer is and the problem they have now
   - What you sell and your price
@@ -30,6 +34,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe one buyer. A second buyer gets a second run.
   - Add your brand file so the page sounds like you.
+output_sample:
+  input:
+    - Who your buyer is and the problem they have now
+    - What you sell and your price
+    - The post, ad or link people click to reach the page (optional)
+    - Customer quotes (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional, but the result is better with it)
+  output:
+    - name: "Step 1: Lead magnet"
+      contains: One free offer for your buyer's stage, what to ask for in return, and an outline of its page and emails.
+    - name: "Step 2: Path to a sale"
+      contains: The route from signup to sale, what each email does, and the numbers to watch.
+    - name: "Step 3: Signup page"
+      contains: A page built from the click, with doubts answered under their own headings and the button text.
+    - name: "Step 4: Page review"
+      contains: The page read at a glance, skimmed and with doubt, with a ranked list of fixes.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Pick the lead magnet
     text: Picks a specific problem, lists free-offer types for the buyer's stage, chooses one and outlines its page and emails.

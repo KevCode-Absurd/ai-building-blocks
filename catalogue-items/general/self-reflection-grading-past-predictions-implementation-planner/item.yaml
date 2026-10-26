@@ -1,17 +1,21 @@
 slug: self-reflection-grading-past-predictions-implementation-planner
 name: Agent prediction review builder
-summary: Build a prediction score log and proposed lessons.
+summary: "Grade your AI agent's past predictions against what happened. Get a score log, a likely cause for each miss and lessons to review. Draft only."
 category: general
 type: skill
 role: make
 job: ops
 level: intermediate
 inputs:
+  - type: brief
+    required: true
   - type: codebase
-    required: true
+    required: false
 outputs:
-  - type: code_change
+  - type: plan
     required: true
+  - type: code_change
+    required: false
 uses: []
 package_files: all
 origin: own

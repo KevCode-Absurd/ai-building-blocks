@@ -1,6 +1,6 @@
 new_slug: winning-style-image-ads
 name: "Make new image ads in the style your winners share"
-summary: "Give it your ads with results. Get the style your winners share, new ad plans, and image prompts ready to make."
+summary: "Find the style your best image ads share, then get new ad plans and image prompts that keep it. Paste six or more image ads with results."
 job: make-image-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You have at least six image ads with results and want more that work the same way.
   - Your winners all feel alike but you cannot say why.
   - You want new ads that test one change at a time, not ten new guesses.
+not_for:
+  - "You have fewer than six image ads with results: use the Single image ad planner to plan new ads from your product facts instead."
+  - "You want a video ad: use the Video ad script writer from customer quotes, or write the script with a person who makes video."
+  - "You want to copy one winning layout exactly: use the Reference layout image ad maker."
 
 you_give:
   - Your image ads, as pictures, with their results (spend, sales or clicks)
@@ -37,6 +41,30 @@ how_to_use:
   - Have your inputs ready. Your ads as pictures with their results, your product facts and photos, and a line on how many new ads you want.
   - Check the style list and the new ad plans when it stops. Fix anything that is wrong before it writes the prompts.
   - Make the images in your image tool, pick the ones to keep, then bring them back for the upscale step.
+output_sample:
+  input:
+    - Your image ads as pictures, with their results (spend, sales or clicks)
+    - Your product facts and photos
+    - Your brand brain (optional)
+    - How many new ads you want, and the sizes
+  prerequisites:
+    - An AI that can read files and images, such as Claude with the handoff pack
+    - An image tool of your choice to make the pictures (some image tools need a paid plan)
+  output:
+    - name: Winning style
+      contains: The traits your best ads share and your weakest ads lack, plus the old words and numbers to drop.
+    - name: New ad plans
+      contains: Each new ad keeps the style and changes one thing, such as the argument or the buyer.
+    - name: Locked brief
+      contains: Every setting filled in one brief, with any clashing settings listed so every ad is made the same way.
+    - name: Ad plan for each ad
+      contains: The one-sentence argument, the words on the image, the layout and the feed copy.
+    - name: Image prompts
+      contains: One prompt per ad and size that keeps your real product, with the job of each reference photo.
+    - name: Upscale plan
+      contains: The target size, the tool settings and any changes found, for the images you pick.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Finds the style your winners share

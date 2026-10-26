@@ -1,6 +1,6 @@
 new_slug: sales-letter-outline
 name: Research your buyer and outline the sales letter
-summary: Give it your product material. Get sorted research, the feeling to write to and a full sales letter outline.
+summary: Turn your product material into a sales letter outline. Get sorted buyer research, the one feeling to write to, and a plan with proof for each claim.
 job: write-landing-page
 thinking: high
 thinking_why: It reads a lot of material and has to choose one theme and keep every claim tied to proof. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to write a long sales page or letter and want the research done first.
   - You have a lot of old promotions, emails and notes and no idea which parts are worth using.
   - Your page keeps leading with features and you want to start from what your buyer feels.
+not_for:
+  - "You have only a short product page and little else: use the Community evidence researcher to find real buyer words first."
+  - "You already have your research and want the finished page: use the Proof-backed sales copy writer."
+  - "You only want to know what your buyers worry about: use the Buyer problem list builder."
 you_give:
   - Product material, such as issues, emails, bonuses and old promotions, with dates
   - Your brand file (optional)
@@ -32,6 +36,27 @@ how_to_use:
   - Share all the product material you have, newest first. It builds the research files.
   - Read the dominant feeling it picks. Leave it a day or two and talk it over with someone before you accept it as the theme.
   - Show the outline to someone outside the project before you start writing.
+output_sample:
+  input:
+    - Your product material, such as old promotions, emails and bonuses, with dates
+    - Your price, contents, guarantee and proof
+    - Customer words, such as reviews or call notes (optional)
+    - Your brand brain or a short buyer description (optional)
+    - The goal for the piece, such as break-even on each send (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - A brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: "Step 1: Copy research file builder"
+      contains: Best passages sorted by purpose with their sources, proof you can give away, and your top past hits.
+    - name: "Step 2: Dominant emotion finder"
+      contains: The one feeling to write to, the events and words behind it, a main theme and a runner-up.
+    - name: "Step 3: Sales letter outline planner"
+      contains: Sections of the letter, headline ideas, each claim with its proof, and three headline, deck and lead-in options.
+    - name: Brief
+      contains: A short brief another writer or AI can use to write the full page.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the research files
     text: Reads your material, copies the best passages into files by purpose, and lists proof you can give away and the top past hits.

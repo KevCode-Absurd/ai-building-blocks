@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches amounts and explains the gaps.
 new_slug: payout-reconciler
 name: Payout reconciler
-summary: Run it on your payouts. Get each one matched to the orders that funded
-  it, with gaps flagged.
+summary: Check your Shopify Payments payouts against the orders behind them. Find the gaps that explain a missing dollar, in one reconciliation file.
 job: run-your-store
 headline: Payout reconciler
-subhead: Each Shopify Payments payout matched to the orders that funded it, with
-  gaps flagged so you can trace a missing dollar. It reads data only and changes
-  nothing.
+subhead: Each Shopify Payments payout matched to the orders that funded it, with gaps flagged so you can trace a missing dollar. It reads data only and changes nothing.
 explain: |
   Each Shopify Payments payout matched to the orders that funded it, with gaps flagged so you can trace a missing dollar. It reads data only and changes nothing.
 
@@ -18,6 +15,10 @@ when:
   - You close the books and must match deposits to orders.
   - Refunds or fees seem to be missing from a payout.
   - Your accountant asks for proof of what each payout covered.
+not_for:
+  - "Your store uses only third-party gateways: it stops with a message, so use that gateway's own dashboard to match deposits."
+  - "You suspect fraud: it finds money gaps, not fraud, so use the payout detail view in your Shopify admin."
+  - "You need the final books match: compare the result with the deposit records in your bookkeeping software or ask your accountant."
 you_give:
   - Store address
   - Days to look back (optional)
@@ -29,8 +30,30 @@ you_get:
   - List of gaps over your tolerance
   - Readable or JSON output
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Check that your store uses Shopify Payments. If it does not, this skill stops with a message.
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Sign in with the Shopify command-line tool, with read access to payouts and orders.
+  - Ask your AI to run the payout reconciliation skill. Give it your store address, and days to look back or a tolerance if you want to change them.
+  - Open the CSV file and check each flagged payout in your Shopify admin. Flags are leads, not confirmed errors.
+  - Payouts still in transit are skipped. Run it again after they are paid.
+output_sample:
+  input:
+    - Your store address
+    - Days to look back (optional, 30 by default)
+    - Tolerance amount (optional, one cent by default)
+    - Output style, readable or JSON (optional)
+  prerequisites:
+    - A store that uses Shopify Payments
+    - A Shopify command-line login with read access to payouts and orders
+    - An AI that can run commands and reach your Shopify admin
+  output:
+    - name: Start banner and step log
+      contains: Shows the store, the start time and what each step did as the check runs.
+    - name: Payout check
+      contains: For each payout, the reported net, the expected net from charges, refunds, adjustments and fees, and the difference.
+    - name: Order cross-check
+      contains: Candidate orders from around the payout date, pulled only for payouts that were flagged.
+    - name: Summary
+      contains: Counts of payouts, matches and gaps, plus the total size of the gaps and the top ones.
+    - name: payout_reconciliation CSV file
+      contains: One row per payout with its figures, difference, currency and a verdict of ok or discrepancy.

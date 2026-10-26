@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads the project layout and writes short notes for each part.
 new_slug: project-memory-organizer
 name: Project memory organizer
-summary: Point it at your project. Get small context files per folder so your AI
-  reads less and costs less.
+summary: Set up project memory for your AI. Get a short context file for each folder so your AI reads less, and see rough token savings.
 job: set-up-ai
 headline: Project memory organizer
-subhead: Small context files for each folder in your project, so your AI reads
-  only what it needs and your token bill drops. It stops re-reading the whole
-  project on every prompt.
+subhead: Small context files for each folder in your project, so your AI reads only what it needs and your token bill drops. It stops re-reading the whole project on every prompt.
 explain: |
   Small context files for each folder in your project, so your AI reads only what it needs and your token bill drops. It stops re-reading the whole project on every prompt.
 
@@ -18,18 +15,47 @@ when:
   - One giant CLAUDE.md is too big and mostly irrelevant to any one task.
   - You are starting a project and want structured memory from day one.
   - You want to see how much context you are saving.
+not_for:
+  - "Your project has fewer than three folders: one CLAUDE.md file is enough, so write a short one by hand."
+  - "You want exact token costs: the savings figures are rough guesses, so check your AI provider's usage page."
+  - "Your AI tool can't read or edit files on your computer: write the folder notes by hand instead."
 you_give:
   - Your project folder
   - Notes you already have (optional)
-  - Confirmation of guessed facts in the inbox
 you_get:
   - Short root context file
   - One context file per folder
   - Decisions and patterns files
   - Savings dashboard
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and edit your project files.
+  - Open your project in an AI that can read and edit files, such as Claude Code.
+  - Paste this skill into the chat, or add it to your project.
+  - Type "go ham". Your AI finds your project type and writes the context files.
+  - Open .memory/inbox.md. Confirm or reject each guess.
+  - Type "ham savings" to see rough savings. These are estimates, not measured costs.
+  - Type "ham dashboard" to see charts. This needs Node.js 18 or newer.
+output_sample:
+  input:
+    - Your project folder
+    - Notes you already have (optional)
+    - Your yes or no on guessed facts in the inbox
+  prerequisites:
+    - An AI that can read and edit your project files, such as Claude Code
+    - Node.js 18 or newer, only if you want the dashboard
+  output:
+    - name: CLAUDE.md (root)
+      contains: A short global note of about 200 tokens, with routing lines that point to each folder file.
+    - name: Folder CLAUDE.md files
+      contains: One short note of about 250 tokens for each main folder, covering only that folder.
+    - name: .memory/decisions.md
+      contains: A record of big choices made in the project, and why.
+    - name: .memory/patterns.md
+      contains: Reusable ways of doing things in your project.
+    - name: .memory/inbox.md
+      contains: Facts the AI guessed, waiting for you to confirm or reject.
+    - name: .memory/audit-log.md
+      contains: A history of health checks on the memory files.
+    - name: Savings report
+      contains: A rough estimate of tokens and cost saved, based on a 4-characters-per-token guess.
+    - name: Dashboard
+      contains: A local web page showing savings, session history, and which folders lack context files.

@@ -1,6 +1,6 @@
 slug: google-ads-developer-access-setup-planner
 name: Google Ads token and access check planner
-summary: Plan the final Google Ads access check. Keep tokens private and verify the selected manager and target account with a read probe.
+summary: "Plan a safe read-only test of your Google Ads API access, covering developer token, OAuth login and manager account, with no secret shown."
 category: general
 type: skill
 role: make

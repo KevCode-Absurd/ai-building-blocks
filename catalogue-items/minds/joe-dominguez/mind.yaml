@@ -16,6 +16,29 @@ use_cases:
   - "Compare two job schedules alongside their pay and practical demands"
   - "Separate your sense of useful work from your paid job title"
   - "Make hidden time costs visible in a volunteer commitment"
+not_for:
+  - "You want investment, tax or benefit advice, or a date you can quit work: ask a licensed financial adviser or accountant."
+  - "You want to learn how households can handle money with their family: hire Amelia Warren Tyagi or Beth Kobliner."
+  - "You want to judge whether a choice was good or only lucky: hire Annie Duke."
+output_sample:
+  input:
+    - The period you want to look at, with the same start and end dates
+    - Your daily spending log and your account or card records
+    - Pay, paid hours, commute time and work costs, if you are comparing jobs (optional)
+    - A note of which numbers are estimates
+  output:
+    - name: The question and definitions
+      contains: What is being counted, the period covered, and what each total means by spending.
+    - name: Ledger or comparison
+      contains: Your entries or two job schedules side by side, with transfers and card repayments kept apart from purchases.
+    - name: Reconciliation notes
+      contains: Each mismatch explained, or listed as unresolved, with missing entries, refunds and timing differences named.
+    - name: Time-cost assumptions
+      contains: Any labelled ratio of money to time, with what it leaves out.
+    - name: Purpose observation
+      contains: What each repeated purchase was meant to give you and what it actually gave.
+    - name: Next question
+      contains: One bounded question to look into next, and a plain note on the limits of the result.
 seats:
   - {seat: "Life-energy accounting and visible money records", asks: "What does the record show in money and in time?"}
   - {seat: "Work, spending and enough", asks: "What did that expenditure actually make possible in your life?"}

@@ -1,6 +1,6 @@
 new_slug: store-keyword-validator
 name: "Store keyword validator"
-summary: "Paste products and keyword data. Get keywords worth a page, page types and a score out of 100."
+summary: "Check which store keywords deserve a page. Paste your products and keyword data. You get keep or reject calls, page types and a score out of 100."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It checks each term against clear thresholds, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You have a pile of keyword ideas and need to know which are worth a page.
   - You are about to build new collections and want proof each one can rank.
   - You only have the free Keyword Planner and want to know how far to trust it.
+not_for:
+  - "You have no keyword data yet and only a new idea: start with free Google Keyword Planner and Google Trends, then come back."
+  - "You want a page-by-page plan for the terms you keep: use the Store keyword map builder."
+  - "Your store does not sell the product behind the term: pick a different term, or ask a person who knows your market."
 
 you_give:
   - Your products and collections, and what each page is about
@@ -36,6 +40,28 @@ how_to_use:
   - Say how old your site is, since a new site uses lower thresholds.
   - Check the terms it marks as keep by searching them yourself and looking at page one.
   - Set up rank tracking for the three to five terms it picks, and build the owner pages.
+output_sample:
+  input:
+    - Your products and collections, and what each page is about
+    - Keyword data from a tool, or free Keyword Planner ranges
+    - Words a buyer would type to find you (optional)
+    - Two or three rival store addresses (optional)
+    - How old your site is (optional)
+  prerequisites:
+    - A keyword export or Keyword Planner data pasted into the chat
+  output:
+    - name: Keyword table
+      contains: Each term with intent, volume, difficulty, bid, what ranks, page type, owner page and a keep or reject verdict.
+    - name: Per page
+      contains: One main keyword and two supporting keywords for each page.
+    - name: Track this month
+      contains: Three to five terms to send to rank tracking.
+    - name: Thresholds used
+      contains: Which threshold row it picked and why.
+    - name: Score
+      contains: A score out of 100 for the list, the sum behind it, and a second score without rejected terms.
+    - name: Not run, clashes and missing
+      contains: Tests it could not run, pages aiming at one term, and any missing inputs.
 
 how_it_works:
   - title: Finds ideas

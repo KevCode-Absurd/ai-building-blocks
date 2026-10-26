@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a short set of rules to write one paragraph.
 new_slug: research-brief-writer
 name: Research brief writer
-summary: Give it a vague research need. Get one clear paragraph a deep-research
-  tool can act on without questions.
+summary: Turn a vague research need into one clear research brief paragraph that a deep research tool can act on without asking you questions.
 job: think-and-decide
 headline: Research brief writer
-subhead: One clear paragraph that a deep research tool can act on without asking
-  you anything. Vague research needs usually give vague answers, and this fixes
-  the request before you send it.
+subhead: One clear paragraph that a deep research tool can act on without asking you anything. Vague research needs usually give vague answers, and this fixes the request before you send it.
 explain: |
   One clear paragraph that a deep research tool can act on without asking you anything. Vague research needs usually give vague answers, and this fixes the request before you send it.
 
@@ -18,6 +15,10 @@ when:
   - Past research results were off topic or too general.
   - You need to brief a researcher who has no background.
   - You have several questions and need to pick one mission.
+not_for:
+  - "You only need a quick fact or a one-question answer: use a normal web search."
+  - "You want the research done, not a brief: paste the finished brief into a deep research tool such as ChatGPT, Claude or Gemini."
+  - "You have no goal or decision behind the question: talk it through with a colleague first, then come back."
 you_give:
   - What you want to learn
   - Why you need it and what it informs
@@ -29,7 +30,30 @@ you_get:
   - Stated limits and exclusions
   - Output format request
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed to write the brief.
+  - Describe what you want to learn and why. Add names, dates and known facts. Say what to include or avoid.
+  - Read the brief your AI writes. Check that it has one question, three to six numbered sub-questions and your limits.
+  - Fix anything wrong or missing, then ask your AI to rewrite it as one paragraph.
+  - Paste the brief into a deep research tool. Some of these need a paid plan or an account, so check yours first.
+output_sample:
+  input:
+    - What you want to learn, even if it is vague
+    - Why you need it and what decision it informs
+    - Known facts, names and dates about your project
+    - Things to include or avoid (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - A deep research tool to run the brief afterward (optional)
+  output:
+    - name: Project explainer
+      contains: One or two plain sentences on what the project is, why it exists and where things stand.
+    - name: Core question and decision
+      contains: The single question the research must answer and the decision the answer will inform.
+    - name: Numbered sub-questions
+      contains: Three to six questions, numbered inside the paragraph, that cover the core question fully.
+    - name: Include and avoid limits
+      contains: What sources and topics to focus on, and what to leave out.
+    - name: Source and proof rules
+      contains: Prefer primary sources, separate fact from guesswork, check gaps before finishing.
+    - name: Output format request
+      contains: Each finding needs a source link, a specific claim and a one-line reason it matters, in one markdown file.

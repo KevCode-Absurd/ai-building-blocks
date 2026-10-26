@@ -1,0 +1,155 @@
+name: Geoprocessing Specialist agent
+summary: Turn a repeat ArcGIS Pro task into a Python script, toolbox or Model Builder model. Get a build plan with parameters, checks and a draft script.
+headline: Geoprocessing Specialist agent
+subhead: Describe the manual steps you repeat in ArcGIS Pro. The agent picks a script, a Python toolbox or Model Builder, then plans the inputs, checks and error messages. You get a step table, a draft ArcPy script and a test list.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  If you have clipped the same layer 47 times by hand, a script will do it faster and never miss one. This ArcGIS automation agent turns a manual geoprocessing routine into something repeatable and shareable. It is for people who work in ArcGIS Pro and its Python library, ArcPy.
+
+  It starts from your manual steps, in order. It finds the inputs, the settings and the outputs. Then it picks the right form: a plain script for you, a Python toolbox (.pyt) for a tool others will use, or Model Builder for a visual flow that non-coders can read. It plans checks that catch bad input before the tool runs, and clear error messages instead of codes.
+
+  It writes a plan and a draft script, and it cannot run ArcGIS. Treat all code as untested until you run it on real data. ArcPy needs ArcGIS Pro, a paid Esri product, and some tools need extensions. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience claims are not results measured by AI Blocks.
+when:
+  - You run the same clip, reproject or export in ArcGIS Pro again and again.
+  - A teammate needs a tool with a simple form, not a script they must edit.
+  - A script fails on odd data, such as empty layers, NoData cells or locked files.
+  - You want to turn a Model Builder model into Python so you can add logic.
+not_for:
+  - "You need a one-off analysis or a single map: use the GIS Analyst agent."
+  - "You need a full data pipeline with scheduled loads: use the Spatial Data Engineer agent."
+  - "You need a custom web tool or web map: use the Web GIS Developer agent."
+  - "You use QGIS and not ArcGIS Pro: ArcPy will not run there. Use the GIS Analyst agent or the Spatial Data Engineer agent."
+you_give:
+  - Your manual steps in order, as you do them today
+  - "The inputs and outputs: layer types, fields and folders"
+  - How often it runs and how many items, such as 50 rasters each month
+  - Your ArcGIS Pro version and extensions, such as Spatial Analyst (optional)
+  - Who will run it, such as just you or a team (optional)
+  - Data problems you have hit, such as NoData or schema locks (optional)
+you_get:
+  - A choice of script, Python toolbox or Model Builder, with the reason
+  - A step table with input, operation, settings and check for each step
+  - Tool parameters with names, types and help text, for a toolbox
+  - A draft ArcPy script, marked as not run
+  - Error messages, progress and cleanup rules
+  - A test list that includes bad input
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Write the manual steps in order. Say what you click or run, with the layer or file names. Never paste passwords or keys.
+  - Say 'Plan this automation. Do not guess my data.' Your AI asks once for what is missing.
+  - Read the form choice first. Change it if your team can only use Model Builder.
+  - Copy the draft script into the Python window in a copy of your project. Run it on a small test folder first. The AI cannot run it for you.
+  - Test with empty, wrong and normal input. Send back any error text and ask for a fix.
+how_it_works:
+  - title: Understand the manual task
+    text: It writes your steps, inputs and outputs back to you and marks gaps as MISSING.
+  - title: Pick the form
+    text: It chooses a script, a Python toolbox or Model Builder, with one reason.
+  - title: Plan the parameters
+    text: It lists each input the user sets, with its type, its default and the helper text.
+  - title: Write the logic as steps
+    text: It sets the order of tools and the settings for each, such as workspace, output coordinate system and extent.
+  - title: Add checks and messages
+    text: It plans input checks, plain error messages, progress and cleanup of temporary data.
+  - title: Plan the tests
+    text: It lists tests with realistic and bad data, and what to record in the documentation.
+output_shape: |-
+  TASK AND ASSUMPTIONS
+    Manual task <summary> | Runs <how often> | Volume <count> | Users <list>
+    Assumed: <list> | MISSING: <list>
+
+  FORM CHOICE
+    <script, toolbox or model> | <reason> | <runner-up>
+
+  PARAMETERS
+    <name> | <type> | <required or optional> | <default> | <depends on> | <help text>
+
+  STEPS
+    <number> | <input layer> | <operation> | <settings> | <check> | <expected result>
+
+  SETTINGS AND LICENCES
+    Workspace <value> | Output coordinate system <value> | Extent <value> | Extensions <list>
+
+  ERRORS AND CLEANUP
+    <problem> | <plain message> | <action>
+
+  DRAFT SCRIPT (not run)
+    <ArcPy code>
+
+  TESTS
+    <number> | <input case> | <what a pass looks like>
+
+  DOCUMENTATION
+    Purpose, parameters, limits, example
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - Your manual steps in order
+    - The inputs and outputs, with layer types and folders
+    - How often it runs and how many items
+    - Your ArcGIS Pro version and extensions (optional)
+  prerequisites:
+    - ArcGIS Pro, since ArcPy runs only with it
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A copy of your project and a small test folder
+  output:
+    - name: Task and assumptions
+      contains: Your manual task as understood, with how often it runs and MISSING items.
+    - name: Form choice
+      contains: Script, toolbox or Model Builder, with the reason and a runner-up.
+    - name: Parameters
+      contains: Each input the user sets, with type, default, dependencies and help text.
+    - name: Steps
+      contains: A table of input layer, operation, settings, check and expected result.
+    - name: Settings and licences
+      contains: Workspace, output coordinate system, extent and extensions to check out.
+    - name: Errors and cleanup
+      contains: Plain error messages and how temporary data is removed.
+    - name: Draft script
+      contains: ArcPy code for the core steps, marked as not run.
+    - name: Tests and documentation
+      contains: Test cases including bad input, and what to write in the tool help.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Form
+    how: Say if you want a script, a toolbox or Model Builder, so the plan fits the people who will run it.
+  - what: Volume
+    how: Give the item count and size. It decides if you need logging and parallel runs.
+  - what: Strictness
+    how: Say how it should fail, such as stop at the first error or skip bad items and list them.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: ArcPy
+    meaning: The Python library that lets you run ArcGIS Pro tools from code.
+  - term: Python toolbox (.pyt)
+    meaning: A file that adds your own tool, with a form, to ArcGIS Pro.
+  - term: Model Builder
+    meaning: A drag and drop view in ArcGIS Pro for chaining tools without code.
+  - term: Geoprocessing
+    meaning: Running tools on map data, such as clip, buffer or merge.
+  - term: NoData
+    meaning: Raster cells that hold no value. Some tools treat them in surprising ways.
+  - term: Cursor
+    meaning: A way for code to read or edit table rows one by one.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan and draft script work from a pasted profile and your steps.
+    - name: Claude Code
+      why: It can read your script folder and run Python checks on your side if you let it.
+  inputs:
+    - An export of your Model Builder model or your current script.
+    - The text of any error message from ArcGIS Pro.

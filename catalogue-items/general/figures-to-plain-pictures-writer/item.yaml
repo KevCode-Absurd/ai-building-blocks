@@ -8,6 +8,8 @@ job: creative
 level: beginner
 inputs:
   - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: copy_draft}
 uses: []

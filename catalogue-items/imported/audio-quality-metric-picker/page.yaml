@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It matches each metric to the question.
 new_slug: audio-quality-metric-picker
 name: Audio quality metric picker
-summary: Give it a sound file. Get loudness, noise and speech quality scores
-  with the right metric chosen.
+summary: Pick the right audio quality metric for loudness, noise or speech clarity, with calibrated MATLAB code and the standard to check it against.
 job: build-software
 headline: Audio quality metric picker
-subhead: "The right way to measure a sound, chosen before any maths is done. Say
-  what you care about: loudness, background noise, speech clarity or room echo."
+subhead: "The right way to measure a sound, chosen before any maths is done. Say what you care about: loudness, background noise, speech clarity or room echo."
 explain: |
   The right way to measure a sound, chosen before any maths is done. Say what you care about: loudness, background noise, speech clarity or room echo. The AI picks the proper MATLAB Audio Toolbox function and standard. It does not write its own version.
 
@@ -17,6 +15,10 @@ when:
   - A speech recording sounds muffled and you want a number for it.
   - An office's noise level has to be rated against a standard.
   - You have a microphone's datasheet and need correct sound levels.
+not_for:
+  - "You need live audio processing in a streaming loop: use the matlab-process-streaming-audio skill instead."
+  - "You want to record from a microphone or run live calibration: use the matlab-play-record-audio skill instead."
+  - "You do not have MATLAB with Audio Toolbox: ask an audio engineer or use a free loudness meter for a quick check."
 you_give:
   - Your sound file or recording details
   - What you want to measure
@@ -28,8 +30,31 @@ you_get:
   - Scores for loudness, noise or speech quality
   - Unit conversions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Audio Toolbox.
+  - You need MATLAB with Audio Toolbox. Some functions need a newer MATLAB release. Without MATLAB, this skill cannot run.
+  - Download the skill folder and add it to your AI tool, or paste the skill text into a chat.
+  - Tell your AI what you want to measure and give it your sound file or recording details.
+  - Add your microphone sensitivity and the standard you must meet, if you have them.
+  - Answer the questions your AI asks before it computes.
+  - Run the MATLAB code it gives you and check each score against your target.
+output_sample:
+  input:
+    - Your sound file or recording details
+    - What you want to measure, such as loudness, noise or speech quality
+    - Your microphone sensitivity (optional)
+    - The standard you must meet (optional)
+  prerequisites:
+    - MATLAB with Audio Toolbox (some functions need a newer release)
+    - An AI that can run MATLAB code
+  output:
+    - name: Measurement goal
+      contains: The goal sorted into a group, such as loudness, broadcast, noise compliance or speech quality.
+    - name: Questions before computing
+      contains: Short questions about your file, microphone and target standard, asked before any maths is done.
+    - name: Function and standard
+      contains: The Audio Toolbox function and the standard that fit your goal, with a note on any function that does not exist.
+    - name: Calibration
+      contains: A calibration factor worked out from your microphone sensitivity, plus advice on calibrating the whole system.
+    - name: MATLAB code
+      contains: Code for your chosen metric, such as loudness, noise rating, speech score, LUFS or reverb time.
+    - name: Unit conversions
+      contains: Conversions between units, so your numbers match the standard you are checking against.

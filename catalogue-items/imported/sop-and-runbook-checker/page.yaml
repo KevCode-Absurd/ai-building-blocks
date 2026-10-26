@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It checks each step against a fixed list, then writes fixes.
 new_slug: sop-and-runbook-checker
 name: SOP and runbook checker
-summary: Give it your SOPs or wiki export. Get missing owners, stale pages and
-  gaps, plus new SOPs to fix them.
+summary: Check your SOPs and runbooks for missing owners, stale pages and gaps. Get a ranked cleanup list and draft SOPs to fill what's missing.
 job: document-work
 headline: SOP and runbook checker
-subhead: A list of the weak spots in your company procedures, with new SOPs
-  written to fill the gaps. Give it your SOPs or a wiki export.
+subhead: A list of the weak spots in your company procedures, with new SOPs written to fill the gaps. Give it your SOPs or a wiki export.
 explain: |
   A list of the weak spots in your company procedures, with new SOPs written to fill the gaps. Give it your SOPs or a wiki export. It checks each one against the 5W2H questions: who, what, when, where, why, how and how much.
 
@@ -17,10 +15,14 @@ when:
   - A runbook is about to go into use and you want it checked first.
   - Your SOPs name a team instead of a person as owner.
   - You need a hygiene report on your Notion or Confluence space.
+not_for:
+  - "You need one process written from scratch with no existing docs: ask a process owner to walk you through it, then write it down."
+  - "Your docs are PDFs or HTML pages: turn them into markdown files first, or this will not read them."
+  - "You want the wiki moved to a new tool: use the import tool for that tool, since this only checks and reports."
 you_give:
-  - Your SOPs, runbooks or a wiki export
+  - Your SOPs, runbooks or wiki export, saved as markdown files
+  - Owner and last-reviewed dates in each file header (optional)
   - The processes that matter most (optional)
-  - Python available on your computer
 you_get:
   - Completeness scores for each SOP
   - A list of missing owners and stale pages
@@ -28,8 +30,28 @@ you_get:
   - A prioritised cleanup list
   - Draft SOPs for the gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Export your wiki as markdown files. If you only have PDF or HTML, convert them to markdown first.
+  - Open an AI that can run Python code, such as Claude with code tools.
+  - Paste the skill text and upload your markdown files in one folder.
+  - Name the processes that matter most, if you have them.
+  - Read the cleanup list first and fix the top items.
+  - Review the draft SOPs with the person who owns each process before you publish them.
+output_sample:
+  input:
+    - Your SOPs, runbooks or wiki export as markdown files
+    - Owner and last-reviewed dates in the file headers (optional)
+    - The processes that matter most (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Your pages saved as markdown files, not PDF or HTML
+  output:
+    - name: Completeness scores
+      contains: A score for each SOP against the who, what, when, where, why, how and how much questions.
+    - name: Runbook checks
+      contains: Whether each runbook step has an owner, expected time, success sign, rollback path and escalation contact.
+    - name: KB health report
+      contains: Orphan pages with no links in, stale pages with no review date, and terms used two ways.
+    - name: Cleanup list
+      contains: The top fixes in priority order, so you know what to repair first.
+    - name: Draft SOPs
+      contains: New SOPs written to fill the gaps the checks found.

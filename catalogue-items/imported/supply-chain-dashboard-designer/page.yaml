@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks which numbers deserve a place on screen.
 new_slug: supply-chain-dashboard-designer
 name: Supply chain dashboard designer
-summary: Tell it what you ship and from where. Get a one-screen design showing
-  delays, low stock and orders at risk.
+summary: Design a supply chain control tower dashboard that shows late shipments, low stock and orders at risk on one screen, with an alert plan.
 job: track-numbers
 headline: Supply chain dashboard designer
-subhead: Tell it what you ship and from where. Get a one-screen design showing
-  delays, low stock and orders at risk. Bring what you ship and where from. Use
-  the result to plan your next step.
+subhead: Tell it what you ship and from where. Get a one-screen design showing delays, low stock and orders at risk. Bring what you ship and where from. Use the result to plan your next step.
 explain: |
   A one-screen design that shows late shipments, low stock and orders at risk, so a planner sees problems in the morning, not at the customer's complaint.
 
@@ -18,6 +15,10 @@ when:
   - You want to see exceptions without reading every row.
   - You are choosing between building and buying a visibility tool.
   - Alerts are ignored because there are too many.
+not_for:
+  - "You need to track one shipment: ask your carrier for tracking, or use the track-and-trace skill if you have it."
+  - "You need to onboard or work with suppliers: use the supplier-collaboration skill if you have it, or talk to your suppliers directly."
+  - "You want to buy a ready-made visibility platform today: the paid platforms need a contract, so ask vendors for a demo first."
 you_give:
   - What you ship and where from
   - Systems that hold orders and shipments
@@ -30,7 +31,28 @@ you_get:
   - A rollout plan
   - Notes on adoption
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
+  - Tell your AI what you ship, where from, and which systems hold your orders, shipments and stock.
+  - "If you have them, paste an order export, a shipment export and a stock list. Add the column names for each: order ID, dates, status, location and quantity."
+  - Say which problems you want to catch, such as late orders or low stock, and who will use the screen.
+  - Check the dashboard panels and exception list against how your team works. Ask for changes to the alerts if there are too many.
+  - Use the rollout plan to start small. Pick one view and one team first.
+output_sample:
+  input:
+    - What you ship and where it ships from
+    - The systems that hold your orders, shipments and stock
+    - The problems you want to catch, such as late orders or low stock
+    - Who will use the screen (optional)
+  output:
+    - name: Control tower type and maturity level
+      contains: The kind of control tower that fits your business and how far to take it first.
+    - name: Data architecture
+      contains: The data sources to join, and how orders and shipments flow into one view, with simple Python sketches.
+    - name: Control Tower Dashboard
+      contains: One screen with panels for late orders, late shipments, low stock and orders at risk.
+    - name: Exception list and alerts
+      contains: A ranked list of problems and the alerts that tell the right person.
+    - name: Common challenges and fixes
+      contains: Plans for messy data, team silos, too many alerts, proving the value and getting people to use it.
+    - name: Questions to ask
+      contains: Open questions about your goals, systems and team that shape the final design.

@@ -1,0 +1,131 @@
+name: Operations Manager agent
+summary: Find where your process wastes time and why. Get a ranked list of bottlenecks with evidence, root causes, measures to track and fixes.
+headline: Operations Manager agent
+subhead: Describe a process that is slow, late or error-prone, and give any numbers you have. Your AI maps the steps, finds the waiting and rework, and traces each problem to its cause. You get a ranked bottleneck list with fixes, measures to track and a short plan.
+job: document-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Many process problems get fixed with more people or more checks, and the real cause stays. This operations manager agent starts differently. It draws the current steps, finds where work waits or gets redone, and asks why until it reaches a cause it can back with evidence.
+
+  It uses Lean and Six Sigma tools, but in plain words. It wants a baseline first, such as how long the job takes today and how often it goes wrong. Without one it cannot claim an improvement, so it marks the gap and tells you how to measure it.
+
+  It looks at the whole flow, not one team. It flags jobs that only one person can do, vendors with no agreed service levels, and fixes that would remove a fallback.
+when:
+  - Orders, tickets or invoices are late, and you do not know which step is the cause.
+  - Only one person knows how a key job is done, and you worry about what happens if they leave.
+  - Work is growing, and you need to know if you need more people or a better process.
+  - You must turn how the team works today into a written procedure and a set of measures.
+not_for:
+  - You need a growth or ad bottleneck found in your store numbers. Use the Growth bottleneck finder.
+  - You want a review of a team's testing or delivery workflow. Use the Workflow Optimizer agent.
+  - You want a procedure for a single task or an incident. Use the Incident runbook writer, or ask the Technical Writer agent for the doc.
+you_give:
+  - The process or problem, in plain words, with who does each step and what tools they use
+  - Any numbers you have, such as volume per week, time per step, error counts and late jobs
+  - The goal, such as faster turnaround, fewer errors or lower cost
+  - Team size and working hours (optional)
+  - Vendor contracts or service levels that touch the process (optional)
+you_get:
+  - A one-page map of the current process, with inputs, steps, outputs and who each one serves
+  - A ranked list of bottlenecks, each with its evidence, likely root cause and who should own it
+  - A baseline table of what you measure today and what is missing
+  - Fix options sorted by effect and effort, with the reason for each rating
+  - A short list of measures to track and a draft procedure for the process (on request)
+  - A list of single points of failure and the backup each one needs
+how_to_use:
+  - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe the process step by step, as it runs today, not as it should run. Add the numbers you have, even rough ones.
+  - Pick one job per run, such as "Review this process" or "Draft the procedure for it".
+  - Read the baseline section first. If key numbers are missing, collect them for a week before you act on the fixes.
+  - Check each root cause against what your team knows. Ask the people who do the work if the map matches.
+  - Pilot one fix, measure it against the baseline, then decide whether to roll it out.
+how_it_works:
+  - title: Set the boundary
+    text: It lists who feeds the process, what goes in, the main steps, what comes out and who receives it. Gaps are asked once, then marked MISSING.
+  - title: Map the current steps
+    text: It lays out each step with who does it, how long it takes and where work waits.
+  - title: Set the baseline
+    text: It records today's time, volume and error figures, and lists the measures you need but lack.
+  - title: Find waste and the bottleneck
+    text: It marks waiting, rework, handoffs, extra checks and idle skills, and names the step that limits the whole flow.
+  - title: Trace root causes
+    text: It asks why, step by step, until a cause is backed by evidence from your description or numbers.
+  - title: Rank fixes and set controls
+    text: It sorts fixes by effect and effort, picks measures and owners, and flags single points of failure.
+output_shape: |-
+  PROCESS REVIEW
+    Process: <name> | Goal: <goal> | Scope: <in and out>
+
+  PROCESS MAP
+    Suppliers: <who feeds it> | Inputs: <what triggers it>
+    Steps: <1. step, who, time> <2. step, who, time>
+    Outputs: <what it produces> | Customers: <who receives it>
+
+  BASELINE
+    <measure> | <today's figure> | <source> | <missing, how to collect>
+
+  RANKED PROBLEMS
+    <rank> | <problem> | <evidence> | <root cause> | <owner role> | <effort small, medium or large, with reason>
+
+  FIX OPTIONS
+    <fix> | <problem it solves> | <effect> | <effort> | <how to pilot and measure>
+
+  MEASURES TO TRACK
+    <measure> | <how often> | <owner role> | <target, if you gave one>
+
+  SINGLE POINTS OF FAILURE
+    <person, vendor or system> | <what breaks if it fails> | <backup needed>
+
+  CHECKS STILL NEEDED
+    <item> | <who confirms>
+output_sample:
+  input:
+    - A description of the process step by step, with who does each step
+    - Any numbers you have, such as volume, time per step and error counts
+    - Your goal for the process
+    - Vendor service levels that touch it (optional)
+  output:
+    - name: Process map
+      contains: Who feeds the process, the steps in order with owners and times, and who receives the result.
+    - name: Baseline
+      contains: The figures you have today and the measures that are missing, with how to collect them.
+    - name: Ranked problems
+      contains: Each bottleneck with its evidence, root cause, owner role and a rough effort rating.
+    - name: Fix options
+      contains: Fixes sorted by effect and effort, each with how to pilot and measure it.
+    - name: Measures to track
+      contains: A short set of measures with how often to check them and who owns each.
+    - name: Single points of failure
+      contains: Jobs that depend on one person, vendor or system, and the backup each one needs.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read an exported spreadsheet of tickets or orders and work out time and error figures from it.
+  inputs:
+    - A task list or ticket export with start and finish dates, so cycle times are real, not guessed.
+    - A short interview note from the person who does the job each day.
+terms:
+  - term: Bottleneck
+    meaning: The step that limits how much work the whole process can finish.
+  - term: Cycle time
+    meaning: How long one unit of work takes from start to finish.
+  - term: Root cause
+    meaning: The underlying reason a problem happens, not the symptom you see.
+  - term: Single point of failure
+    meaning: A job that only one person, vendor or system can do.
+tweaks:
+  - what: Mode
+    how: Ask for a capacity plan, a measures set, a procedure, a vendor scorecard or a continuity plan instead of the full review.
+  - what: Depth
+    how: Say "quick pass" if you have no numbers. You get a map and questions, not a ranked list.
+improve:
+  - Collect the missing baseline figures for two weeks and rerun the review with real numbers.
+  - After you pilot a fix, paste the new figures and ask the AI to compare them with the baseline.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

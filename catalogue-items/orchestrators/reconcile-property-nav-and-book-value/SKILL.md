@@ -1,46 +1,29 @@
 ---
 name: reconcile-property-nav-and-book-value
-description: "Explain the difference between supplied property NAV and reported common book value per share."
+description: "Use when a property company quotes NAV per share and you need to see how it links to reported book value per share. Runs two checkers in order. Not for valuing property or multi-business groups."
 ---
 
 # Reconcile property NAV and book value
 
-A linked property NAV and book-value bridge with source-dated differences.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Explain the gap between property NAV and reported book value per share. Two steps run in order. The first fixes book value, shares and date. The second swaps in the appraisals and explains each difference.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (all as of the reporting date):
+- **Appraisals** (yours): each property's appraised value and appraisal date.
+- **Balance sheet and equity statement** (yours): for the same reporting date.
+- **Closing share ledger** (yours): the closing share count.
+- **Perimeter and tax notes** (yours): which assets and liabilities count in NAV, and the tax adjustments.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** the equity movements for the period, if they are not in the equity statement.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Appraisals, balance sheet, property/other net asset perimeter, tax adjustments, equity movements and closing share ledger.
+The items under "Before you start", all as of the reporting date, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,9 +33,9 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Book value per share roll-forward** (`book-value-per-share-rollforward`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove closing reported common equity and actual closing shares from the equity statement; retain book values for every asset and liability used. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-book-value-per-share-rollforward.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Book value per share roll-forward** (`book-value-per-share-rollforward`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove closing reported common equity and actual closing shares from the equity statement; retain book values for every asset and liability used. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-book-value-per-share-rollforward.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** closing reported common equity and closing shares tie to the equity statement, and the book value of every asset and liability used is kept. If not, stop and say which line is off.
 
-2. **Investment property NAV bridge** (`investment-property-nav-bridge`). Use the same date and shares, replace only the evidenced property book values with supplied appraisals and reconcile tax/debt conventions. Explain the complete NAV-to-book difference rather than treating appraisal uplift as earnings. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-investment-property-nav-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Investment property NAV bridge** (`investment-property-nav-bridge`). Use the same date and shares, replace only the evidenced property book values with supplied appraisals and reconcile tax/debt conventions. Explain the complete NAV-to-book difference rather than treating appraisal uplift as earnings. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-investment-property-nav-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** both steps use the same date and shares, the whole NAV-to-book difference is explained by disclosed valuation and tax adjustments, and no appraisal is invented. Appraisal uplift is not shown as earnings.
 
 ## Workbook checks
 
@@ -69,4 +52,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the NAV-to-book gap per share and its parts, then the supporting schedules. State plainly that no property was valued here, and that a person who knows the company's reporting must check the conventions before anyone quotes a figure. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- The [Reconcile conglomerate valuation perimeters](https://useaiblocks.com/workflows/reconcile-conglomerate-valuation-perimeters) workflow, when the group also holds stakes in other businesses.
+- The [Reconcile buybacks with owner cash](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash) workflow, when buybacks moved the share count or closing book value.
+Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It reads long sources and picks what becomes a skill.
 new_slug: book-to-skill-converter
 name: Book to skill converter
-summary: Give it a book or a folder of documents. Get skill files that put its
-  method to work.
+summary: Turn a book or folder of documents into skill files. Your AI looks up exact answers instead of searching a PDF. Book to skill converter.
 job: make-skills
 headline: Book to skill converter
-subhead: Point it at a book or a folder of documents and get a set of skill
-  files that put the method to work. Your agent can then look up an exact answer
-  instead of searching a PDF.
+subhead: Point it at a book or a folder of documents and get a set of skill files that put the method to work. Your agent can then look up an exact answer instead of searching a PDF.
 explain: |
   Point it at a book or a folder of documents and get a set of skill files that put the method to work. Your agent can then look up an exact answer instead of searching a PDF.
 
@@ -18,6 +15,10 @@ when:
   - A folder of standards or specs keeps being searched by hand.
   - You want a glossary and cheat sheet from a long document.
   - You want to review what will be extracted before it is built.
+not_for:
+  - You only want to read a short source once. Just read it, or ask your AI for a quick summary.
+  - You cannot show the file or have no right to share it. Keep the notes private, or get written permission first.
+  - The knowledge is in your own head, not a document. Write the skill yourself with a skill-writing guide.
 you_give:
   - A book file or folder of documents
   - Which mode to run, full or analyse first
@@ -29,8 +30,30 @@ you_get:
   - A glossary and a patterns file
   - A decision cheat sheet
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read files and write files.
+  - Save your book or documents on your computer. Use an AI that can read files, write files and run Python code.
+  - Add the skill to your AI and ask it to convert your file. Say if the content is technical (tables, code, formulas) or plain text.
+  - "Say what you want the skill for and name three real questions you will ask it. Then pick a mode: full conversion, or analyse first."
+  - Check the size and cost estimate your AI shows. Approve it before the build starts.
+  - Tell your AI what to name the skill and where to save it.
+  - Read the checks your AI runs at the end. Fix any errors before you use the new skill.
+output_sample:
+  input:
+    - A book file or a folder of documents (PDF, EPUB, DOCX, HTML, Markdown and more)
+    - Whether the content is technical or plain text
+    - What you want to use the skill for
+    - "Which mode to run: full conversion or analyse first (optional)"
+  prerequisites:
+    - An AI that can read files, write files and run Python code
+    - Python 3 on your computer
+    - The source file saved on your computer
+  output:
+    - name: SKILL.md
+      contains: The main frameworks, a chapter index and a topic index, kept small so your AI can always load it.
+    - name: chapters/chNN-*.md
+      contains: One summary per chapter, loaded only when your AI needs that chapter.
+    - name: glossary.md
+      contains: Every key term in alphabetical order, with the chapter where it appears.
+    - name: patterns.md
+      contains: Techniques and design patterns from the source, with the trade-offs of each.
+    - name: cheatsheet.md
+      contains: Decision rules, thresholds and trade-off tables for quick lookup.

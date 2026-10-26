@@ -1,0 +1,141 @@
+name: Developer Advocate agent
+summary: "Get a developer relations plan: the top fixes to getting started, tutorial ideas, community actions and a monthly feedback report."
+headline: Developer Advocate agent
+subhead: Give it your product, your developers and the complaints and questions you already have. It finds the top fixes to getting started, plans tutorials that answer real questions and plans community work. You get a plan, plus a report for your product team.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Developers tend to trust a product that is easy to start with, and help that works, more than they trust marketing. A developer advocate is the person who speaks for developers inside the company. This agent plans that work. It starts by reading what developers already say, and only then plans content.
+
+  Its rule is to fix the product experience before writing more tutorials. A better error message or a clearer quickstart helps every new developer, for as long as the product lives. So the plan lists the top fixes first, each tied to evidence you pasted. Then it plans tutorials that start with the finished result and answer a real question. It adds community actions that are honest about who you work for, and a short report that shows the product team what developers keep hitting.
+
+  It cannot run code or open your docs, GitHub or forum. It works from what you paste. It will not invent issue counts, quotes or survey scores. Code in a tutorial must be run by you before you publish, and the agent marks it as untested. The response time, survey and activation targets in the original profile are goals, not results.
+when:
+  - You launched an API or tool and few developers get past the first step.
+  - Your GitHub issues, forum posts or support tickets keep showing the same pain and nobody has summed it up.
+  - You need a content and community plan for a developer audience, not a general marketing plan.
+  - You want to bring evidence from developers to your product team, in one short report.
+not_for:
+  - You want the docs themselves written. Use the Developer docs writer or the Developer quickstart writer.
+  - You want a Discord or GitHub Discussions set-up with channels and rules. Use the Developer Community Builder agent.
+  - You want a plan to grow through partners and outside coders. Use the Developer adoption program planner.
+  - You want paid ads or general social posts. Use the Social Media Strategist agent.
+you_give:
+  - Your product and who the developers are
+  - The first thing a new developer must do, and a link to your quickstart or docs if you have one
+  - Evidence of friction, such as GitHub issues, support tickets, forum threads or survey answers (paste them)
+  - What content and channels you have now, such as docs, blog, Discord or videos (optional)
+  - How many hours a week the team can give (optional)
+  - Your numbers, such as sign-ups and time to first success (optional)
+you_get:
+  - The top five onboarding fixes, each with the evidence and a suggested change
+  - Three to five tutorial or talk ideas, each tied to a real developer question
+  - Community actions, with reply templates for issues and a plan for office hours
+  - A monthly developer feedback report for your product team
+  - The numbers to track, with your starting values or MISSING
+  - A list of gaps and checks, including every code sample to test
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md. Claude, ChatGPT and Gemini all work.
+  - Paste your product and who your developers are. Add your quickstart link or text.
+  - Paste the last 30 days of GitHub issues, support tickets or forum posts. Remove names and private data first.
+  - 'Say: "Make my developer relations plan. Use only what I pasted. Do not invent counts or quotes. Mark any code as untested."'
+  - Read the fix list first. Check each fix against the evidence. Take the list to the team that owns the product.
+  - Run every code sample yourself before you publish a tutorial. Then bring back the numbers a month later for the next report.
+how_it_works:
+  - title: Read the evidence
+    text: It reads the issues, tickets and posts you pasted and groups them into themes. Counts come only from what you pasted.
+  - title: Rank the fixes
+    text: It lists the top onboarding and product fixes by how often they show up and how much time they cost a new developer.
+  - title: Plan the content
+    text: It plans tutorials and talks that each answer one real question, start with the result and cover the usual failures.
+  - title: Plan the community work
+    text: It writes reply templates for bugs and feature requests, and plans office hours and a small champion group, with honest limits on what you promise.
+  - title: Write the feedback report
+    text: It sums up the top pain points with the evidence for each, in a short report for the product team.
+  - title: Set the measures
+    text: It sets the numbers to track, such as time to first success and reply time, and lists every check left for you.
+output_shape: |-
+  WHAT DEVELOPERS SAY
+    <theme> | how often in what you pasted <count, or MISSING> | example from your evidence
+
+  TOP FIXES
+    <rank> | fix <change> | evidence <what you pasted> | effort <small, medium, large or MISSING> | owner <MISSING unless given>
+
+  CONTENT PLAN
+    <idea> | question it answers <real developer question> | format <tutorial, talk, video> | outline <hook, steps, failure modes>
+
+  COMMUNITY ACTIONS
+    Reply templates <bug report, feature request> | Office hours <rhythm> | Champions <how to pick>
+
+  DEVELOPER FEEDBACK REPORT
+    Top pain points <list> | evidence <list> | what we told developers <list>
+
+  MEASURES
+    <metric> | starting value <yours, or MISSING> | target <yours, or MISSING>
+
+  GAPS AND CHECKS
+    <code to test, claims to verify, facts you did not give>
+output_sample:
+  input:
+    - Your product and who the developers are
+    - Your quickstart link or text
+    - GitHub issues, support tickets or forum posts from the last 30 days
+    - Your current content and channels (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - Someone who can run code samples before you publish them
+  output:
+    - name: What developers say
+      contains: Themes from your evidence, with counts only from what you pasted.
+    - name: Top fixes
+      contains: Ranked onboarding and product fixes, each with evidence and a suggested change.
+    - name: Content plan
+      contains: Tutorial and talk ideas, each tied to a real question, with an outline.
+    - name: Community actions
+      contains: Reply templates for issues, an office hours rhythm and a way to pick champions.
+    - name: Developer feedback report
+      contains: The top pain points with evidence, ready for your product team.
+    - name: Measures
+      contains: Numbers to track, with your starting values or MISSING.
+    - name: Gaps and checks
+      contains: Code to test, claims to verify and facts you did not give.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Evidence
+    how: Paste real issues and tickets. More real material gives a more reliable fix list.
+  - what: Developer level
+    how: Say if your developers are new or expert. Tutorial depth and tone change with it.
+  - what: Team hours
+    how: Give the hours a week. The plan then holds only what you can keep up.
+  - what: Product stage
+    how: Say if features are in beta. Tutorials for beta features must say so.
+improve:
+  - Each month, paste the new issues and the numbers, and ask for the next feedback report. Keep the old reports so you can show what changed.
+  - Add your own rules to the brief, such as "never promise a date" or "always show the failure case".
+  - Pair it with the Developer quickstart writer to rewrite the first step that the fix list points at.
+terms:
+  - term: Developer experience (DX)
+    meaning: How easy and pleasant it is for a developer to start and keep using your product.
+  - term: Time to first success
+    meaning: How long it takes a new developer to get a first working result.
+  - term: SDK
+    meaning: A code kit that helps developers use your product from their own code.
+  - term: Office hours
+    meaning: A set time each week when developers can ask your team questions live.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: All three can group many pasted issues into themes. Pick one that takes long pastes.
+    - name: Your issue tracker or forum export
+      why: It gives the raw evidence. Export it and remove personal data before you paste.
+  inputs:
+    - Your last 30 days of GitHub issues and support tickets.
+    - Your quickstart and the first three pages of your docs.
+    - Answers from a short survey of new developers, if you have run one.

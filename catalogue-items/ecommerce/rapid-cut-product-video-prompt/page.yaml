@@ -1,6 +1,6 @@
 new_slug: rapid-cut-product-video-prompt
 name: Rapid-cut product video prompt
-summary: Share a product and short spot idea. Get a timed product-only or surreal comedy prompt with a clear final hero shot.
+summary: Make a rapid-cut product video prompt with timed beats and a clear final hero shot. Give it your product and spot idea.
 job: make-video-ads
 headline: Rapid-cut product video prompt
 subhead: Share a product and short spot idea. Get a timed product-only or surreal comedy prompt with a clear final hero shot. Bring the brief and any files you want it to use.
@@ -11,6 +11,10 @@ explain: |-
 when:
   - You need a timed product-only or surreal-comedy spot.
   - You want a clear draft and checks from the material you already have.
+not_for:
+  - "You need a spoken-script ad: write the script first, then use your AI to turn it into scenes."
+  - "You only need a still product image: use a standard product photo brief with your photographer or AI image tool."
+  - "You need the finished video file: this makes a prompt only, so run it in a video tool you pick."
 you_give:
   - brief
   - "Optional: product photos"
@@ -19,9 +23,29 @@ you_get:
   - shot list
   - Missing inputs and steps that still need to run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text.
+  - "Say which mode you want: product-only motion or surreal comedy with a person and the product."
+  - Add your product, spot length in seconds, palette and photos if you have them.
+  - Read the timed prompt. Check that the label, pack shape and claims match your facts.
+  - Paste the prompt into your video tool. Check the final shot shows a readable label.
+output_sample:
+  input:
+    - Your product and the short spot idea
+    - Spot length in seconds
+    - Product photos (optional)
+    - Palette and any moves the product may make (optional)
+    - Approved label artwork (optional)
+  prerequisites:
+    - A video tool to run the prompt in, if you want to make the video
+  output:
+    - name: MODE AND PRODUCT LOCK
+      contains: The mode chosen, your product reference roles and the facts you approved for use.
+    - name: TIMED PROMPT
+      contains: Each time interval with its image and action, camera move, light and sound.
+    - name: FINAL HERO HOLD
+      contains: The closing shot with a readable pack and how long it stays on screen.
+    - name: NOT RUN
+      contains: The render and output checks that still need to be done by you.
 how_it_works:
   - title: Read the brief
     text: Choose product-only hyper-motion or surreal actor-and-product comedy. These are modes of one short-spot method; neither requires a long spoken script.

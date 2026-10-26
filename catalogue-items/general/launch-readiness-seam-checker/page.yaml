@@ -1,6 +1,6 @@
 new_slug: launch-readiness-seam-checker
 name: "Launch readiness seam checker"
-summary: "Describe a launch, migration or release. Get a readiness score, the joins between parts and a run-through plan."
+summary: "Check a launch readiness plan before go-live. Give it the parts and teams. You get each join checked, a score out of 100 and a run-through plan."
 job: build-software
 thinking: high
 thinking_why: "It must trace what passes between many parts and find gaps, which needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You are about to launch something that cannot be undone easily.
   - You are moving to a new system, supplier or process.
   - Several teams own parts of the same release and no one owns the joins.
+not_for:
+  - "You are making one small change with no joins to other parts: use a simple test checklist instead."
+  - "You want to design what the system shows when a join fails: use the Error warning and recovery designer."
+  - "You want a person to run the launch day itself: use a project manager and a written launch plan."
 
 you_give:
   - What is launching, the date and what success looks like
@@ -34,6 +38,32 @@ how_to_use:
   - Fill in any joins it marks as missing before you trust the score.
   - Fix the weakest join first, then ask it to score again.
   - Run the full run-through it plans with a real person before launch.
+output_sample:
+  input:
+    - What is launching, the date and what success means
+    - The parts, teams and suppliers involved, as far as you know them
+    - Change records, diagrams or notes from past problems (optional)
+  output:
+    - name: The launch
+      contains: What is launching, when, and what success means.
+    - name: Parts
+      contains: Every system, person, supplier and plan, each with an owner or a MISSING mark.
+    - name: Joins
+      contains: Each place two parts meet, what crosses it, and whether it was checked.
+    - name: Priorities
+      contains: Every job ranked with no ties.
+    - name: When it is overloaded
+      contains: What is dropped first and what is never dropped.
+    - name: Change control
+      contains: Each change with its reason and who approved it.
+    - name: Final reader
+      contains: The one person who reads the final package by eye for join errors.
+    - name: Readiness score
+      contains: A score out of 100 with the six marks that built it.
+    - name: Run-through plan
+      contains: Steps from start to finish, who does each, and when to call it off.
+    - name: Missing and checks missed
+      contains: Gaps you must fill and any checks that still failed.
 
 how_it_works:
   - title: Lists every part

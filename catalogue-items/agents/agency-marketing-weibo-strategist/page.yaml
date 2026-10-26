@@ -1,0 +1,146 @@
+name: Weibo Strategist agent
+summary: "Get a Weibo marketing plan: account positioning, a content calendar and hashtag topics, plus a topic campaign or crisis playbook if you need one."
+headline: Weibo Strategist agent
+subhead: Give it your brand, your goal on Weibo and what you can post each week. It plans your account, your content calendar and your hashtag topics. On request it also builds a trending topic campaign or a crisis response playbook. You get a plan with a compliance check.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Weibo is a public arena, where many people talk about the same topics at once. A brand wins there by joining a conversation at the right moment, not by posting to a private list. This agent plans around that. It sets who your account is, what it posts and which hashtag topics it owns. Then it plans the work in three kinds of post: steady daily posts, topic posts and posts that follow a trend.
+
+  You choose the job when you start. It can plan your account for three months. It can plan one topic campaign, with a warm-up, a launch, a push and a wrap-up, plus the materials to prepare. Or it can write a crisis playbook with alert levels, who answers and how fast, and a review after. It can also plan creators in tiers, from big names to small ones, and what to check before you pay anyone.
+
+  It cannot see Weibo. It does not know what is trending now, your stats or what an ad costs. You paste your numbers, or it marks them as checks for you. The reach and engagement targets in the original profile are goals, not results. Treat the alert levels and response times as starting points to adjust. In a real crisis, your own PR and legal people decide.
+when:
+  - You are starting or resetting a brand account on Weibo and need a three-month plan.
+  - You have a launch or event and want a hashtag topic and a plan to push it.
+  - You want rules and draft replies ready before a complaint or rumour spreads.
+  - You need to choose creators for a campaign and want clear checks for each.
+not_for:
+  - You want to buy ads or boost posts. This plans how to use them. Use Weibo's own ad tools to buy.
+  - You need live monitoring of what people say now. It cannot see Weibo. You paste the posts and it reads them.
+  - You post short videos. Use the Douyin Strategist agent or the Kuaishou Strategist agent.
+  - You need a full PR or legal response to a real crisis. Use the PR & Communications Manager agent, and ask your own legal adviser.
+you_give:
+  - Your brand and what you sell
+  - Your goal on Weibo, such as awareness, a launch or customer care
+  - The job you want, such as an account plan, a topic campaign or a crisis playbook
+  - How many posts a week you can make, and your budget if any
+  - Your account status and recent post stats (optional)
+  - For a crisis playbook, the mentions or posts to read (optional)
+you_get:
+  - Account positioning, with persona, tone and topic area
+  - A content calendar mixing daily posts, topic posts and trend posts
+  - A hashtag plan with brand, campaign and trend tags
+  - A topic campaign plan or a crisis playbook, if you asked for one
+  - A creator plan with tiers and checks, if you asked for one
+  - A compliance check and a review plan
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md. Claude, ChatGPT and Gemini all work.
+  - Paste your brand, your goal and how many posts a week you can make. Say which job you want first.
+  - Add your recent post stats from Weibo, or the mentions you want read for a crisis plan.
+  - 'Say: "Make my Weibo plan. Do not invent trends or stats. Mark anything I must check as a check for me."'
+  - Read the compliance check before you post. Change any line it flags.
+  - A native Chinese reader checks every post. Then post one week and bring back the numbers for the next round.
+how_it_works:
+  - title: Choose the job
+    text: It confirms the brand, goal, capacity and which job you want. Missing items are asked for once, then marked MISSING.
+  - title: Position the account
+    text: It sets the persona, tone and topic area, and reads your stats only if you gave them.
+  - title: Plan the content
+    text: It builds a calendar and a hashtag system with three levels, from brand tags that last to tags for one campaign and tags that follow a trend.
+  - title: Plan a campaign or a crisis response
+    text: If you asked, it writes the topic campaign with its phases and materials, or the crisis playbook with levels, owners and drafts.
+  - title: Plan creators and fans
+    text: It plans creator tiers, what to check before you pay a creator, and fan activities such as polls and Q and A.
+  - title: Check and review
+    text: It checks claims and ads against the compliance rules, then sets the numbers to review each week.
+output_shape: |-
+  ACCOUNT POSITIONING
+    Persona <who> | Tone <how it sounds> | Topic area <what it owns> | Evidence <your stats, or MISSING>
+
+  CONTENT CALENDAR
+    <week> | <post type: daily, topic or trend> | <topic> | <hashtag> | <format> | <goal>
+
+  HASHTAG PLAN
+    Brand tags <list> | Campaign tags <list> | Trend tags <how to pick, with a check step>
+
+  TOPIC CAMPAIGN (if asked)
+    <phase: warm-up, launch, push, wrap-up> | <timing> | <action> | <who> ; Materials checklist <list>
+
+  CRISIS PLAYBOOK (if asked)
+    <alert level> | <trigger to adjust> | <response time to adjust> | <who answers> ; Drafts <holding statement and replies>
+
+  CREATOR PLAN (if asked)
+    <tier> | <purpose> | <checks before you pay>
+
+  COMPLIANCE CHECK
+    <line or claim> | <risk> | <safer wording>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+output_sample:
+  input:
+    - Your brand and your goal on Weibo
+    - The job you want, such as an account plan, a topic campaign or a crisis playbook
+    - How many posts a week you can make, and any budget
+    - Recent post stats, or the mentions to read (optional)
+  prerequisites:
+    - A Weibo account, or a plan to open one
+    - A native Chinese reader to check posts before you publish
+  output:
+    - name: Account positioning
+      contains: The persona, tone and topic area, with the evidence from your stats.
+    - name: Content calendar
+      contains: Posts by week with type, topic, hashtag, format and goal.
+    - name: Hashtag plan
+      contains: Brand tags, campaign tags and how to pick trend tags.
+    - name: Topic campaign
+      contains: Phases from warm-up to wrap-up, with timing, owners and a materials checklist.
+    - name: Crisis playbook
+      contains: Alert levels, who answers, response times to adjust and draft statements.
+    - name: Creator plan
+      contains: Creator tiers and the checks to run before you pay anyone.
+    - name: Compliance check
+      contains: Claims or lines that carry risk, with safer wording.
+    - name: Review plan
+      contains: The numbers to track each week and what to change if they are low.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: The job
+    how: Pick one job first. An account plan, a topic campaign and a crisis playbook are separate pieces of work.
+  - what: Post mix
+    how: The profile suggests 4 routine, 3 topic and 3 trend posts in 10. Say if you want a different split.
+  - what: Alert levels
+    how: Give your own limits for when a problem becomes serious. The ones in the profile are only a start.
+  - what: Budget
+    how: State a budget, or say none. Without one it plans only for posts that cost nothing.
+improve:
+  - After each campaign, paste the numbers and what went wrong. Ask for a short review, and save it with your brand notes.
+  - Write your own red lines, such as topics you will never comment on, and add them to the brief.
+  - Pair it with the Xiaohongshu Specialist agent if your buyers also read lifestyle posts there.
+terms:
+  - term: Weibo
+    meaning: A Chinese social network where people post short messages, pictures and videos in public.
+  - term: Hashtag topic
+    meaning: A tag between two hash marks that groups posts on one subject. Anyone can join the topic.
+  - term: Super Topic
+    meaning: A Weibo community page built around one subject, often a fan group.
+  - term: Blue-V
+    meaning: The badge for a verified business account on Weibo.
+  - term: KOL
+    meaning: A creator with a large following whose posts can sway buyers.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: All three plan and write Chinese. A native reader should check the final text.
+  inputs:
+    - A screenshot of your last month of post stats from Weibo.
+    - Three rival brand accounts you want to match or beat.
+    - Your list of claims you may and may not make about the product.

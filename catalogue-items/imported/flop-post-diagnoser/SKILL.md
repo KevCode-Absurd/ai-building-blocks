@@ -34,7 +34,7 @@ them before saying anything.
 ## Step 1: get the numbers, or say you cannot do this
 
 Ask for the post text and its impressions, likes or reactions, comments and
-reposts. Both platforms show these to the author.
+reposts. Both platforms show these to the author. If a results report from a social media analyst is supplied, take the numbers and the weakest post from it, and the post text from the posts that were published.
 
 ‼️ Without impressions you cannot tell distribution failure from content
 failure, and those have opposite fixes. If they cannot get impressions, say

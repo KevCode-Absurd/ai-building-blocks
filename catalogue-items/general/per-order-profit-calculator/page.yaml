@@ -1,6 +1,6 @@
 new_slug: per-order-profit-calculator
 name: "Per-order profit calculator"
-summary: "Paste your price and every cost per order. Get the profit per order, the break-even and what moves it most."
+summary: "Find your profit per order from your price and every cost, plus the break-even and the one cost that moves it most. Paste the numbers into your AI."
 job: track-numbers
 thinking: low
 thinking_why: "It is arithmetic on given numbers, shown line by line."
@@ -17,6 +17,10 @@ when:
   - "You are about to run a discount and want to know what each discounted order leaves you."
   - "Sales are up and the bank balance is not."
   - "You are pricing a new product or service and need the floor."
+not_for:
+  - "You want tax or cash timing: use your accountant's profit and loss report."
+  - "You sell bundles or several products at once: split them and run each product on its own."
+  - "You sell in more than one currency: convert everything to one currency first, or ask your accountant."
 
 you_give:
   - "The price, including any discount actually given"
@@ -34,6 +38,27 @@ how_to_use:
   - "Include payment fees as percent plus fixed, and your refund rate."
   - "Read MISSING. Find those costs and run again."
   - "Work on the top line in WHAT MOVES IT first."
+output_sample:
+  input:
+    - The price a customer pays, with any discount actually given
+    - Every cost per order, including fees, shipping, refund rate and the cost to win the order
+    - Your fixed monthly costs (optional)
+    - Your orders per month (optional)
+  output:
+    - name: PER ORDER
+      contains: Each line of price and cost per order, then the profit per order with the sum written out and as a percent of price.
+    - name: BREAK-EVEN
+      contains: Fixed costs divided by profit per order, as orders a month, and whether you are above or below it.
+    - name: WHAT MOVES IT
+      contains: Each cost and the price, with what a ten percent change does to profit, ranked.
+    - name: DISCOUNT CHECK
+      contains: Profit per order with and without the discount, and the extra orders needed to pay for it.
+    - name: NOT COVERED
+      contains: One-off costs, tax and costs that do not grow with orders, so the number is not read as total profit.
+    - name: MISSING
+      contains: Costs you did not give, each with a note on why it matters.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Lists every line"

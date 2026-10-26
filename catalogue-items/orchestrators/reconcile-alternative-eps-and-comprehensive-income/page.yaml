@@ -1,44 +1,82 @@
 new_slug: reconcile-alternative-eps-and-comprehensive-income
 name: Reconcile alternative EPS and comprehensive income
 headline: Reconcile alternative EPS and comprehensive income
-summary: Keep acquired-amortization adjustments and OCI recycling consistent with reported earnings and equity performance.
+summary: Turn reported profit into adjusted EPS and prove other comprehensive income still adds up. Get a linked workbook that ties both to reported totals.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked reported-to-alternative EPS and OCI conservation workbook. Share reported ordinary profit, amortization/tax reconciliation, diluted shares, OCI reserves and specific reclassification evidence.
+subhead: Give it reported profit, the acquired-asset amortization and its tax effect, diluted shares and the OCI note. It builds adjusted EPS from reported profit, then checks that any move between profit and OCI nets to zero. You get a linked workbook with each adjustment tied to a note.
 explain: |-
-  A linked reported-to-alternative EPS and OCI conservation workbook.
+  Many companies show an adjusted EPS that adds back the cost of assets they bought. Their reports also move amounts between profit and other comprehensive income (OCI), for example when a hedge settles or an investment is sold. If both happen, the same item can be added back twice, or total comprehensive income can quietly change.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 starts from reported profit and adds back the amortization of purchased intangibles, less its tax effect. It divides reported and adjusted profit by the same diluted share count, so the two EPS figures compare. Step 2 finds the after-tax amount that moved from OCI to profit and shows it as equal and opposite entries, so total comprehensive income does not change. It also stops the same item from being added back again as amortization.
+
+  Adjusted EPS is an analytical measure, not reported profit, and the add-back does not remove what the company paid for the assets. This workflow checks figures from the filing. It does not decide whether an adjustment is allowed.
 when:
-  - You need a linked reported-to-alternative EPS and OCI conservation workbook.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A company reports adjusted EPS and you want to see how it ties to reported profit.
+  - A note shows an amount recycled from OCI to profit, and you suspect it also sits in the add-back.
+  - Adjusted EPS uses a different share count from reported EPS and you want them on the same one.
+  - A reviewer wants proof that total comprehensive income is the same before and after the transfer.
+not_for:
+  - "You only want reported basic and diluted EPS: use the Basic and diluted earnings per share checker."
+  - "You are updating a whole model after a new filing: use the Company filing earnings workbook updater."
+  - "Your OCI item is a pension remeasurement, which is not moved to profit: use the Pension funding, expense and remeasurement checker."
 you_give:
-  - Reported ordinary profit, amortization/tax reconciliation, diluted shares, OCI reserves and specific reclassification evidence.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Reported profit for the ordinary shareholders, from the income statement
+  - Amortization of purchased intangibles and the tax benefit recognized on it, from the notes or the company's reconciliation
+  - Diluted weighted shares for the same period, from the EPS note
+  - OCI reserve balances and the after-tax amount moved to profit, with the note that allows it
+  - Currency, scale and period
 you_get:
-  - A linked reported-to-alternative EPS and OCI conservation workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Reported and adjusted EPS side by side, on one share count
+  - The after-tax amortization adjustment with its tax effect
+  - Equal and opposite profit and OCI entries for each item moved
+  - Proof that total comprehensive income is the same before and after
+  - A list of gaps and anything counted in both steps
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the workflow pack to Claude, ChatGPT or Gemini. Use an AI that can read files, and make spreadsheets if you want a workbook.
+  - Attach the income statement, the EPS note, the amortization and tax notes and the OCI note. Say the period, currency and scale once.
+  - After step 1, check that reported and adjusted EPS use the same diluted share count and that the tax effect comes from the notes.
+  - After step 2, check that each moved item has an equal and opposite entry, and that none of them is also in the amortization add-back.
+  - Read every MISSING line. Treat adjusted EPS as an analytical measure when you share it.
 how_it_works:
   - title: Purchased amortization EPS bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Use the actual acquired-intangible charge, attributable recognized tax effect and matching diluted denominator; preserve reported income and the recurring economic cost.
+    text: Picks out the purchased-intangible amortization from other costs, subtracts the tax benefit recognized on it, and divides reported and adjusted profit by the same diluted shares. Hands step 2 the list of items already added back.
   - title: OCI reclassification bridge
-    text: Identify actual permitted after-tax recycling amounts inside the reported profit and OCI. Prove total comprehensive income is conserved, and do not apply the same recycled item again as an amortization adjustment.
+    text: Finds each permitted after-tax amount moved from OCI to profit. Adds it to profit and takes it off OCI as equal and opposite entries, proves total comprehensive income is unchanged, and checks it was not added back in step 1.
 output_shape: |-
-  A linked reported-to-alternative EPS and OCI conservation workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  ADJUSTED EPS AND COMPREHENSIVE INCOME  <currency>, <scale>, <period>
+
+  1 ADJUSTED EPS   reported profit <n>, diluted shares <n>, reported EPS <n>
+                   amortization <n> - tax benefit <n> = adjustment <n>
+                   adjusted profit <n>, adjusted EPS <n>
+  2 OCI TRANSFER   item <name>: profit before <n> after <n>, OCI before <n> after <n>
+                   total comprehensive income before <n> = after <n>
+
+  SOURCES         <each input, its source, date and unit>
+  MISSING         <each gap and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Reported profit and the diluted share count
+    - Amortization of purchased intangibles and its tax effect
+    - The OCI reserve note and the amounts moved to profit
+    - Period, currency and scale
+  prerequisites:
+    - An AI that can read files
+    - A diluted EPS note from the filing
+  output:
+    - name: Adjusted EPS bridge
+      contains: Reported EPS, the after-tax add-back and adjusted EPS on the same shares.
+    - name: OCI transfer
+      contains: Equal and opposite profit and OCI entries for each item moved.
+    - name: Conservation check
+      contains: Total comprehensive income before and after, shown equal.
+    - name: Linked workbook
+      contains: Inputs, calculations and checks on separate tabs, when your AI can make files.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your inputs and any check that could not run.
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -58,15 +96,26 @@ test:
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a linked workbook, recalculates it and reopens the saved file. In plain chat you get the same tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The company's own reconciliation of adjusted to reported profit
+    - The OCI note from the filing
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Adjusted EPS
+    meaning: Earnings per share after adding back items the company chooses to exclude. It is not reported profit.
+  - term: Purchased intangibles
+    meaning: Assets such as customer lists or brands that the company bought in a deal and writes off over time.
+  - term: OCI
+    meaning: "Other comprehensive income: gains and losses that bypass the income statement until they are moved to profit."
+  - term: Recycling
+    meaning: Moving an amount from OCI into profit when the item behind it ends.
+  - term: Total comprehensive income
+    meaning: Profit plus OCI for the period.
+next:
+  - prepare-a-filing-based-earnings-model-update
+before:
+  - reconcile-basic-and-diluted-issuer-eps

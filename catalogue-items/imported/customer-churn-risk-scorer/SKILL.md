@@ -1,7 +1,7 @@
 ---
 name: shopify-admin-churn-risk-scorer
 role: customer-ops
-description: "Read-only: scores customers by churn probability based on purchase recency, frequency decay, and expected repurchase intervals."
+description: "Read-only: scores repeat Shopify customers for churn risk from how often they buy and how overdue their next order is."
 toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
@@ -12,65 +12,66 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Predicts which customers are at risk of churning by analyzing their purchase patterns against their historical buying frequency. Calculates an expected next-purchase date for each repeat customer, then scores churn risk based on how overdue they are. Read-only — no mutations.
+Finds repeat customers who have gone quiet. For each one it works out their usual gap between orders, then scores how overdue they are. Read-only: it changes nothing in the store.
+
+It only works for products people buy again. It cannot score a customer with one order, and it says nothing about why a customer left.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_customers`
 - API scopes: `read_orders`, `read_customers`
+- No CLI? Ask the person to export orders from the Shopify admin (order date, customer email, order total). Run steps 2 to 4 on that file and say the customer details step was skipped.
+- Written against Admin API version `2025-01`. Check field names against Shopify's current docs before a first run.
 
 ## Parameters
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
-| store | string | yes | — | Store domain |
-| days_back | integer | no | 365 | Historical window for purchase pattern analysis |
-| min_orders | integer | no | 2 | Minimum orders to calculate purchase interval (need 2+ for frequency) |
-| risk_threshold | float | no | 1.5 | Multiplier of avg purchase interval before flagging as at-risk |
+| store | string | yes | none | Store domain |
+| days_back | integer | no | 365 | How far back to read orders |
+| min_orders | integer | no | 2 | Minimum orders in the window to score a customer (2 or more) |
+| risk_threshold | float | no | 1.5 | Overdue ratio where a customer becomes At Risk |
 | format | string | no | human | Output format: `human` or `json` |
 
 ## Safety
 
-> ℹ️ Read-only skill — no mutations are executed. Safe to run at any time.
+Read-only. No changes are made. Do not email or tag anyone from this skill.
 
 ## Churn Risk Scoring Model
 
-For each customer with `min_orders` or more purchases:
+For each customer with `min_orders` or more orders inside the window:
 
-1. **Average Purchase Interval (API)** = total days between first and last order / (order_count - 1)
-2. **Days Since Last Order (DSLO)** = today - last_order_date
-3. **Overdue Ratio** = DSLO / API
-4. **Churn Risk Score** (0-100):
-   - Overdue ratio ≤ 1.0 → Score 0-20 (Active)
-   - Overdue ratio 1.0–1.5 → Score 20-50 (Cooling)
-   - Overdue ratio 1.5–2.5 → Score 50-80 (At Risk)
-   - Overdue ratio > 2.5 → Score 80-100 (Likely Churned)
-5. **Customer Lifetime Value (CLV)** = total spend / customer age in years × expected remaining years
+1. **Average gap (days)** = days between first and last order in the window / (order count - 1)
+2. **Days since last order** = today minus the last order date
+3. **Overdue ratio** = days since last order / average gap. If the average gap is 0 (all orders on one day), do not score the customer. List them as "not scored".
+4. **Score (0 to 100)**, with T = `risk_threshold`. Round to a whole number.
+   - Ratio up to 1.0: score = 20 x ratio. Segment: Active.
+   - Ratio from 1.0 to T: score = 20 + 30 x (ratio - 1) / (T - 1). Segment: Cooling.
+   - Ratio from T to T + 1: score = 50 + 30 x (ratio - T). Segment: At Risk.
+   - Ratio above T + 1: score = 80 + 20 x (ratio - T - 1), capped at 100. Segment: Likely Churned.
+   With the default T of 1.5 the bands are 0 to 20, 20 to 50, 50 to 80 and 80 to 100.
+5. **Spend in window** = sum of the customer's order totals in the window.
+
+Worked arithmetic, to show the method: a customer with 4 orders, first to last 200 days apart, last order 150 days ago. Average gap = 200 / 3 = 66.7 days. Overdue ratio = 150 / 66.7 = 2.25. With T of 1.5 that is At Risk, score 50 + 30 x 0.75 = 72.5, shown as 73.
 
 ## Workflow Steps
 
-1. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `createdAt`, `totalPriceSet`, `customer { id, email, firstName, lastName }`, pagination cursor
-   **Expected output:** All orders with customer association
+1. **Ask once** for the store, and for `days_back`, `min_orders` and `risk_threshold` if the person wants to change them. Missing values use the defaults above.
+2. **OPERATION:** `orders` query
+   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `createdAt`, `totalPriceSet`, `customer { id, email, firstName, lastName }`, pagination cursor. Page until `hasNextPage` is false.
+   **Expected output:** All orders in the window with their customer. Skip guest orders (no customer) and count them.
+3. Group orders by customer. Work out the order dates, average gap, days since last order, spend in window and order count.
+4. Score and classify each customer with the model above.
+5. **OPERATION:** `customers` query, only for At Risk and Likely Churned customers. Use it to add contact details and tags.
+6. Report. For money, give **Spend in window of At Risk and Likely Churned customers**. Label it as past spend, not a forecast of lost sales. Do not give a churn probability or a lifetime value. The skill has no basis for either.
 
-2. Group orders by customer, calculate per customer:
-   - Order dates (sorted chronologically)
-   - Average purchase interval
-   - Days since last order
-   - Total spend
-   - Order count
+## What the window hides
 
-3. **OPERATION:** `customers` — query (enrichment)
-   **Inputs:** Customer IDs for at-risk and likely-churned segments
-   **Expected output:** Contact details, tags, total spend
-
-4. Calculate churn risk score and classify into segments
-
-5. Estimate revenue at risk = sum of (annual_spend × churn_probability) for at-risk customers
+Customers whose last order was before the window do not appear at all. If `days_back` is shorter than your usual gap between orders, many real repeat buyers will look like one-time buyers. Tell the person this in the report, and suggest a longer window if most scored customers have only 2 orders.
 
 ## GraphQL Operations
 
 ```graphql
-# orders:query — validated against api_version 2025-01
+# orders:query (written for api_version 2025-01; check current docs)
 query OrdersForChurnAnalysis($query: String!, $after: String) {
   orders(first: 250, after: $after, query: $query) {
     edges {
@@ -92,7 +93,7 @@ query OrdersForChurnAnalysis($query: String!, $after: String) {
 ```
 
 ```graphql
-# customers:query — validated against api_version 2025-01
+# customers:query (written for api_version 2025-01; check current docs)
 query AtRiskCustomers($ids: [ID!]!) {
   nodes(ids: $ids) {
     ... on Customer {
@@ -100,7 +101,6 @@ query AtRiskCustomers($ids: [ID!]!) {
       email
       firstName
       lastName
-      totalSpentV2 { amount currencyCode }
       numberOfOrders
       tags
       createdAt
@@ -109,62 +109,47 @@ query AtRiskCustomers($ids: [ID!]!) {
 }
 ```
 
-## Session Tracking
+## Progress lines
 
-**Claude MUST emit the following output at each stage. This is mandatory.**
+Print one plain line per step:
 
-**On start**, emit:
 ```
-╔══════════════════════════════════════════════╗
-║  SKILL: Churn Risk Scorer                    ║
-║  Store: <store domain>                       ║
-║  Started: <YYYY-MM-DD HH:MM UTC>             ║
-╚══════════════════════════════════════════════╝
-```
-
-**After each step**, emit:
-```
-[N/TOTAL] <QUERY|MUTATION>  <OperationName>
-          → Params: <brief summary of key inputs>
-          → Result: <count or outcome>
-```
-
-**On completion**, emit:
-
-For `format: human` (default):
-```
-══════════════════════════════════════════════
-CHURN RISK REPORT  (<days_back> days analyzed)
-  Repeat customers scored:  <n>
-  ─────────────────────────────
-  Active (score 0-20):      <n> (<pct>%)
-  Cooling (score 20-50):    <n> (<pct>%)
-  At Risk (score 50-80):    <n> (<pct>%)   ⚠️
-  Likely Churned (80-100):  <n> (<pct>%)   🔴
-
-  Revenue at risk:         $<amount>/year
-
-  Top at-risk by value:
-    <name> (<email>)  Score: <n>  Last order: <date>  Lifetime: $<n>
-
-  Output: churn_risk_<date>.csv
-══════════════════════════════════════════════
+[N/TOTAL] <QUERY|CALCULATE> <what> | params: <short summary> | result: <count or outcome>
 ```
 
 ## Output Format
-CSV file `churn_risk_<YYYY-MM-DD>.csv` with columns:
-`customer_id`, `email`, `first_name`, `last_name`, `order_count`, `total_spent`, `avg_purchase_interval_days`, `days_since_last_order`, `overdue_ratio`, `churn_risk_score`, `risk_segment`, `expected_annual_value`
+
+For `format: human` (default):
+
+```
+CHURN RISK REPORT (<days_back> days)
+  Repeat customers scored:   <n>
+  Not scored (one order, guest order, or gap of 0): <n>
+  Active (0-20):             <n> (<pct>%)
+  Cooling (20-50):           <n> (<pct>%)
+  At Risk (50-80):           <n> (<pct>%)
+  Likely Churned (80-100):   <n> (<pct>%)
+
+  Spend in window of At Risk and Likely Churned customers: <amount> <currency>
+
+  Top At Risk and Likely Churned by spend:
+    <name> (<email>)  Score: <n>  Last order: <date>  Spend: <amount>
+```
+
+Then give a CSV as text in the chat, or as `churn_risk_<YYYY-MM-DD>.csv` if you can write files. Columns:
+`customer_id`, `email`, `first_name`, `last_name`, `order_count`, `spend_in_window`, `avg_gap_days`, `days_since_last_order`, `overdue_ratio`, `churn_risk_score`, `risk_segment`
+
+For `format: json`, give the same counts and rows as JSON.
 
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| Single-purchase customers | Can't calculate interval | Exclude from scoring (need 2+ orders) |
-| Guest orders | No customer linkage | Skip — cannot build customer profile |
+| One order in the window | Cannot work out a gap | Exclude and count as not scored |
+| Guest orders | No customer linked | Skip and count them |
 
 ## Best Practices
-- Pair with `customer-win-back` skill to take action on At-Risk and Likely Churned segments.
-- Use with `rfm-customer-segmentation` for a more holistic view of customer health.
-- High-value churning customers (top 20% by spend) should get personalized outreach.
-- Export At-Risk segment to email marketing platform for automated win-back sequences.
-- Adjust `risk_threshold` based on your product type: consumables (1.3), fashion (1.5), furniture (2.0).
+- Check three or four customers you know by hand before you trust the list.
+- Set `risk_threshold` lower for things people reorder often and higher for things they buy rarely. There is no fixed right value, so test it on customers you know.
+- Pair with the Lapsed customer finder to tag the At Risk group for a win-back email.
+- Pair with the Customer segment builder for a wider view of who your best customers are.

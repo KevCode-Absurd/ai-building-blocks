@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows standard training steps but picks designs per task.
 new_slug: model-training-builder
 name: Model training builder
-summary: Describe your data and goal. Get training code with data loading,
-  checks and saved checkpoints.
+summary: Describe your data and goal. Get model training code that loads, checks and splits your data, trains, and saves checkpoints as it runs.
 job: build-software
 headline: Model training builder
-subhead: Training code for your data and goal that loads the data, checks it,
-  trains and saves progress as it goes, so a crash does not cost you the whole
-  run.
+subhead: Training code for your data and goal that loads the data, checks it, trains and saves progress as it goes, so a crash does not cost you the whole run.
 explain: |
   Training code for your data and goal that loads the data, checks it, trains and saves progress as it goes, so a crash does not cost you the whole run.
 
@@ -18,6 +15,10 @@ when:
   - Your model scores well on training data and badly on new data.
   - Training takes hours and you need checkpoints.
   - You want preprocessing that works the same at prediction time.
+not_for:
+  - "You have under 1,000 rows: ask your AI to use k-fold cross-validation or a pretrained model, not a single split."
+  - "A hosted model API already does the job: call that API and skip training."
+  - "You cannot run code or reach your data: ask a data person to run the training for you."
 you_give:
   - Your dataset or where it lives
   - What you want to predict
@@ -30,8 +31,33 @@ you_get:
   - Saved checkpoints
   - Training and test scores
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can run code, or plan to run the code yourself.
+  - Paste the skill text from this page into the chat.
+  - Tell your AI where your data is, what you want to predict, and which framework you use.
+  - Add your hardware and a score target if you have them.
+  - Read the data profile first. Check the split and the score before you trust the model.
+  - Run the training script. Keep the best checkpoint and test it on fresh data you have not used.
+output_sample:
+  input:
+    - Your dataset, or where it lives
+    - What you want to predict
+    - Your framework and hardware (optional)
+    - A score target (optional)
+  prerequisites:
+    - An AI that can run code and read your files, or a place where you can run the code it writes
+    - Python with your chosen framework installed
+  output:
+    - name: Data profile
+      contains: Class balance, missing values and data types, plus how the data was split into training, validation and test sets.
+    - name: Preprocessing pipeline
+      contains: Reusable steps that clean and transform data the same way at training and prediction time.
+    - name: Model and training setup
+      contains: The model chosen for your task, with its optimizer, loss, learning rate schedule and batch size.
+    - name: Training script
+      contains: The training loop with validation checks and early stopping when scores stop improving.
+    - name: Checkpoints
+      contains: Saved models from the best validation score and at regular points, so a crash does not lose the run.
+    - name: Exported model
+      contains: The final model saved in a portable format, ready for use elsewhere.
+    - name: Metrics and settings log
+      contains: Your training and validation scores and the settings used for the run.

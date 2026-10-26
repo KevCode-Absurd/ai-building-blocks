@@ -2,11 +2,10 @@ thinking: high
 thinking_why: It fits size, weight and stop order together.
 new_slug: van-loading-planner
 name: Van loading planner
-summary: Plan a van load from item sizes, weights, stops and vehicle limits. Check fit, balance, access and unloading order.
-  everything and puts the first stop last in.
+summary: Plan your van load from item sizes, weights, stops and vehicle limits. You get a load order, positions and a weight balance check.
 job: plan-supply-chain
 headline: Van loading planner
-subhead: A feasible loading plan that respects measured vehicle and cargo constraints.
+subhead: Give it your van size, weight limit, parcels and stop order. It plans where each item goes, last stop first in. You get a load order, a weight balance check and securing notes.
 explain: |
   A load plan that fits every parcel in your van and puts the first drop within easy reach. Fewer repacks, safer weight and less time at the back doors.
 
@@ -16,6 +15,10 @@ when:
   - A van keeps coming back with items that did not fit.
   - You need to stay under axle weight limits on a heavy day.
   - You are training new drivers or loaders on how to pack.
+not_for:
+  - "You need to load a shipping container: use a container loading tool, since this plan is built for vans and trucks."
+  - "You need the best order of stops: use a route planning tool first, then bring the stop order here."
+  - "You need legal axle limits confirmed: ask your local transport authority, since the axle check here is a rough estimate."
 you_give:
   - Van or truck size and weight limit
   - A list of parcels with size and weight
@@ -27,8 +30,24 @@ you_get:
   - A weight balance check
   - Notes on securing the load
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Add your van size, weight limit and door layout.
+  - Paste your parcel list with sizes and weights, and your stop order.
+  - Mention fragile, cold or hazardous items, and your axle limits if you know them.
+  - Check the result against your real axle limits before you load. Then print the load order for your drivers.
+output_sample:
+  input:
+    - Your van or truck size and weight limit
+    - A list of parcels with size and weight
+    - Your stop order
+    - Fragile, cold or hazardous items (optional)
+    - Your axle weight limits (optional)
+  prerequisites:
+    - An AI that can run code works best, but a chat AI can still make a plan
+  output:
+    - name: Vehicle Loading Report
+      contains: Vehicle size, weight capacity and number of stops, as a header for the plan.
+    - name: Loading Plan
+      contains: Zones along the cargo area, each with the stop it serves, its items and its weight.
+    - name: Summary
+      contains: Total weight against capacity, how full the space is, axle weights and whether the load is secured.

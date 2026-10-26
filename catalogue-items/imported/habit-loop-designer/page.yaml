@@ -2,25 +2,23 @@ thinking: medium
 thinking_why: It maps four named steps onto your product with some judgment.
 new_slug: habit-loop-designer
 name: Habit loop designer
-summary: Describe your product. Get a four step loop that brings users back,
-  with the weak steps scored.
+summary: Find why users stop coming back with this habit loop designer. Describe your product. You get a four-step loop map with weak steps scored.
 job: build-product
 headline: Habit loop designer
-subhead: "Describe your product, what brings users in now and where they stop
-  coming back. It maps your habit loop in four steps from the Hook Model:
-  trigger, action, variable reward and investment. You get the map, a score out
-  of 10 with the weak steps named, ideas to replace reminders with inner
-  triggers, and an ethics check."
+subhead: "Describe your product, what brings users in now and where they stop coming back. It maps your habit loop in four steps from the Hook Model: trigger, action, variable reward and investment. You get the map, a score out of 10 with the weak steps named, ideas to replace reminders with inner triggers, and an ethics check."
 explain: |
   A four step loop that gives people a reason to come back to your product without being nagged. It uses the Hook Model: a trigger, an action, a reward that varies, and an investment that makes the next visit more likely.
 
   You describe your product and the skill checks each step. Does an inner feeling, like boredom or worry, prompt the visit? Is the action very easy? Is the reward unpredictable enough to stay interesting? Does the user put something in, such as data, settings or followers, that makes the next trip better? Each step scores 0 to 2. An ethics check caps the score if the design just hooks people.
 when:
   - People sign up and then never return.
-  - You are planning notifications, streaks or progress bars and want them to
-    mean something.
+  - You are planning notifications, streaks or progress bars and want them to mean something.
   - You want to know why users drop off after the first week.
   - You want to check that your engagement tactics are fair to users.
+not_for:
+  - "You want to cut sign-up steps and friction: use improve-retention, a separate skill, not this one."
+  - "You want users to share your product with others: use contagious, a separate skill, for viral sharing."
+  - "Your product does not help users and relies on regret or addiction: fix the product first, because this tool caps the score at 3."
 you_give:
   - What your product does and who uses it
   - What brings users in now
@@ -32,7 +30,28 @@ you_get:
   - Ideas to move users from reminders to inner triggers
   - An ethics check on your design
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. It needs no code, files or paid tools.
+  - Describe your product, who uses it, what brings users in now and where they stop coming back.
+  - Add any notifications, streaks or progress bars you already run (optional).
+  - Read the score and the weak rows first. Fix the lowest row before the others.
+  - Read the ethics check before you change anything. If it flags a concern, deal with that first.
+  - Run improve-retention next if friction is the weak row. Run contagious if you want more sharing.
+output_sample:
+  input:
+    - What your product does and who uses it
+    - What brings users in now
+    - Where users stop coming back
+    - Notifications, streaks or progress bars you already run (optional)
+  output:
+    - name: Loop map
+      contains: Your product laid out as trigger, action, variable reward and investment, with the loop back to the next trigger.
+    - name: Diagnostic table
+      contains: The four rows, internal trigger, simple action, variable reward and investment, each scored 0, 1 or 2.
+    - name: Score
+      contains: A total out of 10, with the rows that block a 10 named.
+    - name: Trigger shift ideas
+      contains: Ways to move users from reminders to an inner feeling that brings them back.
+    - name: Ethics check
+      contains: A verdict from the Manipulation Matrix, with the score capped at 3 if the product is a Dealer.
+    - name: Next steps
+      contains: Which weak row to fix first and which related skill to run after this one.

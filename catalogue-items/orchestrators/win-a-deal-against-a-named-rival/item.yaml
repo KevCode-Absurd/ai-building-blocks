@@ -1,26 +1,38 @@
 slug: win-a-deal-against-a-named-rival
-name: "Win a deal against a named rival"
-summary: "Give it the deal and the rival. Get a playbook, a battlecard, objection answers and a signature plan."
+name: Win a deal against a named rival
+summary: Win a sales deal against a named competitor. Get a rival playbook, a battlecard, answers to live objections and a signature plan to share.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: strategy
 level: intermediate
 inputs:
-  - {type: question, required: true}
-  - {type: brief, required: false}
-  - {type: tool_connection, required: false}
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+  - type: tool_connection
+    required: false
 outputs:
-  - {type: competitor_set}
-  - {type: document}
-  - {type: copy_draft}
-  - {type: plan}
-uses: [deal-competitor-playbook-builder, sales-battlecard-builder, live-objection-responder, mutual-action-plan-builder]
+  - type: competitor_set
+  - type: document
+  - type: copy_draft
+  - type: plan
+uses:
+  - deal-competitor-playbook-builder
+  - sales-battlecard-builder
+  - live-objection-responder
+  - mutual-action-plan-builder
 steps:
-  - {uses: deal-competitor-playbook-builder, note: "Where you win and lose against this rival, the patterns from past deals, the traps they set and the ground to fight on."}
-  - {uses: sales-battlecard-builder, note: "Honest comparisons, reply scripts for their usual claims, your positioning against them and the win themes to lead with."}
-  - {uses: live-objection-responder, note: "For each objection the buyer raises: what it really means, a reply that has worked before and the proof to use."}
-  - {uses: mutual-action-plan-builder, note: "The why-buy case in the buyer's words and a dated plan to signature, with who does what on both sides, written to share with the buyer."}
+  - uses: deal-competitor-playbook-builder
+    note: Where you win and lose against this rival, the patterns from past deals, the traps they set and the ground to fight on. A win rate only with its deal count. Hands the playbook to step 2.
+  - uses: sales-battlecard-builder
+    note: Honest comparisons you can prove, reply scripts for their usual claims, and the win themes to lead with. Leaves out any claim you refuse to make. Hands the battlecard to step 3.
+  - uses: live-objection-responder
+    note: "Takes step 2's battlecard and the buyer's own words, and hands the replies to step 4: for each objection, what it really means, a reply that starts from the buyer's own goals and the proof to use."
+  - uses: mutual-action-plan-builder
+    note: "The case for buying in the buyer's words and a dated plan to signature, with tasks for both sides, written to share with the buyer. Takes step 3's replies and step 2's battlecard as the deal evidence."
 origin: own
 version: 1.0.0
 example_pending: true
+needs_mode: manual

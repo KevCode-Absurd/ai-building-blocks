@@ -5,6 +5,22 @@ description: Build a single-company equity research earnings preview — a 4-5 p
 
 # Single-Company Earnings Preview (free data stack)
 
+## Before you start (read this first)
+
+**Needs.** This skill collects data from public websites and APIs, so your AI must be able to run Python and reach the web. If it cannot, stop at Phase 1 and say so. Ask the user to paste the numbers instead, and mark every other figure `not available`.
+
+- Python 3 with `yfinance` (`pip install yfinance`).
+- A free Alpha Vantage key in `ALPHA_VANTAGE_API_KEY` (optional; without it, run on Yahoo data and say so at the top of the report).
+- An EDGAR `User-Agent` in `SEC_EDGAR_USER_AGENT` ("Name email@domain"), only for filers that report to the SEC.
+
+**Files this skill names.** `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not included in this folder. If your AI cannot find them, use the two rules in the India section below and the data stack in this file. Say in the report that the fuller guides were not loaded. Never invent what they would have said.
+
+**Indian companies and actuals.** The actuals path below (EDGAR XBRL) covers US filers only. For an NSE or BSE company, you must treat reported actuals as manual review. Ask the user to paste the latest quarterly results (from the company's results filing on NSE or BSE), or write `not available from free sources` in the cell and add it to the MANUAL REVIEW table. Consensus and prices for Indian tickers come from yfinance (for example `RELIANCE.NS`); check the figures exist before you build on them. Never put a US figure in an Indian company's table.
+
+**Not advice.** The report is a research aid. It is not investment advice. Say that in the header and in the closing line of the answer.
+
+**If an input is missing.** No ticker or company: ask once. No quarter: take the next reporting quarter from the yfinance calendar and state it. No point of view from the user: skip that section; do not make one up.
+
 ## India
 
 This skill operates on **Indian markets**. Load **`india-market-conventions`**
@@ -15,8 +31,8 @@ most Indian errors:
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
   Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format shows
+  **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —

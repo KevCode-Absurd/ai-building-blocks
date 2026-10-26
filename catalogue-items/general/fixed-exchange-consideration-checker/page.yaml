@@ -1,7 +1,7 @@
 new_slug: fixed-exchange-consideration-checker
 name: Fixed exchange consideration checker
 headline: Fixed exchange consideration checker
-summary: Show fixed-ratio stock consideration changing with the dated acquirer share price.
+summary: "Check fixed exchange ratio merger consideration: shares issued, cash leg and total value at the dated acquirer share price."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -11,9 +11,14 @@ explain: |-
 
   Merger consideration. Illustrative figures only. 100 target shares at0.5 issue50 acquirer shares; price20 and cash2 per target give1200. Price30 gives1700.
 when:
-  - You need shares issued, cash leg and total consideration at the supplied price.
-  - You work on merger consideration and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You need to see how a fixed exchange ratio deal changes in value as the acquirer share price moves.
+  - A reviewer wants to trace the shares issued and cash paid back to the signed terms.
+  - You are checking announced deal value against the ratio and the dated price.
+  - You need an editable workbook that shows each step of the sum.
+not_for:
+  - "The deal has a floating or collared ratio, proration or fractional-share settlement: ask a deal adviser or use a dedicated valuation tool."
+  - "You need merger EPS or purchase accounting: ask your accountant, because this only sums stock plus cash."
+  - "The deal is all cash: multiply cash per share by eligible target shares in a simple spreadsheet step."
 you_give:
   - Signed fixed ratio, eligible target shares, cash per target share and dated acquirer market price.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +32,27 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Signed fixed ratio and eligible target shares
+    - Cash per target share
+    - Acquirer share price with its date
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can create spreadsheets and run code, to build the workbook and run the calculation script
+  output:
+    - name: Shares issued, cash leg and total consideration
+      contains: Stock shares issued, cash paid, and their total value at the supplied acquirer price.
+    - name: Scope and dated sources
+      contains: Where each input came from, with its date, and which target shares are excluded.
+    - name: Inputs and assumptions
+      contains: Every input and assumption, with currency, scale and period stated.
+    - name: Model calculations and reconciliations
+      contains: The editable workbook steps and a check that stock plus cash ties to the total.
+    - name: Actual file verification
+      contains: Which recalculation, render and reopen checks ran on the saved workbook.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and checks that failed or could not run.
 how_it_works:
   - title: 1. Confirm a fixed rather than floating or collared ratio and identify excluded target shares
     text: Confirm a fixed rather than floating or collared ratio and identify excluded target shares.

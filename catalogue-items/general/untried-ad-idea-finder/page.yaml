@@ -1,6 +1,6 @@
 new_slug: untried-ad-idea-finder
 name: Untried ad idea finder
-summary: Paste your past ads and brand file. Get a gap map and five untried ad ideas to test.
+summary: Find untried ad ideas for your brand. Paste your past ads and brand file. You get a gap map and five ad ideas, each one a clear test.
 job: plan-ad-tests
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - Your ads have gone stale and every new one looks like the last one.
   - You're planning next month's tests and want each one to answer a different question.
   - You only have an ad library page or your own memory of what you ran, and want a clear view anyway.
+not_for:
+  - "You have no ad history and no brand file: write down your products, buyers and proof first, or ask a marketer to help you plan a first ad."
+  - "You want a health check of a running ad account: use your ad platform's own reports, or a person who audits ad accounts."
+  - "You already picked an idea and need the final ad written: use your AI with your brand facts to write the copy, or hire a copywriter."
 you_give:
   - What your ads have done, from an account export, an ad library page or your own list
   - Your brand file, with products, prices, claims, offers and the proof you hold
@@ -32,6 +36,28 @@ how_to_use:
   - Paste your brand file underneath, with your approved claims, current offers and any studies, tests or guarantees.
   - Add reviews if you have them. They turn guessed buying moments into real ones.
   - Read the test questions first. Make the ideas whose answers would change what you do next.
+output_sample:
+  input:
+    - Your past ads, as an export with spend and purchases, a list, or an ad library page
+    - Your brand file with products, prices, claims, offers and proof you hold
+    - Your buyers and their doubts (optional)
+    - Reviews or support tickets (optional)
+    - Competitor ads, and who can appear on camera (optional)
+  output:
+    - name: Evidence line
+      contains: Says whether your results are measured, reported or only seen running, so claims match the evidence.
+    - name: Record
+      contains: One row per past ad with its moment, value, opening, format, product, proof and graded result.
+    - name: Proof on hand
+      contains: The kinds of proof you hold, with sources, and which ones past ads already used.
+    - name: Five lenses with grid
+      contains: Buying moments, value, buyer knowledge, openings and form, each marked covered, thin or open.
+    - name: Ranked gaps
+      contains: The five biggest gaps, plus a list of proof worth collecting.
+    - name: Five ad ideas
+      contains: Each idea has a test question, headlines, an opening, an offer and a five-link check.
+    - name: Checks missed
+      contains: One line for each check the map still failed, or none.
 how_it_works:
   - title: Grades its evidence
     text: Says whether it works from measured results, the founder's account or an ad library, and claims only what that evidence supports.

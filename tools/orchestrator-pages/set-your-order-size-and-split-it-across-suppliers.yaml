@@ -1,6 +1,6 @@
 new_slug: set-your-order-size-and-split-it-across-suppliers
 name: Set your order size and split it across suppliers
-summary: Give it past sales and supplier quotes. Get a forecast, the cheapest order size and a split by supplier.
+summary: Find the cheapest order size and split your stock order across suppliers. Give it past sales and supplier quotes. You get a forecast and a buy plan.
 job: plan-supply-chain
 thinking: high
 thinking_why: It runs three skills in a row and does cost sums at each step. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You buy stock in batches and pick the quantity by feel or by the supplier's price break.
   - You have two or more suppliers for the same product and no rule for who gets what.
   - A supplier offers a discount for a bigger order and you cannot tell if it pays.
+not_for:
+  - "You make each item to order or buy once only: there is no repeat demand to forecast, so ask your supplier for a single quote and compare it by hand."
+  - "You have only one supplier for the product: skip the split and use the Order quantity calculator step on its own."
+  - "You want to bargain on price breaks: take your plan to the Factory price-break negotiator."
 you_give:
   - Past sales for the product, by week or month
   - Your cost to place one order, such as freight, admin and checks
@@ -25,11 +29,30 @@ you_get:
   - How much to buy from each supplier, and what each choice costs in total
   - A note on the risk of relying on one supplier
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Do one product at a time. The sums change with each product's price and demand.
-  - Give real supplier quotes. If a cost is missing it is marked, not guessed.
-  - Check the holding cost with your accountant if you are unsure. It moves the answer most.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the three skill files this workflow uses.
+  - Upload all of it to your AI that can read files, such as Claude Code or a Claude Project. Say "Follow HANDOFF.md".
+  - Work on one product at a time. The sums change with each product's price and demand.
+  - Paste your past sales and real supplier quotes when asked. Any missing cost is marked MISSING, not guessed.
+  - Check the holding cost first. It changes the answer most, so ask your accountant if you are unsure.
+  - Read the last file for the plan. Take it to your suppliers before you place the order.
+output_sample:
+  input:
+    - Past sales for one product, by week or month
+    - Your cost to place one order
+    - Your cost to hold one unit for a year
+    - Each supplier's price, price breaks, minimum order and lead time
+  prerequisites:
+    - An AI that can read and use a spreadsheet
+    - The files for the three steps, uploaded together with HANDOFF.md
+  output:
+    - name: "Step 1: Forecast"
+      contains: The sales pattern, the method used, the forecast by period, yearly demand and how far off it was on held-back months.
+    - name: "Step 2: Order size"
+      contains: The inputs used, the lowest-cost quantity, total cost at each price break and the pick.
+    - name: "Step 3: Supplier split"
+      contains: Quantity and cost per supplier, lead times, limits hit, total cost and the risk of leaning on one supplier.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Forecast demand
     text: Reads your sales history, picks the method that fits the pattern, tests it on held-back months and gives the yearly demand the next step needs.

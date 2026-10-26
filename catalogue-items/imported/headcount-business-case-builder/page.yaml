@@ -2,37 +2,79 @@ thinking: medium
 thinking_why: It mixes cost maths with a written argument.
 new_slug: headcount-business-case-builder
 name: Headcount business case builder
-summary: Describe a role to add. Get its full yearly cost, hire versus contract,
-  and a case for finance.
+summary: "Get a headcount business case for finance: the full yearly cost of a role, hire versus contractor, and a payback estimate."
 job: hire-people
 headline: Headcount business case builder
-subhead: Describe the role, level, location, salary range and the work it would
-  do. It works out the fully loaded yearly cost, from pay and benefits to
-  equipment and ramp-up time, then compares a hire with a contractor. You get
-  the cost, the comparison, a payback estimate and a short case worded for
-  finance.
+subhead: "Describe the role, level, location, pay range and the work it would do. It builds the full yearly cost line by line, from pay and benefits to equipment and ramp-up time. Then it compares a hire with a contractor and writes a short case for finance."
 explain: |
-  A hiring request that finance can say yes to. Instead of arguing that the team is busy, you show what a role costs, what it returns, and when it pays back.
+  A headcount business case that a finance lead can say yes to. Instead of saying the team is busy, you show what a new hire costs in full, and when the role pays back.
 
-  The skill works out the full yearly cost of a role: base pay, benefits, taxes, equipment and overhead, plus hidden costs like ramp-up time and management attention. It then compares a full-time hire with a contractor or outsourcing over the same period. It estimates the payback, and suggests how to word the case for a CFO. You can also use it to price the cost of turnover and slow hiring, or to check labor cost as a share of revenue.
+  The skill builds the cost of a role line by line: pay, benefits, taxes, equipment, overhead, and the months before the person works at full speed. It marks each line as given by you or an assumption. Then it compares a full-time hire with a contractor over the same period, and works out the payback.
+
+  It does not make up market rates or benchmarks. If you give no contractor rate, it shows the break-even rate. If you give no revenue figure, it shows the output the role must reach to cover its cost.
 when:
-  - You need approval to add a person and finance wants numbers.
-  - You are deciding between a full-time hire and a contractor.
-  - You want to know the true cost of a role beyond salary.
-  - You need to explain turnover or slow hiring costs to leaders.
+  - Finance asks for numbers before you can add a person to the team.
+  - You are deciding between a full-time hire and a contractor for the same work.
+  - You want the true cost of a role, not just the salary.
+  - You must explain what turnover or slow hiring costs the business.
+not_for:
+  - "You need a firm go or no-go without finance data: use this for a draft, then have finance confirm the figures."
+  - "You want a plan for how many people to hire across the year: use the Headcount plan builder."
+  - "You want the budget by team and month: use the People cost budget builder."
+  - "You want three what-if futures for the hiring plan: use the Headcount scenario planner."
 you_give:
   - The role, level and location
-  - The salary range you expect
+  - The pay range you expect
   - What work the person would do
-  - The time period you are comparing
-  - Revenue or output the role would affect (optional)
+  - The period you are comparing, such as 12 months
+  - Benefits, tax and equipment costs, if you know them (optional)
+  - A contractor rate (optional)
+  - Revenue or savings the role would bring (optional)
 you_get:
-  - A fully loaded yearly cost for the role
-  - A hire versus contract comparison
-  - A payback estimate
-  - A short business case worded for finance
+  - A loaded yearly cost table, with each line marked given or assumed
+  - A hire versus contractor comparison over the same period
+  - A payback estimate, or the output needed to break even
+  - A case for finance in under 300 words
+  - A list of figures finance should confirm
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text, then your details for the role, as many as you know.
+  - If it asks for a figure you do not have, say so. It will mark that line as an assumption and not make one up.
+  - Check the cost table first. Replace any assumption with a real figure from your payroll or finance team.
+  - Send the case and the "to confirm" list to finance before you present it.
+output_sample:
+  input:
+    - The role, level and location
+    - The pay range
+    - The work the person would do and the period to compare
+    - Benefit, tax, equipment and contractor figures (optional)
+    - Revenue or savings the role would bring (optional)
+  output:
+    - name: Loaded yearly cost
+      contains: A table of pay, benefits, taxes, equipment, overhead and ramp-up, each marked given or assumption.
+    - name: Hire vs contract
+      contains: Total cost of each option over your period, with hidden costs listed.
+    - name: Payback
+      contains: Months to cover the cost, or the output the role needs to break even.
+    - name: Case for finance
+      contains: A short write-up, payback first, with every assumption listed.
+    - name: To confirm with finance
+      contains: The figures and assumptions someone must check before you present.
+how_it_works:
+  - title: Gather the facts
+    text: It asks for the role, pay range, work and period, and marks anything missing instead of guessing.
+  - title: Build the loaded cost
+    text: It adds each cost line and labels it given or assumed.
+  - title: Compare hire and contractor
+    text: It costs both over the same period, or shows the break-even contractor rate.
+  - title: Work out payback
+    text: It shows months to payback, or the output needed to break even.
+  - title: Write the case
+    text: It writes a short case for finance and lists what to confirm.
+terms:
+  - term: Loaded cost
+    meaning: The full cost of a person, not just pay. It includes benefits, taxes, equipment and overhead.
+  - term: Payback
+    meaning: How many months until the role has earned or saved what it cost.
+  - term: Ramp-up
+    meaning: The months before a new person works at full speed.

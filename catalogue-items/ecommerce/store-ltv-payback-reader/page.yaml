@@ -1,6 +1,6 @@
 new_slug: store-ltv-payback-reader
 name: "Store LTV and payback reader"
-summary: "Give it first-order cohorts by month. Get repeat rate, LTV and true CAC payback, scored out of 100."
+summary: "Find your store's LTV and real CAC payback month from first-order cohorts by month. Get repeat rate, LTV and a score out of 100."
 job: track-numbers
 thinking: high
 thinking_why: "It reads a cohort table and several formulas that are easy to misapply, so a stronger model avoids wrong payback dates."
@@ -17,6 +17,10 @@ when:
   - Your payback estimate says three months but the cash says longer.
   - You want to know how much you can afford to pay for a customer.
   - You are making a subscription or repeat-purchase offer and want to value it.
+not_for:
+  - "You have fewer than three months of cohort data: gather more history first, or use stated assumptions and treat every number as a rough estimate."
+  - "You only want repeat rate by month: use a simple cohort report in Shopify or Google Sheets."
+  - "You sell software with a subscription only: use a subscription unit economics skill built for software."
 
 you_give:
   - Orders by first-purchase month, for each following month (a cohort table)
@@ -36,6 +40,30 @@ how_to_use:
   - Add your margin per order and your CAC, and say whether any customers are on subscription.
   - Read the payback month first, then the naive estimate beside it.
   - Re-run it every month with a new cohort row.
+output_sample:
+  input:
+    - Your orders by first-purchase month, for each following month (a cohort table)
+    - Your margin per order
+    - Your CAC
+    - Whether any customers are on subscription
+    - Your monthly churn (optional)
+  prerequisites:
+    - A cohort table from your store, such as Shopify's customer cohort report, or one you build in Google Sheets
+  output:
+    - name: COHORTS
+      contains: How many months of data you gave, your margin and CAC, and where the lifetime window ends.
+    - name: RETENTION
+      contains: The share of starting customers still buying at months 0, 1, 3, 6 and 12.
+    - name: LTV PER CUSTOMER
+      contains: Profit per customer by month, the LTV to CAC ratio and the highest CAC you can afford.
+    - name: PAYBACK
+      contains: The real payback month beside the naive estimate, the gap, and how payback moves if CAC changes.
+    - name: LIFETIME ORDERS
+      contains: An estimate of orders per customer, using churn or annual retention.
+    - name: SCORE
+      contains: A score out of 100 split into payback, LTV to CAC, data strength and retention trend.
+    - name: NEXT
+      contains: The first change to make, plus anything marked MISSING.
 
 how_it_works:
   - title: Builds the cohorts

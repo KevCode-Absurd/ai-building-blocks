@@ -1,6 +1,6 @@
 new_slug: short-video-format-picker
 name: "Short video format picker"
-summary: "Give it your product and who is on camera. Get a format pick, a script outline and 10 hooks."
+summary: "Pick the short video formats that fit your product and who is on camera. Get script outlines, 10 hooks and a weekly post mix."
 job: grow-social
 thinking: medium
 thinking_why: "It matches formats to a product and writes varied hooks, which a mid-size model does well."
@@ -17,6 +17,10 @@ when:
   - You have a product and a phone and want a plan for what videos to film this week.
   - Your videos get few views and you think the opening is the problem.
   - You want one video to work as a post, a creator post and an ad.
+not_for:
+  - "You have no one who can truly back the product on camera: film a plain product-page video, or ask a real customer for a short review."
+  - "You want ad copy, not video ideas: use the Ad first line writer and scorer."
+  - "You already have a video script and need to check it against ad rules: use the Meta ads compliance checker."
 
 you_give:
   - Your product, price and key benefit
@@ -36,6 +40,30 @@ how_to_use:
   - Add one real story from your team or a customer, if you have one.
   - Pick two or three formats from its list and film them as simply as you can.
   - Check each hook against your claims. Cut any line you cannot back up.
+output_sample:
+  input:
+    - Your product, its price and its key benefit
+    - Who can be on camera (you, a team member, creators or a real expert)
+    - Your set and props (optional)
+    - Who you serve and one real story from your team (optional)
+    - Customer reviews with strong reactions (optional)
+  output:
+    - name: FORMAT PICKS
+      contains: The formats that fit your product and people, each with why it fits, who is on camera, a claim check and an outline.
+    - name: 10 HOOKS
+      contains: Ten hooks across formats, each naming its format and paired with a narrow version that names a small group.
+    - name: TUTORIAL SHOT PLAN
+      contains: Each shot, what the product does on screen, and the line said while doing it.
+    - name: TWO-PART VIDEO
+      contains: The promised format first, then a related real story from your team in the back half.
+    - name: WEEKLY MIX (5 posts)
+      contains: Five posts for the week, each tagged wide, middle or bottom of the funnel.
+    - name: USE THE SAME VIDEO
+      contains: How to run one video as an organic post, a creator post and an ad, with the claim check.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none.
+    - name: MISSING
+      contains: Anything you did not supply, such as product facts or a real story.
 
 how_it_works:
   - title: Reads your product

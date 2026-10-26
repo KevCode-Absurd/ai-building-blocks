@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It splits work and reviews it, with set steps.
 new_slug: free-worker-delegator
 name: Free worker delegator
-summary: Hand off routine coding. Get free helper models doing scout, code and
-  test jobs while Claude reviews.
+summary: Hand routine coding jobs to free helper models. Your AI plans, checks and merges. Get scout, coder and tester results from this free worker delegator.
 job: build-software
 headline: Free worker delegator
-subhead: Routine coding jobs go to free helper models, while Claude plans the
-  work, checks it and merges the result. This keeps your paid usage for the
-  thinking.
+subhead: Routine coding jobs go to free helper models, while Claude plans the work, checks it and merges the result. This keeps your paid usage for the thinking.
 explain: |
   Routine coding jobs go to free helper models, while Claude plans the work, checks it and merges the result. This keeps your paid usage for the thinking.
 
@@ -18,6 +15,10 @@ when:
   - You have several small tasks that can run side by side.
   - You want a test writer that does not use your main quota.
   - You want Claude to review code that other models wrote.
+not_for:
+  - "You work with private code, passwords or secrets: keep them in your own AI chat, because free workers run on opencode's servers."
+  - "You need one small edit or one quick question: ask your AI directly, or use the single worker command (/oc), which is faster than a swarm."
+  - "You cannot install Node.js or the opencode tool, or your AI cannot run code: use a plain chat and split the work by hand."
 you_give:
   - Coding tasks to delegate
   - Node.js and the opencode tool installed
@@ -29,8 +30,35 @@ you_get:
   - Claude's review of each result
   - Run logs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code, use git and the opencode tool.
+  - Install Node.js 18 or newer and the opencode tool, then log in to your opencode account. This needs an AI that can run code, such as Claude Code.
+  - Put the skill folder where your AI loads skills. Copy its command files and worker files into place, as the setup steps say.
+  - Tell your AI the coding task. Use /hive to let it pick one worker or a group, or /oc for a single question.
+  - For a group, the AI splits the task into 2 to 5 separate jobs. Each coder gets its own git worktree, which is a separate copy of your project.
+  - Read the diff for each worker before you accept it. Your AI merges only the work it has checked, then runs your tests.
+  - If a worker fails twice, your AI does that job itself and marks it as orchestrator-sourced.
+output_sample:
+  input:
+    - The coding task you want done, in plain words
+    - Your project folder, with git set up
+    - Node.js and the opencode tool, with an opencode login
+    - "The worker role you want: scout, coder or tester (optional)"
+  prerequisites:
+    - An AI that can run code and use git, such as Claude Code
+    - Node.js 18 or newer installed
+    - The opencode tool installed and logged in
+    - The skill folder and its command files copied into place
+  output:
+    - name: Worker result line
+      contains: One short line per worker with ok, result, tokens, cost_usd, duration_ms, label, agent and model.
+    - name: Scout answer
+      contains: A read-only answer about your code that points to the evidence it found.
+    - name: Coder changes
+      contains: Edits for one subtask, made in its own git worktree so workers never clash.
+    - name: Tester result
+      contains: Test runs only. The tester never edits your source files.
+    - name: Review and merge
+      contains: Your AI checks every diff, merges the good branches, then runs the tests.
+    - name: Swarm report table
+      contains: One row per subtask with subtask, agent, tokens and outcome, plus total worker tokens.
+    - name: Run log
+      contains: A progress record for each run that you can read later to see what each worker did.

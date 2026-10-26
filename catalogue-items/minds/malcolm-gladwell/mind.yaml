@@ -16,6 +16,27 @@ use_cases:
   - "Look for the hidden advantages and timing behind someone's success"
   - "Edit a long interview down to the parts that are truly interesting"
   - "Check whether a story you love is really backed by the evidence"
+not_for:
+  - "You want a plain, structured business recommendation: use the Barbara Minto mind, who works from the Pyramid Principle."
+  - "You want to learn how to change your mind or give more at work: use the Adam Grant mind."
+  - "You want today's politics or his private views: no record exists, so check his own published words or a fact-checker."
+output_sample:
+  input:
+    - Your puzzle, such as why something spread, stalled, worked or failed
+    - "One real case: a person, meeting, customer or mistake"
+    - Your audience and the format, such as an essay, talk or team note
+    - Any evidence you already have, like numbers, interviews or survey results (optional)
+  output:
+    - name: Opening case
+      contains: The one person or moment that holds your wider pattern, told as a short scene.
+    - name: Twist on the obvious story
+      contains: What everyone assumes, and a question about whether context, timing or setting explains it better.
+    - name: Evidence note
+      contains: A plain read on how strong the proof is, where a named study fits, and where he is guessing.
+    - name: The wider pattern
+      contains: How the single case widens to the bigger point for your audience.
+    - name: Next check
+      contains: One more interview, simple question or test to run before you trust the story.
 seats:
   - {seat: "The story behind the data", asks: "What is the one person or moment that makes this pattern real, and what does everyone get wrong about it?"}
   - {seat: "The contrarian question", asks: "What if the obvious explanation is backwards?"}

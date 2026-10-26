@@ -1,6 +1,6 @@
 new_slug: mvp-experiment-planner
 name: "MVP experiment planner"
-summary: "Paste your product idea. Get the riskiest guess, the smallest test and a pivot or persevere rule."
+summary: "Plan an MVP experiment for your product idea. Find the riskiest guess, run the smallest test, and set a pivot or persevere rule first."
 job: test-an-idea
 thinking: medium
 thinking_why: "It ranks guesses and designs a test, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "You have an idea and are about to build a first version."
   - "A test came back unclear and you do not know what to do."
   - "You need a plan to show a team or investor that you tested the right thing."
+not_for:
+  - "You want to check your whole business model, not one test: use the Business model guess tester."
+  - "You already have paying customers and want to pick a test: use the Smallest test picker."
+  - "You need to decide between features to build: use the Feature request screener."
 
 you_give:
   - "Your idea: what, for whom, why"
@@ -33,6 +37,28 @@ how_to_use:
   - "Describe the idea and add your guess list if you have one."
   - "Agree the pass numbers before you start the test."
   - "Run the test, then bring back the numbers to apply the rule."
+output_sample:
+  input:
+    - "Your idea: what you offer, for whom and why"
+    - Your guess list or plan (optional)
+    - Your time and money limits (optional)
+  output:
+    - name: Guesses
+      contains: Each belief your idea needs, written as a testable sentence with a score for cost if wrong and how little you know.
+    - name: Riskiest
+      contains: The one guess with the highest risk score, which the test will target.
+    - name: Test
+      contains: What the customer sees and does, and what you do behind the scenes.
+    - name: Numbers
+      contains: The pass, fail and middle results, plus sample size and time limit, set before the run.
+    - name: Run plan
+      contains: Each customer group, how you reach them, the dates and who does what.
+    - name: Reading the results
+      contains: How you will tell counts of actions from comments, split by customer group.
+    - name: Rule
+      contains: What to do on a pass, a fail or a middle result, and when to stop.
+    - name: Missing and checks missed
+      contains: Gaps in your input and any checks the plan did not meet.
 
 how_it_works:
   - title: "Writes the guesses"

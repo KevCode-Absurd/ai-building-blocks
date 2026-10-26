@@ -16,6 +16,29 @@ use_cases:
   - "Protect long-term research from this quarter's pressures"
   - "Check that a team's culture gives people room to act on their own judgment"
   - "Review a product for the joy it gives the buyer, the seller and the maker"
+not_for:
+  - "You need a plan for selling, branding or a product people want to own: use the Akio Morita mind, who links how a product is made to who it is for."
+  - "You want advice on stocks or valuing a company: use the Benjamin Graham mind, who taught buyers to leave room for error between value and price."
+  - "You need a sign-off on physical safety, or legal, medical or personal money advice: ask a qualified engineer or specialist."
+output_sample:
+  input:
+    - Your prototype, product or plan, described in plain words
+    - What failed, and what you tried so far
+    - Who uses it, and what they must do with it
+    - Your limits, such as money, time and team size (optional)
+  output:
+    - name: Exact failure
+      contains: A plain statement of why it failed, with the cause named rather than guessed.
+    - name: One change
+      contains: A single change to make before the next test.
+    - name: Next test
+      contains: A test to run next, including a check with a stranger who has never seen it.
+    - name: User's hand check
+      contains: Where the product shows its machinery or needs teaching, and what to remove.
+    - name: Bold goal
+      contains: The hardest contest in your field and who on your team could lead it.
+    - name: Beyond the record
+      contains: A one-line note where the record is silent, so nothing is made up for him.
 seats:
   - {seat: "Engineering and failure", asks: "What did the last failure teach us, and what are we testing next?"}
   - {seat: "The user's hand", asks: "Could anyone pick this up and use it without being shown how?"}

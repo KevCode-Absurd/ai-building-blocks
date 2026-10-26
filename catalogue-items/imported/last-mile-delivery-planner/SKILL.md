@@ -7,6 +7,34 @@ description: When the user wants to optimize last-mile delivery operations, urba
 
 You are an expert in last-mile delivery operations and urban logistics. Your goal is to help optimize the final leg of delivery from distribution center to customer, balancing cost efficiency with customer satisfaction in dense urban environments.
 
+## How to run this in a chat (added by AI Blocks)
+
+**Who this is for.** A business that delivers to customers in one local area (parcel, grocery, restaurant, pharmacy, retail) and wants a lower cost per delivery, fewer failed drops or same-day service. For the actual order of stops use the Delivery route planner. For long haul freight use the Freight mode and carrier picker.
+
+**Ask the user once** for whichever of these is missing:
+1. What you deliver and where: area type (dense city, suburb, rural), rough size of the service area.
+2. Deliveries per day, and how that changes in busy weeks.
+3. Cost per delivery now, or the parts: driver pay, vehicle, hub or overhead.
+4. First-attempt success rate and on-time rate.
+5. Your promise to customers (time windows, same-day or next-day).
+6. Own drivers or gig drivers, and number of depots (optional).
+
+If an input is missing, write MISSING and carry on. Do not invent a cost, a rate or a volume.
+
+**Use their numbers.** The benchmarks, rates, fees, success rates and the sample report in this file are placeholders that show the method. Compare the user to their own past numbers, and to a benchmark only if they supply one. For each change you suggest, say what number it would move, and write "needs your costs" where you have none. Savings and payback only come from figures the user gave. Show the sum.
+
+**If you cannot run code,** skip the random-data demos in this file. Work with the user's numbers in a table.
+
+**Output format.** Give the answer in this order:
+1. Summary: where the cost per delivery goes now, in the user's own terms.
+2. Cost breakdown: driver, vehicle, hub, failed deliveries. Use MISSING for parts they did not give.
+3. Top three changes ranked by effect on cost per delivery, each with the number it moves and what you assumed.
+4. Same-day outline: cut-off time, pick and pack time, what must be true, and what it would cost (MISSING if unknown).
+5. Metrics to track each week.
+6. MISSING list.
+
+---
+
 ## Initial Assessment
 
 Before optimizing last-mile operations, understand:
@@ -50,7 +78,7 @@ Before optimizing last-mile operations, understand:
 - **Vehicle cost per mile**: Fuel, maintenance, depreciation
 - **Hub/facility cost per package**: Overhead allocation
 
-**Typical Benchmarks:**
+**Typical Benchmarks (rough, undated, unsourced figures from a public skill: use only to give a sense of scale, never as the user's targets or as facts about their market):**
 - Dense urban: $4-8 per delivery
 - Suburban: $8-12 per delivery
 - Rural: $15-25 per delivery
@@ -299,23 +327,23 @@ class TimeWindowOptimizer:
         recommendations.append({
             'strategy': '2-hour windows during peak (10 AM - 6 PM)',
             'rationale': 'Balance efficiency and satisfaction',
-            'expected_success_rate': 0.92
+            'expected_success_rate': 0.92  # ILLUSTRATIVE: replace with the user's own first-attempt data
         })
 
         # Premium: 1-hour windows for higher fee
         recommendations.append({
             'strategy': '1-hour express windows (+$5 fee)',
             'rationale': 'Premium service for time-sensitive customers',
-            'expected_success_rate': 0.85,
-            'upcharge': 5.00
+            'expected_success_rate': 0.85,  # ILLUSTRATIVE
+            'upcharge': 5.00  # ILLUSTRATIVE: set the user's own fee
         })
 
         # Economy: 4-hour or all-day windows for discount
         recommendations.append({
             'strategy': '4-hour economy windows (-$2 discount)',
             'rationale': 'Flexible customers, easier routing',
-            'expected_success_rate': 0.97,
-            'discount': -2.00
+            'expected_success_rate': 0.97,  # ILLUSTRATIVE
+            'discount': -2.00  # ILLUSTRATIVE: set the user's own discount
         })
 
         return recommendations
@@ -487,7 +515,7 @@ class MicroFulfillmentOptimizer:
         annual_cost_savings = annual_miles_saved * cost_per_mile
 
         # Additional savings from faster delivery (premium pricing)
-        faster_delivery_premium = demand_served * 365 * 2.00  # $2 premium per delivery
+        faster_delivery_premium = demand_served * 365 * 2.00  # PLACEHOLDER: $2 premium, use the user's own price or drop this line
 
         total_annual_benefit = annual_cost_savings + faster_delivery_premium
 
@@ -526,8 +554,8 @@ for idx, result in enumerate(micro_hub_results):
     print(f"  Payback: {roi['payback_years']:.1f} years")
 ```
 
-**Micro-Fulfillment Benefits:**
-- Reduced delivery distance (30-60%)
+**Micro-Fulfillment Benefits (possible gains, not promised. Size them from the user's own addresses and costs):**
+- Shorter delivery distance (the size depends on where customers and hubs are)
 - Faster delivery times (same-day capable)
 - Lower cost per delivery
 - Higher customer satisfaction
@@ -940,6 +968,8 @@ def optimize_routes_api(stops, depot, api_key):
 ## Output Format
 
 ### Last-Mile Delivery Analysis Report
+
+Every figure in this example layout (volumes, costs, rates, benchmarks, investments, savings and payback) is invented. Never reuse them. Fill each table from the user's own numbers, or write MISSING.
 
 **Executive Summary:**
 - Daily delivery volume: 1,850 packages

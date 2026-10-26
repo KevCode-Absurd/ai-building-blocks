@@ -2,35 +2,107 @@ thinking: high
 thinking_why: It loops through trying, looking and fixing.
 new_slug: live-screen-debugger
 name: Live screen debugger
-summary: Describe the screen bug. Get your web or Electron app opened, tried out
-  and fixed step by step.
+summary: Fix a screen bug in your local web or Electron app. Your AI opens it, clicks through it, edits the code and checks again until it works.
 job: test-and-fix-code
 headline: Live screen debugger
-subhead: Describe the screen bug and your web or Electron app is opened, clicked
-  through and fixed in a loop, until it works. You watch the problem disappear.
+subhead: Describe the screen bug and give your local app's address. Your AI opens the app in a real browser window, repeats your steps, changes the code and checks the screen again. It tests desktop and phone sizes. Electron apps are supported.
 explain: |
-  Describe the screen bug and your web or Electron app is opened, clicked through and fixed in a loop, until it works. You watch the problem disappear.
+  Most screen bugs need you to look at the screen. A button does nothing, a menu is cut off, or a layout breaks on a phone. Your AI cannot see any of this by reading code alone, so it guesses.
 
-  It keeps one browser or app window open between edits, so each test is quick. It can use desktop or mobile sizes, and a native-window pass for Electron. The loop is: change code, reload only when needed, try the flow, check what is on screen, repeat. The checklists cover function, layout and visual checks. It needs Playwright, and for Electron it needs the app project itself.
+  This skill gives your AI a browser window that stays open between edits. It works in a loop: change the code, reload only when needed, repeat your steps with real clicks and typing, then look at the screen. Each pass has a function check and a separate visual check, so a working button on a broken layout does not pass.
+
+  Before it starts, your AI writes a short list of what you asked for and what it changed, and every item must be tested before it says it is done. It also does a short free-form test to find weak spots you did not list. It uses Playwright, a tool that drives a browser, and for Electron it needs the app project itself.
 when:
-  - A button does nothing and you cannot see why.
-  - A layout breaks on a phone screen.
+  - A button, menu or form does nothing on your local site and you cannot see why.
+  - A page layout breaks or gets clipped on a phone screen.
   - You are fixing a desktop app built with Electron.
-  - You want your AI to try the page, not guess.
+  - You want your AI to test the screen with real clicks, not only read the code.
+not_for:
+  - "You want to debug a live website you do not own, or a page with real customer data: use the Browser page debugger, which reads a page through Chrome DevTools in a separate profile."
+  - "You want a lasting set of tests to run on every change: use the Browser test writer."
+  - "Your AI can only chat and cannot run code on your computer: ask a developer, or use the Browser page debugger if you can set it up."
 you_give:
-  - The app or its address
+  - The address of your local app, such as http://127.0.0.1:3000, or the Electron project folder
   - A description of the bug
-  - Steps to reproduce
+  - The steps that show the bug
   - Screen sizes to check (optional)
-  - Playwright installed
+  - The command that starts your app (optional)
 you_get:
-  - The app opened and tested step by step
+  - A written list of what will be tested
   - The cause of the screen bug
-  - Code fixes
-  - Checks that the fix works on desktop and mobile
+  - Code fixes made in your project
+  - Screenshots in the chat, with notes on the desktop and phone checks
+  - A short list of what was tested and what was left out
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Use an AI tool that can run code on your computer and open a browser. The skill was written for OpenAI Codex and its js_repl tool. A plain chat window will not work.
+  - Know the risk first. The skill asks you to start Codex with its sandbox turned off, so your AI can reach your browser. That lets it do more on your computer. Use it only on a local app you trust, never on a live site.
+  - Start your app in its own terminal so it keeps running.
+  - Give your AI the skill, the app address, the bug and the steps to repeat it. Add the screen sizes you care about.
+  - Let it run the loop. Read its test list first, and add anything it missed.
+  - When it says it is done, look at the screenshots it shows in the chat. Ask it to repeat any check you doubt.
+  - Run your own tests, then look at the changes in your code review before you save them.
+how_it_works:
+  - title: Write the test list
+    text: It lists what you asked for, what it changed and what it will claim, and plans a check for each. It adds at least two off-path tests.
+  - title: Open the app
+    text: It opens a browser window at a set size, or a phone-size window, or your Electron app.
+  - title: Change and reload
+    text: After each edit it reloads the page, or restarts Electron if startup or main-process code changed.
+  - title: Run the function check
+    text: It uses real clicks, typing and touch to test each control, and a full flow from start to end.
+  - title: Run the visual check
+    text: It inspects each state on screen for clipping, overlap, weak contrast and broken layout.
+  - title: Check the fit and sign off
+    text: It checks that the first view fits the screen, saves screenshots, and lists what it did and did not test.
+output_shape: |
+  Test list
+  - <what you asked for> checked by <test>
+  Cause
+  - <what caused the bug, in plain words>
+  Changes
+  - <file>: <what changed>
+  Checks
+  - Function: <flow tested and result>
+  - Visual: <state, screen size, result>
+  Not tested
+  - <anything left out, and why>
+output_sample:
+  input:
+    - The address of your local app, or your Electron project folder
+    - A description of the bug and the steps that show it
+    - Screen sizes to check (optional)
+    - The command that starts your app (optional)
+  prerequisites:
+    - An AI tool that can run code and open a browser on your computer
+    - Playwright installed in your project folder
+    - Your app running locally, kept open in its own terminal
+  output:
+    - name: Test list
+      contains: Each request, change and claim, with the check planned for it.
+    - name: Cause
+      contains: Why the bug happens, in plain words.
+    - name: Code changes
+      contains: The files edited in your project to fix it.
+    - name: Function and visual checks
+      contains: Results for each flow and screen state, with desktop and phone sizes.
+    - name: Screenshots
+      contains: Images shown in the chat of the screen states that support the fix.
+    - name: Not tested
+      contains: Anything left out on purpose, so you know the gaps.
+works_best_with:
+  tools:
+    - name: OpenAI Codex
+      why: The skill was written for its js_repl tool, which keeps one browser open between edits.
+    - name: Any AI tool that can run code on your computer
+      why: It can run the same Playwright steps in a script, but it may reopen the browser each time.
+  inputs:
+    - The console errors from your browser
+    - A screenshot of the bug
+    - The smallest screen size your app must support
+terms:
+  - term: Playwright
+    meaning: A free tool that controls a real browser with code, so your AI can click like you would.
+  - term: Electron
+    meaning: A way to build desktop apps with web pages.
+  - term: js_repl
+    meaning: A Codex tool that runs JavaScript in a session that stays open.

@@ -15,6 +15,30 @@ use_cases:
   - "Choose a useful project for your design portfolio"
   - "Compare sharing, borrowing and buying for a common need"
   - "Turn a vague sustainability claim into concrete questions"
+not_for:
+  - "You need certified safety design, or a medical or legal answer: use a qualified expert, since this mind only helps you ask better questions."
+  - "You want a clean, spare look for a finished product: use the Dieter Rams mind, which is not on this list yet, or ask a working designer."
+  - "You want help with how a chart or graphic reads: use Alberto Cairo for truthful charts, or Cole Nussbaumer Knaflic for clear data stories."
+output_sample:
+  input:
+    - The product, purchase or project you are weighing
+    - Three recent times the problem came up
+    - Who would use it and where
+    - What you can spend in money, time and upkeep (optional)
+    - The exact wording of any claim you want reviewed (optional)
+  output:
+    - name: Need statement
+      contains: A rewritten plain statement of the difficulty, who has it, and when it happens.
+    - name: Whole-function review
+      contains: A check of use, context, meaning and form, instead of looks alone.
+    - name: Burdens map
+      contains: Who makes, explains, maintains and disposes of the thing, and who pays in money, time or choice.
+    - name: Options list
+      contains: Other responses to compare, such as sharing, a change of setting, an existing product or doing nothing new.
+    - name: Test plan
+      contains: The user task to try, who takes part, and what evidence would show it works.
+    - name: Open evidence gaps
+      contains: What is still unproven, including any expert review needed for safety claims.
 seats:
   - {seat: "Useful design and real needs", asks: "Whose need does this actually serve?"}
   - {seat: "Social and material consequences", asks: "What burdens does this design create for other people?"}

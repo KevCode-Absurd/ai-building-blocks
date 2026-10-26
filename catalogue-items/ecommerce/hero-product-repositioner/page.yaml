@@ -1,6 +1,6 @@
 new_slug: hero-product-repositioner
 name: "Hero product repositioner"
-summary: "Give it one hero product and its reviews. Get several buyer angles, each with its own offer."
+summary: "Find new reasons buyers want your hero product. Give it reviews and claims. You get four to six angles, each with its own offer."
 job: make-offer
 thinking: medium
 thinking_why: "It reads review language and writes angles and offers. A mid-size model handles that well; the claims check is simple."
@@ -17,6 +17,10 @@ when:
   - One product makes most of your sales and you want more buyer types for it.
   - Your ads for the hero product all say the same thing and have stopped growing.
   - Your reviews mention several different reasons people buy, and your page ignores most of them.
+not_for:
+  - "You sell a wide catalogue of many products: this fits one hero product, so work on your best seller first or use a person who knows your range."
+  - "You have no reviews or survey answers yet: ask customers why they bought first, then come back. Without their words the angles are guesses."
+  - "You already have an angle and only need to test the discount cost: use the Discount impact checker."
 
 you_give:
   - Your hero product's facts and the claims you are allowed to make
@@ -37,6 +41,28 @@ how_to_use:
   - Add margin and shipping by pack size so each offer can be cost-checked.
   - Read the claims list first. Remove or fix anything you cannot back up.
   - Build one angle page at a time and send traffic from a matching ad.
+output_sample:
+  input:
+    - Your hero product's facts and the claims you are allowed to make
+    - Review and survey lines in your buyers' own words
+    - Your best ad angles (optional)
+    - Margin and shipping cost by pack size
+    - Partners who could give a discount or gift (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+  output:
+    - name: Hero product line
+      contains: The product name and which allowed claims were used.
+    - name: Angles
+      contains: Four to six buyer reasons, each with who buys, proof from reviews, a product title, headline and page plan.
+    - name: Offer per angle
+      contains: An offer built on that angle's timing and doubt, with why it fits and a margin note.
+    - name: Partner or gift idea
+      contains: A partner or gift that could fund the offer at near-zero cost, or none.
+    - name: Claims to check
+      contains: Each claim, the angle it belongs to, and what to confirm before use.
+    - name: Checks missed and missing
+      contains: Any failed checks and any inputs you did not give.
 
 how_it_works:
   - title: Lists real angles

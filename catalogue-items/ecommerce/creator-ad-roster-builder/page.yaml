@@ -1,6 +1,6 @@
 new_slug: creator-ad-roster-builder
 name: "Creator ad roster builder"
-summary: "Give it your product and budget. Get a gifting funnel, roster size, pay rule and creator brief."
+summary: "Plan a creator ad roster for your store: a gifting funnel, roster size, flat pay rule and a creator brief that asks for raw clips."
 job: make-video-ads
 thinking: medium
 thinking_why: "It plans a funnel and writes a brief from your numbers, which a mid-size model does well."
@@ -17,6 +17,10 @@ when:
   - You want a steady supply of creator footage for ads and don't want to pay a studio.
   - You've gifted a few products and got mixed results, and need a system.
   - You want to run ads through creators' handles and aren't sure how to set up the terms.
+not_for:
+  - "Your product costs a lot to ship or the margin is thin: send paid samples to a few creators, or hire a freelance video editor instead."
+  - "You want one filming brief for a single video: write it by hand or ask a creator what they need, as this plans the whole roster."
+  - "You have never made a good ad yourself: learn that first, then bring in creators."
 
 you_give:
   - Your product, price and whether it ships cheaply
@@ -36,6 +40,31 @@ how_to_use:
   - Attach one or two of your best ads with their results, for the specific brief.
   - Send the brief and the first gifts. Get usage rights and account access in writing before you pay anyone.
   - Post the best clips on organic first, then move the winners into paid and tell your creators which ones won.
+output_sample:
+  input:
+    - Your product, price and whether it ships cheaply
+    - How many free samples you can send and what each costs
+    - How many new ads a month you want
+    - Who edits your videos
+    - Your best ads with results (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Fit check
+      contains: Pass or fail, based on shipping cost, margin and where your buyers and creators live.
+    - name: Gifting funnel
+      contains: Units gifted, expected usable creators and videos, and the time from shipping to finished video.
+    - name: Roster and pay rule
+      contains: How many creators to keep for your ad volume, and flat fees with usage and account access in writing.
+    - name: Creator brief
+      contains: A wide and a specific brief, raw footage list, placement, length, framing, look, winners and what did not work.
+    - name: Partnership ad setup
+      contains: Whether to run from creator handles or accounts you own, with steps to connect them.
+    - name: Winner loop
+      contains: Post organic first, move winners to paid, tell creators what won, and tag each asset to its creator.
+    - name: Checks missed and missing
+      contains: Any failed checks and the facts that would sharpen the plan.
 
 how_it_works:
   - title: Checks the fit

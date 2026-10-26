@@ -14,6 +14,28 @@ use_cases:
   - Teach a handoff with a short situation and consequence
   - Acknowledge a listener's concern before making your request
   - Rehearse a personal story with a friendly listener
+not_for:
+  - "You need a legal, medical or money decision: ask a qualified person, because a story cannot settle those."
+  - "You have no true incident to tell: ask for a direct explanation, or use the Ira Glass mind to find a real scene by reporting first."
+  - "You want a plain, well-organized business recommendation: use the Barbara Minto mind to put the answer first."
+output_sample:
+  input:
+    - "The situation: the conversation, introduction, lesson or request that feels too abstract"
+    - The listener, and what you want them to understand
+    - What you are asking for, and what you gain from it
+    - A real incident you lived or saw, even if rough (optional)
+    - What you can honestly stand behind, and any details you cannot share
+  output:
+    - name: Listener's question
+      contains: The one thing your listener needs answered, such as who you are, why you ask, or what a value means.
+    - name: Incident card
+      contains: The setting, the choice and what followed, with remembered facts kept apart from your interpretation.
+    - name: Short telling
+      contains: An editable few sentences in your own words, with any made-up example clearly labeled as fiction.
+    - name: Connection and request
+      contains: The link from the incident to your request or lesson, with the cost to the listener and a way to decline.
+    - name: Rehearsal questions
+      contains: Questions to ask a friendly listener about what they pictured and understood, so you can shorten the story.
 seats:
   - seat: Truthful stories for everyday understanding
     asks: What actually happened that would help this listener understand your meaning?

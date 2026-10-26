@@ -1,46 +1,82 @@
 new_slug: restate-eps-after-splits-and-rights
 name: Restate EPS after splits and rights
 headline: Restate EPS after splits and rights
-summary: Put split and discounted rights events onto a consistent comparative EPS and share basis.
+summary: Put past EPS on one basis after a stock split or rights issue. Give the terms and past EPS. Get a restated EPS workbook and a share count tie-out.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A corporate-action restatement workbook and current-period weighted-share reconciliation. Share confirmed split and rights terms, cum-rights prices, share transactions, comparative EPS and issuer restatement notes.
+subhead: Give your AI the split or rights terms, the share price before the rights, this year's share changes and past reported EPS. It restates each earlier year, then works out this year's weighted average shares. You get a workbook and a list of what it could not check.
 explain: |-
-  A corporate-action restatement workbook and current-period weighted-share reconciliation.
+  After a stock split or a discounted rights issue, last year's EPS no longer lines up with this year's. The share counts sit on different bases, so growth looks wrong. Accounting rules say to restate the earlier years so every year is on one footing. Total earnings never change. Only the share count and EPS do.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Three skills run in order. The split step builds a split factor and restates old shares and EPS. The rights step finds the theoretical ex-rights price (TERP, the price the shares should trade at once the rights have gone) and a bonus factor, and applies it only to the years before the issue. The last step works out this year's weighted average shares from the dated share changes.
+
+  Splits, rights and cash issues are kept apart. A cash issue at full price is never treated as a split. If a number is missing, the AI marks it MISSING and stops that step. It does not guess.
 when:
-  - You need a corporate-action restatement workbook and current-period weighted-share reconciliation.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your annual report shows EPS for several years, and a split or rights issue happened in between.
+  - You are building a model and old per-share figures no longer match the new ones.
+  - A company sold rights at a discount and you need the bonus factor for earlier years.
+  - A reviewer asks you to tie your restated EPS to the company's own EPS note.
+not_for:
+  - "The company issued shares for cash at the full market price: use the Weighted-average share schedule on its own."
+  - "You want basic and diluted EPS for options and convertibles: use the Reconcile basic and diluted issuer EPS workflow."
+  - "You want EPS before and after a buyback: use the Cash-funded buyback EPS bridge."
+  - "You have no confirmed split or rights terms yet: get the company's announcement or filing first."
 you_give:
-  - Confirmed split and rights terms, cum-rights prices, share transactions, comparative EPS and issuer restatement notes.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The split terms, such as 2 new shares for each old share
+  - "For a rights issue: the share price just before it, the subscription price, and the old and new share counts"
+  - The date each event took effect
+  - Each past year's reported EPS and weighted average shares, from the annual report
+  - This year's share issues and buybacks, with dates
+  - The currency and scale, such as USD millions
+  - The company's own EPS note, to check against (optional)
 you_get:
-  - A corporate-action restatement workbook and current-period weighted-share reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A split factor ledger, with restated shares and EPS for each past year beside the originals
+  - The theoretical ex-rights price and bonus factor, applied only to the years before the issue
+  - This year's weighted average shares, with days and fractions shown
+  - A check that total earnings are the same before and after
+  - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the annual report pages, the split or rights announcement and the company's EPS note. Give the reporting date, currency and scale.
+  - Ask your AI to follow the pack, save a file for each step and stop a step when an input is missing.
+  - After steps 1 and 2, compare each factor with the announcement. A wrong factor carries into every later year.
+  - Before you use the result, check that restated EPS times restated shares gives the same earnings as before. A spreadsheet tool is needed for the workbook. Without one, your AI gives the tables in chat.
 how_it_works:
   - title: Stock-split EPS restatement
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build the actual split-factor ledger and preserve original comparatives; pass adjusted historical shares and EPS with their event dates.
+    text: "Builds the split factor ledger from the confirmed terms. Restates earlier shares and EPS and keeps the originals beside them. Hands step 2 the adjusted shares and EPS with their event dates. Check before moving on: each factor matches the announcement."
   - title: Rights-issue EPS adjustment
-    text: Calculate the actual rights TERP and bonus factor separately from split effects. Apply each confirmed bonus factor only to the affected historical periods; document factor one when no bonus exists.
+    text: Works out the theoretical ex-rights price and the bonus factor, apart from any split. Applies the factor only to years before the issue, or writes factor one when there is no bonus part. Hands step 3 the restated pre-event share counts.
   - title: Weighted-average share schedule
-    text: Use the dated restated pre-event share intervals and actual issued-share dates to compute the current denominator; avoid treating cash issuance as a retrospective split.
+    text: "Uses the restated opening shares and the dated issues to build this year's weighted average. A cash issue is weighted by date and never treated as a retrospective split. Check before you finish: the result ties to the company's EPS note."
 output_shape: |-
-  A corporate-action restatement workbook and current-period weighted-share reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES   <events, dates, currency, scale, source of each number>
+  SPLIT FACTOR LEDGER       <event | date | new per old | factor>
+  RIGHTS ADJUSTMENT         <TERP | bonus factor | years it applies to>
+  RESTATED COMPARATIVES     <year | reported EPS | restated EPS | reported shares | restated shares>
+  WEIGHTED-AVERAGE SHARES   <start | end | shares | days | fraction | weighted shares>
+  RECONCILIATION            <earnings unchanged: yes or no | restated EPS against the company's EPS note>
+  MISSING                   <inputs not given>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - The split or rights terms and the date each took effect
+    - Past years' reported EPS and weighted average shares
+    - This year's share issues and buybacks, with dates
+    - The currency and scale
+  prerequisites:
+    - An AI that can read files, and make a spreadsheet if you want the workbook
+  output:
+    - name: outputs/step-1-stock-split-eps-restatement.md
+      contains: The split factor ledger and restated shares and EPS for each past year, with the earnings check.
+    - name: outputs/step-2-rights-issue-eps-adjustment.md
+      contains: The theoretical ex-rights price, the bonus factor and the years it applies to.
+    - name: outputs/step-3-weighted-average-share-schedule.md
+      contains: This year's dated share timeline, weighted average shares and the tie to reported EPS.
+    - name: Workbook
+      contains: Linked sheets for inputs, calculations and reconciliations. Made only if your AI has a spreadsheet tool.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines and checks missed.
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,13 +98,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI with a spreadsheet tool
+      why: It can build, recalculate and reopen the workbook. In plain chat you get the tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The company's own EPS note, so the result can be tied to it.
+    - The rights or split announcement, with its dates.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: EPS
+    meaning: "Earnings per share: profit for ordinary shareholders divided by their weighted average shares."
+  - term: TERP
+    meaning: "Theoretical ex-rights price: the share price you would expect once the rights shares exist."
+  - term: Bonus factor
+    meaning: The number that scales earlier share counts to account for the discount in a rights issue.
+  - term: Weighted average shares
+    meaning: The share count over the year, with each change counted for the days it was in place.
+before: []
+next:
+  - reconcile-basic-and-diluted-issuer-eps
+  - convertible-eps-inclusion-test
+  - cash-funded-buyback-eps-bridge
+  - eps-multiple-return-bridge

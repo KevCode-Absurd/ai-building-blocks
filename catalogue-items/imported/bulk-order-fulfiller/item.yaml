@@ -1,6 +1,6 @@
 slug: bulk-order-fulfiller
 name: Bulk order fulfiller
-summary: Give it orders and tracking numbers. Get them fulfilled in one batch, with customer alerts if you choose. Changes live orders.
+summary: "Mark many Shopify orders as shipped in one batch. Give it your order tracking numbers, check the preview, then it adds tracking to each order."
 category: general
 boards: []
 type: skill

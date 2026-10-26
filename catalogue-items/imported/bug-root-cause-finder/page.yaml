@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It follows five strict phases and pauses for your OK.
 new_slug: bug-root-cause-finder
 name: Bug root cause finder
-summary: Describe the bug. Get the cause proven with evidence before any code is
-  changed, so fixes stop being guesses.
+summary: Find the root cause of a stubborn bug before any code changes. Your AI proves the cause, then waits for your OK before it fixes anything.
 job: test-and-fix-code
 headline: Bug root cause finder
-subhead: Describe the bug. Get the cause proven with evidence before any code is
-  changed, so fixes stop being guesses. Bring the failing command or test. Use
-  the result to plan your next step.
+subhead: Describe the bug. Get the cause proven with evidence before any code is changed, so fixes stop being guesses. Bring the failing command or test. Use the result to plan your next step.
 explain: |
   Stops your AI from guessing at fixes. It must prove the cause first, and you approve it before any code is changed.
 
@@ -18,6 +15,10 @@ when:
   - A bug comes and goes and you need a disciplined approach.
   - You want to approve the diagnosis before any edits happen.
   - A bug appeared after a recent change and you need the cause.
+not_for:
+  - "You have a simple typo or an error with a known fix: just make the edit yourself, or ask your AI for a quick fix."
+  - "You can only test on a live site: run the failing test in a safe copy of your project first, never in production."
+  - "Your AI cannot run code or read your files: ask a developer to run the steps, or paste the error and code into a chat for ideas only."
 you_give:
   - The failing command or test
   - A description of the bug
@@ -29,8 +30,28 @@ you_get:
   - A minimal fix after you agree
   - Proof that tests pass
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open an AI that can run code and read your project files. Use a safe copy, not your live site.
+  - Paste this skill into the chat, or upload its folder.
+  - Give it the failing command or test and a short description of the bug.
+  - Read the root cause it proposes in Phase 3. Check the evidence. Reply that you agree, or ask it to dig further.
+  - After the fix, check that the failing test and the related tests pass.
+output_sample:
+  input:
+    - The command or test that fails
+    - A short description of the bug
+    - Your project files, so your AI can read and run them
+    - Notes on when it started or how often it fails (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - A safe copy of your project, not your live site
+  output:
+    - name: "Phase 1: Reproduce"
+      contains: The exact error, captured from running the failing command two or three times, with no code read yet.
+    - name: "Phase 2: Isolate"
+      contains: The narrowed-down place where the bug starts, found with temporary debug logging marked DEBUG.
+    - name: "Phase 3: Root cause"
+      contains: A plain statement of why the bug happens, with the evidence, then a pause for you to agree or ask for more.
+    - name: "Phase 4: Fix"
+      contains: The smallest change that fixes the confirmed cause, with all debug lines removed.
+    - name: "Phase 5: Verify"
+      contains: Results from rerunning the failing test and related tests, run 5 or more times if the bug comes and goes.

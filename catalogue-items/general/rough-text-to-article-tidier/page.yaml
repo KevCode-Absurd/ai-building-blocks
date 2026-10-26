@@ -1,35 +1,52 @@
 new_slug: rough-text-to-article-tidier
 name: Rough text to article tidier
-summary: Paste rough text. Get a tidy article with a title, summary and headings, in your words.
+summary: Turn rough notes or a transcript into a tidy article with a title, summary, headings and lists. Your words stay, and every change is listed.
 job: work-with-files
 thinking: low
 thinking_why: It only changes layout, so there are few judgement calls.
 headline: Rough text to article tidier
-subhead: Paste rough text or notes. You get a tidy article with a title, a two-sentence summary, headings and lists, in your own words, with a list of what changed.
-explain: Rough text is full of good material in a bad shape. This prompt fixes the shape and leaves the voice alone. It adds a title that says what the reader gets, a short summary, headings where the topic turns and lists where items run in a row. It does not add facts or reword. Anything unclear is flagged as a note for you to fix, and every change is listed so you can see what it touched.
+subhead: Paste rough text, meeting notes or a transcript. You get a tidy article with a title, a two-sentence summary, headings and lists, in your own words. A list of changes and a list of unclear spots come with it.
+explain: |-
+  Rough text is full of good material in a bad shape. A transcript is one long block. Notes jump between topics. A list is buried in a paragraph. This prompt turns that into an article layout and leaves your voice alone.
+
+  It adds a title that says what the reader gets, a two-sentence summary, headings where the topic changes, and a list where items run in a row. It fixes only clear typos and spacing. It does not reword and it does not add facts. When a line is unclear, it flags it as a note for you to settle. It does not guess.
+
+  Every change is listed, so you can see what it touched. If you want a rewrite, a shorter version or a fact check, those are separate jobs. This one only fixes the shape, in one message, in any chat AI.
 when:
-  - You have notes that need to look like an article.
-  - A transcript or draft is one long block.
-  - You want layout help, not a rewrite.
+  - You pasted a call transcript or voice note and need it to read like an article.
+  - Your meeting notes are one long block and you want headings and lists before you share them.
+  - A draft has a list hidden inside a paragraph, and you want it to look like a list.
+  - You want a blog or help-center post laid out, but you like your own wording.
+not_for:
+  - "You want the text reworded, shorter or less stiff. Use the Plain English editor, or the Anti-AI-slop copy editor if it sounds like a machine wrote it."
+  - "You want typos and grammar slips found and listed. Use the Doc typo and term checker."
+  - "You have an article file and want a saved copy with the options set. Use the Article formatter, which needs Bun or npx on your computer."
+  - "You need the claims checked. This does not check facts. It only changes layout."
 you_give:
-  - Rough text or loose markdown
-  - Who reads it (optional)
+  - "Your rough text, pasted into the chat: notes, a transcript or a loose draft"
+  - "Who will read it (optional)"
+  - "The format you want, markdown or plain text (optional)"
 you_get:
-  - A tidy article with title, summary, headings and lists
-  - A list of changes
-  - Unclear spots flagged as notes
+  - "A title that says what the reader gets"
+  - "A two-sentence summary taken only from your text"
+  - "The body with headings where the topic changes, and lists where items run in a row"
+  - "A list of what it changed"
+  - "Notes on any unclear lines for you to decide"
 how_to_use:
-  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
-  - Under it, paste your rough text.
-  - Send it and read the result.
-  - Read the NOTES first, since those are the spots that need your call.
+  - "Copy the prompt and paste it into Claude, ChatGPT or Gemini."
+  - "Paste your rough text under it. Say who will read it, if you know."
+  - "Send it. No file, code or paid tool is needed."
+  - "Read the NOTES first. Those are the lines that need your call."
+  - "Skim CHANGES to see that nothing was added. Then copy the article out."
 how_it_works:
-  - title: Keep the words
-    text: No new facts and no rewording.
-  - title: Add shape
-    text: Title, summary, headings and lists.
-  - title: List changes
-    text: Everything it touched, plus notes on unclear spots.
+  - title: Keeps your words
+    text: Adds no facts and does not reword. It fixes only clear typos and spacing.
+  - title: Writes a title and summary
+    text: A title of under ten words that says what the reader gets, and two sentences taken only from your text.
+  - title: Adds shape
+    text: Headings where the topic turns, lists where items run in a row, and shorter paragraphs.
+  - title: Reports changes
+    text: Lists everything it touched, and flags unclear spots as notes without fixing them.
 output_shape: |-
   THE ARTICLE
   <title>
@@ -41,6 +58,18 @@ output_shape: |-
 
   NOTES
   <unclear spots>
+output_sample:
+  input:
+    - "Your rough text, such as notes, a transcript or a loose draft"
+    - "Who will read it (optional)"
+  output:
+    - name: "THE ARTICLE"
+      contains: "A title, a two-sentence summary, then your text with headings, lists and shorter paragraphs."
+    - name: "CHANGES"
+      contains: "A short list of layout changes and typo fixes, so you can see what it touched."
+    - name: "NOTES"
+      contains: "Lines that were unclear, left as they were, for you to settle."
+next: [article-formatter, doc-typo-and-term-checker, plain-english-editor]
 tweaks:
   - what: Format
     how: Ask for markdown or plain text.
@@ -67,3 +96,9 @@ works_best_with:
       why: A one-message prompt works in any strong chat AI, with nothing to install.
   inputs:
     - Rough text or loose markdown
+    - The name of the reader, such as customers or your team, so the title fits.
+terms:
+  - term: Transcript
+    meaning: A recording written out as text, such as a call or a voice note.
+  - term: Markdown
+    meaning: Plain text with simple marks for headings and lists, such as # and -.

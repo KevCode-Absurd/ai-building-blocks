@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It steps through pages and reacts to what it sees.
 new_slug: browser-task-runner
 name: Browser task runner
-summary: Describe a browser task. Get pages visited, forms filled, and
-  screenshots or data saved.
+summary: Tell your AI what to do in a web browser. It opens pages, fills forms, and saves screenshots or data. A browser task runner for your terminal.
 job: test-and-fix-code
 headline: Browser task runner
-subhead: Describe a browser task. Get pages visited, forms filled, and
-  screenshots or data saved. Bring the task in plain words. Use the result to
-  plan your next step.
+subhead: Describe a browser task. Get pages visited, forms filled, and screenshots or data saved. Bring the task in plain words. Use the result to plan your next step.
 explain: |
   Pages visited, forms filled, buttons clicked, and the screenshots or data you wanted saved, all done by a real browser from your terminal.
 
@@ -18,6 +15,10 @@ when:
   - You need to fill out and submit a form step by step.
   - You want a screenshot or PDF of a page.
   - You need to click through a site to see what it does.
+not_for:
+  - "You need test files for your code: use a test framework such as @playwright/test, which this skill avoids unless you ask."
+  - "The site's terms forbid automated access: do the task by hand or ask the site owner for permission."
+  - "You want to pull data from a logged-in account without permission: ask the account owner first, or export the data yourself."
 you_give:
   - The task in plain words
   - The web address
@@ -29,8 +30,29 @@ you_get:
   - Data collected from the page
   - A trace of what happened (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and open a browser.
+  - Check that Node.js is installed. Type node --version in your terminal. If it fails, install Node.js first, then run npm install -g @playwright/cli@latest.
+  - Use an AI that can run commands on your computer. A plain chat window cannot open a browser.
+  - Paste this skill into your AI. Then describe the task and the web address.
+  - Start with a public page. Ask your AI to open it, take a snapshot and save a screenshot.
+  - Check the screenshot in output/playwright/. Tell your AI what to click, fill or copy next.
+  - Ask for a trace if a step fails and you want to see what happened.
+output_sample:
+  input:
+    - The task in plain words
+    - The web address
+    - Text to type into forms (optional)
+    - Whether to show the browser window (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - Node.js installed, which gives you npx
+  output:
+    - name: Steps run
+      contains: The pages opened and the clicks, typing and key presses done, in order.
+    - name: Snapshots
+      contains: A list of page elements with short references, retaken after each page change.
+    - name: Screenshots and PDFs
+      contains: Images or PDFs of the pages, saved in the output/playwright/ folder.
+    - name: Collected data
+      contains: Text or values copied from the page, if you asked for data.
+    - name: Trace
+      contains: A recording of the browser session for debugging, only if you ask for one.

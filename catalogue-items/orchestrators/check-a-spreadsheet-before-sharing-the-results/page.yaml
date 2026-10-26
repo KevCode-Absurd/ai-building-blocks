@@ -1,51 +1,94 @@
 new_slug: check-a-spreadsheet-before-sharing-the-results
 name: Check a spreadsheet before sharing the results
 headline: Check a spreadsheet before sharing the results
-summary: Share the source files. Get a formula issue list, corrected presentation plan and sharing checklist.
+summary: Find broken formulas and wrong totals before you share a spreadsheet. Get an issue list, your key figures in plain words and a sharing checklist.
 job: work-with-files
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A formula issue list, corrected presentation plan and sharing checklist. Share the workbook, raw sources, intended audience and the decisions the results will support. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your workbook, the raw data behind it and who will read it. It traces key numbers back to their source, checks formulas and totals and lists what is wrong. Then it puts the figures that hold up into plain words. You get an issue list and a sharing checklist.
 explain: |-
-  A formula issue list, corrected presentation plan and sharing checklist.
+  A spreadsheet can look right and be wrong. A total skips a row. A formula copied down keeps a shifted range. A date reads as text. A hidden sheet still feeds the answer. Once you share the file, people repeat those numbers. This workflow checks a spreadsheet before you share the results, so you find the problems first.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Totals reconcile to sources and charts agree with cells; unverified formulas remain flagged. Missing tools or evidence stay visible in the final summary.
+  Step 1 traces each key output back to its inputs and checks formulas, ranges, totals, dates, currencies and duplicates. It reads formulas as formulas and stored values as values, and it will not say the file was recalculated when it only read stored numbers. Step 2 takes the figures that passed and writes them in plain words, with the unit, the period and the limits next to each. Last, it builds a sharing checklist from what it found.
+
+  Your original file is never changed. Fixes go in a copy or in the issue list, and a result that could not be verified stays marked as unverified.
 when:
-  - You need a formula issue list, corrected presentation plan and sharing checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You built a workbook and are about to email it or paste its numbers into a report.
+  - You inherited a spreadsheet and do not trust its totals.
+  - The totals in your sheet do not match the raw export or your accounting software.
+  - A manager will read the headline numbers and will not open the formulas.
+not_for:
+  - You want slides from a spreadsheet. Use Turn a messy spreadsheet into a clean slide deck.
+  - You need a monthly workbook and deck built every month. Use Build a monthly Excel and PowerPoint update.
+  - You need your analysis written up so someone else can repeat it. Use Document a dataset analysis for reproduction.
+  - You want to match two lists, such as bank lines to your books. Use Match bank to books and issue a clean P&L.
 you_give:
-  - The workbook, raw sources, intended audience and the decisions the results will support.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - Your workbook (.xlsx, .csv or similar)
+  - The raw data or source reports behind it, if the workbook uses them
+  - Who will read the results and what decision they will make
+  - Where you will share it, such as email, a shared drive or a board pack
+  - Totals you already trust, such as a bank balance or a ledger report (optional)
 you_get:
-  - A formula issue list, corrected presentation plan and sharing checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "An issue list: each formula, range, total, date or duplicate problem, with the cell and how serious it is"
+  - A list of results it could not verify, and why
+  - Your key figures in plain words, with unit, period and limits
+  - "A sharing checklist: hidden sheets, links, comments, personal data and file version"
+  - A hand-back summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach your workbook and the raw data. Say who will read it and which numbers matter most.
+  - Read the issue list first. Fix what you agree with in a copy of your file, not the original.
+  - Check the plain-words version against your own sense of the numbers. Change any line that says more than the data shows.
+  - Go through the sharing checklist before you send, then recheck the numbers you changed.
 how_it_works:
   - title: Spreadsheet checker
-    text: Trace key outputs to inputs and check formulas, ranges, error handling, totals, dates, currencies, duplicates and displayed results.
+    text: Traces key outputs to their inputs. Checks formulas, ranges, error handling, totals, dates, currencies and duplicates. Hands a list of figures that passed, and the issue list, to the next step.
   - title: Figures to plain pictures writer
-    text: Explain the verified findings in plain words with the units, periods and limitations intact.
+    text: Takes two to five figures that passed and explains each in plain words, with the exact figure, unit and period kept beside it.
+  - title: Sharing checklist
+    text: "This workflow's own step. It turns the findings into a checklist: hidden sheets, outside links, macros, comments, personal data, file name and version."
 output_shape: |-
-  Scope and source coverage
-  A formula issue list, corrected presentation plan and sharing checklist.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ISSUE LIST
+    Cell or range | Problem | How serious | Suggested fix | Checked how
+
+  NOT VERIFIED
+    Result | Why it could not be checked
+
+  KEY FIGURES IN PLAIN WORDS
+    Original figure, unit and period | Plain comparison | Limit
+
+  SHARING CHECKLIST
+    Hidden sheets | Outside links | Macros | Comments | Personal data | File version
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | Checks not done | One next step
+output_sample:
+  input:
+    - Your workbook
+    - The raw data behind it
+    - Who will read the results and what they will decide
+    - Totals you already trust (optional)
+  prerequisites:
+    - A spreadsheet tool, if you want formulas recalculated and not only read
+  output:
+    - name: Issue list
+      contains: Each formula, range, total, date or duplicate problem, with its cell and how serious it is.
+    - name: Not verified list
+      contains: Results it could not check, and the reason for each.
+    - name: Key figures in plain words
+      contains: The figures that passed, as comparisons, with exact figure, unit, period and limit.
+    - name: Sharing checklist
+      contains: Hidden sheets, outside links, macros, comments, personal data and file version to check before you send.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks that could not run and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Name the sheets and the numbers that matter. Checking every cell of a big file is slower and finds less.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Attach the raw data, not a description of it. Totals cannot be traced without it.
   - what: Acceptance
-    how: Totals reconcile to sources and charts agree with cells; unverified formulas remain flagged.
+    how: Each key total matches its source or sits on the issue list. Formulas it could not verify are flagged.
 judge:
   - Totals reconcile to sources and charts agree with cells; unverified formulas remain flagged.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,16 +101,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Fix the issues in a copy, then run the check again on the copy.
+  - Keep the issue list. Repeat problems show you where your template needs a better formula.
+  - Add the totals you trust, such as a bank balance, so the next check has something to match.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet engine the AI can run
+      why: Recalculating formulas needs one. Without it, the AI reads formulas and stored values and marks totals as not recalculated.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A report from your accounting software to match totals against.
+    - A named person who signs off before you share.
+next:
+  - document-a-dataset-analysis-for-reproduction
 terms:
+  - term: Trace
+    meaning: Follow a number back through formulas to the cells or data it comes from.
+  - term: Recalculate
+    meaning: Make the spreadsheet work out every formula again, instead of showing saved results.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

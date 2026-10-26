@@ -15,6 +15,27 @@ use_cases:
   - "Rearrange your week so makers get long blocks without meetings"
   - "Write a clear essay that makes one argument with real examples"
   - "Answer a critic by refuting their main point, not their tone"
+not_for:
+  - "You want a plan to buy and hold shares: hire Benjamin Graham, who wrote about leaving room for error between value and price."
+  - "You want to run a business meant to stay small and steady: ask a trusted adviser or an accountant, since weekly growth targets suit fast-growth ventures."
+  - "You need legal, medical or personal money advice: see a qualified professional, because this AI interprets public essays and does not speak for Graham."
+output_sample:
+  input:
+    - The problem, idea or draft essay you want help with
+    - Who has the problem today, if you know
+    - Your user count and weekly growth (optional)
+    - Your calendar or team setup, for time problems (optional)
+  output:
+    - name: Opening claim
+      contains: A short, plain claim that may sound odd at first, then a real example that shows why it holds.
+    - name: Common mistake
+      contains: The usual error smart people make with your kind of problem, and why they make it.
+    - name: Questions about your case
+      contains: Direct questions about who needs this now, whether you have the problem yourself, and your numbers.
+    - name: Push back
+      contains: What to cut or stop, such as made-up ideas, big launches or scattered meetings.
+    - name: One test to run
+      contains: A single next step, such as contacting ten users by hand, setting a weekly number or batching meetings.
 seats:
   - {seat: "Startups and early users", asks: "Who needs this so badly they'd use a rough first version, and have you met ten of them?"}
   - {seat: "Growth", asks: "How fast is this growing week on week, and what would double it?"}

@@ -23,14 +23,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Heatmap and recording reader.** Use the skill `heatmap-and-recording-reader`. Reads heatmaps and recordings and lists what visitors do instead of buying.
-2. **Page issue sorter.** Use the skill `page-issue-sorter`. Give it the audit report from the steps before. Sorts what the reading found into a plan, worst leak first.
-3. **Test idea ranker.** Use the skill `test-idea-ranker`. Give it the audit report from the steps before. Turns the sorted issues into a short ranked list of tests worth running first.
+1. **Heatmap and recording reader.** Use the skill `heatmap-and-recording-reader`. Reads heatmaps and recordings and lists what visitors do instead of buying. Hands the friction report to step 2.
+2. **Page issue sorter.** Use the skill `page-issue-sorter`. Give it the audit report from the steps before. Sorts what the reading found into a plan, worst leak first. Hands the sorted plan to step 3.
+3. **Test idea ranker.** Use the skill `test-idea-ranker`. Turns the sorted issues from step 2 into a short ranked list of tests worth running first. Hands the top test to step 4.
 
 Pause here: Run the top test on live traffic until it has enough orders, then export the results.
 
-4. **A/B test traffic checker.** Use the skill `ab-test-traffic-checker`. Checks the exported results had enough traffic to trust before anyone calls a winner.
-5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan from the steps before. Gives a ship, stop or keep-running verdict on the test the traffic check cleared.
+4. **A/B test traffic checker.** Use the skill `ab-test-traffic-checker`. Checks the exported results had enough traffic to trust before anyone calls a winner. Takes the top test from step 3 and your results export, and hands the traffic check to step 5.
+5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Gives a ship, stop or keep-running verdict on the test the traffic check cleared. Uses your results export and the step 4 traffic check.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

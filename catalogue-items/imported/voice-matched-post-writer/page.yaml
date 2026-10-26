@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It learns your style first and then measures the draft.
 new_slug: voice-matched-post-writer
 name: Voice-matched post writer
-summary: Share posts you already wrote. Get new Twitter/X or LinkedIn posts that
-  sound like you, checked against your style.
+summary: Paste five posts you wrote. Get a new Twitter/X or LinkedIn post in your voice, checked against your own style before you see it.
 job: grow-social
 headline: Voice-matched post writer
-subhead: New Twitter/X or LinkedIn posts that sound like you wrote them, checked
-  against how you really write. Most AI drafts read like nobody; this one starts
-  from your own posts.
+subhead: New Twitter/X or LinkedIn posts that sound like you wrote them, checked against how you really write. Most AI drafts read like nobody; this one starts from your own posts.
 explain: |
   New Twitter/X or LinkedIn posts that sound like you wrote them, checked against how you really write. Most AI drafts read like nobody; this one starts from your own posts.
 
@@ -18,6 +15,10 @@ when:
   - Your AI posts all sound generic.
   - You want to turn a rough idea into a hook and short thread.
   - You want to test if a piece of text sounds like you.
+not_for:
+  - "You want writing that is not for Twitter/X or LinkedIn, like emails or blog posts: use your AI with a plain prompt, or ask a person who knows your voice."
+  - "You want a numeric voice score or a profile built from your full post history: use the paid VoiceMoat connector, which needs a Pro or Enterprise plan."
+  - "You want a promise of reach or likes: no tool can give that, so test the post with a small audience first."
 you_give:
   - Five recent posts you wrote
   - The topic or idea for the new post
@@ -29,7 +30,29 @@ you_get:
   - A match check against your samples
   - Edit notes for lines that sound off
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Paste five ordinary posts you wrote yourself. If you cannot, answer the four short style questions.
+  - Read the voice sketch your AI shows you. Correct anything that is wrong.
+  - Say the topic and the platform, then read the draft and the match check.
+  - Edit the lines your AI flagged. Paste the final post into your scheduler, or ask for the match check again on your last edit.
+  - "Optional: the VoiceMoat connector needs a paid Pro or Enterprise plan. It can post to your real account, but only after a preview and your clear yes."
+output_sample:
+  input:
+    - Five recent posts you wrote yourself, pasted in
+    - The topic or idea for the new post
+    - "The platform: Twitter/X or LinkedIn"
+    - Four short answers about your style, if you cannot paste posts (optional)
+  prerequisites:
+    - Any chat AI such as Claude, ChatGPT or Gemini
+    - A paid VoiceMoat plan and sign-in, only if you want the optional connector
+  output:
+    - name: Voice sketch
+      contains: About six lines on how you open, your sentence length, your words, your tone and what you never do.
+    - name: Sketch check
+      contains: A question asking if anything in the sketch is wrong, before any drafting starts.
+    - name: Draft post
+      contains: One post written against your sketch, or three different openings if you are stuck on the first line.
+    - name: Match check
+      contains: A line-by-line note on what fits your samples and what drifted, with the fixes it made.
+    - name: Weak spot note
+      contains: One line on what the AI was unsure about, so you know where to edit.

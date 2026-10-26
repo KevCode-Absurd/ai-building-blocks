@@ -1,6 +1,6 @@
 slug: wartime-or-peacetime-check
 name: "Wartime or peacetime check"
-summary: "Describe your company's position. Get a call on which mode you are in and how to lead in it."
+summary: Is your company in peacetime or wartime? Get a call backed by evidence, a plan to lead in that mode and a signal to switch.
 category: general
 type: skill
 role: check
@@ -15,3 +15,5 @@ version: 1.0.0
 minds: [ben-horowitz]
 credits:
   - {title: "Peacetime CEO / Wartime CEO", by: "Ben Horowitz", used: "Peacetime for a company with a big lead in a growing market; wartime for a threat to survival; each calls for a different leader"}
+needs_mode: manual
+next: [pivot-or-persevere-decider, bad-year-plan-stress-tester, claim-skepticism-kit]

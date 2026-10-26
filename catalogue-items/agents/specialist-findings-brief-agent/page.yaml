@@ -1,37 +1,124 @@
 new_slug: specialist-findings-brief-agent
 name: Specialist findings brief agent
-summary: Turn specialist findings into one clear brief. Resolve clashes, rank next steps and save a checkpoint with owners and open questions.
+summary: Combine findings from several specialists into one decision brief. Settle clashes, rank next steps and get a checkpoint with owners.
 job: set-up-ai
 headline: Specialist findings brief agent
-subhead: Turn specialist findings into one clear brief. Resolve clashes, rank next steps and save a checkpoint with owners and open questions.
+subhead: Give it findings from two or more specialists, such as an ads review, a tracking check and a finance review. It removes repeats, settles clashes where the evidence allows and ranks what to do first. You get a one-page decision brief and five more files.
 explain: |-
-  Share scoped specialist findings, goals, evidence dates and delegation limits. Get a concise strategic brief, owned next steps and state checkpoint.
+  When three specialists look at the same business, you get three reports. They repeat each other, use different numbers and sometimes disagree. This agent turns them into one decision brief you can act on.
 
-  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+  It groups repeated points so one claim told twice does not count as two proofs. It lines up dates, currency and metric definitions before it combines any numbers. It never adds up conversions reported by different platforms as if they were different customers. Where specialists disagree, it names the clash. Then it says what the evidence supports, or which check would settle it.
+
+  The brief names one main recommendation, the strongest doubt, and the checks that could change the decision. Every next step has an owner and a date, or says MISSING. It proposes who should do what. It does not hand out work or take action by itself.
 when:
-  - You need a concise strategic brief, owned next steps and state checkpoint.
+  - Your ads review, tracking check and finance review each say something different, and you need one plan.
+  - A team meeting needs a one-page brief, not three long reports.
+  - You have to decide what to do first, and who owns it.
+  - You want next month's review to start from this decision.
+not_for:
+  - You have one report and nothing to compare it with. Use the Source note summariser.
+  - You need a hard choice argued from several sides. Use the Advisory council.
+  - You only want one report sorted into proven, likely and guess. Use the Findings and guesses separator.
 you_give:
-  - Scoped specialist findings, goals, evidence dates and delegation limits
-  - Authorized tools, owner, limits and any prior checkpoint
+  - Findings from two or more specialists on the same scope, each with its date
+  - The evidence behind each finding, or where to find it
+  - The decision or goal the brief must serve, and the date you must decide
+  - Who owns what, and what each owner may be asked to do
+  - Your last checkpoint file (optional)
 you_get:
-  - A concise strategic brief, owned next steps and state checkpoint
-  - Evidence gaps, proposed actions and checks not run
+  - A one-page decision brief with one main recommendation and the biggest doubt
+  - A clash log showing where specialists agree, repeat each other or disagree
+  - Ranked next steps, each with an owner and a due date
+  - The checks that could change the decision
+  - A list of evidence gaps and a checkpoint file for next time
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Download the pack from this page and add it to your AI. If you cannot add it, paste SKILL.md into a new chat.
+  - Paste or attach each specialist report. Put the date and the author or tool name at the top of each one.
+  - Say what you must decide and by when. List who owns what, and what they may be asked to do.
+  - Say "Write the brief. Propose, do not assign." Your AI asks once for anything missing.
+  - Read decision-brief.md first. Then open clash-log.md and check any clash you disagree with against the source reports.
+  - Approve or change the next steps yourself, then keep checkpoint.md for the next round.
 how_it_works:
-  - title: Step 1
-    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
-  - title: Step 2
-    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
-  - title: Step 3
-    text: Collect current specialist findings for one scope. Group duplicate issues, retain source/evidence links and mark disagreement rather than counting repeated claims as independent proof.
-  - title: Step 4
-    text: Compare urgency, business impact, confidence and dependencies. Reconcile metric definitions before combining numbers. Platform conversions can overlap; do not sum them as unique customers without evidence.
-  - title: Step 5
-    text: "Write a short decision brief: main recommendation, strongest uncertainty or dissent, checks that change the decision, owner and next step. Propose specialist delegation only through the current authority registry and user authorization; coordination does not grant unrestricted execution."
-  - title: Step 6
-    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+  - title: Fix the scope
+    text: It confirms one scope, one decision and a decision date. Anything missing is asked once, then marked MISSING.
+  - title: Load the last checkpoint
+    text: If you supply one, it lists what changed since then. Old approvals are re-checked, not assumed.
+  - title: List every finding
+    text: Each claim gets a tag with its specialist, date, evidence and metric definition. Repeats are grouped and counted as one.
+  - title: Line up the numbers
+    text: It checks period, currency, attribution and units. Numbers that cannot be lined up are shown side by side, not added.
+  - title: Rank the findings
+    text: It compares urgency, business impact, confidence and dependencies, in words rather than invented scores.
+  - title: Write the brief
+    text: One recommendation, the strongest doubt, the checks that would change it, and next steps with owners.
+  - title: Save a checkpoint
+    text: It records scope, sources, open questions and approvals, so the next run can compare.
+output_shape: |-
+  DECISION BRIEF (one page)
+    Decision: <what is being decided, by when>
+    Recommendation: <one to three sentences>
+    Why: <up to three points, each with a source tag>
+    Biggest doubt or dissent: <who disagrees and why>
+    Checks that would change this: <check> | <what result would flip the call>
+
+  CLASH LOG
+    <topic> | <specialist A says> | <specialist B says> | <what the evidence supports, or Open>
+
+  NEXT STEPS (ranked)
+    <rank> | <step> | <owner or MISSING> | <due date or MISSING> | <depends on> | <needs approval>
+
+  EVIDENCE GAPS
+    <what is missing> | <which step it limits> | <how to get it>
+
+  CHECKPOINT
+    Scope, sources and dates, decision, open questions, approvals, next review trigger
+output_sample:
+  input:
+    - Reports from two or more specialists on the same scope
+    - The decision you must make and the date
+    - Who owns what, and what each owner may be asked to do
+    - Your last checkpoint file (optional)
+  prerequisites:
+    - Specialist work already done, such as the output of the Meta results review agent
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: decision-brief.md
+      contains: One page with the main recommendation, the reasons, the biggest doubt and what would change the call.
+    - name: clash-log.md
+      contains: Each point where specialists repeat, agree or disagree, and what the evidence supports.
+    - name: next-steps.md
+      contains: Ranked steps with owner, due date, dependencies and whether each needs approval.
+    - name: decision-checks.md
+      contains: The checks that could flip the recommendation, and which result would do it.
+    - name: evidence-gaps.md
+      contains: Missing facts, the step each one limits and how to get it.
+    - name: checkpoint.md
+      contains: Scope, sources, decision, open questions, approvals and the next review trigger.
+tweaks:
+  - what: One scope
+    how: Keep all reports on the same scope and dates. Reports on different periods cannot be lined up.
+  - what: Evidence links
+    how: Ask each specialist to name the data behind each finding. Claims with no source rank lower.
+  - what: Owners
+    how: List who owns what and what they may be asked to do. Without it, next steps name roles, not people.
+improve:
+  - Add your own decision rule, such as "no spend change without two independent sources", and the agent will apply it.
+  - Keep each brief and checkpoint together. The next brief can then show what changed and why.
+  - Add a short list of past decisions, so the agent does not recommend something you already rejected.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads several reports side by side and keeps track of where each claim came from.
+  inputs:
+    - The raw exports behind each specialist report.
+    - A short list of what each owner can and cannot decide.
+    - The decision history, so past choices are not repeated.
+terms:
+  - term: Specialist
+    meaning: A person or an AI review that looks at one area, such as ads, tracking or finance.
+  - term: Dissent
+    meaning: A specialist who disagrees with the main recommendation, and the reason they give.
+  - term: Checkpoint
+    meaning: A file that records where this run stopped, so the next run can pick up from it.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.

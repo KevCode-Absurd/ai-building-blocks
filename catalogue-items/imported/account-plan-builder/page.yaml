@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It weighs many facts to set goals and a plan.
 new_slug: account-plan-builder
 name: Account plan builder
-summary: Name an account. Get a written plan with goals, key people, open deals,
-  risks and next steps.
+summary: Build an account plan for one customer. Give it the account name and your CRM. You get goals, key people, risks and next steps in one doc.
 job: sell-and-negotiate
 headline: Account plan builder
-subhead: "Name the account and connect your CRM and document tools. It gathers
-  the account picture, then drafts a plan in sections: current state, goals, who
-  you know, open deals, risks and actions. You get the plan in a doc, a
-  stakeholder map and the key CRM fields updated after you approve."
+subhead: "Name the account and connect your CRM and document tools. It gathers the account picture, then drafts a plan in sections: current state, goals, who you know, open deals, risks and actions. You get the plan in a doc, a stakeholder map and the key CRM fields updated after you approve."
 explain: |
   You get a strategic plan for one account in a shared doc, with the key fields copied back to your CRM. It covers where the account stands, goals, the people involved, open deals, risks and next steps.
 
@@ -19,6 +15,10 @@ when:
   - You need a plan for a large account you just inherited.
   - You want to see which decision makers you have not met.
   - You want your CRM to match the plan without retyping.
+not_for:
+  - "You are prepping a first call with a new prospect: use a short discovery brief or your own call notes, since there is no account history to plan from."
+  - "You only want to see who you know at the account: ask your AI for a stakeholder map on its own, which is one step of this plan."
+  - "You want a deep search for upsell ideas only: ask your AI for an expansion review, as this plan only lists first ideas."
 you_give:
   - The account name
   - Connected CRM and document tools
@@ -31,8 +31,34 @@ you_get:
   - An action plan with next steps
   - CRM fields updated after your approval
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Connect your CRM first if your AI allows it.
+  - Type the account name. Say if you want a new plan or a refresh, and if you want a quarter, half or year.
+  - If your CRM is not connected, upload a file of the account and deal rows. Paste any notes or call transcripts too.
+  - Read each section and check the sources it names. Fix anything that looks wrong.
+  - Approve the CRM changes one by one. If your AI cannot write to your CRM, you get a checklist to apply by hand.
+output_sample:
+  input:
+    - The account name or CRM record
+    - "Plan length: quarter, half or year (optional)"
+    - Your goals for the account (optional)
+    - Notes, past plans or call transcripts (optional)
+  prerequisites:
+    - A CRM your AI can read, or a file of your account and deal rows
+    - A docs tool to hold the plan (optional, the plan shows in chat if missing)
+  output:
+    - name: Account snapshot
+      contains: What the customer does, their size and where the relationship stands today.
+    - name: Their goals and initiatives
+      contains: What the customer says it wants, with the source named for each point.
+    - name: Where we are
+      contains: Open and closed deals, and what was won or lost and why.
+    - name: Stakeholder coverage
+      contains: Who you know at the account and who you are missing.
+    - name: Opportunity map
+      contains: Ideas for growing the account, each with the evidence behind it.
+    - name: Risks
+      contains: Rival vendors, renewal exposure and the risk of losing your champion.
+    - name: Action plan
+      contains: Dated actions with an owner for each, covering the plan length you chose.
+    - name: CRM updates
+      contains: A short account summary and next steps on open deals, shown before and after for you to approve.

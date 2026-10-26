@@ -1,6 +1,6 @@
 new_slug: subscription-page-take-rate-checker
 name: "Subscription page take-rate checker"
-summary: "Give it your product page and pop-up. Get a score out of 100 for selling subscription."
+summary: "Check your subscription page for the fixes that raise how many first orders pick subscription. Get a score out of 100 and a test plan."
 job: keep-customers
 thinking: medium
 thinking_why: "It applies seven set rules to a page and adds up points, so a mid-size model is enough. Use a stronger one if you attach many screens."
@@ -17,6 +17,10 @@ when:
   - You already sell a subscription, but only a small share of first orders choose it.
   - You are about to change a pop-up, an ad landing page or the product page and want to know what would clash.
   - You want one cheap test to run next and need to know which fix to start with.
+not_for:
+  - "You have no subscription yet: use the Subscription offer designer first, then come back to check the page."
+  - "You only want to check the rest of the page, like photos and copy: use the Product page screenshot auditor."
+  - "Your subscription app cannot show a clear repeat-order label: fix that in the app, or ask a person who knows the rules where you sell."
 
 you_give:
   - Your product page on desktop and phone, as screenshots or a link
@@ -35,6 +39,29 @@ how_to_use:
   - Tell it your take rate if you know it, and whether you offer a different discount in the pop-up.
   - Try the page yourself on a phone and tell it what you see. A screenshot cannot show which option is pre-selected after the page loads.
   - Change one thing at a time and run the test plan it gives you.
+output_sample:
+  input:
+    - Your product page on phone and desktop, as screenshots or a link
+    - Your welcome pop-up and any cart or slide-in offer
+    - Ad landing pages that mention a discount (optional)
+    - Your current first-order subscription take rate (optional)
+  prerequisites:
+    - An AI that can read images, if you attach screenshots
+  output:
+    - name: Score
+      contains: A total out of 100, added up from the seven rules.
+    - name: Rule scores R1 to R7
+      contains: Points for default selection, offer gating, option count, pop-up alignment, visible value, cadence and cart upgrade, with what the page shows.
+    - name: Honesty check
+      contains: A list of renewal terms, cancel path and urgency claims near the button. It is not scored.
+    - name: Conflicts
+      contains: Places where the pop-up, page or cart disagree, quoting both sides.
+    - name: Fixes, biggest lift first
+      contains: Ranked changes, each with its cost and the rule it fixes.
+    - name: Test plan
+      contains: A one-change test for each of the top two fixes, with the measure and run time.
+    - name: Not seen
+      contains: Anything you did not give it, marked MISSING, so you know what was not checked.
 
 how_it_works:
   - title: Looks at the default

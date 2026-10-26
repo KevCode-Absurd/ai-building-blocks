@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts your setup, then checks set controls.
 new_slug: bank-messaging-security-checker
 name: Bank messaging security checker
-summary: Describe how you connect to SWIFT. Get your architecture type, control
-  gaps and what your yearly attestation needs.
+summary: Check your SWIFT security setup. Get your architecture type, control gaps and what your yearly SWIFT attestation needs.
 job: check-contracts
 headline: Bank messaging security checker
-subhead: Describe how you connect to SWIFT. Get your architecture type, control
-  gaps and what your yearly attestation needs. Bring how you connect to SWIFT.
-  Use the result to plan your next step.
+subhead: Describe how you connect to SWIFT. Get your architecture type, control gaps and what your yearly attestation needs. Bring how you connect to SWIFT. Use the result to plan your next step.
 explain: |
   A clear read on your SWIFT security obligations. Describe how you connect to the SWIFT network, and the AI works out your architecture type and which of the 32 controls in the Customer Security Controls Framework v2026 apply, 26 mandatory and 6 advisory.
 
@@ -18,6 +15,10 @@ when:
   - You don't know which architecture type you fall under.
   - Control 2.4 became mandatory and you need to know what changes.
   - An independent assessment is coming and you need evidence ready.
+not_for:
+  - "You need a formal sign-off: hire an accredited independent assessor, because this check cannot replace one."
+  - "You need legal advice or the latest rules: ask qualified counsel and read the SWIFT Knowledge Centre."
+  - "You use a payment network other than SWIFT: use that network's own security guide or ask its operator."
 you_give:
   - How you connect to SWIFT
   - Your current security controls
@@ -29,7 +30,26 @@ you_get:
   - A control gap list
   - What your attestation needs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
+  - Describe how you connect to SWIFT. Say who runs the messaging and communication interfaces.
+  - Add your current security controls and the back-office systems that send messages.
+  - Ask for your architecture type first. Check it is right before you go on.
+  - Ask for a gap assessment, then an attestation checklist.
+  - Check the control list and dates against the SWIFT Knowledge Centre before you act. This tool needs no code or files.
+output_sample:
+  input:
+    - How you connect to SWIFT, in plain words
+    - Your current security controls
+    - Back-office systems that send messages (optional)
+    - Your attestation deadline (optional)
+  output:
+    - name: Architecture scoping
+      contains: Your architecture type (A1, A2, A3, A4 or B) and which controls apply to it.
+    - name: Gap assessment
+      contains: A table of controls with a red, amber or green status, evidence needed and gap notes.
+    - name: Control 2.4 review
+      contains: What the now mandatory back-office data flow control asks for, common gaps and fix steps.
+    - name: Attestation prep checklist
+      contains: A checklist by control with attestation status and where to find evidence.
+    - name: Timeline and next steps
+      contains: The KYC-SA attestation window, the deadline and what to book or fix first.

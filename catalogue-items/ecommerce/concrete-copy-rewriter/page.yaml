@@ -1,6 +1,6 @@
 new_slug: concrete-copy-rewriter
 name: "Concrete copy rewriter"
-summary: "Paste a line or product copy. Get pass or fail on three tests and a true, picturable rewrite."
+summary: "Paste vague ad or product copy plus your true facts. Get pass or fail on three tests and concrete copy rewrites, each tied to a fact."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It must keep every rewrite tied to a true fact, so it needs care, but the steps are short and clear."
@@ -17,6 +17,10 @@ when:
   - Your headline or product page says "better", "easy" or "high quality" and you can't say what that means.
   - An ad line could be word for word on a rival's page.
   - You have true facts about your product (materials, process, numbers) that your copy doesn't use yet.
+not_for:
+  - "You have no true facts about your product yet: gather them first, or ask the maker for a spec sheet before you write."
+  - "You want the draft polished for flow and tone: use the Sales copy editor."
+  - "Your copy makes health, safety or earnings claims: have a qualified person check them first, then bring the cleared claims here."
 
 you_give:
   - The line, ad or product description to improve
@@ -35,6 +39,27 @@ how_to_use:
   - Paste the true facts you have. Add the source for every number, such as a lab report, a spec sheet or a supplier email.
   - List any claims you can't make, for example health or earnings claims.
   - Check every item marked "confirm". Fix or delete it before the copy goes live.
+output_sample:
+  input:
+    - The ad line, headline or product description you want to improve
+    - True product facts, with a source for every number
+    - One real customer or a few rival lines (optional)
+    - Claims you must not make (optional)
+  output:
+    - name: Three tests
+      contains: Pass or fail on picture it, true or false, and nobody else, each with the reason.
+    - name: Zoom ladder
+      contains: Each vague word walked down step by step to something you could point at.
+    - name: Rewrites
+      contains: Two or three rewrites, each with the fact it rests on and where that fact came from.
+    - name: Side by side
+      contains: A table of the vague line, the specific line and the fact behind it.
+    - name: Senses
+      contains: Which senses the copy covers, which real ones are missing, and which do not apply.
+    - name: Confirm
+      contains: Every detail you did not supply, marked so you can check it before the copy goes live.
+    - name: Checks missed
+      contains: Any check that failed and why, or none.
 
 how_it_works:
   - title: Runs the three tests

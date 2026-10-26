@@ -20,6 +20,36 @@ tools:
   - cursor
 ---
 
+## When not to use (added by AI Blocks)
+
+- The course teaches safety, legal, medical or compliance rules. Write it by hand or have an expert check every fact first.
+- You want a course inside a learning platform with logins, scores saved per person or certificates. This skill makes one static page with no server.
+- You need only one lesson or a study sheet. Ask for a single lesson in your request.
+
+## Before you build (added by AI Blocks)
+
+Ask once for anything missing. Never invent it.
+
+1. The topic. If it is missing, stop and ask.
+2. The learners and their starting level. If not given, write for beginners and say so.
+3. Source links or notes, if the person has them.
+
+Source rule: link only to sources the person gave you or that you actually opened through web search. Never make up a URL, author, study or quote. If there are no sources, show a "Sources" card that reads "None supplied. Check the facts in each lesson before sharing." Lesson facts that come from your own general knowledge must be flagged for checking in the final message.
+
+## Output (added by AI Blocks)
+
+Build these three files in the workspace root, as the steps above describe:
+
+1. **index.html.** The course overview, the lesson list, the lesson reader, the sources list and the final review.
+2. **styles.css.** The warm, readable look from the design tokens.
+3. **script.js.** The lesson data (6 to 8 lessons, each with objectives, flashcards and quiz questions) and the page logic.
+
+In your final message, list the course title, the lesson titles, how to open index.html in a browser, and any facts or sources the person should check before sharing.
+
+## Licence note (added by AI Blocks)
+
+This copy came through the sickn33 collection, which licenses its written content under CC BY 4.0 (see LICENSE-CONTENT). The original DAIR.AI plugin lists MIT. Credit DAIR.AI and sickn33 when you share it.
+
 ## When to Use
 
 Use when this workflow matches the user request: Build compact, standalone multi-lesson course artifacts with lesson navigation, objectives, flashcards, quizzes, and source links.

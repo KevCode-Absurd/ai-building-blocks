@@ -1,6 +1,6 @@
 new_slug: sit-still-rule-writer
 name: "Sit-still rule writer"
-summary: "Paste your picks. Get one page of holding rules: what must stay true, review dates and the only reasons to act."
+summary: "Write sit-still rules for your investments: the facts that must stay true, fixed review dates, what acting costs you, and the only reasons to act."
 job: money-and-investing
 thinking: low
 thinking_why: "It turns your picks into a fixed template of facts, dates and rules. The sums are simple."
@@ -17,6 +17,10 @@ when:
   - You have made your picks and feel the pull to tinker with them.
   - You check prices often and change your mind with each move.
   - You pay fees or tax on moves that did not help.
+not_for:
+  - "You need the money within a year: talk to a licensed adviser or keep it in a plain savings account, since these rules suit long holds."
+  - "You trade for the short term: this tool aims to stop trading, so use your own written trading plan or a broker's risk tools."
+  - "You have not chosen your picks yet: pick them first, because a pick with no reason cannot be watched."
 
 you_give:
   - Your picks, sizes and why you chose them
@@ -34,6 +38,28 @@ how_to_use:
   - Add your fees and how often you check or trade.
   - Print the one-page result and put it where you look at your picks.
   - On each review date, mark each fact and act only on the three reasons.
+output_sample:
+  input:
+    - Your picks, their sizes and why you chose each
+    - A report on what could go wrong (optional)
+    - Your fees, tax rate and how often you check or trade (optional)
+  output:
+    - name: Facts that must stay true
+      contains: Two to four facts you can check for each pick, such as the return it earns or who runs it.
+    - name: Review dates
+      contains: A few fixed dates a year, with each fact marked holds, weaker or broken, and no price checks between.
+    - name: The cost of acting
+      contains: Fees, tax and noise added into one line that says what acting costs you a year.
+    - name: The only reasons to act
+      contains: Three reasons to sell or cut, plus the reasons that do not count.
+    - name: The cooling line
+      contains: A short note to read when the urge hits, plus a one-week wait for any move off the dates.
+    - name: Spare cash
+      contains: A rule for where new money goes while you wait, including holding it.
+    - name: Missing
+      contains: What you did not give that would firm up the sums.
+    - name: Checks missed
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Lists what must stay true

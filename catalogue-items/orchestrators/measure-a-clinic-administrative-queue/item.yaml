@@ -1,6 +1,6 @@
 slug: measure-a-clinic-administrative-queue
 name: Measure a clinic administrative queue
-summary: Share the source files. Get an administrative delay map, capacity options and measurement gaps.
+summary: Find the admin step that slows your clinic queue. Get a delay map, staff capacity options and data gaps, using deidentified records only.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -21,9 +21,9 @@ uses:
   - team-capacity-planner
 steps:
   - uses: process-bottleneck-finder
-    note: Use the bundled deterministic process methods on actual repeated administrative stages and timing evidence. If timing is absent, return an instrumentation plan rather than a measured bottleneck ranking.
+    note: Check the files for names and numbers first. Then work out typical and slow-case time per admin stage and rank where work waits. If timings are missing, return a plan for what to record. Hand step 2 the stage workload.
   - uses: team-capacity-planner
-    note: Compare administrative workload and actual qualified staff availability, retaining fixed duties and uncertainty; propose options for the clinic operations owner.
+    note: Set the admin workload from step 1 against the qualified staff you listed, keeping fixed duties and uncertainty. Return options for the clinic operations owner.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

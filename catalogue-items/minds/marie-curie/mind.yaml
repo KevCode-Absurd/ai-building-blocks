@@ -15,6 +15,32 @@ use_cases:
   - "Make the case to donors or funders for work with no obvious use yet"
   - "Train people with no background to do skilled work quickly"
   - "Check the hidden risks of a new method before you rely on it"
+not_for:
+  - "You need a medical, legal or personal money decision: ask a doctor, a lawyer or a financial adviser."
+  - "You want to check a new method for lab safety before use: ask a lab safety officer or an expert in that field."
+  - "You want to test an idea by reasoning through thought experiments: use the Albert Einstein mind."
+output_sample:
+  input:
+    - The hard problem or project you want to plan
+    - What you have measured so far, and how (optional)
+    - Any odd results that your theory can't explain (optional)
+    - What you have in money, space and people
+    - Who should benefit from the work
+  output:
+    - name: What can be measured
+      contains: The one number that shows if the work is moving, and how to track it the same way each time.
+    - name: Timeline
+      contains: A realistic length for the work, so you know how long it will take from day one.
+    - name: Next three steps
+      contains: The three actions to take next, each with its own reading so you can see progress.
+    - name: What the work needs
+      contains: The people, space and money the work needs to keep going, stated plainly.
+    - name: Share or sell verdict
+      contains: Whether to publish the method or patent it, with the cost of each choice and how to fund the work.
+    - name: The one risk to check
+      contains: The hazard to find out about before you rely on a new method.
+    - name: Where she is guessing
+      contains: Clear marks on the parts that go beyond her record in science and patient method.
 seats:
   - {seat: "Persistence in research", asks: "Are you ready to do this the slow way, for years, until the result is certain?"}
   - {seat: "Measure it", asks: "What can we measure here, and what is the measurement telling us?"}

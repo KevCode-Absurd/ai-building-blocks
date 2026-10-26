@@ -2,35 +2,93 @@ thinking: medium
 thinking_why: It designs a process from your company size.
 new_slug: internal-mobility-program
 name: Internal job move program builder
-summary: Describe your company. Get a transfer process, forms for staff and
-  managers, and measures to track.
+summary: "Describe your company. Get an internal mobility program: a transfer process, forms for staff and managers, and measures to track."
 job: hire-people
 headline: Internal job move program builder
-subhead: Describe your company. Get a transfer process, forms for staff and
-  managers, and measures to track. Bring your company size and structure. Use
-  the result to plan your next step.
+subhead: Give it your company size and how people move jobs today. It writes an internal mobility program sized to you. You get a transfer policy, request and approval forms, a manager guide and a short list of measures.
 explain: |
-  A way for your staff to move into new roles, teams and projects, with the process written down, forms for employees and managers, and measures to track. It helps you keep good people who would otherwise leave to grow elsewhere.
+  Good people leave when they cannot see a next step inside. An internal mobility program gives them one: a clear way to apply for new roles, teams and projects without a fight with their manager. This skill writes that process for your company size.
 
-  You describe your company and get a framework sized to it. It covers how roles are posted inside, how employees apply, how managers should respond, and how approvals work. It adds options like short project moves, rotations and career maps that are not just ladders. It includes training for HR partners who guide moves, a link to succession planning, and rates of internal moves to compare over time. It works from reusable prompts.
+  It starts with how moves happen today and the main gap. Then it writes the policy, the forms and a guide for managers on letting people go. It adds choices such as short project moves and rotations. It ends with measures that use your own numbers and a small pilot.
+
+  It covers moves, not exits or restructures. For who replaces key leaders, use the Succession plan builder.
 when:
   - Good people leave because they see no next step here.
   - Managers block transfers to keep their best staff.
   - You want to post roles inside before going outside.
-  - You are starting a rotation programme for high performers.
-  - You need to measure how many roles are filled internally.
+  - You are starting a rotation program for high performers.
+not_for:
+  - "You need to end a job, run a layoff or restructure the company: use your HR policy and ask an employment adviser."
+  - "You want a plan for who replaces key leaders: use the Succession plan builder."
+  - "You need career levels for one job family: use the Career ladder and growth plan writer."
 you_give:
-  - Your company size and structure
-  - Your current transfer practice
-  - Retention or growth goals (optional)
+  - Your company size and how it is organised
+  - How people move or apply for other roles today
+  - Your goal, such as keeping people longer (optional)
+  - Your own numbers for internal moves and exits (optional)
 you_get:
-  - A mobility framework and policy
-  - Transfer request and approval forms
-  - A manager guide
-  - Rotation or project-move options
-  - Measures to track
+  - A one-page internal move policy
+  - A transfer request form and a manager approval form
+  - A manager guide for letting people move
+  - Options such as project moves and rotations
+  - A table of measures and a pilot plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload the skill folder if your tool allows it.
+  - Paste your company size, how it is organised and how people move jobs now.
+  - Add your goal and any numbers you track. If you have none, say so. The AI marks them MISSING.
+  - Read the policy and forms. Change the time-in-role rule to fit your company.
+  - Ask HR or an employment adviser to check the policy before you publish it.
+  - Pilot it with one team for a quarter, then fill in the measures table with your own results.
+how_it_works:
+  - title: Describe today
+    text: It sums up how moves happen now and names the main gap.
+  - title: Choose move types
+    text: "It picks the types that fit your size: lateral, promotion, cross-team, project or rotation."
+  - title: Write the policy
+    text: It sets who can apply, time in role, how roles are posted and how fast each stage runs.
+  - title: Write forms and guides
+    text: It drafts the request form, the approval form and a manager guide.
+  - title: Add conversation guides
+    text: It helps HR partners and managers talk through internal moves.
+  - title: Set measures and pilot
+    text: It lists the measures, using your own data, and plans a small first pilot.
+output_shape: |-
+  Policy summary: <one page, plain words>
+  Move types: <type | who it suits>
+  Transfer request form: <fields>
+  Manager approval form and guide: <fields, steps>
+  Career conversation guide for HR partners: <questions>
+  Measures: <measure | how to collect | your starting value or MISSING>
+  Rollout plan: <pilot | review date | full launch>
+output_sample:
+  input:
+    - Your company size and how it is organised
+    - How people move or apply for other roles today
+    - Your goal for the program (optional)
+    - Your own numbers for internal moves and exits (optional)
+  output:
+    - name: Policy summary
+      contains: Who can apply, time in role, how roles are posted and how long each stage takes.
+    - name: Transfer request form
+      contains: The fields an employee fills in to ask for a move.
+    - name: Manager approval form and guide
+      contains: How managers respond to a request and release a good person.
+    - name: Career conversation guide
+      contains: Questions HR partners and managers use to talk about moves.
+    - name: Measures table
+      contains: Each measure, how to collect it, and a blank for your starting value.
+    - name: Rollout plan
+      contains: A small pilot, a review date and the steps to a full launch.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can draft the policy and forms. HR should review them before launch.
+  inputs:
+    - Your org chart or team list
+    - Your current transfer rules, if written
+    - Exit data from the last year
+terms:
+  - term: Internal mobility
+    meaning: Staff moving to new roles, teams or projects inside the same company.
+  - term: Rotation
+    meaning: A set stint in another team before returning or moving on.

@@ -1,0 +1,149 @@
+name: Aging Parent Care Companion agent
+summary: Keep an aging parent's medicines, appointments and care team straight. Get a care plan, who to tell about what, and questions for the doctor.
+headline: Aging Parent Care Companion agent
+subhead: Tell it your parent's medicines, appointments and who is on their care team. Your AI builds a care coordination plan for the week, a list of who needs to hear what, and questions to bring to each visit. It is not medical advice, and it points you to the care team and to emergency help.
+job: organise-work
+thinking: high
+thinking_why: It must tell routine questions from safety ones and never answer a medical question itself. Use a model that follows safety rules closely and keeps its answers plain.
+explain: |-
+  Caring for an aging parent means holding a lot at once. Which pill, from which doctor, runs out when? Did the pharmacist hear about the new prescription? What changed since the last visit? This caregiver support agent helps you keep that picture straight so the clinicians can do their work.
+
+  It does not diagnose, change doses or say what a symptom means. When you ask a medical question, it helps you word the question and decide who should hear it: the doctor, the pharmacist or the home health aide. It asks three things about each piece of news: could leaving it out put your parent at risk, does this person's job touch it, and is it the least they need to know.
+
+  It is warm by default and plain when it matters. If you describe a fall with a head injury, sudden confusion, chest pain or trouble breathing, it stops everything else and tells you to call emergency services. It also watches for caregiver burnout and for signs of neglect or abuse, and points you to real help.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your parent sees three doctors and takes seven medicines, and you need one place that shows it all.
+  - A hospital stay or rehab is ending, and you want a plan for the first weeks at home.
+  - You have a doctor visit next week and want a short list of what changed and what to ask.
+  - You are the main caregiver, you are worn out, and you want a plan for what to hand off or ask others to do.
+not_for:
+  - Something is happening right now, such as a fall with a head injury, chest pain or sudden confusion. Call emergency services (911 in the US) first.
+  - You want to know if a medicine is safe, what a symptom means or what dose to give. Ask the doctor or pharmacist. This agent will help you word the question.
+  - You need a power of attorney, a will or an advance directive written. Take its question list to an elder law attorney.
+  - You want a summary of what research says about a treatment. Use the Clinical Evidence agent.
+you_give:
+  - Your parent's first name or a nickname, and any allergies and standing conditions that affect daily care
+  - Their medicines, with dose, how often, who prescribes each and when each runs out
+  - Their care team and upcoming appointments, with what each visit is for
+  - What changed lately, such as a fall, a new symptom, a new prescription or a move (optional)
+  - Which papers exist, such as a power of attorney or a healthcare proxy, and who holds them. Never paste their contents (optional)
+you_get:
+  - A care snapshot with the medicine list, refill dates and care team in one table
+  - A list of this week's tasks with an owner and a date for each
+  - For each appointment, what to bring and the questions to ask
+  - A "who needs to know" list for each piece of news, with the reason
+  - A short check-in on how you are doing, with real support options
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Type the facts in your own words. Use a first name or nickname. Leave out insurance numbers, social security numbers and full medical records. A short list is enough.
+  - Tell it what you need today, such as a refill plan, a visit prep list or a plan for coming home from the hospital.
+  - Check every medicine, dose and date against the pill bottle or pharmacy label. Fix anything wrong before you rely on it.
+  - Take the questions to the doctor or pharmacist. Do not change a medicine because of anything in the plan.
+  - Save the updated care snapshot it gives you in a file. Paste it into the next chat, because your AI will not remember it for you.
+how_it_works:
+  - title: Check for an emergency
+    text: Before anything else it looks for signs of a medical emergency or a risk to safety. If it finds one, it tells you to call emergency services.
+  - title: Fix the scope
+    text: It confirms what you need today and what has changed since last time. It asks once for what is missing, then marks it MISSING.
+  - title: Build the care snapshot
+    text: It lists medicines, refill dates, the care team, appointments and which papers exist. It keeps the list short on purpose.
+  - title: Decide who needs to know
+    text: It runs each piece of news through three tests, safety, relevance and the least needed, and says who to tell and how.
+  - title: Prepare each visit
+    text: It lists what to bring and the questions to ask, based on what has changed since the last visit.
+  - title: Check on the caregiver
+    text: It names any signs of burnout and offers concrete options, such as respite care or a caregiver support group.
+output_shape: |-
+  SAFETY CHECK
+    <no emergency signs seen | emergency steps if any>
+
+  CARE SNAPSHOT
+    Name <first name or nickname> | Allergies <list> | Standing conditions <care-relevant only>
+    MEDICINES: <name> | <dose> | <how often> | <prescriber> | <refill date or MISSING>
+    CARE TEAM: <role> | <name> | <how to reach> | <last told about what>
+    PAPERS ON FILE: <power of attorney, healthcare proxy, advance directive> | <exists yes or no> | <held by>
+
+  THIS WEEK
+    <task> | <why> | <owner> | <due date>
+
+  APPOINTMENTS
+    <date> | <provider> | <what it is for> | <what to bring> | <questions to ask>
+    AFTER THE VISIT: <what to log> | <who else needs to hear it>
+
+  WHO NEEDS TO KNOW
+    <news> | <who to tell> | <why> | <how soon>
+
+  QUESTIONS FOR THE CARE TEAM
+    <question to word for the doctor, pharmacist or aide> | <why you are asking>
+
+  CAREGIVER CHECK-IN
+    <what you noticed> | <support options>
+
+  UPDATED CARE SNAPSHOT (save this file)
+  ASSUMPTIONS AND CHECKS NOT DONE
+output_sample:
+  input:
+    - Your parent's first name or nickname, allergies and standing conditions
+    - Their medicines, care team and upcoming appointments
+    - What changed lately (optional)
+    - Which papers exist and who holds them (optional)
+  prerequisites:
+    - Your own file to save the care snapshot in, because a chat AI will not remember it
+  output:
+    - name: Safety check
+      contains: Whether anything you described needs emergency help now, and what to do if so.
+    - name: Care snapshot
+      contains: The medicine list with refill dates, the care team, and which papers exist.
+    - name: This week
+      contains: Tasks with an owner and a due date, such as a refill call or a pharmacist check.
+    - name: Appointments
+      contains: For each visit, what to bring, the questions to ask and what to log afterward.
+    - name: Who needs to know
+      contains: Each piece of news matched to the person who should hear it and why.
+    - name: Questions for the care team
+      contains: Questions worded for the doctor, pharmacist or aide. It gives no medical answers.
+    - name: Caregiver check-in
+      contains: Signs of strain it saw, with support options such as respite care or a support group.
+    - name: Updated care snapshot
+      contains: A short file you save and paste into your next chat.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them handles a typed list well. Choose one you can keep in one project or chat, so the saved snapshot stays near.
+  inputs:
+    - The pharmacy name and phone number, so refill tasks can name who to call.
+    - The after-visit notes the clinic gave you, summarised in a few lines.
+    - A list of what your parent still does alone, and what they need help with.
+terms:
+  - term: Care team
+    meaning: The doctors, pharmacist, nurses, aides and care manager who look after your parent.
+  - term: Power of attorney
+    meaning: A legal paper that lets someone act for your parent on money or other matters.
+  - term: Healthcare proxy
+    meaning: A paper that names who makes health choices if your parent cannot.
+  - term: Advance directive
+    meaning: A paper that states what care your parent wants or does not want in a crisis.
+  - term: Respite care
+    meaning: Short-term care that gives the main caregiver a break.
+  - term: Adult Protective Services
+    meaning: A public service in the US that looks into reports of abuse or neglect of older adults.
+tweaks:
+  - what: Scope
+    how: Ask for one thing at a time, such as the refill plan or one visit. A short list gets better answers than a whole life story.
+  - what: Tone
+    how: Say if you want the plain version. It will say hard things directly when safety is involved.
+  - what: Privacy
+    how: Use a first name or nickname, and give only what the task needs. Leave out insurance and ID numbers.
+improve:
+  - After each visit, tell the AI what the doctor said and ask it to update the care snapshot.
+  - Keep the saved snapshot with your other care papers, and paste the latest version each time.
+  - Share the questions list with a sibling or helper so everyone asks the same things.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

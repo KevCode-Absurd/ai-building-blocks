@@ -1,6 +1,6 @@
 new_slug: turn-a-messy-spreadsheet-into-a-clean-slide-deck
 name: Turn a messy spreadsheet into a clean slide deck
-summary: Give it a messy data file. Get clean, checked data, a written story and slides built from it.
+summary: Turn a messy spreadsheet into a clean slide deck. Give it your raw data file and get cleaned, checked data, a written story and slides.
 job: work-with-files
 thinking: medium
 thinking_why: The steps are clear and checkable. A mid-size model works, and a stronger one helps on large files.
@@ -14,6 +14,10 @@ when:
   - You have an export or survey file and a meeting to present it in.
   - The same file passes through several hands and no one trusts it.
   - You need slides fast but cannot afford a wrong number on one.
+not_for:
+  - "You only want the data cleaned: use a data cleaning step on its own, or ask your AI to tidy the file and stop there."
+  - "Your data is a small sample or raw numbers you have not looked at yet: review it by hand or with a person who knows the data first."
+  - "You already have a clean story and only need slides: ask your AI to build the deck from your notes, with no data steps."
 you_give:
   - The data file, as CSV or Excel
   - Who the audience is and what decision they must make
@@ -30,6 +34,26 @@ how_to_use:
   - Give it the file and keep a copy of the original.
   - Read the quality report before the story is written, and tell it which columns to trust.
   - Say who the audience is and what they must decide.
+output_sample:
+  input:
+    - Your raw data file, as CSV or Excel
+    - Who the audience is and what decision they must make
+    - The format you will present in (optional)
+    - Notes on what the columns mean (optional)
+  prerequisites:
+    - An AI that can read files and write new ones, such as Claude with file access
+    - A copy of your original file kept safe
+  output:
+    - name: step-01-data-cleaner.md
+      contains: The clean copy of your data and a list of the changes made. Your original stays untouched.
+    - name: step-02-data-quality-auditor.md
+      contains: A quality score, the gaps and odd values still left, and what to fix first.
+    - name: step-03-data-story-writer.md
+      contains: The one point your data proves, ordered as context, problem, proof and next step.
+    - name: step-04-presentation-builder.md
+      contains: The slide deck, with one point per slide, speaker notes and proof figures.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Clean the data
     text: Profiles the file, fills or flags blanks, removes repeats, fixes types and formats and treats outliers. The original stays untouched.

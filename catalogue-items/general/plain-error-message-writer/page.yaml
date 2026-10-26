@@ -1,6 +1,6 @@
 new_slug: plain-error-message-writer
 name: "Plain error message writer"
-summary: "Paste your error messages. Get each rewritten to say what went wrong and what to do next."
+summary: "Rewrite confusing error messages in plain words. Give it your errors and get what went wrong, the next step and a fix, costliest first."
 job: design-work
 thinking: low
 thinking_why: "It rewrites short messages by set rules."
@@ -17,6 +17,10 @@ when:
   - "Your checkout or sign-up form shows stock errors."
   - "Support gets the same confused question after an error."
   - "You are cleaning up the text in a new product."
+not_for:
+  - "You need legal or payment provider text that must keep fixed wording: check with the provider or a lawyer first."
+  - "You need a full review of a whole form or screen: use the Forms and instructions rewriter."
+  - "You want the full version with every check: use the Error message rewriter."
 
 you_give:
   - "The exact error messages"
@@ -32,6 +36,24 @@ how_to_use:
   - "Under it, paste your error messages, one per line."
   - "Add what triggers each one if you know."
   - "Send the rewrites to whoever edits the app text."
+output_sample:
+  input:
+    - Your error messages, one per line
+    - What triggers each message (optional)
+    - Your voice notes, such as calm or direct (optional)
+  output:
+    - name: Ranked list
+      contains: Your messages in order from highest cost to lowest, so money and data problems come first.
+    - name: Original and Trigger
+      contains: The message as you pasted it and what causes it, or MISSING if you did not say.
+    - name: Cost
+      contains: A rating of high, medium or small, based on lost money, lost data or a blocked task.
+    - name: Rewrite
+      contains: One sentence on what went wrong in plain words, then one clear next step.
+    - name: Prevent it
+      contains: A way to stop the error before it shows, such as a date picker that greys out past dates.
+    - name: MISSING
+      contains: A list of facts you did not give, such as unknown triggers, so nothing is invented.
 
 how_it_works:
   - title: "Add the trigger"

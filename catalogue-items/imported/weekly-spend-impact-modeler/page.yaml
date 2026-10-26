@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Spend and sales move together, so it must avoid overclaiming.
 new_slug: weekly-spend-impact-modeler
 name: Weekly spend impact modeler
-summary: Give it weekly spend and sales by channel. Get a simple model of what
-  each channel adds, with honest limits.
+summary: Model what each marketing channel adds to weekly sales from your spend data, with the limits stated. Not a budget tool, and no causal claims.
 job: track-numbers
 headline: Weekly spend impact modeler
-subhead: A plain model of what each marketing channel adds to your weekly sales,
-  with its limits stated up front. It stops you from reading a correlation as
-  proof that a channel works.
+subhead: A plain model of what each marketing channel adds to your weekly sales, with its limits stated up front. It stops you from reading a correlation as proof that a channel works.
 explain: |
   A plain model of what each marketing channel adds to your weekly sales, with its limits stated up front. It stops you from reading a correlation as proof that a channel works.
 
@@ -18,6 +15,10 @@ when:
   - Your CRM credits one channel and you doubt it.
   - You are planning a lift test and want a baseline first.
   - Someone says a channel is incremental and you need to check the claim.
+not_for:
+  - "You need proof a channel causes sales: run a randomized lift test instead, because this model only shows links in past data."
+  - "You want a budget split or an optimizer: ask a person to review the results, since this skill never allocates budget."
+  - "You have only a few weeks of data, or channels that always move together: collect more weeks or vary spend on purpose first."
 you_give:
   - Weekly spend by channel
   - Weekly sales or conversions
@@ -31,8 +32,34 @@ you_get:
   - Assumptions and status flags
   - Plain statement of what is not proven
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and read your spreadsheet.
+  - Open a chat with an AI that can run Python and read files. Claude or ChatGPT with code running turned on both work.
+  - Upload the skill folder, or paste in SKILL.md.
+  - Add your weekly spend and sales by channel as a spreadsheet or CSV. Also give your time zone, currency and week range.
+  - Add your CRM numbers and any spend scenarios you want to test (optional).
+  - Ask your AI to follow the skill. Check the status lines before you read any channel result.
+  - Take the modeled share versus CRM share into a lift-test plan or a human budget review. Do not treat it as a budget decision.
+output_sample:
+  input:
+    - Weekly spend by channel
+    - Weekly sales or conversions
+    - Your time zone, currency and week range
+    - Your CRM's spend and sales by channel (optional)
+    - Spend scenarios to test (optional)
+  prerequisites:
+    - An AI that can run Python code and read files
+    - Python with NumPy installed
+  output:
+    - name: Regression result
+      contains: A status and the modeled contribution for each channel, or the reason no usable result exists.
+    - name: Response curves
+      contains: A curve for each channel built from stated assumptions, or a note that the channel is unsupported.
+    - name: Scenario result
+      contains: Assumed media response for your baseline and proposed spend, with the change shown by channel.
+    - name: Assumption bands
+      contains: Low and high ends of a scenario change, based on multipliers you supply, not confidence intervals.
+    - name: Share comparison
+      contains: Modeled share versus CRM share by channel, with the factor between them.
+    - name: Adjusted CPA
+      contains: CRM cost per conversion divided by the share factor, only when the outcome is a conversion count.
+    - name: Assumptions and limits
+      contains: Scope, dates, units, status flags and a plain note on what is not proven.

@@ -14,6 +14,31 @@ use_cases:
   - Prepare a conversation that leaves room for surprise
   - Arrange several voices or ideas in a clear sequence
   - Turn a vague creative worry into a testable craft question
+not_for:
+  - "You need a fact check or a source check: use a subject expert or a source-checking tool, because a sound effect is not proof."
+  - "You need legal, medical or personal money advice: ask a qualified professional, not a creative advisor."
+  - "You want a film director's view on story order, time and suspense: use the Christopher Nolan mind or the Alfred Hitchcock mind."
+output_sample:
+  input:
+    - A rough recording, draft or outline you are stuck on (optional)
+    - The question that first made you curious about the topic
+    - Who will listen or read, and what they need to know first
+    - How much time and which tools you have
+  output:
+    - name: The live question
+      contains: One craft question taken from your material, in place of a verdict on the whole project.
+    - name: One nearby experiment
+      contains: A small change to one relationship, such as order of voices or a sound, with an unchanged version kept for comparison.
+    - name: Short script or sequence map
+      contains: A brief script, recording plan or sequence card showing what each voice or part does.
+    - name: Carry forward note
+      contains: The strongest moment in the attempt and what it does for the listener.
+    - name: Repair note
+      contains: What is unclear or misleading, and a simple fix to try in the next version.
+    - name: Next test
+      contains: The next experiment, missing material to gather, or a decision to simplify or stop.
+    - name: Fact and illustration labels
+      contains: Which parts are checked facts, which are illustrative sounds, and which remain uncertain.
 seats:
   - {seat: Creative experiments and discovery, asks: What happened in this attempt that is worth carrying forward?}
   - {seat: Sound and conversational explanation, asks: How can a listener experience the question with us?}

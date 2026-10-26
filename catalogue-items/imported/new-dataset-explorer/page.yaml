@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It profiles the data and judges what looks off.
 new_slug: new-dataset-explorer
 name: New dataset explorer
-summary: Give it a new dataset. Get its structure, spread, links and odd spots
-  mapped before you use it.
+summary: Explore a new dataset before you use it. Give it a CSV or Excel file and get a plain profile of its size, gaps, links and outliers.
 job: track-numbers
 headline: New dataset explorer
-subhead: A first look at a dataset you have not worked with, so surprises show
-  up before they wreck a report or a model. You get a plain picture of what is
-  really in the file.
+subhead: A first look at a dataset you have not worked with, so surprises show up before they wreck a report or a model. You get a plain picture of what is really in the file.
 explain: |
   A first look at a dataset you have not worked with, so surprises show up before they wreck a report or a model. You get a plain picture of what is really in the file.
 
@@ -18,6 +15,10 @@ when:
   - You are about to build a model and want to check the data first.
   - Your totals look wrong and you suspect bad rows.
   - You need a quick profile for a data handover.
+not_for:
+  - "You already have a clear question or a decision to make: use a data analysis skill or ask your AI that question directly."
+  - "You need the data cleaned or fixed: this only reports problems, so fix them in your spreadsheet or ask your AI to clean it next."
+  - "Your file is not a table, such as a PDF or a stack of notes: use a plain chat and ask your AI to pull out the numbers first."
 you_give:
   - A table of data (CSV, Excel or similar)
   - The question you hope to answer (optional)
@@ -29,8 +30,29 @@ you_get:
   - Strong links between columns
   - Outliers and a short findings summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open spreadsheets.
+  - Open Claude, ChatGPT or Gemini in a mode that can run code and read files. Data analysis tools may need a paid plan.
+  - Paste the skill text into the chat.
+  - Attach your CSV or Excel file.
+  - Add your question or the column you want to predict, if you have one.
+  - Read the quality section first. Fix the problems it lists before you build a report or model.
+  - Run it again after cleaning to check the fixes worked.
+output_sample:
+  input:
+    - Your data file (CSV, Excel or similar)
+    - The question you hope to answer (optional)
+    - The column you want to predict (optional)
+  prerequisites:
+    - An AI that can run code and open data files
+  output:
+    - name: Structure
+      contains: Row and column counts, column names, data types, and the first and last five rows to catch bad headers or junk.
+    - name: Data quality scorecard
+      contains: Missing values per column, constant columns, mixed types, columns with many unique values, and duplicate rows.
+    - name: Distributions
+      contains: Average, median, spread and skew for number columns, and top category counts, with lopsided columns flagged.
+    - name: Relationships
+      contains: A correlation heatmap and the pairs of columns that move strongly together, up or down.
+    - name: Outliers
+      contains: Count and share of unusual values per number column using the IQR method, with rows odd in several columns.
+    - name: EDA report
+      contains: A short summary of what you can trust, what needs cleaning first, and suggested next steps.

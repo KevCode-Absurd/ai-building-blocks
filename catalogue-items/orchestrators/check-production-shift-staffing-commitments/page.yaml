@@ -1,72 +1,112 @@
 new_slug: check-production-shift-staffing-commitments
 name: Check production shift staffing commitments
 headline: Check production shift staffing commitments
-summary: Share the source files. Get a shift staffing comparison, dependency gaps and handover options.
+summary: Check if a production shift has enough qualified people for its work orders. Get a staffing comparison, the gaps and a handover note.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A shift staffing comparison, dependency gaps and handover options. Share confirmed work orders, available qualified operators, approved equipment capacity, maintenance constraints, changeovers and planned shift hours. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the work orders for a shift, the qualified operators you have, equipment limits, maintenance and changeovers. It compares the hours needed with the hours you really have, lists the gaps and writes the handover options for the shift lead.
 explain: |-
-  A shift staffing comparison, dependency gaps and handover options.
+  A shift looks fully staffed on paper until you take out the setup time, the machine under maintenance and the operator who is not qualified for that line. This workflow checks production shift staffing against your commitments before the shift starts, so the gaps show up while you can still act.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Staffing capacity uses actual qualified roles and equipment constraints; machine throughput is not calculated, and proposed reassignment is not operating authorization. Missing tools or evidence stay visible in the final summary.
+  First it counts the hours of qualified people you really have, not paid hours. It removes maintenance, setup, changeovers and leave. It compares that with the hours the confirmed work orders need, and lists each gap by role and equipment. Then it writes a handover for the shift lead with the options that your numbers support, what blocks each, and which decisions belong to the production owner.
+
+  It does not work out machine speed or output. A proposed move of people is a suggestion, not permission to operate. The production owner decides.
 when:
-  - You need a shift staffing comparison, dependency gaps and handover options.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are planning a shift and want to know if the work orders can be covered by qualified people.
+  - Someone is off or a machine is down and the plan no longer adds up.
+  - A customer date depends on this shift and you need to know where it is at risk.
+  - You hand the shift to another lead and want the blockers and decisions in writing.
+not_for:
+  - You run a restaurant or kitchen shift. Use the Prepare a restaurant shift handover workflow.
+  - A team member is away for days or weeks. Use the Prepare a team absence handover workflow.
+  - A disruption, such as a storm or strike, hits the whole site. Use the Plan staff coverage during a disruption workflow.
+  - You need machine speed or output worked out. Use your planning system, because this does not calculate throughput.
 you_give:
-  - Confirmed work orders, available qualified operators, approved equipment capacity, maintenance constraints, changeovers and planned shift hours.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The confirmed work orders for the shift, with the hours or quantity each needs
+  - The operators available, with the lines or machines each is qualified for
+  - Approved equipment capacity and any machine that is down
+  - Maintenance windows, setup times and changeovers
+  - The planned shift hours, breaks and known leave
+  - Who decides on moves, such as the production owner (optional)
 you_get:
-  - A shift staffing comparison, dependency gaps and handover options.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A staffing comparison: hours needed against qualified hours available, by role and line
+  - A list of dependency gaps, such as a missing qualification or equipment that is down
+  - Handover options for the shift lead, each with what it needs and what blocks it
+  - A list of decisions the production owner must make
+  - Missing facts marked, so nothing is guessed
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the work orders, the operator list with qualifications, equipment limits and shift hours. A spreadsheet export works.
+  - Check the staffing comparison first. If a qualification or a machine status is wrong, fix it before the handover is written.
+  - Read the handover, then give it to the shift lead yourself. Nothing is sent.
 how_it_works:
   - title: Team capacity planner
-    text: Compare committed work and real available qualified hours, preserving maintenance, setup, leave and dependency constraints rather than treating every paid hour as production time.
+    text: Compares work order hours with the qualified hours really available, after maintenance, setup, changeovers and leave. It hands the comparison and the gaps to the handover step.
   - title: Handover note writer
-    text: Prepare the shift lead handover of supported delivery options, blockers, approved priorities and decisions needing the production owner.
+    text: Writes the shift lead handover with the options your numbers support, the blockers, the priorities you set and the decisions that need the production owner.
 output_shape: |-
-  Scope and source coverage
-  A shift staffing comparison, dependency gaps and handover options.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
-tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Staffing capacity uses actual qualified roles and equipment constraints; machine throughput is not calculated, and proposed reassignment is not operating authorization.
-judge:
-  - Staffing capacity uses actual qualified roles and equipment constraints; machine throughput is not calculated, and proposed reassignment is not operating authorization.
-  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
-  - The original source files stay intact, and revised files have distinct names or versions.
-  - Each required component check ran, or the run stopped and says which check could not pass.
-  - The summary names any work that could not be checked.
-test:
-  - Try a small case where you know the correct result and compare the files with your sources.
-  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
-  - Change a date, unit or version between two sources. The handoff should flag the conflict.
-  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  STAFFING COMPARISON
+    Line or role | hours needed | qualified hours available | gap
+
+  DEPENDENCY GAPS
+    Missing qualification | equipment down | maintenance clash | changeover time
+
+  HANDOVER FOR THE SHIFT LEAD
+    If you read nothing else | options and what blocks each | priorities | decisions for the production owner | people and equipment notes
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done
+output_sample:
+  input:
+    - The confirmed work orders for the shift
+    - The available operators and what each is qualified to run
+    - Equipment capacity, machines that are down, maintenance and changeovers
+    - The planned shift hours and known leave
+  output:
+    - name: Staffing comparison
+      contains: Hours needed against qualified hours available for each line or role, with the gap.
+    - name: Dependency gaps
+      contains: Missing qualifications, equipment that is down, maintenance clashes and changeover time that cut the hours.
+    - name: Handover options
+      contains: The options your numbers support, each with what it needs, what blocks it and who decides.
+    - name: Decisions for the production owner
+      contains: Every move or priority change that needs the owner's yes before it happens.
+    - name: Hand-back summary
+      contains: Files saved, facts that could not be checked and the single next step.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read a spreadsheet of work orders and operators and show every sum. No code or web access is needed.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your qualification or training matrix, so the AI never assumes who can run what.
+    - A named production owner who decides on moves.
+tweaks:
+  - what: Scope
+    how: Check one shift and one site at a time so the work orders and people are for the same hours.
+  - what: Evidence
+    how: Paste the real work order list and roster, not a summary from memory.
+  - what: Rules
+    how: Add your rules, such as the maximum hours or the breaks per shift, to the first message.
+judge:
+  - Capacity uses qualified people and equipment limits, not paid hours.
+  - Maintenance, setup, changeovers and leave are removed before hours are compared.
+  - No machine throughput is calculated and no move is called authorised.
+  - Every figure traces to a source you gave or is labelled as an assumption.
+test:
+  - Try a small shift where you know the gap and compare the comparison table.
+  - Remove an operator's qualifications. The AI should ask, not assume.
+  - Change a machine status between two sources. The handoff should flag the conflict.
+improve:
+  - Keep the qualification list up to date and give it to every run.
+  - Save the handover that worked and give it to the next shift lead.
+  - Record the real hours at the end of the shift to set better setup times.
+next:
+  - executive-action-register
+  - prepare-a-team-absence-handover
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Changeover
+    meaning: The time to switch a line from one product or job to the next, when it makes nothing.
+  - term: Qualified hours
+    meaning: Hours worked by people who are trained and approved to run that line or machine.

@@ -1,39 +1,51 @@
 new_slug: prediction-and-bet-planner
 name: "Prediction and bet planner"
-summary: "Paste a belief you hold. Get what it predicts, what would prove it wrong, a small bet and a date to check."
+summary: "Turn a belief into a checkable bet. Get what it predicts, what would prove you wrong, a small stake and a date to check."
 job: test-an-idea
 thinking: medium
 thinking_why: "It turns a loose belief into checkable claims and weighs rival explanations, which needs some judgment."
 
 headline: "Prediction and bet planner"
-subhead: "Give it a belief you hold about your market, your customers or your work. It states the belief simply, writes what it predicts that you could check, and what result would prove you wrong. You get a small stake, a date to check and the rival explanations set out fairly."
+subhead: "Give it a belief about your market, customers or work. It states the belief plainly and writes what it predicts that you could check. It writes the result that would prove you wrong before any test. You get a small stake, a date to check and the rival explanations."
 
 explain: |
-  Beliefs that cannot be wrong cannot be useful. "Customers like our brand" or "this channel will grow" feel true, and since nothing could disprove them, nobody checks. Putting a stake and a date on a claim forces the question of what you would see if you were wrong.
+  A belief that nothing could disprove teaches you nothing. "Customers like our brand" or "this channel will grow" feel true. Nothing could show they are false, so nobody checks. Putting a small stake and a date on a belief forces one question: what would you see if you were wrong?
 
-  This skill strips the belief down to its simplest form and writes what it predicts. It writes the result that would prove you wrong before you test, sets a small stake and a date, and lists the rival explanations with the one you prefer and why. At the date, it asks you to check and settle openly, and records what changed your mind.
+  This skill strips the belief down to its simplest form and writes what it predicts. It writes the result that would prove you wrong before you test anything, so you can't move the goalposts later. It sets a small stake and a date. It lists the rival explanations and says which one you prefer and why.
+
+  The bet is the point. Most planning tools stop at a forecast. This one leaves a block to fill in on the date: the result, who won, and what changed your mind.
 
 when:
-  - You hold a strong view about your market and have never tested it.
-  - Two people in your team disagree and neither can say what would change their mind.
-  - You want to learn from your own predictions instead of explaining them away afterward.
+  - "You hold a strong view about your market and have never tested it."
+  - "Two people on your team disagree and neither can say what would change their mind."
+  - "A planning meeting ends with a vague forecast such as this channel will grow."
+  - "You want to write your guesses down first, so you can learn from them instead of explaining them away later."
+
+not_for:
+  - "You need a proper test with before and after numbers: use the One-change experiment planner."
+  - "You want the strongest case against a plan you already favour: use the Plan objection writer."
+  - "You want to collect facts against a belief over several weeks: use the Assumption evidence tracker."
+  - "The belief has no result you could ever see, or a stake would be unsafe or unfair. It will not work here."
 
 you_give:
-  - The belief, in your own words
-  - What is at stake if you are right or wrong
-  - Rival views you have heard (optional)
+  - "The belief, in your own words"
+  - "What changes if you are right or wrong (optional)"
+  - "Rival views you have heard (optional)"
+  - "Numbers that bear on the belief, such as last quarter's sign-ups (optional)"
 you_get:
-  - The belief in its simplest form
-  - What it predicts that you could check
-  - The result that would prove you wrong, written before the test
-  - A stake, a date and the rival explanations
-  - A record of what changed your mind, after the date
+  - "The belief in its simplest form"
+  - "2 to 4 things it predicts that you could check, each with where to look and by when"
+  - "The result that would prove you wrong, written before the test"
+  - "A small stake, who holds it and a date to check"
+  - "Rival explanations set out fairly, with the one you prefer"
+  - "Blanks to fill in on the date: result, won or lost, what changed your mind"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Write the belief the way you would say it to a friend.
-  - Name a stake you would be happy to pay, such as a lunch, a donation or an hour of work.
-  - Check on the date, settle the bet in public, and bring back what happened.
+  - "Open the skill in your AI, or copy it and paste it into Claude, ChatGPT or Gemini. It needs no files or tools."
+  - "Write the belief the way you would say it to a friend. Add any numbers you have."
+  - "Read WHAT WOULD PROVE ME WRONG first. If you would never accept that result, say so and ask for a sharper version."
+  - "Pick a stake you would feel but not fear, such as a lunch, a donation or an hour of work. Do not bet money."
+  - "On the date, check the numbers, fill in the AT THE DATE block and settle the bet in the open. For a test with before and after numbers, take the belief to the One-change experiment planner."
 
 how_it_works:
   - title: Simplifies the belief
@@ -82,6 +94,32 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "Your belief, in your own words"
+    - "What is at stake if you are right or wrong (optional)"
+    - "Rival views you have heard (optional)"
+    - "Numbers that bear on the belief (optional)"
+  prerequisites:
+    - "Any chat AI. A shared note or doc helps if others should see the bet."
+  output:
+    - name: "THE BELIEF"
+      contains: "Your belief in its simplest form, in one sentence with no hedges."
+    - name: "WHAT IT PREDICTS"
+      contains: "Two to four things you could check if the belief is true, each with where to look and by when."
+    - name: "WHAT WOULD PROVE ME WRONG"
+      contains: "The result, as a number or a plain outcome, written before any test."
+    - name: "THE BET"
+      contains: "A small stake, who holds it and the date to check."
+    - name: "RIVAL EXPLANATIONS"
+      contains: "At least two other explanations for the same facts, in their strongest form, and which you prefer."
+    - name: "AT THE DATE"
+      contains: "Blanks for the result, won or lost, and how you settled it in the open."
+    - name: "WHAT CHANGED MY MIND"
+      contains: "A line to fill in on the date about what surprised you."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts that would sharpen the bet, and any check the answer failed, or none."
+
 tweaks:
   - what: Wording of the belief
     how: Say it plainly, without "might" or "tends to". Vague words make wrong results hard to see.
@@ -106,10 +144,10 @@ test:
   - At the date, check that the result was easy to read against what you wrote.
 
 improve:
-  - Add the numbers you can pull to the prediction step, so predictions use real sources.
-  - Add the kind of stake your team likes, such as a lunch or a donation.
-  - Keep a list of bets and results to see how often you are right.
-  - Pair it with "One-change experiment planner" when a bet needs a proper test.
+  - "Add the numbers you can pull to the prediction step, so predictions use real sources."
+  - "Add the kind of stake your team likes, such as a lunch or a donation."
+  - "Keep a list of bets and results to see how often you are right."
+  - "Pair it with the One-change experiment planner when a bet needs a proper test."
 
 works_best_with:
   tools:

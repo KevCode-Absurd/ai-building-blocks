@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It checks a short draft against a fixed list.
 new_slug: cold-email-pre-send-checker
 name: Cold email pre-send checker
-summary: Paste a cold email and what you know of the prospect. Get claims
-  tested, legal basics checked, and a tighter version.
+summary: Check your cold email before you send it. It tests claims about the prospect, checks legal basics and gives you a tighter version.
 job: write-emails
 headline: Cold email pre-send checker
-subhead: A careful second opinion on a cold email before you hit send. It tests
-  every claim about the prospect against their real page, checks legal basics,
-  and returns a tighter version.
+subhead: A careful second opinion on a cold email before you hit send. It tests every claim about the prospect against their real page, checks legal basics, and returns a tighter version.
 explain: |
   A careful second opinion on a cold email before you hit send. It tests every claim about the prospect against their real page, checks legal basics, and returns a tighter version.
 
@@ -18,6 +15,10 @@ when:
   - You are emailing a country with strict rules.
   - You claim a client result and need it checked.
   - A cold email feels long and you want it tighter.
+not_for:
+  - "You are writing a newsletter or a bulk campaign: use your email tool's own compliance checks, and have a lawyer review the setup."
+  - "You are replying to someone who already wrote back: send a normal reply, as there is nothing to test."
+  - "You need legal advice: ask a lawyer or read your regulator's guidance, as this only checks basics."
 you_give:
   - The draft with subject and body
   - Text from the prospect's page
@@ -29,7 +30,26 @@ you_get:
   - Flags on unproven statements
   - A tighter rewrite
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your draft email, with the subject line and body.
+  - Paste the text from the prospect's page. If your AI can browse the web, you can give it the link instead.
+  - Add proof for any result or client you mention, and say which countries you and the recipient are in (optional).
+  - Read the verdict and the claims table first. Fix anything marked unsupported or needs proof.
+  - Use the tightened version, fill in every [CONFIRM] note, then send it yourself.
+output_sample:
+  input:
+    - Your draft cold email, with subject and body
+    - Text from the prospect's page (or let your AI fetch it, if it can browse)
+    - Proof for any result or client you mention (optional)
+    - Your country and the recipient's country (optional)
+  output:
+    - name: Verdict
+      contains: "One line: send as is, send after fixes, or do not send, with the main reason."
+    - name: Claims table
+      contains: Each claim about the prospect or you, with quoted evidence or a status like unsupported, not checked or needs proof.
+    - name: Issues
+      contains: A numbered list, most serious first, with the exact words from your draft, why it matters and the fix.
+    - name: Tightened version
+      contains: Your draft with unsupported claims removed or marked to confirm, one ask and plain words.
+    - name: Before you send
+      contains: What you must confirm or add, such as postal address, opt-out line and proof for claims.

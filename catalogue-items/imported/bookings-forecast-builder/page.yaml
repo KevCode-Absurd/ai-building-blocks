@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs set funnel maths, then explains the forecast.
 new_slug: bookings-forecast-builder
 name: Bookings forecast builder
-summary: Give it your pipeline and cohorts. Get a commit, best case and
-  pipe-only forecast with the maths shown.
+summary: Build a bookings forecast with commit, best case and pipe-only numbers. Give it your pipeline and cohorts. The maths and assumptions are shown.
 job: money-and-investing
 headline: Bookings forecast builder
-subhead: "Three forecast numbers with the maths shown: commit, best case and
-  pipe only. Leaders can present one figure while the board sees the assumptions
-  behind it."
+subhead: "Three forecast numbers with the maths shown: commit, best case and pipe only. Leaders can present one figure while the board sees the assumptions behind it."
 explain: |
   Three forecast numbers with the maths shown: commit, best case and pipe only. Leaders can present one figure while the board sees the assumptions behind it.
 
@@ -18,6 +15,10 @@ when:
   - You suspect overall retention hides a weak recent cohort.
   - Pipeline coverage is shrinking and you need to know why.
   - You need to project recurring revenue for the next few quarters.
+not_for:
+  - "You need month-end reporting or a financial close: use your accountant or finance team's usual reports."
+  - "You want to set prices: pick a price first, then come back to forecast revenue at that price."
+  - "You want to decide whether to hire a sales lead or redesign territories: talk to a sales leader or advisor."
 you_give:
   - Pipeline by stage with amounts
   - Cohort retention data
@@ -29,8 +30,29 @@ you_get:
   - Retention by cohort
   - A reliability rating for each funnel stage
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run code and read files. Upload the skill folder to it.
+  - "Fill in the intake template: your open deals, stage conversion history, cohort revenue and retention, and the quarter to forecast."
+  - Ask your AI to run the bookings forecaster, then the cohort projector, then the funnel confidence scorer on your intake file.
+  - To see the format first, ask your AI to run each script with the sample option.
+  - Check the assumptions block and any leaky-cohort flag before you share the numbers.
+  - Put the assumptions on the same slide as the forecast number.
+output_sample:
+  input:
+    - Your open deals, with stage, amount, close date, age and last activity
+    - Conversion from stage to stage for the last 4 and last 12 quarters
+    - Each customer cohort's revenue, with retention and expansion by quarter
+    - The quarter and number of quarters you want to forecast
+  prerequisites:
+    - An AI that can run Python code and read files, since the three scripts do the maths
+    - The intake template filled in (about 20 minutes)
+  output:
+    - name: Bookings forecast
+      contains: Commit, best case and pipe-only numbers, each with the conversion rate, data window and weighting used.
+    - name: Assumptions block
+      contains: The conversion rate, data window, weighting and pipeline coverage behind each number, shown next to it.
+    - name: Cohort revenue projection
+      contains: Retention and net revenue retention for each cohort over the forecast period, plus the combined trend.
+    - name: Leaky-cohort callout
+      contains: Flags any cohort whose retention is falling faster than the average of earlier cohorts.
+    - name: Funnel confidence scores
+      contains: For each stage, the average conversion, how much it swings, a confidence band and how to treat it.

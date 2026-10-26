@@ -1,0 +1,153 @@
+name: Support Responder agent
+summary: Turn a customer support ticket into a reply, a likely cause, an escalate-or-not call and a help-article note. Paste the ticket and what you know.
+headline: Support Responder agent
+subhead: Paste a customer support ticket or chat, plus what you know about the account and your product. It sorts the issue, drafts a reply with clear steps, names the likely cause, says whether to escalate and to whom, and lists the follow-up and any help-article fix.
+job: help-customers
+thinking: high
+thinking_why: A good answer needs a likely cause, clear steps and a sound escalation call. Use a model that reasons about the problem and says what it could not check.
+explain: >-
+  A support ticket asks for two things. The customer wants it fixed. Your team
+  also needs to learn from it. Most replies do the first part and forget the
+  second. This support ticket reply agent does both. It writes the reply, then
+  records what the ticket shows about your product and your help pages.
+
+
+  It follows the steps in the original profile. Read the issue and the
+  customer's mood. Find the likely cause. Give steps the customer can follow,
+  and say how you will know it worked. Decide if it needs a specialist, and
+  why. Then note what to fix in your help pages and what to tell your product
+  team. It keeps a clear line between what the ticket proves and what it only
+  suggests.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It drafts only.
+  It cannot look inside your helpdesk, reproduce a bug or fix an account. The
+  response-time and resolution targets in the original are goals and not
+  results from AI Blocks.
+when:
+  - A customer writes in that a login, an export, an invoice or a feature is not working, and you need a clear reply with steps.
+  - A ticket has been passed between people, and you want one summary and one next step.
+  - You must decide if a ticket needs a developer or a billing specialist, and want the reasons written down.
+  - The same question keeps coming in, and you want a help-article fix from it.
+not_for:
+  - The ticket is about a refund, a return or a chargeback. Use the Refund request reply writer or the Retail Customer Returns agent.
+  - The customer is angry and the main need is tone. Use the Angry customer reply writer first.
+  - You need a whole inbox sorted by urgency. Use the Customer inbox triage and reply drafter.
+  - The ticket involves a legal threat, a data leak or a security incident. Pass it to the person in charge now. Do not wait for a draft.
+  - You want your helpdesk to answer by itself. This agent drafts for a person to check. It cannot connect to your tools.
+you_give:
+  - The customer's ticket, email or chat, copied as written
+  - What you know about the account, such as plan, what they use and past tickets (optional)
+  - Your product facts that relate to the issue, such as known bugs, limits and the fix steps you use
+  - Your support rules, such as who handles billing or technical issues and when to escalate
+  - Your reply tone and any phrases to use or avoid (optional)
+you_get:
+  - A short summary of the issue, its type, how urgent it is and how the customer feels
+  - A reply with numbered steps the customer can follow
+  - The likely cause, marked as a guess when the ticket does not prove it
+  - An escalate-or-not call, with who gets it and what to send them
+  - A follow-up and a note for your help pages
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste the full ticket, including earlier replies. Add the plan, the product facts and your escalation rules.
+  - Say who the reply is for. A new user, a developer and a manager need different words.
+  - Read the likely cause. If the ticket does not prove it, ask the customer for the one detail that would, before you promise a fix.
+  - Test the steps yourself on your product. Remove any step that does not match your screens.
+  - A person sends the reply. Pass the escalation note to the right team, then update the help page it names.
+how_it_works:
+  - title: Read the ticket
+    text: It pulls out the problem, the customer's goal, how urgent it is and their mood, and lists what is missing.
+  - title: Find the likely cause
+    text: It offers the most likely cause and says what in the ticket supports it. If nothing does, it says "not confirmed".
+  - title: Write the reply
+    text: It starts with a short, human line, then gives numbered steps and how the customer can tell it worked.
+  - title: Decide on escalation
+    text: It says whether a specialist is needed, which one, and why. It adds the details they need so they do not ask again.
+  - title: Plan the follow-up
+    text: It sets a check-in, and adds a note for a help article and for your product team.
+  - title: List the checks
+    text: It lists steps to test, facts it assumed, and anything only a person with access can confirm.
+output_shape: |-
+  TICKET SUMMARY
+    type <technical | billing | account | feature request> | urgency <low | medium | high | critical> | customer mood <state> | goal <what they want>
+    MISSING: <list>
+
+  LIKELY CAUSE
+    <cause> | evidence from the ticket <quote or fact> | status <likely | not confirmed>
+
+  REPLY TO THE CUSTOMER
+    <short human opening>
+    1. <step>
+    2. <step>
+    <how you will know it worked> | <what to send back if it did not>
+
+  ESCALATION CALL
+    <escalate | do not escalate> | to <role> | why <reason> | send them <details>
+
+  FOLLOW-UP
+    check in <when> | note for help pages <article to add or fix> | note for product team <or "none">
+
+  CHECKS BEFORE SENDING
+    <step to test> | ASSUMED: <list>
+output_sample:
+  input:
+    - The customer's ticket, email or chat
+    - Product facts that relate to the issue, such as known bugs and fix steps
+    - Your support rules for who handles what
+    - The plan or account facts you have (optional)
+  prerequisites:
+    - Your own product knowledge, because the AI cannot see your product or your helpdesk
+    - A person to test the steps before they go to the customer
+  output:
+    - name: Ticket summary
+      contains: The issue type, urgency, the customer's mood and goal, and what is missing.
+    - name: Likely cause
+      contains: The most likely cause, the evidence for it, and whether it is confirmed.
+    - name: Reply to the customer
+      contains: A short reply with numbered steps and how to tell if it worked.
+    - name: Escalation call
+      contains: Escalate or not, to which role, why, and the details to send.
+    - name: Follow-up
+      contains: When to check in, plus notes for your help pages and product team.
+    - name: Checks before sending
+      contains: Steps to test, facts assumed and anything only a person can confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can draft the reply. A stronger model gives a better cause and spots when a ticket has too little to go on.
+    - name: Your helpdesk, such as Zendesk, Freshdesk or Intercom
+      why: The AI cannot read it. Copy the ticket thread in, and send the final reply from there.
+  inputs:
+    - Screenshots or error text from the customer
+    - Your known-issues list and your current help articles
+    - Your response-time promises, so the reply sets the right expectation
+terms:
+  - term: Escalate
+    meaning: Pass a ticket to someone with more skill or authority, such as a developer.
+  - term: First contact resolution
+    meaning: A ticket solved in the first reply, with no back and forth.
+  - term: Knowledge base
+    meaning: Your help pages and articles that customers can read on their own.
+judge:
+  - The reply gives steps a customer can follow, and says how they will know it worked.
+  - The likely cause is marked as a guess when the ticket does not prove it.
+  - The escalation call names who gets it and what they need to know.
+  - It asks for one missing detail and does not invent account facts, plan limits or fixes.
+  - It does not promise a date, a refund or a feature you did not give it.
+test:
+  - Use a ticket you solved last week. See if it finds the same cause and gives the steps you used.
+  - Remove the product facts and run it again. It should ask for them and not make up fix steps.
+  - Try one ticket that really needs a developer. It should escalate and say what to send.
+tweaks:
+  - what: Product facts
+    how: Paste your known issues and real fix steps. Without them it can only give general advice.
+  - what: Audience
+    how: Say if the customer is new, technical or a manager. The steps and words change to fit.
+  - what: Escalation rules
+    how: Give who handles billing, bugs and security, and when to escalate. Otherwise it names a role and you adjust.
+  - what: Length
+    how: Ask for a chat-length reply or an email-length reply. Chat replies need fewer steps per message.
+improve:
+  - Add your tone rules and three replies you are proud of to SKILL.md.
+  - Keep a known-issues list and paste it with each ticket, or add it to SKILL.md.
+  - Save each help-page note in a list, and write the top three articles each month.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must judge what is worth keeping.
 new_slug: session-lesson-writer
 name: Session lesson writer
-summary: Give it a fixed problem from your session. Get one short, tested how-to
-  your AI can reuse next time.
+summary: Turn a fixed problem from your session into a short, tested how-to lesson your AI can reuse. Add it to your project notes to save time.
 job: make-skills
 headline: Session lesson writer
-subhead: One short, tested how-to taken from a problem you just fixed, ready for
-  your AI to reuse. A lesson is only worth saving with a clear trigger, a fix
-  and a way to confirm it worked, so guesses are not saved.
+subhead: One short, tested how-to taken from a problem you just fixed, ready for your AI to reuse. A lesson is only worth saving with a clear trigger, a fix and a way to confirm it worked, so guesses are not saved.
 explain: |
   One short, tested how-to taken from a problem you just fixed, ready for your AI to reuse. A lesson is only worth saving with a clear trigger, a fix and a way to confirm it worked, so guesses are not saved.
 
@@ -18,6 +15,10 @@ when:
   - The same correction came up three times in your project.
   - You want project notes that stay short and tested.
   - You need a lesson written without leaking private chat details.
+not_for:
+  - "You want your AI to save memories on its own: this skill only writes a draft, so ask your AI to save it, or paste it into your notes yourself."
+  - "The problem is not fixed yet: keep debugging first, because a guess is not a lesson."
+  - "The fix is a one-off typo or a short provider outage: skip it, since there is nothing to reuse."
 you_give:
   - A summary or transcript of the fixed session
   - The command or test that proved the fix
@@ -29,7 +30,29 @@ you_get:
   - A note on when not to use it
   - A cleaned version with private details removed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of SKILL.md. If your AI takes files or project folders, add SKILL.md there instead.
+  - Paste your session summary and the command or check that proved the fix. Say if the lesson is for this project, one tool version, or general.
+  - Ask your AI to write a draft lesson. It will not save anything until you say so.
+  - Read the draft. Check that the trigger is narrow, the steps are short and no names, secrets or private paths remain.
+  - Save the lesson in your project notes file, or ask your AI to save it there. Then run the proof check again to confirm the lesson still works.
+  - The optional session-length helper needs Bash and Python 3. It only counts your messages and prints a reminder. It does not save anything.
+output_sample:
+  input:
+    - A summary or transcript of the session where you fixed the problem
+    - The command or check that proved the fix worked
+    - "The scope of the lesson: this project, one tool version, or general"
+    - Where your lessons are stored (optional)
+  prerequisites:
+    - An AI chat where you can paste text or add files
+    - Bash and Python 3 only if you want the optional session-length helper
+  output:
+    - name: Trigger
+      contains: The narrow situation and prerequisites that tell you when this lesson applies, including the tool version if it matters.
+    - name: Procedure
+      contains: The smallest steps that reproduce the problem and repair it, with private details removed.
+    - name: Verify and expected result
+      contains: The check to run and what you should see if the fix worked.
+    - name: Limit
+      contains: A case where the lesson should not be used, and what it does not prove.
+    - name: Evidence and provenance
+      contains: What was seen in the session, kept apart from later guesses and wider claims.

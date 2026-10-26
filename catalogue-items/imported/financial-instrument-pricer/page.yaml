@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Picking the pricing method needs finance knowledge.
 new_slug: financial-instrument-pricer
 name: Financial instrument pricer
-summary: Name the option or bond. Get it priced by the right method, with MATLAB
-  code you can rerun.
+summary: Price an option, bond or swap with the right method and get MATLAB code you can rerun. Works for a financial instrument pricer in MATLAB.
 job: money-and-investing
 headline: Financial instrument pricer
-subhead: A price and sensitivities for an option, bond or swap, using the method
-  that fits the instrument, with MATLAB code you can run again. It saves you
-  from guessing which model applies.
+subhead: A price and sensitivities for an option, bond or swap, using the method that fits the instrument, with MATLAB code you can run again. It saves you from guessing which model applies.
 explain: |
   A price and sensitivities for an option, bond or swap, using the method that fits the instrument, with MATLAB code you can run again. It saves you from guessing which model applies.
 
@@ -18,6 +15,10 @@ when:
   - You want delta and vega for a position.
   - You hold a callable bond and need its price with the rate model.
   - You want to check one pricing method against another.
+not_for:
+  - "You do not have MATLAB with the Financial Instruments Toolbox: ask a quant or use a spreadsheet pricer for simple options instead."
+  - "You need an instrument with a custom payoff: ask a quant to build it from scratch."
+  - "You work in Python, R or Excel: this skill only writes MATLAB code."
 you_give:
   - Instrument type and terms
   - Market data such as rates and volatility
@@ -29,9 +30,26 @@ you_get:
   - MATLAB code to rerun
   - A comparison of methods (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Financial Instruments
-    Toolbox.
+  - Open your AI tool. Paste the skill text from this page into the chat.
+  - Say which instrument you want priced. Add its terms, such as dates, strike and rate.
+  - "Add your market data: the rate curve and volatility. Say which Greeks you want."
+  - Run the code your AI writes in MATLAB. This needs the Financial Instruments Toolbox, a paid add-on.
+  - Check the price and Greeks. Ask for a second method if you want to compare.
+output_sample:
+  input:
+    - The instrument type and its terms
+    - Market data such as rate curve and volatility
+    - The method or model you prefer (optional)
+    - Which Greeks you want (optional)
+  prerequisites:
+    - MATLAB with the Financial Instruments Toolbox, which is a paid product
+    - An AI that can run MATLAB, or a MATLAB window where you paste the code
+  output:
+    - name: Price
+      contains: The fair value of the instrument from the method the skill picked.
+    - name: Greeks and sensitivities
+      contains: Delta, vega, gamma and other sensitivities, read from the pricing results.
+    - name: MATLAB code
+      contains: The instrument, model and pricer objects, so you can rerun the price yourself.
+    - name: Method comparison
+      contains: A second method run on the same product, if you ask to compare methods.

@@ -38,6 +38,7 @@ How to start:
 ## What you need
 - **Clips** (needed for final timing): the files, with each one's real length. With no clips yet, work from the script and the planned lengths, marked `[inferred]`. Open them directly if you can. If you can't open video, ask for screenshots of each clip's first, middle and last frames, not a description, and mark any placement check you couldn't see as blocked.
 - **Transcript** (required): the approved script or a word-for-word transcript of what is said.
+- **Cut list** (optional): the edit plan from the Video ad edit planner, so captions follow its caption windows and the cuts you made. Use it with the exported cut, not instead of it.
 - **Font files** (required): the .ttf or .otf file for each text role (captions, any title). A font name alone is not enough.
 - **Brand colours and logo file** (required if a logo or end card is planned).
 - **Where the ad runs** (optional): Reels, Stories, TikTok, feed. Default: tall 9:16 placements.

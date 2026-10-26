@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Structure choices affect many people.
 new_slug: org-structure-map
 name: Org structure and role map builder
-summary: Give it your goals and team. Get an org structure plan, a spans check
-  and a chart of who decides what.
+summary: Plan your org structure from your goals and team. Get a spans check, a recommended design and a RACI chart of who decides what.
 job: hire-people
 headline: Org structure and role map builder
-subhead: Give it your goals and team. Get an org structure plan, a spans check
-  and a chart of who decides what. Bring company goals and strategy. Use the
-  result to plan your next step.
+subhead: Give it your goals and team. Get an org structure plan, a spans check and a chart of who decides what. Bring company goals and strategy. Use the result to plan your next step.
 explain: |
   A clear plan for how your company or team should be organised, with a check on how many people each manager leads and a chart of who decides what.
 
@@ -18,6 +15,10 @@ when:
   - Managers have too many direct reports.
   - You are splitting a team for a new product or market.
   - A leadership group needs options for a restructure.
+not_for:
+  - "You need one job offer or a single hire: use your hiring manager and a simple offer letter template."
+  - "You are dealing with one person's performance problem: talk to an HR business partner, not an org design plan."
+  - "You need job levels and titles only: ask your AI for a job leveling framework, or work with an HR specialist on job architecture."
 you_give:
   - Company goals and strategy
   - Current team and reporting lines
@@ -31,7 +32,27 @@ you_get:
   - Decision rights and governance notes
   - A change plan outline
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your company goals, your team list with who reports to whom, and your headcount.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your goals, reporting lines, headcount and pain points, such as slow decisions.
+  - "Ask for named sections: structure options, spans and layers check, RACI chart, decision rights and a change plan."
+  - Check the result against real workload, not just headcount. Keep people placement separate from structure.
+  - Review any people decisions with HR and legal before you act.
+output_sample:
+  input:
+    - Your company goals and strategy
+    - Your current team and reporting lines
+    - Your headcount
+    - Pain points such as slow decisions (optional)
+    - Limits such as budget (optional)
+  output:
+    - name: Structure options
+      contains: A comparison of functional, divisional and matrix designs, with one recommended for your size and strategy.
+    - name: Spans and layers check
+      contains: Managers with too many or too few direct reports, and levels that add little.
+    - name: RACI chart
+      contains: Who does the work, who is accountable, who is consulted and who is told, for each key process.
+    - name: Decision rights and governance
+      contains: Who makes which calls, and how a central or local model would work.
+    - name: Change plan outline
+      contains: Steps and messages for moving from the current structure to the new one.

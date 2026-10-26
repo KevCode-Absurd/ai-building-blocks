@@ -2,38 +2,62 @@ thinking: medium
 thinking_why: It must record decisions correctly in a set form.
 new_slug: board-minutes-drafter
 name: Board minutes drafter
-summary: Give it a meeting agenda and notes. Get draft board or committee
-  minutes in a proper format. Have a lawyer check them.
+summary: Draft board minutes from your agenda and notes, in the format of your past minutes. You get a draft with resolutions and open points to check.
 job: document-work
 headline: Board minutes drafter
-subhead: Draft board or committee minutes in your own house format, ready for
-  you to check and correct instead of retyping from scratch. Minutes are a legal
-  record, so the format and accuracy matter.
+subhead: Give it your agenda, notes and a sample of past minutes. It drafts board or committee minutes in that same format. A lawyer must check the draft, because minutes are a legal record.
 explain: |
   Draft board or committee minutes in your own house format, ready for you to check and correct instead of retyping from scratch. Minutes are a legal record, so the format and accuracy matter.
 
   The skill reads your meeting dates from your calendar, asks for the agenda and any slides or pre-read papers, and then drafts the full minutes based on your earlier sample minutes. It can also handle written consents in place of a meeting. Your settings file holds your preferred minutes style. Treat the output as a draft: a lawyer should review it before it goes into the record.
 when:
   - A board meeting just ended and you need the minutes.
-  - Committee minutes must follow the format of past ones.
+  - Committee minutes must match the format of past ones.
   - You have an agenda and slides but no written record.
-  - A decision was made by written consent, not in a meeting.
+  - You want a first draft to hand to a lawyer for review.
+not_for:
+  - "You need final adopted minutes: have a lawyer review and sign off first, as this makes a draft only."
+  - "The meeting had no quorum: stop and ask a lawyer how to fix it before any minutes are written."
+  - "You want to approve an action without a meeting: ask a lawyer to draft a written consent, as this skill does not write one."
 you_give:
-  - The agenda
-  - Meeting notes or a transcript
+  - The meeting agenda
+  - Your notes or a transcript of the meeting
   - Slides or pre-read papers (optional)
-  - Sample past minutes for format
+  - Sample minutes from past meetings, for the format
+  - Who attended, who chaired and who took the minutes
 you_get:
-  - Draft minutes in your house format
-  - Resolutions and votes recorded
-  - A list of open points to confirm
-  - A draft ready for a lawyer's review
+  - Draft minutes in the format of your past minutes
+  - Resolutions and votes written in your house wording
+  - Placeholders where you gave no discussion details
+  - A review checklist for a lawyer to work through
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your calendar.
-  - Where the skill points to /corporate-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste two or three sets of past minutes so your AI can copy the format. If you have a saved house format file, share that too.
+  - Paste the agenda, your notes, and any slides. Say who attended, who chaired, and whether a quorum was present.
+  - Read the draft. Fix every placeholder and check each resolution and vote against what really happened.
+  - Work through the review checklist, then send the draft to a lawyer before it is adopted.
+output_sample:
+  input:
+    - Your meeting agenda
+    - Your notes or a transcript of the meeting
+    - Slides or pre-read papers (optional)
+    - Sample minutes from past meetings, for the format
+    - Who attended, who chaired and who took the minutes
+  prerequisites:
+    - Sample past minutes pasted into the chat, or a saved house format file
+    - A lawyer to review the draft before it is adopted
+  output:
+    - name: Header block
+      contains: Meeting type, company name, date and place of the meeting.
+    - name: Opening and attendance
+      contains: Who called the meeting to order, notice, quorum, directors present and absent, and guests.
+    - name: Previous minutes
+      contains: Approval of the last meeting's minutes, with the date left blank if unknown.
+    - name: Agenda items
+      contains: One section per item, with a discussion summary and any resolution in your house wording.
+    - name: Adjournment and signature block
+      contains: Closing time and a line for the secretary to sign.
+    - name: Review checklist
+      contains: Points to check before sharing, such as attendance, quorum, votes, exhibits and conflicts.
+    - name: Placeholder flags
+      contains: Marks on any section where there was no material, so nothing is made up.

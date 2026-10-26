@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps paths and edge cases from your description.
 new_slug: user-flow-mapper
 name: User flow mapper
-summary: Describe what users do. Get a flow diagram with choices, error states
-  and drop-off points.
+summary: Describe what users do and get a user flow diagram with choices, error paths and drop-off risks. Paste it into a Mermaid tool to share it.
 job: build-product
 headline: User flow mapper
-subhead: A diagram of everything a person can do while finishing a task,
-  including the paths where it goes wrong. You see where they might leave, and
-  what to change first.
+subhead: A diagram of everything a person can do while finishing a task, including the paths where it goes wrong. You see where they might leave, and what to change first.
 explain: |
   A diagram of everything a person can do while finishing a task, including the paths where it goes wrong. You see where they might leave, and what to change first.
 
@@ -18,6 +15,10 @@ when:
   - Support tickets suggest people get lost partway through checkout.
   - You are handing a feature to developers and want every error case listed.
   - You want to find which step to test first for conversion.
+not_for:
+  - "You want to polish screen design or colors: ask a designer to review the screens instead."
+  - "You want to know how real people use your product: run a usability test with real users, or check your analytics funnel."
+  - "You need a flow across many goals at once: map one goal at a time, then link the diagrams."
 you_give:
   - The task to map and who does it
   - Where users enter the flow
@@ -29,7 +30,26 @@ you_get:
   - Drop-off risk notes on each step
   - A list of fixes ranked by effect
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Tell it the task to map, who does it, where users enter, and whether it is a web or mobile app.
+  - Add your drop-off numbers or screen notes if you have them. Leave them out if you do not. Any numbers it shows are examples, so swap in your own.
+  - Copy the Mermaid code it gives you into a Mermaid viewer or a diagram tool that reads Mermaid, to see the picture.
+  - Check each branch ends somewhere. Then look at the highest drop-off step first, and check it against your real funnel data before you share the diagram.
+output_sample:
+  input:
+    - The task to map and who does it, such as checkout or password reset
+    - Where users enter the flow
+    - "Your product type: web app, mobile app or both"
+    - Known drop-off numbers (optional)
+    - Existing screens or notes (optional)
+  output:
+    - name: Mermaid flow diagram
+      contains: A top-down diagram with screens, actions, decisions, error paths and start and end points, with errors in red and success in green.
+    - name: Happy path
+      contains: The ideal route from entry to success, drawn first so the diagram stays easy to read.
+    - name: Edge paths
+      contains: Branches for not signed in, form errors, timeouts and declined payments, each ending in success, recovery or exit.
+    - name: Metric and risk notes
+      contains: Notes on each step, with high-friction steps flagged and a suggested fix for each.
+    - name: Review check
+      contains: A check that every branch ends and no step is left orphaned, done with you before you finish.

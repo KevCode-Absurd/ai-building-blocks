@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It must keep records short and true over time.
 new_slug: feature-memory-keeper
 name: Feature memory keeper
-summary: Point it at your project. Get one short file per feature with status,
-  decisions and risks for the next session.
+summary: Keep feature notes in your project so the next person or AI session knows the status, decisions and risks. One short file per feature.
 job: build-software
 headline: Feature memory keeper
-subhead: A set of short files in your repo, one per feature, so the next person
-  or AI session knows what was decided and what is still risky.
+subhead: A set of short files in your repo, one per feature, so the next person or AI session knows what was decided and what is still risky.
 explain: |
   A set of short files in your repo, one per feature, so the next person or AI session knows what was decided and what is still risky. Nothing has to be re-explained.
 
   The skill keeps a global index plus one markdown file per feature under a docs folder. Before you change anything, it reads the index and the feature's file, and follows links to current sources. If they are missing, it creates the smallest useful structure with a lowercase feature id. After the work it records the status, decisions, risks, rollout limits and the checked outcome. It stays short on purpose. It is not a log of every edit or a replacement for an issue tracker.
 when:
-  - You come back to a feature after a month and cannot recall why it works that
-    way.
+  - You come back to a feature after a month and cannot recall why it works that way.
   - A new AI session keeps asking questions you already answered.
   - Notes on one feature are spread across tickets and old plans.
   - You want to hand a feature to a teammate with context.
+not_for:
+  - "You want to log every code edit: use your version history (git) and its commit messages."
+  - "You need to track tasks, owners and due dates: use your issue tracker, such as Jira or GitHub Issues."
+  - "You need a formal spec written before coding: write the spec first, then use this skill to record what was built."
 you_give:
   - Access to your project folder
   - The feature name
@@ -29,8 +30,34 @@ you_get:
   - Recorded decisions and risks
   - Status and next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write your project files.
+  - Open your AI tool in your project folder. It needs to read and write files, so use a tool like Claude Code, Cursor or Codex.
+  - Paste the skill into the chat, or add it to your tool's skills folder.
+  - Tell your AI the feature name and what changed in this session. Point it to any old docs or tickets (optional).
+  - Ask it to read the index and the feature file first, then do the work, then update both files.
+  - Check the new feature file. Make sure the status, decisions and risks are true, and that no link is broken.
+  - Commit the files with your code so the next session starts with them.
+output_sample:
+  input:
+    - Access to your project folder
+    - The feature name
+    - Existing docs, plans and tickets (optional)
+    - What changed in this session
+  prerequisites:
+    - An AI that can read and write files in your project, such as Claude Code, Cursor or Codex
+  output:
+    - name: docs/features/README.md
+      contains: A short index listing each feature with its status, track file, main source document, last update date and notes.
+    - name: docs/features/<feature-id>/README.md
+      contains: The feature track, one file for each feature, with a lowercase hyphenated name.
+    - name: Current Status
+      contains: A short statement of what the feature does today and what is still in progress.
+    - name: Source of Truth
+      contains: Links to the specs, API notes and plans that are still correct.
+    - name: Current Behavior
+      contains: What has been checked and works now, kept apart from what is only planned.
+    - name: Decisions
+      contains: Lasting choices and trade-offs, so nobody has to ask why again.
+    - name: Known Risks
+      contains: Open risks, rollout limits and follow-ups, including checks that could not be run.
+    - name: Changelog
+      contains: Short dated lines on what changed and what was verified.

@@ -16,6 +16,29 @@ use_cases:
   - "Turn a past failure into a lesson you can use on the next try"
   - "Show your real costs and margins so customers trust your price"
   - "Choose where to put your effort when you have several interests"
+not_for:
+  - "You need stock, tax, legal or health advice: ask a qualified professional, since this mind gives no buy or sell calls."
+  - "You want his views on current news or politics: read recent news from a trusted source, because this mind has no record of them."
+  - "You want to check costs and value with spreadsheets: use the Aswath Damodaran mind, which pairs a business story with the numbers behind its value."
+output_sample:
+  input:
+    - Your business or idea, and who you want to sell to
+    - What you sell and what it costs you to deliver
+    - The offer or outreach message you have now (optional)
+    - Your biggest rival or worry (optional)
+  output:
+    - name: Contrary claim
+      contains: An opening line that pushes back on the common advice for your situation.
+    - name: Early-career story
+      contains: A short story from his recorded early days that backs the claim.
+    - name: Rule or steps
+      contains: A plain rule or short chain of steps to take on your problem.
+    - name: Cost and margin arithmetic
+      contains: Simple sums on what each piece costs, what you charge and who keeps the margin.
+    - name: Closing challenge
+      contains: A task to go learn more or call someone, then come back.
+    - name: Gap note
+      contains: A one-line flag on anything he never wrote about, so you know where the advice is ours.
 seats:
   - {seat: "Sales effort and hustle", asks: "Who have we called this week, and what deal are we closing next?"}
   - {seat: "The knowledge edge", asks: "What do we know about this market that our competitors haven't bothered to learn?"}

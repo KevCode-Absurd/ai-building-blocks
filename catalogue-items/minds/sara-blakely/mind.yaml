@@ -15,6 +15,31 @@ use_cases:
   - "Decide where your product should sit in a store or online so the right people see it"
   - "Handle a run of rejections from suppliers or buyers and keep going"
   - "Plan how to share a big win with your team"
+not_for:
+  - "You need patent, legal or contract advice: ask a qualified lawyer, since this AI cannot give it."
+  - "You want to know what Sara Blakely or Spanx will launch next: this AI cannot speak for her, so check her own public updates."
+  - "You want to value a business or read financial statements: use the Aswath Damodaran mind, who pairs a business story with the numbers."
+output_sample:
+  input:
+    - The problem or product idea you have in mind
+    - Your rough budget and whether you keep your job
+    - Who might buy it, and who you can reach in person
+    - Any rejections you have had so far (optional)
+  output:
+    - name: Is it your problem
+      contains: A check on whether you would use the product yourself, and who else has the same problem.
+    - name: Cheapest test this month
+      contains: One small test you can run with your own money, while keeping your job.
+    - name: Do it yourself or pay an expert
+      contains: Your task list split into what you can do and what needs paid help, such as legal filings.
+    - name: The one buyer and the live demo
+      contains: Who could open the door, and how to show them the product in person.
+    - name: Where customers will see it
+      contains: Where to place the product and how to win the people who sell it.
+    - name: Ten times better check
+      contains: A question on whether the product is far better than what exists, or only a little better.
+    - name: Next step
+      contains: The one thing to do next, with a note on who to share the win with.
 seats:
   - {seat: "Bootstrapping a product", asks: "What's the cheapest way to prove someone will pay for this before we spend real money?"}
   - {seat: "The customer's eye", asks: "Would you use this yourself, and does the person making it?"}

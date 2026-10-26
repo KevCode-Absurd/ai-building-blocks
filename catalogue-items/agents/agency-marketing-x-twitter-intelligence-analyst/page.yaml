@@ -1,0 +1,139 @@
+name: X/Twitter Intelligence Analyst agent
+summary: Turn X (Twitter) posts into a sourced brief on your brand, rivals or audience, with a reusable search list and next steps.
+headline: X/Twitter Intelligence Analyst agent
+subhead: Paste posts, an export or links from X, and say what decision they should help with. It separates real signals from noise and shows how sure it is. You get a sourced brief, a search list you can reuse and a short monitoring plan.
+job: research-topics
+thinking: high
+thinking_why: It must tell a real trend from a few loud accounts and say how sure it is. Use a model that reasons well and does not overstate what the posts show.
+explain: |-
+  X/Twitter research (also called social listening or social media monitoring) goes wrong when someone reads a few loud posts and calls it a trend. This agent starts with the decision you need to make. Are you checking how people talk about your brand, what a rival just launched, or what your audience complains about?
+
+  Then it builds the search first. It lists the exact phrases, handles, hashtags, misspellings and product names to look for, and the words that should be left out. You get this as a table you can reuse.
+
+  When you give it posts, it removes repeats and spam, and it saves the link, handle and time of each post it relies on. It groups posts into themes, checks whether a spike comes from many accounts or a few, and marks each finding as a fact from the posts or its own guess. Each finding gets a confidence level and the sample size behind it.
+
+  It works only from public posts or data you are allowed to use. It will not work out who is behind an account, expose personal details or suggest going after anyone. A chat AI cannot read X live, so you supply the posts, or your AI needs web search or a data service. Some services are paid, and you can run the agent without one.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A rival just launched something and you want to know how buyers on X are reacting before you reply.
+  - Mentions of your brand jumped overnight and you need to know if it is a real problem, a support issue or a few loud accounts.
+  - You want to know what your customers complain about or ask for on X, in their own words.
+  - You need a list of search phrases and accounts to watch for your brand and category.
+not_for:
+  - You want to write or schedule posts. This agent does research only. Use the Twitter Engager agent for replies.
+  - You want to track results of paid social ads. Use the Paid Social Strategist agent.
+  - You expect it to watch X live and alert you. A chat AI cannot do that without a data service and a webhook set up by you.
+  - You want to find out who is behind an account or collect personal details. It will not do that.
+you_give:
+  - The decision the research should help with, in one line, such as "Should we answer a rival's price cut?"
+  - Your brand name, handles and product names, and the rivals and topics to cover
+  - The posts to study, pasted with links, or an export from X or a data service
+  - The date range to cover and any words to leave out (optional)
+you_get:
+  - A sourced brief with the question, the scope, the key findings and the confidence for each
+  - A signal timeline of what happened and when, with a link for each entry
+  - A search table of phrases, handles and exclusions you can reuse
+  - A monitoring plan with what to watch, how often and what counts as a spike
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Tell it the decision you need to make, your brand names and handles, and the rivals or topics to cover.
+  - Paste the posts with their links and times, or attach an export. If your AI can search the web, say so. If you have an X data service such as Xquik, which is paid, say that too.
+  - Type "Make the brief. Show the link for each finding. Say how sure you are and how many posts it rests on."
+  - Read the confidence lines first. Open two or three of the cited posts yourself before you act on a finding.
+  - Take the search table to your monitoring tool, or run the brief again each week with fresh posts.
+how_it_works:
+  - title: Frame the decision
+    text: It restates the question, the deadline and the proof you need. If a part is missing it asks once, then marks it MISSING.
+  - title: Build the search
+    text: It lists exact phrases, handles, hashtags, misspellings and rival names, and the words to leave out.
+  - title: Clean the posts
+    text: It removes reposts, spam and off-topic matches. It keeps each link, handle and time in UTC.
+  - title: Group and test
+    text: It groups posts into themes. It checks if a spike comes from many accounts or a few, and over what time.
+  - title: Mark fact or guess
+    text: Each finding is marked as seen in the posts or as its own reading, with a confidence level and sample size.
+  - title: Write the brief
+    text: You get the brief, timeline, search table and monitoring plan, with actions sorted into now, this week and watch.
+output_shape: |-
+  X/TWITTER INTELLIGENCE BRIEF
+
+  QUESTION
+    <the decision this supports>
+
+  COLLECTION SCOPE
+    Search phrases <list> | Accounts <list> | Date range <dates> | Left out <terms> | Data source <paste, export or search> | Posts used <number>
+
+  KEY FINDINGS
+    1. <finding> | Evidence <link, count> | Fact or reading <which> | Confidence <low, medium or high> | Impact <what it means for you>
+
+  SIGNAL TIMELINE
+    <time in UTC> | <signal> | <source link> | <confidence> | <action>
+
+  SEARCH TABLE
+    <theme> | <phrase> | <accounts> | <language> | <leave out> | <priority> | <how often to review>
+
+  RECOMMENDED ACTIONS
+    Now <list> | This week <list> | Watch <list>
+
+  LIMITS AND CHECKS STILL NEEDED
+    <what the posts cannot show>
+output_sample:
+  input:
+    - The decision the research should help with
+    - Your brand names, handles, rivals and topics
+    - The posts to study, with links, or an export
+    - The date range and words to leave out (optional)
+  prerequisites:
+    - Posts from X pasted in, an export, web search in your AI, or an X data service
+  output:
+    - name: Brief
+      contains: The question, scope and numbered findings, each with a link, a confidence level and what it means.
+    - name: Signal timeline
+      contains: A table of what happened and when, with the source link and action for each signal.
+    - name: Search table
+      contains: Reusable search phrases, handles, languages, words to leave out and how often to review each.
+    - name: Monitoring plan
+      contains: What to watch, how often to check, and the spike level that should trigger a review.
+    - name: Recommended actions
+      contains: Steps sorted into now, this week and watch list.
+    - name: Limits and checks still needed
+      contains: What the posts cannot show, and what you must confirm before you act.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search
+      why: It can open public posts and check links. Search results are partial, so treat counts as a sample.
+    - name: Xquik, a paid X data service
+      why: Gives structured X data and alerts. Not required. Check its current terms and prices yourself.
+  inputs:
+    - A list of your products, nicknames and common misspellings.
+    - Your past support tickets or complaints, to compare with what X shows.
+terms:
+  - term: Signal
+    meaning: A pattern in posts that points to a real shift, such as a jump in complaints. Noise is everything else.
+  - term: Mention spike
+    meaning: A sudden rise in posts that name your brand.
+  - term: Repost
+    meaning: A copy of someone else's post. It is removed so one post is not counted many times.
+  - term: Confidence
+    meaning: How sure the agent is that a finding is real, based on how many posts and accounts support it.
+tweaks:
+  - what: Scope
+    how: Run one decision at a time, such as one rival launch or one week of brand mentions. Broad runs give thin findings.
+  - what: Date range
+    how: Give exact dates. A launch day and a quiet week need different reading.
+  - what: Leave-out words
+    how: Add words that bring noise, such as job ads or giveaways, so they do not skew the counts.
+improve:
+  - Keep each brief and its search table. Compare the next run to see what changed.
+  - Note which phrases found real signal and which brought noise, then trim the table.
+  - Hand the findings to your content or support team, along with the links.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

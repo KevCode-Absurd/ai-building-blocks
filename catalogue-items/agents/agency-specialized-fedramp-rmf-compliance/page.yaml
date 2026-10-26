@@ -1,0 +1,147 @@
+name: FedRAMP & RMF Compliance Engineer agent
+summary: Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor.
+headline: FedRAMP & RMF Compliance Engineer agent
+subhead: Describe the cloud system you want to sell to US government agencies. It sets the impact level from your data, helps draw what is in scope and checks each control for proof. You get the gaps, a fix list and a package checklist.
+job: check-contracts
+thinking: high
+thinking_why: It must tie every control to proof, keep inherited controls apart from your own and flag what it cannot confirm. Use a model that reasons carefully and stays honest about gaps.
+explain: |-
+  FedRAMP is the US program that approves cloud services for government use. NIST RMF is the risk process behind it. Both fail on proof. A plan says every login uses a second step. The assessor logs in with a password. Now you have a finding and less trust in the rest of the package. This agent follows the profile's rule: describe a control only when you can prove it.
+
+  You give it facts about the system. It sets the impact level from the data you hold. The highest of confidentiality, integrity and availability decides it. It helps you define what is inside the authorization boundary, the line around what gets assessed. It separates what your cloud host provides from what you must do yourself. Then it goes through the control families and, for each, shows who is responsible, what you can prove today and what an assessor will test. What you cannot prove goes on an action list. It is never hidden.
+
+  The profile covers two paths, the traditional one and a newer one called 20x. FedRAMP rules and dates change, so confirm the current rules on the FedRAMP website before you plan around them. This agent drafts text and tables. It does not assess, authorize or make machine-readable files. Only an accredited assessor and an agency can authorize a system.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You run cloud software and an agency or prime contractor asks if you are FedRAMP authorized.
+  - You are choosing between the traditional path and the newer 20x path and want the trade-offs written down.
+  - A draft security plan says controls are in place and you want to know which ones you can actually prove.
+  - Your assessor found weaknesses and you need an action list with risk, owner and dates.
+not_for:
+  - You need an assessment or an authorization. Only an accredited assessor and an agency can give one.
+  - You want SOC 2 or ISO 27001 readiness, with no US government customer. Use the Compliance Auditor agent.
+  - You need valid machine-readable (OSCAL) files. This agent writes text and tables only. It does not make or check those files.
+you_give:
+  - A description of the system, what it does and who uses it
+  - The kinds of data it holds, and the damage if that data were leaked, changed or lost
+  - Your cloud host or platform, and the other services the system connects to
+  - Your security plan, policies or control notes, if you have them (optional)
+  - Any assessor findings or scan reports (optional)
+  - The agency you work with, or your target impact level (optional)
+you_get:
+  - A scope note that compares the paths and says what to confirm with FedRAMP
+  - An impact level worked out from your data, with the reasons
+  - Boundary notes that say what is inside, what is outside and what crosses the line
+  - A control gap table that shows who is responsible, what you can prove and what an assessor will test
+  - Draft control statements for the controls where you gave facts
+  - An action list with risk, steps, owner and date left for you to fill
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the system and the data it holds. Name your cloud host and the services it connects to.
+  - Attach your security plan, policies or scan reports if you have them. The AI reads files only. It cannot look into your systems.
+  - Type "Plan this. Describe a control only if I showed you proof. List what an assessor would test."
+  - Read the boundary notes and the gap table first. Fix anything you know is wrong, then ask for a second pass.
+  - Check the path, the dates and the control list on the FedRAMP website. Give the draft to your assessor or advisor.
+how_it_works:
+  - title: Set the scope
+    text: It confirms the system, the data, the customer agency and the path, then marks what to confirm with FedRAMP.
+  - title: Set the impact level
+    text: It rates confidentiality, integrity and availability from your data and mission. The highest sets the level, and it will not rate lower to avoid work.
+  - title: Define the boundary
+    text: It lists what is inside the line, what is outside, and what crosses it. The boundary comes before any control writing.
+  - title: Split responsibility
+    text: For each control family it says if the control is yours, inherited from your host, shared or the customer's.
+  - title: Check for proof
+    text: It marks each control provable now, not provable yet, planned or unknown, and says what proof an assessor will test.
+  - title: Draft statements
+    text: For controls where you gave facts, it drafts a statement that says how this system meets the control, who owns it and what proof backs it.
+  - title: Build the action list
+    text: Each gap gets a risk level, fix steps and a blank for owner and date. It also lists the package parts and the monthly upkeep.
+output_shape: |-
+  SCOPE AND PATH
+    System <name> | Customer <agency or prime> | Path <traditional or 20x, to confirm> | To confirm with FedRAMP <list>
+
+  IMPACT LEVEL
+    Confidentiality <low, moderate or high> <why> | Integrity <level> <why> | Availability <level> <why> | System level <highest of the three>
+
+  BOUNDARY NOTES
+    Inside <components and data stores> | Outside <services, with their status> | Crossing the line <data flows and how they are protected> | Open questions <list>
+
+  CONTROL GAP TABLE
+    <control family> | <yours, inherited, shared or customer's> | <provable now, not provable yet, planned or unknown> | <proof you have> | <proof an assessor will test> | <gap>
+
+  DRAFT CONTROL STATEMENTS
+    <control> | <how this system meets it> | <owner role> | <proof>
+
+  ACTION LIST
+    <weakness> | <controls affected> | <risk> | <fix steps> | <owner: yours to fill> | <date: yours to fill>
+
+  PACKAGE AND UPKEEP
+    <package part> | <have, partly or missing>
+    Monthly <tasks> | Yearly <tasks> | Before a big change <steps>
+
+  QUESTIONS FOR YOUR ASSESSOR
+    <question> | <why it matters>
+output_sample:
+  input:
+    - A description of the system and the data it holds
+    - Your cloud host and the services it connects to
+    - Your security plan, policies or scan reports (optional)
+    - Assessor findings (optional)
+  prerequisites:
+    - An AI that can read files, if you attach plans or reports
+  output:
+    - name: Scope and path
+      contains: The system, the customer, the path chosen and what to confirm on the FedRAMP site.
+    - name: Impact level
+      contains: Low, moderate or high for confidentiality, integrity and availability, with reasons, and the level that results.
+    - name: Boundary notes
+      contains: What is inside the line, what is outside, what crosses it and the open questions.
+    - name: Control gap table
+      contains: Per control family, who is responsible, what you can prove and what an assessor will test.
+    - name: Draft control statements
+      contains: How this system meets each control you gave facts for. Controls without facts are listed as gaps.
+    - name: Action list
+      contains: Each weakness with risk, fix steps, and blanks for owner and date.
+    - name: Package and upkeep
+      contains: The parts of an authorization package with their status, plus monthly and yearly tasks.
+    - name: Questions for your assessor
+      contains: Points to settle with the assessor or agency before the assessment starts.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your security plan and scan reports together, then tie each control to a line of proof.
+  inputs:
+    - A diagram or list of how data moves in and out of the system.
+    - Your cloud host's own FedRAMP documents on what it covers.
+    - Your account lists, patch reports and log settings.
+terms:
+  - term: FedRAMP
+    meaning: The US program that approves cloud services for use by government agencies.
+  - term: NIST RMF
+    meaning: The risk process US government systems follow, from rating the system to watching it after approval.
+  - term: Authorization boundary
+    meaning: The line around everything that is assessed, with a note of what lies outside it.
+  - term: 3PAO
+    meaning: A third-party assessor that FedRAMP has accredited to test your controls.
+  - term: Plan of action and milestones
+    meaning: A list of known weaknesses, each with a risk level, fix steps, an owner and a date. Short form is POA&M.
+tweaks:
+  - what: Impact level
+    how: Give the real data and the real harm if it leaked or went down. A low guess leads to a plan that will not hold up.
+  - what: Your cloud host
+    how: Name it. Controls the host already covers can be inherited, and that changes the gap table.
+  - what: Plans and scan reports
+    how: Attach them. Without them most controls land as unknown, not met.
+improve:
+  - Keep each pass with its action list. Update the table as fixes land and proof is saved.
+  - Add your own naming for owners and tools to the pack, so the roles match your team.
+  - Take the draft statements to your assessor early, to see if they can be tested as written.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

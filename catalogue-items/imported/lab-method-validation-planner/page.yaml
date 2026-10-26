@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It must match the right standard and justify every limit.
 new_slug: lab-method-validation-planner
 name: Lab method validation planner
-summary: Name the lab test method and rules. Get a validation plan, acceptance
-  limits and a write-up ready for review.
+summary: Plan your lab method validation before you test. Name the method and rules. Get acceptance limits, a protocol and a report outline.
 job: document-work
 headline: Lab method validation planner
-subhead: A validation plan with acceptance limits fixed before any data is
-  collected. Name the test method and the rules it falls under. The skill first
-  picks the governing framework, because ICH Q2(R2), ICH M10, USP and ISO 17025
-  ask for different studies, and blending them satisfies none.
+subhead: A validation plan with acceptance limits fixed before any data is collected. Name the test method and the rules it falls under. The skill first picks the governing framework, because ICH Q2(R2), ICH M10, USP and ISO 17025 ask for different studies, and blending them satisfies none.
 explain: |
   A validation plan with acceptance limits fixed before any data is collected. Name the test method and the rules it falls under. The skill first picks the governing framework, because ICH Q2(R2), ICH M10, USP and ISO 17025 ask for different studies, and blending them satisfies none.
 
@@ -19,6 +15,10 @@ when:
   - You have results and need the statistics worked out and written up.
   - You are moving a method to another lab or instrument.
   - A reviewer asked you to defend your acceptance criteria.
+not_for:
+  - Your method already has a validated compendial record. You need verification, not full validation, so follow USP <1226> and ask your analyst and quality unit.
+  - You want a person to decide the method is validated. Your analyst and quality unit make that call, not this skill.
+  - You only need a quick statistics check on one result set with no plan or report. Use a spreadsheet or ask your statistician.
 you_give:
   - The test method and what it measures
   - The governing guideline or framework
@@ -30,7 +30,35 @@ you_get:
   - Calculated statistics
   - A report outline for review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code and read files, since the statistics scripts need that.
+  - Upload the skill folder, or paste the SKILL.md text into the chat.
+  - Tell your AI the method, what it measures and the guideline you must follow. If you are not sure of the guideline, say so and ask it to pick one.
+  - Add your specification or development data. Add any existing validation data if you have it.
+  - Ask for the protocol first. Check the acceptance limits and their sources before you collect any data.
+  - Give the write-up to your analyst and quality unit. File the protocol before you start testing.
+output_sample:
+  input:
+    - The test method and what it measures
+    - The governing guideline or framework, if you know it
+    - Your specification or development data
+    - Existing validation data (optional)
+  prerequisites:
+    - An AI that can run Python 3.11 or newer, for the statistics scripts
+    - Access to the standards you cite, since paywalled ones are cited and not quoted
+  output:
+    - name: Framework and required characteristics
+      contains: The guideline that governs your method and the list of studies it asks for.
+    - name: Validation protocol
+      contains: The study layout, with acceptance criteria written down before any data is collected.
+    - name: Acceptance criteria sources
+      contains: Where each limit comes from, such as your specification, target profile or development data.
+    - name: Response evaluation
+      contains: Calculated linearity and range statistics from your data.
+    - name: Accuracy and precision results
+      contains: Calculated recovery and repeatability figures checked against your limits.
+    - name: Detection and quantitation limits
+      contains: Estimated limits and a check that confirms them.
+    - name: Transfer or method comparison
+      contains: Statistics comparing two labs, instruments or methods, when you need them.
+    - name: Report outline
+      contains: A structure for the write-up, ready for your analyst and quality unit to review.

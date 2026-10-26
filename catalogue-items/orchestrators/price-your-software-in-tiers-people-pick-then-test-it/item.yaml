@@ -7,17 +7,18 @@ role: orchestrate
 job: offer
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: business_profile, required: true}
   - {type: performance_sheet, required: false}
   - {type: product_data, required: false}
 outputs:
   - {type: plan}
+needs_mode: manual
 uses: [revenue-model-picker, saas-pricing-designer, price-presentation-planner, price-test-planner]
 steps:
-  - {uses: revenue-model-picker, note: "Three to five ways to earn from the product (subscription, usage, seats, one-off), the risk of each and the one to build on, with the test that would prove it."}
-  - {uses: saas-pricing-designer, note: "The value metric (what you charge for that grows with the customer's value), the good, better, best tier layout and the starting price for each."}
-  - {uses: price-presentation-planner, note: "How the tiers sit on the page: the anchor, the order, the words under each price and what each tier is for, with no tricks."}
-  - {uses: price-test-planner, note: "The one price change to test first, three outcome cases (worse, same, better), the number that decides and how to roll it back. No live price changes without your yes."}
+  - {uses: revenue-model-picker, note: "Three to five ways to earn from the product (subscription, usage, seats, one-off), the risk of each and the one to build on, with the test that would prove it. Hands the chosen model to the tier step."}
+  - {uses: saas-pricing-designer, note: "The value metric (what you charge for that grows with the customer's value), the good, better, best tier layout and the starting price for each. Hands the tiers and prices to the price-page step."}
+  - {uses: price-presentation-planner, note: "How the tiers sit on the page: the anchor, the order, the words under each price and what each tier is for, with no tricks. Hands the page layout and the tiers to the test step."}
+  - {uses: price-test-planner, note: "The one price change to test first, three outcome cases (worse, same, better), the number that decides and how to roll it back. Uses the tiers and prices from step 3 and your own sign-up and churn numbers. No live price changes without your yes."}
 origin: own
 version: 1.0.0
 example_pending: true

@@ -1,6 +1,6 @@
 new_slug: plan-a-branded-unboxing-that-customers-film-and-reorder-for
 name: Plan a branded unboxing that customers film and reorder for
-summary: Give it your store link and order data. Get a customer ritual, an unboxing plan and the inserts that carry it.
+summary: Plan a branded unboxing that customers film and reorder for. Give it your store link and order numbers. Get a ritual, a box plan and costed inserts.
 job: brand-file
 thinking: medium
 thinking_why: Four skills run in a row, but they are plans, not sums. A mid-size model does it well. Use your strongest for a large range.
@@ -14,6 +14,10 @@ when:
   - Your product looks like your rivals' and you want a pack opening that customers repeat and share.
   - You send orders in plain boxes and want to know what is worth adding for the cost.
   - You want customers to reorder, and think a ritual or gift could help.
+not_for:
+  - "Your box costs more than the margin on each order: first get quotes from your packaging supplier, then come back with a real cost per order."
+  - "You only need your brand voice or look written down: use the Brand guide builder."
+  - "You only want the box plan and already have a ritual: use the Unboxing plan writer."
 you_give:
   - Your store address, and reviews that show how customers use the product (optional)
   - Photos of your current box, insert and wrapping
@@ -31,6 +35,28 @@ how_to_use:
   - Attach photos of your current box. The AI can read images.
   - Choose your three words for the brand feeling when it asks. It will offer five if you have none.
   - Ask your packaging supplier for real quotes before you commit. The plan uses cost bands.
+output_sample:
+  input:
+    - Your store link
+    - Photos of your current box, insert and wrapping
+    - Your average order value, gross margin and orders per month
+    - Your packaging cost per order and repeat rate, if you know it
+    - Your last reviews that show how customers use the product (optional)
+  prerequisites:
+    - An AI that can read files and images, such as Claude
+    - The handoff pack from this page, with every skill file in it
+    - A brand brain from the Brand profile builder (optional, the first step builds one if you have none)
+  output:
+    - name: "Step 1: Brand file"
+      contains: Eight plain files on your facts, offers, buyers, claims, voice and look, each fact tagged by source.
+    - name: "Step 2: Ritual"
+      contains: Three named ritual ideas, the one to launch, a 90-day plan and how to measure it.
+    - name: "Step 3: Unboxing plan"
+      contains: Your brand feeling in three words, one cue per sense, clashes, cost per order and a two-version test.
+    - name: "Step 4: Inserts and gifts"
+      contains: Tiers with costs, an insert card spec, note and gift rules and the repeat orders needed to pay back.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Build your brand file
     text: Reads your site and reviews and writes eight plain files with each fact tagged by source, so the later steps work from your real brand.

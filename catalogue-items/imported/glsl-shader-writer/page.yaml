@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It needs math care and speed checks.
 new_slug: glsl-shader-writer
 name: GLSL shader writer
-summary: Describe the visual effect. Get an efficient vertex and fragment shader
-  for the web or a game.
+summary: Describe the effect you want and get a GLSL shader for the web or a game, with vertex and fragment code, uniforms and speed notes.
 job: build-websites
 headline: GLSL shader writer
-subhead: A visual effect, described in words, turned into working vertex and
-  fragment shaders. Say what you want to see, such as a ripple, a glow or a
-  blur, and you get GLSL code made to run fast on the GPU.
+subhead: A visual effect, described in words, turned into working vertex and fragment shaders. Say what you want to see, such as a ripple, a glow or a blur, and you get GLSL code made to run fast on the GPU.
 explain: |
   A visual effect, described in words, turned into working vertex and fragment shaders. Say what you want to see, such as a ripple, a glow or a blur, and you get GLSL code made to run fast on the GPU.
 
@@ -18,6 +15,10 @@ when:
   - Your shader runs slowly and needs tuning.
   - You want to add bloom, blur or colour correction to a render.
   - You want a procedural texture with no image files.
+not_for:
+  - "You need plain 2D canvas drawing: use the canvas drawing tools in your browser or a 2D library instead."
+  - "You must ship to phones without testing: check the shader on real devices or ask a graphics developer to review it."
+  - "You want a ready-made effect with no code: use the effects or filters built into your engine or editor."
 you_give:
   - A description of the effect
   - Your engine or framework
@@ -29,7 +30,26 @@ you_get:
   - Uniform names to adjust the effect
   - Notes on speed and compatibility
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Say what effect you want to see, such as a ripple, glow or blur.
+  - Name your engine, such as WebGL or Three.js, and list any values you want to control.
+  - Copy the vertex and fragment shaders into your project and set the uniforms from your code.
+  - If the screen is black, check that your uniforms are set and your UV values run from 0 to 1, then ask your AI to fix it.
+  - Test the speed on the devices you care about before you publish.
+output_sample:
+  input:
+    - A description of the effect you want to see
+    - Your engine or framework, such as WebGL or Three.js
+    - Values you want to control, such as speed or color
+    - Your speed target (optional)
+  prerequisites:
+    - A way to run shaders, such as a WebGL page, Three.js project or game engine
+  output:
+    - name: Vertex shader
+      contains: Code that moves each point into screen space and passes data like UV coordinates on to the fragment shader.
+    - name: Fragment shader
+      contains: Code that sets the color of each pixel to create the effect you described.
+    - name: Uniforms
+      contains: The names of the values you can change from your app to adjust the effect.
+    - name: Performance notes
+      contains: Tips on keeping the shader fast, such as avoiding heavy branching, and what to check on other devices.

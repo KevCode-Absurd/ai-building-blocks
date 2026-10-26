@@ -1,6 +1,6 @@
 new_slug: publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote
 name: Publish comparison and best-of pages that shoppers and AI quote
-summary: Give it your rivals and product facts. Get a comparison page plan and a fair best-of page that answers first.
+summary: Plan comparison pages and write a fair best-of page that answers first. Give it your rivals and product facts, and get a page you can publish.
 job: get-found-in-search
 thinking: high
 thinking_why: It runs three skills in a row and the fairness checks need care. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Shoppers compare you with rivals before they buy, and you are not on the pages they read.
   - You want AI assistants to name your product when someone asks for the best option.
   - You have written a best-of page that reads like an ad and want it to be fair and useful.
+not_for:
+  - "You only need one product page: write a plain product page instead, since this workflow plans pages that compare you with rivals."
+  - "You have no rivals shoppers compare you with: use the Category search plan builder to find what shoppers search for."
+  - "You only want the page plan and no draft: use the Comparison page set planner on its own."
 you_give:
   - Your category and the five to ten rivals you want to cover
   - Your product facts, including prices and specs
@@ -32,6 +36,27 @@ how_to_use:
   - Name your category and your rivals. Add your brand file if you have one.
   - When it pauses, pick the first page from the plan and collect the real price and specs for you and each rival. Note the date you checked them.
   - Before you publish, fill in the proof checklist and cut any claim you cannot back.
+output_sample:
+  input:
+    - Your category and the five to ten rivals you want to cover
+    - Your product facts, including prices and specs
+    - The real prices and specs of each rival, which it asks for halfway through
+    - Your brand brain from the Website brand brain builder (optional)
+    - Search or sales results by page (optional)
+  prerequisites:
+    - An AI that can read files, if you use the handoff pack
+    - Your own time at the pause to collect real rival prices and specs
+  output:
+    - name: "Step 1: Page plan"
+      contains: A table of pages by rival, type and search, plus build order, fairness rules and a legal check note.
+    - name: "Step 2: Best-of page"
+      contains: A page type check, brief and draft with a table, item blocks, proof checklist and held-back claims.
+    - name: "Step 3: Answer-first rewrite"
+      contains: The draft rewritten so each section opens with the answer, plus a summary, table and FAQ.
+    - name: Facts that still need a source
+      contains: A list of numbers and claims the page cannot yet back.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the page set
     text: Comparison page set planner lists the five page types for each rival (best-of, review, alternatives, rival versus rival and you versus rival). It checks which searches are open, sets fairness rules and a legal check, and orders the pages in batches.

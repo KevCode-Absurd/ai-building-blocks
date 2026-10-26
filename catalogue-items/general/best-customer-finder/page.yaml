@@ -1,6 +1,6 @@
 new_slug: best-customer-finder
 name: "Best customer finder"
-summary: "Paste customers with what each paid and how long they stayed. Get your top 20 percent and what they share."
+summary: "Find your best customers from your own list. Paste what each paid and how long they stayed. You get the top fifth and the traits they share."
 job: understand-customers
 thinking: medium
 thinking_why: "It ranks customers and finds shared traits, with judgement on what counts as shared, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - You want to know who to aim your marketing at, using your own customers.
   - You treat all customers alike, though a few bring most of the money.
   - You are about to write an ideal customer profile and want to base it on data.
+not_for:
+  - "You have fewer than about 20 customers: talk to them one by one or run a short survey. The result here would only be a hunch."
+  - "You sell one product once and customers never come back: use a survey or interviews to learn why they bought."
+  - "You want to see what your best customers read before they bought: use the Buying path rebuilder."
 
 you_give:
   - A customer list with what each paid and how long they stayed
@@ -35,6 +39,30 @@ how_to_use:
   - Add reviews or answers about goals and why they bought, if you have them.
   - Check each trait against the top group yourself.
   - Use the profile to choose where to advertise and who to turn away.
+output_sample:
+  input:
+    - Your customer list with what each paid and how long they stayed
+    - How well each one is to work with (optional)
+    - Survey answers or reviews in customers' own words (optional)
+    - How each customer first found you (optional)
+    - Your brand file (optional)
+  output:
+    - name: The data
+      contains: How many customers you gave, how big the top group is, and which measures it used.
+    - name: Top group
+      contains: The top fifth of customers, each with what they paid, how long they stayed and how well they fit.
+    - name: What they share
+      contains: Three to five traits, each with how many of the top group have it.
+    - name: Profile
+      contains: One short paragraph in plain words on who they are, what they want and why they bought.
+    - name: Who does not fit
+      contains: The kind of customer the data shows is less valuable to you.
+    - name: Channels
+      contains: How many top-group customers came from each first source, or a MISSING note if no source was given.
+    - name: What the data cannot show
+      contains: The limits of your list, and whether the result is a finding or a hunch.
+    - name: Checks missed
+      contains: One line for each check it could not pass, or none.
 
 how_it_works:
   - title: Sorts the customers

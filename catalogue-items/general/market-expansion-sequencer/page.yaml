@@ -1,6 +1,6 @@
 new_slug: market-expansion-sequencer
 name: "Market expansion sequencer"
-summary: "Paste your first market and product. Get the next markets in order, nearest first, with the sign to move on."
+summary: "Plan which markets to enter after your first one. Get a market expansion plan in order, nearest first, with a sign for when to move on."
 job: plan-strategy
 thinking: medium
 thinking_why: "It must order markets and spot hidden obstacles, which needs some judgement."
@@ -17,6 +17,10 @@ when:
   - "You are winning a small market and don't know where to go next."
   - "Your plan jumps from a small start to a very large market."
   - "You want to explain your growth path to a team or backer."
+not_for:
+  - "You do not yet own a first market: test your idea with a small group of real buyers first, then come back."
+  - "You want one big launch into a new country or sector: ask an advisor who knows that place, because this plan moves in small steps."
+  - "You need market sizes, share figures or sales forecasts: use a research report or your own sales data, as this skill never invents numbers."
 
 you_give:
   - "Your first market and product"
@@ -33,6 +37,26 @@ how_to_use:
   - "Paste your first market and product. Add the share you hold and your long-term aim if you have them."
   - "Check each obstacle it lists against what you know of those buyers. Correct any it got wrong."
   - "Put the first step in your calendar and set the sign it gives you as a number you track."
+output_sample:
+  input:
+    - Your first market and product
+    - How much of the first market you hold (optional)
+    - The big aim you hope to reach (optional)
+  output:
+    - name: Starting point
+      contains: Your first market, the share you hold and your long-term aim, with gaps marked MISSING.
+    - name: Neighbours
+      contains: Four to eight nearby markets, each scored 0 to 3 for how near the buyer, product and route are.
+    - name: Obstacle and fight check
+      contains: For each move, what is different about the new buyers, a way round it, and whether it is quiet or a fight.
+    - name: The order
+      contains: Numbered steps with the market, why it is next, a start date and the sign to move on.
+    - name: One-line story
+      contains: A single sentence that links your first market to your long-term aim.
+    - name: Missing
+      contains: The facts that would make the plan sharper.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Finds the neighbours"

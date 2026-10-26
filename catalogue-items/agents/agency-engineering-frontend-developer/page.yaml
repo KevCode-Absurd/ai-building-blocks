@@ -1,0 +1,145 @@
+name: Frontend Developer agent
+summary: Plan a React, Vue, Angular or Svelte front end. Get the component list, accessibility and speed plan, and tests to run before launch.
+headline: Frontend Developer agent
+subhead: Describe the screen or app, your framework and your design. The agent plans components, state, mobile layout, accessibility and page speed. You get an implementation plan with code sketches and a list of checks to run in your browser.
+job: build-websites
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Front-end work often ships with no plan for page speed, keyboard use or small screens. Then it gets rebuilt. This agent plans a web interface build with accessibility and speed in from the start, in React, Vue, Angular or Svelte.
+
+  Its defaults are mobile-first layouts, accessibility to WCAG 2.1 AA, Core Web Vitals and tested components. It plans component structure, how data and state flow, styling and tests. If the job is an editor extension or a link between two apps, it follows the profile's section on that.
+
+  Percent gains and Lighthouse scores in the profile are its goals, not promises. This agent reports only numbers you measured. Run Lighthouse and a keyboard check yourself and bring the results back. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's targets are its own goals, not results measured by AI Blocks.
+when:
+  - You have a design or wireframe and need a component plan before you code.
+  - A page loads slowly on phones and you want to know what to split, load later or compress.
+  - You are adding a data table, form or dashboard that must work with a keyboard and a screen reader.
+  - You are choosing how to handle state, styling and tests for a new app.
+not_for:
+  - "You only need the visual design, with no code: use the UI Designer agent."
+  - "You need server, database or API design: use the Backend Architect agent."
+  - "You want a quick throwaway demo: use the Rapid Prototyper agent."
+  - "Your site runs on WordPress or Drupal themes: use the CMS Developer agent."
+you_give:
+  - What the screen or app does and who uses it
+  - Your framework and version, such as React 18, or 'no preference'
+  - "Your design: a Figma link, a screenshot or a plain description"
+  - The data it shows, such as an API endpoint and its fields (optional)
+  - Your existing code or package.json (optional)
+  - Targets such as devices, browsers and page speed goals (optional)
+you_get:
+  - A component list with props, state and data flow
+  - A mobile-first layout plan
+  - "An accessibility plan: labels, focus and keyboard use"
+  - "A speed plan: code splitting, images and caching"
+  - Code sketches for the main components, marked as drafts you have not run
+  - A list of tests and checks to run
+  - Open questions
+how_to_use:
+  - Download the pack and add it as a skill in your AI. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - "Write your brief: what the screen does, your framework and your design. Paste your package.json and any components it should match."
+  - Say 'Plan this front end. Do not guess my framework version.' Your AI asks once for what is missing.
+  - Read the component list and the state plan first. Change them if they do not match your design.
+  - Build the sketches in your project. The AI cannot run your code, so run the tests and checks yourself.
+  - Run Lighthouse and a keyboard-only check, then paste the results back and ask for fixes.
+how_it_works:
+  - title: Collect the brief
+    text: It confirms the screen, framework and version, design and data. It asks once for anything missing, then marks it MISSING.
+  - title: Plan components and state
+    text: It lists reusable components with types, props and how state and data flow between them.
+  - title: Plan layout
+    text: It plans a mobile-first layout and how it grows to larger screens.
+  - title: Plan accessibility
+    text: It plans semantic HTML, labels, focus order and keyboard use, aiming at WCAG 2.1 AA.
+  - title: Plan speed
+    text: It plans code splitting, lazy loading, image handling and caching, and what to measure with Core Web Vitals.
+  - title: List tests
+    text: It lists unit, integration, accessibility and cross-browser checks, and what is still unknown.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Screen <what it does> | Framework <name and version> | Design <source>
+    Assumed: <list> | MISSING: <list>
+
+  COMPONENTS AND STATE
+    <component> | <props> | <state or data it uses> | <where it is reused>
+
+  RESPONSIVE PLAN
+    <screen size> | <layout change> | <touch note>
+
+  ACCESSIBILITY PLAN
+    <component or flow> | <labels and roles> | <keyboard behavior> | <how to test>
+
+  PERFORMANCE PLAN
+    <area> | <step> | <what to measure>
+
+  CODE SKETCHES (drafts, not run)
+    <component> | <short code>
+
+  TESTS AND CHECKS
+    <number> | <check> | <what a pass looks like>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - What the screen or app does and who uses it
+    - Your framework and version
+    - Your design as a link, screenshot or description
+    - Your package.json or existing components (optional)
+  prerequisites:
+    - A code project where you can build and run the sketches
+    - An AI that takes a pasted profile, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brief and assumptions
+      contains: The screen, framework and design as understood, with assumptions and MISSING items.
+    - name: Components and state
+      contains: Each component with its props, the state it uses and where it is reused.
+    - name: Responsive plan
+      contains: How the layout changes by screen size, starting from the phone.
+    - name: Accessibility plan
+      contains: Labels, roles and keyboard behavior for each component, and how to test them.
+    - name: Performance plan
+      contains: Code splitting, images and caching steps, and what to measure.
+    - name: Code sketches
+      contains: Short drafts of the main components, marked as not run.
+    - name: Tests and checks
+      contains: Numbered tests and checks, each with what a pass looks like.
+    - name: Open questions
+      contains: What is unknown and what each answer changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Framework
+    how: Name the framework and version so the sketches use its patterns.
+  - what: Speed goals
+    how: Give a target, such as loads in 3 seconds on a mid-range phone, so the plan aims at it.
+  - what: Scope
+    how: Ask for one screen or one component first, not the whole app.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Core Web Vitals
+    meaning: Google's scores for how fast a page loads, reacts to input and stays steady.
+  - term: WCAG 2.1 AA
+    meaning: A widely used standard for making websites usable by people with disabilities.
+  - term: Component
+    meaning: A reusable piece of an interface, such as a button or a table.
+  - term: Code splitting
+    meaning: Loading the code for a page only when someone needs it.
+  - term: Lighthouse
+    meaning: A Chrome tool that scores a page for speed and accessibility.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A pasted brief and profile is enough for a plan and code sketches.
+    - name: Claude Code
+      why: It can read your repo, so components and state fit what you already have.
+  inputs:
+    - A Lighthouse report for the current page.
+    - Your design file or screenshots of each state, such as empty, loading and error.

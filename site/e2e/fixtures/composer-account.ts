@@ -20,6 +20,9 @@ export async function mockComposerAccount(page: Page, signedIn = true, userId = 
   `;
   // The production dynamic import retains Clerk's named export. Intercept only
   // this test SDK boundary; every protected POST in these fixture tests is mocked.
+  // Real Clerk leaves a __client_uat cookie, and the app opens Clerk only when it sees a possible session
+  // (src/lib/composer-account.ts). Keep the fixture SDK loaded on every page, as these tests expect.
+  await page.addInitScript(() => { document.cookie = "__client_uat=1700000000; path=/"; });
   for (const pattern of ["**/@clerk_clerk-js.js*", "**/assets/clerk-*.js"]) {
     await page.route(pattern, route => route.fulfill({ contentType: "text/javascript", body: sdkFixture }));
   }

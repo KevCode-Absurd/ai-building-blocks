@@ -29,3 +29,26 @@ how_it_works:
     text: Make a pilot, adapt sizes, inspect actual outputs and retain revision history.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You only have rough phone photos and want a quick set: use A full product photoshoot from your phone photos."
+  - "You only need to plan the shots, not make them: use the Product photo shoot planner."
+  - "You already have photos and want them checked for product accuracy: use the AI product photo inspector."
+output_sample:
+  input:
+    - Real photos of the exact product variant, including how it is worn or used
+    - A set of reference photos for the looks you like
+    - Your brand direction, if you have a brand file (optional)
+    - Sizes, number of looks and budget (optional)
+  prerequisites:
+    - An image tool that can use your real product photo as a reference
+  output:
+    - name: Product truth sheet
+      contains: The exact variant, colours, label text and how the product looks in use.
+    - name: Look selection and shot plan
+      contains: Reference looks ranked by fit, with what to keep, swap or drop in each.
+    - name: Pilot image
+      contains: One test frame checked against your real photo before the full set is made.
+    - name: Checked image files
+      contains: Final images in each size you ask for, such as 4:5, 1:1 and 9:16.
+    - name: Review deck and QA record
+      contains: Shot IDs, versions, reasons for each look and which frames passed inspection.

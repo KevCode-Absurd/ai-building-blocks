@@ -1,0 +1,42 @@
+slug: agency-engineering-wordpress-shopping-cart
+name: WordPress Shopping Cart Engineer agent
+summary: Get a WooCommerce implementation plan with checkout and payment checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-wordpress-shopping-cart.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wordpress-shopping-cart.md
+  licence: MIT
+  original_name: WordPress Shopping Cart Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: a2ef45cebe1cf03175b16ef48a2a01acdd2b7e8eda289114f568ebe0f1ae4112
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - WordPress Shopping Cart Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: WordPress Shopping Cart Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wordpress-shopping-cart.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

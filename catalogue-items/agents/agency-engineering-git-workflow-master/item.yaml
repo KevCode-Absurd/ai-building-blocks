@@ -1,0 +1,42 @@
+slug: agency-engineering-git-workflow-master
+name: Git workflow agent
+summary: Get a Git workflow plan with branch names, commit rules and a pull
+  request checklist. Bring your team size and release pace.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-git-workflow-master.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-git-workflow-master.md
+  licence: MIT
+  original_name: Git Workflow Master
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: d3f7718f852e03d5cd83a97340550a5b82694547c4b9b22c9e77bb40c1467ba3
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Git Workflow Master
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Git Workflow Master
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-git-workflow-master.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

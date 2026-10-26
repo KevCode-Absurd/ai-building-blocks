@@ -1,0 +1,120 @@
+{
+  "schema": "abb-upstream-skill/1",
+  "repository": "luongnv89/claude-howto",
+  "commit": "188f468893231cbe4525f45e657d554746232072",
+  "originalName": "self-assessment",
+  "author": "Luong NGUYEN (luongnv89)",
+  "licence": "MIT",
+  "licenceEvidence": {
+    "file": "LICENSE",
+    "copyright": "Copyright (c) 2024 luongnv89",
+    "standaloneLicenceFile": true
+  },
+  "adapted": true,
+  "adaptedBy": "AI Blocks",
+  "adaptation": [
+    "New primary instructions and catalogue copy.",
+    "Self-contained local lesson index; original Markdown source stored byte-exact with .txt filenames.",
+    "Question-tool fallback to numbered chat choices.",
+    "Transparent partial scoring, self-report limits and version differences."
+  ],
+  "adaptedPrimary": {
+    "path": "SKILL.md",
+    "sha256": "1bb74319fcebfe10cfc9571ecc23390117b2f30e617ee3805d9bfc99c833bd99",
+    "bytes": 4853
+  },
+  "copiedFiles": {
+    "LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "70af63a728d585a646c86276b0a8ae0f6edffcd6cf535f45e595241fec97fbbf",
+      "bytes": 1066,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/self-assessment/SKILL.txt": {
+      "upstreamPath": ".claude/skills/self-assessment/SKILL.md",
+      "sha256": "2c165b9f1d90c7957d20dea31e961679ca2088c8eb6dc923bf44ffeffff160bb",
+      "bytes": 23354,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/self-assessment/references/deep-assessment-rounds.txt": {
+      "upstreamPath": ".claude/skills/self-assessment/references/deep-assessment-rounds.md",
+      "sha256": "c6164f4a36fbad4d725c48ddbd528595e5424bc76a813bf60caf8bee53065003",
+      "bytes": 5517,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/self-assessment/references/output-templates.txt": {
+      "upstreamPath": ".claude/skills/self-assessment/references/output-templates.md",
+      "sha256": "1ef776df6e18a881c8b3bf3a52cbcefd08676b423480fbf19a286ac4a42842fd",
+      "bytes": 3512,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/self-assessment/references/topic-recommendations.txt": {
+      "upstreamPath": ".claude/skills/self-assessment/references/topic-recommendations.md",
+      "sha256": "54ff28d570c01031ffde0a2406854127949acff0c02470ba42929bbe14ac1e49",
+      "bytes": 9903,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/01-slash-commands/README.txt": {
+      "upstreamPath": "01-slash-commands/README.md",
+      "sha256": "df912ef72f7727b87061fac00fa086d9b594919a0bbe3e1bd4e7a47f4bfc2683",
+      "bytes": 35384,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/02-memory/README.txt": {
+      "upstreamPath": "02-memory/README.md",
+      "sha256": "cda7dc31c0bcde141a3a12d83da6e7cbf385e636723c70e58c749092336ef4dd",
+      "bytes": 49504,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/03-skills/README.txt": {
+      "upstreamPath": "03-skills/README.md",
+      "sha256": "4fbdac26eed5ba41aebbf4c5b4c50bf83d7e2630665400bb5baffe47b80ba64f",
+      "bytes": 40360,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/04-subagents/README.txt": {
+      "upstreamPath": "04-subagents/README.md",
+      "sha256": "52685a16c39621665f3df8249a01aca198ea50b0455ce90257d9c18dca88fa14",
+      "bytes": 54159,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/05-mcp/README.txt": {
+      "upstreamPath": "05-mcp/README.md",
+      "sha256": "0355ff61cf0ca9cd62c6ab5a86698edab669f83c4a544151685ecf740bbe2462",
+      "bytes": 51936,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/06-hooks/README.txt": {
+      "upstreamPath": "06-hooks/README.md",
+      "sha256": "ff985bf9ef11a109adfaa361ef890f4b2a98e4508b30209d41d018db80b81265",
+      "bytes": 60844,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/07-plugins/README.txt": {
+      "upstreamPath": "07-plugins/README.md",
+      "sha256": "2b24c35c10c0203569a8dd3e4f778c61a25e1d2d3b8dd1f73cad3e7fb15d33ca",
+      "bytes": 59152,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/08-checkpoints/README.txt": {
+      "upstreamPath": "08-checkpoints/README.md",
+      "sha256": "0958ededb125957eba9dc07b3a00b2720c00406f2abb9117f9e3557fe37ad4b6",
+      "bytes": 14145,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/09-advanced-features/README.txt": {
+      "upstreamPath": "09-advanced-features/README.md",
+      "sha256": "a2d7cd9267e9214e1c7651b0cf43caf66c97e4cfc12a7ebd20b91d5d4f624ff1",
+      "bytes": 122059,
+      "byteExactGitBlob": true
+    },
+    "references/upstream/lessons/10-cli/README.txt": {
+      "upstreamPath": "10-cli/README.md",
+      "sha256": "981293e73c421481196c0cc292d8756c0e1a26c899576b7e596b925da4924a17",
+      "bytes": 76298,
+      "byteExactGitBlob": true
+    }
+  },
+  "upstreamCodeExecuted": false,
+  "newExecutables": 0
+}

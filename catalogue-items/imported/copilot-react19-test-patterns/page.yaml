@@ -2,16 +2,98 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-react19-test-patterns
 name: React 19 test migration helper
-summary: Share your React tests. Get updates for React 19 test APIs and render behavior.
+summary: Fix React tests that break on React 19, including act imports, removed Simulate and test-utils calls, and StrictMode call counts.
 job: test-and-fix-code
 headline: React 19 test migration helper
-subhead: Share your React tests. Get updates for React 19 test APIs and render
-  behavior. Share your goal and the files you already have. The skill file sets
-  out the steps and the tools needed for this job.
+subhead: Paste the React test files that fail after the React 19 upgrade. Your AI fixes the act import, swaps Simulate for fireEvent, removes old test-utils calls, and corrects call counts from the numbers your tests really give.
+explain: |
+  React 19 removes act from react-dom/test-utils and removes Simulate and other test-utils helpers. Test files that import them fail before they run a single check. Fixing them in the right order saves time, because the first fix unblocks the next.
+
+  The order is fixed. First the act import, which now comes from react. Then Simulate becomes fireEvent from Testing Library. Then the rest of the react-dom/test-utils imports are removed. Only after that do you look at StrictMode call counts, async act warnings and your shared render helper.
+
+  One rule runs through the skill: measure, never guess. A spy count that changed is updated to the number your failing test reports. If your AI cannot explain why a count changed, the test is flagged for you to check, not edited until it passes.
+when:
+  - After upgrading to React 19, your test run fails with an import error on act or Simulate.
+  - Your tests import from react-dom/test-utils.
+  - A spy assertion with toHaveBeenCalledTimes fails after the upgrade.
+  - Tests show a "not wrapped in act" warning.
+not_for:
+  - "Your tests still use Enzyme: use the Enzyme test migration helper first, since Enzyme has no React 18 adapter."
+  - "Your app code, not your tests, fails on React 19: use the React 19 source migration helper."
+  - "A test fails for a reason unrelated to the upgrade: debug it on its own, for example with the Live screen debugger for a screen bug."
+you_give:
+  - The test files that fail after the React 19 upgrade
+  - The test output showing the failure messages
+  - Your shared render helper, such as customRender (optional)
+  - Your test runner, such as Jest (optional)
+you_get:
+  - The act import fixed in each file
+  - Simulate calls swapped for fireEvent
+  - Remaining test-utils imports removed or replaced
+  - Updated call counts, taken from your real test output
+  - A list of tests flagged for you to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste one failing test file and the error it prints. Add your render helper if you have one.
+  - Ask your AI to work in the order in the skill and show the changes for each step.
+  - For any call count, run the test yourself and paste the real number back. Do not let your AI guess it.
+  - Run the full test suite on your own machine. Your AI cannot run it from a chat window. Flag the tests it marked CHECK for your own review.
+how_it_works:
+  - title: Fix the act import
+    text: It changes act from react-dom/test-utils to act from react, since that import unblocks everything else.
+  - title: Swap Simulate
+    text: It replaces each Simulate call with the matching fireEvent call from Testing Library.
+  - title: Clean up test-utils
+    text: It maps each remaining react-dom/test-utils call to its new home, or removes it.
+  - title: Fix call counts
+    text: It updates StrictMode counts from the real failing output and marks any change it cannot explain.
+  - title: Wrap async updates
+    text: It adds await act(async) only for updates your test starts and that still show a warning.
+  - title: Check the render helper
+    text: It checks your shared helper once, so you do not fix it in every test.
+output_shape: |
+  Changes by step
+  - Step <1 to 6>: <file>, <old code> then <new code>
+  Call counts
+  - <test name>: expected <old> now <measured>
+  Flagged
+  - <test name>: <why it needs your check>
+  Render helper
+  - <file>: <what was changed, or "no change needed">
+output_sample:
+  input:
+    - Your failing test files
+    - The test output with the error messages
+    - Your shared render helper (optional)
+    - Your test runner, such as Jest (optional)
+  prerequisites:
+    - A project upgraded to React 19
+    - Testing Library installed in a version that supports React 19
+  output:
+    - name: act import fix
+      contains: Each test file importing act from react, not react-dom/test-utils.
+    - name: Simulate to fireEvent
+      contains: Every Simulate call replaced with the same fireEvent call.
+    - name: test-utils cleanup
+      contains: Old helpers swapped for Testing Library queries, or removed.
+    - name: Call count fixes
+      contains: Spy counts updated from your real test output.
+    - name: Flagged tests
+      contains: Tests with a count change that your AI could not explain.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can rewrite imports and calls from pasted test files. It cannot run your tests.
+    - name: An AI coding tool in your project
+      why: It can run the failing test, read the real count and fix files in a loop.
+  inputs:
+    - The exact failing test output
+    - Your Testing Library version
+    - The React 19 source migration helper's results, if you ran it first
+terms:
+  - term: act
+    meaning: A test helper that tells React to finish updates before the test checks the screen.
+  - term: Simulate
+    meaning: An old test-utils helper that fakes a click or key press. React 19 removes it.
+  - term: StrictMode
+    meaning: A React wrapper that runs extra checks in development, which can change call counts.

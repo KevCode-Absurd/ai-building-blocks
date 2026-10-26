@@ -1,37 +1,70 @@
 new_slug: ai-answer-visibility-tracker
-name: AI answer visibility tracker
-summary: Run the same shopper questions through AI assistants each month. Get your share against last month and the fix for the gap.
+name: AI recommendation mention tracker
+summary: Track whether AI assistants name your store each month. Ask the same shopper questions, see your share against last month, and get up to three fixes.
 job: get-found-in-search
 thinking: high
 thinking_why: It runs up to seven skills, compares noisy results month to month and picks its own path. Give it your strongest model.
-headline: AI answer visibility tracker
-subhead: Give it your products and rivals. Each month it asks AI assistants the same shopper questions, compares how often your store is named with last month, and picks the fix that fits, with wrong facts first, then page fixes or the sites assistants quote instead of you.
+headline: AI recommendation mention tracker
+subhead: Give it your product facts and your main rivals. Each month it asks the same shopper questions in the same AI assistants and counts how often your store is named. You get your share against last month, wrong facts first, and at most three fixes to approve.
 explain: |
   Shoppers now ask AI assistants which store to buy from. You can check by hand, but the answers change from run to run, so one look tells you little. Most owners try a few questions once, see nothing, and never check again.
 
-  This agent keeps a fixed list of shopper questions and runs it the same way each month. It records how often your store and each rival are named, and compares with last month. A small change is called normal wobble, not a win or a loss. A real fall or a rival's gain sends it to find the cause. Wrong facts go first. It proposes at most three fixes a month so you can see which one moved the numbers. It never changes your pages or contacts anyone without your yes.
+  This AI mention tracker keeps a fixed list of shopper questions and runs it the same way each month. It records how often your store and each rival are named, and compares with last month. A small change is called normal wobble, not a win or a loss. A real fall, or a rival's gain, sends it to find the cause.
+
+  Wrong facts go first, such as a wrong return policy or price. It proposes at most three fixes a month, so you can see which one moved the numbers. It never changes your pages or contacts anyone without your yes. It cannot promise that a fix gets you named, because each assistant decides for itself.
 when:
-  - Shoppers in your category ask AI assistants for store or product picks.
-  - You made changes to be named by AI and want to know if they worked.
-  - An assistant said something wrong about your store and you want to catch it each month.
+  - Shoppers in your category ask AI assistants for store or product picks, and you want to know if yours is named.
+  - You changed a page to be named by AI assistants and want to know whether it worked.
+  - An assistant said something wrong about your store, and you want to catch that each month.
+  - A rival keeps showing up in AI answers and you want to see how often, and why.
+not_for:
+  - You want a one-off check today. Use the AI search visibility tester, which sets up and reads one run.
+  - You already know which rivals are named and want to know why. Use the AI search recommendation gap finder.
+  - Your buyers do not ask AI assistants for picks, for example a very local trade or a custom-order business. A manual spot check each quarter is enough.
+  - You want to check whether Google ranks your pages. Use the Search Console content planner.
 you_give:
   - Your product facts, price range and who the products are for
-  - Your main rivals (optional)
+  - Your 3 to 6 main rivals (optional, but without them it can only report your own share)
   - Customer questions from reviews, tickets or search terms (optional)
-  - Your store address and key pages (optional)
-  - The assistants you can use, with web search on
+  - Your store address and key pages, such as returns and shipping (optional)
+  - The AI assistants you can use, with web search on, and whether you are logged in
 you_get:
-  - Your share of mentions overall and per assistant, with the number of valid runs
+  - Your share of mentions overall and for each assistant, with the number of valid runs behind it
   - What moved against last month, and what is only normal wobble
-  - A check of last month's fixes, as moved, no change or too early
-  - Wrong facts with the source and the fix
-  - Up to three fixes to approve, each with its reason
+  - A check of last month's fixes, marked moved, no change or too early
+  - Wrong facts the assistants stated, with the source they used and the fix
+  - Up to three fixes to approve, each with its reason and the size of the work
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
-  - The first time, give it your product facts and rivals. It builds a fixed question list and saves it.
-  - Tell it which assistants to use, and keep them the same each month.
-  - Read the fix list. Make the fixes you agree with, or say yes to each and let it make only those.
-  - Run it again next month with the same questions. It reads last month's files.
+  - Add the agent to your AI. In Claude Code, save it in .claude/agents or add it as a skill. In Claude, ChatGPT or Gemini, paste it at the start of a chat. It keeps a visibility folder, so Claude Code is easiest; in a plain chat, paste last month's numbers.
+  - The first month, give it your product facts and rivals. It builds a list of 10 to 20 shopper questions and saves it. Do not edit the list later, or months cannot be compared.
+  - Pick the assistants and use the same ones every month, with web search on. Your AI can only ask the assistant it runs in. For any other, paste each question in yourself and paste the answer back.
+  - Check the terms of each assistant before you repeat questions many times. Free versions often skip web search, and some features may need a paid plan. No paid tool is needed.
+  - Read the wrong facts first, then the fix list. Make the fixes you agree with, or say yes to each one and let it make only those.
+  - Run it again next month with the same questions. Pair it with the AI search recommendation gap finder when a rival keeps winning.
+output_sample:
+  input:
+    - Your product facts, price range and who the products are for
+    - Your 3 to 6 main rivals (optional)
+    - Customer questions from reviews, tickets or search terms (optional)
+    - Your store address and key pages, such as returns and shipping (optional)
+    - The AI assistants you can use, with web search on
+  prerequisites:
+    - An AI assistant that can search the web
+    - Your brand brain from the Brand profile builder (recommended)
+    - Last month's numbers, or the ai-visibility folder (from month two)
+  output:
+    - name: This month
+      contains: Your share of mentions overall and for each assistant, with the number of valid runs behind it.
+    - name: What moved
+      contains: Questions where you or your rivals gained or lost, with small changes marked as normal wobble.
+    - name: Last fixes checked
+      contains: Each earlier fix marked moved, no change or too early.
+    - name: Wrong facts
+      contains: Each wrong claim an assistant made, the source it used and the fix.
+    - name: Fixes to approve
+      contains: At most three fixes, each with its reason and the size of the work.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Build the panel
     text: Builds the fixed list of shopper questions once and saves it, so every month is run the same way.

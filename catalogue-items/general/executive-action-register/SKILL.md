@@ -11,7 +11,7 @@ Share meeting notes or email threads. Get one action list with owners, deadlines
 
 ## Method
 
-1. Read the supplied notes and threads within the requested date window. Extract explicit commitments, decisions and requests separately. Quote only the short phrase needed to verify an action and attach a source reference.
+1. Read the supplied notes and threads within the requested date window. A handover note or similar document counts as notes: take its follow-ups and open items as the commitments to record. A findings report, risk register or checked evidence sheet counts too: take each finding's owner, date and gap as a proposed action, never as an accepted commitment. Extract explicit commitments, decisions and requests separately. Quote only the short phrase needed to verify an action and attach a source reference.
 2. For each action record a stable ID, task, owner, due date, timezone, dependency, source and status. Separate dates said in the source from dates you propose. Resolve relative dates using the source date and user's timezone; if ambiguous, leave the date unconfirmed. Never assign an owner from a guess.
 3. Deduplicate the same commitment across email and meeting notes using its source ID and action meaning. Preserve the original ID and last-known status. An unanswered request is not an accepted commitment. A discussion or draft is not a completed task.
 4. Put owner and deadline gaps in a short clarification list. Show overdue, due soon, blocked and undated work separately. With no reliable current date or task state, mark the affected rows unknown.

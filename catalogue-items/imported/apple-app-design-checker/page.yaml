@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares your design against a set of known rules.
 new_slug: apple-app-design-checker
 name: Apple app design checker
-summary: Show it your iPhone, iPad or Mac app design. Get what to fix to match
-  Apple's design rules.
+summary: Check your iPhone, iPad or Mac app design against Apple's design rules. Get a list of fixes for color, type, icons and accessibility.
 job: design-work
 headline: Apple app design checker
-subhead: A list of what to fix so your iPhone, iPad or Mac app design matches
-  Apple's own design rules. Show it a design and you get findings tied to the
-  principle behind each one.
+subhead: A list of what to fix so your iPhone, iPad or Mac app design matches Apple's own design rules. Show it a design and you get findings tied to the principle behind each one.
 explain: |
   A list of what to fix so your iPhone, iPad or Mac app design matches Apple's own design rules. Show it a design and you get findings tied to the principle behind each one.
 
@@ -18,6 +15,10 @@ when:
   - Your app feels off compared with Apple's own apps.
   - You need to check accessibility before release.
   - You are bringing an Android design over to iOS.
+not_for:
+  - "You are designing an Android or web app: use a checker made for that platform, or ask a designer who knows it."
+  - "You need proof your app is accessible: test it with VoiceOver and large text on a real device, or hire a tester who uses assistive tech."
+  - "You want to know if Apple will approve your app: read App Store Review Guidelines or submit a build to TestFlight."
 you_give:
   - Screenshots or a description of your design
   - Target device and OS
@@ -29,7 +30,28 @@ you_get:
   - Accessibility gaps
   - Privacy and permission notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code running or paid tool is needed.
+  - Add screenshots of your design, or describe each screen in a few lines.
+  - Say which device and system version you are building for, and what the app is for.
+  - Add your brand rules or design notes if you have them (optional).
+  - Read the findings and fix the ones tied to accessibility and privacy first.
+  - Test the fixed design on a real device with VoiceOver and large text turned on.
+output_sample:
+  input:
+    - Screenshots or a short description of your design
+    - The device and system you are building for
+    - Your design notes or brand rules (optional)
+    - What your app is for
+  output:
+    - name: Findings by principle
+      contains: Each problem is tied to one of Apple's design principles, such as content first, accessibility or privacy.
+    - name: Reference file and section
+      contains: Each finding names the guideline file it comes from, such as accessibility.md or color.md.
+    - name: Fixes for color, type and icons
+      contains: Plain changes for system colors, text styles, SF Symbols and app icon problems.
+    - name: Accessibility impact
+      contains: What a problem means for contrast, large text and VoiceOver users.
+    - name: Platform differences
+      contains: Notes on where advice changes between iPhone, iPad and Mac.
+    - name: Code patterns
+      contains: Short SwiftUI, UIKit or AppKit examples for the fixes, where they help.

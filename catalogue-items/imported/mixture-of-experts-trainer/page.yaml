@@ -2,35 +2,119 @@ thinking: high
 thinking_why: Routing and balancing experts is hard to get right.
 new_slug: mixture-of-experts-trainer
 name: Mixture of experts trainer
-summary: Name your compute budget and goal. Get code to train a large model that
-  only uses part of itself per word.
+summary: Get starter code and settings to train a mixture of experts language model with PyTorch and DeepSpeed, sized to your GPUs and goal.
 job: build-software
 headline: Mixture of experts trainer
-subhead: Name your compute budget and goal. Get code to train a large model that
-  only uses part of itself per word. Bring your compute budget and GPUs. Use the
-  result to plan your next step.
+subhead: Tell it your GPUs, your goal and your training tool. It writes a sparse expert layer in PyTorch, a training setup for DeepSpeed or Hugging Face, and starting settings for experts and routing. You run it on your own GPUs.
 explain: |
-  Code to train a large language model that uses only part of itself for each token, so you get more capacity for the same compute. Give your compute budget and goal and you get a working setup, not just theory.
+  A mixture of experts (MoE) model is a language model built from many small expert networks. A router picks a few experts for each word, so only part of the model runs each time. You get more capacity for the compute spent on each word.
 
-  In a mixture of experts model, a router sends each token to a few expert sub-networks, for example two of eight. Only those run, so cost per token stays lower than a dense model of the same size. The skill supplies a sparse layer in PyTorch and shows how to train it with DeepSpeed, Megatron-DeepSpeed or Hugging Face tools. It draws on models like Mixtral and Switch Transformers. It needs Python, GPUs and the listed libraries.
+  This skill gives you the pieces to train one: a sparse layer in PyTorch, three ways to route words, the extra loss that keeps experts evenly used, and training setups for DeepSpeed, Megatron-DeepSpeed and Hugging Face. It follows designs such as Mixtral and Switch Transformers.
+
+  It is a starting sketch, not a finished product. Some code is marked as an outline you must complete, and every setting is a starting value to test. You need Python, several GPUs and your own training data. Check flag names against the version you install.
 when:
-  - You have limited GPU budget and want a bigger model.
-  - You want to try the Mixtral-style design in your own training.
-  - You need experts that specialise by language or domain.
-  - You want lower cost per token at run time.
+  - You have a fixed GPU budget and want a model with more capacity than a dense model of the same compute.
+  - You want to try a Mixtral-style design with 8 experts and 2 per word.
+  - Your training loss is unstable, or a few experts get all the work.
+  - You need to spread experts across several GPUs with DeepSpeed.
+not_for:
+  - You have one GPU or a small dataset. Use a dense model, or the LLM fine-tuning guide to adapt an existing one.
+  - You want to train a small model from scratch to learn how it works. Use the tiny GPT trainer or the LitGPT model trainer.
+  - You only need to run a finished MoE model. Use the local model runner for laptops instead.
+  - You still need to set up several GPUs. Start with the multi-GPU training setup helper.
 you_give:
-  - Your compute budget and GPUs
-  - Your goal, such as language or domain
-  - Model size and expert count (optional)
-  - Your training framework preference (optional)
+  - Your GPUs, such as how many and what type
+  - Your goal, such as a language or domain
+  - Your training data, or where it lives
+  - Model size and number of experts (optional)
+  - Your training tool, such as DeepSpeed or Hugging Face (optional)
 you_get:
   - A sparse expert layer in PyTorch
-  - Training setup for your framework
-  - Install steps
-  - Guidance on expert and router settings
+  - A training script or config for your tool
+  - Install steps with versions to confirm
+  - Starting values for experts, routing and loss weights
+  - A short list of what to watch while it trains
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on several GPUs.
+  - Make sure you have Python, PyTorch and GPUs ready. Your AI writes the code but cannot train in a chat window.
+  - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read files, give it the skill folder too.
+  - Tell it your GPUs, your goal, your data and your tool. Say if you want DeepSpeed, Megatron-DeepSpeed or Hugging Face.
+  - Read the setup it recommends before you run anything. Check the flag names against the DeepSpeed version you install.
+  - Run a short test first, such as a few hundred steps. Watch the loss and how evenly the experts are used.
+  - If one expert gets most words or the loss jumps, tell your AI. It will suggest a change to the loss weights.
+how_it_works:
+  - title: Match setup to budget
+    text: It picks the tool, expert count and top-k from your GPUs and goal.
+  - title: Build the sparse layer
+    text: It writes the router and expert networks in PyTorch.
+  - title: Choose a routing rule
+    text: Top-1, top-2 or expert choice, with the trade-off for each.
+  - title: Add load balancing
+    text: It adds the extra loss that keeps experts evenly used, and a stability loss for the router.
+  - title: Set up training
+    text: It writes the DeepSpeed, Megatron-DeepSpeed or Hugging Face config, including how experts spread over GPUs.
+  - title: List what to watch
+    text: It says what to check while training, and marks every setting as a starting value.
+output_shape: |
+  ## Recommended setup
+  <tool, experts, top-k, and why>
+
+  ## Code
+  <sparse layer and training script or config>
+
+  ## Settings to check
+  <learning rate, loss weights, capacity factor>
+
+  ## Install steps
+  <commands and versions to confirm>
+
+  ## What to watch
+  <expert balance, loss, dropped tokens>
+
+  ## Open questions
+  <missing inputs>
+output_sample:
+  input:
+    - Your GPUs, such as how many and which type
+    - Your goal, such as a language or a domain
+    - Your training data, or where it lives
+    - Model size, expert count and training tool (optional)
+  prerequisites:
+    - Python and PyTorch installed
+    - Several GPUs you can run code on
+    - DeepSpeed or Hugging Face libraries, installed as the skill lists
+  output:
+    - name: Recommended setup
+      contains: The tool, expert count and top-k that fit your GPUs, and the reason.
+    - name: Sparse expert layer
+      contains: PyTorch code for the router and the expert networks.
+    - name: Training script or config
+      contains: A DeepSpeed, Megatron-DeepSpeed or Hugging Face setup, with experts spread across GPUs.
+    - name: Settings to check
+      contains: Starting values for learning rate, loss weights and capacity factor, each marked as a starting point.
+    - name: Install steps
+      contains: Commands to install the libraries, with versions for you to confirm.
+    - name: What to watch
+      contains: How evenly experts are used, loss, gradient size and dropped words.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the skill's reference files and edit your training scripts on your machine.
+    - name: DeepSpeed
+      why: It has built-in MoE support and spreads experts across GPUs.
+    - name: Hugging Face Transformers
+      why: It already has Mixtral-style model code you can build on.
+  inputs:
+    - Your GPU count and memory
+    - A small sample of your training data
+    - Your current training script, if you have one
+terms:
+  - term: Mixture of experts
+    meaning: A model made of many small networks, where only a few run for each word.
+  - term: Router
+    meaning: The small network that picks which experts handle each word.
+  - term: Top-k
+    meaning: How many experts handle each word. Mixtral uses 2.
+  - term: Load balancing
+    meaning: An extra loss that stops a few experts from getting all the work.
+  - term: Dense model
+    meaning: A normal model where every part runs for every word.

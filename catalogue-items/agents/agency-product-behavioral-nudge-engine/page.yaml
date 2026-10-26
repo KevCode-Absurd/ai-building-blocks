@@ -1,0 +1,159 @@
+name: Behavioral Nudge Engine agent
+summary: Get a nudge plan that helps users finish tasks. Each message has one small step, the best timing and an easy way to stop.
+headline: Behavioral Nudge Engine agent
+subhead: Describe your product, the action users skip and the channels you can use. It turns the long task list into one small next step, picks the channel and timing, writes the messages and the praise, and adds a clear way to stop.
+job: build-product
+thinking: high
+thinking_why: It balances motivation, load and consent for different kinds of user, and checks each message for pressure. Use a model that can weigh user needs against product goals.
+explain: >-
+  Most reminders fail because they ask for too much. "You have 14 unread
+  notifications" gives a person a pile, not a place to start. A behavioral nudge
+  plan shrinks the pile to one small step, sends it when and where the person
+  prefers, then celebrates and lets them stop. This agent designs that plan for
+  your product.
+
+
+  It follows four steps from the original role: ask how each person likes to
+  work, cut the task list into tiny steps, send one clear next step, then
+  celebrate and offer an exit. Every message has one action, a draft ready for
+  the user to approve, and a way to say "enough for today". It never uses
+  guilt, fake urgency or a wall of tasks.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It writes the plan
+  and the messages. It does not send anything or track users on its own. Its
+  success measures are goals, not results from AI Blocks.
+when:
+  - Users sign up, start a task and drop off before they finish it.
+  - Your app sends reminders that people mute or ignore.
+  - Your team wants a first-week message plan that fits each person's own pace.
+  - You have a long to-do list for users and want to shrink it to one step at a time.
+not_for:
+  - You want to understand why users do not come back at all. Use the Habit loop designer first.
+  - You need a full email series for new customers. Use the New customer onboarding sequence writer.
+  - You want to run a live test or send messages today. This plans and writes them. A person must approve, send and measure them in your own tools.
+  - You plan to infer a health condition, such as ADHD, from user data. This agent asks about preferences only. Do not collect or guess medical details.
+you_give:
+  - What your product does, and the action you want users to take
+  - Who the users are and where they get stuck now
+  - The channels you can use, such as email, SMS or in-app, and your quiet hours
+  - How you measure completion now, and any numbers you have (optional)
+  - Messages you send today (optional)
+you_get:
+  - A short question set to learn each user's preferred channel, timing and style
+  - A step-by-step nudge sequence by day and channel, with one action per message
+  - Messages for the nudge, the praise and the off-ramp
+  - A list of what to store about each user, and what not to store
+  - A check of each message for pressure, guilt and fake urgency
+  - A small test plan with a measure of success and a stop rule
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Say what the product does, the action users skip, where they drop off, your channels and quiet hours.
+  - Your AI asks once for anything missing. Anything still unknown is marked as an assumption you can change.
+  - Read the sequence first. Check that every message has one action and a way to stop. Cut any that sound like pressure.
+  - Check the list of data to store. Remove anything you do not have consent to collect.
+  - Run the plan with a small group, using your own sending tool. Compare against the measure it names, and stop if people opt out.
+how_it_works:
+  - title: Learn the preferences
+    text: It writes a short set of questions for the user's channel, timing, tone and how often they want to hear from you.
+  - title: Break the task down
+    text: It cuts a long list into the smallest steps a person can finish quickly, and picks the single most important one to show first.
+  - title: Choose the nudge
+    text: It picks one message, one channel and one time, and drafts the work so the user only has to approve or edit it.
+  - title: Celebrate
+    text: It writes praise for what was done, such as "5 sent", rather than what is left.
+  - title: Offer an off-ramp
+    text: It adds a clear choice to do a little more or stop for the day, and pauses the nudges for anyone who stops answering.
+  - title: Plan the test
+    text: It names the measure, the starting group, the check for opt-outs and the rule for stopping.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <product> | action to change: <action> | channels: <list> | quiet hours: <hours> | ASSUMED: <list> | MISSING: <list>
+
+  PREFERENCE QUESTIONS
+    <question> | stores: <field> | why it matters: <reason>
+
+  NUDGE SEQUENCE
+    <day> | <channel> | trigger: <what starts it> | single action: <one step> | draft ready: <yes or no> | message: <text>
+
+  PRAISE AND OFF-RAMPS
+    <moment> | praise: <text> | choices: <do a bit more | stop for today>
+
+  IF A USER STOPS RESPONDING
+    <rule> | <pause or change channel> | <how they can restart>
+
+  DATA TO STORE
+    <field> | purpose | consent needed: <yes or no> | do not store: <list>
+
+  PRESSURE CHECK
+    <message> | <issue found or none> | <fix>
+
+  TEST PLAN
+    group <who> | measure <what to count> | baseline <current number or MISSING> | stop if <rule> | owner <a named person>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What your product does and the action users skip
+    - Where users drop off now
+    - The channels you can use and your quiet hours
+    - Messages you send today (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Your own email, SMS or in-app tool to send the messages, run by a person
+  output:
+    - name: Preference questions
+      contains: A short set of questions that learns each user's channel, timing and style, and where each answer is stored.
+    - name: Nudge sequence
+      contains: Messages by day and channel, each with one small action and a draft ready to approve.
+    - name: Praise and off-ramps
+      contains: Short messages that celebrate what was done and let the user stop for today.
+    - name: Stop rules
+      contains: What happens when someone stops replying, and how they can restart.
+    - name: Data to store
+      contains: Each field kept about a user, why it is kept, and what must not be stored.
+    - name: Pressure check
+      contains: Each message checked for guilt, fake urgency or overload, with a fix.
+    - name: Test plan
+      contains: The group, the measure, the baseline, the stop rule and the person who owns it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your current reminder messages and the plan can rewrite them.
+    - name: Your email, SMS or in-app message tool
+      why: A person sets up and sends the plan there. The AI only writes and checks it.
+  inputs:
+    - Your current open and completion numbers for reminders.
+    - A list of the tasks users must finish, in the order they should happen.
+    - Your rules on quiet hours and consent.
+terms:
+  - term: Nudge
+    meaning: A small prompt that makes the next step easy, without forcing or tricking anyone.
+  - term: Micro-sprint
+    meaning: A short, timed burst of work, such as five minutes, with an easy stop.
+  - term: Off-ramp
+    meaning: A clear way to stop or take a break from a task or a series of messages.
+  - term: Default
+    meaning: The choice that is already filled in, such as a drafted reply the user can send or edit.
+  - term: Cognitive load
+    meaning: How much a person has to think about at once. Too much leads to giving up.
+  - term: Opt-out
+    meaning: A way for the user to say stop, and have that respected.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Channel limits
+    how: Tell it which channels you can send on and your quiet hours. Without them it asks, and the sequence uses only what you can send.
+  - what: Tone
+    how: Say if your product is playful, calm or formal, and give two example messages in that voice.
+  - what: Number of nudges
+    how: Set a maximum per week. It will plan inside that and drop the weakest messages first.
+improve:
+  - Keep the opt-out and reply data from the first run and give it back to the agent, so it can cut what people ignore.
+  - Rewrite any message the group finds pushy, and keep the new version as an example.

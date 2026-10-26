@@ -1,6 +1,6 @@
 new_slug: set-your-position-and-turn-it-into-a-checked-roadmap
 name: Set your position and turn it into a checked roadmap
-summary: Give it what you offer and who you serve. Get a position, a roadmap of results and the gaps found.
+summary: Set your business position and test your strategy roadmap before you commit. Give it your offer and customers. Get a roadmap and its gaps.
 job: plan-strategy
 thinking: high
 thinking_why: Two steps rebuild and attack the same plan. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You list what you offer and keep adding to it.
   - You have a roadmap of features and cannot say what it should change.
   - You must show a board, partner or bank that the plan holds.
+not_for:
+  - "You plan one campaign or one launch: use the Big problem splitter to break it into smaller parts."
+  - "You only want to know if your edge holds up against rivals: use the Competitive advantage tester."
+  - "You need a single yes or no on one choice: use the Group decision reviewer, or ask a trusted adviser."
 you_give:
   - What you offer and who you serve
   - Your main rivals (optional)
@@ -30,6 +34,25 @@ how_to_use:
   - State your end date and the result you want in plain numbers at the start. Step 3 needs both.
   - Tell it about any commitment you cannot drop, so the not-do list stays honest.
   - Read the failure list last and decide which changes to make before you share the roadmap.
+output_sample:
+  input:
+    - What you offer and who you serve
+    - Your end date and the result you want by then
+    - Your main rivals (optional)
+    - Your current feature or task list with dates (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1 file: position"
+      contains: Better versus different, the chosen position, the price stance, the not-do list and the activities that must fit.
+    - name: "Step 2 file: roadmap of results"
+      contains: Three to five customer problems, each with a result to measure, an owner and a review point.
+    - name: "Step 3 file: backward check"
+      contains: The end goal, steps worked back from it, two cases, a second method, return paths and a score out of 100.
+    - name: "Step 4 file: failure review"
+      contains: Ways the plan could fail, how well it covers each, risks that could end it, and one change per gap.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Choose a position and what you will not do
     text: Separates doing better from doing different, picks one position that fits the facts, writes at least four things you will not do and lists the activities that carry it.

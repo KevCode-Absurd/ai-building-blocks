@@ -18,9 +18,9 @@ outputs:
 uses: [influencer-gifting-planner, selfie-style-ad-script, creator-filming-brief-writer, video-ad-edit-planner]
 steps:
   - {uses: influencer-gifting-planner, note: "Picks who to send to and what to ask, in a card creators can answer."}
-  - {uses: selfie-style-ad-script, note: "Turns the gifting brief into a short phone-video script a creator could film."}
-  - {uses: creator-filming-brief-writer, note: "Turns the script into a brief the creator can follow without asking questions."}
-  - {uses: video-ad-edit-planner, note: "Plans the cut of the creator's footage against the approved script."}
+  - {uses: selfie-style-ad-script, note: "Turns step 1's gifting brief into a short phone-video script a creator could film. Hands the script to step 3 and, later, to the edit."}
+  - {uses: creator-filming-brief-writer, note: "Turns step 2's script into a filming brief the creator can follow without asking questions. Hands the brief to the creator; the edit later uses the script, not this brief."}
+  - {uses: video-ad-edit-planner, note: "Plans the cut of the creator's returned footage against step 2's approved script. Uses the footage the creator sends back (your own material) and the script from step 2, not step 3's brief."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-send-creators-a-gift-and-a-brief-they-can-film-from/skeleton.yaml

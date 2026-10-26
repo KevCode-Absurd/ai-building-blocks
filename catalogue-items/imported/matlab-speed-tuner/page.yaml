@@ -2,36 +2,60 @@ thinking: medium
 thinking_why: It profiles, changes and measures in a set loop.
 new_slug: matlab-speed-tuner
 name: MATLAB speed tuner
-summary: Give it slow code. Get the real slowdown found, fixed and measured,
-  with no made-up speed claims.
+summary: Find why your MATLAB code is slow and speed it up. Get the real bottleneck, a tested fix and measured before and after times.
 job: test-and-fix-code
 headline: MATLAB speed tuner
-subhead: Slow MATLAB code made faster by fixing the real bottleneck, with
-  measured proof and no invented speed claims. You hand over slow code and get
-  the cause, the fix and the numbers.
+subhead: Give it MATLAB code that runs too slowly. It times the code, finds the slow lines with the profiler and fixes them one at a time. You get faster code and real before and after times.
 explain: |
   Slow MATLAB code made faster by fixing the real bottleneck, with measured proof and no invented speed claims. You hand over slow code and get the cause, the fix and the numbers.
 
   The skill follows seven steps. It times a baseline, then runs the profiler and reads self-time and call counts per line to find where time goes. It checks whether the target is worth optimising before it touches anything. Common fixes include moving unchanging work out of loops, vectorising, preallocating and using the GPU where it helps. After each change it times the code again and checks that the result is unchanged. Claims of speedup come only from measurements. A short report covers what was tried and what worked.
 when:
   - A loop takes minutes and you think it should take seconds.
-  - You are not sure which line in your code is the slow one.
+  - You do not know which line of your code is the slow one.
   - You want a speedup you can quote with real numbers.
   - Your GPU code is not faster than the CPU version.
+not_for:
+  - "You are speeding up a Simulink model: use the Simulink Profiler built into MATLAB."
+  - "Your code is slow because of file, network or database waits: fix the reads or the connection, since code changes will not help."
+  - "You want to write performance tests: use the writing-matlab-perf-tests skill."
 you_give:
-  - The slow code
+  - Your slow MATLAB code
   - A way to run it with typical data
   - Your target speed (optional)
-  - MATLAB release
+  - Your MATLAB release (optional)
 you_get:
-  - Baseline timing
-  - Profiler findings
-  - Faster code
-  - Before and after numbers
-  - Proof results match
+  - A baseline run time
+  - The slow lines found by the profiler
+  - Faster code, changed one step at a time
+  - Before and after times for each change
+  - A check that the new results match the old ones
+  - A short report of what was tried and what worked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your slow code and say how to run it with typical data.
+  - Run the timing and profiler commands it gives you in MATLAB, then paste the results back. An AI that can run MATLAB does this for you.
+  - Check the profiler finding before you accept any change.
+  - Check that the results match and that the speedup is at least 1.2x.
+  - Rerun the timing on full-size data, then keep the report.
+output_sample:
+  input:
+    - Your slow MATLAB function or script
+    - A way to run it with typical data
+    - Your MATLAB release (optional)
+    - Your target speed (optional)
+  prerequisites:
+    - An AI that can run MATLAB, or a MATLAB session where you paste the results back
+  output:
+    - name: Baseline
+      contains: The starting run time of your code, measured with the same method used again after the fix.
+    - name: Profiler findings
+      contains: The lines and functions where time is spent, using self-time and call counts.
+    - name: Optimized code
+      contains: Your code with one fix at a time, such as preallocating arrays, moving work out of loops or vectorising.
+    - name: Measured speedup
+      contains: The new run time and the speedup over the baseline, from real measurements only.
+    - name: Correctness check
+      contains: The largest difference between old and new results, so you know the answers still match.
+    - name: Performance report
+      contains: The target, baseline, optimized time, speedup, error and the pattern applied.

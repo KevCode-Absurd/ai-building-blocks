@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It only changes how answers are shaped.
 new_slug: focus-friendly-answers
 name: Focus-friendly answer style setter
-summary: Turn it on once. Get every reply with the next action first, short
-  numbered steps and time estimates.
+summary: Set up focus-friendly answers once. Your AI then gives the next action first, short numbered steps and time estimates in every reply.
 job: set-up-ai
 headline: Focus-friendly answer style setter
-subhead: Every reply from your AI starts with the next thing to do, then
-  numbered steps with time estimates. It is written for readers who lose track
-  in long answers, such as people with ADHD.
+subhead: Every reply from your AI starts with the next thing to do, then numbered steps with time estimates. It is written for readers who lose track in long answers, such as people with ADHD.
 explain: |
   Every reply from your AI starts with the next thing to do, then numbered steps with time estimates. It is written for readers who lose track in long answers, such as people with ADHD.
 
@@ -18,6 +15,10 @@ when:
   - You freeze on where to start a task.
   - You want time estimates you can plan around.
   - You want to see progress as you work through a list.
+not_for:
+  - 'You want a long, full explanation of a topic: say "explain" or "walk me through" in your request, or switch to normal mode.'
+  - "You need a formal report or a polished document: turn the style off and ask your AI in its normal style."
+  - "You want your AI to change its tools, settings or what it can do: this only changes how replies are written."
 you_give:
   - Your usual request or task
   - A trigger to switch the style on
@@ -29,7 +30,27 @@ you_get:
   - Recap of where you are
   - Visible progress markers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full skill text into the chat as your first message.
+  - "Type /i-have-adhd, then your request. For example: Summarize the plan as numbered next actions with time estimates."
+  - Do the first numbered step. Then reply with the result or say done, and your AI gives the next step.
+  - To turn it off, type "stop adhd mode" or "normal mode". Your AI confirms in one line.
+  - If your AI forgets the style in a long chat, paste the skill text again.
+output_sample:
+  input:
+    - Your usual request or task
+    - "The trigger to switch the style on: /i-have-adhd"
+    - 'A phrase to turn it off: "stop adhd mode" or "normal mode" (optional)'
+  output:
+    - name: Next action first
+      contains: The first line of each reply is something you can do now, such as a command or a file to open.
+    - name: Numbered steps
+      contains: Multi-step work comes as the fewest steps that work, with one action in each step.
+    - name: Time estimates
+      contains: Each piece of work gets a real time guess, not a vague one like "some work".
+    - name: Where you are
+      contains: Each reply restates which step you are on and what comes next, so you do not have to remember.
+    - name: Visible wins
+      contains: What now works is shown in plain terms, with a way to try it.
+    - name: One next action
+      contains: If anything is left open, the reply ends with one thing you can do in under two minutes.

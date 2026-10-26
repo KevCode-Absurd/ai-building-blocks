@@ -28,8 +28,33 @@ you_get:
   - A sample size with a confidence label
   - Ranked insights marked by how many people said them
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Paste the skill into Claude, ChatGPT or Gemini. Or add it as a skill so you can reuse it.
+  - Say what you need to learn in one plain sentence. Add your product stage (idea, prototype, beta or live) and who your users are.
+  - Ask for the research method and plan first. Check that the method fits your goal. A usability test cannot find unmet needs.
+  - Ask for the sample size. Write down the confidence label it gives you, and share it with whoever asked how many people you need.
+  - After you run the sessions, paste your coded notes. Ask which insights have 3 or more different people behind them.
+  - The three tools need code running. Without it, the AI can follow the same steps by hand and will say so.
+not_for:
+  - You want personas or a map of the steps a customer takes. Use the User persona and path mapper.
+  - You want to compare two live versions of a page or feature. Use the Experiment designer.
+  - You want to size a market or run a big survey. Use the Market research report writer.
+  - You already have the method and only want interview questions. Use the Customer interview coach.
+output_sample:
+  input:
+    - What you need to learn, in one sentence
+    - Your product stage, such as concept, prototype, beta or live
+    - The kind of product and who uses it
+    - Coded notes from past sessions, one tag per note (optional)
+  prerequisites:
+    - Python 3, if you want the three tools to run
+  output:
+    - name: Method and study plan
+      contains: The research method that fits your goal, with an objective, who to recruit, a question guide and success measures.
+    - name: Sample size
+      contains: How many people to talk to, with a confidence label such as 5 per group or about 12 for themes.
+    - name: Ranked insights
+      contains: Coded notes grouped by tag and ranked by how many different people said each one.
+    - name: Anecdote flags
+      contains: Anything said by fewer than 3 people, marked as a signal to probe and not a finding.
+    - name: Repository tags
+      contains: A tagging scheme so each insight can be found and reused later.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It lays out a phased plan from a set structure.
 new_slug: customer-onboarding-planner
 name: Customer onboarding planner
-summary: Describe your product and customers. Get phased onboarding steps, email
-  templates, milestones and owners.
+summary: Plan your customer onboarding in phases. Give it your product and customers. You get tasks, owners, email templates and milestones.
 job: build-product
 headline: Customer onboarding planner
-subhead: New customers who do not reach a first win tend to leave. Describe your
-  product and your customers and you get an onboarding plan with phases, task
-  lists, email templates, milestones and owners.
+subhead: New customers who do not reach a first win tend to leave. Describe your product and your customers and you get an onboarding plan with phases, task lists, email templates, milestones and owners.
 explain: |
   New customers who do not reach a first win tend to leave. Describe your product and your customers and you get an onboarding plan with phases, task lists, email templates, milestones and owners.
 
@@ -18,6 +15,10 @@ when:
   - You need a 30-day plan for a new product launch.
   - Your team onboards customers differently each time.
   - You want email templates ready for each stage.
+not_for:
+  - "You sell one-off or single-session purchases: use a simple welcome email or a sales handover note instead."
+  - "You need to fix a live support problem for one customer: use your support runbook or ask a teammate who owns that account."
+  - "You want in-product tours or tooltips built: use a product designer or your product's own tour tool, since this plan covers steps and emails, not screens."
 you_give:
   - Your product and customer type
   - Your onboarding length and goals
@@ -29,7 +30,30 @@ you_get:
   - Email and message templates
   - Milestones and escalation rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Describe your product, your customer type and how long onboarding should take.
+  - Add the milestones you already track and your team roles, if you have them.
+  - Read the milestones first. Change any that your product cannot measure.
+  - Check the emails. Replace any stats or claims with figures from your own product data.
+  - Share the plan with your team. Load the milestones into your product analytics, and review the plan every quarter.
+output_sample:
+  input:
+    - Your product and the type of customer you onboard
+    - Your onboarding length and goals
+    - Success milestones you already track (optional)
+    - Your team roles, such as account manager or support (optional)
+  output:
+    - name: Success milestones
+      contains: Three to five measurable actions that show a customer is set up, each tied to an outcome they care about.
+    - name: Phases
+      contains: Welcome, Setup, First Value and Adoption, each with entry rules, exit rules and a day range.
+    - name: Task checklists
+      contains: Tasks for each phase with an owner, a length, what must come first and a clear done test.
+    - name: Communication templates
+      contains: Welcome email, kickoff agenda, check-in, milestone message, risk alert and graduation email, with fields to personalise.
+    - name: Timeline and ownership
+      contains: Due dates counted from day zero, one owner per task, and extra time for accounts with reviews.
+    - name: Escalation rules
+      contains: What happens when a task is two, five or ten days late.
+    - name: Edge case handling
+      contains: What to do when a customer goes quiet, skips phases, or loses their main contact.

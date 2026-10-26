@@ -30,6 +30,7 @@ How to start:
 ## What you need
 - **The search phrase** (required).
 - **Who is searching and what they want to do** (required).
+- **A ranked post plan** (optional): from the Topic cluster mapper. Take the keyword and the reader from the row you picked.
 - **What you sell or offer** (advised): so the post can lead to it.
 - **Pages on your site to link to** (optional).
 - **What the top results look like** (optional): lists, guides, comparisons.

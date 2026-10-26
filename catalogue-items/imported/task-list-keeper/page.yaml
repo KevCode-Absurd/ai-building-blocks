@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It edits one small file.
 new_slug: task-list-keeper
 name: Task list keeper
-summary: Tell it your tasks. Get one TASKS file kept current as you add, finish
-  and review work.
+summary: Keep one task list file current. Tell your AI what you add, finish or wait on, and it moves each item to the right section.
 job: organise-work
 headline: Task list keeper
-subhead: Tell it your tasks, and say when you finish one or are waiting on
-  someone. It keeps one plain TASKS file with four sections (Active, Waiting On,
-  Someday, Done) and moves items as you report. You get a current file, a review
-  of stuck work and an optional task board.
+subhead: Tell it your tasks, and say when you finish one or are waiting on someone. It keeps one plain TASKS file with four sections (Active, Waiting On, Someday, Done) and moves items as you report. You get a current file, a review of stuck work and an optional task board.
 explain: |
   One plain TASKS file that stays current as you add, finish and review your work; you know what is active, waiting and can wait.
 
@@ -20,6 +16,10 @@ when:
   - You want to say "done with the invoice" and have it updated.
   - You need a weekly check of what is stuck.
   - You want tasks the AI can see while it works with you.
+not_for:
+  - "You need to track work for a whole team: use a shared project tool your team already logs into."
+  - "You want reminders or alerts at set times: use your phone or calendar app, since this is only a file."
+  - "Your AI cannot read or write files: it can still show the list in chat, but you must save it yourself."
 you_give:
   - Tasks in your own words
   - Updates as you finish things
@@ -30,8 +30,30 @@ you_get:
   - A review of open and stuck work
   - An optional visual task board
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write files.
+  - Open your AI in a folder where it can read and write files. If it cannot, paste your TASKS file into the chat each time.
+  - "Paste the skill into the chat. Then tell it your tasks, for example: Send invoice to Acme, waiting on Sam since 3 May."
+  - Check that the TASKS file has the four sections and each task sits in the right one.
+  - Say "done with the invoice" when you finish something. It moves the task to Done with the date.
+  - Ask "what am I waiting on" or "what is on my plate" for a weekly check of stuck work.
+  - After a meeting, paste your notes. It offers tasks it found and asks before adding any.
+output_sample:
+  input:
+    - Your tasks, in your own words
+    - Updates when you finish something
+    - Who you are waiting on, and since when (optional)
+    - Due dates (optional)
+  prerequisites:
+    - An AI that can read and write files in a working folder, or you paste the file back each time
+  output:
+    - name: TASKS.md
+      contains: One plain file with four sections, where each task has a bold title and context such as who it is for and due date.
+    - name: Active
+      contains: Tasks you are working on now, with who they are for and when they are due.
+    - name: Waiting On
+      contains: Tasks stuck with other people, each noting the date you started waiting.
+    - name: Someday
+      contains: Tasks that can wait, kept out of your way until you want them.
+    - name: Done
+      contains: Finished tasks, crossed out with the date, kept about a week and then cleared.
+    - name: Task summary
+      contains: A short reply when you ask what is on your plate, with overdue items and waiting time called out.

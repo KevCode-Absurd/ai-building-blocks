@@ -1,6 +1,6 @@
 new_slug: subscription-churn-audit
 name: "Subscription churn audit"
-summary: "Give it your subscription data. Get a score out of 100 for where subscribers leave."
+summary: "Find where subscribers cancel with a subscription churn audit. Give it your cancel data. You get a score out of 100 and your top three fixes."
 job: keep-customers
 thinking: high
 thinking_why: "It reads your numbers, finds spikes and scores four parts, so a stronger model makes fewer arithmetic and reading mistakes."
@@ -17,6 +17,10 @@ when:
   - Your churn is higher than you want and you do not know which moment causes it.
   - You send campaigns to subscribers and want to know if they cause cancels.
   - You want one list of fixes, each pointing to the skill that handles it.
+not_for:
+  - You have fewer than a few hundred subscribers, so the day-by-day chart would be too thin to read. Do a plain review of your cancel reasons by hand instead.
+  - You sell one-off products with no repeat billing. A churn audit has nothing to measure, so look at repeat purchase rates in your store reports.
+  - You want lifetime value or cost to win a customer. Use the Subscription unit economics skill for that.
 
 you_give:
   - Cancels with date, order number and reason
@@ -35,6 +39,31 @@ how_to_use:
   - Add your email sends with cancels and starts after each, and your save rate.
   - Read the score, then the spikes. Fix the biggest spike first.
   - Run it again after the fix, on the next cohort, to see if the spike shrank.
+output_sample:
+  input:
+    - Your cancels, with date, order number and reason
+    - A flag for whether each customer's first order was a subscription, plus revenue per customer by month
+    - The emails you sent to subscribers, with cancels and starts after each send
+    - Your save rate from your cancel portal (optional)
+  prerequisites:
+    - An export from your subscription app, such as Skio or Recharge, which need their own paid accounts
+    - Your email sends from a tool like Klaviyo, also a paid account (optional)
+    - An AI that can read a spreadsheet
+  output:
+    - name: Score
+      contains: A score out of 100, built from four parts of 25 points each, with the working shown.
+    - name: Cancels by day since first order
+      contains: Cancel counts for each window after sign-up, with spikes labelled by likely cause.
+    - name: Sends with more cancels than starts
+      contains: The emails to subscribers that led to more cancels than new starts, with date and counts.
+    - name: Monthly churn
+      contains: Your monthly churn rate, shown for context and not scored.
+    - name: Top three fixes
+      contains: Three fixes in order, each pointing to the skill that handles it.
+    - name: Thresholds used
+      contains: Every score band used, and whether it came from a source or from us.
+    - name: Not run and missing
+      contains: Any part that could not be scored, and the data you did not give.
 
 how_it_works:
   - title: Charts cancels by day

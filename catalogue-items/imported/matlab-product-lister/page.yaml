@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It reads one list.
 new_slug: matlab-product-lister
 name: MATLAB product lister
-summary: Point it at a MATLAB install. Get a list of every product and add-on
-  package in it.
+summary: List every MATLAB product and support package in your install. Give it a folder path or release name and get a clean, sorted list.
 job: set-up-ai
 headline: MATLAB product lister
-subhead: A clean list of every product and add-on package inside one MATLAB
-  install. Point it at the install folder, or just name the release, and see
-  what you actually have.
+subhead: A clean list of every product and add-on package inside one MATLAB install. Point it at the install folder, or just name the release, and see what you actually have.
 explain: |
   A clean list of every product and add-on package inside one MATLAB install. Point it at the install folder, or just name the release, and see what you actually have.
 
@@ -18,6 +15,10 @@ when:
   - You are planning an upgrade and need a list of what to reinstall.
   - You need to show IT what MATLAB products you use.
   - You have several MATLAB releases and need to compare them.
+not_for:
+  - "You want to install new products: use matlab-install-products, which adds them to your install."
+  - "You want to check your MATLAB license or activation: use your MathWorks account page or ask your IT team."
+  - "You only want the MATLAB version number: type ver or version inside MATLAB."
 you_give:
   - The install path or release name
   - Operating system (if not clear)
@@ -28,8 +29,21 @@ you_get:
   - Release name and version
   - A tidy list to share
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open your AI tool and paste in this skill's instructions. Use one that can read files on your computer.
+  - Give it your MATLAB install folder, or just the release name such as R2025a.
+  - Tell it your operating system if the path does not make it clear.
+  - Check the release and install folder at the top of the result.
+  - Copy the two tables to share with a colleague or IT. To add missing products, use matlab-install-products.
+output_sample:
+  input:
+    - Your MATLAB install folder path, or just the release name such as R2025a
+    - Your operating system (optional, if the path does not make it clear)
+  prerequisites:
+    - An AI that can read files on your computer, so it can open the product list in the install folder
+  output:
+    - name: Release heading
+      contains: The release name, such as R2025a, with the install folder and the support package folder.
+    - name: Installed Products table
+      contains: Every product in the install with version and system tags removed, MATLAB first, then Simulink and Copilot products, then A to Z.
+    - name: Installed Support Packages table
+      contains: Every support package in A to Z order, or a line saying none are installed.

@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It measures each stage, then names the main constraint.
 new_slug: process-bottleneck-finder
 name: Process bottleneck finder
-summary: Describe a business process. Get a swim-lane map, cycle times and the
-  one stage holding everything up.
+summary: Find the one stage slowing your business process. Give it your stages and times. You get a swim-lane map, cycle times and a ranked bottleneck list.
 job: organise-work
 headline: Process bottleneck finder
-subhead: The one stage that holds your process back, named and ranked, with a
-  likely cause. Most elapsed time in a process is waiting, not work.
+subhead: The one stage that holds your process back, named and ranked, with a likely cause. Most elapsed time in a process is waiting, not work.
 explain: |
   The one stage that holds your process back, named and ranked, with a likely cause. Most elapsed time in a process is waiting, not work. This finds where the waiting piles up so you fix the right stage.
 
@@ -17,6 +15,10 @@ when:
   - You want to speed up a process but do not know which stage to fix first.
   - You need a map of how work moves between teams.
   - You have timestamps for each stage and want to see where work waits.
+not_for:
+  - "You want to track tickets or tasks day to day: use a project tool such as Jira or Trello."
+  - "You want to check system uptime or error rates: use a service level tool built for engineers."
+  - "You need to choose which process to fix first: talk it through with your COO or leadership team, then come back."
 you_give:
   - A description of the process and its stages
   - Cycle time or timestamp data per stage (optional)
@@ -29,8 +31,27 @@ you_get:
   - A root-cause guess for each bottleneck
   - The share of time spent on real work
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run Python code.
+  - Paste the skill text into the chat.
+  - Describe one process, stage by stage. Add the owner, typical time and slow-case time for each stage.
+  - Mark each stage as real work, waiting or rework. Answer any question your AI asks about handoffs and batch sizes.
+  - Read the map and the ranked list. Take the top bottleneck into one fix plan, then run it again after the change.
+output_sample:
+  input:
+    - Your process, with one line per stage and who owns it
+    - Typical and slow-case time for each stage
+    - Whether each stage is real work, waiting or rework
+    - Your work volume per week or month (optional)
+  prerequisites:
+    - An AI that can run Python code, since small scripts do the math
+  output:
+    - name: Swim-lane process map
+      contains: A text diagram with one lane per owner, so handoffs between teams are easy to see.
+    - name: Normalized process file
+      contains: Your stages saved in a clean, checked format that the other tools read.
+    - name: Cycle-time analysis
+      contains: Typical and slow-case total time, share of real work, waiting and rework, and throughput, with a health verdict.
+    - name: Ranked bottleneck list
+      contains: Each bottleneck with a severity level, a likely root cause and one recommended action.
+    - name: Recommendation
+      contains: One fix aimed at the main constraint, with no advice to speed up other stages.

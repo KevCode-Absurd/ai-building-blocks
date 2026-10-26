@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Routes with load limits are hard to get right.
 new_slug: delivery-route-planner
 name: Delivery route planner (vehicle routing)
-summary: Give it your stops and truck limits. Get routes that reach every stop
-  with the fewest miles.
+summary: Plan delivery routes that stay under each truck's load limit. Give it your stops and fleet. You get a route per vehicle with the fewest miles.
 job: plan-supply-chain
 headline: Delivery route planner (vehicle routing)
-subhead: Routes that reach every customer without overloading a truck, using the
-  fewest miles. Give it stops, order sizes and your fleet, and you get a route
-  for each vehicle that respects capacity.
+subhead: Routes that reach every customer without overloading a truck, using the fewest miles. Give it stops, order sizes and your fleet, and you get a route for each vehicle that respects capacity.
 explain: |
   Routes that reach every customer without overloading a truck, using the fewest miles. Give it stops, order sizes and your fleet, and you get a route for each vehicle that respects capacity.
 
@@ -18,6 +15,10 @@ when:
   - Orders have grown and your vans are overloaded on some days.
   - You want to know if you need one more vehicle.
   - You have mixed truck sizes and need the best use of each.
+not_for:
+  - Your stops have delivery time windows. Use a routing tool that handles time windows, or plan those stops by hand first.
+  - You have several depots. Plan each depot's stops as its own run, or ask a routing planner who handles more than one depot.
+  - Your trucks have no load limit. A plain route sorter or a map app is simpler and faster.
 you_give:
   - List of stops with locations
   - Order size for each stop
@@ -30,8 +31,26 @@ you_get:
   - Total distance
   - Stops that do not fit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open your AI tool, such as Claude, ChatGPT or Gemini, and paste in the skill instructions.
+  - Paste your stop list with order sizes, your vehicle count and capacities, and your depot location.
+  - Answer any questions it asks about load units, split orders and whether you want fewest miles or fewest vehicles.
+  - Check each route's load against the truck limit. Look at any stop it says does not fit.
+  - For many stops, use an AI that can run code. Small lists can work in a plain chat.
+output_sample:
+  input:
+    - Your list of stops with addresses or locations
+    - The order size for each stop
+    - How many vehicles you have and what each can carry
+    - Your depot location
+    - "Your goal: fewest miles or fewest vehicles (optional)"
+  prerequisites:
+    - An AI that can run code gives the best results on large stop lists
+  output:
+    - name: Problem summary
+      contains: Number of customers, vehicle capacity, total demand and the least number of vehicles you could need.
+    - name: Solution table
+      contains: Total distance, vehicles used, and the average, lowest and highest load.
+    - name: Routes table
+      contains: "For each vehicle: stops served, load, share of capacity used and distance."
+    - name: Stops that do not fit
+      contains: Any stop or order the fleet cannot carry, flagged so you can act on it.

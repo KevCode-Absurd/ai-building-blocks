@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It applies set guidelines to new writing and checks the result.
 new_slug: brand-voice-rewriter
 name: Brand voice rewriter
-summary: Give it a draft or a topic. Get emails, posts or pitches written in
-  your brand voice, with notes on each choice.
+summary: Rewrite a draft or topic as an on-brand email, post or pitch. Get a brand voice rewriter result with notes on each wording choice.
 job: brand-file
 headline: Brand voice rewriter
-subhead: Emails, posts and pitches that sound like your company wrote them, plus
-  a short note on why each choice was made so you can check it.
+subhead: Emails, posts and pitches that sound like your company wrote them, plus a short note on why each choice was made so you can check it.
 explain: |
   Emails, posts and pitches that sound like your company wrote them, plus a short note on why each choice was made so you can check it.
 
@@ -17,6 +15,10 @@ when:
   - A draft from a teammate sounds off and you want it rewritten in your tone.
   - You want a proposal or sales message written to your guidelines.
   - You want to know why a line was changed, not just see the result.
+not_for:
+  - "You have no brand guidelines yet: ask a brand strategist, or write a short list of voice traits and banned words first, then come back."
+  - "You want to find brand materials across your files and apps: gather them by hand and paste them in, because this tool does not search for them."
+  - "You only need a spelling and grammar check: use the checker built into your word processor."
 you_give:
   - Your brand voice guidelines
   - A draft to fix, or a topic and goal
@@ -28,8 +30,25 @@ you_get:
   - Notes on each brand choice
   - A check against your guidelines
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved brand guidelines file.
+  - Open Claude, ChatGPT or Gemini. Paste your brand voice guidelines first, or attach the file if your AI can read files.
+  - Paste the skill instructions from SKILL.md into the same chat.
+  - Add your draft, or a topic and goal. Say who will read it and what format it is. Add any facts to include.
+  - Read the draft, then the brand choices and the check. Ask for changes if a line still feels off.
+  - "If your request clashes with your guidelines, pick one of the options it offers: follow the guidelines, adapt them, or override them."
+output_sample:
+  input:
+    - Your brand voice guidelines (pasted, or in a saved file)
+    - A draft to fix, or a topic and goal
+    - Who will read it and what format it is (email, post, pitch, Slack message)
+    - Facts or offers to include (optional)
+  prerequisites:
+    - Brand guidelines in the chat, in a saved file your AI can read, or pasted in. Without them it stops and asks.
+  output:
+    - name: Draft
+      contains: The email, post, proposal or message written in your brand voice, with tone set for the format and audience.
+    - name: Brand choices
+      contains: A short list of the key wording and tone decisions, and which guideline each one follows.
+    - name: Guideline check
+      contains: A check of the draft against your voice traits, approved words and banned words.
+    - name: Conflicts and open questions
+      contains: Any clash between your request and your guidelines, with a recommendation and options. Shown only when one comes up.

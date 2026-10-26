@@ -2,17 +2,26 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-bug-report-writer
 name: Gorgias bug report writer
-summary: Share a Gorgias ticket. Get a bug report with steps, evidence, and missing details.
+summary: Turn a Gorgias ticket into a bug report your engineers can use. Get steps, evidence and missing details, then add it to Linear if you approve.
 job: help-customers
 headline: Gorgias bug report writer
-subhead: Give it the number of a Gorgias ticket that describes a bug. It separates the expected result from what happened and collects the evidence. You get a clear bug report, with an option to create an approved Linear issue.
+subhead: Give it the number of a Gorgias ticket that describes a bug. It reads the whole thread and writes a bug report your engineers can act on. It flags what is missing, and creates a Linear issue only if you say yes.
 when:
-  - You use this tool for customer support and need help with this task.
+  - A customer writes in about something broken and your engineers need a clear report.
+  - A ticket thread has grown long and nobody has pulled out the steps to reproduce.
+  - You want to hand a bug to engineering without retyping the customer's words.
+  - You need to know what to ask the customer before the bug can be fixed.
+not_for:
+  - "The ticket is a feature request or a billing question: reply to the customer yourself or ask a support lead, since this tool only reads bug reports."
+  - "You have no Composio access to Gorgias or Linear: paste the ticket text into your AI and ask for a bug report by hand."
+  - "You want a bug fixed or the cause found: send the finished report to your engineers, because this tool only writes the report."
 you_give:
   - A Gorgias ticket number for a reported bug.
-  - Access to the full conversation and any available evidence.
+  - The Linear team that should get the issue (optional).
 you_get:
-  - Show the report. Create a Linear issue only after you approve the report and team.
+  - A bug report with title, steps, expected and actual results, impact and quoted evidence.
+  - A list of details missing from the ticket, and what to ask the customer.
+  - A Linear issue link, only after you approve the report and pick the team (optional).
 how_it_works:
   - title: Read the full thread
     text: Fetch the ticket and read customer and staff messages before drafting.
@@ -25,8 +34,34 @@ works_best_with:
     - name: Gorgias and Linear
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias bug report writer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide a Gorgias ticket number for a reported bug.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run commands and read skill files. Install Composio CLI and connect Gorgias. Connect Linear too if you want an issue.
+  - Add the downloaded folder to your AI and ask it to run the Gorgias bug report writer.
+  - Give it the ticket number of a bug report. Say which ticket it is.
+  - Read the report. Check the steps and the missing details, and fix anything that looks wrong.
+  - If you want a Linear issue, say yes and pick the team. Nothing is created before you approve.
+  - If a step says Gorgias is not connected, run the link command your AI shows, then try again.
+output_sample:
+  input:
+    - Your Gorgias ticket number for a reported bug
+    - Which Linear team should get the issue (optional, only if you create one)
+  prerequisites:
+    - An AI that can run Composio CLI commands
+    - Gorgias connected through Composio
+    - Linear connected through Composio (only to create an issue)
+  output:
+    - name: Bug Report header
+      contains: The ticket source, reporter, date reported and a severity rating of Critical, High, Medium or Low.
+    - name: Title and Description
+      contains: A clear bug title, not the ticket subject, and a one or two sentence summary.
+    - name: Steps to Reproduce
+      contains: Numbered steps taken from the customer thread, with gaps flagged as missing.
+    - name: Expected Behavior and Actual Behavior
+      contains: What should have happened, next to what the customer says happened.
+    - name: Environment and Evidence
+      contains: Browser, system, account details, quoted error messages, and screenshots or IDs the customer mentioned.
+    - name: Impact
+      contains: How many users are affected, whether a workaround exists, and any revenue impact if it can be found.
+    - name: Additional Context
+      contains: Other useful details from the thread, plus a list of missing information to ask the customer for.
+    - name: Linear issue link
+      contains: "Only if you approve: a new issue in the team you pick, with the full report inside."

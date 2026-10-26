@@ -67,15 +67,15 @@ If an image tool is connected, offer to make the picture with it, and ask before
    - *Passing it on:* one person hands it, pours it or shares it with another.
    - *The table:* the product among the occasion's things, nobody in frame.
    - *After:* what's left (an empty pack, the last one, the product put back).
-   At least 2 frames have no people. At most 2 have three or more people. Each frame gets a job (feed ad, post, email strip) and a size.
+   At least 2 frames have no people. At most 2 have three or more people. Each frame gets a job (feed ad, post, email strip) and a size. Every frame's setting must match the falloff dial. *Close wall* needs a wall, fence or large surface within reach behind the subject. *Deep room* needs open space so the background goes dim. If a place cannot match the dial (a park bench with no wall behind it), choose another place or change that frame to match.
 4. **Write every action as mechanics:** which hand holds what, where the other hand is. "Thumb flips the cap while the other hand steadies the base." If you can't picture the physics, change the verb. Show only actions the product's facts describe. For a room object, people sit around it rather than hold it up. A children's product shows no child or part of one.
 5. **Show the dials and the roll** (frame, who, action, job, size) and wait for approval. If they asked for everything in one go, carry on and mark it "(approve)". Most frames have nobody looking at the lens. At most one, with approval, catches someone who has just noticed the camera mid-laugh, never posed.
 6. **Make one test frame,** *the table* or *the reach*. Check it against the truth sheet. Once approved, attach it to later prompts with the real photos, each labelled with its role. Never attach photos of real people; describe people in words.
 7. **Write each prompt as one paragraph,** in this order:
    - The moment and the place: occasion, time, room, wall or surface.
    - People and action: how many adults, age, hair, clothes, one detail each, and the hand-by-hand mechanics.
-   - The product: its role in the attached images, the fixed phrase, its size against a hand, label sharp and turned to the lens, the brightest flash spot falling on an edge or cap, never across the words.
-   - The camera and flash in physical terms: "a compact camera held at chest height, its built-in flash fired straight from beside the lens", plus the three dials in words.
+   - The product: its role in the attached images and the fixed phrase. State its size against a hand only from a given fact or photo. Otherwise write `MISSING: product size` and leave size out. Every prompt says the label is sharp and faces the lens, and names where the brightest flash spot falls (an edge or the cap, never across the words).
+   - The camera and flash in physical terms: "a compact camera held at chest height, its built-in flash fired straight from beside the lens", plus the three dials in words. Use the same shadow wording for the whole roll. *Close wall*: a hard-edged shadow on the wall just behind the person. *Deep room*: no shadow on the far wall, and the background falls into dim. *Flash only*: the room drops toward dark. *Flash plus room light*: lamps glow and moving hands leave a faint trail. *Flash as fill*: daylight carries the scene.
    - Texture: fine film grain or phone snapshot, slightly off level.
    - Then: "no added words, date stamps or borders".
 8. **Check every frame at full size** beside the real photo. Rewrite only the failing line of the prompt; a resent prompt repeats its mistake. Log each failure in one line.
@@ -83,7 +83,33 @@ If an image tool is connected, offer to make the picture with it, and ask before
 10. **Deliver** the frames named `<nn>_<moment>_<job>`, marked as made with AI and kept apart from real photos, with a short note on keepers, flaws and remakes. On request, turn one approved frame into a few seconds of video: one small action at real speed, a little handheld shake, no cut.
 
 ## What you hand back
-The flash dials, the approved roll, one prompt per frame, the frames, the check log, and `CHECKS MISSED`: one line per check still missed, or "none".
+```
+BEFORE WE START
+<missing photos or facts; whether the look fits the brand>
+
+PRODUCT, SAME WORDS EVERY TIME
+"<exact phrase>; not <the lookalike>"
+
+FLASH DIALS
+Ambient: <flash only | flash plus room light | flash as fill>
+Falloff: <close wall | deep room>
+Colour:  <neutral | warm mix | brand daylight>
+
+THE ROLL: <one occasion> (for approval)
+01 <moment> | <who> | <action, hand by hand> | <job and size>
+...
+TEST FRAME: <which, and why>
+
+PROMPT, FRAME <nn>
+<moment and place>. <people and hands>. <product>. <camera and flash>. <texture>. No added words, date stamps or borders.
+
+CHECK LOG
+<frame>: asked <...> / came back <...> / fix <...>
+
+CHECKS MISSED
+<one line per check still missed, or none>
+```
+If no pictures were made yet, say so and check the prompts instead.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -111,13 +137,3 @@ Write `MISSING: <photo in a hand | buyer moment | product fact>`. Until it arriv
 - A catalogue layout or a staged-looking room.
 - Food, bags or contents that are branded, or that the product couldn't hold.
 
-
-## Optional flash spread and two-pass inspection
-
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-flash-photography.md.
-
-For a larger set, record flash direction, distance/falloff, ambient visibility, colour temperature, shadow character and finish. A style cast cannot change the real product colour or material.
-
-An optional eight-frame example mixes three solo, two duo and three group scenes, but the requested count and people policy take priority. Use fictional adults or authorized people in appropriate contexts. Product-only alternatives include hard-surface still life, held detail, real room, unboxing and texture. Do not invent uses to fill a spread.
-
-Inspect in two passes. First compare exact variant, shape, closure, label, scale, use and contact. Then judge source direction, shadow, falloff, ambient exposure, hands/anatomy and continuity. Product truth outranks style. Give every frame a role and reject near-identical filler. An unviewed export stays uninspected.

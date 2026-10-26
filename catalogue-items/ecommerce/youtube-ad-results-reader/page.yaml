@@ -1,6 +1,6 @@
 new_slug: youtube-ad-results-reader
 name: "YouTube ad results reader"
-summary: "Give it your YouTube ad results. Get a scale, keep or pause call per ad, with a score out of 100."
+summary: "Check your YouTube ad results and get a scale, keep or pause call for each ad, with a score out of 100 and the next test to run."
 job: run-google-ads
 thinking: low
 thinking_why: "It compares a few numbers with fixed thresholds and follows a short decision rule, so a fast, small model is enough."
@@ -17,6 +17,10 @@ when:
   - You have several YouTube ads running and do not know which to scale and which to stop.
   - An ad has views but few sales, and you need to know whether to fix the hook, the offer or the page.
   - You want a quick weekly read of YouTube results that you can repeat.
+not_for:
+  - "Your channel is brand new and spend is too low to show a pattern: wait for a full week of spend, then run it."
+  - "You have no sales data from your store: read the ad platform's own report first, then come back with a new-customer cost."
+  - "You do not know your break-even cost per sale: work it out first with the break-even calculator."
 
 you_give:
   - Per ad, the view rate, click-through rate, conversion rate, cost and new-customer cost per sale
@@ -35,6 +39,31 @@ how_to_use:
   - Add your new-customer cost per sale from your store or attribution tool, and your break-even figure.
   - Act on the verdicts, one change per ad, and read the results again after the next full week.
   - Run the next test it names for each ad that is not ready to scale.
+output_sample:
+  input:
+    - Each ad's view rate, click-through rate, conversion rate, cost and new-customer cost per sale
+    - "Where each ad ran: in-stream or Shorts"
+    - Your break-even new-customer cost per sale
+    - Your view-through conversions (optional)
+    - Whether customers buy again, such as monthly (optional)
+  prerequisites:
+    - Your YouTube ad results exported from Google Ads, split by placement
+    - Your new-customer cost per sale from your store or attribution tool
+  output:
+    - name: Results header
+      contains: The date range and your break-even new-customer cost per sale, so every call is judged against your own number.
+    - name: Ad block
+      contains: One block per ad with its placement, verdict (scale, keep or pause) and score out of 100.
+    - name: Metric checks
+      contains: A pass or fail for view rate, click-through rate, conversion rate and new-customer cost per sale, plus view-through conversions.
+    - name: Score line
+      contains: 25 points for each metric that passes, with the sum shown.
+    - name: Next test
+      contains: Whether to test the hook, the offer and call to action, or the page.
+    - name: Notes
+      contains: A low reported return is fine only when you can show customers come back.
+    - name: Not checked and Missing
+      contains: Any metric not supplied, and what you need to add so it can be checked.
 
 how_it_works:
   - title: Rates view rate

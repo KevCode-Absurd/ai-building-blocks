@@ -78,9 +78,24 @@
         }
       }
       window.addEventListener("error", bootStyleError, true);
-      window.__abbBootTimer = setTimeout(function () {
-        if (document.documentElement.dataset.boot === "loading") bootError();
-      }, 12000);
+      // Only time the page spends visible counts: a tab opened in the background
+      // loads at low priority, so it gets a fresh wait once someone looks at it.
+      (function armBootTimer(ms) {
+        window.__abbBootTimer = setTimeout(function () {
+          if (document.documentElement.dataset.boot !== "loading") return;
+          if (document.visibilityState === "hidden") {
+            document.addEventListener("visibilitychange", function shown() {
+              if (document.visibilityState === "hidden") return;
+              document.removeEventListener("visibilitychange", shown);
+              armBootTimer(8000);
+            });
+            return;
+          }
+          // A readable pre-rendered page beats an error: show it while the app finishes.
+          if (document.querySelector('#root [data-testid="public-opening"] [data-prerendered]')) { document.documentElement.dataset.boot = "ready"; return; }
+          bootError();
+        }, ms);
+      })(15000);
       document.addEventListener("abb:ready", function () {
         clearTimeout(window.__abbBootTimer);
         if (bootStyleFailed) return;
@@ -106,11 +121,13 @@
         const home = location.pathname === "/";
         const params = new URLSearchParams(location.search);
         const starter = home && !params.has("block") && !params.has("workflow");
-        for (const href of starter ? ["/data/blocks.json", "/data/starter-blocks.json"] : ["/data/blocks.json"]) {
+        // Home lists cards from the small index; block pages and tools need the full catalogue.
+        const list = home ? "/data/blocks-index.json" : "/data/blocks.json";
+        for (const href of starter ? [list, "/data/starter-blocks.json"] : [list]) {
           const catalogue = document.createElement("link");
           catalogue.rel = "preload"; catalogue.href = href;
           catalogue.as = "fetch"; catalogue.crossOrigin = "anonymous";
-          if (home && href === "/data/blocks.json") catalogue.fetchPriority = "low";
+          if (home && href === list) catalogue.fetchPriority = "low";
           document.head.append(catalogue);
         }
       }
@@ -130,19 +147,6 @@
     </div>
     <!-- APP_LOADER_END -->
     <div id="root"></div>
-    <script>
-      // Public prerender contains a search-engine reading page. Reuse only its
-      // title in this compact first screen; never flash the long text wall.
-      if (location.pathname !== "/") {
-        const isPrivate = /^\/(account|sign-in|sign-up|space|people|s|my-submissions|admin)(\/|$)/.test(location.pathname);
-        const heading = isPrivate ? "Your work, in one place." : document.querySelector("#root [data-prerendered] h1")?.textContent?.trim();
-        if (heading) document.querySelector(".boot-h1").textContent = heading;
-        if (isPrivate) {
-          document.querySelector(".boot-kicker").textContent = "Your saved work";
-          document.querySelector(".boot-lede").textContent = "Sign in to find your saved skills and workflows.";
-        }
-      }
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

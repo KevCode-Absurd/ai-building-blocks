@@ -1,51 +1,96 @@
 new_slug: bridge-floating-rate-changes-to-revolver-cost
 name: Bridge rate changes to revolver cost
 headline: Bridge rate changes to revolver cost
-summary: A rate repricing scenario and revolving charge reconciliation
+summary: Work out what a floating-rate rise adds to your revolving credit line, then reconcile the new interest and fees to the lender's statement.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A rate repricing scenario and revolving charge reconciliation. Share floating facility reset dates, verified exposed principal, base and scenario rates, actual average drawn/fee-undrawn balances, day-count and statement charges.
-explain: |-
-  A rate repricing scenario and revolving charge reconciliation.
+subhead: Give it each floating loan's balance, reset date and the rate you expect, plus the average drawn and unused amounts from a lender statement. It prices the rate change loan by loan, then rebuilds the revolver's interest and unused-line fee for the same period. You get the extra cost and a match against the lender's bill.
+explain: |
+  When rates rise, the quick answer is a year's balance times the rate change. That rarely matches the bill. A statement covers one billing period, the reset may land part-way through it, and the fixed or hedged part of a loan does not move. An annual dollar figure and a statement charge are not the same thing.
 
-  Treasury interest scenarios. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow fixes the order. Step 1 works out the change loan by loan as a rate and a share of the year. Step 2 takes that changed rate, not the annual dollar total, and rebuilds the interest and the fee on unused credit from the actual average balances. Base and scenario charges are then compared on the statement's own period.
+
+  It does not forecast rates. You bring the scenario. Rate floors, rate caps and resets on a set day inside the period are not modelled, and the page lists them as gaps so nobody thinks they were covered.
 when:
-  - You need a rate repricing scenario and revolving charge reconciliation.
-  - You work on treasury interest scenarios and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Rates moved and finance needs the cost on the revolver, not a rough guess.
+  - A lender statement came in above or below budget and you want to know if a reset explains it.
+  - A reset date falls part-way through a billing period.
+  - A board or bank asks what a 1% rise does to interest and the unused-line fee.
+not_for:
+  - Your loan has a rate floor, a rate cap or a reset on a set day. This does not model them. It lists each one as a gap.
+  - You only want the extra interest per loan, with no tie to a bill. Use the Floating rate repricing planner.
+  - You only want to check one billing period against a lender's bill. Use the Revolver interest and fee checker.
+  - You want to know how much you can still borrow against receivables and stock. Use the Reconcile an asset-based revolver certificate workflow.
 you_give:
-  - Floating facility reset dates, verified exposed principal, base and scenario rates, actual average drawn/fee-undrawn balances, day-count and statement charges.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Each floating loan's balance, reset date and day count (from the loan agreement and the lender statement)
+  - The fixed or hedged part of any loan, with the contract that proves it (optional)
+  - The base rate and the scenario rate, each with its date
+  - The average drawn amount and the average unused amount for the billing period (from the lender statement)
+  - The interest rate and unused-line fee rate, and the total the lender billed
+  - The currency and scale, such as USD thousands
 you_get:
-  - A rate repricing scenario and revolving charge reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The extra interest on each floating loan
+  - Interest and unused-line fee at the base rate and at the new rate
+  - The change in cost, on the statement's own period
+  - The gap between your figure and the lender's bill, with a likely cause
+  - Floors, caps and reset-day gaps, listed as not covered
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach the loan agreement or rate notice, the latest lender statement and your base interest budget. Paste the scenario rate and its date. Say which loans are fixed or hedged.
+  - After step 1, check that each loan row shows its floating balance, extra rate and share of the year, and that the rows add up to the total change.
+  - After step 2, check that the period, day count and year basis (360 or 365) match the statement. Read the gap against the bill and its stated cause.
+  - Fill every MISSING line before anyone budgets from the result. Nothing here pays, sends or files anything. A person who knows the agreement checks it before anyone acts.
 how_it_works:
   - title: Floating rate repricing planner
-    text: Calculate scenario interest changes by exposed facility and reset fraction. Preserve the annual versus statement-period basis and pass the actual changed facility rate, not an annual dollar total, into the revolver charge model.
+    text: Works out the extra interest on each floating loan as balance times extra rate times share of year. Keeps the annual and statement-period bases apart. Hands step 2 the changed rate for each facility, not an annual dollar total.
   - title: Revolver interest and fee checker
-    text: Recompute the affected statement interest and undrawn fee on actual average balances. Compare base and scenario charges with step1 on a reconciled period basis; retain floors, caps and day-specific reset gaps as missing coverage.
-output_shape: |-
-  A rate repricing scenario and revolving charge reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Rebuilds the statement's interest and unused-line fee on actual average balances, at the base rate and at the new rate. Compares them with step 1 and with the bill. Floors, caps and reset-day gaps stay listed as missing coverage.
+output_shape: |
+  PERIOD  <start> to <end>, <days> days, <currency>, <scale>, basis <360 or 365>
+
+  1 REPRICING LADDER  <one row per loan: floating balance | extra rate | share of year | extra interest>
+                      total extra interest <n>
+
+  2 REVOLVER CHARGES  base rate:     interest <n> + unused fee <n> = <n>
+                      scenario rate: interest <n> + unused fee <n> = <n>
+                      change in cost <n>
+
+  AGAINST THE BILL   billed <n> | difference <n> | likely cause <cause or unexplained>
+  NOT COVERED        <each floor, cap or reset-day gap>
+  SOURCES            <each input, its source, date and unit>
+  MISSING            <each gap, and the line it stops>
+  CHECKS MISSED      <one line each, or none>
+output_sample:
+  input:
+    - Each floating loan's balance, reset date and day count
+    - The base rate and the scenario rate
+    - Average drawn and average unused amounts for the billing period
+    - The lender's statement and the amount it billed (optional)
+  prerequisites:
+    - The loan agreement or rate notice, and the latest lender statement
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: 1 REPRICING LADDER
+      contains: One row per loan with its floating balance, extra rate, share of the year and extra interest.
+    - name: 2 REVOLVER CHARGES
+      contains: Interest and unused-line fee at the base and new rate, and the change in cost.
+    - name: AGAINST THE BILL
+      contains: The billed amount, the difference and its likely cause, or a note that it is unexplained.
+    - name: NOT COVERED
+      contains: Each rate floor, cap or reset-day gap the figures leave out.
+    - name: SOURCES, MISSING and CHECKS MISSED
+      contains: Where each figure came from, each gap and the line it stops, and checks that could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Annual affected fractions are mapped to the actual statement window; incremental interest is not added twice to recomputed charges.
+  - what: A mid-period reset
+    how: Move the reset date into the middle of the billing period. The share of year changes and so does the extra cost.
+  - what: A hedged part
+    how: Tell it that half of one loan is fixed by a swap. That half drops out of the ladder, and the page cites the contract.
+  - what: A bigger rate move
+    how: Change the scenario rate. Both steps recalculate, and the page shows base and scenario side by side.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - Annual affected fractions are mapped to the actual statement window; incremental interest is not added twice to recomputed charges.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +101,31 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a one-line note of each facility's reset dates, day count and year basis, and paste it in every run.
+  - Keep the statement figures for each month, so the next run can compare the same period.
+  - Pair it with the Review contractual debt service cash tests workflow when a higher rate may squeeze cover.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: The lender's statement
+      why: It gives the real average balances, fees and billed total, which are facts, not estimates.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The loan agreement's wording on the interest rate, the unused-line fee and the day count.
+    - A dated rate notice for the base rate, not a news headline.
+    - A named reviewer from treasury.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Floating rate
+    meaning: A loan rate that moves with a market rate, so the interest bill moves too.
+  - term: Revolver
+    meaning: A credit line you can draw, repay and draw again up to a limit.
+  - term: Unused-line fee
+    meaning: A fee the lender charges on the part of the credit line you have not drawn. Also called a commitment fee.
+  - term: Reset date
+    meaning: The day a floating rate is updated to the current market rate.
+  - term: Day count
+    meaning: How days in a period are counted, such as 360 or 365 days to the year.
+before: []
+next:
+  - review-contractual-debt-service-cash-tests
+  - review-sponsor-debt-cash-demands

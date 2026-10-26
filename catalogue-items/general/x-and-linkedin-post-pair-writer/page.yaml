@@ -1,6 +1,6 @@
 new_slug: x-and-linkedin-post-pair-writer
 name: "X and LinkedIn post pair writer"
-summary: "Paste one idea. Get an X post and a LinkedIn post that read as written separately."
+summary: "Turn one idea into an X post and a LinkedIn post that each read as written for that place. Paste your idea and get both, plus what differs."
 job: grow-social
 thinking: low
 thinking_why: "It rewrites one idea for two places using clear rules."
@@ -17,6 +17,10 @@ when:
   - "You want to post one idea on X and LinkedIn today."
   - "Your LinkedIn posts feel like long tweets."
   - "You are tired of rewriting the same thing twice by hand."
+not_for:
+  - "You want a full check across many platforms: use the Cross-platform post writer."
+  - "You want a long article or a numbered thread: write it yourself or ask your AI for a long-form draft."
+  - "You only post on one site: ask your AI to write a single post for that site."
 
 you_give:
   - "The idea in rough words"
@@ -32,6 +36,22 @@ how_to_use:
   - "Paste your idea and any facts under the prompt."
   - "Add a past post if you want it to sound like you."
   - "Read both aloud before you post."
+output_sample:
+  input:
+    - Your idea in rough words
+    - The story or facts behind it (optional)
+    - A past post in your voice (optional)
+  output:
+    - name: IDEA
+      contains: Your idea said back in one plain sentence.
+    - name: X POST
+      contains: A short post whose first line works alone and starts mid-thought.
+    - name: LINKEDIN POST
+      contains: A post that opens on the situation, uses short lines and ends on a lesson.
+    - name: WHAT DIFFERS
+      contains: One line on what changed between the two posts and why.
+    - name: MISSING
+      contains: Any fact the posts needed that you did not give.
 
 how_it_works:
   - title: "Find the idea"

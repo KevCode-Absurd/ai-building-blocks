@@ -1,52 +1,89 @@
 new_slug: build-an-equity-thesis-counterevidence-brief
 name: Build an equity thesis counterevidence brief
 headline: Build an equity thesis counterevidence brief
-summary: Share the source files. Get a thesis claim ledger, contradictory evidence and open research questions.
+summary: Test an equity research thesis against its own filings. Get a claim ledger, the evidence that cuts against it and open questions.
 job: money-and-investing
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A thesis claim ledger, contradictory evidence and open research questions. Share an existing research thesis draft, dated filings, source exhibits, current as-of date and the stated investment horizon. Your AI prepares the work and marks any facts it cannot verify.
-explain: |-
-  A thesis claim ledger, contradictory evidence and open research questions.
+subhead: Give it your thesis draft and the dated filings behind it. It lists each claim and the proof it needs, reads the filings for evidence that supports and evidence that cuts against each claim, and drafts a committee outline. You get a claim ledger, the counter-case and a list of open questions.
+explain: |
+  A thesis can feel solid because you only collected evidence that agreed with it. This workflow checks it the other way round. It starts from the claims, asks what proof each one needs, and then reads the filings for both sides. A claim with no proof, or with evidence against it, shows up in the ledger.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Supporting and adverse evidence use comparable periods; absence of evidence is not evidence a risk is absent. Missing tools or evidence stay visible in the final summary.
+  Three steps run in order. Step 1 lists every claim in the draft and the exact evidence it needs, treating numbers and forecasts as high risk. Step 2 reads each filing and marks what supports, what contradicts and what is silent, with source dates and the limits of what was read. Step 3 turns that into a discussion outline for an investment committee. It makes no target price.
+
+  No evidence for a risk is not proof the risk is absent. The ledger says so. It also does not tell you whether to buy or sell.
 when:
-  - You need a thesis claim ledger, contradictory evidence and open research questions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You wrote a thesis and want to know which claims no filing backs up.
+  - A colleague's thesis lands on your desk and you have to challenge it.
+  - The investment committee meets soon and someone will argue the other side.
+  - You suspect you only gathered evidence that agreed with you.
+not_for:
+  - Your thesis is a university dissertation. Use the Prepare a thesis defence evidence brief workflow.
+  - You want a valuation or a target price. This builds none. Use the Review equity valuation sensitivity assumptions workflow to test your assumptions.
+  - You have no dated filings. The ledger will show claims with no evidence, but it cannot supply facts.
+  - You want a buy or sell recommendation. This tests a thesis. A person makes the decision.
 you_give:
-  - An existing research thesis draft, dated filings, source exhibits, current as-of date and the stated investment horizon.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your research thesis draft, as a memo, note or list of points
+  - The dated filings and exhibits behind it, such as annual and quarterly reports (from the company's investor page or a regulator's site)
+  - The as-of date and your investment horizon
+  - Who will read the outline, and by when (optional)
+  - Your earlier notes on the company (optional)
 you_get:
-  - A thesis claim ledger, contradictory evidence and open research questions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A claim ledger: each claim, the evidence it needs, its source and date, and whether the filings support, contradict or say nothing"
+  - The evidence that cuts against the thesis, with where to find it
+  - Open research questions for each claim with no proof
+  - "A committee discussion outline: the thesis, the counter-case and the unanswered questions"
+  - A list of facts it could not check
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini.
+  - Attach your thesis draft and the filings. Paste the as-of date and your horizon. Say who will read the outline.
+  - After step 1, check that every claim in your draft is on the list, including the ones you think are obvious.
+  - After step 2, read each claim marked contradicted or silent. Check the source date, and that supporting and adverse evidence come from comparable periods.
+  - Fill every MISSING line before the outline goes to a committee. Nothing here sends or publishes anything.
 how_it_works:
   - title: Unsupported claim spotter
-    text: Inventory the draft thesis claims and the exact evidence needed to support each, treating financial assertions as high risk.
+    text: Lists each claim in the draft and the exact evidence it needs. Treats financial claims as high risk. Hands step 2 the claim list with the proof wanted for each.
   - title: Source note summariser
-    text: Read supplied filings and exhibits for evidence that supports or challenges each claim. Preserve source dates and explicitly state the coverage limits.
+    text: Reads each filing for evidence that supports or challenges each claim. Keeps source dates and states what it did not read. Hands step 3 the claims with evidence, marked supports, contradicts or silent.
   - title: Presentation builder
-    text: Prepare an investment committee discussion outline that presents the thesis, counter-case and unanswered questions without inventing a target price.
-output_shape: |-
-  Scope and source coverage
-  A thesis claim ledger, contradictory evidence and open research questions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+    text: Drafts a committee discussion outline that sets out the thesis, the counter-case and the open questions. Makes no target price. Needs your reader and time limit.
+output_shape: |
+  SCOPE  <company>, <as-of date>, <horizon>, <filings read, with dates>
+
+  CLAIM LEDGER  <per claim: claim | evidence needed | source and date | supports, contradicts or silent | MISSING>
+  COUNTER-CASE  <evidence against each claim, with where to find it>
+  OPEN QUESTIONS  <per claim with no proof: the question and where to look>
+  COMMITTEE OUTLINE  <slides or sections: thesis, counter-case, unanswered questions>
+
+  MISSING and CHECKS MISSED  <one line each, or none>
+  NEXT ACTION  <one proposed step, not yet done>
+output_sample:
+  input:
+    - Your research thesis draft
+    - The dated filings and exhibits behind it
+    - The as-of date and your investment horizon
+    - The reader and deadline for the outline (optional)
+  prerequisites:
+    - The company's annual and quarterly filings, saved as files or links
+    - An AI that can read files
+  output:
+    - name: CLAIM LEDGER
+      contains: Each claim, the proof it needs, the source and date, and whether the filings support, contradict or say nothing.
+    - name: COUNTER-CASE
+      contains: The evidence that cuts against each claim, and where to find it in the filings.
+    - name: OPEN QUESTIONS
+      contains: One question and a place to look for each claim that has no proof.
+    - name: COMMITTEE OUTLINE
+      contains: A discussion outline with the thesis, the counter-case and the unanswered questions, and no target price.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap, what it stops, and every check that failed or could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Supporting and adverse evidence use comparable periods; absence of evidence is not evidence a risk is absent.
+  - what: A shorter horizon
+    how: Cut the horizon from five years to one. Claims about distant events move to the open questions.
+  - what: A stricter reader
+    how: Say the reader is a risk committee. The outline gives the counter-case more room.
+  - what: A missing filing
+    how: Leave out the latest quarter. Claims that need it show as silent and the gap is listed under MISSING.
 judge:
   - Supporting and adverse evidence use comparable periods; absence of evidence is not evidence a risk is absent.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +96,26 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep a list of the filings you have already read and their dates, and paste it in the next run, so the ledger shows only what changed.
+  - Save each ledger with its as-of date, so you can see which claims later proved right or wrong.
+  - Run the Review equity valuation sensitivity assumptions workflow once the claims hold up.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that can read files
+      why: It reads the full filings. A pasted summary hides the clauses that cut against a claim.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Filings in full, with their dates, not excerpts.
+    - Your thesis draft in your own words.
+    - A named reviewer who will argue the other side.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Thesis
+    meaning: The case for why an investment should do well or badly, as a set of claims.
+  - term: Claim ledger
+    meaning: A table of each claim in the thesis and the evidence for and against it.
+  - term: Counter-case
+    meaning: The strongest argument against your thesis.
+  - term: Filing
+    meaning: A report a company files with a regulator, such as an annual or quarterly report.
+before: []
+next:
+  - review-equity-valuation-sensitivity-assumptions

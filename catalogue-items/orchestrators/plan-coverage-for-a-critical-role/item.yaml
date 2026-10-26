@@ -1,6 +1,7 @@
 slug: plan-coverage-for-a-critical-role
 name: Plan coverage for a critical role
-summary: Share the source files. Get a role coverage map, development actions and a handover checklist.
+summary: Make sure someone can cover each critical task. Get a role coverage
+  map, the skills each backup needs, practice actions and a handover checklist.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -23,11 +24,17 @@ uses:
   - training-program-builder
 steps:
   - uses: succession-plan-builder
-    note: Identify continuity needs and possible cover using supplied skills and role evidence.
+    note: Identify continuity needs and possible cover using supplied skills and
+      role evidence. Hands the coverage map, with each task's gaps, to the
+      skills step.
   - uses: role-skills-framework-builder
-    note: Define the observable skills each proposed backup needs for the critical tasks.
+    note: Define the observable skills each proposed backup needs for the critical
+      tasks, from the coverage map. Hands the skills each backup lacks to the
+      training step.
   - uses: training-program-builder
-    note: Create practice and review actions to close the specific gaps before cover is needed.
+    note: Create practice and review actions to close the specific gaps before cover
+      is needed. Uses the skills each backup lacks from step 2 and your time
+      left.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -37,13 +44,19 @@ credits:
   - title: Succession plan builder
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-succession-planning
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Role skills framework builder
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-competency-management
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Training program builder
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-training-development
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

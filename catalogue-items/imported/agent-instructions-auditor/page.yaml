@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks each command against the repo before writing it.
 new_slug: agent-instructions-auditor
 name: Agent instructions auditor
-summary: Point it at your repo. Get a short, checked AGENTS.md with real
-  commands and no guesses.
+summary: Check your AGENTS.md against your repo. Get a short file with commands traced to your own files, and any command not run marked as unverified.
 job: set-up-ai
 headline: Agent instructions auditor
-subhead: A short AGENTS.md for your code project where every command was checked
-  and nothing was guessed. Your AI coding tool reads this file first, so a wrong
-  line costs you on every task.
+subhead: Give it your repo and any AGENTS.md you have. It writes a short file where every command is traced to your repo files. Any command it did not run is marked as unverified.
 explain: |
   A short AGENTS.md for your code project where every command was checked and nothing was guessed. Your AI coding tool reads this file first, so a wrong line costs you on every task.
 
@@ -18,19 +15,45 @@ when:
   - You are adding AI coding help to a repo for the first time.
   - A repo holds several packages and each needs its own rules.
   - You have both AGENTS.md and CLAUDE.md and they disagree.
+not_for:
+  - "You want a packaged generator with dry-run and backup modes: use @agents-generator."
+  - "You need deeper help with rules that differ by folder for Claude and AGENTS files: use @folder-specific-claude-and-agents-md."
+  - "Your AI cannot read your project files: ask a developer on your team to write the file by hand."
 you_give:
   - Your code repository
   - Any existing AGENTS.md or CLAUDE.md
   - Rules you want kept (optional)
   - Parts of the repo that are off limits (optional)
 you_get:
-  - A short, checked AGENTS.md
-  - A list of commands confirmed from your own files
-  - Notes on lines removed or fixed
-  - Narrower files for sub-folders if needed
+  - A short AGENTS.md that fits your repo, with sections only where your files give proof
+  - A list of commands with the file each one came from
+  - Notes on lines removed or fixed, and which commands were not run
+  - Narrower files for sub-folders, if they need them
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open an AI tool that can read your project files, such as Claude Code or another coding assistant.
+  - Paste the skill text into the chat, or add the skill folder to your project.
+  - "Say: Audit or write AGENTS.md for this repo with this skill. Add any rules to keep and any off-limits folders."
+  - Read the handoff report first. Check which commands were run and which were only read from config.
+  - Review the changes to your files before you keep them.
+  - If you need packaged generation or backup modes, use @agents-generator instead.
+output_sample:
+  input:
+    - Your code repository
+    - Your current AGENTS.md or CLAUDE.md (optional)
+    - Rules you want kept (optional)
+    - Parts of the repo that are off limits (optional)
+  prerequisites:
+    - An AI coding tool or chat that can read your project files
+  output:
+    - name: AGENTS.md
+      contains: A short root file with only the commands, paths and rules your repo files support.
+    - name: Commands section
+      contains: Install, build, lint, type-check and test commands, with the folder to run them from.
+    - name: Generated code section
+      contains: Which folders are made by a tool and must not be edited by hand, if your repo has any.
+    - name: Safety boundaries section
+      contains: Secrets, production data and risky commands that need your approval first, if your repo shows them.
+    - name: Nested AGENTS.md files
+      contains: Short files for sub-folders that need different rules, only when a folder truly differs.
+    - name: Handoff report
+      contains: Files changed, the evidence used, checks actually run, and anything left unverified.

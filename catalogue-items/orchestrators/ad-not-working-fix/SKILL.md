@@ -56,8 +56,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Find the likely cause.** Use the skill `ad-pull-diagnoser`. Causes in order, starting with the headline and the appeal.
 2. **Compare your winners with your losers.** Use the skill `winners-and-losers-ad-comparer`. Give it the audit report from the steps before. What your own winners share, so the fix copies a pattern and not a hunch.
 3. **Write the fixed ad.** Use the skill `reply-getting-fix-writer`. Give it the audit report and the lessons register from the steps before. A fixed version that changes only what the causes called for.
-4. **Check the fixed ad is ready.** Use the skill `sales-copy-readiness-checker`. Give it the copy draft from the steps before. A last pass before the fixed ad goes out.
-5. **Plan the test of old against new.** Use the skill `split-run-test-planner`. Give it the copy draft from the steps before. Proves the fix beats the old ad instead of assuming it does.
+4. **Check the fixed ad is ready.** Use the skill `sales-copy-readiness-checker`. Give it the copy draft from the steps before. A last pass before the fixed ad goes out. Apply its fixes to the step 3 draft before step 5.
+5. **Plan the test of old against new.** Use the skill `split-run-test-planner`. Give it the copy draft from the steps before. Proves the fix beats the old ad instead of assuming it does. Uses the fixed ad from step 3 as the new version and your old ad as the control, not step 4's report.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -1,6 +1,6 @@
 new_slug: ga4-store-setup-checker
 name: "GA4 store setup checker"
-summary: "Describe your GA4 setup. Get missing day-one settings, store events to add and a setup score out of 100."
+summary: "Check your GA4 store setup in one pass. Get the day-one settings you missed, the store events to add and a setup score out of 100."
 job: track-numbers
 thinking: low
 thinking_why: "It compares your answers with a fixed list of settings. A fast model is enough. Open GA4 yourself to confirm each click path, because menu labels change."
@@ -17,6 +17,10 @@ when:
   - You just created a GA4 property for your store and want to know what is still missing.
   - Your GA4 numbers look wrong or your purchases are not showing.
   - You are about to send traffic to the store and want tracking right before you do.
+not_for:
+  - "You need GA4 or Tag Manager installed from scratch: use the install guide for your store platform, or ask a developer."
+  - "You want to read store traffic and sales numbers: wait until the setup passes and data has filled, then read the reports in GA4 yourself."
+  - "You want to judge ad results or test ideas: use a person who runs your ads, because this only checks setup."
 
 you_give:
   - Your platform and how GA4 is installed (Shopify Google channel, a tag, Tag Manager, a developer)
@@ -36,6 +40,29 @@ how_to_use:
   - Open Reports, Realtime, and list the events you see. Paste them in.
   - Fix the fails in order, then run the test order it gives you.
   - Wait the time it names before judging traffic numbers.
+output_sample:
+  input:
+    - Your store platform and how GA4 is installed
+    - The domains a shopper visits, such as store and checkout
+    - Your current retention, session timeout, engagement time and data filter settings
+    - Events you see in Realtime or DebugView (optional)
+    - Whether you can edit the property (optional)
+  prerequisites:
+    - A GA4 property for your store
+    - Access to GA4 Admin to read your current settings
+  output:
+    - name: Day-one settings
+      contains: Each setting marked pass, fail or not sure, with its current value and the click path to fix it.
+    - name: Choices (not Google rules)
+      contains: Session timeout and engagement time shown as your own choices, with the cost of each option.
+    - name: Store events
+      contains: Whether view item, add to cart, begin checkout, add payment info and purchase are seen, who sends them, and the fix.
+    - name: Key events
+      contains: The thank-you page event or purchase event, how it is made, and whether it is marked as a key event.
+    - name: Test sequence
+      contains: The steps to test in order, then how long to wait before judging traffic numbers.
+    - name: Score
+      contains: A score out of 100 with the points sum, the checks not run, and anything missing.
 
 how_it_works:
   - title: Checks retention

@@ -1,33 +1,117 @@
 new_slug: build-the-performance-max-diagnostics-module-builder-prompt
 name: Performance Max checks coding prompt
-summary: Get a coding brief for Performance Max checks. Show the data used, the gaps and what to check next.
+summary: Get a coding brief for Google Ads Performance Max checks on asset groups, brand overlap and audience signals, with the data used and gaps shown.
 job: build-software
 headline: Performance Max checks coding prompt
-subhead: Get a coding brief for Performance Max checks. Show the data used, the gaps and what to check next.
+subhead: Give your coding assistant your project and your Google Ads account. It plans a read-only module that checks each Performance Max asset group, looks for brand searches PMax may be taking, and lists what to fix first. It never changes your account.
 explain: |-
-  Share your project and the required feature. Get a coding brief for the performance max diagnostics module, with setup and test steps.
+  Performance Max shows you little. You can't see single search queries, and an asset group can run for weeks with thin or weak assets. A weekly check of each asset group, by hand, is easy to skip. This prompt gives a coding assistant a brief to build a Performance Max checker in your own project.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The module scores each asset group on three things. How many asset slots are filled. How strong the ad is. How many assets are rated good or best. It then checks whether branded search themes take a large share of a campaign with no brand exclusion list. It checks audience signals and conversion goals too. It uses theme data only, since PMax gives no query data, and it never makes up a spend figure.
+
+  The limits are starting defaults that you confirm, and it does not claim any check is the biggest win. The brief also fixes mistakes found in the source: a multiplied total, a spend test with no cost data, and two different headline counts. To review keyword results, use the Keyword grouping coding prompt.
 when:
-  - You need a coding brief for the performance max diagnostics module.
-  - You need build the performance max diagnostics module prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You run Performance Max and can't tell which asset groups are thin or weak.
+  - Branded searches seem to have moved from your Search campaign to PMax.
+  - You want a weekly PMax check built into your own tool.
+  - You inherited a PMax account and want a list of what to check first.
+not_for:
+  - Your account has no Performance Max campaigns, or they started less than two weeks ago. There is not enough data to judge. Use the Google Ads report auditor on an export when you have more.
+  - You want a one-time review and no code. Paste your export into the Google Ads report auditor.
+  - You want to check a Shopping feed. Use the Shopping feed audit coding prompt.
+  - You want it to change assets or goals for you. It only proposes changes. You make them in Google Ads.
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, or its main folders and database schema
+  - The customer ID and the names of the credentials your project uses (never the secrets)
+  - Your brand terms, including common misspellings
+  - Which asset groups changed in the last two weeks (optional)
+  - The date range to review (30 days if you don't say) and limits you want changed (optional)
 you_get:
-  - A coding brief for the performance max diagnostics module
-  - Required files, setup gaps and test cases
+  - A list of setup gaps before any code is written
+  - A read-only module that checks each Performance Max asset group
+  - A brand overlap check that uses shares of impressions, not made-up spend
+  - Findings for audience signals and conversion goals, each with a proposed fix
+  - Test cases and a sample result built from made-up rows
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your coding assistant, such as Claude Code or Codex, in your project folder. A plain chat AI can only write a plan.
+  - Paste the skill, then add your brand terms and project details. Never paste a secret key.
+  - Read the setup gaps first. Fix each one, or tell the assistant to go on with placeholders.
+  - Check the asset counts against Google's current limits. Say yes or change them.
+  - Read every change before you accept it. Run the tests in your own project.
+  - Treat each finding as a proposal. Look at the asset group in Google Ads, then make the change yourself.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project first
+    text: Reads your folders, any Google Ads client and shared types, then lists what is missing before it writes code.
+  - title: Pulls asset group data
+    text: Plans queries for asset counts, ad strength, asset ratings and results. Missing fields are listed, not guessed.
+  - title: Scores each asset group
+    text: Gives coverage, ad strength and asset mix. Asset groups changed in the last two weeks are left out of the results checks.
+  - title: Checks brand overlap
+    text: Adds up brand theme impressions as a share of the campaign. It flags a high share when no brand exclusion list is set.
+  - title: Checks signals and goals
+    text: Counts audience signals per asset group and looks for campaigns that share account-wide conversion goals.
+  - title: Plans tests and handover
+    text: Writes tests on made-up rows. It proposes a schedule but does not create one.
+output_shape: |-
+  SETUP GAPS
+  <what is missing: schemas, permissions, brand terms, asset limits to confirm>
+
+  FUNCTION SIGNATURE
+  runPmaxDiagnostics(<input>) -> DiagnosticOutput
+
+  SAMPLE DiagnosticOutput (made-up rows)
+  <findings with checkId, severity, evidence and proposal>
+
+  ASSET GROUP HEALTH TABLE
+  <asset group> | <coverage> | <ad strength> | <mix health> | <bucket>
+
+  TEST RESULTS
+  <passed, failed, or not run and why>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your code project, or its main folders and database schema
+    - The customer ID and the names of your Google Ads credentials
+    - Your brand terms, including common misspellings
+    - The date range, and asset groups changed recently (optional)
+  prerequisites:
+    - A coding assistant that can open your project, such as Claude Code or Codex
+    - Google Ads API access with read permission, set up before you run the module
+    - At least one Performance Max campaign with a few weeks of data
+  output:
+    - name: Setup gaps
+      contains: Missing schemas, permissions, brand terms and asset limits to confirm, each with what it stops.
+    - name: Function signature
+      contains: The inputs and result type of the Performance Max check in your project.
+    - name: Sample DiagnosticOutput
+      contains: Findings from made-up rows for asset coverage, ad strength, asset mix, video, brand overlap, signals and goals.
+    - name: Asset group health table
+      contains: Coverage, ad strength, asset mix and bucket for each made-up asset group.
+    - name: Test results
+      contains: Tests for each bucket, the brand share limit and the asset mix base, or a note that none were run.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your project, reads your Google Ads files, edits code and runs your tests.
+    - name: Codex
+      why: Does the same work in a repository and shows each change for you to review.
+    - name: Google Ads asset report
+      why: Lets you check one flagged asset group by hand before you change anything.
+  inputs:
+    - A list of your brand names and common misspellings
+    - A note of which customer lists and segments you already use as audience signals
+terms:
+  - term: Performance Max
+    meaning: A Google Ads campaign type that shows your ads across Google's channels from one set of assets.
+  - term: Asset group
+    meaning: A set of headlines, descriptions, images, logos and videos that a Performance Max campaign mixes into ads.
+  - term: Audience signal
+    meaning: A hint you give Google about who is likely to buy, such as a customer list.
+  - term: Brand exclusion list
+    meaning: A list of your brand words that stops a campaign from showing on those searches.
+  - term: Search theme
+    meaning: A group of related searches Google reports instead of single queries.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

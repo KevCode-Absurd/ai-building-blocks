@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set steps for hosting and packaging.
 new_slug: mcp-server-publisher
 name: MCP server publisher
-summary: Point it at your MCP server. Get it hosted, scaled and packaged so
-  others can install it.
+summary: Publish your MCP server so others can use it. Get a hosting plan, install packaging and MCP Registry listing steps for your server.
 job: ship-and-host
 headline: MCP server publisher
-subhead: Your MCP server running online and ready for others to install. It
-  covers hosting, scaling and packaging, so people can use it remotely or
-  install it on their own computers.
+subhead: Your MCP server running online and ready for others to install. It covers hosting, scaling and packaging, so people can use it remotely or install it on their own computers.
 explain: |
   Your MCP server running online and ready for others to install. It covers hosting, scaling and packaging, so people can use it remotely or install it on their own computers.
 
@@ -18,6 +15,10 @@ when:
   - You need to run it behind a load balancer without losing sessions.
   - You want it listed in the public MCP Registry.
   - You plan to change a tool and need to avoid breaking users.
+not_for:
+  - "You still need to write or fix the server code: use mcp-server-implementation, or ask a developer."
+  - "You need sign-in setup, hardening or tests for your server: use mcp-server-auth, mcp-server-security or mcp-server-testing."
+  - "You want to host a normal website or app with no MCP server: use your host's own setup guide."
 you_give:
   - The MCP server code
   - How people should reach it
@@ -25,13 +26,40 @@ you_give:
   - A registry account (optional)
 you_get:
   - "A delivery plan: hosted, local or both"
-  - A stateless hosting setup
-  - Health and rollout checks
-  - Install packaging
-  - Registry listing steps
+  - A hosting setup where no server copy keeps session data
+  - Health checks and a staged rollout plan
+  - Per-tool logs, traces and alerts
+  - An install package (npm, PyPI or MCPB) with pinned install steps
+  - A checked server.json for the MCP Registry
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and edit your code.
+  - Open your AI tool. Pick one that can run commands and edit your code, such as Claude Code.
+  - Paste the skill, or attach its folder, and share your MCP server code.
+  - "Say who will use your server: technical users, non-technical users, many users online, or a mix."
+  - Name where you plan to host it, and say if you have a registry account.
+  - Read the delivery plan first and fix anything that does not fit before it changes files.
+  - Run the server.json check, then publish. The MCP Registry is in preview, so check its site before you publish.
+output_sample:
+  input:
+    - Your MCP server code
+    - Who will use it, and how they will reach it
+    - Where you want to host it
+    - Your registry account (optional)
+  prerequisites:
+    - An AI that can run commands and edit your code
+    - A hosting account if you want a hosted server
+    - A GitHub account for the MCP Registry
+  output:
+    - name: Delivery mode
+      contains: The choice of hosted service, local install or both, based on who will use your server.
+    - name: Stateless hosting setup
+      contains: A design where session data sits in Redis or Postgres, so any copy of your server can answer.
+    - name: Health and rollout checks
+      contains: Readiness checks for real dependencies and a canary rollout that tests start-up, sign-in discovery and one tool call.
+    - name: Per-tool logs, traces and metrics
+      contains: One log line and one trace per tool call, plus metrics and alerts that matter.
+    - name: Local install package
+      contains: An npm, PyPI or MCPB package with pinned install steps and tool docs.
+    - name: server.json
+      contains: The registry manifest that points at your packages or hosted URL, checked before you publish.
+    - name: README compatibility note
+      contains: The protocol revisions, tested clients and SDK version your server supports, with semver rules.

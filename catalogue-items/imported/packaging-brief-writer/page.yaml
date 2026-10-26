@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It turns your brand look into specific packaging choices.
 new_slug: packaging-brief-writer
 name: Packaging brief writer
-summary: Describe your product and brand. Get a packaging brief a designer can
-  follow, from materials to unboxing.
+summary: Write a packaging brief your designer can follow. Give it your product and brand. You get structure, materials, layout and an unboxing plan.
 job: design-work
 headline: Packaging brief writer
-subhead: A packaging brief a designer or agency can pick up and work from. It
-  covers shape, materials, layout and the moment the customer opens the box.
+subhead: A packaging brief a designer or agency can pick up and work from. It covers shape, materials, layout and the moment the customer opens the box.
 explain: |
   A packaging brief a designer or agency can pick up and work from. It covers shape, materials, layout and the moment the customer opens the box.
 
@@ -17,6 +15,10 @@ when:
   - Your shipping box feels generic and forgettable.
   - You want a premium unboxing without overspending.
   - You need to explain packaging goals to your supplier.
+not_for:
+  - "You need a print-ready dieline: ask your printer or a structural designer for their template."
+  - "You need legal label text such as ingredients or warnings: ask your supplier or a legal reviewer to check it."
+  - "You have no brand colours, fonts or tone yet: pin those down first, or give your AI your best guess and refine later."
 you_give:
   - Product details and size
   - Sales channel
@@ -29,7 +31,35 @@ you_get:
   - Visual hierarchy for the pack
   - An unboxing experience plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Paste your brand colours, fonts and tone. If you have a brand file, paste that instead.
+  - "Add your product details: what it is, its size and weight, where you sell it, and your budget level."
+  - Answer the few questions your AI asks about anything missing, such as competitors, volumes or green needs.
+  - Read the strategy statement first. If it does not sound like your brand, fix it before you use the rest.
+  - Send the brief to your designer. Have your printer or supplier check the legal text and the dieline.
+output_sample:
+  input:
+    - "Your product: what it is, its size and weight, and whether it is fragile"
+    - "Where you sell it: shop shelf, online, direct or gifts"
+    - Your brand colours, fonts and tone, pasted in if you have no brand file
+    - Your budget level and any green or legal needs (optional)
+    - Your competitors' packaging (optional)
+  output:
+    - name: 01 Packaging strategy statement
+      contains: One paragraph on what the customer should feel on first sight and on opening the pack.
+    - name: 02 Packaging structure
+      contains: The box, bottle or pouch type, its size, how it opens, outer shipping box and inserts.
+    - name: 03 Visual identity application
+      contains: Where the logo goes, how colours and type are used, and which images and finishes to use.
+    - name: 04 Information hierarchy
+      contains: What goes on the front, back, sides and bottom, ranked by importance.
+    - name: 05 Materials brief
+      contains: Material and finish choices that fit your budget, plus any green notes.
+    - name: 06 Unboxing experience
+      contains: Five layers from first sight to what the customer keeps, with the feeling you want at each.
+    - name: 07 Competitive differentiation
+      contains: What rival packs look like, which clichés to avoid and how yours stands out.
+    - name: 08 SKU system
+      contains: How variants differ and what stays the same across them, if you have more than one.
+    - name: 09 Technical requirements
+      contains: Barcode, legal copy to confirm, certifications, file format, colour profile and dieline source.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It finds the section breaks and writes short titles.
 new_slug: youtube-chapter-writer
 name: YouTube chapter writer
-summary: Give it your video transcript. Get a chapter list that follows
-  YouTube's rules and shows up on the video.
+summary: Turn your video transcript into a YouTube chapter list that follows YouTube's rules, so the chapters show up on your video.
 job: grow-social
 headline: YouTube chapter writer
-subhead: Give it your video transcript. Get a chapter list that follows
-  YouTube's rules and shows up on the video. Bring your transcript as an SRT
-  file. Use the result to plan your next step.
+subhead: Give it your video transcript. Get a chapter list that follows YouTube's rules and shows up on the video. Bring your transcript as an SRT file. Use the result to plan your next step.
 explain: |
   A chapter list that YouTube really turns into chapters, built from your video transcript.
 
@@ -18,6 +15,10 @@ when:
   - Your pasted timestamps never turned into chapters.
   - You want chapter titles that make people jump to a section.
   - A long video feels baggy and you want to see where it splits.
+not_for:
+  - "You have a Short or a video under three minutes: skip chapters, since YouTube needs at least three of ten seconds each, and put key points in the description."
+  - "You have no transcript yet: get an SRT file from your video editor or YouTube Studio first, then come back."
+  - "You want the video cut into clips: use a video editor, because this only writes the chapter list."
 you_give:
   - Your transcript as an SRT file
   - How many chapters you want
@@ -28,8 +29,27 @@ you_get:
   - Rewritten five-word chapter titles
   - A flag on any section that is two sections or filler
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Get your transcript as an SRT file from your editor or YouTube Studio.
+  - Open an AI that can run Python code and upload your SRT file with the skill folder.
+  - Ask it to run chapters.py on your transcript with the number of chapters you want. For example, a target of 8.
+  - Check the rule report. The list must start at 00:00, have three or more chapters, and each must last ten seconds or more.
+  - Read the rewritten titles. Ask for changes if any feels vague or too long.
+  - Copy the final block into your video description, then publish it yourself.
+output_sample:
+  input:
+    - Your video transcript as an SRT file
+    - How many chapters you want
+    - Your voice notes (optional)
+  prerequisites:
+    - An AI that can run Python code and read your SRT file
+  output:
+    - name: Chapter list
+      contains: A block of timestamps and titles, starting at 00:00, ready to paste into your video description.
+    - name: Rule check
+      contains: A note on whether the list has a 00:00 start, at least three chapters, and ten seconds each.
+    - name: Rewritten titles
+      contains: Each draft topic title turned into a three to five word promise of that section, in your voice.
+    - name: Weak section flags
+      contains: A note on any section you cannot name in five words, which may be two sections or filler.
+    - name: Ship or change question
+      contains: A final question asking if you want to ship the list or change it.

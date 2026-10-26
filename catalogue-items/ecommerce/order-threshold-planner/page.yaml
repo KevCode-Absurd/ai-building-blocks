@@ -1,6 +1,6 @@
 new_slug: order-threshold-planner
 name: "Order threshold planner"
-summary: "Paste your order sizes. Get free-shipping and bundle thresholds set at your real order peaks."
+summary: "Set a free shipping threshold from your real order sizes, not the average. Get offers just above each peak, plus a multipack ladder."
 job: make-offer
 thinking: medium
 thinking_why: "It reads a spread of numbers and does simple profit maths, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You want to set or fix a free-shipping threshold and don't want to guess from the average.
   - You sell one hero product and want a multipack ladder that raises AOV without giving margin away.
   - You are about to run a free-shipping offer on a low-priced item and want to see if it loses money.
+not_for:
+  - "You have under a few hundred orders: treat the result as a first guess, or run a simple price test on your store instead."
+  - "You sell one product at one price and want no ladder: a simple price test is enough."
+  - "You want to check the combined effect of stacked discount codes: use the discount impact checker."
 
 you_give:
   - A list or export of order totals and units per order
@@ -35,6 +39,27 @@ how_to_use:
   - Paste your margins, your shipping cost at one, two and three units, and your current thresholds.
   - Read the peaks first, then the thresholds and ladder. Check each tier with the discount impact checker.
   - Test the dollar versus percent choice on your own store before you keep it.
+output_sample:
+  input:
+    - Your order totals and units per order
+    - Your gross margin by product
+    - Your shipping cost at one, two and three units
+    - Your current thresholds and discount tiers (optional)
+  output:
+    - name: ORDER SPREAD
+      contains: How many peaks your orders have, where each sits, and what a line set at the average would get wrong.
+    - name: THRESHOLDS
+      contains: One offer just above each peak, the stretch a buyer must make, and the profit change per order.
+    - name: MULTIPACK LADDER
+      contains: Three pack sizes for your hero product, the middle one pre-selected, with shipping and profit per tier.
+    - name: OFFER WORDING
+      contains: Dollar off, percent off or free item for each price range, worded as a test.
+    - name: CART BAR
+      contains: A progress bar plan with a first reward and a second reward.
+    - name: CHECKS
+      contains: Notes on free shipping for low-priced items, stacking of codes, and the order history used.
+    - name: MISSING
+      contains: Any input you did not give, such as orders, margins or shipping costs.
 
 how_it_works:
   - title: Bucket your orders

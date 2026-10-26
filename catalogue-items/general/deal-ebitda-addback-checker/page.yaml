@@ -1,32 +1,65 @@
 new_slug: deal-ebitda-addback-checker
 name: Deal EBITDA addback checker
 headline: Deal EBITDA addback checker
-summary: Bound a requested addback using a documented cap measured on pre-addback EBITDA.
+summary: Check how much of a requested EBITDA addback your deal cap allows. Give it your EBITDA and addbacks. You get adjusted EBITDA and the excess.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Adjusted EBITDA, allowed capped addback and disallowed excess. Share actual EBITDA, separately permitted uncapped adjustments, supported capped addbacks and a signed cap explicitly based on pre-addback EBITDA.
+subhead: Give it your EBITDA, your addback requests and the cap in your agreement. It applies the cap to EBITDA before addbacks. You get adjusted EBITDA, the allowed addback and the excess that is rejected.
 explain: |-
   Adjusted EBITDA, allowed capped addback and disallowed excess.
 
   Private credit definitions. Illustrative figures only. Cap20% of100 permits20 of requested40; adding10 uncapped gives130. Cap10% gives120 and rejects30.
 when:
-  - You need adjusted EBITDA, allowed capped addback and disallowed excess.
-  - You work on private credit definitions and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender or buyer asks you to justify an addback against a cap.
+  - You need a traceable EBITDA addback calculation for a credit agreement.
+  - A reviewer wants to see every number tied back to its source.
+  - You want to test how a different cap changes adjusted EBITDA.
+not_for:
+  - "Your cap is measured on EBITDA after the addbacks: ask an adviser or your lawyer to work out the algebra, because this tool only handles caps on EBITDA before addbacks."
+  - "You need to know if the addback is legally allowed under your contract: ask your lawyer, because this tool only does the arithmetic."
+  - "You want audited earnings or free cash flow: use your accountant's reported figures, because adjusted EBITDA here is a contract scenario."
 you_give:
-  - Actual EBITDA, separately permitted uncapped adjustments, supported capped addbacks and a signed cap explicitly based on pre-addback EBITDA.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your actual EBITDA before addbacks.
+  - Adjustments that have no cap, with their support (optional).
+  - Capped addbacks, with support for each.
+  - The signed cap, stated as a share of EBITDA before addbacks.
+  - Reporting date, currency, scale and accounting basis.
 you_get:
-  - Adjusted EBITDA, allowed capped addback and disallowed excess.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Adjusted EBITDA.
+  - The allowed capped addback.
+  - The disallowed excess.
+  - An editable workbook with inputs, calculations and checks.
+  - A list of missing inputs and checks that did not run.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and open it in an AI that can work with files.
+  - Paste your EBITDA, addbacks, cap and the source for each. Say the cap is on EBITDA before addbacks.
+  - Ask your AI to build the workbook and stop on any missing input instead of using zero.
+  - "Check the example: a 20% cap on 100 admits 20 of 40 requested. Adding 10 uncapped gives 130."
+  - Read MISSING and CHECKS MISSED before you rely on the result.
+output_sample:
+  input:
+    - Your actual EBITDA before addbacks
+    - Addbacks that have no cap (optional)
+    - Addbacks that are capped, with support for each
+    - The cap from your signed agreement, as a share of EBITDA before addbacks
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can create spreadsheet files
+    - Node.js 20 or later, to run the bundled calculation (optional)
+  output:
+    - name: Adjusted EBITDA
+      contains: Actual EBITDA plus the allowed capped addbacks plus the uncapped adjustments.
+    - name: Allowed capped addback
+      contains: The lesser of the cap amount and the supported capped requests.
+    - name: Disallowed excess
+      contains: The part of the requested capped addback that goes over the cap.
+    - name: Editable workbook
+      contains: A spreadsheet with inputs, calculations and checks, built on illustrative figures you replace.
+    - name: Reconciliations
+      contains: A tie-out of accepted and rejected amounts, with the evidence for each accepted item.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs still unknown and checks that failed or could not run.
 how_it_works:
   - title: 1. Separate realized earnings from proposed adjustments; remove duplicate costs, unsupported synergy claims and amounts already realized
     text: Separate realized earnings from proposed adjustments; remove duplicate costs, unsupported synergy claims and amounts already realized.

@@ -1,6 +1,6 @@
 new_slug: contrary-evidence-log-keeper
 name: "Contrary evidence log keeper"
-summary: "Describe the belief you are building. Get a log of every fact against it, plus a weekly review."
+summary: "Keep a log of facts that go against your plan or theory, then run a weekly review. Built to track contrary evidence before you commit."
 job: think-and-decide
 thinking: low
 thinking_why: "It sets up a log and a review routine from fixed rules, with little judgment needed."
@@ -17,6 +17,10 @@ when:
   - You are building a plan or theory and feel sure of it already.
   - Something odd keeps turning up and you keep brushing it aside.
   - You want a team to track doubts in one place instead of in heads.
+not_for:
+  - "You can test the belief with one quick experiment: run that test and skip the log."
+  - "You need to choose between options today: use the Decision checklist builder."
+  - "You want to rank growth ideas to try: use the Growth idea ranker."
 
 you_give:
   - The belief or plan you are working on, in a sentence or two
@@ -33,6 +37,27 @@ how_to_use:
   - Copy the log into a note or sheet you open every day.
   - Add to the log the same day you meet a fact against the belief.
   - On your review day, paste the log back in and run the review.
+output_sample:
+  input:
+    - The belief or plan you are working on
+    - Facts that already go against it (optional)
+    - Your review day (optional)
+    - An existing log to review (optional)
+  output:
+    - name: The belief
+      contains: Your belief in one clear line, split into numbered parts if it is wide.
+    - name: The log
+      contains: A table with date, fact, source, the part of the belief it hits, and easy to forget.
+    - name: Entry rules and trigger list
+      contains: Short rules for adding facts the same day, and a list of signs that count in your field.
+    - name: Weekly review
+      contains: Which facts the belief still explains, which it cannot, and the weakest part.
+    - name: The belief, restated
+      contains: A new one-line belief that claims only what the facts allow.
+    - name: Next review
+      contains: The next review date, rows to chase, and one place you have not looked yet.
+    - name: MISSING and CHECKS MISSED
+      contains: What is unknown, and any check the result still fails.
 
 how_it_works:
   - title: States the belief

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set page structure but needs fitting words for each section.
 new_slug: conversion-page-writer
 name: Conversion page writer
-summary: Give it your offer and audience. Get landing page copy with hero, value
-  points, proof, answers to doubts and clear buttons.
+summary: Write landing page copy that sells. Give it your offer and audience. You get a hero, proof, answers to doubts and buttons, ready for your builder.
 job: write-landing-page
 headline: Conversion page writer
-subhead: Give it your offer and audience. Get landing page copy with hero, value
-  points, proof, answers to doubts and clear buttons. Bring your offer and
-  price. Use the result to plan your next step.
+subhead: Give it your offer and audience. Get landing page copy with hero, value points, proof, answers to doubts and clear buttons. Bring your offer and price. Use the result to plan your next step.
 explain: |
   Landing page copy for a page that sells: a hero that states the offer, early proof, the problem and promise, how it works, answers to doubts, and a closing call to action. You get the whole page in order, ready to drop into a builder.
 
@@ -18,6 +15,10 @@ when:
   - Your current page gets visits but few sign ups.
   - You need a sales page for a course or service.
   - You want an opt-in page with a clear headline.
+not_for:
+  - "You want a long blog post: use a writer or a content skill, since this makes a page, not an article."
+  - "You want email copy or a sequence: write the emails in a separate email tool or ask your AI for an email series."
+  - "Your page is live and you want a higher sign up rate through testing: use a conversion testing step once you have traffic."
 you_give:
   - Your offer and price
   - Your audience and their main doubts
@@ -30,7 +31,33 @@ you_get:
   - Button text
   - Final call to action
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Paste your offer, price, audience, their main doubt and the one action you want.
+  - Add real quotes, numbers or logos if you have them. If you do not, the copy marks the gap instead of making proof up.
+  - Read the hero first. Ask for changes until the headline states your offer in plain words.
+  - Check every section marked as missing proof, and add real proof before you publish.
+  - "Hand the copy to your page builder. Use the pre-launch checklist: test every link, check the page on a phone, and add the proof you owe. Then try the Variants for testing in an A/B test."
+output_sample:
+  input:
+    - Your offer, and its price if it has one
+    - Your audience and the main doubt they bring
+    - The one action you want visitors to take
+    - Real quotes, numbers or logos you can use as proof (optional)
+    - Your brand voice (optional)
+  output:
+    - name: Hero
+      contains: A headline, a subheadline, one button label and a short line under the button, such as a no-risk cue.
+    - name: Social proof (early)
+      contains: A spot for logos, a trust number or one quote, placed right below the hero.
+    - name: Problem / promise
+      contains: Two or three short paragraphs that name the visitor's problem in their own words.
+    - name: Solution
+      contains: A headline and three to five features, each written as the result it gives.
+    - name: Proof
+      contains: Case studies, quotes and data points, with gaps clearly marked where you must supply real proof.
+    - name: Objection handling
+      contains: Answers to doubts about price, time, trust or risk, as an FAQ, a comparison or a guarantee.
+    - name: Final CTA
+      contains: A closing headline and one button that repeats the action from the hero.
+    - name: Variants for testing
+      contains: Other headlines, buttons and proof angles you can use in an A/B test.

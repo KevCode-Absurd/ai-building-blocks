@@ -1,6 +1,6 @@
 new_slug: can-they-pay-deal-checker
 name: "Can-they-pay deal checker"
-summary: "Paste your terms and what you know of their means. Get a range they can pay and a sum they can meet."
+summary: "Check if your price, debt or settlement is more than they can pay. Get their payment range, a fixed sum they can meet and a clear verdict."
 job: sell-and-negotiate
 thinking: high
 thinking_why: "It estimates a range from thin evidence and must keep guesses separate from facts."
@@ -17,6 +17,10 @@ when:
   - "You are setting a price, fee or settlement and doubt they can pay it."
   - "A debt or invoice keeps going unpaid."
   - "You want a firm figure to offer instead of an open demand."
+not_for:
+  - "The other side has already accepted a fixed-price quote: there is nothing left to check, so send the invoice."
+  - "Your debt is court-ordered: use a lawyer or the court process instead."
+  - "You need help with the talk itself: use the Negotiation call prep planner after you have your figure."
 
 you_give:
   - "Your terms and their parts"
@@ -34,6 +38,26 @@ how_to_use:
   - "Add everything you know about their means and mark what is a guess."
   - "Check the sources it lists for each figure."
   - "Update the range when you learn more and run it again."
+output_sample:
+  input:
+    - Your terms, with the parts, dates and any conditions
+    - What you know about their means, such as income, cash, assets and debts
+    - Your own needs, such as the least you can accept and by when (optional)
+  output:
+    - name: The ask, in parts
+      contains: Each part of your demand with a low, middle and high figure and its source, or a mark that it is a guess.
+    - name: What they can pay
+      contains: A low and high payment range for them, with the sum shown and the assumptions listed.
+    - name: Comparison and verdict
+      contains: Whether your ask sits below, inside or above their range, by how much, and one line on whether it can be met.
+    - name: Who gains from each term
+      contains: What each side needs to feel it won, and which terms give them that.
+    - name: Proposed sum or terms
+      contains: One fixed figure or set of terms with a payment schedule and a two-sentence reason.
+    - name: What would change the number
+      contains: Two or three facts that would move the figure, and how to check each.
+    - name: Missing and checks missed
+      contains: Gaps in what you gave it, and any quality check the answer still fails.
 
 how_it_works:
   - title: "Splits the ask"

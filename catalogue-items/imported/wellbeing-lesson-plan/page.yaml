@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It must weave content and wellbeing into one lesson.
 new_slug: wellbeing-lesson-plan
 name: Lesson plan with wellbeing built in
-summary: Give it a topic and goals. Get a lesson that teaches the content and
-  builds student wellbeing. Not medical advice.
+summary: Plan a lesson that teaches your topic and builds student wellbeing at the same time. Give it a topic, year group and goals. Not medical advice.
 job: teach-and-train
 headline: Lesson plan with wellbeing built in
-subhead: A lesson where the subject content and student wellbeing are taught
-  together, so you do not need a separate wellbeing slot. It teaches your topic
-  and builds habits like engagement and positive relationships as part of the
-  work.
+subhead: A lesson where the subject content and student wellbeing are taught together, so you do not need a separate wellbeing slot. It teaches your topic and builds habits like engagement and positive relationships as part of the work.
 explain: |
   A lesson where the subject content and student wellbeing are taught together, so you do not need a separate wellbeing slot. It teaches your topic and builds habits like engagement and positive relationships as part of the work.
 
@@ -19,6 +15,10 @@ when:
   - Your class seems anxious or switched off in your subject.
   - A school priority asks you to build wellbeing into teaching.
   - You want a fresh lesson structure for a topic you already teach.
+not_for:
+  - "You need support for a student in distress: talk to your pastoral lead or follow your school's safeguarding steps."
+  - "You have no curriculum goal for the lesson: use a standard lesson plan instead."
+  - "You want a stand-alone wellbeing session with no subject content: ask a school counsellor or use your school's wellbeing programme."
 you_give:
   - Lesson topic and learning goals
   - Year group or age
@@ -31,7 +31,25 @@ you_get:
   - Teacher moves for each element
   - Student reflection prompts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Add your lesson topic, learning goals and year group. Add the lesson length if you know it.
+  - Add a wellbeing focus or class concern if you have one. Skip this for a balanced lesson.
+  - Check the result has a wellbeing map, a lesson plan, teacher moves and reflection prompts.
+  - Compare the plan with your school's wellbeing policy and change anything that does not fit your class.
+  - After you teach it, note what worked and use it to plan your next lesson.
+output_sample:
+  input:
+    - Your lesson topic and learning goals
+    - Your year group or age
+    - Your subject (optional)
+    - The wellbeing element to focus on, or ask for a balanced mix (optional)
+    - Class concerns such as anxiety or low engagement (optional)
+  output:
+    - name: PERMA Mapping
+      contains: Shows which wellbeing element each activity in the lesson builds, and how.
+    - name: Lesson Plan
+      contains: A step-by-step lesson that teaches your content with the wellbeing elements built into the activities.
+    - name: Teacher Moves
+      contains: Specific things you can say or do to bring out each wellbeing element.
+    - name: Reflection Prompts
+      contains: Questions that help students link what they learned to how they felt.

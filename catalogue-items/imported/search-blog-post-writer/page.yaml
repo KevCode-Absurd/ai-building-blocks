@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows a set structure but needs sound writing.
 new_slug: search-blog-post-writer
 name: Search blog post writer
-summary: Give a topic and target keyword. Get a long post with an answer first,
-  FAQs and internal links.
+summary: Write a search blog post from your topic and keyword. You get an answer-first article with FAQs and links to your own pages.
 job: get-found-in-search
 headline: Search blog post writer
-subhead: A finished long post of 800 to 3,000 words built to rank in search and
-  to be quoted by AI answer tools. It opens with a two or three sentence direct
-  answer, then an introduction that names your keyword early, then a fixed set
-  of sections.
+subhead: A finished long post of 800 to 3,000 words built to rank in search and to be quoted by AI answer tools. It opens with a two or three sentence direct answer, then an introduction that names your keyword early, then a fixed set of sections.
 explain: |
   A finished long post of 800 to 3,000 words built to rank in search and to be quoted by AI answer tools. It opens with a two or three sentence direct answer, then an introduction that names your keyword early, then a fixed set of sections.
 
@@ -19,6 +15,10 @@ when:
   - You want a post with a short answer block at the top that AI tools can pull.
   - You have other pages on your site and want links to them placed naturally.
   - You need a consistent blog format across many posts.
+not_for:
+  - "You need a product page or sales page: write that by hand or with a product page tool, not a blog post."
+  - "You are covering breaking news: use a news writer or a person, since this format is built for lasting search topics."
+  - "You only have a topic and no keyword yet: first pick a keyword and the sub-topics to cover, then come back."
 you_give:
   - Topic and exact target keyword
   - Secondary keywords (optional)
@@ -30,7 +30,36 @@ you_get:
   - FAQ section
   - Internal links in the text
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Add your topic, exact keyword, audience, tone and word count. Add other keywords and page titles to link to if you have them.
+  - Ask your AI to write the post.
+  - Check the answer box, the five FAQs and the link spots. Your AI cannot check live search results, so rankings are not promised.
+  - Replace every suggested external link or statistic with a real source you have checked yourself.
+output_sample:
+  input:
+    - Your topic and the exact keyword you want to rank for
+    - Other keywords to work in (optional)
+    - Who will read the post and the tone you want
+    - Word count, from 800 to 3,000 (optional)
+    - Titles of your own pages to link to (optional)
+  output:
+    - name: H1 title
+      contains: One title that includes your main keyword.
+    - name: TL;DR
+      contains: A two or three sentence direct answer that AI answer tools can quote.
+    - name: Introduction
+      contains: States the problem and uses your keyword in the first 100 words.
+    - name: What is the topic
+      contains: Opens with a one-line definition, then a few short paragraphs of context.
+    - name: Why it matters
+      contains: Explains why the reader should care, using a list.
+    - name: How it works
+      contains: The deepest section, with sub-sections and a comparison table when you compare options.
+    - name: Practical steps and common mistakes
+      contains: A numbered how-to list and a short list of what to avoid, when they fit.
+    - name: Frequently Asked Questions
+      contains: Five questions with short, direct answers.
+    - name: Conclusion
+      contains: Restates the answer in new words and ends with one call to action.
+    - name: Internal links, external links and product CTA
+      contains: Link spots for your pages, a suggested source to check, and a product next step when it fits.

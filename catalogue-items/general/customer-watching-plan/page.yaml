@@ -1,39 +1,49 @@
 new_slug: customer-watching-plan
 name: "Customer watching plan"
-summary: "Name who you want to understand. Get a plan to watch them first-hand, log what you see and test odd moments."
+summary: "Plan how to watch a few real customers, log what you see apart from what you guess, and turn odd moments into tests you can run."
 job: understand-customers
 thinking: medium
 thinking_why: "It plans fieldwork and judges what counts as an odd moment, within fixed steps."
 
 headline: "Customer watching plan"
-subhead: "Give it the type of customer you want to understand. It picks a few real people, plans long quiet watching and sets a sheet that keeps what you saw apart from what you think. You get a plan, a note sheet and tests for the odd moments."
+subhead: "Tell it which customers you want to understand and what you want to learn. It picks a few real people, plans long quiet sessions with no questions at first, and sets a note sheet that keeps what you saw apart from what you think it means. You get a plan, the note sheet and tests for the odd moments."
 
 explain: |
-  Reports flatten people. Averages hide the person who set the product up in a way nobody planned, and a survey cannot show what customers do not know they do. The surest way to learn how people really behave is to watch them, for a long time, before asking anything.
+  A customer observation plan comes before any survey. Reports flatten people. Averages hide the customer who set your product up in a way nobody planned, and a survey cannot show what people do without knowing they do it. The surest way to learn how customers really behave is to watch them for a long time before you ask anything.
 
-  This skill plans that watching. It picks a few individuals and names them, so they stay people and not a segment. It sets long, quiet sessions and a note sheet that keeps what you saw apart from what you think. It flags odd moments, and checks each guess about them against the notes. It keeps the awkward findings, and only turns patterns shared by more than one person into tests.
+  This skill plans that watching. It names a few real individuals, so they stay people and not a segment, and it adds one who is unlike the rest. It sets quiet sessions and a note sheet with a separate column for your guesses. When something odd happens, you log exactly what you saw, then write two guesses and check each against your notes.
+
+  It also keeps the findings you would rather not publish, and only turns a pattern into a test when at least two named people show it. It cannot watch for you. You run the sessions and bring your notes back.
 
 when:
-  - "You know your customers from surveys and reports but have never watched one use your product."
-  - "Your numbers show a problem and you cannot say what is behind it."
-  - "You want to test an idea that comes from something odd you saw."
+  - You know your customers from surveys and reports but have never watched one use your product.
+  - Your numbers show a problem and you cannot say what is behind it.
+  - You want to test an idea that comes from something odd you saw.
+  - Your team argues about what customers "really do" and nobody has seen it.
+
+not_for:
+  - "You want to know why people bought or switched. Use the Customer job interview planner or the Customer interview question writer."
+  - "You already have raw notes from customer talks. Use the Customer conversation notes sorter."
+  - "You have no way to see customers in person or on a shared screen. Start with the Customer buying reasons finder on reviews you already hold."
 
 you_give:
-  - "The type of customer you want to understand and what you want to learn"
-  - "Where and how often you can see them (optional)"
-  - "Earlier notes, reviews or support emails (optional)"
+  - "The type of customer you want to understand, and what you want to learn about them"
+  - "Where and how often you can see them, in person or on a shared screen (optional)"
+  - "Earlier notes, reviews or support emails from the same people (optional)"
 you_get:
-  - "A list of individuals to watch, with a reason for each"
-  - "A watching plan and a note sheet"
-  - "A way to flag and check odd moments"
-  - "A findings report outline and tests tied to patterns"
+  - "A short list of 3 to 6 real people to watch, with one line on why each, and one who is unlike the rest"
+  - "A watching plan: where, when, how long, and no questions in the first sessions"
+  - "A note sheet with a separate column for your guesses"
+  - "A way to flag odd moments and check two guesses against your notes"
+  - "A report outline that keeps the awkward findings, and tests that say what would change your mind"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Say who you want to understand and what you want to learn."
-  - "Tell it where you can see them and how often."
-  - "Get each person's permission, then watch and fill in the note sheet."
-  - "Bring your notes back to turn them into the report and tests."
+  - "Open the skill in your AI if you added it, or copy it and paste it into a new chat in Claude, ChatGPT or Gemini."
+  - "Say which customers you want to understand and what you want to learn, such as how first-time buyers set up the product."
+  - "Say where you can see them and how often. Add any earlier notes or reviews."
+  - "Ask each person for permission first. Tell them what you will write down, do not record without a yes, and follow your local privacy rules."
+  - "Watch, and write in the note sheet by hand or in a shared sheet. Fill the guess column later, never in the moment."
+  - "Come back to the same chat with your notes. It flags the odd moments, checks the guesses and writes the tests."
 
 how_it_works:
   - title: "Chooses individuals"
@@ -77,7 +87,35 @@ output_shape: |
   <gaps>
 
   CHECKS MISSED
-  <one line per check, or none>
+  <one line per failed check or empty section, or none>
+
+output_sample:
+  input:
+    - "The type of customer you want to understand, and what you want to learn"
+    - "Where you can see them and how often (optional)"
+    - "Earlier notes, reviews or support emails (optional)"
+  prerequisites:
+    - "Each person's permission to be watched"
+    - "A notebook or shared sheet to write in as you watch"
+  output:
+    - name: "WHO I WILL WATCH"
+      contains: "Three to six named or coded people, with where you will see them and why each was chosen."
+    - name: "THE PLAN"
+      contains: "Where, when, how long and how many sessions, with no questions at first and a note on how you will log your own effect."
+    - name: "NOTE SHEET"
+      contains: "A log with columns for date, person, what happened, before and after, and a separate guess column."
+    - name: "ODD MOMENTS"
+      contains: "Each odd moment as it happened, with two guesses and the notes that support or go against each."
+    - name: "REPORT OUTLINE"
+      contains: "Findings with evidence, guesses, and a section for awkward findings you would rather not publish."
+    - name: "TESTS"
+      contains: "One test per pattern seen in two or more people, with the result that would change your mind."
+    - name: "MISSING"
+      contains: "Gaps such as no notes yet, so those sections stay empty."
+    - name: "CHECKS MISSED"
+      contains: "Each failed check or empty section, or none."
+
+next: [customer-interview-questions, customer-job-interview-planner]
 
 tweaks:
   - what: "How many people"
@@ -123,3 +161,5 @@ terms:
     meaning: "Something that happened once, a workaround, or an action that does not fit the pattern."
   - term: "Note sheet"
     meaning: "A log that keeps what you saw in one column and what you think it means in another."
+  - term: "Observation"
+    meaning: "Watching what people do in their own setting, without asking them to explain it first."

@@ -1,53 +1,115 @@
 new_slug: follow-on-reserve-planner
 name: Follow-on reserve planner
 headline: Follow-on reserve planner
-summary: Compare documented participation plans with the fund approved follow-on reserve.
+summary: Work out the cash you need to keep your ownership share in each company's next round, and whether your reserve covers it or falls short.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Participation cash by company, total reserve need and budget headroom. Share two companies approved target ownership, inclusive round sizes, eligible rights, scenario dates and the available reserve.
+subhead: Give it the share you want to hold in each company, the size of each company's next round and your reserve. It works out the cash each company needs from you and adds them up. You get the total need and how much your reserve is over or short.
 explain: |-
-  Participation cash by company, total reserve need and budget headroom.
+  When a company you back raises a new round, you may want to put in more so your share does not shrink. That extra cash is a follow-on. This follow-on reserve planner works out the cash for each company, then checks the total against the money you set aside.
 
-  Venture portfolio reserves. Illustrative figures only. 10% of100 plus20% of100 requires30. Doubling A round raises requirement to40 and creates a10 gap.
+  Each company is priced on its own. Your cash for a company is the share you want to hold times the full round size. The round size must already include your own money. If the quote is only what outside investors put in, convert it first with the Pro rata allocation checker. The company rows are then added up and compared with your reserve.
+
+  The result is a plan, not a prediction. A target share is a number you or your fund approved, not a chance that the round closes. Practice numbers: 10% of a 100 round needs 10 and 20% of another 100 round needs 20. That is 30 in total. With a reserve of 30, headroom is 0. If company A's round doubles to 200, the need becomes 40 and you are 10 short.
 when:
-  - You need participation cash by company, total reserve need and budget headroom.
-  - You work on venture portfolio reserves and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A company you back says it is raising a new round, and you want to know what keeping your share costs.
+  - You are setting a reserve for a year and want to test it against the rounds you expect.
+  - Two companies may raise at the same time and you need to see if one reserve covers both.
+  - A partner or investment committee asks how much cash you need to hold back for follow-ons.
+not_for:
+  - "The round size you were quoted leaves out your own money: use the Pro rata allocation checker first, then come back here."
+  - You want to rank which company deserves more cash. This skill only adds up cash for targets you already chose.
+  - "Your funding comes in stages tied to milestones: use the Milestone tranche funding checker."
+  - You need legal advice on what a side letter or SAFE gives you. A lawyer must read the contract.
 you_give:
-  - Two companies approved target ownership, inclusive round sizes, eligible rights, scenario dates and the available reserve.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The share you want to hold in each company, such as 10% (from your approved plan)
+  - The size of each company's next round, including your own money (from the term sheet or the company)
+  - The right that lets you take part, such as a side letter or pro rata clause (from the contract)
+  - The date of the scenario, and the currency and units, such as USD thousands
+  - The reserve you have set aside for follow-ons (from your fund records)
 you_get:
-  - Participation cash by company, total reserve need and budget headroom.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The cash each company needs from you
+  - Your total follow-on need
+  - Headroom, meaning your reserve minus the need (a negative number is a gap)
+  - A check that the company rows add up to the total
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste the facts for each company: target share, round size, your right to take part and the scenario date. Add your reserve, the currency and the units."
+  - Say if the round size is the full round or only what outside investors put in. If it is outside only, run the Pro rata allocation checker first.
+  - Check one row yourself. Cash for a company is the target share times the round size.
+  - Read MISSING and CHECKS MISSED before you use any figure.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Confirm round sizes include fund participation and link each target to approved rights and a dated scenario
-    text: Confirm round sizes include fund participation and link each target to approved rights and a dated scenario.
-  - title: 2. Multiply each target by its matching inclusive round size and sum the cash needs
-    text: Multiply each target by its matching inclusive round size and sum the cash needs.
-  - title: 3. Compare combined need to available reserve; list constraints before proposing any reallocation
-    text: Compare combined need to available reserve; list constraints before proposing any reallocation.
+  - title: Checks the round sizes
+    text: Confirms each round size already includes your money and ties each target share to a right and a dated scenario.
+  - title: Prices each company
+    text: Multiplies each target share by its own round size to get the cash that company needs.
+  - title: Adds up the need
+    text: Adds the company rows into one total and checks the rows equal the total.
+  - title: Compares with your reserve
+    text: Subtracts the need from your reserve to give headroom, and lists any limits before it suggests moving cash between companies.
+  - title: Marks the gaps
+    text: Writes MISSING for any number you did not give and lists any check it could not run. It never fills a gap with zero.
 output_shape: |-
-  Participation cash by company, total reserve need and budget headroom.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Total need <amount> | Reserve <amount> | Headroom <amount> (negative means short)
+
+  COMPANY CASH
+  <one row per company: target share | round size | cash needed>
+
+  SCOPE AND SOURCES
+  <scenario date, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <target shares, round sizes, rights, reserve; whether each round size includes your money>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of company rows to the total>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The share you want to hold in each company
+    - The size of each company's next round, including your money
+    - Your follow-on reserve
+    - The side letter or clause that gives you the right to take part (optional)
+  prerequisites:
+    - Your approved ownership targets and the dated scenario
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Your total follow-on need, your reserve and the headroom, which is negative when you are short.
+    - name: COMPANY CASH
+      contains: One row per company with its target share, round size and the cash it needs.
+    - name: SCOPE AND SOURCES
+      contains: The scenario date, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that company rows equal the total.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Outside-only allocations must first be converted to inclusive round sizes.
+  - what: A bigger round for one company
+    how: Change that company's round size. Only its row, the total and the headroom move.
+  - what: A different target share
+    how: Change the share for one company. A 15% target on a 100 round needs 15.
+  - what: A smaller or larger reserve
+    how: Change the reserve. The need stays the same and only the headroom moves.
 judge:
   - Outside-only allocations must first be converted to inclusive round sizes.
   - Targets are approved scenarios, not financing-success probabilities.
@@ -62,15 +124,24 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The term sheet or round announcement for each company
+    - The side letter or investment agreement that sets your right to take part
+    - A named reviewer and the scenario date you want to test
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Follow-on
+    meaning: More money you put into a company you already own part of.
+  - term: Reserve
+    meaning: Cash you set aside for follow-ons.
+  - term: Pro rata
+    meaning: Your share of a new round, sized so your ownership stays the same.
+  - term: Inclusive round size
+    meaning: The full round, with your own money counted in it.
+  - term: Headroom
+    meaning: Reserve minus need. A negative number means you are short.

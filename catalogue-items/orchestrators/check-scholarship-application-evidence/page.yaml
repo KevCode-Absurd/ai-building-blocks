@@ -1,52 +1,100 @@
 new_slug: check-scholarship-application-evidence
 name: Check scholarship application evidence
 headline: Check scholarship application evidence
-summary: Share the source files. Get an eligibility evidence map, revised draft and missing documents list.
+summary: Check your scholarship application against the rules. Get an evidence map, a revised draft within the word limit and a list of documents you still need.
 job: write-and-tell-stories
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An eligibility evidence map, revised draft and missing documents list. Share an existing application draft, eligibility rules, personal evidence supplied with consent, achievements and official deadline. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your draft, the funder's eligibility rules and the records that back your claims. Your AI maps each rule and claim to a record, flags what has no proof and polishes the draft without adding facts.
 explain: |-
-  An eligibility evidence map, revised draft and missing documents list.
+  A scholarship application fails in two quiet ways. A claim has no proof you can hand over, or a rule is met in real life but not shown in the draft. This workflow checks both before you submit.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Achievements and eligibility claims stay truthful; no identity, award or personal history is invented. Missing tools or evidence stay visible in the final summary.
+  It maps each eligibility rule and each claim in your draft to a record you supplied, such as a transcript, an award letter or an activity list. Anything with no record is marked MISSING. It then looks again at the draft for achievements, ranks and dates that nothing supports. Last it polishes your wording inside the word limit. It keeps your voice and adds no fact.
+
+  It does not decide if you qualify. Only the funder does that. It also never invents an award, a story or a personal detail to fill a gap.
 when:
-  - You need an eligibility evidence map, revised draft and missing documents list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have a draft essay and the scholarship asks for proof of grades, awards or service
+  - You are not sure your draft shows that you meet each rule on the funder's page
+  - A teacher, parent or advisor is helping and wants to see what is backed by documents
+  - The deadline is close and you need to know which documents to chase first
+not_for:
+  - You need a ruling on whether you qualify. Only the funder decides. Read their official rules or ask them.
+  - You are writing a grant for an organisation, not a scholarship for a person. Use the Nonprofit grant proposal writer.
+  - You only want a grammar pass on your text. Use the Proofreader.
+  - You are checking claims in an article or ad. Use the Unsupported claim spotter.
 you_give:
-  - An existing application draft, eligibility rules, personal evidence supplied with consent, achievements and official deadline.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your application draft or essay
+  - The funder's eligibility rules and word limit, copied from their page
+  - The records that back your claims, such as transcripts, award letters and activity lists. Share only what you may share, and leave out ID numbers
+  - The official deadline (optional)
+  - Parts of the draft you want left as they are (optional)
 you_get:
-  - An eligibility evidence map, revised draft and missing documents list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "An evidence map: each rule and claim matched to a record, or marked MISSING"
+  - A list of claims with no support, such as an award, a rank or a date
+  - A revised draft within the word limit, in your voice, with no new facts
+  - "A missing documents list: what to get, which claim it backs and who can supply it"
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste your draft and the funder's rules. Add your records. Remove ID numbers and anything private you do not need to share.
+  - Read the evidence map first. Every MISSING row is a document to find or a claim to cut.
+  - Read the revised draft against your own story. Change anything that is not true to you. Then check the funder's rules yourself before you submit.
 how_it_works:
   - title: Source note summariser
-    text: Map the supplied eligibility criteria and application claims to the actual records; label gaps and avoid retaining unnecessary identity data.
+    text: Matches each eligibility rule and each claim to a record you gave it, and marks gaps. It keeps only the identity details the check needs and hands on the evidence map.
   - title: Unsupported claim spotter
-    text: Check the application draft for achievements, rankings, dates and personal claims without supplied support.
+    text: Finds achievements, ranks, dates and personal claims in the draft that no record supports. It hands on the claims to cut, soften or back with a document.
   - title: Proofreader
-    text: Polish the real draft within the published word limit while preserving the applicant voice and factual boundaries.
+    text: Polishes the real draft inside the word limit, in your voice. It adds no fact and hands back the revised draft.
 output_shape: |-
-  Scope and source coverage
-  An eligibility evidence map, revised draft and missing documents list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  EVIDENCE MAP
+  Rule or claim | Where in the draft | Record that backs it | Status (backed, partly backed, MISSING)
+
+  UNSUPPORTED CLAIMS
+  Claim | Why it has no support | Cut, soften or back with
+
+  REVISED DRAFT
+  <draft within the word limit, with word count>
+
+  MISSING DOCUMENTS
+  Document | Claim it backs | Who can supply it | Needed by
+
+  HAND-BACK SUMMARY
+  Files | MISSING lines | Checks missed | One next step
+output_sample:
+  input:
+    - Your application draft or essay
+    - The funder's eligibility rules and word limit
+    - The records that back your claims, shared with consent
+    - The official deadline (optional)
+  prerequisites:
+    - An AI that can read your files or pasted text
+  output:
+    - name: Evidence map
+      contains: Each rule and claim matched to a record, with a status of backed, partly backed or MISSING.
+    - name: Unsupported claims
+      contains: Achievements, ranks and dates with no record, and whether to cut, soften or back each one.
+    - name: Revised draft
+      contains: Your draft polished inside the word limit, in your voice, with no new facts.
+    - name: Missing documents list
+      contains: Each document to get, the claim it backs and who can supply it.
+    - name: Hand-back summary
+      contains: Files saved, MISSING facts, checks not done and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Check one application at a time, against one funder's rules.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Share the real records with dates, not what you remember.
   - what: Acceptance
-    how: Achievements and eligibility claims stay truthful; no identity, award or personal history is invented.
+    how: Every claim is backed, softened or cut. Nothing is invented to fill a gap.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read your draft and records and keep each step's result as a file. None of them can confirm your record with the school or the funder.
+  inputs:
+    - The funder's rules page, saved as a file or pasted in full.
+    - A teacher or advisor who can check the revised draft is true to you.
 judge:
   - Achievements and eligibility claims stay truthful; no identity, award or personal history is invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,13 +110,11 @@ improve:
   - Add your own acceptance rules and one approved example without changing the component licences.
   - Keep corrections with the result so the next run uses current facts and the same definitions.
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+next:
+  - proofreader
+  - unsupported-claim-spotter
 terms:
+  - term: Evidence map
+    meaning: A table that ties each rule and claim to the record that proves it.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

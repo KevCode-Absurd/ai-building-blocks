@@ -2,17 +2,58 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-acreadiness-assess
 name: Agent readiness dashboard builder
-summary: Point it at your repo. Get a dashboard showing what stops coding agents
-  from working well.
+summary: Run an agent readiness check on your repo and get a dashboard of what stops coding agents from working well, with a fix plan.
 job: set-up-ai
 headline: Agent readiness dashboard builder
-subhead: Point it at your repo. Get a dashboard showing what stops coding agents
-  from working well. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: Give your AI access to your code repo. It runs the AgentRC readiness scan and builds one web page from the results. The page shows your score, each weak spot and a fix plan.
+not_for:
+  - "You cannot run Node 20 or newer, or cannot share the repo with an outside tool: ask a developer to run the scan, or skip it."
+  - "You want a quick, plain report with no custom look: run the built-in agentrc readiness command with its visual option instead."
+  - "You want to write the agent instruction files themselves: use the acreadiness-generate-instructions skill after this check."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can run code and edit files in your repo, such as Claude Code or GitHub Copilot. A plain chat window will not work.
+  - Check that Node 20 or newer is installed. Your AI can run node --version to confirm.
+  - Install the skill and the ai-readiness-reporter agent from the same folder, using your AI tool's steps for adding skills and agents.
+  - Ask your AI to run the acreadiness-assess skill. Add your policy file if you have one.
+  - Open reports/index.html in your browser and read the fix-first list.
+  - Next, run the acreadiness-generate-instructions skill to fix the top gaps.
+output_sample:
+  input:
+    - Your code repository, open in your AI tool
+    - A policy file or package (optional)
+    - The per-area option, if you want scores for each part of the repo (optional)
+  prerequisites:
+    - An AI that can run code and read and write files in your repo
+    - Node 20 or newer installed
+    - Web access, so the scan can fetch the AgentRC tool
+    - The ai-readiness-reporter custom agent installed next to the skill
+  output:
+    - name: reports/index.html
+      contains: One static dashboard file that opens in a browser, with all styling built in.
+    - name: Maturity level and score
+      contains: Your overall score, grade and maturity level, and the pass rate against the threshold.
+    - name: Pillar breakdown
+      contains: Nine pillars, each with what it measures, why it matters for AI, its current state and a fix.
+    - name: Extras
+      contains: Bonus checks shown on their own. They never change your score.
+    - name: Active policy
+      contains: Any policy in use, with criteria that were turned off or changed, and the thresholds.
+    - name: Prioritised remediation plan
+      contains: Fixes sorted into Fix First, Fix Next and Plan.
+    - name: Chat summary
+      contains: Your maturity level, score, three lowest pillars and the best next step.
+when:
+  - You want to know how ready your repo is for coding agents.
+  - You are about to add AI coding tools to a team project.
+  - Your company has its own rules and you want to score against them.
+  - You want a before and after check once you have fixed things.
+you_give:
+  - Your code repository, open in your AI tool
+  - A policy file or package for your own scoring rules (optional)
+  - A request for scores by area of the repo (optional)
+you_get:
+  - A dashboard file at reports/index.html that opens in any browser
+  - Your score, grade and maturity level
+  - A look at nine areas, with what to fix in each
+  - A fix list sorted by what to do first
+  - A short summary in chat

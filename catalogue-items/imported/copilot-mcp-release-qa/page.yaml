@@ -2,17 +2,63 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-mcp-release-qa
 name: MCP protocol release tester
-summary: Share your MCP server. Get a real session check of its tools, errors
-  and advertised features.
+summary: Test your MCP server before release. Get a real session check of its tools, errors and docs, with exact commands and a clear pass or fail.
 job: set-up-ai
 headline: MCP protocol release tester
-subhead: Share your MCP server. Get a real session check of its tools, errors
-  and advertised features. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: "Share your MCP server code, the version you plan to release and the command that starts it. It runs a real session against a test setup, tries bad inputs and compares what the server does with its code and docs. You get a PASS, PASS WITH CAVEATS or FAIL."
+explain: |
+  Reading the code of an MCP server does not prove it works. This MCP server release tester starts the server and talks to it the way a real app would. It lists the tools, resources and prompts, makes sample calls and sends bad input to see how it fails.
+
+  It then compares four sources: your source code, the live server, the package details and your docs. Any mismatch shows up in a table.
+
+  The report records the exact commands and raw replies, so someone else can repeat it. Anything it could not check is listed under Missing evidence. Run it against fixtures or a sandbox, never live data.
+when:
+  - "You are about to publish an MCP server."
+  - "You changed a tool and want to know if the docs still match."
+  - "A teammate says it works on their machine and you want proof."
+  - "You need an install and start check before a release."
+not_for:
+  - "You only want a security review of the server: use a security reviewer or a person who audits code, since this checks behavior, not attacks."
+  - "You cannot run the server in a safe test setup: ask a developer to set up a sandbox first, or skip this check."
+  - "You want a quick read of the code in a chat with no running server: ask your AI for a plain code review instead."
+you_give:
+  - "Your MCP server code, or a link to it"
+  - "The commit or version you plan to release"
+  - "The command that builds and starts the server"
+  - "Your README and install steps (optional)"
+  - "A safe test setup with no live data"
+you_get:
+  - "A header with the commit tested, the transport used and a verdict of PASS, PASS WITH CAVEATS or FAIL"
+  - "Each exact command that ran, with its result"
+  - "A transcript of one full session, including bad-input tests"
+  - "A table comparing tools, resources and prompts across code, live server, package details and docs"
+  - "Findings with severity, evidence and the smallest fix, plus a Missing evidence list"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Check that your AI can run shell commands and use an MCP client. In a plain chat it can only review code, and that is not proof the server works.
+  - Give your AI the skill, your server code and the build and start command.
+  - Point it at a test setup with fixtures or a sandbox. Never point it at live data.
+  - Ask it to follow the skill and report the exact commands and raw replies.
+  - Read the verdict and the Missing evidence list first. Fix each finding, then run it again.
+  - Pair the report with a security review before you release.
+output_sample:
+  input:
+    - Your MCP server code, or a link to it
+    - The commit or version you plan to release
+    - The command that builds and starts the server
+    - Your README and install steps (optional)
+  prerequisites:
+    - An AI that can run shell commands and use an MCP client
+    - A safe test setup, such as fixtures or a sandbox, with no live data
+  output:
+    - name: Header
+      contains: The commit tested, the transport used, and a verdict of PASS, PASS WITH CAVEATS or FAIL.
+    - name: Commands and results
+      contains: Each exact command that was run, with its exit status and result.
+    - name: Session transcript
+      contains: "What happened in one full session: start-up, discovery, sample calls and bad-input tests."
+    - name: Parity
+      contains: A table comparing each tool, resource and prompt across source code, live server, metadata and docs.
+    - name: Findings
+      contains: Each problem with its severity, the evidence, the impact and the smallest fix.
+    - name: Missing evidence
+      contains: Any check that could not run, and why.

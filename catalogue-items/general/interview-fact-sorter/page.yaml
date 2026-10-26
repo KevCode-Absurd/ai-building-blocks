@@ -1,6 +1,6 @@
 new_slug: interview-fact-sorter
 name: Interview fact sorter
-summary: Paste notes from customer talks. Get facts told apart from praise and ideas, with the next question.
+summary: Sort your customer interview notes into facts, praise and ideas. Get a verdict on each person and the next question to ask for every weak line.
 job: understand-customers
 thinking: medium
 thinking_why: Telling a fact from praise or a wish takes some judgement.
@@ -14,6 +14,10 @@ when:
   - You just finished a round of customer calls and the notes are a mess.
   - Everyone said they liked your idea and you do not trust it.
   - You want to know which people are real customers and which were just being polite.
+not_for:
+  - "You want the full version with every check: use the Customer conversation notes sorter."
+  - "You have survey answers or one happy call with no past behaviour: ask for stories of what people did, then sort those notes."
+  - "You have reviews or support tickets, not call notes: read them yourself for repeat complaints, or paste them as notes with a name on each."
 you_give:
   - Your rough notes from one or more customer talks
   - What you wanted to learn (optional)
@@ -27,6 +31,20 @@ how_to_use:
   - Include who said what, even as initials.
   - Put exact quotes in quote marks.
   - Use the next questions in your following calls.
+output_sample:
+  input:
+    - Your rough notes from one or more customer talks, with who said what
+    - Exact quotes in quote marks (optional)
+    - What you wanted to learn (optional)
+  output:
+    - name: ITEMS
+      contains: One line per quote or learning, with the person, a label of Fact, Compliment, Vague or Idea, and the next question.
+    - name: PEOPLE
+      contains: "A verdict for each person: likely customer, complainer or not a customer, and what they did to earn it."
+    - name: REAL SIGNALS
+      contains: Each pain, workaround or money fact, counted by how many separate people gave it.
+    - name: TO DO
+      contains: Follow-ups you promised and names to chase.
 how_it_works:
   - title: Split into items
     text: Each quote or learning becomes one line with a name.

@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It maps each conversion to the right function and checks the result.
 new_slug: aerospace-unit-converter
 name: Aerospace unit and frame converter
-summary: Give it values in one unit, time system or frame. Get them converted,
-  with MATLAB code you can rerun.
+summary: Convert aerospace units, time systems and coordinate frames with MATLAB code you can rerun. Give it your values and the target frame or unit.
 job: build-software
 headline: Aerospace unit and frame converter
-subhead: Give it your values with their current units or frame, the target units
-  or frame, and the dates where the frame depends on time. It converts units,
-  time systems such as UTC, positions between Earth frames, orbit elements and
-  rotation forms. You get the converted values, MATLAB code to rerun, the
-  assumptions used and a check of the result.
+subhead: Give it your values with their current units or frame, the target units or frame, and the dates where the frame depends on time. It converts units, time systems such as UTC, positions between Earth frames, orbit elements and rotation forms. You get the converted values, MATLAB code to rerun, the assumptions used and a check of the result.
 explain: |
   Values move correctly between units, time systems and coordinate frames, with MATLAB code you can run again. That avoids the slip-ups that come from mixing frames in flight or space work.
 
@@ -20,19 +15,41 @@ when:
   - You need to turn GPS positions into Earth-fixed coordinates.
   - You must convert orbit elements to position and velocity.
   - Your attitude data is in Euler angles and you need quaternions.
+not_for:
+  - "You need air density or pressure at altitude: use the MATLAB aerospace environment skill, which covers atmosphere models."
+  - "You need to predict an orbit or plan a satellite move: use the Aerospace Toolbox, Aerospace Blockset or Satellite Communications Toolbox."
+  - "You need local east, north, up positions from GPS points: use the Navigation Toolbox, which has those functions."
 you_give:
   - Your values and their current units or frame
-  - The target units or frame
-  - Dates and times, where the frame depends on time
-  - MATLAB with the Aerospace Toolbox
+  - The units or frame you want
+  - Dates and times, if the frame changes with time (optional)
 you_get:
   - Converted values
   - MATLAB code you can rerun
   - The frame and time assumptions used
   - A check of the result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Aerospace Toolbox.
+  - Open a chat with an AI that can run MATLAB code, or plan to run the code yourself. You need MATLAB with the Aerospace Toolbox.
+  - Paste the skill text into the chat.
+  - Add your values, their current units or frame, and the target. Add dates if the frame depends on time.
+  - Ask your AI to name the frame and time system it assumes before it converts.
+  - Run the MATLAB code and check the round-trip result matches your starting values.
+  - Compare a few converted values with a source table before you use them in a simulation.
+output_sample:
+  input:
+    - Your values, with their current units or frame
+    - The units or frame you want
+    - Dates and times, if the frame changes with time (optional)
+    - Your MATLAB release, so the right functions are used (optional)
+  prerequisites:
+    - MATLAB with the Aerospace Toolbox
+    - An AI that can run MATLAB code, or you run the code yourself
+  output:
+    - name: Converted values
+      contains: Each value in the unit, time system or frame you asked for.
+    - name: MATLAB code
+      contains: A script using Aerospace Toolbox functions that you can rerun on your own data.
+    - name: Assumptions used
+      contains: The frames, time system, date and rotation order the conversion relied on.
+    - name: Check of the result
+      contains: A round-trip test that converts back and compares with your starting values.

@@ -34,3 +34,24 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
   - It works best when your AI can search the web and save files.
+not_for:
+  - You want a quick gut-check, not four files. Use the Idea validation analyst.
+  - You already know what to build and only need requirements. Use the Product requirements writer.
+  - You need a short brief a developer can build from. Use the Idea to dev brief writer.
+output_sample:
+  input:
+    - Your raw idea or problem, in a few sentences
+    - How technical you are
+    - Your answers to the clarifying questions
+    - Budget and time limits (optional)
+  prerequisites:
+    - An AI that can search the web and save files
+  output:
+    - name: questions.md
+      contains: Four to 18 clarifying questions, grouped by who and pain, scope, and constraints and goals.
+    - name: research.md
+      contains: Problem check, market size with sources, competitors, strengths and weaknesses, first-100-users channels, risks and insights.
+    - name: PRD.md
+      contains: The problem statement, named personas, ranked customer jobs, non-goals and success measures.
+    - name: plan.md
+      contains: A step-by-step user flow, platform and tool picks, a phased build with stop criteria, and the next few actions.

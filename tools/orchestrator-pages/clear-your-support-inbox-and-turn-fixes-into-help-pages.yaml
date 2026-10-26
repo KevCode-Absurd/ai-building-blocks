@@ -1,6 +1,6 @@
 new_slug: clear-your-support-inbox-and-turn-fixes-into-help-pages
 name: Clear your support inbox and turn fixes into help pages
-summary: Give it your open tickets. Get them sorted, checked replies to send and a help page per fix.
+summary: Clear your support inbox in one run. Give it your open tickets. Get them ranked, checked replies to send and a help page for each fix.
 job: help-customers
 thinking: high
 thinking_why: It writes replies that make promises to real customers and checks every one. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have more than thirty open tickets and no idea which to answer first.
   - The same five questions make up half your inbox.
   - You are about to hand support to someone new and want answers written down.
+not_for:
+  - "You get only a few tickets a week: answer them by hand, or paste one into the Customer reply promise checker."
+  - "You want to answer public reviews: use the workflow Reply to reviews safely and plan how to get more."
+  - "You only need one angry reply checked: use the Customer reply promise checker."
 you_give:
   - The open tickets, pasted as they came in, with dates
   - How you want to sound, or two replies you were happy with
@@ -29,6 +33,27 @@ how_to_use:
   - Paste the tickets and what you can offer. It sorts them and drafts and checks a reply for each.
   - Read the replies, change any you want, and send the ones you approve. Mark which are solved.
   - Say which tickets are solved. It writes a help page for each problem.
+output_sample:
+  input:
+    - Your open tickets, pasted as they came in, with dates
+    - How you want to sound, or two replies you liked
+    - What you can and cannot offer, such as refunds or replacements
+    - Who handles orders, medical or legal questions, and what comes to you (optional)
+    - Reviews or complaints with the full customer story (optional)
+  prerequisites:
+    - An AI that can work with the files in the handoff pack
+    - Your help desk, to send the replies you approve
+  output:
+    - name: Sorted tickets
+      contains: Every ticket given a category, a priority from P1 to P4, a person to route it to and a first line.
+    - name: Replies
+      contains: A full reply per ticket in your voice, with what to check in your systems before sending.
+    - name: Checked replies
+      contains: Each promise, fact and line of tone checked, with a repaired reply where one failed.
+    - name: Help pages
+      contains: One page per solved problem with steps, what the customer should see and what to do if it fails.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Sort and rank the tickets
     text: Classifies every ticket, ranks it by the harm of a slow reply, routes it and writes a first line.

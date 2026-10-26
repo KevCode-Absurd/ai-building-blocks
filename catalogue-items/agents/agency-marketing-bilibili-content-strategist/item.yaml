@@ -1,0 +1,43 @@
+slug: agency-marketing-bilibili-content-strategist
+name: Bilibili Content Strategist agent
+summary: Get a Bilibili content plan with audience and format choices. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: performance_sheet
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-bilibili-content-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-bilibili-content-strategist.md
+  licence: MIT
+  original_name: Bilibili Content Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 4268a7b51025967fbb4a80c0aeb5e4a80abaad9344f5dec164a8d1fb6ea62d06
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Bilibili Content Strategist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Bilibili Content Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-bilibili-content-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

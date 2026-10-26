@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It checks addresses against set patterns.
 new_slug: customer-email-list-checker
 name: Customer email list checker
-summary: Run it on your customer emails. Get bad, role-based and throwaway
-  addresses flagged to protect your sender reputation.
+summary: Check your customer email list for bad, role-based and throwaway addresses. Get a suppression list to protect your sender reputation.
 job: run-your-store
 headline: Customer email list checker
-subhead: Bad addresses on a mailing list damage your sender reputation. This
-  scans your Shopify customers and flags the ones likely to hurt you, and builds
-  a suppression list you can act on.
+subhead: Bad addresses on a mailing list damage your sender reputation. This scans your Shopify customers and flags the ones likely to hurt you, and builds a suppression list you can act on.
 explain: |
   Bad addresses on a mailing list damage your sender reputation. This scans your Shopify customers and flags the ones likely to hurt you, and builds a suppression list you can act on.
 
@@ -18,6 +15,10 @@ when:
   - You are about to send to an old list and want to clean it first.
   - You see many sign-ups from fake-looking addresses.
   - You need to remove duplicates before an import.
+not_for:
+  - "You want real bounce numbers: use the bounce reports in your email platform, since this only checks how addresses look."
+  - "You want to delete customers from Shopify: import the suppression list into your email platform instead."
+  - "You want to check whether customers agreed to marketing: ask your email platform or review consent in Shopify admin."
 you_give:
   - Your Shopify store and read access
   - Whether to check only opted-in customers (optional)
@@ -28,8 +29,29 @@ you_get:
   - Duplicate groups
   - A recommended action for each flag
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open Claude Code, Cursor, Codex or Gemini CLI. This skill needs a tool that can run commands.
+  - Sign in to your store with read access to customers, using the Shopify CLI.
+  - Paste the skill into your AI and give it your store address.
+  - Say if you want all customers or only those who accept marketing. Only marketing customers is the default.
+  - Open the CSV and check the rows marked review before you act on them.
+  - Import the suppression list into your email platform. Do not delete customers from Shopify. Store the CSV safely and delete it when you are done, as your privacy policy requires.
+output_sample:
+  input:
+    - Your Shopify store address
+    - Read access to your customers
+    - Whether to check only customers who accept marketing (optional)
+    - Your own list of role names or throwaway domains (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A signed-in Shopify session with the read_customers permission
+  output:
+    - name: Start banner
+      contains: The skill name, your store address and the start time.
+    - name: Step log
+      contains: One line per step showing what was asked and how many customers came back.
+    - name: Summary report
+      contains: Counts and percentages for each flag, plus how many addresses are recommended for suppression.
+    - name: deliverability_audit CSV
+      contains: One row per customer with email, flags, recommended action, marketing state, order count, total spent and sign-up date.
+    - name: recommended_action column
+      contains: Each row is marked suppress, review or keep, based on the worst flag on that address.

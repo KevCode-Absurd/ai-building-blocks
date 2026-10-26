@@ -1,6 +1,6 @@
 new_slug: new-category-launch
 name: Find a category to be first in and launch it
-summary: Paste your rivals and product. Get a category you can lead, a name for it and a press-first launch.
+summary: Find a new product category you can lead, name it and plan a press-first launch. Paste your rivals and product to get a ranked shortlist.
 job: plan-strategy
 thinking: high
 thinking_why: It splits a market many ways and tests each branch, then plans a launch, so it needs your strongest model.
@@ -14,6 +14,10 @@ when:
   - A rival leads your market and you can't win by being better.
   - You are third or lower and attacking the leaders is not working.
   - You have a product that doesn't fit any existing kind.
+not_for:
+  - "You can win by being better than the leader: use a plain positioning review of your offer and your rivals, not this workflow."
+  - "No rival holds a category in your market yet: skip the map and start with the Best customer finder to learn who you serve."
+  - "You only want to see what rivals do in their ads: use the Competitor ad opportunity finder."
 you_give:
   - Your main rivals and what each is known for
   - Your product facts, such as price, benefits and proof
@@ -25,10 +29,32 @@ you_get:
   - The category in plain words, ten brand names scored on seven tests and a category pitch
   - A launch that starts with press and says when ads begin
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your rivals and product first. Search the top category name yourself before you commit, since a rival may already use it.
-  - Check the top name in a trademark register. The skills do no legal check.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md". It needs a tool that can read files.
+  - Paste your rivals and product facts when asked. Add reviews if you have them.
+  - Check each step's file before the next step starts. Fix any MISSING line you can fill.
+  - Search the top category name yourself before you commit, since a rival may already use it.
+  - Check the top brand name in a trademark register. The skills do no legal check.
+output_sample:
+  input:
+    - Your main rivals and what each is known for
+    - Your product facts, such as price, benefits and proof
+    - Your brand facts, including any name you must keep
+    - Your customer reviews (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: step-01-competitor-white-space-mapper.md
+      contains: A grid of who holds what, with the spots no rival serves marked.
+    - name: step-02-first-in-category-finder.md
+      contains: A ranked short list of categories you could lead, each scored on four tests.
+    - name: step-03-category-name-writer.md
+      contains: The category in buyer words, brand name ideas that could become its word, and a category pitch.
+    - name: step-04-publicity-first-launch-planner.md
+      contains: A launch plan that starts with press, then says when ads begin.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Maps where no rival is strong
     text: Rates rivals on what buyers value and marks the rungs held and the spots nobody serves.

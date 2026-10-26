@@ -1,6 +1,6 @@
 new_slug: inbox-placement-recovery-planner
 name: "Inbox placement recovery planner"
-summary: "Give it your open rates and engaged counts. Get a score out of 100 and a recovery plan."
+summary: "Fix low email opens and spam placement. Give it your open rates and engaged counts. You get a score out of 100 and a staged recovery plan."
 job: write-emails
 thinking: medium
 thinking_why: "It reads numbers, picks a cause and builds a staged plan. A mid-size model does this reliably."
@@ -17,6 +17,10 @@ when:
   - Your opens dropped and your emails seem to land in spam or promotions.
   - Your open rate is under 40 percent on your best segment.
   - Your email tool shows spam complaints rising, or a new sending domain is not performing.
+not_for:
+  - "Your email tool shows a domain warning or DNS error: fix that first with the email setup health checker, then come back."
+  - "You have no send history yet, such as a brand new store: send to a small, willing group first and build up from there."
+  - "Your list was bought, rented or scraped: a plan cannot fix that, so stop sending to it and rebuild with people who opted in."
 
 you_give:
   - Open and click rates for your last 8 campaigns
@@ -36,6 +40,25 @@ how_to_use:
   - List your live flows and say whether your email tool shows a domain warning.
   - Start with the set-up fixes if the skill finds any, then begin the ramp.
   - Fill in the tracker after each stage and follow the gates.
+output_sample:
+  input:
+    - Open and click rates for your last 8 campaigns
+    - Engaged counts at 14, 30, 60 and 90 days
+    - Your list of live flows
+    - Your sending domain status and complaint and unsubscribe rates (optional)
+  output:
+    - name: Inbox health score
+      contains: A score out of 100 with six measures added up, and a note of anything not given.
+    - name: Diagnosis
+      contains: The likely cause, set-up or engagement, with the numbers behind it.
+    - name: Fix first
+      contains: Any gaps in your branded domain, default sender or DMARC record.
+    - name: Recovery plan
+      contains: Staged sends to your most engaged people, with a gate to widen or repeat each stage.
+    - name: Email fixes
+      contains: Changes to layout, subject lines, buttons and product blocks so emails earn opens.
+    - name: Tracker
+      contains: One row per stage with segment, sends, open, click, complaints and your decision.
 
 how_it_works:
   - title: Diagnoses the cause

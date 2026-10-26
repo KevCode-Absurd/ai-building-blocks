@@ -3,7 +3,7 @@ name: statsmodels
 description: Fits and diagnoses Python statistical models including OLS, GLM, discrete and mixed models, ARIMA and SARIMAX. Supports coefficient inference, marginal effects, model comparison and time series forecasting with explicit design and uncertainty checks. Used for econometrics and statistical modeling; for guided test selection with APA reporting, see statistical-analysis.
 allowed-tools: Read Write Edit Bash
 compatibility: Requires Python 3.10+ and statsmodels 0.15.0; the tested NumPy 2.5.3/SciPy 1.18.1 stack needs Python 3.12+. Plotting needs matplotlib; predictive metrics need scikit-learn. Network access is needed only for installation or documentation; no credentials.
-license: BSD-3-Clause license
+license: MIT (this skill). The statsmodels library itself is BSD-3-Clause.
 metadata:
   version: "1.5"
   last-reviewed: "2026-10-01"
@@ -237,6 +237,34 @@ For detailed documentation and examples:
 - User guide: https://www.statsmodels.org/stable/user-guide.html
 - Examples: https://www.statsmodels.org/stable/examples/index.html
 - API reference: https://www.statsmodels.org/stable/api.html
+
+## Before you run it (AI Blocks notes)
+
+Needs code running. If your AI cannot run Python, write the code and the commands, say clearly that nothing was run, and report no numbers.
+
+Ask once for what is missing: the data file, the column to explain or predict, the factors to include, and for a forecast the date column and horizon. Mark anything still missing as `MISSING: <what>`. Never invent data, columns or results. Stop and say so if there are too few rows for the model asked (about 30 for a regression, and at least two full seasons for a seasonal forecast).
+
+Show your plan before fitting: the model you will use, why, the rows used and any rows dropped.
+
+## Report format
+
+Hand back these sections in order:
+
+1. **Question**: what is explained or predicted, and which column.
+2. **Data**: rows used, rows dropped and why, columns used.
+3. **Model**: the type and the reason.
+4. **Effects**: a table with factor, effect, range of doubt and a plain reading. Use the right scale for the model (for example odds ratios for a logistic model).
+5. **Checks**: pass or fail for each assumption, odd rows, overlapping factors and convergence.
+6. **Comparison**: the models tried and which won, on the same rows.
+7. **Forecast** (if asked): period, expected value, low and high. Say whether the range covers a mean or future values.
+8. **Held-back test**: how far off the model was on rows it did not see, in date order for time series.
+9. **What it means**: a plain summary under 150 words. Separate "moves with" from "causes". Say what the model cannot show.
+10. **MISSING**: inputs not given, or none.
+
+## About the citation step
+
+The citation step below is optional. If you cannot go online to fetch the arXiv record, cite from the text as written.
+
 
 ## Citing Scientific Agent Skills
 

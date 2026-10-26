@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs known test commands and reads the output.
 new_slug: matlab-test-runner
 name: MATLAB test runner
-summary: Point it at your tests. Get them run and filtered, with failures,
-  coverage gaps and CI set up.
+summary: Run your MATLAB tests, see why each one fails, find code no test covers, and set up CI. Works with a test folder and your AI.
 job: test-and-fix-code
 headline: MATLAB test runner
-subhead: Your MATLAB tests run, filtered and explained. You get a clear pass and
-  fail count, the reason for each failure, which lines are not covered by tests,
-  and a build file for continuous integration.
+subhead: Your MATLAB tests run, filtered and explained. You get a clear pass and fail count, the reason for each failure, which lines are not covered by tests, and a build file for continuous integration.
 explain: |
   Your MATLAB tests run, filtered and explained. You get a clear pass and fail count, the reason for each failure, which lines are not covered by tests, and a build file for continuous integration.
 
@@ -18,11 +15,16 @@ when:
   - You want to know which parts of your code no test touches.
   - Your team wants tests to run on every pull request.
   - You only want to run one group of tests quickly.
+not_for:
+  - "You need new tests written or test classes built: use the matlab-write-tests skill, which is outside this page."
+  - "You are testing Simulink models or Simulink coverage: use Simulink test tools, not this one."
+  - "You only want a speed check on your code: use MATLAB's profiler, not a test run."
 you_give:
-  - The folder or files with tests
-  - A filter by name or tag (optional)
+  - The folder or files that hold your tests
+  - A filter by test name, tag or folder (optional)
+  - The folder with your source code, if you want coverage (optional)
   - Your CI service (optional)
-  - MATLAB release
+  - Your MATLAB release
 you_get:
   - Pass and fail results
   - Failure reasons
@@ -30,8 +32,31 @@ you_get:
   - A build file
   - A CI config (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open an AI that can run MATLAB code, such as one linked to MATLAB through MCP. Without that, it can only write the commands for you to run.
+  - Paste the skill into the chat, or add the skill folder to your AI tool.
+  - Tell your AI where your tests are. Add a name or tag filter if you want only some tests.
+  - Check the pass and fail counts first. Fix failures before you ask for coverage.
+  - Ask for coverage and name your source folder. Reports such as HTML are made only if you ask.
+  - Ask for a build file and a CI config if you want tests to run on every pull request.
+output_sample:
+  input:
+    - The folder with your MATLAB tests
+    - A filter by name, tag or folder (optional)
+    - The folder with your source code, for coverage (optional)
+    - "Your CI service: GitHub Actions, Azure DevOps or GitLab (optional)"
+  prerequisites:
+    - An AI that can run MATLAB, for example through the MATLAB MCP server
+    - MATLAB installed, with your release number to hand
+  output:
+    - name: Test results
+      contains: Pass and fail counts for the run, shown before anything else happens.
+    - name: Failure diagnostics
+      contains: One block for each failed or incomplete test, with the reason MATLAB gave.
+    - name: Coverage summary
+      contains: A percentage of covered code from the coverage plugin, using MC/DC as the default level.
+    - name: Coverage gaps
+      contains: The lines, decisions and conditions that no test reaches, listed when you ask for gap analysis.
+    - name: buildfile.m
+      contains: A build file with a test task and options for source and reports.
+    - name: CI config
+      contains: A config file for GitHub Actions, Azure DevOps or GitLab CI that runs the build.

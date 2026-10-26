@@ -1,50 +1,91 @@
 new_slug: prepare-a-filing-based-earnings-model-update
 name: Prepare a filing-based earnings model update
 headline: Prepare a filing-based earnings model update
-summary: Update a sourced earnings workbook while keeping periods, shares, adjustments, taxes and OCI reconciled.
+summary: "Update an earnings model after a new filing: trailing 12 months, share counts, adjusted EPS, cash tax and OCI. Get a linked workbook and change log."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked filing update workbook and change log with five reconciled schedules. Share new filing and prior model, annual/YTD statements, share ledger, acquired-amortization reconciliation, current-tax and OCI notes.
+subhead: "Give it the new filing, your prior model and the supporting notes. It rebuilds five linked schedules: trailing earnings, weighted shares, adjusted EPS, cash tax and other comprehensive income. You get an updated workbook and a log of what changed and why."
 explain: |-
-  A linked filing update workbook and change log with five reconciled schedules.
+  A new filing changes more than one number. Last year may be restated, share counts move, and the tax and other comprehensive income (OCI) notes shift. If you patch a model line by line, the pieces stop agreeing with each other. This workflow updates the whole model from the filing, in an order where each schedule feeds the next.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  It starts with the trailing 12 months, built as last full year plus this year to date, minus the same part of last year. Then it rebuilds the share count for that exact period. Adjusted EPS, cash tax and OCI come next, each tied to the filing note it came from. Every changed period or definition goes in a change log.
+
+  It works only from your filing and your model. When a note is missing it marks the gap and stops the schedules that need it. It checks arithmetic and ties. It does not tell you what to forecast or whether to buy or sell.
 when:
-  - You need a linked filing update workbook and change log with five reconciled schedules.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A company has just filed its annual or quarterly report and your model needs to catch up.
+  - Last year's figures were restated and you need to see which lines changed.
+  - Your trailing EPS looks off because quarterly share counts were added together.
+  - You are handing a model to a reviewer and need a change log that shows what moved.
+not_for:
+  - "You only need basic and diluted EPS from a share ledger: use the Basic and diluted earnings per share checker."
+  - "You want to write the earnings preview or the note after the release: use Earnings preview, call review and written update."
+  - The company is private or you have no filing. This workflow needs the filing's own notes.
 you_give:
-  - New filing and prior model, annual/YTD statements, share ledger, acquired-amortization reconciliation, current-tax and OCI notes.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The new filing: annual or interim report with its notes, as a PDF or pasted text"
+  - Your prior model, as a spreadsheet
+  - Annual and year-to-date income statements, with the same period last year
+  - A dated share ledger, and the diluted share count from the filing
+  - The notes on purchased intangibles amortization and its tax effect, current tax paid, and OCI items moved to profit
+  - Currency, scale, fiscal year end and accounting basis
 you_get:
-  - A linked filing update workbook and change log with five reconciled schedules.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A trailing 12 month bridge for each earnings line you model
+  - A weighted share count built for the exact period
+  - Reported and adjusted EPS side by side on the same share count
+  - A bridge from current tax expense to cash tax paid, and a check that OCI transfers net to zero
+  - A change log of every changed period, definition and source
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the workflow pack to Claude, ChatGPT or Gemini. Use an AI that can read PDFs and spreadsheets, and that can make files if you want a workbook.
+  - Attach the new filing and your prior model. Add the share ledger and the tax and OCI notes. State the currency, scale and fiscal year end once.
+  - After step 1, check that the prior year-to-date period has the same length as the current one, and that restated lines match the filing.
+  - After step 2, check that the share count was built for the whole period and not added up from quarters, and that closing shares match the filing.
+  - After steps 3 to 5, check that adjusted EPS, cash tax and OCI each point to a filing note, and that no item is counted twice.
+  - Read the change log and every MISSING line before you pass the model on.
 how_it_works:
   - title: Trailing-period financial bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Map restated annual/YTD additive earnings lines to trailing periods; retain prior source versions and document every changed period or definition.
+    text: Builds trailing figures as last full year plus current year to date, less the matching prior year to date. Keeps balances, margins and EPS out of that sum. Hands step 2 the period dates and ordinary profit.
   - title: Weighted-average share schedule
-    text: Rebuild each required weighted denominator from actual transactions. A trailing EPS denominator must be constructed for its actual interval, not formed by adding quarterly weighted shares.
+    text: Builds the share count for the exact trailing period from the dated ledger, weighting each stretch by days. Hands step 3 the basic count and the diluted count from the filing.
   - title: Purchased amortization EPS bridge
-    text: Update the actual charge and attributable recognized tax effect against matching reported ordinary income and sourced diluted shares; basic weighted shares feed this only when no dilution is evidenced.
+    text: Adds back purchased-intangible amortization less its recognized tax benefit, and shows reported and adjusted EPS on the same diluted shares. Hands step 5 the items it already added back.
   - title: Current tax cash-payment bridge
-    text: Reconcile current tax expense/payables to cash taxes separately from the non-GAAP tax adjustment; retained deferred-tax differences must not become cash.
+    text: Starts with opening tax payable, adds current tax expense and noncash moves, takes off closing payable, and compares to cash tax paid. Keeps deferred tax out of cash.
   - title: OCI reclassification bridge
-    text: Trace permitted recycling changes to both profit and OCI and prove conservation before issuing the update; list source changes and unresolved model checks for the reviewer.
+    text: Moves each recycled after-tax amount into profit and out of OCI as equal and opposite entries, proves total comprehensive income is unchanged, and lists open model checks for the reviewer.
 output_shape: |-
-  A linked filing update workbook and change log with five reconciled schedules.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  FILING UPDATE <company>, <period>, <currency>, <scale>
+  SCOPE AND DATED SOURCES   <filing, model version, dates>
+  1 TRAILING PERIOD         annual <n> + current YTD <n> - prior YTD <n> = trailing <n>
+  2 WEIGHTED SHARES         rows by date and days, weighted total <n>, closing <n>
+  3 ADJUSTED EPS            reported EPS <n>, adjustment after tax <n>, adjusted EPS <n>
+  4 CASH TAX                opening payable + expense + noncash - closing = cash paid <n>, reported <n>
+  5 OCI TRANSFER            profit before / after, OCI before / after, total unchanged
+  CHANGE LOG                <line, old value, new value, source>
+  MISSING                   <each gap and the schedule it stops>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - The new filing and your prior model
+    - Annual and year-to-date statements, with the same period last year
+    - A dated share ledger and the diluted share count
+    - The tax, amortization and OCI notes
+  prerequisites:
+    - An AI that can read PDFs and spreadsheets
+    - Your prior model in a spreadsheet
+  output:
+    - name: Trailing-period bridge
+      contains: Last full year plus current year to date, less the matching prior period, for each earnings line.
+    - name: Weighted share schedule
+      contains: Share count by date and days for the exact period, tied to the filing's closing shares.
+    - name: Purchased amortization EPS bridge
+      contains: Reported and adjusted EPS on the same diluted shares, with the tax effect.
+    - name: Cash tax bridge
+      contains: Tax expense and payables worked into cash tax paid, with any difference explained.
+    - name: OCI reclassification bridge
+      contains: Equal and opposite profit and OCI entries, and proof that total comprehensive income is unchanged.
+    - name: Change log
+      contains: Every changed period, definition and source, for your reviewer.
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -64,15 +105,24 @@ test:
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Updates a linked workbook, recalculates it and reopens the saved file to check it.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The prior filing, so restated lines can be compared
+    - A named reviewer who will read the change log
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Trailing 12 months
+    meaning: The latest full year of results, rolled forward by the part of this year already reported.
+  - term: Year to date (YTD)
+    meaning: Results from the start of the fiscal year to the latest report date.
+  - term: Weighted-average shares
+    meaning: The share count over a period, with each stretch weighted by how many days it lasted.
+  - term: Adjusted EPS
+    meaning: Earnings per share after adding back items the company chooses to exclude. It is not reported profit.
+  - term: OCI
+    meaning: "Other comprehensive income: gains and losses that bypass the income statement until they are moved to profit."
+next:
+  - reconcile-basic-and-diluted-issuer-eps

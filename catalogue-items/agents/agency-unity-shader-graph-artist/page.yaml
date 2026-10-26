@@ -1,0 +1,129 @@
+name: Unity Shader Graph Artist agent
+summary: "Plan a Unity Shader Graph for URP or HDRP: node layout, artist parameters, cost checks and a handoff guide, from your visual target."
+headline: Unity Shader Graph Artist agent
+subhead: Give it a visual target, your Unity render pipeline and your platform. It plans the Shader Graph, or an HLSL version when speed needs it. You get a node layout, a parameter table, a cost check and a guide for artists.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A Unity shader plan saves rework. A graph built for URP will not work in HDRP without porting. A mobile shader that looks great can still blow the frame budget. This agent settles the pipeline, the platform and the cost first, then it plans the graph.
+
+  It builds the plan around Sub-Graphs, so repeated logic lives in one place. It sorts nodes into groups for texturing, lighting, effects and output. It lists only the parameters artists should touch, each with a range and a tooltip. It says when a hand-written HLSL version is worth the effort.
+
+  It follows the Unity Shader Graph Artist profile from Agency Agents. It cannot open Unity or run the Frame Debugger. It gives you the checks to run. The profile's limits, such as texture samples, are starting values. Unity's render code changes between versions, so treat any code as a sketch to test on yours.
+when:
+  - You have a reference for water, dissolve, outline or glow and need to know how to build it in Shader Graph.
+  - A shader runs fine on PC but slowly on mobile.
+  - The same node cluster appears in several graphs, and you want one Sub-Graph.
+  - You need a Renderer Feature plan for a full-screen effect in URP.
+not_for:
+  - You need gameplay code in C#. Use the Unity Architect agent.
+  - You need a custom editor window or tool. Use the Unity Editor Tool Developer agent.
+  - Your project is in Unreal. Use the Unreal Technical Artist agent. For Godot, use the Godot Shader Developer agent.
+  - You need art budgets and import rules that apply to any engine. Use the Technical Artist agent.
+you_give:
+  - Your Unity version and render pipeline, URP or HDRP
+  - Your target platforms, such as mobile, PC or console
+  - The look you want, as a reference image or a plain description
+  - Your performance budget, if you have one (optional)
+  - An existing graph as a screenshot, node list or HLSL (optional)
+you_get:
+  - A shader plan that says Shader Graph or HLSL, and why
+  - A parameter table with type, range and tooltip for each artist control
+  - A node layout with groups and Sub-Graphs named
+  - A cost check for texture samples, instructions and see-through risk
+  - A handoff guide so artists can use and tune the material
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md, then references/source-agent.md, then your brief into a new chat. Claude, ChatGPT and Gemini all work.
+  - Start with your Unity version, pipeline and platform. The agent cannot guess the pipeline, and the wrong one breaks the graph.
+  - Add the look you want and any budget. Say "Plan the shader. Mark any limit you cannot tie to my budget."
+  - Check the cost table against your slowest device. If it is over, ask for a cheaper version.
+  - Build the Sub-Graphs first in Unity, then the main graph. Treat any code as an untested sketch.
+  - Open the Frame Debugger and GPU profiler on a real scene. Paste what you see for a second look.
+how_it_works:
+  - title: Fix the target
+    text: It confirms Unity version, pipeline, platform and the look you want. It asks once, then marks gaps MISSING.
+  - title: Choose the build route
+    text: It picks Shader Graph for artist access, or HLSL where cost demands it, and gives the reason.
+  - title: Plan the graph
+    text: Reusable logic goes into Sub-Graphs. Nodes sit in labelled groups. Only artist-facing parameters are exposed.
+  - title: Write the parameter table
+    text: Each control gets a type, a range and tooltip text for the Blackboard.
+  - title: Check the cost
+    text: It counts texture samples and estimates instructions, then checks blend mode, depth write and two-sided cost.
+  - title: Hand off to artists
+    text: It writes what each parameter does on screen and a setup guide for a common material.
+output_shape: |-
+  SHADER SPEC
+    Visual target <look> | Pipeline <URP or HDRP> | Platform <> | Build route <Shader Graph or HLSL, with the reason>
+  BLACKBOARD PARAMETERS
+    <name> | <type> | <range> | <tooltip text>
+  GRAPH LAYOUT
+    Group <Texturing, Lighting, Effects or Output> | <nodes in order> | <Sub-Graph used>
+  SUB-GRAPHS
+    <name> | <what it holds> | <graphs that reuse it>
+  CODE SKETCH (only if needed, untested)
+  COMPLEXITY AUDIT
+    Texture samples <n> | Instructions <estimate> | Blend mode <> | Depth write <> | Two-sided <> | Mobile fallback <yes, no or not needed>
+  PROFILING STEPS
+    <step> | <Unity tool> | <what to look for>
+  ARTIST HANDOFF
+    <parameter> | <what it does on screen> | <safe range>
+  OPEN QUESTIONS AND CHECKS NOT RUN
+output_sample:
+  input:
+    - Your Unity version and render pipeline, URP or HDRP
+    - Your target platforms
+    - The look you want, as a reference or a description
+    - An existing graph or your budget (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Unity with Shader Graph, to build and test the plan (the AI does not open it)
+  output:
+    - name: Shader spec
+      contains: The visual target, pipeline, platform and whether to build in Shader Graph or HLSL, with the reason.
+    - name: Blackboard parameters
+      contains: Each artist control with its type, range and tooltip text.
+    - name: Graph layout
+      contains: Node groups in order, and which Sub-Graph each group uses.
+    - name: Complexity audit
+      contains: Texture samples, instruction estimate, blend mode, depth write, two-sided cost and mobile fallback.
+    - name: Profiling steps
+      contains: What to open in Unity's Frame Debugger and GPU profiler, and what to look for.
+    - name: Artist handoff
+      contains: What each parameter does on screen and a safe range for it.
+    - name: Code sketch
+      contains: Optional HLSL or Renderer Feature outline, marked untested.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Build route
+    how: Say "Shader Graph only" if your artists cannot read code.
+  - what: Platform
+    how: Name the weakest device so the cost check fits it.
+improve:
+  - Paste your Frame Debugger and GPU profiler results back, and ask for a cheaper version if the shader is over budget.
+terms:
+  - term: Shader Graph
+    meaning: Unity's tool for building a shader by joining nodes, with no code.
+  - term: URP and HDRP
+    meaning: Unity's two main render pipelines. A graph built for one needs porting for the other.
+  - term: Sub-Graph
+    meaning: A small reusable graph you can place inside other graphs.
+  - term: Blackboard
+    meaning: The panel in Shader Graph where you list the parameters artists can change.
+  - term: HLSL
+    meaning: The code language for shaders. Used when a graph is too slow.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can plan the graph. Pick one that can read a screenshot of your current graph.
+  inputs:
+    - A screenshot of your current graph or Blackboard
+    - Frame Debugger or GPU profiler results
+    - A reference image or short clip of the look you want

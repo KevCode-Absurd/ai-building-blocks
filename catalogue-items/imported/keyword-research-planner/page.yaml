@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It gathers searches and then ranks them.
 new_slug: keyword-research-planner
 name: Keyword research planner
-summary: Name your site and topic. Get a ranked keyword list, including question
-  searches, grouped by what people want.
+summary: "Plan your keyword research: give your site and topic, and get a ranked keyword list with question searches, grouped by what people want."
 job: get-found-in-search
 headline: Keyword research planner
-subhead: "A ranked list of what people search for in your topic, grouped by what
-  they want. Give it your site, topic, audience and goal: rank, convert or
-  educate."
+subhead: "A ranked list of what people search for in your topic, grouped by what they want. Give it your site, topic, audience and goal: rank, convert or educate."
 explain: |
   A ranked list of what people search for in your topic, grouped by what they want. Give it your site, topic, audience and goal: rank, convert or educate. Add a location, competitor links or keywords you already care about if you have them.
 
@@ -18,6 +15,10 @@ when:
   - You want to find question searches your customers type.
   - You need to see which terms fit a sale and which fit education.
   - You run a local business and want searches for your area.
+not_for:
+  - Your site has no clear topic or products yet. Decide what you sell or teach first, then run this.
+  - You need checked search volumes. Use a live keyword tool such as Google Keyword Planner or Ahrefs.
+  - You want to fix a page you already wrote. Ask a person who knows SEO, or edit the page by hand.
 you_give:
   - Your topic and what the site does
   - Your target audience
@@ -31,7 +32,37 @@ you_get:
   - Gaps compared with competitors
   - A note on which numbers are estimates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Tell your AI your topic, what your site does, who it is for, and your goal: rank, convert or educate."
+  - Add a city, competitor links or keywords you already care about (optional).
+  - If your AI can browse the web or use a keyword data service, say so. If not, it will mark volume and difficulty as estimates.
+  - Check the Quick Wins Summary first, then the Keyword → Content Map.
+  - Check the numbers in a live keyword tool before you spend money on content.
+output_sample:
+  input:
+    - Your topic and what your site or business does
+    - Who the content is for
+    - "Your goal: rank, convert or educate"
+    - Competitor links and keywords you already care about (optional)
+    - A city or country (optional)
+  prerequisites:
+    - Web browsing or a keyword data service is optional. Without it, the numbers are estimates only.
+  output:
+    - name: Seed Keywords
+      contains: The starting terms drawn from your topic, your site and the keywords you named.
+    - name: Priority Keyword Tiers
+      contains: "Keywords sorted into three tiers: target first, build toward, and long-term goals."
+    - name: Long-Tail Keywords
+      contains: Longer, more specific searches that are easier to win.
+    - name: AEO Keywords
+      contains: Question searches that AI answer tools and search answer boxes tend to pick up.
+    - name: LSI and Semantic Keywords
+      contains: Related words and phrases to use naturally in your content.
+    - name: Keywords to Avoid
+      contains: Terms that are too hard, too vague or a poor fit for your goal.
+    - name: Cannibalization Check
+      contains: Places where two of your pages would compete for the same search.
+    - name: Keyword → Content Map
+      contains: Which page or content piece should target each keyword.
+    - name: Quick Wins Summary
+      contains: The few terms to go after first, with a short reason for each.

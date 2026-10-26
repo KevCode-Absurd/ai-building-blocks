@@ -1,0 +1,145 @@
+name: Agents Orchestrator agent
+summary: "Plan a software build run by a team of AI agents: the phases, who hands what to whom, pass or fail quality checks and when to stop and ask you."
+headline: Agents Orchestrator agent
+subhead: "Give it a written project spec. It plans the build as a pipeline of AI agents: a task list, a design foundation, then build and test one task at a time, then a final check. You get the phases, the handoffs, the pass or fail gates and the retry limits."
+job: set-up-ai
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A software project built by several AI agents falls apart when each agent works alone and nobody checks the work. This agent plans the pipeline that prevents that. The order is: turn the spec into a task list, set the design and technical foundation, build one task at a time, test each task before the next one starts, and run a final check on the whole thing.
+
+  The key idea is the build-and-test loop. A task moves on only after it passes testing with evidence, such as screenshots or test output. A failed task goes back to the builder with specific feedback. After three failed tries it stops and tells you, instead of looping forever. Each handoff carries what the next agent needs, and a fixed status report shows which phase you are in.
+
+  Be clear about what runs where. In a normal chat, this agent writes the plan and the reports. It cannot start other agents. In Claude Code it can start the agents named in the plan, but only if you have installed them. Roles it names include a project manager, a UX architect, a tester who needs screenshot proof and a final reality checker. This pack installs none of them. Ask it to pause for your OK before each phase and before anything touches a live system.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have a written spec for a website or app and want AI agents to build it step by step.
+  - You tried one big "build it all" prompt and the result was messy and untested.
+  - You want every part tested, with proof, before the next part starts.
+  - You are using several AI agents and need to decide who does what and when to stop.
+not_for:
+  - You only want a task list from a spec. Use the Senior Project Manager agent.
+  - You want one software design with options and trade-offs. Use the Software Architect agent.
+  - You want to design how several AI agents trust and talk to each other. Use the Multi-Agent Systems Architect agent.
+  - You need a final go or no-go on a release. Use the Reality Checker agent.
+  - You have no written spec. Write one first. Without it the plan is a guess.
+you_give:
+  - A written project spec: what to build, for whom and what done looks like. Any document works.
+  - Where you will run it: a plain chat, or Claude Code with agents installed.
+  - Your limits, such as tools to use, a deadline and what must not change.
+  - The agents or roles you already have, such as project manager, designer, builder and tester (optional)
+you_get:
+  - A pipeline plan with the phases in order: task list, design foundation, build and test loop, final check
+  - Who does each phase and what each one hands to the next
+  - Pass or fail rules for each phase, with the proof required
+  - Retry rules: send back with feedback, and stop after 3 tries and tell you
+  - A status report you can reuse after each phase
+  - A final report layout that shows what passed, what is blocked and what is left
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write or paste your project spec. Say whether you will run this in a chat or in Claude Code.
+  - Type "Plan the pipeline for this spec. List every agent you need and what each hands on. Ask me before each phase."
+  - Check the phases and gates. Every task needs a test that gives proof, such as a screenshot or a test result.
+  - In a chat, you run each phase with the right agent and paste the result back. In Claude Code, install the agents it names first, then let it run one phase at a time.
+  - Read each status report. Stop the run if a task fails three times or if a step wants to change a live system.
+how_it_works:
+  - title: Check the spec
+    text: It confirms the spec exists and is clear enough to plan from. It asks once for anything missing.
+  - title: Plan the tasks
+    text: A project manager role turns the spec into a task list that quotes the spec and adds no extras.
+  - title: Lay the foundation
+    text: A UX or technical architect role sets the structure and styles that builders will use.
+  - title: Build and test one task at a time
+    text: A builder does one task. A tester checks it with proof. Only a pass moves the pipeline on.
+  - title: Retry or stop
+    text: A failed task goes back with the tester's feedback. After 3 failed tries it is marked blocked and you are told.
+  - title: Run the final check
+    text: A reality checker role tests the whole build and starts from "needs work" until the proof says otherwise.
+  - title: Report
+    text: It fills in the status report after each phase and the completion report at the end.
+output_shape: |-
+  PIPELINE PLAN
+    Phase <n> | <name> | <role or agent> | <available, not installed or done by you>
+
+  HANDOFFS
+    <from phase> to <to phase> | <file or context passed> | <what it must contain>
+
+  QUALITY GATES
+    <phase or task> | <pass means> | <proof required> | <if inconclusive: fail>
+
+  RETRY AND STOP RULES
+    Retries per task <number> | After the last try <mark blocked, tell you> | Never <changes to live systems without your OK>
+
+  STATUS REPORT
+    Phase <current> | Tasks done <x of y> | Current task <name> | Attempt <n of 3> | Last feedback <text> | Next action <step> | Blockers <list>
+
+  COMPLETION REPORT
+    Passed <list> | Needed retries <list> | Blocked <list> | Final check <pass or needs work> | Left to do <list>
+
+  ASSUMPTIONS AND CHECKS
+    <assumption> | <source: you, document or estimate>
+    Checks still needed: <list>
+output_sample:
+  input:
+    - Your written project spec
+    - Where you will run it, a chat or Claude Code
+    - Your limits, such as tools, deadline and what must not change
+    - The agents or roles you already have (optional)
+  prerequisites:
+    - Claude Code with the specialist agents installed, if you want it to start them for you. A plain chat can only plan.
+  output:
+    - name: Pipeline plan
+      contains: The phases in order, the role for each and whether that agent is available.
+    - name: Handoffs
+      contains: What each phase passes to the next, as files or context.
+    - name: Quality gates
+      contains: What passing means for each phase and task, and the proof required.
+    - name: Retry and stop rules
+      contains: How many tries each task gets and what happens after the last one.
+    - name: Status report
+      contains: A fill-in report for the current phase, task, attempt, feedback and blockers.
+    - name: Completion report
+      contains: A fill-in summary of what passed, what was blocked and what is left.
+    - name: Assumptions and checks
+      contains: What the AI assumed and what you must confirm before you start.
+works_best_with:
+  tools:
+    - name: Claude Code with agents installed
+      why: It can start the named agents one at a time and show you each result. A plain chat can only plan.
+  inputs:
+    - A spec that lists exact requirements and what done looks like, so each task has a clear test.
+    - A list of the agents you have installed, so the plan names roles you can actually run.
+    - Screenshots or test output from earlier runs, if you are fixing an existing build.
+terms:
+  - term: Pipeline
+    meaning: A fixed order of steps where each step's result feeds the next.
+  - term: Handoff
+    meaning: The files and notes one agent passes to the next.
+  - term: Quality gate
+    meaning: A pass or fail check that must be met before work moves on.
+  - term: Build and test loop
+    meaning: A builder does one task, a tester checks it, and a failure goes back for a fix.
+  - term: Subagent
+    meaning: An AI helper that another AI starts to do one job.
+tweaks:
+  - what: Retry limit
+    how: The default is 3 tries per task. Ask for 2 if you want to see problems sooner.
+  - what: Pause points
+    how: Ask it to pause after every phase, or only after the design and the final check.
+  - what: Task size
+    how: Ask for smaller tasks if tests keep failing. One small change per task is easier to test.
+improve:
+  - Save each status report. If a run stalls, paste the last report and ask where the handoff failed.
+  - Keep the spec in one file and update it, so every agent reads the same version.
+  - Ask the Reality Checker agent for the final go or no-go on the finished build.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

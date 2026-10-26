@@ -1,6 +1,6 @@
 new_slug: turn-a-flaw-first-ad-into-a-checked-picture-ad
 name: Turn a flaw-first ad into a checked picture ad
-summary: Give it your product's real weaknesses. Get a flaw-first ad, a matching picture and a check.
+summary: Turn the flaw buyers already see in your product into a flaw-first picture ad, with a matching image idea and a check of words and picture.
 job: make-image-ads
 thinking: medium
 thinking_why: Three steps with clear rules. Use a stronger model if you have many weaknesses to sort.
@@ -14,6 +14,10 @@ when:
   - Buyers keep raising the same flaw in reviews and your ads avoid it.
   - You want a picture ad that stands out without any new claim.
   - You want to test two picture ideas for the same story.
+not_for:
+  - "Buyers never raise a flaw about your product: use the Ad angle planner to find a plain angle instead."
+  - "You only need the words of an ad: use the Ad hook writer or the Ad headline writer."
+  - "You already have an ad and picture and only want a final check: use the Ad claims checker."
 you_give:
   - A brief with your buyer and goal
   - Your product facts, including what it does not do well
@@ -31,6 +35,27 @@ how_to_use:
   - Paste your product facts and the weaknesses buyers mention. Do not hide any.
   - Read the check before you make the pictures.
   - When it pauses, make both pictures in your image tool and run them as a small test.
+output_sample:
+  input:
+    - Your brief with your buyer and goal
+    - Your product facts, including what it does not do well
+    - Review lines that mention the flaw (optional)
+    - Rival claims (optional)
+    - Your brand file and buyer notes (optional)
+  prerequisites:
+    - An AI that can read the handoff folder, such as Claude Code or a Claude Project
+    - An image tool to make the pictures yourself when the workflow pauses
+  output:
+    - name: Flaw-first ad
+      contains: Your true weaknesses, the one buyers see, a flat and a plain version, the ad copy and hooks.
+    - name: Picture
+      contains: The quoted moment the old way stopped working, the picture type, an image prompt, a caption and a runner-up.
+    - name: Check
+      contains: Findings on shape, first second, claims against your proof, and a verdict on words and picture together.
+    - name: Pause
+      contains: A stop where you make both pictures and run them as a small test.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the flaw-first ad
     text: Lists your true weaknesses, picks the one buyers see, writes the flat claim and then the plain version, and checks the line holds in real use.

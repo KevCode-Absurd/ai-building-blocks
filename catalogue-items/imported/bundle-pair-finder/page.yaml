@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It counts patterns, then picks the useful ones.
 new_slug: bundle-pair-finder
 name: Bundle pair finder
-summary: Run it on your orders. Get the product pairs and triples people buy
-  together, as ideas for bundles and cross-sells.
+summary: Find which products your Shopify customers buy together. Get ranked pairs from real orders to plan bundles and cross-sells.
 job: run-your-store
 headline: Bundle pair finder
-subhead: Find which products your customers already buy together, so your
-  bundles and cross-sells start from real orders, not hunches. It only reads
-  data and changes nothing.
+subhead: Find which products your customers already buy together, so your bundles and cross-sells start from real orders, not hunches. It only reads data and changes nothing.
 explain: |
   Find which products your customers already buy together, so your bundles and cross-sells start from real orders, not hunches. It only reads data and changes nothing.
 
@@ -18,6 +15,10 @@ when:
   - You need ideas for "frequently bought together" suggestions.
   - You want to know which products sell together by more than chance.
   - You are planning a promotion and need product pairings.
+not_for:
+  - "Your store has few orders with more than one product: use a longer order window, or plan bundles by hand from what you know about your buyers."
+  - "You want to change prices, bundles or products in your store: this only reads orders, so make those changes yourself in Shopify admin."
+  - "You have no Shopify store or no access to its orders: pull an order export from your sales tool and look for repeat pairs by hand."
 you_give:
   - Your store address
   - How many days of orders to look at (optional)
@@ -29,8 +30,26 @@ you_get:
   - Bundle candidates
   - Cross-sell ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Check that you have the Shopify CLI signed in to your store with read access to orders and products.
+  - Open an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Paste the skill and give your store address. Add days, a collection or triples if you want them.
+  - Check the order count first. If few orders had two or more products, run it again with a longer window.
+  - Use the top pairs to plan bundles by hand. Pairs with high lift are the strongest ideas.
+output_sample:
+  input:
+    - Your store address
+    - How many days of orders to look at (optional)
+    - A collection to focus on (optional)
+    - Pair or triple size (optional)
+  prerequisites:
+    - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in to your store with read access to orders and products
+  output:
+    - name: Summary
+      contains: How many days and orders were checked, how many pairs were found, and how many met the minimum order count.
+    - name: Top pairs by lift
+      contains: Ranked product pairs, each with its order count, lift and how often one follows the other.
+    - name: Bundle candidates
+      contains: Pairs that sell together often and by more than chance, as ideas for bundles.
+    - name: fbt_pairs CSV file
+      contains: One row per pair with product names, support, confidence both ways, lift and average combined price.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It uses set formulas with checks.
 new_slug: pcb-trace-designer
 name: PCB trace designer
-summary: Give it impedance and layer needs. Get microstrip, stripline or paired
-  traces sized and checked.
+summary: Design a PCB trace for your impedance target. Get microstrip, stripline or differential pair widths, spacing and crosstalk checked in MATLAB.
 job: build-software
 headline: PCB trace designer
-subhead: Trace widths and spacings that hit your impedance target, sized and
-  checked in one pass. Ask for microstrip, stripline, coplanar or a differential
-  pair and get the geometry plus crosstalk figures.
+subhead: Trace widths and spacings that hit your impedance target, sized and checked in one pass. Ask for microstrip, stripline, coplanar or a differential pair and get the geometry plus crosstalk figures.
 explain: |
   Trace widths and spacings that hit your impedance target, sized and checked in one pass. Ask for microstrip, stripline, coplanar or a differential pair and get the geometry plus crosstalk figures.
 
@@ -18,6 +15,10 @@ when:
   - You are routing a differential pair and want to know the crosstalk.
   - You want per-unit-length values to feed a circuit model.
   - You are designing a substrate-integrated waveguide line.
+not_for:
+  - "You only need S-parameters or fields from an existing part: use the skill named matlab-analyze-em, or ask an RF engineer."
+  - "You do not have MATLAB with the RF PCB Toolbox: use your PCB tool's built-in impedance calculator, or ask your board maker for a stackup check."
+  - "You want to set up substrate or metal materials only: use the skill named matlab-manage-pcb-material."
 you_give:
   - Target impedance and frequency
   - Substrate and metal
@@ -29,8 +30,31 @@ you_get:
   - Crosstalk figures for pairs
   - A mesh and memory check before the full solve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Open an AI that can run MATLAB code. You need MATLAB and the RF PCB Toolbox, which are paid and need a licence.
+  - Paste the skill into the chat, or load the skill folder if your AI supports files.
+  - Give your target impedance, frequency, substrate, metal and line type. Add the aggressor spacing for crosstalk.
+  - Check the mesh and memory estimate before you let it run the full solve.
+  - Read the width, spacing and impedance first. Then check the crosstalk figures against your limit.
+output_sample:
+  input:
+    - Your target impedance and frequency
+    - Your substrate and metal
+    - "The line type: microstrip, stripline, coplanar or differential pair"
+    - The spacing to a nearby aggressor trace (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the RF PCB Toolbox, both paid products that need a licence
+    - Your substrate and conductor set up first, if you use custom materials
+  output:
+    - name: Line design
+      contains: The trace width and spacing sized to hit your impedance at your frequency.
+    - name: Impedance check
+      contains: The impedance of the finished line, so you can compare it with your target.
+    - name: Per-unit-length values
+      contains: Resistance, inductance, conductance and capacitance per unit length taken from the cross-section.
+    - name: Coupling matrices
+      contains: How strongly traces in a pair or group couple, for use in a circuit model.
+    - name: Crosstalk
+      contains: Near-end and far-end crosstalk in dB for a differential pair with a nearby aggressor.
+    - name: Mesh and memory check
+      contains: An estimate of solver size, run before the full solve so it does not run out of memory.

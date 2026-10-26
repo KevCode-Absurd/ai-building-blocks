@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Waveform choices trade off many technical limits.
 new_slug: radar-waveform-designer
 name: Radar waveform designer
-summary: Give it radar or sonar needs. Get a chosen waveform, its settings and
-  plots of how well it performs.
+summary: Pick the right radar or sonar waveform for your range, resolution and speed needs. Get its settings and plots of sidelobes and Doppler.
 job: build-software
 headline: Radar waveform designer
-subhead: A radar or sonar waveform chosen for your needs, with its settings and
-  plots showing how well it works. You see range resolution, sidelobes and how
-  it copes with moving targets.
+subhead: A radar or sonar waveform chosen for your needs, with its settings and plots showing how well it works. You see range resolution, sidelobes and how it copes with moving targets.
 explain: |
   A radar or sonar waveform chosen for your needs, with its settings and plots showing how well it works. You see range resolution, sidelobes and how it copes with moving targets.
 
@@ -18,10 +15,14 @@ when:
   - Sidelobes hide weak targets and you need to lower them.
   - You want to know how a waveform handles Doppler shift.
   - You are designing an FMCW radar and need the sweep settings.
+not_for:
+  - "You need a full radar system simulation, with beamforming or CFAR detection: use the MATLAB Phased Array toolbox examples for those, or ask an engineer."
+  - "You are working on communications signals, not sensing: use a communications toolbox or a specialist in that field."
+  - "You have no access to MATLAB with the Phased Array System Toolbox: ask a radar engineer to size the waveform by hand."
 you_give:
-  - Range, resolution and speed needs
-  - Radar, sonar or dual use
-  - MATLAB with Phased Array toolbox
+  - Your range, resolution and speed needs
+  - Whether it is radar, sonar or dual use
+  - Your MATLAB version, with the Phased Array System Toolbox
   - Bandwidth or pulse limits (optional)
 you_get:
   - Chosen waveform type with reasons
@@ -29,9 +30,32 @@ you_get:
   - Ambiguity function plots
   - Sidelobe and resolution figures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Phased Array System
-    Toolbox.
+  - Check you have MATLAB with the Phased Array System Toolbox. Some functions need R2023a or later, and radarWaveformGenerator needs R2026a.
+  - Open your AI and paste the skill, or upload the skill folder.
+  - Tell it your range, resolution and speed needs, and whether it is radar or sonar.
+  - Answer any questions it asks about your use. It may ask about range scale, target speed and limits.
+  - Run the MATLAB code it writes. Your AI needs to run MATLAB for this, or you run it yourself.
+  - Check the sidelobe figure and the ambiguity plots against your needs. Ask it to try another waveform if they miss.
+output_sample:
+  input:
+    - Your range, range resolution and target speed needs
+    - Whether it is radar, sonar or dual use
+    - Bandwidth or pulse limits (optional)
+    - Your MATLAB version and toolbox access
+  prerequisites:
+    - MATLAB with the Phased Array System Toolbox
+    - An AI that can run MATLAB code
+    - MATLAB R2026a if you want radarWaveformGenerator, as some functions need R2023a or later
+  output:
+    - name: Waveform choice
+      contains: The waveform type picked from the decision tree, with the reasons it fits your needs.
+    - name: Derived parameters
+      contains: Bandwidth, range resolution, PRF, maximum unambiguous range and maximum two-way Doppler worked out from your needs.
+    - name: Waveform settings
+      contains: The values to build the matching Phased Array waveform object.
+    - name: Transmit spectrum plot
+      contains: The spectrum of the waveform, with a mask if your case has one.
+    - name: Ambiguity function plots
+      contains: Plots showing how the waveform handles range and Doppler shift, including a zero-Doppler cut.
+    - name: Sidelobe check
+      contains: The peak sidelobe level measured and whether it meets your requirement, plus any receive weighting loss.

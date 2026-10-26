@@ -1,6 +1,6 @@
 new_slug: non-brand-search-campaign-builder
 name: "Non-brand Search campaign builder"
-summary: "Give it your products and search terms. Get themed ad groups, keywords, ad copy and extensions."
+summary: "Build a non-brand Google Search campaign from your products and search terms. Get themed ad groups, keywords, ad copy and free extras to add."
 job: run-google-ads
 thinking: medium
 thinking_why: "It organises keywords and writes short copy to fixed rules, which a mid-size model does well."
@@ -17,6 +17,10 @@ when:
   - Your Shopping campaigns work and you want Search to catch people typing what you sell.
   - You have converting search terms in a report and no Search campaign to use them.
   - You want to push a popular collection with its own Search ad group and page.
+not_for:
+  - "You want to reach people who already visited your site: use the Google remarketing campaign builder."
+  - "You want to write or score the first line of an ad: use the Ad first line writer and scorer."
+  - "You want a campaign for people who search your brand name: set up a separate branded Search campaign in Google Ads, or ask your ads person."
 
 you_give:
   - Your products and their key benefits
@@ -36,6 +40,30 @@ how_to_use:
   - Say your daily budget and whether the account has conversion data yet.
   - Check each ad group has one theme and one landing page that matches it.
   - Build it in Google Ads, then check search terms weekly and add negatives.
+output_sample:
+  input:
+    - Your products and their key benefits
+    - Converting search terms from Shopping or Performance Max (optional)
+    - Your offers and landing pages
+    - Your daily budget and whether the account has sales data
+    - Your brand name and spellings
+  output:
+    - name: Seed keywords
+      contains: A list of 20 to 30 short terms that describe what you sell.
+    - name: Intent sort
+      contains: Terms split into informational, buying and brand, with brand terms kept out of this campaign.
+    - name: Ad groups
+      contains: Each group has one theme, a landing page, keywords with match types, headlines and descriptions.
+    - name: Category campaign
+      contains: One ad group per collection with phrase keywords and brand terms as negatives, only if the category is popular.
+    - name: Assets to create once
+      contains: Sitelinks, callouts, promotions and snippets to add in Google Ads.
+    - name: Bid and match
+      contains: Which match type to use and why, based on your account stage.
+    - name: Review plan
+      contains: A weekly check of search terms and a schedule to refresh weak headlines.
+    - name: Checks missed and missing
+      contains: Any failed checks and any facts you did not give, marked MISSING.
 
 how_it_works:
   - title: Finds seed keywords

@@ -2,35 +2,110 @@ thinking: medium
 thinking_why: It picks methods that fit the question and the data.
 new_slug: data-analyst
 name: Data analyst
-summary: Give it a dataset and a question. Get evidence-based answers with
-  trends, tests and correlations.
+summary: Get a clear, number-backed answer to one question about your data file, with trends, tests, outliers and limits, from a CSV or Excel sheet.
 job: track-numbers
 headline: Data analyst
-subhead: Hand over a dataset and a clear question and get an answer backed by
-  numbers, with the limits stated. It uses Python statistics, so results are
-  checkable rather than guesses.
+subhead: Give it a data file and one question, such as "is last month's dip real?" It runs the checks in Python on your own numbers. You get a short findings note with ranked results and the limits of what the data can say.
 explain: |
-  Hand over a dataset and a clear question and get an answer backed by numbers, with the limits stated. It uses Python statistics, so results are checkable rather than guesses.
+  A guess about your numbers is cheap. A wrong guess is not. This data analyst skill answers one defined question from your file, using tests you can check, so you are not left with a hunch.
 
-  The skill loads the data and checks its shape and types. It then computes averages, spread and skew, and looks at trends over time with rolling averages and seasonal splits. It tests relationships with correlation, and uses t-tests, chi-square or ANOVA when a difference needs proof, at a significance level of 0.05 unless you change it. It flags outliers using the IQR rule and z-scores, then writes up findings ranked by impact, with caveats such as small samples. It needs Python with common data libraries.
+  It loads the file and checks that it read correctly. Then it works out averages, spread and skew, and looks at trends over time. It tests whether two groups really differ, with a t-test, chi-square or ANOVA, at a 0.05 level unless you pick another. It flags outliers and says if they look like errors or real events.
+
+  The result is a findings note ranked by how much each point matters. Every number comes from your file. Each finding comes with its caveat, such as a small sample or a hidden third factor.
+
+  This skill comes from the awesome-ai-agent-skills collection by Burhan Sebin, shared under MIT. It needs an AI that can run Python.
 when:
   - You want to know if last month's sales dip is real or just noise.
   - You need to test whether two customer groups behave differently.
-  - You have survey data and want the strongest relationships in it.
+  - You have survey results and want the strongest links between answers.
   - You need a short findings note with numbers for a decision.
+not_for:
+  - You just got a file and have no question yet. Use the New dataset explorer first.
+  - You are checking an A/B test for a ship or hold call. Use the Experiment result analyst.
+  - You want a forecast with ranges. Use the Trend and forecast analyst.
+  - Your file is too large for a normal sheet. Use the Fast data table analyst.
 you_give:
-  - A dataset file
-  - The question to answer
-  - Columns to focus on (optional)
-  - Significance level (optional)
+  - A data file, such as a CSV, Excel, Parquet or JSON file
+  - The one question you want answered
+  - The columns to focus on (optional)
+  - A stricter or looser significance level than 0.05 (optional)
 you_get:
-  - Summary statistics
-  - Trend and correlation results
-  - Hypothesis test outcomes
-  - Ranked findings with caveats
+  - A one or two sentence answer, and how sure it is
+  - A table of key numbers, such as averages, trends and correlations
+  - Test results with p-values and the size of the effect
+  - Ranked findings, each with its caveat
+  - Outliers and data problems, and what to do next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open spreadsheets.
+  - Add this skill to your AI, or paste SKILL.md into a new chat. Use an AI that can open files and run Python, such as Claude with code running or ChatGPT with data analysis.
+  - Attach your data file and ask one question in plain words. Add the columns that matter if you know them.
+  - Check the first section of the answer. It should show the right row count and the columns you expected. If not, fix the file before you read on.
+  - Read the answer line and the ranked findings. Ask "what would change this answer?" for the top finding.
+  - Use the next step at the end. Run the test it suggests, or share the note with the person making the decision.
+how_it_works:
+  - title: Load and check
+    text: It reads the file and checks the shape, the column types and the first and last rows for read errors.
+  - title: Describe each column
+    text: It works out averages, spread and skew for numbers, and counts for categories.
+  - title: Find trends
+    text: It uses rolling averages, percent change and seasonal splits for dates, and group totals for categories.
+  - title: Test links and differences
+    text: It checks correlations, then runs t-tests, chi-square or ANOVA, and reports p-values with effect sizes.
+  - title: Flag outliers
+    text: It marks odd values with the IQR rule and z-scores, then asks if they are errors or real events.
+  - title: Write the note
+    text: It ranks findings by impact and states the limits, such as small samples or other causes.
+output_shape: |-
+  QUESTION AND DATA
+    <question> | <file> | <rows and columns> | <what was fixed or dropped>
+
+  ANSWER
+    <one or two sentences> | <how sure>
+
+  KEY NUMBERS
+    <statistic or test> | <value> | <what it means>
+
+  FINDINGS, RANKED
+    1. <finding> | <number> | <what to decide> | <caveat>
+
+  OUTLIERS AND DATA PROBLEMS
+    <value> | <likely cause> | <what was done>
+
+  LIMITS AND NEXT STEP
+    <sample size, other causes> | <the next test or action>
+output_sample:
+  input:
+    - Your data file, such as a CSV or Excel sheet
+    - The one question you want answered
+    - The columns to focus on (optional)
+  prerequisites:
+    - An AI that can open files and run Python
+  output:
+    - name: Question and data
+      contains: Your question, the file used, its size, and anything fixed or dropped.
+    - name: Answer
+      contains: One or two plain sentences that answer the question, with how sure it is.
+    - name: Key numbers
+      contains: Averages, trends, correlations and test results, with p-values and effect sizes.
+    - name: Findings, ranked
+      contains: Each finding with its number, what to decide and its caveat.
+    - name: Outliers and data problems
+      contains: Odd values, their likely cause, and what was done about them.
+    - name: Limits and next step
+      contains: Sample size and other causes to rule out, plus the next test or action.
+works_best_with:
+  tools:
+    - name: Claude with code running, or ChatGPT with data analysis
+      why: They can open your file and run the Python tests, so every number is computed, not guessed.
+  inputs:
+    - A short list of what each column means
+    - The decision the answer will feed
+    - A second file from an earlier period, to compare with (optional)
+terms:
+  - term: P-value
+    meaning: How likely a result this big is if nothing is really going on. Small means it is probably real.
+  - term: Correlation
+    meaning: How closely two numbers move together. It does not show that one causes the other.
+  - term: Outlier
+    meaning: A value far from the rest. It may be a mistake or a real event.
+  - term: Effect size
+    meaning: How big a difference is, not just whether it exists.

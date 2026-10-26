@@ -1,0 +1,83 @@
+name: Detection rule and fixture builder
+headline: Detection rule and fixture builder
+summary: Build a detection rule from one threat behavior and redacted logs. You get test cases and a report that says which checks were actually run.
+subhead: Give your AI one threat behavior and some redacted logs. It drafts one detection rule and a set of test events. It then reports which tests it really ran and which it did not.
+job: secure-code
+thinking: high
+thinking_why: The task compares evidence and alternatives. Its output still needs the stated checks.
+explain: |-
+  Draft one detection rule with positive, negative and evasion fixtures before SIEM review
+
+  A repeatable specialist method with non-obvious field, translation and exception checks. A skill can load the rule-language and fixture contract when needed; a generic security persona or one-line prompt would omit essential obligations.
+
+  This task uses selected methods from Threat Detection Engineer. It is a focused adaptation. The original agents remain available: [Threat Detection Engineer agent](https://useaiblocks.com/agents/agency-security-threat-detection-engineer).
+when:
+  - You have one behavior to catch and need a first rule draft.
+  - You want test events for a rule before your team reviews it.
+  - You need to see which log fields a rule depends on.
+  - You want a clear record of what was tested and what was not.
+not_for:
+  - "You want to deploy a rule or switch off alerts: use your SIEM team's normal change and review process."
+  - "You need to test against a live system or run an attack: use an approved test lab and your security team."
+  - "You have no logs or field list yet: first ask your logging team which fields your log source records."
+you_give:
+  - The behavior you want to detect, in plain words.
+  - Your rule language and its version, such as Sigma or KQL.
+  - Redacted events that show the behavior.
+  - Redacted normal events that look similar.
+  - Your list of log fields and known log gaps (optional).
+you_get:
+  - A draft detection rule.
+  - A map from each rule condition to a log field.
+  - Test events that should match, should not match, or look similar, with expected results.
+  - Real test results, or a clear list of checks that were not run.
+how_to_use:
+  - Open Claude, ChatGPT or Gemini and add the skill folder or paste SKILL.md.
+  - Paste the behavior, your rule language and version, and your redacted events.
+  - Answer any question about missing log fields. Do not guess them.
+  - Read the field map and the fixture list. Check each expected result.
+  - If your AI can run code and has your compiler, let it run the tests. Otherwise run the test plan yourself.
+  - Send the rule and evidence table to your SIEM team for peer review.
+output_sample:
+  input:
+    - The behavior you want to catch, in plain words
+    - Your rule language and its version, such as Sigma or KQL
+    - Redacted events that show the behavior, and normal events that look similar
+    - Your list of log fields and any known gaps in your logs (optional)
+  prerequisites:
+    - Permission to monitor the systems the rule covers
+    - A compiler or replay tool for your rule language, if you want real test results (optional)
+  output:
+    - name: Rule draft
+      contains: One detection rule written in your chosen rule language and version.
+    - name: Field map
+      contains: Each rule condition matched to a real log field, or marked as an open gap.
+    - name: Fixture manifest
+      contains: Test events with an ID, the expected match or non-match, the reason and the condition tested.
+    - name: Exception check
+      contains: Tests showing that a fake trusted tool name in a command cannot skip the rule.
+    - name: Evidence table
+      contains: Each test with expected result, observed result, PASS, FAIL or NOT_RUN, and revision.
+    - name: Gaps and false-positive notes
+      contains: Missing fields, open assumptions and the tradeoffs in any exceptions.
+how_it_works:
+  - title: 1. A rule draft and field-to-condition map
+    text: Every rule condition maps to supplied telemetry or an explicit unresolved requirement.
+  - title: 2. Positive, negative and lookalike fixtures with expected results
+    text: Required fixtures and fields block a validation pass when absent.
+  - title: 3. Actual compile/replay evidence or an explicit list of unrun checks
+    text: A lookalike trusted-tool string cannot silently trigger an allowlist exemption.
+judge:
+  - Every rule condition maps to supplied telemetry or an explicit unresolved requirement.
+  - Required fixtures and fields block a validation pass when absent.
+  - A lookalike trusted-tool string cannot silently trigger an allowlist exemption.
+  - Compilation/replay statuses describe actual target-engine checks, not guessed success.
+test:
+  - Try a small supplied case whose facts and result you can check.
+  - Omit one required fact and check that the affected work stays unresolved.
+tweaks:
+  - what: Task scope
+    how: State the intended result, available evidence and actual tools before starting.
+improve:
+  - Keep useful corrections with the task evidence for the next run.
+terms: []

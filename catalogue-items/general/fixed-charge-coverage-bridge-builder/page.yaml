@@ -1,48 +1,118 @@
 new_slug: fixed-charge-coverage-bridge-builder
 name: Fixed charge coverage bridge builder
 headline: Fixed charge coverage bridge builder
-summary: A fixed charge cash bridge and contractual headroom
+summary: Work out your fixed charge coverage ratio and the cash above your lender's minimum, from cash, taxes, upkeep spending, interest, repayments and rent.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A fixed charge cash bridge and contractual headroom. Share contract-defined cash before rent and financing charges, taxes, maintenance capital, interest, principal, rent and required coverage.
+subhead: Give it your cash before fixed charges and the loan's rules for what counts. It takes off the taxes and upkeep spending the contract allows, adds up interest, loan repayments and rent, and divides one by the other. You get the fixed charge coverage ratio, the cash needed at your minimum and the gap.
 explain: |-
-  A fixed charge cash bridge and contractual headroom.
+  Many loan agreements set a minimum fixed charge coverage ratio. It asks one question: after taxes and upkeep, is there enough cash to pay interest, scheduled loan repayments and rent? This skill builds that fixed charge coverage calculation as a bridge you can follow line by line.
 
-  Credit fixed charges. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+  Contracts define the pieces in different ways. Some start from cash after rent. Some allow only certain taxes. The skill asks which rules apply and checks that rent is counted once, not twice and not left out. If a definition or a figure is missing, it stops that line and says so. It never fills a gap with zero.
+
+  It looks at one period at a time. It checks the arithmetic and the bridge. It does not read your contract for you, and it does not decide whether a lender should lend.
 when:
-  - You need a fixed charge cash bridge and contractual headroom.
-  - You work on credit fixed charges and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your loan agreement has a minimum fixed charge coverage ratio and you want to know where you stand before the next report.
+  - Your lender asks for a coverage calculation and you need one that shows every step.
+  - You are weighing a new lease or more debt and want to see how much cash room is left above the minimum.
+  - Someone says the ratio changed and you need to see which line moved it.
+not_for:
+  - You need coverage for each quarter or year of a plan. Use the Loan covenant cash coverage checker.
+  - You want to test cash over the whole life of a loan, with discounting. Use the Loan lifetime cash coverage checker.
+  - You want to know whether debt is too high against earnings. Use the Net debt covenant checker.
+  - You want a call on whether the loan is safe. This gives numbers, not a decision. Use the Lender safety verdict writer on its results.
 you_give:
-  - Contract-defined cash before rent and financing charges, taxes, maintenance capital, interest, principal, rent and required coverage.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Cash before fixed charges for the period, as your loan defines it. Take it from your accounts.
+  - Cash taxes and upkeep (maintenance) spending for the same period, if the contract takes them off
+  - Interest, scheduled loan repayments (principal) and rent for the period, from your loan schedule and lease
+  - The minimum ratio in the loan agreement, for example 1.2 times
+  - The contract clause that defines fixed charges (optional, but it settles what counts)
+  - The period end date, the currency and whether figures are in units, thousands or millions
 you_get:
-  - A fixed charge cash bridge and contractual headroom.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A bridge from cash before fixed charges down to cash available for fixed charges
+  - Total fixed charges, split into interest, principal and rent
+  - The coverage ratio next to your required minimum
+  - The cash needed at the minimum, and the headroom above it or the shortfall below it
+  - A list of every input marked MISSING and every check that could not run
+  - A workbook version of the same lines, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste the text of SKILL.md into a new chat.
+  - Paste your figures for one period, the minimum ratio, and the date, currency and units. Add the contract clause if you have it.
+  - Say whether your cash figure is before or after rent. The skill needs to know so it does not count rent twice.
+  - Check the bridge against your own records, line by line. Rent should appear once, and every deduction should be one the contract allows.
+  - Read MISSING and CHECKS MISSED before you use the ratio. Fix those first.
+  - For a workbook, use an AI that can make files. The pack also has a practice workbook and a small calculator that needs Node.js 20 or later.
 how_it_works:
-  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
-    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
-  - title: 2. Identify which fixed charges are included and source whether rent has already been deducted from the numerator
-    text: Identify which fixed charges are included and source whether rent has already been deducted from the numerator.
-  - title: 3. Deduct only contract-eligible taxes and maintenance spending from cash-before-fixed-charges; total interest, scheduled principal and rent separately
-    text: Deduct only contract-eligible taxes and maintenance spending from cash-before-fixed-charges; total interest, scheduled principal and rent separately.
-  - title: 4. Compute coverage and required cash at the approved floor, then reconcile numerator deductions and denominator components to source records
-    text: Compute coverage and required cash at the approved floor, then reconcile numerator deductions and denominator components to source records.
+  - title: 1. Map the sources
+    text: Lists each figure with its source, date, currency and units. Marks any gap before it calculates.
+  - title: 2. Check the definition
+    text: Finds which charges count as fixed charges and whether rent is already out of the cash figure.
+  - title: 3. Build the bridge
+    text: Takes off only the taxes and upkeep spending the contract allows. Adds interest, scheduled principal and rent as separate lines.
+  - title: 4. Test the ratio
+    text: Divides cash available by fixed charges, then works out the cash needed at your minimum and the gap.
+  - title: 5. Reconcile
+    text: Ties each deduction and each fixed charge back to a record and explains any difference.
+  - title: 6. Report what is missing
+    text: Lists every MISSING input and every check that failed or could not run.
 output_shape: |-
-  A fixed charge cash bridge and contractual headroom.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Coverage: <ratio> times against a required <minimum> times | Headroom: <amount above or below the minimum>
+
+  SCOPE AND DATED SOURCES
+  <period, currency, units; each figure with its source and date>
+
+  INPUTS AND ASSUMPTIONS
+  <figures given, each assumption, and the contract wording used>
+
+  COVERAGE BRIDGE
+  Cash before fixed charges: <amount>
+  Less allowed cash taxes: <amount>
+  Less allowed maintenance spending: <amount>
+  Cash available for fixed charges: <amount>
+
+  FIXED CHARGES
+  Interest: <amount> | Scheduled principal: <amount> | Rent: <amount> | Total: <amount>
+
+  COVERAGE AND HEADROOM
+  Ratio: <available / total fixed charges> | Cash needed at the minimum: <total x minimum> | Headroom: <available less needed>
+
+  RECONCILIATIONS
+  <each deduction and charge tied to a record, with differences explained>
+
+  FILE CHECK
+  <what was checked in the workbook or calculator, or that none was made>
+
+  MISSING
+  <inputs not given>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+output_sample:
+  input:
+    - Cash before fixed charges for one period, as your loan defines it
+    - Cash taxes, upkeep spending, interest, scheduled principal and rent for that period
+    - The minimum coverage ratio in your loan agreement
+    - The contract clause that defines fixed charges (optional)
+  prerequisites:
+    - Your loan agreement or the lender's definitions, so the right charges are counted
+    - An AI that can make files, if you want the workbook (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency and units, and where each figure came from.
+    - name: Inputs and assumptions
+      contains: Every figure you gave and each assumption, kept apart from the contract's own terms.
+    - name: Coverage bridge
+      contains: Cash before fixed charges, less allowed taxes and upkeep spending, down to cash available.
+    - name: Fixed charges
+      contains: Interest, scheduled principal and rent, listed separately and added up.
+    - name: Coverage and headroom
+      contains: The ratio, the cash needed at your minimum, and the cash above or below it.
+    - name: Reconciliations
+      contains: Each deduction and charge tied to a record, with any difference explained.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not given, and every check that failed or could not run, or "none".
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -64,15 +134,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: It does the arithmetic and shows each line, so you can check it against your records.
+    - name: A spreadsheet app and an AI that can make files
+      why: Builds, recalculates and reopens the workbook version of the bridge.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small calculator in the pack on your own figures.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Dated records from your accounts, your loan schedule and your lease.
+    - The loan clause that defines fixed charges, and the name of someone who will review the result.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Fixed charge coverage ratio
+    meaning: How many times your cash covers interest, scheduled loan repayments and rent. 1.5 times means you have 1.5 in cash for every 1 you owe.
+  - term: Headroom
+    meaning: The cash left above the minimum the loan requires. A negative number is a shortfall.
+  - term: Principal
+    meaning: The part of a loan payment that pays down the loan itself, not the interest.
+  - term: Cash before fixed charges
+    meaning: Cash left after running costs but before interest, loan repayments and rent.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Checking that two records agree and explaining any gap between them.

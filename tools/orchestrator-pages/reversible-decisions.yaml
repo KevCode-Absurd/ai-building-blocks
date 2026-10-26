@@ -1,6 +1,6 @@
 new_slug: reversible-decisions
 name: "Sort decisions by reversibility and fund long shots"
-summary: "Paste a choice you are stuck on. Get it sorted by reversibility, a capped long-shot test and a keep-or-cut review."
+summary: "Sort a choice you are stuck on as easy or hard to undo, plan a capped long-shot test, then review each program: keep, cut or double down."
 job: plan-strategy
 thinking: high
 thinking_why: "It sorts decisions, sets limits on a risky bet and judges results later. Give it your strongest model."
@@ -17,12 +17,16 @@ when:
   - You are stuck on a choice and can't tell whether it needs a week of debate or an hour.
   - You have an idea with a low chance and a big payoff, and you want to try it without risking the business.
   - You run several programs, such as channels or products, and need to decide which to keep, cut or push.
+not_for:
+  - "You face a daily operational call: use a normal review meeting or ask the person who owns that task."
+  - "You need to rank many big choices by importance: use the Decision priority planner."
+  - "You want a group to weigh in on a choice: use the Group decision reviewer."
 
 you_give:
   - The choice you are stuck on, and who it touches
-  - A bet you want to try, with what a big win would look like
+  - A long-shot bet you want to try, and what a big win would look like
   - A sheet of what each of your programs cost and what it returned, for the last step
-  - Time to run the small test and track its cost and results
+  - Customer signals for each program, such as repeat purchases and referrals (optional)
 
 you_get:
   - A sort of the choice as a one-way or two-way door, with the process that fits it
@@ -35,6 +39,24 @@ how_to_use:
   - Paste the choice you are stuck on. It sorts it and plans the long-shot test.
   - It stops after the plan. Run the small test and write down its cost and results.
   - Bring the results and your program numbers back and say "carry on from step 3".
+output_sample:
+  input:
+    - The choice you are stuck on, and who it touches
+    - A long-shot bet you want to try, and what a big win looks like
+    - A sheet of what each program cost and what it returned (for the last step)
+    - Customer signals for each program, such as repeat purchases and referrals (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Time to run the small test yourself and track its cost and results
+  output:
+    - name: "Step 1: Decision sort"
+      contains: The choice marked as a one-way or two-way door, with the owner, review date and what is still needed.
+    - name: "Step 2: Long-shot plan"
+      contains: The bet, honest odds and payoff, the most you can lose, one owner, a short build and what counts as learning.
+    - name: "Step 3: Keep-or-cut review"
+      contains: Each program with its cost, return and customer signals, marked keep, cut or double down, with the reason.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Sort the decision

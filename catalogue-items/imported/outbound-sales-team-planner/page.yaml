@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It fits a known model of roles and steps to your business.
 new_slug: outbound-sales-team-planner
 name: Outbound sales team planner
-summary: Describe your sales. Get roles, a lead flow and a repeatable outreach
-  process for outbound B2B sales.
+summary: Plan your outbound sales team. Get a process score, roles for prospectors and closers, and a repeatable cold email routine for B2B sales.
 job: sell-and-negotiate
 headline: Outbound sales team planner
-subhead: A setup where some people find leads and others close them, with an
-  outreach routine that makes next quarter's pipeline easier to predict. It
-  follows the Predictable Revenue method.
+subhead: A setup where some people find leads and others close them, with an outreach routine that makes next quarter's pipeline easier to predict. It follows the Predictable Revenue method.
 explain: |
   A setup where some people find leads and others close them, with an outreach routine that makes next quarter's pipeline easier to predict. It follows the Predictable Revenue method.
 
@@ -18,6 +15,10 @@ when:
   - You are hiring your first sales reps and need roles.
   - You want pipeline you can forecast three months out.
   - Handoffs between reps and closers keep dropping leads.
+not_for:
+  - You only sell to consumers or get leads only from inbound. Ask a marketing expert or use a marketing skill instead.
+  - You need to design or price what you sell. Use the Hundred million offers skill from the same library, or work out your offer first.
+  - You want to learn the psychology behind why people say yes. Use the Influence psychology skill instead.
 you_give:
   - What you sell and to whom
   - Current sales team and process
@@ -29,7 +30,28 @@ you_get:
   - A lead flow and handoff plan
   - An outreach routine to repeat
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI what you sell, who you sell to, and how your team finds and closes leads today.
+  - Add your lead sources and your revenue goal if you have one.
+  - Read the score first, then the checks that block a 10.
+  - Ask your AI to write the referral email and follow-up schedule for your buyer.
+  - Treat the benchmark numbers as rough rules of thumb. Check them against your own market. Tools like Sales Navigator, ZoomInfo, Apollo and Clearbit need a paid plan, and the plan works without them.
+output_sample:
+  input:
+    - What you sell and who you sell to
+    - Your current sales team and how they find and close leads
+    - Where your leads come from, and how many
+    - Your revenue goal (optional)
+  output:
+    - name: Process score
+      contains: A score from 0 to 10, two points for each of five checks, and the checks that block a 10.
+    - name: Lead type mix
+      contains: How your leads split across seeds from referrals, nets from marketing and spears from outbound, and where to invest.
+    - name: Role plan
+      contains: "What each role does and how it is measured: prospecting rep, closer and customer success."
+    - name: Cold email routine
+      contains: A referral email that asks who the right person is, and a follow-up schedule from day 1 to day 30.
+    - name: Qualification and handoff
+      contains: How reps check authority, need, urgency and money, and what they pass to the closer.
+    - name: Pipeline math
+      contains: A way to work backward from your revenue goal to deals, opportunities and emails needed.

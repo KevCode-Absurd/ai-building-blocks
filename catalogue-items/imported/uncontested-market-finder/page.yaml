@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It has to weigh your whole market and find gaps nobody is serving.
 new_slug: uncontested-market-finder
 name: Uncontested market finder
-summary: Describe your market. Get a strategy canvas showing what to cut, raise
-  and add to stand apart.
+summary: Describe your crowded market and rivals. You get a strategy canvas, cut, reduce, raise and create lists, and a score to find an uncontested market.
 job: plan-strategy
 headline: Uncontested market finder
-subhead: A strategy canvas that shows where you copy your rivals and where you
-  could stand apart in a space with no fights. You see what to cut, what to
-  reduce, what to raise and what to create.
+subhead: A strategy canvas that shows where you copy your rivals and where you could stand apart in a space with no fights. You see what to cut, what to reduce, what to raise and what to create.
 explain: |
   A strategy canvas that shows where you copy your rivals and where you could stand apart in a space with no fights. You see what to cut, what to reduce, what to raise and what to create.
 
@@ -18,6 +15,10 @@ when:
   - You are planning a new product and want a different angle.
   - You want to find people who do not buy anything in your category yet.
   - You need a clear picture of how you differ from rivals.
+not_for:
+  - "You only want to tweak the price of one product: work it out with a simple cost and margin sheet instead."
+  - "You already have a finished strategy and want to test it: use the Good strategy bad strategy skill, not this one."
+  - "You need a plan to get a tech product past early buyers: use a go-to-market plan or ask a marketing advisor."
 you_give:
   - Your market and main rivals
   - What buyers compare you on
@@ -29,7 +30,26 @@ you_get:
   - A look at non-customers
   - A score with moves to improve it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the full skill text as your first message.
+  - Describe your market, your main rivals and what buyers compare you on.
+  - Add your costs and who does not buy in your category, if you know them.
+  - Ask for the strategy canvas, the four actions lists and the score.
+  - Check that the factors match how buyers really choose. Fix any that are wrong, then ask your AI to redo the lists.
+  - No code, files or web access are needed. The reference files are optional.
+output_sample:
+  input:
+    - Your market and your main rivals
+    - What buyers compare you on, such as price, features or service
+    - Your costs and strengths (optional)
+    - Who does not buy in your category (optional)
+  output:
+    - name: Strategy canvas
+      contains: A table of the factors your market competes on, with the industry level, your level and each rival's level.
+    - name: Four actions grid
+      contains: Lists of what to eliminate, reduce, raise and create to stand apart and cut cost.
+    - name: Non-customers
+      contains: Three groups who do not buy from you yet, and what would win each one.
+    - name: Score out of 10
+      contains: A score from the five diagnostic questions, with the questions your strategy fails.
+    - name: Moves to reach 10
+      contains: The specific changes needed to lift your score.

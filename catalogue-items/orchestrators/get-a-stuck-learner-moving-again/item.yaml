@@ -14,9 +14,9 @@ outputs:
   - {type: plan}
 uses: [stuck-point-diagnosis-coach, step-by-step-hint-writer, confidence-building-task-ladder, study-session-planner-and-review]
 steps:
-  - {uses: stuck-point-diagnosis-coach, note: "Where the learner's thinking breaks, with the evidence from their own attempts, and the earlier step they are missing."}
-  - {uses: step-by-step-hint-writer, note: "Hints in order, each revealing one step, so the learner does the work and the last hint still does not give the answer."}
-  - {uses: confidence-building-task-ladder, note: "Tasks from where the learner can succeed today up to the hard problem, each one step harder, with what success looks like."}
+  - {uses: stuck-point-diagnosis-coach, note: "Where the learner's thinking breaks, with the evidence from their own attempts, and the earlier step they are missing. Hands the hint writer the diagnosis."}
+  - {uses: step-by-step-hint-writer, note: "Hints in order, each revealing one step, so the learner does the work and the last hint still does not give the answer. Hands the ladder the hard problem to climb toward."}
+  - {uses: confidence-building-task-ladder, note: "Tasks from where the learner can succeed today up to the hard problem, each one step harder, with what success looks like. Hands the planner the ladder."}
   - {uses: study-session-planner-and-review, note: "Short sessions across the week, each with a goal from the ladder and a review at the end, and what to do if a session fails."}
 origin: own
 version: 1.0.0

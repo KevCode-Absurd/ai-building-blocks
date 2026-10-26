@@ -1,17 +1,21 @@
 slug: the-monitoring-loop-always-watching-implementation-planner
 name: Agent anomaly monitoring builder
-summary: Build checks for unusual changes in your data. Set local baselines, quiet periods, alert rules and next checks.
+summary: "Plan checks that spot unusual changes in your numbers. Set baselines, quiet periods and alert rules so you get few, useful alerts. Draft only."
 category: general
 type: skill
 role: make
 job: ops
 level: intermediate
 inputs:
+  - type: brief
+    required: true
   - type: codebase
-    required: true
+    required: false
 outputs:
-  - type: code_change
+  - type: plan
     required: true
+  - type: code_change
+    required: false
 uses: []
 package_files: all
 origin: own

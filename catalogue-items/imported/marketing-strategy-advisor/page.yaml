@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set frameworks and tailors them to you.
 new_slug: marketing-strategy-advisor
 name: Marketing strategy advisor
-summary: Describe your growth stage. Get a positioning check, growth model
-  choice and a budget split by channel.
+summary: "Plan your marketing strategy: check your positioning, pick a growth model and split your budget by channel, worked back from your revenue target."
 job: plan-strategy
 headline: Marketing strategy advisor
-subhead: Give it your revenue target, stage, current channels and your spend,
-  lead and customer numbers. It checks your positioning, picks a growth model
-  and works the budget backwards from the target. You get the positioning check,
-  a growth model, a budget split by channel, key numbers and warning signs.
+subhead: Give it your revenue target, stage, current channels and your spend, lead and customer numbers. It checks your positioning, picks a growth model and works the budget backwards from the target. You get the positioning check, a growth model, a budget split by channel, key numbers and warning signs.
 explain: |
   Marketing advice from the seat of a chief marketing officer. You describe your stage and goals, and it checks your positioning, picks a growth model and splits your budget across channels.
 
@@ -19,6 +15,10 @@ when:
   - A board or partner is asking for a marketing budget and its logic.
   - You are unsure who your best customer is.
   - You wonder if a channel is worth the money it costs.
+not_for:
+  - "You want ads, emails or posts written: ask your AI for that copy directly, since this plans strategy and does not write content."
+  - "You want to run or tune a live campaign: use your ad platform's own reports and a person who runs it day to day."
+  - "You need a full financial forecast: ask your finance lead or accountant, because this only models marketing spend and leads."
 you_give:
   - Your revenue target
   - Your stage and current channels
@@ -31,7 +31,30 @@ you_get:
   - Key numbers to track
   - A list of warning signs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your revenue target, stage, current channels, spend, lead and customer numbers. Add your positioning notes if you have them.
+  - "Say which answer you want: a positioning check, a growth model, or a budget split."
+  - If a number is missing, let your AI ask for it. Do not let it guess.
+  - Read the budget split and check each assumption against your own data. Fix any that are wrong and ask for a rerun.
+  - "Optional: if your AI can run code, ask it to run the budget and growth scripts. If not, skip them. It will do the sums in chat."
+output_sample:
+  input:
+    - Your revenue target and how long you have to hit it
+    - Your stage and the channels you use now
+    - Your spend, leads and customer numbers, ideally by channel
+    - Your best customers and where they came from (optional)
+    - Your company notes or positioning text (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Python is only needed to run the two budget scripts. You can skip them and let your AI do the sums.
+  output:
+    - name: Positioning check
+      contains: Answers to who you are for, why they choose you, how they find you and whether it works.
+    - name: Growth model choice
+      contains: A pick between product-led, sales-led, community-led or a mix, with the reason it fits your product and customer.
+    - name: Channel budget split
+      contains: Customers needed, leads needed at each step, and what each channel should cost, worked back from your target.
+    - name: Key numbers to track
+      contains: Cost to win a customer by channel, payback time, and lifetime value against cost, with healthy targets.
+    - name: Warning signs
+      contains: Problems spotted in your setup, such as no clear ideal customer or one blended cost number.

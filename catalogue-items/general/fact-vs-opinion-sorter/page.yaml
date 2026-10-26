@@ -1,6 +1,6 @@
 new_slug: fact-vs-opinion-sorter
 name: "Fact and opinion sorter"
-summary: "Paste any text that persuades. Get every line sorted into fact, inference or opinion, with what to check."
+summary: "Sort a persuasive article or pitch into fact, inference and opinion. See which lines to check before you trust it or act on it."
 job: research-topics
 thinking: medium
 thinking_why: "It labels from how each sentence is written, not from what it believes, and that takes care."
@@ -17,6 +17,10 @@ when:
   - "A supplier's pitch or a vendor's case study is making a strong argument and you want to know what it rests on."
   - "An article is going round your team as if it settled something."
   - "You are writing something persuasive yourself and want to see how much is opinion."
+not_for:
+  - "You want to know if a claim is true: check the sources yourself, or ask a person who knows the field."
+  - "You need to summarise what a study or source says: use the Source note summariser."
+  - "You want a quick read of a short, plain message with no argument in it: just read it, no sort needed."
 
 you_give:
   - "The text in full"
@@ -33,6 +37,28 @@ how_to_use:
   - "Say what you are trying to decide."
   - "Read DRESSED UP first. Those are the lines that were working on you."
   - "Check the CHECK FIRST facts before you act on the text."
+output_sample:
+  input:
+    - The full text of the article, pitch, report or post
+    - The main claim, if you can tell (advised)
+    - What you need to decide (optional)
+  output:
+    - name: MAIN CLAIM
+      contains: The one thing the text wants you to believe or do, marked if your AI had to infer it.
+    - name: SORTED
+      contains: Each sentence that carries weight, quoted and labelled fact, inference, opinion or prediction.
+    - name: DRESSED UP
+      contains: Opinion lines that use fact words like studies show, with no source or number.
+    - name: THE CHAIN
+      contains: A short paragraph on what the main claim rests on and where it leans on opinion.
+    - name: CHECK FIRST
+      contains: Three to six facts that would sink the claim if false, with how to check each.
+    - name: COUNT
+      contains: Tallies of sourced facts, unsourced facts, inferences, opinions and predictions.
+    - name: MISSING
+      contains: Parts of the text that were cut off or unclear.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Finds the main claim"

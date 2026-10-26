@@ -1,6 +1,6 @@
 new_slug: map-your-rivals-and-write-a-message-they-cannot-answer
 name: Map your rivals and write a message they cannot answer
-summary: Give it your product and rivals. Get a position map, the words nobody owns and a message you can defend.
+summary: Find a rival-proof message for your product. Give it your rivals. Get a position map, open words and ranked messages you can prove.
 job: study-competitors
 thinking: medium
 thinking_why: Each step reads the one before, but none needs long sums. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - Your site and ads sound like everyone else's in your category.
   - A bigger rival keeps winning on the same word.
   - You are about to write a new tagline, landing page or ad set and want the message settled first.
+not_for:
+  - "Your brand has no rivals yet, or no strengths you can prove: build your facts first with the Brand profile builder."
+  - "You only want to place rivals on a map: use the Competitor positioning mapper."
+  - "You already know your message and need a one-line statement: use the Brand positioning sentence writer."
 you_give:
   - Your product, who it is for and the rivals you worry about
   - What buyers say about you and them, from reviews or calls (optional)
@@ -27,13 +31,30 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - List five or more rivals, including the cheap option and doing nothing.
   - Only give strengths you can show with a number, a policy or a review. It drops the rest.
+output_sample:
+  input:
+    - Your product and who it is for
+    - Five or more rivals, including the cheap option and doing nothing
+    - Buyer quotes from reviews or calls (optional)
+    - Your brand file or a list of strengths you can prove (optional)
+  prerequisites:
+    - An AI that can read the handoff folder, such as Claude Code or a Claude Project with files
+  output:
+    - name: "Step 1: Position map"
+      contains: Every alternative placed on two axes, with crowded and open corners marked and the corner to own.
+    - name: "Step 2: Owned words"
+      contains: The word each rival owns, marked taken, contested or open, plus empty claims and three open words.
+    - name: "Step 3: Messages"
+      contains: Ranked messages built on your proven strengths, with evidence, the rival weakness behind each and the likely reply.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Map where each rival sits
     text: Lists every real alternative, plots them on two axes buyers feel, checks the map again on a second axis and marks the corners that are open.
   - title: Find the words nobody owns
     text: Reads the mapped rivals, picks the one word each owns, marks it taken, contested or open, and lists three open words buyers care about.
   - title: Turn a rival weakness into a message
-    text: Matches your proven strengths to rival weak spots, keeps pairs a buyer can check, writes the message and tests the rival's best reply.
+    text: Matches your proven strengths to rival weak spots, keeps pairs a buyer can check, writes the message and tests the rival's best reply. Uses the rival set from step 1 and the word map from step 2.
 output_shape: |-
   STEP 1: POSITION MAP
     Alternatives | two axes | where each sits | crowded and open corners | the corner to own

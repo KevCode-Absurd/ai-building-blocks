@@ -1,32 +1,57 @@
 new_slug: executive-email-draft
 name: Executive reply draft writer
-summary: Share an email thread and your goal. Get a reply draft with clear recipients, supported facts and a specific next step.
+summary: Write a reply to an email thread. Share the thread and your goal. You get a draft with clear recipients, checked facts and one next step.
 job: write-emails
 headline: Executive reply draft writer
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share an email thread and your goal. Get a reply draft with clear recipients, supported facts and a specific next step. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Paste an email thread and say what you want from the reply. Your AI drafts the reply and lists who it goes to. It also shows which facts the thread backs up and which are missing.
 explain: |-
   Share an email thread and your goal. Get a reply draft with clear recipients, supported facts and a specific next step.
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - A long thread has a new question and you need a clear answer.
+  - You are replying to a boss, client or partner and want the facts right.
+  - You are not sure who should be on To, CC or BCC.
+  - You need to suggest meeting times in a set time zone.
+not_for:
+  - "You want to send the email for you without a read-through: this only drafts, so review it and send it yourself."
+  - "You are writing a first cold email with no thread: write a short note yourself or ask your AI for a plain first draft."
+  - "The thread is a legal, HR or money dispute: ask a lawyer, an HR lead or your accountant before you reply."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - The full email thread, newest message first if you can
+  - Your goal for the reply
+  - Your writing style or an example email (optional)
+  - Your time zone and free dates (optional)
 you_get:
-  - "Recipients: To / CC / BCC"
-  - Subject and reply body
-  - Facts checked and missing facts
-  - Next step and approval status
+  - The To, CC and BCC lines, checked before the draft
+  - A subject line and reply body
+  - A list of facts the thread supports and facts that are missing
+  - One next step and whether the draft is ready to send
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill.
+  - Paste the full email thread and say what you want the reply to do.
+  - Add your style notes and free dates if you have them.
+  - Check the recipients first, then the facts and the placeholders.
+  - Fill in any missing dates or prices, then send the email yourself. This works with pasted text and needs no code or paid tool.
+output_sample:
+  input:
+    - The email thread you need to answer, pasted in full
+    - Your goal for the reply
+    - Your writing style or an example email (optional)
+    - Your time zone and dates you can meet (optional)
+  prerequisites:
+    - A mail connector, only if you want a draft saved in your inbox. Pasted text works without one.
+  output:
+    - name: Recipients
+      contains: The To, CC and BCC lines, listed before the draft, with any unclear recipient flagged for you to confirm.
+    - name: Subject and reply body
+      contains: A subject line and a reply that answers the open questions, with placeholders where dates or prices are missing.
+    - name: Facts checked and missing facts
+      contains: What the thread supports, what it only claims, and what you still need to supply.
+    - name: Next step and approval status
+      contains: The one action requested and whether the draft is approved to send.
 how_it_works:
   - title: Read the sources
     text: Identify the current request, time window and facts you can verify.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs the market and picks positions to explore.
 new_slug: brand-discovery-researcher
 name: Brand discovery researcher
-summary: Describe your business. Get who it is for, who you compete with and
-  where you could stand out.
+summary: Run brand discovery research before any brief. Give it your business and what you know. You get audience findings, a competitor map and positioning options.
 job: understand-customers
 headline: Brand discovery researcher
-subhead: Find out who your brand is for, what they need, who else is trying to
-  meet that need, and where you could stand apart. This comes before any brief,
-  logo or content plan.
+subhead: Find out who your brand is for, what they need, who else is trying to meet that need, and where you could stand apart. This comes before any brief, logo or content plan.
 explain: |
   Find out who your brand is for, what they need, who else is trying to meet that need, and where you could stand apart. This comes before any brief, logo or content plan.
 
@@ -18,18 +15,50 @@ when:
   - A rebrand needs facts before any design work.
   - You have sales calls and reviews but no one has read them together.
   - You want to see how competitors are positioned.
+not_for:
+  - "You already know your audience and category well: go straight to the creative-brief or brand-ideation skill."
+  - "You want to test a design or feature with real users: use usability testing instead."
+  - "You want brand names or visual ideas: use brand-ideation, which comes after discovery."
 you_give:
-  - The product or organisation to brand
+  - The product or organisation you want to brand
   - What you already know about your audience
-  - Calls, tickets, reviews or analytics (optional)
-  - Your timeline and any constraints
+  - Sales call notes, support tickets or reviews (optional)
+  - Names of 5 to 8 people you could interview (optional)
+  - Your timeline and any limits, such as a parent brand
 you_get:
   - Audience findings
   - A competitor map
   - A category map with its conventions
   - A discovery report with positioning territories
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your product brief, what you know about your buyers, and your timeline.
+  - Add any call notes, tickets or reviews as text. Read review sites by hand or use their own export. Do not scrape them.
+  - Say how long you have, from one week to six weeks, so the scope fits.
+  - Read the report. Check that it has at least one surprise, and fix any gap it names.
+  - Take the positioning territories to the creative-brief or brand-ideation skill.
+output_sample:
+  input:
+    - The product, service or organisation you are branding
+    - What you already know about your audience and market
+    - Sales calls, support tickets, reviews or analytics (optional)
+    - Your timeline and any limits, such as a parent brand or rules
+  prerequisites:
+    - Free web access helps your AI check competitor sites. Without it, paste in what you find by hand.
+  output:
+    - name: Executive summary
+      contains: Five to ten bullets with the main findings and what to do next.
+    - name: Audience
+      contains: One to three named audience groups, each with a short profile of needs, habits and jobs to be done.
+    - name: Competitors
+      contains: A matrix of three to eight competitors, including doing nothing, with who they target and why they are a threat.
+    - name: Category and problem space
+      contains: The real problem, how the category is shaped, common habits to break, shifts and the words people use.
+    - name: Positioning territories
+      contains: Three to five possible places to stand, each with a proof point, audience, rivals and risk.
+    - name: Implications and recommendations
+      contains: What the findings mean for the next step of your brand work.
+    - name: Open questions
+      contains: Gaps that need more research before you commit.
+    - name: Appendices
+      contains: Cleaned interview notes, competitor research data and a list of sources.

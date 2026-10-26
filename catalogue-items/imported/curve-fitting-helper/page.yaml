@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tries several fit types and compares them.
 new_slug: curve-fitting-helper
 name: Curve fitting helper
-summary: Give it x and y data. Get the best curve or surface fit, with outliers
-  handled and code to repeat it.
+summary: Fit a curve or surface to your x and y data, compare fit types, drop bad readings and get MATLAB code to repeat the curve fitting.
 job: build-software
 headline: Curve fitting helper
-subhead: Finding the right curve for your data is slow when you try every model
-  by hand. Give it x and y values and it guides you through fitting a curve or
-  surface in MATLAB's Curve Fitter app, then hands back code to repeat the work.
+subhead: Finding the right curve for your data is slow when you try every model by hand. Give it x and y values and it guides you through fitting a curve or surface in MATLAB's Curve Fitter app, then hands back code to repeat the work.
 explain: |
   Finding the right curve for your data is slow when you try every model by hand. Give it x and y values and it guides you through fitting a curve or surface in MATLAB's Curve Fitter app, then hands back code to repeat the work.
 
@@ -16,9 +13,12 @@ explain: |
 when:
   - You have measured data and do not know which model fits it.
   - A few bad readings are pulling your fit off and need removing.
-  - You want to compare a polynomial, a spline and a custom equation side by
-    side.
+  - You want to compare a polynomial, a spline and a custom equation side by side.
   - You need a fitted curve as a Simulink lookup table.
+not_for:
+  - "You already know the fit type and want code only: write it yourself with fit(), fittype() and fitoptions() in MATLAB."
+  - "You need a quick smooth or interpolation: use base MATLAB functions such as interp1, spline or smoothdata."
+  - "You want statistical modeling or machine learning: use MATLAB's Statistics and Machine Learning Toolbox instead."
 you_give:
   - Your x and y data, or x, y and z for a surface
   - MATLAB with the Curve Fitting Toolbox
@@ -30,8 +30,29 @@ you_get:
   - A comparison of fit types
   - Generated MATLAB code and exports
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Curve Fitting Toolbox.
+  - Check that you have MATLAB with the Curve Fitting Toolbox. Your AI needs to be able to run MATLAB, or you follow its steps in the Curve Fitter app.
+  - Open your AI and paste the skill text from this page, or add the skill file.
+  - Paste your x and y data, or x, y and z for a surface. Add a model idea if you have one.
+  - Ask it to try fit types and compare them. Tell it which readings look wrong so it can exclude them.
+  - Read the numbers and plots it reports. Then ask for the MATLAB code, a figure or a Simulink lookup table.
+output_sample:
+  input:
+    - Your x and y data, or x, y and z for a surface
+    - A model idea or equation (optional)
+    - A saved session file (optional)
+  prerequisites:
+    - MATLAB with the Curve Fitting Toolbox
+    - An AI that can run MATLAB, or you run the steps in the Curve Fitter app yourself
+  output:
+    - name: Fit and formula
+      contains: The chosen fit type, its formula, and the coefficients with their confidence intervals.
+    - name: Goodness-of-fit numbers
+      contains: SSE, R-square, adjusted R-square, RMSE and DFE, reported as numbers without a quality verdict.
+    - name: Fit status
+      contains: Whether the fit finished as Complete, Warning, Error or Incomplete, with any messages.
+    - name: Plots
+      contains: The fit plot, with residuals, contour and prediction bounds added when they apply.
+    - name: Fit comparison
+      contains: Several fits kept side by side in one session so you can compare their numbers.
+    - name: Exports
+      contains: A figure, generated MATLAB code, fits saved to the workspace, a Simulink lookup table or a saved session.

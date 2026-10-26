@@ -1,0 +1,156 @@
+name: Customer Success Manager agent
+summary: Get an account health read, churn risks and a plan to keep one customer, from onboarding to renewal. Give it the account facts and what happens next.
+headline: Customer Success Manager agent
+subhead: Give it the facts on one customer account, such as goals, usage, support tickets, contacts and renewal date. Choose one job. It scores account health with its reasons, lists the churn risks with evidence, and gives you a plan with owners and dates. It can also write a review agenda or a renewal timeline.
+job: keep-customers
+thinking: high
+thinking_why: It must weigh mixed signals, show its reasoning and not invent usage or goals. Use a model that reasons well and marks every gap.
+explain: >-
+  Most accounts that leave gave signs weeks earlier. Logins fell. A key
+  contact went quiet. Support tickets piled up. By the time a renewal is
+  close, it is late to fix. This customer success manager agent reads the facts
+  you have on one account and shows you which signs matter and what to do about
+  them.
+
+
+  It uses the five jobs in the original profile. Onboard for a first result
+  inside 30 days. Score the account's health across adoption, outcomes,
+  relationship, support and money signals. Plan a quarterly review that shows
+  results and not just a recap. Prepare a save plan when the account is at
+  risk. Start the renewal 90 days before it is due. Expansion is only offered
+  when the customer has already got value.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The health score
+  weights are a starting point that you should change. It drafts only. It
+  cannot read your CRM or contact anyone. The profile's targets are goals and
+  not results from AI Blocks.
+when:
+  - A renewal is 90 days away and you want a plan and the risks laid out before you call the customer.
+  - A customer's logins have fallen and their main contact has gone quiet, and you want to know what to do first.
+  - You need an agenda for a quarterly review with an account that shows results and not just activity.
+  - A new customer is signing, and you want a 90-day onboarding plan with a goal in writing.
+not_for:
+  - You want a weekly view across all your accounts. Use the Weekly customer health watcher.
+  - You want a monthly list of every renewal due. Use the Monthly renewal watcher.
+  - You want to watch new customers stall in the first 30 days. Use the Customer onboarding keeper.
+  - The customer wants to cancel a consumer subscription. Use the Cancel reason save planner.
+  - You need legal, price or contract advice. Ask your legal and finance leads. It cannot judge a contract.
+you_give:
+  - The account name or a label, the contract value and the renewal date
+  - What the customer said they want to achieve, and who the key contacts are
+  - What you know about usage, support tickets and any survey or NPS score
+  - What has changed lately, such as a new contact, a missed meeting, a layoff or a late payment (optional)
+  - Which job you want first, such as health read, onboarding plan, review agenda, save plan, expansion check or renewal plan
+you_get:
+  - A health read across five areas, with the reason for each and what is missing
+  - The churn risks, each with the evidence for it
+  - A plan with actions, owners and dates for the job you chose
+  - A review agenda, a save plan or a renewal timeline when you ask for one
+  - A list of things to confirm and what to ask the customer
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Pick one job to start with. A health read is the best first run. Write the account facts, the dates and what you know about usage and contacts.
+  - Say what is unknown. It marks gaps and does not fill them. A health score with half the facts is shown as partial.
+  - Read the evidence column before the score. If a risk has no evidence, ask the customer or check your system.
+  - Pick one or two actions from the plan and put them in your calendar. Do not try all of them at once.
+  - Run it again after the next customer call, and paste what you learned.
+how_it_works:
+  - title: Set the facts
+    text: It lists the account facts you gave and marks each missing fact.
+  - title: Read the health
+    text: It scores adoption, outcomes, relationship, support and commercial signals, shows the evidence, and says if the score is partial.
+  - title: Find the risks
+    text: It looks for early signs such as falling logins, a quiet contact, a ticket spike or a new champion.
+  - title: Choose the play
+    text: It picks the job you asked for, such as a save plan, an onboarding plan, a review agenda or a renewal timeline.
+  - title: Check expansion
+    text: It only suggests growth when the customer has got value, and says what to prove first when they have not.
+  - title: Hand back the plan
+    text: It gives actions with owners and dates, and the questions to ask the customer.
+output_shape: |-
+  ACCOUNT AND FACTS
+    account <name or label> | value <amount> | renewal <date> | contacts <roles> | MISSING: <list>
+
+  HEALTH READ
+    area <adoption | outcomes | relationship | support | commercial> | rating <green | yellow | red | unknown> | evidence <fact or "none given">
+    overall <green | yellow | red | partial> | how worked out <weights used and what was missing>
+
+  RISKS
+    <risk> | evidence <fact> | how serious <low | medium | high> | first move <action>
+
+  PLAN FOR <job asked>
+    <action> | owner <role> | due <date> | why <reason>
+
+  EXPANSION CHECK
+    <ready | not yet> | reason <line> | what to prove first <list>
+
+  ASK THE CUSTOMER
+    <question>
+
+  TO CONFIRM
+    <item> | ASSUMED: <list>
+output_sample:
+  input:
+    - The account facts, such as value, renewal date and key contacts
+    - What the customer wants to achieve
+    - Usage, support and survey facts you have
+    - The job you want, such as a health read, a save plan or a renewal plan
+  prerequisites:
+    - Your own account data, because the AI cannot see your CRM or product usage
+    - A person to do the follow-up it suggests
+  output:
+    - name: Health read
+      contains: Five areas rated with the evidence for each, and an overall rating that says if it is partial.
+    - name: Risks
+      contains: Each churn risk, the evidence, how serious it is and the first move.
+    - name: Plan for the job you asked
+      contains: Actions with owners and dates for onboarding, a save plan, a review or a renewal.
+    - name: Expansion check
+      contains: Whether the account is ready for more, and what to prove first if not.
+    - name: Ask the customer
+      contains: Questions that find the real cause, in plain words.
+    - name: To confirm
+      contains: Facts it assumed and checks a person must make.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can run it. A stronger model weighs mixed signals better and is less likely to overstate a weak one.
+    - name: Your CRM or customer success tool, such as HubSpot or Gainsight
+      why: The AI cannot read it. Copy the usage, tickets and contact notes in.
+  inputs:
+    - The goals written in the customer's own words from the kickoff
+    - Usage numbers for the last three months
+    - Notes from the last two calls, and your open support tickets
+terms:
+  - term: Health score
+    meaning: A rating of how likely an account is to stay and grow, from signs such as usage and support.
+  - term: Churn
+    meaning: When a customer stops paying or leaves.
+  - term: Champion
+    meaning: Your main supporter at the customer, who pushes for your product inside.
+  - term: QBR
+    meaning: A quarterly business review. A meeting to show results and agree the next goals.
+judge:
+  - Every rating is backed by a fact you gave, or is marked unknown.
+  - A partial score says it is partial and shows which areas are missing.
+  - The risks are specific to this account and not a list of general churn signs.
+  - The plan has an owner and a date for each action.
+  - It does not promise a feature, a price or a date to the customer.
+test:
+  - Run it on an account you know well. Check if the rating matches what you think.
+  - Remove the usage numbers. The adoption area should show unknown, and the overall rating should be partial.
+  - Run it for an account that just lost its main contact. That should show up as a high risk.
+tweaks:
+  - what: Weights
+    how: The profile gives adoption 30, outcomes 25, relationship 20, support 15 and commercial 10. Say if your business weighs these differently.
+  - what: Account type
+    how: Say if it is a small account or a large one. The plan for a large account adds an executive sponsor.
+  - what: Job
+    how: Name one job per run. A run for a save plan is more useful than one that tries to do all six.
+  - what: Evidence
+    how: Paste real numbers and quotes. The more specific they are, the less the read leans on general advice.
+improve:
+  - Put your own health score areas and weights in SKILL.md, and drop any you cannot measure.
+  - Add your customers' typical goals, so the onboarding plan starts from them.
+  - Keep the plans you ran and what happened, and paste the last one in at the next review.

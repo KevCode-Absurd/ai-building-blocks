@@ -1,6 +1,6 @@
 new_slug: product-page-seo-builder
 name: "Product page SEO builder"
-summary: "Give it a product and target term. Get page layout, copy, image names, markup and an index call."
+summary: "Build a product page SEO plan: a rank-or-not call, title, H1, page copy, image names, markup list and stock-out rules from your product facts."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It makes a few judgement calls and writes within fixed limits, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You are adding or rewriting a product page for a product people search by name.
   - Your product titles are supplier names like "Silk Stretch Crepe 4421" and you want clear ones.
   - You sell out often and want to keep rankings when stock runs out.
+not_for:
+  - "You want to rank a collection or category page: write that page by hand or with your usual SEO tool, since this skill builds one product page only."
+  - "You only need better product photos: use the Product page image checker."
+  - "You need to rewrite a page so AI tools can quote it: use the AI-ready product page editor."
 
 you_give:
   - The product facts, such as specs, materials or ingredients, use and variants
@@ -35,6 +39,30 @@ how_to_use:
   - Attach product photos if you want image names and alt text.
   - Read the rank-or-not call first. If it says do not target, spend your time on the collection page instead.
   - Paste each part into the right Shopify field, then check the markup with a rich results test.
+output_sample:
+  input:
+    - Your product facts, such as specs, materials, use, price and variants
+    - The term you want the page to rank for
+    - Search volume for that term (optional)
+    - Questions customers ask (optional)
+    - Product photos (optional)
+  output:
+    - name: INDEX CALL
+      contains: A rank, keep live or noindex decision, with the reason for it.
+    - name: FIELDS
+      contains: Title tag, H1, URL and search listing text, with a bulk title template for large catalogues.
+    - name: PAGE LAYOUT
+      contains: Short description, bullets, spec table, detailed description, FAQ and a plan for reviews.
+    - name: IMAGES
+      contains: A file name, alt text and format for each product photo.
+    - name: MARKUP
+      contains: The markup types the page needs, plus a check for doubles from review apps.
+    - name: LINKS
+      contains: Related collections, bought-together items and related products to link to.
+    - name: STOCK RULES
+      contains: What to do when the item is out of stock or discontinued.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none, plus what facts were missing.
 
 how_it_works:
   - title: Decides whether to rank

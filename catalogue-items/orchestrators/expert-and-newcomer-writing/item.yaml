@@ -18,7 +18,7 @@ steps:
   - {uses: layered-draft-writer, note: "A draft where the surface works for anyone and the depth rewards a second look."}
   - {uses: overstuffed-draft-cutter, note: "A shorter draft with the cuts listed, so you can put one back if you disagree."}
   - {uses: expert-and-newcomer-test-planner, note: "Who to try it on, what to ask each, and what counts as a pass."}
-  - {uses: reader-feedback-sorter, note: "A ranked rewrite list that says which group each change serves."}
+  - {uses: reader-feedback-sorter, note: "Uses the notes your expert and newcomer send back after the test in step 5, not step 5's test plan. Hands you a ranked rewrite list that says which group each change serves."}
 origin: rebuilt
 version: 1.0.0
 minds: [wolfgang-amadeus-mozart]

@@ -16,6 +16,27 @@ use_cases:
   - "Teach a child using a purchase they already understand"
   - "Break an unfamiliar first-job money task into a learnable lesson"
   - "Organise questions for qualified insurance, financial or legal help"
+not_for:
+  - "You want a ready plan for budgeting your family's money, with the first steps laid out: use the Amelia Warren Tyagi mind, which works from All Your Worth."
+  - "You want to teach a child about money over time: use the Beth Kobliner mind, who writes on family money education."
+  - "You need a product pick, tax or benefit choice, legal drafting or help with urgent debt: talk to a qualified adviser or the support service for that debt."
+output_sample:
+  input:
+    - The money task you have been avoiding, such as a bill, a statement or a first-job pay packet
+    - The number or story you think explains it, such as a credit score
+    - What you want your money to make possible
+    - Any deadline on the task (optional)
+  output:
+    - name: Starting assumption
+      contains: What you think the number or task means, and what it leaves out.
+    - name: Foundations checklist
+      contains: Your finances sorted into understood, needs checking and needs help.
+    - name: Plain-language explanation
+      contains: The bill, term or document explained in everyday words, with an example you know.
+    - name: Question or conversation
+      contains: A drafted request, household agenda, invitation or learning sheet, naming who can answer and any deadline.
+    - name: Understanding check
+      contains: A prompt to say the next task in your own words, plus any point that needs a qualified professional.
 seats:
   - {seat: "Financial wholeness and teachable steps", asks: "Which foundation is missing from the picture you are using?"}
   - {seat: "Money shame, values and learning", asks: "What do you need to understand before calling yourself bad with money?"}

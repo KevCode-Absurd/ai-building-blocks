@@ -44,18 +44,18 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Subscription offer designer.** Use the skill `subscription-offer-designer`. Designs the subscription offer from your products and order data.
+1. **Subscription offer designer.** Use the skill `subscription-offer-designer`. Designs the subscription offer from your products and order data. Hands the offer to steps 2 and 3.
 2. **Subscription payback checker.** Use the skill `subscription-payback-checker`. Give it the offer from the steps before. Tests the designed offer against cost and payback before launch.
-3. **Subscription cancel flow builder.** Use the skill `subscription-cancel-flow-builder`. Give it the offer from the steps before. Builds the cancel flow around the offer, with save offers that keep the payback true.
-4. **Billing reminder and confirmation writer.** Use the skill `billing-reminder-and-confirmation-writer`. Give it the email flow from the steps before. Writes the billing and reminder emails to sit beside the cancel flow.
+3. **Subscription cancel flow builder.** Use the skill `subscription-cancel-flow-builder`. Give it your own cancel reasons, the offer from step 1 and the payback check from step 2. Builds the cancel flow with save offers kept inside the payback limit.
+4. **Billing reminder and confirmation writer.** Use the skill `billing-reminder-and-confirmation-writer`. Give it the cancel flow from step 3. Writes the billing and reminder emails to sit beside it. Hands the emails to step 5.
 
 Pause here: Put the subscription live and let it run for about 60 days, then export subscriber and cancel data.
 
-5. **Subscription churn audit.** Use the skill `subscription-churn-audit`. Finds where in the subscriber life people leave.
+5. **Subscription churn audit.** Use the skill `subscription-churn-audit`. Give it your own subscriber and cancel export, and the emails from step 4. Finds where in the subscriber life people leave.
 
 Pause here: Pick the lapse points the audit flagged and export the orders of subscribers around those dates.
 
-6. **Subscriber retention calendar.** Use the skill `subscriber-retention-calendar`. Schedules the touches that land before each of those lapse points.
+6. **Subscriber retention calendar.** Use the skill `subscriber-retention-calendar`. Give it the churn audit from step 5 and your churn by month. Schedules the touches that land before each of those lapse points.
 7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

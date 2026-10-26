@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: meeting_notes
     required: false
+  - type: plan
+    required: false
 outputs:
   - type: meeting_notes
 uses: []

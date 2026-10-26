@@ -2,34 +2,96 @@ thinking: medium
 thinking_why: It builds a program from skills and your goals.
 new_slug: leadership-program-designer
 name: Leadership program designer
-summary: Say who you are training. Get a program, a 360 review form, a coaching
-  guide and a succession plan.
+summary: "Design a leadership program for one group: a month-by-month outline, skills framework, 360 review form, coaching guide and scorecard."
 job: hire-people
 headline: Leadership program designer
-subhead: Say who you are training. Get a program, a 360 review form, a coaching
-  guide and a succession plan. Bring who you are training and their level. Use
-  the result to plan your next step.
+subhead: Say who you are training and which skills matter. It designs the leadership program for that group. You get an outline, a skills framework, a 360 review form, a coaching guide and a scorecard. You can ask for one piece.
 explain: |
-  A full leadership development plan, from first-time managers to senior executives. Say who you are training and which skills matter. The skill designs the program and its competency framework, then adds the tools around it: a 360-degree review form, a coaching guide, a scorecard to track progress and a succession plan for key roles.
+  A leadership program works best when it is built for one group, such as first-time managers or directors. This skill designs a leadership development program around who you are training, the skills you want and the time you have.
 
-  It can also cover executive onboarding, cross-cultural leadership and digital leadership. Each piece is written with the audience in mind, so a program for team leads differs from one for directors. You can ask for one piece, such as only the 360 form, or the whole set.
+  It writes a competency framework, which is a list of skills with what good looks like at their level. It outlines the program month by month. It adds a 360 review form, where a person's manager, peers and team give feedback. It adds a coaching guide and a scorecard. If you ask, it adds a succession plan for named roles.
+
+  For mentoring pairs, use the Mentoring program builder. To review how managers manage today, use the Manager quality review planner.
 when:
   - You promoted several people to manager and want to train them together.
-  - HR asked for a competency framework for your leaders.
+  - HR asked for a skills framework for your leaders.
   - You need a 360 review form for senior staff.
   - Your board asked who could replace your key leaders.
+not_for:
+  - "You need one workshop or a short course: ask your AI for a single session plan instead."
+  - "You want pairs of mentors and mentees: use the Mentoring program builder."
+  - "You want to measure how well managers manage today: use the Manager quality review planner."
+  - "You only need a replacement plan for key roles: use the Succession plan builder."
 you_give:
-  - Who you are training and their level
-  - Skills you want to build
-  - Company size and industry
-  - Time and budget limits (optional)
+  - "Who you are training: their level and how many"
+  - The skills you want them to build
+  - Your company size and industry
+  - Your time and budget limits (optional)
+  - Your own skills list or company values (optional)
 you_get:
-  - A leadership program outline
-  - A competency framework
-  - A 360 review form
-  - A coaching guide and succession plan
+  - A month-by-month program outline
+  - A skills framework for that level
+  - A 360 review form with rating items and open questions
+  - A coaching guide
+  - A progress scorecard, and a succession plan if you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload the skill folder if your tool allows it.
+  - Say who you are training, how many people, and which skills you want to build.
+  - Add your company size, time and budget. Add your own skills list if you have one.
+  - Say which pieces you want, or ask for the full set.
+  - Test the 360 form with two managers before you launch. Check that no one can be identified.
+  - Fill in the scorecard with your own starting numbers. Do not use one person's 360 results for pay or firing without HR review.
+how_it_works:
+  - title: Set the audience and goals
+    text: It states who joins and sets three to five goals.
+  - title: Build the skills framework
+    text: It lists each skill with what good looks like at that level.
+  - title: Outline the program
+    text: It plans each month with a topic, format, practice task and hours.
+  - title: Write the 360 form
+    text: It writes rating items and three open questions, and sets a minimum number of raters.
+  - title: Add coaching and scorecard
+    text: It writes a coaching guide and a scorecard with before and after checks.
+  - title: Add succession, if asked
+    text: It maps who is ready now and who is ready later for named roles.
+output_shape: |-
+  Program outline: <audience | goals | month | topic | format | practice | hours>
+  Skills framework: <skill | what good looks like | example behaviours>
+  360 review form: <rating items | 3 open questions | who answers>
+  Coaching guide: <how to support a participant>
+  Progress scorecard: <measure | before | after>
+  Succession plan (if asked): <role | ready now | ready in 1 to 2 years | gap | next step>
+output_sample:
+  input:
+    - "Who you are training: their level and how many"
+    - The skills you want them to build
+    - Your company size and industry
+    - Your time and budget limits (optional)
+  output:
+    - name: Program outline
+      contains: Audience, goals and a month-by-month table of topics, practice and hours.
+    - name: Skills framework
+      contains: Each skill with what good looks like and example behaviours at that level.
+    - name: 360 review form
+      contains: Rating items, three open questions and who answers.
+    - name: Coaching guide
+      contains: How a coach or manager supports each participant between sessions.
+    - name: Progress scorecard
+      contains: Measures with a before and after check for each participant.
+    - name: Succession plan
+      contains: "For named roles: who is ready now, who is ready later, and the next step."
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can draft every piece. Run the 360 form in a survey tool that can keep answers anonymous.
+  inputs:
+    - Your company values
+    - A list of the roles you want covered
+    - Feedback you already have on your current leaders
+terms:
+  - term: 360 review
+    meaning: Feedback on one person from their manager, peers and team.
+  - term: Skills framework
+    meaning: A list of skills with what good looks like at each level.
+  - term: Succession plan
+    meaning: A plan for who could fill key roles when they open.

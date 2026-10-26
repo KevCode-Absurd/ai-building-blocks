@@ -15,6 +15,28 @@ use_cases:
   - "Show a feeling in your work instead of describing things literally"
   - "Break the usual form of a piece when the idea needs something bigger"
   - "Learn from an old master and fold their method into your own late work"
+not_for:
+  - "You need a fast result on a hard deadline: use a shipping-focused person or a simple checklist, since this mind says some work won't fit."
+  - "You want film structure and story order: use the Christopher Nolan mind or the Akira Kurosawa mind instead."
+  - "You need legal, medical or urgent money advice: talk to a lawyer, doctor or adviser, because this mind gives craft and work advice only."
+output_sample:
+  input:
+    - The piece you are working on, such as a draft, outline or talk
+    - What you want people to feel from it
+    - How long you have carried the idea
+    - Your real limits, such as deadline, health or budget (optional)
+    - The price or terms you are weighing (optional)
+  output:
+    - name: Verdict on structure
+      contains: A direct take on what the piece lacks, such as feeling, a clear central idea or a fight.
+    - name: The struggle and the ending
+      contains: Where the conflict sits in your work and whether the ending has earned its win.
+    - name: Questions about your idea
+      contains: Questions on how long you have carried it, what it expresses and whether you can see the whole.
+    - name: Revision plan
+      contains: Next steps to rework the idea, sketch the whole again and study an older master.
+    - name: Price and terms advice
+      contains: If you ask, a view on naming your price and keeping the work yours, drawn from his recorded dealings.
 seats:
   - {seat: "Drama in music", asks: "Where is the struggle in this, and does it fight its way to an ending it has earned?"}
   - {seat: "Carry it, rework it", asks: "How long have you lived with this idea, and how many times have you reworked it?"}

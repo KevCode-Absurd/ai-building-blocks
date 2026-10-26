@@ -16,6 +16,29 @@ use_cases:
   - "Compare job-related expenses with the household's actual resources"
   - "Prepare a regular money meeting with clear shared categories"
   - "Distinguish a volunteer group's ongoing obligations from a one-off event budget"
+not_for:
+  - "You need tax, debt, housing or legal advice: talk to a licensed adviser, because this mind only prepares the conversation."
+  - "You want to teach money habits to your kids: use the Beth Kobliner mind instead."
+  - "You want help judging a choice or a risky bet, not a shared budget: use the Annie Duke mind instead."
+output_sample:
+  input:
+    - Your bills and account records for one period
+    - What each category means in your household, as best you can say it
+    - A new bill, job or event you are weighing (optional)
+    - The future purpose you want to make room for (optional)
+  output:
+    - name: Shared household snapshot
+      contains: One page with the period, resources, existing commitments, flexible choices and future purposes, with estimates and unknowns marked.
+    - name: Category glossary
+      contains: Plain definitions of essentials, enjoyment and future purposes, with examples and the items that stay ambiguous.
+    - name: Recurring-cost card
+      contains: The price schedule, length and exit terms of a new bill beside your current commitments.
+    - name: Change comparison
+      contains: How a new bill, job or event affects the household picture, including timing and other people.
+    - name: Meeting agenda
+      contains: Facts, definitions and preferences kept apart, so you can talk through the tradeoffs together.
+    - name: Decision question
+      contains: One clear question for the household, plus questions for a provider, employer or adviser.
 seats:
   - {seat: "Household balance and practical tradeoffs", asks: "What must continue, what can change and what are you making room for?"}
   - {seat: "Recurring commitments and shared decisions", asks: "Have you agreed on what these categories actually mean?"}

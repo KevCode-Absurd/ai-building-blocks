@@ -16,6 +16,29 @@ use_cases:
   - "Plan a big next step when you're starting late or starting again"
   - "Check a deal with a partner for what it does to them, not just to you"
   - "Make a short daily checklist for quality, service and cleanliness"
+not_for:
+  - "You need legal, tax or investment advice: ask a lawyer, an accountant or a licensed adviser instead."
+  - "You want a guess on whether a second location will succeed: run a trial in one place and check it against your own numbers."
+  - "You want a mind on valuing a business from its numbers: use the Aswath Damodaran mind, who works from a story plus the figures."
+output_sample:
+  input:
+    - The task or process your business must get right every time
+    - What you do now, in your own words, and any steps already written down
+    - Your costs and what an owner or partner would earn (optional)
+    - The problem you want help with, such as a second location or partner rules
+  output:
+    - name: The standard
+      contains: What the task must look like every time, and whether it is written down well enough for a stranger to follow.
+    - name: What is missing
+      contains: The gaps in your process, and which of quality, service, cleanliness or value each one hurts.
+    - name: Basics to fix first
+      contains: A short list of the basics to repair before you grow.
+    - name: Job cards and one-place trial
+      contains: A job card for each role and a plan to have a newcomer run a shift while you watch.
+    - name: Owner's sums
+      contains: What the person running the place needs to earn, and which terms would be fair to them.
+    - name: Bigger step
+      contains: A push to think bigger, once the basics hold, with the history marked as disputed where the record is unclear.
 seats:
   - {seat: "Systems and franchising", asks: "Could a stranger run this the same way tomorrow, with only what we've written down?"}
   - {seat: "The basics", asks: "Which fundamental are we letting slide while we chase the next big thing?"}

@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It compares stock counts by set rules.
 new_slug: bundle-stock-checker
 name: Bundle stock checker
-summary: Run it on your bundles. Get a check that every part is in stock, and
-  how many bundles you can really sell.
+summary: Check your Shopify bundles for missing parts. Find bundles that show in stock but can't ship, and see how many you can really sell.
 job: run-your-store
 headline: Bundle stock checker
-subhead: Find bundles that look in stock on your storefront but cannot be
-  shipped because one part ran out. It only reads data and changes nothing.
+subhead: Find bundles that look in stock on your storefront but cannot be shipped because one part ran out. It only reads data and changes nothing.
 explain: |
   Find bundles that look in stock on your storefront but cannot be shipped because one part ran out. It only reads data and changes nothing.
 
@@ -17,6 +15,10 @@ when:
   - You want to check every bundle before a big sale.
   - One component is running low and you need to know which bundles it affects.
   - You want a safety buffer so parts do not hit zero.
+not_for:
+  - "You have single products with no bundle setup: use the low-inventory-restock skill, or check stock in your Shopify admin."
+  - "You want to change stock counts or hide a bundle: this only reads data, so make those changes in Shopify yourself."
+  - "Your store is not on Shopify: ask a person on your team to compare parts by hand, since this needs Shopify access."
 you_give:
   - Your store address
   - Where your bundle parts are listed
@@ -28,8 +30,27 @@ you_get:
   - How many bundles you can really sell
   - The part that is the bottleneck
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Install the Shopify CLI on your computer. Use an AI tool that can run code, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Sign in with the store auth command. Give it your store address and the read_products and read_inventory scopes.
+  - Paste this skill into your AI. Add your store address, and your bundle metafield namespace and key if you use them.
+  - Add a safety stock number or active-only setting if you want one (optional).
+  - Let your AI run the checks. It only reads data and changes nothing.
+  - Open the bundle_availability CSV. Fix the broken bundles first, starting with the bottleneck part.
+output_sample:
+  input:
+    - Your store address
+    - The place where your bundle parts are listed (optional)
+    - A safety stock number (optional)
+    - Whether to check active products only (optional)
+  prerequisites:
+    - An AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI
+    - The Shopify CLI signed in with read access to products and inventory
+  output:
+    - name: Run summary
+      contains: Counts of bundles checked, fully buildable, low on parts, and broken, plus the top broken bundles and their bottleneck part.
+    - name: bundle_availability CSV
+      contains: One row per bundle with how many you can build, the bottleneck part, what it needs, and what you have.
+    - name: Status column
+      contains: Marks each bundle as fully buildable, constrained, or broken, so you can see which need action first.
+    - name: Error notes
+      contains: Bundles skipped for bad setup, deleted parts, or untracked stock, with a short reason for each.

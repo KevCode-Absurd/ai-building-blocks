@@ -1,6 +1,6 @@
 new_slug: waste-to-profit
 name: Cost every step and turn your waste into profit
-summary: Describe how you make or deliver your product. Get a cost for every step and a price on each kind of waste.
+summary: Describe how you make or deliver your product. Get a cost for every step and a price on the waste you throw away. Find what to fix first.
 job: plan-strategy
 thinking: high
 thinking_why: It builds a cost model from your steps and then prices the waste from it. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You do not know which products earn money after all the steps are counted.
   - You throw away scrap, leftovers, returns or idle time and suspect some of it is worth something.
   - Costs keep rising and you want to find the step to fix first.
+not_for:
+  - "You have no products or steps yet: start with a simple cost sheet in a spreadsheet, then come back."
+  - "You only need a tax or accounting report: ask your accountant or use your bookkeeping software."
+  - "You want to cut a supplier price: ask your suppliers for quotes, then bring the new prices here."
 you_give:
   - How each product is made or delivered, step by step
   - What you buy, sell and pay for each, if you have figures
@@ -31,6 +35,30 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your process and add any figures you have. It works step by step and saves each result.
   - Hold the count on the dates it sets, and bring the new numbers back for a re-count.
+output_sample:
+  input:
+    - How each product is made or delivered, step by step
+    - What you buy, sell and pay for each, if you have figures
+    - What you throw away, leave idle or redo, with any amounts you know
+    - A sales or cost sheet for a closed period (optional)
+    - Who does each step (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: Steps and measures
+      contains: Every step from raw material to sale, with one thing you can count on each step.
+    - name: Cost sheet (monthly)
+      contains: Cost per unit, price and what each product earns after all the steps.
+    - name: Ranking and carry and drain
+      contains: Products ranked by true earnings, with the lines that carry the business and the lines that drain it.
+    - name: Waste list
+      contains: Each thing you throw away or leave idle, its source step, monthly amount and labour in it.
+    - name: Buyer or reuse
+      contains: Who would buy each item or what it could feed, and the cost to reclaim it.
+    - name: First three actions
+      contains: The three best moves ranked by money recovered against effort, with owners and dates.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file and every gap marked MISSING in one list.
 how_it_works:
   - title: Lists every step
     text: Lists every step from raw material to sale and puts a weight, a count or a time on each.

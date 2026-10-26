@@ -1,6 +1,6 @@
 new_slug: waterfall-price-setter
 name: "Waterfall price setter"
-summary: "Give it your targets, CAC and costs. Get the lowest viable price, or a call to drop it."
+summary: "Set the lowest price that still earns your profit target. Give it your CAC and costs to get a price table and a keep, reprice or cut call."
 job: set-prices
 thinking: medium
 thinking_why: "It solves one equation and compares it to the market, which a mid-size model does well when it shows each step."
@@ -17,6 +17,10 @@ when:
   - You are pricing a new product and want a floor, not a guess.
   - A product sells but never makes money, and you suspect the price is too low.
   - A supplier offers a big order and you want to know what price it needs before you commit.
+not_for:
+  - "You want to price a subscription: the skill does not price subscriptions, so work it out with your accountant or a simple spreadsheet."
+  - "You want to price a whole catalogue at once: run this once per product, because CAC and shipping differ for each one."
+  - "You only want to check the margin at a price you already chose: use the product margin checker."
 
 you_give:
   - Your net profit target and operating expense share, as percents of price
@@ -37,6 +41,28 @@ how_to_use:
   - For CAC, use your account's recent CAC on similar products. A new product's CAC is a guess, so the skill shows three.
   - Check the price it gives against the product margin checker before you set it live.
   - Test the price with a pre-order or a small batch before a large order.
+output_sample:
+  input:
+    - Your net profit target and overhead share, as percents of price
+    - Your expected CAC, the ad cost to win one customer
+    - Your returns and discount allowance, shipping per order and unit cost
+    - The price range competitors charge (optional)
+    - Units per order, for a bundle (optional)
+  output:
+    - name: Target and allowance
+      contains: The contribution margin your price must leave, and the share of price set aside for returns and discounts.
+    - name: Waterfall
+      contains: Price at the top, then each cost taken off in dollars, down to zero left over.
+    - name: Viable price
+      contains: The lowest price that earns your target at low, mid and high CAC, marked as a hypothesis.
+    - name: Market
+      contains: Your viable price set next to what competitors charge.
+    - name: Call
+      contains: Keep, reprice, reposition or cut, with the reason.
+    - name: Test
+      contains: A pre-order or small batch to try, and what result would pass.
+    - name: Checks missed and missing inputs
+      contains: Any checks it could not finish and any input you did not give.
 
 how_it_works:
   - title: Sets the target

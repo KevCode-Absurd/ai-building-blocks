@@ -2,12 +2,19 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-leadership-handover-planner
 name: Nonprofit leadership handover planner
-summary: Share leadership risks and departure dates. Get emergency cover, search steps, and a clear handover plan.
+summary: Plan nonprofit leadership succession. Give it your leadership risks and departure timing. You get emergency cover, a search timeline and a handover plan.
 job: lead-people
 headline: Nonprofit leadership handover planner
 subhead: Share your leadership roles, key risks, and any planned departure date. It separates sudden absence cover from a planned leadership change. You get acting-role limits, a search timeline, internal development steps, and a relationship handover plan for the board to review.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - Your executive director is also the founder, and you want a plan before they leave.
+  - Your board has no written plan for what happens if your leader is suddenly unable to work.
+  - A retirement is one to three years away and you need a search and handover timeline.
+  - One person holds your key donor relationships and you want to move them on purpose.
+not_for:
+  - "You want to fix low staff morale or turnover below the top: use the Nonprofit staff retention skill, or talk with your team first."
+  - "You need to recruit new board members: use the Nonprofit board recruitment skill."
+  - "You need messages for staff and donors about a change already under way: use the Nonprofit change management skill."
 you_give:
   - Leadership roles, existing backup plan, board decision rules, key relationships, and departure timing if known.
 you_get:
@@ -28,3 +35,28 @@ works_best_with:
 how_to_use:
   - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - Your leadership roles and who could step in today
+    - Your board's decision rules and who the board contact is
+    - Your key donor and funder relationships held by one person
+    - Planned departure date (optional)
+    - Any internal successor you are considering (optional)
+  prerequisites:
+    - An AI chat tool. No code or paid tools are needed.
+    - A board that will review and approve the plan
+  output:
+    - name: Emergency cover plan
+      contains: The acting leader, what they can and cannot decide alone, the board contact, and where access records are kept.
+    - name: Readiness assessment
+      contains: A frank check of money, reliance on the outgoing leader's relationships, written-down knowledge, and staff depth, with founder risk named.
+    - name: Successor development steps
+      contains: How to judge internal candidates against leadership skills and build their growth plans well before the change.
+    - name: Route decision
+      contains: The choice between internal promotion, open search, or interim then search, with the reasons written down.
+    - name: Interim terms
+      contains: The temporary leader's scope, authority and a set end date, written so staff and funders are not left unsure.
+    - name: Search timeline
+      contains: The steps from job description to board vote, with realistic time for the search.
+    - name: Handover plan
+      contains: Dates for knowledge transfer and donor introductions, plus the outgoing leader's limited role afterward.

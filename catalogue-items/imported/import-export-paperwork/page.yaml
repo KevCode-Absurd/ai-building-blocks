@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Rules vary by country and each answer needs careful reasoning.
 new_slug: import-export-paperwork
 name: Import and export paperwork advisor
-summary: Describe your goods and route. Check official tariff and customs
-  sources, then list supported options and open questions.
+summary: Check tariff codes, duty options and documents for an import or export. Give your goods and route. You get a source-based paperwork review.
 job: check-contracts
 headline: Import and export paperwork advisor
-subhead: Share product, origin, route and value; get a source-based tariff
-  review, duty options, and the facts still needed.
+subhead: Share product, origin, route and value; get a source-based tariff review, duty options, and the facts still needed.
 explain: |
   Share the product, origin, route and value. The skill checks current official sources and shows supported codes, duties and unknowns. Confirm shipment decisions with a licensed broker.
 
@@ -18,6 +16,10 @@ when:
   - Customs held your shipment and asked for papers you lack.
   - You want to know which free trade deal might cut your duty.
   - You need a checklist of documents before a first import.
+not_for:
+  - "You need a final customs declaration filed or a seizure answered: use a licensed customs broker."
+  - "You need legal advice on sanctions, export licences or a penalty notice: ask a trade lawyer."
+  - "You want a firm tariff rate with no checking: confirm it on the official tariff site of the importing country."
 you_give:
   - A description of the goods, with materials and use
   - The origin and destination countries
@@ -30,7 +32,30 @@ you_get:
   - Trade term suggestions
   - Common mistakes to avoid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini with web search turned on.
+  - Paste the skill instructions into the chat.
+  - Add your goods, materials, use, origin, destination, value and transport mode.
+  - Read Open questions first and send the missing facts.
+  - Open each official source link and confirm the code and rate yourself.
+  - Share the result with a licensed customs broker before you ship.
+output_sample:
+  input:
+    - A description of your goods, with materials, function and use
+    - The origin and destination countries and the transport mode
+    - The value and sale terms (optional)
+    - Any papers you already have (optional)
+  prerequisites:
+    - An AI that can search the web, so it can check official tariff sources
+  output:
+    - name: Supported codes
+      contains: The tariff code the evidence supports, with the reasoning for it, or the facts still needed to pick one.
+    - name: Duty options
+      contains: Possible duty rates and free trade deals that might cut the duty, to confirm on the official tariff site.
+    - name: Documents
+      contains: The papers your route needs, each with its official source link and the date it was checked.
+    - name: Trade terms
+      contains: A suggested Incoterm for your sale and what it means for who pays and who carries risk.
+    - name: Common mistakes
+      contains: Errors to avoid in classing and valuing your goods and in filling in forms.
+    - name: Open questions
+      contains: Anything unresolved, missing or in conflict between sources, marked as not confirmed.

@@ -2,15 +2,10 @@ thinking: high
 thinking_why: It weighs evidence across many platforms and flags what data is missing.
 new_slug: ad-account-audit
 name: Twelve-platform ad account auditor
-summary: Give it your ad exports and goal. Get a scored audit across Google,
-  Meta, TikTok and more, with fixes.
+summary: Run a multi-platform ad account audit. Give it your ad exports and goal. You get a scored report by platform, with evidence and ranked fixes.
 job: read-ad-results
 headline: Twelve-platform ad account auditor
-subhead: Give it your ad account exports, your goal, your monthly budget and
-  your tracking setup. It audits each platform (Google, Meta, YouTube, LinkedIn,
-  TikTok and others) and cites a source for every finding. You get a scored
-  audit by platform, the evidence, a ranked list of fixes, a budget and
-  measurement plan and test ideas for next month.
+subhead: Give it your ad account exports, your goal, your monthly budget and your tracking setup. It audits each platform (Google, Meta, YouTube, LinkedIn, TikTok and others) and cites a source for every finding. You get a scored audit by platform, the evidence, a ranked list of fixes, a budget and measurement plan and test ideas for next month.
 explain: |
   A fact-based audit of your paid advertising comes with the proof for each finding and clear next steps. It covers Google, Meta, YouTube, LinkedIn, TikTok and other platforms.
 
@@ -20,6 +15,10 @@ when:
   - A new agency took over and you want an independent check.
   - You want a plan for budget and measurement for next quarter.
   - You need a report that shows its evidence.
+not_for:
+  - "You want a quick look at one platform: use that platform's own reporting tool in Google Ads, Meta Ads Manager or TikTok Ads Manager."
+  - "You need new ad images, video or copy: ask your AI for creative help instead, since this audit does not make ads."
+  - "You want live campaigns changed for you: this audit only drafts changes, and a person must approve and apply each one."
 you_give:
   - Ad account exports or reports
   - Your goal, such as sales or leads
@@ -33,10 +32,34 @@ you_get:
   - A budget and measurement plan
   - Test ideas for the next month
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your ad exports and files, and
-    optionally read your ad accounts with your own read-only tokens. Account
-    changes stay as drafts for your approval.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text, or upload the skill folder if your AI accepts files.
+  - Upload your ad exports. Add your goal, monthly budget and the platforms you run. Add your tracking setup and landing page links if you have them.
+  - Live account reading is optional. It needs your own read-only tokens and an AI that can run code. Skip it if you only have exports.
+  - Ask your AI to audit your ad account. Answer any question it asks about your goal or data.
+  - Check the findings and their sources first. Then work through the ranked fixes.
+  - Treat every account change as a draft. Approve and apply each one yourself.
+output_sample:
+  input:
+    - Your ad account exports or reports from each platform
+    - Your goal, such as sales or leads
+    - Your monthly budget
+    - Your tracking setup (optional)
+    - Your landing page links (optional)
+  prerequisites:
+    - An AI that can read files, so it can open your exports
+    - Your own read-only access tokens, only if you want it to read live ad accounts (optional)
+  output:
+    - name: Run manifest
+      contains: "A record of this run: your goal, platforms, budget, data window and which files were used."
+    - name: Platform scores
+      contains: A health score for each platform, shown with how much of the evidence was available.
+    - name: Findings with evidence
+      contains: Each finding cites its source in your data, and notes what the data cannot show.
+    - name: Ranked fixes
+      contains: The actions to take, in order, with an owner, a measurement window and a rollback note.
+    - name: Budget and measurement plan
+      contains: How to split spend across platforms and what to track so results can be trusted.
+    - name: Missing data and partial results
+      contains: Any platform or input that failed or was missing, so the audit is never called complete by mistake.
+    - name: Test ideas
+      contains: Experiments to run next month, based on what the audit found.

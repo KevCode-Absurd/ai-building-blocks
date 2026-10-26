@@ -1,6 +1,6 @@
 new_slug: plan-a-big-sales-budget-and-daily-pacing
 name: Plan a big sale's budget, offers and daily pacing
-summary: Give it your margin, discount depth and last year's sale data. Get a cost-per-sale limit, an offer ladder and a pacing sheet.
+summary: Plan a big sale budget that makes profit. Give it your margin and discounts. Get a cost-per-sale limit, offer ladder and daily pacing sheet.
 job: plan-ad-tests
 thinking: high
 thinking_why: Four skills run in a row, and the first and third do real money sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are planning Black Friday, Cyber Monday or another big sale and want it to make profit, not just revenue.
   - Last year's sale brought record sales and an empty bank account.
   - You have a discount in mind but do not know the most you can pay to win a customer during it.
+not_for:
+  - "You run an evergreen offer, not a big sale: use the Weekly store ad pulse checker on its own."
+  - "You do not know your landed cost per order: work it out first with your accountant or a simple sheet, then come back."
+  - "Cash is tight before the sale: sort that first with a simple cash forecast, then run this plan."
 you_give:
   - Price, product cost, shipping and fees per order, with packaging, payment fees and returns
   - Your discount options, such as 10%, 20% or 40%, or a gift with purchase
@@ -31,6 +35,27 @@ how_to_use:
   - Give the real landed cost per order, not a guess. The whole plan depends on it.
   - When it pauses, agree the discount depth and the sale cost-per-sale limit with whoever signs off the budget.
   - After the first days of the sale, export spend, sales, emails and discounts and run the weekly check.
+output_sample:
+  input:
+    - Price, product cost, shipping and fees per order
+    - Your discount options and your sale goal and dates
+    - Products graded A, B or C by margin and stock depth
+    - Last year's daily spend, revenue and orders
+    - Your budget ceiling (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Cost limit"
+      contains: Margin after each discount, break-even return, the sale cost-per-sale limit, a go or skip call and a readiness score.
+    - name: "Step 2: Offer ladder"
+      contains: Your goal, the main offer, backups in order, a switch trigger and stock limit for each, and a subscriber plan.
+    - name: "Step 3: Pacing sheet"
+      contains: The lag between spend and sales, daily spend, base and stretch plans, and scale, hold and cut rules.
+    - name: "Step 4: Weekly pulse"
+      contains: This week against last week, what moved, the next levers to pull and a health score out of 100.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Set the cost limit
     text: Recomputes margin after the discount, sets break-even return and a separate sale cost-per-sale limit, and checks if sale customers repeat less.

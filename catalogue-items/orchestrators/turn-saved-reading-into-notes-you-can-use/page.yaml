@@ -1,52 +1,101 @@
 new_slug: turn-saved-reading-into-notes-you-can-use
 name: Turn saved reading into notes you can use
 headline: Turn saved reading into notes you can use
-summary: Share the source files. Get linked notes, a sourced answer and a small recall exercise.
+summary: Turn articles and book excerpts you saved into linked notes, a short answer to your question with sources, and a recall exercise.
 job: study-and-practice
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: Linked notes, a sourced answer and a small recall exercise. Share articles or book excerpts you can share, existing notes and a question you want to answer. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the articles or excerpts you saved and the question you want answered. It pulls out the claims and where each came from, files them as small linked notes, answers your question from those notes and sets a recall exercise.
 explain: |-
-  Linked notes, a sourced answer and a small recall exercise.
+  Saved reading piles up and you remember little of it. This workflow turns saved reading into notes you can use: it reads each source for the claims that matter to your question, keeps them as small notes that link to each other, and then makes you try to recall them.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Sources and your interpretations stay separate; quotations remain brief and attributable. Missing tools or evidence stay visible in the final summary.
+  For each source it records each claim with a short quote and where to find it, how well the source backs it up, and what it leaves out. Your own opinions stay in a separate place from the source's claims. Notes that overlap are linked. Notes that disagree stay side by side, not smoothed over.
+
+  Then it answers your question using only those notes, with each point tied to its source. The recall exercise asks you to write what you remember before it shows you what you missed.
 when:
-  - You need linked notes, a sourced answer and a small recall exercise.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have saved a pile of articles on one topic and want to know what they say
+  - You are reading for an essay, a report or a decision and need claims you can cite
+  - You want notes that connect to each other, not a long list of summaries
+  - You want to test what stuck, a day or a week after reading
+not_for:
+  - You have a single article and want a quick summary. Use the Source note summariser on its own.
+  - You want quiz questions from notes you already have. Use the Recall quiz writer.
+  - You want a lasting notebook for a whole course of self-study. Use the Personal study notebook.
+  - You will not answer recall questions. Skip this workflow and use the Source note summariser.
 you_give:
-  - Articles or book excerpts you can share, existing notes and a question you want to answer.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The articles or book excerpts, pasted or as files, each with its title, author and date
+  - The question you want answered
+  - Your existing notes on the topic (optional)
+  - A folder where notes may be saved, if you want them written to disk (optional)
+  - What you already believe about the question, in one line (optional)
 you_get:
-  - Linked notes, a sourced answer and a small recall exercise.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "Source notes for each item: claims with quotes and locations, how well each is backed, and gaps"
+  - Small linked notes with an index, one idea per note
+  - A short answer to your question, with each point tied to its source
+  - "A recall exercise: write what you remember, rate how sure you are, then see the gaps"
+  - A summary of anything missing, such as a source with no date
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste each source with its title, author and date. Then paste your question.
+  - Read the source notes first. If a claim is wrong or missing, correct it before the notes are linked.
+  - Answer the recall exercise in your own words before you read the answers. Bring your answers back to see the gaps.
 how_it_works:
   - title: Source note summariser
-    text: Extract claims, evidence, gaps and source locations relevant to the supplied question, separating the source from your interpretation.
+    text: Takes each source and lists the claims that bear on your question, with quotes, locations and how well each is backed. It keeps the source apart from your view and hands the notes on.
   - title: Notes wiki builder
-    text: Prepare linked note files or use an explicitly approved local notes folder. Connect genuine overlaps without erasing disagreements and do not silently persist private memory.
+    text: Files the durable points as small notes, one idea each, with links and an index. Overlaps are linked and disagreements kept. It writes to a folder only if you name one.
   - title: Recall-first study tutor
-    text: Prepare recall prompts and require actual learner attempts and confidence before assessing understanding. Leave the check unrun when the learner has not answered.
+    text: Asks you to write what you remember and rate how sure you are, then shows only what you missed. Without your answers the check stays unrun.
 output_shape: |-
-  Scope and source coverage
-  Linked notes, a sourced answer and a small recall exercise.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SOURCE NOTES (one per source)
+    Source | Claims with quote and location | Evidence rating | Gaps | For my question
+
+  LINKED NOTES
+    index.md: <title> -> <file>, <one-line hook>
+    <note-name>.md: one idea | [[links to related notes]] | source
+
+  ANSWER
+    <Short answer> | each point tied to <source and location>
+
+  RECALL EXERCISE
+    Prompt: write what you remember | confidence rating | gaps after your answer
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - The articles or excerpts you saved, each with title, author and date
+    - The question you want answered
+    - Your existing notes on the topic (optional)
+    - A folder where notes may be saved (optional)
+  prerequisites:
+    - The full text of each source. A link alone is not enough unless your AI can open it.
+  output:
+    - name: Source notes
+      contains: For each source, its claims with short quotes, locations, how well each is backed, and gaps.
+    - name: Linked notes and index
+      contains: Small notes with one idea each, links between them and a one-line index entry.
+    - name: Answer to your question
+      contains: A short answer built only from the notes, with each point tied to its source.
+    - name: Recall exercise
+      contains: A prompt to write what you remember and rate your confidence, then a check of the gaps.
+    - name: Hand-back summary
+      contains: Files saved, facts that were missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read the pasted text or files and keep each step's result as a file. None of them can run a lesson, a class or a check for you.
+  inputs:
+    - Your own notes, so new notes link to what you already have.
+    - A folder you control, if you want the notes saved as files.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Use one question and five to eight sources at a time. A wide question makes notes that link to nothing.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the full text with title, author and date. A link or a half-remembered summary gives weaker notes.
   - what: Acceptance
-    how: Sources and your interpretations stay separate; quotations remain brief and attributable.
+    how: Say how long a quote may be, or ask for none. By default quotes stay short and carry their location.
 judge:
   - Sources and your interpretations stay separate; quotations remain brief and attributable.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +108,16 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - Come back after a week and ask the recall exercise again on the same notes.
+  - Add a new source and ask for the notes to be updated, not rewritten.
+  - Ask which claims in the notes disagree, and read those sources first.
+next:
+  - recall-quiz-writer
+  - personal-study-notebook
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Linked notes
+    meaning: Small notes that point to each other, so one idea leads to the related ones.
+  - term: Recall exercise
+    meaning: You write what you remember, from memory, before you look at the notes again.
+  - term: Evidence rating
+    meaning: A short label for how well a source backs a claim, such as data, example, assertion or opinion.

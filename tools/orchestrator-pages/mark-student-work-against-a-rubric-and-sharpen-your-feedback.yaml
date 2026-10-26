@@ -14,8 +14,13 @@ when:
   - Students repeat the same mistakes after you have marked their work.
   - Your comments take long to write and you suspect they are too vague.
   - You want a rubric students can use to check their own work.
+not_for:
+  - "You want a rubric with wording for every level of work: use the Task rubric drafter. This workflow builds a single-point rubric with one criterion."
+  - "You are checking an AI tutor's replies, not your own comments: use the AI feedback quality checker."
+  - "You need a mark or grade given to a whole class at once: this handles one piece of work, or a small set, at a time."
 you_give:
   - A learning goal or the task students did
+  - A rubric you already have (optional)
   - One piece of student work, or a small set, to mark
   - After you write your comments, the comments themselves
 you_get:
@@ -29,6 +34,29 @@ how_to_use:
   - Give it the learning goal. Read the rubric and fix the wording before you use it.
   - Remove the student's name, then paste the work, so it can be marked against the rubric.
   - Write your comments from the causes, then paste the comments for the last check.
+output_sample:
+  input:
+    - The learning goal, or the task your students did
+    - One piece of student work, or a small set, with names removed
+    - Your own comments to the student, once you have written them
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A few minutes between steps 3 and 4 to write your comments
+  output:
+    - name: "Step 1: Rubric"
+      contains: One criterion, what meeting it looks like, and open columns for evidence of falling short and exceeding.
+    - name: Pause to pick the work
+      contains: You choose the student work to mark and paste it without names.
+    - name: "Step 2: Gaps"
+      contains: Strengths, what is missing against the criterion and why, in priority order, with feedback to give.
+    - name: "Step 3: Causes of mistakes"
+      contains: Errors grouped by likely cause, slips told apart from misunderstandings, and a response for each.
+    - name: Pause to write your comments
+      contains: You write comments to the student using the causes and fixes above.
+    - name: "Step 4: Feedback check"
+      contains: Each comment rated for how specific it is and whether it says what to do next, with better wording for weak ones.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Build the rubric
     text: Writes the one criterion for the goal, describes what meeting it looks like and leaves open columns for evidence of falling short and exceeding.

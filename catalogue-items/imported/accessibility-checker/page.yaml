@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set checks but weighs how bad each problem is.
 new_slug: accessibility-checker
 name: Accessibility checker
-summary: Point it at a page or code. Get ranked WCAG 2.2 problems, with fixes if
-  you ask.
+summary: Check a web page or code for WCAG 2.2 accessibility problems. Get a ranked list with where each one is, and fixes if you ask.
 job: test-and-fix-code
 headline: Accessibility checker
-subhead: Point it at a web address or code folder and say whether you want a
-  report or fixes. It audits the live page where it can, otherwise the code, and
-  ranks every finding against WCAG 2.2. You get the ranked list, the place of
-  each problem, fixes if asked and a note on what automated checks miss.
+subhead: Point it at a web address or code folder and say whether you want a report or fixes. It audits the live page where it can, otherwise the code, and ranks every finding against WCAG 2.2. You get the ranked list, the place of each problem, fixes if asked and a note on what automated checks miss.
 explain: |
   Accessibility problems on a page or in your code come back as a ranked list, checked against WCAG 2.2. Ask for fixes and it repairs them and checks again.
 
@@ -19,6 +15,10 @@ when:
   - A customer says your site is hard to use with a screen reader.
   - You want colour contrast problems fixed and confirmed.
   - You need a report to hand to your developers.
+not_for:
+  - "You need a legal or certified WCAG conformance check: hire an accessibility specialist, since automated checks cover only part of WCAG."
+  - "You need to know how a screen reader or keyboard user feels on your page: test it by hand with a screen reader and the Tab key."
+  - "You only have a design mockup or a plain idea, with no page or code yet: ask a designer to review it first."
 you_give:
   - A page address or the code folder
   - Report only or fix as well
@@ -30,8 +30,33 @@ you_get:
   - Fixes applied and re-checked, if you asked
   - A note on what automated checks cannot cover
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open your AI in a chat that can run code or use a browser. Paste this skill into the chat.
+  - Give it a page address or a code folder. Say if you want a report only, or a report and fixes.
+  - Start with a small scope, such as one page or one folder. Whole-site checks are rarely useful.
+  - Only use a signed-in session for accounts and data you are allowed to share with your AI tool.
+  - Read the critical and serious problems first. Check any fixes before you publish.
+  - Test by hand with a screen reader and the Tab key, since automated checks miss things.
+output_sample:
+  input:
+    - A page address or a code folder
+    - Report only, or report and fix
+    - A signed-in browser session, if the page needs one (optional)
+    - The pages or parts to focus on (optional)
+  prerequisites:
+    - An AI that can run an accessibility checking tool, or open a browser, for a live page check
+    - A browser you are allowed to use, if the page needs a sign-in
+  output:
+    - name: Summary
+      contains: Counts of critical, serious, moderate and minor problems, and the top patterns behind them.
+    - name: Critical
+      contains: Problems that block access, each with the WCAG rule, where it is, the fix and why it matters.
+    - name: Serious
+      contains: Problems that make the page hard to use, in the same shape as the critical list.
+    - name: Moderate and minor
+      contains: A short list of smaller problems, grouped by rule.
+    - name: Recommendations
+      contains: Changes that stop the problems coming back, and what to test by hand.
+    - name: Positive findings
+      contains: What the page or code already does well.
+    - name: Fix report (fix mode only)
+      contains: What was changed, what was left as a to-do, and the before and after check.

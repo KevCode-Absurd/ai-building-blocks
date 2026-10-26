@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: brief
     required: true
+  - type: shortlist
+    required: false
 outputs:
   - type: shortlist
 uses: []

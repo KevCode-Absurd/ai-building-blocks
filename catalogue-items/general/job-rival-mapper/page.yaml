@@ -1,6 +1,6 @@
 new_slug: job-rival-mapper
 name: Job rival mapper
-summary: Paste your job spec. Get every rival, including doing nothing, each with a short resume and what must be fired.
+summary: Find every rival for your customer's job, including doing nothing. Paste your job spec and get a short resume for each rival and what they must drop.
 job: understand-customers
 thinking: medium
 thinking_why: It widens a list of rivals and writes short comparisons from a spec. A mid-range model does this well if the spec is clear.
@@ -14,6 +14,10 @@ when:
   - You track competitors by category and sales still surprise you.
   - Many people with the problem buy nothing, and you do not know why.
   - You want to know what a customer gives up to switch to you.
+not_for:
+  - "You want to compare one known competitor on price or features: read that competitor's site and pricing page, or ask a person who has bought from them."
+  - "You do not have a job spec yet: use the Job spec writer first, then come back here."
+  - "You want to find where no rival is strong: use the Competitor white space mapper after this one."
 you_give:
   - A job spec for one circumstance
   - Your known rivals (optional)
@@ -29,6 +33,28 @@ how_to_use:
   - Paste the job spec. Add any rivals and customer words you have.
   - Check the rival list against what customers really said.
   - Take the table to "Competitor white space mapper" to find where nobody is strong.
+output_sample:
+  input:
+    - Your job spec for one customer moment
+    - Your known rivals (optional)
+    - Customer reviews or notes that mention what else people tried (optional)
+  prerequisites:
+    - A job spec, for example one made by the Job spec writer
+  output:
+    - name: Job
+      contains: The circumstance and the job in one line.
+    - name: Rivals
+      contains: A table of at least eight rivals in five groups, each with a three-line resume, ratings and what must be fired.
+    - name: Doing nothing
+      contains: Who has the problem and buys nothing, and why, with any size estimate marked as a guess.
+    - name: Odd ones out
+      contains: Rivals from other aisles or industries that a category review would miss.
+    - name: The read
+      contains: Five lines or fewer on who you really compete with and which rival to study first.
+    - name: Missing
+      contains: Gaps marked MISSING where the facts were not given.
+    - name: Checks missed
+      contains: One line for each check it failed, or none.
 how_it_works:
   - title: Reads the spec
     text: Keeps every rival tied to this person in this moment.

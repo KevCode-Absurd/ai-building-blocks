@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares set figures, then explains the gap.
 new_slug: earnings-recap-writer
 name: Earnings recap writer
-summary: Give it a stock ticker. Get actual versus expected results, margin
-  trends and how the share price reacted. Collects data from websites.
+summary: "Get an earnings recap for any stock ticker: actual vs expected results, margin trends and the share price reaction, in one short read."
 job: money-and-investing
 headline: Earnings recap writer
-subhead: "A post-earnings summary for one stock: what was reported against what
-  was expected, how margins moved, and how the share price reacted. Give a
-  ticker and read the answer in minutes."
+subhead: "A post-earnings summary for one stock: what was reported against what was expected, how margins moved, and how the share price reacted. Give a ticker and read the answer in minutes."
 explain: |
   A post-earnings summary for one stock: what was reported against what was expected, how margins moved, and how the share price reacted. Give a ticker and read the answer in minutes.
 
@@ -18,6 +15,10 @@ when:
   - You want to see whether a miss was small or large.
   - You want margin trends across recent quarters.
   - You need to explain a big price move to a client.
+not_for:
+  - "You want to prepare for a report that has not happened yet: use the earnings-preview skill, which is not in this library yet."
+  - "You need what management said on the call, such as guidance or segment detail: read the company's own filing or call transcript."
+  - "You want advice on whether to buy or sell: talk to a licensed financial adviser, as this gives facts only."
 you_give:
   - A stock ticker
   - Python with internet access
@@ -28,8 +29,28 @@ you_get:
   - Margin trends over recent quarters
   - Share price reaction to the report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run Python code and go online, such as Claude with code tools on.
+  - Paste the skill into the chat, or upload its folder if your AI takes files.
+  - Type the stock ticker. Add the quarter if you want an older report.
+  - Let your AI install yfinance if it asks. Then wait for the data to load.
+  - Read the headline first. Then check the tables against the company's own filing before you share them.
+output_sample:
+  input:
+    - A stock ticker
+    - The quarter to cover (optional)
+  prerequisites:
+    - An AI that can run Python code and reach the internet
+    - The yfinance Python package, which the skill installs if it is missing
+  output:
+    - name: Headline result
+      contains: The quarter, the report date, the beat or miss, revenue growth and the share price reaction.
+    - name: Estimates vs actuals
+      contains: Expected earnings per share, reported earnings per share and the surprise in dollars and percent.
+    - name: Quarterly trends
+      contains: Revenue, gross margin, operating margin and earnings per share for about five recent quarters.
+    - name: Price reaction
+      contains: The move in the reaction session, compared with the usual move over the prior four reports.
+    - name: What changed
+      contains: Margin direction, revenue growth shift, how this surprise fits the usual pattern, and analyst mood if found.
+    - name: Caveats
+      contains: Limits of the data, such as no guidance, no revenue estimate, and that this is not financial advice.

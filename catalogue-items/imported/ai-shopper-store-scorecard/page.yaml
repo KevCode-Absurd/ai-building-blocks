@@ -2,13 +2,10 @@ thinking: low
 thinking_why: A script runs six fixed checks and the AI reports them.
 new_slug: ai-shopper-store-scorecard
 name: AI shopper store scorecard
-summary: Give it your Shopify store link. Get a 6-point scorecard of what AI
-  shopping tools can read. Scrapes sites.
+summary: Check if AI shopping tools can read your Shopify store. Give it your store link and get a 6-point scorecard with proof for each result.
 job: get-found-in-search
 headline: AI shopper store scorecard
-subhead: Can an AI shopping assistant actually read your Shopify store? In about
-  two minutes you get a six point scorecard with proof for each result, set
-  against 99 other stores.
+subhead: Can an AI shopping assistant actually read your Shopify store? In about two minutes you get a six point scorecard with proof for each result, set against 99 other stores.
 explain: |
   Can an AI shopping assistant actually read your Shopify store? In about two minutes you get a six point scorecard with proof for each result, set against 99 other stores.
 
@@ -18,6 +15,10 @@ when:
   - You wonder how your store compares with other Shopify stores.
   - You need proof of gaps before asking a developer for changes.
   - You want a quick check before a bigger audit.
+not_for:
+  - Your store is not on Shopify or is password-protected. Check your product pages by hand instead, because the script cannot read them.
+  - You want a step-by-step fix list. This only finds gaps. Use the paid agent-ready-store-audit in the Store Ops Pack.
+  - You do not own the store or have no permission to check it. Ask the owner first, or skip it.
 you_give:
   - Your Shopify store address
   - Python on your computer
@@ -28,8 +29,28 @@ you_get:
   - A comparison with 99 stores
   - Plain notes on what AI agents cannot do because of each gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python code, such as Claude with code tools turned on.
+  - Add the skill file and the script folder to the chat.
+  - "Tell your AI: run the quick check on your store link."
+  - Read the scorecard. Start with the gaps that say what an AI agent cannot answer.
+  - If a page could not be fetched, paste its text when your AI asks.
+output_sample:
+  input:
+    - Your Shopify store link
+    - Pages you paste in if the script cannot fetch them (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python 3 on the machine that runs it
+  output:
+    - name: Header and score
+      contains: The store domain, the date, and how many of the 6 checks your store passes against the study median.
+    - name: Scorecard table
+      contains: One row per check with a pass or gap result, the evidence found, and the share of study stores that pass.
+    - name: AI crawler and llms.txt check
+      contains: Whether AI agents are allowed in by robots.txt and whether an llms.txt file exists.
+    - name: Product data checks
+      contains: Shipping and returns, star ratings and barcodes in structured data, description length, and image alt text.
+    - name: What this means
+      contains: Three to five bullets saying what an AI agent cannot answer because of each gap.
+    - name: Paid audit line
+      contains: One closing line pointing to the full audit in the paid Store Ops Pack.

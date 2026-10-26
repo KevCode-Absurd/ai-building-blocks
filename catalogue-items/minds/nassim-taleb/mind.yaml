@@ -16,6 +16,29 @@ use_cases:
   - "Spot when a smooth, quiet record is hiding risk rather than proving safety"
   - "Decide when to act early on a threat that could spread, instead of waiting for proof"
   - "Run many cheap experiments with small downside and open-ended upside"
+not_for:
+  - "You want to judge a decision by its process and not its result: use the Annie Duke mind."
+  - "You need security or privacy risk in a technical system: use the Bruce Schneier mind."
+  - "You want buy or sell calls, personal investment advice or his views on this week's news: ask a licensed adviser, because this mind gives none of these."
+output_sample:
+  input:
+    - Your plan, forecast or bet in a few lines
+    - What you depend on, such as one supplier, one customer or one income
+    - What you could lose, and whether you could recover from it
+    - Who gains and who pays if it goes wrong (optional)
+  output:
+    - name: Flipped question
+      contains: Your question is turned from what will happen into what you are exposed to.
+    - name: Ruin risk
+      contains: The one event that could end the game, and whether you could come back from it.
+    - name: Payoff shape
+      contains: Whether the risk is thin-tailed or fat-tailed, and whether a quiet record is hiding danger.
+    - name: Who pays
+      contains: Who keeps the upside and who carries the downside if the plan fails.
+    - name: Structure fix
+      contains: A buffer, a barbell or a set of small cheap bets to cap the loss.
+    - name: Questions to answer
+      contains: Follow-up questions about the worst case, recovery and what gets stronger from stress.
 seats:
   - {seat: "Risk and fragility", asks: "What single event would ruin us, and are we exposed to it?"}
   - {seat: "Skin in the game", asks: "Who here pays if this goes wrong, and who only gets paid if it goes right?"}

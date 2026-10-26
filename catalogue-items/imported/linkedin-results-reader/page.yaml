@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads patterns in your numbers and weighs if they are real.
 new_slug: linkedin-results-reader
 name: LinkedIn results reader
-summary: Paste your own LinkedIn numbers. Get which posts worked, why reach
-  changed and a test to run next.
+summary: Paste your LinkedIn post numbers to read why reach changed and which posts worked. You get honest patterns and one test to run next.
 job: grow-social
 headline: LinkedIn results reader
-subhead: "A plain reading of your own LinkedIn numbers: which posts worked, why
-  reach changed, and one test to run next. It is careful not to claim more than
-  the data supports."
+subhead: "A plain reading of your own LinkedIn numbers: which posts worked, why reach changed, and one test to run next. It is careful not to claim more than the data supports."
 explain: |
   A plain reading of your own LinkedIn numbers: which posts worked, why reach changed, and one test to run next. It is careful not to claim more than the data supports.
 
@@ -18,6 +15,10 @@ when:
   - You wonder if carousels work better for you.
   - One post did well and you want to know if it was luck.
   - You want to decide what to post next based on your data.
+not_for:
+  - "You have fewer than 10 posts: it will only describe what happened. Keep posting and come back later."
+  - "You want to compare your numbers with other people's: it does not do that, and those numbers rarely match yours. Track your own results over time."
+  - "You want to decide what to post next: use a LinkedIn strategy item instead. This one only says what happened."
 you_give:
   - Post data you copied from LinkedIn
   - The dates and formats of posts
@@ -29,7 +30,28 @@ you_get:
   - A confidence label on each claim
   - One test to run next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Export your post data from LinkedIn Analytics, or ask for a copy of your data in Settings.
+  - Open an AI that can run code and paste in this skill, then upload your export file.
+  - "Ask: Why did my reach change, and what is working? Add your own question if you have one."
+  - Check the summary first. If you have under 10 posts, expect a description only, with no conclusions.
+  - Read each pattern as an idea to test, not a fact. Then run the one test it suggests.
+output_sample:
+  input:
+    - Your LinkedIn post export, as a CSV or JSON file
+    - The date and format of each post (included in the export)
+    - Your goal beyond likes (optional)
+    - A question you want answered (optional)
+  prerequisites:
+    - An AI that can run code, so the three scripts can work out the numbers
+    - Your own LinkedIn data, copied from LinkedIn Analytics or your data export
+  output:
+    - name: Post performance summary
+      contains: Your typical post, how far each post sits above or below it, and which posts broke out or flopped.
+    - name: Pattern test
+      contains: Each pattern you might see, such as carousels, and whether it beat chance or failed and why.
+    - name: Confidence labels
+      contains: "Each claim marked by source: LinkedIn official, third-party study, or folklore."
+    - name: Experiment plan
+      contains: A two-arm posting test, how many weeks it needs, what to hold constant and what would prove it wrong.
+    - name: What the data cannot show
+      contains: The limits of past posts, including timing and topic, and a plain note when nothing held up.

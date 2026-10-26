@@ -24,6 +24,14 @@ export type Tool = {
   alternatives: string[];
   lastChecked: string;
   sources: string[];
+  /** Optional: the steps to a first result, grouped by way in (chat, API) or one unnamed list. */
+  firstResult?: { name: string; steps: string[] }[];
+  /** Optional: what you need before you start. */
+  needs?: string[];
+  /** Optional: one worked case. The cost and reply are our own example, not a measured result. */
+  example?: { task?: string; cost?: string; reply?: string };
+  /** Optional: claims we could not confirm against the maker's pages. */
+  notVerified?: string[];
 };
 export type AiTools = {
   built: string;

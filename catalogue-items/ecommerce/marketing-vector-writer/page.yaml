@@ -1,6 +1,6 @@
 new_slug: marketing-vector-writer
 name: "Marketing vector writer"
-summary: "Give it your brand and ad plans. Get a marketing vector and on, borderline and off-brand ad angles."
+summary: "Write a marketing vector for your ads. Sort ad ideas into on-brand, stretch and off-limits, and set a clear rule for when a discount is allowed."
 job: brand-file
 thinking: medium
 thinking_why: "It sorts your ad ideas against a brand direction and writes a short brief. A mid-size model does this well. Use a stronger one if you review real ad data."
@@ -17,6 +17,10 @@ when:
   - You sell on identity and your ads are drifting toward heavy discounts.
   - You are briefing creators or editors and need a short guide on what is in and out.
   - You review ad results each quarter and want to tell story-led ads from ones that only win on a discount.
+not_for:
+  - Your store sells mostly on low price. A brand direction will not help, so test offers and prices with a media buyer instead.
+  - You have no brand file or brand description yet. Run the Store promise writer first, then come back.
+  - You want ads scored against benchmarks. This skill gives no score, so use your own ad reports and a person who reads them.
 
 you_give:
   - Your brand file or a short description of the brand and who it is for
@@ -37,6 +41,28 @@ how_to_use:
   - List your current ad angles, offers and discounts, and your price and average order value.
   - Hand the one-page brief to your creators. Add ad results each quarter and ask for the review.
   - Move an angle between columns only when the review backs it.
+output_sample:
+  input:
+    - Your brand file or a short description of the brand and who it is for
+    - Your current ad angles and offers, including discount ads
+    - Your price point and average order value
+    - Ad results per ad, such as hook, hold and click-through rates (optional)
+    - Repeat purchase or cohort figures (optional)
+  prerequisites:
+    - A brand file or a short brand description. If you have none, run the Store promise writer first.
+  output:
+    - name: Marketing vector
+      contains: One paragraph on the world your ads show, who the buyer is and the tone.
+    - name: Allowed selling moves
+      contains: The offer, proof and honest urgency your ads may use.
+    - name: Spectrum of ad variance
+      contains: A grid of concept types and formats sorted into on-brand, stretch and off-limits, with a reason for each.
+    - name: Discount rule
+      contains: What is off-limits, when a discount is allowed, and how to word it.
+    - name: One-page creator brief
+      contains: The vector, a do list, a do-not list, formats and examples for creators and editors.
+    - name: Quarterly review
+      contains: Each ad labelled as carrying the story, winning only on discount, or lacking data, with a baseline and top 3 changes.
 
 how_it_works:
   - title: Writes the vector

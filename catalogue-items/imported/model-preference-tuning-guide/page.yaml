@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Choosing the method and data takes careful judgment.
 new_slug: model-preference-tuning-guide
 name: Model preference tuning guide
-summary: Give it a model and examples of good and bad answers. Get a model tuned
-  to answer the way you prefer.
+summary: Tune a language model to answer your way with DPO, PPO or GRPO. Give it good and bad answer pairs. You get training code and a test against the original.
 job: build-software
 headline: Model preference tuning guide
-subhead: A language model tuned to answer the way you prefer, taught with
-  examples of good and bad answers. You choose the method that fits your data
-  and compute.
+subhead: A language model tuned to answer the way you prefer, taught with examples of good and bad answers. You choose the method that fits your data and compute.
 explain: |
   A language model tuned to answer the way you prefer, taught with examples of good and bad answers. You choose the method that fits your data and compute.
 
@@ -18,10 +15,14 @@ when:
   - You have a pile of thumbs up and thumbs down examples.
   - You want a small model to follow your house style.
   - You need to pick between DPO, PPO and GRPO.
+not_for:
+  - "You only want a better tone from a chat AI: change your prompt instead. No training is needed."
+  - "You have no GPU or Python setup: use a hosted fine-tuning service or ask a developer to run the training for you."
+  - "You only have prompt and answer pairs, with no good or bad ranking: use plain supervised fine-tuning with the Hugging Face Trainer."
 you_give:
-  - A base model
-  - Pairs of chosen and rejected answers
-  - A GPU and a Python setup
+  - The name of a base model to tune
+  - A JSON or CSV file with a prompt, a chosen answer and a rejected answer on each row
+  - A computer with an NVIDIA GPU and Python set up
   - The behavior you want to see (optional)
 you_get:
   - Training code for the right method
@@ -30,8 +31,32 @@ you_get:
   - An evaluation against the original
   - Advice on which method suits your data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Open an AI that can run Python code on a computer with an NVIDIA GPU. A plain chat window can only explain the steps.
+  - Paste this skill into your AI, then name your base model.
+  - Add your file of prompts with chosen and rejected answers. Ask your AI to check the format first.
+  - Ask your AI to pick a method. DPO is the simplest if you have answer pairs.
+  - Run the training script. If the GPU runs out of memory, ask for smaller batch sizes or LoRA.
+  - Compare the tuned model with the original on the same prompts before you use it.
+output_sample:
+  input:
+    - The name of a base model to tune
+    - A JSON or CSV file with a prompt, a chosen answer and a rejected answer on each row
+    - The tuning method you want, or your data size and GPU memory (optional)
+    - The behavior you want to see (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - A computer with an NVIDIA GPU
+    - The TRL, Transformers, Datasets, PEFT and Accelerate Python libraries installed
+  output:
+    - name: Method choice
+      contains: Which of SFT, DPO, PPO or GRPO fits your data, and why.
+    - name: Dataset format check
+      contains: A check that each row has a prompt, a chosen answer and a rejected answer.
+    - name: Training script
+      contains: Python code or a command line for the method you chose, with settings filled in.
+    - name: Memory settings
+      contains: Smaller batch sizes, gradient checkpointing and LoRA options if your GPU runs out of memory.
+    - name: Saved model folder
+      contains: The tuned model, saved to the output folder you named.
+    - name: Test against the original
+      contains: Answers from the original and tuned model on the same prompts, so you can compare them.

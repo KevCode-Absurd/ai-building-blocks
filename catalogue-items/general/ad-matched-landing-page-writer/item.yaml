@@ -14,6 +14,8 @@ inputs:
   - {type: ad_copy, required: false}
   - {type: voc_reviews, required: false}
   - {type: persona, required: false}
+  - {type: objection_map, required: false}
+  - {type: copy_draft, required: false}
 outputs:
   - {type: landing_page}
 uses: [customer-question-finder]

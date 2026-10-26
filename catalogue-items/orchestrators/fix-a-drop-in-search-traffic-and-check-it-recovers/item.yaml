@@ -15,10 +15,10 @@ outputs:
   - {type: audit_report}
 uses: [search-console-traffic-drop-diagnoser, store-seo-fix-prioritiser, shopify-duplicate-page-fixer, organic-search-report-builder]
 steps:
-  - {uses: search-console-traffic-drop-diagnoser, note: "Finds the pages and queries that lost clicks and the likely causes."}
-  - {uses: store-seo-fix-prioritiser, note: "Ranks the faults behind the drop so you fix crawl and index problems before content. Reads the diagnosis from the step before."}
-  - {uses: shopify-duplicate-page-fixer, note: "Fixes the duplicate and thin pages the ranked list put first. Reads the findings from the step before."}
-  - {uses: organic-search-report-builder, note: "Reports non-branded clicks, branded trend and organic sales for the new window, so you can see whether the drop is recovering."}
+  - {uses: search-console-traffic-drop-diagnoser, note: "Finds the pages and queries that lost clicks and the likely causes, and hands that diagnosis to step 2."}
+  - {uses: store-seo-fix-prioritiser, note: "Ranks the faults behind the drop so you fix crawl and index problems before content. Reads the diagnosis from the step before, and hands the ranked list to step 3."}
+  - {uses: shopify-duplicate-page-fixer, note: "Fixes the duplicate and thin pages the ranked list put first. Your fixes go live before step 4."}
+  - {uses: organic-search-report-builder, note: "Uses your own fresh Search Console export for the same pages, taken four weeks after the fixes, not step 3's output. Reports non-branded clicks, branded trend and organic sales for the new window, so you can see whether the drop is recovering."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/fix-a-drop-in-search-traffic-and-check-it-recovers/skeleton.yaml

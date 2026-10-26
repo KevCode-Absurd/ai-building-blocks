@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It reads sales against price to find patterns.
 new_slug: price-sensitivity-analyst
 name: Price sensitivity analyst
-summary: Get which products sell more or less as price changes, plus price
-  points worth testing.
+summary: Find which Shopify products sell less when the price goes up, and which price points to test. Reads your store data and changes nothing.
 job: set-prices
 headline: Price sensitivity analyst
-subhead: See which of your products sell more or less when price changes, and
-  which price points are worth testing. It reads your Shopify store data and
-  changes nothing.
+subhead: See which of your products sell more or less when price changes, and which price points are worth testing. It reads your Shopify store data and changes nothing.
 explain: |
   See which of your products sell more or less when price changes, and which price points are worth testing. It reads your Shopify store data and changes nothing.
 
@@ -18,6 +15,10 @@ when:
   - You want to know which items drop in sales when raised.
   - You are planning a price review for the quarter.
   - You need data to defend a price change to your team.
+not_for:
+  - You have fewer than 5 products in a group, so there is too little to compare. Look at each product's sales by hand instead.
+  - You ran a big sale or the season just changed. The sales shift will blur the result, so wait or pick a calmer period.
+  - You want proof that a price caused a sales change. This only shows patterns, so run a simple price test on one product instead.
 you_give:
   - Shopify store domain
   - Read access to orders and products
@@ -29,8 +30,29 @@ you_get:
   - Price points worth testing
   - Group comparison summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run the Shopify command line tool, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot read your store.
+  - Sign in to your store with read access to orders and products. The skill only reads and never edits a price.
+  - Paste the skill into your AI. Give it your store domain, and the number of days and grouping if you want to change them.
+  - Check the group sizes in the result. Treat any group with fewer than 5 products as weak evidence.
+  - Pick one or two products to test at a new price. Change the price yourself in Shopify, then compare sales again next quarter.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - Read access to your orders and products
+    - How many days of sales to look at (optional, 90 by default)
+    - "How to group products: type, vendor or collection (optional)"
+  prerequisites:
+    - An AI that can run the Shopify command line tool, signed in to your store with read access to orders and products
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line after each step with what was asked and how many results came back.
+    - name: Price-sensitive list
+      contains: Product groups where sales speed drops as price rises, with a top product and a lower price to test.
+    - name: Price-insensitive list
+      contains: Product groups where sales stay steady across prices, with a top product that may have room for a higher price.
+    - name: Sale effectiveness
+      contains: How many products are on sale, the average discount and how sale items sell against full-price peers.
+    - name: price_elasticity CSV file
+      contains: One row per product with price, sales speed, revenue per day, rank in group, a sensitivity flag and a recommendation.

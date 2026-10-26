@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It picks what matters, then fills a fixed template.
 new_slug: ai-guide-file-publisher
 name: AI guide file publisher
-summary: Give it your store. Get an llms.txt guide to your brand, products and
-  policies for AI assistants. Changes your live theme.
+summary: Make an llms.txt file for your Shopify store, so AI assistants know your brand, top products and policies. Preview it first, then publish.
 job: get-found-in-search
 headline: AI guide file publisher
-subhead: An llms.txt file for your Shopify store, a plain-text guide that tells
-  AI assistants who you are, what you sell and where your key pages are.
+subhead: An llms.txt file for your Shopify store, a plain-text guide that tells AI assistants who you are, what you sell and where your key pages are.
 explain: |
   An llms.txt file for your Shopify store, a plain-text guide that tells AI assistants who you are, what you sell and where your key pages are. It is published through your theme at a fixed address.
 
@@ -17,6 +15,10 @@ when:
   - A site audit says your store has no llms.txt.
   - You want to choose which products AI sees first.
   - You want a preview of the file before it goes live.
+not_for:
+  - "Your store blocks AI crawlers: fix crawler access first, since an llms.txt only helps if AI tools can reach your site."
+  - "Your store has no public storefront: there is nothing to link to, so ask a developer to write the file by hand."
+  - "You cannot sign in to the Shopify CLI or change themes: ask your store admin to run it, or copy the preview text in yourself."
 you_give:
   - Your store address
   - A signed-in Shopify CLI
@@ -28,8 +30,33 @@ you_get:
   - A flagship product list with links
   - Links to your policy and contact pages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Copy your live theme in Shopify first, so you can go back if needed.
+  - Open an AI that can run Shopify CLI commands, such as Claude Code, and sign in to your store.
+  - Paste the skill and give it your store address. Add a brand summary or a collection if you want to choose what shows.
+  - Read the preview. It writes nothing until you approve.
+  - Approve the write. The skill adds a new template to your live theme.
+  - Create a page that uses the llms template, or add a redirect from /llms.txt to that page.
+output_sample:
+  input:
+    - Your store address
+    - A Shopify CLI that is signed in to your store
+    - A brand summary (optional)
+    - A collection to draw your top products from (optional)
+    - How many products to list (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - Shopify permission to read products and themes, and to write themes
+    - A copy of your live theme, made before you publish
+  output:
+    - name: Brand header
+      contains: Your store name and a one-line summary of what you sell.
+    - name: Key products
+      contains: Your flagship products, each with its title, link and one line of description.
+    - name: Policies
+      contains: Links to your shipping, returns and privacy pages.
+    - name: Contact
+      contains: Your store contact email.
+    - name: Theme template
+      contains: A new page template that serves the text as plain text. Written only after you approve.
+    - name: Final step note
+      contains: How to create a page on the llms template, or redirect /llms.txt to it.

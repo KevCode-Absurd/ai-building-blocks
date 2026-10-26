@@ -2,32 +2,32 @@ slug: make
 name: Make
 maker: Make (formerly Integromat)
 url: https://make.com
-promise: "Connect apps and build repeatable tasks or AI agents on a visual canvas."
+promise: "Connect your apps on a visual canvas so work moves between them automatically."
 use_cases: [automate]
 categories: [automation]
 what_it_does:
-  - Lets you build automations by dragging steps onto a canvas.
-  - "Connects apps through ready-made links or their APIs."
-  - Builds AI agents with the goals, apps and limits you set.
-  - Adds JavaScript or Python when a step needs code.
-  - "Lets supported AI assistants start your connected Make automations."
-  - Shows each run live, so you can find and fix a failure.
+  - "Lets you build a workflow by prompting, by dragging steps, or through MCP, in a visual builder (checked 26 Oct 2026)."
+  - "Connects more than 3,000 apps. The home page says both 3,500+ and 3,000+, so treat the exact count as unclear (checked 26 Oct 2026)."
+  - "Builds AI agents. You set the goal, give them tools and set limits, and the page says you can see how the agent reasons (checked 26 Oct 2026)."
+  - "Lets you build, test and debug in the same visual space (checked 26 Oct 2026)."
+  - "Works with supported AI assistants through MCP (the builder page names it; checked 26 Oct 2026)."
 benefits:
-  - See your whole process on one canvas, not a list of rules.
-  - "Build steps with branches, repeated actions and filters."
-  - Start on a free plan with no credit card.
-  - Let a developer add code only where it is needed.
+  - "See your whole process on one canvas, not a list of rules."
+  - "Start on a free plan with no credit card and no time limit (checked 26 Oct 2026)."
+  - "Test and debug a workflow before you turn it on."
+  - "Give an AI agent a goal, tools and limits, and see how it reasons."
 best_for:
-  - "People who want to see and control the steps that connect their apps."
-  - Teams that run larger or branching automations.
-  - "Teams that build app links and repeat tasks for several clients."
+  - People who want to see and control the steps that connect their apps.
+  - Teams that run larger or branching workflows.
+  - Teams that build app links for several clients.
 not_for:
-  - People who want the simplest possible first automation.
-  - Teams that need a fixed price, since cost depends on credits used.
+  - "Your very first automation, if you want the simplest tool. Try Zapier first."
+  - "Anyone who wants to keep data on their own server. Use n8n."
+  - "Teams that need a fixed price, since the bill depends on the credits you use."
 pricing:
   model: freemium
-  from: Check the maker's site
-  note: Free plan with 1,000 credits a month. Paid plans are Core, Pro, Teams and Enterprise, priced by monthly credits and cheaper billed yearly. Sites that quote the prices disagree, so check the live page.
+  from: "Free plan, 1,000 credits a month (checked 26 Oct 2026)"
+  note: "The pricing page names Free, Core, Pro, Teams, Business and Enterprise. The Free plan has 1,000 credits a month, no time limit and no credit card needed (checked 26 Oct 2026). Yearly payment in advance costs less than monthly. Extra credits come in bundles of 1,000 or 10,000. Companies under 20 staff can ask about a Start-up Plan at 50 percent off Business. The page we could read showed no dollar prices, so check the live page for Core, Pro, Teams and Business."
 works_with:
   - claude
   - chatgpt
@@ -37,8 +37,28 @@ works_with:
 runs_in: [web, api]
 blocks: []
 alternatives: [zapier, n8n, gumloop, lindy]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to make.com and sign up for the free plan. No credit card is needed (checked 26 Oct 2026)."
+  - "Pick one small job with a clear start, such as a new row in a Google Sheet."
+  - "Add that app as the first step and sign in to it when asked. Add the second app, such as Slack, as the next step."
+  - "Map the fields. Choose which cell goes into which part of the message."
+  - "Run it once on a real row. Open the result of each step and check the message before you switch the workflow on."
+needs:
+  - "A Make account. The free plan needs no card."
+  - "A login for each app you connect, with permission to read or write what you pick."
+  - "The sheet, channel or folder to use, set up before you start."
+  - "A clear start and a clear end, written in one line. Example: new row, then Slack message."
+example:
+  task: "When a row is added to a Google Sheet, post a message in a Slack channel."
+  cost: "The free plan gives 1,000 credits a month. The pages we read do not say how many credits one run uses, so run it a few times and read your credit count before you rely on it."
+  reply: "A run you can open step by step, with the data each step received and sent, and a message in the Slack channel. If a step fails, the run view shows where."
+not_verified:
+  - "Dollar prices for Core, Pro, Teams and Business. The pricing page we read named the plans but showed no amounts."
+  - "That you can add JavaScript or Python to a step. We did not see it on the pages we read."
+  - "How many credits one run uses."
+  - "The exact app count. The home page gives two numbers."
 sources:
   - https://www.make.com/en/pricing
   - https://www.make.com
-  - https://www.jetadmin.io/blog/make-pricing/

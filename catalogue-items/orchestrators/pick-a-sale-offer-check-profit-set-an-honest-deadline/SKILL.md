@@ -46,8 +46,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Store offer picker.** Use the skill `store-offer-picker`. Starts the chain: the offer types worth testing, ranked, with the maths.
 2. **Reason-why deal writer.** Use the skill `reason-why-deal-writer`. Give it the shortlist from the steps before. Takes the top offer type from the step before and writes the deal with a reason a buyer will believe.
-3. **Discount impact checker.** Use the skill `discount-impact-checker`. Give it the offer from the steps before. Runs the deal from the step before through your costs to find the return you must hit.
-4. **Honest urgency planner.** Use the skill `honest-urgency-planner`. Give it the offer from the steps before. Takes the checked deal and sets a limit and date you can keep.
+3. **Discount impact checker.** Use the skill `discount-impact-checker`. Give it the offer from the steps before. Runs the deal from step 2 through your costs to find the return you must hit. If it says the deal does not pay, fix the deal before step 4.
+4. **Honest urgency planner.** Use the skill `honest-urgency-planner`. Give it the offer from the steps before. Uses the deal from step 2 and your own capacity (not step 3's report), once step 3 says the deal pays. Hands back a limit and date you can keep.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

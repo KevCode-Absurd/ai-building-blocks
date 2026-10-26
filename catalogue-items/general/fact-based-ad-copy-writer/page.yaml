@@ -1,6 +1,6 @@
 new_slug: fact-based-ad-copy-writer
 name: "Fact-based ad copy writer"
-summary: "Paste facts and buyer. Get an ad built on one real fact, with the source of every line."
+summary: "Write ad copy from your real product facts. Give it the buyer and the facts. You get an ad built on one fact, with the source of each line."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You have a product with real details, but your ads sound like everyone else's.
   - You're worried an ad overclaims, and want each line backed by something you can show.
   - You're writing for one specific buyer, for example people who tried a competitor and gave up on it.
+not_for:
+  - You have no product facts to share. Gather your spec sheet or product page first, or the ad will be full of gaps marked MISSING.
+  - You want a long sales page. Use a landing page writer, or write the page copy by hand, because this makes one ad.
+  - You want bold claims with no proof. This tool cuts or flags claims it cannot back. Ask your legal or compliance person instead.
 
 you_give:
   - Who the ad is for, what they want, and what makes them doubt
@@ -36,6 +40,24 @@ how_to_use:
   - Say who the ad is for in one or two sentences, including what makes them hesitate.
   - Name the format and its limits, for example "Facebook image ad, main text under 125 characters, headline under 40".
   - Read the notes at the end first. If it says MISSING, decide whether to find that fact or drop the claim.
+output_sample:
+  input:
+    - Who the ad is for, what they want and what makes them doubt
+    - Your product facts and the claims you may make
+    - The ad format and its length limits
+    - Your real offer terms (optional)
+    - A draft line, script or image to improve (optional)
+  output:
+    - name: Main text
+      contains: The ad words, opening on the buyer's want or doubt, with a character count.
+    - name: Headline
+      contains: One line built on the fact it chose, with a character count.
+    - name: Image
+      contains: A note on what the picture shows, used the real way, with no invented results.
+    - name: Notes
+      contains: The reason chosen, the fact and its source, conditions kept, facts left out, and what is missing.
+    - name: Checks missed
+      contains: One line for each of its own checks the ad still fails, or none.
 
 how_it_works:
   - title: Starts with the buyer

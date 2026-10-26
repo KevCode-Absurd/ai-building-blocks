@@ -1,0 +1,120 @@
+name: Blockchain Security Auditor agent
+summary: Paste your smart contract scope. Get an audit plan with reentrancy,
+  oracle and access-control checks, ranked by how much user money is at risk.
+headline: Blockchain Security Auditor agent
+subhead: Give it the contracts in scope and what the protocol is meant to do.
+  It checks each one against known exploit patterns, such as reentrancy and
+  oracle manipulation, and hands back a ranked audit plan with the invariants
+  to verify.
+job: secure-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Most smart contract bugs don't come from bad syntax. They come from a contract that looks correct and still loses funds, because an external call ran before a balance was zeroed, or a price came from a pool an attacker could move with one flash loan. A quick read misses these. This agent works through the known exploit classes on purpose: reentrancy, oracle manipulation, access control gaps, and the economic logic a static scanner can't see.
+
+  For each contract it checks the call chain, not just the function you're worried about, and the protocol's invariants, the things that must always stay true, such as "shares times price per share equals total assets." It separates a real finding from a style note, classifies severity by how much user value is at risk, and writes the audit plan so a developer can go fix it, not just worry about it.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+when:
+  - You're about to deploy a contract that holds or moves user funds and want a structured review first.
+  - You changed a lending, AMM or vault contract and want the invariants re-checked, not just the diff.
+  - You're adding a price oracle or a new external dependency and want to know what it exposes.
+  - You want a plan to brief a paid audit firm with, so the engagement starts from known risks, not from zero.
+not_for:
+  - You need a full, paid audit before deploying funds-holding contracts. This plan is a starting point, not a substitute for a licensed audit firm.
+  - You're reviewing a traditional web app or API with no on-chain contracts. Use the Security Architect or Application Security Engineer agent.
+  - Your contracts are already live and under active attack. Get your team and an incident response firm on it now; this agent plans reviews, it doesn't respond to live exploits.
+you_give:
+  - The contracts in scope, pasted or attached, and what the protocol is supposed to do.
+  - The invariants you believe must always hold, such as "total shares times price equals total assets" (optional, but it sharpens the review).
+  - Any external dependencies: price oracles, bridges, other protocols you call into.
+  - Past audit reports or known issues, if you have them (optional).
+you_get:
+  - A scope list: every contract in scope, its size and its external dependencies.
+  - An invariant list: what must always hold, and where it could break.
+  - A findings table: each issue, its severity (critical to informational), the attack scenario and the fix.
+  - A methodology note saying what was checked by reading the code versus what still needs a tool like Slither or a fuzzer.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
+  - Paste the contracts in scope and say what the protocol does, in plain words.
+  - Name the invariants you expect to hold, and any oracle or external protocol you depend on.
+  - Say "Build the audit plan. Flag anything you could not verify without running a tool."
+  - Read the findings table first. Any Critical or High finding should block deployment until it's fixed and re-checked.
+  - Take the finished plan to a licensed audit firm before you deploy funds-holding contracts.
+how_it_works:
+  - title: Scope the contracts
+    text: It lists every contract in scope, its size, and the external calls, oracles and protocols it depends on.
+  - title: List the invariants
+    text: It states what must always hold, such as a share-to-asset ratio, and where the contract could let that break.
+  - title: Check known exploit classes
+    text: It walks reentrancy, access control, oracle manipulation and flash loan attack paths against the actual code, not a checklist.
+  - title: Classify by value at risk
+    text: Each finding gets a severity from critical (funds lost with no special access) to informational, based on real impact.
+  - title: Write the audit plan
+    text: Each finding gets a location, an attack scenario and a specific fix, plus what still needs a tool like Slither to confirm.
+output_shape: |-
+  SCOPE
+    <contract> | <lines of code> | <external dependencies>
+
+  INVARIANTS
+    <invariant> | <where it could break>
+
+  FINDINGS (by severity)
+    [Critical/High/Medium/Low/Informational] <title> | <location> | <attack scenario> | <fix>
+
+  METHODOLOGY
+    Checked by reading: <list>
+    Still needs a tool (Slither, Mythril, Echidna or a fuzzer): <list>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <assumption or gap> | <what to verify>
+output_sample:
+  input:
+    - The contracts in scope, pasted or attached
+    - What the protocol is supposed to do, in plain words
+    - The invariants you expect to hold (optional)
+    - Any oracle or external protocol dependency (optional)
+  prerequisites:
+    - An AI that can read files, if you attach contract source
+  output:
+    - name: Scope
+      contains: Every contract in scope, its size and the external dependencies it calls into.
+    - name: Invariants
+      contains: What must always hold in the protocol, and where the code could let that break.
+    - name: Findings
+      contains: Each issue by severity, with its location, attack scenario and a specific fix.
+    - name: Methodology
+      contains: What was checked by reading the code, and what still needs a tool like Slither or a fuzzer.
+    - name: Assumptions and checks
+      contains: What the agent assumed and which facts you still need to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read the full contract source next to your description of what the protocol does.
+  inputs:
+    - Your test suite or Foundry invariant tests, if you have them.
+    - The protocol's whitepaper or spec.
+    - Any Slither or Mythril output you already have.
+terms:
+  - term: Reentrancy
+    meaning: A bug where an external call lets an attacker call back into your contract before it finishes updating its own state.
+  - term: Invariant
+    meaning: Something that must always stay true in the protocol, such as total shares matching total assets.
+  - term: Oracle manipulation
+    meaning: Pushing a price feed to a false value, often with a flash loan, so a contract makes a bad decision based on it.
+tweaks:
+  - what: Scope size
+    how: Review one or two contracts per pass. A whole protocol in one request gives shallow answers.
+  - what: Invariants
+    how: State the invariants yourself if you can. The review is sharper when it's checking your rule, not guessing one.
+improve:
+  - Keep each finding and its fix with your contract's test suite, so the next review starts from what's already closed.
+  - Pair it with the Security Architect agent for any off-chain backend the contracts talk to.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

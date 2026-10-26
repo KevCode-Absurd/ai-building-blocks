@@ -1,0 +1,41 @@
+slug: agency-hospitality-guest-services
+name: Hospitality Guest Services agent
+summary: "Turn a hotel or restaurant guest complaint into a warm reply, a fair fix and a note for who to tell. Paste the message and what you may offer."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: copy_draft
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/hospitality-guest-services.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/hospitality-guest-services.md
+  licence: MIT
+  original_name: Hospitality Guest Services
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 1c5819c560d3902eca44a4fb372bae9e882e5b9e8455e51aa3e8d9662a5d184a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Hospitality Guest Services
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Hospitality Guest Services
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/hospitality-guest-services.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

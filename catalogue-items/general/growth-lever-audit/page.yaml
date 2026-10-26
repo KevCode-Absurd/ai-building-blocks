@@ -1,54 +1,66 @@
 new_slug: growth-lever-audit
 name: "Growth lever audit"
-summary: "Paste your customer count, average sale and repeat rate. Get the three growth levers sized and the one to pull first."
+summary: "Find the cheapest way to grow revenue. Give your buyers, average sale and repeat rate. Get three levers sized and one test with a date."
 job: plan-strategy
 thinking: medium
 thinking_why: "The sums are fixed, but choosing the cheapest lever takes a judgement about effort and cost."
 
 headline: "Growth lever audit"
-subhead: Give it your number of customers, your average sale, how often they buy and what a new customer costs. It sizes a modest gain in each of three levers, multiplies them, finds the cheapest lever to pull and plans one test with a measure and a date.
+subhead: "Give it your buyers, your average sale, how often they buy and what a new buyer costs. It sizes a modest gain in each of three growth levers, multiplies them and finds the cheapest one to pull. You get one test with a measure, a read date and a stop rule."
 
 explain: |
-  There are three ways to grow revenue: win more customers, raise the average sale, or get each customer to buy more often. Most plans focus on the first, which is usually the most costly. Yet a modest gain in each lever multiplies, not adds. A 10% gain in all three is a 33% gain in revenue, not 30%.
+  Revenue comes from three numbers: how many people buy, how much each sale is worth and how often each person buys. Most plans to grow revenue chase new customers, which is usually the costliest lever. Yet a modest gain in each lever multiplies instead of adding. A 10% gain in all three is a 33.1% gain in revenue, not 30%.
 
-  This skill lists your numbers, models a modest gain in each lever and multiplies them. It then maps every way money comes in and every step from first contact to repeat buyer, so it can find the cheapest lever to pull. It checks how people who did not buy could still be served at a profit, and ends by choosing one lever and one test with a measure and a date. It lists missing numbers, and never guesses them.
+  This growth lever audit works from your own numbers. It sizes a modest gain in each lever, multiplies them, then maps every way money comes in and every step from first contact to repeat buyer. That map shows where the weak steps are. It then finds the cheapest lever, checks how people who did not buy could still be served at a profit, and ends with one test.
+
+  It never guesses a number. A missing figure goes on a list, and the modelled gain is a size to aim at, not a promise. The idea of three levers comes from Jay Abraham's teaching on growing a business.
 
 when:
-  - You want to grow and do not know whether to chase new customers, bigger sales or repeat orders.
-  - Your ad costs are rising and you want a cheaper source of growth.
+  - You want to grow and do not know whether to chase new buyers, bigger sales or repeat orders.
+  - Your ad costs keep rising and you want a cheaper source of growth.
   - You are setting next quarter's plan and need numbers behind your choice.
+  - Your shop or service has steady sales, but you cannot say which number to move first.
+
+not_for:
+  - "You have no sales history yet, so there is nothing to size. Use the Target size back-solver to work out what has to be true to reach a goal."
+  - "You want the most you can spend to win one customer. Use the Customer value and spend limit calculator."
+  - "You already have a list of growth ideas and want them ranked. Use the Growth idea ranker."
 
 you_give:
-  - A performance sheet with customers, orders, revenue and repeat rate (required)
-  - Your cost to win a new customer (optional but needed for a firm answer)
+  - "Your numbers for one period, such as the last 12 months: buyers, orders, revenue and how many buy again. A store or sales export works."
+  - What it costs you to win a new buyer, including ads, discounts and sales time (optional, but needed for a firm pick)
   - Product or price facts (optional)
-  - Ways money comes in today, such as products, services and add-ons (optional)
+  - Every way money comes in today, such as products, services and add-ons (optional)
+
 you_get:
-  - Your numbers laid out for each lever
-  - A modest gain modelled in each lever and the multiplied result
-  - A map of the steps from lead to repeat buyer, with the weakest points
-  - One lever and one test with a measure and a date
+  - Your numbers laid out for each lever, with the sums shown
+  - A modest gain in each lever and the multiplied result
+  - A map of the steps from first contact to repeat buyer, with the weakest steps marked
+  - The cheapest lever to pull, with the reason in numbers
+  - One test with a measure, a target, a read date and a stop rule
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your numbers for one period, such as the last 12 months. Say which period.
-  - List every product or service and every step a customer goes through.
-  - Read the lever sizes, then the pick. Check any figure marked MISSING.
-  - Run the test for the stated period and bring the result back.
+  - Open the skill in Claude, ChatGPT or Gemini. If you added it, call it by name. If not, copy it and paste it in.
+  - Paste your numbers for one period and say which period. An order export or a short summary sheet works. It needs no files or web access.
+  - Add what a new buyer costs you. List every product or service and every step a customer goes through.
+  - Read the three lever sizes, then the pick. Fill in any figure marked MISSING and run it again.
+  - Run the test for the stated period and bring the result back. Use the Customer value and spend limit calculator for the cost side.
 
 how_it_works:
   - title: List the numbers
-    text: Lists buyers, average sale, purchases per buyer and the cost to win a buyer.
+    text: Lists buyers, average sale, purchases per buyer and the cost to win a buyer, with each sum shown.
   - title: Multiply the gains
-    text: Models a modest gain in each of the three levers and multiplies them.
+    text: Models the same modest gain in each of the three levers and multiplies them.
   - title: Map the money
-    text: Lists every way money comes in and every step from lead to repeat buyer.
+    text: Lists every way money comes in and every step from first contact to repeat buyer.
+  - title: Find the weakest steps
+    text: Marks the steps with the biggest drop, judged against your own past data only.
   - title: Find the cheapest lever
-    text: Finds the lever that costs least to pull, often not new customers.
+    text: Compares what it would cost to gain the modelled amount in each lever. It is often not new customers.
   - title: Serve non-buyers
     text: Checks how people who did not buy could still be served at a profit.
   - title: Pick one test
-    text: Picks one lever and one test with a measure and a date.
+    text: Picks one lever and one test with a measure, a target, a read date and a stop rule.
   - title: Check it
     text: Runs its own checks and names any it missed.
 
@@ -63,22 +75,44 @@ output_shape: |
   Together (multiplied): +<x>% -> <revenue>
 
   THE MAP
-  <step from lead to repeat buyer> | Drop-off or gap: <fact>
+  <step from first contact to repeat buyer> | In: <n> | Out: <n> | Weak? <yes or no>
 
   CHEAPEST LEVER
-  <lever> | Why cheapest: <reason>
+  <lever> | Why cheapest: <reason in numbers, or PROVISIONAL and why>
 
   NON-BUYERS
   <how they could be served at a profit, or not>
 
   THE TEST
-  Change: <what> | Measure: <metric> | Target: <number> | Date: <date>
+  Change: <what> | Measure: <metric> | Target: <number> | Read on: <date, or <n> weeks after the test starts> | Stop if: <rule>
 
   MISSING
   <numbers that would sharpen the audit>
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your numbers for one period: buyers, orders, revenue and how many buy again"
+    - What it costs you to win a new buyer (optional)
+    - Product or price facts (optional)
+    - Every way money comes in today (optional)
+  output:
+    - name: Your numbers
+      contains: Period, buyers, average sale, purchases per buyer and cost to win a buyer, with each sum shown.
+    - name: The three levers
+      contains: A modest gain in buyers, average sale and purchases per buyer, plus the multiplied result.
+    - name: The map
+      contains: Each step from first contact to repeat buyer, with the count in, the count out and the weak steps.
+    - name: Cheapest lever
+      contains: The lever that costs least per extra dollar of revenue, with the reason in numbers.
+    - name: Non-buyers
+      contains: What people who did not buy could be offered at a profit, with cost and margin.
+    - name: The test
+      contains: One change with its measure, target, read date and stop rule.
+    - name: Missing and checks missed
+      contains: Numbers that would sharpen the audit, plus any check the skill could not pass.
 
 tweaks:
   - what: The period

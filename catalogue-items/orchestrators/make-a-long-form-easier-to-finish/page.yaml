@@ -1,52 +1,95 @@
 new_slug: make-a-long-form-easier-to-finish
 name: Make a long form easier to finish
 headline: Make a long form easier to finish
-summary: Share the source files. Get a shorter field list, a revised form flow and a test script.
+summary: Cut a long web form to the fields you need and get a flow people finish, with a short test script to try it on real people.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A shorter field list, a revised form flow and a test script. Share the current form, required fields, user goal and known abandonment points. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your current form, the fields that must stay and the points where people quit. Your AI removes fields you do not need, decides if the form needs steps, and writes a test script. You get a shorter field list, a revised form flow and a test to run.
 explain: |-
-  A shorter field list, a revised form flow and a test script.
+  A long form loses people at the fields they do not understand or do not want to give. Adding steps does not always help. Splitting a form with 20 fields into 5 pages can hide the length without making it shorter.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every retained field has a purpose; required, optional, error and success states are covered. Missing tools or evidence stay visible in the final summary.
+  This workflow cuts first. It lists every field, asks what each one is used for, and removes or merges the ones nothing depends on. Then it decides if the shorter form still needs several steps. A short, simple form stays on one page. A longer one gets a step order, saved progress and a final review page.
+
+  The last step writes a small usability test so you can watch a few people use the new form. The result is a plan, not proof. Only a test with real people shows if more of them finish.
 when:
-  - You need a shorter field list, a revised form flow and a test script.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your quote or sign-up form has 15 or more fields and people leave halfway.
+  - A sales team asks for three more fields and you want to know which ones earn their place.
+  - Your analytics show people quit at one field, such as phone number or company size.
+  - You are about to split a form into steps and are not sure it will help.
+not_for:
+  - Your form has about five fields on one page. Use the Web form designer on its own.
+  - You already have a finished design and only want a test plan. Use the Small usability test planner.
+  - Every field is required by law or by a contract. It can still reorder and reword, but it cannot cut fields. Use the Plain words interface rewriter for wording.
+  - You want clearer error messages on a form. Use the Error message rewriter.
 you_give:
-  - The current form, required fields, user goal and known abandonment points.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your current form, as a link, screenshot or list of fields
+  - What the form is for and what you do with each answer
+  - The fields that law or your process makes required
+  - Where people quit and your finish rate, if you know them (optional)
+  - Who fills it in, such as new customers on a phone (optional)
 you_get:
-  - A shorter field list, a revised form flow and a test script.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A field audit showing each field as keep, cut or merge, with the reason
+  - A shorter field list with labels, help text and checks for each answer
+  - A decision on one page or steps, with step order, progress labels and save-and-resume if steps are used
+  - A test script with tasks, a read-aloud script and rules for what counts as finished
+  - One next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Attach your current form and say what each answer is used for. Say which fields are required and why.
+  - After step 1, read the cut list. Push back on any field you cannot lose and say why. The AI should keep it.
+  - After step 2, check the page-or-steps decision. A short form should stay on one page.
+  - Use the test script with a few people who have not seen the form. Change the form before you ship it, then run the test again.
 how_it_works:
   - title: Web form designer
-    text: Map required information, remove needless fields and define labels and validation rules.
+    text: Lists every field, what it is used for and whether it is required. Cuts or merges fields nothing depends on, then sets labels, help text and answer checks. Hands step 2 the kept field list. Check before moving on, every cut field has a reason and every required field is still there.
   - title: Multi-step form designer
-    text: Decide whether the retained form warrants multiple steps; keep a short simple form on one page, otherwise plan step order, saved progress and final review.
+    text: Decides if the kept fields need several steps. A short simple form stays on one page. Otherwise it plans step order, progress labels, skip rules, saved progress and a final review. Hands step 3 the flow. Check before moving on, each kept field sits on exactly one step.
   - title: Small usability test planner
-    text: Test whether a person can finish the revised flow, recover from an error and understand what happens next.
+    text: Writes tasks from the revised flow, a read-aloud script with neutral prompts, and a rule for what counts as finished. Includes an error the person must recover from. Check before moving on, no task tells the person where to click.
 output_shape: |-
-  Scope and source coverage
-  A shorter field list, a revised form flow and a test script.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  FORM          <name>, <what it is for>, <fields now> -> <fields after>
+
+  FIELD AUDIT   <field> | keep, cut or merge | <what it is used for> | required by <law, contract or none>
+
+  REVISED FIELDS <field> | <label> | <help text> | <answer check and error message>
+
+  FLOW          <one page or N steps>, <why>
+                step <n>: <fields> | progress label <text> | skip rule <rule or none>
+                save and resume: <how people come back>
+                final review: <what is shown>
+
+  TEST SCRIPT   task <n> | <what the person tries> | finished when <rule> | stuck when <rule>
+
+  MISSING       <each gap, and the line it stops>
+  CHECKS MISSED <one line each, or none>
+  NEXT STEP     <one action for you>
+output_sample:
+  input:
+    - Your current form, as a link, screenshot or list of fields
+    - What each answer is used for
+    - Which fields are required by law or by your process
+    - Where people quit and your finish rate (optional)
+  output:
+    - name: Field audit
+      contains: Every field marked keep, cut or merge, with its use and whether it is required.
+    - name: Revised fields
+      contains: The kept fields with labels, help text and answer checks written in plain words.
+    - name: Form flow
+      contains: One page or a step order, with progress labels, skip rules and save-and-resume when steps are used.
+    - name: Test script
+      contains: Tasks, a read-aloud script, finished and stuck rules, and one error to recover from.
+    - name: Hand-back summary
+      contains: Saved files, MISSING lines, checks not run and the next change to try.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every retained field has a purpose; required, optional, error and success states are covered.
+  - what: Phone first
+    how: Say most people use a phone. The flow favors short steps, large touch areas and fewer typed fields.
+  - what: A fixed field list
+    how: Mark fields you cannot cut. Step 1 keeps them and cuts only from the rest.
+  - what: Known quit points
+    how: Give the field where people quit. Step 1 reviews that field first and the test script gives it a task.
+  - what: A test with fewer people
+    how: Say how many people you can watch. The script and the note sheet size to match.
 judge:
   - Every retained field has a purpose; required, optional, error and success states are covered.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -70,5 +113,11 @@ works_best_with:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
 terms:
+  - term: Save and resume
+    meaning: A way to leave a form and come back later with your answers kept.
+  - term: Progress label
+    meaning: The short name shown for each step, such as Your details or Review.
+  - term: Merge a field
+    meaning: Combine two fields into one, such as first and last name into full name.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result and file passed from one step to the next.

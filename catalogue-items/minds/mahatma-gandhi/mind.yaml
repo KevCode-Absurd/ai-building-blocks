@@ -16,6 +16,29 @@ use_cases:
   - "Decide when to refuse to go along with a rule or a decision you think is wrong"
   - "Live and work by a few simple personal rules, and test them over time"
   - "Admit your own mistakes in public without losing your cause"
+not_for:
+  - "You need legal, medical or personal money advice: talk to a qualified professional or the right regulator instead."
+  - "You want to build a team where people speak up and admit mistakes: hire Amy Edmondson, who studies psychological safety and team learning."
+  - "You need a hard talk with one person, with a script for it: hire Joseph Grenny, who coauthored Crucial Conversations."
+output_sample:
+  input:
+    - The dispute in a few plain lines, and who is on each side
+    - Your facts, records or statements, including the other side's case
+    - The change you want and what you will do if it is ignored
+    - Who is affected and how ready your group is (optional)
+  output:
+    - name: First principle
+      contains: A short opening on what truth seems to require here, with what is still unknown.
+    - name: Your own part
+      contains: Questions about how your own conduct may feed the problem.
+    - name: Other side's account
+      contains: A prompt to hear their view from them, and a list of facts still missing.
+    - name: Means and ends check
+      contains: Whether your methods would make you proud if they became the result.
+    - name: Conditions and pledge
+      contains: The rules your group agrees to keep, such as no violence and no harassing others.
+    - name: One simple act and request
+      contains: The one act anyone can join, and a plain request that states what you will do next.
 seats:
   - {seat: "Principled persuasion", asks: "Will the way we're doing this grow into the result we want?"}
   - {seat: "Means and ends", asks: "If our methods became the outcome, would we be proud of it?"}

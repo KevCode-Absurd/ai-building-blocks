@@ -14,8 +14,8 @@ outputs:
   - {type: audit_report}
 uses: [performance-max-launch-planner, performance-max-routine-keeper, google-ads-scale-gate-checker]
 steps:
-  - {uses: performance-max-launch-planner, note: "Says go or wait, then gives the build."}
-  - {uses: performance-max-routine-keeper, note: "Checks the live campaign against the plan and lists what to exclude or replace."}
+  - {uses: performance-max-launch-planner, note: "Says go or wait, then gives the build. Hands step 2 the plan to check the live campaign against."}
+  - {uses: performance-max-routine-keeper, note: "Checks the live campaign against step 1's plan, using the reports you export after three to four weeks, and lists what to exclude or replace. Hands step 3 the clean-up findings."}
   - {uses: google-ads-scale-gate-checker, note: "Takes the clean-up findings and decides whether raising spend is safe."}
 origin: rebuilt
 version: 1.0.0

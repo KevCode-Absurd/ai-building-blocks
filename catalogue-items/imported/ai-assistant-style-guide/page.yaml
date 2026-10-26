@@ -2,34 +2,101 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: ai-assistant-style-guide
 name: AI assistant interface style guide writer
-summary: Describe your AI product. Get a style guide for a chat-first screen
-  with few controls and clear outcomes.
+summary: Get a style guide for a chat-first AI product, with type, colour and spacing tokens, part states, accessibility rules and tone, ready for designers.
 job: design-work
 headline: AI assistant interface style guide writer
-subhead: A style guide for an AI product where the main screen is a
-  conversation, with few buttons and a clear result at the end. The guide is
-  built so designers and engineers can use it directly.
+subhead: "Describe your AI product, where the main screen is a conversation and the user hands the work to the AI. You get a style guide with tokens, parts, states, accessibility rules, writing tone and a checklist for code review."
 explain: |
-  A style guide for an AI product where the main screen is a conversation, with few buttons and a clear result at the end. The guide is built so designers and engineers can use it directly.
+  Most AI products are a chat box and a few buttons. The risk is that every screen ends up with its own colours, spacing and button words. This AI assistant style guide fixes that with one set of rules that designers and engineers both use.
 
-  It begins with one sentence of design intent. Then it sets the basics in order: type sizes, fonts, colours as named tokens, and an 8-point spacing grid. After that come the parts: how each component looks, its states and how it behaves, including empty, loading and error screens. Accessibility is built in, with keyboard use, visible focus, large touch targets and strong contrast. The writing tone is short, friendly and action-led, with do and don't lists to keep the screens consistent.
+  The guide is built for a conversation-first screen: few controls, clear results and tasks handed over to the AI. It starts with one sentence of design intent, then sets the basics before any part. After that come the parts, with every state they need, including empty, loading and error.
+
+  Rules are tied to a token, a number or an example, so nobody argues about what "clean" means. It tests colour pairs for contrast and says where a default colour fails. Where looks and accessibility clash, accessibility wins.
 when:
-  - You are designing an AI assistant and want a consistent look.
-  - Your team keeps choosing different colours and spacing for the same product.
-  - You need chat screens to be easy to use with a keyboard or screen reader.
-  - You want one place for rules on button labels and messages.
+  - You are designing an AI assistant and want one look across all its screens.
+  - Your team keeps picking different colours and spacing for the same product.
+  - You need a chat screen that works with a keyboard and a screen reader.
+  - You want one place that settles button labels, messages and empty or error screens.
+not_for:
+  - "Your product has no chat-first screen, such as a dashboard or a shop: use the Brand style guide writer or the Minimal style guide writer."
+  - "You want a reading-heavy product with a printed-magazine feel: use the Magazine layout style guide writer."
+  - "You need a sales page that sells: use the Conversion page style guide writer or the Story-led page style guide writer."
+  - "You only need to check contrast on colours you already have: use the Colour contrast checker."
 you_give:
-  - A description of your AI product
-  - Your brand colours and fonts (optional)
-  - The screens or parts you need
-  - Accessibility rules you must follow (optional)
+  - A description of your AI product and who uses it
+  - The platform, such as web, iOS or Android (optional)
+  - Fonts or colours you must keep (optional)
+  - The screens or parts to cover first, such as the message box or the result card (optional)
+  - Accessibility rules you must meet (optional)
 you_get:
-  - Design tokens for type, colour and spacing
-  - Part-by-part guidance with states
-  - Accessibility rules
-  - Writing tone rules and do and don't lists
+  - Tokens for type, colour and spacing, with contrast ratios
+  - Rules for each part, with its states and how it responds on keyboard, mouse and touch
+  - Accessibility rules you can test
+  - Writing tone, with do and don't examples
+  - A checklist to run in code review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill. No tools or code are needed.
+  - Describe your product in a few lines. Add your fonts, colours, platform and the screens you need first. Anything you leave out is marked MISSING and filled with the defaults.
+  - Read the design intent sentence first. If it does not sound like your product, fix your description and run it again.
+  - Check the contrast table. The default orange does not pass as text on white, so change or limit it before you use it.
+  - Hand the guide to your designer or developer, or paste it into your coding AI's project instructions so new screens follow it.
+how_it_works:
+  - title: Ask once
+    text: It asks for the product, platform, fonts, colours and screens in a single message, and marks gaps MISSING.
+  - title: State the intent
+    text: It restates the design intent in one sentence before it makes any rule.
+  - title: Set the foundations
+    text: It sets type sizes, fonts, named colour tokens and an 8-point spacing grid.
+  - title: Define the parts
+    text: It writes each part with its states, variants, and keyboard, mouse and touch behavior.
+  - title: Check contrast and accessibility
+    text: It tests colour pairs, adds tests you can run, and puts accessibility ahead of looks.
+  - title: Close with a checklist
+    text: It adds anti-patterns and a checklist you can run in code review.
+output_shape: |
+  1. Context and goals
+  2. Design tokens and foundations   (type, colour with contrast, spacing)
+  3. Part rules   (<part>: states, variants, behavior, responsive)
+  4. Accessibility requirements and tests
+  5. Content and tone, with examples
+  6. Anti-patterns
+  7. Review checklist
+  Next step: <hand to designer, developer or coding AI>
+output_sample:
+  input:
+    - A description of your AI product and who uses it
+    - Your fonts, colours and platform (optional)
+    - The screens or parts to cover first (optional)
+  prerequisites:
+    - Any chat AI
+  output:
+    - name: Context and goals
+      contains: The design intent in one sentence, and what the guide aims to settle.
+    - name: Design tokens and foundations
+      contains: Type sizes, fonts, colour tokens with contrast ratios, and an 8-point spacing grid.
+    - name: Part rules
+      contains: For each part, how it looks in each state, and how it works by keyboard, mouse and touch.
+    - name: Accessibility requirements
+      contains: Rules you can test, such as visible focus, large touch targets and reduced motion.
+    - name: Content and tone
+      contains: How the product writes, with do and don't examples for labels and messages.
+    - name: Anti-patterns
+      contains: What to avoid, each paired with a concrete example.
+    - name: Review checklist
+      contains: Yes or no checks to run in code review.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It needs only your description, with nothing to install or run.
+  inputs:
+    - Screenshots or a link to your current screens, so the guide matches what exists.
+    - Your brand colours and fonts, so the tokens start from your own.
+terms:
+  - term: Design token
+    meaning: A named value, such as a colour or a gap size, that the whole product reuses.
+  - term: Contrast ratio
+    meaning: How different a text colour is from its background. Higher is easier to read.
+  - term: Focus state
+    meaning: The outline that shows which button or field a keyboard user is on.
+  - term: WCAG 2.2 AA
+    meaning: A common standard for making web content usable by more people.

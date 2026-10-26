@@ -2,36 +2,94 @@ thinking: medium
 thinking_why: It sets up a full process, so choices need weighing.
 new_slug: review-cycle-form-builder
 name: Review cycle form builder
-summary: Give it your team and goals. Get review forms, goal templates and a
-  guide for fair rating meetings. Not legal advice.
+summary: "Build performance review forms, goal templates and a fair rating-meeting guide for each role on your team. Not legal advice."
 job: hire-people
 headline: Review cycle form builder
-subhead: "A ready set of performance review materials: appraisal forms, goal
-  templates and a guide for running fair rating meetings. Managers get wording
-  they can use instead of starting from a blank page."
+subhead: "Name your team, roles, goals and review period. You get a review form and a goal template for each role, feedback wording, and a guide to run fair rating meetings."
 explain: |
-  A ready set of performance review materials: appraisal forms, goal templates and a guide for running fair rating meetings. Managers get wording they can use instead of starting from a blank page. It is not legal advice.
+  Managers rate people differently, and review forms are often copied from last year. This review cycle form builder sets up the whole cycle once, so every manager starts from the same forms and the same wording.
 
-  You give the team, roles and what you want to measure. The skill drafts review forms and goal or OKR templates for each role, and helps write the reviews themselves with clear, specific language. It covers 360-degree feedback, improvement plans with measurable milestones, and calibration sessions where managers compare ratings across teams. It can also draft recognition programmes and succession plans. Check anything on formal warnings with HR or a lawyer.
+  You give the roles, the goals to measure and the review period. It drafts a performance review form and a goal or OKR template for each role. It adds feedback phrases tied to what people did, not who they are. If you ask, it adds a calibration guide for managers who compare ratings, and an improvement plan outline with check-ins at 30, 60 and 90 days.
+
+  It does not invent facts about a person. It marks missing details so you can fill them.
 when:
-  - Review season is near and you have no form.
-  - You need to write a review for a team member and want clear wording.
-  - A struggling employee needs an improvement plan with measurable steps.
-  - Managers rate people differently and you want calibration.
+  - Review season is near and you have no form to use.
+  - Managers write reviews in very different styles and you want one standard.
+  - You need clear, specific wording for a review of one team member.
+  - A struggling team member needs an improvement plan with measurable steps.
+  - Managers rate the same work differently and you want a calibration meeting.
+not_for:
+  - "You are writing one person's review or your own: use the Performance review helper."
+  - "You need to dismiss someone or face a tribunal claim: take it to HR or an employment lawyer, not a form."
+  - "You want to define the skills for each role first: use the Role skills framework builder, then come back."
 you_give:
-  - Your team and job roles
-  - Goals or OKRs to measure
-  - Time period for the review
-  - Examples of achievements or issues (optional)
-  - Company values or rating scale (optional)
+  - Your team and the job roles in it
+  - The goals or OKRs to measure
+  - The review period
+  - Your rating scale and company values (optional)
+  - Examples of achievements or problems (optional)
 you_get:
-  - Review forms for each role
-  - Goal and OKR templates
-  - Phrases for clear feedback
-  - A calibration meeting guide
-  - Improvement plan outlines
+  - A review form for each role
+  - A goal or OKR template for each role
+  - Feedback phrases tied to behaviour
+  - A calibration meeting guide (on request)
+  - An improvement plan outline with 30, 60 and 90 day check-ins (on request)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. Paste the skill text into the chat.
+  - Paste your roles, goals, review period and rating scale. If you have no scale, say so and it will suggest one.
+  - Ask for the forms first. Check that each form fits the role and uses your scale.
+  - Ask for the goal templates and feedback phrases. Replace any phrase that does not sound like your team.
+  - Ask for the calibration guide if managers will compare ratings, or the improvement plan if one person needs it.
+  - Show anything about warnings or pay to HR or a lawyer before you use it.
+output_sample:
+  input:
+    - Your team and the roles in it
+    - The goals or OKRs to measure
+    - The review period
+    - Your rating scale and company values (optional)
+    - Examples of achievements or problems (optional)
+  output:
+    - name: Review form
+      contains: One per role, with goals and a rating column, behaviours, comments and next-period goals.
+    - name: Goal or OKR template
+      contains: One objective, two to four measurable results, a date and a check-in point.
+    - name: Feedback phrases
+      contains: Five to eight specific sentences tied to what a person did, for use in reviews.
+    - name: Calibration guide
+      contains: Who attends, what evidence each manager brings, the order of talks and how to settle a gap.
+    - name: Improvement plan outline
+      contains: The gap, the result expected, the support offered and check-ins at 30, 60 and 90 days.
+how_it_works:
+  - title: Collect your setup
+    text: It asks once for roles, goals, period and rating scale. It suggests a scale if you have none.
+  - title: Draft the forms
+    text: It writes a review form and a goal template for each role.
+  - title: Write the wording
+    text: It adds feedback phrases that point to behaviour you can see.
+  - title: Add the extras
+    text: On request, it adds a calibration guide and an improvement plan outline.
+  - title: Give a check list
+    text: It ends with what to check before the forms go out.
+output_shape: |
+  Review form: <role>, <period>
+  Goals: <goal> | <rating> | <evidence>
+  Behaviours: <value or behaviour> | <rating> | <example>
+  Comments, next-period goals
+  Goal template: <objective>, <key results>, <date>, <check-in>
+  Feedback phrases: <8 specific sentences>
+  Improvement plan: <gap>, <result expected>, <support>, <30, 60 and 90 day checks>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Forms and wording are a writing job. Claude, ChatGPT and Gemini all do it well.
+  inputs:
+    - Last cycle's forms, so the new ones match what managers know
+    - Your company values in a few lines
+    - A list of the rating levels your managers already use
+terms:
+  - term: OKR
+    meaning: A goal with a few measurable results that show if you hit it.
+  - term: Calibration
+    meaning: A meeting where managers compare ratings across teams so the same standard is used for everyone.
+  - term: Improvement plan
+    meaning: A written plan with set goals and check-ins for someone whose work is below the standard.

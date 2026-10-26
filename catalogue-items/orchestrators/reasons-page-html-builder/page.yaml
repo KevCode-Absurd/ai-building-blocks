@@ -30,3 +30,27 @@ how_it_works:
     text: Render mobile HTML, refine it and export scoped Shopify files when requested.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You only need the words, not a built page: use the Reasons-to-switch page writer."
+  - "You want a Shopify page built from a plan, not a five-reasons page: use the Shopify landing page builder."
+  - "You want an existing landing page reviewed, not built: use the Landing page 30-point checker."
+output_sample:
+  input:
+    - Your product facts, the buyer and the ad that sends traffic to the page
+    - Your offer terms and prices
+    - Proof you can back up, such as real reviews
+    - Product photos and your brand colours (optional)
+    - Your Shopify theme details (optional)
+  prerequisites:
+    - An AI that can write code files and, ideally, view a page in a browser
+  output:
+    - name: Reason and proof map
+      contains: Five buying reasons, each with its claim, source, buyer doubt and image job.
+    - name: Page copy
+      contains: Three headline options, the five reasons, the offer, real conditions and questions.
+    - name: Responsive HTML page
+      contains: A mobile-ready page in the editorial or direct-response look you pick.
+    - name: Revision and check log
+      contains: The changes you asked for and what was checked at phone and desktop sizes.
+    - name: Shopify section and template (optional)
+      contains: A Liquid section with its settings and template file, marked as a starter if no theme is given.

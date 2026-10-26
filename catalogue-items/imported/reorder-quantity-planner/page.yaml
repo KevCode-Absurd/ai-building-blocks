@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Forecasts weigh sales speed and seasons.
 new_slug: reorder-quantity-planner
 name: Reorder quantity planner
-summary: Get a sales forecast for each product, plus when to reorder and how
-  many to buy.
+summary: Plan your Shopify reorder quantities. Get a sales forecast per product, the stock level to reorder at, and how many units to buy.
 job: run-your-store
 headline: Reorder quantity planner
-subhead: For every product, a sales forecast, the stock level at which to
-  reorder, and how many units to buy. It tells you what runs out before the next
-  delivery lands.
+subhead: For every product, a sales forecast, the stock level at which to reorder, and how many units to buy. It tells you what runs out before the next delivery lands.
 explain: |
   For every product, a sales forecast, the stock level at which to reorder, and how many units to buy. It tells you what runs out before the next delivery lands.
 
@@ -18,6 +15,10 @@ when:
   - You are about to place a purchase order and need quantities.
   - You want to see which items will stock out in the next month.
   - Supplier lead times differ and you need to plan around them.
+not_for:
+  - You sell products with no sales history yet. Use a simple guess from your supplier's minimum order and your own plans.
+  - Your stock is not tracked in Shopify. This plan cannot read it, so turn on stock tracking first.
+  - You want to find items that are not selling. Use the Dead stock identifier first, so you do not reorder them.
 you_give:
   - Store domain
   - Sales history window in days
@@ -30,8 +31,29 @@ you_get:
   - Suggested order quantities
   - List of items likely to stock out
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. This skill reads your Shopify store, so a plain chat window will not work.
+  - Sign in to your store with the Shopify command line tool. Give it read access to orders, products and stock.
+  - Paste the skill into your AI. Tell it your store domain, your supplier lead time and how many days of sales to read.
+  - Add a supplier name if you only want that supplier's products. Ask for only low stock items if you want a short list.
+  - Check the urgent list first. Place those orders before the order-by date, then open the CSV file for the full plan.
+output_sample:
+  input:
+    - Your store domain
+    - How many days of past sales to look at (optional, 90 by default)
+    - Your supplier lead time in days (optional, 14 by default)
+    - Extra safety days of stock (optional, 7 by default)
+    - One supplier to focus on (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify command line tool
+    - A signed-in Shopify session that can read orders, products and stock
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store and the start time.
+    - name: Urgent reorders
+      contains: Items that run out in under 7 days, with stock, days left, order-by date and quantity.
+    - name: Plan ahead list
+      contains: Items that run out in 7 to 30 days, with stock, days left and order-by date.
+    - name: Healthy count
+      contains: How many products have more than 30 days of stock.
+    - name: reorder_plan CSV file
+      contains: One row per product with velocity, trend, days of stock, stockout date, reorder point, reorder quantity, order-by date and cost.

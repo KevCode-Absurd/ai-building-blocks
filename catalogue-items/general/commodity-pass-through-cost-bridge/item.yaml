@@ -1,15 +1,13 @@
 slug: commodity-pass-through-cost-bridge
 name: Commodity pass through cost bridge
-summary: A commodity cost and pass-through contribution bridge
+summary: "See how a commodity price rise cuts your margin per unit and how much a price rise wins back. Get a per-unit and period bridge."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -33,3 +31,6 @@ credits:
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
 package_files: all
+before: []
+next: [manufacturing-yield-cost-bridge, landed-cost-allocator]
+needs_mode: manual

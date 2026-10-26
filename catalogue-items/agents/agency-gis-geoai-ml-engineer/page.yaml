@@ -1,0 +1,145 @@
+name: GeoAI/ML Engineer agent
+summary: Plan a model that finds buildings, roads or land cover in satellite and aerial images, with data checks, a test plan and deployment steps.
+headline: GeoAI/ML Engineer agent
+subhead: Tell it what you want to find in your images and where. It checks your imagery and labels, picks a model type, and plans the tests that show whether it works on new places. You get a plan to review, not a trained model.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Models that find things in satellite and aerial images often look great in a
+  notebook and fail on a new city. One accuracy number hides which classes fail
+  and where. A good satellite image machine learning plan asks first what you
+  must find, how good it must be and which imagery you have.
+
+
+  This agent follows that order. It defines the target and the accuracy you
+  need. It checks your imagery and looks for ready-made labelled data or a
+  model you could reuse. Then it picks a model type for the job and plans the
+  tests: results per class, a test on places the model has not seen, and a
+  visual spot-check. It also plans how results become map layers.
+
+
+  It does not train anything and it never sees your images. It is a role
+  profile from Agency Agents, shared under MIT. Settings it suggests, such as
+  tile size, are starting points to test, not proven values.
+when:
+  - You want building outlines, roads or vehicles pulled from satellite or drone images.
+  - You need a land cover or crop map from Sentinel-2 or Landsat images and want to know if you have enough data.
+  - You want to compare images from two dates to find change, such as new buildings or lost trees.
+  - A model works in your notebook and you need the steps to make it work on a whole city.
+not_for:
+  - You need a buffer, overlay or simple map analysis. Use the GIS Analyst agent.
+  - You need a study of spatial patterns or statistics. Use the Spatial Data Scientist agent.
+  - You need drone photos turned into maps and 3D models. Use the Drone/Reality Mapping Specialist agent.
+  - Your files need cleaning and converting before any model. Use the Spatial Data Engineer agent first.
+you_give:
+  - What you want to find, such as buildings, roads, vehicles, water or crop types
+  - Your imagery, with its source, pixel size, bands, dates and the area it covers
+  - Any labelled examples you already have, and how many (optional)
+  - The accuracy you need and what the result will be used for
+  - The computer you will train on, such as one GPU or none (optional)
+you_get:
+  - A clear target with the accuracy you need
+  - A check of your imagery, and whether a ready-made dataset or model could do the job
+  - A model plan with tile size, training split and model type, and why
+  - A test plan with results per class and a test on places the model has not seen
+  - A deployment plan from image tiles to map layers
+  - A list of ways the model may fail, and the checks left for you
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe what you want to find and attach notes on your imagery. A sample image helps.
+  - Type "Plan the model and tell me what data I am missing." Your AI asks once for anything missing.
+  - Read the data check first. If labelled examples are too few, fix that before anything else.
+  - Run the tests it lists on your own computer or cloud account. It cannot train or score a model for you.
+  - Have a GIS specialist review the plan before a decision that affects people or money relies on the map.
+how_it_works:
+  - title: Define the target
+    text: It states what to find, the accuracy you need, and what the result is for.
+  - title: Check the imagery and labels
+    text: It checks pixel size, bands, coverage and dates. It looks for public labelled data or a pre-trained model before you start labelling.
+  - title: Pick the model and the data steps
+    text: It picks a model type for the job, such as segmentation or detection. It plans tiling, extra training variety and the train, validation and test split.
+  - title: Plan the tests
+    text: It plans results per class, a confusion matrix, a test on new places and a visual spot-check. It lists the conditions that break models, such as cloud and shadow.
+  - title: Plan the move to production
+    text: It plans export, tiling and merging, clean-up of small slivers, conversion to map layers and a way to watch for drift.
+output_shape: |-
+  TARGET AND ASSUMPTIONS
+    <what to find> | <accuracy needed> | <use of the result> | <assumptions>
+
+  IMAGERY AND DATA CHECK
+    <imagery> | <pixel size, bands, dates> | <labelled data found or missing> | <ready-made model to try>
+
+  MODEL PLAN
+    <model type> | <why> | <tile size and overlap> | <train, validation, test split> | <training steps>
+
+  TEST PLAN
+    <metric per class> | <test on new geography> | <visual spot-check> | <pass line to agree with you>
+
+  DEPLOYMENT PLAN
+    <export> | <tile, predict, merge> | <clean-up> | <map layer output> | <drift watch>
+
+  FAILURE MODES
+    <condition> | <what goes wrong> | <how to test it>
+
+  CHECKS LEFT AND NEXT STEP
+    <what you must run> | <next action>
+output_sample:
+  input:
+    - What you want to find in your images, and the area
+    - Notes on your imagery, such as source, pixel size, bands and dates
+    - Labelled examples, if you have any (optional)
+    - The accuracy you need and how the result will be used
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - Your imagery on a machine you control, since the AI never sees the images
+  output:
+    - name: Target and assumptions
+      contains: What to find, the accuracy needed, what the map is for and what the plan assumes.
+    - name: Imagery and data check
+      contains: Whether your images and labels are enough, and any ready-made data or model worth trying first.
+    - name: Model plan
+      contains: The model type, tile settings, data split and training steps, each with a reason.
+    - name: Test plan
+      contains: How to score the model per class, on new places and by eye, with the pass line.
+    - name: Deployment plan
+      contains: The steps from image tiles to clean map layers, and how to watch for drift.
+    - name: Failure modes
+      contains: Cloud, shadow, season and other conditions that break the model, with a test for each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your imagery notes and label counts and point out gaps in them.
+  inputs:
+    - A small sample of labelled tiles, so the plan can judge label quality.
+    - A map of where the model must work, so the new-place test fits your real area.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one thing to find first, such as buildings, before you add roads or land cover.
+  - what: Starting point
+    how: Say if you want to reuse a ready-made model or train your own, so the plan does not cover both.
+improve:
+  - Save your test results and the places the model failed, and paste them in on the next run so the plan targets those cases.
+terms:
+  - term: Segmentation
+    meaning: Labelling every pixel of an image, such as building or not building.
+  - term: Object detection
+    meaning: Drawing a box around each thing you want to find, such as a vehicle.
+  - term: IoU
+    meaning: A score for how well a predicted shape overlaps the true shape. 1 is a perfect match.
+  - term: Confusion matrix
+    meaning: A table that shows which classes the model mixes up with each other.
+  - term: Tile
+    meaning: A small square cut from a big image so a model can process it.
+  - term: ONNX
+    meaning: A file format for models that lets them run outside the tool used to train them.

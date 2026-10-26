@@ -10,6 +10,10 @@ level: beginner
 inputs:
   - type: document
     required: true
+  - type: spreadsheet
+    required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: audit_report
 uses: []

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts by clear rules.
 new_slug: support-inbox-priority-sorter
 name: Support inbox priority sorter
-summary: Paste a support ticket. Get its category, P1 to P4 priority, owning
-  team and any known duplicate.
+summary: Sort a support ticket by category and P1 to P4 priority. Get the team to route it to, any duplicate and a first reply to edit.
 job: help-customers
 headline: Support inbox priority sorter
-subhead: Paste one support ticket. It pulls out the issue, who is affected and
-  what they tried, then sets a category and a P1 to P4 priority with the reason.
-  You get the team to route to, any known duplicate and a suggested first reply.
+subhead: Paste one support ticket. It pulls out the issue, who is affected and what they tried, then sets a category and a P1 to P4 priority with the reason. You get the team to route to, any known duplicate and a suggested first reply.
 explain: |
   One support ticket in, a clear handling decision out: category, a P1 to P4 priority, the team that should own it, and whether it is a known issue or a duplicate.
 
@@ -18,6 +15,10 @@ when:
   - Two agents argue about whether an issue is urgent.
   - You suspect a ticket repeats one from last week.
   - You want a draft first reply ready to edit.
+not_for:
+  - "You need a full reply to an angry customer: ask your AI to draft one from the triage note, then edit it yourself."
+  - "The ticket is a contract or legal dispute: send it to your finance lead or a lawyer."
+  - "You have no ticket text yet, only a title or a phone call: write down what the customer said first."
 you_give:
   - The ticket text
   - Customer or plan details (optional)
@@ -30,8 +31,30 @@ you_get:
   - Any duplicate or known issue
   - A suggested first reply
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your help desk.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste the ticket text under the instructions. Add the plan details, known issues list or routing rules if you have them.
+  - Read the category and priority. Check the reason makes sense for your customer.
+  - Check the duplicate line. If you gave no known issues list, it will say it could not check.
+  - Edit the suggested reply, then send it and route the ticket.
+  - This needs no code and no files. If your AI is connected to your help desk, it can also search past tickets.
+output_sample:
+  input:
+    - The ticket text, pasted as the customer wrote it
+    - Customer or plan details (optional)
+    - Your list of known issues (optional)
+    - Your team routing rules (optional)
+  prerequisites:
+    - None. Without help desk access, paste the ticket and your known issues list by hand.
+  output:
+    - name: Triage headline
+      contains: A one-line summary of the issue with its category, secondary category if any, priority and product area.
+    - name: Issue Summary
+      contains: Two or three sentences on what the customer is experiencing.
+    - name: Key Details
+      contains: The customer, who is affected, any workaround, related tickets and whether it is a known issue.
+    - name: Routing Recommendation
+      contains: The team or queue to send it to, with a short reason.
+    - name: Suggested Initial Response
+      contains: A draft first reply that acknowledges the issue, sets expectations and gives a workaround if there is one.
+    - name: Internal Notes
+      contains: Context for the next agent, hints to reproduce a bug and escalation triggers to watch.

@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It fills in a config file from set options.
 new_slug: matlab-project-setup-helper
 name: MATLAB project setup helper
-summary: Say how your project is laid out. Get a matlab.toml with paths,
-  dependencies and scripts set up.
+summary: Set up a MATLAB project file. Describe your folders and get a matlab.toml with paths, dependencies and startup scripts, checked against the format rules.
 job: build-software
 headline: MATLAB project setup helper
-subhead: "A matlab.toml file that sets up your project: its folders, search
-  paths, dependencies and scripts that run on open or close. You describe how
-  the project is laid out and get a file that fits."
+subhead: "A matlab.toml file that sets up your project: its folders, search paths, dependencies and scripts that run on open or close. You describe how the project is laid out and get a file that fits."
 explain: |
   A matlab.toml file that sets up your project: its folders, search paths, dependencies and scripts that run on open or close. You describe how the project is laid out and get a file that fits.
 
   The skill asks only for the project name, then scans your folder for what already exists. It writes a minimal draft first and shows it to you,. When you edit an existing file it changes only the parts you name, and leaves the rest as it was. It checks every key against the format rules by hand, because MATLAB's openProject does not report mistakes in the file; unknown keys are silently ignored.
 when:
-  - You are starting a MATLAB project and want its folders on the path
-    automatically.
+  - You are starting a MATLAB project and want its folders on the path automatically.
   - A teammate cannot run your code because the paths are wrong.
   - You need a startup script to run each time the project opens.
   - Your project file has a typo that MATLAB does not warn about.
+not_for:
+  - "You want to edit an old .prj project file: this skill only writes matlab.toml, so edit the .prj in MATLAB or convert it first."
+  - "You want to build the project in code with matlab.project.createProject: write those calls yourself, because this skill writes the file directly."
+  - "You need to build or install a MATLAB package: use MATLAB's own package tools, not this skill."
 you_give:
   - The project name
   - Your folder layout
@@ -30,8 +30,31 @@ you_get:
   - A check against the format rules
   - Option to create the folders
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open your AI in a chat that can see your project folder. Paste this skill in, or add it to your tool.
+  - Tell it you want a matlab.toml, and give your project name.
+  - Let it scan your folders. Read the short draft it shows you and say what to change.
+  - Answer its questions about packages, shortcuts or deployment, only if you need them.
+  - Ask it to check every key against the format rules, then save the file in your project root.
+  - MATLAB is a paid product. Install and license it to open the project and confirm the file loads. Converting a .prj file needs a recent MATLAB release. The skill alone cannot run MATLAB.
+output_sample:
+  input:
+    - Your project name
+    - Your project folder (so your AI can scan it for code, test and startup files)
+    - Packages or reference projects your code needs (optional)
+    - Shortcuts, labels or deployment targets (optional)
+  prerequisites:
+    - An AI that can read your project folder and write files
+    - MATLAB installed and licensed, only if you want to open the project and check it loads
+  output:
+    - name: matlab.toml
+      contains: The project file with the name, folders, startup and shutdown scripts, and any sections you asked for.
+    - name: "[folders]"
+      contains: The code folders to put on the MATLAB path and the folders that hold tests.
+    - name: "[dependencies]"
+      contains: MATLAB packages by version, and reference projects by path.
+    - name: "[project]"
+      contains: Summary, startup folder, startup and shutdown scripts, and shortcuts to scripts you use often.
+    - name: Format check
+      contains: A key-by-key check of the file against the format rules, since MATLAB does not warn about mistakes.
+    - name: Folder creation
+      contains: An offer to create any listed folders that do not exist yet.

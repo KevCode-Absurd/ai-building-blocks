@@ -19,6 +19,16 @@ projections. The [quick reference](references/quality-quick-reference.md) summar
 checks; the [shared contract](references/channel-contract.md) defines source boundaries.
 The detailed contracts linked below are authoritative for typed inputs and full findings.
 
+## Before you start
+
+This is an expert skill. The nine checks are SQL scripts that run in Google BigQuery, so you need all of these:
+
+1. **A BigQuery project with billing on**, and the `bq` command-line tool signed in to it. BigQuery charges for the data each query reads, so a run can cost money. Keep the `--maximum_bytes_billed` cap in the commands below.
+2. **Your own data as typed tables**, for the window and systems you name. The scripts ship with synthetic sample rows. Replace them with your rows before you trust a result.
+3. **The ability to run commands and edit SQL.** In a chat window with no code running, you can only plan the check. You cannot run it.
+
+If any of these is missing, say which one and stop. Do not guess results and do not fill in missing numbers. If the user cannot run BigQuery, you may help them list what each check would need, and spot-check a small pasted table by hand. Label that clearly as "manual spot check, not a native finding".
+
 ## Declare evidence before deciding
 
 1. Identify the report scope, source systems/scopes, named timezone, inclusive date window,
@@ -106,6 +116,15 @@ configuration, status, reasons, evidence references, all details and diagnostics
 also carries invocation_key and the serialized result_json. An interpretation may accompany the
 finding, but must not replace unknowns, discard caveats, rewrite statuses or fabricate missing fields.
 Execution errors stay errors; do not substitute an unknown or passing native finding.
+
+Put a short plain summary above the native finding, in this order:
+
+1. **Check run**, with its status (pass, unknown or fail) and the reasons.
+2. **What failed or is unknown**: the dates, rows or columns, copied from the finding.
+3. **Scope**: the date window, time zone, systems and whether each side was marked complete.
+4. **What to do next**: one step, such as "supply the missing spend rows" or "ask the ad platform why these two dates differ".
+
+Then show the full native finding unchanged. Do not call a gap proof of deletion, fraud or a provider fault.
 
 Overall precedence is fail, then unknown, then pass. Apply each contract's rules for independently
 proven local defects or values under partial evidence. Observed amounts and counts are not automatically

@@ -2,34 +2,91 @@ thinking: medium
 thinking_why: It sorts what is worth keeping from what is noise.
 new_slug: project-memory-builder
 name: Project memory builder
-summary: Give it a bloated project notes file. Get a lean version, plus a way
-  for your AI to save lasting facts.
+summary: Sort an overgrown CLAUDE.md and let your AI save lasting project facts, each traced to its source and kept only after you approve it.
 job: set-up-ai
 headline: Project memory builder
-subhead: A short project notes file that your AI actually reads, plus a way for
-  it to save lasting facts without piling clutter back in. Repeated corrections
-  stop being forgotten.
+subhead: Give it your project notes file, and past session files if you have them. It tells one-off remarks from facts that keep coming back. You get each notes line marked keep, park or cut, and a way to see where every saved line came from.
 explain: |
-  A short project notes file that your AI actually reads, plus a way for it to save lasting facts without piling clutter back in. Repeated corrections stop being forgotten.
+  Your project notes file, such as CLAUDE.md, grows until nobody reads it. Then your AI repeats a mistake you already fixed. This skill gives your AI a memory where each fact has to earn its place.
 
-  The skill uses four layers: raw session logs, possible facts, project context and stable preferences. A fact only moves up when it shows up again across different sessions and days, never from one confident remark. Nothing lands in a committed file until you approve it. You can ask why a remembered line exists and where it came from. It runs with plain scripts, with no database or outside service.
+  It works in four layers: raw session logs, possible facts, project notes and lasting preferences. A fact moves up only when it comes back in different sessions on different days. One confident remark is never enough. Nothing reaches your notes file until you approve it.
+
+  You can ask why any saved line exists and get the sessions and the quote behind it. If two saved lines disagree, the skill flags both and waits for you. It runs on plain Python scripts, with no database and no outside service.
 when:
   - Your CLAUDE.md has grown so long that nobody reads it.
-  - Your AI keeps making the same mistake you already corrected.
-  - A remembered rule is wrong and you want to find where it came from.
-  - You want the AI to learn from sessions, but only with your say-so.
+  - Your AI keeps repeating a mistake you corrected last week.
+  - A saved rule looks wrong and you want to know where it came from.
+  - You want your AI to learn from past sessions, but only with your say-so.
+not_for:
+  - Your notes file is short and you can edit it by hand. Keep a plain file and skip the extra layers.
+  - Your sessions often include passwords, client data or other private details. Do not turn on session capture, because the privacy filter misses some of it.
+  - You want a small context file for each folder in a big codebase. Use the Project memory organizer.
+  - You want notes saved as you work, with no review step. Use the Project memory keeper.
 you_give:
-  - Your current project notes file
-  - Past session transcripts if available (optional)
-  - A fact or rule you want to check (optional)
+  - Your project notes file, such as CLAUDE.md
+  - Past Claude Code session files, saved as .jsonl (optional)
+  - A saved line you want traced to its source (optional)
 you_get:
-  - A trimmed notes file
-  - A tiered store of candidate facts
-  - Review list for adopting or rejecting facts
-  - Traceable source for each remembered line
+  - Each line of your notes file marked keep, park or cut
+  - A list of candidate facts from your sessions
+  - A staged list of facts ready for your review
+  - The sessions, days and quote behind any saved line
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write files in your project.
+  - For the full version, use Claude Code with Python 3 installed. In Claude, ChatGPT or Gemini you can run only the sort step. It reads your notes file and writes nothing.
+  - Paste the skill and your notes file. Ask for the sort step first. Read the keep, park and cut labels before you change anything.
+  - To try the scripts, add the skill folder to your project. Run python3 scripts/memory_extract.py on one session file to see which facts it would pick up.
+  - Run python3 scripts/memory_inspect.py --tier L1 to list candidates. Add --why with a line from your notes to see its source.
+  - Run python3 scripts/memory_promote.py for a dry run. Add --stage to write proposals to .memory/staged/. It never edits CLAUDE.md.
+  - Read each staged fact. Copy the ones you agree with into your notes file yourself. The hooks that capture sessions on their own come from the original repo, so check its setup page first.
+how_it_works:
+  - title: Capture
+    text: Plain word patterns spot stated rules, corrections and lessons in a session. Anything that looks like a secret is cleaned first.
+  - title: Hold as candidates
+    text: Each possible fact is saved with a pointer to the exact line it came from. Candidates are not loaded into every session.
+  - title: Promote on recurrence
+    text: A fact moves up after three sessions on at least two days. A fact you stated outright needs two sessions. A verified fact can move up on one.
+  - title: Refuse to guess
+    text: A fact whose text was changed by the privacy filter never moves up on its own. A fact with an open conflict stays frozen until you decide.
+  - title: Stage for approval
+    text: Promotions go to a staged folder. Your notes file changes only when you adopt a proposal, and the original is backed up first.
+output_shape: |
+  Sort table: <line> | KEEP, PARK or CUT | <one-line reason>
+  Candidate list: <id> | <kind> | <claim> | <sessions> | <days>
+  Staged proposal: <claim> | seen in <n> sessions on <n> days | blocked by <reason or none>
+  Trace for one line: <sessions> | <days> | <quoted source>
+output_sample:
+  input:
+    - Your project notes file, such as CLAUDE.md
+    - Past Claude Code session files, saved as .jsonl (optional)
+    - A saved line you want traced to its source (optional)
+  prerequisites:
+    - Python 3 installed
+    - Claude Code, if you want the scripts and hooks to run for you
+    - A project folder where a .memory folder can be created
+  output:
+    - name: Sort table
+      contains: Each line of your notes file marked keep, park or cut, with a short reason.
+    - name: Candidate list
+      contains: Possible facts from your sessions, with how many sessions and days each appeared in.
+    - name: Staged proposals
+      contains: Facts that earned a place in your notes, waiting for your approval in .memory/staged.
+    - name: Source trace
+      contains: The sessions, days and quoted line behind any saved fact, or a note that none was found.
+    - name: Conflict list
+      contains: Saved facts that disagree, each shown with both sides so you can pick one.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: The scripts run there, and so do the hooks that capture sessions on their own.
+    - name: Claude, ChatGPT or Gemini
+      why: Good for the sort step on your notes file. You run the scripts yourself and paste the results back.
+  inputs:
+    - A few weeks of session files from the same project
+    - A list of rules your AI has broken more than once
+terms:
+  - term: CLAUDE.md
+    meaning: A notes file in your project that Claude Code reads at the start of every session.
+  - term: Session file
+    meaning: A saved record of one past conversation with your AI, kept as a .jsonl file.
+  - term: Hook
+    meaning: A small script that runs by itself at set moments, such as when a session starts or ends.

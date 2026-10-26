@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a small set of known macro calls.
 new_slug: excel-and-matlab-bridge-writer
 name: Excel and MATLAB bridge writer
-summary: Say what to move between Excel and MATLAB. Get VBA macros that send
-  data, run MATLAB and return results.
+summary: Write VBA macros that move Excel data into MATLAB, run your MATLAB commands and bring results or charts back into your sheet.
 job: work-with-files
 headline: Excel and MATLAB bridge writer
-subhead: Say what to move between Excel and MATLAB. Get VBA macros that send
-  data, run MATLAB and return results. Bring what data moves between Excel and
-  MATLAB. Use the result to plan your next step.
+subhead: Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results. Bring what data moves between Excel and MATLAB. Use the result to plan your next step.
 explain: |
   Working Excel VBA macros that send your sheet data into MATLAB, run MATLAB commands and bring the results or charts back into cells, so Excel stays your front end and MATLAB does the heavy maths.
 
@@ -18,19 +15,47 @@ when:
   - You want a button in a workbook that runs a MATLAB script.
   - You need MATLAB results to land back in specific cells.
   - You want a MATLAB plot to appear inside an Excel sheet.
+not_for:
+  - "You use Python or .NET with MATLAB: use the MATLAB Engine API instead."
+  - "You want to run MATLAB as a web service: use MATLAB Production Server instead."
+  - "You work on a Mac or Linux computer: this link only runs on Windows, so use a plain file export such as CSV."
 you_give:
   - What data moves between Excel and MATLAB
   - The MATLAB command or script to run
   - Where results should land in the workbook
-  - Windows computer with Excel and MATLAB
+  - Whether you prefer macros or cell formulas (optional)
 you_get:
-  - VBA macros for sending and receiving data
-  - Worksheet formula alternative
-  - Code to run MATLAB commands
-  - Steps to bring figures into Excel
+  - A VBA module you paste into your workbook, with macros that send and receive data
+  - A line that runs your MATLAB command from Excel
+  - Code to bring a MATLAB figure into your sheet as an image (if you ask for one)
+  - A cell formula version of the same job (if you ask for one)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Excel.
+  - Check you are on Windows with Excel and MATLAB installed, and open MATLAB first.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Say what data moves, which MATLAB command to run and where results should land.
+  - Copy the VBA code into a new module in your workbook. Your AI does not run it for you.
+  - Test the macro on a copy of the workbook with a small range of data.
+  - Check the results in the cells, then run it on your live data.
+output_sample:
+  input:
+    - What data moves between Excel and MATLAB
+    - The MATLAB command or script to run
+    - Where the results should land in your workbook
+    - Whether you want macros or cell formulas (optional)
+  prerequisites:
+    - A Windows computer with Excel and MATLAB installed
+    - MATLAB open and running
+    - MathWorks Spreadsheet Link turned on in Excel
+  output:
+    - name: VBA macro with MLPutVar and MLGetVar
+      contains: Code that sends VBA values into MATLAB and brings the results back into VBA variables.
+    - name: VBA macro with MLPutMatrix and MLGetMatrix
+      contains: Code that sends a block of cells to MATLAB and writes a MATLAB variable back into cells.
+    - name: Named ranges export
+      contains: Code that sends all named ranges in the workbook to MATLAB in one call.
+    - name: MLEvalString command
+      contains: The line that runs your MATLAB command or script from Excel.
+    - name: Figure import code
+      contains: Code that makes a MATLAB plot and places it in the sheet as an image.
+    - name: Worksheet formula version
+      contains: Cell formulas that do the same job without a macro, when you prefer formulas.

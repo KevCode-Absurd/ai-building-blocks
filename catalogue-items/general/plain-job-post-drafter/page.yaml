@@ -67,3 +67,20 @@ works_best_with:
       why: A one-message prompt works in any strong chat AI, with nothing to install.
   inputs:
     - The role and the team
+not_for:
+  - "You want the full set of inclusive-language checks: use Inclusive job post writer."
+  - "You want the post built around one problem the new hire must solve: use Problem-first job description writer."
+  - "You have the resumes already and need a shortlist: use Applicant shortlist builder."
+output_sample:
+  input:
+    - The role and the team
+    - The real must-haves
+    - Pay and working arrangement (optional)
+    - An old post to rewrite (optional)
+  output:
+    - name: The post
+      contains: About the role, What you will do, First 90 days, You have, Nice to have, Pay and terms, Closing line.
+    - name: Changes
+      contains: Each requirement or word that was cut or swapped, and why.
+    - name: Missing
+      contains: Anything you did not give, such as the pay range, marked MISSING.

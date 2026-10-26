@@ -1,63 +1,100 @@
 new_slug: survey-answer-truth-checker
 name: "Survey answer truth checker"
-summary: "Paste your survey questions and results. Get a trust score out of 100, each weak answer and the fix."
+summary: "Check how far you can trust your survey before you act on it. Get a trust score out of 100, each weak answer quoted, and a better survey."
 job: research-topics
 thinking: high
 thinking_why: "It judges sampling, wording and memory effects against each other and must explain every deduction."
 
 headline: "Survey answer truth checker"
-subhead: "Paste your survey questions word for word, how it was sent, the response rate and the results. The prompt scores who answered, the wording, memory effects and the fit with your other data, gives a trust score out of 100, sorts the answers into use, direction or discard, and rewrites the survey."
+subhead: "Paste your survey questions word for word, how it was sent, the response rate and the results. It scores who answered, the wording, memory effects and the fit with your other data. You get a trust score out of 100, each answer sorted into use, direction or discard, and a rewritten survey."
 
 explain: |
-  A survey comes back and the numbers look like facts. Forty percent said they found you on social, so the budget moves. Rand Fishkin has pointed out in public for years why that is risky: people name the channel they saw last, the question's options steer them, and the customers who bother to reply are not the ones who left.
+  A survey comes back and the numbers look like facts. Forty percent say they found you on social, so the budget moves. But people tend to name the channel they saw last. The answer options steer them. And the customers who bother to reply are not the ones who left. A survey bias checker catches this before you spend.
 
-  This prompt scores the survey on four things, each out of 25: who answered and who is missing, how each question is worded, what people typically misremember for each question, and how the answers compare with your analytics or sales. It shows the sum as a trust score out of 100 and what the band means. It sorts each answer into use as is, use as direction or do not use, with a reason, and rewrites the questions and sampling for next time.
+  This prompt scores the survey on four things, each out of 25. Who answered and who is missing. How each question is worded. What people usually misremember on each question. How the answers compare with your analytics or sales. The sum is a trust score out of 100, with what the band means.
+
+  It then sorts each answer into use as is, use as direction or do not use, with a reason. It ends with a rewrite of the questions and the sampling for next time.
 
 when:
   - "A 'how did you hear about us' survey is about to move your marketing budget."
-  - "A customer survey says one thing and your sales data says another."
-  - "You are writing a survey and want to know what will make the answers worthless."
+  - A customer survey says one thing and your sales data says another.
+  - You are writing a survey and want to know what will make the answers worthless.
+  - Most of your replies came from happy, recent buyers and you doubt the result.
+
+not_for:
+  - "You want channel comparisons from buyer answers, ad spend and sales. Use the post-purchase survey reader."
+  - "You need to write a survey from scratch. Use the post-purchase survey builder, then bring the draft here to check it."
+  - You have very few answers. It will mark who-answered low and tell you to collect more first.
+  - "You want to read what customers say in their own words in reviews. Use the review reason spotter."
+  - It checks your own surveys. It does not judge public opinion polls you cannot see the questions of.
 
 you_give:
-  - "The questions and answer options, word for word"
-  - "How it was sent, to whom, and the response rate"
-  - "The results"
-  - "What you will decide with it, and any other data on the same question (advised)"
+  - The questions and answer options, word for word, in the order shown
+  - How it was sent, to whom, when, how many were asked and how many answered
+  - The results, as counts or percentages for each answer
+  - What you will decide with it (advised)
+  - Analytics, promo code or sales numbers on the same question (optional)
 you_get:
-  - "A trust score out of 100 with four scored parts and reasons"
-  - "Each wording problem quoted, and the memory effects per question"
-  - "Answers sorted into use, direction or discard"
-  - "The rewritten survey for next time"
+  - A trust score out of 100 with four scored parts and a reason for each
+  - Each wording problem quoted, and the memory effects per question
+  - Each answer sorted into use as is, use as direction or do not use
+  - A rewritten survey for next time, with who to send it to
 
 how_to_use:
-  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the questions under it."
-  - "Add how it was sent, who replied, and the results."
-  - "Paste any analytics or sales numbers on the same question."
-  - "Act only on the USE AS IS answers. Send the NEXT TIME version next quarter."
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the questions under it.
+  - Add how it was sent, how many were asked, how many answered, and the results.
+  - Paste any analytics or sales numbers on the same question, such as promo code use by channel.
+  - Say what decision the survey is meant to inform.
+  - Act only on the answers it puts under use as is. Send the next-time version at your next survey.
 
 how_it_works:
-  - title: "Checks who answered"
-    text: "Response rate, who was asked, who likely replied, who is missing."
-  - title: "Checks the wording"
-    text: "Leading words, missing options, option order, double questions, impossible recall, each quoted."
-  - title: "Checks memory"
-    text: "Which answers are likely inflated or deflated by how people remember."
-  - title: "Checks against other data"
-    text: "Survey versus analytics, sales or support, with the gaps named."
-  - title: "Scores and sorts"
-    text: "Four parts out of 25, the sum out of 100, and each answer marked use, direction or discard."
-  - title: "Rewrites for next time"
-    text: "Questions, options, sampling, and what to collect alongside."
+  - title: Checks who answered
+    text: Response rate, who was asked, who likely replied, who is missing. Capped low if the rate is not given.
+  - title: Checks the wording
+    text: Leading words, missing options, option order, double questions and impossible recall, each quoted.
+  - title: Checks memory
+    text: Which answers are likely inflated or deflated by how people remember.
+  - title: Checks against other data
+    text: Survey against analytics, sales or support numbers, with the gaps named.
+  - title: Scores and sorts
+    text: Four parts out of 25, the sum out of 100, and each answer marked use, direction or discard.
+  - title: Rewrites for next time
+    text: New questions and options, who to send to, and what to collect alongside.
 
 output_shape: |
   TRUST SCORE         <a>/25 + <b>/25 + <c>/25 + <d>/25 = <n>/100   <band>
   WHO ANSWERED        <rate, who, missing>
-  WORDING             <question | problem | quote>
+  WORDING             <question | problem | exact quote from the survey>
   MEMORY              <question | inflated | deflated>
   AGAINST OTHER DATA  <answer | survey | data | gap>
   USE AS IS / DIRECTION / DO NOT USE
   NEXT TIME           <rewrites, sampling>
-  MISSING             <...>
+  MISSING             <facts not given>
+  CHECKS MISSED       <one line each, or none>
+
+output_sample:
+  input:
+    - "Your survey questions and answer options, word for word"
+    - "How it was sent, to whom, the number asked and the number who answered"
+    - "The results for each answer"
+    - "The decision it will inform, and analytics or sales numbers on the same question (optional)"
+  output:
+    - name: "TRUST SCORE"
+      contains: "Four parts out of 25, the sum out of 100, and what the band means."
+    - name: "WHO ANSWERED"
+      contains: "The response rate, who replied and which groups are missing."
+    - name: "WORDING"
+      contains: "Each question problem, with the exact question or option quoted."
+    - name: "MEMORY"
+      contains: "Which answers people likely inflate or deflate, question by question."
+    - name: "AGAINST OTHER DATA"
+      contains: "Each survey answer next to your analytics or sales figure, with the gap."
+    - name: "USE AS IS, DIRECTION or DO NOT USE"
+      contains: "Every answer sorted into one of the three, with a reason."
+    - name: "NEXT TIME"
+      contains: "Rewritten questions and options, who to send to, and what to collect alongside."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check it could not pass."
 
 example:
   business: sprout
@@ -106,9 +143,20 @@ improve:
   - "Save the NEXT TIME version as your standard survey and run the checker on it before sending."
   - "Pair it with the Review reason spotter to compare what buyers say unprompted."
 
+before: [post-purchase-survey-builder]
+next: [brand-and-sales-budget-splitter, idea-evidence-review]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a scored check in one message."}
   inputs:
     - "Analytics by channel for the same period"
     - "Promo code use and store sell-through, to compare with the channel answers"
+
+terms:
+  - term: Response rate
+    meaning: The share of people asked who answered.
+  - term: Leading question
+    meaning: A question worded so that one answer feels like the right one.
+  - term: Recall
+    meaning: How well people remember something that happened weeks ago.

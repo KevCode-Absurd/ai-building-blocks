@@ -1,6 +1,6 @@
 new_slug: fair-escape-checker
 name: "Fair escape checker"
-summary: "Paste your plan and how your character escapes. Get each escape tested for fairness, with fixes for cheats."
+summary: "Check if your story's escapes feel fair. Paste your plan and get each way out judged for luck, effort and cost, with fixes for cheats."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It has to judge whether an escape is fair to a reader and rebuild the cheats from what is already on the page."
@@ -17,6 +17,10 @@ when:
   - A reader said "that was too easy" about your ending.
   - Your character is saved by luck, a new person or a fact that appears just in time.
   - You are planning a cliffhanger and want to know the answer will hold.
+not_for:
+  - "You want a general review of pacing, theme or voice: ask a person you trust to read it, or use a plain plot review in your AI."
+  - "Your story has no danger or no trapped character: there is no escape to test, so skip this."
+  - "The escape is the whole point, such as a twist or a spoof of lucky rescues: keep it, and test only the other escapes."
 
 you_give:
   - Your plan, with each trouble and how the character gets out
@@ -32,6 +36,25 @@ how_to_use:
   - Paste your plan, or list each trouble and each way out, one per line.
   - Add anything you already show early in the story, such as skills, objects and habits.
   - Plant the things it lists in your first draft.
+output_sample:
+  input:
+    - Your plan, with each trouble and how the character gets out
+    - "What is already on the page: objects, skills, habits, people (optional)"
+  output:
+    - name: Escapes
+      contains: Each trouble and way out, with a verdict of fair, weak or cheat, and where the means was planted.
+    - name: Earned by and Costs
+      contains: What the character does to earn each escape, and what it costs them.
+    - name: Fix
+      contains: For each weak or cheat escape, a new version built only from what is already in the story.
+    - name: Things to plant early
+      contains: Each object, skill or habit to show early, the scene to show it in, and which escape it serves.
+    - name: Summary
+      contains: How many escapes are fair, weak and cheat, and which one is the worst.
+    - name: Missing
+      contains: Facts still needed, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: Lists the escapes

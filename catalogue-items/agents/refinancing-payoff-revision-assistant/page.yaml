@@ -1,51 +1,121 @@
 new_slug: refinancing-payoff-revision-assistant
 name: Refinancing payoff revision assistant
 headline: Refinancing payoff revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: Check a refinancing raises enough cash to repay the old loan and close the deal. Get the payoff and funding gap, redone on updates.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked. Share actual issue price and fees, payoff letter and premium, distinct refinancing fees, acquisition uses, buyer available cash, rollover and sponsor commitments. If principal changed through PIK, include actual coupon terms, capitalization evidence and a revised payoff letter. Supply the previous approved review and actual changed source files with dates.
-explain: |-
-  A linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked.
+subhead: Give it the new loan's face amount and issue price, the old loan's payoff letter, all the fees, what the deal must pay and the cash sources behind it. It traces the new loan down to the cash you really get, then to the payoff, then to the funding gap at closing. You get a sources and uses table and a list of what is still blocked.
 
-  Acquisition financing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  On a refinancing, the new loan's face amount is not the cash you receive. The lender may sell the loan below its face value and take fees out of the money before it reaches you. The old loan's payoff is not its balance either. It can include a premium and interest that has built up. If you compare the two face amounts, you miss the gap. This agent follows the money step by step, from face value to cash to payoff to closing.
+
+  It runs three checks in order. First, the new loan's cash after the issue discount and the fees taken at issue. Second, the payoff and the refinancing costs against that cash. Third, the whole closing table of purchase price, payoff, fees, rollover and sponsor cash. Each fee is deducted once. Rollover is counted as a source or taken off the purchase price, never both. A gap stays a gap. Nothing is plugged.
+
+  It keeps a record of the last approved review and runs again when the lender sends new issue proceeds, a payoff letter, a fee invoice or a closing date. If part of the old principal grew because interest was added to it, known as payment in kind or PIK, it checks that interest first and then asks for a revised payoff letter. It never adds its own interest to a payoff amount that a letter fixes.
+
 when:
-  - You need a linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on acquisition financing and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A lender sends a revised payoff letter for the old loan.
+  - The new loan's issue price or fees change before it funds.
+  - A fee invoice arrives, and you need to know if it was already taken from the proceeds.
+  - The closing date moves, and the payoff amount or interest changes with it.
+
+not_for:
+  - You want a quote for a new loan, or want to compare lenders. This checks documents you already hold. It gives no market quote.
+  - You only want the cash a new loan pays out after discount and fees. Use the Debt issue proceeds checker.
+  - You want the seller's cash after closing. Use the Seller closing revision assistant.
+  - You have no payoff letter from the old lender yet. The payoff stays MISSING and the closing gap cannot be called final.
+
 you_give:
-  - Actual issue price and fees, payoff letter and premium, distinct refinancing fees, acquisition uses, buyer available cash, rollover and sponsor commitments. If principal changed through PIK, include actual coupon terms, capitalization evidence and a revised payoff letter. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The new loan's face amount, its issue price as a share of face, and the fees taken at issue (from the lender's funding statement)
+  - The old lender's payoff letter with principal, premium and any interest (from the old lender)
+  - Refinancing fees you pay separately, with invoices (from your advisers and lenders)
+  - What the deal must pay, meaning the purchase price, other payments and the cash needed at closing (from the sale agreement or funds flow)
+  - The cash sources, meaning buyer cash, rollover and sponsor commitments (from commitment letters)
+  - Cash and PIK coupon terms and the evidence the interest was added to principal (optional, only if the old principal grew)
+  - The last approved review's record and the changed source files with dates (optional, needed to show what changed)
+
 you_get:
-  - A linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The new loan's cash after issue discount and fees taken at issue, with the principal kept at face
+  - The old loan's payoff with its premium, and the refinancing fees counted once
+  - A sources and uses table with the signed funding gap, or surplus, at closing
+  - A PIK interest check, only when the old principal grew
+  - What changed since the last review, a record for the next one, MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Check acquisition refinancing funds workflow and the Cash and PIK interest checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
+  - Say if this is the first run. If not, paste last time's record. Then attach the funding statement, the payoff letter, the fee invoices and the deal's sources and uses.
+  - Check the first result before the rest. Principal should stay at face, and cash should be face less the issue discount and the fees taken at issue.
+  - Check that every fee appears once. A fee taken from proceeds should not appear again as a closing cost. Check that rollover is not both a source and a cut to the purchase price.
+  - If old principal grew by PIK, get the revised payoff letter and give it to the AI. Then run it again.
+  - Fix every MISSING line and run it again whenever the lender sends something new. Adding it sets up no schedule.
+
 how_it_works:
-  - title: Check acquisition refinancing funds
-    text: Run the governing workflow when A lender sends revised issue proceeds, a payoff letter, fee invoice or confirmed closing date.
-  - title: Cash and PIK interest checker
-    text: If a capitalized PIK interval explains changed old principal, verify the supported single-period cash/PIK calculation and then obtain the actual revised payoff letter. Never add illustrative accrual to a legally binding payoff amount or count the same charge again as a closing fee.
-output_shape: |-
-  A linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last approved review
+    text: Reads the saved record if it belongs to this debt and deal, or sets a first baseline. It compares debt IDs, funding status, face against cash proceeds, fee-netting flags, the payoff date and the closing gap. If nothing changed and no review is due, it says so and stops.
+  - title: Works out the new loan's cash
+    text: Runs the Debt issue proceeds checker step. It multiplies face by the issue price, treats face less cash as original issue discount, and deducts only the fees taken at issue once. It ties the net cash to the funding statement and keeps principal at face.
+  - title: Sets payoff against that cash
+    text: Runs the Refinancing closing cost checker step. It uses the payoff letter, applies the premium to the right base, and adds only refinancing fees not already taken. It compares the total payoff need with the usable new cash and shows a surplus or a gap. It claims no savings.
+  - title: Closes the funding gap
+    text: Runs the Deal funding gap checker step. It maps old principal and premium to payoff, other fees to fee uses, and adds purchase use and closing cash. It sets that against net debt cash, buyer cash, rollover and sponsor cash. The gap is signed, and a plug must trace to a real commitment.
+  - title: Checks PIK interest only if needed
+    text: If a PIK interval explains why old principal changed, it runs the Cash and PIK interest checker on the opening principal, the coupons and the year fraction. It then asks for the revised payoff letter. It never adds its own interest to a payoff a letter fixes.
+  - title: Checks and saves
+    text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, which steps ran or were skipped, and the new record. It never replaces an approved baseline with an unapproved scenario.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  NEW LOAN CASH  face <n> x issue price <n> = <n>; discount <n>;
+                 fees taken at issue <n>; net cash <n>; principal <n> at face
+  PAYOFF         old principal <n> + premium <n> (+ interest <n> if in the letter)
+                 + refinancing fees not yet taken <n> = need <n>;
+                 against net cash <n>: surplus or gap <n>
+  SOURCES AND USES  uses: purchase <n>, payoff <n>, fees <n>, closing cash <n>
+                    sources: net debt cash <n>, buyer cash <n>, rollover <n>,
+                    sponsor <n>; funding gap <n>
+  PIK CHECK      opening <n>; cash interest <n>; PIK interest <n>; ending <n>
+                 (only if the principal grew)
+  RECORD FOR NEXT REVIEW  debt IDs, funding status, face against cash, fee-netting flags,
+                          payoff cutoff, PIK evidence, closing gap
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - The new loan's funding statement, with face, issue price and fees
+    - The old lender's payoff letter
+    - Refinancing fee invoices
+    - The deal's uses and cash sources, such as buyer cash, rollover and sponsor commitments
+    - The last approved review's record (optional)
+  prerequisites:
+    - An AI that can read files and build a spreadsheet
+    - The Check acquisition refinancing funds workflow and the Cash and PIK interest checker skill, added with the agent
+  output:
+    - name: Changed since last review
+      contains: Each figure or document that moved, with old and new value and source date.
+    - name: outputs/step-1-debt-issue-proceeds-checker.md
+      contains: Face less issue discount and fees taken at issue, giving usable cash, with principal kept at face and tied to the funding statement.
+    - name: outputs/step-2-refinancing-closing-cost-checker.md
+      contains: The payoff with its premium, the refinancing fees not yet taken, the total need and the surplus or gap against usable new cash.
+    - name: outputs/step-3-deal-funding-gap-checker.md
+      contains: A sources and uses table with purchase, payoff, fees and closing cash against debt, buyer, rollover and sponsor cash.
+    - name: PIK interest check
+      contains: Cash interest, capitalized interest and ending principal for one period. Only when the old principal grew, and it asks for a revised payoff letter.
+    - name: Record and MISSING lines
+      contains: The record for the next review, every gap with the line it stops, and CHECKS MISSED.
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Financing and payoff fees are deducted once; face debt never substitutes for usable funding cash. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - what: A lower issue price
+    how: Lower the issue price. The discount rises, net cash falls by the same amount, and the funding gap grows. Principal stays at face.
+  - what: A fee already taken from proceeds
+    how: Mark the fee as taken at issue. It leaves the closing costs, so it is counted once, in the proceeds step.
+  - what: A bigger rollover
+    how: Raise the rollover. It counts as a source, and the cash the buyer must find falls. The purchase price is not cut a second time.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with linked schedules and a checks tab, and tells you what it could not verify.
+
 judge:
   - Financing and payoff fees are deducted once; face debt never substitutes for usable funding cash. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +126,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each payoff letter with its date and the date it is valid to. A payoff past its date is treated as stale.
+  - Write down which fees the lender takes at issue and which you pay at closing, so each run sorts them the same way.
+  - Keep the commitment letter for each source of cash. A source with no letter shows as unconfirmed.
+  - Pair it with the Seller closing revision assistant when the question moves to what the seller receives.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a linked sources and uses workbook, and saves the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your lender documents
+      why: The issue price, the payoff, the premium and the fees are in the lender's letters and statements. Quote them, never estimate them.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The funds flow or closing statement for the deal.
+    - Commitment letters for rollover and sponsor cash.
+    - A named person who owns the closing and will check the payoff and the fees.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Issue price
+    meaning: The share of the face amount the lender actually pays out. A price of 98 means 98 for every 100 of face.
+  - term: Original issue discount
+    meaning: The gap between the face amount of a loan and the cash it pays out.
+  - term: Payoff letter
+    meaning: A letter from the lender that states what you must pay to clear a loan on a given date.
+  - term: PIK interest
+    meaning: Interest that is added to the loan balance instead of paid in cash. PIK stands for payment in kind.
+  - term: Rollover
+    meaning: Existing owners keep part of their stake instead of taking cash.
+  - term: Sources and uses
+    meaning: A table that lists where the money comes from and where it goes.

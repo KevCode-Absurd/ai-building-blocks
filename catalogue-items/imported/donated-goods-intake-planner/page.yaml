@@ -2,14 +2,23 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: donated-goods-intake-planner
 name: Donated goods intake planner
-summary: Share donated items and intake issues. Get acceptance rules, grading steps, routing lanes, and receipt wording.
+summary: "Plan your donated goods intake: what to accept, how to grade, where each item goes, and a basic donor receipt. Built for thrift and resale stores."
 job: organise-work
 headline: Donated goods intake planner
 subhead: Share the goods you accept, intake space, staff, and current bottlenecks. It separates acceptance, sorting, grading, and routing for a resale store. You get clear intake steps, grading rules, safe handling checks, and receipt wording that leaves value decisions to the donor.
 when:
   - You need this task done for a nonprofit, community program, or donated-goods store.
+not_for:
+  - "You need to value a gift for tax, or handle Form 8283 or an appraisal: ask your tax adviser, since this plan leaves value to the donor."
+  - "You want shelf prices or display ideas for graded items: use a retail pricing step or a pricing guide, not this plan."
+  - "You want to list high-value items online: this plan only flags them for review, so use an online resale guide for the listing."
 you_give:
-  - Accepted goods, intake space, staffing, disposal routes, current grading rules, and the main bottleneck.
+  - The goods you accept now and the goods you turn away
+  - Your monthly item volume by category (optional)
+  - Your intake space, drop-off hours and staff or volunteer count
+  - Your current grading rules, if you have any (optional)
+  - Your current discard rate, plus disposal or recycler costs (optional)
+  - The main intake problem you want fixed
 you_get:
   - Acceptance list, intake layout, grading guide, routing plan, basic receipt template, and tracking measures.
 how_it_works:
@@ -26,5 +35,28 @@ works_best_with:
   inputs:
     - At-donation receipts are tax documents for the donor.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into the chat.
+  - Add your answers to the list under what you give. Say the biggest problem first.
+  - Read the plan. Check that the accepted list and grading tiers match your real shop.
+  - Have a person check the receipt wording before you use it. Receipts are tax papers for the donor.
+output_sample:
+  input:
+    - The goods you accept and the goods you turn away
+    - Your intake space, hours and staff count
+    - Your drop-off and pickup setup
+    - Your current discard rate and disposal costs (optional)
+    - Your biggest intake problem today
+  output:
+    - name: Accepted and not-accepted items list
+      contains: A public list of what you take and what you turn away, ready to post at drop-off points.
+    - name: Drop-off and pickup plan
+      contains: Hours, unloading area, pickup routing and the checks to run before a pickup is booked.
+    - name: Grading rubric
+      contains: Clear condition tiers for each category, with a note to add photos of each tier.
+    - name: Triage flow
+      contains: "The four lanes each item can go to: sell floor, sell online, salvage or recycle, and discard."
+    - name: At-donation receipt template
+      contains: A dated receipt that lists item categories and the org's details, with no value and a no-goods-given statement.
+    - name: Monthly intake dashboard
+      contains: Volume, discard rate, diversion rate and sell-through by lane, to review each month.

@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: source_text
     required: false
+  - type: copy_draft
+    required: false
 outputs:
   - type: audit_report
 uses: []

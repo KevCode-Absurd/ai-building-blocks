@@ -1,6 +1,6 @@
 new_slug: get-a-product-made-right-from-tech-pack-to-inspected-shipment
 name: "Get a product made right, from tech pack to shipment"
-summary: Give it product photos and facts. Get a tech pack, factory scores, landed cost and sample checks.
+summary: "Plan a product made to spec: give it photos and facts, get a tech pack, factory scores, landed cost per unit and sample checks."
 job: plan-supply-chain
 thinking: high
 thinking_why: It runs five skills in a row and does cost sums at the end. Give it your strongest model.
@@ -14,10 +14,14 @@ when:
   - You are ordering a physical product from a factory for the first time and do not know what to ask for.
   - You have quotes from three factories that all look different and cannot compare them.
   - Production is finishing and you need to decide whether to pay the balance.
+not_for:
+  - "Your product is already made by a known factory with settled specs: use a plain reorder checklist, or run only the tech pack step."
+  - "You only want a price per unit and have quotes in hand: ask a freight forwarder for freight and duty, and do the sums in a spreadsheet."
+  - "You need someone to visit the factory and test goods in person: hire a third-party inspector. This workflow only briefs them."
 you_give:
   - Photos of the product from every angle, or a sample
   - Materials, sizes, colors, finishes and packaging
-  - Quotes, order size, selling price and freight and duty costs (at the cost step)
+  - Factory quotes, order size, selling price, freight and duty costs (at the cost step)
   - Photos and measures of the sample (at the sample step)
   - Your purchase order and payment terms (at the last step)
 you_get:
@@ -32,6 +36,29 @@ how_to_use:
   - Attach your product photos and tell it what the photos do not show, such as materials and sizes.
   - At the first pause, send the tech pack and the same quote request to your shortlisted factories, then order samples.
   - At the second pause, approve one sample, place the order and keep that sample as your gold standard.
+output_sample:
+  input:
+    - Photos of your product from every angle, or a sample
+    - Materials, sizes, colors, finishes and packaging
+    - Factory quotes, order size, selling price, freight and duty costs (added at the cost step)
+    - Photos and measures of the sample (added at the sample step)
+    - Your purchase order and payment terms (added at the last step)
+  prerequisites:
+    - An AI that can read files, such as Claude with a project or Claude Code
+    - Real factory quotes and freight and duty rates. It does not estimate them, and marks gaps as MISSING.
+  output:
+    - name: "Step 1: Tech pack"
+      contains: Six sections with measured limits, a version and date, and one quote request to send to every factory.
+    - name: "Step 2: Factory shortlist"
+      contains: Each factory scored out of 100, with red flags, document checks, a backup plan and contract terms to ask for.
+    - name: "Step 3: Landed cost"
+      contains: Cost per sellable unit, air versus sea, your margin and a go or no-go.
+    - name: "Step 4: Sample check"
+      contains: Pass, fail or not checked for every tech pack line, a go or hold on bulk, and the gold standard sample.
+    - name: "Step 5: Inspection brief"
+      contains: What the inspector tests, a pass, rework or reject rule, and a payment plan tied to the result.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the tech pack
     text: Turns your photos and facts into six sections, replaces every vague word with a number, and drafts one quote request that asks every factory the same questions.

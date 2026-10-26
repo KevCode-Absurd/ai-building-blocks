@@ -16,6 +16,29 @@ use_cases:
   - "Write a short, clear pitch for a project that makes some people excited at once"
   - "Check whether a team problem is internal before blaming a competitor"
   - "Think through how a new technology might change your work, step by step"
+not_for:
+  - "You need legal, medical or personal money advice, or an investment call: use a qualified adviser, such as a lawyer, doctor or financial planner."
+  - "You want to know what OpenAI will launch or what Altman said in private: no one can answer that from his public essays, so check OpenAI's own announcements."
+  - "You want a view on valuing a company or its numbers: use the Aswath Damodaran mind, who works from valuation data and spreadsheets."
+output_sample:
+  input:
+    - Your idea, project or goal list in a few lines
+    - Any proof that users want it, such as sign-ups or comments (optional)
+    - Your costs, time and limits (optional)
+    - The decision you are stuck on
+  output:
+    - name: First questions
+      contains: A few pointed questions, such as who loves this already and what one number shows it is working.
+    - name: Numbered advice
+      contains: Each line gives the rule first, then the reason in two or three sentences.
+    - name: One number to track
+      contains: A single measure that shows whether your project is really growing.
+    - name: One test for this week
+      contains: A small step you can take now instead of debating the idea.
+    - name: Opposite risk
+      contains: A plain note on how the advice could go wrong, with a hedge on any forecast.
+    - name: Beyond the record flags
+      contains: Marks any point outside his published work as an inference from his general advice.
 seats:
   - {seat: "Startup advice and ambition", asks: "Who loves this already, and is the idea big enough to be worth your next ten years?"}
   - {seat: "Focus and momentum", asks: "What are the two things that matter most this week, and why aren't they done yet?"}

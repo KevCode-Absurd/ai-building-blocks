@@ -1,37 +1,45 @@
 # Connect AI to your tools: AI Blocks
 
-> 33 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 41 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer): Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools.
-- [AI tool definition writer](https://useaiblocks.com/skills/ai-tool-definition-writer): Describe what a tool does. Get a clear, safe definition your AI can call without guessing.
-- [AI tool designer](https://useaiblocks.com/skills/ai-tool-designer): Describe what your AI needs to do. Get clear tool definitions it can call without guessing or failing silently.
-- [AI tool list drafter](https://useaiblocks.com/prompts/ai-tool-list-drafter): Paste what your AI should do with your systems. Get a short list of clearly named tools it can pick from.
-- [API connector builder](https://useaiblocks.com/skills/api-connector-builder): Name the service you need to reach. Get working code with sign-in, error handling and retries.
-- [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder): Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
-- [Automation flow sketcher](https://useaiblocks.com/prompts/automation-flow-sketcher): Paste a task you repeat. Get an automation laid out step by step for Zapier or Make, with what can break.
-- [Build an n8n automation that reports failures and is reusable](https://useaiblocks.com/workflows/build-an-n8n-automation-that-reports-failures-and-can-be-reused): Describe the task. Get an n8n workflow that retries, alerts you on failure and splits into reusable parts.
-- [C# MCP server implementation helper](https://useaiblocks.com/skills/copilot-dotnet-mcp-builder): Share your C# project and tools to expose. Get MCP server code using current package patterns.
-- [ChatGPT app builder](https://useaiblocks.com/skills/chatgpt-app-builder): Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
-- [Copilot SDK app builder](https://useaiblocks.com/skills/copilot-copilot-sdk): Describe the agent app you need. Get Copilot SDK sessions, tools and streaming code suited to your project.
-- [Copilot team usage reporter](https://useaiblocks.com/skills/copilot-copilot-usage-metrics): Name your organization and date range. Get usage metrics from GitHub, with access needs and limits explained.
-- [Go MCP server starter builder](https://useaiblocks.com/skills/copilot-go-mcp-server-generator): Describe your tools and data. Get a Go MCP server project with working structure and tests.
-- [Google Workspace command-line operator](https://useaiblocks.com/skills/google-workspace-cli): Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you.
-- [Market data connector](https://useaiblocks.com/skills/market-data-connector): Name the data source and series. Get MATLAB code that pulls Bloomberg, FRED, Haver or Datastream data.
-- [MATLAB to Python bridge](https://useaiblocks.com/skills/matlab-to-python-bridge): Say which Python library you need. Get MATLAB code that calls it, with setup and errors fixed.
-- [MCP server sign-in builder](https://useaiblocks.com/skills/mcp-server-sign-in-builder): Say how people will connect to your MCP server. Get correct OAuth sign-in built into it.
-- [MCP tool server builder](https://useaiblocks.com/skills/mcp-tool-server-builder): Say what tools your AI should reach. Get a safe MCP server with clear tool rules and tests.
-- [MCP tool set designer](https://useaiblocks.com/skills/mcp-tool-set-designer): Say what your AI should do through MCP. Get a small set of clearly named tools with plain descriptions.
-- [Microsoft 365 admin helper](https://useaiblocks.com/skills/microsoft-365-admin-helper): Say what your company needs. Get Microsoft 365 setup scripts for users, mail, Teams and security.
-- [n8n AI agent builder](https://useaiblocks.com/skills/n8n-ai-agent-builder): Say what your n8n agent should do. Get the agent, tools, memory and review steps set up the right way.
-- [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler): Give it an n8n workflow that breaks quietly. Get clear errors, retries and alerts so you see and fix failures.
-- [n8n sub-workflow builder](https://useaiblocks.com/skills/n8n-sub-workflow-builder): Give it a long n8n workflow. Get reusable sub-workflows with clear inputs that your agents can also call.
-- [n8n workflow designer](https://useaiblocks.com/skills/n8n-workflow-designer): Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
-- [No-code automation planner](https://useaiblocks.com/skills/no-code-automation-planner): Describe a task to automate. Get the right Zapier or Make setup, built to hold up, and when to switch to code.
-- [Platform growth experiment planner](https://useaiblocks.com/skills/traction-existing-platforms): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
+- [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer): Describe the agent’s jobs and tool problems. Get clear tool definitions, input and output rules, examples and recovery errors.
+- [AI tool builder](https://useaiblocks.com/skills/ai-tool-designer): Describe the job your AI needs to do. Get tool definitions, input checks, clear errors and code patterns for connecting the tools.
+- [AI tool definition writer](https://useaiblocks.com/skills/ai-tool-definition-writer): Describe a tool’s job and limits. Get its name, input schema, side-effect rules and test cases, with unclear or risky parts flagged.
+- [AI tool set designer](https://useaiblocks.com/prompts/ai-tool-list-drafter): Describe jobs, apps and limits. Get tool definitions with clear names, inputs, results and approval rules.
+- [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder): Share an OpenAPI spec. Get tool definitions and starter server code in Python or TypeScript, with checks and next build steps.
+- [API-to-MCP server release builder](https://useaiblocks.com/workflows/turn-an-api-into-a-safe-mcp-server-others-can-install): Share the API spec, access rules and hosting limits. Get server code, OAuth sign-in, security findings and a release path after fixes.
+- [Automation flow sketcher](https://useaiblocks.com/prompts/automation-flow-sketcher): Turn a task you repeat into an automation plan for Zapier or Make. You get each step, filters, and what happens when it fails.
+- [AWS resource inventory reader](https://useaiblocks.com/skills/aws-resource-inventory-reader): Ask what resources exist in AWS. Get a read-only list for the services and regions you name.
+- [BIM and GIS integration planner](https://useaiblocks.com/agents/agency-gis-bim-specialist): Plan how to bring a Revit or IFC model into GIS. Get a coordinate plan, attribute map, checks and an indoor or twin plan.
+- [C# MCP server builder](https://useaiblocks.com/skills/copilot-dotnet-mcp-builder): Share your C# project and tools. Get server code using current .NET package patterns.
+- [ChatGPT app starter builder](https://useaiblocks.com/skills/chatgpt-app-builder): Describe the app and its tools. It reviews current Apps SDK docs, plans the interaction and drafts a project scaffold for testing.
+- [Email parsing engineer](https://useaiblocks.com/agents/agency-engineering-email-intelligence-engineer): Turn a messy email thread into who said what, decisions and tasks with owners. Or plan the pipeline that does it for many threads.
+- [Feishu integration planner](https://useaiblocks.com/agents/agency-engineering-feishu-integration-developer): Plan a Feishu (Lark) bot, approval flow or data sync. Get the app plan, permission list, event setup and a launch test list.
+- [GitHub Copilot SDK app builder](https://useaiblocks.com/skills/copilot-copilot-sdk): Describe the agent app you need. Get GitHub Copilot SDK code for sessions, tools and streaming responses.
+- [GitHub Copilot usage reporter](https://useaiblocks.com/skills/copilot-copilot-usage-metrics): Get a GitHub Copilot usage report for your organization or enterprise, with active users, acceptance rate, suggestions and chat use.
+- [Go MCP server starter builder](https://useaiblocks.com/skills/copilot-go-mcp-server-generator): Build a Go MCP server project from a plain description of your tools, with a working layout, config, README and tests, ready to connect to your AI.
+- [Google Ads developer access checker](https://useaiblocks.com/skills/google-ads-developer-access-setup-planner): Plan a safe read-only test of your Google Ads API access, covering developer token, OAuth login and manager account, with no secret shown.
+- [Google Ads OAuth setup planner](https://useaiblocks.com/skills/google-ads-oauth-setup-planner): Plan your Google Cloud project, Ads API access and OAuth client. Get a setup checklist with field names, access limits and what to do next.
+- [Google Workspace command-line operator](https://useaiblocks.com/skills/google-workspace-cli): Run Gmail, Drive, Sheets and Calendar jobs with the gws command line. Install it, sign in, then send, list, share or audit, with a check before changes.
+- [MATLAB market data connector](https://useaiblocks.com/skills/market-data-connector): Share your feed, series and dates. Get MATLAB code for Bloomberg, FRED, Haver or LSEG Datastream.
+- [MATLAB Python integration helper](https://useaiblocks.com/skills/matlab-to-python-bridge): Share the Python library and MATLAB task. Get calls, data conversions and help with the correct Python environment.
+- [MATLAB Python vision model connector](https://useaiblocks.com/skills/python-vision-model-connector): Turn a Python image model link into a MATLAB demo, with tests only when tools allow.
+- [MCP server planner](https://useaiblocks.com/agents/agency-specialized-mcp-builder): Plan an MCP server so your AI can use your app or API. Get named tools, typed inputs, error rules and a test plan a developer can build from.
+- [MCP server sign-in builder](https://useaiblocks.com/skills/mcp-server-sign-in-builder): Share your MCP transport and identity setup. Build token checks, discovery and permissions, then test client sign-in.
+- [MCP tool server builder](https://useaiblocks.com/skills/mcp-tool-server-builder): Describe the tools and data your AI needs. Build an MCP server with explicit permissions, schemas and verification steps.
+- [MCP tool set designer](https://useaiblocks.com/skills/mcp-tool-set-designer): Plan your MCP tool set before you code. Give it the jobs your AI must do and get a short list of clear tools with plain descriptions.
+- [Meta developer app setup planner](https://useaiblocks.com/skills/meta-developer-app-setup-planner): Plan your Meta developer app with the least access you need, private secrets and a read-only test that shows the access works.
+- [Microsoft 365 admin helper](https://useaiblocks.com/skills/microsoft-365-admin-helper): Describe an authorised admin task. Get PowerShell scripts for users, mail, Teams or security, with prerequisites and review steps.
+- [n8n AI agent builder](https://useaiblocks.com/skills/n8n-ai-agent-builder): Share the job and n8n setup. Choose an agent or simpler node, then build tool, memory and review connections with checks.
+- [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler): Share the workflow and failure cases. Add error paths, bounded retries and alert rules, then check response codes and recovery limits.
+- [n8n sub-workflow builder](https://useaiblocks.com/skills/n8n-sub-workflow-builder): Share a long n8n workflow. Get reusable sub-workflows with clear inputs that your agents can also call.
+- [n8n workflow designer](https://useaiblocks.com/skills/n8n-workflow-designer): Describe the automation and data flow. Choose an n8n pattern, map nodes and error paths, then prepare build and test steps.
+- [n8n workflow reliability planner](https://useaiblocks.com/workflows/build-an-n8n-automation-that-reports-failures-and-can-be-reused): Describe the task and available n8n setup. Get a workflow plan with visible failures, recovery steps and reusable parts.
+- [OAuth API access setup helper](https://useaiblocks.com/skills/sign-in-flow-setup-helper): Share your app, provider and access needs. Get an OAuth flow design, implementation code and checks for tokens, redirects and error paths.
+- [Platform growth experiment planner](https://useaiblocks.com/skills/traction-existing-platforms): Share your product link. Test demand for one integration before building a full marketplace listing.
 - [Python MCP server starter builder](https://useaiblocks.com/skills/copilot-python-mcp-server-generator): Describe your tools and data. Get a Python MCP server project with clear handlers and tests.
-- [Python vision model connector](https://useaiblocks.com/skills/python-vision-model-connector): Give it a vision model repo on GitHub. Get a MATLAB function that runs it on your images.
-- [Sign-in flow setup helper](https://useaiblocks.com/skills/sign-in-flow-setup-helper): Say which app and service. Get a secure OAuth sign-in flow, with the right steps for your case.
-- [Tool connector builder](https://useaiblocks.com/skills/tool-connector-builder): Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.
-- [Turn an API into a safe, installable MCP server](https://useaiblocks.com/workflows/turn-an-api-into-a-safe-mcp-server-others-can-install): Give it an API spec. Get an MCP server with sign-in, a security review and a package.
-- [TypeScript MCP server starter builder](https://useaiblocks.com/skills/copilot-typescript-mcp-server-generator): Describe your tools and data. Get a TypeScript MCP server project with tools, resources and tests.
+- [Salesforce architect agent](https://useaiblocks.com/agents/agency-specialized-salesforce-architect): Get a Salesforce architecture plan with a data model, system links, decision records and the platform limits to check before you build.
+- [Tool connector builder](https://useaiblocks.com/skills/tool-connector-builder): Share API docs and the tasks your AI needs. Get an MCP server plan, tool definitions, setup steps and tests to run.
+- [TypeScript MCP server builder](https://useaiblocks.com/skills/copilot-typescript-mcp-server-generator): Describe your tools and data. Get a TypeScript MCP server project with tools, resources and tests.
 - [Webhook receiver builder](https://useaiblocks.com/skills/webhook-receiver-builder): Say which events to catch. Get a webhook receiver that checks signatures and handles repeats safely.
+- [Zapier and Make automation planner](https://useaiblocks.com/skills/no-code-automation-planner): Describe the trigger, apps and result. Compare Zapier and Make patterns, map the steps and plan tests, costs and failure handling.

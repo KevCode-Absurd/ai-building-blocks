@@ -2,17 +2,30 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-support-metrics-report
 name: Gorgias support metrics report
-summary: Choose report dates. Get ticket counts, response times, issue groups, and trends, with sample limits shown.
+summary: "Get a Gorgias support metrics report: ticket counts, response times, issue groups and trends for your dates, with sample limits shown."
 job: help-customers
 headline: Gorgias support metrics report
-subhead: Connect Gorgias and choose the dates you want to review. It gathers ticket records and samples detailed threads for response times. You get counts, issue groups, trends, and timing measures, with an optional Google Sheets export. Check the sample limits before sharing.
+subhead: Give it the dates you want to review. It pulls your Gorgias tickets and reads up to 20 of them in full to time replies. You get counts, issue groups, trends and timing, with an optional Google Sheets export.
 when:
-  - You use this tool for customer support and need help with this task.
+  - You want a weekly or monthly look at ticket volume and trends in Gorgias.
+  - You need to see which tags and issue types come up most.
+  - You want a quick view of how fast your team replies, as a rough guide.
+  - You want the numbers in a Google Sheet to share with your team.
+not_for:
+  - You need exact response-time audits for a service promise. Times come from up to 20 tickets, so check Gorgias's own dashboard instead.
+  - You need live ticket counts right now. Use the Gorgias dashboard, since this report reads only the first 100 tickets in your period.
+  - You have no way to run Composio CLI or link Gorgias. Ask a teammate with Gorgias access to export tickets and review them in Google Sheets.
 you_give:
-  - The report date range and access to Gorgias tickets.
-  - Full message timestamps for the sampled response-time measures.
+  - The dates you want to review.
+  - Access to your Gorgias tickets, linked through Composio.
+  - Your Google account linked through Composio (optional).
 you_get:
-  - Show volume, response times, issue groups, trends, and notable tickets. Offer a Google Sheets export.
+  - Ticket counts by status, plus new tickets in the last day and week.
+  - Average and median first response time, and average resolution time.
+  - Tables of tickets by category and by tag.
+  - A volume trend, a response time trend, and the busiest day.
+  - The most common issue and the longest open ticket.
+  - A Google Sheet with the report, if you ask for it.
 how_it_works:
   - title: Choose the date range
     text: Read ticket records for the chosen dates within the skill's stated collection limits.
@@ -25,8 +38,34 @@ works_best_with:
     - name: Gorgias; Google Sheets for optional export
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias support metrics report by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide the report date range and access to Gorgias tickets.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run commands and read skill files, such as Claude Code. A plain chat window cannot run this.
+  - Install Composio CLI and link your accounts. Run composio link gorgias, and link Google Sheets if you want the export.
+  - Add the downloaded folder to your AI and ask it to run the support metrics skill.
+  - Tell it the dates to review.
+  - Check the sample note. Counts cover the first 100 tickets in your dates. Response times come from up to 20 tickets.
+  - Say yes if you want the Google Sheet. The sheet holds customer ticket data, so share it with care.
+output_sample:
+  input:
+    - The dates you want to review
+    - Access to your Gorgias tickets
+    - A yes or no on exporting to Google Sheets (optional)
+  prerequisites:
+    - An AI that can run commands in a terminal
+    - Composio CLI installed
+    - Your Gorgias account linked through Composio
+    - Your Google account linked through Composio, only for the export
+  output:
+    - name: Volume
+      contains: Total tickets, open, pending and closed counts, and new tickets in the last day and the last week.
+    - name: Response Performance
+      contains: Average and median first response time and average resolution time, taken from the sampled tickets.
+    - name: Breakdown by Category
+      contains: A table of each category with its count, share of tickets and average resolution time.
+    - name: Breakdown by Tag
+      contains: A table of each tag with its count and share of tickets.
+    - name: Trends
+      contains: Whether ticket volume is rising, steady or falling, and whether response time is improving or getting worse.
+    - name: Highlights
+      contains: The busiest day, the most common issue and the longest open ticket.
+    - name: Google Sheet export
+      contains: A sheet named Support Metrics with the report data, plus a link to share. Only if you ask.

@@ -2,24 +2,23 @@ thinking: high
 thinking_why: Reading model warning signs correctly takes real statistical judgement.
 new_slug: statistical-model-checker
 name: Statistical model checker
-summary: Give it a fitted Bayesian model. Learn if you can trust its results,
-  and where it breaks, in plain words.
+summary: Check a fitted Bayesian model before you quote it. Find sampling problems, weak predictions and claims the results can't support.
 job: track-numbers
 headline: Statistical model checker
-subhead: "Before you quote a Bayesian model's results, you learn whether they
-  deserve trust. The check covers three separate questions: did the sampling run
-  properly, does the model predict data like yours, and do its conclusions make
-  sense for the claim you want to make."
+subhead: "Before you quote a Bayesian model's results, you learn whether they deserve trust. The check covers three separate questions: did the sampling run properly, does the model predict data like yours, and do its conclusions make sense for the claim you want to make."
 explain: |
   Before you quote a Bayesian model's results, you learn whether they deserve trust. The check covers three separate questions: did the sampling run properly, does the model predict data like yours, and do its conclusions make sense for the claim you want to make.
 
   It counts divergences, reads R-hat and effective sample size, and looks at trace and rank plots for stuck chains. It then compares simulated data to real data, runs leave-one-out checks and flags unreliable points. It warns against common slips, such as treating comparison weights as probabilities. It works with ArviZ output, so you need Python and a fitted model.
 when:
   - Your sampler reported divergences and you do not know if they matter.
-  - You must pick between two models and want a fair comparison with honest
-    uncertainty.
+  - You must pick between two models and want a fair comparison with honest uncertainty.
   - A reviewer asks whether your posterior results are reliable.
   - Your model fits the data it saw but you doubt it predicts new groups.
+not_for:
+  - "You have not fitted a model yet: fit one first in your own stats tool, then bring the saved results here."
+  - "You only have point estimates, such as a single best-fit number: ask a statistician or use a simple fit check instead."
+  - "You need a fix written into your model code: this finds likely causes and what to try, but you make the changes."
 you_give:
   - Your fitted model output in ArviZ form
   - The data it was fitted to
@@ -32,9 +31,29 @@ you_get:
   - Likely causes of problems and what to try
   - A plain-words verdict on what you can claim
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and read your saved model
-    results.
+  - Save your fitted model results in ArviZ form. Keep the data you fitted it to.
+  - Open an AI that can run Python code and read files, such as Claude or ChatGPT with code tools turned on.
+  - Paste the skill text from this page, then upload your saved results and data.
+  - Say what you want to claim from the model, for example which effect or which model is better.
+  - Read the verdict first, then the sampling health section. Fix sampling problems before you trust any comparison.
+output_sample:
+  input:
+    - Your fitted model results saved in ArviZ form
+    - The data the model was fitted to
+    - The claim you want to make from the model
+    - Sampler settings (optional)
+  prerequisites:
+    - An AI that can run Python code and read your saved model results
+  output:
+    - name: Sampling health
+      contains: Divergence counts by chain, R-hat, effective sample size and Monte Carlo error for the numbers you plan to report.
+    - name: Plot review
+      contains: What trace, rank and energy plots show, such as stuck or drifting chains and clusters of divergences.
+    - name: Prediction checks
+      contains: How well simulated data matches your real data, and whether uncertainty looks right for new observations.
+    - name: Model comparison
+      contains: Leave-one-out scores with paired uncertainty, reliability of each point, and a warning if stacking weights are misread.
+    - name: Likely causes and fixes
+      contains: Probable reasons for any problem, such as scaling or model setup, and which fix to try first.
+    - name: Verdict
+      contains: A plain-words statement of what you can claim, what you can't, and what to check next.

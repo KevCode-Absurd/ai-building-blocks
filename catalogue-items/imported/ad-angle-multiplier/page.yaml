@@ -2,35 +2,89 @@ thinking: low
 thinking_why: It spins a set list of angles from one idea.
 new_slug: ad-angle-multiplier
 name: Ad angle multiplier
-summary: Give it one winning ad idea. Get 10 to 15 different angles with hooks
-  and a test order.
+summary: Turn one winning ad into 10 to 15 different ad angles with hooks and a test order, from pain, desire, proof, identity, contrarian and urgency.
 job: plan-ad-tests
 headline: Ad angle multiplier
-subhead: "Give it your best ad or core idea, the product, the offer and the
-  audience. It works from six directions: pain, desire, proof, identity,
-  contrarian and urgency. You get 10 to 15 clearly different angles, a hook for
-  each, the type of angle it is and a suggested order to test them."
-explain: |
-  One ad idea that already works turns into 10 to 15 clearly different angles, each with a hook, so you can test them side by side instead of running small edits of the same ad.
+subhead: Give it your best ad or core idea, the product, the offer and the audience. It writes angles in six directions, with a hook for each. You get 10 to 15 distinct angles, the proof each one needs and an order to test them.
+explain: |-
+  An ad that works is a clue about what your buyers care about. This ad angle multiplier uses that clue to find other reasons to buy, so your creative test compares messages, not small edits of one line.
 
-  The skill works from six directions. Pain starts with the problem. Desire starts with the result. Proof leans on evidence. Identity speaks to who the buyer is. Contrarian goes against common belief. Urgency adds a reason to act now. Each angle has to feel new, so minor rewrites are rejected. That helps you find out which message moves people, rather than which wording does. It works with any product and needs only your winning idea and some context on the audience.
+  It works in six directions. Pain starts with the problem. Desire starts with the result. Proof leans on evidence you can show. Identity speaks to who the buyer is. Contrarian goes against a common belief. Urgency adds a real reason to act now. An angle that is only a reworded version of another gets cut.
+
+  It uses only the proof you give it. If an angle needs a real review or number you have not supplied, it says what is needed and does not make one up. Urgency and contrarian angles are flagged, so you can check them against your ad platform's rules before you spend money.
 when:
-  - One ad is working and you need more like it to scale.
-  - Your ads are tiring out and you need fresh messages.
-  - You plan a creative test and need distinct angles.
-  - You are stuck writing variations of the same line.
+  - One ad is working and you need more messages to scale it.
+  - Your ads are tiring out and results are slipping.
+  - You are planning a creative test and want angles that really differ.
+  - You keep writing small edits of the same line.
+not_for:
+  - "You have no ad that worked yet: start with the Product angle finder or the Ad angle planner."
+  - "You want finished ads or full scripts, not angles: use the Five-angle ad headline writer."
+  - "You want to check an ad against Meta or Google rules: use the Pre-launch ad checker."
 you_give:
-  - Your best ad or core idea
-  - The product and offer
-  - Your audience
-  - Proof points you can use (optional)
+  - Your best ad text, or the core idea in a few lines
+  - The product and the offer
+  - "The audience: who buys, and what they want or fear"
+  - Real proof you can use, such as reviews or numbers (optional)
 you_get:
-  - 10 to 15 distinct angles
+  - 10 to 15 angles, spread across six directions
   - A hook for each angle
-  - The type of angle each one is
-  - A suggested order to test
+  - The proof each angle needs from you
+  - A suggested order to test them
+  - Flags on hooks to check against ad rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Pick the ad or idea that has done best. Write a line on why you think it worked.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code or paid tools are needed.
+  - Paste the ad, the product and offer, and the audience. Add real proof points if you have them.
+  - Check that no angle is only a reworded version of another, and that no proof is made up.
+  - Run the flagged hooks past your ad platform's rules before you spend money.
+  - Test in the order given, one angle per ad, and keep the winners.
+how_it_works:
+  - title: Read your inputs
+    text: It takes the winning ad, product, offer and audience. It asks once for anything missing and marks the rest MISSING.
+  - title: Write across six directions
+    text: It writes angles in pain, desire, proof, identity, contrarian and urgency, with at least one in each.
+  - title: Add a hook to each
+    text: Each angle gets a one-line reason to buy and the opening line or visual of the ad.
+  - title: Cut near copies
+    text: It drops any angle that would lead to the same ad in different words.
+  - title: Keep claims honest
+    text: It uses only your proof and real deadlines, and flags hooks that may break ad rules.
+  - title: Set the test order
+    text: It puts the angles that differ most from your winner first.
+output_shape: |-
+  Angles from: <one line on the core idea>
+  | # | Direction | Angle (the reason to buy) | Hook | Proof needed |
+  Test order
+  1. <angle number>: <why first>
+  Flags
+  - <angle number>: <rule or truth check needed>
+  - MISSING: <what you did not provide>
+output_sample:
+  input:
+    - Your best ad text, or the core idea
+    - The product and the offer
+    - The audience
+    - Real proof points you can back up (optional)
+  output:
+    - name: Angles table
+      contains: 10 to 15 angles, each with its direction, reason to buy, hook and the proof it needs.
+    - name: Test order
+      contains: The order to test the angles, with a reason for the first picks.
+    - name: Flags
+      contains: Hooks to check against ad rules, and any facts you still need to supply.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your ad results, such as which ad won and by how much
+    - Customer reviews in their own words
+    - A list of angles you have already tried
+terms:
+  - term: Angle
+    meaning: The reason to buy that an ad leans on.
+  - term: Hook
+    meaning: The first line or image of an ad, meant to make people stop.
+  - term: Creative test
+    meaning: Running several different ads to see which message wins.

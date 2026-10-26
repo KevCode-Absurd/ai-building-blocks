@@ -16,6 +16,29 @@ use_cases:
   - "Turn a dull fact about your product into a simple, memorable picture"
   - "Check whether an ad makes people admire the product or just the ad"
   - "Plan how to keep a long-term client or customer for decades"
+not_for:
+  - "You need ad copy built on tested product facts and small tests: use the Claude Hopkins mind."
+  - "You want a sharp idea with honest wit, like a surprising angle on a rival: use the Bill Bernbach mind."
+  - "You need legal, medical or pricing copy checked for claims: ask a compliance reviewer or a lawyer, not an ad mind."
+output_sample:
+  input:
+    - Your product or service and who buys it
+    - Your draft ad, copy or mascot idea (optional)
+    - The problem you want solved, such as flat sales or sloppy work
+    - Proof you can back up, such as facts or reviews (optional)
+  output:
+    - name: Drama in your product
+      contains: The human story already inside your product, told plainly so an ordinary buyer would feel it.
+    - name: What is clever but empty
+      contains: Where your draft shows off or hides the product, and why it may not feel warm.
+    - name: One thing to cut
+      contains: A single line, word or idea to remove so the copy sounds like a person.
+    - name: One thing to push further
+      contains: The strongest image or moment in your draft, with a nudge to take it further.
+    - name: Character idea (if it fits)
+      contains: A simple friendly figure that stands for one shared value, or a note to skip it.
+    - name: Questions and a standards check
+      contains: Questions he would ask you, and a test of whether you would be proud to sign the work.
 seats:
   - {seat: "Characters and warmth", asks: "Who is the friendly character or human moment that would make people feel something for this?"}
   - {seat: "Inherent drama", asks: "What is the drama already inside this product, and are we telling it plainly?"}

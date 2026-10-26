@@ -1,0 +1,127 @@
+name: Legal Client Intake agent
+summary: Turn your intake call notes into an attorney-ready summary with urgency flags, names to run through your conflicts check and open questions.
+headline: Legal Client Intake agent
+subhead: Paste your notes from a new client call or web form. Your AI sorts the facts, flags anything time-sensitive, lists the names for your conflicts check and writes a one-page summary for the attorney. Remove client names first unless your firm approves the tool.
+job: document-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  The first conversation with a possible client sets the tone, and the attorney needs the facts in order before the consultation. This legal client intake agent turns messy notes into a clear summary and shows what is still missing.
+
+  It stays inside the intake role. It does not give legal advice, say whether the person has a case, or promise an outcome. It does not clear conflicts. It lists every person and company to run through your firm's own conflicts system, and the status stays "pending" until a person confirms the result.
+
+  It reads for urgency first. Court dates, filing deadlines, hearings and safety concerns go to the top of the summary, so the attorney sees them before anything else.
+when:
+  - Your phone, chat or web form brings in new matters, and the notes are messy.
+  - An attorney asks for a one-page brief before each first consultation.
+  - You are writing intake questions for a new practice area and want a ready list.
+  - A matter is outside your practice area, and you need a kind message that points the person elsewhere.
+not_for:
+  - You need the conflicts check itself. Run it in your firm's conflicts system. The attorney or intake lead clears it, not this agent.
+  - You want a review of a contract or court paper. Use the Legal Document Review agent or the Contract risk reviewer.
+  - You want to bill or log time. Use the Legal Billing & Time Tracking agent.
+you_give:
+  - Your notes from the call, chat or web form, with names removed or changed if your firm has not approved this AI tool
+  - Your practice areas, the places you cover and the fee types you offer
+  - The attorney's name and the consultation date, if one is booked (optional)
+  - The matter type, if you already know it (optional)
+you_get:
+  - A one-page attorney summary with matter, key facts, parties and documents
+  - Urgency flags at the top, such as court dates or deadlines the person mentioned
+  - A list of names and companies to run through your conflicts system
+  - A list of gaps and questions for the attorney or for a follow-up call
+  - A kind message for a person you must refer elsewhere, or a confirmation message for a booked consult (on request)
+how_to_use:
+  - Check your firm's rules first. Client details are confidential. Remove names, numbers and addresses unless your firm has approved this AI tool for client information.
+  - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Paste your call notes and your practice areas. Say what you want, such as "Write the attorney summary and the conflicts list."
+  - Read the urgency flags first. Pass anything time-sensitive to the attorney now, not after you tidy the summary.
+  - Run the conflicts list through your own system. Update the status yourself after the attorney or intake lead clears it.
+  - Send the summary to the attorney before the consultation. Fill any gaps with the person on a follow-up call.
+how_it_works:
+  - title: Check the setup
+    text: It asks once for your practice areas, coverage and fee types. Anything missing is marked MISSING.
+  - title: Screen for urgency
+    text: It looks for court dates, deadlines, hearings and safety concerns, and moves them to the top.
+  - title: Qualify the matter
+    text: It sorts the matter into a practice area and checks it against what your firm handles.
+  - title: Pull out the parties
+    text: It lists the person, any other side, other parties and prior ties to the firm, for your conflicts check.
+  - title: Write the summary
+    text: It fills the attorney brief from the notes, in the person's own words, and lists open questions.
+  - title: Set next steps
+    text: It proposes one clear next step, such as booking, a referral message or a call back. A person confirms it.
+output_shape: |-
+  URGENT FLAGS
+    <court date, deadline, safety concern> | <what the person said>
+
+  INTAKE SUMMARY
+    Prepared for: <attorney> | Consultation: <date, time, format or not booked>
+    Prospect: <name> | Contact: <phone, email> | Source: <how they found the firm>
+    Practice area: <area> | Matter type: <issue> | Date of incident: <date>
+    Summary: <two or three sentences in the person's words>
+    Key facts: <bullets>
+    Parties: <our prospect, other side, others, other side's lawyer if known>
+    Documents: <what they have>
+    Goals: <in the person's words>
+    Fees discussed: <yes or no, questions raised>
+
+  CONFLICTS LIST
+    <name or company> | <role> | <status: pending, run by a person>
+
+  QUESTIONS FOR THE ATTORNEY
+    <gap or question>
+
+  NEXT STEP
+    <one action> | <owner>
+output_sample:
+  input:
+    - Your notes from an intake call, chat or web form
+    - Your practice areas, coverage and fee types
+    - The attorney and consultation date (optional)
+  prerequisites:
+    - Your firm's approval to use this AI tool with client information, or notes with names removed
+  output:
+    - name: Urgent flags
+      contains: Court dates, deadlines and safety concerns the person mentioned, shown first.
+    - name: Intake summary
+      contains: Matter, key facts, parties, documents, goals and fees, in a one-page brief for the attorney.
+    - name: Conflicts list
+      contains: Every person and company to run through your conflicts system, marked pending.
+    - name: Questions for the attorney
+      contains: Gaps in the facts and points to ask in the consultation.
+    - name: Next step
+      contains: One proposed action with an owner, such as book the consult or send a referral message.
+    - name: Referral or confirmation message
+      contains: A kind note that refers the person elsewhere, or confirms the booked consultation (on request).
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini, in an account your firm has approved
+      why: Intake notes hold private facts, so use a tool whose data terms your firm has checked.
+  inputs:
+    - Your firm's intake form, so the summary uses the same headings your attorneys already read.
+    - Your list of partner firms for referrals, so the referral message names real options.
+terms:
+  - term: Intake
+    meaning: The first contact with a possible client, where you collect facts and decide if the firm can help.
+  - term: Conflict of interest check
+    meaning: A search for any tie between the firm and the people on the other side of a matter.
+  - term: Adverse party
+    meaning: The person or company on the other side of the matter.
+  - term: Statute of limitations
+    meaning: A legal time limit for starting a case. Only the attorney can confirm the limit for a matter.
+tweaks:
+  - what: Practice area
+    how: Name the one area you want, such as employment. The AI then uses the question set for that area.
+  - what: Summary length
+    how: Ask for a half-page brief if your attorneys want less, or add the full facts if they want more.
+improve:
+  - Ask your attorneys what they wish the summary had said. Add that to your instructions and rerun.
+  - Keep a list of the reasons matters did not fit, and add them to your practice area list.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

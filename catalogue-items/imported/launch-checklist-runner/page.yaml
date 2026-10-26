@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It walks a set checklist and adapts it to your release.
 new_slug: launch-checklist-runner
 name: Launch checklist runner
-summary: Say what you are releasing. Get a pre-launch checklist, a staged
-  rollout and a rollback plan.
+summary: Use this launch checklist to get a pre-launch checklist, a staged rollout plan and a rollback plan for your release before you ship to production.
 job: ship-and-host
 headline: Launch checklist runner
-subhead: A launch you can roll back if it goes wrong. Say what you are
-  releasing, and the skill builds a checklist that covers code quality,
-  security, performance, infrastructure and monitoring.
+subhead: A launch you can roll back if it goes wrong. Say what you are releasing, and the skill builds a checklist that covers code quality, security, performance, infrastructure and monitoring.
 explain: |
   A launch you can roll back if it goes wrong. Say what you are releasing, and the skill builds a checklist that covers code quality, security, performance, infrastructure and monitoring. That includes passing tests, no secrets in code, clean dependency audits, limited cross-origin access and rate limits on login.
 
@@ -18,6 +15,10 @@ when:
   - You are about to migrate data and cannot afford to lose any.
   - You want to release to ten percent of users before everyone.
   - Your team has no agreed rollback steps.
+not_for:
+  - "You only change copy or content with no user impact: use a simple deploy checklist or ask a teammate to check the page after it goes live."
+  - "You need a deep security review or a full accessibility audit: ask a security or accessibility specialist, since this only gives you tick boxes."
+  - "You want to host or set up your site for the first time: use your host's own setup guide, because this skill plans the release, not the hosting."
 you_give:
   - What is being released
   - Where it runs
@@ -29,8 +30,29 @@ you_get:
   - What to monitor after release
   - A rollback plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI what you are releasing, where it runs, and what tests and monitoring you have now.
+  - Add your project files if your AI can read them. If not, paste the key details.
+  - Read the checklist and mark any box you cannot tick yet. Fix those before you ship.
+  - Check the rollback plan and the numbers that trigger it. Agree them with your team before launch day.
+output_sample:
+  input:
+    - What you are releasing
+    - Where it runs, such as your host or cloud service
+    - Your current tests and monitoring
+    - Who needs to approve the release (optional)
+  prerequisites:
+    - An AI that can read your project files works best, but you can also paste in the details
+  output:
+    - name: Pre-launch checklist
+      contains: Tick boxes for code quality, security, performance, accessibility, infrastructure and documentation.
+    - name: Feature flag plan
+      contains: How to ship with the feature switched off, then turn it on step by step.
+    - name: Staged rollout
+      contains: The order of release from staging to a small group of users to everyone, with a watch period at each step.
+    - name: Rollout decision thresholds
+      contains: A table that says when to advance, hold or roll back, based on errors, speed and business numbers.
+    - name: Monitoring list
+      contains: What to watch after release, plus checks for the first hour.
+    - name: Rollback plan
+      contains: What triggers a rollback, the steps to undo the release, database notes and how long each option takes.

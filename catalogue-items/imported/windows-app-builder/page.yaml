@@ -2,36 +2,65 @@ thinking: medium
 thinking_why: It follows official guidance but must fit your app.
 new_slug: windows-app-builder
 name: Windows app builder
-summary: Describe the Windows desktop app. Get a WinUI 3 project set up and
-  built to Microsoft guidance.
+summary: Start a Windows desktop app with WinUI 3. Get a working project that builds and opens, set up the way Microsoft recommends, after you say yes.
 job: build-software
 headline: Windows app builder
-subhead: A new Windows desktop app, set up and built the way Microsoft
-  recommends for WinUI 3. You describe what the app should do and get a working
-  project instead of a blank folder and a long setup guide.
+subhead: Describe the Windows desktop app you want. It checks your PC, asks before it installs anything, then makes a WinUI 3 project, builds it and opens it. You get a project folder and proof the app launched.
 explain: |
-  A new Windows desktop app, set up and built the way Microsoft recommends for WinUI 3. You describe what the app should do and get a working project instead of a blank folder and a long setup guide.
+  This skill builds a Windows desktop app with WinUI 3, the modern Windows app toolkit from Microsoft. You describe what the app does, and you get a project that builds and opens, not a blank folder and a long setup guide.
 
-  The skill first classifies your request: machine setup, new app, design, implementation, review or fixing a problem. For a new app it picks a safe name, checks your machine through a WinGet configuration that can turn on Developer Mode and install Visual Studio with the right workloads, then confirms the winui template exists and scaffolds the project with dotnet. It asks before changing your machine. It needs Windows and the .NET tools.
+  It starts by checking whether your PC is ready. If tools are missing, it tells you what it would install, which is Developer Mode and Visual Studio Community with the Windows app workloads. It waits for your yes before it changes anything. Then it makes the project with the dotnet tool, builds it and launches it. A launch counts only when a real window opens.
+
+  It follows Microsoft's own design guidance, so the app supports light and dark mode and uses standard Windows controls. It needs a Windows PC and an AI that can run commands on it.
 when:
   - You want to start a Windows desktop app and have no project yet.
-  - Your machine is not ready for WinUI development.
-  - You are unsure how a modern Windows app should look.
-  - An existing WinUI project has build errors.
+  - Your PC may not be ready for WinUI development and you want it checked first.
+  - You are not sure how a modern Windows app should look and behave.
+  - An existing WinUI project has build errors you cannot trace.
+not_for:
+  - "You want a website or a cross-platform app: use the ASP.NET web app builder for the web, or the Single-file app builder for a quick shareable page."
+  - "You have a WPF, WinForms or UWP app you want to keep as it is: this skill builds new WinUI 3 apps only."
+  - "You want to test an Electron app: use the Desktop app tester."
 you_give:
-  - Description of the app
-  - App name (optional)
-  - Where to create the project (optional)
-  - A Windows machine with permission to install tools
-you_get:
-  - Machine readiness check
-  - New WinUI 3 project
-  - Build that compiles
-  - Design guidance for modern Windows
-  - Fixes for setup problems
+  - A description of what the app should do
+  - An app name (optional)
+  - The folder to create it in (optional)
+  - A Windows 10 or 11 PC where you agree to install tools
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code on Windows.
+  - Use an AI that can run commands on your Windows PC, such as Claude Code or Codex. Add this skill, with its files, to your AI.
+  - Describe the app in a few lines. Say if you want a packaged app, which suits the Store, or an unpackaged one, which is easier to run from the command line.
+  - Read the machine check. If tools are missing, it lists what it would install. Say yes only if you are happy with that list.
+  - Wait for the build and launch. A real window should open. If it does not, ask your AI to keep debugging.
+  - Open the project in Visual Studio. Ask for the first screen or feature, one at a time.
+you_get:
+  - A machine check: what is ready, missing or unsure
+  - A new WinUI 3 project folder
+  - A build result from dotnet build
+  - Proof that the app opened, such as its window title
+  - Next steps for the first screen
+output_sample:
+  input:
+    - A short description of the app
+    - An app name (optional)
+    - The folder to create it in (optional)
+  prerequisites:
+    - Windows 10 (version 1809 or newer) or Windows 11
+    - An AI that can run PowerShell and dotnet on your PC
+    - Your yes before any tool is installed
+  output:
+    - name: Machine check
+      contains: What is present, missing or uncertain for WinUI work, and what an install would change.
+    - name: Project folder
+      contains: A new WinUI 3 project made with dotnet, with its packaging choice explained.
+    - name: Build result
+      contains: The dotnet build result for the new project.
+    - name: Launch result
+      contains: A window title or other sign that the app opened, or the reason it did not.
+    - name: Next steps
+      contains: The first screen or feature to add, and anything left unchecked.
+works_best_with: Claude Code or Codex on the Windows PC itself, so they can run the setup, build and launch. Visual Studio is the editor you will open the project in.
+terms:
+  WinUI 3: Microsoft's toolkit for modern Windows desktop apps.
+  Developer Mode: A Windows setting that lets you run apps you build yourself.
+  packaged app: An app installed through an installer package, as Store apps are.
+  unpackaged app: An app you run as a plain .exe file, which is simpler to rebuild from the command line.

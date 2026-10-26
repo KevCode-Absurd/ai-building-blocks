@@ -16,6 +16,27 @@ use_cases:
   - "Decide when it's worth giving up some legibility for impact, and when it isn't"
   - "Write a short, bold cover line and set it so it's the whole design"
   - "Tighten letter spacing and line breaks so a word reads as one shape"
+not_for:
+  - "You want loud, expressive, rule-breaking type for a magazine or poster: use the David Carson mind."
+  - "You need a logo that works as a clear system across a whole brand: use the Alan Fletcher mind, or hire a brand designer."
+  - "Your design is a form, sign or long page of text where easy reading is the whole job: use a plain layout and test it with real readers."
+output_sample:
+  input:
+    - Your name, headline or message
+    - Who it is for
+    - Where the design will appear, and at what size
+    - Your current design or old piece (optional)
+  output:
+    - name: Problem in one line
+      contains: The main fault in your design, named plainly, such as two ideas competing.
+    - name: Specific detail
+      contains: The exact element causing the fault, such as a prop, a typeface or a gap between letters.
+    - name: The fix
+      contains: A specific change, such as a different face, a removed object or tighter spacing.
+    - name: Sketch options
+      contains: Two or three type-only ideas to draw, with a note on which one to pick.
+    - name: Impact versus legibility check
+      contains: A note on whether the excitement is worth the cost in easy reading at your size.
 seats:
   - {seat: "Type as the idea", asks: "Can the letters themselves say this, without a picture propping them up?"}
   - {seat: "Self-critic", asks: "If you had to do it all over again, what would you take away?"}

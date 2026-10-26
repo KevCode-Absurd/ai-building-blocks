@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must read each site and judge how rivals position themselves.
 new_slug: competitor-profile-writer
 name: Competitor profile writer
-summary: Give it competitor links. Get a profile of each with site, pricing and
-  positioning. Collects data from websites.
+summary: Give it competitor links and your product. Get a competitor profile for each rival with positioning, pricing, features and sources for every claim.
 job: study-competitors
 headline: Competitor profile writer
-subhead: A structured profile for each competitor, built from their own site and
-  public data, with facts kept separate from opinion. Every claim traces back to
-  a source page, a review or an SEO figure.
+subhead: A structured profile for each competitor, built from their own site and public data, with facts kept separate from opinion. Every claim traces back to a source page, a review or an SEO figure.
 explain: |
   A structured profile for each competitor, built from their own site and public data, with facts kept separate from opinion. Every claim traces back to a source page, a review or an SEO figure.
 
@@ -18,6 +15,10 @@ when:
   - A new rival appears and you need a profile today.
   - You are starting a positioning project and need the field mapped.
   - You want pricing and positioning side by side for every rival.
+not_for:
+  - "You want comparison or alternative pages for your own site: use a page-writing skill after the profiles are done, not this one."
+  - "You need a sales battle card for your team: build one from the finished profiles with a sales enablement skill."
+  - "You want to research companies you plan to sell to: use a prospecting skill, since this one studies rivals."
 you_give:
   - Competitor website links
   - Your product description
@@ -29,8 +30,35 @@ you_get:
   - Search and traffic data when available
   - Sources for every claim
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Firecrawl API key.
+  - Open Claude, ChatGPT or Gemini in a chat that can browse the web, and paste in the skill.
+  - Paste your competitor links, one per line, and one line on what your product does.
+  - "Say how deep to go: quick scan for key facts, or deep profile for full research."
+  - Say if you have a Firecrawl key or an SEO tool connected. DataForSEO, Ahrefs and Semrush are paid, and Firecrawl needs its own key. Without them it reads pages directly.
+  - The skill reads public pages. Check each site's terms and robots.txt before you run it.
+  - Read each profile. Check pricing and any claim marked as inferred against the source page before you use it.
+output_sample:
+  input:
+    - Links to the competitor websites
+    - A short description of your product (optional if your product notes exist)
+    - "Depth: quick scan or deep profile"
+    - Focus areas such as pricing or positioning (optional)
+  prerequisites:
+    - An AI that can fetch web pages
+    - A Firecrawl key and an SEO data tool such as DataForSEO, Ahrefs or Semrush (optional, paid, for richer data)
+  output:
+    - name: At a Glance
+      contains: The key facts about the competitor in one short block, with anything not found marked unknown.
+    - name: Positioning & Messaging
+      contains: How the competitor describes itself, who it targets and the claims it leads with.
+    - name: Product & Features
+      contains: Core capabilities, standout differences, integrations and signs of where the product is heading.
+    - name: Pricing
+      contains: Plans and prices as shown on the pricing page, with notes on what is hidden or unclear.
+    - name: Customers & Social Proof
+      contains: Named customers, reviews and proof the competitor shows.
+    - name: SEO & Content Strategy
+      contains: Search and traffic data when a tool is connected, plus what content the site publishes.
+    - name: Strengths & Weaknesses
+      contains: Where the competitor is strong and weak, kept apart from the plain facts.
+    - name: Competitive Implications for Your Product
+      contains: What each finding means for you, with a source for each claim.

@@ -1,0 +1,42 @@
+slug: agency-design-ux-researcher
+name: "UX Researcher agent"
+summary: "Plan a user research study or turn your interview and test notes into findings, personas and ranked fixes for your website or app."
+category: agent
+boards: []
+type: agent
+role: make
+job: brand
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: design/design-ux-researcher.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ux-researcher.md
+  licence: MIT
+  original_name: UX Researcher
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 25f59c4333df2d0f1170ff7a1b11ea8415fd3d0ef80c3e0985209aeb4018680f
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - UX Researcher
+  - Agency Agents
+  - Design
+credits:
+  - title: UX Researcher
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ux-researcher.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

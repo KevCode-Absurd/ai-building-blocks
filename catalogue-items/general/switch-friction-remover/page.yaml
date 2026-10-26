@@ -1,6 +1,6 @@
 new_slug: switch-friction-remover
 name: Switch friction remover
-summary: Paste your switch story map. Get the habits and worries ranked, a fix for each and one small change to test first.
+summary: Rank what stops buyers switching, get two fixes for each, and pick one small change to test first. Built for a buyer switch friction fix.
 job: understand-customers
 thinking: medium
 thinking_why: It ranks known blockers and picks fixes from a fixed set of moves. A mid-range model does this well.
@@ -14,6 +14,10 @@ when:
   - Trials, demos or baskets stall and you do not know why.
   - Buyers say they like it and still do not switch.
   - You keep adding features to win people who are held back by worry.
+not_for:
+  - "You have no buyer stories yet: run the Switch story mapper first, or talk to five recent buyers."
+  - "You want to know why people buy at all: use the Switch story mapper to find the push and pull behind a purchase."
+  - "You need a full redesign of the buyer path: map it with the Job experience mapper first."
 you_give:
   - Your switch story map, from the Switch story mapper
   - Your question, such as why trials do not convert (optional)
@@ -30,6 +34,28 @@ how_to_use:
   - Paste the switch story map. Add what you can change.
   - Read the ranking and check it against what you saw in interviews.
   - Run the test it picks and bring the result back.
+output_sample:
+  input:
+    - Your switch story map, with its forces table, clusters and what buyers fired
+    - Your question, such as why trials do not convert (optional)
+    - What you can change and your budget (optional)
+  prerequisites:
+    - A switch story map from the Switch story mapper, or your own notes in that shape
+  output:
+    - name: Holding forces (ranked)
+      contains: Each habit and worry, its type, where it bites, the people count, severity and the score.
+    - name: Fixes
+      contains: Two options for each top force, with cost and speed.
+    - name: Getting rid of the old way
+      contains: What buyers must drop and what you can do to help them drop it.
+    - name: Not for
+      contains: One line for your page that tells the wrong buyer not to hire it.
+    - name: Test first
+      contains: One change, who gets it, the measure, the baseline, the window and the rule for keeping it.
+    - name: Missing
+      contains: Gaps in your inputs, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the AI could not meet, or none.
 how_it_works:
   - title: Lists the holding forces
     text: Habits and worries from the stories, merged and counted by separate people.

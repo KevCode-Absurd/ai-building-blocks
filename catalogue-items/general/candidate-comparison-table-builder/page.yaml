@@ -1,6 +1,6 @@
 new_slug: candidate-comparison-table-builder
 name: "Candidate comparison table builder"
-summary: "Paste your interview notes on several people. Get a side-by-side on agreed criteria, with the stories flagged."
+summary: "Compare candidates side by side with a fair interview scorecard. Paste your notes and criteria. Get scores backed by quotes and a ranking."
 job: hire-people
 thinking: high
 thinking_why: "It scores many cells from evidence and must resist the overall impression until the end."
@@ -17,6 +17,10 @@ when:
   - "The team has a favourite and you are not sure why."
   - "Three interviewers wrote notes and they disagree."
   - "You want to be able to explain the decision to the people who did not get the job."
+not_for:
+  - You have notes on only one person. Use a simple scorecard for that interview, and compare later.
+  - You never set criteria before the interviews. Write them from the job first, or expect a weaker table.
+  - You want to write to the people you turned down. Use the Candidate reply drafter instead.
 
 you_give:
   - "The criteria set before the interviews"
@@ -33,6 +37,29 @@ how_to_use:
   - "Say who wrote which notes if you can."
   - "Read STORIES first. Decide as a team whether each one is evidence or impression."
   - "Ask the STILL UNKNOWN questions in a follow-up before you decide."
+output_sample:
+  input:
+    - Your criteria for the role, set before the interviews
+    - Your interview notes on each candidate, per interviewer if you can
+    - The problem the hire must solve (optional)
+    - Who wrote which notes (optional)
+  output:
+    - name: CRITERIA
+      contains: Each criterion written as a behaviour you could observe, with rewritten ones marked.
+    - name: TABLE
+      contains: A score from 1 to 5 for each criterion and candidate, with a quote or action beside it.
+    - name: TOTALS
+      contains: Each candidate's sum and how many cells had no evidence.
+    - name: STORIES
+      contains: Notes that are verdicts, with who wrote them and the criterion they stood in for.
+    - name: SPLIT READINGS
+      contains: Answers that two interviewers scored differently, and the gap between them.
+    - name: STILL UNKNOWN
+      contains: The gaps for each candidate and one question that would fill the biggest gap.
+    - name: RANKING
+      contains: The order by total, and whether the unknowns could change it.
+    - name: MISSING
+      contains: Any criteria or notes you did not give.
 
 how_it_works:
   - title: "Fixes the criteria"

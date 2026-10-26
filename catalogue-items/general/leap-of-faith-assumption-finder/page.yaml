@@ -1,6 +1,6 @@
 new_slug: leap-of-faith-assumption-finder
 name: Leap-of-faith assumption finder
-summary: Paste your plan. Get the few guesses it stands on, each with a number, ranked so you test the riskiest first.
+summary: Find the leap-of-faith assumptions in your plan. Paste it and get the few risky guesses, each with a number, ranked so you test the riskiest first.
 job: test-an-idea
 thinking: medium
 thinking_why: It rewrites claims and ranks risk, but the steps are fixed and the facts come from your plan.
@@ -14,6 +14,10 @@ when:
   - You have a plan and a sense that something in it is a bet, but you cannot say which part.
   - Your pitch leans on "we are like X, but for Y".
   - You are about to spend months building and want to know what you are really assuming.
+not_for:
+  - "You already have sales data from real customers: go straight to the Smallest test picker."
+  - "You want to run a test on one guess: use the Smallest test picker, which takes this list."
+  - "You need a forecast or budget: build it in a spreadsheet or ask your accountant."
 you_give:
   - "Your plan: what, for whom, how they find it, what you get back"
   - Your biggest worry (optional)
@@ -27,6 +31,28 @@ how_to_use:
   - Paste your plan as it stands, comparisons included.
   - Check each number it proposes against your plan and fix the ones that are wrong.
   - Take the top guess to the Smallest test picker.
+output_sample:
+  input:
+    - "Your plan: what you make, for whom, how they find it, what you expect back"
+    - Your biggest worry (optional)
+    - Your forecast or customer notes (optional)
+  output:
+    - name: Plain facts
+      contains: Each comparison to another business, rewritten as plain claims about your own customers.
+    - name: Value guess
+      contains: One sentence, with a number, on the benefit people must get once they use it.
+    - name: Growth guess
+      contains: One sentence, with a number, on how new customers will find it and keep coming.
+    - name: Ranked guesses
+      contains: Your top five to seven guesses, each with a number, damage score, evidence score and total.
+    - name: Riskiest
+      contains: The top guess and the reason it comes first.
+    - name: Test on first
+      contains: The group who feel the need most and one place to meet ten of them.
+    - name: Missing
+      contains: Figures or details you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 how_it_works:
   - title: Strips comparisons
     text: Rewrites each into plain facts about your customers.

@@ -1,6 +1,6 @@
 new_slug: buyer-aware-headline
 name: "Write a headline that fits what your buyers already know"
-summary: "Give it your product and buyers. Get their awareness and claim fatigue read, stage-matched headlines, a promise check and a test plan."
+summary: "Find where your buyers stand and how tired they are of your market's claims. Get headlines that fit, a promise check and a test plan."
 job: write-ad-copy
 thinking: high
 thinking_why: "It reads evidence, writes to rules, checks the lines and plans a test. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - Your headline gets ignored or doubted and you do not know if buyers know too little or have heard too much.
   - Rivals all make the same claim and you need a different move, not a louder one.
   - You are writing to people who do not know your product exists.
+not_for:
+  - "Your market has no rival claims to read, or buyers already know your product well: use the Ad headline writer for a simple set of headlines."
+  - "You only need new opening lines for an ad, not a read of your market: use the Ad hook writer."
+  - "You want to check ad claims for proof, not write headlines: use the Ad claims checker."
 
 you_give:
   - Your product facts, including what it does for the buyer
@@ -35,6 +39,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your product facts, rival claims and customer words.
   - It works step by step and saves each result. Check the claim timeline in step 1 before you read the headlines.
+output_sample:
+  input:
+    - Your product facts, including what it does for the buyer
+    - Rival claims pasted from their ads and pages (optional)
+    - Customer words such as reviews (optional)
+    - Your offer and the place you will test
+  prerequisites:
+    - An AI that can save each step as a file, such as Claude Code or a Claude Project
+    - The handoff pack for this workflow
+  output:
+    - name: "Step 1: stage brief"
+      contains: The want, where buyers sit on awareness, how worn the claims are, and what a headline may and may not do.
+    - name: "Step 2: headlines for the stage"
+      contains: Headlines that each make one allowed move, with the first one to test and a second that differs.
+    - name: "Step 3: promise check"
+      contains: For each headline, who it speaks to and what reward it offers, with stronger rewrites of weak ones.
+    - name: "Step 4: keyed test plan"
+      contains: Two or three headlines that differ in kind, a code for each, and a winner rule set before the test.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Read the market

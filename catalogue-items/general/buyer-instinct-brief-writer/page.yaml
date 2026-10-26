@@ -1,6 +1,6 @@
 new_slug: buyer-instinct-brief-writer
 name: "Buyer instinct brief writer"
-summary: "Paste your product facts and buyer words. Get a brief naming the drive behind buying and the feeling the ad must leave."
+summary: "Turn product facts and buyer words into a buyer instinct brief. It names the drive behind buying and the feeling your ad must leave."
 job: understand-customers
 thinking: high
 thinking_why: "It infers a hidden motive from buyer words, which takes judgement and evidence."
@@ -17,6 +17,10 @@ when:
   - You have a pile of facts and reviews but no single message.
   - Your ads list features and nobody reacts.
   - You are about to brief a writer or an AI and want the brief to name the real reason people buy.
+not_for:
+  - You have no buyer words at all. Gather reviews, support messages or interview notes first, or the drive stays a guess.
+  - You need finished headlines or ad copy. Use the Ad headline writer once you have the brief.
+  - You want a list of buying reasons from a pile of reviews. Use the Customer buying reasons finder first, then bring its result here.
 
 you_give:
   - Your product facts
@@ -34,6 +38,29 @@ how_to_use:
   - Check the drive it names against what you hear from customers.
   - Hand the brief to your writer, or paste it into "Ad headline writer".
   - If the drive feels wrong, add more buyer quotes and run it again.
+output_sample:
+  input:
+    - Your product facts
+    - Customer reviews or buyer quotes (optional)
+    - A persona or description of your buyer (optional)
+    - Your brand brain (optional)
+  output:
+    - name: Facts (springboard)
+      contains: The five to eight facts most likely to matter to a buyer, with the proven ones marked.
+    - name: What buyers say they want
+      contains: Each stated want with a short buyer quote and how often it came up.
+    - name: The drive underneath
+      contains: The deeper motive behind the top wants, with the quotes that support it or a note that it is a guess.
+    - name: Where language hides it
+      contains: Pairs of tidy reasons and emotional ones that point to the real motive.
+    - name: The feeling the ad must leave
+      contains: One plain line on what the reader feels when the ad ends.
+    - name: What the reader takes away
+      contains: One line on what the reader should believe or plan to do.
+    - name: Fresh angle
+      contains: One true angle tied to the drive, and the worn angles to avoid.
+    - name: Missing and checks missed
+      contains: Gaps marked MISSING, and one line for each check the brief still fails, or none.
 
 how_it_works:
   - title: Lists the facts

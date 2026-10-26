@@ -1,0 +1,28 @@
+# Use Image Prompt Engineer agent
+
+Describe the photo you want. Get an image prompt that sets subject, light, camera and style, plus a leave-out list, for Midjourney, DALL-E or Flux.
+
+## Skill hosts
+
+Install the complete agency-design-image-prompt-engineer folder with SKILL.md and references/ together. The skill reads the original profile when used.
+
+## Chat
+
+Paste SKILL.md, then references/source-agent.md, then your task. A plain chat can propose work; files, tools and recurring runs depend on the host you use.
+
+## Claude Code agent
+
+The unmodified references/source-agent.md is the upstream agent file. Copy it to .claude/agents/agency-design-image-prompt-engineer.md in your chosen project. Supply the task scope and review rules in SKILL.md when invoking it.
+
+## Other agent hosts
+
+Import the role profile using the host's documented agent format. This pack does not register Codex agents, install software, provision integrations or create schedules.
+
+## Source and checks
+
+Source: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-image-prompt-engineer.md
+Revision: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+SHA-256 of references/source-agent.md: 63a564d01dc5812c494cd8aa034ce1217031d8fe8b3eca1323316879769ff13f
+Licence: MIT (LICENSE).
+
+AI Blocks adds a skill adapter and task guide. The original profile is unchanged. Static intake checks are recorded in the AI Blocks import report; no model behavior test has been run for this entry.

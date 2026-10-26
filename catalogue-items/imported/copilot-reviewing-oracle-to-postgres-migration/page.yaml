@@ -2,17 +2,103 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-reviewing-oracle-to-postgres-migration
 name: Oracle migration risk reviewer
-summary: Share your migrated code. Get Oracle and PostgreSQL behavior gaps
-  checked before release.
+summary: Check Oracle to PostgreSQL migration work against 14 known behavior gaps and get a risk table, test coverage check and pass or fail verdict.
 job: build-software
 headline: Oracle migration risk reviewer
-subhead: Share your migrated code. Get Oracle and PostgreSQL behavior gaps
-  checked before release. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Give it the Oracle procedures, triggers or queries you plan to move, or the PostgreSQL version you have already built. It checks the work against 14 known differences between the two databases and tells you which risks apply, what to change and whether your tests cover them.
+explain: |
+  Oracle and PostgreSQL look alike, but they behave differently in small ways that break working code. Oracle treats empty text as NULL and PostgreSQL does not. Row numbers, date functions, sorting and type rules all differ. These gaps usually show up late, as wrong results in production.
+
+  This skill checks your migration against a library of 14 known differences. They cover empty strings, missing rows, NVL and DECODE, brackets in FROM, ROWNUM paging, SYSDATE and sequences, sorting, TO_CHAR on numbers, type matching, UNION ALL speed, materialized view refresh, one command per connection, refcursors and time zones. It reads the full note for a difference only when your code could be affected.
+
+  It works in two ways. Before you migrate, it lists the risks and the fix for each one. After you migrate, it checks that each risk was handled and that your integration tests cover it. It ends with a pass or fail list.
+when:
+  - You are about to move a procedure, trigger, query or refcursor client from Oracle to PostgreSQL.
+  - You finished a migration and want a check before release.
+  - You suspect your integration tests miss Oracle and PostgreSQL differences.
+  - A reviewer asks which known risks your migration has covered.
+not_for:
+  - "You have one wrong result and want to write it up: use the Database migration bug report writer."
+  - "You want the procedures converted: use the Oracle stored procedure migrator."
+  - "You need a general SQL performance review: use the Postgres query tuner."
+  - "You are moving to a database other than PostgreSQL: the 14 differences do not apply."
+you_give:
+  - The procedures, triggers, queries or views in scope
+  - The application code that calls them
+  - The migration changes, or a diff, if you are checking finished work
+  - Your existing integration tests
+  - The Oracle source, so it can compare behavior (optional)
+you_get:
+  - A table with one row per risk that applies to your code
+  - For each risk, the affected file and the fix to apply
+  - A note on any risk that needs a design decision from you
+  - A check of whether your tests cover each risk
+  - A pass or fail checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - List what you are migrating or have migrated, and the code that calls it. Gather your integration tests too.
+  - Open an AI that can read your files, such as Claude Code or Copilot in your editor. Paste this skill and the reference notes folder if you have it.
+  - Say which mode you want. Say "planning" before you migrate, or "validating" after.
+  - Read the risk table. Mark each risk you accept, fix or need to decide on. Decide on the empty text rule first, since it changes many results.
+  - For each risk, add or fix the test. A test should cover the normal case and the failure case.
+  - Run your migration scripts and tests. Ask for the pass or fail list again until nothing fails.
+how_it_works:
+  - title: Choose the mode
+    text: It asks if you are planning a migration or validating finished work.
+  - title: Map the scope
+    text: It lists the database objects and the application code that calls them.
+  - title: Screen the 14 differences
+    text: It reads the index of known differences and opens a full note only when your code could be affected.
+  - title: Record the risks
+    text: For each risk it writes the problem and the fix, and flags any that need a design choice.
+  - title: Check test coverage
+    text: When validating, it checks that tests cover the normal case and each failure case.
+  - title: Give a verdict
+    text: It ends with a list showing each risk as addressed or not, and whether the scripts and tests pass.
+output_shape: |
+  Scope: <objects and calling code reviewed>
+  Mode: <planning or validating>
+  Risk table
+    <difference> | affects <file and line> | fix <change> | test <covered or missing>
+  Decisions needed
+    <risk that needs your choice, such as keeping Oracle's empty text rule>
+  Verdict
+    <each risk: addressed or not>  Scripts run: <yes or no>  Tests pass: <yes or no>
+output_sample:
+  input:
+    - The procedures, triggers, queries or views in scope
+    - The application code that calls them
+    - The migration changes or diff, if you are validating
+    - Your existing integration tests
+  prerequisites:
+    - An AI that can read your code and test files
+    - The 14 reference notes that come with the skill
+  output:
+    - name: Scope list
+      contains: The database objects and calling code that were reviewed.
+    - name: Risk table
+      contains: One row for each applicable difference, with the affected code, the fix and the test status.
+    - name: Decisions needed
+      contains: Risks where you must choose between Oracle's behavior and PostgreSQL's, such as empty text.
+    - name: Test coverage check
+      contains: Whether tests cover the normal case and the failure case for each applicable risk.
+    - name: Pass or fail checklist
+      contains: Each risk marked addressed or not, and whether scripts run and tests pass.
+works_best_with:
+  tools:
+    - name: Claude Code or Copilot in your editor
+      why: They can read your procedures, calling code and tests together.
+    - name: A PostgreSQL test database
+      why: You need one to run the migration scripts and integration tests.
+  inputs:
+    - Sample data that includes empty text, NULLs and dates across time zones
+    - The Oracle version of each object
+    - Your CI test results
+terms:
+  - term: Refcursor
+    meaning: A pointer to a set of rows that a procedure hands back to the caller.
+  - term: Integration test
+    meaning: A test that runs your code against a real database.
+  - term: Materialized view
+    meaning: A saved copy of a query result that must be refreshed on purpose in PostgreSQL.
+  - term: Collation
+    meaning: The rule that sets how text is sorted and compared.

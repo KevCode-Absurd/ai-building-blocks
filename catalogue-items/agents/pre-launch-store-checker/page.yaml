@@ -1,6 +1,6 @@
 new_slug: pre-launch-store-checker
 name: Pre-launch store checker
-summary: Tell it your store setup. It checks go-live, re-checks after each fix, and stops at a clear go or a no-go.
+summary: Check your store before launch. Tell it your setup. It lists what blocks real orders, re-checks after each fix, and stops at a clear go or no-go.
 job: set-up-store
 thinking: medium
 thinking_why: It runs the same check up to four times and routes each problem to the right skill. A mid-level model is enough.
@@ -14,6 +14,10 @@ when:
   - You are about to open a store and want to know if it can take real orders.
   - You have fixed some items and want to check again without starting over.
   - Your payment account is on hold, or checkout shows a wrong tax or shipping price.
+not_for:
+  - "Your store is not built yet: finish the products, payments and policies first, then run this check."
+  - "Your store has already taken real orders: use a checklist for your platform instead, such as Shopify's own launch guide."
+  - "You only have a tax question: ask an accountant who knows the countries you sell to."
 you_give:
   - Your platform, country and the countries you sell to
   - What is set up, such as products, payments, shipping, tax, policies and domain
@@ -30,6 +34,32 @@ how_to_use:
   - Fix what is on the list, start the slow items first, then tell the agent what you fixed.
   - It checks again. Place the test orders it plans and tell it what each showed.
   - When it says GO, follow the switch-to-live steps yourself, with the password last.
+output_sample:
+  input:
+    - Your platform, your country and the countries you sell to
+    - "What is set up: products, payments, shipping, tax, policies and domain"
+    - Screenshots of checkout or settings you are unsure about (optional)
+    - What each test order showed (from the second round)
+  prerequisites:
+    - A store or preview link your AI can be told about
+    - A test mode for payments on your platform, which may need a paid plan or a payment gateway
+  output:
+    - name: Verdict
+      contains: Go or no-go, the round number out of four, and a one-line reason.
+    - name: Score
+      contains: A score out of 100 with the sum that shows how it was worked out.
+    - name: Blockers
+      contains: Each problem that stops a sale, with one fix and any waiting time.
+    - name: Warnings
+      contains: Smaller problems, each with one fix.
+    - name: Closed since last round
+      contains: Items the new check passed.
+    - name: Test orders to place
+      contains: Each test order with its address, product and payment mode, and what to confirm.
+    - name: Who to ask
+      contains: Who can help with any item still open after two rounds.
+    - name: Files and missing
+      contains: The files saved each round and every line marked MISSING.
 how_it_works:
   - title: Run the first full check
     text: Runs the go-live check and a payments and checkout check, because a payout hold can take days.

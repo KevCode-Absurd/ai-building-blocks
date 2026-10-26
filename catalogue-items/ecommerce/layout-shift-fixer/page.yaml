@@ -1,6 +1,6 @@
 new_slug: layout-shift-fixer
 name: "Layout shift fixer"
-summary: "Give it your CLS report and page. Get the shifting element found and the fix for each cause."
+summary: "Fix layout shift on your store. Give it your PageSpeed CLS report and theme code. You get the jumping element, its cause and the CSS fix."
 job: speed-up-store
 thinking: medium
 thinking_why: "It reasons about causes and writes small CSS and theme edits. A mid-size model does this well when it can see the report and the code."
@@ -17,6 +17,10 @@ when:
   - "CLS is above 0.1 on mobile or desktop."
   - "A bar, widget or image pushes the page down as it loads."
   - "Search Console shows a Core Web Vitals warning for layout shift."
+not_for:
+  - "Your CLS is already 0.1 or less: leave the page as it is and check it again in Search Console later."
+  - "The page only moves after a shopper taps, such as a menu opening: that is not layout shift, so no fix is needed."
+  - "You want to find why the whole store loads slowly: read the PageSpeed report first, then come back for any shifting elements."
 
 you_give:
   - "The PageSpeed CLS element list and loading filmstrip, mobile and desktop"
@@ -35,6 +39,30 @@ how_to_use:
   - "Paste the layout shift section from PageSpeed (mobile and desktop) and attach the filmstrip."
   - "Paste the theme code for the part of the page that moves, and list apps that add bars or widgets."
   - "Apply the fixes on the copy, run PageSpeed three times, and look again at real-user data in 28 days."
+output_sample:
+  input:
+    - The layout shift part of your PageSpeed report, for mobile and desktop
+    - The loading filmstrip screenshots from PageSpeed
+    - The page address and the theme code for the part that moves
+    - A list of apps that add bars, review stars or messages (optional)
+  prerequisites:
+    - A duplicate of your theme to edit, not the live one
+    - Access to your theme code
+  output:
+    - name: Layout shift fix header
+      contains: The store, page and theme copy, with the CLS now on mobile and desktop and the target of 0.1 or less.
+    - name: Shifting element blocks
+      contains: "One block per element: what moves, how far, the cause, the exact code to find and replace, and the space to reserve."
+    - name: Not a shift
+      contains: Movement the shopper caused, such as a tapped menu, which is left out of the fix.
+    - name: Legal and consent note
+      contains: Confirms space is reserved for cookie or consent banners, not removed.
+    - name: Test steps
+      contains: How to test on slow 3G with the cache off, frame by frame, three runs, on mobile and desktop.
+    - name: Recheck
+      contains: The date to look at real-user data again, about 28 days later.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Finds the element

@@ -1,6 +1,6 @@
 new_slug: proof-spot-mapper
 name: "Proof spot mapper"
-summary: "Paste your reviews, quotes and buyer doubts. Get which proof to show, where it goes and what to drop."
+summary: "Match your real reviews and quotes to buyer doubts. See which proof to show, where it goes on the page, and which proof to drop."
 job: write-landing-page
 thinking: low
 thinking_why: "It matches given proof to given doubts with a short set of rules."
@@ -17,6 +17,10 @@ when:
   - "You have good reviews but they sit in one block at the bottom."
   - "Buyers hesitate at the price or the size choice."
   - "You are redesigning a page and need to place proof."
+not_for:
+  - "You have no reviews or proof yet: collect some first, or use the Buyer doubt gap finder to find which doubts need proof."
+  - "You want the full set of checks for a store page: use the Store social proof placer."
+  - "You need the page itself written: use the Sales letter outline planner."
 
 you_give:
   - "Reviews, quotes, ratings and press, each with a source"
@@ -33,6 +37,23 @@ how_to_use:
   - "List the doubts buyers have."
   - "Add buyer groups if you know them."
   - "Hand the map to whoever builds the page."
+output_sample:
+  input:
+    - Your reviews, quotes, ratings and press, each with a source
+    - The doubts buyers raise before they buy
+    - Your buyer groups (optional)
+    - Your brand brain from the Brand profile builder (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tools needed.
+  output:
+    - name: PROOF MAP
+      contains: Each doubt, the proof that settles it, who said it, and where on the page it goes.
+    - name: FIRST SCREEN
+      contains: The two kinds of proof to show before the visitor scrolls.
+    - name: DROPPED
+      contains: Each item you should not use, with the reason.
+    - name: MISSING
+      contains: Proof you still need to collect.
 
 how_it_works:
   - title: "Match"

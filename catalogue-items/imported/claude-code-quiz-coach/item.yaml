@@ -1,0 +1,40 @@
+slug: claude-code-quiz-coach
+name: Claude Code quiz coach
+summary: Choose a Claude Code lesson. Get a scored quiz, clear feedback and the
+  parts to review.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+package_files: all
+source:
+  by: Luong NGUYEN
+  repo: luongnv89/claude-howto
+  path: .claude/skills/lesson-quiz
+  url: https://github.com/luongnv89/claude-howto/tree/188f468893231cbe4525f45e657d554746232072/.claude/skills/lesson-quiz
+  licence: MIT
+  licence_file: LICENSE
+  commit: 188f468893231cbe4525f45e657d554746232072
+  original_name: lesson-quiz
+  author: luongnv89
+  imported: 2026-10-25
+  sha256: 9fa1f505d2c7bb59d44ae4a8ca8dfcefdc828009bbf38825b45e022170e8f687
+  adapted: true
+version: 1.0.0
+example_pending: true
+credits:
+  - title: lesson-quiz learning skill
+    by: Luong NGUYEN (luongnv89)
+    url: https://github.com/luongnv89/claude-howto/tree/188f468893231cbe4525f45e657d554746232072/.claude/skills/lesson-quiz
+    used: Adapted primary instructions with self-contained lesson paths and scoring
+      limits. Original instructions, selected references, ten lessons and MIT
+      license retained as byte-exact source files.

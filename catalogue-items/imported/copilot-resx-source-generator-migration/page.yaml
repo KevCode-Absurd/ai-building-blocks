@@ -2,18 +2,56 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-resx-source-generator-migration
 name: RESX generated code migration helper
-summary: Share your resource files and project. Get a move from checked-in
-  designer files to a source generator.
+summary: Move your .NET project from checked-in RESX designer files to a source generator. Give it your project path. You get a clean migration and a build check.
 job: build-software
 headline: RESX generated code migration helper
-subhead: Share your resource files and project. Get a move from checked-in
-  designer files to a source generator. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Give it your project file path and your .resx files. It swaps checked-in designer files for a source generator, then builds the project and checks your resources. It asks you first if a file uses a custom namespace.
+not_for:
+  - "Your .resx files hold images, icons or other non-string values: keep the current generator, or turn the source generator off for that file."
+  - "Your .resx sits beside a WinForms form or control designer: keep that file as it is and set GenerateSource to false on it."
+  - "Your code builds or inherits from the generated resource class and you cannot make it static: ask a developer to refactor first, or keep the old designer file."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI tool in a place where it can read and edit your project files. This job needs file access and a way to run a build.
+  - Paste the skill, then give it the path to your .csproj or its folder.
+  - If a file sets a custom namespace, pick one of the two options your AI offers before it starts.
+  - Let it edit the project, delete the designer files and build.
+  - Read the list of changes and the build result. Check that no WinForms files or non-string resources were touched.
+  - Run your own test suite to confirm the text still loads.
+output_sample:
+  input:
+    - The path to your project file (.csproj) or the folder that holds it
+    - Your .resx files and the designer files next to them
+    - Your choice on custom namespaces, if any file sets one
+  prerequisites:
+    - An AI that can read and edit your project files
+    - A way to build the project, such as the .NET SDK
+    - Access to your NuGet package feed
+  output:
+    - name: Package reference
+      contains: The Microsoft.CodeAnalysis.ResxSourceGenerator reference added to your project, using your repo's usual way of setting versions.
+    - name: Deleted designer files
+      contains: The generated .Designer.cs files removed after checking each one is a resource accessor and holds only strings.
+    - name: Updated project items
+      contains: EmbeddedResource items cleaned up, with Public, ClassName or GenerateSource set where needed.
+    - name: Code fixes
+      contains: Changes to code that used the old non-static class, so it works with the new static one.
+    - name: Build result
+      contains: Whether the migrated project builds, with any namespace or type name conflicts and how they were fixed.
+    - name: Validation results
+      contains: "Which resources were checked: string values, other languages, retained resources, and that every .resx is still embedded."
+when:
+  - Your project has .resx files with checked-in .Designer.cs files, and you want them generated at build time.
+  - Merge conflicts keep showing up in generated designer files.
+  - You are cleaning up a project and want fewer generated files in source control.
+  - You want to switch to the Microsoft.CodeAnalysis.ResxSourceGenerator package.
+you_give:
+  - The path to your project file (.csproj) or its folder
+  - Your .resx files and the designer files beside them
+  - Your target .NET SDK version (optional)
+  - Your choice on custom namespaces, if your files use them (optional)
+you_get:
+  - The package added to your project
+  - Old designer files deleted, once checked
+  - Project items cleaned up, with Public, ClassName or GenerateSource set where needed
+  - Code fixed where it used the old class
+  - A build result and a check of the resources

@@ -1,6 +1,6 @@
 new_slug: fix-a-static-ad-then-clear-it-to-run
 name: Fix a static ad's pitch and clear it to run
-summary: Give it a static ad and its copy. Get a scored critique, a rewrite that fits the buyer and a ship call.
+summary: Check a static ad before launch. Give it your image and copy. You get a score, two rewrites, a pitch fit check and a ship or stop call.
 job: check-ads
 thinking: medium
 thinking_why: Each step reviews one short ad against clear checks. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - You have an image ad ready and want it checked before launch.
   - An image ad is getting clicks but few sales and you suspect the pitch.
   - You have several drafts and need to pick one to fix.
+not_for:
+  - "You only have copy and no finished image: write the picture first, then come back. For a quick single critique, run the Single image ad planner on its own."
+  - "You want to check a Meta ad against policy rules only: use the Meta ad policy checker."
+  - "You want a final stop-ship check and nothing else: use the Pre-launch ad checker."
 you_give:
   - Your static ad image
   - Its copy (headline, primary text and call to action)
@@ -29,6 +33,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach the final image, not a sketch, and paste the exact copy.
   - Give only facts you can prove. The rewrites never add numbers you did not supply.
+output_sample:
+  input:
+    - Your finished static ad image
+    - "Its copy: headline, primary text and call to action"
+    - The page the ad sends people to (optional)
+    - Your product facts or brand brain (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project with the handoff pack uploaded
+  output:
+    - name: outputs/step-01-static-ad-critic.md
+      contains: The side chosen, eye path, picture and headline pair test, phone view, a score out of 100 and two rewrites.
+    - name: outputs/step-02-ad-awareness-stage-checker.md
+      contains: The awareness stage of the hook, picture and copy, any mismatches, a score and a rewrite for each mismatch.
+    - name: outputs/step-03-five-part-ad-checker.md
+      contains: A pass or fail on attention, gain, proof, case and ask, with fixes ranked from the earliest failing part.
+    - name: outputs/step-04-pre-launch-ad-checker.md
+      contains: The stop-ship check on claims, brand details and sizes, with each fix, a verdict and a score out of 100.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Critique the ad
     text: Picks a side, traces the eye path, swaps the picture or headline to test the pair, checks the phone view, scores it and writes two rewrites.

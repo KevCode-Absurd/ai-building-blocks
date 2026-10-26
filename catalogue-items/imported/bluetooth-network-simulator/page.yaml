@@ -2,35 +2,108 @@ thinking: medium
 thinking_why: Network setups vary by topology.
 new_slug: bluetooth-network-simulator
 name: Bluetooth network simulator
-summary: Describe your devices and links. Get a system-level Bluetooth network
-  run with results.
+summary: Simulate a Bluetooth network in MATLAB and get throughput, delay and packet loss for your devices and links before you build hardware.
 job: build-software
 headline: Bluetooth network simulator
-subhead: Describe your Bluetooth devices and how they link, and get a network
-  simulation with results you can read. It handles one link, a star of devices
-  or a mix of Bluetooth types.
+subhead: Describe your Bluetooth devices, how they link and how much data they send. It writes a MATLAB script that simulates the network and reports throughput, delay and packet loss. It handles one link, a star of devices, LE Audio, classic piconets and mixed setups.
 explain: |
-  Describe your Bluetooth devices and how they link, and get a network simulation with results you can read. It handles one link, a star of devices or a mix of Bluetooth types.
+  Before you build or buy Bluetooth hardware, you can test how a network of devices behaves. This skill writes the MATLAB simulation for you from a plain description of your devices, links and traffic. Then it runs it and reads out the key numbers.
 
-  It covers LE data links, LE Audio streams for speakers and hearing aids, and connection setup with advertising and scanning. It also covers classic piconets with voice links, and LE and classic devices sharing the air with adaptive hopping. Every run follows one flow. Start the simulator, set traffic and movement, add statistics, add the nodes, run, then read the key numbers. It needs MATLAB with the Bluetooth Toolbox.
+  It first picks the right Bluetooth type for your case. That can be a Low Energy data link, LE Audio streams for speakers or hearing aids, connection setup with advertising and scanning, classic earbuds with voice links, or Low Energy and classic devices sharing the air. It then follows one fixed order: start the simulator, set traffic and movement, add statistics, add the devices, run, then read the results. It also avoids the usual mistakes, such as using the wrong device type or reading delay from the wrong layer.
+
+  You need MATLAB R2026a or later with the Bluetooth Toolbox. MATLAB and its toolboxes are paid products from MathWorks, so check your licence first.
 when:
-  - You want to know how many devices a Bluetooth link can carry.
+  - You want to know how many devices one Bluetooth link can carry.
   - You are testing LE Audio for stereo earbuds or hearing aids.
   - You need connection timing for advertising and scanning.
-  - LE and classic devices share space and you want to see the effect.
+  - Low Energy and classic devices share space and you want to see the effect on each.
+not_for:
+  - "You need radio-level work such as waveforms, receiver tests or bit error rate: use a physical-layer tool, not this network simulator."
+  - "Your network is Wi-Fi, 5G or another wireless type: use the Wireless network simulator."
+  - "You only need to read or fix MATLAB code you already have: use the MATLAB code reviewer."
+  - "You do not have MATLAB with the Bluetooth Toolbox: this skill cannot run without them."
 you_give:
-  - The devices and how they connect
-  - Traffic type and data rates
-  - Movement or distance between nodes (optional)
+  - The devices and how they connect, such as one central and three peripherals
+  - The Bluetooth type, such as Low Energy, LE Audio or classic
+  - The traffic, such as data rate and packet size
+  - Distances or movement between devices (optional)
   - How long to run the simulation
 you_get:
-  - A runnable simulation script
-  - Throughput, delay and loss numbers
+  - A MATLAB script you can run again
+  - Throughput, delay and packet loss for each link
   - Connection and link statistics
-  - Plots of how the network behaves
+  - A plain summary of what the numbers say
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Bluetooth Toolbox.
+  - Check that you have MATLAB R2026a or later with the Bluetooth Toolbox. Both are paid MathWorks products.
+  - Open an AI that can run MATLAB code, or one that writes the script for you to run yourself. Paste this skill.
+  - Describe your devices, links and traffic. Give the data rate in kilobits per second and say how long to run.
+  - Read the setup it proposes before it runs. Check the device types, the number of links and the traffic.
+  - Run the script. Check throughput, delay and packet loss against what you expected.
+  - Change one thing at a time, such as the number of devices or the data rate, and run again to compare.
+how_it_works:
+  - title: Pick the Bluetooth type
+    text: It matches your case to one of five setups, from a simple Low Energy link to Low Energy and classic sharing the air.
+  - title: Start the simulator
+    text: It creates the wireless network simulator, then sets the traffic and any movement.
+  - title: Add statistics
+    text: It switches on the counters it needs to report throughput, delay and loss.
+  - title: Create devices and links
+    text: It makes the central and peripheral devices and sets each connection, with a unique address for each Low Energy link.
+  - title: Run the simulation
+    text: It runs for the time you set. Settings cannot change once the run starts.
+  - title: Read the key numbers
+    text: It reads throughput, delay and loss from the right layer for your Bluetooth type and reports them.
+output_shape: |
+  Setup
+    Bluetooth type: <type>   Devices: <count and roles>
+    Traffic: <data rate, packet size>   Run time: <seconds>
+  Script
+    <MATLAB code that builds, runs and reads the simulation>
+  Results
+    <link>: throughput <value>, delay <value>, loss <value>
+  Reading the numbers
+    <what the results mean for your case>
+  Next change to try
+    <one setting to change and compare>
+output_sample:
+  input:
+    - Your devices and how they connect
+    - The Bluetooth type you want to test
+    - Traffic type and data rate
+    - How long to run the simulation
+    - Distances or movement between devices (optional)
+  prerequisites:
+    - MATLAB R2026a or later with the Bluetooth Toolbox, which are paid MathWorks products
+    - An AI that can run MATLAB code, or a person who will run the script
+  output:
+    - name: Simulation script
+      contains: MATLAB code that sets up the simulator, devices, connections and traffic, runs it and reads the results.
+    - name: Throughput
+      contains: Data delivered per link, read from the link layer for Low Energy and the baseband layer for classic.
+    - name: Delay
+      contains: How long data takes to arrive, read from the application layer for Low Energy links.
+    - name: Packet loss
+      contains: The share of packets that did not arrive, for each link.
+    - name: Connection statistics
+      contains: Counts and timing for connections and links, such as setup time with advertising and scanning.
+    - name: Plain summary
+      contains: What the numbers mean for your case and which setting to change next.
+works_best_with:
+  tools:
+    - name: MATLAB with the Bluetooth Toolbox
+      why: The simulation only runs there. It is a paid MathWorks product.
+    - name: Claude Code or another AI that can run MATLAB
+      why: It can write, run and fix the script without you copying code across.
+  inputs:
+    - A target for each link, such as a minimum data rate or a maximum delay
+    - The number of devices you expect at the busiest time
+    - Whether other radios share the space
+terms:
+  - term: Central and peripheral
+    meaning: The central starts and manages a link. The peripheral is the device it connects to.
+  - term: LE Audio
+    meaning: The newer Bluetooth Low Energy way to stream sound to speakers and hearing aids.
+  - term: Piconet
+    meaning: A small classic Bluetooth network, one central with up to seven peripherals.
+  - term: Throughput
+    meaning: How much data gets through per second.

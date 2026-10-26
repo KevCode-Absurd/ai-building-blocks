@@ -11,6 +11,10 @@ inputs:
     required: true
   - type: copy_draft
     required: false
+  - type: plan
+    required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: audit_report
     required: true

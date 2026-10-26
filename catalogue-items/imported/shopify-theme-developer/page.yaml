@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows theme structure, with design choices on top.
 new_slug: shopify-theme-developer
 name: Shopify theme developer
-summary: Say how your store should look. Get a built or edited theme with
-  sections, templates and speed fixes.
+summary: "Describe how your Shopify store should look. Get theme code: sections, templates and settings you can preview, edit in the theme editor and push live."
 job: build-websites
 headline: Shopify theme developer
-subhead: A built or edited Shopify theme that looks the way you described, with
-  sections, templates and speed fixes done. You get code you can preview and
-  push to the store.
+subhead: A built or edited Shopify theme that looks the way you described, with sections, templates and speed fixes done. You get code you can preview and push to the store.
 explain: |
   A built or edited Shopify theme that looks the way you described, with sections, templates and speed fixes done. You get code you can preview and push to the store.
 
@@ -18,6 +15,10 @@ when:
   - You need to change a product page layout in an existing theme.
   - You want sections your team can rearrange without code.
   - Your store feels slow and you suspect the theme.
+not_for:
+  - "You need a Shopify app or checkout changes: hire a Shopify developer, since this skill only covers theme files."
+  - "You only want to change text, colors or images in a theme you already have: use the theme editor in your Shopify admin."
+  - "You want a store built from scratch with products and payments set up: use Shopify's setup guide or a Shopify expert."
 you_give:
   - How the store should look
   - Which pages need work
@@ -30,8 +31,31 @@ you_get:
   - Speed fixes
   - Deploy steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use the Shopify CLI.
+  - Check that you have Node.js 18 or newer, the Shopify CLI and a Shopify Partner account.
+  - Open an AI that can run code, such as Claude, and paste in this skill.
+  - Describe how the store should look and name the pages you want built or changed. Add your current theme if you have one.
+  - Let your AI write the files, then run the local preview and look at each page.
+  - Fix anything that looks wrong, then push the theme as unpublished and test it in your store.
+  - Publish the theme when you are happy with it.
+output_sample:
+  input:
+    - A short brief on how your store should look
+    - The pages that need work, such as the product page
+    - An existing theme to edit (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - Node.js 18 or newer
+    - A Shopify Partner account
+  output:
+    - name: sections/*.liquid
+      contains: Section files that shop owners can add, move and edit in the theme editor, with settings and blocks.
+    - name: templates/*.json
+      contains: Page templates that list which sections show on each page, such as the product page.
+    - name: config/settings_schema.json
+      contains: Store-wide settings, such as colors, that you can change in the theme editor.
+    - name: snippets
+      contains: Small reusable pieces of code, such as a product card, that sections can share.
+    - name: Speed fixes
+      contains: Changes such as lazy loaded images and sized images, plus theme check warnings to fix.
+    - name: Install and test steps
+      contains: Commands to start the local preview, push the theme as unpublished and then publish it.

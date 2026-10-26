@@ -16,6 +16,27 @@ use_cases:
   - "Rewrite a page around the visitor's problem instead of your history"
   - "Find a position your bigger rivals ignore"
   - "Turn interviews, chats and demos into themes you can act on"
+not_for:
+  - "You want to find your market position and sell against rivals: use the April Dunford mind, whose work is built on positioning."
+  - "You want the words of the page written in a strong sales voice: use the Clayton Makepeace mind for long, proof-heavy sales copy."
+  - "You need revenue, paid-ad returns or exact test statistics worked out: use your analytics or a stats tool, not this mind."
+output_sample:
+  input:
+    - Your page text, such as the headline and first paragraph
+    - Who you want to win as buyers
+    - Any research you have, like chat logs, interviews or survey answers (optional)
+    - Your A/B test details, such as visitors and days run (optional)
+  output:
+    - name: Verdict
+      contains: A short, plain answer on whether the message or test result holds up, with the caveats.
+    - name: Weakest layer
+      contains: Which of clarity, relevance, value or difference loses the buyer first.
+    - name: Questions for buyers
+      contains: A short list to ask five buyers who fit your target, to see where the message loses them.
+    - name: Rewrite plan
+      contains: Changes to the page by layer, built around the visitor's problem instead of your history.
+    - name: Next test
+      contains: What to test or research next, and the data that would settle the question.
 seats:
   - {seat: "Conversion research", asks: "What do the people we want to convince actually think when they see this, and how do we know?"}
   - {seat: "Message tester", asks: "Is it clear, is it for me, do I want it, and how is it different? Where does it lose them?"}

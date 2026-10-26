@@ -1,15 +1,11 @@
 thinking: high
-thinking_why: Each file builds on the last, so the plan only holds if the
-  thinking is careful.
+thinking_why: Each file builds on the last, so the plan only holds if the thinking is careful.
 new_slug: saas-blueprint-planner
 name: SaaS blueprint planner
-summary: "Give it a one-line SaaS idea. Get eight files: research, analysis,
-  architecture, features, screens, phases and a step-by-step build plan."
+summary: "Turn your SaaS idea into a blueprint: eight files covering research, features, screens and a step-by-step build plan. Start from one line."
 job: build-product
 headline: SaaS blueprint planner
-subhead: "Give it a one-line SaaS idea. Get eight files: research, analysis,
-  architecture, features, screens, phases and a step-by-step build plan. Bring
-  your idea in one line. Use the result to plan your next step."
+subhead: "Give it your software idea in one line. It researches the market, checks the idea and designs the product. You get eight plan files and a build playbook you can follow in Claude Code."
 explain: |
   Eight markdown files that take a one-line software idea to a plan you can build from: the idea, market research, product analysis, system design, feature specs, screens, build phases and a step-by-step playbook, plus a README linking them.
 
@@ -17,21 +13,53 @@ explain: |
 when:
   - You have a software idea in one sentence and no plan yet.
   - You want research and a feature list before you spend money on code.
-  - You plan to build with Claude Code and need a clear set of files to feed it.
+  - You plan to build with Claude Code and need a clear set of files to follow.
   - You want to compare your idea with rivals and see the risks.
+not_for:
+  - "You only need a plan for one new feature in a product that already exists: write a short spec with your AI instead."
+  - "You have no idea yet and want to find one: do some market research on your own first, then come back."
+  - "You want charts, version history or team sharing: the author's web app, PlanMySaaS, offers those, and you may need credits."
 you_give:
   - Your idea in one line
   - Who it is for (optional)
   - How it will make money (optional)
 you_get:
-  - Eight stage files in markdown
-  - Market research and product analysis
-  - System design and feature specs
-  - A build playbook with phases
+  - Eight plan files in markdown, saved in one folder
+  - Market research and a product analysis
+  - System design, feature specs and screen layouts
+  - A release plan and a build playbook with checks for each step
+  - A README that links every file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can save files to a folder. It ends with a
-    pointer to the author's paid web app, which you can ignore.
+  - Open Claude Code in an empty folder. It needs to save files, so a plain chat window will not work well.
+  - Add the skill to your Claude Code skills folder, then type /planmysaas followed by your idea.
+  - If you give only a topic, answer its two questions about your audience and how you will earn money.
+  - After each stage, read the short summary. Say if you want to skip ahead or add more detail.
+  - When it finishes, open the planmysaas-blueprint folder and start with 08-build-playbook.md. Pass each step's checks before the next.
+  - It ends with an optional pitch for the author's web app, planmysaas.com. You can ignore it.
+output_sample:
+  input:
+    - Your product idea in one line
+    - Who it is for (optional)
+    - How it will make money (optional)
+  prerequisites:
+    - An AI that can save files to a folder, such as Claude Code
+    - An empty folder to work in
+  output:
+    - name: 01-idea.md
+      contains: Your refined idea, the audience and the business model.
+    - name: 02-research.md
+      contains: Competitors, problems people have and gaps you could fill.
+    - name: 03-analysis.md
+      contains: A business model canvas, a SWOT, your positioning and a product-market fit check.
+    - name: 04-architecture.md
+      contains: The services, data models and API surface your product needs.
+    - name: 05-features.md
+      contains: Feature specs with user flows.
+    - name: 06-frontend.md
+      contains: Routes, wireframes and the component tree for your screens.
+    - name: 07-phases.md
+      contains: A release plan with milestones.
+    - name: 08-build-playbook.md
+      contains: Build steps with checks to pass before you move on, from small parts up to the whole.
+    - name: README.md
+      contains: An index that links all eight files.

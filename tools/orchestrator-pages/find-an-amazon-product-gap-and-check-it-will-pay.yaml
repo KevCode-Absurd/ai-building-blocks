@@ -1,63 +1,93 @@
 new_slug: find-an-amazon-product-gap-and-check-it-will-pay
 name: Find an Amazon product gap and check it will pay
-summary: Give it a category. Get product ideas page 1 misses, a score out of 100 and a go or no-go.
+headline: Find an Amazon product gap and check it will pay
+summary: Find Amazon product ideas that page 1 misses, then score one out of 100 before you buy stock. You get ideas, a score and a go, test first or no-go.
 job: sell-on-amazon
 thinking: high
 thinking_why: The second step does margin and cash sums that decide a stock order. Give it your strongest model.
-headline: Find an Amazon product worth stocking, before you pay for stock
-subhead: Give it a hobby, problem or category. It finds phrases buyers search where page 1 has nothing made for them, then scores the idea you pick out of 100 on margin, competition and cash, and ends with a go, test first or no-go.
+subhead: Give it a hobby, problem or Amazon category, and how much cash you have. It finds phrases buyers search where page 1 has nothing made for them. Then you pick one idea, bring a supplier quote, and it scores that idea out of 100 and calls it go, test first or no-go.
 explain: |
-  Most first Amazon products fail for one of two reasons. The idea was crowded, so ads and reviews ate the margin. Or the idea looked good until the sums were done on landed cost, fees and the cash needed for the first order. Both are cheap to find out before you buy stock and expensive to find out after.
+  Most first Amazon products fail for one of two reasons. The idea was crowded, so ads and reviews ate the margin. Or the idea looked good until someone did the sums on landed cost, fees and the cash needed for a first order. Both are cheap to find out before you buy stock and costly to find out after. This Amazon product research workflow checks both, in order.
 
-  The first step looks for gaps: phrases real buyers search where page 1 has no product built for them. It drops crowded niches and picks three to check. Then it pauses and asks you to choose one and get a supplier quote with cost, size, weight and your selling price. The second step runs five hard stops and ten scored tests on that product, names the weakest test, sizes the first order against your cash and gives a go, test first or no-go. Search volumes are tool estimates, so the second step treats them as clues, not promises.
+  Step 1 looks for gaps: phrases real buyers search where page 1 has no product built for them. It drops crowded niches, ranks five to ten ideas and names three worth a full check. Then it stops. You pick one idea and get a supplier quote with unit cost, size, weight and your selling price. Step 2 runs five hard stops, then ten scored tests, names the weakest test, sizes the first order to your cash and gives a go, test first or no-go.
+
+  Search numbers are tool estimates, so the workflow treats them as clues, not promises. A gap shows that people search. It does not show that they will buy. The scoring is for private label products you make or brand, not for reselling other brands.
 when:
   - You want to sell on Amazon but only have an interest or a category, and need a product to start from.
-  - You have a supplier quote in hand and want to know whether the margin and the competition still make sense.
+  - You have a supplier quote in hand and want to know if the margin and the competition still make sense.
   - You are about to pay for a first order and want a second opinion on whether your cash can carry it.
+  - A product idea looks good on page 1, but you have not worked out fees, shipping and ad cost.
+not_for:
+  - You already have a product and want fees and profit per unit. Use the Amazon seller profit calculator.
+  - You resell other brands through wholesale or arbitrage. The scoring covers private label only.
+  - You sell a service, an app or something off Amazon. Use the Pick a market worth selling to and its price workflow.
+  - You have a go and want to launch. Use the Launch an Amazon product with sales from day one workflow.
 you_give:
   - A hobby, problem or Amazon category, and whether you will make the product or only brand it
   - How much cash you can put into a first order
-  - A keyword tool export with monthly searches (optional)
-  - A paste of what page 1 shows for your ideas, such as prices, ratings and review counts (optional)
+  - A keyword tool export with monthly searches, such as one from Helium 10, which has a free tier with capped lookups (optional)
+  - What page 1 shows for your ideas, such as prices, ratings and review counts, pasted in (optional)
   - After the pause, a supplier quote with unit cost, size, weight and your selling price
 you_get:
   - Five to ten gap ideas ranked, each with what page 1 shows now and how yours would be better
-  - The three ideas worth a full check, and the ones dropped with reasons
+  - The three ideas worth a full check, and the ones dropped, each with a reason
   - A score out of 100 for the idea you pick, built from ten tests, with the weakest test named
-  - A go, test first or no-go call, a first order size matched to your cash and the cheapest next test
+  - A go, test first or no-go call, the cheapest next test and a first order sized to your cash
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Tell it what you can make or brand and how much cash you have. Add a keyword export if you have one.
-  - When it pauses, pick one idea from the shortlist and get a supplier quote. Write down cost, size, weight and the price you would charge.
-  - Give it the quote. Read the weakest test before you read the verdict.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to your AI, such as Claude, and say "Follow HANDOFF.md". Use one that can read files.
+  - Tell it what you can make or brand and how much cash you have. Add a keyword export and page 1 notes if you have them.
+  - When it pauses, pick one idea from the shortlist. Check the phrase on Amazon yourself, then get a supplier quote and write down cost, size, weight and your price.
+  - Give it the quote. Read the weakest test before the verdict, and check current fees in Seller Central before you order.
 how_it_works:
   - title: Find the search gaps
-    text: Notes what you can make and what cash you have, reads your keyword and page 1 data, drops crowded niches and ranks the gaps. It names three to check and lists what to verify by hand on Amazon.
+    text: "Notes what you can make and what cash you have, reads your keyword and page 1 data, drops crowded niches and ranks the gaps. Names three to check and lists what to verify by hand. Hands step 2 the shortlist and the page 1 evidence."
   - title: Pick one and get a quote
-    text: A pause. You choose the best idea from the shortlist and get a supplier quote with its cost, size, weight and your selling price.
+    text: "A pause. You choose one idea from the shortlist and get a supplier quote with its cost, size, weight and your selling price."
   - title: Score the idea
-    text: Applies five hard stops that end an idea, then scores ten tests, including price band, margin, page 1 weakness, brand giants and shipping. It sizes the first order to your cash and gives a go, test first or no-go.
+    text: "Applies five hard stops that end an idea, then scores ten tests, including price band, margin, page 1 weakness, brand giants and shipping. It sizes the first order to your cash and gives a go, test first or no-go."
 output_shape: |-
   STEP 1: PRODUCT GAPS
-    Ranked ideas (phrase, searches, what page 1 shows, the gap, how you'd be better) | top 3 to check | dropped ideas | what to verify by hand
+    Ranked ideas (phrase, searches as estimate, what page 1 shows, the gap, how you would be better) | top 3 to check | dropped ideas and why | what to verify by hand
 
   PAUSE: pick one idea and get a supplier quote (cost, size, weight, price)
 
   STEP 2: VIABILITY SCORE
-    Verdict and score out of 100 | weakest test | hard stops | ten test scores with the sum | first order sized to cash | cheapest next test
+    Verdict and score out of 100 | weakest test | hard stops | ten test scores with the sum | repeated complaints | cheapest next test | first order sized to cash
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+output_sample:
+  input:
+    - A hobby, problem or Amazon category
+    - Whether you will make or only brand the product, and your cash for a first order
+    - A keyword tool export and page 1 notes (optional)
+    - After the pause, your supplier quote with cost, size, weight and price
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - A keyword tool such as Helium 10 for search numbers (optional, free tier is capped)
+  output:
+    - name: Gap ideas
+      contains: Five to ten searched phrases that page 1 serves badly, ranked, with the one change that would beat page 1.
+    - name: Top 3 and dropped ideas
+      contains: Which ideas deserve a full check, and each dropped idea with its reason.
+    - name: Verify by hand
+      contains: Phrases to type into Amazon yourself, and what to look for on page 1.
+    - name: Viability score
+      contains: A score out of 100 from ten tests, with the weakest test and any hard stop.
+    - name: Verdict and next test
+      contains: Go, test first or no-go, a first order sized to your cash and the cheapest next test.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 tweaks:
   - what: Your cash and what you can make
     how: This changes which gaps rank first. Low cash favours small, light products. A skill you already have favours ideas you can make or brand with a story.
   - what: A keyword tool export
-    how: Without one, the search numbers are guesses and are marked MISSING. Free tiers cap lookups, so the first step runs your best phrases first.
+    how: Without one, the search numbers are marked MISSING and the ideas come from method. Free tiers cap lookups, so the first step runs your best phrases first.
   - what: A real supplier quote
     how: The margin test and the landed cost check use your actual cost, size and weight. A rough quote gives a rough score.
   - what: Page 1 data for your idea
-    how: Prices, ratings and complaints from the top results feed the weak-page-1 and brand-giant tests. Paste them in rather than describing them.
+    how: Prices, ratings and complaints from the top results feed the weak page 1 and brand giant tests. Paste them in rather than describing them.
 judge:
   - Each gap names a phrase buyers type and says what page 1 lacks for it.
   - Dropped ideas come with a reason, such as crowded, seasonal or restricted.
@@ -72,4 +102,25 @@ improve:
   - Add your price floor, margin floor and cash limit to your brand file, so the hard stops use your rules.
   - Edit the scoring weights in the scorer skill if your category needs different ones, such as a higher floor on margin.
   - Keep a list of ideas you dropped and why, and feed it in next time so the same dead ends are skipped.
-  - Pair it with a listing or launch plan once you get a go.
+  - Run the Launch an Amazon product with sales from day one workflow once you get a go.
+works_best_with:
+  tools:
+    - name: Helium 10
+      why: A keyword and product database with a title-competition filter and reverse ASIN lookup. It has a free tier with capped lookups, so check current limits. A paid plan is optional.
+    - name: Google Trends
+      why: Free. Shows whether interest in a topic is rising before you check the same phrase on Amazon.
+    - name: Seller Central fee calculator
+      why: Amazon's own tool shows current referral and fulfilment fees for your size and weight.
+  inputs:
+    - Your cash limit and the most you can afford to lose on a first order
+    - A supplier quote with landed cost, size and weight
+    - A paste of page 1 for your best phrase
+terms:
+  - term: Page 1
+    meaning: The first page of Amazon results for a search phrase.
+  - term: Private label
+    meaning: A product made by a factory and sold under your own brand.
+  - term: Landed cost
+    meaning: What one unit costs you once product, shipping, duties and taxes are paid.
+  - term: Hard stop
+    meaning: A problem that ends an idea whatever its score, such as a restricted category.

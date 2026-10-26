@@ -2,34 +2,107 @@ thinking: high
 thinking_why: Price, demand and no-shows interact.
 new_slug: hotel-room-pricing-planner
 name: Hotel room pricing planner
-summary: Give it your bookings and rates. Get room prices, overbooking limits
-  and a channel mix that fill rooms at the best rate.
+summary: Set hotel room rates, overbooking limits and a channel mix from your own bookings, so you fill more rooms at better prices.
 job: set-prices
 headline: Hotel room pricing planner
-subhead: Room prices and booking limits that fill more rooms at better rates.
-  Share your bookings, rates and sales channels and get a plan for what to
-  charge, how many rooms to oversell and where to sell them.
+subhead: "Give it your past bookings, current room rates and sales channels. It sets a rate for each date and room type, a safe overbooking limit, and a split between direct bookings, travel sites and corporate deals. You get a short report you can act on this week."
 explain: |
-  Room prices and booking limits that fill more rooms at better rates. Share your bookings, rates and sales channels and get a plan for what to charge, how many rooms to oversell and where to sell them.
+  A hotel room pricing planner sets what to charge for each room type and night. Many hotels price by gut feel or copy the hotel next door. This skill works from your own occupancy, rates and booking pace instead.
 
-  It reads your key numbers first: occupancy, average daily rate and revenue per available room. Then it models how demand reacts to price, so you can see where a higher or lower rate earns more. It sets overbooking limits by weighing the cost of a walked guest against an empty room. It also compares your direct bookings, travel sites and corporate deals, and suggests how to split room supply between them. Some steps use Python code.
+  It starts with three numbers: occupancy, average daily rate and revenue per available room. Then it tests how demand moves when the rate goes up or down, so you see where a higher or lower price earns more. For overbooking, it weighs the cost of a guest you must walk against the cost of an empty room. It also compares what each sales channel really pays after fees.
+
+  It does not know your market. Every figure in its report comes from what you give it, and a missing number is marked MISSING instead of guessed.
 when:
   - Your rooms sell out on some nights and sit empty on others.
-  - You want to know how many extra bookings you can safely take.
-  - Booking sites take a large share of sales and you want a better mix.
-  - You are planning rates for a busy season or a big event.
+  - You want to know how many extra bookings you can take without walking guests.
+  - Travel sites like Booking.com or Expedia take a big share of sales and you want a better mix.
+  - A busy season or a big local event is coming and you need rates for it.
+not_for:
+  - "You run tours or package trips, not hotel rooms: this plans room rates and room sales only."
+  - "You need to buy linens, food or supplies for the hotel: use the Hotel and restaurant buying planner."
+  - "You want a sales forecast for any business, not a hotel: use the Demand forecast planner."
+  - "You have no booking history yet, for example before opening: it can only give rough guesses, so treat its numbers as a start."
 you_give:
-  - Past bookings and occupancy
-  - Current room rates by type
-  - Sales channels and their fees
-  - Seasonal patterns and local events (optional)
+  - Past bookings and occupancy by date, from your booking system or a spreadsheet
+  - Your current rate for each room type
+  - Your sales channels, with the fee each one takes
+  - Your no-show and late-cancellation rates
+  - Local events and busy seasons (optional)
 you_get:
   - A rate plan by date and room type
-  - Overbooking limits
-  - A channel mix recommendation
-  - Revenue forecasts under different prices
+  - An overbooking limit for each room type
+  - A channel mix with net rate after fees
+  - Revenue under two or three different price choices
+  - A list of the numbers it was missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed to get the plan.
+  - Paste the skill text into the chat, or open the skill if you added it to your AI.
+  - Paste your bookings and rates as plain text or a spreadsheet. Name each channel and its fee.
+  - If it asks for a number you do not have, say so. It will mark the gap instead of making up a figure.
+  - Check the occupancy, average rate and revenue per room it reports first. If they do not match your own books, fix the input before you trust the plan.
+  - Change rates on one room type or one week first. Check bookings after a week before you change the rest.
+how_it_works:
+  - title: Ask what is missing
+    text: It checks your room types, past performance, channels and goals, and asks once for anything absent.
+  - title: Read your key numbers
+    text: It works out occupancy, average daily rate and revenue per available room from your bookings.
+  - title: Test price against demand
+    text: It models how bookings change as rates move, then picks the rate that earns the most for each room type.
+  - title: Set overbooking limits
+    text: It combines your no-show and cancellation rates with the cost of walking a guest to find a safe number of extra bookings.
+  - title: Compare channels
+    text: It subtracts each channel's fee from its rate and suggests how many rooms to give each one.
+  - title: Write the report
+    text: It returns tables for rates, limits and channels, with the assumptions and gaps listed at the end.
+output_shape: |
+  Summary: <how you are doing now and what to do first>
+  Performance: <occupancy>, <average daily rate>, <revenue per available room>
+  Rate plan: <date> | <room type> | <recommended rate> | <hold, raise or promote>
+  Overbooking: <room type> | <extra bookings to accept>
+  Channel mix: <channel> | <fee> | <net rate> | <recommended share>
+  Price scenarios: <two or three choices with expected occupancy and revenue>
+  Actions: <3 to 5 next steps>
+  Assumptions and gaps: <every MISSING input and what it changes>
+output_sample:
+  input:
+    - Your past bookings and occupancy, by date
+    - Your current rate for each room type
+    - Your sales channels and the fee each one takes
+    - Your no-show and cancellation rates
+    - Local events and busy seasons (optional)
+  prerequisites:
+    - Python only if you want to run the code in the skill. The plan itself needs no code.
+  output:
+    - name: Performance metrics
+      contains: Your occupancy, average daily rate and revenue per available room, compared with last year and your target.
+    - name: Rate plan
+      contains: A recommended rate for each date and room type, with hold, raise or promote.
+    - name: Overbooking limits
+      contains: How many extra bookings to accept for each room type, based on no-shows and the cost of walking a guest.
+    - name: Channel mix
+      contains: Each channel's fee and net rate, and how many rooms to give it.
+    - name: Price scenarios
+      contains: Expected occupancy and revenue for two or three price choices, with the assumption behind each.
+    - name: Assumptions and gaps
+      contains: Every input that was missing and every placeholder figure, so you know what to check.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can read pasted bookings and show the maths step by step.
+    - name: A spreadsheet tool
+      why: Google Sheets or Excel can hold your bookings so you paste clean rows.
+  inputs:
+    - A rate sample from the hotels next to you
+    - Your booking pace for the next 30 days
+    - Your group and corporate contracts
+terms:
+  - term: Average daily rate
+    meaning: Room revenue divided by rooms sold.
+  - term: Revenue per available room
+    meaning: Room revenue divided by all rooms you could have sold.
+  - term: Overbooking
+    meaning: Taking more bookings than rooms, because some guests cancel or do not show.
+  - term: Walking a guest
+    meaning: Sending a guest with a booking to another hotel because you have no room.
+  - term: Channel mix
+    meaning: How your bookings split between your own site, travel sites and corporate deals.

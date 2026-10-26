@@ -1,27 +1,59 @@
 new_slug: campaign-change-impact-mapper
 name: Campaign change impact mapper
-summary: Compare an approved fact change with your campaign assets. Get affected lines, missing coverage, repair order and release checks.
+summary: Map which campaign assets break when an approved price, offer or claim changes. Get a repair order and release limits from your own files.
 job: organise-work
 headline: Campaign change impact mapper
-subhead: Compare an approved fact change with your campaign assets. Get affected lines, missing coverage, repair order and release checks. Supply the records and asset versions to review.
+subhead: Give your AI an approved change, such as a new price or offer term, and your campaign assets. It finds every place the old fact shows up, including math, image text and follow-up emails. You get a repair order and a list of what it could not check.
 explain: |-
   Trace a specific approved product, offer or claim change through an existing campaign pack. This maps impact; it does not invent a new offer, rewrite the whole campaign or publish anything.
 
   Marketing fact-level dependency tracing and coordinated repair map across an existing asset manifest; not software compatibility analysis or a decision about whether to change the campaign.
 when:
-  - You need the stated review outcome from existing records.
-  - You want unknowns and proposed repairs separated from completed actions.
+  - Your price, offer terms or a product claim has just been approved to change.
+  - You must update ads, landing pages and emails and want to miss none.
+  - A teammate asks which assets a change touches before anything goes live.
+  - You need to keep old and new performance numbers from being mixed.
+not_for:
+  - "The change is not approved yet: get the decision from its owner first, then run this."
+  - "You need a legal review of your claims: ask a lawyer or your compliance lead."
+  - "You only want to reword copy: ask your AI to edit the text directly, with no impact map."
 you_give:
-  - document
-  - copy draft (optional)
+  - The old and new value of the approved change
+  - The date the change starts
+  - The products or markets it covers
+  - The person who approved it, and the record that shows it
+  - Your campaign assets with version IDs, as text or files
+  - Your past performance records (optional)
 you_get:
-  - An asset-by-asset map of direct and derived effects
-  - A repair order, owners and missing evidence
-  - The effective-time boundary for old and new campaign facts
+  - A list of each asset showing if it is affected, unaffected, unclear or not checked
+  - The exact place where each old fact appears, including derived values
+  - A repair order with the smallest edit, owner and check for each fix
+  - A date line that keeps old and new results apart
+  - A list of assets and approvals still missing
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open Claude, ChatGPT or Gemini and paste the skill.
+  - "Paste the approved change: old and new values, start date, scope, approver and source."
+  - Paste the text of each asset with its version ID. Add files only if your AI can read them.
+  - Read the impact map. Check any asset marked unclear or not checked yourself.
+  - Approve the repair order before anyone edits live assets. The skill does not publish anything.
+output_sample:
+  input:
+    - "The approved change: the old and new value, the effective date and the markets it covers"
+    - Who approved the change, and the source record
+    - "Your campaign assets with version IDs: ads, pages, emails, scripts and images"
+    - Your past performance records (optional)
+  prerequisites:
+    - Files or pasted text for each asset, not only file names
+    - An AI that can read files, if you want a saved report (optional)
+  output:
+    - name: CHANGE RECORD
+      contains: The approved before and after values, scope, effective time and source.
+    - name: ASSET IMPACT MAP
+      contains: Each asset and version, where the old fact appears, whether it is direct or derived, and its status.
+    - name: REPAIR ORDER
+      contains: The smallest edit for each asset, its owner, the check needed and what must happen first.
+    - name: RELEASE LIMITS
+      contains: Assets not seen, approvals still open and the date that splits old and new performance records.
 how_it_works:
   - title: Define the review
     text: Identify the approved before/after values, effective time, product or market scope, decision owner and source IDs. A proposed change is not approved merely because a draft file contains it. Keep unresolved versions separate.

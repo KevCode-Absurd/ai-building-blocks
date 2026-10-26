@@ -11,12 +11,16 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Compares the shipping amount charged to customers against the actual shipping cost recorded on orders, broken down by carrier and shipping method. Identifies where shipping is being subsidized (charged less than cost) or over-charged. Read-only — no mutations.
+Shows what customers were charged for shipping, and how much was given away in shipping discounts and free shipping, broken down by carrier and shipping method. When the user also supplies what each method costs them (from carrier invoices or a rate card), it compares the two and shows where shipping is subsidized (charged less than it cost) or over-charged. Read-only — no mutations.
+
+**Important:** Shopify's order data holds only what the customer was charged. It does not hold what you paid the carrier, unless your carrier app writes that cost back. This skill never guesses carrier cost. Without cost figures from the user, report charges and discounts only, and say so plainly at the top of the report.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders`
 - API scopes: `read_orders`
-- Actual shipping costs are only available if recorded via the Shopify Admin API or carrier-calculated shipping; manually entered orders may lack cost data.
+- Shopify returns only the last 60 days of orders unless your access also has `read_all_orders`. If `days_back` is more than 60 and you do not have it, say so before you start.
+- **Carrier cost (optional but needed for a subsidy figure):** ask once for what each carrier and method costs the user per parcel, from carrier invoices or a rate card, or the total invoiced per method for the window. If the user has none, run the charges and discounts report only and mark cost MISSING.
+- **No Shopify access?** Ask once for an orders export with the shipping method, shipping charged and shipping discount for each order, then run steps 2 and 3 on it.
 
 ## Parameters
 
@@ -24,6 +28,7 @@ Compares the shipping amount charged to customers against the actual shipping co
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | days_back | integer | no | 30 | Lookback window |
+| carrier_costs | table | no | — | What each carrier or method costs you per parcel, or the invoiced total per method for the window. Supplied by the user. Never estimated. |
 | format | string | no | human | Output format: `human` or `json` |
 
 ## Safety
@@ -36,9 +41,11 @@ Compares the shipping amount charged to customers against the actual shipping co
    **Inputs:** `query: "financial_status:paid created_at:>='<NOW - days_back days>'"`, `first: 250`, select `shippingLines { title, discountedPriceSet, originalPriceSet, carrierIdentifier }`, pagination cursor
    **Expected output:** Orders with shipping line details; paginate until `hasNextPage: false`
 
-2. For each shipping line: record carrier (from `title` or `carrierIdentifier`), charged amount (`discountedPriceSet`), and actual cost if available
+2. For each shipping line: record carrier (from `title` or `carrierIdentifier`), the price before discounts (`originalPriceSet`), the amount charged (`discountedPriceSet`), and the discount (original minus charged). Count a line with a charged amount of 0 as free shipping.
 
-3. Group by carrier/method; calculate total charged, total cost, net subsidy/overage
+3. Group by carrier and method. For each group, calculate orders, total charged, total discount given, free shipping orders and average charged per order.
+
+4. **Only if the user supplied `carrier_costs`:** for each group, work out total cost (cost per parcel times orders, or the invoiced total), then net = total charged minus total cost. A negative net is a subsidy. A positive net is an overcharge. If a method has no cost figure, leave its net blank and mark it MISSING. If you matched costs to methods by name, show the match so the user can check it.
 
 ## GraphQL Operations
 
@@ -119,8 +126,9 @@ SHIPPING COST ANALYSIS  (<days_back> days)
   Free shipping orders:       <n>
 
   By Carrier/Method:
-    "Standard Shipping"  Orders: <n>  Charged: $<n>  Avg: $<n>
-    "Express"            Orders: <n>  Charged: $<n>  Avg: $<n>
+    "Standard Shipping"  Orders: <n>  Charged: $<n>  Discounts: $<n>  Avg: $<n>  Cost: $<n or MISSING>  Net: $<n or MISSING>
+    "Express"            Orders: <n>  Charged: $<n>  Discounts: $<n>  Avg: $<n>  Cost: $<n or MISSING>  Net: $<n or MISSING>
+  Carrier cost: <supplied by you | MISSING, so no subsidy figure>
   Output: shipping_cost_<date>.csv
 ══════════════════════════════════════════════
 ```
@@ -142,7 +150,9 @@ For `format: json`, emit:
 
 ## Output Format
 CSV file `shipping_cost_<YYYY-MM-DD>.csv` with columns:
-`order_name`, `shipping_method`, `carrier`, `charged_amount`, `original_price`, `discount_applied`, `currency`
+`order_name`, `shipping_method`, `carrier`, `charged_amount`, `original_price`, `discount_applied`, `currency`. When the user supplied carrier costs, also add `carrier_cost` and `net` for each line, or leave them blank.
+
+Report these five parts in order: (1) settings and what was missing, (2) totals, (3) table by carrier and method, (4) methods that lose money, or "cannot tell, carrier cost missing", (5) one next step.
 
 ## Error Handling
 | Error | Cause | Recovery |
@@ -152,7 +162,7 @@ CSV file `shipping_cost_<YYYY-MM-DD>.csv` with columns:
 | Carrier identifier missing | Custom or manual shipping methods | Use `title` as carrier name |
 
 ## Best Practices
-- Free shipping orders show $0 charged but the actual carrier cost is your subsidy — knowing this per carrier helps evaluate free shipping threshold decisions.
+- Free shipping orders show $0 charged. What you paid the carrier on them is your subsidy, but only if you bring the cost. Knowing this per carrier helps judge a free shipping threshold.
 - `originalPriceSet` vs `discountedPriceSet` difference represents shipping discounts applied to customers — useful for understanding total shipping subsidy cost.
-- Pair with `average-order-value-trends` to evaluate whether free shipping thresholds are driving the intended AOV lift.
-- For actual carrier cost reconciliation, cross-reference with carrier invoices — Shopify's API only stores what was charged to customers, not what was paid to carriers unless your carrier integration writes those costs back.
+- Pair with the Average order value tracker to see whether a free shipping threshold lifts order value.
+- Do not use this if you have no carrier invoices and want a true cost. Get the invoices first, or use the Carrier performance comparer to compare carriers on delivery time.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must simplify without losing the key features.
 new_slug: history-source-simplifier
 name: History source simplifier
-summary: Paste a primary source and the learners' age. Get a shorter, simpler
-  version that keeps what they need to analyse.
+summary: Simplify a primary source for your class. Paste it with learners' age and skills. You get a shorter version that still works as evidence.
 job: teach-and-train
 headline: History source simplifier
-subhead: A shorter, easier version of a primary source that still works as
-  evidence. Paste a document and say how old your learners are. You get a
-  version they can read, with the parts they need for analysis left in.
+subhead: A shorter, easier version of a primary source that still works as evidence. Paste a document and say how old your learners are. You get a version they can read, with the parts they need for analysis left in.
 explain: |
   A shorter, easier version of a primary source that still works as evidence. Paste a document and say how old your learners are. You get a version they can read, with the parts they need for analysis left in.
 
@@ -18,6 +15,10 @@ when:
   - You want to keep loaded words so learners can analyse them.
   - You have learners with English as an extra language and need glossing.
   - You need an honest, marked adaptation instead of a rewrite.
+not_for:
+  - "Learners must decode the original wording: give them the full text and add a word bank yourself, or ask a colleague to gloss the hard words."
+  - "You need a source built around one idea, not an adapted real document: write a new classroom text instead, and label it as written by you."
+  - "You need a full lesson, not just the source: plan the lesson first, then come back here for each source."
 you_give:
   - The original source text
   - Learners' age or reading level
@@ -30,7 +31,27 @@ you_get:
   - Notes on what was changed
   - A list of features kept for analysis
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste the full source. Add the author, date, publication and where it came from.
+  - Say how old your learners are and their reading level. Name the skills you want them to use.
+  - Add a target length, your question, or must-keep phrases if you have them.
+  - "Check the five sections: adapted source, word bank, notes, preserved features and value check."
+  - Read the cuts against the original. Fix any that remove a loaded word or a detail learners need to analyse.
+output_sample:
+  input:
+    - The full source text, with author, date, publication and where it came from
+    - Your learners' age and reading level
+    - The skills you want them to use, such as sourcing or close reading
+    - Target length (optional)
+    - The question the source will help answer (optional)
+  output:
+    - name: Adapted Source
+      contains: The shortened, simpler text with every cut marked in brackets and a note that it is adapted.
+    - name: Word Bank
+      contains: Hard words from the source with plain definitions, placed at the bottom.
+    - name: Adaptation Notes
+      contains: What was cut or changed, and why each change was made.
+    - name: Preserved Features
+      contains: The parts kept on purpose, such as source details, the writer's voice and loaded words.
+    - name: Analytical Value Check
+      contains: A check that learners can still use the adapted source for the skills you named.

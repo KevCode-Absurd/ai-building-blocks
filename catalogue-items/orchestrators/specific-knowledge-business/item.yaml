@@ -14,8 +14,8 @@ outputs:
 uses: [specific-knowledge-finder, hours-to-assets-planner, long-term-partner-screener]
 steps:
   - {uses: specific-knowledge-finder, note: "Your specific knowledge, with a way to test each"}
-  - {uses: hours-to-assets-planner, note: "Which parts earn only while you work, and a plan to build something you own. Reads the plan from the step before"}
-  - {uses: long-term-partner-screener, note: "A check on intelligence, energy and integrity, and whether it is a game worth repeating. Reads the plan from the step before"}
+  - {uses: hours-to-assets-planner, note: "Which parts earn only while you work, and a plan to build something you own. Takes your specific knowledge from step 1 as what you are known for, and hands it on as the product plan"}
+  - {uses: long-term-partner-screener, note: "A check on intelligence, energy and integrity, and whether it is a game worth repeating. Uses the plan from step 2 as the game you would play together. You add who the partner is and what you have seen them do"}
 origin: rebuilt
 version: 1.0.0
 minds: [naval-ravikant]

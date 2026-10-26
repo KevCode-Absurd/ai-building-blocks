@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scans, scores and prioritises.
 new_slug: tech-debt-tracker
 name: Tech debt tracker
-summary: Point it at your code. Get debt found, scored by severity and ordered
-  into a clean-up plan.
+summary: Find tech debt in your codebase, score each item by severity and get a clean-up plan in priority order. Track the trend from one scan to the next.
 job: build-software
 headline: Tech debt tracker
-subhead: Point it at your code. Get debt found, scored by severity and ordered
-  into a clean-up plan. Bring the path to your codebase. Use the result to plan
-  your next step.
+subhead: Point it at your code. Get debt found, scored by severity and ordered into a clean-up plan. Bring the path to your codebase. Use the result to plan your next step.
 explain: |
   A scan of your codebase that finds debt, scores each item by how serious it is, and orders them into a clean-up plan you can track over time. It gives you a number for something that usually stays a feeling.
 
@@ -19,6 +16,10 @@ when:
   - You must report engineering health to non-technical leaders.
   - You want to pick this quarter's clean-up from a scored list.
   - Your TODO comments are scattered and nobody tracks them.
+not_for:
+  - You have one small script. Read it and fix it by hand, a tech debt scan adds little.
+  - You want a check on every commit. Use a linter or your team's CI tool instead.
+  - Your AI cannot run Python or read your files. Ask a developer to run the scripts and share the results.
 you_give:
   - The path to your codebase
   - Python to run the scripts
@@ -30,8 +31,22 @@ you_get:
   - Summary counts by type
   - A trend dashboard over time
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Check that your AI can run Python and read your project files. If it cannot, run the scripts yourself or ask a developer to.
+  - Give your AI this skill and the path to your codebase. Ask it to scan the code and save the debt inventory.
+  - "Ask it to rank the items. You can pick a method: cost of delay, WSJF or RICE. Add your team size and sprint capacity if you know them."
+  - Read the top of the ranked list and the summary counts. Check that the first items make sense for your project.
+  - Save each scan with its date. After a clean-up sprint, scan again and ask for the dashboard to see if the counts dropped.
+output_sample:
+  input:
+    - The folder path to your codebase
+    - Your team size and sprint capacity (optional)
+    - Dated scan files from earlier scans, for trends (optional)
+  prerequisites:
+    - An AI that can run Python scripts and read your project files, or a developer who can run them for you
+  output:
+    - name: debt_inventory.json
+      contains: Every debt item found, with a summary count, file statistics and recommendations.
+    - name: debt_priorities.json
+      contains: The prioritised backlog, a sprint allocation and insights, ranked with the framework you pick.
+    - name: Debt dashboard
+      contains: Trend direction across dated scans and a summary written for leaders, as text, JSON or both.

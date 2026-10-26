@@ -2,17 +2,27 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-response-deadline-checker
 name: Gorgias response deadline checker
-summary: Share your response targets. Get late and at-risk Gorgias tickets, deadlines, and next actions.
+summary: Check your open Gorgias tickets against your reply targets. See which are late or at risk, how long is left, and what to do next.
 job: help-customers
 headline: Gorgias response deadline checker
 subhead: Connect Gorgias and share your reply and resolution targets. It compares ticket timestamps with those limits. You get late and at-risk tickets, time remaining, suggested actions, and a score out of 100 for meeting response targets.
 when:
-  - You use this tool for customer support and need help with this task.
+  - You want a weekly check of open Gorgias tickets against your reply targets.
+  - Your team feels behind and you need to see which tickets are late first.
+  - You are about to end a shift and want to catch tickets close to their limit.
+  - You want one score for how well the team meets its response targets.
+not_for:
+  - "You run live chat queues: check them in your chat tool's own reports, since this reads Gorgias tickets only."
+  - "You use a helpdesk other than Gorgias: paste the ticket times into your AI and ask it to compare them with your targets."
+  - "You need replies sent or tickets changed: ask a teammate or use Gorgias itself, since this only reads and reports."
 you_give:
   - Your reply and resolution time targets.
   - Gorgias ticket messages with timestamps and current status.
 you_get:
-  - Group late, at-risk, and on-track tickets with times, next steps, and response target scores.
+  - A list of tickets that are late, at risk or on track, each with its time elapsed.
+  - The time left on each at-risk ticket.
+  - A health score out of 100 for meeting your targets.
+  - Suggested next steps for late tickets and who to ping.
 how_it_works:
   - title: Set response targets
     text: Use your stated reply and resolution limits. Review any suggested defaults before relying on them.
@@ -25,8 +35,27 @@ works_best_with:
     - name: Gorgias
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias response deadline checker by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide your reply and resolution time targets.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Install the Composio CLI and link your Gorgias account. Your AI will ask you to run composio link gorgias if it is not linked. Check Composio for any cost.
+  - Add the downloaded folder to an AI that can read skill files and run commands.
+  - Ask your AI to run the SLA monitor skill.
+  - Give your reply and resolution targets. Skip this to use the defaults, which are set by priority from P0 to P3. Check they match your own rules.
+  - Read the late tickets first, then the at-risk ones. The skill only reads tickets. It never sends replies or changes anything.
+output_sample:
+  input:
+    - Your reply and resolution time targets (optional, defaults are used if you skip this)
+    - Your open and pending Gorgias tickets, read through a connected account
+  prerequisites:
+    - An AI that can read skill files and run commands
+    - The Composio CLI installed, with your Gorgias account linked
+    - Check Composio's site for any cost, as this page does not list one
+  output:
+    - name: Breached tickets
+      contains: A table of tickets past their target, with subject, customer, target, time elapsed and how far over.
+    - name: At risk tickets
+      contains: A table of tickets with over 75% of their target used, showing time left.
+    - name: On track tickets
+      contains: A table of tickets still within limits, with target, time elapsed and time remaining.
+    - name: SLA health score
+      contains: A score out of 100, the share of first replies and resolutions on time, and average response time.
+    - name: Recommendations
+      contains: Next steps for breached tickets and which agents to ping.

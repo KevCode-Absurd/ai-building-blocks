@@ -2,17 +2,27 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-ticket-tag-planner
 name: Gorgias ticket tag planner
-summary: Share a ticket or queue. Get suggested tags, confidence levels, and reasons before changes.
+summary: Plan Gorgias ticket tags for untagged tickets. Give it a ticket number or a batch. You get tags, confidence levels and reasons to review first.
 job: help-customers
 headline: Gorgias ticket tag planner
-subhead: Give it a Gorgias ticket number or a batch of untagged tickets. It reads your existing tags and each message. You get suggested tags with reasons and confidence levels, ready to review before applying them.
+subhead: Give it a Gorgias ticket number, or ask for a batch of untagged tickets. It reads your tag list and each message. You get suggested tags with reasons and confidence levels to review.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Your support queue has tickets with no tags.
+  - A ticket has only one tag and may need more.
+  - You want a second opinion on tags before a busy week.
+  - A new teammate needs to see how your tags are used.
+not_for:
+  - "You want to tag a ticket by pasting text outside Gorgias: ask your AI to suggest tags from the pasted text, then add them by hand."
+  - "Your tickets already have the right tags: leave them as they are, or fix the few wrong ones by hand in Gorgias."
+  - "You want to reply to customers: write the reply yourself or ask your AI to draft it, as this tool only suggests tags."
 you_give:
-  - A ticket number or a batch of untagged tickets.
-  - Access to the current tag list and messages in Gorgias.
+  - A ticket number, or the word batch for untagged tickets.
+  - Your Gorgias account, connected to your AI.
 you_get:
-  - Show the tag table and ask which changes you want to apply.
+  - A list of the tags you already use in Gorgias.
+  - Suggested tags for each ticket, with a reason.
+  - "A confidence level for each ticket: high, medium or low."
+  - A count of how many tickets need a manual look.
 how_it_works:
   - title: Read your tag list
     text: Read the tags already set up in Gorgias so suggestions use your own labels.
@@ -25,8 +35,25 @@ works_best_with:
     - name: Gorgias
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias ticket tag planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide a ticket number or a batch of untagged tickets.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run commands and read files. Install the Composio CLI first.
+  - Link your Gorgias account when asked. The command is composio link gorgias.
+  - Add the skill folder to your AI and ask for the auto-tag skill.
+  - Give it one ticket number, or say batch to check untagged tickets.
+  - Read the table. Check the medium and low confidence rows first.
+  - Say which tags to apply. The skill does not change anything until you confirm.
+output_sample:
+  input:
+    - A Gorgias ticket number, or the word batch for untagged tickets
+    - Your Gorgias account connected through the Composio CLI
+  prerequisites:
+    - An AI that can run commands and read skill files
+    - The Composio CLI installed, with your Gorgias account linked
+  output:
+    - name: Available Tags in System
+      contains: The full list of tags already set up in your Gorgias account.
+    - name: Tagging Recommendations
+      contains: A table with ticket ID, subject, suggested tags, confidence level and the reason for each pick.
+    - name: Summary
+      contains: Counts of tickets checked, and how many are high, medium or low confidence.
+    - name: Apply question
+      contains: A question asking which suggested tags you want applied. Nothing changes until you say yes.

@@ -1,6 +1,6 @@
 new_slug: lock-down-your-store-logins-and-staff-against-takeover
 name: Lock down your store logins and staff against takeover
-summary: Describe your team and apps. Get a security score, a fix list, a sign-in policy and a phishing rule sheet.
+summary: "Check your store security: give it your staff, apps and sign-in rules. Get a score out of 100, a fix list, a sign-in policy and a phishing sheet."
 job: protect-your-store
 thinking: medium
 thinking_why: Three skills run in a row, but each is a checklist. A mid-size model does it well. Use your strongest if you have a large team.
@@ -14,6 +14,10 @@ when:
   - You have staff, contractors or agencies with admin access and have never reviewed who still needs it.
   - A phishing email or a strange login alert made you worry about your store.
   - You are hiring or about to share access and want written rules before you do.
+not_for:
+  - "Your store has no staff or admin users yet: skip this and turn on two-step sign-in for your own account first."
+  - "You want a full security audit of your site code or servers: hire a security professional, since this only checks logins, staff access and apps."
+  - "You need to check your email setup: use the Email setup health checker instead."
 you_give:
   - Your platform, such as Shopify, WooCommerce or a custom store
   - Everyone with admin or staff access, their role and whether they are staff or a contractor
@@ -31,6 +35,24 @@ how_to_use:
   - Copy your staff list and installed apps from the admin pages. Do not paste passwords or codes.
   - When it pauses, turn on two-step sign-in for every admin, remove leavers and delete apps you do not use.
   - Share the policy with your team, move everyone to a password manager, then run the drill.
+output_sample:
+  input:
+    - Your store platform, such as Shopify or WooCommerce
+    - Everyone with admin or staff access, with their role and whether they are staff or a contractor
+    - Your installed apps and what each one can access
+    - How people sign in, your password rules and how forgotten passwords are handled
+    - Your key accounts and whether you use a password manager (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude with files or a Claude Project
+  output:
+    - name: Store security checkup
+      contains: A score out of 100 across eight checks, with fixes ranked for today, this month and this quarter.
+    - name: Sign-in check
+      contains: Ranked gaps in passwords, second steps and recovery, and a one-page sign-in policy.
+    - name: Phishing rules
+      contains: A one-page rule sheet for staff, who to tell, and a ten-case drill with answers.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Check your store security
     text: Splits what your platform covers from what you cover, scores eight basics, and ranks the fixes into today, this month and this quarter.

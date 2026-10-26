@@ -12,12 +12,12 @@ inputs:
 outputs:
   - {type: email_flow}
   - {type: audit_report}
-uses: [email-sequence-writer, email-draft-reviewer, email-mistake-fixer, email-send-readiness-scorer]
+uses: [email-sequence-writer, email-draft-reviewer, plain-english-editor, email-send-readiness-scorer]
 steps:
-  - {uses: email-sequence-writer, note: "Five emails with timing, each teaching one useful thing before any ask, in your voice, with the sale asked for only after the reader has had something from you."}
-  - {uses: email-draft-reviewer, note: "Each email reviewed against Claude Hopkins's tests: a specific claim, a reason why, proof, one clear action, and nothing clever that hides the offer."}
-  - {uses: email-mistake-fixer, note: "Each flagged line fixed: the vague subject, the claim without proof, the two asks in one email, the paragraph that says nothing."}
-  - {uses: email-send-readiness-scorer, note: "Each email scored for send readiness: links, names, length, spam triggers, the missing unsubscribe, with what to fix before it goes live. You switch it on."}
+  - {uses: email-sequence-writer, note: "Five emails with timing, each teaching one useful thing before any ask, in your voice, with the sale asked for only after the reader has had something from you. Hands step 2 the five emails to review."}
+  - {uses: email-draft-reviewer, note: "Each email reviewed against Claude Hopkins's tests: a specific claim, a reason why, proof, one clear action, and nothing clever that hides the offer. Reads step 1's emails and hands step 3 a list of flagged lines."}
+  - {uses: plain-english-editor, note: "Edits step 1's emails, using step 2's review as the list of flagged lines: the vague subject, the claim without proof, the two asks in one email, the paragraph that says nothing. Hands step 4 the fixed emails."}
+  - {uses: email-send-readiness-scorer, note: "Each email scored for send readiness: links, names, length, spam triggers, the missing unsubscribe, with what to fix before it goes live. You switch it on. Reads the fixed emails from step 3."}
 origin: own
 version: 1.0.0
 minds: [claude-hopkins]

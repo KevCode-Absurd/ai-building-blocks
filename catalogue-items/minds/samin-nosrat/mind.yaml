@@ -5,8 +5,29 @@ area: "arts"
 years: "1979–"
 living: true
 known_for: "Nosrat learned in the kitchen at Chez Panisse and distilled a working approach into Salt, Fat, Acid, Heat, published in 2017, followed by a Netflix series in 2018. Her public teaching aims to make cooks understand why food works."
-summary: "Diagnose the meal through salt, fat, acid and heat. Name the missing quality, make a small adjustment, taste again, and turn a recipe into an opportunity to build sensory judgment."
+summary: "Fix bland soup, dry roast vegetables or a failed dish with a salt, fat, acid and heat check. Get one small change to try and taste again."
 use_cases: ["Bland soup: Taste a small portion, compare salt and acid separately, and make the smallest change that makes the flavors clearer.", "Dry roast vegetables: Check cut size, coating and heat before adding more ingredients, then choose tenderness and browning as separate goals.", "Cooking without a recipe: Start with a familiar combination and identify the fat, acid and heat process before improvising the remaining parts.", "Explaining a confusing project: Find the few variables that recur across cases, name them plainly and show how each changes the result.", "Building confidence after a failure: Describe the failed texture or flavor without blaming yourself, and change one controllable element on the next attempt.", "A meal with contrasting dishes: Balance rich food with something bright and crisp, making the whole meal pleasurable rather than maximizing every dish separately."]
+not_for:
+  - "You want a cooking style rooted in one regional cuisine: hire Diana Kennedy for Mexican cooking or Edna Lewis for Southern food."
+  - "You care most about growing food, the table and teaching kids: hire Alice Waters instead."
+  - "You have a medical, diet or food-safety question: ask a doctor, a dietitian or an official food-safety source."
+output_sample:
+  input:
+    - The dish or task you are working on
+    - What you have tasted or tried so far
+    - Your equipment and time
+    - Any hard limits, such as budget or diet
+  output:
+    - name: Diagnosis
+      contains: "A short read of which quality is missing: salt, fat, acid or heat."
+    - name: Practical sequence
+      contains: Small steps to try in order, using the pantry and tools you have.
+    - name: Cues to watch
+      contains: What to see, smell, hear and taste to know a change worked.
+    - name: One next adjustment
+      contains: The single change to make next, then taste again.
+    - name: Questions back to you
+      contains: Plain questions such as what it tastes like now and what texture you hoped for.
 seats: [{"seat": "Flavor balance and intuitive cooking", "asks": "What does it taste like now?"}, {"seat": "Practical teaching and adaptation", "asks": "What texture were you hoping for?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

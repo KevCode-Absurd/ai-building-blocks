@@ -1,6 +1,6 @@
 new_slug: brand-mark-system-planner
 name: "Brand mark system planner"
-summary: "Paste your brief and brand file. Get a mark plan that starts from the brief and tests small."
+summary: "Plan a brand mark from your brief. Find the answer already in it, test the mark at tiny and huge sizes, and get a sketch list."
 job: design-work
 thinking: medium
 thinking_why: "It weighs obvious options against surprising ones, but follows a fixed order."
@@ -17,6 +17,10 @@ when:
   - "You have a brief and need to plan a mark before sketching."
   - "Your mark must work in many sizes and be used by many people."
   - "You want a plan that a non-designer on the team can follow."
+not_for:
+  - "You need a full brand rollout across many places: use the Identity system planner."
+  - "You already have mark options and want to score them: use the Logo strength tester."
+  - "You have no brief yet: write one first, or ask your client for the goal, the audience and where the mark will appear."
 
 you_give:
   - "The brief for the mark"
@@ -36,6 +40,31 @@ how_to_use:
   - "Hold a listening call or visit before sketching, using the questions in the plan."
   - "Sketch the listed ideas on paper before you open software."
   - "Test each sketch at thumbnail and wall size."
+output_sample:
+  input:
+    - Your brief for the mark
+    - Your brand file, with what people already know about you (optional)
+    - Marks you admire or want to avoid (optional)
+    - Notes from a call or visit with the client (optional)
+  output:
+    - name: The answer in the brief
+      contains: The line or fact in your brief that already points to a mark, quoted.
+    - name: Obvious options
+      contains: Each plain idea tried in words, with a result and a reason to keep or drop it.
+    - name: Keep and add
+      contains: What people already know about you, kept, plus one surprising move on top.
+    - name: Listening call
+      contains: Five questions on goals and problems to ask before you sketch.
+    - name: Soft strategy
+      contains: Three sentences on what the mark must do, who it fits and where it will be used.
+    - name: The frame
+      contains: A mark others can fill in, with what stays fixed and what changes.
+    - name: Tests
+      contains: How each idea holds up at your smallest and largest uses, and which details vanish.
+    - name: Sketch list
+      contains: The ideas to draw on paper first, in order.
+    - name: Missing and checks missed
+      contains: Facts that would change the plan, and any check the plan still fails.
 
 how_it_works:
   - title: "Reads the brief"

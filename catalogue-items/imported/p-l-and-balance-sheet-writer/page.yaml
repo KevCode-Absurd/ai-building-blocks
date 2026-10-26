@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Numbers must tie and the notes must be right.
 new_slug: p-l-and-balance-sheet-writer
 name: P&L and balance sheet writer
-summary: Give it your books. Get an income statement, balance sheet or cash flow
-  with big swings flagged. Review with an accountant.
+summary: Turn your trial balance into a P&L, balance sheet or cash flow with last period beside it and big swings flagged for your accountant.
 job: track-numbers
 headline: P&L and balance sheet writer
-subhead: Your income statement, balance sheet or cash flow built from your
-  books, with the prior period beside it and the big swings explained. It is
-  ready for review by your accountant.
+subhead: Your income statement, balance sheet or cash flow built from your books, with the prior period beside it and the big swings explained. It is ready for review by your accountant.
 explain: |
   Your income statement, balance sheet or cash flow built from your books, with the prior period beside it and the big swings explained. It is ready for review by your accountant.
 
@@ -18,6 +15,10 @@ when:
   - You must explain why costs jumped from last quarter.
   - You have a trial balance and need formatted statements.
   - You want a first draft before your accountant reviews it.
+not_for:
+  - "You need filed or audited statements: have an accountant prepare and sign them. This gives a draft only."
+  - "Your accounting system's own reports already cover the period: use those reports instead."
+  - "You want financial advice or tax filing help: ask a qualified accountant."
 you_give:
   - Period type and date
   - Trial balance or accounting data
@@ -29,8 +30,30 @@ you_get:
   - Flagged large variances
   - Notes on adjustments to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your accounting file.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Say which statement you want and the period, such as monthly for December 2024.
+  - Paste your trial balance, or upload a spreadsheet. Add last period or budget numbers if you have them.
+  - Add any adjustments you already know about, such as accruals.
+  - Read the flagged swings first and answer the follow-up questions where you can.
+  - Send the draft to your accountant to review before you use it.
+output_sample:
+  input:
+    - "The period type: monthly, quarterly, annual or year to date"
+    - The period, such as a month, quarter or year
+    - Your trial balance or income statement data, pasted or in a spreadsheet
+    - Last period, last year or budget numbers (optional)
+    - Known adjustments or reclassifications (optional)
+  prerequisites:
+    - An AI that can read a spreadsheet, if you upload a file
+    - A connected accounting system is optional. You can paste the numbers instead.
+  output:
+    - name: Income statement
+      contains: Revenue and expense lines for your period, with columns for the prior period and prior year.
+    - name: Variance analysis
+      contains: Changes in dollars and percent for each line, split into what drove them.
+    - name: Key metrics summary
+      contains: A short table of the main ratios and totals for the period.
+    - name: Material variance summary
+      contains: The large swings, each marked for follow-up with a suggested question to ask.
+    - name: Balance sheet and cash flow formats
+      contains: Standard layouts and presentation rules, plus common period-end adjustments and reclassifications to check.

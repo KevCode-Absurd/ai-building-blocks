@@ -2,36 +2,92 @@ thinking: low
 thinking_why: It fetches set figures and tables.
 new_slug: stock-data-fetcher
 name: Stock data fetcher
-summary: Give it a ticker. Get prices, statements, options and holdings from
-  Yahoo Finance. Collects data from websites.
+summary: Pull stock prices, financial statements, options and analyst targets for any ticker into a clean table, using Python and Yahoo Finance data.
 job: money-and-investing
 headline: Stock data fetcher
-subhead: Give it a ticker. Get prices, statements, options and holdings from
-  Yahoo Finance. Collects data from websites. Bring a ticker symbol or list of
-  tickers. Use the result to plan your next step.
+subhead: Give it a ticker and say what you want, such as five years of prices or the cash flow statement. It runs a short Python script against Yahoo Finance data and hands back a table you can paste into a spreadsheet. This is research data only. It comes from an unofficial source.
 explain: |
-  Market data on any listed company, pulled into a tidy table from Yahoo Finance. Give a ticker and say what you want, and you get current quotes, price history, statements, options chains, dividends, analyst targets or holdings.
+  A stock data fetcher gets market data on a listed company into a tidy table. Give a ticker and say what you want, and you get current quotes, price history, financial statements, options chains, dividends, analyst targets or holdings. Many people search for this as a Yahoo Finance data download or a stock price history table.
 
-  It matches your request to the right data type: income statement, balance sheet, cash flow, dividends and splits, earnings estimates, insider and fund holdings, news, or sector data. It can compare several tickers and run simple screens. It uses a Python library, so it needs code to run and installs the package if missing. Data is for research and learning only, and the library has no tie to Yahoo.
+  It matches your request to the right data type and can compare several tickers in one go. It runs a Python library called yfinance, so your AI needs to run code. It asks before it installs the library.
+
+  The library collects data from Yahoo Finance and has no tie to Yahoo. Yahoo can limit or block it, and its terms may restrict how you use the data. Treat results as a research starting point, not as official figures.
 when:
   - You need five years of price history for a chart or model.
-  - You want a company's cash flow statement in a spreadsheet-ready table.
+  - You want a company's cash flow statement as a table you can open in a spreadsheet.
   - You are comparing the numbers of several tickers in one go.
   - You want to see analyst price targets and recent ratings.
+not_for:
+  - You need live prices for trading. The data can be delayed or wrong. Use your broker's tools.
+  - You need official filings or audited numbers. Use the company's own reports or a licensed data vendor.
+  - You want to know how easily a stock trades. Use the Stock trading cost checker.
 you_give:
-  - A ticker symbol or list of tickers
-  - The type of data you want
+  - A ticker symbol or a list of tickers
+  - The type of data you want, such as prices or statements
   - A date range (optional)
-  - A way to run Python
+  - An AI that can run Python code
 you_get:
-  - Price tables for the period
-  - Financial statements
+  - Price tables for the period you chose
+  - Income statement, balance sheet or cash flow tables
   - Options chains or dividend history
-  - Analyst estimates and targets
-  - Holdings and news lists
+  - Analyst estimates and price targets
+  - A list of anything that failed to load
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini with a tool that can run Python. Add this skill, or paste the text of SKILL.md into a new chat.
+  - Give the ticker and the data you want. For a non-US stock, add the Yahoo suffix, for example RELIANCE.NS.
+  - Say yes if it asks to install yfinance. Say no if you would rather run the code yourself.
+  - Check the table against a second source for any number you will rely on. Look at the date of the pull.
+  - Copy the table into a spreadsheet, or ask for a CSV.
+how_it_works:
+  - title: Check the setup
+    text: It tests whether yfinance is installed and asks you before installing it.
+  - title: Match your request
+    text: It maps what you asked for to the right data type, such as price history, statements, options or holdings.
+  - title: Run the code
+    text: It writes and runs a short script with error handling, using the right period and interval.
+  - title: Handle limits
+    text: It uses a bulk download for several tickers and keeps to the date limits on short-interval data.
+  - title: Present the table
+    text: It leads with your answer, then the table, notable points, any gaps and the caveats.
+output_shape: |
+  What was fetched: <ticker>, <data type>, <period>, <time of pull>
+  Answer: <the number you asked for>
+  Table: <date or line item> | <column 1> | <column 2>
+  Notable points: <earnings beat, unusual volume or dividend change>
+  Gaps: <tickers or fields that failed and why>
+  Caveats: <unofficial source, may be delayed, research only>
+output_sample:
+  input:
+    - A ticker symbol or a list of tickers
+    - The kind of data you want, such as prices or statements
+    - A date range (optional)
+  prerequisites:
+    - An AI that can run Python 3.8 or newer
+    - Your yes to installing the yfinance package, if it is not already there
+  output:
+    - name: What was fetched
+      contains: The ticker, data type, period and the time of the pull.
+    - name: Data table
+      contains: Prices, statements, options, dividends or holdings in a table you can copy.
+    - name: Notable points
+      contains: Anything unusual in the data, such as an earnings beat or a dividend change.
+    - name: Gaps
+      contains: Tickers or fields that came back empty, and the reason.
+    - name: Caveats
+      contains: A note that the source is unofficial, may be delayed and is for research only.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It can run the script when code tools are on and keep tables tidy.
+    - name: ChatGPT
+      why: Its data analysis tool runs Python and can hand back a CSV.
+  inputs:
+    - The exact Yahoo ticker, including any exchange suffix
+    - A second data source to check key numbers
+terms:
+  - term: Ticker
+    meaning: The short code a stock trades under, such as AAPL.
+  - term: Options chain
+    meaning: A list of the buy and sell contracts open on a stock.
+  - term: yfinance
+    meaning: A free Python library that collects Yahoo Finance data. It is not made by Yahoo.

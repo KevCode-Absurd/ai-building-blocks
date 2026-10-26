@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Radio timing needs care.
 new_slug: radio-transmit-capture
 name: Radio transmit and capture helper
-summary: Give it a test signal. Get it sent over the air and the received IQ
-  data captured.
+summary: Send a test signal from a USRP radio and capture the IQ data it receives. Run a radio transmit and capture test in MATLAB, loopback or live.
 job: build-software
 headline: Radio transmit and capture helper
-subhead: A test signal sent over the air from a software defined radio, and the
-  received IQ data captured and ready to study. You can run a loopback test,
-  capture a band, or send for a long time.
+subhead: A test signal sent over the air from a software defined radio, and the received IQ data captured and ready to study. You can run a loopback test, capture a band, or send for a long time.
 explain: |
   A test signal sent over the air from a software defined radio, and the received IQ data captured and ready to study. You can run a loopback test, capture a band, or send for a long time.
 
@@ -18,6 +15,10 @@ when:
   - You need to capture a slice of spectrum as IQ data.
   - You are transmitting for hours and capturing in the background.
   - Captured data has dropped samples or the wrong gain.
+not_for:
+  - "You are setting up or connecting a USRP radio for the first time: use the MATLAB set-up USRP radio skill, or follow the NI setup guide."
+  - "You want capture that starts only when a signal appears: use the MATLAB detect and capture USRP skill."
+  - "You need FPGA targeting or several radios kept in sync: use the MathWorks Wireless Testbench help pages for those jobs."
 you_give:
   - Test signal or waveform
   - Radio model and antenna setup
@@ -29,9 +30,33 @@ you_get:
   - Gain and sample-rate settings
   - Fixes for dropped samples
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP
-    radio.
+  - Open your AI tool and paste in the skill text. Tell it you have a USRP radio and MATLAB with Wireless Testbench.
+  - Tell it your radio model, antennas, center frequency, sample rate and the signal you want to send.
+  - Check that you may transmit on that frequency and power in your country before you run any transmit step.
+  - Copy the script it writes into MATLAB and run it. Your AI needs to run MATLAB itself only if you want it to do this for you.
+  - Check the captured data for dropped samples and wrong gain. Paste any error back to your AI to get a fix.
+output_sample:
+  input:
+    - "Your test signal: a test tone, a standard-style waveform or your own samples"
+    - Your radio model and antenna setup
+    - Center frequency and sample rate
+    - "Transmit mode: once or continuous (optional)"
+  prerequisites:
+    - MATLAB with the Wireless Testbench add-on
+    - A USRP radio that is already set up and saved as a radio configuration
+    - An AI that can run MATLAB code, or you can paste the script into MATLAB yourself
+  output:
+    - name: Radio object
+      contains: The transmitter, receiver or transceiver set up with your radio, frequency, sample rate, gain and antennas.
+    - name: Transmit waveform
+      contains: The test signal prepared and ready to send, with the right sample rate.
+    - name: Transmit step
+      contains: Code that sends the signal once or continuously.
+    - name: Capture step
+      contains: Code that records IQ data in the foreground or the background.
+    - name: Loopback test
+      contains: A script that sends and captures on the same radio to check the chain works.
+    - name: Multi-antenna setup
+      contains: Settings to send or capture on more than one antenna.
+    - name: Troubleshooting
+      contains: Fixes for dropped samples and wrong gain.

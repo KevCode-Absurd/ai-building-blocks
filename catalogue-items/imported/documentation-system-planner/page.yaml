@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a doc system from your needs.
 new_slug: documentation-system-planner
 name: Documentation system planner
-summary: Describe your team and product. Get what to write down, where it lives
-  and how to keep it fresh.
+summary: Plan what to write down, where it lives, who owns it and how often to review it. Give it your team and tools to get a documentation plan.
 job: document-work
 headline: Documentation system planner
-subhead: "A documentation plan for your team: what to write down, where it
-  should live, who owns it and how it stays up to date. It covers internal docs,
-  product docs and runbooks."
+subhead: "A documentation plan for your team: what to write down, where it should live, who owns it and how it stays up to date. It covers internal docs, product docs and runbooks."
 explain: |
   A documentation plan for your team: what to write down, where it should live, who owns it and how it stays up to date. It covers internal docs, product docs and runbooks.
 
@@ -18,6 +15,10 @@ when:
   - A new product needs docs, but no one knows where to start.
   - Your docs are stale and nobody trusts them.
   - You need to choose a documentation tool for the team.
+not_for:
+  - "You need to write one document, like a guide or a blog post: ask your AI to draft it directly, or use the content-and-copy skill."
+  - "You want help text for customers, like a help centre: use the content-strategy skill, not this plan."
+  - "You only want comments inside code: ask a developer or use a code review in your AI instead."
 you_give:
   - Who the docs are for
   - A list of existing docs and their state
@@ -30,7 +31,32 @@ you_get:
   - A tool recommendation
   - First steps for cleanup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather first: a list of your current docs with where they live and when they were last updated, your team size, and the tools you use."
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your list and answers. Say who the docs are for and what kinds of work create them.
+  - Check the gap list and the dead weight first. Make sure nothing you still need is marked for deletion.
+  - Check that each doc type has one owner and one home, then pick the first three cleanup steps from the roadmap.
+output_sample:
+  input:
+    - Who the docs are for, such as your team, developers or customers
+    - A list of the docs you have now, where they live and when they were last updated
+    - Your team size and how fast it is growing
+    - The tools you use today, such as Notion or GitHub
+    - The kinds of work that create docs, such as engineering, product, ops or support
+  output:
+    - name: Audit
+      contains: What docs exist, where they live, who owns them and how fresh they are.
+    - name: Tiering and categorization
+      contains: Each doc sorted by type (reference, how-to, explanation, tutorial) and by audience level.
+    - name: Gap list
+      contains: Docs your team needs that do not exist yet, and old docs to delete or archive.
+    - name: Tool decisions
+      contains: Where each kind of doc should live, with a tool suggestion if you lack one.
+    - name: Ownership map
+      contains: Who owns each doc or type of doc, with a backup.
+    - name: Maintenance cadence
+      contains: How often each tier of doc gets reviewed, and how updates become part of normal work.
+    - name: Style guide
+      contains: A short list of rules to keep docs consistent.
+    - name: Roadmap
+      contains: The order of work to fill gaps and clear out dead weight.

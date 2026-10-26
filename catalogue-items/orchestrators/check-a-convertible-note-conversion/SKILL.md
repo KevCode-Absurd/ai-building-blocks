@@ -1,46 +1,28 @@
 ---
 name: check-a-convertible-note-conversion
-description: "Carry the approved interest balance into the actual lower-of conversion election."
+description: "Use when a priced round closes and you need the shares a simple-interest convertible note converts into: interest first, then the lower of the cap price and the discount price. Not for SAFEs, other note terms or legal advice."
 ---
 
 # Check a convertible note conversion
 
-A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Check how many shares a convertible note converts into. Two steps run in order: work out the accrued simple interest and the converting balance, then compare shares at the cap, the discount and the round price.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **The signed note** (yours): principal, simple interest rate, issue and funding dates, the year fraction and the interest conversion rule.
+- **Price terms** (yours): the cap price, the discount and the lower-of wording, from the note.
+- **The round** (yours): the price per share of the priced round, from the term sheet.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** a copy of your cap table, to compare the result.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Signed simple-interest convertible note, funding dates, contractual year fraction, interest conversion rule, approved cap price, round price and an actual lower-of discount clause.
+The items under "Before you start", as of the conversion date, with the currency and scale stated once. If the note's lower-of wording is not in the text you were given, mark it MISSING and do not assume it. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,9 +32,9 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Convertible note interest checker** (`convertible-note-interest-checker`). Calculate actual simple accrual from funded principal and contractual dates. Save the interest-converting balance with currency and scale; keep share rounding unresolved until the agreement is checked. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-convertible-note-interest-checker.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Convertible note interest checker** (`convertible-note-interest-checker`). Calculate actual simple accrual from funded principal and contractual dates. Save the interest-converting balance with currency and scale; keep share rounding unresolved until the agreement is checked. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-convertible-note-interest-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** interest uses the note's year fraction and each funding date, principal and interest appear apart, and share rounding is left open.
 
-2. **Cap and discount conversion checker** (`cap-and-discount-conversion-checker`). Pass the verified converting balance as amount, converting scale explicitly if necessary. Use the approved cap price and actual round discount, confirm lower-of language and compare resulting shares against round-price shares. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-cap-and-discount-conversion-checker.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Cap and discount conversion checker** (`cap-and-discount-conversion-checker`). Pass the verified converting balance as amount, converting scale explicitly if necessary. Use the approved cap price and actual round discount, confirm lower-of language and compare resulting shares against round-price shares. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-cap-and-discount-conversion-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** the amount passed in is the verified converting balance with its scale, the lower-of wording is quoted from the note, and shares at the cap, at the discount and at the round price sit side by side.
 
 ## Workbook checks
 
@@ -60,7 +42,7 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Acceptance
 
-- Convert only interest the note permits and use an independently checked cap price, not a guessed valuation denominator.
+- Interest accrues only on funded principal for the contract's dates; the converting balance passes between steps with its scale; the lower-of price is confirmed from the note's own wording; share rounding is left to the agreement.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
 - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
@@ -69,4 +51,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the answer: the converting balance, the price that applies and the share count, then the extra shares versus the round price. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that nothing was paid, sent or filed, and that a person who knows the agreement must check the definitions before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Check a SAFE instead** with the [Check a SAFE into priced financing](https://useaiblocks.com/workflows/check-a-safe-into-priced-financing) workflow, if other investors hold SAFEs.
+- **Check the option pool** with the [Option pool top-up checker](https://useaiblocks.com/skills/option-pool-top-up-checker), if the round changes it.
+Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -1,6 +1,6 @@
 new_slug: visual-system-rules-writer
 name: "Visual system rules writer"
-summary: "Describe your brand or event. Get the feeling first, then firm rules for colour, type and grid."
+summary: "Write visual system rules for your brand or event: the feeling first, then firm rules for colour, type and grid that keep every place consistent."
 job: design-work
 thinking: medium
 thinking_why: "It turns a feeling into firm rules, which needs judgement but follows a fixed order."
@@ -17,6 +17,10 @@ when:
   - "You are launching an event, venue, product line or brand that will appear in many places."
   - "Your materials look different from one channel to another."
   - "You need rules short enough that a new designer or supplier will follow them."
+not_for:
+  - "You only need one poster or print piece: a simple style guide is enough, or use the Brand guide builder if you need a full brand guide."
+  - "You want to lay out a single page or set its type: ask a designer, or use a page layout tool, not a whole rule sheet."
+  - "You have no idea what the brand is yet: first write down who it is for and what it offers, then come back."
 
 you_give:
   - "What the event or brand is, and what it is for"
@@ -36,6 +40,31 @@ how_to_use:
   - "Paste your brand file if you have one."
   - "Test the rules by giving them to someone who was not in the room and asking them to make one item."
   - "Name the person who checks final work against the rules."
+output_sample:
+  input:
+    - What the event or brand is, and what it is for
+    - Every place it will show up
+    - Your brand file (optional)
+    - Looks or histories you want to avoid (optional)
+  output:
+    - name: Feeling
+      contains: Two to four short lines on what the place or event should feel like to someone arriving.
+    - name: Must not look like
+      contains: Looks, eras and associations to avoid, with one reason each.
+    - name: Colours
+      contains: The fewest colours that work, each with a meaning and reason, plus colours ruled out.
+    - name: Tools
+      contains: One type family with weights, the page sizes in use, and the grid. Four tools only.
+    - name: Signs and icons
+      contains: How signs are drawn on one grid, with rules for stroke, corner and space, so they read in any language.
+    - name: Where the team may play
+      contains: What can vary, and by how much.
+    - name: Who checks
+      contains: The person or role who checks final work against the grid.
+    - name: Stranger test
+      contains: How to test a sign with someone who does not know the language.
+    - name: Missing and checks missed
+      contains: Facts that would change a rule, and any check the skill could not pass.
 
 how_it_works:
   - title: "Writes the feeling first"

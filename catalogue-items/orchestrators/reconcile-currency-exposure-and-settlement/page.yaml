@@ -1,51 +1,65 @@
 new_slug: reconcile-currency-exposure-and-settlement
-name: Reconcile currency exposure and settlement
-headline: Reconcile currency exposure and settlement
-summary: A currency exposure bridge and matched forward settlement schedule
+name: Currency exposure and forward settlement checker
+headline: Currency exposure and forward settlement checker
+summary: Share foreign receipts, bills and an existing buy-forward contract. Get net exposure, settlement checks and any unmatched amount.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A currency exposure bridge and matched forward settlement schedule. Share one currency maturity bucket, documented receivables/payables and commitments, existing buy-forward contract and settlement rates/fees.
+subhead: Share the foreign currency you expect to receive and owe on one date, your existing buy-forward contract, and the settlement rate and fees. Your AI maps the exposure with the forward in it. It then checks the forward against the bill it was meant to cover. You get the cash to settle, any over-hedge or leftover exposure, and each source difference.
 explain: |-
-  A currency exposure bridge and matched forward settlement schedule.
+  A company that pays a supplier in another currency often buys that currency forward, to fix the cost. Two checks follow. How much foreign currency is still exposed once receipts, bills and the forward are netted? And on the day it settles, did the forward do what it should against the bill?
 
-  Treasury foreign exchange settlement. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow runs both. The first step builds the exposure map for one maturity bucket and records the forward as foreign currency to be delivered. The second step takes the same forward and the original bill, and works out the cost at the forward rate against the cost at the settlement spot rate, plus fees. It shows cash to settle, any over-hedge and any remaining exposure.
+
+  One rule keeps it honest. The forward counts once in the exposure and once in settlement, never as two hedges. The step passes the original bill and the real forward amount to settlement, not the already-netted figure. It supports buy-foreign forwards only, and it does not pick or place a new hedge.
 when:
-  - You need a currency exposure bridge and matched forward settlement schedule.
-  - You work on treasury foreign exchange settlement and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You have a forward contract and a supplier bill in the same currency and date, and want to confirm the match.
+  - Receipts and payments in a foreign currency make you unsure how much is really exposed.
+  - A forward settles soon and you need the cash amount, rate and fees checked.
+  - Finance asks if you are over-hedged on one currency and date.
+not_for:
+  - "You want to choose or place a new hedge: not done here. Talk to your bank or treasury adviser."
+  - "Your forward sells foreign currency: the settlement step supports buy-foreign contracts only. Use the Foreign currency exposure checker for the exposure part."
+  - "You only want the net exposed amount: use the Foreign currency exposure checker."
+  - "You only want to check one forward payment: use the Currency forward payment checker."
 you_give:
-  - One currency maturity bucket, documented receivables/payables and commitments, existing buy-forward contract and settlement rates/fees.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - One currency and one maturity bucket to review
+  - Foreign receipts and bills in that bucket, plus commitments, from your ledger
+  - "The existing buy-forward contract: amount, forward rate and settlement date"
+  - The settlement spot rate and fees, from the bank's confirmation
+  - The rate quote direction, such as dollars per euro or euros per dollar
 you_get:
-  - A currency exposure bridge and matched forward settlement schedule.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - An exposure map with receipts, bills and the forward, and the net amount still exposed
+  - The cost at the forward rate against the cost at the settlement spot rate, with fees
+  - Cash to settle, and any over-hedge or leftover exposure
+  - A list of source differences, such as a rate or date that does not match
+  - A list of missing facts and checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the ledger lines for one currency and date, the forward contract and the settlement confirmation. Say which way each rate is quoted.
+  - Tell your AI to follow the pack and save each step's file. Ask for one currency and one maturity bucket at a time.
+  - After step 1, check the forward is listed as foreign currency to be delivered. Gross receipts and bills must show before netting.
+  - After step 2, check the rate direction and the dates match the contract. Make any hedge decision with your bank, not from this result.
 how_it_works:
-  - title: Currency exposure netting checker
-    text: Reconcile gross foreign receipts and obligations. Record the existing buy-forward as a positive foreign delivery, or a sell-forward as negative, in the exposure map. Pass the original matched obligation and actual hedge notional to settlement, never the already-net residual as the full payable. This workflow settlement branch supports buy-foreign contracts only.
-  - title: Currency forward settlement checker
-    text: Reconcile the same existing buy-forward against its underlying payable using contractual forward price, settlement spot and fees. Return cash settlement, overhedge or residual exposure and source discrepancies; no new contract is selected or executed.
+  - title: Foreign currency exposure checker
+    text: "Reconciles gross foreign receipts and obligations for the bucket. Records the buy-forward as foreign delivery in the exposure map. Hands step 2 the original bill and the real hedge amount, never the already-netted figure. Check before moving on: gross figures are shown before netting, and the forward is listed once."
+  - title: Currency forward payment checker
+    text: "Checks the same forward against its bill using the contract forward rate, the settlement spot rate and fees. Returns cash to settle, any over-hedge or leftover exposure and source differences. Selects or places no new contract. Check before you use it: the rate direction and the dates match the contract."
 output_shape: |-
-  A currency exposure bridge and matched forward settlement schedule.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES    <files, currency pair, bucket date, quote direction>
+  EXPOSURE MAP         <receipts | bills | commitments | forward | net exposed>
+  FORWARD CHECK        <bill | forward rate | settlement spot | fees | cost at each>
+  SETTLEMENT RESULT    <cash to settle | over-hedge | leftover exposure>
+  SOURCE DIFFERENCES   <rate, date or amount that does not match>
+  MISSING              <each gap and what it stops>
+  CHECKS MISSED        <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Maturity, currency units and rate quote direction match; forward notional appears once in exposure netting and once in settlement, never as two hedges.
+  - what: Quote direction
+    how: Say which way each rate reads, such as dollars per euro. A flipped rate gives a wrong answer that looks right.
+  - what: Maturity bucket
+    how: Use one bucket at a time. Mixed dates hide an over-hedge.
+  - what: Fees
+    how: List each fee and its currency. A fee in a different currency is converted at the rate you state.
 judge:
   - Maturity, currency units and rate quote direction match; forward notional appears once in exposure netting and once in settlement, never as two hedges.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -60,13 +74,36 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads files and builds spreadsheets
+      why: The sums are small, and each rate and date must match the contract. A spreadsheet shows every cell. In a plain chat it comes back as tables.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The bank's confirmation of the forward trade (optional).
+    - Open purchase orders that are not yet bills (optional).
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Buy-forward
+    meaning: A contract to buy foreign currency on a set date at a rate agreed now.
+  - term: Exposure
+    meaning: The foreign currency amount that can still change in value when rates move.
+  - term: Over-hedge
+    meaning: A forward larger than the bill it covers.
+  - term: Spot rate
+    meaning: The exchange rate on the day, used to compare with the forward rate.
+output_sample:
+  input:
+    - Foreign receipts, bills and commitments for one currency and maturity
+    - "The buy-forward contract: amount, rate and settlement date"
+    - The settlement spot rate and fees, and the rate quote direction
+  prerequisites:
+    - An AI that can read files
+    - The currency pair and the date you are checking
+  output:
+    - name: outputs/step-1-currency-exposure-netting-checker.md
+      contains: The exposure map with the forward in it and the net amount still exposed.
+    - name: outputs/step-2-currency-forward-settlement-checker.md
+      contains: Forward cost against spot cost, cash to settle, over-hedge or leftover exposure.
+    - name: Source differences
+      contains: Any rate, date or amount in your sources that does not match.
+    - name: Workbook (optional)
+      contains: The schedules in one linked spreadsheet, if your AI can build files.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.

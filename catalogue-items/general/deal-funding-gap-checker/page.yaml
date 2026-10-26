@@ -1,53 +1,119 @@
 new_slug: deal-funding-gap-checker
 name: Deal funding gap checker
 headline: Deal funding gap checker
-summary: Find the closing funding gap after cash sources and noncash rollover are classified consistently.
+summary: "Find the funding gap at deal closing: what must be paid, less the money lined up. Rollover counts once, so the gap is not doubled."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Signed sources-and-uses balance and unfunded commitments. Share equity purchase use before rollover, payoff, fees, required closing cash, net new debt cash, permitted buyer cash, rollover and sponsor cash.
+subhead: Give it the price paid for the shares before rollover, the debt payoff, fees and closing cash, then the debt cash, buyer cash, rollover and sponsor cash. It adds up uses and sources and shows the gap as a signed number. Any plug must trace to a real commitment.
 explain: |-
-  Signed sources-and-uses balance and unfunded commitments.
+  Every deal has two lists. Uses are what must be paid at closing. Sources are where that money comes from. This deal funding gap checker adds up both and shows the difference. A positive gap means the money lined up falls short.
 
-  Acquisition financing. Illustrative figures only. Uses100+20+5+5=130; sources70+10+10+30=120 leave10 unfunded. Debt cash80 balances.
+  The common mistake is rollover, where the sellers keep part of their stake instead of taking cash. If you cut the purchase price by the rollover and also list the rollover as a source, the same money counts twice and the gap shrinks. The skill picks one treatment and holds it. It counts new debt only as the cash you receive after discount and fees. It counts buyer cash only when that cash is free to use.
+
+  A gap of zero on paper does not mean the deal can close. Closing conditions and lender approvals are separate. Practice numbers: uses of 100, 20, 5 and 5 add to 130. Sources of 70, 10, 10 and 30 add to 120, so 10 is unfunded. With debt cash of 80, the gap is zero.
 when:
-  - You need signed sources-and-uses balance and unfunded commitments.
-  - You work on acquisition financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A sources-and-uses table does not balance, and you need to know by how much.
+  - The lender cut the debt cash, and you want to see the new gap.
+  - You want to be sure rollover is counted once.
+  - A plug line shows up in a draft funds flow, and you want it traced to a real commitment.
+not_for:
+  - You want a full buyout return or a borrowing capacity study. This checks one closing balance only. A zero gap also does not clear the closing conditions, so ask your lawyer or lender.
+  - You only need the debt cash after discount and fees. Use the Debt issue proceeds checker.
+  - You want to check a debt payoff, premium and fees against new funding. Use the Refinancing closing cost checker, or run the Check acquisition refinancing funds workflow.
+  - You want the seller's ownership after rollover. Use the Rollover equity ownership checker.
 you_give:
-  - Equity purchase use before rollover, payoff, fees, required closing cash, net new debt cash, permitted buyer cash, rollover and sponsor cash.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The price paid for the equity before rollover (from the signed purchase terms)
+  - The debt payoff, deal fees and cash the company must hold at closing (from payoff and fee letters)
+  - New debt cash after discount and fees (from the lender's term sheet or commitment)
+  - Buyer cash that is free to use, not restricted (from bank balances)
+  - The rollover amount and the sponsor cash (from the rollover agreement and equity commitment)
+  - The closing date, currency and units
 you_get:
-  - Signed sources-and-uses balance and unfunded commitments.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Total uses and total sources
+  - The funding gap as a signed number (positive means short)
+  - A table showing how each line was classified, with rollover counted once
+  - A trace of any plug line to a real funding commitment
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same balance, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste your uses and your sources, each with where it came from. Say the closing date, currency and units. Say how your draft table treats rollover.
+  - "Ask: add up uses and sources, count rollover once, and show the gap."
+  - Check that debt is the cash you receive after discount and fees, and that buyer cash leaves out restricted balances.
+  - If it shows a plug, ask which signed commitment backs it. No commitment means no plug.
+  - Read MISSING and CHECKS MISSED. A gap of zero is arithmetic only. It does not clear the closing conditions.
 how_it_works:
-  - title: 1. Classify rollover consistently; never subtract it from purchase use and also count it as a source
-    text: Classify rollover consistently; never subtract it from purchase use and also count it as a source.
-  - title: 2. Sum purchase, payoff, fees and closing cash; separately sum usable debt, permitted cash, rollover and sponsor equity
-    text: Sum purchase, payoff, fees and closing cash; separately sum usable debt, permitted cash, rollover and sponsor equity.
-  - title: 3. Show uses less sources as a signed funding gap; trace any proposed plug to a real funding commitment
-    text: Show uses less sources as a signed funding gap; trace any proposed plug to a real funding commitment.
+  - title: Classifies rollover
+    text: Counts rollover one way only. It is never cut from the purchase price and also listed as a source.
+  - title: Adds the uses
+    text: Adds the purchase price, the debt payoff, the fees and the cash needed at closing.
+  - title: Adds the sources
+    text: Adds new debt cash after fees, free buyer cash, rollover and sponsor cash.
+  - title: Shows the gap
+    text: Takes uses less sources and shows the result with its sign.
+  - title: Traces any plug
+    text: Any line added to close the gap must trace to a real funding commitment.
+  - title: Marks the gaps
+    text: Writes MISSING for any figure it was not given. It never fills a gap with zero.
 output_shape: |-
-  Signed sources-and-uses balance and unfunded commitments.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Total uses <amount> | Total sources <amount> | Funding gap <amount> (positive = short)
+
+  USES OF CASH
+  <purchase price before rollover | debt payoff | deal fees | closing cash, each with its source>
+
+  SOURCES OF CASH
+  <debt cash after discount and fees | buyer cash | rollover | sponsor cash, each with its source>
+
+  ROLLOVER TREATMENT
+  <how rollover was counted, and the check that it appears once>
+
+  PLUGS AND COMMITMENTS
+  <any balancing line and the commitment that backs it, or "none proposed">
+
+  INPUT SOURCES AND ASSUMPTIONS
+  <closing date, currency and units, source and date for each input, workbook check if any>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The price paid for the equity before rollover
+    - The debt payoff, deal fees and closing cash
+    - New debt cash after discount and fees
+    - Buyer cash that is free to use
+    - The rollover amount and the sponsor cash
+  prerequisites:
+    - The signed purchase terms, payoff letter and fee letters
+    - The lender's term sheet or commitment, and the equity commitment
+  output:
+    - name: RESULT
+      contains: Total uses, total sources and the funding gap with its sign.
+    - name: USES OF CASH
+      contains: Purchase price before rollover, debt payoff, fees and closing cash, each with its source.
+    - name: SOURCES OF CASH
+      contains: Debt cash after fees, free buyer cash, rollover and sponsor cash, each with its source.
+    - name: ROLLOVER TREATMENT
+      contains: How rollover was counted, and proof that it appears once.
+    - name: PLUGS AND COMMITMENTS
+      contains: Any balancing line and the signed commitment behind it, or none.
+    - name: INPUT SOURCES AND ASSUMPTIONS
+      contains: Closing date, currency, units and the source and date of every input.
+    - name: MISSING
+      contains: Each figure it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Debt source is net cash after OID and financing fees.
+  - what: Debt cash changes
+    how: Give the new cash after discount and fees. Do not give the face amount of the loan.
+  - what: Rollover treated the other way
+    how: Say which treatment your table uses. It holds that treatment and checks the rollover appears once.
+  - what: Buyer cash is partly restricted
+    how: Give only the balance that is free to use, and say what is restricted.
 judge:
   - Debt source is net cash after OID and financing fees.
   - Buyer cash excludes restricted or unavailable balances.
@@ -62,15 +128,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can add up the two lists in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed purchase terms, payoff letter and fee letters
+    - The lender term sheet or commitment, and the rollover and equity commitment papers
+    - A named reviewer and the question you want answered
 terms:
+  - term: Sources and uses
+    meaning: Two lists. Uses are what must be paid at closing. Sources are where the money comes from.
+  - term: Rollover
+    meaning: Sellers keep part of their stake instead of taking all of it in cash.
+  - term: Sponsor
+    meaning: The investor that puts equity into the deal.
+  - term: Funding gap
+    meaning: Uses less sources. A positive gap means the money lined up falls short.
+  - term: Plug
+    meaning: A line added only to make the table balance.
+  - term: Discount and fees on debt
+    meaning: Costs taken out of a loan up front, so the cash received is less than the loan amount.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real deal.

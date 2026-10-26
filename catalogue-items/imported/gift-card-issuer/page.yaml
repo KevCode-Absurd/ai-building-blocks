@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a fixed list of steps per card.
 new_slug: gift-card-issuer
 name: Gift card issuer
-summary: Name the customers and amounts. Get gift cards issued as goodwill,
-  return credit or rewards. Creates live gift cards.
+summary: Issue Shopify gift cards to named customers as goodwill, return credit or rewards. Check a dry run first, then create live gift cards.
 job: run-your-store
 headline: Gift card issuer
-subhead: Store credit in your customers' hands, issued from one request. Name
-  the customers and amounts, and it creates Shopify gift cards for goodwill
-  after a late order, credit in place of a refund, or loyalty rewards.
+subhead: Store credit in your customers' hands, issued from one request. Name the customers and amounts, and it creates Shopify gift cards for goodwill after a late order, credit in place of a refund, or loyalty rewards.
 explain: |
   Store credit in your customers' hands, issued from one request. Name the customers and amounts, and it creates Shopify gift cards for goodwill after a late order, credit in place of a refund, or loyalty rewards.
 
@@ -18,6 +15,10 @@ when:
   - A customer returned an item and you prefer store credit to a cash refund.
   - You want to reward your top customers with a small gift card.
   - You need to issue the same amount to a list of customers.
+not_for:
+  - "You owe the customer a refund by law or they are disputing a card payment: use a cash refund or talk to your payments provider."
+  - "You want a discount code for a sale or campaign: set up a discount code in your Shopify admin instead."
+  - "You have no Shopify store, or gift cards are off in your store settings: turn them on first, or use a person on your team to issue credit by hand."
 you_give:
   - Store domain
   - Customer emails or IDs
@@ -29,8 +30,28 @@ you_get:
   - Reason notes logged on each card
   - A summary of what was issued
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Open an AI that can run Shopify commands and is signed in to your store. Check that gift cards are on in your settings.
+  - Paste the skill into the chat. Add your store domain, the customer email or ID, and the amount.
+  - Add a reason, an expiry date and a customer tag if you want them (optional).
+  - Ask for a dry run first. The skill does not default to one, so say so. Check the customer, amount and expiry.
+  - For a list of customers, check the full list before you run it. Then run it for real and copy each code from the summary.
+  - Send each code to its customer. Cards cannot be deleted, only disabled, so check amounts with care.
+output_sample:
+  input:
+    - Your store domain
+    - Customer emails or customer IDs
+    - Gift card amount
+    - Reason, expiry date and customer tag (optional)
+  prerequisites:
+    - An AI that can run Shopify commands and is signed in to your store
+    - Write access to gift cards for your store
+    - Gift cards turned on in your Shopify settings
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Customer lookup
+      contains: The customer's name and email, found by email or ID, before any card is made.
+    - name: Gift card creation
+      contains: The gift card made for that customer, or a dry run note if nothing was created.
+    - name: Outcome summary
+      contains: Customer, gift card code, amount, expiry date and error count, to copy and send to the customer.

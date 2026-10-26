@@ -1,6 +1,6 @@
 slug: prepare-a-supplier-corrective-action-review
 name: Prepare a supplier corrective action review
-summary: Share the source files. Get a sourced issue review, corrective procedure draft and follow up register.
+summary: Check a supplier's corrective action reply against your inspection evidence. Get a sourced issue review, a fix procedure draft and a follow-up register.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,12 +8,10 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
-    required: false
+    required: true
   - type: question
-    required: false
+    required: true
   - type: meeting_notes
     required: false
 outputs:
@@ -25,11 +23,11 @@ uses:
   - executive-action-register
 steps:
   - uses: source-note-summariser
-    note: Extract observed nonconformances, dates, affected lots and supporting evidence from the inspection records; separate the supplier explanation from verified findings.
+    note: "Extract observed nonconformances, dates, affected lots and supporting evidence from the inspection records; separate the supplier explanation from verified findings. Hands step 2 the findings with dates and lots."
   - uses: process-and-sop-writer
-    note: Document the proposed containment, correction, evidence collection and effectiveness review steps against the owner approved acceptance process; do not prescribe technical safety decisions.
+    note: "Document the proposed containment, correction, evidence collection and effectiveness review steps against the owner approved acceptance process; do not prescribe technical safety decisions. Uses step 1's findings with your acceptance process. Hands step 3 the draft procedure."
   - uses: executive-action-register
-    note: Record explicit accepted supplier commitments separately from proposed actions, with source IDs and missing owners or dates.
+    note: "Record explicit accepted supplier commitments separately from proposed actions, with source IDs and missing owners or dates. Uses your meeting notes or emails with the supplier, plus step 2's draft procedure."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

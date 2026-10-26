@@ -1,6 +1,6 @@
 new_slug: customer-concentration-risk
 name: "Customer concentration risk check"
-summary: "List your top clients and key dependencies. Get a risk map, limits to set and an exit plan for the biggest one."
+summary: "Check your customer concentration risk. Give it sales by client and your key suppliers. You get a risk map, share limits and an exit plan."
 job: plan-strategy
 thinking: medium
 thinking_why: "It adds up shares from your numbers and weighs five kinds of dependence, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - One client or one supplier makes up a big share of your money.
   - A large customer has asked for a price cut or longer payment terms.
   - You want limits in writing before you take the next big deal.
+not_for:
+  - "You have one small client and no real dependence: a simple cash-flow forecast in your spreadsheet is enough."
+  - "You want to set prices or judge one deal: work it out with your accountant, or use a pricing tool."
+  - "You need a legal review of a client or supplier contract: ask a lawyer, because this check does not read contract law."
 
 you_give:
   - "Sales by client for the last 12 months, in a sheet or pasted list"
@@ -37,6 +41,28 @@ how_to_use:
   - "Say which limits you can live with. If you are not sure, ask it to propose some."
   - "Name your biggest client and any terms they are pushing."
   - "Take the limits to whoever owns each one, and set a date to run the check again."
+output_sample:
+  input:
+    - Your sales by client for the last 12 months
+    - Your main suppliers and the share of sales each one affects
+    - Your key people, tools and regions you depend on
+    - Your sources of credit (optional)
+    - The terms your biggest client is asking for (optional)
+  output:
+    - name: Dependence map
+      contains: Every dependence by client, technology, country, type of work and key person, with its share of sales and a rating.
+    - name: Client terms check
+      contains: The terms your biggest client wants, their effect on margin and cash, and a call to accept, negotiate or refuse.
+    - name: Limits to set
+      contains: A share limit for each kind of dependence, with a named owner and a review date.
+    - name: Suppliers and credit
+      contains: Each supplier's share of sales, contract end, a second source, and the order to pay if cash is short.
+    - name: Exit plan for the biggest client
+      contains: A short polite message that declines the terms, offers handover help and sets a date.
+    - name: MISSING
+      contains: Facts that were not given and would make the map sharper.
+    - name: CHECKS MISSED
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: Lists every dependence

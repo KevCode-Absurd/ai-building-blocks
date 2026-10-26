@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows known patterns but writes real code.
 new_slug: backend-builder
 name: Backend builder
-summary: Say what the service must do. Get API routes, database design and
-  secure login written for you.
+summary: Describe what your service must do and get API routes, database fixes and login code. A backend builder for Express, Fastify or Koa.
 job: build-software
 headline: Backend builder
-subhead: "The server side of an app: API routes, database design and secure
-  login, written for what your service must do. Start from an OpenAPI file or a
-  schema, and the AI scaffolds route handlers, input checks and types."
+subhead: "The server side of an app: API routes, database design and secure login, written for what your service must do. Start from an OpenAPI file or a schema, and the AI scaffolds route handlers, input checks and types."
 explain: |
   The server side of an app: API routes, database design and secure login, written for what your service must do. Start from an OpenAPI file or a schema, and the AI scaffolds route handlers, input checks and types.
 
@@ -18,6 +15,10 @@ when:
   - A page is slow and you suspect the database.
   - You want to know if your API survives fifty users at once.
   - You need login added and want it hardened.
+not_for:
+  - "You only need a web page or app screen: use a frontend tool or a web developer, as this one only builds the server side."
+  - "You have no API plan and no database yet: write a short list of what your service must do first, or ask a developer to sketch it."
+  - "You want to load test a service you do not own: do not. Get written permission first, or test your own copy."
 you_give:
   - An API spec or a description of the service
   - Database type and connection details (optional)
@@ -29,8 +30,28 @@ you_get:
   - Load test results
   - Security hardening steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open a chat with an AI that can run code and read your files, and add the skill folder.
+  - Paste your API plan or describe what your service must do. Say which framework you use.
+  - Ask for routes first. Read the files it writes before you use them.
+  - Add your database link if you want a speed check. Ask for migration files, then try them on a copy first.
+  - Only run a load test on a system you own or have written permission to test. Never test a live login page without approval.
+output_sample:
+  input:
+    - Your API plan as an OpenAPI file, or a plain description of the service
+    - Your database link or schema files (optional)
+    - The framework you use, such as Express, Fastify or Koa
+    - Your load test target, such as users and seconds (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Python on your computer to run the three helper scripts
+  output:
+    - name: Route handlers
+      contains: One file per API route, with the code that answers each request.
+    - name: Validation middleware and types
+      contains: Checks on request bodies, query values and paths, plus TypeScript types.
+    - name: Schema analysis and migration files
+      contains: Missing indexes, slow query risks and migration files you can apply or undo.
+    - name: Load test results
+      contains: Requests per second, response time spread, error counts and advice on scaling.
+    - name: Security hardening steps
+      contains: Fixes for login, rate limiting and input checks, with tests to confirm they work.

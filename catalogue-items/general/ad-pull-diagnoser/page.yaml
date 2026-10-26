@@ -1,6 +1,6 @@
 new_slug: ad-pull-diagnoser
 name: "Ad pull diagnoser"
-summary: "Paste an ad that gets few replies. Get its causes ranked by likelihood and cost to fix."
+summary: "Find why your ad gets few replies. Paste the ad and your results to get likely causes ranked, with the cheapest fix first."
 job: check-ads
 thinking: high
 thinking_why: "It weighs several possible causes against thin evidence, so it benefits from your strongest model."
@@ -17,6 +17,10 @@ when:
   - An ad, email or page is seen but not answered and you do not know what to change.
   - You have a list of ideas for what is wrong and need an order.
   - You want to fix the cheapest likely cause first, before a redesign.
+not_for:
+  - "You have no way to trace replies to the ad: key the ad first, then come back."
+  - "You want to compare your best ads with your worst ones: use the Winners and losers ad comparer."
+  - "You already know the cause and need new wording: use the Reply-getting fix writer."
 
 you_give:
   - The ad as the reader sees it
@@ -34,6 +38,25 @@ how_to_use:
   - Paste your results and say where and when it ran.
   - Fix the top cause first and change nothing else.
   - Take the fixed version to "Reply-getting fix writer" or run a split test against the old one.
+output_sample:
+  input:
+    - Your ad as the reader sees it, with the reply path
+    - "Your results by ad: audience, replies, sales, spend (optional)"
+    - Where, when and how big the ad ran (optional)
+    - Results for your other ads in the same place (optional)
+  output:
+    - name: Stranger sentence
+      contains: One line on what a stranger thinks the headline offers and to whom, or a note that it is unclear.
+    - name: Findings
+      contains: Seven checks, each marked fine, suspect or broken, with the line or number it rests on.
+    - name: Ranked causes
+      contains: Each cause with its likelihood, cost to fix and a one-line fix, ordered by likelihood then cost.
+    - name: Could not judge
+      contains: What the skill could not check and what would settle it.
+    - name: MISSING
+      contains: Any input you did not give, marked where it would have mattered.
+    - name: Checks missed
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Checks it is counted

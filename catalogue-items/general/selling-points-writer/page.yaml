@@ -1,6 +1,6 @@
 new_slug: selling-points-writer
 name: "Selling points writer"
-summary: "Paste your features and buyer. Get selling points in buying order, and the claims that need proof."
+summary: "Turn your product features into selling points: paste your facts and buyer, get points in buying order and a list of claims that need proof."
 job: write-ad-copy
 thinking: low
 thinking_why: "It reshapes what you give it, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - You have a list of features and need the points for a product page, an ad image or a long ad.
   - Your points all sound like a spec sheet, or all make the same argument.
   - You want to know which of your benefit claims you can actually back.
+not_for:
+  - You have no facts or sources for your features yet. Gather the label, spec sheet or lab report first.
+  - You only need one line for the top of an ad. Use the Ad headline writer.
+  - You want to test claims you already wrote against your proof. Use the Claim evidence checker.
 
 you_give:
   - Your feature and fact list, with where each fact comes from
@@ -51,6 +55,24 @@ how_it_works:
     text: Cuts or sharpens any point a rival also claims, then skims the list fast and cuts any point the eye slides past.
   - title: Checks the list
     text: Goes through its own checks, such as every claim tracing to a fact and no bare features, fixes what it can, and names any it still misses.
+
+output_sample:
+  input:
+    - Your features and facts, each with its source
+    - A note on your buyer, how aware they are and their doubts
+    - Where the points go, how many and how long
+    - What competitors all claim (optional)
+  prerequisites:
+    - A buyer brief, from the Buyer brief writer, if you have one (optional)
+  output:
+    - name: "Points"
+      contains: A numbered list of one-sentence points, each tagged with the buyer question it answers and its source fact.
+    - name: "Needs evidence"
+      contains: Benefit claims your facts do not prove yet, so you can find proof or drop them.
+    - name: "Unanswered"
+      contains: Questions buyers ask that your facts cannot answer yet.
+    - name: "Checks missed"
+      contains: One line for each of the skill's own checks the list failed, or none.
 
 output_shape: |
   POINTS

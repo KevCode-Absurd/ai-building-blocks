@@ -2,17 +2,26 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-to-linear-issue-handover
 name: Gorgias to Linear issue handover
-summary: Share a ticket or problem. Get an issue draft and Slack alert to approve together.
+summary: Turn a Gorgias support ticket into a Linear issue and a Slack alert. You check both first, then it creates the issue and posts the alert.
 job: help-customers
 headline: Gorgias to Linear issue handover
 subhead: Give it a Gorgias ticket number or describe the problem. It prepares a Linear issue and a Slack message with the right team and channel. You review both before it creates the issue and posts the approved alert.
 when:
-  - You use this tool for customer support and need help with this task.
+  - A Gorgias ticket describes a bug that engineering must fix.
+  - A customer problem needs a Linear issue and a heads-up to your team in Slack.
+  - A teammate describes a problem and you need it logged with the right team and priority.
+not_for:
+  - "Routine customer replies or refunds: answer them in Gorgias, where your support team already works."
+  - "You have no Composio access or connected Gorgias, Linear and Slack accounts: write the issue and Slack message by hand."
+  - "The problem is not for engineering: tell the right team in Slack directly, with no Linear issue."
 you_give:
   - A Gorgias ticket number or a clear problem description.
   - The intended Linear team and Slack channel.
 you_get:
-  - After approval, create the Linear issue and include its returned link in the Slack alert.
+  - A plan to approve first, with the issue title, team, priority and Slack message.
+  - A Linear issue created after you approve.
+  - A Slack alert that includes the Linear issue link.
+  - A short report with the links and next steps.
 how_it_works:
   - title: Collect the issue facts
     text: Read the ticket or problem description and find the available Linear teams and Slack channels.
@@ -25,8 +34,26 @@ works_best_with:
     - name: Gorgias, Linear, and Slack
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias to linear issue handover by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide a Gorgias ticket number or a clear problem description.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run Composio CLI commands, with Gorgias, Linear and Slack connected to Composio.
+  - Open the skill folder in your AI and ask it to run escalate.
+  - Give it a Gorgias ticket number, or describe the problem in a few sentences.
+  - Read the Escalation Plan. Fix the team, title, priority or message if needed.
+  - Say yes. Nothing is created or posted until you do.
+  - Open the Linear issue from the report. Update the Gorgias ticket once the issue is fixed.
+output_sample:
+  input:
+    - A Gorgias ticket number, or a short description of the problem
+    - The Linear team that should get the issue (optional)
+    - The Slack channel for the alert (optional)
+  prerequisites:
+    - An AI that can run Composio CLI commands
+    - Gorgias, Linear and Slack accounts connected to Composio
+  output:
+    - name: Escalation Plan
+      contains: The ticket source, subject and customer, the proposed Linear team, title, priority and description, and a preview of the Slack message.
+    - name: Linear issue
+      contains: A new issue made only after you say yes, using the team, title, priority and description you approved.
+    - name: Slack notification
+      contains: A message in your chosen channel with the ticket reference, customer, issue summary, priority and the Linear issue link.
+    - name: Escalation Complete
+      contains: The Linear issue link, the Slack channel it was sent to, the original ticket number and suggested next steps.

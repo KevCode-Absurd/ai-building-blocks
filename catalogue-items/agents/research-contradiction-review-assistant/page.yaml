@@ -1,55 +1,108 @@
 new_slug: research-contradiction-review-assistant
 name: Research contradiction review assistant
 headline: Research contradiction review assistant
-summary: A paper comparison, disagreement map and evidence gaps.
+summary: Compare research papers that disagree. Give it two or more full papers. Get a side-by-side table, a disagreement map and the evidence gaps that matter.
 job: research-topics
 thinking: high
-thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A paper comparison, disagreement map and evidence gaps. Share at least two full papers, the research question, study populations, methods and publication dates. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+thinking_why: It reads several full papers, decides whether their results can be compared and must not rank studies that measured different things.
+subhead: Give it two or more full papers on the same question. It pulls out each paper's population, method and result, then maps where they disagree and why. You get a comparison table, a disagreement map and a list of what is still unknown.
 explain: |-
-  A paper comparison, disagreement map and evidence gaps.
+  Two papers on the same question can reach opposite results. Often they did not measure the same thing. One studied adults and the other studied children. One counted a symptom and the other counted a diagnosis. One was a trial and the other a survey. This research contradiction review checks that first, before it says anyone is wrong.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Different populations, outcomes and designs are not ranked as if they measured the same thing. Missing tools or evidence stay visible in the final summary.
+  For each point of conflict, it puts the papers side by side and asks four things. Was the population the same? Was the outcome defined the same way? Was the design the same kind? Is the gap in the results bigger than those differences explain? Each conflict ends up marked as a real conflict, not comparable, or unclear. It never ranks two studies as if they measured the same thing.
+
+  It works only from the papers you give it, and it points to the section or table for every fact. If you add a draft that summarises the papers, it checks your wording against them. It keeps a short record, so when a new or corrected paper arrives it updates only the comparisons that paper touches.
 when:
-  - You need a paper comparison, disagreement map and evidence gaps.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - Two studies on the same question reached opposite results and you need to explain why.
+  - You are writing a literature review and your sources disagree.
+  - A new paper contradicts one you already cite.
+  - A supervisor or editor asks why two sets of results differ.
+not_for:
+  - You have one paper and want its claims and evidence. Use the Source note summariser.
+  - You want an answer to a question, with sources found for you. Use the Cited research assistant.
+  - You want new papers on a topic each month. Use the Research topic watcher.
+  - You are running a formal systematic review with a set protocol. This agent compares only the papers you give it and does not search databases.
+  - You need one comparison and no record for later. Use the Compare conflicting research findings workflow.
 you_give:
-  - At least two full papers, the research question, study populations, methods and publication dates. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - Two or more full papers on the same question, as PDFs or pasted text (abstracts alone are not enough)
+  - Your research question, in one sentence
+  - The outcome you want compared, such as survival or test scores (optional)
+  - A draft that summarises these papers (optional, for the wording check)
+  - The record from your last review (optional)
 you_get:
-  - A paper comparison, disagreement map and evidence gaps.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A comparison table with each paper's question, population, design, outcome, main result and where in the paper it appears
+  - A disagreement map that marks each conflict as a real conflict, not comparable or unclear
+  - A list of evidence gaps, each with what would settle it
+  - A wording check of your draft against the papers, if you gave one
+  - A short record to start your next review from
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, or paste SKILL.md into a new chat. Claude, ChatGPT and Gemini work if they can read your files. Without file access, paste the text of each paper.
+  - Attach the full papers. Type your research question and the outcome you care about. Attach your draft and your last record if you have them.
+  - Say "Run the review. Use only these papers." Your AI asks once for anything missing.
+  - Open paper-comparison.md first. Check three or four rows against the papers to see that the numbers and locations are right.
+  - Read disagreement-map.md. For each real conflict, read the two passages yourself before you write about it.
+  - Use evidence-gaps.md to decide what to read or ask next. Keep next-review-record.md for the next paper.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep paper ID, version, question, comparable outcomes, unresolved contradictions and source locations. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A supplied paper is added or corrected, or the user requests a comparison review.
-  - title: Choose the next step
-    text: Run compare-conflicting-research-findings for changed evidence or a due review. If a paper changes, extract the changed sections before updating only the affected comparisons. If the paper is missing, return a source request.
-  - title: Check and save evidence
-    text: Different populations, outcomes and designs are not ranked as if they measured the same thing. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last record
+    text: If you supply one, it loads the papers, the comparable outcomes and the open conflicts from last time. On a first run it sets a baseline.
+  - title: Find what changed
+    text: A new or corrected paper triggers a review. It extracts only the changed sections and updates only the comparisons they touch. A missing paper gets a source request.
+  - title: Pull the facts from each paper
+    text: For each paper it writes the question, population, design, outcome, result and publication date, with the section or table number for each.
+  - title: Test whether results can be compared
+    text: For every pair of results it checks population, outcome definition, design and time frame. If any differs, it says so before it says anyone disagrees.
+  - title: Map the disagreements
+    text: Each conflict is marked as a real conflict, not comparable or unclear, with the reason and what would settle it.
+  - title: Check the wording
+    text: If you gave a draft, it flags sentences that say more than the papers show, such as a cause claimed from a survey.
+  - title: Save the record
+    text: It writes the papers, the comparable outcomes and the open conflicts, so a new paper next month starts from here.
 output_shape: |-
-  Scope and source coverage
-  A paper comparison, disagreement map and evidence gaps.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE  <research question> | <n> papers | <outcome compared> | <date of review>
+  CHANGED SINCE LAST REVIEW  <what changed, or "first run">
+
+  PAPER COMPARISON
+    <paper> | <year> | <population> | <design> | <outcome as defined> | <main result> | <where in the paper>
+
+  DISAGREEMENT MAP
+    <point of conflict> | <paper A says, where> | <paper B says, where> | <same population, outcome, design?> | <Real conflict, Not comparable or Unclear> | <why>
+
+  EVIDENCE GAPS
+    <what is unknown> | <which conflict it limits> | <what would settle it>
+
+  WORDING CHECK (only if a draft was given)
+    <sentence> | <what the papers support> | <suggested wording>
+
+  MISSING  <each gap and what it blocks>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - Two or more full papers on the same question
+    - Your research question, in one sentence
+    - The outcome you want compared (optional)
+    - A draft that summarises the papers (optional)
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The full text of each paper, not only the abstract
+  output:
+    - name: paper-comparison.md
+      contains: One row per paper with question, population, design, outcome as defined, main result, publication date and the section or table each fact came from.
+    - name: disagreement-map.md
+      contains: Each point where papers conflict, what each paper says, whether they measured the same thing, and a verdict of real conflict, not comparable or unclear.
+    - name: evidence-gaps.md
+      contains: What is still unknown, which conflict it limits and what would settle it.
+    - name: wording-check.md
+      contains: Sentences in your draft that say more than the papers show, with suggested wording. Written only when you give a draft.
+    - name: next-review-record.md
+      contains: The papers and versions reviewed, the outcomes that can be compared, the open conflicts and the trigger for your next review.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Different populations, outcomes and designs are not ranked as if they measured the same thing.
+  - what: Outcome
+    how: Name the one outcome to compare, such as 12-month survival. It then ignores results on other outcomes.
+  - what: Papers
+    how: Start with the two papers that disagree most. Add more later and let the record carry the comparison forward.
+  - what: Draft
+    how: Paste the paragraph that summarises the papers. The wording check then works on your own sentences.
 judge:
   - Different populations, outcomes and designs are not ranked as if they measured the same thing.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +115,25 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep every review's record in one folder, named by date, so a new paper is compared with the true earlier state.
+  - Write your own definition of the outcome once, for example "relapse within 12 months", and give it each time.
+  - Check the Real conflict rows by hand. They are the ones that will end up in your writing.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads several full papers at once and keeps each fact tied to a section or table.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The supplementary tables for each paper, if the main results sit there.
+    - Your own definition of the outcome.
+    - A named co-author who reads the Real conflict rows.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Population
+    meaning: The people, animals or things a study looked at, and how they were chosen.
+  - term: Study design
+    meaning: How the study was done, such as a trial, a cohort study or a survey.
+  - term: Outcome
+    meaning: The thing the study measured to see if something worked or was linked.
+  - term: Disagreement map
+    meaning: A table of each point where papers conflict, and why.
+  - term: Record
+    meaning: A short file that says where this review stopped, so the next review can start from it.

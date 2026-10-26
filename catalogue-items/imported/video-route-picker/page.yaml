@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs options and locks one path.
 new_slug: video-route-picker
 name: Video route picker
-summary: "Describe your video. Get the right way to make it chosen first:
-  generate, compose, or edit your footage."
+summary: "Pick the right way to make your video before you spend anything: AI generation, built from code, or edited footage. Get a locked route and a plan."
 job: make-video-ads
 headline: Video route picker
-subhead: "Describe your video. Get the right way to make it chosen first:
-  generate, compose, or edit your footage. Bring a description of the video you
-  want. Use the result to plan your next step."
+subhead: "Describe your video. Get the right way to make it chosen first: generate, compose, or edit your footage. Bring a description of the video you want. Use the result to plan your next step."
 explain: |
   Choose how a video will be made before you spend anything: generate it with AI, build it from code and assets, or edit footage you already have. 
   You describe the video. The skill looks at three things: where the visuals come from, how the pieces get assembled, and whether you supplied footage. Then it picks one main route, or a combined plan when a brief mixes types. Generation suits new scenes. Composition suits exact text, charts and repeatable layouts. Editing suits cutting, trimming and finishing your own clips. If production tools or paid services are not available, it still returns a full written package: script, timed storyboard, exact on-screen text, audio direction and export target.
@@ -17,6 +14,10 @@ when:
   - Your brief mixes screen recordings, motion graphics and new scenes.
   - You need exact text on screen that AI video usually gets wrong.
   - You have no tools yet and want a ready plan to hand to someone.
+not_for:
+  - "You want the video made and rendered: this only picks the route, so hand the plan to a video editor or a video tool."
+  - "You already know your route and only need a script: write the script straight in your AI chat."
+  - "You want AI to edit or change your footage: use an editing tool, then come back if the plan mixes methods."
 you_give:
   - A description of the video you want
   - Footage or assets you already have (optional)
@@ -28,7 +29,30 @@ you_get:
   - Exact on-screen text and captions
   - Notes on assets, rights and export
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Write down four things: what the video is about, its length and shape, footage you already have, and any tools or budget."
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
+  - "Add this line, then your four details: Pick the route for this video and lock it. Give me the full plan."
+  - Check the reply. It should name one route (or a mixed plan), give reasons, and list the script, storyboard, on-screen text and export target.
+  - If the route looks wrong, say why and ask your AI to pick again before you start work.
+  - Hand the plan to your editor or video tool. The reply is a plan only. No video has been made yet.
+output_sample:
+  input:
+    - A description of the video you want
+    - Length, shape (like vertical or wide) and where it will play
+    - Footage or assets you already have (optional)
+    - Tools or budget you have (optional)
+  output:
+    - name: Locked route
+      contains: The main way to make the video (generate, compose, edit or a mix), with the reasons for the choice.
+    - name: Assumptions
+      contains: What your AI took as true where your brief was silent, so you can correct it.
+    - name: Script and narration
+      contains: The words spoken in the video, written to fit your length.
+    - name: Timed storyboard
+      contains: A shot-by-shot list showing what appears on screen and for how long.
+    - name: On-screen text and captions
+      contains: The exact words that show on screen, written out so nothing is left to chance.
+    - name: Visual and audio direction
+      contains: Notes on look, motion, music and voice, plus safe fallbacks for any asset you lack.
+    - name: Export target and checks
+      contains: The file shape to export, and a checklist to review the preview and final playback.

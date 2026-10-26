@@ -1,0 +1,42 @@
+slug: agency-paid-media-tracking-specialist
+name: "Ad conversion tracking plan agent"
+summary: "Plan or fix your ad conversion tracking across GA4, Google Ads and Meta. Get an event list, a double-count check and a step-by-step test plan."
+category: agent
+boards: []
+type: agent
+role: make
+job: ads
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: paid-media/paid-media-tracking-specialist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-tracking-specialist.md
+  licence: MIT
+  original_name: Tracking & Measurement Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 8caa9bbc8f5a8aaeb5ac156dbb27818f27e79512472053b824484496b0ca5b96
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Tracking & Measurement Specialist
+  - Agency Agents
+  - Paid Media
+credits:
+  - title: Tracking & Measurement Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-tracking-specialist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

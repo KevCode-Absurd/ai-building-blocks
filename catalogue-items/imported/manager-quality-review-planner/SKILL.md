@@ -10,6 +10,56 @@ metadata:
 
 Assess, measure, and improve people manager effectiveness at scale — from designing manager capability frameworks and 360 feedback tools to targeted development programs, accountability systems, and organizational health diagnostics that surface the true quality of management across the business.
 
+## When to use it
+
+Use it to plan how you will measure management quality across a team of managers and support the ones who struggle.
+
+Skip it when:
+
+- You must decide pay, a promotion or a dismissal for one named manager. Take it to HR and an employment adviser.
+- One person has a complaint about their manager. Use the Workplace conflict mediation guide.
+- You want to train managers rather than review them. Use the Leadership program designer.
+- You only want survey questions for staff. Use the Employee survey designer.
+
+## What to gather first
+
+Ask for anything missing once, in one message. Mark what you still lack as MISSING. Never invent scores, attrition numbers or names.
+
+1. Management levels and headcount at each level.
+2. Engagement or attrition data by team (optional, from your own HR system).
+3. Your company values.
+4. How you gather feedback on managers today (optional).
+5. Your country, since privacy rules for employee data differ.
+
+## Steps
+
+1. Write standards for each management level: what good looks like in team results, team health and people growth.
+2. Write the 360 form with an upward section for the manager's team. Use 4 or 5 rating items and 3 open questions.
+3. Set anonymity rules: a minimum number of responses before any result is shown, such as 5, and combine small teams.
+4. Plan how to compare scores with engagement and attrition from your own data. Say which columns to export.
+5. Write the support plan: coaching steps with dates, who does what, and what happens if there is no progress. Mark the final step "take to HR and legal".
+6. Write a 90-day onboarding outline for new managers and a peer group plan.
+7. Draft the report layout for HR and leaders.
+
+## Output format
+
+1. Standards by level (table)
+2. 360 feedback form and anonymity rules
+3. Data comparison plan (what to export and how to read it)
+4. Support and next-step plan for managers who fall short
+5. New manager onboarding outline
+6. Report layout for HR and leaders
+
+## Rules
+
+- Say that scores show patterns and do not prove cause. A team may have high exits for other reasons.
+- Treat feedback as sensitive staff data. Recommend limiting who can see it and checking local privacy law.
+- Do not invent benchmark scores.
+
+## After you run it
+
+Run the 360 with one team first. Share the report with HR before leaders see it. Then use the Leadership program designer to close the skill gaps.
+
 ## Supported tasks
 
 - Defining manager effectiveness standards and competencies
@@ -59,7 +109,7 @@ Assess, measure, and improve people manager effectiveness at scale — from desi
 2. "How do we handle a manager who consistently delivers results but causes high team attrition?"
 3. "What is the right process for addressing a manager who receives persistently low upward feedback from their team?"
 4. "Write talking points for an HRBP conversation with a business leader about a manager who is a performance risk."
-5. "How do we create meaningful consequences for poor people management without undermining business continuity?"
+5. "How do we create meaningful consequences for poor people management without undermining business continuity? Route any action on a named person through HR and legal."
 
 ### Organizational health and diagnostics
 
@@ -70,8 +120,8 @@ Assess, measure, and improve people manager effectiveness at scale — from desi
 
 ## Tips
 
-- Manager effectiveness is the biggest lever in employee experience and retention — invest here before investing in programs that treat symptoms like low engagement.
-- Most manager problems are predictable: the biggest risks are newly promoted managers, managers in hypergrowth environments, and managers who were promoted for technical excellence without people skills.
+- Manager quality is a major lever in employee experience and retention. Look here before investing in programs that treat symptoms like low engagement.
+- Common risk points are newly promoted managers, managers in hypergrowth environments, and managers who were promoted for technical excellence without people skills.
 - Upward feedback is powerful but fragile — it requires psychological safety design, anonymous aggregation, and clear follow-through commitments from HR to be trusted.
 - Accountability for manager effectiveness must exist at the business leader level, not just the HR level; if business leaders protect strong-results-but-bad-people managers, no HR program will change behavior.
 - Distinguish between manager capability gaps (training can help) and manager motivation gaps (coaching or consequences may be needed) before designing interventions.

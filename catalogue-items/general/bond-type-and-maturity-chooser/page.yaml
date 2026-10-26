@@ -1,6 +1,6 @@
 new_slug: bond-type-and-maturity-chooser
 name: Bond type and maturity chooser
-summary: Compare bond yields, taxes and price risk. Get clear sums, missing inputs and limits before choosing a bond category.
+summary: Compare bond yields, tax and price risk to choose a bond type and maturity. You get clear sums, gaps flagged and limits stated.
 job: money-and-investing
 thinking: medium
 thinking_why: The sums are small. Care is needed to separate tax, credit and price risk and leave unsupported choices unresolved.
@@ -14,6 +14,10 @@ when:
   - You have set a stock and bond split and now need to say what kind of bonds the bond part holds.
   - A bond pays more than the rest and you want to know what you give up for it.
   - You are comparing a tax-free bond with a taxable one.
+not_for:
+  - Your plan has no bond part. Skip this and talk to a licensed adviser about the whole plan first.
+  - You want to buy high-yield, foreign-government or convertible bonds. This tool keeps them out, so ask a licensed adviser.
+  - You need a tax ruling for your own case. Ask a tax adviser, because rules vary by place and account.
 you_give:
   - Your stock and bond split, and the amount in bonds
   - Comparable yields, jurisdiction and investor tax basis
@@ -30,6 +34,30 @@ how_to_use:
   - Paste your split, comparable yields, jurisdiction and tax basis.
   - Supply verified duration or pricing inputs for a rate-risk comparison. Mark missing facts.
   - Review unresolved inputs and the stated limits with a licensed adviser before using the comparison.
+output_sample:
+  input:
+    - Your stock and bond split, or the amount in bonds
+    - Your tax rate on interest
+    - Taxable and tax-free yields you want to compare
+    - Modified duration, or the price and cash flow details (optional)
+    - The price fall you could accept (optional)
+  output:
+    - name: Tax comparison
+      contains: Both yields, the tax break-even rate and which one pays more after tax, or a note that inputs are missing.
+    - name: Rate sensitivity
+      contains: A rough price fall for the rate change you test, checked against the price fall you could accept.
+    - name: Credit checks
+      contains: Issuer, guarantee, currency and rating evidence, kept apart from yield, with the usual safety order as a starting point.
+    - name: Keep out
+      contains: Bond kinds a plain plan should avoid, with the reason for each.
+    - name: Deposit comparison
+      contains: Term, access, yield and insurance limits for a deposit as an alternative to short bonds.
+    - name: Call check
+      contains: The date and price at which the borrower can pay the bond back early, and the risk to you.
+    - name: MISSING
+      contains: Every fact you still need to supply, so no choice rests on a guess.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed and why, or none.
 how_it_works:
   - title: Finds the tax break-even
     text: Checks comparable yields and tax treatment. For a positive taxable yield, shows the supported simple break-even; zero, negative or missing inputs need a different assessment.

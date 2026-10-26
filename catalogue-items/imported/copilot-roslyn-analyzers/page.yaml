@@ -2,17 +2,67 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-roslyn-analyzers
 name: Roslyn analyzer and fix builder
-summary: Describe a C# code rule. Get an analyzer, code fix and tests for the
-  cases it should catch.
+summary: Build a Roslyn analyzer for your C# code rule. You get the analyzer, a code fix and tests for what it should and should not flag.
 job: build-software
 headline: Roslyn analyzer and fix builder
-subhead: Describe a C# code rule. Get an analyzer, code fix and tests for the
-  cases it should catch. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: "Describe a rule for your C# code in plain words and give two or three examples it should flag. It builds the Roslyn analyzer, a code fix that rewrites the flagged code, tests for both cases and the package layout. It ends with a review checklist."
+explain: |
+  A Roslyn analyzer checks your C# code as you type and can offer a one-click fix. This Roslyn analyzer builder turns a rule you can describe into a working analyzer, a separate code fix and tests.
+
+  The tests cover code that must be flagged and code that must not. If you promise VB support, the tests cover VB too. It checks your project setup before it writes code, and builds on operation analysis where it can.
+
+  It also writes the docs page for the rule and the NuGet package layout, with dependency versions pinned. It builds a source generator only when your job needs one.
+when:
+  - "Your team keeps making the same C# mistake in code review."
+  - "You want a rule that shows a warning and offers a fix."
+  - "You need to ship an analyzer as a NuGet package."
+  - "An existing analyzer gives false alarms and you want to fix and test it."
+not_for:
+  - "You only want a style check on plain C# code: use a code review or a linter setup, not a Roslyn analyzer."
+  - "Your rule is for VB.NET only: this skill treats C# as required and VB as optional, so ask a person who knows VB Roslyn work."
+  - "Your task has nothing to do with Roslyn, such as app logic or a bug fix: ask your AI for a normal coding task."
+you_give:
+  - "The rule you want to catch, in plain words"
+  - "Your target framework and test framework"
+  - "Two or three code examples that should be flagged, and some that should not"
+  - "Your existing analyzer and test projects, if you have them"
+  - "The diagnostic ID range your team uses (optional)"
+you_get:
+  - "The analyzer that finds the rule break"
+  - "A code fix that rewrites the flagged code, in its own assembly"
+  - "Tests for code that should be flagged and code that should not"
+  - "A docs page and help link for the rule"
+  - "The project and NuGet package layout"
+  - "A review checklist for design rules, dependency limits and test coverage"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open an AI that can read and edit your project files. Add the skill to the chat or upload the skill folder.
+  - Describe the rule in plain words. Add your target framework, test framework and diagnostic ID range.
+  - Share your existing analyzer and test projects. Add two or three examples that must be flagged and some that must not.
+  - Ask your AI to follow the skill. Let it check your project setup before it writes code.
+  - Build the project and run the tests. Fix any failure with your AI before you merge.
+  - Read the review checklist at the end and confirm each item.
+output_sample:
+  input:
+    - The rule you want to catch, in plain words
+    - Your target framework and test framework
+    - Your existing analyzer and test projects, if you have them
+    - Two or three code examples that should be flagged, and some that should not
+    - The diagnostic ID range your team uses (optional)
+  prerequisites:
+    - An AI that can read and edit your project files
+    - A way to build and run your tests, such as the .NET SDK
+  output:
+    - name: Analyzer
+      contains: The diagnostic analyzer that finds the rule break, built on operation analysis where it can, in its own assembly.
+    - name: Code fix provider
+      contains: The fix that rewrites the flagged code, kept in a separate assembly from the analyzer.
+    - name: Tests
+      contains: Test cases for code that should be flagged and code that should not, with C# and VB cases if VB is promised.
+    - name: Incremental source generator
+      contains: "Only when your job needs one: a generator with its own tests. Skipped for plain analyzer work."
+    - name: Diagnostic documentation and help link
+      contains: A docs page for the rule and the help link that the diagnostic points to.
+    - name: Packaging
+      contains: The project and package layout so the analyzer ships as a NuGet package with the right dependencies.
+    - name: Review checklist
+      contains: A final list to check design rules, dependency limits, unique assembly versions and test coverage.

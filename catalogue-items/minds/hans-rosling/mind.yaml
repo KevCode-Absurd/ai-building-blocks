@@ -15,6 +15,29 @@ use_cases:
   - "Teach a group with a short prediction and evidence exercise"
   - "Read income differences within and between places"
   - "Create a weekly report that separates events from duplicate records"
+not_for:
+  - "You need a medical, legal or personal money decision: ask a qualified professional, not this mind."
+  - "You want to test a claim with experiments or hands-on checks: hire Galileo Galilei instead."
+  - "You want the story of how a scientific idea grew from years of observing: hire Charles Darwin instead."
+output_sample:
+  input:
+    - The claim, number or comparison you are unsure about
+    - The population and year you care about
+    - Your own guess at the answer, if you have one (optional)
+    - Any records, reports or source links you already have (optional)
+  output:
+    - name: Dated question
+      contains: Your impression turned into a clear question with a defined population, outcome and reference period.
+    - name: Distribution check
+      contains: The spread behind an average, including the majority, the extremes and where groups overlap.
+    - name: Counts and rates
+      contains: The isolated number set beside a baseline or denominator, with level and direction of change kept apart.
+    - name: Source and method notes
+      contains: Where the numbers came from, what changed in how they were counted, and any gaps or duplicate records.
+    - name: Corrected conclusion
+      contains: What your first impression got right, what changed, and which uncertainty still matters.
+    - name: Next inquiry
+      contains: The practical decision or question the clearer picture makes possible.
 seats:
   - {seat: "Distributions before generalizations", asks: "Where are most people in this comparison, and what year are we describing?"}
   - {seat: "Dated evidence and proportions", asks: "Compared with what, divided by what, and measured how?"}

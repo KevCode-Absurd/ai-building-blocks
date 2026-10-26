@@ -1,6 +1,6 @@
 new_slug: work-backwards-plan-checker
 name: "Work-backwards plan checker"
-summary: "Paste your goal and plan. Get it rebuilt from the end date, checked a second way, with a score out of 100."
+summary: "Check your plan from the end date back. Paste your goal and plan to get a second-method check, a backup route and a score out of 100."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to rebuild the plan and recompute numbers by a second route, and a slip in either is easy to miss."
@@ -17,6 +17,10 @@ when:
   - You have a launch date, budget or forecast and nobody has checked it a second way.
   - Your plan starts with "first we" and never says what has to be true the week before the end.
   - You trust a tool's number and want to know if it holds up.
+not_for:
+  - "Your goal is too big to plan yet: split it into smaller parts first with the Big problem splitter."
+  - "Your plan has no dates or numbers at all: talk it through with a colleague first, since only step order can be checked."
+  - "You need a go or no-go call on a launch: use the Go or no-go launch checker."
 
 you_give:
   - Your goal, and the date or limit you must meet
@@ -33,6 +37,29 @@ how_to_use:
   - Paste your goal, the date and your plan. Add the numbers if you have them.
   - Read the rebuilt plan first, then the gap between the two methods.
   - Fix the steps marked as one-miss-ends-it, then run the skill again on the new plan.
+output_sample:
+  input:
+    - Your goal, and the date or limit you must meet
+    - Your current plan, even a rough list of steps
+    - The numbers behind the plan, such as costs, hours or volumes (optional)
+    - The decision or doubt you most want checked (optional)
+  output:
+    - name: The end point
+      contains: The result, how it is measured and the date or limit, written once.
+    - name: The plan, built backwards
+      contains: Each step as a condition with a date and an owner, with one-miss-ends-it steps marked.
+    - name: Two methods
+      contains: The answer worked two ways, side by side, with the gap explained.
+    - name: Small changes
+      contains: How far the result moves when each key input is nudged up and down.
+    - name: Cheapest means per step
+      contains: The easiest way to do each step that you can defend, and why others were dropped.
+    - name: Return path and backup
+      contains: A checked backup route for each step where one miss ends the plan.
+    - name: Score
+      contains: A score out of 100 for your original plan, with the six checks shown pass or fail.
+    - name: Missing and checks missed
+      contains: What you did not give, and any check the result still fails.
 
 how_it_works:
   - title: Fixes the end

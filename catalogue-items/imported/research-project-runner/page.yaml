@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must pick the next test from what the last one showed.
 new_slug: research-project-runner
 name: Research project runner
-summary: Give it a research question. Get a run of tested ideas, a log of what
-  you learned, and a findings write-up.
+summary: Run a research project from one question to a write-up. You get tested experiments, a running log of what you learned, and a draft report.
 job: research-topics
 headline: Research project runner
-subhead: "A research project run from question to write-up: a series of tested
-  ideas, a log of what you learned, and a findings report. The agent keeps going
-  without asking you at every step."
+subhead: "A research project run from question to write-up: a series of tested ideas, a log of what you learned, and a findings report. The agent keeps going without asking you at every step."
 explain: |
   A research project run from question to write-up: a series of tested ideas, a log of what you learned, and a findings report. The agent keeps going without asking you at every step.
 
@@ -18,6 +15,10 @@ when:
   - You want a running log of what worked and what did not.
   - You are resuming a project and need it to pick up where it left off.
   - You want a draft write-up at the end.
+not_for:
+  - "You want a quick literature review or a fast answer: ask your AI a plain research question, or search the papers yourself."
+  - "You have one single experiment to run: use one skill for that domain, or run it by hand."
+  - "You want to approve each step as it happens: this agent keeps going without asking, so do the work in normal chat."
 you_give:
   - Research question or plan
   - Compute or tools it may use
@@ -29,9 +30,32 @@ you_get:
   - Findings across experiments
   - Draft report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code, search the web and keep working on
-    its own.
+  - Open an AI that can run code, search the web and work on its own, such as Claude Code.
+  - Paste the skill into the chat, or point your AI to the skill folder.
+  - Tell it your research question, what tools or compute it may use, and how to measure success. Add existing work if you have it (optional).
+  - Let it set up its continuity loop first. This keeps the project going between cycles.
+  - Check research-log.md and findings.md now and then. Redirect it if it drifts.
+  - Read the progress presentation and the draft paper when it finishes, and check every claim before you share it.
+output_sample:
+  input:
+    - Your research question or plan
+    - The compute or tools it may use
+    - A clear measure of success for experiments
+    - Your existing work or code (optional)
+  prerequisites:
+    - An AI that can run code and keep working on its own
+    - Web access, so it can search for papers
+    - Time and compute you are happy for it to spend
+  output:
+    - name: research-state.yaml
+      contains: The central record of where the project stands, so work can restart after a break.
+    - name: research-log.md
+      contains: A timeline of each decision and why it was made.
+    - name: findings.md
+      contains: "The project memory: what the experiments show so far and what to try next."
+    - name: Experiment trajectory
+      contains: A record of each experiment and its measure, so you can see progress over time.
+    - name: Progress presentation
+      contains: An HTML or PDF story of results, plots and next plans, made when there is something worth sharing.
+    - name: Draft paper
+      contains: A write-up of the research question, methods and findings, made when the project concludes.

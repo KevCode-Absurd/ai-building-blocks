@@ -1,33 +1,26 @@
 slug: issuer-capital-distribution-review-assistant
 name: Issuer capital distribution review assistant
-summary: Review executed buybacks and dividends against equity cash flow and the share ledger.
+summary: Check a listed company's share buybacks and dividends against its cash flow and share count. Get an EPS, cash cover and book value review.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - reconcile-buybacks-with-owner-cash
   - dividend-reinvestment-share-schedule
 steps:
   - uses: reconcile-buybacks-with-owner-cash
-    note: Run the governing workflow when When the user provides updated repurchase execution, dividend or equity-statement evidence, compare actual amounts with the previously accepted cash-allocation model.
+    note: Run this when new repurchase execution, dividend or equity-statement evidence arrives. Compare actual amounts with the last accepted cash-allocation model, then run the EPS bridge, the payout cover and the book value roll-forward on the same executed amounts. It hands step 2 the executed dividend and buyback cash, in its workbook and reconciliation.
   - uses: dividend-reinvestment-share-schedule
-    note: If the review includes an actual shareholder reinvestment statement, reconcile dividend cash to acquired shares separately. An authorization without executions stays pending evidence and is never treated as completed buyback cash.
+    note: Run this only when a real shareholder reinvestment statement is supplied. It uses your reinvestment statement and step 1's executed dividend cash, not step 1's other schedules. Divide net dividend cash by the actual reinvestment price, apart from buyback cash. An authorization with no executions stays pending and is never counted as buyback cash.
 origin: own
 version: 1.0.0
 added: 2026-10-22

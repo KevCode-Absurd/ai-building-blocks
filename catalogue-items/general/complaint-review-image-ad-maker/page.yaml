@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: complaint-review-image-ad-maker
 name: "Complaint review image ad maker"
-summary: "Paste your reviews. Get a review card whose grumble proves it works, or a clear stop."
+summary: "Turn your real customer reviews into a plain review card for a story ad. It picks one grumble that proves the product works, or tells you to stop."
 job: make-image-ads
 
 headline: "Complaint review image ad maker"
@@ -17,6 +17,10 @@ when:
   - You have real reviews where customers grumble about something that only happens because the product works.
   - You have the customer's permission to use their review in an ad.
   - Your story ad has a sceptical or grumpy tone and needs a picture to match.
+not_for:
+  - "You have no real reviews yet: ask a few customers for honest ones first, or use another picture. Never write a review yourself."
+  - "Your best review complains about a side effect, a fault, taste or price: it will fail. Pick a different picture for the ad."
+  - "You want a picture made from your story ad alone: write the ad text first with the Fact-based ad copy writer."
 
 you_give:
   - Your real reviews, word for word, with stars, date and where they were posted
@@ -36,6 +40,30 @@ how_to_use:
   - Say which customers agreed to ad use and how they may be named.
   - Paste your story ad underneath.
   - If no review passes, believe it. Don't reword a review to make it fit.
+output_sample:
+  input:
+    - Your real reviews, word for word, with stars, date and source
+    - How each customer may be named, and whether they agreed to ad use
+    - Your approved story ad
+    - Known side effects of your product (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A design tool like Canva or Figma to build the card (optional)
+  output:
+    - name: Review check
+      contains: Every review marked pass or fail, with a one-line reason for each.
+    - name: Card
+      contains: The winning review's title, body, stars, name and date, exactly as allowed.
+    - name: Blank version
+      contains: The same card layout with empty lines, ready to fill.
+    - name: Line under image
+      contains: A short plain caption of about 27 characters that makes no claim the review doesn't make.
+    - name: Flags
+      contains: Permission status and anything to check before the ad runs.
+    - name: How to make it
+      contains: Steps to build the card as real text in a design tool, or a short image prompt.
+    - name: Checks missed
+      contains: One line for each check the card still fails, or none.
 
 how_it_works:
   - title: Sets the house rules

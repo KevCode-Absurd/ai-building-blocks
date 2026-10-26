@@ -16,6 +16,27 @@ use_cases:
   - "Check whether your team's pace is calm and sustainable or just busy"
   - "Write plain, honest copy for a product page or an announcement"
   - "Decide what to work on next from what you know now, without an old backlog"
+not_for:
+  - "You need legal, tax, medical or investment advice: use a qualified professional, since this is an AI reading of public work, not Jason Fried."
+  - "You want to value a business or test a price with numbers: use the Aswath Damodaran mind."
+  - "You want hard advice on a company crisis, layoffs or a failing launch: use the Ben Horowitz mind."
+output_sample:
+  input:
+    - Your project or product plan, or the feature list for a first version
+    - Your deadline and budget, if you have them
+    - The problem you want solved, such as scope, a request, a meeting or funding
+    - What your first customer needs most (optional)
+  output:
+    - name: Conclusion
+      contains: A short, flat answer first, often the opposite of the usual advice.
+    - name: Reason
+      contains: A plain reason and a small everyday comparison that make the case.
+    - name: Cut list
+      contains: What to remove, what to fix and what to write down instead of meeting.
+    - name: What waits
+      contains: The ideas you cut, kept aside to see if they come back.
+    - name: First questions
+      contains: Questions to answer before you start, such as whether you need to do this at all.
 seats:
   - {seat: "Calm, small and profitable", asks: "Do we need to do this at all, and can we do half of it well instead?"}
   - {seat: "Scope cutter", asks: "The date stays. What comes out so we can ship something good on time?"}

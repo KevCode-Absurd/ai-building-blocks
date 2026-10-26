@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a fixed sentence format from your description.
 new_slug: job-story-writer
 name: Job story writer
-summary: Describe a customer situation. Get job stories in the when, I want, so
-  I can format, with checks for done.
+summary: Turn a customer situation into job stories in the When, I want, so I can format, with acceptance criteria your team can check.
 job: build-product
 headline: Job story writer
-subhead: Backlog items that start from the customer's situation instead of a
-  made-up persona. Describe the product, the feature, and the moments when
-  people need it.
+subhead: Backlog items that start from the customer's situation instead of a made-up persona. Describe the product, the feature, and the moments when people need it.
 explain: |
   Backlog items that start from the customer's situation instead of a made-up persona. Describe the product, the feature, and the moments when people need it. The skill turns each into a job story in the form: when this happens, I want to do this, so I can reach that result.
 
@@ -18,6 +15,10 @@ when:
   - You must split a big feature into small, testable pieces.
   - You want backlog items based on what customers are doing at that moment.
   - Developers ask what done looks like and you have no answer.
+not_for:
+  - "You need to fix one bug: write a plain bug report with steps to repeat it and what you expected."
+  - "You are still learning who your customers are: run customer interviews first, then come back with real situations."
+  - "Your team wants short role-based stories: write plain user stories in the As a, I want, so that format."
 you_give:
   - The product name
   - The feature to break down
@@ -29,7 +30,23 @@ you_get:
   - Titles that state the outcome
   - Design links attached to the stories
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - "Paste the prompt below into the chat. Fill in the four brackets: Product, Feature, Situations, Design link. Delete the design line if you have none."
+  - "Prompt: Write job stories in the format When [situation], I want to [motivation], so I can [outcome]. Product: [your product]. Feature: [your feature]. Situations: [when people need it]. Design: [link]. Give each story a title and 6 to 8 acceptance criteria I can observe and measure."
+  - Check that each story starts from a situation, not a type of person. Fix any criterion you could not test.
+  - Paste the stories into your backlog tool. Link each acceptance criterion to a test or QA checklist.
+output_sample:
+  input:
+    - Your product name
+    - The feature you want to break into stories
+    - Situations when people need the feature
+    - A link to your designs, such as Figma or Miro (optional)
+  output:
+    - name: Title
+      contains: A short line that names the result the customer wants.
+    - name: Description
+      contains: "One sentence in the form: When this happens, I want this, so I can reach that result."
+    - name: Design
+      contains: The link to your design files, placed next to the story.
+    - name: Acceptance Criteria
+      contains: Six to eight checks you can watch and measure, from spotting the situation to reaching the result.

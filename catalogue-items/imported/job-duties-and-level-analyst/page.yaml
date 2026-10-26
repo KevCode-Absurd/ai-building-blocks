@@ -2,35 +2,93 @@ thinking: medium
 thinking_why: It breaks a role into parts and weighs each one.
 new_slug: job-duties-and-level-analyst
 name: Job duties and level analyst
-summary: Name a role. Get its duties, time split, required skills and a fair
-  level, ready for pay and planning.
+summary: "Name a role. Get a job analysis: duties with time split, needed skills and a suggested level, ready for pay and planning."
 job: hire-people
 headline: Job duties and level analyst
-subhead: Name a role. Get its duties, time split, required skills and a fair
-  level, ready for pay and planning. Bring the role title and department. Use
-  the result to plan your next step.
+subhead: Give it a role title and notes from people who do the job. It writes a job analysis. You get a duties list with a time split, the skills needed, and a suggested level with reasons.
 explain: |
-  A role written down as it is actually done, with a fair level to match. Name the role. The skill plans a job analysis, choosing methods such as interviews, questionnaires and task lists, and then drafts the duties, the share of time spent on each, and the knowledge, skills and abilities needed.
+  A job analysis writes down what a role really involves, not what an old job description says. This skill turns your notes into a duties list, a time split, the skills the job needs and a suggested level.
 
-  It rates job complexity to suggest a level or pay band, and it helps check whether the written duties match real work. It supports overtime-exemption decisions with documented facts. The output is a clean job content record you can use for pay reviews, workforce planning and training needs, and one you can defend if someone challenges how the role was classified.
+  It plans how you would gather the facts: interviews, a questionnaire, a task list or watching the work. It marks which duties are essential and which are marginal. It labels any duty it inferred, so you can check it. It rates how complex the job is, using your own level structure if you have one.
+
+  It gathers facts for a decision. It does not make the legal call on overtime pay or disability accommodation. Ask an employment lawyer for that.
 when:
   - Two people have the same title but do very different work.
   - You are building levels for a new set of roles.
-  - You need to justify a pay band for a position.
+  - You need to explain a pay band for a role.
   - A job description is years old and nobody trusts it.
+not_for:
+  - "You only need a job post: use the Job post writer."
+  - "You need a pay range: use the Pay band builder after this one."
+  - "You need skills and levels for many roles at once: use the Role skills framework builder."
+  - "You need a legal decision on overtime pay or an accommodation: ask an employment lawyer. This skill only gathers the facts."
 you_give:
   - The role title and department
-  - Notes from people who do the job or manage it
-  - Existing job descriptions (optional)
+  - Notes from people who do the job and their manager
+  - An existing job description (optional)
   - Your level or pay structure (optional)
+  - Your country, if there is a legal question (optional)
 you_get:
-  - A duties list with time split
-  - Required skills and knowledge
-  - A suggested job level
-  - A job analysis plan
-  - A record you can use for pay and planning
+  - A plan for how to gather the facts
+  - A duties table with share of time
+  - Each duty marked essential or marginal
+  - A list of needed knowledge and skills
+  - A suggested level with reasons, and gaps to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload the skill folder if your tool allows it.
+  - Paste the role title, department and your notes. Interview notes and task lists both work.
+  - Add the old job description and your level structure if you have them.
+  - Check the duties marked INFERRED. Ask two people who do the job if they are true.
+  - Check that the time shares add to 100 percent and match real weeks.
+  - Take anything marked for HR or legal to the right person before you set a level.
+how_it_works:
+  - title: Plan the analysis
+    text: It picks methods that suit the role and who to ask.
+  - title: List the duties
+    text: It lists duties from your notes and marks any it inferred.
+  - title: Split the time
+    text: It gives each duty an estimated share of time that adds to 100 percent.
+  - title: Mark essential or marginal
+    text: It marks each duty and gives a one-line reason.
+  - title: List the skills
+    text: It lists the knowledge, skills and abilities that the duties need.
+  - title: Suggest a level
+    text: It rates complexity with your levels, or a plain scale, and lists what to check.
+output_shape: |-
+  Analysis plan: <methods | people to ask | time needed>
+  Duties: <duty | share of time | essential or marginal | source>
+  Skills needed: <need | type | linked duty>
+  Complexity and suggested level: <rating | reasons>
+  Gaps and things to check: <list, with what goes to HR or legal>
+output_sample:
+  input:
+    - The role title and department
+    - Notes from people who do the job and their manager
+    - An existing job description (optional)
+    - Your level or pay structure (optional)
+  output:
+    - name: Analysis plan
+      contains: How to gather the facts, who to ask and how long it takes.
+    - name: Duties table
+      contains: Each duty, its share of time, essential or marginal, and where it came from.
+    - name: Skills table
+      contains: Knowledge, skills and abilities needed, each linked to a duty.
+    - name: Complexity rating and suggested level
+      contains: How complex the job is, the level that fits, and why.
+    - name: Gaps and things to check
+      contains: What to confirm with staff, and what to take to HR or legal.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can structure your notes. The facts must come from people who do the job.
+  inputs:
+    - Interview notes from two people in the role
+    - Your level or grade chart
+    - A task list kept for a week
+terms:
+  - term: Job analysis
+    meaning: Studying a job to record its duties and what it needs.
+  - term: Essential duty
+    meaning: A duty the job exists to do, and cannot be dropped.
+  - term: KSAOs
+    meaning: Knowledge, skills, abilities and other needs of a job.

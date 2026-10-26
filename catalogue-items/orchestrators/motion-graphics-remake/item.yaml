@@ -17,11 +17,11 @@ outputs:
   - {type: audit_report}
 uses: [video-ad-style-remake-planner, ad-script-read-aloud-editor, video-ad-format-picker, motion-graphics-build-plan, meta-ads-compliance-checker]
 steps:
-  - {uses: video-ad-style-remake-planner, note: "Start from your best script and write a remake plan that keeps every word in its place."}
-  - {uses: ad-script-read-aloud-editor, note: "Read the script aloud and fix the lines that sound written, changing no claim or number."}
-  - {uses: video-ad-format-picker, note: "Score formats for the remade script and confirm motion graphics ranks well before you build."}
-  - {uses: motion-graphics-build-plan, note: "Take the remade script through the build stages, with the words set as live text."}
-  - {uses: meta-ads-compliance-checker, note: "Check the script and the on-screen words against Facebook and Instagram ad rules."}
+  - {uses: video-ad-style-remake-planner, note: "Start from your best script and write a remake plan that keeps every word in its place. Hands the remade script to the read-aloud step."}
+  - {uses: ad-script-read-aloud-editor, note: "Read the script aloud and fix the lines that sound written, changing no claim or number. Hands the final script to the format check, the build plan and the rules check."}
+  - {uses: video-ad-format-picker, note: "Score formats for the final script from step 2 and confirm motion graphics ranks well before you build. Hands you a go or stop. The build uses the script, not this score."}
+  - {uses: motion-graphics-build-plan, note: "Take the final script from step 2 through the build stages, with the words set as live text. Uses your product facts and cutouts, not step 3's score. Hands the build plan and the on-screen words to the rules check."}
+  - {uses: meta-ads-compliance-checker, note: "Check the final script from step 2 and the on-screen words in step 4's build plan against Facebook and Instagram ad rules. Hands back a verdict with each flagged line quoted."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-remake-your-best-video-ad-as-motion-graphics/skeleton.yaml

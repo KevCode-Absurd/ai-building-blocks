@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It picks a planner and checks the path.
 new_slug: robot-arm-motion-planner
 name: Robot arm motion planner
-summary: Give it a start and goal pose. Get a smooth path and timed moves for the arm.
+summary: Plan a robot arm motion path in MATLAB. Give it start and goal poses. You get a collision-free path and a timed trajectory within speed limits.
 job: build-software
 headline: Robot arm motion planner
-subhead: An arm that moves from pose A to pose B along a path that avoids
-  obstacles, with timing that respects speed and acceleration limits. That is
-  what you finish with, as MATLAB code you can run.
+subhead: An arm that moves from pose A to pose B along a path that avoids obstacles, with timing that respects speed and acceleration limits. That is what you finish with, as MATLAB code you can run.
 explain: |
   An arm that moves from pose A to pose B along a path that avoids obstacles, with timing that respects speed and acceleration limits. That is what you finish with, as MATLAB code you can run.
 
@@ -17,6 +15,10 @@ when:
   - A tool must move at constant speed along a seam, like welding or cutting.
   - Your workspace has boxes or meshes the arm must not touch.
   - You already have waypoints and need them joined into timed moves.
+not_for:
+  - "You need to build or load the robot model, or solve IK and FK: use the robot kinematics skill first, then come back here."
+  - "You plan paths for wheeled robots or ground vehicles: use a mobile robot navigation tool or a person who knows your platform."
+  - "You want to simulate forces and torques, or turn the planner into deployable code: this skill does neither, so use a dynamics tool or MATLAB Coder."
 you_give:
   - A robot model already set up in MATLAB
   - Start and goal poses or joint values
@@ -28,8 +30,34 @@ you_get:
   - Planner choice with reasons
   - A collision check of the final motion
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Robotics System Toolbox.
+  - Get your robot model ready in MATLAB first. If you do not have one, use the robot kinematics skill to build it.
+  - Open an AI that can run MATLAB code. You need MATLAB with Robotics System Toolbox, which is a paid product.
+  - Paste the skill into your AI. Then add your start and goal poses, your obstacles and your speed limits.
+  - Check the planner your AI picks and the reason it gives. Ask for a different one if it does not fit.
+  - Read the collision check on the final timed motion before you trust the path.
+  - Test the trajectory in simulation before you run it on a real arm.
+output_sample:
+  input:
+    - Your robot model, already set up in MATLAB
+    - Start and goal poses, or joint values
+    - Obstacle shapes or an environment map (optional)
+    - Speed and acceleration limits (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with Robotics System Toolbox, which is a paid product
+    - A robot model from the robot kinematics skill, if you do not have one yet
+  output:
+    - name: Collision risk check
+      contains: A note on whether obstacles exist in the workspace, so collision safety is planned in from the start.
+    - name: Environment model
+      contains: Your obstacles set up as a collision world the planner can use.
+    - name: Planner choice
+      contains: The planner picked for your task, such as RRT or CHOMP, with the reason.
+    - name: Planned path
+      contains: A collision-free path from your start pose to your goal pose, shortened where possible.
+    - name: Timed trajectory
+      contains: The path turned into timed moves that respect speed and acceleration limits, such as time-optimal or constant speed.
+    - name: Collision verification
+      contains: A check that the whole timed motion stays clear of obstacles.
+    - name: Visualization
+      contains: A plot or animation of the arm following the planned motion.

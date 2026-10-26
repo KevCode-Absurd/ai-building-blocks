@@ -2,29 +2,28 @@ thinking: high
 thinking_why: Wrong setup choices quietly ruin the final comparison.
 new_slug: rna-seq-comparison-preparer
 name: RNA-seq comparison preparer
-summary: Give it sequencing output. Get counts ready to compare gene activity
-  between groups, with replicate and setup checks.
+summary: Turn RNA-seq reads or Salmon output into a checked counts table to compare gene activity between groups, with replicate and strandedness checks.
 job: research-topics
 headline: RNA-seq comparison preparer
-subhead: Sequencing output turned into a checked table of gene counts, ready to
-  compare gene activity between groups. Mistakes in set-up are caught before
-  they ruin the analysis.
+subhead: Sequencing output turned into a checked table of gene counts, ready to compare gene activity between groups. Mistakes in set-up are caught before they ruin the analysis.
 explain: |
   Sequencing output turned into a checked table of gene counts, ready to compare gene activity between groups. Mistakes in set-up are caught before they ruin the analysis.
 
   The skill takes FASTQ files or output from Salmon, STAR or featureCounts, and can set up the nf-core/rnaseq pipeline. It validates the sample list, checks you have real biological replicates, confirms strandedness and records which reference was used. Quality checks run before and after counting. It then assembles a counts matrix with the right sample and gene order and hands it to PyDESeq2. It needs Python with pandas and numpy, and often Nextflow with containers.
 when:
   - You have raw reads and need a counts table.
-  - You want to check your experiment has enough replicates before paying for
-    compute.
+  - You want to check your experiment has enough replicates before paying for compute.
   - Salmon output must become a matrix for DESeq2.
   - You are unsure about strandedness or reference settings.
+not_for:
+  - "You have single-cell data: use scanpy, not this skill."
+  - "You already have a counts table and only want the statistics: use pydeseq2."
+  - "You only want pathway results from a finished gene list: use pathway-enrichment."
 you_give:
-  - FASTQ files or quantification output
-  - A sample sheet with groups
-  - The reference genome or transcriptome used
-  - Batch information (optional)
-  - Python and, for raw reads, Nextflow set up
+  - Your FASTQ files, or Salmon, STAR or featureCounts output
+  - A sample sheet that lists each sample and its group
+  - The reference genome or transcriptome you used
+  - Batch details for each sample (optional)
 you_get:
   - A validated counts matrix
   - A matching sample metadata table
@@ -32,8 +31,34 @@ you_get:
   - A record of settings and versions
   - A handoff ready for PyDESeq2
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python and command line tools.
+  - Open Claude, ChatGPT or Gemini in a mode that can run Python and command line tools. Raw reads also need Nextflow with containers.
+  - Paste the skill text from this page, or upload the skill folder.
+  - "Add your files, sample sheet and reference details. Say which route you use: raw reads or Salmon, STAR or featureCounts output."
+  - Let your AI check the sample sheet first. Fix any replicate or strandedness problem it flags before counting starts.
+  - Read the QC report, then check that counts.csv and metadata.csv list the same samples.
+  - Pass both files to the pydeseq2 step to compare your groups.
+output_sample:
+  input:
+    - Your FASTQ files, or Salmon, STAR or featureCounts output
+    - A sample sheet that lists each sample and its group
+    - The reference genome or transcriptome you used
+    - A gene-to-transcript map for the Salmon route (tx2gene file)
+    - Batch details for each sample (optional)
+  prerequisites:
+    - An AI that can run Python and command line tools
+    - Python 3.11 or newer with pandas and numpy
+    - pytximport, if you start from Salmon output
+    - Nextflow with containers, if you start from raw reads
+  output:
+    - name: Validated sample sheet
+      contains: Your sample list checked for missing fields, real biological replicates and the strandedness setting before any compute is spent.
+    - name: QC report
+      contains: Quality checks run before and after counting, such as mapping rate, duplication and sample outliers.
+    - name: counts.csv
+      contains: A gene by sample table of counts, with samples and genes in the right order.
+    - name: metadata.csv
+      contains: A matching table of samples with their group and any batch details, ready for PyDESeq2.
+    - name: Run record
+      contains: The reference used, tool versions and settings, so the run can be repeated.
+    - name: PyDESeq2 handoff
+      contains: Notes on how to feed the counts and metadata into PyDESeq2 for the group comparison.

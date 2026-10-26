@@ -1,50 +1,88 @@
 new_slug: prepare-a-referral-administration-handover
 name: Prepare a referral administration handover
 headline: Prepare a referral administration handover
-summary: Share the source files. Get a referral status handover, missing confirmations and follow up drafts.
+summary: Hand over clinic referral paperwork. Get what was sent, received and booked, the missing confirmations and draft follow-ups, with no clinical detail.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A referral status handover, missing confirmations and follow up drafts. Share authorized minimal referral status records, receipt and dispatch evidence, clinic approved follow up rules and incoming administrator. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the referral status records you may share, with proof of each step. It keeps only the administrative status, then writes a handover with pending confirmations and draft follow-ups. It does not judge clinical urgency.
 explain: |-
-  A referral status handover, missing confirmations and follow up drafts.
+  Referral paperwork is easy to lose between administrators. A referral can be sent but never received, or received but never booked. The next person needs to know which. This referral administration handover keeps those states apart.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Sent, received, booked and completed remain distinct; no clinical urgency or patient outcome is inferred. Missing tools or evidence stay visible in the final summary.
+  The Source note summariser pulls only the status and the proof of each referral, with its record reference, and drops clinical detail. The Handover note writer then lists pending confirmations first, then contacts, deadline evidence and who to escalate to. For each unconfirmed referral it adds a follow-up draft.
+
+  Nothing is sent. The pack never decides which patient matters most. If a record says a referral is urgent, it repeats that line and points to the clinician. Patient detail stays to the reference and what your clinic allows.
 when:
-  - You need a referral status handover, missing confirmations and follow up drafts.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - An administrator is leaving or going on leave, and someone else takes the referral list.
+  - You need to know which referrals were only sent and which were really booked.
+  - A receiving service has gone quiet, and you want follow-ups ready to send.
+  - A clinic manager wants a status report with proof for each referral.
+not_for:
+  - "You want to check records over time, with closure proof: use the Referral administration evidence review assistant."
+  - "You want customers to refer friends to your business: use the Referral program designer."
+  - You want to decide who is seen first, or how urgent a case is. That is for clinicians.
+  - You want letters or messages sent. You get drafts only, and you send them.
 you_give:
-  - Authorized minimal referral status records, receipt and dispatch evidence, clinic approved follow up rules and incoming administrator.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Referral status records you may share, with a reference for each (from your clinic system or log)
+  - "Proof of each step: sent, received, booked, with dates"
+  - Your clinic's follow-up rules, such as how long to wait before chasing
+  - Who takes over, and from when
+  - Clinicians and services to escalate to (optional)
 you_get:
-  - A referral status handover, missing confirmations and follow up drafts.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - Pending confirmations, listed first
+  - Each referral's state (sent, received, booked or completed), with proof and date
+  - Any line that needs a clinician, copied as written
+  - A draft follow-up for each unconfirmed referral, marked not sent
+  - Contacts, and a list of gaps
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste or attach only the records you may share. If your clinic's rules ask for it, remove names and clinical notes first.
+  - Check each referral's state against your own log. Booked needs a booking record.
+  - Read the lines marked as needing a clinician, and pass them on yourself.
+  - Edit the follow-up drafts, then send them yourself. Nothing is sent for you.
 how_it_works:
   - title: Source note summariser
-    text: Extract only the administrative status and confirmation evidence needed for the handover, minimizing patient identifiers and retaining record references.
+    text: Pulls only the status and proof of each referral, with record reference and date, and drops clinical detail. Hands step 2 one line per referral. Check before moving on, every referral has a state and the source of that state.
   - title: Handover note writer
-    text: Prepare the administrator handover with pending confirmations, authorized contacts, deadline evidence and clinician escalation points; never reprioritize clinical care.
+    text: Writes the handover from step 1's referral lines, with pending confirmations first, then contacts, deadline evidence and clinician escalation points. Adds a follow-up draft for each unconfirmed referral, marked not sent. Never reorders clinical care.
+  - title: Check and hand back
+    text: Joins both files, checks that each state matches its proof, and lists every gap and every check that did not run.
 output_shape: |-
-  Scope and source coverage
-  A referral status handover, missing confirmations and follow up drafts.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  NEEDS A CLINICIAN <reference | line from the record as written | escalation contact>
+  PENDING CONFIRMATIONS <reference | state | proof | what is missing | how long waiting>
+  REFERRAL STATUS <reference | sent | received | booked | completed, each with date and source>
+  FOLLOW-UP DRAFTS <reference | draft text | DRAFT, NOT SENT>
+  CONTACTS <name or role | for what>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - Referral status records you may share, with a reference for each
+    - Proof of sent, received and booked, with dates
+    - Your clinic's follow-up rules
+    - Who takes over
+  prerequisites:
+    - An AI that can read files or long pasted text
+    - The two component skills, which come in the pack
+    - Permission under your clinic's rules to share the records with your AI
+  output:
+    - name: Needs a clinician
+      contains: Any record line that mentions urgency, copied as written, with who to escalate to.
+    - name: Pending confirmations
+      contains: Referrals sent but not confirmed received or booked, and what proof is missing.
+    - name: Referral status
+      contains: Each referral's state, with the date and source of that state.
+    - name: Follow-up drafts
+      contains: A short chase message for each unconfirmed referral, marked draft and not sent.
+    - name: Hand-back summary
+      contains: The files saved, steps run, missing items and any check that could not run.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Sent, received, booked and completed remain distinct; no clinical urgency or patient outcome is inferred.
+    how: Run one clinic, service or batch of referrals at a time so the proof stays easy to check.
+  - what: Patient detail
+    how: Share the referral reference and only what your clinic allows. Leave out diagnoses and notes about care.
+  - what: Follow-up rules
+    how: Add how long you wait before chasing. The drafts then use your rule, not a guess.
 judge:
   - Sent, received, booked and completed remain distinct; no clinical urgency or patient outcome is inferred.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +95,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep your clinic's follow-up rules with the pack so each handover chases on the same schedule.
+  - Record where proof of receipt and booking is kept, so each state can point to it.
+  - Run the pack again at the next handover and see which referrals are still unconfirmed.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads a status export and your rules together. Check your clinic's rules before you share records with any AI.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A referral log or status export.
+    - Your clinic's list of who to escalate to.
 terms:
+  - term: Referral
+    meaning: A request from one clinic or professional to another service to see a patient or client.
+  - term: Confirmation
+    meaning: Proof that the other side received or booked the referral.
+  - term: Escalation point
+    meaning: The clinician or manager to tell when a record needs their decision.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

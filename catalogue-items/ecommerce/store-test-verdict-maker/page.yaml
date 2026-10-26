@@ -1,6 +1,6 @@
 new_slug: store-test-verdict-maker
 name: "Store test verdict maker"
-summary: "Give it test numbers and dates. Get valid or not, the lift as a range, a ship call and a trust score."
+summary: "Check if your store test result can be trusted. Get a ship call, the lift as a range in money, and a trust score out of 100."
 job: test-store-changes
 thinking: high
 thinking_why: "It judges whether a result is real and weighs several checks together, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - Your testing tool shows a winner and you are about to roll it out.
   - A test ended with no clear result and you want to know what that means.
   - A lift looks too good to be true and you want to check it before you plan around it.
+not_for:
+  - Your test has no planned sample or dates. Write a plan first, or ask your testing tool for its suggested run length.
+  - You have not run the test yet. Check the design with a person who knows testing, or a simple plan, before you start.
+  - You want a verdict on a test that is not about a store page. Use a general A/B test verdict maker instead.
 
 you_give:
   - Visitors and conversions for each version, the planned split, and the planned sample and dates
@@ -37,6 +41,34 @@ how_to_use:
   - List anything that changed during the test, such as sales, email sends or site changes.
   - Add your gross profit per order and the smallest gain worth shipping, if you know them.
   - Save the log entry it gives you, then act on the call.
+output_sample:
+  input:
+    - Visitors and conversions for each version
+    - Your planned split, sample and dates
+    - Your main metric and guardrails, such as order value, margin and returns
+    - Any sale, email send, outage or tracking change during the test
+    - Your gross profit per order (optional)
+  prerequisites:
+    - An AI chat tool that can do sums from pasted numbers
+  output:
+    - name: CALL
+      contains: One of ship, do not ship, re-test or inconclusive.
+    - name: TRUST
+      contains: A score out of 100 with the points taken off shown as a sum.
+    - name: CHECKS
+      contains: Pass or fail for split, length, early stopping, tracking and contamination, and flicker and bots.
+    - name: RESULT
+      contains: Control against variant, the difference with its range, and the smallest lift worth shipping.
+    - name: MONEY
+      contains: Gross profit per month at the low, middle and high end of the range.
+    - name: GUARDRAILS
+      contains: Whether order value, margin and returns held or got worse.
+    - name: SEGMENTS
+      contains: Results for splits you agreed before the test, or a note that none were agreed.
+    - name: WHY
+      contains: Two sentences giving the reason for the call.
+    - name: LOG
+      contains: A test log entry with hypothesis, evidence, metrics, dates, result, split check, call and lesson.
 
 how_it_works:
   - title: Checks the split

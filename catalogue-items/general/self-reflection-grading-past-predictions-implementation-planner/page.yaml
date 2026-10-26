@@ -1,38 +1,131 @@
 new_slug: self-reflection-grading-past-predictions-implementation-planner
 name: Agent prediction review builder
-summary: Build a prediction score log and proposed lessons.
+summary: "Grade your AI agent's past predictions against what happened. Get a score log, a likely cause for each miss and lessons to review. Draft only."
 job: build-software
 headline: Agent prediction review builder
-subhead: Share recorded predictions, dates, actual outcomes and grading rules. Get a prediction score log and proposed lessons.
+subhead: "Give it the predictions your AI agent saved, what really happened and your grading rule. It scores each one with set math, tells a wrong read from a wrong action, and drafts lessons for a person to review. Nothing is run or changed."
 explain: |-
-  Share recorded predictions, dates, actual outcomes and grading rules. Get a prediction score log and proposed lessons.
+  An AI agent says "pause this ad and results will go up 15% in a week." A week later, did they? Most teams never check. The agent keeps making the same kind of call, right or wrong.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill builds a way to grade agent predictions. First, it checks that each prediction was saved before the result was known. A prediction written after the fact is not graded. Then it looks at the result at the end of the window the agent named, not at today's number. It scores each one with plain math: right direction, close size, right timing. A written reason is added only after the score.
+
+  It then separates two kinds of miss. The agent may have read the problem wrongly. Or it may have read it right and chosen an action that did not move the number. Lessons are drafted only once there are enough graded results, and each lesson waits for a person to approve it. The skill also reads a starter grading script and lists what it gets wrong. It does not run code or change any live rule.
 when:
-  - You need a prediction score log and proposed lessons.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - "Your agent has made 20 recommendations and you want to know how many were right."
+  - "An agent keeps suggesting the same fix and you doubt it works."
+  - "You want lessons for your agent based on results, not on opinions."
+  - "You have a starter grading script and need to know what it misses before you rely on it."
+not_for:
+  - "You turn Slack reactions and comments into lessons. Use the Agent feedback learning builder."
+  - "You want to test one belief of your own with a small bet. Use the Prediction and bet planner."
+  - "Nobody saved the predictions before the results came in. They cannot be graded fairly. Start saving them first, then come back."
+  - "You want the agent to change its own live rules. This skill drafts lessons. A person approves each one."
 you_give:
-  - Recorded predictions, dates, actual outcomes and grading rules
+  - "The predictions your agent saved, with the agent, the date saved, the number it watches, the direction and size it expected, and the check date"
+  - "What really happened, with the value before, the value at the check date and the dates"
+  - "Your grading rule, such as how close counts as right and the smallest change that counts as real"
+  - "How many graded results you want before a lesson is drafted (optional)"
+  - "Your grading code and tables (optional)"
 you_get:
-  - A prediction score log and proposed lessons
-  - A failure checklist and synthetic test cases
+  - "A score log with one row per prediction: predicted, actual, score and result"
+  - "A list of predictions that could not be graded, with the reason for each"
+  - "A likely cause for each miss: wrong read or wrong action"
+  - "Draft lessons marked for review, only where there are enough results"
+  - "Gaps in the starter grading code, and test cases on made-up predictions"
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open the skill in your AI. A chat AI works if you paste your predictions in. A coding AI such as Claude Code works better if you want it to read your scripts."
+  - "Paste the saved predictions, what happened and your grading rule. Remove client names first."
+  - "Read MISSING and NOT GRADED first. A prediction with no save date is not graded."
+  - "Check three scores by hand using the math the skill shows. If they differ, fix the rule before you trust the rest."
+  - "Read each draft lesson. Keep, change or drop it. Nothing goes into the agent's live rules until you say so."
+  - "Run the test cases on a copy of your system, never on live data."
 how_it_works:
-  - title: Step 1
-    text: Save the prediction before the outcome is known.
-  - title: Step 2
-    text: Match the correct outcome window.
-  - title: Step 3
-    text: Grade with deterministic math where possible.
-  - title: Step 4
-    text: Use explanation text only after scoring.
-  - title: Step 5
-    text: Separate wrong diagnosis from wrong action.
-  - title: Step 6
-    text: Propose lessons and record review maturity without silently changing production rules.
+  - title: Checks the save date
+    text: A prediction counts only if it was saved before the result was known. Others go to NOT GRADED.
+  - title: Finds the right window
+    text: Reads the result at the end of the window the agent named, not at today's value.
+  - title: Scores with math
+    text: Gives points for direction, size and timing. The score never comes from the AI's opinion.
+  - title: Writes the reason after
+    text: Adds a short explanation only once the score is fixed, using the evidence you gave.
+  - title: Splits wrong read from wrong action
+    text: Marks whether the agent misread the cause or read it right and chose an action that did not work.
+  - title: Drafts lessons
+    text: Finds patterns only when there are enough graded results. Each lesson is a draft for a person.
+  - title: Lists gaps and tests
+    text: Reads the starter script and tables, names what they get wrong, and writes test cases.
+output_shape: |-
+  BASIS
+  <what was read; nothing was run>
+  MISSING: <inputs and what each stops>
+
+  GRADING RULE
+  <direction> | <size> | <timing> | <smallest real change> | <how the score is worked out>
+
+  SCORE LOG
+  <id> | <agent> | <saved on> | <checked on> | <number watched> | <predicted> | <actual> | <score> | <result> | <cause> | <review status>
+
+  NOT GRADED
+  <id> | <reason>
+
+  PATTERNS
+  <agent and type> | <graded count> | <share correct> | <enough to act?>
+
+  DRAFT LESSONS
+  <id> | <type> | <lesson, under 60 words> | <applies to> | draft
+
+  GAPS IN THE STARTER
+  <#> | <what it does> | <why it matters> | <fix>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <one smallest useful step>
+output_sample:
+  input:
+    - "The predictions your agent saved, with save dates"
+    - "What really happened, with dates"
+    - "Your grading rule"
+    - "How many results you want before a lesson (optional)"
+  prerequisites:
+    - "Predictions saved before the results were known"
+    - "Your grading script or tables, if you want the gaps listed (optional)"
+  output:
+    - name: "Grading rule"
+      contains: "How direction, size and timing become a score, written out so you can check it by hand."
+    - name: "Score log"
+      contains: "One row per prediction with predicted and actual change, the score, the result and the likely cause."
+    - name: "Not graded"
+      contains: "Predictions skipped, with the reason, such as no save date or a window that has not ended."
+    - name: "Patterns"
+      contains: "Accuracy for each agent and type of call, and whether there are enough results to act."
+    - name: "Draft lessons"
+      contains: "Short lessons marked draft: stop doing this, keep doing that, or move this limit."
+    - name: "Gaps in the starter"
+      contains: "What the starter script and tables get wrong, and the fix for each."
+    - name: "Test cases"
+      contains: "Made-up predictions that check the score, the noise floor and the window."
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your grading script and tables together and proposes exact edits.
+    - name: Any good chat AI
+      why: Enough if you paste in a list of predictions and results and want the score log only.
+  inputs:
+    - "The agent's own words for each prediction, so the lesson can quote the real call"
+    - "A note on what else changed that week, such as a sale or a site outage"
+    - "The measuring window your team already uses"
+terms:
+  - term: Prediction
+    meaning: A saved claim of what will happen to a number, by how much and by when.
+  - term: Grading window
+    meaning: The span of days the agent named. The result is read at the end of it.
+  - term: Noise floor
+    meaning: The smallest change that counts as real. Smaller moves are treated as no change.
+  - term: Lesson
+    meaning: A short rule drafted from many graded results, held as a draft until a person approves it.
+  - term: Wrong read
+    meaning: The agent misjudged what was causing the problem.
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It checks dates, does set math and follows a fixed method, so it needs care but not deep reasoning.

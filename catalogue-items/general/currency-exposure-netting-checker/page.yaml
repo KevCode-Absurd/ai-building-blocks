@@ -1,55 +1,112 @@
 new_slug: currency-exposure-netting-checker
 name: Currency exposure netting checker
 headline: Currency exposure netting checker
-summary: A currency-unit exposure bridge and reporting-currency sensitivity
+summary: "Net your foreign currency receipts, payments and hedges for one currency. See the amount still exposed and what a rate move does to it."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A currency-unit exposure bridge and reporting-currency sensitivity. Share same-currency receivables, payables, committed receipts/payments, confirmed hedge notionals and reporting-currency spot rate for one maturity bucket.
+subhead: Give it your foreign currency receipts and payments, the hedges you have confirmed and two exchange rates, for one currency and one date range. It nets them against each other. You get the amount still exposed, what it is worth at each rate and the change between them.
 explain: |-
-  A currency-unit exposure bridge and reporting-currency sensitivity.
+  If you sell or buy in a foreign currency, some of it cancels out. A euro you expect to receive can pay a euro you owe. What is left over is your real exposure. This currency exposure netting checker finds that left-over amount for one currency and one date range, then shows what a move in the exchange rate would do to it.
 
-  Treasury foreign exchange. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  The skill works in the foreign currency first. It adds receipts, both invoiced and committed. It subtracts payments, both billed and committed. Then it adds the hedge you have confirmed. A hedge that buys foreign currency counts as positive. A hedge that sells foreign currency counts as negative. If you have hedged more than you need, the answer goes negative and stays negative. It is not hidden.
+
+  Last, it turns the leftover into your reporting currency at two rates and shows the difference. Rates are reporting currency per one foreign unit, so flip a quote that goes the other way first. Forecast sales stay out unless you ask for them and label them. Practice numbers, not a real company: 120 euros in, 70 euros out and a hedge that sells 30 leaves 20 euros. At 1.1 that is 22 dollars. At 1.2 it is 24, so the move is 2.
 when:
-  - You need a currency-unit exposure bridge and reporting-currency sensitivity.
-  - You work on treasury foreign exchange and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your finance team sells to customers in euros and pays suppliers in euros, and you want to know what is truly exposed.
+  - Your treasury asks if the forward contracts you hold cover the net exposure, or cover too much.
+  - You are building a month-end report on foreign currency risk and need the net by currency.
+  - A reviewer asks what a 10 cent move in the rate would do to the unhedged amount.
+not_for:
+  - You want to check a forward contract at its settlement date. Use the Currency forward settlement checker.
+  - You need hedge accounting, value at risk or a trade recommendation. This is arithmetic only, so use a treasury system or a qualified adviser.
+  - You have several currencies. Run it once per currency and date range, then add the results in your reporting currency.
 you_give:
-  - Same-currency receivables, payables, committed receipts/payments, confirmed hedge notionals and reporting-currency spot rate for one maturity bucket.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Foreign currency receivables and payables due in the date range (from your ledger or aged reports)
+  - Committed receipts and payments not yet invoiced (from signed contracts or purchase orders)
+  - The hedge you have confirmed, as a signed amount (positive if it buys foreign currency, negative if it sells), from the forward contract confirmations
+  - The base exchange rate and a scenario rate, each in reporting currency per one foreign unit
+  - The currency, the date range, the reporting currency and the units
+  - Your own exposure spreadsheet (optional)
 you_get:
-  - A currency-unit exposure bridge and reporting-currency sensitivity.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Total foreign receipts and total foreign payments
+  - The net foreign amount before hedges
+  - The residual exposure after your confirmed hedges, in the foreign currency
+  - That residual in your reporting currency at the base rate and the scenario rate
+  - The change in value between the two rates
+  - A list of missing facts and checks it could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the receipts, payments, hedge and two rates. Say the currency, the date range and the units. Say which items are firm and which are forecast.
+  - Ask in plain words, such as how much euro exposure do we have left for June, and what is it worth if the euro rises 10 cents?
+  - Check one line yourself. Residual is receipts minus payments, plus the signed hedge. Value is the residual times the rate.
+  - Read MISSING and CHECKS MISSED before you use any figure. Check the sign of each hedge.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Bucket contractual receipts and payments by currency and maturity; distinguish firm commitments from forecast activity
-    text: Bucket contractual receipts and payments by currency and maturity; distinguish firm commitments from forecast activity.
-  - title: 3. Net contractual foreign receipts less payments within the approved bucket
-    text: "Net contractual foreign receipts less payments within the approved bucket. Add signed confirmed hedge delivery: positive for foreign currency bought and negative for foreign currency sold; preserve the residual in foreign units."
-  - title: 4. Translate the residual at supplied base and scenario rates; reconcile movement to residual units times rate change
-    text: Translate the residual at supplied base and scenario rates; reconcile movement to residual units times rate change.
+  - title: Maps the sources
+    text: Lists each figure with its source, date, currency and sign. Separates firm commitments from forecasts.
+  - title: Adds receipts and payments
+    text: Adds invoiced and committed receipts, and invoiced and committed payments, in the foreign currency.
+  - title: Nets them
+    text: Subtracts payments from receipts to get the net amount before hedges.
+  - title: Adds the hedge
+    text: Adds the signed hedge. Buying foreign currency is positive and selling is negative. Over-hedging stays visible as a negative.
+  - title: Translates the residual
+    text: Multiplies the residual by the base rate and the scenario rate. Shows the change between the two. Missing figures are marked, never set to zero.
 output_shape: |-
-  A currency-unit exposure bridge and reporting-currency sensitivity.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Residual exposure <foreign amount> | Value at base rate <amount> | Value at scenario rate <amount> | Movement <amount>
+
+  SCOPE AND SOURCES
+  <currency, date range, reporting currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <receivables, payables, committed receipts and payments, signed hedge, base rate, scenario rate>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of movement to residual times the rate change>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Foreign currency receivables and payables for the date range
+    - Committed receipts and payments not yet invoiced
+    - The signed amount of each confirmed hedge
+    - The base exchange rate and a scenario rate
+    - Your own exposure spreadsheet (optional)
+  prerequisites:
+    - Your receivables and payables reports in the foreign currency
+    - The forward contract confirmations
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The residual exposure, its value at the base and scenario rates, and the movement between them.
+    - name: SCOPE AND SOURCES
+      contains: The currency, date range and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that movement equals residual times the rate change.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every material input has a source location, date, unit, sign and approval status.
+  - what: A different hedge
+    how: Change the signed hedge amount. Selling foreign currency lowers the residual, and buying raises it.
+  - what: A different scenario rate
+    how: Change the scenario rate. Only the scenario value and the movement change.
+  - what: Another date range or currency
+    how: Run it again with that range or currency. Do not mix currencies in one run.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
@@ -64,15 +121,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your aged receivables and payables in the foreign currency
+    - Your forward contract confirmations
+    - A named reviewer and the question you want answered
 terms:
+  - term: Net exposure
+    meaning: The foreign currency left over after receipts and payments cancel each other out.
+  - term: Hedge
+    meaning: A contract, such as a forward, that fixes a future exchange rate.
+  - term: Residual
+    meaning: What is left exposed after the hedge.
+  - term: Reporting currency
+    meaning: The currency your accounts are kept in.
+  - term: Committed
+    meaning: Signed or ordered, but not yet invoiced.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real company.

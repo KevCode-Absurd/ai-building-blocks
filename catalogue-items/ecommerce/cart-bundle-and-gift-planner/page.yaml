@@ -1,6 +1,6 @@
 new_slug: cart-bundle-and-gift-planner
 name: "Cart bundle and gift planner"
-summary: "Give it products, margins and shipping costs. Get a cart bundle, gift and shipping line that hold margin."
+summary: "Plan a cart bundle, free gift and free-shipping line that keep your margin. Give it product costs and shipping costs, and get the sums shown."
 job: make-offer
 thinking: medium
 thinking_why: "It does margin sums and writes a layout from clear rules, so a mid-size model is enough. Check the numbers."
@@ -11,12 +11,16 @@ subhead: Give it your products with prices, costs and shipping costs, plus your 
 explain: |
   Most stores raise order value by cutting the price. That lifts sales and shrinks profit, and it teaches shoppers to wait for the next sale. A better route is to sell a set that helps the buyer reach the result, and to pay for the discount with money you already save.
 
-  This skill prices the bundle from the shipping and fulfilment you save by sending items together, so margin stays flat. It picks a gift that costs you little and is worth a lot to the buyer, and sets the gift and free-shipping lines so a bigger basket unlocks them. It writes the cart slide-out in words, adds a relevant one-click offer after payment, and checks each step against your margin. The example figures come from one operator. Test them in your store.
+  This skill prices the bundle from the shipping and fulfilment you save by sending items together, so margin stays flat. It picks a gift that costs you little and is worth a lot to the buyer, and sets the gift and free-shipping lines so a bigger basket earns them. It writes the cart slide-out in words, adds a relevant one-click offer after payment, and checks each step against your margin. The example figures come from one operator. Test them in your store.
 
 when:
   - Your average order value is stuck and you want to raise it without discounting.
   - You offer free shipping to everyone and wonder if a line would pay.
   - You have products that go together but sell them one at a time.
+not_for:
+  - "You sell one item with no routine or set: offer multi-packs or a build-your-own set, and plan the price by hand."
+  - "You want to run or read a store test: use the Store test readiness checker to size it and the Store test verdict maker to read it."
+  - "You want a site-wide sale or percent-off plan: ask a person who knows your margins, since this plan avoids discounting everything."
 
 you_give:
   - Each product with price, cost of goods, and shipping and fulfilment cost per unit
@@ -36,6 +40,29 @@ how_to_use:
   - Add your average order value, your current free-shipping line and any gift you have in mind.
   - Check every margin line against your own numbers before you build anything.
   - Run one test per page at a time, starting with the cart slide-out.
+output_sample:
+  input:
+    - Your products with price, cost of goods and shipping cost per unit
+    - Your average order value and current free-shipping line
+    - A gift you might give and what it costs you delivered
+    - Your monthly orders and traffic (optional)
+  output:
+    - name: BUNDLE
+      contains: The items, the discount taken from shipping saved, the bundle price, and margin per order against buying separately.
+    - name: GIFT
+      contains: The gift, its landed cost, its real value, the gift line, and the cost per qualifying order.
+    - name: SHIPPING
+      contains: Two or three free-shipping lines above your order value, a margin check at each, and the test order.
+    - name: CART SLIDE-OUT
+      contains: The cart panel written in words from top to bottom, with the upgrade card and checkout button.
+    - name: POST-PURCHASE
+      contains: A relevant one-click offer after payment, with a real normal price and a time limit only if real.
+    - name: TEST PLAN
+      contains: Gross profit per visitor as the main measure, with guardrails and the order to run tests.
+    - name: NOTES
+      contains: Which figures came from one operator, and any local wording rules to check.
+    - name: MISSING and CHECKS MISSED
+      contains: What you did not give, and any check the plan failed, or none.
 
 how_it_works:
   - title: Checks the products fit
@@ -49,7 +76,7 @@ how_it_works:
   - title: Sets the shipping line
     text: Two or three candidate lines above your order value, each checked for margin, then tested in order.
   - title: Writes the cart slide-out
-    text: A one-click upgrade to the full set that shows the gift, the shipping and the saving it unlocks.
+    text: A one-click upgrade to the full set that shows the gift, the shipping and the saving it earns.
   - title: Adds a post-purchase offer
     text: A relevant item right after payment, at a real discount, with only real time limits.
   - title: Plans the test
@@ -88,7 +115,7 @@ test:
   - "Check the bundle sum by hand: the sum of separate shipping costs, minus the shipping for one parcel."
   - Ask it for a 30 percent off everything offer. It should explain the margin cost and offer a set or gift instead.
   - Run it twice on the same products. The bundle price and gift line should match.
-  - Show the cart layout to a friend. They should see the saving and what it unlocks in a few seconds.
+  - Show the cart layout to a friend. They should see the saving and what it earns in a few seconds.
 
 improve:
   - Add your real shipping costs by weight to the skill file, so the savings are exact.

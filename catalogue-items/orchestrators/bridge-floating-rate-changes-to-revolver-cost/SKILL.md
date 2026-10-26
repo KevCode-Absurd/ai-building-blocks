@@ -1,46 +1,28 @@
 ---
 name: bridge-floating-rate-changes-to-revolver-cost
-description: "A rate repricing scenario and revolving charge reconciliation"
+description: "Use when interest rates move and you need the extra cost on a floating loan and a revolving credit line, reconciled to the lender's statement. Not for loans with rate floors, caps or set-day resets, or for forecasting rates."
 ---
 
 # Bridge rate changes to revolver cost
 
-A rate repricing scenario and revolving charge reconciliation.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Work out what a floating-rate change adds to a revolving credit line, then match the new interest and unused-line fee to the lender's statement. Two steps run in order: price the change loan by loan, then rebuild the statement charge.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **Floating loans** (yours): each loan's balance, reset date and day count, from the loan agreement and the lender statement.
+- **Rates** (yours): the base rate and the scenario rate, each with its date.
+- **Statement balances** (yours): the average drawn amount, the average unused amount, the fee rates and the amount billed.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** the part of any loan that is fixed or hedged, with the contract that proves it.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Floating facility reset dates, verified exposed principal, base and scenario rates, actual average drawn/fee-undrawn balances, day-count and statement charges.
+The items under "Before you start", as of one reporting date, with the currency, scale and day count stated once. If the scenario rate has no date or source, ask for it before step 1. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,9 +32,9 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Floating rate repricing planner** (`floating-rate-repricing-planner`). Calculate scenario interest changes by exposed facility and reset fraction. Preserve the annual versus statement-period basis and pass the actual changed facility rate, not an annual dollar total, into the revolver charge model. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-floating-rate-repricing-planner.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Floating rate repricing planner** (`floating-rate-repricing-planner`). Calculate scenario interest changes by exposed facility and reset fraction. Preserve the annual versus statement-period basis and pass the actual changed facility rate, not an annual dollar total, into the revolver charge model. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-floating-rate-repricing-planner.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** each loan row shows its floating balance, extra rate and share of the year, fixed or hedged parts are removed with the contract that proves them, and the rows add up to the total change. Pass the changed rate and share of year to step 2, not the annual dollar total.
 
-2. **Revolver interest and fee checker** (`revolver-interest-fee-checker`). Recompute the affected statement interest and undrawn fee on actual average balances. Compare base and scenario charges with step1 on a reconciled period basis; retain floors, caps and day-specific reset gaps as missing coverage. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-revolver-interest-fee-checker.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Revolver interest and fee checker** (`revolver-interest-fee-checker`). Recompute the affected statement interest and undrawn fee on actual average balances. Compare base and scenario charges with step1 on a reconciled period basis; retain floors, caps and day-specific reset gaps as missing coverage. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-revolver-interest-fee-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** the period, day count and year basis match the statement, base and scenario charges sit on the same period, every floor, cap or reset-day gap is listed as not covered, and the difference from the bill has a cause or says unexplained.
 
 ## Workbook checks
 
@@ -69,4 +51,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the cost: extra interest, the base and scenario statement charges, the change, and the gap against the bill. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that nothing was paid, sent or filed, and that a person who knows the agreement must check the definitions before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Check cover after a rate rise** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Check cash and PIK interest against a sweep** with the [Review sponsor debt cash demands](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow, if the debt is sponsor-backed.
+Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

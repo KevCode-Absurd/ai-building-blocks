@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Wrong solver choices break the model.
 new_slug: pll-circuit-modeler
 name: PLL circuit modeler
-summary: Give it a PLL datasheet. Get a working phase-locked loop model with the
-  right solver set.
+summary: Build a PLL circuit model in Simulink from a datasheet or your targets. Get a working loop with the right solver, then check lock time and noise.
 job: build-software
 headline: PLL circuit modeler
-subhead: A working model of a phase-locked loop chip built from its datasheet or
-  your system targets, with the solver set up correctly. You can then check
-  whether the loop locks fast enough and has low enough phase noise.
+subhead: A working model of a phase-locked loop chip built from its datasheet or your system targets, with the solver set up correctly. You can then check whether the loop locks fast enough and has low enough phase noise.
 explain: |
   A working model of a phase-locked loop chip built from its datasheet or your system targets, with the solver set up correctly. You can then check whether the loop locks fast enough and has low enough phase noise.
 
@@ -18,6 +15,10 @@ when:
   - You are designing a synthesizer for a set output and reference frequency.
   - You need to check phase noise against the datasheet.
   - You are choosing between integer-N and fractional-N.
+not_for:
+  - "You want transistor-level design of the VCO or charge pump: use a circuit simulator made for that, or ask a circuit designer."
+  - "You only need a phase noise estimate and no Simulink model: call the estimatePLLPhaseNoise function in MATLAB directly."
+  - "You need clock distribution or jitter cleaning: use a plain clock tree tool or ask a hardware engineer, since this is for frequency synthesis."
 you_give:
   - The PLL datasheet or system specs
   - Output and reference frequencies
@@ -29,8 +30,34 @@ you_get:
   - Loop filter design
   - Phase noise check against targets
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Mixed-Signal Blockset.
+  - Open your AI tool and paste in the skill instructions. Also add the companion guide if you can.
+  - Tell it you want a PLL model. Add your datasheet or your output and reference frequencies.
+  - Answer its questions. It asks one at a time.
+  - Let it build and run the model. This needs an AI that can run MATLAB with Simulink and the Mixed-Signal Blockset.
+  - Check the stability result first, then the lock time and phase noise. Ask it to tune the model if a target is missed.
+output_sample:
+  input:
+    - Your PLL datasheet (optional if you have system targets)
+    - Output frequency or range
+    - Reference frequency
+    - Lock time and phase noise targets
+    - Answers to its questions, one at a time
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB and Simulink
+    - Mixed-Signal Blockset
+  output:
+    - name: Extracted parameters
+      contains: "The key numbers pulled from your datasheet, plus the PLL type it found: integer-N, fractional-N or dual modulus."
+    - name: Assembly choice
+      contains: Whether it used a ready-made PLL template or single building blocks, and any gaps it had to fill.
+    - name: Simulink PLL model
+      contains: The loop built from Mixed-Signal Blockset blocks with the solver set up, a VCO, charge pump, loop filter and divider.
+    - name: Loop filter design
+      contains: Filter type and component values chosen for your bandwidth and phase margin targets.
+    - name: Stability analysis
+      contains: An open-loop and closed-loop check, run before any time-domain simulation.
+    - name: Lock time result
+      contains: Lock time and final frequency read from the PLL Testbench after the simulation.
+    - name: Phase noise check
+      contains: Phase noise levels compared with your target or the datasheet, covered in the companion guide.

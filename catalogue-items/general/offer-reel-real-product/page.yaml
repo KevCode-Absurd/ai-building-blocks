@@ -1,6 +1,6 @@
 new_slug: offer-reel-real-product
 name: "An offer video with your product and price exactly right"
-summary: "Give it your product photos, words and offer. You get a finished 10 to 20 second video in every size you need."
+summary: "Make an offer video from your real product photos, approved words and price. You get a 10 to 20 second reel in each shape you need."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several skills in a row. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You're launching a product or an offer and need a short reel in your exact brand look.
   - AI-generated video keeps getting your pack or label wrong.
   - You need the same reel in several shapes (tall for Reels and Stories, 4:5 for feeds).
+not_for:
+  - "You need a demo that shows the product in use: film real footage instead, or ask a video editor."
+  - "You want a story told by a person: film the person, or use the Video ad script writer from customer quotes to plan it."
+  - "You have no computer that can run code: a simple video editor such as Canva or CapCut is an easier fit."
 
 you_give:
   - What the reel is for (launch, offer, reasons, bundle, closing card)
@@ -36,6 +40,32 @@ how_to_use:
   - Approve the product card, then the product sheet and style guide.
   - Read the storyboard carefully, then reply APPROVED or ask for changes.
   - Wait for the review rounds to finish before judging the reel. For later changes, ask it to update the storyboard first, then rebuild.
+output_sample:
+  input:
+    - What the reel is for, such as a launch, offer, 3 reasons, bundle or closing card
+    - Your real product photos, with the front on a clean background
+    - Your approved words in order, with a source for each claim, price and offer
+    - Your colours, font files and logo file
+    - Length, shapes, music and voice (optional)
+  prerequisites:
+    - A coding agent that can run code on your computer, such as Claude Code with Remotion
+    - Your brand brain from the Brand profile builder
+    - A video ad script from the Video ad script writer from customer quotes
+  output:
+    - name: Brief
+      contains: Your purpose, words, offer, length, shapes, music and voice, with anything blank marked MISSING.
+    - name: Product card
+      contains: The product variant, which photo does which job, and what never changes. You approve it.
+    - name: Photo picks
+      contains: The hero photo and the photos chosen for each reason.
+    - name: Product sheet and style guide
+      contains: Clean cut-outs of your photos, colours, type sizes, ways in and out, and lock lines. You approve them.
+    - name: Storyboard
+      contains: A beat grid and shot list with on-screen words, photos, motion, sound and a source for every claim.
+    - name: Review log
+      contains: Each review round with its scores and the fixes made, until every score is 8 or more.
+    - name: Final videos
+      contains: The reel in each shape, with loudness, scores, a contact sheet and anything left imperfect.
 
 how_it_works:
   - title: Fills the brief

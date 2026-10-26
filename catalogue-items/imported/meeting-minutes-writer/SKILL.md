@@ -25,7 +25,7 @@ Turn messy meeting notes into minutes that let someone who missed the meeting ca
 
 ## Workflow
 
-1. **Read the raw notes**: read the transcript or jotted notes the user pasted. Find "what was finally decided" first, then look back for the reasoning. Minutes record conclusions and points of disagreement, not the full discussion.
+1. **Read the raw notes**: read the transcript or jotted notes the user pasted. Find "what was finally decided" first, then look back for the reasoning. Minutes record conclusions and points of disagreement, not the full discussion. If you are given a plan or discussion guide and no notes yet (the meeting has not happened), write the minutes template from it and mark every agreement `proposed`. Record nothing as decided.
 2. **Sort into three buckets**:
    - **Decisions**: one per line, phrased as "Decided to do X", never "Discussed X".
    - **Action items**: each must have an owner + a deadline. If the notes name no owner, mark `[unassigned]`; if no deadline, mark `[TBD]` — never invent them.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It counts collections per product.
 new_slug: orphan-product-finder
 name: Orphan product finder
-summary: Get products that sit in no collection, and ones stuffed into too many,
-  so shoppers can find everything.
+summary: Find products in no collection and products in too many, so shoppers can find them. Give it your Shopify store and get a CSV report.
 job: run-your-store
 headline: Orphan product finder
-subhead: A list of products that no shopper can find through your menus, and a
-  list of products crammed into too many collections. Fixing both makes your
-  catalogue easier to browse.
+subhead: A list of products that no shopper can find through your menus, and a list of products crammed into too many collections. Fixing both makes your catalogue easier to browse.
 explain: |
   A list of products that no shopper can find through your menus, and a list of products crammed into too many collections. Fixing both makes your catalogue easier to browse.
 
@@ -18,6 +15,10 @@ when:
   - Your menu feels messy and some items seem lost.
   - You are tidying the catalogue before a sale.
   - You suspect a few products appear in too many places.
+not_for:
+  - Your store cross-lists on purpose, like a marketplace. Skip the over-collected check or raise the collection limit.
+  - You want to change collections. This only reads data, so add or remove products in your Shopify admin.
+  - Your products show up through rule-based collections. Check those in Shopify first, as a product may not be a true orphan.
 you_give:
   - Store domain
   - Collection limit (optional)
@@ -29,8 +30,26 @@ you_get:
   - Collection names and sizes
   - A report you can act on
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot do this.
+  - Sign in to Shopify CLI for your store with permission to read products.
+  - Paste the skill and give your store domain. Add a collection limit or product status if you want to change the defaults.
+  - Let it scan. It only reads data and changes nothing in your store.
+  - Open the CSV. Fix each flagged product in Shopify admin, then run the scan again to check.
+output_sample:
+  input:
+    - Your store domain
+    - Collection limit (optional)
+    - "Product status to scan: active, draft or all (optional)"
+    - Readable or JSON summary (optional)
+  prerequisites:
+    - An AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A signed-in Shopify CLI session with permission to read products
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the time the scan began.
+    - name: Step progress lines
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Summary
+      contains: Counts of products scanned, orphan products and over-collected products, plus a short sample of orphans.
+    - name: collection_audit_<date>.csv
+      contains: One row per flagged product with its ID, title, handle, status, collection count, collection names and issue.

@@ -1,15 +1,13 @@
 slug: currency-exposure-netting-checker
 name: Currency exposure netting checker
-summary: A currency-unit exposure bridge and reporting-currency sensitivity
+summary: "Net your foreign currency receipts, payments and hedges for one currency. See the amount still exposed and what a rate move does to it."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,12 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - currency-forward-settlement-checker
+  - reconcile-currency-exposure-and-settlement
 origin: own
 version: 1.0.0
 added: 2026-10-22

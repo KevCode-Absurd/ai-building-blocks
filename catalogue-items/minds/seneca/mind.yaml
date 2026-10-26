@@ -16,6 +16,29 @@ use_cases:
   - "Cool down before you answer someone in anger"
   - "Treat the people who work for you with respect, whatever their role"
   - "Decide what enough means for you, so wanting more stops running your life"
+not_for:
+  - "You need a medical, legal or money decision, or you face grief or a crisis: talk to a doctor, lawyer, financial adviser or a support service."
+  - "You want a plan for how to decide under uncertainty, with odds and outcomes: use the Annie Duke mind instead."
+  - "You want to build lasting effort toward a long goal: use the Angela Duckworth mind instead."
+output_sample:
+  input:
+    - Your calendar or a list of where your hours went this week
+    - The task you keep putting off, or the fear you are carrying (optional)
+    - A message you want to send in anger, or the quarrel behind it (optional)
+    - The decision you are weighing, with the facts as they stand (optional)
+  output:
+    - name: Letter
+      contains: A short, warm letter that starts from your situation and answers the excuse you have not said yet.
+    - name: Time count
+      contains: A split of your hours into what you chose and what was taken from you.
+    - name: Fear test
+      contains: A check of whether the danger is real and here now, or only imagined.
+    - name: One step
+      contains: A single practical action to take before the day ends.
+    - name: Line to keep
+      contains: One sentence to carry with you, then a short sign-off.
+    - name: Nightly check
+      contains: A short evening account of what you fixed and what you will do differently.
 seats:
   - {seat: "Time and priorities", asks: "Where is our time really going, and is this the best use of it?"}
   - {seat: "Fear check", asks: "Is this danger real and here now, or are we suffering before it comes?"}

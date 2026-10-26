@@ -2,34 +2,79 @@ thinking: medium
 thinking_why: It sorts feedback into lessons you can act on.
 new_slug: hiring-quality-reviewer
 name: Hiring quality reviewer
-summary: Give it a finished search. Get surveys, a look back at what worked and
-  a start-day checklist for the new hire.
+summary: "Review a finished hire: get manager and candidate surveys, a look back at what worked, 30-60-90 day check-ins and a pre-start checklist."
 job: hire-people
 headline: Hiring quality reviewer
-subhead: A way to learn whether a hire was good and what to change next time.
-  When a search ends, you usually move on. This skill closes the loop with
-  surveys, a review and a plan for the new person's first days.
+subhead: "Tell it about a search that just closed: the role, where candidates came from, any interview scores and the start date. It writes the surveys, runs a look back on what worked, lists near-miss candidates to keep warm and builds a checklist for the days before the new hire starts."
 explain: |
-  A way to learn whether a hire was good and what to change next time. When a search ends, you usually move on. This skill closes the loop with surveys, a review and a plan for the new person's first days.
+  A hiring quality review for a search that has just closed. Most teams fill the role and move on. This skill asks whether the hire was a good one and what to change next time.
 
-  It sets up check-ins at 30, 60 and 90 days to measure the hiring manager's satisfaction, ramp-up time and whether you would hire the person again. It writes a short survey on how the process felt for the manager and another for candidates. It runs a look back on the search, comparing sources and interviewers to see which predicted good hires. It also sets up a silver medalist list for near misses and a pre-boarding checklist for start day.
+  It writes short surveys for the hiring manager and for candidates, with different questions for people you hired, rejected or who withdrew. It sets check-ins at 30, 60 and 90 days. It runs a look back on the search in seven short parts, from timeline to three changes for next time.
+
+  It only uses the facts you give it. If you have no interview scores or source data, it says "not enough data" and tells you what to track on the next search. Any target it shows is an example to adjust, not an industry standard.
 when:
-  - A search just closed and you want to know what worked.
-  - You want to learn which source or interviewer predicts strong hires.
+  - A search just closed and you want to know what worked and what did not.
+  - You want to learn which source or interviewer leads to strong hires.
   - You need a short survey for hiring managers or candidates.
-  - A new hire starts soon and you want a clean first-day plan.
+  - A new hire starts soon and you want a clean plan for the days before day 1.
+not_for:
+  - "The search is still open: use the Hiring progress reporter for an update."
+  - "You want to plan the new hire's first 90 days in detail: use the 30-60-90 day onboarding planner."
+  - "You want to learn why someone left: use the Exit interview and grievance guide."
+  - "You want to rate a candidate in the interview: use the Interview scorecard builder."
 you_give:
-  - Details of the finished search
-  - Hiring manager and new hire feedback, if you have it
-  - Source of hire and interview scores (optional)
-  - Start date
+  - The role and the outcome of the search (filled or cancelled)
+  - How long it took, and where candidates came from
+  - The start date of the new hire
+  - Feedback from the hiring manager or new hire (optional)
+  - Interview scores and your names for near-miss candidates (optional)
 you_get:
-  - Survey questions for managers and candidates
-  - A look back on the search
+  - Survey questions for the hiring manager and for candidates
   - A 30, 60 and 90 day check-in plan
-  - A pre-boarding checklist
+  - A look back on the search with three changes for next time
+  - A near-miss candidate list with a plan to stay in touch
+  - A pre-start checklist with owners and dates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text. Then paste the facts of the search. Say which of the four parts you want, or ask for all.
+  - If you lack a fact, such as scores, leave it out. The AI will mark it missing and not guess.
+  - Read the look back first. Check each finding against what you remember of the search.
+  - Send the surveys and the checklist only after you have edited them to fit your company.
+  - Get a candidate's permission before you keep them on a near-miss list.
+output_sample:
+  input:
+    - The role and the outcome of the search
+    - Timeline, sources and interview scores, if you have them
+    - The new hire's start date
+    - Feedback from the hiring manager or new hire (optional)
+  output:
+    - name: Quality of hire check-ins
+      contains: Short questions for day 30, 60 and 90, including whether you would hire the person again.
+    - name: Hiring manager survey
+      contains: Five questions on communication, intake, candidate fit, pace and overall satisfaction.
+    - name: Candidate surveys
+      contains: Different questions for hired, rejected and withdrawn candidates, plus a recommend question.
+    - name: Search look back
+      contains: Timeline, what worked, what did not, source results and three changes for next time.
+    - name: Silver medalist list
+      contains: Strengths, suitable roles and a re-contact plan for near-miss candidates you name.
+    - name: Pre-boarding checklist
+      contains: Equipment, access, welcome email, buddy and first-week plan, with an owner and date for each.
+how_it_works:
+  - title: Confirm the search is closed
+    text: It checks that an offer was accepted or the role was cancelled before it starts.
+  - title: Collect the facts
+    text: It marks any missing fact instead of making one up.
+  - title: Write the surveys
+    text: It writes manager and candidate surveys, with questions for each outcome.
+  - title: Run the look back
+    text: It works through the timeline, sources and process, and ends with three changes.
+  - title: Plan the start
+    text: It builds the near-miss list and the checklist for the days before day 1.
+terms:
+  - term: Quality of hire
+    meaning: How well a new person does the job over their first months.
+  - term: Silver medalist
+    meaning: A strong candidate who did not get the offer but may suit a later role.
+  - term: Pre-boarding
+    meaning: The steps between a person accepting an offer and starting work.

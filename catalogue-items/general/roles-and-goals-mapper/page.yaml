@@ -1,45 +1,53 @@
 new_slug: roles-and-goals-mapper
 name: "Roles and long-term goals mapper"
-summary: "List your roles. Get what you are about in each, one or two lasting results, and the role crowding out the rest."
+summary: Map your life roles and set one or two lasting goals for each. Get a role table and see which role crowds out the others.
 job: think-and-decide
 thinking: medium
 thinking_why: "It organises what you give it and checks balance against fixed rules, so a mid-level model is enough."
 headline: "Roles and long-term goals mapper"
-subhead: "Tell it what you do and who depends on you. It lists your roles, writes one line on what you are about in each, sets one or two results that last, and shows which role is crowding out the others. You get a role table you can plan a week from."
-explain: |
-  When you think about your life as one long to-do list, the loudest part wins. Work takes the evenings, and health, friends and learning wait for a quieter time that does not come. Splitting life into roles shows what each part needs.
+subhead: Tell it what you do and who depends on you. It lists your roles and writes one line on what you are about in each. It sets one or two lasting results per role and shows which role is crowding out the others. You get a role table you can plan your weeks from.
+explain: |-
+  When you think about life as one long to-do list, the loudest part wins. Work takes the evenings. Health, friends and learning wait for a quieter time that never comes. Splitting your life into roles shows what each part needs.
 
-  This skill lists the roles you play, from your own health to your work to your community. It writes what you are about in each, ties each to a value, and sets one or two results you could name when done. It then compares the hours each role takes with how much it matters to you, names the role that is crowding out the others, and sets a date to look again.
+  This skill lists the roles you play, from your own health to work, family and community. For each role it writes what you are about, ties it to a value and sets one or two results you could name when they are done. Each result has a test, so "spend more time with the kids" becomes something you can check.
+
+  Then it compares the hours each role takes with how much that role matters to you. It names the role crowding out the others and sets a date to look again. It never tells you which role to favour. The method follows Stephen Covey's habit of starting with roles and goals. This version is ours.
 when:
   - Work fills every hour and the rest of life gets what is left.
-  - You are about to write a mission statement and need the parts first.
-  - You start a new season, such as a new job, a baby or a move, and want to know where to invest.
+  - You are about to write a personal mission statement and need the parts first.
+  - A new season starts, such as a new job, a baby or a move, and you want to know where to put your time.
+  - You feel busy all week and sense that something important is slipping.
+not_for:
+  - You do not know your values yet. Use the Eulogy values finder first, then come back.
+  - You want a plan for this week's tasks. Use the Week priority picker or the Values-to-week planner.
+  - You need to settle one specific choice, such as taking a job. Use the Pros and cons decision planner.
 you_give:
   - What you do, who depends on you and what is on your mind
-  - Your top values, for example from "Eulogy values finder" (optional)
+  - Your top values, for example from the Eulogy values finder (optional)
   - A rough picture of how you spend a week (optional)
+  - Your hours and ranking for each role, when it asks
 you_get:
-  - A table of your roles, each with what you are about, its guiding value and one or two results with a test
-  - A balance view with the role that is crowding out the others named
-  - Small results for body, mind, relationships and meaning
+  - A table of your roles, each with what you are about, a guiding value and one or two results with a test
+  - A balance view that names the role crowding out the others
+  - One small result each for body, mind, relationships and meaning
   - A review date and the results to plan first
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe your situation in a paragraph. Paste your top values if you have them.
-  - Rank your roles by how much they matter, and say roughly how many hours each takes.
-  - Check each result. Cross out any you took on from someone else's wish.
-  - Take the table to "Personal mission statement writer".
+  - When it asks, rank your roles by how much they matter and say roughly how many hours each takes. Use real hours, not wished-for hours.
+  - Check each result. Cross out any you took on only because someone else wanted it.
+  - Save the table, then take it to the Personal mission statement writer.
 how_it_works:
   - title: Lists the roles
-    text: Finds four to eight parts you play, merging or adding until the list is real.
+    text: Finds four to eight parts you play, merging or adding until the list is real. It always keeps a role for yourself.
   - title: Writes what you are about
-    text: One sentence per role that a stranger could picture.
+    text: One sentence per role that a stranger could picture, such as what someone would see you do.
   - title: Links to values
-    text: Ties each role to a value, and flags roles with no value or values with no role.
+    text: Ties each role to one of your values, and flags roles with no value and values with no role.
   - title: Sets lasting results
-    text: One or two results per role, each with a test for when you have arrived.
+    text: One or two results per role, each with a test for when you have arrived. Results from someone else's wish are marked.
   - title: Checks the balance
-    text: Compares hours with importance and names the role that is crowding out the rest.
+    text: Compares hours with how much each role matters and names the role crowding out the rest.
   - title: Adds renewal
     text: Makes sure your own role has a small result for body, mind, relationships and meaning.
   - title: Dates the review
@@ -85,12 +93,34 @@ improve:
   - Pair it with "Eulogy values finder" before and "Personal mission statement writer" after.
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Sorting roles and checking goal wording is text work any strong chat AI does well."}
-    - {name: "A spreadsheet or notes app", why: "Keeps the role table where you can see it when you plan the week."}
+    - name: Any good chat AI
+      why: Sorting roles and checking goal wording is text work. Claude, ChatGPT and Gemini all do it well with this skill.
+    - name: A spreadsheet or notes app
+      why: Keeps the role table where you can see it when you plan the week.
   inputs:
-    - "A ranked values list from Eulogy values finder"
-    - "Your calendar from the last month"
-    - "A note on what others expect from you in each role"
+    - A ranked values list from the Eulogy values finder
+    - Your calendar from the last month, to check the hours column
+    - A note on what others expect from you in each role
 terms:
   - term: Result
     meaning: Something you can name when it is done, as opposed to an activity you keep doing.
+  - term: Crowding role
+    meaning: The role that takes the most hours while ranking low in how much it matters to you.
+output_sample:
+  input:
+    - What you do, who depends on you and what is on your mind
+    - Your top values (optional)
+    - How you spend a typical week (optional)
+  prerequisites:
+    - Your values list from the Eulogy values finder (optional)
+  output:
+    - name: ROLES
+      contains: Four to eight roles, each with what you are about, a guiding value and one or two results with a test.
+    - name: BALANCE
+      contains: Each role's hours now and importance, and the role crowding out the rest.
+    - name: RENEWAL
+      contains: One small result each for body, mind, relationships and meaning, or a note on which you left out.
+    - name: REVIEW
+      contains: A date about six months out, and the results to plan first.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts you did not give, and any of its own checks it could not pass, or none.

@@ -1,3 +1,5 @@
+> Correction added by AI Blocks: this file mixes up the two directions. In the MiniLLM paper, forward KL is KL(Teacher || Student) and is mode-covering. Reverse KL is KL(Student || Teacher) and is mode-seeking. The paper trains with a policy gradient on text the student samples. The loss code below is a simplified sketch and does not compute reverse KL. Use the corrected `reverse_kl_loss` in SKILL.md, and check the paper (arXiv 2306.08543) before relying on any formula here.
+
 # MiniLLM: Reverse KL Divergence for LLM Distillation
 
 Based on arXiv 2306.08543 (2024) - MiniLLM: Knowledge Distillation of Large Language Models

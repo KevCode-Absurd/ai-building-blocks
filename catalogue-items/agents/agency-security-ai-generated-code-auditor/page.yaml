@@ -1,0 +1,142 @@
+name: AI-Generated Code Security Auditor agent
+summary: Paste AI-written app code. Get a ranked list of leaked keys, open database rules and prompt injection holes, each with the fix and a rescan list.
+headline: AI-Generated Code Security Auditor agent
+subhead: Paste or upload the files your AI coding tool wrote, plus your database rules if you have them. It checks for exposed keys, weak access rules and unsafe AI calls. You get findings ranked worst first, each with the line, the risk and the fix.
+job: secure-code
+thinking: high
+thinking_why: It reads code like an attacker, must separate real holes from safe patterns, and must not overstate what it checked. Use a model that reasons well and says when it is unsure.
+explain: |-
+  Code written by an AI tool is built to pass the demo, not to survive the internet. The same mistakes show up again and again. A secret key is pasted into a file that ships to every visitor's browser. A database says "row-level security is on", but the rule lets everyone read every row. A chatbot passes what a user types straight into its instructions, and it can also call tools that move money. This agent reads for those mistakes first.
+
+  It checks three things. Keys: any secret that reaches the browser, including keys hiding behind a public prefix such as NEXT_PUBLIC. Database access: rules that look on but allow everyone, open storage, and access checks that trust a value the user can edit. AI calls: user input that lands in the system prompt, or any call that mixes untrusted input with tools. It leaves safe patterns alone, such as a public anon key or user text kept in its own message with no tools, so you can trust what it does flag.
+
+  Every finding shows the file and line, how an attacker would use it, and the fix. A leaked key always comes with "rotate it at the provider", because deleting it from the code does not make it safe again. It reads what you give it. It does not run a scanner or see your live database, and it tells you what it could not check.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You built an app with Cursor, Lovable, bolt, v0 or Claude Code and want a security check before real users sign up.
+  - Your app uses Supabase or Postgres and you are not sure the access rules really keep users apart.
+  - Your app has an AI chat or agent and you want to know if a user could hijack its instructions.
+  - You just fixed a list of security issues and want a rescan to see what is resolved and what is new.
+not_for:
+  - You want a deep review of any kind of code, a threat model or advice on scanning tools. Use the Application Security Engineer agent.
+  - You only want a quick check of one code change. Use the Diff security skimmer.
+  - You want keys and private files found on a live website. Use the Exposed secrets finder.
+  - You want a hands-on attack test of your running app. Use the Penetration Tester agent or the Live app security tester, and only on systems you own.
+you_give:
+  - The code files to review, pasted or uploaded. Start with client-side files, API routes, and any file that calls an AI model.
+  - Your database rules and setup files, such as SQL migrations or policy definitions (optional)
+  - The names of your environment variables, with the values removed (optional)
+  - Your stack, such as Next.js with Supabase, and what sensitive data the app holds
+  - The list from a past audit, if this is a rescan (optional)
+you_get:
+  - A coverage note saying what was checked and what was not
+  - Findings ranked worst first, each with file and line, how it could be abused, and the fix
+  - A rotate-now list for every key that was exposed
+  - A list of safe patterns that were left alone, so you know it did not miss them
+  - A fix order, and a checklist to rescan after changes
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste or upload the files to review. Remove real secret values first. Add your database rules and your stack. A chat AI reads only what you give it, so for a whole project use an AI tool that can open your project folder.
+  - Type "Audit this code. Worst first. Show the line, the risk and the fix for each finding. Do not print secret values. Tell me what you could not check."
+  - Read the rotate-now list first. Change those keys at the provider, even if you delete them from the code.
+  - Ask your AI coding tool to apply the fixes one at a time. Then paste the changed files back and ask for a rescan.
+  - Treat prompt injection findings as a prompt to look closer. They are medium confidence, and you confirm each one by hand.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms which files, stack and data it has seen, and says what is out of reach, such as your live database settings.
+  - title: Check for exposed secrets
+    text: It looks for keys in code that reaches the browser, including public-prefix variables, and ignores keys designed to be public.
+  - title: Check database access
+    text: It looks for rules that allow everyone, tables with no rules, open storage and access checks that trust editable user fields.
+  - title: Check AI calls
+    text: It follows user input into AI calls and rates the risk by where it lands, such as a user message, the system prompt or a call that also has tools.
+  - title: Rank and explain
+    text: It sorts findings worst first, in plain words before any code term, with the line, the abuse path and the fix.
+  - title: Plan the rescan
+    text: It lists what to re-check after fixes, so you can see what is resolved, what remains and what is new.
+output_shape: |-
+  COVERAGE
+    Files seen <list> | Not checked <list and why> | Stack <what>
+
+  FINDINGS (worst first)
+    <number> [<severity>] <what is wrong in plain words> | <file and line> | <weakness ID if known>
+      How it could be used: <one sentence>
+      Fix: <one change>
+      Confidence: <high or medium> | Rotate: <key to change at the provider, if any>
+
+  ROTATE NOW
+    <key type> | <where it was seen, value hidden> | <where to change it>
+
+  LEFT ALONE (safe patterns)
+    <pattern> | <why it is safe>
+
+  FIX ORDER
+    <finding number> | <why first>
+
+  RESCAN CHECKLIST
+    <what to re-check> | <what a pass looks like>
+
+  GAPS AND CHECKS
+    <what could not be checked> | <how to check it>
+output_sample:
+  input:
+    - The code files your AI tool wrote, pasted or uploaded
+    - Your database rules and setup files (optional)
+    - Your stack and the sensitive data the app holds
+    - A past audit list, if this is a rescan (optional)
+  prerequisites:
+    - Secret values removed from anything you paste
+    - An AI tool that can open your project folder, if you want a whole project checked at once
+  output:
+    - name: Coverage
+      contains: Which files were checked, what was out of reach and the stack assumed.
+    - name: Findings
+      contains: Each problem worst first, with file and line, how it could be abused, the fix and a confidence level.
+    - name: Rotate now
+      contains: Each exposed key by type and location, never its value, with where to change it.
+    - name: Left alone
+      contains: Safe patterns it saw and did not flag, such as a public anon key.
+    - name: Fix order
+      contains: The order to fix findings in, with why.
+    - name: Rescan checklist
+      contains: What to re-check after fixes, and what a pass looks like.
+    - name: Gaps and checks
+      contains: What it could not check, such as live database settings, and how to check it yourself.
+works_best_with:
+  tools:
+    - name: Claude Code, Cursor or another AI tool that can open your project folder
+      why: It can read every file and follow user input from the request to the AI call. A plain chat only sees what you paste.
+  inputs:
+    - Your SQL migration files or a list of your database tables and their access rules.
+    - The settings page of your hosting provider showing which variables are public.
+    - A list of every AI model call in your app and the tools each one can use.
+terms:
+  - term: Row-level security (RLS)
+    meaning: A database feature that decides which rows each user may read or change. It only helps if the rules are written well.
+  - term: Prompt injection
+    meaning: Text from a user or a web page that tricks an AI into following new instructions.
+  - term: Public-prefix variable
+    meaning: A setting whose name starts with a word like NEXT_PUBLIC. The app sends its value to every visitor's browser.
+  - term: Rotate a key
+    meaning: Make a new key at the provider and turn off the old one. Needed because a leaked key stays leaked.
+  - term: Service role key
+    meaning: A Supabase key that skips all access rules. It must never reach the browser.
+tweaks:
+  - what: Scope
+    how: Start with the files users can reach and the files that call an AI model. Add the rest in a second pass.
+  - what: Stack
+    how: Say which tools wrote the code and which database you use. The checks are tuned to each.
+  - what: Noise
+    how: If a finding is a safe pattern, say so. It will keep that pattern quiet in the rescan.
+improve:
+  - Keep the findings list with your code, and rescan after each batch of fixes.
+  - Rescan after any large change from your AI coding tool, since it can bring the same mistakes back.
+  - Pair it with the Application Security Engineer agent for a deeper review before a public launch.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -2,35 +2,57 @@ thinking: medium
 thinking_why: It must match the estimator to the signal.
 new_slug: signal-spectrum-analyzer
 name: Signal spectrum analyzer
-summary: Give it a signal. Get its frequency content, peaks and bandwidth worked
-  out with the right method.
+summary: Find the peaks, band power and bandwidth of a signal in MATLAB, using the right spectrum method so your FFT plot does not mislead you.
 job: build-software
 headline: Signal spectrum analyzer
-subhead: The frequency content of your signal, with peaks, band power and
-  bandwidth worked out using a method that fits your data. It avoids the usual
-  FFT traps that give misleading plots.
+subhead: Give it your signal and sample rate. It checks your data, picks a spectrum method that fits, and plots the result. You get peak frequencies, band power and bandwidth.
 explain: |
   The frequency content of your signal, with peaks, band power and bandwidth worked out using a method that fits your data. It avoids the usual FFT traps that give misleading plots.
 
   It asks whether data is saved or streaming in live. For saved data it runs quick diagnostics, checks for gaps and trend, and picks the output type: power spectral density, power spectrum or amplitude spectrum. Then it chooses the estimator, such as Welch, periodogram or a parametric method, computes with a stated sample rate, and plots with labelled axes. It pulls out peaks, band power and bandwidth with built-in functions. It needs MATLAB with the Signal Processing Toolbox.
 when:
-  - You need to find the dominant frequencies in a recording.
-  - You want to compare two signals with coherence or cross-spectrum.
-  - Your FFT plot looks noisy and you are unsure why.
-  - You need the bandwidth or power in a specific band.
+  - You need the main frequencies in a recording.
+  - Your FFT plot looks noisy and you do not know why.
+  - You need the power or bandwidth in one band.
+  - You want to compare two signals with coherence or a cross-spectrum.
+not_for:
+  - "You want to design or apply a filter: use the matlab-design-digital-filter skill."
+  - "You want a spectrogram or time-frequency view of a signal that changes over time: use a time-frequency tool, since this skill does not cover it yet."
+  - "You want audio features such as pitch, or Bode and Nyquist plots: use Audio Toolbox or Control System Toolbox."
 you_give:
-  - Your signal data
-  - Sample rate
-  - The measurement you want, such as peaks or band power
-  - MATLAB with Signal Processing Toolbox
+  - Your signal, as a MATLAB variable or a CSV file
+  - Your sample rate in Hz
+  - "The measurement you want: peaks, band power or bandwidth"
+  - The band edges in Hz, for band power (optional)
 you_get:
-  - A spectrum computed with a suitable estimator
-  - A labelled plot
-  - Peak frequencies
+  - A short check of your data and the method it picked
+  - A plot with labelled axes
+  - A table of peak frequencies
   - Band power and bandwidth figures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Signal Processing Toolbox.
+  - Open MATLAB with the Signal Processing Toolbox. Your AI needs to run MATLAB code, so use an AI that can do that.
+  - Paste the skill into your AI chat, or add the skill folder to your AI tool.
+  - Load your signal into MATLAB as a variable, or save it as a CSV file.
+  - "Tell your AI the sample rate in Hz and the measurement you want: peaks, band power or bandwidth."
+  - Read the data check first. Then check the plot axes and the peak table.
+  - If your data arrives live, frame by frame, say so. The skill uses a different method for that.
+output_sample:
+  input:
+    - Your signal, as a variable in MATLAB or a CSV file
+    - Your sample rate in Hz
+    - "The measurement you want: peaks, band power or bandwidth"
+    - The band edges in Hz, if you want band power (optional)
+  prerequisites:
+    - MATLAB with the Signal Processing Toolbox
+    - An AI that can write and run MATLAB code
+  output:
+    - name: Preliminary analysis
+      contains: Sampling details, duration, gaps or trend, the spectral character of your data and the estimator it recommends.
+    - name: Output type choice
+      contains: Whether to use power spectral density, power spectrum or amplitude spectrum, and why it fits your goal.
+    - name: Spectrum plot
+      contains: A plot with labelled axes and units, made with the chosen estimator and your stated sample rate.
+    - name: Peak frequencies
+      contains: A table of the dominant frequencies found in the spectrum.
+    - name: Band power and bandwidth
+      contains: Power in the band you asked for and the bandwidth, from built-in MATLAB functions.

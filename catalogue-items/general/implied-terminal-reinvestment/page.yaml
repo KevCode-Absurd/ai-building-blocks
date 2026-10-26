@@ -1,7 +1,7 @@
 new_slug: implied-terminal-reinvestment
 name: Implied terminal reinvestment schedule
 headline: Implied terminal reinvestment schedule
-summary: Backsolve reinvestment and capital returns embedded in a supplied terminal operating value.
+summary: Find the reinvestment and return on capital hidden in your terminal value. Give it value, NOPAT, growth and WACC. You get an implied reinvestment schedule.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need an implied FCFF, reinvestment-rate and ROC workpaper.
   - You work on public equity valuation and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need a full company valuation or an investment call: use a person who does valuation work, such as an analyst or adviser."
+  - "You are valuing a bank, insurer or other financial firm: this method does not fit, so use a model built for financial firms."
+  - "Your reinvestment comes out zero, negative or above 100%: the steady-state view fails, so rework your growth, WACC or terminal value first."
 you_give:
   - Terminal operating value, first stable-year NOPAT, stable growth and matching WACC.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,26 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your terminal operating value, at the terminal date, for operating assets only
+    - Your first stable-year NOPAT (operating profit after tax)
+    - Your stable growth rate and matching WACC (discount rate)
+    - Reporting date, currency, scale and accounting basis
+  prerequisites:
+    - An AI that can read and write spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Scope and dated sources
+      contains: The valuation date, currency, scale, accounting basis and the dated source for each input.
+    - name: Inputs and assumptions
+      contains: Each input and assumption, kept apart from reported facts, with gaps marked MISSING.
+    - name: Model calculations and reconciliations
+      contains: Implied FCFF, reinvestment, reinvestment rate and return on capital, plus a check that FCFF rebuilds your terminal value.
+    - name: Actual file verification
+      contains: The recalculation, formula and reopen checks that were run on the workbook.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 how_it_works:
   - title: 1. Verify the supplied value is at the terminal date and covers operating assets only; record its valuation convention
     text: Verify the supplied value is at the terminal date and covers operating assets only; record its valuation convention.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a structure, then sets it up.
 new_slug: confluence-space-builder
 name: Confluence space builder
-summary: Say what your team needs. Get a Confluence space set up with page
-  templates, permissions and a clear layout.
+summary: Plan and set up a Confluence space for your team. Get a page tree, templates and permission advice, with pages created in Confluence if connected.
 job: organise-work
 headline: Confluence space builder
-subhead: A well organised Confluence space for your team, with page templates,
-  access rules and a layout people can find their way around. It takes a blank
-  space and gives it structure.
+subhead: A well organised Confluence space for your team, with page templates, access rules and a layout people can find their way around. It takes a blank space and gives it structure.
 explain: |
   A well organised Confluence space for your team, with page templates, access rules and a layout people can find their way around. It takes a blank space and gives it structure.
 
@@ -18,6 +15,10 @@ when:
   - You are starting a new project and need a ready-to-use space.
   - You want standard meeting notes and decision templates.
   - You need to control who can see and edit which pages.
+not_for:
+  - "You only need one shared document: use a plain Confluence page instead."
+  - "Your space already works well: keep it and fix single pages by hand."
+  - "You want the space itself created for you: make it in Confluence first, because the connector cannot do that."
 you_give:
   - What your team documents
   - Team and group names
@@ -29,8 +30,29 @@ you_get:
   - Permission suggestions
   - Pages created or updated in Confluence
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to Confluence.
+  - Make an empty space in Confluence first. Your AI cannot create the space itself.
+  - Paste the skill into your AI chat. Turn on the Atlassian connector if you want pages created for you.
+  - Describe what your team documents. Add your team and group names, and any pages you want to reorganise (optional).
+  - Read the page tree plan your AI shows you. Ask for changes, then say yes before it creates any page.
+  - Set the permissions in your space settings in Confluence. Your AI cannot do this step.
+  - Open the space and check the homepage loads. Create a test page from each template.
+output_sample:
+  input:
+    - What your team writes down, such as meeting notes or project pages
+    - Your team and group names
+    - A short brief on how your team works
+    - Your existing pages to reorganise (optional)
+  prerequisites:
+    - A Confluence account and an empty space you made in Confluence
+    - The Atlassian connector turned on in your AI, to create pages (optional)
+  output:
+    - name: Page tree plan
+      contains: A layout of parent and child pages, no more than three levels deep, for you to approve first.
+    - name: Page templates
+      contains: Ready-to-use pages for meeting notes, project overviews, decision logs and retrospectives, with placeholders.
+    - name: Permission suggestions
+      contains: Who should view, edit, create and administer, based on your space type. You set these in Confluence.
+    - name: Created or updated pages
+      contains: The pages added to your space through the connector, once you approve the plan.
+    - name: Content health notes
+      contains: Stale, orphaned and low-use pages to archive or update, if you share a page list.

@@ -2,36 +2,60 @@ thinking: medium
 thinking_why: It picks a merge method and settings.
 new_slug: model-merger
 name: Model merger
-summary: Give it two or more tuned models. Get one model that blends their
-  skills, with no new training.
+summary: Merge two or more tuned AI models into one with mergekit. No new training. Get a config, the merge command and a test plan.
 job: build-software
 headline: Model merger
-subhead: One model that blends the strengths of two or more tuned models, built
-  without any new training. Merge a math model with a coding model and a chat
-  model, and test the result in minutes.
+subhead: Give it two or more tuned models that share the same base. It picks a merge method, writes the settings and gives you the command. You get one model that blends their skills, plus a way to test it.
 explain: |
   One model that blends the strengths of two or more tuned models, built without any new training. Merge a math model with a coding model and a chat model, and test the result in minutes.
 
   The skill uses mergekit and a short config file. You choose a method: a plain weighted average, SLERP for two models, or TIES and DARE for several, which trim clashing changes first. You set the weights, run one command, and test the new model on a few benchmarks against its parents. It runs on a CPU, though a GPU is faster. The models must share the same base design.
 when:
-  - You have a model good at code and another good at chat and want both.
-  - You cannot afford the GPU time to train from scratch.
-  - You want to try five blends in an afternoon.
-  - You need to check that a merge did not erase a skill.
+  - You have one model good at code and another good at chat, and you want both skills in one.
+  - You cannot pay for the GPU time to train a new model from scratch.
+  - You want to try several blends in one afternoon and compare them.
+  - You need to check that a merge did not wipe out a skill.
+not_for:
+  - "You need a model that learns new facts or your own data: fine-tune a model instead, since merging only blends skills that already exist."
+  - "Your models use different base designs, such as Llama and Mistral: pick one base and use models built on it, because they cannot be merged."
+  - "You have no way to run Python code or store model files: ask a developer or an ML engineer to run the merge for you."
 you_give:
-  - Two or more models built on the same base
+  - Two or more tuned models built on the same base model
   - The skills you want to keep
-  - Weights or a method preference (optional)
-  - A test set to score the result
+  - Weights or a preferred merge method (optional)
+  - A small test set to score the result
 you_get:
-  - A merge config file
-  - The command to run the merge
-  - A merged model folder
-  - A comparison against the parent models
-  - Advice on which method to use
+  - A merge config file with your models, weights and method
+  - The command that runs the merge
+  - A merged model folder of weights and config files
+  - A test script and a comparison against the parent models
+  - Advice on which merge method to use and how to tune it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open Claude, ChatGPT or Gemini and paste this skill. Then list your models and the skills you want to keep.
+  - Check that all your models share the same base design. Your AI will flag any that do not.
+  - Ask for a merge config and the mergekit command. This step needs a computer or AI tool that can run Python code.
+  - Run the command. A CPU works, though a GPU is faster. The result is a folder of model files.
+  - Load the merged model and test it on your test set. Compare the scores with each parent model.
+  - If a skill got weaker, ask your AI to change the weights or density and run the merge again.
+output_sample:
+  input:
+    - Two or more tuned models built on the same base model
+    - The skills you want to keep, such as math, code or chat
+    - Weights or a preferred merge method (optional)
+    - A small test set to score the merged model
+  prerequisites:
+    - An AI or computer that can run Python code and install mergekit
+    - Enough disk space to download the models and save the merged one
+  output:
+    - name: Merge config file
+      contains: A short YAML file that names each model, its weight, the merge method and the data type.
+    - name: Merge command
+      contains: The mergekit command that reads the config and writes the merged model to a folder.
+    - name: Merged model folder
+      contains: The new model's weights and config files, ready to load and test.
+    - name: Test script
+      contains: A short Python snippet that loads the merged model and runs a prompt for each skill.
+    - name: Comparison with parent models
+      contains: How the merged model scores against each parent on your test set or common benchmarks.
+    - name: Method advice
+      contains: Which merge method fits your models, and how to adjust weights or density if a skill drops.

@@ -23,24 +23,11 @@ uses:
   - copilot-qdrant-monitoring
 steps:
   - uses: copilot-qdrant-performance-optimization
-    note: 1. Read skills/copilot-qdrant-performance-optimization/SKILL.md. Share
-      your search workload. Get index, query and hardware changes to test
-      against a clear baseline. Save the result with source references. Carry
-      the user's goal and all earlier findings into this step. If required
-      evidence or tool access is missing, mark this step blocked; do not
-      fabricate a result.
+    note: "1. Read skills/copilot-qdrant-performance-optimization/SKILL.md. Share your search workload. Get index, query and hardware changes to test against a clear baseline. Uses your query traces and workload sizes. Hands step 2 the baseline and the changes to test, so capacity is sized after tuning. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
   - uses: copilot-qdrant-scaling
-    note: 2. Read skills/copilot-qdrant-scaling/SKILL.md. Share your data size and
-      traffic. Get a scaling plan and the evidence needed before adding nodes.
-      Save the result with source references. Carry the user's goal and all
-      earlier findings into this step. If required evidence or tool access is
-      missing, mark this step blocked; do not fabricate a result.
+    note: "2. Read skills/copilot-qdrant-scaling/SKILL.md. Share your data size and traffic. Get a scaling plan and the evidence needed before adding nodes. Uses your data size and traffic, not step 1's plan directly; the earlier findings tell it which fixes to try before adding nodes. Hands step 3 the capacity limits worth alerting on. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
   - uses: copilot-qdrant-monitoring
-    note: 3. Read skills/copilot-qdrant-monitoring/SKILL.md. Share your Qdrant
-      setup. Get useful health metrics, alerts and checks for slow or unhealthy
-      search. Save the result with source references. Carry the user's goal and
-      all earlier findings into this step. If required evidence or tool access
-      is missing, mark this step blocked; do not fabricate a result.
+    note: "3. Read skills/copilot-qdrant-monitoring/SKILL.md. Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search. Uses your Qdrant setup, with the baseline and capacity limits from steps 1 and 2 as the numbers to watch. Hands back the metrics and alerts to compare after each change. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
 origin: rebuilt
 version: 1.0.0
 credits:

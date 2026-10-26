@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows a set method but must read mixed results with care.
 new_slug: prompt-change-tester
 name: Prompt change tester
-summary: Give it a prompt change and a fixed set of cases. Get a clear report of
-  what got better or worse.
+summary: Compare a new prompt with your old one on the same test cases. You get a case-by-case report of what got better or worse, and a ship or hold call.
 job: test-and-fix-code
 headline: Prompt change tester
-subhead: A fair test of whether your new prompt is better than the old one. You
-  get case-by-case evidence, so a change ships on proof, not a hunch.
+subhead: A fair test of whether your new prompt is better than the old one. You get case-by-case evidence, so a change ships on proof, not a hunch.
 explain: |
   A fair test of whether your new prompt is better than the old one. You get case-by-case evidence, so a change ships on proof, not a hunch.
 
@@ -17,6 +15,10 @@ when:
   - Your team argues over which prompt is better and needs evidence.
   - You are changing models and want to compare answers on the same cases.
   - You need a record of why you approved a change.
+not_for:
+  - "You made a one-off wording tweak and have no fixed test cases: spot-check a few answers by hand instead."
+  - "You want to write or improve a prompt from scratch: ask your AI to draft it, then come back here to test it."
+  - "You need proof that the prompt will behave well in future: a finite test set cannot show that, so keep watching real use."
 you_give:
   - Old and new prompts
   - A fixed set of test cases
@@ -29,7 +31,30 @@ you_get:
   - Notes on missing or noisy results
   - A ship or hold recommendation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your old prompt, your new prompt and your test cases. Give each case an ID.
+  - Say what counts as a pass for each case, before you see any results. Add the model and settings you used.
+  - Ask your AI to compare both prompts case by case. Add the answers you got from each prompt if you already ran them.
+  - Check the report for incomplete cases. A missing answer or timeout is not a pass.
+  - Save the report in your team change log. Run the test again after any change to the model or settings.
+output_sample:
+  input:
+    - Your old prompt and your new prompt
+    - A fixed set of test cases, each with an ID
+    - Rules for what counts as a pass, set before you run
+    - The model and settings you use
+    - Human-scored examples to check an AI judge (optional)
+  prerequisites:
+    - Test cases you have reviewed and frozen
+    - Permission to run both prompts on those cases
+  output:
+    - name: Run record
+      contains: The prompt versions, model, settings and tools used, so the test can be repeated.
+    - name: Regression register
+      contains: One row per case with the check, a pass, fail or incomplete result, and the evidence.
+    - name: Judge notes
+      contains: Which AI judge and rubric were used, and how far they match human scores.
+    - name: Case-by-case review
+      contains: Wins and losses for each case, with counts, failures and how unsure the result is.
+    - name: Decision
+      contains: A keep, revise or reject call for this test set, plus notes on missing or noisy results.

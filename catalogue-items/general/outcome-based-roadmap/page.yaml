@@ -1,6 +1,6 @@
 new_slug: outcome-based-roadmap
 name: "Feature roadmap to outcomes rewriter"
-summary: "Paste your list of features and dates. Get a short list of problems to solve, each with a result to measure."
+summary: "Turn a feature roadmap into outcomes. Paste your features and dates. Get three to five customer problems, each with a result you can measure."
 job: plan-strategy
 thinking: medium
 thinking_why: "It judges what each item is really for and groups them, but follows a fixed rewrite pattern."
@@ -17,6 +17,10 @@ when:
   - Your plan is a long list of features ranked by a deadline.
   - Your team ships on time and nothing seems to improve.
   - A boss or client has handed you a list of requests and you need to find the goals behind them.
+not_for:
+  - "You have a one-off bug list: use a task tracker, since bugs need fixing, not rewriting as goals."
+  - "You want to know if one new idea is worth building: ask a trusted colleague to test it, or run a small trial first."
+  - "You have no list yet and only a blank page: talk to five customers first, then come back with what they said."
 
 you_give:
   - Your list of features, tasks or requests, with any dates
@@ -34,6 +38,27 @@ how_to_use:
   - Name the customers you serve. If you are not sure, say so.
   - Pick the results it suggests and make sure someone can pull each number.
   - Take the problems to your next planning meeting in place of the old list.
+output_sample:
+  input:
+    - Your list of features, tasks or requests, with any dates
+    - Who asked for each item (optional)
+    - The customers you serve (optional)
+    - Findings from earlier checks on the ideas (optional)
+  output:
+    - name: Your list, sorted
+      contains: Each item marked as a feature, a problem or a result, with who asked and what they hope will change.
+    - name: Problems to solve
+      contains: Three to five problems, each for a named customer, with one result, a start figure and a target.
+    - name: Owners
+      contains: One role for whether customers want it and one for whether the business can run it.
+    - name: Review points
+      contains: A time to check each problem and the evidence needed to carry on, change course or stop.
+    - name: Dropped or parked
+      contains: Items that fit no problem, each with a reason.
+    - name: Missing
+      contains: Facts that would sharpen the list, such as a customer group or a current figure.
+    - name: Checks missed
+      contains: One line for each check still missed, or the word none.
 
 how_it_works:
   - title: Sorts the list

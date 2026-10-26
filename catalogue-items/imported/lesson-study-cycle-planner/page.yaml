@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It sequences a long cycle with many linked steps.
 new_slug: lesson-study-cycle-planner
 name: Lesson study cycle planner
-summary: Give it a teaching question. Get a full lesson study plan, from shared
-  planning to the research lesson.
+summary: Plan a lesson study cycle for your teaching team. Give it one teaching problem. You get a four-meeting plan, a research lesson and an observation guide.
 job: teach-and-train
 headline: Lesson study cycle planner
-subhead: A four-meeting plan for a teaching team to study one problem in their
-  own classrooms, from first question to shared findings. You skip the guesswork
-  about what each meeting should produce.
+subhead: A four-meeting plan for a teaching team to study one problem in their own classrooms, from first question to shared findings. You skip the guesswork about what each meeting should produce.
 explain: |
   A four-meeting plan for a teaching team to study one problem in their own classrooms, from first question to shared findings. You skip the guesswork about what each meeting should produce.
 
@@ -18,6 +15,10 @@ when:
   - You are a new teacher and want a safe way to learn from colleagues.
   - A school leader needs a clear plan for collaborative teacher inquiry.
   - Students can do the basic skill but fail when it changes shape.
+not_for:
+  - "You want to rate or judge one teacher: this plan studies the lesson, not the person, so use a simple observation checklist agreed with that teacher."
+  - "You have no team and no shared meeting time: ask one trusted colleague to watch a lesson and give feedback."
+  - "You need a one-off lesson plan for a single class: write a normal lesson plan instead."
 you_give:
   - The teaching challenge
   - Subject and topic
@@ -31,7 +32,27 @@ you_get:
   - Post-lesson discussion questions
   - A way to share what the team learned
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Type your teaching challenge, your subject and topic, and who is on the team.
+  - Add your meeting time and your three case students if you know them (optional).
+  - Read the cycle plan first. Check that each meeting fits the time you really have.
+  - Edit the research lesson plan with your team before you use it.
+  - After the last meeting, share your notes with the wider school.
+output_sample:
+  input:
+    - Your teaching challenge
+    - Subject, topic and year group
+    - Who is on the team and how much experience they have
+    - Meeting time you have (optional)
+    - Profiles of three case students (optional)
+  output:
+    - name: Research Theme
+      contains: The main question your team will study in its own classrooms.
+    - name: Cycle Plan
+      contains: What each of the four meetings should do and produce, in order.
+    - name: Research Lesson Plan
+      contains: The lesson the team plans together and teaches while others watch.
+    - name: Observation Protocol
+      contains: A guide for watching three case students and noting what they do and say.
+    - name: Post-Lesson Discussion Guide
+      contains: Questions for the team talk after the lesson, based on what was seen.

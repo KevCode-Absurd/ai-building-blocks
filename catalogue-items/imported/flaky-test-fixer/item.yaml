@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
+  - type: test_report
+    required: false
 outputs:
   - type: code_change
 uses: []

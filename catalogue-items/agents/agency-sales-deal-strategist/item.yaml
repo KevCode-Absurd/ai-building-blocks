@@ -1,0 +1,42 @@
+slug: agency-sales-deal-strategist
+name: Deal Strategist agent
+summary: Get a deal review with qualification gaps and next actions. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: sales/sales-deal-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-deal-strategist.md
+  licence: MIT
+  original_name: Deal Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: fdd92f2ced04ad842e25fd9ebcc341372ce2630d4ec152a29c53f7b8535b855e
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Deal Strategist
+  - Agency Agents
+  - Sales
+credits:
+  - title: Deal Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-deal-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

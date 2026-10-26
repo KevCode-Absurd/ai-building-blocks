@@ -2,16 +2,31 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-board-meeting-and-role-planner
 name: Nonprofit board meeting and role planner
-summary: Share board issues and current rules. Get clearer roles, meeting agendas, committee duties, and review tools.
+summary: Plan a nonprofit board meeting that gets decisions made. Get a timed agenda, clear board and staff roles, committee charters and review tools.
 job: lead-people
 headline: Nonprofit board meeting and role planner
-subhead: Share your board's rules, meeting habits, and the decisions that keep getting stuck. It separates board oversight from staff work. You get clearer roles, timed agendas, committee duties, and review tools suited to your board's way of making decisions.
+subhead: Share your board's rules, recent minutes and the meeting problems you face. Your AI separates board work from staff work. You get a timed agenda, committee duties and review tools that fit how your board decides.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - Your board meetings run long and nothing gets decided.
+  - Board members keep telling staff what to do, and you need clear lines.
+  - You need to set up or fix your committees.
+  - It is time for the yearly board self-review or the director's review.
+not_for:
+  - "You need to find and bring on new board members: use the Nonprofit board recruitment skill, not this page."
+  - "You need the legal text of bylaws or a conflict-of-interest policy: ask your lawyer or use the Nonprofit bylaws policy skill."
+  - "You need help answering the board questions on Form 990: use the Nonprofit Form 990 skill or ask your accountant."
 you_give:
-  - Board rules, current agenda and packets, committee duties, meeting problems, and leadership review process.
+  - Your last three sets of board minutes.
+  - The quorum and voting rules from your bylaws.
+  - Your current list of committees and what each does.
+  - Your next board packet (optional).
+  - A short note on the meeting problems you want fixed.
 you_get:
-  - A meeting agenda, role boundaries, committee charter, or board self-review tool matched to the task.
+  - A timed agenda with a consent agenda and key decisions placed early.
+  - A clear line between what the board decides and what staff decide.
+  - A written charter for each committee.
+  - A board self-review survey with an action plan.
+  - A yearly review tool for your executive director.
 how_it_works:
   - title: Clarify who decides
     text: Identify how the board works. Separate oversight from day-to-day staff work.
@@ -26,5 +41,26 @@ works_best_with:
   inputs:
     - Internal process design; consequential but not externally filed.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your minutes, your quorum and voting rules, your committee list and your next packet.
+  - "Say which job you want done: agenda, committee charters, self-review or director review."
+  - Check that the voting rules and quorum in the result match your bylaws.
+  - Have your board chair read the draft before you share it with the board.
+output_sample:
+  input:
+    - Your last three sets of board minutes
+    - The quorum and voting rules from your bylaws
+    - Your current list of committees
+    - Your next board packet (optional)
+    - The meeting problems you want fixed
+  output:
+    - name: Board meeting agenda
+      contains: A timed agenda with a consent agenda for routine items and key decisions placed early.
+    - name: Committee charter
+      contains: Purpose, authority, membership, chair term and reporting schedule for each committee.
+    - name: Board self-assessment survey
+      contains: A confidential survey with an action plan summary for the full board.
+    - name: ED evaluation tool
+      contains: A yearly review form and goal-setting worksheet for the executive director.
+    - name: Board member job description and code of conduct
+      contains: A one-page summary of what each board member does and how they act.

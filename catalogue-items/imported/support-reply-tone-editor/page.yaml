@@ -2,30 +2,75 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: support-reply-tone-editor
 name: Support reply tone editor
-summary: Paste a reply and choose a tone. Get a rewrite that keeps the same facts and next steps.
+summary: Change the tone of a support reply without changing its facts. Paste your reply, pick a tone, and get a rewrite with the changes explained.
 job: help-customers
 headline: Support reply tone editor
-subhead: Give it a support reply and the tone you want, such as warm, firm, formal, or brief. It changes the wording while keeping the meaning and facts. You get a rewritten reply and a short explanation of the changes.
+subhead: Paste a support reply and name a tone, such as formal, casual, empathetic or firm. It rewrites the wording and keeps your facts, numbers and next steps. You get the new reply and a short list of what changed.
+explain: |
+  A support reply can be right and still land badly. It may sound cold to an upset customer, or too casual for a business account. This support reply tone editor changes how the reply sounds without changing what it says.
+
+  You pick one of eight tones: formal, casual, technical, empathetic, concise, friendly, apologetic or firm. Name none, and it gives you five versions side by side, so you can see which one fits.
+
+  It does not add facts, promises, refunds or apologies you did not write. If a tone needs a name or a detail you left out, it leaves a gap for you to fill. It ends with a check that your facts, numbers and dates are unchanged.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Your draft is correct but sounds cold, stiff or too blunt.
+  - You are writing to an enterprise customer and need a formal tone.
+  - A customer is upset and your draft needs to sound more caring.
+  - You want the same reply in a shorter, more direct version for a follow-up.
+not_for:
+  - You do not know what to say yet. Use the Customer reply drafter to write the first draft.
+  - You want your reply checked for bad promises before you send it to an angry customer. Use the Angry customer reply checker.
+  - You want a style guide for your whole team. Use the Voice and tone guide writer.
+  - The reply decides a refund, a legal matter or a policy. Have the person who owns that decision write or confirm it first.
 you_give:
-  - The support reply you want changed.
-  - Your preferred tone, such as warm, firm, formal, or brief.
+  - The support reply you want to change
+  - The tone you want, from formal, casual, technical, empathetic, concise, friendly, apologetic or firm (optional)
 you_get:
-  - Return the new reply and key edits, or several tone options when no preference was given.
+  - The reply rewritten in your tone
+  - The tone your original had
+  - A short list of what changed and why
+  - A fact check line, so you can see that nothing was added
+  - Five versions side by side, if you name no tone
+how_to_use:
+  - Open Claude, ChatGPT or Gemini and paste this skill, or add the skill folder if your AI supports it.
+  - Type the tone you want, then paste your reply. To see options, paste only the reply.
+  - Read the Check before you send line. Compare any number, date or link with your original.
+  - Fill in any gap in square brackets, such as a name.
+  - Copy the reply into your help desk and send it yourself. The skill sends nothing.
+output_sample:
+  input:
+    - The support reply you want to change
+    - The tone you want (optional)
+  prerequisites:
+    - Nothing. It works from the text you paste.
+  output:
+    - name: Original tone detected
+      contains: A short label for how your reply sounds now.
+    - name: Rewritten Response
+      contains: Your reply in the tone you chose, with the same facts and next steps.
+    - name: What Changed
+      contains: The main wording changes and why they fit the tone.
+    - name: Check before you send
+      contains: A line that confirms your facts, numbers, dates and links match the original, or lists any difference.
+    - name: Comparison table
+      contains: Five tones next to your original. Only when you named no tone.
 how_it_works:
-  - title: Read the reply
-    text: Identify the existing tone, core message, facts, and requested tone.
+  - title: Read your reply
+    text: It finds the tone you wrote in, the core message, and every fact, number and date.
+  - title: Pick the tone
+    text: It uses the tone you named, or builds five versions if you named none.
   - title: Rewrite the wording
-    text: Adjust formality, detail, warmth, or length while preserving the reply's meaning.
+    text: It changes formality, warmth and length. It keeps the facts and the steps the customer must take.
+  - title: Mark the gaps
+    text: It leaves a bracket where the tone needs a detail you did not give, instead of making it up.
   - title: Explain the changes
-    text: Return the new reply and key edits, or several tone options when no preference was given.
+    text: It lists what changed and checks that the facts still match.
 works_best_with:
   tools:
-    - name: Pasted text; no outside account needed
-      why: This task works directly from the text you provide.
-how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for support reply tone editor by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide the support reply you want changed.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+    - name: Claude, ChatGPT or Gemini
+      why: Nothing to connect. It works from the text you paste.
+    - name: Your last customer message (optional)
+      why: Paste it too if you want your AI to match how formal the customer is.
+terms:
+  - term: Tone
+    meaning: How a message sounds, such as warm, formal or firm.

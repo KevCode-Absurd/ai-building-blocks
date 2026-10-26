@@ -1,6 +1,6 @@
 new_slug: monthly-content-repurposer
 name: Monthly content repurposer
-summary: Give it last month's content results. Get your best pieces picked and turned into posts, emails and clips to approve.
+summary: Give it last month's content results. It picks your best pieces and turns them into posts, emails and clip ideas for you to approve.
 job: grow-social
 thinking: high
 thinking_why: It ranks pieces from several signals, decides which platforms earn more and reshapes one idea for each format without changing its facts. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You publish articles, a newsletter or videos and most pieces get one day of attention.
   - You post on four platforms and cannot say which ones earn it.
   - You want a month of posts from work you have already done.
+not_for:
+  - "You want one post from one piece: use a plain repurposing step in your AI, such as pasting the piece and asking for a post."
+  - "You do not track results for each piece: pick the piece yourself and ask your AI to reshape it, because this agent ranks by results."
+  - "You want it to publish or schedule for you: use your own scheduling tool, because this agent never posts anything."
 you_give:
   - Last month's results per piece, with views, completion, replies, shares and any traced sales
   - The full text or transcript of the pieces you might repurpose
@@ -33,6 +37,31 @@ how_to_use:
   - Tell it your platforms and how often you post. It saves them.
   - Read the calendar and the posts. Schedule the ones you agree with in your own tools.
   - Run it again on the first Tuesday of next month. It reads how the repurposed posts did.
+output_sample:
+  input:
+    - Last month's results for each piece (views, completion, replies, shares, sales if traced)
+    - The full text or transcript of the pieces you might reuse
+    - Your brand brain (advised)
+    - Your platforms and how often you post (advised)
+    - Last month's calendar (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code, to keep the pieces and platforms files between months
+    - Your brand brain from the Brand profile builder (advised, for the voice check)
+  output:
+    - name: Last month
+      contains: One line on pieces published, the two that earned most, and the platform that moved most.
+    - name: Platform calls
+      contains: A keep, grow or drop call for each platform, with the number behind it.
+    - name: The picks
+      contains: The one or two original pieces chosen, and why each was picked.
+    - name: The formats
+      contains: Posts, emails and clip ideas for each pick, grouped by platform, with video titles and tags where they apply.
+    - name: The calendar
+      contains: The month's dates, platforms and posts, spread by where your audience pays attention.
+    - name: Voice fixes
+      contains: Lines changed to match your voice, each with the reason.
+    - name: Files and MISSING
+      contains: Each step's file and every line marked MISSING.
 how_it_works:
   - title: Read last month
     text: Checks how last month's repurposed posts did and updates the keep, grow or drop call on each platform.

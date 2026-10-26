@@ -1,6 +1,6 @@
 new_slug: long-hold-return-calculator
 name: "Long-hold return calculator"
-summary: "Paste what you know about a business and its price. Get the long-run sums and a keep, wait or pass call."
+summary: "Run the long-hold return sums on a business you have studied. See what the price and tax timing do, then get a keep, wait or pass call."
 job: money-and-investing
 thinking: high
 thinking_why: "It runs several sums, keeps the cases straight and weighs them against your real alternative. Errors in the arithmetic would change the call."
@@ -17,6 +17,10 @@ when:
   - You have studied a business and want to know what a long hold could actually earn.
   - You are torn between a great business at a fair price and a poor one at a bargain price.
   - You want to see what trading often costs against holding.
+not_for:
+  - "You want to time trades or pick a stock to buy today: this tool does not give buy or sell calls, so talk to a licensed adviser."
+  - "You need to file or work out your tax bill: use an accountant or your tax office, because the tax sum only shows a rough gap."
+  - "You have not studied the business yet: do that first, because this tool needs your findings and the return it earns."
 
 you_give:
   - Your findings on the business
@@ -35,6 +39,30 @@ how_to_use:
   - Add your tax rate and how long you would hold.
   - Name the best other use of the same money that you know well.
   - Read the call, then check which figures it leans on.
+output_sample:
+  input:
+    - Your findings on the business
+    - The yearly return it earns on the money put in, over at least five years
+    - Your estimate of what it is worth and the price you would pay (optional)
+    - Your tax rate and how many years you would hold (optional)
+    - Your next best use of the same money (optional)
+  output:
+    - name: Business return
+      contains: A low, middle and high case for the yearly return, with the number of years of record.
+    - name: The cap sum
+      contains: What one unit of money becomes over a long hold at your low and high return.
+    - name: The price grid
+      contains: The yearly return for weak and strong businesses, bought cheap or dear.
+    - name: The tax sum
+      contains: Yearly return when tax is paid once at the end, against tax paid each year, with a local-check note.
+    - name: The alternative
+      contains: Your real next best choice and the bar the business must beat.
+    - name: The call
+      contains: Keep, wait or pass as a method result, with a two-line reason and the figures that would change it.
+    - name: Missing
+      contains: Any figure that was not given and had to be marked, not guessed.
+    - name: Checks missed
+      contains: One line for each self-check that still failed, or none.
 
 how_it_works:
   - title: Three cases for the business

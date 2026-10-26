@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches advice to the project and its audience.
 new_slug: open-source-promoter
 name: Open source promoter
-summary: Give it your open source project. Get a plan to win stars, users and
-  contributors without sounding pushy.
+summary: "Get an open source promotion plan for your project: readme fixes, easy first issues, a launch schedule and follow-up, so stars turn into users."
 job: grow-social
 headline: Open source promoter
-subhead: A plan to get your open source project noticed, used and contributed
-  to, without coming across as pushy. Developers can smell hype, so the plan is
-  built on being useful.
+subhead: A plan to get your open source project noticed, used and contributed to, without coming across as pushy. Developers can smell hype, so the plan is built on being useful.
 explain: |
   A plan to get your open source project noticed, used and contributed to, without coming across as pushy. Developers can smell hype, so the plan is built on being useful.
 
@@ -18,6 +15,10 @@ when:
   - Your repo has stars but no contributors.
   - You are planning a launch on a developer forum.
   - Your readme gets visitors but few of them try the project.
+not_for:
+  - "You want to promote a paid app or a software company: use a normal marketing plan or a person who does marketing."
+  - "You have not built anything yet: finish a first working version before you plan any promotion."
+  - "You need help writing code, fixing bugs or reviewing pull requests: use a coding assistant or a maintainer you trust."
 you_give:
   - Your project and what it does
   - Who you think uses it
@@ -29,7 +30,31 @@ you_get:
   - Contributor-friendly issue ideas
   - A launch and follow-up schedule
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code running, files or paid tools.
+  - "Describe your project in a few lines: what it does, who uses it and where it is hosted."
+  - Say how much time you have each week (optional).
+  - Ask for the full plan, then read the readme and launch parts first.
+  - Fix your readme and repo page before you post anywhere, then follow the launch schedule.
+output_sample:
+  input:
+    - Your project and what it does
+    - Who you think uses it
+    - Where the project is hosted, for example GitHub
+    - Your time per week (optional)
+  prerequisites:
+    - A short note on who uses your project and where they spend time. If you have none, your AI will ask you.
+  output:
+    - name: Audience check
+      contains: Who would use the project, where they find tools, what they use now and how they judge a project.
+    - name: Readme rewrite
+      contains: A readme layout with a one-line pitch, a quick start, reasons to pick it and a contributing link, plus a checklist.
+    - name: Repository page checklist
+      contains: Fixes for the description, topics, website link, releases, issue templates and discussions.
+    - name: Good first issues and CONTRIBUTING.md
+      contains: Easy starter issue ideas and a guide that tells new contributors how to send their first change.
+    - name: Launch plan
+      contains: A pre-launch checklist and a launch day timeline for Hacker News, Reddit, X and developer blogs.
+    - name: Follow-up schedule
+      contains: What to do in week one, week two, week three and month one after launch.
+    - name: Growth and tracking notes
+      contains: Content ideas for steady growth, plus the numbers worth tracking, such as contributors and issue response time.

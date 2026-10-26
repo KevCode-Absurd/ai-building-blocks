@@ -2,35 +2,102 @@ thinking: medium
 thinking_why: Several models answer, then a chair model weighs them.
 new_slug: multi-model-answer-panel
 name: Multi-model answer panel
-summary: Ask one question. Get answers from several open AI models, ranked, plus
-  one final answer.
+summary: Get a second opinion on a hard question. Several AI models answer, rank each other, and one chairman writes the final answer.
 job: think-and-decide
 headline: Multi-model answer panel
-subhead: One question answered by several open AI models, ranked by each other,
-  then boiled down to one final answer. You see every answer and every ranking,
-  so nothing is hidden.
+subhead: Ask one hard question and get a multi-model AI panel (an LLM council). Each model answers alone, then ranks the others with names hidden. A chairman model writes one final answer. You see every answer and every ranking.
 explain: |
-  One question answered by several open AI models, ranked by each other, then boiled down to one final answer. You see every answer and every ranking, so nothing is hidden.
+  A single AI can sound sure and still be wrong. This skill asks several different AI models the same question, so you can see where they agree and where they split.
 
-  It follows Andrej Karpathy's council idea in three rounds. Round one: every model answers alone, in parallel. Round two: each model ranks the others' answers with the names removed. Round three: a chairman model reads all of it and writes the final answer. You pick the council and the chairman. Raw responses are saved to files and shown unedited. It needs a Fireworks AI account and API key, which has a cost.
+  It follows the council idea from Andrej Karpathy, in three rounds. Round one: each model answers alone. Round two: each model ranks all the answers, with the model names removed, so none can favour its own brand. Round three: a chairman model reads every answer and every ranking, then writes one final answer.
+
+  You pick the models and the chairman. Every raw answer is saved to a file and shown unedited. The models run on Fireworks AI, a paid service that hosts open AI models. It needs a Fireworks account and key, and you pay per use.
 when:
-  - You have a hard question and want more than one opinion.
-  - You want to see where models disagree.
-  - You are comparing open models on your own questions.
-  - A decision is important enough to check twice.
+  - You face a hard choice and want more than one AI opinion before you act.
+  - You want to see where different models disagree on the same question.
+  - You are comparing open models such as DeepSeek, Kimi or Qwen on your own questions.
+  - The answer will go to a client or a boss, so you want it checked twice.
+not_for:
+  - Your question has one checkable answer, like a date or a sum. Ask one AI, or use the AI answer fact-checker.
+  - You want to test one claim from many sides. Use the Claim stress tester or the Strategy Duel agent instead.
+  - You have no Fireworks key or cannot run code. The skill has a manual fallback, but it is a weaker version.
+  - You want one fast, cheap answer. A panel makes many calls, so it costs more and takes longer.
 you_give:
-  - Your question
-  - Which models sit on the council
-  - Which model is chairman
-  - A Fireworks AI account and key
+  - Your question, written out in full
+  - 3 to 5 models for the council
+  - One model to act as chairman
+  - A Fireworks AI account and API key
+  - Background the models need, such as your numbers or context (optional)
 you_get:
-  - Each model's own answer
-  - Anonymous rankings between them
-  - A final combined answer
-  - Saved files with all raw responses
+  - Each model's full answer, unedited
+  - Each model's ranking of all the answers, with a reason
+  - One final answer written by the chairman
+  - Saved files holding every raw response
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Fireworks API key.
+  - Make a Fireworks AI account and set your key as FIREWORKS_API_KEY on your own machine. Do not paste the key into a chat.
+  - Open your AI tool that can run code, such as Claude Code, and add this skill. Chat windows that cannot run code can only do the manual version.
+  - Type your question. Say which 3 to 5 models sit on the council and which one is chairman. The skill lists the choices if you do not know.
+  - Let it run all three rounds. Check the cost on the Fireworks pricing page first, because each round makes one call per model.
+  - Read the rankings before the final answer. If the models disagree, read the split first. The final answer should say where they agreed.
+how_it_works:
+  - title: Check the key
+    text: It confirms your Fireworks key is set before it spends anything.
+  - title: Pick the panel
+    text: You choose the council models and the chairman. It suggests 3 to 5 council models.
+  - title: Round one, answer alone
+    text: Each model answers your question at the same time, without seeing the others.
+  - title: Round two, rank with names hidden
+    text: Each model ranks all the answers as Response A, B and C, with a short reason for each.
+  - title: Round three, chairman writes
+    text: The chairman reads every answer and ranking, fixes contradictions and writes one answer.
+  - title: Show everything
+    text: It reads the saved files back to you, so nothing is trimmed or reworded.
+output_shape: |
+  QUESTION: <your question>
+  COUNCIL: <model names>   CHAIRMAN: <model name>
+  PHASE 1, individual answers
+    [A] <model name> (<seconds>, <tokens>): <full answer>
+  PHASE 2, rankings
+    <letter to model key>
+    <model name> ranks: 1. <letter> - <reason>  2. <letter> - <reason>
+  PHASE 3, chairman's final answer
+    <one combined answer>
+  Saved in <session folder>
+output_sample:
+  input:
+    - Your question, in full
+    - The council models you pick, 3 to 5 of them
+    - The chairman model you pick
+    - Any numbers or background the models need (optional)
+  prerequisites:
+    - A Fireworks AI account and API key set as FIREWORKS_API_KEY
+    - An AI tool that can run Python 3 with the requests package
+  output:
+    - name: Individual answers
+      contains: Every council model's full answer, with its letter, speed and token count.
+    - name: Cross-model rankings
+      contains: Each model's best-to-worst ranking of the answers, with a short reason for each.
+    - name: Chairman's final answer
+      contains: One combined answer that keeps the best points and settles any contradictions.
+    - name: final_output.md
+      contains: The full session, from question to final answer, in one readable file.
+    - name: phase1_responses.json
+      contains: The raw answers from round one, exactly as the models sent them.
+    - name: phase2_rankings.json
+      contains: The raw rankings from round two and the key that maps letters to models.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the Python steps and read the saved files back to you.
+    - name: Any AI tool that runs code
+      why: The skill calls the Fireworks service from your own machine, so a plain chat window is not enough.
+  inputs:
+    - Your own figures, deadline or constraints, so the models do not guess
+    - A list of options you already considered
+terms:
+  - term: Open model
+    meaning: An AI model whose weights are public, so many services can host it.
+  - term: Chairman
+    meaning: The model that reads all answers and rankings and writes the final answer.
+  - term: Fireworks AI
+    meaning: A paid service that runs open AI models. You pay for each call.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a set check and reports what it finds.
 new_slug: schedule-timing-checker
 name: Schedule timing checker
-summary: Give it a cron schedule. Get a plain-English meaning, the next run
-  times, and any silent mistakes that stop or repeat it.
+summary: Check your cron schedule before it ships. Get a plain-English meaning, the next run times and silent mistakes that stop it or repeat it.
 job: test-and-fix-code
 headline: Schedule timing checker
-subhead: Find out what your cron schedule will really do before it ships. Paste
-  the expression and get a plain English meaning, the next run times and any
-  silent mistakes that stop it or make it run too often.
+subhead: Find out what your cron schedule will really do before it ships. Paste the expression and get a plain English meaning, the next run times and any silent mistakes that stop it or make it run too often.
 explain: |
   Find out what your cron schedule will really do before it ships. Paste the expression and get a plain English meaning, the next run times and any silent mistakes that stop it or make it run too often.
 
@@ -18,6 +15,10 @@ when:
   - You are about to deploy a CronJob and want to check its timing.
   - You need to know how many times a year a schedule runs.
   - You inherited a crontab and want it explained.
+not_for:
+  - Your schedule has seconds or a year field, like Quartz 6 or 7 fields. Check it with the docs of your scheduler, as this tool reads 5 fields only.
+  - "Your job uses @reboot or other special words like L or #. Check these by hand in your scheduler's docs."
+  - The schedule is fine but the job fails inside a container or cluster. Ask a developer to check the container setup and logs.
 you_give:
   - The cron expression or file
   - The time zone it runs in (optional)
@@ -28,8 +29,27 @@ you_get:
   - A list of silent mistakes found
   - A corrected expression
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - "Copy your cron line. It must have 5 fields: minute, hour, day of month, month, day of week."
+  - Paste the skill text into Claude, ChatGPT or Gemini, then paste your cron line below it.
+  - Add the time zone and where it runs, such as Kubernetes or GitHub Actions, if you know them.
+  - Read the plain-English meaning first. Check it matches what you wanted.
+  - Check the traps and the next 5 run dates. For exact dates, use an AI that can run code.
+  - Use the fixed line, then test it in your own scheduler.
+output_sample:
+  input:
+    - Your cron expression, with 5 fields
+    - The time zone it runs in (optional)
+    - Where it is used, such as Kubernetes or GitHub Actions (optional)
+  prerequisites:
+    - An AI that can run code, to list exact run dates with the Node script (optional, the checks also work in plain chat)
+  output:
+    - name: Plain-English meaning
+      contains: What the schedule says in words, and what you may have thought it meant.
+    - name: Trap checklist
+      contains: "Which of the five traps apply: impossible dates, OR rule, midnight spike, uneven steps, leap day."
+    - name: Next 5 run times
+      contains: The next five dates and times the job will fire, so you can check them.
+    - name: Yearly run count
+      contains: About how many times the schedule fires in a year.
+    - name: Fix
+      contains: A corrected expression or a script check, with any case the fix still gets wrong.

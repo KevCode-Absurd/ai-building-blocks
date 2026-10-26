@@ -33,3 +33,26 @@ how_it_works:
     text: Check consistency, product accuracy, contrast/readability and completeness. Distinguish a planned sheet from an exported document and list steps that did not run.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You need a full brand guide with voice and rules for a whole business: use the Brand guide builder."
+  - "You want a set of finished product photos, not a plan: use the Product photo set maker."
+  - "You only need image prompts from an existing brand file: use the Brand-to-image prompt compiler."
+output_sample:
+  input:
+    - Your product and what it is for
+    - Your brand direction, colours and fonts
+    - Product photos (optional)
+    - Your brand file (optional)
+  prerequisites:
+    - An image tool such as ChatGPT or Gemini, to draw the images from the prompts
+  output:
+    - name: Asset inventory
+      contains: What you have and what is missing, such as photos, logo, fonts and approved copy.
+    - name: Visual rules
+      contains: The palette, camera, light, materials and type that every image on the sheet shares.
+    - name: Sheet plan
+      contains: The one-page layout with a zone and a job for each image.
+    - name: Asset prompts
+      contains: One image prompt per needed asset, with the fixed product details written in.
+    - name: Checks and not run
+      contains: What was checked for product accuracy and layout, and what did not run.

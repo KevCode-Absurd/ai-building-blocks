@@ -1,0 +1,42 @@
+slug: agency-paid-media-auditor
+name: Paid Media Auditor agent
+summary: Paste your Google, Microsoft or Meta ad exports. Get ranked account problems, each with proof from your data, a fix and the effort needed.
+category: agent
+boards: []
+type: agent
+role: make
+job: ads
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: paid-media/paid-media-auditor.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-auditor.md
+  licence: MIT
+  original_name: Paid Media Auditor
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: ce0346ba6a1b1652e350733cd3c124ab200e869c116fd85bcd0225d9764b0c56
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Paid Media Auditor
+  - Agency Agents
+  - Paid Media
+credits:
+  - title: Paid Media Auditor
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-auditor.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,51 +1,91 @@
 new_slug: compare-preferred-exit-payout-terms
 name: Compare preferred exit payout terms
 headline: Compare preferred exit payout terms
-summary: Compare nonparticipating and capped-participating alternatives on the same single-class proceeds scenarios.
+summary: See what the investor and common holders each get at exit under nonparticipating and capped participating preferred terms, side by side.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Side-by-side preferred/common payout branches with each alternative clearly labeled. Share two explicitly alternative draft term sets, one preferred investment, matched as-converted ownership, equity proceeds after senior claims and conversion conditions.
+subhead: Give it two draft term sets for one preferred round, the investment, the investor's as-converted ownership and the equity proceeds after senior claims. Step 1 pays out the nonparticipating terms. Step 2 pays out the capped participating terms on the same proceeds. You get both payouts side by side, labeled as alternatives.
 explain: |-
-  Side-by-side preferred/common payout branches with each alternative clearly labeled.
+  Preferred stock gets paid before common stock when a company is sold. Two term sheets for the same round can pay very differently. Under nonparticipating terms, the investor takes either the preference or the converted share of the sale, whichever is larger. Under capped participating terms, the investor takes the preference and then a share of what is left, up to a cap, or converts if that pays more. This preferred exit payout comparison shows both on the same numbers.
 
-  Venture exit rights. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 pays out the nonparticipating terms and keeps what is left for common holders. Step 2 reuses the same investment, ownership and proceeds, applies the cap that includes the preference, and checks conversion. The two results are alternatives. They are never added, because a deal gets one set of terms.
+
+  It covers one preferred class with no unpaid dividends. Stacked classes, uncapped participation and legal election conditions need a person with the documents.
 when:
-  - You need side-by-side preferred/common payout branches with each alternative clearly labeled.
-  - You work on venture exit rights and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Two term sheets for the same preferred round differ on participation, and you want to see what each pays at exit.
+  - A founder or investor asks what a participation cap gives up or protects at a given sale price.
+  - You have a few possible exit proceeds and want each alternative's payout at each one.
+  - A lawyer or adviser needs payout figures they can trace back to the draft terms.
+not_for:
+  - There is more than one preferred series, or the series rank or share equally. This covers one class only.
+  - The terms give full participation with no cap, or add unpaid dividends. Neither is covered here.
+  - You are working out how a SAFE or note turns into shares. Use the Check a SAFE into priced financing or Check a convertible note conversion workflow.
+  - You want advice on which terms to accept. This shows payouts. It does not rank deals for you.
 you_give:
-  - Two explicitly alternative draft term sets, one preferred investment, matched as-converted ownership, equity proceeds after senior claims and conversion conditions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Both draft term sets, written as two alternatives (from the term sheets)
+  - The preferred investment amount and each alternative's preference multiple (from the term sheets)
+  - The cap multiple for the capped alternative, counted with the preference included (from the term sheet)
+  - The investor's as-converted ownership, the same in both (from the cap table)
+  - Equity proceeds after senior claims such as debt, for each exit you want to test (from your sale model or offer)
+  - The reporting date, currency and scale, such as USD thousands
 you_get:
-  - Side-by-side preferred/common payout branches with each alternative clearly labeled.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The nonparticipating payout: investor, common holders, and the choice the investor would make"
+  - "The capped participating payout: preference, capped extra share, conversion test and common leftover"
+  - Both alternatives side by side on the same proceeds, labeled and never added
+  - The common holders' leftover under each alternative
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach both term sheets. Add the investment, the ownership percentage and each exit proceeds figure, after senior claims. Say which terms are alternative A and which are alternative B.
+  - After step 1, check that the investor gets the larger of the preference and the converted share, never more than the proceeds, and that the rest goes to common.
+  - After step 2, check that preference plus extra share stays under the cap, and that investor plus common equals the proceeds.
+  - Fill every MISSING line before anyone relies on the result. A lawyer who has the final documents should confirm the terms.
 how_it_works:
   - title: Nonparticipating preference checker
-    text: Calculate the nonparticipating alternative with actual available equity proceeds and optional conversion. Preserve the common residual and low-exit availability cap.
+    text: "Pays the investor the larger of the preference (investment times its multiple) and the converted share of proceeds, capped at the proceeds available. Gives the rest to common holders. Hands step 2 the investment, ownership and proceeds. Check before moving on: investor plus common equals proceeds."
   - title: Capped participation checker
-    text: Reuse only matched investment, ownership and proceeds. Apply the alternative inclusive cap and conversion right, then compare outcomes without adding the two alternatives together.
+    text: Pays the preference, adds the investor's share of the rest, and caps the total at the inclusive cap. Compares that with converting to common and takes the larger. Shows the common leftover. Checks that the cap includes the preference. Never adds step 1's payout to this one.
 output_shape: |-
-  Side-by-side preferred/common payout branches with each alternative clearly labeled.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  ALTERNATIVE A  nonparticipating     proceeds <n>
+                 preference <n> vs as-converted <n> -> investor takes <n>, common <n>
+  ALTERNATIVE B  capped participating  proceeds <n>
+                 preference <n> + share of rest <n>, cap <n> -> <n>
+                 vs as-converted <n> -> investor takes <n>, common <n>
+
+  SIDE BY SIDE   investor A <n> | investor B <n>   common A <n> | common B <n>
+  SOURCES        <each input, its source, date, currency and scale>
+  MISSING        <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - Two draft term sets for the same preferred class
+    - The preferred investment and the investor's as-converted ownership
+    - Equity proceeds after senior claims, for each exit to test
+    - The cap multiple and conversion right for the capped terms
+  prerequisites:
+    - The draft term sheets and a current cap table
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: ALTERNATIVE A
+      contains: "Nonparticipating payout: preference against converted share, the investor's choice and what common holders keep."
+    - name: ALTERNATIVE B
+      contains: "Capped participating payout: preference, extra share, the cap, the conversion test and the common leftover."
+    - name: SIDE BY SIDE
+      contains: Investor and common payouts for each alternative on the same proceeds, labeled and never added.
+    - name: SOURCES
+      contains: Each input with its source, date, currency and scale.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Alternatives are mutually exclusive; never stack both payouts or present a single-class example as a multi-series waterfall.
+  - what: Exit proceeds
+    how: Test a low, a middle and a high figure. At low proceeds the payout is limited by what is available. At high proceeds the investor converts under both.
+  - what: The cap multiple
+    how: Raise or lower the cap. A lower cap means the investor converts sooner, and the page shows which choice the investor makes.
+  - what: The preference multiple
+    how: Change the multiple on one alternative only. The other stays fixed so you can see what the multiple alone is worth.
+  - what: Senior claims
+    how: Change debt ahead of the preferred. Proceeds fall first, so both alternatives and the common leftover fall.
 judge:
   - Alternatives are mutually exclusive; never stack both payouts or present a single-class example as a multi-series waterfall.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +96,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the term sheets and cap table in one folder and attach the same files each run, so alternatives are always compared on the same ownership.
+  - Add the exit prices your board is actually discussing to your copy of the skill, so each run starts with the cases that matter.
+  - Name each alternative the way the term sheets do, so the labels match what your lawyer reads.
+  - Run the Review a down round rights change workflow next if a later round could change these terms.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and a checks tab you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed or latest draft term sheet, not a summary of it.
+    - A current cap table showing the investor's as-converted share.
+    - A named reviewer, such as the company's lawyer.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Nonparticipating preferred
+    meaning: The investor takes either the preference or the converted share, not both.
+  - term: Capped participation
+    meaning: The investor takes the preference and a share of the rest, up to a total cap.
+  - term: As-converted ownership
+    meaning: The share of the company the investor would own after turning preferred into common.
+  - term: Senior claims
+    meaning: Debts and other claims paid before the preferred and common holders.
+  - term: Preference multiple
+    meaning: How many times the original investment the investor is paid back first.
+before: []
+next:
+  - review-a-down-round-rights-change
+  - check-adviser-fees-in-seller-proceeds

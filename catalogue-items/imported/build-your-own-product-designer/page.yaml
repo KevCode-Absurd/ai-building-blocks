@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Option rules and pricing conflicts need careful logic.
 new_slug: build-your-own-product-designer
 name: Build-your-own product designer
-summary: Describe your customisable product. Get a plan with option rules, live
-  pricing, checks and saving.
+summary: Plan a build-your-own product tool people finish. Get the options to show, smart defaults, option rules, live pricing and a save plan.
 job: build-product
 headline: Build-your-own product designer
-subhead: A plan for a build-your-own product tool that people finish, not
-  abandon. It covers the choices to show, the rules between them, live pricing,
-  checks and saving.
+subhead: A plan for a build-your-own product tool that people finish, not abandon. It covers the choices to show, the rules between them, live pricing, checks and saving.
 explain: |
   A plan for a build-your-own product tool that people finish, not abandon. It covers the choices to show, the rules between them, live pricing, checks and saving.
 
@@ -18,6 +15,10 @@ when:
   - Your current builder has many people quitting halfway.
   - You need rules that stop customers picking combinations that cannot be made.
   - You are not sure which options to show and which to hide.
+not_for:
+  - "You only have a few fixed sets of choices: sell plain bundles on a normal product page instead."
+  - "You need the tool built and coded: hand this plan to a developer or a configurator app."
+  - "You want to fix a normal checkout that people quit: review the cart and checkout steps with a person, not this plan."
 you_give:
   - The product and all its options
   - Which combinations are not allowed
@@ -30,7 +31,28 @@ you_get:
   - A live pricing approach
   - Save and share ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
+  - Paste your product and the full list of options.
+  - Add the pairs of options that cannot go together, and your price table.
+  - Add your drop-off data if you have it (optional).
+  - Ask for the plan. Check that each rule has a clear message the buyer would understand.
+  - Give the plan to your developer or builder tool.
+output_sample:
+  input:
+    - Your product and all its options
+    - Pairs of options that cannot go together
+    - Your price table and pricing rules
+    - Your drop-off data from the current builder (optional)
+  output:
+    - name: Option shortlist
+      contains: The choices worth showing up front, and the ones to hide behind a deeper customise step.
+    - name: Default configuration
+      contains: A sensible starting build so buyers begin with something that works.
+    - name: Constraint rules
+      contains: Each rule that blocks a bad combination, with the message the buyer sees explaining why.
+    - name: Pricing approach
+      contains: How the price updates as people choose, and how the cost of each choice is shown.
+    - name: Save and share choice
+      contains: How buyers keep, return to and share their build, and which method fits your product.
+    - name: Bundles check
+      contains: A view on whether plain bundles would serve you better than a full builder.

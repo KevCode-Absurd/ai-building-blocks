@@ -1,42 +1,98 @@
 new_slug: executive-work-keeper
 name: Executive work follow up agent
-summary: Share new notes and your saved action list. Get changed commitments, due follow-up drafts and an updated work brief.
+summary: "Check new meeting notes against your saved action list. Get changed commitments, follow-up drafts for due tasks and a short work brief."
 job: organise-work
 headline: Executive work follow up agent
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share new notes and your saved action list. Get changed commitments, due follow-up drafts and an updated work brief. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Paste your new meeting notes or email threads, plus the action list from your last run. It finds the commitments that changed, drafts follow-ups only for tasks that are due and still need a message, and writes a short work brief. It never sends anything.
 explain: |-
-  Share new notes and your saved action list. Get changed commitments, due follow-up drafts and an updated work brief.
+  Action lists go stale. A meeting adds three tasks, an email moves a date, and a week later nobody knows which list is right. This action item tracker works from one saved list and checks it against what is new, instead of rebuilding the list every time.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Each run starts by comparing your new notes and dates with the saved state. Then it picks one path. With no state, it builds the action list and a first brief. With new notes, it updates only the commitments those notes touch. With tasks newly due, it drafts follow-ups for the ones that still need a message. With nothing changed, it says so and does no new work. It runs only the skill that path needs.
+
+  It drafts and never sends. A draft is not a finished task, and a sent reminder is not proof the work happened. Any instruction hidden inside a note or email is treated as text to read, not an order.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - A weekly team meeting just ended and its notes should update the action list you already keep.
+  - A client email moved a due date and you need to know which commitments it touches.
+  - Three tasks passed their due date and you want follow-up email drafts to the right people.
+  - You keep an action list in a spreadsheet or a note and want it checked against new notes each week.
+not_for:
+  - You have notes and want an action list once, with no saved state. Use the Executive action register keeper.
+  - You only want today's priorities from your calendar. Use the Executive daily briefing writer.
+  - You want one follow-up email drafted from one thread. Use the Due task follow up drafter.
+  - You expect it to send emails, update your task app or run every morning. It prepares drafts and files only. You send, and you set any schedule.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - New notes since the last run: meeting notes, a transcript or email threads, pasted in or attached (only the ones in scope)
+  - Your saved action list as a CSV, a spreadsheet export or pasted text, with task, owner, due date and status (skip it on the first run)
+  - The two state files from last time, agent-state.json and decision-log.md, in a folder you choose (optional on the first run; in a plain chat, paste them back)
+  - Today's date and your timezone
+  - Who may be contacted, and the tone you want for drafts (optional)
 you_get:
-  - Dated decision log
-  - Updated state and result files
-  - Missing facts and next action
+  - A list of commitments marked new, changed, unchanged or blocked, each with its source note and date
+  - Follow-up drafts only for tasks that are due and still need a message, with To, subject and body
+  - A short work brief: what changed, what is due and what you are waiting on
+  - Updated agent-state.json and decision-log.md files, or the same text to save in a note
+  - Missing facts, and one next action
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Open Claude, ChatGPT or Gemini and add the pack, which holds this agent and its three skills. If your AI can't keep files, paste the agent first.
+  - First run: paste your notes or action list and say there is no saved state. Pick a folder for the two state files, or ask for them as text to save in a note.
+  - Later runs: paste the new notes and the saved state files, then give today's date and your timezone.
+  - Check the line that says which path ran. If you gave it new notes and it says nothing changed, ask it to show which notes it read.
+  - Read every draft before you use it. Check the recipient, the date and any promise. Send it yourself, and mark the task done yourself.
+  - Save the new state files. You will paste them in next time.
+output_sample:
+  input:
+    - New meeting notes or email threads since the last run
+    - Your saved action list (skip on the first run)
+    - The two state files from last time, agent-state.json and decision-log.md (skip on the first run)
+    - Today's date and your timezone
+    - Who may be contacted and the tone for drafts (optional)
+  prerequisites:
+    - An AI that can read files, or a chat where you can paste the saved state back each time
+  output:
+    - name: STATE
+      contains: The date and timezone, plus whether this run was a first run or found new, changed, unchanged, pending or blocked work.
+    - name: PATH
+      contains: Which skill ran and why, and which skills were skipped.
+    - name: CHANGED COMMITMENTS
+      contains: Each task with its owner, due date, status (new, changed, unchanged or blocked) and the note it came from.
+    - name: DRAFTS (not sent)
+      contains: Follow-up drafts for due tasks that still need a message, with who it goes to, subject and first line.
+    - name: BRIEF
+      contains: What changed, what is due and what you are waiting on.
+    - name: MISSING
+      contains: Each gap in the facts and what it stops the agent from doing.
+    - name: NEXT ACTION
+      contains: One line on the single thing to do next.
+    - name: agent-state.json and decision-log.md
+      contains: The saved state and the evidence behind each decision, ready for your next run.
 how_it_works:
   - title: Compare saved state
-    text: Check which sources, dates or results changed since the last run.
-  - title: Choose the needed work
-    text: With no state, build an action register and a first brief. With new notes, update only the affected commitments. With tasks newly due, draft follow-ups only for unresolved communication needs. With no changed sources or due tasks, preserve the prior register and return no new work. Do not automatically complete tasks after drafting or sending.
+    text: Checks the source IDs, dates and task IDs in the new notes against the last saved state, to see what changed since the last run.
+  - title: Pick one path
+    text: No state means build the action list and a first brief. New notes mean update only the affected commitments. Tasks newly due mean draft follow-ups for the ones that still need a message. Nothing changed means keep the old list and return no new work.
+  - title: Run only that skill
+    text: Uses the Executive action register keeper, the Due task follow up drafter or the Executive daily briefing writer, whichever the path needs. It does not run all three each time.
   - title: Save the decision
-    text: Record evidence, remaining gaps and one next action. Keep external action status explicit.
+    text: Writes the evidence, the gaps and one next action to the decision log. Task status changes only on evidence, so a draft or a sent reminder never marks a task done.
 output_shape: |-
-  Dated decision log
-  Updated state and result files
-  Missing facts and next action
+  STATE <date, timezone>: <first run | new | changed | unchanged | pending | blocked>
+  PATH <which skill ran and why, and which were skipped>
+
+  CHANGED COMMITMENTS
+    <task ID> | <task> | <owner> | due <date> | <new | changed | unchanged | blocked> | source <note, date>
+
+  DRAFTS (not sent)
+    <task ID> | To <name> | Subject: <subject> | <first line of the body>
+
+  BRIEF
+    <what changed> | <what is due> | <waiting on>
+
+  MISSING <each gap, and what it stops>
+  NEXT ACTION <one line>
+  FILES agent-state.json, decision-log.md
+
 tweaks:
   - what: Scope
     how: Name the date window, project or business to keep the work focused.
@@ -54,4 +110,19 @@ test:
 improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
-terms: []
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: Reads your notes, action list and the two state files, and returns them updated. In a plain chat, paste the state back each time.
+    - name: Google Sheets or Excel
+      why: Keep the action list as a sheet with task, owner, due date and status columns, and export it as CSV for each run.
+  inputs:
+    - The same action list columns every run (task, owner, due date, status)
+    - Your timezone and the date, so relative dates like "next Friday" are read correctly
+terms:
+  - term: Saved state
+    meaning: A small file that records which notes, dates and tasks the last run saw, so the next run can tell what changed.
+  - term: Commitment
+    meaning: A task someone agreed to do, with an owner and a date.
+  - term: Draft
+    meaning: A message the agent writes for you to read and send. Nothing is sent for you.

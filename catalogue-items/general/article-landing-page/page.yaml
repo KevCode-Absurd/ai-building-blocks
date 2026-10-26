@@ -1,6 +1,6 @@
 new_slug: article-landing-page
 name: Article-style landing page writer
-summary: Paste your facts, offer and ad. Get an article-style page, labelled as an ad, and an image list.
+summary: Write an article-style landing page for ad clicks. Give it your facts, offer and ad. You get ten sections, labelled as an ad, plus an image list.
 job: write-landing-page
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You run ads to people who have the problem but don't know your product yet, and they bounce off your product page.
   - Your ad reads like a story or article, and the page it sends people to jumps straight to "Add to cart".
   - You have a real reason the usual fixes fail and want a page with room to explain it.
+not_for:
+  - "Your buyers already know your brand: send them to a normal product page, or ask a copywriter for a short sales page."
+  - "You sell a one-off item to people who are ready to buy: use the Shopify landing page builder."
+  - "You only want to check a page you already have: use the Landing page 30-point checker."
 you_give:
   - Your product facts, price, offers, guarantee and the claims you're allowed to make
   - The ad that sends people to the page (its first line, buyer and offer, with its image attached)
@@ -31,6 +35,25 @@ how_to_use:
   - Paste the ad that will send people here, word for word, and say who it speaks to.
   - Write two or three sentences on why the usual fixes fail and why yours is different. If you can't, work that out first, because the page is built on it.
   - Read the MISSING list before anything else, then check the offer block against your real prices.
+output_sample:
+  input:
+    - Your product facts, price, offer, guarantee and the claims you may make
+    - The ad that sends people to the page, word for word
+    - The true reason the usual fix fails and why yours is different
+    - Real customer quotes with their sources (optional)
+  output:
+    - name: Page brief
+      contains: The ad's first line, the buyer, the problem, the cause, the tests and the offer the ad named.
+    - name: Ten page sections
+      contains: "The full copy in four moves: recognise, understand, believe and decide, with the ad label above the headline."
+    - name: Subheads alone
+      contains: The subheads in order, to show the page still makes sense to a skimmer.
+    - name: Image list
+      contains: Each image slot, the real product photo to use, and a caption that carries one fact.
+    - name: MISSING list
+      contains: Every fact the page needed that you did not supply, left out instead of invented.
+    - name: CHECKS MISSED
+      contains: One line for each of the skill's own checks the page still fails, or none.
 how_it_works:
   - title: Keeps the ad's promise
     text: The headline keeps the ad's words, the first image shows the same product, and any offer the ad named comes first.

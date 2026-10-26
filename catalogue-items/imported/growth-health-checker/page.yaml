@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It compares channels and picks the actions that matter.
 new_slug: growth-health-checker
 name: Growth health checker
-summary: Connect your sales and marketing data. Get a one-page read on growth
-  and three actions for this week.
+summary: Check if your growth is working. Give it your sales and marketing data. You get a one-page read, the biggest funnel drop-off and three actions.
 job: read-ad-results
 headline: Growth health checker
-subhead: Connect your sales and marketing tools, or upload exports, and say
-  which week or month to review. It pulls the numbers together and builds five
-  views, such as channel trend and funnel conversion, each marked with a status.
-  You get a one-page growth read, the biggest drop-off in your funnel and three
-  actions for this week.
+subhead: Connect your sales and marketing tools, or upload exports, and say which week or month to review. It pulls the numbers together and builds five views, such as channel trend and funnel conversion, each marked with a status. You get a one-page growth read, the biggest drop-off in your funnel and three actions for this week.
 explain: |
   One page that says whether your growth is working and what to do about it this week. Connect your sales and marketing sources, or upload exports, and it pulls everything at once and builds five views, such as channel trend and funnel conversion, each given a status.
 
@@ -20,6 +15,10 @@ when:
   - You want a Monday summary of what is working.
   - Leads are up but sales are flat and you do not know why.
   - You need to decide where to put next week's effort.
+not_for:
+  - "You only want a finance check on cash, profit or bills: use business-pulse."
+  - "You want a single day's sales number: look at your shop or payment dashboard."
+  - "You have no data at all, not even a CSV export: gather one export first, or the read will have nothing to work from."
 you_give:
   - Connected sales and marketing tools or exports
   - The week or month to review
@@ -31,10 +30,34 @@ you_get:
   - Biggest drop-off in your funnel
   - Three actions for this week
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. Use an AI that can read your connected tools if you have one.
+  - Connect your sales and marketing tools, or upload exports such as a CRM deal list, a sales report or an ads CSV.
+  - Say which week or month to review. Add your goals and last period's figures if you have them.
+  - Read the one-line story first, then check the status on each of the five views.
+  - Pick from the three actions. Each one shows the number behind it, so you can check it before you act.
+output_sample:
+  input:
+    - Your sales and marketing tools connected, or exports such as a CRM deal list, a sales report or an ads CSV
+    - The week or month to review
+    - Your goals (optional)
+    - Last period's figures (optional)
+  prerequisites:
+    - An AI that can read your connected accounts, or files you upload
+    - Some tools need a paid plan or login to connect. Exports work without that.
+  output:
+    - name: One-line story
+      contains: A single sentence that explains the period, with the numbers that back it up.
+    - name: Channel trend
+      contains: Revenue by channel this period against last period, with a status.
+    - name: Funnel conversion
+      contains: Leads, qualified, opportunities and wins, with the step where most people drop off.
+    - name: Campaign return
+      contains: Spend against attributed revenue for each campaign, and cost per lead.
+    - name: Product performance
+      contains: Your top three and bottom three products by revenue and growth.
+    - name: Customer sentiment
+      contains: Recent review scores, review themes, disputes and signs of customers leaving.
+    - name: Three actions
+      contains: Each action says what to do, why with a number from the page, and what it is worth.
+    - name: Appendix
+      contains: Sources that were missing or had no data, marked n/a.

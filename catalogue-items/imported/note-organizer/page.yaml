@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Filing notes follows a simple structure.
 new_slug: note-organizer
 name: Note organizer
-summary: Give it ideas or meeting notes. Get them captured, tagged and filed so
-  you can find them later.
+summary: Turn rough meeting notes and ideas into tidy, tagged note files you can find later. Give it your notes. You get Markdown files with action items.
 job: organise-work
 headline: Note organizer
-subhead: Ideas and meeting notes captured as tidy files you can find again. You
-  say what happened, and the skill writes it down in the right shape, tags it
-  and files it.
+subhead: Ideas and meeting notes captured as tidy files you can find again. You say what happened, and the skill writes it down in the right shape, tags it and files it.
 explain: |
   Ideas and meeting notes captured as tidy files you can find again. You say what happened, and the skill writes it down in the right shape, tags it and files it.
 
@@ -18,6 +15,10 @@ when:
   - You want one place for ideas that is not a messy pile.
   - You need to find what was decided last month.
   - You want a short summary across several notes on one topic.
+not_for:
+  - "You need to store passwords or API keys: use a secrets manager, not plain text notes."
+  - "You need shared team documents with access control: use a team wiki or shared drive with permissions."
+  - "You want a quick answer from one short thought: just write it in your usual notes app."
 you_give:
   - Your notes, ideas or meeting talk
   - Where your notes folder lives
@@ -28,7 +29,29 @@ you_get:
   - Action items as checkboxes
   - Search results and topic summaries
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text first. To save files into a folder, use an AI that can work with files on your computer.
+  - Tell your AI where your notes folder is. If it does not exist yet, ask the AI to create it.
+  - "Paste your notes and say the type: meeting, research, idea, daily log or project."
+  - Add the tags you already use (optional), so new notes match your old ones.
+  - Check the note. Make sure names, dates and action items are right. Do not include passwords or keys.
+  - "To find things later, ask a question like: what did we decide about the dashboard this month?"
+output_sample:
+  input:
+    - Your notes, ideas or what was said in a meeting
+    - Where your notes folder lives
+    - Tags you already use (optional)
+  prerequisites:
+    - An AI that can create and read files in a folder, or you copy the note text yourself
+  output:
+    - name: Meeting note
+      contains: Date, attendees, discussion, decisions, action items as checkboxes with names, and open questions.
+    - name: Research note
+      contains: Key findings grouped by topic, open questions, and the sources you gave.
+    - name: Other note types
+      contains: Daily log, idea and project notes, each with its own simple layout.
+    - name: Note header
+      contains: Date, type, tags and links to related notes at the top of every file.
+    - name: Date-first file name
+      contains: A name like 2026-02-12-sprint-planning.md so notes sort by date.
+    - name: Search results and summaries
+      contains: A short summary across several notes on one topic, with the latest decision shown.

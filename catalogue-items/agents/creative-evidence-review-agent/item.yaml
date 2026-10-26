@@ -1,6 +1,6 @@
 slug: creative-evidence-review-agent
 name: Creative evidence review agent
-summary: Share your brief, creative assets and product facts. Get ranked issues, evidence and a checkpoint for the next revision.
+summary: "Check ad creative against your brief and product facts. Get ranked issues, a pass or fix call per check and a checkpoint."
 category: agent
 type: agent
 role: orchestrate
@@ -10,6 +10,8 @@ inputs:
   - type: brief
     required: true
   - type: document
+    required: false
+  - type: image
     required: false
 outputs:
   - type: audit_report

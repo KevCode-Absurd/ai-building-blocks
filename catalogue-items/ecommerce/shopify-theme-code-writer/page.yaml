@@ -1,6 +1,6 @@
 new_slug: shopify-theme-code-writer
 name: "Shopify theme code writer"
-summary: "Name the section you need and your theme. Get installable code and what to upload."
+summary: "Write Shopify theme code that installs and edits cleanly. Name the section you need and your theme. You get the files and what to upload."
 job: write-landing-page
 thinking: high
 thinking_why: "It writes code that has to work the first time."
@@ -17,6 +17,10 @@ when:
   - You need a new section, such as a guarantee strip or an FAQ block, for your Shopify store.
   - A theme file you edited won't save, or shows an error in the theme editor.
   - You want the words on a section editable in the theme editor instead of locked in code.
+not_for:
+  - "You want a whole landing page from finished copy: use the Shopify landing page builder."
+  - "You need to change checkout: theme code cannot do this, so use Shopify's checkout settings or a developer."
+  - "You only need a small tweak to a word or image: change it in the theme editor, no code needed."
 
 you_give:
   - What to build, in plain words, such as a section, block, snippet or edit
@@ -33,6 +37,22 @@ how_to_use:
   - Name your theme and, if you're editing, paste the current file.
   - Upload the files to a duplicate of your theme, open the theme editor, and check the section on a phone-width preview.
   - If something errors, paste the error message back in and ask it to fix that file.
+output_sample:
+  input:
+    - What you want built, in plain words (a section, block, snippet or edit)
+    - Your theme name and whether it supports theme blocks (recommended)
+    - The file you want fixed (optional)
+  prerequisites:
+    - Shopify CLI or Shopify's AI Toolkit, if you want Theme Check run on the code (optional)
+  output:
+    - name: Theme files
+      contains: Each section, block or snippet in a code block with its path, plus a locale file if fixed words are used.
+    - name: Schema
+      contains: The settings list the theme editor reads, with typed settings, blocks and a preset so the section can be added.
+    - name: NOTES
+      contains: What to upload, what the owner can edit in the theme editor, and what was assumed about the theme.
+    - name: CHECKS MISSED
+      contains: One line per check the code still misses, or none; for a pasted file, also the checks it failed before the fix.
 
 how_it_works:
   - title: Picks the file type

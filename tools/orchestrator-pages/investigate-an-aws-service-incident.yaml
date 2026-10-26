@@ -13,6 +13,11 @@ explain: |-
 when:
   - You want the result described above from the files and facts you already have.
   - You need a repeatable process and a clear next action.
+not_for:
+  - "Your AWS bill is the problem, not an outage: use the Cloud bill waste finder or the AWS resource cost reviewer."
+  - "You want a health check on one resource with no incident to chase: use the AWS service health investigator on its own."
+  - "The incident is over and you only need the write-up: use the Incident learning report writer or the Incident postmortem writer."
+  - "Your service did not record logs or metrics at the time: nothing here can recover data that was never kept."
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits
@@ -26,6 +31,24 @@ how_to_use:
   - Share your goal and the files listed above.
   - Ask it to follow the steps and mark any missing facts.
   - Review the result before approving external actions.
+output_sample:
+  input:
+    - The alarm name and the exact time it fired, with its time zone
+    - The AWS account, region and service, such as Lambda or ECS
+    - The resource that is failing and the symptoms you saw
+    - The outage timeline and impact, for the report
+  prerequisites:
+    - Read-only access to CloudWatch Logs, Metrics and alarm history, or the AWS CLI
+    - If you have no AWS access, run each query in the console and paste back the result
+  output:
+    - name: "Step 1: CloudWatch evidence"
+      contains: A timeline, the blast radius, any deploy link rated strong, weak or none, and every query that was run.
+    - name: "Step 2: Health and recovery findings"
+      contains: The resource's health status, issues ranked by severity with likely causes, and a recovery plan in phases.
+    - name: "Step 3: Incident report"
+      contains: A blameless report with impact, timeline, root cause, contributing factors, action items with owners and unresolved facts.
+    - name: Source coverage
+      contains: What was read, what could not be read, and every MISSING fact.
 how_it_works:
   - title: CloudWatch incident evidence collector
     text: Share an AWS incident and time window. Get useful log queries, deployment links and the likely affected services.

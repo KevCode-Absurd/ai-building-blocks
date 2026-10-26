@@ -25,9 +25,9 @@ steps:
   - uses: cash-forecast-builder
     note: Use ledger exports or CSV for dated inflows/outflows and explicit uncertainty. Avoid double-counting opening cash or commitments. Pass timing schedule and gaps to option formulation.
   - uses: constrained-decision-auditor
-    note: Define project variables, units, objectives and hard/soft constraints. Validate candidate choices against cash schedule and other limits. Report feasible set or unresolved feasibility; optimality and infeasibility require proof.
+    note: "Takes step 1's cash schedule as the limit and checks each candidate choice against it. Define project variables, units, objectives and hard/soft constraints. Report feasible set or unresolved feasibility; optimality and infeasibility require proof. Hands the feasible choices and tradeoffs to step 3."
   - uses: decision-tripwire-planner
-    note: Use feasible choices, tradeoffs and uncertainty to challenge the preference, consider another option and set evidence-based review triggers. Return owner, next action and fallback. A proposed date is not a scheduled reminder.
+    note: "Takes step 2's feasible choices, tradeoffs and uncertainty to challenge the preference, consider another option and set evidence-based review triggers. Return owner, next action and fallback. A proposed date is not a scheduled reminder."
 execution: coordinator
 package_files: all
 origin: own

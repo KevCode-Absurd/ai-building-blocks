@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: coding-project-coach
 name: Coding project coach
-summary: Describe a learning project. Get small build milestones, hints and
-  checks while you write the code.
+summary: Learn to code by building a real project. Your AI sets small milestones, gives hints and checks your code, and you write every line yourself.
 job: study-and-practice
 headline: Coding project coach
-subhead: Describe the project you want to learn by building, your level and your
-  tools. It breaks the work into small milestones and explains the choices. You
-  write the code, get hints and feedback, and pass each check before moving on.
-explain: Describe the project you want to learn by building, your level and your
-  tools. It breaks the work into small milestones and explains the choices. You
-  write the code, get hints and feedback, and pass each check before moving on.
+subhead: Describe the project you want to learn by building, your level and your tools. It breaks the work into small milestones and explains the choices. You write the code, get hints and feedback, and pass each check before moving on.
+not_for:
+  - "You want the full code written for you: ask your AI to write it directly, since this coach only gives hints and feedback."
+  - "You are stuck on one bug and have no project: paste the error and the code into a chat and ask your AI to help you find the cause."
+  - "You need a concept explained before you can start: ask your AI to teach the idea first, then come back to build."
+explain: Describe the project you want to learn by building, your level and your tools. It breaks the work into small milestones and explains the choices. You write the code, get hints and feedback, and pass each check before moving on.
 you_give:
   - Your project goal, technical tools and current level.
   - The existing code and your time or resource limits.
@@ -27,9 +26,27 @@ how_it_works:
   - title: Step 3
     text: Review your code against each milestone check before continuing.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions. No code running or paid tool is needed.
+  - "Send your first message: your goal in one sentence, your level, your tools, how much time you have each week, and your code if you have any."
+  - Agree on the milestones, then build the first one yourself. Paste your code back when you think it passes the check.
+  - Read the feedback and fix what it points out. Ask for a hint if you are stuck, not for the full answer.
+  - Move on only when the check passes. If you hit a bug, share the error and what you tried, and the coach will guide you to the cause.
+output_sample:
+  input:
+    - Your project goal in one sentence
+    - Your current level and the tools or languages you use
+    - Your existing code or repo (optional)
+    - Your time limits or resources (optional)
+  output:
+    - name: Project scope and milestones
+      contains: Your goal restated as a result you can check, split into three to five milestones, each with a pass check.
+    - name: Basic design
+      contains: A small design for the project, with the reason behind each main choice and a question for you on the trade-offs.
+    - name: Current milestone
+      contains: What to build now, hints on how to approach it, and what to avoid.
+    - name: Acceptance check
+      contains: The test your code must pass before you move to the next milestone.
+    - name: Coaching feedback
+      contains: "Feedback on the code you wrote: what worked, what to fix, and what to try to grow."
+    - name: Next milestone preview
+      contains: A short look at the next step, shown once the current check is met.

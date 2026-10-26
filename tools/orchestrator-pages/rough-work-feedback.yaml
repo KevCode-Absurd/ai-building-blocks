@@ -1,6 +1,6 @@
 new_slug: rough-work-feedback
 name: Get honest notes on rough work and a fix plan
-summary: Give it rough work and your reviewers. Get a safe review, sharp problem notes and a plan to fix it.
+summary: Get honest feedback on rough work. Give it your draft and reviewers. You get problem notes, likely causes and a dated plan for the next version.
 job: lead-people
 thinking: high
 thinking_why: It has to judge what sits behind each note and decide what to keep. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your work is stuck or still rough and you want honest notes from people you trust.
   - The feedback you get is either polite or bossy.
   - You have a pile of comments and do not know where to start.
+not_for:
+  - "Your work is finished and needs sign-off or an expert check: ask a named expert or approver to review it instead."
+  - "You want one person to edit your wording line by line: ask a single trusted reader for an editing pass instead."
+  - "You have no reviewers and no comments yet: ask two or three peers to look at the work first, then come back."
 you_give:
   - The work, or a description of it, and what is stuck
   - The people who could review it, with their roles
@@ -24,10 +28,31 @@ you_get:
   - Each problem traced to its likely cause, with notes that may name the wrong spot
   - Three to five headlines, what to blow up and keep, a choice sheet for you and the date of the next look
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Give step 1 your work and your possible reviewers. Hold the session, then paste every comment into step 2.
-  - Fill in the choice sheet yourself. The workflow never decides for you.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
+  - "Step 1: paste your work and the people who could review it. Then hold the review session and write down every comment."
+  - "Step 2: paste all the comments, with who said each one. Steps 3 and 4 then run from the notes."
+  - Read the headlines, then fill in the choice sheet yourself. The workflow never decides for you.
+output_sample:
+  input:
+    - Your rough work, or a short description of it and where it is stuck
+    - The people who could review it, with their roles
+    - Every comment from the session, as it was said, and who said it
+    - The date of your next look (optional)
+  prerequisites:
+    - An AI that can read your pasted text or files
+    - A review session held by you between step 1 and step 2
+  output:
+    - name: "Step 1: The review session"
+      contains: Who sits in the room, who speaks last, a timed plan, the note rule and a follow-up date.
+    - name: "Step 2: Good notes"
+      contains: Each raw comment rewritten as a problem note with its place, what the reader lost and who raised it.
+    - name: "Step 3: Causes"
+      contains: Each problem traced to its likely cause, with notes that may point at the wrong spot flagged.
+    - name: "Step 4: The fix plan"
+      contains: Three to five headlines, what to blow up, go back on and keep, and your choice sheet.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and every gap marked MISSING in one list.
 how_it_works:
   - title: Plans a session peers can be honest in
     text: Picks reviewers with no power over you, keeps the most senior voices quiet at the start and sets the rule that notes name problems and not fixes.

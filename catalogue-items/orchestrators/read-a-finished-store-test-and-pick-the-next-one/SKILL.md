@@ -26,7 +26,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Get the verdict.** Use the skill `store-test-verdict-maker`. Starts from your test numbers and says whether the result can be trusted and whether to ship.
 2. **Rank the ideas it points to.** Use the skill `test-idea-ranker`. Give it the audit report from the steps before. Takes what step 1 learned and writes each next idea as a hypothesis with the evidence behind it.
-3. **Pick the next bold tests.** Use the skill `big-swing-test-picker`. Give it the audit report from the steps before. Fits the ideas and the step 1 verdict to what your traffic can prove, in order.
+3. **Pick the next bold tests.** Use the skill `big-swing-test-picker`. Give it the ranked ideas from step 2 and the verdict from step 1. Fits the ranked ideas and the step 1 verdict to what your traffic can prove, in order.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -1,26 +1,25 @@
 slug: stock-split-eps-restatement
 name: Stock-split EPS restatement
-summary: Restate historical shares and EPS onto a consistent post-split basis.
+summary: "Restate past EPS and share counts after a stock split or reverse split so every year compares on one basis, with earnings unchanged."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
+before: []
+next: [weighted-average-share-schedule, rights-issue-eps-adjustment, treasury-stock-option-dilution]
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

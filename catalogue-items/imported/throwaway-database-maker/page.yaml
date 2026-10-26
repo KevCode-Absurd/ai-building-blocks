@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It makes one request and saves the result.
 new_slug: throwaway-database-maker
 name: Throwaway database maker
-summary: Ask for a database to test with. Get a Postgres link in seconds with no
-  sign-up, kept 72 hours.
+summary: Get a free throwaway Postgres database for testing, with no sign-up. Your AI sends one request and saves the link in your .env file.
 job: build-software
 headline: Throwaway database maker
-subhead: Need a real Postgres database for a demo or a test, and do not want to
-  sign up for anything? This skill gets you a working database address in
-  seconds.
+subhead: Need a real Postgres database for a demo or a test, and do not want to sign up for anything? This skill gets you a working database address in seconds.
 explain: |
   Need a real Postgres database for a demo or a test, and do not want to sign up for anything? This skill gets you a working database address in seconds. No account, no card, no login.
 
@@ -18,6 +15,10 @@ when:
   - You want a clean database for a test run.
   - You are demoing an app and do not want to set up hosting.
   - A tutorial asks for Postgres and you only want to follow along.
+not_for:
+  - "You will store real customer data or run a live app: set up a standard Neon database instead, as it does not expire."
+  - "You need more than 100 MB of storage or database branches: claim the database into a Neon account first."
+  - "You want to keep the database past 72 hours without signing in: open the claim link in a Neon account, or the database is deleted."
 you_give:
   - A project that needs a database
   - Node.js or the ability to send a web request
@@ -28,8 +29,29 @@ you_get:
   - Your .env file filled in
   - A reminder of the 72 hour limit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and reach the internet.
+  - Open your AI in a chat that can run commands and reach the internet, such as Claude Code or ChatGPT with code tools.
+  - "Paste this skill and say: I need a throwaway Postgres database for my project."
+  - Tell your AI which .env file to use. Say if you want a seed SQL file loaded.
+  - Let your AI check that .env is listed in .gitignore. If it is not, it will warn you. Do not commit the connection string.
+  - Check the report for where the address was saved. Ask your AI to run a quick test query.
+  - Open the claim link within 72 hours if you want to keep the database.
+output_sample:
+  input:
+    - A project that needs a database
+    - Permission to write to your .env file
+    - Your preferred .env file name or variable name (optional)
+    - A seed SQL file to load starter data (optional)
+  prerequisites:
+    - An AI that can run commands and reach the internet
+    - Node.js, if you use the one-line command, script or Vite plugin
+  output:
+    - name: connection_string
+      contains: The Postgres address your app uses to connect, saved in your .env file as DATABASE_URL.
+    - name: DATABASE_URL_DIRECT
+      contains: A second address without pooling, written by the one-line command, for tools that change the database layout.
+    - name: claim_url
+      contains: A link you open in a browser to keep the database in a Neon account.
+    - name: expires_at
+      contains: The time the database will be deleted if you do not claim it, 72 hours after it is made.
+    - name: Report
+      contains: A short note on where the address was saved, which name it uses, and the claim link.

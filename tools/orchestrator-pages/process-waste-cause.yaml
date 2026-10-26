@@ -1,6 +1,6 @@
 new_slug: process-waste-cause
 name: Find process waste and the cause behind it
-summary: Paste your process step by step. Get the waste named, one change to try and the root cause behind it.
+summary: Find process waste in a slow process and the root cause behind it. Paste your steps. Get the worst waste, one change to try and a fixable cause.
 job: plan-strategy
 thinking: high
 thinking_why: It has to check each why against facts and not accept easy answers. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A process feels slow and you can't say which steps are the problem.
   - The same mistake keeps happening, and each fix lasts only a few weeks.
   - You inherited a process and want to know which steps can be deleted.
+not_for:
+  - "You have no process yet and want to design one: write the main steps down on paper first, then come back."
+  - "You need to set prices or pick a strategy: use the Brand and sales budget splitter."
+  - "You have one single mistake to explain and no process steps: ask a colleague who saw it to walk you through what happened."
 you_give:
   - Your process, step by step, with who does each step
   - Times for work and waiting (optional)
@@ -31,6 +35,22 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your process and the problem. It works step by step and saves each result.
   - Go and look at the real place or record for any why it can't check, then bring back what you find.
+output_sample:
+  input:
+    - Your process, step by step, with who does each step
+    - Times for work and waiting (optional)
+    - The problem that keeps coming back, with place and date
+    - Logs, tickets, photos or notes (optional)
+    - What was tried before (optional)
+  prerequisites:
+    - An AI that can save each step's result as a file, such as Claude with files or Claude Code
+  output:
+    - name: "Step 1: Process waste map"
+      contains: Each step with work and wait time, marked value or waste, the worst waste, who asked for each step and one change to try.
+    - name: "Step 2: Root cause"
+      contains: The problem as seen, the records checked, a chain of whys with evidence, a second branch, and the fix with a check.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Lays out the steps
     text: Lists each step with who does it, how long it takes and how long it waits, from the customer's order to cash in hand.

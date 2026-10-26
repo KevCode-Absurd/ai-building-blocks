@@ -1,6 +1,6 @@
 new_slug: tenfold-goal-rewriter
 name: "Tenfold goal rewriter"
-summary: "Paste a goal that aims for 10 percent more. Get a tenfold version, what must change and a small first test."
+summary: "Rewrite a small goal as a tenfold goal. See what breaks at that size, which beliefs to drop, and a small first test with a stop rule."
 job: plan-strategy
 thinking: medium
 thinking_why: "It must reason about what breaks at ten times the size, but the structure is fixed."
@@ -17,6 +17,10 @@ when:
   - Your goal for next year is last year plus a few percent.
   - Growth has gone flat and every idea is a small tweak.
   - You want to try something odd without risking the core.
+not_for:
+  - Your goal has no number yet. Set a plain number first, then come back.
+  - Your core business is failing now. Fix that first with a simple plan, or talk to an adviser you trust.
+  - You need a dated plan for a goal you already chose. Use a plain task list or ask a colleague to review it.
 
 you_give:
   - Your current goal, with its number
@@ -33,6 +37,28 @@ how_to_use:
   - Paste your goal with its number and describe how you reach it today.
   - Say what slice of time or money is safe to risk.
   - Run the first test it gives. Come back when the date arrives and say what happened.
+output_sample:
+  input:
+    - Your current goal, with its number
+    - What you do now to reach it
+    - How much time or money you could risk on a test (optional)
+  output:
+    - name: Current goal
+      contains: Your goal and its number, copied exactly with the unit and period.
+    - name: Tenfold goal
+      contains: The same goal at ten times the number, and what stops working at that size.
+    - name: Assumptions to drop
+      contains: At least three beliefs your method relies on, and what would be true if each were dropped.
+    - name: The first test
+      contains: One odd idea, sized to your safe slice, with a start date, a check date and what to measure.
+    - name: Protected core and side-bet slice
+      contains: How much time or money stays on the main work and how much goes to side bets.
+    - name: What to close
+      contains: One thing to stop or merge so your effort is not spread thin, and why.
+    - name: Stop rule
+      contains: The result that would prove the bet wrong, and the date to look.
+    - name: Missing and checks missed
+      contains: What you did not give, and any checks the answer did not pass.
 
 how_it_works:
   - title: Writes the goal

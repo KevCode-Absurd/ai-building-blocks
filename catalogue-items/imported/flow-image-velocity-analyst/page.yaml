@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set method but needs care when it rejects bad vectors.
 new_slug: flow-image-velocity-analyst
 name: Flow image velocity analyst
-summary: Give it pairs of flow images. Get velocity fields, bad vectors fixed,
-  and vorticity and turbulence numbers.
+summary: Turn pairs of flow images into velocity maps. Bad vectors are found and fixed, then you get vorticity and turbulence numbers. Needs Python.
 job: research-topics
 headline: Flow image velocity analyst
-subhead: Pairs of flow images become velocity fields, with bad vectors found and
-  fixed and vorticity and turbulence numbers worked out. It turns particle
-  photos into measured fluid motion.
+subhead: Pairs of flow images become velocity fields, with bad vectors found and fixed and vorticity and turbulence numbers worked out. It turns particle photos into measured fluid motion.
 explain: |
   Pairs of flow images become velocity fields, with bad vectors found and fixed and vorticity and turbulence numbers worked out. It turns particle photos into measured fluid motion.
 
@@ -18,6 +15,10 @@ when:
   - Your vector field has spurious arrows and you need them cleaned.
   - You need vorticity or turbulence statistics from experiment data.
   - You are choosing window sizes for your image pairs.
+not_for:
+  - "You want to simulate flow, not measure it: use a CFD tool or a CFD specialist instead."
+  - "You have no Python, or your AI cannot run code: ask a lab colleague to run the analysis, or use a ready PIV program."
+  - "You have a single image, not a pair taken a known time apart: take a second frame first, because the method needs two."
 you_give:
   - Image pairs
   - Time gap between frames
@@ -30,8 +31,29 @@ you_get:
   - Turbulence statistics
   - Plots and a parameter log
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Install the openpiv package in Python with uv pip install openpiv. Your AI must be able to run code and save files.
+  - Paste the skill into your AI chat, or upload the skill folder if your tool takes files.
+  - Add your image pairs, the time gap between frames and the pixel to millimetre scale.
+  - Ask your AI to run the analysis and show vector_field.png. Check that the arrows look right before you trust the numbers.
+  - If you see stray arrows, ask your AI to change the window size or overlap and run it again.
+  - Next, plot or compare vectors.txt and params.npz in your own tools, or against your CFD results.
+output_sample:
+  input:
+    - Your pairs of flow images (frame A and frame B)
+    - The time gap between the two frames
+    - The scale, in pixels per millimetre
+    - The flow type or expected speed (optional)
+  prerequisites:
+    - An AI that can run Python code and save files
+    - Python 3.10 or newer with the openpiv package installed
+  output:
+    - name: vectors.txt
+      contains: A tab-separated table of position, velocity, a flag for bad vectors and a mask value for each point.
+    - name: params.npz
+      contains: The full velocity field, signal quality, window settings, scale, time gap and the OpenPIV version used.
+    - name: vector_field.png
+      contains: The velocity arrows drawn over your first image, so you can check the field by eye.
+    - name: Vorticity and strain rate
+      contains: Spin and stretch values worked out from the cleaned velocity field.
+    - name: Turbulence statistics
+      contains: Averages and fluctuation measures worked out from the measured velocities.

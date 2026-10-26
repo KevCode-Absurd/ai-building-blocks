@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a fixed help format.
 new_slug: matlab-help-text-writer
 name: MATLAB help text writer
-summary: Give it a MATLAB function. Get clear help text with a summary line,
-  syntax lines and See Also links.
+summary: Write MATLAB help text for your function in MathWorks style. Give it the file. You get a summary line, syntax lines and a See Also line.
 job: build-software
 headline: MATLAB help text writer
-subhead: Help text for a MATLAB function that shows up properly when someone
-  types help or doc. You hand over the function and get the comment block back
-  in MathWorks style.
+subhead: Help text for a MATLAB function that shows up properly when someone types help or doc. You hand over the function and get the comment block back in MathWorks style.
 explain: |
   Help text for a MATLAB function that shows up properly when someone types help or doc. You hand over the function and get the comment block back in MathWorks style.
 
@@ -18,6 +15,10 @@ when:
   - Your help comments are out of date after you added options.
   - You want your team's functions to read the same way.
   - You are about to share code and need documentation done.
+not_for:
+  - "You need a README or general project docs: write those by hand or ask your AI for a plain README instead."
+  - "You want new MATLAB code written: this only writes help comments and does not change your code."
+  - "You use Live Scripts or another language: use that tool's own doc format instead."
 you_give:
   - The MATLAB function file
   - Related functions to link (optional)
@@ -29,8 +30,29 @@ you_get:
   - A See Also line
   - The whole comment block ready to paste
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open your AI tool. Paste the skill text into the chat, or load the skill folder if your tool supports it.
+  - Paste your MATLAB function file. Add related functions and an example if you have them.
+  - Or, if MATLAB is installed and linked to your AI, give it the file name and let it read the file.
+  - Read the help block it proposes. Check the summary line, each syntax line and the See Also links.
+  - Ask for changes, then paste the block under the function line, matching the indent of your code.
+  - Type help and your function name in MATLAB to check how it shows up.
+output_sample:
+  input:
+    - Your MATLAB function, class or script file
+    - Related functions to link under See Also (optional)
+    - An example of typical use (optional)
+  prerequisites:
+    - Either MATLAB with its AI tool link connected, or the file text pasted into your chat
+  output:
+    - name: H1 line
+      contains: A one-line summary on the first help line, in the casing MATLAB help uses.
+    - name: Syntax paragraphs
+      contains: One line for each way to call the function, with inputs named the MathWorks way.
+    - name: Example section
+      contains: A short example of typical use, added when you give one or it is clearly needed.
+    - name: See Also line
+      contains: Links to related functions, written in the format that help and doc expect.
+    - name: Note section
+      contains: An optional note for details that do not fit in the syntax lines.
+    - name: Full help block
+      contains: The whole comment block, shown for your review before any file is changed.

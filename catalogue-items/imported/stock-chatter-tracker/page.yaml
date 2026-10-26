@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It fetches numbers and reports them side by side.
 new_slug: stock-chatter-tracker
 name: Stock chatter tracker
-summary: Give it stock tickers. Get how much Reddit, X, news and Polymarket talk
-  about each, and whether the mood is rising.
+summary: Check stock sentiment across Reddit, X, news and Polymarket. Give it tickers. You get buzz, bullish share, counts and trend for each source.
 job: money-and-investing
 headline: Stock chatter tracker
-subhead: "How much people are talking about a stock, and whether the mood is
-  warming or cooling, across Reddit, X, news and Polymarket. You give tickers
-  and get a comparison: a buzz score, the share of bullish posts, mention or
-  trade counts and a trend for each source."
+subhead: "How much people are talking about a stock, and whether the mood is warming or cooling, across Reddit, X, news and Polymarket. You give tickers and get a comparison: a buzz score, the share of bullish posts, mention or trade counts and a trend for each source."
 explain: |
   How much people are talking about a stock, and whether the mood is warming or cooling, across Reddit, X, news and Polymarket. You give tickers and get a comparison: a buzz score, the share of bullish posts, mention or trade counts and a trend for each source.
 
@@ -19,6 +15,10 @@ when:
   - You want to see if Reddit and news tell the same story about a company.
   - You are comparing the buzz around two or three tickers.
   - You want to check whether Polymarket traders are active on a company.
+not_for:
+  - You want to know when to buy or sell. This tracker only reads talk and mood, so ask a licensed financial adviser.
+  - You need company numbers like earnings or debt. Use your broker's site or the company's own filings instead.
+  - You want live price charts. Use a price-data tool or your broker's app instead.
 you_give:
   - One or more stock tickers
   - Which sources to check
@@ -31,8 +31,27 @@ you_get:
   - A trend direction
   - A side-by-side comparison of tickers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Adanos API key.
+  - Get an Adanos Finance API key from the Adanos site, and check their page for current pricing.
+  - Open an AI that can run code, such as Claude with code tools. Add your key as ADANOS_API_KEY.
+  - Paste the skill into the chat. Then list your tickers and the sources you want.
+  - Say how far back to look. If you skip this, it uses the last 7 days.
+  - Read the result. Treat sources with no data as no data, not as bearish.
+  - Save the result in a watchlist note, or use it as a starting point for your own research.
+output_sample:
+  input:
+    - One or more stock tickers, up to 10
+    - "Which sources to check: Reddit, X, news or Polymarket"
+    - Your Adanos Finance API key
+    - A time window (optional, 7 days if you skip it)
+  prerequisites:
+    - An AI that can run code and make web requests
+    - An Adanos Finance API key, set as ADANOS_API_KEY
+  output:
+    - name: Single-source summary
+      contains: Buzz score, bullish percentage, mentions or trades, and trend for one ticker on one source.
+    - name: Multi-source snapshot
+      contains: One block per source for a ticker, like Reddit, X, news and Polymarket.
+    - name: Synthesis line
+      contains: A short note saying if the sources are aligned bullish, aligned bearish, or mixed.
+    - name: Ticker comparison
+      contains: Tickers ranked by buzz score, with big gaps in bullish share or trend called out.

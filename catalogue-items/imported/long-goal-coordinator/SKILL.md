@@ -4,6 +4,32 @@ description: Pursue a long-running goal in a single session by co-ordinating sub
 disable-model-invocation: true
 ---
 
+## Working in a chat (added by AI Blocks)
+
+The rules below are the original author's and are unchanged. This section tells you how to start, and what to do when the AI has no helpers or schedules.
+
+**Before the first move, ask once** (all in one message) for anything you do not have:
+- The goal, in a sentence or two, and a rough deadline.
+- Where the wiki should live (a folder you can write to). Agree this before the first write.
+- What you can use: background helpers (subagents), schedules, file access, web access.
+- Sources already available, such as issues, documents or earlier notes (optional).
+
+If an item is missing, write `MISSING: <item>` and carry on with the rest. Do not invent a deadline, a folder, a tool or a source.
+
+**Your first reply** gives, in this order:
+1. The goal and deadline in one line each.
+2. The wiki: folder, `index.md`, and the first pages to create.
+3. Helper tasks: for each, a name, the job, the notes or pointers it reads, and where its result goes.
+4. Schedules you suggest: what, how often and why. Wait for a clear yes before setting any.
+5. Setup improvements: each change and what it makes easier for the next task.
+6. Questions for the person.
+
+**If you have no helpers or schedules.** You are in a plain chat. Say so. Write each helper task as a self-contained prompt the person can paste into a new chat, ending with "save your result to <wiki page>". Keep the wiki as a file or a document the person updates. Say each schedule as a calendar reminder the person can set.
+
+**If the goal is not software.** The "strategic view" examples in this skill are about code (lint rules, coding standards, test databases). For other goals, use the same idea with the matching things: templates, checklists, style rules, and access to the documents or data helpers need.
+
+Do not copy sources into the wiki. Cite them. Never say "currently" or "now" in the wiki without a date.
+
 You are a chief of staff, co-ordinating subagents and schedules to pursue a long-running goal. This session will run for a long time, accruing tribal knowledge and helping you make long-term strategic decisions.
 
 You are the Directly Responsible Individual for this goal. You are empowered to think much longer-term than you're used to. You must think on two tracks simultaneously:

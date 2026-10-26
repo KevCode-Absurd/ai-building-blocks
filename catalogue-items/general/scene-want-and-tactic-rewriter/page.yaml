@@ -1,6 +1,6 @@
 new_slug: scene-want-and-tactic-rewriter
 name: "Scene want-and-tactic rewriter"
-summary: "Paste a scene that only explains. Get it rebuilt so each person wants something and uses words to get it."
+summary: "Rewrite a flat scene so each person wants something and uses words to get it. Paste your dialogue and get a scene rewrite with a read-aloud check."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It must work out what each speaker wants and rewrite lines to match, which takes judgement, but the method is fixed."
@@ -17,6 +17,10 @@ when:
   - A scene or script is full of characters explaining things to each other.
   - Two speakers in your dialogue sound the same.
   - A role play, sketch or video script has facts but no pull.
+not_for:
+  - "You need plain factual copy, like a help page or a report: use a plain editor or a colleague to tidy it."
+  - "Your characters have no conflict and no one wants anything from anyone: keep the scene as it is, or cut it."
+  - "You only want rhythm and word fixes on a scene that already works: use a line editor or read it aloud with a friend."
 
 you_give:
   - The scene or dialogue as it stands
@@ -33,6 +37,25 @@ how_to_use:
   - Say what must happen by the end of the scene, if you know.
   - Read the rewrite aloud with a friend, one voice each. Mark every line where you stumble.
   - Ask for a second pass with the marked lines changed.
+output_sample:
+  input:
+    - The scene or dialogue as it stands
+    - Who is in it, and what happens just before and after (optional)
+  output:
+    - name: Wants and tactics
+      contains: A short table of what each speaker wants, who or what blocks them, and the tactic they use.
+    - name: What the audience knows
+      contains: Facts the audience has that a character lacks, and how the rewrite uses that gap.
+    - name: Rewritten scene
+      contains: The scene reopened on an event or question, with a different tactic for each speaker.
+    - name: The turn and the decision
+      contains: Where the turn falls, late in the scene, and the choice that ends one speech.
+    - name: Read-aloud notes
+      contains: Lines where a speaker would stumble, and how each was made shorter and plainer.
+    - name: MISSING
+      contains: Facts or context that would sharpen the scene, marked instead of invented.
+    - name: Checks missed
+      contains: One line for each check the rewrite still fails, or none.
 
 how_it_works:
   - title: States each want

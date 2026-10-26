@@ -1,6 +1,6 @@
 new_slug: ad-landing-page
 name: "A landing page that matches your best ad"
-summary: "Give it your website, offer and best ad. You get the page text, a design plan and a 30-point review."
+summary: "Turn your best ad into a landing page that matches it. You get the page copy, a design plan and a 30-point review with the top fixes."
 job: write-landing-page
 
 headline: "A landing page that matches your best ad"
@@ -15,6 +15,10 @@ when:
   - An ad is getting clicks but the page it sends people to doesn't sell.
   - You're launching a new ad and want a page made for it, not your home page.
   - Your product page opens with the product name and a brand story instead of a reason to buy.
+not_for:
+  - "You have no ad yet: use the Website first-screen copy writer to draft the top of the page, then come back once an ad is running."
+  - "You only want the page text, without design or review: use the Ad-matched landing page writer on its own."
+  - "You already have a live page and only want it graded: use the Landing page conversion reviewer or the 30-point landing page checker."
 
 you_give:
   - Your website, as a link or saved pages
@@ -34,6 +38,27 @@ how_to_use:
   - Have your inputs ready. Your website link, your offer and guarantee terms, and the ad itself (its first line, the offer it named and what the picture shows). Add reviews if you have them.
   - It works step by step and saves each result. Check the page brief at the top of the copy first. If the buyer or reason is wrong, everything after it is too.
   - Hand the copy and design plan to whoever builds your pages, and fix the top items in the review before the ad points to the new page.
+output_sample:
+  input:
+    - Your website, as a link or saved pages
+    - Your offer, with price and exact guarantee terms
+    - The ad's first line, its offer and what its picture shows
+    - Customer reviews, copied as written (optional)
+    - Who the ad is for (optional)
+  prerequisites:
+    - An AI that can work through a folder of files, such as Claude Code or a Claude Project
+    - The handoff pack zip with HANDOFF.md and the skill files
+  output:
+    - name: Brand file
+      contains: Eight files of your facts, offer, buyers, claims and voice, each fact tagged by where it came from.
+    - name: Page copy
+      contains: A page brief, first screen, buyer doubts, answer-first sections, cost block, questions and a closing button.
+    - name: Design plan
+      contains: One design system from your brand and three directions, with section plans for phone and desktop.
+    - name: 30-point review
+      contains: 30 yes-or-no checks at five buyer stops, deal-breakers flagged, and the first five fixes in order.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Builds your brand file

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads what the code saves, then writes matching schema files.
 new_slug: apify-output-schema-writer
 name: Apify output schema writer
-summary: Give it an Apify Actor. Get output schema files that show its results
-  as a clear table. Needs a paid Apify account.
+summary: Write Apify output schema files for your Actor, so run results show as a clear table in Apify Console. Reads your code first. Needs a paid Apify account.
 job: build-software
 headline: Apify output schema writer
-subhead: Give it an Apify Actor. Get output schema files that show its results
-  as a clear table. Needs a paid Apify account. Bring the Actor project folder.
-  Use the result to plan your next step.
+subhead: Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account. Bring the Actor project folder. Use the result to plan your next step.
 explain: |
   Schema files that make an Actor's results show up as a clear table in Apify Console, so anyone can read a run without opening raw data. It suits Actors already built on Apify, which needs a paid account.
 
@@ -18,6 +15,10 @@ when:
   - You are about to publish an Actor and want a tidy results view.
   - Several Actors in a repo need schemas that match each other.
   - Your code saves files to a store and you want them listed.
+not_for:
+  - "Your Actor has no code yet: build it first, or ask a developer, then come back to write the schema."
+  - "Your Actor only saves plain text or one file and has no result fields: skip the dataset schema and write the output schema by hand."
+  - "You want a different results layout than the table: edit the views in the schema file yourself, or ask a developer."
 you_give:
   - The Actor project folder
   - Notes on what each field means (optional)
@@ -28,8 +29,28 @@ you_get:
   - A key-value store schema (when needed)
   - Updated Actor settings
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini, in a tool that can read your project folder. A plain chat only works if you paste your files in.
+  - Paste the skill text, or upload the skill folder if your AI accepts files.
+  - Add your Actor project folder. Add your field notes and other Actors to match, if you have them.
+  - Ask your AI to write the output schema for your Actor.
+  - Read the summary and check each field against your code.
+  - Run the Actor on Apify, which needs a paid account, and open the results in Console to see the table.
+output_sample:
+  input:
+    - Your Actor project folder, with its .actor folder and source code
+    - Notes on what each field means (optional)
+    - Other Actors in the same repo to match (optional)
+  prerequisites:
+    - A paid Apify account
+    - An AI that can read your project files
+  output:
+    - name: dataset_schema.json
+      contains: Every field the Actor saves to its dataset, with types, descriptions, example values and a table view for Console.
+    - name: key_value_store_schema.json
+      contains: Groups of files the Actor saves to its key-value store. Only made when the Actor uses one.
+    - name: output_schema.json
+      contains: Links that tell Apify Console where to find the results, such as the dataset and the files.
+    - name: actor.json
+      contains: Your existing Actor settings file, updated to point to the new schema files.
+    - name: Summary
+      contains: A short list of what was created or changed, and anything you should check.

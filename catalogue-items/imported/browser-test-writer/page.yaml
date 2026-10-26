@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads your code first, then writes tests in a set style.
 new_slug: browser-test-writer
 name: Browser test writer
-summary: Describe a user story or page. Get Playwright tests written for it that
-  you can run.
+summary: Write Playwright browser tests from a user story, page or component. Get a test file that matches your project's style and that you can run.
 job: test-and-fix-code
 headline: Browser test writer
-subhead: Describe a user story or page. Get Playwright tests written for it that
-  you can run. Bring a user story, page, component or feature name. Use the
-  result to plan your next step.
+subhead: Describe a user story or page. Get Playwright tests written for it that you can run. Bring a user story, page, component or feature name. Use the result to plan your next step.
 explain: |
   Tell it what a user should be able to do, and get Playwright tests for it that you can run today.
 
@@ -18,6 +15,10 @@ when:
   - You want a login test that follows your existing test style.
   - You have a component file and want its behaviour covered.
   - You need accessibility checks added to a page.
+not_for:
+  - "You need unit tests for plain functions: use your existing test runner, such as Jest or Vitest."
+  - "You only want to check an API with no browser: use a simple API test in your current test tool."
+  - "You have no Playwright setup and no code to read: ask a developer to set up Playwright first."
 you_give:
   - A user story, page, component or feature name
   - Your Playwright config and existing tests
@@ -28,8 +29,29 @@ you_get:
   - Page objects or fixtures where they help
   - Cases for the main path and for errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in a way that lets it read your project files and run code.
+  - Paste the skill instructions into the chat.
+  - "Say what to test, for example: user can log in with email and password. You can also give a page, a component file or a feature name."
+  - Let it read your Playwright config and existing tests so the new test matches them.
+  - Check the test file it writes and the run result. If the test fails, it fixes the test. If the app is at fault, it tells you.
+output_sample:
+  input:
+    - A user story, page, component file or feature name
+    - Your Playwright config and existing tests
+    - Test login details or sample data (optional)
+  prerequisites:
+    - An AI that can read your project files and run code
+    - Playwright already installed in your project
+  output:
+    - name: Test file
+      contains: A .spec.ts or .spec.js file with tests for the main path and for errors, using your project's style.
+    - name: Page object
+      contains: A helper that holds the page's selectors, made only when the test touches five or more on one page.
+    - name: Fixture
+      contains: Shared setup such as login or data, made or extended only when the test needs it.
+    - name: Test data file
+      contains: A JSON file of structured data, saved in test-data, made only when the test uses it.
+    - name: Test run result
+      contains: The pass or fail result from running the new test, with fixes made to the test if it failed.
+    - name: Coverage note
+      contains: A short list of the behaviours that are now tested.

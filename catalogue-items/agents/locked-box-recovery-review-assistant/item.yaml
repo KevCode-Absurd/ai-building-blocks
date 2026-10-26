@@ -1,33 +1,26 @@
 slug: locked-box-recovery-review-assistant
 name: Locked-box recovery review assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: Check seller transfers and ticking compensation against a locked-box deal price. Get the leakage still to recover and the daily amount owed, apart.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - reconcile-a-locked-box-closing-price
   - escrow-release-checker
 steps:
   - uses: reconcile-a-locked-box-closing-price
-    note: Run the governing workflow when A new seller-benefit transfer, permitted-item consent, verified repayment or ticking-day confirmation is supplied.
+    note: "Run this when a new seller transfer, permitted-item consent, repayment or ticking-day confirmation arrives. Sort each transfer as permitted, recovered, unrecovered or disputed, then work out the ticking amount on its own line. It hands step 2 the price bridge, with the unrecovered leakage amount."
   - uses: escrow-release-checker
-    note: If unrecovered leakage has a specific approved escrow reserve, reconcile only that account and claim ledger before proposing a release or collateral shortfall. If no dedicated escrow or authority is evidenced, return a question and never divert an unrelated earnout or indemnity account.
+    note: "Run this only when a dedicated escrow account exists for leakage. It uses your escrow agreement and statements, and takes the unrecovered leakage from step 1 as the claim to cover. Reconcile that one account and its claim list, then propose a release or name any shortfall. With no dedicated escrow or authority shown, return a question and never use an earn-out or indemnity account."
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -17,6 +17,29 @@ use_cases:
   - "Spot a claim that can't be tested, and ask what result would prove it wrong"
   - "Check a big warning before you go public with it, and say how sure you are"
   - "Teach a team or a class the habits of scientific thinking"
+not_for:
+  - "You want to see how fast a claim changes under hands-on testing and measuring: use the Galileo Galilei mind."
+  - "You need to explain data to the public with charts and facts about world trends: use the Hans Rosling mind."
+  - "You need legal or medical advice, or a question of taste that no test can settle: ask a qualified professional or a person you trust."
+output_sample:
+  input:
+    - A claim, pitch, study or result you are unsure about
+    - A hard idea you want to explain to a general audience
+    - A test or plan you want checked (optional)
+    - Who will read or hear it (optional)
+  output:
+    - name: First reaction
+      contains: A warm opening on what is interesting about your claim or idea.
+    - name: Evidence check
+      contains: Whether anyone independent has confirmed it, and if the evidence is as big as the claim.
+    - name: Other explanations
+      contains: Rival ways to explain the same result, compared fairly.
+    - name: Test that could prove it wrong
+      contains: A result that would count against the claim, and any logic tricks spotted in the argument.
+    - name: How sure to be
+      contains: A plain statement of what is known, what is not, and how strong the case is.
+    - name: Zoom out
+      contains: A view from far away in scale or time, ending with one short line you could repeat.
 seats:
   - {seat: "Wonder and doubt (the baloney check)", asks: "That is a wonderful idea. Now, what is the evidence, and who has checked it besides you?"}
   - {seat: "Explainer for the public", asks: "Could a curious 12-year-old follow this, and would they feel the wonder in it?"}

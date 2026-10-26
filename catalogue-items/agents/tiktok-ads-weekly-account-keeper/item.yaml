@@ -16,13 +16,13 @@ outputs:
   - {type: plan}
 uses: [product-margin-checker, tiktok-ads-account-setup-checker, tiktok-ad-test-reader, tiktok-spark-ad-picker, platform-roas-reality-check, tiktok-ads-account-auditor, next-dollar-budget-allocator]
 steps:
-  - {uses: product-margin-checker, note: "Once, then reused: the break-even cost per sale every later call is measured against."}
-  - {uses: tiktok-ads-account-setup-checker, note: "First run only, or after a setup change: missing steps to fix before any ad is judged."}
-  - {uses: tiktok-ad-test-reader, note: "Every week: keep, fix or kill for each ad that has run three days or more."}
-  - {uses: tiktok-spark-ad-picker, note: "Only when organic or creator posts at least five days old are supplied: which to boost as Spark ads."}
-  - {uses: platform-roas-reality-check, note: "First run of each month, or when TikTok shows a sudden jump in return: a truer return and a trust level."}
-  - {uses: tiktok-ads-account-auditor, note: "First run of each month: a full check of pixel, creative, audiences and bids."}
-  - {uses: next-dollar-budget-allocator, note: "Only when the gates pass: how to split a budget raise."}
+  - {uses: product-margin-checker, note: "Once, then reused: the break-even cost per sale every later call is measured against. Hands the later steps that number."}
+  - {uses: tiktok-ads-account-setup-checker, note: "First run only, or after a setup change: missing steps to fix before any ad is judged. Uses your setup screenshots, not step 1's number. Hands step 3 a setup score: if it is too low, the ad calls wait."}
+  - {uses: tiktok-ad-test-reader, note: "Every week: keep, fix or kill for each ad that has run three days or more. Uses this week's ad export, with step 1's break-even number and the setup result from step 2. Hands step 4 the best ad and its numbers."}
+  - {uses: tiktok-spark-ad-picker, note: "Only when organic or creator posts at least five days old are supplied: which to boost as Spark ads. Uses the organic or creator posts you supply and the best ad from step 3, so a boosted post has an ad to be tested against."}
+  - {uses: platform-roas-reality-check, note: "First run of each month, or when TikTok shows a sudden jump in return: a truer return and a trust level. Uses the weekly export and your store totals, with step 1's margin, not step 4's picks. Hands step 6 the truer return."}
+  - {uses: tiktok-ads-account-auditor, note: "First run of each month: a full check of pixel, creative, audiences and bids. Uses the weekly export, step 1's cost target and step 5's truer return as a second source to compare. Hands step 7 the fix list."}
+  - {uses: next-dollar-budget-allocator, note: "Only when the gates pass: how to split a budget raise. Uses the weekly spend and revenue, step 6's plan and the trust level from step 5."}
 schedule: "Every Monday morning, after last week's data is in"
 asks_before: [raising or cutting budgets, pausing or turning on ads, boosting a post as a Spark ad, changing bids, audiences or targets]
 origin: own

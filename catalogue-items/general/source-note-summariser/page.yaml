@@ -1,6 +1,6 @@
 new_slug: source-note-summariser
 name: "Source note summariser"
-summary: "Paste an article, talk or chapter. Get its claims, evidence, gaps and the three lines worth keeping."
+summary: "Paste an article, talk or chapter into this source note summariser. You get each claim, how well it is backed, the gaps and three quotes to keep."
 job: research-topics
 thinking: medium
 thinking_why: "It has to rate evidence honestly and keep claims separate from its own inference."
@@ -17,6 +17,10 @@ when:
   - "You are reading ten sources for one decision and need notes you can compare."
   - "A long article is being quoted at you and you want to know what it actually shows."
   - "You are building a course or a report and need to cite accurately."
+not_for:
+  - "You only want a quick gist of a short piece: ask your AI for a plain summary, or just read it."
+  - "You need to check the statistics inside a study that someone quotes: use the Study headline claim checker."
+  - "You have not read or cannot paste the full source: get the full text first, since a partial paste leaves claims out."
 
 you_give:
   - "The full source with its title, author and date"
@@ -32,6 +36,30 @@ how_to_use:
   - "Add the question you are reading for."
   - "Read EVIDENCE. Any claim rated ASSERTION or OPINION is one you cannot repeat as fact."
   - "File the note with the source link so you can go back to the quotes."
+output_sample:
+  input:
+    - The full source text with its title, author and date
+    - The question you are reading it for (advised)
+    - What you already believe, in one line (optional)
+  output:
+    - name: SOURCE
+      contains: Title, author, date, where it appeared, and what the author might gain from the claim.
+    - name: CLAIMS
+      contains: Each claim in one line, with a short quote and where to find it.
+    - name: EVIDENCE
+      contains: What the source offers for each claim, rated data, example, assertion or opinion.
+    - name: GAPS
+      contains: What the source leaves out or assumes, and who it does not cover.
+    - name: FOR MY QUESTION
+      contains: What the source adds to your question and what it does not settle.
+    - name: KEEP
+      contains: Three short quotes with their locations, each under 25 words.
+    - name: SUMMARY
+      contains: A paragraph under 80 words that claims no more than the evidence allows.
+    - name: MISSING
+      contains: Source facts that were not given.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Records the source"

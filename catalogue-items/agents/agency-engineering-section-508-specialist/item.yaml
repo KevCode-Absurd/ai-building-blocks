@@ -1,0 +1,41 @@
+slug: agency-engineering-section-508-specialist
+name: Section 508 Accessibility Specialist agent
+summary: "Review a web page or form for Section 508 and WCAG barriers, and get a ranked fix list plus a draft accessibility report (VPAT) to check."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: web_page
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-section-508-specialist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-section-508-specialist.md
+  licence: MIT
+  original_name: Section 508 Accessibility Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: d4fb7139c69e270fd626cfc1410b7412bd864d010903b459f9eb90c8359809f9
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Section 508 Accessibility Specialist
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Section 508 Accessibility Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-section-508-specialist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

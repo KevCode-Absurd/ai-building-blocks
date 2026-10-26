@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks parts and wires them together.
 new_slug: ai-app-and-chatbot-builder
 name: AI app and chatbot builder
-summary: Describe the app you want. Get working code for a chatbot, question
-  answerer or agent that uses tools.
+summary: Describe the chatbot, document question answerer or tool-using agent you want. Get starter code for your AI app in Python with LangChain.
 job: build-software
 headline: AI app and chatbot builder
-subhead: Working code for a chatbot, a document question answerer, or an agent
-  that uses tools, written with the LangChain library. It runs on your choice of
-  AI provider, so you can swap one for another later.
+subhead: "Tell your AI what app you want: a chatbot, a document question answerer or an agent that uses tools. You get starter Python code built with LangChain. It works with more than one AI provider, so you can switch later."
 explain: |
   Working code for a chatbot, a document question answerer, or an agent that uses tools, written with the LangChain library. It runs on your choice of AI provider, so you can swap one for another later.
 
@@ -18,20 +15,50 @@ when:
   - You need an app that answers questions from your own documents.
   - You want an agent that can call tools like search or a calculator.
   - You may switch AI providers later and want code that makes that easy.
+not_for:
+  - "You only want to chat with your own files and have no coding setup: use a ready-made chat tool or the file upload in Claude, ChatGPT or Gemini."
+  - "You need a complex workflow with loops, many agents or tight control: use LangGraph, a separate library, instead."
+  - "You want a search-focused app over many documents and nothing else: use LlamaIndex, a library built for that."
 you_give:
-  - A plain description of the app
+  - A plain description of the app you want
   - The documents or tools it should use (optional)
   - Your preferred AI provider
-  - A Python setup and an API key
+  - An API key from that provider
 you_get:
-  - Starter code for the app
-  - Install steps
-  - A search setup for your documents if needed
-  - A tool-using agent example
-  - Notes on when to pick a different library
+  - Starter Python code for your chatbot, question answerer or agent
+  - Install commands for the right packages
+  - A document search setup, if your app needs one
+  - An example of an agent that uses tools
+  - A note on when a different library is a better fit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and call an AI model.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe the app you want in plain words. Say which AI provider you use.
+  - Add the documents or tools the app should use, if any.
+  - Read the code your AI writes. Check that it asks for your API key and does not run unsafe code.
+  - Run it on your computer with Python 3.10 or newer. Your AI can run it for you only if it can run code.
+  - Ask one test question. If the answer is wrong, paste the error back to your AI and ask for a fix.
+output_sample:
+  input:
+    - A plain description of the app you want
+    - The documents or tools it should use (optional)
+    - Your preferred AI provider
+    - Your Python setup and an API key from your AI provider
+  prerequisites:
+    - Python 3.10 or newer on your computer
+    - An API key from your AI provider
+    - An AI that can run Python code, or a place where you can run it yourself
+  output:
+    - name: Installation
+      contains: The pip commands to install LangChain and the add-ons for your chosen AI provider.
+    - name: Basic model call
+      contains: A short starter script that sends one question to your AI provider and prints the answer.
+    - name: Agent with tools
+      contains: Code for an agent that picks and calls tools, such as search or a calculator.
+    - name: Conversation memory
+      contains: Code that lets a chatbot remember earlier messages in the same chat.
+    - name: Document question answerer
+      contains: Code that loads your files, splits them, stores them and pulls the best pieces into each answer.
+    - name: Vector store options
+      contains: Setup examples for storing document pieces locally or in the cloud.
+    - name: Alternatives note
+      contains: Short guidance on when LangGraph or another library fits better than LangChain.

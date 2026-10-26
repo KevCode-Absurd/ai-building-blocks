@@ -1,0 +1,43 @@
+slug: agency-godot-gameplay-scripter
+name: Godot Gameplay Scripter agent
+summary: Get a Godot gameplay implementation plan with scene and script checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/godot/godot-gameplay-scripter.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-gameplay-scripter.md
+  licence: MIT
+  original_name: Godot Gameplay Scripter
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 20cc00332db9cbf19f9a86dd87bd4b514d348ab0c4c0536b151c936b38be4392
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Godot Gameplay Scripter
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Godot Gameplay Scripter
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-gameplay-scripter.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

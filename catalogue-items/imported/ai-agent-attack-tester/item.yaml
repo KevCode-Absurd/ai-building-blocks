@@ -12,9 +12,13 @@ inputs:
     required: true
   - type: codebase
     required: false
+  - type: security_report
+    required: false
 outputs:
   - type: security_report
     required: true
+  - type: test_report
+    required: false
 uses: []
 origin: imported
 source:

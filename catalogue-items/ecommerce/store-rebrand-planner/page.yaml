@@ -1,6 +1,6 @@
 new_slug: store-rebrand-planner
 name: "Store rebrand planner"
-summary: "Give it your store, name and goals. Get a keep-or-rename score out of 100 and a phased plan."
+summary: "Decide if your store should keep, tweak or change its name. Get a rename score out of 100 and a four-phase store rebrand plan."
 job: brand-file
 thinking: high
 thinking_why: "It weighs name problems against search traffic and customers, then plans a long project. A stronger model keeps the trade-offs straight."
@@ -17,6 +17,10 @@ when:
   - You dislike or doubt your store name and want to know if a rename is worth it.
   - You got a trademark letter or found a bigger brand with a name close to yours.
   - You are changing what the store stands for and need a plan for the brand, the products and the site.
+not_for:
+  - "You only want to sharpen how your brand stands against rivals: use the Positioning grid builder instead."
+  - "You are renaming one product, not the store: pick the new product name yourself or ask a friend, since this plan covers the whole store."
+  - "You have no sales, search or customer data yet: wait until you have some, because the score needs real numbers."
 
 you_give:
   - Current name, age of the brand and customer count
@@ -37,6 +41,29 @@ how_to_use:
   - Add the problems you see with the name and where it appears, including marketplaces.
   - Read the score and call, then the plan. If it says tweak, start with the pilot suggestion before any full rename.
   - Do the trademark and domain checks yourself, with a lawyer for trademarks.
+output_sample:
+  input:
+    - Your store name, how old the brand is and how many customers you have
+    - Your branded search and direct traffic share, repeat customers and review counts
+    - Problems with the name and where it appears, such as marketplaces
+    - Your goals for the next five years (optional)
+  output:
+    - name: Hard trigger check
+      contains: Says if a trademark claim or lawsuit risk forces a rename, which sets the score to 100.
+    - name: Rename score and call
+      contains: Shows the sum of friction, equity and age points out of 100, then a keep, tweak or rename call.
+    - name: Customer message and old-name plan
+      contains: "If you rename: what to tell customers, how to keep the old name findable and how reviews carry over."
+    - name: Friction fixes and pilot
+      contains: "If you keep or tweak: ways to ease the name problems, and a one-product-line test."
+    - name: Four phases
+      contains: Discover, define, develop and deliver, each with tasks, owners and dates, plus design challenges as questions.
+    - name: Keep, change and drop list
+      contains: What to keep, change or drop across your brand, products and site.
+    - name: Rollout order
+      contains: "The order to launch: sitemap, two key pages, then the rest of the site."
+    - name: Lawyer note and checks missed
+      contains: A reminder to check trademark and domain with a lawyer, and any checks the plan skipped.
 
 how_it_works:
   - title: Looks for hard triggers

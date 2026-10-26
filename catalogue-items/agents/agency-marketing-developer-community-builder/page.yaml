@@ -1,0 +1,125 @@
+name: Developer Community Builder agent
+summary: "Get a developer community plan for Discord or GitHub Discussions: channels, rules, contributor tiers and health checks. Bring your product and community."
+headline: Developer Community Builder agent
+subhead: Give it your product, where your community lives and what is going wrong. It plans the channels, rules and welcome flow, a contributor program and a set of health checks. You get a developer community plan you can set up yourself.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A big community is not a healthy one. Ten thousand members with twelve active ones is a quiet room. This agent plans for the people who use your product, not for your marketing numbers. It looks at who answers questions, who goes unanswered, and which few members carry the load.
+
+  It plans in order: audit what exists, design the channels and rules around what members do, seed the space before you invite many people, set health checks from day one, then build a path from lurker to helper to contributor. It also writes the conflict playbook before you need it.
+
+  It does not run your community. It can't watch your Discord, post, or run on a schedule or trigger. You bring the facts and numbers, and you set up the channels and bots. The health ranges and targets in the original profile are starting points to adjust, not measured benchmarks.
+when:
+  - You are launching a Discord server or forum for the people who use your product.
+  - Your community is large but few members post or help.
+  - Three people answer almost every question and you need a contributor program.
+  - You need rules and a response plan before a product change that may upset members.
+not_for:
+  - You want a plan for a Reddit community. Use the Reddit Community Builder agent.
+  - You want to learn what customers say in public forums. Use the Community evidence researcher.
+  - You want growth tests for your community as a channel. Use the Community growth experiment planner.
+you_give:
+  - Your product and who uses it
+  - Where your community lives, such as Discord, GitHub Discussions or a forum, and its size
+  - What is going wrong, such as unanswered questions or a quiet server
+  - Your current channel list and rules (optional)
+  - Rough numbers for the last month, such as new members, active members and questions answered (optional)
+  - How much team time you can give each week
+you_get:
+  - A channel and rules plan, with a welcome message
+  - "A contributor program: tiers, ways in and how to thank people"
+  - Health checks to review each week and each month, with warning signs
+  - A conflict and crisis playbook
+  - "A step-by-step plan: audit, design, seed, measure and grow contributors"
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you can't, paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your product, your platform, its size and the problem. Add your channel list and rules if you have them.
+  - Add your last month's numbers if you can. If you can't, the plan sets up how to start counting.
+  - "Say: \"Make my community plan. Don't invent numbers. Mark anything you can't check as a check for me.\""
+  - Read the audit questions first and answer them. Talk to five to ten active members if you can. The profile suggests it.
+  - Set up the channels, rules and bots yourself, then review the health checks on the schedule it gives you. Come back with new numbers for a fresh plan.
+how_it_works:
+  - title: Confirm the community
+    text: It confirms the product, platform, size, problem and team time. Missing items are asked for once, then marked MISSING.
+  - title: Audit what exists
+    text: It asks who is active, what goes unanswered and who carries the load. It uses your numbers only.
+  - title: Design for members
+    text: It builds channels around what members do, with rules that protect members from each other.
+  - title: Seed before growth
+    text: It plans a small start with real members, pinned help and a few anchor members.
+  - title: Plan contributors
+    text: It sets tiers, recognition and a path from first answer to long-term contributor.
+  - title: Set health checks
+    text: It sets weekly and monthly checks with warning signs. It writes the conflict playbook last.
+output_shape: |-
+  COMMUNITY AUDIT
+    <what exists> | <who is active> | <what goes unanswered> | <who carries the load> | <questions for you>
+
+  CHANNELS AND RULES
+    <section> | <channel> | <what it is for> | <rule>
+    Welcome message: <text>
+
+  CONTRIBUTOR PROGRAM
+    <tier> | <how to earn it> | <what it gives> | <how you recognise it>
+
+  HEALTH CHECKS
+    <metric> | <how to count it> | <healthy range, your choice> | <warning sign>
+
+  CONFLICT PLAYBOOK
+    <situation> | <first response> | <who decides> | <what you say publicly>
+
+  PHASED PLAN
+    <phase: audit, design, seed, measure, grow> | <steps> | <check before moving on>
+output_sample:
+  input:
+    - Your product and who uses it
+    - Your platform, such as Discord or GitHub Discussions, and its size
+    - The problem you see
+    - Your current channels, rules and last month's numbers (optional)
+  prerequisites:
+    - Admin access to your community, so you can set up the channels and rules yourself
+    - Time to talk to a few active members (optional but suggested)
+  output:
+    - name: Community audit
+      contains: What exists today, who is active, what goes unanswered and who carries the load.
+    - name: Channels and rules
+      contains: A channel list, rules and a welcome message built around what members do.
+    - name: Contributor program
+      contains: Tiers, how to earn them, what they give and how you thank people.
+    - name: Health checks
+      contains: Weekly and monthly checks, how to count each, and the warning signs.
+    - name: Conflict playbook
+      contains: How to respond to heated threads, bad actors and unpopular product changes.
+    - name: Phased plan
+      contains: Audit, design, seed, measure and grow, with a check before each move.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Contributor program
+    meaning: A set of tiers that thank and reward members who help others or improve your product.
+  - term: Health check
+    meaning: A number you review on a schedule to see if the community is getting better or worse.
+  - term: Seeding
+    meaning: Filling a new space with useful posts and a few real members before you invite many people.
+  - term: Lurker
+    meaning: A member who reads but does not post.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They can turn your numbers and thread examples into a plan. They can't join or watch your community.
+  inputs:
+    - Your last 20 unanswered questions.
+    - Your top five answerers and how many answers each gave.
+    - Your current rules and moderation notes.

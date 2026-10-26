@@ -1,6 +1,6 @@
 new_slug: sound-off-commercial-checker
 name: "Sound-off commercial checker"
-summary: "Paste a video ad script or storyboard. Get a pass or fail on whether it still sells with the sound off."
+summary: "Check if your video ad still sells with the sound off. Paste a script or storyboard. Get a pass or fail and a shot for each spoken-only line."
 job: check-ads
 thinking: low
 thinking_why: "The checks are fixed and each one can be answered by reading the shots."
@@ -17,6 +17,10 @@ when:
   - You have a video script or storyboard and want to know if it works in a muted feed.
   - Your video ads lose people in the first seconds.
   - You are about to shoot and want to fix the gaps on paper first.
+not_for:
+  - "You want the spoken words checked line by line: use the Video ad script line checker."
+  - "Your ad is radio or audio only: there are no pictures to check, so ask a person to listen to it."
+  - "You have no script or storyboard yet: write the script first, then come back to check it."
 
 you_give:
   - A video ad script or storyboard, with shots and spoken lines
@@ -32,6 +36,27 @@ how_to_use:
   - Read what a silent viewer would learn and compare it with your goal.
   - Add the replacement shots to your script.
   - Run it again on the fixed version.
+output_sample:
+  input:
+    - Your video ad script or storyboard, with shots and spoken lines
+    - Frames or stills of the storyboard (optional)
+    - Your main claim in one line (optional)
+    - Where the ad will run (optional)
+  output:
+    - name: Result
+      contains: A pass or fail, with the score out of 100 and how it was worked out.
+    - name: What a silent viewer learns
+      contains: One line per shot on what a person would understand from the picture alone.
+    - name: Checks
+      contains: A pass or fail for the main claim, the opening, the product and brand, and the tone.
+    - name: Spoken lines with no picture
+      contains: Each spoken line that no shot shows, with a replacement shot to film or show.
+    - name: Score after fixes
+      contains: The new score out of 100 once the replacement shots are added, worked out the same way.
+    - name: Missing
+      contains: Anything you did not give, such as shot descriptions, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: Strips the sound

@@ -1,15 +1,11 @@
 thinking: high
-thinking_why: It sets up conversation flow, tools and testing, and mistakes show
-  up in live calls.
+thinking_why: It sets up conversation flow, tools and testing, and mistakes show up in live calls.
 new_slug: voice-assistant-builder
 name: Voice assistant builder
-summary: Say what your voice assistant should do. Get a working agent that talks
-  with customers, with tools and a web embed.
+summary: Build a voice assistant that talks with your customers. Get a live ElevenLabs agent, tools it can call and a snippet to put it on your site.
 job: help-customers
 headline: Voice assistant builder
-subhead: Say what your voice assistant should do. Get a working agent that talks
-  with customers, with tools and a web embed. Bring what the assistant should do
-  and say. Use the result to plan your next step.
+subhead: Say what your voice assistant should do. Get a working agent that talks with customers, with tools and a web embed. Bring what the assistant should do and say. Use the result to plan your next step.
 explain: |
   A voice agent that talks with your customers, answers from your instructions and can run actions you define, plus a snippet to put it on your website. You can test it by speaking to it.
 
@@ -19,6 +15,10 @@ when:
   - You need a voice bot that can look things up or book something.
   - You want to test a voice assistant idea before building a full system.
   - You need a talking helper embedded on your site.
+not_for:
+  - "You need a finished call centre with no testing or legal review: test it first and ask a lawyer about call rules in your country."
+  - "You need calls handled by people: use a hosted helpdesk or live-chat tool instead."
+  - "You only want a text chatbot with no voice: use a plain chat widget from your site builder."
 you_give:
   - What the assistant should do and say
   - The voice and language you want
@@ -30,9 +30,32 @@ you_get:
   - Tool connections for actions
   - An embed snippet for your site
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and commands, and use your own
-    ElevenLabs API key.
+  - Open an AI that can run commands, such as Claude Code, and add this skill. A plain chat window can only show you the code to run yourself.
+  - Create an ElevenLabs account and get your API key. Usage is billed by ElevenLabs, so check the plan and cost first.
+  - Tell your AI what the assistant should do, its first line, the language and the voice. Add any tools it should call.
+  - Let your AI create the agent and push it live. Then speak to it and check the answers.
+  - Fix the instructions where it gets things wrong, and test again.
+  - Copy the embed snippet onto your site. Check the rules on calls and consent in your country first.
+output_sample:
+  input:
+    - What the assistant should do and say
+    - The first line it says, and the language
+    - The voice you want
+    - Tools or actions it should call (optional)
+  prerequisites:
+    - An ElevenLabs account and API key
+    - An AI that can run commands or code
+    - Internet access
+  output:
+    - name: Agent setup
+      contains: The command line steps or Python or JavaScript code that create the agent with your name, first line, language and voice.
+    - name: System prompt
+      contains: "Written instructions for the agent: its personality, where it works, its tone and its goal."
+    - name: Tools
+      contains: Built-in tools and your own actions the agent can call, such as looking something up.
+    - name: Guardrails
+      contains: Limits on what the agent may say or do.
+    - name: Test steps
+      contains: How to talk to the agent and check it before you share it.
+    - name: Widget embed snippet
+      contains: A short block of code that puts the voice agent on your website.

@@ -1,46 +1,30 @@
 ---
 name: reconcile-an-asset-based-revolver-certificate
-description: "A collateral certificate reconciliation and signed revolver availability"
+description: "Use when you are preparing or checking an asset-based revolver borrowing base certificate for one date. Runs receivables, then inventory, then revolver availability, hands each net figure and reserve to the next step, and returns signed availability with any overadvance. Not for lender submission or sign-off."
 ---
 
 # Reconcile an asset based revolver certificate
 
-A collateral certificate reconciliation and signed revolver availability.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Check a borrowing base certificate and find what you can still draw. Three steps run in order: receivables, inventory, then the revolver. Each hands the next a net figure and the reserves it already took.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (all for the same certificate date):
+- **Receivables aging** (yours): the aging report and its control total, from the accounting system.
+- **Ineligible receivables and concentration caps** (yours): the reasons and customer caps as the credit agreement defines them.
+- **Inventory at cost and the appraisal's net orderly liquidation value** (yours): for the same items.
+- **Credit agreement terms** (yours): advance rates, inventory sublimit, reserves and commitment.
+- **Loan statement** (yours): drawn loan, letters of credit and other blocks.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** the borrower's draft certificate to compare against, and the lender's latest reserve notices.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Same-date receivables aging, eligible inventory cost/appraisal, credit agreement, advance rates, caps, reserves, commitment, debt drawings and letters of credit.
+The items under "Before you start", all as of one certificate date, with the currency and scale stated once. If the receivables and inventory dates differ, stop and ask which date governs before running step 1. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,11 +34,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Receivables borrowing base builder** (`receivables-borrowing-base-builder`). Reconcile eligible receivables and contractual concentration deductions to the aging control total. Pass the net receivables advance plus a reserve ledger to the facility bridge. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-receivables-borrowing-base-builder.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Receivables borrowing base builder** (`receivables-borrowing-base-builder`). Reconcile eligible receivables and contractual concentration deductions to the aging control total. Pass the net receivables advance plus a reserve ledger to the facility bridge. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-receivables-borrowing-base-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** the aging total ties to the control total and no invoice is excluded twice. If it does not, stop and say which line is off.
 
-2. **Inventory borrowing base builder** (`inventory-borrowing-base-builder`). Calculate inventory advance on the same certificate date using matching cost and liquidation-value populations. Pass net advance and already-applied reserves, identifying appraisal coverage gaps. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-inventory-borrowing-base-builder.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Inventory borrowing base builder** (`inventory-borrowing-base-builder`). Calculate inventory advance on the same certificate date using matching cost and liquidation-value populations. Pass net advance and already-applied reserves, identifying appraisal coverage gaps. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-inventory-borrowing-base-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** the date matches step 1, cost and appraisal cover the same items, and any item with no appraisal is listed. Name which limit applied (cost, appraisal or sublimit).
 
-3. **Revolver availability checker** (`revolver-availability-checker`). Combine only compatible net collateral advances, cap by commitment and deduct actual funded/contingent usage and additional nonduplicated blocks. Return signed capacity and all draw-condition gaps without submitting or certifying the certificate. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-revolver-availability-checker.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Revolver availability checker** (`revolver-availability-checker`). Combine only compatible net collateral advances, cap by commitment and deduct actual funded/contingent usage and additional nonduplicated blocks. Return signed capacity and all draw-condition gaps without submitting or certifying the certificate. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-revolver-availability-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** every reserve and usage deduction appears once, and negative availability stays an overadvance.
 
 ## Workbook checks
 
@@ -71,4 +55,11 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with signed availability, which limit applied (commitment or borrowing base) and any overadvance. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly: this is an arithmetic and tracing check, not a lender-certified certificate, and nothing was submitted. A person who knows the credit agreement must review and sign the real certificate.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Check what the line costs** with the [Revolver interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the same loan balances.
+- **See what a rate change does to the cost** with the [Bridge rate changes to revolver cost](https://useaiblocks.com/workflows/bridge-floating-rate-changes-to-revolver-cost) workflow.
+- **Test your covenants** with the [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
+Nothing here goes to a lender. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

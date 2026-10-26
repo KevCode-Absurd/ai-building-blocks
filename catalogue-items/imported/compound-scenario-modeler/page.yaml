@@ -2,23 +2,23 @@ thinking: high
 thinking_why: It must trace knock-on effects across the whole business.
 new_slug: compound-scenario-modeler
 name: Compound scenario modeler
-summary: Describe several things going wrong at once. Get how each team feels it
-  and a response plan.
+summary: Plan for several things going wrong at once. This scenario planning tool shows how one problem hits each team and gives hedges and warning signs.
 job: plan-strategy
 headline: Compound scenario modeler
-subhead: A what-if plan for several bad things happening together, showing how
-  one problem spreads into others. Single-risk stress tests miss this, and
-  compound trouble is what actually hurts.
+subhead: A what-if plan for several bad things happening together, showing how one problem spreads into others. Single-risk stress tests miss this, and compound trouble is what actually hurts.
 explain: |
   A what-if plan for several bad things happening together, showing how one problem spreads into others. Single-risk stress tests miss this, and compound trouble is what actually hurts.
 
   You state up to three variables, such as losing a top customer, a delayed fundraise and a key engineer leaving. For each you give size, odds and timing. Claude then maps the effect on cash, revenue, product, people and operations, models three severity levels, and traces how a hit in one area lands in the next. It ends with specific hedges to put in place now and warning triggers that tell you to act. A Python script is available for guided input.
 when:
-  - You rely on one customer for a large share of revenue and want to plan for
-    losing them.
+  - You rely on one customer for a large share of revenue and want to plan for losing them.
   - A fundraise is uncertain and you need a Plan B.
   - You want to know how many things must go wrong before you run out of cash.
   - A board asked for a risk plan with real numbers.
+not_for:
+  - "You want to test one risk on its own: use a simple what-if in a spreadsheet, with one changed number at a time."
+  - "You need a full financial forecast or a tax view: ask your finance lead or accountant, as this does not build a financial model."
+  - "You want to plan for more than three risks at once: pick the three that worry you most and run it again for the rest."
 you_give:
   - Up to three things that could go wrong
   - Odds and timing for each
@@ -31,7 +31,31 @@ you_get:
   - Hedges to set up now
   - Warning triggers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your cash balance, monthly burn and revenue by customer.
+  - Pick the three risks that worry you most. Write the size, odds and timing of each.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code is needed.
+  - Paste your numbers and risks. The numbers in the skill's examples are only samples, so use your own.
+  - Check the cascade map and the hedges. Fix any figure that does not match your business.
+  - Turn the hedges and warning signs into a board paper or a weekly check. Give each one an owner and a date.
+output_sample:
+  input:
+    - Up to three things that could go wrong, with size, odds and timing
+    - Your cash balance and monthly burn
+    - Revenue by customer
+    - Team and customer details (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Python only if you want the guided script (optional)
+  output:
+    - name: Scenario summary
+      contains: The scenario name, your variables and the most likely path with its odds.
+    - name: Severity levels
+      contains: Base, stress and severe cases, each with its effect on runway, revenue and headcount.
+    - name: Cascade map
+      contains: How one hit spreads from team to team, and where you can stop it.
+    - name: Early warning signals
+      contains: Measurable signs that a scenario is starting, each linked to the risk it points to.
+    - name: Hedges
+      contains: Actions to take now, each with cost, what it buys, an owner and a deadline.
+    - name: Recommended decision
+      contains: One paragraph on what to do, in what order, and why.

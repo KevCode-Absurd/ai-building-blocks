@@ -1,6 +1,6 @@
 new_slug: anger-pause-and-repair-planner
 name: "Anger pause and repair planner"
-summary: "Describe a fight or hurt at work or home. Get a pause routine and a calm first message."
+summary: "Plan a pause and a calm first message after a fight or hurt at work or home. Sort facts from feelings and guesses before you reply."
 job: lead-people
 thinking: medium
 thinking_why: "It must catch blame and unsupported claims hiding in your account."
@@ -10,13 +10,17 @@ subhead: "Describe a fight or hurt at work or home. It sets a pause, splits fact
 
 explain: |
   A hurt makes a fast reply feel right. But the first message is often built on a guess about the other person's motive or on a report you got second-hand, and it starts a bigger fight.
-  
+
   This skill adds a pause before anything is sent. It splits what happened from how it felt and what you are guessing. It checks whether the report reached you first-hand and whether your view of the person could be wrong. It asks if the anger comes from care or from irritation, then drafts a short message that says you are hurt, asks one open question and leaves out claims you cannot back up. It gives no mental health advice.
 
 when:
   - "A colleague or client said something that stung and you want to reply."
   - "You heard something about yourself second-hand."
   - "A fight at home needs a calm first message."
+not_for:
+  - "You face abuse, threats or harassment: go to HR, your manager or a qualified adviser, not a message plan."
+  - "You feel unsafe or in crisis: contact a qualified person or your local emergency line."
+  - "You face a legal dispute: talk to a lawyer or other qualified adviser before you write back."
 
 you_give:
   - "What was said or done, by whom, when"
@@ -33,6 +37,28 @@ how_to_use:
   - "Paste your angry draft if you have one."
   - "Read the three lists and move anything misplaced."
   - "Wait the time it says, then read the message again before sending."
+output_sample:
+  input:
+    - What was said or done, by whom and when
+    - Your angry draft reply (optional)
+    - Who told you, if you were told (optional)
+  output:
+    - name: PAUSE
+      contains: A three-breath pause, a wait time before replying, and a short line to send if you must answer sooner.
+    - name: FACTS, FEELINGS and GUESSES
+      contains: "Three separate lists: what a record would show, how it felt, and what you assume about the other person."
+    - name: SOURCE
+      contains: Whether you saw it yourself or were told, by whom, and what to check before acting.
+    - name: WHAT I MAY NOT KNOW
+      contains: What you may not know about the other person, and one other reading of the same facts.
+    - name: WHERE THE ANGER COMES FROM
+      contains: One sentence on whether your anger comes from care or from irritation.
+    - name: CALM MESSAGE
+      contains: Five or six sentences that say you are hurt, ask for help and end with one open question.
+    - name: MISSING
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: CHECKS MISSED
+      contains: One line for each of its own checks that still failed, or none.
 
 how_it_works:
   - title: "Stop before you send or say"
@@ -55,29 +81,29 @@ how_it_works:
 output_shape: |
   PAUSE
   <breaths, wait time, line to send if you must answer>
-  
+
   FACTS
   <what a record would show>
   FEELINGS
   <how it felt>
   GUESSES
   <what you assume about them>
-  
+
   SOURCE
   <first-hand or told, by whom, what to check>
-  
+
   WHAT I MAY NOT KNOW
   <list, one other reading>
-  
+
   WHERE THE ANGER COMES FROM
   <care or irritation>
-  
+
   CALM MESSAGE
   <5 or 6 sentences, one open question>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

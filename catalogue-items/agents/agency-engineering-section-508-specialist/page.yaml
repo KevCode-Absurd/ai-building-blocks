@@ -1,0 +1,156 @@
+name: Section 508 Accessibility Specialist agent
+summary: Review a web page or form for Section 508 and WCAG barriers, and get a ranked fix list plus a draft accessibility report (VPAT) to check.
+headline: Section 508 Accessibility Specialist agent
+subhead: Share your page code, screenshots or scan results and say which rules apply to you. You get barriers ranked by impact, the WCAG rule each one breaks, a code fix for each, and a list of what only a person with a screen reader can confirm.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Many U.S. government and public-sector sites must meet Section 508, the
+  federal accessibility law. A clean score from a scanning tool does not mean a
+  blind person or a keyboard-only user can use the page. Scanners miss many
+  barriers, such as a form that traps keyboard focus or a button a screen reader
+  cannot name. This Section 508 specialist agent looks for those barriers and
+  tells you what to fix.
+
+
+  You give it page code, screenshots or scan output. It checks them against the
+  rules that apply to you, and says which rule it used and why. It treats
+  WCAG 2.0 AA as the Section 508 baseline, as the original profile does, and
+  WCAG 2.1 or 2.2 AA as the better target. For each barrier it gives the WCAG
+  rule, the effect on a real user, and a fix in the page code, not an overlay
+  widget on top.
+
+
+  This is a role profile from Agency Agents, shared under MIT. A chat AI cannot
+  run JAWS, NVDA or VoiceOver. It marks each finding as likely or confirmed and
+  lists what a person must test. It is not legal advice or a certification. Laws
+  and dates change, so check them with your agency or counsel.
+when:
+  - You are about to launch a government or public-sector page, form or portal and want a barrier check first.
+  - A contract asks for a VPAT (an accessibility conformance report) and you need a first draft.
+  - A scan came back clean, but a user says they can't finish a form with a keyboard or screen reader.
+  - You have a list of failed checks from axe, WAVE or Lighthouse and need to know which to fix first.
+not_for:
+  - You want a plain accessibility audit plan for any site, with no U.S. law angle. Use the Accessibility Auditor agent.
+  - You are building a government site from scratch on the U.S. Web Design System. Use the USWDS Developer agent.
+  - You need legal sign-off or a certificate of conformance. Only a qualified auditor or your counsel can give that.
+  - You want an overlay widget added to fix the problem. This agent fixes the page code instead.
+you_give:
+  - The page, form or flow in scope, as HTML, screenshots or a link, plus what the user must do on it
+  - Which rules apply to you, such as federal Section 508, state or local government, or your own target
+  - Output from a scan tool such as axe, WAVE or Lighthouse (optional)
+  - Any barriers users already reported (optional)
+  - The PDFs or documents linked from the page (optional)
+you_get:
+  - A list of barriers, each with the WCAG rule, how bad it is, where it is, and what a real user would hit
+  - A code fix for each barrier
+  - A fix order from "blocks a task" to "polish"
+  - A draft accessibility report (VPAT or ACR), if you ask, with every claim marked tested or not tested
+  - A list of what only a person with a screen reader and keyboard can confirm
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Say which rules apply to you, and paste the page code or screenshots, one page or flow at a time. A chat AI cannot open your site, so paste what you want checked.
+  - Read the findings. Each one says if it is confirmed from the code or only likely. Treat "likely" as a test to run, not a fact.
+  - Fix the top items in your page code. Then test the real flow yourself with only a keyboard, and with a screen reader such as NVDA (free on Windows) or VoiceOver (built into Mac).
+  - Paste your test results back in and ask the agent to update the list. Ask for the VPAT draft last, once testing is done.
+  - Have your accessibility lead or counsel review any report before you send it to a buyer or agency.
+how_it_works:
+  - title: Set the standard
+    text: It states which rule applies to you and why, so it does not claim a stricter or looser law than the one that governs your site.
+  - title: Check the code and scans
+    text: It reads your HTML or screenshots for missing labels, bad structure, weak contrast and unreachable controls.
+  - title: Mark what is proven
+    text: It labels each finding as confirmed from the code, likely, or needs a person to test. It never says it ran a screen reader.
+  - title: Write the barrier list
+    text: Each barrier gets a WCAG rule, a severity, the place it sits, the effect on a real user and a fix in the page code.
+  - title: Plan the fixes
+    text: It orders fixes by how much they block users, and lists the retest steps for each.
+  - title: Draft the report
+    text: If asked, it drafts the conformance report. A rule is only marked "Supports" if testing backs it.
+output_shape: |-
+  SCOPE
+    pages and flows <list> | rule that applies <Section 508, other> | why | tested with <what was actually used> | ASSUMED: <list> | MISSING: <list>
+
+  FINDINGS
+    <ID> | WCAG rule <number and name> | severity <critical, serious, moderate, minor>
+      location <page, part, element> | what a user hits <effect> | status <confirmed, likely, needs a person to test> | fix <code change>
+
+  FIX ORDER
+    P0 <blocks a task> | P1 <hard, needs a workaround> | P2 <noticeable> | P3 <polish>
+
+  STILL TO TEST BY A PERSON
+    <keyboard, screen reader, zoom, document checks>
+
+  DRAFT REPORT (if asked)
+    <criterion> | Supports, Partly supports, Does not support or Not tested | remarks
+
+  NEXT STEPS
+    <retest, review by an accessibility lead, who signs off>
+output_sample:
+  input:
+    - The page, form or flow in scope, as HTML, screenshots or a link
+    - Which rules apply to you, such as Section 508
+    - Output from a scan tool (optional)
+    - Barriers users already reported (optional)
+  prerequisites:
+    - A keyboard and a screen reader such as NVDA or VoiceOver, for the tests only a person can do
+  output:
+    - name: Scope
+      contains: The pages checked, the rule that applies and why, and what is missing.
+    - name: Findings
+      contains: Each barrier with its WCAG rule, severity, location, user effect, status and code fix.
+    - name: Fix order
+      contains: Barriers ranked from those that block a task to polish.
+    - name: Still to test by a person
+      contains: Keyboard, screen reader, zoom and document checks the AI cannot run.
+    - name: Draft report
+      contains: A VPAT or ACR draft with each rule marked and each claim tied to a test.
+    - name: Next steps
+      contains: Retest steps and who must review before you share it.
+works_best_with:
+  tools:
+    - name: axe, WAVE or Lighthouse
+      why: These free tools catch the barriers a scan can find. Paste their output so the agent can sort what they found.
+    - name: NVDA, JAWS or VoiceOver
+      why: These are screen readers. Testing with one is how you confirm what the AI could only guess.
+    - name: Claude Code or another AI that can open your site files
+      why: It can read your real templates and edit the fix in place. In a plain chat you paste the code.
+  inputs:
+    - Your agency or contract wording on which accessibility standard applies.
+    - A short list of the tasks users must finish, such as "file a claim".
+    - Your last accessibility report, if you have one.
+terms:
+  - term: Section 508
+    meaning: The U.S. federal law that requires government technology to be usable by people with disabilities.
+  - term: WCAG
+    meaning: The Web Content Accessibility Guidelines, the main rulebook for accessible web pages. AA is the usual target level.
+  - term: VPAT or ACR
+    meaning: A report that says how well a product meets accessibility rules. Buyers often ask for one.
+  - term: Screen reader
+    meaning: Software that reads a page aloud for people who cannot see it.
+  - term: ARIA
+    meaning: Extra code that tells a screen reader what a custom control is. Plain HTML is better when it can do the job.
+  - term: Overlay widget
+    meaning: A tool that adds an accessibility toolbar on top of a page. It does not fix the page itself.
+tweaks:
+  - what: Rule that applies
+    how: Name it, such as Section 508, a state law or WCAG 2.2 AA. The agent states the rule it used. A different rule changes what counts as a pass.
+  - what: Scope
+    how: Give one page or one task flow at a time, such as "sign up and upload a document". Smaller scope gives sharper findings.
+  - what: Depth of the report
+    how: Ask for findings only, or findings plus the VPAT draft. Do the draft last, after real testing.
+improve:
+  - Add your agency's own accessibility standard and contract wording to SKILL.md, so the agent checks against it.
+  - Keep a list of your components that keep failing, such as the date picker, and tell the agent to check them first.
+  - Pair it with the Accessibility Auditor agent for the test plan, and the USWDS Developer agent for the build.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

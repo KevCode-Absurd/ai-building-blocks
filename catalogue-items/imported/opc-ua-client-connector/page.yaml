@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: Security setup needs care.
 new_slug: opc-ua-client-connector
 name: OPC UA client connector
-summary: Name an industrial server. Get MATLAB connected securely and its nodes browsed.
+summary: Connect MATLAB to an OPC UA server and browse its nodes. Get working code for secure login, certificate trust fixes and node lookup.
 job: build-software
 headline: OPC UA client connector
-subhead: MATLAB code that finds an industrial OPC UA server, connects to it
-  securely, and lets you browse what it offers. You name the server and get
-  working steps instead of trial and error with certificates.
+subhead: MATLAB code that finds an industrial OPC UA server, connects to it securely, and lets you browse what it offers. You name the server and get working steps instead of trial and error with certificates.
 explain: |
   MATLAB code that finds an industrial OPC UA server, connects to it securely, and lets you browse what it offers. You name the server and get working steps instead of trial and error with certificates.
 
@@ -17,19 +15,51 @@ when:
   - Your connection fails with a certificate trust error.
   - Discovery returns an empty list and you do not know why.
   - You want to find a node by name in a huge address space.
+not_for:
+  - "You do not have MATLAB with the Industrial Communication Toolbox: ask your plant's automation engineer, or use the OPC client tool that comes with your server."
+  - "You want to change settings or run methods on live equipment: check with the plant owner first, because a method call can change how a machine runs."
+  - "Your server speaks another protocol such as Modbus: use a client made for that protocol instead."
 you_give:
   - The server name or address
-  - Login or certificate details
-  - The security mode required (optional)
-  - The node or data you want
+  - Your username and password, or certificate files (optional)
+  - The security mode your server needs (optional)
+  - The node name or ID you want to find
 you_get:
   - MATLAB code to discover and connect
   - Security and certificate setup
   - Fixes for trust and host name errors
   - Node browsing and lookup code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and reach an OPC UA server.
+  - Open MATLAB with the Industrial Communication Toolbox. This is a paid add-on. Make sure you can reach the server and its discovery service.
+  - Open your AI chat and paste the skill text. Add your server name or address and how you log in.
+  - Ask your AI to find the server, connect and browse its nodes.
+  - Copy the code into MATLAB and run it. If your AI can run MATLAB, it can do this step for you.
+  - If the connection fails with a trust or host name error, paste the error back into the chat and ask for the fix.
+  - Before you call any method, check with the plant owner. A method can change how equipment runs.
+output_sample:
+  input:
+    - Your OPC UA server name or address
+    - Your username and password, or certificate files (optional)
+    - The security mode your server needs (optional)
+    - The node name or ID you want to find
+  prerequisites:
+    - MATLAB with the Industrial Communication Toolbox (a paid licence)
+    - Network access to the server and its discovery service
+    - An AI that can run MATLAB (optional, you can also run the code yourself)
+  output:
+    - name: Discovery
+      contains: Code that asks the local discovery service for servers, endpoints and their security policies.
+    - name: Create the client
+      contains: Code that builds the OPC UA client for your server, using the highest security by default.
+    - name: Security setup
+      contains: Code that sets a specific security mode, only when the default does not fit.
+    - name: Certificate trust
+      contains: Steps to trust a server certificate and fix host name mismatch errors, plus a way to inspect certificate files.
+    - name: Connect and verify
+      contains: Code that connects with no login, a username and password, or certificates, then checks the connection status.
+    - name: Node browsing
+      contains: Code that walks the node tree and finds nodes by name or ID, with batch handling for large namespaces.
+    - name: Method call
+      contains: Code that finds a method node and calls it, with a note to confirm with the plant owner first.
+    - name: Troubleshooting
+      contains: A short list of common connection errors and what to try for each.

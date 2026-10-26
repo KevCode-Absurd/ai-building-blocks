@@ -2,35 +2,96 @@ thinking: medium
 thinking_why: It collects mentions, then judges tone and spots problems.
 new_slug: brand-mention-tracker
 name: Brand mention tracker
-summary: Give it a brand name. Get reviews, ratings and mentions from many sites
-  in one report. Collects data from websites.
+summary: Pull your reviews, ratings and mentions from Google Maps, TripAdvisor, Booking.com and social sites into one file and summary. Collects data from websites.
 job: understand-customers
 headline: Brand mention tracker
-subhead: Give it a brand name and get reviews, ratings and mentions from several
-  sites in one report. You see how people talk about you without checking each
-  site by hand.
+subhead: Give it a brand or business name and the sites to check. Your AI collects public reviews, ratings and comments with an Apify scraper, saves them to a file and writes a summary of what people praise, what they complain about and how your ratings look.
 explain: |
-  Give it a brand name and get reviews, ratings and mentions from several sites in one report. You see how people talk about you without checking each site by hand.
+  Brand reputation monitoring means knowing what people say about you without opening ten sites by hand. This skill pulls the public reviews and comments into one place, so you can read them as a whole.
 
-  The skill picks a ready-made scraper from Apify for each source, such as Google Maps reviews, Booking.com hotels or TripAdvisor. It fetches that scraper's settings, asks for your file name and format, runs the job, and then summarises the signals. It collects data from public websites and needs an Apify token, Node.js and the mcpc command line tool. Check each site's terms of use before you scrape.
+  For each site it picks a ready-made data collector on Apify, called an Actor. Sources include Google Maps, Booking.com, TripAdvisor, Facebook, Instagram, YouTube and TikTok. It reads what the Actor needs, asks how you want the results saved, runs it and then summarises the signals.
+
+  It is a one-time pull, not live monitoring. It needs an Apify account, which charges per run, plus Node.js and a command line tool. Check each site's terms before you collect, and keep customer names out of anything you share.
 when:
-  - You want all your reviews gathered in one place.
-  - You manage a hotel or venue and track ratings.
-  - You need to see what people say about a competitor.
-  - You want a regular reputation check.
+  - You want your reviews from several sites gathered in one file.
+  - You manage a hotel, venue or shop and track ratings across Google Maps, TripAdvisor and Booking.com.
+  - You want to see what people say about a competitor before you plan your own offer.
+  - You want a regular reputation check you can repeat each month and compare.
+not_for:
+  - You already have your reviews in a file or sheet. Use the Review insight finder.
+  - You want to know if AI assistants name your brand. Use the AI brand mention scanner.
+  - You need live alerts the moment someone posts. Use a social listening or review alert tool, since this is a single pull.
+  - The site's terms forbid scraping, or you want customers' personal details. Use the site's own export or API.
 you_give:
-  - Your brand or business name
-  - The sites to check
-  - An Apify token
-  - Output format and file name (optional)
+  - Your brand or business name, or the competitor's
+  - The sites to check, such as Google Maps, TripAdvisor or Booking.com
+  - The page link or place name on each site
+  - Your Apify account token, saved in a file called .env and never pasted into chat
+  - A cap on how many results to collect
+  - A file format, quick answer in chat, CSV or JSON (optional)
 you_get:
-  - Reviews and ratings from each site
-  - An exported data file
-  - A summary of reputation signals
-  - Notes on common praise and complaints
+  - A data file of public reviews, ratings and comments, if you ask for one
+  - A count of records found per site and the file location
+  - Average ratings, where the site gives ratings
+  - The most common praise and complaints, with example quotes
+  - Suggested next steps, such as filtering or sentiment checks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Apify token.
+  - Choose the sites and the exact page or place on each. Write down the brand or business name as it appears there.
+  - Create an Apify account and an API token. Save the token in a file called .env as APIFY_TOKEN=your token. Do not paste it into chat. Apify charges for runs, so check each Actor's price first.
+  - Use an AI that can run commands, such as Claude Code. Install Node.js 20.6 or newer, the jq tool and the mcpc tool with npm install -g @apify/mcpc.
+  - Paste the skill, then your brand, sites, links and a small cap such as 100 results per site. Ask for the quick answer first, which shows 5 results, to check it is the right page.
+  - Run the full export. Read the summary, then open the file and spot-check five or six reviews against what the summary says.
+  - Save the file with its date. Run the same pull next month to compare.
+how_it_works:
+  - title: Choose the source
+    text: It matches each site you named to a ready-made Apify Actor from its table.
+  - title: Read the Actor's inputs
+    text: It fetches the Actor's settings and the fields it returns, so the run is set up right.
+  - title: Ask how to save it
+    text: It asks for a quick answer, a CSV or a JSON file, and how many results to collect.
+  - title: Run the collection
+    text: It runs the script with your token, waits for it and saves the data.
+  - title: Summarise the signals
+    text: It counts results per site and reads the file for ratings, praise and complaints.
+output_shape: |
+  RUN          <sites, Actors used, cap, records per site, file path>
+  RATINGS      <site> | <records> | <average rating, where given> | <date range>
+  PRAISE       <theme> | <how many records> | <short example quote>
+  COMPLAINTS   <theme> | <how many records> | <short example quote>
+  CHANGES      <anything that moved since the last pull, if you have one>
+  LIMITS       <sample size, sites with no ratings, what is missing>
+  NEXT         <filter, sentiment check or reply plan>
+  MISSING      <inputs not given, or none>
+output_sample:
+  input:
+    - Your brand or business name
+    - The sites to check and the page link or place name on each
+    - Your Apify token, saved in a .env file
+    - A cap on how many results to collect
+    - A format choice, quick answer, CSV or JSON (optional)
+  prerequisites:
+    - An Apify account, which charges per run
+    - An AI that can run commands
+    - Node.js 20.6 or newer, jq and the mcpc tool
+  output:
+    - name: Data file
+      contains: The public reviews, ratings and comments collected, as CSV or JSON, saved with a dated file name.
+    - name: Quick answer
+      contains: The top 5 records shown in chat, so you can check you have the right page.
+    - name: Run report
+      contains: Sites and Actors used, records found per site and where the file is.
+    - name: Ratings table
+      contains: Records and average rating for each site, where the site gives a rating.
+    - name: Praise and complaints
+      contains: The common themes with counts and short example quotes from the file.
+    - name: Next steps
+      contains: Ideas such as filtering, sentiment checks or planning replies.
+terms:
+  - term: Actor
+    meaning: A ready-made data collector on the Apify service, built for one site or task.
+  - term: Apify token
+    meaning: A private key that lets your AI run Actors on your account. Keep it secret.
+  - term: mcpc
+    meaning: A command line tool that lets your AI read an Actor's settings.
+  - term: Scraping
+    meaning: Collecting public web page data with a program instead of copying it by hand.

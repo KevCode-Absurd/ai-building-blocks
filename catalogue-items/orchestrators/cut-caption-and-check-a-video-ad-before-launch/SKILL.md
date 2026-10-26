@@ -50,11 +50,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Video ad edit planner.** Use the skill `video-ad-edit-planner`. Starts the chain: the cut list for your clips.
+1. **Video ad edit planner.** Use the skill `video-ad-edit-planner`. Starts the chain: the cut list for your clips, with caption windows. You cut and export the video from it.
 
 Pause here: Cut the video to the cut list in your editor and export it.
 
-2. **Video caption maker in your brand font.** Use the skill `branded-video-captions`. Reads the cut you exported and the script, and adds timed captions.
+2. **Video caption maker in your brand font.** Use the skill `branded-video-captions`. Reads the video you exported from step 1's cut list, plus the script and step 1's caption windows, and adds timed captions. Hands the captioned video to step 3.
 3. **Pre-launch ad checker.** Use the skill `pre-launch-ad-checker`. Give it the video ads from the steps before. Checks the captioned video from the step before and gives a ship or fix verdict.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

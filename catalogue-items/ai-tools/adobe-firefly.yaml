@@ -2,40 +2,62 @@ slug: adobe-firefly
 name: Adobe Firefly
 maker: Adobe
 url: https://www.adobe.com/products/firefly.html
-promise: "Create images, video and audio from prompts, or edit and extend existing photos."
+promise: "Make images, video and audio from a prompt, or edit photos you already have."
 use_cases: [make-images, make-video, design]
 categories: [image, video, design]
 what_it_does:
-  - Makes images from a written description.
-  - Makes video clips and audio from a prompt or a still image.
-  - Lets you choose between Adobe's own model and partner models.
-  - Fills in or expands a photo from a written request.
-  - "Works with Photoshop and Illustrator. Also works with Adobe Express."
+  - "Makes images and vector graphics from a written description (checked 26 Oct 2026)."
+  - "Makes video clips, music, sound effects and speech from a prompt. These use credits on paid plans (checked 26 Oct 2026)."
+  - "Lets you pick Adobe's own model or a partner model from Google, OpenAI, Runway and others with one login (checked 26 Oct 2026)."
+  - "Fills in or expands a photo from a written request, with Generative Fill and Generative Expand (checked 26 Oct 2026)."
+  - "Sends results to Photoshop, Illustrator and Adobe Express for finishing. Pro plans include full Photoshop on web and mobile and Adobe Express Premium (checked 26 Oct 2026)."
 benefits:
-  - "Fix and extend photos using the Adobe apps you already work in."
-  - Pick the model that suits each job from one account.
-  - "Try ideas within the listed free allowance before choosing a paid plan."
+  - "Fix and extend photos with the Adobe apps you may already work in."
+  - "Pick the model that suits each job from one account."
+  - "Try it on the free daily generations before you pay (the daily number is not shown on Adobe's pages)."
+  - "Adobe's FAQ says output from its own models can be used commercially. You check partner model output yourself (checked 26 Oct 2026)."
 best_for:
   - Designers and marketers who already use Adobe apps.
-  - Editing and extending existing photos.
-  - Teams that want Adobe's terms for commercial use.
+  - Editing and extending photos you already own.
+  - Teams that want Adobe's stated terms for commercial use.
 not_for:
-  - People who only need a few quick images and no editing apps.
-  - Heavy video use on the smallest plan.
+  - People who only need a few quick images and no editing apps. Try the free plan first, or use Canva for posts and ads.
+  - Heavy video use on the smallest plan. Standard lists up to 20 five-second videos a month (checked 26 Oct 2026).
+  - Partner model output you have not read the terms for. Adobe says the checking is up to you.
 pricing:
   model: freemium
-  from: US$9.99 per month
-  note: Free plan gives a limited daily allowance. Standard includes 2,000 generative credits a month, Pro 4,000, Pro Plus 10,000 and Premium 50,000. Credits reset each month and do not roll over.
+  from: US$9.99 per month (from a third-party page; Adobe's page showed local-currency prices on 26 Oct 2026)
+  note: "Free plan gives free daily generations, with limits that reset each day. Paid plans give a monthly credit pool: Standard 2,000, Pro 4,000, Pro Plus 10,000, Premium 50,000. Credits reset each month and do not roll over. Paid plans list unlimited standard image features, such as Generative Fill and Generative Expand. Video, audio, speech, music and partner models use credits. Standard lists up to 20 five-second videos, Pro 40, Pro Plus 100. Team plans are priced per licence. Adobe shows prices in your local currency, so check the US price on adobe.com. Credit figures checked 26 Oct 2026."
 works_with:
   - Photoshop
   - Illustrator
   - Adobe Express
   - nano-banana
-runs_in: [web, desktop, mobile, api]
+runs_in: [web, mobile, api]
 blocks: []
 alternatives: [canva, midjourney, nano-banana, recraft]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  web:
+    - "Open the Firefly page on adobe.com and choose Create now or Get started. The free plan includes daily generations (checked 26 Oct 2026). The sign-in steps were not checked here."
+    - "Pick an image model, then type one plain sentence, such as 'a wide banner of a white running shoe on a clean grey background'."
+    - "Open the best result in the image editor. Try Generative Expand to widen it, or Generative Fill to remove or add an item."
+    - "Download it, or send it on to Photoshop or Adobe Express to add your text and logo."
+needs:
+  - "A free Adobe account to start. The free plan has daily limits."
+  - "A paid plan if you want video, audio or partner models in volume. These use credits."
+  - "Photos you own the rights to, if you plan to edit or extend existing images."
+example:
+  task: "Extend a square product photo into a wide banner, then fix the background."
+  cost: "Generative Expand is listed as a standard feature, which paid plans list as unlimited, so it should not use credits. A five-second video uses credits: Standard lists up to 20 of them a month. We did not check how many credits one video costs."
+  reply: "A new version of your photo with the extra space filled in. You get a picture to download or send to Photoshop. File formats and sizes were not listed on the pages we checked, so look at the download options in the app."
+not_verified:
+  - "The US price of each plan. Adobe showed prices in another currency when we checked."
+  - "The number of free daily generations."
+  - "Which file formats and sizes you can download."
+  - "How many credits one video, one song or one partner-model image uses."
 sources:
+  - https://www.adobe.com/products/firefly.html
   - https://www.adobe.com/products/firefly/plans.html
   - https://www.adobe.com/cc-shared/fragments/products/firefly/plans/faq
-  - https://dupple.com/learn/is-adobe-firefly-free

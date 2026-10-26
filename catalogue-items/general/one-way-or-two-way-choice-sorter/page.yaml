@@ -1,6 +1,6 @@
 new_slug: one-way-or-two-way-choice-sorter
 name: "One-way or two-way choice sorter"
-summary: "Paste a choice you are stuck on. Get it sorted as hard or easy to undo, with the right speed to decide."
+summary: "Stuck on a choice? Paste it and sort it as hard or easy to undo, with the cost of reversing it and the right pace for deciding."
 job: think-and-decide
 thinking: low
 thinking_why: "It sorts one choice by a clear test, with a short set of next steps."
@@ -17,6 +17,10 @@ when:
   - "You keep putting off a choice."
   - "Your team is slow on small choices and fast on big ones."
   - "You are not sure how much review a choice needs."
+not_for:
+  - "You want the full version with every check: use the Reversible decision sorter."
+  - "The choice is already made and you want to argue against it: use the Decision counterargument writer."
+  - "The choice is about money, law or health and needs real advice: ask a qualified person such as an accountant, lawyer or doctor."
 
 you_give:
   - "The choice in one line"
@@ -32,6 +36,21 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - The choice you are stuck on, in one line
+    - What it would cost to undo (optional)
+  output:
+    - name: CHOICE
+      contains: The decision written as one line, and who it touches.
+    - name: HARD TO UNDO
+      contains: The parts that are hard to take back, and the cost of reversing them in time, money and trust.
+    - name: SORT
+      contains: One-way, two-way or split, with the reason in two lines.
+    - name: PACE
+      contains: "For a two-way choice: an owner, a small trial and a review date. For a one-way choice: what to find out first."
+    - name: MISSING
+      contains: Any figures you did not give, shown as labelled guesses for you to confirm.
 
 how_it_works:
   - title: "Name the choice"

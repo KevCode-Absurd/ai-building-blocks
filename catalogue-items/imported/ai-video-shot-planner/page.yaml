@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set steps but makes many small creative calls.
 new_slug: ai-video-shot-planner
 name: AI video shot planner
-summary: Give it a one-line video idea. Get a shot list, a ready prompt per shot
-  and fixes for failed clips.
+summary: "Turn one line into an AI video shot planner result: a shot list, a ready prompt for each shot, and fixes for clips that failed."
 job: make-video-ads
 headline: AI video shot planner
-subhead: "A shot list and one ready prompt per shot for your AI video, plus a
-  plan to fix clips that came out wrong. Most failed clips break for dull
-  reasons: two actions in one clip, no camera move, a changing subject, or a
-  mood instead of an image."
+subhead: "A shot list and one ready prompt per shot for your AI video, plus a plan to fix clips that came out wrong. Most failed clips break for dull reasons: two actions in one clip, no camera move, a changing subject, or a mood instead of an image."
 explain: |
   A shot list and one ready prompt per shot for your AI video, plus a plan to fix clips that came out wrong. Most failed clips break for dull reasons: two actions in one clip, no camera move, a changing subject, or a mood instead of an image.
 
@@ -19,6 +15,10 @@ when:
   - Your video prompt keeps producing the wrong result.
   - The same character looks different from shot to shot.
   - You wasted a generation and want to change the right thing next.
+not_for:
+  - "You want the video made or edited: this only plans, so use your video AI such as Runway, Kling or Veo."
+  - "You have no video idea yet: write a one-line idea first, or ask a teammate for a brief."
+  - "You need to check ad copy or script claims: this plans shots, so ask a person to review the script."
 you_give:
   - A one-line video idea or script
   - Platform and length (optional)
@@ -29,7 +29,30 @@ you_get:
   - A diagnosis of a failing prompt
   - One change to make before the next try
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code or paid tool is needed.
+  - Type your video idea in one line. Add the platform, length and video model if you know them.
+  - Answer up to three short questions. For a real product or person, share a photo.
+  - Read the shot list. Check that each shot has one action and one camera move.
+  - Copy one prompt per shot into your video tool. It plans only, so it will not make the video.
+  - If a clip fails, paste the prompt or describe the clip. Make the one change it names, then try again.
+output_sample:
+  input:
+    - Your video idea in one line
+    - Platform and length (optional)
+    - A photo of your real product or person (optional)
+    - A prompt that is failing, or a description of a bad clip (optional)
+  output:
+    - name: SHOT_LIST.md
+      contains: "The full plan: crew notes, a shot table, and a reroll plan for each shot."
+    - name: Director section
+      contains: The logline, the intent, a beat sheet with timings, and the hook.
+    - name: Continuity bible
+      contains: Fixed descriptions of each character, prop and place, pasted word for word into every shot.
+    - name: Shot table
+      contains: Each shot with its size, lens, angle, one camera move, lighting and length.
+    - name: Prompt block per shot
+      contains: One copy-paste prompt for each shot, plus a negative prompt where the model supports it.
+    - name: Reroll plan
+      contains: The most likely failure for each shot and what to change if it happens.
+    - name: Fix or Review result
+      contains: The problems in a failing prompt with a rewrite, or the one change to make before the next try.

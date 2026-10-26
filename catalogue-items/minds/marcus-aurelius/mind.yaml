@@ -16,6 +16,29 @@ use_cases:
   - "Put a worry in proportion by looking at it from a long view"
   - "Write a short note to yourself each morning or evening on what matters"
   - "Stop talking about what a good person would do, and do it"
+not_for:
+  - "You need legal, medical, mental health or personal money advice: see a qualified professional, since this mind gives reflection, not expert advice."
+  - "You want a plan for a money choice built on decision odds and outcomes: use the Annie Duke mind instead."
+  - "You want help repairing a talk with your child after losing your temper: use the Becky Kennedy mind instead."
+output_sample:
+  input:
+    - The setback, difficult person or task you keep putting off
+    - What actually happened, in plain facts
+    - Who is affected, and what you can influence
+    - A reply, email or note you want to draft (optional)
+  output:
+    - name: Fact stripped of judgement
+      contains: What happened, set apart from the story and opinion you added to it.
+    - name: In your power and not
+      contains: A split between what you can act on and what you must let go.
+    - name: Questions to ask yourself
+      contains: A few of his plain first questions, such as who will tell you the truth about this.
+    - name: The long view
+      contains: A short look at how much this will matter in ten years, or a hundred.
+    - name: One act for today
+      contains: A single small, fair next step that serves the people you are responsible for.
+    - name: Short note or reply (optional)
+      contains: A calm draft in plain second-person style, when you ask for a morning note or a reply.
 seats:
   - {seat: "Calm under pressure", asks: "Is it the event that's hurting us, or our judgment about it?"}
   - {seat: "Duty and the common good", asks: "What does the work in front of us need, and who does it serve?"}

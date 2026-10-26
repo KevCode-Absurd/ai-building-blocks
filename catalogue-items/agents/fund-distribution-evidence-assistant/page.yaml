@@ -1,51 +1,130 @@
 new_slug: fund-distribution-evidence-assistant
-name: Fund distribution evidence assistant
-headline: Fund distribution evidence assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+name: No-catch-up fund distribution reviewer
+headline: No-catch-up fund distribution reviewer
+summary: Check a fund distribution under simple no-catch-up terms. Show who is paid, what remains unpaid and any unsupported terms.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers. Include changed inputs, source versions, branch reasons and checks still blocked. Share actual no-catchup LPA, constant eligible capital interval, dated accrual basis, unpaid opening preference, distributable cash and residual carry fraction. For terminal carry review include independently verified final whole-fund entitlement, actual prior carry paid, permitted tax deductions, recoveries and escrow. Supply the previous approved review and actual changed source files with dates.
-explain: |-
-  Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers. Include changed inputs, source versions, branch reasons and checks still blocked.
+subhead: Give it the fund agreement, the dated capital records, the cash to pay out and your last review. It works out the preference owed and pays capital, then preference, then the manager's share. You get a payout table, the unpaid amounts and any term it cannot support.
 
-  Private fund distributions. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  In many private funds, investors get their capital back first. They then get a fixed yearly return on it, called the preferred return. Only the cash left after both is shared with the manager as carry. With no catch-up, the manager gets no make-up payment for the return investors already took. A payout table that skips a step, or pays carry before the preference is covered, is wrong.
+
+  This agent keeps a record of the last review. It holds the agreement version, the periods when eligible capital stayed the same, and the unpaid preference. It also holds the no-catch-up confirmation, the cash proposed against the cash paid, the carry paid so far, and the source of any final carry entitlement. A new distribution proposal, preference record, final entitlement notice or carry recovery is compared with that record. If nothing changed, it says so and stops.
+
+  It handles simple, non-compounding return with no catch-up, and nothing else. If the fund compounds the return, has manager capital or has a catch-up, it records a blocker and stops that line. Someone else may have verified the final whole-fund entitlement. If so, it also checks how much paid carry might have to be given back, and how much escrow covers it. It never treats one distribution's carry as the lifetime amount. It pays no one and sends no notice. A fund lawyer or administrator checks the clauses.
+
 when:
-  - You need preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on private fund distributions and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - The fund proposes a distribution, and you need to know who is paid and in what order.
+  - A new preference record shows a different unpaid amount from your model.
+  - A final entitlement notice arrives, and you want to know whether the carry already paid is too high.
+  - The fund agreement says no catch-up, and you want to confirm the payout table follows it.
+
+not_for:
+  - Your fund compounds its return, has a catch-up or manager capital, or pays carry deal by deal. It marks each of these a blocker and stops. Ask your fund counsel or administrator.
+  - Your question is about management fees, a stepdown or fee credits. Use the Fund fee and credit reviewer.
+  - You want one check with no earlier review to compare with. Use the No-catchup fund payout checker.
+  - You want to check an investor's capital account or fund value. Use the Investor statement NAV checker.
+  - You want it to pay anyone or send a notice. It never does.
+
+output_sample:
+  input:
+    - The signed fund agreement, with its simple return and no-catch-up terms
+    - Dated capital records, and any unpaid preference from the last period
+    - The cash to distribute, and the manager's share of what is left
+    - A verified final entitlement, carry paid, allowed tax and escrow (optional, for a clawback check)
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The pack's component files added to your AI
+    - An agreement with simple return and no catch-up. Anything else is marked as a blocker.
+  output:
+    - name: Terms check
+      contains: Whether the fund fits the simple, no-catch-up structure, or which term is a blocker.
+    - name: Changed since last review
+      contains: Each proposal, record or notice that moved, with its old value, new value and source.
+    - name: Preference due
+      contains: Capital times rate times year fraction, plus unpaid opening preference, with no interest on that unpaid amount.
+    - name: Payout order
+      contains: Cash paid to capital, then preference, then the rest split between manager and investors, with unpaid amounts.
+    - name: Proposed against paid
+      contains: Proposed cash and cash actually paid, kept apart so a plan is never read as a payment.
+    - name: Clawback check
+      contains: Only if a verified final entitlement is supplied. Carry paid less entitlement, allowed tax and recoveries, against escrow.
+    - name: Record for next review
+      contains: A short record to paste into your next run.
+    - name: Missing and checks missed
+      contains: Each gap, and each check that failed or could not run.
+
 you_give:
-  - Actual no-catchup LPA, constant eligible capital interval, dated accrual basis, unpaid opening preference, distributable cash and residual carry fraction. For terminal carry review include independently verified final whole-fund entitlement, actual prior carry paid, permitted tax deductions, recoveries and escrow. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed fund agreement with its no-catch-up terms (from the fund administrator or data room)
+  - Capital paid in and returned, with dates, to show the eligible unreturned capital (from the administrator's records)
+  - Unpaid preference from the last period, the simple annual rate and the year fraction (from the agreement and the records)
+  - The cash to distribute, and the manager's share of the cash left after capital and preference (from the distribution notice)
+  - For a clawback check, the verified final entitlement, carry paid so far, allowed tax, recoveries and escrow (optional)
+  - The record from your last review (optional on a first run)
+
 you_get:
-  - Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A terms check that says whether the fund fits, or names the blocker
+  - A preference due figure that adds the unpaid opening amount without interest on it
+  - A payout table that pays capital, then preference, then the manager and investor split
+  - The amounts still unpaid, and the proposed cash kept apart from the cash actually paid
+  - A clawback check when a verified final entitlement is supplied, plus MISSING lines and a record for next time
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the No-catchup fund payout checker workflow and the Fund manager clawback checker. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
+  - Say whether this is the first run. If not, paste the record from last time. Then attach the fund agreement, the capital records and the distribution notice.
+  - Read the terms check first. If it names a blocker, such as compounding or a catch-up, the payout lines stop there. Take that to your fund counsel.
+  - Check the preference by hand. Capital times the rate times the year fraction, plus any unpaid opening amount, should match the figure shown.
+  - Check the payout order. Manager carry should be zero until capital and preference are paid in full.
+  - Fix every MISSING line. Run it again when a proposal, record or notice changes. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Check a no-catchup fund distribution
-    text: Run the governing workflow when A distribution proposal, dated preference record, final entitlement notice or actual GP carry recovery changes.
-  - title: GP clawback exposure checker
-    text: If a terminal entitlement review is supplied, compare actual paid carry with that independently verified whole-fund entitlement and collateral. Do not treat one current distribution carry amount as final lifetime entitlement. Otherwise skip clawback and keep the current distribution scenario separate from executed payments.
-output_shape: |-
-  Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this fund, or sets a first baseline. Compares the agreement version, capital periods, unpaid preference, currency and dates. If nothing changed and no review is due, it says so and stops.
+  - title: Checks the terms
+    text: Confirms the fund uses a simple return with no catch-up and no manager capital. Compounding, manager capital or a catch-up is recorded as a blocker. A change in capital during the period is split into separate intervals first.
+  - title: Works out the preference
+    text: Multiplies the eligible capital by the annual rate and the year fraction. Adds the unpaid opening preference without interest on it. Hands the next step the capital owed and the preference due as two separate figures.
+  - title: Pays the cash in order
+    text: Pays the smaller of the cash and the unreturned capital, then pays preference from what is left. Only cash left after both is split by the manager's share. Unpaid capital and preference stay on the page.
+  - title: Checks clawback only with a verified entitlement
+    text: If someone has verified the final whole-fund entitlement, it takes paid carry less that entitlement, allowed tax and prior recoveries, and floors the result at zero. It then compares the result with escrow. Without one, it skips this step.
+  - title: Saves the record
+    text: Writes the small record for next time and lists what is still MISSING. It never replaces an accepted baseline with an unapproved scenario, and keeps the old record. It corrects a failed check at most twice, then reports the blocker.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  TERMS CHECK  agreement version <v>; simple return <yes or BLOCKED>;
+               no catch-up <yes or BLOCKED>; constant eligible capital <yes or split>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  PREFERENCE DUE  capital <n> x rate <n>% x year fraction <n> = <n>
+                  + unpaid opening <n> = <n>
+  PAYOUT ORDER  cash <n>: capital <n> | preference <n> | rest <n>
+                -> manager <n> (<n>%), investors <n>
+                unpaid capital <n>; unpaid preference <n>
+  PROPOSED AGAINST PAID  proposed <n>; actually paid <n>
+  CLAWBACK CHECK (only if run)  carry paid <n> - final entitlement <n> - allowed tax <n>
+                - recovered <n> = exposure <n>; escrow <n>; uncovered <n>
+
+  RECORD FOR NEXT REVIEW  agreement version, capital periods, unpaid preference,
+                          no-catch-up confirmation, carry paid, entitlement source, escrow evidence
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Use only the supported simple-accrual no-catchup structure; record any compounding, GP capital or catch-up as a blocker. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - what: More cash to distribute
+    how: Raise the cash. Capital is paid first, then preference. Carry appears only once both are paid in full.
+  - what: An unpaid opening preference
+    how: Add it. It joins the preference due without interest, and the cash needed for the first two tiers rises by that amount.
+  - what: A longer period
+    how: Raise the year fraction. The preference grows in a straight line, because the return is simple and not compounding.
+  - what: A verified final entitlement
+    how: Add it with the carry paid so far. The clawback check appears. It cannot go below zero, and escrow is set against it.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Use only the supported simple-accrual no-catchup structure; record any compounding, GP capital or catch-up as a blocker. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +135,34 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder named by date, so the next run starts from the true earlier state.
+  - Paste the return and no-catch-up clauses of the agreement once, word for word, with clause numbers, so every run reads the same rule.
+  - Keep one capital record in the same layout each period, so a change in eligible capital is easy to see.
+  - Pair it with the Fund commitments and capital call reviewer when the question is what an investor can still be called for, and with the Fund manager clawback checker when only the clawback is in question.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: Your fund administrator's capital account records
+      why: Give dated contributions and returns of capital, so the preference rests on facts and not on a rebuild.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The return and carry clauses of the signed fund agreement, with clause numbers.
+    - A dated capital record for each investor class, or for the whole fund as the agreement says.
+    - A named reviewer, such as fund counsel or the administrator, who will check the clauses and the payout order.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Preferred return
+    meaning: A fixed yearly return that investors receive on their capital before the manager shares in profit.
+  - term: Simple return
+    meaning: A return worked out on the capital only. It does not earn interest on itself.
+  - term: Catch-up
+    meaning: A clause that pays the manager extra after the preferred return, to make up for the return investors took. This agent does not support it.
+  - term: Carry
+    meaning: The manager's share of fund profit, paid after capital and preferred return.
+  - term: Clawback
+    meaning: Money the manager may have to return if carry paid over the life of the fund was more than the final entitlement.
+  - term: Escrow
+    meaning: Cash held back as security for a possible clawback.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

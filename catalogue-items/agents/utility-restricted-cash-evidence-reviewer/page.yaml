@@ -1,51 +1,101 @@
 new_slug: utility-restricted-cash-evidence-reviewer
-name: Utility restricted cash evidence reviewer
-headline: Utility restricted cash evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+name: Utility collection and grant cash reviewer
+headline: Utility collection and grant cash reviewer
+summary: Split utility bill money from grant money and find the cash you can spend. Get a cash bridge, grant payments awaiting proof and any signed loan test.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A utility collections, restricted fund and usable cash reconciliation. Share utility billing/collection records, program bank cash, actual grant restrictions, approved eligible program payments, restricted/unrestricted receipts and source allocation rules. Include the previous dated review and source versions when available.
-explain: |-
-  A utility collections, restricted fund and usable cash reconciliation.
+subhead: Give it the bills your customers paid, the bank balances, the grant terms and the payments you have approved. It keeps customer money and grant money apart, rolls each cash balance forward, and works out the cash you can really spend. It checks a loan cash test only when a signed one falls due. You get a cash bridge, a list of grant money still waiting for proof, and a short record for the next review.
 
-  Utility program funding controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A utility that runs a grant-funded program holds money from two places. Customers pay their bills, and a funder pays a grant with rules on how it may be spent. Both land in one bank account. When someone reads the bank balance as spendable cash, grant money gets spent on the wrong things, or the same dollar is counted twice.
+
+  This agent keeps a small record of the last review: the program, the date of the last customer collections, the grant award version, the evidence for each approved grant payment, the restricted balance, whether the bank reconciled, and which loan test applies. When a bill collection, an approved payment, a grant condition or a bank source changes, it compares the new evidence with that record. It splits customer receipts from grant receipts, rolls the restricted balance and the total bank cash on their own, and takes any lender reserve or pending debit off what is left. Money collected for old bills is shown apart from money collected for this period's bills.
+
+  It checks a loan cash test only if the utility has a signed one due. With no such loan, it marks that step as not applicable instead of making up a rule. It reviews and reports. It does not release grant money, pay anyone or contact the bank. The grant manager and the finance lead check the sources.
+
 when:
-  - You need a utility collections, restricted fund and usable cash reconciliation.
-  - You work on utility program funding controls and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - Month end: the bank balance is up and you need to know how much is customer money, how much is grant money and how much you can spend.
+  - A new grant instalment arrives and you want to see the restricted balance move before anyone spends it.
+  - A payment is marked as grant-eligible and you want to check that the approval is on file before it comes off the restricted balance.
+  - A lender asks for proof of cash on a test date and you need cash that counts under the loan agreement, not the whole bank balance.
+  - Collections look strong this month, and you want to know how much of it was old arrears.
+
+not_for:
+  - You have no grant or restricted money, only bills and bank cash. Use the Water utility billing and cash checker.
+  - You want to check spendable cash for one account, with no collections or grant records. Use the Spendable cash balance checker.
+  - You want it to decide whether a payment is allowed under the grant. It follows your approved evidence and the award terms, and a person must approve each payment.
+  - You have a loan cash test but no grant money. Use the Loan covenant cash cover reviewer. The loan step here checks cash coverage only, not debt ratios, cures or waivers, so ask a lawyer about a breach.
+  - You want it to release grant money or pay a bill. It prepares the review and takes no action.
+
 you_give:
-  - Utility billing/collection records, program bank cash, actual grant restrictions, approved eligible program payments, restricted/unrestricted receipts and source allocation rules. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Billing and collection records for the period: amount billed, current and arrears receipts, opening receivables and approved adjustments (from your billing system export)
+  - Opening and closing bank balances for the program account (from the bank statement)
+  - The grant award terms, with the award version and date (from the grant agreement)
+  - Each approved grant-eligible payment, with an ID and the approval evidence (from the grant manager's sign-off)
+  - Other payments, pending debits, and any lender reserve or collateral block, each with an amount (from your payment run and loan letters)
+  - Your approved minimum cash floor, in writing (from your cash policy)
+  - The signed loan cash test and the debt service schedule (optional, only needed if a test falls due)
+  - The last review's record, pasted in (optional on a first run)
+  - The reporting date, the currency and the scale, such as thousands
+
 you_get:
-  - A utility collections, restricted fund and usable cash reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A receivables roll for the period, with current-bill collection shown apart from arrears
+  - The restricted grant balance rolled forward, with each approved payment and its evidence ID
+  - Total bank cash rolled forward on its own, and general cash as the difference
+  - Spendable cash after reserves and pending debits, with headroom over your floor
+  - A loan cash test with signed headroom for each test period, only when a signed test is due
+  - A list of grant releases still waiting for evidence, MISSING lines and CHECKS MISSED, plus a short record for next time
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. In a chat-only tool it still works, but cannot save files, so you keep the record it hands back.
+  - Say if this is the first run. If not, paste last time's record. Then attach or paste the billing export, bank balances, award terms, approved payments and your cash floor.
+  - Read "changed since last review" first. If a restriction or a payment is new, check it against the award and the approval before you go on.
+  - Check one line by hand. Opening receivables, plus billings, less adjustments, less receipts should equal closing receivables.
+  - Fill every MISSING line before anyone acts on the spendable figure. Run it again whenever a collection, payment, award term or bank source changes.
+
 how_it_works:
-  - title: Reconcile restricted utility program cash
-    text: Run the governing workflow when A utility collection, approved restricted payment, grant condition or bank cash source changes.
-  - title: Debt service covenant headroom checker
-    text: If the utility has an actual signed debt-service cash test due, compare only contract-qualifying cash after restriction mapping with the supplied service schedule. If no applicable loan test exists, mark this branch inapplicable rather than inventing a covenant.
-output_shape: |-
-  A utility collections, restricted fund and usable cash reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this program, or sets a first baseline. Lists new grant terms, new payments and bank sources. If nothing changed and no review is due, it says so and stops.
+  - title: Rolls the receivables
+    text: Takes opening receivables, adds billings, takes off approved adjustments and receipts, and checks the closing figure. Shows arrears collected apart from this period's bills, so old debt is never counted as a better collection rate.
+  - title: Splits customer money from grant money
+    text: Sorts each receipt by its source using only your award rules. Customer receipts are never grant revenue, and a payment is never assumed eligible from its category name.
+  - title: Rolls restricted and total cash on their own
+    text: Rolls the restricted balance through grant receipts, evidenced eligible payments and refunds. Rolls total bank cash through every movement. General cash is the total less the restricted balance.
+  - title: Finds spendable cash
+    text: Takes lender reserves and pending debits off general cash without counting any block twice, then compares it with your floor. Restricted money is never spendable.
+  - title: Tests a loan only if one applies
+    text: If a signed loan test is due, it multiplies debt service by the required cover and subtracts it from qualifying cash. If there is no such loan, it marks the step not applicable. It then saves the record for next time.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <new award version, new payments, new bank sources>
+  COLLECTIONS     opening receivables <n> + billed <n> - adjustments <n> - receipts <n> = <n>
+                  current-bill collection <x>%, arrears collected <n> (kept apart)
+  RESTRICTED CASH opening <n> + grant receipts <n> - eligible payments <n> = <n>
+  TOTAL BANK CASH opening <n> + receipts <n> - payments <n> = <n>
+                  general cash <n>
+  SPENDABLE CASH  general <n> - reserve <n> - pending <n> = <n>
+                  floor <n>, headroom <n>
+  LOAN TEST       <headroom by period> or <not applicable, with reason>
+
+  RECORD FOR NEXT REVIEW  program, collection cutoff, award version, evidence IDs,
+                          restricted balance, bank status, loan-test scope
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Consumer receipts and grant receipts remain separate source streams; restricted releases require evidence and general cash is not double-counted. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: A new restriction or reserve
+    how: Add a lender reserve or a pending debit with an amount. Spendable cash falls by that amount and the headroom over your floor moves with it.
+  - what: A payment without evidence
+    how: Remove the approval for one grant payment. It leaves that payment out of the restricted roll and lists it as waiting for proof.
+  - what: A signed loan test
+    how: Add the loan's cash test, its required cover and the debt service for three periods. The loan step runs and shows signed headroom for each period.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Consumer receipts and grant receipts remain separate source streams; restricted releases require evidence and general cash is not double-counted. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +106,63 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
+  - Give every grant payment an ID and keep its approval note with that ID. Without stable IDs, it cannot tell a new payment from a renamed one.
+  - Paste the award's spending rules into the agent's file once, so each run reads the same terms.
+  - Pair it with the Restricted grant cash tracker when you only need the grant balance, and the Loan covenant cash coverage checker when you only need the loan test.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: Your bank statement and billing export
+      why: Gives dated balances and receipts, so the opening amounts are facts, not estimates.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The grant agreement and each amendment, so every restriction has a source.
+    - The grant manager's written approval for each eligible payment.
+    - The loan agreement's own definition of cash that counts.
+
 terms:
+  - term: Restricted cash
+    meaning: Money that may only be spent on what a grant allows. It sits in the bank but is not free to spend.
+  - term: General cash
+    meaning: Total bank cash less the restricted balance. It is the money that is free to spend before reserves.
+  - term: Arrears
+    meaning: Money collected this period for bills from earlier periods.
+  - term: Receivables
+    meaning: Money customers owe for bills already sent.
+  - term: Eligible payment
+    meaning: A payment the grant rules allow, shown by evidence that a person approved it.
+  - term: Debt service
+    meaning: The loan payments due in a period, covering interest and repayment.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the calculation works, with no claim about a real utility.
+
+output_sample:
+  input:
+    - The last review's record (optional on a first run)
+    - Billing and collection records for the period, and the program account's opening and closing bank balances
+    - The grant award terms and each approved grant payment with its approval evidence
+    - Other payments, pending debits, any lender reserve, and your written cash floor
+    - The signed loan cash test and debt service schedule (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Utility restricted cash checker in the agent pack
+    - The Loan covenant cash coverage checker in the pack, only if a signed loan test is due
+  output:
+    - name: Changed since last review
+      contains: New award versions, new or removed payments and new bank sources, each with its date.
+    - name: Collections
+      contains: Opening receivables, billings, adjustments and receipts rolled to closing receivables. Current-bill collection is shown apart from arrears.
+    - name: Restricted cash
+      contains: The grant balance rolled forward with each approved payment and its evidence ID. Payments without evidence are listed as waiting for proof.
+    - name: Total bank cash and general cash
+      contains: Total bank cash rolled forward on its own, and general cash as the total less the restricted balance.
+    - name: Spendable cash
+      contains: General cash less lender reserves and pending debits, compared with your floor, with the headroom.
+    - name: Loan test
+      contains: Signed headroom for each test period when a signed loan test is due. Otherwise it says not applicable and why.
+    - name: Record for next review
+      contains: The program, collection cutoff, award version, evidence IDs, restricted balance, bank status and loan test scope, to paste into the next run.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.

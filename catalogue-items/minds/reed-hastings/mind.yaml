@@ -16,6 +16,32 @@ use_cases:
   - "Name one owner for a big decision and ask them to gather dissent first"
   - "Write an honest note to customers after a change that upset them"
   - "Check whether your team is aligned on goals but free in how they work"
+not_for:
+  - "You need a founder's view on product design and customer experience: use the Brian Chesky mind instead."
+  - "You need hard-choice advice on running a company in a crisis: use the Ben Horowitz mind instead."
+  - "You cannot pay well or easily replace people, so a keeper test is risky: talk it through with a trusted adviser or an employment professional first."
+output_sample:
+  input:
+    - The decision, rule or problem you face, in plain words
+    - "Your team: size, roles and how they work today"
+    - Your current rules, approvals or policies that slow people down
+    - What you cannot change, such as legal duties, budget or contracts
+    - Any customer upset or past mistake involved (optional)
+  output:
+    - name: Context or people check
+      contains: A view on whether the problem is missing context for the team or a real people problem.
+    - name: Rules to cut
+      contains: Which approvals or rules only stop errors, which ones help, and which one to remove first.
+    - name: Door test
+      contains: Whether the choice is easy to undo or hard to undo, and how fast to move.
+    - name: Dissent and decision owner
+      contains: Who to ask for opposing views, how to score them, and who should own the call.
+    - name: Keeper test
+      contains: Questions to ask about each person and how to plan hard talks kindly.
+    - name: Plain note to the people affected
+      contains: A short, honest draft for your team or customers, with the real reason and the cost.
+    - name: Cost of the advice and limits
+      contains: Where this approach can fail, and anything marked beyond the record.
 seats:
   - {seat: "Culture and reinvention", asks: "What would we build if we started today, and do we have the people to build it?"}
   - {seat: "Talent and candor", asks: "Would you fight to keep each person on this team? Have you told them the truth this week?"}

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds specific people from what you tell it.
 new_slug: ideal-customer-profile-writer
 name: Ideal customer profile writer
-summary: Describe what you sell. Get detailed buyer personas with motivations,
-  doubts and habits.
+summary: Describe what you sell and get an ideal customer profile with personas, doubts, habits and the words buyers use. Built to guide your ads and pages.
 job: understand-customers
 headline: Ideal customer profile writer
-subhead: Buyer personas built on how people think and decide, not just age and
-  income. Describe what you sell and get detailed profiles with motivations,
-  doubts and habits that you can write ads and pages against.
+subhead: Buyer personas built on how people think and decide, not just age and income. Describe what you sell and get detailed profiles with motivations, doubts and habits that you can write ads and pages against.
 explain: |
   Buyer personas built on how people think and decide, not just age and income. Describe what you sell and get detailed profiles with motivations, doubts and habits that you can write ads and pages against.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a product and need a first target group.
   - You have reviews and support tickets you have not mined.
   - You write copy and want the real words customers use.
+not_for:
+  - You have no product or offer yet. Write down your best guess of who needs it first, then come back.
+  - You need proof of what buyers think. Talk to five real customers, then bring your notes here.
+  - You need a full brand plan with voice and positioning. Ask a brand strategist, or write your positioning by hand first.
 you_give:
   - What you sell
   - Who buys now or who you hope will
@@ -29,7 +30,27 @@ you_get:
   - The jobs your buyers hire you for
   - Customer language to reuse in copy
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Tell your AI what you sell, who buys it now and who you want to reach. Add your brand position if you have one.
+  - Paste any reviews, survey answers or interview notes. The quotes in section 04 should come from these. With no notes, treat that section as a guess to test.
+  - Read the personas and cross out anything that does not match real customers you know.
+  - Use section 04 words in your ads and pages, and section 06 to pick your channels and message.
+output_sample:
+  input:
+    - What you sell, in a few lines
+    - Who buys it now, or who you hope will
+    - Reviews, surveys or interview notes (optional)
+    - Your brand position, such as premium or low cost (optional)
+  output:
+    - name: 01 Audience overview
+      contains: One honest paragraph on who your buyers are, what they want to do and what annoys them today.
+    - name: 02 Primary audience profile
+      contains: Basic facts, values, hopes, buying habits and what triggers a search for a product like yours.
+    - name: 03 Audience personas
+      contains: Two or three detailed people, each with goals, frustrations, decision triggers and the places to reach them.
+    - name: 04 Audience language
+      contains: Phrases buyers use for their problem and the result they want, plus why they chose a rival.
+    - name: 05 Who this brand is not for
+      contains: Groups you should not aim at, and why they are a poor fit.
+    - name: 06 Audience implications
+      contains: What to lead with in messaging, where to show up, how to sound and what to offer.

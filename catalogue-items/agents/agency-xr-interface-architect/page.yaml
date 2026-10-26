@@ -1,0 +1,126 @@
+name: XR Interface Architect agent
+summary: "Plan spatial UI for VR, AR and XR apps: panels, menus, input methods, comfortable placement and a test plan, from your app idea."
+headline: XR Interface Architect agent
+subhead: Give it your XR app idea, the headset and how users will act. It plans the menus, panels and flows, and where each one sits in space. You get an interaction plan, input backups and a test plan for comfort and ease of learning.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Interfaces in XR are placed in the room, not on a flat screen. Where a panel sits, how far away it is and how you pick it decide if the app feels natural or tiring. This agent plans those choices before you build.
+
+  It picks the main way to act: direct touch, gaze and pinch, a controller or hand gestures. Then it plans a backup for each, so people with different abilities can still use the app. It lays out panels, menus and heads-up displays with comfort in mind, and maps the flow from first look to done.
+
+  It follows the XR Interface Architect profile from Agency Agents. The profile gives no measured distances or comfort limits, and the agent will not invent any. It marks each placement as a starting point to test, and it gives you experiments to run on a real headset.
+when:
+  - You are designing a menu, dashboard or heads-up display for a headset app and need a layout plan.
+  - Your app must work with hands, controllers and gaze, and you need to decide which one leads.
+  - Testers find the panels tiring, too close or hard to find.
+  - A developer needs a flow and layout template before they start coding.
+not_for:
+  - Your app is a seated vehicle with levers and gauges. Use the XR Cockpit Interaction Specialist agent.
+  - You need the experience built in WebXR. Use the XR Immersive Developer agent.
+  - You are building for Apple Vision Pro. Use the visionOS Spatial Engineer agent.
+  - Your screens are flat, on the web or a phone. Use the UI Designer agent.
+you_give:
+  - Your app idea and the main tasks users do in it
+  - "Your headset or device, and how users act: touch, gaze and pinch, controllers or gestures"
+  - "Where it is used: seated, standing or room-sized"
+  - Users who need other input methods, such as limited hand use (optional)
+  - A sketch or the screens you have so far (optional)
+you_get:
+  - An input plan with a main method and a backup for each task
+  - A flow from first look to done, with what the user sees at each step
+  - A placement plan for panels, menus and heads-up displays
+  - A list of comfort risks to watch
+  - Test experiments with tasks, measures and what counts as trouble
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md, then references/source-agent.md, then your brief into a new chat. Claude, ChatGPT and Gemini all work.
+  - "Paste your app idea, the main tasks and your headset first. Say where users will be: seated, standing or in a room."
+  - Say "Plan the interface. Mark any distance or angle as a starting point to test." Answer its one round of questions.
+  - Read the input plan first. Check that every key task has a backup input.
+  - Build rough panels in your tool, using the placement plan. Move them and see what feels tiring.
+  - Run the test experiments with real users on the headset. Paste the results back for a revised plan.
+how_it_works:
+  - title: Fix the brief
+    text: It confirms the app idea, tasks, device, environment and users. Gaps are asked once, then marked MISSING.
+  - title: Choose the inputs
+    text: It picks a main input for each task and a backup so more people can use the app.
+  - title: Map the flow
+    text: It writes the steps from first look to done, and what the user sees and does at each one.
+  - title: Place the interface
+    text: It places each panel or menu in space and says if it follows the world, the body or the head.
+  - title: Flag the risks
+    text: It lists comfort and discovery risks in the plan and says how to check each.
+  - title: Plan the tests
+    text: It writes experiments with tasks, measures and what counts as trouble.
+output_shape: |-
+  INTERACTION BRIEF
+    App idea <> | Tasks <> | Device <> | Environment <seated, standing or room-sized> | Users <>
+  INPUT MODEL
+    <input method> | <role: main or backup> | <used for> | <who it helps>
+  UI FLOW
+    <step> | <what the user sees> | <how they act> | <next step>
+  PLACEMENT PLAN
+    <panel or menu> | <anchored to world, body or head> | <starting distance and angle, to test> | <why>
+  ACCESSIBILITY BACKUPS
+    <task> | <main input> | <backup input>
+  COMFORT RISKS
+    <risk> | <where in the plan> | <how to check it>
+  VALIDATION EXPERIMENTS
+    <question> | <task for testers> | <measure> | <what counts as trouble>
+  OPEN QUESTIONS AND CHECKS NOT RUN
+output_sample:
+  input:
+    - Your XR app idea and the main tasks users do
+    - Your headset or device and the ways users can act
+    - "Where it is used: seated, standing or room-sized"
+    - A sketch or screens so far (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A headset to test the plan with real users (the AI does not do this)
+  output:
+    - name: Input model
+      contains: A main input and a backup for each task, and who each one helps.
+    - name: UI flow
+      contains: Each step from first look to done, with what the user sees and does.
+    - name: Placement plan
+      contains: Where each panel or menu sits, what it follows, and a starting distance and angle to test.
+    - name: Accessibility backups
+      contains: For each task, the main input and the backup input.
+    - name: Comfort risks
+      contains: Risks in the plan and how to check each one.
+    - name: Validation experiments
+      contains: Tasks for testers, what to measure and what counts as trouble.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Lead input
+    how: Name the input you want to lead, such as hands or controllers, and the others become backups.
+  - what: User needs
+    how: Add any access needs, such as one-handed use, so the backups fit real users.
+improve:
+  - After your test, paste what testers missed or found tiring and ask for a revised placement plan.
+terms:
+  - term: XR
+    meaning: Extended reality. A short name for virtual, augmented and mixed reality.
+  - term: Gaze and pinch
+    meaning: You look at a target, then pinch your fingers to pick it.
+  - term: HUD
+    meaning: A heads-up display. Information shown in your view as you move.
+  - term: Anchor
+    meaning: "What a panel follows: the room, your body or your head."
+  - term: Discoverability
+    meaning: How easy it is for a new user to find a control.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can write the flow and tables. Pick one that can read a sketch of your layout.
+  inputs:
+    - A sketch of your panels and menus
+    - Your headset maker's comfort and design guidance
+    - Notes on any users who cannot use hands or voice

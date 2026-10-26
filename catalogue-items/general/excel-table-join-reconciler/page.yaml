@@ -1,70 +1,69 @@
 new_slug: excel-table-join-reconciler
 name: Excel table join reconciler
-summary: Share two Excel tables. Get matched rows, unmatched records and
-  duplicate-key checks.
+summary: Check two Excel tables against a shared key. Get a joined workbook, a list of unmatched rows and a report on duplicate keys.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
 headline: Excel table join reconciler
-subhead: Share two Excel tables and their matching keys. Get a reconciled join
-  with unmatched rows and duplicate keys explained. Work on a copy of your file.
-  Get a clear record of what passed and what still needs checking.
+subhead: Share two Excel tables and their matching keys. Get a reconciled join with unmatched rows and duplicate keys explained. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share two Excel tables and their matching keys. Get a reconciled join with
-  unmatched rows and duplicate keys explained.
+  Share two Excel tables and their matching keys. Get a reconciled join with unmatched rows and duplicate keys explained.
 
 
-  It works with the actual Excel files and follows a specific method for this
-  task. Your source files stay intact. The method starts by checking what your
-  AI already knows and which files it can read. It asks only for missing facts
-  that change the work.
+  It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
 
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share two Excel tables and their matching keys. Get a reconciled join with
-    unmatched rows and duplicate keys explained.
-  - Both source tables, key definitions, expected one-to-one or one-to-many
-    relationship, reporting period and required outputs.
+  - Share two Excel tables and their matching keys. Get a reconciled join with unmatched rows and duplicate keys explained.
+  - Both source tables, key definitions, expected one-to-one or one-to-many relationship, reporting period and required outputs.
   - You need a checked copy while keeping your original files intact.
+not_for:
+  - "You need fuzzy or approximate matching: use a person's review or a tool built for fuzzy matching, since this skill only joins on exact keys."
+  - "The two tables share no key: add a key column first, or ask the data owner which fields identify the same record."
+  - "You want a live join that refreshes: build a Power Query connection or a database join yourself, since this skill never refreshes outside data."
 you_give:
-  - Both source tables, key definitions, expected one-to-one or one-to-many
-    relationship, reporting period and required outputs.
+  - Both source tables, key definitions, expected one-to-one or one-to-many relationship, reporting period and required outputs.
   - The app and file tools your AI can use for the requested work
 you_get:
   - joined-tables.xlsx, unmatched-rows.csv and join-checks.md.
   - A record of source files, changes and check results
   - Missing facts and any checks that could not run
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing context before asking for missing information.
   - Review the native output and its real check evidence before sharing it.
+output_sample:
+  input:
+    - Your first Excel table
+    - Your second Excel table
+    - The key column or columns that match the two tables
+    - Whether each key should match once or many times
+    - The reporting period and the files you want back (optional)
+  prerequisites:
+    - An AI that can read and write Excel files, such as one with file or code tools
+  output:
+    - name: joined-tables.xlsx
+      contains: A new workbook with matched rows, source row IDs, and left-only, right-only and ambiguous records.
+    - name: unmatched-rows.csv
+      contains: Every row from either table that found no match, with where it came from.
+    - name: join-checks.md
+      contains: Key counts, duplicate key findings, record and total reconciliation, and each check marked passed, failed or not run.
+    - name: Run register
+      contains: Source file and version, action taken, output path, check result and remaining limits.
+    - name: MISSING lines
+      contains: Any fact or tool you did not supply that the work needed.
 how_it_works:
   - title: Step 1
-    text: 1. Preserve both sources. Define the grain of each table, composite keys
-      and the intended join. Keep leading zeros and meaningful case or
-      whitespace unless normalization is approved.
+    text: 1. Preserve both sources. Define the grain of each table, composite keys and the intended join. Keep leading zeros and meaningful case or whitespace unless normalization is approved.
   - title: Step 2
-    text: 2. Count null keys and key multiplicity on both sides before joining. Stop
-      a requested one-to-one join when duplicate keys make the match ambiguous.
+    text: 2. Count null keys and key multiplicity on both sides before joining. Stop a requested one-to-one join when duplicate keys make the match ambiguous.
   - title: Step 3
-    text: 3. Build the approved join using supported Excel formulas, Power Query or
-      a local data tool. Keep source row IDs and expose one-to-many expansion
-      instead of choosing the first match.
+    text: 3. Build the approved join using supported Excel formulas, Power Query or a local data tool. Keep source row IDs and expose one-to-many expansion instead of choosing the first match.
   - title: Step 4
-    text: 4. Produce left-only, right-only, matched and ambiguous records. Reconcile
-      record counts and additive totals at the correct grain; never sum a
-      duplicated parent measure after an expanded join.
+    text: 4. Produce left-only, right-only, matched and ambiguous records. Reconcile record counts and additive totals at the correct grain; never sum a duplicated parent measure after an expanded join.
   - title: Step 5
-    text: 5. Recalculate and test a new key, an unmatched key and a duplicated key.
-      Deliver the new workbook plus the exact join rule and exceptions; do not
-      refresh external systems.
+    text: 5. Recalculate and test a new key, an unmatched key and a duplicated key. Deliver the new workbook plus the exact join rule and exceptions; do not refresh external systems.
 output_shape: |-
   FILES
   joined-tables.xlsx, unmatched-rows.csv and join-checks.md.
@@ -79,38 +78,26 @@ output_shape: |-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: Both source tables, key definitions, expected one-to-one or one-to-many
-      relationship, reporting period and required outputs.
+    how: Both source tables, key definitions, expected one-to-one or one-to-many relationship, reporting period and required outputs.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - Expected cardinality is checked before the join.
   - Unmatched records are retained.
   - Control totals use the original grain.
   - The result names its sources and keeps unrun checks visible.
 test:
-  - "Try this case: Orders have one row per order; lines have three rows for one
-    order. Check that it does this: Allow an explicit one-to-many join; do not
-    triple-count the order total."
-  - "Try this case: A required customer key maps to two distinct customers.
-    Check that it does this: Stop the ambiguous match and return both source
-    locations."
-  - Reopen the saved result and compare it with the source. Keep any failed or
-    unrun check in the report.
+  - "Try this case: Orders have one row per order; lines have three rows for one order. Check that it does this: Allow an explicit one-to-many join; do not triple-count the order total."
+  - "Try this case: A required customer key maps to two distinct customers. Check that it does this: Stop the ambiguous match and return both source locations."
+  - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Add your confirmed field names, file rules and target app version to the required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same meanings and checks.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:
   - input: Orders have one row per order; lines have three rows for one order
     expected: Allow an explicit one-to-many join; do not triple-count the order total.

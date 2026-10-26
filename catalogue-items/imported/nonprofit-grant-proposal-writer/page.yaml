@@ -2,16 +2,31 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-grant-proposal-writer
 name: Nonprofit grant proposal writer
-summary: Share funder rules, program facts, and budget. Get a proposal draft matched to the required sections.
+summary: Write a nonprofit grant proposal, inquiry letter or grant report that follows your funder's rules. Give it the guidelines, program facts and budget.
 job: document-work
 headline: Nonprofit grant proposal writer
-subhead: Share the funder's rules, your program plan, and the approved budget. It matches the required sections, checks the figures, and trims to the limits. You get a proposal, inquiry letter, or grant report draft for program and finance review.
+subhead: Share the funder's rules, your program plan and your approved budget. It follows the funder's required sections and flags totals that do not reconcile. You get a proposal, inquiry letter or grant report draft for program and finance review.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - A funder has opened a call and you must write the proposal in their format.
+  - A funder asks for a short inquiry letter before a full proposal.
+  - You have a budget and need a clear budget narrative that matches it.
+  - A grant report is due and must match what you promised in the proposal.
+not_for:
+  - You still need to find or check funders. Use a grant research tool or ask a grant consultant first.
+  - You have no program plan yet. Build the program design and results plan first, then come back to write the proposal.
+  - You want to send the draft as it is. Program staff, finance and your director must review it before it goes out.
 you_give:
-  - Funder guidelines, existing program design, local evidence, approved budget, and required limits.
+  - The funder's guidelines or call for proposals, with page or word limits.
+  - Your program plan or logic model.
+  - Your approved budget and the amount you are asking for.
+  - Local data on the need, with sources (optional).
+  - Your approved indirect cost rate (optional).
 you_get:
-  - A proposal, inquiry letter, budget narrative, or grant report matched to the funder's rules.
+  - A draft in the funder's section order and exact headings.
+  - A budget narrative that shows the math for each line.
+  - A list of totals that do not match and attachments that are missing.
+  - A draft trimmed to the funder's limits without cutting the ask, outcomes or evaluation plan.
+  - A list of what program staff, finance and your director must check.
 how_it_works:
   - title: Read the funder rules
     text: Extract required sections, length limits, attachments, deadlines, and submission details.
@@ -26,5 +41,34 @@ works_best_with:
   inputs:
     - Proposals are binding representations to a funder about what you will deliver.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
+  - Paste the funder's guidelines first. Ask your AI to list the required sections, limits and attachments.
+  - Add your program plan, budget and local data. Mark anything you do not have, so your AI does not guess.
+  - Ask for the draft in the funder's section order. Then ask it to flag totals that do not reconcile.
+  - Have program staff check the facts and finance check the budget and rate. Confirm current federal rules with finance before you use them.
+  - Have your director sign off on every promise before you submit.
+output_sample:
+  input:
+    - Funder guidelines or the RFP (the funder's call for proposals)
+    - Your program plan or logic model
+    - Your approved budget and the amount you are asking for
+    - Local data on the need, with sources (optional)
+    - Your indirect cost rate, approved by finance (optional)
+  prerequisites:
+    - An AI that can read your files, or the text pasted into the chat
+    - A finance-approved budget and indirect cost rate if the funder uses federal money
+  output:
+    - name: Executive summary
+      contains: Who you are, the problem, the amount you ask for, and the result you expect.
+    - name: Statement of need
+      contains: The problem, backed by local data from named sources.
+    - name: Program description
+      contains: What you will do, drawn from your program plan.
+    - name: Goals, objectives and outcomes
+      contains: Measurable goals that separate services delivered from change achieved.
+    - name: Evaluation plan
+      contains: How you will measure results, with tools and a reporting timeline.
+    - name: Budget narrative
+      contains: Each budget line explained in words, with the math shown and totals checked against your budget.
+    - name: Review list
+      contains: Totals that do not match, missing attachments, open rate questions, and who must review each part.

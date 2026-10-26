@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Safe changes in tangled code need careful reasoning about side effects.
 new_slug: untested-code-change-guide
 name: Untested code change guide
-summary: Give it code with no tests. Get safe steps to add tests and change it
-  without breaking anything.
+summary: "Change code that has no tests without breaking it. Get a safe plan: where to add tests, how to free the code, and what order to edit in."
 job: test-and-fix-code
 headline: Untested code change guide
-subhead: A safe way to change code that has no tests, one step at a time. You
-  get tests around the part you will touch before you edit it, so you know right
-  away if you broke something.
+subhead: A safe way to change code that has no tests, one step at a time. You get tests around the part you will touch before you edit it, so you know right away if you broke something.
 explain: |
   A safe way to change code that has no tests, one step at a time. You get tests around the part you will touch before you edit it, so you know right away if you broke something.
 
@@ -18,6 +15,10 @@ when:
   - You cannot test a class because it calls a database or the network.
   - You want a plan to add tests only where you change code.
   - A teammate suggests a rewrite and you want a safer path.
+not_for:
+  - "Your code already has tests and you only want to tidy it: use refactoring-patterns, not this guide."
+  - "You want to throw the code away and start over: this guide keeps the code and changes it in small safe steps."
+  - "You want everyday advice on clean code: use clean-code, which covers style and naming rather than testing old code."
 you_give:
   - The code you need to change
   - What change you want to make
@@ -29,7 +30,28 @@ you_get:
   - Tests that record current behaviour
   - A safe order for the real change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the skill instructions from this page's download into the chat.
+  - Paste the code you plan to change. Say what change you want.
+  - Add your language and test tools, and any trouble spots you know of (optional).
+  - Read the plan. Write the recorded-behavior tests first and run them on your own machine.
+  - Make the real change only after those tests pass. Keep tidy-ups as a separate step.
+output_sample:
+  input:
+    - The code you need to change
+    - The change you want to make
+    - Your language and test tools (optional)
+    - Known trouble spots (optional)
+  output:
+    - name: Change points
+      contains: The places in the code where your edit will go, and where its effects will show up.
+    - name: Test points
+      contains: The places where tests can catch a break, close to the change.
+    - name: Dependency breaks
+      contains: Small, low-risk moves that free the code from things like databases or the network so it can be tested.
+    - name: Characterization tests to write
+      contains: Tests that record what the code does today, before you touch it.
+    - name: Safe order of edits
+      contains: The order to make the change, with behavior changes and tidy-ups kept as separate steps.
+    - name: Score out of 10
+      contains: A rating of your current approach and the steps needed to reach 10.

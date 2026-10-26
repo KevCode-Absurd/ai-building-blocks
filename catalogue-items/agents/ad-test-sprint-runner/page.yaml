@@ -1,6 +1,6 @@
 new_slug: ad-test-sprint-runner
 name: Ad test sprint runner
-summary: Give it your brand file and results. It plans each test round, reads it when it ends and plans the next.
+summary: Plan each ad test round, read the result when it ends, and plan the next round. This ad test sprint runner stops after three rounds without a winner.
 job: plan-ad-tests
 thinking: high
 thinking_why: It reads each result, chooses between four paths and carries lessons from round to round. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want to find a winning ad and expect it to take more than one round.
   - Your last test did not win and you do not know what to try next.
   - You have run tests before but never kept what they taught.
+not_for:
+  - Your store makes only a few sales a day. Tests cannot reach a readable result, so fix your page and offer first.
+  - You want one test, not a run of rounds. Plan a single round by hand with your ad platform's own test tools.
+  - You need a weak product or page fixed. More ad tests will not help, so work on the product or page first, or ask a person who knows your market.
 you_give:
   - Your brand file with products, claims, proof and buyers
   - Your target cost per sale or ROAS
@@ -33,6 +37,29 @@ how_to_use:
   - Launch the round yourself, or say yes to each step if it is connected.
   - On the read date, give it the round's results. It reads them and plans the next round.
   - Keep going until a set wins or the cap of three rounds is reached.
+output_sample:
+  input:
+    - Your brand file with products, claims, proof and buyers
+    - Your target cost per sale or ROAS
+    - Your past ad results for the last 30 to 90 days
+    - Your test budget and platform (Meta or TikTok)
+    - Each round's results by ad, when the round ends
+  prerequisites:
+    - A brand brain folder, made with the Brand profile builder or written by you
+    - An ad account on Meta or TikTok, with ad-level results you can export
+  output:
+    - name: Round plan
+      contains: The daily budget, spend limit per ad, read date, five untried ideas with briefs, and the campaign layout.
+    - name: Round result
+      contains: A verdict for each ad set against your target, any false winners, and whether the read was safe to act on.
+    - name: What it means
+      contains: The path taken and the number that decided it.
+    - name: Next round
+      contains: A plan built on the lesson, or the call to stop and why.
+    - name: Lessons so far
+      contains: A dated list of what each round changed and what it showed.
+    - name: Where the sprint stands
+      contains: Rounds used out of three, ads tested, hit rate if readable, and every missing item.
 how_it_works:
   - title: Set the budget
     text: Works out the daily test budget, the spend limit per ad and the earliest day to read, from your target.

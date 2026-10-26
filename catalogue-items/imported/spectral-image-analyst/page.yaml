@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Many specialist methods must be matched to the data.
 new_slug: spectral-image-analyst
 name: Spectral image analyst
-summary: Give it a hyperspectral or satellite image. Get it cleaned, unmixed and
-  checked for targets or anomalies.
+summary: "Spectral image analysis in MATLAB: give it a hyperspectral or satellite image. You get code to clean it, unmix materials and flag targets or odd spots."
 job: build-software
 headline: Spectral image analyst
-subhead: Cleaned hyperspectral or satellite images, with materials separated and
-  targets or odd spots flagged. The skill writes MATLAB code for the full path.
-  It reads files in formats like ENVI, GeoTIFF, Sentinel-2 and Landsat.
+subhead: Cleaned hyperspectral or satellite images, with materials separated and targets or odd spots flagged. The skill writes MATLAB code for the full path. It reads files in formats like ENVI, GeoTIFF, Sentinel-2 and Landsat.
 explain: |
   Cleaned hyperspectral or satellite images, with materials separated and targets or odd spots flagged. The skill writes MATLAB code for the full path. It reads files in formats like ENVI, GeoTIFF, Sentinel-2 and Landsat. Then it applies calibration, atmospheric correction, denoising and sharpening, and cuts bands down with PCA.
 
@@ -18,6 +15,10 @@ when:
   - You want to find a target material hidden in a hyperspectral image.
   - Your image data is noisy and needs correcting before analysis.
   - You are preparing labelled data to train a classifier.
+not_for:
+  - "You have plain RGB photos or grayscale images: use imread and imwrite, or the Image Processing Toolbox in MATLAB."
+  - "You have a single spectrum or a spectral library with no image: read it with MATLAB's own tools, such as readEcostressSig."
+  - "You only want to train a classifier on ordinary pictures: use the Deep Learning Toolbox in MATLAB."
 you_give:
   - A hyperspectral or multispectral image file
   - The material or feature you want to find
@@ -30,9 +31,31 @@ you_get:
   - Target or anomaly detections
   - Spectral index maps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Hyperspectral Imaging
-    Library.
+  - Check you have desktop MATLAB with the Hyperspectral Imaging Library add-on. MATLAB Online will not work.
+  - Open a chat with your AI and paste in the skill text.
+  - Tell it your file type, the material or feature you want, and any reference spectra you have.
+  - "Ask for one processing step at a time: correct, then unmix, then detect."
+  - Run each piece of code in MATLAB and check the maps before you move on.
+  - Save results with enviwrite, or feed the abundance maps into a classifier.
+output_sample:
+  input:
+    - Your hyperspectral or multispectral image file (ENVI, NITF, GeoTIFF, Sentinel-2, Landsat or ASTER)
+    - The material or feature you want to find
+    - A reference spectral library (optional)
+  prerequisites:
+    - Desktop MATLAB (not MATLAB Online or Mobile)
+    - The Hyperspectral Imaging Library add-on for Image Processing Toolbox
+    - An AI that can write code, ideally one that can run MATLAB
+  output:
+    - name: Read and band setup code
+      contains: MATLAB code that loads your image into a cube, picks bands and crops the scene.
+    - name: Correction and denoising code
+      contains: Steps for calibration, atmospheric correction, denoising and sharpening, with optional band reduction by PCA.
+    - name: Unmixing code and abundance maps
+      contains: Code that finds pure materials and shows how much of each one is in every pixel.
+    - name: Target and anomaly detection
+      contains: Code that matches known spectra and flags pixels that stand out from the scene.
+    - name: Spectral index maps
+      contains: Maps such as NDVI for vegetation or water, made with built-in index functions.
+    - name: Segmentation and labelling code
+      contains: Code to split the scene into regions and prepare labelled data for deep learning.

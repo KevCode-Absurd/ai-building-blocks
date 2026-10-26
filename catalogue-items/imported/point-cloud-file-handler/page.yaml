@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It matches each file type to a reader or writer.
 new_slug: point-cloud-file-handler
 name: Point cloud file handler
-summary: Give it a lidar file. Get it read or saved in the right format, with
-  its point details kept.
+summary: Read and save lidar point cloud files in MATLAB. Pick the right reader for LAS, LAZ, PLY, PCD, E57 or sensor files and keep point details.
 job: build-software
 headline: Point cloud file handler
-subhead: Open and save 3D lidar files without guessing which function fits which
-  format. The skill routes by file type and keeps the extra point details such
-  as class, time and scan angle.
+subhead: Open and save 3D lidar files without guessing which function fits which format. The skill routes by file type and keeps the extra point details such as class, time and scan angle.
 explain: |
   Open and save 3D lidar files without guessing which function fits which format. The skill routes by file type and keeps the extra point details such as class, time and scan angle.
 
@@ -18,6 +15,10 @@ when:
   - A sensor recording must be read frame by frame.
   - You need to convert point clouds from one format to another.
   - You must keep classification and timestamps while saving.
+not_for:
+  - "You need live data from a running sensor: use the sensor's own MATLAB connection, such as velodynelidar or ousterlidar, not this skill."
+  - "You want to clean, thin out or filter points after reading: use MATLAB's pcdownsample or pcdenoise."
+  - "You only want to look at the points: use MATLAB's pcshow or pcplayer. You can also save the cloud to a MAT-file with save."
 you_give:
   - The lidar file or recording
   - The format you want back
@@ -28,8 +29,29 @@ you_get:
   - A saved file in the new format
   - The right reader for your format
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Lidar Toolbox.
+  - Check that you have MATLAB with the Lidar Toolbox. Your AI can write the code, but MATLAB must run it.
+  - Open your AI and paste in the skill text.
+  - "Say which file you have and what you want: read it, filter it, save it or convert it."
+  - For a PCAP file, give the sensor model. Your AI should ask if you leave it out.
+  - Run the MATLAB code your AI writes. Check the point count and that your point details are still there.
+  - Next, clean the cloud with pcdownsample or pcdenoise, and check it with pcshow.
+output_sample:
+  input:
+    - Your lidar file or sensor recording (PLY, PCD, LAS, LAZ, PCAP, E57 or IDC)
+    - The format you want to save to (optional)
+    - An area, class or time filter for LAS files (optional)
+    - Your sensor model, if the file is a PCAP recording
+  prerequisites:
+    - MATLAB with the Lidar Toolbox
+    - An AI that can run MATLAB code, or you run the code it writes yourself
+  output:
+    - name: Reader choice
+      contains: The right MATLAB reader or writer for your file type, picked by file extension.
+    - name: Point cloud
+      contains: Your points loaded into a MATLAB point cloud object, read whole or filtered.
+    - name: Point attributes
+      contains: Extra LAS details such as class, GPS time and scan angle, kept when you ask for them.
+    - name: Saved file
+      contains: Your cloud written to PLY, PCD, LAS or LAZ, with attributes kept where the format allows.
+    - name: Format conversion
+      contains: Code that reads one format and writes another, such as LAS to PLY or PCD to LAZ.

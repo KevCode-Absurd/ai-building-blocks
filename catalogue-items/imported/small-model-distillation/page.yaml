@@ -2,35 +2,108 @@ thinking: high
 thinking_why: Matching a teacher model needs careful tuning.
 new_slug: small-model-distillation
 name: Small model trainer from a big one
-summary: Name your large model. Get a plan and code to teach a smaller, cheaper
-  model to match it.
+summary: Train a small, cheaper AI model to copy a large one. Get a plan, training code and a test that shows how much quality you kept.
 job: build-software
 headline: Small model trainer from a big one
-subhead: A plan and working code to teach a small, cheap model to copy a big
-  one. You name the large teacher model and the small student, and you get a
-  path to keep most of the quality at a fraction of the running cost.
+subhead: Name the large teacher model, the small student model and your task. Your AI picks a distillation method and writes the training code with settings to tune. You also get a side-by-side test, so you can measure what the small model keeps.
 explain: |
-  A plan and working code to teach a small, cheap model to copy a big one. You name the large teacher model and the small student, and you get a path to keep most of the quality at a fraction of the running cost.
+  A large AI model can be too slow or too costly to run all day. Model distillation trains a small model, the student, to copy a large one, the teacher. You pay for the large model once, to teach, and then run the small one. This skill plans that job and writes the code.
 
-  The skill covers the main methods. Soft targets with temperature scaling let the student learn from the teacher's full probability spread, not only its top answer. Logit distillation matches raw outputs. Response distillation trains on text the teacher wrote. A reverse KL method suits language models. It uses Python with transformers and torch, and training needs real GPU time. Expect to keep around 90 percent of performance when it goes well.
+  It covers three common methods. Response distillation trains the student on text the teacher wrote. Soft-target and logit distillation train it on the teacher's full set of probabilities, which carries more than the top answer. Reverse KL, from the MiniLLM paper, is aimed at models that write free text. It also covers settings like temperature and loss weight.
+
+  This needs Python, a GPU and real training time. Some models are gated and need an access request. How much quality the student keeps depends on your models and data, so the skill always ends with a test on prompts held out from training.
 when:
-  - Your large model works but costs too much to run.
+  - Your large model works, but it costs too much or runs too slowly to use every day.
   - You want an open model that handles one task as well as a paid one.
   - You need a model small enough for limited hardware.
-  - You have teacher answers and want to train a student on them.
+  - You already have teacher answers and want to train a student on them.
+not_for:
+  - "The two models are close in size, or you just want a model in your style: use the LLM fine-tuning guide."
+  - "You have a small GPU and a large model: use the Low-memory fine-tuning guide."
+  - "You have no GPU or no budget to rent one: a hosted API or a smaller ready-made model costs less."
+  - "You want to train a model from nothing: use the Tiny GPT trainer."
 you_give:
-  - The teacher model
-  - The student model you want to train
-  - Training data or prompts for the task
+  - The teacher model, by name
+  - The student model you want to train, by name
+  - Training prompts or text for your task
+  - A separate set of prompts for testing
   - GPU access and a Python setup
 you_get:
-  - A distillation plan for your models
-  - Training code with the right loss
-  - Settings like temperature and loss weights
-  - A way to compare student and teacher
+  - A plan that names the method and why it fits
+  - A training script with the loss, temperature and loss weight set
+  - A table of settings marked as starting points to tune
+  - A comparison script that scores student and teacher on your test prompts
+  - Notes on cost, model access and the teacher's terms of use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Pick your teacher and student models. Check that you can get both, because some need an access request on Hugging Face. Set aside prompts for training and a separate set for testing.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. Then give the model names, your task, and how many prompts you have.
+  - Read the plan first. If the teacher is a hosted model, check its terms of use before you generate training data.
+  - Copy the training script to a computer with a GPU and run it. A chat AI cannot train a model for you, but Claude Code or Codex can if they run on that computer.
+  - Paste the loss values and any error back to your AI. Ask it to fix the script or adjust the settings.
+  - Run the comparison script on your test prompts. Keep the small model only if it meets the bar on your task.
+how_it_works:
+  - title: Check the setup
+    text: It confirms the teacher, the student, the task data and the GPU, and checks the size gap between the models.
+  - title: Choose the method
+    text: It picks response, soft-target, logit or reverse KL distillation, and says why in one line.
+  - title: Set the loss
+    text: It sets the temperature and the weight between teacher knowledge and real labels as starting points.
+  - title: Write the training script
+    text: It writes the training loop for the chosen method, using Python with transformers and torch.
+  - title: Write the test
+    text: It writes a comparison on held-out prompts, scored by your own check.
+  - title: Report what is unknown
+    text: It lists the cost, access and terms questions it could not answer.
+output_shape: |
+  Plan: <teacher>, <student>, <method>, <why>
+  Training script: <file name>
+  <loss, temperature, alpha, training loop>
+  Settings:
+  | Setting | Start at | Notes |
+  | <temperature> | <value> | <start here, then tune> |
+  Comparison script: <file name>
+  Cost and access: <GPU need, gated models, teacher terms>
+  Not checked: <anything untested>
+output_sample:
+  input:
+    - The teacher model and the student model
+    - Training prompts or text for your task
+    - Test prompts kept apart from training
+    - Your GPU and Python setup
+  prerequisites:
+    - A GPU, and real training time (rented GPUs cost money)
+    - Access to gated models, if you use them
+  output:
+    - name: Plan
+      contains: The method chosen, why it fits your models, and any size gap worry.
+    - name: Training script
+      contains: Python code with the loss, temperature and loss weight set, ready to run on a GPU.
+    - name: Settings table
+      contains: Temperature, loss weight, learning rate and epochs, each marked as a starting point to tune.
+    - name: Comparison script
+      contains: Code that runs teacher and student on your test prompts and scores both.
+    - name: Cost and access notes
+      contains: GPU needs, gated model access and the teacher's terms of use, with unknowns marked.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can run the training on your own GPU computer, so you do not copy code by hand.
+    - name: Any good chat AI
+      why: It writes the plan and scripts and reads your results. You run the code yourself.
+    - name: Hugging Face account
+      why: You need it to download models, and to accept access for gated ones.
+  inputs:
+    - A few of the teacher's answers to your real prompts
+    - The score or check that tells you an answer is good
+    - Your GPU model and memory size
+terms:
+  - term: Distillation
+    meaning: Training a small model to copy the answers of a large one.
+  - term: Teacher and student
+    meaning: The teacher is the large model you copy. The student is the small model you train.
+  - term: Temperature
+    meaning: A setting that softens the teacher's probabilities, so the student sees more than the top answer.
+  - term: Reverse KL
+    meaning: A loss from the MiniLLM paper that keeps the student close to what the teacher likes. It suits free-text models.
+  - term: Gated model
+    meaning: A model you can only download after you accept its licence on the site that hosts it.

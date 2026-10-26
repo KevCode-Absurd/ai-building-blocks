@@ -1,0 +1,42 @@
+slug: agency-research-synthesist
+name: Research Synthesist agent
+summary: "Turn a pile of articles, papers or reports into one honest summary. See what is well backed, what is disputed and what is missing."
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: research/research-synthesist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/research/research-synthesist.md
+  licence: MIT
+  original_name: Research Synthesist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 3618b4a2a73523147731ae38ac4096cea0e83a7de930f55ea9ea6c69e3c77f30
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Research Synthesist
+  - Agency Agents
+  - Research
+credits:
+  - title: Research Synthesist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/research/research-synthesist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

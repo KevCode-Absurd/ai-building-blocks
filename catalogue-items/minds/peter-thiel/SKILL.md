@@ -1,11 +1,11 @@
 ---
 name: peter-thiel
-description: "Stress-test a startup idea using Peter Thiel’s recorded approach. Compare substitutes, choose a narrow first market and examine how the business could stay distinct. Bring the idea, buyer evidence, alternatives and cost assumptions. This AI uses Thiel’s recorded questions to examine the claimed difference, market size, team and route to customers. You get a critique, scorecard or test plan. It does not speak for Thiel or give investment calls. A contrarian claim needs evidence, and a narrow market definition does not prove dominance. Use this mind on its own or as a seat on an advisory council."
+description: "Test a startup idea with Peter Thiel's public approach. Find your market, your real edge and the weakest of seven questions. Not for investment calls. Bring the idea, buyer evidence, alternatives and cost assumptions. This AI uses Thiel’s recorded questions to examine the claimed difference, market size, team and route to customers. You get a critique, scorecard or test plan. It does not speak for Thiel or give investment calls. A contrarian claim needs evidence, and a narrow market definition does not prove dominance. Use this mind on its own or as a seat on an advisory council."
 ---
 
 # Peter Thiel
 
-Stress-test a startup idea using Peter Thiel’s recorded approach. Compare substitutes, choose a narrow first market and examine how the business could stay distinct.
+Test a startup idea with Peter Thiel's public approach. Find your market, your real edge and the weakest of seven questions. Not for investment calls.
 
 Bring the idea, buyer evidence, alternatives and cost assumptions. This AI uses Thiel’s recorded questions to examine the claimed difference, market size, team and route to customers. You get a critique, scorecard or test plan. It does not speak for Thiel or give investment calls. A contrarian claim needs evidence, and a narrow market definition does not prove dominance.
 

@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It runs a small what-if with your numbers.
 new_slug: deal-slip-impact-modeler
 name: Deal slip impact modeler
-summary: Name a deal that may slip. Get the hit to your number, new coverage and
-  pipeline to backfill.
+summary: Model a deal slip before it happens. See the hit to your quota, your new coverage ratio and the pipeline you need to backfill the gap.
 job: sell-and-negotiate
 headline: Deal slip impact modeler
-subhead: "Name the deal and the scenario: it slips, shrinks or is lost. Give it
-  your pipeline export and quota. It groups your quarter into commit, best case
-  and pipeline, then moves the deal. You get the forecast impact, your new
-  coverage ratio, the gap to quota and the pipeline needed to backfill."
+subhead: "Name the deal and the scenario: it slips, shrinks or is lost. Give it your pipeline export and quota. It groups your quarter into commit, best case and pipeline, then moves the deal. You get the forecast impact, your new coverage ratio, the gap to quota and the pipeline needed to backfill."
 explain: |
   See what a slipping deal does to your number before it happens. You name the deal and the scenario, and you get the hit to your forecast, your new coverage ratio, and how much pipeline you need to replace it.
 
   It starts with a baseline: the open and closed-won deals in your quarter, grouped into commit, best case and pipeline using your own stage mapping. Then it moves the deal to next quarter, cuts its amount, or removes it, and reruns the math against quota. Every figure ties back to a record it read. It never changes the CRM. It is read-only maths.
 when:
-  - A big deal says it needs one more month and you must tell your boss the
-    damage.
+  - A big deal says it needs one more month and you must tell your boss the damage.
   - You want to know if your pipeline can survive losing your largest deal.
   - Quarter end is close and you are deciding what to chase to backfill.
   - You need to compare slip, shrink and loss for the same deal.
+not_for:
+  - Your deal has no close date or you have no quota. Set both first, or do a plain forecast review with your manager.
+  - You want to change a close date or forecast category in your CRM. This only models, so make the change in your CRM yourself.
+  - You need a forecast for the whole year. This covers one quarter only, so use a spreadsheet for a longer view.
 you_give:
   - Deal name or ID
   - "Scenario: slips, shrinks or is lost"
@@ -31,8 +30,29 @@ you_get:
   - Gap to quota
   - Pipeline needed to backfill
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload it as a file.
+  - Add your pipeline export as a file, or connect your CRM if your AI can. Give your quota too.
+  - Name the deal and say if it slips, shrinks or is lost. For a shrink, give the new amount.
+  - Check the baseline first. Make sure booked, commit and best case match your own numbers.
+  - Read the verdict and the substitute list. Pick the deals to chase this week.
+  - This only models. It does not change your CRM. Update your close dates yourself.
+output_sample:
+  input:
+    - The deal name or ID
+    - "What happens to it: slips, shrinks or is lost"
+    - Your quota, and whether to model you, a rep or a team
+    - Your pipeline export, or CRM access
+  prerequisites:
+    - Your quota, if it is not in your CRM
+    - Your CRM connected to your AI, or a pipeline export file
+  output:
+    - name: Before and after table
+      contains: Booked, commit total, gap to quota and coverage ratio, before and after the change, with the difference.
+    - name: Verdict
+      contains: One sentence saying if you are still on plan, at risk, or cannot recover this period without new pipeline.
+    - name: Substitute list
+      contains: Open deals that could fill the gap, with amount, why they are plausible, what must happen and by when.
+    - name: This week's actions
+      contains: The best moves to save the slipping deal or speed up a substitute deal.
+    - name: If it slips anyway note
+      contains: Next period's commit with this deal included, plus knock-on risks like stacked renewals.

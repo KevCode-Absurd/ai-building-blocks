@@ -1,6 +1,6 @@
 new_slug: thirty-day-launch-planner
 name: "Thirty day launch planner"
-summary: "Paste your idea, budget and tools. Get a 30-day plan to launch, take payment and decide to keep, kill or change."
+summary: "Plan a 30-day launch with a fixed deadline, an early payment step, a spending cap and a keep, kill or change rule. Give it your idea and tools."
 job: test-an-idea
 thinking: medium
 thinking_why: "It has to fit a plan to your skills, budget and tools, but the structure of the 30 days is fixed."
@@ -17,6 +17,10 @@ when:
   - You have been planning for months and nothing has launched.
   - You want to test an idea without leaving your job or spending much.
   - You want a plan that ends with a decision, not a list of tasks.
+not_for:
+  - "You already have paying customers and want to grow: use a simple growth plan from a mentor or advisor, since this plan starts from zero."
+  - "You need a licence or legal sign-off before you can sell: get that sorted first with a lawyer or the licensing body, then come back."
+  - "You only want a quick check that people want the idea before building: test it with a few buyers by hand, one chat at a time."
 
 you_give:
   - Your idea and the problem it solves, ideally one you have yourself
@@ -34,6 +38,29 @@ how_to_use:
   - Name the places your exact audience gathers.
   - Write the deadline and the decision rule where others can see them.
   - Update the log of problems each week and bring it back on day 30.
+output_sample:
+  input:
+    - Your idea and the problem it solves, ideally one you have yourself
+    - Your budget and the hours you can give each week
+    - The tools you already use
+    - Where your audience gathers (optional)
+  output:
+    - name: The problem
+      contains: The problem as you have felt it, and who else shares it.
+    - name: The deadline
+      contains: The launch date, 30 days from your start, and where you will share it.
+    - name: Budget and hours
+      contains: A hard spending cap for the month, your weekly hours and a note that you keep your regular income.
+    - name: Tools and the core
+      contains: The tools you already know, the one core part to build and what is left out of version one.
+    - name: Do it yourself and pay for
+      contains: What you do cheaply, plus the one hard part worth paying an expert for and its cost.
+    - name: The 30 days
+      contains: Four weeks of named steps that fit your hours, with the day the payment step goes in.
+    - name: Where to launch
+      contains: The place your exact audience gathers and a weekly schedule of progress posts.
+    - name: Decision rule and failure log
+      contains: Keep, change and kill rules written before launch, and a way to log what goes wrong.
 
 how_it_works:
   - title: Starts from your problem

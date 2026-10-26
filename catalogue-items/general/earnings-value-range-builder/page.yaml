@@ -1,6 +1,6 @@
 new_slug: earnings-value-range-builder
 name: Earnings value range builder
-summary: Share an earnings range and price. Model share values and a bounded price breakdown, with assumptions and missing inputs shown.
+summary: Turn a range of normal earnings and a share price into a low, middle and high earnings value range, and see how much of the price is hope.
 job: money-and-investing
 thinking: high
 thinking_why: It chooses a multiple with reasons, handles debt ahead of the shares and must keep the answer a range. That needs careful reasoning.
@@ -14,6 +14,10 @@ when:
   - You know what a company earns in an ordinary year and want to see what that supports.
   - A share price looks high and you want to know how much of it rests on growth that has not happened.
   - You are weighing a price for a small business and want a range, not one number.
+not_for:
+  - "You have no earnings figures yet: use the Normal earnings estimator first to get low, normal and high earnings per share."
+  - "You want to value a company that loses money, or a private business with no adjusted earnings: ask a licensed financial adviser for a fuller valuation."
+  - "You need to decide on a large or personal purchase: use a licensed financial adviser, because this is a method, not advice."
 you_give:
   - Low, normal and high earnings per share from "Normal earnings estimator"
   - The share price and share count, or the asking price of a private business
@@ -31,6 +35,34 @@ how_to_use:
   - Say what you know about how stable the business is.
   - Read the split of the price before the range.
   - Take the result to "Asset floor estimator".
+output_sample:
+  input:
+    - Low, normal and high earnings per share, from the Normal earnings estimator
+    - The share price and share count, or the asking price of a private business
+    - Debt and preferred shares ahead of the ordinary shares (optional)
+    - The yield on top-grade bonds today (optional)
+    - A few words on how stable the business is (optional)
+  prerequisites:
+    - The earnings range from the Normal earnings estimator
+  output:
+    - name: FACTS
+      contains: The earnings range, price, share count and debt ahead, with any missing items marked.
+    - name: MULTIPLE
+      contains: The chosen multiple with its reason, the ceiling of 20 and the interest-rate cross-check.
+    - name: VALUE RANGE
+      contains: Low, middle and high value per share and in total.
+    - name: DEBT AHEAD
+      contains: How a quarter change in business earnings moves earnings per share.
+    - name: YIELD FLOOR
+      contains: Normal earnings divided by price, and whether it clears about 5%.
+    - name: SPLIT OF THE PRICE
+      contains: The earnings-supported part of the price and the remainder, or an unresolved result with the reason.
+    - name: HOW WIDE
+      contains: One sentence on how wide the range is and what that means.
+    - name: MISSING
+      contains: Facts you did not give.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed, or none.
 how_it_works:
   - title: Picks the multiple
     text: Anchors at about 10 to 12.5 and moves it only for stated reasons, never above 20.

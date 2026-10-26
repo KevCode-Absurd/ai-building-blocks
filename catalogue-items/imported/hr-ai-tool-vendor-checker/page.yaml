@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs risks and tests against set criteria.
 new_slug: hr-ai-tool-vendor-checker
 name: HR AI tool vendor checker
-summary: Name the HR job and the AI tool. Get a vendor test covering accuracy,
-  bias and a small pilot with success rules.
+summary: Check an HR AI tool vendor before you buy. Name the HR job and the tool. You get a scorecard, vendor questions, a small pilot and a decision record.
 job: hire-people
 headline: HR AI tool vendor checker
-subhead: A fair test of an AI tool before it touches hiring or other people
-  decisions. Name the HR job and the vendor, and get a scorecard, a list of
-  questions to ask and a small pilot with clear pass and fail rules.
+subhead: A fair test of an AI tool before it touches hiring or other people decisions. Name the HR job and the vendor, and get a scorecard, a list of questions to ask and a small pilot with clear pass and fail rules.
 explain: |
   A fair test of an AI tool before it touches hiring or other people decisions. Name the HR job and the vendor, and get a scorecard, a list of questions to ask and a small pilot with clear pass and fail rules.
 
@@ -18,6 +15,10 @@ when:
   - You are comparing two AI screening or chatbot tools for HR.
   - You want to pilot a tool on a small group before a full rollout.
   - Legal or leadership wants a record of why you picked a tool.
+not_for:
+  - "You need legal sign-off on a tool that makes final hiring decisions: ask your lawyer or employment counsel, as this does not replace legal review."
+  - "You want proof of fairness: start with the vendor's own independent bias audit, then use this to check it."
+  - "You only need to write a job post or screen questions: use your AI in a plain chat, no vendor check needed."
 you_give:
   - The HR task the tool will do
   - The vendor names or product pages
@@ -29,7 +30,30 @@ you_get:
   - A pilot plan with success and stop rules
   - A written decision record
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill into the chat. No code or paid tool is needed.
+  - Tell your AI the HR task, such as resume screening or a staff chatbot.
+  - Add the vendor names or product page text. Add your HR systems and any rules you must follow if you have them.
+  - Ask for the scorecard and the vendor questions first. Send the questions to each vendor and add their answers to the chat.
+  - Ask for the pilot plan with its success measures and stop rule. Run the pilot on a small group.
+  - Ask for the decision record. Have legal and your HR lead read it before you roll out.
+output_sample:
+  input:
+    - The HR task the tool will do, such as resume screening or a staff chatbot
+    - The vendor names or product pages
+    - Your HR systems, such as applicant tracking (optional)
+    - Rules or laws you must follow (optional)
+  output:
+    - name: Evaluation framework
+      contains: "The criteria for your HR task: accuracy, bias, openness about method, data privacy, cost and fit."
+    - name: Vendor scorecard
+      contains: One table that scores each vendor on the same criteria so you can compare them fairly.
+    - name: Vendor questions
+      contains: What to ask each vendor about training data, bias testing, data security and how the model changes.
+    - name: Red flags
+      contains: Warning signs to watch for in a sales demo or pitch.
+    - name: Pilot plan
+      contains: A small test with success measures and the signs that mean you pause or roll back.
+    - name: Decision record
+      contains: A written note of what you chose and why, for audit and compliance.
+    - name: Review schedule
+      contains: When to check the tool again, who owns it, and how to retire it.

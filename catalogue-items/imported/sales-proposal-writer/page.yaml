@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches your offer to the buyer needs.
 new_slug: sales-proposal-writer
 name: Sales proposal writer
-summary: Give it the prospect needs. Get a proposal or RFP reply with value,
-  price, timeline and proof.
+summary: Turn an RFP or call notes into a sales proposal with a summary, price table, timeline and case studies, ready for you to polish and send.
 job: sell-and-negotiate
 headline: Sales proposal writer
-subhead: A proposal or RFP reply that speaks to what the buyer asked for, with
-  value, price, timeline and proof in one document. Give it the prospect's needs
-  and get a draft to polish.
+subhead: A proposal or RFP reply that speaks to what the buyer asked for, with value, price, timeline and proof in one document. Give it the prospect's needs and get a draft to polish.
 explain: |
   A proposal or RFP reply that speaks to what the buyer asked for, with value, price, timeline and proof in one document. Give it the prospect's needs and get a draft to polish.
 
@@ -18,6 +15,10 @@ when:
   - You need a tailored proposal after a good discovery call.
   - You want an executive summary that sounds like the buyer.
   - Your pricing needs a clear table with options.
+not_for:
+  - "You only need a short sales email: write it by hand or ask your AI for a plain email draft."
+  - "You need a simple price quote: use a one-page quote template from your invoicing tool."
+  - "You have no RFP, call notes or product details yet: hold a discovery call first, then come back."
 you_give:
   - The RFP or notes on the prospect's needs
   - Your product or service details
@@ -29,7 +30,34 @@ you_get:
   - A pricing table
   - Case study sections
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Paste the RFP text or your notes on what the buyer needs.
+  - Add your product details, prices and timelines. Add case studies you own, if you have them.
+  - Say which format and tone you want, such as a Word document or a slide deck.
+  - Read the draft. Check every price, date and result against your own records, then edit before you send.
+  - Ask your AI to list any RFP question it left unanswered, and fix those gaps.
+output_sample:
+  input:
+    - The RFP text or your notes on the prospect's needs
+    - Your product or service details
+    - Your pricing and timelines
+    - Your case studies, logos or testimonials (optional)
+    - The format and tone you want (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Case studies and results that come from your own work
+  output:
+    - name: Requirements list
+      contains: Must-have and nice-to-have items from the RFP or notes, with any risks that could disqualify you.
+    - name: Prospect research
+      contains: Size, news and goals of the buyer, and what each decision maker is likely to care about.
+    - name: Executive summary
+      contains: A 250 to 400 word summary in the buyer's own words that restates their problem and your answer.
+    - name: Solution mapping
+      contains: Each requirement matched to one of your products or services.
+    - name: Pricing table and timeline
+      contains: Line items, options, volume discounts, and a timeline with milestones and assumptions.
+    - name: Case studies
+      contains: Two or three similar customer stories with the challenge, the solution and the results you supplied.
+    - name: Final document
+      contains: The proposal in your chosen format, with a contents list, appendices and a check that every RFP question is answered.

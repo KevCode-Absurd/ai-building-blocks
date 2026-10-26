@@ -1,0 +1,41 @@
+slug: agency-marketing-short-video-editing-coach
+name: Short-Video Editing Coach agent
+summary: "Share your clips, platform and editing app. Get a second-by-second edit plan, caption and sound checks, export settings and fixes ranked by impact."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: footage
+    required: false
+outputs:
+  - type: edit_plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-short-video-editing-coach.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-short-video-editing-coach.md
+  licence: MIT
+  original_name: Short-Video Editing Coach
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 4634520ab5e84b26bb6658f4f8c0f737ed7dd0b5c631b9211482a4cf4037ccbf
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Short-Video Editing Coach
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Short-Video Editing Coach
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-short-video-editing-coach.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

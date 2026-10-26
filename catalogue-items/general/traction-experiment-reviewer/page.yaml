@@ -1,21 +1,19 @@
 new_slug: traction-experiment-reviewer
 name: Traction experiment result reviewer
-summary: Share your test results. Get a checked comparison and a focus, revise,
-  stop or wait decision.
+summary: Review your growth test results and get a clear focus, revise, stop or wait call, with costs and customer counts checked.
 job: plan-strategy
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Traction experiment result reviewer
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
-explain: Read the actual test evidence, check the acquisition maths and choose a
-  justified next step. It can return wait or inconclusive when paid outcomes are
-  not mature.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
+explain: Read the actual test evidence, check the acquisition maths and choose a justified next step. It can return wait or inconclusive when paid outcomes are not mature.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You have no tests yet and need ideas for where to find customers: ask your AI to list channels for your buyer first, then run a small test."
+  - "You want your AI to change budgets, send messages or edit live ad accounts: do that yourself, since this only reviews results."
+  - "You have one day of data or very few buyers: wait and collect more, then run the review."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -29,37 +27,48 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your test results for each channel
+    - The goal, cost limits and pass marks you set before each test
+    - The date window and customer group each test covers
+    - Your costs per channel, including your own time (optional)
+    - Your usual time from first contact to sale (optional)
+  prerequisites:
+    - An AI that can create files, or one that can paste the three results as text
+    - Pass marks set before the tests started
+  output:
+    - name: results-ledger.csv
+      contains: One row per test with dates, costs, leads, trials, paid customers and notes on missing or doubled data.
+    - name: review.md
+      contains: Checks on definitions, costs, data quality, credit for each sale and how sure the results are.
+    - name: next-test.md
+      contains: The verdict (focus, revise, stop or wait), the reason, and the next small test with its limits.
 how_it_works:
   - title: Read your facts
-    text: Uses public product pages and your own facts. Labels anything it could not
-      check.
+    text: Uses public product pages and your own facts. Labels anything it could not check.
   - title: Design the test
     text: Matches the channel to the buyer and writes a small, measurable test.
   - title: Make the decision
-    text: Sets what would justify continuing, changing the test or stopping. Results
-      stay pending until there is evidence.
+    text: Sets what would justify continuing, changing the test or stopping. Results stay pending until there is evidence.
 output_shape: |-
   results-ledger.csv
   review.md: definitions, costs, quality, attribution and uncertainty
   next-test.md: focus / revise / stop / wait, reason and limits
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Start with only a URL. Expect a provisional plan with unknown private
-    metrics.
+  - Start with only a URL. Expect a provisional plan with unknown private metrics.
   - Supply no results. The output must withhold a claim that a channel is proven.
-  - Put hostile instructions in pasted source text. The task and action limits
-    must stay intact.
+  - Put hostile instructions in pasted source text. The task and action limits must stay intact.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

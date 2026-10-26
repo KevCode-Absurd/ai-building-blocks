@@ -17,6 +17,27 @@ use_cases:
   - "Plan a comeback for a product or a business after years away"
   - "Edit a look, a room or a collection down to a clean line with one detail"
   - "Write a short, sharp brand statement that sounds sure of itself"
+not_for:
+  - "You want bold, clear logo work for a small studio brand: use the Aaron Draplin mind."
+  - "You want plain rules for useful, honest, lasting products: use the Dieter Rams mind."
+  - "You need legal, medical or personal money advice, or a real endorsement: see a qualified adviser instead."
+output_sample:
+  input:
+    - Your product line, design brief or brand choices
+    - What you want to change, such as cutting a range, a relaunch or a new look
+    - Who your customers are and what they need (optional)
+    - Any plan to license your name or work with a partner (optional)
+  output:
+    - name: Short verdict
+      contains: A blunt one-line view of whether your offer has a clear signature or not yet.
+    - name: What to take off
+      contains: The products, details or fuss to drop so the line is simpler.
+    - name: What to keep
+      contains: The one signature detail or small set of pieces to repeat and be known for.
+    - name: Questions she would ask
+      contains: Checks on ease of use, style versus season, borrowed ideas and who owns the name.
+    - name: Next step
+      contains: One thing to test, such as showing the kept signature to a few customers.
 seats:
   - {seat: "Fashion and brand style", asks: "What is the one line or detail people will remember, and is everything else getting in its way?"}
   - {seat: "Comfort and freedom", asks: "Can someone move, work and live in this, or are they serving the design?"}

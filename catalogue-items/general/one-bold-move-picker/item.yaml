@@ -1,19 +1,26 @@
 slug: one-bold-move-picker
 name: "One bold move picker"
-summary: "Paste your plan and rivals. Get one move to back, a stop list, the cost and pass test."
+summary: Pick the one move to back from your marketing plan. Get a stop list for the rest, what it costs and a pass or fail test with a date.
 category: general
 type: skill
 role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: plan, required: true}
-  - {type: audit_report, required: false}
-  - {type: competitor_set, required: false}
+  - { type: plan, required: true }
+  - { type: audit_report, required: false }
+  - { type: competitor_set, required: false }
 outputs:
-  - {type: plan}
+  - { type: plan }
 origin: rebuilt
 version: 1.0.0
-minds: [al-ries, jack-trout]
+minds: [ al-ries, jack-trout ]
 credits:
-  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The law of singularity (one move in each situation produces the result, found where the rival least expects it), the warning that managers must stay near the front line, the law of failure (cut losses early) and the law of resources (an idea needs money to reach the mind)"}
+  - { title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The law of singularity (one move in each situation produces the result, found where the rival least expects it), the warning that managers must stay near the front line, the law of failure (cut losses early) and the law of resources (an idea needs money to reach the mind)" }
+before:
+  - marketing-plan-law-checker
+next:
+  - long-run-effects-checker
+  - smallest-test-picker
+  - case-against-writer
+needs_mode: manual

@@ -50,10 +50,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Interview five to eight recent buyers and write notes after each. Collect reviews and forum posts from the same group.
 
-2. **Forum and review avatar digger.** Use the skill `forum-and-review-avatar-digger`. Mines your interview notes, reviews and forum posts for the words this group uses.
+2. **Forum and review avatar digger.** Use the skill `forum-and-review-avatar-digger`. Mines your interview notes, reviews and forum posts for the words this group uses. Uses the notes you wrote after each interview, not the interview sheet.
 3. **Job-based avatar builder.** Use the skill `job-based-avatar-builder`. Give it the voc reviews from the steps before. Turns the quoted words into a buyer profile with a trigger, a job and proof. Reads the words from the step before.
-4. **Buyer brief writer.** Use the skill `buyer-brief-writer`. Give it the voc reviews from the steps before. Boils the findings to a half-page brief for ad and page writers. Reads the quoted words from the digger step.
-5. **Avatar fit checker.** Use the skill `avatar-fit-checker`. Give it the persona and the voc reviews from the steps before. Checks whether your current ad or page sounds like this buyer. Reads the profile from the step before.
+4. **Buyer brief writer.** Use the skill `buyer-brief-writer`. Give it the voc reviews and the persona from the steps before. Boils the findings to a half-page brief for ad and page writers. Reads the quoted words from step 2 and the buyer profile from step 3.
+5. **Avatar fit checker.** Use the skill `avatar-fit-checker`. Give it the persona, the brief and the voc reviews from the steps before. Checks whether your current ad or page sounds like this buyer. Reads the brief from step 4 and the profile from step 3.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

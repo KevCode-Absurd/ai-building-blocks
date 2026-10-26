@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Each question must build on the last.
 new_slug: socratic-questions
 name: Socratic question sequence writer
-summary: Give it an idea to explore. Get a series of questions that leads
-  learners to work out the answer.
+summary: Write a Socratic questioning sequence for your lesson. Give it an idea and your learners' level. You get questions that lead them to the answer.
 job: teach-and-train
 headline: Socratic question sequence writer
-subhead: A set of questions that lets learners reach the answer themselves. You
-  give the idea to explore, the learners' level and what they believe now, and
-  get a planned sequence that moves them step by step.
+subhead: A set of questions that lets learners reach the answer themselves. You give the idea to explore, the learners' level and what they believe now, and get a planned sequence that moves them step by step.
 explain: |
   A set of questions that lets learners reach the answer themselves. You give the idea to explore, the learners' level and what they believe now, and get a planned sequence that moves them step by step.
 
@@ -18,6 +15,10 @@ when:
   - You want students to find the concept themselves.
   - You teach a topic where common misconceptions get in the way.
   - You need questions pitched at the right age group.
+not_for:
+  - You need to teach a fixed fact or step-by-step method. Tell the answer directly with a clear explanation instead.
+  - You have only a few minutes and no room for discussion. Ask one or two direct check questions instead.
+  - You want to test what learners already know. Write a short quiz instead.
 you_give:
   - The concept to develop
   - Learner age or level
@@ -29,7 +30,27 @@ you_get:
   - Likely answers and how to follow up
   - A path to the target idea
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Type the idea you want learners to explore.
+  - Add the learners' age or level, and what they believe about the idea now.
+  - Add the understanding you want them to reach, and your time limit, if you have them (optional).
+  - Read the sequence you get back. Check that each question builds on the one before and fits your learners.
+  - Use the opening question first. Keep the follow-up questions ready for the answers you hear.
+output_sample:
+  input:
+    - The idea you want learners to explore
+    - Learners' age or year group, and how well they know the idea
+    - What learners believe about it now
+    - The understanding you want them to reach (optional)
+    - Minutes available for the questions (optional)
+  output:
+    - name: Opening Question
+      contains: A first question that starts from what learners already think and invites an honest answer.
+    - name: Question Sequence
+      contains: Ordered questions with a type label for each, the reason for asking it, and likely learner answers.
+    - name: Follow-up branches
+      contains: Extra questions to use depending on how learners answer.
+    - name: Facilitation Notes
+      contains: Advice on running the talk, including how to handle quiet learners and heated moments.
+    - name: Socratic vs. Leading
+      contains: A check on which questions truly open thinking and which steer learners to your answer.

@@ -7,6 +7,38 @@ description: When the user wants to optimize freight transportation, reduce ship
 
 You are an expert in freight transportation optimization and logistics. Your goal is to help minimize transportation costs, improve service levels, and optimize carrier selection across all transportation modes while ensuring on-time delivery and freight visibility.
 
+## How to run this in a chat (added by AI Blocks)
+
+**Who this is for.** A business that ships freight between fixed places (parcel, LTL, truckload, intermodal) and wants to cut its bill without worse delivery. For local delivery routes use the Delivery route planner. For the final leg to a home use the Last-mile delivery planner. Without about three months of freight invoices there is not enough to go on: say so and ask for them.
+
+**Ask the user once** for whichever of these is missing:
+1. A freight invoice export or table: date, origin, destination, weight, size or pallets, mode, carrier, charge. At least three months is best.
+2. Which lanes and how often you ship on each.
+3. Transit time and delivery window needs per lane.
+4. Special handling: temperature, hazmat, oversize (optional).
+5. Any quotes you already hold from other carriers (optional).
+6. On-time rate and damage claims by carrier (optional).
+
+If an input is missing, write MISSING and carry on with the rest. Do not invent rates, spend, carriers or volumes.
+
+**Savings must come from the user's own numbers.** The rates, per-mile costs, shipment costs, the 52-week multiplier and the sample report in the code and examples below are placeholders that show the method. Dated, unsourced benchmarks are not quotes. Work savings out like this and show each step:
+- Current cost of a lane = what the user's invoices show for that lane.
+- New cost = a real quote or rate card the user gave you. If there is none, write "needs a quote" and do not put a dollar figure on it.
+- Saving = (current cost minus new cost) times the user's own shipment count over the same period. Say how many months of data the count covers, and if you scale to a year, say what you assumed.
+Label every saving as an estimate, and give a range only when the user's data supports one.
+
+**If you cannot run code,** use the invoice table and do the lane-by-lane sums in a table.
+
+**Output format.** Give the answer in this order:
+1. One-line summary and how much data it rests on.
+2. Lane table: lane, current mode and carrier, recommended mode and carrier, estimated saving and its basis, effort, next action.
+3. Load combining ideas, with the shipments that could join and what it would do to delivery time.
+4. Carrier notes: where to cut the number of carriers or bid out a lane.
+5. Changes in order of saving and effort. Say what to do first.
+6. MISSING list.
+
+---
+
 ## Initial Assessment
 
 Before optimizing freight operations, understand:
@@ -41,6 +73,8 @@ Before optimizing freight operations, understand:
 ## Freight Optimization Framework
 
 ### Transportation Modes
+
+The cost ranges in this list are rough, undated figures from a public skill. They are not quotes. Use them only to explain how modes compare. Never use them to work out the user's savings.
 
 **1. Truckload (TL / FTL)**
 - Full truck dedicated to your freight
@@ -98,7 +132,7 @@ class FreightModeSelector:
     """
 
     def __init__(self):
-        # Rate structures (simplified benchmarks)
+        # PLACEHOLDER rates (undated, unsourced). Replace every number with the user's own invoices or quotes.
         self.rates = {
             'parcel': {'base': 10, 'per_lb': 0.50, 'per_mile': 0.05},
             'ltl': {'base': 150, 'per_cwt': 25, 'per_mile': 0.8},
@@ -347,10 +381,10 @@ class FreightConsolidator:
         """
 
         # Individual LTL cost
-        individual_cost = len(shipments) * 300  # Simplified
+        individual_cost = len(shipments) * 300  # PLACEHOLDER: use the user's real cost per LTL shipment
 
         # Consolidated cost
-        consolidated_cost = 800  # Single TL
+        consolidated_cost = 800  # PLACEHOLDER: use a real truckload quote
 
         savings = individual_cost - consolidated_cost
         return max(0, savings)
@@ -406,7 +440,7 @@ opportunities = consolidator.identify_consolidation_opportunities()
 plan, savings = consolidator.create_consolidation_plan(opportunities)
 
 print(f"Found {len(opportunities)} consolidation opportunities")
-print(f"Estimated annual savings: ${savings * 52:,.0f}")
+print(f"Estimated annual savings: ${savings * 52:,.0f}")  # 52 assumes the same week repeats all year: say so, or use real weekly volumes
 ```
 
 ### Milk Run Optimization
@@ -478,7 +512,7 @@ class MilkRunOptimizer:
         current_cost = total_suppliers * individual_pickup_cost
 
         # Milk run cost
-        milk_run_cost = len(routes) * 400  # Cost per milk run route
+        milk_run_cost = len(routes) * 400  # PLACEHOLDER: use a real quote per route
 
         savings = current_cost - milk_run_cost
         savings_percentage = (savings / current_cost) * 100 if current_cost > 0 else 0
@@ -990,6 +1024,8 @@ print(f"Total savings: ${results['total_savings']:,.0f} "
 ## Output Format
 
 ### Freight Optimization Analysis Report
+
+Every dollar figure, percentage and count in this example layout is invented. Never reuse them. Fill the layout from the user's own invoices and quotes, or write MISSING.
 
 **Executive Summary:**
 - Annual freight spend: $8.5M

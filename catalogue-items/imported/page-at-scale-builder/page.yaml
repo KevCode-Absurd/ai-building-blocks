@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Quality at scale needs careful design.
 new_slug: page-at-scale-builder
 name: Page-at-scale builder
-summary: Give it a keyword pattern and data. Get a page template and plan for
-  many useful search pages.
+summary: Plan many search pages from one keyword pattern and your data. You get a page template, URL plan and a small first batch to test.
 job: get-found-in-search
 headline: Page-at-scale builder
-subhead: A page template and a rollout plan for hundreds of search pages, built
-  so none of them read as thin or copied. You give it a keyword pattern, such as
-  service plus city, and the data you have to fill it.
+subhead: A page template and a rollout plan for hundreds of search pages, built so none of them read as thin or copied. You give it a keyword pattern, such as service plus city, and the data you have to fill it.
 explain: |
   A page template and a rollout plan for hundreds of search pages, built so none of them read as thin or copied. You give it a keyword pattern, such as service plus city, and the data you have to fill it.
 
@@ -18,6 +15,10 @@ when:
   - You have a data set and wonder if it can power a directory.
   - You worry that near-identical pages will get ignored by search.
   - You need a plan for URLs, templates and internal links before building.
+not_for:
+  - "You only need a few pages, or you have no real data for each page: write one landing page by hand instead."
+  - "You want to fix search problems on pages you already have: use an SEO audit, not this skill."
+  - "You want to plan topics and a content calendar: use a content strategy step instead."
 you_give:
   - Keyword pattern, like [service] in [city]
   - Your data source or spreadsheet
@@ -30,7 +31,33 @@ you_get:
   - Quality checks before publishing
   - Small first-batch launch plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Give your keyword pattern, such as [service] in [city], and say what you sell and who buys it.
+  - Paste your data as a table. One row per page, with columns such as city, service, number of providers and one unique fact per row.
+  - Add the pages that rank today for this pattern (optional).
+  - Read the template and data check first. Fix any gaps in your data before you build.
+  - Publish a small first batch. Check how many pages get indexed before you add more.
+output_sample:
+  input:
+    - Your keyword pattern, such as service plus city
+    - Your data source or spreadsheet, with one row per page
+    - Your product and who buys it
+    - Pages that rank for these terms today (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - A product marketing file from earlier work (optional)
+  output:
+    - name: Opportunity analysis
+      contains: Whether the keyword pattern has real demand, how many pages it could make, and who ranks now.
+    - name: Data check
+      contains: Your data ranked from hardest to copy to easiest, with what is missing.
+    - name: Page template
+      contains: Title and meta description patterns, a content outline, unique content slots and schema markup.
+    - name: URL structure
+      contains: A clean folder layout on your main site, not a subdomain.
+    - name: Internal linking plan
+      contains: A main category page linked to each page, with links between related pages.
+    - name: Indexation plan
+      contains: Which pages to publish first, which thin ones to keep out of search, and how to split sitemaps.
+    - name: Pre-launch checklist
+      contains: Checks for content quality, technical setup, links and indexing before you publish.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks several signals against size benchmarks.
 new_slug: telegram-ad-vetter
 name: Telegram ad vetter
-summary: Give it a channel and its price. Get a verdict on audience, fake
-  followers and fair cost per thousand.
+summary: Check a Telegram channel before you buy an ad post. Get a reach check, fake follower signs, cost per thousand views and a buy or skip verdict.
 job: check-ads
 headline: Telegram ad vetter
-subhead: Give it a channel and its price. Get a verdict on audience, fake
-  followers and fair cost per thousand. Bring the channel name or link. Use the
-  result to plan your next step.
+subhead: Give it a channel and its price. Get a verdict on audience, fake followers and fair cost per thousand. Bring the channel name or link. Use the result to plan your next step.
 explain: |
   A verdict on whether a Telegram channel is worth the price you were quoted, based on real audience reach, signs of fake followers and a fair cost per thousand views. You avoid paying for a post that nobody sees.
 
@@ -19,6 +16,10 @@ when:
   - You suspect a channel has bought subscribers.
   - You do not know what 1/24 or 1/48 means.
   - You need a cost per thousand to compare with other ad channels.
+not_for:
+  - The channel has not posted in the last week. Its views are not a fair guide, so ask the admin for 30 days of Telegram statistics instead.
+  - The channel hides its public web preview. Ask the admin for screenshots of the built-in statistics, or check by hand.
+  - You want to buy impressions, not a post in one channel. Use Telegram Ads, which Telegram runs itself.
 you_give:
   - The channel name or link
   - The price quoted
@@ -30,7 +31,28 @@ you_get:
   - Cost per thousand views
   - A buy, negotiate or skip verdict
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat and paste the skill text. Use an AI that can open web links if you can.
+  - Give it the channel name or link, the price and the post format offered.
+  - Add other channels you want to compare (optional).
+  - If the AI cannot open the channel preview, paste in the subscriber count and the views of 10 to 20 posts that are over a week old.
+  - Read the reach check and red flags first, then the cost per thousand and the verdict.
+  - Before you pay, ask the admin for 30 days of Telegram statistics. Give each channel its own link or code.
+output_sample:
+  input:
+    - The channel name or link
+    - The price you were quoted
+    - The post format offered, such as 1/24 or a permanent post
+    - Other channels to compare (optional)
+  prerequisites:
+    - An AI that can open web links, or you paste in the channel's subscriber count and post views yourself
+  output:
+    - name: Reach check
+      contains: Median views of week-old posts divided by subscribers, set against channels of the same size, topic and language.
+    - name: Red flags
+      contains: Findings on how active the channel is, how many ads it runs, shared ad contacts, channel age and admin statistics.
+    - name: Cost per thousand views
+      contains: Expected views, adjusted for how long the post stays up, turned into a cost per thousand views.
+    - name: Verdict
+      contains: A buy, negotiate or skip call with the reasons behind it.
+    - name: Tracking advice
+      contains: How to give each channel its own link or code so you can compare results.

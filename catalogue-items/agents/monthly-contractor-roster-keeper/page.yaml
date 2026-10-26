@@ -1,6 +1,6 @@
 new_slug: monthly-contractor-roster-keeper
 name: Monthly contractor roster keeper
-summary: Give it your contractor roster and invoices each month. Get who to keep, whose terms to fix and the agreements to redo.
+summary: Check contractor invoices against what you agreed each month. Spot risky terms, decide who to keep, and draft the missing agreements.
 job: hire-people
 thinking: high
 thinking_why: It matches invoices to agreements, weighs risk signs and judges working relationships from notes. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You work with five or more freelancers or contractors and the terms live in old emails.
   - An invoice surprised you last month and you could not find what was agreed.
   - You are not sure which contractors are worth keeping and which are costing you.
+not_for:
+  - "You have employees on payroll: use your payroll tool or an HR adviser, not this roster keeper."
+  - "You have one contractor or a one-off buy: use the Invoice checker alone to compare the bill with the agreement."
+  - "You want a legal ruling on employee or contractor status: ask a lawyer. This only raises questions for counsel."
 you_give:
   - Your roster with work, agreed rate, terms, start date and whether an agreement exists
   - This month's contractor invoices (advised)
@@ -33,6 +37,31 @@ how_to_use:
   - On the first run, approve the program setup and have counsel check the classification part.
   - Read the mismatches and the screens. Pay, dispute or change what you decide, then tell the agent.
   - Run it again at the end of next month. It tracks drift over time.
+output_sample:
+  input:
+    - Your contractor roster with work, rate, terms, start date and agreement status
+    - This month's contractor invoices
+    - Your notes on what was delivered, late or wrong (optional)
+    - Where you and each contractor are based
+    - Last month's keeper file (once it exists)
+  prerequisites:
+    - An AI that can read your files, such as Claude Code, to keep the roster between months
+    - Counsel to check the classification part on the first run
+  output:
+    - name: This month in one line
+      contains: Number of contractors, total invoiced against agreed, mismatches and flags.
+    - name: Invoice mismatches
+      contains: Each invoice with the agreement line it breaks and the gap.
+    - name: Classification flags
+      contains: Contractors with two or more risk signs, the signs, and a question for counsel.
+    - name: Screens
+      contains: Each contractor screened this month, with a verdict of repeat, fix terms or wind down, and the evidence.
+    - name: Paperwork
+      contains: Results agreements and contract drafts, each marked for counsel.
+    - name: Wind-downs
+      contains: Contractors to end once current work finishes, with the date.
+    - name: Files and MISSING lines
+      contains: Each step's saved file and every gap the agent could not fill.
 how_it_works:
   - title: Set up the program once
     text: Builds the classification risk check, onboarding checklist and vendor plan for the kinds of work you buy.

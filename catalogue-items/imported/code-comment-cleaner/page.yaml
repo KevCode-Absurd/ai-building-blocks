@@ -2,13 +2,10 @@ thinking: low
 thinking_why: "It rewrites comments under one strict rule: never change behaviour."
 new_slug: code-comment-cleaner
 name: Code comment cleaner
-summary: Give it a code file. Get clear, professional comments and tidy-ups,
-  with the logic left untouched.
+summary: Clean up code comments without changing how the code works. Give it a file. You get clear comments, missing docstrings and a report of what changed.
 job: build-software
 headline: Code comment cleaner
-subhead: Comments that read like one careful person wrote them, and code that
-  still behaves exactly the same. It is meant for the last pass before a review,
-  a handoff or going public.
+subhead: Give it a code file. It rewrites rough or old comments, adds missing docstrings and tidies spacing. The logic stays exactly the same. Use it for the last pass before a review, a handoff or going public.
 explain: |
   Comments that read like one careful person wrote them, and code that still behaves exactly the same. It is meant for the last pass before a review, a handoff or going public.
 
@@ -17,19 +14,45 @@ when:
   - You are about to open-source a project full of rough notes.
   - A file mixes human comments and AI comments in different voices.
   - Old comments no longer match what the code does.
-  - You want clearer comments without any risk of changed behavior.
+  - You want clearer comments with no risk of changed behaviour.
+not_for:
+  - "You need a bug fixed or the behaviour changed: ask your AI for a plain bug fix instead, since this skill never edits logic."
+  - "You want the code rebuilt, split into new functions or given a new design: work with a developer or ask your AI for a separate refactor."
+  - "You want a full style check, such as line length or import order: run your language's linter or formatter."
 you_give:
   - A code file or module
   - The language and style guide (optional)
   - Comments to keep as they are (optional)
 you_get:
-  - Rewritten comments in one voice
+  - Your file with comments rewritten in one clear voice
   - Docstrings where they were missing
-  - Safe formatting tidy-ups
-  - A list of anything spotted but not changed
+  - Safe spacing and layout tidy-ups
+  - A report of what was rewritten, added, removed, flagged as stale or left alone
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and edit your project files.
+  - Save a git commit or a backup copy of your code first, so you can compare before and after.
+  - Open your AI and paste the skill instructions. If your AI can read files, upload the file. If not, paste the code.
+  - Tell it the language and whether any comments must stay as they are.
+  - Read the report first. Check the flagged and left-alone items.
+  - Compare the new file with your backup. Only comments and layout should differ.
+  - Run your project's tests before you merge. Send any logic problems it flagged to a separate bug fix.
+output_sample:
+  input:
+    - Your code file or module
+    - The language and style guide (optional)
+    - Comments you want kept as they are (optional)
+  prerequisites:
+    - A git commit or backup of your code to compare against
+    - An AI that can read your file, or a chat where you can paste it
+  output:
+    - name: Rewritten file
+      contains: Your code with clear comments in one voice, docstrings added where missing, and safe spacing fixes. Logic is unchanged.
+    - name: Rewritten comments
+      contains: A count of comments that were reworded, with the reason for each.
+    - name: Added comments
+      contains: Docstrings and notes added to complex logic or public functions that had none.
+    - name: Removed comments
+      contains: Redundant comments and dead code taken out, listed one by one.
+    - name: Flagged as stale
+      contains: Comments that no longer matched the code, with what they used to say and what they say now.
+    - name: Left alone
+      contains: Anything you were unsure about, so a person can decide.

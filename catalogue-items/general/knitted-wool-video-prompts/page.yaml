@@ -1,6 +1,6 @@
 new_slug: knitted-wool-video-prompts
 name: "Knitted wool video clip prompt writer"
-summary: "Paste your knitted script and attach product photos. Get sheets, a storyboard and wool clip prompts."
+summary: "Turn a knitted wool video script into doll sheets, a storyboard and clip prompts for AI video tools, with three stops for your OK."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have a knitted-wool script and need it made with AI image and video tools.
   - Earlier tries drifted into real people, real materials or a doll that kept changing.
   - You want to approve each step before you spend credits on video.
+not_for:
+  - "You want an ad with real people, real products or a speaking character: use a live-action video ad script and shoot it, or write prompts by hand."
+  - "You only need a script and have no plan to make clips yet: write the script first, then come back here."
+  - "You want a single image, not a video: use your image tool with a plain prompt."
 
 you_give:
   - The script with narration and picture notes (and its show plan, room list and cast note, if you have them)
@@ -35,6 +39,31 @@ how_to_use:
   - Approve the avatar card, then make the reference images and pick one.
   - Make the sheets and approve them with the lock lines, then approve the storyboard.
   - Make the clips from the approved frames, record the narration, and cut the edit from the edit list.
+output_sample:
+  input:
+    - Your knitted wool script with narration and picture notes
+    - "Clean photos of your product: front, side and top"
+    - Your label text, word for word
+    - How your product is used
+    - Your video tool and clip length (optional)
+  prerequisites:
+    - An AI that can read your photos
+    - An image tool and a video tool to make the pictures and clips from the prompts
+  output:
+    - name: "Stage 0: Script in"
+      contains: What the ad shows, which yarn technique it uses, and where the change starts and ends.
+    - name: "Stage 1: Avatar card"
+      contains: "Who or what carries the ad: look, clothes, props, voice and what never changes. You approve it."
+    - name: "Stage 2: Reference images"
+      contains: Three or four image prompts for the doll, plus a pick of the best one.
+    - name: "Stage 3: Sheets and lock lines"
+      contains: Doll, product and room sheets, with the doll card, material sentence and motion sentence. You approve them.
+    - name: "Stage 4: Storyboard"
+      contains: A frame prompt and a shot card for every shot, with continuity notes. You approve the board.
+    - name: "Stage 5: Clip prompts"
+      contains: One prompt per clip where yarn moves only as yarn can, plus voice lines and an edit list.
+    - name: Checks missed
+      contains: One line for each check the result still misses, or none.
 
 how_it_works:
   - title: Takes in the script

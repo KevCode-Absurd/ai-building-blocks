@@ -10,6 +10,10 @@ level: beginner
 inputs:
   - type: source_text
     required: true
+  - type: plan
+    required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: copy_draft
     required: true

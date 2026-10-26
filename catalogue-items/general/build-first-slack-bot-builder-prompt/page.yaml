@@ -1,27 +1,59 @@
 new_slug: build-first-slack-bot-builder-prompt
 name: First Slack Bot coding prompt
-summary: Get a coding brief for a Slack bot that receives scoped events, checks access and returns a clear reply.
+summary: Get a coding prompt that builds a Slack bot which replies "Pong" when someone says ping. A first test for your Slack bot, in Claude Code.
 job: build-software
 headline: First Slack Bot coding prompt
-subhead: Get a coding brief for a Slack bot that receives scoped events, checks access and returns a clear reply.
+subhead: Use this to prove your Slack connection works. You give it your project and tokens. It builds a small ping bot that replies in the thread, and explains each part in plain words.
 explain: |-
   Share your project and the required feature. Get a coding brief for first slack bot, with setup and test steps.
 
   The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
 when:
-  - You need a coding brief for first slack bot.
-  - You need build first slack bot prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You want a first test that your app can talk to Slack.
+  - You are new to Slack bots and want each part explained simply.
+  - You want a small base to grow into a bigger bot later.
+not_for:
+  - "You want a bot that does real work for your team: plan that build as its own project, and use this only to test your Slack connection first."
+  - "You want to run it in a live company workspace: use a sandbox Slack workspace, or ask a developer to review it first."
+  - "You do not have a Slack app, tokens or a code project yet: ask a developer to set those up, then come back."
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, open in a coding AI
+  - Your Slack bot token and app token, saved in .env.local
+  - A Slack app with Socket Mode on and the scopes listed above
+  - A sandbox Slack workspace to test in
 you_get:
-  - A coding brief for first slack bot
-  - Required files, setup gaps and test cases
+  - A Slack bot file that replies Pong when someone says ping
+  - A test script to start the bot
+  - A plain explanation of Socket Mode and the two tokens
+  - Steps to invite the bot and test it
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Check you have a Slack app, Socket Mode on, the three bot scopes and both tokens in .env.local.
+  - Open your project in a coding AI that can write files, such as Claude Code.
+  - Paste the prompt from the skill and send it.
+  - Say yes before it installs the Slack package.
+  - Run the test script, invite the bot to a channel with /invite and type ping.
+  - Check the bot replies in the thread with the channel and user.
+output_sample:
+  input:
+    - Your code project (a repository your AI can open)
+    - Your Slack bot token and app token, saved in .env.local
+    - A Slack workspace where you can add a bot
+  prerequisites:
+    - A coding AI that can read and write files in your project, such as Claude Code
+    - A Slack app with Socket Mode on, made at api.slack.com/apps
+    - Bot scopes chat:write, channels:history and app_mentions:read
+    - An app-level token with the connections:write scope
+  output:
+    - name: Package install
+      contains: The Slack Bolt package added to your project, after you confirm the install.
+    - name: lib/slack/app.ts
+      contains: The bot setup using both tokens in Socket Mode, with a listener that answers ping in the same thread.
+    - name: scripts/test-slack-bot.ts
+      contains: A short script that starts the bot, prints a running message and shuts down cleanly on Ctrl+C.
+    - name: Plain-language explanation
+      contains: Short notes on Socket Mode, what each token does, how to invite the bot and what happens on ping.
+    - name: Test steps
+      contains: The command to start the bot, then how to invite it to a channel and type ping.
 how_it_works:
   - title: Inspect the target project
     text: Check its file structure, interfaces and service setup before choosing paths.

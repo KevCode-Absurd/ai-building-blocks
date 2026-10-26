@@ -1,15 +1,13 @@
 slug: compare-preferred-exit-payout-terms
 name: Compare preferred exit payout terms
-summary: Compare nonparticipating and capped-participating alternatives on the same single-class proceeds scenarios.
+summary: "See what the investor and common holders each get at exit under nonparticipating and capped participating preferred terms, side by side."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - nonparticipating-preference-checker
   - capped-participation-checker

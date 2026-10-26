@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows strict style rules while it writes.
 new_slug: forceful-prose-writer
 name: Forceful prose writer
-summary: Give it a topic or a draft. Get clean, concrete writing with no filler
-  and none of the usual AI habits.
+summary: Give it a topic or a draft. Get forceful prose writing with strong verbs, no filler and none of the usual AI habits.
 job: write-and-tell-stories
 headline: Forceful prose writer
-subhead: "Clean, concrete writing with no filler and none of the usual AI
-  habits: no friendly assistant tone, no empty openers, no stock phrases. Use it
-  for essays and rewrites that need weight."
+subhead: "Clean, concrete writing with no filler and none of the usual AI habits: no friendly assistant tone, no empty openers, no stock phrases. Use it for essays and rewrites that need weight."
 explain: |
   Clean, concrete writing with no filler and none of the usual AI habits: no friendly assistant tone, no empty openers, no stock phrases. Use it for essays and rewrites that need weight.
 
@@ -18,6 +15,10 @@ when:
   - You want an essay with a firm, confident voice.
   - You need a rewrite that cuts filler and keeps the point.
   - You want to try the same piece in a cooler or hotter tone.
+not_for:
+  - "You need a factual report or content that cites sources: ask a human editor or a research tool, since this skill does not check facts."
+  - "You want a warm, friendly or chatty tone: write it yourself or ask your AI for a plain, casual draft."
+  - "You need your own brand voice: run a separate edit pass after, or share a sample of your voice with your AI."
 you_give:
   - Topic or draft
   - Register (literary, journalistic, cold)
@@ -28,7 +29,21 @@ you_get:
   - Version in the voice you picked
   - Rewrite that removes stock phrases
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - "Paste the skill text first. Then start your request with the line: Apply the Beautiful Prose skill."
+  - "On the next lines, add your settings if you want them, such as REGISTER: cold_steel or LENGTH: short."
+  - Add your topic, or paste your draft. Say who it is for and how long it should be.
+  - Read the result. Check facts and names yourself, because the skill does not verify claims.
+  - Run a separate edit pass if the piece must match your brand voice.
+output_sample:
+  input:
+    - Your topic, or a draft to rewrite
+    - "The register you want: founding_fathers, literary_modern, cold_steel or journalistic (optional)"
+    - "Density: lean, standard or dense (optional)"
+    - "Heat: cool, warm or hot (optional)"
+    - "Length: micro, short, medium or long (optional)"
+  output:
+    - name: Prose
+      contains: Plain text writing in the register you chose, with no headings or bullets unless you asked for them.
+    - name: No commentary
+      contains: The skill adds no notes, no thanks and no talk about the piece, so you get the writing only.

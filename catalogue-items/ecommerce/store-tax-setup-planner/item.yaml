@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: product_data, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 uses: []

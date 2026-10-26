@@ -1,0 +1,42 @@
+slug: agency-academic-geographer
+name: Geographer agent for worldbuilding
+summary: Check a fictional map for impossible rivers, climate and resources, or build one that follows real physics. Get a report on land, weather and settlements.
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: academic/academic-geographer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-geographer.md
+  licence: MIT
+  original_name: Geographer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 4acf4a6ee6ae96ce562323c8ce508db9f2eb0ece016fc754214be9587c071c0d
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Geographer
+  - Agency Agents
+  - Academic
+credits:
+  - title: Geographer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-geographer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

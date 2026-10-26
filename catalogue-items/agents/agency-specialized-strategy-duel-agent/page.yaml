@@ -1,0 +1,130 @@
+name: Strategy Duel agent
+summary: Rehearse a negotiation or rivalry before it happens. Get a scored round-by-round strategy debate and a clear verdict on your best next move.
+headline: Strategy Duel agent
+subhead: Describe the situation, your goal and the other side. The agent plays both sides for a set number of rounds. Each move uses a named stratagem and a game theory idea. You get a verdict and advice on what to do for real.
+job: think-and-decide
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Before a hard negotiation, most people prepare their own side only. This strategy simulator makes you face the other side's best replies first. You see how a price talk, a rival launch or a partner deal could go before you are in the room.
+
+  The agent sorts your situation into a game type, such as a one-off deal or a repeated one where trust matters. Then it plays both sides, round by round. In each round, each side makes one move. A move names a stratagem from the classic Chinese Thirty-Six Stratagems and a game theory idea, such as tit-for-tat. It gives one or two lines of reasoning and a score. The history carries over, so round 3 depends on round 2.
+
+  At the end a referee gives a verdict. It names a winner or a draw, says why, and checks if either side gains by changing its move. Then it gives advice for the real world: what to open with, which signals to watch and what to avoid. The tone is dramatic, but the reasoning stays clear.
+
+  This is a thinking exercise. The other side is a character the AI builds from your description, and the scores are its judgment, not data. A real person may act differently. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its memory and success claims are role language, not results measured by AI Blocks.
+when:
+  - You have a tough negotiation coming, such as a contract price, a raise or a deal with a partner.
+  - A rival is about to make a move and you want to test your answer before you commit.
+  - You are stuck between cooperating and pushing hard and want to see how each plays out.
+  - You want to train for a pitch or a sales call by facing a tough, simulated opponent.
+not_for:
+  - "You are negotiating supplier prices and want a ready plan with numbers: use the Factory price-break negotiator."
+  - "You want a plain list of options with trade-offs for one decision: use the Personal Growth Mentor agent, which has a decision table."
+  - "The stakes are legal, such as a lawsuit or a contract dispute: talk to a lawyer. Use this only to rehearse."
+  - "You want to predict what a real person will do. It cannot. It only tests your plan against a character built from your notes."
+  - "You want a one-pass pros and cons list: ask your AI directly, as a duel is slower than you need."
+you_give:
+  - The situation in a few lines, and what is at stake.
+  - Your role and your goal, such as "buyer who wants 10 percent off".
+  - The other side's style, wants and limits, as far as you know them.
+  - The number of rounds. Three is the default. Five gives more depth.
+  - Your hard limits, meaning what you will not give up (optional).
+  - Moves the other side has made before (optional).
+you_get:
+  - A setup card with the game type, the dynamic between both sides, the roles and the rounds.
+  - Each round with both moves. Each move has a named stratagem, a game theory idea, a line or two of reasoning and points.
+  - A referee verdict with a winner or a draw, the reason, the final score and whether either side gains by changing its move.
+  - Advice for the real world, with the opening move, signals to watch and what to avoid.
+  - A note on where the simulation had to guess.
+how_to_use:
+  - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - "Paste your situation, your goal and what you know about the other side. Say the number of rounds."
+  - Check the setup card first. If the game type or the other side is wrong, correct it before round 1.
+  - Read each round. If the opponent plays a move you think is unlikely, say so. Ask for that round again with your correction.
+  - Read the verdict and the advice. Pick one opening move and one signal to watch.
+  - Run it again with a different opponent style, such as "patient" or "aggressive", to see how your plan holds up.
+how_it_works:
+  - title: Gather the facts
+    text: It asks for the situation, your role, the opponent, your goal and the rounds. It marks anything missing and does not invent it.
+  - title: Name the game
+    text: It sorts the situation into a game type, such as a one-off deal or a repeated one, and announces the setup.
+  - title: Play each round
+    text: Each side picks a stratagem and a game theory idea, makes a move with reasoning and gets points. The history carries into the next round.
+  - title: Keep the score honest
+    text: It scores by its own stated reasons. It tells you the scores are judgments, not measures.
+  - title: Give the verdict
+    text: A referee names a winner or a draw and checks if either side would gain by changing its move.
+  - title: Advise for real
+    text: It turns the duel into advice for the real talk, and says where it was guessing.
+output_shape: |-
+  SETUP
+    Game type <type> | Dynamic <one line> | You <role> | Other side <role> | Rounds <n>
+
+  ROUND <n> OF <total>
+    YOU | Stratagem <#number and name> | Idea <game theory idea> | Move <what you do> | Reasoning <1 to 2 lines> | Points <+n, total>
+    OTHER SIDE | Stratagem <#number and name> | Idea <game theory idea> | Move <what they do> | Reasoning <1 to 2 lines> | Points <+n, total>
+
+  REFEREE VERDICT
+    Winner <you, other side or draw> | Why <one to three lines>
+    Would either side gain by changing its move <yes or no, who and how>
+    Final score <you and other side>
+
+  ADVICE FOR THE REAL TALK
+    Open with <move> | Watch for <signals> | Avoid <mistake>
+
+  WHERE THE SIMULATION GUESSED
+    <list of guesses about the other side>
+output_sample:
+  input:
+    - The situation and what is at stake
+    - Your role and your goal
+    - What you know about the other side
+    - The number of rounds (optional, the default is 3)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Setup
+      contains: The game type, the dynamic, both roles and the number of rounds.
+    - name: Rounds
+      contains: Both moves in each round, with a named stratagem, a game theory idea, reasoning and points.
+    - name: Referee verdict
+      contains: The winner or a draw, the reason, the final score and whether either side gains by changing its move.
+    - name: Advice for the real talk
+      contains: What to open with, which signals to watch and what to avoid.
+    - name: Where the simulation guessed
+      contains: The points about the other side that came from guesses, so you can check them.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Opponent style
+    how: Describe the other side as patient, aggressive, deal-focused or relationship-first, and run the duel again.
+  - what: Rounds
+    how: Ask for one round first to check the setup, then continue.
+  - what: Tone
+    how: Say "plain commentary" if you do not want the dramatic style.
+improve:
+  - Save the verdict and your own notes. Paste them into the next duel so it can build on what you learned.
+terms:
+  - term: Stratagem
+    meaning: A named trick or tactic. The Thirty-Six Stratagems is an old Chinese list of them.
+  - term: Game theory
+    meaning: The study of choices where the result depends on what the other side does too.
+  - term: Tit-for-tat
+    meaning: A way to play where you start friendly and then copy what the other side did last.
+  - term: Stable outcome
+    meaning: A result where neither side gains by changing its move alone. Game theory calls this a Nash equilibrium.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The duel runs as a conversation, so no files or tools are needed.
+  inputs:
+    - Notes on how the other side has acted in the past.
+    - Your best and worst outcomes, in plain words.

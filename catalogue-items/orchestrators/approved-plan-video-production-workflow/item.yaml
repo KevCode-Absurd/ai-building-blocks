@@ -1,17 +1,23 @@
 slug: approved-plan-video-production-workflow
 name: Approved-plan video production workflow
-summary: Turn your footage and brief into an edit plan. Approve the plan, review the render and prepare the delivery files.
+summary: Turn raw footage into a scene-by-scene edit plan. You approve it, then get a render check and delivery files for Reels, TikTok or Shorts.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: footage
     required: true
+  - type: transcript
+    required: false
+  - type: brief
+    required: false
 outputs:
   - type: edit_plan
     required: true
+  - type: audit_report
+    required: false
 uses: []
 execution: coordinator
 package_files: all

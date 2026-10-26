@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It must split work into tasks with proof of done.
 new_slug: multi-session-build-plan-writer
 name: Multi-session build plan writer
-summary: Give it a big build request. Get a plan in your repo that any fresh
-  agent can pick up and finish.
+summary: Turn a big build request into a plan stored in your repo, so a fresh AI agent can resume a multi-session build and prove each task is done.
 job: build-software
 headline: Multi-session build plan writer
-subhead: A plan stored in your repo that any fresh agent can pick up and finish,
-  so a big build does not die when a chat ends.
+subhead: A plan stored in your repo that any fresh agent can pick up and finish, so a big build does not die when a chat ends.
 explain: |
   A plan stored in your repo that any fresh agent can pick up and finish, so a big build does not die when a chat ends.
 
@@ -17,19 +15,44 @@ when:
   - An agent said it was finished and nothing actually worked.
   - You switch tools or branches and lose track of progress.
   - You need a clean handoff to a teammate.
+not_for:
+  - "You can finish and check the job in one chat: skip the plan and just ask your AI to do it."
+  - "Your goals are still unclear: settle what you want first with a short written brief, then come back."
+  - "You only want a task list, with no proof or resume point: ask your AI for a simple checklist instead."
 you_give:
   - The build request
   - Your repo
   - Existing plan or task files (optional)
   - What proof counts as done
 you_get:
-  - A contract file with scope and tasks
-  - A task tracker
-  - A resume checkpoint
-  - Evidence rules for completion
+  - A contract file with the goal, scope, tasks and what done means.
+  - A task tracker that shows status and links to proof.
+  - A checkpoint file with the exact place to resume.
+  - A decisions file and a validation log, kept when the work is large enough to need them.
+  - Rules that count a task as done only with proof.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write your project files.
+  - Open your AI tool in a chat that can read and write your project files, such as Claude Code, Cursor or Codex.
+  - Paste the skill text, then paste your build request. Add any plan or task files you already have.
+  - Say what proof counts as done for this build, such as a passing test or a working screen.
+  - Check the contract it writes. Fix the scope and tasks before any building starts.
+  - After each work session, ask your AI to update the tasks, validation log and checkpoint.
+  - "To resume, start a new chat, paste the skill, and say: read the contract and checkpoint, then do the next exact action."
+output_sample:
+  input:
+    - Your build request, in plain words
+    - Access to your repo, so your AI can read and write files
+    - Existing plan, goal or task files (optional)
+    - What proof counts as done, such as a passing test or a working screen
+  prerequisites:
+    - An AI that can read and write files in your project
+  output:
+    - name: IMPLEMENTATION_CONTRACT.md
+      contains: The goal, scope, exclusions, tasks with stable IDs, acceptance rules and the final definition of done.
+    - name: TASKS.md
+      contains: The status of each task and subtask, what it depends on, and links to proof.
+    - name: CHECKPOINT.md
+      contains: The branch, the active task, work in progress, blockers, and the one exact next action.
+    - name: DECISIONS.md
+      contains: Choices that limit later work, with the options considered and the reasons.
+    - name: VALIDATION.md
+      contains: Each check that was run, its exact command or steps, the result, and any open gates.

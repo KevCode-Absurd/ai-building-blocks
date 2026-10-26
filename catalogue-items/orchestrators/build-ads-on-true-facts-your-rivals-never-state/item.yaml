@@ -20,10 +20,10 @@ outputs:
   - {type: image_prompt}
 uses: [process-fact-finder, typed-headline-batch-writer, headline-cover-test-ranker, single-image-ad-planner]
 steps:
-  - {uses: process-fact-finder, note: "Starts from your maker, supplier and test notes."}
-  - {uses: typed-headline-batch-writer, note: "Writes twenty or more headlines from the claims in the step before."}
-  - {uses: headline-cover-test-ranker, note: "Reads the headline list and keeps three that can teach you something."}
-  - {uses: single-image-ad-planner, note: "Reads the claims from step 1. Paste the top headline from step 3 as the line it should keep."}
+  - {uses: process-fact-finder, note: "Starts from your own maker, supplier and test notes, not from a step before. Hands step 2 a ranked list of claims no rival states."}
+  - {uses: typed-headline-batch-writer, note: "Writes twenty or more headlines from the claims in step 1. Hands step 3 the headline list."}
+  - {uses: headline-cover-test-ranker, note: "Reads the headline list from step 2 and keeps three that can teach you something. Hands step 4 the shortlist, with the top headline first."}
+  - {uses: single-image-ad-planner, note: "Reads the claims from step 1 and the product facts you give it, and takes the top headline from step 3's shortlist as the line on the image. Hands you the ad copy and image prompt."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-ads-on-true-facts-your-rivals-never-state/skeleton.yaml

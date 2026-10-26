@@ -1,50 +1,87 @@
 new_slug: prepare-a-construction-defects-handover
 name: Prepare a construction defects handover
 headline: Prepare a construction defects handover
-summary: Share the source files. Get a defect register, remedial handover and missing acceptance evidence.
+summary: Turn inspection records into a construction defects register with owners and closure evidence, plus a handover note that shows what is still open.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A defect register, remedial handover and missing acceptance evidence. Share actual inspection records, defect IDs, photos, approved priority definitions, accepted remedial commitments and handover dates. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it inspection records, defect IDs, photos and your approved priority definitions. It lists each defect with its source, owner and the proof needed to close it, then writes a handover note that keeps open items open.
 explain: |-
-  A defect register, remedial handover and missing acceptance evidence.
+  At handover, "done" often means someone said so. This workflow builds a construction defects register where a defect stays open until the proof is in and the right person has signed. It does not trust a promised date.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A defect closes only with the required evidence and authorized signoff; AI provides no engineering or safety certification. Missing tools or evidence stay visible in the final summary.
+  Step 1 pulls the accepted defects from your inspection records into one register. Each row has the inspection source ID, location, priority from your own definitions, owner, due date and the evidence needed to close it. Step 2 writes the handover note for the contractor or facilities team: where each open item is, how to get in, what depends on what and which signoffs are missing.
+
+  The AI gives no engineering or safety judgment. A qualified person decides what is safe and what is finished. The workflow only tracks what the records and the signoffs say.
 when:
-  - You need a defect register, remedial handover and missing acceptance evidence.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A building or fit-out is near handover and the snag list is long.
+  - A contractor says defects are fixed and you need proof, not a promise.
+  - Facilities is taking over and needs to know what is still open and where.
+  - Inspection notes, photos and emails sit in different places and nobody has one list.
+not_for:
+  - You need a safety inspection or a certificate. Use the engineer's signed report. This workflow tracks and does not certify.
+  - A defect needs a price or a change to the contract. Use the Prepare a construction variation decision workflow.
+  - You only want actions pulled from meeting notes. Use the Executive action register.
+  - The building is already running and you are handing over maintenance. Use the Prepare a property maintenance handover workflow.
+  - The contractor's own register already tracks closure evidence. Use that one.
 you_give:
-  - Actual inspection records, defect IDs, photos, approved priority definitions, accepted remedial commitments and handover dates.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Inspection records with defect IDs (from the inspector's report or your snag list)
+  - Photos for each defect, if you have them
+  - Your approved priority definitions, such as what counts as high or low
+  - The remedial work the contractor accepted, with owners and promised dates
+  - The handover date and who receives the building
 you_get:
-  - A defect register, remedial handover and missing acceptance evidence.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A defect register: ID, location, priority, owner, due date, evidence needed and status"
+  - A list of the closure evidence still missing for each open defect
+  - A handover note for the contractor or facilities team, with access rules and dependencies
+  - A list of signoffs still outstanding
+  - A flag at the top for any record that mentions an immediate danger
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Open Claude, ChatGPT or Gemini. Pick one that can read files, since inspection reports and photo lists are often attachments.
+  - Add the workflow pack. Attach the inspection records, your priority definitions, the accepted remedial commitments and the handover date.
+  - After step 1, check that each defect ID matches the inspection report. Check that no row is marked closed without evidence and a named signoff.
+  - After step 2, read the handover note as the person who receives the keys. Check the access rules and which items depend on others.
+  - Fill every MISSING line before you hand over. A qualified person must sign off safety items. Pass any danger flag to the site manager first.
 how_it_works:
   - title: Executive action register keeper
-    text: Extract the accepted defect actions with inspection source IDs, owners, dates and evidence needed for closure; missing acceptance remains open.
+    text: "Reads the inspection records and lists each accepted defect with its inspection source ID, location, owner, due date and the evidence needed to close it. Uses only your priority definitions. Hands step 2 the open defects and the signoffs still missing. Check before moving on: no defect is closed without evidence and a named signoff."
   - title: Handover note writer
-    text: Prepare the responsible contractor or facilities handover with location, access rules, dependencies and unresolved signoffs; do not infer completion from a promised date.
+    text: "Writes the handover note for the contractor or facilities team: where each open item is, access rules, what depends on what and the signoffs not yet given. A promised date is not treated as proof the work is done. Hand-back check: every open item in the note appears in the register."
 output_shape: |-
-  Scope and source coverage
-  A defect register, remedial handover and missing acceptance evidence.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  DANGER FLAGS        <record or defect ID> | <what the record says> | pass to <responsible person>, or none
+  DEFECT REGISTER     id | location | what is wrong | priority (your definition) | owner | due | evidence needed | evidence received | status | source ID
+  OPEN ITEMS          <defect id> | evidence still missing | signoff needed from <person>
+  HANDOVER NOTE       <area> | open defects | access rules | depends on | who to contact
+  SIGNOFFS            <item> | signoff needed from <person> | given, or not yet
+  MISSING             <each gap, and the line it stops>
+  CHECKS MISSED       <one line each, or none>
+output_sample:
+  input:
+    - Inspection records with defect IDs, and photos
+    - Your approved priority definitions
+    - The remedial work the contractor accepted, with owners and dates
+    - The handover date and who receives the building
+  prerequisites:
+    - Inspection reports signed or issued by the inspector
+  output:
+    - name: Danger flags
+      contains: Any record that mentions an immediate danger, listed first with the person to pass it to.
+    - name: Defect register
+      contains: Each defect with ID, location, priority, owner, due date, evidence needed, status and source ID.
+    - name: Open items
+      contains: Defects still open, the closure evidence missing for each and who must sign.
+    - name: Handover note
+      contains: Open items by area with access rules, dependencies and contacts, for the person taking over.
+    - name: Signoffs
+      contains: Each approval still needed and from whom, and which are given.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps such as an undefined priority, and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: A defect closes only with the required evidence and authorized signoff; AI provides no engineering or safety certification.
+  - what: A new inspection
+    how: Add the new report. Defects already closed with evidence stay closed, and new ones are added.
+  - what: A later handover date
+    how: Move the date and run step 2 again. The note shows what is still open on the new date.
+  - what: One contractor
+    how: Filter to one owner. You get a register that contractor can work from.
 judge:
   - A defect closes only with the required evidence and authorized signoff; AI provides no engineering or safety certification.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +94,27 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep every defect ID the same from the first inspection to final closure, so history stays linked.
+  - Ask the contractor to attach closure evidence to the same ID, such as a photo or a test result.
+  - Write your priority definitions once and paste them every run.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It can read inspection reports and a photo list, so each row cites its source ID.
+    - name: A spreadsheet
+      why: The register is a table. Paste it into a sheet for the contractor to update.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A named person who gives final signoff.
+    - The contractor's own list, so you can match IDs.
 terms:
+  - term: Defect register
+    meaning: One list of every defect, with its owner, due date and proof of fix.
+  - term: Closure evidence
+    meaning: The proof that a defect is fixed, such as a photo or a test result.
+  - term: Signoff
+    meaning: A named person's approval that the work is done.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+next:
+  - prepare-a-property-maintenance-handover
+  - prepare-a-construction-variation-decision

@@ -1,6 +1,6 @@
 new_slug: research-question-outliner
 name: "Research question outliner"
-summary: "Paste a research question. Get sub-questions, sources to find and what a good answer needs."
+summary: "Turn a big research question into a clear plan. Get sub-questions, source types, search phrases and a test for when your research is done."
 job: research-topics
 thinking: medium
 thinking_why: "It breaks a broad question into parts and picks what matters, which takes some judgement."
@@ -17,6 +17,10 @@ when:
   - "You have a big topic and do not know where to start."
   - "You are briefing a research tool or a teammate."
   - "Your research keeps growing and never ends."
+not_for:
+  - "You need one fact that a single search can answer: just search for it."
+  - "You want a formal literature review: use a systematic review method and ask a librarian or research lead."
+  - "You want the research done, not planned: use the Research outline builder, or give this plan to a research tool."
 
 you_give:
   - "Your research question"
@@ -34,6 +38,22 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - Your research question
+    - What the answer is for (optional)
+    - What you already know (optional)
+  output:
+    - name: SHARP QUESTION
+      contains: Your question rewritten as one sentence with one topic, one scope and one kind of answer.
+    - name: SUB-QUESTIONS
+      contains: Three to six questions in research order, each with a source type and a search phrase.
+    - name: DONE WHEN
+      contains: A test for what a good answer needs, including the point where you can stop.
+    - name: WATCH OUT
+      contains: The one thing most likely to mislead you on this topic.
+    - name: MISSING
+      contains: What you did not say that would change the plan.
 
 how_it_works:
   - title: "Sharpen the question"

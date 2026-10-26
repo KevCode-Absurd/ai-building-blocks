@@ -2,17 +2,49 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-dotnet-timezone
 name: C# timezone handling reviewer
-summary: Share your scheduling code. Get safer time conversions and fixes for
-  daylight saving and timezone errors.
+summary: Find timezone bugs in your C# code and get safe fixes for UTC conversion, daylight saving time and Windows or IANA timezone IDs.
 job: build-software
 headline: C# timezone handling reviewer
-subhead: Share your scheduling code. Get safer time conversions and fixes for
-  daylight saving and timezone errors. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Share your C# code that works with dates and times. Your AI checks it for timezone and daylight saving mistakes. You get the right timezone IDs and code you can paste in.
+not_for:
+  - Your code is not C# or .NET, so ask a helper for that language instead.
+  - You only need to show local times in a web page or app screen, so use your front-end tools instead.
+  - Your app runs only on Windows and does simple conversions, so plain TimeZoneInfo is enough without this review.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. No code running or web access is needed.
+  - Paste the skill text into the chat.
+  - Paste your C# code that works with time, and say if it runs on Windows, Linux or a container.
+  - Name the places or timezones your code must serve.
+  - Read the reply and copy the code snippet into your project.
+  - If it names a package, install it with dotnet add package, then test around a daylight saving change.
+output_sample:
+  input:
+    - Your C# files that handle dates and times
+    - "Where the code will run: Windows, Linux or a container"
+    - The city, region or timezone your code must serve (optional)
+  output:
+    - name: Timezone block
+      contains: "For each place you name: the Windows ID, the IANA ID, the UTC offset and whether it uses daylight saving."
+    - name: Recommended approach
+      contains: One sentence on the best way to handle your case, such as TimeZoneConverter, NodaTime or DateTimeOffset.
+    - name: C# snippet
+      contains: A short, copy-paste-ready piece of code that does the conversion or scheduling safely.
+    - name: Package guidance
+      contains: The package to install if the fix needs a third-party library.
+    - name: Pitfall warning
+      contains: One warning that fits your code, such as storing local time or skipped and repeated hours at daylight saving changes.
+when:
+  - A scheduled job runs at the wrong hour after the clocks change.
+  - Your code works on your Windows laptop but fails on Linux or in a container.
+  - You need the timezone for a city, address or country, with C# code to use it.
+  - You store DateTime.Now in a database and want to fix it.
+you_give:
+  - Your C# files that handle dates and times
+  - "Where the code will run: Windows, Linux or a container"
+  - The city, region or timezone your code must serve (optional)
+you_get:
+  - The Windows and IANA timezone IDs for each place you name
+  - "A clear pick of library: TimeZoneInfo, TimeZoneConverter, NodaTime or DateTimeOffset"
+  - Copy-paste C# code for the fix
+  - The install line if a package is needed
+  - A warning about the daylight saving trap that fits your code

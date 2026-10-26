@@ -1,6 +1,6 @@
 new_slug: proof-sales-copy
 name: "Write sales copy with proof beside every claim"
-summary: "Give it customer reviews and product facts. Get a buyer brief, two openings to test and a body with proof."
+summary: "Write sales copy with proof beside every claim. Give it customer reviews and product facts. You get a buyer brief, two openings and a body."
 job: write-landing-page
 
 headline: "Sales copy where every claim has its proof beside it"
@@ -15,6 +15,10 @@ when:
   - You're writing a long sales page or letter and want each claim to be believable.
   - You can't decide between two ways to open and want both written to test.
   - Your page makes claims and readers say they don't believe them.
+not_for:
+  - "You have no real reviews, or no confirmed price and guarantee terms: build your brand brain and offer first, or gather them from your customers."
+  - "You only need to check a finished ad for claims with no proof: use the Ad claims checker."
+  - "You want a short ad opening, not a long sales page: use the Ad opening writer and reviewer."
 
 you_give:
   - Customer reviews, copied as written
@@ -34,6 +38,24 @@ how_to_use:
   - Have your inputs ready. Real reviews, your product facts, and your exact price and guarantee terms.
   - It works step by step and saves each result. Choose one opening before step 3, or run step 3 on each.
   - Check each claim against the proof beside it before the page goes live.
+output_sample:
+  input:
+    - Customer reviews, copied as written
+    - Your product facts, with price, delivery and guarantee terms
+    - Your brand file (optional)
+    - Your offer (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack, a zip with HANDOFF.md and the three skill files
+  output:
+    - name: step-01-buyer-brief-writer.md
+      contains: A short brief on one buyer, the moment they started looking and the one thing the page must move.
+    - name: step-02-sales-copy-opening-writer.md
+      contains: Two openings from neighbouring lead types, and the promise the close must keep.
+    - name: step-03-proof-backed-sales-copy-writer.md
+      contains: The body and close, with proof beside each claim, the deal stated with conditions, and one ask.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Writes the buyer brief
@@ -69,15 +91,15 @@ example:
   output: |
     BUYER BRIEF
     Moment: the third tub went stale | Stops them: "Is this just candy?"
-    
+
     OPENINGS
     A: Nine days, one full shaker. | B: Greens you will actually finish. | The close must keep: you will finish it
-    
+
     BODY AND CLOSE
     Tested for what your body absorbs | Proof: 2025 study, 120 adults, 12 weeks, blood vitamin C up 40.1%
     Guarantee: 30-day money-back, first order only
     Ask: See the first box
-    
+
     MISSING: shipping after the first box
 
 tweaks:

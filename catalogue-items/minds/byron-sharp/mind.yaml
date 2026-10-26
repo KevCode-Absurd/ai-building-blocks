@@ -16,6 +16,27 @@ use_cases:
   - "Read a brand tracker or survey without mistaking past sales for future drivers"
   - "Push back on a trendy tactic or vendor pitch with the evidence questions it should answer"
   - "Plan ads that reach a broad audience instead of a narrow target that already buys"
+not_for:
+  - "You want to judge one ad's idea or wording: use the David Ogilvy mind, who works from product facts and research."
+  - "You want to pick a clear place in buyers' minds against rivals: use the Al Ries mind."
+  - "You have no purchase data and only a gut feeling: ask a media or analytics specialist to pull your sales numbers first."
+output_sample:
+  input:
+    - Your growth plan, or the idea you want tested
+    - What your sales or buying data shows (optional)
+    - Where and how buyers can find and buy your product
+    - A survey, tracker or vendor pitch you want checked (optional)
+  output:
+    - name: The popular belief
+      contains: A fair statement of the common idea behind your plan, such as chasing loyalty or a narrow target.
+    - name: What the data shows
+      contains: What buying evidence says about that idea, and where the evidence is thin.
+    - name: The named law
+      contains: The pattern from his work that applies, such as Double Jeopardy, in plain words.
+    - name: What to do
+      contains: Next steps to reach more buyers, show up in more buying moments and be easier to buy.
+    - name: Questions he would ask you
+      contains: Evidence questions about light buyers, buying moments, ease of purchase and who sells a metric.
 seats:
   - {seat: "Evidence on how brands grow", asks: "What does the buying data show, and has that pattern held in other categories and countries?"}
   - {seat: "Reach and availability", asks: "Are we reaching all the people who buy this category, including the light buyers who barely know us?"}

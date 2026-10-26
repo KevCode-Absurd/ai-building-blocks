@@ -1,37 +1,127 @@
 new_slug: google-results-review-agent
 name: Google results review agent
-summary: Share dated Google Ads results and business targets. Get findings, evidence gaps, proposed next steps and a checkpoint for follow-up.
+summary: Review your Google Ads results against your targets. Get ranked findings, tracking gaps, proposed changes and a checkpoint for your next review.
 job: set-up-ai
 headline: Google results review agent
-subhead: Share dated Google Ads results and business targets. Get findings, evidence gaps, proposed next steps and a checkpoint for follow-up.
+subhead: Give it your Google Ads exports for one date range and your targets. It checks that the numbers line up and that conversions are counted the way you think. Then it reviews each campaign type you run. You get ranked findings, gaps and proposed changes.
 explain: |-
-  Share scoped dated google ads exports, conversion setup and approved business targets. Get a google ads evidence report and follow-up checkpoint.
+  A Google Ads review goes wrong when the numbers cannot be compared. The date range differs between reports. The currency or time zone differs. A "conversion" counts page views in one report and sales in another. This Google Ads results review checks those first. Then it reads your campaigns against your own targets, not against a generic rule.
 
-  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+  It only reviews what your account runs. Search, Shopping, Performance Max, Display and video each get their own checks, and the rest are skipped. It separates branded searches from searches that find new buyers where your data allows. It looks for wasted spend in search terms and for conversion tracking that may be wrong. It does not apply fixed account-structure rules as if they were laws.
+
+  Findings come with the sum behind them. Platform conversion value is not the same as unique sales in your store, so the agent says when it could not match them. It never changes your account. A new budget, a negative keyword or a paused campaign comes back as a proposal for you to approve. Each review ends with a checkpoint for your next one.
 when:
-  - You need a google ads evidence report and follow-up checkpoint.
+  - Your Google Ads results moved and you need to know whether the cause is the ads, the tracking or too little data.
+  - A client or boss wants a Google Ads review that shows its evidence.
+  - You want to check results against a target cost per sale or return on ad spend.
+  - You review monthly and want each review to start from the last one.
+not_for:
+  - You want a score out of 100 and a 90-day fix order for a store account. Use the Google Ads store account auditor.
+  - You have one export and want a quick score and changes. Use the Google Ads report auditor.
+  - Sales just dropped and you want the cause. Use the Google Ads dip investigator.
+  - You want the same checks every Monday and a scale or hold call. Use the Google Ads weekly account keeper.
+  - You want it to log in and change bids, budgets or keywords. It proposes changes, and you make them.
 you_give:
-  - Scoped dated Google Ads exports, conversion setup and approved business targets
-  - Authorized tools, owner, limits and any prior checkpoint
+  - Google Ads exports for one date range, such as campaign, search terms and asset or placement reports, with cost, conversions, conversion value and impressions
+  - Your account time zone, currency and attribution model (in your Google Ads account settings)
+  - Your conversion actions, with which are counted as primary and what each one measures
+  - Your targets, such as the cost per sale or return on ad spend you need
+  - Whether the account is a manager account or the target account you are reviewing
+  - Your store or CRM sales totals for the same dates (optional)
+  - Your last checkpoint (optional)
 you_get:
-  - A Google Ads evidence report and follow-up checkpoint
-  - Evidence gaps, proposed actions and checks not run
+  - A setup check that says whether dates, currency, time zone, attribution and conversion counting line up
+  - A ranked findings table, with the evidence, the sum and how sure the AI is for each row
+  - A list of evidence gaps and the checks that did not run
+  - A proposed changes list, with nothing changed in your account
+  - A checkpoint file for your next review
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Download the pack and add it to your AI, or paste SKILL.md into a new chat. Claude, ChatGPT and Gemini work if they can read files. Without file access, paste the numbers as text.
+  - Export your reports from Google Ads for one clear date range and attach them. No Google login is needed.
+  - Type your time zone, currency, attribution model, conversion actions and targets. Attach your store sales totals and last checkpoint if you have them.
+  - Say "Run the review. Propose changes, do not make any." Your AI asks once for anything missing.
+  - Open setup-check.md first. If the numbers do not line up, fix the exports before you trust the findings.
+  - Check each finding against its evidence ID. Make the changes you agree with in Google Ads yourself, then keep checkpoint.md for next time.
 how_it_works:
-  - title: Step 1
-    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
-  - title: Step 2
-    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
-  - title: Step 3
-    text: Confirm manager versus target account, authorization, dates, currency, conversion actions and attribution. Use supplied exports or authorized read-only tools and distinguish branded demand from acquisition where the data permits.
-  - title: Step 4
-    text: Review Search, Shopping, Performance Max, Display or video only where applicable. Check tracking, search/keyword waste, asset/placement evidence and bidding/budget context. Do not impose generic account-structure thresholds as universal requirements.
-  - title: Step 5
-    text: Return source-linked findings with calculation inputs, evidence gaps and recommended tests. Keep bidding, negatives, budgets and pauses as proposed changes until explicitly authorized. Never treat platform attributed value as unique store sales without reconciliation.
-  - title: Step 6
-    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+  - title: Fix the scope
+    text: It confirms the account, the date range, the time zone, the currency, the attribution model and your goal. Anything missing is asked once, then marked MISSING.
+  - title: Load the last checkpoint
+    text: If you supply one, it compares scope and dates and says what is new. Your current request wins over the old checkpoint.
+  - title: Check the numbers line up
+    text: It recomputes cost per conversion and return on ad spend from the raw columns, and checks which conversion actions are counted.
+  - title: Check tracking
+    text: It marks each conversion action Confirmed, Not confirmed or Not supplied, and compares platform conversions with your store totals when you give them.
+  - title: Review each campaign type you run
+    text: It reviews Search, Shopping, Performance Max, Display or video only where they exist. It looks at wasted search terms, branded versus new buyers, assets, placements, bidding and budget.
+  - title: Rank and propose
+    text: Each finding gets an evidence ID, the sum behind it and a confidence level. Actions stay proposals until you approve that exact action.
+  - title: Save a checkpoint
+    text: It records scope, evidence dates, open questions and the next review trigger, so a later run can compare.
+output_shape: |-
+  SETUP CHECK
+    Account <name> | <manager or target account> | <start date> to <end date> | <time zone> | <currency> | <attribution model>
+    Conversion actions counted: <list> | Metrics that match: <list> | Metrics that do not: <list and the gap>
+
+  TRACKING CHECK
+    <conversion action> | <Confirmed, Not confirmed or Not supplied> | <evidence ID> | <platform total versus store total, if given>
+
+  FINDINGS (ranked by money at stake, then confidence)
+    <rank> | <campaign type and name> | <finding> | <evidence IDs> | <the sum, with the numbers> | <high, medium or low> | <proposed action>
+
+  EVIDENCE GAPS  <what is missing> | <which finding it limits> | <how to get it>
+  PROPOSED ACTIONS (none done)  <action> | <where in Google Ads> | <why> | <risk> | <needs your approval>
+  CHECKPOINT  <scope, evidence IDs and dates, open questions, approvals, next review trigger>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - Google Ads exports for one date range
+    - Your time zone, currency and attribution model
+    - Your conversion actions and targets
+    - Your store or CRM sales totals (optional)
+    - Your last checkpoint (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - Permission to export reports from your Google Ads account
+  output:
+    - name: setup-check.md
+      contains: Whether dates, time zone, currency, attribution and conversion counting match, each conversion action marked Confirmed or not, and every mismatch listed.
+    - name: findings.md
+      contains: Ranked findings by campaign type, each with evidence ID, the sum behind it, confidence and a proposed action.
+    - name: evidence-gaps.md
+      contains: What is missing, which finding it limits and how to get it, plus checks that did not run.
+    - name: proposed-actions.md
+      contains: Each change you could make, with where, why and risk, and a note that nothing was done.
+    - name: checkpoint.md
+      contains: Scope, evidence dates, open questions, approvals and the trigger for the next review.
+tweaks:
+  - what: Date range
+    how: Use one range for every export, and say if it includes a sale or a tracking change.
+  - what: Targets
+    how: Give your break-even cost per sale or return on ad spend. Findings are then measured against what you need.
+  - what: Store totals
+    how: Add the sales your store recorded for the same dates. It then compares them with the platform's conversions.
+improve:
+  - Keep every checkpoint. The next review then compares the new numbers with this one, not with a guess.
+  - Write down your break-even cost per sale once and give it each time, so findings are always measured against what you need.
+  - Add your store totals for the same dates. The tracking check is much stronger when platform conversions can be reconciled.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads several exports at once and does sums on them.
+  inputs:
+    - Your break-even return on ad spend, worked out from your margin.
+    - Your store or CRM sales for the same dates.
+    - The change history for the same dates.
+terms:
+  - term: Attribution model
+    meaning: The rule Google Ads uses to decide which click gets credit for a conversion.
+  - term: Conversion action
+    meaning: One thing Google Ads counts as a win, such as a purchase or a form sent.
+  - term: Return on ad spend
+    meaning: Sales value divided by ad spend. Also called ROAS.
+  - term: Checkpoint
+    meaning: A file that records where this review stopped, so the next review can pick up from it.
+  - term: Evidence ID
+    meaning: A short tag, like E1, that points to one export behind a finding.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.

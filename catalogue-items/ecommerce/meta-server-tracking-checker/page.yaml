@@ -1,6 +1,6 @@
 new_slug: meta-server-tracking-checker
 name: "Meta server tracking checker"
-summary: "Describe your Meta setup. Get the best server route, a double-count check and a score out of 100."
+summary: "Check your Meta server tracking: pick the right route, prove each sale counts once, and get a score out of 100. Gain claims shown from both sources."
 job: track-numbers
 thinking: high
 thinking_why: "It weighs a route against your budget and skills and checks IDs and consent rules, so a stronger model avoids a wrong recommendation. Confirm every setup step on Meta's own pages."
@@ -17,6 +17,10 @@ when:
   - You see fewer Meta purchases than store orders and want to know if server tracking would help.
   - You added server tracking and want proof that each sale counts once.
   - You are choosing between a gateway, server-side Tag Manager and a Shopify app.
+not_for:
+  - "You have no Meta pixel yet: set up the pixel first with Meta's own setup guide in Events Manager, then come back."
+  - "Shopify or another app already sends both browser and server events: keep that route and only check the event IDs match, with no second setup."
+  - "You want to audit Google Ads tracking: ask a tracking specialist or use Google's own tag diagnostics, since this checks Meta only."
 
 you_give:
   - Your platform and who can build and maintain it
@@ -36,6 +40,31 @@ how_to_use:
   - Place one test order. In Events Manager, find the browser and the server event for it and paste both event IDs.
   - Never paste an access token into the chat. Keep it in your tag settings.
   - Fix what fails and run the check again after a day.
+output_sample:
+  input:
+    - Your store platform and who can build and maintain the setup
+    - How your pixel and server events are sent today
+    - Your monthly Meta spend and purchases (optional)
+    - One browser event ID and one server event ID from a test purchase (optional)
+    - Your consent banner setup (optional)
+  prerequisites:
+    - Access to Meta Events Manager to read the event IDs
+    - One test order placed on your store (optional, needed for the ID check)
+  output:
+    - name: Route
+      contains: The recommended route, why it fits your team, the realistic gain from both sources, and the hosting cost to confirm.
+    - name: Setup steps
+      contains: The steps for your chosen route, in order.
+    - name: Dedupe proof
+      contains: Browser and server event IDs side by side, marked match, mismatch or not run.
+    - name: Consent, test ID leak, server tag status and event match quality
+      contains: A result line for each check, using only what you supplied.
+    - name: Weekly check
+      contains: Meta purchases set against store orders, so you can watch the trend and large gaps.
+    - name: Score
+      contains: A score out of 100 with the points shown, counting only the checks that were run.
+    - name: Checks not run and missing
+      contains: The checks that had no data, and the facts you still need to give.
 
 how_it_works:
   - title: Checks for an existing route

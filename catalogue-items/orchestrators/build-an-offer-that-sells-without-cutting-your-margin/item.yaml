@@ -15,11 +15,11 @@ outputs:
   - {type: audit_report}
 uses: [offer-builder, gift-with-purchase-planner, store-guarantee-planner, discount-impact-checker, offer-profit-per-session-checker]
 steps:
-  - {uses: offer-builder, note: "Builds a first offer that answers the buyer's biggest doubts."}
-  - {uses: gift-with-purchase-planner, note: "Adds a gift or tier to the offer and works out what each tier costs you."}
-  - {uses: store-guarantee-planner, note: "Adds a guarantee to the offer and counts what refunds would cost."}
-  - {uses: discount-impact-checker, note: "Tests the offer against a plain discount and shows the return on ad spend it must hit."}
-  - {uses: offer-profit-per-session-checker, note: "Compares the offer's profit per visitor with your current one before you launch it."}
+  - {uses: offer-builder, note: "Builds a first offer that answers the buyer's biggest doubts. Hands step 2 the offer."}
+  - {uses: gift-with-purchase-planner, note: "Takes the offer from step 1 and adds a gift or tier, with what each tier costs you. Hands step 3 the updated offer."}
+  - {uses: store-guarantee-planner, note: "Takes the offer from step 2 and adds a guarantee, counting what refunds would cost. Hands steps 4 and 5 the finished offer."}
+  - {uses: discount-impact-checker, note: "Tests the finished offer against a plain discount and shows the return on ad spend it must hit. Hands step 5 a report with the costs per order and the discount to compare against."}
+  - {uses: offer-profit-per-session-checker, note: "Uses the finished offer from step 3, the discount report from step 4 and your own sessions and orders (your performance sheet). Hands you the profit per visitor of each version, so you launch the winner."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-an-offer-that-sells-without-cutting-your-margin/skeleton.yaml

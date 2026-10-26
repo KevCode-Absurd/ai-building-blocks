@@ -1,6 +1,6 @@
 new_slug: customer-inbox-triage-and-reply-drafter
 name: Customer inbox triage and reply drafter
-summary: Give it the new customer emails. Get them ranked, with a checked reply to approve for each. It never sends.
+summary: Triage your customer inbox in one pass. Give it the new emails and get them ranked, each with a checked reply draft to approve. It never sends.
 job: help-customers
 thinking: medium
 thinking_why: It sorts, picks a path for each email and loops on checks for upset customers. A mid-size model handles most days. Use a stronger one when the inbox is full of disputes.
@@ -14,6 +14,10 @@ when:
   - Your inbox has more customer emails than you can answer in the order they arrived.
   - You answer the same questions again and again.
   - You want drafts that match your policy, with the risky emails flagged first.
+not_for:
+  - "You only want to sort emails by type once: use the Support ticket sorter on its own."
+  - "Your emails come from wholesale or B2B buyers with custom terms: answer those yourself or with a person who knows the deal."
+  - "A customer mentions injury, a lawsuit or a regulator: talk to a qualified person before you reply."
 you_give:
   - The new customer emails, pasted or forwarded, with the full thread
   - Your returns, refund and shipping policies, the first time
@@ -31,6 +35,28 @@ how_to_use:
   - Paste or forward the new emails. If your inbox or store is connected, tell it which to read.
   - Read the decide-first list, then the ranked list. Edit and send the replies you agree with yourself.
   - Run it again tomorrow. It remembers what you approved and which questions repeat.
+output_sample:
+  input:
+    - The new customer emails, with the full thread
+    - Your returns, refund and shipping policies (the first time)
+    - Order details or store access (optional)
+    - A few replies you wrote and liked (optional)
+  prerequisites:
+    - An AI that can save and read files, to keep the inbox folder and log between days
+    - Your brand brain from the Brand profile builder (optional)
+  output:
+    - name: The inbox in one line
+      contains: How many emails came in, how many are urgent and how many need your decision first.
+    - name: Decide first
+      contains: Emails about harm, legal action, disputes or refunds over policy, each with the open question.
+    - name: Ranked list
+      contains: Each email with its priority, type, one-line summary, draft reply and check result.
+    - name: Things to look up
+      contains: Order or account facts the agent could not check, listed per email.
+    - name: Repeated questions
+      contains: Questions asked three or more times in 30 days, each with a draft help article.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line in one list.
 how_it_works:
   - title: Read what it knows
     text: Opens your policy, your voice notes and the log of past emails.

@@ -1,6 +1,6 @@
 new_slug: selling-claim-demo
 name: Find the one claim that sells and show it working
-summary: Give it your product and rivals. Get one tested selling claim, a demonstration that proves it and a check for distractions.
+summary: Find one selling claim buyers will remember and show it working. Give it your product facts and rival ads. Get a tested claim and a demo script.
 job: write-ad-copy
 thinking: high
 thinking_why: It has to judge which differences a buyer would notice and which claims rivals leave open. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your ads say many things, or your product looks the same as its rivals.
   - You need one claim buyers will remember and act on.
   - People like your ad but cannot say what it promises.
+not_for:
+  - "Your product has no real difference yet: run the Product differentiation checker first, or fix the product before you write any claim."
+  - "You only need ad copy written from a claim you already have: use the Reply-getting fix writer."
+  - "You want to plan which ads to test against each other: use the Ad test brief writer."
 you_give:
   - Your product facts, with what it does, how it is made and how it is used
   - What rivals say in their ads or on their pages (optional)
@@ -31,6 +35,28 @@ how_to_use:
   - Paste your product facts and any rival ads. Ask it to run the first four steps.
   - Show the script or a rough cut to ten people who have not seen it. Ask only what it said, and write their words down.
   - Bring the answers back for the last step.
+output_sample:
+  input:
+    - "Your product facts: what it does, how it is made and how it is used"
+    - What two or three rivals say in their ads or on their pages (optional)
+    - Your customer reviews or other customer words (optional)
+    - After the pause, what ten viewers said the ad said, word for word
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff folder
+    - Ten people who have not seen the ad, for the last step
+  output:
+    - name: "Step 1 file: product difference check"
+      contains: A verdict on whether buyers could notice a difference in your product, or whether it needs work first.
+    - name: "Step 2 file: candidate claims"
+      contains: Three to five one-sentence claims from three roads, ranked, with the weak ones struck out.
+    - name: "Step 3 file: claim test"
+      contains: A pass or fail for the top claim on being a real offer, unique and strong enough, with fixes.
+    - name: "Step 4 file: demonstration plan"
+      contains: A script table where every spoken line is matched to a picture that shows the same thing.
+    - name: "Step 5 file: distraction check"
+      contains: How many viewers repeated the claim, what took attention from the rest, and what to cut.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Checks you have something real to say
     text: Gives a verdict on whether the product has a difference a buyer could notice, or needs work first.

@@ -1,0 +1,28 @@
+# Use Roblox Experience Designer agent
+
+Get a Roblox experience design plan. See the first-minute flow, a return loop, fair Game Pass ideas and the player numbers to watch.
+
+## Skill hosts
+
+Install the complete agency-roblox-experience-designer folder with SKILL.md and references/ together. The skill reads the original profile when used.
+
+## Chat
+
+Paste SKILL.md, then references/source-agent.md, then your task. A plain chat can propose work; files, tools and recurring runs depend on the host you use.
+
+## Claude Code agent
+
+The unmodified references/source-agent.md is the upstream agent file. Copy it to .claude/agents/agency-roblox-experience-designer.md in your chosen project. Supply the task scope and review rules in SKILL.md when invoking it.
+
+## Other agent hosts
+
+Import the role profile using the host's documented agent format. This pack does not register Codex agents, install software, provision integrations or create schedules.
+
+## Source and checks
+
+Source: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/roblox-studio/roblox-experience-designer.md
+Revision: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+SHA-256 of references/source-agent.md: 36fb12b8b76ba666e8e9e2830328f63e713556b8f503fe12ab883902a77b308a
+Licence: MIT (LICENSE).
+
+AI Blocks adds a skill adapter and task guide. The original profile is unchanged. Static intake checks are recorded in the AI Blocks import report; no model behavior test has been run for this entry.

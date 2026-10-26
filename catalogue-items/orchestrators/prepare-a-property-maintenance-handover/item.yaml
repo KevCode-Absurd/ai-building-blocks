@@ -1,6 +1,6 @@
 slug: prepare-a-property-maintenance-handover
 name: Prepare a property maintenance handover
-summary: Share the source files. Get a maintenance handover, access constraints and overdue decisions.
+summary: Hand over open property repairs. Get a job-by-job handover, access notes and a list of overdue decisions and unresolved approvals.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - executive-action-register
 steps:
   - uses: handover-note-writer
-    note: Organize actual ticket status, accepted appointments, access approval locations and urgent escalation contacts for the incoming property lead.
+    note: "Organize actual ticket status, accepted appointments, access approval locations and urgent escalation contacts for the incoming property lead. Hands step 2 the note with every ticket ID."
   - uses: executive-action-register
-    note: Extract confirmed maintenance commitments and unresolved approvals with source IDs. Proposed scheduling or contractor changes stay drafts.
+    note: "Extract confirmed maintenance commitments and unresolved approvals with source IDs. Uses step 1's note with your original tickets and emails. Proposed scheduling or contractor changes stay drafts."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It adapts each question to your last answer.
 new_slug: stuck-decision-guide
 name: Stuck decision guide
-summary: Tell it what feels stuck. Get a few branching questions, then a clear
-  next step you can take today.
+summary: Feel stuck on a choice? Tell it what is wrong and answer a few short questions. You get a clear next step you can take today.
 job: think-and-decide
 headline: Stuck decision guide
-subhead: When you feel stuck or overwhelmed, a wall of options does not help.
-  You need one small step you can take today. This skill talks you there.
+subhead: When you feel stuck or overwhelmed, a wall of options does not help. You need one small step you can take today. This skill talks you there.
 explain: |
   When you feel stuck or overwhelmed, a wall of options does not help. You need one small step you can take today. This skill talks you there.
 
@@ -17,17 +15,39 @@ when:
   - You are torn between two paths at work and keep going in circles.
   - A project stalled and you do not know why.
   - You want a next step, not a long list of advice.
+not_for:
+  - You need legal, medical, financial or mental health advice. Talk to a lawyer, doctor, financial adviser or counsellor.
+  - You already know the exact action you want. Ask your AI to do that task directly.
+  - You are in real distress, not just unsure. Talk to a person you trust or a professional first.
 you_give:
-  - A short description of what feels stuck
-  - Answers to a few questions as they come
-  - Limits like time, money or people (optional)
+  - A short line on what feels stuck
+  - The options you are weighing, if you have any (optional)
+  - Any deadline, budget or time limit (optional)
+  - Your answers to each question as it comes
 you_get:
   - A few branching questions that fit your case
   - A clear next step you can do today
   - A short list of follow-up steps
   - A calm summary of where you stand
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Write one or two lines on what feels stuck. Add your deadline and any limits if you know them.
+  - Answer each question by picking a choice. Pick not sure if none fit.
+  - Say just tell me what to do if you want the steps sooner.
+  - Read the steps at the end and do the first one today. Adapted from the decision-navigator skill (CC BY-4.0).
+output_sample:
+  input:
+    - A short line on what feels stuck
+    - Your answers to each question as it comes
+    - Limits like time, money or people (optional)
+  output:
+    - name: Orienting line
+      contains: One or two sentences that say back where you are, with no advice yet.
+    - name: Branching questions
+      contains: One question at a time with 3 to 5 short choices, including a not sure option.
+    - name: Summary of what you shared
+      contains: A short recap of your answers before the steps, so you know it understood you.
+    - name: Next steps
+      contains: A numbered list of 3 to 6 specific steps you can start on today.
+    - name: Offer to explore another path
+      contains: If you wanted to look at more than one option, a prompt to do the next one.

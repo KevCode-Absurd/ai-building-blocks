@@ -1,6 +1,6 @@
 new_slug: sample-approval-gatekeeper
 name: "Sample approval gatekeeper"
-summary: "Give it a sample and your tech pack. Get line-by-line pass or fail, scored out of 100."
+summary: "Check a product sample against your tech pack line by line. Get pass or fail on each line, a score out of 100 and a go or hold on bulk."
 job: plan-supply-chain
 thinking: high
 thinking_why: "It compares many small facts line by line and must not wave a sample through, so a stronger model catches more mismatches."
@@ -17,6 +17,10 @@ when:
   - A factory sent a sample and you need to decide if it can go to the next stage.
   - A cheaper supplier looks good on paper and you want to test it without risking your stock.
   - Bulk is about to start and you want to confirm the production sample matches the gold standard.
+not_for:
+  - "You need to inspect finished goods already made for shipping: ask a third-party inspector for a pre-shipment inspection, or write a brief for one."
+  - "You want to compare factory prices or pick a new supplier: use a quote comparison in a spreadsheet, then bring the sample here."
+  - "You have no tech pack yet: write one first, because without it there is nothing to check the sample against."
 
 you_give:
   - Your tech pack
@@ -35,6 +39,31 @@ how_to_use:
   - Measure the sample against the pack and attach photos. List weights and color codes.
   - Read the fails, send the fixes to the factory, and ask for a new sample if any critical line failed.
   - Log the result, then keep one approved sample at home and send one to the factory.
+output_sample:
+  input:
+    - Your tech pack
+    - Photos, measures, weights and color codes from the sample
+    - "The stage: strike-off, pre-production, production or test batch"
+    - Your current supplier's defect and return rate (optional)
+  prerequisites:
+    - An AI that can read images, if you want it to check photos
+  output:
+    - name: Sample check
+      contains: One line per tech pack line, with its weight, the spec, what was found, and pass, fail or not checked.
+    - name: Score
+      contains: A score out of 100, the sum behind it, and how many lines were not checked.
+    - name: Decision
+      contains: A go or hold on the next stage, with the reason.
+    - name: Fix before next stage
+      contains: Each failed line with what the factory should change.
+    - name: Gold standard
+      contains: Which approved sample to keep at home and which to keep at the factory.
+    - name: Test batch plan
+      contains: A small first order from a new supplier, with defects counted and the old supplier kept until both pass.
+    - name: 90 day return watch
+      contains: Start and review dates, and the return rate to compare against.
+    - name: Log
+      contains: Supplier, date, pack version, stage and result, so the next reorder starts from the last approved sample.
 
 how_it_works:
   - title: Names the stage

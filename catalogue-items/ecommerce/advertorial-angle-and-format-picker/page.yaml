@@ -1,6 +1,6 @@
 new_slug: advertorial-angle-and-format-picker
 name: "Advertorial angle and format picker"
-summary: "Give it your pain points and buyers. Get ranked angles, an awareness mix and a format for each."
+summary: "Pick which ad angles to test and which need an advertorial. Give it your pain points and buyers. You get ranked angles and a five-angle test sheet."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It ranks and matches a handful of options by clear rules, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You are choosing which angles to run in your next ad batch.
   - You are not sure whether a product needs an advertorial or can go straight to a product page.
   - A rival owns the obvious angle and you need a buyer group or angle they ignore.
+not_for:
+  - "You sell one simple product to one kind of buyer: send ads to a product page and skip the advertorial."
+  - "You already know your winning angle and need the page written: ask your AI for an advertorial brief for that angle."
+  - "You have almost no ad budget or no ad images: test two or three angles by hand, not five."
 
 you_give:
   - Three to five biggest pain points and desires from reviews
@@ -37,6 +41,28 @@ how_to_use:
   - Add what rivals run and your budget.
   - Make the five to eight native image ads it lists, and run them in one campaign.
   - Come back with the winner and ask for its advertorial brief.
+output_sample:
+  input:
+    - Your 3 to 5 biggest pain points and wishes, taken from reviews
+    - Your product, its price and what buyers already know
+    - Buyer groups you could sell to (optional)
+    - What rivals run, including native image ads (optional)
+    - Your monthly ad budget and how many ads you can make (optional)
+  output:
+    - name: Ranked angles
+      contains: Each angle with its buyer group, the pain it answers and the buyer's awareness stage.
+    - name: Awareness mix
+      contains: The share of angles for each awareness stage, from unaware to most aware.
+    - name: Page decision
+      contains: A yes or no on an advertorial per angle, the rule used, one identity and one format.
+    - name: Five-angle test sheet
+      contains: One broad campaign plan with the number of image ads, spend per angle and a winner rule.
+    - name: Test order
+      contains: "What to test on the page first: format, headline, first proof block, then offer."
+    - name: Metrics
+      contains: "Three numbers to read: click-through to the product page, engagement and CPM."
+    - name: Risk flags
+      contains: Crowded niches, ad policy checks and claims that need proof.
 
 how_it_works:
   - title: Picks the buyer first

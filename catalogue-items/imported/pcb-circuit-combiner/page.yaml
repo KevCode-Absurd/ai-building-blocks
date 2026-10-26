@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It joins parts with a set method.
 new_slug: pcb-circuit-combiner
 name: PCB circuit combiner
-summary: Give it several RF PCB parts. Get them cascaded with extra parts added
-  and S-parameters exported.
+summary: Join RF PCB parts into one circuit, add loads at ports and save a Touchstone S-parameter file. Use it as a PCB circuit combiner in MATLAB.
 job: build-software
 headline: PCB circuit combiner
-subhead: Several RF circuit board parts joined end to end into one circuit, with
-  extra components added and results saved as a standard Touchstone file. It
-  runs in MATLAB.
+subhead: Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
 explain: |
   Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
 
@@ -18,6 +15,10 @@ when:
   - You need S-parameters in a file for another tool.
   - A feed network must connect to an antenna array.
   - An internal port needs a load or terminator.
+not_for:
+  - "You need to design a single filter, coupler or line: use the matching MATLAB PCB design skill for that part first."
+  - "You want EM analysis of one component: use a single-part analysis step in MATLAB, not this skill."
+  - "You have no MATLAB with the RF PCB Toolbox, which are paid licensed products: ask an RF engineer or use a free circuit simulator."
 you_give:
   - Designed PCB components in MATLAB
   - Order they connect in
@@ -29,8 +30,29 @@ you_get:
   - Touchstone S-parameter file
   - Link to eye diagram analysis
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Check you have MATLAB and the RF PCB Toolbox. Both are paid products and are needed to run this.
+  - Gather your designed parts, the order they connect in, any load values and your frequency range.
+  - Open a chat with an AI that can run MATLAB code. Paste this skill and your details.
+  - Ask it to cascade the parts, add the loads and save the Touchstone file.
+  - Open the S-parameters and check them before you use them in another tool.
+output_sample:
+  input:
+    - Your designed and checked PCB components in MATLAB
+    - The order they connect in
+    - Loads for internal ports, such as terminators or varactors (optional)
+    - The frequency range to sweep
+  prerequisites:
+    - MATLAB with the RF PCB Toolbox, both paid licensed products
+    - An AI that can run MATLAB code
+    - Each part designed and checked first
+  output:
+    - name: Cascaded circuit
+      contains: Your parts joined end to end with pcbcascade, with a note on port matching.
+    - name: Circuit elements
+      contains: Parts wrapped with pcbElement so RF Toolbox can use them in a circuit.
+    - name: Loaded ports
+      contains: Internal ports loaded with resistors, capacitors or Touchstone parts such as varactors.
+    - name: Touchstone file
+      contains: The combined S-parameters saved with rfwrite, ready for other tools.
+    - name: Eye diagram link
+      contains: A bridge from the S-parameters to signal integrity eye diagram analysis.

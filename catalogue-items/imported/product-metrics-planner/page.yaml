@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It picks metrics that fit your stage.
 new_slug: product-metrics-planner
 name: Product metrics planner
-summary: Say your product stage. Get the KPIs to track, a dashboard layout and
-  how to read retention and adoption.
+summary: Plan product metrics for your stage. Give it your product and goal. You get the KPIs to track, a dashboard layout and a read on retention.
 job: build-product
 headline: Product metrics planner
-subhead: A short list of the numbers worth tracking at your product's stage,
-  laid out as a dashboard, plus a way to read retention and adoption.
+subhead: A short list of the numbers worth tracking at your product's stage, laid out as a dashboard, plus a way to read retention and adoption.
 explain: |
   A short list of the numbers worth tracking at your product's stage, laid out as a dashboard, plus a way to read retention and adoption. You avoid drowning in charts that do not drive decisions.
 
@@ -17,6 +15,10 @@ when:
   - Your dashboard has too many numbers and no clear story.
   - You need to read cohort retention.
   - You want to know if a feature is actually being used.
+not_for:
+  - "You need revenue forecasts or SaaS numbers like ARR, MRR, churn and LTV: use the SaaS metrics coach in the finance area, or ask your accountant."
+  - "You want to test a change with an A/B test: use an experiment planning tool or ask your analyst to set it up."
+  - "You want to pick which feature to build next: use a simple scoring sheet in Google Sheets or talk to your team."
 you_give:
   - Your product and its stage
   - Your main business goal
@@ -28,7 +30,32 @@ you_get:
   - A layered dashboard layout
   - A reading of retention and adoption
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell it your product, its stage and your main goal.
+  - Paste a few weeks of cohort data if you have it (optional). A chat AI can read pasted rows. To run the CSV script, use an AI that can run code.
+  - Read the framework choice and KPI list first. Change any metric that does not fit your business.
+  - Use the dashboard layers to build your report in your analytics tool.
+  - Pick the actions you will do first and give each one an owner.
+output_sample:
+  input:
+    - Your product and its stage (before product-market fit, growing or mature)
+    - Your main business goal
+    - A few weeks of cohort data (optional)
+    - The analytics tool you use (optional)
+  prerequisites:
+    - An AI that can run code, only if you want it to work out retention from a CSV file
+  output:
+    - name: Framework choice
+      contains: One of AARRR, North Star or HEART, with a short reason it fits your product.
+    - name: KPIs for your stage
+      contains: The few numbers worth tracking now, picked for pre-PMF, growth or mature products.
+    - name: Executive layer
+      contains: Five to seven top metrics for leaders, each with a target, threshold, owner and decision rule.
+    - name: Product health layer
+      contains: Acquisition, activation, retention and engagement metrics laid out as the middle of the dashboard.
+    - name: Feature layer
+      contains: Adoption, depth and repeat use for each feature, and how use links to outcomes.
+    - name: Retention reading
+      contains: What your cohort curves suggest, including early drop points near first value.
+    - name: Actions
+      contains: One clear product action for each major risk or chance the numbers show.

@@ -1,71 +1,67 @@
 new_slug: excel-monthly-rollup-builder
 name: Excel monthly rollup builder
-summary: Share dated records. Get an Excel monthly summary with checked counts,
-  totals and rates.
+summary: Turn dated records into an Excel monthly summary with counts, totals and rates you can trace back to your source rows.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
 headline: Excel monthly rollup builder
-subhead: Share dated operational records. Get an Excel monthly summary with
-  traceable counts, totals and rates. Work on a copy of your file. Get a clear
-  record of what passed and what still needs checking.
+subhead: Share dated operational records. Get an Excel monthly summary with traceable counts, totals and rates. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share dated operational records. Get an Excel monthly summary with traceable
-  counts, totals and rates.
+  Share dated operational records. Get an Excel monthly summary with traceable counts, totals and rates.
 
 
-  It works with the actual Excel files and follows a specific method for this
-  task. Your source files stay intact. The method starts by checking what your
-  AI already knows and which files it can read. It asks only for missing facts
-  that change the work.
+  It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
 
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share dated operational records. Get an Excel monthly summary with traceable
-    counts, totals and rates.
-  - Dated source records, record grain, inclusion rules, timezone, month
-    boundaries and definitions of requested measures.
+  - Share dated operational records. Get an Excel monthly summary with traceable counts, totals and rates.
+  - Dated source records, record grain, inclusion rules, timezone, month boundaries and definitions of requested measures.
   - You need a checked copy while keeping your original files intact.
+not_for:
+  - "Your records have no dates, or you only need a one-off list: use a pivot table or a filtered view in Excel."
+  - "You want a chart or slide from the monthly numbers: build the chart in Excel or PowerPoint after this step."
+  - "Your AI cannot read and write real Excel files: ask a colleague to run the monthly count in Excel instead."
 you_give:
-  - Dated source records, record grain, inclusion rules, timezone, month
-    boundaries and definitions of requested measures.
+  - Dated source records, record grain, inclusion rules, timezone, month boundaries and definitions of requested measures.
   - The app and file tools your AI can use for the requested work
 you_get:
   - monthly-summary.xlsx and metric-definitions.md.
   - A record of source files, changes and check results
   - Missing facts and any checks that could not run
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing context before asking for missing information.
   - Review the native output and its real check evidence before sharing it.
+output_sample:
+  input:
+    - Your dated records, one row per event or item
+    - What each row stands for, such as an event or a snapshot
+    - Your timezone and month start and end rules
+    - How each count, total or rate is worked out (optional)
+  prerequisites:
+    - An AI that can read and write real Excel files
+    - Excel or a similar app to open and check the result
+  output:
+    - name: monthly-summary.xlsx
+      contains: A copy of your source rows and a monthly table of counts, totals and rates that update with formulas.
+    - name: metric-definitions.md
+      contains: What each measure means, the month boundary rule and how a rate handles a zero denominator.
+    - name: Run register
+      contains: Source file and version, each action, the output path, check results and remaining limits.
+    - name: Missing items
+      contains: Any fact or check that could not be done, each marked MISSING with the next action.
 how_it_works:
   - title: Step 1
-    text: 1. Confirm whether each row is an event, entity or snapshot. Use the
-      supplied timezone and explicit inclusive-start/exclusive-end reporting
-      boundaries.
+    text: 1. Confirm whether each row is an event, entity or snapshot. Use the supplied timezone and explicit inclusive-start/exclusive-end reporting boundaries.
   - title: Step 2
-    text: 2. Keep original rows in one source table and preserve source IDs. Convert
-      genuine numeric and date fields without changing text identifiers or
-      interpreting missing values as zero.
+    text: 2. Keep original rows in one source table and preserve source IDs. Convert genuine numeric and date fields without changing text identifiers or interpreting missing values as zero.
   - title: Step 3
-    text: 3. Build a compact monthly output using COUNTIFS, SUMIFS or a supported
-      equivalent. Calculate a rate from matching aggregate numerator and
-      denominator, with a stated zero-denominator rule.
+    text: 3. Build a compact monthly output using COUNTIFS, SUMIFS or a supported equivalent. Calculate a rate from matching aggregate numerator and denominator, with a stated zero-denominator rule.
   - title: Step 4
-    text: 4. Include months with no eligible activity when the brief requires them.
-      Reconcile each monthly result to source rows and check that totals do not
-      count subtotal or duplicate rows twice.
+    text: 4. Include months with no eligible activity when the brief requires them. Reconcile each monthly result to source rows and check that totals do not count subtotal or duplicate rows twice.
   - title: Step 5
-    text: 5. Change a value and add a boundary-date record in a disposable test
-      copy. Recalculate, verify the intended range extension and render the
-      output before delivering the workbook.
+    text: 5. Change a value and add a boundary-date record in a disposable test copy. Recalculate, verify the intended range extension and render the output before delivering the workbook.
 output_shape: |-
   FILES
   monthly-summary.xlsx and metric-definitions.md.
@@ -80,37 +76,26 @@ output_shape: |-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: Dated source records, record grain, inclusion rules, timezone, month
-      boundaries and definitions of requested measures.
+    how: Dated source records, record grain, inclusion rules, timezone, month boundaries and definitions of requested measures.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - Month boundaries are unambiguous.
   - Rates use matching populations.
   - Input changes update formulas rather than static copied totals.
   - The result names its sources and keeps unrun checks visible.
 test:
-  - "Try this case: January records total 12 completed of 20 eligible; February
-    3 of 10. Check that it does this: Show 60% and 30%; the combined completion
-    rate is 15/30, not 45%."
-  - "Try this case: A record falls exactly at 1 February 00:00 in the chosen
-    timezone. Check that it does this: Count it in February only."
-  - Reopen the saved result and compare it with the source. Keep any failed or
-    unrun check in the report.
+  - "Try this case: January records total 12 completed of 20 eligible; February 3 of 10. Check that it does this: Show 60% and 30%; the combined completion rate is 15/30, not 45%."
+  - "Try this case: A record falls exactly at 1 February 00:00 in the chosen timezone. Check that it does this: Count it in February only."
+  - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Add your confirmed field names, file rules and target app version to the required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same meanings and checks.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:
   - input: January records total 12 completed of 20 eligible; February 3 of 10
     expected: Show 60% and 30%; the combined completion rate is 15/30, not 45%.

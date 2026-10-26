@@ -1,6 +1,6 @@
 new_slug: deliverer-fit-planner
 name: "Deliverer fit planner"
-summary: "Paste your brief and who will present it. Get what suits them, what to avoid and where to put the showpiece."
+summary: "Plan who delivers your talk or script. Give the brief and the speaker. You get a fit plan with where to put the showpiece and lines to swap."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It judges what suits a person from limited evidence, but the table and checks are fixed."
@@ -17,6 +17,10 @@ when:
   - "Someone other than you will present, read or perform what you are writing."
   - "You are writing your own talk and want it to sound like you, not like a template."
   - "A script keeps feeling stiff when the real person delivers it."
+not_for:
+  - "You have no live or recorded deliverer, such as a plain written page with a reader: use the Layered draft writer instead."
+  - "You want the full draft written: use the Layered draft writer, then come back here to check it suits the speaker."
+  - "You need a talk shortened or reworded with no person in mind: ask your AI to edit it directly."
 
 you_give:
   - "The brief or a short description of the piece"
@@ -34,6 +38,29 @@ how_to_use:
   - "Paste the brief and say who delivers the piece. If you have a recording or a transcript of them speaking, paste it."
   - "If you are the deliverer, answer its three questions about how you talk."
   - "Use the plan when you write or edit the draft, then run the rehearsal check with the real person."
+output_sample:
+  input:
+    - Your brief or a short description of the piece
+    - "Who will deliver it and how: stage, video, call or page"
+    - A recording or notes on how they speak (optional)
+    - Your draft (optional)
+  output:
+    - name: The deliverer
+      contains: Who delivers the piece, in what setting, and what evidence the plan used.
+    - name: Fit table
+      contains: Pace, range, vocabulary, humour, feeling, and memory and stamina, each marked strength, strain or unknown.
+    - name: Showpiece
+      contains: The moment to remember, where it goes, and why it suits this person.
+    - name: Plain parts
+      contains: Passages to keep simple, and what was changed to make them easy.
+    - name: Swaps
+      contains: Each line the person cannot carry, the new line, and the reason.
+    - name: Rehearsal check
+      contains: How to read it aloud with the person and what to mark.
+    - name: MISSING
+      contains: What you still need to know about the person.
+    - name: CHECKS MISSED
+      contains: One line for each check the plan failed, or none.
 
 how_it_works:
   - title: "Reads the deliverer"

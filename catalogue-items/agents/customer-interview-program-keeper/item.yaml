@@ -16,11 +16,11 @@ outputs:
   - {type: persona}
 uses: [buying-story-interview-guide, customer-interview-notes, switch-story-mapper, job-based-avatar-builder, switch-friction-remover]
 steps:
-  - {uses: buying-story-interview-guide, note: "On the first run, and after any round with weak answers or a gap to fill: the next round's questions, who to talk to and how to record."}
-  - {uses: customer-interview-notes, note: "Every round, for each person: splits the notes into facts, praise and ideas, and marks who is a likely customer."}
-  - {uses: switch-story-mapper, note: "Only once at least five people have usable stories: maps each buying story, the four forces and the patterns across people."}
-  - {uses: job-based-avatar-builder, note: "Only when a new pattern is backed by two or more separate people: one buyer card per pattern, with quotes."}
-  - {uses: switch-friction-remover, note: "Only when the patterns have stopped changing or a holding force is clear: ranks the habits and worries that hold buyers back and picks one change to test."}
+  - {uses: buying-story-interview-guide, note: "On the first run, and after any round with weak answers or a gap to fill: the next round's questions, who to talk to and how to record. Hands the plan to the interviews, whose notes feed step 2."}
+  - {uses: customer-interview-notes, note: "Every round, for each person: takes your interview notes, guided by step 1's plan, and splits them into facts, praise and ideas, and marks who is a likely customer. Hands the sorted notes to step 3."}
+  - {uses: switch-story-mapper, note: "Only once at least five people have usable stories: takes the sorted notes from step 2 and maps each buying story, the four forces and the patterns across people. Hands the story map to steps 4 and 5."}
+  - {uses: job-based-avatar-builder, note: "Only when a new pattern is backed by two or more separate people: takes step 3's story map and the buyer stories behind it and writes one buyer card per pattern, with quotes."}
+  - {uses: switch-friction-remover, note: "Only when the patterns have stopped changing or a holding force is clear: uses step 3's story map from this or an earlier run, not step 4's cards. Ranks the habits and worries that hold buyers back and picks one change to test."}
 schedule: "After each round of interviews, about every two weeks"
 asks_before: [contacting anyone to invite or thank them, recording a conversation, offering a payment or gift for an interview, using a customer's words or name in an ad or page, changing a page, price or onboarding step because of a finding]
 origin: own

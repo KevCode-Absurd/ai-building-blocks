@@ -1,6 +1,6 @@
 new_slug: usability-heuristic-reviewer
 name: "Usability heuristic reviewer"
-summary: "Paste a page or form. Get a score out of 100, each usability break and ranked fixes."
+summary: "Check a page or form against ten usability rules. Get a usability review with a score out of 100, each break found and fixes ranked by harm."
 job: design-work
 thinking: high
 thinking_why: "It must judge many small breaks and rank them by harm, and each finding needs evidence."
@@ -17,6 +17,10 @@ when:
   - "A form, checkout or sign-up loses people and you do not know why."
   - "Your team is arguing over design and needs something firmer than taste."
   - "You want a fast expert-style check before paying for user tests."
+not_for:
+  - "You need to know if real people understand a label or flow: run a small user test with five or so people, and use the Small usability test planner to set it up."
+  - "You want a new design or a rewrite: ask a designer, since this reviews what exists and does not redesign it."
+  - "You have no screenshot, link or screen text to share: gather those first, as it never guesses what a screen holds."
 
 you_give:
   - "The page, screen or form (attach a screenshot or link, your AI can see pictures)"
@@ -36,6 +40,29 @@ how_to_use:
   - "Say who the visitor is, and whether they have used you before."
   - "Fix the top three items, then run it again on the new version."
   - "Use the \"needs a real test\" list to plan your next test with a small test planner."
+output_sample:
+  input:
+    - Your page, screen or form, as a screenshot or link
+    - The task a visitor came to do, in one sentence
+    - Who the visitor is and how new they are (optional)
+    - Anything you already know is broken (optional)
+  prerequisites:
+    - An AI that can read images, if you share screenshots
+  output:
+    - name: Task
+      contains: What the visitor came to do, so every finding ties back to that goal.
+    - name: Score
+      contains: A score out of 100 with the deductions shown, and the score if every fix is made.
+    - name: Findings, worst first
+      contains: Each break with the rule it breaks, the screen or step, what happens and a fix.
+    - name: Seams
+      contains: Where two parts meet, such as form to payment, and who owns the join.
+    - name: Needs a real test
+      contains: Doubts a review cannot settle, and the test that would settle each one.
+    - name: Missing
+      contains: Facts or screens that were not given and could change a finding.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: "Names the task"

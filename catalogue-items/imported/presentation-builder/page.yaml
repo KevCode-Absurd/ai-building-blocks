@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans the story, then builds slides to a format.
 new_slug: presentation-builder
 name: Presentation builder
-summary: Give it an outline or document. Get a polished slide deck for your
-  audience in Marp, reveal.js or PPTX.
+summary: Turn your outline, report or notes into a slide deck built for your audience. Get a presentation builder result in Marp, reveal.js, PPTX or Google Slides.
 job: work-with-files
 headline: Presentation builder
-subhead: A finished slide deck made from your outline, document or meeting
-  notes, written for the people who will watch it. Output comes as Marp,
-  reveal.js or PPTX.
+subhead: Give it your outline, document or meeting notes, plus your audience. It builds the story, writes short slides and suggests a visual for each one. You get a full deck with speaker notes.
 explain: |
   A finished slide deck made from your outline, document or meeting notes, written for the people who will watch it. Output comes as Marp, reveal.js or PPTX.
 
@@ -17,20 +14,46 @@ when:
   - You have a report and a meeting in two hours.
   - You need a pitch deck from rough notes.
   - A long document must become a ten-slide summary.
-  - You want slides that say one thing each.
+  - You want each slide to make one point.
+not_for:
+  - "You need a single-page memo or summary: write a one-pager instead, since a deck is too much."
+  - "You have no source content, only a topic: gather your key facts first, or expect a draft full of placeholders you must fill in."
+  - "You want to design slides by hand in a visual editor: use PowerPoint or Google Slides directly."
 you_give:
-  - Outline, document or notes
-  - Audience
-  - Slide count
-  - Output format
+  - Your outline, document or meeting notes
+  - Who will watch the deck
+  - How many slides you want
+  - "Output format: Marp, reveal.js, PPTX or Google Slides"
 you_get:
-  - Complete slide deck file
-  - Slide headlines that state takeaways
-  - Visual suggestions per slide
-  - Speaker notes (if asked)
+  - A complete slide deck file in your chosen format
+  - A takeaway headline on every slide
+  - A suggested chart, image or layout for each slide
+  - Speaker notes for each slide
+  - A list of claims for you to check before you present
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open your AI and paste in the skill instructions.
+  - Paste your notes or document. Say who the audience is, how many slides you want and which format.
+  - Use an AI that can run code and save files if you want a PPTX file. Marp and reveal.js decks are plain text, so a chat is enough.
+  - Check every number, name and claim. Fill in any bracketed placeholder such as [X%] with a real figure.
+  - Rehearse with the speaker notes, then open the file in your chosen app to check it displays well before you share it.
+output_sample:
+  input:
+    - Your outline, document or meeting notes
+    - Who will watch the deck
+    - How many slides you want
+    - "Output format: Marp, reveal.js, PPTX or Google Slides"
+  prerequisites:
+    - An AI that can run code and save files, if you want a PPTX file
+  output:
+    - name: Slide outline
+      contains: The story from opening hook to problem, answer, evidence and close, mapped slide by slide.
+    - name: Slide content
+      contains: A takeaway headline under eight words and three to five short points for each slide.
+    - name: Visual and layout suggestions
+      contains: The chart, diagram or image and the layout that fit each slide, plus a colour and font pairing.
+    - name: Slide deck file
+      contains: The full deck in your chosen format, with slide numbers and media references.
+    - name: Speaker notes
+      contains: The full talking points for each slide, written for the presenter to say aloud.
+    - name: Review pass
+      contains: A check that no slide is overloaded, plus slides to merge or move to an appendix.

@@ -16,6 +16,29 @@ use_cases:
   - "Prepare now for a bad turn of luck, while things are calm"
   - "Design rules that still work when people act in their own interest"
   - "Tell honest advisers from flatterers before a big decision"
+not_for:
+  - "You want a plan built on trust, courage and being open with your team: use the Brené Brown mind instead of Machiavelli."
+  - "You need to weigh a choice by its odds and your own bias, not by who holds power: use the Annie Duke mind."
+  - "You want cruelty, deceit or pressure on real people justified: no mind on this site does that, so talk to a trusted adviser, HR or a lawyer."
+output_sample:
+  input:
+    - The team, deal or rivalry you face, in a few lines
+    - The decision you must make, and any deadline
+    - Who holds power, and what each key person wants and fears
+    - Who you depend on from outside, such as agencies or partners (optional)
+  output:
+    - name: Power map
+      contains: Who can help you, who can block you and who can hurt you, which may differ from the org chart.
+    - name: Wants and fears
+      contains: What gain or fear moves each person on the map.
+    - name: Risks
+      contains: Where you lean on outsiders you cannot control, and what happens if your luck turns.
+    - name: Fit with the times
+      contains: Whether your usual way of working suits this moment, or whether someone else should lead that part.
+    - name: Either/or recommendation
+      contains: A clear choice between two paths with the reason, such as one hard change now or steps over time.
+    - name: Decent version of the advice
+      contains: His historical examples turned into lawful, honest moves for a modern team.
 seats:
   - {seat: "Power and realism", asks: "Forget how it should work. How do people actually behave here, and who holds the power?"}
   - {seat: "Fortune and preparation", asks: "What banks and dykes are we building now, while the weather is calm?"}

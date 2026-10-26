@@ -1,6 +1,6 @@
 new_slug: reason-why-deal-writer
 name: "Reason-why deal writer"
-summary: "Paste your product and the deal you want to run. Get the deal with a believable reason why, in three versions."
+summary: "Write a deal people believe. Give it your product and offer, and get a reason why the discount is real, in three versions."
 job: make-offer
 thinking: medium
 thinking_why: "It judges which reason is true and fits the reader, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "You want to run a discount or a gift and fear it will look too good to be true."
   - "Your offer is fair but readers ignore it."
   - "You are testing different reasons for the same deal."
+not_for:
+  - "You have no real saving or no reason you can prove: run a plain price cut, or use the Commodity trap checker to make the offer itself stronger."
+  - "You need to pick who the deal is for: use the Hungry audience ranker first, then bring its group here."
+  - "You want to polish copy you already wrote: use the Anti-AI-slop copy editor or the Sales copy editor."
 
 you_give:
   - "The deal you want to run, with real numbers"
@@ -35,6 +39,31 @@ how_to_use:
   - "Paste your product facts and the group it is for."
   - "Check the reason it picked against what you can actually prove."
   - "Test the three versions on your chosen group."
+output_sample:
+  input:
+    - The deal you want to run, with real numbers and an end date
+    - Your product facts and costs
+    - The group the deal is for
+    - Your brand brain or voice sample (optional)
+  output:
+    - name: The deal
+      contains: The price, gift or discount, the terms and the end date in one plain sentence.
+    - name: Doubts
+      contains: Four to six reasons a stranger would not believe the deal.
+    - name: Reasons considered
+      contains: Each possible reason, the proof it needs, and whether it was kept or dropped.
+    - name: The picture
+      contains: One or two sentences showing what the buyer gets, using only your product facts.
+    - name: Claim steps
+      contains: "Numbered steps to claim: where to go, what to enter, by when, and who to contact."
+    - name: Version 1
+      contains: An 80 to 150 word deal using a reason the buyer already knows.
+    - name: Version 2
+      contains: An 80 to 150 word deal using a reason that singles out this reader.
+    - name: Version 3
+      contains: A short line for a subject line or an ad.
+    - name: Missing and checks missed
+      contains: Facts it could not find, and any checks the draft still fails.
 
 how_it_works:
   - title: "States the deal"

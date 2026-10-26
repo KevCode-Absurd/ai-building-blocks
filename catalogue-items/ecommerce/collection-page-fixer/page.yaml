@@ -1,6 +1,6 @@
 new_slug: collection-page-fixer
 name: "Collection page fixer"
-summary: "Paste your collection page and stock by size. Get which products to feature and a daily check."
+summary: "Check your collection page for stock gaps and weak top products. Give it a screenshot and stock by size. You get swaps, fixes and a score."
 job: audit-landing-page
 thinking: medium
 thinking_why: "It matches a fixed set of rules to your products and stock, so a mid-size model is enough if it can read your screenshot."
@@ -13,6 +13,10 @@ when:
   - Your collection pages get plenty of visits but few clicks into products.
   - A best seller has gone out of stock in the common sizes and you want to know what to show instead.
   - You want a short daily routine for the pages that carry most of your sales.
+not_for:
+  - Your products have no sizes or colours. Use the Store friction checker for menus and checkout, or build a custom landing page for your ad traffic.
+  - You have no stock numbers at all. Get stock by size from your store first, or use the Store friction checker for the page itself.
+  - You need to read scroll maps or session recordings. Use the heatmap and recording reader, then bring the scroll map back here.
 you_give:
   - A screenshot of your collection page, with its top 6 to 12 products
   - Stock by size and colour for those products
@@ -30,6 +34,30 @@ how_to_use:
   - Add each product's grade or sales rank. If you have no grades, say so and it will use sales rank.
   - Make the product swaps and filter fixes, one change at a time.
   - Use the daily check it gives you, and name one person who owns the page.
+output_sample:
+  input:
+    - A phone screenshot of your collection page
+    - Stock by size and colour for your top products
+    - Each product's grade (A, B or C) or sales rank
+    - Conversion rate by day (optional)
+    - A scroll map or your filter list (optional)
+  prerequisites:
+    - An AI that can read a screenshot
+  output:
+    - name: Top six now
+      contains: The products shown first today, with each grade and a note on stock.
+    - name: Top six fix
+      contains: Which products to bring in, which to take out, and why.
+    - name: Stock warnings
+      contains: Products with sold-out key sizes or colours, and whether to swap or move them down.
+    - name: Above the fold, quick add and filters
+      contains: How many products show first, whether quick add helps, and how to cut filter layers.
+    - name: Trust lines and collab traffic
+      contains: Where to add lines like free shipping, and whether ad traffic needs its own page.
+    - name: Owner and daily check
+      contains: Who owns the page, what they read each day, and what triggers a swap.
+    - name: Score
+      contains: A score out of 100 with the sum shown and any checks not run.
 how_it_works:
   - title: Grades the top six
     text: Grade A and B products go in the top six. Grade C stays out, because landing performance depends on the first products shown.

@@ -1,6 +1,6 @@
 new_slug: hungry-audience-ranker
 name: "Hungry audience ranker"
-summary: "Paste the groups you could sell to. Get them ranked from coldest to hungriest, with the group to test first."
+summary: "Rank the groups you could sell to by proof of past buying, and find the hungry audience to test first. Get a ladder, a test group and a pass line."
 job: understand-customers
 thinking: medium
 thinking_why: "It ranks groups by evidence of past buying, and weighing that evidence takes judgement."
@@ -14,9 +14,14 @@ explain: |
   This skill ranks every group you could reach on a ladder, from cold names up to your own happy customers. It moves groups up when they bought by mail or online, spent more, or bought lately. It notes any weaker group that fits the offer closely enough to still pay. It then picks the highest rung you can afford for a small first test and writes down, before you spend, what would count as a fail.
 
 when:
-  - "You have an offer and several lists, audiences or channels and cannot decide where to start."
-  - "A cheap list or audience looks tempting and you want to check it is worth it."
-  - "You are about to buy a list, rent a partner's list or set ad targeting."
+  - You have an offer and several lists, audiences or channels and cannot decide where to start.
+  - A cheap list or audience looks tempting and you want to check it is worth it.
+  - You are about to buy a list, rent a partner's list or set ad targeting.
+  - You want to know if your own customers should hear the offer before anyone else.
+not_for:
+  - You have only one known buyer group. The ladder adds nothing, so go straight to the Small test and rollout planner.
+  - You want to know why people buy, not where to start. Interview a few past customers instead.
+  - You need to check consent for a rented or bought list. Ask the list owner and read the ad platform's targeting rules first.
 
 you_give:
   - "What you sell and the groups you could reach"
@@ -35,6 +40,26 @@ how_to_use:
   - "Add size and cost beside each group, and any results that show past buying."
   - "Say how much you can afford to lose on a first test."
   - "Read the ladder and the test group, then take it to Small test and rollout planner."
+output_sample:
+  input:
+    - What you sell
+    - The groups you could reach, with size and cost if you know them
+    - Results showing who bought what and when (optional)
+    - How much you can afford to lose on a first test (optional)
+    - A buyer persona (optional)
+  output:
+    - name: The ladder
+      contains: Every group ranked from coldest to hungriest, with its size, cost, proof of buying and the reason for its place.
+    - name: Fit exceptions
+      contains: Weaker groups that match your offer so closely they may still pay, marked as second tests only.
+    - name: First test
+      contains: The group to try first, why it was chosen, two backups and the money at risk.
+    - name: Checks
+      contains: The pass line, what to check in the results and when to step down a rung.
+    - name: Missing
+      contains: Each gap, such as a size, a cost or a test budget, marked instead of guessed.
+    - name: Checks missed
+      contains: One line for each check the skill could not meet, or none.
 
 how_it_works:
   - title: "Lists the groups"

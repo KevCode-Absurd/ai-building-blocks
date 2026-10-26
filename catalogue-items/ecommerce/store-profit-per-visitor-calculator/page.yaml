@@ -1,6 +1,6 @@
 new_slug: store-profit-per-visitor-calculator
 name: "Store profit per visitor calculator"
-summary: "Paste your Shopify and analytics numbers. Get corrected revenue and gross profit per visitor, and a trust score."
+summary: "Find your store's profit per visitor from Shopify and GA4 numbers. Fixes tax, shipping and bot errors, and gives a trust score out of 100."
 job: track-numbers
 thinking: low
 thinking_why: "It follows fixed formulas on numbers you paste, so a fast model is enough. Check the arithmetic once."
@@ -17,6 +17,10 @@ when:
   - You are about to judge a page change and need a number that does not move when your ad mix does.
   - Your conversion rate fell as you scaled ads and you want to know if the page got worse.
   - You compare your conversion rate with other brands and want to know if that makes sense.
+not_for:
+  - "You want a split of revenue per visitor by traffic source: pull that report from GA4 or your ad platform instead."
+  - "You need to judge one ad or ad set: use your ad platform's own results, since this tool reads store-wide numbers."
+  - "You have less than four weeks of data: gather more weeks first, or expect a low trust score."
 
 you_give:
   - Net sales, shipping collected, tax and discount totals for one date range
@@ -37,6 +41,34 @@ how_to_use:
   - Paste sessions from GA4, split by cold and warm traffic if you can.
   - Add your gross margin percent and, if you have them, ad spend and new-customer orders.
   - Put the weekly list it gives you into a sheet and fill it in every Monday.
+output_sample:
+  input:
+    - Net sales, shipping collected, tax and discounts for one date range
+    - Order count, and new versus returning orders if you have them
+    - GA4 sessions, split by cold and warm traffic if you can
+    - Your gross margin percent
+    - Ad spend and new-customer orders (optional)
+  prerequisites:
+    - Shopify reports and an analytics tool such as GA4 to export the numbers from
+  output:
+    - name: RANGE
+      contains: The dates, order count and session count, with the source of the sessions.
+    - name: AS GIVEN
+      contains: Conversion, order value, revenue per visitor and gross profit per visitor as the dashboard shows them.
+    - name: CORRECTED
+      contains: The same figures after adding shipping, using net sales and using cleaner sessions, with the working shown.
+    - name: CORRECTIONS
+      contains: What was changed for tax, shipping and bots.
+    - name: BLEND
+      contains: Cold and warm conversion, the blended rate, and the rate at a different cold share.
+    - name: CAC LINK
+      contains: Cost to get a customer, and what it would be at double the conversion.
+    - name: READ
+      contains: Two sentences on what this says about the page and the traffic.
+    - name: TRACK WEEKLY
+      contains: The list of numbers to fill in every week.
+    - name: SCORE
+      contains: A trust score out of 100 with the sum shown, and the score after the fixes.
 
 how_it_works:
   - title: Sets the formulas

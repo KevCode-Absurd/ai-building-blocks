@@ -1,6 +1,6 @@
 new_slug: mechanism-namer
 name: "Mechanism namer"
-summary: "Give it your product and rivals. Get a named, true mechanism and three pillars that sell the reason."
+summary: "Name the true reason your product works differently from rivals. Paste your product and rival lines. Get a mechanism name and three pillars."
 job: make-offer
 thinking: medium
 thinking_why: "It compares your product with rivals and must keep every claim true, which takes careful reading but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You sell something buyers compare with rivals on price alone.
   - You know your product is better made, but your page can't say why in one line.
   - You are writing an offer or a long page and need a clear reason to believe.
+not_for:
+  - Your product has no real difference you can prove. Fix the product or the offer first, then come back.
+  - You need to rewrite the whole offer, price and guarantee. Use the Offer checklist reviewer.
+  - You want ad scripts from customer words. Use the Video ad script writer from customer quotes.
 
 you_give:
   - Your product and how it works
@@ -33,6 +37,25 @@ how_to_use:
   - Paste two or three rivals and what they say on their pages.
   - List every real difference you know of, with proof such as a test, a spec or a certificate.
   - Check the chosen name against your ad platform's rules, then use it in your offer and page.
+output_sample:
+  input:
+    - Your product and how it works
+    - Your main rivals and what they say on their pages
+    - Real differences in ingredient, material, process, design or test results
+    - Your brand brain (optional)
+  output:
+    - name: Commodity test
+      contains: A verdict on whether buyers compare you on price alone, and so whether you need a mechanism.
+    - name: Candidates
+      contains: Three to five possible mechanisms, each marked true, untrue or unproven, with the proof behind it.
+    - name: Chosen mechanism
+      contains: The best name in plain words and one line on why it matters to the buyer's result.
+    - name: Pillars
+      contains: "Three blocks: what most sellers do, why that falls short, why yours differs, each with proof and an analogy."
+    - name: Claim flags
+      contains: Names or lines that may break ad platform rules, especially health, weight or money claims.
+    - name: Missing
+      contains: Any product detail, rival lines or proof you did not give.
 
 how_it_works:
   - title: Runs the commodity test

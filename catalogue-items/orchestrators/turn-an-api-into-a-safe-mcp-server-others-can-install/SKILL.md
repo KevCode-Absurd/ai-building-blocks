@@ -21,19 +21,19 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **API to MCP server builder.** Use the skill `api-to-mcp-server-builder`. Builds the first version of the server from your API spec.
+1. **API to MCP server builder.** Use the skill `api-to-mcp-server-builder`. Builds the first version of the server from your API spec and hands that server project to step 2.
 
 Pause here: Save the generated server in your repo and run it once to confirm it starts.
 
-2. **MCP server sign-in builder.** Use the skill `mcp-server-sign-in-builder`. Adds OAuth sign-in to the server you saved.
+2. **MCP server sign-in builder.** Use the skill `mcp-server-sign-in-builder`. Adds OAuth sign-in to the server project from step 1 and hands the changed project to step 3.
 
 Pause here: Commit the sign-in code and run the server again so the security check reads the final code.
 
-3. **MCP server hardener.** Use the skill `mcp-server-hardener`. Reviews the server with its sign-in in place and lists what to fix before anyone installs it.
+3. **MCP server hardener.** Use the skill `mcp-server-hardener`. Reviews the server with its sign-in in place and lists what to fix before anyone installs it. Hands the security report to step 4.
 
 Pause here: Apply every fix marked must-fix, then run the server once more.
 
-4. **MCP server publisher.** Use the skill `mcp-server-publisher`. Hosts and packages the hardened server so others can install it.
+4. **MCP server publisher.** Use the skill `mcp-server-publisher`. Hosts and packages the hardened server so others can install it. Uses the server project with the fixes from step 3 applied, and the security report.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

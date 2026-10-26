@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It gives one plain step at a time.
 new_slug: setup-walkthrough-guide
 name: Setup walkthrough guide
-summary: Name what you want to set up. Get one small step at a time, with the
-  steps left shown.
+summary: Get a setup walkthrough guide that shows one small step at a time, with the steps left listed below, so installs stop feeling like too much.
 job: organise-work
 headline: Setup walkthrough guide
-subhead: A guided setup where you see only one small step at a time, with the
-  steps left shown below. Setups feel long because the whole list lands at once.
+subhead: A guided setup where you see only one small step at a time, with the steps left shown below. Setups feel long because the whole list lands at once.
 explain: |
   A guided setup where you see only one small step at a time, with the steps left shown below. Setups feel long because the whole list lands at once. Here each reply holds a single action, such as one click, field or command, then a divider and a numbered list of what remains.
 
@@ -17,6 +15,10 @@ when:
   - You are connecting several services and keep losing your place.
   - You are helping a teammate set up something non-technical.
   - You want to see how many steps are still left at every point.
+not_for:
+  - "You can finish the task in one action: just do it, or ask your AI for a single answer."
+  - "You need the full checklist at once to plan your time: ask your AI for a written setup guide instead."
+  - "The setup needs a specialist, such as a server or payment system: ask the vendor's support or a technical person."
 you_give:
   - What you want to set up
   - Docs or an outline of the steps (optional)
@@ -27,7 +29,25 @@ you_get:
   - An updated list after each step
   - A completion message
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Tell your AI what you want to set up, such as a tool to install or services to connect.
+  - Paste any docs or steps you have (optional). You can also describe what is on your screen now.
+  - Do the one step it shows, then reply "done" or tell it what you see.
+  - Keep going until it says setup is complete. Then test that the tool works.
+  - If a step fails, say what went wrong. Your AI adds the fix as a new step.
+output_sample:
+  input:
+    - What you want to set up
+    - Docs or an outline of the steps (optional)
+    - Your current screen or progress (optional)
+  output:
+    - name: Current step
+      contains: One small action, such as a single click, field or command, in one or two plain lines.
+    - name: Divider
+      contains: A short line of dashes that separates the current step from the list below.
+    - name: Still remaining
+      contains: A numbered list of the steps left after this one, never more than eight items.
+    - name: Updated list
+      contains: After each step you finish, the next step moves up and the list is redone.
+    - name: Completion message
+      contains: A line saying setup is complete, shown instead of the list when nothing is left.

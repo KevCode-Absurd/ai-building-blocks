@@ -1,6 +1,6 @@
 new_slug: launch-email-sequence-planner
 name: "Launch email sequence planner"
-summary: "Give it your product, list and close date. Get a 10-email launch plan with resends and a triple close."
+summary: "Plan a 10-email product launch sequence with resends and a triple close. Give it your product, list size and close date."
 job: write-emails
 thinking: medium
 thinking_why: "It follows a fixed launch shape, but the content of each email needs judgement about your product and doubts."
@@ -17,6 +17,10 @@ when:
   - You are launching a new product, a drop or a limited offer with a real end date.
   - You have a list of a few thousand or more and want more of it to see the launch.
   - You want a plan that mixes value and selling instead of daily sales emails.
+not_for:
+  - "Your product never closes, or you have no real end date: write a value-only welcome sequence with your AI instead, and skip the countdown."
+  - "You have a list under 1,000 contacts and want a big plan: ask for 5 or 6 emails and one resend, or send a single announcement email."
+  - "You need the finished email copy today: use this plan first, then write each email from its outline with your AI."
 
 you_give:
   - Your product or drop, price, offer and the date it closes
@@ -37,6 +41,28 @@ how_to_use:
   - "Choose a pace: about 10 days if you need the cash soon, about 20 if you can wait."
   - Read the outlines, then write each email from its outline and rest it for a day.
   - Check that the end date and what happens after it are true before you send email 1.
+output_sample:
+  input:
+    - Your product or drop, price, offer and the date it closes
+    - Your list size and usual open rate
+    - Content you can reuse, such as guides, tutorials and blog posts (optional)
+    - The questions and doubts buyers raise most (optional)
+    - Reviews and testimonials, noted by which doubt each answers (optional)
+  output:
+    - name: Launch plan header
+      contains: The product, the real close date and what happens after it, your list size and the pace you chose.
+    - name: Calendar
+      contains: A day-by-day table of sends, marking new emails and resends, with goal, subject and a second subject for each.
+    - name: Email outlines
+      contains: One block per email with its goal, type, subject, preview text, story, content, call to action and P.S.
+    - name: Closing day
+      contains: The morning, afternoon and late evening sends on the last day, each with its own subject line.
+    - name: Proof used
+      contains: Each real review used, and the buyer doubt it answers.
+    - name: Checks missed
+      contains: Any check the plan failed, or the word none.
+    - name: Missing
+      contains: Anything you did not give, such as a close date, reviews or reusable content.
 
 how_it_works:
   - title: Checks the fit

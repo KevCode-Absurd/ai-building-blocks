@@ -23,11 +23,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Sort your apps into keep, swap or cut.** Use the skill `store-app-stack-picker`. Starts from your app list and makes the verdict on each app and the list of what to export before you cut.
+1. **Sort your apps into keep, swap or cut.** Use the skill `store-app-stack-picker`. Starts from your app list and makes the verdict on each app and the list of what to export before you cut. Hands step 2 the keep list.
 
 Pause here: Remove the apps marked cut. Then open your home, product, cart and account pages, and save the list of scripts each one loads, from the network tab or the page source.
 
-2. **Rank the scripts and apps that are left by risk.** Use the skill `store-script-and-app-risk-auditor`. Works on what is left after the cuts in step 1, using the saved script list and the keep list from the app check.
+2. **Rank the scripts and apps that are left by risk.** Use the skill `store-script-and-app-risk-auditor`. Works on what is left after the cuts in step 1, using the script list you saved at the pause (your own capture, not step 1's output) and the keep list from the app check.
 3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

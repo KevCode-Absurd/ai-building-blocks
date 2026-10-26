@@ -1,0 +1,118 @@
+name: Carousel content agent
+summary: "Get a six-slide TikTok and Instagram carousel plan from your site: three hooks, slide text, image prompts and a caption. Bring your link."
+headline: Carousel content agent
+subhead: Give it your website link and what you sell. It builds a six-slide carousel on one fixed story shape and offers three hooks for slide 1. You get slide text, a picture prompt for each slide, a caption and a pre-post checklist.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A good carousel stops the scroll on slide 1, then moves a stranger from a problem to your offer in six slides. This agent uses one fixed shape: hook, problem, agitation, solution, feature, call to action. It writes the hook in three styles so you can pick: a question, a bold claim or a pain point.
+
+  It builds the slides from real facts on your site, such as features, prices and customer quotes. It does not make up stats or testimonials. It also writes one picture prompt per slide so all six keep the same look, and a caption with hashtags.
+
+  The original profile describes a full autopilot: it scrapes your site, makes the images with Gemini, posts to TikTok and Instagram and learns from the results. A chat can't do that. This agent plans and writes. You make the images, check the facts and post. Scripts, API keys and approved developer apps would be needed for the rest, and this pack does not include them.
+when:
+  - You want to explain one product or idea in six slides.
+  - You want to turn a features or pricing page into TikTok and Instagram carousels.
+  - You have posted carousels before and want the next one to build on what worked.
+  - You need a repeatable slide structure for a daily or weekly carousel.
+not_for:
+  - You need a paid ad carousel. Use the Carousel ad writer.
+  - You need a short video script, not slides. Use the Short video hook writer.
+  - You want a plan across several channels, not one carousel. Use the Platform-native content planner.
+you_give:
+  - Your website link. Pricing and features pages help most.
+  - What you sell and who it is for
+  - Your goal for the carousel, such as sign-ups or store visits
+  - Facts and quotes you are happy to use, such as features, prices and reviews
+  - "Results from past carousels: the hook used, views and likes (optional)"
+  - Your brand colours and fonts (optional)
+you_get:
+  - "Three hook options for slide 1: question, bold claim and pain point"
+  - "Text for six slides: hook, problem, agitation, solution, feature and call to action"
+  - One picture prompt per slide that keeps the same look across all six
+  - A caption with hashtags and a TikTok title
+  - "A pre-post checklist: text placement, file type and facts to verify"
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you can't, paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your link, what you sell, who it is for and your goal. If your AI can't open links, paste your features and pricing text.
+  - Add the facts you want used, and the results of past carousels if you have them.
+  - "Say: \"Plan one carousel. Use only facts I gave you. Mark anything you can't confirm.\""
+  - Pick one of the three hooks, then ask for the slides built on it. Read each slide against your site and fix any wrong fact.
+  - Use the picture prompts in an image maker such as Gemini or ChatGPT, or in your design tool. Put the slide text on the images, check the checklist, then post it yourself.
+how_it_works:
+  - title: Read your facts
+    text: It confirms your product, buyer, goal and the real facts you gave it. Missing items are asked for once, then marked MISSING.
+  - title: Choose the business type
+    text: It labels your business, such as software, store, app or developer tool, and picks pain points that fit.
+  - title: Write three hooks
+    text: It writes slide 1 as a question, a bold claim and a relatable pain point.
+  - title: Build the six slides
+    text: It follows hook, problem, agitation, solution, feature, call to action. Slide 1 sets the look for the rest.
+  - title: Write picture prompts
+    text: It writes one prompt per slide, with the same colours and type style, and keeps text out of the bottom fifth of the picture.
+  - title: Add the caption and checks
+    text: It writes the caption, hashtags and TikTok title, then lists what to verify before posting.
+output_shape: |-
+  HOOK OPTIONS
+    Question: <slide 1 line>
+    Bold claim: <slide 1 line>
+    Pain point: <slide 1 line>
+
+  SLIDES (built on the hook you pick)
+    <number> | <role: hook, problem, agitation, solution, feature, call to action> | <headline> | <body text> | <fact it rests on> | <picture prompt>
+
+  CAPTION
+    <caption text> | <hashtags> | <TikTok title, 90 characters or fewer>
+
+  PRE-POST CHECKLIST
+    <text clear of the bottom fifth> | <file type and size to check> | <facts to verify> | <how to post it yourself>
+output_sample:
+  input:
+    - Your website link, or your features and pricing text
+    - What you sell, who it is for and your goal
+    - Facts and quotes you are happy to use
+    - Results from past carousels (optional)
+  prerequisites:
+    - An image maker, such as Gemini or ChatGPT, to turn the picture prompts into slides
+    - Your own TikTok and Instagram accounts to post from
+  output:
+    - name: Hook options
+      contains: "Three versions of slide 1: a question, a bold claim and a pain point."
+    - name: Slides
+      contains: Six slides, each with its role, headline, body text, the fact behind it and a picture prompt.
+    - name: Caption
+      contains: The caption, hashtags and a TikTok title of 90 characters or fewer.
+    - name: Pre-post checklist
+      contains: Where text may sit, the file type to use and the facts to verify before posting.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Hook
+    meaning: The first slide. Its job is to make someone stop scrolling.
+  - term: Agitation
+    meaning: A slide that makes the problem feel real before you offer the fix.
+  - term: Picture prompt
+    meaning: The words you give an image maker so it draws the slide.
+  - term: Call to action
+    meaning: The last slide. It tells the viewer the one thing to do next.
+works_best_with:
+  tools:
+    - name: Gemini
+      why: The original profile uses Gemini to make slide images from the prompts. Any image maker can do the same job.
+    - name: Claude or ChatGPT
+      why: Both write the slide text and read your site text well.
+  inputs:
+    - Your best-performing past carousel and its numbers.
+    - A real customer quote you have permission to use.
+    - One screenshot of your product for the feature slide.

@@ -1,51 +1,65 @@
 new_slug: reconcile-hotel-room-and-food-contribution
-name: Reconcile hotel room and food contribution
-headline: Reconcile hotel room and food contribution
-summary: A property room and food contribution reconciliation
+name: Hotel room and food contribution checker
+headline: Hotel room and food contribution checker
+summary: Share room receipts, channel fees, food batches and separate costs. Get matched room and food subtotals with open cost gaps.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A property room and food contribution reconciliation. Share same-property room-night/channel records and restaurant service batches, observed portion yields, actual receipts and clearly partitioned occupied-room versus kitchen cash costs.
+subhead: Share one hotel's room-night records by booking channel, restaurant batches, the money actually received and your costs split between rooms and kitchen. Your AI works out room contribution after channel fees. It works out food contribution from real portions. You get both for the same period in one summary, with shared costs left out unless you allocate them.
 explain: |-
-  A property room and food contribution reconciliation.
+  A hotel earns from rooms and food, and each has its own costs. Room money arrives net of channel fees. Food depends on how many portions a batch really yields. When these are mixed, a cost lands in both departments, or the food and room figures cover different dates. The result looks like profit, but it is not.
 
-  Hospitality operating finance. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow does the two departments one after the other. The first step reconciles room-night receipts, commissions and the cost to service occupied rooms, and passes on the period and cost boundaries. The second step builds food contribution from yields, servings and receipts across that same period, then brings both into one management summary.
+
+  Shared overhead, such as rent, management pay or utilities used by both, stays out of both subtotals unless you allocate it and show the evidence. The summary is department contribution. It is not the full profit of the property.
 when:
-  - You need a property room and food contribution reconciliation.
-  - You work on hospitality operating finance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Booking sites take commission and you want room contribution after those fees.
+  - Food cost per portion seems off and you want to test it against real yields.
+  - You need room and food results for the same property and period in one place.
+  - Owners ask why departmental figures do not add up to the profit statement.
+not_for:
+  - "You want full property profit: this stops at department contribution. Use your accounts and add shared costs."
+  - "You only need room revenue after channel fees: use the Hotel room revenue and cost checker."
+  - "You only want dish cost: use the Restaurant portion cost calculator."
+  - "You want to allocate shared costs between departments: use the Service capacity and cost reviewer."
 you_give:
-  - Same-property room-night/channel records and restaurant service batches, observed portion yields, actual receipts and clearly partitioned occupied-room versus kitchen cash costs.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Room-night records by booking channel, with rates and commissions, from your booking system
+  - "Restaurant service batches: ingredients, observed portion yield and servings, from the kitchen"
+  - Actual receipts for rooms and food, from your payments report or bank
+  - Costs split into occupied-room costs and kitchen cash costs, from your ledger
+  - The property name and the dates for the period
 you_get:
-  - A property room and food contribution reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Room contribution after channel commissions and occupied-room service costs
+  - Food contribution for each batch, from real yield, servings and receipts
+  - A room and food summary for the same property and period
+  - A note of shared overhead left out, or allocated with its source
+  - A list of cost gaps and checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the room-night records, kitchen batches, receipts and cost split. Say the property, the dates and the currency.
+  - Tell your AI to follow the pack and save each step's file. Ask for a spreadsheet if your tool can make one.
+  - After step 1, check that the commission matches your channel statements and that no kitchen cost sits in room costs.
+  - After step 2, check that room and food cover the same dates and that no shared cost is in both. Do not read the summary as property profit.
 how_it_works:
-  - title: Hotel channel revenue reconciler
-    text: Reconcile actual room-night channel receipts, commissions and occupied-room service costs. Pass the property period, cost boundaries and room contribution as one departmental subtotal.
-  - title: Restaurant portion cost builder
-    text: Build food service batch contributions across that period using actual yield, servings and receipts. Reconcile room and food subtotals in a clearly bounded management summary; exclude shared overhead from both unless separately allocated with source evidence.
+  - title: Hotel room revenue and cost checker
+    text: "Reconciles room-night receipts by channel, commissions and the cost to service occupied rooms. Hands step 2 the property period, the cost boundaries and the room contribution as one departmental subtotal. Check before moving on: commission matches channel statements, and no kitchen cost is in room cost."
+  - title: Restaurant portion cost calculator
+    text: "Builds food contribution by batch from real yield, servings and receipts over that same period. Brings room and food together in one bounded management summary. Leaves shared overhead out of both unless you allocate it with evidence. Check before you use it: both subtotals cover the same dates and no cost is in both."
 output_shape: |-
-  A property room and food contribution reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES    <property, dates, currency, files>
+  ROOM CONTRIBUTION    <channel | room nights | receipts | commission | service cost | contribution>
+  FOOD CONTRIBUTION    <batch | portions | servings | receipts | cash cost | contribution>
+  MANAGEMENT SUMMARY   <room subtotal | food subtotal | combined | shared costs excluded>
+  COST GAPS            <cost not split or not sourced>
+  MISSING              <each gap and what it stops>
+  CHECKS MISSED        <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Periods and currency match, shared expenses are not duplicated, and department contribution is clearly separate from complete property profit.
+  - what: Period
+    how: Use the same dates for rooms and food. Mixed periods are flagged as a conflict.
+  - what: Shared costs
+    how: If you want a split of shared costs, give the rule and its source. Otherwise they stay out.
+  - what: Payment timing
+    how: Room receipts are matched to stays. When money lands later, your AI keeps timing apart from contribution.
 judge:
   - Periods and currency match, shared expenses are not duplicated, and department contribution is clearly separate from complete property profit.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -60,13 +74,36 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads files and builds spreadsheets
+      why: Room and food schedules need the same dates and cost lines. A spreadsheet makes the match easy to see. In a plain chat they come back as tables.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Channel commission statements (optional).
+    - Kitchen waste or comp logs for the period (optional).
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Contribution
+    meaning: Money earned by a department after its own direct costs, before shared overhead.
+  - term: Channel commission
+    meaning: The fee a booking site takes from each room booking.
+  - term: Portion yield
+    meaning: How many servings a batch of ingredients really makes.
+  - term: Shared overhead
+    meaning: Costs that serve the whole property, such as rent or management pay.
+output_sample:
+  input:
+    - Room-night records by channel, with rates and commissions
+    - Restaurant batches with observed yield, servings and receipts
+    - Costs split between occupied rooms and the kitchen
+  prerequisites:
+    - An AI that can read files
+    - The property and dates for one period
+  output:
+    - name: outputs/step-1-hotel-channel-revenue-reconciler.md
+      contains: Room receipts, commissions, service cost and room contribution for the period.
+    - name: outputs/step-2-restaurant-portion-cost-builder.md
+      contains: Food contribution by batch, from real yield, servings and receipts.
+    - name: Management summary
+      contains: Room and food subtotals side by side, with shared overhead left out or allocated.
+    - name: Cost gaps
+      contains: Costs that were not split or have no source, and what each stops.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.

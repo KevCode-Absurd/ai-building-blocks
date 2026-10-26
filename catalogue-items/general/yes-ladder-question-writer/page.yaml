@@ -1,6 +1,6 @@
 new_slug: yes-ladder-question-writer
 name: "Yes-ladder question writer"
-summary: "Paste your request and plan. Get four to seven questions in order, each with an honest yes, ending at your ask."
+summary: "Write a yes ladder of four to seven fair questions that leads from shared ground to your ask, with a plan for each no."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It must order claims so each follows from the last and test each for an honest yes, but the method is fixed."
@@ -17,6 +17,10 @@ when:
   - "You are about to ask for a change and expect an early no."
   - "You are in a sales or support talk where the other person starts from a flat refusal."
   - "You want to lead a meeting to a decision without making a speech."
+not_for:
+  - "The other person has already decided: talk to them directly and ask what would change their mind."
+  - "The ask is high stakes or sensitive: have a plain, open talk instead of a set of questions."
+  - "A rung drew a no and you need words to calm things down: use the Disagreement calming line writer."
 
 you_give:
   - "Your request in one line"
@@ -34,6 +38,28 @@ how_to_use:
   - "Read the questions aloud. Change any that sound like a trap."
   - "Take the ladder to the talk, and leave it on the page if you can ask the questions in your own words."
   - "After the talk, note which rung got a no."
+output_sample:
+  input:
+    - Your request in one line
+    - Your plan or notes on what the person wants
+    - Their likely doubts (optional)
+  output:
+    - name: The request
+      contains: Your ask in one line, and what the person must already believe for it to feel natural.
+    - name: The starting point
+      contains: The shared ground you both hold and why it cannot draw a no.
+    - name: The ladder
+      contains: Four to seven short questions in order, each with the yes you expect.
+    - name: If they say no
+      contains: What to ask and where to step back for each rung.
+    - name: Where to stop
+      contains: The line that lets them say the last step themselves.
+    - name: Fairness check
+      contains: One line per rung saying it is an honest yes or was removed.
+    - name: Missing
+      contains: Facts you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the ladder still fails, or none.
 
 how_it_works:
   - title: "Finds the end point"

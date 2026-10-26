@@ -1,26 +1,25 @@
 slug: shared-service-activity-cost-allocator
 name: Shared service activity cost allocator
-summary: An activity cost allocation and unused capacity bridge
+summary: "Split a shared service cost across departments by how much each one used, with the cost of unused capacity shown on its own line."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+before: []
+next: [product-mix-capacity-checker, service-utilization-margin-builder]
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

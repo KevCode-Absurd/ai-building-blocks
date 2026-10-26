@@ -50,10 +50,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Cut the line.** Use the skill `product-line-cutter`. The products ranked by what they really earn and what attention they take, and the line cut to the few that pay, in the manner of Steve Jobs's 1997 cull: the grid, the four quadrants, everything else gone.
-2. **Review every programme.** Use the skill `program-keep-or-cut-reviewer`. Give it the cut line and your numbers. Each programme, campaign and recurring effort reviewed as keep or cut on its results, the way Jeff Bezos and Warren Buffett judge what to stop, with the reason.
-3. **Write the give-up list.** Use the skill `give-up-list-planner`. Give it the cuts. What you will no longer do, sell or chase, said plainly, following Al Ries and Jack Trout's rule that focus means sacrifice, with the customers and revenue you are giving up named.
-4. **Write the commit note.** Use the skill `disagree-and-commit-note-writer`. Give it the cuts and the give-up list. A note in Jeff Bezos's manner that states the decision, records the disagreement honestly, and asks everyone to commit, with what each team does on Monday. Sent only when you say so.
+1. **Cut the line.** Use the skill `product-line-cutter`. The products ranked by what they really earn and what attention they take, and the line cut to the few that pay, in the manner of Steve Jobs's 1997 cull: the grid, the four quadrants, everything else gone. Hands steps 2 and 3 the plan and the shortlist of what stays.
+2. **Review every programme.** Use the skill `program-keep-or-cut-reviewer`. Give it the cut line and your numbers. Each programme, campaign and recurring effort reviewed as keep or cut on its results, the way Jeff Bezos and Warren Buffett judge what to stop, with the reason. Reads step 1's plan and your numbers, and hands you the verdicts to add to the cuts before step 3.
+3. **Write the give-up list.** Use the skill `give-up-list-planner`. Give it the cuts. What you will no longer do, sell or chase, said plainly, following Al Ries and Jack Trout's rule that focus means sacrifice, with the customers and revenue you are giving up named. Uses step 1's shortlist and plan, not step 2's review, and hands the give-up plan to step 4.
+4. **Write the commit note.** Use the skill `disagree-and-commit-note-writer`. Give it the cuts and the give-up list. A note in Jeff Bezos's manner that states the decision, records the disagreement honestly, and asks everyone to commit, with what each team does on Monday. Takes step 3's give-up plan as the actions each team commits to. Sent only when you say so.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

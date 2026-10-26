@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It builds the numbers two ways and checks that they agree.
 new_slug: market-size-estimator
 name: Market size estimator
-summary: Give it a market or product idea. Get a TAM, SAM and SOM estimate built
-  top-down and bottom-up, with sources.
+summary: Size your market for a pitch or plan. Give it your idea, customers and price. You get TAM, SAM and SOM worked out three ways, with sources.
 job: plan-strategy
 headline: Market size estimator
-subhead: A market size estimate for your idea, shown as TAM, SAM and SOM and
-  built three ways so you can see if the numbers agree.
+subhead: A market size estimate for your idea, shown as TAM, SAM and SOM and built three ways so you can see if the numbers agree.
 explain: |
   A market size estimate for your idea, shown as TAM, SAM and SOM and built three ways so you can see if the numbers agree. It is useful for fundraising, planning and checking whether an idea is big enough.
 
@@ -17,6 +15,10 @@ when:
   - You want to know whether your idea can reach a meaningful revenue.
   - Your top-down and bottom-up numbers are far apart.
   - An investor asked you to justify your TAM.
+not_for:
+  - "You have no customers or price yet: talk to a few likely buyers first, then come back."
+  - "A current published report already gives the number you need: cite that report instead."
+  - "You need a full financial forecast: use a spreadsheet or ask an accountant."
 you_give:
   - Your product or idea
   - Target customers and region
@@ -28,8 +30,30 @@ you_get:
   - A willingness-to-pay view
   - Assumptions and sources list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web for market data.
+  - Open your AI tool (Claude, ChatGPT or Gemini) and paste in the skill text.
+  - Describe your product or idea, your target customers, your region and your price.
+  - Paste any industry reports you have (optional). If your AI can search the web, ask it to find current market data.
+  - Read the three estimates and the cross-check. If they are far apart, ask your AI why.
+  - Check each source and date. Treat the share rates as assumptions, and ask for a cited reason behind each one.
+  - Some data providers charge for reports. Do not buy a report or share customer data unless you are allowed to.
+output_sample:
+  input:
+    - Your product or idea
+    - Your target customers and region
+    - Your price or revenue per customer
+    - Any industry reports you have (optional)
+  prerequisites:
+    - An AI that can search the web is best, so it can find current market data
+  output:
+    - name: Market definition
+      contains: The problem, the customers, the product category, the region and the time span being sized.
+    - name: Top-down estimate
+      contains: TAM, SAM and SOM worked from a total market figure, with each filter and source shown.
+    - name: Bottom-up estimate
+      contains: TAM, SAM and SOM built from customer counts times yearly revenue per customer.
+    - name: Value theory estimate
+      contains: What the problem costs today, what buyers might pay to fix it, and the market that follows.
+    - name: Cross-check
+      contains: A comparison of the methods that explains any gap in definitions, units, groups or source dates.
+    - name: Assumptions and sources
+      contains: Every assumption and source, with the share rates marked as scenario assumptions to justify.

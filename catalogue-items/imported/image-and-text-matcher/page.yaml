@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows standard model calls.
 new_slug: image-and-text-matcher
 name: Image and text matcher
-summary: Give it pictures and words. Get image search, sorting by label and
-  checks for what a picture shows.
+summary: Match pictures to words. Search a photo set by description, sort images into your own labels, or check what a picture shows, with no training.
 job: build-software
 headline: Image and text matcher
-subhead: A program that matches pictures to words without any training of your
-  own. Give it images and text and you can search a photo set by description,
-  sort pictures into labels you choose, and check what a picture shows.
+subhead: A program that matches pictures to words without any training of your own. Give it images and text and you can search a photo set by description, sort pictures into labels you choose, and check what a picture shows.
 explain: |
   A program that matches pictures to words without any training of your own. Give it images and text and you can search a photo set by description, sort pictures into labels you choose, and check what a picture shows.
 
@@ -18,6 +15,10 @@ when:
   - You need to sort images into your own categories with no labeled examples.
   - You want to flag unsafe images in uploads.
   - You need to check if a caption fits a picture.
+not_for:
+  - "You want a caption written for a picture: use BLIP-2, a model made for captions."
+  - "You want to chat about an image or ask it questions: use LLaVA, a model built for picture chat."
+  - "You need to cut objects out of a picture or find exact positions: use Segment Anything, which marks objects."
 you_give:
   - Images or a folder of images
   - Labels or text descriptions to match
@@ -28,8 +29,31 @@ you_get:
   - Search results for a text query
   - Code you can run on your own files
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open an AI chat that can run Python code, and paste in this skill.
+  - Tell your AI where your pictures are, and add your labels or your search sentence.
+  - Ask it to install what it needs, then run the matching on your files.
+  - Check the scores. Use clear, descriptive labels, because vague ones give weak results.
+  - For moderation, treat the scores as a way to pick pictures for a person to review. Do not use them to block pictures on their own.
+  - For a large photo set, save the picture data in a vector database so you can search it again fast.
+output_sample:
+  input:
+    - Your pictures, or a folder of pictures
+    - Labels or short descriptions to match, such as a list of categories
+    - A search sentence, such as a scene you want to find (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python with torch, transformers and pillow installed
+    - A graphics card (GPU) is faster, but not needed
+  output:
+    - name: Zero-shot classification
+      contains: A percent score for each label you listed, so you can see which label fits the picture best.
+    - name: Image-text similarity
+      contains: One similarity score showing how close a picture is to a piece of text.
+    - name: Semantic image search
+      contains: A ranked list of file names that best match your search sentence, each with a score.
+    - name: Content moderation check
+      contains: The best-fit category for a picture, such as safe or violent, with its percent score.
+    - name: Batch similarity table
+      contains: A table of scores for many pictures against many texts, computed in one run.
+    - name: Vector store code
+      contains: Code to save picture data in a database so you can search larger photo sets.

@@ -1,6 +1,6 @@
 new_slug: price-a-product-so-it-pays-after-delivery-ads-and-discounts
 name: "Price a product so it pays after every cost"
-summary: Give it a price and every cost. Get your true margin, three test prices and how deep a discount can go.
+summary: Check what you keep after delivery, set three test prices and see how deep a discount can go. Give it your price and every cost.
 job: set-prices
 thinking: high
 thinking_why: It runs three skills in a row and each does margin sums on the last. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are launching a product and need a first price that you can defend.
   - Your ads show good returns, yet the bank balance does not grow.
   - You plan a sale and want to know how deep the discount can go before it costs you money.
+not_for:
+  - "You sell a service or a product with no delivery cost: use a simple hourly rate or project quote sum instead."
+  - "You only want to know if a sale will pay off: use the Discount impact checker."
+  - "You want to read ad results, not set a price: use the Ad results report writer."
 you_give:
   - Your selling price, excluding tax
   - Your unit cost, freight, duty and shipping out
@@ -32,6 +36,25 @@ how_to_use:
   - Give it your price and every cost line. Tell it which numbers are guesses.
   - Read the margin step before the prices. If the margin is low, fix cost before you test price.
   - Take the numbers to your accountant before you set ad targets from them.
+output_sample:
+  input:
+    - Your selling price, excluding tax
+    - Your unit cost, freight, duty and shipping out
+    - Your pick and pack, packaging and payment fees
+    - Your return and discount rates from the last 90 days (optional)
+    - Your current ad return and order value (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff folder
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Product margin checker"
+      contains: Cost of delivery per order, three margins, break-even ad return, cost to win a customer and a score out of 100.
+    - name: "Step 2: Pricing decision planner"
+      contains: Three test prices with estimated sales and total profit, the pick, a floor check and the one number to watch.
+    - name: "Step 3: Discount impact checker"
+      contains: Profit at full price, the sales jump a discount needs, the best depth, an offer comparison and a verdict.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the true margin
     text: Product margin checker adds freight, duty, shipping out, packing, fees and a returns allowance to the unit cost. It shows product, gross and contribution margin, and finds break-even ad return and the ad cost the product can carry.

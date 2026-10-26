@@ -2,34 +2,83 @@ thinking: medium
 thinking_why: It picks peers and computes standard multiples.
 new_slug: peer-multiples-table-builder
 name: Peer multiples table builder
-summary: Name a company. Get a table comparing its price multiples and key
-  numbers with its peers.
+summary: Name an Indian listed company. Get a peer comps table in Excel with P/E, EV/EBITDA and margins in crore, and a note on every source.
 job: money-and-investing
 headline: Peer multiples table builder
-subhead: Name a company. Get a table comparing its price multiples and key
-  numbers with its peers. Bring the target company name. Use the result to plan
-  your next step.
+subhead: Name the company you want to value and, if you can, its peers. Your AI builds a comps table with operating figures and valuation multiples, median and quartiles, live formulas, and a source note on every input. Missing data is marked, not guessed.
 explain: |
-  A comparison table of your target company against its listed peers, showing price multiples and key figures side by side, so you can tell whether it looks cheap or dear. This version is set up for Indian markets.
+  This is a comparable company analysis builder, often called a comps table. It lines up a target company against listed peers so you can see if its price looks high or low next to similar businesses.
 
-  The skill follows Indian conventions: the fiscal year runs April to March, periods are labelled like Q3 FY26, and money is in lakh and crore, with live formulas that divide by the right number rather than a number format that is wrong by 100 times. It reads data from institutional sources first, such as FactSet or S&P, and only then public filings, never web search as the main source. Where India has no matching measure, it says so.
+  It is set up for Indian markets. The year runs April to March, periods read like Q3 FY26, and money is in crore. Crore comes from a live formula that divides the raw figure, not from a number format that is off by 10 times. Every multiple is a formula, so the table updates when an input changes.
+
+  It prefers institutional data sources, which are paid. If you do not have them, it uses the company's own results filings on NSE or BSE and marks anything from a free site as unverified. It will not fill a hole with a guess, and it asks you to confirm the peers. The table is a starting point for a valuation, not the valuation.
 when:
   - You are valuing an Indian listed company and need its peers' multiples.
-  - You are preparing a pitch and need a quick comps page.
-  - You want to see if a stock trades above or below its sector.
+  - You are preparing a pitch and need a quick comps page for a sector.
+  - You want to see whether a stock trades above or below its sector median.
   - You need figures in crore with correct fiscal year labels.
+not_for:
+  - The company is private with no listed peers, or it is a start-up with no revenue. Use the Early-stage valuation estimator.
+  - You want a full valuation with forecasts. Use the DCF model builder for India.
+  - You want to check a comps file someone else built. Use the India modeling rules checker.
+  - You want an earnings view for one company. Use the Earnings preview report builder for India.
 you_give:
-  - The target company name
-  - Peer set, or sector to choose from (optional)
-  - Multiples wanted, such as P/E or EV/EBITDA
-  - Access to a financial data source
+  - The target company name or ticker
+  - Peers you want in the table, or the sector so your AI can suggest some (optional)
+  - The multiples you want, such as P/E or EV/EBITDA (optional)
+  - Results filings or exports from your data source
+  - Who the table is for, such as a pitch or a committee (optional)
 you_get:
-  - A comps table with consistent periods
-  - Multiples calculated by live formula
-  - Median and mean across peers
-  - Notes on gaps with no Indian equivalent
+  - An Excel comps table with consistent periods
+  - Multiples worked out by live formulas
+  - Median, quartiles, high and low across peers
+  - A notes block with each source and date
+  - A list of gaps with no Indian equivalent
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Choose 5 to 8 listed peers with the same business and a similar size, or let your AI suggest them. Confirm the list.
+  - Gather the latest results from each company's NSE or BSE filing, or export them from your data tool. Paid sources are better, but not needed.
+  - Open the skill, give your AI the target, the peers and the files. Use an AI that can write Excel files if you can.
+  - Check the layout, then the inputs, then the margins, then the multiples. Your AI stops after each part for you to confirm.
+  - Look at outliers outside the 25th and 75th percentiles, and every figure marked unverified. Check them against the filings.
+  - Write up your valuation view yourself. The table does not give a price.
+output_sample:
+  input:
+    - The target company name or ticker
+    - Peers, or the sector (optional)
+    - Results filings or exports for each company
+    - The multiples you want (optional)
+  prerequisites:
+    - An AI that can write Excel files (optional)
+    - A paid data source such as FactSet (optional)
+  output:
+    - name: Header block
+      contains: The title, the companies, the as-of date and the unit, such as ₹ Cr.
+    - name: Operating metrics
+      contains: Revenue, growth, margins and EBITDA for each company, with the period on every column.
+    - name: Valuation multiples
+      contains: Market cap, enterprise value, EV to revenue, EV to EBITDA and P/E, each from a live formula.
+    - name: Statistics block
+      contains: Median, 75th and 25th percentile, high and low across the peers.
+    - name: Notes and sources
+      contains: Where each input came from, its date, and which figures are unverified or not available.
+    - name: Outliers line
+      contains: Which companies sit outside the quartiles, and what to check next.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Can run officecli to write the Excel file, with live formulas.
+    - name: Excel
+      why: Lets you read each formula and each source comment yourself.
+  inputs:
+    - Each peer's latest quarterly results filing
+    - A short list of peers you chose and why
+    - Net debt for each company from its balance sheet
+terms:
+  - term: Comps table
+    meaning: A table of similar listed companies and how the market prices them.
+  - term: EV/EBITDA
+    meaning: Enterprise value divided by operating profit before depreciation. It compares firms with different debt.
+  - term: Quartile
+    meaning: A split of the peers into four groups. The 25th and 75th percentiles mark the middle half.
+  - term: Crore
+    meaning: An Indian unit. One crore is 10,000,000.

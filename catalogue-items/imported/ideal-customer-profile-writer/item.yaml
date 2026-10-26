@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: voc_reviews
     required: false
+  - type: angle_library
+    required: false
 outputs:
   - type: persona
 uses: []

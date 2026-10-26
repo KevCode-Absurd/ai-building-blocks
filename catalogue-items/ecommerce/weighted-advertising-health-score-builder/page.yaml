@@ -1,44 +1,149 @@
 new_slug: weighted-advertising-health-score-builder
 name: Weighted advertising health score builder
-summary: Build a clear ad health score from weighted checks. Show what ran, what is missing and how each score was calculated.
+summary: Score your Meta and Google ad account health out of 100 with weighted checks, a grade for each category and a ranked list of fixes.
 job: check-ads
 headline: Weighted advertising health score builder
-subhead: Share the inputs listed below. Get a reproducible score table with coverage and reliability notes. Check the gaps before you use the result.
+subhead: Share your Meta or Google ad exports. It runs weighted checks, or uses check results you already have. You get one score out of 100, a grade for each category, how much evidence it had, and what to fix first.
 explain: |-
-  Build a clear ad health score from weighted checks. Show what ran, what is missing and how each score was calculated.
+  An ad account health score gives you one number to track each month, and one number to show a boss or a client. This builder shows how that number was made. Every check has a weight. Critical checks count five times more than low ones. A check with no evidence counts as zero and is marked as missing. It is never guessed.
 
-  Share check results, severity weights, category weights and missing evidence. Get a reproducible score table with coverage and reliability notes.
+  Most ad scores hide what they could not see. This one prints a data coverage figure. If under 70% of the checks had data, it tells you to treat the score as a direction, not a grade. If a critical check fails, a warning sits at the top even when the other checks pull the score up.
+
+  It covers 30 Meta checks and a starter set of 22 Google checks. It also works as the scoring step after another audit. Bring the results and it does the math.
 when:
-  - You need a reproducible score table with coverage and reliability notes.
-  - You need weighted advertising health score builder for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - A client or boss wants one number for the ad account, and you want to show how it was worked out.
+  - You want to track account health month by month and see if fixes are working.
+  - You have run an audit and now need the results turned into weighted category scores and a grade.
+  - You run several accounts and need to see which one needs attention first.
+not_for:
+  - "You want a full written audit of why Meta results are poor. Use the Meta Ads 30-check account auditor."
+  - "You want a Google Ads review with brand leakage and a 90-day plan. Use the Google Ads store account auditor."
+  - "Results dropped last week and you want the cause. Use the Google Ads dip investigator or the Ad performance change checker."
+  - "Your account is new or has almost no spend. Most checks will have no data, so the score will not mean much."
 you_give:
-  - Check results
-  - Severity weights
-  - Category weights and missing evidence
+  - Your ad account export from Ads Manager or Google Ads, as a CSV, a pasted table or screenshots
+  - Which platform you want scored, Meta, Google or both
+  - Your spend on each platform, if you score both
+  - Tracking screenshots from Meta Events Manager, for the tracking checks (optional)
+  - Your target cost per sale or target return on ad spend (optional)
+  - Check results or your own weights from an earlier audit (optional)
 you_get:
-  - A reproducible score table with coverage and reliability notes
-  - The sources used, missing inputs and assumptions
+  - One score out of 100 with a letter grade, A to F
+  - A score and grade for each category, with the math shown
+  - A data coverage figure, and a warning if too little evidence was shared
+  - Critical failures, high-priority warnings and quick wins, each tied to a check
+  - A check-by-check table, plus a list of the exports that would fill any gaps
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code and no ad account login.
+  - Tell it the platform. Then paste or attach your exports. Add screenshots of Meta Events Manager if you want the tracking checks scored.
+  - Add your target cost per sale or target return on ad spend if you have one.
+  - Read the coverage line first. If it is under 70%, add the exports it names and run it again.
+  - Check a few PASS and FAIL calls against your own account before you share the score.
+  - Fix the critical failures first, then run it again next month and compare.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm check results, severity weights, category weights and missing evidence. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Account Data
-    text: Follow the collect account data section in the full method and keep its required fields and decision rules.
-  - title: Scoring Formula
-    text: Follow the scoring formula section in the full method and keep its required fields and decision rules.
-  - title: Meta Ads Checks (30 checks)
-    text: Follow the meta ads checks (30 checks) section in the full method and keep its required fields and decision rules.
-  - title: Google Ads Checks (build in parallel)
-    text: Follow the google ads checks (build in parallel) section in the full method and keep its required fields and decision rules.
-  - title: Cross-Platform Aggregate (If Both Platforms)
-    text: Follow the cross-platform aggregate (if both platforms) section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a reproducible score table with coverage and reliability notes. Check facts, math and the decisions before any action.
+  - title: Collects and dates the data
+    text: It notes the date range, currency and attribution window. Missing items are marked MISSING.
+  - title: Picks the checks
+    text: 30 Meta checks, a starter set of 22 Google checks, or your own results. It runs only the categories that fit your campaigns.
+  - title: Judges each check
+    text: PASS, WARNING, FAIL or INSUFFICIENT_DATA, with the number or screenshot that shows it. It never judges tracking from a performance export alone.
+  - title: Scores by weight
+    text: Pass earns full points, warning half, fail none. Critical checks count five times, high three times, medium one and a half and low a half. Each category scores out of 100, then categories are weighted into a platform score.
+  - title: Combines platforms
+    text: If you give both, the platform scores are weighted by your share of spend. The working is shown.
+  - title: Checks coverage and critical failures
+    text: It reports how many checks had data and puts a warning on top if a critical check failed.
+  - title: Ranks the fixes
+    text: Critical fails first, then high warnings, then quick wins, with the check ID and the evidence for each.
+output_shape: |
+  AD ACCOUNT HEALTH SCORE
+  Date range: <...>   Currency: <...>   Attribution window: <...>
+  Overall score: <XX>/100 (<GRADE>)
+  Data coverage: <XX>% (<n> of <n> applicable checks had data)
+  <BLOCKED CATEGORY warning, if a Critical check failed>
+
+  CATEGORY SCORES
+  | Platform | Category | Score | Grade | Weight |
+
+  PLATFORM AND AGGREGATE (if both)
+  Meta <XX> x <share>% + Google <XX> x <share>% = <XX>
+
+  CRITICAL FAILURES
+  1. <ID> | <what the evidence shows> | <fix>
+
+  HIGH-PRIORITY WARNINGS
+  1. <ID> | <...>
+
+  QUICK WINS
+  1. <action> | <effort> | <why it should help>
+
+  CHECK-BY-CHECK TABLE
+  | ID | Check | Severity | Status | Evidence used |
+
+  ASSUMPTIONS AND THRESHOLDS USED: <...>
+  MISSING EVIDENCE: <exports or screenshots that would fill the gaps>
+  CHECKS MISSED: <none, or list>
+output_sample:
+  input:
+    - Your Meta or Google ad account export (CSV, pasted table or screenshots)
+    - Which platform to score, and your spend on each if both
+    - Tracking screenshots from Events Manager (optional)
+    - Your target cost per sale or return on ad spend (optional)
+    - Check results or weights from an earlier audit (optional)
+  prerequisites:
+    - An AI that can read pasted tables or images
+  output:
+    - name: Overall score and grade
+      contains: One score out of 100 with a letter, the date range and the data coverage. A warning sits on top if a critical check failed.
+    - name: Category scores
+      contains: A score, grade and weight for each category on each platform, with the math you can check.
+    - name: Aggregate score
+      contains: If you score both platforms, the two scores weighted by your share of spend, with the working.
+    - name: Critical failures
+      contains: Each failed critical check with its ID, what the evidence shows and the fix.
+    - name: High-priority warnings
+      contains: High-severity checks that failed or warned, with the evidence behind each.
+    - name: Quick wins
+      contains: Small jobs with a clear reason to help, ordered by effort.
+    - name: Check-by-check table
+      contains: Every check with its severity, status and the evidence used. Checks with no evidence show INSUFFICIENT_DATA.
+    - name: Assumptions and missing evidence
+      contains: The thresholds used, and the exports or screenshots that would turn missing checks into results.
+tweaks:
+  - what: Which platforms you share
+    how: Give Meta, Google or both. If you give both, add your spend on each so the two scores can be combined by spend.
+  - what: Your target cost per sale or return on ad spend
+    how: Add one if you have it. The budget and bidding checks need it, or they show INSUFFICIENT_DATA.
+  - what: Your own weights
+    how: If an earlier audit used other severity or category weights, paste them. The skill uses yours and says so.
+  - what: Tracking screenshots
+    how: Add Meta Events Manager screenshots. Without them the pixel and server-side checks cannot be scored.
+improve:
+  - Change the severity multipliers or category weights in the skill file if your store lives on a different part of the account.
+  - Add your own checks, such as TikTok or Amazon ads, and keep the same scoring math.
+  - Save each month's check-by-check table in a spreadsheet and compare scores over time.
+  - Pair it with the Meta Ads 30-check account auditor or the Google Ads store account auditor for a written diagnosis behind the score.
+
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It reads pasted tables and screenshots and shows its math. A stronger model helps if you score both platforms.
+    - name: A spreadsheet
+      why: Paste the check-by-check table into Google Sheets or Excel to track the score each month.
+  inputs:
+    - Daily ad-level export with click-through rate, to score creative fatigue
+    - Google search terms report, to score wasted spend
+    - Screenshots of Meta Events Manager, to score tracking
+terms:
+  - term: Severity weight
+    meaning: How much one check counts. A critical check counts five times as much as a low one.
+  - term: Data coverage
+    meaning: The share of checks that had evidence. Low coverage means the score is a direction, not a grade.
+  - term: INSUFFICIENT_DATA
+    meaning: A check with no evidence. It scores zero and is flagged so you can fill the gap.
+  - term: Events Manager
+    meaning: The Meta tool that shows if your tracking is working.
+  - term: Quality Score
+    meaning: A Google rating of how well your keyword, ad and landing page match.
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It compares supplied evidence and follows a specific method. Use a stronger model if you score both platforms.

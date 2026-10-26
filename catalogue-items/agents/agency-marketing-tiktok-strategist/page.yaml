@@ -1,0 +1,138 @@
+name: TikTok Strategist agent
+summary: "Get a TikTok plan: content pillars, 10 video ideas with 3-second hooks, one test for each and the numbers to read. Bring your product and buyer."
+headline: TikTok Strategist agent
+subhead: Give it your product, your buyer and what you can film. It sets content pillars and plans 10 video ideas, each with a hook for the first three seconds. You get a TikTok content plan with one thing to test per video and the numbers to check.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Most brand TikToks fail in the first three seconds. A viewer swipes before the point arrives. This TikTok strategist agent plans each video from the hook backward, so the opening is built before the rest.
+
+  It starts with your real buyer, not a guess about a generation. It sets three or four content pillars, such as teaching, entertaining, proving and selling, and uses the profile's 40/30/20/10 split of teaching, entertainment, inspiration and promotion as a starting point. Then it plans 10 video ideas. Each has a hook, a format, a length, a call to action and one variable to test, such as a new opening line. It adds notes on creator partners, simple hashtag groups and ways to reuse the video on Reels and Shorts.
+
+  It can't see TikTok. It doesn't know what is trending this week and can't pick sounds for you. You choose current sounds and effects in the app. Business accounts may be limited in which sounds they can use, so check there. The profile's targets, such as an 8 percent engagement rate, are the author's goals, not results from AI Blocks.
+when:
+  - You are starting a TikTok account for a product or a business.
+  - Your videos get views but few people watch to the end.
+  - You have one product and need a month of video ideas you can film with a phone.
+  - You want to test creators and need a plan for who to ask and what to test.
+not_for:
+  - You sell through TikTok Shop. Use the TikTok Shop content planner or the TikTok Shop launch planner.
+  - You want to run TikTok ads. Use the TikTok starter campaign builder or the TikTok ads account auditor.
+  - You only want opening lines for videos. Use the Short video hook writer.
+  - You want to write to creators. Use the TikTok creator outreach planner.
+  - You post in China. Use the Douyin Strategist agent.
+you_give:
+  - What you sell and who buys it, in your own words
+  - Your goal on TikTok, such as sales, leads or followers
+  - What you can film each week, with your phone, helpers and props
+  - Your account status, new or running, and your last few videos' numbers (optional)
+  - Two or three accounts you want to match (optional)
+  - Whether you plan to work with creators (optional)
+you_get:
+  - Three or four content pillars, with a starting split for each
+  - 10 video ideas, each with a 3-second hook, a format, a length and a call to action
+  - One test for each video, such as a new first line, with the number that shows if it worked
+  - A hashtag mix and sound notes for you to confirm in the app
+  - Ideas for creator partners and customer videos, if you ask for them
+  - Notes on reusing each video on Instagram Reels and YouTube Shorts
+  - A review plan with the numbers to read after each video
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste what you sell, who buys it, your goal and what you can film each week. Say if your account is new or running.
+  - Add your last few videos' views, average watch time and shares from TikTok analytics if you have them.
+  - "Say: \"Plan my first 10 TikTok videos. Don't invent trends, sounds or numbers. Mark anything you can't check as a check for me.\""
+  - Read the hooks aloud and cut any that don't sound like you. Pick current sounds in the TikTok app.
+  - Film the first three videos, post them and bring back the numbers. Ask which test to run next.
+how_it_works:
+  - title: Confirm the basics
+    text: It confirms product, buyer, goal, what you can film and account status. Missing items are asked for once, then marked MISSING.
+  - title: Set the pillars
+    text: It sets three or four pillars for your buyer and a starting split to adjust.
+  - title: Plan 10 videos
+    text: Each video gets a 3-second hook, a story shape, a length and a call to action.
+  - title: Add one test each
+    text: It picks one thing to change per video, such as the hook, and the number that shows the result.
+  - title: Plan the extras
+    text: It adds a hashtag mix, sound notes, creator partner ideas and how to reuse the video on Reels and Shorts.
+  - title: Plan the review
+    text: It names the numbers to read after each video and what to change if they are low.
+output_shape: |-
+  ASSUMPTIONS AND MISSING
+    ASSUMED: <list> | MISSING: <list>
+
+  PILLARS
+    <pillar> | <starting share> | <what it does for your buyer>
+
+  10 VIDEO IDEAS
+    <number> | <pillar> | <hook, first 3 seconds> | <format> | <length> | <call to action> | <what to test> | <number to read>
+
+  HASHTAGS AND SOUNDS
+    hashtags <3 groups> | sounds <how to choose in the app> | CHECK: <what to confirm in the app>
+
+  CREATORS AND CUSTOMER VIDEOS (if asked)
+    <creator type> | <what to ask for> | <what you give> | <disclosure note>
+
+  REUSE
+    <video> | <Reels version> | <Shorts version>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+output_sample:
+  input:
+    - What you sell, who buys it and your goal
+    - What you can film each week
+    - Your account status and last few videos' numbers (optional)
+    - Two or three accounts you want to match (optional)
+  prerequisites:
+    - A TikTok account, or a plan to open one
+    - TikTok analytics, to read your own numbers (optional)
+  output:
+    - name: Pillars
+      contains: Three or four content pillars with a starting share and the job each does for your buyer.
+    - name: 10 video ideas
+      contains: A 3-second hook, format, length, call to action and one test for each video.
+    - name: Hashtags and sounds
+      contains: Hashtag groups and how to choose sounds in the app, with what to confirm there.
+    - name: Creators and customer videos
+      contains: Who to ask, what to ask for and what to give, with a note to disclose paid posts.
+    - name: Reuse plan
+      contains: How to cut each video for Instagram Reels and YouTube Shorts.
+    - name: Review plan
+      contains: The numbers to read after each video and what to change if they are low.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Number of videos
+    how: Ask for five videos instead of 10 if you can film once a week.
+  - what: Format
+    how: Say if you can show your face, do voice-over or only film products, so the ideas fit what you can do.
+  - what: Test
+    how: Pick one thing to test across all videos, such as the hook, so the numbers are easy to read.
+improve:
+  - Keep the hooks that held viewers and ask for more in the same style.
+  - Drop any pillar that got views but no sales or follows after two rounds.
+terms:
+  - term: Hook
+    meaning: The first three seconds of a video, which decide whether a viewer stays.
+  - term: Content pillar
+    meaning: A topic or video type you post again and again, such as teaching or behind the scenes.
+  - term: Completion rate
+    meaning: The share of viewers who watch a video to the end.
+  - term: Spark Ad
+    meaning: A paid boost of an organic TikTok post, from your own account or a creator's.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three can turn your product facts into hooks and scripts, and read screenshots of your analytics.
+    - name: The TikTok app
+      why: You choose current sounds and read your own numbers there. Your AI can't see them.
+  inputs:
+    - Screenshots of your last five videos with views, watch time and shares.
+    - Three of your customers' own questions, word for word.
+    - Your product list with the one thing each does best.

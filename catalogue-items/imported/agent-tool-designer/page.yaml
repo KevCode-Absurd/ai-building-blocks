@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Tool design shapes how the whole agent behaves.
 new_slug: agent-tool-designer
 name: Agent tool designer
-summary: Describe what your agent must do. Get tool definitions it can use well,
-  with fewer and clearer tools.
+summary: Design agent tool definitions that your AI picks and uses correctly. Give it your tools or tasks. Get fewer, clearer tools with better errors.
 job: connect-tools
 headline: Agent tool designer
-subhead: Tool definitions your AI agent can pick and use correctly, with fewer
-  tools and clearer ones. Most agent failures come from tools that overlap or
-  describe themselves badly.
+subhead: Tool definitions your AI agent can pick and use correctly, with fewer tools and clearer ones. Most agent failures come from tools that overlap or describe themselves badly.
 explain: |
   Tool definitions your AI agent can pick and use correctly, with fewer tools and clearer ones. Most agent failures come from tools that overlap or describe themselves badly.
 
@@ -18,6 +15,10 @@ when:
   - You have too many overlapping tools and want to cut them down.
   - You are adding a new tool and want its description right the first time.
   - Tool errors leave the agent stuck.
+not_for:
+  - Your agent has only one or two tools that already work. Leave them alone and test them with real requests.
+  - You need code for the tools. Ask a developer to build them, then use this to review the definitions.
+  - Your tool data is messy or your task is unclear. Write down the agent's main task in a few lines first, then come back.
 you_give:
   - The tools your agent has now, or the jobs it must do
   - Examples of failed tool calls (optional)
@@ -29,7 +30,29 @@ you_get:
   - Better error messages
   - A naming and settings pattern to follow
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill's instructions. No code running or paid tools are needed.
+  - List your agent's main task and its current tools. Add any failed tool calls you have (optional).
+  - Ask your AI to review the tool set and cut or merge tools that overlap.
+  - Read each new description. Check that a person could tell which tool fits which task.
+  - Test the new tools with real requests to your agent. Fix any call that still goes wrong.
+output_sample:
+  input:
+    - The tools your agent has now, or the jobs it must do
+    - The agent's main task
+    - Examples of failed tool calls (optional)
+    - Naming rules you already use (optional)
+  output:
+    - name: Consolidation review
+      contains: Which tools overlap, which to merge, and which can be cut so each job has one clear tool.
+    - name: Tool descriptions
+      contains: For each tool, what it does, when to use it, and what it returns.
+    - name: Response format options
+      contains: Guidance on short or full replies, so the agent gets what it needs without wasted length.
+    - name: Error messages
+      contains: Plain messages that say what went wrong and how to fix the call.
+    - name: Tool definition schema
+      contains: Each tool written out with its name, inputs and settings in one consistent pattern.
+    - name: Naming and settings pattern
+      contains: Shared naming rules and settings so the agent learns one pattern across all tools.
+    - name: Testing plan
+      contains: Steps to try the tools with real agent requests and spot calls that go wrong.

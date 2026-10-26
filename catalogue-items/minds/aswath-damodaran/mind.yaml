@@ -17,6 +17,29 @@ use_cases:
   - "Check a market price story: work backwards from a price to the revenue and margin it needs"
   - "Compare investing methods with your time horizon and approach to risk. Use the framework to ask better questions."
   - "Learn to build a simple valuation from scratch and explain it in plain words"
+not_for:
+  - "You want a buy or sell call on a named stock, or advice on your own money: talk to a licensed adviser, because this mind gives neither."
+  - "You want a margin of safety rule for picking cheap stocks: use the Benjamin Graham mind."
+  - "You want to test a deal for bad incentives and ways it could fail: use the Charlie Munger mind."
+output_sample:
+  input:
+    - Your business story in about three sentences
+    - What it earns or loses now, and how that changed over the last few years
+    - The price or offer you are looking at (optional)
+    - How much it must spend to grow, and the odds it does not survive (optional)
+  output:
+    - name: The story
+      contains: Three sentences on the business, with the game named as value or price.
+    - name: The inputs
+      contains: Growth, mature margin, reinvestment, cost of capital and failure chance, each with a reason and source.
+    - name: Possible, plausible, probable check
+      contains: Each part of the story placed in one of three bins, with the reason.
+    - name: The value
+      contains: A low, middle and high case, and the bridge to value per share or your offered price.
+    - name: Sensitivity
+      contains: The two inputs that move the value most.
+    - name: What has to be true
+      contains: What must hold for the price to be right, and the first signs the story is breaking.
 seats:
   - {seat: "Valuation and what the story is worth", asks: "What has to be true for this to be worth that much, and is it possible, plausible and probable?"}
   - {seat: "Price versus value", asks: "Are we working out what this is worth, or only what others will pay for it?"}

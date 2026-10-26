@@ -2,35 +2,89 @@ thinking: low
 thinking_why: It follows known file steps.
 new_slug: libreoffice-document-builder
 name: LibreOffice document builder
-summary: Describe the document. Get an ODT file, or a conversion to Word, PDF or HTML.
+summary: Build a document from a plain description and turn it into Word, PDF or HTML, or make many letters from one template and a list, with LibreOffice.
 job: work-with-files
 headline: LibreOffice document builder
-subhead: Make a text document from a plain description, then turn it into the
-  format the other person needs. You get an ODT file, or a copy in Word, PDF or
-  HTML, without opening a word processor.
+subhead: Describe the document, or give it a template and a list of names. It uses LibreOffice on your computer to make an ODT file, then converts it to Word, PDF, HTML or text. You get the files and the commands it ran.
 explain: |
-  Make a text document from a plain description, then turn it into the format the other person needs. You get an ODT file, or a copy in Word, PDF or HTML, without opening a word processor.
+  LibreOffice Writer is a free word processor. It can also run from the command line, with no window open. This skill uses that to build a document, fill a template with your list for a mail merge, or convert one file or a whole folder of files at once.
 
-  The skill drives LibreOffice Writer from the command line. It builds a document, fills a template for mail merge, and converts one file or a whole folder at once. It can also script edits with Python. You need LibreOffice installed on your computer. If conversion fails, it checks for a stuck background process, the usual cause, and tidies layout problems after the change.
+  A mail merge means one template, many finished copies. You write the template once with markers such as ${name}. The skill swaps in each row of your list and saves one file per row. The same method works for a folder of old Word files that need to become PDFs.
+
+  It needs LibreOffice installed and an AI that can run commands. Some steps use Python. The skill checks for a stuck LibreOffice process if a conversion hangs. It does not check page layout for you, so open one or two results before you send them.
 when:
   - You need fifty letters made from one template and a list of names.
-  - A client sent a Word file and you want a clean PDF.
-  - You want a document built by script instead of by hand.
-  - A folder of old files needs converting in one go.
+  - A client sent a Word file and you want a clean PDF copy.
+  - A folder of old files needs converting to one format in one go.
+  - You want a document made by script, so you can run it again next month.
+not_for:
+  - "You want a designed brochure or a page with tight layout: use a layout tool, since this skill builds plain documents and does not fine-tune design."
+  - "You need a spreadsheet or a slide deck: use the LibreOffice spreadsheet builder or the LibreOffice slide builder."
+  - "You want to edit a PDF or fill a PDF form: use the PDF toolkit, which works on PDF files directly."
 you_give:
-  - What the document should say
-  - A template file (optional)
-  - Data for mail merge (optional)
-  - The output format you need
-  - LibreOffice installed
+  - What the document should say, in plain words or as notes
+  - The format you need back (ODT, DOCX, PDF, HTML, RTF, TXT or EPUB)
+  - A template file with markers such as ${name} (optional)
+  - A CSV or list of values for a mail merge (optional)
+  - A folder of files to convert (optional)
 you_get:
-  - An ODT document
-  - Converted DOCX, PDF or HTML copies
-  - Merged documents from a template
-  - A batch conversion command
+  - A new ODT document
+  - Copies in DOCX, PDF, HTML, RTF, TXT or EPUB
+  - One filled file per row, for a mail merge
+  - The commands it ran, so you can repeat the job
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Install LibreOffice and check it opens. Use an AI that can run commands and save files, such as Claude Code, or ask for the commands and run them yourself.
+  - Start a chat and add the skill. Say what you want, such as "make a one-page offer letter and save it as a PDF".
+  - For a mail merge, attach your template and your list. Check that the template markers match your list columns.
+  - Open one or two of the files it made. Check the text, the layout and that no ${...} markers are left.
+  - For a folder, ask it to convert a few files first. Then run the whole folder once you are happy.
+  - If a conversion hangs, close LibreOffice, then ask your AI to find and stop any leftover LibreOffice process and try again.
+output_sample:
+  input:
+    - What the document should say
+    - The format you need back
+    - A template file with markers such as ${name} (optional)
+    - A list of values for a mail merge, as a CSV (optional)
+  prerequisites:
+    - LibreOffice installed on your computer
+    - An AI that can run commands and save files
+    - Python, for the template and mail merge steps (optional)
+  output:
+    - name: ODT document
+      contains: Your new document in LibreOffice's own format, made from your description or filled from your template.
+    - name: Converted copies
+      contains: The same document as DOCX, PDF, HTML, RTF, TXT or EPUB, as you asked.
+    - name: Merged files
+      contains: One finished file per row of your list, named by row number.
+    - name: Batch conversion
+      contains: Every file in a folder converted to one format, with a list of any that failed.
+    - name: Commands used
+      contains: The exact commands it ran and any checks it did not run, so you can repeat the job.
+how_it_works:
+  - title: Check the setup
+    text: It confirms LibreOffice is installed and that it can run commands. If not, it stops and says so.
+  - title: Confirm what you asked for
+    text: It asks for any missing content, template, list or format. It never makes up text or rows.
+  - title: Build the file
+    text: It writes the ODT from a command, a Python script or a template with your values swapped in.
+  - title: Convert
+    text: It runs LibreOffice in the background to save the format you need, for one file or a whole folder.
+  - title: Check and report
+    text: It lists the paths, the count of files made, anything that failed and what it did not check.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run LibreOffice commands and Python scripts and save the files on your computer.
+    - name: Any chat AI
+      why: It can write the template and the commands, but you run them yourself.
+  inputs:
+    - A sample of a past document you liked, to match the wording and layout
+    - Your brand fonts and logo file
+    - The list of names or values as a clean CSV with one header row
+terms:
+  - term: ODT
+    meaning: The file format LibreOffice Writer uses. Word can open it.
+  - term: Mail merge
+    meaning: Filling one template with each row of a list to make many copies.
+  - term: Headless
+    meaning: Running LibreOffice with no window, from a command.

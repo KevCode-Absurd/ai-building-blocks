@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It models claims that have not yet been reported.
 new_slug: claims-reserve-calculator
 name: Insurance claims reserve calculator
-summary: Give it claims history. Get loss reserves, IBNR estimates and loss and
-  combined ratios.
+summary: Estimate insurance claims reserves and IBNR from your loss triangle, and get your loss and combined ratios. Built for year-end reserve work.
 job: money-and-investing
 headline: Insurance claims reserve calculator
-subhead: How much should an insurer set aside for claims that have happened but
-  are not yet fully paid? You give it claims history, and you get reserve
-  estimates, the incurred but not reported amount (IBNR) and the loss and
-  combined ratios.
+subhead: How much should an insurer set aside for claims that have happened but are not yet fully paid? You give it claims history, and you get reserve estimates, the incurred but not reported amount (IBNR) and the loss and combined ratios.
 explain: |
   How much should an insurer set aside for claims that have happened but are not yet fully paid? You give it claims history, and you get reserve estimates, the incurred but not reported amount (IBNR) and the loss and combined ratios.
 
@@ -19,6 +15,10 @@ when:
   - You want to know how much IBNR to book.
   - Your loss triangle is ready but the growth factors are not.
   - You must check whether losses plus expenses are above premium.
+not_for:
+  - "You have no loss triangle or only a few accident years of history: use a simple loss-ratio method, or ask a qualified actuary."
+  - "You need reserves you can book or file: have a qualified actuary check the factors and figures first."
+  - "You want to judge the risks behind your policies: use a person who does underwriting review, not this reserve tool."
 you_give:
   - A loss triangle by accident year
   - Line of business
@@ -30,8 +30,27 @@ you_get:
   - An IBNR estimate
   - Loss and combined ratios
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat.
+  - Paste your loss triangle. Add your line of business, premiums and expenses. Add an expected loss ratio if you have one.
+  - Ask your AI to run the insurance reserving skill. If it can run code, let it use the script for the math.
+  - Check the growth factors it picked and the IBNR figure. Ask it to explain any year that looks odd.
+  - Have a qualified actuary review the factors and reserve figures before you book or file anything.
+output_sample:
+  input:
+    - Your loss triangle by accident year (paid or incurred losses)
+    - Your line of business, short-tail or long-tail
+    - Your premium and expense figures
+    - Your expected loss ratio (optional)
+  prerequisites:
+    - An AI that can run code and read your files gives the most exact math
+  output:
+    - name: Key Ratios
+      contains: Your loss ratio, expense ratio and combined ratio, with a check on whether the combined ratio is under 100%.
+    - name: Age-to-age factors
+      contains: How claims grow from one year of age to the next, and which factors were chosen.
+    - name: Ultimate loss by year
+      contains: The projected final cost of each accident year using the chain ladder method, or Bornhuetter-Ferguson for young years.
+    - name: The Reserve
+      contains: Case reserves, the IBNR estimate and the total loss reserve.
+    - name: Triangle Visualization
+      contains: A short description of the loss trend, such as a year where losses got worse.

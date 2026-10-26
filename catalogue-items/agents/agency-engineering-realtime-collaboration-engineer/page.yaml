@@ -1,0 +1,139 @@
+name: Realtime Collaboration Engineer agent
+summary: Plan live editing, shared cursors and offline sync for your app, with merge rules and network tests that prove no edit is lost.
+headline: Realtime Collaboration Engineer agent
+subhead: Give it your app, what people edit together and how many users you expect. It sorts your data by how it should merge, then plans reconnects, live cursors and scaling. You get a design plus tests that try to break it.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Live editing breaks when two people change the same thing, or when a phone loses signal in the middle of an edit. This agent plans for that first. It treats a dropped connection as normal. Every edit gets a number and an ID, so it can be sent again without being applied twice.
+
+  Its main step is to sort each piece of data by how it should merge. Text can merge word by word. A status dropdown should keep the last save. A counter should send "add one", never the new total. Live cursors are kept apart from saved data, because nobody needs a history of cursor moves.
+
+  It also plans for load. One room with thousands of viewers fails in a different way from thousands of small rooms. This is an AI role profile shared under MIT. The targets in it, such as 99 percent of reconnects resuming, are goals and not results measured by AI Blocks. The agent writes a design and tests. It does not run your servers.
+when:
+  - You are adding shared documents, a task board or live cursors to your app, like Google Docs does.
+  - Two people edited the same record and one change vanished.
+  - Your app has to work offline on a phone and sync when the signal returns.
+  - Live updates work in your demo but you fear what happens at ten times the users.
+not_for:
+  - You only need a page that refreshes every few seconds or a notification. A simple refresh plan is enough, and the Backend Architect agent can size it.
+  - Your app is down right now. Use the Incident Response Commander agent.
+  - You want the full system layout or a database choice. Use the Backend Architect agent or the Software Architect agent.
+you_give:
+  - What people edit together, such as documents, a task board or a form
+  - The tech you use today, such as your web framework, database and hosting
+  - How many people share one room or document, and how many rooms you expect
+  - Whether it must work offline, and on which devices
+  - Your current sync code or data model (optional)
+  - Reports of lost or doubled edits, with what the user did (optional)
+you_get:
+  - A table that sorts each piece of data by how it merges
+  - A plain statement of what users see when the connection drops
+  - A reconnect plan so no edit is lost or applied twice
+  - A plan for live cursors and who is online, kept apart from saved data
+  - A scaling plan for one busy room and for many small rooms
+  - A test list that attacks the design with bad networks
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then references/source-agent.md.
+  - List what people edit together and paste your data model or sync code if you have one.
+  - Add your user counts, devices and whether offline use matters. Say "Write the collaboration design. Ask me once if anything is missing."
+  - Check the data table first. Each row should name one merge rule, and each rule should make sense to your users.
+  - Run the tests it lists on a real slow or broken connection. The agent cannot run them for you.
+  - Take the design to your developers. Ask the agent to rewrite any part you do not follow in plain words.
+how_it_works:
+  - title: Sort the data
+    text: It labels each field as saved or live-only, and picks a merge rule for each, such as text merge, last save wins or add-one counters.
+  - title: Write the promise to users
+    text: It states what users see while offline, what "saved" means, and which clashes show on screen.
+  - title: Plan the reconnect
+    text: It numbers every edit, resumes from the last one the user got, and makes repeats harmless.
+  - title: Keep live presence apart
+    text: Cursors and who is online expire on a timer and never touch saved data.
+  - title: Plan for load
+    text: It treats one busy room and many small rooms as different problems, and plans for deploys that do not drop users.
+  - title: Plan the attack tests
+    text: It lists network cuts, long offline gaps and same-word edits, with what must be true after each.
+output_shape: |-
+  COLLABORATION DESIGN: <app name>
+
+  DATA MAP
+    <field or object> | <saved or live-only> | <how it merges> | <why>
+
+  PROMISE TO USERS
+    Offline: <what they see> | "Saved" means: <rule> | Clashes shown on screen: <which>
+
+  RECONNECT PLAN
+    Resume rule: <rule> | Repeat protection: <rule> | Order rule: <rule>
+
+  LIVE PRESENCE
+    <what is shared> | <how long it lasts> | <how often it updates>
+
+  SCALING
+    Busy room: <plan> | Many rooms: <plan> | Deploys: <plan>
+
+  TESTS TO RUN
+    <scenario> | <what must be true afterwards>
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What people edit together in your app
+    - Your tech, user counts and devices
+    - Whether it must work offline
+    - Your data model or sync code (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+  output:
+    - name: Data map
+      contains: Each field marked saved or live-only, with its merge rule and the reason for it.
+    - name: Promise to users
+      contains: What users see offline, what saved means, and which clashes show on screen.
+    - name: Reconnect plan
+      contains: How edits resume after a drop, how repeats are ignored and how order is kept.
+    - name: Live presence
+      contains: What is shared, such as cursors, how long it lasts and how often it updates.
+    - name: Scaling plan
+      contains: Separate plans for one busy room, many small rooms and deploys.
+    - name: Tests to run
+      contains: Bad-network scenarios, each with what must be true afterwards.
+    - name: Assumptions and open questions
+      contains: What the agent had to guess and what you still need to answer.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Merge choice
+    how: Tell it which edits your users must never lose, so those fields get the strictest rule.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Realtime
+    meaning: Changes show up for other people within a moment, without a page refresh.
+  - term: CRDT
+    meaning: A way to store data so many people can edit at once and every copy ends up the same.
+  - term: Operational transform
+    meaning: Another way to merge edits, where a server adjusts each change to fit the others.
+  - term: WebSocket
+    meaning: A live link between a browser and a server that stays open.
+  - term: Presence
+    meaning: Who is in the document and where their cursor is.
+  - term: Idempotent
+    meaning: Safe to send twice, because the second copy does nothing.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat is enough to write the design. Paste your code so it can name the real gaps.
+  inputs:
+    - A short list of the worst sync bugs your users reported, in their words.
+    - Your peak number of people in one document or room.

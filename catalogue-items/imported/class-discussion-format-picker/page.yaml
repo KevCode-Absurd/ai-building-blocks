@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It matches a format to the purpose and group.
 new_slug: class-discussion-format-picker
 name: Class discussion format picker
-summary: Give it your topic and group. Get the discussion format that fits, with
-  steps to run it.
+summary: Pick the right class discussion format for your topic and group. Get a plan with setup, steps, sentence starters and fixes for when talk stalls.
 job: teach-and-train
 headline: Class discussion format picker
-subhead: The right kind of class discussion for your goal, with steps to run it.
-  A debate, a Socratic seminar and a think-pair-share all do different jobs.
+subhead: The right kind of class discussion for your goal, with steps to run it. A debate, a Socratic seminar and a think-pair-share all do different jobs.
 explain: |
   The right kind of class discussion for your goal, with steps to run it. A debate, a Socratic seminar and a think-pair-share all do different jobs. You give your topic, purpose and group, and you get the best match.
 
@@ -17,6 +15,10 @@ when:
   - You are planning a Socratic seminar for the first time.
   - Your class needs to argue both sides of an issue fairly.
   - Students are young and need sentence starters to join in.
+not_for:
+  - "You want students to recall one right answer: use a short quiz or a simple question and answer round instead."
+  - "Your students have never done any structured talk: start with think-pair-share, then come back to this."
+  - "You need a full lesson plan with marking and slides: write that yourself or ask your AI for a lesson plan, then paste this plan in."
 you_give:
   - What the discussion should achieve
   - The topic or driving question
@@ -29,7 +31,33 @@ you_get:
   - Moves for when talk stalls
   - Ways to include quiet students
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Add your purpose, topic, year group and how used to structured talk your students are. Add class size and time if you know them.
+  - Read the format it picks and check it fits your class.
+  - Copy the plan into your lesson plan. Adjust the timing to your lesson.
+  - If you want more questions or sentence starters, ask your AI for them next.
+output_sample:
+  input:
+    - What the discussion should achieve, such as explore, argue, agree or analyse
+    - Your topic or driving question
+    - Your students' year group and how used to structured talk they are
+    - Your class size (optional)
+    - Minutes available (optional)
+  output:
+    - name: Discussion Protocol
+      contains: The format picked for your group, named at the top of the plan.
+    - name: Why This Protocol
+      contains: Why this format fits your purpose, topic and students.
+    - name: Setup
+      contains: How to arrange the room and prepare students before the talk starts.
+    - name: Protocol Steps
+      contains: The steps to run the discussion, in order, with timing.
+    - name: Teacher Moves During Discussion
+      contains: What you say or do to keep the talk going and include quiet voices.
+    - name: Sentence Stems for Students
+      contains: Sentence starters students can use to agree, disagree, question and build on ideas.
+    - name: Debrief
+      contains: How to close the talk and help students reflect on what they said.
+    - name: Common Pitfalls
+      contains: Mistakes that often go wrong with this format and how to avoid them.

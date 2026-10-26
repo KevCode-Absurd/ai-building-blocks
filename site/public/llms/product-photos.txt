@@ -1,38 +1,39 @@
 # Make product photos: AI Blocks
 
-> 34 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 35 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [A full product photoshoot from your phone photos](https://useaiblocks.com/workflows/phone-product-photoshoot): Give it your product photos and brand look. You get 8 to 12 photos, each with a job and its own light.
-- [A product gallery that answers shoppers' doubts](https://useaiblocks.com/workflows/product-gallery-answers): Give it your product, photos, reviews and current gallery. You get a checked set of images, ready to upload.
-- [Accessory try-on photo maker](https://useaiblocks.com/skills/accessory-try-on-photo-maker): Give it a shoe, bag, watch or necklace photo. Get a prompt that puts it on a person.
-- [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector): Give it an AI-made product photo. Get a risk rating, eight checks and lines to add to your prompt before you retry.
-- [Eight-picture product page planner](https://useaiblocks.com/prompts/eight-picture-product-page-planner): Paste your product facts and photos you have. Get a plan for the eight pictures on your product page.
-- [Fabric close-up maker](https://useaiblocks.com/skills/fabric-close-up-maker): Give it a clothing photo. Get close-ups of fabric, stitching and weave for the product page. Your image model draws them.
-- [Fabric swap sample maker](https://useaiblocks.com/skills/fabric-swap-sample-maker): Give it a garment shape and a fabric swatch. Get a sample photo in the new fabric. Your image model draws it.
-- [Fabric texture fixer](https://useaiblocks.com/skills/fabric-texture-fixer): Give it a blurry clothing photo and a sharp product photo. Get clear, believable fabric. Your image model redraws it.
-- [Flash snapshot product photo maker](https://useaiblocks.com/skills/flash-product-photos): Attach your product photos. Get 6 flash snapshot prompts from one real occasion.
-- [Get product photos in three looks from phone photos](https://useaiblocks.com/workflows/three-look-product-photos): Give it your website and product photos. Get a styled photo set, flash snapshots and a copy of a look you like.
-- [Ghost mannequin photo maker](https://useaiblocks.com/skills/ghost-mannequin-photo-maker): Give it a clothing flat lay. Get a photo shaped as if worn by an invisible model. Your image model draws it.
-- [Main product image designer](https://useaiblocks.com/skills/main-product-image-designer): Give it a product photo and selling points. Get a main image with the copy laid on. Your image model draws it.
-- [Make matching photos for a product sheet and check them](https://useaiblocks.com/workflows/make-matching-photos-for-a-product-sheet-and-check-them): Give it a product sheet. Get matching photos, a faults report and a marketplace rules check.
-- [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker): Give it product photos and your platform. Get a pass or reject per photo, and fixed copies.
-- [Missing product image finder](https://useaiblocks.com/skills/missing-product-image-finder): Get products and variants with no image or too few images, so no page goes live looking bare.
-- [Model and scene swapper](https://useaiblocks.com/skills/model-and-scene-swapper): Give it a model photo. Get versions with other models and backgrounds, same clothes. Your image model draws them.
-- [Outfit photo composer](https://useaiblocks.com/skills/outfit-photo-composer): Give it up to eight single items. Get one photo of a model wearing the full outfit. Your image model draws it.
-- [Product background swapper](https://useaiblocks.com/skills/product-background-swapper): Give it a white-background product photo. Get it placed in a real-looking scene with matching light. Your image model draws it.
+- [Accessory try-on photo maker](https://useaiblocks.com/skills/accessory-try-on-photo-maker): Make an accessory try-on photo from your product shot. Give it a shoe, bag, watch or necklace photo and get a prompt that puts it on a model.
+- [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector): Share an AI-made product photo. Get eight visual checks, a risk rating and specific prompt fixes, with human review before release.
+- [Chinese-text product image designer](https://useaiblocks.com/skills/main-product-image-designer): Share a product photo, verified features and offer. Get a Chinese-text main image prompt and versions through dLazy.
+- [Clothing marketplace photo editor](https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos): Share a real garment photo and target marketplace. Get photo edits, close-up checks and a review of the final images against relevant rules.
+- [Clothing photo model and background editor](https://useaiblocks.com/skills/model-and-scene-swapper): Share a clothing photo and desired change. Create model or background variants, then check that the garment stays true.
+- [Fabric close-up maker](https://useaiblocks.com/skills/fabric-close-up-maker): Give it a clothing photo. Use a paid image model to request close-ups of fabric, stitching and weave.
+- [Fabric swap sample maker](https://useaiblocks.com/skills/fabric-swap-sample-maker): Give it a garment photo and fabric swatch. Get an image prompt; a paid image model can make visual samples to review.
+- [Fabric texture fixer](https://useaiblocks.com/skills/fabric-texture-fixer): Give it a blurry clothing photo and a sharp product photo. Ask an image model to restore fabric detail.
+- [Flash snapshot product photo maker](https://useaiblocks.com/skills/flash-product-photos): Plan six flash snapshot product photos from one real occasion. Get the flash settings, a shot roll and one image prompt per photo.
+- [Ghost mannequin photo maker](https://useaiblocks.com/skills/ghost-mannequin-photo-maker): Give it a garment flat lay, garment type and color. Get a prompt for an image tool that aims to keep garment details true.
+- [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker): Share product photos and the marketplace. Check image size, colour and layout, then fix supported issues in separate copies.
+- [Outfit photo composer](https://useaiblocks.com/skills/outfit-photo-composer): Share up to eight item images. Use dLazy’s image service to generate outfit pictures, then check each item’s details.
 - [Product catalogue photo maker](https://useaiblocks.com/skills/product-photo-batch-maker): Give it a spreadsheet of products. Get one matching photo per product, with a cost limit. Your image model draws them.
-- [Product detail image maker](https://useaiblocks.com/skills/product-detail-image-maker): Give it a product photo and selling points. Get detail page pictures with the text built in. Your image model draws them.
-- [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer): Attach your product photos. Get a sourced truth sheet, lock lines and the next photo to take.
-- [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner): Attach your product photos and facts. Get an 8-image gallery plan with sourced words and a gaps list.
-- [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker): Attach your product images and plan. Get every fault, one fix each and a score out of 100.
-- [Product photo retoucher](https://useaiblocks.com/skills/product-photo-retoucher): Give it a phone photo of a product. Get a cleaner listing photo with fewer wrinkles. Your image model edits it.
-- [Product photo set builder](https://useaiblocks.com/skills/product-photo-set-builder): Give it one product photo. Get a full set of new angles and scenes. Your image model draws them.
-- [Product photo set maker](https://useaiblocks.com/agents/product-photo-set-maker): Give it photos of one real product. Get a planned photo set, checked frame by frame, with every failed frame redone.
-- [Product photo shoot planner](https://useaiblocks.com/skills/product-photo-shoot-planner): Attach your product photos and colours. Get a style sheet and 9 matching photo prompts.
-- [Product shoot brief writer](https://useaiblocks.com/skills/product-shoot-brief-writer): Tell it your product. Get a shot list for photos and video, with a reason for each shot.
-- [Product shot list writer](https://useaiblocks.com/prompts/product-shot-list-writer): Paste your product and where the photos will run. Get a shot list, with the reason for each shot.
-- [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos): Attach your product and a photo you like. Get a matching prompt and ranked pictures.
-- [Social post photo maker](https://useaiblocks.com/skills/social-post-photo-maker): Give it an outfit photo. Get lifestyle shots with new models, scenes and poses for social posts. Your image model draws them.
-- [Turn a clothing flat lay into marketplace-ready photos](https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos): Give it a garment phone photo. Get a clean photo, a worn-shape photo, fabric close-ups and a rules check.
-- [Turn real photos into a product page gallery](https://useaiblocks.com/workflows/photo-product-gallery): Give it your product photos and facts. You get about 8 checked images that each answer a shopper question.
-- [Virtual try-on photo maker](https://useaiblocks.com/skills/virtual-try-on-photo-maker): Give it a clothing flat lay and a pose photo. Get a model-wearing shot. Your image model draws it, not Claude.
+- [Product detail image maker](https://useaiblocks.com/skills/product-detail-image-maker): Give it a product photo and selling points. Get detail-page image prompts with text to review before upload.
+- [Product gallery image designer](https://useaiblocks.com/workflows/photo-product-gallery): Share exact product photos, facts and buyer questions. Get a gallery plan, pilot images and a checked final set where image tools are available.
+- [Product gallery image planner](https://useaiblocks.com/workflows/product-gallery-answers): Share exact product photos, brand facts and customer feedback. Get a gallery review, image plan and checked files when image tools are available.
+- [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer): Check your product photos and write a product image spec: a sourced truth sheet, lock lines for every prompt and the next photo to take.
+- [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner): Plan your product page gallery image by image. Give it product facts, reviews and photos. You get an 8-image plan with sourced words and a gaps list.
+- [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker): Check your product page images before you upload. Get a pass or fail for each image, one fix per fault and a score out of 100 for the set.
+- [Product page photo planner](https://useaiblocks.com/prompts/eight-picture-product-page-planner): Share product facts and available photos. Get a plan for up to eight product-page pictures, each answering one shopper question.
+- [Product photo background editor](https://useaiblocks.com/skills/product-background-swapper): Give it a product photo and scene idea or background. Get an image prompt and, with a paid image model, a scene image to inspect.
+- [Product photo batch reviewer](https://useaiblocks.com/workflows/make-matching-photos-for-a-product-sheet-and-check-them): Share product rows, real photos and target marketplace. Get a pilot, generated batches where tools allow, defect checks and a listing-rule review.
+- [Product photo retoucher](https://useaiblocks.com/skills/product-photo-retoucher): Bring product photos. Use dLazy’s paid image model to request lighting, wrinkle, layout or background edits.
+- [Product photo set builder](https://useaiblocks.com/skills/product-photo-set-builder): Share one product photo. Ask an image model for new angles and scenes, then check product details.
+- [Product photo set reviewer](https://useaiblocks.com/agents/product-photo-set-maker): Plan AI product photos from real references. Check returned images against the product and track fixes or dropped frames.
+- [Product photo shoot planner](https://useaiblocks.com/skills/product-photo-shoot-planner): Plan a product photo shoot where every picture matches. Give it your product photos and colours. You get a style sheet and a prompt for each frame.
+- [Product photo styling planner](https://useaiblocks.com/workflows/three-look-product-photos): Share product photos, brand facts and a visual reference. Get styled shot plans, flash-photo ideas and a reference-led look for your own product.
+- [Product photoshoot planner and producer](https://useaiblocks.com/workflows/phone-product-photoshoot): Share real product photos, brand rules and placements. Get a shot and lighting plan, an approved pilot and generated photos where tools allow.
+- [Product shoot brief writer](https://useaiblocks.com/skills/product-shoot-brief-writer): Write a product shoot brief for your photographer. Give it your product and get a shot list for photos and video, with a reason for each shot.
+- [Product shot list writer](https://useaiblocks.com/prompts/product-shot-list-writer): Write a product photo shot list with a reason for each shot. Give it your product and where the photos will run, and get a plan for your shoot.
+- [Reference-based product photoshoot planner](https://useaiblocks.com/workflows/reference-library-photoshoot): Pick photo looks for one real product. Get a shot plan, a pilot and checked files in each size you ask for.
+- [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos): Make product photos that match a look you like. Attach your product and one reference photo. Get an image prompt and ranked pictures.
+- [Shopify missing product image finder](https://useaiblocks.com/skills/missing-product-image-finder): Review Shopify product and variant image records. Find missing images or counts below your target and export a fix list.
+- [Social post photo maker](https://useaiblocks.com/skills/social-post-photo-maker): Give it an outfit photo. Ask a paid image model for a new model, scene and pose for social posts.
+- [Virtual try-on photo maker](https://useaiblocks.com/skills/virtual-try-on-photo-maker): Give it a flat garment photo and a pose photo. Get an image prompt; a paid image model makes the try-on picture.

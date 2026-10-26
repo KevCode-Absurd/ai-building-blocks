@@ -1,36 +1,35 @@
 slug: employee-feedback-action-review-assistant
 name: Employee feedback action review assistant
-summary: A progress brief, new themes and proposed updates to the employee response.
+summary: "Track the actions you agreed after employee feedback. Get new themes, overdue actions and a draft staff update, with small groups kept private."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: question
-    required: false
-  - type: meeting_notes
-    required: false
+  - type: spreadsheet
+    required: true
 outputs:
   - type: document
-  - type: plan
   - type: audit_report
+  - type: plan
 uses:
   - turn-employee-feedback-into-owned-actions
   - executive-action-register
 steps:
   - uses: turn-employee-feedback-into-owned-actions
-    note: "Run when: New anonymized feedback arrives or an agreed action is overdue or blocked."
+    note: "Run when new anonymized feedback arrives. Themes from groups below your minimum size are held back. The rest are split into recurring and one-off, then turned into risks, gaps in proof and proposed actions."
   - uses: executive-action-register
-    note: Run the listening workflow for new themes. For existing actions, use executive-action-register to compare evidence with the agreed commitments and draft only the changed update.
+    note: "Run when an agreed action is overdue or blocked, or after new feedback. It reads your own agreed action list and dated proof, plus the proposed actions step 1 hands over. It compares dated proof with each commitment. An action is done only with proof. It drafts only the changed update."
 schedule: At the agreed review dates after an employee listening exercise.
 asks_before:
   - Sending or submitting any message or form
   - Changing a live account, calendar, task, permission or published document
   - Spending money, releasing a payment or signing a contract
   - Starting or changing any recurring schedule
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

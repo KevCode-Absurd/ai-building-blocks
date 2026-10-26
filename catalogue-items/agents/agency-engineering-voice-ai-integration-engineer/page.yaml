@@ -1,0 +1,138 @@
+name: Voice AI Integration Engineer agent
+summary: Plan a speech-to-text system for your recordings, with the audio prep, tool choice, speaker labels, subtitles, privacy steps and quality checks.
+headline: Voice AI Integration Engineer agent
+subhead: Describe your recordings, how many you have and where the text must go. The agent plans each stage of a speech-to-text pipeline, from audio clean-up to the transcript, speaker labels and subtitles. You get a stage-by-stage plan with checks for each stage.
+job: work-with-audio
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Turning speech into text sounds simple until it fails without warning. A stereo file gets fed in at the wrong sample rate. A two-hour recording overflows the model and the end of the transcript is quietly wrong. Speaker names get lost on the way to the summary. This voice AI integration engineer agent plans the whole speech-to-text pipeline so those failures are caught early.
+
+  You describe the audio and the goal. It lays out the stages in order: check the file, clean and convert the audio, split long recordings, transcribe, label speakers, tidy the text, make subtitles or data files, and send the result where it is needed. At each stage it names what can go wrong and how to check for it. It also helps you choose between a model that runs on your own machine and a paid cloud service, based on privacy, cost, speed and accuracy.
+
+  It is a planner and a code helper. It does not hear your audio or measure accuracy on it. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its error-rate and speed targets are examples, not results measured by AI Blocks.
+when:
+  - You have hundreds of interviews, calls or podcast episodes to turn into text and need a plan that scales.
+  - Your transcripts come out garbled on noisy, long or multi-speaker recordings and you do not know which stage is at fault.
+  - You need subtitles (SRT or VTT) or speaker-labelled text to feed a summary tool or your website.
+  - You must decide whether private recordings can go to a cloud service or must stay on your own machine.
+not_for:
+  - "You just want one audio file turned into text today: use the Whisper speech transcriber."
+  - "You want a summary and action items from one meeting recording: use the Audio meeting notes writer."
+  - "You want to turn text into speech: use the Voiceover maker."
+  - "You want a video in another language: use the Video dubbing editor."
+  - "You need a legal or medical compliance sign-off for call recordings. A plan is not one: ask a qualified professional."
+you_give:
+  - What your recordings are, such as support calls, podcasts or interviews, and how long they run
+  - How many you have, and whether they arrive in batches or one by one
+  - Languages and accents, and how noisy the audio is
+  - What you need out, such as plain text, subtitles, speaker labels or action items
+  - Where the text must go, such as your website, a spreadsheet or a summary tool
+  - Privacy limits, budget and speed needs (optional)
+you_get:
+  - A stage-by-stage plan from audio file to finished transcript, with what each stage does
+  - A choice between local and cloud transcription, with the trade-offs for your case
+  - Audio clean-up steps, a splitting plan for long files, and speaker-label and subtitle steps
+  - A privacy and storage checklist for the audio and the text
+  - Quality checks to run at each stage, and a small test to try before you scale up
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe your recordings, volume, languages and the output you need. Add any privacy rules, such as "audio may not leave our network".
+  - Ask for the plan first. Say "Plan only. Do not write code yet." Your AI asks once for anything missing.
+  - Read the local versus cloud choice and the privacy section before the rest. Fix anything that does not match your rules.
+  - Ask for code for one stage at a time. You need a person or tool that can run it, such as Python and ffmpeg. A chat AI cannot run it for you.
+  - Test the plan on three of your own recordings, one clean and two hard. Compare the text to what you hear before you scale up.
+how_it_works:
+  - title: Set the goal
+    text: It confirms what the audio is, what you need out and where it goes, and asks once for what is missing.
+  - title: Check the input
+    text: It plans file checks for format, length and sound, so bad files are caught before they cost time.
+  - title: Prepare the audio
+    text: It plans conversion to the format speech models expect, plus clean-up and splitting of long files.
+  - title: Choose where to transcribe
+    text: It compares a model on your own machine with a cloud service on privacy, cost, speed and languages.
+  - title: Label and tidy
+    text: It plans speaker labels, punctuation clean-up, time stamps and subtitle files, and flags low-confidence parts for a human.
+  - title: Deliver and protect
+    text: It plans how the text reaches your tools, how long files are kept and how private data is removed.
+output_shape: |-
+  GOAL
+    Audio <type, length, count> | Languages <list> | Need <outputs> | Destination <where>
+
+  PIPELINE PLAN
+    <stage> | <what it does> | <what can go wrong> | <check>
+
+  LOCAL OR CLOUD
+    Pick <local, cloud or mix> | Why <privacy, cost, speed, languages>
+    Open question <what to verify with the vendor or your own test>
+
+  OUTPUTS
+    <transcript, subtitles, speaker labels, data file> | <format> | <who uses it>
+
+  PRIVACY AND STORAGE
+    <rule> | <how the plan meets it>
+
+  TEST PLAN
+    <recording type> | <what to compare> | <pass looks like>
+
+  OPEN CHECKS
+    <assumption> | <who confirms it>
+output_sample:
+  input:
+    - What your recordings are, how many and how long
+    - Languages, noise level and the outputs you need
+    - Where the text must go, and any privacy limits
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - Python, ffmpeg and a transcription tool, only if you want to run the code it writes
+  output:
+    - name: Goal
+      contains: Your audio, languages, needed outputs and destination in one short block.
+    - name: Pipeline plan
+      contains: Each stage in order, with what it does, what can go wrong and how to check it.
+    - name: Local or cloud
+      contains: A pick with reasons based on privacy, cost, speed and language coverage.
+    - name: Outputs
+      contains: Each file you get, such as plain text, subtitles or speaker-labelled text, and who uses it.
+    - name: Privacy and storage
+      contains: How audio and text are handled, kept and deleted, and what private data is removed.
+    - name: Test plan
+      contains: Three kinds of recordings to try first and what a pass looks like for each.
+    - name: Open checks
+      contains: Assumptions to confirm, such as vendor terms or your own privacy rules.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Depth
+    how: Ask for a plain-language plan for a manager, or a technical plan with code outline for a developer.
+  - what: Privacy
+    how: Say "local only" or "cloud allowed" up front so the plan does not offer options you cannot use.
+  - what: Outputs
+    how: Name the one output you need first, such as subtitles only, to keep the plan short.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Speech-to-text
+    meaning: Software that turns spoken audio into written text. Also called transcription or ASR.
+  - term: Whisper
+    meaning: A speech-to-text model from OpenAI that can run on your own machine or through a paid service.
+  - term: Diarization
+    meaning: Working out who spoke when, so each line of text gets a speaker label.
+  - term: Word error rate
+    meaning: The share of words a transcript gets wrong, compared with what was said.
+  - term: SRT and VTT
+    meaning: Two common subtitle file types, with each line tied to a time on the video.
+  - term: ffmpeg
+    meaning: A free tool that converts and cleans audio and video files.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A plan needs only pasted text. Code it writes must be run by you or a developer, with ffmpeg and a speech model installed.
+  inputs:
+    - Two or three sample recordings, one clean and one hard, to test the plan on.
+    - A list of names and special words, such as product names, that must be spelled right.

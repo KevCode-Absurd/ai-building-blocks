@@ -1,6 +1,6 @@
 new_slug: email-send-readiness-scorer
 name: "Email send-readiness scorer"
-summary: "Paste an email. Get counts, cuts, three subject lines, a score out of 100 and a ship or fix verdict."
+summary: "Check your email draft before you send it. Get word counts, cuts, three subject lines, a score out of 100 and a ship or fix verdict."
 job: write-emails
 thinking: low
 thinking_why: "It counts and scores against fixed rules."
@@ -17,6 +17,10 @@ when:
   - "You wrote an email and want a second pair of eyes in two minutes."
   - "Your emails get opened but not clicked."
   - "You want one number to decide whether to send or fix."
+not_for:
+  - "You want every check on a draft: use the Email draft reviewer."
+  - "You are writing cold outreach to people who do not know you: ask a colleague to read it, as the rules here suit your own list."
+  - "You are sending a receipt, a password reset or other system mail: those need clear facts, not a score."
 
 you_give:
   - "The email with subject and preview text"
@@ -32,6 +36,24 @@ how_to_use:
   - "Paste the full email, including the subject and preview text, under the prompt."
   - "State the one goal in a sentence."
   - "Fix the three things it lists, then paste the new version to score it again."
+output_sample:
+  input:
+    - Your email draft, with subject line and preview text
+    - Who gets it and the one goal
+    - Your voice rules (optional)
+  output:
+    - name: COUNTS
+      contains: Words in the first sentence, words in the whole email, characters in the subject, and the number of I and we lines.
+    - name: MARKED DRAFT
+      contains: Your email with [cut] marks on filler and [rewrite] marks on lines that need to speak to the reader.
+    - name: SUBJECT LINES
+      contains: Three subject line options to swap in.
+    - name: SCORE
+      contains: A score out of 100 with the sum shown, based on Stops, Fixes and Polish.
+    - name: VERDICT
+      contains: Ship or fix, with the three fixes that matter most.
+    - name: MISSING
+      contains: Any fact the AI needed but did not have, so nothing is made up.
 
 how_it_works:
   - title: "Count"

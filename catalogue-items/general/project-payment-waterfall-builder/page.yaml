@@ -1,55 +1,126 @@
 new_slug: project-payment-waterfall-builder
 name: Project payment waterfall builder
 headline: Project payment waterfall builder
-summary: A payment priority waterfall with unpaid obligations
+summary: Split one period's project cash across senior debt, reserve top-up and junior debt in the order your loan sets, with every unpaid amount shown.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A payment priority waterfall with unpaid obligations. Share nonnegative qualifying cash after operating obligations, dated payment priority, due senior and junior service and required reserve top-up.
+subhead: Give it the cash a project has available, the payment order from the loan agreement and what is due in each tier. It pays each tier in turn from the cash that is left, never more than is due. You get what each tier receives, every unpaid amount and the cash left over.
 explain: |-
-  A payment priority waterfall with unpaid obligations.
+  Many projects, such as a solar farm, a toll road or a building, borrow money on a rule: when cash comes in, it is paid out in a fixed order. Senior lenders come first. Then a reserve account is topped up. Then junior lenders. What is left may go to the owners. This project payment waterfall shows what each tier gets from one period's cash and what goes unpaid.
 
-  Project distribution controls. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+  The skill reads the order from your agreement instead of assuming one. It caps each tier at the cash that is left and at the amount really due. It does not count the cash already sitting in a reserve account as new cash. It adds up everything paid plus the cash left and checks that the total equals the cash you started with. A shortfall in a high tier is still reported when the tiers below it get nothing.
+
+  A positive amount left over is a modelled figure only. It does not mean the owners may legally take it out. Distribution tests in the agreement are a separate check.
 when:
-  - You need a payment priority waterfall with unpaid obligations.
-  - You work on project distribution controls and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your loan agreement sets a payment order and you want to see who is paid from this period's cash.
+  - Cash is short and you need to know which tier goes unpaid first.
+  - An owner asks how much can be taken out, and you must first show what is due ahead of them.
+  - You are checking a payment statement from a lender or an agent against the agreement.
+not_for:
+  - You still need to work out the cash available from revenue and costs. Use the Project cash for debt checker first.
+  - You want reserve balances tracked over many periods, with draws and top-ups. Use the Project debt reserve payment checker.
+  - You want to know whether owners may legally take a payout. Check the distribution tests in the agreement. The Shareholder payout cash checker compares payouts with cash.
+  - You want a payout split between a fund's investors and its manager. Use the Fund payout without catch-up checker.
+  - You want a forecast of the company's cash across the year. This covers one payment date and its tiers only.
 you_give:
-  - Nonnegative qualifying cash after operating obligations, dated payment priority, due senior and junior service and required reserve top-up.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Cash available for payments in the period, after operating costs. It cannot be below zero.
+  - The payment order from the agreement, with the clause that sets it
+  - Senior debt due this period, including interest and scheduled principal
+  - The reserve top-up required this period (the amount to add, not the balance already held)
+  - Junior debt due this period
+  - The period date, the currency and whether figures are in units, thousands or millions
 you_get:
-  - A payment priority waterfall with unpaid obligations.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - What each tier receives, in the order of the agreement
+  - Every unpaid amount, tier by tier, even where lower tiers receive nothing
+  - The reserve top-up funded and any shortfall
+  - The cash left after all tiers, labelled as a modelled figure and not an approved payout
+  - A check that payments plus cash left equal the cash you started with
+  - A list of every input marked MISSING and every check that could not run
+  - A workbook version of the same lines, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste the text of SKILL.md into a new chat.
+  - Paste the cash available, the amounts due in each tier and the reserve top-up. Add the period date, currency and units.
+  - Paste the payment order clauses from the agreement, or list the order yourself and say where it comes from. Without a stated order the skill will not guess one.
+  - Check that the cash figure is after operating costs and that the reserve figure is a top-up, not the balance already in the account.
+  - Read each tier's unpaid amount, then MISSING and CHECKS MISSED, before you share the result.
+  - Check the distribution tests in the agreement before anyone treats the cash left as payable to owners.
 how_it_works:
-  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
-    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
-  - title: 2. Read the actual priority and distribution gates; map upstream CFADS without counting existing reserve balances as new cash
-    text: Read the actual priority and distribution gates; map upstream CFADS without counting existing reserve balances as new cash.
-  - title: 3. Allocate available cash to senior service, reserve top-up and junior service in the stated order, capping each tier at remaining cash and actual due amount
-    text: Allocate available cash to senior service, reserve top-up and junior service in the stated order, capping each tier at remaining cash and actual due amount.
-  - title: 4. Reconcile final residual to all allocations; retain unpaid debt or reserves and block any assertion that a positive residual is legally distributable
-    text: Reconcile final residual to all allocations; retain unpaid debt or reserves and block any assertion that a positive residual is legally distributable.
+  - title: 1. Build a source ledger
+    text: Lists balances, amounts due, period dates, contract terms and any evidence gaps, each with its source.
+  - title: 2. Read the order
+    text: Takes the payment order and distribution conditions from the agreement. Existing reserve balances are not treated as new cash.
+  - title: 3. Pay the tiers in turn
+    text: Pays senior debt, then the reserve top-up, then junior debt. Each tier is capped at the cash left and the amount due.
+  - title: 4. Show every gap
+    text: Reports the unpaid amount for each tier, including tiers that receive nothing.
+  - title: 5. Reconcile
+    text: Checks that all payments plus the cash left equal the cash available, and explains any difference.
+  - title: 6. Report gaps
+    text: Lists missing inputs and checks that could not run. It does not call the cash left distributable.
 output_shape: |-
-  A payment priority waterfall with unpaid obligations.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Senior paid: <amount> (unpaid <amount>) | Reserve funded: <amount> (short <amount>) | Junior paid: <amount> (unpaid <amount>) | Cash left: <amount>
+
+  SCOPE AND DATED SOURCES
+  <period date, currency, units; each figure with its source and date>
+
+  INPUTS AND ASSUMPTIONS
+  <figures given, each assumption, and the agreement clauses used>
+
+  PAYMENT ORDER
+  1. <tier> | 2. <tier> | 3. <tier> | Then: cash left   (source: <clause>)
+
+  WATERFALL
+  Cash available: <amount>
+  1. Senior debt: due <amount> | paid <amount> | unpaid <amount> | cash after <amount>
+  2. Reserve top-up: required <amount> | funded <amount> | short <amount> | cash after <amount>
+  3. Junior debt: due <amount> | paid <amount> | unpaid <amount> | cash after <amount>
+  Cash left after all tiers: <amount>  (a modelled figure, not an approved payout)
+
+  CASH CHECK
+  Payments plus cash left = cash available: <yes, or the difference>
+
+  RECONCILIATIONS
+  <each figure tied to a record, with differences explained>
+
+  FILE CHECK
+  <what was checked in the workbook or calculator, or that none was made>
+
+  MISSING
+  <inputs not given>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+output_sample:
+  input:
+    - Cash available for payments in the period, after operating costs
+    - The senior debt due, the reserve top-up required and the junior debt due
+    - The payment order and the clause that sets it
+    - The distribution conditions in the agreement (optional)
+  prerequisites:
+    - A signed loan agreement that sets the payment order
+    - A cash available figure from the Project cash for debt checker or your own accounts
+  output:
+    - name: Scope and dated sources
+      contains: The period date, currency and units, and the source and date of each figure.
+    - name: Payment order
+      contains: The tiers in the order the agreement sets, with the clause for each.
+    - name: Waterfall
+      contains: For each tier, the amount due, paid and unpaid, and the cash left after it.
+    - name: Cash check
+      contains: Whether payments plus cash left equal the cash you started with.
+    - name: Reconciliations
+      contains: Each figure tied to a record, with any difference explained.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not given, and every check that failed or could not run, or "none".
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
   - what: Assumptions
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
-    how: Each material input is sourced with currency, scale, sign and period.
+    how: Actual records and scenarios remain separate; missing evidence is not zero.
 judge:
   - Each material input is sourced with currency, scale, sign and period.
   - Actual records and scenarios remain separate; missing evidence is not zero.
@@ -64,15 +135,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: It does the arithmetic and shows each line, so you can check it against the agreement.
+    - name: A spreadsheet app and an AI that can make files
+      why: Builds, recalculates and reopens the workbook version of the waterfall.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small calculator in the pack on your own figures.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The loan agreement's payment order and distribution conditions, and the period's debt statements.
+    - The cash available figure from your project accounts.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Waterfall
+    meaning: A rule that pays several claims in a fixed order. Each is paid in full before the next gets anything.
+  - term: Senior debt
+    meaning: Debt that is paid first when cash is short.
+  - term: Junior debt
+    meaning: Debt paid only after senior debt and the reserve top-up are covered.
+  - term: Reserve top-up
+    meaning: Cash set aside into a reserve account to bring it up to the level the agreement requires.
+  - term: Cash available for debt service (CFADS)
+    meaning: Project cash left after operating costs, which is what the payment order is paid from.

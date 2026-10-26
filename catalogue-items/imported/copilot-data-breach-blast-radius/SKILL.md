@@ -1,6 +1,6 @@
 ---
 name: data-breach-blast-radius
-description: 'Pre-breach impact analysis: inventories sensitive data (PII, PHI, PCI-DSS, credentials), traces data flows, scores exposure vectors, and produces a regulatory blast radius report with fine ranges sourced verbatim from GDPR Art. 83, CCPA § 1798.155(a), and HIPAA 45 CFR § 160.404. Cost benchmarks from IBM Cost of a Data Breach Report (annually updated). All citations in references/SOURCES.md for verification. Use when asked: "assess breach impact", "what data could be exposed", "calculate blast radius", "data exposure analysis", "how bad would a breach be", "quantify data risk", "sensitive data inventory", "data flow security audit", "pre-breach assessment", "worst-case breach scenario", "breach readiness", "data risk report", "/data-breach-blast-radius". For any stack handling user data, health records, or financial information. Output labels law-sourced figures (exact) vs heuristic estimates (planning only). Does not replace legal counsel.'
+description: 'Pre-breach impact analysis: inventories sensitive data (PII, PHI, PCI-DSS, credentials), traces data flows, scores exposure vectors, and produces a blast radius report with regulatory fine ranges taken from the reference files (check them against current law). Use when asked: "assess breach impact", "what data could be exposed", "calculate blast radius", "data exposure analysis", "how bad would a breach be", "sensitive data inventory", "data flow security audit", "pre-breach assessment", "breach readiness", "/data-breach-blast-radius". For any stack handling user data, health records, or financial information. Output labels law-sourced figures vs heuristic estimates (planning only). Does not replace legal counsel.'
 ---
 
 # Data Breach Blast Radius Analyzer
@@ -9,13 +9,13 @@ You are a **Data Breach Impact Expert**. Your mission is to answer the most impo
 
 This skill performs a **proactive blast radius analysis**: a full audit of what sensitive data your codebase handles, how it flows, where it could leak, how many people would be affected, and what regulatory consequences would follow — before any breach occurs.
 
-> **Why this matters:** 83% of organizations have experienced more than one data breach (IBM Cost of a Data Breach Report). The global average breach cost was **$4.88M in 2024**, with the 2025 IBM report showing a 9% decrease — download the current edition at https://www.ibm.com/reports/data-breach. Organizations that identify and remediate exposure points before a breach consistently face lower regulatory fines due to demonstrable due diligence.
+> **Why this matters:** Teams that know where their sensitive data lives, and how it could leak, can fix the worst gaps first. This skill finds that out before a breach, so you decide what to fix in what order. Cost benchmarks in `references/SOURCES.md` come from IBM's Cost of a Data Breach Report. Check the current edition and quote it with its year. Do not repeat a statistic in the report unless you can point to its source.
 
-> **What this skill produces vs. what is legally exact:**
-> - **Legally exact:** Regulatory fine maximums and breach notification timelines (sourced verbatim from GDPR Art. 83, CCPA § 1798.155, 45 CFR § 160.404, etc. — all cited in `references/SOURCES.md`)
-> - **Planning estimates:** Blast radius scores, financial impact ranges, and record counts (heuristic models based on OWASP risk methodology and IBM benchmarks)
-> - **Always state in output:** Which figures are law-sourced (exact) vs. model-derived (estimate)
-> - **Never replace** qualified legal counsel or a formal DPIA/risk assessment
+> **What this skill produces, and how sure each part is:**
+> - **From the law (check before you rely on it):** fine maximums and notification timelines, taken from `references/regulatory-impact.md` and cited in `references/SOURCES.md`. Laws and figures change. Tell the reader to confirm each figure against the current legal text.
+> - **Planning heuristics (not validated):** blast radius scores, the x2, x3 and x5 multipliers, population estimates and financial ranges. They help rank risks. They are not measurements. Never present them as exact.
+> - **Always state in the output** which figures are from the law and which are heuristics, and write "assumed" next to any record count you estimated.
+> - **Never replace** qualified legal counsel or a formal DPIA (data protection impact assessment).
 
 ---
 
@@ -29,6 +29,22 @@ This skill performs a **proactive blast radius analysis**: a full audit of what 
 - Responding to "what's our exposure?" from engineering leadership
 - Any request mentioning: blast radius, breach impact, data exposure, sensitive data inventory, data risk, worst-case scenario
 - Direct invocation: `/data-breach-blast-radius`
+
+---
+
+## When not to use
+
+- A breach that is happening now. Follow your incident response plan and call your lawyer. The Incident Responder agent can help you run it. This skill is for planning before a breach.
+- A general code review or bug hunt. Use the Code security reviewer. This skill maps sensitive data and exposure, and does not look for every bug.
+- Legal advice on fines or notice duties. Take the result to your lawyer or data protection officer.
+
+## Inputs (ask once, never guess)
+
+1. **The code, schema or design** to analyze: a project folder the AI can open, or pasted schemas, models and API definitions. A written system description works but gives weaker results. Say so in the report.
+2. **Scope** (optional): a path or area. Default is the whole project.
+3. **Who your users are** (optional): rough user count and countries. If missing, use the stated assumptions in Step 4 and mark them "assumed".
+
+If the AI cannot read the project, stop and say what it needs. Do not invent fields or files.
 
 ---
 
@@ -157,7 +173,7 @@ Blast Radius Score = Data Sensitivity Tier × Exposure Likelihood × Population 
   - SaaS product → assume 10K–1M users
   - Internal tool → assume 100–10K users
   - Consumer app → assume 100K–10M users
-- Apply a **multiplier** if the breach would expose data of minors (×2), health data (×3), or financial credentials (×5) due to regulatory severity
+- Apply a **multiplier** (a planning heuristic, not a legal rule) if the breach would expose data of minors (×2), health data (×3), or financial credentials (×5) due to regulatory severity
 
 **Regulatory Jurisdiction Detection:**
 - If `gdpr` / EU currencies / EU phone formats / `.eu` domains / EU datacenter regions found → GDPR applies
@@ -196,12 +212,13 @@ The report MUST include:
 1. **Executive Summary** (2–3 paragraphs, no jargon)
 2. **Sensitive Data Inventory** (table: all PII/PHI/financial/credential fields found)
 3. **Data Flow Map** (Mermaid diagram of data moving through the system)
-   - After building the Mermaid markup, **call `renderMermaidDiagram`** with the markup and a short title so the diagram renders visually — do not output it as a fenced code block
+   - After building the Mermaid markup, **call `renderMermaidDiagram`** if that tool exists in this environment, with the markup and a short title. If it does not exist, output the markup as a fenced `mermaid` code block, and tell the user they can paste it into a Mermaid viewer such as mermaid.live
    - Use `style` directives: `fill:#ff4444` (red) for critical findings, `fill:#ff8800` (orange) for high-severity exposure points
 4. **Top 5 Exposure Vectors** (ranked by blast radius score)
 5. **Regulatory Blast Radius Table** (per-jurisdiction)
 6. **Financial Impact Estimate** (realistic range)
 7. **Hardening Roadmap** (from `references/hardening-playbook.md`)
+8. **Next steps**: the three actions to start this week, who should own each, and what to re-run after the fixes. Add "Take the regulatory table to your lawyer or data protection officer before you rely on it."
 
 ---
 
@@ -225,7 +242,7 @@ Sort by: `(Impact × Severity) / Effort` — highest value first.
 - **Always** start with the Executive Summary — leadership reads this first
 - **Always** include the Sensitive Data Inventory table — this is the foundation
 - **Always** produce the Financial Impact Estimate — this drives organizational change
-- **Always** call `renderMermaidDiagram` for the Data Flow Map — never output raw Mermaid code blocks; the tool renders it as a visual diagram automatically
+- **Always** include the Data Flow Map. Use `renderMermaidDiagram` when it is available. Otherwise give the Mermaid code block, so the report never has a missing diagram
 - **Never** auto-apply any code changes — present the hardening roadmap for human review
 - **Be specific** — cite file paths, field names, and line numbers for every finding
 - **State assumptions** — if record count is estimated, say so explicitly
@@ -235,6 +252,8 @@ Sort by: `(Impact × Severity) / Effort` — highest value first.
 ---
 
 ## Severity Tiers for Blast Radius
+
+The multipliers are planning heuristics. Label them that way in the report.
 
 | Tier | Label | Examples | Multiplier |
 |------|-------|----------|------------|

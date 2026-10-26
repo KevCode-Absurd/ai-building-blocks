@@ -1,6 +1,6 @@
 new_slug: investing-policy-page-writer
 name: "Investing policy page writer"
-summary: "Paste your type, split and bond choice. Get one page with your plan, what you won't do and a review date."
+summary: "Turn your split, investor type and bond choice into an investing policy page with a rebalancing rule, a won't-do list and a review date."
 job: money-and-investing
 thinking: low
 thinking_why: "It gathers decisions you already made onto one page and adds fixed rules. A fast model does this well."
@@ -17,6 +17,10 @@ when:
   - You have decided your split and want it written down before you put money in.
   - You keep changing your plan every time prices move.
   - Someone else manages part of your money and you want one page to hold them to.
+not_for:
+  - "You have no stock and bond split yet: build it first with the Stock and bond split planner, then come back."
+  - "You want to pick a single stock, fund or broker: this page names no securities, so ask a licensed adviser you trust."
+  - "You want full rules for a market fall: write them with the Price drop rules writer, then add the link to this page."
 
 you_give:
   - Your investor type, split and rebalancing rule
@@ -36,6 +40,29 @@ how_to_use:
   - Paste your split, type and bond choice.
   - Say whether you want a small separate account for risky bets, and how much.
   - Print the page and keep it where you look at your accounts.
+output_sample:
+  input:
+    - Your investor type, split and rebalancing rule
+    - Your bond choice (optional)
+    - Whether you want a small separate account for risky bets (optional)
+    - Who advises you, if anyone (optional)
+  output:
+    - name: What I hold
+      contains: Your stock and bond split with its range, and the kind of bonds you chose.
+    - name: How I keep it
+      contains: The rebalancing trigger, the move, and whether new money or selling does the work.
+    - name: What I expect
+      contains: A plain note on income after tax and inflation, plus a bad year shown in money.
+    - name: What I will not do
+      contains: Rules against forecasting, borrowing to buy, chasing prices and acting on tips, plus your own lines.
+    - name: Risky bets (optional)
+      contains: A small separate account with a cap, kept apart from the plan, with a note that you expect to lose it.
+    - name: Advice rule
+      contains: Questions to ask any adviser and the signs that mean you walk away.
+    - name: Review
+      contains: A next review date and the only reasons to change the page.
+    - name: Missing and checks missed
+      contains: Gaps marked MISSING, and one line for each check the skill still failed, or none.
 
 how_it_works:
   - title: Gathers your choices

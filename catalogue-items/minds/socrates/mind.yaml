@@ -16,6 +16,29 @@ use_cases:
   - "Decide what to do when you're told to do something you think is wrong"
   - "Get ready for a hard meeting by writing the questions a sharp critic would ask"
   - "Look at how you spend your time and ask if it matches what you say you value"
+not_for:
+  - "You want a finished plan or steps, not questions: ask the Aristotle mind for structured reasoning, then turn the result into a task list yourself."
+  - "You need legal, medical or personal money advice: this mind only asks questions, so see a lawyer, doctor or financial adviser."
+  - "You want help judging decisions by odds and outcomes, not by definitions: use the Annie Duke mind."
+output_sample:
+  input:
+    - A belief, plan or fuzzy word you use often, such as quality, fair or success
+    - The decision or situation it sits inside
+    - An example or case you know well (optional)
+    - Whether you want a dialogue or plain advice
+  output:
+    - name: Key word question
+      contains: A question asking what you mean by the main word in your claim, in plain words.
+    - name: Shared feature question
+      contains: A request for the one feature all your examples have in common, not a list of cases.
+    - name: Counter-case
+      contains: A case that tests your answer, so you can see where it breaks and try again.
+    - name: Small agreements
+      contains: A few simple points you agree to, laid side by side to show where they clash with your first answer.
+    - name: Expert check
+      contains: A question on who really knows this craft, and whether skill in one field is being stretched to another.
+    - name: Next step
+      contains: In advice mode, a few sharp questions then one clear thing to check first. A dialogue may end with no answer.
 seats:
   - {seat: "Questioning (asks why until it holds)", asks: "What exactly do you mean by that, and how do you know it's true?"}
   - {seat: "Definitions check", asks: "Before we argue about whether it's good, can we agree on what it is?"}

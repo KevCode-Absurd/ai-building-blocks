@@ -1,27 +1,67 @@
 new_slug: google-ads-report-code-builder-prompt
 name: Google Ads report coding prompt
-summary: Get a coding brief for a Google Ads report with matched dates, clear metrics, evidence and owned next steps.
+summary: Get a coding brief to build a Google Ads monthly report generator, with correct dates, spend math, tests and clear gaps. Needs your code.
 job: build-software
 headline: Google Ads report coding prompt
-subhead: Get a coding brief for a Google Ads report with matched dates, clear metrics, evidence and owned next steps.
+subhead: Give your AI your code folder and your Google Ads details. You get a coding brief for a monthly Google Ads report. It covers the report parts, the math, the tests and what is still missing.
 explain: |-
   Share your project and the required feature. Get a coding brief for google ads report code builder, with setup and test steps.
 
   The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
 when:
-  - You need a coding brief for google ads report code builder.
-  - You need build monthly report generator prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You want a monthly Google Ads report built into your own tool.
+  - You need spend and conversion math written down before anyone codes it.
+  - Your current report mixes currencies, dates or accounts and you want it fixed.
+  - You want tests for the report before you build it.
+not_for:
+  - "You only run Meta ads: this brief reads Google Ads data, so ask your AI for a Meta report builder or use Meta Ads Manager reports."
+  - "You want one report across a whole manager account as a single total: this brief keeps each customer separate, so run it once per customer."
+  - "You want a finished report now and no code: export your Google Ads data to a spreadsheet and ask your AI to summarize it."
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your Google Ads customer ID
+  - The report dates and a comparison period
+  - Your account timezone and currency
+  - A Google Ads export, or read-only API access
+  - Your code folder and what the report should show
+  - Your conversion actions and attribution rules (optional)
 you_get:
-  - A coding brief for google ads report code builder
-  - Required files, setup gaps and test cases
+  - A coding brief for a Google Ads monthly report
+  - The report parts in plain order, with those that do not apply marked
+  - Metric rules for spend, conversions, CTR, CPC, CPA and ROAS
+  - Test cases for dates, currency and missing data
+  - A list of missing inputs and setup gaps
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the prompt from the download.
+  - Paste your code or schema, or share the folder if your AI can read files.
+  - Add your customer ID, dates, timezone, currency and an export of your data.
+  - Ask for the coding brief and check that the dates, currency and conversion actions match your account.
+  - Fix any gap it lists, then hand the brief to your developer or your coding AI.
+  - Run the tests it proposes in your own project. The prompt does not run code or call Google Ads.
+output_sample:
+  input:
+    - Your Google Ads customer ID
+    - The report dates and a comparison period
+    - Your account timezone and currency
+    - A Google Ads export or read-only API access
+    - Your code folder and the report feature you want
+  prerequisites:
+    - An AI that can read your code, or code pasted into the chat
+    - Read-only access to Google Ads data, or an export file
+  output:
+    - name: Report function spec
+      contains: How to build the monthly report function, with customer, dates, comparison period and options kept separate.
+    - name: Data and money checks
+      contains: How to read the data, turn cost micros into currency once, and handle missing values.
+    - name: Metric rules
+      contains: How to work out spend, conversions, CTR, CPC, CPA and ROAS, including zero and missing cases.
+    - name: Report sections
+      contains: The report parts that apply, such as summary, metric table, campaigns, search terms and next steps.
+    - name: JSON and Markdown output
+      contains: A structured file and a readable report with a source list and checks not run.
+    - name: Test cases
+      contains: Tests for dates, currency, micros conversion, no conversions and missing data.
+    - name: Gaps and next step
+      contains: Missing inputs, assumptions and the smallest useful next step.
 how_it_works:
   - title: Inspect the target project
     text: Check its file structure, interfaces and service setup before choosing paths.

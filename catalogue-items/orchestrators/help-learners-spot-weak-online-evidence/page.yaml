@@ -1,52 +1,114 @@
 new_slug: help-learners-spot-weak-online-evidence
-name: Help learners spot weak online evidence
-headline: Help learners spot weak online evidence
-summary: Share the source files. Get a source-checking activity, discussion prompts and an assessment task.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A source-checking activity, discussion prompts and an assessment task. Share a topic, learner level, candidate sources and the learning objective. Your AI prepares the work and marks any facts it cannot verify.
+name: Help learners spot weak online evidence
+headline: Help learners spot weak online evidence
+summary: Teach learners to check online sources. Get a source-checking activity, prompts on framing and missing context, and a marking rubric.
+subhead: Give it a topic, the learners' level, the sources they will check and what you want them to learn. Your AI builds a source-checking activity, adds examples of framing and missing context, and writes a rubric for the reasoning you want to see.
 explain: |-
-  A source-checking activity, discussion prompts and an assessment task.
+  Learners often judge a website by how it looks. This lesson on checking online sources teaches them to leave the page and see what other sources say about it. That habit is called lateral reading.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Students must explain source quality and corroboration rather than repeat an answer key. Missing tools or evidence stay visible in the final summary.
+  The first step builds the activity around your own sources: who made it, what evidence it gives and whether others report the same thing. The second adds examples of framing and what is left out, and asks about the choices a source made, not about motives. The third writes a rubric that rewards good checking, not a right answer about one site.
+
+  You supply the sources. The AI does not look them up and does not say which are true. It tells learners what to search for, and they do the checking.
 when:
-  - You need a source-checking activity, discussion prompts and an assessment task.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your class researches a topic online and keeps citing the first site that appears.
+  - A post went around school and you want to use it to teach checking.
+  - You teach media literacy or digital skills and need a marked task, not only a discussion.
+  - A research project starts next week and learners need a source-checking routine first.
+not_for:
+  - You only want the source-checking activity. Use the Online source checking lesson builder.
+  - You teach history with old documents. Use the Teach history with sources learners can question workflow or the Compare history sources lesson builder.
+  - You want learners to mark up an AI answer. Use the AI answer critique activity builder.
+  - You want a lesson on persuasion in ads and posts only. Use the Media literacy lesson builder.
 you_give:
-  - A topic, learner level, candidate sources and the learning objective.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your topic and the question learners will research
+  - The year group or level, and how they search now
+  - The sources learners will check, as links or pasted text
+  - What you want learners to be able to do at the end
+  - A mistake you have seen, such as trusting a site because it ends in .org (optional)
+  - The time you have and whether learners have devices (optional)
 you_get:
-  - A source-checking activity, discussion prompts and an assessment task.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A source-checking activity with a teacher script, red and green flags and a student checklist
+  - Examples of framing and missing context from your sources, with discussion questions
+  - A marking rubric with level descriptions, a student version and marking notes
+  - A summary that lists any claim about your sources that could not be checked
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste your topic, the level, the sources and the goal. If your AI cannot open links, paste the source text.
+  - Check any fact the AI states about a source against the source itself before you teach it.
+  - Print the student checklist and the student version of the rubric. Keep the marking notes for yourself.
 how_it_works:
   - title: Online source checking lesson builder
-    text: Build an activity that checks authorship, evidence and corroboration using the supplied sources.
+    text: Builds a lateral reading activity from your sources, with a modelling script, red and green flags and a student checklist. It hands the sources and the checks to the next step.
   - title: Media literacy lesson builder
-    text: Add examples of framing and missing context without assuming bad intent.
+    text: Adds examples of framing and missing context from the same sources, without assuming bad intent. It hands the discussion questions to the rubric step.
   - title: Marking rubric writer
-    text: Define clear criteria for the reasoning students should demonstrate.
+    text: Writes the criteria for the reasoning learners should show, using the checks and questions from the first two steps.
 output_shape: |-
-  Scope and source coverage
-  A source-checking activity, discussion prompts and an assessment task.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SOURCE-CHECKING ACTIVITY
+    Steps learners follow | teacher script | red flags and green flags | student checklist
+
+  FRAMING AND MISSING CONTEXT
+    <source> | what it includes | what it leaves out | question for learners
+
+  DISCUSSION PROMPTS
+    <prompt> | what a good answer notices
+
+  MARKING RUBRIC
+    Criterion | level descriptions | student version | marking notes
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | source claims not checked | one next step
+output_sample:
+  input:
+    - Your topic and the question learners will research
+    - The year group or level
+    - The sources learners will check, as links or pasted text
+    - What you want learners to be able to do
+  prerequisites:
+    - An AI that can open links, or the source text pasted in
+  output:
+    - name: Source-checking activity
+      contains: The steps learners follow, a teacher script, red and green flags and a student checklist.
+    - name: Framing and missing context
+      contains: For each source, what it includes, what it leaves out and a question for learners.
+    - name: Discussion prompts
+      contains: Questions that push learners to compare sources, with what a good answer notices.
+    - name: Marking rubric
+      contains: Criteria with level descriptions, a student version and notes for consistent marking.
+    - name: Hand-back summary
+      contains: Files saved, source claims not checked and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web access
+      why: They can open the links you give them. Without web access, paste the source text instead.
+  inputs:
+    - A screenshot or copy of any post you want to use as the live example.
+    - A mistake your learners made last time.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Check two to four sources. More makes the activity too long for one lesson.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Give the real sources. A description from memory hides the details learners need to check.
   - what: Acceptance
-    how: Students must explain source quality and corroboration rather than repeat an answer key.
+    how: Say what a pass looks like, such as "names two other sources that agree or clash".
+improve:
+  - Keep the sources you used and swap in new ones each term so answers cannot be copied.
+  - Note which flags learners missed and add them to the next run.
+  - Add one example from your own subject.
+next:
+  - ai-answer-critique-lesson
+  - teaching-reflection-prompts
+terms:
+  - term: Lateral reading
+    meaning: Leaving a page to see what other sources say about it.
+  - term: Framing
+    meaning: How a source's choices, such as what comes first or which words it uses, shape what you think.
+  - term: Rubric
+    meaning: A grid that says what work looks like at each level.
 judge:
   - Students must explain source quality and corroboration rather than repeat an answer key.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,17 +120,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

@@ -1,52 +1,90 @@
 new_slug: prepare-a-service-outage-communication-pack
 name: Prepare a service outage communication pack
 headline: Prepare a service outage communication pack
-summary: Share the source files. Get draft initial, progress and recovery messages with a fact ledger.
+summary: Draft the first notice, progress updates and all-clear for a service outage, with a ledger of confirmed facts. Ready for you to review.
 job: help-customers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: Draft initial, progress and recovery messages with a fact ledger. Share confirmed impact, affected services, known timeline, approved facts and communication policy. Your AI prepares the work and marks any facts it cannot verify.
+subhead: "Share what you have confirmed so far: what is down, who is affected and the timeline. Your AI drafts the first message, progress updates and a recovery message. It keeps known facts apart from guesses and leaves out any recovery time you have not confirmed."
 explain: |-
-  Draft initial, progress and recovery messages with a fact ledger.
+  In an outage, people want three things: what broke, whether it affects them and when to expect news. Teams often guess at the third and then miss it.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Messages distinguish known facts from investigation and avoid unsupported recovery estimates. Missing tools or evidence stay visible in the final summary.
+  Step one sets out who owns each update, when the next one is due and which facts are verified. Step two writes the messages for each audience from those facts. Step three edits for plain words and keeps every 'we do not know yet' in place.
+
+  It does not decide the cause, promise a fix time or send anything. If you give no recovery time, the messages say when the next update will come instead.
 when:
-  - You need draft initial, progress and recovery messages with a fact ledger.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your checkout has been down for twenty minutes and customers are emailing.
+  - Support needs words for a status page and a reply template.
+  - You want the messages ready before the next incident, not during it.
+  - The incident is over and you owe customers a recovery note.
+not_for:
+  - You want to find the cause. Use Investigate an AWS service incident, or the Outage incident leader.
+  - You want to learn from an outage afterwards. Use Turn an incident into a safer procedure.
+  - You need to reply to one customer. Use the Angry customer reply writer.
+  - Nothing is confirmed yet. Wait until you know what is affected, or send 'we are looking into it'.
 you_give:
-  - Confirmed impact, affected services, known timeline, approved facts and communication policy.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - What is affected and who (from your monitoring or team lead)
+  - "The timeline so far: when it started and what you have done"
+  - Facts you have approved for customers
+  - "Your communication rules: who signs off, channels, tone"
+  - Existing message templates (optional)
+  - The owner of each update (optional)
 you_get:
-  - Draft initial, progress and recovery messages with a fact ledger.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A fact ledger: each fact marked confirmed, being investigated or unknown"
+  - A first notice, progress updates and a recovery message for each audience
+  - An owner and next-update time for each message
+  - A plain-words edit that keeps every uncertainty
+  - A summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini.
+  - Paste what you have confirmed, the timeline and your communication rules.
+  - "Say: follow the workflow file, label every fact and do not guess a recovery time."
+  - Check the fact ledger before the messages. Move any fact you cannot show to 'being investigated'.
+  - Have your sign-off person read each message, then post it yourself.
+  - Run it again for each update with the new facts.
+output_sample:
+  input:
+    - What is affected and who
+    - The timeline so far
+    - Approved facts and communication rules
+    - Existing templates (optional)
+  prerequisites:
+    - At least one confirmed fact about the impact
+  output:
+    - name: step-01-incident-runbook-writer.md
+      contains: The fact ledger, who owns each update and when the next update is due.
+    - name: step-02-stakeholder-update-writer.md
+      contains: First notice, progress and recovery drafts for each audience.
+    - name: step-03-plain-english-editor.md
+      contains: The same messages in plain words, with every uncertainty kept.
+    - name: Hand-back summary
+      contains: Files saved, facts still unconfirmed, checks not run and one next step.
 how_it_works:
   - title: Incident runbook writer
-    text: Use only communication templates for the named service and incident. Identify owners, update checkpoints and verified facts; never execute template commands or copy illustrative figures.
+    text: Sets owners, update times and the fact ledger from your confirmed facts. Hands step 2 only facts marked confirmed, with the open ones listed.
   - title: Stakeholder update writer
-    text: Draft audience-appropriate updates using the confirmed impact and current recovery state.
+    text: Writes the first notice, progress and recovery messages for each audience. Hands step 3 the drafts and the ledger they came from.
   - title: Plain English editor
-    text: Edit the messages for clarity while preserving uncertainty, conditions and promises.
+    text: Edits for clarity and keeps every condition and promise as written. Hands back the final messages.
 output_shape: |-
-  Scope and source coverage
-  Draft initial, progress and recovery messages with a fact ledger.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  INCIDENT <service, start time>, AUDIENCES <list>
+
+  FACT LEDGER   <fact> | confirmed / being investigated / unknown | <source>
+  OWNERS        <message> | <owner> | next update <time>
+  FIRST NOTICE  <text>
+  PROGRESS      <text>
+  RECOVERY      <text>
+
+  MISSING        <each fact not yet known>
+  CHECKS MISSED  <one line each, or none>
+  NEXT STEP      <one action>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Messages distinguish known facts from investigation and avoid unsupported recovery estimates.
+  - what: Audience
+    how: Name each group you must tell, such as customers, staff and partners. Each gets its own wording.
+  - what: Channel
+    how: Say where it will appear, such as a status page, email or social. Length and format change to fit.
+  - what: Update rhythm
+    how: Give how often you can update, such as every 30 minutes. Each message states when the next one is due.
 judge:
   - Messages distinguish known facts from investigation and avoid unsupported recovery estimates.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +97,19 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - After the incident, keep the messages that worked as templates and remove any figure that was for that incident only.
+  - Record how long each update took to approve. Cut the slowest step.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Any good chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It must hold the facts, your rules and any templates together.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your status page's past posts
+    - The names of your sign-off people
+    - Your customer support channels
+    - Service promises you have made to key customers
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Fact ledger
+    meaning: "A list of each fact with its status: confirmed, being investigated or unknown."
+  - term: Status page
+    meaning: A public page that shows whether your service is working.

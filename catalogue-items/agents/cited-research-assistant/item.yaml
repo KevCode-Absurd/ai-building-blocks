@@ -14,10 +14,10 @@ outputs:
   - {type: audit_report}
 uses: [deep-research-reporter, unsupported-claim-spotter, scholarly-database-searcher, study-claim-checker]
 steps:
-  - {uses: deep-research-reporter, note: "Once per topic: the first cross-checked report with its sources. Later rounds: only on the open claims, as a narrow question."}
-  - {uses: unsupported-claim-spotter, note: "Every round: lists each claim in the report that still needs a source, ranked by risk. This is the claim ledger."}
-  - {uses: scholarly-database-searcher, note: "Only when an open claim is a science, health or academic claim: papers and full text to settle it."}
-  - {uses: study-claim-checker, note: "Only when a claim rests on a single study or a study number: the study's flaws and evidence grade, before the claim stays in."}
+  - {uses: deep-research-reporter, note: "Once per topic: the first cross-checked report with its sources. Later rounds: only on the open claims, as a narrow question. Hands the report to the claim spotter."}
+  - {uses: unsupported-claim-spotter, note: "Every round: reads step 1's report and lists each claim that still needs a source, ranked by risk. This is the claim ledger. Hands the open claims to the searcher."}
+  - {uses: scholarly-database-searcher, note: "Only when an open claim from step 2's ledger is a science, health or academic claim: finds the papers and full text to settle it. Hands the paper text to the study checker."}
+  - {uses: study-claim-checker, note: "Only when a claim rests on a single study or a study number: reads the paper text from step 3 and gives the study's flaws and evidence grade before the claim stays in."}
 asks_before: [paying for a database, report or API access, logging in to a site, publishing or sending the report, citing a source you could not open]
 origin: own
 version: 1.0.0

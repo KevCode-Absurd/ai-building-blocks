@@ -32,3 +32,25 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - You also need the staff actions and systems behind each step. Use the Customer path blueprint maker.
+  - You want separate cart and email flows for new, returning and loyal buyers. Use the Customer stage flow mapper.
+  - You already have interview notes and want the patterns in them. Use the Customer interview synthesizer.
+output_sample:
+  input:
+    - Your product and the one customer you want to map
+    - Interview notes, survey results, analytics or support tickets (optional)
+    - A link to your website (optional)
+  prerequisites:
+    - An AI that can open web links, if you give a website link
+  output:
+    - name: Persona
+      contains: One specific buyer and the job they want done.
+    - name: Path stages
+      contains: Seven stages from awareness to advocacy, each with touchpoints, actions, thoughts, emotions, pain points and opportunities.
+    - name: Critical moments
+      contains: The first moment of real value, the points where buyers commit or leave, and the main reasons they quit.
+    - name: Path map table
+      contains: One table with stage, touchpoint, action, emotion, pain point and opportunity.
+    - name: Prioritised improvements
+      contains: The pain points that matter most, quick wins and bigger investments.

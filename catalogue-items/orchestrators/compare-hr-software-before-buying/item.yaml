@@ -1,6 +1,7 @@
 slug: compare-hr-software-before-buying
 name: Compare HR software before buying
-summary: Share the source files. Get a vendor comparison, privacy questions and a recommendation to review.
+summary: Compare HR software vendors on the same tasks, price terms and employee
+  data handling. Get a side-by-side brief and questions to ask.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,7 +11,7 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: question
+  - type: source_text
     required: false
 outputs:
   - type: document
@@ -22,11 +23,11 @@ uses:
   - vendor-comparison-writer
 steps:
   - uses: hr-vendor-selection-planner
-    note: Define the must-have tasks and evaluate the supplied vendors against the same criteria.
+    note: "Define the must-have tasks and evaluate the supplied vendors against the same criteria. Hands the shortlist, the criteria and the scores to step 2."
   - uses: hr-ai-tool-vendor-checker
-    note: Review AI features, employee data handling and evidence of controls for the shortlisted vendors.
+    note: "Take step 1's shortlist and review each vendor's AI features, employee data handling and evidence of controls. Hands the findings and open questions to step 3."
   - uses: vendor-comparison-writer
-    note: Combine price, fit, implementation effort and open questions into a decision brief.
+    note: "Take step 1's scores and step 2's findings, and combine price, fit, implementation effort and open questions into a decision brief."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -36,13 +37,19 @@ credits:
   - title: HR vendor selection planner
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-vendor-management
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: HR AI tool vendor checker
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-ai-evaluation
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Vendor comparison writer
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

@@ -2,36 +2,57 @@ thinking: medium
 thinking_why: It writes queries and checks the setup works.
 new_slug: duckdb-big-file-query-helper
 name: DuckDB big file query helper
-summary: Point it at large CSV, Parquet or JSON files. Get fast queries run from
-  MATLAB with DuckDB.
+summary: Run SQL on large CSV, Parquet or JSON files from MATLAB with DuckDB. Only the small result loads into memory, so big files stop being a problem.
 job: build-software
 headline: DuckDB big file query helper
-subhead: Large CSV, Parquet and JSON files queried in place from MATLAB, with no
-  giant loading step. You get SQL answers fast, and only the reduced result
-  lands in memory.
+subhead: Give it the path to a large CSV, Parquet or JSON file and the question you have. It writes SQL that reads the file in place from MATLAB. You get a small result table instead of a giant load.
 explain: |
   Large CSV, Parquet and JSON files queried in place from MATLAB, with no giant loading step. You get SQL answers fast, and only the reduced result lands in memory.
 
   The skill uses DuckDB through the Database Toolbox. On load it audits your code for the slow habit of reading a file into MATLAB, writing it to a database, then querying it. It sends you straight to reading the file with SQL instead. It covers in-memory and file databases, filtering, grouping, deduplicating, cleaning and sampling at the source, and saving to a .duckdb file for repeat use. It also says when not to use it: small files, or number-heavy work better done in MATLAB afterwards.
 when:
   - Your file is too big for readtable.
-  - Your code loads a CSV only to write it to a database.
+  - Your code loads a CSV only to write it into a database.
   - You need to filter and group a large Parquet file before analysis.
-  - You want to profile a dataset before deciding what to load.
+  - You want to look at a big dataset before you decide what to load.
+not_for:
+  - "Your file fits in memory: use MATLAB's own readtable or readmatrix."
+  - "You have many files in a folder: start with MATLAB's datastore or tall arrays, and use DuckDB only as a fallback."
+  - "You need number-heavy maths on the data: reduce it here first, then do the maths in MATLAB."
 you_give:
-  - Paths to CSV, Parquet or JSON files
+  - The path to your CSV, Parquet or JSON file
   - The question or summary you need
-  - Existing MATLAB code to review (optional)
-  - MATLAB with Database Toolbox
+  - Your existing MATLAB code to review (optional)
 you_get:
-  - SQL queries that run on the files directly
-  - A reduced table ready for MATLAB
-  - A review of slow loading patterns
+  - SQL queries that run on your files directly
+  - A small result table ready to use in MATLAB
+  - A review of slow loading habits in your code
   - A saved .duckdb file for repeat use (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB R2026a or later with Database
-    Toolbox.
+  - Check that you have MATLAB R2026a or later with Database Toolbox. This skill needs MATLAB code to run.
+  - Compare your file size to your computer's memory. If the file fits easily, use readtable instead.
+  - Paste the skill into your AI. Add the file path and the question you want answered.
+  - Ask for the profile query first. Run it to see the columns and row count.
+  - Run the full query next. Check the result table has the columns you expect.
+  - Say so if you want the data saved to a .duckdb file for later queries.
+output_sample:
+  input:
+    - Paths to your CSV, Parquet or JSON files
+    - The question you want answered, or the summary you need
+    - Your existing MATLAB code to review (optional)
+  prerequisites:
+    - MATLAB R2026a or later with Database Toolbox
+    - An AI that can run MATLAB code, or you run the code yourself
+  output:
+    - name: Pre-flight check
+      contains: A check that DuckDB is available in your MATLAB, and that the file is big enough to need it.
+    - name: Profile query
+      contains: A small SQL query that shows the columns, types and row count before you run the full query.
+    - name: Reduction query
+      contains: SQL that filters, groups, cleans or samples the file at the source, run with fetch on a DuckDB connection.
+    - name: Result table
+      contains: The reduced result in MATLAB memory, ready for analysis.
+    - name: Code review
+      contains: Notes on slow habits, such as loading a file only to write it into a database, with a faster fix.
+    - name: .duckdb file
+      contains: A saved database file for repeat queries, made only if you ask for one.

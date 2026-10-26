@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It fills proven templates with your service details.
 new_slug: incident-runbook-writer
 name: Incident runbook writer
-summary: Name your service. Get a runbook with severity levels, first steps,
-  fixes and who to tell.
+summary: Write an incident runbook for your service. Get severity levels, first checks, fixes, who to tell and message drafts for your on-call team.
 job: build-software
 headline: Incident runbook writer
-subhead: "A runbook your on-call engineer can follow at 3 a.m. without thinking
-  hard: how bad is it, what to check first, how to fix it and who to tell."
+subhead: "A runbook your on-call engineer can follow at 3 a.m. without thinking hard: how bad is it, what to check first, how to fix it and who to tell."
 explain: |
   A runbook your on-call engineer can follow at 3 a.m. without thinking hard: how bad is it, what to check first, how to fix it and who to tell. You name the service and get a ready draft.
 
@@ -18,6 +16,10 @@ when:
   - You need clear rules for who gets paged at each severity.
   - You want ready-made messages for customers during an incident.
   - A new engineer joins the on-call rotation next week.
+not_for:
+  - "You suspect a security breach: follow your own security incident process and call your security team."
+  - "You need a postmortem after the incident: use your team's postmortem template, since this only covers the response."
+  - "You want a quick fix for an outage that is live now: ask the service owner or your on-call lead, because every change needs approval."
 you_give:
   - The service name and what it does
   - Its main parts and dependencies
@@ -30,7 +32,35 @@ you_get:
   - Escalation paths
   - Message templates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code running or web access.
+  - Paste your service name, its main parts and your escalation contacts. Add past incidents if you have them.
+  - Read the draft. Numbers, limits and messages are examples only, so replace them with your own.
+  - Do read-only checks first. Get approval from the service owner before any change, and confirm a rollback version first.
+  - Add your own tested smoke test and rollback scripts where the draft mentions them.
+  - After an incident, write a postmortem with your team's template and update the runbook.
+output_sample:
+  input:
+    - Your service name and what it does
+    - Its main parts and dependencies
+    - Your escalation contacts and chat channels (optional)
+    - Your rollback steps and scripts (optional)
+  prerequisites:
+    - The service owner agrees who can approve changes during an incident
+    - Your own tested smoke test and rollback scripts, since none come with this skill
+  output:
+    - name: Overview and impact
+      contains: The service, its owner, its chat channel and paging group, plus questions to size who is affected.
+    - name: Severity levels
+      contains: A table of four levels with impact, response time and an example for each.
+    - name: Detection and alerts
+      contains: The alerts that should fire and the dashboards to open first.
+    - name: Initial triage
+      contains: Read-only checks for the first five minutes and a table that maps symptoms to likely causes.
+    - name: Mitigation procedures
+      contains: Copyable commands for an outage, slow responses, partial failures and a traffic surge, each needing owner approval.
+    - name: Verification and rollback
+      contains: Checks that the fix worked and steps to undo a change.
+    - name: Escalation matrix
+      contains: Who to contact for each condition, such as a long outage or a suspected breach.
+    - name: Communication templates
+      contains: Drafts for the first alert, a status update and the all-clear message.

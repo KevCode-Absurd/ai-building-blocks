@@ -1,6 +1,6 @@
 new_slug: customer-question-keyword-finder
 name: "Customer question keyword finder"
-summary: "Paste reviews, tickets and comments. Get the questions people search for and the page each one needs."
+summary: "Turn your reviews, tickets and comments into a customer question keyword list. See which questions buyers search and which page to write first."
 job: get-found-in-search
 thinking: low
 thinking_why: "It extracts and groups questions from given text."
@@ -17,6 +17,10 @@ when:
   - "You want to write pages people will find and do not know where to start."
   - "Your support inbox is full of the same questions and your site answers none of them."
   - "You have no budget for keyword tools and a folder full of reviews."
+not_for:
+  - "You have a brand-new product and no customer words yet: use your search console or a keyword tool, or ask a few buyers or leads what they wondered before buying."
+  - "You want ad copy from customer complaints: use the Product flaw copy writer."
+  - "You want to know who your buyers are, not what they search: use the Job spec writer."
 
 you_give:
   - "Reviews, tickets, chats and comments, as written"
@@ -32,6 +36,24 @@ how_to_use:
   - "Add your page list so gaps can be marked."
   - "Read the STRONG groups marked GAP. Those are your first pages."
   - "Write the first five, then run it again next quarter with new tickets."
+output_sample:
+  input:
+    - Your reviews, support tickets, chats and comments, as written
+    - A list of your pages with one line on what each covers (optional)
+    - One line on what you sell and to whom (optional)
+  output:
+    - name: QUESTIONS FOUND
+      contains: Each question as a short search query, with how many sources raised it and one quoted customer line.
+    - name: GROUPS
+      contains: Queries that mean the same, merged, with a count, a STRONG mark, the intent, the page type and your page status.
+    - name: WRITE FIRST
+      contains: Up to five groups to write first, each with its page type and a line on why.
+    - name: NOT FOUND
+      contains: Topics you would expect buyers to ask about that never came up, so you know where the input is thin.
+    - name: MISSING
+      contains: Anything not given, such as your page list or context about what you sell.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
 
 how_it_works:
   - title: "Pulls every question"

@@ -1,6 +1,6 @@
 slug: prepare-a-confidential-conflict-discussion
 name: Prepare a confidential conflict discussion
-summary: Share the source files. Get a neutral issue map, discussion guide and draft agreements.
+summary: Prepare a workplace conflict discussion. Get a neutral issue map, a discussion guide and draft agreements, with serious issues flagged for HR.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -11,8 +11,6 @@ inputs:
   - type: brief
     required: true
   - type: question
-    required: false
-  - type: copy_draft
     required: false
   - type: transcript
     required: false
@@ -27,11 +25,11 @@ uses:
   - meeting-minutes-writer
 steps:
   - uses: conflict-mediation-guide
-    note: Separate observed events, disputed accounts and needs; identify issues requiring a formal process.
+    note: "Separate observed events, disputed accounts and needs; identify issues requiring a formal process. Hands step 2 the issue map and the flags."
   - uses: feedback-conversation-planner
-    note: Prepare neutral questions and a discussion structure focused on work and future behavior.
+    note: "Uses the issue map from step 1 to prepare neutral questions and a discussion structure focused on work and future behavior. Hands step 3 the discussion guide."
   - uses: meeting-minutes-writer
-    note: Draft a record that distinguishes proposed agreements from decisions actually accepted.
+    note: "Before the talk, works from the step 1 and 2 files to draft a record that distinguishes proposed agreements from decisions actually accepted. After the talk, give it your real notes."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

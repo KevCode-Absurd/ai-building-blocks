@@ -1,6 +1,6 @@
 new_slug: reasons-to-switch-page-writer
 name: "Reasons-to-switch page writer"
-summary: "Paste your facts and offer. Get 3 to 7 reasons to switch, the offer, questions and headlines."
+summary: "Write a reasons-to-switch page for buyers comparing options. Give it your facts and offer. You get 3 to 7 reasons, the offer and headlines."
 job: write-landing-page
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your buyers compare you with a cheaper or more familiar option, and your product page doesn't say why you're better for them.
   - You want a short page between your ad and your product page for people who aren't ready to buy yet.
   - Buyers like the idea but stall on a worry, such as taste, price or cancelling.
+not_for:
+  - "Your buyers don't know the product type yet, or have nothing to switch from: put the facts on your product page, or write a short guide to the category."
+  - "You want the full product page with specs and a buy box: build it in your store, or ask a web designer."
+  - "You need ad copy, not a page: write the ad first with your AI, then come back with it."
 
 you_give:
   - Your facts, such as what the product is, what sets it apart, prices, offers, guarantee, delivery and the claims you may make
@@ -33,8 +37,31 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your facts and current offers, and say what your buyer uses now.
   - Paste the ad that will send people here, so the first screen keeps its words.
-  - Add real customer quotes with their source, and the doubts you hear before people buy.
+  - Add real customer quotes with their source, and the doubts you hear before people buy. With no real quotes, the page ships without proof boxes. You can wait to get some, or go ahead.
   - Pick a headline and check every reason against your facts before you build the page.
+output_sample:
+  input:
+    - "Your facts: what you sell, what sets it apart, prices, offers, guarantee, delivery and allowed claims"
+    - The ad that sends people to the page, with its image (strongly recommended)
+    - Real customer quotes and the doubts that stop people buying (recommended)
+    - How many reasons you want (optional)
+  output:
+    - name: Page brief
+      contains: Who the buyer is, what they use now, the ad's opening line and your offer.
+    - name: Four piles
+      contains: Your facts sorted into push, pull, doubt and habit, one line per fact.
+    - name: Headline options
+      contains: Three headlines, a pick with the reason, and a line saying who the page is from.
+    - name: Reasons 1 to N
+      contains: Each reason has a claim title, a short body, proof from a real quote or none, and an image note.
+    - name: Offer block
+      contains: The live offer, what is included, and its main condition beside the price.
+    - name: Questions and answers
+      contains: One answered question for each doubt buyers raised.
+    - name: Closing and button text
+      contains: A closing heading, one lead-in line and the button text used everywhere.
+    - name: Layout notes, MISSING and Checks missed
+      contains: How to lay out the page, facts it couldn't fill, and any check it still missed.
 
 how_it_works:
   - title: Pins buyer and old way

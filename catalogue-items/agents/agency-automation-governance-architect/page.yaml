@@ -1,0 +1,151 @@
+name: Automation Governance Architect agent
+summary: "Decide if a business process should be automated. Get a verdict, the risks, a safe design with fallback and the tests to pass before go-live."
+headline: Automation Governance Architect agent
+subhead: "Describe a process you want to automate and the tools it touches. It scores time saved, data risk, outside dependencies and growth, then gives one verdict from approve to reject, a safe design, owners and the tests to pass before you switch it on."
+job: set-up-ai
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Before you automate a process, ask whether you should. An automation that touches customer records, invoices or bookings can duplicate, drop or corrupt data without anyone noticing. This agent acts as a skeptical reviewer. It checks four things: how much time the automation saves each month, how bad wrong or missing data would be, how many outside services it depends on, and whether it still works at 10 or 100 times the volume.
+
+  Then it gives exactly one verdict: approve, approve as a pilot, automate only part of it, defer or reject. It explains the verdict. If you can go ahead, it lays out a safe design with the same ten stages for every workflow: trigger, input checks, clean-up, business rules, actions, result check, log, error path, manual fallback and status update. It adds naming and version rules, what to log, the tests to pass first and who owns each connected system. Its default tool is n8n, but the rules fit Zapier, Make or custom code.
+
+  It reviews and designs. It does not build anything or switch anything on, and it will not tell you to edit a live critical workflow without your approval. It works from your description. If you leave out the systems or owners, it marks them as missing instead of guessing.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Someone asks "can we automate this?" and you need a clear yes, no or pilot.
+  - An automation already exists and keeps failing, duplicating records or needing manual fixes.
+  - You plan to connect a CRM, a billing tool or a booking system and want rules for who owns what.
+  - You need a handover document so another person can run an automation.
+not_for:
+  - You have decided to automate and only want a Zapier or Make setup. Use the No-code automation planner.
+  - You want an n8n workflow laid out. Use the n8n workflow designer, then bring the design here for review.
+  - Your automation is already built and you want its failures checked. Use the workflow Check a new automation before relying on it.
+  - You want a full spec for a software workflow with every failure path. Use the Workflow Architect agent.
+  - You need a legal or privacy ruling on the data it handles. Ask a qualified professional.
+you_give:
+  - The process in plain steps: what happens now and what you want automated.
+  - The tools and systems it touches, such as a CRM, email, billing or a spreadsheet.
+  - How often it runs and how long it takes by hand each time.
+  - What data it handles, such as customer, payment or contract records.
+  - Who owns the process and who fixes it when it breaks (optional)
+  - The tool you plan to use, such as n8n, Zapier or Make (optional)
+you_get:
+  - One verdict: approve, approve as a pilot, automate part only, defer or reject, with the reason
+  - Scores for time saved, data risk, outside dependencies and growth
+  - A safe design with ten stages, an error path and a manual fallback
+  - Naming and version rules, and what to log on every run
+  - A list of tests to pass before go-live
+  - For each connected system, its role, its owner and what it may change
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the process in plain steps. Include the systems, how often it runs, how long it takes by hand and what data it handles. Paste a workflow export if the automation already exists.
+  - Type "Evaluate this process for automation. Score the four checks, give one verdict and list the preconditions. Do not guess any system or owner I did not name."
+  - Read the verdict and the risks first. If you disagree, say why and ask it to score again.
+  - If the verdict is approve or pilot, give the design and the test list to whoever builds it. Do not switch on a live workflow until every test passes.
+  - Ask for a new review when volume jumps, a tool changes or the same manual fix keeps coming back.
+how_it_works:
+  - title: Pin the process
+    text: It restates the process, the goal, the current flow and the systems. It asks once for anything missing, then marks it MISSING.
+  - title: Score four checks
+    text: It rates time saved, data risk, outside dependency risk and how the process holds up as volume grows.
+  - title: Give one verdict
+    text: It picks exactly one of approve, approve as pilot, partial automation only, defer or reject.
+  - title: Explain the verdict
+    text: It gives the business impact, the key risks and why this verdict and not the next one.
+  - title: Design the safe version
+    text: It sets the ten stages, the error branch and the manual fallback, with duplicate protection and safe retries.
+  - title: Set the standards
+    text: It adds naming and version rules, the logging list, the test list and who owns each system.
+  - title: List preconditions
+    text: It names the approvals, limits and rollout guardrails needed before anything goes live.
+output_shape: |-
+  PROCESS SUMMARY
+    Name <process> | Goal <business goal> | Current flow <steps> | Systems <list> | MISSING <what was not given>
+
+  AUDIT EVALUATION
+    Time saved <monthly, material or not> | Data risk <what goes wrong if data is wrong, late, doubled or missing> | Dependency risk <outside services and how stable> | Growth <what breaks at 10x and 100x>
+
+  VERDICT
+    <APPROVE, APPROVE AS PILOT, PARTIAL AUTOMATION ONLY, DEFER or REJECT>
+
+  RATIONALE
+    Business impact <text> | Key risks <list> | Why this verdict <text>
+
+  RECOMMENDED DESIGN
+    Trigger | Input checks | Clean-up | Business rules | Actions | Result check | Log | Error path | Manual fallback | Status update
+
+  IMPLEMENTATION STANDARD
+    Name <ENV-SYSTEM-PROCESS-ACTION-vMAJOR.MINOR> | Documents needed <list> | Tests <list> | Monitoring <list>
+
+  SYSTEMS AND OWNERS
+    <system> | <role and source of truth> | <who owns it> | <what it may change> | <limits>
+
+  PRECONDITIONS AND RISKS
+    Approvals <list> | Limits <list> | Rollout guardrails <list>
+output_sample:
+  input:
+    - The process in plain steps, and what you want automated
+    - The tools and systems it touches
+    - How often it runs, how long it takes by hand and what data it handles
+    - Who owns it (optional)
+  prerequisites:
+    - A workflow export from n8n, Zapier or Make, if the automation already exists (optional)
+  output:
+    - name: Process summary
+      contains: The process, its goal, the current flow and the systems involved.
+    - name: Audit evaluation
+      contains: Scores for time saved, data risk, outside dependencies and growth.
+    - name: Verdict
+      contains: One of approve, approve as pilot, partial automation only, defer or reject.
+    - name: Rationale
+      contains: The business impact, the key risks and why this verdict was chosen.
+    - name: Recommended design
+      contains: Ten stages with an error path and a manual fallback.
+    - name: Implementation standard
+      contains: Naming and version rules, documents, tests and monitoring.
+    - name: Systems and owners
+      contains: For each connected system, its role, its owner and what it may change.
+    - name: Preconditions and risks
+      contains: Approvals, limits and rollout guardrails needed before go-live.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can upload a workflow export or a process document, so the review uses your real steps.
+  inputs:
+    - An export of the existing workflow from n8n, Zapier or Make.
+    - A log of recent failures or manual fixes, so the risks come from what really happened.
+    - The names of the owner of each connected system.
+terms:
+  - term: Automation governance
+    meaning: The rules for deciding what to automate, how to build it safely and who looks after it.
+  - term: Duplicate protection
+    meaning: A design where running the same job twice gives the same result, with no double records.
+  - term: Source of truth
+    meaning: The one system whose data wins when two systems disagree.
+  - term: Manual fallback
+    meaning: A way for a person to finish the job when the automation fails.
+  - term: n8n
+    meaning: A workflow automation tool. You can host it yourself or use it in the cloud.
+tweaks:
+  - what: Scope
+    how: Review one process at a time. Mixing several gives one blurry verdict.
+  - what: Tool
+    how: Name your tool, such as Zapier or Make, so the design uses its terms.
+  - what: Strictness
+    how: Say if the process touches money or legal records. Ask it to be extra cautious.
+improve:
+  - Keep each verdict with its date and owner. Review it again when volume or tools change.
+  - After the build, run the workflow Check a new automation before relying on it.
+  - Paste your failure log after a month and ask what to change in the design.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

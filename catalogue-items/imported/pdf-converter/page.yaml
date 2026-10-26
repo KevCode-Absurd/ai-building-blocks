@@ -2,35 +2,89 @@ thinking: medium
 thinking_why: It first checks what kind of PDF this is, then picks a route.
 new_slug: pdf-converter
 name: PDF converter
-summary: Give it a PDF and the format you want. Get a faithful Markdown, HTML,
-  Word or JSON copy with tables kept intact.
+summary: Convert a PDF to Markdown, HTML, Word or JSON with tables and labels kept together. It checks the result against the page before it hands it over.
 job: work-with-files
 headline: PDF converter
-subhead: Give it a PDF and the format you want. Get a faithful Markdown, HTML,
-  Word or JSON copy with tables kept intact. Bring the PDF file. Use the result
-  to plan your next step.
+subhead: Give it a PDF and the format you want. It works out what kind of PDF it is, picks the best way to convert it, then checks sample sections against the page. You get the converted file and a note on what it checked.
 explain: |
-  A PDF turned into Markdown, HTML, Word or JSON that still reads like the original, with tables intact and labels still tied to their values. It matters when plain text extraction would scramble columns or lose which number belongs to which row.
+  Copying text out of a PDF often scrambles it. Table columns collapse into one line, labels drift away from their values, and two-column pages read in the wrong order. This PDF converter looks at the PDF first and then picks a route that fits it.
 
-  The skill sorts the PDF first: scanned, table-heavy, slide-based, medical, academic or multi-column. It then picks a route for the output you asked for, using opendataloader-pdf as the main converter and other tools to check, run OCR or repair noisy spots. It spot-checks sections against the page, retries with better settings if needed, and only then hands over the file. It runs as a command line tool and needs installing.
+  It sorts the PDF into a type: normal digital text, scanned pages, slides, a table-heavy report, a lab report or a mixed layout. It converts with a command line tool called opendataloader-pdf. Other tools only look, check text, run OCR on scans or repair noisy spots.
+
+  Then it checks an early section, a hard section and the section that matters most to you. If the result is poor, it retries once with better settings. The tools must be installed first, and it tells you if any are missing.
 when:
-  - You have a table-heavy report PDF and need it in Markdown.
-  - A scanned document needs OCR and then a Word copy.
-  - You are feeding a PDF to an AI and need clean structured text.
-  - A multi-column paper loses its reading order when you copy it.
+  - You have a table-heavy report PDF and need it as Markdown or Word.
+  - A scanned document needs OCR and then an editable copy.
+  - You are giving a PDF to an AI and want clean text that keeps its tables.
+  - A two-column paper loses its reading order when you copy it.
+not_for:
+  - "You only need to merge, split, rotate or fill in a PDF: use the PDF toolkit."
+  - "You want text with page positions from scans, Office files or images, run on your own computer: use the scanned PDF text reader."
+  - "The PDF is a simple one-page letter: copy the text by hand, since a full conversion is more than you need."
 you_give:
-  - The PDF file
-  - The output format you want
-  - Pages to include (optional)
-  - What matters most, such as tables or layout (optional)
+  - Your PDF file
+  - The format you want, such as Markdown, HTML, Word or JSON
+  - The pages to include (optional)
+  - What matters most, such as tables, reading order or layout (optional)
 you_get:
-  - A converted file in your chosen format
+  - The converted file in the format you chose
   - Tables and labels kept together
-  - A note on the PDF type and route used
-  - Spot-check results on sample sections
+  - The PDF type found and the route used
+  - Spot-check results for early, hard and key sections
+  - A list of anything that could not run or is still rough
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read files.
+  - Use an AI that can run commands and read your files, such as Claude Code. Install the converter tools first, and ask your AI which ones it finds missing. The skill does not guess install commands.
+  - Start a chat and add the skill. Attach your PDF and say the format you want.
+  - Tell it which pages or tables matter most. It checks those first.
+  - Do not upload private, medical or client PDFs to an AI tool unless your own rules allow it. Run the tools on your own computer when you can.
+  - Open the converted file next to the PDF. Check the tables and the section you care about most. Ask for a retry if any are wrong.
+  - For lab or medical results, check every value against the original page before you rely on the copy.
+output_sample:
+  input:
+    - Your PDF file
+    - The format you want (Markdown, HTML, text, JSON or Word)
+    - The pages to convert (optional)
+    - What matters most, such as tables or reading order (optional)
+  prerequisites:
+    - An AI that can run commands and read your files
+    - The opendataloader-pdf command line tool installed
+    - Poppler tools (pdfinfo, pdftotext) and an OCR tool, for scanned PDFs (optional)
+  output:
+    - name: Converted file
+      contains: Your PDF as Markdown, HTML, text, JSON or Word, saved in a new folder. The original is untouched.
+    - name: PDF type and route
+      contains: The kind of PDF found, the command and settings used, and whether a retry was needed.
+    - name: Spot-check results
+      contains: An early section, a hard section and a key section, each marked passed or failed with the reason.
+    - name: Cleanup notes
+      contains: Footers, page numbers and stray symbols removed, and any table repairs made.
+    - name: Remaining limits
+      contains: Anything still rough, and any tool that could not run.
+how_it_works:
+  - title: Classify the PDF
+    text: It checks if the PDF is digital, scanned, slides, table-heavy, medical or mixed, using quick looks at the file and its text.
+  - title: Pick the output shape
+    text: It matches your format to the PDF, such as Markdown with HTML tables for table-heavy files.
+  - title: Convert
+    text: It runs opendataloader-pdf with settings that suit the PDF type, with OCR first for scans.
+  - title: Validate
+    text: It checks an early section, a hard section and the key section against the page, and looks for known red flags.
+  - title: Repair and hand over
+    text: It retries once if needed, cleans noise, then reports the route, checks and limits.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the converter, the OCR tool and the checks on your own computer.
+    - name: Any chat AI
+      why: It can explain the route and write the commands, but you run them yourself.
+  inputs:
+    - A note of which tables or numbers must stay exact
+    - The page numbers of the hardest section
+    - Whether the PDF is a scan or a normal file, if you know
+terms:
+  - term: OCR
+    meaning: Software that reads text from a picture of a page, used for scanned PDFs.
+  - term: Markdown
+    meaning: Plain text with simple marks for headings and tables, easy for an AI to read.
+  - term: opendataloader-pdf
+    meaning: The command line tool that does the main conversion in this skill.

@@ -16,6 +16,29 @@ use_cases:
   - "Check whether a flood of information is making a team wiser or just louder"
   - "Ask whether a system has a way to notice and fix its own mistakes"
   - "Separate what you actually know from the stories you have absorbed about it"
+not_for:
+  - "You want a risk and security review of a technical system: use the Bruce Schneier mind instead."
+  - "You want to judge a decision by how well you thought it through, not by how it turned out: use the Annie Duke mind."
+  - "You need a forecast, or personal money, medical or legal advice: ask a qualified person or run a data analysis, because this mind gives scenarios, not predictions."
+output_sample:
+  input:
+    - The problem, idea or decision you want looked at
+    - The system or group involved, such as your company, market or team
+    - What you already know and what you only assume
+    - Who is affected, and who gains or loses (optional)
+  output:
+    - name: The long view
+      contains: Your situation placed on a timeline of generations or centuries, before a close look.
+    - name: The shared story
+      contains: The belief that holds your brand, team or market together, and who gains when it is repeated.
+    - name: Data and power
+      contains: Who controls the information in your problem and what they could do with it.
+    - name: Self-correction check
+      contains: Whether the system can notice its own mistakes and fix them, or punishes bad news.
+    - name: Two or three scenarios
+      contains: Plausible futures, each tied to the choices that lead there, with speculation marked as such.
+    - name: Your choice
+      contains: A closing line on what you can still decide, plus a note where his record has nothing on your topic.
 seats:
   - {seat: "The long view of history", asks: "How does this look on a scale of centuries, not quarters?"}
   - {seat: "Stories and power", asks: "Which shared story holds this together, and who gets to tell it?"}

@@ -32,3 +32,26 @@ how_it_works:
     text: If no compatible motion-control tool is connected, deliver the reference-role map, starting-frame prompt, transfer brief and review checklist. Do not claim a completed transfer.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - You have no avatar or clip yet and want to plan the character and shots first. Use the Video avatar and storyboard planner.
+  - You want a full ad plan with a script and timed shots. Use the Video ad production plan builder.
+  - You only want to check an AI clip brief for problems with people or movement. Use the Human image and motion reviewer.
+output_sample:
+  input:
+    - Your brief (what the clip should show)
+    - Your approved avatar sheet or photo (optional)
+    - A performance clip you own or have the right to use (optional)
+  prerequisites:
+    - Proof the performance clip is yours or cleared for this use
+    - A motion-control video tool to run the transfer (the plan works without one)
+  output:
+    - name: Reference roles and rights
+      contains: Which file sets how the avatar looks and which sets how it moves, and who owns the clip.
+    - name: Source compatibility
+      contains: Findings on framing, hidden body parts and contact points in the performance clip.
+    - name: Starting frame and motion brief
+      contains: A copy-ready prompt for the avatar's first frame and the motion to carry over.
+    - name: Review checklist
+      contains: Passes at normal speed, muted and paused at contact moments, for face, hands and feet.
+    - name: Not run
+      contains: Any tool or media check that did not happen, so the plan is not read as a finished clip.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs likelihood against harm for new issues.
 new_slug: feature-legal-risk-assessor
 name: Feature legal risk assessor
-summary: Name a risky feature. Get what could go wrong, how likely, how bad and
-  fixes. First check, not legal advice.
+summary: Check a risky feature before launch. Get what could go wrong, how likely, how bad, and fixes in one short legal risk assessment. Not legal advice.
 job: check-contracts
 headline: Feature legal risk assessor
-subhead: A short, structured look at what could go wrong with a risky feature,
-  written so a lawyer or leader can act on it. It is a first check, not legal
-  advice.
+subhead: A short, structured look at what could go wrong with a risky feature, written so a lawyer or leader can act on it. It is a first check, not legal advice.
 explain: |
   A short, structured look at what could go wrong with a risky feature, written so a lawyer or leader can act on it. It is a first check, not legal advice.
 
@@ -18,6 +15,10 @@ when:
   - Leadership asks what the risk is and wants more than one line.
   - A launch touches children, health or biometric data.
   - A review turned up a problem nobody has seen before.
+not_for:
+  - "You need a quick check of a normal launch: a short launch review is enough, so skip this deeper step."
+  - "You want numbers and risk scores: use your company's own risk framework, because this skill is plain-words only."
+  - "You need advice you can rely on in court or with a regulator: ask a qualified lawyer, since this is only a first check."
 you_give:
   - A description of the feature
   - What data it uses
@@ -29,11 +30,33 @@ you_get:
   - Suggested fixes
   - Open questions for a lawyer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved product legal setup notes.
-  - Where the skill points to /product-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill, or upload the skill folder if your AI can read files.
+  - Paste your feature description, the data it uses, and who the users are. Add earlier review notes if you have them.
+  - If you have product legal setup notes, paste them too. They help the skill judge risk for your company and add the right header. Without them, tell your AI your company's risk appetite and any past legal trouble.
+  - Read the risks and check each likelihood and severity reason makes sense for your business.
+  - Check every case, law or fine it names. This needs a legal research tool such as Westlaw or CourtListener. Without one, check the regulator's own website.
+  - Give the result to your lawyer or decision maker with the open questions.
+output_sample:
+  input:
+    - A description of the feature and what is new about it
+    - What data the feature uses
+    - Who the users are and where they live
+    - Earlier review notes (optional)
+  prerequisites:
+    - Your product legal setup notes, if you have them, for risk calibration and the header on the result
+    - A legal research tool such as Westlaw or CourtListener, only if you want cited cases or rules checked
+  output:
+    - name: What we're assessing
+      contains: One paragraph on what the feature does, what is new, and why it needs a full assessment.
+    - name: The risks
+      contains: Two to five risks, each with a scenario, who gets hurt, likelihood, severity, current fixes, gaps and leftover risk.
+    - name: Regulatory landscape
+      contains: Which regulator is watching this area and how the feature might look to them. Only included if relevant.
+    - name: Precedent
+      contains: What happened when another company did something similar, if anything is known.
+    - name: Options
+      contains: A table of two or three paths, such as ship as planned, ship with a change, or cut a part.
+    - name: Recommendation
+      contains: One chosen option, why, what risk remains, and who needs to accept it.
+    - name: Next steps
+      contains: A short list of choices for what to do after reading, such as draft a document or get more facts.

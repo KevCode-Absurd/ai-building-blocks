@@ -1,6 +1,6 @@
 new_slug: settle-a-hard-decision-with-a-council-then-commit-the-team
 name: Settle a hard decision with a council, then commit
-summary: Give it a hard decision. Get a council's call, a stress-tested plan and a note that commits the team.
+summary: Settle a hard decision with a council of minds. Get a clear call, a plan tested for failure and a note that commits your team.
 job: think-with-minds
 thinking: high
 thinking_why: The council has several voices that must really disagree, and the plan check needs sharp reasoning. Use your strongest model.
@@ -14,6 +14,10 @@ when:
   - You face a real choice with a cost to getting it wrong.
   - The team is split and the same argument keeps coming back.
   - You are the boss and disagree with a call the team wants to make.
+not_for:
+  - You have a choice with one right answer. Check the facts or ask the person who knows the field.
+  - You can undo the choice in a day. Just try it, then review it, or run the advisory council once on its own.
+  - You need to plan the work after the choice is made. Use a simple task list with an owner and a date for each step.
 you_give:
   - The decision, the options and what a good outcome looks like
   - Hard limits, such as money, time or values
@@ -30,6 +34,24 @@ how_to_use:
   - Describe the decision, the options and what is at stake. Name the minds you want, or let it pick.
   - When it pauses, turn the brief's decision and first three steps into a dated plan with an owner for each step.
   - Add each person's real view before the last step, so the note records what they said.
+output_sample:
+  input:
+    - Your decision, the options and what a good outcome looks like
+    - Hard limits, such as money, time or values
+    - Who disagrees and why, in a line each (optional)
+    - Your brand file or business facts (optional)
+  prerequisites:
+    - An AI that can read the handoff files, such as Claude with files in a Project or Claude Code
+    - A dated plan with an owner for each step, which you write at the pause
+  output:
+    - name: Council brief
+      contains: The council's call, its strongest dissent, what would change the call and the first three steps.
+    - name: Failure check
+      contains: Ways the plan could fail, survival risks first, and a change to the plan for each.
+    - name: Commit note
+      contains: Each doubt on record, who decides any clash, the owner, the signal to watch and the review date.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Run the council
     text: Seats the minds, lets each one answer from their seat, has them challenge each other and rank the answers blind, then writes the brief with the call and the strongest dissent.

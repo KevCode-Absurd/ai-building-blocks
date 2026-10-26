@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares several policies and ranks what could cost you.
 new_slug: store-policy-checker
 name: Store policy checker
-summary: Give it your store link or policy text. Get gaps, clashes and unclear
-  wording, with fixes to paste in.
+summary: Check your store policies for gaps, clashes and unclear wording. Give it your store link or policy text. You get fixes to paste in.
 job: check-contracts
 headline: Store policy checker
-subhead: Give it your store link or policy text. Get gaps, clashes and unclear
-  wording, with fixes to paste in. Bring your store link or pasted policy text.
-  Use the result to plan your next step.
+subhead: Give it your store link or policy text. Get gaps, clashes and unclear wording, with fixes to paste in. Bring your store link or pasted policy text. Use the result to plan your next step.
 explain: |
   A check of your shop's refund, shipping, privacy and terms pages that tells you what is missing, what contradicts itself and what will confuse customers, with fixed wording to paste in. Give it a store link or the policy text.
 
@@ -18,6 +15,10 @@ when:
   - Customers keep asking questions your return page should answer.
   - Your FAQ says 30 days and your refund policy says 14.
   - A payment or ad platform asked you to fix your policies.
+not_for:
+  - "You want to check another store's policies without its owner's permission: ask the owner to paste the text, or skip it."
+  - "You need legal advice or a contract review: ask a lawyer, because this tool flags common gaps only."
+  - "You need a payment platform or ad platform to approve your store: send your fixed policies to that platform's own review."
 you_give:
   - Your store link or pasted policy text
   - Regions you sell to (optional)
@@ -29,7 +30,31 @@ you_get:
   - Rewritten wording to paste in
   - Notes on region rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Reading a store link needs an AI that can run a script. If yours can't, paste your policy text instead.
+  - Paste your store link, or paste the text of your refund, shipping, privacy and terms policies. Add your FAQ if it mentions returns or shipping.
+  - Add the regions you sell to and any facts your policies leave out (optional).
+  - Read the score and the Fix these first list. Check each quote against your store.
+  - Fill in any blanks like [X] business days with your real numbers. Never paste a blank into your store.
+  - Paste each fix into Shopify admin under Settings, then Policies. Edit pages under Online Store, then Pages.
+output_sample:
+  input:
+    - Your store link or your pasted policy text
+    - The regions you sell to (optional)
+    - Facts your policies leave out, like your return window (optional)
+  prerequisites:
+    - An AI that can run a script, to read your store link. Without one, paste your policy text instead.
+  output:
+    - name: Score
+      contains: A score out of 100, split across refund, shipping, privacy, terms and contact, and consistency.
+    - name: Fix these first
+      contains: The top 3 to 5 issues, highest risk first, each with an exact quote, why it matters and paste-ready fix text.
+    - name: Contradictions
+      contains: A table of topics where two sources give different answers, such as return windows, with a fix for each.
+    - name: Missing must-haves
+      contains: A table of details each policy lacks, with paste-ready text for each one.
+    - name: Confusing wording
+      contains: A table of vague or unclear quotes, what is wrong with each and a clearer rewrite.
+    - name: What's already good
+      contains: Two to four specific things your policies already do well.
+    - name: Where to paste
+      contains: Where in your Shopify admin each fix goes, including pages and return rules.

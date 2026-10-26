@@ -1,6 +1,6 @@
 new_slug: mood-colour-palette-planner
 name: "Mood colour palette planner"
-summary: "Name the feeling a space, page or brand should give. Get a small palette, one job per colour."
+summary: "Plan a mood colour palette that gives one feeling. Give it a room, page or brand. You get five colours or fewer, each with one job."
 job: design-work
 thinking: low
 thinking_why: "The steps are fixed and the output is a short palette."
@@ -17,6 +17,10 @@ when:
   - "You are choosing colours for a room, site, deck or product and cannot say why."
   - "Your current palette looks fine but does not feel like the brand."
   - "You must repaint or redesign and want one clear rule for every colour."
+not_for:
+  - "You already have a brand guide and only need to apply its colours: use the guide itself, or ask a designer to check the match."
+  - "You only need to test text contrast for accessibility: use a free contrast checker, such as the one built into Coolors or Adobe Color."
+  - "You want a logo or full design made: use the Logo strength tester to judge a logo, or hire a designer."
 
 you_give:
   - "What it is for and where people will see it"
@@ -33,6 +37,28 @@ how_to_use:
   - "Say what the palette is for and the feeling you want."
   - "List any colours you cannot change."
   - "Apply the palette to a mock-up and run the three-second test."
+output_sample:
+  input:
+    - What the palette is for and where people will see it
+    - The feeling it should give (optional, it can propose three)
+    - Colours you cannot change (optional)
+  output:
+    - name: Feeling
+      contains: One plain word and a line on what the viewer should sense.
+    - name: Plain baseline
+      contains: The subject in its true shapes and colours, before any push.
+    - name: Palette
+      contains: Five colours or fewer, each with a name, a hex code and one job.
+    - name: The push
+      contains: The plain main colour next to the pushed one, and what the push adds.
+    - name: Background
+      contains: One background colour, the reason for it, and a check that text stays readable.
+    - name: Cut list
+      contains: Colours that fight the feeling, each with the reason it was removed.
+    - name: Frame
+      contains: A trim or edge colour that fills what the palette lacks, and where it goes.
+    - name: Glance test
+      contains: A three-second test with one word from the viewer, plus a colour-blind check.
 
 how_it_works:
   - title: "Names the feeling"

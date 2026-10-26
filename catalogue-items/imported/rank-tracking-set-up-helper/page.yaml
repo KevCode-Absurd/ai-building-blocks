@@ -2,35 +2,65 @@ thinking: medium
 thinking_why: It picks and groups keywords by a set method.
 new_slug: rank-tracking-set-up-helper
 name: Rank tracking set-up helper
-summary: Connect Ahrefs. Get the keywords worth tracking, grouped by purpose,
-  with baselines, alert limits and a reporting routine.
+summary: "Set up rank tracking in Ahrefs: pick the keywords worth tracking, group them, record a baseline and set alert limits for your site."
 job: get-found-in-search
 headline: Rank tracking set-up helper
-subhead: A rank tracking setup you can start using today. It picks the keywords
-  worth watching, groups them by purpose, records where you stand now, and sets
-  the points at which you should be alerted.
+subhead: "Give it your site and market. It picks the keywords worth tracking and sorts them into four groups: brand, money, opportunity and competitor. It records where you stand today and sets when you get alerted. It also sets a review routine for your team."
 explain: |
   A rank tracking setup you can start using today. It picks the keywords worth watching, groups them by purpose, records where you stand now, and sets the points at which you should be alerted.
 
   It connects to Ahrefs and takes your site, market and language. Keywords are split into groups, such as money terms, content that brings readers, and brand names. Each group gets a different alert limit, because a small move on a brand term matters less than a drop on a sales term. It stores a baseline so later changes mean something. It ends with a reporting routine for your team. An Ahrefs account and connection are needed.
 when:
   - You are launching a site and want to track the terms that matter.
-  - You need a before picture ahead of a big site change.
-  - Your tracked list has grown stale and bloated.
+  - You want a before picture ahead of a campaign or big site change.
+  - Your tracked keyword list has grown stale or too long.
   - Your boss wants a ranking report they can follow each month.
+not_for:
+  - You need new keyword ideas. Ask your AI to research keywords first, then come back to set up tracking.
+  - You want to know why rankings already dropped. Check Search Console and your recent site changes with a person who knows SEO.
+  - You want to audit one page. Review that page by hand against the search phrase it should rank for.
 you_give:
-  - Site address
-  - Target market and language
-  - Ahrefs connection
-  - Key products or topics (optional)
+  - Your site address
+  - Your target market and language
+  - Your business priorities, such as which products or topics matter most
+  - How often your team wants a report
+  - Access to your Ahrefs account through your AI
+  - Your Search Console data (optional)
 you_get:
-  - Keyword list grouped by purpose
-  - Baseline positions
-  - Alert limits per group
-  - Reporting routine
+  - A tracked keyword list in four groups, with tags on each keyword
+  - Starting positions for every keyword
+  - Alert limits for each group and who gets them
+  - A dashboard layout for your reports
+  - A weekly, monthly and quarterly review routine
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to Ahrefs.
+  - You need a paid Ahrefs account with Rank Tracker. Your AI must be able to connect to Ahrefs and create projects there.
+  - Open your AI and paste the skill, or upload its folder.
+  - Give it your site address, market, language, priorities and report schedule. Add Search Console data if you have it.
+  - Check the keyword list and the four groups. Remove any keyword that does not fit your business.
+  - Check the baseline and alert limits. If any data is missing, the result says so. It will not guess.
+  - Start the review routine. Rebuild the opportunity group every quarter.
+output_sample:
+  input:
+    - Your site address
+    - Your target market and language
+    - Your business priorities, such as which products matter most
+    - "How often your team wants a report: weekly, monthly or quarterly"
+    - Your Search Console data (optional)
+  prerequisites:
+    - A paid Ahrefs account with Rank Tracker
+    - An AI that can connect to Ahrefs and create Rank Tracker projects
+  output:
+    - name: Tracking charter
+      contains: Your site, market, who reads the reports and how often.
+    - name: Tracked keyword set
+      contains: Every keyword placed in a bucket (brand, money, opportunity or competitor) with tags such as topic and page.
+    - name: Baseline snapshot
+      contains: Starting position, search results make-up and click rate for each keyword, or a note on any missing data.
+    - name: Alert configuration
+      contains: When to be alerted for each bucket and who gets the alert.
+    - name: Dashboard layout
+      contains: The charts and filters your report should show, split by bucket.
+    - name: Review cadence
+      contains: What to check weekly, monthly and quarterly.
+    - name: Methodology notes
+      contains: Country and device settings, how often data refreshes and any data gaps.

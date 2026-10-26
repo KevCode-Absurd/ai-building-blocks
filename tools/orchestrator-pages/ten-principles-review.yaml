@@ -1,52 +1,52 @@
 new_slug: ten-principles-review
 name: "Review a product against ten principles, then cut extras"
-summary: "Describe your product or page. Get a ten-principle review and a list of what to keep, cut and merge."
+summary: "Review your product against ten design principles. Describe it; get a score for each principle and a list of what to keep, cut and merge."
 job: design-work
 thinking: high
 thinking_why: "It judges a product on ten principles, then decides what to cut. Give it your strongest model."
-
 headline: "A simpler product, with a clear list of what to keep, cut and merge"
-subhead: "Describe your product, page or app, and say what it is for. It scores the product on ten principles of good design and marks every part that serves no purpose. Then it turns that into a plan: what to keep, what to cut and what to merge so the product explains itself."
-
+subhead: "Describe your product, page or app, and say what it is for. It scores the product on ten principles of good design and marks every part that serves no purpose. Then it turns that into a plan: what to keep, what to cut and what to merge, so the product explains itself."
 explain: |
-  Products grow by adding. Each feature had a reason, but over time the page fills up, the menu gets long, and the one thing the product is for gets harder to find. Cutting is harder than adding, because every part has someone who likes it.
+  How do you simplify a product that has too many features? Products grow by adding. Each feature had a reason, but over time the page fills up, the menu gets long, and the one thing the product is for gets harder to find. Cutting is harder than adding, because every part has someone who likes it.
 
   This workflow gives you a standard to cut against. It starts with one sentence on what the product is for, then scores it on ten principles, such as being useful, understandable, honest and having as little design as possible. It marks each part that serves no purpose. The second step lists every feature, asks whether it helps the main job, and sorts them into keep, cut and merge. The ten principles come from a talk by Dieter Rams, the designer behind Braun and Vitsoe.
-
 when:
   - Your product, app or page has grown cluttered and new users don't know where to start.
   - You are planning a redesign and want to decide what goes before you decide what it looks like.
   - Your team can't agree on which features to keep, and you want a shared standard to argue from.
-
+  - A settings menu or a form has gone past a screen long and nobody can say why each item is there.
+not_for:
+  - "You want to find where visitors get stuck on one page: use Review a page's ease of use, then plan a test."
+  - "You sell many products and want to cut the line by what pays: use Cut your product line to the few that pay."
+  - "The product has no features yet. Talk to customers first with Interview customers and map what they hire you to do."
+  - "You want a new look or a visual redesign. This decides what to remove, not how it looks."
 you_give:
-  - A description of the product and what it is for
+  - A description of the product, who uses it and what it is for
   - A page or screenshot of it (optional)
   - A list of its features, parts or settings (optional)
-
+  - Usage numbers or support questions for each feature (optional)
 you_get:
-  - A score on each of the ten principles, with the reason for each
+  - A score out of 10 on each of the ten principles, with the reason for each
   - A list of every part and its job, with the parts that serve no purpose marked
-  - A plan that sorts each feature into keep, cut or merge, with a reason, in the order a new user should meet them
-
+  - A plan that sorts each feature into keep, cut or merge, with a reason
+  - The order a new user should meet what is left, and the size, colour and wording fixes to match
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the product and say what it is for. Add a page, screenshot or feature list if you have one.
   - It works step by step and saves each result. Read the review before you read the cut list.
   - Check the cuts with your team before you remove anything people rely on.
-
 how_it_works:
   - title: Score against ten principles
     text: "Writes what the product is for, lists every part and its job, and scores it on ten principles. Marks the parts that serve no purpose."
   - title: Plan the cuts
     text: "Takes the review and asks of each feature whether it helps the main job. Sorts them into keep, cut and merge, then sets the order a new user should see them."
-
 output_shape: |-
   STEP 1: TEN-PRINCIPLE REVIEW
     Purpose: <what it is for and who uses it>
-    Scores: <principle | score | reason> (ten rows)
+    Scores: <principle | score out of 10 | reason> (ten rows) | Total: <out of 100>
     Parts: <each part | its job | serves a purpose or not>
-    Proposed cuts: <part | why>
+    Proposed cuts: <part | why> | Fixes for scores under 7
 
   STEP 2: KEEP, CUT AND MERGE PLAN
     The one job: <what the product does for the user>
@@ -56,7 +56,18 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
-
+output_sample:
+  input:
+    - "A description of the product, who uses it and what it is for"
+    - "A page link or screenshot (optional)"
+    - "A list of its features, parts or settings (optional)"
+  output:
+    - {name: "Purpose", contains: "One sentence on what the product is for and who uses it."}
+    - {name: "Ten-principle scores", contains: "A score out of 10 and a reason for each principle, with a total out of 100."}
+    - {name: "Parts list", contains: "Every part and its job, with the idle parts and the cuts that follow from them."}
+    - {name: "Keep, cut and merge plan", contains: "Each feature sorted, with a reason, and the order a new user should meet them."}
+    - {name: "Consistency fixes", contains: "Size, colour and wording changes so the parts that stay look and read as one."}
+    - {name: "Hand-back summary", contains: "Each step's file and every MISSING line in one list."}
 tweaks:
   - what: The one-sentence purpose
     how: Write what the product is for before you run it. A vague purpose makes every feature look useful.
@@ -64,24 +75,20 @@ tweaks:
     how: Include small things such as settings, labels and footers. They often add the most clutter.
   - what: Who uses it
     how: Say who uses the product most. A part the main user never touches is a good candidate for a cut.
-
 judge:
   - The purpose is one sentence and every score refers back to it.
   - Each score has a reason you could argue with, not just a number.
   - Every part in the product appears in the list, including small ones.
   - Each cut names what happens to the job it did, such as merged or no longer needed.
   - The plan keeps the product's main job working.
-
 test:
   - Run it on a product you know has dead weight. The parts you suspected should show up in the cut list.
   - Ask it to defend one cut you disagree with. The reason should rest on the product's purpose, not on taste.
   - Show the keep, cut and merge plan to a new user. They should be able to say what the product is for.
-
 improve:
   - Save the purpose sentence and the keep list in a file your team shares, and check new feature ideas against it.
   - Add rules of your own to the review, such as a limit on menu items or on fields in a form.
   - Re-run the review after each round of cuts to see which parts are now the weakest.
-
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Takes screenshots and a feature list and works through both steps."}
@@ -90,7 +97,9 @@ works_best_with:
     - "Usage numbers for each feature"
     - "Support questions about the product"
     - "A screenshot of every main screen"
-
 terms:
   - term: Ten principles
     meaning: A short list of tests for good design, such as useful, honest, understandable and as little design as possible.
+  - term: Merge
+    meaning: Fold two features that do the same job into one, so the user has one place to go.
+next: [page-usability-review, job-based-product-design]

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a message ladder from your facts and audience.
 new_slug: brand-messaging-builder
 name: Brand messaging builder
-summary: Give it your brand facts. Get a tagline, key messages and proof points
-  for each audience.
+summary: Build your brand messaging in one pass. Give it your brand facts and get a core message, tagline options and proof points for each audience.
 job: brand-file
 headline: Brand messaging builder
-subhead: "A full set of messages for your brand: the one thing you must say, a
-  tagline, and proof points for each audience. Everyone who writes for you then
-  pulls from the same page."
+subhead: "A full set of messages for your brand: the one thing you must say, a tagline, and proof points for each audience. Everyone who writes for you then pulls from the same page."
 explain: |
   A full set of messages for your brand: the one thing you must say, a tagline, and proof points for each audience. Everyone who writes for you then pulls from the same page.
 
@@ -18,6 +15,10 @@ when:
   - You need a tagline and want options to compare.
   - You sell to more than one audience.
   - You want facts that back up each claim.
+not_for:
+  - You have no clear audience yet. Work that out first with the brand-positioning skill, then come back.
+  - You need legal or regulatory claims checked. Ask a lawyer or compliance person to review them.
+  - You need finished ad, email or web copy. This builds the message base, so write the copy after it.
 you_give:
   - Your positioning
   - Primary and secondary audiences
@@ -29,7 +30,32 @@ you_get:
   - Key messages by audience
   - Proof points for each claim
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
+  - Paste your positioning, your main audience, the key benefit and your proof points. Add your current tagline if you have one.
+  - Answer any question your AI asks about a missing item. It asks only for what you left out.
+  - Check that each proof point is true and that the recommended tagline fits your brand.
+  - Use the result to guide your brand voice and the channel table before you write copy.
+output_sample:
+  input:
+    - Your brand positioning
+    - Your main audience and up to two more (optional)
+    - The main benefit you give customers
+    - Your proof points, such as facts, numbers or features
+    - Your current tagline (optional)
+  prerequisites:
+    - Saved brand notes in .agents/brand-context.md help, but are not needed. Your AI asks for anything missing.
+  output:
+    - name: Core message
+      contains: One sentence naming the brand, the audience, the outcome and how you deliver it.
+    - name: Value proposition
+      contains: Two or three sentences on what you do, for whom, the outcome and what makes you different.
+    - name: Tagline options
+      contains: Four or five taglines of three to seven words, each with a style and a reason, plus a pick.
+    - name: Messaging hierarchy
+      contains: A headline, a supporting statement, three or four key messages, and a bank of six to eight proof points.
+    - name: Audience-specific messaging
+      contains: "For each audience: what they care about, how to lead, proof that lands, and what to avoid."
+    - name: Messaging by channel
+      contains: A table showing headline direction, tone and length for website, social, email, sales deck and ads.
+    - name: Things not to say
+      contains: Claims without proof, clichés and wording that clashes with your positioning.

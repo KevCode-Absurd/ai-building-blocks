@@ -1,6 +1,6 @@
 new_slug: page-problems-test-picks
 name: Find what's wrong with your page and pick tests
-summary: Give it your page and analytics. Get a research plan, ranked page problems and a check that you can test.
+summary: Find what's wrong with your landing page and pick what to test. You get a research plan, ranked problems and a check on your traffic.
 job: audit-landing-page
 thinking: high
 thinking_why: It runs four skills with two pauses for real research. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your page gets visits but few people buy, sign up or book, and you do not know what to fix first.
   - You have a list of changes you want to test and need to know which ones deserve the traffic you have.
   - Someone says to run an A/B test and you want to know if your numbers can support one.
+not_for:
+  - "Your page has no traffic yet: set up basic analytics first, then come back once visits are coming in."
+  - "You only want the page scored before launch: use the Landing page auditor."
+  - "You only want to know if your traffic can support a test: use the A/B test traffic checker."
 you_give:
   - The address or saved copy of the page (optional for the first step, needed for the audit)
   - Your analytics, with visits, steps and sales or sign-ups by page
@@ -32,6 +36,27 @@ how_to_use:
   - Share your page and analytics. It writes the research plan and stops.
   - Do the research the plan lists, such as the analytics check, a walk-through of the page and a few customer questions. Then say "carry on".
   - Pull your visits and orders for the page you want to test when it asks, so the last step can size the test.
+output_sample:
+  input:
+    - The link or saved copy of your page
+    - "Your analytics: visits, steps and sales or sign-ups by page"
+    - Customer words from reviews, chats or surveys (optional)
+    - Your brand brain or a note on your offer and proof (optional)
+    - Your visits and conversions for the page to test, pulled after the research
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Time to do the research the plan lists, from a few days to a few weeks
+  output:
+    - name: Research plan
+      contains: "The order to work in: tracking check first, where people drop, pages to review, customer questions and an issue template."
+    - name: Page audit
+      contains: What a glance and a skim tell a buyer, ranked fixes with quick wins first, and a score out of 100.
+    - name: Sorted problems
+      contains: Each problem tagged tracking, fix now, investigate or test, ranked by likely gain and effort.
+    - name: Test check
+      contains: The smallest lift worth finding, weeks needed, a yes or no verdict and rules for running the test.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the research
     text: Writes the order to work in, from checking your tracking to finding where people drop and asking why they hesitate.

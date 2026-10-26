@@ -2,34 +2,111 @@ thinking: medium
 thinking_why: It weighs supply risk across many parts.
 new_slug: electronics-parts-sourcing
 name: Electronics parts sourcing planner
-summary: Give it your parts list. Get a plan for scarce parts, long lead times
-  and leftover stock.
+summary: Find the electronic parts that can stall your build. Give it your parts list to get a risk table, second-source ideas and a leftover stock plan.
 job: plan-supply-chain
 headline: Electronics parts sourcing planner
-subhead: "A plan for the parts that can stall your build: scarce chips, long
-  lead times and leftover stock. Give it your parts list and manufacturing
-  setup, and you get a sourcing plan with the risky items picked out."
+subhead: Give it your parts list, your production plan and how you build. It scores each part for shortage risk, picks out the ones that can stall a launch, and suggests second sources and buffer stock. It also plans leftover and out-of-date stock.
 explain: |
-  A plan for the parts that can stall your build: scarce chips, long lead times and leftover stock. Give it your parts list and manufacturing setup, and you get a sourcing plan with the risky items picked out.
+  One scarce chip can stop a whole product. Chips and displays can take months to arrive. Some parts are rationed by the maker, which is called allocation. Others reach end of life, and you are left with stock nobody wants.
 
-  The skill first learns how you build, as OEM, ODM or contract maker, your volume, and whether your supply is single-sourced or spread out. It looks at your component mix, such as chips, memory, passives and custom parts, and at suppliers, distributors and consignment. It then tackles allocation, lead time swings, excess and obsolete stock, end-of-life parts and cost targets. It suggests second sources and buffer stock for the riskiest lines.
+  This skill checks your parts list against your production plan. It asks how you build and whether key parts come from one supplier. It then compares what you need with what you hold and what is on order, and sorts parts by risk. For the risky ones it lists options such as a second source, buffer stock or a last-time buy.
+
+  Scores are a way to sort, not a verdict. The weights it uses are placeholders you can change, and it shows how each part got its score. It marks missing data and never fills a blank with a guess.
 when:
-  - A key chip has a 40 week lead time.
+  - A key chip has a lead time of many months and a launch date is close.
   - You hold stock of a part that is going out of date.
   - You depend on one supplier for a critical part.
-  - You are planning volume for a new product launch.
+  - You are planning parts volume for a new product launch.
+not_for:
+  - "You need to schedule factory lines and machines: use the Production schedule planner."
+  - "You want to score and compare suppliers: use the Supplier scorer or the Supplier risk scorecard builder."
+  - "You need an overall sourcing plan for non-electronic goods: use the Sourcing plan builder."
+  - "You have a quality or defect problem with parts you already received. This skill is about supply, not quality."
 you_give:
-  - Your bill of materials or parts list
-  - Product type and volume
-  - Current supplier setup
-  - Known shortages or cost targets (optional)
+  - Your parts list or bill of materials, as a spreadsheet or pasted table
+  - Production plan, as units per month
+  - How you build, such as your own factory or a contract maker, and the product type
+  - Which key parts have only one supplier
+  - Known shortages, end-of-life notices and cost targets (optional)
 you_get:
-  - A list of high-risk parts
-  - Sourcing options and second sources
-  - A plan for excess and obsolete stock
-  - Lead time and buffer advice
+  - A risk table that sorts your parts by shortage risk, with what drove each score
+  - Sourcing options for each high-risk part, with the trade-off
+  - A plan for excess and out-of-date stock
+  - Lead time and buffer stock advice
+  - An action list with owners, and a list of missing data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Open Claude, ChatGPT or Gemini and paste the skill. A plain chat works. A tool that can run code and read a spreadsheet gives faster results on long lists."
+  - "Prepare your parts list. These columns help: part_number, quantity_per_unit, manufacturer, allocation_status, lead_time_weeks, available_inventory. Blank cells are fine, and it marks them MISSING."
+  - "Paste the list or attach the file, then your production plan and how you build."
+  - "Check the risk table first. Read why each part scored high. Change the weights if they do not fit your business."
+  - "Confirm lead times and stock for the top parts with your maker or distributor before you act. The skill does not know today's market."
+  - "Fill in the MISSING list, run it again, and take the action list to your buyers."
+how_it_works:
+  - title: Learn how you build
+    text: Asks about your build model, product type, volume and supplier setup.
+  - title: Check each part
+    text: Compares what you need with stock, allocated quantity and lead time.
+  - title: Score the risk
+    text: Gives each part a score from status, lead time and coverage, and shows the working.
+  - title: Plan the sourcing
+    text: Suggests second sources, buffer stock, redesign or a last-time buy for risky parts.
+  - title: Handle leftover stock
+    text: Sorts excess and out-of-date parts into hold, sell back, use up or write off.
+  - title: List the actions
+    text: Ends with an action list, owners and everything marked MISSING.
+output_shape: |
+  Supply risk summary: <one line>
+
+  Risk table
+  | Part | Maker | Status | Lead time | Stock | Need | Shortfall | Risk | Why |
+
+  Sourcing options
+  - <part>: <option> | trade-off: <note>
+
+  Excess and out-of-date stock
+  - <part>: <hold / sell back / use up / write off>
+
+  Lead time and buffer advice: <note>
+  Actions: <action> | owner: <name>
+  MISSING: <list>
+output_sample:
+  input:
+    - Your parts list or bill of materials
+    - Your production plan by month
+    - How you build and who supplies key parts
+    - Known shortages and cost targets (optional)
+  output:
+    - name: Risk table
+      contains: Each part sorted by shortage risk, with stock, need, shortfall and what drove the score.
+    - name: Sourcing options
+      contains: Second source, buffer stock, redesign or last-time buy ideas for each high-risk part.
+    - name: Excess and out-of-date plan
+      contains: What to hold, sell back, use up or write off for each leftover part.
+    - name: Lead time and buffer advice
+      contains: How much cover to hold for long lead time parts.
+    - name: Action list
+      contains: Next steps with owners.
+    - name: Missing list
+      contains: Parts with blank lead time, status or stock that you need to fill in.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your parts list as a spreadsheet instead of pasting it.
+    - name: A tool that can run code
+      why: It can work through a long parts list and show the scores line by line.
+  inputs:
+    - Maker part numbers, so options can be matched
+    - Quotes or lead times from your distributors
+terms:
+  - term: Bill of materials (BOM)
+    meaning: The list of every part that goes into one product, with the quantity of each.
+  - term: Allocation
+    meaning: When a maker rations a scarce part, so each buyer gets only a share.
+  - term: Lead time
+    meaning: How long a part takes to arrive after you order it.
+  - term: Second source
+    meaning: A different supplier or part that can do the same job.
+  - term: Excess and obsolete (E&O)
+    meaning: Stock you hold more of than you will use, or parts that are out of date.
+  - term: Last-time buy
+    meaning: A final large order of a part before the maker stops making it.

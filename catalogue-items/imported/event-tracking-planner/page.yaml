@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Bad event design is costly later, so it needs careful reasoning.
 new_slug: event-tracking-planner
 name: Event tracking planner
-summary: Describe your product. Get an event list, naming rules, funnels,
-  retention cohorts and one main metric to watch.
+summary: Plan your product event tracking. Give it a product description and get an event list, naming rules, funnels, cohorts and a North Star metric.
 job: track-numbers
 headline: Event tracking planner
-subhead: Describe your product. Get an event list, naming rules, funnels,
-  retention cohorts and one main metric to watch. Bring description of your
-  product and main user steps. Use the result to plan your next step.
+subhead: Describe your product. Get an event list, naming rules, funnels, retention cohorts and one main metric to watch. Bring description of your product and main user steps. Use the result to plan your next step.
 explain: |
   A tracking plan for your product that you can trust: a short list of events, clear naming rules, funnels, retention groups and one main metric to watch.
 
@@ -18,6 +15,10 @@ when:
   - Your current data is messy and nobody trusts the dashboards.
   - You are adding a feature and want to track it without breaking old events.
   - You need to define signup to paid funnels and retention groups.
+not_for:
+  - "You have not yet chosen what to measure or why: work that out with a person on your team first, then come back to plan the events."
+  - "You want to read the results of an A/B test: use a stats tool or ask an analyst, because this plan only sets up the events."
+  - "You need the tool connected or the code written: ask a developer, as this gives the plan and not the install."
 you_give:
   - Description of your product and main user steps
   - Analytics tool you use
@@ -30,7 +31,33 @@ you_get:
   - User identity plan
   - North Star metric choice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Describe your product in a few lines and list the main steps a user takes.
+  - Say which analytics tool you use and what your business goal is. Paste your current event list if you have one.
+  - Read the event list first. Cut any event you will not use, and check that names follow the rules.
+  - Check the funnels and the North Star metric against your goal. Ask your AI to fix anything that does not fit.
+  - Hand the final plan to your developers to build.
+output_sample:
+  input:
+    - Your product description and the main steps a user takes
+    - The analytics tool you use, such as Mixpanel, Amplitude or PostHog
+    - Your business goal
+    - Your current event list (optional)
+  prerequisites:
+    - An analytics tool already chosen or connected
+    - A clear idea of what you want to measure
+  output:
+    - name: Event list
+      contains: Each event with its name, what triggers it, its properties, an owner and a version.
+    - name: Naming rules
+      contains: How to name events and properties, such as object then past-tense action, snake_case and money in cents.
+    - name: Schema versioning plan
+      contains: How to change events later without breaking old data, including when to add a new version.
+    - name: Funnels
+      contains: Step-by-step paths such as signup to paid, with the start event and a time window.
+    - name: Retention cohorts
+      contains: Groups of users defined by when they joined or what they did, so you can track who returns.
+    - name: User identity plan
+      contains: How to link anonymous visits to a signed-in user.
+    - name: North Star metric
+      contains: The one main metric to watch, with the reason it fits your product.

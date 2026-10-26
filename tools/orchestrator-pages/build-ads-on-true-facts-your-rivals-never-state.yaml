@@ -1,6 +1,6 @@
 new_slug: build-ads-on-true-facts-your-rivals-never-state
 name: Build ads on true facts your rivals never state
-summary: Give it your maker notes. Get claims no rival makes, headlines and an image ad plan.
+summary: Turn your maker and test notes into ad claims no rival makes, the three best headlines, and an image ad plan built on your strongest true fact.
 job: write-ad-copy
 thinking: medium
 thinking_why: The steps are clear and short. Give it a stronger model if your notes are long.
@@ -11,9 +11,13 @@ explain: |
 
   The steps find that material. First it reads your notes and keeps the facts a buyer would not know and would find surprising, then marks which are backed and which rivals already say. Next it writes headlines from those claims, sorted by type. A cover test reads each headline alone and keeps the three best. Last it plans an image ad around your anchor fact. You give it the notes. It will not invent a fact to fill a gap.
 when:
-  - You make, source or test something carefully, but your ads sound like everyone else's.
-  - You have notes from a maker visit, a supplier call or a test and have not used them.
+  - You make, source or test something with care, but your ads sound like everyone else's.
+  - You have notes from a maker visit, a supplier call or a test, and you have not used them.
   - You need a claim a rival cannot copy by changing their wording.
+not_for:
+  - "Your product has no real process behind it to mention: write the angles first with the Ad angle planner."
+  - "Your facts are not written down yet: build them first with the Website brand brain builder, then come back."
+  - "You already have claims and only want headlines: use the Ad headline writer."
 you_give:
   - Notes on how it is made, sourced and tested (the full text, not a summary)
   - Your product facts, such as price and what it is
@@ -33,6 +37,27 @@ how_to_use:
   - Paste your maker, supplier or test notes in full. Short notes give short results.
   - Check every claim marked unproven before you run it.
   - When step 3 is done, paste the top headline into step 4 so the image ad keeps it.
+output_sample:
+  input:
+    - Your notes on how the product is made, sourced and tested, in full
+    - Your product facts, such as price and what it is
+    - Rival ads or claims (optional)
+    - Your offer (optional)
+    - Your buyer and their words (optional)
+  prerequisites:
+    - Claude, ChatGPT or Gemini that can read pasted text or files
+    - An image tool, only if you want the picture made (optional)
+  output:
+    - name: "Step 1: Facts rivals never state"
+      contains: Kept facts as claims with a number or picture, marked backed or unproven, the anchor fact, and questions to ask your maker.
+    - name: "Step 2: Headlines"
+      contains: Twenty or more headlines from your claims, each labelled by type and reason.
+    - name: "Step 3: Cover test"
+      contains: What a stranger thinks each headline offers, scores on five rules, and the three best headlines.
+    - name: "Step 4: Image ad plan"
+      contains: One-sentence ad, chosen claim, layout zones, feed text and an image prompt built on the anchor fact.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Find the facts rivals never state
     text: Reads every step and standard in your notes, keeps what buyers do not know, turns each into a number or a picture and marks what rivals already say.

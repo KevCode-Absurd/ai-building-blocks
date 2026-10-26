@@ -1,6 +1,6 @@
 new_slug: turn-reviews-into-a-checked-sales-video-and-cut-list
 name: Turn reviews into a checked sales video and cut list
-summary: Give it product facts and reviews. Get a checked sales video script, timed shots and a cut list.
+summary: Turn your product facts and customer reviews into a checked sales video script, timed shots and a cut list for your clips.
 job: make-video-ads
 thinking: high
 thinking_why: Five skills run in a row and each one edits the last. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your product is hard to explain in a few seconds.
   - Buyers hesitate and you have good reviews to answer their doubts.
   - You have been burned before by a video script that read well but sounded stiff.
+not_for:
+  - "Your product is simple and a 15 to 30 second ad can explain it: use the Video ad script line checker on a short script, or write a short ad first."
+  - "You only want to tidy a script you already have so it sounds natural spoken: use the Ad script read-aloud editor."
+  - "You want captions in your brand font on a finished video: use the Video caption maker in your brand font."
 you_give:
   - "Your product facts: what it is, how it works, price"
   - Customer reviews or quotes, with where each one came from
@@ -31,6 +35,29 @@ how_to_use:
   - Paste your product facts and reviews. Say who the buyer is and what they doubt.
   - When it stops at the shot list, make the clips with your video tool. Save every take in one folder.
   - Come back, list the clip files and say go. It plans the cut from what you really have.
+output_sample:
+  input:
+    - "Your product facts: what it is, how it works, price"
+    - Customer reviews or quotes, with where each one came from
+    - Your offer with real terms (optional)
+    - Your finished clips, once you have made them (for the last step)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - A way to film or generate the clips yourself, using your own camera or video tool
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "STEP 1: SALES VIDEO SCRIPT"
+      contains: A seven-part script with timings, hooks, shorter cuts and a brief.
+    - name: "STEP 2: LINE CHECK"
+      contains: Each weak line quoted with a fix, plus a score out of 100 and how it was worked out.
+    - name: "STEP 3: READ-ALOUD SCRIPT"
+      contains: The fixed script that a presenter can say cleanly, with the rule behind each fix.
+    - name: "STEP 4: SHOTS AND CLIP PROMPTS"
+      contains: Timed shots, a prompt for each clip and an edit list.
+    - name: "STEP 5: CUT LIST"
+      contains: Cuts by clip file, caption windows, a sound plan, exports and any gaps.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Write the seven-part script
     text: Checks a long video suits the product, then writes seven parts with timings, the hooks and the shorter cuts, using your reviews for the doubts.

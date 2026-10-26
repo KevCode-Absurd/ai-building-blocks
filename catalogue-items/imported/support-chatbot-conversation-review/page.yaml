@@ -2,31 +2,86 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: support-chatbot-conversation-review
 name: Support chatbot conversation review
-summary: Choose recent chatbot chats. Get missed questions, wrong answers, and fixes for your help content.
+summary: Find where your support chatbot fails. Review recent chats to get missed questions, wrong answers and help articles to add or fix.
 job: help-customers
 headline: Support chatbot conversation review
-subhead: Connect Botsonic, Docsbot, or Landbot and ask for a review of recent chats. It checks whether replies answered the question and flags unsupported claims. You get failed examples, repeated missing topics, and suggested help content or handover changes.
+subhead: Link your Botsonic, Docsbot or Landbot account and give it your help content. It reads your last 50 chatbot chats and checks if each reply answered the question. You get failed chats, repeated gaps and fixes to make.
+explain: |
+  A support chatbot can answer wrongly and nobody notices until a customer complains. This review reads your recent chatbot chats and checks them one by one.
+
+  For each chat it asks four things. Did the bot answer? Was the answer right? Did the customer have to ask for a person? How did they feel after? It checks answers only against the help content you give it. If you give none, it marks accuracy as "Not checked" rather than guess.
+
+  You get the chats that failed, the topics people ask about that the bot cannot answer, and a list of answers the bot made up. It ends with help articles to add and handover rules to set. It removes customer names and contact details from the report.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Customers keep saying your chatbot is no help, and you want to see why.
+  - You changed your help content and want to check how the bot handles it.
+  - You want to know which questions the bot cannot answer, so you can add articles.
+  - You suspect the bot is making up policies and want to find examples.
+not_for:
+  - You are building a bot. Use the Chatbot conversation designer.
+  - You want to check one written claim against your facts. Use the Unsupported claim spotter.
+  - You have no help content or product facts to check against. Gather them first, or the accuracy check will say "Not checked".
+  - You want a report on survey scores or comments. Use the Customer feedback report from survey tools.
 you_give:
-  - Recent chats from Botsonic, Docsbot, or Landbot.
-  - Verified product facts or help content for checking answers.
+  - Your Botsonic, Docsbot or Landbot account, linked through Composio
+  - Your help articles, product facts or policies, pasted in
+  - An exported file of recent chats, if you cannot link an account (optional)
 you_get:
-  - Show failed conversations, repeated unanswered questions, and suggested help content or handover rules.
+  - A count of chats resolved, partly resolved and failed
+  - A table of failed chats with the question, the bot's reply and the issue
+  - The topics asked about most that the bot could not answer
+  - Made-up answers, set against what is true
+  - Help articles to add and handover rules to set
+how_to_use:
+  - Check you have a Botsonic, Docsbot or Landbot account, and a Composio account with its command line tool. Check your own plan for any cost.
+  - Open an AI that can run commands and read skill files, such as Claude Code, and add the downloaded folder.
+  - Paste your help articles and policies. Ask it to run the chatbot review.
+  - Check a few failed chats against the originals before you act on the list.
+  - Add the missing articles first, then fix the wrong answers. Run the review again after a week.
+  - No Composio? Export your chats, paste them into your AI, and ask it to follow the skill. Remove names and emails first.
+output_sample:
+  input:
+    - Your chatbot account, linked through Composio, or an exported file of chats
+    - Your help articles, product facts or policies
+    - How many chats to review, 50 by default (optional)
+  prerequisites:
+    - An AI that can run commands, with Composio CLI installed, or a pasted export
+    - A Botsonic, Docsbot or Landbot account
+    - Chats may hold personal details, so check this suits your privacy rules
+  output:
+    - name: Performance Summary
+      contains: How many chats were reviewed, resolved, partly resolved or failed, and how many answers were made up.
+    - name: Failed Conversations
+      contains: A table of each failed chat with the question, the bot's reply, the issue and the right answer.
+    - name: Top Unanswered Topics
+      contains: The topics people asked about most that the bot could not answer.
+    - name: Hallucination Alerts
+      contains: Answers the bot made up, set against what your help content says.
+    - name: Recommendations
+      contains: Help articles to add, wrong answers to fix and handover rules to set.
 how_it_works:
-  - title: Read recent chats
-    text: Fetch recent conversation logs from the connected chatbot service.
-  - title: Check each answer
-    text: Review whether the answer was useful and accurate. Note failures and requests for a person.
-  - title: List fixes by topic
-    text: Show failed conversations, repeated unanswered questions, and suggested help content or handover rules.
+  - title: Find the chat tools
+    text: It searches Composio for the tool that lists chats from your chatbot service.
+  - title: Pull recent chats
+    text: It fetches your last 50 chats, or reads the export you pasted.
+  - title: Judge each chat
+    text: It rates each chat for answered or not, right or wrong, handover, and how the customer felt.
+  - title: Check against your facts
+    text: It compares answers only with the help content you gave. With none, it says "Not checked".
+  - title: Write the report
+    text: It lists failures, repeated gaps and made-up answers, then the fixes, with names removed.
 works_best_with:
   tools:
-    - name: Botsonic, Docsbot, or Landbot
-      why: Live lookups need Composio CLI access and connected accounts for these services.
-how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for support chatbot conversation review by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Recent chats from Botsonic, Docsbot, or Landbot.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+    - name: Botsonic, Docsbot or Landbot
+      why: It reads chat logs from your own account.
+    - name: Composio CLI
+      why: It links your AI to your chatbot account. Your AI must be able to run commands.
+    - name: Your help center articles, pasted in
+      why: They give the review a source of truth. Without them accuracy is not checked.
+terms:
+  - term: Hallucinated answer
+    meaning: A reply the bot made up that is not in your help content.
+  - term: Handover
+    meaning: The point where the bot passes the chat to a person.
+  - term: Composio
+    meaning: A tool that links your AI to apps such as Botsonic.

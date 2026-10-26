@@ -22,11 +22,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Audio meeting notes writer.** Use the skill `audio-meeting-notes-writer`. Turns the recording into a transcript and notes.
-2. **Call follow-up drafter.** Use the skill `call-follow-up-drafter`. Give it the transcript from the steps before. Drafts the follow-up from the transcript. Nothing is sent until you approve.
+2. **Call follow-up drafter.** Use the skill `call-follow-up-drafter`. Give it the transcript from the steps before. Drafts the follow-up from the transcript from step 1 and hands you the draft and meeting notes. Nothing is sent until you approve.
 
 Pause here: Check the draft, fix any wrong detail and send it yourself.
 
-3. **Meeting coaching analyst.** Use the skill `meeting-coaching-analyst`. Give it the transcript from the steps before. Coaches you on how the call went. Reads the transcript from the first step.
+3. **Meeting coaching analyst.** Use the skill `meeting-coaching-analyst`. Give it the transcript from step 1. Coaches you on how the call went. Uses the transcript from step 1, not the follow-up draft from step 2, and hands you the coaching notes.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

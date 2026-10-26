@@ -2,34 +2,65 @@ thinking: medium
 thinking_why: It follows a set page structure and fits it to your offer.
 new_slug: bridge-page-writer
 name: Bridge page writer
-summary: Describe your ad and offer. Get a short page that warms visitors and
-  sends them on to buy.
+summary: Write a short bridge page between your ad and your offer, using only your real proof. You get 2 or 3 versions to test and a list of facts to fill in.
 job: write-landing-page
 headline: Bridge page writer
-subhead: A short page of 300 to 800 words that sits between your ad and your
-  offer. It warms up a curious visitor so they click through to watch your video
-  or see the offer.
+subhead: Give it your ad, your offer and who clicks. It writes 2 or 3 short bridge pages of 300 to 800 words that warm up a curious visitor so they click on to your video or offer. Proof comes only from you.
 explain: |
-  A short page of 300 to 800 words that sits between your ad and your offer. It warms up a curious visitor so they click through to watch your video or see the offer.
+  Many ads send cold traffic straight to a long video or sales page, and most visitors leave. A bridge page sits in the middle. It is short. It answers "is this real?" and "is it worth my time?", then points to the next step. This pre-sell page does not sell. It has no price and no checkout.
 
-  It does not sell. There is no price and no checkout. The skill first sorts your brief by market and by how aware the visitor is, from not knowing they have a problem to already comparing solutions. That choice sets the angle, headline and proof. It then writes copy that answers whether this is legit and worth their time, while leaving the main question open enough that the next click feels natural. It follows classic direct-response methods.
+  The writer sorts your brief first: your market, and how much the visitor knows, from not knowing they have a problem to already comparing options. That choice sets the angle, headline and proof. It then writes three parts in order: why this is worth a look, proof that others got a result, and a clear button.
+
+  It never invents a doctor, a study, a user count or a testimonial. Where you gave no proof, it leaves a labelled gap. It will also stop on health, finance or other claims that need review before you run them.
 when:
-  - You run ads that send people straight to a long video and many drop off.
-  - You need a pre-sell page between a cold ad and your main offer.
+  - Your ad sends people straight to a long video and many leave before it plays.
+  - You need a pre-sell page between a cold Meta or TikTok ad and your main offer.
   - You want to test a new angle without rebuilding your sales page.
-  - Your ad gets clicks but few watch the video.
+  - Your ad gets clicks but few people watch the video.
+not_for:
+  - "You want the full sales page: use the conversion page writer."
+  - "You want a story-style page that reads like an article: use the store advertorial writer."
+  - "You want page copy that continues your ad word for word: use the ad-matched landing page writer."
+  - Your offer is a health, money or other regulated claim, or you have no proof for it. Get compliance review first.
 you_give:
-  - Your ad or ad idea
-  - The offer it leads to
-  - Who the visitor is and what they know
-  - Proof or results you can show (optional)
+  - Your ad, or the idea behind it
+  - The offer or video the page leads to
+  - Who clicks the ad and what they already know
+  - Real proof you can show, such as reviews, results and sources (optional)
+  - Your founder story or the story behind the product (optional)
 you_get:
-  - A short bridge page
-  - A headline matched to visitor awareness
-  - A curiosity-led body with proof
-  - A call to action that leads to the next step
+  - Two or three versions of the page, each with a different angle
+  - A headline matched to how much the visitor knows
+  - Three short parts: why look, proof, and what to click
+  - A button line that says what they will see next
+  - A list of facts you must supply and claims to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Paste your ad, the offer or video it leads to, and who the visitor is. Add reviews, results and sources you can really show.
+  - Read the "Facts to supply" list first. Fill each gap with a real fact, or delete that line.
+  - Check every claim against your proof. Cut any line you cannot back up.
+  - Build the page in your page builder, link the button to your video or offer, and test one change at a time, such as the headline.
+output_sample:
+  input:
+    - Your ad or ad idea
+    - The offer or video the page leads to
+    - Who the visitor is and what they know
+    - Your real proof and sources (optional)
+  output:
+    - name: Page variations
+      contains: Two or three versions, each with a headline, three short parts and button text, labelled by angle.
+    - name: Headline
+      contains: A headline that matches the ad and how much the visitor already knows.
+    - name: Button text
+      contains: Benefit-led wording that tells people what they will see after the click.
+    - name: Facts to supply
+      contains: Each placeholder for a stat, source or testimonial, and where to find the real one.
+    - name: Claims to check
+      contains: Lines that need evidence or compliance review before you run the page.
+    - name: Test plan
+      contains: How to compare the versions by changing one thing at a time.
+works_best_with: Claude, ChatGPT or Gemini. Give it your real reviews and the exact words from the ad. Message match matters most.
+terms:
+  - Bridge page: A short page between an ad and the main offer that gets the click through.
+  - Message match: The page uses the same words and promise as the ad.
+  - Awareness level: How much the visitor already knows about the problem and the answers.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches a standard rule to each product type.
 new_slug: restock-rule-designer
 name: Restock rule designer
-summary: Give it your sales and lead times. Get a restock rule for each product
-  group, like min-max or fixed cycle.
+summary: Give it your sales and supplier lead times. Get a restock rule for each product group, like min-max, so you stop running out of stock.
 job: run-your-store
 headline: Restock rule designer
-subhead: A restock rule for each group of products, so reordering stops being a
-  weekly guess. You get a clear trigger, an order size and a reason it fits that
-  group's sales pattern.
+subhead: A restock rule for each group of products, so reordering stops being a weekly guess. You get a clear trigger, an order size and a reason it fits that group's sales pattern.
 explain: |
   A restock rule for each group of products, so reordering stops being a weekly guess. You get a clear trigger, an order size and a reason it fits that group's sales pattern.
 
@@ -18,6 +15,10 @@ when:
   - You are setting up reorder rules for the first time.
   - Your suppliers have long or uneven lead times.
   - You move stock between a warehouse and several stores.
+not_for:
+  - "You need safety stock numbers only: ask your AI for a safety stock calculation, or use a plain reorder sheet."
+  - "You buy one-off items or order from one supplier on a fixed schedule: a simple par sheet is enough."
+  - "You run a large network with many warehouses and need full planning software: use a planner or your ERP tool."
 you_give:
   - Sales history by product or group
   - Supplier lead times
@@ -30,7 +31,27 @@ you_get:
   - Notes on why each rule fits
   - Warnings about storage or supplier limits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text into the chat.
+  - "Paste your sales and supplier details. Use one row per product group, with these columns: product group, units sold per week, supplier lead time in days, minimum order quantity, how often you can order."
+  - Add storage limits if you have them (optional).
+  - Check each rule against what you know about your suppliers. Ask your AI to change any rule that does not fit.
+  - Test the rules on your best sellers first, then roll out to the rest.
+output_sample:
+  input:
+    - Your sales history by product or product group
+    - Supplier lead times for each group
+    - Minimum order quantities
+    - How often you can place orders
+    - Storage limits (optional)
+  output:
+    - name: Initial assessment
+      contains: A short summary of your locations, demand pattern, supplier limits and how you reorder today.
+    - name: Replenishment method for each group
+      contains: The method that fits each product group, such as reorder point, periodic review or min-max.
+    - name: Policy settings
+      contains: The reorder point, order size or order-up-to level for each group.
+    - name: Reasons and limits
+      contains: Why each rule fits, plus notes on storage space, minimum orders and full-truck savings.
+    - name: Replenishment strategy document
+      contains: One write-up that pulls the rules, reasons and next steps together.

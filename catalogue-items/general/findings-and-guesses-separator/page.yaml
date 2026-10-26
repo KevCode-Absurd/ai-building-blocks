@@ -1,12 +1,12 @@
 new_slug: findings-and-guesses-separator
 name: "Findings and guesses separator"
-summary: "Paste a report or analysis. Get every line sorted into proven, likely or guess, plus the open questions left over."
+summary: "Paste a report and find out which lines are proven, likely or just guesses. Get a clean version and a list of open questions."
 job: think-and-decide
 thinking: high
 thinking_why: "It has to judge how well each claim is supported and spot hidden leaps, which takes careful reading."
 
 headline: "Findings and guesses separator"
-subhead: Paste a report, analysis or write-up. It lists the terms it relies on, sorts every claim into observed, inferred or guess, and ties each inference to its evidence. You get a clean version and a separate list of open questions.
+subhead: Paste a report, analysis or write-up. Your AI sorts every claim into proven, likely or guess, and links each one to its evidence. You get a clean version and a separate list of open questions.
 
 explain: |
   Reports often mix three things in one voice: what was seen, what was worked out from it, and what someone hopes is true. A reader cannot tell which is which, so a guess gets repeated as a finding.
@@ -15,25 +15,53 @@ explain: |
 
 when:
   - You are about to share a report, case study or recommendation.
-  - You are reading an analysis from someone else and want to know what is solid.
-  - A team has started repeating a claim as fact and nobody can say where it came from.
+  - You are reading someone else's analysis and want to know what is solid.
+  - A team keeps repeating a claim as fact and nobody knows where it came from.
+  - You plan to publish a result and want one line you can stand behind.
+not_for:
+  - You have one number and no claim attached. Check that number against its source instead.
+  - You want a quick fact check of one line. Spot check it against the original source.
+  - You have no report yet and want to plan a decision. Talk it through with a colleague who knows the topic.
 
 you_give:
   - The report or analysis, as text
   - The data it rests on, such as a sheet or results (optional)
   - The decision or question it is meant to answer (optional)
 you_get:
-  - A list of defined terms
-  - Every claim sorted into proven, likely or guess, with the observation behind it
-  - A rewritten version with guesses moved out
-  - A separate block of open questions
+  - A list of the key terms and what they mean in this report.
+  - Every claim marked proven, likely or guess, with the observation behind it.
+  - A rewritten report with the guesses taken out.
+  - A separate list of open questions.
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the report. Attach the data if you have it.
+  - Open a chat in Claude, ChatGPT or Gemini. Add the skill, or copy it and paste it in.
+  - Paste your report. Attach the data too if you have it.
   - Say what decision the report is for.
-  - Check the sorted list. Challenge any line you think was rated too high or too low.
-  - Share the clean version and the open questions, not the original.
+  - Read the sorted list. Challenge any line that looks rated too high or too low.
+  - Share the clean version and the open questions, not the original report.
+  - Proven means seen or measured with a source. Likely means worked out from solid evidence. Guess means neither.
+output_sample:
+  input:
+    - The report or analysis, pasted as text
+    - The data behind it, such as a sheet or export (optional)
+    - The decision or question the report is for (optional)
+  output:
+    - name: Terms used
+      contains: The key words the report relies on, and what each one means in this report.
+    - name: Claims, sorted
+      contains: Each claim in one sentence, with its status, the observation it rests on, its routes and causes.
+    - name: The clean version
+      contains: The report text with the guesses taken out.
+    - name: Open questions
+      contains: Each guess rewritten as a question, with the data that would answer it.
+    - name: The public claim
+      contains: One line you could say in public, using only proven and likely claims.
+    - name: Data quality
+      contains: Whether the data is the best available, and what would make it better.
+    - name: Missing
+      contains: Gaps marked MISSING, so nothing is made up.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Defines the terms

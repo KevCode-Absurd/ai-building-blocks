@@ -2,18 +2,56 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-github-actions-hardening
 name: GitHub Actions permission reviewer
-summary: Share your build workflows. Get risky permissions, unsafe inputs and
-  dependency trust problems with fixes.
+summary: Check your GitHub Actions workflow files for risky permissions, unsafe inputs and unpinned actions. Get each problem with a before and after fix.
 job: secure-code
 headline: GitHub Actions permission reviewer
-subhead: Share your build workflows. Get risky permissions, unsafe inputs and
-  dependency trust problems with fixes. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: "Paste your workflow files from .github/workflows and say whether the repo is public or private. It reads them the way an attacker would and lists each risk with the exact line, in order of severity. Each serious one comes with a fixed snippet."
+explain: |
+  A GitHub Actions workflow runs code with access to your secrets. This GitHub Actions security reviewer looks for the ways that goes wrong: text from issues or pull requests pasted into shell commands, workflows that run outside code with a powerful token, actions not pinned to a fixed version, and tokens with too many permissions.
+
+  Generic code scanners tend to miss these because they depend on how the workflow is triggered. It reasons about that, so it can say who could abuse a given line.
+
+  It only suggests fixes. You apply them in a branch and run the review again before you merge.
+when:
+  - "You added a workflow that runs on pull requests from forks."
+  - "You use a third-party action and have not pinned it to a version."
+  - "Your repo is public and you want to know what a stranger could trigger."
+  - "A security review asks for proof your pipelines are locked down."
+not_for:
+  - "You want to scan your app code for bugs: use a general code security scanner, since this only reads workflow files."
+  - "You want your AI to change the files for you: this only suggests fixes, so apply them yourself in a branch and run the review again."
+  - "Your CI is not on GitHub Actions: ask the tool your CI provider offers, or a person who knows that system."
+you_give:
+  - "Your workflow files from .github/workflows (paste or upload them)"
+  - "Whether your repo is public or private"
+  - "Whether you use self-hosted runners (optional)"
+you_get:
+  - "A table of findings by severity, shown first"
+  - "Each finding with the file, the exact line and the risk in plain words"
+  - "Script injection and risky trigger findings"
+  - "Missing or broad token permissions, and actions not pinned to a full commit"
+  - "A corrected snippet for every critical and high finding"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste each workflow file from .github/workflows, or upload them if your AI accepts files.
+  - Say whether your repo is public or private, and whether you use self-hosted runners.
+  - Read the summary table first, then fix the critical and high items.
+  - Apply the fixes in a branch. Then run the review again before you merge.
+output_sample:
+  input:
+    - Your workflow files from .github/workflows (paste them or upload them)
+    - Whether your repo is public or private
+    - Whether you use self-hosted runners (optional)
+  output:
+    - name: Findings summary table
+      contains: A count of problems by severity, from critical to info, shown first.
+    - name: Findings grouped by issue type
+      contains: Each problem with the file, the exact YAML line, and the risk in plain words.
+    - name: Script injection findings
+      contains: Places where text from issues, pull requests or branch names is pasted into a shell command.
+    - name: Privileged trigger findings
+      contains: Workflows that run outside code with a token that can write and read secrets.
+    - name: Permissions and action pinning findings
+      contains: Missing or broad token permissions, and third-party actions not pinned to a full commit.
+    - name: Before and after fixes
+      contains: A corrected YAML snippet for every critical and high finding, for you to review.

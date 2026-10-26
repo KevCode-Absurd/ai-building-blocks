@@ -1,6 +1,6 @@
 new_slug: weekly-video-ad-batch-maker
 name: Weekly video ad batch maker
-summary: Give it last week's video ad results. Get a checked batch of new scripts and clip prompts to approve.
+summary: Make a weekly batch of video ad scripts and clip prompts from last week's results. Every line is checked, and weak ads are held back.
 job: make-video-ads
 thinking: high
 thinking_why: It chooses script types, loops each script until it passes, and checks every ad before hand-back. Give it your strongest model.
@@ -16,6 +16,10 @@ when:
   - You run video ads and want a new batch of scripts each week.
   - You have customer reviews but your scripts all sound the same.
   - You want every line checked against your facts before you pay for clips.
+not_for:
+  - "You want still image ads: this agent only plans video, so use the Image ad remake planner."
+  - "You need one script type only, like a founder video: write it with the Founder video ad script writer."
+  - "Your offer is about to change, the product is out of stock, or you have no budget to test: wait, or plan with a person first."
 you_give:
   - An export of your video ads with dates, spend and your result
   - The product and offer, with what you may claim
@@ -35,6 +39,28 @@ how_to_use:
   - Read the batch. Say yes or no to each script.
   - If you want clips made, pick a tool. The agent asks before it uses any credits.
   - Run it again next Monday. It reads its memory folder to see which types did well.
+output_sample:
+  input:
+    - An export of last week's video ads with dates, spend and results
+    - Your product and offer, with what you may claim
+    - Customer reviews or call notes, with where each came from
+    - Transcripts of past videos and product photos (optional)
+  prerequisites:
+    - An AI chat where you can attach files
+    - A video tool or a creator to make the clips later, which may cost credits
+  output:
+    - name: Path taken
+      contains: Whether the batch used a winners rubric or not, and why.
+    - name: The batch
+      contains: Three or four scripts of different types, each with its opening, sourced customer lines, line-check scores and clip prompts.
+    - name: Held out
+      contains: Each script that failed a check, with the reasons and what would fix it.
+    - name: Types left out
+      contains: Each script type dropped and what it lacked.
+    - name: How the clips get made
+      contains: The tools you can use, what they cost and the first step.
+    - name: Files and missing
+      contains: Each step's saved file and a list of every fact that was missing.
 how_it_works:
   - title: Read the memory
     text: Opens the opening rubric, the script types from earlier batches and the never-again list.

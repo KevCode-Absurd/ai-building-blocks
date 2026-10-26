@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It runs several methods and must judge which assumptions matter.
 new_slug: valuation-method-comparer
 name: Valuation method comparer
-summary: Give it a company's numbers. Get a value range from DCF, peer multiples
-  and past deals, with the key assumptions.
+summary: Get a company valuation range from a DCF, peer multiples and past deals, plus the few assumptions that move the answer. Give it three years of numbers.
 job: money-and-investing
 headline: Valuation method comparer
-subhead: "A fair value range for a company, built from three angles that check
-  each other, with the assumptions that move the answer shown plainly. First, a
-  cash flow model: project free cash flow for five to ten years, discount it,
-  and add a terminal value."
+subhead: "A fair value range for a company, built from three angles that check each other, with the assumptions that move the answer shown plainly. First, a cash flow model: project free cash flow for five to ten years, discount it, and add a terminal value."
 explain: |
   A fair value range for a company, built from three angles that check each other, with the assumptions that move the answer shown plainly. 
   First, a cash flow model: project free cash flow for five to ten years, discount it, and add a terminal value. A warning appears if the terminal value is over 75 percent of the total. Second, trading multiples from five to ten peers, using median and quartile ranges. Third, past deals, which include a control premium of about 20 to 35 percent. A bridge then turns company value into equity value by subtracting debt and other claims. The purpose of the valuation, such as a sale or a tax test, sets the standard used.
@@ -18,6 +14,10 @@ when:
   - A board member asks what the company is worth and why.
   - You want to test how much a growth or discount rate changes the answer.
   - You need to compare your own estimate with what peers trade for.
+not_for:
+  - "Your company has no revenue yet or is growing very fast: use a startup valuation method, since this skill is built for mature companies."
+  - "You need a formal fairness opinion or a tax valuation: hire a licensed valuer, because this gives an estimate, not a signed opinion."
+  - "You only need the discount rate: work out the cost of capital on its own first, then bring it back here."
 you_give:
   - Three or more years of financials
   - Management forecasts (optional)
@@ -29,7 +29,30 @@ you_get:
   - A bridge from company value to equity value
   - The key assumptions and what changes them
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather three or more years of financials. Write down why you need the value, and whether it is for control or a minority stake.
+  - Pick five to ten peer companies with a similar business model. Add recent deals in your sector if you have them. Add management forecasts too (optional).
+  - Open Claude, ChatGPT or Gemini and paste the skill. Use an AI that can run code, because the model and the sensitivity grid need it.
+  - Paste your financials and your purpose. Ask it to run the cash flow model, the peer multiples and the past deals.
+  - Check the bridge first. Every debt-like item should be listed. Then read Key Judgments and test the assumptions you doubt.
+  - If the cash flow value and the peer value differ by more than 30 percent, ask your AI to find the assumption that is off.
+output_sample:
+  input:
+    - Three or more years of the company's financials
+    - Management forecasts (optional)
+    - Peer companies or recent deals in the same sector (optional)
+    - Why you need the value, such as a sale, fundraising or an impairment test
+    - Whether the value is for control or a minority stake
+  prerequisites:
+    - An AI that can run code, for the cash flow model and the sensitivity grid
+    - A discount rate (WACC) for the company, or let your AI work one out with you
+  output:
+    - name: Summary
+      contains: A football field chart of the value range from each method, with the final range and the basis of value.
+    - name: DCF
+      contains: An assumptions table, the free cash flow build, a terminal value cross-check and a sensitivity grid.
+    - name: Comps/Precedents
+      contains: A table of peers and past deals with their multiples, the target's cleaned-up numbers and the range applied.
+    - name: Bridge
+      contains: A waterfall from company value to equity value, with each debt-like item listed on its own line.
+    - name: Key Judgments
+      contains: The three to five assumptions that move the answer most.

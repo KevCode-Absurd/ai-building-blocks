@@ -21,9 +21,9 @@ Open the included SKILL.md and required references for each named skill before i
 ## Work in this order
 1. **Identify the defensible story** Use `source-note-summariser`. Read the supplied paper in full, including relevant appendices, with the source-note method. Record its claims, table/figure pointers, offered evidence and gaps. Map those notes to the attached result tables without assuming independent truth verification. Hand the approved source-bound claim list and exact evidence references to figure preparation.
 
-2. **Prepare talk-size figures** Use `journal-ready-figure-maker`. Use source tables and claim list to choose readable, faithful plots. Preserve uncertainty, exclusions and missing observations. Hand figures, captions and data references to slide production.
+2. **Prepare talk-size figures** Use `journal-ready-figure-maker`. Use your attached result tables and step 1's claim list to choose readable, faithful plots. The tables come from you; the claim list only decides which to plot. Preserve uncertainty, exclusions and missing observations. Hand figures, captions and data references to slide production.
 
-3. **Build the timed talk** Use `conference-talk-slide-maker`. Use compiled paper, evidence list, figures, audience and duration to build the outline, supported slide formats and notes. Render only with available tools; return timing estimates and required rehearsal checks.
+3. **Build the timed talk** Use `conference-talk-slide-maker`. Use your compiled paper with step 1's evidence list and step 2's figures, plus audience and duration, to build the outline, supported slide formats and notes. Render only with available tools; return timing estimates and required rehearsal checks.
 
 ## Missing inputs and boundaries
 If a figure cannot be matched to source data, ask for it rather than guessing values. Without duration, propose a labelled draft outline and seek confirmation before file production. Conclusions retain negative or mixed findings and study limits. Do not submit the talk or download unapproved assets.

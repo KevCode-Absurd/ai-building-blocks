@@ -1,6 +1,6 @@
 new_slug: story-shape-mapper
 name: "Story shape mapper"
-summary: "Paste your story, talk or pitch. Get its fortune line drawn in text, the flat spots, and a fix."
+summary: "Paste your story, talk or pitch and see its story shape drawn as a line, with the flat spots marked and one fix suggested."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It scores each beat and draws a line, then judges where the shape is unclear."
@@ -14,26 +14,52 @@ explain: |
   This skill treats a story as a line. The horizontal axis is time from start to end. The vertical axis is the main character's fortune, from ill at the bottom to good at the top. It scores each beat, draws the line in text and names the shape, such as a man in a hole, boy meets girl, Cinderella, a sinking line or a flat line. It flags flat stretches and any beat where the reader cannot tell good from bad, then suggests one change and redraws the line so you can see the effect.
 
 when:
-- "You have a draft that reads fine but does not pull the reader along."
-- "You are writing a talk or pitch and the middle feels level."
-- "You want to compare two versions of a story."
+  - "You have a draft that reads fine but does not pull the reader along."
+  - "You are writing a talk or pitch and the middle feels level."
+  - "You want to compare two versions of a story."
+not_for:
+  - "You want facts, grammar or tone checked: use a fact-checker or a copy editor."
+  - "You have no draft yet: write a first version yourself, then bring it back to map."
+  - "You want line-by-line edits or a rewrite: use a human editor, as this gives one change only."
 
 you_give:
-- "The story, talk or pitch in full"
-- "Whose fortune to track, if it is not obvious (optional)"
-- "How it should feel at the end (optional)"
+  - "The story, talk or pitch in full"
+  - "Whose fortune to track, if it is not obvious (optional)"
+  - "How it should feel at the end (optional)"
 you_get:
-- "A list of beats with a fortune score and a reason for each"
-- "The line drawn in text"
-- "The shape, named, or marked flat on purpose"
-- "One change and the redrawn line"
+  - "A list of beats with a fortune score and a reason for each"
+  - "The line drawn in text"
+  - "The shape, named, or marked flat on purpose"
+  - "One change and the redrawn line"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Paste the full draft."
-- "Say whose fortune it should follow."
-- "Read the drawn line and say if it matches how it should feel."
-- "Apply the suggested change and run it again to compare."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the full draft."
+  - "Say whose fortune it should follow."
+  - "Read the drawn line and say if it matches how it should feel."
+  - "Apply the suggested change and run it again to compare."
+output_sample:
+  input:
+    - Your story, talk or pitch, pasted in full
+    - Whose fortune to follow, if it is not obvious (optional)
+    - How the ending should feel (optional)
+  output:
+    - name: Beats
+      contains: A numbered list of 6 to 15 beats, each with a score from -5 to +5 and a reason.
+    - name: Line
+      contains: The scores drawn as a line of text, one column per beat.
+    - name: Shape
+      contains: The closest common shape by name, or a flat line marked as planned or not.
+    - name: Trouble spots
+      contains: Flat stretches and unclear beats, with what the reader is waiting for.
+    - name: One change
+      contains: A single change to one beat and its new score.
+    - name: Redrawn line
+      contains: The new line beside the old one, with one sentence on what is different.
+    - name: Missing
+      contains: Any gaps in what you gave, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "List the beats"
@@ -89,23 +115,23 @@ tweaks:
     how: "Say if it is a first draft. Early drafts need bigger changes."
 
 judge:
-- "You can see the line and match it to your memory of the story."
-- "Each score has a reason taken from the text."
-- "The named shape fits what you meant."
-- "The fix changes one thing and the new line shows it."
-- "Flat stretches are where you felt the story sag."
+  - "You can see the line and match it to your memory of the story."
+  - "Each score has a reason taken from the text."
+  - "The named shape fits what you meant."
+  - "The fix changes one thing and the new line shows it."
+  - "Flat stretches are where you felt the story sag."
 
 test:
-- "Run it on a story you love. The line should show a clear shape."
-- "Run it on a draft you find dull. Check if the flat spots match."
-- "Apply the fix and run again. The line should move as predicted."
-- "Ask a friend to rate your beats good or bad and compare."
+  - "Run it on a story you love. The line should show a clear shape."
+  - "Run it on a draft you find dull. Check if the flat spots match."
+  - "Apply the fix and run again. The line should move as predicted."
+  - "Ask a friend to rate your beats good or bad and compare."
 
 improve:
-- "Add the shapes your genre uses to step 4."
-- "Add a rule for how many beats you want in your usual piece."
-- "Keep a file of lines from past stories to compare."
-- "Pair it with \"Hero story mapper\" to build a draft before mapping."
+  - "Add the shapes your genre uses to step 4."
+  - "Add a rule for how many beats you want in your usual piece."
+  - "Keep a file of lines from past stories to compare."
+  - "Pair it with \"Hero story mapper\" to build a draft before mapping."
 
 works_best_with:
   tools:

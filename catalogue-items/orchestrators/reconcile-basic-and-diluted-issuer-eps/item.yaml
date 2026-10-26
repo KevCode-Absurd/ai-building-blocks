@@ -1,25 +1,18 @@
 slug: reconcile-basic-and-diluted-issuer-eps
 name: Reconcile basic and diluted issuer EPS
-summary: Build a sourced share timeline and test option and convertible dilution against reported EPS.
+summary: Build basic and diluted EPS from earnings, a share ledger and option and convertible terms. Get a linked workbook that ties to the company's EPS note.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - weighted-average-share-schedule
   - treasury-stock-option-dilution

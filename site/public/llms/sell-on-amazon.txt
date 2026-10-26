@@ -1,20 +1,13 @@
 # Sell on Amazon: AI Blocks
 
-> 16 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 9 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Amazon brand registry planner](https://useaiblocks.com/skills/amazon-brand-registry-planner): Give it your brand name and listing. Get a trademark choice, a registry pack and tools to turn on.
-- [Amazon fee and margin checker](https://useaiblocks.com/skills/amazon-fee-and-margin-checker): Give it price, landed cost and size. Get profit per unit, all fees and a score out of 100.
+- [Amazon fee and margin checker](https://useaiblocks.com/skills/amazon-fee-and-margin-checker): Share price, costs, size and fee figures. Get profit per unit, break-even ad cost and a score against the source’s rules.
 - [Amazon inbound stock planner](https://useaiblocks.com/skills/amazon-inbound-stock-planner): Give it sales, lead times and case sizes. Get how much to send, when, and a shipment checklist.
 - [Amazon keyword picker](https://useaiblocks.com/skills/amazon-keyword-picker): Give it your product and a keyword export. Get the phrases for your title, bullets and backend.
-- [Amazon launch week planner](https://useaiblocks.com/skills/amazon-launch-week-planner): Give it your product and audience. Get a pre-launch and launch-day plan for early sales and reviews.
-- [Amazon listing first draft writer](https://useaiblocks.com/prompts/amazon-listing-first-draft-writer): Paste product facts and search phrases. Get an Amazon title, five bullets and backend keywords.
-- [Amazon listing writer](https://useaiblocks.com/skills/amazon-listing-writer): Give it product facts and keyword tiers. Get an Amazon title, five benefit bullets and backend keywords.
-- [Amazon PPC launch builder](https://useaiblocks.com/skills/amazon-ppc-launch-builder): Give it your product, keywords and daily budget. Get auto, keyword and competitor campaigns with bids and negatives.
-- [Amazon product opportunity finder](https://useaiblocks.com/skills/amazon-search-gap-finder): Give it an interest or category. Get Amazon product ideas people search for that page 1 misses.
-- [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer): Give it a product idea and costs. Get a score out of 100, the weakest test and a go or no-go.
-- [Amazon reimbursement claim finder](https://useaiblocks.com/skills/amazon-reimbursement-claim-finder): Give it shipment and fee reports. Get a claim-readiness score and the claims to file.
-- [Amazon unit profit checker](https://useaiblocks.com/prompts/amazon-unit-profit-checker): Paste price, landed cost and Amazon fees. Get profit per unit and break-even ad cost.
-- [Find an Amazon product gap and check it will pay](https://useaiblocks.com/workflows/find-an-amazon-product-gap-and-check-it-will-pay): Give it a category. Get product ideas page 1 misses, a score out of 100 and a go or no-go.
-- [Launch an Amazon product with sales from day one](https://useaiblocks.com/workflows/launch-an-amazon-product-with-sales-from-day-one): Give it product facts and keywords. Get a listing, launch ads, a stock order and a launch week.
-- [Monthly Amazon account review](https://useaiblocks.com/agents/amazon-monthly-account-keeper): Give it your Amazon fee, stock and sales reports. Get margins checked, restock sized and refund claims found.
-- [Ship stock to Amazon and claim back what goes missing](https://useaiblocks.com/workflows/ship-stock-to-amazon-and-claim-back-what-goes-missing): Give it your sales and product facts. Get a shipment plan, then the claims to file.
+- [Amazon listing first draft writer](https://useaiblocks.com/prompts/amazon-listing-first-draft-writer): Write a first Amazon listing from your product facts and search phrases. You get a title, five bullets, a short description and backend keywords.
+- [Amazon product gap and viability reviewer](https://useaiblocks.com/workflows/find-an-amazon-product-gap-and-check-it-will-pay): Review what Amazon search results miss, then score a selected idea using supplier cost, size, weight and selling price.
+- [Amazon product opportunity finder](https://useaiblocks.com/skills/amazon-search-gap-finder): Share an interest, category and any search data. Get ranked product-gap ideas and the evidence needed to test them.
+- [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer): Share a product idea and costs. Get a score, the weakest test and a go or no-go.
+- [Amazon Sponsored Products ad planner](https://useaiblocks.com/skills/amazon-ppc-launch-builder): Share product profit, keywords and budget. Get three Amazon ad campaign plans with bids, excluded search terms and stop rules.
+- [Amazon unit profit checker](https://useaiblocks.com/prompts/amazon-unit-profit-checker): Check your Amazon unit profit before you order stock. Paste price, landed cost and fees. You get profit per unit and break-even ad cost.

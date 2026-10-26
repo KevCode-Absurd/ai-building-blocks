@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: debugging-practice-coach
 name: Debugging practice coach
-summary: Share a bug and what you tried. Learn to gather evidence, test causes
-  and verify your own fix.
+summary: Learn to debug your own code. Share the bug and what you tried, and this debugging practice coach guides you to find and prove the fix yourself.
 job: study-and-practice
 headline: Debugging practice coach
-subhead: Share the code, error and result you expected. It helps you gather
-  evidence, form possible causes and test them one at a time. You work out the
-  fix and explain why it works, then choose a check that proves it.
-explain: Share the code, error and result you expected. It helps you gather
-  evidence, form possible causes and test them one at a time. You work out the
-  fix and explain why it works, then choose a check that proves it.
+subhead: Share the code, error and result you expected. It helps you gather evidence, form possible causes and test them one at a time. You work out the fix and explain why it works, then choose a check that proves it.
+not_for:
+  - Your live site or app is down right now. Fix it with a teammate or your hosting support first, and learn from it later.
+  - You just want the fixed code. Paste it into a plain chat and ask for the fix, since this coach will not hand it over.
+  - You need a concept explained, like how loops or promises work. Ask your AI for a short lesson on that topic first.
+explain: Share the code, error and result you expected. It helps you gather evidence, form possible causes and test them one at a time. You work out the fix and explain why it works, then choose a check that proves it.
 you_give:
   - The code, error and expected result.
   - Your environment and fixes already tried.
@@ -27,9 +26,31 @@ how_it_works:
   - title: Step 3
     text: Check your explanation, fix and a test that would catch the bug again.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of this skill first.
+  - On the next message, paste your code, the error, and what you expected to happen.
+  - Add your setup and any fixes you already tried, if you have them.
+  - Answer its questions. It will ask for evidence and for your own guesses before it helps further.
+  - Explain the cause in your own words, then propose a fix and a test that proves it.
+  - This needs no code running or paid tools. You run your own code and paste back what you see.
+output_sample:
+  input:
+    - The code that fails
+    - The error message
+    - What you expected to happen
+    - Your setup, such as language and version (optional)
+    - Fixes you already tried (optional)
+  output:
+    - name: Symptom
+      contains: Your expected result, the actual result, and when it changed, in your own words.
+    - name: Evidence
+      contains: The logs, error traces and steps to repeat the bug that you gathered.
+    - name: Hypotheses
+      contains: Your 2 or 3 possible causes, each with what would confirm or rule it out.
+    - name: Isolation test
+      contains: One small test per cause, run one at a time to rule causes out.
+    - name: Root cause
+      contains: Your explanation of why the bug happens, not just which line is wrong.
+    - name: Fix
+      contains: Your proposed fix, with a review of side effects and risks.
+    - name: Verification test
+      contains: A test that proves the fix works and would catch the bug if it came back.

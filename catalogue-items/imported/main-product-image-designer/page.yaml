@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set layout recipe, and you choose the words.
 new_slug: main-product-image-designer
 name: Main product image designer
-summary: Give it a product photo and selling points. Get a main image with the
-  copy laid on. Your image model draws it.
+summary: Turn a product photo and your selling points into a square main image with text on it, ready for a marketplace listing.
 job: product-photos
 headline: Main product image designer
-subhead: A square main image for your product with selling-point text laid on
-  it, built to stay readable at thumbnail size. Your image model draws it;
-  Claude writes the instructions.
+subhead: A square main image for your product with selling-point text laid on it, built to stay readable at thumbnail size. Your image model draws it; Claude writes the instructions.
 explain: |
   A square main image for your product with selling-point text laid on it, built to stay readable at thumbnail size. Your image model draws it; Claude writes the instructions.
 
@@ -18,6 +15,10 @@ when:
   - Your plain product photo gets few clicks in search results.
   - You want the text to stay clear when the image is small.
   - You have a product photo but no designer.
+not_for:
+  - "You need a long detail page with many sections: use the detail page skill from the same set, or a designer."
+  - "Your product has no checked selling points or real promo: write and confirm them first, then come back."
+  - "You want the photo changed, such as a new shape or colour: use your photo editor, as this skill keeps the product as is."
 you_give:
   - A product photo on a plain background
   - Three or four selling points
@@ -29,9 +30,30 @@ you_get:
   - Advice on keeping text legible
   - One square main image once drawn
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Set up a paid dLazy account and add credits. The image step uses it, and your AI needs to run code to call it.
+  - Paste the skill into your AI, or upload its folder if your AI can use files.
+  - Give it your photo, your features and your promo. Keep the headline to 10 characters and the badge to 8.
+  - Let it draw three versions, then pick the one where the text is clear and correct.
+  - Shrink the image to about 200 pixels wide. If you can't read the headline, shorten it and run again.
+  - Upload the image to your main image slot. For a new sale, change only the badge line and run again.
+output_sample:
+  input:
+    - Your product photo, on a plain background
+    - Your product's key features, split by slash (up to 100 characters)
+    - Your promo offer, split by slash (up to 100 characters)
+    - Your product type, such as shoes, clothes or beauty
+    - A layout reference image (optional)
+  prerequisites:
+    - A paid dLazy account with credits
+    - An AI that can run code, to call the dLazy image tool
+  output:
+    - name: Picture prompt
+      contains: Written instructions for the image model, with the product, background, headline, two small lines and badge.
+    - name: Layout zones
+      contains: A badge corner for the offer, the product at centre left, and the feature text on the right.
+    - name: Colour and background choice
+      contains: A background, text colour and badge colour picked to suit your product type.
+    - name: Main image file
+      contains: One square image with your product kept as is and the Chinese text laid on.
+    - name: Fix lines
+      contains: Extra lines to add to the prompt when text is garbled, too small, or covers the product.

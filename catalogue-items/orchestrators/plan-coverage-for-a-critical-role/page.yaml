@@ -1,52 +1,91 @@
 new_slug: plan-coverage-for-a-critical-role
 name: Plan coverage for a critical role
 headline: Plan coverage for a critical role
-summary: Share the source files. Get a role coverage map, development actions and a handover checklist.
+summary: Make sure someone can cover each critical task. Get a role coverage map, the skills each backup needs, practice actions and a handover checklist.
 job: lead-people
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A role coverage map, development actions and a handover checklist. Share critical tasks, current owner, available deputies, dependencies and the planning horizon. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the critical tasks of one role, who does them now and who could cover. It builds a role coverage map that shows where cover is real and where it is a gap. Then it lists the skills each backup needs, the practice that closes each gap and a handover checklist.
 explain: |-
-  A role coverage map, development actions and a handover checklist.
+  Most role cover plans stop at a name. "Sam covers payroll." But if Sam has never run it, that is a hope, not cover. This workflow plans coverage task by task and asks for proof. It marks each backup as none, claimed or shown, and a task with no shown backup becomes a named gap.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Each critical task has a trained backup or a named gap; readiness is supported by work evidence. Missing tools or evidence stay visible in the final summary.
+  Step 1 builds the coverage map. Step 2 turns each task into skills you could see someone do, so training has a target. Step 3 writes the practice and review actions that close each gap before the cover is needed. A last check builds the handover checklist from the three files, so a backup knows what to have ready.
+
+  It plans for one role at a time. It does not move anyone, change a job or promise a promotion. Your own reviewer decides who covers what.
 when:
-  - You need a role coverage map, development actions and a handover checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A key person is the only one who can run a task that cannot stop, such as payroll, a supplier account or customer onboarding.
+  - Someone has given notice or set a retirement date and you need cover ready by then.
+  - A client, lender or insurer asked who covers a role if the owner is out.
+  - You plan a long leave and want a backup trained before it starts.
+not_for:
+  - You are covering one short absence. Use the prepare a team absence handover workflow.
+  - A founder is stepping back from many tasks at once. Use the hand over founder dependent operations workflow.
+  - You run a nonprofit and need a plan for the top leader. Use the nonprofit leadership handover planner.
+  - You already know the skills gap and only need a training plan. Use the training program builder on its own.
 you_give:
-  - Critical tasks, current owner, available deputies, dependencies and the planning horizon.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The role's critical tasks, each with how often it happens and what breaks if it stops (from the role holder and the job description)
+  - The current owner of each task and who could cover it
+  - What each possible backup has already done, such as past cover or work samples
+  - What each task depends on, such as tools, access and outside contacts
+  - The date or period by which cover must work
 you_get:
-  - A role coverage map, development actions and a handover checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A role coverage map with one row per task, its backup, evidence and gap
+  - The observable skills each backup needs for those tasks
+  - Practice and review actions that close each gap, with an owner and a date
+  - A handover checklist per task
+  - A list of missing facts and checks that did not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste the critical tasks, owners, possible backups and your date. Add past cover or work samples if you have them.
+  - After step 1, check that no backup is marked ready without something to show for it.
+  - After step 3, read each action as the backup would. Ask whether the practice is real work they can do.
+  - Share the checklist with the role holder and fix what they say is wrong.
 how_it_works:
   - title: Succession plan builder
-    text: Identify continuity needs and possible cover using supplied skills and role evidence.
+    text: Lists each critical task, the possible cover and the evidence for it. Marks a task with no shown backup as a named gap. Hands step 2 the tasks and the gaps. Check before moving on, every task has a backup or a gap.
   - title: Role skills framework builder
-    text: Define the observable skills each proposed backup needs for the critical tasks.
+    text: Turns each task into skills you could watch someone do, such as "runs the month-end export alone". Hands step 3 the skills each backup lacks. Check before moving on, no skill is a trait like "reliable".
   - title: Training program builder
-    text: Create practice and review actions to close the specific gaps before cover is needed.
+    text: Writes practice and review actions for each gap, such as shadowing a run, doing one with review, then doing one alone. Hands back the actions with owners and dates.
+  - title: Check and hand back
+    text: Builds the handover checklist from the three files and joins everything into one result. Marks every missing fact.
 output_shape: |-
-  Scope and source coverage
-  A role coverage map, development actions and a handover checklist.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ROLE COVERAGE MAP
+    <task | owner | backup | evidence: none, claimed or shown | gap | risk if uncovered>
+  BACKUP SKILLS
+    <task | skills you could watch | how you would see it>
+  DEVELOPMENT ACTIONS
+    <gap | practice or review action | who leads | date | what shows it worked>
+  HANDOVER CHECKLIST, per task
+    <steps written | access requested | files and contacts | when to call the owner | test run done>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - "The role's critical tasks, how often they happen and what breaks if they stop"
+    - "The current owner of each task and who could cover it"
+    - "What each backup has already done"
+    - "The date or period by which cover must work"
+  prerequisites:
+    - "An AI that can read files or long pasted text"
+  output:
+    - name: "Role coverage map"
+      contains: "One row per task with owner, backup, evidence of readiness and the gap."
+    - name: "Backup skills"
+      contains: "For each task, the skills you could watch someone do and how you would see them."
+    - name: "Development actions"
+      contains: "Practice and review steps for each gap, with a lead, a date and a sign it worked."
+    - name: "Handover checklist"
+      contains: "Per task, what a backup needs ready: written steps, access, contacts and a test run."
+    - name: "Missing and checks missed"
+      contains: "Every unknown fact, marked MISSING, and any check that could not run."
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: One role
+    how: Plan one role per run. Two roles in one run blur the gaps and the owners.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Each critical task has a trained backup or a named gap; readiness is supported by work evidence.
+    how: Attach a past cover week or a work sample per backup. Readiness moves from claimed to shown.
+  - what: Time left
+    how: Say how many weeks you have. Actions are sized to fit, and what cannot fit is flagged.
 judge:
   - Each critical task has a trained backup or a named gap; readiness is supported by work evidence.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +98,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Run it again each quarter and update the evidence column as backups do real work.
+  - Keep each completed practice run as a work sample, so readiness stays shown.
+  - Add your own skill wording for your tools, so the skills match what people really do.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads your task list and the pack together. Nothing is sent or changed for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The role's current procedures or checklists, if they exist.
+    - A record of past cover, such as who ran things during a holiday.
 terms:
+  - term: Critical task
+    meaning: A task that cannot stop without harm to customers, money or the law.
+  - term: Backup
+    meaning: The person who covers a task. A backup counts as ready only with evidence they can do it.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

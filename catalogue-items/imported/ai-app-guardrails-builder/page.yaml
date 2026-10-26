@@ -2,36 +2,103 @@ thinking: medium
 thinking_why: Rules follow a set pattern, but each needs testing.
 new_slug: ai-app-guardrails-builder
 name: AI app guardrails builder
-summary: Describe what your AI app must never do. Get rules that block
-  jailbreaks, made-up facts and leaked personal details.
+summary: Set up guardrails for your AI chatbot with NeMo Guardrails. Get rules that refuse jailbreaks and private data, plus a test plan to check each rule.
 job: build-software
 headline: AI app guardrails builder
-subhead: Safety rules for your AI app that block jailbreaks, made-up facts and
-  leaked personal details before a reply goes out. You say what the app must
-  never do, and the rules enforce it at run time.
+subhead: Tell it what your AI app must never say or do. You get guardrail rules for what users send in and what the app sends back, refusal messages and a test plan. It labels any check you must still write yourself.
 explain: |
-  Safety rules for your AI app that block jailbreaks, made-up facts and leaked personal details before a reply goes out. You say what the app must never do, and the rules enforce it at run time.
+  AI chatbot guardrails are rules that sit outside the prompt. They check what a user sends before the model sees it, and what the model says before the user sees it. Because they sit outside the prompt, they are harder to talk your way around.
 
-  The skill uses NeMo Guardrails, a Python package you install. Rules are written as short patterns: what users might say, what the bot should answer, and which flow connects them. Input rules catch attempts such as "ignore your instructions" and refuse before the model sees them. Output rules check replies for toxic text, unsupported facts and personal data. You can add your own check functions. A test script sends sample attacks to confirm each rule fires.
+  This skill uses NeMo Guardrails, a free Python package from NVIDIA. You describe what the app must never do. The skill turns that into short rules: the phrases users might send, the reply the app should give, and the flow that links them. It covers jailbreak attempts, toxic text, private data such as emails, and unsupported facts.
+
+  It is honest about limits. A phrase rule only catches the phrases you list. A fact check needs a source you trust, and the skill gives you a placeholder for it, not a fake check. Every test is marked NOT RUN until you run it.
 when:
   - Users try to talk your chatbot out of its rules.
   - Your bot sometimes states facts it cannot back up.
-  - You must stop the bot from repeating emails, phone numbers or other private
-    data.
+  - You must stop the bot from repeating emails, phone numbers or other private data.
   - You want rules that sit outside the prompt so they are harder to bypass.
+not_for:
+  - "You only need to filter harmful text: a hosted moderation API is simpler than building rails."
+  - "You want to attack-test an AI agent you already built: use the AI agent attack tester."
+  - "You want to score your app's answers against a test set: use the AI app evaluation planner."
 you_give:
-  - What your app must never say or do
-  - Examples of attacks or bad requests
-  - Your app's code or setup (optional)
-  - A Python setup
+  - What your app does and what it must never say or do
+  - Examples of attacks or bad requests you have seen (optional)
+  - Which Python app and model you use
+  - What personal data the app could see, and the privacy rules that apply
+  - Whether your AI can run Python for you
 you_get:
-  - Guardrail rules for input and output
-  - Refusal messages
-  - Custom check functions
-  - Test cases for each rule
+  - A rules table that shows which check covers each risk
+  - Config and rule files for what users send in and what the app sends back
+  - A plain refusal message for each rule
+  - A test plan with fake attack texts and the result each should give
+  - A list of limits and checks you must still write yourself
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Write what your app must never do, in plain words. Add any real attack texts you have seen. Use fake names and numbers, never real ones.
+  - Check what you need. NeMo Guardrails is a Python package you install, your app needs a model with its own key, and Presidio and LlamaGuard are extra installs.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. It works best when your AI can run Python. If it cannot, every test is marked NOT RUN.
+  - Paste your notes. Answer any question your AI asks. Skipped inputs are listed as missing, not guessed.
+  - Run the test plan yourself with fake data. Fix any rule that does not give the result the plan expects.
+  - Do not ship until you have written the placeholder checks and tested real attacks. Pair it with the AI agent attack tester.
+output_shape: |
+  Rules summary: <risk> | <input or output rail> | <method> | <what it needs>
+  Files: <config.yml>, <rail files>, <actions.py with placeholders marked>
+  Refusal messages: <one plain line per rule>
+  Test plan: <fake attack text> | <rule it should hit> | <expected result> | <NOT RUN or result>
+  Limits: <what the rules do not guarantee>
+  Missing: <inputs not given>
+output_sample:
+  input:
+    - What your app does and what it must never say or do
+    - Attack texts you have seen (optional)
+    - Which Python app and model you use
+    - Which personal data the app could see
+  prerequisites:
+    - A Python setup where you may install NeMo Guardrails
+    - A model for your app, with its own key or endpoint
+    - Presidio or LlamaGuard installs, if you want those checks
+  output:
+    - name: Rules summary
+      contains: One row per risk, with the rail, the method and what it needs.
+    - name: Files
+      contains: The config file, the rail files and the actions file, with placeholders clearly marked.
+    - name: Refusal messages
+      contains: One plain line for each rule, written for your users.
+    - name: Test plan
+      contains: Fake attack texts, the rule each should hit and the expected result, marked NOT RUN until you run them.
+    - name: Limits
+      contains: What the rules do not guarantee, such as unlisted phrases and checks that need your source.
+    - name: Missing
+      contains: Inputs you did not give and how that limits the rules.
+how_it_works:
+  - title: Check what you need
+    text: It tells you about installs, model keys and any paid outside service before it writes a rule.
+  - title: Map risks to rails
+    text: It assigns each risk to an input rule, an output rule or both, and picks a method for each.
+  - title: Write the rules
+    text: It writes phrase rules for attacks, self-check rules for model replies and config for Presidio or LlamaGuard.
+  - title: Mark the placeholders
+    text: Any check it cannot write for you, such as a fact check, is labelled as a placeholder.
+  - title: Plan the tests
+    text: It writes fake attack texts with the expected result, and marks each NOT RUN until a test runs.
+  - title: State the limits
+    text: It lists what the rules do not catch, so the app is not called safe by mistake.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with code running
+      why: Writing the rules needs no code. Running the test plan does, so use an AI that can run Python or run it yourself.
+    - name: NeMo Guardrails (free Python package)
+      why: The rules are written for it. It is a separate install, and your app needs its own model with a key.
+  inputs:
+    - Real attack texts from your own logs, with names and numbers removed
+    - Your privacy rules for personal data
+    - A source your app can check facts against
+terms:
+  - term: Guardrails
+    meaning: Rules that check what goes into and out of an AI app.
+  - term: Jailbreak
+    meaning: A message that tries to make an AI break its own rules.
+  - term: Presidio
+    meaning: A separate tool that finds personal data such as emails in text.
+  - term: LlamaGuard
+    meaning: A safety model from Meta that checks text for harmful content.

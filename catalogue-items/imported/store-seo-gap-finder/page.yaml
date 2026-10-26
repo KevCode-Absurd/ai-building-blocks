@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It checks for blank fields.
 new_slug: store-seo-gap-finder
 name: Store SEO gap finder
-summary: Get products, collections and pages with no search title or
-  description, so search results stop looking blank.
+summary: Find Shopify products, collections and pages with no search title or description, and get a list to fix. Read-only store SEO gap finder.
 job: get-found-in-search
 headline: Store SEO gap finder
-subhead: A list of pages in your Shopify store that show up blank or weak in
-  search results. It scans products, collections and pages for missing or short
-  search titles and descriptions, the text that appears under your link on
-  Google.
+subhead: A list of pages in your Shopify store that show up blank or weak in search results. It scans products, collections and pages for missing or short search titles and descriptions, the text that appears under your link on Google.
 explain: |
   A list of pages in your Shopify store that show up blank or weak in search results. It scans products, collections and pages for missing or short search titles and descriptions, the text that appears under your link on Google.
 
@@ -19,6 +15,10 @@ when:
   - Your listings in Google show random text from the page.
   - You are planning an SEO clean-up and need a to-do list.
   - You want a regular check after each product launch.
+not_for:
+  - "Your store is not on Shopify: check titles and descriptions by hand, or use your own platform's SEO settings."
+  - "You need new search titles or descriptions written: this only finds the gaps, so write the text yourself or ask your AI in a separate step."
+  - "You want to change anything in your store: this tool only reads, so edit the fields in your Shopify admin."
 you_give:
   - Your Shopify store link and read access
   - What to scan, products, collections, pages or all (optional)
@@ -29,8 +29,28 @@ you_get:
   - Pages with short text flagged
   - Results grouped by type
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code and the Shopify CLI, such as Claude Code. A plain chat window cannot reach your store.
+  - "Sign in to your store with read access to products and content. The skill lists the exact command: shopify store auth with the read_products and read_content scopes."
+  - Paste the skill and give your store domain. Add what to scan and your minimum lengths if you want to change the defaults.
+  - Let it scan. It only reads and changes nothing in your store.
+  - Open the CSV file and fix the flagged rows in your Shopify admin, starting with products.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - "What to scan: products, collections, pages or all (optional)"
+    - Shortest title length you accept (optional)
+    - Shortest description length you accept (optional)
+  prerequisites:
+    - An AI that can run code and the Shopify CLI
+    - Read access to products and content in your store
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the time the scan began.
+    - name: Step log
+      contains: One line per scan step, with what was asked and how many records came back.
+    - name: Summary
+      contains: How many products, collections and pages were scanned, and how many have missing or short search text.
+    - name: Top gaps
+      contains: The first products flagged, each with what is missing, such as the description or a too-short title.
+    - name: seo_audit CSV file
+      contains: One row per flagged item with type, id, title, handle, search title, search description and the issue.

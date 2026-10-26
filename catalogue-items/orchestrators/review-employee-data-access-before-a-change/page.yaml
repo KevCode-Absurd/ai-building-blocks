@@ -1,52 +1,84 @@
 new_slug: review-employee-data-access-before-a-change
 name: Review employee data access before a change
 headline: Review employee data access before a change
-summary: Share the source files. Get an access and privacy issue list with a restricted action plan.
+summary: "Review employee data access before an HR system change: get an access and privacy issue list and a restricted action plan for your reviewer."
 job: check-contracts
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An access and privacy issue list with a restricted action plan. Share proposed HR system or process changes, data categories, role access, retention and local policy. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the planned HR system or process change, the data it touches and who gets access. It checks the data flow and access against job tasks, ranks the people risks and lists the actions a reviewer must approve first. You get an issue list and a restricted action plan.
 explain: |-
-  An access and privacy issue list with a restricted action plan.
+  Changing an HR system often changes who can see pay, health or performance records. This workflow helps you review employee data access before a change goes live, so access follows the job and not whoever asks.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Access needs follow job tasks; sensitive data and retention claims are supported by policy and evidence. Missing tools or evidence stay visible in the final summary.
+  The Employee data privacy checker reviews the changed data flow and access scope without copying employee records into the review. The People risk register builder maps the privacy and operating risks to mitigations and owners. The Executive action register keeper then turns them into a list of reviewer actions and the proof each needs, before any access is changed.
+
+  It works from your policy and the roles you list, not from real employee files. It is a review aid, not legal or HR advice. The responsible person approves each action, and it never changes live access.
 when:
-  - You need an access and privacy issue list with a restricted action plan.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are moving payroll, HR records or time tracking to a new system.
+  - A manager asks for wider access to employee records.
+  - A tool will start reading staff data, such as an AI note taker.
+  - You need a record of why a role may see sensitive fields.
+not_for:
+  - You are choosing which HR software to buy. Use Compare HR software before buying.
+  - You only want to check one AI tool that uses staff data. Use the Employee data privacy checker.
+  - You want to grant or remove access now. This lists actions for a reviewer. Your IT admin makes the change.
+  - The data belongs to customers, not staff. Use Prepare a new data use for review.
 you_give:
-  - Proposed HR system or process changes, data categories, role access, retention and local policy.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - "The change: which HR system or process is changing, and when (from the project plan)"
+  - The data it holds, such as pay, health, performance or ID numbers
+  - Roles and who gets which access now and after the change (a table is fine)
+  - The countries where your staff work
+  - Your retention rules and local privacy policy (optional)
 you_get:
-  - An access and privacy issue list with a restricted action plan.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "An issue list: each access or privacy problem, the role and data it touches, and why it matters"
+  - A people risk list ranked by likelihood and impact, with a mitigation and owner
+  - "A restricted action plan: what a reviewer must approve before access changes"
+  - The proof each action needs
+  - A hand-back note with MISSING lines and any check that did not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give the whole folder to Claude, ChatGPT or Gemini.
+  - Paste or attach the change description, a role-and-access table and your policies. Use data types and role names, not real employee records.
+  - Check the issue list. Each issue must name a role, a data type and a reason. Mark any you disagree with.
+  - Check the risk list with your HR lead. Fix wrong owners.
+  - Give the action plan to the person who approves access. Change nothing until they sign off.
 how_it_works:
   - title: Employee data privacy checker
-    text: Review the changed data flow and access scope without copying unnecessary employee records.
+    text: "Reviews the changed data flow and who gets access, role by role, against the tasks each role does. Keeps real employee records out of the review. Hands step 2 the issue list. Check before moving on: each issue names a role, a data type and a reason."
   - title: People risk register builder
-    text: Map supported privacy and operational risks to practical mitigations and responsible roles.
+    text: "Maps the issues to privacy and operating risks with likelihood, impact, a mitigation and an owner. Hands step 3 the risks that need a decision. Check before moving on: every risk traces to an issue or a policy line."
   - title: Executive action register keeper
-    text: Prepare restricted reviewer actions and evidence requirements before access changes are made.
+    text: "Turns the risks into reviewer actions with an owner, a due date and the proof needed before any access change. Hands back the restricted action plan. Check before moving on: every action says who approves it."
 output_shape: |-
-  Scope and source coverage
-  An access and privacy issue list with a restricted action plan.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE    <change, date, countries, systems>
+  ISSUES   <role> | <data> | <access now> | <access after> | <issue> | <why it matters>
+  RISKS    <risk> | <likelihood> | <impact> | <mitigation> | <owner>
+  ACTIONS  <action> | <owner> | <proof needed> | <must happen before which change>
+  SOURCES  <each file or policy and its date>
+  MISSING  <each gap and what it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - The HR system or process change, and the date
+    - The data it holds, such as pay or health records
+    - Roles with their access now and after the change
+    - The countries where your staff work
+  prerequisites:
+    - An AI that can read files. Use role names and data types, not real employee records
+  output:
+    - name: Issue list
+      contains: Each access or privacy problem with the role, the data and why it matters.
+    - name: People risk list
+      contains: Risks ranked by likelihood and impact, each with a mitigation and an owner.
+    - name: Restricted action plan
+      contains: Actions a reviewer must approve before access changes, with owner and proof needed.
+    - name: Hand-back note
+      contains: Saved files, MISSING lines and checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Access needs follow job tasks; sensitive data and retention claims are supported by policy and evidence.
+  - what: Sensitive data only
+    how: Tell it to focus on pay, health and ID numbers. The list gets shorter and easier to act on.
+  - what: A new tool
+    how: Name the tool and what it reads. The review then covers where the data goes and who can export it.
+  - what: Your country
+    how: Name each country where staff work. Retention and notice points then follow those rules.
 judge:
   - Access needs follow job tasks; sensitive data and retention claims are supported by policy and evidence.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +91,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep one table of roles and the data each needs. Update it when a job changes.
+  - Save the approved action plan with the change record so the next review starts from it.
+  - Record any check that needs a person, such as a works council or legal review, and finish it before access changes.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI with file support
+      why: It can read your policy and role table. Do not attach real employee files. Paste data types and role names.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A role-and-access table from your IT admin.
+    - Your data retention schedule.
 terms:
+  - term: Data flow
+    meaning: Where employee data comes from, where it is stored and who can see it.
+  - term: Retention
+    meaning: How long a record is kept before it is deleted.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result of one step, passed to the next.

@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It matches rows and explains what is left.
 new_slug: account-reconciler
 name: Account reconciler
-summary: Give it a ledger and a bank statement. Get matched items, the gaps
-  sorted by type and a next step each.
+summary: Match your ledger to a bank statement or subledger, and sort each gap into timing, adjustment or needs a look. Get a next step for each one.
 job: track-numbers
 headline: Account reconciler
-subhead: Give it a ledger or trial balance extract, the bank statement or other
-  record to compare, and the period you are closing. It matches the items that
-  agree and sorts each gap into timing, adjustment or needs a look. You get the
-  matched list, the differences by type, an aging view and a next action for
-  each. Have an accountant check it.
+subhead: Give it a ledger or trial balance extract, the bank statement or other record to compare, and the period you are closing. It matches the items that agree and sorts each gap into timing, adjustment or needs a look. You get the matched list, the differences by type, an aging view and a next action for each. Have an accountant check it.
 explain: |
   Differences between your books and a bank statement, subledger or partner records are matched, sorted and explained. Have an accountant check the result before you rely on it.
 
@@ -20,6 +15,10 @@ when:
   - Two group companies disagree on what they owe each other.
   - You need to explain old open items to your accountant.
   - You want a clear list of what needs booking and what needs a closer look.
+not_for:
+  - "You need payroll or inventory count checks: use your payroll report or a stock count sheet, as this skill does not cover them."
+  - "You need tax or audit work: ask your accountant, as this is a working aid and not sign-off."
+  - "You want a final sign-off on the books: have an accountant review the result before you close."
 you_give:
   - A ledger or trial balance extract
   - A bank statement or the other record to compare
@@ -32,8 +31,31 @@ you_get:
   - An aging view of open items
   - A note on the next action for each gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read the files you upload.
+  - Export your ledger or trial balance for the period. Export the bank statement or other record to compare. Use the same cut-off date and currency for both.
+  - If you are checking a subledger, pull its report as of the same date, such as the AR or AP aging.
+  - Paste the skill into Claude, ChatGPT or Gemini. Add your files, or paste the rows if your AI cannot read files.
+  - Add the period you are closing. Add your escalation limits if you have them.
+  - Read the three groups. Check each adjustment before you book it.
+  - Send the result to your accountant for review before you sign off.
+output_sample:
+  input:
+    - Your ledger or trial balance extract
+    - Your bank statement or the other record to compare
+    - The period you are closing
+    - Your escalation limits, such as amounts and days old (optional)
+  prerequisites:
+    - Both records cut off at the same date and in the same currency
+    - A subledger report, if you are checking a ledger against a subledger
+  output:
+    - name: Reconciliation summary
+      contains: The balance on each side, the items that match and the difference left over.
+    - name: Timing differences
+      contains: Items like outstanding checks and deposits in transit that should clear without a journal entry.
+    - name: Adjustments required
+      contains: Items that need a journal entry, such as unrecorded bank fees, interest, errors or missing entries.
+    - name: Items to investigate
+      contains: Differences with no clear cause, disputed amounts and old items that have not cleared.
+    - name: Aging report
+      contains: Each open item with its amount, start date, age in days, category, status and owner.
+    - name: Trend and escalation notes
+      contains: Whether open items are growing and which ones pass your limits and need review.

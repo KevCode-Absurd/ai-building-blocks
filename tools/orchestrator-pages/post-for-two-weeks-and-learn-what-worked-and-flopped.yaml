@@ -14,6 +14,10 @@ when:
   - You post often but have no proof of what works.
   - You are about to start posting and want a first set you can trust.
   - A post flopped and you don't know whether to rewrite it or drop the topic.
+not_for:
+  - "You have one post that flopped and want only its reason: use the Post flop reason finder."
+  - "You want a week of posts with no numbers read afterwards: use the Weekly social content planner."
+  - "You want posts for one account on X and LinkedIn: use the X and LinkedIn post pair writer."
 you_give:
   - The platforms you use and your goal
   - Your brand file (optional)
@@ -29,6 +33,29 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Name your platforms and goal. Fix the weakest posts, then post them on the days in the calendar.
   - After two weeks, export your numbers from each platform and give them back.
+output_sample:
+  input:
+    - The platforms you post on and your goal
+    - Your brand file (optional)
+    - Who you want to reach (optional)
+    - After two weeks, an export of reach, likes, comments, shares and clicks for each post
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - Two weeks of posting before steps 3 and 4 can run
+    - Impressions for each post, which the flop step needs. It reads X and LinkedIn posts.
+  output:
+    - name: "Step 1: Calendar and posts"
+      contains: Topics, a mix of post types, a two-week calendar and the written posts for each platform.
+    - name: "Step 2: Sharing check"
+      contains: Six ratings per post with quotes, a score out of 30, the weakest reason and one change.
+    - name: Pause
+      contains: You post for two weeks, then export your numbers from each platform.
+    - name: "Step 3: Results"
+      contains: Engagement rate for each post, a platform comparison, a ranking and what to post next.
+    - name: "Step 4: Flop diagnosis"
+      contains: Whether the worst post was unseen, skipped or ignored, and the one change to make.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Plan and write the posts
     text: Sets topics and a mix of post types, lays out a calendar and writes the posts for each platform.

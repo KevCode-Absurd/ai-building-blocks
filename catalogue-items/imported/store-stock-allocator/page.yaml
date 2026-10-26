@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It spreads limited stock using each store sales.
 new_slug: store-stock-allocator
 name: Store stock allocator
-summary: Give it a new buy and store sales. Get how many units of each size and
-  style go to each store.
+summary: Split a new buy across your stores by sales history. Get units by store, style and size, plus a reserve to hold back. Fits store stock allocation.
 job: plan-supply-chain
 headline: Store stock allocator
-subhead: A split of a new delivery across your stores that matches what each one
-  can sell. You give the buy, the sizes and styles, and each store's sales, and
-  get how many units of each go where.
+subhead: Give it your new buy and each store's sales. It groups your stores, then splits the buy by style and size. You also get a reserve to hold back for reorders.
 explain: |
   A split of a new delivery across your stores that matches what each one can sell. You give the buy, the sizes and styles, and each store's sales, and get how many units of each go where.
 
@@ -16,22 +13,55 @@ explain: |
 when:
   - A new season's buy arrives and you must decide what each store gets.
   - Some stores sell out in days while others hold stock for months.
-  - You split everything equally and suspect that costs you sales.
-  - Your size mix ends with too many mediums and no smalls in the busy stores.
+  - You split everything equally and think it costs you sales.
+  - Busy stores end up with too many mediums and no smalls.
+not_for:
+  - "You want to keep shelves stocked week to week: use a replenishment plan, since this skill only covers the first split of new stock."
+  - "You need to decide when and how much to mark down: use a markdown pricing tool, not this one."
+  - "You have one store or a very small buy: split it by hand, as clusters add no value there."
 you_give:
-  - The new buy by style, size and cost
-  - Store list with sales history
+  - Your new buy by style, size and cost
+  - Your store list with sales history
   - Store sizes and tiers
-  - Current sell-through and markdown rate (optional)
-  - Weeks of cover you want
+  - Your current sell-through and markdown rate (optional)
+  - The weeks of cover you want
 you_get:
-  - Units by store, style and size
-  - Store clusters with reasons
-  - A warehouse reserve amount
-  - Re-balancing rules
-  - Targets for sell-through
+  - Units for each store, style and size
+  - Store groups with the reason for each
+  - A reserve of units to hold at the warehouse
+  - Rules for moving stock when a store sells out early
+  - Sell-through targets for each store grade
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your buy and your store sales as tables. A spreadsheet with columns for store, style, size and units works best.
+  - Answer its questions about your products, store tiers, current split and goals.
+  - Check the store groups first. The A, B and C cut-offs and the 8, 6 and 4 weeks of cover are defaults, so change them to fit your data.
+  - Read the units by store, style and size. Fix anything that looks off before you send it to the warehouse.
+  - Any code in the skill is only an example with random data. You do not need to run it.
+output_sample:
+  input:
+    - Your new buy by style, size and cost
+    - Your store list with sales history
+    - Store sizes and tiers
+    - Your current sell-through and markdown rate (optional)
+    - The weeks of cover you want (optional)
+  prerequisites:
+    - Your store sales in a spreadsheet or pasted table. The AI will ask for any column it lacks.
+    - An AI that can run code is helpful for large store lists, but not required.
+  output:
+    - name: Executive summary
+      contains: The product, total units, store count, method used and the sell-through you can expect.
+    - name: Store cluster profiles
+      contains: Each group of similar stores, how many stores it holds, and the stock approach for that group.
+    - name: Allocation summary by grade
+      contains: Units, share of the buy, style coverage and weeks of supply for A, B and C stores.
+    - name: Size curve allocation
+      contains: The share of each size that each store group should get.
+    - name: Sample store allocation
+      contains: Units per store for your top stores, with the top style in each.
+    - name: Financial impact
+      contains: Units, full price value, expected sell-through and markdown rate set against your target.
+    - name: Risk assessment
+      contains: Risky styles, regional risks, and the stock held back to move later.
+    - name: Action plan
+      contains: Week by week steps from final plan to moving stock between stores.

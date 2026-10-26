@@ -10,6 +10,38 @@ metadata:
 
 Comprehensive employee wellbeing knowledge for HR business partners, wellbeing program managers, and people leaders — from understanding modern wellbeing program design and mental health support principles to running burnout risk assessments, building flexible work policies, and leading post-crisis stabilization.
 
+This is HR planning support. It is not medical advice, and it cannot diagnose anyone.
+
+## Safety first
+
+- If someone may be in danger or may harm themselves, stop. Tell the user to contact local emergency services, or the person's clinician or crisis line, right now. Do not draft a plan for that moment.
+- Never name or diagnose individual employees from data. Work with team-level numbers only.
+- Before the user shares survey, workload or leave data, remind them to remove names and health details and to check their data protection rules. Employees should know what is measured and why. Do not design hidden monitoring of individuals.
+
+## How to run this skill
+
+1. **Ask once for what is missing.** You need: team size and type of work, known pressures or risks (such as a restructure or long hours), and the budget range if there is one. Optional: existing benefits and policies, survey or workload data (team level). If the user gives none, write `MISSING: <what>`. Never invent numbers about their team.
+2. **Check the risk.** From what the user gave, name the most likely sources of burnout (workload, change, unclear roles, manager support). Mark each as a signal to check, not a finding. Offer a short early-warning checklist for managers: signs to watch and a question to ask.
+3. **Write the plan.** Cover the program's goals, the actions by owner, support steps (employee assistance, flexible work, leave), manager training, and how you will measure whether it helped (behaviour and retention, not just attendance at events). If the user wants options, compare two or three and say the trade-offs.
+4. **Write the manager guide.** What to say and do when someone shows signs of burnout or discloses a problem, who to call at HR, and what stays private. Leave a place for the local emergency number and the employee assistance contact: `[ADD]`.
+5. **Write the return-to-work plan** if someone is coming back from burnout or mental health leave. Include the first week and check-ins at 30, 60 and 90 days. Say that workload should be agreed with the person, and that medical details are theirs to share.
+6. **Draft staff messages** and, if asked, a short proposal for leaders. Do not claim results you do not have, and do not cite industry statistics unless the user gives a source.
+
+### Output format
+
+```
+## Wellbeing plan
+Goals / Risks to check / Actions (owner, date) / Measures
+## Manager early-warning checklist
+## Manager guide
+## Crisis steps (with [ADD] contact slots)
+## Return-to-work plan
+Week 1 / 30-day check-in / 60-day check-in / 90-day check-in
+## Staff messages
+## Proposal for leaders (if asked)
+## MISSING (anything you could not fill)
+```
+
 ## Supported tasks
 
 - Explaining employee wellbeing concepts and terminology for HR teams and business leaders
@@ -22,109 +54,25 @@ Comprehensive employee wellbeing knowledge for HR business partners, wellbeing p
 - Using AI tools to analyze wellbeing data and draft support communications
 - Writing wellbeing program proposals, manager guidance, and employee communications
 
-## What employee wellbeing means in 2026
+## What good wellbeing work includes
 
-Modern employee wellbeing is no longer:
+Wellbeing is more than a yearly wellness week, an employee assistance program nobody knows how to use, or help that starts after someone has gone on leave. Good practice usually includes:
 
-- "a once-a-year wellness week with free snacks and a yoga session"
-- "an employee assistance program nobody knows how to access"
-- "burnout addressed only after someone has already gone on leave"
+- checking workload and survey signals through the year, not only once
+- training managers to spot early burnout signs
+- flexible work policies built around outcomes where the work allows it
+- mental health support that people can reach without stigma
+- crisis steps that are written down before they are needed
+- a return-to-work plan, not ad hoc reintegration after leave
+- measures that look at behaviour and retention, not only participation
 
-In 2026, modern employee wellbeing increasingly includes:
+## Tools people use (examples only, not endorsements; check current features and prices)
 
-- continuous wellbeing monitoring through behavioral and workload signals, not only annual surveys
-- manager-level burnout risk training embedded into people leadership development
-- AI-assisted early detection of workload imbalance and disengagement patterns
-- flexible work policies designed around outcomes rather than rigid schedules
-- destigmatized, accessible mental health support integrated into benefits design
-- proactive return-to-work plans rather than ad hoc reintegration after leave
-- a clear link between wellbeing investment and retention, performance, and safety outcomes
-
-Modern wellbeing teams are increasingly expected to support:
-
-- sustainable workloads under frequent organizational change and growth pressure
-- psychological safety that is explainable and defensible to employees and leadership
-- wellbeing program impact measured by behavior and retention, not just participation counts
-- crisis response protocols for acute mental health or safety situations
-- manager capability to recognize and respond to early burnout signals
-- a clear connection between employee wellbeing and business performance
-
-AI-assisted burnout risk detection and outcome-based flexible work design are becoming major industry trends in 2026.
-
-## Employee wellbeing ecosystem (2026)
-
-### Wellbeing platforms and benefits tools
-
-- Lyra Health
-- Spring Health
-- Headspace for Work / Calm for Business
-- Modern Health
-- Wellhub (formerly Gympass)
-
-### Employee assistance and mental health support
-
-- Employee Assistance Programs (EAPs)
-- Telehealth and virtual therapy platforms
-- Crisis hotlines and emergency mental health partners
-
-### Engagement and wellbeing measurement
-
-- Culture Amp
-- Glint (LinkedIn)
-- Qualtrics Employee Experience
-- Microsoft Viva Insights for workload and collaboration signals
-
-### Flexible work and leave management
-
-- Workday Absence Management
-- Leave management platforms (Sequoia, Cocoon)
-- Hybrid/remote work scheduling tools
-
-### AI-assisted wellbeing analytics
-
-- Microsoft Viva Insights
-- Visier
-- ChatGPT / Claude for wellbeing communication drafting and risk pattern analysis
-
-AI-assisted burnout and workload analytics are rapidly changing how organizations identify wellbeing risk before it surfaces as attrition or a health crisis.
-
-## Types of employee wellbeing roles
-
-### Wellbeing Program Coordinator
-
-Focuses on:
-
-- coordinating wellbeing program logistics and vendor relationships
-- maintaining EAP awareness and access materials
-- supporting wellbeing survey administration and reporting
-- organizing wellbeing-related events and communications
-
-### Wellbeing/Mental Health Program Manager
-
-Focuses on:
-
-- designing and running wellbeing programs and benefits offerings
-- building manager training on recognizing burnout and mental health signals
-- analyzing wellbeing data to identify risk patterns across teams
-- partnering with benefits teams on mental health coverage design
-
-### HR Business Partner (Wellbeing Focus)
-
-Focuses on:
-
-- leading return-to-work planning after burnout or mental health leave
-- responding to individual and team-level wellbeing crises
-- advising managers on sustainable workload and team health practices
-- escalating systemic wellbeing risks to leadership with data and recommendations
-
-### Director / Head of Employee Wellbeing
-
-Focuses on:
-
-- setting organization-wide wellbeing strategy and investment priorities
-- leading crisis response protocol design and executive readiness
-- advising the executive team on psychological safety and workforce sustainability
-- building internal manager capability for wellbeing leadership across the organization
+- Wellbeing and benefits platforms such as Lyra Health, Spring Health, Headspace for Work, Modern Health and Wellhub
+- Employee assistance programs (EAPs), telehealth and crisis hotlines
+- Survey and workload tools such as Culture Amp, Glint, Qualtrics Employee Experience and Microsoft Viva Insights
+- Leave management tools such as Workday Absence Management
+- A chat AI such as ChatGPT or Claude, for drafting messages and looking at team-level patterns
 
 ## Key prompts
 
@@ -156,51 +104,19 @@ Focuses on:
 
 1. "Design a [return-to-work plan] for [an employee returning after 6 weeks of burnout-related leave]."
 2. "How do I reconcile [an outcome-based flexible work policy] with [team collaboration needs] without creating [inequity between remote and in-office employees]?"
-3. "Use AI to analyze [our latest engagement and workload data] and identify [the top 3 burnout risk teams] to address before [next quarter]."
+3. "Use AI to analyze [our latest team-level engagement and workload data] and identify [the top 3 teams to look at first] before [next quarter]."
 4. "Help me draft a [manager talking points document] for [checking in with a team showing early disengagement signals]."
 5. "What should I include in a [90-day post-intervention review] to make sure [a wellbeing program actually reduced risk] rather than [participation alone looking like success]?"
 
-## Important hiring realities
-
-### Wellbeing work is highly cross-functional and sensitive
-
-Strong wellbeing professionals often need:
-
-- familiarity with mental health resources and appropriate escalation boundaries
-- facilitation and difficult-conversation skill for manager coaching
-- data literacy to identify risk patterns without over-relying on self-report alone
-- discretion and confidentiality in handling sensitive disclosures
-- credibility with both leadership and frontline employees
-
-### A wellbeing program on paper ≠ a program that reduces risk
-
-A candidate may:
-
-- design a logically sound wellbeing program with strong benefits offerings
-- but still lack:
-  - the manager training component needed for early signal recognition
-  - a clear crisis escalation protocol for acute situations
-  - a measurement approach that goes beyond participation counts
-  - a return-to-work process that prevents repeat burnout after reintegration
-
-### Wellbeing support is not benefits alone
-
-Strong wellbeing professionals understand that:
-
-- offering an EAP is not the same as employees feeling safe to use it
-- burnout is often a workload and structural issue, not only an individual coping issue
-- wellbeing programs need reinforcement and manager involvement, not a one-time rollout
-- different teams and roles need different support based on their specific risk profile
-
 ## Common HR misunderstandings
 
-### Wellbeing ≠ perks and events
+### Wellbeing is more than perks and events
 
-Wellness events and perks are one artifact of a wellbeing strategy. Full wellbeing work also includes burnout risk monitoring, manager training, crisis response, and return-to-work planning — the events are a visible output, not the discipline.
+Wellness events and perks are one visible part of a wellbeing strategy. Full wellbeing work also includes burnout risk monitoring, manager training, crisis response, and return-to-work planning.
 
 ### Wellbeing is not just an annual survey score
 
-A single engagement or wellbeing survey number does not capture organizational health. Strong wellbeing practice triangulates survey data with workload indicators (overtime patterns, after-hours activity, team turnover) and qualitative signals from manager check-ins.
+A single engagement or wellbeing survey number does not capture organizational health. Strong wellbeing practice triangulates survey data with workload indicators (overtime patterns, after-hours activity, team turnover) and qualitative signals from manager check-ins, using team-level data.
 
 ### Returning to work does not end at the return date
 
@@ -208,7 +124,7 @@ The period immediately following a return from burnout or mental health leave is
 
 ## Tips
 
-- Strong wellbeing programs are tested against multiple intervention options before implementation, not finalized from a single benefits offering — model at least two or three approaches and compare trade-offs explicitly.
-- Manager training should begin alongside program design, not after rollout; managers are most often the first to see early burnout signals, and waiting to train them until after a crisis reduces the program's effectiveness significantly.
-- Wellbeing measurement is most useful when paired with workload data — a disengagement or burnout signal often traces back to a structural workload issue, not a personal resilience problem alone.
-- The first 90 days after any return-to-work transition deserve a dedicated check-in cadence; without one, workload often quietly creeps back to pre-leave levels and increases relapse risk.
+- Test several options before you commit. Model at least two or three approaches and compare trade-offs explicitly.
+- Manager training should begin alongside program design, not after rollout. Managers are most often the first to see early burnout signals.
+- Pair wellbeing measures with workload data. A burnout signal often traces back to workload and structure, not personal resilience alone.
+- The first 90 days after any return-to-work transition deserve a dedicated check-in cadence. Without one, workload often quietly creeps back to pre-leave levels.

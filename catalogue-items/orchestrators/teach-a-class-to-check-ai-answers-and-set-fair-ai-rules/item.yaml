@@ -15,10 +15,10 @@ outputs:
   - {type: audit_report}
 uses: [ai-reliability-lessons, spot-ai-mistakes-activity, ai-answer-critique-lesson, assignment-ai-boundaries]
 steps:
-  - {uses: ai-reliability-lessons, note: "Lessons for this age group on where AI answers go wrong, why they sound confident, and how to check a claim, with examples from the subject."}
-  - {uses: spot-ai-mistakes-activity, note: "A real AI answer on the subject with mistakes found or planted, a worksheet for students to find them, and the answer key."}
-  - {uses: ai-answer-critique-lesson, note: "A lesson where students grade an AI answer against a rubric, say what is missing or wrong, and write the better version."}
-  - {uses: assignment-ai-boundaries, note: "Your assignment's AI rules checked for what is vague, unfair or unenforceable, and rewritten so a student knows what is allowed and how to show their own work."}
+  - {uses: ai-reliability-lessons, note: "Lessons for this age group on where AI answers go wrong, why they sound confident, and how to check a claim, with examples from the subject. Hands step 2 the lesson plan, which sets the subject and age group for the mistake hunt."}
+  - {uses: spot-ai-mistakes-activity, note: "A real AI answer on the subject with mistakes found or planted, a worksheet for students to find them, and the answer key. Builds on step 1's lessons and a real AI answer you paste in. Hands step 3 the activity plan."}
+  - {uses: ai-answer-critique-lesson, note: "A lesson where students grade an AI answer against a rubric, say what is missing or wrong, and write the better version. Builds on step 2's activity, so students grade the same kind of AI answer they just hunted in. Hands step 4 the lesson plan."}
+  - {uses: assignment-ai-boundaries, note: "Your assignment's AI rules checked for what is vague, unfair or unenforceable, and rewritten so a student knows what is allowed and how to show their own work. Uses your own assignment and its current AI rules, with the lessons from steps 1 to 3 as the plan behind them. Hands back the checked and rewritten rules."}
 origin: own
 version: 1.0.0
 example_pending: true

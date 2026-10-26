@@ -2,34 +2,120 @@ thinking: medium
 thinking_why: It sets numbers from how users feel outages.
 new_slug: reliability-target-setter
 name: Reliability target setter
-summary: Name your service. Get service level targets, error budgets and alerts
-  to track them.
+summary: "Set reliability targets for your service. Get measures of what users feel, an error budget and alert rules you can paste."
 job: ship-and-host
 headline: Reliability target setter
-subhead: Name your service. Get service level targets, error budgets and alerts
-  to track them. Bring name and type of your service. Use the result to plan
-  your next step.
+subhead: Name your service and what users do with it. It picks the measures that show what users feel, sets a target for each and works out your error budget. You get Prometheus rules for alerts that warn you early, plus a dashboard layout.
 explain: |
-  A set of reliability goals for your service that people can measure, with an error budget and alerts that warn you before users feel it. Instead of vague promises like "keep it up", you get numbers.
+  "Keep it up" is not a goal you can measure. A reliability target is. It says, for example, that 99.9 percent of requests must succeed over 28 days. Engineers call this a service level objective, or SLO.
 
-  The method has three layers. Indicators measure what users feel, such as the share of successful requests or how fast pages load. Objectives set the target for each, such as 99.9 percent over thirty days. Error budgets turn the gap into minutes of allowed failure. The skill then writes alert rules based on how fast the budget burns, and a way to report it. It includes example queries for common monitoring tools.
+  This skill works in layers. First it picks indicators, which are measures of what users feel, such as the share of requests that work or load fast enough. Then it sets a target for each. The gap between the target and 100 percent is your error budget, the amount of failure you can afford. It then writes alert rules that fire when you spend that budget too fast, so you hear about a problem before the budget is gone.
+
+  The output is written for Prometheus, a free monitoring tool, with example queries you can paste. Use the Error budget planner if you want the same idea without code.
 when:
   - You need to promise a customer an uptime number you can keep.
-  - Your team argues about when to ship and when to fix stability.
+  - Your team argues about shipping new features versus fixing stability.
   - Alerts fire all the time and nobody trusts them.
-  - You want to measure reliability the way users experience it.
+  - You use Prometheus and want recording rules and alerts for your targets.
+not_for:
+  - "You want the targets and budget without any code or monitoring tool: use the Error budget planner."
+  - "You want a full monitoring setup with logs, traces and dashboards: use the Monitoring system planner."
+  - "You need contract wording for a customer promise: ask a lawyer and your account owner. This skill sets targets, not contract terms."
 you_give:
-  - Name and type of your service
-  - Current uptime or speed data (optional)
-  - Monitoring tool in use (optional)
-  - Customer promises already made (optional)
+  - Your service name and what users do with it
+  - What users care about most, such as pages loading or orders going through
+  - Your current success rate and response times (optional)
+  - Your monitoring tool, such as Prometheus (optional)
+  - Promises you have already made to customers (optional)
 you_get:
-  - Service level indicators
-  - Targets with time windows
-  - Error budget numbers
-  - Alert rules based on budget burn
+  - Two or three measures of what users feel, with the queries to read them
+  - A target and time window for each
+  - An error budget in minutes or in failed requests
+  - A rule for what to do as the budget runs down
+  - Alert rules for fast and slow budget burn
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill's instructions, or upload the skill folder so it can open its reference files.
+  - Give your service name and what users do with it. Add the names of your request counters if you know them. Add your current success rate and speed if you have them.
+  - Read the measures first. Check each one is something users feel, and agree it with your team.
+  - Check each target against real numbers from the last few weeks before you share it. Do not promise a number you do not meet today.
+  - Paste the rules into Prometheus. Test them with known counts, including a quiet hour with no traffic.
+  - Ask your team and your account owner to review before any target goes in a customer promise.
+how_it_works:
+  - title: Pick the measures
+    text: It chooses measures such as the share of successful requests, requests faster than a limit, and writes that succeed.
+  - title: Set the targets
+    text: It sets a target and a time window for each measure, using what users need and what you do today.
+  - title: Work out the budget
+    text: The budget is 100 percent minus the target, shown as failure you can afford in the window.
+  - title: Write the rules
+    text: It writes recording rules that track the measures, the budget left and how fast you are spending it.
+  - title: Set the alerts
+    text: It pairs a short and a long time window, so a fast burn pages you and a slow burn warns you, with fewer false alarms.
+  - title: Plan the review
+    text: It adds a dashboard layout, a budget policy and a weekly, monthly and quarterly review.
+output_shape: |
+  SERVICE: <name and what users do>
+  YOUR NUMBERS: <current rates or MISSING>
+
+  MEASURES
+  - <measure> : <what users feel> : <query>
+
+  TARGETS
+  - <measure> : <target> over <window>
+
+  ERROR BUDGET
+  - <measure> : <budget in the window, with the formula>
+
+  BUDGET POLICY
+  - <budget left> : <what the team does>
+
+  ALERTS
+  - <alert> : <condition> : <severity>
+
+  DASHBOARD: <panels>
+  REVIEW: <weekly, monthly, quarterly>
+output_sample:
+  input:
+    - Your service name and what users do with it
+    - What users care about most
+    - Your current success rate and speed (optional)
+    - The names of your request counters (optional)
+  prerequisites:
+    - Prometheus or a similar tool, to run the rules
+    - Real numbers from the last few weeks, so targets can be checked
+  output:
+    - name: Measures
+      contains: Two or three measures of what users feel, each with a query to read it.
+    - name: Targets
+      contains: A target and time window for each measure.
+    - name: Error budget
+      contains: How much failure you can afford in the window, with the formula shown.
+    - name: Budget policy
+      contains: What your team does as the budget runs down.
+    - name: Alert rules
+      contains: Fast and slow burn alerts, written for Prometheus.
+    - name: Dashboard and review routine
+      contains: A dashboard layout and a weekly, monthly and quarterly check.
+works_best_with:
+  tools:
+    - name: Prometheus
+      why: The rules and queries are written for it.
+    - name: Grafana
+      why: It shows the budget and burn rate on the dashboard layout.
+    - name: Claude or ChatGPT
+      why: Any good chat AI can write the rules from the skill.
+  inputs:
+    - Your counter names, for example total requests and failed requests
+    - Four weeks of success rate and response times
+    - The promises you have made to customers
+terms:
+  - term: SLI
+    meaning: A service level indicator, a measure of what users feel.
+  - term: SLO
+    meaning: A service level objective, your internal target for that measure.
+  - term: SLA
+    meaning: A service level agreement, the promise to a customer in a contract.
+  - term: Error budget
+    meaning: The amount of failure you can afford while still meeting the target.
+  - term: Burn rate
+    meaning: How fast you are using up the error budget.

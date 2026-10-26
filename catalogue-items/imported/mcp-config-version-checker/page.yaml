@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It reads config files and flags unpinned package versions.
 new_slug: mcp-config-version-checker
 name: MCP config version checker
-summary: Give it your MCP config files. Get a list of server packages that can
-  change under you, before you approve them.
+summary: Check your MCP config for server packages that can change after you approve them. Get a list of risky lines and safe pinning advice.
 job: secure-code
 headline: MCP config version checker
-subhead: A list of the tool servers in your MCP config that could change under
-  you, found before you approve them. It reads your config files without running
-  anything, so nothing can start by accident.
+subhead: Give your AI your MCP config files. It reads them as plain text and runs nothing. You get a list of server packages that could change after you approve them.
 explain: |
   A list of the tool servers in your MCP config that could change under you, found before you approve them. It reads your config files without running anything, so nothing can start by accident.
 
@@ -18,6 +15,10 @@ when:
   - You want to know which servers update themselves.
   - Your team needs a rule to block unpinned servers.
   - You are reviewing a pull request that adds a new MCP server.
+not_for:
+  - "Your MCP servers are local scripts, programs or non-npm tools: ask a security reviewer to check them by hand, since this check only covers npm and npx packages."
+  - "You need a full MCP security review of logins, prompt tricks or server flaws: hire a security reviewer, because this only checks package versions."
+  - "You want to scan source code for bugs: use a code scanning tool such as a static analysis scanner."
 you_give:
   - The repo or MCP config files
   - Your approval rules (optional)
@@ -29,8 +30,26 @@ you_get:
   - A short report
   - A CI check (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini, and paste in this skill's instructions.
+  - Paste your MCP config files, or upload them if your AI can read files. Say not to run any servers.
+  - Read the table. Fix each high and medium row by pinning a version your team has reviewed.
+  - "Optional: the scanner tool is not needed. If your AI offers to install it, that fetches code from GitHub and needs your approval. You can say no, and it will check by hand rules instead."
+  - "Optional: ask for a CI step if you want this check on every pull request."
+output_sample:
+  input:
+    - Your repo or the MCP config files, such as .mcp.json
+    - Your approval rules (optional)
+    - Your CI service, for example GitHub Actions (optional)
+  prerequisites:
+    - An AI that can read your project files, or the config text pasted into the chat
+  output:
+    - name: Findings table
+      contains: One row per MCP server with its config file, package, risk level, reason and next step.
+    - name: Risk levels
+      contains: Each package marked safe, high, medium or review, based on how its version is set.
+    - name: Pinning advice
+      contains: "A fix for each risky entry: pin a version your team has reviewed, never a guessed one."
+    - name: Safety notes
+      contains: A reminder that no servers were run and that a clean result is not a full security check.
+    - name: CI check
+      contains: A GitHub Actions step to run this check on pull requests, only if you ask for it.

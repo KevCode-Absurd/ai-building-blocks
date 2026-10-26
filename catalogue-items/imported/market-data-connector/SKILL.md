@@ -34,6 +34,30 @@ Access financial and economic data from four major providers through the MATLAB 
 - Real-time streaming from LSEG (datastreamws is historical only)
 - Data sources not covered here (e.g., Yahoo Finance)
 
+## Before you write code
+
+Ask once for anything missing. Never guess it, and never make up a ticker, series ID or date.
+
+- The provider (Bloomberg, FRED, Haver or Datastream).
+- The securities or series IDs and the date range. If the person is unsure of a FRED series ID, use `search` (see `references/fred.md`) and show the matches.
+- The computer type (Windows, Mac or Linux) and the MATLAB release. If unknown, say which interfaces need which, and ask.
+- Whether credentials are saved in MATLAB's secret store. If not, tell them to run `setSecret` themselves. Never ask them to paste a password or key into the chat.
+
+If the request is outside this skill (for example Yahoo Finance data, or live streaming from Datastream), say so and stop.
+
+## Output
+
+Return one runnable MATLAB script, followed by short notes, in this order:
+
+1. **Connect:** the connection code for the chosen interface, with credentials from `getSecret`.
+2. **Pull data:** the fetch code for the securities or series and dates asked for, returning a table or timetable. Name the columns it returns.
+3. **Close:** close the connection if the interface needs it.
+4. **Notes:** the interface chosen and why, the provider's limits, and one next step (for example, load the result into a timetable for analysis).
+
+If you cannot run MATLAB, say "not run" and do not claim the script works.
+
+---
+
 ## Provider Overview
 
 | Provider | Data Type | Interfaces | Reference |
@@ -77,7 +101,7 @@ Before generating code for a specific provider, read the corresponding reference
 - All four providers require the **Datafeed Toolbox**
 - `fredrs` additionally requires **R2026a** or later
 - `datastreamws` available since **R2018b**
-- Bloomberg and Haver local interfaces (`bloomberg`, `blp`, `haver`, `haverdirect`) are Windows-only; cloud/REST variants (`bloombergHypermedia`, `bpipe`, `haverview`, `fredrs`, `datastreamws`) are platform-independent
+- Bloomberg and Haver local interfaces (`bloomberg`, `blp`, `haver`, `haverdirect`) are Windows-only; cloud/REST variants (`bloombergHypermedia`, `bloombergBPIPE`, `haverview`, `fredrs`, `datastreamws`) are platform-independent. `bpipe` is the Java version of `bloombergBPIPE`; use it only if you need Java.
 
 ---
 

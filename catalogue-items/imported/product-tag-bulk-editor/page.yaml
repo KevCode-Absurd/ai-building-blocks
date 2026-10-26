@@ -2,36 +2,73 @@ thinking: low
 thinking_why: It repeats one tag change.
 new_slug: product-tag-bulk-editor
 name: Product tag bulk editor
-summary: Pick products and a tag. Get it added or removed on all of them.
-  Changes your live catalog; preview first.
+summary: Add or remove Shopify product tags in bulk. Pick products by collection, tag or search, preview every change, then apply it to your live store.
 job: run-your-store
 headline: Product tag bulk editor
-subhead: A tag added or removed on every product in a collection, tag group or
-  search result, in one run. Campaign setup and teardown no longer mean editing
-  products one at a time.
+subhead: Give it the tags to add or remove and the products to change, picked by collection, tag or search. It shows a preview first. After you say yes, it updates every product and reports the count and any failures.
 explain: |
-  A tag added or removed on every product in a collection, tag group or search result, in one run. Campaign setup and teardown no longer mean editing products one at a time.
+  Tags drive your Shopify collections, customer groups and reports. Setting up or ending a sale often means changing the same tag on dozens of products. This Shopify product tag bulk editor does it in one run, instead of editing products one at a time.
 
-  You say whether to add or remove, give the tags, and pick the products by collection, existing tag or search query. Claude lists what will change, applies it and reports the count. Use it to add a summer-sale tag before a promotion, remove flash-sale tags after it ends, or retag items moving between categories. It changes your live catalog, so preview first. You need an authenticated Shopify CLI session with product write access.
+  You say whether to add or remove, give the tag names, and pick the products by collection, existing tag or search query. Your AI lists the products and shows what each would gain or lose. Nothing changes until you confirm.
+
+  It then applies the change and saves a CSV with each product's old tags, so you can put them back. Before a removal, it asks whether any collection rule uses that tag.
 when:
   - A sale starts and a whole collection needs a promotion tag.
   - A campaign ended and its tags must go.
   - You are reorganising how products are tagged.
-  - You tag by vendor or product group and want it done fast.
+  - You tag by vendor or product type and want it done fast.
+not_for:
+  - You are changing one or two products. Edit them in Shopify admin.
+  - The tag drives a collection rule you have not checked. Look at the rule first, or the products can drop out of the collection.
+  - You want to tag customers. Use the Customer tag bulk updater.
+  - You want to tag orders by your own rules. Use the Order tagger.
 you_give:
-  - Your store domain
+  - Your Shopify store address, like mystore.myshopify.com
   - Add or remove, and the tag names
-  - A collection, tag or search query to select products
-  - Confirmation after reviewing the preview
+  - A collection, a current tag or a search to pick the products
+  - Your yes after you read the preview
 you_get:
-  - A preview of affected products
-  - Tags added or removed on all matches
-  - A count of changes made
-  - A list of failures
+  - A preview of every product that would change
+  - The tags added or removed on all matches, once you confirm
+  - A count of changes made and a list of any failures
+  - A CSV with each product's old tags, so you can undo
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Connect your AI to your Shopify store with permission to read and change products. The skill needs this to make the change. Without it, you get a preview only.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Say whether you want to add or remove, the exact tag names, and how to pick the products.
+  - Read the preview. Check the count and the sample titles. If a removal could affect a collection rule, check the rule first.
+  - Say yes only when the preview is right. Your AI then runs the change.
+  - Open two products in Shopify and check their tags. Keep the CSV in case you need to restore them.
+output_sample:
+  input:
+    - Your Shopify store address
+    - Add or remove, and the tag names
+    - A collection, a tag or a search to pick the products
+    - Your yes to the preview
+  prerequisites:
+    - Access that can read and change your Shopify products
+    - A check that no collection rule depends on a tag you remove
+  output:
+    - name: Preview
+      contains: The count of products and the tags each would gain or lose. Nothing is changed yet.
+    - name: Outcome summary
+      contains: Products targeted, tags added or removed, the action, and the number of errors.
+    - name: tag-update-<date>.csv
+      contains: One row per product with its ID, title, tags changed, old tags and result.
+    - name: Failure list
+      contains: Products that could not be changed and Shopify's reason for each.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with a Shopify connection
+      why: It can read and change products directly, after you confirm the preview.
+    - name: Shopify admin bulk editor
+      why: A fine choice for a few products, or if you have no connection.
+  inputs:
+    - A list of your automated collections and the tags their rules use
+    - A consistent tag style, for example all lowercase
+terms:
+  - term: Tag
+    meaning: A short label on a product that collections, reports and filters can use.
+  - term: Collection rule
+    meaning: A setting that puts products in an automated collection when they have a certain tag.
+  - term: Preview
+    meaning: A list of what would change, shown before anything is changed.

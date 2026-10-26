@@ -1,6 +1,6 @@
 new_slug: ai-recommendation-gap-finder
 name: "AI recommendation gap finder"
-summary: "Paste AI panel results. Get six gaps marked fix, build or influence, and a score out of 100."
+summary: "Find why AI names your rivals and not you. Paste your panel results and get six gaps, a ranked fix list and a topic score out of 100."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It reads a table of results and ranks gaps with reasons, so a mid-level model is enough."
@@ -17,6 +17,10 @@ when:
   - Your AI panel shows rivals named and you missing, and you do not know where to start.
   - You have a list of ideas, such as Reddit, video and review sites, and need to rank them.
   - You want to copy what a rival does, and need to know which topics and formats they cover that you do not.
+not_for:
+  - "You have no panel results yet: run the AI recommendation panel runner first, then come back here."
+  - "You want to rewrite a page so AI can quote it: use the answer-first page rewriter or the AI-ready product page editor."
+  - "You want help with Google rankings only: use the Store SEO fix prioritiser."
 
 you_give:
   - "Your panel results: who was named, who was cited"
@@ -36,6 +40,30 @@ how_to_use:
   - List your brand names and how you want to be described.
   - Read the quick wins first. Do those before building new pages.
   - Run the same check on one rival to see what topics and formats they cover that you do not.
+output_sample:
+  input:
+    - "Your panel results: who was named and who was cited, per question"
+    - "Your brand names: store, products, owned phrases, founder"
+    - Your rivals (optional)
+    - How you want to be described (optional)
+  prerequisites:
+    - Results from the AI recommendation panel runner
+    - An AI chat that can read pasted text
+  output:
+    - name: YOUR NAMES
+      contains: Your store name, products, owned phrases and founder, each checked on its own.
+    - name: GAPS
+      contains: Six gaps marked found or none, each with evidence from your panel runs.
+    - name: ACTIONS (ranked)
+      contains: Each opportunity tagged fix, build or influence, rated for demand, credibility and chance of being cited.
+    - name: QUICK WINS
+      contains: The fastest actions first, such as refreshing a stale page that once ranked.
+    - name: PLATFORM NOTE
+      contains: Which AI assistant to work on first, with a date and a note that it may drift.
+    - name: SCORE
+      contains: Topics where you are named in half the runs or more, out of all topics, shown as a sum.
+    - name: NOT RUN and MISSING
+      contains: Anything skipped and any input you did not give.
 
 how_it_works:
   - title: Lists your names

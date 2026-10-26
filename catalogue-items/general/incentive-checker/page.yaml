@@ -1,6 +1,6 @@
 new_slug: incentive-checker
 name: "Incentive checker"
-summary: "Describe a team, plan or deal. Get who is rewarded for what, where it pulls the wrong way, and a fix."
+summary: "Check your pay plan or deal with this incentive checker. See who is rewarded for what, where it pulls the wrong way, and get a fix."
 job: think-and-decide
 thinking: medium
 thinking_why: "It follows fixed steps but must reason about how each reward changes behaviour."
@@ -17,6 +17,10 @@ when:
   - A team hits its numbers but the real result is poor.
   - You are about to sign a deal, a commission plan or a contract.
   - You are setting up a new role or pay plan and want to catch problems early.
+not_for:
+  - "You are making a single one-off purchase with no shared reward: read the terms yourself or ask a person you trust."
+  - "You want to test a whole plan for ways it could fail: use a plan review, not a reward check."
+  - "You are judging if a person is good at their job: talk to them and look at their work. This tool checks the reward, not the person."
 
 you_give:
   - The team, plan or deal in plain words, and the goal it should serve
@@ -34,6 +38,27 @@ how_to_use:
   - Say how each person is paid, including bonuses, targets and praise.
   - Read each mismatch and say if the example is how it would really play out.
   - Try the proposed fix on paper with a few tricky cases before you roll it out.
+output_sample:
+  input:
+    - Your team, plan or deal in plain words, and its goal
+    - How each person or party is paid or rewarded
+    - A plan from an earlier step (optional)
+    - What people have actually done (optional)
+  output:
+    - name: Goal and pay fairness
+      contains: The goal in one line, and a note on whether basic pay is fair enough to take money off the table.
+    - name: Rewards table
+      contains: One row per person or rule, with what it pays, what it encourages, the mismatch and an example.
+    - name: The fix
+      contains: A small change to the reward that pays for the outcome you want, with a guard against gaming.
+    - name: Who decides and who pays
+      contains: Whether the person who makes the call also bears the result if it goes wrong.
+    - name: Routine and thinking work
+      contains: Your tasks sorted into routine and thinking work, since each responds to different rewards.
+    - name: What to tell the team
+      contains: One short line that explains the change and what it now pays for.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps it could not fill, and any check the result still fails, or none.
 
 how_it_works:
   - title: Lists who gets what

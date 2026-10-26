@@ -2,35 +2,61 @@ thinking: medium
 thinking_why: It reads components and writes matching tests.
 new_slug: react-test-writer
 name: React test writer
-summary: Share your React app. Get tests for components, linked features and
-  full user tasks that lack coverage.
+summary: Find the parts of your React app with no tests. Get Jest test files, Playwright route tests and a list of files under your coverage target.
 job: test-and-fix-code
 headline: React test writer
-subhead: "Tests for the parts of your React app that have none: unit tests for
-  components, integration tests, and end-to-end tests for key routes. You also
-  learn where your coverage falls short."
+subhead: "Give your AI your React components. It writes starter tests for the ones with none. It also reads your coverage report and lists the files that fall short of your target."
 explain: |
   Tests for the parts of your React app that have none: unit tests for components, integration tests, and end-to-end tests for key routes. You also learn where your coverage falls short.
 
   A scanner reads your components and writes Jest and React Testing Library test files with the render and interaction cases laid out. A coverage analyser reads your Jest report and shows files under your threshold, such as 80 percent. A third tool scaffolds Playwright tests for each Next.js route. The stubs give you a base to fill with real assertions. You need Python for the scripts and Node for running the tests.
 when:
-  - Your React app has little test coverage and you need a start.
-  - You want end-to-end tests for every page route.
-  - A coverage report is full of numbers and you need the gaps.
-  - You are about to refactor and need a safety net.
+  - Your React app has few tests and you need a place to start.
+  - You want an end-to-end test for each page of your Next.js app.
+  - Your coverage report is full of numbers and you want a short list of gaps.
+  - You plan to change a lot of code and want a safety net first.
+not_for:
+  - "Your app uses Vue, Angular or another test runner than Jest: write tests with that tool's own docs instead."
+  - "You need a plan for what to test and how much: read the testing strategy notes in the skill's references folder first."
+  - "You want your AI to fix a failing test or a bug: ask your AI to debug that one test, or ask a developer."
 you_give:
-  - Components folder
-  - Jest coverage report (optional)
-  - Coverage target
-  - Node and Python installed
+  - The path to your components folder, such as src/components
+  - Your Jest coverage report, coverage-final.json (optional)
+  - Your coverage target, such as 80 percent
+  - Your jest.config file
+  - Your Next.js app folder, for end-to-end tests (optional)
 you_get:
-  - Jest test files for components
-  - Playwright end-to-end tests
-  - Coverage gap list
-  - Next steps to fill in assertions
+  - Jest test files for your components, with render and click tests
+  - A list of files under your coverage target, with the branches that lack tests
+  - Playwright end-to-end test files, one per route
+  - A sign-in helper for pages that need a login
+  - Notes on where to add your own checks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in a tool that can run code and read your project files. Paste in the skill.
+  - Give it your components path. Say which jest.config file you use.
+  - If you have no coverage report, ask it to run npm test -- --coverage --coverageReporters=json first. This makes coverage-final.json.
+  - Tell it your coverage target. Ask for test files, a gap list, or both.
+  - For end-to-end tests, give it your Next.js app folder. Install Playwright first if you have not.
+  - Open each new test file and replace the TODO lines with checks for your own app. Then run npm test.
+output_sample:
+  input:
+    - The path to your components folder
+    - Your Jest coverage report, coverage-final.json (optional)
+    - Your coverage target, such as 80 percent
+    - Your Next.js app folder, for end-to-end tests (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Python and Node installed
+    - Jest and React Testing Library set up in your project
+    - Playwright installed, for end-to-end tests
+  output:
+    - name: Jest test files
+      contains: One test file per component with describe blocks, render tests, click tests and a TODO where you add your own cases.
+    - name: Coverage analysis
+      contains: Files that fall under your target, with the branches no test reaches and tips on what to test first.
+    - name: Playwright test files
+      contains: One end-to-end test file per Next.js route, with common page actions ready to fill in.
+    - name: Page Object classes (optional)
+      contains: Helper classes for each page, made when you ask for them.
+    - name: Auth fixture
+      contains: A sign-in helper for tests of pages that need a logged-in user.

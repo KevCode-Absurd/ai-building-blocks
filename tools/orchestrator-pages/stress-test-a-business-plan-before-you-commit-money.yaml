@@ -1,6 +1,6 @@
 new_slug: stress-test-a-business-plan-before-you-commit-money
 name: Stress test a business plan before you commit money
-summary: Give it the plan. Get a one-page canvas, the strongest case against it, stress-tested assumptions and a pre-mortem.
+summary: Stress test a business plan before you commit money. Give it your plan and numbers. Get a one-page canvas, the case against it and a pre-mortem.
 job: test-an-idea
 thinking: high
 thinking_why: It must argue against a plan its owner loves and find the risk of ruin. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to sign a lease, hire or spend savings on a plan.
   - Everyone around you likes the plan, which worries you.
   - A past plan failed for a reason that was obvious afterwards.
+not_for:
+  - "You have no money, lease or guarantee at stake yet: run a simple test with a few real customers first."
+  - "You only want to check one number, such as break-even in a bad year: use the Bad-year break-even tester."
+  - "You want to know if the idea suits AI rather than whether the business works: use the AI suitability reviewer."
 you_give:
   - The business plan, however rough
   - "The numbers behind it: costs, prices, how many customers and when"
@@ -30,6 +34,28 @@ how_to_use:
   - Paste the plan and the numbers. It writes the canvas and the case against.
   - Read the stress tests and the ruin risks. Decide which you can remove.
   - Read the pre-mortem. Change the plan so that story cannot happen, or decide not to go.
+output_sample:
+  input:
+    - Your business plan, however rough
+    - "The numbers behind it: costs, prices, customers and timing"
+    - "What you are putting in: money, guarantees, time"
+    - What you fear most (optional)
+  prerequisites:
+    - A chat AI that can work through several steps and keep each result
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: One-page canvas
+      contains: Problem, customers, solution, channels, revenue, costs and advantage, with every assumption marked.
+    - name: The case against
+      contains: The strongest honest case for not doing this, with the fatal flaw if there is one, rivals and why customers will not switch.
+    - name: Stress tests
+      contains: Each assumption tested at half as good and twice as slow, and which ones the plan cannot survive.
+    - name: Ruin check
+      contains: The risks you cannot recover from, how exposed you are, and how to cap the downside.
+    - name: Pre-mortem
+      contains: The most likely story of how the plan failed a year on, and what to change today.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Squeeze it onto one page
     text: Puts the plan on a one-page canvas with every assumption marked.

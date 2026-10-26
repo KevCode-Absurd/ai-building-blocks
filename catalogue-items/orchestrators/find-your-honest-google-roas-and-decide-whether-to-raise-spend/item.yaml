@@ -14,8 +14,8 @@ outputs:
   - { type: audit_report }
 uses: [ break-even-roas-and-cpa-calculator, brand-and-non-brand-splitter, google-ads-scale-gate-checker ]
 steps:
-  - { uses: break-even-roas-and-cpa-calculator, note: "Sets the line every later number is judged against." }
-  - { uses: brand-and-non-brand-splitter, note: "Splits brand from new-customer traffic and compares true non-brand ROAS with the break-even line from step one." }
+  - { uses: break-even-roas-and-cpa-calculator, note: "Works out break-even ROAS and cost per sale, and hands them to step 2 as the line every later number is judged against." }
+  - { uses: brand-and-non-brand-splitter, note: "Splits brand from new-customer traffic and compares true non-brand ROAS with the break-even line from step one. It hands step 3 the split report and your true non-brand ROAS." }
   - { uses: google-ads-scale-gate-checker, note: "Reads the split report and decides whether it is safe to raise spend, and by how much." }
 origin: rebuilt
 version: 1.0.1

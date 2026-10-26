@@ -1,6 +1,6 @@
 new_slug: image-ad-test-learnings
 name: Image ad grid production and test planner
-summary: Share brand facts, buyer research and photos. Get a supported ad grid, pilot row and image production where tools allow, with test assumptions marked.
+summary: Plan 50 image ads as a grid of buying reasons, ad types and looks. Get a pilot row and briefs, and see which reason or type sells.
 job: plan-ad-tests
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You're about to make your first large batch of image ads and want each one to teach you something.
   - Past batches looked varied but all made the same argument.
   - You want a plan your team can split up and brief, with counts that prove the mix is balanced.
+not_for:
+  - "You only need one ad: use the Single image ad planner, which briefs a single image ad."
+  - "You have no buyer research or product photos yet: gather your reviews and photos first, because this plan leaves out reasons it can't back."
+  - "You want to check finished ads against Meta rules: use the Meta ads compliance checker."
 you_give:
   - Your brand file with voice, claims, live offers, guarantee and never-show list
   - Buyer research such as reviews, buyer types and their own words
@@ -30,6 +34,30 @@ how_to_use:
   - List every product photo you have and what it shows. Be honest if you only have one or two.
   - Ask for stage 1 only. Read the grid, the budget check and the MISSING lines before you approve anything.
   - Reply "approved" to move on. If you ask for changes, it shows the stage again and waits.
+output_sample:
+  input:
+    - "Your brand facts: voice, claims, live offers, guarantee and never-show list"
+    - Your buyer research, such as reviews and their own words
+    - A list of your product photos and what each one shows
+    - Your cost per sale and past ad results (optional)
+  prerequisites:
+    - An image tool such as ChatGPT or Gemini if you want the pictures made in chat
+    - "Your approval at two points: the grid, then the pilot row"
+  output:
+    - name: Photo list
+      contains: Each photo, what it shows, whether it can lead an ad, and a shoot suggestion if you have too few.
+    - name: Reasons to buy
+      contains: Five reasons, each with the buyer, the problem, what only this product does and the proof.
+    - name: Ad types and looks
+      contains: Five ad types covering at least three buyer questions, and two looks.
+    - name: Grid
+      contains: The planned ads with an idea in each cell, empty cells marked, and counts per row and column.
+    - name: Budget check
+      contains: The purchases needed and the estimated spend, shown as a rough planning guide.
+    - name: Pilot row
+      contains: Ten finished ads from one reason, made first so you can approve the look.
+    - name: Briefs and images
+      contains: A brief and image for each remaining ad, with check results and any failures shown.
 how_it_works:
   - title: Lists your photos
     text: Notes what each photo shows and whether it can lead an ad, and suggests a shoot if you have too few.

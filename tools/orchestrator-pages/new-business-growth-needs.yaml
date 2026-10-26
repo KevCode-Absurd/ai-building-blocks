@@ -1,6 +1,6 @@
 new_slug: new-business-growth-needs
 name: Work out what a new business needs to get huge
-summary: Name a business and a target size. Get the big choices, the sums behind the size and what to avoid.
+summary: Test a new business plan against a huge target. Give it the business and a size. You get the big choices, the sums behind them and what to avoid.
 job: plan-strategy
 thinking: high
 thinking_why: It carries a plan through five checks, works sums backward and thinks in reverse. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are shaping a business from scratch and want its plan tested against a big target.
   - A pitch says a huge market means a huge result, and you want to test it.
   - You want to find the one assumption your plan leans on most.
+not_for:
+  - "You want to value a company that already trades or has sales: use a valuation tool or ask an accountant."
+  - "You have no buyer group in mind yet: use the Customer needs finder first, then come back."
+  - "You want to test how strong your edge is: use the Business power tester."
 you_give:
   - The business, what it sells and to whom
   - The size you want it to reach and by what year
@@ -31,6 +35,28 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give your business, the target size and the year. Paste every open question you have, even small ones.
   - It works step by step and saves each result. Go and find real facts for the figure the plan leans on.
+output_sample:
+  input:
+    - The business, what it sells and to whom
+    - The size you want it to reach and by what year
+    - Your open questions and limits you cannot change (optional)
+    - Market size, purchase counts and prices you can source (optional)
+    - Your partners and how each is paid (optional)
+  prerequisites:
+    - An AI that can work with a folder of files, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Big decisions first sorter"
+      contains: The choices the goal already settles, each with a reason, plus the open questions in order.
+    - name: "Step 2: Target size back-solver"
+      contains: The target as yearly earnings, split into buyers, purchases, share and profit, each marked checked, estimated or guess.
+    - name: "Step 3: Buying habit stack designer"
+      contains: The action and cue, the rewards, five true ties, a reach map and the chain that makes buying repeat.
+    - name: "Step 4: Incentive checker"
+      contains: Each partner, how they are paid, what that encourages and where it pulls the wrong way.
+    - name: "Step 5: Failure-first plan check"
+      contains: What would guarantee failure, the standard failures checked and a list of what to avoid.
+    - name: Hand-back summary
+      contains: Each step's file and every missing item in one list.
 how_it_works:
   - title: Settles the big choices first
     text: Tests each open question against the goal, settles those it forces with a one-line reason and notes what each choice rules out.

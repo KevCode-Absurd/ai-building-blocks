@@ -16,6 +16,27 @@ use_cases:
   - "Check whether a new venture is needed, or just copies what already exists"
   - "Keep a steady head when the business starts to do well"
   - "Weigh the ethics of a deal that is legal but gives you a hidden edge"
+not_for:
+  - "You need legal, antitrust, tax or personal investment advice: take it to a qualified adviser, and use this mind only for the cost and order question."
+  - "You want a view on giving, debt or growth from a builder who funded libraries and reinvested profits: use the Andrew Carnegie mind."
+  - "You want a way to value a business or weigh incentives and failure risks before you buy: use the Charlie Munger mind."
+output_sample:
+  input:
+    - Your costs, prices and sales by job, product or client
+    - A short note on the problem, such as falling profit, a price war or a gift to plan
+    - What you throw away, such as offcuts, idle hours or spare vehicles (optional)
+    - The name of a rival you might combine with (optional)
+  output:
+    - name: What he needs to see in the books
+      contains: The cost and margin lines he would ask for first, with any missing figures named.
+    - name: The waste list
+      contains: What you throw away or leave idle that someone might buy, and the steps in your chain that may not be needed.
+    - name: The combination test
+      contains: The gains and dangers of joining a rival instead of fighting on price, with his defence and his critics' view.
+    - name: The rule to keep
+      contains: A sound, open way to act, and any sharp trick he would cut.
+    - name: The next step
+      contains: One steady move in order, with advice to stay calm and not rush.
 seats:
   - {seat: "Efficiency and consolidation", asks: "Where are we losing money to waste, and who could we combine with to stop it?"}
   - {seat: "The books", asks: "Do we know, to the cent, where we gained and where we lost this month?"}

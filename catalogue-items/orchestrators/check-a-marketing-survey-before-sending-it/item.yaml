@@ -1,6 +1,6 @@
 slug: check-a-marketing-survey-before-sending-it
 name: Check a marketing survey before sending it
-summary: Share the source files. Get a revised survey, bias review and analysis plan.
+summary: Check your marketing survey before you send it. Get a revised question list, a bias review, a pretest plan and a plan for reading the answers.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,20 +8,21 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
+    required: true
+  - type: question
     required: true
 outputs:
-  - type: plan
-  - type: question
   - type: document
+  - type: plan
 uses:
   - market-size-and-survey-planner
   - interview-and-research-planner
 steps:
   - uses: market-size-and-survey-planner
-    note: Check whether the questions and sample can answer the actual business decision.
+    note: Checks that the questions, the group you ask and the sample can answer your decision. Works out how many replies you need in each group if you give group sizes. Hands the decision check and sample limits to the next step.
   - uses: interview-and-research-planner
-    note: Plan qualitative wording and cognitive pretests with appropriate respondents. Keep statistical sample design and quantitative analysis with the earlier survey method.
+    note: "Plans the pretest from your survey draft and the decision check and groups step 1 hands over: a few people from your audience say what each question means. Writes the tester guide. It leaves sample design with step 1."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

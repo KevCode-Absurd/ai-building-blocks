@@ -2,35 +2,75 @@ thinking: medium
 thinking_why: It computes portfolio measures and stress tests.
 new_slug: bond-portfolio-reviewer
 name: Bond portfolio reviewer
-summary: Give it your bond holdings. Get yield, duration and mix by rating, plus
-  a rate shock test. It collects data from websites.
+summary: "Review your bond holdings for portfolio yield, duration, mix by rating and sector, cash flows and a rate shock test, with every gap marked."
 job: money-and-investing
 headline: Bond portfolio reviewer
-subhead: Give it your bond holdings. Get yield, duration and mix by rating, plus
-  a rate shock test. It collects data from websites. Bring a list of bond
-  holdings with amounts. Use the result to plan your next step.
+subhead: Give it a list of your bond holdings with prices, coupons and maturities. It works out portfolio yield, duration and DV01, splits the mix by rating, sector and maturity, and tests rate moves from minus 2 to plus 2 percentage points. Missing data is marked, not guessed.
 explain: |
-  Give it your bond holdings and get a portfolio review: yield, duration and convexity weighted by market value, a mix by rating and sector, and a rate shock test. It is set up for Indian markets and fiscal year conventions.
+  A bond portfolio review shows how much interest your holdings pay, how sensitive they are to rate moves and where the risk sits. This skill builds that review from your own holdings list.
 
-  The skill prices every bond first, adds reference data such as rating and issuer, and projects cash flows to show reinvestment risk. It then rolls the numbers up and stresses the portfolio with moves in interest rates. It loads Indian conventions so lakh, crore and the April to March year are right. It gathers data from public websites, so results depend on what those sources show.
+  It weights every measure by market value. It then projects cash flows by quarter to show where coupons and repayments bunch up. Last, it shifts the whole rate curve up and down and shows the gain or loss for each move, and which bonds drive it.
+
+  It has limits. Free sources give index and bond ETF data, not prices for single corporate bonds, and no Indian bond prices are bundled. So you bring the prices. If a number is missing, the report says so. It never uses an ETF as a stand-in for a single bond. Web data comes from public sites and can be delayed or break.
 when:
   - You hold a set of bonds and want one risk summary.
-  - You need to know how a rate rise would hit your portfolio.
-  - You want your mix by rating and sector in one table.
-  - You must report in crore and match an April to March year.
+  - You want to know how a rise or fall in rates would hit your portfolio.
+  - You need your mix by rating, sector and maturity in one table.
+  - You want to see which quarters bring the most coupon and repayment cash.
+not_for:
+  - You want a price for one private or unlisted bond. Free sources do not have it, so use your broker or the issuer's documents.
+  - You have no price for most of your bonds. Get prices first, or use the yield curve explainer to learn the basics.
+  - You want a view on what to buy or sell. This is a research summary, not investment advice.
 you_give:
-  - A list of bond holdings with amounts
-  - Purchase prices or dates (optional)
-  - The scenarios you want tested
-  - Internet access for public data
+  - A holdings list with name or ID, amount held, price, coupon and maturity date for each bond
+  - Rating, sector and currency for each bond (optional)
+  - Yield and duration, if you already have them (optional)
+  - A benchmark to compare against (optional)
+  - The rate moves you want tested (optional, the standard set is used if you skip this)
 you_get:
-  - Portfolio yield, duration and convexity
-  - A breakdown by rating and sector
-  - Cash flow projections
-  - Rate shock results
+  - Portfolio yield, duration, DV01 and convexity
+  - A mix by rating, sector and maturity
+  - A quarter by quarter cash flow table
+  - A table of gains or losses for each rate move
+  - A data notes list of everything computed or missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the web.
+  - Open Claude, ChatGPT or Gemini. Turn on code running and web access if you have them. Paste in this skill.
+  - Paste or attach your holdings list. Make sure each bond has a price, coupon and maturity.
+  - Say which currency you hold in and whether any bonds are Indian. Name a benchmark if you have one.
+  - Read the data notes first. Check each figure marked computed or n/a against your broker statement.
+  - Then read the rate shock table. Look at the top contributors and check those bonds' terms in the issuer documents.
+  - Treat the result as research, not advice.
+output_sample:
+  input:
+    - Your bond holdings with amount, price, coupon and maturity for each
+    - Rating, sector and currency for each bond (optional)
+    - A benchmark (optional)
+  prerequisites:
+    - An AI that can reach the web or run code, only if you want free curve and spread data added
+  output:
+    - name: Portfolio summary
+      contains: Market value, yield, modified duration, DV01 and average rating, against a benchmark if you gave one.
+    - name: Composition breakdown
+      contains: Percent of the portfolio by sector, rating and maturity bucket, with over and underweights flagged.
+    - name: Cashflow waterfall
+      contains: Coupon income, principal and total cash by quarter, with the busiest periods flagged.
+    - name: Scenario P&L
+      contains: Gain or loss for each parallel rate move, with the top and bottom contributing bonds.
+    - name: Data notes
+      contains: Each figure supplied, computed or missing, the sources with dates and a not-advice line.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with code running
+      why: Does the weighted sums and the rate shocks without hand errors.
+  inputs:
+    - A holdings export from your broker or custodian
+    - A government bond curve in your currency, pasted in
+terms:
+  - term: Duration
+    meaning: How much a bond's price moves for a small change in interest rates.
+  - term: DV01
+    meaning: The money gained or lost if rates move by one hundredth of a percentage point.
+  - term: Convexity
+    meaning: How much duration itself changes as rates move.
+  - term: Rate shock
+    meaning: A test where all rates are moved up or down by the same amount.

@@ -1,6 +1,6 @@
 new_slug: monthly-roles-and-goals-reviewer
 name: Monthly roles and goals reviewer
-summary: Give it your roles and last month's calendar. Get the role crowding out the rest, your goals re-set and next month protected.
+summary: Run a monthly roles and goals review. Give it your roles and last month's calendar. See which role got squeezed and get next month planned.
 job: organise-work
 thinking: high
 thinking_why: It weighs a month of hours against what someone said matters and plans a month that must survive real life. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your months are busy and the things you said mattered keep getting the leftovers.
   - You set goals each quarter and lose track of them by week three.
   - You want a monthly habit that asks whether the time went where you meant.
+not_for:
+  - "You want to review one week only: use the Weekly review keeper, which closes each week."
+  - "You have not written down your roles yet: start a plain list of four to seven roles first, then come back for the first review."
+  - "You want someone to move meetings or message people for you: do that yourself, since this agent only suggests changes."
 you_give:
   - Your four to seven roles, with one line on what you are about in each
   - Last month's calendar as an export or a list of hours by day (advised)
@@ -33,6 +37,32 @@ how_to_use:
   - Export last month's calendar, or list the hours by day. Attach it or put it in the folder.
   - Read the crowded role and the plan. Add the protected blocks to your own calendar.
   - Run it again on the last Sunday of next month. It compares the rows.
+output_sample:
+  input:
+    - Your four to seven roles, with one line on what you are about in each
+    - Last month's calendar as an export or a list of hours by day
+    - The quarter's goals, once you have set them (optional on month one)
+    - A journal or loose notes from the month (optional)
+  prerequisites:
+    - An AI that can keep files between months, such as Claude Code, to save the roles and goals
+    - A calendar export from Google Calendar or Outlook (advised)
+  output:
+    - name: Last month
+      contains: Hours by role, this month against last, with the crowded role and the role that took the most.
+    - name: The roles
+      contains: Each role with what you are about, its lasting result, and its hours against last month.
+    - name: The goals
+      contains: Each key result marked moved, stuck or no time made, plus a new set at quarter end.
+    - name: The foothold
+      contains: One two-minute habit for a role crowded out two months running, with a cue and a restart plan.
+    - name: Next month
+      contains: A plan from values to month to week, with protected hours, the first week's big tasks and what to batch or drop.
+    - name: Tools
+      contains: Each app marked kept, cut or limited, shown quarterly or when apps ate a fifth of the month.
+    - name: Changes to approve
+      contains: Calendar blocks to add, things to decline and habits to start, for your yes.
+    - name: Files and missing
+      contains: The file saved for each step and every line marked MISSING.
 how_it_works:
   - title: Map the roles once and each quarter
     text: Your roles, what you are about in each, one or two lasting results, and the role crowding out the rest.

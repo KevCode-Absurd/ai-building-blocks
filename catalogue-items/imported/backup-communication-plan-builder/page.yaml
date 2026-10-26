@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: backup-communication-plan-builder
 name: Backup communication plan builder
-summary: Share your group and communication methods. Get fallback paths, owners, switch triggers, and a safe test plan.
+summary: Build a backup communication plan with fallback paths, owners and switch triggers. Get a worksheet, check-in card and a safe test outline.
 job: organise-work
 headline: Backup communication plan builder
 subhead: Share who must reach whom, the communication methods available, and local rules. It checks whether fallback paths share the same weak points. You get a primary and backup plan, owners, switch triggers, open gaps, and an authorized exercise outline.
+not_for:
+  - "You only need status updates or notices for staff or customers: write them with your own incident or stakeholder messaging process."
+  - "You need radio frequencies, channels or programming details: use your group's approved radio or channel procedure."
+  - "Someone is in immediate danger: call emergency services and follow your incident leader."
 you_give:
   - The mission, required contacts, available methods, local procedures, owners, and activation authority.
 you_get:
@@ -24,5 +28,29 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - "Gather your inputs first: the job you must keep doing, who must reach whom, the methods you can use, your local procedures, and who can approve a switch."
+  - Open your AI and upload the skill folder. If it cannot read files, paste the skill text into the chat.
+  - Paste your inputs and ask it to build your backup communication plan.
+  - Check the worksheet. Make sure each backup path does not share a device, network, power source or provider with the one before it.
+  - Fill every item marked UNKNOWN with its owner before you approve the plan.
+  - Once the plan is approved, use the check-in card to brief people and the exercise template to plan a safe test. Nothing is activated until your named authority says so.
+output_sample:
+  input:
+    - The job your group must keep doing, and who must reach whom
+    - The ways you can communicate now, such as phone, radio or messaging apps
+    - Your local rules and procedures (optional)
+    - The names or roles of owners and who can approve a switch
+  prerequisites:
+    - An AI that can read files, so it can use the skill's templates
+    - Your group's own contact details, kept in a protected plan
+  output:
+    - name: PACE plan worksheet
+      contains: Primary, Alternate, Contingency and Emergency paths for each sender and receiver pair, with owners, triggers and shared weak points.
+    - name: Communications check-in card
+      contains: A short card for participants showing how to check in, when to switch paths and who to call.
+    - name: Exercise and after-action review
+      contains: A bounded test plan with goals, safety limits, evidence to collect, stop rules and follow-up actions.
+    - name: Troubleshooting decision log
+      contains: A record of what failed, the evidence, the decisions made and any handoffs.
+    - name: Unknowns and gap list
+      contains: Each missing fact marked UNKNOWN, with an owner and a check that will settle it.

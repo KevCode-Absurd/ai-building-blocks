@@ -1,6 +1,6 @@
 new_slug: logo-strength-tester
 name: "Logo strength tester"
-summary: "Paste your logo ideas. Get each scored out of 100 on seven tests, with a keep or drop call."
+summary: "Test your logo ideas before you pick one. Get each scored out of 100 on seven tests, plus a one-colour and small-size check, with a keep, fix or drop call."
 job: design-work
 thinking: high
 thinking_why: "It scores each idea on several tests and weighs old value against change, which needs judgement."
@@ -17,6 +17,10 @@ when:
   - "You have several logo ideas and need a way to choose that is not taste."
   - "Someone wants to change a mark that has been used for years."
   - "A designer sent options and you are not sure how to judge them."
+not_for:
+  - "You want to plan how the mark works as a system across a brand: use the Brand mark system planner."
+  - "You want a new logo drawn: hire a designer, this only judges ideas you already have."
+  - "You only want to know which one people like best: ask a small group of real customers, as this skill sets first reactions aside."
 
 you_give:
   - "Your logo ideas (attach images; your AI can see pictures)"
@@ -36,6 +40,29 @@ how_to_use:
   - "For a redesign, attach the current mark and say how long it has been in use."
   - "Print each idea at the smallest size, in one colour, and compare with its small-size result."
   - "Fix the \"fix\" ideas and run them again."
+output_sample:
+  input:
+    - Your logo ideas, as images
+    - What the business is and does
+    - Where the mark will be used, and the smallest size (optional)
+    - "For a redesign: the current mark, how long it has been used and who wants the change (optional)"
+  prerequisites:
+    - An AI that can read images, if you attach pictures
+  output:
+    - name: What the mark must identify
+      contains: One line on what makes the business different and what the mark must tell people it is.
+    - name: Seven test scores
+      contains: A score from 0 to 10 for each idea on distinct, visible, usable, memorable, universal, durable and timeless.
+    - name: One colour and small size
+      contains: A score from 0 to 15 and a note on which details disappear at the smallest size.
+    - name: Not just a picture of the product
+      contains: A score from 0 to 15 on whether the mark only works because it shows what you sell.
+    - name: Score and call
+      contains: A total out of 100 with the working, and a keep, fix or drop call with one reason.
+    - name: For a redesign
+      contains: Who wants the change, whether the fault is real or a wish, and how long the mark has been in use.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts that would change a score, and one line for each check that was still missed, or none.
 
 how_it_works:
   - title: "Says what it identifies"

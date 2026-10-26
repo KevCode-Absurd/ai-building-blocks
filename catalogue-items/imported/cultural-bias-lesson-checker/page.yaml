@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must spot assumptions the writer cannot see.
 new_slug: cultural-bias-lesson-checker
 name: Cultural bias lesson checker
-summary: Paste a lesson or task. Get a check for cultural bias and hidden
-  assumptions, with ways to adapt it for your learners.
+summary: Check a lesson for cultural bias before you teach it. Paste the task and say who it is for. You get hidden assumptions and ways to adapt it.
 job: teach-and-train
 headline: Cultural bias lesson checker
-subhead: A lesson built in one country can quietly fail in another. Paste a task
-  or teaching practice and say who will use it, and you get a check for cultural
-  bias and hidden assumptions.
+subhead: A lesson built in one country can quietly fail in another. Paste a task or teaching practice and say who will use it, and you get a check for cultural bias and hidden assumptions.
 explain: |
   A lesson built in one country can quietly fail in another. Paste a task or teaching practice and say who will use it, and you get a check for cultural bias and hidden assumptions.
 
@@ -18,6 +15,10 @@ when:
   - A teaching method that worked elsewhere is not landing with your learners.
   - You want to review a resource before it goes into your curriculum.
   - A research finding is being treated as true for every classroom.
+not_for:
+  - You have already run this task well with this class. Trust what you know about your students instead.
+  - You need a full new lesson built around your learners' culture. Ask a colleague who knows the community, or write it with them.
+  - You want a check on spelling, facts or reading level. Use a plain proofreading step in your AI chat.
 you_give:
   - The task, lesson or practice
   - Who it is for and where
@@ -30,7 +31,27 @@ you_get:
   - Adapted versions of weak parts
   - Questions to ask your students or colleagues
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste your task or lesson in full.
+  - Say who your learners are and where you teach. Add any worries you have, and where the task came from if you know.
+  - Read each assumption the AI lists. Talk it over with a colleague or with your students.
+  - Pick one adapted version and try it with your class. Change the whole unit only after it works.
+  - Treat the regional examples as ideas to check. Your own students may be different.
+output_sample:
+  input:
+    - The task, lesson or teaching practice, pasted in full
+    - Who will use it, and where
+    - Where the task was first made (optional)
+    - Year group and subject (optional)
+    - Any worries you have about cultural fit (optional)
+  output:
+    - name: Cultural Assumptions Identified
+      contains: The things the task takes for granted, such as values, speaking up in class, the teacher's role and how success is judged.
+    - name: Adaptation Suggestions
+      contains: Changes to the weak parts that keep the learning goal and fit your learners better.
+    - name: Alternative Approaches From Other Traditions
+      contains: Other ways of teaching the same goal, drawn from different cultures and school traditions.
+    - name: What Transfers Well
+      contains: The parts of the task that should work fine for your learners as they are.
+    - name: Honest Caveats
+      contains: Limits of the check, and what you should confirm with your own students and colleagues.

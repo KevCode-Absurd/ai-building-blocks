@@ -1,50 +1,65 @@
 new_slug: make-a-new-policy-understandable-to-staff
 name: Make a new policy understandable to staff
 headline: Make a new policy understandable to staff
-summary: Share the source files. Get a plain explanation, staff FAQ and rollout action list.
+summary: Explain a new staff policy in plain words. Share the approved policy and change list. Get a clear explanation, a staff announcement and a rollout list.
 job: document-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A plain explanation, staff FAQ and rollout action list. Share the approved policy, the policy owner confirmed change list, affected roles and effective date. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share the approved policy, the owner's list of what changed, the roles affected and the start date. Your AI explains each change in plain words, drafts the announcement to staff, and lists the sign-offs and training that still need an owner.
 explain: |-
-  A plain explanation, staff FAQ and rollout action list.
+  A new policy usually reaches staff as a long document and a short email. People skim it, miss the part that changes their day, and then ask the same questions for weeks. This workflow makes a new staff policy easy to understand before you announce it.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The explanation preserves obligations and exceptions; uncertain legal meaning goes back to the policy owner. Missing tools or evidence stay visible in the final summary.
+  Two skills run in order. The first explains each change in plain words. Every change gets a short answer, the details, any exceptions and the policy section it comes from. The examples use only what the policy says. The second skill writes the announcement for staff, and lists each acknowledgment or training the policy needs, with a blank for who owns it.
+
+  It keeps every duty and exception from the policy. Where the meaning is unclear, it does not guess. It sends the question back to the policy owner. It explains a policy. It does not write one, and it does not give legal advice.
 when:
-  - You need a plain explanation, staff FAQ and rollout action list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - HR or a manager has approved a policy change and you must tell the whole team.
+  - Staff keep asking what the new expenses, leave, remote work or conduct rules mean for them.
+  - The policy is correct but too long and too formal for most people to read.
+  - You need a list of who must sign or train before the start date.
+not_for:
+  - "The policy is still being drafted or reviewed: finish approval first. This works from the approved text."
+  - "You need the official reading of a rule for a dispute: ask the policy owner or a lawyer. This explains, it does not rule."
+  - "You want to know whether staff understood it after launch: use the Review staff adoption of a policy change workflow."
+  - "You only need to answer one staff question on an existing policy: use the Company policy explainer on its own."
 you_give:
-  - The approved policy, the policy owner confirmed change list, affected roles and effective date.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The approved policy text, with its version and start date
+  - The policy owner's list of what changed, from what to what
+  - The roles or teams the policy affects
+  - The policy owner's name or role, so staff know who to ask
+  - Any sign-off or training the policy needs (optional)
 you_get:
-  - A plain explanation, staff FAQ and rollout action list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A plain explanation of each change, with a short answer, details, exceptions and the policy section
+  - A draft announcement to staff for the policy owner to review
+  - A rollout list of sign-offs and training, each with an owner and date still to fill
+  - Questions for the policy owner where the text is unclear
+  - A list of facts still MISSING
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the approved policy. Paste the policy owner's change list and say who is affected and when it starts.
+  - Tell your AI to follow the pack and save each step's file.
+  - After step 1, read each explanation against the policy. Every duty, limit and exception must still be there. Send the owner any unclear points.
+  - After step 2, fill in the owner and date on each rollout item. Have the policy owner approve the announcement before you send it.
 how_it_works:
   - title: Company policy explainer
-    text: Explain the approved changes with practical examples drawn only from the policy.
+    text: Writes one entry per change in plain words, with a short answer, the details, exceptions and the quoted policy section. Uses examples taken only from the policy. Hands step 2 the explanations and the open questions. Check before moving on, nothing a rule requires or allows was dropped.
   - title: Stakeholder update writer
-    text: Draft a clear announcement and list acknowledgments or training still requiring an owner.
+    text: Writes the announcement for staff from the step 1 entries, and lists each acknowledgment or training that still needs an owner. Check before you send, the start date and who is affected match the policy.
 output_shape: |-
-  Scope and source coverage
-  A plain explanation, staff FAQ and rollout action list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCES      <policy version, change list, roles and start date>
+  PLAIN EXPLANATION      <change | short answer | details | exceptions | policy section>
+  STAFF ANNOUNCEMENT     <what changes | who it affects | start date | what to do | who to ask>
+  ROLLOUT LIST           <sign-off or training | who | owner | due date>
+  QUESTIONS FOR THE OWNER  <unclear clause | why it matters>
+  MISSING                <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The explanation preserves obligations and exceptions; uncertain legal meaning goes back to the policy owner.
+  - what: Reader
+    how: Say who the staff are, such as shop floor, office or managers. The words and examples change to suit them.
+  - what: Tone
+    how: Ask for a formal note, a friendly team message or a short post for your chat tool. The facts stay the same.
+  - what: One change at a time
+    how: If the policy has many changes, start with the three that touch most people. Run the rest after.
 judge:
   - The explanation preserves obligations and exceptions; uncertain legal meaning goes back to the policy owner.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +72,38 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the finished explanation beside the policy, so the next staff question has a ready answer.
+  - Add the questions staff ask after launch, and run the explainer again on those.
+  - Pair it with the adoption review workflow a few weeks after the start date.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads documents
+      why: It can read the full policy and the change list together. In plain chat, paste the changed sections.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The old version of the policy, so changes can be shown side by side.
+    - Questions staff have already asked.
 terms:
+  - term: Acknowledgment
+    meaning: A staff member's sign-off that they have read and understood the policy.
+  - term: Policy owner
+    meaning: The person or team who approves the policy and answers questions about what it means.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.
+output_sample:
+  input:
+    - The approved policy text, with its version and start date
+    - The policy owner's list of what changed
+    - The roles affected and the policy owner's name
+    - Any sign-off or training the policy needs (optional)
+  prerequisites:
+    - An AI that can read files
+    - A policy that has been approved
+  output:
+    - name: outputs/step-01-company-policy-explainer.md
+      contains: Each change in plain words, with short answer, details, exceptions and the policy section.
+    - name: outputs/step-02-stakeholder-update-writer.md
+      contains: The staff announcement and the rollout list of sign-offs and training, each with an owner to fill in.
+    - name: Questions for the owner
+      contains: Each unclear clause, with why it matters and who can settle it.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.

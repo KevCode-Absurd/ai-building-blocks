@@ -2,34 +2,65 @@ thinking: medium
 thinking_why: It follows a set lesson structure with your content.
 new_slug: primary-source-lesson
 name: Primary source history lesson planner
-summary: Give it a topic and sources. Get a full lesson where learners
-  investigate a historical question from documents.
+summary: Plan a primary source history lesson from your question and documents. You get a four-part lesson with prompts, discussion and support for learners.
 job: teach-and-train
 headline: Primary source history lesson planner
-subhead: A full history lesson where learners investigate a real question using
-  original documents, then argue from the evidence. Give it a topic and sources
-  and it builds the lesson.
+subhead: Give your AI a history question, your documents, your learners and your class time. It builds a four-part lesson where learners study original sources, then argue from the evidence. It uses the Reading Like a Historian method.
 explain: |
   A full history lesson where learners investigate a real question using original documents, then argue from the evidence. Give it a topic and sources and it builds the lesson.
 
   It follows the Reading Like a Historian method from Stanford researchers. The lesson has four parts: set up background, ask a central question, work through the documents with prompts on who wrote it, when and why, and finish with discussion that compares sources. It includes guiding questions and scaffolds for readers who need help. It suits middle school, high school and adult classes.
 when:
-  - You teach a unit and want learners to use sources, not a textbook summary.
-  - You have two conflicting documents on one event.
-  - You need a lesson plan with discussion questions.
-  - You want learners to practise judging sources.
+  - You teach a unit and want learners to work from sources, not a textbook summary.
+  - You have two documents that disagree about one event.
+  - You need discussion questions and a plan for your class time.
+  - You want learners to practise judging who wrote a source and why.
+not_for:
+  - "You want learners to practise reading a single source: use a short close-reading task from your own materials instead."
+  - "You want a plain summary lesson from a textbook: ask your AI for a simple lesson outline, as this skill needs documents."
+  - "You have no documents yet: find two or three sources first, such as from a library or archive site, then come back."
 you_give:
-  - Topic
-  - Sources or document excerpts
-  - Grade level
-  - Class time
+  - Your central question
+  - Your documents or excerpts, with a note on what each says
+  - Your learners' age or year, reading level and past practice with documents
+  - Your class time, such as 2 x 50 minutes
+  - The skills you want to focus on (optional)
+  - What learners already know about the topic (optional)
 you_get:
-  - Central question
-  - Background activity
-  - Document analysis prompts
-  - Discussion plan
+  - A background activity that sets up the topic
+  - A framed central question
+  - Prompts for each document on author, date, purpose and claims
+  - A discussion plan that compares the sources
+  - Notes for learners who need more support
+  - Points where you can check understanding
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Add your central question, your documents and what each one says.
+  - Add your learners' level and your class time. Add the optional items if you have them.
+  - Ask your AI to design the lesson.
+  - Check that each prompt matches your documents. Fix any claim about a source that is wrong.
+  - Print or copy the plan into your lesson notes.
+output_sample:
+  input:
+    - Your central question, the one learners will investigate
+    - "Your document set: how many, what type, and what each says"
+    - "Your learners: age or year, reading level, and past practice with documents"
+    - Your lesson time, such as 2 x 50 minutes
+    - Skills to focus on, background and writing task (optional)
+  output:
+    - name: "Phase 1: Background Knowledge"
+      contains: A short activity that gives learners the context they need before they meet the documents.
+    - name: "Phase 2: Central Question"
+      contains: How to pose the question so learners know what they are investigating.
+    - name: "Phase 3: Document Investigation"
+      contains: Each document with prompts on who wrote it, when, why, and what it claims.
+    - name: "Phase 4: Discussion and Writing"
+      contains: A discussion that compares the sources, then a writing task that answers the question.
+    - name: Strategy Instruction Plan
+      contains: Which reading skills to teach or model, and when in the lesson.
+    - name: Discussion Plan
+      contains: Questions to ask, in order, to push learners to argue from evidence.
+    - name: Differentiation Notes
+      contains: Ways to support learners who need help and stretch those who are ready.
+    - name: Assessment Opportunities
+      contains: Points in the lesson where you can check what learners understand.

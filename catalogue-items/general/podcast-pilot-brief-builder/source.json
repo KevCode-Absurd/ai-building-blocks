@@ -1,0 +1,14 @@
+{
+  "repo": "msitarzewski/agency-agents",
+  "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+  "adaptation": "selected task methods; original profiles are background/provenance only",
+  "sources": [
+    {
+      "slug": "agency-marketing-global-podcast-strategist",
+      "path": "marketing/marketing-global-podcast-strategist.md",
+      "sha256": "98416e338db666c5cc1d6bfd37c35daffa00532010623fdb4a92ed7dce76a7aa",
+      "licence": "MIT"
+    }
+  ],
+  "review": "reports/2026-10-25-agency-curation-business.json"
+}

@@ -1,0 +1,115 @@
+name: Cloud Security Architect agent
+summary: Describe your AWS, Azure or GCP setup. Get a posture checklist by
+  area, each gap ranked, and the guardrail to add so it can't happen again.
+headline: Cloud Security Architect agent
+subhead: Describe your cloud accounts, identity setup and network layout. It
+  checks each area, identity, network, data and logging, against known cloud
+  breach patterns, and hands back the gaps ranked with a fix for each.
+job: secure-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Most cloud breaches aren't zero-days. They're a public bucket, a wildcard IAM policy or a long-lived key sitting where it shouldn't, found because nobody checked. This agent runs the check an experienced cloud architect would run first: identity (who can do what, and for how long), network (what's reachable from the internet), data (what's encrypted and who holds the keys), and logging (what you'd see if something went wrong).
+
+  For each area it compares what you describe against the pattern behind real breaches, such as long-lived credentials instead of short-lived roles, or a management port open to the world, and proposes the guardrail that stops the class of mistake, not just this one instance. It marks what you confirmed against what it assumed, so you know exactly what to verify before you trust a "pass."
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+when:
+  - You're setting up a new AWS, Azure or GCP account and want a security baseline before you go live.
+  - You want a second look at your IAM policies, security groups or storage buckets before a launch or an audit.
+  - You're moving from a single account to multiple accounts or environments and want the guardrails planned first.
+  - A customer or auditor asks how your cloud environment is secured and you want a written answer.
+not_for:
+  - You want your application code reviewed for bugs. Use the Application Security Engineer agent.
+  - You have an active breach or suspicious activity right now. Use the Incident Responder agent and act immediately.
+  - You need a formal SOC 2, ISO 27001 or HIPAA gap assessment signed off by a certified assessor. Use the Compliance Auditor agent as a starting point, then bring in a certified assessor.
+you_give:
+  - Your cloud provider (AWS, Azure, GCP, or more than one) and how your accounts or projects are organized.
+  - How identity works today: who has admin access, whether MFA is enforced, how services authenticate to each other.
+  - Your network layout: what's public, what's private, what's reachable from the internet.
+  - What data you store and how sensitive it is (optional, sharpens the data-protection checks).
+  - A security posture export (AWS Security Hub, Azure Defender, GCP Security Command Center), if you have one (optional).
+you_get:
+  - A posture checklist across five areas: identity, network, data, logging and compute, each marked Pass, Gap or Unknown.
+  - A ranked gap list: the issue, the breach pattern it matches, and the fix.
+  - A guardrail list: preventive policies (SCPs, Azure Policies, Organization Policies) that stop the mistake from recurring.
+  - The assumptions it made and what you should confirm before you trust a "Pass."
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
+  - Describe your cloud provider, account structure, identity setup and network layout.
+  - Attach a posture export if you have one (Security Hub, Defender for Cloud, Security Command Center).
+  - Say "Run the posture check. Mark anything you can't verify as Unknown, not Pass."
+  - Fix every item marked Gap on identity and network first. Those are where breaches start.
+  - Turn the guardrail list into policy (SCPs, Org Policies) so the fix survives the next change, not just this one.
+how_it_works:
+  - title: Set the scope
+    text: It confirms your provider, account structure, identity setup and network layout, and asks once for gaps.
+  - title: Check identity
+    text: It looks for long-lived credentials, missing MFA, and IAM policies that grant more than the task needs.
+  - title: Check network, data and logging
+    text: It looks for public management ports, unencrypted storage, and whether you'd actually see an incident in your logs.
+  - title: Match to known breach patterns
+    text: Each gap is tied to a real class of cloud breach, such as a public bucket or a leaked long-lived key, not a generic warning.
+  - title: Rank and propose guardrails
+    text: Gaps are ranked by how exposed they leave you, each with a preventive policy that stops the mistake class, not just this instance.
+output_shape: |-
+  POSTURE CHECKLIST
+    [Identity/Network/Data/Logging/Compute] <item> | <Pass, Gap or Unknown> | <evidence or reason>
+
+  RANKED GAPS
+    <gap> | <breach pattern it matches> | <impact> | <fix>
+
+  GUARDRAILS TO ADD
+    <policy or control> | <what it prevents> | <effort: small, medium or large>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <assumption or gap> | <what to verify>
+output_sample:
+  input:
+    - Your cloud provider and account or project structure
+    - How identity and authentication work today
+    - "Your network layout: public versus private"
+    - What data you store (optional)
+    - A posture export from Security Hub, Defender or Security Command Center (optional)
+  prerequisites:
+    - An AI that can read files, if you attach a posture export
+  output:
+    - name: Posture checklist
+      contains: Identity, network, data, logging and compute, each marked Pass, Gap or Unknown with the reason.
+    - name: Ranked gaps
+      contains: Each gap, the breach pattern it matches, its impact and the fix.
+    - name: Guardrails to add
+      contains: Preventive policies that stop the mistake from recurring, sized small, medium or large.
+    - name: Assumptions and checks
+      contains: What the agent assumed and which facts you still need to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a posture export or Terraform/CloudFormation files next to your description.
+  inputs:
+    - Your IAM policy exports or role list.
+    - Past findings from AWS Security Hub, Azure Defender or GCP Security Command Center.
+    - Your Terraform or CloudFormation source, if your infrastructure is code.
+terms:
+  - term: Least privilege
+    meaning: Giving an identity only the access it needs for its task, nothing more.
+  - term: Blast radius
+    meaning: How much damage a single compromised credential or service can cause before it's contained.
+  - term: Guardrail
+    meaning: A preventive policy, such as an AWS SCP, that blocks a class of mistake instead of relying on someone remembering a rule.
+tweaks:
+  - what: Scope
+    how: Review one account or environment at a time. All of production and all of dev in one pass blurs the risk ranking.
+  - what: What you attach
+    how: A real posture export (Security Hub, Defender, Security Command Center) turns guesses into checked facts fast.
+improve:
+  - Keep each posture check with your account docs, and start the next review from what's already fixed.
+  - Pair it with the Application Security Engineer agent for the code that runs inside this infrastructure.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

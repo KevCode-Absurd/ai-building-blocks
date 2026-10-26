@@ -1,55 +1,113 @@
 new_slug: debt-service-covenant-headroom-checker
 name: Debt service covenant headroom checker
 headline: Debt service covenant headroom checker
-summary: A debt service covenant schedule and minimum cash headroom
+summary: See your cash cushion over a debt service covenant in each of three test periods, and where cash falls short of the floor.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A debt service covenant schedule and minimum cash headroom. Share qualifying cash and contractual debt service for three matching periods, signed covenant definition and minimum required cash coverage.
+subhead: Give it the qualifying cash and the debt service for three test periods, plus the minimum cover in your loan agreement. It shows the cash needed, the headroom for each period and the weakest period. A short period stays in view and is not averaged away.
 explain: |-
-  A debt service covenant schedule and minimum cash headroom.
+  Many loans have a cash test. In each test period, the cash the contract counts must be at least a set multiple of the debt service due. Debt service means the interest and principal payments for the period. This debt service covenant headroom checker shows how far above or below that line you are.
 
-  Credit covenant cash tests. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+  Headroom is qualifying cash minus the minimum multiple times debt service. A negative number is a shortfall. The skill shows all three periods and the smallest headroom. It uses the covenant's own meaning of cash and debt service. It does not swap in EBITDA, drop debt service or assume a waiver.
+
+  It is a cash covenant calculation, not a legal opinion on a breach. Practice numbers: cash of 150, 120 and 180, debt service of 100, 100 and 120, and a floor of 1.25 times. Headroom is 25, minus 5 and 30, so the second period is 5 short.
 when:
-  - You need a debt service covenant schedule and minimum cash headroom.
-  - You work on credit covenant cash tests and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - The next test date is close, and you want to know whether cash covers the floor.
+  - A forecast shows one weak quarter, and you want the exact shortfall.
+  - A lender asks for a covenant schedule that shows the headroom.
+  - You are changing a debt payment and want to see the effect on headroom.
+not_for:
+  - Your covenant tests net debt against EBITDA, not cash. That is a different check. If a test is missed, use the Equity cure scenario checker.
+  - Your covenant counts fixed charges, not debt service. Use the Fixed charge coverage bridge builder.
+  - You want to know whether you are in breach in law, or whether a waiver applies. Ask a lawyer. This skill shows the sums only.
+  - A period has no debt service. The ratio means nothing there, so handle that period on its own.
 you_give:
-  - Qualifying cash and contractual debt service for three matching periods, signed covenant definition and minimum required cash coverage.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Qualifying cash for each of three test periods, as the covenant defines it (from the compliance certificate or your cash records)
+  - Debt service for each of those periods (from the loan repayment schedule)
+  - The minimum cover multiple, for example 1.25 times (from the loan agreement)
+  - The test dates, currency and units
+  - The page of the signed agreement that defines cash and debt service (optional, but best)
 you_get:
-  - A debt service covenant schedule and minimum cash headroom.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "A schedule for each period: qualifying cash, debt service, cash required and headroom"
+  - The smallest headroom and the period it falls in
+  - The cash gap, if any period is short
+  - A ratio for each period that ties back to the same table
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same schedule, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste three periods of cash and debt service, the minimum multiple and the covenant wording if you have it. Say the test dates, currency and units.
+  - "Ask: show the headroom for each period and the smallest one."
+  - Check one period. Debt service times the multiple is the cash required. Cash minus that is the headroom.
+  - Check that the cash and the debt service match the covenant's own definitions, not your own.
+  - Read MISSING and CHECKS MISSED. Take any short period to your credit reviewer or lawyer.
 how_it_works:
-  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
-    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
-  - title: 2. Read the actual covenant cash numerator, debt-service denominator, test dates and minimum required coverage; no market benchmark becomes a rule
-    text: Read the actual covenant cash numerator, debt-service denominator, test dates and minimum required coverage; no market benchmark becomes a rule.
-  - title: 3. For each test period multiply debt service by the contractual floor and subtract from qualifying cash to show signed cash headroom
-    text: For each test period multiply debt service by the contractual floor and subtract from qualifying cash to show signed cash headroom.
-  - title: 4. Identify minimum headroom, preserve any deficient period and reconcile ratios to the same period cash/service table
-    text: Identify minimum headroom, preserve any deficient period and reconcile ratios to the same period cash/service table.
+  - title: Maps the sources
+    text: Lists each source, contract definition, period boundary, currency and gap before any sums.
+  - title: Reads the covenant
+    text: Takes the cash, the debt service, the test dates and the minimum multiple from the contract. No market rule replaces them.
+  - title: Finds the cash needed
+    text: Multiplies each period's debt service by the minimum multiple.
+  - title: Shows the headroom
+    text: Takes that from qualifying cash. A negative result stays negative.
+  - title: Finds the weakest period
+    text: Shows the smallest headroom, keeps any short period in view and ties the ratios back to the same table.
+  - title: Marks the gaps
+    text: Writes MISSING for any figure it was not given. It never fills a gap with zero.
 output_shape: |-
-  A debt service covenant schedule and minimum cash headroom.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Smallest headroom <amount> in <period> | Largest single-period cash gap <amount or none>
+
+  HEADROOM SCHEDULE
+  <period | test date | qualifying cash | debt service | minimum multiple | cash required | headroom | cash / debt service>
+
+  SHORT PERIODS
+  <each period below the floor, the shortfall, or "none">
+
+  COVENANT DEFINITIONS USED
+  <the wording or source for cash, debt service and the minimum multiple>
+
+  INPUT SOURCES AND ASSUMPTIONS
+  <currency and units, source and date for each input, workbook check if any>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Qualifying cash for three test periods
+    - Debt service for the same three periods
+    - The minimum cover multiple from the loan agreement
+    - The test dates, currency and units
+    - The agreement page that defines cash and debt service (optional)
+  prerequisites:
+    - The signed loan agreement with its covenant definitions
+    - Your cash records or compliance certificate, and the repayment schedule
+  output:
+    - name: RESULT
+      contains: The smallest headroom and its period, and the largest single-period cash gap if any.
+    - name: HEADROOM SCHEDULE
+      contains: "One row per period: cash, debt service, cash required, headroom and the cash to debt service ratio."
+    - name: SHORT PERIODS
+      contains: Each period below the floor with its shortfall, kept in view and never averaged away.
+    - name: COVENANT DEFINITIONS USED
+      contains: The contract wording or source behind cash, debt service and the minimum multiple.
+    - name: INPUT SOURCES AND ASSUMPTIONS
+      contains: Currency, units, test dates and the source and date of every input.
+    - name: MISSING
+      contains: Each figure it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Actual records, contractual terms and scenarios remain distinguishable.
+  - what: A different cash forecast
+    how: Give the new cash for the period and run it again. Say what changed and when.
+  - what: A different minimum multiple
+    how: Give the multiple from the agreement. Do not use a market norm in its place.
+  - what: More than three periods
+    how: Say how many. The same steps repeat. The workbook that comes with the skill covers three.
 judge:
   - Actual records, contractual terms and scenarios remain distinguishable.
   - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
@@ -64,15 +122,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can build the headroom table in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed loan agreement pages that define qualifying cash, debt service and the minimum cover
+    - The repayment schedule and your cash records for each test period
+    - A named reviewer and the question you want answered
 terms:
+  - term: Debt service
+    meaning: The interest and principal payments due in a period.
+  - term: Covenant
+    meaning: A promise in a loan agreement that the borrower must keep, such as a cash test.
+  - term: Qualifying cash
+    meaning: The cash the covenant allows you to count.
+  - term: Headroom
+    meaning: How far cash sits above the required level. A negative number is a shortfall.
+  - term: Minimum cover
+    meaning: The least number of times cash must cover debt service. The loan agreement sets it.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real loan.

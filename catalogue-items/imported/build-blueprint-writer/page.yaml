@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It researches, picks a stack and writes testable steps with no guessing.
 new_slug: build-blueprint-writer
 name: Build blueprint writer
-summary: Give it a product idea. Get one researched build document with stack,
-  steps and tests an AI can build from.
+summary: "Turn a product idea into a build blueprint: researched tech stack, epics, tests and steps an AI coding agent can follow without guessing."
 job: build-product
 headline: Build blueprint writer
-subhead: One long document that an AI coding agent can build your product from,
-  epic by epic, without stopping to guess. It starts from an idea that may be
-  only two or three lines.
+subhead: One long document that an AI coding agent can build your product from, epic by epic, without stopping to guess. It starts from an idea that may be only two or three lines.
 explain: |
   One long document that an AI coding agent can build your product from, epic by epic, without stopping to guess. It starts from an idea that may be only two or three lines.
 
@@ -18,6 +15,10 @@ when:
   - You want competitor research and a tech stack recommendation with reasons.
   - You plan to have an AI agent build the app and need clear instructions.
   - You need a backlog with acceptance criteria for a small team.
+not_for:
+  - "You only need one screen of copy or a short feature note: write it by hand or ask your AI for a one-page brief."
+  - "You already have a spec and want it reviewed: ask your AI to review it, since this skill writes new blueprints."
+  - "You have no way to search the web or save files: use a plain chat for a rough outline, not this skill."
 you_give:
   - Your product idea in a few lines
   - Answers to intake questions
@@ -30,8 +31,34 @@ you_get:
   - Epics and stories with acceptance criteria
   - A build protocol for AI agents
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and save files.
+  - Open an AI that can search the web and save files, such as Claude Code or Codex. Set it to its highest thinking setting.
+  - Add this skill's instructions to your AI, or upload the skill folder.
+  - Tell your AI your product idea in a few lines. Add your budget, platform, deadline and known competitors if you have them.
+  - Answer the intake questions. Then check the decision brief and approve it or ask for changes.
+  - Read the finished blueprint. Fix anything that is wrong for your product.
+  - Start a fresh session for each epic and tell your AI to build the next one.
+output_sample:
+  input:
+    - Your product idea, even if it is only two or three lines
+    - Your answers to the intake questions
+    - Your budget, platform or deadline (optional)
+    - Competitors you already know (optional)
+  prerequisites:
+    - An AI that can search the web and save files
+    - Claude Code or Codex if you want the AI to build the product from the blueprint
+    - Your AI's highest thinking setting, which costs more but gives better research
+  output:
+    - name: Decision brief
+      contains: A short checkpoint of the research and choices for you to approve before the full blueprint is written.
+    - name: Architecture drivers and stack
+      contains: The needs that shape the design, and a tech stack with pinned versions and evidence tags.
+    - name: Quality gate
+      contains: The code quality and review standards every build session must meet.
+    - name: Personas, flows, UX copy and edge cases
+      contains: Who uses the product, how they move through it, the screen text, and what can go wrong.
+    - name: Epics and stories
+      contains: Work split into epics and stories with Given, When, Then checks, tests and a Definition of Done.
+    - name: Session protocol
+      contains: Rules that tell Claude Code or Codex to build one epic per fresh session.
+    - name: Lint result
+      contains: A final check of the finished blueprint for gaps and broken structure.

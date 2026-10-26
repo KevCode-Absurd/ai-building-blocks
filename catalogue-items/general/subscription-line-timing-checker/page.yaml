@@ -1,53 +1,110 @@
 new_slug: subscription-line-timing-checker
 name: Subscription line timing checker
 headline: Subscription line timing checker
-summary: Compare periodic LP returns with and without a one-year capital-call bridge.
+summary: See how a one-year capital call delay lifts a fund's IRR while the money multiple falls. Get both IRRs, the bridge cost and both multiples.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples. Share actual investment and exit evidence, exactly two annual investment periods, one-year bridge, annual simple bridge cost and a call at the first anniversary.
+subhead: Give it the amount an investor puts in, what the investor gets at the end of year two, and the yearly cost of a one-year bridge. It shows the return with and without the delayed call. Cost and timing are shown on their own lines.
 explain: |-
-  Unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples.
+  Many private funds use a subscription line, a bank loan that pays for an investment first. The fund then calls cash from its investors a year later. The investor's money is out for less time. This subscription line timing checker shows what that does to the reported return.
 
-  Private fund performance. Illustrative figures only. 100 grows to121 over2 years:10%. Bridge cost5 delays105 LP call to year1;121/105-1=16/105. Cost10 reduces LP IRR to10%.
+  It works out the return if the investor pays at the start and gets paid at the end of year two. Then it adds one year of bridge cost to the amount called, moves the call to year one, and works out the return again. The money multiple is shown for both.
+
+  The yearly return (IRR) goes up when the call is later, even though the investment did not do any better. The multiple goes down, because the investor pays the bridge cost. The skill shows both so a shorter period is not mistaken for better performance.
 when:
-  - You need unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples.
-  - You work on private fund performance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A fund reports an IRR and you want to know how much comes from a delayed capital call.
+  - A fund manager says the line costs investors nothing and you want to see the numbers.
+  - You are comparing two funds and one uses a bridge, so their IRRs are not like for like.
+  - The bridge rate changes and you want the new IRR and multiple.
+not_for:
+  - Your cash flows fall on uneven dates. Use a dated return function such as XIRR in Excel or Google Sheets.
+  - The fund has facility fees, rolling calls or a loan against fund value. This covers a fixed two-year hold and one simple bridge.
+  - You want to split fund payouts between investors and the sponsor. Use the No-catchup waterfall checker.
+  - You want to see what an early dividend does to a return. Use the Dividend recap timing checker.
 you_give:
-  - Actual investment and exit evidence, exactly two annual investment periods, one-year bridge, annual simple bridge cost and a call at the first anniversary.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The amount the investor puts in at the start (from the capital account statement)
+  - What the investor receives at the end of year two (from the exit or distribution notice)
+  - The yearly bridge cost, as a simple rate for one year (from the line's terms or the manager)
+  - Confirmation that the dates are exactly one and two years apart
+  - The currency and units, such as USD in millions
+  - Your own fund spreadsheet (optional)
 you_get:
-  - Unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The yearly return (IRR) with no bridge, over two years
+  - The bridge cost and the larger call it makes
+  - The yearly return (IRR) with the bridge, measured from the delayed call
+  - The money multiple with and without the bridge
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the amount invested, the year-two receipt and the bridge rate. Say where each came from, and give the currency and units.
+  - Say if the real dates are exactly one and two years apart. If not, the skill will tell you to use XIRR.
+  - "Check one line yourself: the call with a bridge is the investment plus the bridge cost. For 100 and 5, that is 105."
+  - Read both IRRs and both multiples together, then MISSING and CHECKS MISSED. Do not call the higher IRR better performance.
 how_it_works:
-  - title: 1. Verify exact annual spacing; for irregular actual dates use XIRR in a suitable engine rather than relabeling periodic IRR
-    text: Verify exact annual spacing; for irregular actual dates use XIRR in a suitable engine rather than relabeling periodic IRR.
-  - title: 2. Calculate one-year bridge cost and add it to the LP contribution called at year one; retain the same year-two exit receipt
-    text: Calculate one-year bridge cost and add it to the LP contribution called at year one; retain the same year-two exit receipt.
-  - title: 3. Compare two-period unbridged IRR against one-period LP IRR after delayed call, showing cost and lower money multiple separately
-    text: Compare two-period unbridged IRR against one-period LP IRR after delayed call, showing cost and lower money multiple separately.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. Reported facts stay apart from assumptions.
+  - title: Checks the dates
+    text: Confirms the periods are exactly one year apart. For uneven dates it stops and points to XIRR.
+  - title: Finds the return with no bridge
+    text: Works out the yearly return when the investor pays at the start and is paid after two years.
+  - title: Adds the bridge cost
+    text: Multiplies the investment by the bridge rate and adds it to the call, moved to year one.
+  - title: Finds the return with the bridge
+    text: Works out the yearly return on the delayed call over the one remaining year, plus both money multiples.
 output_shape: |-
-  Unbridged periodic IRR, bridged LP IRR, financing cost and both money multiples.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  IRR with no bridge <percent> | Bridge cost <amount> | Delayed call <amount> | IRR with bridge <percent> | Multiple with no bridge <x> | Multiple with bridge <x>
+
+  SCOPE AND SOURCES
+  <currency, units; source and date for each input; the dates behind year one and year two>
+
+  INPUTS AND ASSUMPTIONS
+  <investment, year-two receipt, bridge rate>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <both sets of cash flows; both IRRs; bridge cost; both multiples; the check that each IRR solves to zero>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The amount the investor puts in
+    - What the investor receives at the end of year two
+    - The yearly bridge cost rate
+    - Confirmation of the dates
+  prerequisites:
+    - The capital account statement and the exit notice
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Both IRRs, the bridge cost, the delayed call and both money multiples.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, and the source and dates of each cash flow.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: The amount invested, the year-two receipt and the bridge rate.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Both sets of cash flows, both IRRs, and a check that each IRR solves to zero.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: No period shortening is presented as improved asset performance.
+  - what: Bridge rate
+    how: Change the yearly rate and ask for a second run to see the cost, the IRR and the multiple move.
+  - what: Net of costs
+    how: Give amounts as the investor actually pays and receives, after fees and tax that fall on the investor.
+  - what: Uneven dates
+    how: Give the real dates. The skill will not use these sums and will point you to XIRR.
 judge:
   - No period shortening is presented as improved asset performance.
   - IRR uses one initial negative flow followed by nonnegative inflows; every cash flow has evidence.
@@ -62,15 +119,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The capital call notice and capital account statement
+    - The distribution or exit notice
+    - The subscription line terms or the manager's note on the bridge cost
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Subscription line
+    meaning: A bank loan a fund uses to pay for deals before it calls money from its investors.
+  - term: Capital call
+    meaning: A request from a fund for investors to send in part of the money they promised.
+  - term: IRR
+    meaning: The yearly rate of return that makes a set of cash flows add up to zero.
+  - term: Money multiple
+    meaning: Total cash received divided by the money paid in.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+next:
+  - no-catchup-waterfall-checker
+  - dividend-recap-timing-checker

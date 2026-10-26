@@ -1,6 +1,6 @@
 new_slug: defensive-stock-list-builder
 name: "Defensive stock list builder"
-summary: "Paste the companies that passed your tests. Get a spread list of 10 to 30, size limits and a yearly review date."
+summary: "Build a defensive stock list from companies that passed your tests. Get 10 to 30 names, size limits and a yearly review date."
 job: money-and-investing
 thinking: low
 thinking_why: "It sorts a short list, applies size caps and writes fixed review rules. A fast model does this well."
@@ -17,6 +17,10 @@ when:
   - You ran the quality and price tests and have a handful of survivors.
   - You are not sure how many names to hold or how much to put in each.
   - Only a few companies passed and you do not know whether to loosen a test.
+not_for:
+  - "You want retirement or tax planning: ask a licensed financial planner, since this only sorts a list."
+  - "You want a company or fund picked for you: this names none, so use a licensed adviser."
+  - "You have not tested your companies yet: run the quality and price tests first, then come back."
 
 you_give:
   - The results from the quality and price tests
@@ -35,6 +39,27 @@ how_to_use:
   - Paste the test results, the industry of each company and your stock amount.
   - Say how you feel about holding a broad fund instead of single companies.
   - Take the list to "Sit-still rule writer".
+output_sample:
+  input:
+    - The pass and fail results from your quality and price tests
+    - The amount you plan to put in stocks (optional)
+    - The industry of each company (optional)
+    - Whether you want a broad fund as an option (optional)
+  prerequisites:
+    - Quality and price test results, such as those from the Defensive stock quality screener and the Defensive price ceiling tester
+  output:
+    - name: Passed all tests and set aside
+      contains: The companies that passed every test, and the others with the test each one failed.
+    - name: Spread
+      contains: How many names and industries you have, and the share held by the largest industry.
+    - name: List and sizes
+      contains: Each company with its industry and size, plus the cap for any one name and industry.
+    - name: If too few passed
+      contains: Whether to hold fewer names, add a broad fund for the rest, or wait, with reasons.
+    - name: Yearly review
+      contains: A review date, the facts to check, the only reasons to change the list and the cost of changing.
+    - name: Missing and checks missed
+      contains: Gaps in your inputs and any checks the skill could not pass.
 
 how_it_works:
   - title: Keeps only the passes

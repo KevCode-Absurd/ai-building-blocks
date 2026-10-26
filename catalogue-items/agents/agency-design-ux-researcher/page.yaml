@@ -1,0 +1,138 @@
+name: UX Researcher agent
+summary: Plan a user research study or turn your interview and test notes into findings, personas and ranked fixes for your website or app.
+headline: UX Researcher agent
+subhead: Say what you need to learn about your users, or paste notes from interviews and tests. The agent picks the research method, writes a study plan or a usability test script, and turns notes into findings tied to evidence. You get ranked fixes.
+job: understand-customers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Teams often redesign a page because someone has a hunch, then find out later users were stuck somewhere else. This UX researcher agent starts from the question you need answered, and picks the cheapest method that can answer it. That might be five interviews, a short survey or a usability test.
+
+  It works in two modes. Before research, it writes a study plan: the questions, the method, who to recruit, how many people and how to run each session. After research, it reads your notes and sorts them into findings. Each finding links to what users said or did, so you can check it. It also builds personas and path maps from that evidence, never from guesses.
+
+  It plans and analyses. It cannot recruit people, run sessions or watch your analytics. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its sample percentages and targets are examples, not results measured by AI Blocks.
+when:
+  - Your checkout, sign-up or app keeps losing people and you do not know where they get stuck.
+  - You are about to redesign a page and want to test the idea with real users first.
+  - You have a folder of interview or usability test notes and no time to find the patterns.
+  - A teammate says "users hate this" and you need evidence before you change anything.
+not_for:
+  - "You want to find what to ask in early customer interviews for a business idea: use the Customer discovery interview planner."
+  - "You want a quick research method pick and plan, with no UX focus: use the User research planner."
+  - "You want to sort a pile of reviews, tickets or survey comments into themes: use the Feedback Synthesizer agent."
+  - "You need a study with real legal or medical risk, such as patient testing: use a trained researcher and an ethics review."
+  - "You want to test whether a result is statistically real: use the Statistician agent."
+you_give:
+  - The product or page, and who uses it
+  - The one question you need answered, such as why people leave the checkout
+  - Notes from interviews or usability tests, pasted as text (optional if you are only planning)
+  - Any numbers you have, such as drop-off by step (optional)
+  - Your limits on time, people and budget (optional)
+you_get:
+  - A study plan with questions, method, who to recruit, how many people and a timeline
+  - A usability test script with tasks and what to watch for, if you ask for one
+  - Findings that each cite the notes behind them
+  - Personas and a path map built from your evidence, if you ask for them
+  - Fixes ranked by impact and effort, with a way to check each one worked
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Say whether you are planning research or analysing notes. Paste the product, the users and your one question.
+  - For analysis, paste your notes, one person per block. Say how many people you spoke to.
+  - Read the evidence list first. Remove or fix any quote or finding that does not match your notes.
+  - Run the plan or the test script with real people. You do the recruiting and the sessions, then come back with the notes.
+  - Pick the top fix, make the change and test again with a few new people.
+how_it_works:
+  - title: Fix the question
+    text: It turns your worry into a research question you can answer, and asks once for what is missing.
+  - title: Pick the method
+    text: It matches the question to interviews, a survey, a usability test or your analytics, and says why.
+  - title: Plan the study
+    text: It sets who to recruit, how many, how to screen them and how to get consent and protect privacy.
+  - title: Read the notes
+    text: It lists what people said and did, one per line, before it draws any conclusion.
+  - title: Find the patterns
+    text: It groups the evidence into themes and counts how many people showed each one.
+  - title: Rank the fixes
+    text: It turns each finding into a fix with impact, effort and a way to measure it.
+output_shape: |-
+  RESEARCH QUESTION
+    <what you need to learn> | <decision it will change>
+
+  STUDY PLAN
+    Method <interviews, survey, usability test or analytics> | Why <reason>
+    Who <user type> | How many <number and why> | Screening <rules>
+    Session <length and structure> | Consent and privacy <steps>
+    Tasks <task 1> | <success looks like> | <what to watch>
+
+  EVIDENCE
+    <participant> | <what they said or did>
+
+  FINDINGS
+    <finding> | <people who showed it> | <quote> | <how sure>
+
+  PERSONAS AND PATH MAP (if asked)
+    <name> | goals | pain points | quote from your notes
+
+  RECOMMENDATIONS
+    <fix> | impact <high, medium, low> | effort <high, medium, low> | check <how to measure>
+
+  OPEN CHECKS
+    <gap in the evidence> | <what to do next>
+output_sample:
+  input:
+    - The product or page, and who uses it
+    - The one question you need answered
+    - Notes from interviews or tests, pasted as text (optional)
+    - Your limits on time, people and budget (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - Real people to talk to, if you want to run the study
+  output:
+    - name: Research question
+      contains: Your worry restated as one question, with the decision it will change.
+    - name: Study plan
+      contains: Method, who to recruit, how many, screening rules, session outline and consent steps.
+    - name: Evidence
+      contains: What each person said or did, listed before any conclusion is drawn.
+    - name: Findings
+      contains: Each finding with the people who showed it, a quote and how sure the agent is.
+    - name: Personas and path map
+      contains: Goals, pain points and steps for each user type, built only from your notes.
+    - name: Recommendations
+      contains: Fixes ranked by impact and effort, each with a way to check it worked.
+    - name: Open checks
+      contains: Gaps in the evidence and what to learn next.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Mode
+    how: Say "plan only", "analyse only" or "plan and script" so you get one clear deliverable.
+  - what: Method
+    how: Name the method you can afford, such as five interviews or an unmoderated test.
+  - what: Users
+    how: Say who is often left out, such as people who use screen readers, so the plan includes them.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Usability test
+    meaning: A session where a person tries to finish tasks on your product while you watch.
+  - term: Persona
+    meaning: A short profile of one type of user, built from what real people said and did.
+  - term: Path map
+    meaning: A chart of the steps a user takes to reach a goal, with where they get stuck.
+  - term: Think-aloud
+    meaning: Asking a person to say what they are thinking while they use the product.
+  - term: Triangulation
+    meaning: Checking a finding against more than one source, such as interviews and analytics.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Pasted notes are enough. Long note sets work best in an AI with a large reading window.
+  inputs:
+    - Drop-off numbers by step, from your analytics.
+    - Session recordings or transcripts, pasted as text.

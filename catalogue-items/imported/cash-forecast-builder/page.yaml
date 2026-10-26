@@ -2,38 +2,60 @@ thinking: medium
 thinking_why: It projects timing from history and flags risks.
 new_slug: cash-forecast-builder
 name: Cash forecast builder
-summary: Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day
-  cash forecast with risks named.
+summary: Build a 30, 60 and 90 day cash forecast from your invoices, bills and fixed costs. See if you can make payroll, with risks named.
 job: track-numbers
 headline: Cash forecast builder
-subhead: "A 30, 60 and 90 day cash forecast that answers the question: will I
-  make payroll next month? You get a short chat summary and an Excel workbook,
-  with named risks next to the numbers."
+subhead: "Give it your bank balance, unpaid invoices, bills and fixed costs. It builds a 30, 60 and 90 day cash forecast and names the risks. You get a short chat summary and an Excel workbook."
 explain: |
   A 30, 60 and 90 day cash forecast that answers the question: will I make payroll next month? You get a short chat summary and an Excel workbook, with named risks next to the numbers.
 
   The skill pulls your bank balance, unpaid invoices, bills and fixed costs from whatever you have connected, such as accounting, payments or Shopify. If nothing is connected it takes a CSV. It forecasts money in and out for each window and widens or narrows the range based on how late each customer usually pays. Risks are named, like one slow customer owing a large invoice. If two ledgers are connected, it asks which is the main one.
 when:
   - You are unsure you can cover payroll in six weeks.
-  - A large customer pays late and you want to see the effect on cash.
-  - You need a forecast for a bank or investor conversation.
-  - You are planning a big purchase and want to know when it is safe.
+  - A big customer pays late and you want to see what it does to your cash.
+  - You need a cash forecast for a bank or investor talk.
+  - You plan a large purchase and want to know when it is safe.
+not_for:
+  - "You need weekly detail: use a 13-week cash model built by your bookkeeper or in a spreadsheet."
+  - "You need tax, audit or financing advice: ask your accountant or bookkeeper. This forecast is not a substitute."
+  - "You want to chase unpaid invoices: send reminders yourself or ask your bookkeeper, as this only forecasts."
 you_give:
-  - Connected accounting or payment tools, or a CSV
-  - Current bank balance
+  - Your accounting, payment or Shopify data, or a CSV of income and expenses
+  - Your current bank balance and the date it was taken
   - Unpaid invoices and bills
-  - Fixed costs and payroll dates
+  - Fixed costs and payroll dates (optional if your accounts already show them)
 you_get:
-  - A 30, 60 and 90 day cash forecast
-  - Confidence ranges per period
-  - Named risk flags
-  - An Excel workbook to keep
-  - A short chat summary
+  - A 30, 60 and 90 day cash forecast with a low and high range for each
+  - Up to five named risks, biggest dollar impact first
+  - An Excel workbook with summary, detail and risk sheets
+  - A short chat summary with the forecast table
+  - A forecast page in the format you prefer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open your AI tool and paste in the skill, or add it as a skill if your tool allows.
+  - Connect your accounting or payment tool if you can. Connectors may need a paid plan or account with that tool. If not, upload a CSV with date, amount, type and description. The CSV route needs no connector.
+  - "Ask a plain question, such as: Will I make payroll next month?"
+  - Give your bank balance and its date if your AI asks. It will not guess one.
+  - Check the risks and the low range first. Then open the Excel file to see the transactions behind each number.
+  - Show the forecast to your bookkeeper before you make any financing decision.
+output_sample:
+  input:
+    - Your accounting, payment or Shopify data, or a CSV of income and expenses
+    - Your current bank balance and the date it was taken
+    - Unpaid invoices and bills (from your accounts or the CSV)
+    - Fixed costs and payroll dates (optional if your accounts already show them)
+  prerequisites:
+    - An AI that can read your connected accounts, or a CSV file you can upload
+    - An AI that can make Excel files, to get the workbook
+  output:
+    - name: Chat summary
+      contains: Sources used, opening balance, a table of expected, low and high net cash for 30, 60 and 90 days, and risk count.
+    - name: Risks flagged
+      contains: Up to five named risks, such as a late payer, a payroll shortfall or thin data, biggest dollar impact first.
+    - name: Summary sheet
+      contains: The 30, 60 and 90 day forecast with confidence ranges and the transactions behind each window.
+    - name: Detail sheet
+      contains: Every transaction grouped by window and sorted by date, with a running net and subtotals.
+    - name: Risks sheet
+      contains: Each flagged risk with its dollar impact and the window it affects.
+    - name: Forecast page
+      contains: The full forecast in your preferred format, with tiles for each window and a status tag on each risk.

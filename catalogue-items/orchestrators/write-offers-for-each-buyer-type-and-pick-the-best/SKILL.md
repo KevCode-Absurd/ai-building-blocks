@@ -49,7 +49,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Run each offer on its own page for the same dates and traffic. Then export visits and orders for each one.
 
-4. **Offer test planner.** Use the skill `offer-test-planner`. Give it the offer from the steps before. Turns the winning offers into a funded test with a control and a spend rule.
+4. **Offer test planner.** Use the skill `offer-test-planner`. Give it the revised offers from step 2, the profit check from step 3 and the visits and orders you exported. Turns the winning offers into a funded test with a control and a spend rule.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

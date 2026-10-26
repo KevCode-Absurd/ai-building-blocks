@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It uses a few set viewer functions.
 new_slug: image-viewer-builder
 name: Image viewer builder
-summary: Give it images and regions to mark. Get a viewer with overlays and
-  masks in MATLAB.
+summary: Build a MATLAB image viewer that shows masks, regions and linked views. Give it your images and labels. You get code that runs in MATLAB.
 job: build-software
 headline: Image viewer builder
-subhead: Give it images and regions to mark. Get a viewer with overlays and
-  masks in MATLAB. Bring your images or label data. Use the result to plan your
-  next step.
+subhead: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB. Bring your images or label data. Use the result to plan your next step.
 explain: |
   A MATLAB viewer where you can zoom into an image, draw regions on it and lay coloured masks over it, without building the plumbing yourself. It needs MATLAB with the Image Processing Toolbox.
 
@@ -19,6 +16,10 @@ when:
   - Your images are too big for a normal figure window.
   - You want two images side by side that zoom together.
   - You need to capture a screenshot of the viewer for a report.
+not_for:
+  - "You want a quick look at one small image: use plain imshow in MATLAB, no skill needed."
+  - "You do not have the Image Processing Toolbox: use imshow, and note it is slower on large images."
+  - "You need a viewer outside MATLAB: this skill does not cover other tools, so use a viewer made for that tool."
 you_give:
   - Your images or label data
   - The regions or overlays you want shown
@@ -29,8 +30,30 @@ you_get:
   - Drawing tools for regions
   - Linked views for comparing images
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Image Processing Toolbox.
+  - Open a chat with your AI and paste in the skill text, or upload the skill file.
+  - "Say what you want: a short script or a full app. Describe your images and the regions or masks to show."
+  - Paste the code your AI writes into MATLAB. You need the Image Processing Toolbox.
+  - Run it. Check that the overlays line up with your image and that zoom works.
+  - Ask your AI to fix anything that looks off, such as colours or transparency.
+output_sample:
+  input:
+    - Your images or image files
+    - Your label or mask data (optional)
+    - The regions or overlays you want shown
+    - Whether you want a full app or a short script
+  prerequisites:
+    - MATLAB with the Image Processing Toolbox
+    - An AI that can run MATLAB code (optional, to test the result)
+  output:
+    - name: Standard image display
+      contains: Code that shows your image in a viewer with smooth zoom and pan, even for large images.
+    - name: Overlays and masks
+      contains: Code that lays a label map or mask over the image with a see-through setting.
+    - name: Annotations
+      contains: Code that lets you draw regions on the image, with measurements built in.
+    - name: Linked viewers
+      contains: Code that puts two images side by side so they pan and zoom together.
+    - name: Large image loading
+      contains: Code that loads very large files in blocks so they open fast.
+    - name: App building
+      contains: Code that puts the viewer inside a MATLAB app, with screenshot capture for reports.

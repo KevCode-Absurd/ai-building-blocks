@@ -2,7 +2,8 @@ import { REMOTE_LIBRARY_UPDATE, libraryStorage } from "./lib/library-storage";
 // /minds: the people you can borrow a way of thinking from (docs/MINDS-PRD.md §4). Use one alone from its page,
 // or seat a few here and open the council in the builder: Start → the minds side by side → Advisory council → End.
 import { type CSSProperties, memo, useEffect, useMemo, useRef, useState } from "react";
-import { type Catalogue, type RosterMind, pathOf } from "./lib/data";
+import { type Catalogue, type RosterMind, classificationText, pathOf } from "./lib/data";
+import { useLibrarySearch } from "./lib/library-search";
 import { Link } from "./lib/router";
 import { ArrowIcon } from "./ui";
 import PixelFace from "./PixelFace";
@@ -21,6 +22,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
   const areas = c.minds?.areas ?? {};
   const [label, setLabel] = useState("");
   const [query, setQuery] = useState("");
+  const search = useLibrarySearch(c, query, { extraText: classificationText });
   const myMinds = new URLSearchParams(location.search).get("view") === "my";
   const labels = c.minds?.labels ?? {};
   const [seated, setSeated] = useState<string[]>(() => {
@@ -45,14 +47,15 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
   }, [myMinds]);
   const searchable = useMemo(() => roster.map((mind) => ({
     mind,
-    text: normalizeSearch([mind.name, mind.identity, mind.seat, areas[mind.area], c.bySlug[mind.slug]?.summary,
+    text: normalizeSearch([mind.name, mind.identity, mind.seat, areas[mind.area], c.bySlug[mind.slug]?.summary, c.bySlug[mind.slug] ? classificationText(c.bySlug[mind.slug]) : '',
       ...(mind.labels ?? []).map((id) => labels[id]), ...(mind.useCases ?? [])].filter(Boolean).join(" ")),
   })), [roster, areas, labels, c.bySlug]);
   const shown = useMemo(() => {
     const terms = normalizeSearch(query).trim().split(/\s+/).filter(Boolean);
     return searchable.filter(({ mind, text }) => (!label || mind.labels?.includes(label))
-      && terms.every((term) => text.includes(term))).map(({ mind }) => mind);
-  }, [searchable, label, query]);
+      && (!terms.length || search.hits.has(mind.slug) || terms.every((term) => text.includes(term))))
+      .sort((a, b) => terms.length ? (search.hits.get(b.mind.slug)?.score ?? 0) - (search.hits.get(a.mind.slug)?.score ?? 0) : 0).map(({ mind }) => mind);
+  }, [searchable, label, query, search.hits]);
   const clear = () => { setQuery(""); setLabel(""); };
   const toggle = (slug: string) => setSeated((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length >= MAX ? s : [...s, slug]));
   const open = () => {

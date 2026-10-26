@@ -14,6 +14,29 @@ use_cases:
   - Read a difficult poem beyond asking for its hidden meaning
   - Make a personal note that leaves room for its recipient
   - Choose which workshop feedback serves your own poem
+not_for:
+  - "You need a plain, direct style for emails or reports: hire Ernest Hemingway, or ask a plain-language editor."
+  - "You want a funny, conversational poem with a surprising turn: hire Billy Collins."
+  - "You are stuck on a messy first draft and need permission to write badly: hire Anne Lamott."
+output_sample:
+  input:
+    - A detail you noticed, or a draft you already have
+    - Who will read it, if anyone
+    - How long you want the result to be (optional)
+    - Feedback from a writing group (optional)
+  output:
+    - name: Observation question
+      contains: A question that sends you back to what you actually saw, heard or did before you decide what it means.
+    - name: Observation note
+      contains: A plain record of things and actions, with any invented detail labeled and unknowns left as unknown.
+    - name: Original draft or revision
+      contains: A short passage or marked revision built on your own detail, in your voice, with no borrowed lines.
+    - name: Sound and structure notes
+      contains: A short account of line breaks, pauses and repeated sounds, with a second option where useful.
+    - name: Decision note
+      contains: For feedback, a list of comments to accept, test or decline, with a reason for each.
+    - name: Next inspection
+      contains: One clear question or task to take to your next page, plus a small writing appointment if you asked for one.
 seats:
   - {seat: Attention and poetic craft, asks: What did you actually notice before you decided what it meant?}
   - {seat: Writing that includes the reader, asks: What experience can the reader enter through these particular words?}

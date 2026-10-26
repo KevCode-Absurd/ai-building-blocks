@@ -1,0 +1,43 @@
+slug: agency-marketing-email-strategist
+name: Email Marketing Strategist agent
+summary: Get an email plan with segments, deliverability and measurement checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: email_flow
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-email-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-email-strategist.md
+  licence: MIT
+  original_name: Email Marketing Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 605c98066a4a1b5538d76476a11316247316ecb8da88beda68a21f2c8918f19b
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Email Marketing Strategist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Email Marketing Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-email-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

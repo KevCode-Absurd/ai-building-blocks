@@ -1,41 +1,52 @@
 new_slug: creator-pay-planner
 name: "Creator pay planner"
-summary: "Give it a creator's views, audience mix and your Meta CPM. Get a flat fee or floor offer."
+summary: "Work out a fair flat fee or floor-or-commission offer for a creator post from your Meta ad cost and their real views, with a go or no-go."
 job: grow-social
 thinking: medium
 thinking_why: "It does fee math and writes offer terms, which a mid-size model handles well."
 
 headline: "Creator pay planner"
-subhead: Give it a creator's last 10 video views, their audience split and your own Meta CPM. It works out a flat fee, or a floor-or-commission offer for shop sales, and tells you go or no-go. You also get what to ask for in return.
+subhead: "Give it a creator's last 10 video views, their audience split and what your Meta ads cost per 1,000 views. It works out a flat fee, or a floor-or-commission offer for shop sales, and tells you go or no-go on their quote. You also get what to ask for in return."
 
 explain: |
-  Most stores guess what to pay a creator, then find out later that one post cost far more per view than their ads. CPM means the cost for every 1,000 views. If you know what your Meta ads cost per 1,000 views, you can work backwards to a fair price for a creator.
+  Most stores guess what to pay a creator, then find out later that one post cost far more per view than their ads. CPM means the cost for every 1,000 views. If you know what your Meta ads cost per 1,000 views, you can work backwards to a fair price for an influencer post.
 
-  This skill sets the creator's target at half your Meta CPM, multiplies it by the views their last 10 videos usually get, and cuts the fee for any part of the audience you cannot sell to. Shipped product counts as part of the cost. If you sell through a shop, it can write a floor-or-commission offer instead. It tells you to walk away when the quote is above your ceiling.
+  This skill sets the creator's target at half your Meta CPM and multiplies it by the views their last 10 videos usually get. It then cuts the fee for any part of the audience you cannot sell to, and counts shipped product as part of the cost. If you sell through a shop, it can write a floor-or-commission offer instead. It tells you to walk away when the quote is above your ceiling.
+
+  The method comes from founder interviews about very large creator programs. Their numbers are not checked here, so treat the half-of-Meta rule as a starting point. One creator tells you little, so the plan treats creator pay as many small bets.
 
 when:
-  - A creator sent you a price and you cannot tell if it is fair.
-  - You want to make offers to many small creators and need one simple rule.
-  - You sell through a shop and want an offer that pays creators more when they sell more.
+  - A creator sent you a price and you can't tell if it is fair.
+  - You want to make the same simple offer to many small creators.
+  - You sell through a shop, such as TikTok Shop, and want an offer that pays creators more when they sell more.
+  - You are about to ship product and want to see how much cash fee is left after the product and postage.
+
+not_for:
+  - "You have no Meta ad cost and no paid view price to start from: run a small ad test first to get one. This skill won't guess a CPM."
+  - "You want to pay many people only for approved clips of your own footage: use the Clipper program planner."
+  - "You are sending free product with no cash fee: use the Influencer gifting planner."
+  - "You want equity or a long deal with a well-known creator: use the Creator equity deal planner, and ask a lawyer."
 
 you_give:
-  - Your current Meta CPM, or any paid view price you know
-  - The creator's last 10 videos with view counts
-  - The creator's audience split by gender and country
-  - Your hero product, margin and where you sell
-  - The creator's size and your budget (optional)
+  - What your Meta ads cost per 1,000 views, or any paid view price you know (find it in Meta Ads Manager)
+  - The creator's last 10 videos with their view counts
+  - The creator's audience split by gender and country (optional, ask the creator for a screenshot)
+  - Your hero product, margin, where you sell and what shipping costs (optional)
+  - The creator's size, your budget and the cash you can hold for 90 days (optional)
+
 you_get:
-  - A fee range with the target CPM, expected views, audience discount and flat fee
-  - Floor-or-commission terms, or a go or no-go on their quote
-  - What to ask for in return, such as number of posts and usage rights
-  - Volume targets and a plan for posting the content again
+  - A fee with the target CPM, expected views, audience cut and cash fee, with the sum shown
+  - A go, no-go or counter-offer on the creator's quote
+  - Offer terms: a flat fee, or a floor or commission for shop sales, with posts and usage rights
+  - What to ask for in return, such as number of posts and ad rights
+  - Volume targets, a plan for posting the content again, and a check to run after posting
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your Meta CPM and the creator's last 10 videos with views. Ask the creator for their audience split by country and gender.
-  - Say where you sell and what shipping the product costs.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - Paste your Meta CPM and the creator's last 10 videos with views. Ask the creator for a screenshot of their audience tab.
+  - Say where you sell and what it costs to ship the product.
   - Read the go or no-go first, then the offer terms.
-  - Send the offer in writing, with the disclosure rule, before the creator posts.
+  - Send the offer in writing before the creator posts, with the paid-post label rule in it. In the week the video lands, check orders and branded search.
 
 how_it_works:
   - title: Sets the target CPM
@@ -53,7 +64,7 @@ how_it_works:
   - title: Plans volume and reuse
     text: How many posts to ask for, how to review them, and where to repost with the creator's name.
   - title: Checks it worked
-    text: It tells you to check orders and branded search in the week a video lands before trusting the CPM.
+    text: It tells you to check orders and branded search in the week a video lands, and says one creator tells you little. Judge the program over many creators.
 
 output_shape: |
   FEE
@@ -69,15 +80,38 @@ output_shape: |
   Posts: <n>  Usage and ad rights: <terms>
   Disclosure: posts carry #ad or the platform's paid-partnership label
 
-  RECRUITING LADDER
+  RECRUITING LADDER (optional, check the rules first)
   <micro-creator> -> <commission only when earnings pass the move-up line> -> <recruiter>
 
   VOLUME AND REPOSTING
   <posts per week>  Review owner: <name>  Repost to: <platforms>, commission <rule>
 
-  CHECK AFTER POSTING: orders and branded search in the week the video lands
+  CHECK AFTER POSTING: orders and branded search in the week the video lands. One creator tells you little; judge the program over many creators.
   CHECKS MISSED: <none | list>
   MISSING: <what>
+
+output_sample:
+  input:
+    - What your Meta ads cost per 1,000 views
+    - The creator's last 10 videos with view counts
+    - The creator's audience split by gender and country (optional)
+    - Your hero product, margin and where you sell (optional)
+  prerequisites:
+    - Meta ads running, or a paid view price you know
+    - A screenshot of the creator's audience tab, which the creator can send
+  output:
+    - name: FEE
+      contains: Target CPM, expected views, base fee, audience cut, product and postage, the cash fee, and go, no-go or counter.
+    - name: OFFER
+      contains: A flat fee, or a floor or commission for shop sales, with post count, usage rights and the paid-post label rule.
+    - name: RECRUITING LADDER
+      contains: An optional path from small creator to commission only to recruiter, with a note to check the rules first.
+    - name: VOLUME AND REPOSTING
+      contains: Posts per week, who reviews them, and where to repost with the creator's name.
+    - name: CHECK AFTER POSTING
+      contains: The orders and branded search to check in the week the video lands, and a reminder that one creator tells you little.
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that failed and any input you did not give, such as a missing CPM or audience split.
 
 tweaks:
   - what: Your Meta CPM
@@ -106,7 +140,7 @@ test:
   - Run it twice on the same creator. The fee should match.
 
 improve:
-  - Replace the quarterly check with your own review rhythm, and add your current shop commission rules.
+  - Add your current shop commission rules and your own review rhythm for how often you recheck the numbers.
   - Add your standard contract lines for usage rights, ad rights and posting dates.
   - Save your agreed CPM ceiling in your brand file, so every offer starts from it.
   - Keep a list of fees paid and the orders in the following week, to see if your half-of-Meta rule holds.
@@ -130,3 +164,5 @@ terms:
     meaning: A minimum payment each month, or a share of sales, whichever is higher.
   - term: Usage rights
     meaning: What you may do with the creator's video, such as run it as an ad.
+  - term: Branded search
+    meaning: People searching Google for your brand name. A jump after a post is a sign it worked.

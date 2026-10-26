@@ -1,6 +1,6 @@
 new_slug: founder-ad-script-builder
 name: "Founder ad script builder"
-summary: "Give it your founder story and proof. Get a claim-first script, 2 to 4 hooks and narrator-swap versions."
+summary: "Turn your true founder story and proof into a founder video ad script. You get a claim-first script, 2 to 4 hooks and narrator-swap versions."
 job: make-video-ads
 thinking: medium
 thinking_why: "It shapes a true story into a set order, so a mid-size model works, and a stronger one writes smoother lines."
@@ -17,6 +17,10 @@ when:
   - You have a real origin story and proof, and want a video ad where you or your founder speak.
   - A founder ad worked once and you want more versions that feel different.
   - The founder is not at ease with a teleprompter, and needs an outline to speak from.
+not_for:
+  - "You have no true founder story or no proof: show the product in a simple demo video instead."
+  - "You want a general founder script built from one real decision: use a general founder script writer, not this claim-first version."
+  - "You need ad copy for a still image or a text ad: write the copy first, then come back with a video idea."
 
 you_give:
   - "Your origin story: why it started, true and in your words"
@@ -36,6 +40,33 @@ how_to_use:
   - Say who the viewer is and what problem they have today.
   - Check every claim and comparison against your proof before you film.
   - If you do not read well from a teleprompter, ask for the sentence-by-sentence outline and speak in your own words.
+output_sample:
+  input:
+    - Your origin story, true and in your words
+    - "Your mechanism: how the product works and who can explain it"
+    - Your proof items, such as lab certificates, tests, photos and reviews
+    - Competitor comparisons with evidence (optional)
+    - Your buyer and how much they already know (optional)
+  prerequisites:
+    - An AI chat that can read pasted text
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: VIEWER PROBLEM and CLAIM
+      contains: One line on the problem your buyer has, and one bold claim you can prove.
+    - name: SCRIPT (maker version)
+      contains: "Five blocks in order: claim, proof of claim, mechanism tied to your story, proof of mechanism, call to action."
+    - name: HOOKS
+      contains: Two to four opening lines that make sense with the body of the script.
+    - name: NARRATOR SWAPS
+      contains: The same story told by a witness, an interviewer or a reader.
+    - name: INVOLVEMENT PLAN
+      contains: "How the founder appears: face and voice, voice only, evidence, proxy or absent, and what to vary."
+    - name: OUTLINE FOR SPEAKING
+      contains: A sentence-by-sentence outline to speak from, only if you ask for it.
+    - name: CLAIMS TO CHECK
+      contains: Claims that need a policy or legal check before you run the ad.
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that failed, and any input you did not give.
 
 how_it_works:
   - title: Opens with the viewer's problem

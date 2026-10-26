@@ -1,6 +1,6 @@
 new_slug: rough-prompt-rebuilder
 name: "Rough prompt rebuilder"
-summary: "Paste a rough prompt. Get one clear prompt that gets better answers."
+summary: "Paste a rough prompt into your AI and get one clear, rebuilt prompt back. Fix a weak AI prompt so it gives better answers."
 job: set-up-ai
 thinking: low
 thinking_why: "It reshapes what you wrote into a fixed layout, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - "Your prompt gives answers that are too general."
   - "You want a prompt your team can reuse."
   - "You know what you want but not how to ask for it."
+not_for:
+  - "You have a one-off question and will not reuse the prompt: just ask your AI directly."
+  - "You want the full set of checks on a prompt: use the Prompt improver."
+  - "You have no draft prompt yet and only an idea: write one plain sentence about what you want first, then paste it here."
 
 you_give:
   - "A rough prompt"
@@ -31,6 +35,15 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - Your rough prompt, written as you would type it today
+    - Who the answer is for and where it will be used (optional)
+  output:
+    - name: Rebuilt prompt
+      contains: One copy-ready block with a role, context, task, format and limits, using only the facts you gave.
+    - name: Added and assumed
+      contains: Up to three lines on what was added and what your AI guessed, so you can correct it.
 
 how_it_works:
   - title: "Read the rough prompt"

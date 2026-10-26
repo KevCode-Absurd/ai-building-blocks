@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: copy_draft, required: true}
   - {type: persona, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: copy_draft}
 origin: rebuilt

@@ -1,7 +1,7 @@
 slug: company-profile-slide
 renamed_from: company-strip-profile-slide-maker
 name: "Company strip profile slide maker"
-summary: "Name a company. Get a one-slide profile with business, key numbers and ownership in a standard layout."
+summary: "Name a listed company. Get a one-page company profile slide with the business, key financials and top shareholders, sourced from filings."
 category: general
 boards: []
 type: skill
@@ -15,6 +15,10 @@ outputs:
   - type: slide_deck
 uses: []
 origin: imported
+warnings:
+  - paid:Bloomberg
+  - paid:FactSet
+  - paid:CapIQ
 source:
   by: nighomni123
   repo: nighomni123/fsi-skills-india

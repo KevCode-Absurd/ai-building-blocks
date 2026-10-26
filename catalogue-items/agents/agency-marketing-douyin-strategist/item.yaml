@@ -1,0 +1,44 @@
+slug: agency-marketing-douyin-strategist
+name: Douyin Strategist agent
+summary: Get a Douyin content plan with video and commerce choices. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: business_profile
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+  - type: script
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-douyin-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-douyin-strategist.md
+  licence: MIT
+  original_name: Douyin Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 87e3b91287fc97ad0dedb2f407a49d551b52b8513c8c61d06c1a93d837a7ae46
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Douyin Strategist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Douyin Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-douyin-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

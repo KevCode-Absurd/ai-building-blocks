@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fetches market numbers and lays them out.
 new_slug: hyperliquid-market-data-reader
 name: Hyperliquid market data reader
-summary: Give it a coin. Get prices, funding rates, open interest and the order
-  book. Collects data from websites.
+summary: "Read Hyperliquid market data for any coin: price, funding rate, open interest, order book and candles. Needs an AI that can run commands."
 job: money-and-investing
 headline: Hyperliquid market data reader
-subhead: Live market numbers for any coin on Hyperliquid, pulled for you to
-  read. Name a coin and get its price, daily change, funding rate, open
-  interest, trading volume and order book.
+subhead: Live market numbers for any coin on Hyperliquid, pulled for you to read. Name a coin and get its price, daily change, funding rate, open interest, trading volume and order book.
 explain: |
   Live market numbers for any coin on Hyperliquid, pulled for you to read. Name a coin and get its price, daily change, funding rate, open interest, trading volume and order book. This is read-only, so it never touches an account, orders or transfers. It is not financial advice.
 
@@ -18,18 +15,43 @@ when:
   - You need an order book snapshot to judge how deep the market is.
   - You are comparing funding on Hyperliquid with other exchanges.
   - You want recent price candles to review a move.
+not_for:
+  - "You want your account balance, positions or trade history: open the Hyperliquid app, because this reads public market data only."
+  - "You want to place, change or cancel an order: use your exchange app, because this tool cannot trade or move funds."
+  - "You want stock or options data: use a stock quote site or your broker, because this only covers Hyperliquid coins and spot pairs."
 you_give:
-  - The coin or pair name
-  - The time range for candles or history (optional)
-  - Node.js installed on your computer
+  - The coin or pair name, such as BTC or PURR/USDC
+  - The candle size or time range (optional)
 you_get:
   - Price, 24 hour change and volume
   - Funding rates, hourly and yearly
   - Open interest and order book depth
   - Cross-exchange funding comparison
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands.
+  - Open an AI that can run commands on your computer. A plain chat window cannot do this.
+  - Install Node.js version 24 or newer. Then ask your AI to run the install commands from Step 1 of the skill.
+  - "Paste the skill into your AI and name a coin, for example: what is the funding on BTC?"
+  - "Check the top lines of the reply first: price, funding rate and open interest. Ask for more detail if you need it."
+  - Treat any funding gap between exchanges as a screen, not a sure gain. Fees and transfer costs are not included.
+output_sample:
+  input:
+    - A coin name, such as BTC, or a spot pair such as PURR/USDC
+    - "What you want to see: prices, funding, order book, candles or a funding comparison"
+    - A candle size or a time range (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - Node.js version 24 or newer
+    - The opencli tool and the Hyperliquid plug-in, installed with the commands in Step 1 of the skill
+  output:
+    - name: Market snapshot
+      contains: Mark, oracle and mid price, 24 hour change, hourly and yearly funding, open interest and 24 hour volume for a coin.
+    - name: Order book
+      contains: Best bid, best ask, mid price and spread, with the price levels on each side.
+    - name: Candles
+      contains: Open, high, low, close and volume for each period, with a short note on the move.
+    - name: Funding history
+      contains: Past funding rates for a coin, shown hourly and as a yearly rate.
+    - name: Funding comparison
+      contains: Yearly funding on Hyperliquid, Binance and Bybit, with the gap between them, widest gaps first.
+    - name: Spot pairs overview
+      contains: Price, 24 hour change, volume and market cap for Hyperliquid spot pairs.

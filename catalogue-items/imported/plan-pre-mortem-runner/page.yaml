@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Finding weak spots needs real reasoning about the plan.
 new_slug: plan-pre-mortem-runner
 name: Plan pre-mortem runner
-summary: Give it a plan. Imagine it failed in a year and get the hidden
-  assumptions and risks found now.
+summary: Run a plan pre-mortem before you commit. Give it your plan and get the hidden assumptions, weak links and risks ranked, with fixes.
 job: think-and-decide
 headline: Plan pre-mortem runner
-subhead: Weak spots in a plan, found before reality finds them. Give it the
-  plan, imagine it failed a year from now, and work back to why.
+subhead: Weak spots in a plan, found before reality finds them. Give it the plan, imagine it failed a year from now, and work back to why.
 explain: |
   Weak spots in a plan, found before reality finds them. Give it the plan, imagine it failed a year from now, and work back to why. The goal is a plan that survives, not one that gets killed.
 
@@ -17,6 +15,10 @@ when:
   - You present to the board or investors next week.
   - Everyone only says good things about your idea.
   - Your plan relies on several outside parties lining up.
+not_for:
+  - "Your plan is already running and the commitments are settled: use a simple risk register, a list of risks with an owner for each."
+  - "You need a quick yes or no on one decision: talk it through with a colleague instead."
+  - "You want ideas to improve the plan, not risks: ask your AI for a plain brainstorm."
 you_give:
   - The plan in writing
   - Key dates and budget
@@ -27,7 +29,27 @@ you_get:
   - Weak dependencies
   - Steps to reduce the biggest risks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Paste your plan under it. Include the goal, the timeline, the budget and any dependencies.
+  - "Say: run the challenge on this plan."
+  - Read the critical risks first. Check each one against what you really know.
+  - Do the hardening actions before you commit money or present the plan.
+output_sample:
+  input:
+    - Your plan in writing, with the goal and the timeline
+    - Your budget
+    - Known dependencies, such as partners or suppliers (optional)
+  output:
+    - name: Core assumptions
+      contains: Each thing the plan assumes is true, with how sure you are and the impact if it is wrong.
+    - name: Vulnerability map
+      contains: Critical and high risks, why each might be wrong, and what breaks if it is.
+    - name: Dependency chain
+      contains: Which assumptions rely on others, and the weakest link that would bring down the rest.
+    - name: Reversibility assessment
+      contains: Which bets you can undo and which commitments you cannot.
+    - name: Kill switches
+      contains: What must be true at 30, 60 and 90 days to continue, and what means stop or pivot.
+    - name: Hardening actions
+      contains: Specific checks, alternatives and backup steps to add before you go ahead.

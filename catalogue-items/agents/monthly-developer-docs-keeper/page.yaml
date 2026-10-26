@@ -1,39 +1,26 @@
 new_slug: monthly-developer-docs-keeper
 name: Monthly developer docs keeper
-summary: Share your docs and recent changes. Get stale pages fixed, broken steps
-  flagged and a clearer start guide.
+summary: Check your developer docs each month. Find broken README steps, docs that no longer match the code, and get a changelog draft.
 job: document-work
 thinking: high
-thinking_why: It runs install steps, reads code against prose and must tell a
-  doc that is wrong from code that is wrong. Give it your strongest model.
+thinking_why: It runs install steps, reads code against prose and must tell a doc that is wrong from code that is wrong. Give it your strongest model.
 headline: Monthly developer docs keeper
-subhead: Give it your repo on the first Tuesday of each month. It tries every
-  README step as a new developer would, finds every doc that describes code
-  changed this month and did not change itself, drafts the changelog from the
-  month's releases, updates the API spec when endpoints moved and keeps the
-  glossary straight. You merge.
+subhead: Give it your repo on the first Tuesday of each month. It tries every README step as a new developer would, finds every doc that describes code changed this month and did not change itself, drafts the changelog from the month's releases, updates the API spec when endpoints moved and keeps the glossary straight. You merge.
 explain: >
-  Developer docs rot one commit at a time. A flag gets renamed and the README
-  still shows the old one. An endpoint gains a field the spec never heard of.
-  The changelog stops at a version from spring. The first person to notice is
-  the new developer on their first morning, and they assume the problem is them.
+  Developer docs rot one commit at a time. A flag gets renamed and the README still shows the old one. An endpoint gains a field the spec never heard of. The changelog stops at a version from spring. The first person to notice is the new developer on their first morning, and they assume the problem is them.
 
 
-  This agent reads the repo every month. It tries each README step on a fresh
-  machine and marks what broke, with proof and the edit. It maps which doc
-  describes which code, so this month's changed files point at the docs to
-  re-check, and lists the modules with no doc at all. It drafts the changelog
-  from what was released, in plain words, and proposes rewrites for docstrings,
-  the API spec and the glossary where they drifted. Every change is a proposal.
-  It never commits, merges or publishes.
+  This agent reads the repo every month. It tries each README step on a fresh machine and marks what broke, with proof and the edit. It maps which doc describes which code, so this month's changed files point at the docs to re-check, and lists the modules with no doc at all. It drafts the changelog from what was released, in plain words, and proposes rewrites for docstrings, the API spec and the glossary where they drifted. Every change is a proposal. It never commits, merges or publishes.
 when:
-  - Other people build on or install your code and keep hitting the same broken
-    step.
+  - Other people build on or install your code and keep hitting the same broken step.
   - Your changelog stopped months ago and the spec does not match the API.
   - You want docs checked on a schedule instead of when someone complains.
+not_for:
+  - "You want a one-off review of a single release: ask the Release manager, or read that release's notes yourself."
+  - "Nobody installs or builds on your repo: a short note in the README is enough, so skip a monthly check."
+  - "You want the docs published or merged for you: this agent only proposes changes, so a person must commit them."
 you_give:
-  - Your repo with its README, docs, changelog, API spec and the month's git
-    history
+  - Your repo with its README, docs, changelog, API spec and the month's git history
   - Docs that live outside the repo, such as a wiki page (optional)
   - The release tags for the month (advised)
   - Last month's keeper file, once it exists
@@ -41,36 +28,54 @@ you_get:
   - Each README step marked working or broken, with proof and the edit
   - Every doc that disagrees with the code, with file and line
   - New modules and endpoints with no doc
-  - A changelog draft for the month's releases, grouped into added, changed and
-    fixed
+  - A changelog draft for the month's releases, grouped into added, changed and fixed
   - Proposed rewrites for docstrings, the API spec and the glossary
   - A map of which doc covers which code, kept current
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in
-    .claude/agents, then point it at the repo.
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then point it at the repo.
   - Tell it which releases shipped this month, or let it read the tags.
   - Read the broken README steps first. Fix those before anything else.
-  - Review the proposed rewrites and the changelog draft. Commit and publish
-    what you approve yourself.
+  - Review the proposed rewrites and the changelog draft. Commit and publish what you approve yourself.
   - Run it again on the first Tuesday of next month. It re-tests what you fixed.
+output_sample:
+  input:
+    - Your repo with its README, docs, changelog and API spec
+    - The month's git history and release tags
+    - Docs that live outside the repo, such as a wiki page (optional)
+    - Last month's keeper file, once it exists (optional)
+  prerequisites:
+    - An AI that can read your repo and run commands, such as Claude Code
+    - A clean virtual machine or container to run the README install steps in
+  output:
+    - name: This month in one line
+      contains: README steps passed and broken, docs drifted, endpoints out of spec, compared with last month.
+    - name: Broken first
+      contains: Each README step that failed, with the proof and the edit that fixes it.
+    - name: Drifted docs
+      contains: Each false claim, with the doc, the code file and line, and the fix.
+    - name: Undocumented
+      contains: New modules or endpoints that have no doc yet.
+    - name: Changelog draft
+      contains: The month's released changes grouped into added, changed and fixed, in plain words.
+    - name: Proposed rewrites
+      contains: Docstring, usage guide, API spec and glossary changes, each as a diff or a file.
+    - name: The map
+      contains: Which doc covers which code, kept current.
+    - name: Files and missing
+      contains: Each step's file, every MISSING line, and a CHECKS MISSED line.
 how_it_works:
   - title: Read last month
     text: Picks up the fixes marked done, to re-test first.
   - title: Test the README as a stranger
-    text: Tries each step in order and marks it working or broken with proof and the
-      fix. A broken first step tops the report.
+    text: Tries each step in order and marks it working or broken with proof and the fix. A broken first step tops the report.
   - title: Find what changed
-    text: Lists the files changed this month and, from the map, every doc that
-      describes them, plus new modules with no doc.
+    text: Lists the files changed this month and, from the map, every doc that describes them, plus new modules with no doc.
   - title: Check the docs that should have moved
-    text: Each doc that describes changed code is checked for false claims and
-      drift, with file and line.
+    text: Each doc that describes changed code is checked for false claims and drift, with file and line.
   - title: Draft the changelog
-    text: The month's released commits grouped into added, changed and fixed, in
-      words a user understands.
+    text: The month's released commits grouped into added, changed and fixed, in words a user understands.
   - title: Fix the drifted docs as proposals
-    text: Docstring and usage guide rewrites, the API spec matched to the code, and
-      glossary entries for new or doubled terms.
+    text: Docstring and usage guide rewrites, the API spec matched to the code, and glossary entries for new or doubled terms.
   - title: Log and hand back
     text: Updates the health and map files, then stops. You merge.
 output_shape: >-
@@ -118,17 +123,13 @@ example:
   output: pending
 tweaks:
   - what: Release tags
-    how: Tag releases and tell the agent which shipped. The changelog is for what
-      users got, not every commit.
+    how: Tag releases and tell the agent which shipped. The changelog is for what users got, not every commit.
   - what: The map
-    how: Check the doc-to-code map after the first run. A wrong map means the wrong
-      docs get checked.
+    how: Check the doc-to-code map after the first run. A wrong map means the wrong docs get checked.
   - what: Operating systems
-    how: Tell it which systems your developers use. The README test says which it
-      ran on.
+    how: Tell it which systems your developers use. The README test says which it ran on.
   - what: Glossary rule
-    how: A term used two ways triggers an entry. Add terms you want defined even if
-      used one way.
+    how: A term used two ways triggers an entry. Add terms you want defined even if used one way.
 judge:
   - Every README step has a mark and proof.
   - Every drifted doc names the code file and line.
@@ -136,25 +137,20 @@ judge:
   - The spec was matched to the code, not to a bug.
   - Nothing was committed or published.
 test:
-  - Rename one environment variable in the code and leave the README. The next
-    run should flag the README line.
+  - Rename one environment variable in the code and leave the README. The next run should flag the README line.
   - Add a field to an endpoint response. The spec step should propose the update.
-  - Run it twice on the same repo. The broken steps and drifted docs should
-    match.
+  - Run it twice on the same repo. The broken steps and drifted docs should match.
 improve:
   - Check the doc-to-code map after the first month and fix it by hand once.
-  - Add your release process to the folder, so the changelog step knows what
-    counts as shipped.
+  - Add your release process to the folder, so the changelog step knows what counts as shipped.
   - Record which fixes were merged and when. Re-tests depend on it.
   - Pair it with the Release manager, which cuts the release this one documents.
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can run the README steps, read the git history and keep the health and
-        map files between months.
+      why: It can run the README steps, read the git history and keep the health and map files between months.
     - name: Your docs site
       why: Export or link the hosted docs, so pages outside the repo are checked too.
   inputs:
-    - Questions new developers asked this month, so the test knows where they
-      got stuck
+    - Questions new developers asked this month, so the test knows where they got stuck
     - Your release notes for the month

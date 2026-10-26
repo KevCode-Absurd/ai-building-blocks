@@ -2,15 +2,12 @@ thinking: medium
 thinking_why: It builds paired prompts that show the difference.
 new_slug: prompt-quality-lesson-planner
 name: Prompt quality lesson planner
-summary: Give it a task. Get lessons where students compare vague and clear
-  prompts and see why detail changes the result.
+summary: Plan a prompt quality lesson. Students compare vague and clear prompts for your subject and see why detail changes what AI writes back.
 job: teach-and-train
 headline: Prompt quality lesson planner
-subhead: A short sequence of lessons where students see for themselves why a
-  detailed prompt beats a vague one. They stop treating AI as a magic box and
-  start asking better questions.
+subhead: A short sequence of lessons where students see for themselves why a detailed prompt beats a vague one. They stop treating AI as a black box and start asking better questions.
 explain: |
-  A short sequence of lessons where students see for themselves why a detailed prompt beats a vague one. They stop treating AI as a magic box and start asking better questions.
+  A short sequence of lessons where students see for themselves why a detailed prompt beats a vague one. They stop treating AI as a black box and start asking better questions.
 
   You give the subject, year group and what students use AI for. The skill builds a prompt anatomy lesson, then a compare-and-contrast activity with a vague prompt next to a refined one. A pricing exercise has students judge what extra detail is worth. A rewriting task lets them fix weak prompts, and a summary card lists the principles. Examples fit your subject, and you can focus on context, limits, format, role or iteration.
 when:
@@ -18,6 +15,10 @@ when:
   - You want a lesson on AI literacy that uses real subject tasks.
   - You teach writing or research and want better student prompts.
   - You need a ready activity showing why wording changes results.
+not_for:
+  - You need students to write assessed work on their own. Use this for practice only, and set that task with no AI.
+  - You want to teach what AI is or how it works. Plan that lesson yourself or write your own short talk first.
+  - You need one single lesson plan for a full class period. This builds a short sequence, so trim it by hand to fit.
 you_give:
   - Subject area
   - Year group and AI habits
@@ -30,7 +31,27 @@ you_get:
   - Rewriting activity
   - Student summary card
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. You do not need code, files or a paid tool.
+  - Paste the full text of SKILL.md into the chat.
+  - Add your subject, your students' year group and habits, and what they use AI for. Add the optional details if you have them.
+  - Ask your AI to build the prompt literacy sequence.
+  - Check that the examples fit your subject. The results are what the skill should produce, not tested runs, so read them before class.
+  - Use the rewritten prompts for practice only. Do not use them to produce coursework that students submit.
+output_sample:
+  input:
+    - Your subject area
+    - Your students' year group and how they use AI now
+    - What students use AI for, such as research or essay help
+    - The prompt skill to focus on (optional)
+    - Vague prompts your students often type (optional)
+  output:
+    - name: Prompt Anatomy
+      contains: The parts of a good prompt, such as context, task, limits, format and role, with examples from your subject.
+    - name: Compare-Contrast Activity
+      contains: A vague prompt beside a refined one, with questions that help students spot what changed in the answer.
+    - name: The Pricing Exercise
+      contains: A task where students judge what each extra piece of detail is worth, so they see when it pays off.
+    - name: Prompt Rewriting Activity
+      contains: Weak prompts for students to fix, with guidance on what a better version should include.
+    - name: Prompt Principles Summary Card
+      contains: A short card listing the main rules of a good prompt for students to keep.

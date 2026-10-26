@@ -2,36 +2,63 @@ thinking: medium
 thinking_why: It matches the job to a server and tracks cost.
 new_slug: rented-gpu-server-setup-helper
 name: Rented GPU server setup helper
-summary: Say what you need to train. Get a rented GPU server chosen, set up,
-  loaded with your files and shut down after.
+summary: Pick a rented GPU server for your training job, launch it on Lambda Labs, load your files and shut it down so billing stops.
 job: build-software
 headline: Rented GPU server setup helper
-subhead: A rented GPU machine picked for your job, set up, loaded with your
-  files and shut down when you finish. You stop paying for idle hardware.
+subhead: Tell your AI what you want to train or run. It picks a Lambda Labs GPU, shows the steps to launch it, connect, and load your files. It does not shut the server down for you, so you run the terminate step when you finish.
 explain: |
   A rented GPU machine picked for your job, set up, loaded with your files and shut down when you finish. You stop paying for idle hardware.
 
   You say what you need to train or run. The skill matches it to a Lambda Labs instance type, such as an A100 or H100, and shows the price per minute. It uses the Lambda API to launch the machine, adds your SSH key, attaches a persistent file store so your data survives restarts, and copies your files over. The machine comes with PyTorch, CUDA and related tools already installed. When you are done it terminates the server. You need a Lambda account and an API key.
 when:
   - Your laptop is too slow to train a model.
-  - A training run will last many hours and you need storage that persists.
-  - You want to compare GPU types before you pay.
-  - You keep forgetting to shut a rented server down.
+  - A training run will last many hours and you need storage that stays after the server stops.
+  - You want to compare GPU types and prices before you pay.
+  - You keep forgetting to shut a rented server down and want the stop step written out.
+not_for:
+  - "You have bursty or serverless jobs that scale up and down: use Modal."
+  - "You want the cheapest spot GPUs: use RunPod or Vast.ai."
+  - "You run many clouds at once and want to cut cost across them: use SkyPilot."
 you_give:
   - What you need to train or run
-  - Lambda account and API key
-  - SSH key
+  - Your Lambda API key
+  - The name of your SSH key on Lambda
   - Files or code to upload
-  - Budget or run length (optional)
+  - Your budget or run length (optional)
 you_get:
-  - Chosen GPU instance with price
-  - Running server with SSH access
-  - Persistent storage set up
-  - Shutdown steps so billing stops
+  - A GPU type and region chosen for your job, with the hourly price
+  - Launch steps with your SSH key and storage attached
+  - The server IP and the ssh command to connect
+  - A persistent folder for data and checkpoints
+  - The terminate command to stop billing, to run yourself
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and use a Lambda Labs account
-    (paid).
+  - Make a Lambda Labs account, add a payment method, create an API key and add your SSH key. This is a paid service.
+  - Paste this skill into Claude, ChatGPT or Gemini. Say what you want to train and how long it may run.
+  - Check the GPU, region and hourly price your AI suggests before you launch.
+  - Run the launch steps, either in the Lambda console or with the commands. Commands need a terminal or an AI that can run code.
+  - Connect with ssh, copy your files over and start the run. Save checkpoints to the persistent folder.
+  - When you finish, run the terminate command from the skill. Lambda does not stop the server for you.
+output_sample:
+  input:
+    - What you need to train or run
+    - Your Lambda account API key
+    - Your SSH key name
+    - Files or code to upload
+    - Your budget or run length (optional)
+  prerequisites:
+    - A paid Lambda Labs account with a payment method added
+    - An SSH key added to your Lambda account before launch
+    - An AI that can run commands, or you run them yourself
+  output:
+    - name: GPU choice
+      contains: The GPU type that fits your job, with its price per GPU per hour and the region.
+    - name: Launch step
+      contains: The console clicks or API call that start the server with your SSH key and storage attached.
+    - name: SSH connection
+      contains: The ssh command with your server's IP so you can log in.
+    - name: Persistent filesystem
+      contains: Where your data and checkpoints are saved so they survive after the server is stopped.
+    - name: Training command
+      contains: The command to start your run, saving checkpoints to the persistent folder.
+    - name: Terminate command
+      contains: The curl or Python call that ends the server. You must run it yourself, or billing continues.

@@ -1,30 +1,26 @@
 new_slug: traction-speaking-engagements
 name: Speaking channel experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a speaking engagements test for your product. Paste your link and get a small talk pilot with cost limits, measures and a stop rule.
 job: speak-and-persuade
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Speaking channel experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused speaking engagements plan for your product. It reads the buyer and
-  offer, checks why this channel might work and writes a small test. The default
-  is SaaS; you can ask for general-business mode.
+  A focused speaking engagements plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Prepare and rehearse one short talk for a small relevant group, gather
-  task-specific feedback and test interest in the follow-up resource.
+  Prepare and rehearse one short talk for a small relevant group, gather task-specific feedback and test interest in the follow-up resource.
 
 
-  A full room or applause does not establish buyer demand. Do not invent speaker
-  credentials or event invitations.
+  A full room or applause does not establish buyer demand. Do not invent speaker credentials or event invitations.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare all 19 growth channels: use the Traction workflow."
+  - "Your buyers do not go to events or listen to talks: pick another channel, or ask a few customers where they learn about products."
+  - "You want a finished talk, slides or a booking made for you: write the talk yourself or hire a speaking coach, as this plan only sets up the test."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -38,18 +34,42 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, buyer type and stage (optional)
+    - Your cash cap and hours per week (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can browse the web, or pasted page text if it cannot
+  output:
+    - name: Recommendation
+      contains: Whether to test speaking now, later or not at all, with the reason.
+    - name: Evidence
+      contains: Each fact used, with its source link, the date you read it and what it means.
+    - name: Buyer and useful action
+      contains: Who the buyer is and the first useful thing they do in your product.
+    - name: Channel mechanism
+      contains: How a person in the audience gets from the talk to value in your product.
+    - name: Pilot
+      contains: The idea to test, the audience, the offer, the follow-up resource and who owns it.
+    - name: Limits
+      contains: Cash, hours and dates, marked as proposed or approved.
+    - name: Measurement
+      contains: What you count, who counts in each group and how you credit the talk.
+    - name: Decision
+      contains: The rule for when to continue, revise or stop.
+    - name: Risks and next action
+      contains: What could go wrong and the one next step, plus what needs your approval.
+    - name: MISSING
+      contains: The facts the plan could not find and still needs from you.
 how_it_works:
   - title: Check 1
-    text: Research events by topic, audience, deadlines and speaker requirements.
-      Match the speaker's demonstrated expertise to a practical buyer problem.
+    text: Research events by topic, audience, deadlines and speaker requirements. Match the speaker's demonstrated expertise to a practical buyer problem.
   - title: Check 2
-    text: Draft a talk proposal with a useful outcome, supporting evidence and a
-      story of the problem and discovery. Separate teaching from a product
-      advertisement.
+    text: Draft a talk proposal with a useful outcome, supporting evidence and a story of the problem and discovery. Separate teaching from a product advertisement.
   - title: Check 3
-    text: Plan an optional relevant resource, a permitted way to keep in touch and a
-      follow-up path into the product. Budget preparation, travel and speaking
-      time.
+    text: Plan an optional relevant resource, a permitted way to keep in touch and a follow-up path into the product. Budget preparation, travel and speaking time.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -63,21 +83,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - The talk earns praise but attracts no relevant follow-ups. Check audience
-    and resource fit before booking more talks.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - The talk earns praise but attracts no relevant follow-ups. Check audience and resource fit before booking more talks.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

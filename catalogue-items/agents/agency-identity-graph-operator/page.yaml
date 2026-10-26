@@ -1,0 +1,146 @@
+name: Identity Graph Operator agent
+summary: Get a plan to match duplicate customer, company or product records across your tools, with match keys, scoring, review steps and privacy checks.
+headline: Identity Graph Operator agent
+subhead: Describe the systems that hold the same customers, companies or products under different records. It plans which fields to match on, how to score a match, and who reviews the unsure ones. You get a matching plan, test cases and privacy notes.
+job: secure-code
+thinking: high
+thinking_why: It judges when two records are the same thing, and a wrong merge is costly. Use a model that reasons well and says when it is unsure.
+explain: |-
+  When the same customer sits in your shop, your support tool and your billing tool, each with a slightly different record, things go wrong. One person is charged twice. Two parcels are sent. Two agents or teams give different answers to "who is this?". Entity resolution is the work of deciding which records are one real person, company or product, and giving each a single ID everyone shares.
+
+  This agent plans that work. It starts with your sources and the fields each one holds. Then it cleans each field into one form before comparing, such as lower-case emails and phone numbers in one format. It picks match keys that narrow the search so you do not compare everything with everything. It scores a pair by comparing field by field, with more weight on strong fields like email. It then sets three bands: link automatically, send to a person to review, or treat as new. Every decision carries a reason you can read, such as "same email and phone, name differs by nickname".
+
+  It never merges on a hunch, and it prefers proposals over silent merges, so a person or second agent can check. It also covers the privacy side: match only data you have a lawful reason to hold, show less personal detail by default and have a qualified professional review compliance questions. The score cut-offs in the profile are examples. You test them on your own data.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - The same customer appears in your shop, support tool and billing tool, and you want one shared record for each.
+  - Two or more AI agents or automations touch the same customers or products and sometimes disagree about who is who.
+  - You are about to join two customer lists, for example after buying a business, and want rules for matching them.
+  - A merge went wrong once and you want a safer process with a review step and a way to undo it.
+not_for:
+  - You only want likely duplicate customers found in one store list. Use the Duplicate customer finder.
+  - You want duplicates merged in your live store. Use the Customer record merger, and check each match first.
+  - You want AI agents to prove who they are. Use the Agentic Identity & Trust Architect agent.
+  - You want a messy spreadsheet cleaned. Use the Messy spreadsheet cleaner.
+you_give:
+  - The systems that hold the records, such as your shop, support tool, billing tool and email list.
+  - The fields each system holds, such as email, phone, name and address.
+  - What counts as the same, such as "same email means same customer", and what a wrong merge would cost.
+  - A small sample of records with personal details masked (optional)
+  - Where your customers live, and who can review unsure matches (optional)
+you_get:
+  - A match plan with the fields to compare, how to clean each, and how heavily to weigh it
+  - Three decision bands, which are link automatically, review, or treat as new
+  - A review and undo process for merges and splits
+  - Sample test pairs to try on your own data before you trust the rules
+  - Privacy notes and a list of what is missing
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - List your systems and the fields in each. If you paste sample records, mask names, emails and phone numbers first.
+  - Type "Plan how to match these records. Show the evidence for each rule. Do not merge anything on a hunch. Mark every cut-off as a starting point to test."
+  - Read the three decision bands first. Move the cut-offs after you try the sample test pairs against your real records.
+  - Run the matching in your own tool or script. The AI plans the rules and does not run a matching engine.
+  - Have a person review every merge in the middle band, and keep a way to undo it.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the sources, the fields, what counts as the same and the cost of a wrong merge. Anything missing is asked once, then marked MISSING.
+  - title: Clean each field
+    text: It plans one form per field before comparing, such as lower-case emails, phone numbers in one format and nicknames matched to full names.
+  - title: Narrow the search
+    text: It picks match keys, such as email domain or phone start, so you compare likely pairs and not every pair.
+  - title: Score a pair
+    text: It compares field by field, with more weight on strong fields. A missing field never raises the score.
+  - title: Set the bands and the review
+    text: It sets cut-offs for link, review and new, and says who reviews and how a bad merge is split again.
+  - title: Check privacy and consistency
+    text: It plans checks that two systems give the same answer, and flags personal data to mask or leave out.
+output_shape: |-
+  SCOPE
+    Sources <list> | Record type <person, company, product> | What counts as the same <rule> | Cost of a wrong merge <low, medium or high>
+
+  SOURCES AND FIELDS
+    <source> | <fields> | <how clean the data is> | <which fields are reliable>
+
+  MATCH PLAN
+    <field> | <how to clean it> | <how to compare> | <weight>
+
+  DECISION BANDS
+    Link automatically <cut-off> | Send to review <range> | Treat as new <cut-off> | <starting points to test>
+
+  MERGE AND SPLIT PROCESS
+    <who proposes> | <who reviews> | <what is recorded> | <how to undo>
+
+  CONSISTENCY CHECKS
+    <check> | <what a failure means>
+
+  TEST PAIRS
+    <pair described in words> | <expected band> | <why>
+
+  PRIVACY NOTES
+    <what to mask or leave out> | <what needs a professional>
+
+  GAPS AND CHECKS
+    <missing fact or choice> | <why it matters>
+output_sample:
+  input:
+    - The systems that hold the records
+    - The fields each system holds
+    - What counts as the same, and the cost of a wrong merge
+    - A small masked sample of records (optional)
+  output:
+    - name: Scope
+      contains: The sources, the record type, the rule for "same" and the cost of a wrong merge.
+    - name: Sources and fields
+      contains: Each source with its fields and which fields can be trusted.
+    - name: Match plan
+      contains: For each field, how to clean it, how to compare it and how much weight it carries.
+    - name: Decision bands
+      contains: Starting cut-offs for link, review and new, marked as figures to test.
+    - name: Merge and split process
+      contains: Who proposes, who reviews, what is recorded and how to undo a merge.
+    - name: Consistency checks
+      contains: Checks that two systems agree on who is who, and what a failure means.
+    - name: Test pairs
+      contains: Example record pairs in words with the band each should land in, and why.
+    - name: Privacy notes
+      contains: What personal data to mask or leave out, and what a professional should review.
+    - name: Gaps and checks
+      contains: Missing facts and open choices that limit the plan.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads a masked export from each system and tests your rules by hand on pairs you choose.
+  inputs:
+    - A masked export of 30 to 50 records from each system, including pairs you already know are the same person.
+    - A list of pairs that look the same but are not, such as two people at one shared email.
+    - The merges you made before that you later regretted.
+terms:
+  - term: Entity resolution
+    meaning: Deciding which records in different systems are the same real person, company or product.
+  - term: Canonical ID
+    meaning: The one shared ID given to all records that belong to the same person, company or product.
+  - term: Match key
+    meaning: A field or part of a field used to narrow the search to likely pairs, such as email domain.
+  - term: Confidence score
+    meaning: A number from 0 to 1 that shows how sure the plan is that two records are one. It is a guide, not proof.
+  - term: Merge and split
+    meaning: A merge joins two records into one. A split pulls apart a merge that was wrong.
+tweaks:
+  - what: Record type
+    how: Plan one type at a time, such as customers first. People, companies and products need different rules.
+  - what: Cost of a mistake
+    how: Say if a wrong merge is costly, such as billing the wrong person. Then the review band gets wider.
+  - what: Privacy
+    how: Say where your customers live and what consent you hold. It then adds fitting privacy notes.
+improve:
+  - Keep the test pairs and add every bad merge you find, so the next run starts stronger.
+  - Check the cut-offs on a fresh sample after your data changes, such as a new import.
+  - Pair it with the Agentic Identity & Trust Architect agent when several AI agents can change the same records.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -1,6 +1,6 @@
 new_slug: creative-sprint-readiness-reviewer
 name: Creative sprint readiness reviewer
-summary: Review a creative sprint before briefs, before image generation and before launch. Check source facts, buyer fit, copy, product truth and delivery files.
+summary: Check a creative sprint before you brief, generate images or launch ads. Get a PASS, FIX or NOT CHECKED result for each gate, with an owner.
 job: check-ads
 headline: Creative sprint readiness reviewer
 subhead: Share the sprint briefs, source facts and finished assets. Get a stage-by-stage go or fix report with each blocker and its owner.
@@ -8,6 +8,10 @@ explain: "Check a creative sprint at four gates: source readiness, concept brief
 when:
   - A sprint is ready for design or paid image generation.
   - Finished ads need a final check before account upload.
+not_for:
+  - "You have one ad and no sprint to check: ask a colleague for a quick read, or check it against your platform's ad rules by hand."
+  - "You only want copy edited: use a plain copy edit in your AI, with your brand voice notes pasted in."
+  - "You want ads made, not checked: this reviews work that already exists, so write the briefs and images first."
 you_give:
   - Brand and product facts, buyer notes and dated ad results
   - Concepts, production briefs and visual settings
@@ -16,9 +20,35 @@ you_get:
   - A go or fix result for each sprint gate
   - Evidence for each blocker, plus owner and recheck action
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text.
+  - Paste your brand facts, buyer notes, dated ad results and sprint briefs. Upload finished images if you have them.
+  - Say which ad platform you plan to use and name any visual themes your briefs rely on.
+  - Ask for the gate report. Any gate with missing input comes back as NOT CHECKED.
+  - Fix each FIX item with its named owner, then ask your AI to recheck those items.
+  - Have the person who approves ads sign off before you upload anything.
+output_sample:
+  input:
+    - Your brand and product facts, and your buyer notes
+    - Your last 30 days of ad results, with dates
+    - Your sprint concepts and production briefs
+    - Your finished ad images, if you have them
+    - The ad platform's size and text limits you plan to use
+  prerequisites:
+    - Your own list of visual themes, if the briefs use named themes
+    - Files or text your AI can read
+  output:
+    - name: Pre-sprint readiness
+      contains: Whether your data is fresh, your buyer is described in their own words, and your winners and losers are named.
+    - name: Sprint brief gate
+      contains: Each concept checked for awareness stage, opening words, specific hook, reading level, banned words and voice match.
+    - name: Production brief gate
+      contains: Visual settings, hook variants, copy field lengths and image field completeness checked against the brief.
+    - name: Post-production gate
+      contains: Each finished image checked for product look, text legibility, theme fit and banned visuals.
+    - name: Launch readiness
+      contains: Batch checks for variety, sizes, hook variants, tracking links and the page pixel before you publish.
+    - name: Gate report
+      contains: PASS, FIX or NOT CHECKED for each gate, with evidence, defect, severity, owner, recheck action and files inspected.
 how_it_works:
   - title: Check readiness
     text: Check freshness, buyer detail and the prior performance anchors before briefing.

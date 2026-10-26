@@ -51,10 +51,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Website brand brain builder.** Use the skill `website-brand-brain-builder`. Reads your store and reviews into one brand file.
-2. **Store brand signal auditor.** Use the skill `store-brand-signal-auditor`. Give it the brand brain from the steps before. Scores and ranks where homepage, pack and emails drift from the brand file. Reads the brand file from the step before.
-3. **Brand voice editor.** Use the skill `brand-voice-editor`. Give it the brand brain from the steps before. Checks sample copy against the voice and rewrites the weak lines. Reads the brand file from the first step.
-4. **Brand guide builder.** Use the skill `brand-guide-builder`. Give it the brand brain from the steps before. Packages the voice, look and do and don't into a guide for new writers. Reads the brand file from the first step.
+1. **Website brand brain builder.** Use the skill `website-brand-brain-builder`. Reads your store and reviews into one brand file. Hands the brand file to steps 2, 3 and 4.
+2. **Store brand signal auditor.** Use the skill `store-brand-signal-auditor`. Scores and ranks where homepage, pack and emails drift from the brand file. Uses the brand file from step 1 and your store capture.
+3. **Brand voice editor.** Use the skill `brand-voice-editor`. Checks sample copy against the voice and rewrites the weak lines. Uses the brand file from step 1 and your own ad copy or script, not step 2's report.
+4. **Brand guide builder.** Use the skill `brand-guide-builder`. Packages the voice, look and do and don't into a guide for new writers. Uses the brand file from step 1, not step 3's report.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

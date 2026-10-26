@@ -28,9 +28,9 @@ uses:
   - small-usability-test-planner
 steps:
   - uses: everyday-usability-reviewer
-    note: Review the supplied screen for discoverability, mapping, errors and feedback; label the findings as a heuristic review rather than real user test results.
+    note: Review the supplied screen for discoverability, mapping, errors and feedback; label the findings as a heuristic review rather than real user test results. Hands the issue list you kept to step 2.
   - uses: design-feedback-giver
-    note: Turn the agreed issues into specific changes, keeping observations separate from preferences.
+    note: Turn the agreed issues into specific changes, keeping observations separate from preferences. Uses the issues you kept from step 1 along with the design, and hands the revised brief to step 3.
   - uses: small-usability-test-planner
     note: Write task-based checks for the changes, with neutral prompts and observable success criteria.
 origin: rebuilt

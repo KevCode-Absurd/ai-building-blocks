@@ -1,6 +1,6 @@
 new_slug: ltgp-to-cac-checker
 name: "Lifetime gross profit to CAC checker"
-summary: "Give it ad spend, new customers and cohort revenue. Get your ratio, its band and a score."
+summary: "Check your LTGP to CAC ratio. Give it ad spend, new customers and cohort revenue. You get the ratio, a scale, hold or fix band, and a score."
 job: track-numbers
 thinking: high
 thinking_why: "It works with several numbers and time windows and must say which side of the ratio is moving, so a stronger model avoids mistakes."
@@ -17,6 +17,10 @@ when:
   - Revenue is flat or falling while ad spend rises.
   - You want to know if you can raise your ad budget safely.
   - You judge ads by platform ROAS and suspect it hides a payback problem.
+not_for:
+  - "You have under 12 months of orders and want a firm answer: the check gives only a flagged estimate, so wait and use your ad platform's ROAS view for now."
+  - "You sell to other businesses from a lead list: use your CRM sales report, because this needs repeat orders by first-purchase month."
+  - "You want to know which ad platform to cut: use each platform's own cost report, because the ratio alone does not say."
 
 you_give:
   - Ad spend and new customers per month
@@ -36,6 +40,32 @@ how_to_use:
   - Add your cost of goods and delivery cost per order. Real figures work better than a guessed percentage.
   - Read the band, then the side that is moving, and fix that side first.
   - Write down every big change with its date, and run the check again in a month.
+output_sample:
+  input:
+    - Ad spend and new customers by month
+    - Gross profit per order after product and delivery cost
+    - Cohort revenue at day 30, 90, 180 and 365 by first-purchase month
+    - Your product category (optional)
+    - A dated list of big changes (optional)
+  prerequisites:
+    - A Shopify cohort report, or a table with the same columns
+  output:
+    - name: Header
+      contains: Your store, the time window used, and the repeat rate that set it.
+    - name: Monthly table
+      contains: One row per month with ad spend, new customers, CAC, LTGP over the window and the ratio.
+    - name: BAND
+      contains: Where the ratio sits (under 1, 1 to 2, 2 to 3, over 3) and whether to fix, hold or scale.
+    - name: WHICH SIDE
+      contains: Whether CAC is rising, LTGP is falling, both, or neither.
+    - name: SPIRAL
+      contains: The month-on-month pattern of CAC, new customers and revenue.
+    - name: CASH SIDE
+      contains: Any risk from operating costs, debt or stock.
+    - name: TIMESTAMP
+      contains: Each big change with its date and the ratio before and after.
+    - name: SCORE
+      contains: A score out of 100 with its sum, plus checks not run and anything missing.
 
 how_it_works:
   - title: Defines CAC

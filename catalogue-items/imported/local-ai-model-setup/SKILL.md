@@ -30,6 +30,46 @@ Use this skill when:
 - Creating team-shared inference endpoints
 - Prototyping before committing to cloud LLM APIs
 
+## When Not to Use
+
+- You want a quick private chat and do not mind a hosted AI: use Claude, ChatGPT or Gemini and skip the setup.
+- A shared server for many users or heavy production traffic: this is a single-machine setup. Look at a production inference server instead.
+- A computer with under 8 GB of memory: only very small models will run.
+- You are not comfortable running commands: ask a technical friend to run the steps with you.
+
+## What You Give It
+
+Ask once for any that are missing. If one is still missing, write MISSING and say what it changes. Never guess hardware.
+
+1. Operating system (Windows, Mac or Linux).
+2. Graphics card name and its memory (VRAM), or "Apple Silicon" and total memory, or "no graphics card".
+3. What the model is for (chat, coding, searching your own documents, images in and text out).
+4. Whether Docker is installed (optional).
+5. Whether anyone else must reach it (optional). The default is this machine only.
+
+## Steps
+
+1. **Read the hardware.** Match memory to the Model Selection Guide and pick one starter model. Say why. Sizes in the table are approximate, so tell the person to check the model's page on ollama.com before pulling.
+2. **Install Ollama.** Windows and Mac: the installer from ollama.com. Linux: the install command below. The person runs it themselves. Do not run installers for them without being asked.
+3. **Pull and test the model.** One `ollama pull`, one `ollama run` with a short question. Say what a good result looks like.
+4. **Add the browser chat screen (optional).** Docker Compose with Open WebUI. Only if Docker is installed.
+5. **Add the proxy (optional).** LiteLLM only if an app needs one address for several models.
+6. **Lock it down.** Keep everything on this machine unless the person asked otherwise. If they asked for access from other machines, explain the risk first and use the reverse proxy pattern in Security.
+7. **Check it works.** List the checks in Output.
+
+## Output
+
+Return these in order.
+
+1. **Your setup**: the hardware you read, the starter model and the reason.
+2. **Install and start commands**: for the person's operating system only.
+3. **Compose file**: only if Docker is used, with secrets as placeholders (see below).
+4. **How to know it works**: what the person should see (the model in `ollama list`, a reply in the terminal, Open WebUI loading on `http://localhost:3000`, and a login screen).
+5. **Backup and undo notes**: where model files and chat data are stored, and how to stop and remove the setup.
+6. **Gaps and next steps**: every MISSING input, and one next step such as trying a second model.
+
+Before any command that changes the machine, remind the person to back up anything important. Never put real passwords or keys in files you show. Use placeholders and tell the person to make their own.
+
 ## Prerequisites
 
 - 8 GB+ RAM (16 GB+ recommended for 7B+ models)
@@ -39,8 +79,10 @@ Use this skill when:
 
 ## Quick Start
 
+Windows and Mac: download the installer from ollama.com and skip the first command. Check the install script before you run it, since it runs with your account's rights.
+
 ```bash
-# Install Ollama
+# Install Ollama (Linux)
 curl -fsSL https://ollama.com/install.sh -o /tmp/install-ollama.sh && sh /tmp/install-ollama.sh && rm /tmp/install-ollama.sh
 
 # Start the server
@@ -59,6 +101,8 @@ ollama pull llama3.1:8b-instruct-q4_K_M
 
 ## Model Selection Guide
 
+Sizes and memory needs are approximate and the model list changes. Check each model's page on ollama.com for the current size before you pull it.
+
 | Model | Size | VRAM | Best For |
 |-------|------|------|----------|
 | `llama3.1:8b` | 4.7 GB | 6 GB | General chat, coding |
@@ -73,6 +117,14 @@ ollama pull llama3.1:8b-instruct-q4_K_M
 
 ## Docker Compose — Full Stack
 
+Notes before you use this file:
+
+- The `deploy` block asks for an NVIDIA graphics card. Remove it for a computer with no NVIDIA card. Docker on a Mac cannot use the Apple graphics chip, so on a Mac run Ollama directly and use Compose only for Open WebUI.
+- Every port is published to `127.0.0.1`, so only this machine can reach it.
+- `latest` and `main` tags change over time. Pin a version for anything you rely on.
+- Create a `.env` file next to this file with your own `WEBUI_SECRET_KEY` and `LITELLM_MASTER_KEY`. Make each a long random value. Do not copy a value from this page.
+- The `litellm` service is optional. Delete it if you do not need one address for several models.
+
 ```yaml
 # docker-compose.yml
 services:
@@ -81,10 +133,11 @@ services:
     container_name: ollama
     restart: unless-stopped
     ports:
-      - "11434:11434"
+      - "127.0.0.1:11434:11434"
     volumes:
       - ollama_data:/root/.ollama
     environment:
+      # 0.0.0.0 is the inside of the container only. The published port above is local.
       - OLLAMA_HOST=0.0.0.0
       - OLLAMA_NUM_PARALLEL=4
       - OLLAMA_MAX_LOADED_MODELS=2
@@ -97,7 +150,7 @@ services:
               count: all
               capabilities: [gpu]
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      test: ["CMD", "ollama", "list"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -107,13 +160,13 @@ services:
     container_name: open-webui
     restart: unless-stopped
     ports:
-      - "3000:8080"
+      - "127.0.0.1:3000:8080"
     volumes:
       - webui_data:/app/backend/data
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
       - WEBUI_AUTH=true
-      - WEBUI_SECRET_KEY=${WEBUI_SECRET_KEY:-change-me-in-production}
+      - WEBUI_SECRET_KEY=${WEBUI_SECRET_KEY:?Set WEBUI_SECRET_KEY in your .env file}
       - DEFAULT_MODELS=llama3.1:8b
     depends_on:
       ollama:
@@ -124,7 +177,9 @@ services:
     container_name: litellm
     restart: unless-stopped
     ports:
-      - "4000:4000"
+      - "127.0.0.1:4000:4000"
+    environment:
+      - LITELLM_MASTER_KEY=${LITELLM_MASTER_KEY:?Set LITELLM_MASTER_KEY in your .env file}
     volumes:
       - ./litellm-config.yaml:/app/config.yaml
     command: ["--config", "/app/config.yaml"]
@@ -156,7 +211,7 @@ model_list:
       api_base: http://ollama:11434
 
 general_settings:
-  master_key: sk-local-dev-key
+  master_key: os.environ/LITELLM_MASTER_KEY  # set in your .env file, never hardcode
   max_budget: 0  # unlimited for local
 ```
 
@@ -217,7 +272,10 @@ print(f"Embedding dimensions: {len(result['embeddings'][0])}")
 ```python
 from openai import OpenAI
 
-client = OpenAI(base_url="http://localhost:11434/v1", api_key="..." # local endpoint requires no real key)
+client = OpenAI(
+    base_url="http://localhost:11434/v1",
+    api_key="local-no-key-needed",  # the local endpoint ignores the key, but the library needs a value
+)
 
 response = client.chat.completions.create(
     model="llama3.1:8b",
@@ -302,6 +360,8 @@ fi
 
 ## Systemd Service
 
+Linux only. It binds to this machine only. Do not change the host to `0.0.0.0` unless you have put a login and a reverse proxy in front (see Security).
+
 ```ini
 # /etc/systemd/system/ollama.service
 [Unit]
@@ -315,7 +375,7 @@ User=ollama
 Group=ollama
 Restart=always
 RestartSec=3
-Environment="OLLAMA_HOST=0.0.0.0"
+Environment="OLLAMA_HOST=127.0.0.1"
 Environment="OLLAMA_NUM_PARALLEL=4"
 Environment="OLLAMA_FLASH_ATTENTION=1"
 LimitNOFILE=65535
@@ -333,7 +393,8 @@ sudo systemctl status ollama
 
 ## Security
 
-- Bind to `127.0.0.1` in production (default), use reverse proxy for remote access
+- Bind to `127.0.0.1` (the default). Ollama has no login of its own, so never expose port 11434 to a network. Use a reverse proxy with a login for remote access.
+- Keep real secrets in a `.env` file, out of the Compose file, and out of any place you share.
 - Set `WEBUI_AUTH=true` on Open WebUI
 - Use nginx with TLS for remote access:
 
@@ -363,7 +424,7 @@ server {
 | Out of memory | Reduce `num_ctx`, use smaller model, set `OLLAMA_MAX_LOADED_MODELS=1` |
 | GPU not detected | Check `nvidia-smi`, reinstall CUDA drivers, verify Docker GPU runtime |
 | Connection refused | Check `OLLAMA_HOST` setting, verify firewall rules |
-| Model download fails | Check disk space, retry with `ollama pull --insecure` for self-signed registries |
+| Model download fails | Check disk space and your network, then retry. Do not use `--insecure` unless you run the registry yourself and accept the risk |
 
 ## Related Skills
 

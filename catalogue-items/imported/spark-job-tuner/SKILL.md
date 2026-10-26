@@ -12,23 +12,59 @@ Production patterns for optimizing Apache Spark jobs including partitioning stra
 
 ## Do not use this skill when
 
-- The task is unrelated to apache spark optimization
-- You need a different domain or tool outside this scope
-
-## Instructions
-
-- Clarify goals, constraints, and required inputs.
-- Apply relevant best practices and validate outcomes.
-- Provide actionable steps and verification.
+- The job runs fine today and nobody is waiting on it. Leave it alone.
+- The pipeline is not Spark, or the work is SQL on a warehouse such as BigQuery or Snowflake. Those need their own tuning guides.
+- The job fails with a bug or wrong results. Fix correctness first, then tune.
+- You only have a vague wish for "faster". Ask for the job code and one run time first.
 
 ## Use this skill when
 
-- Optimizing slow Spark jobs
-- Tuning memory and executor configuration
-- Implementing efficient partitioning strategies
-- Debugging Spark performance issues
-- Scaling Spark pipelines for large datasets
-- Reducing shuffle and data skew
+- A Spark job takes far longer than it should
+- A few tasks run much longer than the rest (data skew)
+- Executors run out of memory or spill to disk
+- You are scaling a pipeline to much bigger data
+- You want to cut shuffle (data moved between steps) and cost
+
+## Risk note
+
+Settings here change how a cluster uses memory and money. Wrong values can make a job fail or raise the bill. Try each change on a small run or a copy of the data first. Never apply changes to a production job without a rollback plan.
+
+## What you need
+
+Ask once, in one message, for anything missing:
+
+1. The job code (PySpark, Scala or Spark SQL).
+2. The Spark version and where it runs (Databricks, EMR, Dataproc, on your own cluster).
+3. Cluster size and the current settings (executors, memory, cores, shuffle partitions).
+4. Rough data size and the current run time.
+5. The Spark UI stage view or the slowest stages (optional, but it helps most).
+
+## Steps
+
+1. **State the goal.** Write the target in one line, such as "cut the nightly run from 2 hours to under 1".
+2. **Diagnose before tuning.** From the stage view, name the slow stage and the cause: too few or too many partitions, a large shuffle, skewed keys, memory spill, or slow serialization. If you have no stage view, say which stage you guess and mark it unmeasured.
+3. **Pick fixes from the patterns below.** Order them by expected effect and risk. Start with the cheapest: turn on adaptive query execution, broadcast small tables, prune columns and partitions.
+4. **Give each fix as a change.** Show the exact setting or code diff, why it helps, the effect you expect, and the metric to check afterwards.
+5. **Say how to verify.** Name the same run, the same data, and the numbers to compare (run time, shuffle read and write, spill, longest task against the median).
+6. **Stop at the limit.** If the data is too skewed or small for these fixes to matter, say so and suggest a data-layout change instead of more settings.
+
+## Output
+
+Return:
+
+1. **Diagnosis:** the slow stage, the cause, and the evidence.
+2. **Changes, ranked:** a table with columns change (setting or code diff), why, expected effect, risk, metric to check.
+3. **Rewritten code:** only the parts that change.
+4. **Settings block:** the full set of settings to try, with old and new values.
+5. **How to confirm:** the numbers to compare before and after.
+6. **Next steps:** what to try if the gain is too small, and what to watch in the Spark UI.
+
+## If something is missing
+
+- No job code: ask for it. Do not tune from a description alone.
+- No stage view or run time: give general fixes, labelled unmeasured, and ask for the Spark UI view.
+- Unknown Spark version: assume 3.2 or newer for adaptive execution and say so.
+- Never state a speed gain as fact. Say "expected" until a run confirms it.
 
 ## Core Concepts
 
@@ -262,7 +298,9 @@ def print_memory_usage(spark):
 
 ```python
 # Reduce shuffle data size
-spark.conf.set("spark.sql.shuffle.partitions", "auto")  # With AQE
+# With adaptive query execution on, Spark merges small shuffle partitions by itself.
+# Start near data size / 128MB, or leave the default of 200.
+spark.conf.set("spark.sql.shuffle.partitions", "200")
 spark.conf.set("spark.shuffle.compress", "true")
 spark.conf.set("spark.shuffle.spill.compress", "true")
 
@@ -429,6 +467,7 @@ spark_configs = {
 - [Databricks Optimization Guide](https://docs.databricks.com/en/optimizations/index.html)
 
 ## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+- Settings depend on your Spark version, your cluster and your data. Measure on a test run before you apply them.
+- Do not treat this as a substitute for review by someone who knows your cluster.
+- Stop and ask if the job code, the cluster size or the goal is missing.

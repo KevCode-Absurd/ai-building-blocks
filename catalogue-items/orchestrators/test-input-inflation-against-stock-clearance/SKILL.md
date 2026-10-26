@@ -1,46 +1,29 @@
 ---
 name: test-input-inflation-against-stock-clearance
-description: "A stock recovery bridge and separate replenishment margin scenario"
+description: "Use when you hold old stock at an old cost and need to know the cash a clearance recovers, and separately what a higher input cost and price rise do to the next batch's margin. Not for stock count errors or demand forecasts."
 ---
 
 # Test input inflation against stock clearance
 
-A stock recovery bridge and separate replenishment margin scenario.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Answer two questions on their own. Step 1 reconciles the old batch and shows how much cash clearing it recovers. Step 2 tests the next batch's margin when an input costs more and the price rises. The two bridges are never merged, and no change in demand is assumed.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **The old batch** (yours): units bought, cost per unit and the purchase date, from supplier invoices.
+- **Sales of the old batch** (yours): units sold at full price and on markdown with the prices received, from your sales report.
+- **Clearance costs** (yours, optional): ads, handling or fees paid to clear the stock.
+- **The new batch scenario** (yours): input cost per kilogram before and after, kilograms in each finished unit, other cost per unit, the approved selling price, the share of the rise it passes on, and planned volume.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** your own stock sheet, so the AI can keep your layout.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Historical stock cohort purchase costs, proposed full/markdown sell-through, actual clearance expenses and a separately approved future input-price/pass-through scenario.
+The items under "Before you start", with the currency, units and dates stated once. Ask once, in one short message, for only what you cannot work without. Never use a replacement price for the old batch: its cost is what was actually paid.
 
 ## Governing scope
 
@@ -50,9 +33,9 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Retail markdown stock reconciler** (`retail-markdown-stock-reconciler`). Reconcile old-cohort units, receipts, sold purchase cost and held stock cost memo. Pass remaining quantity and actual purchase-cost vintage, not a hypothetical replacement price. Preserve both sold-unit contribution and full-cohort cumulative purchase cash recovery; never use the unsold purchase-cost memo as new cash. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-retail-markdown-stock-reconciler.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Retail markdown stock reconciler** (`retail-markdown-stock-reconciler`). Reconcile old-cohort units, receipts, sold purchase cost and held stock cost memo. Pass remaining quantity and actual purchase-cost vintage, not a hypothetical replacement price. Preserve both sold-unit contribution and full-cohort cumulative purchase cash recovery; never use the unsold purchase-cost memo as new cash. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-retail-markdown-stock-reconciler.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** Units sold are no more than the batch (refuse overselling), receipts, cost of units sold and cost of held stock reconcile to the batch cost, and held stock is not counted as cash.
 
-2. **Commodity pass through cost bridge** (`commodity-pass-through-cost-bridge`). Model the future replenishment input-price and approved price-recovery scenario using the correct physical intensity. Present old-stock cash recovery and new-cohort margin as separate bridges with explicit timing and no assumed demand response. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-commodity-pass-through-cost-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Commodity pass-through cost bridge** (`commodity-pass-through-cost-bridge`). Model the future replenishment input-price and approved price-recovery scenario using the correct physical intensity. Present old-stock cash recovery and new-cohort margin as separate bridges with explicit timing and no assumed demand response. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-commodity-pass-through-cost-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** Kilograms per unit come from a source, the price scenario is not treated as a contracted purchase, only the approved pass-through share is applied, and recovered and unrecovered input cost add up to the extra cost.
 
 ## Workbook checks
 
@@ -60,7 +43,8 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Acceptance
 
-- Historical stock keeps its original purchase basis; prospective input inflation is not applied retroactively to existing inventory cost. Sold-unit contribution and cumulative cash after the full original cohort purchase remain distinct; stock cannot be oversold.
+- Old-stock cash recovery and new-batch margin stay as separate bridges, and held stock cost is never used as new cash.
+- No demand response is assumed, and only the approved pass-through share is applied.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
 - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
@@ -69,4 +53,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the two bridges apart: the old batch (profit on units sold and cumulative cash against the full batch cost) and the new batch (margin with the input rise, recovered against unrecovered). State that demand was held flat. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that nothing was paid, sent or filed, and that a person who knows the documents must check the definitions before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Size the restock cash** with the [Plan the cash for your next stock order](https://useaiblocks.com/workflows/plan-the-cash-for-your-next-stock-order) workflow.
+- **Explain inventory charges in margin** with the [Explain inventory accounting margin effects](https://useaiblocks.com/workflows/explain-inventory-accounting-margin-effects) workflow.
+Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

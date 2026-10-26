@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It chains many methods and builds one forecast from your answers.
 new_slug: repeatable-growth-guide
 name: Repeatable growth guide
-summary: Describe your business. Get a growth plan with a forecast, built step
-  by step from your marketing to your numbers.
+summary: Turn lucky months into a growth plan you can repeat. Give it your business details and get a marketing plan, a sharper offer and a forecast.
 job: plan-strategy
 headline: Repeatable growth guide
-subhead: A growth plan and forecast for a business whose good months happened by
-  luck, built one phase at a time. Each phase produces a document that the next
-  phase uses.
+subhead: A growth plan and forecast for a business whose good months happened by luck, built one phase at a time. Each phase produces a document that the next phase uses.
 explain: |
   A growth plan and forecast for a business whose good months happened by luck, built one phase at a time. Each phase produces a document that the next phase uses.
 
@@ -18,6 +15,10 @@ when:
   - A conference or referral gave you a great month and you cannot repeat it.
   - You have a product people pay for but no steady way to find buyers.
   - You need a growth forecast you can defend.
+not_for:
+  - "You have no paying customers yet: use create-business to find and test your first buyers."
+  - "Your offer, customer retention or daily operations are broken: run improve-business first, then come back."
+  - "Your product itself must drive the growth, such as invites or sharing inside an app: use grow-app."
 you_give:
   - Description of your business and customers
   - Current revenue and sales figures
@@ -30,7 +31,25 @@ you_get:
   - Metrics plan with one key number
   - Growth forecast
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - A short description of your business and your customers
+    - Your current revenue and sales numbers
+    - Your offer and pricing (optional)
+    - Time to work through each phase, with answers to the questions your AI asks
+  prerequisites:
+    - An AI that can read and write files, so it can save each document and resume later
+    - The nine linked skills, installed together or pulled in one phase at a time (the full install command is optional)
+  output:
+    - name: MARKETING.md
+      contains: Your marketing plan, with a before, during and after grid of how buyers find you and stay.
+    - name: OFFER.md
+      contains: A sharper offer, built before any channel work so traffic does not go to a weak offer.
+    - name: METRICS.md
+      contains: The one key number to track, and how each part of the plan feeds it.
+    - name: GROW-BUSINESS-PLAN.md
+      contains: The full growth plan, with your forecast, built from the answers and documents of every phase.
+    - name: Phase notes
+      contains: Notes on your outbound, word-of-mouth, mainstream buyer, network and pricing decisions, saved as you go.

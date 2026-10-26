@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set checks and fills in complaint templates.
 new_slug: amazon-brand-protection-planner
 name: Amazon brand protection planner
-summary: Give it your brand and listings. Get checks for hijackers and fakes,
-  plus complaint letters ready to send.
+summary: Check your Amazon listings for hijackers, fakes and price breaks. Get a risk rating and complaint letters ready for Brand Registry.
 job: run-your-store
 headline: Amazon brand protection planner
-subhead: A set of checks and ready complaint templates to protect your Amazon
-  brand from hijackers, fakes and sellers breaking your price rules. It works to
-  risk levels, so you know what needs action in 24 hours and what only needs
-  watching.
+subhead: A set of checks and ready complaint templates to protect your Amazon brand from hijackers, fakes and sellers breaking your price rules. It works to risk levels, so you know what needs action in 24 hours and what only needs watching.
 explain: |
   A set of checks and ready complaint templates to protect your Amazon brand from hijackers, fakes and sellers breaking your price rules. It works to risk levels, so you know what needs action in 24 hours and what only needs watching.
 
@@ -19,6 +15,10 @@ when:
   - Reviews say the product is fake or different from the photos.
   - A reseller is selling below your minimum price.
   - You need a complaint ready to send to Amazon.
+not_for:
+  - "You need legal advice or a final call on a lawsuit: ask a lawyer before you send any letter."
+  - "You want live alerts on your listings: this skill has no data feed, so use a paid Amazon monitoring tool."
+  - "You sell on Shopify or your own site: use a plain takedown request to the host or platform instead."
 you_give:
   - Your brand name and trademark details
   - Your listing identifiers
@@ -30,7 +30,33 @@ you_get:
   - Brand Registry and cease and desist templates
   - A test buy guide for evidence
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your brand name, trademark number and the listing IDs (ASINs) you want to protect. Add your minimum price and approved sellers if you have them.
+  - Note that the skill has no data feed. You bring the seller, price and review details, or use an AI that can run code and has your data files.
+  - Open the skill in an AI that can run code and fill in the settings with your details.
+  - Run detector.py. Read the risk rating for each listing. High means act within 24 hours.
+  - "Run the templates script for the letter you need: complaint, cease-desist or testbuy. It works from the same settings."
+  - Have a lawyer check each letter before you send it. Treat the sample report as made-up example data.
+output_sample:
+  input:
+    - Your brand name and trademark number
+    - Your listing IDs (ASINs) to protect
+    - Your minimum advertised price (optional)
+    - Seller IDs you allow to sell your brand (optional)
+  prerequisites:
+    - An AI that can run code, to use the detector and template scripts
+    - Seller, price and review data from your own checks, since the skill has no data feed
+  output:
+    - name: Brand Protection Report
+      contains: Risk ratings per listing for unauthorized sellers, prices below your minimum, and review signs of fakes.
+    - name: High risk alerts
+      contains: Listings that need action within 24 hours, with seller count, lowest price and the suggested next step.
+    - name: Counterfeit signals
+      contains: A count of reviews that say fake or not authentic, with advice on whether to make a test buy.
+    - name: Brand Registry complaint
+      contains: A complaint template to report a violation to Amazon.
+    - name: Cease and desist letter
+      contains: A letter template for contacting a seller directly.
+    - name: Test buy report
+      contains: A guide and template to record evidence when you buy from a suspect seller.
+    - name: DMCA takedown
+      contains: A template for copyright infringement claims.

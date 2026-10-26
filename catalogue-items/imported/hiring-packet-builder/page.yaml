@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes several linked documents from one brief.
 new_slug: hiring-packet-builder
 name: Hiring packet builder
-summary: Give it your hiring brief. Get a job post, interview guide with scoring
-  rubric, and an offer letter template.
+summary: Turn your hiring brief into a job post, an interview guide with scoring rubric, and an offer letter template for one role you need to hire.
 job: hire-people
 headline: Hiring packet builder
-subhead: Give it your hiring brief. Get a job post, interview guide with scoring
-  rubric, and an offer letter template. Bring role title, level and team. Use
-  the result to plan your next step.
+subhead: Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template. Bring role title, level and team. Use the result to plan your next step.
 explain: |
   Everything you need to hire for one role, in three documents: a job post, an interview guide with a scoring guide, and an offer letter template. You answer a short set of questions about the role instead of starting from a blank page.
 
@@ -18,6 +15,10 @@ when:
   - You want a consistent interview guide for a small team.
   - You need an offer letter template you can reuse.
   - You are writing your first job post and do not know what to include.
+not_for:
+  - "You need to screen or rank applicants: use a person on your team, or the hiring-screener skill once applications arrive. This page does not sort applicants."
+  - "You need an offer letter that is legally ready: have a lawyer or HR adviser review it first. The default terms are US terms, so replace them if you hire elsewhere."
+  - "You want the job posted for you: this only writes the files. You post the job on any job board yourself."
 you_give:
   - Role title, level and team
   - Responsibilities and must-have skills
@@ -30,10 +31,31 @@ you_get:
   - An offer letter template
   - A draft DocuSign link if you ask for it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill, or upload the skill folder if your AI takes files.
+  - Tell your AI you are hiring. Give the role title, level, team, duties, must-have skills, pay and interview stages.
+  - Say whether you want Word files only or a DocuSign draft. DocuSign needs a DocuSign account and an AI that can use your browser.
+  - Let it look at your old job posts and comparable posts online if it has file and web access. If not, it writes from your brief.
+  - Read each file. Check the pay band and that every requirement can be seen on a resume.
+  - Have a lawyer or HR adviser review the offer letter before you use it.
+output_sample:
+  input:
+    - Role title, level and team
+    - Main duties and must-have skills
+    - Pay range and benefits
+    - Interview stages you plan to run
+    - "How you want to send the offer: Word file or DocuSign (optional)"
+  prerequisites:
+    - An AI that can make Word files (otherwise you get the text in chat)
+    - Access to your Google Drive or Microsoft 365 files, to reuse old job posts (optional)
+    - A DocuSign account and an AI that can use your browser, only if you want a DocuSign draft (optional)
+  output:
+    - name: "[Role]-Job-Post.docx"
+      contains: A job post that leads with impact, lists checkable requirements, and shows a pay band if you gave one.
+    - name: "[Role]-Interview-Guide.docx"
+      contains: One section per interview stage, with questions, follow-up probes, and a 1/3/5 scoring rubric for each skill.
+    - name: Resume screening rubric
+      contains: Must-have, should-have and nice-to-have tiers, with should-haves weighted to 100 and scored 0 to 3. It sits inside the interview guide.
+    - name: "[Role]-Offer-Letter.docx"
+      contains: An offer letter template with marked blanks for candidate details, plus at-will, contingency and legal review notes.
+    - name: DocuSign draft link
+      contains: A saved draft of the offer in DocuSign. It is never sent without your approval.

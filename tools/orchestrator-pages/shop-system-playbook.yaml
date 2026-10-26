@@ -1,6 +1,6 @@
 new_slug: shop-system-playbook
 name: "Turn one working shop into a system others can copy"
-summary: "Describe your best location. Get written standards, a manual a stranger can follow, a readiness check and a go or no-go."
+summary: "Turn your best shop into a system others can copy: written standards, a manual a newcomer can follow, a readiness check and a go or no-go."
 job: plan-strategy
 thinking: high
 thinking_why: "It runs four skills in a row and the later steps depend on what a real person finds in the trial. Give it your strongest model."
@@ -19,6 +19,10 @@ when:
   - One location works well and you want a second, a partner or a franchisee to run it the same way without you.
   - A new hire keeps asking you things that should be written down.
   - You are about to hire a manager and hand over the keys.
+not_for:
+  - "You run one site and will never copy it: use a plain staff checklist for each role instead."
+  - "Your work has no repeatable steps, such as custom one-off projects: write notes on how you decide, not a manual."
+  - "You only need to check a launch plan for faults: use the Rapid growth readiness reviewer."
 
 you_give:
   - What you sell and how a customer gets it, from order to hand-off
@@ -35,6 +39,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your business and your roles. It works step by step and saves each result.
   - At the pause, print the trial sheet, have a newcomer run one shift, and write down every stop. Bring the notes back.
+output_sample:
+  input:
+    - What you sell and how a customer gets it, from order to hand-off
+    - Your roles and what each person does in a shift
+    - Your opening and closing routines (optional)
+    - Takings and costs for a week you were away (optional)
+    - Notes from a newcomer's trial shift (after the pause)
+  prerequisites:
+    - An AI that can read the handoff folder, such as Claude Code or a Claude Project
+    - A person who has never worked for you, to run one trial shift
+  output:
+    - name: Standards
+      contains: Yes-or-no standards with numbers, the lines you never cut and one job for each person.
+    - name: Manual
+      contains: A job card for each role, a rule for missed standards and a trial sheet for the newcomer.
+    - name: Ready to copy check
+      contains: The gaps from the trial with a fix for each, and whether the first place earns without you.
+    - name: Go or no-go
+      contains: A go or no-go on the next location, a halfway check and the first fix to make.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and every MISSING line in one list.
 
 how_it_works:
   - title: Writes the standards

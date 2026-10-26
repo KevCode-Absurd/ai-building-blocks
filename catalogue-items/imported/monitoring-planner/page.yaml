@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies known frameworks to your service.
 new_slug: monitoring-planner
 name: Monitoring planner
-summary: Describe your service. Get metrics, logs, traces, alerts and service
-  targets that tell you when it hurts.
+summary: Plan monitoring for your service. Get a Grafana dashboard, a cleaned alert config and a first draft of targets that flag real user pain.
 job: ship-and-host
 headline: Monitoring planner
-subhead: A monitoring setup for your service that tells you when users are
-  hurting, without waking you for noise. You get the dashboards, the alert rules
-  and the targets that define good service.
+subhead: A monitoring setup for your service that tells you when users are hurting, without waking you for noise. You get the dashboards, the alert rules and the targets that define good service.
 explain: |
   A monitoring setup for your service that tells you when users are hurting, without waking you for noise. You get the dashboards, the alert rules and the targets that define good service.
 
@@ -18,6 +15,10 @@ when:
   - A new service goes live and has no dashboard.
   - You suspect your alert rules overlap or miss real failures.
   - You need a first draft of targets for uptime and speed.
+not_for:
+  - "You need error-budget maths or burn-rate alert thresholds: use slo-architect, which is built for that."
+  - "You have no way to run Python scripts: ask an engineer to run them, or use your AI to talk through the plan only."
+  - "You do not run a live service yet: wait until it has users, then plan alerts and targets."
 you_give:
   - Service name and type, such as API or queue
   - How critical it is
@@ -30,7 +31,30 @@ you_get:
   - A first draft of service targets
   - A tuning check for the next rotation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open an AI that can run Python scripts and add the skill folder.
+  - Tell it your service name, type and how critical it is. Add your alert config file if you have one.
+  - Ask it to make the dashboard and run the alert report first. Read the report before you accept changes.
+  - Ask it to write the cleaned alert config and the first draft of targets.
+  - Import the dashboard into Grafana and check that every panel shows live data.
+  - Watch your alerts for one on-call rotation. If fewer alerts led to action, run the report again on the live config.
+output_sample:
+  input:
+    - Your service name and type, such as API or queue
+    - How critical the service is
+    - Your current alert config as a JSON file (optional)
+    - Who is on call and which tools you use
+  prerequisites:
+    - An AI that can run Python scripts from the command line
+    - Grafana, to import the dashboard file
+    - Prometheus or a similar metrics tool, so the panels show live data
+  output:
+    - name: dashboard.json
+      contains: A Grafana dashboard for your service type and criticality, covering latency, traffic, errors and saturation.
+    - name: dashboard.md
+      contains: Notes that explain each panel and how to read the dashboard.
+    - name: alert_report.json
+      contains: An alert noise report that flags noisy rules, duplicates and gaps in coverage.
+    - name: alerts_optimized.json
+      contains: Your alert config, cleaned up after you review the report.
+    - name: slo_scaffold.json
+      contains: A quick first draft of service targets, to refine with slo-architect.

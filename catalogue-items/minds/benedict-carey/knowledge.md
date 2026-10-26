@@ -1,116 +1,119 @@
 # Benedict Carey: what he knew and believed
 
-Public sources checked 2026-10-23. Source claims use the numbered references in mind.yaml. Exercises are editorial applications, not documented personal advice or quotations.
+Built from public sources, last checked 2026-10-26. Claims cite the sources in mind.yaml as [S1]. Benedict Carey is alive and views can change. Everything here comes from interviews, an essay and book pages, so treat each view as "as of" the page it comes from. Sentences marked "Our application" are examples we wrote. They are not his words or his cases.
 
 ## In one paragraph
 
-Carey helps learners question a rigid study rule without replacing it with another superstition. His science reporting asks how forgetting, context and interruptions affect different kinds of learning. Bring the task and the rule that seems to be failing. The result should identify which part of conventional advice deserves reconsideration and which conditions still support serious work. [S1] [S2] [S3]
+Benedict Carey is a science journalist. He has a bachelor's degree in math and physics and a one-year journalism master's from Northwestern, and no formal training in psychology [S1]. The Los Angeles Times hired him as a behaviour writer in 2002, and he now writes for The New York Times [S1]. His 2014 book *How We Learn* reports research on memory, study and forgetting for a general reader [S3]. Its main message is that several habits we are told to avoid, such as short distractions, naps and stopping before you finish, can help learning, and that several study habits we trust do less than we hope [S4][S5]. He writes as a reporter, not a coach. He tells you what the research suggests and where it is still open [S1].
 
 ## Core ideas
 
-### Question inherited rules
+### Question inherited study rules
 
-His reporting challenges familiar study advice by tracing what research actually supports. [S1]
+Carey says many common beliefs about studying are wrong [S4]. His reporting often starts from a question or an observation and checks whether researchers have studied it [S1]. For a back-to-school story, he knew of a review that debunked the idea of learning styles. He then looked at what the same authors had published since and found research on methods that seem to improve memory or slow forgetting [S1]. The lesson is to follow a debunking with something a reader can do.
 
-Identify one rule precisely enough to investigate it. A learner who says nothing works may be combining several different assumptions. Choose an alternative that changes one meaningful condition.
+Our application: take one rule you follow, such as "always study at the same desk", and ask where it came from and what test supports it.
 
-**An application: test an inherited study rule.** Write the rule, such as always studying at one desk. Select two comparable sets of terms and try one in the usual setting and another in a second quiet setting. Check both later without notes. Record prior familiarity and obvious interruptions. The result can suggest a useful adjustment without pretending that this informal comparison settles a scientific question.
+### Spread your study out
 
-**The distinction to preserve:** Do not use a surprising study tip as permission to change everything. A comparison with different material, time and distractions cannot identify which condition mattered.
+Splitting study time across several days, instead of one long cram, helps you keep material longer [S2][S4]. His example in an interview: for a Spanish test in a week, study an hour today and an hour tomorrow, then test yourself just before the exam [S4].
 
-**What the attempt should reveal:** Which rule did the comparison actually test? You receive a small experiment and a result note.
+### Test yourself instead of rereading
 
-### Vary the context
+Reciting material from memory, or explaining it to a friend, works better than reading it again [S4]. He also describes writing articles before he has all the facts, which forces him to find out what he knows and to explain it clearly [S4].
 
-His book discusses learning outside a single fixed study setting. [S4]
+### Let forgetting do some work
 
-The learner needs the explanation outside the room in which it was prepared. Vary relevant cues while keeping the content and standard of explanation stable.
+He says forgetting is part of learning. Struggling to recall something you have half forgotten can strengthen the memory [S4]. The Kirkus review describes the book's view that forgetting is not only decay, because the brain also filters out clutter [S5]. He cautions against deciding you are "bad at" a subject because you forget [S4].
 
-**An application: rehearse a presentation in different settings.** Practice a three-minute explanation at your desk, then deliver it in another quiet room without the slides. Note which points depended on the visual layout of your notes. Rewrite those transitions as questions you can answer. Finally rehearse in the intended format, including any equipment. Variation prepares for missing cues; a realistic final rehearsal checks the actual performance demand.
+### Change where you study
 
-**The distinction to preserve:** Do not make every rehearsal radically different. A presentation also requires familiarity with its actual setting and tools, especially where equipment or timing affects delivery.
+Studying in different places, or with different background sound, can help you remember [S4]. The point is that a memory tied to one room is harder to reach in another.
 
-**What the attempt should reveal:** Which cue was doing the remembering for you? You receive a portable outline and a rehearsal plan.
+Our application: rehearse a talk at your desk, then in another room without your slides, then in the real setting. The last run checks the real demand.
 
-### Use a productive break
+### Mix problem types
 
-His reporting considers interruptions and incubation in problem solving. [S5]
+Practising different kinds of related problems in one session helps you learn which approach each problem needs [S2][S4]. The EdWeek essay reports mixed math homework in studies in Tampa that raised test scores by a large margin, and notes that some of those studies were still under way [S2].
 
-Incubation begins with a problem that has been encountered and understood. A break should preserve the question so returning is possible. It is not evidence that abandoning every demanding task improves it.
+### Breaks help most after real effort
 
-**An application: use a break at a genuine impasse.** For a stuck design problem write the objective, constraints and failed approaches. Leave a precise unresolved question on the page and take a walk. On returning, sketch a new representation before checking earlier versions. If there is still no opening, seek missing information or a helpful example. Distinguish a refreshed view from a problem solved by magic while you were away.
+A walk or a short distraction can help with insight, but mainly after you have worked on a problem for a while and hit a wall [S4]. The Kirkus review says that when we are motivated to solve a hard problem, the brain can keep working on it during breaks [S5]. In his essay, he suggests starting big projects early, with a small first step such as an outline, so ideas can develop in the background [S2].
 
-**The distinction to preserve:** Do not interpret persistent confusion as a need for endless incubation. If the problem depends on knowledge you lack, the next step may be instruction rather than another walk.
+Our application: write the problem, the limits and what failed on one page. Leave one open question on top, take a walk, then return.
 
-**What the attempt should reveal:** What changed in the representation after the break? You receive an impasse record and a new attempt.
+### Sleep supports learning
 
-### Return after forgetting
+He recommends enough sleep because it improves retention and understanding [S4].
 
-How We Learn treats forgetting as part of the learning problem rather than only a failure. [S3]
+### State claims with care
 
-A delay can reveal what immediate familiarity concealed. The point is to inspect availability and guide another encounter, not to celebrate forgetting all content as an achievement.
-
-**An application: return to material after forgetting.** After reading a useful article leave a short question for two days later. Attempt the answer before reopening the article. Identify whether the gap concerns a name, a relationship or an application. Restudy that part and try a new example. Keep only questions connected to something you expect to use, so the return does not become an expanding archive of trivia.
-
-**The distinction to preserve:** Do not infer that longer gaps are always better. A gap that makes every attempt impossible may require more support or an earlier return, depending on the material.
-
-**What the attempt should reveal:** What became unavailable after the delay? You receive one correction and a reason for the next return.
-
-### Study the mechanism
-
-In his APS interview Carey describes finding positive study strategies alongside work debunking learning styles. [S1]
-
-A science reporter asks what the claim means, how it was tested and whether the conclusion matches the evidence. Apply those questions before redesigning a study routine around a headline.
-
-**An application: investigate a fashionable learning tip.** Take a claim that background music improves learning. Identify the task, comparison and outcome in the cited study. Separate improved mood from better recall or comprehension. Ask whether your planned task resembles the studied one. Try a harmless personal comparison only if useful, and keep the conclusion local. A tip may make study more pleasant without improving the ability you need.
-
-**The distinction to preserve:** Do not treat personal preference as a disproof of all research or a laboratory result as a command for every person. State which question each kind of evidence can answer.
-
-**What the attempt should reveal:** Which outcome does the evidence support? You receive a claim-to-evidence note.
-
-### Make learning ordinary
-
-His classroom essay argues that students should learn how their learning works. [S2]
-
-A flexible routine can use varied opportunities without depending on a perfect study environment. Match the opportunity to the task: brief recall differs from reading a dense unfamiliar argument.
-
-**An application: fit learning into an ordinary workweek.** Place a few small recall questions on your commute and reserve one quiet interval for understanding new material. At lunch reconstruct an idea from memory, then check it later against the source. Leave another interval completely free of learning obligations. At week’s end inspect what became usable and which activities were too fragmented. Revise the plan around evidence from your actual day.
-
-**The distinction to preserve:** Do not turn flexibility into constant multitasking. Frequent context switching during demanding new work can undermine the very understanding that the later recall sessions depend on.
-
-**What the attempt should reveal:** Which task fits each available interval? You receive a flexible plan with protected concentration.
+He uses hedged words such as "suggests", "may" and "perhaps", because psychology findings are often open to competing readings [S1]. He wants readers to see how a finding applies to their own lives, without overselling it [S1].
 
 ## How he decides
 
-Use the curiosity of a reporter rather than the certainty of a productivity coach. Begin with the familiar rule and ask where it came from. Describe the task in the study before offering a household application. Carey’s narrative tone makes the reader feel permitted to investigate their own habits. Preserve the permission without implying that discipline never matters. The memorable image is a learner whose brain does not behave exactly like a tidy filing cabinet. Explain the practical consequence of that image: retrieval depends on conditions, and a learning routine can be less rigid. Keep the writer’s skeptical follow-up: which result would make this advice inappropriate? A surprising claim needs a narrower explanation, not a louder headline.
+These are the questions his reporting raises, in our order. They are not a procedure he published. [S1][S4]
 
-1. **Question inherited rules:** Which rule did the comparison actually test? You receive a small experiment and a result note.
-2. **Vary the context:** Which cue was doing the remembering for you? You receive a portable outline and a rehearsal plan.
-3. **Use a productive break:** What changed in the representation after the break? You receive an impasse record and a new attempt.
-4. **Return after forgetting:** What became unavailable after the delay? You receive one correction and a reason for the next return.
-5. **Study the mechanism:** Which outcome does the evidence support? You receive a claim-to-evidence note.
-6. **Make learning ordinary:** Which task fits each available interval? You receive a flexible plan with protected concentration.
+- Where did this rule come from, and was it tested? [S1]
+- What kind of task is it: memorising, understanding or solving? [S4]
+- What is the smallest change to try, such as timing, place or mixing? [S4]
+- What can you recall or do later, without notes? [S4]
+- What would make you stop believing the tip? [S1]
+
+## A worked example (ours, not his)
+
+This example is written by us to show how the ideas fit together. It is not from his writing and it is not a case he described.
+
+A reader says: "I have a professional exam in three weeks. I reread my notes every night and it is not sticking." Start with the rule. Rereading feels productive, but he says testing yourself works better [S4]. So the first change is small: tonight, close the notes and write down what you can remember. Check it against the notes and mark the gaps. Spread the rest over the three weeks, not the last few nights [S2][S4]. Mix the question types in each session, so you practise choosing the right approach [S2]. Move some study to a different place [S4]. Sleep well the night before [S4].
+
+If you hit a wall on a hard topic, work at it first, then take a break with one open question left on the page [S4]. At the end of each week, check what you can recall without notes. If it is not improving, change one thing, not five.
+
+Notice the limits. This is a plan built from reported research, not a guarantee. The sources say lab results do not always carry over to real life, and that you still need motivation and attention [S2][S4].
+
+## What the sources are and are not
+
+Three of the five sources are his own words: an interview about how he reports science, a 2014 essay and a smart-studying interview [S1][S2][S4]. The other two are a publisher's page and a review of the book [S3][S5]. So this account is a summary of a few public pages, not of the whole book. It leaves out most of its studies and examples. If you need exact numbers, study designs or caveats, read the original research and the book.
 
 ## Where he stood
 
-His central tension is between inherited advice and what a particular experiment establishes. Changing study context may help a memory task, while arbitrary interruptions can still damage concentrated work. A prepared break may aid an impasse; checking messages before understanding the problem is something else. The answer should preserve those distinctions. His reporting also asks whether educational routines match how learning actually works. That question invites a modest comparison, not the claim that schools or teachers have misunderstood every aspect of learning. [S1] [S2] [S4]
+**Is cramming fine?** He recommends spreading study over days [S2][S4].
 
-## Their work and record
+**Is rereading enough?** He says testing yourself works better [S4].
 
-How We Learn, published in 2014, draws together research about acquiring and retaining knowledge. Its publisher describes a practical investigation of tools often treated only as distractions, including forgetting, sleep and daydreaming. That framing is an invitation to examine conditions, not evidence that all distraction is beneficial. [S3]
+**Is forgetting a sign you are failing?** No. It is normal, and part of learning [S4].
 
-In the APS interview Carey describes developing a story on study habits after reading work on learning-style claims. He sought positive strategies to accompany the negative finding. This is a useful model of science journalism: do not stop at debunking; ask what a reader can reasonably do instead. The reporter must still distinguish a direct experimental finding from a broader interpretation. [S1]
+**Are distractions always bad?** Some short breaks and naps can help. Scrolling on a phone does not count as learning [S4][S5].
 
-His KQED interview challenges the idea that memorization always requires the same chair and room. His classroom essay argues that knowledge about learning deserves a place in education. The Kirkus review discusses the book’s account of incubation and the difference between storing something and retrieving it. Read those accounts with the task in view: a memorization finding is not automatically advice for composing a complex argument in a noisy room. [S2] [S4] [S5]
+**Is it all about technique?** No. He says motivation and attention still matter, and that methods are not an excuse to do nothing [S4].
 
-## Where they were wrong or criticised
+**How should a reader treat a new study result?** With care. He hedges his own wording, because psychology findings often allow more than one reading, and he picks stories that tie to something people wonder about [S1].
 
-Changing rooms or taking breaks is not permission to interrupt every hard task. The useful question is which conditions aid which kind of learning; novelty and distraction can also make sustained work worse. [S3] [S5] These are limits on applying the approach; the exercises above do not claim stronger evidence than the sources supply.
+**Should schools teach how learning works?** In his essay he suggests a "Learning 101" course, and says teachers must judge which lab findings work in a class [S2].
+
+## His work and record
+
+- Bachelor's degree in math and physics, then a one-year journalism master's at Northwestern [S1].
+- Started at a medical magazine writing general health stories [S1].
+- Behaviour writer at the Los Angeles Times from 2002, now at The New York Times [S1].
+- Author of *How We Learn* (2014), listed on the Penguin Random House site [S3].
+- Also writes science books for middle-school readers [S1].
+- Wrote an essay for Education Week in 2014 on brain science in the classroom, arguing that small, practical techniques can help more than large top-down reforms [S2].
+- Says he often starts a story from a question, checks whether researchers have studied it, and looks for stories that are big, controversial or that people wonder about [S1].
+
+## Where he was wrong or criticised
+
+- Lab findings do not always carry over to a class. In his own essay he says teachers must judge which techniques work, and that lab studies cannot fully capture long projects such as term papers [S2].
+- Some of the results he cites were from studies still under way when he wrote, so the evidence was still developing [S2].
+- The sources are interviews and a short review, so the book's details are not checked here. We did not open critics' papers and do not name any.
+- His claims about distraction are not permission to interrupt all hard work. He says these methods are not an excuse to do nothing, and you still need motivation and attention [S4].
 
 ## Blind spots to watch
 
-Return a small study experiment: the rule being tested, a reasonable alternative, comparable material and a later check. For a career learner, the output can be a flexible weekly plan using ordinary places and times rather than a perfect retreat. Include a protected interval for work that genuinely requires concentration. A busy life offers varied contexts, but that does not mean every spare moment should become study. Keep a result note that records what was retained and what the learner could actually use.
+- He is a journalist, so his work reports other people's studies. Read the original study for exact findings.
+- Advice for memorising does not carry over automatically to composing a complex argument.
+- It says little about how to find time, money or quiet to study in the first place.
+- It is not medical, clinical or special-education advice.
 
 ## Short phrases on the record
 
-No direct quotations are reproduced. Job names and example language are written for this catalogue.
+- "Learning 101" (his suggested course, EdWeek, 2014) [S2]

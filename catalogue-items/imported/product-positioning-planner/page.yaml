@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Good positioning means weighing real alternatives and customer value.
 new_slug: product-positioning-planner
 name: Product positioning planner
-summary: Describe your product and its rivals. Get the best market to compete in
-  and a clear line on why you win.
+summary: "Plan your product positioning: give it your product and rivals. You get the market to compete in and a clear line on why you win."
 job: plan-strategy
 headline: Product positioning planner
-subhead: The market you should compete in and one clear line on why you win
-  there. It stops you from being compared in the wrong category.
+subhead: The market you should compete in and one clear line on why you win there. It stops you from being compared in the wrong category.
 explain: |
   The market you should compete in and one clear line on why you win there. It stops you from being compared in the wrong category.
 
@@ -17,6 +15,10 @@ when:
   - You are launching and need a clear market category.
   - Your pitch sounds like everyone else's.
   - You are refreshing positioning after your product changed.
+not_for:
+  - You need a price, a product name or a brand look. Ask a person who does that work, as this tool does not cover them.
+  - You want a deep review of rivals only. Run a competitor research step first, then come back here.
+  - Your product has no live competitors or no customers yet. Talk to a few likely buyers first, then use this tool.
 you_give:
   - Your product and what it does
   - Your current customers or target buyers
@@ -28,8 +30,31 @@ you_get:
   - A map of competitive alternatives
   - A recommended market category
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can save files.
+  - Use an AI that can search the web, such as Claude, ChatGPT or Gemini with search on. Without search, findings are marked as unverified estimates.
+  - Paste the skill into a new chat, or upload its folder if your AI takes files.
+  - Say "Follow this skill to position my product". Then answer its questions about your product, buyers and rivals.
+  - Let it run its two research rounds. It may take 10 to 30 minutes.
+  - Check anything marked unverified, then read the red flags and yellow flags at the end of each file.
+  - Use the positioning statement and messaging notes to rewrite your site and pitch.
+output_sample:
+  input:
+    - Your product and what it does
+    - Your current customers or target buyers
+    - Known competitors or other ways people solve the problem
+    - Notes from earlier design or competitor work (optional)
+  prerequisites:
+    - An AI that can search the web, for real market data. Without it, findings are marked as unverified guesses you must check.
+    - An AI that can save files (optional, but it helps)
+  output:
+    - name: intake.md
+      contains: A short summary of your product, the problem, the alternatives and your customers.
+    - name: positioning-doc.md
+      contains: Your positioning in three sentences, each part with evidence, a strength rating and next steps.
+    - name: positioning-statement.md
+      contains: A positioning statement, an onliness statement, a 30-second pitch, tagline ideas and short one-liners.
+    - name: competitive-alternatives.md
+      contains: Every alternative, including doing nothing, with what customers hire it for and why they switch.
+    - name: market-category-analysis.md
+      contains: Three to five possible market categories, what buyers expect from each, and the one it recommends.
+    - name: messaging-implications.md
+      contains: What to say first, the category label, words to use and avoid, and tips on proof.

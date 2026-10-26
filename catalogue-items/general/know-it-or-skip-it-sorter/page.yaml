@@ -1,6 +1,6 @@
 new_slug: know-it-or-skip-it-sorter
 name: Know-it-or-skip-it sorter
-summary: Describe a business or bet. Get it sorted yes, no or too tough, based on what you know.
+summary: Check if you know a business well enough to judge it. Get a yes, no or too tough sort, with your edge and your first gap written down.
 job: money-and-investing
 thinking: medium
 thinking_why: It asks you to judge how well you know something, which needs care.
@@ -11,6 +11,10 @@ when:
   - A friend or a headline pitched you a business or bet.
   - You feel sure but cannot say why.
   - You want a quick check before you do deeper work.
+not_for:
+  - "You want the full check with every test: use the Circle of competence sorter."
+  - "You want to know if a business can survive a bad year: use the Bad-year break-even tester."
+  - "You want to test a startup idea with real people: use the Seven-question startup scorer."
 you_give:
   - The business or bet
   - Your background (optional)
@@ -20,10 +24,28 @@ you_get:
   - Your edge, or "no edge"
   - "A sort: yes, no or too tough, with the reason"
 how_to_use:
-  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
-  - Under it, paste the business or bet and your background.
-  - Send it and read the result.
-  - Answer without notes. Looking things up changes the test.
+  - Copy the prompt and paste it into Claude, ChatGPT or Gemini.
+  - Under it, paste the business or bet. Add your background if you have one.
+  - Send it. Your AI asks the five questions. Answer each one from memory, with no notes.
+  - Your AI only marks and sorts your answers. It does not add facts of its own.
+  - Read the sort and the first question you could not answer.
+output_sample:
+  input:
+    - The business or bet you are weighing
+    - Your background in the field (optional)
+  output:
+    - name: THE BUSINESS
+      contains: One plain sentence on what it sells, who buys it and how the money comes in.
+    - name: FIVE ANSWERS
+      contains: Your answers on money, costs, lost customers, rivals and ten-year change, each marked KNOW, GUESS or BLANK.
+    - name: YOUR EDGE
+      contains: Something you see better than others, or the words no edge.
+    - name: BASKET
+      contains: "The sort: YES, NO or TOO TOUGH, with the reason."
+    - name: FIRST QUESTION YOU CANNOT ANSWER
+      contains: The first of the five questions you could not answer with a fact.
+    - name: MISSING
+      contains: Any facts that were not given, listed so nothing is made up.
 how_it_works:
   - title: Say it simply
     text: One sentence, or it is too tough.

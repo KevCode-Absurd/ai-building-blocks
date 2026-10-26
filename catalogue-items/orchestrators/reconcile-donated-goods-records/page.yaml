@@ -1,51 +1,87 @@
 new_slug: reconcile-donated-goods-records
 name: Reconcile donated goods records
 headline: Reconcile donated goods records
-summary: Share the source files. Get an in kind goods reconciliation, missing records and handover notes.
+summary: Check donated goods by item and unit. Get a stock reconciliation, a list of missing records and a handover note for the store lead.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An in kind goods reconciliation, missing records and handover notes. Share donation intake and distribution records, item units, date range, opening and closing quantities and approved recording rules. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your donation intake records, your distribution records and your opening and closing counts. It checks that stock in, minus stock out, matches the closing count for each item. You get the gaps and a note for whoever holds the stock next. It puts no dollar value on anything.
 explain: |-
-  An in kind goods reconciliation, missing records and handover notes.
+  Donated goods arrive and leave all year, often on paper or in more than one sheet. At the end of a period the counts rarely match, and nobody can say where the gap began. This workflow reconciles in kind donations: it checks each item, in its own unit, against what came in and what went out.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Quantity movements reconcile by item and unit; tax value and fair market value are not invented. Missing tools or evidence stay visible in the final summary.
+  Step 1 works out the expected closing count for each item: opening stock, plus what you received, minus what you gave out. It compares that with your counted closing stock. It flags duplicate IDs, units that do not match (boxes in one list, kilos in another) and records with no partner. Step 2 turns the result into a handover note for the store or program lead: shortages, where each record is kept, custody records still open and what to do next.
+
+  It counts things, not value. It does not set a dollar value or a tax value for any item, and it is not tax advice. The value on a donation receipt is a decision for you and your tax adviser.
 when:
-  - You need an in kind goods reconciliation, missing records and handover notes.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are closing a month or a year of donated food, clothing or supplies and the counts do not match.
+  - A new store or program lead is taking over and needs to know what is missing.
+  - A funder, board member or auditor asks where donated items went.
+  - Your intake list and your give-out list use different units or IDs for the same item.
+not_for:
+  - You want a dollar value for donations or a tax receipt. This counts items only. Ask your tax adviser.
+  - You are planning how to accept and grade new donations. Use the Donated goods intake planner.
+  - You are splitting bank cash into restricted grant money and free cash. Use the Grant restrictions cash reconciler.
+  - You have one messy list and want it checked for errors. Use the Spreadsheet checker on its own.
 you_give:
-  - Donation intake and distribution records, item units, date range, opening and closing quantities and approved recording rules.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - "Your donation intake records: what came in, with item, quantity, unit, date and ID"
+  - "Your distribution records: what went out, with the same details"
+  - Opening and closing counts for each item, and the date range
+  - Your recording rules, such as how you name items and which units you use
+  - Who reads the result and when you need it (optional)
+  - Your last reconciliation or a handover note you liked (optional)
 you_get:
-  - An in kind goods reconciliation, missing records and handover notes.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A table for each item: opening, received, given out, expected closing, counted closing and the gap"
+  - A list of duplicate IDs, mixed units and records with no match
+  - "A handover note: shortages, where records are kept, open custody questions and next actions"
+  - A hand-back summary that lists every fact it could not check
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste or attach your intake list, your distribution list and your counts. Say the date range and the units you use.
+  - Read the gap table first. Fix any item the AI matched wrongly, such as two names for one item.
+  - Read the handover note, fill in each MISSING line yourself, then give it to the lead.
 how_it_works:
   - title: Spreadsheet checker
-    text: Reconcile opening stock plus receipts minus recorded distributions to closing quantities, flagging duplicate IDs and mismatched units. Do not assign monetary values.
+    text: Works out opening plus received minus given out for each item and unit, then compares it with the closing count. Flags duplicate IDs and mixed units. Hands the gap table and open questions to the next step.
   - title: Handover note writer
-    text: Prepare the store or program lead handover with actual shortages, source locations, unresolved custody records and accepted next actions.
+    text: "Turns the gap table into a note for the store or program lead: shortages, where each record is kept, custody records still open and agreed next actions."
 output_shape: |-
-  Scope and source coverage
-  An in kind goods reconciliation, missing records and handover notes.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  STOCK RECONCILIATION
+    Item | Unit | Opening | Received | Given out | Expected closing | Counted closing | Gap | Note
+
+  PROBLEMS FOUND
+    Duplicate IDs | Mixed units | Records with no match, each with its row
+
+  HANDOVER NOTE
+    If you read nothing else | Shortages | Where records are kept | Open custody questions | Next actions
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | Checks not done | One next step
+output_sample:
+  input:
+    - Your donation intake records
+    - Your distribution records
+    - Opening and closing counts for each item
+    - Your recording rules for item names and units
+  prerequisites:
+    - Records as spreadsheets or pasted tables, with dates
+    - A spreadsheet tool, only if you want a workbook back
+  output:
+    - name: Stock reconciliation
+      contains: Opening plus received minus given out, against the counted closing stock, with the gap for each item and unit.
+    - name: Problem list
+      contains: Duplicate IDs, units that do not match and records with no partner, each with its row.
+    - name: Handover note
+      contains: Shortages, where each record is kept, custody questions still open and the next actions.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks that could not run and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Reconcile one store or program and one period at a time. Two periods at once make the opening counts clash.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Give the real intake and distribution lists with dates, not a summary from memory.
   - what: Acceptance
-    how: Quantity movements reconcile by item and unit; tax value and fair market value are not invented.
+    how: Each item reconciles in its own unit, or has a MISSING line that says why not. No dollar or tax values appear.
 judge:
   - Quantity movements reconcile by item and unit; tax value and fair market value are not invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,16 +94,23 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the gap table after each period. Next time, use its closing counts as your opening counts.
+  - Add the item names and units you use, so the next run matches them without asking.
+  - Note who counts stock and when. Gaps often start where nobody owns the count.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read pasted lists or uploaded spreadsheets. To get a workbook back, the AI also needs a spreadsheet tool.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your last reconciliation, if you have one.
+    - A named person who signs off the result.
+next:
+  - donated-goods-intake-planner
+  - process-and-sop-writer
 terms:
+  - term: In kind donation
+    meaning: A gift of goods or services instead of money.
+  - term: Reconcile
+    meaning: Check that two sets of records agree, and find out why when they do not.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

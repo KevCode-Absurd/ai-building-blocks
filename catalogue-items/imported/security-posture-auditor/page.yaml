@@ -2,12 +2,10 @@ thinking: high
 thinking_why: A broad review needs many linked judgements.
 new_slug: security-posture-auditor
 name: Security posture auditor
-summary: Describe your system. Get a scoped review of code, servers, sign-in and
-  daily operations.
+summary: Get a security audit of your web app, API or cloud setup. Each issue is rated, tied to OWASP or CWE, and paired with a fix you can act on.
 job: secure-code
 headline: Security posture auditor
-subhead: A scoped security audit of your web app, API or cloud setup, with each
-  issue rated, mapped to a known standard and paired with a fix.
+subhead: A scoped security audit of your web app, API or cloud setup, with each issue rated, mapped to a known standard and paired with a fix.
 explain: |
   A scoped security audit of your web app, API or cloud setup, with each issue rated, mapped to a known standard and paired with a fix. You describe the system and what is in scope, and say whether you need to meet SOC 2, PCI-DSS or HIPAA.
 
@@ -17,19 +15,48 @@ when:
   - An auditor will review you soon and you want to find gaps first.
   - You inherited a system and need to know how exposed it is.
   - You need findings tied to OWASP or CWE for a report.
+not_for:
+  - You only need one check, such as scanning dependencies or reviewing code. Ask your AI for just that check, so it stays short.
+  - You need a formal penetration test or an auditor's sign-off. Hire a qualified security tester or auditor.
+  - You do not own the system and have no written permission to test it. Do not run this audit.
 you_give:
-  - A description of the stack and architecture
-  - Scope and environments
-  - Config files or infrastructure code
-  - Compliance targets (optional)
+  - A description of your stack and how the system is built
+  - Which parts and environments are in scope
+  - Config files, infrastructure code or source code
+  - Read-only cloud access or a staging web address, if you want scans run
+  - The standard you must meet, such as SOC 2, PCI-DSS or HIPAA (optional)
 you_get:
   - A scoped audit checklist
   - Findings with severity and CWE labels
   - Business impact notes
   - A ranked fix plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Only audit systems you own or have written permission to test. Agree the scope first and start with read-only checks.
+  - Open an AI that can read your project files, and paste in this skill.
+  - Describe your system, the scope and any standard you must meet. Add your config files or code.
+  - Scans need tools installed and access to your systems. Without them, ask for a review of files and config only.
+  - Approve any active scan before it runs. Read the findings and check the top ones yourself.
+  - Fix the highest-rated issues first, then ask your AI to re-check them.
+output_sample:
+  input:
+    - A description of your stack and how the system is built
+    - Which parts and environments are in scope
+    - Config files, infrastructure code or source code
+    - The standard you must meet, such as SOC 2, PCI-DSS or HIPAA (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - Written permission to test the system
+    - Read-only access and scanner tools installed, if you want automated scans
+  output:
+    - name: Scope and checklist
+      contains: The parts in scope, the standards to meet, and a checklist built from the OWASP Top 10 and CWE/SANS Top 25.
+    - name: Scan results
+      contains: Raw findings from tools such as OWASP ZAP, Trivy and Prowler, gathered for review.
+    - name: Manual review notes
+      contains: Problems in sign-in, access roles, input checks, encryption, logging and hardcoded secrets that tools often miss.
+    - name: Findings table
+      contains: Each issue with a severity, a CWE ID, an OWASP category and its business impact.
+    - name: Audit report
+      contains: An executive summary, evidence and steps to reproduce each issue, and a ranked fix plan with effort.
+    - name: Compliance gap analysis
+      contains: Pass or fail against the controls of the standard you chose.

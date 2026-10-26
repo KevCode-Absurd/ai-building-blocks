@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Tuning needs careful technical reasoning.
 new_slug: pcb-rf-filter-designer
 name: PCB RF filter designer
-summary: Give it pass band and rejection needs. Get a PCB filter designed and
-  its response plotted.
+summary: Design a PCB RF filter from your pass band and rejection needs. Get a filter type, a built design and a plotted response. Needs MATLAB.
 job: build-software
 headline: PCB RF filter designer
-subhead: Say what band you need to pass and what you need to block, and get a
-  printed-circuit filter designed with its response plotted. You do not have to
-  know which filter type fits.
+subhead: Say what band you need to pass and what you need to block, and get a printed-circuit filter designed with its response plotted. You do not have to know which filter type fits.
 explain: |
   Say what band you need to pass and what you need to block, and get a printed-circuit filter designed with its response plotted. You do not have to know which filter type fits.
 
@@ -18,6 +15,10 @@ when:
   - You are unsure whether a hairpin or combline filter suits your size limit.
   - You need a notch to remove one unwanted signal.
   - You have measured filter data and want its coupling matrix.
+not_for:
+  - "You need to design a coupler or splitter: use the matlab-design-pcb-coupler skill, or ask an RF engineer."
+  - "You want to tune filter sizes after the design: use the matlab-optimize-pcb-design skill."
+  - "You have no MATLAB or paid RF PCB Toolbox: use a free circuit simulator, or ask a person who has the tools."
 you_give:
   - Centre frequency and bandwidth
   - Stopband rejection needed
@@ -30,8 +31,30 @@ you_get:
   - A plotted frequency response
   - A mesh and memory estimate
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Check you have MATLAB and the paid RF PCB Toolbox. The skill is by MathWorks and comes under its own licence, so read that licence first.
+  - Open an AI that can run MATLAB code. Paste in the skill text.
+  - Give your centre frequency, bandwidth, rejection need and substrate. Add size limits or measured data if you have them.
+  - Check the recommended filter type and the mesh and memory estimate before you run a full solve.
+  - Look at the plotted response. If it misses your target, ask for a change or move on to tuning.
+output_sample:
+  input:
+    - Your centre frequency and bandwidth
+    - The stopband rejection you need
+    - Your substrate and metal details
+    - Your size limit (optional)
+    - Measured S-parameter data (optional)
+  prerequisites:
+    - MATLAB with the paid RF PCB Toolbox
+    - An AI that can run MATLAB code
+    - Your substrate and conductor set up first with the matlab-manage-pcb-material skill
+  output:
+    - name: Recommended filter type
+      contains: The filter type that fits your band, sharpness and size limit, with the reason it was chosen.
+    - name: Filter object
+      contains: The designed filter built on your substrate, with its dimensions and number of poles.
+    - name: Mesh and memory estimate
+      contains: The mesh density and memory cost, checked before you commit to a full solve.
+    - name: Frequency response plot
+      contains: A plot of the filter response so you can check the pass band and rejection.
+    - name: Coupling matrix (optional)
+      contains: A coupling matrix pulled from your measured data, only if you gave measured data.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs the numbers and weighs risk.
 new_slug: business-investment-analyst
 name: Business investment analyst
-summary: Describe a purchase. Get payback, return and risk worked out, so you
-  can decide whether to invest.
+summary: Check if a business purchase pays off. Give it the cost and savings. You get payback, ROI, NPV, IRR, risks and a clear answer.
 job: money-and-investing
 headline: Business investment analyst
-subhead: "Work out whether a business purchase pays off: payback time, return
-  and risk, with a clear recommendation and the assumptions behind it. It is for
-  business spending, not personal stocks."
+subhead: "Work out whether a business purchase pays off: payback time, return and risk, with a clear recommendation and the assumptions behind it. It is for business spending, not personal stocks."
 explain: |
   Work out whether a business purchase pays off: payback time, return and risk, with a clear recommendation and the assumptions behind it. It is for business spending, not personal stocks.
 
@@ -18,6 +15,10 @@ when:
   - You are weighing a new hire against another use of the same money.
   - You have three options and need to see them side by side.
   - You want a payback figure to show your boss or partner.
+not_for:
+  - "You want advice on personal stocks or your own savings: talk to a licensed financial adviser, as this tool only covers business spending."
+  - "You need a startup runway, burn rate or fundraising plan: use a CFO or finance adviser, not this one."
+  - "You want to value a whole company from its financial statements: use a financial analyst or a valuation tool."
 you_give:
   - What the investment is and its upfront cost
   - Expected savings or extra revenue
@@ -30,7 +31,27 @@ you_get:
   - Assumptions and risks flagged
   - A comparison table for several options
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - What you plan to buy, such as equipment, a hire, software, space or a vendor contract
+    - The upfront cost and how long it will last
+    - Expected savings or extra revenue per month or year
+    - Ongoing costs such as upkeep, fees or salary
+    - Other options or your cost of borrowing (optional)
+  output:
+    - name: Recommendation
+      contains: "A clear call at the top: proceed, proceed with conditions, or do not proceed."
+    - name: The numbers
+      contains: A table with total investment, yearly net cash flow, payback, 3-year ROI, NPV, IRR and a score out of 30.
+    - name: Key assumptions
+      contains: Every assumption used, each tagged by how sure it is, so weak guesses stand out.
+    - name: Upside case
+      contains: How the result looks if things go 20% better than planned.
+    - name: Downside case
+      contains: How the result looks if things go worse than planned.
+    - name: Risks to watch
+      contains: The main risks, each with a way to reduce it.
+    - name: Next step
+      contains: One action to take before you commit any money.

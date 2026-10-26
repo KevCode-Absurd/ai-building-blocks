@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It infers roles and mood from records.
 new_slug: deal-stakeholder-mapper
 name: Deal stakeholder mapper
-summary: Name a deal. Get a map of the people, their influence and mood, and who
-  is missing.
+summary: "Map the stakeholders in a deal: who decides, who backs you, who is missing and how to reach them. Works from your CRM or a pasted contact list."
 job: sell-and-negotiate
 headline: Deal stakeholder mapper
-subhead: Name a deal or account and give it your CRM contacts, plus emails or
-  call notes if you have them. It compares listed roles with who actually
-  replied, joined meetings and spoke on calls. You get each person's role,
-  influence and mood, the roles you are missing and the shortest route to reach
-  them.
+subhead: Give it a deal or account name and your contacts. Add emails, calendar or call notes if you have them. You get a map of who is involved, how they feel, who is missing and how to reach them.
 explain: |
   Find out who really decides, and who you have never spoken to. You get a map of the people in a deal with their role, influence, mood and how strong your relationship is, plus the gaps and the shortest route to the people you are missing.
 
@@ -18,21 +13,47 @@ explain: |
 when:
   - You have one contact at an account and the deal is stalling.
   - You are not sure who signs the contract.
-  - A champion leaves and you need to know who else supports you.
-  - You are handing a deal over and want the people map in one place.
+  - Your champion leaves and you need to know who else backs you.
+  - You are handing a deal over and want the people in one place.
+not_for:
+  - "You only want a plain list of contacts or an account overview: use account-context."
+  - "The deal has no contacts yet: start with a simple list of target job titles and ask a colleague for an intro."
+  - "You want to score how likely the deal is to close: ask your AI for a deal review instead, since this page only maps people."
 you_give:
   - Deal or account name
-  - CRM contacts or pasted attendee lists
+  - CRM contacts, or a pasted list of names, titles and meeting attendees
   - Emails, calendar or call notes (optional)
   - Roles you need for a close (optional)
 you_get:
-  - Stakeholder map with role and influence
-  - Mood and relationship strength per person
-  - Missing roles
-  - Suggested routes to reach them
+  - A map of each person with role, engagement and stance
+  - The evidence behind each call, such as a reply or a call quote
+  - Roles you are missing, like economic buyer or legal contact
+  - Routes to reach the missing people
+  - A list of people who are not yet in your CRM
+  - One relationship action for this week
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Type the deal or account name.
+  - Paste your contact list with names, titles and roles. Paste attendee lists or call notes too if you have them.
+  - If your AI is connected to your CRM, email and calendar, say so and it will read them. If not, the pasted text is enough.
+  - Check the map. Anything marked unknown means there was no evidence, so add notes and run it again.
+  - Your AI will ask before it adds any new contact to your CRM. Check each name and source first.
+output_sample:
+  input:
+    - Your deal or account name
+    - Your CRM contacts, or a pasted list of names, titles and meeting attendees
+    - Your emails, calendar or call notes (optional)
+    - The roles you need for a close, such as economic buyer (optional)
+  prerequisites:
+    - A CRM, email and calendar connected to your AI helps, but a pasted contact list and attendee notes are enough to start
+  output:
+    - name: Stakeholder map
+      contains: One row per person with title, deal role, engagement, stance and the evidence behind each.
+    - name: Coverage verdict
+      contains: A short read on how many required roles you have reached and whether you rely on one person.
+    - name: Missing people and access paths
+      contains: Roles with no named person, and the shortest route to each, such as a colleague or past champion.
+    - name: Not in CRM list
+      contains: People who joined meetings or appear in threads but have no CRM record, with where each name came from.
+    - name: This week's relationship action
+      contains: The one relationship move most worth making in the next few days.

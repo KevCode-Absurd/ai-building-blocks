@@ -21,6 +21,31 @@ you_get:
   - Resource cost findings
   - Architecture risks
   - Prioritized change and rollback plan
+not_for:
+  - "Your setup runs on Azure, not AWS: use Review Azure cost and resilience."
+  - "Something is broken on AWS right now: use Investigate an AWS service incident."
+  - "You only want to cut the cost of your build and test runs: use Cut CI cost without weakening checks."
+output_sample:
+  input:
+    - Your AWS design files (Terraform, CloudFormation or CDK) or a list of your AWS services
+    - Your AWS bills or cost reports (optional)
+    - The release or infrastructure change you plan to make
+    - Your goal and the limits you work within
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - AWS command line access and a GitHub link, only if you want the AI to read live resources and open issues
+  output:
+    - name: Resource cost findings
+      contains: Each saving tied to a named resource, with current cost, proposed change, risk, effort and a priority score.
+    - name: Architecture risks
+      contains: Findings across the six AWS Well-Architected pillars, each rated high, medium or low risk, with a fix.
+    - name: Rollout and rollback plan
+      contains: Preflight checks, rollout stages, health signals, rollback steps and who to tell.
+    - name: Prioritized change list
+      contains: Savings and risk fixes in one order, so you see which saving costs you resilience.
+    - name: Hand-back summary
+      contains: Source coverage, missing facts and one next action.
+
 how_to_use:
   - Add the complete skill pack to your AI.
   - Share your goal and the files listed above.

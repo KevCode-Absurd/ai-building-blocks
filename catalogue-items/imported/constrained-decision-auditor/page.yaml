@@ -1,22 +1,58 @@
 new_slug: constrained-decision-auditor
 name: Audit a constrained decision
-summary: Check each hard limit and compare the feasible choices. State what the evidence proves about the best result.
+summary: "Audit a constrained decision: check every hard limit, compare the choices that fit, and see what the evidence proves about the best result."
 job: think-and-decide
 headline: Audit a constrained decision
-subhead: Bring goals, limits and candidate choices. Check the math, then get a decision with clear proof limits.
+subhead: Give it your goals, limits and the choices you are weighing. Your AI writes the problem down clearly and rechecks every limit by hand. You get a decision that says what the evidence proves and what it does not.
 explain: Bring goals, limits and candidate choices. Check the math, then get a decision with clear proof limits.
 when:
-  - You want to audit a constrained decision.
+  - A solver or spreadsheet gave you an answer and you want to check it before acting.
+  - You must pick between several plans that all have to meet a budget, capacity or time limit.
+  - Two goals pull against each other and you need to see the tradeoff.
+  - Someone says a result is optimal and you want to know if that is proven.
+not_for:
+  - You need to fit a statistical model or test a cause. Ask a data scientist or a stats tool instead.
+  - You want to train or tune a machine learning model. Use an ML engineer or your ML tool's tuning guide.
+  - You need help running a named solver or cloud service. Follow that tool's own guide, then bring the result here to audit.
 you_give:
-  - The decision variables, units, bounds, objectives and decision owner.
-  - Hard/soft constraints, candidate solutions and any solver status, limits or bounds.
+  - Your decision variables, with units and bounds.
+  - Your goals, and whether each should go up or down.
+  - Your hard limits (must hold) and soft preferences (nice to have).
+  - Candidate solutions you want checked.
+  - Solver status, bound or log (optional).
+  - The name of the person who owns the decision (optional).
 you_get:
-  - A unit-consistent formulation and independent feasibility audit.
-  - A candidate/Pareto decision with explicit optimality, uncertainty and recheck limits.
+  - A written problem with units, limits and tolerances.
+  - A feasibility check of each candidate, done again from scratch.
+  - The worst limit violation for each candidate.
+  - A clear note on whether the result is proven best, or only the best found.
+  - A chosen solution or tradeoff set, with an owner and a recheck trigger.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code or paid tool is needed.
+  - Paste your variables, units, bounds, goals and limits. List any candidate solutions and solver status.
+  - Ask your AI to write the formulation record first. Check that it matches your real problem.
+  - Ask it to audit each candidate and recompute every limit. If a fact is missing, it should say so, not guess.
+  - Read the decision and the open unknowns. Share the owner and recheck trigger with your team before you act.
+output_sample:
+  input:
+    - Your decision variables, with units and bounds
+    - Your goals and which way each should go
+    - Your hard limits and soft preferences
+    - Candidate solutions you want checked
+    - Solver status, bound or log (optional)
+  output:
+    - name: Formulation record
+      contains: Variables, units, goals, hard and soft limits, tolerances, the feasibility check and the compute budget, written before any solving.
+    - name: Baselines
+      contains: A known feasible choice and a simple comparison, with what each one proves and does not prove.
+    - name: Solution audit
+      contains: Each limit and goal recomputed from the returned choice, with the worst violation and whether it is feasible.
+    - name: Solver evidence
+      contains: Solver status, bound or gap, run time and open unknowns, kept apart from the feasibility result.
+    - name: Decision
+      contains: The chosen feasible solution or Pareto set, with the tradeoff reason and the owner.
+    - name: Recheck trigger
+      contains: What would make you re-run the optimization or roll back the decision.
 how_it_works:
   - title: Write the formulation
     text: Define variable domains, objective direction, hard constraints, tolerances and soft preferences.

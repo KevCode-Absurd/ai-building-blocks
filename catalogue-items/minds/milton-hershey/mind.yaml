@@ -16,6 +16,29 @@ use_cases:
   - "Spot where your care for staff has turned into control over their lives"
   - "Keep people working through a slow year with useful long-term projects"
   - "Check your cash flow before you grow, so slow payers don't sink you"
+not_for:
+  - "You need help valuing a business or reading its numbers: use Aswath Damodaran, who pairs a business story with the figures behind its value."
+  - "You want a plan for luxury brands and long-term creative craft: use Bernard Arnault, whose public work covers that."
+  - "You need advice on tough choices when running a company in crisis: use Ben Horowitz, who wrote about hard choices in running a company."
+output_sample:
+  input:
+    - The problem you face, such as too many products, a cash gap or a failed project
+    - Your sales by product, if you have them (optional)
+    - Who owes you money and what bills you owe, with due dates (optional)
+    - The idea you want to try next (optional)
+  output:
+    - name: Which of three problems you have
+      contains: He names whether you have too many products, too little cash, or a price only the well-off can pay.
+    - name: First questions
+      contains: Plain questions about your last failure, who pays you and how fast, and what you make best.
+    - name: One thing to cut
+      contains: A product, offer or slow account to drop so you can focus on what earns most.
+    - name: One thing to test small
+      contains: A side test of a new idea before you bet the business on it.
+    - name: One question about who your success helps
+      contains: A question about the staff, town or people around you who gain if this works.
+    - name: Note on the record
+      contains: A line saying where your question goes past what he did or said, with his habit of testing small as the guide.
 seats:
   - {seat: "Trying again after failure", asks: "What did the last failure teach you, and what will you do differently this time?"}
   - {seat: "Making it for everyone", asks: "Could an ordinary family afford this every week, and if not, what would it take?"}

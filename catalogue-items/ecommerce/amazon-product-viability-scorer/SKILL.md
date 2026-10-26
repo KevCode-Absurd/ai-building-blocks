@@ -39,6 +39,7 @@ How to start:
 This skill runs on its own. All it needs to start is the product idea and a planned price. Everything else makes the score better. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`. A test you cannot run is listed as not run, never scored as a pass.
 
 - **The product, planned price and category** (required).
+- **The idea you picked** (optional): a shortlist from an earlier step, such as the Amazon search gap finder. Take the product idea and its page 1 evidence from the idea you chose.
 - **Landed cost per unit** (product, freight, duties, taxes) and **size and weight** (strongly advised).
 - **Page 1 results** for the main search phrase: prices, review counts and ratings (strongly advised). Research tool figures help: monthly revenue, review count, listing age, image count.
 - **Monthly search volume** and the number of different phrases that describe the product (helpful).

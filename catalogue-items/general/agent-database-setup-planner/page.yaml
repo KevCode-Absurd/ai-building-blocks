@@ -1,37 +1,141 @@
 new_slug: agent-database-setup-planner
-name: Agent database setup planner
-summary: Plan an agent database with scoped records, access rules and staging checks. Get the schema map and setup steps.
+name: "Agent database setup planner"
+summary: "Plan the database your AI agents need. Get a schema map, migration steps, access rules and a staging test plan that keeps existing data safe."
 job: build-software
-headline: Agent database setup planner
-subhead: Plan an agent database with scoped records, access rules and staging checks. Get the schema map and setup steps.
-explain: |-
-  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+headline: "Agent database setup planner"
+subhead: "Share your project's code, its current tables and your database setup. This skill plans the tables an AI agent needs for its jobs and activity, who can read each row, and how to test it all in staging. You get a schema map, migration steps, access rules and a rollback plan. It changes nothing."
+explain: |
+  An AI agent needs somewhere to keep its jobs and a record of what it did. The risky shortcuts are well known: build a second table that does not fit the first, switch off an access rule to silence a test error, put a server key in a browser, or wipe data so a tutorial's example fits.
 
-  Use forward migrations and rehearsed recovery. Existing data and access policies must survive the planned change unless a separate explicit decision authorizes otherwise.
+  This agent database planner starts by looking at what is already there: your tables, schema history, extensions and access rules. It decides whether this is a new test database or a shared one with real data. Then it defines the smallest set of records the agent needs: a job id, the account it belongs to, a status, timestamps and links to errors and costs. It reuses a table that already fits, or plans a forward change.
+
+  The plan sets out versioned migrations with named constraints and indexes, and an access rule for each table that limits rows to the right account. It tests the plan on made-up rows in an isolated copy, including a check that one account cannot read another's rows. It ends with a rollback plan. The pack's own example uses Supabase, a hosted Postgres database with row-level security. If you use another database, ask for the same plan with your database's own access rules.
+
 when:
-  - You need a concrete setup or code-change plan with required files.
+  - "You are adding AI agents to an app and need tables for their jobs and activity."
+  - "Your agents will work for more than one client or account, and each must see only its own rows."
+  - "Your database already holds real data and you must add tables without breaking it."
+  - "You want a test plan for the database before any agent touches it."
+
+not_for:
+  - "The agent tables already exist and you need to change them. Use the Agent database migration planner."
+  - "You want to plan what an agent remembers and how it looks things up. Use the Agent memory designer."
+  - "You want the job queue, retries and recovery, not the tables. Use the Recoverable agent job queue builder."
+  - "You want the database created for you. This skill plans only. You run the SQL yourself, in staging first, after you read it."
+
 you_give:
-  - The selected codebase, schemas and service setup
-  - The exact change you want and actions you authorize
+  - "Your project's code, or a list of its current tables and columns (a schema dump or migration history is best)"
+  - "Which database you use, and whether this is a new test copy or a shared one holding real data"
+  - "Your current access rules, if you have any (optional)"
+  - "What the agent must store, such as jobs, status and who it acts for (optional)"
+  - "What you allow it to do: plan only, or also write files or run SQL in a test copy"
 you_get:
-  - A concrete setup or code-change plan with required files
-  - Missing inputs and a bounded verification plan
+  - "A schema map: the tables, columns, keys and indexes for jobs and activity"
+  - "Migration files in order, forward only, with what each one changes"
+  - "An access rule for each table, and which key belongs where"
+  - "A staging test plan using made-up rows"
+  - "A rollback and recovery plan"
+  - "A list of missing inputs and checks that did not run"
+
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Add the skill to your AI, or open the pack and give your AI SKILL.md and the file in its references folder. An AI that can read your project folder, such as Claude Code, works best. A chat AI works if you paste the files."
+  - "Tell it which project you mean, and whether the database is a test copy or holds real data. Paste your table list or schema dump and your access rules. Never paste passwords or keys."
+  - "Say what you allow. If you say nothing, it only plans."
+  - "Read the schema map and access rules first. Check that each table has a column for the account and a rule that limits rows to it."
+  - "Run the migrations in staging only, with made-up rows, and work through the test plan. The skill does not run the tests for you."
+
 how_it_works:
-  - title: Step 1
-    text: Identify the selected project and whether the database is a new disposable development environment or an existing shared system. Inspect current tables, schema history, extensions and access policies before proposing any setup.
-  - title: Step 2
-    text: Define the minimal durable job and activity records the agent requires, including stable job identity, account scope, status, timestamps and error/cost references. Reuse compatible existing tables or plan a forward change instead of creating a parallel incompatible store.
-  - title: Step 3
-    text: Configure the database client using secure settings and the least privilege supported by the runtime. Browser/public keys and privileged server credentials have different roles; never expose a service credential in a public client or report.
-  - title: Step 4
-    text: Plan schema creation as a versioned migration with named constraints, indexes and row-level or application access checks. Use explicit scoped policies; a broad allow-all policy is not a harmless way to silence a test error.
-  - title: Step 5
-    text: Rehearse in an isolated environment with synthetic rows. Check write/read shape, status transitions, account isolation, rejected unauthorized access and reconnect/failure behavior. A client connection alone does not prove the full agent system works.
-  - title: Step 6
-    text: Deliver the proposed schema/configuration, setup gaps, actual test evidence where available and rollback or recovery plan. Do not drop existing tables or reset production data to make the source example fit.
-thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+  - title: "Inspects first"
+    text: "Reads your tables, schema history, extensions and access rules. It decides if this is a new test database or a shared system, before it proposes anything."
+  - title: "Defines the smallest records"
+    text: "Lists what the agent must keep: stable job id, account, status, timestamps, error and cost links. It reuses a compatible table or plans a forward change instead of a second store."
+  - title: "Plans the connection safely"
+    text: "Keeps the public key for the browser and the powerful server key on the server. It never puts a key in the plan."
+  - title: "Plans the migration"
+    text: "Writes versioned migrations with named constraints, indexes and an access rule per table. A rule that allows everything is never used to silence a test error."
+  - title: "Rehearses in staging"
+    text: "Plans tests on made-up rows: write and read, status changes, one account blocked from another's rows, refused access and reconnecting after a failure."
+  - title: "Hands back the plan"
+    text: "Gives the schema, setup gaps, test evidence if any ran, and a rollback plan. It never drops tables or resets data to fit an example."
+
+output_shape: |
+  DATABASE
+  <provider> | environment: <new test copy | shared with real data> | allowed: <plan only | run in a test copy>
+
+  WHAT EXISTS
+  <tables, schema history, access rules found, or MISSING>
+
+  SCHEMA MAP
+  <table> | key: <...> | account column: <...> | columns: <...> | indexes: <...> | reuses: <existing table or new>
+
+  MIGRATIONS (in order)
+  1 <file name> | adds: <...> | touches existing data: <no | yes, why>
+
+  ACCESS RULES
+  <table> | who can read | who can write | enforced by: <row rule | app check>
+
+  KEYS AND CONNECTION
+  <which key goes where; no key values>
+
+  STAGING TESTS
+  <test> | made-up rows: <...> | passes if: <...> | status: <run | not run>
+
+  ROLLBACK AND RECOVERY
+  <what to back up first, how to undo each migration, what cannot be undone>
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+  <list>
+
+  MISSING
+  <inputs that would change the plan>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+
+output_sample:
+  input:
+    - "Your project's code or a list of its current tables and columns"
+    - "Your database provider, and whether it is a test copy or holds real data"
+    - "Your current access rules (optional)"
+    - "What you allow: plan only, or run SQL in a test copy"
+  prerequisites:
+    - "An AI that can read your files, or the files pasted in"
+    - "A staging copy of the database, if you want to run the plan"
+  output:
+    - name: "DATABASE and WHAT EXISTS"
+      contains: "The provider, the environment, and the tables and access rules already in place."
+    - name: "SCHEMA MAP"
+      contains: "The tables, columns, keys and indexes for jobs and activity, and which existing tables are reused."
+    - name: "MIGRATIONS"
+      contains: "Forward-only migration files in order, each with what it adds and whether it touches data."
+    - name: "ACCESS RULES"
+      contains: "For each table, who can read and write, and how the rule is enforced."
+    - name: "KEYS AND CONNECTION"
+      contains: "Which key lives in the browser and which on the server. No key values."
+    - name: "STAGING TESTS"
+      contains: "Tests on made-up rows, including one account blocked from another's rows, each marked run or not run."
+    - name: "ROLLBACK AND RECOVERY"
+      contains: "What to back up first, how to undo each step and what cannot be undone."
+    - name: "ASSUMPTIONS, MISSING and CHECKS MISSED"
+      contains: "What it assumed, what it could not find and which checks did not run."
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "It can read your project folder and migration history, so the plan fits the tables you already have."}
+    - {name: "Any good chat AI", why: "Works if you paste your table list and access rules. It cannot see your database, so it marks anything it has to guess."}
+  inputs:
+    - "A schema dump or your migration folder"
+    - "Your current access rules"
+    - "A list of the agents and what each one must record"
+
+terms:
+  - term: "Schema"
+    meaning: "The list of tables in a database and the columns each one holds."
+  - term: "Migration"
+    meaning: "A saved, numbered change to the database, run in order, so every copy ends up the same."
+  - term: "Row-level security"
+    meaning: "A database rule that decides which rows each user or account may read or change."
+  - term: "Staging"
+    meaning: "A safe copy of your setup used for tests, with no real customer data."
+  - term: "Service key"
+    meaning: "A powerful key for your own server. It must never be placed in a web page or an app."

@@ -1,6 +1,6 @@
 new_slug: cut-your-product-line-to-the-few-that-pay-and-commit-the-team
 name: Cut your product line to the few that pay
-summary: Give it your products and their numbers. Get the cut list, a give-up list and a commit note.
+summary: Cut your product line to the few that pay. Give it your products and their numbers. You get a cut list, a give-up list and a team commit note.
 job: plan-strategy
 thinking: high
 thinking_why: It kills products people love and must defend each cut with numbers. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have thirty products and five of them make most of the money.
   - Every meeting is about a product nobody would launch today.
   - You tried to cut before and the team quietly kept the old products alive.
+not_for:
+  - You sell one product. Use a pricing review, or talk it through with an adviser you trust.
+  - You want to decide which big choices to make first. Use the Decision priority planner.
+  - You only want to say what you will give up, with no product numbers. Use the Brand focus trade-off planner.
 you_give:
   - Your products and programmes with revenue, margin and the attention each takes
   - What you believe the business is for
@@ -30,6 +34,26 @@ how_to_use:
   - Paste your products, programmes and their numbers. It ranks and cuts.
   - Read the cuts and the give-up list. Argue with any, then decide.
   - Read the commit note with the people who disagreed, then send it.
+output_sample:
+  input:
+    - Your products and programmes, with revenue, margin and team hours for each
+    - What you believe the business is for
+    - Who owns each product
+    - Your brand file (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+    - A buyer brief or brand brain helps but is optional
+  output:
+    - name: "Step 1: The cut line"
+      contains: Each product marked keep or cut, with what it earns, the attention it takes and the reason.
+    - name: "Step 2: Programmes"
+      contains: Each programme or recurring effort marked keep or cut, with its result and the reason.
+    - name: "Step 3: Give-up list"
+      contains: What you will no longer do, the customers and revenue you give up, and what you give them up for.
+    - name: "Step 4: Commit note"
+      contains: The decision, who disagreed and why, what everyone commits to, and what each team does on Monday.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Cut the line
     text: Ranks products by what they earn and the attention they take, and cuts to the few that pay, in the manner of Jobs's 1997 cull.

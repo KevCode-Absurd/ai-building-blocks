@@ -4,6 +4,35 @@ description: "Identify the best GTM motions and tools across 7 motion types: Inb
 ---
 # GTM Motions
 
+## Working in a chat (added by AI Blocks)
+
+The seven motions and the five steps below are the original author's and are unchanged. This section tells you how to run them in a chat.
+
+**What you need.** Ask once, in one message, for anything you do not have:
+- What is sold, and its price.
+- Who buys it and who decides.
+- Sales cycle length, from first contact to payment.
+- Team size and monthly budget.
+- Channels already tried, and results (optional).
+
+If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent prices, budgets or results. Score a channel only from facts the person gave. If a fact needed for a score is missing, say the score is a guess and name the fact.
+
+**What you hand back**, in this order:
+1. The person's facts, restated in a few lines.
+2. A fit score from 1 to 10 for each of the seven motions, with one reason each. Say what the scores measure: fit for this product, team and budget, not proven results.
+3. The mix: one main motion and one to three support motions, with the start order.
+4. Example tools and tactics for each chosen motion.
+5. A 90-day plan with milestones for weeks 1 to 4, 5 to 8 and 9 to 12.
+6. People and budget the plan needs.
+7. Success measures for each motion, and a date to review the mix.
+8. `MISSING:` list.
+
+**Rules.**
+- Tool names in this skill are examples, not a ranking. Tell the person to check each tool's current price and fit before buying. Do not state prices.
+- Choose two to four motions at most. Name what you are leaving out and why.
+- The tips at the end (such as "2 to 4 motions work best") are the author's view. Label them that way.
+- This skill needs no code, files or paid tools.
+
 ## Overview
 Identify and evaluate the best go-to-market motions for your product. This skill analyzes seven proven GTM approaches with specific tools and tactics to help you build a balanced acquisition strategy.
 

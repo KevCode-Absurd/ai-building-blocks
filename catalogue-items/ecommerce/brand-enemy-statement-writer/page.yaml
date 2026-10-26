@@ -1,6 +1,6 @@
 new_slug: brand-enemy-statement-writer
 name: Brand enemy statement writer
-summary: Share what buyers dislike and what your product changes. Get a clear brand stance, a promise and proof gaps.
+summary: Write a brand enemy statement from your customer reviews. You get a clear stance, a promise and a list of proof gaps to fill.
 job: plan-strategy
 headline: Brand enemy statement writer
 subhead: Name the old habit your brand wants to change.
@@ -8,6 +8,10 @@ explain: A short positioning exercise that distinguishes customer evidence from 
 when:
   - Your positioning feels generic.
   - You want a useful belief or status quo to challenge in your brand story.
+not_for:
+  - Your product has no real difference from the alternatives. Fix the product or the offer first, because a stance would have nothing to stand on.
+  - You have no customer words yet. Run a few customer interviews or read your reviews first, then come back.
+  - You want to attack a named rival. Write a plain comparison from facts you can show instead.
 you_give:
   - Customer complaints or reviews.
   - Product facts and the common alternatives.
@@ -17,9 +21,33 @@ you_get:
   - A concise enemy statement and positive promise.
   - Evidence gaps and a check against misleading claims.
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste your customer reviews or complaints, your product facts and the alternatives buyers use.
+  - Add your brand values if you have them (optional).
+  - Read the frustration list first and check each source is a real customer quote.
+  - Check the final stance against your product facts. Cut any claim you cannot prove.
+  - Test the stance on a landing page or in an ad before you roll it out.
+output_sample:
+  input:
+    - Customer complaints or reviews
+    - Your product facts
+    - The common alternatives buyers use
+    - Your brand values or positioning (optional)
+  output:
+    - name: Frustrations
+      contains: Up to five frustrations customers really report, each with its source and whether it repeats.
+    - name: Hypothesis list
+      contains: Likely frustrations you have not seen in the evidence, kept apart from the real ones.
+    - name: Recurring failures
+      contains: Up to three habits in the category behind those frustrations, described without blaming any rival.
+    - name: Candidate stance lines
+      contains: Three draft lines that name the practice you challenge and the alternative you offer.
+    - name: Final stance and promise
+      contains: The clearest supported stance line and a positive promise to customers.
+    - name: Copy and product examples
+      contains: Two examples of how the stance would change your copy or product choices.
+    - name: Evidence gaps
+      contains: What you still need to prove, plus one research question if the evidence is thin.
 how_it_works:
   - title: Find repeated frustration
     text: Separate observed customer language from inferred industry habits.

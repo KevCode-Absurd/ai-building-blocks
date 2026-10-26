@@ -32,7 +32,7 @@ How to start:
 This skill runs on its own. Ask once, in one short message, for what you cannot work without, then carry on and mark each gap `MISSING:`.
 
 - **Quiz submissions export** (required): one row per person, one column per question. Read an attached file directly.
-- **What each question asks** (advised), if column names are short codes.
+- **What each question asks** (advised), if column names are short codes. A quiz build that lists each question and its job gives this.
 - **Ad sets that sent the traffic** (optional).
 - **Whether the store has a real expert or real proof** (advised), so you only suggest frames it can back.
 

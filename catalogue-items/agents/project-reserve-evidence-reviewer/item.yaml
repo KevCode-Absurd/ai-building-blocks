@@ -1,33 +1,28 @@
 slug: project-reserve-evidence-reviewer
 name: Project reserve evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Check your project's debt reserve and who is paid first from project cash. Get a reserve roll-forward and payment waterfall, redone when terms change.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs:
+  - type: audit_report
+  - type: spreadsheet
+needs_mode: manual
 uses:
   - reconcile-project-reserves-and-payment-priority
   - debt-service-covenant-headroom-checker
 steps:
   - uses: reconcile-project-reserves-and-payment-priority
-    note: Run the governing workflow when A reserve requirement, authorized draw, upcoming service or payment-priority source changes.
+    note: Run the governing workflow when a reserve requirement, an authorized draw, an upcoming payment or a payment-priority source changes. It hands back a reserve roll-forward and a payment waterfall tied to it. Hands the reserve roll-forward and the payment waterfall to step 2.
   - uses: debt-service-covenant-headroom-checker
-    note: If a signed debt-service test gate is relevant to a requested distribution review, calculate only that cash covenant using the actual definition and periods. A cash residual does not satisfy an unverified distribution gate.
+    note: If a signed debt-service test gates a requested distribution, work out only that cash test on the contract's own definition and periods. A cash residual does not pass a test nobody has checked. Uses the signed debt-service test in your loan document and the cash figures from step 1.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +30,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It moves no money and gives no legal opinion that a payout is allowed.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

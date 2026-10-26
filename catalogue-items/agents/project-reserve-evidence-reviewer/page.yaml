@@ -1,51 +1,116 @@
 new_slug: project-reserve-evidence-reviewer
 name: Project reserve evidence reviewer
 headline: Project reserve evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Check your project's debt reserve and who is paid first from project cash. Get a reserve roll-forward and payment waterfall, redone when terms change.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A debt reserve rollforward and payment priority reconciliation. Share actual project cash after operations, senior and junior service schedule, approved reserve draws, next-service requirement, reserve balance and contract payment priority. Include the previous dated review and source versions when available.
-explain: |-
-  A debt reserve rollforward and payment priority reconciliation.
+subhead: Give it the project cash left after operations, the senior and junior loan payments due, the reserve balance and the draws that were approved. It works out the reserve you must hold and the top-up needed. It then pays out the cash in the order your contracts set. You get a reserve roll-forward and a payment waterfall, with every unpaid amount shown.
 
-  Project reserve controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  Project loans usually require a debt service reserve. That is cash set aside to cover the next loan payments. Each period the reserve is topped up, drawn on or released. The cash that is left has to be paid out in the order your contracts set, which is often senior debt first, then the reserve, then junior debt. If the top-up is counted in two places, or a plug hides a gap, the numbers look fine and are wrong.
+
+  This agent builds the reserve roll-forward from your debt schedule: the balance you must hold, the draws that were approved and the top-up you need. It then runs the same cash through the payment order and ties the reserve deposit back to the roll-forward. If the two disagree, it corrects the inputs and records the difference. It never forces a match. Any senior payment, reserve amount or junior payment left unpaid stays visible. A positive amount at the bottom is not called a payout the contracts allow.
+
+  It keeps a record of the last review and runs again when a reserve requirement, an approved draw, an upcoming payment or the payment order changes. If owners ask for a distribution and your documents have a signed debt-service test, it also checks that test on the contract's own definition. Cash left over does not pass a test nobody has checked.
+
 when:
-  - You need a debt reserve rollforward and payment priority reconciliation.
-  - You work on project reserve controls and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - The next loan payment changes, so the reserve you must hold changes with it.
+  - A lender approves a draw on the reserve.
+  - Owners ask for a distribution and you need to show the cash goes through the waterfall first.
+  - A contract change alters who is paid first.
+
+not_for:
+  - You only need to test a signed covenant, such as cash cover each period. Use the Debt service covenant evidence reviewer. This agent runs that test only when a distribution is requested.
+  - You need to build the loan schedule and the cover ratios first. Use the Project debt cash evidence reviewer.
+  - Your reserve is a plain cash balance with no payment priority. A simple balance check is enough, and the Treasury settlement evidence reviewer covers daily cash.
+  - You want to know if a payout is legally allowed. It reads the order and gates you supply. It gives no legal opinion.
+
 you_give:
-  - Actual project cash after operations, senior and junior service schedule, approved reserve draws, next-service requirement, reserve balance and contract payment priority. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The project cash left after operating obligations for the period (from your cash records)
+  - The senior and junior loan payments due, with dates (from the loan agreements)
+  - The reserve rule, meaning how many months of payments it must cover and what may fill it (from the loan agreement)
+  - The reserve balance and the draws that were approved (from the reserve account statement and approvals)
+  - The payment priority clause (from the contract)
+  - A signed debt-service test, with cash and payments for three periods (optional, only if a distribution is requested)
+  - The last review's record and the earlier source versions (optional, needed to show what changed)
+
 you_get:
-  - A debt reserve rollforward and payment priority reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A reserve roll-forward with opening balance, draws, required balance, top-up needed and what is still unfunded
+  - A payment waterfall that allocates the cash to senior payments, the reserve and junior payments in order
+  - A tie between the waterfall's reserve deposit and the roll-forward, with any difference explained
+  - A covenant headroom line for each test period, only when a distribution review needs it
+  - What changed since the last review, a record for the next one, MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Reconcile project reserves and payment priority workflow and the Debt service covenant headroom checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
+  - Say if this is the first run. If not, paste last time's record. Then attach the debt schedule, the reserve statement, the payment priority clause and the cash records for the period.
+  - Name the payment order once, in your own words. Check that the waterfall follows it and that existing reserve cash is not counted as new cash.
+  - Check that the reserve top-up appears once, and that the waterfall's reserve deposit matches the roll-forward. Any unpaid senior, reserve or junior amount should show on its own line.
+  - Fix every MISSING line and run it again when a requirement, a draw, a payment date or the order changes. Adding it sets up no schedule.
+
 how_it_works:
-  - title: Reconcile project reserves and payment priority
-    text: Run the governing workflow when A reserve requirement, authorized draw, upcoming service or payment-priority source changes.
-  - title: Debt service covenant headroom checker
-    text: If a signed debt-service test gate is relevant to a requested distribution review, calculate only that cash covenant using the actual definition and periods. A cash residual does not satisfy an unverified distribution gate.
-output_shape: |-
-  A debt reserve rollforward and payment priority reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this project and reserve account, or sets a first baseline. It compares the requirement window, authorized draws, deposits, payment priorities and open test gates. If nothing changed and no review is due, it says so and stops.
+  - title: Builds the reserve roll-forward
+    text: Runs the Debt reserve rollforward builder step. It applies only the authorized draw, capped at the opening reserve, works out the required balance from the next payments, and funds a shortfall only from cash that is really available. The ending reserve ties to opening plus deposits less draws and releases.
+  - title: Runs the payment waterfall
+    text: Runs the Project payment waterfall builder step. It allocates the same cash to senior payments, the reserve and junior payments in the order the contract sets, capping each at the cash left and the amount due. It ties the reserve deposit to the roll-forward and records any difference.
+  - title: Tests a distribution gate only if needed
+    text: If owners request a distribution and a signed debt-service test applies, it runs the Debt service covenant headroom checker on the contract's own definition and periods. It shows signed cash headroom for each period and keeps any weak period visible.
+  - title: Checks and saves
+    text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, which steps ran or were skipped, and the new record. It keeps the old record.
+
+output_shape: |
+  REVIEW DATE <date>, <project>, <currency>, <scale>   LAST REVIEW <date or first run>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  RESERVE      opening <n> - approved draw <n> + deposit <n> = ending <n>;
+               required <n> (<n> months of next payments); unfunded <n>
+  WATERFALL    cash <n>: senior paid <n> of <n>; reserve deposit <n> of <n>;
+               junior paid <n> of <n>; left over <n>; unpaid <n>
+  TIE          waterfall reserve deposit <n> = roll-forward deposit <n>
+               (or the difference and why)
+  TEST GATE    <period>: qualifying cash <n> - required cover x payments <n>
+               = headroom <n> (only if a distribution is requested)
+  RECORD FOR NEXT REVIEW  reserve account reference, requirement window,
+                          authorized draws, deposits, payment priorities, open gates
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - The project cash left after operating costs for the period
+    - The senior and junior loan payments due, and the payment priority clause
+    - The reserve account statement and the approved draws
+    - The signed debt-service test, if owners ask for a distribution (optional)
+    - The last review's record (optional)
+  prerequisites:
+    - An AI that can read files and build a spreadsheet
+    - The Reconcile project reserves and payment priority workflow and the Debt service covenant headroom checker skill, added with the agent
+  output:
+    - name: Changed since last review
+      contains: Each requirement, draw, payment or priority term that moved, with old and new value and source date.
+    - name: outputs/step-1-debt-reserve-rollforward-builder.md
+      contains: Opening reserve, approved draw, required balance, top-up needed and any unfunded amount, with the ending balance tied to its parts.
+    - name: outputs/step-2-project-payment-waterfall-builder.md
+      contains: The cash allocated to senior payments, the reserve and junior payments in order, what is left over, and every unpaid amount.
+    - name: Reserve tie
+      contains: The waterfall's reserve deposit set against the roll-forward deposit, with any difference explained, not plugged.
+    - name: Covenant headroom line
+      contains: Signed cash headroom for each test period on the contract's own definition. Only when a distribution review needs it.
+    - name: Record and MISSING lines
+      contains: The record for the next review, every gap with the line it stops, and CHECKS MISSED.
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: A bigger next payment
+    how: Raise the next payment due. The required reserve rises, the top-up needed rises, and less cash reaches junior payments or owners.
+  - what: A reserve draw
+    how: Add an approved draw. The opening reserve falls by the draw, the top-up need rises, and the waterfall shows whether cash can refill it.
+  - what: A different payment order
+    how: Give the new priority. The same cash is allocated again, and the unpaid line moves to whichever level now sits last.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +121,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the reserve account statement for each period with its date, so the opening balance is always sourced.
+  - Write the payment order once in the agent's file, with the clause number, so every run uses the same order.
+  - Keep each lender approval for a draw. A draw with no approval is not applied.
+  - Pair it with the Project debt cash evidence reviewer when the cash you feed in needs to be rebuilt from the project accounts.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds linked schedules for the reserve and the waterfall, and saves the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your loan agreements and reserve account statements
+      why: The reserve rule, the payment order and the balances are contract and bank facts. Quote them, never guess them.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The debt schedule with senior and junior payment dates.
+    - Lender approvals for any draw or release.
+    - A named person who owns the loan reporting and will check the order and the amounts.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Debt service reserve
+    meaning: Cash set aside to cover the next loan payments.
+  - term: Waterfall
+    meaning: The order in which cash is paid out, from the first claim down to what is left.
+  - term: Senior and junior debt
+    meaning: Senior debt is paid first. Junior debt is paid after it.
+  - term: Top-up
+    meaning: The cash added to bring a reserve back to the amount required.
+  - term: Distribution
+    meaning: A payout of cash to the owners.
+  - term: Covenant
+    meaning: A promise in a loan agreement, such as keeping cash above a set multiple of the payment.

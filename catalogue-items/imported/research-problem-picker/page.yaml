@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It guides a hard choice with a method.
 new_slug: research-problem-picker
 name: Research problem picker
-summary: Describe your research ideas. Get help choosing a problem worth
-  pursuing, or why a project is stuck.
+summary: Pick a research problem worth your years, or find out why your project is stuck. Give it your idea. You get risks, success checks and a next step.
 job: think-and-decide
 headline: Research problem picker
-subhead: Help choosing a research problem worth your years, or finding out why a
-  current project is stuck. It uses a decision tree for problem choice from a
-  published paper by Fischbach and Walsh.
+subhead: Tell your AI your research idea, a stuck project or a big question. It asks one question at a time and tests the idea for risk and impact. The method comes from a paper by Fischbach and Walsh.
 explain: |
   Help choosing a research problem worth your years, or finding out why a current project is stuck. It uses a decision tree for problem choice from a published paper by Fischbach and Walsh.
 
@@ -16,19 +13,49 @@ explain: |
 when:
   - You have several project ideas and must choose one.
   - Your project has stalled and you do not know why.
-  - You need to judge whether an idea would matter if it worked.
-  - You are planning a lab's long-term direction.
+  - You want to know if an idea would matter if it worked.
+  - You are planning the long-term direction of a lab.
+not_for:
+  - "You need a go or no-go on finished data: ask a trusted colleague or your advisor to review the results."
+  - "You only want papers on a topic: use a literature search tool such as PubMed or Google Scholar."
+  - "You need help writing a grant or paper: write the draft yourself first, then ask your AI for edits."
 you_give:
-  - A short pitch of your idea or problem
-  - Details on method, payoff and risks
+  - A 1 to 2 sentence pitch of your idea, problem or question
+  - More detail on what you want to do, how, why it matters and the biggest risks
   - Your field and resources (optional)
 you_get:
-  - Summary of your idea as understood
-  - Questions that test its value
-  - Assessment of risks
-  - Advice on which problem to pursue
+  - A short summary of your idea, so you can check it was understood
+  - Questions that test whether the idea is worth your years
+  - A clear look at your biggest risks
+  - Plans for setbacks and ways around obstacles
+  - Advice on which problem to pursue and what to do next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed.
+  - "Pick a start: pitch an idea, share a problem in a current project, or ask a strategic question."
+  - Write the short version in 1 to 2 sentences.
+  - Check the summary your AI gives back. Correct anything it got wrong.
+  - Add the detail it asks for, then answer its questions one at a time.
+  - Ask it to sum up the risks and your next step before you decide.
+output_sample:
+  input:
+    - A 1 to 2 sentence pitch of your idea, problem or question
+    - "More detail: what you want to do, how, why it matters and the biggest risks"
+    - Your field and resources (optional)
+  prerequisites:
+    - No files or code needed. It works in a plain chat.
+    - Web search is optional. Literature checks only work if your AI can search PubMed.
+  output:
+    - name: Idea summary
+      contains: A one-paragraph restatement of your idea or problem so you can confirm your AI understood it.
+    - name: Intuition pumps
+      contains: Ways to sharpen and strengthen the idea, so it moves toward more impact.
+    - name: Risk assessment
+      contains: The main risks in your project, rated, with ways to handle each one.
+    - name: Optimization function
+      contains: The success measures that show whether the project would matter if it worked.
+    - name: Parameter strategy
+      contains: Which one constraint to fix and which choices to keep flexible.
+    - name: Decision tree and adversity plan
+      contains: Key decision points, plans for setbacks, and ways to go around obstacles.
+    - name: Next step
+      contains: Advice on which problem to pursue and what to do first.

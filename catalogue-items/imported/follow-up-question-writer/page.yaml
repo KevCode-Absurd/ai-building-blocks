@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It reacts to one short answer.
 new_slug: follow-up-question-writer
 name: Follow-up question writer
-summary: Give it what a student just said. Get follow-up moves that push their
-  thinking further.
+summary: Give it what a student just said. Get follow-up questions that push their thinking further, with the exact words to say and when to use each.
 job: teach-and-train
 headline: Follow-up question writer
-subhead: Give it what a student just said. Get follow-up moves that push their
-  thinking further. Bring what the student said. Use the result to plan your
-  next step.
+subhead: Give it what a student just said. Get follow-up moves that push their thinking further. Bring what the student said. Use the result to plan your next step.
 explain: |
   After a student says something half right or surprising, you get follow-up questions that push their thinking further, so you are not stuck saying "good, anyone else?".
 
@@ -18,6 +15,10 @@ when:
   - A student says something wrong in an interesting way and you want to use it.
   - You want the class to build on each other's ideas.
   - You run discussion lessons and want better questions ready.
+not_for:
+  - "You need a whole lesson plan: plan the lesson yourself first, then come back with a student answer you want to explore."
+  - "The student's answer is simply wrong and needs reteaching: use a simple check-for-understanding question, then teach the idea again."
+  - "You want to mark or grade written work: give feedback on the work itself, not a spoken follow-up."
 you_give:
   - What the student said
   - What you want students to understand
@@ -29,7 +30,22 @@ you_get:
   - When to use each one
   - Prompt for the whole class to join in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Before you start, gather the student's exact words, what you want students to understand, and the subject, topic and year group.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text, then paste your details.
+  - Read the moves. Pick one that fits your class and rewrite it in your own voice. They are drafts.
+  - Try the move in your lesson. Then use the Move Selection Guide to plan the next question.
+output_sample:
+  input:
+    - What the student said, in their exact words
+    - What you want students to understand
+    - Subject and topic
+    - Age group and how confident the student is (optional)
+    - "Your view of the answer: right, partly right, wrong, unclear or thin (optional)"
+  output:
+    - name: Recommended Moves
+      contains: Three to five follow-up moves, each with a type label, the exact words to say and why it works.
+    - name: Move Selection Guide
+      contains: When to pick each move, based on your goal, the student and the stage of the lesson.
+    - name: Moves to Avoid Here
+      contains: Common responses that would shut the talk down or miss the point in this case.

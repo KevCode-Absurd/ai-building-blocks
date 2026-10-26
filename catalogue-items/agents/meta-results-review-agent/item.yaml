@@ -9,6 +9,8 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: spreadsheet
+    required: false
   - type: document
     required: false
 outputs:

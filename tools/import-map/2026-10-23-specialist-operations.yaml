@@ -1,0 +1,204 @@
+erphq/skills:templates/01-org-under-100/go-live-checklist:
+  slug: business-tool-launch-checklist
+  name: Business tool launch checklist
+  summary: Share your rollout plan. Get launch checks, open blockers and a clear decision record for your team.
+  subhead: Share the business tool you are launching, the people affected and your readiness notes. It checks data, access, training, connections and rollback plans. You get an open-issue checklist, a launch-day plan and a place to record the go or no-go decision.
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a process checklist and ties each step to your records.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  explain: Share the business tool you are launching, the people affected and your readiness notes. It checks data, access, training, connections and rollback plans. You get an open-issue checklist, a launch-day plan and a place to record the go or no-go decision.
+  you_give:
+    - The new business tool, rollout date and affected teams.
+    - Known test results, owners, training plans and rollback options.
+  you_get:
+    - A readiness checklist with open items.
+    - A go or no-go decision record for the owner.
+    - A launch-day plan and follow-up review outline.
+  how_it_works:
+    - title: Step 1
+      text: Check data, users, connections and communication readiness.
+    - title: Step 2
+      text: Separate launch blockers from risks the owner may accept.
+    - title: Step 3
+      text: Prepare the decision record, launch-day checks and follow-up review.
+  needs: read your supplied records; changing live systems needs separate access and approval
+erphq/skills:templates/01-org-under-100/migration-runbook:
+  slug: business-data-move-runbook
+  name: Business data move runbook
+  summary: Share the old and new tools. Get a data-move plan with field maps, checks and a rollback path.
+  subhead: Share the business tools you are moving between, the records involved and your target date. It plans field mapping, a test move, checks and the final switch. You get a runbook, a validation plan and a fallback if the move fails.
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a process checklist and ties each step to your records.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  explain: Share the business tools you are moving between, the records involved and your target date. It plans field mapping, a test move, checks and the final switch. You get a runbook, a validation plan and a fallback if the move fails.
+  you_give:
+    - Source and target tools, record types and counts.
+    - Field details, business timing, test results and responsible owners.
+  you_get:
+    - A phased data-move runbook.
+    - A source-to-target field map and validation checklist.
+    - A fallback plan and old-system retention steps.
+  how_it_works:
+    - title: Step 1
+      text: Map source fields to the target and keep a full backup.
+    - title: Step 2
+      text: Plan a small test move, then check counts, samples and relationships.
+    - title: Step 3
+      text: Set the final switch, rollback triggers and old-system archive plan.
+  needs: read your supplied records; changing live systems needs separate access and approval
+erphq/skills:templates/01-org-under-100/requirements-traceability:
+  slug: project-requirement-tracker
+  name: Project requirement tracker
+  summary: Share project requirements. Get a table that links each need to its owner, build, test and approval.
+  subhead: Share your project requirements, priorities and progress notes. It links each need to an owner, a build choice and a specific test. You get a compact tracking table, an approval log and a clear list of work that remains open.
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a process checklist and ties each step to your records.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  explain: Share your project requirements, priorities and progress notes. It links each need to an owner, a build choice and a specific test. You get a compact tracking table, an approval log and a clear list of work that remains open.
+  you_give:
+    - Business requirements and their priorities.
+    - Owners, build choices, test evidence and approval records.
+  you_get:
+    - A requirement-to-build-and-test table.
+    - An approval log with names and dates where known.
+    - Open requirements and a completion summary.
+  how_it_works:
+    - title: Step 1
+      text: Write one clear requirement per row and assign an owner.
+    - title: Step 2
+      text: Link each row to how it will be built and tested.
+    - title: Step 3
+      text: Track built, tested and approved states separately.
+  needs: read your supplied records; changing live systems needs separate access and approval
+erphq/skills:departments/information-technology/01-org-under-100/master-data-management:
+  slug: shared-business-record-planner
+  name: Shared business record planner
+  summary: Share conflicting records across tools. Get field ownership rules, duplicate checks and a plan to keep records consistent.
+  subhead: Share the customer, product or supplier records that differ across your tools. It maps which source should own each field and how duplicates need review. You get a shared-record plan, quality checks and steps for keeping future changes consistent.
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a process checklist and ties each step to your records.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  explain: Share the customer, product or supplier records that differ across your tools. It maps which source should own each field and how duplicates need review. You get a shared-record plan, quality checks and steps for keeping future changes consistent.
+  you_give:
+    - The systems holding shared records and examples of conflicts.
+    - Field owners, quality problems and rules for updates.
+  you_get:
+    - A shared-record model with source-to-field rules.
+    - Duplicate review and quality-check plans.
+    - An update and ownership plan with reversal history.
+  how_it_works:
+    - title: Step 1
+      text: Map record sources, shared fields and current quality gaps.
+    - title: Step 2
+      text: Choose field ownership, duplicate review and reversal rules.
+    - title: Step 3
+      text: Plan safe updates, quality checks and the people who review exceptions.
+  needs: read your supplied records; changing live systems needs separate access and approval
+erphq/skills:departments/project-operations/01-org-under-100/time-expense:
+  slug: project-time-and-expense-plan
+  name: Project time and expense plan
+  summary: Share your time and expense process. Get entry rules, approval steps and a clear handoff to billing.
+  subhead: Share how your team records project hours and expenses, plus the rules you use today. It maps entries, receipts, approvals and billing handoffs. You get a process plan, review roles and checks for late entries, missing receipts and project budget gaps.
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a process checklist and ties each step to your records.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  explain: Share how your team records project hours and expenses, plus the rules you use today. It maps entries, receipts, approvals and billing handoffs. You get a process plan, review roles and checks for late entries, missing receipts and project budget gaps.
+  you_give:
+    - Current time and expense tools, project codes and policies.
+    - Approval roles, billing needs and known delays or missing records.
+  you_get:
+    - Time and expense entry rules.
+    - An approval and exception process.
+    - A billing handoff plan with reporting checks.
+  how_it_works:
+    - title: Step 1
+      text: Define project codes, billable flags, entry timing and receipt rules.
+    - title: Step 2
+      text: Set review roles, backup approvers and exception handling.
+    - title: Step 3
+      text: Plan the billing handoff and reports for delays and budget gaps.
+  needs: read your supplied records; changing live systems needs separate access and approval
+erphq/skills:departments/project-operations/01-org-under-100/client-collaboration:
+  slug: client-project-communication-plan
+  name: Client project communication plan
+  summary: Share how you work with clients. Get clear channels, update dates and a record for decisions and approvals.
+  subhead: Share your client projects, current communication channels and approval problems. It sets a main channel, update rhythm and decision record for each relationship. You get a communication plan, clear approval roles and steps for raising issues before they delay the work.
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a process checklist and ties each step to your records.
+  inputs:
+    - type: source_text
+      required: true
+    - type: brief
+      required: true
+  outputs:
+    - type: document
+    - type: plan
+  explain: Share your client projects, current communication channels and approval problems. It sets a main channel, update rhythm and decision record for each relationship. You get a communication plan, clear approval roles and steps for raising issues before they delay the work.
+  you_give:
+    - Client projects, stakeholders and current communication channels.
+    - Update needs, approval roles, document access and recurring problems.
+  you_get:
+    - A client communication and update plan.
+    - A decision and deliverable-approval log format.
+    - An escalation and handover process.
+  how_it_works:
+    - title: Step 1
+      text: Choose a main working channel and a shared home for documents.
+    - title: Step 2
+      text: Set update dates, decision records and approval roles.
+    - title: Step 3
+      text: Plan how issues, delays and stakeholder changes are raised.
+  needs: read your supplied records; changing live systems needs separate access and approval

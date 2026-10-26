@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Hardware setup needs matching settings.
 new_slug: vehicle-network-setup-helper
 name: Vehicle network setup helper
-summary: Say which CAN device you have. Get channels set up and messages sent
-  and received.
+summary: "Set up a CAN bus connection in MATLAB: find your device, open a channel at the right speed, then send and receive messages with a health check."
 job: build-software
 headline: Vehicle network setup helper
-subhead: "A working CAN connection in MATLAB: your device found, a channel
-  opened at the right speed, and messages going out and coming in. You can test
-  without hardware too, using a virtual channel."
+subhead: "A working CAN connection in MATLAB: your device found, a channel opened at the right speed, and messages going out and coming in. You can test without hardware too, using a virtual channel."
 explain: |
   A working CAN connection in MATLAB: your device found, a channel opened at the right speed, and messages going out and coming in. You can test without hardware too, using a virtual channel.
 
@@ -18,6 +15,10 @@ when:
   - Your channel will not start because of a speed or access error.
   - You need to send a test message to an ECU on your bench.
   - You want to practice with a virtual channel before buying hardware.
+not_for:
+  - "You only want to replay logged BLF files with no live bus: use a BLF logging tool, not this setup helper."
+  - "You are building Simulink vehicle network blocks: use a Simulink-specific tool instead."
+  - "You need to create or edit DBC, LDF or A2L files: use your vendor's database editor. This skill only uses existing files."
 you_give:
   - Your CAN hardware brand and model
   - Your bus speed and whether it is CAN or CAN FD
@@ -29,9 +30,31 @@ you_get:
   - Send and receive examples
   - Fixes for common channel errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Vehicle Network Toolbox and
-    CAN hardware.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill's instructions.
+  - Tell your AI your CAN adapter brand and model, your bus speed, and whether you use CAN or CAN FD.
+  - Add your MATLAB release and any error message you see (optional).
+  - Run the code your AI gives you in MATLAB. This needs Vehicle Network Toolbox and, for real hardware, the vendor driver. No adapter? Use the virtual channel.
+  - Check the health line after each send. Error counts of zero and an active bus mean the frame was accepted.
+  - Once messages flow, ask your AI to decode signals using your database file.
+output_sample:
+  input:
+    - Your CAN hardware brand and model, or a virtual channel
+    - Your bus speed, and whether it is CAN or CAN FD
+    - Your MATLAB release
+    - The error message you see (optional)
+  prerequisites:
+    - MATLAB R2021a or later
+    - Vehicle Network Toolbox installed
+    - The vendor driver for your adapter, if you use real hardware
+    - An AI that can run MATLAB code
+  output:
+    - name: Hardware discovery
+      contains: MATLAB code that lists the CAN devices your computer can see.
+    - name: Channel setup
+      contains: Code that creates a CAN or CAN FD channel and sets the bus speed before start.
+    - name: Send and receive code
+      contains: Examples to send, repeat and receive messages, with filters and signal decoding from a database.
+    - name: Bus health check
+      contains: A check of error counts and bus status after each send, so you know the frame was accepted.
+    - name: Error fixes
+      contains: Steps for common problems such as channel in use, wrong speed or no acknowledgment.

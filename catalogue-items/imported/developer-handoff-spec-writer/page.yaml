@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It must read details out of a design.
 new_slug: developer-handoff-spec-writer
 name: Developer handoff spec writer
-summary: Share a finished design. Get a spec for layout, tokens, component
-  props, states, breakpoints and edge cases.
+summary: Turn a finished design into a developer handoff spec with layout, tokens, component states, breakpoints and edge cases, so it gets built right.
 job: design-work
 headline: Developer handoff spec writer
-subhead: A handoff spec that answers a developer's questions before they ask, so
-  a finished design gets built the way you meant it. Nothing is left for them to
-  guess.
+subhead: A handoff spec that answers a developer's questions before they ask, so a finished design gets built the way you meant it. Nothing is left for them to guess.
 explain: |
   A handoff spec that answers a developer's questions before they ask, so a finished design gets built the way you meant it. Nothing is left for them to guess.
 
   Give it a Figma link, a screenshot or a plain description. It writes down exact measurements, uses token names such as spacing-md in place of raw pixel values, and lists every component state: default, hover, active, disabled, loading, error and empty. It adds interaction details like timing and easing, then covers content limits, long text, slow connections and missing data. It also covers accessibility: focus order, labels and keyboard use. Each odd choice gets a one-line reason.
 when:
   - A design is approved and it is time to pass it to engineers.
-  - Developers keep building your screens with the wrong spacing or missing
-    states.
+  - Developers keep building your screens with the wrong spacing or missing states.
   - You need to specify how a component behaves on mobile versus desktop.
   - You want accessibility needs written down before the build starts.
+not_for:
+  - Your design is still an early concept or unfinished. Get a design critique or write a rough brief first, and come back when it is approved.
+  - You need the code itself. Give the spec to a developer, or ask your AI to build the screen from it as a separate step.
+  - You only need a quick note on one small change. Write a short message to your developer instead.
 you_give:
   - A Figma link, screenshot or written description of the design
   - Your design token names (optional)
@@ -31,8 +31,36 @@ you_get:
   - Edge case and content rules
   - An accessibility checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open images or Figma links.
+  - Open your AI chat. Paste the skill instructions from this page.
+  - Add your design. Paste a Figma link, upload a screenshot or describe the screen in plain words.
+  - Add your token names, breakpoints and known edge cases if you have them (optional). Say which tech stack you use.
+  - Send it. If you have a Figma connector, your AI can read exact measurements. In a plain chat, it works from your image or description.
+  - Read the spec. Fill any gap your AI marked, such as a missing token name or a state you did not show.
+  - Send the finished spec to your developer.
+output_sample:
+  input:
+    - A Figma link, a screenshot or a written description of the screen
+    - Your design token names (optional)
+    - Your tech stack, such as React and Tailwind (optional)
+    - Edge cases you already know about (optional)
+  prerequisites:
+    - A Figma connector, if you want your AI to read measurements straight from Figma. Without it, paste a screenshot or a description.
+  output:
+    - name: Overview
+      contains: What the screen or feature does and the context the user is in.
+    - name: Layout
+      contains: The grid, the breakpoints and how the layout responds.
+    - name: Design Tokens Used
+      contains: A table of token names, their values and where each one is used.
+    - name: Components
+      contains: A table of each component, its variant, its props and any special behavior.
+    - name: States and Interactions
+      contains: A table of each element's states, such as hover, loading and error, and what happens.
+    - name: Responsive Behavior
+      contains: A table of what changes on desktop, tablet and mobile.
+    - name: Edge Cases
+      contains: Rules for empty data, long text, loading and error appearance.
+    - name: Animation / Motion
+      contains: A table of each element, its trigger, the animation, the duration and the easing.
+    - name: Accessibility Notes
+      contains: Focus order, labels needed and keyboard use.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs the numbers before it suggests teaching moves.
 new_slug: quiz-and-dashboard-data-reader
 name: Quiz and dashboard data reader
-summary: Paste your quiz results or LMS numbers. Get what they say and what to
-  do in class next.
+summary: Paste your quiz results or LMS numbers and get a plain reading of what they show, plus what to do in class next. A quiz data reader for teachers.
 job: teach-and-train
 headline: Quiz and dashboard data reader
-subhead: Your quiz results or LMS numbers turned into a plain statement of what
-  is going on, and what to do in class next. It helps you avoid acting on a
-  number that means less than it looks.
+subhead: Your quiz results or LMS numbers turned into a plain statement of what is going on, and what to do in class next. It helps you avoid acting on a number that means less than it looks.
 explain: |
   Your quiz results or LMS numbers turned into a plain statement of what is going on, and what to do in class next. It helps you avoid acting on a number that means less than it looks.
 
@@ -18,6 +15,10 @@ when:
   - The LMS shows low engagement and you need to know if it matters.
   - You must decide whether to reteach a topic or move on.
   - You want to read a dashboard without being misled by it.
+not_for:
+  - "You want to judge one student's grade or make a high-stakes call about a single child: use your own marking and your school's assessment process."
+  - "You need to write better quiz questions: use a diagnostic question designer if you have one, or ask a colleague to review them."
+  - "You have no data yet, only a hunch: collect a short quiz first, then come back."
 you_give:
   - Quiz results or LMS data pasted in
   - The decision you need to make
@@ -28,7 +29,26 @@ you_get:
   - Teaching actions for next class
   - Follow-up checks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your quiz results or LMS numbers as text. Say what was measured and how.
+  - Say the decision you face, such as reteach or move on.
+  - Add student level, subject or last year's results if you have them (optional).
+  - Read What the Data Does NOT Show first, then pick one or two actions to try this week.
+output_sample:
+  input:
+    - Your quiz results or LMS numbers, pasted as text
+    - The decision you need to make
+    - Student level or subject (optional)
+    - Last year's results or other baseline data (optional)
+    - How soon you must act (optional)
+  output:
+    - name: What the Data Shows
+      contains: The patterns, outliers and trends in your numbers, explained in plain teacher-friendly terms.
+    - name: Actionable Patterns
+      contains: The patterns that point to a teaching action, ranked by how urgent they are and how sure the reading is.
+    - name: Recommended Actions
+      contains: Specific teaching moves you can do in your next lessons, tied to your decision.
+    - name: What the Data Does NOT Show
+      contains: The limits of the numbers, so you do not act on more than they can tell you.
+    - name: Quick Reference
+      contains: A short summary of the reading and the next steps.

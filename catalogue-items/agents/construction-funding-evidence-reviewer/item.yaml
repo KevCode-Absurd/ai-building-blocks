@@ -1,33 +1,26 @@
 slug: construction-funding-evidence-reviewer
 name: Construction funding evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Review changed build costs and draw dates. Recheck interest and available funding, with any completion shortfall shown openly.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - reconcile-construction-draws-and-completion-funding
   - construction-interest-schedule-builder
 steps:
   - uses: reconcile-construction-draws-and-completion-funding
-    note: Run the governing workflow when A certified cost, actual debt draw date, completion estimate or usable commitment changes.
+    note: Run the governing workflow when a certified cost, an actual debt draw date, the completion estimate or a usable commitment changes.
   - uses: construction-interest-schedule-builder
-    note: If actual draw timing differs from the prior assumption, recalculate capitalized interest with the evidenced timing fraction and test final debt against remaining commitment. Preserve uncovered interest as a funding gap.
+    note: If a draw happened on a different date from the earlier plan, rerun the interest for that year with the share of the year the bank notice supports. Test the final loan, interest included, against the commitment left, and keep any uncovered interest as a funding gap.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It moves no money, contacts no lender and is not a substitute for a qualified project finance or audit review.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

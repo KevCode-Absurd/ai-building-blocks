@@ -1,6 +1,6 @@
 new_slug: price-drop-rules-writer
 name: Price drop rules writer
-summary: Share your holdings plan and money needs. Draft calmer price-drop rules while keeping documented checks, notices and response deadlines in place.
+summary: Write calm price-drop rules for your investments before the next fall. Get a one-page card that keeps required checks, notices and deadlines in place.
 job: money-and-investing
 thinking: medium
 thinking_why: It writes a rule card from your plan and a few honest answers. The steps are fixed, and the care is in matching rules to you.
@@ -14,6 +14,10 @@ when:
   - You hold investments and want rules in place before the next fall.
   - You sold in a panic once and do not want to do it again.
   - You are about to put more money in and want a calm plan for the bumps.
+not_for:
+  - "You hold a loan secured on your investments or face a margin or collateral deadline: talk to your financial adviser or lender first, since this card cannot set the response."
+  - "You have one big cash need due soon: ask a licensed financial adviser how to fund it, not a rule card."
+  - "You want to know what to buy or sell: see a licensed financial adviser, since this skill never names a trade."
 you_give:
   - Your holdings plan, with what you hold, how long, and the facts behind each
   - Money needed and when, loans against holdings, and actual documented checks, notices, deadlines and responsible people
@@ -31,6 +35,32 @@ how_to_use:
   - Answer the half-value question in your own words. An unanswered question stays missing; the exercise does not diagnose your personal risk capacity.
   - Supply money needs and any documented loan, monitoring or response terms. Unknown requirements stay marked for the responsible adviser.
   - Review the proposed card, preserve required checks and deadlines, and choose a witness if useful. Sharing or contacting anyone needs your authorization.
+output_sample:
+  input:
+    - "Your holdings plan: what you hold, for how long, and the facts behind each"
+    - Money you need in the next five years, and any loan secured on your holdings
+    - Your honest answer to the half-value question
+    - Any written monitoring rules, notices or deadlines (optional)
+    - A review of your holdings by business results (optional)
+  output:
+    - name: Half-value exercise
+      contains: Your holdings total, the half figure, and your own sentence on what you would do.
+    - name: Money needed soon
+      contains: What you need in five years, any overlap with your holdings, and loan risk shown first.
+    - name: Required checks
+      contains: Documented monitoring, collateral and notice duties with deadlines, and unknown terms marked MISSING.
+    - name: Business facts
+      contains: The reasons you gave for holding each investment.
+    - name: Drop and jump rules
+      contains: Check, do and do-not lines for three drop sizes and for a rise of a quarter or more.
+    - name: Optional review routine
+      contains: Review dates you choose, kept apart from required checks.
+    - name: Traps and counters
+      contains: Three mind traps that may fit you, each with a counter-rule.
+    - name: Cooling line and witness
+      contains: A short note for the moment of urge, and a witness you choose or MISSING.
+    - name: Missing and checks missed
+      contains: Gaps in your inputs and any checks the draft failed, or none.
 how_it_works:
   - title: Runs the half-value test
     text: Halves your holdings on paper and asks what you would do.

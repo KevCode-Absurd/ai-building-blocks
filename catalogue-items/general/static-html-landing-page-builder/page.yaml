@@ -1,6 +1,6 @@
 new_slug: static-html-landing-page-builder
 name: Static HTML landing page builder
-summary: Turn checked page copy and layout into plain HTML and CSS, with accessible forms, local assets and hosting instructions.
+summary: Build a static HTML landing page from approved copy and layout. You get index.html, styles.css, a checks file and hosting steps.
 job: write-landing-page
 headline: Static HTML landing page builder
 subhead: A page you can host as plain files, without React or a build service.
@@ -11,6 +11,10 @@ explain: |
 when:
   - You need a landing page for static hosting.
   - You want HTML and CSS without React or npm.
+not_for:
+  - "You need a shop, a login or a database: use a hosted store builder or ask a web developer."
+  - "You need a site with many pages: use a site builder or a web developer."
+  - "You have no approved copy or layout yet: write and plan the page first, then come back."
 you_give:
   - Approved copy, layout and the full brief
   - Business facts and local assets
@@ -23,3 +27,24 @@ how_to_use:
   - Download the skill and add it to a coding environment.
   - Supply your brief, copy, layout and assets.
   - Review the source and checks before authorizing publication.
+output_sample:
+  input:
+    - Your approved page copy
+    - Your approved page layout
+    - Your original brief
+    - Your business facts and images
+    - Your form endpoint (optional)
+  prerequisites:
+    - An AI that can write files and open a local preview
+    - A browser check tool, or the checks are marked not run
+  output:
+    - name: index.html
+      contains: The landing page in plain HTML with labelled form fields, alt text and factual page title and description.
+    - name: styles.css
+      contains: Responsive styles with visible focus and reduced-motion support.
+    - name: assets/
+      contains: Your local images, sized for the web.
+    - name: checks.md
+      contains: What was checked on desktop, mobile, keyboard, links and form, and which checks were not run.
+    - name: README.md
+      contains: How to preview the page, host it as static files and set up the form.

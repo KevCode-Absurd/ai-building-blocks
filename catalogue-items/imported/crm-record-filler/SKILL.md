@@ -11,108 +11,105 @@ metadata:
 
 Enrich company and contact records in your CRM with up-to-date firmographic, technographic, and demographic data. This skill identifies gaps in existing records, sources enrichment data from available signals, merges and deduplicates entries, validates accuracy, and updates fields — giving sales teams cleaner data for segmentation, lead routing, and personalized outreach.
 
+## Before you start
+
+Ask once for any of these that are missing. If the user cannot give one, write MISSING and carry on. Never invent a value to fill a field. An empty field is better than a made-up one.
+
+1. The records to enrich: a pasted table or an exported file.
+2. The fields that matter most (for example industry, company size, job title).
+3. Fields that must never be overwritten (optional).
+4. The CRM name (optional).
+
+Tools this skill may need:
+
+- **Web search.** Without it, work only from what the user pastes and say so.
+- **Paid data services.** If the user wants a third-party provider, they need their own account and key. Never guess at what such a provider would return.
+- **Site terms.** Some sites, including LinkedIn and many directories, limit automated reading in their terms. Read public pages the user could open in a browser. Do not use scraping tools on sites whose terms forbid it. If a source needs a login or breaks its terms, skip it and say so.
+- **Personal data.** Company details are the default. Fill personal details (a person's title, direct phone or personal email) only for contacts the user already has a lawful reason to hold. In places with privacy law such as GDPR or CCPA, consent or another legal basis may be required. If unsure, fill company fields only and tell the user why. Do not look for personal mobile numbers or home details.
+- If the CRM has a built-in enrichment tool and its terms bar outside data, suggest the user use that instead.
+
 ## Workflow
 
-1. **Identify Gaps in CRM Data** — Audit the target CRM records to surface missing or outdated fields. Common gaps include annual revenue, employee count, industry classification, technology stack, direct phone numbers, verified email addresses, and current job titles. Prioritize fields that directly impact lead scoring and routing logic.
+1. **Identify Gaps in CRM Data** — Audit the target CRM records to surface missing or outdated fields. Common gaps include annual revenue, employee count, industry classification, technology stack, current job titles, and business contact details already held. Prioritize fields that directly impact lead scoring and routing logic.
 
-2. **Source Enrichment Data** — Pull data from company websites, LinkedIn profiles, SEC filings, job postings, DNS/TXT records (for tech stack detection), press releases, and third-party data providers. Cross-reference at least two independent sources per data point to reduce single-source risk.
+2. **Source Enrichment Data** — Look in places the user could also open: the company website, job postings, press releases, public filings, public DNS records (for tech stack hints), and a data provider the user has an account with. Cross-reference at least two independent sources per data point where possible.
 
-3. **Match and Merge Records** — Align enrichment data to CRM records using deterministic matching on domain, email, or unique identifiers, supplemented by fuzzy matching on company name and location. Deduplicate records where enrichment reveals two CRM entries represent the same entity, preserving the most complete record as the primary.
+3. **Match and Merge Records** — Align enrichment data to CRM records using deterministic matching on domain, email, or unique identifiers, supplemented by fuzzy matching on company name and location. When enrichment suggests two CRM entries are the same entity, flag them for merge review. Do not merge them.
 
-4. **Validate Accuracy** — Apply confidence scoring to each enriched field. Flag data points sourced from a single unverified origin as low-confidence. Cross-check revenue and headcount against recent earnings reports or LinkedIn company pages. Validate email deliverability and phone connectivity where possible.
+4. **Validate Accuracy** — Give each new value one confidence level (see Confidence scale). Cross-check revenue and headcount against a second source where one exists. Do not claim an email or phone was verified unless a check was actually run.
 
-5. **Update CRM Fields** — Write validated enrichment data back to the CRM, respecting field-level permissions and avoiding overwrites of manually verified data. Log all changes with timestamps and source attribution for audit trails. Trigger downstream automations (lead scoring recalculation, territory reassignment) based on newly populated fields.
+5. **Show the changes** — Present a before and after table. Do not write anything to a CRM. The user decides what to copy in. Respect any fields the user marked as protected, and never overwrite manually verified data. Log each change with source and date.
+
+## Confidence scale
+
+Use these three levels and no others. Put every value in exactly one.
+
+- **High:** two independent sources agree.
+- **Medium:** one reliable source, such as the company's own site or a public filing.
+- **Low:** one weak source, an estimate, or an old page. Put it in the review list. Do not recommend writing it to the CRM until a person checks it.
+
+## Output Format
+
+For each record:
+
+```
+RECORD: <company or contact>
+| Field | Old value | New value | Source | Confidence |
+|---|---|---|---|---|
+| <field> | <blank or old> | <new> | <where> | High, Medium or Low |
+
+REVIEW LIST
+- <field>: <why it needs a person>
+
+DUPLICATES
+- <record A> and <record B>: <why they look the same>
+
+CHANGE LOG
+<field> | <old> | <new> | <source> | <date>
+
+MISSING
+- <fields it could not find, and why>
+```
+
+After the last record, give a one-line count: fields filled, fields sent to review, fields not found.
 
 ## Usage
 
 Provide the CRM records (or describe the fields and current data) you want enriched, along with which fields to prioritize. Specify the CRM system if relevant (Salesforce, HubSpot, etc.) and any enrichment constraints.
 
 **Example prompt:**
-> Enrich this company record for NovaTech Solutions. Currently we only have the company name and domain (novatech.io). Fill in revenue, employee count, industry, headquarters, founding year, tech stack, and key contacts. Format as a before/after comparison.
+> Enrich this company record. We have the company name and domain only. Fill in industry, employee count, headquarters, founding year and tech stack. Format as a before/after comparison with a source and confidence for each value.
 
-## Examples
+## Illustration (made up, to show the layout only)
 
-### Example 1: Company Record Enrichment
+The company, person and values below are invented for this example. They do not describe a real business. Real output uses real, sourced values only.
 
-**Input:** Sparse CRM record for NovaTech Solutions.
+| Field | Old value | New value | Source | Confidence |
+|---|---|---|---|---|
+| Company Name | Example Co | Example Co, Inc. | Company website footer | Medium |
+| Industry | — | Software | Company website, public filing | High |
+| Employee Count | — | 200 to 300 | Company site "About" page | Medium |
+| Headquarters | — | Austin, TX | Company website footer | Medium |
+| Tech Stack | — | PostgreSQL | One job posting | Low |
 
-**Before:**
-
-| Field | Value |
-|---|---|
-| Company Name | NovaTech Solutions |
-| Domain | novatech.io |
-| Industry | — |
-| Annual Revenue | — |
-| Employee Count | — |
-| Headquarters | — |
-| Founded | — |
-| Tech Stack | — |
-| LinkedIn URL | — |
-
-**After Enrichment:**
-
-| Field | Value | Source | Confidence |
-|---|---|---|---|
-| Company Name | NovaTech Solutions, Inc. | SEC filing | High |
-| Domain | novatech.io | Existing | — |
-| Industry | Enterprise Software (SaaS) | LinkedIn + Crunchbase | High |
-| Annual Revenue | $42M ARR | Crunchbase Series C filing | Medium |
-| Employee Count | 280 | LinkedIn company page | High |
-| Headquarters | Austin, TX | Company website footer | High |
-| Founded | 2017 | Crunchbase | High |
-| Tech Stack | AWS, React, PostgreSQL, Snowflake, Segment | DNS records + job postings | Medium |
-| LinkedIn URL | linkedin.com/company/novatech-solutions | LinkedIn search | High |
-
-**Fields added:** 7 of 7 gaps filled. Revenue flagged as medium confidence (sourced from fundraising disclosure, not audited financials).
-
----
-
-### Example 2: Contact Record Enrichment
-
-**Input:** Contact record with only name and email.
-
-**Before:**
-
-| Field | Value |
-|---|---|
-| First Name | Sarah |
-| Last Name | Nguyen |
-| Email | s.nguyen@novatech.io |
-| Title | — |
-| Phone | — |
-| LinkedIn | — |
-| Location | — |
-| Reports To | — |
-
-**After Enrichment:**
-
-| Field | Value | Source | Confidence |
-|---|---|---|---|
-| First Name | Sarah | Existing | — |
-| Last Name | Nguyen | Existing | — |
-| Email | s.nguyen@novatech.io | Existing (verified deliverable) | High |
-| Title | VP of Engineering | LinkedIn profile | High |
-| Phone | +1 (512) 555-0173 | Company directory page | Medium |
-| LinkedIn | linkedin.com/in/sarah-nguyen-eng | LinkedIn search | High |
-| Location | Austin, TX | LinkedIn profile | High |
-| Reports To | James Park, CTO | LinkedIn org chart + press release | Medium |
-
-**Fields added:** 5 of 5 gaps filled. Phone flagged as medium confidence (directory pages can lag behind extensions changes).
+Review list: Tech Stack (one job post only). Fields filled: 4. Sent to review: 1. Not found: 0.
 
 ## Best Practices
 
 - Always enrich the company record before enriching associated contacts — firmographic context improves contact validation.
-- Set confidence thresholds for auto-update vs. manual review; fields below 70% confidence should be queued for human verification.
-- Preserve manually entered data by default; only overwrite when enrichment data has demonstrably higher confidence and recency.
+- Preserve manually entered data by default; only suggest an overwrite when new data is clearly more recent and rated High.
 - Run enrichment on a recurring schedule (monthly for active pipeline accounts, quarterly for nurture) rather than one-off batches.
-- Log every field change with source and timestamp so sales reps can assess trustworthiness.
+- Log every field change with source and date so sales reps can assess trustworthiness.
 - Respect data privacy regulations (GDPR, CCPA) — do not enrich with personal data where consent requirements are unmet.
 
 ## Edge Cases
 
 - **Domain mismatch or redirect** — When a company domain redirects to a parent org, verify whether the CRM record refers to the subsidiary or parent before merging firmographic data.
-- **Stale LinkedIn data** — Job titles on LinkedIn can lag real-world changes by months. Cross-reference with recent press releases, company announcements, or email signature blocks for current titles.
-- **Duplicate records post-enrichment** — Enrichment may reveal that two CRM accounts (e.g., "NovaTech" and "NovaTech Solutions Inc.") are the same entity. Flag for merge review rather than auto-merging to prevent accidental data loss.
-- **Private companies with no public financials** — Revenue and funding data may be unavailable or speculative. Mark these fields as estimates with explicit confidence bands (e.g., "$30M–$50M estimated ARR").
-- **Contacts with common names** — When matching contacts by name alone, require a secondary identifier (domain, company, location) to avoid false positive matches. Never enrich a contact record based solely on name similarity.
+- **Stale job titles** — Titles found online can lag real changes by months. Mark them Medium at best, and cross-check with a recent press release or announcement where possible.
+- **Duplicate records post-enrichment** — Enrichment may reveal that two CRM accounts (e.g., "Example" and "Example Co Inc.") are the same entity. Flag for merge review rather than merging, to prevent data loss.
+- **Private companies with no public financials** — Revenue and funding data may be unavailable or speculative. Give a range, mark it as an estimate, and rate it Low.
+- **Contacts with common names** — When matching contacts by name alone, require a secondary identifier (domain, company, location). Never enrich a contact based solely on name similarity.
+
+## Next steps
+
+Copy the High and Medium changes into your CRM. Have a person check the review list. Then use the Lead prioritizer to rank the updated records.

@@ -1,15 +1,13 @@
 slug: restate-research-capital-before-growth-modelling
 name: Restate research capital before growth modelling
-summary: Carry an explicit research cohort adjustment consistently into operating reinvestment and terminal assumptions.
+summary: Treat R&D spend as an asset before you model growth. Get a linked workbook with adjusted profit, reinvestment and a long-run growth check.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -43,3 +41,4 @@ credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+needs_mode: manual

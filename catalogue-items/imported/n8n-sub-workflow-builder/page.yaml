@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It splits a workflow by set rules and wires the parts.
 new_slug: n8n-sub-workflow-builder
 name: n8n sub-workflow builder
-summary: Give it a long n8n workflow. Get reusable sub-workflows with clear
-  inputs that your agents can also call.
+summary: Split a long n8n workflow into small sub-workflows with named inputs. Your parent flow gets shorter and your agents can call each piece.
 job: connect-tools
 headline: n8n sub-workflow builder
-subhead: A long n8n workflow split into small, reusable pieces. Each piece has
-  named inputs and a clear output, like a function, so you fix a bug once
-  instead of in five copies.
+subhead: A long n8n workflow split into small, reusable pieces. Each piece has named inputs and a clear output, like a function, so you fix a bug once instead of in five copies.
 explain: |
   A long n8n workflow split into small, reusable pieces. Each piece has named inputs and a clear output, like a function, so you fix a bug once instead of in five copies.
 
@@ -18,6 +15,10 @@ when:
   - One workflow has grown so large that nobody wants to edit it.
   - You want an AI agent to call a workflow as a tool.
   - A teammate keeps rebuilding something you already made.
+not_for:
+  - "You need a brand new n8n workflow from scratch: ask your AI to build it in n8n first, then come back to split it."
+  - "Your logic is used once and is short: leave it in the parent workflow, since a sub-workflow adds a step with no gain."
+  - "You only want to fix a broken node or a failing credential: debug that node directly in n8n or ask a teammate who owns the workflow."
 you_give:
   - The workflow or steps to split out
   - A list of your existing workflows (optional)
@@ -29,8 +30,33 @@ you_get:
   - A findable name
   - A parent workflow that is shorter and simpler
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can use the n8n MCP tools.
+  - Connect the n8n MCP tools to your AI first. This skill works best when your AI can read and create workflows in n8n.
+  - Paste the skill instructions into your AI, or upload the skill folder if your tool takes files.
+  - Paste the long workflow or the steps to split out. Add what the piece should accept and return, and whether the caller should wait.
+  - Let your AI list your existing workflows. Check that it reuses one if a good match exists.
+  - Read the plan before it builds. Approve anything that sends, writes, deletes or costs money.
+  - Open the parent in n8n and run it once with test data to check the call settings.
+output_sample:
+  input:
+    - The long n8n workflow, or the steps you want to split out
+    - A list of your existing workflows (optional)
+    - What the new piece should accept and return
+    - Whether the caller should wait for the answer
+  prerequisites:
+    - An AI that can use the n8n MCP tools, connected to your n8n
+    - Permission to read your workflow list, and to create workflows in n8n
+  output:
+    - name: Existing workflow check
+      contains: A search of your workflow names, with any sub-workflow that already does the job and will be reused.
+    - name: Split decision
+      contains: Which steps become a sub-workflow and which stay in the parent, with a short reason.
+    - name: Execute Workflow Trigger inputs
+      contains: The named, typed input fields the sub-workflow accepts, so callers and agents know what to send.
+    - name: Return node
+      contains: A final step that shapes the result so every caller gets the same clear output.
+    - name: Parent call settings
+      contains: "How the parent calls it: once for all items or once per item, and wait or not wait."
+    - name: Discoverable name
+      contains: A verb-first name and short description so others find the sub-workflow instead of rebuilding it.
+    - name: Agent tool setup
+      contains: How an AI agent can call the sub-workflow as a tool, when you ask for that.

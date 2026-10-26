@@ -1,55 +1,115 @@
 new_slug: supplier-correction-evidence-review-assistant
 name: Supplier correction evidence review assistant
 headline: Supplier correction evidence review assistant
-summary: A sourced issue review, corrective procedure draft and follow up register.
+summary: Check supplier corrective action evidence against your acceptance standard. Get a sourced issue review and a follow-up register.
 job: plan-supply-chain
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A sourced issue review, corrective procedure draft and follow up register. Share actual supplier defects or delivery failures, inspection evidence, the approved acceptance standard and supplier response draft. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the supplier defects or late deliveries, your inspection evidence, your acceptance standard and the supplier's reply. It builds a supplier corrective action review. What you verified stays apart from what the supplier says. It drafts the fix steps and a follow-up register. A fix stays open until the evidence meets your standard.
 explain: |-
-  A sourced issue review, corrective procedure draft and follow up register.
+  A supplier says the problem is fixed. Your inspector saw something different. The reply email is long, the lots are mixed up, and nobody wrote down what "fixed" means.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Root causes stay hypotheses until supported; no inspection, certification or corrective effectiveness is fabricated. Missing tools or evidence stay visible in the final summary.
+  This agent tracks each issue by ID and affected lot. It splits your inspection findings from the supplier's explanation, so a cause the supplier names stays a hypothesis until evidence supports it. When the supplier says a correction is complete, it compares what they sent with the acceptance requirement you approved, line by line. Effectiveness stays open until later lots show the fix held for the period your standard names.
+
+  You get a sourced review, a draft of the correction steps (containment, correction, evidence to collect and the effectiveness check) and a register of what the supplier has accepted to do. It drafts only. It does not decide product safety, certify anything or message the supplier. Lot acceptance rules and effectiveness windows come from your own standard, never from the agent.
 when:
-  - You need a sourced issue review, corrective procedure draft and follow up register.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A supplier sends back a corrective action reply and you need to check it against your standard.
+  - The same defect shows up in a second lot and you need to know if the first fix worked.
+  - An effectiveness review date is close and nobody has the evidence in one place.
+  - You take over a supplier file and need to know which issues are open and why.
+not_for:
+  - A single customer complaint or an internal process audit. This agent is for supplier defects and delivery failures.
+  - You are choosing between suppliers. Use the Supplier shortlist vetter.
+  - A safety, recall or regulator question. Take it to the qualified person. The agent does not judge safety or compliance.
+  - You only want a long supplier email turned into notes. Use the Source note summariser.
 you_give:
-  - Actual supplier defects or delivery failures, inspection evidence, the approved acceptance standard and supplier response draft. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - Supplier defects or delivery failures, each with an issue ID, a date and the affected lot (from your quality log or inspection reports)
+  - "Inspection evidence: results, measurements, photos or reports (from your receiving or quality checks)"
+  - "Your approved acceptance standard: what makes a lot acceptable and what proof a fix needs"
+  - The supplier's written response or draft corrective plan
+  - The effectiveness window your standard names, such as how many later lots to check (optional if it sits in the standard)
+  - Last review's record (optional, from the second run on)
 you_get:
-  - A sourced issue review, corrective procedure draft and follow up register.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - "A sourced issue review: each issue with the verified finding, the supplier's explanation and the evidence behind each"
+  - "A draft of the correction steps: containment, correction, evidence to collect and the effectiveness check"
+  - "A follow-up register: what the supplier accepted and what is only proposed, with owners and dates"
+  - "A status for each fix: evidence meets the standard, evidence falls short, or effectiveness not yet shown"
+  - MISSING lines for gaps, and a record to start the next review from
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent to Claude, ChatGPT or Gemini with its helpers, the Prepare a supplier corrective action review workflow and the Source note summariser. Or download the pack and attach it.
+  - Paste the issue list, inspection evidence, your acceptance standard and the supplier's reply. Say the review date. From the second review, paste last review's record.
+  - Read the status of each fix. Check one fix marked as meeting the standard against the real evidence.
+  - Fill in each MISSING line, especially owners and dates the supplier never gave.
+  - Send anything to the supplier yourself. The agent only drafts.
+  - In a chat-only tool, copy the record it gives you and paste it in next time. Installing sets up no schedule, so you start each run.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep issue ID, affected lot reference, accepted action, evidence version and effectiveness status. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A supplier sends corrective action evidence or an effectiveness review becomes due.
-  - title: Choose the next step
-    text: Run prepare-a-supplier-corrective-action-review for changed evidence or a due review. If a corrective action is claimed complete, compare actual evidence to the owner-approved acceptance requirement. Unverified effectiveness remains open.
-  - title: Check and save evidence
-    text: Root causes stay hypotheses until supported; no inspection, certification or corrective effectiveness is fabricated. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last review
+    text: Loads each issue ID, affected lot, accepted action, evidence version and effectiveness status. A first run builds a baseline with you.
+  - title: Sort the evidence
+    text: The Source note summariser splits your verified findings (defects, dates, lots) from the supplier's explanation. Causes the supplier names stay hypotheses.
+  - title: Compare with your standard
+    text: For each fix the supplier calls complete, lists the proof your standard requires next to the proof the supplier sent. Anything missing is named.
+  - title: Draft the correction steps
+    text: The Process and SOP writer drafts containment, correction, evidence collection and the effectiveness review, against your approval process. It prescribes no technical safety decision.
+  - title: Record commitments
+    text: The Executive action register keeper lists what the supplier has accepted, apart from what is only proposed, with source IDs and any missing owners or dates.
+  - title: Check and save
+    text: Checks that no inspection, certificate or effectiveness result is invented. Saves the files, a run log and the new record, and keeps the old record.
 output_shape: |-
-  Scope and source coverage
-  A sourced issue review, corrective procedure draft and follow up register.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SUPPLIER REVIEW <date>, supplier <name or ID>
+  <first baseline, or compared with <last review date>>
+
+  ISSUES
+  <issue ID> | lot <reference> | verified finding <what, source> | supplier says <explanation> | cause <hypothesis, not confirmed>
+
+  FIX CHECK
+  <issue ID> | claimed action | proof your standard needs | proof received | status <evidence meets standard | evidence falls short | effectiveness not yet shown>
+
+  CORRECTION STEPS (draft)
+  <issue ID> | containment | correction | evidence to collect | effectiveness check <window from your standard, or MISSING>
+
+  FOLLOW-UP REGISTER
+  <ID> | action | accepted by supplier <yes | proposed only> | owner <name or MISSING> | due <date or MISSING> | source <ID>
+
+  MISSING  <each gap>
+  CHECKS MISSED  <one line each, or none>
+  RECORD FOR NEXT REVIEW  <issue ID | lot | accepted action | evidence version | effectiveness status>
+output_sample:
+  input:
+    - Supplier defects or delivery failures, with issue ID, date and lot
+    - Your inspection evidence
+    - Your approved acceptance standard
+    - The supplier's response or corrective plan
+    - The effectiveness window from your standard (optional)
+    - Last review's record (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - The helper skills added, or the pack attached
+    - An acceptance standard that someone with authority approved
+  output:
+    - name: Sourced issue review
+      contains: Each issue with the finding you verified, the supplier's explanation and the evidence behind both. Causes stay hypotheses.
+    - name: Fix check
+      contains: For each fix the supplier calls complete, the proof your standard needs next to the proof received, and one status.
+    - name: Correction steps draft
+      contains: Containment, correction, evidence to collect and the effectiveness check for each issue, against your approval process.
+    - name: Follow-up register
+      contains: What the supplier accepted and what is only proposed, with source IDs, owners and dates, and gaps marked.
+    - name: Effectiveness list
+      contains: Issues where the window in your standard has not yet shown the fix held, so they stay open.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Every owner, date or proof the sources did not give, and every check that could not run.
+    - name: Record for the next review
+      contains: Issue ID, lot, accepted action, evidence version and effectiveness status.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Root causes stay hypotheses until supported; no inspection, certification or corrective effectiveness is fabricated.
+  - what: Acceptance standard
+    how: Paste your own standard, not a summary. Every fix is checked against its exact wording.
+  - what: Lot scope
+    how: Name the lots in the review, so evidence from other lots is not mixed in.
+  - what: Effectiveness window
+    how: State how many lots or how long a fix must hold. The agent never picks a window.
+  - what: Evidence you accept
+    how: List what counts as proof, such as inspection results or a measurement record. The check uses your list.
 judge:
   - Root causes stay hypotheses until supported; no inspection, certification or corrective effectiveness is fabricated.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +122,26 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep one record per supplier, with issue IDs that never change.
+  - Write down your acceptance standard once, with version and date, and paste it in every run.
+  - List who owns each kind of follow-up, so owners stop coming out as MISSING.
+  - Record checks that need a person, such as a quality lead confirming an inspection, and finish them before you rely on the review.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Keeps the record between reviews. In a plain chat tool you paste the record in each time.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your inspection reports or measurement records.
+    - The supplier's full reply and any attachments.
+    - Your supplier quality agreement, if you have one.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Corrective action
+    meaning: A fix the supplier makes so the same problem does not come back.
+  - term: Containment
+    meaning: A short-term step that stops a bad lot reaching customers.
+  - term: Nonconformance
+    meaning: A part or delivery that fails your standard.
+  - term: Effectiveness review
+    meaning: A later check that the fix held.
+  - term: Lot
+    meaning: One batch of goods from a supplier.

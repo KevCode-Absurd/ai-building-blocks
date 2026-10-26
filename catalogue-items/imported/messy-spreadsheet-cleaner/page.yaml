@@ -2,34 +2,86 @@ thinking: low
 thinking_why: It applies set cleaning rules.
 new_slug: messy-spreadsheet-cleaner
 name: Messy spreadsheet cleaner
-summary: Give it messy data. Get spacing, text numbers, dates and duplicates
-  fixed, with mixed columns flagged.
+summary: Clean a messy Excel sheet by fixing extra spaces, text numbers, mixed dates and duplicate rows. Columns that mix types get flagged. Your original stays.
 job: work-with-files
 headline: Messy spreadsheet cleaner
-subhead: A spreadsheet where the spaces, text-numbers, dates and duplicate rows
-  are fixed, and any column that mixes types is flagged for you to decide. Point
-  it at a sheet or a range and it does the sweep.
+subhead: Give it an Excel sheet, or a range in it. It checks every column, shows you the fixes it plans, then applies them in helper columns beside your original data. You get a cleaned copy and a list of columns to decide on.
 explain: |
-  A spreadsheet where the spaces, text-numbers, dates and duplicate rows are fixed, and any column that mixes types is flagged for you to decide. Point it at a sheet or a range and it does the sweep.
+  A messy spreadsheet has spaces that should not be there, numbers stored as text, dates in several formats and rows that repeat. Sums, filters and pivot tables break on all of these. This skill is an Excel data cleaner: it finds each problem and fixes it.
 
-  It first profiles each column to find the main type and the odd ones out. Then it hunts for the usual mess: extra spaces, mixed upper and lower case such as usa and USA, numbers stored as text with stray symbols, dates in several formats, and exact or near-duplicate rows. Fixes go through helper-column formulas in the .xlsx file, so the original stays visible. It follows Indian number and fiscal-year conventions.
+  It first looks at each column and works out what type it mostly holds. The odd cells stand out. Then it checks for extra spaces, mixed upper and lower case such as usa and USA, stray symbols in numbers, dates in different formats, blanks, errors and near-duplicate rows.
+
+  It shows a table of planned fixes before it changes anything. It writes each fix as a formula in a helper column, so the original stays visible. It asks before it removes duplicates or overwrites values, and it does one kind of fix at a time. An extra rule set for Indian fiscal years and lakh and crore applies only when your data uses them.
 when:
   - You pasted a CSV into Excel and the numbers will not add up.
   - A date column mixes 3/8/26 and March 8 2026.
-  - You have a customer list with repeated rows that differ only by spacing.
+  - A customer list has repeated rows that differ only by spacing or case.
   - Category names appear in three different spellings.
+not_for:
+  - "You have a database table or a file with many thousands of rows: use the data cleaner or a database tool, since this works on one Excel sheet at a time."
+  - "You need blanks filled in or odd values judged: use the data cleaner, which handles missing values and outliers."
+  - "The data is already clean and you want a summary: pair it with the data story writer after cleaning."
 you_give:
-  - An .xlsx file
-  - A cell range to clean (optional)
-  - Which columns matter most (optional)
+  - Your spreadsheet file (.xlsx)
+  - The cell range to clean, such as A1:F200 (optional)
+  - The columns that matter most (optional)
+  - How you want dates to look (optional)
 you_get:
-  - A cleaned sheet with fixes in helper columns
+  - A cleaned copy of your sheet, with fixes in helper columns
   - Dates and numbers in one format
-  - Duplicates marked or removed
-  - A list of columns with mixed types to review
+  - Duplicates marked, and removed only after you say yes
+  - A table of every fix: column, issue, count and fix used
+  - A list of columns that mix types, for you to review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and save spreadsheet files.
+  - Start a chat and add the skill. Attach your .xlsx file. Name the range or columns to clean, if you only want part of the sheet.
+  - Use an AI that can read and save spreadsheet files, such as Claude Code. A chat AI that cannot open files can still give you the formulas to paste.
+  - Read the table of planned fixes. Say yes, no or change for each kind of fix.
+  - Check the samples it shows after each kind of fix, such as spaces, case, numbers, dates, then duplicates.
+  - Open the cleaned copy. Spot-check a few rows against the original, and check the dates most closely.
+  - Decide what to do with the mixed-type columns it flagged. Then use the clean sheet for your sums or pivot tables.
+output_sample:
+  input:
+    - Your spreadsheet file (.xlsx)
+    - The cell range or columns to clean (optional)
+    - How you want dates to look (optional)
+  prerequisites:
+    - An AI that can read and save Excel files, or one that gives you formulas to paste
+  output:
+    - name: Cleaned copy
+      contains: Your sheet saved under a new name, with cleaned values in helper columns next to the originals.
+    - name: Planned fixes table
+      contains: Column, issue found, number of cells and the fix proposed, shown before any change.
+    - name: Sample after each fix
+      contains: A few before-and-after rows for spaces, case, numbers, dates and duplicates, for your approval.
+    - name: Before and after summary
+      contains: What changed in total, and what was left alone.
+    - name: Mixed-type columns
+      contains: Columns with numbers and text mixed, listed for you to decide.
+how_it_works:
+  - title: Scope the sheet
+    text: It uses your range, or the whole used range, and works out each column's main type.
+  - title: Find the issues
+    text: It checks spaces, case, numbers stored as text, dates, duplicates, blanks, mixed types, odd characters and errors.
+  - title: Propose fixes
+    text: It shows a table of every planned fix and waits for you.
+  - title: Apply with formulas
+    text: It writes each fix as a formula in a helper column, so the originals stay visible.
+  - title: Confirm each type
+    text: It shows a sample after each kind of fix and asks before the next one, and before it removes duplicates.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can open and save .xlsx files and write formulas into the sheet.
+    - name: Any good chat AI
+      why: It can plan the fixes and write the formulas, but you paste them into Excel yourself.
+  inputs:
+    - A note of how dates should read, such as day first or month first
+    - The list of valid category names, so spelling variants map to the right one
+    - Which columns identify a duplicate row, such as email or order number
+terms:
+  - term: Helper column
+    meaning: A new column next to your data that holds the cleaned version, made by a formula.
+  - term: Number stored as text
+    meaning: A number Excel treats as a word, so it will not add up.
+  - term: Near-duplicate
+    meaning: Rows that match except for spaces or capital letters.

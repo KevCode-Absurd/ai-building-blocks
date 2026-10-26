@@ -1,6 +1,6 @@
 new_slug: function-purity-refactor-planner
 name: "Function purity refactor planner"
-summary: "Paste a messy function. Get its hidden state listed, a safer version that uses only its inputs, and tests."
+summary: "Find the hidden state in a messy function. Get a pure version that uses only its inputs, a thin layer for outside effects, and tests."
 job: build-software
 thinking: high
 thinking_why: "It must trace every read and write across code, which needs careful step-by-step reading."
@@ -17,6 +17,10 @@ when:
   - A function gives different answers on different runs and you cannot see why.
   - You cannot write a test for a function without setting up half the program.
   - A change in one place keeps breaking something in another.
+not_for:
+  - "You want to explain finished code to a teammate: use the Code walkthrough writer."
+  - "You want to rework a whole program at once: start with a design review by a senior developer, then come back with one function."
+  - "You only need to move code around without changing what it does: use the Structure and behaviour change splitter."
 
 you_give:
   - The function, pasted in full, and the code it calls (the more the better)
@@ -34,6 +38,29 @@ how_to_use:
   - Say what it should do and describe the case where it goes wrong.
   - Read the hidden state list first. Correct anything it missed.
   - Run the tests against the old function and the new plan, and compare.
+output_sample:
+  input:
+    - One function, pasted in full
+    - The code that calls it (optional)
+    - What it should do and one case where it goes wrong (optional)
+    - How often it runs, and any speed or memory limits (optional)
+  output:
+    - name: The function and its job
+      contains: Which function was chosen, why it was chosen, and what it should do.
+    - name: Hidden state
+      contains: Every outside value it reads or changes, marked Read, Changed or Both, with gaps marked MISSING.
+    - name: The comment to add above it
+      contains: The hidden state list, written as a short comment you can paste above the function.
+    - name: Pure version
+      contains: The inputs it takes and the result it returns, as a plan or short code.
+    - name: Thin outside layer
+      contains: A small wrapper that gathers inputs, calls the pure function and writes results back out.
+    - name: Tests
+      contains: At least five cases with plain inputs and expected outputs, including your failing case.
+    - name: Cost of copying
+      contains: What is copied, how big it is, and where changing in place is still worth it.
+    - name: Missing and checks missed
+      contains: What would change the plan, and one line for each check still missed, or none.
 
 how_it_works:
   - title: Picks one function

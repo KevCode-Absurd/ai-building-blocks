@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It adds up and sorts order lines.
 new_slug: top-product-ranker
 name: Top product ranker
-summary: Pick a date range. Get your products ranked by revenue, units sold and
-  refund rate.
+summary: Rank your best selling products by revenue, units sold and refund rate for any date range in your Shopify store. Read-only, no changes made.
 job: run-your-store
 headline: Top product ranker
-subhead: Your products ranked by what they earn, so you know which ones to push
-  and which to drop. Choose any date range and see revenue, units sold and
-  refund rate side by side.
+subhead: Your products ranked by what they earn, so you know which ones to push and which to drop. Choose any date range and see revenue, units sold and refund rate side by side.
 explain: |
   Your products ranked by what they earn, so you know which ones to push and which to drop. Choose any date range and see revenue, units sold and refund rate side by side.
 
@@ -18,6 +15,10 @@ when:
   - A product sells a lot but you suspect high returns.
   - You are planning stock and need a ranked list.
   - You want to find weak products to retire.
+not_for:
+  - "You need stock forecasting across several stores: use your own inventory system or a spreadsheet."
+  - "Your shop is not on Shopify: ask your shop platform for a sales report instead."
+  - "You want to change prices, products or orders: this only reads orders, so use your Shopify admin."
 you_give:
   - Your store address
   - Shopify login with order read access
@@ -29,8 +30,25 @@ you_get:
   - Refund rate for each
   - A readable or JSON file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open an AI that can run Shopify CLI commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Log in to your store with the Shopify CLI. Your login needs permission to read orders.
+  - Paste the skill and give your store address, a start date and an end date.
+  - Start with a 30 day range. Wider ranges take longer on busy stores.
+  - Ask for a ranking by revenue, units or refund rate, and say how many products you want to see.
+  - Check the table. Net revenue is revenue after refunds. Refund rate is the refunded amount divided by gross revenue.
+output_sample:
+  input:
+    - Your store address
+    - Start and end dates
+    - "Ranking measure: revenue, units or refund rate (optional)"
+    - How many products to show (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - A Shopify login with permission to read orders
+  output:
+    - name: Ranked product table
+      contains: One row per product with rank, units sold, gross revenue, refunded amount, net revenue and refund rate.
+    - name: Outcome summary
+      contains: Orders processed, products ranked, date range, sort measure and error count.
+    - name: JSON results (optional)
+      contains: The same ranked rows as data, if you ask for json format.

@@ -1,6 +1,6 @@
 new_slug: risky-order-rule-writer
 name: "Risky order rule writer"
-summary: "Paste your order volume and chargebacks. Get rules by risk level and a chargeback watch line."
+summary: "Write rules for risky orders in your store. Give it your order volume, chargebacks and review time. You get rules by risk level and a chargeback watch line."
 job: protect-your-store
 thinking: low
 thinking_why: "It sets a short rule list from a few numbers."
@@ -17,6 +17,10 @@ when:
   - "You had your first chargeback."
   - "You get a few fake orders a week."
   - "You are not sure what to do with orders marked risky."
+not_for:
+  - "Your store gets under 100 orders a month: keep your platform's default fraud settings, as there is too little data to tune rules."
+  - "You need the full version with every check: use the Fraud rules setter."
+  - "Nobody can look at held orders: use flag-only rules, or ask your payment provider to review risky orders for you."
 
 you_give:
   - "Monthly orders and average order value (required)."
@@ -34,6 +38,27 @@ how_to_use:
   - "Under it, paste your details: monthly orders and average order value; chargebacks; payment setup; review time."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Your orders each month and average order value
+    - Your chargeback count and rate over the last 3 months (optional)
+    - Your payment setup, such as Shopify Payments or another gateway
+    - Who can review held orders, and hours a week
+  prerequisites:
+    - The risk ratings your platform already shows on each order
+  output:
+    - name: READ
+      contains: A one-line summary of your orders a month, chargeback rate and review hours.
+    - name: RULES
+      contains: What to do at low, medium and high risk, and when to cancel an order.
+    - name: REVIEW CHECKLIST
+      contains: Signs to look for when you check a held order.
+    - name: WATCH LINE
+      contains: Your chargeback rate now, the rate to act at, and the rate processors may flag.
+    - name: MONTHLY LOOP
+      contains: What to count each month and how to change one rule at a time.
+    - name: MISSING
+      contains: Any detail you did not give, so you can add it and run it again.
 
 how_it_works:
   - title: "Check the limits first"

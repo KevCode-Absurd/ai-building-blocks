@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads messy bills and judges where each one belongs.
 new_slug: vendor-bill-coder
 name: Vendor bill coder
-summary: Give it your vendor bills. Get each one read, coded and matched, with a
-  payment run ready for your approval.
+summary: Turn your vendor bills into coded entries and a payment run you approve. A simple vendor bill coder that reads, codes and matches each bill.
 job: track-numbers
 headline: Vendor bill coder
-subhead: Give it your vendor bills. Get each one read, coded and matched, with a
-  payment run ready for your approval. Bring your chart of accounts and jobs.
-  Use the result to plan your next step.
+subhead: Give it your vendor bills. Get each one read, coded and matched, with a payment run ready for your approval. Bring your chart of accounts and jobs. Use the result to plan your next step.
 explain: |
   The bill pile cleared in one sitting: every bill read, coded to the right account and job, checked against the order and receipt, and a proposed payment run waiting for your yes. Nothing is entered and nothing is paid until you approve.
 
@@ -18,6 +15,10 @@ when:
   - You suspect a supplier billed you twice.
   - You want to know who must be paid this week.
   - A supplier invoice was forwarded with no message and you need it coded.
+not_for:
+  - "You want to pay bills the tool has not checked: nothing is paid without your yes, so use your bank or accounting software to pay by hand."
+  - "Your bills are already paid and entered: ask your bookkeeper or use your accounting software's reports instead."
+  - "You have no purchase orders or receipts: the match step will be thin, so ask your AI to code and read the bills only."
 you_give:
   - "Your bills: inbox, PDFs or photos"
   - Your chart of accounts and jobs
@@ -29,10 +30,31 @@ you_get:
   - Match results and duplicate flags
   - A proposed payment run for approval
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+output_sample:
+  input:
+    - Your bills from an email folder, PDFs or phone photos
+    - Your chart of accounts and your jobs
+    - Purchase orders and receiving records (optional)
+    - A connection to your accounting software (optional)
+  prerequisites:
+    - An AI that can read your uploaded files
+    - An email or accounting connection only if you want bills pulled in or entries staged there
+  output:
+    - name: Bill list
+      contains: Each bill with its vendor, amount, due date and line detail, plus anything the AI could not read.
+    - name: Coding
+      contains: The account and job for every line, with a note when the AI is unsure.
+    - name: Match results
+      contains: How each bill lines up with its purchase order and receipt, and any exception in plain words.
+    - name: Flags
+      contains: Possible double billing, odd amounts, credits owed, and bills with changed bank or payee details to check by phone.
+    - name: Staged entries
+      contains: Entries ready for QuickBooks, Xero or NetSuite, held until you approve them.
+    - name: Payment run proposal
+      contains: Bills ranked by due date and cash available, held until you approve it separately.
+    - name: Vendor emails
+      contains: Drafts you can copy and send yourself when a vendor needs a question or correction.

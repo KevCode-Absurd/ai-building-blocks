@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: brief, required: true}
   - {type: copy_draft, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

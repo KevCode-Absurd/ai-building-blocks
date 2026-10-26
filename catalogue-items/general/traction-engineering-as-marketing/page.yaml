@@ -1,30 +1,26 @@
 new_slug: traction-engineering-as-marketing
 name: Free tool experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a free tool experiment for your SaaS. Paste your product link and get one small test with cost caps, measures and a go, revise or stop rule.
 job: build-product
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Free tool experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused engineering as marketing plan for your product. It reads the buyer
-  and offer, checks why this channel might work and writes a small test. The
-  default is SaaS; you can ask for general-business mode.
+  A focused engineering as marketing plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Prototype one narrow tool or even a manual version, test task completion with
-  relevant users, and measure interest in the adjacent product.
+  Prototype one narrow tool or even a manual version, test task completion with relevant users, and measure interest in the adjacent product.
 
 
-  Tool usage alone does not show demand for the paid product. Avoid a tool that
-  attracts a different audience or requires excessive maintenance.
+  Tool usage alone does not show demand for the paid product. Avoid a tool that attracts a different audience or requires excessive maintenance.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "Your buyer has no repeat task a calculator or small tool could solve: use a sales-led plan or paid ads instead."
+  - "You want to compare many growth channels at once: use the Traction workflow."
+  - "You need the tool built for you: hire a developer or use a no-code builder, then bring the spec back here."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -38,17 +34,42 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and hours limits (optional)
+    - Past tests and their results (optional)
+  prerequisites:
+    - An AI that can browse the web, or product page text you paste in
+  output:
+    - name: Recommendation
+      contains: Whether to test now, later, or skip because the fit is weak, with the reason.
+    - name: Evidence
+      contains: Each fact used, with its source link, access date and what it means for the plan.
+    - name: Buyer and useful action
+      contains: Who the buyer is and the first useful thing they do with your product.
+    - name: Channel mechanism
+      contains: How a free tool would lead this buyer to your paid product.
+    - name: Pilot
+      contains: The idea to test, the audience, the offer, what to build and who owns it.
+    - name: Limits
+      contains: Cash cap, hours cap and review date, marked as proposed or approved.
+    - name: Measurement
+      contains: What to track, which group to count, and how to credit results.
+    - name: Decision
+      contains: The rule for when to continue, revise or stop.
+    - name: Risks and next action
+      contains: The main ways the test could fail and the one step to take next.
+    - name: MISSING
+      contains: The facts the plan still needs from you.
 how_it_works:
   - title: Check 1
-    text: List calculators, graders, templates and small utilities the same buyer
-      would need before buying. Choose a single task with a clear answer.
+    text: List calculators, graders, templates and small utilities the same buyer would need before buying. Choose a single task with a clear answer.
   - title: Check 2
-    text: Describe the inputs, calculation or transformation, output and connection
-      to the core product. Keep the useful result easy to reach.
+    text: Describe the inputs, calculation or transformation, output and connection to the core product. Keep the useful result easy to reach.
   - title: Check 3
-    text: Bound implementation and maintenance cost, privacy requirements, error
-      cases and distribution. A useful prototype should precede a large
-      engineering project.
+    text: Bound implementation and maintenance cost, privacy requirements, error cases and distribution. A useful prototype should precede a large engineering project.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -62,21 +83,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - A popular free tool has no path to the main product. Identify the audience
-    or transition gap before adding features.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - A popular free tool has no path to the main product. Identify the audience or transition gap before adding features.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

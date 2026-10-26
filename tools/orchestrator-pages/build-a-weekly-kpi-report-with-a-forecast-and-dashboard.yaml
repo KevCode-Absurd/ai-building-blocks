@@ -1,6 +1,6 @@
 new_slug: build-a-weekly-kpi-report-with-a-forecast-and-dashboard
 name: Build a weekly KPI report with a forecast and dashboard
-summary: Describe your weekly numbers. Get a report you can rerun, a forecast and a shareable dashboard.
+summary: Build a weekly KPI report you can rerun, with a forecast that shows ranges and a dashboard page you can share. Describe your numbers to start.
 job: track-numbers
 thinking: medium
 thinking_why: Each step reads a table and the forecast is a standard method. A mid-level model is enough.
@@ -14,6 +14,10 @@ when:
   - You report the same numbers every Monday and rebuild them each time.
   - You want a forecast with a range, not a single guess, for the next quarter.
   - Your team keeps asking for a link to "the numbers".
+not_for:
+  - "You have under about twelve weeks of data: build only the report step and let the history grow, then add the forecast later."
+  - "You need a one-off chart of last month: make it in your spreadsheet, since this workflow is built for numbers you rerun every week."
+  - "You want ad ideas or copy, not numbers: this workflow does not write creative, so ask your AI to draft it directly."
 you_give:
   - A plain description of the report, with the numbers, the groups, the comparison and the period
   - A spreadsheet or export with at least two full seasons of weekly history (optional but best)
@@ -30,6 +34,24 @@ how_to_use:
   - Describe the report in your own words and attach the data. Answer its one or two questions, like which period each run covers.
   - Tell it how far ahead to forecast and which events to know about.
   - Open the finished page and check three numbers against your source.
+output_sample:
+  input:
+    - "A plain description of the report: numbers, groups, comparison and period"
+    - A spreadsheet or export with weekly history (optional, but best)
+    - How far ahead to forecast
+    - Known events such as promos or outages (optional)
+  prerequisites:
+    - An AI that can read files and build a spreadsheet and a web page, such as Claude with files
+    - The handoff pack zip from the workflow page
+  output:
+    - name: "Step 1: Report"
+      contains: Each metric with its formula, grouping, comparison and period, plus a workbook and a saved definition to rerun.
+    - name: "Step 2: Trend and forecast"
+      contains: Trend, seasons, spikes and dips with likely causes, and a forecast table with ranges and test error on held-back weeks.
+    - name: "Step 3: Dashboard"
+      contains: One shareable page with headline cards, a trend chart, a forecast chart and filters.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Fix the report
     text: Turns your description into metrics, groups, comparisons and a period, asks only about what is unclear, builds the workbook and saves the definition.

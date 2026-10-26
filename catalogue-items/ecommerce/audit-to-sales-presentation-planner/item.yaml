@@ -7,7 +7,7 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: audit_report
     required: true
 outputs:
   - type: document

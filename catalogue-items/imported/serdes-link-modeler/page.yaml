@@ -2,36 +2,62 @@ thinking: high
 thinking_why: Equalizer tuning needs careful analysis.
 new_slug: serdes-link-modeler
 name: SerDes link modeler
-summary: Describe a high-speed serial link. Get a model with equalizers tuned
-  and eye diagrams plotted.
+summary: "Build a SerDes link model in MATLAB: tune equalizers, plot eye diagrams and export IBIS-AMI files for PCIe, USB4 or PAM4 links."
 job: build-software
 headline: SerDes link modeler
-subhead: A working model of a high-speed serial link, with equalisation tuned
-  and eye diagrams plotted. It uses MATLAB's SerDes Toolbox and covers NRZ and
-  PAM links from PAM3 to PAM16.
+subhead: Give it a data rate and a channel. Your AI writes MATLAB code that builds the link model and tunes the equalizers. You get eye diagrams, jitter results and IBIS-AMI files.
 explain: |
   A working model of a high-speed serial link, with equalisation tuned and eye diagrams plotted. It uses MATLAB's SerDes Toolbox and covers NRZ and PAM links from PAM3 to PAM16.
 
   Start from a target data rate and channel loss, or from a reference design such as PCIe, USB4, DDR5 or UCIe. Load a Touchstone channel file, or model crosstalk. Then tune FFE, CTLE and DFE settings, sweep parameters, and check eye height, eye width, bathtub curves and jitter parts. The skill also builds IBIS-AMI models for transmitters, receivers, redrivers and retimers, and tests them against the behavioural model. It includes rules that avoid silent setup errors.
 when:
-  - You are designing a PCIe or PAM4 link and need to pick equaliser settings.
-  - You have measured channel S-parameters and want to see the eye.
-  - You need an IBIS-AMI model to share with a partner.
+  - You are designing a PCIe or PAM4 link and must pick equalizer settings.
+  - You have measured S-parameters for a channel and want to see the eye.
+  - A partner needs an IBIS-AMI model of your transmitter or receiver.
   - You want to sweep data rates and compare eye margin.
+not_for:
+  - "You have no MATLAB or SerDes Toolbox licence: ask a signal integrity engineer, or use a free circuit simulator."
+  - "You need a full board layout or 3D field solve of your channel: use a dedicated electromagnetic solver and bring the S-parameter file here."
+  - "You want a quick answer on cable length or loss: check the cable or connector datasheet instead."
 you_give:
-  - Target data rate and signalling type
-  - Channel data or loss profile
-  - MATLAB with SerDes Toolbox
-  - Compliance mask or jitter budget (optional)
+  - Your target data rate and signal type, such as NRZ or PAM4
+  - Your channel loss, or a Touchstone S-parameter file
+  - A reference design such as PCIe or USB4 (optional)
+  - Your compliance mask or jitter budget (optional)
+  - A MATLAB licence with the SerDes Toolbox, plus the Signal Integrity Toolbox to check AMI models, all paid
 you_get:
-  - A SerDes system model
-  - Tuned equaliser settings
-  - Eye diagrams and jitter breakdown
-  - IBIS-AMI model files
-  - Parameter sweep results
+  - A runnable MATLAB script with a parameters block and a section for each step
+  - Tuned FFE, CTLE and DFE settings
+  - Eye height, eye width and jitter results for each design
+  - A summary table that compares your designs
+  - IBIS-AMI model files, if you ask for them
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with SerDes Toolbox.
+  - Check that you hold MATLAB and the SerDes Toolbox licences. Your AI must be able to run MATLAB code.
+  - Paste the skill into your AI chat, or add the skill folder to your AI tool.
+  - Give your data rate, signal type and channel. For example, say a 10 Gb/s NRZ link with 15 dB loss at Nyquist.
+  - Ask for the model, the tuned equalizers and the eye plots. Read the eye height and width it reports.
+  - Ask for IBIS-AMI files only when the design looks right. Check that the compiled model matches the behavioural model.
+  - Run the script in MATLAB and change the parameters block to test other designs.
+output_sample:
+  input:
+    - Your target data rate and signal type (NRZ or PAM3 to PAM16)
+    - "Your channel: a loss profile, a Touchstone S-parameter file, or crosstalk details"
+    - A reference design such as PCIe, USB4, DDR5 or UCIe (optional)
+    - Your compliance mask or jitter budget (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB and the SerDes Toolbox, both paid licences
+    - Simulink, to export IBIS-AMI models (optional)
+  output:
+    - name: System setup
+      contains: The SerDes system with your data rate, signal type, channel and transmitter and receiver settings.
+    - name: Equalizer settings
+      contains: Tuned FFE, CTLE and DFE values, found by a sweep or an optimizer.
+    - name: Eye and jitter results
+      contains: Eye height, eye width, bathtub curves and a jitter breakdown for each design.
+    - name: Parameter sweep results
+      contains: A comparison of designs across the settings or data rates you chose.
+    - name: IBIS-AMI model files
+      contains: The .ami, .ibs and .dll or .so files for a transmitter, receiver, redriver or retimer.
+    - name: Validation check
+      contains: A test of the compiled model against the behavioural model.

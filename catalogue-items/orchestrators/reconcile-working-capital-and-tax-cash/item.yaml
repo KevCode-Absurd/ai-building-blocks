@@ -1,25 +1,18 @@
 slug: reconcile-working-capital-and-tax-cash
 name: Reconcile working capital and tax cash
-summary: Explain balance-sheet-to-cash differences through noncash operating movements and current tax payables.
+summary: "Explain the gap between balance sheet changes and cash flow, from operating working capital, currency moves, acquisitions and current tax paid."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - noncash-working-capital-bridge
   - constant-currency-revenue-bridge
@@ -39,6 +32,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This checks arithmetic and tracing against the figures you supply. It does not read your contracts, give advice or approve a payment. A person who knows the source documents must review it.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

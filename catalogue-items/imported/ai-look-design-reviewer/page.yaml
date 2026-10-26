@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores against a set rubric.
 new_slug: ai-look-design-reviewer
 name: AI-look design reviewer
-summary: Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a
-  ranked fix list.
+summary: Check your UI code for signs it looks AI-made. Get a 0 to 100 design score, the lines that cost points and a ranked fix list.
 job: design-work
 headline: AI-look design reviewer
-subhead: Your screen looks off and you cannot say why. This review finds the
-  reason. It reads your UI code, scores it from 0 to 100 and points to the exact
-  lines that make it look machine-made.
+subhead: Your screen looks off and you cannot say why. This review finds the reason. It reads your UI code, scores it from 0 to 100 and points to the exact lines that make it look machine-made.
 explain: |
   Your screen looks off and you cannot say why. This review finds the reason. It reads your UI code, scores it from 0 to 100 and points to the exact lines that make it look machine-made.
 
@@ -18,6 +15,10 @@ when:
   - You want a quality check on a page before you ship it.
   - An AI built your front end and you want to know what gives it away.
   - You need a ranked list of design fixes to hand to a developer.
+not_for:
+  - "You need backend code reviewed: ask a developer or a code review tool, as this only checks how screens look."
+  - "You need a logo or brand identity: work with a designer, as this does not create or judge brand marks."
+  - "You only want a colour contrast check: use a free contrast checker tool, as this covers much more than contrast."
 you_give:
   - UI code files or a folder (React, Tailwind or HTML)
   - The page or screen to focus on (optional)
@@ -28,8 +29,27 @@ you_get:
   - A ranked fix list
   - A short list of what already works
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat, or load the skill file if your AI takes files.
+  - Add your UI code. Paste one file, or give your AI the project folder if it can read files.
+  - Say which screen to focus on. Add your brand colours if you have them.
+  - Read the score and the fix list. Start with fix number 1, as it gains the most points.
+  - Ask your AI to apply the fixes if you want them done. It only reviews unless you ask.
+  - Run the review again after the fixes. Aim for about 80 or more, then ship.
+output_sample:
+  input:
+    - Your UI code files or a folder (React, Tailwind or HTML)
+    - The page or screen to focus on (optional)
+    - Your brand colours or design tokens (optional)
+  prerequisites:
+    - An AI that can read your project files, or code pasted into the chat
+  output:
+    - name: Design Score
+      contains: Your total out of 100, a letter grade from A to F and the file reviewed.
+    - name: Category breakdown
+      contains: A score for each of seven categories, with the line numbers that lost points.
+    - name: Fix first
+      contains: A ranked list of fixes, ordered by how many points each one would add.
+    - name: Re-score estimate
+      contains: A rough score you could reach after you apply the fixes.
+    - name: Folder summary
+      contains: For a folder, a one-line score per file, then the full breakdown of the lowest file.

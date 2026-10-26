@@ -1,11 +1,11 @@
 new_slug: weekly-one-on-one-prep-keeper
 name: Weekly one-on-one prep keeper
-summary: Give it last week's notes on each person you manage. Get this week's agenda, the praise and the hard point to raise.
+summary: Prepare for each one-on-one with last week's notes. You get an agenda per person, the praise to give and a plan for any problem that came up twice.
 job: lead-people
 thinking: high
 thinking_why: It reads notes about people, tells a pattern from a bad week and plans a conversation that must land well. Give it your strongest model.
 headline: Weekly one-on-one prep keeper
-subhead: Give it last week's notes for each person you manage. It carries open items forward, finds the specific win to praise, notices when a problem has repeated and plans how to raise it, then hands you a one-page agenda per person. You run the meeting. It never messages or records anything.
+subhead: Give it last week's one-on-one notes for each person you manage. It carries open items forward, finds a win worth praising, notices when a problem has come up two weeks running and plans how to raise it. You get a one-page one-on-one agenda per person. You run the meeting. It never messages or records anything.
 explain: |
   One-on-ones slide into status updates because nobody prepared. The manager arrives with a list of their own, the win from last week is forgotten, the problem that showed up twice is never raised because it is awkward, and the question "what could I do better?" is asked once and never acted on.
 
@@ -14,12 +14,18 @@ when:
   - You manage three or more people and your one-on-ones have become status meetings.
   - You keep forgetting to praise the thing that went well last week.
   - A problem has come up twice and you are not sure how to raise it.
+  - A new hire starts and you want a meeting rhythm that fits their first weeks.
+not_for:
+  - You manage one or two people. A shared note and a good question may be all you need.
+  - You are writing the end-of-quarter review. Use the Employee performance review writer, which reads these files.
+  - A problem is serious now, such as a safety issue or a policy breach. Raise it yourself at once. Do not wait for two weeks of notes.
+  - You want notes from a meeting turned into minutes or action items. Use the Rough-note meeting minutes writer.
 you_give:
-  - Last week's notes from each one-on-one and anything you noticed, per person
-  - Each person's name, job, time in it and current work
+  - Last week's notes from each one-on-one and anything you noticed, per person (rough one-liners are fine)
+  - Each person's name, job, time in the role and current work
   - Their objectives or key results this quarter (advised)
   - A yes if you want a status update for your own manager (optional)
-  - The person files, once they exist
+  - The person files from earlier weeks, once they exist (optional on week one)
 you_get:
   - A one-page agenda per person, their items first
   - One specific win per person and the exact praise
@@ -28,11 +34,36 @@ you_get:
   - Patterns stuck across the team, which may be yours to fix
   - A one-page status update for your manager, when asked
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to prepare this week.
-  - Keep your one-on-one notes in one private folder, one file per person, or paste them in the chat.
-  - On the first run, give each person's job and how new they are. It sets up the rhythm and the go-to question.
-  - Read each agenda before the meeting. Change what does not fit. Hold the meeting yourself.
-  - After the week, add your notes. Run it again next Monday.
+  - Open the agent in Claude, ChatGPT or Gemini, or paste it into a new chat. In Claude Code, add it as a skill or save it in .claude/agents so it can keep one file per person.
+  - Paste last week's notes for each person, or point it to your private folder of notes. Leave out anything you would not want written down.
+  - On the first run, give each person's job and how new they are. It sets up the rhythm and the go-to question, and starts the repeat check next week.
+  - Read each agenda before the meeting. Check that every win and every hard point comes from your notes. Change what does not fit.
+  - Hold the meeting yourself. Afterward, add your notes and run it again next Monday. At quarter end, hand the files to the Employee performance review writer.
+output_sample:
+  input:
+    - Last week's notes from each one-on-one, per person (rough lines are fine)
+    - Each person's name, job, time in the role and current work
+    - Their goals this quarter (advised)
+    - A yes if you want an update for your own manager (optional)
+    - Person files from earlier weeks, once they exist (optional)
+  prerequisites:
+    - Your notes about each person, kept where only you can read them
+    - Claude Code or similar, if you want it to keep one file per person
+  output:
+    - name: This week in one line
+      contains: How many one-on-ones, stuck items and hard points you have this week.
+    - name: Per-person agenda
+      contains: "One page per person: their items first, open items, the win, any hard point and the go-to question if due."
+    - name: Win and exact praise
+      contains: One specific win from your notes, the words to say and when to say them.
+    - name: Hard point plan
+      contains: "For a problem seen two weeks running: the behaviour, the likely reason and how to raise it."
+    - name: Team patterns
+      contains: Anything stuck for more than one person, which may be yours to fix.
+    - name: Your update
+      contains: A one-page status update for your manager, only if you ask, with private notes left out.
+    - name: Files and missing
+      contains: Each agenda file saved and every MISSING line.
 how_it_works:
   - title: Set up each person once
     text: Sets a meeting rhythm that tightens when someone is new, and writes your go-to question for asking them what to change.
@@ -114,7 +145,7 @@ improve:
   - Write each person's goals into their file before the first run.
   - Record what each person said to the go-to question and what you changed. The agent checks it before asking again.
   - Set the repeat rule to one week for a new person, where small things need raising early.
-  - Pair it with the Quarterly performance review keeper, which reads these files at quarter end.
+  - Pair it with the Employee performance review writer, which reads these files at quarter end.
 works_best_with:
   tools:
     - name: Claude Code

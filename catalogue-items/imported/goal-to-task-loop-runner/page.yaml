@@ -33,3 +33,28 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
   - It works best when your AI can run code and read your project files.
+not_for:
+  - You want to design a repeatable loop on paper, with no code running. Use the Agent loop designer.
+  - You only want to keep one to-do list up to date. Use the Task list keeper.
+  - Your goal is one small step. Just ask your AI to do it.
+output_sample:
+  input:
+    - Your goal, with the finished result named so it can be checked
+    - A folder of skills for the domain, or one of the 18 ready-made setups
+    - What must not change
+    - Who reviews the work when the loop gets stuck
+  prerequisites:
+    - An AI that can run Python and read and write files
+  output:
+    - name: Sharpening questions
+      contains: Asked when your goal is too vague, before any plan is made.
+    - name: plan.json
+      contains: The list of tasks, each with a check that a machine can run.
+    - name: state.json
+      contains: The saved status of every task, so a new session can pick up where the last stopped.
+    - name: Next-task directive
+      contains: The one task to do now, which skill to open and what to do next.
+    - name: Evidence log
+      contains: The result of each check, recorded by the controller and not by the AI.
+    - name: Close or escalate
+      contains: A finish only when every task is verified or waived, or a stop that tells you why it is stuck.

@@ -1,0 +1,149 @@
+name: Solution Engineer agent
+summary: "Plan a working GIS demo or proof of concept: what it must show, the simplest tools, build steps, a safe backup and what is not production ready."
+headline: Solution Engineer agent
+subhead: Give it the strategy or goal and the three to five things the demo must show. The agent picks the simplest tools, checks if the idea is feasible, and plans the build and a backup. You get a proof of concept plan.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A working demo beats a diagram. But a demo that breaks on stage, or hides what is not built yet, costs trust. This GIS proof of concept agent plans a demo that works, is honest, and answers one question: can this idea work with our data and tools?
+
+  It starts from the strategy or architecture, such as a plan from the Technical Consultant agent. It picks the three to five things the demo must show, then the simplest technology that shows them. It plans feasibility checks first: can the data be joined, does the service support that action, how will it run with a large number of features, and does a licence block the idea. Then it plans the build, a hardened demo that runs offline, and a backup.
+
+  It plans only. It cannot build or run the demo. It will not hide shortcuts: every prototype has them, so it lists them and marks what is production ready and what is proof only. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience claims and its one to two week target are the profile's own aims, not results measured by AI Blocks.
+when:
+  - A client or boss asks "can you show me?" before they approve a GIS project.
+  - You have an architecture plan and must prove the risky part works.
+  - You need a demo that runs without Wi-Fi at a conference or site visit.
+  - You must find out early if a data format, an API or a licence blocks your idea.
+not_for:
+  - "You need strategy, tool choice or a roadmap: use the Technical Consultant agent."
+  - "You need production ready software: use the Web GIS Developer agent and your engineering team."
+  - "You need your data cleaned in depth: use the Spatial Data Engineer agent."
+  - "You need the demo map styled: use the Cartography Designer agent."
+you_give:
+  - The strategy, architecture plan or goal, in a few lines
+  - The three to five things the demo must show
+  - "Your data: sources, formats and rough size"
+  - The tools and licences you have, such as ArcGIS Pro, ArcGIS Online, QGIS or PostGIS
+  - Where it will run, such as a laptop, a tablet or a phone, and whether Wi-Fi is certain
+  - The deadline and who will build it (optional)
+you_get:
+  - Success criteria for the demo
+  - The simplest technology path for each key interaction
+  - Feasibility checks with how to test each one
+  - A phased build plan with time limits
+  - "A demo safety plan: offline copy, saved data and a backup"
+  - A shortcuts list, and a table of what is production ready and what is proof only
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste the strategy or goal. Then list the three to five things the demo must show, and your data and tools. Never paste real keys. Use a placeholder.
+  - Say 'Plan this demo. Do not guess my data.' Your AI asks once for what is missing.
+  - Read the feasibility checks first. Run the risky ones before you build anything.
+  - Build the one path the client cares about most. Add polish last, and make the offline backup before the day.
+  - Hand the shortcuts list to the engineers who will build the real version.
+how_it_works:
+  - title: Collect the brief
+    text: It reads the goal and the key moments, and asks once for anything missing. It marks gaps as MISSING.
+  - title: Set success criteria
+    text: It defines what the demo must show to count as a pass.
+  - title: Choose the simplest path
+    text: It picks the tool for each task, such as ArcGIS Pro for analysis, ArcGIS Online for sharing and Python for automation.
+  - title: Check feasibility
+    text: It lists data, service, speed and licence risks, each with a quick test and a two hour limit on research.
+  - title: Plan the build
+    text: It plans data first, then the key path, then polish, with a test on the real device.
+  - title: Plan reliability and handoff
+    text: It plans an offline copy and a backup, and lists the shortcuts and what is proof only.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Goal <one line> | Audience <who> | Run on <device, offline or online>
+    Assumed: <list> | MISSING: <list>
+
+  SUCCESS CRITERIA
+    <number> | <what the demo must show> | <how you know it passed>
+
+  KEY INTERACTIONS AND TOOLS
+    <interaction> | <tool> | <why this is the simplest path>
+
+  FEASIBILITY CHECKS
+    <risk> | <quick test> | <if it fails>
+
+  BUILD PLAN
+    <phase> | <task> | <time limit> | <done when>
+
+  DEMO SAFETY
+    Offline copy <how> | Saved data <what> | Backup <screenshots, video or local version> | Traps <errors to catch>
+
+  SHORTCUTS
+    <shortcut> | <why taken> | <fix for production>
+
+  PRODUCTION READY OR PROOF ONLY
+    <part> | <status> | <what is needed>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - The strategy, architecture plan or goal
+    - The three to five things the demo must show
+    - Your data, tools and licences
+    - Where the demo will run
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A strategy or architecture plan, for example from the Technical Consultant agent (optional)
+  output:
+    - name: Brief and assumptions
+      contains: The goal, audience and device as understood, with assumptions and MISSING items.
+    - name: Success criteria
+      contains: What the demo must show to count as a pass, and how you will know.
+    - name: Key interactions and tools
+      contains: Each interaction with the simplest tool that shows it, and why.
+    - name: Feasibility checks
+      contains: Data, service, speed and licence risks, each with a quick test.
+    - name: Build plan
+      contains: Phases with tasks, time limits and a done-when line.
+    - name: Demo safety
+      contains: The offline copy, saved data, backup and errors to catch.
+    - name: Shortcuts and status table
+      contains: Each shortcut taken, and what is production ready or proof only.
+    - name: Open questions
+      contains: What is unknown and what each answer changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Key moments
+    how: Name the single workflow the audience cares about most. The plan builds that first.
+  - what: Time limit
+    how: Give your real deadline so the plan cuts scope to fit.
+  - what: Platform
+    how: Say if you must use Esri tools, open source tools or both.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Proof of concept
+    meaning: A small working build that shows an idea is possible. It is not a finished product.
+  - term: Feasibility
+    meaning: Whether the idea can work with your data, tools and rules.
+  - term: Architecture
+    meaning: The plan for how data, tools and apps fit together.
+  - term: REST API
+    meaning: A web address service that apps use to ask for or send data.
+  - term: Hardened demo
+    meaning: A demo prepared so common failures, such as no Wi-Fi, do not stop it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan works from a pasted profile and your brief.
+    - name: Claude Code
+      why: It can read your project and sample data, so the build plan fits what you have.
+  inputs:
+    - The architecture document from your consultant or team.
+    - A small sample of each data source.

@@ -1,6 +1,6 @@
 new_slug: campaign-link-tracker
 name: "Campaign link tracker"
-summary: "Give it your campaign and channels. Get tagged links, Shopify match rules and an attribution pick."
+summary: "Give it your campaign and channels. Get tagged links, Shopify match rules and the attribution model to start with, so you can see which channel sold."
 job: track-numbers
 thinking: low
 thinking_why: "It follows a fixed naming pattern and fills a table, so a small, fast model is enough."
@@ -17,12 +17,17 @@ when:
   - You are launching a sale or campaign on more than one channel and want to see which one sold.
   - You send links to influencers or event partners and want each one tracked.
   - Your marketing reports show most sales as direct traffic.
+not_for:
+  - "You run a single-channel promo and have nothing to compare: use Shopify's own reports instead."
+  - "You need tracking that does not rely on link tags: ask a developer to set up server-side tracking."
+  - "You want to read revenue by tag after the campaign: use a skill that reads your sales by source, not this one."
 
 you_give:
-  - Campaign name and dates
-  - The channels (Instagram, Facebook, TikTok, email, influencers)
+  - Your campaign name and dates
+  - Your channels, such as Instagram, Facebook, TikTok, email or influencers
   - The page each link goes to
-  - Existing traffic you want counted, such as a Shopify email or an ad (optional)
+  - "Your main question: awareness, final sales or the whole path (optional)"
+  - Shopify emails or ads that already run (optional)
 
 you_get:
   - Naming rules and a link sheet with tags for each channel
@@ -36,6 +41,32 @@ how_to_use:
   - Copy the links from the sheet into each platform. Use the exact tags.
   - Enter the match rules in Shopify's marketing area, one per source.
   - Each week, look at sessions, sales and orders per campaign, and change one thing.
+output_sample:
+  input:
+    - Your campaign name and dates
+    - Your channels, such as Instagram, Facebook, TikTok, email or influencers
+    - The page each link goes to
+    - "Your main question: awareness, final sales or the whole path (optional)"
+    - Shopify emails or ads that already run (optional)
+  prerequisites:
+    - A Shopify store with access to the marketing area
+  output:
+    - name: Naming rules
+      contains: The one campaign tag and the source tag for each platform, in the same style everywhere.
+    - name: Link sheet
+      contains: One row per channel with the destination page, the full tagged link and who uses it.
+    - name: Shopify match rules
+      contains: One rule per source, where the campaign tag and the platform tag must match.
+    - name: Partner links
+      contains: A separate trackable link for each influencer or event, with a QR code where it helps.
+    - name: Activities
+      contains: Existing traffic, such as a Shopify email or ad, added as a campaign activity.
+    - name: Attribution
+      contains: The model to start with and the reason, tied to your question.
+    - name: Weekly review
+      contains: What to read each week and the one thing to change.
+    - name: Limits
+      contains: Notes on untagged traffic and why platform reports may not match Shopify.
 
 how_it_works:
   - title: Names the campaign

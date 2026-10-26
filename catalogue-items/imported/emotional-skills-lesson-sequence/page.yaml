@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a lesson sequence in a set order.
 new_slug: emotional-skills-lesson-sequence
 name: Emotional skills lesson sequence
-summary: Give it your class and goal. Get lessons on naming and handling
-  feelings. Not medical or clinical advice.
+summary: Build an emotional skills lesson sequence for your class. Give it the problem and year group. You get lessons that help students name and manage feelings.
 job: teach-and-train
 headline: Emotional skills lesson sequence
-subhead: A short run of lessons that teach students to name feelings and handle
-  them, based on the RULER approach from Yale. Describe the situation in your
-  class, and you get a plan you can teach.
+subhead: A short run of lessons that teach students to name feelings and handle them, based on the RULER approach from Yale. Describe the situation in your class, and you get a plan you can teach.
 explain: |
   A short run of lessons that teach students to name feelings and handle them, based on the RULER approach from Yale. Describe the situation in your class, and you get a plan you can teach. This is classroom practice, not medical or clinical advice.
 
@@ -18,6 +15,10 @@ when:
   - Conflict keeps erupting at break time.
   - You want a ready sequence for a tutor group.
   - You want students to build words for their feelings.
+not_for:
+  - "A student shows signs of self-harm, safeguarding worries or lasting distress: go to your pastoral lead or school counsellor, and use this only alongside their support."
+  - "You need a diagnosis, therapy or treatment for a student: ask a qualified clinician, as this plan is classroom practice only."
+  - "You need a plan for a single quick check-in with no lessons: use the Mood Meter on its own with your class."
 you_give:
   - The situation in your class
   - Year group
@@ -29,7 +30,26 @@ you_get:
   - Activities and prompts
   - Teacher notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
+  - Describe what is happening in your class and name the year group.
+  - Add your time, your subject and what students know about RULER, if you wish.
+  - Read the plan. Check it fits your school's wellbeing policy before you teach it.
+  - After the first step, look at how students placed themselves on the Mood Meter. Use that to adjust later lessons.
+output_sample:
+  input:
+    - The situation in your class, such as anxiety before exams or conflict
+    - Your students' year group
+    - Time you have, such as tutor time or a full lesson (optional)
+    - Your subject (optional)
+    - Whether students know the Mood Meter, Meta-Moment or Blueprint (optional)
+  output:
+    - name: RULER Sequence
+      contains: A title for your class situation, followed by the full plan.
+    - name: Teacher Modelling
+      contains: How you show your own feelings and calming steps to the class before students try them.
+    - name: Sequence Steps
+      contains: Lesson steps in order, each using a RULER tool such as the Mood Meter, with activities and prompts.
+    - name: Academic Integration
+      contains: Ways to bring the same feeling skills into your subject lessons.
+    - name: Sustaining the Practice
+      contains: Simple habits to keep the skills in use after the sequence ends.

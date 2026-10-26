@@ -2,36 +2,60 @@ thinking: medium
 thinking_why: It queries public data and must separate sampling gaps from real change.
 new_slug: virus-variant-trend-reader
 name: Virus variant trend reader
-summary: Name a virus and a region. Get current lineages, weekly sequence shares
-  and mutation frequencies from public data.
+summary: Find which virus variants are showing up in public sequence data. Get weekly lineage shares and mutation frequencies for a region.
 job: track-numbers
 headline: Virus variant trend reader
-subhead: A plain summary of which virus lineages are showing up in public
-  sequence data for a region, week by week. It is built for questions like what
-  is circulating now, and it will not answer from memory or old examples.
+subhead: Name a virus and a region. Your AI queries public sequence databases and reports which lineages are common, week by week. It also checks what each lineage name means today and warns where the data is thin.
 explain: |
   A plain summary of which virus lineages are showing up in public sequence data for a region, week by week. It is built for questions like what is circulating now, and it will not answer from memory or old examples.
 
   You name the virus and the place. The skill runs small Python scripts that query open sequence databases, then reports the current lineages, their weekly shares and common mutations. It checks what a lineage name means today. It also keeps reminding you that sequence counts are not case counts, and that a rising share can come from changes in sampling rather than real growth. It needs Python and internet access, but no login.
 when:
-  - You need to know which variants are most common in submitted sequences this
-    month.
+  - You need to know which variants are most common in submitted sequences this month.
   - You are writing a report and want mutation frequencies for a lineage.
-  - You want to see whether a lineage share is truly rising or just sampled more.
+  - You want to see whether a lineage share is rising or just sampled more.
   - You need to check what a lineage name means now.
+not_for:
+  - "You want case counts or how many people are infected: ask your local health agency, because sequence counts are not case counts."
+  - "You need medical advice, outbreak advice or a view on how a variant acts: ask a public health expert."
+  - "You have no way to run Python or reach the web: this skill cannot fetch data, so read the agency's own variant reports instead."
 you_give:
   - The virus, such as SARS-CoV-2 or influenza
   - A country or region
   - A time window
   - A lineage or mutation of interest (optional)
 you_get:
-  - Current top lineages with weekly sequence shares
-  - Mutation frequencies
-  - Notes on sampling limits
-  - The queries used, so you can repeat them
+  - A table of top lineages with weekly counts, share with an interval, date range and flagged weeks.
+  - Mutation frequencies for a lineage, or a comparison of two.
+  - Notes on sampling limits and weeks that are not yet complete.
+  - The queries and data version used, so you can repeat the run.
+  - "Next step: check the flagged weeks before you draw conclusions, then cite the data source, filters and snapshot in your report."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can call public web APIs and run code.
+  - Use an AI that can run Python 3.11 or newer and reach the web, such as Claude with code running. No login is needed.
+  - Give it the skill and tell it your virus, region and time window.
+  - Ask it to check reporting delay first with the reporting_lag script, so you know which recent weeks to trust.
+  - Ask it to run lineage_prevalence for the top lineages, then resolve_lineage to check what each name means now.
+  - Ask for mutation_profile if you want mutation frequencies for a lineage.
+  - Read the flagged weeks and sampling notes before you use the numbers. This suits surveillance research, not general business reporting.
+output_sample:
+  input:
+    - The virus, such as SARS-CoV-2 or influenza
+    - A country or region
+    - A time window
+    - A lineage or mutation of interest (optional)
+  prerequisites:
+    - An AI that can run Python 3.11 or newer
+    - Internet access to public sequence databases (no login needed)
+  output:
+    - name: Reporting delay
+      contains: How long sequences take to appear after collection, so you know which recent weeks are still incomplete.
+    - name: Top lineages by week
+      contains: Each lineage, its weekly sequence count, its share with an interval, and the dates covered.
+    - name: Low-completeness flags
+      contains: Weeks marked low because they are recent, partial or have too few sequences.
+    - name: Lineage name check
+      contains: What each lineage name means today, including withdrawn, renamed or unknown names, and its descendants.
+    - name: Mutation frequencies
+      contains: How often each site changes in a lineage, with coverage, and a side-by-side view of two lineages if you ask.
+    - name: Provenance notes
+      contains: The filters, data version and queries used, so you can repeat the run.

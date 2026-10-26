@@ -44,11 +44,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Positioning grid builder.** Use the skill `positioning-grid-builder`. Maps your rivals on two extreme axes and picks the corner to own.
-2. **Positioning statement writer.** Use the skill `positioning-statement-writer`. Give it the competitor set from the steps before. Writes the one-line position and a brief from the corner you picked. Reads the grid from the step before.
-3. **Store name generator.** Use the skill `store-name-generator`. Give it the brief and the competitor set from the steps before. Generates and cuts names against the brief and the rivals' naming patterns. Reads the brief from the step before.
-4. **Store name tester.** Use the skill `store-name-tester`. Give it the shortlist and the competitor set from the steps before. Tests the shortlist for sound, spelling, meaning and fit. Reads the shortlist from the step before.
-5. **Brand name stretch checker.** Use the skill `brand-name-stretch-checker`. Give it the plan and the competitor set from the steps before. Checks the winning name still works when the range grows. Reads the position plan and rivals from earlier steps.
+1. **Positioning grid builder.** Use the skill `positioning-grid-builder`. Maps your rivals on two extreme axes and picks the corner to own. Hands the rival map to the position writer.
+2. **Positioning statement writer.** Use the skill `positioning-statement-writer`. Give it the competitor set from the steps before. Writes the one-line position and a brief from the corner you picked. Reads the grid from the step before. Hands the position plan and the brief to the name steps.
+3. **Store name generator.** Use the skill `store-name-generator`. Give it the brief and the competitor set from the steps before. Generates and cuts names against the brief and the rivals' naming patterns. Reads the brief from the step before. Hands a shortlist of names to the tester.
+4. **Store name tester.** Use the skill `store-name-tester`. Give it the shortlist and the competitor set from the steps before. Tests the shortlist for sound, spelling, meaning and fit. Reads the shortlist from the step before. Hands each name's keep, fix or drop call so you can pick the winner.
+5. **Brand name stretch checker.** Use the skill `brand-name-stretch-checker`. Give it the plan, the competitor set and the name test results from the steps before. Checks the winning name from step 4 still works when the range grows. Uses your brand file and the new product, plus the position plan and rivals from steps 1 and 2.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

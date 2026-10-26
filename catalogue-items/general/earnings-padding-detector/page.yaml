@@ -1,6 +1,6 @@
 new_slug: earnings-padding-detector
 name: "Earnings padding detector"
-summary: "Paste a company's statements and one-off table. Get accounting choices that lift profit, their size, and a clean, adjusted or avoid call."
+summary: "Check a company's profit for accounting choices that lift it. Paste its statements and get each effect sized, restated earnings and a clear call."
 job: money-and-investing
 thinking: high
 thinking_why: "It must link write-downs, cash flow, depreciation and share counts across years and judge a pattern without accusing anyone. That needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - A company's profit rises while its cash does not.
   - A big write-down was followed by a very good year.
   - You are about to rely on a profit figure to value a business.
+not_for:
+  - "You want a view on a bank or insurer: ask a licensed analyst, because these checks are built for ordinary companies."
+  - "You only have one year of accounts or a private company's figures: gather several years first, or ask an accountant."
+  - "You are making a large or personal money decision about a named company: talk to a licensed financial adviser."
 
 you_give:
   - The table and ordinary earnings from "One-off items separator", or several years of income statements
@@ -29,11 +33,37 @@ you_get:
   - Questions to put to the company
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the one-off table, then the balance sheets, cash flow and notes if you have them.
-  - Say what you are using the profit figure for.
-  - Read the call and the pattern before the individual findings.
-  - Take the restated earnings to "Earnings record reliability checker".
+  - Start a chat with your AI. Add the skill, or copy it and paste it in. It needs no code or web access.
+  - Paste the one-off table. Add balance sheets, cash flow and notes if you have them.
+  - Say what you will use the profit figure for.
+  - Read the call and the pattern first, then the single findings.
+  - Take the restated earnings to the Earnings record reliability checker.
+output_sample:
+  input:
+    - The one-off items table and ordinary earnings, or several years of income statements
+    - Balance sheets for the same years (optional)
+    - Cash flow statements for the same years (optional)
+    - Notes to the accounts (optional)
+    - What you will use the profit figure for
+  prerequisites:
+    - The one-off table from the One-off items separator, if you do not paste raw income statements
+  output:
+    - name: Four levers
+      contains: The four ways profit can be shaped, listed first so each check ties back to one.
+    - name: Findings
+      contains: Each check with its year, amount, whether it flatters or depresses profit, and its share of reported profit.
+    - name: Earnings
+      contains: Reported and restated earnings for each year, side by side.
+    - name: Pattern
+      contains: Whether the findings look like noise, an adjustment or a pattern of shaping, with the reason.
+    - name: Call
+      contains: Clean, adjusted or avoid, plus a note that it is a method and not advice.
+    - name: Questions for the company
+      contains: Questions to put to the company about what the checks found.
+    - name: Missing
+      contains: Facts you did not give, marked against the check that needed them.
+    - name: Checks missed
+      contains: One line for each check that could not be run, or none.
 
 how_it_works:
   - title: Names the four levers

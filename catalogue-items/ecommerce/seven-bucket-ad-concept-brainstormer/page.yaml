@@ -1,6 +1,6 @@
 new_slug: seven-bucket-ad-concept-brainstormer
 name: Seven-bucket ad concept brainstormer
-summary: Generate ad concepts in seven groups. Rank the best eight by fit, proof needs, effort and risk.
+summary: Brainstorm 20 or more ad concepts in seven groups, then rank them and pick the top eight to produce. Built for planning your next ad tests.
 job: plan-ad-tests
 headline: Seven-bucket ad concept brainstormer
 subhead: Share product facts, target buyer, offer, past ads and production limits. Get a ranked concept list with top-eight production picks.
@@ -12,6 +12,10 @@ when:
   - You need a ranked concept list with top-eight production picks.
   - You need seven-bucket ad concept brainstormer for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "You need one finished ad, not a list of ideas: ask your AI to write a single ad from your product facts."
+  - "You have no product facts or proof yet: gather those first, because ideas without proof get killed."
+  - "You need to build, launch or track the ads: use your ad platform, or ask a person who runs your ads."
 you_give:
   - Product facts
   - Target buyer
@@ -24,6 +28,21 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - Your product in one sentence
+    - Your main buyer, or 2 or 3 buyer types
+    - Which awareness stages you need to cover
+    - Your brand voice and your do-not-do list
+  output:
+    - name: Concepts by bucket
+      contains: At least 20 concepts in seven groups, each with hook, angle, buyer, stage, theme, format, proof needed and risk.
+    - name: Top 8 to produce
+      contains: The highest ranked concepts, each with its scores for novelty, proof, production ease and buyer match.
+    - name: Defer
+      contains: Good concepts of middle rank that can wait for a later round.
+    - name: Kill
+      contains: Weak concepts with no proof or a brand risk, each with the reason.
 how_it_works:
   - title: Check the inputs
     text: Confirm product facts, target buyer, offer, past ads and production limits. Mark facts that are missing.

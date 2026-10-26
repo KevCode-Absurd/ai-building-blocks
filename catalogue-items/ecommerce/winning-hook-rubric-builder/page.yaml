@@ -1,6 +1,6 @@
 new_slug: winning-hook-rubric-builder
 name: "Winning hook rubric builder"
-summary: "Paste your top ads and a rival's. Get a hook rubric from the winners and your drafts graded."
+summary: "Build a winning hook rubric from your top ads and one rival's. Get hook formats, plus your draft hooks graded A to D with three rewrites."
 job: write-ad-copy
 thinking: high
 thinking_why: "It compares many ads, finds patterns and grades drafts against them, which needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You have a pile of old ads or videos and want to know what your winners have in common.
   - You want to learn from one rival's best hooks without copying them.
   - You have draft hooks and want them graded against what has worked.
+not_for:
+  - "You have fewer than about four ads per source, or no result number for them: run a split test of your own ads instead."
+  - "You want hooks written from scratch with no ads to learn from: use the Ad first line writer and scorer."
+  - "You want to plan which hooks to test next: use the Split-run test planner."
 
 you_give:
   - Your top 10 ads or videos with the hook or transcript and a result number
@@ -35,6 +39,25 @@ how_to_use:
   - Paste the top ads from one rival in a separate list. Do not mix rivals.
   - Read the rubric and the hook formats. Treat every rule as a hypothesis to test.
   - Paste your draft hooks to grade, then test the best rewrites in a real ad test.
+output_sample:
+  input:
+    - Your top ads or videos, with the hook or transcript and a result number
+    - The top ads from one rival, in a separate list
+    - Which items were boosted or paid, and which are off-topic
+    - Draft hooks to grade (optional)
+  output:
+    - name: Source summary
+      contains: Item count, the metric used, the break point, winners and losers, and how many boosted or off-topic items were removed.
+    - name: Rubric (per source)
+      contains: "Four buckets: psychology, trigger words and framing, grammar, and what is not obvious."
+    - name: Universal rules and source-specific rules
+      contains: Patterns seen in two or more sources, and patterns that belong to one source only.
+    - name: Hook formats
+      contains: Each winning hook as a fill-in-the-blank template, with the source it came from.
+    - name: Draft grades
+      contains: An A to D grade for each draft hook, the reasons, and three rewrites.
+    - name: Confidence and checks missed
+      contains: Whether the sample is thin or enough, and any check that failed.
 
 how_it_works:
   - title: Cleans each list

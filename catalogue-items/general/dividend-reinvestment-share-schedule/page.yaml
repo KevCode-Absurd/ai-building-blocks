@@ -1,32 +1,64 @@
 new_slug: dividend-reinvestment-share-schedule
 name: Dividend reinvestment share schedule
 headline: Dividend reinvestment share schedule
-summary: Track how a cash dividend changes share count at an actual reinvestment price.
+summary: Find how many shares a cash dividend buys at your actual reinvestment price, and compare the result with keeping the cash.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A dividend cash-to-shares schedule with a no-reinvestment comparator. Share shares before the dividend, dividend per share, actual reinvestment price, fees, withholding treatment and ending price.
+subhead: Give it your share count, dividend and reinvestment price. It works out the new shares and compares your ending value with keeping the cash. Fees and withholding are shown on their own lines.
 explain: |-
   A dividend cash-to-shares schedule with a no-reinvestment comparator.
 
   Public equity and share counts. Illustrative figures. 100 shares × $1 yields $100, acquiring five shares at $20. At $22, 105 shares are worth $2,310 versus $2,300 if the dividend stayed cash. Reinvesting at $22 makes both values $2,300.
 when:
-  - You need a dividend cash-to-shares schedule with a no-reinvestment comparator.
-  - You work on public equity and share counts and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You got a cash dividend that was reinvested and want to see the new share count.
+  - You want to know if reinvesting left you better off than taking the cash.
+  - A reviewer needs to trace the result back to your inputs.
+  - You want an editable spreadsheet to check a plan statement.
+not_for:
+  - "You want total return from a price series: use an adjusted-price return calculation in a spreadsheet, and do not add dividends twice."
+  - "Your plan fees or withholding are unknown: get the plan statement from your broker first, then run this."
+  - "You want a forecast of future dividends or prices: ask a licensed adviser, because this schedule only uses prices you supply."
 you_give:
-  - Shares before the dividend, dividend per share, actual reinvestment price, fees, withholding treatment and ending price.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Shares you held before the dividend.
+  - Dividend per share.
+  - The actual price the dividend was reinvested at.
+  - Fees and withholding, if any (optional).
+  - The ending share price.
 you_get:
-  - A dividend cash-to-shares schedule with a no-reinvestment comparator.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The dividend cash, net cash and shares added.
+  - Your ending value next to the keep-the-cash case.
+  - An editable spreadsheet with live formulas.
+  - A list of missing inputs and checks that did not run.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and open SKILL.md in your AI, or paste it in.
+  - Share your share count, dividend, reinvestment price, fees, withholding and ending price.
+  - Ask your AI to build the schedule as a spreadsheet. This needs an AI that can make files.
+  - Check the net cash, shares added and ending value against your broker statement.
+  - Read MISSING and CHECKS MISSED before you rely on the result.
+output_sample:
+  input:
+    - Shares you held before the dividend
+    - Dividend per share
+    - Actual reinvestment price
+    - Fees and withholding (optional)
+    - Ending share price
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The records used, their dates, the currency and scale, and the question being answered.
+    - name: Inputs and assumptions
+      contains: Every number you supplied, with fees and withholding shown on their own lines.
+    - name: Model calculations and reconciliations
+      contains: Dividend cash, net cash, shares added and ending value, set against the case where the cash was kept.
+    - name: Editable workbook
+      contains: A spreadsheet with live formulas, an input schema and golden test cases.
+    - name: Actual file verification
+      contains: The recalculation, changed-input and reopen checks that were run on the workbook.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and checks that failed or could not run.
 how_it_works:
   - title: 1. Confirm payment date, eligible shares and actual reinvestment execution price; use unadjusted prices when dividends are modeled explicitly
     text: Confirm payment date, eligible shares and actual reinvestment execution price; use unadjusted prices when dividends are modeled explicitly.

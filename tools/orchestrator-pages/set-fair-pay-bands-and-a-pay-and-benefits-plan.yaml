@@ -14,6 +14,33 @@ when:
   - You are about to make offers and have no pay ranges.
   - Two people do the same job on very different pay.
   - Someone asks how their pay was set and you have no clear answer.
+not_for:
+  - "You are making one offer now and need the letter checked: use Hire fairly, from job post to a checked offer letter."
+  - "You want to plan how many people to hire and the cost: use Plan a year of hiring and what it will cost."
+  - "You pay a sales team on commission: use Hire, pay and measure a sales team on what works."
+  - "Payroll is due and you need the inputs checked: use Check payroll inputs before the cut off."
+  - "You pay creators, not staff: use the Creator pay planner."
+output_sample:
+  input:
+    - Your roles, with the level and place of each
+    - What you pay now in those roles (optional)
+    - Your total budget or a limit per role
+    - Any market pay data you already hold, with its source (optional)
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - Time for you or an adviser to check the market data and the sums
+  output:
+    - name: "Step 1: Market benchmarks"
+      contains: Pay at the 25th to 90th percentile for each role, with source and date, outliers against your pay and equity models.
+    - name: "Step 2: Pay bands"
+      contains: A low, middle and high for each role, where your pay sits in the band and a method note in plain words.
+    - name: "Step 3: Pay and benefits plan"
+      contains: A pay philosophy, grades, a bonus plan, a benefits list, a total rewards outline and total cost against budget.
+    - name: Flags and next steps
+      contains: Your assumptions, missing data and what needs HR or legal review.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
+
 you_give:
   - The roles, levels and place for each
   - What you pay now, if you have people in those roles (optional)

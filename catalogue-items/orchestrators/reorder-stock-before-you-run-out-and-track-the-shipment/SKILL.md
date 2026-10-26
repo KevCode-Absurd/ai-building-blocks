@@ -23,8 +23,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **See how long each product will last.** Use the skill `days-of-stock-calculator`. Reads your live store and makes the sheet of days of stock and sales speed for every product.
-2. **Set a restock rule for each product group.** Use the skill `restock-rule-designer`. Give it the spreadsheet from the steps before. Uses the sales speed from step 1 and your supplier lead times to set the reorder level for each group.
-3. **Draft the purchase orders.** Use the skill `purchase-order-reorder`. Give it the spreadsheet from the steps before. Reads the days-of-stock sheet from step 1 and turns the rules from step 2 into draft orders.
+2. **Set a restock rule for each product group.** Use the skill `restock-rule-designer`. Give it the spreadsheet from the steps before. Uses the sales speed from step 1 and your supplier lead times to set the reorder level for each group. It hands over a restock rule for each group.
+3. **Draft the purchase orders.** Use the skill `purchase-order-reorder`. Give it the spreadsheet from the steps before. Reads the days-of-stock sheet from step 1 and takes the reorder levels from step 2 as your cover target instead of its 60-day default. It hands over draft orders and the slow movers to clear.
 
 Pause here: Check the drafts with your supplier, place the orders and note the purchase order numbers, freight details and ship dates.
 

@@ -1,26 +1,28 @@
 slug: receivables-borrowing-base-builder
 name: Receivables borrowing base builder
-summary: A receivables eligibility bridge and collateral advance
+summary: Work out how much a lender will advance against your receivables. Get eligible receivables, the advance rate applied and the net amount after reserves.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - revolver-availability-checker
+  - inventory-borrowing-base-builder
+  - factoring-cashflow-timing-bridge
 origin: own
 version: 1.0.0
 added: 2026-10-22

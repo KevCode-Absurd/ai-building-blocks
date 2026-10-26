@@ -1,0 +1,151 @@
+name: LLM Post-Training Engineer agent
+summary: "Plan an SFT, DPO or RL fine-tune of a language model, or find why a run went wrong. Get fair tests, a stop rule and a checkpoint check."
+headline: LLM Post-Training Engineer agent
+subhead: Tell it what you want your language model to do better, or paste the numbers from a run that went wrong. It picks the simplest training method that fits, sets fair tests, and finds the cause before you retry. You get a gate record, an incident report or a checkpoint check.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Fine-tuning a language model goes wrong in quiet ways. The loss falls but the
+  model is no better. A run is "running" but the GPUs sit idle. A checkpoint
+  saves but is missing a shard. This agent treats each run as a controlled
+  change. It fixes the model, data, tokenizer, test set and budget first. Then
+  it changes one thing at a time.
+
+
+  It follows the LLM Post-Training Engineer profile. The method is the weakest
+  one that works: plain fine-tuning (SFT) on trusted examples first, preference
+  training (DPO) only when the answer pairs are sound, and reinforcement
+  learning (RL) only when the reward is checked. Every step has a gate, an
+  evidence file and a stop rule. A falling loss or a rising reward is never
+  treated as proof of quality.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its targets
+  describe the intended work. They are not measured results from AI Blocks.
+  Your AI plans and reads evidence. It can't train a model or inspect your
+  machines unless it has those tools.
+when:
+  - You want to fine-tune an open model on your own examples and don't know where to start.
+  - Training loss goes down but the model isn't better on your test questions.
+  - A preference run (DPO) or reward run (RL) finishes, but answers aren't better or just get longer.
+  - A checkpoint saved and you need to know it is complete before you resume or publish.
+not_for:
+  - You use a hosted model and only change prompts. Use the Prompt Engineer agent.
+  - You want to find silent bugs in a small model's training code. Use the AI model training debugger.
+  - You want a working AI feature in an app, with retrieval and deployment. Use the AI Engineer agent.
+you_give:
+  - The behaviour you want to change in the model, and what must stay the same
+  - The base model name and how you train now, such as SFT, DPO or GRPO (optional)
+  - Five to ten sample rows of your training data, with private details removed
+  - Your test questions and how you score answers
+  - Your GPU, storage and time budget
+  - For a failed run, the config, log lines and the numbers you saw (optional)
+you_get:
+  - Which training method fits, and why a simpler one isn't enough
+  - A gate record with a fixed comparison, one change under test and a promote or stop rule
+  - For a failed run, an incident report with a status, the likely cause and the smallest next test
+  - For a saved checkpoint, a release record with a file list, hashes and a load test
+  - A list of evidence to keep before you clean up or retry
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Say what you want the model to do better, and paste your data samples, test questions and budget.
+  - For a failed run, paste the config and log lines and say what you saw. Remove keys, tokens and private text first.
+  - Read the Status line first. UNVERIFIED means the evidence isn't there yet, not that the run is fine.
+  - Run only the "Next Minimal Test". Change one thing, then paste the new numbers back.
+  - Don't scale up, register or publish a checkpoint until the gate says promote.
+how_it_works:
+  - title: Freeze the decision
+    text: It writes down the target, baseline, model, data version, test set and budget, so runs can be compared fairly.
+  - title: Name the failure before any retry
+    text: It sorts the problem into data, objective, reward, rollout, runtime, integrity or quality, and names a competing cause if there is one.
+  - title: Pick the weakest method that works
+    text: It starts with SFT on trusted targets. It moves to DPO only when pairs are intact, and to RL only when the reward is checked.
+  - title: Run the smallest gate
+    text: It moves through preflight, smoke, signal and controlled gates. Each gate has an evidence file and a stop rule.
+  - title: Check checkpoints
+    text: It lists the expected files, then asks for a hash list and a clean load test before you register or resume.
+  - title: Preserve and hand off
+    text: It names what to keep, such as hashes, configs and sample rows, then states what the test proves and what it doesn't.
+output_shape: |-
+  FOR A PLAN (experiment gate record)
+    Behavior target and non-goals: <target> | <what must not change>
+    Fixed comparator contract: <baseline> | <model digest> | <data and tokenizer version> | <test set> | <decoding> | <budget>
+    Gate: <preflight, smoke, signal or controlled>
+    Single change under test: <one change>
+    Required measurements: <measure> | <what each explanation predicts>
+    Promotion or stop decision: <promote, stop or wait> | <reason>
+    Preserved evidence: <hashes, counts, configs>
+
+  FOR A FAILED RUN (incident report)
+    Status: <PASS, WARN, FAIL or UNVERIFIED>
+    Observed evidence: <fact> ...
+    Failure classification: <primary class> | <competing cause>
+    Next minimal test: <what stays fixed> | <what changes> | <measure> | <stop condition>
+    Stop condition: <when to stop>
+    Artifacts to preserve: <list>
+    Risks and limitations: <list>
+
+  FOR A SAVED CHECKPOINT (release record)
+    Expected inventory | Rank-local save evidence | Hash manifest | Clean-load probe | Registration or resume decision | Recovery boundary
+output_sample:
+  input:
+    - The behaviour you want to change, and what must stay the same
+    - Sample training rows and your test questions
+    - Your base model, GPU budget and time limit
+    - Config and log lines from a failed run (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - A way to run training and tests yourself, because your chat AI can't (optional)
+  output:
+    - name: Experiment gate record
+      contains: The target, fixed comparison, one change under test, required measures, and a promote or stop decision.
+    - name: Incident report
+      contains: A status, observed evidence, failure class, smallest next test, stop condition and what to keep.
+    - name: Checkpoint release record
+      contains: Expected files, save evidence, a hash list, a load test and a register or resume decision.
+    - name: Assumptions and gaps
+      contains: What was assumed, what is MISSING and which checks were not run.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Test set and scoring
+    how: Give it held-out questions and say how you score them. Without them, no quality claim is made.
+  - what: Method you already tried
+    how: Say which of SFT, DPO or RL you ran, so it doesn't restart from the simplest one.
+  - what: Budget limits
+    how: Name the GPU count, hours and storage. Gates are sized to fit.
+improve:
+  - Keep each incident report with its confirmed fix, and paste the earlier ones into the next run.
+  - Save your fixed test set and scoring rule, and reuse them so runs stay comparable.
+  - Pair it with the AI model training debugger for a quick bug check before a full run.
+terms:
+  - term: Post-training
+    meaning: More training on a model that is already trained, to change how it behaves.
+  - term: SFT
+    meaning: Supervised fine-tuning. The model learns from example questions and good answers.
+  - term: DPO
+    meaning: Direct preference optimization. The model learns from pairs of a better and a worse answer.
+  - term: RL
+    meaning: Reinforcement learning. The model learns from a reward score on its own answers.
+  - term: Checkpoint
+    meaning: A saved copy of the model during or after training.
+  - term: Hash
+    meaning: A short fingerprint of a file, used to check it was saved and copied whole.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read configs and logs together and keep the evidence straight.
+  inputs:
+    - Your last good run's config, to use as the baseline.
+    - A fixed set of held-out test questions.
+    - The tokenizer and chat template files.

@@ -2,35 +2,121 @@ thinking: high
 thinking_why: Pay design mixes market data, fairness and cost.
 new_slug: pay-and-benefits-plan-builder
 name: Pay and benefits plan builder
-summary: Describe your roles and budget. Get a pay philosophy, pay bands, a
-  bonus plan and a benefits list. Check the maths yourself.
+summary: Turn your roles and pay budget into a draft pay and benefits plan with pay bands, a bonus plan and a benefits list. The maths is shown.
 job: hire-people
 headline: Pay and benefits plan builder
-subhead: "A draft pay and benefits plan for your team: a pay philosophy, pay
-  bands, a bonus scheme, equity options and a benefits list. Check the maths
-  yourself before using any of it."
+subhead: Give it your roles, headcount, budget and location. It drafts a pay philosophy, pay bands by grade, a bonus plan and a benefits list, and shows the cost against your budget. Check the maths before you use it.
 explain: |
-  A draft pay and benefits plan for your team: a pay philosophy, pay bands, a bonus scheme, equity options and a benefits list. Check the maths yourself before using any of it.
+  Most small teams set pay one hire at a time, and the gaps show up later. This pay and benefits plan builder starts from your roles and budget and drafts the whole plan in one pass, so you can see what it costs before you promise anything.
 
-  You describe your roles, budget and goals. It then works through pay analysis, how to compare jobs and set grades, bonus and incentive design, stock plans, health and leave policies, and a total rewards statement. It also helps spot pay gaps across groups. It offers many ready prompts for each part. The output is a starting draft for HR to refine, and it is not legal or tax advice.
+  It writes a short pay philosophy, groups your roles into grades, and sets a min, mid and max for each grade. It adds a bonus plan with a payout formula, a benefits list, and an outline of a total rewards statement. For every part it shows the maths and the cost against your budget.
+
+  It does not invent market pay. You bring the market data, or it marks each claim "needs market data". The result is a draft for HR to refine. It is not legal or tax advice.
 when:
-  - You are building pay structure for the first time.
+  - You are building a pay structure for the first time.
   - You must write a pay philosophy statement.
-  - You want to design a bonus plan on a limited budget.
-  - You need a benefits package to support hiring and retention.
+  - You want a bonus plan that fits a limited budget.
+  - You need a benefits list to support hiring and keeping people.
+not_for:
+  - "You only need the pay range for one role: use the Pay band builder."
+  - "You want a pay equity check, a commission plan or a raise cycle: use the Pay and benefits package designer."
+  - "You need a formal job evaluation or a legal review of your pay practices: use a qualified HR or employment adviser."
 you_give:
-  - Roles and team size
-  - Pay budget
-  - Location and industry
-  - Current pay data (optional)
+  - Your roles and levels, with the number of people in each
+  - Your pay budget
+  - Your location and industry
+  - Current pay for each role (optional)
+  - Market data or a salary survey extract (optional)
 you_get:
-  - Pay philosophy draft
-  - Pay bands by role
-  - Bonus plan outline
-  - Benefits list
-  - Total rewards statement outline
+  - A short pay philosophy you can edit
+  - Roles grouped into grades
+  - A table of pay bands with min, mid and max for each grade
+  - A bonus plan with its payout formula and cost
+  - A benefits list, split into core and optional
+  - The total cost set against your budget
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your roles, headcount and budget in a note. Add current pay or market data if you have it.
+  - Open Claude, ChatGPT or Gemini and paste in this skill, then your note.
+  - Check the grades first. Move any role that sits in the wrong grade before you read the bands.
+  - Check the maths on the pay bands and the bonus cost, and compare the total with your budget.
+  - Ask for a deeper pass on any part, such as a bonus plan for sales, using the prompts in the skill.
+  - Have HR or an adviser review the plan before you share it with staff.
+output_sample:
+  input:
+    - Your roles and levels, with headcount for each
+    - Your pay budget
+    - Your location and industry
+    - Current pay or market data (optional)
+  output:
+    - name: Pay philosophy
+      contains: One paragraph on where you pay against the market and what pay rewards.
+    - name: Grades
+      contains: Each grade with a one-line meaning and the roles in it.
+    - name: Pay bands
+      contains: Min, mid and max for each grade, with spread, headcount and cost at midpoint.
+    - name: Bonus plan
+      contains: Target percent, measures and payout formula for each grade, with cost at target.
+    - name: Benefits list
+      contains: Core and optional benefits for your location, with the reason for each.
+    - name: Total rewards outline
+      contains: The headings an employee would see in a statement of their full pay.
+    - name: Cost against budget
+      contains: Base, bonus and benefits added up and compared with your budget.
+    - name: Flags and next steps
+      contains: Assumptions, missing data, and what HR or legal should review.
+how_it_works:
+  - title: Restate the brief
+    text: Repeats your roles, budget and goals, and marks anything missing instead of guessing.
+  - title: Write the philosophy
+    text: Sets where you pay against the market and what pay rewards, with your choice.
+  - title: Group the roles
+    text: Puts similar roles into grades by scope and level, not by title.
+  - title: Build the bands
+    text: Sets min, mid and max for each grade from your market data, and shows the maths and the cost.
+  - title: Design the bonus
+    text: Sets a target percent and a payout formula for each grade, then totals the cost.
+  - title: List the benefits
+    text: Suggests core and optional benefits for your location, without quoting prices you didn't give.
+  - title: Check and flag
+    text: Compares total cost with budget and lists what needs market data or expert review.
+output_shape: |-
+  PAY PHILOSOPHY
+    <one paragraph>
+
+  GRADES
+    <grade> | <what it means> | <roles>
+
+  PAY BANDS
+    <grade> | min <n> | mid <n> | max <n> | spread <%> | headcount <n> | cost at mid <n>
+
+  BONUS PLAN
+    <grade> | target <%> | measures <list> | formula <formula> | cost at target <n>
+
+  BENEFITS LIST
+    Core: <list> | Optional: <list>
+
+  TOTAL REWARDS OUTLINE
+    <headings>
+
+  COST AGAINST BUDGET
+    <base + bonus + benefits> vs <budget> | gap <n>
+
+  FLAGS AND NEXT STEPS
+    <assumptions> | MISSING: <items> | Review needed: <items>
+works_best_with:
+  tools:
+    - name: Any chat AI that can build tables
+      why: The bands and cost lines are tables, and the maths is easier to check in one.
+    - name: Google Sheets or Excel
+      why: Paste the bands in to check the maths and test other budgets.
+  inputs:
+    - A salary survey extract for your roles and location
+    - Your last year of pay for each role
+    - A list of the benefits you already offer
+terms:
+  - term: Pay band
+    meaning: The lowest and highest pay for a grade, with a midpoint between them.
+  - term: Pay philosophy
+    meaning: A short statement of how you decide what to pay and why.
+  - term: Total rewards
+    meaning: All the value an employee gets, such as pay, bonus, benefits, time off and development.

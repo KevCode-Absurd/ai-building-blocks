@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: phone-note-image-ad
 name: "Phone note screenshot image ad maker"
-summary: "Paste your story ad. Get a private phone note in their voice and a screenshot plan."
+summary: "Turn your story ad into a phone note screenshot ad: a private note in your narrator's voice, plus a plan to build the image. Words on it stay under 30."
 job: make-image-ads
 
 headline: "Phone note screenshot image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your story is about trying things, failing and restarting.
   - The narrator keeps track of something (days, attempts, money, what they tried).
   - You want words on the picture that feel private, not written for an audience.
+not_for:
+  - "You want a message from another person on screen: use the Chat screenshot image ad maker."
+  - "You want the picture to show reminders the phone keeps sending: use the Ignored reminders image ad maker."
+  - "You have no story ad yet, or want no words on the picture: write the story first, or use the Problem moment image ad maker."
 
 you_give:
   - Your approved story ad, with any note the narrator keeps
@@ -35,6 +39,33 @@ how_to_use:
   - Build the screen in a design tool from the brief, with the words typed in as real text.
   - If you use the image prompt instead, check every word in the result.
   - Crop it a little at the bottom, the way people share screenshots.
+output_sample:
+  input:
+    - Your approved story ad, with any note the narrator keeps
+    - How your buyer would type to themselves (optional)
+    - Whether words on the image are on or off (optional, on by default)
+  prerequisites:
+    - An image tool in your AI, or a design tool like Canva or Figma, to build the screen
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: Shape
+      contains: Streak, tried list, running cost or restart plan, and why it fits your story.
+    - name: The screen
+      contains: The layout, font, time in the status bar and how the picture is cropped.
+    - name: Words on the image
+      contains: The title and 3 to 6 lines exactly as typed, with the word count.
+    - name: Blank version
+      contains: The same note with only its title, so you can change the words later.
+    - name: Line under the image
+      contains: A short caption of about 27 characters that never names the product.
+    - name: Flags
+      contains: Which words were lifted from your story, which were written for the image, and what was guessed.
+    - name: How to make it
+      contains: A design-tool build, or an image prompt of 60 to 120 words.
+    - name: Checks missed
+      contains: One line for each check the note still fails, or none.
 
 how_it_works:
   - title: Sets the house rules

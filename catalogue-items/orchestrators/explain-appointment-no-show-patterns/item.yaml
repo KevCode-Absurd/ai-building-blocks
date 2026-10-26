@@ -12,20 +12,17 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-  - type: performance_sheet
-    required: false
 outputs:
   - type: spreadsheet
-  - type: copy_draft
   - type: document
 uses:
   - spreadsheet-checker
   - figures-to-plain-pictures-writer
 steps:
   - uses: spreadsheet-checker
-    note: Reconcile appointment IDs, statuses, dates, denominators and duplicate bookings; apply only the supplied no-show definition.
+    note: Reconcile appointment IDs, statuses, dates, denominators and duplicate bookings; apply only the supplied no-show definition. Hands the checked attendance table to step 2.
   - uses: figures-to-plain-pictures-writer
-    note: Explain verified attendance patterns by supplied grouping without sensitive profiling or invented reasons for absence.
+    note: Takes step 1's checked attendance table and explains verified attendance patterns by supplied grouping without sensitive profiling or invented reasons for absence.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

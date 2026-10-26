@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tests whether code is safe for threads before switching.
 new_slug: thread-pool-speed-up-helper
 name: Thread pool speed-up helper
-summary: Give it slow local parallel code. Get it switched to a thread pool and
-  timed to prove the gain.
+summary: Speed up slow MATLAB parfor code on your own computer. Your AI tries a thread pool and reads any error. It falls back to a process pool if needed.
 job: build-software
 headline: Thread pool speed-up helper
-subhead: Give it slow local parallel code. Get it switched to a thread pool and
-  timed to prove the gain. Bring your MATLAB parallel code. Use the result to
-  plan your next step.
+subhead: Give it slow local parallel code. Get it switched to a thread pool and timed to prove the gain. Bring your MATLAB parallel code. Use the result to plan your next step.
 explain: |
   MATLAB code that runs in parallel on your own computer often barely beats a plain loop, because data gets copied between worker processes. Switching to a thread pool removes much of that copying, and your existing parfor, parfeval or spmd code needs no rewrite.
 
@@ -18,19 +15,42 @@ when:
   - Workers spend a lot of time receiving large arrays.
   - Opening a process pool takes longer than your short job.
   - You want to know if your function can run on a thread pool at all.
+not_for:
+  - "You run on a cluster: thread pools work only on your own computer, so keep the process pool."
+  - "You use parsim or Simulink parallel runs, or distributed arrays: use a process pool."
+  - "Your code is slow but not parallel: use the matlab-optimize-performance skill, or a plain profiler, for loops and memory."
 you_give:
-  - Your MATLAB parallel code
-  - Whether you run locally or on a cluster
-  - A rough sense of data sizes (optional)
-  - MATLAB with Parallel Computing Toolbox
+  - Your MATLAB parallel code (parfor, parfeval or spmd)
+  - Whether you run on your own computer or on a cluster
+  - A rough sense of your data sizes (optional)
 you_get:
   - Code running on a thread pool
   - Timing before and after
   - A fallback plan if threads are unsupported
   - A setting to make Threads your default
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open a chat with an AI that can run MATLAB code. You need MATLAB with Parallel Computing Toolbox.
+  - Paste the skill text, then paste your parfor, parfeval or spmd code.
+  - Say whether you run on your own computer or on a cluster.
+  - Let your AI run the code on a thread pool. It should read any error instead of guessing.
+  - Check the result. If MATLAB says a feature is not supported, switch to a process pool.
+  - Ask for Threads as your default if you want it every time.
+output_sample:
+  input:
+    - Your MATLAB parfor, parfeval or spmd code
+    - Whether you run on your own computer or on a cluster
+    - A rough sense of your data sizes (optional)
+  prerequisites:
+    - MATLAB with Parallel Computing Toolbox
+    - An AI that can run MATLAB, so it can test your code instead of guessing
+  output:
+    - name: Thread pool start code
+      contains: A short snippet that starts a thread pool only if one is not already open.
+    - name: Run result
+      contains: Whether your existing code ran on threads, or the error MATLAB gave if it did not.
+    - name: Fallback advice
+      contains: If a feature is not supported on threads, advice to use a process pool instead.
+    - name: What threads save
+      contains: A plain note that large shared variables are not copied, while sliced arrays still are.
+    - name: Default setting
+      contains: The command to make Threads your default pool, if you ask for it.

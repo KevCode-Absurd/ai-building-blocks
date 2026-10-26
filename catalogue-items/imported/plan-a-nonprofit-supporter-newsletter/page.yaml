@@ -1,12 +1,16 @@
 new_slug: plan-a-nonprofit-supporter-newsletter
 name: Plan a nonprofit supporter newsletter
-summary: Plan a nonprofit newsletter that shares news between appeals. Set its sections, reader groups and content schedule.
+summary: Plan a nonprofit newsletter that keeps supporters informed between appeals. Get a template, reader group rules and a content calendar.
 job: write-emails
 headline: Plan a nonprofit supporter newsletter
 subhead: Share your news, reader groups and voice guide. Plan each issue and draft a template. Get a newsletter plan and checks.
 explain: Share your news, reader groups and voice guide. Plan each issue and draft a template. Get a newsletter plan and checks.
 when:
   - You want to plan a nonprofit supporter newsletter.
+not_for:
+  - "You want an email that asks for gifts: use a fundraising appeal email, not this newsletter plan."
+  - "You need to set up lists or tags in your email tool: ask whoever runs your donor database or email tool."
+  - "You want social posts or donation page copy: write those as separate pieces of work."
 you_give:
   - Your nonprofit goals, approved news and stories, voice guide, reader groups and realistic content supply.
 you_get:
@@ -15,6 +19,24 @@ how_to_use:
   - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
   - Provide the inputs listed here and ask your AI to follow the skill.
   - Review the result and any missing facts before using it.
+output_sample:
+  input:
+    - Your nonprofit goals for the newsletter
+    - Approved news items and stories
+    - Your voice guide or brand messaging
+    - How you want to group readers, such as donors, volunteers and general readers
+    - How much news you can really share each month
+  output:
+    - name: Newsletter template
+      contains: A reusable layout with subject line, opening note, lead story, quick updates, spotlight, dates and footer.
+    - name: Reader group rules
+      contains: What each reader group should see, such as general readers, donors, volunteers, board and lapsed readers.
+    - name: Subject line and send guidance
+      contains: Short, specific subject lines, a steady send day and list clean-up habits that protect inbox delivery.
+    - name: Content calendar
+      contains: A rolling plan for the next 4 to 8 weeks, built on the news you can really supply.
+    - name: Issue checklist
+      contains: Checks for links, personal tags, mobile view and the unsubscribe link before each send.
 how_it_works:
   - title: Define the newsletter’s role
     text: Keep routine supporter news distinct from fundraising appeals. Choose a pace the team can sustain.

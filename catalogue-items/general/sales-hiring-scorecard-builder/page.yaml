@@ -1,56 +1,67 @@
 new_slug: sales-hiring-scorecard-builder
 name: "Sales hiring scorecard builder"
-summary: "Describe your sale and past hires. Get a 1 to 10 scorecard with a test for each trait."
+summary: "Hire salespeople on traits that fit how you sell. Get a 1 to 10 scorecard with a test for each trait and a re-check date."
 job: lead-people
 thinking: medium
 thinking_why: "It matches traits to your kind of sale, but the scorecard shape and steps are fixed."
 
 headline: "Sales hiring scorecard builder"
-subhead: Describe what you sell, who buys it and how your past sales hires turned out. It defines the traits that fit your sale, writes what a 1, a 5 and a 10 look like for each, and picks a test for every trait. You get a scorecard and a date to check it.
+subhead: Describe what you sell, who buys it and how your past sales hires turned out. It picks the traits that fit your sale, writes what a 1, a 5 and a 10 look like for each, and picks one test per trait. You get a one-page sales hiring scorecard and a date to check it.
 
 explain: |
-  Most sales hiring runs on gut feel and a strong first impression. A person who did well at a big company with a well-known product may struggle at a small one that has to explain what it does. Without a written scorecard, every interviewer scores a different thing and nobody can learn what worked.
+  Most sales hiring runs on gut feel and a strong first impression. Someone who did well at a big company with a well-known product may struggle at a small one that has to explain what it does. Without a written scorecard, every interviewer scores something different, and nobody can learn which hires worked and why.
 
-  This skill starts from your sale: who buys, how hard the product is to explain and how long a deal takes. It lists the traits you think predict success, defines each one and writes what a score of 1, 5 and 10 looks like. It chooses one test for each trait, such as a question, a role play, an exercise or a reference check. After you have hired, it compares the scorecards of your best and slowest hires, and shows which traits to raise, cut or add.
+  This skill builds a scorecard for sales candidates from your own sale: who buys, how hard the product is to explain and how long a deal takes. It lists six to eight traits that fit, defines each in one sentence, and writes what a 1, a 5 and a 10 look like in behaviour you can see in an interview. Each trait gets one test that fits it, such as a question about the past, a role play, a written exercise or a reference check. The method follows the first chapter of Mark Roberge's book on building a sales team.
+
+  If you give it past hires, it lines up the scorecards of your best and slowest to show which traits to raise, cut or add. It warns when that rests on only a few people. It also cuts any trait that your slowest hires had too, because that trait does not separate good from poor.
 
 when:
   - You are hiring your first salespeople and have no way to compare candidates.
   - Your recent hires have done much worse than the interviews suggested.
   - Each interviewer asks different questions and the team cannot agree on who to hire.
+  - You are about to hire a salesperson because they came from a famous company.
+
+not_for:
+  - "You are hiring for a role that is not sales: use the interview scorecard builder."
+  - "You want to hire on values and team fit: use the culture-fit hiring planner."
+  - "You want to check how you pay salespeople: use the sales pay plan checker."
+  - "You want the hiring scorecard and a pay check in one run: use the Hire, pay and measure a sales team on what works workflow, which runs this skill first."
 
 you_give:
-  - What you sell, who buys and how long a sale takes
-  - How hard the product is to explain to a new buyer
-  - How your past hires turned out, with a few notes on each (optional)
-  - Traits you think matter (optional)
+  - "What you sell, who buys it and how long a sale takes from first call to close"
+  - "How hard the product is to explain to a new buyer (low, medium or high)"
+  - "Your best and slowest past sales hires, with a few notes on each (optional)"
+  - "Traits you already believe in, and why (optional)"
+  - "Your company stage, early or established (optional)"
 you_get:
-  - A sale profile in plain words
-  - A list of traits with a definition and a 1, 5 and 10 anchor for each
-  - A test for each trait and a one-page scorecard
-  - A date and method to check the scorecard against real results
+  - "A sale profile in plain words, at the top of the scorecard"
+  - "Six to eight traits, each with a definition and a 1, 5 and 10 anchor"
+  - "One test for each trait, written out in full"
+  - "A one-page scorecard with a score, evidence and a rule to score before you talk"
+  - "A date and a method to check scores against real results"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe your sale and your best and slowest past hires, even if you have only two or three.
-  - List the traits you already believe in. Say why you think they matter.
-  - Use the scorecard for every candidate, and write the scores before you discuss them.
-  - After six months, bring the hires' real results back to the skill and update the scorecard.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Describe your sale, even roughly. Add your best and slowest hires, even if you have only two or three, and the traits you believe in.
+  - Read each trait and its 1, 5 and 10 anchors. Change any that do not match what you can see in an interview. Keep traits related to the job.
+  - Use the scorecard for every candidate. Write scores before you discuss them as a group.
+  - After about six months, bring the hires' real results back to the skill and update the scorecard.
 
 how_it_works:
   - title: Describes your sale
-    text: Writes who buys, how hard the product is to explain and how long a deal takes.
+    text: Writes who buys, how much they need to be taught and how long a deal takes. If one is missing it marks it.
   - title: Lists the traits
-    text: Chooses traits that fit this kind of sale and defines each in plain words.
+    text: Six to eight traits that fit this kind of sale, each defined in one sentence a new interviewer can use.
   - title: Writes the anchors
-    text: Describes what a 1, a 5 and a 10 look like for each trait.
-  - title: Picks a test
-    text: Chooses one test per trait, such as a question, role play, exercise or reference check.
+    text: What a 1, a 5 and a 10 look like as behaviour a candidate can show, with a 5 as a realistic hire.
+  - title: Picks one test per trait
+    text: A question, role play, exercise or reference check, matched to the trait and written out in full.
   - title: Builds the scorecard
-    text: Puts all traits on one page, with space for each score and a note.
-  - title: Compares to results
-    text: Lines up the scorecards of your best and slowest hires to find traits to raise, cut or add.
+    text: One page with a score, the evidence seen and a total, plus a rule to write scores before group talk.
+  - title: Compares with past hires
+    text: Lines up your best and slowest hires to mark traits to raise, cut or add, and says how few hires it rests on.
   - title: Sets the re-check
-    text: Sets a date to compare scores with real results.
+    text: A date about six months after the first hire, and what to compare then.
 
 output_shape: |
   YOUR SALE
@@ -76,6 +87,26 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check missed, or none>
+
+output_sample:
+  input:
+    - "What you sell, who buys it and how long a sale takes"
+    - "How hard the product is to explain to a new buyer"
+    - "Your best and slowest past sales hires, with notes (optional)"
+    - "Traits you already believe in (optional)"
+  output:
+    - name: "YOUR SALE"
+      contains: "Who buys, how much they need to be taught and how long a deal takes, in three lines."
+    - name: "TRAITS"
+      contains: "Six to eight traits with a definition, a 1, 5 and 10 anchor, and one test each."
+    - name: "SCORECARD"
+      contains: "A one-page sheet per candidate with a 1 to 10 score and the evidence for each trait."
+    - name: "WHAT PAST HIRES SUGGEST"
+      contains: "Which traits to raise, cut or add, based on your best and slowest hires, with how few hires it rests on."
+    - name: "RE-CHECK"
+      contains: "A date about six months out and how to compare scores with real results."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, such as past hires, and any check it could not pass."
 
 tweaks:
   - what: How hard the product is to explain
@@ -108,7 +139,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Defining traits and writing anchors is text work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Defining traits and writing anchors is text work. No files, web access or paid tools needed."}
     - {name: "A spreadsheet", why: "Keep one row per hire with scores and results so you can compare them later."}
   inputs:
     - "Notes from past interviews and how those hires did"
@@ -120,3 +151,5 @@ terms:
     meaning: A written description of what a certain score, such as 1, 5 or 10, looks like for a trait.
   - term: Role play
     meaning: A short acted scene in which a candidate does part of the job, such as a first call.
+  - term: Scorecard
+    meaning: One page that lists each trait with a score and the evidence behind it, so every interviewer scores the same things.

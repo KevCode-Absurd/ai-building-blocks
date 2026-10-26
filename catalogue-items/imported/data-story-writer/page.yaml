@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It picks the point, then shapes the numbers around it.
 new_slug: data-story-writer
 name: Data story writer
-summary: Give it your numbers. Get a clear story with the point, the proof and
-  the next step for your readers.
+summary: Turn your numbers into a data story with a clear point, proof and next step. Built for decks and reports that need a decision from the room.
 job: work-with-files
 headline: Data story writer
-subhead: "Your numbers turn into a story a room can follow: what happened, why
-  it matters and what to do next. The aim is a decision, not a pile of charts."
+subhead: "Your numbers turn into a story a room can follow: what happened, why it matters and what to do next. The aim is a decision, not a pile of charts."
 explain: |
   Your numbers turn into a story a room can follow: what happened, why it matters and what to do next. The aim is a decision, not a pile of charts.
 
@@ -17,6 +15,10 @@ when:
   - Your analysis is correct but nobody acts on it.
   - You are building an investor update with data.
   - You need to explain a trend to people who do not read charts.
+not_for:
+  - "You need to clean messy raw data first: use an analyst or a spreadsheet tool, then come back with the clean numbers."
+  - "You want a live dashboard that updates by itself: use a BI tool such as Looker Studio or Power BI."
+  - "You need a formal statistical test or a forecast you can defend: ask an analyst to run it."
 you_give:
   - Your numbers or analysis
   - Who the audience is
@@ -28,7 +30,29 @@ you_get:
   - Chart suggestions
   - Recommendation and next step
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your numbers, or attach your spreadsheet if your AI can read files. Say which columns and which time period matter.
+  - Tell your AI who the audience is and the decision you want from them.
+  - "Ask for a deck outline or a written report. Your AI picks a story shape: problem and solution, trend, or comparison."
+  - Read the draft. Your AI should flag any number it cannot trace to your data. Fix or cut those before you present.
+output_sample:
+  input:
+    - Your numbers or analysis, pasted or as a spreadsheet
+    - Who the audience is
+    - The decision you want from them
+    - Deck or written report (optional)
+  prerequisites:
+    - An AI that can read your files, if your numbers are in a spreadsheet. Otherwise paste them into the chat.
+  output:
+    - name: Headline
+      contains: One sentence that puts the main finding first, with a number and what it means for the business.
+    - name: Context
+      contains: The starting point and baseline, so readers know what the numbers are measured against.
+    - name: Discovery and deep dive
+      contains: The key pattern in your data, the likely cause, and any caveats about what the numbers cannot prove.
+    - name: Chart suggestions
+      contains: Which chart fits each slide or section, and what to highlight or label so the shift is easy to see.
+    - name: Recommendation and impact
+      contains: The action you propose, the expected effect with assumptions shown, and any risks.
+    - name: The ask
+      contains: The specific decision needed from your audience and the next steps.

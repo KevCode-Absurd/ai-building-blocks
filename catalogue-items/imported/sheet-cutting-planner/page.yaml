@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tests many layouts.
 new_slug: sheet-cutting-planner
 name: Sheet cutting planner
-summary: Give it your sheet size and the panels you need. Get cutting layouts
-  that waste the least material.
+summary: Plan sheet cutting layouts that waste less steel, glass, wood or fabric. Give it your sheet size and panel list. You get patterns and a sheet count.
 job: plan-supply-chain
 headline: Sheet cutting planner
-subhead: Cutting layouts that use the least material when you cut panels from
-  large sheets of steel, glass, wood, fabric or paper. You list sheet size and
-  every panel you need, with sizes and quantities.
+subhead: Cutting layouts that use the least material when you cut panels from large sheets of steel, glass, wood, fabric or paper. You list sheet size and every panel you need, with sizes and quantities.
 explain: |
   Cutting layouts that use the least material when you cut panels from large sheets of steel, glass, wood, fabric or paper. You list sheet size and every panel you need, with sizes and quantities.
 
@@ -18,6 +15,10 @@ when:
   - Your offcuts are piling up and you want less waste.
   - Your saw only makes full-width cuts and you need layouts that respect that.
   - You want to compare sheet cost across two sheet sizes.
+not_for:
+  - "You cut odd shapes, not rectangles: use a nesting tool made for irregular shapes."
+  - "You cut long bars, pipes or rolls in one length only: use a 1D cutting-stock tool."
+  - "You need a waste figure that is guaranteed to be the lowest possible: ask a cutting-software vendor, as this gives a good estimate only."
 you_give:
   - Sheet sizes and cost
   - Panel sizes and quantities
@@ -31,8 +32,24 @@ you_get:
   - Cost comparison
   - A layout that fits your saw
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open your AI tool. Use Claude, ChatGPT or Gemini. One that can run code works best.
+  - Paste the skill text, or upload the skill folder if your tool takes files.
+  - Tell it your sheet size and every panel, with width, height and quantity.
+  - "State your saw limits first: blade width, minimum trim, grain, turning panels, and whether cuts must run edge to edge."
+  - Check the sheet count and the waste figure. Treat the waste as an estimate, not a guaranteed minimum.
+  - Send the cutting layouts to your saw operator, or ask for a table you can copy into a spreadsheet.
+output_sample:
+  input:
+    - Your sheet size, and cost per sheet if you know it
+    - Your panel list with width, height and quantity
+    - Whether panels can be turned 90 degrees, and whether grain matters
+    - "Your saw limits: blade width, minimum trim and cut type (optional)"
+  prerequisites:
+    - An AI that can run code gives the best results, but a chat works for small jobs
+  output:
+    - name: Solution summary
+      contains: The number of sheets used, the share of material used, and the method chosen.
+    - name: Pattern details
+      contains: A cutting diagram for each sheet showing where each panel sits.
+    - name: Waste and sheet count
+      contains: The waste percentage per sheet and the total sheets needed, as an estimate.

@@ -1,6 +1,6 @@
 new_slug: meta-campaign-purpose-checker
 name: "Meta campaign purpose checker"
-summary: "List your Meta campaigns. Get each kept or cut, setup errors and a score out of 100."
+summary: "Check your Meta campaigns with this campaign purpose checker. Get a keep, merge or cut call for each, a list of setup errors and a score out of 100."
 job: read-ad-results
 thinking: medium
 thinking_why: "It compares names, settings and numbers across a list, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You inherited a Meta account or an agency's setup and want to know what is worth keeping.
   - You have many campaigns and the numbers are hard to trust.
   - You want a quick audit of settings before you spend more.
+not_for:
+  - "You only want to judge ad creative: use the Ad test brief writer to plan what to test."
+  - "You want to read results and decide what to change: use the Campaign keep-or-change checker."
+  - "Your account spends under about $10k a month and has one or two campaigns: a quick look at your settings by hand is enough."
 
 you_give:
   - A campaign and ad set list with budgets, objectives and names
@@ -33,6 +37,24 @@ how_to_use:
   - Add your audience segment breakdown, with spend and frequency for new, engaged and existing customers.
   - Attach screenshots of your advertiser settings if you can.
   - Fix the errors in the order the report lists them, then run it again.
+output_sample:
+  input:
+    - A list of your campaigns and ad sets with budgets, objectives and names
+    - Your audience segment breakdown with spend and frequency
+    - Screenshots of your advertiser settings (optional)
+  output:
+    - name: CAMPAIGN VERDICTS
+      contains: One line per campaign with its purpose in one sentence, a keep, merge or cut call, and the reason.
+    - name: SETUP ERRORS
+      contains: Each error, most serious first, with the campaign or setting it sits in and one fix.
+    - name: CHECKS
+      contains: Frequency on existing customers, attribution setting, testing structure, dynamic product ad share and existing plus engaged share.
+    - name: SCORE
+      contains: A score out of 100 split into four parts, with a note that the weights are ours.
+    - name: NOT RUN
+      contains: Any check that could not run, and what you need to add to run it.
+    - name: MISSING
+      contains: Any input you did not give, such as the campaign list, audience breakdown or settings screenshots.
 
 how_it_works:
   - title: Writes each purpose

@@ -1,6 +1,6 @@
 slug: earnings-call-tone-reader
 name: Earnings call tone reader
-summary: Give it an earnings call transcript. Get shifts in management tone and confidence flagged, with quotes.
+summary: "Paste an earnings call transcript. Get shifts in management tone, hedging and Q&A friction flagged, each backed by a quote."
 category: general
 boards: []
 type: skill

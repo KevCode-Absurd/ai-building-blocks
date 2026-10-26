@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads project history and weighs which routines repeat.
 new_slug: project-skill-finder
 name: Project skill finder
-summary: Point it at a project. Get a short list of skills worth adding or
-  updating, based on how you really work.
+summary: Find the skills your project needs. Give it your project folder and get a ranked list of skills to add or update, based on how you really work.
 job: make-skills
 headline: Project skill finder
-subhead: A short list of skills worth adding to your project, picked from how
-  you really work rather than a generic wish list. Updating an existing skill
-  comes before inventing a new one.
+subhead: A short list of skills worth adding to your project, picked from how you really work rather than a generic wish list. Updating an existing skill comes before inventing a new one.
 explain: |
   A short list of skills worth adding to your project, picked from how you really work rather than a generic wish list. Updating an existing skill comes before inventing a new one.
 
@@ -18,6 +15,10 @@ when:
   - You have skills already but are not sure which are worth improving.
   - You are setting up a new project and want to start with the right skills.
   - You want suggestions backed by evidence from your own work.
+not_for:
+  - "You already know which skill you want: ask your AI to write it, or use the AI's own skill creator."
+  - "You want to fix a one-off bug: ask your AI to debug it directly, since this only looks for jobs you repeat."
+  - "Your project is brand new with no files or past sessions: write your first skill by hand from a task you repeat."
 you_give:
   - Your project folder
   - Access to your AI's memory and session notes (optional)
@@ -27,8 +28,26 @@ you_get:
   - Evidence for each pick
   - Notes on existing skills that nearly fit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files and notes.
+  - Open your AI tool in the project folder, so it can read your files. This works best with Codex or a similar coding assistant.
+  - Paste the skill text into the chat, or add the skill folder to your project.
+  - "Ask: Audit this project and tell me which skills to add or update."
+  - Add your memory notes and past session summaries if you have them. The skill looks for them in the ~/.codex folder.
+  - If those folders are missing, it still reads your project files and existing skills, but the evidence will be thinner. Paste a few past chat summaries instead.
+  - Check each pick has real evidence. Then ask your AI to write the skill you chose.
+output_sample:
+  input:
+    - Your project folder, with files like README and AGENTS.md
+    - Your AI's memory notes and past session summaries (optional)
+    - The skills you already have in the project (optional)
+  prerequisites:
+    - An AI that can read your project files, such as Codex or another coding assistant
+    - Codex-style memory folders (~/.codex) if you want evidence from past sessions
+  output:
+    - name: Existing skills
+      contains: The skills already in your project and the main job each one covers.
+    - name: Suggested updates
+      contains: "For each skill that nearly fits: its name, why it is stale or incomplete, and the best change."
+    - name: Suggested new skills
+      contains: "For each new skill: a short name, why it should exist, what triggers it and the steps it should hold."
+    - name: Priority order
+      contains: The top picks ranked by expected value, with the repeated work that backs each one.

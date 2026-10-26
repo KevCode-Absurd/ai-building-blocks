@@ -1,12 +1,19 @@
 new_slug: nonprofit-executive-dashboard-planner
 name: Plan nonprofit executive and board dashboards
-summary: Plan two views of nonprofit health. Give staff and the board clear measures, owners and action points.
+summary: Plan a nonprofit executive dashboard and board scorecard. Pick 8 to 15 measures, set targets and owners, and get a review plan.
 job: track-numbers
 headline: Plan nonprofit executive and board dashboards
 subhead: Bring goals and trusted data. Pick a small set of measures, define each one and build separate staff and board scorecards.
 explain: Bring goals and trusted data. Pick a small set of measures, define each one and build separate staff and board scorecards.
 when:
-  - You want to plan nonprofit executive and board dashboards.
+  - Your board scorecard has too many numbers and no one reads it.
+  - You only track past results and want measures that show trouble early.
+  - Your leadership team has no standing monthly review of key numbers.
+  - Your strategic plan changed and your dashboard did not.
+not_for:
+  - "You need to prepare the financial statements that feed the finance numbers: use nonprofit-financial-statements."
+  - "You need to design program outcome measures or an evaluation: use nonprofit-outcomes-measurement."
+  - "You need to write the strategic plan the dashboard will track: use nonprofit-strategic-planning."
 you_give:
   - Strategic priorities and authoritative financial, fundraising, program and staff data
   - Review cadence, metric owners and proposed decision thresholds
@@ -14,9 +21,30 @@ you_get:
   - Executive dashboard and smaller board scorecard specifications
   - Metric dictionary with formulas, sources, owners and review actions
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tools are needed.
+  - Paste your strategic priorities and your current metric list if you have one.
+  - Add your latest finance, fundraising, program and staff numbers, and your review calendar.
+  - Ask for a one-page executive dashboard, a board scorecard of 5 to 8 measures, and a definitions table.
+  - Check that every measure has one named owner, a target and red and yellow thresholds. Fix gaps before you share it.
+output_sample:
+  input:
+    - Your strategic priorities, 3 to 5 of them
+    - Your current dashboard or list of metrics (optional)
+    - Your latest financial, fundraising, program and staff numbers
+    - Your meeting calendar for leadership and board reviews
+  output:
+    - name: One-page executive dashboard
+      contains: 8 to 15 measures grouped by mission, finance, stakeholders and people, with target, status and trend.
+    - name: Board scorecard
+      contains: 5 to 8 measures for the quarterly board meeting, shown over a longer time span.
+    - name: KPI definitions document
+      contains: "One row per measure: definition, formula, data source, named owner, cadence, target, thresholds and leading or lagging tag."
+    - name: Leadership monthly review agenda
+      contains: A meeting plan that scans red and yellow items, discusses each one, and records decisions and owners.
+    - name: Quarterly OKR set
+      contains: 3 to 5 objectives with key results, linked to the dashboard measures that track them.
+    - name: Annual dashboard reset checklist
+      contains: Steps to retire old measures, add new ones, reset targets and confirm owners each year.
 how_it_works:
   - title: Choose decisions and measures
     text: Map candidates to strategic goals and balance mission, finance, stakeholders and organizational learning.

@@ -1,6 +1,6 @@
 new_slug: owner-earnings-calculator
 name: Owner earnings calculator
-summary: Share profit, spending and working-capital records. Get three owner-earnings estimates, input gaps and an order check before using a range.
+summary: "Find owner earnings for a business: give it profit, upkeep spending and working-capital figures. You get three estimates, a list of gaps and an order check."
 job: money-and-investing
 thinking: medium
 thinking_why: The sum is fixed, but it needs judgment about what spending keeps the business level. Use a strong model.
@@ -14,6 +14,10 @@ when:
   - You are about to value a business and the profit figure may hide how much cash it eats.
   - A company shows rising profit but the owners never seem to get any money.
   - You want one cash figure to feed into a value calculation.
+not_for:
+  - "You are looking at a bank, an insurer or a firm that is mostly an investment pool: use net worth plus expected earnings, or ask an accountant."
+  - "You want a buy or sell call on a stock: this only tests cash figures, so ask a licensed financial adviser."
+  - "You have no cash flow statement or capital spending figures: get the statement from the company's annual report first."
 you_give:
   - Four or five years of profit after tax, depreciation, capital spending and working capital lines
   - Earlier findings on the business (optional)
@@ -30,6 +34,30 @@ how_to_use:
   - Say what you know about one-off items, such as a building sale.
   - Check the inputs, candidate labels and order before using a range. Read ratios only when their basis is defined.
   - Carry a working figure to a value calculation only after the data, upkeep assumptions and order checks pass. Keep unresolved cases out of that handoff.
+output_sample:
+  input:
+    - Four or five years of profit after tax, depreciation and other non-cash charges
+    - Capital spending for each year
+    - Receivables, stock and payables for each year
+    - Notes on one-off items or what the business does (optional)
+    - Earlier findings on the business (optional)
+  output:
+    - name: FIGURES BY YEAR
+      contains: One row per year with profit, non-cash charges, capital spending and working capital, and MISSING marked where a figure is absent.
+    - name: CLEANED PROFIT
+      contains: The one-off items taken out of profit and the reason for each.
+    - name: OWNER EARNINGS
+      contains: Light, depreciation and heavy upkeep candidates, an order check, a range only if it passes, and plain cash flow.
+    - name: SHARE OF PROFIT
+      contains: Each candidate divided by cleaned profit, or a note that the ratio is undefined and why.
+    - name: TREND
+      contains: Yearly candidate figures and yearly growth only where the ends are positive and comparable.
+    - name: WHERE IT DOES NOT FIT
+      contains: A note if the business is a bank, insurer or investment pool, or none.
+    - name: MISSING
+      contains: The figures you did not supply.
+    - name: CHECKS MISSED
+      contains: One line for each self-check that failed, or none.
 how_it_works:
   - title: Lines up the years
     text: Puts profit, non-cash charges, capital spending and working capital side by side and marks every gap.

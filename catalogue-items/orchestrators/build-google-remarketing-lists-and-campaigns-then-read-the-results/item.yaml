@@ -15,9 +15,9 @@ outputs:
   - {type: audit_report}
 uses: [google-ads-audience-builder, google-remarketing-campaign-builder, google-ads-report-auditor]
 steps:
-  - {uses: google-ads-audience-builder, note: "Decides which lists exist and how big they are."}
-  - {uses: google-remarketing-campaign-builder, note: "Builds the campaigns on the lists the audience plan made."}
-  - {uses: google-ads-report-auditor, note: "Reads the first results so you know which doubt-led ad to keep."}
+  - {uses: google-ads-audience-builder, note: "Decides which lists exist and how big they are. Hands step 2 the audience plan."}
+  - {uses: google-remarketing-campaign-builder, note: "Builds the campaigns on the lists the audience plan from step 1 made. Hands you a plan with caps and five doubt-led ads to run."}
+  - {uses: google-ads-report-auditor, note: "Uses the Google Ads report you export after running step 2's campaigns (your performance sheet), and step 2's plan to match rows to each doubt-led ad. Hands you which ad to keep."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-google-remarketing-lists-and-campaigns-then-read-the-results/skeleton.yaml

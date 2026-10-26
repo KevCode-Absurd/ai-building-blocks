@@ -25,6 +25,7 @@ description: Track and document analytical assumptions and decisions. Use when m
 - Data sources, time period, and population being analysed
 - Key methodological choices made (and alternatives considered)
 - Stakeholder-provided business rule definitions
+- A document of metric definitions, if one exists, such as from the Metric definition writer
 - Any known data quality issues
 
 # Output

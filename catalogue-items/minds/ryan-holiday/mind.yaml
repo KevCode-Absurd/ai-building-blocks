@@ -16,6 +16,31 @@ use_cases:
   - "Reframe a crisis for a team so they focus on the task in front of them"
   - "Write a short story from history that teaches a lesson about patience or courage"
   - "Ask whether you already have enough, before you chase the next goal"
+not_for:
+  - "You want focused work habits and fewer projects: use the Cal Newport mind instead."
+  - "You need legal, medical or personal money advice: talk to a lawyer, doctor or financial adviser, since a Stoic reflection is not a substitute."
+  - "You want a real quote or his private view on today's news: read his own writing, as this AI cannot speak for him."
+output_sample:
+  input:
+    - The setback or decision, in one paragraph
+    - The commitments or spending involved
+    - Your real deadlines and limits (optional)
+    - What you have already tried (optional)
+  output:
+    - name: Up to you and not up to you
+      contains: Two lists that split what you control from what you do not, so effort goes to the first.
+    - name: Perception, action and will
+      contains: The setback seen calmly, the action open to you, and what you must endure.
+    - name: Ego check
+      contains: Questions on whether the choice serves the work or how you look.
+    - name: Shortcut test
+      contains: A look at which part of your plan skips the slow work.
+    - name: Next action
+      contains: One task in front of you and a deadline.
+    - name: Time-boxed experiment
+      contains: A smaller version of a big bet with a fixed end date.
+    - name: Daily practice
+      contains: One small habit, such as a page, a card or an evening question.
 seats:
   - {seat: "Stoic calm under pressure", asks: "What here is up to us, and what is the next right action?"}
   - {seat: "Ego check", asks: "Is this about the work, or about how we look?"}

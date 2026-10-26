@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It steps through live state and reasons about each finding.
 new_slug: live-code-debugger
 name: Live code debugger
-summary: Point it at a bug. Get the program run with breakpoints, so you see
-  exact values and where it goes wrong.
+summary: Find why your code fails by running it and pausing at the bug. See the real values and the root cause, not guesses from error text.
 job: test-and-fix-code
 headline: Live code debugger
-subhead: Instead of guessing from error text, run the program and stop it where
-  the bug lives. You see the exact values at that moment and trace back to the
-  cause.
+subhead: Instead of guessing from error text, run the program and stop it where the bug lives. You see the exact values at that moment and trace back to the cause.
 explain: |
   Instead of guessing from error text, run the program and stop it where the bug lives. You see the exact values at that moment and trace back to the cause.
 
@@ -18,6 +15,10 @@ when:
   - A crash happens deep inside, far from where you looked.
   - A server is stuck and you cannot restart it.
   - You want facts, not another round of guessing.
+not_for:
+  - Your AI cannot run code or install tools. Paste the error and the code into a chat and ask for a read-through instead.
+  - You need a security review or a production change signed off. Ask a developer to check the fix first.
+  - You want to write new code from scratch. Ask your AI to write it, then use this when something breaks.
 you_give:
   - The program or script
   - How to trigger the bug
@@ -29,8 +30,30 @@ you_get:
   - The root cause
   - A fix suggestion
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and a debugger.
+  - Use an AI that can run code and commands on your computer, such as Claude Code. A plain chat window cannot run the debugger.
+  - Give your AI the skill and your program. Say how to trigger the bug, what you expected and what happens.
+  - If the dap tool is missing, your AI asks before it installs it. Say yes only if you are happy with that.
+  - Watch each stop. Check the values and the call stack against what you expected.
+  - Ask your AI to test its fix on the paused program, then restart and run the same case again.
+  - On a Mac with Go, do not turn off system protection to attach to a running program. Start the program under the debugger or attach remotely instead, and get approval first.
+output_sample:
+  input:
+    - Your program or script
+    - How to make the bug happen
+    - What you expected and what you got instead
+    - Your guess at where it goes wrong (optional)
+  prerequisites:
+    - An AI that can run code and commands on your computer
+    - The dap debugger tool, which your AI asks to install first
+    - A debugger for your language, if one is missing
+  output:
+    - name: Session start
+      contains: The command that launches your program under the debugger, with the breakpoints your AI picked and why.
+    - name: Stop points
+      contains: "At each pause: the file and line, nearby code, local values, the call stack and any program output."
+    - name: Evidence
+      contains: Values checked with live expressions, including what the calling code passed in at each step up the stack.
+    - name: Root cause
+      contains: The place where the value first went wrong, named as the origin of the bug and not just the symptom.
+    - name: Fix check
+      contains: A proposed fix tested on the live state, then a restart to confirm the same scenario now works.

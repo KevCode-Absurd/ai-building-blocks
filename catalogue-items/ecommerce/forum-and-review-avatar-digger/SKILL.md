@@ -28,7 +28,7 @@ How to start:
 
 ## What you need
 - **Product and the problem it solves** (required). One or two sentences.
-- **A starting group** (strongly advised): the age range and gender of your biggest competitor's buyers. If they don't have it, tell them how to get a rough one: a website traffic tool, the competitor's ads in the Meta Ad Library, or asking a chat AI. Mark any number you could not check as `[guess]`.
+- **A starting group** (strongly advised): the age range and gender of your biggest competitor's buyers, or the buyer profile an earlier step picked for you. If they don't have it, tell them how to get a rough one: a website traffic tool, the competitor's ads in the Meta Ad Library, or asking a chat AI. Mark any number you could not check as `[guess]`.
 - **The posts and reviews** (required for the second half): the person reads them and pastes them in. If your AI can open pages, it may help find threads, but the person still reads them.
 - **Customer data** (optional): an order export, if the store already sells, to find its best customers.
 

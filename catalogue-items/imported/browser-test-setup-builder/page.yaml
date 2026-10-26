@@ -2,22 +2,23 @@ thinking: low
 thinking_why: It follows a set setup path for your framework.
 new_slug: browser-test-setup-builder
 name: Browser test setup builder
-summary: Point it at your project. Get Playwright installed with a config, a
-  sample test and a CI file.
+summary: Set up Playwright browser tests in your project. You get a config, folders, a sample test, a CI file and a pass or fail result.
 job: test-and-fix-code
 headline: Browser test setup builder
-subhead: Point it at your project. Get Playwright installed with a config, a
-  sample test and a CI file. Bring your project folder. Use the result to plan
-  your next step.
+subhead: Point your AI at your project folder. It checks which framework you use, installs Playwright and writes the files you need. It then runs the sample test and tells you if it passed.
 explain: |
   Playwright installed and ready to run in your project in one pass: a config, a folder layout, a sample test and a CI file that runs it on every change.
 
   The skill scans your project to see what you use, such as React, Next.js, Vue or Angular, whether you write TypeScript, and whether tests or CI already exist. It installs Playwright if needed, then writes a config that fits your framework, including the dev server, the base address, retries on CI and screenshots on failure. It adds one working example test and a GitHub Actions workflow. It needs Node.js and npm.
 when:
   - You have no browser tests yet and want a clean start.
-  - You use Next.js or Vite and want the right config without reading docs.
-  - You want tests to run automatically on every pull request.
-  - Your current Playwright setup is a mess and you want a fresh baseline.
+  - You use Next.js or Vite and want the right config without reading the docs.
+  - You want tests to run on every pull request.
+  - Your current Playwright setup is a mess and you want a fresh base.
+not_for:
+  - "Your project already has a working Playwright suite: keep it, and write new tests by hand or ask your AI for one new test."
+  - "You test a mobile app or a non-web program: use a mobile test tool made for your app type."
+  - "You have no Node.js or npm in your project: set those up first, or ask a developer to do it."
 you_give:
   - Your project folder
   - Your framework, if the skill cannot detect it (optional)
@@ -29,8 +30,32 @@ you_get:
   - A working sample test
   - A CI workflow file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in your project. It must be able to read your files and run code. Claude Code, Codex or a similar tool works.
+  - "Paste the skill text, or upload the skill folder, and say: set up Playwright in this project."
+  - Let your AI look at your project first. In Claude it uses a helper called Explore. In other tools it simply reads package.json and your folders.
+  - Answer any question about your framework or CI. If you skip it, your AI uses what it found.
+  - Check the setup report. The sample test should pass.
+  - Next, write your first real test for a key page, such as login or checkout.
+output_sample:
+  input:
+    - Your project folder
+    - Your framework, if it cannot be found (optional)
+    - Your CI preference (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Node.js and npm installed
+  output:
+    - name: playwright.config.ts
+      contains: "Settings that fit your framework: dev server, base address, retries on CI, and screenshots on failure."
+    - name: e2e folder
+      contains: Folders for fixtures, page objects and test data, plus a first example test file.
+    - name: example.spec.ts
+      contains: "Two simple tests: the homepage loads, and the page shows a navigation area."
+    - name: CI workflow
+      contains: A GitHub Actions file, or a GitLab stage, that runs your tests on every push and pull request.
+    - name: .gitignore update
+      contains: Lines that keep test results and reports out of your repository.
+    - name: npm scripts
+      contains: Short commands to run tests, open the test viewer, or debug a test.
+    - name: Setup report
+      contains: The file paths made, the scripts added, and whether the sample test run passed or failed.

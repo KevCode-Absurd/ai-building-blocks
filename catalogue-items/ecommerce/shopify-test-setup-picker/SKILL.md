@@ -31,7 +31,7 @@ How to start:
 
 ## What you need
 - **Shopify plan** (required): Basic, Shopify, Advanced or Plus.
-- **The test ideas** (required): pages and logic to test, such as product page, cart, checkout, pricing.
+- **The test ideas** (required): pages and logic to test, such as product page, cart, checkout, pricing. A shortlist of tests from the big swing test picker works as they are.
 - **Who builds the changes** (required): the owner, an app, or a developer.
 - **Monthly orders** (strongly advised): if under 30, say a test is not the right step and point to the store test readiness checker.
 - **Other tests running** (optional).

@@ -1,6 +1,6 @@
 new_slug: stop-fake-orders-card-testing-and-bot-abuse
 name: Stop fake orders, card testing and bot abuse
-summary: Give it your orders and payment setup. Get fraud rules, a review routine and a bot access plan.
+summary: Stop fake orders and card testing in your store. Give it your orders and payment setup. Get fraud rules, a review routine and a bot access plan.
 job: protect-your-store
 thinking: high
 thinking_why: It sets rules that can block real buyers if they are too tight. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You see chargebacks, repeated small card charges, fake sign-ups or odd traffic, and want rules in place before they cost you.
   - Your processor has warned you about your dispute rate.
   - You want to decide whether AI shopping assistants may browse and buy from your store.
+not_for:
+  - "Your store has very few orders a month: there is too little data to tune rules, so check each order by hand and ask your payment provider for its basic fraud settings."
+  - "Nobody has time to review held orders: set no hold rules yet, and use only the block rules your payment provider already offers."
+  - "You need to recover money from a chargeback you already got: reply to the dispute through your payment provider, with your order and shipping proof."
 you_give:
   - Your orders per month and average order value
   - Your chargebacks over the last 3 months (count and rate)
@@ -33,11 +37,35 @@ how_to_use:
   - Give it your order numbers, chargebacks and how much review time you have. It will not hold orders nobody can review.
   - Turn the rules on and run them for two to four weeks. Export the blocked, held and disputed orders, failed sign-ins and repeated small card charges.
   - Bring those back, and say if you want AI shopping assistants allowed, partly allowed or blocked.
+output_sample:
+  input:
+    - Your orders per month and average order value
+    - Your chargebacks over the last 3 months (count and rate)
+    - Your payment setup, such as Shopify Payments or another gateway
+    - How many hours a week you can review held orders
+    - Your processor's warning and block thresholds (paste its message)
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+    - Two to four weeks of running the rules before step 2
+    - Your blocked, held and disputed orders, failed sign-ins and repeated small card charges for step 2
+  output:
+    - name: Fraud rules setter file
+      contains: A chargeback watch line, rules for low, medium and high risk orders, extra card check settings and a review checklist.
+    - name: Monthly loop
+      contains: A routine to tune the rules each month using your blocked and disputed orders.
+    - name: Bot and AI agent access plan
+      contains: Which people, bots and AI agents may reach each page, with a permit, verify, challenge or prevent choice.
+    - name: Limits and alerts
+      contains: Limits per account and per address for sign-in, reset and checkout, plus alerts on simple signals.
+    - name: Sign-in and reset wording
+      contains: The exact messages to show on sign-in and password reset pages.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Set the fraud rules
     text: Checks you have enough orders to tune rules, sets a chargeback watch line, writes a rule for each risk level, uses an extra card check only for higher-risk orders, and adds a review checklist.
   - title: Plan bot and agent access
-    text: Names the attack from your data, such as stolen passwords or card testing, sets alerts, lists which bots and agents reach each page, and gives an allow, check or block policy with limits at the edge.
+    text: Takes step 1's rules and your export from two to four weeks of running them. Names the attack from your data, such as stolen passwords or card testing, sets alerts, lists which bots and agents reach each page, and gives an allow, check or block policy with limits at the edge.
 output_shape: |-
   STEP 1: FRAUD RULES
     Inputs read | chargeback watch line | rules by risk level | extra card check settings | review checklist | monthly loop

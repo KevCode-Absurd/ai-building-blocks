@@ -1,6 +1,6 @@
 new_slug: set-your-cac-limit-and-test-what-ads-really-add
 name: "Set your CAC limit and test what ads add"
-summary: Give it your ad and order data. Get a CAC limit, a lift test and a budget split.
+summary: Set your CAC limit from your ad and order data, then plan a lift test to see which ads really bring new customers. Ends with a budget split.
 job: plan-ad-tests
 thinking: high
 thinking_why: It runs five skills in a row, with profit sums and a test design that depend on each other. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You spend on several channels, the platforms claim more than your store sees, and you need one limit.
   - Your cost to win a customer keeps rising and you do not know if you can keep scaling.
   - You want to know how many of one channel's sales it really caused.
+not_for:
+  - "You run one channel and have no order export: use the New-customer profit dashboard builder on its own."
+  - "You only want to know if a payback time is safe: use the CAC payback checker on its own."
+  - "You only want to compare platform numbers with your store: use the Platform ROAS reality check on its own."
 you_give:
   - Shopify orders with a new or returning flag, and net revenue after returns
   - Ad spend by day and by channel
@@ -32,6 +36,29 @@ how_to_use:
   - Paste your order and ad exports. Check your product costs with your accountant first. Wrong costs give a wrong limit.
   - Pick the channel you doubt most. Pull its spend by week and region for the last 90 days.
   - Run the test for the planned weeks. Then pull spend and new-customer results by channel and bring them back.
+output_sample:
+  input:
+    - Your store orders with a new or returning flag, and net revenue after returns
+    - Your ad spend by day and by channel
+    - Your product cost and fulfilment cost per order
+    - Gross profit per customer at 30, 90 and 180 days (optional)
+    - Your sales by region for 6 to 12 months, for the lift test
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Your product costs checked by someone who knows your books
+  output:
+    - name: "STEP 1: NEW-CUSTOMER SHEET"
+      contains: A daily sheet of new-customer return, blended CAC and profit, with definitions, formulas and cost gaps to fix.
+    - name: "STEP 2: CAC LIMIT"
+      contains: A target, ceiling and floor for CAC, with payback time and a score out of 100.
+    - name: "STEP 3: PLATFORM NUMBERS"
+      contains: A return ladder for each platform, the traps found and a trust level for each channel.
+    - name: "STEP 4: LIFT TEST PLAN"
+      contains: The test type, matched regions, dates, cost, how to read the result and a cut, hold or scale rule.
+    - name: "STEP 5: BUDGET SPLIT"
+      contains: A ranking of channels for the next $10,000, a stop point for each and a grade for the evidence.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Build the new-customer sheet
     text: Defines net revenue, MER, new-customer MER, blended CAC and profit once, writes the sheet formulas and lists the cost gaps to fix.

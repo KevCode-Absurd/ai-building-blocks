@@ -1,6 +1,7 @@
 slug: prepare-new-data-use-review-for-signoff
 name: Prepare a new data use for review
-summary: Describe a feature and attach privacy policies. Get triage, an assessment where needed and owned sign-off questions.
+summary: "Check a new use of customer data before launch: get a triage call, a
+  privacy assessment if needed and sign-off questions with owners."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -21,11 +22,21 @@ uses:
   - feature-legal-risk-assessor
 steps:
   - uses: new-data-use-screener
-    note: Load required practice and matter context first. Use data flows, jurisdiction and policies to determine the review route. Pass classification, evidence and questions to assessment. Classification does not approve launch.
+    note: Load required practice and matter context first. Use data flows,
+      jurisdiction and policies to determine the review route. Pass
+      classification, evidence and questions to assessment. Classification does
+      not approve launch.
   - uses: privacy-impact-assessment-writer
-    note: When triage triggers assessment, use house format, seed and product answers to draft conditions, owners and policy checks. Verify current mandatory triggers from primary sources when access permits; otherwise record unresolved legal verification.
+    note: Reads step 1's route and open questions, and your own product answers.
+      When triage calls for it, drafts the assessment in your house format with
+      conditions, owners and policy checks. Verifies current mandatory triggers
+      from primary sources when it can browse; otherwise records them as
+      unverified. Hands step 3 the draft assessment.
   - uses: feature-legal-risk-assessor
-    note: Use assessment and triage to find novel or serious risks requiring deeper attention. Draft a separate assessment only when the actual threshold is met; otherwise document why specialist escalation is not proposed.
+    note: Reads step 2's assessment and step 1's triage to find novel or serious
+      risks. Drafts a separate assessment only when the threshold is met;
+      otherwise documents why escalation is not proposed. Hands back the
+      sign-off pack.
 execution: coordinator
 package_files: all
 origin: own

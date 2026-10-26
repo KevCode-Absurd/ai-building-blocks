@@ -1,53 +1,91 @@
 new_slug: check-supplier-invoices-before-approval
 name: Check supplier invoices before approval
 headline: Check supplier invoices before approval
-summary: Share the source files. Get a matched invoice register and a list of amounts needing investigation.
+summary: Check each supplier invoice against its purchase order and receipt before you pay. You get a matched register and a list of amounts to investigate.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A matched invoice register and a list of amounts needing investigation. Share invoices, purchase orders, receipt records, currency and the approval rules you use. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your supplier invoices, the purchase orders and the receipt records. It matches them line by line, re-adds every total and flags what does not fit. You get a matched invoice register and a list of amounts to look into before you approve payment.
 explain: |-
-  A matched invoice register and a list of amounts needing investigation.
+  Paying an invoice that does not match what you ordered or received is an easy mistake. A price is higher than agreed. An item was never delivered. The same invoice arrives twice. This workflow does a three-way match on supplier invoices: invoice, purchase order and receipt.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Each match names the records used; duplicates, mismatched units and unreceived items remain flagged. Missing tools or evidence stay visible in the final summary.
+  It checks quantities, unit prices and currency on each line. Then it re-adds line totals, discounts and the tax the invoice states, without deciding how tax should be treated. A last step looks across the whole register for duplicate invoice numbers, mixed currencies and totals that do not add up.
+
+  Each match names the records it used. Anything it cannot match stays flagged. It does not approve or pay anything. You do that in your own system.
 when:
-  - You need a matched invoice register and a list of amounts needing investigation.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A batch of supplier invoices is waiting for your approval.
+  - A supplier invoice looks higher than what you agreed.
+  - You suspect the same invoice was entered twice.
+  - You pay in more than one currency and want the totals checked.
+not_for:
+  - You want payment released or approval changed. This checks only. Approve in your accounts system.
+  - You need tax advice or filing. The tax figure is only re-added, not judged. Ask your accountant.
+  - A customer owes you money. Use the Get a late invoice paid and keep the customer workflow.
+  - You want your bank matched to your books. Use the Match bank to books and issue a clean P&L workflow.
 you_give:
-  - Invoices, purchase orders, receipt records, currency and the approval rules you use.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - The supplier invoices to check, as PDFs, photos or an export
+  - The purchase orders for those invoices
+  - Receipt or delivery records showing what arrived
+  - The currency of each invoice
+  - Your approval rules (optional), such as a limit above which two people sign
+  - The price difference you accept before flagging, such as 2 percent (optional)
 you_get:
-  - A matched invoice register and a list of amounts needing investigation.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A matched invoice register with the records used for each match
+  - A list of amounts to investigate, with what to ask and whom
+  - "A totals check for each invoice: your lines re-added against the invoice total"
+  - Flags for duplicates, items not received and mixed currencies
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the invoices, purchase orders and receipt records. Say which currency each invoice uses.
+  - Tell the AI the difference you accept, such as 2 percent on price. If you do not, it flags every difference.
+  - Read the investigation list first. Ask the supplier or your team about each item before you approve payment.
 how_it_works:
   - title: Invoice checker
-    text: Compare each invoice with the supplied order and receipt evidence and mark gaps.
+    text: Matches each invoice line to the purchase order and receipt on number, quantity, unit price and currency. Marks gaps. Hands the draft register to the next step.
   - title: Invoice totals checker
-    text: Independently recompute line totals, discounts and stated tax arithmetic without choosing tax treatment.
+    text: Re-adds line totals, discounts and the tax the invoice states. It does not choose a tax treatment. Hands back any invoice whose total does not add up.
   - title: Spreadsheet checker
-    text: Check the combined register for duplicate IDs, currency mix-ups and unreconciled totals.
+    text: Checks the combined register for duplicate invoice numbers, mixed currencies and totals that do not reconcile. Hands back the final register.
 output_shape: |-
-  Scope and source coverage
-  A matched invoice register and a list of amounts needing investigation.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  MATCHED INVOICE REGISTER
+    Invoice ID | <Supplier> | <PO> | <Receipt> | <Currency> | <Invoiced total> | <Re-added total> | <Match status> | <Records used> | <Flag>
+
+  INVESTIGATION LIST
+    Invoice | <Issue> | <Amount at stake> | <What to ask> | <Who to ask>
+
+  MISSING
+  CHECKS MISSED
+  HAND-BACK SUMMARY
+output_sample:
+  input:
+    - Supplier invoices to check
+    - The purchase orders and receipt records for them
+    - The currency of each invoice
+    - Your approval rules and the price difference you accept (optional)
+  prerequisites:
+    - An AI that can open PDFs, images or spreadsheets
+  output:
+    - name: Matched invoice register
+      contains: One row per invoice with its purchase order, receipt, totals, match status and the records used.
+    - name: Investigation list
+      contains: Each amount that needs a look, the issue, what to ask and whom.
+    - name: Totals check
+      contains: Line totals, discounts and stated tax re-added and compared with the invoice total.
+    - name: Duplicate and currency flags
+      contains: Repeated invoice numbers and invoices whose currency differs from the order.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks missed and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Each match names the records used; duplicates, mismatched units and unreceived items remain flagged.
+  - what: Tolerance
+    how: Say how much price difference is acceptable. Without a number, every difference is flagged.
+  - what: Batch
+    how: Check one supplier or one week of invoices at a time. Smaller batches are easier to review.
+  - what: Currency
+    how: State each invoice's currency. The AI does not convert unless you give the rate and date.
+  - what: Approval rules
+    how: Paste your limits, such as two signers above a set amount. The AI lists them next to each flag.
 judge:
   - Each match names the records used; duplicates, mismatched units and unreceived items remain flagged.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,16 +98,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the register and the answers you got from suppliers, then attach them next time to spot repeat issues.
+  - Add a list of your usual suppliers and their agreed prices so price jumps show up faster.
+  - Finish any check that needs a person or a spreadsheet tool before you pay.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet tool such as Excel or Google Sheets
+      why: Lets you open the register and re-check a total. The AI cannot recalculate a workbook without one.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A price list or contract for your main suppliers.
+    - A named person who approves invoices.
 terms:
+  - term: Three-way match
+    meaning: Checking that the invoice, the purchase order and the receipt all agree.
+  - term: Purchase order
+    meaning: Your written order to a supplier, with what you asked for and the agreed price.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

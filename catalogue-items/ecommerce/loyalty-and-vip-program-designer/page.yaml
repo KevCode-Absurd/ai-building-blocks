@@ -1,6 +1,6 @@
 new_slug: loyalty-and-vip-program-designer
 name: "Loyalty and VIP program designer"
-summary: "Give it your spend tiers and margins. Get a loyalty design with non-discount perks and a test."
+summary: "Design a loyalty or VIP program that rewards top customers with access, not discounts. Get a go or wait call, costed perks and a 90-day test."
 job: keep-customers
 thinking: medium
 thinking_why: "It makes a go or wait call and costs each perk, so a mid-size model is enough if you give it your spend data."
@@ -17,6 +17,10 @@ when:
   - Your top customers get the same experience as someone who bought once.
   - You have points or a discount club and want a version that costs less margin.
   - You want to know if a VIP tier is worth building now or if something else comes first.
+not_for:
+  - "Your store is small or few customers place a second order: fix the second-order problem first, with a simple follow-up email after the first sale."
+  - "You only want a list of your best buyers: use a spreadsheet sort by lifetime spend, then come back here."
+  - "You want a points or cashback scheme that is just a discount: use a loyalty app such as Smile.io or LoyaltyLion."
 
 you_give:
   - Customers by spend tier, and their share of revenue and profit
@@ -35,6 +39,30 @@ how_to_use:
   - Say what your team can do each week and what you can spend per member.
   - Read the go or wait call first. If it says wait, do that fix before anything else.
   - Run the test for 90 days against a group that does not get the perks.
+output_sample:
+  input:
+    - Your customers with lifetime spend and order count
+    - Your repeat rate and how much it depends on discounts
+    - Your margin limits and weekly team hours
+    - Upcoming drops or new products (optional)
+    - Your current loyalty program (optional)
+  output:
+    - name: Go or wait
+      contains: A clear call on whether a VIP program is worth building now, with the reason from the bottleneck check.
+    - name: Your top 20 percent
+      contains: The share of revenue and profit your best customers bring.
+    - name: Club and tiers
+      contains: A club name, who is invited, and each tier with its threshold, perks and cost per member.
+    - name: Reward mix
+      contains: How the rewards split between access, experiences, recognition and discounts.
+    - name: Gating and paid tier
+      contains: How people get in, the guard against bots and resellers, and whether to test a paid tier.
+    - name: Invite message
+      contains: A short invite saying why they were chosen and what they get.
+    - name: Flows and campaigns
+      contains: Perk reminders, early access announcements and a win-back for lapsed top customers.
+    - name: Test
+      contains: A holdout or before-and-after plan with 90-day checks on repeat rate, order value and retention.
 
 how_it_works:
   - title: Checks the bottleneck

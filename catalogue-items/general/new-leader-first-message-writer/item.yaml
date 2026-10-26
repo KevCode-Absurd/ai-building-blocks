@@ -1,6 +1,6 @@
 slug: new-leader-first-message-writer
 name: "New leader first message writer"
-summary: "Paste your background and team situation. Get a first-week message saying who you are and what happens next."
+summary: "Write your first message as a new leader. Get a one-page note covering who you are, why you are here and what happens next."
 category: general
 type: skill
 role: make
@@ -15,3 +15,5 @@ version: 1.0.0
 minds: [satya-nadella, mary-barra]
 credits:
   - {title: "Email to employees on his first day as CEO, 4 February 2014", by: "Satya Nadella", used: "The frame of a personal opening, the shift in the field, four questions answered, honesty about what he did not know, and a closing ask"}
+next: [team-culture-memo-writer, one-on-one-meeting-planner]
+needs_mode: manual

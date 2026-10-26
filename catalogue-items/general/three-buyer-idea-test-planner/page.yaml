@@ -1,6 +1,6 @@
 new_slug: three-buyer-idea-test-planner
 name: "Three-buyer idea test planner"
-summary: "Paste your business idea. Get the one-minute math and a weekend plan to ask ten people to pay."
+summary: "Test a business idea in a weekend. Get the math on buyers needed, ten people to ask, and a plan to see if they will pay."
 job: test-an-idea
 thinking: low
 thinking_why: "The steps are fixed arithmetic and a script, so a quick pass is enough."
@@ -17,6 +17,10 @@ when:
   - You have an idea and want to know in a weekend if anyone will pay.
   - You are tempted to build first and find buyers later.
   - You keep asking friends what they think and getting only encouragement.
+not_for:
+  - Your idea already has paying customers. Use your sales numbers to decide what to do next, not a first-buyer test.
+  - Your buyers cannot pay you within a week, such as big companies with slow buying. Ask a few of them for a signed letter of intent by hand instead.
+  - You want to learn why people say no. Talk to them one by one and ask about their last time they had the problem.
 
 you_give:
   - Your idea in a sentence, and who it is for
@@ -34,6 +38,30 @@ how_to_use:
   - Give it names of people you could reach this week, or places where such buyers gather.
   - Send the asks as written. Count payments, not kind words.
   - Bring back the count and let it apply the rule.
+output_sample:
+  input:
+    - Your idea in one sentence, and who it is for
+    - A price you could charge
+    - Your profit on each sale (optional)
+    - Your profit goal for the first year (optional)
+    - Names or groups of people you could reach this week (optional)
+  output:
+    - name: The idea
+      contains: Your idea, your buyer and one price, each written in one plain line.
+    - name: The one-minute math
+      contains: Profit goal divided by profit per sale, the number of buyers needed, and a fix if that number looks out of reach.
+    - name: Ten people you can reach in 48 hours
+      contains: Ten people or groups, each with the way you will reach them.
+    - name: The ask
+      contains: A short direct message asking for payment, with what they get, the price and how to pay.
+    - name: The weekend
+      contains: Five asks for day two and five for day three, with times and channels.
+    - name: The rule
+      contains: Go and change rules written before the test, based on how many people pay.
+    - name: Every no
+      contains: A line asking for a referral or offering a smaller deal.
+    - name: Missing and checks missed
+      contains: Facts that would sharpen the plan, and any check the plan still fails.
 
 how_it_works:
   - title: States idea, buyer, price

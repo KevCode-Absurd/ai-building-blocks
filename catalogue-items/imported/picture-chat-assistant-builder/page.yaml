@@ -2,35 +2,111 @@ thinking: medium
 thinking_why: It sets up a vision model and tunes it.
 new_slug: picture-chat-assistant-builder
 name: Picture chat assistant builder
-summary: Give it images and questions. Get a chat that describes pictures and
-  answers questions about them.
+summary: Set up LLaVA on your own GPU in Python to caption photos and answer follow-up questions about each image, with no per-call fee.
 job: build-software
 headline: Picture chat assistant builder
-subhead: A chat assistant that looks at pictures and talks about them. Ask what
-  is in a photo, what a chart says or what a document image contains, and keep
-  asking follow-ups.
+subhead: Give it your images and the questions you want to ask. It walks you through installing LLaVA, an open-source model that sees pictures, and running it on your own GPU. You get image captions and answers, and a chat that keeps context across questions.
 explain: |
-  A chat assistant that looks at pictures and talks about them. Ask what is in a photo, what a chart says or what a document image contains, and keep asking follow-ups.
+  LLaVA is a free, open-source AI model that looks at an image and talks about it. This skill helps you set up your own picture chat assistant: you ask what is in a photo, what a chart shows or what a document image says, then ask follow-ups.
 
-  The skill sets up LLaVA, an open-source model that pairs vision with a language model. You clone the project, install it, load a model in a chosen size and feed it images with your question. It supports multi-turn chats, captions, visual question answering and following instructions about an image. It is a good fit when you want to run it yourself and pay no per-call fee. It needs Python and a GPU.
+  Your AI walks you through the install, picks a model size that fits your GPU memory, and writes the code for a first run. It shows the command line chat, a small web page chat, and how to keep a multi-turn conversation going. It also shows how to shrink memory use with 4-bit loading.
+
+  It runs on your machine, so there is no fee per image. The trade-off is that you need Python and a strong GPU. The model can invent details, and it misreads small text and counts. Check its answers before you rely on them.
 when:
   - You want a bot that answers questions about product photos.
-  - You need captions for a pile of images.
-  - You want to ask follow-up questions about a screenshot.
-  - You prefer running a model yourself over a paid service.
+  - You need captions for a folder of images, and want to run it yourself.
+  - You want to ask follow-up questions about a screenshot or chart.
+  - You prefer an open model on your own GPU to a paid image service.
+not_for:
+  - You have no GPU. A hosted service is simpler. Without a GPU this model is far too slow.
+  - You need the exact text from a scan or a receipt. Use the image text reader, since this model misreads small text.
+  - You need exact counts or exact positions of objects. Answers here are approximate.
+  - You want to match images to text search queries. Use the image and text matcher.
 you_give:
-  - Images
-  - Questions to ask
-  - A computer with a GPU
-  - Model size choice (optional)
+  - Your images, such as JPG or PNG files
+  - The questions you want to ask about them
+  - Your GPU type and memory
+  - A model size, such as 7B or 13B (optional)
 you_get:
-  - A running picture chat setup
-  - Image descriptions
-  - Answers to questions about each image
-  - Multi-turn conversations
+  - Install and first-run commands for your setup
+  - A caption or answer for each image and question
+  - A saved conversation when you ask follow-ups
+  - A list of answers to double-check, such as small text or counts
+  - Ideas for what to do next with the answers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Check you have Python, git and an NVIDIA GPU with enough memory. A 7B model needs about 14 GB, or less with 4-bit loading. Your AI cannot run the model in a chat window. You run it on your own machine.
+  - Open Claude, ChatGPT or Gemini and paste this skill. Tell it your GPU and the model size you want.
+  - Run the install commands it gives you, then run the first command with one image and one question.
+  - Read the answer and compare it with the image. If it invents details, make your question more specific.
+  - Move on to your full set of images, or start the web chat page to ask follow-ups.
+  - Save the captions to a file or spreadsheet, and check a sample by eye.
+how_it_works:
+  - title: Check your setup
+    text: It checks your GPU memory and picks a model size that fits, such as 7B in 4-bit.
+  - title: Install LLaVA
+    text: It gives the commands to download the project and install it.
+  - title: Run a first test
+    text: It runs one image with one question from the command line.
+  - title: Ask in a conversation
+    text: It keeps the chat history, so a follow-up like "what breed is it?" makes sense.
+  - title: Add a front end
+    text: It can start a small web page chat with Gradio so others can use it.
+  - title: Flag weak spots
+    text: It lists where the model is weak, such as small text, counting and invented details.
+output_shape: |
+  ## Setup check
+  <GPU, memory, model size, MISSING items>
+
+  ## Commands
+  <clone, install, first run>
+
+  ## Answers
+  <one answer per question, or the conversation log>
+
+  ## Notes
+  <answers to double-check>
+
+  ## Next steps
+  <save, add a chat page, try a larger model>
+output_sample:
+  input:
+    - Your images, such as JPG or PNG files
+    - The questions you want to ask about each image
+    - Your GPU type and memory
+    - A model size (optional)
+  prerequisites:
+    - Python and git installed
+    - An NVIDIA GPU with enough memory for your model size
+    - A willingness to run commands on your own machine
+  output:
+    - name: Setup check
+      contains: Your GPU, the model size that fits it, and anything missing.
+    - name: Commands
+      contains: The install and first-run commands for your setup.
+    - name: Answers
+      contains: One text answer per question, or the full conversation log for follow-ups.
+    - name: Notes
+      contains: Answers to double-check, such as small text, counts or details the model made up.
+    - name: Next steps
+      contains: Save captions to a file, add a web chat page, or try a larger model.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the install and test commands on your machine for you, when you allow it.
+    - name: Hugging Face
+      why: It hosts the LLaVA model files that the code downloads.
+  inputs:
+    - Clear, well-lit images
+    - Specific questions, such as "what colour is the logo?"
+    - A short list of images where you already know the right answer
+terms:
+  - term: LLaVA
+    meaning: A free, open-source model that reads images and chats about them.
+  - term: Multi-turn chat
+    meaning: A chat where each question builds on the earlier ones.
+  - term: VRAM
+    meaning: The memory on your graphics card. The model must fit in it.
+  - term: 4-bit loading
+    meaning: A way to shrink the model so it uses far less VRAM, with some loss in quality.
+  - term: Caption
+    meaning: A short written description of an image.

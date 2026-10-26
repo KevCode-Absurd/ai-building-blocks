@@ -1,15 +1,13 @@
 slug: escrow-release-checker
 name: Escrow release checker
-summary: Reconcile remaining escrow with supported claim reserves and available release cash.
+summary: "Work out how much escrow can be released now and how much to keep for approved pending claims. Claims above the balance are shown."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - earnout-payout-checker
+  - closing-equity-proceeds-checker
+  - check-an-escrow-funded-earnout
 origin: own
 version: 1.0.0
 added: 2026-10-22

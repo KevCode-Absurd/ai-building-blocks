@@ -1,52 +1,96 @@
 new_slug: prepare-research-poster-source-notes
 name: Prepare research poster source notes
 headline: Prepare research poster source notes
-summary: Share the source files. Get a poster content hierarchy, figure source index and wording review.
+summary: Turn a finished study into a poster outline, a figure source list and a claim check, so every caption on your research poster traces to your results.
 job: work-with-files
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A poster content hierarchy, figure source index and wording review. Share the completed study, approved results, required poster sections, intended audience and conference size limits. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your finished study, your approved results and the conference poster rules. Your AI plans the reading order, lists where each figure comes from and flags any wording your study does not back.
 explain: |-
-  A poster content hierarchy, figure source index and wording review.
+  A research poster has little room, so text gets cut fast and people lose track of where each number came from. This workflow turns your finished study into poster content you can trust: a reading order, short text for each section and a source for every figure and caption.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every proposed figure and caption names an actual source; the content pack is distinct from a finished poster. Missing tools or evidence stay visible in the final summary.
+  It works in three passes. First your AI pulls only the facts the poster needs from your study, with where each one sits and what limits it. Next it plans the reading order and a brief for each figure. Last it checks every heading and caption against the study and flags anything that was not measured, or that claims to be new without support.
+
+  You get a content pack, not a finished poster. Layout and print files come from a poster tool afterward. Anything your AI cannot verify stays marked MISSING, so you see the gaps before the print shop does.
 when:
-  - You need a poster content hierarchy, figure source index and wording review.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your study is done and the conference wants it on one poster
+  - You have a paper, a few result tables and a poster rules page, and no plan for the layout
+  - A co-author asks where a number on the poster came from
+  - You want every caption checked against the results before you pay for printing
+not_for:
+  - You want the poster itself laid out for print. Use the Research poster builder for an editable PowerPoint, or the Research poster maker for a LaTeX PDF.
+  - Your study has no approved results yet. Wait for them. This workflow only reports what was measured.
+  - You want a talk, not a poster. Use Build a research talk from checked figures.
+  - You want a poster for a public event, with a date and a price. Use Make a readable event poster.
 you_give:
-  - The completed study, approved results, required poster sections, intended audience and conference size limits.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your finished study, as a paper, report or notes
+  - The approved results you may show, such as tables and figures
+  - The conference poster rules, such as size, orientation and required sections
+  - Who will read the poster
+  - A word limit for the poster text (optional)
 you_get:
-  - A poster content hierarchy, figure source index and wording review.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A poster content hierarchy: the reading order, a heading for each section and short text for each"
+  - "A figure source index: each figure and caption with the table, file or page it comes from"
+  - "A wording review: headings and captions that claim more than the study measured, with safer wording"
+  - MISSING lines for any fact your AI could not find in your files
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Share your study, your approved results and the poster rules. Say who will read the poster.
+  - Read the figure source index first. Check that each figure points to the right table or page.
+  - Fix every MISSING line and every flagged heading in your own files. Then take the outline to a poster tool.
 how_it_works:
   - title: Source note summariser
-    text: Extract only the completed study facts relevant to the poster question, preserving the source locations and limitations.
+    text: Pulls the facts the poster needs from your study, each with its location and limits. It hands these on as the only source for poster text.
   - title: Presentation builder
-    text: Use visual narrative planning to propose a short poster reading order and figure briefs. Return a content outline; do not claim a rendered poster.
+    text: Plans a short reading order and a brief for each figure from those facts. It returns an outline, not a rendered poster, and hands on the headings and captions.
   - title: Unsupported claim spotter
-    text: Check the proposed headings and captions against the completed study, flagging unmeasured outcomes and unsupported novelty.
+    text: Checks each heading and caption against the study. It flags outcomes that were not measured and novelty claims with no support, and offers safer wording.
 output_shape: |-
-  Scope and source coverage
-  A poster content hierarchy, figure source index and wording review.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  POSTER CONTENT HIERARCHY
+  Section | Heading | Short text | Source in your study
+
+  FIGURE SOURCE INDEX
+  Figure | Caption | File, table or page | Limit to state
+
+  WORDING REVIEW
+  Heading or caption | Problem | Safer wording | Source or MISSING
+
+  HAND-BACK SUMMARY
+  Files saved | MISSING lines | Checks missed | One next step
+output_sample:
+  input:
+    - Your finished study, as a paper, report or notes
+    - The approved results you may show
+    - The conference poster rules, such as size and required sections
+    - Who will read the poster
+    - A word limit for the poster text (optional)
+  prerequisites:
+    - An AI that can read your files or pasted text
+  output:
+    - name: Poster content hierarchy
+      contains: The reading order, a heading for each section and short text for each, with where it comes from.
+    - name: Figure source index
+      contains: Each figure and caption with the table, file or page it comes from and the limit to state.
+    - name: Wording review
+      contains: Headings and captions that claim more than the study measured, with safer wording.
+    - name: Hand-back summary
+      contains: Files saved, MISSING facts, checks not done and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Run one study at a time. Say which sections the conference requires.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Share the paper and the result tables, not a summary from memory.
   - what: Acceptance
-    how: Every proposed figure and caption names an actual source; the content pack is distinct from a finished poster.
+    how: Every figure and caption names a real source. The pack is an outline, not a finished poster.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read your paper and tables and keep each step's result as a file. None of them prints a poster. No code or paid tool is needed.
+  inputs:
+    - The conference poster rules page, saved as a file.
+    - A co-author who can confirm the results are final.
 judge:
   - Every proposed figure and caption names an actual source; the content pack is distinct from a finished poster.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,13 +106,11 @@ improve:
   - Add your own acceptance rules and one approved example without changing the component licences.
   - Keep corrections with the result so the next run uses current facts and the same definitions.
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+next:
+  - research-poster-builder
+  - research-poster-maker
 terms:
+  - term: Figure source index
+    meaning: A list that ties each figure and caption to the table or page it came from.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks code against a known list of patterns.
 new_slug: fixed-point-code-reviewer
 name: Fixed-point code reviewer
-summary: Give it MATLAB fixed-point code. Get slow or risky patterns found, with
-  cleaner replacements.
+summary: Check your MATLAB fixed-point code for slow or risky fi patterns. Get each finding by line number, with a cleaner way to write it.
 job: test-and-fix-code
 headline: Fixed-point code reviewer
-subhead: MATLAB fixed-point code is checked for slow habits and risky patterns,
-  and each one gets a cleaner replacement. Your simulations run faster and your
-  code is ready for C or hardware conversion.
+subhead: MATLAB fixed-point code is checked for slow habits and risky patterns, and each one gets a cleaner replacement. Your simulations run faster and your code is ready for C or hardware conversion.
 explain: |
   MATLAB fixed-point code is checked for slow habits and risky patterns, and each one gets a cleaner replacement. Your simulations run faster and your code is ready for C or hardware conversion.
 
@@ -18,18 +15,41 @@ when:
   - You plan to generate C or HDL code and want the MATLAB clean first.
   - You want to compare double, single and fixed versions of one algorithm.
   - You inherited fi code and do not know if it is written well.
+not_for:
+  - "Your code only uses plain integer types like int8 or uint16: no fi objects are involved, so a normal MATLAB code review is enough."
+  - "Your algorithm is pure floating point with no fixed-point plan: ask a colleague or your AI for a general MATLAB code review."
+  - "You set up fixed-point in Simulink block dialogs: use the Fixed-Point Tool that comes with Simulink."
 you_give:
   - MATLAB code that uses fi, fimath or numerictype
   - Target (simulation speed, C code or hardware)
   - Word lengths you plan to use (optional)
 you_get:
-  - List of slow or risky patterns found
-  - Bad and good code side by side
-  - Types table pulled out of your algorithm
-  - Notes on code generation readiness
+  - A list of findings by line number, each tagged as speed, code generation, correctness, pattern or debug.
+  - A short note on each finding and the check it came from.
+  - A suggested fix for each finding, such as one array call in place of a loop.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Fixed-Point Designer.
+  - Open your AI tool and paste the skill instructions into a chat.
+  - Paste your MATLAB code that uses fi, fimath or numerictype. Say if your target is speed, C code or hardware.
+  - Read the findings. Start with the CORRECTNESS items, then the PERF items.
+  - Apply the fixes. Your AI can write the changed code for you.
+  - Time your code before and after with timeit, and compare double, single and fixed results.
+  - Your AI can review code without MATLAB. To run and time it, you need MATLAB with Fixed-Point Designer, both paid.
+output_sample:
+  input:
+    - Your MATLAB code that uses fi, fimath, numerictype or quantizenumeric
+    - "Your target: simulation speed, C code or hardware (optional)"
+    - The word lengths you plan to use (optional)
+  prerequisites:
+    - MATLAB with Fixed-Point Designer, both paid products, if you want your AI to run the code
+    - MATLAB Coder, also paid, only for the code generation checks
+  output:
+    - name: "[PERF] findings"
+      contains: Line numbers where code runs slowly, such as scalar fi calls in a loop or slow constructors.
+    - name: "[CODEGEN] findings"
+      contains: Line numbers where settings or math would give bloated C code, such as default fimath or division.
+    - name: "[CORRECTNESS] findings"
+      contains: Line numbers where number types may grow or give wrong results, such as missing subscripted assignment.
+    - name: "[PATTERN] findings"
+      contains: Line numbers where design habits cause trouble, such as hard-coded types or floating point forced into fixed point.
+    - name: "[DEBUG] findings"
+      contains: Notes on where results drift from double, such as a possible overflow.

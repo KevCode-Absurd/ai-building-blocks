@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads traces and finds what went wrong.
 new_slug: phoenix-ai-app-tracer
 name: Phoenix AI app tracer
-summary: Give it your AI app. Get traces of every step, plus tests that score
-  answers and spot failures.
+summary: Trace every step of your AI app, then score its answers with test sets and judge runs. A free tool to debug an LLM app that you host yourself.
 job: build-software
 headline: Phoenix AI app tracer
-subhead: See every step your AI app takes, score its answers, and catch failures
-  before users do. Phoenix is an open-source tool you run yourself, with no
-  vendor lock-in.
+subhead: See every step your AI app takes, score its answers, and catch failures before users do. Phoenix is an open-source tool you run yourself, with no vendor lock-in.
 explain: |
   See every step your AI app takes, score its answers, and catch failures before users do. Phoenix is an open-source tool you run yourself, with no vendor lock-in.
 
@@ -18,6 +15,10 @@ when:
   - You want to compare two prompts on the same test set.
   - You need a regression check before shipping a change.
   - You want to watch an AI app in production.
+not_for:
+  - "You do not write code or run a Python app: ask the developer who built your AI app to set this up."
+  - "You want a managed service with no setup: use Arize Cloud or LangSmith instead."
+  - "You track classic machine learning model training: use Weights & Biases or MLflow instead."
 you_give:
   - Your AI app code
   - A test set of questions (optional)
@@ -29,8 +30,30 @@ you_get:
   - Versioned test sets
   - Experiment results comparing prompts or models
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and open a browser.
+  - Install the packages with pip install arize-phoenix, plus arize-phoenix-otel and arize-phoenix-evals. You need Python and a paid model key for judge runs.
+  - Start the Phoenix server with the phoenix serve command. Open http://localhost:6006 in your browser.
+  - Add the tracing lines for your framework to your app, then run the app once. Check that a trace shows up in Phoenix.
+  - Run one judge test on a single saved trace first. Judge runs call a paid model, so check the cost before you run a whole set.
+  - Save a small test set, run an experiment on it, and compare your prompts or models in the results.
+output_sample:
+  input:
+    - Your AI app code (Python)
+    - Which framework your app uses, such as OpenAI, LangChain, LlamaIndex or Anthropic
+    - A test set of questions and expected answers (optional)
+    - What counts as a good answer
+  prerequisites:
+    - An AI that can run Python code, or a Python setup you control
+    - Python and the arize-phoenix package installed
+    - A running Phoenix server
+    - An API key and paid model access for the judge model, such as OpenAI gpt-4o (judge runs cost money)
+  output:
+    - name: Trace
+      contains: Each call and tool step your app made, nested in order, so you can see where an answer went wrong.
+    - name: Evaluation results
+      contains: Judge scores and labels on each answer, such as hallucination, relevance or toxicity, with optional explanations.
+    - name: Dataset
+      contains: A versioned test set of questions and expected answers that you can rerun after each change.
+    - name: Experiment results
+      contains: Scores for each prompt or model run on the same test set, so you can compare them.
+    - name: Annotations
+      contains: Feedback such as user ratings logged against a single step.

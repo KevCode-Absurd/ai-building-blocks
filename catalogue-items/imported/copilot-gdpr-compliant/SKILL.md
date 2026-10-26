@@ -12,8 +12,50 @@ Inspired by CNIL developer guidance and GDPR Articles 5, 25, 32, 33, 35.
 
 For deep dives, read the reference files in `references/`:
 - `references/data-rights.md` — user rights endpoints, DSR workflow, RoPA
-- `references/security.md` — encryption, hashing, secrets, anonymization
-- `references/operations.md` — cloud, CI/CD, incident response, architecture patterns
+- `references/Security.md` — encryption, hashing, secrets, anonymization, plus cloud, CI/CD, incident response and architecture patterns (this one file covers security and operations)
+
+> **Not legal advice.** This is an engineering checklist, not a full compliance review. Findings need review by a data protection officer or a lawyer. It does not replace a DPIA (data protection impact assessment) or a record of processing (RoPA).
+
+## When not to use
+
+- A legal opinion on whether you comply. Ask a lawyer or data protection officer.
+- A map of what sensitive data you hold and how it could leak. Use the Sensitive data exposure mapper.
+- Preparing answers for an auditor. Use the GDPR audit prep coach. For a scan that also drafts an impact assessment and tracks data requests, use the GDPR privacy checker.
+- Code that handles no personal data.
+
+## Inputs (ask once, never guess)
+
+1. **What to review:** a project folder, a pull request diff, a schema, an API design or a cloud setup, as files the AI can open or text pasted in. If the AI cannot open files, ask the user to paste the relevant parts.
+2. **The goal:** review existing work, or design something new. If missing, ask.
+3. **Where your users live and your legal basis** (optional). If missing, write `MISSING` in the report. Do not assume a legal basis.
+
+No scanner or special tool is needed. You read the files and check them against the rules below. If you cannot read part of the system (for example the cloud setup), say so in the report. Do not mark it compliant.
+
+## How to run a review
+
+1. Read the inputs. Ask for anything missing, once.
+2. Go through sections 1 to 14 and the PR Review Checklist in section 15 that apply to the code in front of you.
+3. For each gap, record the file and line, the rule it breaks, the change to make and a priority.
+4. For areas with no gap, write "No gap found" and what you looked at. Do not leave areas out silently.
+5. Deliver the report in the format below.
+
+## Output Format
+
+Deliver a **Privacy Engineering Review** with these parts, in order.
+
+1. **Scope.** What was reviewed, what was not, and any `MISSING` input.
+2. **Gaps found.**
+
+   | # | File and line | What is wrong | Rule broken (section) | Suggested change | Priority |
+   |---|---------------|---------------|-----------------------|------------------|----------|
+
+   Priority is High, Medium or Low. High means personal data can reach someone who should not see it, or data is kept with no limit.
+3. **Checked, no gap.** Each area you reviewed with no problem, with one line on what you checked.
+4. **Needs a person.** Items only a lawyer, a data protection officer or the team can decide: legal basis, retention periods, sub-processor contracts, whether a DPIA is needed.
+5. **Next steps.** The three most important changes, in order.
+6. **Reminder line:** "This is an engineering review, not legal advice."
+
+---
 
 ---
 
@@ -106,7 +148,8 @@ For deep dives, read the reference files in `references/`:
 
 **MUST**
 - MUST NOT include personal data in URL paths or query parameters.
-  - `GET /users/{userId}`
+  - Wrong: `GET /users/john@example.com`
+  - Right: `GET /users/{userId}` where the ID is opaque
 - Authenticate all endpoints that return or accept personal data.
 - Extract the acting user's identity from the JWT — never from the request body.
 - Validate ownership on every resource: `if (resource.OwnerId != currentUserId) return 403`.
@@ -126,7 +169,7 @@ For deep dives, read the reference files in `references/`:
 
 **MUST**
 - Anonymize IPs in application logs — mask last octet (IPv4) or last 80 bits (IPv6).
-  - `192.168.1.xxx`
+  - Example result: `192.168.1.xxx`
 - MUST NOT log: passwords, tokens, session IDs, credentials, card numbers, national IDs, health data.
 - MUST NOT log full request/response bodies where PII may be present.
 - Enforce log retention — purge automatically after the defined period.
@@ -142,8 +185,8 @@ For deep dives, read the reference files in `references/`:
 
 **MUST**
 - Return generic error messages — never expose stack traces, internal paths, or DB errors.
-  - `"Column 'email' violates unique constraint on table 'users'"`
-  - `"A user with this email address already exists."`
+  - Wrong: `"Column 'email' violates unique constraint on table 'users'"`
+  - Right: `"A user with this email address already exists."`
 - Use **Problem Details (RFC 7807)** for all error responses.
 - Log the full error server-side with a correlation ID; return only the correlation ID to the client.
 
@@ -153,7 +196,7 @@ For deep dives, read the reference files in `references/`:
 
 ---
 
-## 9. Encryption (summary — see `references/security.md` for full detail)
+## 9. Encryption (summary — see `references/Security.md` for full detail)
 
 | Scope | Minimum standard |
 |---|---|
@@ -191,7 +234,7 @@ For deep dives, read the reference files in `references/`:
 
 ---
 
-## 12. Anonymization & Pseudonymization (summary — see `references/security.md`)
+## 12. Anonymization & Pseudonymization (summary — see `references/Security.md`)
 
 - **Anonymization** = irreversible → falls outside GDPR scope. Use for retained records after erasure.
 - **Pseudonymization** = reversible with a key → still personal data, reduced risk.

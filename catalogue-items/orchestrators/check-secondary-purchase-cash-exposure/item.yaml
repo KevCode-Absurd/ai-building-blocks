@@ -1,15 +1,13 @@
 slug: check-secondary-purchase-cash-exposure
 name: Check secondary purchase cash exposure
-summary: Connect transferred callable commitments with the signed NAV-based purchase price adjustment.
+summary: "Check what a buyer pays for a fund interest in a secondary deal, and the future capital calls it takes on, as two separate cash numbers."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false

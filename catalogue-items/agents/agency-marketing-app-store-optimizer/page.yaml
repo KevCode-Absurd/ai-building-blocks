@@ -1,0 +1,161 @@
+name: App store optimization strategy agent
+summary: Plan your app store listing for more installs. Get keywords, new title and description, a screenshot plan and a test order. Share your listing.
+headline: App store optimization strategy agent
+subhead: Share your app's current listing and 2 or 3 rival apps. The agent finds keyword gaps and rewrites your title, subtitle and description. It plans your screenshots and preview video, then puts the changes in a test order.
+job: get-found-in-search
+thinking: high
+thinking_why: It has to balance words that rank with words that persuade, and keep guesses apart from store data.
+explain: >-
+  App store optimization, or ASO, decides if people find your app in store
+  search and how many of them then install it. There are two levers. Words:
+  title, subtitle, keywords and description. Visuals: icon, screenshots and
+  preview video. Most teams pull only one.
+
+
+  This agent plans both. It starts from your listing and your rivals, finds
+  keyword gaps and writes copy that works for search and for a person reading
+  it. For visuals it plans a screenshot order, with one promise per screen, and
+  a short preview video. Then it sets a test order, starting with the icon and
+  the first screenshot, and adds a plan for other countries and for reviews.
+
+
+  It has no live store data. It will not make up search volumes, rankings or
+  download counts. You supply them from the store console or an ASO tool, or
+  they are marked "check in an ASO tool". This is a role profile from Agency
+  Agents, shared under MIT. Its success targets describe the intended work, not
+  measured results from AI Blocks.
+when:
+  - You are launching an app and the store listing is not written yet.
+  - Downloads are flat and you think the listing, not the app, is the problem.
+  - You want to enter a new country and need a plan for the language and the screenshots.
+  - You plan to test icons or screenshots and want to know what to test first.
+not_for:
+  - You want one listing scored and rewritten fast. Use the App store listing optimiser.
+  - You want the "What's new" text for a release. Use the App Store release notes writer.
+  - You want a website SEO review. Use the SEO Specialist agent.
+  - You need real keyword volumes. Pull them from an ASO tool or your store console, then bring the numbers here.
+you_give:
+  - Your app name, the store (App Store, Google Play or both) and what the app does.
+  - Your current listing text, including title, subtitle or short description, keywords and description.
+  - Your screenshots listed in order, with what each one shows.
+  - Two or three rival apps with their listing text.
+  - Your target countries and languages (optional).
+  - Your store numbers, such as impressions, page views, installs and ratings (optional).
+  - Keyword volume data from an ASO tool (optional).
+you_get:
+  - An audit of your current listing, with what works and what is missing.
+  - A keyword plan with main, long-tail and gap keywords, each with a reason.
+  - A new title, subtitle or short description and description, with keywords placed naturally.
+  - A screenshot plan with a purpose and headline for each screen, plus a preview video outline.
+  - A test order, with what to test first and what to measure.
+  - A plan for other countries and for handling reviews.
+  - All changes ranked by effort and expected effect.
+how_to_use:
+  - Add the pack to your AI as a skill. In a plain chat, paste SKILL.md first.
+  - Copy the listing text of your app and of 2 or 3 rivals from their store pages. List your screenshots in order.
+  - Add your store numbers and keyword data if you have them. Without them, volume is marked "check in an ASO tool".
+  - Check the current character limits for each field in App Store Connect or Play Console, and tell your AI. Then say "Build the ASO plan."
+  - Compare the new copy with the store's rules, then update the listing yourself in the store console.
+  - Test the icon and first screenshot with the store's own test tool. Watch impressions, page views and installs each week, then run the plan again.
+how_it_works:
+  - title: Audit the listing
+    text: It reads your title, subtitle, description and screenshots against your rivals and notes what is missing.
+  - title: Plan the keywords
+    text: It sorts keywords into main, long-tail and gaps rivals miss, and says why each fits. Volumes are only used if you supply them.
+  - title: Write the copy
+    text: It drafts the title, subtitle or short description and description, built to be read by a person first.
+  - title: Plan the visuals
+    text: It sets a screenshot order with one promise per screen, notes icon tests, and outlines a 15 to 30 second video.
+  - title: Set the tests and rollout
+    text: It orders the tests, lists what to track and adds a plan for countries and reviews.
+output_shape: |-
+  ASO PLAN: <app> | <store> | <date>
+
+  LISTING AUDIT
+  What works | What is missing | How rivals differ
+
+  KEYWORD PLAN
+  Main: <keyword> | why it fits | volume: <your figure or "check in an ASO tool">
+  Long-tail: <phrase> | the search it targets
+  Gaps: <keyword rivals use that you do not>
+
+  COPY
+  Title: <text> (<n> characters)
+  Subtitle or short description: <text> (<n> characters)
+  Description: <hook, features and benefits, proof you supplied, who it is for, call to action>
+
+  VISUALS
+  Screenshot 1 to 5: <purpose> | <headline> | <what it shows>
+  Icon tests: <variables>
+  Preview video: <0 to 3 seconds hook, 3 to 20 seconds demo, close>
+
+  TEST ORDER
+  1 <test> | measure | 2 ...
+
+  COUNTRIES AND REVIEWS
+  <priority markets, what to change per market, review plan>
+
+  RANKED CHANGES
+  <change> | effort | expected effect
+output_sample:
+  input:
+    - Your app name, store and what the app does
+    - Your current listing text and screenshots in order
+    - Two or three rival apps with their listing text
+    - Your store numbers and keyword volumes (optional)
+  prerequisites:
+    - Access to your store console, to check character limits and update the listing
+  output:
+    - name: Listing audit
+      contains: What your listing does well, what it lacks and how it differs from your rivals.
+    - name: Keyword plan
+      contains: Main, long-tail and gap keywords, each with a reason and a volume only where you gave one.
+    - name: Store copy
+      contains: A new title, subtitle or short description and a full description that reads well and fits the limits.
+    - name: Screenshot and video plan
+      contains: A purpose and headline for each screenshot, and a 15 to 30 second preview video outline.
+    - name: Test order
+      contains: What to test first, such as icon and first screenshot, and what to measure.
+    - name: Country and review plan
+      contains: Priority markets, what to adapt for each and how to handle ratings and reviews.
+    - name: Ranked changes
+      contains: Every change listed with effort and expected effect, so you can start with the best.
+works_best_with:
+  tools:
+    - name: Your store console and an ASO tool
+      why: They give the real keyword volumes, rankings and page-view numbers that this plan cannot make up.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read your listing and rival text and write the plan and copy.
+  inputs:
+    - Your app's reviews, to find the words real users use.
+    - A list of the problems your app solves, in the words customers say.
+    - Your past test results, if you have run any.
+terms:
+  - term: ASO
+    meaning: App store optimization. Improving your listing to be found in store search and to win more installs.
+  - term: Keyword field
+    meaning: A box in the store console for search words. Users never see it.
+  - term: Conversion rate
+    meaning: The share of people who view your listing and then install the app.
+  - term: Long-tail keyword
+    meaning: A longer, more specific search phrase with fewer searches but clearer intent.
+  - term: Localization
+    meaning: Changing your listing words and pictures to suit another country and language.
+tweaks:
+  - what: Rival apps
+    how: Pick the apps your users compare you to. A wrong rival list gives wrong keyword gaps.
+  - what: Store numbers
+    how: Add impressions, page views and installs. They show if the problem is being found or being chosen.
+  - what: Character limits
+    how: Check the current limits in your store console and give them. Copy that is too long will be cut.
+improve:
+  - Keep a log of each listing change and the date, so you can link a change to a result.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts notes into three lists and flags what is missing.
 new_slug: meeting-minutes-writer
 name: Meeting minutes writer
-summary: Paste rough meeting notes. Get short minutes with decisions, action
-  items with owners and dates, and open questions.
+summary: Turn rough meeting notes into short minutes. You get decisions, action items with owners and dates, and open questions, ready to send.
 job: organise-work
 headline: Meeting minutes writer
-subhead: Short minutes that let someone who missed the call catch up in three
-  minutes, and let attendees see what they owe. Paste your rough notes and get
-  the point of the meeting first, then the detail.
+subhead: Short minutes that let someone who missed the call catch up in three minutes, and let attendees see what they owe. Paste your rough notes and get the point of the meeting first, then the detail.
 explain: |
   Short minutes that let someone who missed the call catch up in three minutes, and let attendees see what they owe. Paste your rough notes and get the point of the meeting first, then the detail.
 
@@ -18,6 +15,10 @@ when:
   - Your action items keep going out without owners or dates.
   - You need to show a boss what was decided, not the full discussion.
   - You want a clear record of what is still open after a meeting.
+not_for:
+  - "You need a word-for-word or legal record: use a transcript tool or keep the full recording."
+  - "You have no notes yet, only a live call: take notes first, or use your meeting app's built-in transcript."
+  - "You want to plan the next meeting: write the agenda by hand, because this only works from notes you already have."
 you_give:
   - Raw meeting notes or a transcript
   - Attendee names (optional)
@@ -28,7 +29,24 @@ you_get:
   - Action items with owner and date
   - Open questions with a next step
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your rough notes or transcript below it. Add attendee names and known deadlines if you have them.
+  - Send it and read the bottom line first. Check it matches what the meeting decided.
+  - Look for [unassigned], [TBD] and [to confirm] marks. Fill in each gap yourself, because the AI will not guess.
+  - Send the minutes to the attendees. Copy the open questions into your task list, and run the skill again when one gets an answer.
+output_sample:
+  input:
+    - Your rough meeting notes or a transcript
+    - Attendee names (optional)
+    - Known deadlines (optional)
+  output:
+    - name: Bottom line
+      contains: Up to three lines on what the meeting decided, placed at the top.
+    - name: Decisions
+      contains: One line for each decision, written as "Decided to do X", never "Discussed X".
+    - name: Action items
+      contains: Each task with an owner and a deadline. Missing ones are marked [unassigned] or [TBD].
+    - name: Open questions
+      contains: Each undecided issue, what blocks it, and who owns the next step.
+    - name: Self-check flags
+      contains: A note on any item that still lacks an owner, a deadline or a next step.

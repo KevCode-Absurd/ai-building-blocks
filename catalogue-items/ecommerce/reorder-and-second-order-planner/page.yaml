@@ -1,6 +1,6 @@
 new_slug: reorder-and-second-order-planner
 name: "Reorder and second-order planner"
-summary: "Give it your products and how long they last. Get reorder, refill and second-order messages with timing and an offer cap."
+summary: "Plan reorder and second-order emails from how long each product lasts. You get refill timing, message goals and an offer cap for each message."
 job: write-emails
 thinking: medium
 thinking_why: "It turns usage days into dates and message rules. A mid-size model does this well, but check the dates it gives."
@@ -17,6 +17,10 @@ when:
   - Your product runs out (food, supplements, skincare, refills) and you don't send refill reminders.
   - Most buyers order once and you want to lift the second order.
   - You sell a product that needs setup or practice and want a plan for the first weeks.
+not_for:
+  - "Your product is a one-off buy with no usage cycle, like furniture: use a simple care and cross-sell email, not refill timing."
+  - "You need to map every customer stage first: use the Customer stage flow mapper, then come back here."
+  - "You want a win-back for buyers who have gone quiet: use the Win-back flow builder instead."
 
 you_give:
   - Your product list with how many days one unit lasts
@@ -36,6 +40,28 @@ how_to_use:
   - Build the setup sequence and the refill reminder first. Add the rest once those run.
   - Keep codes out of messages for loyal buyers.
   - After 60 days, compare repeat rate for this group against the group before.
+output_sample:
+  input:
+    - Your products, with how many days one unit lasts
+    - How long delivery takes, and whether your shipping app sends a delivery confirmation
+    - Your margin and the most you can offer on order two
+    - Your repeat-order rate and any subscription (optional)
+    - Support, return and review data (optional)
+  output:
+    - name: Product table
+      contains: Usage days, refill nudge day and run-out day for each product, with the arithmetic shown.
+    - name: Timeline
+      contains: Each message with its day, one goal and one offer rule, from order to second order.
+    - name: Offer rule and pre-send check
+      contains: The offer cap, the margin floor, and who to skip, such as open tickets or returns.
+    - name: Subscription, review and referral timing
+      contains: When to offer a flexible subscription and when to ask for a review or referral.
+    - name: Optional 90-day habit branch
+      contains: A daily message plan, only for products used every day with a visible result.
+    - name: Measure
+      contains: How to compare repeat rate and lifetime gross profit against earlier groups.
+    - name: Checks missed and missing
+      contains: Any check that failed, and any input you did not give.
 
 how_it_works:
   - title: Plans the quiet weeks

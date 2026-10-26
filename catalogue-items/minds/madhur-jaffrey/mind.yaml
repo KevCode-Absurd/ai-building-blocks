@@ -5,8 +5,29 @@ area: "arts"
 years: "1933–"
 living: true
 known_for: "Jaffrey is an actor and cookbook author whose work includes An Invitation to Indian Cooking and Vegetarian India. In a 2023 interview she described reconstructing food from her mother’s short written directions and her own memory of taste."
-summary: "Treat Indian food as many regional home traditions, then make the method legible to a newcomer. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list."
+summary: "Get help planning a first Indian home-cooked supper, from dal and vegetables to a small spice cupboard, in the method of Madhur Jaffrey's public work."
 use_cases: ["A first dal-and-vegetable supper: Choose a manageable pair of recipes and a rice or bread accompaniment, avoiding several unfamiliar techniques in one evening.", "Using a small spice cupboard: Pick recipes that share a short set of spices and learn their distinct uses before buying a large collection.", "Vegetarian weekday variety: Rotate pulses, greens and vegetable textures while keeping the cooking sequence clear enough to repeat.", "Documenting a family process: Ask the person to describe sensory cues and quantities while they work, then test the written version independently.", "Learning a skill after moving: Use a familiar outcome as your target, translate missing local resources and practise with the tools now available.", "A recipe that tastes flat: Check the sequence and condition of ingredients before increasing every spice or adding indiscriminate heat."]
+not_for:
+  - "You want to cook Mexican regional food: hire Diana Kennedy instead."
+  - "You want Southern American home cooking tied to seasons and memory: hire Edna Lewis instead."
+  - "You want seasonal, garden-led menus or school food teaching: hire Alice Waters instead."
+output_sample:
+  input:
+    - The dish you want to cook or remember, and where your version came from
+    - The pots, tools and ingredients you have or can buy where you live
+    - Your time and cooking skill on the night
+    - What went wrong last time, if a recipe tasted flat (optional)
+  output:
+    - name: Short diagnosis
+      contains: A plain read of your dish, your limits and what is most likely to matter, such as spice order or texture.
+    - name: Practical sequence
+      contains: The steps in cooking order, with ingredients prepared first and a manageable side dish chosen.
+    - name: Cues to watch
+      contains: The changes in smell, colour and texture that tell you when to move to the next step.
+    - name: Substitutions noted
+      contains: Any swap you must make, with what it changes, so the adapted dish is not called the original.
+    - name: One next adjustment
+      contains: A single change to try next time, plus a closing check that fits tonight's time and tools.
 seats: [{"seat": "Indian home cooking and spice sequence", "asks": "Which dish are you trying to remember?"}, {"seat": "Practical teaching and adaptation", "asks": "Where did this version come from?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

@@ -1,0 +1,17 @@
+# One distinct public-website measurement and evidence-based design-rules skill.
+# Manual import: pinned README explicitly declares MIT; upstream has no LICENSE.
+"senlindesign/taste-skill:.":
+  new_slug: website-design-dna-extractor
+  name: Website design analyst
+  summary: Share a public website link. Get its colours, fonts and layout rules, plus the reasons behind those choices.
+  task: design-work
+  role: source
+  level: intermediate
+  thinking: high
+  thinking_why: It compares browser measurements with screenshots and checks the reasons for each design choice.
+  inputs: [{type: web_page, required: true}, {type: tool_connection, required: true}]
+  outputs: [{type: design_direction}, {type: document}]
+  needs: An already connected Playwright MCP server, an isolated browser, screenshot inspection and local output files.
+  licence_file: README.md
+  author: Sen Lin
+  author_url: https://github.com/senlindesign

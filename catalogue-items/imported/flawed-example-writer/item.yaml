@@ -10,6 +10,10 @@ level: intermediate
 inputs:
   - type: source_text
     required: true
+  - type: plan
+    required: false
+  - type: feedback_notes
+    required: false
 outputs:
   - type: copy_draft
     required: true

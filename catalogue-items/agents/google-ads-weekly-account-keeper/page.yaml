@@ -1,6 +1,6 @@
 new_slug: google-ads-weekly-account-keeper
 name: Google Ads weekly account keeper
-summary: Give it your weekly Google Ads exports. Get waste cut, a scale-or-hold call and a change list to approve.
+summary: "Check your Google Ads weekly: give it your exports and margin. It cuts wasted spend, calls scale or hold, and lists changes for you to approve."
 job: run-google-ads
 thinking: high
 thinking_why: It runs up to six skills, picks its own path from the numbers and does budget sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run Google Ads for your store and want the weekly checks done the same way every Monday.
   - Results dropped this week and you want to know why before you change anything.
   - You want to raise your budget, but only when the numbers say it is safe.
+not_for:
+  - "You have less than two weeks of data: wait until you have two full weeks, or check your numbers by hand against break-even."
+  - "You only want to know why one sharp drop happened: use the Google Ads dip investigator on its own."
+  - "You want it to change your account for you without asking: this agent only lists changes and waits for your yes."
 you_give:
   - Campaign results for the last two weeks, with cost, conversions and conversion value
   - Search terms reports, and a Shopping product report if you run Shopping
@@ -30,6 +34,29 @@ how_to_use:
   - The first time, give it your average order value and margin. It saves the break-even numbers and reuses them.
   - Read the change list. Make the changes you agree with in Google Ads, or say yes to each one and let it make only those if it is connected.
   - Run it again next Monday. It compares against last week's files.
+output_sample:
+  input:
+    - Campaign results for this week and last week
+    - Search terms reports, and a Shopping product report if you run Shopping
+    - Your average order value and gross margin (first run only)
+    - What changed this week (optional)
+  prerequisites:
+    - An AI that can read your exported files
+    - Your Google Ads reports exported with cost, conversions and conversion value
+    - Your brand brain from the Brand profile builder (optional)
+  output:
+    - name: This week in one line
+      contains: Spend, sales, ROAS and CPA against last week and against your break-even, with the sums shown.
+    - name: Path taken
+      contains: Whether it ran a dip investigation, a clean-up only, or a clean-up and scale check, and why.
+    - name: Changes to approve
+      contains: Up to 15 changes, most important first, each with where it goes, its size, its source step and reason.
+    - name: Scale call
+      contains: A raise, hold or cut call on budget, with the scale gate that decided it.
+    - name: Watch next week
+      contains: The one to three numbers that decide next week's path.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line from all steps in one list.
 how_it_works:
   - title: Get the base numbers
     text: Works out break-even ROAS and CPA from your price and margin once, then reuses them every week.

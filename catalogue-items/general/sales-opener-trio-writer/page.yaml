@@ -1,6 +1,6 @@
 new_slug: sales-opener-trio-writer
 name: "Sales opener trio writer"
-summary: "Paste what you sell and who you meet. Get a ten-word opener, two spares and a test."
+summary: "Write a short sales opener for a stall, call or shop floor. Give it what you sell and who you meet. You get a ten-word opener, two spares and a test."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It writes very short lines from one benefit."
@@ -17,6 +17,10 @@ when:
   - "You greet strangers at a stall, door or event."
   - "Your first line gets polite nods and nothing else."
   - "You want an opener for a cold call."
+not_for:
+  - "You need a written email or a group pitch: write that yourself or use your AI with a plain brief, as this makes short spoken lines only."
+  - "You want the full check on an opener you already have: use the Ten-second opener writer, which runs every check."
+  - "You do not yet know who the buyer is or what moves them: use the Buyer brief writer first, then come back here."
 
 you_give:
   - "What you sell and the result buyers get"
@@ -32,6 +36,25 @@ how_to_use:
   - "Paste what you sell and the result under the prompt."
   - "Say where you will use it."
   - "Try the first opener on ten people and keep a count."
+output_sample:
+  input:
+    - What you sell and the result buyers get
+    - Who you meet and where, such as a stall, a call or a shop floor
+    - One reason you believe in it (optional)
+    - A buyer brief (optional)
+  output:
+    - name: BENEFIT CHOSEN
+      contains: The one benefit you can say honestly, with the reason it fits where you will use it.
+    - name: OPENER
+      contains: A question of about ten words that points at the result the buyer gets.
+    - name: TWO SPARES
+      contains: One line for a buyer in a rush and one for a relaxed or doubtful buyer.
+    - name: EXTRA
+      contains: A true, light compliment about something visible, or an offer of a sample, if one fits.
+    - name: TEST
+      contains: Who to try it on, how many people, and what counts as a win.
+    - name: MISSING
+      contains: Any fact the prompt needed and did not have.
 
 how_it_works:
   - title: "Pick a true benefit"

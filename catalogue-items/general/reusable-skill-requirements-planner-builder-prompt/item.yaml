@@ -1,6 +1,6 @@
 slug: reusable-skill-requirements-planner-builder-prompt
 name: Reusable skill brief coding prompt
-summary: Get a coding brief that turns a task into a reusable skill, with inputs, steps, output rules and checks.
+summary: "Fill in a short template and paste it into Claude Code. It writes a reusable skill file for any task you repeat, run with a slash command."
 category: general
 type: prompt
 role: make

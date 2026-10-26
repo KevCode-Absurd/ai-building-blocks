@@ -13,6 +13,8 @@ inputs:
     required: false
   - type: question
     required: false
+  - type: offer
+    required: false
 outputs:
   - type: plan
   - type: lessons_register

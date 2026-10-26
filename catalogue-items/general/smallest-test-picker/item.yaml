@@ -1,6 +1,6 @@
 slug: smallest-test-picker
 name: Smallest test picker
-summary: Paste your ranked guesses. Get the cheapest test for the top one, who to try it on and what to cut.
+summary: "Pick the cheapest test for your riskiest business guess. Get the test form, who to try it on, what to cut and a fail line."
 category: general
 type: skill
 role: make
@@ -22,3 +22,6 @@ credits:
     by: Eric Ries
     url: https://theleanstartup.com/
     used: The minimum viable product as the fastest route through one learning loop, its forms (smoke test, explainer video, hand-delivered service, human behind the screen), testing on early adopters, and cutting everything that does not feed the learning
+before: [leap-of-faith-assumption-finder]
+next: [mvp-experiment-planner]
+needs_mode: manual

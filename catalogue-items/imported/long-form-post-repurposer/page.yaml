@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It picks one strong idea, then writes it for the platform.
 new_slug: long-form-post-repurposer
 name: Long-form post repurposer
-summary: Give it an article, newsletter or transcript. Get an X or LinkedIn post
-  that works even if nobody clicks.
+summary: Turn an article, newsletter or transcript into an X or LinkedIn post that works on its own. Pick one idea and get a finished post.
 job: grow-social
 headline: Long-form post repurposer
-subhead: A post for X or LinkedIn that is worth reading even if nobody clicks
-  your link. The usual summary plus link performs badly because all the value
-  sits somewhere else.
+subhead: A post for X or LinkedIn that is worth reading even if nobody clicks your link. The usual summary plus link performs badly because all the value sits somewhere else.
 explain: |
   A post for X or LinkedIn that is worth reading even if nobody clicks your link. The usual summary plus link performs badly because all the value sits somewhere else.
 
   Give it an article, newsletter, transcript, video or draft. It first lists the two or three ideas that could each carry a post and lets you choose one, since a post can hold only a single idea. Then it writes the post so that idea stands alone: a strong first line, the point made in full, and a reason to care. The link, if any, is an extra rather than the payoff. It works for promoting something you published or for mining a recording for something postable.
 when:
-  - You published an article and want a post that does not just say "new
-    article, link below".
+  - You published an article and want a post that does not just say "new article, link below".
   - You have a podcast transcript and want a LinkedIn post from it.
   - You wrote a long newsletter and want one idea pulled out for X.
   - You have a rough draft and want to know which idea is strongest.
+not_for:
+  - "You have nothing written yet and want a post from scratch: write a few lines of your own first, then bring them here."
+  - "You only want a short summary with a link attached: paste the link into your post by hand. This skill will not write that."
+  - "You need a promise of reach, clicks or likes: no tool can give that, so plan to test and track your posts."
 you_give:
   - The article, transcript or draft
   - The platform, X or LinkedIn
@@ -30,7 +30,26 @@ you_get:
   - A strong opening line
   - A natural place for the link
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your article, transcript or draft. Say whether the post is for X or LinkedIn.
+  - Add your link and a few of your past posts if you have them (optional).
+  - Read the shortlist of ideas and pick one.
+  - Check any number or quote in the post against your source. Then choose where the link goes.
+  - Ask for the other ideas as later posts, spaced over several days.
+output_sample:
+  input:
+    - Your article, newsletter, transcript, video text or draft
+    - The platform you want, X or LinkedIn
+    - Your link (optional)
+    - Your voice or past posts (optional)
+  prerequisites:
+    - The VoiceMoat connector is optional. It needs a paid VoiceMoat plan and is only for scoring, publishing or scheduling. The skill works without it.
+  output:
+    - name: Shortlist of ideas
+      contains: Two or three claims from your piece that could each carry a post, so you can pick one.
+    - name: Finished post
+      contains: One post for your chosen platform, with the sharpest detail from the source and a strong first line.
+    - name: Link placement line
+      contains: A one-line trade-off for no link, link in a reply or comment, or link in the post, so you choose.
+    - name: Other ideas offer
+      contains: A reminder of the remaining claims, with an offer to space them out as later posts.

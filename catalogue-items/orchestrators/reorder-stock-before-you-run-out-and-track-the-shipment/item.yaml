@@ -15,8 +15,8 @@ outputs:
 uses: [days-of-stock-calculator, restock-rule-designer, purchase-order-reorder, inbound-shipment-tracker-builder]
 steps:
   - {uses: days-of-stock-calculator, note: "Reads your live store and makes the sheet of days of stock and sales speed for every product."}
-  - {uses: restock-rule-designer, note: "Uses the sales speed from step 1 and your supplier lead times to set the reorder level for each group."}
-  - {uses: purchase-order-reorder, note: "Reads the days-of-stock sheet from step 1 and turns the rules from step 2 into draft orders."}
+  - {uses: restock-rule-designer, note: "Uses the sales speed from step 1 and your supplier lead times to set the reorder level for each group. It hands over a restock rule for each group."}
+  - {uses: purchase-order-reorder, note: "Reads the days-of-stock sheet from step 1 and takes the reorder levels from step 2 as your cover target instead of its 60-day default. It hands over draft orders and the slow movers to clear."}
   - {uses: inbound-shipment-tracker-builder, note: "Starts from the draft orders and the details you gathered once the orders were placed."}
 origin: rebuilt
 version: 1.0.0

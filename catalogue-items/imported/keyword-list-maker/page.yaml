@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows strict output rules on one text.
 new_slug: keyword-list-maker
 name: Keyword list maker
-summary: Paste any text. Get one line of up to 50 ranked keywords, ready for SEO
-  or tags.
+summary: "Paste any text and get a keyword list for SEO or tags: one line of up to 50 ranked keywords, ready to copy into your site."
 job: get-found-in-search
 headline: Keyword list maker
-subhead: "One clean line of up to fifty keywords from any text you paste. The
-  output is machine-ready: lowercase, comma separated, ranked from most to least
-  relevant, with no numbers, bullets, notes or full stop at the end."
+subhead: "One clean line of up to fifty keywords from any text you paste. The output is machine-ready: lowercase, comma separated, ranked from most to least relevant, with no numbers, bullets, notes or full stop at the end."
 explain: |
   One clean line of up to fifty keywords from any text you paste. The output is machine-ready: lowercase, comma separated, ranked from most to least relevant, with no numbers, bullets, notes or full stop at the end.
 
@@ -18,6 +15,10 @@ when:
   - You want a keyword field for a product page.
   - You need metadata for a batch of documents.
   - You want a quick check of which topics a text really covers.
+not_for:
+  - "You want a short summary of your text: ask your AI for a summary instead, since this makes keywords only."
+  - "You need to know how often people search each keyword: check a search tool such as Google Keyword Planner, as this list uses no search data."
+  - "You need keywords in a table or with notes: ask your AI directly, because this gives one plain line and nothing else."
 you_give:
   - The text to extract keywords from
   - The purpose, such as SEO or tags (optional)
@@ -28,7 +29,21 @@ you_get:
   - Lowercase and without duplicates
   - A mix of words and short phrases
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into the chat.
+  - On the next message, paste the text you want keywords for.
+  - Say what the list is for, such as SEO or tags. Add a limit if you want fewer than 50 (optional).
+  - Copy the one-line result into your tags field, SEO field or product keyword box.
+  - Check the keywords against real search data before you publish.
+output_sample:
+  input:
+    - The text you want keywords for
+    - What the keywords are for, such as SEO or tags (optional)
+    - A lower limit than 50 keywords (optional)
+  output:
+    - name: Keyword line
+      contains: One line of up to 50 keywords, lowercase and separated by commas, with no numbers, bullets, notes or full stop.
+    - name: Ranking order
+      contains: The main topic of your text comes first, then key terms, tools and names, then common searches and side topics.
+    - name: Keyword mix
+      contains: Single words and phrases of two to four words, with repeats and near matches removed.

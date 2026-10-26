@@ -1,33 +1,26 @@
 slug: issuer-eps-reconciliation-review-assistant
 name: Issuer EPS reconciliation review assistant
-summary: Review new share and instrument disclosures for changes to a reconciled EPS model.
+summary: Recheck a company's basic and diluted EPS when a filing changes its shares, options or convertibles. Get a change register and open questions.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
-  - reconcile-basic-and-diluted-issuer-eps
   - stock-split-eps-restatement
+  - reconcile-basic-and-diluted-issuer-eps
 steps:
-  - uses: reconcile-basic-and-diluted-issuer-eps
-    note: Run the governing workflow when On a user-supplied filing or revised share/instrument note, compare the source date and accounting period with the last accepted EPS model.
   - uses: stock-split-eps-restatement
-    note: If a confirmed split or reverse split affects comparatives, build the separate restatement schedule before rerunning the EPS workflow. Missing conversion terms pause only the affected instrument; never infer exercise or conversion.
+    note: Run this first, but only when a confirmed split or reverse split changes earlier periods. It hands step 2 the restated shares and EPS, with total earnings unchanged. If there is no confirmed split, skip it and start at step 2.
+  - uses: reconcile-basic-and-diluted-issuer-eps
+    note: Run this when a new filing or a revised share or instrument note arrives. Compare its date and period with the last accepted model, then rebuild basic and diluted EPS on step 1's restated share counts if a split was confirmed. A missing conversion term pauses only that instrument; never guess an exercise or conversion price.
 origin: own
 version: 1.0.0
 added: 2026-10-22

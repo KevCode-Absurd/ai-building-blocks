@@ -2,36 +2,61 @@ thinking: high
 thinking_why: It loops through experiments and judges each result.
 new_slug: metric-driven-file-improver
 name: Metric-driven file improver
-summary: Pick a file and a score. Get an agent that edits, measures and keeps
-  only changes that raise the score.
+summary: "Set up a metric-driven file improver: your AI tries small edits to one file, scores each one, and keeps only the changes that raise the score."
 job: set-up-ai
 headline: Metric-driven file improver
-subhead: A file that gets better while you sleep, because an agent tries
-  changes, measures each one and keeps only those that raise your score. Give it
-  one file and one way to score it, and it runs dozens of small experiments
-  instead of one guess.
+subhead: Give your AI one file and one way to score it. It makes one small change at a time, scores it, and keeps the change only if the score improves. You get a better file and a log of every try.
 explain: |
   A file that gets better while you sleep, because an agent tries changes, measures each one and keeps only those that raise your score. Give it one file and one way to score it, and it runs dozens of small experiments instead of one guess.
 
   You set it up once with the file, the test that produces a number, and how often to run. In each round the agent edits the file, runs the fixed test, and compares the score. Changes that help stay and those that do not are dropped. You can run one round, loop on a timer, check results, or resume a paused run. It needs Python to run.
 when:
-  - You want a script to run faster and have a benchmark to prove it.
-  - You want headlines or prompts improved overnight against a score.
-  - You have a metric to move from one value to another.
+  - You want a script to run faster and have a speed test to prove it.
+  - You want headlines or prompts improved against a score, such as a rating from an AI judge.
+  - You want a file to get smaller, or a test pass rate to go up.
   - You want a record of every try, not just the final version.
+not_for:
+  - You have no score you can run from a command. Judge the file by hand, or ask your AI for a plain review.
+  - Your project has unsaved work. Save it to git first, or the agent may wipe it when it undoes a failed try.
+  - You only need one speed test or one test run. Run the benchmark or test once yourself, with no loop.
 you_give:
   - The file to improve
-  - A command that gives a score
-  - Run frequency and a stopping point
-  - Your project folder to run it in
+  - A command that prints a score
+  - Whether a higher or lower score is better
+  - How often to run and when to stop
+  - A git project with your work saved
 you_get:
-  - A better version of the file
-  - A log of every experiment and score
-  - A status dashboard
-  - The ability to pause and resume
+  - A better version of your file
+  - A log of every try and its score
+  - A dashboard of runs and results
+  - A run you can pause and pick up later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code, use git and run commands on a timer.
+  - Use an AI that can run code and git commands, such as Claude Code, Codex or Gemini CLI. A plain chat window cannot run the loop.
+  - Save your work in git first. Then make a new branch just for the experiments.
+  - Ask your AI to set up the experiment. Give it your file, your score command, and whether higher or lower is better.
+  - Run the score command once to check it works. Then set a top limit on the number of tries.
+  - Start one round, then check results.tsv. If it looks right, start the loop.
+  - Check your plan's usage limits before a long run, since AI scoring uses your plan.
+output_sample:
+  input:
+    - The one file you want to improve
+    - A command that prints a score, such as a speed test or test run
+    - Whether a higher or lower score is better
+    - How often to run, and when to stop
+  prerequisites:
+    - An AI that can run code, Python and git commands
+    - A git project with your work saved and committed
+    - A dedicated branch for the experiments
+  output:
+    - name: program.md
+      contains: Your goal, the rules for what may change, and the strategy notes the agent updates as it learns.
+    - name: config.cfg
+      contains: The target file, the score command, the score name, whether higher or lower wins, and the time limit.
+    - name: evaluate.py
+      contains: The locked scoring script, if you picked a ready-made scorer. The agent must never edit it.
+    - name: results.tsv
+      contains: One row per try with the commit, the score, keep, discard or crash, and a short note.
+    - name: Improved target file
+      contains: Your file with only the changes that beat the best score so far.
+    - name: Dashboard
+      contains: A table of runs, kept changes, best score and change from the start, per experiment.

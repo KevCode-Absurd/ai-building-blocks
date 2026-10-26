@@ -8,10 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: codebase
+  - type: brief
     required: true
-  - type: question
-    required: true
+  - type: document
+    required: false
 outputs:
   - type: audit_report
     required: true
@@ -34,4 +34,4 @@ credits:
   - title: power-bi-model-design-review skill
     by: github
     url: https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-bi-model-design-review
-    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.
+    used: Original instructions and supporting files, with attribution and the MIT licence. A short run order and report format were added. Display copy describes the task.

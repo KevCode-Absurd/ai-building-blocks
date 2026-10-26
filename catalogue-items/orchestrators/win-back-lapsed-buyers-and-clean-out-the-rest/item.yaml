@@ -17,11 +17,11 @@ outputs:
   - {type: audit_report}
 uses: [repeat-order-bottleneck-finder, win-back-flow-builder, customer-stage-flow-mapper, sunset-flow-and-list-cleaner, email-and-sms-performance-reader]
 steps:
-  - {uses: repeat-order-bottleneck-finder, note: "Finds where buyers stop coming back."}
-  - {uses: win-back-flow-builder, note: "Builds the win-back flow for that group."}
-  - {uses: customer-stage-flow-mapper, note: "Maps which customer stage gets the win-back flow and which gets other emails."}
-  - {uses: sunset-flow-and-list-cleaner, note: "Writes the clean-out rule for the buyers the flows did not wake up."}
-  - {uses: email-and-sms-performance-reader, note: "Reads the flow results to show what the win-back earned."}
+  - {uses: repeat-order-bottleneck-finder, note: "Finds where buyers stop coming back. Hands step 2 the bottleneck and the lapsed group to win back."}
+  - {uses: win-back-flow-builder, note: "Builds the win-back flow for that group, from step 1's bottleneck and your order timing. Hands step 3 the flow."}
+  - {uses: customer-stage-flow-mapper, note: "Maps which customer stage gets the win-back flow and which gets other emails. Hands step 4 the stage map."}
+  - {uses: sunset-flow-and-list-cleaner, note: "Writes the clean-out rule for the buyers the flows did not wake up. Uses your email open and click data, not step 3's map, so it only cleans out buyers the flows have had a chance to reach. Hands step 5 the clean-out flow."}
+  - {uses: email-and-sms-performance-reader, note: "Reads the results of the flows from steps 2 to 4 to show what the win-back earned."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/win-back-lapsed-buyers-and-clean-out-the-rest/skeleton.yaml

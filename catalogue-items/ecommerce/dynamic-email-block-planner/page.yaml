@@ -1,6 +1,6 @@
 new_slug: dynamic-email-block-planner
 name: Dynamic email block planner
-summary: Share customer fields, connected apps and approved offer terms. Plan email blocks, eligibility rules and previews before any send.
+summary: Plan dynamic email blocks, show-hide rules and previews from your customer fields, apps and offer terms, before you send anything.
 job: write-emails
 thinking: high
 thinking_why: It ties customer data, store events and email rules together, and one wrong value shows nothing.
@@ -14,6 +14,10 @@ when:
   - You send two campaigns that differ only in a line or two, such as shipping terms by country.
   - Your cart or browse emails do not show the product the person left behind.
   - You use a reviews, loyalty or subscription app and want its events to start emails.
+not_for:
+  - "You only need the email text for a cart or browse flow: write those emails with your email tool or a copywriter first, then come back to plan the blocks."
+  - "Your store has very few orders or no connected apps: skip predicted dates and app flows, and use one simple show-hide rule instead."
+  - "You want to send, launch a flow or change tracking now: this plans only, so do that step yourself in your email tool after checking."
 you_give:
   - The customer data you hold, such as country, tags, tier and loyalty points
   - The apps connected to your email tool
@@ -33,6 +37,35 @@ how_to_use:
   - Name the moments you care about, such as a subscription pause or a first order.
   - Build one rule at a time, and preview it with real profiles before you send.
   - Add the next rule only after the first one shows the right content.
+output_sample:
+  input:
+    - The customer data you hold, such as country, tags and tier
+    - The apps connected to your email tool
+    - Your flows and key customer moments
+    - Approved offer terms and purchase history (for offers)
+    - Your margin on a first-order discount (optional)
+  prerequisites:
+    - Access to your email tool, such as Klaviyo, to check real profiles
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Data held
+      contains: Each customer property with its exact values, plus your apps and events.
+    - name: Show / hide rules
+      contains: Each block with the property value that shows it, the other version, and where it is used.
+    - name: Offer eligibility
+      contains: Whether a first-order or returning-customer offer applies, or if history is too thin to decide.
+    - name: Product feeds
+      contains: The time window, filters for category, price and stock, and the saved block name.
+    - name: Abandonment blocks
+      contains: Separate variables for cart, checkout and browse emails.
+    - name: Event checks
+      contains: How to test that added-to-cart, viewed-product and active-on-site events are recorded.
+    - name: App-triggered flows
+      contains: Which app event starts which flow, using only apps you already use.
+    - name: Predictive uses
+      contains: How expected order dates, value and channel fit each use, when history allows.
+    - name: Test list
+      contains: For each rule, which profile to preview as and what you should see.
 how_it_works:
   - title: Lists what you hold
     text: Profile properties, tags, tiers, apps and events. Values must match the profile text exactly, such as the way a country is written.

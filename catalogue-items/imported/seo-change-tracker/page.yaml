@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares two snapshots and flags differences.
 new_slug: seo-change-tracker
 name: SEO change tracker
-summary: Save your site's SEO state today. Get a warning when rankings, tags or
-  pages slip later.
+summary: Save a before picture of your site's SEO, then check for lost rankings, dropped pages and changed tags after a redesign or release.
 job: get-found-in-search
 headline: SEO change tracker
-subhead: A saved picture of how your site looks to search engines today, and a
-  warning later if something slips. It records a baseline of search performance
-  and live page details, then compares a new snapshot against it.
+subhead: A saved picture of how your site looks to search engines today, and a warning later if something slips. It records a baseline of search performance and live page details, then compares a new snapshot against it.
 explain: |
   A saved picture of how your site looks to search engines today, and a warning later if something slips. It records a baseline of search performance and live page details, then compares a new snapshot against it.
 
@@ -18,6 +15,10 @@ when:
   - Traffic dropped after a release and you need to see what changed.
   - A plugin may have overwritten your titles and you want to catch it.
   - You want a monthly check that key pages still rank and index.
+not_for:
+  - "You want a one-time SEO audit with no past snapshot: use a general SEO audit, since this tool needs a baseline to compare."
+  - "You need to crawl a very large site or read server logs: use a full crawl tool, or ask a developer."
+  - "You want your AI to fix titles, tags or settings on your live site: ask a developer or your CMS, since this tool only reads and reports."
 you_give:
   - Your site and the key URLs
   - Search Console access or export
@@ -29,8 +30,31 @@ you_get:
   - Ranking and index losses
   - Changed titles, tags and schema
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can browse the web.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web, and connect Search Console if you can.
+  - Paste the skill text into the chat. Say if you want a baseline or a comparison.
+  - Give your site address and the key URLs. Include your best landing pages, sales pages and any page a recent release touched.
+  - For a comparison, paste your last snapshot and say which dates each one covers. Use the same URLs and date range both times.
+  - Read the critical items first. Check each one on the live page before you act.
+  - Fix the problems, then ask for a new baseline.
+output_sample:
+  input:
+    - Your site address and the key page URLs
+    - Search Console access or an export (strongly advised)
+    - Your last snapshot, if you are comparing (optional)
+    - Known site changes, like a redesign or release (optional)
+  prerequisites:
+    - An AI that can open web pages
+    - A Google Search Console account for your site, for ranking and index checks
+  output:
+    - name: Snapshot
+      contains: A dated record of search results, titles, descriptions, headings, canonical links, robots rules, schema types and content size for each key URL.
+    - name: Change report
+      contains: Each change with the URL, the field, the before and after values, the dates and the severity.
+    - name: Ranking and index losses
+      contains: Queries that dropped or vanished, and key pages that lost their indexed status.
+    - name: Tag and schema changes
+      contains: Titles, descriptions, headings, canonicals, noindex rules and schema types that changed, went blank or disappeared.
+    - name: Severity ranking
+      contains: Critical, warning and info levels, with noindex and index problems first and likely causes marked as guesses.
+    - name: Next steps
+      contains: What to check or fix for each change, and an offer to save a new baseline once repairs are done.

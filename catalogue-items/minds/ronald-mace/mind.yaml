@@ -15,6 +15,30 @@ use_cases:
   - "Improve instructions that rely on only one way of sensing information"
   - "Plan a more adaptable home for changing needs"
   - "Request practical workplace changes around a specific task"
+not_for:
+  - "You need a ruling that a room or building meets accessibility law: ask a qualified local assessor, because design principles cannot sign off a building."
+  - "You want a lasting, simple look for a product and its parts: use the Dieter Rams mind, not a barrier review."
+  - "You want to see how a design grows from making and testing, with practical limits: use the Charles and Ray Eames mind."
+output_sample:
+  input:
+    - The task you want to do, such as entering with shopping or joining an event
+    - Where the task gets hard, or what help you need now
+    - Details of the place or product, such as specifications or venue arrangements
+    - What you would like to change, and who can change it
+    - Anything you choose to share about your needs (optional)
+  output:
+    - name: Task sequence
+      contains: The whole task followed step by step, from approach to departure, or the product equivalent.
+    - name: Barrier record
+      contains: Reach, handling, effort, information and space demands, each noted in the user's own terms.
+    - name: Options to investigate
+      contains: Practical choices, with what must be built now and what can be adjusted later.
+    - name: Practical brief
+      contains: The users' preferred outcomes, grouped into quick operating changes, options to investigate and questions for specialists.
+    - name: Questions for specialists
+      contains: Precise technical, legal or safety questions for a qualified local reviewer.
+    - name: Checks afterward
+      contains: Who can act, what to test with willing users, and what stays unknown.
 seats:
   - {seat: "Universal use and adaptable places", asks: "Who can complete the whole task independently?"}
   - {seat: "Environmental barriers", asks: "Which demand comes from the design rather than the person?"}

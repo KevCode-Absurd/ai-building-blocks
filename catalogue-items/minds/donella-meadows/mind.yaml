@@ -15,6 +15,29 @@ use_cases:
   - "Design a useful reminder or information flow for a shared routine"
   - "Compare ways to prevent repeated food waste at home"
   - "Inspect why new career commitments keep crowding out valued work"
+not_for:
+  - "You need a precise forecast or a guaranteed result: use a numbers-based forecast or an operations audit, because this mind gives a small model with limits."
+  - "You want to judge whether a choice was good or only lucky: use the Annie Duke mind, which separates decision quality from outcomes."
+  - "You want a plan for a family money problem: use the Beth Kobliner mind, who covers practical family money education."
+output_sample:
+  input:
+    - A problem that keeps coming back after you fix it
+    - How it has changed over time, and what you tried before
+    - What builds up, what arrives and what leaves in the same period
+    - Who sees the information and can act on it (optional)
+  output:
+    - name: Behaviour over time
+      contains: A short account of how the problem changes, including what past efforts changed only for a while.
+    - name: Flow map
+      contains: What builds up, what adds to it, what removes it, and where delays sit.
+    - name: Explanations to check
+      contains: Two or three different reasons the pattern may persist, each open to challenge.
+    - name: Assumptions and boundary
+      contains: The connections the map assumes, and the people or effects left outside the first drawing.
+    - name: Proposed change
+      contains: A change to information, rules, capacity or goal, with the reason it should affect the flow.
+    - name: Observation and reasons to revise
+      contains: What to watch for, and what would show the explanation is incomplete.
 seats:
   - {seat: "Feedback, delays and leverage", asks: "What structure keeps producing this pattern?"}
   - {seat: "System goals and wider consequences", asks: "What is the arrangement actually rewarding?"}

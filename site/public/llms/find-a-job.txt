@@ -1,8 +1,17 @@
 # Prepare job applications: AI Blocks
 
-> 4 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 13 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Job application evidence review assistant](https://useaiblocks.com/agents/job-application-evidence-review-assistant): A tailored application draft, unsupported claim list and submission checklist.
-- [Prepare work examples for a job interview](https://useaiblocks.com/workflows/prepare-work-examples-for-a-job-interview): Share the source files. Get a role evidence map, concise example answers and practice questions.
-- [Resume and job application builder](https://useaiblocks.com/skills/resume-job-application-builder): Share your real experience and a job description. Get a tailored resume, cover letter and a check for unsupported claims.
-- [Tailor a job application to real evidence](https://useaiblocks.com/workflows/tailor-a-job-application-to-real-evidence): Share the source files. Get an evidence-based resume draft, application answers and a final check.
+- [Academic CV builder](https://useaiblocks.com/skills/academic-cv-builder): Build an academic CV for a faculty, postdoc or research job. Share your degrees, papers, grants and teaching. Get a draft in the right order.
+- [Creative resume layout planner](https://useaiblocks.com/skills/creative-resume-layout-planner): Plan a creative resume that passes job portals and still looks designed. Get two layouts, type and colour choices, and links to your work.
+- [Job application evidence reviewer](https://useaiblocks.com/agents/job-application-evidence-review-assistant): Tailor your application to a role using real work evidence. Get a draft, claim gaps and a submission checklist.
+- [Job interview work-example coach](https://useaiblocks.com/workflows/prepare-work-examples-for-a-job-interview): Share the role description, interview format and your real work examples. Get a skills map, concise answer notes and practice questions.
+- [Job reference list builder](https://useaiblocks.com/skills/job-reference-list-builder): Build a job reference list: pick the right referees, check permission, and get request and briefing drafts for each person. Missing details are marked.
+- [Portfolio case study writer](https://useaiblocks.com/skills/portfolio-case-study-writer): Turn your project notes and results into a portfolio case study. Get a draft with the problem, your role, process, solution and lessons.
+- [Resume and application evidence writer](https://useaiblocks.com/workflows/tailor-a-job-application-to-real-evidence): Share the job description, resume and real work examples. Get tailored application drafts, clearer wording and a check of facts and format.
+- [Resume and job application builder](https://useaiblocks.com/skills/resume-job-application-builder): Share real experience and a job post. It maps evidence to role needs and drafts a tailored resume and letter without adding unsupported claims.
+- [Resume editor](https://useaiblocks.com/agents/agency-resume-tailor): Tailor your resume to one job post without inventing anything. Get new bullets, a keyword map and a list of claims to confirm. Paste both.
+- [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor): Fix your resume layout so hiring software and recruiters can read it. Get a formatting review with clear fixes for fonts, spacing and sections.
+- [Resume parsing checker](https://useaiblocks.com/agents/agency-engineering-ats-validator-architect): Check your resume for what hiring software may miss. Get a score out of 100, layout and keyword gaps and bullet fixes. Paste your resume.
+- [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer): Sort your resume files with a master resume, clear file names and a tracker of which resume version went to which job. Paste your files to start.
+- [Technical interview coach](https://useaiblocks.com/skills/technical-interview-practice): Run a mock technical interview on coding or system design. Get scored on four areas and told what to practice next. Good for interview practice.

@@ -42,11 +42,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Find out whether you need more leads or better ones.** Use the skill `inquiry-problem-diagnoser`. A raise or cut call, with the numbers behind it.
 2. **Tune the reply offer.** Use the skill `lead-offer-tuner`. Give it the audit report from the steps before. The reply offer, changed in the direction the numbers asked for.
-3. **Fix the coupon or form.** Use the skill `coupon-and-form-fixer`. Give it the offer from the steps before. A reply form that matches the offer and the direction.
+3. **Fix the coupon or form.** Use the skill `coupon-and-form-fixer`. Give it the offer from the steps before. A reply form that matches the offer and the direction. Hands you the new offer and form to run.
 
 Pause here: Run the ad with a code on each coupon or form for as long as it takes to collect enough replies.
 
-4. **Read the results.** Use the skill `ad-results-report-writer`. What changed, in one line, with actions.
+4. **Read the results.** Use the skill `ad-results-report-writer`. What changed, in one line, with actions. Uses your ad totals before and after the new offer and form ran, not step 3's form. Hands step 5 the one-line answer and the actions.
 5. **Record the result for next time.** Use the skill `keyed-ad-results-log-keeper`. Give it the audit report and the copy draft and the offer from the steps before. A log entry per ad so the next one starts from what worked.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

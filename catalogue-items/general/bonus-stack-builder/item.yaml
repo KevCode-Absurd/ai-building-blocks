@@ -1,6 +1,6 @@
 slug: bonus-stack-builder
 name: Bonus stack builder
-summary: Paste your offer and the doubts buyers have. Get named bonuses that each answer one doubt, with a value and proof.
+summary: "List the doubts that stop buyers and get 5 to 8 named bonuses that answer them, each with proof, a value and a reveal order."
 category: general
 type: skill
 role: make
@@ -9,9 +9,9 @@ level: intermediate
 inputs:
   - type: offer
     required: true
-  - type: plan
-    required: true
   - type: objection_map
+    required: false
+  - type: plan
     required: false
 outputs:
   - type: offer

@@ -14,6 +14,29 @@ use_cases:
   - Turn a vague complaint into a factual request for help
   - Compare records that use different definitions
   - Explain a service problem with a clear table and request
+not_for:
+  - "You need a medical, legal or money decision: ask a doctor, a lawyer, an adviser or the relevant service, not this mind."
+  - "You want help with a money plan for your family: use the Beth Kobliner mind instead."
+  - "You want a way to decide under uncertainty, not a handoff or a record: use the Annie Duke mind instead."
+output_sample:
+  input:
+    - The task or service that keeps going wrong
+    - One recent instance, with what you saw and what you were told
+    - Who will cover the work, and when you are away
+    - The records or complaints you want to compare (optional)
+  output:
+    - name: Handoff note
+      contains: The next action, the information needed, an ordinary exception, who to ask, and an agreement to check with the cover person.
+    - name: Event note
+      contains: Date, expected sequence, what was seen, what was reported by others and what is still unknown.
+    - name: Focused request
+      contains: A clear question for the person who can act, with a few dated examples and what answer would help.
+    - name: Definition sheet and bounded table
+      contains: What each record counts, the period, and a simple comparison that keeps records that cannot be combined apart.
+    - name: Reform brief
+      contains: The observed problem, the evidence, the action, the owner, the resources and a review date.
+    - name: Review question
+      contains: What to ask the people using the arrangement to check that it works for them.
 seats:
   - seat: Observation and reliable everyday arrangements
     asks: What actually happened, and what must continue when you are not there?

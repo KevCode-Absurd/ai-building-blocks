@@ -1,6 +1,6 @@
 name: "Competitor ad video script writer"
 new_slug: competitor-video-ad-script
-summary: "Paste an admired ad and facts. Get a new script on its structure and a copy check."
+summary: "Write a competitor video ad script from an ad you admire. Keep its rows, order and pace, with new lines from your own facts and a copy check."
 job: study-competitors
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -19,6 +19,10 @@ when:
   - You found an ad (yours or another brand's) and want the same shape for your product.
   - A teammate says "make one like this" and you need to pin down what "like this" means, row by row.
   - You want to test whether a winning structure works for a different product or buyer.
+not_for:
+  - "You want only the idea behind an ad, in your own order and length: use the skill that writes a fresh script from why an ad worked."
+  - "You have no breakdown of the reference ad yet: use the Competitor ad opportunity finder first, then come back."
+  - "You want a script with no link to any reference ad: write from your own product facts and buyer words, with a copywriter or your AI."
 
 you_give:
   - A row-by-row breakdown of the reference, with start and end times, spoken words and on-screen text
@@ -41,6 +45,31 @@ how_to_use:
   - Paste your product facts, proof and offer underneath, and any buyer quotes.
   - Read the frame map first. If a row was changed, check you agree with the reason.
   - Fill or remove every gap, and confirm the speaker, before anything is filmed.
+output_sample:
+  input:
+    - Your reference ad, broken down row by row with times, spoken words and on-screen text
+    - Screenshots of each shot, or the video file if your AI can watch it
+    - Your product facts, proof with sources, and your offer and guarantee as written
+    - Your approved and banned claims
+    - Buyer quotes or your brand voice (optional)
+  prerequisites:
+    - An AI that can read pictures, if you attach screenshots
+    - Your brand brain from the Brand profile builder (helpful, not required)
+  output:
+    - name: Move
+      contains: One sentence naming the trick the whole reference ad depends on.
+    - name: FRAME MAP
+      contains: Each row's time, words per second, job and move, and what yours keeps, changes or leaves missing.
+    - name: SCRIPT
+      contains: Your new script row by row, with timing, spoken line, on-screen text and a visual note.
+    - name: PLACEHOLDERS
+      contains: Each marked gap and the true fact that would fill it.
+    - name: ASSUMED
+      contains: Each guess made, and what breaks if the guess is wrong.
+    - name: DISTANCE CHECK
+      contains: Row counts, total time, longest run of shared words and any borrowed claims, figures or names.
+    - name: CHECKS MISSED
+      contains: Each of the six checks that failed or could not run, or the word none.
 
 how_it_works:
   - title: Maps the frame

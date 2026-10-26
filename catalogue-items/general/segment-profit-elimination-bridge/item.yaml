@@ -1,26 +1,25 @@
 slug: segment-profit-elimination-bridge
 name: Segment profit elimination bridge
-summary: Tie segment profit to consolidated operating profit before using segment values.
+summary: "Reconcile segment profit to group operating profit, with each elimination and corporate cost shown and any unexplained gap left open."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
+before: []
+next: [minority-interest-multiple-reconciliation, cash-versus-earnings-checker]
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It fills a seven-part story frame from your answers.
 new_slug: customer-as-hero-message-planner
 name: Customer-as-hero message planner
-summary: Describe your brand. Get a clear message with the customer as the hero,
-  plus a website and elevator pitch. Uses StoryBrand.
+summary: "Turn your brand details into a clear customer-as-hero message: a seven-part brand script, one-liner and elevator pitch, built on StoryBrand."
 job: write-and-tell-stories
 headline: Customer-as-hero message planner
-subhead: Customers pick what they understand fastest. Describe your brand and
-  this builds a clear message where your customer is the hero and you are the
-  guide.
+subhead: Customers pick what they understand fastest. Describe your brand and this builds a clear message where your customer is the hero and you are the guide.
 explain: |
   Customers pick what they understand fastest. Describe your brand and this builds a clear message where your customer is the hero and you are the guide. You end up with website copy, an elevator pitch and a one-liner.
 
@@ -18,6 +15,10 @@ when:
   - Your team describes the company five different ways.
   - You are writing a landing page or email sequence and need a clear spine.
   - You need a one-line answer to "what do you do?"
+not_for:
+  - "Your homepage already has tested copy that converts: keep it, and change one line at a time instead."
+  - "Your copy makes legal, medical or financial claims: have a compliance reviewer or lawyer check it before you publish."
+  - "You only want a memorable idea or slogan: ask a copywriter, or use a plain brainstorm with your AI."
 you_give:
   - What you sell and who buys it
   - The problem your customer faces
@@ -29,7 +30,28 @@ you_get:
   - Homepage and landing page copy
   - A score of your current copy with fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the SKILL.md text. No code or paid tools are needed.
+  - Tell your AI what you sell, who buys it and the problem your customer faces.
+  - Add your current homepage or pitch copy and your proof if you have them. Say if you have none.
+  - Read the score, then the brand script. Check that the customer is the hero and you are the guide.
+  - Replace any placeholder such as [your real figure] with a true fact. Do not publish proof you cannot verify.
+  - Use the one-liner, pitch and website copy once you are happy with the script.
+output_sample:
+  input:
+    - What you sell and who buys it
+    - The problem your customer faces
+    - Your current homepage or pitch copy (optional)
+    - Your proof, such as results or testimonials (optional)
+  output:
+    - name: Current copy score
+      contains: A score out of 10 for your existing copy, with the changes needed to reach 10.
+    - name: Brand script
+      contains: "Your message in seven parts: the customer, their problem, you as guide, a plan, a call to action, and the stakes."
+    - name: Three levels of the problem
+      contains: The outer problem, the inner feeling it causes, and why it is wrong.
+    - name: One-liner
+      contains: One sentence checked to be clear and easy to repeat after hearing it once.
+    - name: Elevator pitch
+      contains: A short spoken pitch built from the brand script.
+    - name: Website copy
+      contains: Homepage and landing page copy that follows the script.

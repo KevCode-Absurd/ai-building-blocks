@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It plans how many pages fit together.
 new_slug: topic-cluster-mapper
 name: Topic cluster mapper
-summary: Name your business goal. Get a main page and supporting articles,
-  ranked by what to write first.
+summary: "Plan a topic cluster for SEO: one main page plus 5 to 10 supporting articles, ranked by what to write first, with a link map and calendar."
 job: get-found-in-search
 headline: Topic cluster mapper
-subhead: Name your business goal. Get a main page and supporting articles,
-  ranked by what to write first. Bring main topic and keyword. Use the result to
-  plan your next step.
+subhead: Name your business goal. Get a main page and supporting articles, ranked by what to write first. Bring main topic and keyword. Use the result to plan your next step.
 explain: |
   A content plan built around one main page and a set of supporting articles that link to it, so search engines see you as an authority on the subject. It also tells you what to write first.
 
   You give the topic, main keyword, audience, content you already have and what readers should do next. The skill designs a pillar page with a title, intent and length target, then 5 to 10 cluster articles, each with its own search intent and keyword. It skips near-duplicates to hit a number. Each article gets a role in the link structure and a place in a publishing order, so you start with the pieces most likely to win.
 when:
-  - You want to rank for a subject, not just one keyword.
-  - You have a blog with random posts and no plan.
+  - You want to rank for a whole subject, not just one keyword.
+  - You have a blog full of random posts and no plan.
   - You are launching a new site and need the first articles.
-  - You need to show a writer what to produce and in what order.
+  - You need to tell a writer what to write and in what order.
+not_for:
+  - "You need a single product page or a one-off keyword check: write the page yourself or ask your AI one plain question about that keyword."
+  - "You have no keyword list yet: run a keyword search in your own keyword tool first, then come back with the keywords."
+  - "You want finished articles: use this plan to brief a writer, or paste each row into your AI and ask it to draft the article."
 you_give:
   - Main topic and keyword
   - Your audience
@@ -31,7 +32,32 @@ you_get:
   - An internal linking plan
   - A publish order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code or paid tool is needed.
+  - Add your main topic, main keyword, audience and what readers should do next.
+  - Add your existing page titles and extra keywords if you have them (optional). The skill does not measure search volume, so paste volumes from your own keyword tool, or treat its volume labels as estimates.
+  - Check that no two articles share a keyword or search intent.
+  - Start with the Priority 1 articles, then hand the plan to a writer or to your AI.
+output_sample:
+  input:
+    - Your main topic and main keyword
+    - Who the content is for
+    - Titles of pages you already have (optional)
+    - Extra keywords, ideally with volumes from your keyword tool (optional)
+    - What readers should do after reading
+  output:
+    - name: Pillar Page
+      contains: A table with the main page title, keyword, search intent, audience, page type and word count target.
+    - name: Cluster Articles
+      contains: Articles in three priority tiers, each with a keyword, search intent, content type and link targets.
+    - name: Internal Link Map
+      contains: A tree showing which articles link to the main page and to each other, with no orphan articles.
+    - name: Foundational Page Plan
+      contains: The first pages to publish, each with the problem it solves, the query it owns and its next step.
+    - name: 20-Day Editorial Calendar
+      contains: Twenty distinct topics by day, with query, intent, format, link target and a place to share each one.
+    - name: Content Gap Analysis
+      contains: Angles rivals likely miss, plus topics left out because they belong to a different cluster.
+    - name: AEO Cluster Signals
+      contains: "Two direct-answer pages to include: one FAQ page and one What Is explainer."
+    - name: Cluster Health Checklist
+      contains: A tick list to check keywords are unique, every article links back, and nothing competes for the same intent.

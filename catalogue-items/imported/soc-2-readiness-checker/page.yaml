@@ -2,34 +2,114 @@ thinking: high
 thinking_why: It checks you against controls and judges each answer.
 new_slug: soc-2-readiness-checker
 name: SOC 2 readiness checker
-summary: Name your scope. Answer six questions and get gaps to fix before the
-  SOC 2 Type II watch period.
+summary: "Check where you stand before a SOC 2 Type II audit. Answer six questions and get a verdict, your gaps and the top 3 fixes."
 job: secure-code
 headline: SOC 2 readiness checker
-subhead: A list of gaps to close before your SOC 2 Type II watch period starts.
-  You name your scope, answer six pointed questions, and see where an auditor
-  would push back.
+subhead: "Tell it your scope and how far into the audit period you are. It asks six hard questions about missed cycles, changes, exceptions and evidence, then gives you a verdict and your top three fixes."
 explain: |
-  A list of gaps to close before your SOC 2 Type II watch period starts. You name your scope, answer six pointed questions, and see where an auditor would push back.
+  A SOC 2 Type II audit does not look at one day. It looks at whether your controls worked every month of the audit period. One missed monthly review can become a finding. This SOC 2 readiness checker finds those problems while you can still fix them.
 
-  Type II looks at how controls work over months, not on one day, so the questions focus on that. They cover which trust categories are in scope, whether any control skipped a cycle, whether evidence exists for each period, how changes and incidents were handled, and whether the system description is complete. You can run it at the start, at the month six checkpoint, before the audit field work, or after a major incident. It prepares you for the audit but is not a replacement for your auditor.
+  You name your scope and where you are in the cycle. It asks six questions: what is in scope, did any control skip a cycle, were mid-period changes documented, is the exception log kept as you go, can you show evidence from the first month, and can you reuse evidence from other audits. Each answer is marked ready or a gap.
+
+  It prepares you for the audit. It does not replace your auditor, who sets the real rules for what counts as an exception.
 when:
-  - You are about to start a SOC 2 Type II observation period.
+  - You are about to start a SOC 2 Type II audit period and want to know what to fix first.
   - You are halfway through the period and want a checkpoint.
-  - A control skipped a monthly review and you need to know the damage.
-  - You added a new trust category and need to recheck scope.
+  - A monthly or quarterly control, such as an access review, was skipped and you need to know the damage.
+  - You added a new trust category or changed a control mid-period.
+not_for:
+  - "You are starting from nothing and need a plan for controls, owners and evidence: use the SOC 2 readiness planner."
+  - "You are preparing for ISO 27001 instead: use the ISO 27001 audit prep coach."
+  - "You need your auditor's view on what counts as an exception: ask your audit firm. This checker only helps you prepare."
 you_give:
-  - "Your scope: the systems and teams covered"
+  - Your scope, meaning the systems and teams the audit covers
   - Which trust categories you plan to include
-  - Your current controls and evidence (optional)
-  - Where you are in the audit cycle
+  - Where you are in the audit period, with start and end dates
+  - Your list of controls and how often each runs (optional)
+  - Your exception log and evidence list (optional)
 you_get:
-  - Answers to six readiness questions
-  - A list of gaps ranked by risk
-  - Missed cycles flagged
-  - Next steps before the audit
+  - Ready or gap for each of the six questions
+  - Controls that skipped a cycle, and mid-period changes that need paperwork
+  - Evidence coverage by quarter of the period
+  - A verdict of on track, needs attention or material risk
+  - Your top three fixes, each with an owner and a date
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed.
+  - Paste the skill text into the chat.
+  - "Under it, paste your scope, your trust categories and the audit period dates. Add your control list and exception log if you have them."
+  - Answer any question it asks. If you do not know, say so. It marks the item MISSING and does not guess.
+  - Read the verdict and the top three fixes first. Check each gap against your own records.
+  - Take the fixes to your compliance owner. Run the checker again at the next checkpoint.
+output_sample:
+  input:
+    - Your scope, the systems and teams the audit covers
+    - The trust categories you plan to include
+    - Where you are in the audit period, with dates
+    - Your control list and exception log (optional)
+  prerequisites:
+    - An audit firm picked, or an audit period planned
+  output:
+    - name: Decision being made
+      contains: Whether this is scoping, pre-period, a mid-period check or a pre-fieldwork check.
+    - name: Trust category scope
+      contains: Which of security, availability, processing integrity, confidentiality and privacy are in.
+    - name: Audit period status
+      contains: Months elapsed, controls that skipped a cycle and mid-period changes with or without paperwork.
+    - name: Exception log review
+      contains: Each exception with what, when, impact, owner and fix status.
+    - name: Evidence coverage
+      contains: Which quarters of the period have evidence and where the gaps are.
+    - name: Reuse from other audits
+      contains: Evidence you can share with an ISO 27001 audit, if you run one.
+    - name: Verdict
+      contains: On track, needs attention or material risk.
+    - name: Top 3 actions
+      contains: Three next steps, each with an owner and timing.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms which trust categories are in, since security is always required and the others depend on what your customers ask for.
+  - title: Check for skipped cycles
+    text: "It goes control by control, from quarterly to yearly. A single skipped cycle is likely to become an exception."
+  - title: Check mid-period changes
+    text: It asks for the reason, date and effect on earlier samples for any control that changed during the period.
+  - title: Review the exception log
+    text: It checks that exceptions were logged when found, not at audit time, and that each has an owner and a fix.
+  - title: Test the first month of evidence
+    text: It asks for evidence from the start of the period, since auditors sample across the whole period.
+  - title: Give the verdict
+    text: It rates the result and picks the three fixes that matter most.
+output_shape: |
+  SOC 2 TYPE II READINESS: <scope>
+  Date: <date>   Audit period: <start> to <end>
+
+  THE SIX QUESTIONS
+  1. Scope and categories: <ready | gap> <note>
+  2. Skipped cycles: <ready | gap> <controls>
+  3. Mid-period changes: <ready | gap> <note>
+  4. Exception log: <ready | gap> <note>
+  5. Evidence from the first month: <ready | gap> <note>
+  6. Reuse from other audits: <ready | gap | not applicable> <note>
+
+  VERDICT: <on track | needs attention | material risk>
+
+  TOP 3 ACTIONS
+  1. <action> (owner, timing)
+
+  MISSING
+  - <anything you did not give>
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The questions run fine in plain chat. An AI that reads files can check a pasted control list or evidence log.
+  inputs:
+    - Your control list with how often each runs
+    - Your exception log
+terms:
+  - term: SOC 2 Type II
+    meaning: A report from an auditor on whether your controls worked over a period of months.
+  - term: Trust category
+    meaning: One of five areas an audit can cover, such as security or availability.
+  - term: Control
+    meaning: A check you run on a schedule, such as a quarterly review of who has access.
+  - term: Exception
+    meaning: A time a control did not work as written during the audit period.

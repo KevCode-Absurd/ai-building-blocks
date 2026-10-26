@@ -1,6 +1,6 @@
 new_slug: work-flow-layout-planner
 name: "Work flow layout planner"
-summary: "Describe a repeated job. Get a layout where the work moves to the person, with fewer steps and less walking."
+summary: "Plan a work flow layout for a repeated job. Give it your steps and space. You get fewer moves, less walking and a one-job trial."
 job: build-product
 thinking: high
 thinking_why: "It redesigns how people and parts move, and a bad layout wastes time and may harm people."
@@ -17,6 +17,10 @@ when:
   - A job takes many people and a lot of walking, searching or waiting.
   - You are setting up a space, a kitchen, a desk or a workshop for repeated work.
   - Output stalls because people switch between tasks.
+not_for:
+  - Your job is done by one person at one desk, so a simple list of the steps and a timer is enough.
+  - "Scrap or idle time is your main loss: use the Waste and by-product finder first, then come back here."
+  - "Your space has a fixed layout set by law or by a regulator: ask the person who signs off the rules before you move anything."
 
 you_give:
   - The job and its steps in order, with who does each
@@ -35,6 +39,29 @@ how_to_use:
   - Describe the space and where tools and parts sit.
   - Time one run of the job and give it the numbers.
   - Run the one-job trial it names and ask staff before changing anything else.
+output_sample:
+  input:
+    - The job and its steps in order, with who does each
+    - Your space and tools, and what cannot move
+    - Rough step times (optional)
+    - What staff say slows them down (optional)
+  output:
+    - name: The job and before count
+      contains: The job, its number of steps and people, and how many moves each unit takes now.
+    - name: Steps in order
+      contains: Each small step with who does it and a time marked measured or guessed.
+    - name: Layout
+      contains: Station order, where each part comes from and goes to, each drop place and the working height.
+    - name: After count
+      contains: The new number of moves per unit and the saving, shown only for counts you gave or marked as guesses.
+    - name: Staff check
+      contains: Four to six questions to ask the people who do the job before any change.
+    - name: One-job trial
+      contains: The job or batch to time, how to compare it with the old way and what counts as a pass.
+    - name: Missing
+      contains: Any measure the plan still needs, such as a time, a height or a distance.
+    - name: Checks missed
+      contains: One line for each check it failed, or none.
 
 how_it_works:
   - title: Lists steps and counts moves

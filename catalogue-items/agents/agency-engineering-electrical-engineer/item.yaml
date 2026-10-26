@@ -1,0 +1,42 @@
+slug: agency-engineering-electrical-engineer
+name: Electrical Engineer agent
+summary: Get an electrical design review with checked units, sizing sums,
+  standards and open risks. A licensed engineer must sign off before building.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-electrical-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-electrical-engineer.md
+  licence: MIT
+  original_name: Electrical Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: e62de4808d0209db518f4bde393af88dd5e3d0d74b053d14de91c2b80d2638c0
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Electrical Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Electrical Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-electrical-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

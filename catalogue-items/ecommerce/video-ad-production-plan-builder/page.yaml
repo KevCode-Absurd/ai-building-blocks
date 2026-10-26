@@ -1,6 +1,6 @@
 new_slug: video-ad-production-plan-builder
 name: Video ad production plan builder
-summary: Share your product facts and ad idea. Get a cast kit, timed shots, prompts and edit handoff in your chosen style.
+summary: "Turn your product facts and ad idea into a video ad production plan: cast kit, timed shot table, clip prompts and edit handoff in one style."
 job: make-video-ads
 headline: Video ad production plan builder
 subhead: Share your product facts and ad idea. Get a cast kit, timed shots, prompts and edit handoff in your chosen style. Bring the brief and any files you want it to use.
@@ -11,6 +11,10 @@ explain: |-
 when:
   - You need an end-to-end ad production master plan.
   - You want a clear draft and checks from the material you already have.
+not_for:
+  - "You want a finished video or a ready-to-publish ad: use a human editor or your video tool's own editor."
+  - "You have no product facts or approved claims yet: gather them first, or ask the person who owns the product page."
+  - "You only want a quick script with no shots: ask your AI for a plain script instead."
 you_give:
   - brief
   - "Optional: product photos"
@@ -25,6 +29,28 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - Your product facts and approved claims
+    - Who the ad speaks to, the one benefit, and the action you want
+    - "Ad length and style: podcast, 2D animation, clay stop-motion or live-action short film"
+    - Product photos (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code or paid tool is needed to get the plan.
+  output:
+    - name: MODE AND FACTS
+      contains: The one style chosen, the product claims you approved, and any evidence that is missing.
+    - name: STORY AND CAST/LOCATION KIT
+      contains: The story arc, plus fixed looks for each character, place and product.
+    - name: TIMED SHOT TABLE
+      contains: Start and end times, camera, action, dialogue, audio and image references for each shot.
+    - name: IMAGE AND CLIP PROMPTS
+      contains: A prompt for each shot, ready to paste into an image or video tool.
+    - name: EDIT/SOUND HANDOFF
+      contains: Shot order, transitions, captions, music and sound effects for your editor.
+    - name: NOT RUN
+      contains: What did not happen, such as image or video generation, editing and export.
 how_it_works:
   - title: Read the brief
     text: Choose podcast conversation, 2D illustrated animation, clay stop-motion or live-action short-film as an explicit mode. Do not mix their material rules unless requested.

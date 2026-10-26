@@ -1,0 +1,139 @@
+name: Email Intelligence Engineer agent
+summary: Turn a messy email thread into who said what, decisions and tasks with owners. Or plan the pipeline that does it for many threads.
+headline: Email Intelligence Engineer agent
+subhead: Paste an email thread with its From, To and Date lines. It rebuilds the order, strips repeated quotes and ties every request and task to the person who wrote it. You get tables of messages, decisions and owners, plus the checks it ran.
+job: connect-tools
+thinking: high
+thinking_why: It must keep each message tied to its sender and mark every guess. Use a model that follows structure closely over long text.
+explain: |-
+  Email is a conversation, not a document. Paste a thread as one block and three things go wrong. Replies repeat earlier text, so the thread is much longer than what was said. The word "I" stops pointing at anyone, so tasks go to the wrong person. Old quoted lines look like the current state, even when a later reply changed it. This is why email parsing and thread summaries so often get owners and decisions wrong.
+
+  This agent rebuilds the thread in order and works out who replied to whom. It removes quoted text that only repeats an earlier message. Then it ties every request, decision and task to the person who wrote that message. Anything it infers, such as a person's role or a decision made by silence, is marked Inferred. Anything odd, such as a mention of an attachment you did not paste, goes on a problems list.
+
+  You can use it two ways. Paste one thread and get tables you can check. Or describe the system you are building, and get a plan with the fields to capture, the rules for rebuilding threads and the tests to run. It works on text you give it. It does not read a live inbox or send mail.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A long thread has five people and three forwards, and you need to know what was decided and who owes what.
+  - You are building an AI helper that answers questions about customer emails and need to know what fields to keep.
+  - A summary tool keeps giving a task to the wrong person and you want to see why.
+  - You are about to hand a deal thread to a teammate and want a clean record to go with it.
+not_for:
+  - You want to read your live inbox or send replies. This agent works on text you paste. Use the Customer inbox triage and reply drafter for new customer emails.
+  - You want minutes from a meeting, not an email thread. Use the Meeting Notes Specialist agent.
+  - You need production code, hosting and tests. This agent gives a plan and a design. Hand it to a developer.
+you_give:
+  - One email thread, pasted or attached, with the From, To, Cc and Date lines kept on every message
+  - What you want out, such as tasks with owners, decisions or a timeline
+  - The system you are building, if you want a pipeline plan, and the question your AI helper must answer (optional)
+  - Where the emails come from, such as Gmail, Outlook or exported files (optional)
+you_get:
+  - A thread map in order, showing who replied to whom and any forks or forwards
+  - A participant list with each person's first and last message
+  - A message table with only the new text from each message
+  - A decision list and a task list, each tied to the message and sender behind it
+  - A problems list of anything it could not settle
+  - A pipeline plan with fields, rules and tests, if you asked for one
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste one thread, or attach it as an exported file. Keep the From, To and Date lines. Stripped headers lead to wrong owners. Check you may share the emails with your AI tool.
+  - Type "Parse this thread into the message table, decisions and tasks with owners. Mark anything you inferred."
+  - Check the task list against the thread. Is each owner the person who made that promise? Fix any that are wrong and tell it why.
+  - To plan a system, say where the emails come from and what question your AI helper must answer. Ask for "the pipeline plan".
+  - Hand the plan to your developer, or keep it as the spec for the tool you buy.
+how_it_works:
+  - title: Read the headers
+    text: It lists each message with its sender, recipients, date and subject, and notes any message that is missing its ID.
+  - title: Rebuild the thread
+    text: It uses reply links to put messages in order and shows where the thread forks. A forwarded chain is split into its own parts.
+  - title: Remove repeated quotes
+    text: It drops quoted text that only repeats an earlier message. A new quote is kept if it adds something.
+  - title: Name the participants
+    text: It lists everyone who sent or received mail, and marks any role it inferred.
+  - title: Tie each item to its writer
+    text: Requests, decisions and tasks go to the sender of that message, never to the person who is merely mentioned.
+  - title: Check and list problems
+    text: It lists doubts, such as two messages with the same ID, a task with no clear owner or an attachment that was not supplied.
+  - title: Plan the pipeline (if asked)
+    text: It lists the fields to keep, the rules for threading and dedupe, how to protect private data and the tests to run.
+output_shape: |-
+  THREAD MAP
+    <message number> | <sender> | <date> | <replies to message number> | <note: fork, forward or missing ID>
+
+  PARTICIPANTS
+    <name as shown> | <address> | <role: stated or Inferred> | <first message> | <last message>
+
+  MESSAGE TABLE
+    <message number> | <sender> | <new text in one or two lines> | <requests> | <deadlines as written> | <attachments mentioned>
+
+  DECISIONS
+    <decision> | <who proposed> | <who agreed> | <source message> | <stated or Inferred>
+
+  TASKS AND OWNERS
+    <task> | <owner: the sender of the message that took it on> | <source message> | <due date as written>
+
+  PROBLEMS
+    <what is odd or missing> | <message number> | <how to settle it>
+
+  PIPELINE PLAN (only if asked)
+    Fields to keep <list> | Thread rules <list> | Quote removal <rules> | Private data <rules> | Tests <list>
+output_sample:
+  input:
+    - One email thread, pasted or attached, with the From, To and Date lines
+    - What you want out, such as tasks with owners or decisions
+    - The system you are building and the question it must answer (optional)
+  prerequisites:
+    - An AI that can read files, if you attach exported emails
+    - Permission to share the emails with an AI tool
+  output:
+    - name: Thread map
+      contains: The messages in order, who replied to whom and where the thread forks or was forwarded.
+    - name: Participants
+      contains: Each person with their address, role (stated or inferred) and first and last message.
+    - name: Message table
+      contains: One row per message with only its new text, plus its requests, deadlines and attachments mentioned.
+    - name: Decisions
+      contains: Each decision with who proposed it, who agreed and the message it came from.
+    - name: Tasks and owners
+      contains: Each task tied to the sender of the message that took it on, with the due date as written.
+    - name: Problems
+      contains: Anything it could not settle, with the message number and how to resolve it.
+    - name: Pipeline plan
+      contains: Fields to keep, rules for threads and quotes, private data rules and tests. Only if you ask for it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read an exported thread file with all its headers, which keeps the sender tied to each message.
+  inputs:
+    - The same thread exported as a file, not copied from the screen.
+    - A list of the people on the thread and their roles.
+    - Five real threads that show the kinds of mess your system must handle.
+terms:
+  - term: Email thread
+    meaning: A chain of emails on one subject, linked by replies and forwards.
+  - term: Quoted text
+    meaning: Earlier messages copied inside a reply, often marked with ">" or "On Monday, Sam wrote".
+  - term: Participant
+    meaning: Anyone who sent, received or was copied on a message in the thread.
+  - term: Message ID
+    meaning: A hidden tag every email carries. Replies point to it, which lets a thread be rebuilt.
+  - term: Task owner
+    meaning: The person who said they would do the job, not the person who was asked about it.
+tweaks:
+  - what: Headers
+    how: Keep the From, To, Cc and Date lines on every message. Without them the owners will be wrong.
+  - what: Output you want
+    how: Ask only for what you need, such as tasks with owners. A shorter ask gives a cleaner table.
+  - what: Thread length
+    how: For a very long thread, paste it in parts in date order and say so. Ask for one merged table at the end.
+improve:
+  - Run it on five of your own messy threads. Note which problems it missed and add a rule for each to the pack.
+  - Add the names and roles of people who appear often, so roles are stated, not inferred.
+  - Pair it with the Weekly meeting actions keeper to carry tasks from threads into your weekly list.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

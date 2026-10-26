@@ -1,6 +1,6 @@
 new_slug: one-off-items-separator
 name: "One-off items separator"
-summary: "Paste several years of income statements. Get each year's profit rebuilt without one-off gains and losses."
+summary: "Find one-off gains and losses in several years of income statements, then see each year's ordinary earnings without them. Gains and losses are paired."
 job: money-and-investing
 thinking: high
 thinking_why: "It reads many lines across years, pairs items that are booked in different places and must not invent a missing amount. That needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - A company's latest profit looks too good, or too poor, to be typical.
   - You are reading several years of results and want to compare like with like.
   - You are looking at a business to buy and its seller shows one strong year.
+not_for:
+  - "You have only one year of statements: this needs five or more years, so read that year's notes line by line yourself."
+  - "You want to judge whether a company padded its profit: use Earnings padding detector."
+  - "You want a single normal earnings figure for a company: use Normal earnings estimator, or ask a licensed financial adviser for a big or personal decision."
 
 you_give:
   - Five or more years of income statements, with notes
@@ -35,6 +39,28 @@ how_to_use:
   - Add the equity statement if you have it. Some losses never reach the profit line.
   - Read the pairs table before the ordinary earnings.
   - Take the open questions to "Earnings padding detector".
+output_sample:
+  input:
+    - Five or more years of income statements, with the notes
+    - The changes-in-equity statement or retained earnings note (optional)
+    - A tax rate to estimate after-tax amounts (optional)
+  output:
+    - name: One-off items
+      contains: Each one-off by year, with its amount after tax, where it sat, and whether it is a gain or a cost.
+    - name: Pairs
+      contains: Gains and losses of the same kind in the same year, side by side, with their net.
+    - name: Ordinary earnings by year
+      contains: Reported profit, less one-off gains, plus one-off costs, with a column for each adjustment.
+    - name: Ordinary average and all-in average
+      contains: "Two averages: one without one-offs and one with them left in, plus the number of years used."
+    - name: Trading business note
+      contains: How investment results were treated, if the company deals in securities.
+    - name: Questions for the next step
+      contains: Items it could not place or size, each with why it is unclear.
+    - name: Missing
+      contains: Facts you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the skill failed, or none.
 
 how_it_works:
   - title: Reads line by line

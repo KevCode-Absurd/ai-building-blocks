@@ -16,6 +16,31 @@ use_cases:
   - "Find where technology could do the hard work your customers do today"
   - "Split a growing organisation into units that each have a clear owner"
   - "Test whether your team has grown too comfortable doing what already works"
+not_for:
+  - "You want to know what Larry Page thinks about news or AI today: this mind only uses his dated public words, so read his recent sources or ask a person who follows him."
+  - "You need legal, medical or personal investment advice: ask a qualified professional, since this mind gives none."
+  - "You want a careful read of how a company values its money and risk: hire the Aswath Damodaran mind, who pairs a business story with the numbers."
+output_sample:
+  input:
+    - Your current goal or project, in a few lines
+    - The user problem it solves
+    - "What you have to spend: people, time and money"
+    - Ideas or projects already running (optional)
+  output:
+    - name: Bolder goal
+      contains: Your current goal restated at ten times the size, with what you would have to rethink to reach it.
+    - name: Future check
+      contains: What may be true in five years and where your plan sits in that world.
+    - name: User test
+      contains: Whether the plan helps the person using it or only this quarter's numbers.
+    - name: What to close
+      contains: Efforts that do not feed the core, so you can stop splitting your time.
+    - name: Side bets
+      contains: A few small, strange ideas kept beside the main work, small enough to survive failing.
+    - name: Owner and limits
+      contains: Who owns each big bet, and what evidence would show the bet is wrong.
+    - name: Beyond the record
+      contains: A mark on any point Page never addressed, so nothing is made up.
 seats:
   - {seat: "10x thinking", asks: "What would it take to make this ten times better, not ten percent?"}
   - {seat: "Moonshots and long bets", asks: "Which strange-looking bet could serve a billion people in ten years?"}

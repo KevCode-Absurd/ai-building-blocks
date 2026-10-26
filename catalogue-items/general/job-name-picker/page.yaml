@@ -1,6 +1,6 @@
 new_slug: job-name-picker
 name: Job name picker
-summary: Paste your job spec. Get names that tell a stranger what to hire it for, ranked, with a not-for line.
+summary: Paste your job spec and get a job name that tells strangers what to hire your product for. Ten names are tested and the top three ranked.
 job: plan-strategy
 thinking: medium
 thinking_why: It generates names and scores them against fixed tests. A mid-range model does this well, but you should judge the final pick.
@@ -14,6 +14,10 @@ when:
   - You are naming a product, range or service.
   - Your current name says who you are, not what you do.
   - You keep adding variants and the name no longer means one thing.
+not_for:
+  - "Your product already has customers under its current name and you want to stretch it: use the Brand name stretch checker."
+  - "You have no job spec yet: write one first with the Job spec writer, then come back."
+  - "You need to know if a name is free to use: ask a trademark lawyer or search your national trademark register and domain sites."
 you_give:
   - A job spec for one circumstance
   - Your product and any names you have (optional)
@@ -29,6 +33,29 @@ how_to_use:
   - Paste the job spec and any names you already like.
   - Show the top names to three strangers. Ask what each is for.
   - Check trademarks and domains yourself before you commit.
+output_sample:
+  input:
+    - Your job spec for one circumstance
+    - Your product and any names you already like (optional)
+    - Your plan from the Job experience mapper (optional)
+    - Names of your rivals (optional)
+  prerequisites:
+    - A job spec, for example from the Job spec writer
+  output:
+    - name: The job
+      contains: The job in eight words or fewer, in the customer's own words.
+    - name: Names
+      contains: Ten names across four routes, with a few words on what each one says about the job.
+    - name: Scores
+      contains: A table with stranger, stretch, lookalike and maker test results for each name, with the sums shown.
+    - name: Top three
+      contains: Your three best names, ranked, each with a hire-it-when line and a not-for line.
+    - name: Blur rule
+      contains: One rule for deciding when a new variant gets its own name.
+    - name: Missing
+      contains: Gaps such as the trademark and domain check, which you must do yourself.
+    - name: Checks missed
+      contains: One line for each self-check the AI could not pass, or none.
 how_it_works:
   - title: Writes the job
     text: Eight words or fewer in the customer's words.

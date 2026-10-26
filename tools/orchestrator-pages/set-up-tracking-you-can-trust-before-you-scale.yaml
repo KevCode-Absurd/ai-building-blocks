@@ -1,6 +1,6 @@
 new_slug: set-up-tracking-you-can-trust-before-you-scale
 name: "Set up tracking you can trust before scaling"
-summary: Give it your GA4, Meta and campaign setup. Get fix lists, tagged links and a truer ROAS.
+summary: Set up tracking you can trust before you scale ad spend. Check GA4 and Meta, tag every link, then compare platform ROAS with your store.
 job: track-numbers
 thinking: high
 thinking_why: It runs four skills in a row, and each fix list depends on the one before. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to raise ad spend and the numbers in GA4, Meta and Shopify do not agree.
   - Meta reports more sales than your store shows, or the same sale appears twice.
   - You launch on several channels and cannot tell which one sold.
+not_for:
+  - "Your store has no ad spend yet: wait until you run ads, then use this workflow."
+  - "Only GA4 is the problem: use the GA4 store setup checker on its own."
+  - "Your sales dropped and you need to know why: use the Ad sales drop analyst."
 you_give:
   - How GA4 is installed (Shopify Google channel, an app, Tag Manager or custom code) and which domains customers pass through
   - Your GA4 settings and the events you can see in its live view
@@ -32,6 +36,27 @@ how_to_use:
   - Fix the GA4 gaps, place a test order and check it appears in GA4 the next day.
   - Apply the Meta route and check in Events Manager that one test purchase shows once. Then use the tagged links and run the campaigns for two weeks.
   - Pull platform ROAS and store totals for the same dates and bring them back.
+output_sample:
+  input:
+    - How GA4 is installed and which domains customers pass through
+    - Your GA4 settings and the events in its live view
+    - How Meta events are sent now, and who can build changes
+    - Your campaign names, dates, channels and landing pages
+    - Platform ROAS and store totals for the same dates, after two weeks
+  prerequisites:
+    - An AI that can read the handoff folder files, such as Claude Code or a Claude Project
+    - Two weeks of tagged campaigns before the last step
+  output:
+    - name: GA4 check
+      contains: A score out of 100, each setting marked pass or fail, and the click path to fix it.
+    - name: Meta tracking check
+      contains: A score out of 100, the server route that fits you, setup steps, and duplicate and consent checks.
+    - name: Link sheet
+      contains: Naming rules, one tagged link per channel and page, and the rules that match orders to a campaign.
+    - name: Return check
+      contains: Each platform's return next to your store totals, the traps found, and a trust score out of 100.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check GA4
     text: Checks the day-one settings, the store events and the thank-you page key event, and gives the click path for each fix. Menu names change, so confirm each on screen.

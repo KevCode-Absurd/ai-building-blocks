@@ -2,35 +2,60 @@ thinking: medium
 thinking_why: It turns a long paper into a short talk.
 new_slug: conference-talk-slide-maker
 name: Conference talk slide maker
-summary: Give it your finished paper. Get talk slides, speaker notes and a
-  script for a conference talk.
+summary: Turn your finished paper into conference talk slides. Get a Beamer PDF, an editable PowerPoint deck, speaker notes and a script.
 job: research-topics
 headline: Conference talk slide maker
-subhead: Give it your finished paper. Get talk slides, speaker notes and a
-  script for a conference talk. Bring your compiled research paper. Use the
-  result to plan your next step.
+subhead: Give your AI your finished paper and the length of your talk. It plans the slides, then writes them with speaker notes and an optional script. You get a PDF deck and an editable PowerPoint deck.
 explain: |
   Talk slides, speaker notes and a script made from your finished research paper, so you do not rebuild the story from scratch before a conference. You pick the talk type and the slide count follows.
 
   A poster talk of three to five minutes gets five to eight slides. A spotlight gets eight to twelve. A fifteen to twenty minute oral gets fifteen to twenty-two, and an invited talk gets up to forty. Claude pulls the problem, key insight, approach, main results and takeaway from the paper. It produces a polished Beamer PDF and an editable PowerPoint file. It needs your compiled paper and a LaTeX setup for the PDF.
 when:
   - Your paper was accepted and the talk is next month.
-  - You need a five minute spotlight and a full oral from the same work.
-  - You want speaker notes you can read aloud.
-  - You need an editable deck so co-authors can change slides.
+  - You need a short spotlight and a full oral talk from the same work.
+  - You want speaker notes with timing that you can read aloud.
+  - Co-authors need an editable deck so they can change slides.
+not_for:
+  - "You still need to write the paper: use a paper writing skill or your co-authors, since this tool needs a finished paper."
+  - "You need charts or plots for your results: make them first with a plotting tool, then add them to your slides."
+  - "You have no way to run code: ask your AI for an outline and notes only, or build the slides by hand."
 you_give:
   - Your compiled research paper
   - The talk type and time slot
   - Key figures to feature (optional)
   - Conference style rules (optional)
 you_get:
-  - A Beamer PDF deck
-  - An editable PowerPoint deck
-  - Speaker notes
-  - A talk script
+  - A Beamer PDF deck of your talk
+  - An editable PowerPoint deck of the same slides
+  - Speaker notes with timing and a line to lead into each next slide
+  - A talk script you can read aloud (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and LaTeX, and read your paper.
+  - Open Claude, ChatGPT or Gemini with a mode that can run code and read files. Paste in this skill.
+  - Upload your compiled paper. Say the talk type and the time slot, such as a 15 minute oral.
+  - Add your key figures or conference style rules if you have them.
+  - Check the slide plan first. Ask for changes before it writes all the slides.
+  - Without LaTeX, expect only the PowerPoint file. The PDF needs LaTeX on your computer.
+  - Read the speaker notes aloud once to check the timing. Cut slides if you run over.
+output_sample:
+  input:
+    - Your compiled research paper (PDF or LaTeX source)
+    - The talk type and time slot
+    - Key figures to feature (optional)
+    - Conference style rules (optional)
+  prerequisites:
+    - An AI that can run code and read your paper file
+    - LaTeX installed, for the Beamer PDF only
+    - The python-pptx tool, for the PowerPoint file
+  output:
+    - name: Slide plan
+      contains: The slide list for your talk type, with the paper sections mapped to slide groups and time per group.
+    - name: slides.tex and Beamer PDF
+      contains: Polished slides with your title, problem, key insight, approach, results and takeaway, plus a notes entry on each slide.
+    - name: talk.pptx
+      contains: An editable PowerPoint version of the same slides, with speaker notes, so co-authors can change anything.
+    - name: Speaker notes
+      contains: "For each slide: the timing, the key point to say, and a line that leads into the next slide."
+    - name: Talk script
+      contains: An optional full script you can read aloud, built from the speaker notes.
+    - name: Final checklist
+      contains: A check of slide count, title details, figure readability, font size and the thank-you slide with a paper link.

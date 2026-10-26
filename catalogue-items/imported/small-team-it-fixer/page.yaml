@@ -2,35 +2,108 @@ thinking: low
 thinking_why: It follows set fix steps.
 new_slug: small-team-it-fixer
 name: Small team IT fixer
-summary: Name the IT problem, like a lockout or Wi-Fi drop. Get steps to fix it,
-  ranked by how many people it hits.
+summary: Fix small team IT problems such as lockouts, Wi-Fi drops and new hire setup. You get ranked, step-by-step fixes with safety checks.
 job: organise-work
 headline: Small team IT fixer
-subhead: Fast fixes for the IT problems that land on you when nobody on the team
-  has IT in their title. You name the problem, like a locked-out user, a Wi-Fi
-  drop or a laptop that will not start, and get steps ordered by how many people
-  it hits.
+subhead: "Fast fixes for the IT problems that land on you when nobody on the team has IT in their title. Tell it the problem, how many people it hits and your systems. You get steps ordered by impact, the commands to run and a check to confirm it worked."
 explain: |
-  Fast fixes for the IT problems that land on you when nobody on the team has IT in their title. You name the problem, like a locked-out user, a Wi-Fi drop or a laptop that will not start, and get steps ordered by how many people it hits.
+  When nobody has IT in their title, the person who knows a bit ends up fixing a locked Google account at midnight, or Wi-Fi that drops before a client demo. This skill gives that person a ranked plan, not a wall of commands.
 
-  The skill triages first. It asks how many people are affected and whether revenue is at risk, then ranks company-wide outages above single laptops. Runbooks cover sign-in lockouts in Google Workspace, with commands for resetting passwords, unsuspending users and issuing backup codes, plus network, device and onboarding trouble. Some steps need admin access, so check the commands before running them on live accounts.
+  It starts by asking how many people are affected and whether money is at risk. A company-wide outage comes before one person's laptop. Then it walks through the fix, safest step first, with the command for each step and what it changes.
+
+  Many commands act on live accounts with admin power. The skill asks you to confirm the target, take a backup and get approval before it resets, deletes or lowers security. It uses random passwords, never fixed ones. Some steps need paid or admin accounts, such as Google Workspace admin or Okta.
 when:
   - Someone is locked out of their work account at midnight.
   - The office Wi-Fi keeps dropping before a client demo.
   - A new hire starts Monday and has no accounts.
-  - You are the accidental IT person and need a plan.
+  - A laptop is full, slow or will not start, and the person is waiting.
+  - A teammate leaves today and you must cut their access quickly.
+not_for:
+  - "Your site or app is down for customers: use the Outage incident leader."
+  - "You think there was a break-in or a data leak: use the Security incident triager first."
+  - "You want a lasting help desk process for your team: use the IT Service Manager agent."
+  - "You want to write a runbook for later: use the Incident runbook writer."
 you_give:
-  - A description of the problem
-  - How many people are affected
-  - Your tools, like Google Workspace
-  - Admin access when needed (optional)
+  - A description of the problem, with the exact error if you have it
+  - How many people are affected, and whether money or customers are hit
+  - Your systems, such as Google Workspace, Microsoft 365, Mac or Windows
+  - Whether you have admin rights (optional)
 you_get:
-  - Problems ranked by impact
-  - Step by step fixes
-  - Commands for common admin tasks
-  - A note on what to check before you run them
+  - Your problem ranked by how many people it affects
+  - Step by step fixes, safest first
+  - The commands for each step, with what each one changes
+  - A check to confirm it worked
+  - A one-line note for your incident log
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. A plain chat can write the steps. You run any command yourself.
+  - Paste the skill text. Then describe the problem, who is hit and which systems you use.
+  - Read each step and its command before you run it. Do not run anything you do not understand.
+  - Before a reset, delete or security change, confirm the target, take a backup and get the owner's yes.
+  - Keep real passwords, tokens and keys out of the chat. Use your password manager.
+  - Write the incident log line. For a break-in, switch to the Security incident triager.
+how_it_works:
+  - title: Ask the two questions
+    text: Asks how many people are affected and whether revenue is at risk.
+  - title: Rank the problem
+    text: Puts company-wide outages first, then boss or customer blockers, then team slowdowns, then single laptops.
+  - title: Pick the runbook
+    text: Chooses from sign-in lockouts, network, laptop, email, new hire, leaver, video calls, printers and basic security.
+  - title: Give safe steps
+    text: Starts with the lightest fix and shows each command with what it changes.
+  - title: Gate the risky ones
+    text: Asks you to confirm the target, back up and get approval before a reset, delete or security change.
+  - title: Check and log
+    text: Gives a check that it worked and one line for your log.
+output_shape: |
+  IMPACT AND PRIORITY
+  <people affected, money at risk, rank 1-4>
+
+  MOST LIKELY CAUSE
+  <cause, marked as a guess if unsure>
+
+  STEPS
+  1. <step> - <command> - <what it changes>
+
+  CHECK IT WORKED
+  <one check>
+
+  LOG
+  <who, what, when, what you changed>
+
+  IF IT FAILS
+  <next step or who to call>
+output_sample:
+  input:
+    - What is wrong, with the exact error
+    - How many people are affected
+    - Your systems, such as Google Workspace or Windows
+    - Admin access (optional)
+  prerequisites:
+    - Admin rights for steps that change accounts, such as Google Workspace admin
+  output:
+    - name: Impact and priority
+      contains: How many people are hit and where the problem ranks against other issues.
+    - name: Steps to fix
+      contains: Numbered steps, safest first, each with its command and what it changes.
+    - name: Safety checks
+      contains: What to confirm, back up and get approved before any risky step.
+    - name: Check it worked
+      contains: One simple test that shows the fix held.
+    - name: Log line
+      contains: A line for your incident notes with who, what, when and what changed.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It writes steps and commands from your description. You run them.
+    - name: Your admin console, such as Google Admin or Microsoft 365 admin
+      why: Many fixes work from there without any command, and some need a paid plan.
+  inputs:
+    - The exact error text or a screenshot description
+    - A list of the systems your team uses
+terms:
+  - term: Admin rights
+    meaning: Permission to change other people's accounts and settings.
+  - term: Two-step sign-in
+    meaning: A second check at login, such as a code, on top of a password.
+  - term: Runbook
+    meaning: A set of steps for fixing one kind of problem.

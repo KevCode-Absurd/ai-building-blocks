@@ -1,6 +1,6 @@
 new_slug: make-matching-photos-for-a-product-sheet-and-check-them
 name: Make matching photos for a product sheet and check them
-summary: Give it a product sheet. Get matching photos, a faults report and a marketplace rules check.
+summary: Make matching product photos from your product sheet, then check each one for AI faults and marketplace rules before you list them.
 job: product-photos
 thinking: medium
 thinking_why: The checks are one picture at a time. A mid-level model is enough.
@@ -16,6 +16,10 @@ when:
   - You have a long product list and no photos for most of it.
   - You want one consistent look across the whole shop.
   - You list on a marketplace that rejects photos for small faults.
+not_for:
+  - "You only have a few products: take real photos with a phone or hire a photographer, since real photos build more trust."
+  - "You already have photos and only need to know if a shop will accept them: use the Marketplace photo rule checker on its own."
+  - "You want to judge photos that you made in another tool: use the AI product photo inspector on its own."
 you_give:
   - A sheet of products with names, descriptions and a reference photo for each
   - The look you want in one sentence
@@ -32,6 +36,25 @@ how_to_use:
   - Attach your product sheet and a reference photo for each product. Set your cost limit.
   - Approve the test batch before the full run. Ask for changes to the look at this point, not later.
   - Redo any flagged photo with the fix lines, then save the final set for the rules check.
+output_sample:
+  input:
+    - Your product sheet with names, descriptions and a reference photo for each product
+    - The look you want, in one sentence
+    - A spending limit for the batch
+    - Your brand brain (optional)
+    - The marketplace you list on (optional)
+  prerequisites:
+    - An AI that can draw pictures, such as ChatGPT or Gemini, and it may need a paid account
+    - An AI that can read files, so it can open the handoff pack
+  output:
+    - name: step-01-product-photo-batch-maker.md
+      contains: One matching photo per row of your sheet, a contact sheet to pick from, and the cost used against your limit.
+    - name: step-02-ai-product-photo-inspector.md
+      contains: A risk rating for each photo, eight checks, and a call of use, retry or retouch with fix lines.
+    - name: step-03-marketplace-photo-rule-checker.md
+      contains: A pass or reject for each marketplace rule on your final photos, with a fix for every reject.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Make the batch
     text: Reads your sheet, keeps one look word for word the same, changes only the product line for each row, runs a small test first and builds a contact sheet.

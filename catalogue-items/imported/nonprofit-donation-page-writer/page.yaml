@@ -1,12 +1,19 @@
 new_slug: nonprofit-donation-page-writer
 name: Write a nonprofit donation page
-summary: Write a clear giving page. Use real gift patterns, checked impact claims and clear choices for repeat gifts.
+summary: Write a nonprofit donation page that gets more gifts. Give it your page and gift data. You get a leak check, ask amounts and thank-you copy.
 job: write-landing-page
 headline: Write a nonprofit donation page
 subhead: Bring your page, gift history and checked cost facts. Find form friction and draft the ask, payment choices and thank-you screen.
 explain: Bring your page, gift history and checked cost facts. Find form friction and draft the ask, payment choices and thank-you screen.
 when:
-  - You want to write a nonprofit donation page.
+  - Your donate page gets visits but few finished gifts.
+  - You need new suggested gift amounts that match what donors really give.
+  - You want impact lines next to each amount that your team can stand behind.
+  - Your thank-you page says only thanks and does nothing more.
+not_for:
+  - "You want the email or letter that sends people to the page: write that appeal with a nonprofit annual appeal skill, or ask your fundraising lead."
+  - "You need a page for a walk, run or ride participant: use your peer-to-peer fundraising platform's own page tools."
+  - "You need to pick or fix a payment platform: talk to your platform's support or a developer, since this only changes copy and form layout."
 you_give:
   - Current page or form, traffic source and available funnel data
   - Recent gift patterns and finance-approved impact translations
@@ -14,9 +21,33 @@ you_get:
   - Headline, ask amounts, field and trust-signal recommendations
   - Confirmation copy that states amount and payment schedule
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your donation page text or link, plus your page views, form starts and completed gifts if you have them.
+  - Add your recent gift amounts and the impact figures your finance team has approved.
+  - Ask your AI to audit the page first, then write the new headline, amounts and thank-you copy.
+  - Check every impact line with your program and finance team before you publish.
+  - Change one thing at a time and watch the results.
+output_sample:
+  input:
+    - Your donation page link or form text
+    - Your recent gift amounts, by traffic source if you have it (optional)
+    - Page views, form starts and completed gifts (optional)
+    - Impact figures your finance or program team has approved
+  output:
+    - name: Audit report
+      contains: Where visitors drop off, from page view to completed gift, and a fix for each leak.
+    - name: Headline
+      contains: A headline that states the impact of giving, fitted to your current campaign.
+    - name: Ask amounts
+      contains: Three to five suggested gift amounts based on your real gift data, with one higher amount.
+    - name: Impact line per amount
+      contains: One plain line for each amount saying what it funds, marked for finance review.
+    - name: Form and trust recommendations
+      contains: Which fields to cut, how to show monthly giving, and where trust signals go.
+    - name: Thank-you page copy
+      contains: Confirmation text with the gift amount, any monthly schedule, receipt note and one next step.
+    - name: Test plan
+      contains: One change to test at a time, so you can see what worked.
 how_it_works:
   - title: Find the leak
     text: Separate page views, form starts and completed gifts; flag unobserved mobile or payment behavior.

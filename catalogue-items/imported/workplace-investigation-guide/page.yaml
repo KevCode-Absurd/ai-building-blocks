@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It keeps track of evidence and gaps over many steps.
 new_slug: workplace-investigation-guide
 name: Workplace investigation guide
-summary: Describe a workplace complaint. Get a plan, evidence log and draft
-  memo. Not legal advice.
+summary: Run a workplace investigation from complaint to findings memo. Get a plan, an evidence log and a draft memo. Not legal advice.
 job: hire-people
 headline: Workplace investigation guide
-subhead: A structured path through a workplace complaint, from the first intake
-  to a draft memo. You keep a clean evidence log and a record of which sources
-  you have covered.
+subhead: A structured path through a workplace complaint, from the first intake to a draft memo. You keep a clean evidence log and a record of which sources you have covered.
 explain: |
   A structured path through a workplace complaint, from the first intake to a draft memo. You keep a clean evidence log and a record of which sources you have covered. Not legal advice.
 
@@ -18,11 +15,15 @@ when:
   - You are collecting documents and need a clear log.
   - You want to check what evidence you still lack.
   - You must write a findings memo for leadership.
+not_for:
+  - "The matter is not directed by a lawyer: ask your employment counsel first, because marking a file does not create privilege."
+  - "The complaint alleges a crime: call outside employment counsel or the police before you collect anything."
+  - "You only need to hire or onboard someone: use a plain hiring checklist or ask your HR adviser."
 you_give:
-  - Description of the complaint
-  - Documents and interview notes
-  - People and sources to cover
-  - Confirmation of who directs the investigation
+  - A plain description of the complaint
+  - Documents and interview notes, added one at a time
+  - The people and sources you plan to check
+  - Whether a lawyer directs the investigation
 you_get:
   - Investigation plan
   - Evidence log
@@ -30,10 +31,31 @@ you_get:
   - Answers from the log
   - Draft memo and audience summaries
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /employment-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - This skill is built for a plugin that can save files. Use an AI that can create and keep files, and put the skill folder in it.
+  - Confirm first that a lawyer directs the investigation. Marking a file does not create privilege.
+  - "Open the matter: describe the complaint, who is involved and the dates. Your AI sets up the log and a sources checklist."
+  - Add each document or interview note one at a time. Check each log entry and the list of gaps before you add the next.
+  - Ask questions of the log, then ask for the draft memo. Have your lawyer review it before anyone else sees it.
+  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it.
+output_sample:
+  input:
+    - A plain description of the complaint
+    - Documents and interview notes, added one at a time
+    - The people and sources you plan to check
+    - Whether a lawyer directs the investigation
+  prerequisites:
+    - An AI that can create and save files, as the skill keeps a log on disk
+    - Confirmation from counsel that the investigation is lawyer-directed
+  output:
+    - name: log.yaml
+      contains: The matter details, the issues drawn from the complaint, each log entry and the evidence gaps still open.
+    - name: sources-checklist.yaml
+      contains: The people and sources to check for this type of investigation, with a mark for what is covered.
+    - name: documents-reviewed.yaml
+      contains: Each document reviewed, how many were reviewed and how many held key facts.
+    - name: Answers from the log
+      contains: Replies to your questions, drawn only from what the log holds.
+    - name: Investigation memo
+      contains: Executive summary, background, methodology, factual findings, credibility, policies, conclusions, recommendations and two appendices.
+    - name: Audience summary
+      contains: A short version of the memo written for one reader, such as leadership.

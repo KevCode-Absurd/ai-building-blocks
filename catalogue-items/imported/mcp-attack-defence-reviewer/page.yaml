@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It must think like an attacker and tell real risks from noise.
 new_slug: mcp-attack-defence-reviewer
 name: MCP attack defence reviewer
-summary: Point it at an MCP server. Get a ranked list of attack risks, each with a fix.
+summary: Check your MCP server for attack risks. Get a ranked list of problems an attacker could use, with a fix for each one.
 job: secure-code
 headline: MCP attack defence reviewer
-subhead: A ranked list of the ways someone could attack your MCP server, with a
-  fix for each. Point it at the server and see where an attacker or a confused
-  AI could do damage.
+subhead: A ranked list of the ways someone could attack your MCP server, with a fix for each. Point it at the server and see where an attacker or a confused AI could do damage.
 explain: |
   A ranked list of the ways someone could attack your MCP server, with a fix for each. Point it at the server and see where an attacker or a confused AI could do damage.
 
@@ -17,6 +15,10 @@ when:
   - A tool result could contain text that tricks the AI.
   - Your server can delete or pay and you worry about retries.
   - You need a security list to show before release.
+not_for:
+  - "You need to set up sign-in, tokens or OAuth for your server: use the mcp-server-auth skill, if you have it, or ask a developer."
+  - "You are building the server for the first time: use the mcp-server-implementation skill, if you have it, then come back to check it."
+  - "You want a general scan of a web app, a container or a network: use a standard security scanner or a security tester, as this only covers MCP servers."
 you_give:
   - The MCP server code or repo
   - The tools it exposes
@@ -28,8 +30,31 @@ you_get:
   - A logging plan
   - CI checks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your code.
+  - Open your AI tool. Use one that can read your code, such as Claude or ChatGPT with file upload.
+  - Paste in this skill, then add your MCP server code and the list of tools it offers.
+  - Say what data and systems the server can reach, so the AI can judge how bad a break-in could be.
+  - Read the review and start with the risks marked most serious. Add the code guards it suggests.
+  - "Optional: if your AI can run code, run the checklist script and add it to your build checks."
+  - "Three companion skills are named in the method: mcp-server-auth, mcp-server-implementation and mcp-server-testing. If you do not have them, ask your AI to cover those parts in plain steps."
+output_sample:
+  input:
+    - Your MCP server code or repo
+    - The list of tools it offers
+    - What data and systems it can reach (optional)
+    - Any third-party MCP server you want to check (optional)
+  prerequisites:
+    - An AI that can read your code files
+    - An AI that can run code, to run the CI checklist script (optional)
+  output:
+    - name: Threat review
+      contains: Each known MCP attack type checked against your server, with a written note on whether it applies.
+    - name: Guardrails in code
+      contains: Where limits, confirmation steps and retry keys must sit in your code, not in prompts.
+    - name: Blast radius plan
+      contains: How to sandbox the server, keep secrets safe, cap usage and switch off a tool fast.
+    - name: Audit logging plan
+      contains: What to record for each tool call, where to store it, and which events should raise an alert.
+    - name: Model-facing content fixes
+      contains: How to wrap and screen outside content so hidden instructions cannot reach your AI.
+    - name: CI checklist
+      contains: A pass, fail or to-do list for pinning, secrets, description changes and guardrail tests.

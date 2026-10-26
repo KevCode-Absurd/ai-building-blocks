@@ -30,7 +30,7 @@ credits:
   - title: swiftui-expert-skill skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/swiftui-expert-skill
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Adapted under the CC BY-4.0 licence. We gave it a plain name and added a not-for list, input checks and a fixed review table. The method is unchanged.
   - title: Original author
     by: AvdLee
     url: https://github.com/AvdLee

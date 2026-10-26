@@ -1,6 +1,6 @@
 new_slug: get-your-store-ready-for-a-big-sale-day
 name: Get your store ready for a big sale day
-summary: Give it your homepage and collection page. Get heavy features and apps cut, plus a speed budget and sale-day checklist.
+summary: "Get your store ready for a big sale day: cut heavy features and apps, then set a speed budget and a sale-day checklist before traffic peaks."
 job: speed-up-store
 thinking: high
 thinking_why: It judges features and apps across three skills and sets a budget. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A sale, launch or ad push is coming and you need the store fast when traffic peaks.
   - Your homepage has a slider, a popup and autoplay video, and you do not know which earn their place.
   - You cleaned up speed once and it crept back after new apps and banners.
+not_for:
+  - "Your store has no sale or launch coming in the next few months: run a simple PageSpeed check on your key pages instead."
+  - "Your mobile report fails across the board: use a longer speed fix workflow, not this sale-day one."
+  - "You need the live store tested for you: this workflow cannot open your store, so a developer or PageSpeed must run the checks."
 you_give:
   - The homepage, a collection page and a product page, as links or screenshots
   - Your theme name and the popup and video apps you use
@@ -31,6 +35,25 @@ how_to_use:
   - Attach screenshots of your homepage, a collection page and a product page. Add your app list and the sale date.
   - At the pause, make the cuts, then run the key pages through PageSpeed and note the results.
   - Give it those results to get your speed budget and checklist.
+output_sample:
+  input:
+    - Your homepage, a collection page and a product page, as links or screenshots
+    - Your theme name and the popup and video apps you use
+    - The sale date, expected traffic, platform and plan
+    - Heatmap or click data (optional)
+    - PageSpeed results and page weights, after you make the cuts
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff folder
+    - Access to PageSpeed to test your pages after the cuts
+  output:
+    - name: Heavy feature trimmer
+      contains: A keep, change or remove verdict on each heavy feature, a lighter replacement, theme advice and a lightness score out of 100.
+    - name: App script auditor
+      contains: A keep, remove, delay or one page only verdict for each app, with blocking time and the app stack scored before and after.
+    - name: Speed budget and sale check
+      contains: Limits for page weight, mobile score and outside scripts, plus a testing routine, app freeze, pre-sale checklist and overload plan.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Trim heavy features
     text: Judges each slider, quick view, autoplay video, popup and animation keep, change or remove, suggests a lighter replacement, and scores how light the pages are.

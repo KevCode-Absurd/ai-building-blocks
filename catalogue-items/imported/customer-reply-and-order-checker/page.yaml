@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches facts to policy and writes in your tone.
 new_slug: customer-reply-and-order-checker
 name: Customer reply and order checker
-summary: Forward a customer email. Get order status checked and a reply in your
-  voice. Refunds only on your yes.
+summary: Check a customer's order and payment status, then get a reply in your voice. Refunds only go out after you say yes. Works from a pasted email.
 job: help-customers
 headline: Customer reply and order checker
-subhead: Forward a customer email and get back a reply in your own voice, with
-  the facts already checked. It pulls order and payment status, account history
-  and open tickets before it writes.
+subhead: Forward a customer email and get back a reply in your own voice, with the facts already checked. It pulls order and payment status, account history and open tickets before it writes.
 explain: |
   Forward a customer email and get back a reply in your own voice, with the facts already checked. It pulls order and payment status, account history and open tickets before it writes.
 
@@ -18,6 +15,10 @@ when:
   - Someone asks for a refund and you need to check the facts first.
   - You want a reply that sounds like you, not a template.
   - You want to spot problem orders before customers complain.
+not_for:
+  - "You face a chargeback or open payment dispute: use your payments dashboard, because the card issuer handles it."
+  - "You want a bulk reply to many customers at once: write one template yourself or ask your AI to draft a single shared message."
+  - "You have no refund or return policy written down: write a short policy first, because this skill drafts replies within it."
 you_give:
   - The customer email, forwarded or pasted
   - Your writing samples or tone notes (optional)
@@ -29,10 +30,26 @@ you_get:
   - A staged refund waiting for your approval
   - A list of orders needing attention (with Shopify)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open your AI tool and add this skill. Use a chat that can reach your files or accounts if you want live order checks.
+  - Paste or forward the customer email. Add your refund policy and a few samples of your writing.
+  - Connect PayPal, Square, Stripe, Shopify, your CRM or your support desk if you can. Without them, it works from the pasted text alone.
+  - Read the order facts first, then the drafted reply. Change anything that does not sound like you.
+  - If a refund is needed, check the details it sets out. Say yes only when they are right.
+  - Copy the reply and send it yourself. To spot problem orders early, ask it to check your Shopify orders.
+output_sample:
+  input:
+    - The customer email, forwarded or pasted
+    - Your refund and return policy
+    - Samples of your writing or tone notes (optional)
+    - Access to PayPal, Square, Stripe, Shopify, your CRM or support desk (optional)
+  prerequisites:
+    - An AI that can connect to your payments, Shopify, CRM or support desk, if you want live order checks. Pasted text alone also works.
+  output:
+    - name: Order and payment status
+      contains: What your payments tool or Shopify shows for this customer's order, plus account history and open tickets.
+    - name: Drafted reply
+      contains: A reply in your writing voice that stays within your refund and return policy, ready to copy and send.
+    - name: Staged refund
+      contains: The refund details, held until you approve. Nothing is issued before you confirm.
+    - name: Order triage board
+      contains: With Shopify connected, orders that need attention, such as late shipments or payment problems, each with a drafted next action.

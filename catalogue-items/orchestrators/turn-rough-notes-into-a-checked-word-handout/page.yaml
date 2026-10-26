@@ -1,55 +1,109 @@
 new_slug: turn-rough-notes-into-a-checked-word-handout
 name: Turn rough notes into a checked Word handout
 headline: Turn rough notes into a checked Word handout
-summary: Share the source files. Get an edited handout and a document quality review.
+summary: Turn rough notes into a clean Word handout and a PDF copy, with a page-by-page check for cut-off text and broken tables before you print or send.
 job: work-with-files
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An edited handout and a document quality review. Share source notes, the reader, intended action, required format and any approved reference document. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your notes, who the handout is for and what they should do. Your AI rewrites the notes in plain words, builds a Word file, makes a PDF copy and checks every page.
 explain: |-
-  An edited handout and a document quality review.
+  Notes make sense to you, not to the person who gets the handout. Even a good edit can break when it lands in Word: a table runs off the page, a font changes, a line gets cut. This workflow handles both. It rewrites your notes for the reader, builds the Word file, then checks the real pages.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Claims trace to the notes; rendered pages have readable tables and no clipped text. Missing tools or evidence stay visible in the final summary.
+  It runs four steps. The first organises the notes around what the reader must understand or do, and ties each claim to a note. The second builds a new .docx file and leaves your notes alone. The third converts it to a PDF. The fourth draws each PDF page as a picture and logs problems.
+
+  You get a Word file you can edit and a PDF you can read on any device. A page check your AI cannot run is marked "not run", so you know what to open and look at yourself.
 when:
-  - You need an edited handout and a document quality review.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You ran a workshop or a meeting and must send attendees a handout, not your raw notes
+  - A policy, a how-to or a checklist lives in scattered notes and needs to go out as a Word file
+  - A manager wants the handout as .docx so they can edit it, with a PDF for the printer
+  - You want proof that no page has cut-off text or a broken table before you send it
+not_for:
+  - You only need cleaner text, with no Word file. Use the Plain English editor.
+  - You want a one-page training handout from slides or notes. Use the Training handout writer.
+  - You have a slide deck and want an audience handout PDF from it. Use the PowerPoint audience handout builder.
+  - Your AI cannot install tools or run code. You will get the edited text and a plan, not a Word file.
 you_give:
-  - Source notes, the reader, intended action, required format and any approved reference document.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: Node.js with PaperJSX; LibreOffice Writer; A PDF renderer and Python PDF tools."
+  - Your rough notes, pasted or as files
+  - Who the handout is for, and what they should do after reading it
+  - The format you need, such as one page or a table of steps
+  - A past handout or style guide to match (optional)
+  - A deadline, and anything that must not change (optional)
 you_get:
-  - An edited handout and a document quality review.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - An edited handout text in plain words, with each change listed
+  - A new Word file (.docx), with your notes left unchanged
+  - A PDF review copy made from the Word file
+  - "A page-by-page check log: one line per page, each passed, failed or not run"
+  - A hand-back summary with MISSING facts and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Use an AI that can run code and save files. It needs Node.js, LibreOffice and a PDF page-to-picture tool installed.
+  - Give it the folder and say "Follow HANDOFF.md". Then share your notes and say who the handout is for.
+  - Read the edited text first. Fix any MISSING line, then let it build the Word file.
+  - Open the Word file and the check log. Look at any page marked not run, then send or print.
 how_it_works:
   - title: Plain English editor
-    text: Organize the notes around what the reader needs to understand or do.
+    text: Rewrites your notes around what the reader must understand or do, and lists every change. It hands on the edited text, with a note behind each claim.
   - title: Document file generator
-    text: Create a new Word handout using the approved content and reference style; preserve the source notes.
+    text: Builds a new Word file from the edited text in your reference style. It keeps your source notes unchanged and hands on the .docx file.
   - title: LibreOffice document builder
-    text: Use the installed converter to export the actual Word handout to a new PDF review copy. Check the conversion result without overwriting the Word source.
+    text: Converts the Word file to a PDF review copy and checks the conversion. It never overwrites the Word file.
   - title: PDF maker and reader
-    text: Render and inspect every page of the converted review PDF, checking for missing text, tables, fonts and clipping; keep the actual Word and PDF linked by source version.
+    text: Draws every page of the PDF as a picture. It checks for missing text, tables, fonts and clipping, and ties the PDF to the Word version.
 output_shape: |-
-  Scope and source coverage
-  An edited handout and a document quality review.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  EDITED TEXT
+  <the handout in plain words, ready for the Word file>
+
+  CHANGES
+  Original | New | Reason
+
+  FILES
+  <name>.docx | <name>-review.pdf
+
+  PAGE CHECKS
+  Page | Text, tables, fonts and clipping | Passed, failed or not run
+
+  HAND-BACK SUMMARY
+  Files | MISSING lines | Checks missed | One next step
+output_sample:
+  input:
+    - Your rough notes
+    - Who the handout is for and what they should do
+    - The format you need, such as one page
+    - A past handout or style guide to match (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - Node.js, to build the Word file with the PaperJSX npm package
+    - LibreOffice, to make the PDF copy
+    - A tool that draws PDF pages as pictures, such as Poppler
+  output:
+    - name: Edited text and changes
+      contains: The handout in plain words, with every change and its reason.
+    - name: Word handout (.docx)
+      contains: A new, editable Word file built from the edited text.
+    - name: PDF review copy
+      contains: A PDF made from the Word file, saved under a new name.
+    - name: Page check log
+      contains: One line per page for text, tables, fonts and clipping, each passed, failed or not run.
+    - name: Hand-back summary
+      contains: Files saved, MISSING facts, checks not done and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Make one handout per run, for one reader, with one action.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Give the real notes. Do not ask your AI to fill gaps from memory.
   - what: Acceptance
-    how: Claims trace to the notes; rendered pages have readable tables and no clipped text.
+    how: Every claim traces to your notes. Every page is checked as a picture.
+works_best_with:
+  tools:
+    - name: An AI that can run code, such as Claude Code
+      why: It builds the Word file with Node.js and the PaperJSX package. Check that package's licence and cost before you install it.
+    - name: LibreOffice
+      why: It is free. It converts the Word file to PDF.
+    - name: A PDF page-to-picture tool and Python PDF libraries
+      why: Poppler, pdfplumber and pypdf draw and read the pages so layout can be checked. Text alone cannot show a broken table.
+  inputs:
+    - A past handout you liked, to match the look.
+    - A named person to read the final pages.
 judge:
   - Claims trace to the notes; rendered pages have readable tables and no clipped text.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -65,17 +119,13 @@ improve:
   - Add your own acceptance rules and one approved example without changing the component licences.
   - Keep corrections with the result so the next run uses current facts and the same definitions.
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: Node.js with PaperJSX
-      why: The requested Word output needs its format-specific package and the bundled JSON schema.
-    - name: LibreOffice Writer
-      why: The actual Word file must be converted to a PDF review copy with an available converter.
-    - name: A PDF renderer and Python PDF tools
-      why: Render the supplied PDF and inspect actual page images; text extraction alone cannot verify layout.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+next:
+  - training-handout-writer
+  - powerpoint-audience-handout-builder
 terms:
+  - term: Review copy
+    meaning: A PDF made from the Word file so you can check the pages without editing the Word file.
+  - term: Clipping
+    meaning: Text or a table cut off at the edge of the page.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

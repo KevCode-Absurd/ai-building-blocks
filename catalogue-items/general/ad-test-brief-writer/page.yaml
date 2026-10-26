@@ -1,6 +1,6 @@
 new_slug: ad-test-brief-writer
 name: Ad test brief writer
-summary: Share brand facts and any ad results. Get three ideas, nine distinct designer briefs and questions to fill key gaps.
+summary: Plan your next round of ad tests. Give it brand facts and any ad results. You get three ideas and nine different versions a designer can make.
 job: plan-ad-tests
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a month of ad results and need the next round planned, not guessed.
   - Your test ads keep looking alike and one of them takes all the spend.
   - You hand ads to a designer or freelancer and want them made without a round of questions.
+not_for:
+  - "You only need the words for one ad: use the Fact-based ad copy writer, which takes your brief and writes the copy."
+  - "You want to know which live ads to switch off: look at your Meta Ads Manager results yourself, because this skill does not judge live ads."
+  - "You have no brand facts at all: build a brand brain first with the Website brand brain builder, then come back."
 you_give:
   - Your brand file (facts, offers, claims you may make, buyers, voice, competitors)
   - Your ad results per ad for the last 1 to 4 weeks, or what the founder has seen (optional)
@@ -33,6 +37,26 @@ how_to_use:
   - Paste your reviews and your last brief if you have them.
   - Read the header first. If it says "Not proven", treat every idea as a test, not a sure thing.
   - Answer the founder questions in the footer, then run it again for a tighter brief.
+output_sample:
+  input:
+    - "Your brand facts: offers, products, buyers, claims you may make, voice"
+    - Your ad results per ad for the last 1 to 4 weeks (optional)
+    - Your target return or cost per sale (optional)
+    - Customer reviews or quotes (optional)
+    - Your last brief, so no idea repeats (optional)
+  prerequisites:
+    - Your brand facts, or a brand brain from the Website brand brain builder
+  output:
+    - name: Header
+      contains: The evidence grade, the plan chosen (explore, extend or refresh) with the reason, and a three-line diagnosis.
+    - name: Ideas 1 to 3
+      contains: "Each idea has a thinking block: stage, buyer doubt in their words, the answer, the moment, evidence and five-link check."
+    - name: Versions A, B and C
+      contains: Three different ads per idea, each with what changes, layout, headline, support line, customer quote and what is seen.
+    - name: Footer
+      contains: Lines it rewrote, every field it guessed, and one question for the founder per gap.
+    - name: Checks missed
+      contains: One line for each check the brief still fails, or the word none.
 how_it_works:
   - title: Grades the evidence
     text: Tested, measured, reported, observed or inferred. The grade caps what the brief may claim.

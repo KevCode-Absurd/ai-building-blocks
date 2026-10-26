@@ -1,52 +1,96 @@
 new_slug: find-duplicate-and-unused-business-subscriptions
 name: Find duplicate and unused business subscriptions
 headline: Find duplicate and unused business subscriptions
-summary: Share the source files. Get a subscription register, savings scenarios and a renewal action list.
+summary: Find software subscriptions you pay for twice or no longer use. You get a register, savings scenarios and a dated list of renewal actions.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A subscription register, savings scenarios and a renewal action list. Share a software bill export, owners, usage evidence, renewal dates and current contracts. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it a bill export that shows your software charges, and anything you know about who uses each tool and when it renews. It finds overlaps and tools with little use, then checks notice periods before it counts any saving. You get a subscription register, savings scenarios and dates to act by.
 explain: |-
-  A subscription register, savings scenarios and a renewal action list.
+  Software bills grow quietly. Two teams buy the same tool. A free trial turns into a paid plan. A seat stays on after the person leaves. This workflow finds duplicate and unused business subscriptions from your bills and what you know about usage.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Cancellation savings respect notice periods and overlap; missing usage is not proof a tool is unused. Missing tools or evidence stay visible in the final summary.
+  It is careful about two traps. No usage data is not proof a tool is unused, so those tools are marked unknown and not unused. And a saving only starts after the notice period ends, so it counts from the first date you can really stop paying.
+
+  For each tool you might cancel or merge, it compares keeping, merging and replacing, with the effort to move and the cost each year. It does not cancel or change anything. You act, using the dates it gives you.
 when:
-  - You need a subscription register, savings scenarios and a renewal action list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your software spend keeps rising and no one can explain it.
+  - A renewal notice just arrived and you wonder if you still need the tool.
+  - Two teams use different tools for the same job, such as two project boards.
+  - Someone left and you want to see which seats and plans they were using.
+not_for:
+  - You want a tool cancelled or changed. This plans only. You or the owner of the account cancels.
+  - You need legal review of a contract. Ask a lawyer. The Software subscription terms checker explains terms in plain words.
+  - You sell subscriptions to customers. Use the Subscription revenue tracker or the Subscription churn audit.
+  - You are weighing one tool only. Use the Spend savings finder.
 you_give:
-  - A software bill export, owners, usage evidence, renewal dates and current contracts.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - A bill export from your card, bank or accounting tool that shows software charges
+  - The currency and the period the export covers
+  - Who owns or uses each tool (optional)
+  - Usage evidence, such as last login dates or seats in use (optional)
+  - Renewal dates, notice periods or the contracts (optional)
 you_get:
-  - A subscription register, savings scenarios and a renewal action list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A subscription register: each tool, its cost, owner, renewal date and status"
+  - Savings scenarios that count only from the date a notice period ends
+  - Keep, merge or replace choices for the tools worth a second look
+  - "A dated action list: what to decide, by when, and who owns it"
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the bill export. Add usage notes and contracts if you have them.
+  - Read the register first. Fix any tool the AI marked duplicate that is really different, and any marked unknown that you know is used.
+  - Act on the dated list yourself. Cancel or change a plan in the tool's own account, before the date shown.
 how_it_works:
   - title: Spend savings finder
-    text: Identify duplicate spend and possible unused services using the supplied usage evidence.
+    text: Reads the bill export. Groups the charges by tool, finds duplicates and marks possible unused tools using only the usage evidence you gave. Hands the register to the next step.
   - title: Vendor agreement status checker
-    text: Check contract terms and create dated renewal decisions for the supported candidates.
+    text: Checks renewal and notice terms for each tool on the shortlist. Works out the last day to give notice. Flags any contract it cannot see. Hands dated decisions to the last step.
   - title: Vendor comparison writer
-    text: Compare keep, consolidate and replace options with migration effort and recurring cost.
+    text: Compares keep, merge and replace for each tool, with the effort to move and the yearly cost. Uses prices only from your bills or quotes.
 output_shape: |-
-  Scope and source coverage
-  A subscription register, savings scenarios and a renewal action list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SUBSCRIPTION REGISTER
+    Tool | <Owner> | <Cost per month or year> | <Currency> | <Renewal date> | <Notice needed> | <Usage evidence> | <Overlaps with> | <Status>
+
+  SAVINGS SCENARIOS
+    Scenario | <Tools affected> | <Yearly saving> | <Saving starts on> | <Risk>
+
+  OPTIONS FOR EACH SHORTLISTED TOOL
+    Tool | <Keep, merge or replace> | <Effort to move> | <Yearly cost>
+
+  RENEWAL ACTIONS
+    Tool | <Decide by> | <Action> | <Owner>
+
+  MISSING
+  CHECKS MISSED
+  HAND-BACK SUMMARY
+output_sample:
+  input:
+    - A bill export that shows your software charges
+    - The currency and the period it covers
+    - Owners and usage evidence for each tool (optional)
+    - Renewal dates, notice periods or contracts (optional)
+  prerequisites:
+    - An AI that can open spreadsheet, CSV or PDF files
+  output:
+    - name: Subscription register
+      contains: Each tool with its cost, owner, renewal date, notice period and a status such as duplicate or unknown.
+    - name: Savings scenarios
+      contains: What you save and from which date, counted after any notice period ends.
+    - name: Keep, merge or replace options
+      contains: For each shortlisted tool, the choices with the effort to move and the yearly cost.
+    - name: Renewal actions
+      contains: A dated list of what to decide, by when, and who owns it.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks missed and one next step.
 tweaks:
+  - what: Period
+    how: Export at least 12 months, so yearly plans and renewals show up as well as monthly ones.
+  - what: Usage
+    how: Add last login dates or seats in use for each tool. Without them, a tool is marked unknown, not unused.
+  - what: Contracts
+    how: Attach the contract or the renewal email for tools worth over a set amount, so the notice date is real.
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Cancellation savings respect notice periods and overlap; missing usage is not proof a tool is unused.
+    how: Start with one team's tools or the top 10 charges. A long list is harder to check.
 judge:
   - Cancellation savings respect notice periods and overlap; missing usage is not proof a tool is unused.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +103,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the register and run the workflow again each quarter, then compare what changed.
+  - Add an owner to every tool, so each renewal has someone who decides.
+  - Finish any check that needs a person or a spreadsheet tool before you cancel anything.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that opens spreadsheet and PDF files
+      why: It needs to read your bill export and any contracts. It cannot see inside your tools, so usage notes must come from you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Usage reports from the tools themselves.
+    - Renewal emails or contracts for the largest charges.
 terms:
+  - term: Notice period
+    meaning: How many days before renewal you must tell the vendor you are leaving.
+  - term: Auto-renew
+    meaning: A plan that renews on its own unless you cancel in time.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

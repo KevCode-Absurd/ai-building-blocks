@@ -1,6 +1,6 @@
 new_slug: hostile-room-speech-planner
 name: "Hostile-room speech planner"
-summary: "Say who is in the room and what they believe. Get a speech that agrees first, then turns them step by step."
+summary: "Plan a speech for a room that disagrees with you. Say who they are and what they believe. You get a speech that agrees first, then turns them."
 job: speak-and-persuade
 thinking: high
 thinking_why: "It has to model an audience that disagrees and order the evidence so each step is earned."
@@ -17,6 +17,10 @@ when:
   - "You must present a plan to people who have already said they oppose it."
   - "A decision has upset a group and you must speak to them next week."
   - "You are asking a client, board or crowd to change course on something they care about."
+not_for:
+  - "You only need to share bad news plainly: use the Bad news update writer."
+  - "You want to polish a speech you already wrote: ask a friend to read it aloud, or use the Plain English editor."
+  - "The room will not hear any evidence: speak to one or two key people first, one to one."
 
 you_give:
   - "Who is in the room and what they believe"
@@ -36,6 +40,26 @@ how_to_use:
   - "Say what you want them to do after the speech."
   - "Paste your facts with their sources. Leave nothing out that you could not defend."
   - "Practise the speech aloud and fix each line that sounds written."
+output_sample:
+  input:
+    - Who is in the room and what they believe
+    - What you want them to do
+    - The facts you can back, with sources
+    - Quotes or past votes from the room (optional)
+    - The setting and time you have (optional)
+  output:
+    - name: The room believes
+      contains: Their view, written fairly in words they would accept.
+    - name: We agree on
+      contains: Two or three points you can honestly agree with.
+    - name: Speech
+      contains: Opening, turn, held-back fact, evidence, object and close, in speaking order.
+    - name: Changed for the ear
+      contains: Lines rewritten to sound spoken, with a note on why.
+    - name: Missing
+      contains: Gaps where you gave no fact or source, marked and not invented.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: "States their view"

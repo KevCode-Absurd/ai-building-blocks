@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It measures first and then applies known fixes.
 new_slug: website-speed-tuner
 name: Website speed tuner
-summary: Point it at a slow site. Get Core Web Vitals, bundle size and caching
-  problems fixed.
+summary: Find why your website is slow and fix it in order. Get a speed check, a ranked list of causes and fixes for images, scripts and caching.
 job: build-websites
 headline: Website speed tuner
-subhead: A slow site fixed in the order that moves the numbers most. You get a
-  clear read on your Core Web Vitals, a list of what is dragging them down and
-  the changes to make.
+subhead: A slow site fixed in the order that moves the numbers most. You get a clear read on your Core Web Vitals, a list of what is dragging them down and the changes to make.
 explain: |
   A slow site fixed in the order that moves the numbers most. You get a clear read on your Core Web Vitals, a list of what is dragging them down and the changes to make.
 
@@ -18,6 +15,10 @@ when:
   - Google flags your Core Web Vitals as poor.
   - Your JavaScript bundle keeps growing and you do not know why.
   - You are preparing for a performance audit and need a to-do list.
+not_for:
+  - Your site is a small static page and nobody has said it feels slow. Leave it as it is.
+  - Your server is slow to answer before the page even starts to load. Change your hosting or CDN settings first, or ask your host.
+  - You need a full audit signed off by an expert. Hire a web performance specialist and use this only for the to-do list.
 you_give:
   - Your site address or code
   - Current speed scores (optional)
@@ -30,8 +31,31 @@ you_get:
   - Target numbers for each fix
   - Re-test plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add your site address, or paste your code. Add your hosting, your framework and the pages that matter most.
+  - Paste your current speed scores if you have them (optional). If your AI cannot run code or open a browser, these give it numbers to start from.
+  - Read the ranked causes first. Ask your AI to explain any fix you do not follow.
+  - Make the changes one at a time, starting with the biggest cause.
+  - Test again and compare with the target numbers. Treat the example numbers in the skill as illustrations, not promises.
+output_sample:
+  input:
+    - Your site address or your site code
+    - Your current speed scores (optional)
+    - Your hosting and framework
+    - The pages that matter most
+  prerequisites:
+    - An AI that can run code and open a browser gives the best results, because it can measure your pages itself
+    - Without code running, paste in your own speed scores and code so your AI has numbers to work from
+  output:
+    - name: Performance Audit Results
+      contains: Your starting numbers for load speed, response to taps and clicks, and layout jumps, plus a Lighthouse score.
+    - name: Issues Identified
+      contains: The main causes of the slow numbers, such as a large hero image, a heavy script bundle or images without sizes.
+    - name: Optimization Plan
+      contains: Fixes for each cause, with before and after code, such as better image formats, code splitting and deferred scripts.
+    - name: Bundle Size Optimization
+      contains: Which packages add weight to your scripts and what to replace, load later or remove.
+    - name: Image Optimization
+      contains: How to convert, resize and lazy load images, and which image to load first.
+    - name: Results After Optimization
+      contains: Target numbers for each fix, so you can re-test and see if it worked. The examples in the skill are illustrative, not measured.

@@ -13,9 +13,9 @@ outputs:
   - {type: audit_report}
 uses: [ga4-store-setup-checker, meta-server-tracking-checker, campaign-link-tracker, platform-roas-reality-check]
 steps:
-  - {uses: ga4-store-setup-checker, note: "Starts with the base layer: what GA4 is missing before anything else is measured."}
-  - {uses: meta-server-tracking-checker, note: "Fresh start after the GA4 fix: gets Meta counting each sale once."}
-  - {uses: campaign-link-tracker, note: "With both sets of events working, tags every link so orders can be matched to a campaign."}
+  - {uses: ga4-store-setup-checker, note: "Starts with the base layer: what GA4 is missing before anything else is measured. Hands the GA4 report to step 2."}
+  - {uses: meta-server-tracking-checker, note: "Uses the GA4 report to compare counts, and gets Meta counting each sale once. Hands the Meta report to step 3."}
+  - {uses: campaign-link-tracker, note: "With both sets of events working, tags every link so orders can be matched to a campaign. Hands the tagged-link sheet to step 4."}
   - {uses: platform-roas-reality-check, note: "Reads the tagged-link sheet from the step before to compare what platforms claim with what the store counts."}
 origin: rebuilt
 version: 1.0.0

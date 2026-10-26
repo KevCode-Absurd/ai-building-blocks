@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It builds the right query, then records where the answer came from.
 new_slug: public-database-fact-finder
 name: Public database fact finder
-summary: Name the fact you need and the database. Get it retrieved the same way
-  every time, with source and date.
+summary: Look up a fact in a public database and get it back with source, query and date, so anyone can repeat the same public database lookup.
 job: research-topics
 headline: Public database fact finder
-subhead: A fact pulled from a named public database, with the source, query and
-  date attached. Anyone can repeat the lookup and get the same answer.
+subhead: A fact pulled from a named public database, with the source, query and date attached. Anyone can repeat the lookup and get the same answer.
 explain: |
   A fact pulled from a named public database, with the source, query and date attached. Anyone can repeat the lookup and get the same answer.
 
@@ -17,6 +15,10 @@ when:
   - A report needs a figure with a citation you can show.
   - You must pull every record matching a filter, not just the first page.
   - A colleague needs to repeat your search next month.
+not_for:
+  - "You want a general knowledge answer with no citation: ask your AI directly, or check a reference book."
+  - "You need a full bulk download of a database: use the official bulk dump from the database's own site."
+  - "You need a fact from a private or paid source you cannot access: ask the owner for an export, then work from that file."
 you_give:
   - The fact or records you need
   - The database, if you have a preferred one
@@ -28,8 +30,24 @@ you_get:
   - Record count check
   - A log someone else can rerun
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach public web data services.
+  - Open your AI tool and paste in the skill, or upload the skill folder if your tool takes files.
+  - Tell it the fact you need, the database if you have one, and any filters such as species or date range.
+  - Check that your AI can reach the web or run code. Without that it cannot read live databases.
+  - If it asks a question, answer it. It asks when a missing detail would change the answer.
+  - Check the record count and the request in the Provenance part before you use the result.
+output_sample:
+  input:
+    - The fact or records you need
+    - The database you prefer (optional)
+    - Identifiers and filters, such as species, date range or genome build
+    - The fields you want back (optional)
+  prerequisites:
+    - An AI that can run code or call web services, since it reads live public databases
+    - A free key, registration or paid licence for some sources (the skill lists which ones)
+  output:
+    - name: Retrieval Summary
+      contains: The question, the database chosen, the filters used and how many records came back.
+    - name: Results
+      contains: The retrieved records, shown for each database used, with the fields you asked for.
+    - name: Provenance
+      contains: The source, the exact request made and the date, so someone else can run it again.

@@ -14,11 +14,11 @@ outputs:
   - {type: plan}
 uses: [organic-post-to-ad-promoter, video-ad-bridge-checker, meta-ads-compliance-checker, creator-filming-brief-writer, meta-test-campaign-planner]
 steps:
-  - {uses: organic-post-to-ad-promoter, note: "Starts by choosing the posts worth putting money behind."}
-  - {uses: video-ad-bridge-checker, note: "Checks the promo half of each reshoot script, so the hook leads somewhere."}
-  - {uses: meta-ads-compliance-checker, note: "Checks the scripts against ad rules before creators film them."}
-  - {uses: creator-filming-brief-writer, note: "Turns the approved scripts into briefs a creator can film from."}
-  - {uses: meta-test-campaign-planner, note: "Lays out the test so the new ads face your current best ad."}
+  - {uses: organic-post-to-ad-promoter, note: "Starts by choosing the posts worth putting money behind. Hands step 2 the shortlist and the reshoot scripts."}
+  - {uses: video-ad-bridge-checker, note: "Checks the promo half of each reshoot script, so the hook leads somewhere. Hands step 3 the tightened scripts."}
+  - {uses: meta-ads-compliance-checker, note: "Checks the scripts against ad rules before creators film them. Hands step 4 the scripts with the fixes in, and the problems it found."}
+  - {uses: creator-filming-brief-writer, note: "Turns the approved scripts from step 3 into briefs a creator can film from. Hands step 5 the briefs."}
+  - {uses: meta-test-campaign-planner, note: "Lays out the test so the new ads face your current best ad. Uses step 4's briefs and your performance data."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/turn-your-best-organic-posts-and-creator-videos-into-meta-ads/skeleton.yaml

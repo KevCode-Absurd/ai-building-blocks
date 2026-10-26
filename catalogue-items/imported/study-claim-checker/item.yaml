@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: document
     required: true
+  - type: source_text
+    required: false
 outputs:
   - type: audit_report
 uses: []

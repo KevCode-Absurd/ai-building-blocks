@@ -10,20 +10,59 @@ metadata:
 
 Model the financial dimensions of workforce decisions — fully loaded labor cost, productivity economics, and the ROI of workforce investments — so HR decisions are grounded in the same financial rigor as other business investments.
 
-## Supported tasks
+## Steps for a headcount business case
+
+1. Ask for what you need. Required: the role, level and location, the pay range, the work the person would do, and the period to compare. Optional: the revenue or output the role would affect. If a required item is missing, ask once. If it is still missing, mark it MISSING and carry on with a labelled assumption. Never invent a figure.
+2. Build the loaded cost line by line: base pay, benefits, payroll taxes, equipment and software, overhead, recruiting cost, and ramp-up time (months at part output). Use only figures the person gave. For any line they did not give, write "assumption" next to your number and the rate or rule you used, or leave it blank and ask.
+3. Compare hire and contractor over the same period. Use the contractor rate the person gave. If they gave none, show the break-even rate instead: the contractor rate at which both options cost the same.
+4. Work out the payback. Say what the role must produce or save, in money, to cover its loaded cost, and how many months that takes. If the person gave no revenue or output figure, say so and show the break-even output instead of guessing a return.
+5. Add the cost of not hiring only if the person gave numbers for it, such as overtime or lost orders.
+6. Write the case for finance (under 300 words) from the table. Lead with payback and cost, then list assumptions.
+7. Finish with the checks: which figures finance must confirm, and which are assumptions.
+
+## Output
+
+```markdown
+## Headcount case: <role>, <location>
+
+### Loaded yearly cost
+| Line | Amount | Source |
+|------|--------|--------|
+| Base pay | <amount> | given |
+| <benefits, taxes, equipment, overhead, ramp-up> | <amount> | given / assumption |
+| Total | <amount> | |
+
+### Hire vs contract (<period>)
+| | Hire | Contractor |
+|---|---|---|
+| Total cost | <amount> | <amount or break-even rate> |
+| Hidden costs | <ramp-up, management time> | <handover, rework> |
+
+### Payback
+<months to cover cost, or break-even output, and what it depends on>
+
+### Case for finance
+<under 300 words, payback first, assumptions listed>
+
+### To confirm with finance
+- <figure or assumption>
+```
+
+## Benchmarks
+
+Do not state industry benchmarks, peer costs or market rates from memory. Ask for a source or a figure from the person's own data. If a benchmark is still needed, label it "estimate, confirm before use" and say what to check.
+
+## Other tasks this skill can do
 
 - Calculating fully loaded labor cost by role, level, and location
-- Building business cases for headcount requests with financial justification
 - Comparing the cost economics of hiring, contracting, and outsourcing
 - Modeling the ROI of workforce investments (L&D, tools, restructuring)
-- Analyzing labor cost as a percentage of revenue and benchmarking against industry
+- Analyzing labor cost as a percentage of revenue
 - Modeling the financial impact of turnover and time-to-fill
 - Assessing the cost-benefit of geographic labor arbitrage decisions
 - Building workforce cost forecasts tied to the annual budget cycle
 - Analyzing productivity economics (output per FTE, revenue per employee)
-- Modeling the cost implications of workforce scenario plans
 - Translating workforce economics into language finance and executives use
-- Identifying workforce cost optimization opportunities without cutting capability
 
 ## Key prompts
 
@@ -41,12 +80,11 @@ Model the financial dimensions of workforce decisions — fully loaded labor cos
 3. "What financial framing will resonate most with our CFO when requesting headcount for [team]?"
 4. "Model the payback period for automating [process] versus continuing to staff it manually."
 
-### Analysis and benchmarking
+### Analysis
 
-1. "Analyze our labor cost as a percentage of revenue and benchmark it against [industry] norms."
+1. "Analyze our labor cost as a percentage of revenue using the figures I give you."
 2. "Model the financial impact of our current turnover rate on [team/function], including replacement and productivity-loss costs."
 3. "Analyze revenue or output per FTE trends for [function] over the past [timeframe] and flag anything notable."
-4. "Benchmark our workforce cost structure against [industry] peers using publicly available financial disclosures."
 
 ### Optimization
 

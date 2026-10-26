@@ -3,8 +3,7 @@ thinking: medium
 thinking_why: It builds a working page from data.
 new_slug: dashboard-builder
 name: Offline dashboard builder
-summary: Build a self-contained HTML dashboard from supplied data, with charts and filters that work offline.
-  charts, filters and tables you can open and share.
+summary: Build an offline HTML dashboard from your data. Get KPI cards, charts, filters and a table in one file you can open and share.
 job: track-numbers
 headline: Offline dashboard builder
 subhead: A browser-ready dashboard with local chart code and no external network dependency.
@@ -17,6 +16,10 @@ when:
   - You have query results and need them shareable without a BI tool.
   - You want a team snapshot with filters by region or product.
   - You need a quick mock dashboard to show what you would track.
+not_for:
+  - "You need live data that refreshes on its own: use a BI tool such as Looker Studio or Power BI."
+  - "Many people need to log in and see their own reports: use a BI tool, since this file has no sign-in."
+  - "Your data is huge, with hundreds of thousands of rows: use a BI tool or a database instead."
 you_give:
   - What the dashboard should show
   - Your data, CSV or query results (optional)
@@ -28,8 +31,30 @@ you_get:
   - Working filters and tables
   - Steps to swap in real data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini. Use one that can create files and run code, so it can save the dashboard.
+  - Paste the skill instructions into the chat.
+  - Say what the dashboard is for, who reads it and which numbers matter. Name the filters you want.
+  - Paste your CSV or query results, or attach the file. If you have none, ask for sample data.
+  - Open the HTML file in your browser. Check the numbers and try each filter.
+  - Ask for changes in plain words, such as a new chart or a different filter. Your AI gives you the file again.
+output_sample:
+  input:
+    - What the dashboard is for and who will read it
+    - The numbers that matter most
+    - Your data as a CSV, pasted rows or query results (optional)
+    - The filters you want, such as region or product
+  prerequisites:
+    - An AI that can create files and run code, to save and open the HTML file
+  output:
+    - name: Dashboard HTML file
+      contains: One file with your data inside it that opens in any browser with no server.
+    - name: KPI cards
+      contains: A row of cards at the top showing your key numbers.
+    - name: Charts
+      contains: A large main chart and a second chart, such as line, bar or doughnut, that update with the filters.
+    - name: Filters
+      contains: Dropdown and date range controls that change every card, chart and table together.
+    - name: Detail table
+      contains: A table of your rows that you can sort and scroll.
+    - name: Sample data note
+      contains: If you gave no data, a label on the page says it is sample data, with steps to swap in yours.

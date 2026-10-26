@@ -16,6 +16,29 @@ use_cases:
   - "Explain a tough restructuring to the people it affects"
   - "Plan a long shift to a new technology while the old business still pays the bills"
   - "Break down silos so bad news travels fast between departments"
+not_for:
+  - "You need a safe space for staff to speak up, with research on team learning: use the Amy Edmondson mind."
+  - "You need to give clear, caring feedback to one person: use the Kim Scott mind."
+  - "You face a legal or regulatory duty or a real product defect: talk to a lawyer or a safety investigator, not this AI."
+output_sample:
+  input:
+    - The problem or crisis you face, in a few plain lines
+    - Who is affected and how they will hear about it
+    - What you know for sure and what you do not yet know
+    - Who inside knew, and how information moved (optional)
+  output:
+    - name: Customer impact
+      contains: Who could be hurt or let down, and what they need from you now.
+    - name: What happened
+      contains: A plain account of the failure, with what you do not yet know and when you will report.
+    - name: Why it did not travel up
+      contains: Where silos, fear or slow reporting held back bad news.
+    - name: Actions with owner and date
+      contains: The outside review, people changes, rule cuts and fixes, each with a named owner and a date.
+    - name: Questions she would ask you
+      contains: Short questions on who is affected, what you know, and what you can show in 30 days.
+    - name: Message draft
+      contains: A short update that starts with the people affected and says what will change.
 seats:
   - {seat: "Big change in an old company", asks: "What are we still doing because we always have, and what would we stop to fund the future?"}
   - {seat: "Crisis and accountability", asks: "What exactly went wrong, who will we tell, and what will we change so it can't happen again?"}

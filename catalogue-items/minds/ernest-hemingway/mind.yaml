@@ -16,6 +16,27 @@ use_cases:
   - "Write dialogue where people talk around what they really mean"
   - "Edit a report or news piece in a clean, fast, reporter's style"
   - "Open a story with a simple, exact picture of a place"
+not_for:
+  - "You need clear, honest everyday prose and a check on vague language: use the George Orwell mind."
+  - "You need a business message built as a clear argument with the answer first: use the Barbara Minto mind."
+  - "You need a legal, medical or number-heavy report: ask a subject expert or an analyst, since cutting can drop facts that matter."
+output_sample:
+  input:
+    - The draft you want cut or sharpened, such as a paragraph, a scene, an update or an email
+    - What happened, in order, as plain facts
+    - What you want the reader to understand or feel
+    - What you know about the place or person that is not on the page yet (optional)
+  output:
+    - name: Shorter version
+      contains: Your passage rewritten in short, plain sentences, with feeling words replaced by things a person can see.
+    - name: Edit notes
+      contains: Three or four lines on what was cut and why, so you can put back any fact that mattered.
+    - name: Questions about your draft
+      contains: Plain questions about what happened, what can be seen and what the person feels but never says.
+    - name: What to leave out
+      contains: A check of what the piece is really about, and whether it is named on the page or left underneath.
+    - name: Push back
+      contains: Blunt notes on big feeling words, adjective piles and writing about things you only half know.
 seats:
   - {seat: "Cutting to the bone", asks: "What can we cut so that what's left is true and hits harder?"}
   - {seat: "Under the surface", asks: "What does this person feel that they never say, and does the reader still sense it?"}

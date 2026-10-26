@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It covers many risk areas in one pass.
 new_slug: launch-legal-reviewer
 name: Launch legal reviewer
-summary: Give it your product plan. Get a memo that checks each legal area
-  before you ship. First check, not legal advice.
+summary: Check a product plan against each legal area before you ship. Get a launch legal review memo plus a safe note for your ticket. Not legal advice.
 job: check-contracts
 headline: Launch legal reviewer
-subhead: A review memo that checks your product plan against each legal area
-  your team cares about, before you ship. Share the plan, a PRD, a Drive link or
-  a ticket.
+subhead: A review memo that checks your product plan against each legal area your team cares about, before you ship. Share the plan, a PRD, a Drive link or a ticket.
 explain: |
   A review memo that checks your product plan against each legal area your team cares about, before you ship. Share the plan, a PRD, a Drive link or a ticket. The skill reads your team's own framework and risk settings, then goes through every category one by one and rates each finding against what really blocks a launch in your company.
 
@@ -18,6 +15,10 @@ when:
   - You received a PRD and need a legal issues list by category.
   - You need to see which concerns are blockers and which are minor.
   - You want a consistent memo format across launches.
+not_for:
+  - "You only need to check ad or marketing copy: use the marketing-claims-review skill from the same legal set, not this one."
+  - "You need one risk studied in depth: ask for a feature risk assessment, which this review can hand off to."
+  - "You need a final legal opinion or sign-off: ask a qualified lawyer. This memo is a first check."
 you_give:
   - The product plan or PRD
   - Your team's legal review framework
@@ -29,12 +30,35 @@ you_get:
   - Flags on new or unclear issues
   - A summary for the ticket
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved product legal setup notes and
-    your files.
-  - Where the skill points to /product-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open your AI tool and add the skill. Use one that can read files.
+  - Fill in your team's legal setup file first. List your legal areas and what counts as a blocker. The skill stops if placeholders remain.
+  - Paste your PRD, Drive link or ticket ID. Add related documents if you have them.
+  - Ask your AI to run the launch review. It checks each legal area in turn and rates each finding.
+  - Read the bottom line and any flagged new questions. Send those to a lawyer.
+  - Keep the full memo private. Post only the safe tracker note to your ticket, then pass marketing copy or deep risks to the related skills.
+output_sample:
+  input:
+    - Your product plan, PRD, Drive link or ticket ID
+    - Your team's legal setup file (CLAUDE.md) with your framework and risk settings
+    - Related documents for the launch (optional)
+    - Your ticket tracker connection (optional)
+  prerequisites:
+    - An AI that can read your files, including the setup file filled in with no placeholders left
+    - Your team's legal framework and risk settings written into that setup file
+  output:
+    - name: Launch review memo
+      contains: The full private memo in your house format, for people inside the legal circle only.
+    - name: Bottom line
+      contains: "A clear call: clear to ship, ship with conditions, blocked, or needs escalation."
+    - name: Findings by category
+      contains: Each legal area in your framework, with what was found, a risk rating and the reason.
+    - name: Action items
+      contains: What must change before launch, with who owns it and by when.
+    - name: Escalations
+      contains: New or unclear questions that need a lawyer's judgment.
+    - name: Notes for next time
+      contains: Points worth remembering for the next launch review.
+    - name: Citation check
+      contains: A check on the sources the memo relies on.
+    - name: Safe to post to tracker
+      contains: A short, non-private comment with status, conditions, owners and deadlines, and no legal reasoning.

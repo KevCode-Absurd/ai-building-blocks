@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It runs a fixed pipeline but checks primers and overlap first.
 new_slug: 16s-microbiome-read-processor
 name: 16S microbiome read processor
-summary: Give it paired 16S reads and primers. Get a sequence variant table,
-  species labels and a repeatable record.
+summary: Turn paired 16S reads into a sequence variant table with species labels and a saved record of each step, using QIIME 2 on your own machine.
 job: research-topics
 headline: 16S microbiome read processor
-subhead: Give it paired 16S read files, your primer sequences and a trained
-  classifier. It checks the setup, then trims, denoises and labels the reads in
-  QIIME 2. You get a table of sequence variants per sample, a species label for
-  each, a read-retention report and saved files that record every step.
+subhead: Give it paired 16S read files, your primer sequences and a trained classifier. It checks the setup, then trims, denoises and labels the reads in QIIME 2. You get a table of sequence variants per sample, a species label for each, a read-retention report and saved files that record every step.
 explain: |
   You end up with a table of sequence variants, a species label for each one, and a saved record of every step, so a colleague can rerun the work and get the same answer.
 
@@ -19,6 +15,10 @@ when:
   - A reviewer asked you to show exactly how you processed your microbiome data.
   - You are not sure your trim settings leave enough overlap between read pairs.
   - You need species labels for each variant using a reference you trust.
+not_for:
+  - Your reads already have primers removed. Import them and run DADA2 directly, and note the skipped trimming in your methods.
+  - You need strain-level identification. 16S labels cannot tell strains apart, so use a method built for that, such as whole-genome sequencing.
+  - You cannot install QIIME 2 on your own machine or a container. Ask a bioinformatics colleague or your sequencing core to run it.
 you_give:
   - Paired FASTQ files, one pair per sample
   - Your primer sequences
@@ -32,8 +32,38 @@ you_get:
   - Saved QIIME 2 files that record every step
   - A short list of checks that passed or failed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Install QIIME 2 2026.7 with conda or a container. Do not use PyPI. Your AI cannot do this for you in a chat window.
+  - Get a trusted classifier whose scikit-learn version matches your install. Write down its source, version and checksum.
+  - Make a tab-separated manifest with the headers sample-id, forward-absolute-filepath and reverse-absolute-filepath. Make a metadata file with sample-id in the first column.
+  - Give your AI this skill, the manifest, the metadata, your primers and your quality plots. Ask it to run the check step first.
+  - Fix any failed check, such as low overlap or missing primers. Then ask your AI to run the full workflow in a new output folder. It needs to run code.
+  - Open trimmed.qzv, table.qzv and taxa.qzv in QIIME 2 View. Read retention-qc.json and check your blanks before any analysis.
+output_sample:
+  input:
+    - Paired FASTQ files, one pair per sample
+    - A tab-separated manifest listing each sample and its file paths
+    - Sample metadata with matching sample IDs
+    - Your forward and reverse primer sequences and your trim lengths
+    - A trusted classifier file that matches your QIIME 2 install
+  prerequisites:
+    - An AI that can run code, or a person who can run commands
+    - QIIME 2 2026.7 installed through conda or a container, not PyPI
+    - Python 3.10 or newer for the check step
+    - A classifier built with the same scikit-learn version as your install
+  output:
+    - name: trimmed.qzv
+      contains: Quality and length profiles after primer removal, so you can check your trim settings.
+    - name: table.qzv
+      contains: Summary of the sequence variant table, with read depth for each sample.
+    - name: taxa.qzv
+      contains: Species labels for each variant, ready to view as a bar plot.
+    - name: retention-qc.json
+      contains: How many read pairs survived each stage, from raw reads to non-chimeric reads.
+    - name: stats/stats.tsv
+      contains: DADA2 counts for each sample at filtering, denoising, merging and chimera removal.
+    - name: commands.json
+      contains: Every QIIME command that ran, in order.
+    - name: qiime-info.txt
+      contains: The QIIME 2 and plugin versions used in the run.
+    - name: workflow.log
+      contains: A running log of the run, with warnings and any stop point.

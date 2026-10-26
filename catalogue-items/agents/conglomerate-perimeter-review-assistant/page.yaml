@@ -1,51 +1,126 @@
 new_slug: conglomerate-perimeter-review-assistant
-name: Conglomerate perimeter review assistant
-headline: Conglomerate perimeter review assistant
-summary: Review consolidation and ownership changes before reusing segment or holding values.
+name: Business group valuation reviewer
+headline: Business group valuation reviewer
+summary: Check ownership and segment changes before reusing business values. Count each asset and debt once, and keep missing values clear.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A perimeter-change memo, treatment ledger and linked valuation-input schedules. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-explain: |-
-  A perimeter-change memo, treatment ledger and linked valuation-input schedules.
+subhead: Give it your last accepted valuation model and the new segment note or ownership filing. It checks how each subsidiary and holding is treated, then rebuilds only the schedules that move. You get a change memo, a treatment ledger and updated valuation inputs, with unknown values left open.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A business group valuation can go wrong without any new profit figure. A company buys a stake, sells a unit, or changes how much of a subsidiary it owns. If the old model still counts that unit the old way, group profit, debt and the outside owners' share can all be wrong. The model looks fine until someone checks it.
+
+  This agent keeps a record of the last accepted review. For each subsidiary and holding it holds the treatment and the dates ownership changed. It also holds parent-only and group debt, the segment definitions, the source of the outside owners' value, and why any asset was left out. A new segment note, ownership change, purchase or sale is compared with that record. If nothing changed, it says so and stops.
+
+  When something did change, it ties segment profit to group operating profit. It counts the outside owners' share in the same enterprise value as the earnings it divides by. It values a separately held listed stake only where that stake's earnings sit outside the group figure. A dated property appraisal adds a separate property bridge. With no appraisal, the property stays a missing value. It never fills a gap with a peer estimate or an invented yield. A reviewer who knows the group checks the result.
+
 when:
-  - You need a perimeter-change memo, treatment ledger and linked valuation-input schedules.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A company you value files a new segment note, and the segment definitions look different from last year.
+  - A filing shows the group bought or sold a business, or its share of a subsidiary changed.
+  - A parent holds listed stakes, and you need to know which sit inside group profit and which sit outside it.
+  - Your reviewer asks which assets and debts are counted once, and which could be counted twice.
+
+not_for:
+  - You have no earlier model and want one check of a group. Use the Group company valuation checker, which runs the same steps once.
+  - You only want the value of listed stakes held by a parent. Use the Holding company value calculator.
+  - You only want a property appraisal turned into equity value per share. Use the Property net asset value calculator.
+  - You want a buy or sell view or a price target. It gives neither, and it uses no live market data.
+
+output_sample:
+  input:
+    - Your last accepted valuation model and review log
+    - The new segment note, ownership filing, or purchase or sale filing, with dates
+    - Parent-only debt and cash, and dated values for separately held stakes
+    - A dated property appraisal (optional, only if a holding is property)
+    - Your size limit for a material change, plus the reporting date, currency and scale
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The pack's component files added to your AI
+    - A spreadsheet-capable AI if you want a workbook (optional)
+  output:
+    - name: Change memo
+      contains: Each ownership, segment or holding change since the last review, with its filing and date.
+    - name: Treatment ledger
+      contains: One line for each subsidiary and holding, saying how it is valued and why nothing is counted twice.
+    - name: Segment profit bridge
+      contains: Segment profit less eliminations and corporate costs, tied to group operating profit, with any gap shown.
+    - name: Enterprise value multiple
+      contains: Parent equity plus debt plus outside owners' value, less cash and separate stakes, divided by group earnings.
+    - name: Holding value per share
+      contains: Quoted stake values times ownership, plus parent cash, less parent debt and holding costs, per parent share.
+    - name: Property value bridge
+      contains: Only if an appraisal is supplied. Property value to equity value, and the market discount.
+    - name: Record for next review
+      contains: A short record to paste into your next run.
+    - name: Missing and checks missed
+      contains: Each gap, and each check that failed or could not run.
+
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your last accepted valuation model and review log (optional on a first run)
+  - The new segment note, ownership change, or purchase or sale filing, with dates (from the annual report or the filing)
+  - Parent-only debt and cash, and consolidated debt and cash (from the parent's accounts)
+  - Dated quoted values for any separately held stakes, all on one date
+  - A dated property appraisal for a property holding (optional)
+  - Your size limit for a material change, and the reporting date, currency and scale
+
 you_get:
-  - A perimeter-change memo, treatment ledger and linked valuation-input schedules.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A change memo listing each ownership, segment and holding change, with its source
+  - A treatment ledger giving every subsidiary and holding one treatment and a reason
+  - A segment profit bridge to group operating profit, with any gap left open
+  - A multiple that counts outside owners' share, and a look-through value for separately held listed stakes
+  - A property value bridge when an appraisal is supplied, plus MISSING lines and a record for next time
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Group company valuation checker workflow and the Property net asset value calculator. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
+  - Say whether this is the first run. If not, paste the record from last time. Then attach your last model and the new filing.
+  - Read the change memo first. Check each change against the filing and date it names.
+  - Check the treatment ledger. Every subsidiary and holding needs one treatment, and none may appear twice.
+  - Check the segment bridge by hand. Segments, less eliminations and corporate costs, should equal group operating profit. A gap stays open and is never forced to zero.
+  - Fix every MISSING line. Run it again when a new note or filing arrives. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Reconcile conglomerate valuation perimeters
-    text: Run the governing workflow when When the user supplies a new segment note, ownership change or acquisition/disposal filing, compare the legal/economic perimeter with the prior accepted valuation model.
-  - title: Investment property NAV bridge
-    text: If an identified nonoperating property holding has a supplied dated appraisal, build a separately labeled property NAV bridge. Otherwise retain the asset as missing valuation evidence; do not invent a property yield or value.
-output_shape: |-
-  A perimeter-change memo, treatment ledger and linked valuation-input schedules.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this group, or sets a first baseline. Compares ownership dates, segment definitions, currency and scale. If nothing changed and no review is due, it says so and stops.
+  - title: Ties segment profit to the group
+    text: Adds the segment measures, applies signed eliminations and corporate costs, and compares the total with group operating profit. A difference stays a source gap and is never plugged. It hands the checked earnings to the next step.
+  - title: Counts outside owners once
+    text: Maps the subsidiaries whose earnings are counted in full. Adds their outside owners' value to enterprise value, so the multiple matches the earnings. Book value and market value of outside owners stay apart.
+  - title: Values separate stakes
+    text: Values a quoted stake only where its earnings were left out of the group figure. Reconciles parent-only debt and cash, and labels every addition and exclusion.
+  - title: Adds a property bridge only with evidence
+    text: If a nonoperating property holding has a dated appraisal, it builds a separate bridge from property value to equity value. With no appraisal, the property stays missing. It never invents a yield.
+  - title: Checks and saves the record
+    text: Checks that every holding has one treatment, profit ties, and each asset and debt enters once. Corrects an affected sum at most twice, then reports the blocker. Writes the record for next time and keeps the old one.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGE MEMO  <filing, date, old treatment, new treatment>
+  TREATMENT LEDGER  holding | ownership % and date | treatment | source | reason
+  SEGMENT PROFIT BRIDGE  segments <n> - eliminations <n> - corporate costs <n> = <n>
+                         group operating profit <n>; difference <n or none>
+  ENTERPRISE VALUE MULTIPLE  parent equity <n> + debt <n> + outside owners <n>
+                             - cash <n> - separate stakes <n> = <n>; / earnings <n> = <n>x
+  HOLDING VALUE PER SHARE  stakes <n> + parent cash <n> - parent debt <n> - holding costs <n>
+                           = <n>; per share <n>
+  PROPERTY VALUE BRIDGE (only if an appraisal is supplied)
+                           property <n> + other net assets <n> - debt <n> = <n>; per share <n>
+
+  RECORD FOR NEXT REVIEW  treatment ledger, ownership dates, parent-only debt,
+                          segment definitions, outside-owner value sources, excluded assets
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every holding has one treatment, profit reconciles and liabilities/assets enter once; changed ownership is source-backed and unavailable values do not receive automatic peer estimates.
+  - what: A new ownership share
+    how: Change the share held in one subsidiary. Its outside owners' value, the multiple and any look-through value move with it. The ledger records the date.
+  - what: A new segment definition
+    how: Paste the new note. The bridge to group profit is rebuilt, and any difference shows as a gap and not as a balancing figure.
+  - what: A property appraisal
+    how: Add a dated appraisal for a property holding. The property bridge appears, and that holding leaves the MISSING list.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Every holding has one treatment, profit reconciles and liabilities/assets enter once; changed ownership is source-backed and unavailable values do not receive automatic peer estimates.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +131,34 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder named by date, so the next run starts from the true earlier state.
+  - Use the same name for each subsidiary and holding every time. A renamed holding looks like a new one.
+  - Paste each segment note's definitions once, word for word, so a change in definition is easy to see.
+  - Pair it with the Business unit profit reconciliation checker when you only need the profit bridge, and with the Minority interest valuation checker when only the outside owners' share is in question.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The company's annual report
+      why: Holds the segment note, the ownership list and the parent-only accounts, each with a page you can cite.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The segment note's own definitions of profit, so segments can be tied to group operating profit.
+    - Quoted equity values for every separately held stake, all taken on one date.
+    - A named reviewer who knows the group and will check the treatment of each holding.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Perimeter
+    meaning: Which businesses and holdings sit inside the group figures, and which sit outside them.
+  - term: Outside owners
+    meaning: Other investors who own part of a subsidiary the group counts in full. Also called minority interest.
+  - term: Segment elimination
+    meaning: Removing profit made between a group's own units, so it is not counted twice.
+  - term: Look-through value
+    meaning: The value of a parent's share in a listed holding, found by multiplying the holding's equity value by the share owned.
+  - term: Nonoperating holding
+    meaning: An asset the group owns, such as property or a stake, whose earnings are not in group operating profit.
+  - term: Treatment ledger
+    meaning: A list with one line for each subsidiary and holding, saying how it is valued and why.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

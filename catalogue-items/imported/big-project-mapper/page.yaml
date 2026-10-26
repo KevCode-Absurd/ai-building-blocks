@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It plans a long project across many decisions.
 new_slug: big-project-mapper
 name: Big project mapper
-summary: Give it a project too big for one session. Get a map of decisions,
-  resolved one at a time.
+summary: Plan a big project that won't fit in one AI chat. Get a map of open decisions on your issue tracker, settled one per session.
 job: plan-strategy
 headline: Big project mapper
-subhead: Some projects are too big to hold in one chat. This skill turns a
-  loose, foggy idea into a shared map of open questions, then settles them one
-  at a time until the route is clear.
+subhead: Some projects are too big to hold in one chat. This skill turns a loose, foggy idea into a shared map of open questions, then settles them one at a time until the route is clear.
 explain: |
   Some projects are too big to hold in one chat. This skill turns a loose, foggy idea into a shared map of open questions, then settles them one at a time until the route is clear. You end up with a list of decisions made, not a pile of half-done work.
 
@@ -16,9 +13,12 @@ explain: |
 when:
   - You have a large idea and no clear first step.
   - A project is too big to fit in one AI session.
-  - Your team keeps arguing about choices that should have been settled before
-    work began.
+  - Your team keeps arguing about choices that should have been settled before work began.
   - You need a spec or a locked decision before any building starts.
+not_for:
+  - "Your work fits in one session and has no open questions: start building, or ask your AI to write a simple to-do list."
+  - "You want the work built, not planned: this skill only settles decisions, so hand the finished map to a builder."
+  - "You have no issue tracker and want one short chat: use a plain notes file, or let the skill use local markdown files."
 you_give:
   - A rough description of the big idea
   - The destination you want to reach
@@ -30,8 +30,34 @@ you_get:
   - A running list of decisions so far
   - A clear hand-off point when the route is clear
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your issue tracker.
+  - Set up first. Your AI needs your issue tracker, or it can use local markdown files. It also needs the grilling, domain-modeling, research and prototype skills.
+  - Paste this skill into your AI and describe your big idea. Say where you want to end up.
+  - Answer the questions your AI asks. It names the destination, then creates the map and the first tickets. This first session settles no tickets by hand.
+  - Start a new session with the map link. Your AI picks the next open ticket, claims it, and works it with you.
+  - Check the answer it posts. It closes the ticket and adds one line to Decisions so far.
+  - Repeat, one ticket per session, until no tickets are left. Then hand the map to whoever builds.
+output_sample:
+  input:
+    - A rough description of your big idea
+    - Where you want to end up (a spec, a locked decision, or a change made in place)
+    - Your issue tracker, or local markdown files if you have none
+    - Notes on anything already decided (optional)
+  prerequisites:
+    - An AI that can read and write to your issue tracker, or to local markdown files
+    - The grilling, domain-modeling, research and prototype skills the ticket types call on
+    - Tracker setup from the setup-matt-pocock-skills command, which holds the Wayfinding operations notes
+  output:
+    - name: Map issue
+      contains: One issue labelled wayfinder:map that holds the destination, notes, and the shape of the whole effort.
+    - name: Destination
+      contains: One or two lines on what reaching the end of this map looks like.
+    - name: Decision tickets
+      contains: "Child issues of the map, each with one question and a type label: research, prototype, grilling or task."
+    - name: Decisions so far
+      contains: One line per closed ticket with a short gist of the answer and a link to the ticket.
+    - name: Not yet specified
+      contains: Questions you can see coming but cannot yet phrase sharply enough to make a ticket.
+    - name: Out of scope
+      contains: Work ruled out of this effort, with a line on why.
+    - name: Resolution comment
+      contains: The answer to one ticket, posted on that ticket before it is closed.

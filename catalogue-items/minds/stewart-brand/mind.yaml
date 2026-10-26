@@ -15,6 +15,29 @@ use_cases:
   - "Document a community project so another person can maintain it"
   - "Separate durable career skills from changing tools"
   - "Review a new purchase for hidden upkeep and dependence"
+not_for:
+  - "You need a legal, medical or engineering answer: ask a qualified professional or read the relevant manual, because this mind only gives a care and dependency brief."
+  - "You want help with a money plan for your family: use the Beth Kobliner mind, who works on family money education."
+  - "You want a choice backed by tracked odds and decision quality: use the Annie Duke mind, who writes about decisions, bets and when to quit."
+output_sample:
+  input:
+    - The thing you depend on, such as an appliance, a home, a tool library or a work tool
+    - What you own and who is responsible for it
+    - Any manuals, model details, records or repair advice you already have
+    - The options you are weighing, such as keep, repair, replace or simplify (optional)
+  output:
+    - name: Service and dependency map
+      contains: What must keep working, who depends on it, and what happens if it stops.
+    - name: Table of parts and change rates
+      contains: Which parts change often, which last, and where a fast part is stuck inside a slow one.
+    - name: Maintenance knowledge list
+      contains: The manuals, records, people and service help you have, and what you lack the skill or authority to change.
+    - name: Options memo
+      contains: Keep, repair, replace or simplify, with downtime, cost, missing evidence and a recommendation that depends on those gaps.
+    - name: Care assignment
+      contains: Who does what, where information lives, and how the next person finds help.
+    - name: Review and retirement notes
+      contains: When to look at the decision again and what would justify letting the thing go.
 seats:
   - {seat: "Maintenance and long-term adaptability", asks: "Who will keep this going?"}
   - {seat: "Different rates of change", asks: "Have you coupled a fast-changing part to a slow one?"}

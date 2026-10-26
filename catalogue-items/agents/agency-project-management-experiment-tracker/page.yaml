@@ -1,0 +1,156 @@
+name: A/B test planner and tracker agent
+summary: Plan an A/B test before launch, then read the result. Get sample size, stop rules, a go or stop call and the lesson to keep.
+headline: A/B test planner and tracker agent
+subhead: Tell the agent the change you want to test and your current numbers. It writes the test plan with a clear hypothesis, the sample size and stop rules. After the test, give it the counts and it writes the readout with a go or no-go call.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Most A/B tests go wrong before they start. The goal is vague, the audience is
+  too small, or someone stops the test the day the chart looks good. This A/B
+  test planner and tracker agent makes you write down the bet first. It states
+  what you will change, which number should move, how much and what would make
+  you stop.
+
+
+  It works out how many visitors each version needs. It uses the usual rule of
+  thumb of a 5% false alarm rate and an 80% chance of catching a real gain, and
+  shows the arithmetic so you can check it. It sets a minimum run time, keeps a
+  guardrail number such as refunds or page speed, and plans how to roll back. It
+  does not let you stop early on a lucky streak. After the test, it compares the
+  two versions, shows the likely range of the true gain and gives a go or no-go
+  call with the reason.
+
+
+  It runs on numbers you paste. It does not set up the test in your tool or watch it live. Its
+  maths is simple, so check the result in a calculator or sheet before you act on a big
+  decision. This is a role profile from Agency Agents, shared under MIT. The
+  download includes the original profile, its licence and a setup guide. The
+  profile's success targets, such as how many tests reach significance, are
+  examples and not results measured by AI Blocks.
+when:
+  - You want to test a new headline, price, checkout step or email, and need a plan before you start.
+  - Someone asks "do we have enough traffic to test this?" and you need a number.
+  - A test has finished and you must decide whether to ship the new version.
+  - You run several tests and want one place to track what you tried and what you learned.
+not_for:
+  - "You only have finished test numbers and want a quick verdict: use the A/B test verdict maker."
+  - "You do not know what to test yet: use the Growth experiment agent."
+  - "You want one run per test, with a lesson saved each time: use the Experiment readout desk."
+  - "You need a statistician to review a complex study, such as many variants over time. Use the Statistician agent."
+  - "You can only send a small number of visitors, such as a few hundred a month. A test will not give a clear answer. Try customer interviews first."
+you_give:
+  - The change you want to test and the page, email or step it affects
+  - The number that should move, such as checkout rate, and its current value
+  - How many visitors or sends you get in a week
+  - The smallest gain worth acting on, such as 10% more checkouts
+  - Another number that must not get worse, such as refund rate (optional)
+  - For a readout, the visitors and conversions for each version, and the dates the test ran (optional)
+you_get:
+  - A test plan with problem, hypothesis, main number, guardrail number and variants
+  - The sample size per version, with the arithmetic, and the minimum run time
+  - Stop rules, a risk note and a rollback plan
+  - A readout with each version's rate, the gap, a likely range and a go or no-go call
+  - Next tests to run and a short lesson to save
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - To plan, write down the change, the number that should move and its current value, your weekly traffic and the smallest gain worth acting on.
+  - Check the sample size and run time. If the test needs months, ask for a bolder change or a different number to test.
+  - Set the test up in your own tool, such as your email platform, a website testing tool or Shopify. Do not look at the result until the planned end date.
+  - When it ends, paste the visitors and conversions for each version. Say "Write the readout".
+  - Check the maths in a sheet. Then save the readout and the lesson with your other tests.
+how_it_works:
+  - title: Frame the bet
+    text: It turns your idea into a testable claim, with one main number and one guardrail number.
+  - title: Size the test
+    text: It works out visitors per version from your current rate and the smallest gain you care about, and shows the sum.
+  - title: Set rules
+    text: It sets a minimum run time, a no-peeking rule, a stop rule if something breaks and a rollback plan.
+  - title: Read the result
+    text: It compares the two rates, works out the gap and its likely range, and checks the sample reached the target.
+  - title: Make the call
+    text: It gives go, no-go or run longer, with the reason and the risk of being wrong.
+  - title: Save the lesson
+    text: It writes what you learned and what to test next, so the next plan starts smarter.
+output_shape: |-
+  EXPERIMENT PLAN
+    Problem <what is wrong or missing>
+    Hypothesis <if we change X, then Y moves by Z>
+    Main number <name> | Now <value> | Smallest gain worth acting on <value>
+    Guardrail number <name> | Must not fall below <value>
+    Versions <control> | <variant>
+    Sample size <per version> | Working <formula with your numbers> | Minimum run time <days>
+    Stop rules <what ends the test early and what does not>
+    Risk and rollback <what could go wrong> | <how to undo it>
+
+  EXPERIMENT READOUT
+    Decision <go, no-go or run longer> | Reason <one sentence>
+    Results <version> | <visitors> | <conversions> | <rate>
+    Gap and range <difference> | <likely range> | <confident the gain is real? yes or no>
+    Data notes <short runs, uneven traffic, tracking problems>
+    Segments <only if you gave them> | <result and warning about small groups>
+    Learnings <what this tells you>
+    Next tests <up to 3>
+
+  OPEN CHECKS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - The change you want to test, and where it sits
+    - The main number and its current value
+    - Your weekly traffic
+    - The smallest gain worth acting on
+    - After the test, visitors and conversions for each version (optional)
+  prerequisites:
+    - A tool that can split visitors at random, such as your email platform or a website testing tool
+    - A way to count conversions for each version
+  output:
+    - name: Experiment plan
+      contains: Problem, hypothesis, main and guardrail numbers, versions and risks in one page.
+    - name: Sample size and run time
+      contains: Visitors needed per version, the sum behind it and the minimum days to run.
+    - name: Stop rules and rollback
+      contains: What ends the test early, what does not, and how to undo the change.
+    - name: Experiment readout
+      contains: Each version's rate, the gap, a likely range and a go or no-go call.
+    - name: Learnings and next tests
+      contains: What you learned and up to three tests to run next.
+    - name: Open checks
+      contains: Tracking and maths to verify before you ship.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A longer chat can hold the plan, then read the result with the same targets after the test ends.
+    - name: Google Sheets or Excel
+      why: Use them to double-check the sample size and the gap, which the AI works out by hand.
+  inputs:
+    - Last month's numbers for the page or email, to set the current value.
+    - Your past test log, so the agent does not repeat old tests.
+    - The date of any sale or holiday inside the test window.
+terms:
+  - term: Hypothesis
+    meaning: A claim you can test, such as "A shorter form will raise sign-ups by 10%".
+  - term: Control and variant
+    meaning: The control is what you have now. The variant is the new version you want to try.
+  - term: Guardrail number
+    meaning: A number that must not get worse, even if the main number improves, such as refund rate.
+  - term: Sample size
+    meaning: How many visitors each version needs before the result can be trusted.
+  - term: Peeking
+    meaning: Looking at results mid-test and stopping when they look good. It raises the odds of a false win.
+tweaks:
+  - what: Mode
+    how: Say plan only, or readout only, so the agent does one job at a time.
+  - what: Risk
+    how: Say how much of your traffic you will risk, such as 10% for the first days, and the plan adds a soft launch.
+  - what: Number of versions
+    how: Say if you have more than two versions. Each extra version needs more visitors.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

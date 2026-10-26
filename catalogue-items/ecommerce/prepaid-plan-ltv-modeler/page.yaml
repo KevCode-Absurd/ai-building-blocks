@@ -1,6 +1,6 @@
 new_slug: prepaid-plan-ltv-modeler
 name: Prepaid plan LTV modeler
-summary: Share prices, costs, buyer retention and proposed discounts. Compare twelve-month profit scenarios for one-time sales and prepaid plans, with evidence gaps.
+summary: Compare twelve-month profit for one-time sales and 3-order or 6-order prepaid plans. Give your prices, costs and discounts. See where your data has gaps.
 job: keep-customers
 thinking: medium
 thinking_why: The work is a set of sums on your numbers, so a mid-level model is enough. Check one segment by hand.
@@ -14,6 +14,10 @@ when:
   - You sell a repeat-use product and want to compare a three-order or six-order prepaid plan.
   - Someone says a prepaid discount is too deep and you want to see the whole picture.
   - You want customers to fund part of your next stock order.
+not_for:
+  - "You sell a one-off product that people buy once: use a simple margin check on one sale, since a prepaid plan has nothing to repeat."
+  - "You only want to plan stock timing and cash: use the Inventory cash planner."
+  - "You want to compare other ways to raise cash: use the Cash lever ranker."
 you_give:
   - Prices, product and fulfilment costs, plus fees and refund allowances at each plan price
   - The discount you plan for each plan, such as 25 percent for 3 orders
@@ -32,6 +36,30 @@ how_to_use:
   - Say how many buyers you think you could move to each plan.
   - Check contribution, data gaps and the delivery schedule before interpreting the custom points. A failed financial gate is not overridden by a high score. Agree on an appropriate test before committing.
   - Ask how the cash collected up front should be booked, from your accountant.
+output_sample:
+  input:
+    - Your prices, product and fulfilment costs, fees and refund allowances
+    - The discount you plan for each prepaid plan
+    - A dated twelve-month cohort of one-time buyers with completed-order counts
+    - The share of buyers you could move to each plan
+    - Your delivery schedule, cash timing and prepaid obligations
+  output:
+    - name: Per order
+      contains: Price after discount, costs, fees, refunds and contribution for each group, with missing inputs marked.
+    - name: Orders
+      contains: The cohort count, completed orders and delivery schedule behind each scenario.
+    - name: Twelve-month contribution
+      contains: One-time, three-order and six-order amounts, with absolute changes and uplift when the baseline is positive.
+    - name: Contribution parity
+      contains: The orders a plan needs to match one-time profit, or the reason there is no target.
+    - name: Mix
+      contains: Your share of buyers per plan, a sum check and the weighted contribution.
+    - name: Cash
+      contains: Dated net receipts against stock cost, plus remaining fulfilment, fee and refund obligations.
+    - name: Custom points
+      contains: Five planning parts scored up to 20 each, with missing checks and a financial gate.
+    - name: First test
+      contains: The group, schedule, assumptions and limits for a small trial of one plan.
 how_it_works:
   - title: Finds profit per order
     text: Subtracts stated costs from the price after discount. Product and fulfilment assumptions are explicit; price-linked fees and refunds are calculated for each group.

@@ -6,11 +6,11 @@ promise: "Turn scripts into videos with AI presenters for training and product g
 use_cases: [make-video]
 categories: [video]
 what_it_does:
-  - Turns a typed script into a video with an AI presenter.
-  - Offers 125 or more stock avatars on paid plans.
-  - Makes a personal avatar from your own footage on the Pro plan.
-  - Translates and dubs a video into other languages.
-  - Adds branded pages and interactive elements to videos.
+  - "Turns a script you write into a video with an AI presenter (checked 26 Oct 2026)."
+  - "Offers 9 avatars on the free plan, 125 or more on Starter and 180 or more on Pro (checked 26 Oct 2026)."
+  - "Makes a personal avatar from a photo or a short video of you. The pricing page lists 5 on Pro. It asks for a live on-camera consent recording (checked 26 Oct 2026)."
+  - "Dubs a video into other languages. The site says 140 or more languages for video, and 130 or more on the dubbing card (checked 26 Oct 2026)."
+  - "Shares a video as a link or an embed, or exports it to a learning system as SCORM (checked 26 Oct 2026)."
 benefits:
   - Make training and how-to videos without filming anyone.
   - Update a video by changing the script, not by reshooting.
@@ -24,8 +24,8 @@ not_for:
   - Videos where a real person on camera builds the trust.
 pricing:
   model: freemium
-  from: "US$29 per month"
-  note: The free Basic plan has a watermark and a small allowance of video minutes. Starter includes 1,250 credits a month. Yearly billing lowers the price.
+  from: "US$19 per month"
+  note: "Prices checked 26 Oct 2026, in US dollars. Basic is free: 500 credits a month, about 10 minutes of video, 9 avatars and a Synthesia watermark. Starter is US$19 a month (US$14 a month billed yearly) with 1,250 credits a month, 125 or more avatars and no logo. Pro is US$89 a month (US$59 billed yearly) with 6,000 credits a month, 180 or more avatars and 5 personal avatars. Enterprise is custom. Minutes are estimates, because use depends on avatars, B-roll and dubbing. The pricing page does not make clear which plan includes the API."
 works_with:
   - elevenlabs
   - canva
@@ -33,6 +33,29 @@ runs_in: [web, api]
 blocks:
   - marketing-video-producer
 alternatives: [heygen, veed, descript, capcut]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Open synthesia.io and click Get started for free. The site says no credit card is needed (checked 26 Oct 2026)."
+  - "Write your script first. Keep a first video short, about 100 to 150 words, so a mistake costs fewer credits to fix."
+  - "Pick a stock avatar, paste the script, and choose the language."
+  - "Generate the video and watch it all the way through. Listen for names, numbers and product words that are said wrong, then fix the script and render again."
+  - "Share the link or embed it. On the free plan the Synthesia watermark stays on. The pricing page says Starter and above can remove the logo."
+needs:
+  - "A finished script. The AI reads it as written, so spell out names and numbers the way you want them said."
+  - "A free account. A card is not needed for Basic."
+  - "Your logo and brand colours, if you want branded pages (optional)."
+  - "A paid plan if you need no watermark, more avatars or a personal avatar."
+  - "For the API: an account and a plan that includes it. We could not confirm which plan that is."
+example:
+  task: "Turn a 150-word onboarding script into a short video with a stock presenter."
+  cost: "The free Basic plan gives 500 credits a month, which Synthesia says covers up to 10 minutes of video (checked 26 Oct 2026). Credit use varies with avatars and extras, so the minutes are an estimate. A short clip fits well inside that."
+  reply: "A video of one presenter reading your script, with a Synthesia watermark on the free plan. Render time and file formats are not stated on the pages we read, so test one clip before you plan a batch."
+not_verified:
+  - "Which plan includes API access. The pricing page showed an API row but did not say which tier has it. Check before you build on it."
+  - "Download formats, resolution and the longest video allowed. The pages we read did not list them."
+  - "How long a render takes. The site says a demo video is emailed in minutes, but it gives no render time for paid plans."
+  - "The Starter price. An earlier note here said US$29 a month. The pricing page on 26 Oct 2026 showed US$19 a month, so check the page again before you pay."
 sources:
+  - https://www.synthesia.io
   - https://www.synthesia.io/pricing

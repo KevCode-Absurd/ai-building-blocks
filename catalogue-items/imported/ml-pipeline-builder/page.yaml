@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Many linked stages must work together and be repeatable.
 new_slug: ml-pipeline-builder
 name: Machine learning pipeline builder
-summary: Describe your data and goal. Get a repeatable pipeline from data prep
-  to training, checks and release.
+summary: Build a machine learning pipeline you can rerun with the same result. Give it your goal and data. You get stages, checks and a release gate.
 job: build-software
 headline: Machine learning pipeline builder
-subhead: A machine learning pipeline you can run again next month and get the
-  same answer. Every stage, from raw data to a released model, has a named
-  input, a named output and a version.
+subhead: A machine learning pipeline you can run again next month and get the same answer. Every stage, from raw data to a released model, has a named input, a named output and a version.
 explain: |
   A machine learning pipeline you can run again next month and get the same answer. Every stage, from raw data to a released model, has a named input, a named output and a version.
 
@@ -18,6 +15,10 @@ when:
   - You need a model release that only happens when it beats a set score.
   - You must explain which data and code produced the model in production.
   - You want retries and a rollback plan before the first failure, not after.
+not_for:
+  - "You only want a one-off analysis or a notebook with no path to release: keep it in a notebook, or ask a data analyst to run it once."
+  - "You need to pick or tune a model: do that first with your own team, then come back to build the pipeline around it."
+  - "You want your AI to deploy the model to production for you: this skill plans the steps and needs your approval before any release, so use your own release process."
 you_give:
   - Your goal and the score a model must reach
   - Where the data lives and how often it changes
@@ -31,8 +32,32 @@ you_get:
   - Pass or fail rules for release
   - Retry, backfill and rollback steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Add your goal, the score a model must reach, where your data lives and how often it changes.
+  - Share your current training and evaluation code. Say where the model will run and any cost or privacy limits.
+  - Let your AI read your project files and run code if it can. Without that, it gives a plan and sample code, and you test it yourself.
+  - Check the graph and the release rules before you accept anything. Nothing should be released without your approval.
+  - Next, wire the pipeline into your CI system or model registry review, and keep the gate results with each release.
+output_sample:
+  input:
+    - Your goal and the score a model must reach
+    - Where your data lives and how often it changes
+    - Your current training and evaluation code
+    - Where the model will run and your limits on cost, speed or privacy (optional)
+  prerequisites:
+    - An AI that can read your project files and run code, for the testing step
+  output:
+    - name: Dependency graph
+      contains: Each pipeline stage and the files that pass between them, from raw data to a registered model.
+    - name: Pipeline definition
+      contains: The versioned pipeline code, built in the tools you already use for code, storage and scheduling.
+    - name: Stage schemas
+      contains: The named inputs and outputs for every stage, so a missing file stops the run.
+    - name: Versioning rules
+      contains: How data, model and environment versions are pinned so a run can be repeated.
+    - name: Evaluation and promotion gates
+      contains: The pass or fail rules a model must meet before release, and what happens when it fails.
+    - name: Operations plan
+      contains: Retries, backfills, logging and how to roll back to the last good model.
+    - name: Verification record
+      contains: What was tested, such as repeat runs and forced failures, and what passed.

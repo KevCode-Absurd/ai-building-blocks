@@ -2,34 +2,71 @@ thinking: low
 thinking_why: It adds up revenue by location.
 new_slug: revenue-by-location-reporter
 name: Revenue by location reporter
-summary: Run it on your orders. Get revenue for each warehouse or fulfillment
-  location, ready for a split profit view.
+summary: See how much revenue each warehouse or fulfillment location ships. Get Shopify orders totalled by location, with counts and share, over your window.
 job: run-your-store
 headline: Revenue by location reporter
-subhead: Revenue split by the warehouse or fulfilment centre that shipped each
-  order, so you can judge every location's profit on its own. It reads your
-  Shopify data only and changes nothing.
+subhead: Give it your Shopify store and a number of days. It finds which location shipped each order and adds up the totals. You get revenue, order count and share for each warehouse, ready for a profit view by site.
 explain: |
-  Revenue split by the warehouse or fulfilment centre that shipped each order, so you can judge every location's profit on its own. It reads your Shopify data only and changes nothing.
+  If you ship from more than one warehouse, one revenue number hides which site does the work. This revenue by location report splits your Shopify sales by the location that shipped each order. It shows where your orders really leave from.
 
-  The skill first lists your active locations. It then pulls shipped orders for the window you choose, 30 days by default, and attaches each order's total to the location that fulfilled it. Closed fulfilment orders fill gaps, and any order with no location data goes under Unknown so totals still add up. The output shows revenue per location, ready to place beside costs for a per-site profit view.
+  Your AI lists your active locations, then reads shipped orders for the window you pick, 30 days by default. It adds each order's total to the location that shipped it. Orders with no location go under Unknown, and orders shipped from more than one place go under Split across locations, so totals still add up.
+
+  The totals include tax and shipping and come before refunds. It reads your store only and changes nothing. Revenue is not profit, so place each site's costs beside it.
 when:
   - You ship from more than one warehouse and want a profit view for each.
-  - You are deciding staffing or stock levels by site.
-  - You want to see where demand is actually being fulfilled from.
+  - You are deciding staff or stock levels by site.
+  - You want to see where orders are really being shipped from.
   - Finance asks for revenue by location at month end.
+not_for:
+  - You ship from one location. Every order lands on one line, so the report adds nothing.
+  - You want to know where your customers live. This uses the shipping location, not the customer address.
+  - You want profit, not revenue. Use the Store profit margin calculator.
+  - You want to move orders between locations. Use the Fulfillment location rerouter.
 you_give:
-  - Your Shopify store address
-  - How many days back to report
-  - Output format, readable or JSON (optional)
+  - Your Shopify store address, like mystore.myshopify.com
+  - How many days back to report (optional, default 30)
+  - Readable report or JSON (optional)
 you_get:
-  - Revenue for each fulfilment location
-  - Order counts per location
-  - An Unknown line for orders without a location
-  - Figures ready for a location profit view
+  - Revenue for each fulfillment location
+  - Order count and share of total for each location
+  - An Unknown line and a Split across locations line, so totals add up
+  - A CSV you can sort or share with finance
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Connect your AI to your Shopify store with read-only access to orders. If you have no connection, export your orders with their fulfillment location and paste them in.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Give it your store address and the number of days.
+  - If your window is longer than 60 days, check your access includes read_all_orders. Shopify returns only the last 60 days of orders without it.
+  - Check the Unknown and Split lines. A big Unknown share means orders are missing location data, so trust the other lines less.
+  - Put each location's costs beside its revenue. Rent, staff, shipping and stock decide profit.
+output_sample:
+  input:
+    - Your Shopify store address
+    - How many days back to report (optional)
+    - Readable report or JSON (optional)
+  prerequisites:
+    - Read-only access to your Shopify orders, or an orders export with the location for each order
+    - The read_all_orders permission if your window is longer than 60 days
+  output:
+    - name: Revenue by location report
+      contains: Total revenue, orders included, and a table of orders, revenue and share for each location.
+    - name: Unknown line
+      contains: Orders with no location data, so the totals still add up.
+    - name: Split across locations line
+      contains: Orders shipped from more than one place, with their full totals and a count.
+    - name: revenue_by_location_<date>.csv
+      contains: One row per location with ID, name, order count, revenue, currency and share.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with a Shopify connection
+      why: It reads your orders and locations directly.
+    - name: A spreadsheet
+      why: Lets you place each location's costs beside its revenue.
+  inputs:
+    - Costs for each location, such as rent, staff and shipping
+    - An inventory value report, to work out stock turns for each site
+terms:
+  - term: Fulfillment location
+    meaning: A warehouse, shop or 3PL site that packs and ships your orders.
+  - term: 3PL
+    meaning: A third-party logistics company that stores, packs and ships orders for you.
+  - term: Share
+    meaning: A location's revenue as a percent of all revenue in the window.

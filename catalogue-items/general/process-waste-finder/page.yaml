@@ -1,6 +1,6 @@
 new_slug: process-waste-finder
 name: "Process waste finder"
-summary: "Paste your process step by step. Get each step marked value or waste, the worst waste named and one change to try."
+summary: "Find waste in a slow process. Paste your steps and times. You get each step marked value or waste, the worst waste named and one change to try."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sorts steps and ranks waste with fixed categories, and the arithmetic is simple."
@@ -17,6 +17,10 @@ when:
   - "A process takes weeks and you cannot say why."
   - "You are about to add a tool or a hire to speed up work."
   - "Steps exist that nobody can explain."
+not_for:
+  - Your task is done by one person with no hand-offs. Just list the steps yourself and cut what you don't need.
+  - One step keeps failing and you want to know why. Use a root cause analysis, such as asking why five times, on that step.
+  - You need a go or no-go call on a launch. Use the Go or no-go launch checker.
 
 you_give:
   - "Your process, step by step, with who does each"
@@ -33,6 +37,28 @@ how_to_use:
   - "Paste your steps in order, with who does them and rough times."
   - "Check the owner list. Ask each owner why their step exists."
   - "Try the single change for two weeks, then review the standard."
+output_sample:
+  input:
+    - Your process, step by step, from customer order to money in hand, with who does each step
+    - How long each step takes and how long work waits before the next one (optional)
+    - Where it feels slow or costly (optional)
+  output:
+    - name: Steps
+      contains: A table of each step with who does it, work time, wait time and what it makes.
+    - name: Time line
+      contains: Total time from order to cash, split into work and waiting, with the share of each.
+    - name: Value or waste
+      contains: Each step marked value, needed or waste, with the kind of waste and a one-line reason.
+    - name: Worst waste
+      contains: The biggest waste, the time line evidence for it and what it causes later in the process.
+    - name: Who asked
+      contains: A name or role for every step, a delete list and a watch list of steps that may come back.
+    - name: One change
+      contains: One pull change to try on one step, and how long to try it.
+    - name: Standard
+      contains: A date to review the new way of working.
+    - name: Missing and checks missed
+      contains: Gaps you left out, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Writes each step"

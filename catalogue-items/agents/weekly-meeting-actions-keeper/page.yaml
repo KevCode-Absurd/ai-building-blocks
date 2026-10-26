@@ -1,6 +1,6 @@
 new_slug: weekly-meeting-actions-keeper
 name: Weekly meeting actions keeper
-summary: Give it this week's meeting notes. Get minutes, last week's open actions checked and an agenda for the next meeting.
+summary: Turn your weekly meeting notes into minutes, check last week's open actions, and get the next agenda with late items first.
 job: organise-work
 thinking: low
 thinking_why: It sorts notes into actions and compares two lists. A fast, cheap model does this well. Use a stronger one if your notes are very rough.
@@ -14,6 +14,10 @@ when:
   - You run a weekly team or project meeting and actions keep getting lost.
   - You want to see which items have slipped for weeks, without reading old notes.
   - You want the next agenda ready, led by what is still open.
+not_for:
+  - "You hold a one-off or ad hoc meeting: use a plain minutes template or write a short note yourself, since this agent needs last week's list to compare."
+  - "You only want a running action list with no minutes or agenda: use the Task list keeper on its own."
+  - "You want to send the minutes or cancel a meeting automatically: this agent never sends or cancels, so do that step yourself."
 you_give:
   - This week's rough notes or transcript, with who was there
   - Last week's action list (from the second week on)
@@ -30,6 +34,27 @@ how_to_use:
   - Read the late list and the questions. Fill in any missing owner or date.
   - Send the minutes and agenda yourself, or say yes to one named send.
   - Run it again after next week's meeting. It reads the saved action list.
+output_sample:
+  input:
+    - This week's rough notes or transcript, with who was there
+    - Last week's action list (from the second week on)
+    - What the meeting is for (optional, the first time)
+  prerequisites:
+    - An AI chat that can read pasted text
+    - A folder for meetings and an actions.md file, if you want it saved between weeks (optional, you can paste the list instead)
+  output:
+    - name: This week
+      contains: "One line with actions done, still open, dropped and new, plus the path taken: healthy, slipping or not working."
+    - name: Minutes
+      contains: The bottom line, decisions, actions with owner and date, and open questions.
+    - name: Late and slipping
+      contains: Each late action with its owner, weeks open and the likely reason from the notes.
+    - name: Questions for the owner
+      contains: Missing owners or dates, and a go or no-go question on the meeting if it keeps ending with no decisions.
+    - name: Next agenda
+      contains: A draft agenda with late items first, then open questions, then new topics. Not sent.
+    - name: Files and missing
+      contains: The file saved for each step and every MISSING line in one list.
 how_it_works:
   - title: Write the minutes
     text: Turns the notes into a bottom line, decisions, actions and open questions. A missing owner or date is marked, never invented.

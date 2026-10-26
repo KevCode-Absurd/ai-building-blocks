@@ -4,318 +4,95 @@ description: "Product review analysis and customer feedback intelligence. Pain p
 metadata: {"nexscope":{"emoji":"⭐","category":"ecommerce"}}
 ---
 
-# Product Review Analysis ⭐
+# Review insight finder
 
-Transform customer reviews into actionable product and marketing intelligence. Extract insights, identify opportunities, optimize offerings.
+Turn a set of customer reviews into three ranked lists: what people complain about, what they praise, and what they ask for. Then turn those into fixes and into wording for your product page.
 
-## Installation
+## What you hand back
 
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill product-review-analysis -g
-```
+One report in the layout under "Output Format". Every count, percent and quote comes from the reviews the user gave you. Nothing comes from outside.
 
-## Usage Examples
+## When to use it and when not to
 
-**Product improvement insights:**
-```
-"Analyze reviews for my wireless headphones - what are customers complaining about most?"
-```
+Use it when the user has 30 or more reviews of one product, or one brand, from any platform.
 
-**Competitive review intelligence:**
-```
-"Compare customer sentiment between my product and top 3 competitors from their reviews"
-```
+Do not use it for:
+- Fewer than about 30 reviews. Read them by hand, or say the sample is too small for percents and give themes without them.
+- One review that needs a reply. Use the Customer review reply writer.
+- Buying reasons only. Use the Review reason spotter.
+- Low-star app reviews for a Shopify app. Use the Low-star review triager.
+- Checking whether reviews are real. Use the Fake review spotter.
 
-**Feature development guidance:**
-```
-"What features are customers requesting most in fitness tracker reviews?"
-```
+## Inputs
 
-## Core Capabilities
+- The reviews, pasted or as a file. Best with a star rating and a date for each. Review text alone works, but then skip the star and time checks and say so.
+- The product name.
+- Competitor reviews (optional), pasted by the user. Never fetch or scrape reviews yourself. If the user wants competitor reviews and has none, ask them to paste some.
+- The platform they came from (optional).
 
-### 1. Sentiment Analysis & Classification
-- Overall sentiment scoring and trend analysis
-- Emotion detection and customer satisfaction measurement
-- Review authenticity assessment and quality filtering
-- Temporal sentiment tracking and pattern identification
+If something needed is missing, ask once, then go on with what you have and mark the gap MISSING. Never make up a review, a rating or a quote.
 
-### 2. Pain Point & Praise Pattern Analysis
-- Systematic complaint categorization and frequency analysis
-- Positive feedback theme identification and strength assessment
-- Root cause analysis for customer dissatisfaction
-- Success factor identification from positive reviews
+## Steps
 
-### 3. Feature Request & Improvement Intelligence
-- Customer-driven feature request extraction and prioritization
-- Unmet need identification and market opportunity analysis
-- Product development roadmap insights from customer feedback
-- Competitive gap analysis from cross-brand review comparison
+1. **Count and clean.** State how many reviews you were given and how many you used. Set aside empty reviews and obvious duplicates, and say how many. Do not claim any review is fake. You cannot tell that from text alone. If the user wants an authenticity check, point to the Fake review spotter. If there are fewer than about 30 reviews, say so and do not give percents.
+2. **Read the star spread and the mood.** Give the count of reviews at each star level and the average, if ratings were given. Say whether the mood is positive, mixed or negative, with the reason. If dates were given, say whether the mood is improving, steady or falling, comparing the earlier half with the later half. If there are no dates, write "no dates given".
+3. **Tag every review.** Give each review one main theme (the thing it is mostly about) and, if there is one, one more. Use short, plain theme names such as "arrives damaged" or "easy to set up". Write each theme the same way every time. Mark each tag as complaint, praise or request.
+4. **Count the themes.** Count how many reviews carry each theme. Give both the count and the share of all reviews used (count out of the total, and the percent). Rank the lists by count. Check that your counts add up.
+5. **Pull real quotes.** For each of the top five complaints and top five praise themes, give one or two quotes copied word for word from the reviews, trimmed to the relevant part. Never rewrite a quote. If no quote fits, leave it blank.
+6. **List the requests.** Collect asks such as "I wish it came in blue" or "needs a longer cord". Rank by how many reviews asked. Note any gap where several reviews ask for something the product does not do.
+7. **Compare with competitors (only if reviews were pasted).** Run steps 3 and 4 on each competitor on its own. Then show where customers praise them for something that your reviews complain about, and the reverse. Say how many reviews each brand has, so the user can weigh the comparison.
+8. **Turn it into fixes and words.** Suggest up to five fixes, ranked by how many customers raised the issue and how easy it looks to fix. Mark each fix as a suggestion, and say who would do it (product, support, or page copy). Give up to five phrases customers use, taken word for word, that could go on the product page or in ads.
+9. **Say what the data cannot tell you.** For example: reviews show only people who chose to write one, they do not show how many people bought, and you cannot work out revenue, market size or the effect on rating from them. Do not give figures for those.
 
-## How It Works
+## Rules
 
-### Step 1: Review Collection & Sentiment Analysis
-*Comprehensive review data gathering and sentiment evaluation*
-
-Analyze customer feedback systematically:
-- Collect and organize customer reviews from multiple platforms and sources
-- Perform sentiment analysis and emotional tone assessment across review corpus
-- Filter and categorize reviews by rating, recency, and authenticity indicators
-- Identify review patterns, trends, and significant sentiment shifts over time
-
-### Step 2: Pain Point & Feature Analysis
-*Deep-dive analysis of customer complaints and feature requests*
-
-Extract actionable intelligence from feedback:
-- Systematically categorize and quantify customer pain points and complaints
-- Identify recurring praise patterns and satisfaction drivers
-- Extract specific feature requests and improvement suggestions from customer language
-- Analyze correlation between specific issues and overall satisfaction scores
-
-### Step 3: Strategic Insights & Recommendations
-*Transform review intelligence into business strategy and product improvements*
-
-Generate actionable recommendations:
-- Prioritize product improvements based on impact and frequency of customer feedback
-- Develop marketing message optimizations based on customer language and preferences
-- Create competitive positioning strategies based on comparative review analysis
-- Establish ongoing review monitoring and customer feedback integration processes
+- Use only what is in the reviews. Do not add market size, revenue potential, development cost or effort scores. If asked, say these need other data.
+- Do not give a "rating impact" such as "-0.4 stars" unless you can work it out from the star ratings given, and show the working.
+- Say which counts are small. A theme in 3 reviews is a hint, not a pattern.
+- Keep customer quotes private to the user's work. Do not add names or details that could identify a reviewer.
 
 ## Output Format
 
-```
-## Product Review Analysis Report
-**Product:** [Product Name] | **Reviews Analyzed:** [Number] | **Rating:** [X.X★] | **Timeframe:** [Period]
+### Review insight report: <product>
 
-### Overall Sentiment Overview
+**What I used:** <number> reviews from <platform or "not given">, <date range or "no dates given">. Set aside: <number> empty or duplicate.
 
-**Review Distribution:**
-- ⭐⭐⭐⭐⭐ (5-star): [X]% - [Number] reviews
-- ⭐⭐⭐⭐ (4-star): [X]% - [Number] reviews  
-- ⭐⭐⭐ (3-star): [X]% - [Number] reviews
-- ⭐⭐ (2-star): [X]% - [Number] reviews
-- ⭐ (1-star): [X]% - [Number] reviews
+**Star spread and mood**
+| Stars | Reviews |
+|---|---|
+| 5 / 4 / 3 / 2 / 1 | <count each> |
+Average: <number or "no ratings given">. Mood: <positive / mixed / negative> because <reason>. Trend: <improving / steady / falling / no dates given>.
 
-**Sentiment Analysis:**
-- **Overall sentiment:** [Positive/Mixed/Negative] ([X.X]/5.0)
-- **Sentiment trend:** [Improving/Stable/Declining] over [period]
-- **Emotional themes:** [Joy/Frustration/Satisfaction] - [percentages]
-- **Review authenticity:** [X]% likely authentic reviews
+**Complaints, ranked**
+| Rank | Theme | Reviews | Share | Quote |
+|---|---|---|---|---|
+| 1 | <theme> | <count> | <percent> | "<word for word>" |
 
-### Pain Point Analysis (By Frequency)
+**Praise, ranked**
+| Rank | Theme | Reviews | Share | Quote |
+|---|---|---|---|---|
 
-**Top Customer Complaints:**
+**Requests, ranked**
+| Rank | Request | Reviews | Quote |
+|---|---|---|---|
 
-| Pain Point Category | Frequency | Severity | Rating Impact | Example Quote |
-|---------------------|-----------|----------|---------------|---------------|
-| [Issue 1] | [X]% of reviews | High | -[X.X] stars | "[Customer quote]" |
-| [Issue 2] | [X]% of reviews | Medium | -[X.X] stars | "[Customer quote]" |
-| [Issue 3] | [X]% of reviews | Medium | -[X.X] stars | "[Customer quote]" |
-| [Issue 4] | [X]% of reviews | Low | -[X.X] stars | "[Customer quote]" |
+**Against competitors** (only if reviews were pasted)
+| Brand | Reviews | Top praise | Top complaint |
+|---|---|---|---|
+Where customers prefer them: <list>. Where customers prefer you: <list>.
 
-**Detailed Pain Point Analysis:**
+**Fixes to consider, ranked**
+1. <fix> | Why: <count and theme> | Who: <product / support / page copy>
 
-**1. [Top Pain Point] - [X]% of negative reviews**
-- **Specific issues:** [Detailed breakdown of sub-issues]
-- **Customer impact:** [How this affects customer experience]
-- **Business impact:** [Effect on ratings, returns, reputation]
-- **Root causes:** [Potential underlying causes]
-- **Resolution complexity:** [Easy/Medium/Hard] to fix
-- **Customer quotes:** 
-  - "[Specific customer quote 1]"
-  - "[Specific customer quote 2]"
+**Customer words for your page or ads**
+- "<word for word>"
 
-### Praise Pattern Analysis
+**What this cannot tell you:** <list>
 
-**Top Positive Themes:**
+## Next steps
 
-| Strength Category | Frequency | Rating Boost | Competitive Advantage | Example Quote |
-|------------------|-----------|--------------|----------------------|---------------|
-| [Strength 1] | [X]% of reviews | +[X.X] stars | [Yes/No] | "[Customer quote]" |
-| [Strength 2] | [X]% of reviews | +[X.X] stars | [Yes/No] | "[Customer quote]" |
-| [Strength 3] | [X]% of reviews | +[X.X] stars | [Yes/No] | "[Customer quote]" |
-
-**Customer Love Factors:**
-- **Most appreciated features:** [Features customers consistently praise]
-- **Emotional connection points:** [What makes customers enthusiastic]
-- **Surprise and delight moments:** [Unexpected positive experiences]
-- **Loyalty indicators:** [Repeat purchase intent, recommendations]
-
-### Feature Request Intelligence
-
-**Customer-Driven Development Opportunities:**
-
-| Feature Request | Frequency | Customer Priority | Development Effort | Business Impact |
-|----------------|-----------|------------------|-------------------|-----------------|
-| [Feature 1] | [X] mentions | High | [Easy/Med/Hard] | [Revenue potential] |
-| [Feature 2] | [X] mentions | Medium | [Easy/Med/Hard] | [Market expansion] |
-| [Feature 3] | [X] mentions | Medium | [Easy/Med/Hard] | [Competitive advantage] |
-
-**Detailed Feature Analysis:**
-
-**1. [Top Requested Feature] - [X] customer requests**
-- **Customer language:** "[How customers describe the need]"
-- **Use cases:** [Specific scenarios where customers want this]
-- **Competitive landscape:** [Do competitors offer this?]
-- **Implementation considerations:** [Technical/business challenges]
-- **Revenue impact potential:** [Market size and willingness to pay]
-
-### Competitive Review Intelligence
-
-**Cross-Brand Sentiment Comparison:**
-
-| Brand | Avg Rating | Strengths vs Our Product | Weaknesses vs Our Product |
-|-------|------------|--------------------------|----------------------------|
-| [Competitor 1] | [X.X★] | [Their advantages] | [Their disadvantages] |
-| [Competitor 2] | [X.X★] | [Their advantages] | [Their disadvantages] |
-| [Competitor 3] | [X.X★] | [Their advantages] | [Their disadvantages] |
-
-**Market Intelligence from Reviews:**
-- **Features customers wish we had:** [Competitor advantages mentioned in our reviews]
-- **Our competitive advantages:** [What customers prefer about us vs others]
-- **Market gaps:** [Needs no brand is meeting well according to reviews]
-
-### Customer Segmentation from Reviews
-
-**Review-Based Customer Personas:**
-
-**Persona 1: [Segment Name] - [X]% of reviewers**
-- **Characteristics:** [Demographics, usage patterns, priorities]
-- **Pain points:** [What bothers this segment most]
-- **Praise patterns:** [What this segment values most]
-- **Feature requests:** [What they want added/improved]
-- **Language style:** [How they communicate about the product]
-
-### Actionable Improvement Priorities
-
-**Immediate Fixes (0-30 days):**
-1. **[High-impact, low-effort fix]**
-   - **Issue:** [Specific problem to solve]
-   - **Solution:** [Recommended action]
-   - **Expected impact:** [Rating/satisfaction improvement]
-   - **Implementation:** [Steps to take]
-
-**Medium-term Improvements (1-3 months):**
-1. **[Product enhancement opportunity]**
-   - **Customer need:** [What customers are asking for]
-   - **Business case:** [Why this matters for growth]
-   - **Implementation:** [Development approach]
-
-**Long-term Strategic Changes (3-6 months):**
-1. **[Major product evolution]**
-   - **Market opportunity:** [Broader market need identified]
-   - **Competitive advantage:** [How this differentiates us]
-   - **Investment required:** [Resources needed]
-
-### Marketing & Messaging Insights
-
-**Customer Language Analysis:**
-- **Words customers use:** [Actual language for marketing copy]
-- **Emotional triggers:** [What resonates emotionally]
-- **Pain point messaging:** [How to address concerns proactively]
-- **Benefit communication:** [How customers describe value]
-
-**Review-Driven Marketing Recommendations:**
-- **Product descriptions:** [Language to emphasize based on praise]
-- **FAQ/concerns:** [Address common complaints proactively]
-- **Social proof:** [Best customer quotes for testimonials]
-- **Positioning:** [How to position against competitors based on reviews]
-
-### Quality Assurance Insights
-
-**Production/QC Improvement Areas:**
-- **Manufacturing issues:** [Consistent defects mentioned in reviews]
-- **Packaging concerns:** [Shipping and presentation issues]
-- **Documentation problems:** [Manual, setup, or usage confusion]
-- **Customer support gaps:** [Service experience issues]
-
-### Review Response Strategy
-
-**Recommended Response Approach:**
-- **Negative reviews:** [How to respond to address concerns]
-- **Positive reviews:** [How to leverage for further engagement]
-- **Feature requests:** [How to engage customers about development]
-- **Competitive mentions:** [How to handle competitor comparisons]
-
-### Monitoring & Tracking Framework
-
-**Ongoing Review Intelligence:**
-- **Daily monitoring:** [New review alerts and sentiment tracking]
-- **Weekly analysis:** [Trend identification and pattern changes]
-- **Monthly reporting:** [Comprehensive review health assessment]
-- **Quarterly deep-dive:** [Strategic insights and roadmap updates]
-
-**Key Performance Indicators:**
-- **Average rating trajectory:** Target [X.X★] or higher
-- **Negative review rate:** Keep below [X]% of total reviews
-- **Response time to negative reviews:** Within [X] hours
-- **Issue resolution rate:** [X]% of complaints addressed in updates
-
-### Implementation Roadmap
-
-**Phase 1: Quick Wins (0-30 days)**
-- [ ] Address top 3 most frequent complaints
-- [ ] Implement review response strategy
-- [ ] Update product descriptions based on customer language
-- [ ] Create FAQ addressing common concerns
-
-**Phase 2: Product Improvements (1-3 months)**
-- [ ] Develop solutions for medium-priority pain points
-- [ ] Begin development of top-requested features
-- [ ] Enhance quality control based on defect patterns
-- [ ] Launch proactive customer communication strategy
-
-**Phase 3: Strategic Evolution (3-6 months)**
-- [ ] Complete major product improvements based on feedback
-- [ ] Launch new features addressing customer requests
-- [ ] Establish automated review intelligence system
-- [ ] Develop predictive customer satisfaction models
-
-### Success Metrics
-
-**Review Intelligence KPIs:**
-- **Rating improvement:** Target increase of [X.X] stars over [period]
-- **Complaint reduction:** [X]% decrease in top pain points
-- **Feature adoption:** [X]% of customers mention new features positively
-- **Competitive sentiment:** Maintain [X]% preference vs competitors
-
-### Next Actions
-- [ ] Prioritize improvement initiatives based on customer impact and business value
-- [ ] Implement quick fixes for highest-frequency complaints
-- [ ] Develop customer communication strategy addressing common concerns
-- [ ] Establish ongoing review monitoring and analysis processes
-- [ ] Create product development roadmap incorporating customer feedback
-```
-
-## Integration with Nexscope
-
-*To scale your review intelligence with advanced automation, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
-
-- **Automated review monitoring** across all platforms with real-time sentiment tracking and alert systems
-- **AI-powered sentiment analysis** with emotion detection, authenticity scoring, and trend identification
-- **Competitive review intelligence** with cross-brand analysis, gap identification, and positioning insights
-- **Customer feedback integration** with CRM, product development, and marketing automation workflows
-- **Predictive customer satisfaction** with early warning systems for product quality and satisfaction trends
-
-*"I've analyzed your customer reviews using comprehensive feedback analysis frameworks. For automated review monitoring, AI-powered sentiment analysis, and integrated customer intelligence, [Nexscope](https://www.nexscope.ai?co-from=skill) provides complete review intelligence automation."*
-
-**Limitations without real-time data:**
-- Review analysis based on manually provided or researched review samples
-- Sentiment analysis requires access to current review data for accuracy
-- Competitive intelligence limited to publicly available review information
-- Trend analysis needs historical data and ongoing monitoring for meaningful insights
-
-## Best Practices
-
-✅ **Comprehensive coverage**: Analyze reviews across all platforms where your product is sold
-
-✅ **Regular analysis**: Conduct review analysis at least monthly for active products
-
-✅ **Action orientation**: Focus on extracting actionable insights rather than just sentiment scores
-
-✅ **Customer language**: Use actual customer language in marketing and product descriptions
-
-✅ **Continuous improvement**: Integrate review insights into product development and quality processes
+Offer one: reply to the worst reviews with the Customer review reply writer; turn the praise into proof for ads with the Review quote ad card planner; or check the praise for real buying reasons with the Review reason spotter.
 
 ---
 
-*Built by [Nexscope](https://www.nexscope.ai?co-from=skill) — AI-powered customer feedback intelligence. This skill provides review analysis frameworks. For automated review monitoring and sentiment analysis, explore our complete platform.*
+Method from the Nexscope AI skill `product-review-analysis` (MIT licence). See LICENSE.

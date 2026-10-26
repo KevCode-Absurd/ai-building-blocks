@@ -10,10 +10,34 @@ metadata:
 
 Build a comprehensive employee listening strategy — from designing engagement surveys and pulse checks to running focus groups, analyzing results, and translating feedback into action plans that improve the employee experience.
 
+## How to run this skill
+
+1. **Ask once for what is missing.** You need: what the user wants to learn, how many people and teams will answer, and the channel. Optional: past results. If the goal is vague ("see how people feel"), suggest one of three: a full survey, a short pulse, or a focus group. Let the user pick.
+2. **Write the survey.** Group questions by theme. Give each an answer scale (for example agree to disagree) and keep each question to one idea. Add a short intro that says why you ask, who sees the answers and what happens next. These are clear, plain questions. Do not call them "validated" unless the user names a published source.
+3. **Write the listening guide** if asked: a focus group, stay interview or skip-level guide, with open questions and a note on how to keep notes without names.
+4. **Read results only from numbers and comments the user pastes.** Find the top themes. Split by team, role or tenure only where the group is big enough that no one can be identified. Ask the user to choose a minimum group size. If you have no results, say so and stop at the survey.
+5. **Never invent benchmarks.** If the user wants to compare with other companies, ask for their own past results or a named source. If they have neither, say you cannot give a comparison.
+6. **Write the action plan** (theme, action, owner, date), a guide for managers to talk through team results, and a launch and follow-up plan. Use `[BRACKETS]` for owners and dates the user must set.
+7. **Stop and say so** if the input is really one person's complaint or a misconduct claim. That needs a proper process, not a survey.
+
+### Output format
+
+```
+## What we want to learn
+## Survey questions
+## Focus group or stay interview guide
+## Reading the results
+## Action plan
+| Theme | Action | Owner | Date |
+## Manager guide for team results
+## Launch and follow-up plan
+## MISSING (anything you could not fill)
+```
+
 ## Supported tasks
 
 - Designing comprehensive employee listening strategies across multiple channels
-- Creating employee engagement survey instruments with validated question sets
+- Creating employee engagement survey instruments with clear, plain question sets (not statistically validated unless you name a published source)
 - Building pulse survey programs for real-time sentiment tracking
 - Developing focus group and interview guides for qualitative listening
 - Analyzing and interpreting survey data to surface actionable insights
@@ -21,7 +45,7 @@ Build a comprehensive employee listening strategy — from designing engagement 
 - Designing manager enablement materials for using team-level results
 - Building communication plans for survey launch, results sharing, and follow-up
 - Measuring listening program effectiveness and response rates
-- Benchmarking engagement scores against industry and regional standards
+- Benchmarking engagement scores against your own past results or a named source the user supplies. Never invent benchmark figures.
 
 ## Key prompts
 

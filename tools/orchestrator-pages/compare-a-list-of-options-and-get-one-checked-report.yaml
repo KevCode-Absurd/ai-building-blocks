@@ -1,6 +1,6 @@
 new_slug: compare-a-list-of-options-and-get-one-checked-report
 name: Compare a list of options and get one checked report
-summary: Name a topic. Get a list of items to compare, each one researched, and one report without unsure answers.
+summary: Compare many options with one checked report. Give a topic and get each item researched, with unsure answers left out and gaps shown.
 job: research-topics
 thinking: high
 thinking_why: It runs many searches and keeps track of unsure answers, so it needs your strongest model and time.
@@ -14,6 +14,10 @@ when:
   - You must compare ten or more tools, vendors or competitors.
   - You need a market or literature map with the same questions asked of each item.
   - You want a report where every answer has a source and gaps are visible.
+not_for:
+  - "You only have about three items to compare: search each one yourself, it is faster."
+  - "You need a decision memo or a final pick: use the report from this workflow as input, then ask your AI to write the memo."
+  - "You need one deep answer on a single company or paper: ask your AI one focused question and check the source yourself."
 you_give:
   - The topic, such as "AI note-taking apps for small teams"
   - The time range that matters, such as since 2024
@@ -30,6 +34,24 @@ how_to_use:
   - Give the topic and time range. Trim the list of items and fields when it asks.
   - Approve the first small batch before it does the rest.
   - Choose which numbers show in the contents list of the report.
+output_sample:
+  input:
+    - Your topic, in a few words
+    - The time range that matters
+    - Items that must be included (optional)
+    - The fields you care about most (optional)
+  prerequisites:
+    - An AI that can search the web and work with files, such as Claude Code or a Claude Project
+    - Time for many searches, so plan for a small first batch
+  output:
+    - name: Research outline
+      contains: The list of items to compare and the questions to answer for each one.
+    - name: Item files
+      contains: One file per item, with answers, their sources and any unsure answers marked.
+    - name: Report
+      contains: One document with a contents list and a section per item, with unsure answers left out.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the research outline
     text: Builds a first list of items and the questions to answer for each, searches the web for items and fields that are missing and asks you to confirm.

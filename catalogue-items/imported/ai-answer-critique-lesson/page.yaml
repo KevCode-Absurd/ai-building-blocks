@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It turns critical thinking standards into plain questions.
 new_slug: ai-answer-critique-lesson
 name: AI answer critique activity builder
-summary: Give it a subject. Get a worksheet that has students judge an AI answer
-  on clarity, evidence and fairness.
+summary: Build an AI answer critique worksheet for your class. Students mark up an AI answer and score it on six standards of clear thinking.
 job: teach-and-train
 headline: AI answer critique activity builder
-subhead: "A class worksheet set that teaches students to read an AI answer
-  closely instead of trusting how smooth it sounds. It is built around six
-  standards for judging claims: clear, accurate, precise, relevant, deep and
-  broad."
+subhead: "A class worksheet set that teaches students to read an AI answer closely instead of trusting how smooth it sounds. It is built around six standards for judging claims: clear, accurate, precise, relevant, deep and broad."
 explain: |
   A class worksheet set that teaches students to read an AI answer closely instead of trusting how smooth it sounds. It is built around six standards for judging claims: clear, accurate, precise, relevant, deep and broad.
 
@@ -19,6 +15,10 @@ when:
   - You need a ready activity on judging AI text for your subject.
   - You want students to give reasons for what they trust, not just opinions.
   - You want a teacher script to show how a close read sounds.
+not_for:
+  - You want students to check facts in an AI answer. Use a fact-check step with trusted sources, or ask a librarian.
+  - Your subject has one right answer, like maths or languages. Check the working step by step instead.
+  - You need a full critical thinking unit with tasks. Write those tasks yourself or with your own AI chat.
 you_give:
   - Your subject and year level
   - A topic or question for the AI to answer
@@ -30,7 +30,26 @@ you_get:
   - Sentence starters for pushing back
   - A teacher modelling script
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full SKILL.md text into the chat.
+  - Add your subject, your students' year level, and the AI answer you want them to audit. If you have no answer yet, describe the kind you want.
+  - Say which standards to focus on, or ask for all six.
+  - Read the result. Check that the failure modes fit your subject, then print the rubric and stems for class.
+  - Next, plan follow-up tasks with the critical-thinking-task-designer, and check facts with the ai-hallucination-fact-check-protocol.
+output_sample:
+  input:
+    - Your subject and year level
+    - The AI answer to audit, or a short description of the kind of answer (for example, a revision explanation)
+    - The task the AI answer was made for (optional)
+    - Which of the six standards to focus on (optional)
+  output:
+    - name: AI Failure Mode Analysis
+      contains: The ways AI text tends to go wrong for this kind of answer and subject.
+    - name: Annotation Protocol
+      contains: Step-by-step instructions for how students mark up the AI answer.
+    - name: Audit Rubric
+      contains: A grid that rates each of the six standards as weak, medium or strong.
+    - name: Push-Back Stems
+      contains: Sentence starters students use to question the AI answer.
+    - name: Teacher Modelling Script
+      contains: A script for reading the first part of the answer aloud and thinking it through.

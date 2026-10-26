@@ -1,0 +1,156 @@
+name: 3D & Scene Developer agent
+summary: Plan a 3D web map scene with terrain, buildings or LiDAR, lighting, camera and speed checks for Cesium or ArcGIS. Get a build plan you can follow.
+headline: 3D & Scene Developer agent
+subhead: Tell it what the scene must show and what data you have. The agent picks the scene type and 3D engine, sets the build order and plans tiling, lighting, camera and access. You get a build plan and a test list.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A 3D map scene can look great on a gaming laptop and then freeze on a meeting room tablet. The usual causes are heavy data, loaded all at once, and a camera that starts in the wrong place. This 3D web map agent plans the scene so it loads and reads well on the devices your viewers use.
+
+  It starts with a data inventory: terrain, buildings, imagery, 3D models and point clouds. It checks that everything shares one horizontal and vertical datum. Then it sets the build order, from terrain base to imagery, 3D features, labels and controls. It plans tiling and streaming, because proper tiling does most of the work for speed. It also asks whether you need 3D at all, since 2D is better for plain data.
+
+  It plans scenes in CesiumJS, the ArcGIS JavaScript API, MapLibre, Three.js and Deck.gl. It cannot run a scene or measure speed. The checks are for you to run on your real devices. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience claims are not results measured by AI Blocks.
+when:
+  - You have a terrain model or city data and want a 3D flyover on a web page.
+  - You have LiDAR point clouds and want people to view and measure them in a browser.
+  - Your 3D scene loads slowly or fails on tablets and phones.
+  - You must choose between Cesium and the ArcGIS JavaScript API for a 3D project.
+not_for:
+  - "You want a normal 2D web map: use the Web GIS Developer agent."
+  - "You want to bring building models (BIM) into a map: use the BIM/GIS Specialist agent."
+  - "You want to make a 3D mesh from drone photos: use the Drone/Reality Mapping Specialist agent."
+  - "You want map colors and labels designed: use the Cartography Designer agent."
+you_give:
+  - What the scene must show and the one thing viewers should learn
+  - "Your data: terrain, buildings, imagery, 3D models or point clouds, with format and size"
+  - The area covered, and the coordinate system and height reference if you know them
+  - Who views it and on what devices, such as office laptops or a wall tablet
+  - The 3D engine you already use, such as Cesium or ArcGIS (optional)
+  - Whether the scene is public or needs sign-in (optional)
+you_get:
+  - A scene type and 3D engine choice, with reasons
+  - A data check list, including coordinate system and height reference alignment
+  - A build order from terrain to controls
+  - A speed plan covering tiling, simplifying and streaming
+  - Lighting and starting camera settings
+  - An access plan and a test list for your devices
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Write your brief. Say what the scene shows, list each data layer with its format and size, and name the devices. Never paste real keys or passwords. Use a placeholder.
+  - Say 'Plan this 3D scene. Do not guess my data sizes.' Your AI asks once for what is missing.
+  - Read the engine choice and the question 'does this need 3D?' first. Change them if you must use a platform you already have.
+  - Build the scene in a test page or your GIS tool. The AI cannot run it, so test on your real devices and time the first load.
+  - Send back what you see, such as load time or errors, and ask for fixes.
+how_it_works:
+  - title: Collect the brief
+    text: It confirms the scene's job, data, devices and access. It asks once for anything missing, then marks it MISSING.
+  - title: Check the 3D need and choose the engine
+    text: It says if 2D would do the job better, then picks a scene type and engine for your use.
+  - title: Inventory and align the data
+    text: It lists each layer and checks they share one horizontal and vertical datum.
+  - title: Plan the build order
+    text: It sets terrain base, imagery, 3D features, labels and interactions in that order.
+  - title: Plan speed
+    text: It plans tiling, simpler shapes, streaming and level of detail, so nothing loads in full.
+  - title: Plan style, camera and access
+    text: It sets lighting and a starting camera, then sets the scene private by default with a clear sign-in message.
+  - title: List the tests
+    text: It lists checks for each device, load time and the sign-in flow.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Scene job <what it shows> | Data <list with format and size> | Devices <list>
+    Assumed: <list> | MISSING: <list>
+
+  DOES THIS NEED 3D
+    <yes or no> | <reason> | <2D part to keep>
+
+  SCENE TYPE AND ENGINE
+    <scene type> | <engine> | <reason> | <trade-off> | <runner-up>
+
+  DATA INVENTORY
+    <layer> | <format> | <size> | <datum check> | <prep step>
+
+  BUILD ORDER
+    <step number> | <layer or task> | <setting>
+
+  SPEED PLAN
+    <layer> | <tiling or simplifying> | <why>
+
+  STYLE AND CAMERA
+    Lighting <sun, shadows, time of day> | Start view <what it frames> | Controls <list>
+
+  ACCESS
+    <public or sign-in> | <sign-in message> | <test for loops and cross-site errors>
+
+  TESTS
+    <number> | <device> | <check> | <what a pass looks like>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - What the scene must show and who views it
+    - Each data layer with its format and size
+    - The devices viewers will use
+    - Public or sign-in access (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A test page or GIS tool where you can try the scene
+  output:
+    - name: Brief and assumptions
+      contains: The scene's job, data and devices as understood, with assumptions and MISSING items.
+    - name: Does this need 3D
+      contains: A yes or no with the reason, and any part that is better in 2D.
+    - name: Scene type and engine
+      contains: The scene type and 3D engine, with the reason, trade-off and runner-up.
+    - name: Data inventory
+      contains: Each layer with format, size, datum check and the prep step it needs.
+    - name: Build order
+      contains: Numbered steps from terrain base to labels and controls.
+    - name: Speed plan
+      contains: How each layer is tiled, simplified or streamed.
+    - name: Style, camera and access
+      contains: Lighting, the starting view, controls and the sign-in setup.
+    - name: Tests and open questions
+      contains: Device checks with what a pass looks like, and what is still unknown.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Devices
+    how: Name the weakest device viewers will use, since it sets how much detail you can load.
+  - what: Engine
+    how: Say if you must use Cesium or ArcGIS, so the plan works inside it.
+  - what: Scene type
+    how: Say if it is a terrain flyover, city, underground, indoor or point cloud scene.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: 3D Tiles
+    meaning: A web format that cuts a large 3D scene into pieces that load as you move.
+  - term: Point cloud
+    meaning: Millions of measured points, often from LiDAR, that outline a place in 3D.
+  - term: LiDAR
+    meaning: A laser survey method that measures height and shape from the air or ground.
+  - term: DEM, DTM and DSM
+    meaning: Height maps. DTM is bare ground, DSM includes buildings and trees, and DEM is the general term.
+  - term: Level of detail
+    meaning: Showing simple shapes far away and fine detail up close.
+  - term: Datum
+    meaning: The reference that horizontal position or height is measured from.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan works from a pasted profile and your brief.
+    - name: Claude Code
+      why: It can read your project and data files, so the plan fits your real layers.
+  inputs:
+    - A list of your files with format and size, such as the first lines of a file listing.
+    - A screenshot of an existing scene that runs slowly.

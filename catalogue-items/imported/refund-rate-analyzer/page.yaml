@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It finds the cause behind the numbers.
 new_slug: refund-rate-analyzer
 name: Refund rate analyzer
-summary: Pick products, collections or dates. Get refund rates that point to
-  quality or listing problems.
+summary: Find which products, vendors or months get the most refunds. Give it your Shopify store and get a refund rate analysis for each group.
 job: run-your-store
 headline: Refund rate analyzer
-subhead: Which products get sent back most? This gives you a refund rate for
-  each product, vendor or time period, so you can see where quality or listing
-  problems hide.
+subhead: Which products get sent back most? This gives you a refund rate for each product, vendor or time period, so you can see where quality or listing problems hide.
 explain: |
   Which products get sent back most? This gives you a refund rate for each product, vendor or time period, so you can see where quality or listing problems hide.
 
@@ -18,6 +15,10 @@ when:
   - You suspect a supplier ships faulty stock.
   - A product page may promise more than the product delivers.
   - You want a monthly refund check for your finance review.
+not_for:
+  - Your store has only a few orders in the window, so use a simple look through your Shopify refunds list by hand.
+  - You track returns in a separate system, so export that data and read it in a spreadsheet such as Google Sheets.
+  - You want to know why customers return items, so read the return reasons first, since this only shows how often items come back.
 you_give:
   - Store domain
   - Days to look back
@@ -29,8 +30,29 @@ you_get:
   - Notes on likely quality or listing issues
   - Output as plain text or JSON
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot read your store.
+  - Log in to your store with the Shopify command line and allow it to read orders.
+  - Open the skill and give your AI your store domain. Add the days to look back and how to group the results if you want to change the defaults.
+  - Let it run. It reads your orders and never changes anything.
+  - Read the ranked list and open the CSV file. Check the products with the highest refund rates first.
+output_sample:
+  input:
+    - Your store domain
+    - How many days back to look (optional)
+    - "How to group results: product, vendor or period (optional)"
+    - Minimum orders per group (optional)
+    - "Output style: plain text or JSON (optional)"
+  prerequisites:
+    - An AI that can run commands on your computer
+    - A Shopify command line session that is logged in with permission to read orders
+  output:
+    - name: Start banner
+      contains: Your store domain and the time the check began.
+    - name: Step log
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Summary
+      contains: Orders checked, orders with refunds, overall refund rate and total refunded.
+    - name: Group list
+      contains: Each group with units sold, units refunded and refund rate, for the grouping you chose.
+    - name: refund_rate CSV file
+      contains: One row per group with units sold, refunded units, refund rate, refund amount and currency.

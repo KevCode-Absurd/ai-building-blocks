@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It lists and matches devices.
 new_slug: connected-hardware-finder
 name: Connected hardware finder
-summary: Ask what devices are plugged in. Get them listed with the add-ons each
-  one needs.
+summary: Find out what hardware is plugged into your computer and which MATLAB add-ons each device needs. Ask in plain words and get a clear list.
 job: build-software
 headline: Connected hardware finder
-subhead: A quick answer to what hardware is plugged into your computer and what
-  MATLAB add-ons each device needs. You stop hunting through menus to see why a
-  board is not recognised.
+subhead: A quick answer to what hardware is plugged into your computer and what MATLAB add-ons each device needs. You stop hunting through menus to see why a board is not recognised.
 explain: |
   A quick answer to what hardware is plugged into your computer and what MATLAB add-ons each device needs. You stop hunting through menus to see why a board is not recognised.
 
@@ -18,6 +15,10 @@ when:
   - You need to know which of your devices support analogue input.
   - A project needs a support package and you are unsure if it is installed.
   - You inherited a lab setup and want an inventory.
+not_for:
+  - "You want to read data from a device or program it: use a device-specific MATLAB skill, since this one only lists and checks."
+  - "You want to install a missing support package: install it yourself in MATLAB, because this skill only reports what is missing."
+  - "You want a list of all MATLAB products you have installed, with no hardware in mind: use the matlab-list-products skill."
 you_give:
   - Your question about devices
   - MATLAB on your computer
@@ -28,8 +29,28 @@ you_get:
   - Details for a named device
   - The support packages you need to install
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB on a computer with the hardware.
+  - Open your AI tool on the computer that has MATLAB and the hardware plugged in. It must be able to run MATLAB code.
+  - Add the skill folder to your AI, or paste in the skill text.
+  - "Ask a plain question, such as: What is connected, and can any of it do CAN?"
+  - Read the reply. It lists each device, whether its add-ons are installed, and which ones are missing.
+  - Install any missing package yourself in MATLAB. Then use a device-specific skill to collect data or program the device.
+output_sample:
+  input:
+    - Your question about devices, such as what is connected or which devices handle CAN
+    - A device name to look up (optional)
+    - A running MATLAB on the computer with the hardware
+  prerequisites:
+    - MATLAB installed on the computer the hardware is plugged into
+    - An AI that can run MATLAB code
+    - A MATLAB licence, and licences for any add-ons you use
+  output:
+    - name: Connected devices
+      contains: A list of the hardware MATLAB can see right now, with each device's name and how it connects.
+    - name: Capability matches
+      contains: The devices that support the thing you asked about, such as CAN or analog input.
+    - name: Device details
+      contains: What a named device is and what it can do, in plain words.
+    - name: Install state
+      contains: Whether the add-ons each device needs are installed, yes or no.
+    - name: Missing packages
+      contains: The support packages you still need to install, listed by name.

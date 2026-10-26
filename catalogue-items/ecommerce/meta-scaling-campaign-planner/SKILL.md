@@ -33,7 +33,7 @@ How to start:
 
 ## What you need
 - **Winning ad sets or post IDs** with daily spend and ROAS or CPA (required).
-- **Order value, product cost, shipping, fees and returns rate** (required).
+- **Order value, product cost, shipping, fees and returns rate** (required). A break-even report from an earlier step covers these.
 - **Blended revenue and total ad spend** for the same dates.
 - **Daily sales**, and **cash available for ads**.
 

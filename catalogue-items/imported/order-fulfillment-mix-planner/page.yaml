@@ -2,36 +2,101 @@ thinking: high
 thinking_why: It trades cost, speed and stock across many sites.
 new_slug: order-fulfillment-mix-planner
 name: Order fulfillment mix planner
-summary: Give it your stores, stock and order types. Get rules for where each
-  online order ships from and a pickup plan.
+summary: Get rules for which store or warehouse ships each online order, plus an in-store pickup plan, from your stock, order types and costs.
 job: plan-supply-chain
 headline: Order fulfillment mix planner
-subhead: A clear rule set for where each online order ships from, plus a plan
-  for in-store pickup. It helps a retailer with shops, warehouses and a website
-  sell more without paying for extra shipping.
+subhead: Give it your shops, warehouses, stock and order types. It compares pickup in store, ship from store and ship from the warehouse. You get routing rules for each order type, a pickup plan and targets to track.
 explain: |
-  A clear rule set for where each online order ships from, plus a plan for in-store pickup. It helps a retailer with shops, warehouses and a website sell more without paying for extra shipping.
+  A shop that also sells online has a choice for every order. Ship it from the warehouse, ship it from a nearby store, or let the customer pick it up. Without clear rules, orders ship from far away while a store down the road sits on the same stock. This order fulfillment planner turns that choice into a written rule set.
 
-  The skill starts with your channel mix, current delivery times, pickup take-up, ship-from-store rate and cost per order. It then compares fulfilment models: buy online and pick up in store, ship from store, ship from the distribution centre and supplier direct. It builds rules for picking the best location per order, balancing speed, cost and stock. It covers inventory visibility, split shipments and pick efficiency, and sets targets to track. Needs your own numbers to give useful answers.
+  It starts with your channel mix, delivery times, pickup rate, ship-from-store rate and cost per order. It compares four models: buy online and pick up in store, ship from store, ship from the distribution centre, and supplier direct. Then it scores each location for each order on speed, cost, stock and workload.
+
+  It also covers split shipments, stock visibility and pick speed, then sets targets to track. All the cost and benefit figures come from your numbers. Where you have none, the plan marks them as missing instead of guessing.
 when:
-  - Your shops have stock but online orders ship from far away.
-  - You want to launch click-and-collect and need a plan.
-  - Split shipments keep driving your costs up.
-  - You are choosing an order management system and need your rules defined
-    first.
+  - Your shops have stock, but online orders ship from far away.
+  - You want to start click-and-collect and need a plan for it.
+  - Split shipments keep pushing your costs up.
+  - You are picking an order management system and need your rules written first.
+not_for:
+  - You sell only online with no stores. Use the online order fulfillment planner.
+  - You need to move open Shopify orders to another location today. Use the fulfillment location rerouter.
+  - You want to pick robots or conveyors for a warehouse. Use the warehouse automation chooser.
 you_give:
   - Store and warehouse locations
-  - Stock levels by location
-  - Order volume by channel
-  - Current delivery times and costs
-  - Goals such as speed or cost
+  - Stock by location, by product if you have it
+  - Order volume by channel, from your order report
+  - Current delivery times and cost per order
+  - Your goal, such as faster delivery or lower cost
 you_get:
   - Routing rules for each order type
   - A pickup and ship-from-store plan
-  - Cost and speed trade-offs
+  - Cost and speed trade-offs for each option
   - Targets and measures to track
+  - A list of numbers you still need to find
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Paste your locations, stock, order volume by channel, delivery times and cost per order. A spreadsheet export works.
+  - Say your main goal. Pick one: faster delivery, lower cost or using up stock.
+  - Answer its questions. It marks anything you cannot answer as missing.
+  - Read the routing rules and test them on five real orders from last week. Do they pick the location you would?
+  - Replace any cost or benefit figure that is not from your own data before you use it in a budget.
+how_it_works:
+  - title: Map your channels
+    text: It asks about channel mix, pickup take-up, ship-from-store rate, delivery times and cost per order.
+  - title: Compare fulfillment models
+    text: It sets pickup in store, ship from store, ship from warehouse and supplier direct side by side on cost and speed.
+  - title: Score each location
+    text: For each order it scores every location on delivery time, cost, stock level and workload, and picks the lowest score.
+  - title: Decide on splits
+    text: For multi-item orders it compares one shipment from one place with splitting across places.
+  - title: Plan pickup
+    text: It sets ready-by times, pick slots and how much stock to hold back for pickup orders.
+  - title: Set targets
+    text: It lists the measures to track, with today's value and a target for each.
+output_shape: |
+  Fulfillment Analysis Report
+  Summary: <orders by channel>, <cost per order>, <ship-from-store share>, <target>
+  Channel table: <channel>, <orders per month>, <basket>, <cost>, <margin>
+  Routing rules: <order type>, <first choice>, <second choice>, <rule>
+  Pickup plan: <ready-by time>, <pick slots per hour>, <stock held back>
+  Trade-offs: <option>, <cost per order>, <days>, <main risk>
+  Targets: <measure>, <today>, <target>
+output_sample:
+  input:
+    - Store and warehouse locations
+    - Stock by location
+    - Order volume by channel
+    - Current delivery times and cost per order
+    - Your goal (speed, cost or stock use)
+  prerequisites:
+    - An AI that can run Python, if you want it to score orders in code (optional)
+  output:
+    - name: Executive summary
+      contains: Orders by channel, cost per order, ship-from-store share and your target.
+    - name: Channel table
+      contains: Orders, basket size, fulfillment cost and margin for each channel.
+    - name: Routing rules
+      contains: For each order type, the first and second choice location and the rule behind it.
+    - name: Pickup plan
+      contains: Ready-by times, pick slots and the stock held back for pickup orders.
+    - name: Cost and speed trade-offs
+      contains: Each option with its cost per order, delivery days and main risk.
+    - name: Targets to track
+      contains: Each measure with today's value, the target and how it is counted.
+works_best_with:
+  tools:
+    - name: ChatGPT with data analysis, or Claude with code execution
+      why: They can run the routing code on your order and stock files.
+    - name: Any good chat AI
+      why: Fine for writing the rules and the pickup plan from a short summary of your network.
+  inputs:
+    - A week of real orders with delivery address and items
+    - Carrier invoices, so cost per order is real
+    - Store staff hours available for picking
+terms:
+  - term: BOPIS
+    meaning: Buy online, pick up in store. Also called click-and-collect.
+  - term: Ship from store
+    meaning: A store packs and ships an online order from its own shelves.
+  - term: Split shipment
+    meaning: One order leaves in two or more parcels from different places.

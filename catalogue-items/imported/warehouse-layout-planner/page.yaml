@@ -2,34 +2,102 @@ thinking: high
 thinking_why: Size, flow and storage all depend on each other.
 new_slug: warehouse-layout-planner
 name: Warehouse layout planner
-summary: Give it your products, volumes and building size. Get zones, aisle
-  layout, storage type and space needed.
+summary: Plan a warehouse layout before you sign a lease. Get zones, aisles, storage type, dock doors and floor space from your products and order volume.
 job: plan-supply-chain
 headline: Warehouse layout planner
-subhead: "A warehouse design on paper before you commit: zones, aisles, storage
-  type and the floor space you need. It is built to cut handling and wasted
-  walking."
+subhead: "Give it your products, how many orders or pallets move each day, and your growth plans. It sizes the building, splits it into zones, picks a storage type and counts the dock doors. You get a written layout plan you can take to a landlord or contractor."
 explain: |
-  A warehouse design on paper before you commit: zones, aisles, storage type and the floor space you need. It is built to cut handling and wasted walking.
+  A warehouse layout plan puts the size, the zones, the shelves and the dock doors on paper before you spend money on a building. This skill builds that plan from your own numbers. It works as a warehouse design checklist and a space calculator in one.
 
-  You give your product range, daily volume, growth plans and any special needs like cold storage. The skill sizes the building from pallets and shelving needs, then sets out zones for receiving, storage, picking, packing and shipping. It compares storage types such as pallet racking, shelving and flow racks, plans aisle widths and dock numbers, and keeps flow in a simple line. It also checks the layout against your site limits like column spacing and floor load.
+  It starts from what you store and how fast it moves. It works out how many pallet positions you need at your busiest time, then turns that into floor space. It sets zones for receiving, storage, picking, packing and shipping, and keeps goods moving in a line so people walk less. It compares storage types, such as pallet racks, shelving and flow racks, and sizes aisles and dock doors.
+
+  The built-in rules of thumb, such as square feet per pallet and dock door rates, are placeholders. The skill labels each one, and asks you for your own figures where you have them. It will not give you building costs unless you bring prices or quotes.
 when:
-  - You are moving to a new building and need to know how much space you need.
-  - Your current layout has long walks and traffic jams.
-  - You are adding a product line that needs new storage.
-  - You need a layout concept to share with a landlord or contractor.
+  - You are moving to a new building and need to know how much space to ask for.
+  - Pickers walk long distances, or trucks queue at the doors.
+  - A new product line needs storage the current layout does not have.
+  - A landlord, racking supplier or contractor asks for a layout concept.
+not_for:
+  - "You are choosing which city or site to build in: use the Warehouse location planner."
+  - "You already run a warehouse and want fast sellers closer to the pack area: use the Warehouse slot assigner."
+  - "You only need to plan truck-to-truck transfers with no storage: use the Cross-docking planner."
+  - "You need a drawing that a fire officer or racking engineer will sign off. This gives a concept to discuss, not an engineered plan."
 you_give:
-  - Product types, sizes and counts
-  - Orders or pallets per day, with peak
-  - Growth expected over three to five years
-  - Building size and height (optional)
+  - What you store, with sizes and counts (a product list or spreadsheet is fine)
+  - Orders or pallets in and out per day, and your busiest day
+  - Growth you expect over the next three to five years
+  - Building size, clear height, column spacing and floor load (optional)
+  - Special needs such as cold storage, hazmat or security (optional)
 you_get:
-  - Zone plan for the site
-  - Storage type recommendation
-  - Aisle and dock sizing
-  - Space needed and design notes
+  - A zone plan for receiving, storage, picking, packing and shipping
+  - A storage type choice with the reason for it
+  - Pallet positions and total floor space needed
+  - Dock door counts and aisle sizes
+  - A list of open questions for your landlord or supplier
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your product list or a short description of what you store, with sizes and counts.
+  - Add your daily order or pallet volume, your busiest day and your growth plans.
+  - Add the building details if you have them. If you do not, say so, and your AI will mark those figures as assumed.
+  - Check each figure marked PLACEHOLDER or ASSUMED. Swap in your own numbers or supplier quotes, then ask your AI to run the plan again.
+  - Send the report to your landlord, racking supplier or contractor. Ask them to confirm the open questions at the end.
+how_it_works:
+  - title: Gather the inputs
+    text: It asks about your products, throughput, growth, site limits and current pain points. Missing answers are marked as assumed.
+  - title: Size the storage
+    text: It turns your peak inventory into pallet positions, then into square feet for each storage type.
+  - title: Set the zones
+    text: It splits the floor into receiving, reserve storage, forward pick, packing, shipping and support areas.
+  - title: Pick storage and equipment
+    text: It compares rack types on density and access, then matches lift trucks and aisle widths.
+  - title: Size docks and labour
+    text: It works out how many dock doors and pickers your volume needs, using your own rates where you have them.
+  - title: Check the site limits
+    text: It tests the layout against clear height, column spacing and floor load, and flags anything an engineer must confirm.
+  - title: Write the report
+    text: It hands back one report with specs, capacity, open questions and next steps.
+output_shape: |
+  Executive summary: <size, positions, throughput>
+  Facility specs: <total sq ft, clear height, positions, dock doors, storage type, equipment>
+  Layout: <zones and flow from receiving to shipping>
+  Capacity: <design and peak storage, orders, receiving, shipping>
+  Costs: <only from your quotes, else "to be quoted">
+  Assumptions and open questions: <each ASSUMED or PLACEHOLDER figure, who confirms it>
+output_sample:
+  input:
+    - Your products, with sizes and counts
+    - Orders or pallets in and out per day, and your busiest day
+    - Growth you expect over the next 3 to 5 years
+    - Building size, clear height and floor load (optional)
+    - Cold storage, hazmat or security needs (optional)
+  output:
+    - name: Executive Summary
+      contains: Building size, pallet positions and daily capacity in a few lines.
+    - name: Facility Specifications
+      contains: A table of square feet, clear height, positions, dock doors, storage type and equipment.
+    - name: Layout Diagram
+      contains: Where each zone sits and how goods flow from receiving to shipping.
+    - name: Capacity Analysis
+      contains: Design and peak figures for storage, orders, receiving and shipping.
+    - name: Cost Summary
+      contains: Building, racking and equipment costs, only from your own prices or quotes.
+    - name: Assumptions and open questions
+      contains: Each assumed figure, and what the landlord or supplier must confirm.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The skill is a long checklist with arithmetic. Claude, ChatGPT and Gemini all handle it in a chat.
+  inputs:
+    - A spreadsheet of products with unit sizes and units per pallet
+    - Your own pick rate per hour and truck unload time
+    - A floor plan or listing sheet for the building
+    - Supplier quotes for racking and lift trucks
+terms:
+  - term: Pallet position
+    meaning: One slot in a rack or on the floor that holds one pallet.
+  - term: Clear height
+    meaning: The usable height inside the building, from floor to the lowest beam or light.
+  - term: Forward pick
+    meaning: A small area near the pack station that holds fast sellers for quick picking.
+  - term: Reserve storage
+    meaning: Bulk storage that refills the forward pick area.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts issues by risk and writes steps.
 new_slug: wordpress-health-fixer
 name: WordPress health fixer
-summary: Paste your WordPress Site Health report. Get a ranked, backup-first fix
-  plan with exact commands.
+summary: Turn your WordPress Site Health report into a ranked fix plan. Backups come first, and each fix has exact commands. Fix site health warnings safely.
 job: build-websites
 headline: WordPress health fixer
-subhead: A ranked fix plan for your WordPress Site Health screen, with backups
-  first and exact commands for each step. You stop staring at a long list of
-  warnings and start closing them in a safe order.
+subhead: A ranked fix plan for your WordPress Site Health screen, with backups first and exact commands for each step. You stop staring at a long list of warnings and start closing them in a safe order.
 explain: |
   A ranked fix plan for your WordPress Site Health screen, with backups first and exact commands for each step. You stop staring at a long list of warnings and start closing them in a safe order.
 
@@ -18,6 +15,10 @@ when:
   - You want the site faster and safer without breaking it.
   - A client's WordPress site needs a clean-up.
   - You need to remove old plugins and themes safely.
+not_for:
+  - "You have no restorable backup and no way to get one: ask your host's support to make one, or test on a staging copy first."
+  - "You have no file access, no SFTP and no WP-CLI: ask your host's support to make the changes for you."
+  - "Your site shows a white screen or will not load: ask your host to restore a backup first, because Site Health cannot be read."
 you_give:
   - Site Health report text or screenshot
   - Debug info (optional)
@@ -30,7 +31,30 @@ you_get:
   - Code changes to make
   - Handoff list for risky fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Tools, then Site Health in your WordPress admin. Copy the text from the Status tab. You can also copy the Info tab.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Paste your report. Say how you can reach your files (SFTP, host file manager or WP-CLI) and whether you have a full backup.
+  - Make the backup your AI asks for before you change any file. Some commands, such as the UpdraftPlus backup or Redis cache steps, only work if that plugin is installed.
+  - Make one change at a time. Check that your home page and wp-admin still load after each one.
+  - Run Site Health again to see which warnings have cleared.
+output_sample:
+  input:
+    - Your Site Health report, pasted as text or a screenshot
+    - Your Site Health Info debug text (optional)
+    - How you can reach your site files, such as SFTP or WP-CLI
+    - Whether you have a full site and database backup
+  prerequisites:
+    - A restorable backup of your site and database
+    - File access to your site, such as SFTP, your host's file manager or WP-CLI
+    - An AI that can read your pasted text (it does not need to run code)
+  output:
+    - name: Triage table
+      contains: Every item from your report with its category, risk tier and a one-line fix.
+    - name: Tier 1 fixes
+      contains: Low-risk fixes such as removing unused plugins and themes, with a backup step and a before and after view.
+    - name: Tier 2 fixes
+      contains: Riskier changes with the exact code, where it goes, the backup, a check, and how to undo it.
+    - name: Tier 3 and unknown items
+      contains: One line each for items that need no action or that the skill does not recognise.
+    - name: Re-check advice
+      contains: A reminder to run Site Health again to see the warnings clear.

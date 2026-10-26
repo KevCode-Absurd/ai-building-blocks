@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It looks for patterns in your own work.
 new_slug: content-pillar-finder
 name: Content pillar finder
-summary: Share what you have posted and know first-hand. Get three to five
-  subjects you can post about again and again.
+summary: Find the content pillars you can post about again and again. Share your past posts and what you know first-hand. Get 3 to 5 specific subjects.
 job: grow-social
 headline: Content pillar finder
-subhead: Three to five subjects you can post about again and again, chosen from
-  what you have already published and what you know first-hand. That ends the
-  weekly question of what to post, and it keeps your feed from sounding like
-  everyone else's.
+subhead: Three to five subjects you can post about again and again, chosen from what you have already published and what you know first-hand. That ends the weekly question of what to post, and it keeps your feed from sounding like everyone else's.
 explain: |
   Three to five subjects you can post about again and again, chosen from what you have already published and what you know first-hand. That ends the weekly question of what to post, and it keeps your feed from sounding like everyone else's.
 
@@ -19,6 +15,10 @@ when:
   - You have posted for months and cannot say what you are known for.
   - You are starting a personal brand and need a few clear subjects.
   - Your content feels scattered and followers do not know what to expect.
+not_for:
+  - "You want a dated posting calendar: use the plan-my-week skill from VoiceMoat, or a simple weekly calendar in a spreadsheet."
+  - "You want finished posts written for you: ask your AI to draft them once your pillars are set."
+  - "You have no real experience in any subject yet: pick one subject, do the work for a few months, then come back."
 you_give:
   - Links or copies of your past posts
   - Your work history and expertise
@@ -30,7 +30,24 @@ you_get:
   - A list of themes to drop
   - Starter post ideas per pillar
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste 10 to 15 of your ordinary past posts. Add what you want to be known for and who reads you.
+  - If you have no posts yet, describe your job, the questions people ask you and what you argue about.
+  - Read the split of your posts first. Check that the gap it shows feels true.
+  - Check each pillar is specific. Ask your AI to narrow any that sound like a broad label such as marketing.
+  - Stop posting the subjects on the drop list, and ask your AI to draft posts from the seed ideas.
+output_sample:
+  input:
+    - Ten to fifteen posts you have already written
+    - What you want to be known for, in your own words
+    - Who reads your posts and what they want
+    - Your work history and the questions people ask you (optional, if you have no posts yet)
+  output:
+    - name: Post clusters
+      contains: Your posts grouped by subject, with the real split, including gaps between what you think you write about and what you post.
+    - name: Four-question test
+      contains: Each candidate pillar checked for depth, first-hand knowledge, audience want and a view only you can give, with failures named.
+    - name: Pillars
+      contains: Three to five pillars, each with a one-line definition, your own angle, five seed ideas and one thing it is not.
+    - name: Subjects to drop
+      contains: The subjects to stop posting about, with the reason for each.

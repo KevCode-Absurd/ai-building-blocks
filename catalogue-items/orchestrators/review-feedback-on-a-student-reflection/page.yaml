@@ -1,52 +1,107 @@
 new_slug: review-feedback-on-a-student-reflection
 name: Review feedback on a student reflection
 headline: Review feedback on a student reflection
-summary: Share the source files. Get a rubric-linked feedback review and reflection revision prompts.
+summary: Check the feedback on a student's reflection against the rubric. Get clearer comments, revision prompts and a proofread draft that stays the student's own.
 job: study-and-practice
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A rubric-linked feedback review and reflection revision prompts. Share the completed project, learner reflection draft, actual teacher or peer feedback text, process evidence and the teacher-provided rubric. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Paste the project record, the student's reflection draft, the teacher or peer comments and the rubric. Your AI maps each comment to a rubric line, rewrites the vague ones and writes prompts the student can answer to improve the reflection.
 explain: |-
-  A rubric-linked feedback review and reflection revision prompts.
+  A comment such as "good reflection, go deeper" tells a student little. This workflow reviews the feedback on a student reflection: it checks each comment against the rubric and the project evidence, then helps turn the weak ones into something the student can act on.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Feedback addresses demonstrated work; no learner intention, mastery or experience is invented. Missing tools or evidence stay visible in the final summary.
+  First it reads the project record and notes what the student did, decided and changed, with where each fact came from. Then it checks each comment: is it about the task, the method or how the student checks their own work, and does it point to a next step? Vague comments get a rewrite tied to a rubric line and a real moment in the project.
+
+  Last, it proofreads the student's draft for clarity only. It never adds experiences the student did not write down, and it never gives a grade.
 when:
-  - You need a rubric-linked feedback review and reflection revision prompts.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A teacher has written comments on a student's reflection and wants to check they are usable
+  - A student has feedback from a teacher or peers and cannot tell what to change
+  - You have a rubric and a project record and want feedback that cites both
+  - A reflection reads thin and you want questions that draw out more, without writing it for the student
+not_for:
+  - You want a grade or a mark. That needs the teacher's own judgement and the official rubric scoring.
+  - You want the AI to write the reflection or add experiences the student did not describe. It will not.
+  - You only have comments and no student work. Use the Written feedback checker on its own.
+  - You are marking a whole class set. Use Prepare feedback students can act on.
+  - You want to plan peer feedback before it happens. Use Plan a peer feedback session that helps.
 you_give:
-  - The completed project, learner reflection draft, actual teacher or peer feedback text, process evidence and the teacher-provided rubric.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The completed project, or a record of it such as a log, photos with captions or notes
+  - The student's reflection draft
+  - The teacher or peer comments, as written
+  - The teacher's rubric, with its criteria
+  - What the student was asked to do (optional)
+  - The student's year or level (optional)
 you_get:
-  - A rubric-linked feedback review and reflection revision prompts.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "Project evidence notes: what the student did, decided and changed, with where each fact came from"
+  - "A feedback review: each comment sorted by type, linked to a rubric line and marked clear or vague"
+  - Rewrites of the vague comments, each tied to a real moment in the project
+  - Revision prompts for the student, grouped by rubric line
+  - A proofread reflection with every change listed, in the student's own words
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the project record, the reflection draft, the comments and the rubric. Take names out first.
+  - Read the feedback review first. Check that each comment is linked to the right rubric line before you use any rewrite.
+  - Send the revision prompts to the student. Do not send a rewritten reflection. Ask the student to rewrite their own.
 how_it_works:
   - title: Source note summariser
-    text: Extract what the actual project record shows about decisions, outcomes and changes; retain locations and distinguish the learner interpretation.
+    text: Reads the project record and lists what the student did, decided and changed, with the place each fact came from. It keeps the student's own view apart from the record and hands the evidence notes on.
   - title: Written feedback checker
-    text: Review the supplied teacher or peer feedback and rewrite it into task, process and self-regulation prompts grounded in the rubric and real evidence.
+    text: Sorts each comment as about the task, the method, self-checking or the person. It then rewrites weak comments into prompts tied to the rubric and the evidence, and hands them on.
   - title: Proofreader
-    text: Check the learner own reflection draft for clarity and consistency without writing experiences the learner has not supplied.
+    text: Checks the student's draft for clarity and consistency. It lists every change and adds no experience the student has not written.
 output_shape: |-
-  Scope and source coverage
-  A rubric-linked feedback review and reflection revision prompts.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  PROJECT EVIDENCE NOTES
+    What the student did | decided | changed | Where it came from
+
+  FEEDBACK REVIEW
+    Comment | Type (task, method, self-checking, person) | Rubric line | Clear or vague | Why
+
+  REWRITTEN COMMENTS
+    Original | Rewrite tied to <rubric line> and <moment in the project>
+
+  REVISION PROMPTS
+    <Rubric line> | Question for the student to answer
+
+  PROOFREAD REFLECTION
+    Corrected draft | Changes made
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - The project record and the student's reflection draft
+    - The teacher or peer comments, as written
+    - The teacher's rubric
+    - What the student was asked to do (optional)
+  prerequisites:
+    - The comments and rubric as text or files. Names removed.
+  output:
+    - name: Project evidence notes
+      contains: What the student did, decided and changed, with where each fact came from.
+    - name: Feedback review
+      contains: Each comment sorted by type, linked to a rubric line and marked clear or vague.
+    - name: Rewritten comments
+      contains: Better versions of the vague comments, each tied to the rubric and a real moment in the project.
+    - name: Revision prompts
+      contains: Questions for the student to answer, grouped by rubric line.
+    - name: Proofread reflection
+      contains: The student's draft with spelling and clarity fixes, and every change listed.
+    - name: Hand-back summary
+      contains: Files saved, facts that were missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read the pasted text or files and keep each step's result as a file. None of them can run a lesson, a class or a check for you.
+  inputs:
+    - Photos or logs from the project, with dates.
+    - A teacher who checks each rewrite before it goes to the student.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Review one student and one reflection at a time. Comments only make sense next to that student's work.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the comments word for word. A summary of what you said hides the vague parts.
   - what: Acceptance
-    how: Feedback addresses demonstrated work; no learner intention, mastery or experience is invented.
+    how: Say how many revision prompts a student can handle, such as three. The AI will keep to it.
 judge:
   - Feedback addresses demonstrated work; no learner intention, mastery or experience is invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +114,16 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - When the student rewrites, bring the new draft back and ask whether each prompt was answered.
+  - Add your own comment bank of phrases that work and ask for new rewrites in that style.
+  - Ask for the prompts again in simpler words for a younger student.
+next:
+  - prepare-feedback-students-can-act-on
+  - plan-a-peer-feedback-session-that-helps
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Rubric
+    meaning: A list of criteria that says what good work looks like at each level.
+  - term: Task, method and self-checking feedback
+    meaning: Comments about the work, about how it was done, and about how the student checks their own work.
+  - term: Revision prompt
+    meaning: A question that helps a student improve their own work without writing it for them.

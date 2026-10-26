@@ -24,6 +24,15 @@ tools:
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
 
+## Before you start (plain steps)
+
+1. Ask for anything missing, once: the page links and the data wanted. Never guess a field.
+2. Check the site's terms and robots.txt allow this. If they forbid it, stop and say so. Suggest an official API or export instead.
+3. Pull the data, validate it, and rate the result High, Medium or Low.
+4. Deliver one file (CSV or JSON), the confidence line, and notes on any page you could not read. Mark any cell you could not read as MISSING; never fill it in from memory.
+5. If the user gives a previous file, list new, removed and changed rows.
+6. Finish by telling the user to spot-check three rows against the live page.
+
 ## When to Use This Skill
 
 - When the user mentions "scraper" or related topics

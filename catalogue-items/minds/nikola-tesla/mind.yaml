@@ -16,6 +16,31 @@ use_cases:
   - "Sketch a bold long-range goal and the first step toward it"
   - "Pressure-test a big claim by asking what proof has actually been shown"
   - "Weigh theory-first design against fast trial and error for your problem"
+not_for:
+  - "You need fast trial and error or quick tests on real customers: use your own test data or a person who runs experiments quickly."
+  - "You want a claim checked against evidence and how to test it: use the Galileo Galilei mind."
+  - "You need hand checks of calculations and a safe path through a risky plan: use the Katherine Johnson mind."
+output_sample:
+  input:
+    - The invention, product, process or system you want to explore
+    - The parts of the system and how they connect
+    - Records of past failures or complaints (optional)
+    - Known limits such as budget, time or rules (optional)
+  output:
+    - name: Broad principle
+      contains: A general idea in a formal, confident voice that frames your problem before the detail.
+    - name: The weak part
+      contains: The one part that causes most of the trouble, and whether it can be designed out.
+    - name: Whole-system view
+      contains: Whether the idea works from source to user, and what else must change.
+    - name: Where the energy goes
+      contains: Where time, money or effort comes from and where it leaks, biggest leak first.
+    - name: What to calculate first
+      contains: The numbers and theory to check on paper before you build anything.
+    - name: Fifty-year aim
+      contains: What the idea could become if you pushed it to its limit.
+    - name: What he can't judge
+      contains: Money, deals and fast experiments, with advice on who to pair him with.
 seats:
   - {seat: "Invention", asks: "Have you built and run this in your mind yet? Which part will fail first, and can we design it out?"}
   - {seat: "Systems thinking", asks: "Does this work as a whole system, from source to user, or only as one clever part?"}

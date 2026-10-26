@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tracks units and errors by set rules and flags what breaks them.
 new_slug: units-and-error-margin-checker
 name: Units and error margin checker
-summary: Give it a calculation. Get units checked, error margins carried through
-  and an uncertainty budget you can show.
+summary: Check units and carry error margins through your calculation. Get an uncertainty budget and a rounded result you can show a reviewer.
 job: track-numbers
 headline: Units and error margin checker
-subhead: A calculation with its units checked and its error margin carried
-  through, ending in an uncertainty budget you can show a reviewer. The plus or
-  minus on your result then means something.
+subhead: A calculation with its units checked and its error margin carried through, ending in an uncertainty budget you can show a reviewer. The plus or minus on your result then means something.
 explain: |
   A calculation with its units checked and its error margin carried through, ending in an uncertainty budget you can show a reviewer. The plus or minus on your result then means something.
 
@@ -18,6 +15,10 @@ when:
   - You mix units and suspect a hidden conversion error.
   - You must build an uncertainty budget from calibration certificates.
   - You want to review analysis code for unit mistakes.
+not_for:
+  - "You need statistical inference, model selection or study design: use statistical-analysis, statistical-power or experimental-design instead."
+  - "You only want a quick unit conversion with no error margin: use a unit converter or a search engine."
+  - "Your AI cannot run code and you cannot install Python: ask a colleague who works in metrology to check the budget by hand."
 you_give:
   - Your calculation or formula
   - Measured values with units
@@ -29,8 +30,33 @@ you_get:
   - An uncertainty budget table
   - A correctly rounded result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run code, such as Claude with code running turned on. Make sure Python 3.12 or newer is installed.
+  - Paste the skill instructions into the chat, or upload the skill folder.
+  - List each measured input with its unit and its stated uncertainty. Add your formula.
+  - Add calibration certificates or your analysis code if you have them (optional).
+  - Ask your AI to run the uncertainty budget and report the result.
+  - Check the unit flags first. Then share the budget and the rounded result with your reviewer.
+output_sample:
+  input:
+    - Your calculation or formula
+    - Each measured value with its unit
+    - Calibration certificates or specifications (optional)
+    - Your analysis code (optional)
+  prerequisites:
+    - An AI that can run code
+    - Python 3.12 or newer with pint, uncertainties, NumPy and SciPy installed
+  output:
+    - name: Unit check
+      contains: Each conversion is checked, with any mismatch or stripped unit in your calculation flagged.
+    - name: Uncertainty budget
+      contains: Each source of error is listed with its type, size and share of the total.
+    - name: Propagated uncertainty
+      contains: The error margin carried through your formula, with linked inputs handled so correlations are kept.
+    - name: Coverage factor and expanded interval
+      contains: The coverage factor you can defend and the wider interval it gives.
+    - name: Rounded result
+      contains: Your answer rounded properly, in plus or minus form and in other common forms.
+    - name: Method statement
+      contains: The sentence that must go with the number so a reader knows what the plus or minus means.
+    - name: Code audit
+      contains: Silent unit and uncertainty mistakes found in your analysis code, if you shared it.

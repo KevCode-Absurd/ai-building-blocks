@@ -2,35 +2,112 @@ thinking: medium
 thinking_why: It weighs likelihood and impact for each risk.
 new_slug: people-risk-register-builder
 name: People risk register builder
-summary: Give it your team and rules. Get a ranked list of people risks, owners
-  and response steps. Not legal advice.
+summary: Find your people risks before they cost you. Get a ranked HR risk register with scores, an owner and a response step for each risk.
 job: hire-people
 headline: People risk register builder
-subhead: A ranked list of the people risks in your organisation, each with an
-  owner and a response step, so nothing important sits unseen. It is a planning
-  aid and not legal advice.
+subhead: Give it your company size, industry and countries. It lists the people risks that fit you, scores each for likelihood and impact, names an owner and a response, and adds a key person map and escalation steps.
 explain: |
-  A ranked list of the people risks in your organisation, each with an owner and a response step, so nothing important sits unseen. It is a planning aid and not legal advice.
+  People risks are easy to miss because no one owns them: a rule you have not checked, a key person who could leave, a conduct complaint with no clear path. This people risk register builder puts them in one ranked list, each with an owner and a next step.
 
-  The skill sorts risks into groups such as compliance, employee conduct, key person dependence, workforce continuity, data privacy and workplace safety. Each gets a likelihood and impact score, an owner and a plan. It can map who your business cannot do without, build an audit checklist to find process gaps, and write escalation steps for serious incidents. It adapts the list to your size, industry and any change underway, such as rapid growth or restructuring.
+  It groups risks into compliance, employee conduct, key person dependence, workforce continuity, data privacy and workplace safety. It scores each from 1 to 5 for likelihood and impact, and ranks them. The scale is a judgement call, and it says so. It shapes the list to your size, industry and any change underway, such as fast growth or a restructure.
+
+  It does not invent incidents or laws. Where a duty depends on place, it says "check local law". It is a planning aid, not legal advice.
 when:
-  - You are starting a risk register and need the people categories filled in.
+  - You are starting a risk register and need the people risks filled in.
   - The company is growing fast or restructuring and you want the risks checked.
-  - You want to find which roles would hurt most if someone left.
+  - You want to know which roles would hurt most if someone left.
   - You need a clear path for escalating a conduct complaint.
+not_for:
+  - "You have a live complaint or dispute to investigate: use the Workplace investigation guide and talk to employment counsel."
+  - "You want a full audit of HR files and policies: use the HR compliance audit planner."
+  - "You want a plan to cover one key role: use the Succession plan builder."
+  - "You want to check how you handle staff data: use the Employee data privacy checker."
 you_give:
-  - Company size, industry and countries
-  - Current change, such as growth or merger (optional)
+  - Company size, industry and the countries you employ people in
+  - Any change under way, such as growth or a merger (optional)
   - Known problems or past incidents (optional)
-  - Names of risk owners (optional)
+  - Names of people who could own each risk (optional)
+  - Your current HR policies (optional)
 you_get:
-  - A ranked people risk register
-  - Likelihood and impact scores
-  - Owners and response steps
-  - Key person dependency map
-  - Escalation steps for incidents
+  - A ranked people risk register with scores
+  - An owner and a response step for each risk
+  - The five highest priorities in one short list
+  - A key person map
+  - Escalation steps for serious incidents
+  - An audit checklist of five to eight questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write a few lines on your company: size, industry, countries and any change under way. Add past incidents if you have them.
+  - Open Claude, ChatGPT or Gemini and paste in this skill, then your notes.
+  - Read the top five risks first. Change any score you disagree with, and tell the AI why.
+  - Give each risk to a real person and add a review date.
+  - Ask a lawyer to check anything marked "needs counsel" or "check local law".
+output_sample:
+  input:
+    - Your company size, industry and countries
+    - Any change under way, such as growth or a restructure (optional)
+    - Known problems or past incidents (optional)
+    - Names of possible risk owners (optional)
+  output:
+    - name: Risk register
+      contains: Each risk with category, likelihood, impact, priority, owner, response and review date.
+    - name: Top five
+      contains: The five highest-priority risks, one line each.
+    - name: Key person map
+      contains: Roles the business can't easily do without, why, and one step to reduce each risk.
+    - name: Escalation steps
+      contains: For each incident type, who is told, in what order, what is recorded and when to call counsel.
+    - name: Audit checklist
+      contains: Five to eight questions to find gaps in hiring, contracts, policies and records.
+    - name: Flags and next steps
+      contains: Assumptions, missing information and what needs a lawyer.
+how_it_works:
+  - title: Restate the context
+    text: Confirms your size, industry, countries and any change, and marks gaps instead of guessing.
+  - title: List the risks
+    text: Groups 10 to 15 risks that fit your company across conduct, compliance, continuity, privacy and safety.
+  - title: Score each risk
+    text: Rates likelihood and impact from 1 to 5, gives a reason, and ranks by the product.
+  - title: Assign owners
+    text: Gives each risk one owner, one response step and a review date or trigger.
+  - title: Map key people and incidents
+    text: Lists roles you can't lose and writes escalation steps for serious incidents.
+  - title: Flag what needs a lawyer
+    text: Marks assumptions and anything that depends on local law.
+output_shape: |-
+  CONTEXT AND ASSUMPTIONS
+    <size> | <industry> | <countries> | <change under way>
+
+  RISK REGISTER
+    # | <category> | <risk> | likelihood <1-5> | impact <1-5> | priority <n> | owner <role> | response <step> | review by <date>
+
+  TOP 5
+    <risk> | priority <n> | <first step>
+
+  KEY PERSON MAP
+    <role> | why it matters | step to reduce the risk
+
+  ESCALATION STEPS
+    <incident type> | who is told | order | what is recorded | call counsel when <trigger>
+
+  AUDIT CHECKLIST
+    <5 to 8 questions>
+
+  FLAGS AND NEXT STEPS
+    <assumptions> | MISSING: <items> | Needs counsel: <items>
+works_best_with:
+  tools:
+    - name: Any chat AI
+      why: The register is a table, and any good chat AI can build and revise one.
+    - name: Google Sheets or Excel
+      why: Keep the register there so owners can update scores and review dates.
+  inputs:
+    - A list of key roles and who holds them
+    - Your last year of exit data
+    - Your current handbook and contract templates
+terms:
+  - term: Risk register
+    meaning: A list of risks with a score, an owner and a plan for each.
+  - term: Key person risk
+    meaning: The risk that the business suffers if one person leaves or is away.
+  - term: Escalation
+    meaning: Passing a serious issue to a more senior person or an outside adviser.

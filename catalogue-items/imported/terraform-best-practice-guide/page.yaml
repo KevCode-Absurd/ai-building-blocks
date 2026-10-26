@@ -2,36 +2,83 @@ thinking: medium
 thinking_why: It follows set patterns for modules and tests.
 new_slug: terraform-best-practice-guide
 name: Terraform best-practice guide
-summary: Describe the cloud setup you need. Get Terraform or OpenTofu code with
-  tested modules and CI steps.
+summary: Get Terraform or OpenTofu code with a clean module layout, a testing plan and CI steps that check each change before it ships. Starts from your brief.
 job: ship-and-host
 headline: Terraform best-practice guide
-subhead: Describe the cloud setup you need. Get Terraform or OpenTofu code with
-  tested modules and CI steps. Bring the cloud setup you need. Use the result to
-  plan your next step.
+subhead: Describe the cloud setup you need, or paste your existing Terraform. Your AI plans a folder layout, writes the modules, picks a testing level that fits your risk and adds CI steps to check each change.
 explain: |
-  Terraform or OpenTofu code that is organised, tested and ready for a pipeline, built from your description of the cloud setup. You avoid the usual traps, like fragile modules and changes nobody tested.
+  This Terraform best-practice guide helps when you want infrastructure code that stays tidy as it grows. Give it a plain description of your cloud setup and you get Terraform or OpenTofu code, a testing plan and pipeline steps. It can also review Terraform you already have.
 
-  The skill covers how to structure modules and environments, when to use count or for_each, and how to manage state. It sets up a testing ladder from validate and plan checks up to full test frameworks, and helps you choose the level that fits your risk. It adds CI steps for formatting, checks and plans. It also reviews existing Terraform for refactoring. A longer guide holds the detail. Plan before you apply, and review what changes.
+  It follows the habits taught on terraform-best-practices.com. Environments live apart from reusable modules. Each module is small and does one job. Resources that may be added or removed use for_each, so their addresses stay stable. A simple on and off switch uses count.
+
+  Testing is a ladder. It starts with format and validate checks, then plan checks, then built-in tests, then full integration tests. You pick the rung that fits your risk, so you do not pay for tests you do not need. CI runs the steps in order: validate, test, plan, then apply with approval for production.
 when:
-  - You are writing Terraform for a new environment and want it done properly.
-  - Your modules are copied between projects and drifting apart.
-  - You do not know how to test infrastructure code.
-  - You need a pipeline that checks changes before they reach production.
-  - You inherited Terraform with no structure.
+  - You are writing Terraform for a new environment and want a clean layout from day one.
+  - You copy the same modules between projects and they keep drifting apart.
+  - Your team says "how do we test infrastructure code?" and nobody knows.
+  - You want a pipeline that checks every change before it reaches production.
+  - You inherited a pile of .tf files with no structure.
+not_for:
+  - You only have a quick syntax question. Ask your AI directly, it does not need a skill for that.
+  - You want modules and safe remote state set up, or a security review of existing code. Use the Terraform setup builder.
+  - You want to deploy an app, not build cloud infrastructure. Use the Kubernetes deployer.
 you_give:
-  - The cloud setup you need
-  - Cloud provider and Terraform or OpenTofu
-  - Number of environments
-  - Existing code (optional)
+  - A plain description of the cloud setup you need
+  - Your cloud provider, and whether you use Terraform or OpenTofu
+  - How many environments you run, such as dev, staging and prod
+  - Your Terraform version (optional, it decides which tests you can use)
+  - Your existing .tf files (optional)
 you_get:
-  - Terraform or OpenTofu code with modules
-  - A testing approach
-  - CI steps
-  - Notes on structure and state
+  - Terraform or OpenTofu code split into modules and environments
+  - A testing plan matched to your Terraform version and risk
+  - CI steps for format, validate, test and plan
+  - Notes on state and structure
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. If your AI can read files, also give it the detailed guide in the references folder.
+  - Paste your brief, or your existing .tf files. Say your cloud provider, your Terraform or OpenTofu version and how many environments you run.
+  - If any of that is missing, your AI asks once. It will not guess your provider or version.
+  - Read the proposed folder layout first. Fix it before you accept any code.
+  - Run terraform validate and terraform plan on the result yourself. Check what the plan would change before anything is applied.
+  - The scanners in the security steps, such as trivy and checkov, only run if you install them. A plain chat can only suggest the commands.
+output_sample:
+  input:
+    - A plain description of your cloud setup
+    - Your cloud provider and Terraform or OpenTofu version
+    - How many environments you run
+    - Your existing .tf files (optional)
+  prerequisites:
+    - Terraform or OpenTofu installed on your machine, to run the plan
+    - An AI that can run code, to run validate and the scanners (optional)
+  output:
+    - name: Folder layout
+      contains: Separate environments and modules folders, plus examples that double as test fixtures.
+    - name: Modules
+      contains: Small modules with clear inputs and outputs, using for_each for stable resource addresses.
+    - name: Testing plan
+      contains: Which rung of the testing ladder fits your version and risk, from validate to full integration tests.
+    - name: CI steps
+      contains: A pipeline that runs format, validate, tests and plan, with approval before apply on production.
+    - name: Structure and state notes
+      contains: Naming rules, version pinning and how to handle state, with the reasons behind each.
+works_best_with:
+  tools:
+    - name: Claude with file access, or Claude Code
+      why: It can read your project, then run validate and plan for you.
+    - name: Claude, ChatGPT or Gemini in a plain chat
+      why: Works if you paste your .tf files and run the commands yourself.
+  inputs:
+    - Your Terraform version. From 1.6 you get the built-in test command, and from 1.7 free mock providers.
+    - The module list or folder tree you already have.
+terms:
+  - term: Terraform
+    meaning: A tool that builds cloud servers, networks and databases from code files.
+  - term: OpenTofu
+    meaning: A free, community-run version of Terraform. This skill works with both.
+  - term: Module
+    meaning: A reusable bundle of Terraform code, like a template for one part of your setup.
+  - term: State
+    meaning: The record Terraform keeps of what it has built, so it knows what to change next.
+  - term: Plan
+    meaning: A preview of what Terraform will create, change or delete, before it does anything.
+  - term: CI
+    meaning: Automatic checks that run each time someone changes the code.

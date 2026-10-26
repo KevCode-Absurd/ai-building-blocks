@@ -1,6 +1,6 @@
 new_slug: target-size-back-solver
 name: "Target size back-solver"
-summary: "Name the size you want a business to reach. Get the buyers, volume, share and profit that must be true."
+summary: "Back-solve a business size target into the buyers, purchases, market share and profit per sale that must be true, with each figure marked."
 job: plan-strategy
 thinking: high
 thinking_why: "It works a chain of sums backward, marks every figure as checked or guessed and runs stress tests. A slip in the arithmetic changes the answer."
@@ -17,6 +17,10 @@ when:
   - You have a big target for a business and no sense of what it would take.
   - A pitch says a huge market means a huge result and you want to test it.
   - You want to find which assumption in your plan is carrying the most weight.
+not_for:
+  - "You want a price or value for a named company: use a proper financial model or a financial adviser."
+  - "You want advice on where to put your money: talk to a licensed financial adviser."
+  - "You have no plan yet and only a vague idea: sketch the plan first, or talk it over with a mentor or someone who knows the market."
 
 you_give:
   - Your plan and the big choices you have made
@@ -34,6 +38,28 @@ how_to_use:
   - State the target and the year, or let it suggest a range.
   - Add any market sizes, purchase counts and prices you can source.
   - Read the part the plan leans on, then go find real facts for that part.
+output_sample:
+  input:
+    - "Your plan so far: what you sell, who to and where"
+    - The size you want and the year (optional)
+    - Market size, purchase counts and prices you can source (optional)
+  output:
+    - name: Target
+      contains: Your target turned into earnings a year in the year you chose.
+    - name: The sum
+      contains: Buyers, purchases a year, share and profit per purchase, each marked checked, estimated or guess.
+    - name: Money over time
+      contains: Profit per purchase shown in today's money so it can be compared fairly.
+    - name: Richer buyers
+      contains: A note on whether buyers may spend more on this, with a reason.
+    - name: The half test
+      contains: Earnings if each part is halved, and the part the plan leans on most.
+    - name: What must be true
+      contains: Four to six plain sentences, plus the fact that would show the plan is out of reach.
+    - name: Missing
+      contains: The facts you still need to look up.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Sets yearly earnings

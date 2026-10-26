@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It fills a set structure, but needs a clear read of your audience.
 new_slug: analysis-write-up-builder
 name: Analysis write-up builder
-summary: Give it your finished analysis. Get a write-up with the question, data,
-  method, results and steps to rerun it.
+summary: Turn a finished analysis into a write-up that others can trust and rerun. It covers the question, data, method, results and rerun steps.
 job: document-work
 headline: Analysis write-up builder
-subhead: A finished analysis turned into a write-up that someone else can read,
-  trust and rerun. It covers the question, the data, the method, the results and
-  the steps to repeat it, so your future self will not have to guess.
+subhead: A finished analysis turned into a write-up that someone else can read, trust and rerun. It covers the question, the data, the method, the results and the steps to repeat it, so your future self will not have to guess.
 explain: |
   A finished analysis turned into a write-up that someone else can read, trust and rerun. It covers the question, the data, the method, the results and the steps to repeat it, so your future self will not have to guess.
 
@@ -18,6 +15,10 @@ when:
   - You are handing a notebook to a teammate.
   - A recurring report needs to be rerun the same way each time.
   - A peer review or audit is coming.
+not_for:
+  - "You need a quick one-off answer: reply in a short email or chat message instead."
+  - "Your notebook is still a work in progress: finish the analysis first, then come back to write it up."
+  - "You only need a short summary for busy readers: write a one-page note by hand."
 you_give:
   - Your code (SQL, Python or notebook) and outputs
   - The business question and who asked
@@ -29,7 +30,30 @@ you_get:
   - Results with captioned charts
   - Recommendations and rerun steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste your code and outputs. Add the business question, who asked, your key findings, data source details and tool versions.
+  - "Say who will read it: data people, business people or both."
+  - Check the data and method sections first. Fix any detail the AI guessed or marked as missing.
+  - Share the write-up, or file it in your team archive so it can be rerun later.
+output_sample:
+  input:
+    - Your code (SQL, Python or notebook) and its outputs
+    - The business question and who asked
+    - Your key findings and recommendations
+    - Data source details and tool versions
+  prerequisites:
+    - A finished analysis with results you already trust
+    - An AI that can read your code and files
+  output:
+    - name: Business context
+      contains: The question, who asked, the decisions it informs and what success looks like.
+    - name: Data sources
+      contains: Each table or file with date range, row count, key columns and known quality issues.
+    - name: Methodology
+      contains: The approach, tool and library versions, assumptions, key choices and alternatives considered.
+    - name: Results
+      contains: Key metrics and charts with captions, in order of importance.
+    - name: Insights and recommendations
+      contains: Each finding linked to a business meaning and a next action.
+    - name: Reproducibility
+      contains: Data access, environment and the order to run things so someone can repeat the analysis.

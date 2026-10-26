@@ -2,33 +2,58 @@ thinking: low
 thinking_why: Replies are short and follow simple sorting rules.
 new_slug: youtube-comment-reply-writer
 name: YouTube comment reply writer
-summary: Paste your comments. Get them sorted by what to answer, short replies
-  in your voice, and one comment to pin.
+summary: Reply to YouTube comments faster. Paste your comments and get them sorted, short replies in your voice, and one comment to pin.
 job: grow-social
 headline: YouTube comment reply writer
-subhead: Paste your comments. Get them sorted by what to answer, short replies
-  in your voice, and one comment to pin. Bring the comments, pasted as text. Use
-  the result to plan your next step.
+subhead: Paste your YouTube comments into your AI. It sorts them into four piles, writes short replies in your voice, and picks one comment to pin. Nothing posts for you, so you check every reply first.
 explain: |
   Paste your latest comments and get them sorted, answered and ready to post, with one comment picked to pin.
 
   First it counts the comments in four piles: questions, corrections, praise and bait. Questions get answers, and repeated ones are marked as your next video topics. Corrections get a plain thank you if they are right. Praise gets a few short, specific replies rather than a wall of the same thanks. Bait gets no reply at all. Each reply is under 30 words, answers the question in the first sentence and skips emoji unless you use them. It also chooses the comment to pin: the question the most viewers share, not the nicest one.
 when:
-  - Your new video has fifty comments and little time to answer them.
+  - Your new video has fifty comments and you have little time to answer them.
   - You want replies that sound like you, not a bot.
-  - A rude comment tempts you to argue.
+  - A rude comment tempts you to argue back.
   - You want to know which questions should become your next video.
+not_for:
+  - "Your video is sponsored or has legal risk, so replies need a legal check: have your lawyer or sponsor contact review each reply first."
+  - "A comment is a personal or serious complaint: write that reply yourself, or ask a real person on your team to handle it."
+  - "You want to argue back at a rude comment: skip it, because this skill gives bait no reply at all."
 you_give:
-  - The comments, pasted as text
-  - The video title or topic
-  - Your voice notes or past replies (optional)
+  - Your comments, pasted as text
+  - Your video title or topic
+  - Your voice notes, past replies, or three of your own videos (optional)
 you_get:
-  - Comments sorted into four piles with counts
+  - Your comments sorted into four piles, with a count for each
   - Short replies under 30 words
   - A list of repeated questions as video ideas
-  - One comment to pin and why
+  - One comment to pin, and why
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text from this page. No code, files or paid tools are needed.
+  - Paste your voice notes or a few of your past replies. If you have none, paste the text of three of your own videos so your AI can learn how you talk.
+  - Paste the video title, then paste your comments as plain text.
+  - Check the four counts first. Move any comment to a different pile if it looks wrong.
+  - Read each reply and change anything that does not sound like you. Then post them yourself.
+  - Claude Code users can keep a voice file at ~/.claude/youtube/voice.md. Other tools do not read that path, so paste your voice notes into the chat each time.
+output_sample:
+  input:
+    - Your pasted comments, as text
+    - Your video title or topic
+    - Your voice notes or three of your own videos (optional)
+  prerequisites:
+    - Your voice profile, or three of your own videos so your AI can learn how you talk
+  output:
+    - name: Triage counts
+      contains: "How many comments sit in each pile: questions, corrections, praise and bait."
+    - name: Question replies
+      contains: Short answers under 30 words that give the answer in the first sentence.
+    - name: Correction replies
+      contains: A plain thank you for each correction that is right, with no arguing over facts.
+    - name: Praise replies
+      contains: A few brief replies that pick up something specific from each comment.
+    - name: Repeated questions
+      contains: Questions that came up more than once, marked as ideas for your next video.
+    - name: Pin pick
+      contains: The one comment to pin and why, based on the question most viewers share.
+    - name: Copy block
+      contains: "All replies in one block to copy, ending with the question: ship it, or change it?"

@@ -1,15 +1,13 @@
 slug: challenge-terminal-value-with-excess-returns
 name: Challenge terminal value with excess returns
-summary: Compare explicit excess-return fade assumptions with the economics implied by a terminal value.
+summary: "Test whether your terminal value quietly assumes returns that last forever, and see the reinvestment and return on capital it implies."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - economic-profit-fade-schedule
   - terminal-growth-reinvestment-consistency

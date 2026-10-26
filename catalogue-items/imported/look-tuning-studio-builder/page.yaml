@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It builds a custom control page for each task.
 new_slug: look-tuning-studio-builder
 name: Look tuning studio builder
-summary: Name what to tune. Get a local page with sliders and pickers to adjust
-  the look by eye.
+summary: Tune the look of a page by eye. Your AI builds a local studio with sliders and pickers, and you get your chosen settings back.
 job: design-work
 headline: Look tuning studio builder
-subhead: A small local web page where you change the look of something with
-  sliders and pickers, and see the result as you go. You choose by eye, not by
-  typing numbers into a chat.
+subhead: A small local web page where you change the look of something with sliders and pickers, and see the result as you go. You choose by eye, not by typing numbers into a chat.
 explain: |
   A small local web page where you change the look of something with sliders and pickers, and see the result as you go. You choose by eye, not by typing numbers into a chat.
 
   There are two kinds. For visual settings such as color, type, layout, image treatment or animation, the page has controls for each setting and records your final choices. For text, such as a blog post, doc or copy, the page lets you read, edit and mark up the content directly, and it captures your edits. Either way, the point is to replace static grids of options and walls of prose with something you can act on. Your AI builds the page for whatever you name.
 when:
-  - You want to fine-tune colors and spacing and pick by looking, not by
-    guessing numbers.
+  - You want to fine-tune colors and spacing and pick by looking, not by guessing numbers.
   - You need to compare design variations quickly.
   - You want to mark up a blog post or doc and pass the edits back.
   - You are reviewing a set of images or copy and want to react in place.
+not_for:
+  - You only need one quick change to a color or font. Ask your AI to make the edit in chat.
+  - You want a static report or a side-by-side grid to read. Use a plain document instead.
+  - You need final design work in a full design app. Use a standard design tool, then bring the values here.
 you_give:
   - What you want to tune or review
   - The files or page involved
@@ -30,8 +30,25 @@ you_get:
   - A record of your chosen values
   - Captured edits and notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open a chat with an AI that can run code and open a browser, such as Claude Code.
+  - Paste the skill, then say what you want to tune, for example the colors and spacing of your landing page.
+  - Share the files or page involved. Say which settings matter, if you know.
+  - Your AI builds a local page. Open it and adjust the controls by eye, or edit and comment on the text.
+  - Save your choices. Your AI gets the settings or edits back and applies them to your files.
+output_sample:
+  input:
+    - What you want to tune or review, such as a landing page's colors and spacing
+    - The files or page involved
+    - Which settings matter (optional)
+    - A reference look (optional)
+  prerequisites:
+    - An AI that can run code and open a browser
+  output:
+    - name: Visual studio page
+      contains: A local web page with sliders, pickers and drag handles for each setting, and a live preview of the change.
+    - name: Text and media studio page
+      contains: A local page where you edit text in place, highlight lines, leave comments and mark images to replace.
+    - name: Settings JSON
+      contains: The final values you picked, saved so your AI can apply them.
+    - name: Captured edits and notes
+      contains: Your text edits, highlights and comments, passed back to your AI.

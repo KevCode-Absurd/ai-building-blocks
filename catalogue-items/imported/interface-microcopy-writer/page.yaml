@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes short lines from a set voice.
 new_slug: interface-microcopy-writer
 name: Interface microcopy writer
-summary: Give it a screen. Get button labels, error messages, empty states and
-  toasts in a friendly, polite voice.
+summary: Write clear button labels, error messages, empty states and toasts for your app. Give it a screen and get friendly, polite interface microcopy.
 job: design-work
 headline: Interface microcopy writer
-subhead: The small words in your product, button labels, error messages, empty
-  states and toasts, written in a friendly, polite voice. Give it a screen and
-  get text that tells people what will happen and how to move on.
+subhead: The small words in your product, button labels, error messages, empty states and toasts, written in a friendly, polite voice. Give it a screen and get text that tells people what will happen and how to move on.
 explain: |
   The small words in your product, button labels, error messages, empty states and toasts, written in a friendly, polite voice. Give it a screen and get text that tells people what will happen and how to move on.
 
@@ -19,6 +16,10 @@ when:
   - Empty screens look cold and confuse new users.
   - Words for the same thing change between pages.
   - You need a polite, casual tone in payments or account steps.
+not_for:
+  - "You need blog posts, help docs or marketing pages: write those yourself or ask your AI for long-form copy."
+  - "You need the whole feedback design, not only the words: work with a designer on loading, success and error states."
+  - "You need your brand voice defined first: write a short voice guide before you run this."
 you_give:
   - The screen or flow and what it does
   - The product's voice or design language (optional)
@@ -30,7 +31,20 @@ you_get:
   - Toast messages
   - A consistent term list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or paid tool is needed.
+  - Describe your screen or flow and what it does. Say which language to write in.
+  - Paste your voice notes or design language if you have them (optional). Without them, the skill uses a casual but polite voice.
+  - Read each line. Check that every button says what will happen and every error says what to do next.
+  - Use the same word for the same idea across your screens. Fix any line that blames the user.
+output_sample:
+  input:
+    - The screen or flow and what it does
+    - Your product's voice or design language (optional)
+    - The language to write in
+  output:
+    - name: Primary copy
+      contains: The exact text to show on the screen, such as button labels, error messages, empty states and toasts.
+    - name: Variants
+      contains: Other versions of a line when the context changes, such as a different error cause.
+    - name: Do's and Don'ts
+      contains: Short tips for this screen, so your team keeps the same tone when it adds more text.

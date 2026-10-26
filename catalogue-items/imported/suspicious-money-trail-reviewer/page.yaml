@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It must spot subtle patterns and weigh evidence.
 new_slug: suspicious-money-trail-reviewer
 name: Suspicious money trail reviewer
-summary: Give it records that do not add up. Get red flags, money flow traces
-  and what to check next.
+summary: Spot red flags in financial records that don't add up. Give it your transactions and what looks wrong. You get a suspicious money trail review.
 job: money-and-investing
 headline: Suspicious money trail reviewer
-subhead: Give it the financial records and say what looks wrong. It runs a
-  Benford's Law digit test, looks for vendor and staff links, round-trip
-  payments and money flow traces. You get the red flags and a report outline
-  with next steps. It does not prove fraud.
+subhead: Give it the financial records and say what looks wrong. It runs a Benford's Law digit test, looks for vendor and staff links, round-trip payments and money flow traces. You get the red flags and a report outline with next steps. It does not prove fraud.
 explain: |
   A structured look at financial records that do not add up, with the red flags listed and the evidence worth following up. It points where to dig. It does not prove fraud.
 
@@ -19,6 +15,10 @@ when:
   - A whistleblower raised a claim and you need a structured first review.
   - You suspect a vendor is not real.
   - Funds are missing and you must list what to preserve.
+not_for:
+  - "You need proof of fraud or a named suspect: hire a qualified fraud examiner or a lawyer, because this only points to where to look."
+  - "You want a routine check of your controls: use a formal audit or an internal control review by an accountant."
+  - "You have no records, only a hunch: gather bank statements or exports first, or ask your accountant where to start."
 you_give:
   - Financial records or transaction lists
   - What looks wrong
@@ -31,7 +31,32 @@ you_get:
   - Money flow traces
   - A forensic report outline with next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Export your records as files, such as a CSV or PDF. Keep only the columns you need, and get permission before sharing personal data.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Attach your files. Say what looks wrong and the time period.
+  - Say whether this is for a legal case and who may see the results. Add vendor and staff lists if you have them.
+  - Read the red flags first. Treat every name as provisional until a qualified examiner confirms it.
+  - Ask your AI to run the digit test with code if it can. If not, it explains the test and you check the numbers yourself.
+  - Take the report outline and next steps to your accountant, examiner or lawyer. Do not confront anyone based on this alone.
+output_sample:
+  input:
+    - Your financial records as files, such as a CSV export or PDF statements
+    - What looks wrong, in a few plain sentences
+    - The time period you want checked
+    - A list of vendors and staff (optional)
+    - Who may see the findings, and whether this is for a legal case
+  prerequisites:
+    - Records saved as files, because your AI cannot open bank portals or private accounting systems
+    - An AI that can run code, for the digit test (optional, otherwise it explains the test in words)
+  output:
+    - name: Executive Summary
+      contains: A short account of the suspected scheme and the total amount that looks affected.
+    - name: Benford's Law results
+      contains: Whether the first digits of your amounts look natural, and which groups of numbers stand out.
+    - name: Vendor link findings
+      contains: Matches between staff details and vendor details, and vendors that may not be real.
+    - name: Money flow traces
+      contains: Payments that leave and come back through other parties, including repeated amounts and dates.
+    - name: Evidence Chain
+      contains: The scheme step by step, the people or firms involved (provisional), and a table of transactions with reference IDs.
+    - name: Control Recommendations
+      contains: Steps to close the gaps that let this happen.

@@ -14,8 +14,8 @@ outputs:
   - {type: plan}
 uses: [willingness-to-pay-survey, pricing-model-designer, price-test-planner]
 steps:
-  - {uses: willingness-to-pay-survey, note: "Starts from your product facts and returns two questions to send plus the sums to read the answers."}
-  - {uses: pricing-model-designer, note: "Reads the survey answers you collected and sets price points and tiers."}
+  - {uses: willingness-to-pay-survey, note: "Starts from your product facts and returns two questions to send plus the sums to read the answers. Hands the survey plan to step 2."}
+  - {uses: pricing-model-designer, note: "Reads the survey answers you collected, using the survey plan from step 1 to read them, and sets price points and tiers. Hands the price model to step 3."}
   - {uses: price-test-planner, note: "Tests the tier prices from the model on one product, with your real sales and costs."}
 origin: rebuilt
 version: 1.0.0

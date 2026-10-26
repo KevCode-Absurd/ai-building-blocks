@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a strict loop of change, test and undo.
 new_slug: slow-code-speeder
 name: Slow code speeder
-summary: Give it slow code. Get a faster version, one change at a time, with
-  tests run before and after.
+summary: Speed up slow code that times out on big inputs. Your AI makes one change at a time and runs tests before and after each one.
 job: test-and-fix-code
 headline: Slow code speeder
-subhead: Faster code that still gives the same answers. You hand over code that
-  works but is too slow on big inputs, and the skill cuts its time or memory
-  cost one change at a time.
+subhead: Faster code that still gives the same answers. You hand over code that works but is too slow on big inputs, and the skill cuts its time or memory cost one change at a time.
 explain: |
   Faster code that still gives the same answers. You hand over code that works but is too slow on big inputs, and the skill cuts its time or memory cost one change at a time.
 
@@ -18,6 +15,10 @@ when:
   - Nested loops are slowing a report that used to be quick.
   - An ORM makes one database call per row.
   - You fear a speed-up will quietly break results.
+not_for:
+  - "You are writing new code and want it fast from the start: ask your AI to plan the approach first, before any code exists."
+  - "Your code is wrong, not slow: fix the bug first, then come back to speed it up."
+  - "You need a math-level trick such as a Bloom filter or an FFT: ask a developer, as this skill only covers common code changes."
 you_give:
   - The slow code
   - Test files, or a sample input (optional)
@@ -28,8 +29,31 @@ you_get:
   - One change at a time, each tested
   - A note on the time or memory saved
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open a chat with an AI that can run code and read files, such as Claude. No install is needed.
+  - Paste the skill text into the chat, or upload the skill file.
+  - Paste your slow code. Add your tests if you have them, and say how big the data gets.
+  - Let it run the tests first. If you have none, it writes one from a sample input and the current result.
+  - Check each change it proposes. If a test fails, it undoes that change and stops.
+  - Apply the final diff only after your own tests pass.
+output_sample:
+  input:
+    - Your slow code
+    - Your test files, or a sample input (optional)
+    - How big the data gets when it slows down
+  prerequisites:
+    - An AI that can run code and read your project files, for the best results
+  output:
+    - name: Bottleneck
+      contains: The file and line that cause most of the slowness, with one sentence on why.
+    - name: Current complexity
+      contains: How the time and memory cost grow now as the input gets bigger.
+    - name: Transformation
+      contains: The single change made, such as swapping a repeated scan for a lookup table.
+    - name: New complexity
+      contains: How the time and memory cost grow after the change.
+    - name: Semantic risk
+      contains: Anything callers might notice, such as order or error timing, or None.
+    - name: Measured speedup
+      contains: Before and after timing as a ratio, or a note that it is a gain in theory only.
+    - name: The diff
+      contains: The exact code change, ready to apply once your tests pass.

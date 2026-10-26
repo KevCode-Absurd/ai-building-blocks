@@ -2,34 +2,55 @@ thinking: low
 thinking_why: It follows a set recipe that swaps the material and keeps the cut.
 new_slug: fabric-swap-sample-maker
 name: Fabric swap sample maker
-summary: Give it a garment shape and a fabric swatch. Get a sample photo in the
-  new fabric. Your image model draws it.
+summary: Swap the fabric on a garment photo. Give it a style sheet and a swatch, and your AI writes the prompt for a fabric swap sample image.
 job: product-photos
 headline: Fabric swap sample maker
-subhead: A sample image of your garment shape made in a new fabric, before you
-  cut or sew anything. Test eight fabrics for the price of eight image runs, not
-  eight sample garments.
+subhead: Show your garment shape in a new fabric before you sew anything. Give it a style sheet and a fabric swatch. You get a preview image with the same cut and a new material.
 explain: |
   A sample image of your garment shape made in a new fabric, before you cut or sew anything. Test eight fabrics for the price of eight image runs, not eight sample garments.
 
   You give two images: a garment style sheet, which sets the cut, structure and camera angle, and a fabric swatch, which sets material, texture, shine and how it hangs. The skill writes a prompt that keeps the shape fixed and replaces only the cloth, so a chunky knit can become silk satin with a matching drape. A close-up swatch works best. It uses the dlazy command line tool, which needs an account and credits.
 when:
   - You want to see one design in several fabrics before sampling.
-  - A buyer asks what a style would look like in a different material.
-  - You have a swatch from a supplier and want a quick visual.
-  - You are choosing between fabrics and need a mock-up to decide.
+  - A buyer asks how a style would look in a different material.
+  - A supplier sends a swatch and you want a quick picture.
+  - You are picking between fabrics and need a mock-up to decide.
+not_for:
+  - "You need a final production sample or a fit decision: order a physical sample from your maker instead."
+  - "Your style sheet has a busy print: use a plain version of the garment, or the print will fight the new fabric."
+  - "You want to change the cut or shape: ask your pattern maker or edit the sketch first."
 you_give:
-  - Garment style sheet image
-  - Fabric swatch image, close-up if possible
-  - dlazy tool and credits
+  - Your garment style sheet image, on a plain background
+  - Your fabric swatch image, a close-up if you can
+  - The garment type, such as top, dress or coat (optional)
 you_get:
-  - Sample image in the new fabric
-  - Same cut and angle as your style sheet
-  - Material, shine and drape changed to match the swatch
+  - A sample image of your garment in the new fabric
+  - The same cut and camera angle as your style sheet
+  - Shine, texture and drape changed to match the swatch
+  - A fix sentence to add if the shape or colour comes out wrong
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Take a clear photo of your garment on a plain background. Take a close-up photo of the fabric swatch in even light.
+  - Open an AI that can run commands and has the dlazy tool, with a dlazy account and credits. Add both images and paste this skill.
+  - Tell your AI the garment type and the fabric name. Ask it to follow the skill. The skill file is in Chinese, so ask your AI to answer in English.
+  - Let it write the prompt and make the image. Ask for the high quality setting.
+  - Check that the outline matches, the colour is right and the seams are still there. If not, ask for the fix lines.
+  - Treat the image as a preview. It does not show real feel or weight.
+output_sample:
+  input:
+    - Your garment style sheet image, on a plain background
+    - Your fabric swatch image, a close-up if you can
+    - The type of garment, such as top, dress or coat
+  prerequisites:
+    - An AI that can run commands, with the dlazy tool installed
+    - A dlazy account with credits
+  output:
+    - name: Fabric swap prompt
+      contains: A prompt that names the fabric's look and drape, and locks the cut, lengths, details and camera angle.
+    - name: Sample image
+      contains: Your garment shape redrawn in the new fabric, with the same angle and a clean background.
+    - name: Fix lines
+      contains: Extra sentences to add to the prompt if the shape moved, the colour is off or the texture did not change.
+    - name: Fabric matrix (optional)
+      contains: One garment shape run through several fabrics, saved as separate images, so you can compare them.
+    - name: Quality check
+      contains: A list to check outline, colour, texture and seams, plus a note that the image is a visual preview only.

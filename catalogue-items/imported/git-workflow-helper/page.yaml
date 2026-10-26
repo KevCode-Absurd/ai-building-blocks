@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Git tasks follow well known steps.
 new_slug: git-workflow-helper
 name: Git workflow helper
-summary: Tell it your Git problem. Get branching, commits, merges and pull
-  requests handled cleanly.
+summary: Fix a Git problem in plain words. Your AI splits clean commits, makes branches, resolves merge conflicts and drafts the pull request.
 job: build-software
 headline: Git workflow helper
-subhead: "Say what you want done in Git and it gets done cleanly. It starts by
-  reading the state of your repo: current branch, uncommitted changes, recent
-  history and remotes."
+subhead: "Say what you want done in Git and it gets done cleanly. It starts by reading the state of your repo: current branch, uncommitted changes, recent history and remotes."
 explain: |
   Say what you want done in Git and it gets done cleanly. It starts by reading the state of your repo: current branch, uncommitted changes, recent history and remotes. Then it works from that, not from guesses.
 
@@ -18,6 +15,10 @@ when:
   - A merge has conflicts and you are not sure which side to keep.
   - You want a branch naming and PR routine your team follows.
   - You need a .gitignore and pre-commit checks added.
+not_for:
+  - "You cannot give your AI access to the repo: ask a teammate with write access, or run the commands yourself."
+  - "You need to manage your host account, teams or billing: use the GitHub or GitLab help pages."
+  - "You want to learn Git from scratch: use the official Git documentation first, then come back."
 you_give:
   - Your Git problem in plain words
   - Access to the repo
@@ -29,8 +30,32 @@ you_get:
   - Conflicts resolved with explanations
   - A pull request ready to review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in a place where it can run code and read your project files.
+  - Paste the skill text into the chat, or load the skill folder if your tool supports it.
+  - Describe your Git problem in plain words, such as "split my edits into clean commits" or "fix the conflict in this merge".
+  - Let it check your repo first. Read the plan it gives you.
+  - Say yes only when it asks before a command that rewrites history, such as a force push or a hard reset.
+  - Run your tests on the branch, then ask for a review.
+output_sample:
+  input:
+    - Your Git problem in plain words
+    - Access to your repo (your AI must be able to run Git commands)
+    - Your branching model, such as GitHub Flow (optional)
+    - Your hosting platform, such as GitHub or GitLab (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Git installed on your computer
+    - The GitHub or GitLab command line, if you want a pull request made for you (optional)
+  output:
+    - name: Repo check
+      contains: Your current branch, uncommitted changes, recent history and remotes, read before anything else is done.
+    - name: Commits
+      contains: Your changes grouped into small commits, each with a short, clear message.
+    - name: Branch
+      contains: A new branch with a steady name, made from the right base branch.
+    - name: Conflict notes
+      contains: For each conflict, what both sides said and which one was kept, with the reason.
+    - name: Hooks and .gitignore
+      contains: Pre-commit checks and a .gitignore that skips build files, secrets and system files.
+    - name: Pull request
+      contains: A title and body ready for review, opened through the GitHub or GitLab command line.

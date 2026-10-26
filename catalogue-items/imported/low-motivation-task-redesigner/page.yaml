@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads the task, not the students, to find the cause.
 new_slug: low-motivation-task-redesigner
 name: Low-motivation task redesigner
-summary: Give it a task students resist. Get why it drains motivation and a
-  redesign built on choice, success and connection.
+summary: Find why students resist a task and get a redesign that adds choice, success and connection. A low motivation task redesigner for teachers.
 job: teach-and-train
 headline: Low-motivation task redesigner
-subhead: A diagnosis of why a task drains students' motivation, plus a
-  redesigned version that keeps the same rigor. It treats low motivation as a
-  response to the task, not as a flaw in the student.
+subhead: A diagnosis of why a task drains students' motivation, plus a redesigned version that keeps the same rigor. It treats low motivation as a response to the task, not as a flaw in the student.
 explain: |
   A diagnosis of why a task drains students' motivation, plus a redesigned version that keeps the same rigor. It treats low motivation as a response to the task, not as a flaw in the student.
 
@@ -18,6 +15,10 @@ when:
   - You teach something students find dull and want it to feel worth doing.
   - A task is too hard or too easy and students give up early.
   - You want to add choice without lowering standards.
+not_for:
+  - "You need help with one student's behaviour or needs: talk with that student, their family or your school's support team."
+  - "Students cannot yet attempt the task at all: first break the task into smaller steps, or ask a colleague who teaches that level."
+  - "You want a ready lesson plan for a whole unit: write the plan yourself, then bring one weak task here."
 you_give:
   - The task and its learning goal
   - The students' age and level
@@ -29,7 +30,27 @@ you_get:
   - Each change tied to its reason
   - Classroom notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the contents of the skill's SKILL.md file. No code, files or paid tools are needed.
+  - Paste the task exactly as students get it. Add the learning goal and the year group.
+  - Add what you have seen in class and any limits on time or resources, if you have them.
+  - Read the diagnosis first. Check it matches what you see in your own class.
+  - Check that the redesigned task still teaches the same goal. Ask your AI to adjust anything that is too easy.
+  - Test the new task with one class before you use it with all of them.
+output_sample:
+  input:
+    - The task as students get it now
+    - What students should learn from it
+    - Students' age or year group
+    - What you see happening, such as rushing or avoiding the task (optional)
+    - Time, resources or curriculum limits (optional)
+  output:
+    - name: Motivation Diagnostic
+      contains: A short title line that names the task being reviewed.
+    - name: SDT Diagnostic
+      contains: How the task measures up on choice, feeling able to succeed, and connection to others, with a type of motivation named.
+    - name: Redesigned Task
+      contains: A new version of the task that keeps the same learning goal and the same level of challenge.
+    - name: What Changed and Why
+      contains: Each change listed with the need it serves and the reason it should help.
+    - name: What to Watch For
+      contains: Signs in class that show the redesign is working or needs another change.

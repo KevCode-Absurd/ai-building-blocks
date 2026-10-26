@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It must pick a real hook and keep the message short.
 new_slug: prospect-outreach-drafter
 name: Prospect outreach drafter
-summary: Name a prospect. Get a short personal email or sequence saved as a
-  draft for you to review. You send it.
+summary: Write a personal prospect outreach email or 3-touch sequence from your CRM and past emails. It is saved as a draft, and you decide when to send.
 job: sell-and-negotiate
 headline: Prospect outreach drafter
-subhead: A short, personal email or multi-step sequence for one prospect, saved
-  as a draft so you can review it before anything is sent. You stay in control
-  of the send button.
+subhead: A short, personal email or multi-step sequence for one prospect, saved as a draft so you can review it before anything is sent. You stay in control of the send button.
 explain: |
   A short, personal email or multi-step sequence for one prospect, saved as a draft so you can review it before anything is sent. You stay in control of the send button.
 
   Name the person or company. The skill reads your CRM and any call notes for context, then writes outreach that mentions what is actually known about them. It can write a single first email, a re-engagement note or a three-touch sequence. Values come from your records and are labelled blank when missing, with no guessing. Text found in emails or transcripts is treated as data, never as instructions. It adds the contact to a sequence only when you ask.
 when:
-  - You have a hot lead and need a first email that does not sound like a
-    template.
+  - You have a hot lead and need a first email that does not sound like a template.
   - A past prospect went quiet and you want to re-engage them.
   - You need a three-touch sequence for a target account.
   - You want drafts waiting in your inbox, not emails sent for you.
+not_for:
+  - "You need to email a large list with no details on each person: use your sales engagement tool, such as Apollo, Outreach or Salesloft."
+  - "You have no CRM, no past emails and no notes, and nothing to say about the person: do a few minutes of research first, then paste what you find."
+  - "You want to send mail without reading it first: this skill saves a draft, so a person should always review it."
 you_give:
   - Prospect name or company
   - Connected CRM and email
@@ -30,8 +30,30 @@ you_get:
   - Facts used, with sources
   - Draft saved for your review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM and save email drafts.
+  - Open Claude, ChatGPT or Gemini and paste in the skill, or upload the skill folder.
+  - Tell your AI who the prospect is and what you want, such as a first email, a re-engage note or a 3-touch sequence.
+  - Connect your CRM and email if your AI can. If not, paste in what you know about the person and any past emails.
+  - Read the draft. Check that every fact about the prospect is true and that the ask is one clear step.
+  - Edit the draft in your email tool and send it yourself. Ask your AI to add the contact to a sequence only if you want that.
+output_sample:
+  input:
+    - The prospect's name, email or company
+    - What you want from the message, such as a first intro, a follow-up or a re-engage note
+    - A hook or angle to lead with (optional)
+    - Notes from earlier contact (optional)
+  prerequisites:
+    - A connected CRM and email, so your AI can read past contact and save a draft (optional, you can paste details instead)
+    - A sales engagement tool such as Apollo, Outreach or Salesloft, only if you want the contact added to a sequence
+  output:
+    - name: Context used
+      contains: What your AI found in your CRM and past emails, whether this is a cold or warm contact, and the hook it chose.
+    - name: Subject line
+      contains: A short subject of 4 to 7 words that points to the hook, not to your product.
+    - name: Email body
+      contains: A plain text email under 120 words with a relevance line, a value bridge, a soft ask and your signature.
+    - name: Follow-up touches
+      contains: Touches 2 and 3, each more direct than the last, when you ask for a sequence.
+    - name: Draft link
+      contains: A link to the saved email draft so you can open it, edit it and send it.
+    - name: Suggested CRM note
+      contains: A line you can log in your CRM to record the outbound email.

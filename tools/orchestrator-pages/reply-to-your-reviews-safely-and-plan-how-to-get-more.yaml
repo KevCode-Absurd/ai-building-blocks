@@ -1,6 +1,6 @@
 new_slug: reply-to-your-reviews-safely-and-plan-how-to-get-more
 name: Reply to reviews safely and plan how to get more
-summary: Give it your reviews. Get themes, safe replies and a plan to get more reviews.
+summary: "Reply to reviews safely: give it your reviews and refund rules. You get themes, checked replies and a plan to ask for more reviews."
 job: help-customers
 thinking: medium
 thinking_why: It drafts and checks short replies. A mid-range model is enough, unless your reviews run to the hundreds.
@@ -14,6 +14,10 @@ when:
   - Reviews and complaints sit unanswered and you do not know where to start.
   - You want to reply to an angry customer but fear you will promise too much.
   - You want more reviews and are not sure when or how to ask.
+not_for:
+  - "You want fake or paid-for reviews: this workflow does not write them, so ask real customers, and follow each review site's rules."
+  - "The complaint is about the law or safety, such as an injury or a legal threat: pass it to your support process or a lawyer, not this workflow."
+  - "You only need to write one reply to one happy review: ask your AI to write it directly, no workflow needed."
 you_give:
   - Your reviews, complaints and support emails from the last 90 days, pasted or exported
   - Your refund, replacement and credit rules, and what you may offer
@@ -30,6 +34,26 @@ how_to_use:
   - Paste your reviews or export them. Pasted text gives better results than links.
   - Give your refund rules before step 2. Without them every promise is marked not checked.
   - Post the replies yourself. Nothing is posted or refunded for you.
+output_sample:
+  input:
+    - Your reviews, complaints and support emails from the last 90 days
+    - Your refund, replacement and credit rules, and what you may offer
+    - How long your product takes to try before someone can judge it
+    - Order or case facts for the angry ones (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack zip with HANDOFF.md and the skill files
+  output:
+    - name: "Step 1: themes and draft replies"
+      contains: Three to five themes with customer quotes, a draft reply to each review, and customers who may leave.
+    - name: "Step 2: reply check"
+      contains: A verdict on each angry reply, what the customer raised, problems found, a repaired draft and decisions left to you.
+    - name: Pause
+      contains: You post the checked replies and settle any open calls, such as a refund or credit.
+    - name: "Step 3: review plan"
+      contains: When to ask for reviews, the first question, follow-ups, a rating policy and reply templates for public complaints.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read the reviews and draft a reply to each
     text: Groups reviews, complaints and tickets into themes with exact quotes, drafts a reply to every review in your voice and flags customers who look ready to leave.

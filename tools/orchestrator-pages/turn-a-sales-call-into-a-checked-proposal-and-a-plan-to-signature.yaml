@@ -1,6 +1,6 @@
 new_slug: turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature
 name: Turn a sales call into a checked proposal
-summary: Give it the call notes. Get the follow-up, a costed proposal, a margin check and a dated plan.
+summary: Turn a sales call into a checked proposal. Give it your call notes and get the follow-up, a costed proposal, a margin check and a dated plan.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It turns a conversation into a priced document and checks the margin before it goes out. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You just finished a call and the buyer asked for a proposal.
   - Your proposals take days and quote terms nobody checked.
   - Deals stall after the proposal because nobody set the next step.
+not_for:
+  - "You only need a price quote and there was no call: write the quote yourself from your price list, or ask the buyer for a short call first."
+  - "You have no call notes or transcript yet: have the call first, then come back with what was said."
+  - "The buyer named a rival and you need a plan to beat them: use the Win a deal against a named rival."
 you_give:
   - The call transcript or your notes
   - Your price list, discount limits and standard terms
@@ -30,6 +34,26 @@ how_to_use:
   - Paste the transcript or notes and your price and discount rules. It drafts the follow-up and the proposal.
   - Read the deal desk review. If it says counter, change the proposal before sending.
   - Send the follow-up and the proposal yourself. Share the action plan and agree the dates with the buyer.
+output_sample:
+  input:
+    - The call transcript or your notes
+    - Your price list, discount limits and standard terms
+    - Your offer and what you can promise on timeline
+    - Proof you can use, such as results or quotes with permission (optional)
+  prerequisites:
+    - A chat AI that can read files, such as Claude, to follow HANDOFF.md
+    - A buyer brief from the Buyer brief writer (optional but recommended)
+  output:
+    - name: Follow-up
+      contains: The follow-up email in your voice, a summary for your team and the CRM updates from the call.
+    - name: Proposal
+      contains: The buyer's needs in their words, the value, the price, the timeline and proof.
+    - name: Deal desk review
+      contains: Margin after discount, each term marked ok or flagged, and a clear yes, no or counter with changes.
+    - name: Mutual action plan
+      contains: The why-buy case and a dated plan to signature with tasks for both sides, to share with the buyer.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the follow-up
     text: Drafts the follow-up email, a team summary and the CRM updates from the call.

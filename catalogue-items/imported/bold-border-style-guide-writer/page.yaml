@@ -2,34 +2,108 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: bold-border-style-guide-writer
 name: Bold-border style guide writer
-summary: Describe your product. Get a style guide with thick borders and vivid
-  colour, plus rules for each part.
+summary: Get a bold-border style guide with thick borders, vivid colour and rules for each part, plus a contrast check so it stays readable.
 job: design-work
 headline: Bold-border style guide writer
-subhead: "A written style guide for a bold, raw look: thick borders, vivid
-  colours and warm backgrounds. It covers the base rules and then how each part
-  of your interface should look and behave."
+subhead: Tell your AI about your product. It writes a neobrutalist style guide with thick borders, vivid colours and warm backgrounds. You get colours, type, spacing, rules for each part and a contrast check.
 explain: |
-  A written style guide for a bold, raw look: thick borders, vivid colours and warm backgrounds. It covers the base rules and then how each part of your interface should look and behave.
+  A bold-border look is easy to like and hard to repeat. One page gets a 2px border, the next a 4px one, and the bright yellow turns up as text where nobody can read it. This skill writes the rules down, so a designer or developer builds every screen the same way.
 
-  The skill states your design aim in one sentence, then sets the base: colour tokens, a type scale, spacing steps and accessibility needs. After that, it describes each component with its parts, variants, states and responsive behaviour. It ends with do and don't rules, and it explains trade-offs where there is more than one choice. Contrast and visible focus come before style, so the result stays usable.
+  Your AI first states the look in one sentence. Then it sets colours, type sizes and spacing as named values, and gives the border width and shadow offset as numbers. Each part, such as buttons and forms, gets every state: default, hover, focus, disabled, loading and error.
+
+  The loud yellow is the catch. On the default warm background it is only about 1.5 to 1, far under the 4.5 to 1 that normal text needs. So the guide uses it as a fill with dark text on top, never as text. Contrast and a visible focus ring come before style.
 when:
-  - You want a neobrutalist look for a new product.
-  - Designers and developers need one shared reference.
-  - Your current UI feels inconsistent and needs rules.
-  - You need component guidance with all states spelled out.
+  - You want a thick-border, vivid-colour look (neobrutalism) for a new product and need it written down.
+  - A developer asks how thick the border is and what the shadow offset is, and nobody can say.
+  - Your screens mix border widths, shadows and yellows from page to page.
+  - You are briefing a designer and want the look pinned down before they start.
+not_for:
+  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "You want a harsh, blunt, anti-polish look with little colour: use the Raw brutalist style guide writer."
+  - "Your product is a dense data tool, or needs a calm, quiet look: use the Minimal style guide writer."
+  - "You want soft, puffy shapes instead of hard borders: use the Soft clay style guide writer."
 you_give:
-  - A description of your product
-  - Brand colours (optional)
-  - Fonts you already use (optional)
-  - The components you need covered
+  - A description of your product and what it does
+  - Who uses it
+  - Brand colours and fonts you must keep (optional)
+  - Screens or parts to cover first (optional)
+  - Web, iOS or Android (optional)
 you_get:
-  - A style guide with colour, type and spacing
-  - Rules for each component and its states
-  - Do and don't lists
-  - Accessibility requirements
+  - Colours, type sizes and spacing as named values, with a contrast ratio for each colour pair
+  - Border width and shadow offset set as numbers
+  - Rules for each part, such as buttons and forms, with every state
+  - Accessibility rules you can test, plus do and don't lists
+  - A review checklist your team can run before shipping
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill into a new chat, or add it to your AI first.
+  - Paste your product description and who uses it. Add any fonts or colours you must keep, and say if it is for web, iOS or Android.
+  - Answer the one round of questions it asks, or say "use the defaults". Anything you leave out is marked MISSING.
+  - Check the colour table first. Fix any text pair under 4.5 to 1, and keep the yellow for fills.
+  - Hand the guide to your designer or developer, or paste it into your coding AI's project instructions.
+how_it_works:
+  - title: State the look
+    text: It writes one sentence on the bold-border idea and who it is for, before it sets any rules.
+  - title: Set the foundations
+    text: It sets colours as named tokens, the fonts, type sizes, spacing steps, border widths and shadow offsets.
+  - title: Check the contrast
+    text: It tests each text and background pair, and flags any under 4.5 to 1 for normal text or 3 to 1 for large text and borders.
+  - title: Write part rules
+    text: For each part it covers anatomy, variants, states and how it works by keyboard, mouse and touch.
+  - title: Add tone and bans
+    text: It adds tone examples and do and don't pairs, plus notes for moving old screens to the new look.
+  - title: End with a checklist
+    text: It finishes with a short list your team can run in code review.
+output_shape: |-
+  1. Context and goals: <the look in one sentence, the product, who uses it>
+  2. Design tokens
+     | Token | Value | Use | Contrast on surface |
+     | <primary> | <hex> | <where it goes> | <ratio, pass or fail> |
+     Borders: <width in px>   Shadow: <offset in px>
+     Fonts: <display>, <body>, <code>
+     Type steps: <name = size>   Spacing: <steps>
+  3. Parts: <button, form, card> with anatomy, variants, states, small screens
+  4. Accessibility rules: <rule> and <how to test it>
+  5. Tone: <voice words>, then <before> and <after> examples
+  6. What not to do: <rule> and <example to avoid>
+  7. Review checklist: - [ ] <check>
+  Next step: <who gets the guide>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - Your product and what it does
+    - Who uses it
+    - Brand colours and fonts you must keep (optional)
+    - Screens or parts to cover first (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the bold-border look, the product and who it is for.
+    - name: Design tokens and foundations
+      contains: Colours, fonts, type sizes, spacing, border widths and shadow offsets, with a contrast ratio for each pair.
+    - name: Component rules
+      contains: Anatomy, variants, states and small-screen behaviour for each part, such as buttons and forms.
+    - name: Accessibility requirements
+      contains: Testable rules for focus, contrast, keyboard use and touch size.
+    - name: Content and tone standards
+      contains: Voice words with before and after examples.
+    - name: Anti-patterns
+      contains: What not to build, each paired with an example.
+    - name: QA checklist
+      contains: A list your team can run in code review before shipping.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your logo colours as hex codes
+    - Three sites whose bold look you like, in a few words each
+    - A screenshot of your current screens
+    - Your current CSS or Tailwind colour list
+terms:
+  - term: Neobrutalism
+    meaning: A design style with thick borders, hard shadows and bright flat colours on a warm background.
+  - term: Token
+    meaning: A named value, such as primary yellow, used in place of a raw colour code.
+  - term: Contrast ratio
+    meaning: How far apart two colours are in brightness. Normal text needs at least 4.5 to 1.
+  - term: Focus ring
+    meaning: The outline that shows which button or field the keyboard is on.

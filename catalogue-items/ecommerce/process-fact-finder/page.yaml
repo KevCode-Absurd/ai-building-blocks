@@ -1,6 +1,6 @@
 new_slug: process-fact-finder
 name: "Process fact finder"
-summary: "Paste maker, supplier and test notes. Get true facts rivals never state, as specific ad claims."
+summary: "Find true facts about how your product is made that rivals never state. Paste maker or supplier notes, get a fact table and top five ad claims."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It reads long notes and must keep every claim tied to proof, which takes care but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - Your product page says "premium quality" and you can't say why it is.
   - You have a factory visit, a supplier PDF or lab results sitting unused.
   - A rival says the same things you do, and you need a fact that makes your page different.
+not_for:
+  - "You have no maker notes, spec sheets or test results at all: ask your maker or supplier for them first, or read your customer reviews for what buyers praise."
+  - "You need finished ad copy: take the top five claims to a copywriter, or write the ads with your AI once you have proof."
+  - "You want to know what buyers feel or say: talk to a few customers and read your reviews instead."
 
 you_give:
   - Maker or supplier notes, spec sheets, test results and process steps
@@ -34,6 +38,26 @@ how_to_use:
   - Paste two or three things your rivals say about the same product, and the one doubt your buyers raise most.
   - Check the table. Send the "ask your maker" questions and run the skill again with the answers.
   - Use only the claims marked as backed. Show the proof beside any bold one.
+output_sample:
+  input:
+    - Maker or supplier notes, spec sheets, test results and process steps
+    - A few things rivals say on their pages (optional)
+    - The buyer's main doubt (optional)
+  output:
+    - name: FACT TABLE
+      contains: Each fact with whether it is true, if a rival says it, if the buyer knows it, and the proof.
+    - name: TOP FIVE CLAIMS
+      contains: Five claims with a number or something to picture, each with its fact, proof and where to use it.
+    - name: ANCHOR FACT
+      contains: The one fact strong enough to build a campaign on, and why.
+    - name: NEEDS PROOF BEFORE USE
+      contains: Claims without backing, with the proof needed and who can supply it.
+    - name: EXPERT CHECK
+      contains: Technical claims that a subject expert should read before you use them.
+    - name: ASK YOUR MAKER
+      contains: Questions that could turn up more facts when you next talk to your maker.
+    - name: MISSING
+      contains: Any gap, such as maker notes, proof for a claim or rival lines.
 
 how_it_works:
   - title: Reads every step

@@ -1,46 +1,53 @@
 new_slug: get-your-personal-money-in-order-with-room-for-error
 name: Get your money in order with room for error
-summary: Give it your income, spending and debts. Get a budget, a debt plan and a savings forecast.
+summary: "Get a monthly budget, a debt payoff order and a savings forecast that survive a bad month. Give it your income, spending and debts."
 job: money-and-investing
 thinking: high
 thinking_why: It works with your real numbers and judges the plan's margin for error. Give it your strongest model.
 headline: Get your money in order with room for error
-subhead: Give it your income, your spending and your debts. It builds a monthly budget, plans the debt payoff order, checks the story you tell yourself about spending in Morgan Housel's manner, tests whether the plan has room for error, and projects what your savings become over time.
+subhead: Give it your income, your spending and your debts. It builds a monthly budget and plans the debt payoff order. It reads the story behind one or two spending habits, tests whether the plan has room for error, and projects what your savings become over time. The sums are estimates, not financial advice.
 explain: |
-  Most money plans fail for a reason that has nothing to do with maths. The budget assumes a normal month, and no month is normal. The debt plan picks the wrong order. The spending that hurts is the spending with a story attached, and nobody checks the story.
+  How do you make a budget that survives a bad month? Most money plans fail for a reason that has nothing to do with maths. The budget assumes a normal month, and no month is normal. The debt plan picks the wrong order. The spending that hurts is the spending with a story attached, and nobody checks the story.
 
-  This workflow builds a plan that bends without breaking. It sets a monthly budget from your real numbers. It orders the debts so the payoff is fastest or cheapest, your choice. It reads the story behind your spending, in the manner of Morgan Housel: what you are really buying when you buy it. It then tests the plan for room for error: what happens in a bad month, a lost job, a surprise bill, following Housel and Benjamin Graham. Last it projects your savings forward with plain assumptions you can change.
+  This workflow builds a plan that bends without breaking. It sets a monthly budget from your real numbers. It orders the debts so the payoff is fastest or cheapest, your choice. It reads the story behind one or two spending habits you pick, in the manner of Morgan Housel: what you are really buying when you buy it. It then tests the plan for room for error: what happens in a bad month, a lost job, a surprise bill, following Housel and Benjamin Graham. Last it projects your savings forward with plain assumptions you can change. Returns are guesses, so treat the projection as a range, not a promise.
 when:
   - You have no idea where the money goes each month.
   - You have three debts and pay the minimum on all of them.
   - You have saved before and spent it in one bad month.
+  - A raise, a new baby or a move is coming and you want a plan that holds.
+not_for:
+  - "You want to plan one big purchase: use Plan a purchase around your real budget."
+  - "You want to choose what to invest in or how to split stocks and bonds: use Choose your investing style and your stock and bond split."
+  - "It is your business's cash, not your own: use Build a monthly P&L and know your real margin."
+  - "A debt is in collections or you cannot pay the minimums. Talk to a licensed adviser or a nonprofit credit counsellor first."
 you_give:
   - Your monthly income after tax
   - Your spending for the last two or three months, as it really was
   - "Your debts: balance, rate and minimum payment for each"
+  - Your savings now, your age and when you want to stop work (optional)
   - Your goals and when you want them
 you_get:
   - A monthly budget with a buffer built in
-  - A debt payoff order and the months it takes
-  - A plain read of your spending story and the room-for-error test, with what to change
+  - A debt payoff order and the month each debt ends
+  - A plain read of one or two spending habits, and a room-for-error test with what to change
   - A savings projection with assumptions you can change
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your income, spending and debts. It builds the budget and the debt plan.
-  - Read the spending story and the room-for-error test. Decide what you will change.
-  - Set up the payments. Come back each quarter with the new numbers.
+  - Paste your income, spending and debts. Say if you want the smallest debt gone first or the dearest first. Name one or two spending habits you want a closer look at.
+  - It builds the budget and the debt plan, then reads each habit, tests for room for error and projects your savings. A missing figure is marked MISSING, never guessed.
+  - Read the room-for-error test first. Decide what you will change, set up the payments, and come back each quarter with new numbers.
 how_it_works:
   - title: Build the budget
     text: Builds a monthly budget from your real numbers, with fixed and flexible costs, savings and a buffer.
   - title: Plan the debt payoff
     text: Orders the debts, sets the monthly amount and shows the month each one ends.
   - title: Read your spending story
-    text: Reads what you are really buying with each kind of spending, in Housel's manner, and says which to keep.
+    text: Takes one spending habit at a time and reads what you are really buying, in Housel's manner. It sizes the long-run cost and suggests a small test.
   - title: Test for room for error
     text: Tests the plan against a bad month, a lost job and a surprise bill, and says what to change so it survives.
   - title: Project your savings
-    text: Projects your savings over time with plain assumptions you can change.
+    text: Projects your savings over the years you choose with plain assumptions you can change.
 output_shape: |-
   STEP 1: BUDGET
     Income: <...> | Fixed: <...> | Flexible: <...> | Savings: <...> | Buffer: <...>
@@ -48,8 +55,8 @@ output_shape: |-
   STEP 2: DEBT PAYOFF
     Order: <debt, why> | Monthly: <...> | Ends: <debt, month>
 
-  STEP 3: SPENDING STORY
-    <kind of spending>: You are buying <status / comfort / time / ...> | Keep: <yes / cut / change>
+  STEP 3: SPENDING STORY (one block for each habit you pick)
+    The wish: <habit, cost, the feeling> | Where it comes from: <...> | Long-run cost: <...> | Does the joy fade: <...> | Small test: <...>
 
   STEP 4: ROOM FOR ERROR
     Bad month: <what breaks> | Lost job: <months covered> | Surprise bill: <...> | Change: <...>
@@ -59,6 +66,19 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+output_sample:
+  input:
+    - "Your monthly income after tax"
+    - "Two or three months of real spending"
+    - "Your debts: balance, rate and minimum for each"
+    - "Your goals, your savings now, and one or two spending habits to look at"
+  output:
+    - {name: "Step 1 budget", contains: "Income, fixed and flexible costs, savings and a buffer, all adding up to your income."}
+    - {name: "Step 2 debt payoff", contains: "The payoff order you chose, the monthly amount and the month each debt ends."}
+    - {name: "Step 3 spending story", contains: "For each habit, what you are buying, the long-run cost, whether the joy fades and a small test."}
+    - {name: "Step 4 room for error", contains: "What breaks in a bad month, a lost job or a surprise bill, and what to change."}
+    - {name: "Step 5 savings projection", contains: "Where your savings reach over the years you choose, with assumptions you can change."}
+    - {name: "Hand-back summary", contains: "Each step's file and every MISSING line in one list."}
 example:
   business: sprout
   input: |
@@ -111,3 +131,8 @@ works_best_with:
 terms:
   - term: Room for error
     meaning: The gap between what your plan needs and what you have, so a bad month does not break it.
+  - term: Buffer
+    meaning: Money set aside each month for the costs you cannot predict.
+  - term: Minimum payment
+    meaning: The least you must pay on a debt each month to keep it in good standing.
+next: [investing-style-split, plan-a-purchase-around-your-real-budget]

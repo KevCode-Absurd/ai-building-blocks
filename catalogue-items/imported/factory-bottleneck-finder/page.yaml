@@ -2,22 +2,23 @@ thinking: high
 thinking_why: It models flow to find what limits output.
 new_slug: factory-bottleneck-finder
 name: Factory bottleneck finder
-summary: Describe your production steps and times. Get the slowest step found
-  and ranked fixes with expected output gains.
+summary: Find the one slow step that limits your production line. Give it your steps and times. You get a ranked list of fixes and what each could add.
 job: plan-supply-chain
 headline: Factory bottleneck finder
-subhead: The one step that limits your whole line, found and named, with a
-  ranked list of fixes and the output each could add. Speeding up any other step
-  changes nothing, so this tells you where to spend.
+subhead: The one step that limits your whole line, found and named, with a ranked list of fixes and the output each could add. Speeding up any other step changes nothing, so this tells you where to spend.
 explain: |
   The one step that limits your whole line, found and named, with a ranked list of fixes and the output each could add. Speeding up any other step changes nothing, so this tells you where to spend.
 
   You describe your steps, cycle times, machines, people and the way work moves through them. The skill maps the flow, then works out the capacity of each step and compares them. The slowest one is the bottleneck. It then checks the cause, such as waiting, setup time, breakdowns or uneven work, and tests what-if changes like adding a shift or balancing tasks. It uses ideas from lean flow mapping and queue maths. You get fixes ranked by gain per effort.
 when:
-  - Your production line makes less than the machines should allow.
+  - Your line makes less than your machines should allow.
   - Work piles up in front of one station and you do not know why.
-  - You are about to buy equipment and want proof it is the right place.
+  - You are about to buy equipment and want to check it is the right spot.
   - Lead times grew and you cannot see which step caused it.
+not_for:
+  - "You run a single machine or have no step times at all: time one run by hand first, or ask a process engineer to help."
+  - "You want to cut waste like waiting, extra motion or overstock: use lean-manufacturing instead."
+  - "You need a day-by-day job order for the shop floor: use production-scheduling instead."
 you_give:
   - The list of steps in order
   - Time per step, or a rough guess
@@ -30,8 +31,31 @@ you_get:
   - Ranked fixes with expected output gain
   - What-if results for the best options
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
+  - List your steps in order. For each one, add the time per unit, the number of machines and people, and the shifts.
+  - Add any known breakdowns, and your goal, such as more units per day (optional).
+  - Ask your AI to find the bottleneck and test fixes. If it can run Python, ask it to run the simulation too.
+  - Check the capacity table first. The step with the lowest capacity should be the one marked as the bottleneck.
+  - Pick the top fix, then run the numbers again with your real times before you spend money.
+output_sample:
+  input:
+    - Your production steps, in order
+    - Time per step, or a rough guess
+    - Machines, staff and shifts at each step
+    - Known problems or breakdowns (optional)
+    - Your goal, such as more units per day
+  prerequisites:
+    - An AI that can run Python code, if you want the simulation and queue maths run for you
+  output:
+    - name: Executive Summary
+      contains: Current line performance, the bottleneck found, the chances to improve, and the gains you can expect.
+    - name: Process Analysis table
+      contains: Capacity, cycle time, use rate and queue for each step, with the bottleneck step marked.
+    - name: Current Performance
+      contains: Line output, average cycle time, work in progress and how well the steps are balanced.
+    - name: Simulation Results
+      contains: The baseline next to what-if scenarios, such as adding capacity at the bottleneck or balancing the line.
+    - name: Recommendations
+      contains: Fixes in priority order, each with the output gain you can expect and the cost to do it.
+    - name: Expected Benefits
+      contains: A short roll-up of the gains in output, cycle time and work in progress.

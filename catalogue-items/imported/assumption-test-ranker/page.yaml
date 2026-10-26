@@ -2,33 +2,71 @@ thinking: medium
 thinking_why: It scores each item and must suggest fitting tests.
 new_slug: assumption-test-ranker
 name: Assumption test ranker
-summary: Give it your list of assumptions. Get them ranked by impact and risk,
-  with a test for each top one.
+summary: Rank your business assumptions by impact and risk. Get a four-box matrix and a test, with a metric and pass line, for each one worth testing.
 job: test-an-idea
 headline: Assumption test ranker
-subhead: A ranked list of your riskiest assumptions, with an experiment for each
-  one that matters most. Paste your assumptions about a product, feature or
-  business idea, and the AI sorts them so you stop testing the wrong things.
+subhead: Paste the list of assumptions behind a product, feature or business idea. Your AI scores each for impact and risk, sorts them into a four-box matrix and designs a test for the ones that need it, so you stop testing the wrong things.
 explain: |
-  A ranked list of your riskiest assumptions, with an experiment for each one that matters most. Paste your assumptions about a product, feature or business idea, and the AI sorts them so you stop testing the wrong things.
+  This assumption test ranker helps when you have a long list of "we think customers will..." and not enough time to check them all. Give it the list. You get each assumption scored and placed in a box that says what to do next: test it, build it, wait or drop it.
 
-  Each one is scored twice: impact, meaning how much value it creates and how many customers it touches, and risk, meaning how unsure you are and how hard it is to check. The result lands in one of four boxes. Low on both: wait. High impact, low risk: just build it. Low impact, high risk: drop it. High on both: design a test. Each test gets a metric and a pass line.
+  Each assumption gets two scores. Impact is how much value it creates and how many customers it touches. Risk is how unsure you are, weighed against how hard it is to find out. The two scores place it in one of four boxes of the assumption prioritization canvas.
+
+  High on both means design a test. Your AI then writes an experiment that measures what people do, not what they say, with one metric and a pass line. The scores are estimates unless you bring real numbers, and the answer says so.
 when:
-  - You have thirty assumptions on sticky notes and time to test five.
-  - You can't decide what to research before building.
-  - A team argument about priorities needs something neutral to look at.
-  - You want cheap tests for a new product idea.
+  - You have 30 assumptions on sticky notes and time to test five.
+  - You cannot decide what to research before you build.
+  - A team argument about priorities needs a neutral list to look at.
+  - You want cheap tests for the few assumptions that could sink a new product.
+not_for:
+  - You only have a plan, not a list. Use the Leap-of-faith assumption finder or the Plan guess ranker to pull the assumptions out first.
+  - You want to attack one assumption in depth. Use the Business assumption stress tester.
+  - Your customers already tell you what they want, through sales data or interviews. Read that evidence first, then rank what is still unknown.
 you_give:
-  - A list of assumptions
-  - What the product or idea is
-  - Research notes or data (optional)
+  - Your list of assumptions, one per line
+  - What the product or idea is, in a sentence or two
+  - Customer numbers, survey results or research notes (optional)
 you_get:
-  - Each assumption scored for impact and risk
-  - A sorted four-box matrix
-  - An experiment for each top assumption
-  - Which ones to build, wait on or drop
+  - Each assumption scored for impact and risk, marked as an estimate or as based on your data
+  - A four-box matrix showing where each one lands
+  - A test for each high-impact, high-risk assumption, with a metric and a pass line
+  - A call on each assumption: test, build, wait or drop
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill.
+  - Paste your idea in a sentence or two, then your assumptions, one per line. Add any real numbers you have.
+  - Read the scores first. If you gave no data, they are estimates, so argue with any that look wrong and ask for a re-score.
+  - Check each test. It should measure what people do, such as sign-ups or pre-orders, not what they say.
+  - Pick the top one or two tests and run them before you build. This skill does not run tests for you.
+  - If you want more detail on a test, use the Pretotype experiment designer or the Smallest test picker.
+output_sample:
+  input:
+    - Your list of assumptions, one per line
+    - A sentence or two on what the product or idea is
+    - Customer numbers or research notes (optional)
+  prerequisites:
+    - An AI you can paste a list into, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Scored list
+      contains: Each assumption with an impact score and a risk score from 1 to 5, and a note on what each rests on.
+    - name: Four-box matrix
+      contains: Each assumption placed in one box by its impact and risk, shown as a table.
+    - name: Experiments
+      contains: For each assumption that needs testing, a test, one metric to watch and a pass line.
+    - name: What to do next
+      contains: A call on every assumption, test, build, wait or drop, in the order to act on them.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A plain chat is enough, since you paste in a list and read back a table.
+  inputs:
+    - How many customers each assumption touches, if you know.
+    - Your own sense of how sure you are, from 1 to 10, for each assumption.
+    - Anything you have already learned from customer calls.
+terms:
+  - term: Assumption
+    meaning: Something you believe about your customers or business that you have not yet checked.
+  - term: Impact
+    meaning: How much it matters if the assumption is right, and how many customers it touches.
+  - term: Risk
+    meaning: How unsure you are that it is true, and how hard it is to find out.
+  - term: Experiment
+    meaning: A cheap test that shows what real people do, so you do not have to guess.

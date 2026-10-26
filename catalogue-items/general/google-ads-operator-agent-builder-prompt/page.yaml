@@ -1,33 +1,126 @@
 new_slug: google-ads-operator-agent-builder-prompt
 name: Google Ads Operator Agent coding prompt
-summary: Get a coding brief for a Google Ads agent with scoped access, review steps, cost limits and checks.
+summary: Get a coding brief that plans a read-only Google Ads agent for your project, with a module map, safety rules and tests. No account changes.
 job: build-software
 headline: Google Ads Operator Agent coding prompt
-subhead: Get a coding brief for a Google Ads agent with scoped access, review steps, cost limits and checks.
+subhead: Give your coding assistant your project, your Google Ads read access and where results should go. It plans a Google Ads agent that checks your account on a schedule and posts recommendations. You get a module map, safety rules, a build order and a test plan. The agent never changes your account.
 explain: |-
-  Share your project and the required feature. Get a coding brief for google ads operator agent, with setup and test steps.
+  A Google Ads agent is a program that reads your account, runs checks and tells a person what to do. The hard part is not each check. It is the design around them. Where each module lives, who is allowed to call the API, and what the agent must never do. This prompt gives a coding assistant a brief to plan that design in your own project before any module is built.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The plan has one fixed rule. The agent is a recommender and never an actuator. It reads data, writes findings and posts them. It cannot pause, edit or apply anything in Google Ads. If you ever want a write mode, the brief lists three gates it would need first: a mode setting that defaults to recommend, a per-customer allow list and a second confirmation from a person. It does not build write mode.
+
+  The brief asks for a module map, one shared result shape, a data flow, the safety boundary, a build order and a test plan. It points each area to its own prompt in this library, such as the Google Ads audit engine builder. This prompt plans the whole agent. Use the smaller prompts to build each module.
 when:
-  - You need a coding brief for google ads operator agent.
-  - You need google ads operator agent prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You want one agent that watches Google Ads and posts what to fix, and you have no design for it yet.
+  - You have a few Google Ads scripts and need a plan to turn them into one system.
+  - A developer or an AI assistant is about to build Google Ads modules and needs one agreed shape first.
+  - You need a written safety rule that the agent can read data but never change the account.
+not_for:
+  - You want to build only one area, such as Display placements or Performance Max. Use that area's own coding prompt, for example the Display placement review coding prompt.
+  - You want a one-time review of an account, not code. Paste an export into the Google Ads report auditor.
+  - You want an agent that changes bids, budgets or campaigns for you. This plan is recommendation only and does not build write mode.
+  - You have no Google Ads API access yet. Start with the Google Ads Cloud and OAuth client planner, then the Google Ads token and access check planner.
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, or its main folders, language, database and job queue
+  - Your Google Ads access details by name, such as the manager account, the customer IDs the agent may read and where credentials are kept (never the secrets)
+  - Where results should go, such as a database table, a chat channel or a report file
+  - The areas to cover first (optional)
+  - Any limit on API calls, AI calls or run time (optional)
 you_get:
-  - A coding brief for google ads operator agent
-  - Required files, setup gaps and test cases
+  - A list of setup gaps before any code is written
+  - A module map that fits your project
+  - One shared result shape for every module
+  - A data flow and a written safety boundary
+  - A build order, a first small version and a test plan
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your coding assistant, such as Claude Code or Codex, in your project folder. A plain chat AI can only write a plan.
+  - Paste the skill, then add your project details and where results should go. Never paste a secret key.
+  - Read the setup gaps first. Fix each one, or tell the assistant to go on with placeholders.
+  - Read the safety boundary. Check that it says the agent never writes to your account.
+  - Pick the first small version from the build order. Use the matching prompt from the list in the skill for each module.
+  - Run the tests on made-up data before you point anything at a live account.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project first
+    text: Reads your folders, queue, database and shared types, then lists what is missing before it plans anything.
+  - title: Maps the modules
+    text: Places a client, one data fetcher, types, an audit engine, one module per area, job handlers and a queue.
+  - title: Fixes one shared shape
+    text: Every module returns the same kind of result, so the audit engine and the reports can combine them.
+  - title: Draws the data flow
+    text: A schedule starts a job, the data fetcher is the only part that calls the API, and every run is saved so reports can compare periods.
+  - title: Writes the safety boundary
+    text: Lists what is in scope and out of scope, and the three gates any future write mode would need.
+  - title: Sets a build order and tests
+    text: Chooses the first small version, names the prompt for each module, and plans tests on made-up data.
+output_shape: |-
+  SETUP GAPS
+  <what is missing: schemas, permissions, queue, places to post>
+
+  MODULE MAP
+  <module> | <what it does> | <file in your project>
+
+  SHARED TYPES
+  <finding and run result fields>
+
+  DATA FLOW
+  <schedule, handler, fetcher, modules, saved run, post>
+
+  SAFETY BOUNDARY
+  <in scope, out of scope, gates for any write mode>
+
+  BUILD ORDER
+  <step> | <module> | <prompt to use next>
+
+  TEST PLAN
+  <module> | <test on made-up data> | <smoke test, optional>
+
+  OPEN QUESTIONS
+  <questions for the owner>
+output_sample:
+  input:
+    - Your code project, or its main folders, language, database and job queue
+    - Your Google Ads access details by name, never the secrets
+    - Where results should go, such as a table, a chat channel or a report file
+    - The areas to cover first (optional)
+  prerequisites:
+    - Google Ads API access with read permission, set up before you run the agent
+    - A coding assistant that can open your project, such as Claude Code or Codex
+  output:
+    - name: Setup gaps
+      contains: Missing schemas, permissions, queue and places to post, each with what it stops.
+    - name: Module map
+      contains: Each module, what it does and where it sits in your project.
+    - name: Shared types
+      contains: The fields every finding and run result has, so modules can be combined.
+    - name: Data flow
+      contains: How a scheduled job moves from the API through the checks to a saved run and a post.
+    - name: Safety boundary
+      contains: What the agent may and may not do, and the gates any future write mode would need.
+    - name: Build order
+      contains: The order to build the modules and the prompt to use for each one.
+    - name: Test plan
+      contains: A test for each module on made-up data, and an optional read of one known account.
+    - name: Open questions
+      contains: Questions you still need to answer before the first module is built.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your project, reads what you already have and drafts the plan against your real files.
+    - name: Codex
+      why: Works in a repository and shows each change for you to review.
+  inputs:
+    - A list of the Google Ads checks or reports you already run by hand
+    - Where your team reads alerts today, such as a chat channel or a weekly email
+terms:
+  - term: Operator agent
+    meaning: A program that reads your ad account and tells a person what to change. It does not change anything itself.
+  - term: Read-only access
+    meaning: Permission to look at account data but not to change it.
+  - term: Module
+    meaning: One separate part of the agent that checks one area, such as Display or Performance Max.
+  - term: Write mode
+    meaning: A setting that would let the agent change the account. This plan does not build one.
+  - term: Run result
+    meaning: "What one module returns: findings, a summary and a list of checks that could not run."
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

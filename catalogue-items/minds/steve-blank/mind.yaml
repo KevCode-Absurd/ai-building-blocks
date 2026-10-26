@@ -6,7 +6,7 @@ also: [leadership]
 years: "1953–"
 living: true
 known_for: "Startup practitioner and author of The Four Steps to the Epiphany. His customer-development method tests a new venture’s assumptions with real people before scaling."
-summary: "Review startup assumptions using Steve Blank’s recorded approach. List your guesses, plan customer checks and separate learning from evidence that people will buy."
+summary: "Test your startup assumptions with Steve Blank's customer development method. Get a guess list, a one-page model and your next customer interviews."
 use_cases:
   - "List the guesses behind a business plan: customers, channels, pricing, demand and partners"
   - "Plan a round of customer interviews to test those guesses outside the office"
@@ -16,6 +16,31 @@ use_cases:
   - "Keep founders, not hired staff, in direct contact with early customers"
   - "Decide what to change when an experiment fails: the product, the customer or the model"
   - "Set up a new project inside a big organization so it can search before it scales"
+not_for:
+  - "You run a local shop or craft business that does not need a scalable model: ask a practical operations advisor or a trusted peer in your trade."
+  - "You want help with company finances or what a business is worth: use the Aswath Damodaran mind."
+  - "You want his view on this year's news, defense budgets or which startups to back: no mind can give that, so read his own recent posts."
+output_sample:
+  input:
+    - Your plan, or a one-page description of the venture
+    - Who you think your first buyers are
+    - Any customer talks or tests you have done so far (optional)
+    - Your launch date and team plans (optional)
+  output:
+    - name: Guess list
+      contains: Every guess behind your plan about customers, channels, price, demand and partners, each marked tested or untested.
+    - name: Search or execute check
+      contains: A plain view on whether you are still looking for a model or ready to run one.
+    - name: Customer interview plan
+      contains: Questions built around the four buying signals and what counts as a real yes.
+    - name: One-page model
+      contains: Your business model sketched on one page, with each box marked tested or guessed.
+    - name: Smallest first release
+      contains: The smallest problem a customer would pay to solve, with the vision kept to one page.
+    - name: Next step
+      contains: Who to talk to, what to ask, and how many people by what date.
+    - name: Lessons learned
+      contains: A few short lessons to carry into your next test.
 seats:
   - {seat: "Get out of the building", asks: "Which of these guesses have we tested with a real customer, face to face?"}
   - {seat: "Search before you scale", asks: "Have we found a repeatable, scalable model yet, or are we hiring to execute a plan nobody has proved?"}

@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It scores a listing against set rules.
 new_slug: etsy-listing-seo-scorer
 name: Etsy listing SEO scorer
-summary: Give it your Etsy listing. Get a score out of 100, better title and
-  tags, and a ranked fix list.
+summary: Score your Etsy listing SEO out of 100. Get a better title, a full set of 13 tags and a fix list ranked by what helps most.
 job: get-found-in-search
 headline: Etsy listing SEO scorer
-subhead: A score out of 100 for your Etsy listing, with a rewritten title, a
-  full set of tags and a fix list ordered by what will help most.
+subhead: A score out of 100 for your Etsy listing, with a rewritten title, a full set of tags and a fix list ordered by what will help most.
 explain: |
   A score out of 100 for your Etsy listing, with a rewritten title, a full set of tags and a fix list ordered by what will help most.
 
@@ -17,6 +15,10 @@ when:
   - You are launching a new product and want strong tags from day one.
   - You have many listings and need to decide which to fix first.
   - You want keyword ideas for your product category.
+not_for:
+  - "You want live Etsy search volume or competitor data: check Etsy search results yourself, because this skill does not pull live Etsy data."
+  - "You have no listing text yet: write a first draft of your title, tags and description, then come back to score it."
+  - "You need to fix ads or shop-wide problems: this scores one listing at a time, so ask a person who knows Etsy ads."
 you_give:
   - Listing title
   - Tags and description
@@ -29,7 +31,32 @@ you_get:
   - Description fixes
   - Ranked action list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your listing title, all your tags, your description, your attributes and your photo count.
+  - Open your AI chat and paste the skill instructions. If you have Python 3, you can run the script from the skill folder instead.
+  - Paste your listing details. Add your product category or main keyword if you have one (optional).
+  - Read the score first, then the title and tags advice.
+  - Do the HIGH priority fixes first, then rescore the listing.
+  - Treat the keyword ideas as suggestions from the skill's own rules. Check them against real Etsy search results before you use them.
+output_sample:
+  input:
+    - Your listing title
+    - Your tags (up to 13)
+    - Your description
+    - Your product category or main keyword (optional)
+    - Your attributes and photo count (optional)
+  prerequisites:
+    - Python 3 and the skill folder, if you run the script
+    - No API key or paid account
+  output:
+    - name: SEO score
+      contains: A score out of 100, with a sub-score for title, tags, description, attributes and images.
+    - name: Title analysis
+      contains: Your current title and its length, the issues found, and a suggested rewrite.
+    - name: Tag analysis
+      contains: How many of the 13 tags you use, which are too generic, and new tags to add.
+    - name: Description analysis
+      contains: A check of the first 160 characters and how well keywords are used.
+    - name: Attribute check
+      contains: Which listing attributes are missing or incomplete.
+    - name: Action plan
+      contains: Fixes listed by priority, each with its expected impact on the score.

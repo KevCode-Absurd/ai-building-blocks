@@ -1,6 +1,6 @@
 slug: hedgehog-focus-finder
 name: "Hedgehog focus finder"
-summary: "Describe what you do and what you do well. Get a plain statement of the one thing to focus on."
+summary: "Find what your business should focus on. Say what you do, love and do well. Get a plain focus statement, stop-doing list and one bet."
 category: general
 type: skill
 role: make
@@ -19,3 +19,7 @@ credits:
   - {title: "The Hedgehog Concept", by: "Jim Collins", url: "https://www.jimcollins.com/concepts/the-hedgehog-concept.html", used: "Finding where passion, what you can be best at and what drives your resource engine overlap, and writing it as an understanding, not a goal"}
   - {title: "CEO of the Year: A conversation with AMD's revolutionary Lisa Su", by: "Chief Executive", used: "Asking what you want to be when you grow up as an identity, naming what you are fundamentally best at and picking large markets about to change"}
   - {title: "Dream Big: Lisa Su talks chips, curiosity and chance", by: "Lisa Su", used: "Choosing a bet that fits a named strength"}
+
+next: [business-power-tester, strategy-trade-off-planner, smallest-test-picker]
+before: []
+needs_mode: manual

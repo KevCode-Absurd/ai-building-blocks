@@ -2,36 +2,116 @@ thinking: high
 thinking_why: Picking settings and finding silent faults takes judgment.
 new_slug: model-training-recipe-finder
 name: Model training recipe finder
-summary: Say what you are training. Get the right settings, a safe training loop
-  and a checklist for when the loss goes wrong.
+summary: Get starting settings, a PyTorch training loop and a loss troubleshooting checklist for your data and GPU, so you spend less time on trial and error.
 job: build-software
 headline: Model training recipe finder
-subhead: The right training settings for what you are building, plus a safe loop
-  and a checklist for when the loss misbehaves. It saves the weeks that usually
-  go to trial and error.
+subhead: Say what you are training, how much data you have and what hardware you use. It picks a model, sets the optimizer and learning rate, writes a PyTorch training loop and lists fixes for loss that explodes or stalls. You run and test it.
 explain: |
-  The right training settings for what you are building, plus a safe loop and a checklist for when the loss misbehaves. It saves the weeks that usually go to trial and error.
+  When a model trains badly, the fault is often in the recipe, not the model. This skill gives you a recipe: which model fits your data, which settings to start with, and a training loop that avoids common mistakes. It is a PyTorch model training guide with a fix list for when the loss goes wrong.
 
-  You start with a table that matches your data type and size to a model: images, text, tables, audio, molecules, proteins or medical scans. The skill then supplies tested patterns for PyTorch: weight setup, optimizer choices, learning rate groups, data loading, checkpoints and spreading work across GPUs. It adds scaling rules for your compute budget and a keep or discard loop for running many experiments. The core idea is that a good recipe beats a fancier model.
+  It starts with a table that matches data type and data size to a model. Types covered are images, text, tables, audio, molecules, proteins and medical scans. Then it sets the optimizer, learning rate, warmup, precision and gradient clipping, and sizes the run to your compute budget with the 20-tokens-per-parameter rule.
+
+  The checks come from public sources such as Karpathy's training advice and open code. They are starting points. You still run them on your own data and keep or drop each change. For clinical work, a qualified review is needed first.
 when:
-  - You are training a model and do not know where to start with settings.
-  - The loss goes to NaN or stops improving.
+  - You are training a model in PyTorch and do not know which settings to start with.
+  - Your loss goes to NaN, spikes, or stops improving.
   - You must pick a model size for a fixed GPU budget.
-  - You work on biology or medical data and need specific advice.
+  - You train on proteins, molecules or medical images and want advice for that kind of data.
+not_for:
+  - Your model is for patient care or other clinical use. These settings are for research and need expert and regulatory review first.
+  - You want to fine-tune a chat model on one GPU. Use the LLM fine-tuning guide.
+  - You want full training code that loads, splits and checks your data. Use the model training builder.
+  - You train in MATLAB. Use the neural network trainer instead.
 you_give:
   - What you are training and on what data
-  - Data size
-  - Your hardware and budget
-  - Where it fails right now (optional)
+  - How many samples or tokens you have
+  - Your hardware and time or money budget
+  - Where it fails now, such as NaN loss or slow speed (optional)
+  - Your current training code (optional)
 you_get:
-  - A model choice with reasons
-  - Optimizer and learning rate settings
-  - A tested training loop
-  - A loss troubleshooting checklist
-  - Scaling advice for your budget
+  - A model choice with a reason and a fallback
+  - A table of starting settings, each marked as a starting value
+  - A PyTorch training loop sized to your setup
+  - A loss troubleshooting checklist that fits your symptom
+  - Next steps for testing and tracking experiments
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read files, give it the skill folder so it can load the reference files.
+  - Say what you are training, how much data you have, and what GPU and budget you have. Add any error or odd loss curve.
+  - Read the settings table. Ask about any setting you do not understand before you copy it.
+  - Run the overfit-one-batch test from the checklist first. If it fails, you have a bug, so fix that before a long run.
+  - Run a short training and compare the loss to the checklist. Change one thing at a time and write down each result.
+  - Your AI cannot train in a chat window. You run the code in Python with PyTorch.
+how_it_works:
+  - title: Read your setup
+    text: It reads the data type, data size, hardware and budget, and marks any missing item.
+  - title: Pick the model
+    text: It matches data type and size to a model, from pretrained fine-tuning to training from scratch.
+  - title: Set the recipe
+    text: It sets the optimizer, learning rate, warmup, precision and gradient clipping.
+  - title: Write the loop
+    text: It writes a PyTorch loop with clipping, mixed precision and a stop when loss explodes.
+  - title: Size to your budget
+    text: It uses scaling rules to match model size and data to your compute.
+  - title: Build the checklist
+    text: It picks the loss, speed and silent-failure checks that match what you are seeing.
+output_shape: |
+  ## Your setup
+  <data type, size, hardware, budget, MISSING items>
+
+  ## Model choice
+  <pick, reason, fallback>
+
+  ## Settings table
+  | Setting | Starting value | Why |
+
+  ## Training loop
+  <PyTorch code>
+
+  ## Troubleshooting checklist
+  <checks for your symptom>
+
+  ## Next steps
+  <overfit one batch, then track experiments>
+output_sample:
+  input:
+    - What you are training and on what data
+    - How many samples or tokens you have
+    - Your hardware and budget
+    - Where it fails now (optional)
+  prerequisites:
+    - Python and PyTorch installed
+    - A GPU you can run code on, for any real run
+  output:
+    - name: Your setup
+      contains: Your data, size, hardware and budget in one place, with anything missing marked.
+    - name: Model choice
+      contains: One model that fits your data and size, with the reason and a fallback.
+    - name: Settings table
+      contains: Optimizer, learning rate, weight decay, schedule and precision, each marked as a starting value.
+    - name: Training loop
+      contains: PyTorch code with gradient clipping, mixed precision and a stop on exploding loss.
+    - name: Troubleshooting checklist
+      contains: Fixes for loss that explodes, stalls or hides silent faults like data leaks.
+    - name: Next steps
+      contains: Run an overfit test, then track each experiment and keep or drop the change.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the reference files and run short test runs on your machine.
+    - name: Any good chat AI
+      why: It can write the recipe from your description. You run the code.
+  inputs:
+    - Your current training script
+    - A loss curve or error message
+    - Your GPU model and memory
+terms:
+  - term: Learning rate
+    meaning: How big a step the model takes each time it learns. Too high and the loss explodes.
+  - term: Optimizer
+    meaning: The rule that updates the model after each batch, such as AdamW.
+  - term: Gradient clipping
+    meaning: A cap on update size that stops one bad batch from breaking training.
+  - term: Mixed precision
+    meaning: Using smaller numbers in places to train faster and use less memory.
+  - term: Overfit one batch
+    meaning: A test where the model must learn one small batch perfectly. If it cannot, there is a bug.

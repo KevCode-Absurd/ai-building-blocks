@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It plans the story, then each slide layout, then checks them.
 new_slug: editable-slide-deck-builder
 name: Editable slide deck builder
-summary: Give it your story and sources. Get a PowerPoint deck with real
-  editable text, tables and charts, plus a quality check.
+summary: Build an editable PowerPoint deck from your story and sources. Every title, table and chart stays editable, and you get a quality check.
 job: work-with-files
 headline: Editable slide deck builder
-subhead: A PowerPoint file where every title, label, table and chart can be
-  edited, not pasted in as a picture. You give your story and sources, and you
-  get a deck plus a quality check.
+subhead: A PowerPoint file where every title, label, table and chart can be edited, not pasted in as a picture. You give your story and sources, and you get a deck plus a quality check.
 explain: |
   A PowerPoint file where every title, label, table and chart can be edited, not pasted in as a picture. You give your story and sources, and you get a deck plus a quality check.
 
@@ -18,6 +15,10 @@ when:
   - You have data and a story and want slides with real charts.
   - You want an existing deck reviewed for layout and access problems.
   - You want a deck planned before any slides are made.
+not_for:
+  - "You want to change, fill in or fix an existing PowerPoint file: use @pptx-official, which edits files that already exist."
+  - "You only need a quick outline or talking points: ask your AI for a plain list and skip building a file."
+  - "You want a deck made of slide pictures or screenshots: this builds real text, tables and charts, not images."
 you_give:
   - Your main message and audience
   - Source facts, data and figures
@@ -29,7 +30,32 @@ you_get:
   - A story outline
   - A quality and accessibility check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Use an AI that can run code and save files. It needs Python and the python-pptx library. A chat that cannot run code can only plan the deck.
+  - Paste this skill into your AI. Then give it your main message, your audience, your source facts and figures, and any brand colours or fonts.
+  - Pick a story structure when your AI asks. It will not pick one for you.
+  - Check the story plan and slide layouts before the file is built. Fix anything that looks wrong.
+  - Image or design services are optional. They need their own account, and your AI should ask before sending anything out.
+  - After the build, open the audit results and fix any failed checks. Then share the file so others can edit it.
+output_sample:
+  input:
+    - Your main message and who the deck is for
+    - Your source facts, data and figures
+    - A reference deck to learn the look from (optional)
+    - Your brand colours and fonts (optional)
+    - Your choice of story structure
+  prerequisites:
+    - An AI that can run code and save files, with Python and the python-pptx library
+    - An image or design service is optional and needs its own account
+  output:
+    - name: Deck summary
+      contains: The story structure you chose, the design style, the sources used and any assumptions you approved.
+    - name: Slide specification
+      contains: "An exact layout for every slide: where each text box, shape, line, table and image sits."
+    - name: PPTX file
+      contains: The finished PowerPoint deck, built from real editable objects, with alt text and reading order.
+    - name: Build manifest
+      contains: A record of how the file was built, saved next to the deck.
+    - name: Audit records
+      contains: Checks for overlaps, small text, margins, table fit, editability and accessibility, with any problems left over.
+    - name: Source manifest
+      contains: Each fact, number and chart value matched to its source.

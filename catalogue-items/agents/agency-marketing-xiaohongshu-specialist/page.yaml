@@ -1,0 +1,141 @@
+name: Xiaohongshu Specialist agent
+summary: "Get a Xiaohongshu (RedNote) plan: brand look and story, content themes, a 30-day note calendar and keyword picks to check. Bring your brand and buyer."
+headline: Xiaohongshu Specialist agent
+subhead: Give it your brand, your buyer and how often you can post on Xiaohongshu, also called RedNote. It plans your look and story, your content themes and a 30-day calendar of notes, with keywords to check and a community plan. You get a plan you can shoot and post from.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  On Xiaohongshu, people search for ideas and save the notes they like, mostly lifestyle, beauty, travel and shopping. A note that looks like an ad gets skipped. A note that looks like a friend's tip gets saved. This agent plans for that. It starts with your buyer and your look, then plans notes that feel like part of their day.
+
+  The original profile suggests a mix of about 70% lifestyle notes, 20% notes that join a trend and 10% direct brand notes. It suggests three to five posts a week and a reply to comments within two hours. The agent uses these as starting points and fits them to the time you have. It writes a photo and colour guide, themes, a 30-day calendar, keyword ideas and a plan for comments, small creators and customer posts.
+
+  It cannot open Xiaohongshu. It does not know what is trending or how your notes perform. Keywords and trends come as ideas for you to check in the app search. The engagement, save and growth targets in the original profile are goals, not results. Chinese text is a draft that a native reader should check.
+when:
+  - You sell something visual, such as skincare, food, fashion, travel or home goods, and want to reach buyers on Xiaohongshu.
+  - You are opening a brand account and need a look, themes and a first month of notes.
+  - Your notes get views but few saves, and you want a clearer content mix.
+  - You want a plan for working with small creators and getting customers to post about you.
+not_for:
+  - You make short videos for Douyin. Use the Douyin Strategist agent.
+  - You post on Instagram, not Xiaohongshu. Use the Instagram Curator agent.
+  - You are deciding whether and how to enter China at all. Use the China Market Localization Strategist agent.
+  - You want the photos, filters or posts made. This writes the plan and note drafts. A photographer and a native Chinese reader finish the work.
+you_give:
+  - Your brand, what you sell and who buys it
+  - Your goal, such as awareness, store visits or sales
+  - How many notes a week you can make, and who takes the photos
+  - Your account status and recent note stats (optional)
+  - Three accounts you want to look like (optional)
+  - Your brand colours and any rules on how products may look (optional)
+you_get:
+  - A brand story and look that fits Xiaohongshu buyers
+  - A photo, colour and text guide
+  - Four or five content themes
+  - A 30-day calendar with a topic, format and keywords for each note
+  - A community plan for replies, small creators and customer posts
+  - A review plan and a list of checks for you
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md. Claude, ChatGPT and Gemini all work.
+  - Paste your brand, your buyer, your goal and how many notes a week you can make. Say if the account is new.
+  - If it is running, paste the stats for your last notes, such as views, likes, saves and comments.
+  - 'Say: "Make my Xiaohongshu plan. Do not invent trends or stats. Mark every keyword as a check for me."'
+  - Check the keywords in the Xiaohongshu search bar before you shoot anything. Drop the ones nobody searches.
+  - Shoot one week of notes and ask a native Chinese reader to check the words. Bring back the saves and comments for the next round.
+how_it_works:
+  - title: Confirm the brand
+    text: It confirms the brand, buyer, goal, capacity and account status. Missing items are asked for once, then marked MISSING.
+  - title: Set the look and story
+    text: It writes the brand story, the buyer's world and a photo, colour and text guide.
+  - title: Pick the themes
+    text: It sets four or five themes. Most are lifestyle, some join a trend and a few mention the product.
+  - title: Build the calendar
+    text: It fills 30 days with a topic, format, hook and keywords for each note, fitted to the notes a week you gave.
+  - title: Plan the community
+    text: It plans reply rules, small creator outreach and a way for customers to post, with a note on what to avoid.
+  - title: Plan the review
+    text: It sets the numbers to watch each week, such as saves and comments, and what to change if they are low.
+output_shape: |-
+  BRAND LOOK AND STORY
+    Buyer <who> | Story <in two lines> | Personality <words> | Evidence <your stats, or MISSING>
+
+  PHOTO AND TEXT GUIDE
+    Photo style <description> | Colours <palette> | Text on cover <rules>
+
+  CONTENT THEMES
+    <theme> | <share of notes> | <why it fits the buyer>
+
+  30-DAY CALENDAR
+    Day <number> | theme <theme> | format <photos or video> | hook <first line> | keywords <ideas to check> | call to action <one line>
+
+  COMMUNITY PLAN
+    Replies <rules and timing> | Small creators <who to look for, never named> | Customer posts <how to invite>
+
+  REVIEW PLAN
+    <metric> | <your starting number or MISSING> | <what to change if it is low>
+
+  CHECKS FOR YOU
+    <keywords to try in the app, claims to confirm, text for a native reader>
+output_sample:
+  input:
+    - Your brand, what you sell and who buys it
+    - Your goal and how many notes a week you can make
+    - Your account status and recent note stats (optional)
+    - Accounts you want to look like (optional)
+  prerequisites:
+    - A Xiaohongshu account, or a plan to open one
+    - A native Chinese reader to check text before you publish
+  output:
+    - name: Brand look and story
+      contains: The buyer, the brand story in two lines and the personality of the account.
+    - name: Photo and text guide
+      contains: Photo style, colours and rules for text on the cover.
+    - name: Content themes
+      contains: Four or five themes with the share of notes each gets.
+    - name: 30-day calendar
+      contains: A topic, format, hook, keywords and call to action for each note.
+    - name: Community plan
+      contains: Reply rules, how to find small creators and how to invite customer posts.
+    - name: Review plan
+      contains: Weekly numbers such as saves and comments, and what to change if they are low.
+    - name: Checks for you
+      contains: Keywords to test in the app, claims to confirm and text for a native reader.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Notes per week
+    how: Give the number you can really make. Three good notes a week beat five rushed ones.
+  - what: Content mix
+    how: Say if you want a different split from 70, 20 and 10. A new account may need more lifestyle notes and fewer product notes.
+  - what: Your look
+    how: Paste photos or describe your brand colours. The guide then matches what you can shoot.
+  - what: Product type
+    how: Name the exact product. Skincare, food and travel need different notes and different claim care.
+improve:
+  - Each month, list your three most saved notes and your three least saved. Ask what the best have in common and plan the next month from that.
+  - Keep a list of keywords you checked in the app and how they did. Paste it in next time.
+  - Pair it with the Short-Video Editing Coach agent if you add video notes.
+terms:
+  - term: Xiaohongshu
+    meaning: A Chinese app where people share notes with photos or video about products and daily life. Also called RedNote or Little Red Book.
+  - term: Note
+    meaning: One post on Xiaohongshu, with photos or a short video and text.
+  - term: Collection (save)
+    meaning: When a reader saves a note to read again. Saves show that a note was useful.
+  - term: UGC
+    meaning: Posts made by customers, not by the brand.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: All three plan and draft in English and Chinese. A native reader should check the final text.
+    - name: A phone camera or a photographer
+      why: The plan describes shots. Someone has to take them.
+  inputs:
+    - Screenshots of your last 10 notes with views, saves and comments.
+    - Photos of the product in use.
+    - Three rival brand accounts and what you like or dislike about them.

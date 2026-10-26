@@ -1,6 +1,6 @@
 new_slug: cac-payback-checker
 name: "CAC payback checker"
-summary: "Give it CAC, margins and cohort profit. Get profit to CAC ratios, a scale-or-fix call, scored out of 100."
+summary: "Check your CAC payback: give it ad spend, margins and cohort profit. Get profit to CAC ratios, a scale, hold or fix call and a score out of 100."
 job: track-numbers
 thinking: high
 thinking_why: "It mixes several time windows and two rule sets that disagree, so a stronger model keeps them apart and avoids false calls."
@@ -17,6 +17,10 @@ when:
   - Ad spend is rising and you do not know if you can keep scaling.
   - You want a CAC number to give your media buyer.
   - You lose money on the first order on purpose and need to know how long payback takes.
+not_for:
+  - "You have under 3 months of data or no cohort profit: wait, or work out CAC and first order profit by hand in a spreadsheet first."
+  - "You want a deeper read of cohorts and the CAC spiral: use the lifetime gross profit to CAC checker."
+  - "You want to judge one ad or one campaign: use the results screen in your ad platform, or ask your media buyer."
 
 you_give:
   - CAC, average order value after refunds, product cost and fulfilment per order
@@ -38,6 +42,28 @@ how_to_use:
   - Say what type of store you run, how much cash you have to wait for payback, and your stage.
   - Read the first order check first, then the ratio on your chosen window.
   - Act on the CAC figure it says to hit, and run it again next month.
+output_sample:
+  input:
+    - Your ad spend and new customers for the month
+    - Average order value after refunds, product cost and fulfilment per order
+    - Gross profit per customer at 30, 90 and 180 days
+    - "Your product type: one-off, consumable or subscription"
+    - Cash you can fund payback with, and your CPC and conversion rate (optional)
+  output:
+    - name: CAC
+      contains: Ad spend divided by new customers, not the cost per sale shown in your ad platform.
+    - name: First order
+      contains: Contribution on the first order, the ratio to CAC, and a pass or fail.
+    - name: Window
+      contains: The 30, 90 or 180 day window it chose and why, with the profit to CAC ratio and its band.
+    - name: CAC numbers
+      contains: A target, a ceiling, a bad-month ceiling and a floor CAC, plus payback time.
+    - name: Trend
+      contains: Whether CAC, new customers and first order ratio are rising or falling, and if each new customer is worth more or less.
+    - name: Score
+      contains: A score out of 100 for payback safety, split across first order, window ratio, cash cover and trend.
+    - name: Call
+      contains: Scale, hold or fix, the CAC to hit, the first change to make, and any missing input.
 
 how_it_works:
   - title: Counts true CAC

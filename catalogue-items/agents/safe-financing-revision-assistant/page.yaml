@@ -1,51 +1,119 @@
 new_slug: safe-financing-revision-assistant
 name: SAFE financing revision assistant
 headline: SAFE financing revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: See what a SAFE owns after your next priced round, with the option pool top-up and pro rata cash. Redone when terms change.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked. Share executed cap-only post-money SAFE, full capitalization definitions, funded amounts, before-top-up denominator and reserve, pre-cash pool target, later round terms and actual participation side letter. Include the actual protected-series charter and qualifying issuance records if a down round changes the denominator. Supply the previous approved review and actual changed source files with dates.
-explain: |-
-  A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked.
+subhead: Give it the signed SAFE, the amount funded, your share counts, the option pool target, the new round's terms and any side letter with participation rights. It finds the stake the SAFE holds before the round, the extra option shares needed, and the cash an existing investor must add to keep its share. You get an ownership and reserve bridge.
 
-  Venture financing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A SAFE is an agreement to get shares later. With a post-money cap, the investor's stake is the money put in divided by the cap, measured on the company's full share count just before the priced round. Then a new option pool, the round's own dilution and a side letter that lets an investor buy more shares each change the picture. If they are mixed up, the ownership numbers come out wrong.
+
+  This agent keeps them apart. It checks that the cap is the price that binds and works out the stake before the round. It adds the option shares needed to reach the pool target before new cash arrives, using the real share count before the top-up. It does not apply the pool effect twice if the round's dilution already includes it. It then works out the cash a side-letter investor needs to keep its share, given what outside investors put in, and ties that to the whole round.
+
+  It keeps a record of the last approved review and runs again when a new SAFE is funded, a round term is signed, a pool target changes or a participation right is approved. If a down round triggers price protection in the charter, it checks the price reset on the charter's own formula, and asks for an approved new share count before it reruns the affected work. It covers one cap-only post-money SAFE at a time. It does not give legal advice.
+
 when:
-  - You need a sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on venture financing and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A new SAFE is funded before the priced round closes.
+  - The term sheet for the round is signed, and you need to see what each holder owns after it.
+  - The investors and the company agree to a new option pool target before new cash arrives.
+  - An investor with a side letter wants to know how much cash it needs to keep its share of the round.
+
+not_for:
+  - You hold a convertible note with interest. Use the Note conversion revision assistant.
+  - Your SAFE converts at a discount, or the round price is below the cap price. The method covers cap-only post-money SAFEs and stops when the round price changes how the SAFE converts.
+  - You want to plan how much to hold back for later funding rounds. Use the Follow-on reserve planner.
+  - You need legal sign-off on a live round. It reads the terms you supply and lists what it cannot confirm. Ask your lawyer.
+
 you_give:
-  - Executed cap-only post-money SAFE, full capitalization definitions, funded amounts, before-top-up denominator and reserve, pre-cash pool target, later round terms and actual participation side letter. Include the actual protected-series charter and qualifying issuance records if a down round changes the denominator. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The executed SAFE, with the amount, the post-money cap and the definition of capitalization (from the signed SAFE)
+  - The funded amounts and dates (from bank records or the cap table)
+  - The share count before the option pool top-up, and the reserve already set aside (from the cap table)
+  - The pool target as a share of the company right after the top-up and before new cash (from the term sheet)
+  - The later round's dilution, as a share of the company, and its price per share (from the term sheet)
+  - The side letter that gives participation rights, and the cash outside investors will put in (optional, only if pro rata is in question)
+  - The charter and the records of the shares issued, if a down round may trigger price protection (optional)
+  - The last approved review's record and the changed source files with dates (optional, needed to show what changed)
+
 you_get:
-  - A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The SAFE's stake before the priced round, with the cap shown as the binding price
+  - The option shares to add and the total shares after the top-up, with the dilution of existing holders
+  - The cash a side-letter investor needs to keep its share, and the whole round including that cash
+  - A price protection check, only when a down round triggers it
+  - What changed since the last review, a record for the next one, MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Check a SAFE into priced financing workflow and the Weighted-average antidilution checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
+  - Say if this is the first run. If not, paste last time's record. Then attach the signed SAFE, the cap table, the term sheet and any side letter.
+  - Tell it whether the cash figure from outside investors includes the existing investor. Check that the result says which one it used.
+  - Check that the pool top-up appears once and that round dilution is a separate line. Check that the share counts come from your cap table, not from an example.
+  - If a down round triggers price protection, get the new share count approved first and give it to the AI. Then run it again.
+  - Fix every MISSING line and run it again when a term changes. Adding it sets up no schedule.
+
 how_it_works:
-  - title: Check a SAFE into priced financing
-    text: Run the governing workflow when A new funded SAFE, signed round term, pool target or approved participation right is supplied.
-  - title: Weighted-average antidilution checker
-    text: If a qualifying down round changes protected conversion ratios, run the actual charter reset check and require an approved revised capitalization denominator before rerunning affected SAFE, pool or allocation work. Otherwise skip the antidilution branch. Never infer multiple-class ownership from the single-SAFE example.
-output_shape: |-
-  A sourced ownership and reserve bridge with an explicit outside-versus-inclusive cash allocation. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last approved review
+    text: Reads the saved record if it belongs to this SAFE and round, or sets a first baseline. It compares instrument IDs, funding dates, the cap version, the approved share count, the pool target date, the side letter and open conversion conditions. If nothing changed and no review is due, it says so and stops.
+  - title: Checks the SAFE stake
+    text: Runs the Post-money SAFE ownership checker step. It confirms the cap binds and the form is post-money, then divides the amount funded by the cap to get the stake. It applies the dated round dilution separately and stops if a lower round price changes how the SAFE converts.
+  - title: Sizes the pool top-up
+    text: Runs the Option pool top-up checker step. It uses the real share count before the top-up and the target, and solves the added reserve as the larger of zero and (target x shares less existing reserve) divided by (1 less target). It shows the added reserve on its own line.
+  - title: Works out pro rata cash
+    text: Runs the Pro rata allocation checker step. When the quoted cash is from outside investors only, investor cash is its share divided by (1 less its share), times that outside cash. It adds this to the round and checks the share it gives. It stops if the rights base cannot be shown.
+  - title: Checks price protection only if needed
+    text: If a qualifying down round changes protected conversion ratios, it runs the Weighted-average antidilution checker on the charter's formula, then asks for an approved new share count before it reruns the affected SAFE, pool or allocation work. Otherwise it skips this step.
+  - title: Checks and saves
+    text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, which steps ran or were skipped, and the new record. It never replaces an approved baseline with an unapproved scenario.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  SAFE STAKE   amount <n> / post-money cap <n> = <n>% before the round;
+               after round dilution <n>%; cap binds: <yes or no>
+  POOL TOP-UP  shares before <n>; reserve <n>; target <n>%;
+               added reserve <n>; shares after <n>
+  PRO RATA     eligible stake <n>%; outside cash <n>;
+               investor cash <n>; whole round <n>
+  PRICE PROTECTION  old price <n> -> new price <n>; ratio <n> (only if triggered)
+  RECORD FOR NEXT REVIEW  instrument IDs, funding dates, cap version, approved share count,
+                          pool target date, side-letter eligibility, open conditions
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Your executed post-money SAFE
+    - The cap table with the share count before the pool top-up
+    - The term sheet with the pool target and the round's terms
+    - A side letter with participation rights (optional)
+    - The last approved review's record (optional)
+  prerequisites:
+    - An AI that can read files and build a spreadsheet
+    - The Check a SAFE into priced financing workflow and the Weighted-average antidilution checker skill, added with the agent
+  output:
+    - name: Changed since last review
+      contains: Each term, count or document that moved, with old and new value and source date.
+    - name: outputs/step-1-post-money-safe-ownership-checker.md
+      contains: The SAFE's stake before the round from amount over cap, the round dilution kept as a separate dated assumption, and any open conversion conditions.
+    - name: outputs/step-2-option-pool-top-up-checker.md
+      contains: The added option reserve and total shares after the top-up, shown apart from the financing dilution so it is not applied twice.
+    - name: outputs/step-3-pro-rata-allocation-checker.md
+      contains: The cash an eligible investor needs to keep its share, set against outside-only cash and tied to the whole round.
+    - name: Price protection check
+      contains: The charter formula's revised price and the protected conversion ratio. Only when a down round triggers it.
+    - name: Record and MISSING lines
+      contains: The record for the next review, every gap with the line it stops, and CHECKS MISSED.
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Use actual contract denominators; keep pool expansion and financing dilution separate and never treat illustrative defaults as deal facts. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - what: A different pool target
+    how: Change the target share. The added reserve changes, the total shares after the top-up change, and the existing holders' dilution moves with them.
+  - what: Quoted cash that already includes the investor
+    how: Say the round figure already includes the existing investor. Its cash is then read from that total. It is not worked out as a share of outside cash.
+  - what: A new cap
+    how: Give the new cap. The SAFE stake before the round changes, and the check that the cap still binds runs again.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with linked schedules and a checks tab, and tells you what it could not verify.
+
 judge:
   - Use actual contract denominators; keep pool expansion and financing dilution separate and never treat illustrative defaults as deal facts. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +124,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each SAFE's signed copy and the cap table version for each review, so a changed count is a visible change.
+  - Write down, once, whether quoted round cash includes the existing investor, so every run reads it the same way.
+  - Keep the approval for each revised share count. A count with no approval stops the work that uses it.
+  - Pair it with the Note conversion revision assistant if the round also converts a note.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds linked schedules for stake, pool and pro rata, and saves the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your signed SAFE and side letter
+      why: The cap, the definition of capitalization and the participation right are contract terms. Quote them, never guess them.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The full cap table before the round, with the option reserve shown separately.
+    - The term sheet for the priced round.
+    - A named person who approves the share counts and will check the clauses against the result.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: SAFE
+    meaning: An agreement that gives an investor shares at a later priced round, in return for money paid now. The name stands for simple agreement for future equity.
+  - term: Post-money cap
+    meaning: A top value for the company, counted after the SAFE money is in. It sets the SAFE's price.
+  - term: Option pool
+    meaning: Shares set aside for staff to be given later.
+  - term: Pro rata right
+    meaning: A right to buy enough new shares to keep your percentage in a later round.
+  - term: Dilution
+    meaning: The fall in each holder's percentage when new shares are made.
+  - term: Down round
+    meaning: A funding round priced below the one before it.

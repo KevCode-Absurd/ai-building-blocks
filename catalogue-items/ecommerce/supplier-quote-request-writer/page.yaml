@@ -1,6 +1,6 @@
 new_slug: supplier-quote-request-writer
 name: "Supplier quote request writer"
-summary: "Give it your product and buyer complaints. Get a quote request in maker terms and checks to run."
+summary: "Write a supplier quote request email in maker terms. Give your product and buyer complaints. Get a search prompt, the email and checks to run."
 job: plan-supply-chain
 thinking: low
 thinking_why: "It turns clear facts into a search prompt and an email, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You have a product idea or a bestseller and want to make your own version.
   - Reviews of a rival product show a repeat complaint and you want a supplier who can fix it.
   - You have a shortlist of makers and need a clear first email to each.
+not_for:
+  - "You sell by dropshipping and never handle the product: you do not need a quote request, so ask your dropship supplier for their price list."
+  - "You have no product details yet: write down the product type and the top buyer complaint first, then come back."
+  - "You already have quotes and need to pick one: compare them yourself on unit price at each volume, lead time, sample cost and certificates."
 
 you_give:
   - Your product and who buys it
@@ -35,6 +39,29 @@ how_to_use:
   - Use the search prompt to find makers. Check that each one is real on the marketplace.
   - Send the email to your shortlist. Ask each for a sample, prices at several volumes and lead time.
   - Compare at least three quotes. Order a small first batch, not a big one.
+output_sample:
+  input:
+    - Your product and who buys it
+    - Complaints or wishes from buyer reviews
+    - Your target order size, price and certificates needed
+    - Packaging and delivery needs (optional)
+  output:
+    - name: Search prompt
+      contains: One prompt to find makers with OEM service, private label, a low minimum order, certificates and strong reviews.
+    - name: Quote request email
+      contains: A short first email with specs, customization, packaging and delivery, asking for a sample, volume prices and lead time.
+    - name: Words I changed
+      contains: Each buyer wish paired with the maker term to ask about, offered as a question to confirm.
+    - name: Questions and checks
+      contains: Technical questions to ask, such as materials, finish, tolerances and test reports.
+    - name: Check the supplier yourself
+      contains: Steps to call the maker, read reviews and check the reorder rate.
+    - name: Compare
+      contains: "What to compare across at least three quotes: unit price at each volume, lead time, sample cost and certificates."
+    - name: First order
+      contains: A small first order to test quality before you buy a large batch.
+    - name: Checks missed and missing
+      contains: Checks that failed, plus any facts you did not give, marked MISSING.
 
 how_it_works:
   - title: Writes the search prompt

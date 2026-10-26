@@ -1,64 +1,74 @@
 new_slug: store-brand-architecture-planner
 name: "Store brand architecture planner"
-summary: "List your stores and ranges. Get a brand structure, a naming rule and a name call per range."
+summary: "Decide if a new range gets its own name or your store name. Get a brand structure and a naming rule for future products."
 job: brand-file
 thinking: medium
 thinking_why: "It applies a set of rules to your facts and explains the call. A mid-size model does this well. Use a stronger one if you run several stores."
 
 headline: "Store brand architecture planner"
-subhead: List your stores, ranges and brands, with price, sales share and ad budget. It runs the naming rules, picks one structure, writes a naming rule for future products, and gives a name call for each new range, plus what to keep, merge or stop using.
+subhead: "Tell it about your stores, ranges and ad spend. It first checks whether you need a brand structure at all. Then it says whether each new range takes its own name or your store name, and gives you one naming rule for the next product."
 
 explain: |
-  When a store adds a range, it has to decide: give it a new name, or put it under the name you already have? A new name costs a new ad budget, site and email list. An old name is cheaper, but each product you hang on it can make the name mean less, and a cheaper range under a premium name can wreck the premium.
+  Should a new product get its own name, or sit under your store name? That is the question this brand architecture planner answers. A new name needs its own ads, site and email list. The store name costs less. But every product you hang on one name can blur what the name means. A cheap range under a premium name can hurt the premium.
 
-  Brand architecture means how your names relate: one master brand, a parent with endorsed brands, or separate brands. This skill runs the tests from two well-known brand books. They include five rules for house name or own name, a shopping-list test and a bartender test. It starts by checking whether you need any of this. A store with one core product usually does not, and it will say so and stop.
+  Brand architecture is how your names fit together. You can have one master brand. You can have a parent with endorsed brands, which show a small "by Parent" tag. Or you can have separate brands. The skill picks one and says why.
+
+  It uses tests from two well-known brand books: five rules for own name or store name, a shopping-list test and a bartender test. It always starts with a stop-early check. A store with one core product usually needs none of this. In that case it says so and stops, rather than invent a problem. The books' case studies are old, so only their logic carries over.
 
 when:
-  - You are adding a new range or product and need to choose between its own name and your store name.
-  - You run, or plan to run, more than one store or brand and want a clear structure.
-  - You are buying or launching another brand and need to decide how visible the parent name should be.
+  - You are adding a range and cannot decide between a new name and your store name.
+  - You plan a cheaper or a premium line and worry it will change how people see your main brand.
+  - You run two or more stores or brands and want one clear structure.
+  - You are buying or launching another brand and need to decide how much of the parent name shows.
+
+not_for:
+  - "You sell one core product from one store. The skill will say you need no structure. Skip it."
+  - "You need names for the new range. Use the Store name generator for ideas, then the Store name tester to score them."
+  - "You want to change the name of a store you already run. Use the Store rebrand planner."
+  - "You need trademark advice. This plans a structure only. Ask a lawyer about who owns each name."
 
 you_give:
-  - Your current brand and what it stands for, in your customers' words
+  - What your store or brand stands for, in your customers' words (review quotes work well)
   - The new product or range, its price and the sales you expect
-  - Your stores, ranges and brands, with sales share, customer overlap and price tier for each
-  - The ad budget for each brand, and how each is sold
+  - Your stores, ranges and brands, with each one's share of sales and price tier
+  - Monthly ad spend for each brand, and whether it sells by itself online or with a person
+  - How many buyers buy from more than one of your brands (optional)
   - Any plan to buy or launch more brands (optional)
 
 you_get:
-  - A call per range, either its own name, the store name with a descriptor, or the store name only
-  - A chosen structure with a simple diagram, and a naming rule for future products
-  - Answers to the five rules, the shopping-list test and the bartender test
-  - A note on how to keep your old brand's meaning clear, and what to keep, merge or stop using
+  - A stop-early check that says whether you need a structure at all
+  - Your answers to the five rules and the name tests, each with your own fact beside it
+  - "A call for each range: its own name, store name plus a plain label, or store name only"
+  - One structure with a short diagram, and one naming rule for future products
+  - A note on how to keep your old brand meaning one thing, and what to keep, merge or stop using
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your list of brands and ranges with sales share, price and ad budget. Add the new product if there is one.
-  - Say what each name stands for in your customers' words. Use review language if you have it.
-  - Read the stop-early check first. If it says you do not need a structure, you do not.
-  - Keep the naming rule and apply it to the next product without a new debate.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code, files or web access.
+  - Paste your list of brands and ranges. Add share of sales, price tier and monthly ad spend for each. Add the new product if there is one.
+  - Say what each name stands for in your customers' words. Review quotes are best.
+  - Read the stop-early check first. If it says you need no structure, you do not.
+  - Look for any line marked MISSING and add that fact if you have it.
+  - Save the naming rule in your brand notes and use it for the next product.
 
 how_it_works:
   - title: Checks if you need this
     text: A store with one core product usually needs no structure. If so, it says so and stops.
-  - title: Reads your budget
-    text: A small ad budget points to a store name, since each new name costs its own ads, site and list.
+  - title: Reads your ad budget
+    text: A small ad budget points to the store name, because each new name needs its own ads, site and list. The skill treats under a few thousand dollars a month in ads, or fewer than two staff, as small. Those are starting points. Give it your own limit if you have one.
   - title: Runs the five rules
-    text: Volume, competition, ad support, importance and how it is sold decide own name or store name.
+    text: Volume, competition, ad budget, importance and how it is sold point to own name or store name. Each rule is answered with your fact.
   - title: Runs the name tests
-    text: Shopping list, bartender, teeter-totter, direction, same category and stretch.
+    text: Shopping list, bartender, teeter-totter, direction, same category and stretch. They show if a name already means too many things.
   - title: Picks a structure
     text: One master brand, a parent with endorsed brands, or separate brands, with the reasons.
-  - title: Adds special cases
+  - title: Covers special cases
     text: Own-label ranges, acquisitions, widening a product's use, and a separate brand for a new technology.
-  - title: Writes the naming rule
-    text: One rule so future products slot in without debate.
-  - title: Gives the actions
-    text: What to keep, merge or stop, and how to keep the old brand's meaning to one thing.
+  - title: Writes the rule and the actions
+    text: One naming rule for future products, plus what to keep, merge or stop, and when to check repeat orders.
 
 output_shape: |
   STOP-EARLY CHECK: <needed / not needed, why>
-  BUDGET GATE: <ad budget per brand; lean store name if small>
+  BUDGET GATE: <ad spend per brand; lean to store name if small>
 
   FIVE RULES for <new range>
   Volume <big/small> | Competition <none/crowded> | Ad budget <big/small> | Importance <breakthrough/commodity> | How sold <self-serve/with a person>
@@ -69,21 +79,56 @@ output_shape: |
   Bartender: <does the name alone get one thing>
   Teeter-totter: <does the name mean two things>
   Direction: <step up | step down | same level>
-  Same category: <...>   Stretch: <...>
+  Same category: <...>
+  Stretch: <...>
 
   CALL: <own name | store name with descriptor | store name only>
-  STRUCTURE: <master | endorsed | separate>, because <...>
+  STRUCTURE: <one master brand | parent with endorsed brands | separate brands>, because <...>
   DIAGRAM: <parent> > <brand> > <range>
   NAMING RULE: <one rule for future products>
   OLD BRAND NOTE: <how to keep one meaning>
   KEEP / MERGE / STOP: <...>
   REVIEW: <when to compare repeat orders>
+  SOURCE NOTE: <the book case studies are old; only the logic carries over>
   CHECK WITH A LAWYER: trademark ownership across entities
   CHECKS MISSED: <none, or list>
 
+output_sample:
+  input:
+    - What your brand stands for, in your customers' words
+    - Your stores, ranges and brands, with share of sales, price tier and monthly ad spend
+    - The new range, with its price, expected sales and how it is sold
+    - Buyers who buy from more than one brand (optional)
+    - Rivals in the new space (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Stop-early check
+      contains: A plain yes or no on whether a store like yours needs a brand structure. If not, the run ends here.
+    - name: Budget gate
+      contains: The ad spend for each brand, and whether it is small enough to point to the store name.
+    - name: Five rules
+      contains: Volume, competition, ad budget, importance and how it is sold, each answered with your fact. It ends with which way they lean.
+    - name: Tests
+      contains: Shopping list, bartender, teeter-totter, direction, same category and stretch. Each is a line on whether the name can carry the new range.
+    - name: Call
+      contains: For each range, its own name, the store name plus a plain label, or the store name only.
+    - name: Structure and diagram
+      contains: One master brand, a parent with endorsed brands, or separate brands, with the reason and a short parent-to-range diagram.
+    - name: Naming rule
+      contains: One sentence you can apply to a product you have not made yet.
+    - name: Old brand note and keep, merge, stop list
+      contains: How to keep your main name meaning one thing, and which names to keep, merge or stop using.
+    - name: Review, source note and lawyer note
+      contains: When to compare repeat orders, a reminder that the book case studies are old, and a reminder to check trademarks with a lawyer.
+    - name: Checks missed
+      contains: Any check that could not run because a fact was missing, or "none".
+
 tweaks:
-  - what: Your ad budget per brand
+  - what: Your ad spend per brand
     how: The rules lean on budget. Give a real monthly figure for each brand. A thin budget points to a single store name.
+  - what: Your own small-budget line
+    how: The skill treats a few thousand dollars a month in ads, or under two staff, as small. These are starting points. Say your own limit and it will use that.
   - what: How well you describe what each name means
     how: Use customers' words from reviews. The shopping-list and bartender tests only work on what shoppers really think.
   - what: Price tier of the new range
@@ -123,9 +168,13 @@ works_best_with:
     - "Search volume for your store name compared with each range name"
 
 terms:
+  - term: Brand architecture
+    meaning: How your store, brand and range names fit together.
   - term: House name
     meaning: The name of your store or company, used on products as well.
   - term: Endorsed brand
     meaning: A range with its own name that also shows a visible parent, like a small "by Parent".
   - term: Line extension
     meaning: Putting an existing name on a new product.
+  - term: Own-label range
+    meaning: Products a shop sells under its own name instead of a maker's name.

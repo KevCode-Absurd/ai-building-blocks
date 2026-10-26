@@ -12,6 +12,33 @@ Reusable patterns for investigating production incidents using CloudWatch Logs, 
 
 ---
 
+## When not to use (added by AI Blocks)
+
+- The problem is your AWS bill, not an outage. Use the Cloud bill waste finder or the AWS resource cost reviewer.
+- You want a full health check and a fix plan for one resource. Use the AWS service health investigator. This skill collects evidence and a timeline; it does not write the fix plan.
+- You have no CloudWatch logs or metrics for the time of the incident. Nothing here can recover data that was never recorded.
+
+## Before you start (inputs, added by AI Blocks)
+
+Ask once for anything missing. Mark what you could not get as MISSING. Never invent a name, time or number.
+
+1. The alarm name, and the exact time it went into ALARM, with its time zone.
+2. The AWS account, region and service (Lambda, ECS, API Gateway and so on).
+3. The log group names for the service (optional; search for them if not given).
+4. Access: read-only rights to CloudWatch Logs, Metrics and Alarm history, and to CloudTrail. CloudTrail Lake is a separate paid feature, so tell the user before you use it; recent CloudTrail events from `LookupEvents` are the default.
+5. No AWS access? Ask the user to run each query in the console and paste the result back, one query at a time.
+
+Replace every `<ANGLE_BRACKET>` value below with the user's real value before you run a query.
+
+## What you hand back (added by AI Blocks)
+
+1. **Timeline.** The first change, the first error, the first metric spike and the alarm time, in order, each with its source.
+2. **Blast radius.** Account, region, service, operation and resource, narrowed one step at a time, with the evidence for each.
+3. **Deploy link.** Any deploy or change in the 30 minutes before the alarm, rated STRONG, WEAK or NONE, with the reason.
+4. **Queries run.** Every query and its result, so the user can run it again.
+5. **Root event, or "not found".** Name the earliest change before all symptoms. If the evidence does not show one, say so.
+6. **MISSING list and next step.** What you could not read. Then pass the root event to a rollback decision or a post-incident review.
+
 ## Pattern 1: Logs Insights Query Templates
 
 ### Error Spike Detection
@@ -83,7 +110,7 @@ fields @timestamp, @maxMemoryUsed, @memorySize
 
 ### Timeout Detection
 
-Find invocations that hit the configured timeout:
+Find invocations that hit the configured timeout. Replace 28000 with your function's own timeout in milliseconds, minus a small margin:
 
 ```
 fields @timestamp, @duration, @logStream, @requestId
@@ -102,7 +129,7 @@ fields @timestamp, @duration, @logStream, @requestId
 2. **Query CloudTrail** for deployment-related events in a window of [alarm_time - 30min, alarm_time]:
 
 ```
-# CloudTrail Lake query for deployment events
+# CloudTrail Lake query for deployment events (CloudTrail Lake is a paid AWS feature; confirm with the user first)
 SELECT eventTime, eventName, userIdentity.arn, requestParameters
 FROM <event-data-store-id>
 WHERE eventTime > '<alarm_time_minus_30m>'
@@ -128,13 +155,15 @@ ORDER BY eventTime DESC
 
 ### Output Format
 
+Layout only. Every value in angle brackets is filled from the real data. Never copy a placeholder into a report.
+
 ```
 Deploy Correlation:
-  Event: UpdateFunctionCode
-  Time: 2024-03-15T14:23:07Z (12 min before alarm)
-  Actor: arn:aws:sts::123456789012:assumed-role/github-actions-deploy/session
-  Resource: arn:aws:lambda:us-east-1:123456789012:function:payment-processor
-  Correlation: STRONG — same resource, CI/CD actor, alarm was OK prior cycle
+  Event: <event name>
+  Time: <timestamp> (<n> min before alarm)
+  Actor: <ARN of the role or user>
+  Resource: <ARN of the resource>
+  Correlation: <STRONG, WEAK or NONE> because <same resource, CI/CD actor, alarm was OK prior cycle>
 ```
 
 ---
@@ -278,8 +307,8 @@ MetricDataQueries:
       Period: 60
       Stat: Maximum
   - Id: headroom
-    Expression: "1000 - concurrent"
-    Label: "Remaining Concurrency (account limit 1000)"
+    Expression: "<ACCOUNT_LIMIT> - concurrent"
+    Label: "Remaining Concurrency (replace <ACCOUNT_LIMIT> with the limit shown in your own account)"
 ```
 
 ---
@@ -313,14 +342,16 @@ fields @timestamp, @message
 
 3. **Identify the sequence:**
 
+Layout only. Fill each line from the real data and leave out a line you have no evidence for:
+
 ```
 Timeline:
-  T-15m: CloudTrail — UpdateFunctionCode by CI/CD role
-  T-12m: Logs — first error "Connection refused to payments-api.internal"
-  T-10m: Metrics — Error count crosses 5/min threshold
-  T-8m:  Alarm — PaymentProcessorErrors enters ALARM
-  T-5m:  Metrics — p99 latency spikes to 28s (timeout)
-  T-0:   Current — error rate at 45%, alarm still firing
+  T-<n>m: CloudTrail - <change event> by <role>
+  T-<n>m: Logs - first error "<message>"
+  T-<n>m: Metrics - <metric> crosses <threshold>
+  T-<n>m: Alarm - <alarm name> enters ALARM
+  T-<n>m: Metrics - <metric> spikes to <value>
+  T-0:   Current - <state of the alarm and the error rate>
 ```
 
 4. **Determine root event** — the earliest change that preceded all symptoms. Walk backward from the first symptom to the most recent mutation (deploy, config change, scaling event, or external dependency shift).

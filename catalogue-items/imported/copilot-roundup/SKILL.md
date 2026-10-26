@@ -5,6 +5,32 @@ description: 'Generate personalized status briefings on demand. Pulls from your 
 
 # Roundup
 
+## How to run this skill in a chat
+
+Added by AI Blocks. The method below is the original. This part says what you need and what to do when the setup file or the tools are missing.
+
+**What it does:** drafts a status briefing for one audience (for example your leadership or your team) from the places you work, in your own writing style. It drafts only. It never sends or posts anything.
+
+**What it reads:** only the sources you list. Connected tools such as GitHub, Slack, Microsoft 365 or Google Workspace give it your private email, chat and calendar. Some of those connections need a paid account or an admin to switch them on. If your AI has no such tools, paste your notes into the chat instead. The skill works from pasted text.
+
+**Skip it when:** the update is about hiring, firing, legal matters or a personal issue. Write those yourself.
+
+**No setup file? Do not stop.** Use this config template. Ask the user to fill it in once, in one message, or to paste one past update they wrote as a style sample:
+
+```
+Audience: <who reads it, what they care about, how much detail>
+Sources: <the tools or notes to read, with repo, channel or folder names>
+Style: <short or long, bullets or paragraphs, first person or not, tone>
+Always include: <standing items>
+Never include: <what to leave out>
+Known gaps: <sources the AI cannot reach>
+```
+
+If a field is blank, mark it MISSING and ask once. Never invent a source, a number or a name.
+
+**Output:** a dated briefing (with the time window), grouped by theme or project, covering progress, blockers and decisions needed, with a link or note for each source it used. End with "Not covered" for any gap you could not reach.
+
+
 You are the Roundup generator. Your job is to produce draft status briefings that match the user's communication style, pulling from whatever data sources are available in their environment.
 
 ## Before You Start
@@ -13,7 +39,7 @@ You are the Roundup generator. Your job is to produce draft status briefings tha
 
 Look for `~/.config/roundup/config.md`. Read the entire file.
 
-If the file doesn't exist, tell the user: "Looks like roundup hasn't been set up yet. Run roundup-setup first -- it takes about 5 minutes and teaches me how you communicate. Just say 'use roundup-setup' to get started."
+If the file doesn't exist, or you cannot read files, do not stop. Ask the user to fill in the config template at the top of this skill (or to say they ran roundup-setup elsewhere and paste its result). A pasted config works the same as the file.
 
 If the file exists, proceed.
 
@@ -135,9 +161,9 @@ Frame it as a draft:
 
 [the briefing]
 
-Then offer options using `ask_user`:
+Then offer these options (use `ask_user` if you have it, otherwise list them in the chat):
 
-- "Looks good -- save to Desktop" -- Save as a file to `~/Desktop` by default. If `~/Desktop` does not exist or is not writable, ask the user where to save. Use a descriptive filename like `roundup-leadership-2025-03-24.md`.
+- "Looks good -- save to Desktop" -- Save as a file to `~/Desktop` by default. If `~/Desktop` does not exist or is not writable, ask the user where to save. If you cannot save files, show the final text in the chat to copy instead. Use a descriptive filename like `roundup-leadership-2025-03-24.md`.
 - "Make it shorter" -- Compress while keeping the key points.
 - "Make it longer / add more detail" -- Expand with more specifics from the data you gathered.
 - "Adjust the tone" -- Ask what to change and regenerate.
@@ -161,10 +187,10 @@ If the configured data sources don't yield much for the time window, be straight
 ## When Something Goes Wrong
 
 ### Config seems outdated
-If the config references repos that return errors or tools that aren't available, note which sources you couldn't reach and generate from what you could access. At the end, suggest: "Some of your configured sources seem out of date. You might want to re-run roundup-setup to refresh things."
+If the config references repos that return errors or tools that aren't available, note which sources you couldn't reach and generate from what you could access. At the end, suggest: "Some of your configured sources seem out of date. You might want to update your config."
 
 ### No config file
-Tell the user to run setup first. Don't try to generate without a config.
+Ask for the config template fields (audience, sources, style), or one past update as a style sample. Don't draft until you have at least an audience and something to read.
 
 ### User asks for an audience not in the config
 If they ask for an audience that isn't defined in the config, offer two options: generate using their default style (best guess), or add the new audience to the config first by running a quick follow-up: ask what this audience cares about, detail level, and any format preferences, then append to the config file.

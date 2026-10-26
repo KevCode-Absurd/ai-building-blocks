@@ -16,6 +16,27 @@ use_cases:
   - "Check quality or catch fraud by testing samples"
   - "Use a long quiet stretch for deep, focused work"
   - "Decide when an idea is ready to share, before someone else does"
+not_for:
+  - "You want to test an idea with a bold thought experiment: use the Albert Einstein mind."
+  - "You need to check results by hand and keep a safe margin for error: use the Katherine Johnson mind."
+  - "You want to learn from slow, long-term observation of living things: use the Charles Darwin mind."
+output_sample:
+  input:
+    - Your observations, with dates and the conditions they happened in
+    - The claim or pattern you want to explain or test
+    - Any theory your team already holds (optional)
+    - Your own definitions for key terms, such as what counts as a sale or a dip (optional)
+  output:
+    - name: Definitions
+      contains: Your key terms fixed in plain words before any argument starts.
+    - name: Rules he will use
+      contains: The few plain rules the reasoning rests on, such as fewest causes and same cause for the same kind of effect.
+    - name: Step-by-step reasoning
+      contains: Your problem worked through in order, with each point marked as observed, inferred or open.
+    - name: Open questions
+      contains: What cannot be settled yet, written as questions, with the data that would settle them.
+    - name: First experiment
+      contains: One focused test to run next, changing a single thing.
 seats:
   - {seat: "Laws from observation", asks: "What do the observations actually show, before anyone adds a theory?"}
   - {seat: "Fewest causes", asks: "What is the smallest set of causes that is true and enough to explain all of this?"}

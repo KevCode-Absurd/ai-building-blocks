@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Filters are set up by rule, but you must check what they drop.
 new_slug: training-data-cleaner
 name: Training data cleaner
-summary: Give it a pile of text, images or video. Get a clean set with copies,
-  junk and personal details removed.
+summary: Clean a large training data set. Remove copies, junk and personal details from text, images or video before you train a language model.
 job: build-software
 headline: Training data cleaner
-subhead: A cleaned training set where duplicates, junk and personal details are
-  gone, ready to feed a language model. Messy web scrapes make models worse, and
-  this fixes that before you spend on training.
+subhead: A cleaned training set where duplicates, junk and personal details are gone, ready to feed a language model. Messy web scrapes make models worse, and this fixes that before you spend on training.
 explain: |
   A cleaned training set where duplicates, junk and personal details are gone, ready to feed a language model. Messy web scrapes make models worse, and this fixes that before you spend on training.
 
@@ -18,6 +15,10 @@ when:
   - You suspect your dataset has many copies of the same documents.
   - You must strip personal details before using data.
   - You want to filter out low-quality or harmful content.
+not_for:
+  - "You have no NVIDIA GPU and a small data set: use datatrove, which runs on a normal computer."
+  - "You want a simple data toolkit from Allen AI: use dolma instead."
+  - "You have a spreadsheet to tidy, not training data: clean it by hand in Google Sheets or Excel."
 you_give:
   - Your raw text, image or video files
   - The quality bar you want, such as language or length (optional)
@@ -29,9 +30,33 @@ you_get:
   - Personal details redacted
   - A report of what was removed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with an NVIDIA
-    GPU.
+  - Open an AI that can run Python code, on a computer with an NVIDIA GPU if you have one.
+  - Paste the skill text. Tell your AI where your files are and which format they use.
+  - Say which quality rules to use and which personal details to remove.
+  - Ask your AI to run the steps one at a time and show how many documents each step removes.
+  - Check a sample of removed and kept documents before you train. Check the personal detail redaction against your own legal duties.
+  - Treat the speed and cost figures in the skill as vendor claims. Cloud machines cost money.
+output_sample:
+  input:
+    - Your raw text, image, video or audio files, as Parquet, JSONL or CSV
+    - The quality rules you want, such as language or length (optional)
+    - Which personal details to remove, such as emails, phone numbers or names
+    - Details of your GPU setup (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - An NVIDIA GPU for full speed, or the slower CPU mode
+    - Enough disk space and memory for your data set
+    - A paid cloud account if you run it on cloud machines
+  output:
+    - name: Quality filter step
+      contains: Code that drops short, repeated, link-heavy and low-quality documents using your limits.
+    - name: Deduplication step
+      contains: Code that removes exact copies and near copies, and can remove documents with similar meaning.
+    - name: PII redaction step
+      contains: Code that replaces or redacts emails, phone numbers, names and places in the text.
+    - name: Image, video and audio steps
+      contains: Optional code to filter images, cut video clips and screen audio by transcript quality.
+    - name: Curated data set
+      contains: Your cleaned files, saved as Parquet or JSONL, ready for training.
+    - name: Removal report
+      contains: Documents in, documents removed at each step, and counts of personal details found.

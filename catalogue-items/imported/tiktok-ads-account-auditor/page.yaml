@@ -2,41 +2,102 @@ thinking: high
 thinking_why: It weighs many settings at once and says where data is missing.
 new_slug: tiktok-ads-account-auditor
 name: TikTok ads account auditor
-summary: Give it your TikTok Ads exports. Get a checked audit of your pixel,
-  creative, audiences, Smart+ and Shop campaigns, bids and budgets.
+summary: Find where your TikTok ad money leaks. Give it your TikTok Ads exports and get an audit of tracking, creative, bids and budgets, with proof.
 job: read-ad-results
 headline: TikTok ads account auditor
-subhead: Find out where your TikTok ad money is leaking, with each finding tied
-  to the data it came from. You hand over exports and screenshots, and get an
-  audit that separates what it saw, what it thinks it means, and what it
-  suggests.
+subhead: Give it your TikTok Ads exports and your goal. It checks your pixel, creative, audiences, Smart+ and Shop campaigns, bids and budgets. Each finding names the numbers it came from.
 explain: |
-  Find out where your TikTok ad money is leaking, with each finding tied to the data it came from. You hand over exports and screenshots, and get an audit that separates what it saw, what it thinks it means, and what it suggests.
+  A TikTok ads audit should tell you where the money goes and why, not hand you a score with no proof. This skill ties every finding to a column in your exports or a screenshot you gave it.
 
-  The skill sets up your goal, dates and currency first. Then it checks pixel and measurement, phone-style creative, audiences, Smart+ campaigns, TikTok Shop ads, bids, budgets, pacing, attribution and policy. It refuses to apply a benchmark unless your goal, country and sample size fit. Beta or unavailable features are listed but not scored, and no change is made to your account without a separate approval.
+  It starts with your goal, what counts as a conversion, your dates and your targets. Then it checks tracking, short-video creative, audiences, Smart+, Shop ads, bids, budgets and pacing. Each finding has a status of pass, fail, unknown or not applicable.
+
+  It keeps four things apart: what it saw, what it thinks that means, what it suggests, and what is only an idea. It skips any benchmark that does not fit your goal, country or account age. It never changes your account. Any change is a draft for you to approve.
 when:
-  - Your TikTok cost per result keeps climbing and you do not know why.
-  - You inherited an ad account and need to know its state.
-  - You are not sure your pixel is counting sales correctly.
-  - You want a second look before raising budgets.
+  - Your TikTok cost per result keeps rising and you cannot tell why.
+  - You took over a TikTok ad account and need to know what state it is in.
+  - You are not sure your TikTok Pixel counts each sale once.
+  - A new campaign is due and you want a second look before you raise budgets.
+not_for:
+  - You want to set up new campaigns or change live settings. This skill only reads, so make changes in TikTok Ads Manager yourself.
+  - You run ads on several platforms and want one report. Use the Twelve-platform ad account auditor.
+  - You have no ad data yet. Plan first with the TikTok Shop ad planner.
 you_give:
-  - Campaign and ad exports
+  - Campaign and ad exports from TikTok Ads Manager
   - Your goal and what counts as a conversion
-  - Date range, currency and spend targets
-  - Screenshots of settings (optional)
+  - Date range, currency and your target cost per result
+  - Screenshots of pixel, event or campaign settings (optional)
+  - Account and campaign age (optional)
 you_get:
-  - A checked audit of your account
-  - Findings with the source data named
-  - Ranked recommendations
-  - A list of missing inputs and uncertain points
+  - A short health summary of the account
+  - Findings with the source number behind each one
+  - Ranked fixes with a small first step for each
+  - A list of features it left unscored
+  - A list of what it could not check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your ad exports, and optionally read
-    your TikTok Ads account with your own read-only access. Changes stay as
-    drafts for your approval.
-  - Where the skill points to ads/references/, use the
-    ads/references/tiktok-audit.md folder inside it. We copied it in so the
-    skill works on its own.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page, or upload the skill folder if your AI takes files.
+  - In TikTok Ads Manager, export campaign, ad group and ad reports for your date range. Add a screenshot of your pixel and event settings if you have one.
+  - Paste the exports. Write your goal, what counts as a conversion, your target cost per result and your currency.
+  - Read the Missing inputs part first. Export what it asks for, then ask it to redo any finding marked unknown.
+  - Pick one recommendation and make the change yourself in TikTok Ads Manager. Check the result after the time the audit suggests.
+  - You do not need a paid tool. Exports are enough. If you give your AI read-only access to your account, say so in your message.
+how_it_works:
+  - title: Set the ground rules
+    text: It asks for your goal, conversion, dates, currency and targets. Anything you cannot give is marked missing, not guessed.
+  - title: Read the data
+    text: It notes which export, screenshot or column each number came from, so every finding can be traced.
+  - title: Check each control
+    text: It answers pass, fail, unknown or not applicable for tracking, creative, audiences, Smart+, Shop ads, bids, budgets, attribution and policy.
+  - title: Keep four things apart
+    text: Each finding separates what it saw, what it thinks it means, what it suggests, and what is only an idea.
+  - title: Skip weak benchmarks
+    text: It only uses a benchmark when your goal, country, sample size and account age fit it.
+  - title: Hand back drafts
+    text: Suggestions come with evidence, a small first step, a time to measure and a way to undo. It never changes your account.
+output_shape: |
+  Account summary: <goal, dates, currency, spend, data you gave>
+  Health summary: <3 to 5 lines>
+  Findings: <control, status, confidence, evidence, what it means>
+  Ranked recommendations: <evidence, your target, why it should help, first step, measure for, undo if>
+  Not scored: <features listed but not judged>
+  Contradictions: <data that disagrees>
+  Missing inputs: <what to export next>
+output_sample:
+  input:
+    - Campaign, ad group and ad exports from TikTok Ads Manager
+    - Your goal and what counts as a conversion
+    - Your date range, currency and target cost per result
+    - Settings screenshots, such as pixel and event setup (optional)
+  prerequisites:
+    - An AI that can read pasted tables or uploaded files
+    - Read-only access to your TikTok Ads account (optional)
+  output:
+    - name: Account summary
+      contains: Your goal, dates, currency, spend and the data the audit used.
+    - name: Health summary
+      contains: The biggest strengths and gaps in three to five lines.
+    - name: Findings
+      contains: Each check with a status, confidence and the source number behind it.
+    - name: Ranked recommendations
+      contains: Fixes in order, each with a small first step, a time to measure and a way to undo.
+    - name: Not scored
+      contains: Beta, paid or unavailable features it listed but did not judge.
+    - name: Contradictions
+      contains: Places where two of your exports disagree.
+    - name: Missing inputs
+      contains: What it could not check and what to export to close the gap.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your full exports instead of a pasted sample.
+  inputs:
+    - Your own target cost per result. Without it, the audit cannot say if a cost is too high.
+    - A second run after you fix the first finding and export again.
+terms:
+  - term: TikTok Pixel
+    meaning: A bit of code on your site that tells TikTok when someone buys or signs up.
+  - term: Events API
+    meaning: A way to send those same sales and sign-ups to TikTok from your server.
+  - term: Smart+
+    meaning: TikTok's automated campaign type that picks audiences and creative for you.
+  - term: Spark Ads
+    meaning: Ads that run from a real TikTok post, with its likes and comments kept.

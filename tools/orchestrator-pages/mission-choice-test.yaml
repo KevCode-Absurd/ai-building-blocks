@@ -1,6 +1,6 @@
 new_slug: mission-choice-test
 name: Write a mission statement and test it on real choices
-summary: Describe what matters to you. Get a mission statement built from your roles and a test of it on real choices.
+summary: Write a personal mission statement from your roles and test it on five real choices. Get three lengths and a clarity score out of 100.
 job: think-and-decide
 thinking: high
 thinking_why: It runs four skills in a row and each one builds on the last. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are busy all the time and cannot say what it is for.
   - A new job, role or season asks for a clear direction.
   - You wrote a mission statement once and it never helped you decide anything.
+not_for:
+  - "You need a mission for a company or brand: use the Business mission writer."
+  - "You want to turn your roles into a real week: use a week-planning workflow, once it is in the library."
+  - "You have one big decision and no time to build a statement: use the Decision priority planner."
 you_give:
   - Your age or stage in life, and what is on your mind
   - Honest examples from the last thirty days when asked
@@ -30,11 +34,30 @@ how_to_use:
   - Say your stage in life and answer for the four speakers. Give moments, not titles.
   - Check each result before the next step. Strike out any goal you took from someone else's wish.
   - Bring five real choices to the last step and keep the review date it sets.
+output_sample:
+  input:
+    - Your age or stage in life, and what is on your mind
+    - Real moments from the last thirty days, when it asks
+    - Five real choices, two recent and three ahead
+    - What you know you value (optional)
+  prerequisites:
+    - An AI that can read the handoff folder, such as Claude Code or a Claude Project with files
+  output:
+    - name: Eulogy values finder
+      contains: Your top five values, each with evidence, a score for now and a step for this month.
+    - name: Roles and long-term goals mapper
+      contains: A table of your roles, what you are about in each, and one or two lasting results.
+    - name: Personal mission statement writer
+      contains: Your mission in a long, a medium and a one-sentence version, with limits you will not trade.
+    - name: Mission choice tester
+      contains: Each of your five choices marked clear, partly clear or silent, a score out of 100 and line fixes.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every missing item in one list.
 how_it_works:
   - title: Eulogy values finder
     text: Four people speak about you on a distant day. It pulls out what repeats, scores each against your last month and ranks the top five.
   - title: Roles and long-term goals mapper
-    text: Lists your roles, writes what you are about in each and sets one or two lasting results. It names the role crowding out the others.
+    text: Lists your roles, writes what you are about in each and sets one or two lasting results. It names the role crowding out the others. Uses your ranked values from step 1.
   - title: Personal mission statement writer
     text: Joins values, roles and goals into a long, a medium and a one-sentence version in the present tense, with limits you will not trade.
   - title: Mission choice tester

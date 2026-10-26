@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set prompt recipe for each close-up.
 new_slug: fabric-close-up-maker
 name: Fabric close-up maker
-summary: Give it a clothing photo. Get close-ups of fabric, stitching and weave
-  for the product page. Your image model draws them.
+summary: Turn one clothing photo into fabric close-ups of weave, stitching and collar for your product page. Your image model draws them.
 job: product-photos
 headline: Fabric close-up maker
-subhead: Close-up fabric shots for a clothing product page, made from the photo
-  you already have. Buyers see the weave, stitching and collar detail that
-  proves quality, without a macro lens or a photo studio.
+subhead: Close-up fabric shots for a clothing product page, made from the photo you already have. Buyers see the weave, stitching and collar detail that proves quality, without a macro lens or a photo studio.
 explain: |
   Close-up fabric shots for a clothing product page, made from the photo you already have. Buyers see the weave, stitching and collar detail that proves quality, without a macro lens or a photo studio.
 
@@ -18,6 +15,10 @@ when:
   - You want 2 or 3 close-ups per garment without extra photography.
   - You want your detail shots to match the angle of a reference image.
   - You need weave or stitching visible for a premium product.
+not_for:
+  - Your source photo is blurry, small or hides the area you want. Retake the photo first, because the AI will invent the detail.
+  - You need proof of quality, fabric content or a certification. Use a real macro photo of the garment taken by a photographer.
+  - You want the whole garment on a model or a clean background. Use a product photographer or a simple photo of the garment laid flat.
 you_give:
   - A clothing photo
   - The area to zoom into
@@ -28,9 +29,26 @@ you_get:
   - Prompt used, for repeat runs
   - Several area options per garment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Pick your sharpest photo of the garment. Make sure the area you want is clear and not covered.
+  - Choose one area per close-up, such as the collar, cuff or weave. Plan two or three shots per garment.
+  - Open your AI tool and paste the skill. This needs an AI that can run commands, plus a dlazy account with credits.
+  - Add your photo and the area. Add a reference image if you want to copy an angle (optional).
+  - Check each result against the real garment. Look for plastic-looking texture, wrong color or stitching that is not on the garment.
+  - Keep two or three close-ups for the product page. Save the prompt with the product code so you can repeat the shot. Say the images are AI-made if your store requires it.
+output_sample:
+  input:
+    - One clothing photo, at least 400 by 400 pixels, with the area clearly visible
+    - The area to zoom into, such as collar, cuff, hem, button, zip, pocket, embroidery, print or weave
+    - A reference detail image to copy the angle and light (optional)
+  prerequisites:
+    - An AI that can run commands and files on your computer
+    - A dlazy account with credits, or your own image model key
+  output:
+    - name: Close-up image
+      contains: A photo-style macro shot of the one area you chose, filling the frame with soft side light.
+    - name: Prompt used
+      contains: The full text sent to the image model, so you can run the same shot again.
+    - name: Extra area options
+      contains: Other parts of the garment worth zooming into, so you can make two or three shots per item.
+    - name: Fix lines
+      contains: Short sentences to add to the prompt if the texture looks like plastic, the zoom is weak or the color shifts.

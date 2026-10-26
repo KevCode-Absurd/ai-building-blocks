@@ -1,6 +1,6 @@
 new_slug: plan-the-cash-for-your-next-stock-order
 name: Plan the cash for your next stock order
-summary: Give it your supplier invoices and lead times. Get true unit costs, the cash you need, better terms and a verdict.
+summary: Plan the cash for your next stock order. Give it supplier invoices and lead times to get true unit costs, cash needed and a growth verdict.
 job: plan-supply-chain
 thinking: high
 thinking_why: It runs five skills in a row and each one does money sums on the last. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to place a large stock order and want to know if you can pay for it.
   - Your store shows a profit, but cash is always tight after a reorder.
   - You want to ask your factory for better payment terms and need numbers to back the ask.
+not_for:
+  - "You have one small reorder and your cash is clearly fine: check the sums by hand or in a simple sheet instead."
+  - "You have no supplier invoices yet: gather your invoices and freight bills first, then come back."
+  - "You want to know why ad sales dropped: use the Ad sales drop analyst."
 you_give:
   - Your supplier invoices, with freight, duty and any other lump costs for the shipment
   - Your lead times from order to shelf, and how and when you pay the supplier
@@ -32,6 +36,29 @@ how_to_use:
   - Start with your latest invoices in a sheet. Add lead times, payment terms and starting cash.
   - Check the landed costs against your invoices before you read the cash plan. Everything after it builds on those costs.
   - Take the plan and the terms to your accountant before you act on any funding option.
+output_sample:
+  input:
+    - Your supplier invoices, with freight, duty and other lump costs
+    - Your lead times and how and when you pay the supplier
+    - Your starting cash, stock on hand and monthly sales by product
+    - Your price and cost for each product
+    - Your ad results (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack folder with HANDOFF.md and the skill files
+  output:
+    - name: Landed cost allocator result
+      contains: Cost per unit with freight, duty and fees spread across products, checked against invoices, plus margin per unit.
+    - name: Inventory cash planner result
+      contains: Stock and cash by month, your lowest cash point, the raise needed, downside cases and funding options.
+    - name: Supplier terms and float planner result
+      contains: Days of float, a ladder of terms to ask for, a cost-share offer and cash by month.
+    - name: Growth cash limit checker result
+      contains: Profit versus cash, stock grades A to D, stockout and growth tests, a verdict and a score.
+    - name: Cash lever ranker result
+      contains: Six cash levers ranked by cash freed, the best combination and what to watch for 90 days.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Work out true unit costs
     text: Landed cost allocator spreads each freight, duty and fee invoice across the products on a stated basis. It checks the sums add up to the invoices, then divides by units received.

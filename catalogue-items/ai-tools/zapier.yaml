@@ -6,12 +6,12 @@ promise: "Connect apps and run repeatable steps when a chosen event happens."
 use_cases: [automate]
 categories: [automation]
 what_it_does:
-  - Links more than 9,000 apps so one can start work in another.
-  - "Runs a series of steps, called a Zap, when your chosen event happens."
-  - Adds AI steps where they help, and plain rules elsewhere.
-  - Builds AI agents that score leads, sort tickets and process documents.
-  - "Lets supported AI assistants work through your connected apps."
-  - Gives admins control over which apps and actions are allowed.
+  - "Links more than 9,000 apps so one can start work in another (checked 26 Oct 2026)."
+  - "Runs a series of steps, called a Zap, when your chosen event happens. The free plan allows two-step Zaps and paid plans allow more steps (checked 26 Oct 2026)."
+  - "Adds AI steps where they help, and plain rules elsewhere (checked 26 Oct 2026)."
+  - "Builds AI agents that score leads, sort tickets and process documents (checked 26 Oct 2026)."
+  - "Lets AI assistants such as Claude and ChatGPT work through your connected apps, using MCP (checked 26 Oct 2026)."
+  - "Gives admins control over which apps and actions are allowed on the Enterprise plan (checked 26 Oct 2026)."
 benefits:
   - Stop copying data between your store, inbox and spreadsheet.
   - Send each new lead to the right person without a manual step.
@@ -22,12 +22,12 @@ best_for:
   - Small teams automating lead, order and support hand-offs.
   - "Teams that need one place to manage which app tasks can run."
 not_for:
-  - High-volume jobs, since cost rises with the number of tasks.
-  - Free users who need multi-step automations, which need a paid plan.
+  - "High-volume jobs, since cost rises with the number of tasks. Look at Make or n8n for heavy use."
+  - "Free users who need more than two steps in one automation. That needs a paid plan."
 pricing:
   model: freemium
   from: US$19.99 per month
-  note: Free plan with 100 tasks a month and two-step Zaps. Pro starts at US$19.99 per month billed yearly (US$29.99 billed monthly) for 750 tasks. Team starts at US$69 per month billed yearly.
+  note: "Checked 26 Oct 2026, in US dollars. Free is US$0 with 100 tasks a month, two-step Zaps and 1 seat. Pro starts at US$19.99 a month billed yearly (US$29.99 billed monthly) for 750 tasks and adds multi-step Zaps. Team starts at US$69 a month billed yearly (US$103.50 billed monthly) for 2,000 tasks and 25 seats. Enterprise is by quote. Higher task counts cost more. With pay-per-task on, extra tasks cost more than the plan rate. With it off, runs stop at your limit until the next cycle."
 works_with:
   - chatgpt
   - claude
@@ -41,7 +41,28 @@ blocks:
   - lead-handoff-designer
   - recurring-kpi-report-maker
 alternatives: [make, n8n, gumloop, lindy]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to zapier.com and click Start free. Sign up with an email (checked 26 Oct 2026)."
+  - "Write one job in a line first: when this happens in app A, do that in app B. Keep it to one trigger and one action."
+  - "Create a Zap. Choose the trigger app and the event, then connect your account for that app when Zapier asks."
+  - "Add the action app and map the fields, such as a contact's name into a message. Run the test Zapier offers and check the result in the target app."
+  - "Turn the Zap on. Check the next few real runs in your Zap history before you leave it alone."
+needs:
+  - "A Zapier account. The free plan covers two-step Zaps with 100 tasks a month."
+  - "Logins for both apps you want to connect, with permission to connect them."
+  - "A clear rule for the job: what starts it, and what should happen."
+  - "A rough count of runs a month, since each plan has a task limit."
+  - "A paid plan if you need more than two steps in one Zap."
+example:
+  task: "When a new contact is added in HubSpot, send a message to a Slack channel."
+  cost: "This is a two-step Zap, so it fits the free plan, which allows two-step Zaps and 100 tasks a month (checked 26 Oct 2026). How many tasks one run uses is not stated on the pricing page, so check your Zap history after a few runs."
+  reply: "A running Zap with a HubSpot trigger and a Slack action. Each new contact posts a message to your channel. Our example shows the shape only, not a measured result. Test it with a dummy contact first."
+not_verified:
+  - "How Zapier counts tasks for each step. The pricing page gives task limits but not the counting rule."
+  - "Which plan includes API access. The page lists web and API use but gives no plan table for it."
+  - "How well the AI steps and agents work. We did not test them."
 sources:
   - https://zapier.com/pricing
   - https://zapier.com

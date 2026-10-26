@@ -1,0 +1,125 @@
+name: Security Architect agent
+summary: Describe your system. Get trust boundaries, a ranked STRIDE threat
+  table and the security controls to fix first, before you write a line of code.
+headline: Security Architect agent
+subhead: Describe your system's architecture, data and every way in. It maps
+  where trust changes hands, finds how each crossing could be attacked, and
+  hands back a ranked list of fixes with its assumptions marked.
+job: secure-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A security review that starts with code misses the bigger problem: nobody agreed where the system trusts itself less. This agent starts earlier, at the design. It maps trust boundaries, the places where control passes from one user, service or privilege level to another, and asks what happens when each one is crossed by someone it wasn't built for.
+
+  Then it runs a STRIDE pass (spoofing, tampering, repudiation, information disclosure, denial of service, elevation of privilege) on each boundary, keeps only the threats that actually fit your system, and proposes one concrete control per threat, such as a rate limit or a server-side role check. It keeps what you told it apart from what it assumed, and never marks a control "in place" on your word alone.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+when:
+  - You're designing a new service, API or feature and want the security gaps found before you build.
+  - You inherited a system with no written threat model and need one for a review or a customer's security questionnaire.
+  - You added an integration, such as a payment processor or a login provider, and want to know what trust boundary it creates.
+  - A customer or investor asks how your system defends itself and you have nothing written down.
+not_for:
+  - You have an active breach or suspicious activity right now. Use the Incident Responder agent and call your security lead first.
+  - You want your code scanned for bugs like SQL injection or broken access control. Use the Application Security Engineer agent.
+  - You need a SOC 2, ISO 27001, HIPAA or PCI-DSS gap check. Use the Compliance Auditor agent.
+you_give:
+  - Your system's architecture (monolith, microservices or serverless), and its languages, frameworks, databases and cloud provider.
+  - What data it handles and how sensitive it is, such as passwords, payment details or health records.
+  - Every way in: public APIs, admin panels, mobile apps, third-party integrations, internal service calls.
+  - Any controls you already have, such as login checks, encryption or a firewall (optional).
+  - An architecture diagram or design doc (optional).
+you_get:
+  - A trust boundary table: where control passes between a user, a service or a third party, and what protects that crossing today.
+  - A ranked STRIDE threat table: each risk that applies, the component it hits, an attack scenario, and the proposed fix.
+  - An attack surface list, split into external, internal, data and infrastructure entry points.
+  - A control list in priority order, each sized small, medium or large.
+  - The assumptions it made and what you should confirm before you trust the result.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
+  - Describe your system: architecture, tech stack, data types, and every way in, including internal and third-party ones.
+  - List any controls you already have, and attach a diagram if you have one.
+  - Say "Build the threat model. Score each threat and tell me what you assumed."
+  - Read the trust boundary table first. If a boundary is wrong, fix that before trusting the risks listed under it.
+  - Hand the ranked control list to whoever owns each fix, most urgent first.
+how_it_works:
+  - title: Map the system
+    text: It confirms the architecture, tech stack, data types and every way in, and asks once for anything missing.
+  - title: Find the trust boundaries
+    text: It marks each place where control passes between a user, a service or a third party, and what protects that crossing today.
+  - title: Run the STRIDE pass
+    text: For each boundary it checks all six threat types and keeps only the ones that fit, each with a real attack scenario.
+  - title: Rank by risk
+    text: It scores each threat by how easy it is to pull off and what it would cost, then orders the list by that score.
+  - title: Propose one control per threat
+    text: Each threat gets a concrete fix, such as a rate limit or a signature check, sized small, medium or large.
+  - title: Separate fact from assumption
+    text: It lists what you confirmed, what it assumed, and which checks (a scan, a pen test) you still need to run.
+output_shape: |-
+  TRUST BOUNDARIES
+    <boundary> | <from> | <to> | <controls today>
+
+  STRIDE THREATS (ranked)
+    <threat type> | <component> | <risk: high, medium or low> | <attack scenario> | <proposed control>
+
+  ATTACK SURFACE
+    External: <list>
+    Internal: <list>
+    Data: <list>
+    Infrastructure: <list>
+
+  CONTROL PROPOSALS (in order)
+    <control> | <threat it closes> | <effort: small, medium or large>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <assumption or gap> | <what to verify>
+output_sample:
+  input:
+    - Your system's architecture, tech stack and data types
+    - Every way in, including internal and third-party ones
+    - Controls you already have (optional)
+    - An architecture diagram (optional)
+  prerequisites:
+    - An AI that can read files, if you attach a diagram
+  output:
+    - name: Trust boundaries
+      contains: Every place control passes between a user, a service or a third party, and what protects it today.
+    - name: STRIDE threats
+      contains: Each risk that applies, the component it hits, an attack scenario and the proposed fix, ranked by severity.
+    - name: Attack surface
+      contains: Every external, internal, data and infrastructure entry point found.
+    - name: Control proposals
+      contains: A priority-ordered fix list, each sized small, medium or large.
+    - name: Assumptions and checks
+      contains: What the agent assumed and which facts you still need to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your architecture diagram or design doc next to your description.
+  inputs:
+    - Any past security findings or audit reports.
+    - Your incident history, if you've had one.
+    - The compliance framework you're working toward, if any.
+terms:
+  - term: Trust boundary
+    meaning: A place where control passes from one user, service or system to another.
+  - term: STRIDE
+    meaning: Six threat types to check for, spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege.
+  - term: Attack surface
+    meaning: Every point where someone or something outside your control can reach your system.
+tweaks:
+  - what: Scope
+    how: Review one system or service at a time. A whole company in one pass gives vague answers.
+  - what: Data sensitivity
+    how: Say exactly what data each part touches. A model for payment data looks different from one for a blog.
+improve:
+  - Keep each threat model with your architecture docs, and start the next review from the last one.
+  - Pair it with the Application Security Engineer agent once the design is set, to check the code that implements it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

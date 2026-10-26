@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must pick a method, handle paging and check the results.
 new_slug: data-extraction-pipeline-builder
 name: Data extraction pipeline builder
-summary: Give it a site and the data you want. Get a checked script and a clean
-  data file. Collects data from websites.
+summary: Build a data extraction script that pulls data from a website, file or API into a clean CSV or JSON file, with a check for empty or broken results.
 job: build-software
 headline: Data extraction pipeline builder
-subhead: Give it a site and the data you want. Get a checked script and a clean
-  data file. Collects data from websites. Bring the site, file or API address.
-  Use the result to plan your next step.
+subhead: Give it a site and the data you want. Get a checked script and a clean data file. Collects data from websites. Bring the site, file or API address. Use the result to plan your next step.
 explain: |
   Get a script that pulls data from a website, document or API into a clean CSV or JSON file, with a check that the result is not empty or broken. It avoids fragile one off scripts.
 
@@ -18,6 +15,10 @@ when:
   - You have a folder of PDFs and need the numbers pulled into a spreadsheet.
   - A site loads with JavaScript and a simple scraper returns nothing.
   - You want a reusable script instead of copy and paste.
+not_for:
+  - "You need to log in, click through pages or fill forms: use a browser automation tool, since this skill does not drive clicks or logins."
+  - "The site forbids scraping in its rules or robots.txt: ask the site owner for the data or use its official API instead."
+  - "You only need a few values once: copy and paste them by hand, which is faster than building a script."
 you_give:
   - The site, file or API address
   - The fields you want
@@ -29,8 +30,31 @@ you_get:
   - Validation result
   - Cost and quota estimate
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your Firecrawl API key.
+  - Open Claude, ChatGPT or Gemini in a mode that can run Python code and save files. Without code running, you get the script but not the checked data file.
+  - Paste this skill's instructions into the chat.
+  - Tell your AI the site, file or API address, and the fields you want. Add your preferred format if you have one.
+  - If the job needs Firecrawl, store your key as an environment variable named FIRECRAWL_API_KEY. Never paste it into the script.
+  - Check the route and cost estimate your AI gives you before it runs a large job.
+  - Read the validation result. If it shows a warning or error, ask your AI to fix the script and run it again.
+output_sample:
+  input:
+    - The website, file or API address you want data from
+    - The fields you want, such as name and price
+    - The file format you prefer, CSV or JSON (optional)
+    - Your Firecrawl API key, if the route needs it (optional)
+  prerequisites:
+    - An AI that can run Python code and save files
+    - A Firecrawl account and API key, only if your site needs Firecrawl (paid use may apply)
+  output:
+    - name: Route choice
+      contains: A short note on whether Firecrawl, local Python or both fit your source, and why.
+    - name: Budget estimate
+      contains: An estimate of Firecrawl quota or token use before any large job runs.
+    - name: Extraction script
+      contains: An editable Python script built from the Firecrawl or local template, with paging and saved progress for long jobs.
+    - name: Data file
+      contains: Your records as a CSV for tables, JSON for nested data, or Markdown for clean text.
+    - name: Validation result
+      contains: "The validator's status: ok, a warning for empty output, or an error for broken JSON."
+    - name: Summary log
+      contains: Row counts and empty values, plus a check of required fields and duplicates.

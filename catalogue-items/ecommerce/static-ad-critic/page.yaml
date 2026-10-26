@@ -1,6 +1,6 @@
 new_slug: static-ad-critic
 name: "Static ad critic"
-summary: "Attach a static ad and its page. Get a score out of 100, fixes and two rewrites."
+summary: "Check your static ad before you spend. Attach the image and headline. You get a score out of 100, ranked fixes and two rewritten headlines."
 job: check-ads
 thinking: high
 thinking_why: "It reads an image and judges how the picture, words and page work together, so a stronger model sees more."
@@ -17,6 +17,10 @@ when:
   - You designed a static ad and want a second opinion before you spend on it.
   - An image ad underperforms and you do not know whether the picture, the headline or the page is the problem.
   - You want to turn one good ad layout into versions for each problem your product solves.
+not_for:
+  - "You want to check a video ad or an organic post: ask your AI for a plain review, since this works on one image ad only."
+  - "You need the landing page itself judged: use a landing page audit, because this only checks how well the page matches the ad."
+  - "You need to know if the ad breaks Meta's rules: use the Meta ads compliance checker, then run it again after any fix."
 
 you_give:
   - The image ad itself, attached as a file
@@ -36,6 +40,32 @@ how_to_use:
   - Say what page it sends to and who sees it first.
   - Fix the highest-ranked problems, then test the two headlines against each other.
   - Run the compliance checker on any fixed ad about health or money before you publish.
+output_sample:
+  input:
+    - Your image ad, attached as a file
+    - Your headline and primary text
+    - What you sell and who it is for
+    - The type of page the ad sends to (optional)
+    - Whether viewers are cold or ready to buy (optional)
+  prerequisites:
+    - An AI chat that can read images
+  output:
+    - name: Verdict
+      contains: Says if the ad is clear, curiosity-led or stuck in the weak middle, with four quick checks.
+    - name: Eye path
+      contains: Shows what a viewer sees first, second and third.
+    - name: Awareness
+      contains: Compares what the image, the copy and the page assume the buyer knows, and flags a mismatch.
+    - name: Checks and score
+      contains: Nine checks with points earned, a score out of 100 now and a score after the fixes.
+    - name: Fixes
+      contains: A ranked list. Each fix names the check and where in the ad to change it.
+    - name: Page match
+      contains: A note on whether the page the ad sends to fits the ad.
+    - name: Headlines
+      contains: Two rewritten headlines, one clear and one led by curiosity.
+    - name: Policy watch, not run and missing
+      contains: Flags health or before-and-after claims, checks it could not run and inputs you left out.
 
 how_it_works:
   - title: Picks a side

@@ -1,6 +1,6 @@
 slug: meta-ads-report-code-builder-prompt
 name: Meta Ads report coding prompt
-summary: Get a coding brief for a Meta Ads report that compares dated results, shows source data and flags missing evidence.
+summary: "Get a Claude Code prompt that builds a 17-section monthly Meta Ads report from your own data, with dates shown and missing numbers marked."
 category: general
 type: prompt
 role: make

@@ -2,35 +2,59 @@ thinking: low
 thinking_why: It builds a fixed folder layout.
 new_slug: course-exercise-scaffolder
 name: Course exercise scaffolder
-summary: Describe your course section. Get exercise folders with problems,
-  solutions and explainers that pass linting.
+summary: Set up a course exercise folder structure that passes lint. Give it your section and exercise list. You get folders with stub readmes.
 job: build-software
 headline: Course exercise scaffolder
-subhead: A folder tree for a course section, filled with problem, solution and
-  explainer files that pass your lint checks. You skip the hand made folders and
-  start writing the teaching content.
+subhead: Give it your course section and exercise list. It builds the folders and stub files in the pattern your lint check needs. You start writing lessons, not making folders.
 explain: |
   A folder tree for a course section, filled with problem, solution and explainer files that pass your lint checks. You skip the hand made folders and start writing the teaching content.
 
   You describe the section and its exercises, or hand over a plan. The skill names directories to the required pattern, picks the right exercise variant, and creates the needed files in each folder. It follows the lint rules so errors do not appear later, and it covers moving or renaming exercises without breaking links. You can stub every exercise from a plan in one pass. It is built for code-based courses and needs a project folder you can write to.
 when:
-  - You are starting a new course section with ten exercises.
-  - You have a lesson plan and want stub files made for it.
-  - Linting fails because folders or files are named wrong.
-  - You need to rename an exercise without breaking the order.
+  - You are starting a new course section with many exercises.
+  - You have a lesson plan and want stub files made from it.
+  - Your lint check fails because folders or files are named wrong.
+  - You need to renumber an exercise without breaking the order.
+not_for:
+  - "Your course has no code, or your project has no git repo: write a plain outline in a document instead."
+  - "You do not use the ai-hero-cli lint tool: use the lint rules in this skill as a checklist, and check each folder by hand."
+  - "You want to write the lesson content itself: write it yourself or ask your AI to draft it, after the stubs exist."
 you_give:
-  - Section name and exercise list
+  - Your section name and exercise list, or a lesson plan
   - Your course folder
-  - Exercise type for each (optional)
-  - Lesson plan (optional)
+  - "The type for each exercise: problem, solution or explainer (optional)"
 you_get:
-  - Exercise folders
-  - Problem, solution and explainer stubs
-  - Lint-passing structure
-  - Rename and move steps
+  - Numbered section and exercise folders
+  - Problem, solution and explainer folders where you asked for them
+  - A short readme in each folder
+  - A lint check that passes
+  - Git commands to rename or move exercises
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run code and edit files in your course folder, such as Claude Code. A plain chat cannot make the folders for you.
+  - Open your course project and paste this skill into the chat.
+  - Paste your section name and exercise list, or your lesson plan. Say which exercises need problem, solution and explainer.
+  - Let your AI make the folders and readmes, then run the lint check.
+  - Ask it to fix any lint errors until the check passes.
+  - Without the lint tool, ask your AI to check each folder against the lint rules in the skill.
+output_sample:
+  input:
+    - Your section name and its exercise list, or a lesson plan
+    - Your course folder, with an exercises folder inside
+    - Which exercises need a problem, solution or explainer (optional)
+  prerequisites:
+    - An AI that can run code and write files in your project folder
+    - A git repo for your course
+    - The ai-hero-cli lint tool, if you want the lint check to run
+  output:
+    - name: Section folder
+      contains: A numbered, dash-case folder for the section, such as 05-memory-skill-building, inside exercises.
+    - name: Exercise folders
+      contains: One numbered folder per exercise, such as 05.02-short-term-memory, placed inside the section.
+    - name: Variant subfolders
+      contains: A problem, solution or explainer folder in each exercise, with explainer as the default.
+    - name: readme.md stubs
+      contains: A short readme in each subfolder with a title and a one-line description, so it is not empty.
+    - name: Lint result
+      contains: The result of the lint check, with fixes made until it passes.
+    - name: Rename and move steps
+      contains: Git move commands that keep the order and history when you renumber an exercise.

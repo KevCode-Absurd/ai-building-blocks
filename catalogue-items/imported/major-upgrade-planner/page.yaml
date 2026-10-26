@@ -2,35 +2,120 @@ thinking: high
 thinking_why: Upgrades hide many links between parts.
 new_slug: major-upgrade-planner
 name: Major upgrade planner
-summary: Name the package to upgrade. Get a staged plan that checks what breaks
-  and tests each step.
+summary: Get a staged plan to move one package to a new major version, with what will break, a test for each step and a way back if it fails.
 job: build-software
 headline: Major upgrade planner
-subhead: A staged plan to move one package to a new major version, with a clear
-  picture of what will break and tests after every step.
+subhead: Give it the package, the version you want and your dependency file. It lists likely breaking changes, builds a compatibility table and splits the work into small stages. Each stage has tests to pass and a point you can return to.
 explain: |
-  A staged plan to move one package to a new major version, with a clear picture of what will break and tests after every step. It replaces the risky all-at-once upgrade.
+  A major version upgrade, such as React 17 to 18, can break your app in ways your tests do not show. This planner turns that one risky jump into small, checked stages. It is a dependency upgrade plan, not an automatic upgrade.
 
-  You name the package and version. The plan checks the version change type, which signals how big the break may be. It builds a compatibility table showing which of your other packages must change first. Then it splits the work into small stages, each with tests that run before moving on, plus a rollback point. Some helper files it refers to are not bundled, so steps that need them are flagged as unavailable rather than guessed. It gives you a checklist you can follow.
+  It starts with the version change and what that kind of change usually breaks. Then it builds a compatibility table: which of your other packages must change first, and to what. It orders the work, one major version or package per stage. Each stage names the tests to run before you move on and a git tag or branch to go back to.
+
+  The original skill points to seven support files that this copy does not include. The planner will not guess what is in them. Any step that needs one is marked blocked, so the plan stays honest.
 when:
-  - A framework has a new major release and you fear breaking your app.
-  - You have many outdated packages and need an order to update them.
-  - Your tests pass but you do not trust the upgrade.
-  - You need to explain upgrade risk to your team before starting.
+  - A framework such as React, Angular or Vue has a new major release and you worry about breaking your app.
+  - You have many outdated npm packages and need an order to update them.
+  - Your tests pass, but you do not trust the upgrade yet.
+  - You must explain upgrade risk to your team before work starts.
+not_for:
+  - The update is only a minor or patch version. A normal update and a test run are enough.
+  - Your project has no tests. Add a basic smoke test first, so each stage can be checked.
+  - You want the upgrade to run for you with no review. This writes a plan. You run each stage yourself.
+  - You are upgrading an Expo app. Use the Expo upgrade helper, which knows Expo SDK steps.
+  - You are retiring a whole system or API, not one package. Use the migration planner.
 you_give:
-  - The package and target version
-  - Your dependency file
-  - Your test setup
+  - The package and the version you want
+  - Your dependency file, such as package.json
+  - Your lock file, such as package-lock.json (optional)
+  - How you run tests and the build
   - Deadlines or freeze dates (optional)
 you_get:
-  - A list of likely breaking changes
-  - A compatibility table
-  - Staged upgrade steps
-  - Tests for each stage
-  - Rollback points
+  - A list of likely breaking changes, each with its source
+  - A table of which other packages must change first
+  - Numbered upgrade stages, one major step each
+  - The tests to pass before each next stage
+  - A return point for every stage
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read project files, let it read your dependency file.
+  - Name the package, your current version and the version you want. Paste your dependency file and say how you run tests.
+  - Check the compatibility table and the breaking changes against the package's own changelog. The AI cannot see the web unless you give it access.
+  - Run stage 1 on a new git branch. Only go on to the next stage when its tests pass.
+  - If a stage fails, return to its marked point. Share the error with your AI and ask for a changed plan.
+  - Do not run any command the plan marks as risky, such as a force install, without reading what it does first.
+how_it_works:
+  - title: Read your setup
+    text: It reads the dependency file, the current version and the one you want, and checks the size of the jump.
+  - title: List breaking changes
+    text: It finds likely breaks from the changelog or migration guide, and marks any it cannot check.
+  - title: Build the table
+    text: It maps which of your packages must change before this one, and to which versions.
+  - title: Split into stages
+    text: It orders the work, one major version or one package at a time, never everything at once.
+  - title: Add tests
+    text: Each stage gets tests to pass, such as unit, build, integration or end-to-end.
+  - title: Mark return points
+    text: Each stage gets a git tag or branch you can go back to. It asks before any command that discards work.
+output_shape: |
+  ## Version change
+  <package, current version, target version, major or minor step>
+
+  ## Likely breaking changes
+  <each change and its source, or "to check">
+
+  ## Compatibility table
+  | Package | Current | Needed | Changes first? | Source |
+
+  ## Stages
+  <numbered, one major step each>
+
+  ## Tests per stage
+  <what to run before moving on>
+
+  ## Return points
+  <git tag or branch per stage>
+
+  ## Blocked steps
+  <steps that need a missing support file>
+output_sample:
+  input:
+    - The package and the version you want
+    - Your dependency file, such as package.json
+    - How you run your tests and build
+    - Your lock file and deadlines (optional)
+  prerequisites:
+    - A git repository, so each stage has a return point
+    - At least one test or build check you can run
+  output:
+    - name: Version change
+      contains: The package, current and target versions, and how big the jump is.
+    - name: Likely breaking changes
+      contains: Each expected break with its source, or a note that it still needs checking.
+    - name: Compatibility table
+      contains: Which other packages must change first, and to which versions.
+    - name: Stages
+      contains: Numbered steps, one major version or package at a time.
+    - name: Tests per stage
+      contains: What must pass before you move on to the next stage.
+    - name: Return points
+      contains: A git tag or branch for each stage, so you can go back.
+    - name: Blocked steps
+      contains: Any step that needs a support file this copy does not include.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your project files and run the tests for you, when you allow it.
+    - name: Any good chat AI
+      why: It can write the plan from pasted files. You run each stage yourself.
+  inputs:
+    - The package's own changelog or migration guide, pasted in
+    - The output of npm outdated
+    - Your test and build commands
+terms:
+  - term: Major version
+    meaning: The first number in 2.3.1. A change to it may break code that worked before.
+  - term: Compatibility table
+    meaning: A list of which versions of your packages work together.
+  - term: Return point
+    meaning: A saved copy of your code, such as a git tag, you can go back to.
+  - term: Peer dependency
+    meaning: A package that another package expects you to install yourself.

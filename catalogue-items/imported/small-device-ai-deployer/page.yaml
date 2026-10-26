@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Hardware limits and model rebuilds call for careful planning.
 new_slug: small-device-ai-deployer
 name: Small-device AI deployer
-summary: Give it a trained AI model and a target chip. Get lean code that runs
-  the model on that hardware.
+summary: Turn a trained AI model into C or C++ code for a small chip. Give it your model and target hardware to deploy AI to a microcontroller.
 job: build-software
 headline: Small-device AI deployer
-subhead: A trained AI model turned into lean code that runs on a small chip,
-  such as a microcontroller. You give the model and name the target hardware,
-  and the skill carries it through to code you can load.
+subhead: A trained AI model turned into lean code that runs on a small chip, such as a microcontroller. You give the model and name the target hardware, and the skill carries it through to code you can load.
 explain: |
   A trained AI model turned into lean code that runs on a small chip, such as a microcontroller. You give the model and name the target hardware, and the skill carries it through to code you can load.
 
@@ -18,6 +15,10 @@ when:
   - Your model is too large for the memory on your device.
   - You want to test a model inside a larger system simulation first.
   - You need C code generated from a PyTorch model.
+not_for:
+  - You have no MATLAB license. Use a free route such as your chip maker's own tools, or ask an embedded engineer.
+  - Your model runs fine on a laptop or server. You do not need this, so keep using the model as it is.
+  - You only need to import a model into MATLAB with no chip target. Ask your AI for a plain import step instead.
 you_give:
   - The trained model
   - The target chip and its memory limits
@@ -29,8 +30,27 @@ you_get:
   - Generated C, C++ or CUDA code
   - A system simulation of the model (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Embedded Coder.
+  - Open an AI that can run MATLAB, and set up its MATLAB connection first. This needs a paid MathWorks setup.
+  - Paste in the skill text, then add your trained model file.
+  - Tell it your target chip and its memory limits. Add the accuracy drop you can accept (optional).
+  - Let it pick a path and ask you before it changes or shrinks anything.
+  - Check the accuracy and memory results before you load the generated code on your device.
+output_sample:
+  input:
+    - Your trained model, from MATLAB, PyTorch, ONNX, TensorFlow or LiteRT
+    - Your target chip, such as Cortex-M, Cortex-A, Cortex-R, x86 or a GPU
+    - The memory limits of that chip
+    - How much accuracy you can lose after shrinking (optional)
+  prerequisites:
+    - An AI that can drive a live MATLAB session
+    - MATLAB R2026a or newer with the deep learning, coder, Embedded Coder and Simulink tools
+    - A paid MathWorks license
+  output:
+    - name: Model check
+      contains: Confirms the model was imported or rebuilt and still gives the results you expect.
+    - name: Compressed model
+      contains: A smaller version of the model, made by quantization, pruning or projection, sized for your chip.
+    - name: Simulink system test
+      contains: The model placed inside a larger system simulation, so you can test it before building code.
+    - name: Generated code
+      contains: C, C++ or CUDA code for your chosen chip, ready to load.

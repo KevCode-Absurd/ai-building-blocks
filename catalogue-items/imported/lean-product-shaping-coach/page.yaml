@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: Cutting scope needs judgment about what your users truly need.
 new_slug: lean-product-shaping-coach
 name: Lean product shaping coach
-summary: Describe your product plan. Get a smaller scope, a six-week bet and
-  features to say no to. Uses Shape Up.
+summary: Cut your product plan down to a six-week bet. Get a score out of 10, a trimmed scope and a list of features to say no to.
 job: build-product
 headline: Lean product shaping coach
-subhead: "A smaller plan that you can actually finish: a fixed six-week bet, a
-  clear scope, and a list of features you chose not to build."
+subhead: "A smaller plan that you can actually finish: a fixed six-week bet, a clear scope, and a list of features you chose not to build."
 explain: |
   A smaller plan that you can actually finish: a fixed six-week bet, a clear scope, and a list of features you chose not to build. Describe your product plan. The skill scores it from 0 to 10 against ideas from 37signals' Shape Up, Getting Real and Rework, then names the exact changes that raise the score.
 
@@ -17,6 +15,10 @@ when:
   - A feature keeps growing and you cannot say when it ends.
   - You want to try six-week cycles instead of sprints.
   - You need to decide which requests to turn down.
+not_for:
+  - "You need to test whether anyone wants your idea: use the lean-startup skill, or talk to ten likely buyers first."
+  - "You want a structured week of testing with prototypes: use the design-sprint skill."
+  - "Your client contract fixes the scope and you cannot cut anything: ask your client to change the contract first."
 you_give:
   - Your product plan or feature list
   - Team size and current process
@@ -28,7 +30,28 @@ you_get:
   - A six-week pitch outline
   - A list of features to say no to
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini in a new chat. No code or paid tools are needed.
+  - Paste the text of the skill file (SKILL.md) into the chat.
+  - Paste your product plan or feature list, then your team size, how you work now and the problem you want to solve.
+  - Add your deadline if you have one.
+  - "Read the results in order: score, trimmed scope, six-week pitch outline, no-go list."
+  - Answer the questions it asks about what you can leave out, then ask it to redo the scope.
+output_sample:
+  input:
+    - Your product plan or feature list
+    - Your team size and how you work now
+    - The problem you want to solve
+    - Your deadline (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code or paid tools needed.
+  output:
+    - name: Score
+      contains: A rating from 0 to 10 for your plan, with reasons for each part of the score.
+    - name: Changes to reach 10
+      contains: The specific changes that would raise your score, such as smaller teams or no backlog.
+    - name: Trimmed scope
+      contains: The smaller version of your plan that can be built in a fixed time.
+    - name: Six-week pitch outline
+      contains: A short pitch that sets the problem, the time you will spend and the limits of the work.
+    - name: No-go list
+      contains: The features and requests you chose not to build, so the scope stays small.

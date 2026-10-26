@@ -1,0 +1,42 @@
+slug: agency-design-ux-architect
+name: UX Architect agent
+summary: Get a page structure and CSS plan developers can implement. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: brand
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: code_change
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: design/design-ux-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ux-architect.md
+  licence: MIT
+  original_name: UX Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7d373da3fd204db3c830f28e03cdf85bcacd3858e38fbdad58489953f811c296
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - UX Architect
+  - Agency Agents
+  - Design
+credits:
+  - title: UX Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ux-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

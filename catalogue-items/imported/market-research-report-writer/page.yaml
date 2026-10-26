@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs evidence and keeps facts and guesses apart.
 new_slug: market-research-report-writer
 name: Market research report writer
-summary: Name a market. Get a sourced report where every claim has a source, and
-  sizing shows its assumptions.
+summary: Name a market and get a market research report where every claim has a checkable source, and market size shows its assumptions and ranges.
 job: research-topics
 headline: Market research report writer
-subhead: A market report where every claim points to a source you can check, and
-  market size shows its working. You can defend it in front of a board or an
-  investor.
+subhead: A market report where every claim points to a source you can check, and market size shows its working. You can defend it in front of a board or an investor.
 explain: |
   A market report where every claim points to a source you can check, and market size shows its working. You can defend it in front of a board or an investor.
 
@@ -18,6 +15,10 @@ when:
   - You are writing a competitor and market section for a plan.
   - You need a forecast with stated assumptions and ranges.
   - You want to separate hard facts from your own opinion.
+not_for:
+  - "You need a quick back-of-envelope guess of market size: ask your AI for a plain one-page desk brief instead."
+  - "You want a review of one company's finances: ask a finance analyst or an accountant."
+  - "You need investment, legal or tax advice: speak to a qualified adviser, since this skill does not give it."
 you_give:
   - The market and question to answer
   - Region and time period
@@ -30,8 +31,32 @@ you_get:
   - Forecast ranges
   - A list of limits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
+  - Tell your AI the market, the region, the time period and the decision the report will support.
+  - Paste any reports or data you already have. Turn on web search if your AI offers it.
+  - Check the claims table first. Open a few sources and confirm they back the claim.
+  - Review the market size ranges and assumptions before you share the report, and ask for changes where they look weak.
+output_sample:
+  input:
+    - The market you want to study and the question to answer
+    - Region and time period
+    - The decision the report will support
+    - Sources or data you already have (optional)
+  prerequisites:
+    - An AI that can search the web, if you want it to find sources itself
+    - Your own approval before it uses any web source
+  output:
+    - name: Research contract
+      contains: The agreed market definition, customer, region, period, currency and unit, so every number counts the same thing.
+    - name: Source ledger
+      contains: Each source with an ID, so every claim can be traced back and checked.
+    - name: Claims ledger
+      contains: "Every claim with its ID, its source IDs, and a label: fact, estimate, calculation, forecast or opinion."
+    - name: Market size scenarios
+      contains: Top-down and bottom-up sizing with stated assumptions, shown as low, base and high ranges.
+    - name: Forecast with sensitivity
+      contains: Forecast ranges and which assumptions change the result most.
+    - name: Competitor and customer sections
+      contains: Competitive landscape, concentration and customer evidence, each tied to claim IDs.
+    - name: Limits and release check
+      contains: Source conflicts, gaps and open questions, plus a final review before you share the report.

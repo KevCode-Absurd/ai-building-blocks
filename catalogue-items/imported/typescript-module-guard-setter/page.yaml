@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It follows a set setup but must fit your repo.
 new_slug: typescript-module-guard-setter
 name: TypeScript module guard setter
-summary: Point it at a TypeScript repo. Get dependency-cruiser set up so each
-  package is reached only through its front door.
+summary: Set up a TypeScript module boundary check with dependency-cruiser. Each package can be used only through its entry files, and the check fails on deep imports.
 job: build-software
 headline: TypeScript module guard setter
-subhead: A TypeScript repo where each package can only be used through its front
-  door, enforced by lint rules. Nobody can reach into another package's inner
-  files by mistake.
+subhead: A TypeScript repo where each package can only be used through its front door, enforced by lint rules. Nobody can reach into another package's inner files by mistake.
 explain: |
   A TypeScript repo where each package can only be used through its front door, enforced by lint rules. Nobody can reach into another package's inner files by mistake.
 
   The skill sets up dependency-cruiser with four error rules. Code outside a package may import only its root entry files. Files inside a package can import each other freely. Tests go through entry points. Cycles are banned. Packages keep their code in a lib folder and tests in a tests folder. It detects your package manager, finds the packages folder, and merges the rules into any existing config instead of overwriting it. Layering between packages is left as a stub for you to fill.
 when:
-  - Your packages import each other's inner files and changes keep breaking
-    things.
+  - Your packages import each other's inner files and changes keep breaking things.
   - "You want a simple rule: use the entry file or do not import."
   - You are adding dependency-cruiser to an existing TypeScript project.
   - You want the check to run in your build.
+not_for:
+  - "Your repo has no TypeScript or no packages folder: use a plain lint rule, or skip the boundary check."
+  - "You want rules about which packages may depend on which: write those layering rules yourself, since this skill leaves them as a stub."
+  - "You want to check a single small app with no packages: skip it, as there are no package boundaries to guard."
 you_give:
   - A TypeScript repo
   - Your package manager
@@ -30,8 +30,30 @@ you_get:
   - A merged config if one existed
   - A script to run the check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in your TypeScript repo. It needs to read your files and run commands.
+  - "Paste the skill and say: set up the module guard in this repo."
+  - Check the packages folder it picks. Correct it if your repo uses a different one.
+  - Let it install dependency-cruiser and write the config. If you already have a config, it adds the rules to it.
+  - "Watch the proof run: a pass, a fail on a deep import, then a pass again."
+  - Add the lint:boundaries script to your CI if it did not find a check command.
+output_sample:
+  input:
+    - Your TypeScript repo
+    - Your package manager, found from your lock file
+    - Where your packages live (optional)
+    - Your existing dependency-cruiser config (optional)
+  prerequisites:
+    - An AI that can read your project files and run commands
+  output:
+    - name: .dependency-cruiser.cjs
+      contains: "The config with four error rules: entry-point boundary, free imports inside a package, tests through entry points, and no cycles."
+    - name: lint:boundaries script
+      contains: A script that runs the check, added to the same command that runs your typecheck.
+    - name: Example package
+      contains: A copy-me package with an entry file, a hidden lib file and a test that imports only the entry file.
+    - name: Proof run
+      contains: A pass on the clean example, a fail on a deep import in the test, then a pass after you undo it.
+    - name: Packages README
+      contains: The layout, the import rule, how to run the check, and a note to avoid barrel files.
+    - name: CLAUDE.md or AGENTS.md pointer
+      contains: One line that links to the packages README so your AI finds the rule.

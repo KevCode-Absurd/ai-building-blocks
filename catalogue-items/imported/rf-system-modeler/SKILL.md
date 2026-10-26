@@ -22,6 +22,41 @@ Design, analyze, and simulate RF systems in MATLAB -- from measured S-parameter 
 full time-domain Circuit Envelope simulation. One unified workflow covering passive networks,
 active device characterization, system cascade budgets, and behavioral time-domain modeling.
 
+## What you need
+
+- The parts of the RF chain, in order. For each part either a Touchstone file (.s1p, .s2p, .s4p) or its gain, noise figure and third-order intercept (OIP3 or IIP3) from the data sheet.
+- The frequency range, the signal bandwidth, and the input power or source impedance (usually 50 ohm) if known.
+- A target, such as total gain, noise figure or stability, so the result can be called a pass or a fail (optional).
+- MATLAB R2023a or later with RF Toolbox. Time-domain runs also need Simulink and RF Blockset. These are paid products.
+
+MATLAB has to run the code. If you are in a chat that cannot run MATLAB, write the script, say it is untested, and ask the user to run it and paste back the numbers and any error.
+
+If a part's data is missing, ask once. If it is still missing, write `MISSING: <part> <value>` and leave that part out of the budget. Never invent S-parameters, gains or noise figures, and never fill in a data sheet value from memory.
+
+## Steps
+
+1. List the chain in order and the data you have for each part. Say what is missing.
+2. If S-parameter files are given, load them with `sparameters`, check they are passive and causal, and confirm the frequency grids match. Interpolate to a common grid before cascading.
+3. Build the chain with `rfbudget`. Set `SignalBandwidth`. Use `clone` for repeated parts.
+4. Read gain, noise figure, OIP3 and SNR per stage from the budget properties, not from the GUI.
+5. If an amplifier is part of the job, check stability with `stabilityk` or `stabilitymu`. If a matching network is asked for, design it with `matchingnetwork`.
+6. If the user asked for a time-domain run, export with `rfsystem` and use Circuit Envelope.
+7. Save the code as `.m` files, follow the rules below, and write the result in the order under "Output".
+
+## Output
+
+Return, in this order:
+
+1. **Chain table**: one row per stage with its name, source of data (file or data sheet), gain, noise figure and OIP3.
+2. **Cascade results**: total gain, total noise figure, total OIP3 and SNR, from the budget. Compare each with the user's target and say pass or fail.
+3. **Stability verdict**: for each amplifier, the K-factor or mu result and the frequencies where it falls short.
+4. **Plots**: Smith chart and rectangular plots, each named and with axis units.
+5. **Matching network** (if asked): the topology and part values.
+6. **Script**: the MATLAB file name or names, and how to run them.
+7. **Not checked**: anything left out because data was missing.
+
+Do not quote any number the code did not produce. If the user has not run the code yet, label numbers as not yet computed.
+
 ## When to Use
 
 **Measured data workflows**
@@ -162,3 +197,7 @@ Load the relevant reference file before writing code for a specific workflow. Ea
 Copyright 2026 The MathWorks, Inc.
 
 ----
+
+## Credit and licence
+
+Written by MathWorks (matlab-agentic-toolkit). The files in this folder are under the BSD 2-Clause licence in `LICENSE.md`. The front matter above points to MathWorks' own licence page for the same toolkit. Keep the credit to MathWorks when you reuse it. MATLAB, RF Toolbox, Simulink and RF Blockset are separate paid products with their own licences.

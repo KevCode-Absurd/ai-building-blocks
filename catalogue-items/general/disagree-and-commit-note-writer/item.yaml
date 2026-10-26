@@ -1,18 +1,23 @@
 slug: disagree-and-commit-note-writer
 name: Disagree-and-commit note writer
-summary: Paste a decision and who disagrees. Get the dissent on record, who decides and a note that commits the team.
+summary: "Turn a stuck decision and each person's view into one fair dissent line each, a named decider and a note that closes the debate."
 category: general
 type: skill
 role: make
 job: ops
 level: intermediate
 inputs:
-  - type: plan
+  - type: question
     required: true
+  - type: plan
+    required: false
+  - type: council_brief
+    required: false
 outputs:
   - type: copy_draft
 origin: rebuilt
 version: 1.0.0
+needs_mode: manual
 minds:
   - jeff-bezos
 credits:

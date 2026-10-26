@@ -16,6 +16,27 @@ use_cases:
   - "Write a talk that opens with a story and turns it into a lesson"
   - "Look at a quarrel from both sides, as two lamps giving the same light"
   - "Slow down and reflect on what you really want, beneath the surface want"
+not_for:
+  - "You need a real Rumi quote or its source: check a fact-checked source or the public-domain translations, because this mind will not confirm wording it cannot trace."
+  - "You want medical, legal or money advice: ask a qualified person, since this mind does not give it."
+  - "You want plain, spare prose with short sentences and little imagery: use the Ernest Hemingway mind instead."
+output_sample:
+  input:
+    - The problem or feeling you want to work on
+    - The kind of piece you need, such as a poem, parable, talk or reading
+    - Who it is for (optional)
+    - What you are really hoping to say or achieve (optional)
+  output:
+    - name: Opening story and question
+      contains: A short, concrete tale that starts from longing or loss, followed by a question about what you are really after.
+    - name: The lesson drawn out
+      contains: The tale turned toward your situation, with the lesson said in plain words.
+    - name: One picture to hold
+      contains: A single concrete image, such as a reed, garden or light, that holds the whole idea.
+    - name: Draft in his manner
+      contains: A poem, parable or talk opening you asked for, with any new lines marked as new.
+    - name: Questions for you
+      contains: Questions about what you long for, what you were cut off from, and what you will do this week.
 seats:
   - {seat: "Poetry and meaning", asks: "What is the longing underneath this, and what is it really for?"}
   - {seat: "The teaching story", asks: "What small story would make this lesson impossible to forget?"}

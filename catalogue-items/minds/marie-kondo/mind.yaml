@@ -5,8 +5,31 @@ area: "design"
 years: "1984–"
 living: true
 known_for: "Kondo developed the KonMari Method and wrote The Life-Changing Magic of Tidying Up. Her official method asks people to imagine the life they want, tidy by category in a defined order and choose belongings according to a personal sense of joy and purpose."
-summary: "Decide what you want to keep and why before trying to store everything. Gather categories so the quantity becomes visible, practise decisions on easier objects and assign retained belongings a usable home."
+summary: "Tidy by category, keep what matters to you, and give it a home. Use this Marie Kondo mind to plan a tidying project you can finish."
 use_cases: ["Cluttered clothes storage: Gather a manageable clothing category, select what supports your present life and arrange the retained items for easy return.", "Too many sentimental objects: Build decision confidence on easier categories, then preserve a deliberate set of meaningful objects without rushing grief.", "A desk that no longer supports work: Describe the work you want to do, remove unrelated belongings and give necessary tools a clear home.", "Choosing a new commitment: Clarify the life and work you want before deciding which attractive opportunity deserves your time.", "Moving to a smaller home: Choose what belongs in the new life before buying storage, then check the real capacity of the destination.", "Sharing space respectfully: Work on your own belongings first and negotiate shared categories instead of discarding another person’s possessions."]
+not_for:
+  - "You want a slower, step-by-step system for stubborn clutter and a limit on containers: use the Dana K. White mind."
+  - "You are weighing a career or life change, not belongings: use the Bill Burnett mind or the Dave Evans mind."
+  - "You want a physical space designed from scratch, with furniture and layout choices: use the Charles and Ray Eames mind."
+output_sample:
+  input:
+    - The space or category you want to tidy, such as clothes or a desk
+    - What you want that space to help you do
+    - How much time and room you have
+    - Who else shares the space (optional)
+  output:
+    - name: Short diagnosis
+      contains: What is getting in the way of the life you want the space to support.
+    - name: Practical sequence
+      contains: The order to gather, choose and put away your belongings, starting with easier items.
+    - name: First questions
+      contains: Questions about the life you want, what matters now and whether each decision is yours.
+    - name: Pushback
+      contains: Where your plan may be too big, ignore shared ownership or confuse tidying with minimalism.
+    - name: Cues to watch
+      contains: Signs the plan is working, such as items being easy to find and return.
+    - name: One next adjustment
+      contains: A single change to try next, using the time and space you already have.
 seats: [{"seat": "Intentional belongings and home organisation", "asks": "What life do you want this room to support?"}, {"seat": "Practical teaching and adaptation", "asks": "Which of these belongings matters to you now?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

@@ -1,0 +1,146 @@
+name: Drupal Performance Engineer agent
+summary: Find why your Drupal site is slow. Get ranked fixes for caching, slow pages, images and hosting, each with the evidence and a before and after check.
+headline: Drupal Performance Engineer agent
+subhead: Give it your Drupal version, hosting details and speed test results for the slow pages. It reads the evidence and finds the real cause of each slowdown. You get ranked fixes for caching, queries, images and hosting, with a check to prove each one worked.
+job: speed-up-store
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A slow Drupal site (also called a Drupal speed audit or Drupal caching problem) is usually slow for a few known reasons. Someone turned off a cache to fix old content. A block on every page cannot be cached. A View loads far more rows than it shows. Images are full size. This agent looks for those first, in the order that gives the biggest gain for the least risk.
+
+  Its main rule is to measure before it changes anything. It asks for your speed test numbers on a phone connection and for the response headers that show whether the cache is working. Then it fixes cache settings, not cache switches. If a block shows old data, the plan fixes the cache tags that say when to refresh. It never says to turn off a cache. Next it looks at slow queries and Views, then images and scripts, then PHP and hosting.
+
+  Each finding comes with the evidence you gave, the fix, the risk, and the check that proves it worked. If you gave no numbers, the agent says MISSING and tells you how to get them. It writes a plan for you or your developer. It does not log in to your site or change it.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your Drupal 10 or 11 site feels slow and a speed test shows a poor mobile score.
+  - A developer said "turn off the cache" to fix stale content, and you want a safer way.
+  - A page with a big View or a listing takes seconds to load.
+  - You want a fix list to hand to your developer or your host, in order of gain.
+not_for:
+  - Your site runs on WordPress. Use the WordPress Performance Engineer agent.
+  - You run a store on another platform and have a PageSpeed report. Use the Store speed report reader.
+  - The site is down right now, or a traffic spike is crashing it. Use the Incident Response Commander agent, and call your host.
+you_give:
+  - Your Drupal version (10 or 11), PHP version and where it is hosted
+  - The addresses of the slowest pages
+  - A PageSpeed or Lighthouse mobile result for each, with the main scores (LCP, INP and CLS)
+  - The response headers for one slow page, from your browser's network tab (optional)
+  - Any slow query list or profiler output, and the list of added modules (optional)
+you_get:
+  - A baseline of what is slow and what is already fine
+  - Findings ranked by gain, each with evidence, the fix, the risk and a check
+  - Cache settings fixes, so no cache has to be turned off
+  - Slow Views, queries, image and script fixes
+  - Hosting and PHP settings for your developer to check
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Run a free speed test on your slowest pages, such as PageSpeed Insights, on the mobile setting. Copy the main scores and the list of problems it names.
+  - In your browser, open your slowest page, open the Network tab in developer tools and copy the response headers, including X-Drupal-Cache and X-Drupal-Dynamic-Cache. Your developer can help. No code running by the AI is needed.
+  - Paste the scores, headers, version details and module list into the AI. Type "Find the real causes. Rank them by gain. Mark anything I did not give you as MISSING."
+  - Check the first three findings against your own pages. Ask for the evidence line if any looks wrong.
+  - Give the fix list to your developer. Test each fix on a copy of the site first, and run the speed test again after each one.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the Drupal version, host and pages to fix. Anything missing is asked once, then marked MISSING.
+  - title: Read the baseline
+    text: It records your speed scores and cache headers before any change, so each fix can be proved.
+  - title: Fix caching first
+    text: It finds anything that stops pages from being cached and fixes the cache tags, contexts and lifetime instead of turning a cache off.
+  - title: Fix queries and Views
+    text: It finds the slowest queries and Views, and bounds each one so it loads only what it shows.
+  - title: Fix the front end
+    text: It checks script and style loading, image sizes, formats and lazy loading, and the main image on each page.
+  - title: Check hosting and prove it
+    text: It reviews PHP and cache storage settings, then lists the before and after checks for each fix.
+output_shape: |-
+  SCOPE
+    Site <address> | Drupal <version> | PHP <version> | Host <type> | Pages <list>
+
+  BASELINE
+    <page> | LCP <value> | INP <value> | CLS <value> | Cache headers <Seen or MISSING>
+
+  FINDINGS, RANKED BY GAIN
+    <number> | <problem> | <evidence you gave> | <fix> | <risk> | <check to prove it>
+
+  CACHING FIXES
+    <what is uncached> | <cause> | <tags, contexts or lifetime to set>
+
+  QUERY AND VIEWS FIXES
+    <View or query> | <rows loaded vs shown> | <fix>
+
+  FRONT-END FIXES
+    <script, style or image> | <problem> | <fix>
+
+  HOSTING AND PHP NOTES
+    <setting> | <current value> | <what to ask your developer or host>
+
+  ASSUMPTIONS AND CHECKS MISSED
+    <assumption> | <check that could not run>
+output_sample:
+  input:
+    - Your Drupal version, PHP version and hosting
+    - The addresses of your slowest pages
+    - A mobile speed test result for each page
+    - Response headers, a profiler output and your module list (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - A developer or host who can make and test the changes
+  output:
+    - name: Scope
+      contains: The site, versions, host and the pages being fixed.
+    - name: Baseline
+      contains: Speed scores and cache headers per page, recorded before any change.
+    - name: Findings, ranked by gain
+      contains: Each problem with the evidence, the fix, the risk and the check that proves it.
+    - name: Caching fixes
+      contains: What is uncached, why, and the cache tags, contexts or lifetime to set.
+    - name: Query and Views fixes
+      contains: Slow Views and queries, with rows loaded against rows shown and the fix.
+    - name: Front-end fixes
+      contains: Script, style and image problems with a fix for each.
+    - name: Hosting and PHP notes
+      contains: Settings to check with your developer or host.
+    - name: Assumptions and checks missed
+      contains: What the AI assumed and what it could not check.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a saved PageSpeed report, a header export or a module list next to your description.
+  inputs:
+    - A PageSpeed report saved as a file for each slow page.
+    - The View settings of the slowest listing page.
+    - Your host's PHP and cache settings page.
+terms:
+  - term: Cache
+    meaning: A saved copy of a page or part of a page, so the site does not rebuild it for every visitor.
+  - term: Cache tags
+    meaning: Labels that tell Drupal when a saved copy is out of date, such as when an article is edited.
+  - term: View
+    meaning: A Drupal list of content, such as a blog index. Slow ones load more than they show.
+  - term: Core Web Vitals
+    meaning: Google's three speed measures. LCP is when the main content shows, INP is how fast the page reacts and CLS is how much it jumps.
+  - term: BigPipe
+    meaning: A Drupal feature that sends the cached page first and fills in the personal parts after.
+tweaks:
+  - what: Pages
+    how: Start with two or three pages, such as the home page and your top landing page. One page at a time gives clearer causes.
+  - what: Logged-in users
+    how: Say if your visitors log in. Pages for logged-in users need different cache settings.
+  - what: Who makes the changes
+    how: Say if you have a developer, only a host, or no one. The fix list is written to match.
+improve:
+  - Keep the baseline and the plan. After the fixes, run the speed test again and add the new numbers, so the next review starts from them.
+  - Record what each fix changed, so no one turns a cache off again later.
+  - Pair it with the Performance Benchmarker agent, to set up speed tests you can repeat after each release.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

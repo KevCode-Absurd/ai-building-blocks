@@ -1,59 +1,73 @@
 new_slug: real-feeling-checker
+
 name: "Real feeling checker"
-summary: "Paste a story or ad. Get a score out of 100, the fakes it uses and a fix."
+
+summary: "Check if your story, ad or talk makes people feel what you meant. Get a score out of 100, the fakes it uses and a plainer rewrite."
+
 job: design-work
+
 thinking: high
+
 thinking_why: "It judges sincerity and spots fakes in text, and each call needs a quote as evidence."
 
 headline: "Real feeling checker"
-subhead: "Give it a story, ad, talk or design brief and the feeling it should pass on. It tests whether the feeling comes through, checks four fakes and rates sincerity, clarity and individuality. You get a score out of 100, where it fails and a simpler version."
+
+subhead: "Paste a story, ad, talk or design brief. It names the one feeling the piece should pass on and tests four ways that feeling gets faked. You get a score out of 100, the places the feeling fades and a plainer rewrite of the weakest passage."
 
 explain: |
-  Polished work can still feel empty. The writing is smooth, the design is sharp, and nobody feels anything. The usual causes are copied looks, a pile of accurate detail, a shock added for effect, or a puzzle that is interesting but carries no feeling. The maker also may not have felt it at all and is working to a deadline.
+  Polished work can still feel empty. The writing is smooth and the design is sharp, but nobody feels anything. The usual causes are a copied look, a pile of accurate detail, a shock added for effect, or a puzzle that is clever and carries no feeling.
 
-  This skill names the one feeling the piece should pass on, then tests it. It asks if the maker lived the feeling, checks each of four fakes with a quote from the piece, and rates three conditions: individual, clear and sincere. It marks where the feeling is lost and suggests the plainest way to say it.
+  This real feeling checker works from Leo Tolstoy's idea that good work passes a feeling from one person to another. It names the one feeling your piece should pass on. Then it asks whether the maker lived it, and tests four fakes with a quote from your text for each.
+
+  It rates the piece on three conditions: individual, clear and sincere. It shows where the feeling is lost and rewrites one passage in plain words. Unlike a general edit, it does not praise craft. It checks only whether the feeling gets through.
 
 when:
-  - "A piece is well made but leaves people cold, and you cannot say why."
-  - "You are about to publish a founder story, brand film or speech and want to know if it rings true."
-  - "A design brief has lots of effects and no clear feeling."
+  - "A founder story reads well, but readers do not react."
+  - "You are about to publish a brand film script, speech or About page and want to know if it rings true."
+  - "A design brief lists many effects and no single feeling."
+  - "You have two drafts and need to pick the one that sounds lived, not staged."
+
+not_for:
+  - "You want the wording checked for machine-sounding lines. Use the Anti-AI-slop copy editor."
+  - "You want a sales draft tightened line by line. Use the Sales copy editor."
+  - "You have no draft yet and need a design brief written. Use the Design brief rules writer first."
+  - "The text is a legal notice, a data report or safety copy, where feeling is not the goal."
 
 you_give:
-  - "The story, ad, talk or design brief to check"
-  - "The feeling you meant to pass on, if you know it (optional)"
+  - "The story, ad, talk or design brief to check, pasted in full"
+  - "The one feeling you meant to pass on, such as pride or relief (optional)"
   - "Who it is for (optional)"
-  - "What the maker lived through that led to it (optional)"
+  - "A few lines on what the maker really went through (optional)"
+
 you_get:
   - "The feeling named in one word"
-  - "A score out of 100 with its working"
-  - "Each of four fakes marked yes or no, with a quote"
-  - "Where the feeling is lost, and a simpler rewrite of one passage"
+  - "A score out of 100, with the sums shown"
+  - "Four fakes, each marked yes or no with a quote from your piece"
+  - "The places where the feeling fades, and why"
+  - "The weakest passage rewritten in plain words"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste the piece. Say the feeling you meant, if you can."
-  - "Tell it, in a line or two, what the maker actually went through. It judges sincerity first."
-  - "Read each flagged quote aloud and decide if you agree."
-  - "Rewrite the flagged passages in the plainest way, using its suggestion as a model."
-  - "Run it again and check the score rose."
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no tools or files."
+  - "Paste the whole piece. If you paste nothing, it asks for the piece and stops."
+  - "Add the feeling you meant, and a line on what really happened to the maker, if you know them."
+  - "Read each quoted fake aloud. You know what happened, so decide if you agree."
+  - "Rewrite the flagged passages in plain words, using its rewrite as a model. Run it again and check the score went up."
 
 how_it_works:
   - title: "Names the feeling"
-    text: "One word for what the piece should pass on."
+    text: "Picks one word for what the piece should pass on. If you gave one, it uses yours."
   - title: "Asks if it was lived"
-    text: "Judges whether the maker felt it or is working for money or show."
+    text: "Looks for detail only someone there would know, and for signs of working for money or show."
   - title: "Tests four fakes"
-    text: "Borrowed look, piled-up detail, shock or effect, and puzzle or news value."
-  - title: "Scores three conditions"
-    text: "Individual, clear and sincere."
+    text: "Borrowed look, piled-up detail, shock or effect, and puzzle or news value. Each needs a quote."
+  - title: "Rates three conditions"
+    text: "Individual, clear and sincere, then adds the score out of 100 and shows the working."
   - title: "Marks the loss"
-    text: "Points to where the feeling is lost."
-  - title: "Finds the plain way"
-    text: "Suggests the simplest way to say it."
+    text: "Points to each place the reader would stop feeling, with the plainest fix."
   - title: "Rewrites one passage"
-    text: "Shows it as a plain, simple case."
-  - title: "Checks the set"
-    text: "Runs its own checks and names any missed."
+    text: "Takes the weakest passage and says it in short, plain words."
+  - title: "Checks itself"
+    text: "Runs its own checks and names any it missed."
 
 output_shape: |
   FEELING
@@ -72,16 +86,40 @@ output_shape: |
   <n> out of 100 = sincere <n>/40 + clear <n>/20 + individual <n>/20 + fakes absent <n>/20
 
   WHERE THE FEELING IS LOST
-  <place> because <reason>
+  <place> because <reason> | Plainer: <what to cut or say simply>
 
   THE PLAINEST WAY
-  <rewritten passage>
+  <weakest passage, rewritten>
 
   MISSING
   <what would change a call>
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "The story, ad, talk or design brief to check, in full"
+    - "The one feeling you meant to pass on (optional)"
+    - "Who it is for (optional)"
+    - "A few lines on what the maker lived through (optional)"
+  output:
+    - name: "FEELING"
+      contains: "One word for the feeling the piece passes on, or should pass on."
+    - name: "SINCERITY FIRST"
+      contains: "Whether the maker lived it (yes, unclear or no), with the evidence."
+    - name: "FAKES"
+      contains: "Borrowed look, piled-up detail, shock and puzzle value, each marked yes or no with a quote."
+    - name: "SCORE"
+      contains: "A number out of 100, with the sums for sincere, clear, individual and fakes absent."
+    - name: "WHERE THE FEELING IS LOST"
+      contains: "Each place the reader stops feeling, the reason, and the plainer way to say it."
+    - name: "THE PLAINEST WAY"
+      contains: "Your weakest passage rewritten in short, plain words."
+    - name: "MISSING"
+      contains: "What it could not judge, and what would change a call."
+    - name: "CHECKS MISSED"
+      contains: "One line for each of its own checks it missed, or none."
 
 tweaks:
   - what: "The feeling"
@@ -127,3 +165,7 @@ terms:
     meaning: "Something that looks like feeling but carries none, such as copying an older look."
   - term: "Sincere"
     meaning: "Made by someone who really felt it, not for money or show."
+  - term: "Borrowed look"
+    meaning: "A style copied from older or popular work, with no feeling of your own in it."
+  - term: "Piled-up detail"
+    meaning: "Many accurate facts stacked together, with no feeling in any of them."

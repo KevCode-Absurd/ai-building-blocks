@@ -1,6 +1,6 @@
 new_slug: email-sequence-auditor
 name: Email sequence auditor
-summary: Review email steps and results before a rewrite. Get protect, fix and unknown groups, proposed tests and score parts with data gaps.
+summary: "Email sequence auditor: sort each email in your flow by its numbers. Get protect, fix and unknown groups, plus one test per problem."
 job: audit-landing-page
 thinking: medium
 thinking_why: It reads numbers per email and sorts them by fixed rules.
@@ -14,6 +14,10 @@ when:
   - Your welcome or follow-up flow underperforms and you plan to rewrite it.
   - You inherited a flow and do not know which emails matter.
   - Revenue from email is flat and you do not know where it leaks.
+not_for:
+  - "You have no send or result data yet: use your email platform's flow report first, then come back."
+  - "You want to audit one single broadcast email: read its numbers in your email platform, as there is no flow to map."
+  - "You want new emails written: ask your AI to rewrite only the red emails after the audit, with a person's review."
 you_give:
   - "Your email flow: each email with trigger and timing"
   - Opens, clicks, conversions, unsubscribes and revenue per email
@@ -30,6 +34,33 @@ how_to_use:
   - Paste the numbers for each email for the same period.
   - Say what the flow should achieve.
   - Share the audit with your team before anyone rewrites an email.
+output_sample:
+  input:
+    - Your email flow, each email with its trigger and timing
+    - Opens, clicks, conversions, unsubscribes and revenue per email for the same period
+    - Your goal for the flow (optional)
+    - Segments and tags the flow uses (optional)
+  prerequisites:
+    - Results exported from your email platform's flow report
+  output:
+    - name: Score
+      contains: A score out of 100 only if every part can be judged, with the sums and data coverage.
+    - name: Flow map
+      contains: The trigger, each email with its delay, and any dead ends.
+    - name: Numbers
+      contains: A table of open, click, conversion, unsubscribe and revenue for each email.
+    - name: Green
+      contains: Emails that work, with why, so you protect and study them.
+    - name: Red
+      contains: Emails with a failed number, each with one fix and one test.
+    - name: Yellow
+      contains: Emails to look at next, including any with missing numbers.
+    - name: For the team
+      contains: Findings and decisions needed before anyone rewrites an email.
+    - name: Missing
+      contains: Every gap in your data, listed and never guessed.
+    - name: Checks missed
+      contains: One line for each check the audit missed, or none.
 how_it_works:
   - title: Keeps the control
     text: Treats the current emails as the control and changes nothing yet.

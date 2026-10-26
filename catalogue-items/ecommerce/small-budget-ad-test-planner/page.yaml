@@ -1,6 +1,6 @@
 new_slug: small-budget-ad-test-planner
 name: "Small-budget ad test planner"
-summary: "Give it your price, product and test cash. Get a staged plan: image test, then video, then people."
+summary: "Plan your small-budget ad test: give your price, product and test cash. Get a staged plan with an image test, a video, then new people."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It builds a staged plan with decision rules from a few inputs, which a mid-size model handles well."
@@ -17,6 +17,10 @@ when:
   - You have a small test budget and one product and want a plan for what to try first.
   - Your ads get clicks but few buy and you do not know if the problem is the ad, the page or the price.
   - You want to know when it is safe to raise a $20 a day test to $100.
+not_for:
+  - Your store already spends six figures a month. Doubling rules here fit small spend only, so talk to an ads manager or agency.
+  - You only want to know how to split or size your test cash. Use a simple budget calculator first, then come back for the plan.
+  - You need the ad copy or script written. Use a copywriting skill, then bring the winning reason to buy back here.
 
 you_give:
   - Your product, price and cost
@@ -35,6 +39,32 @@ how_to_use:
   - Attach a clean photo of the product on white if you have one.
   - Check that your tracking and store page work before you spend a dollar.
   - Follow the stages in order and write down each result.
+output_sample:
+  input:
+    - Your product, price and cost
+    - How much cash you can risk on testing
+    - Three reasons to buy, each in a few words
+    - A product photo on a plain background (optional)
+    - Whether your purchase tracking works (optional)
+  prerequisites:
+    - Working purchase tracking and a store page that can sell, or the plan puts that fix first
+  output:
+    - name: The question for this pot
+      contains: "The one thing the cash should teach you: price, channel, product or message."
+    - name: Price check
+      contains: Click cost, CPM and cart drop-off, with a verdict on whether to fix price or ad first.
+    - name: "Stage 1: Image smoke test"
+      contains: One photo with three text bars, a daily budget, and go and stop rules.
+    - name: "Stage 2: Video for the winner"
+      contains: Video length, who is on camera, budget, and go and stop rules.
+    - name: "Stage 3: More people"
+      contains: Creators, colours and regions to test, in order of expected gain.
+    - name: What the first days mean
+      contains: What to do if the ad gets spend but no sales, gets no spend, or sells.
+    - name: Doubling schedule
+      contains: Daily budget steps, when to stop doubling, and the time to a first read.
+    - name: Checks missed and Missing
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Frames the pot

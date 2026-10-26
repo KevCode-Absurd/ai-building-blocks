@@ -1,6 +1,6 @@
 new_slug: decision-mistake-collector
 name: Decision mistake collector
-summary: Name a decision you keep making. Get your past mistakes and others' logged by cause, and the repeat offenders.
+summary: Find why a decision you keep making goes wrong. Sort your past cases and others' by cause, and see which mistakes repeat.
 job: think-and-decide
 thinking: medium
 thinking_why: It sorts cases by how they were decided and labels causes, which takes judgment but follows fixed steps.
@@ -14,6 +14,10 @@ when:
   - You keep repeating the same kind of mistake.
   - You are about to build a checklist and need to know what goes on it.
   - A bad result has you asking whether you decided badly or were unlucky.
+not_for:
+  - You face a one-off choice with no pattern. Use a simple pros and cons list, or ask a trusted person.
+  - You want to review one single event in detail. Use a post-mortem with your team, written for that event alone.
+  - You already have your log and want a list of checks. Use the Decision checklist builder.
 you_give:
   - The kind of decision you keep making
   - Three to six past cases of your own, with what you chose and what happened
@@ -25,9 +29,30 @@ you_get:
   - For each case, the question that would have caught it
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Name the decision and paste your past cases as you remember them, bad and good.
-  - Add two or three failures you know from others in your field, or ask it to suggest where to look.
-  - Take the log to "Decision checklist builder".
+  - Name the decision and paste three or more of your past cases, good and bad. Say what you knew then.
+  - Add cases from others only if you can name a source you can check. If your AI suggests cases, treat them as unverified until you check them.
+  - Read the sort first. Check that each mistake has a cause tied to a fact in the case.
+  - Take the log to the Decision checklist builder.
+output_sample:
+  input:
+    - The kind of decision you keep making
+    - Three or more of your own past cases, with what you chose and what happened
+    - Cases from others, each with a source you can check (optional)
+  output:
+    - name: Decision type
+      contains: One line on the decision, how often it comes up, and what is at stake.
+    - name: Sort
+      contains: "Each case placed in one box: good call, bad luck, lucky win or mistake, with a reason."
+    - name: The log
+      contains: Each lucky or mistake case with what was ignored, its cause, its cost and a catching question.
+    - name: Repeat offenders
+      contains: Each cause that shows up in two or more cases, with a count and case numbers.
+    - name: Top four for the checklist
+      contains: The three top repeat causes and the costliest case, with why each matters.
+    - name: Missing
+      contains: Gaps where a detail was not given, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 how_it_works:
   - title: Name the decision
     text: Defines the kind of decision, how often it comes, and what good looks like.

@@ -2,26 +2,123 @@ thinking: medium
 thinking_why: It follows a process checklist and ties each step to your records.
 new_slug: shared-business-record-planner
 name: Shared business record planner
-summary: Share conflicting records across tools. Get field ownership rules, duplicate checks and a plan to keep records consistent.
+summary: Plan how to keep customer, product or supplier records the same across your tools, with field owners, duplicate rules and quality checks.
 job: document-work
 headline: Shared business record planner
-subhead: Share the customer, product or supplier records that differ across your tools. It maps which source should own each field and how duplicates need review. You get a shared-record plan, quality checks and steps for keeping future changes consistent.
-explain: Share the customer, product or supplier records that differ across your tools. It maps which source should own each field and how duplicates need review. You get a shared-record plan, quality checks and steps for keeping future changes consistent.
+subhead: Tell your AI which tools hold the same customers, products or suppliers, and where they disagree. It writes a plan that says which tool owns each field, how to catch duplicates and who fixes problems. You get a shared-record plan you can take to your team.
+explain: |
+  When the same customer, product or supplier lives in several tools, each tool keeps its own version. Addresses differ, one customer shows up twice, and two reports give two answers. This planner is a master data management plan for a small team. It settles who is right, field by field, and writes down how to keep it that way.
+
+  The skill is scaled for a team under 100 people. Controls stay light, the owner approves changes, and automation is added only where it saves repeat work. It starts with the one record type that hurts most, such as customers, and leaves the rest for later.
+
+  Three ideas set it apart. Each field gets its own owner, so a record can take its name from one tool and its payment terms from another. A wrong merge is treated as worse than a missed duplicate, so the duplicate rules start strict. And the original record IDs are kept after a merge, so a mistake can be undone.
+when:
+  - Your customers sit in your shop, your email tool and your accounting tool, and the details do not match.
+  - Two tools show different prices or names for the same product, and nobody knows which is right.
+  - You are about to connect or replace tools and need to decide which one owns each field.
+  - One customer was invoiced twice because they were in the system twice.
+not_for:
+  - "You need to merge duplicate customers inside Shopify now: use the Customer record merger."
+  - "You only want to check one file for blanks and repeats: use the Data quality auditor."
+  - "You are moving everything from one tool to another: use the Business data move runbook."
+  - "Your records live in one tool and already match: you do not need a plan."
 you_give:
-  - The systems holding shared records and examples of conflicts.
-  - Field owners, quality problems and rules for updates.
+  - The tools that hold the same kind of record, such as your shop, email list and accounting tool
+  - The record type to fix first, such as customers, products or suppliers
+  - A few example records that disagree (blank out private details if you like)
+  - Who edits each tool today (optional)
+  - Problems you already know about, such as duplicates or blank fields (optional)
 you_get:
-  - A shared-record model with source-to-field rules.
-  - Duplicate review and quality-check plans.
-  - An update and ownership plan with reversal history.
-how_it_works:
-  - title: Step 1
-    text: Map record sources, shared fields and current quality gaps.
-  - title: Step 2
-    text: Choose field ownership, duplicate review and reversal rules.
-  - title: Step 3
-    text: Plan safe updates, quality checks and the people who review exceptions.
+  - A summary of where your records live and where they go wrong
+  - A field ownership table that names the winning tool for each field
+  - Duplicate rules, with which matches need a person to check
+  - Quality checks, each with a limit and an owner
+  - A plan for updates, owners, exceptions and undoing a wrong merge
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or paste the skill text into a new chat.
+  - Name your tools and the record type to fix first. Paste a few example records that disagree. Blank out names, emails and phone numbers you do not want to share.
+  - Answer any question about who edits each tool. Anything you cannot answer is marked MISSING in the plan.
+  - Read the field ownership table first. Check that each winner is the tool your team really trusts for that field.
+  - Check the duplicate rules. Keep them strict at first, then loosen them once people have reviewed real matches.
+  - Take the plan to the people who own each tool. It plans only. You or a developer must make any change in the live tools.
+how_it_works:
+  - title: Lists your sources
+    text: Names every tool that creates, stores or reads the record, who edits it, and where bad data causes trouble.
+  - title: Picks the scope
+    text: Chooses one or two record types to start with, and how records are shared, such as one master copy or tools that stay in step.
+  - title: Designs the shared record
+    text: Keeps only fields that really are shared, maps each tool's field to it, and names the winning tool per field.
+  - title: Writes duplicate and quality rules
+    text: Sets how to spot the same record, which matches need a person, and checks for accuracy, completeness, consistency, timeliness, uniqueness and validity.
+  - title: Plans how changes flow
+    text: Says how a change in one tool reaches the others and who wins when two tools disagree.
+  - title: Names the owners
+    text: Gives each record type an owner and a steward, sets who handles exceptions, and says how to undo a wrong merge.
+  - title: Sets the review rhythm
+    text: Plans weekly, monthly and quarterly reviews of the checks and rules, so quality does not slip back.
+output_shape: |
+  WHERE YOUR RECORDS LIVE
+  <tool>: <what it holds, who edits it, known problems>
+
+  SCOPE
+  <record type to fix first, and what waits>
+
+  FIELD OWNERSHIP
+  <field> | winner: <tool> | why: <reason> | fallback: <rule>
+
+  DUPLICATE RULES
+  <how to match> | <auto-merge or send to a person> | <how to undo>
+
+  QUALITY CHECKS
+  <check> | <limit> | <owner> | <what happens when it fails>
+
+  UPDATES AND CONFLICTS
+  <how a change moves between tools, and who wins>
+
+  OWNERS AND EXCEPTIONS
+  <record type>: owner, steward, who handles exceptions
+
+  REVIEW RHYTHM
+  <weekly, monthly, quarterly>
+
+  MISSING
+  <what you did not give>
+output_sample:
+  input:
+    - The tools that hold the same kind of record
+    - The record type to fix first
+    - A few example records that disagree
+    - Who edits each tool (optional)
+  prerequisites:
+    - An AI chat you can paste the skill and your examples into
+    - Exports from your tools, if you want checks on real data (optional)
+  output:
+    - name: Current state
+      contains: Where each record lives, who edits it, and where bad data causes problems.
+    - name: Field ownership table
+      contains: For each shared field, the winning tool, the reason and a fallback rule.
+    - name: Duplicate rules
+      contains: How to spot the same record, which matches go to a person, and how to undo a merge.
+    - name: Quality checks
+      contains: Checks with a limit, an owner and an action when a check fails.
+    - name: Update and conflict plan
+      contains: How changes move between tools and which tool wins when they disagree.
+    - name: Owners and exceptions
+      contains: A named owner and steward per record type, and who handles the odd cases.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It works from the text you paste. It cannot change your live tools.
+  inputs:
+    - A spreadsheet export from each tool, with private details blanked
+    - A list of reports that give different answers today
+    - Names of the people who own each tool
+terms:
+  - term: Master data
+    meaning: The records shared across your business, such as customers, products and suppliers.
+  - term: Golden record
+    meaning: The single best version of a record, built from the tools that hold it.
+  - term: Field ownership
+    meaning: A rule that says which tool's value wins for each field when tools disagree.
+  - term: Steward
+    meaning: The person who reviews and fixes problem records.

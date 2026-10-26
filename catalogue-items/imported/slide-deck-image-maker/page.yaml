@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes the outline first, then draws each slide with set steps.
 new_slug: slide-deck-image-maker
 name: Slide deck image maker
-summary: Give it your content. Get a slide deck outline and one drawn image per
-  slide, ready to share or read.
+summary: Turn an article into a slide deck image set. You get an outline you approve, then one drawn image for each slide, made to read and share.
 job: work-with-files
 headline: Slide deck image maker
-subhead: A slide deck made to be read and shared, where each slide is a drawn
-  image. You give your content, and the skill writes an outline with style
-  instructions, then creates one picture per slide.
+subhead: A slide deck made to be read and shared, where each slide is a drawn image. You give your content, and the skill writes an outline with style instructions, then creates one picture per slide.
 explain: |
   A slide deck made to be read and shared, where each slide is a drawn image. You give your content, and the skill writes an outline with style instructions, then creates one picture per slide.
 
@@ -18,6 +15,10 @@ when:
   - You need a self-explanatory deck to email, not present.
   - You want an outline approved before any images are drawn.
   - You want every slide to share one visual style.
+not_for:
+  - You will present live. Build the deck in PowerPoint or Google Slides instead, so you can talk through it.
+  - You need slides with text you can edit later. Use a PowerPoint template, since each slide here is a flat picture.
+  - You have no way to draw images in your AI. Ask a designer, or use a simple slide tool, until you do.
 you_give:
   - The content or article to turn into slides
   - A preferred style and slide count (optional)
@@ -29,8 +30,29 @@ you_get:
   - A deck that reads well without a speaker
   - Ready-to-share image files
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can draw images with an image tool.
+  - Open your AI in a tool that can run code and call an image tool. Check the image tool first, since it may need a paid account or key.
+  - Paste the skill, then paste your article or content.
+  - Answer the questions about style and slide count.
+  - Read the outline. Fix any slide now, because edits after drawing mean redrawing.
+  - Approve the outline. Your AI draws one image per slide.
+  - Check the images and ask for changes to any single slide.
+output_sample:
+  input:
+    - Your article or content to turn into slides
+    - Your preferred style and slide count (optional)
+    - Reference images for the look (optional)
+    - Your choice of image tool
+  prerequisites:
+    - An AI that can run code (Bun or Node)
+    - An image drawing tool the skill can call, which may be paid
+  output:
+    - name: Outline
+      contains: One entry per slide with its message, layout and style notes, for you to approve before any image is drawn.
+    - name: Slide prompts
+      contains: A saved drawing prompt for each slide, so every slide follows the same look.
+    - name: Slide images
+      contains: One picture per slide, drawn from its prompt in your chosen style.
+    - name: Merged deck
+      contains: The slide images joined into one file you can share or send.
+    - name: Summary
+      contains: A short wrap-up of the deck, its style and the files made.

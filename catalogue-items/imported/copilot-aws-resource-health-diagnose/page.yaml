@@ -2,17 +2,55 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-aws-resource-health-diagnose
 name: AWS service health investigator
-summary: Share your AWS resources and symptoms. Get health findings, log
-  evidence and a recovery plan.
+summary: Check an AWS resource's health from its CloudWatch logs and metrics. Get the issues found, their causes and a step-by-step fix plan.
 job: ship-and-host
 headline: AWS service health investigator
-subhead: Share your AWS resources and symptoms. Get health findings, log
-  evidence and a recovery plan. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Tell your AI which AWS resource has a problem and what you see. It runs read-only checks, reads your logs and metrics, and rates each issue. Then it writes a fix plan you approve before anything changes.
+not_for:
+  - "You want to cut your AWS bill: use your AWS cost tools or a cloud cost review with a person who knows your setup."
+  - "You need a security audit of your account: use a security review by a cloud security expert or AWS's own security tools."
+  - "You have no AWS CLI access or logging turned off: ask a teammate with access to run the checks, or turn on CloudWatch logging first."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can run AWS CLI commands, such as Claude Code or another coding agent. In a plain chat, run each command yourself and paste the results back.
+  - Check that the AWS CLI is signed in and CloudWatch logging is on for your resource.
+  - Paste the skill, then give the resource name, type, region and symptoms.
+  - Let it run the read-only checks and read the summary report.
+  - Read every fix before you approve it. Rebooting a database or changing Lambda concurrency can cause downtime or throttling.
+  - Approve the fixes one at a time, then run the validation checklist.
+output_sample:
+  input:
+    - The name and type of your AWS resource, such as a Lambda function or database
+    - The region and account (optional)
+    - What is going wrong, in your own words
+  prerequisites:
+    - An AI that can run AWS CLI commands, or a way to paste results back to it
+    - AWS CLI set up and signed in
+    - CloudWatch logging and metrics turned on for the resource
+  output:
+    - name: Resource found
+      contains: The resource the AI located, with its type, region and account.
+    - name: Health check
+      contains: Status and key metrics for the resource type, such as error rate, CPU or task counts.
+    - name: Log and metric findings
+      contains: Repeating errors, trends over the last 24 hours and any link to recent deployments.
+    - name: Issues by severity
+      contains: Each problem rated critical, high, medium or low, with a likely root cause.
+    - name: Health assessment summary
+      contains: A short report with status, issue counts, top issues and a question asking if you want the full plan.
+    - name: Remediation plan
+      contains: Immediate, short-term and long-term fixes with AWS CLI commands, alarm tips, a validation checklist and rollback steps.
+when:
+  - A Lambda function starts throwing errors and you don't know why.
+  - A database is slow or running out of connections.
+  - A load balancer shows unhealthy targets or many 5XX errors.
+  - A queue is backing up and messages are getting old.
+you_give:
+  - The name and type of the AWS resource
+  - The region and account (optional)
+  - A short note on the symptoms you see
+  - Access to the AWS CLI, with permission to read logs and metrics
+you_get:
+  - "A health status for the resource: healthy, warning or critical"
+  - Log and metric evidence for each problem
+  - Issues rated by severity, each with a likely cause
+  - A phased fix plan with commands, a validation checklist and rollback steps

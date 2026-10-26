@@ -2,35 +2,102 @@ thinking: medium
 thinking_why: It checks code against a ranked rule list.
 new_slug: postgres-performance-tuner
 name: Postgres performance tuner
-summary: Give it your queries or schema. Get Postgres fixes for speed, indexes
-  and security, ranked by impact.
+summary: Find what slows your Postgres database. Get a ranked list of fixes for queries, indexes, connections and row-level security.
 job: build-software
 headline: Postgres performance tuner
-subhead: Give it your queries or schema. Get Postgres fixes for speed, indexes
-  and security, ranked by impact. Bring slow queries or SQL files. Use the
-  result to plan your next step.
+subhead: Paste your slow queries and table definitions. Your AI checks them against Supabase's Postgres rules, biggest impact first. You get a ranked list of problems, each with the SQL to change and a way to test it.
 explain: |
-  Faster Postgres without guessing. Hand over your queries or schema and get a list of fixes ranked by how much each one helps.
+  A slow app often comes down to the database, but it is hard to know where to start. This is a Postgres performance review. You hand over many queries and your tables at once. It tells you which fixes matter most and which can wait.
 
-  The rules come from Supabase and are grouped into eight areas in priority order: query speed, connections, security and row-level access, schema design, locking, data access patterns, monitoring and advanced features. The skill checks your SQL and table design against each area, starting with the changes that matter most, such as missing indexes and wasteful queries. Each finding says what to change and why. It suits anyone writing or reviewing Postgres, not only Supabase users.
+  It works through eight areas in order: query speed, connections, security and row-level access, table design, locking, data access, monitoring and advanced features. For each problem it opens the matching rule file from Supabase and shows your SQL next to a better version. The rules suit any Postgres database, not only Supabase.
+
+  Use it to review a whole set of queries and a schema. For one slow query you want rewritten, the Postgres query tuner is the quicker route.
 when:
-  - A page is slow and you suspect one database query.
-  - You are about to ship a new schema and want a review.
-  - Your app runs out of database connections under load.
-  - You use row-level security and want to check it is safe and quick.
+  - A page or report is slow and you do not know which query is the cause.
+  - You are about to ship a new schema and want it reviewed first.
+  - Your app runs out of database connections when traffic rises.
+  - You use row-level security and want to know if it is safe and fast.
+not_for:
+  - "You have one slow query to rewrite: use the Postgres query tuner."
+  - "You are designing tables from scratch: use the Postgres schema designer."
+  - "Your database is MySQL, SQL Server or Snowflake: these rules are for Postgres only. For Snowflake, use the Snowflake SQL helper."
+  - "Your database is down right now: call your database admin or your host's support first."
 you_give:
-  - Slow queries or SQL files
-  - Table definitions
-  - Query plan output (optional)
-  - Traffic and data size notes (optional)
+  - Your slow queries, or the SQL files from your project
+  - Your table definitions (the CREATE TABLE statements)
+  - The result of EXPLAIN ANALYZE on a slow query (optional)
+  - Rough table sizes and how many people use the app (optional)
 you_get:
-  - Fixes ranked by impact
-  - Index suggestions
-  - Connection and pooling advice
-  - Security and row-level rule checks
+  - A ranked list of problems, biggest impact first
+  - For each one, your SQL, a better version and the rule behind it
+  - Index, connection and row-level security findings
+  - A way to test each fix on a copy of your data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Gather your table definitions and your slowest queries. If you can, run EXPLAIN ANALYZE on a slow query in Postgres and copy what it prints.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. If your AI takes file uploads, attach the references folder too, so it can open each rule file.
+  - Paste your tables first, then your queries, then any EXPLAIN ANALYZE output. Say how big the tables are, if you know.
+  - Read the ranked table at the top. Start with the first finding. Ask your AI to explain any line you do not follow.
+  - Test each change on a copy of your database. Your AI cannot run SQL on your database from a chat.
+  - Run EXPLAIN ANALYZE again on the changed query and compare it with the first run. Keep the change only if it helps.
+how_it_works:
+  - title: Sort what you gave it
+    text: It separates your queries, tables, settings and access rules, and notes anything it was not given.
+  - title: Walk the eight areas
+    text: It checks in priority order, from query speed and connections down to advanced features.
+  - title: Open the rule file
+    text: Before it names a problem, it reads the matching Supabase rule file, so each fix has a source.
+  - title: Rank the findings
+    text: It orders them by the impact rating in the rule file, critical first.
+  - title: Show the fix
+    text: Each finding shows your current SQL, the suggested SQL and why it helps.
+  - title: Hand over a test plan
+    text: It says how to try each fix on a copy and measure the change with EXPLAIN ANALYZE.
+output_shape: |
+  Checked: <what you gave it, and what was missing>
+  | # | Finding | Area | Rule file | Impact |
+  | 1 | <problem> | <area> | <rule file name> | <CRITICAL to LOW> |
+  Finding 1: <problem>
+  Current SQL: <your SQL>
+  Suggested SQL: <better SQL>
+  Why: <one or two plain sentences>
+  Test it: <how to try it on a copy and what to compare>
+  Not checked: <anything it could not judge, and what to send>
+output_sample:
+  input:
+    - Your slow queries or SQL files
+    - Your table definitions
+    - EXPLAIN ANALYZE output for a slow query (optional)
+    - Table sizes and traffic notes (optional)
+  prerequisites:
+    - A copy of your database to test on
+    - Access to run EXPLAIN ANALYZE (optional)
+  output:
+    - name: Findings table
+      contains: Every problem ranked by impact, with its area, rule file and impact rating.
+    - name: Finding detail
+      contains: For each problem, your current SQL, the suggested SQL and why it helps.
+    - name: Test plan
+      contains: How to try each fix on a copy and what to compare in EXPLAIN ANALYZE.
+    - name: Not checked
+      contains: Areas it could not judge from what you gave it, and what to send next.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It reads pasted SQL well. Attach the references folder so it can open each rule file.
+    - name: Claude Code or Codex
+      why: They read your project files and the rule files directly, so you paste less.
+    - name: psql or your database's SQL editor
+      why: You run EXPLAIN ANALYZE there before and after each change.
+  inputs:
+    - Output from pg_stat_statements, which lists your slowest queries
+    - How many database connections your app opens, and whether you use a pooler
+    - Row counts for your biggest tables
+terms:
+  - term: Index
+    meaning: A lookup list Postgres keeps so it can find rows without reading the whole table.
+  - term: EXPLAIN ANALYZE
+    meaning: A Postgres command that runs a query and shows how it ran and how long each step took.
+  - term: Row-level security
+    meaning: Rules that decide which rows each user can see or change.
+  - term: Connection pooling
+    meaning: Sharing a small set of database connections between many users of your app.

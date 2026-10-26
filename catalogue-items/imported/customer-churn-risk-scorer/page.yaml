@@ -2,34 +2,93 @@ thinking: medium
 thinking_why: It scores with set rules but needs sensible cutoffs.
 new_slug: customer-churn-risk-scorer
 name: Customer churn risk scorer
-summary: Run it on your customers. Get each one scored for churn risk from how
-  often they buy and how long since.
+summary: Find Shopify customers who are drifting away. Score each repeat buyer 0 to 100 by how overdue their next order is against their own buying rhythm.
 job: run-your-store
 headline: Customer churn risk scorer
-subhead: Customers rarely announce they are leaving. They just stop buying. This
-  reads your Shopify orders and scores every repeat customer for churn risk,
-  from 0 to 100, based on how overdue they are.
+subhead: Customers rarely say they are leaving. They just stop ordering. This reads your Shopify orders and scores each repeat customer from 0 to 100, based on how late their next order is compared with their usual rhythm.
 explain: |
-  Customers rarely announce they are leaving. They just stop buying. This reads your Shopify orders and scores every repeat customer for churn risk, from 0 to 100, based on how overdue they are.
+  A fixed rule like "no order in 90 days" treats every customer the same. Someone who buys every month is gone at 90 days. Someone who buys twice a year is not. This scorer uses each customer's own gap between orders.
 
-  For each customer with at least two orders it works out their usual gap between purchases. It then compares that to the time since their last order. Someone who is within their normal rhythm scores low. Someone at one and a half times their usual gap or more gets flagged as at risk. You can set the history window, the minimum orders and the risk threshold. It only reads data and changes nothing. It needs Shopify access.
+  For every customer with at least two orders in your window, it works out their average gap. It then divides the days since their last order by that gap. A ratio of 1 means they are right on time. A ratio of 2 means twice as late as usual. The ratio becomes a score from 0 to 100 and a group: Active, Cooling, At Risk or Likely Churned.
+
+  It reads data only and changes nothing. It shows past spend for the late customers, not a forecast of lost sales. It cannot score customers with one order.
 when:
-  - You want to know who to send a win-back email to this week.
-  - Repeat buyers have gone quiet and you cannot tell who matters.
-  - You sell a product people reorder and want to catch lapses early.
+  - You want to know who to email for a win-back this week.
+  - Repeat buyers have gone quiet and you cannot tell who matters most.
+  - You sell something people reorder, and you want to catch lapses early.
   - You are choosing which customers to call before a sale.
+not_for:
+  - Most of your customers buy once. There is no rhythm to measure, so use the Customer segment builder instead.
+  - You sell subscriptions or software. Use the Churn risk finder, which reads usage, support and billing data.
+  - You want to tag lapsed customers and export a list by a fixed number of days. Use the Lapsed customer finder.
 you_give:
-  - Your Shopify store and read access
-  - History window in days (optional)
-  - Minimum orders and risk threshold (optional)
+  - Your store address, such as mystore.myshopify.com
+  - Read access to your orders and customers
+  - How many days of orders to read (optional, 365 if you do not say)
+  - The minimum orders and the At Risk cut-off (optional)
 you_get:
-  - A 0 to 100 churn score per customer
-  - "Groups: active, cooling, at risk"
-  - Each customer's usual buying gap and days overdue
-  - A list ready to export
+  - A 0 to 100 churn score for each repeat customer
+  - A group for each: Active, Cooling, At Risk or Likely Churned
+  - Each customer's usual gap and days since last order
+  - Past spend of the late customers
+  - A CSV you can export
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. Give it the skill.
+  - Sign in to your store with the Shopify CLI. Allow it to read orders and customers. The skill has the exact sign-in command.
+  - Tell your AI your store address. Change the number of days only if your customers reorder less often than once a year.
+  - Read the customers not scored. If most have one order, ask for a longer window.
+  - Check three or four customers you know by hand. If their scores look wrong, change the At Risk cut-off and run it again.
+  - No command tool? Export your orders from the Shopify admin and paste them in. The skill will still score them.
+how_it_works:
+  - title: Read your orders
+    text: It pulls orders for the window you pick, page by page, and skips guest orders with no customer.
+  - title: Work out each customer's gap
+    text: The days between a customer's first and last order, divided by the orders minus one.
+  - title: Compare with today
+    text: Days since their last order, divided by their gap, gives the overdue ratio.
+  - title: Score and group
+    text: The ratio becomes a score of 0 to 100. The groups are Active, Cooling, At Risk and Likely Churned.
+  - title: Add contact details
+    text: For the late groups only, it fetches email and tags so you can act on the list.
+  - title: Report with limits
+    text: It shows past spend, counts customers it could not score, and warns if the window is too short.
+output_shape: |
+  CHURN RISK REPORT (<days> days)
+  Repeat customers scored: <n>   Not scored: <n>
+  Active / Cooling / At Risk / Likely Churned: <count and percent each>
+  Spend in window of late customers: <amount>
+  Top late customers by spend: <name, email, score, last order, spend>
+  CSV: <customer, orders, spend, average gap, days since last order, ratio, score, group>
+output_sample:
+  input:
+    - Your store address
+    - Read access to orders and customers
+    - How many days of orders to read (optional)
+    - Minimum orders and the At Risk cut-off (optional)
+  prerequisites:
+    - An AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in with permission to read orders and customers
+    - Customers who buy more than once
+  output:
+    - name: Churn risk report
+      contains: Counts and percentages for each group, and how many customers could not be scored.
+    - name: Spend of late customers
+      contains: What At Risk and Likely Churned customers spent in the window. Past spend, not a forecast.
+    - name: Top late customers
+      contains: The highest spenders in the late groups, with score, last order date and email.
+    - name: churn_risk CSV
+      contains: One row per customer with orders, spend, usual gap, days since last order, ratio, score and group.
+works_best_with:
+  tools:
+    - name: Claude Code, Cursor, Codex or Gemini CLI
+      why: They can run Shopify CLI on your machine to read your orders for you.
+  inputs:
+    - A window at least twice as long as your customers' usual gap between orders.
+    - Your own list of best customers, to check that the scores look right.
+terms:
+  - term: Overdue ratio
+    meaning: Days since last order, divided by the customer's usual gap. 2 means twice as late.
+  - term: Churn
+    meaning: When a customer stops buying from you.
+  - term: Guest order
+    meaning: An order placed without a customer account, so it cannot be linked to a person.

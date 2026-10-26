@@ -1,6 +1,6 @@
 new_slug: monthly-store-seo-keeper
 name: Monthly store SEO keeper
-summary: Give it your monthly Search Console numbers. Get a search report, the pages to push and a short fix list to approve.
+summary: Check your store's monthly search results. Give it your Search Console export. Get a report, pages to push and a fix list to approve.
 job: get-found-in-search
 thinking: high
 thinking_why: It runs up to six skills, compares months, picks its own path and fits the work to your hours. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your store already gets some search traffic and you want one steady monthly routine.
   - You change titles and pages but never find out if it worked.
   - Clicks dropped and you want the cause before you touch anything.
+not_for:
+  - "Your store has no search traffic yet: start with the Monthly store SEO planner, then come back once clicks arrive."
+  - "You get under about 1,000 search clicks a month: ask it to compare quarters, or use a simple monthly look at Search Console yourself."
+  - "You want a one-off check of a single traffic drop: use the Search Console traffic drop diagnoser, which needs only the export."
 you_give:
   - Search Console queries and pages for the last 3 months and the 3 months before
   - GA4 organic sessions and orders, if you have them
@@ -32,6 +36,29 @@ how_to_use:
   - The first time, give it your store name and monthly hours. It saves the plan and the first baseline.
   - Read the change list. Make the changes you agree with, or say yes to each and let it make only those if it is connected.
   - Run it again next month. It reads last month's files and checks what your changes did.
+output_sample:
+  input:
+    - Your Search Console queries and pages for the last 3 months and the 3 months before
+    - Your store name and its spellings, the first time
+    - The hours you can spend on search each month, the first time
+    - A note of what you changed on the site last month (optional)
+    - A crawl report, product facts or theme files (optional)
+  prerequisites:
+    - An AI that can read your export files
+    - Claude Code if you want it to keep the monthly folder and read last month's files
+  output:
+    - name: Search this month
+      contains: Non-branded clicks against the last period, with a score out of 100 and the sums shown.
+    - name: Last month's changes
+      contains: Each page you changed, marked worked, no effect, worse or too early, with clicks and position before and after.
+    - name: Path taken
+      contains: Whether it fixed a drop or pushed pages, and the reason.
+    - name: Changes to approve
+      contains: Each change, the page or setting, the reason and the hours, most important first.
+    - name: Next month
+      contains: Items moved out to fit your hours, and one to three numbers to watch.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Get the plan
     text: Builds the monthly cycle and sizes it to your hours once, then reuses it.

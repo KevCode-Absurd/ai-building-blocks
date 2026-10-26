@@ -1,26 +1,28 @@
 slug: pro-rata-allocation-checker
 name: Pro rata allocation checker
-summary: Calculate participation cash when the quoted round allocation excludes the existing investor.
+summary: Find the cash an investor needs to keep their share of a new round that leaves them out. Get their amount and the round total.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - follow-on-reserve-planner
+  - post-money-safe-ownership-checker
+  - option-pool-top-up-checker
 origin: own
 version: 1.0.0
 added: 2026-10-22

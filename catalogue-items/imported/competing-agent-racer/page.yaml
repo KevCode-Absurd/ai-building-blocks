@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It coordinates many agents and judges their results.
 new_slug: competing-agent-racer
 name: Competing agent racer
-summary: Give it one task. Get several AI agents trying it in separate branches,
-  scored, with the best one merged.
+summary: Run several AI agents on the same coding task in parallel, score each one, and merge the best. Compare real attempts, not one guess.
 job: build-software
 headline: Competing agent racer
-subhead: Several AI agents try the same task side by side, each in its own copy
-  of your project, and the best result is merged. You stop betting on one
-  attempt and pick from real alternatives with scores.
+subhead: Several AI agents try the same task side by side, each in its own copy of your project, and the best result is merged. You stop betting on one attempt and pick from real alternatives with scores.
 explain: |
   Several AI agents try the same task side by side, each in its own copy of your project, and the best result is merged. You stop betting on one attempt and pick from real alternatives with scores.
 
@@ -18,6 +15,10 @@ when:
   - A bug has several possible fixes and you want to see them tested.
   - You need more test coverage and want the best set of tests.
   - You want to compare content drafts and keep the strongest.
+not_for:
+  - "You want one quick edit with a single attempt: ask your AI to make the change directly."
+  - "Your task has no clear score, test or timing and you cannot judge by reading: pick the approach yourself or ask a teammate to review."
+  - "You do not use git or cannot run code: use a plain chat and ask for a few drafts to compare by eye."
 you_give:
   - The task in one sentence
   - A git project to work in
@@ -29,8 +30,34 @@ you_get:
   - The winning branch merged
   - A status view of every agent
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code, use git and start helper agents.
+  - Open your project in an AI tool that can run code, use git and start helper agents, such as Claude Code. Install the skill folder there.
+  - Start a session and give it your task in one sentence, how many agents to run, and how to score them.
+  - "Pick a ready-made pattern if one fits: speed tuning, code cleanup, test writing or bug fixing."
+  - Start the agents. Each one works on its own branch and cannot see the others.
+  - Check the ranked comparison. Each agent is a separate paid run, so more agents cost more.
+  - Merge the winner. The other attempts are kept as tags in case you want them.
+output_sample:
+  input:
+    - The task in one sentence
+    - A git project to work in
+    - How many agents to run
+    - A way to score results, such as a test command or a timing (optional)
+  prerequisites:
+    - An AI tool that can run code, use git and start helper agents, such as Claude Code
+    - A git repository for your project
+    - Paid model use, since each agent is a separate run
+  output:
+    - name: config.yaml
+      contains: The task, agent count and scoring method for your session.
+    - name: Agent branches
+      contains: One git branch per agent, each with that agent's own attempt.
+    - name: Agent results
+      contains: A short summary from each agent of its approach, files changed and measured result.
+    - name: Ranked comparison
+      contains: All attempts ordered by the measured number or by an AI judge.
+    - name: Merged winner
+      contains: The best branch merged into your base branch.
+    - name: Archive tags
+      contains: Git tags that keep every losing attempt so you can look at it later.
+    - name: Status view
+      contains: Progress and branch state for every agent while the session runs.

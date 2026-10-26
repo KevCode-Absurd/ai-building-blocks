@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set checks and fills in takedown templates.
 new_slug: store-brand-protection-planner
 name: Store brand protection planner
-summary: Give it your brand and store. Get a check for fake stores and misuse,
-  plus takedown and legal letters.
+summary: Check your Shopify store for fake stores and brand misuse. Get takedown and cease and desist letters you can send. No paid tool needed.
 job: run-your-store
 headline: Store brand protection planner
-subhead: Give it your brand and store. Get a check for fake stores and misuse,
-  plus takedown and legal letters. Bring brand name and official domain. Use the
-  result to plan your next step.
+subhead: Give it your brand and store. Get a check for fake stores and misuse, plus takedown and legal letters. Bring brand name and official domain. Use the result to plan your next step.
 explain: |
   A way to find people copying your online store or selling your products without permission, and a ready set of letters to act on it. You give your brand name, domain and trademark number, and it sets up what to look for.
 
@@ -18,6 +15,10 @@ when:
   - Someone is selling your products below your price without approval.
   - You found ads using your brand name that you did not make.
   - You want a monthly routine to watch for copycats.
+not_for:
+  - "You need legal advice on a serious case: ask a trademark lawyer before you send any letter."
+  - "You sell on a marketplace with its own brand tools: use that platform's brand registry instead."
+  - "You want a live scan of the web for you: this skill needs code running, so check by hand or use a paid monitoring service."
 you_give:
   - Brand name and official domain
   - Trademark number (optional)
@@ -30,7 +31,31 @@ you_get:
   - A cease and desist letter template
   - A suggested action for each case
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your brand name, official domain and trademark number if you have one. Add your logo link and social handles too.
+  - Download the skill folder and open it in an AI that can run Python code. The skill lists these steps.
+  - Add your details to the input settings, then run the detector script (detector.py).
+  - Read each finding and its risk level. Check every link yourself before you act.
+  - "Pick the template that fits: takedown notice, cease and desist, platform report, social report or domain complaint."
+  - Have a lawyer review the letter before you send it in any serious case.
+output_sample:
+  input:
+    - Your brand name
+    - Your official domain
+    - Your trademark number (optional)
+    - Your logo link and social handles (optional)
+  prerequisites:
+    - An AI that can run Python code, to use the detector script
+    - A way to download the skill folder
+  output:
+    - name: Brand protection report
+      contains: A list of findings such as fake stores and social media misuse, each with a risk level and a next step.
+    - name: Risk levels
+      contains: High, medium or low for each finding, with the action to take, such as sending a takedown notice within 24 hours.
+    - name: DMCA takedown template
+      contains: A copyright notice you can send to a hosting provider to remove copied content.
+    - name: Cease and desist letter
+      contains: A direct legal notice you can send to the party copying your brand.
+    - name: Platform report
+      contains: A report you can file with Shopify about an abusive store.
+    - name: Social report and domain complaint
+      contains: Templates to report posts and ads to social platforms, and fake domains to the registrar.

@@ -1,30 +1,26 @@
 new_slug: traction-content-marketing
 name: Content growth experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a content marketing test for your product. Paste your link and get one small test with a cost cap, measures and a stop rule.
 job: write-and-tell-stories
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Content growth experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused content marketing plan for your product. It reads the buyer and
-  offer, checks why this channel might work and writes a small test. The default
-  is SaaS; you can ask for general-business mode.
+  A focused content marketing plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Draft one original article, tutorial or research brief and test its usefulness
-  with a small relevant audience before committing to a publishing calendar.
+  Draft one original article, tutorial or research brief and test its usefulness with a small relevant audience before committing to a publishing calendar.
 
 
-  Publishing volume and page views do not show buyer value. Compounding
-  readership needs a longer horizon than an initial usefulness test.
+  Publishing volume and page views do not show buyer value. Compounding readership needs a longer horizon than an initial usefulness test.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare all 19 growth channels: use the Traction workflow."
+  - "Your business has no public product page and no buyer evidence yet: first talk to a few real buyers and write down what they say."
+  - "You want a full publishing calendar now: this plan tests one article first, so start there."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -38,19 +34,42 @@ how_to_use:
   - Paste your product URL and any facts you already know.
   - Ask it to follow the skill and cite what it can verify.
   - Review the plan and approve any external action separately.
+output_sample:
+  input:
+    - Your public product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and time limits (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can browse the web, or product page text you can paste in
+  output:
+    - name: Recommendation
+      contains: Whether to test now, wait, or skip because the fit is weak, with the reason.
+    - name: Evidence
+      contains: Each source link, the date you read it, the fact found and what it means.
+    - name: Buyer and useful action
+      contains: Who the buyer is and the first useful thing they do with your product.
+    - name: Channel mechanism
+      contains: How a reader of your content reaches value in your product.
+    - name: Pilot
+      contains: The idea to test, the audience, the offer, what you make and who owns it.
+    - name: Limits
+      contains: Cash, hours and end date, marked as proposed or approved.
+    - name: Measurement
+      contains: What to count, which group to track and how to credit results.
+    - name: Decision
+      contains: The rules for when to continue, change the test or stop.
+    - name: Risks and next action
+      contains: The main ways the test could fail and the next step.
+    - name: MISSING
+      contains: The facts the AI could not find and you still need to supply.
 how_it_works:
   - title: Check 1
-    text: Choose a costly buyer problem and a reader role. Draw topic ideas from
-      real support questions, discovery notes or original product data with
-      permission.
+    text: Choose a costly buyer problem and a reader role. Draw topic ideas from real support questions, discovery notes or original product data with permission.
   - title: Check 2
-    text: Plan one substantial piece with evidence, a useful takeaway and a natural
-      path into the product. Separate the owned content asset from the channels
-      used to distribute it.
+    text: Plan one substantial piece with evidence, a useful takeaway and a natural path into the product. Separate the owned content asset from the channels used to distribute it.
   - title: Check 3
-    text: Specify how the piece reaches its first readers through relevant
-      communities, partners or an existing list, then how follow-up content
-      builds on demonstrated demand.
+    text: Specify how the piece reaches its first readers through relevant communities, partners or an existing list, then how follow-up content builds on demonstrated demand.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -64,21 +83,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - An article gets broad traffic unrelated to the product. Identify the
-    mismatch and change topic or distribution before scaling output.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - An article gets broad traffic unrelated to the product. Identify the mismatch and change topic or distribution before scaling output.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

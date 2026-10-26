@@ -57,7 +57,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Send the gift and the brief, then collect the creator's footage.
 
-4. **Plan the edit.** Use the skill `video-ad-edit-planner`. Give it the script from the steps before. Plans the cut of the creator's footage against the approved script.
+4. **Plan the edit.** Use the skill `video-ad-edit-planner`. Give it the footage the creator sent back and the script from step 2, not the filming brief from step 3. Plans the cut of the creator's footage against the approved script.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

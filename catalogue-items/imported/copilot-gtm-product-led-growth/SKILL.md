@@ -9,6 +9,34 @@ metadata:
 
 # Product-Led Growth
 
+## Working in a chat (added by AI Blocks)
+
+The frameworks below are the original author's and are unchanged. This section tells you how to run them in a chat.
+
+**What you need.** Ask once, in one message, for anything you do not have:
+- What the product does, who uses it and who pays (are they the same person?).
+- The steps from sign-up to first use.
+- Spend, sign-ups, paying users and retention by channel (optional, but the channel calls need them).
+- Typical deal size and gross margin (optional).
+- A positioning or launch plan, if you have one (optional): use its buyer, message and early channel results.
+
+If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent a rate, a cost or a result. Without channel numbers, give the fit check and the first-value audit, and list the numbers needed for the channel table.
+
+**What you hand back**, in this order:
+1. Fit check: self-serve, hybrid or sales-led, with the reasons from the person's answers.
+2. First-value audit: steps, time to first value, fixes.
+3. Growth equation for each channel: activity, traffic, conversion, result.
+4. Channel economics table: cost to win, conversion, retention, payback, and a keep, optimize or kill call.
+5. Sales handoff rules: deal sizes and usage signals.
+6. Forecast: baseline, upside and downside by channel.
+7. One-page playbook for the best test to run first.
+8. `MISSING:` list.
+
+**Rules.**
+- The numbers in this skill (10 minutes, $5K, $50K, 60% retention, "sales won 10x on dollars", the example channel counts) are the author's examples. They are not benchmarks. Use the person's own data, and label any rule of thumb you keep.
+- Show the sum for every ratio so the person can check it.
+- This skill needs no code, files or paid tools. If the AI can read a spreadsheet, it may use one.
+
 Build self-serve acquisition and expansion motions. But first, figure out if PLG is even the right motion for your product.
 
 ## When to Use

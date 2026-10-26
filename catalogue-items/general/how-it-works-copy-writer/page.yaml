@@ -1,6 +1,6 @@
 new_slug: how-it-works-copy-writer
 name: "How-it-works copy writer"
-summary: "Paste a draft and product facts. Get a short cause-and-effect passage that makes the promise believable, with every link backed."
+summary: "Paste your draft and product facts. Get a short how-it-works passage that shows why your promise is true, with each step backed by a fact."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It builds a short chain of reasoning from facts and checks each link. A mid-size model does it well."
@@ -14,9 +14,13 @@ explain: |
   This skill lists every cause your facts give for the result, and tags each as a fact, something standard in your field or a gap. It then picks how much to say: a short phrase when buyers already know how this kind of product works, a passage when they need reasons, or a lead position when your way of doing it is the new thing. It writes a chain of at least two links, checks each one and puts the passage where the promise needs backing. A link with no fact behind it is never written.
 
 when:
-  - Readers like your promise but say "how?" or "sounds too good".
-  - Your rivals make the same claim and you do it differently.
+  - Readers like your promise but ask "how?" or say it sounds too good.
+  - Your rivals make the same claim and you do it a different way.
   - Your product has a real reason it works that your copy never explains.
+not_for:
+  - Your product's result has no real cause to explain. Use the Sales copy editor to tighten the draft instead.
+  - You have no facts about how it is made or done. Gather those first, or the skill can only write a short phrase.
+  - You need a full ad or page written from scratch. Use the Sales copy editor, then come back to back up the main claim.
 
 you_give:
   - A draft with the main promise in it
@@ -34,6 +38,26 @@ how_to_use:
   - Paste your draft and your product facts. Include how it is made or done.
   - Read the gaps list. Add any fact you can prove, and run it again.
   - Check the passage with someone who does not know the product. They should say it back in their own words.
+output_sample:
+  input:
+    - Your draft, with the main promise in it
+    - "Product facts: how it is made or done, what each part does, test results (optional but helps)"
+    - Standards in your field that buyers already know (optional)
+  output:
+    - name: The promise and the doubt
+      contains: Your main promise in one line, and the question a doubtful buyer would ask about it.
+    - name: Causes
+      contains: Every reason your facts give for the result, each tagged as fact, field or gap.
+    - name: Level
+      contains: Whether to use a short phrase, a passage or a lead position, and why.
+    - name: The chain
+      contains: A short because, which, so chain of at least two links, each backed by a fact.
+    - name: In place
+      contains: Your draft with the new passage added where the promise needs backing.
+    - name: Missing
+      contains: The facts still needed for any link that could not be written.
+    - name: Checks missed
+      contains: One line for each check still failed, or none.
 
 how_it_works:
   - title: States the doubt

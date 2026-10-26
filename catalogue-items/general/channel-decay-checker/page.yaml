@@ -1,6 +1,6 @@
 new_slug: channel-decay-checker
 name: "Channel decay checker"
-summary: "Paste your results by channel over time. Get which channels are fading, why, and what to refresh or try next."
+summary: "Find which marketing channels are fading. Paste your results by month and get the likely causes, what to refresh and one channel to test."
 job: read-ad-results
 thinking: medium
 thinking_why: "It reads trends and weighs three causes against your numbers."
@@ -17,6 +17,10 @@ when:
   - "A channel that used to work is costing more each month."
   - "You are deciding where to move next quarter's budget."
   - "Your early results were great and later ones are not."
+not_for:
+  - "You have under three months of data: wait and gather more, because a short run can be noise."
+  - "You run one new channel with no history: use a simple weekly check of cost per customer instead."
+  - "You want to know if one campaign should stay live: use the Campaign keep-or-change checker."
 
 you_give:
   - "Results by channel for at least six months"
@@ -35,6 +39,28 @@ how_to_use:
   - "List what you changed and when."
   - "Pick the channel it says to test and set its measure."
   - "Put the re-check date in your calendar."
+output_sample:
+  input:
+    - Your results by channel and month, with spend, responses and customers
+    - Changes you made, with dates (optional)
+    - Channels you have not tried yet (optional)
+  output:
+    - name: Score
+      contains: A score out of 100 for how much response has fallen, with the sums shown, or NOT SCORED if rates can't be compared.
+    - name: Channel trends
+      contains: For each channel, response and cost per customer from start to now, the month it began to fall, and the numbers.
+    - name: Causes
+      contains: For each fading channel, whether novelty wearing off, rivals copying and a wider audience are supported, not supported or unknown.
+    - name: Early results trusted too much
+      contains: Channels whose early good results rest on too few customers to rely on.
+    - name: Refresh first
+      contains: One or two changes per fading channel, each with a measure and a time to wait.
+    - name: Test next
+      contains: One untried channel, with a measure, a budget cap and what result means keep or stop.
+    - name: Check again on
+      contains: A date to look at the numbers again, usually six to eight weeks away.
+    - name: Missing and checks missed
+      contains: Gaps in your data, and any checks the AI could not pass.
 
 how_it_works:
   - title: "Lines up the data"

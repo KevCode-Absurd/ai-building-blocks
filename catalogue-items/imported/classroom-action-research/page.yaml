@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It links a question, data and action into a sound plan.
 new_slug: classroom-action-research
 name: Classroom action research planner
-summary: Give it a question about your teaching. Get a plan to collect evidence
-  and act on what you find.
+summary: "Plan a classroom action research project: give it your question about your teaching and get a plan to collect evidence and act on it."
 job: teach-and-train
 headline: Classroom action research planner
-subhead: "A plan for finding out whether a change in your teaching actually
-  works. You write a question about your own practice, and you get a full cycle:
-  how to gather evidence, how to read it, and what to do next."
+subhead: "A plan for finding out whether a change in your teaching actually works. You write a question about your own practice, and you get a full cycle: how to gather evidence, how to read it, and what to do next."
 explain: |
   A plan for finding out whether a change in your teaching actually works. You write a question about your own practice, and you get a full cycle: how to gather evidence, how to read it, and what to do next.
 
@@ -18,6 +15,10 @@ when:
   - Your school asks for a professional learning project.
   - You want to understand why a group of students struggles.
   - You have a term to run a small study without drowning in data.
+not_for:
+  - "You need formal research or findings you will publish: work with a university supervisor or an ethics board instead."
+  - "You want to judge a whole school or a big program: use a school-wide evaluation led by your leadership team."
+  - "You only want a quick opinion on one lesson: ask a colleague to watch it and give feedback."
 you_give:
   - Your inquiry question
   - Subject, year group and goal
@@ -31,7 +32,27 @@ you_get:
   - An action plan
   - A way to share results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Write your question about your teaching. Add your subject, year group and goal.
+  - Add the time you have each week and your last two sets of test scores or work samples, if you have them.
+  - Say whether you work alone or with a team.
+  - Read the plan. Check that the data plan fits your week, and ask your AI to cut anything too heavy.
+  - Run the plan, then bring your findings back and ask your AI to help you decide what to do next.
+output_sample:
+  input:
+    - Your inquiry question about your teaching
+    - Your subject, year group and professional goal
+    - Time you can give, such as one term (optional)
+    - Data you already hold, such as test scores or student work (optional)
+    - Whether you work alone or with a team (optional)
+  output:
+    - name: Inquiry Design
+      contains: Your sharpened question, a baseline, the change you will try, and how you will judge the result.
+    - name: Data Plan
+      contains: What evidence to collect, when to collect it, and how to keep the workload small.
+    - name: Analysis Framework
+      contains: How to read your evidence for patterns, and how to guard against bias.
+    - name: Sharing Plan
+      contains: How to share what you find with colleagues.
+    - name: Honest Caveats
+      contains: What your findings can and cannot show, given a small study in one classroom.

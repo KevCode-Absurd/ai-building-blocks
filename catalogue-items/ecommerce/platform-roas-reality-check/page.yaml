@@ -1,6 +1,6 @@
 new_slug: platform-roas-reality-check
 name: Platform ROAS reality check
-summary: Compare ad-platform returns with store totals. Get measurement gaps, evidence limits and the next check before a budget decision.
+summary: "Run a platform ROAS reality check: compare ad-platform returns with your store totals, spot the gaps and get the next test before you move budget."
 job: read-ad-results
 thinking: high
 thinking_why: It weighs many signals that can disagree, such as attribution windows, audiences and tests. A stronger model keeps them straight.
@@ -14,6 +14,10 @@ when:
   - Your platform ROAS looks great but your bank balance does not.
   - You are about to move budget between channels, or raise spend on the ad with the best ROAS.
   - A new channel looks weak while Meta suddenly looks better, and you wonder why.
+not_for:
+  - "You want to plan a holdout or lift test: use the Incrementality test planner."
+  - "You want to know if your customers repay what you spend to win them: use the LTGP to CAC checker."
+  - "You have no store totals or platform export yet: pull those numbers first, or ask your ad manager for them."
 you_give:
   - Platform ROAS with its attribution setting, plus the same ROAS on 7-day click, for set dates
   - Store new-customer revenue, total ad spend and new-customer count for the same dates
@@ -31,6 +35,30 @@ how_to_use:
   - Paste your new-customer revenue and total ad spend for the same dates, from a first-time-customer view.
   - Read the ladder first, then the traps, then the top ad check.
   - Do the one next step it gives you before you move any budget.
+output_sample:
+  input:
+    - Platform ROAS for set dates, on default attribution and on 7-day click
+    - Store new-customer revenue, total ad spend and new-customer count for the same dates
+    - Your audience breakdown (new, engaged, existing) and spend by campaign type
+    - Your top ads with ROAS, spend and frequency (optional)
+    - Holdout test results, daily ROAS or survey answers (optional)
+  output:
+    - name: Data basis
+      contains: The dates, currency, attribution settings, customer groups and coverage that every number below rests on.
+    - name: Store measure
+      contains: New-customer revenue divided by matched total ad spend, or undefined when spend is zero or missing.
+    - name: Attribution comparison
+      contains: The reported and window measures side by side, with their limits. They are not assumed to fall in order.
+    - name: Top ad
+      contains: The best ad's audience and attribution breakdown, or a note that the data is missing.
+    - name: Evidence
+      contains: For each budget decision, what the evidence is and which causal questions stay open.
+    - name: Custom rubric
+      contains: A bounded checklist score, the checks completed and the checks missing. It is not proof of cause.
+    - name: Next check
+      contains: One tracking check or suitable test to run before you move budget, with its limits.
+    - name: Missing / checks missed
+      contains: A list of the inputs and checks that were absent or failed.
 how_it_works:
   - title: Sets your base
     text: Calculates new-customer revenue divided by matching total ad spend, where the denominator is positive. This is a descriptive store measure.

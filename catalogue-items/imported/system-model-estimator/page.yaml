@@ -2,40 +2,61 @@ thinking: high
 thinking_why: Model choice and fit judgment need care.
 new_slug: system-model-estimator
 name: System model estimator
-summary: Give it input and output data. Get a fitted model of how the system
-  behaves, with fit checks.
+summary: Fit a system model from your input and output data. Get a MATLAB model, fit scores on held-out data, and a side-by-side check of model types.
 job: build-software
 headline: System model estimator
-subhead: Give it measured input and output data and what the model is for. It
-  checks the data is rich enough, tries several model types and picks an order.
-  You get a fitted MATLAB model, fit percentages on validation data, a
-  comparison of candidates and warnings about weak data.
+subhead: Give it measured input and output data and what the model is for. It checks the data is rich enough, tries several model types and picks an order. You get a fitted MATLAB model, fit percentages on validation data, a comparison of candidates and warnings about weak data.
 explain: |
   A mathematical model of how your system reacts, fitted from measured input and output data, with proof of how well it fits. You can then simulate it, predict from it or tune a controller against it.
 
   The skill prepares the data first, then checks the signal is rich enough to learn from. It tries model types such as transfer function, state space, ARX and process models, and picks an order by comparing fits. It estimates the parameters, then validates the result on data it has not seen, using fit percentages and residual checks. Candidate models are compared side by side so you see which one earns its complexity. It runs in MATLAB with the System Identification Toolbox.
 when:
-  - You logged inputs and outputs from a machine and need a model for control
-    design.
+  - You logged inputs and outputs from a machine and need a model for control design.
   - You are unsure which model order fits your measurements.
   - You want to compare several model types and keep the best one.
-  - Your system is too messy to derive equations, so you need a data-driven
-    model.
+  - Your system is too messy to derive equations, so you need a data-driven model.
   - You need natural frequencies and damping pulled from response data.
+not_for:
+  - "Your system is strongly nonlinear: this skill fits linear models only, so ask a controls engineer about a nonlinear model instead."
+  - "You want to design a controller: this skill only builds the model, so use MATLAB Control System Toolbox or a controls engineer for that step."
+  - "You want to tune a Simulink model with test data: use Simulink Design Optimization Toolbox instead."
 you_give:
-  - Input and output measurements, or a time series
-  - Sample time of the data
-  - What the model is for (simulation, prediction, control)
-  - MATLAB with the System Identification Toolbox
+  - Your input and output measurements, as a data file or MATLAB variables
+  - The sample time of the data
+  - The range your input moved over (optional)
+  - "What kind of test signal you used: step, random on and off, or repeating (optional)"
+  - "What the model is for: simulation, prediction or control"
 you_get:
   - A fitted dynamic model
   - Fit percentages on validation data
   - A comparison of candidate models
   - Residual checks and warnings about weak data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the System Identification
-    Toolbox.
+  - Check you have MATLAB with the System Identification Toolbox and a licence. This skill needs an AI that can run MATLAB code. Without MATLAB, it cannot fit the model.
+  - Open your AI and paste in the skill instructions, or add the skill folder.
+  - Share your data file or variable names, the sample time, and what the model is for.
+  - Tell your AI what test signal you used, and the input range if you know it.
+  - Read the results summary first. Check the validation fit and the residual plot before you trust the model.
+  - Next, use the fitted model in a PID tuner or a Control System Toolbox step. This skill does not design the controller.
+output_sample:
+  input:
+    - Your input and output measurements, as a data file or MATLAB variables
+    - The sample time of the data
+    - "What the model is for: simulation, prediction or control"
+    - "What kind of test signal you used: step, random on and off signal, or repeating (optional)"
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the System Identification Toolbox and a valid licence
+  output:
+    - name: Model summary
+      contains: Model type, order, delay, fit percentage and key numbers such as poles and DC gain.
+    - name: Comparison plot
+      contains: Measured response against the model response on data held back from fitting.
+    - name: Bode plot
+      contains: The frequency response of the model, with confidence bounds.
+    - name: Residual plot
+      contains: Autocorrelation and cross-correlation checks that show what the model missed.
+    - name: Results summary
+      contains: One block with validation fit, FPE, AIC, dominant poles and a status of fit achieved or below target.
+    - name: Saved artifacts
+      contains: The fitted model and its plots, saved so you can reuse them.

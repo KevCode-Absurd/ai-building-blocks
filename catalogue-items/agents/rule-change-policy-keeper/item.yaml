@@ -14,14 +14,14 @@ outputs:
   - {type: audit_report}
   - {type: copy_draft}
   - {type: plan}
-uses: [rule-change-policy-comparer, new-ai-rule-gap-checker, privacy-policy-drift-checker, store-policy-checker, handbook-change-checker, policy-redraft-proposer]
+uses: [rule-change-policy-comparer, new-ai-rule-gap-checker, privacy-policy-drift-checker, policy-redraft-proposer, store-policy-checker, handbook-change-checker]
 steps:
-  - {uses: rule-change-policy-comparer, note: "Every rule change: which of your policies it touches and the gap for each requirement. Run again on each redraft."}
-  - {uses: new-ai-rule-gap-checker, note: "Only when the change is a new AI law or rule: gaps against what you do now, and a fix plan."}
-  - {uses: privacy-policy-drift-checker, note: "Only when the change involves personal data, or you plan a new use of it: where the privacy policy no longer matches, with fix wording."}
-  - {uses: store-policy-checker, note: "Only when a store policy (returns, shipping, terms) is touched: gaps, clashes and unclear wording."}
-  - {uses: handbook-change-checker, note: "Only when an employee handbook section is touched: what the redraft affects elsewhere."}
-  - {uses: policy-redraft-proposer, note: "For each real gap: a small marked-up draft. Loops until the comparer finds no high gap, at most three rounds."}
+  - {uses: rule-change-policy-comparer, note: "Every rule change: which of your policies it touches and the gap for each requirement. Run again on each redraft. Hands steps 2 and 3 the gap list, one row per requirement."}
+  - {uses: new-ai-rule-gap-checker, note: "Only when the change is a new AI law or rule: gaps against what you do now, and a fix plan. Uses the rule text and what you do now, plus step 1's gap list so repeats are merged. Hands step 4 its gaps and fix plan."}
+  - {uses: privacy-policy-drift-checker, note: "Only when the change involves personal data, or you plan a new use of it: where the privacy policy no longer matches, with fix wording. Uses the rule text and your privacy policy, plus the gap lists so far. Hands step 4 the privacy gaps with fix wording."}
+  - {uses: policy-redraft-proposer, note: "For each real gap: a small marked-up draft. Loops until the comparer finds no high gap, at most three rounds. Takes the gaps from steps 1 to 3 and your approved policy text, and writes each redraft to a new file. Hands steps 5 and 6 the redraft."}
+  - {uses: store-policy-checker, note: "Only when a store policy (returns, shipping, terms) is touched: gaps, clashes and unclear wording. Runs on step 4's redraft, pasted as policy text. Hands back any clash, so step 4 can try again."}
+  - {uses: handbook-change-checker, note: "Only when an employee handbook section is touched: what the redraft affects elsewhere. Runs on step 4's redraft, not step 5's output; the two checks run side by side. Hands back what the redraft affects elsewhere, so step 4 can try again."}
 schedule: "Each time a law, platform rule or standard that applies to you changes"
 asks_before: [applying any redraft to a live policy page or handbook, publishing or sending a policy to staff or customers, telling a regulator or a customer about the change, closing a gap in your tracker]
 origin: own

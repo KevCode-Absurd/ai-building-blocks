@@ -1,6 +1,6 @@
 new_slug: speed-budget-and-sale-check
 name: "Speed budget and sale check"
-summary: "Give it your store and sale date. Get a speed budget, test routine and pre-sale checklist."
+summary: "Plan your store's speed budget before a sale. Give it your speed results and sale date. You get limits, a test routine and a pre-sale checklist."
 job: speed-up-store
 thinking: medium
 thinking_why: "It builds a plan from your numbers and dates. A mid-size model does this well with clear inputs."
@@ -17,6 +17,10 @@ when:
   - "Before Black Friday, a launch or a big ad push."
   - "After a speed cleanup, to stop it creeping back."
   - "You add apps or content often."
+not_for:
+  - "Your store has no sale, launch or ad push planned and you just want a one-off speed fix: use the Speed fix ranker."
+  - "You want to find which apps slow your pages: use the App script auditor."
+  - "You need someone to run a load test or change the theme code: ask your developer or your platform support."
 
 you_give:
   - "Your current speed results and page weights"
@@ -35,6 +39,25 @@ how_to_use:
   - "Say the sale date, the traffic you expect, your platform and plan, and who can edit the theme and apps."
   - "Put the budget where everyone who changes the store can see it."
   - "Run the checklist from three weeks out, and freeze apps and theme changes two weeks before."
+output_sample:
+  input:
+    - Your current speed results and page weights
+    - Your sale date and the traffic you expect
+    - Your platform and plan
+    - Who can change the theme and apps
+  output:
+    - name: Speed budget
+      contains: A maximum page weight, a minimum mobile score and a cap on outside scripts, set from your own numbers.
+    - name: Test routine
+      contains: Which pages to test each month and after every app or theme change, with three runs and a dated log.
+    - name: Pre-sale checklist
+      contains: Weekly tasks with an owner, questions for your platform, flow tests and the app freeze date.
+    - name: If traffic overloads the site
+      contains: Steps to take if a crowd slows the store, with a waiting room only when the spike is real.
+    - name: After the sale
+      contains: A recheck of mobile real-user data and a log of results against the budget.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Writes the budget

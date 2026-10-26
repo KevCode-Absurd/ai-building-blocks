@@ -24,11 +24,11 @@ uses:
   - spreadsheet-checker
 steps:
   - uses: invoice-checker
-    note: Compare each invoice with the supplied order and receipt evidence and mark gaps.
+    note: "Compares each invoice with the supplied order and receipt evidence and marks gaps. Hands step 2 the draft register with the records used for each match."
   - uses: invoice-totals-checker
-    note: Independently recompute line totals, discounts and stated tax arithmetic without choosing tax treatment.
+    note: "Uses your invoices and step 1's draft register. Independently recomputes line totals, discounts and stated tax arithmetic without choosing tax treatment. Hands step 3 the register with a re-added total for each invoice and the invoices that do not add up."
   - uses: spreadsheet-checker
-    note: Check the combined register for duplicate IDs, currency mix-ups and unreconciled totals.
+    note: "Uses step 1's register and step 2's re-added totals. Checks the combined register for duplicate IDs, currency mix-ups and unreconciled totals, and hands back the checked register and the list of amounts to investigate."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

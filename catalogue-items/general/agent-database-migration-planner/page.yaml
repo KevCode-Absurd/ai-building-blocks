@@ -1,6 +1,6 @@
 new_slug: agent-database-migration-planner
 name: Agent database migration planner
-summary: Plan a database change that preserves existing agent data. Get a schema map, staging checks, release order and recovery steps.
+summary: Plan a database migration that keeps your existing agent data. You get a schema map, staging checks, release order and rollback limits.
 job: build-software
 headline: Agent database migration planner
 subhead: Plan a database change that preserves existing agent data. Get a schema map, staging checks, release order and recovery steps.
@@ -10,6 +10,10 @@ explain: |-
   Use forward migrations and rehearsed recovery. Existing data and access policies must survive the planned change unless a separate explicit decision authorizes otherwise.
 when:
   - You need a concrete setup or code-change plan with required files.
+not_for:
+  - "You only add one column to a table with no data you need to keep: use your normal migration tool."
+  - "You want to wipe and rebuild a live database: this plan refuses a reset, so use a script made for a throwaway test copy."
+  - "You need the migration run for you: this makes a plan and files, so ask a developer to run them on your servers."
 you_give:
   - The selected codebase, schemas and service setup
   - The exact change you want and actions you authorize
@@ -20,6 +24,27 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - Your code and database schemas for the project
+    - The exact change you want made
+    - The actions you allow, such as writing files or only planning
+    - Backup and restore details (optional)
+  prerequisites:
+    - A test copy of your database, kept apart from live data, to rehearse the change
+  output:
+    - name: Current state summary
+      contains: What the tables, constraints, data size and backups look like now, and which jobs read them.
+    - name: Source-to-target mapping
+      contains: Each agent record type matched to your project, with missing columns, renamed fields and meaning changes listed apart.
+    - name: Ordered migration plan
+      contains: Forward steps that add or change data in sequence, with backfill and access rules, and no table reset.
+    - name: Staging checks
+      contains: Queries and steps to test the change and the restore on a test copy, including row counts and old clients.
+    - name: Release order and rollback limits
+      contains: The order to ship, any locking or downtime, what to watch, and what a rollback cannot bring back.
+    - name: Run evidence and open questions
+      contains: What was run and what was not, plus assumptions and missing inputs.
 how_it_works:
   - title: Step 1
     text: Inspect schema history, live table definitions, constraints, data volume, ownership and every job/runtime component that reads them. Capture the current state and backup/restore evidence before designing a change. A mismatch with a classroom schema is not a reason to delete data.

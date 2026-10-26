@@ -1,48 +1,118 @@
 new_slug: freight-trip-contribution-builder
 name: Freight trip contribution builder
 headline: Freight trip contribution builder
-summary: A loaded and empty distance trip contribution bridge
+summary: Find what one freight trip earns after fuel, driver, tolls and maintenance, counting loaded and empty kilometers, with each cost on its own line.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A loaded and empty distance trip contribution bridge. Share loaded and empty kilometers, measured liters per kilometer, diesel cash price, driver cash, tolls, maintenance cash allowance and earned trip receipts.
-explain: |-
-  A loaded and empty distance trip contribution bridge.
+subhead: Give it the loaded and empty kilometers, fuel use per kilometer, the diesel price, driver pay, tolls, maintenance and what the trip earned. It adds up the cash cost of the trip and takes it from the receipts. You get the contribution per trip and each cost on its own line.
 
-  Transport operating finance. Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.
+explain: |-
+  A trip contribution calculator answers one question: after the cash it cost to run this trip, how much was left? Many operators only count the loaded leg. The truck also drove empty to the pickup or back home, and that fuel and wear cost real money. Leave it out and the trip looks better than it was.
+
+  This skill counts both. Total kilometers is loaded plus empty. Fuel is total kilometers times liters per kilometer times the diesel price. Maintenance is total kilometers times the cost per kilometer. It adds the driver, tolls and any other cost that belongs to this trip, once each. It subtracts the total from the receipts you earned on the trip.
+
+  The result is a contribution per trip, not fleet profit. It leaves out truck payments, insurance, office costs and any cost you did not give it. It will not guess a missing figure. It marks it and holds back the result that needs it.
+
 when:
-  - You need a loaded and empty distance trip contribution bridge.
-  - You work on transport operating finance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You quoted a load and want to know what the trip left once fuel, driver and tolls were paid.
+  - A route earns well on paper but the cash at month end says otherwise, and you suspect the empty miles.
+  - You are comparing two trips, or one trip before and after a fuel price change.
+  - A partner or lender asks how you got to a per-trip margin and wants every line shown.
+
+not_for:
+  - "You want full fleet profit with truck payments, insurance and office costs. This covers the cash costs of one trip only."
+  - "You have no trip records yet. Use the Per-order profit calculator for product orders, or gather your fuel receipts first."
+  - "You want to check a 3PL or carrier invoice line by line. Use the 3PL bill auditor."
+  - "You are deciding whether to replace a truck. Use the Fleet replacement cash comparer."
+
 you_give:
-  - Loaded and empty kilometers, measured liters per kilometer, diesel cash price, driver cash, tolls, maintenance cash allowance and earned trip receipts.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Loaded kilometers and empty kilometers for the trip, from your trip log or dispatch sheet"
+  - "Fuel use in liters per kilometer, measured from fuel receipts and odometer readings"
+  - "The diesel price per liter you paid"
+  - "Driver pay for the trip, and tolls from your toll statements"
+  - "Maintenance cost per kilometer"
+  - "Any other cash cost that belongs to this trip (optional)"
+  - "What the trip earned, from the invoice or settlement"
+  - "The currency, and the date or period the figures cover"
+
 you_get:
-  - A loaded and empty distance trip contribution bridge.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "Total kilometers and total fuel in liters for the trip"
+  - "Fuel cost, maintenance cost and total trip cash cost"
+  - "The contribution of the trip: receipts less total cash cost"
+  - "A check that loaded plus empty equals total kilometers"
+  - "A list of figures that were missing, and the result each one held back"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach your trip log if your AI reads files."
+  - "Paste the figures for one trip. If your fuel use is quoted in liters per 100 km, say so. It will convert it."
+  - "Check the inputs table first. Each figure should match your trip log, fuel receipt or invoice."
+  - "Read the contribution line, then the cost lines above it. Look at how much of the cost is empty kilometers."
+  - "Change one figure, such as the diesel price, and ask it to run again to see what moves."
+  - "If a figure is missing, add it and run again. Do not use a guess."
+
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Reconcile loaded and empty distance from actual trip records; distinguish measured fuel consumption from forecast assumptions
-    text: Reconcile loaded and empty distance from actual trip records; distinguish measured fuel consumption from forecast assumptions.
-  - title: 3. Calculate total trip fuel and distance-linked maintenance, then add driver, toll and attributable trip cash charges once
-    text: Calculate total trip fuel and distance-linked maintenance, then add driver, toll and attributable trip cash charges once.
-  - title: 4. Compare earned trip receipts with total trip cash and show contribution per loaded trip without interpreting it as full fleet profit
-    text: Compare earned trip receipts with total trip cash and show contribution per loaded trip without interpreting it as full fleet profit.
+  - title: Lists each figure with its source
+    text: Records every input with its date, currency and unit, and marks anything missing.
+  - title: Checks the kilometers
+    text: Adds loaded and empty kilometers and checks the total against the trip log.
+  - title: Works out fuel and maintenance
+    text: Multiplies total kilometers by liters per kilometer and the diesel price, then by maintenance per kilometer.
+  - title: Adds the other trip costs once
+    text: Adds driver pay, tolls and any other trip cost a single time each.
+  - title: Takes the costs from receipts
+    text: Subtracts total trip cash cost from what the trip earned to get the contribution.
+  - title: States the limits
+    text: Says the result is one trip and not fleet profit, and lists any check that did not run.
+
 output_shape: |-
-  A loaded and empty distance trip contribution bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES
+  <figure> | <source> | <date> | <currency, unit>
+
+  INPUTS AND ASSUMPTIONS
+  Loaded km: <n> | Empty km: <n> | Liters per km: <n> | Diesel price: <n> | Driver: <n> | Tolls: <n> | Maintenance per km: <n> | Other: <n> | Receipts: <n>
+
+  TRIP BRIDGE
+  Total km: <loaded + empty>
+  Fuel liters: <total km x liters per km>
+  Fuel cost: <liters x diesel price>
+  Maintenance cost: <total km x maintenance per km>
+  Total trip cash cost: <fuel + maintenance + driver + tolls + other>
+  Contribution: <receipts - total trip cash cost>
+
+  CHECKS RUN
+  <check> | <result>
+
+  MISSING
+  <figure and the result it held back>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Loaded and empty kilometers for the trip"
+    - "Liters per kilometer, the diesel price, driver pay and tolls"
+    - "Maintenance cost per kilometer, and any other trip cost (optional)"
+    - "What the trip earned"
+  prerequisites:
+    - "Your trip log, fuel receipts and the invoice or settlement for the trip"
+  output:
+    - name: "SCOPE AND SOURCES"
+      contains: "Each figure with where it came from, its date, currency and unit."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "The nine figures used, as you gave them."
+    - name: "TRIP BRIDGE"
+      contains: "Total kilometers, fuel, maintenance, total trip cash cost and the contribution, line by line."
+    - name: "CHECKS RUN"
+      contains: "Each tie-out and its result, such as loaded plus empty equal to total kilometers."
+    - name: "MISSING"
+      contains: "Any figure it could not find, and which result it held back."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [per-order-profit-calculator, fleet-replacement-cash-comparer, 3pl-bill-auditor]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -50,29 +120,38 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+
 judge:
   - Every material driver traces to a dated source; actuals and scenarios remain separate.
   - Missing evidence blocks the affected calculation instead of becoming a zero.
   - Distance is kilometers and consumption liters per kilometer; quoted per100km consumption must be converted first.
   - Loaded plus empty distance equals total; all trip costs and receipts cover the same trip and settlement basis.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Trip logs, fuel receipts and the invoice or settlement for the same trip.
+    - A named reviewer and an explicit question, such as "is this lane worth running?"
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Contribution
+    meaning: What a trip earns after the cash costs that belong to that trip. It is not profit.
+  - term: Empty kilometers
+    meaning: Distance the truck drives with no load, such as to the pickup or back home.
+  - term: Receipts
+    meaning: The money the trip earned, taken from the invoice or settlement.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A second check that compares two records or totals and explains any gap.

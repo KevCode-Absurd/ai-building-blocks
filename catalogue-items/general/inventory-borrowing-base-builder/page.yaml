@@ -1,48 +1,115 @@
 new_slug: inventory-borrowing-base-builder
 name: Inventory borrowing base builder
 headline: Inventory borrowing base builder
-summary: An inventory collateral advance with binding caps
+summary: Work out how much a lender may advance against your inventory. Uses cost, appraised value, rates, a cap and reserves, and shows which limit binds.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An inventory collateral advance with binding caps. Share eligible inventory at cost after exclusions, current appraised net orderly liquidation value, contractual rates, category sublimit and reserves.
+subhead: Give it your eligible inventory at cost and its latest appraised value. Add the advance rates, the category cap and the reserves from your loan agreement. It finds the most you can borrow under each limit and takes the lowest. Then it takes off reserves and shows which limit holds you back.
 explain: |-
-  An inventory collateral advance with binding caps.
+  A borrowing base is the amount a lender will lend against assets such as inventory. An inventory borrowing base calculation usually has several limits. One is a share of what the stock cost. Another is a share of its appraised value, often the net orderly liquidation value, which is what a managed sale would bring after costs. A third is a cap for the inventory category. The lowest limit wins. Then reserves come off.
 
-  Asset based credit. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  The skill follows that order. It first ties eligible inventory to your SKU and location stock list, after the exclusions the contract allows. It keeps cost and appraisal on the same stock and the same date, and shows both. It checks that a reserve does not take off something the appraisal already took off. The result shows which limit binds, so you know whether a better appraisal or a higher rate would change anything.
+
+  It does not appraise stock, and it does not approve credit. Your lender sets the final number.
 when:
-  - You need an inventory collateral advance with binding caps.
-  - You work on asset based credit and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are preparing a borrowing base certificate for a credit line backed by inventory.
+  - Your lender changed an advance rate, a cap or a reserve and you need to see the effect.
+  - A new appraisal came in and you want to know whether cost or appraisal now limits you.
+  - You want to check the lender's borrowing base figure before you rely on it.
+not_for:
+  - Your collateral is customer invoices. Use the Customer invoice borrowing limit calculator.
+  - You have both invoices and stock and want the whole certificate. Use the Asset-backed credit line checker.
+  - You want to know how much of the credit line is still free after what you have drawn. Use the Revolving credit availability checker.
+  - You have no current appraisal. The appraisal limit cannot be worked out. Get one, or use your lender's own certificate.
 you_give:
-  - Eligible inventory at cost after exclusions, current appraised net orderly liquidation value, contractual rates, category sublimit and reserves.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Eligible inventory at cost after exclusions, from your stock list by SKU and location
+  - The latest appraised net orderly liquidation value for the same stock, and the appraisal date
+  - The two advance rates in your loan agreement, one on cost and one on appraised value
+  - The inventory category cap (sublimit) in the loan agreement
+  - The reserves the lender holds back, with what each one is for
+  - The date, the currency and whether figures are in units, thousands or millions
 you_get:
-  - An inventory collateral advance with binding caps.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The limit based on cost and the limit based on appraised value
+  - The lowest limit, after the category cap, before reserves
+  - The net advance after reserves, never below zero
+  - Which limit binds
+  - A note on the appraisal date and on any valuation assumption nobody has supported
+  - A list of every input marked MISSING and every check that could not run
+  - A workbook version of the same lines, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste the text of SKILL.md into a new chat.
+  - Paste your eligible inventory at cost, the appraised value and its date, the two rates, the cap and the reserves. Add the date, currency and units.
+  - Paste the loan agreement clauses on eligibility and reserves, if you have them. Say which stock you excluded and why.
+  - Check that cost and appraisal cover the same stock. If the appraisal covers different stock or a different date, fix that first.
+  - Read which limit binds, then read MISSING and CHECKS MISSED before you use the figure.
+  - Send the figure to your lender or credit adviser to confirm. This skill does not approve credit.
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Reconcile eligible inventory to the SKU/location register after documented exclusions; retain cost and appraisal basis separately
-    text: Reconcile eligible inventory to the SKU/location register after documented exclusions; retain cost and appraisal basis separately.
-  - title: 3. Compute cost-based and appraisal-based advances, then apply the contractual category sublimit using the lowest amount
-    text: Compute cost-based and appraisal-based advances, then apply the contractual category sublimit using the lowest amount.
-  - title: 4. Subtract documented reserves, show the binding constraint and retain appraisal date and unsupported valuation assumptions
-    text: Subtract documented reserves, show the binding constraint and retain appraisal date and unsupported valuation assumptions.
+  - title: 1. Map the sources
+    text: Lists each figure with its source, date, currency and units, and marks any gap.
+  - title: 2. Tie eligible inventory to the stock list
+    text: Reconciles eligible inventory to the SKU and location list after documented exclusions. Keeps cost and appraisal basis apart.
+  - title: 3. Work out each limit
+    text: Applies the cost rate to cost and the appraisal rate to appraised value, then sets the category cap beside them.
+  - title: 4. Take the lowest
+    text: Uses the lowest of the three limits. It never goes above either basis or the cap.
+  - title: 5. Subtract reserves
+    text: Takes off documented reserves, once, and shows the net advance and which limit binds.
+  - title: 6. Report gaps
+    text: Lists missing inputs, the appraisal date and any checks that could not run.
 output_shape: |-
-  An inventory collateral advance with binding caps.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Net advance: <amount> | Binding limit: <cost / appraisal / category cap>
+
+  SCOPE AND DATED SOURCES
+  <date, currency, units; each figure with its source and date; appraisal date>
+
+  INPUTS AND ASSUMPTIONS
+  <figures given, each assumption, and the loan clauses used>
+
+  ELIGIBLE INVENTORY
+  Stock list total at cost: <amount> | Less documented exclusions: <amount> | Eligible at cost: <amount>
+  Appraisal covers the same stock and date: <yes / no / MISSING>
+
+  LIMITS
+  Cost limit: <eligible cost x cost rate> | Appraisal limit: <appraised value x appraisal rate> | Category cap: <amount>
+
+  ADVANCE
+  Lowest limit: <amount> | Less reserves: <amount> | Net advance (not below zero): <amount>
+
+  RECONCILIATIONS
+  <each figure tied to a record, with differences explained>
+
+  FILE CHECK
+  <what was checked in the workbook or calculator, or that none was made>
+
+  MISSING
+  <inputs not given>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+output_sample:
+  input:
+    - Eligible inventory at cost, from your stock list by SKU and location
+    - The latest appraised net orderly liquidation value and its date
+    - The advance rates, category cap and reserves from your loan agreement
+    - The loan clauses on eligibility and reserves (optional)
+  prerequisites:
+    - A current inventory appraisal that covers the same stock as your cost figure
+    - An AI that can make files, if you want the workbook (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The date, currency and units, the appraisal date, and the source of each figure.
+    - name: Eligible inventory
+      contains: Stock list total at cost, less documented exclusions, and whether the appraisal covers the same stock.
+    - name: Limits
+      contains: The cost limit, the appraisal limit and the category cap, side by side.
+    - name: Advance
+      contains: The lowest limit, less reserves, as the net advance, and which limit binds.
+    - name: Reconciliations
+      contains: Each figure tied to a record, with any difference explained.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not given, and every check that failed or could not run, or "none".
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -64,15 +131,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: It does the arithmetic and shows each line, so you can check it against your records.
+    - name: A spreadsheet app and an AI that can make files
+      why: Builds, recalculates and reopens the workbook version of the calculation.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small calculator in the pack on your own figures.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your stock list by SKU and location, the appraisal report and the loan agreement.
+    - The lender's last borrowing base certificate, to compare against.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Borrowing base
+    meaning: The most a lender will lend against your assets, after rates, caps and reserves.
+  - term: Advance rate
+    meaning: The share of an asset's value the lender will lend against, such as 50 percent of cost.
+  - term: Net orderly liquidation value
+    meaning: What an appraiser expects the stock to sell for in a managed sale, after selling costs.
+  - term: Sublimit (category cap)
+    meaning: A ceiling the loan agreement puts on one type of collateral, here inventory.
+  - term: Reserve
+    meaning: An amount the lender takes off the borrowing base to cover a risk.

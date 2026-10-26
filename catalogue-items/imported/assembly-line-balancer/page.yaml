@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It assigns steps under order rules.
 new_slug: assembly-line-balancer
 name: Assembly line balancer
-summary: Give it your work steps and times. Get steps split across stations so
-  none waits or overloads.
+summary: "Balance your assembly line: give it your steps, times and order rules. You get stations with even workloads, takt time and idle time per station."
 job: plan-supply-chain
 headline: Assembly line balancer
-subhead: A work plan that splits assembly steps across stations so no station
-  sits idle and none piles up. Give the AI your steps, how long each takes,
-  which steps must come before others, and how many units you need per day.
+subhead: A work plan that splits assembly steps across stations so no station sits idle and none piles up. Give the AI your steps, how long each takes, which steps must come before others, and how many units you need per day.
 explain: |
   A work plan that splits assembly steps across stations so no station sits idle and none piles up. Give the AI your steps, how long each takes, which steps must come before others, and how many units you need per day.
 
   It works out the pace you must hit (takt time) and the fewest stations that can do the job. It then assigns steps with the ranked positional weight method, which places the steps that block the most others first. You get efficiency and idle time per station. It also handles lines that build several models, U-shaped layouts and steps that must share or avoid a station.
 when:
-  - One station always has a pile of parts waiting while the next one stands
-    idle.
+  - One station always has a pile of parts waiting while the next one stands idle.
   - You are adding a product and need to rebalance the line.
   - You want to know how many workers or stations a target volume needs.
   - You have to show a manager why the current layout wastes time.
+not_for:
+  - "You run a single station or a job shop with no fixed order of steps: use a production schedule or ask your planner."
+  - "You only want to cut the time of one slow step: use a simple time study at that station, then come back to rebalance."
+  - "You need a day-by-day plan of which orders to run: use a production scheduling tool or a spreadsheet, not line balancing."
 you_give:
   - A list of work steps with times
   - Which steps must come first
@@ -30,8 +30,31 @@ you_get:
   - Efficiency and idle time per station
   - Options for U-shaped or mixed-model lines
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Paste your list of steps with times, the order rules, your daily target and your shift hours.
+  - Add any steps that must share or avoid a station (optional).
+  - Ask your AI to balance the line. It works best if your AI can run code.
+  - Check the station table and the bottleneck. Ask for a U-shaped or mixed-model version if you need it.
+  - Review the new layout with your team before you change any station.
+output_sample:
+  input:
+    - Your list of work steps with the time each one takes
+    - Which steps must come before others
+    - Your daily output target and shift hours
+    - Steps that must share or avoid a station (optional)
+    - Your current station layout (optional)
+  prerequisites:
+    - An AI that can run code gives the best results, but you can also use it in a plain chat
+  output:
+    - name: Executive summary
+      contains: Your current line, the balancing result, the main advice and the benefits you can expect.
+    - name: Current state table
+      contains: Each station with its steps, time, idle time and how busy it is, with the bottleneck marked.
+    - name: Current metrics
+      contains: Station count, cycle time, line efficiency, balance delay and units per hour for the line as it runs now.
+    - name: Proposed balance table
+      contains: The new step assignment per station, with time, idle time and how busy each station is.
+    - name: Improved metrics
+      contains: The same measures for the new balance, shown next to the old ones.
+    - name: Recommendations
+      contains: Ranked actions, such as rebalancing, cutting a bottleneck step or moving to a U-shaped line, with effort and priority.

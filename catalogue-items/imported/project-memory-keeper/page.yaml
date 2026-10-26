@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It decides what is worth saving and files it.
 new_slug: project-memory-keeper
 name: Project memory keeper
-summary: Work on a codebase. Get a notes folder of decisions, design and rules
-  that any AI can read later.
+summary: Keep project memory notes for your codebase. Your AI saves decisions, design and coding rules in a notes folder that any AI can read later.
 job: build-software
 headline: Project memory keeper
-subhead: A folder of plain notes inside your project that records what it is,
-  why choices were made and how code should be written. Any AI that can read
-  files can pick it up later.
+subhead: A folder of plain notes inside your project that records what it is, why choices were made and how code should be written. Any AI that can read files can pick it up later.
 explain: |
   A folder of plain notes inside your project that records what it is, why choices were made and how code should be written. Any AI that can read files can pick it up later.
 
@@ -18,6 +15,10 @@ when:
   - The one person who knows why things were built that way might leave.
   - You work in a monorepo and different parts need different rules.
   - You want notes that work across several AI coding tools.
+not_for:
+  - "You want a log of every change: use your git history or a changelog file, since this keeps only lasting decisions."
+  - "You only need your AI tool to scan a new project once: use its own built-in setup command."
+  - "You want to shrink a long chat: use your AI tool's own compact command, since this works on project notes only."
 you_give:
   - Access to your project folder
   - Decisions or conventions to record (optional)
@@ -28,8 +29,32 @@ you_get:
   - Audit of stale or missing entries
   - Compact versions for quick loading
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write your project files.
+  - Open your AI coding tool in your project folder. This skill needs a tool that can read and write files.
+  - Add the skill to your tool, or paste its instructions into the chat.
+  - Say "lore init". It creates the .lore folder in your project and asks which AI tools you use.
+  - After you change something, say "lore sync" or "record this decision in lore". Check the new note before you keep it.
+  - After a batch of changes, say "lore mirror" to refresh your tool's file. Then point your AI tool at .lore/SUMMARY.md.
+  - Now and then, say "lore audit" to find notes that are out of date.
+output_sample:
+  input:
+    - Your project folder, which your AI can read and write
+    - A decision or coding rule to record (optional)
+    - The change you just made, so notes can be synced (optional)
+    - The AI tools you use, so the right mirror files are made (optional)
+  prerequisites:
+    - An AI that can read and write files in your project, such as a coding assistant
+  output:
+    - name: .lore/ folder
+      contains: Plain Markdown notes at the project root, split by layer, with a summary file the AI reads first.
+    - name: Architecture entries
+      contains: Short lines on what the project is and how it is shaped, each with an ID and date.
+    - name: Decision entries
+      contains: Short lines on what was chosen over other options, with the reason and the date it was added.
+    - name: Convention entries
+      contains: Short lines on how code should be written and what to avoid.
+    - name: Audit result
+      contains: A list of notes that look stale, wrong or missing, checked against the current project.
+    - name: Compressed notes
+      contains: Shorter versions of old notes, so your AI can load them quickly.
+    - name: Platform mirror
+      contains: A refreshed file for your AI tool, such as CLAUDE.md, that points to the notes.

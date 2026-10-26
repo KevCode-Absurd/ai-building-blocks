@@ -1,0 +1,166 @@
+name: Government Digital Presales Consultant agent
+summary: Check a Chinese government tender. Get a bid or no-bid view, a list of what could disqualify you and the security gaps to close first.
+headline: Government Digital Presales Consultant agent
+subhead: Paste a Chinese government tender. Say what you sell and what certificates and past projects you hold. It scores the bid, flags what could disqualify you, checks the security and domestic IT rules, and outlines your proposal.
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Selling digital systems to Chinese government buyers works differently from
+  selling to companies. A bid can be thrown out for a missing certificate or a
+  stamp in the wrong place. Some rules are pass or fail, not bonus points. This
+  government digital presales consultant agent reads a tender and tells you
+  whether to bid, what could get you disqualified, and what your proposal must
+  cover for government procurement in China.
+
+
+  It works back from the scoring table. It looks for clauses that seem written
+  for one vendor, treats the security rules (Dengbao, Miping and Xinchuang) as
+  hard limits, and builds the story around the client's business problem, not
+  your technology. It refuses anything that looks like bid rigging, never
+  promises a win, and only uses cases you can prove.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It is an AI's
+  reading of your documents, not legal advice. Check each rule against the
+  tender itself and the official text, and ask a qualified adviser in China for
+  legal points. A chat AI cannot open the procurement site for you, so you paste
+  the documents. The win-rate targets in the original are goals, not results.
+when:
+  - A government tender notice arrives and you must decide whether to bid.
+  - Your team is about to write the technical proposal and wants an outline that fits the scoring table.
+  - You need a checklist that catches anything that could get a bid thrown out.
+  - You are planning a proof of concept or demo for a government client and want a tight scope with clear pass marks.
+not_for:
+  - You want a bid ready to submit. This gives an assessment, checklists and an outline. Your team and an adviser must write and sign off the bid.
+  - You need legal advice on Chinese procurement law. Ask a qualified lawyer in China.
+  - You are answering a request for proposal from a company or a non-Chinese agency. Use the RFP response builder.
+  - You are selling to a company, not a government body. Use the Proposal Strategist agent.
+  - You want to adapt a product or brand for Chinese consumers. Use the China Market Localization Strategist agent.
+you_give:
+  - The tender notice or bid document, pasted as text, with the scoring table and deadlines
+  - What you sell, in a short plain description
+  - The certificates and qualifications your company holds
+  - Past projects like this one that you can prove, with the client and the year
+  - Your price limits and team size (optional)
+  - Rival bidders you know about (optional)
+you_get:
+  - A bid, selective bid or pass view with the reasons, and risk flags such as clauses that favor one vendor
+  - A disqualification checklist covering qualifications, technical, price and format items
+  - A compliance table for Dengbao, Miping and Xinchuang, with each gap and a suggested fix
+  - A technical proposal outline that follows the scoring table
+  - A proof of concept plan with a tight scope and pass marks (when you ask for one)
+  - Talking points for each person on the client side, and a list of questions to settle
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste the tender text, the scoring table and the deadlines. Add what you sell and the certificates and past projects you hold.
+  - Say what you need first. Choose a bid or no-bid view, a disqualification check, a proposal outline or a proof of concept plan.
+  - Read the bid or no-bid view and the risk flags first. Check every flagged clause against the original tender.
+  - Check each certificate, case and date yourself. Fix or remove anything you cannot prove. A fake case gets a bid thrown out.
+  - Give the outline to your team to write the real proposal. Have an adviser check the compliance points before you submit.
+how_it_works:
+  - title: Read the tender
+    text: It pulls out the project, budget, funding source, dates, scoring weights and hard requirements.
+  - title: Score the opportunity
+    text: It rates how real the project is, how well you fit and how strong your client ties are, then weighs cost against payoff.
+  - title: Hunt for disqualifiers
+    text: It checks your papers against each pass or fail item and flags clauses that seem to favor one vendor.
+  - title: Check compliance
+    text: It maps the tender to Dengbao, Miping and Xinchuang needs and lists each gap with a fix.
+  - title: Outline the proposal
+    text: It builds a chapter outline that follows the scoring table and puts proof and client results first.
+  - title: Plan the proof and the people
+    text: It scopes a proof of concept with clear pass marks and adds notes for each kind of person on the client side.
+  - title: List what is unproven
+    text: It names the facts, cases and rules you must confirm before you submit.
+output_shape: |-
+  BID OR NO-BID VIEW
+    <project> | client <name and level> | budget <amount or MISSING> | funding <source> | deadline <date>
+    scores <project is real 1-5> <our fit 1-5> <client ties 1-5> | view <bid fully, bid selectively or pass> | why <reasons>
+
+  RISK FLAGS
+    <clause or issue> | why it matters | what to do
+
+  DISQUALIFICATION CHECKLIST
+    <item> | group <qualification, technical, price or format> | status <OK, MISSING or UNPROVEN> | note
+
+  COMPLIANCE TABLE
+    <area: Dengbao, Miping or Xinchuang> | <requirement> | <proposed measure> | gap <yes or no> | fix
+
+  TECHNICAL PROPOSAL OUTLINE
+    <chapter> | what it must show | scoring points it targets
+
+  PROOF OF CONCEPT AND TALKING POINTS (if asked)
+    scope in and out | pass marks | timeline | notes for <decision maker, business, technical, procurement>
+
+  UNPROVEN AND OPEN QUESTIONS
+    <fact, case or rule to confirm> | who confirms it
+output_sample:
+  input:
+    - The tender notice or bid document, pasted as text, with the scoring table
+    - What you sell, and the certificates and qualifications you hold
+    - Past projects like this one that you can prove
+    - Your price limits and known rival bidders (optional)
+  prerequisites:
+    - An AI chat that takes long pasted text and can read Chinese, such as Claude, ChatGPT or Gemini
+    - Your certificates and case documents, to check each claim yourself
+  output:
+    - name: Bid or no-bid view
+      contains: A rating of how real the project is and how well you fit, with a bid, selective bid or pass call.
+    - name: Risk flags
+      contains: Clauses that seem to favor one vendor, unclear funding or a tight timeline, each with a suggested step.
+    - name: Disqualification checklist
+      contains: Every pass or fail item in the tender, marked OK, MISSING or UNPROVEN.
+    - name: Compliance table
+      contains: Dengbao, Miping and Xinchuang needs, the measure you propose and each gap with a fix.
+    - name: Technical proposal outline
+      contains: Chapters that follow the scoring table, with what each must show.
+    - name: Proof of concept and talking points
+      contains: A tight test scope with pass marks, and what to say to each type of client contact.
+    - name: Unproven and open questions
+      contains: Facts, cases and rules you must confirm, and who should confirm them.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They read long tender text, including Chinese, and keep a scoring table in view.
+    - name: Word or your bid tool
+      why: The outline is not the bid. Your team writes the proposal and formats it to the tender.
+  inputs:
+    - The full tender text, including the scoring table, not only the notice.
+    - A list of your certificates with expiry dates.
+    - Contracts or acceptance papers for each past project you plan to cite.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: First job
+    how: Ask for one thing at a time. Start with the bid or no-bid view. Move on to the outline only if you decide to bid.
+  - what: Language
+    how: Say which language you want the answer in. Keep the original Chinese terms from the tender beside it.
+  - what: Client level
+    how: Say if the buyer is central, provincial, city or county. Rules and habits can differ by level.
+improve:
+  - Paste the real scoring results and evaluator questions from past bids, and ask it to adjust the outline.
+  - Keep a list of certificates and proven cases, and paste it each time so nothing is left out.
+terms:
+  - term: Presales
+    meaning: The work before a sale is signed, such as checking a tender, shaping a solution and planning a demo.
+  - term: Tender
+    meaning: A formal public request for bids, with rules, a scoring table and a deadline.
+  - term: Dengbao
+    meaning: China's classified protection scheme for network security. Systems are graded and must pass a review.
+  - term: Miping
+    meaning: A review of how a system uses approved Chinese encryption.
+  - term: Xinchuang
+    meaning: The push to use domestic Chinese chips, systems and software in government IT.
+  - term: Directional clause
+    meaning: A tender requirement that seems written to fit one vendor.
+  - term: Proof of concept (POC)
+    meaning: A small, time-boxed test that shows the product works for the buyer's case.

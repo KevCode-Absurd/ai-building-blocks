@@ -8,9 +8,9 @@ The user has asked for a **retrospective**. You are suggesting improvements to t
 
 ## Steps
 
-1. Call the Skill tool with `writing-for-agents` for the writing style guide.
+1. If a `writing-for-agents` skill is available, load it for the writing style. If it is not, skip this step and write each suggestion in short, plain sentences that a coding agent can follow.
 
-2. Read the primary sources for the session the user specifies. This may mean searching through session logs on this machine. If the user doesn't specify a session, default to the current one.
+2. Read the primary sources for the session the user specifies. This may mean searching through session logs on this machine. If the user doesn't specify a session, default to the current one. If you cannot find or read the logs, ask the user to paste the key parts of the session. Do not invent what happened. Skip or redact any secrets, keys or passwords you find in logs, and never repeat them in your reply.
 
 3. Look for candidates for improvement in these categories.
 
@@ -22,7 +22,15 @@ The user has asked for a **retrospective**. You are suggesting improvements to t
 - **No-ops**: look for instructions in steering files that don't modify the agent's behavior. _Use when_ the steering files are large and unwieldy.
 - **Information access**: look for opportunities to increase the agent's access to information. Teeing dev server logs, readonly access to third-party services. _Use when_ a crucial piece of information was not available to the agent.
 
-4. Present these candidates to the user, in order of severity.
+4. Present these candidates to the user, in order of severity. Use this format for each one:
+
+```text
+<number>. <Category>: <the problem in one sentence>
+   Evidence: <what happened in the session>
+   Change: <the exact file, check or line to add, change or remove>
+```
+
+End with "Left alone": the categories where you found nothing to fix. If the session was short and had no repeated mistakes, say so and stop. Do not pad the list. Then offer to apply the changes one at a time.
 
 ## Reference
 

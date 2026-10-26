@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Training choices and old-code fixes both need judgment.
 new_slug: neural-network-trainer
 name: Neural network trainer
-summary: Give it data and a goal. Get a neural network trained, tested and
-  exported, with old code moved to current methods.
+summary: Train a neural network in MATLAB, test it on data it hasn't seen, and move old patternnet code to current functions. Export to Simulink if you need it.
 job: build-software
 headline: Neural network trainer
-subhead: A neural network trained in MATLAB, tested on held-out data and
-  exported, using the current functions instead of the old ones. If your code
-  uses outdated calls, it is moved over for you.
+subhead: A neural network trained in MATLAB, tested on held-out data and exported, using the current functions instead of the old ones. If your code uses outdated calls, it is moved over for you.
 explain: |
   A neural network trained in MATLAB, tested on held-out data and exported, using the current functions instead of the old ones. If your code uses outdated calls, it is moved over for you.
 
@@ -18,6 +15,10 @@ when:
   - Your old patternnet code now shows warnings.
   - You want to fine-tune a pretrained image network on your own pictures.
   - Your training code is slow and you want it faster.
+not_for:
+  - "You need to bring in a PyTorch or ONNX model: use MATLAB's own import functions, not this skill."
+  - "You need to load, clean or augment your images first: do that step in MATLAB before you start."
+  - "You are not sure whether a CNN, LSTM or transformer fits: ask a data scientist or read up on network types, then come back to train."
 you_give:
   - Your data (table, images or signals)
   - What you want to predict
@@ -29,8 +30,33 @@ you_get:
   - Updated code using current functions
   - An exported model (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Deep Learning Toolbox.
+  - Open an AI that can run MATLAB code, and check that you have the toolboxes listed above.
+  - Paste the skill text into the chat, or add the skill file if your AI takes files.
+  - Add your data, say what you want to predict, and paste any old code you want updated.
+  - Say if you want a Simulink export. Skip this if you do not.
+  - Read the test results first. Check them before you use the network.
+  - Next, export the model to Simulink, or ask for dlaccelerate on a slow inference loop.
+output_sample:
+  input:
+    - "Your data: a table, images or signals"
+    - What you want to predict
+    - Your old MATLAB training code (optional)
+    - A note if you need a Simulink export (optional)
+  prerequisites:
+    - A MATLAB licence
+    - Deep Learning Toolbox, for trainnet and dlnetwork
+    - Statistics and Machine Learning Toolbox, for fitcnet and fitrnet
+    - Simulink, only if you want to export
+  output:
+    - name: Chosen route
+      contains: "Which method fits your data: fitcnet or fitrnet for tables, or trainnet with dlnetwork for images, signals and sequences."
+    - name: Trained network
+      contains: The network trained on your data, or a pretrained network fine-tuned on it when transfer learning fits.
+    - name: Test results
+      contains: Scores from testnet on data the network has not seen, plus predictions from minibatchpredict.
+    - name: Updated code
+      contains: Your old patternnet, fitnet, narxnet or trainNetwork code rewritten with current functions, with the changed files listed.
+    - name: Simulink export
+      contains: The trained model exported to Simulink, only when you ask for it.
+    - name: Speed-up note
+      contains: Where dlaccelerate can make slow deep learning code or a custom loss run faster.

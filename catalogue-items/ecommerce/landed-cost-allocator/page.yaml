@@ -1,6 +1,6 @@
 new_slug: landed-cost-allocator
 name: "Landed cost allocator"
-summary: "Paste freight, duty and supplier invoices. Get the true landed cost per unit for each product."
+summary: "Work out landed cost per unit for each product in a shipment. Paste your order lines and freight and duty invoices to see true margin."
 job: track-numbers
 thinking: medium
 thinking_why: "The work is arithmetic across several products and layers, so a mid-level model is enough. Check the total of your allocations against the invoices once."
@@ -17,6 +17,10 @@ when:
   - A shipment with several products arrived and you need a cost per unit for each one.
   - Freight, duty or exchange rates changed and your cost per unit is out of date.
   - You want margin per product after the true cost of getting it to your shelf.
+not_for:
+  - "You have one product and want to check a supplier quote: use the landed cost calculator."
+  - "You want to know which costs count as COGS: use the COGS line sorter."
+  - "You need to track costs across many products and shipments over time: use stock software, as a spreadsheet gets heavy."
 
 you_give:
   - "Purchase order lines: product, units, unit price, and weight or volume per unit"
@@ -35,6 +39,26 @@ how_to_use:
   - Say your selling prices and the margin floor below which you would not sell.
   - Check the basis it chose for each lump, and change it if your invoice says otherwise.
   - Rerun it when prices, currency or tariffs change.
+output_sample:
+  input:
+    - "Your purchase order lines: product, units received, unit price, and weight or volume per unit"
+    - Your freight, duty, tariff and insurance invoices for the shipment
+    - Retail packaging cost per unit (optional)
+    - Your selling price per product and lowest margin you accept (optional)
+    - Exchange rate and date, if currencies differ (optional)
+  output:
+    - name: Allocation basis
+      contains: How each lump cost was spread across products, such as value, weight or volume, with the reason.
+    - name: Per product
+      contains: Units, price, freight, duty, insurance, packaging, total and landed cost per unit for each product.
+    - name: Check
+      contains: Whether the allocated amounts add up to each invoice total, and any difference.
+    - name: Margin
+      contains: Margin per unit as an amount and a percent, with products below your floor flagged.
+    - name: Late-cost checklist
+      contains: Costs that can still arrive after the shipment, such as a second freight invoice or duty re-assessment.
+    - name: Checks missed
+      contains: Any check that failed or could not be done, and anything marked missing.
 
 how_it_works:
   - title: Starts at purchase price

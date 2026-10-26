@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It is a short set of standing rules, not a long analysis.
 new_slug: ai-memory-habit-setter
 name: AI memory habit setter
-summary: Connect any memory tool. Get clear rules for when your AI recalls and
-  saves decisions, so it stops repeating itself.
+summary: Set up AI memory rules so your AI knows when to recall and when to save decisions, and stops asking the same questions every session.
 job: set-up-ai
 headline: AI memory habit setter
-subhead: Your AI has a memory tool connected, yet it still asks the same
-  questions and forgets what you decided last week. This skill gives it standing
-  rules for when to look things up and when to write them down.
+subhead: Your AI has a memory tool connected, yet it still asks the same questions and forgets what you decided last week. This skill gives it standing rules for when to look things up and when to write them down.
 explain: |
   Your AI has a memory tool connected, yet it still asks the same questions and forgets what you decided last week. This skill gives it standing rules for when to look things up and when to write them down.
 
@@ -18,6 +15,10 @@ when:
   - Your AI keeps undoing a habit you already corrected.
   - You start every session by repeating the same background.
   - You want one set of memory rules across several AI tools.
+not_for:
+  - "You want to design the memory system itself, such as what to store and how to search it: pick a memory tool first, then come back for the rules."
+  - "You have a one-off question with all the facts in the message: just ask it, memory adds nothing."
+  - "You want to store passwords, keys or personal data: keep those out of AI memory and use a password manager."
 you_give:
   - The memory tool or folder your AI can use
   - Your project name
@@ -28,8 +29,29 @@ you_get:
   - A note format with fact, reason, date and source
   - A list of what never to save
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can use a memory tool or a notes folder.
+  - Connect a memory tool to your AI first. A notes folder works. So does a memory server. This skill adds no memory tool of its own.
+  - Open a chat in Claude, ChatGPT or Gemini, or your AI tool's rules or instructions area. Paste the skill text.
+  - Tell your AI the project name and where its memory lives, such as the folder path or server name.
+  - Add any standing decisions you want kept (optional). Ask your AI to save each one as a note.
+  - Work as usual. Check that your AI names the notes it used, with dates, before it starts.
+  - Correct it when it forgets. It should save the correction as a new note.
+output_sample:
+  input:
+    - The memory tool or notes folder your AI can use
+    - Your project name
+    - Decisions you want kept (optional)
+  prerequisites:
+    - An AI that can use a memory tool, such as a notes folder or a memory server
+  output:
+    - name: Recall before acting
+      contains: When your AI must read memory first, such as old projects, tool choices and phrases like 'as we agreed'.
+    - name: Save after deciding
+      contains: "When your AI writes a note: after decisions, corrections, failures and lasting preferences."
+    - name: Note format
+      contains: One fact per note, with the reason, the date and where it came from, in your own words.
+    - name: Closing old notes
+      contains: How to mark a note as no longer true, with an end date, instead of deleting it.
+    - name: Conflicts
+      contains: How your AI shows two notes that disagree, with dates, and asks you which one holds.
+    - name: What never to save
+      contains: "A list of things to skip: secrets, personal data, file contents and temporary state."

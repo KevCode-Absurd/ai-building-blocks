@@ -16,6 +16,29 @@ use_cases:
   - "Check whether a new tool or method fixes how you work or what you should be working on"
   - "Run a nonprofit or volunteer group with the same rigour as a business"
   - "Judge a manager or a meeting by results rather than style"
+not_for:
+  - "You want honest, caring feedback to give a person: use the Kim Scott mind."
+  - "You need to spot why a strong firm misses a simpler rival: use the Clayton Christensen mind."
+  - "You need a hard talk with someone or help with team safety: use the Amy Edmondson mind, or ask a trusted person to review it."
+output_sample:
+  input:
+    - A real problem from your business, team or career
+    - Who your customer is, in your own words
+    - A list of what you or your team do now
+    - Your current goals and who owns them (optional)
+  output:
+    - name: Customer and value
+      contains: Who the customer is and what they value, based on his questions about your business.
+    - name: What to stop
+      contains: Products, projects or habits that fail the question of whether you would start them today.
+    - name: Goals with owner and date
+      contains: A short set of goals, each with a named person, a date and a way to know it is done.
+    - name: Strengths check
+      contains: Whether each job is built on what the person does best.
+    - name: Quality check
+      contains: A note on how to judge quality as well as numbers, so targets do not hurt the work.
+    - name: First action on Monday
+      contains: One thing you will do differently next week.
 seats:
   - {seat: "Management", asks: "Who is the customer, and what does the customer value?"}
   - {seat: "Planned abandonment", asks: "If we weren't already doing this, would we start it today?"}

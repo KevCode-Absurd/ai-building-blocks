@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: Small setup errors give wrong results.
 new_slug: ofdm-system-builder
 name: OFDM system builder
-summary: Describe your OFDM link. Get a correct simulation using the proper
-  modulation functions.
+summary: Build a custom OFDM simulation in MATLAB that gets noise, timing and channel steps right. Give it your link details and get a working script.
 job: build-software
 headline: OFDM system builder
-subhead: MATLAB code for a custom OFDM link that gives correct results, not just
-  plausible ones. Standard shortcuts in MATLAB quietly break OFDM simulations,
-  and this skill is built to avoid them.
+subhead: MATLAB code for a custom OFDM link that gives correct results, not just plausible ones. Standard shortcuts in MATLAB quietly break OFDM simulations, and this skill is built to avoid them.
 explain: |
   MATLAB code for a custom OFDM link that gives correct results, not just plausible ones. Standard shortcuts in MATLAB quietly break OFDM simulations, and this skill is built to avoid them.
 
   Before writing anything it asks about FFT size, cyclic prefix, subcarrier layout, channel type, pilots, coding and synchronisation. Then it follows firm rules. It uses the built-in OFDM modulate and demodulate functions rather than raw FFT calls. It sets the symbol offset by hand. It gives the noise function an explicit signal power, because the modulator output is not one watt. It uses the dedicated channel response function, and it shows how each parameter was worked out. It also checks that your MATLAB release supports the functions used.
 when:
-  - You are building a custom OFDM transmitter and receiver and your bit error
-    rate looks wrong.
-  - You need to add noise at a chosen signal-to-noise ratio without getting the
-    power wrong.
+  - You are building a custom OFDM transmitter and receiver and your bit error rate looks wrong.
+  - You need to add noise at a chosen signal-to-noise ratio without getting the power wrong.
   - You want to equalise a fading channel using pilots.
   - You have physical specs and need the FFT size and prefix length worked out.
+not_for:
+  - "You need Wi-Fi, 5G, LTE or Bluetooth: use the matching MathWorks toolbox for that standard, not a custom build."
+  - "You do not have MATLAB with Communications Toolbox: ask an engineer to run it, or use a free tool such as Python."
+  - "You only want to add noise at a set signal-to-noise ratio to a signal you already have: use a simple noise step in MATLAB."
 you_give:
   - FFT size, cyclic prefix and subcarrier plan, or the specs to derive them
   - "Channel model: noise only or fading"
@@ -31,8 +30,30 @@ you_get:
   - Correct noise and channel handling
   - A list of questions if your brief has gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Communications Toolbox.
+  - Open Claude, ChatGPT or Gemini and paste in the text of this skill.
+  - "Describe your OFDM link: sizes, channel, pilots, coding and sync. Say which MATLAB release you use."
+  - Answer the questions it asks. It will not write code until the gaps are filled.
+  - Copy the script into MATLAB. You need Communications Toolbox, a paid add-on, to run it.
+  - Run it and check the error rate against what you expect. Tell your AI about any error message.
+output_sample:
+  input:
+    - Your FFT size, cyclic prefix and subcarrier plan, or the specs to work them out
+    - "Your channel type: noise only, or fading"
+    - Whether you need pilots, coding or synchronisation
+    - Your MATLAB release (optional)
+  prerequisites:
+    - MATLAB with Communications Toolbox, which is paid software you must already have
+    - An AI that can write MATLAB code
+  output:
+    - name: Questions list
+      contains: Numbered questions about any missing setup detail, asked before any code is written.
+    - name: Parameter section
+      contains: The OFDM settings, with comments showing how each one was worked out.
+    - name: Transmitter and receiver
+      contains: Code that modulates and demodulates with the built-in OFDM functions and sets the symbol offset.
+    - name: Noise and SNR handling
+      contains: Noise added with the signal power stated, so the signal-to-noise ratio is right.
+    - name: Channel and equalisation
+      contains: Fading channel setup, pilot-based estimates and equalisation, if you asked for them.
+    - name: Sync and coding
+      contains: Timing and frequency estimation and LDPC coding, only if you asked for them.

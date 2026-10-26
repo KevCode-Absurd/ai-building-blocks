@@ -1,6 +1,6 @@
 new_slug: layoff-plan-writer
 name: "Layoff plan writer"
-summary: "Describe the cuts you must make. Get a decision check, a manager script and a company announcement."
+summary: "Plan a layoff with a decision check, a manager script and a company message. Give it your cuts and cash. It writes the plan in your voice."
 job: lead-people
 thinking: high
 thinking_why: "People will be hurt by the result, so it needs careful reasoning, plain honesty and a check for what you may have missed."
@@ -17,6 +17,10 @@ when:
   - Cash or demand has dropped and you may have to cut roles.
   - You have decided to cut and need the words and the order of events.
   - You want a check on your reasoning before you act.
+not_for:
+  - "You want to end one person's job for poor performance: talk to an employment adviser or HR person first."
+  - "The cut is not a business-wide choice, or you are not sure it is needed: get advice from an employment adviser before you plan anything."
+  - "You need legal steps, notice periods or pay rules for your country: ask an employment lawyer, because this skill only marks those as missing."
 
 you_give:
   - "What happened and how much you must save"
@@ -36,6 +40,31 @@ how_to_use:
   - "Answer its decision check honestly before it writes anything."
   - "Check the plan with a lawyer or HR adviser for your country before acting."
   - "Send the company message only after the managers are ready to talk."
+output_sample:
+  input:
+    - What happened and how much you must save
+    - Roles or teams at risk, with the number of people in each
+    - The support you can offer, such as pay weeks, health cover, equity, equipment and job help
+    - Your cash runway and the country your staff work in (optional)
+  output:
+    - name: Decision check
+      contains: Your answers on whether the cut is needed and final, and what else you tried.
+    - name: Timing
+      contains: The order of events for one day, from manager briefing to follow-up.
+    - name: The reason
+      contains: Two or three plain sentences, in the first person, owning the call.
+    - name: Who and why
+      contains: Each role and headcount, tied to a capability the company will not need.
+    - name: Support list
+      contains: Each item of help in numbers, such as weeks of pay and health cover end date.
+    - name: Manager script
+      contains: Opening line, reason, next steps, likely questions with answers, and a do-not-say list.
+    - name: Company message
+      contains: A draft under 400 words, sent first, that owns the decision and says how people learn if affected.
+    - name: Note to those who stay
+      contains: What will and will not change, what is uncertain, and the date of the next update.
+    - name: Missing and checks missed
+      contains: Facts you did not give, and any check the plan still fails.
 
 how_it_works:
   - title: Checks your own head

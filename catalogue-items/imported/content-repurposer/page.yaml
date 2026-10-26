@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It rewrites one source for many formats.
 new_slug: content-repurposer
 name: Content repurposer
-summary: Give it one strong piece. Get a blog series, emails, posts and clips,
-  each adapted to its format.
+summary: Turn one article, talk or video into blog posts, emails, social posts and video scripts. Get a content repurposing plan fitted to each format.
 job: grow-social
 headline: Content repurposer
-subhead: Give it one strong piece. Get a blog series, emails, posts and clips,
-  each adapted to its format. Bring the source piece (article, transcript or
-  video notes). Use the result to plan your next step.
+subhead: Give it one strong piece. Get a blog series, emails, posts and clips, each adapted to its format. Bring the source piece (article, transcript or video notes). Use the result to plan your next step.
 explain: |
   One strong article, talk or video turned into a blog series, an email sequence, social posts, a webinar outline and short video scripts, each written for how that format works. Posting the same text everywhere gets ignored. Rewriting by format gets read.
 
@@ -18,6 +15,10 @@ when:
   - You recorded a webinar or podcast and the recording is just sitting there.
   - You need a month of emails and posts but only have one good idea.
   - Your social posts are copy and paste from the blog and get no replies.
+not_for:
+  - Your source piece is weak, like a story or a tightly linked argument. Publish it once as it is.
+  - You want the same text pasted on every channel. Ask a person to post it. This skill rewrites for each format.
+  - You have no finished source piece yet. Write the article or record the talk first, then come back.
 you_give:
   - The source piece (article, transcript or video notes)
   - Which formats you want
@@ -30,7 +31,30 @@ you_get:
   - Short video scripts
   - Release order and cross links
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code or paid tool is needed.
+  - Paste your source piece. Use the full text, a transcript or your video notes.
+  - List the formats you want, such as emails, social posts or video scripts. Add a sample of your voice.
+  - Let your AI check the source first. If it says the piece is weak, stop there and publish it once.
+  - Read each result as if you had never seen the original. Fix any that sound generic or do not fit the format.
+  - Publish in the order the release plan gives you. Link each piece back to the original.
+output_sample:
+  input:
+    - Your source piece (article, transcript or video notes)
+    - The formats you want, like emails, posts or video scripts
+    - Your usual voice, or a sample of your writing
+    - Your publishing schedule (optional)
+  output:
+    - name: Source check
+      contains: A verdict on whether your piece is strong enough to split, and which parts are worth using.
+    - name: Blog series
+      contains: Standalone posts, each built on one sub-argument from the source, with a new opening and close.
+    - name: Email sequence
+      contains: Emails that build on your framework, with a subject line, preheader and one clear call to action each.
+    - name: Social posts
+      contains: Posts written for each platform, with a hook up front and one point per post.
+    - name: Video scripts
+      contains: Short scripts for single claims or examples, with a hook in the first seconds and captions in mind.
+    - name: Release plan
+      contains: The order and spacing for publishing, plus links from each piece back to the original.
+    - name: AI search extras
+      contains: Question and answer snippets pulled from the source so AI search tools can pick them up.

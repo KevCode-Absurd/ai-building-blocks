@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It traces each change against the tests.
 new_slug: test-gap-finder
 name: Test gap finder
-summary: Give it a code change and your tests. Get each new behaviour marked
-  covered or not, plus test cases for the gaps.
+summary: Find what a code change does that no test checks. Give it your diff and tests. Get each behaviour marked covered or not, plus test cases for gaps.
 job: test-and-fix-code
 headline: Test gap finder
-subhead: A short list of what a code change does that no test checks, with test
-  cases to close each gap. Before you merge, you know which new behaviour is
-  covered and which is not.
+subhead: A short list of what a code change does that no test checks, with test cases to close each gap. Before you merge, you know which new behaviour is covered and which is not.
 explain: |
   A short list of what a code change does that no test checks, with test cases to close each gap. Before you merge, you know which new behaviour is covered and which is not.
 
@@ -19,6 +16,10 @@ when:
   - An AI wrote code and tests and you want a second look.
   - You need test cases for the risky parts of a change.
   - Coverage numbers look high but you doubt the checks.
+not_for:
+  - "You want a coverage score for the whole codebase: use a coverage tool that runs with your test suite."
+  - "The change has no tests yet: ask your AI to write a first set of tests, then run this skill on the result."
+  - "You need to know if your tests pass: run them yourself, because this skill reads tests but does not run them."
 you_give:
   - The diff, branch or commit
   - The related test files
@@ -30,8 +31,29 @@ you_get:
   - Evidence for each label
   - Proposed test cases for the gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool. Use one that can read your project files, or get ready to paste text.
+  - Add the skill instructions to the chat, or upload the skill folder.
+  - Give it your diff, branch or commit, and the test files near the changed code.
+  - Read the behaviour table first. Check that each Covered label names a test that really checks the result.
+  - Run the proposed tests yourself. Where the expected result is unclear, ask the code's author to confirm it.
+  - Add the tests you keep, then run this skill again on the updated change.
+output_sample:
+  input:
+    - Your code change (a diff, a branch or a commit)
+    - The test files that sit near the changed code
+    - Why you made the change (optional)
+    - Your test framework (optional)
+  prerequisites:
+    - Your diff and at least one test file. Without both, the skill stops and tells you which is missing.
+    - Your AI needs to read your project files, or you can paste the diff and tests into the chat.
+  output:
+    - name: Change summary
+      contains: One line on what the change does, as your AI understood it.
+    - name: Behaviour table
+      contains: Each new or changed behaviour, marked Covered, Not covered or Unknown, with the test name or what was searched.
+    - name: Proposed tests
+      contains: One test case per gap, ranked by risk, with setup, input, expected result and why it matters.
+    - name: Test skeletons
+      contains: Starter code in your test framework for the top three gaps, when the framework is clear.
+    - name: What could not be seen
+      contains: Files or tests your AI could not read, so those behaviours stay Unknown.

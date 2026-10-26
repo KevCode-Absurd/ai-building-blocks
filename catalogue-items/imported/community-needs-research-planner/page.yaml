@@ -2,12 +2,19 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: community-needs-research-planner
 name: Community needs research planner
-summary: Share your community and service idea. Get a research plan, provider map, and gaps to investigate.
+summary: "Plan a community needs assessment: give your area and service idea, get a research plan, provider map and gap summary to show if the need is real."
 job: research-topics
 headline: Community needs research planner
 subhead: Share the people, area, and need you want to understand. It combines public evidence, community listening, and a map of existing services. You get a research plan or findings report showing specific gaps and whether to build, partner, refer, or reconsider.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - You are deciding whether to start a new community program and want proof of need.
+  - A funder or board asks for evidence of need in a proposal.
+  - You want to know who else already serves this group in your area.
+  - You are deciding whether to end a program because the need may have changed.
+not_for:
+  - "You want to track whether a running program is working: use the Nonprofit outcomes measurement skill, or a simple yearly check of your own numbers."
+  - "You want to judge whether a funder is a good fit: use the Nonprofit grant research skill."
+  - "You already know the need and want to design the program: ask your AI to build a logic model, or work with a program design adviser."
 you_give:
   - Population, area, proposed need, existing evidence, research budget, and access or consent limits.
 you_get:
@@ -26,5 +33,30 @@ works_best_with:
   inputs:
     - Primary data collection involves human participants and consent.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open your AI chat. Paste the skill text or upload the skill folder.
+  - Tell it who the people are, which area, and what need or service idea you are testing.
+  - Add any reports, data or budget limits you have (optional).
+  - Review the plan first. If you will survey or interview people, get consent and ethics review before you collect anything.
+  - Collect the data yourself, then paste the results back and ask for the report, provider table and gap summary.
+  - Check the sources and numbers the AI cites before you share the report.
+output_sample:
+  input:
+    - The group of people you want to understand, such as an age range
+    - The area, such as a town or postcodes
+    - The need or service idea you are testing
+    - Any data or reports you already have (optional)
+    - Your research budget and any limits on reaching people (optional)
+  prerequisites:
+    - A chat AI. It works best if it can read your files and check current public sources.
+    - Consent and ethics review before you talk to people or send surveys.
+  output:
+    - name: Needs assessment report
+      contains: Summary, methods, findings by data source, limits, and recommendations for your board or funder.
+    - name: Data collection instruments
+      contains: A short survey, an interview guide, and a focus group plan, set up to be easy to join.
+    - name: Provider and asset inventory table
+      contains: Who else serves this group, their capacity, who can use them, waitlists, and local strengths.
+    - name: Gap analysis summary
+      contains: "For each gap: the need, current capacity, the gap, and what it means for you."
+    - name: Board or funder memo
+      contains: "A short note with 2 or 3 options: fill the gap, partner or refer, or stand down."

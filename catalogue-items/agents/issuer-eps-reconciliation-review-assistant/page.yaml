@@ -1,51 +1,114 @@
 new_slug: issuer-eps-reconciliation-review-assistant
-name: Issuer EPS reconciliation review assistant
-headline: Issuer EPS reconciliation review assistant
-summary: Review new share and instrument disclosures for changes to a reconciled EPS model.
+name: EPS and share count reviewer
+headline: EPS and share count reviewer
+summary: Recheck a company's basic and diluted EPS when a filing changes its shares, options or convertibles. Get a change register and open questions.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An EPS change register, reconciled native workbook and reviewer questions. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-explain: |-
-  An EPS change register, reconciled native workbook and reviewer questions.
+subhead: Give it a new filing, your last accepted EPS model and your materiality threshold. It compares the new share and instrument facts with the old ones, restates earlier periods for any confirmed split, and recalculates only what changed. You get an EPS change register, a reconciled workbook and questions for your reviewer.
+explain: |
+  Earnings per share (EPS) moves when profit moves. It also moves when the share count or an option or convertible term changes, and a new filing can change those without touching profit. If you rebuild the whole model every quarter, you lose sight of what really changed. If you patch one number, a split or a missing conversion price can leave the model wrong with no sign.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This EPS reconciliation agent keeps a short record of the last accepted review. It holds the filings you accepted, the profit figure used as the control number and the dated share intervals. It also holds each option or convertible you included or left out, and why, plus any open checks. When a new filing arrives, it compares dates and periods with that record. It checks for a confirmed split first, because a split changes every earlier share count and every earlier EPS figure. Then it reruns the Basic and diluted earnings per share checker on the restated base.
+
+  When a conversion or exercise term is missing, it pauses that one instrument and says so. It never guesses a price. It uses only the filings you give it, with no live market data. It trades nothing, files nothing and starts no schedule. A person who knows the filings checks the result.
 when:
-  - You need an EPS change register, reconciled native workbook and reviewer questions.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A company you follow has filed its results and you want to know whether your EPS model still holds.
+  - A filing confirms a stock split or reverse split, and your old EPS figures now sit on the wrong share count.
+  - A revised note adds or changes options, convertible bonds or other instruments that could dilute EPS.
+  - Your reviewer asks which instruments went into diluted EPS, and why the others were left out.
+not_for:
+  - You are building a first EPS model from scratch. Use the Basic and diluted earnings per share checker.
+  - You only need old EPS restated for one split or one rights issue. Use the Stock split earnings adjustment calculator or the Rights issue earnings adjustment calculator.
+  - You want to judge a share buyback. Use the Cash buyback EPS checker.
+  - You want a buy or sell view, or a price target. It gives neither and uses no live market data.
+  - The company has not filed anything dated, such as a rumour or a draft. It works only from dated filings you supply.
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The new dated filing or revised share and instrument notes (from the company's filing page or results release)
+  - The last accepted EPS model and its review log (optional on a first run)
+  - Any changed source notes since the last review, such as a new option table or convertible terms (optional)
+  - Your materiality threshold, such as 0.01 per share or 1% of EPS
+  - The reporting date, currency, scale (such as millions) and accounting basis the filing uses
+  - The record from the last review, pasted in (optional on a first run)
 you_get:
-  - An EPS change register, reconciled native workbook and reviewer questions.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - An EPS change register. Each change shows its source, its date and its effect on basic and diluted EPS.
+  - A reconciled workbook with profit, share counts and every option or convertible, marked included or left out
+  - Earlier periods restated, when a confirmed split changed the share count
+  - Reviewer questions for anything missing, such as a conversion price
+  - A short record to start the next review from, plus MISSING lines and any checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, pick one that can create spreadsheets. In plain chat it returns the same tables as text.
+  - Say whether this is the first run. If not, paste the record from last time and attach the last accepted model. Then attach the new filing or notes, and state your threshold, currency and scale.
+  - Read "what changed" first. Check each changed share count or instrument against the filing page it came from.
+  - If a split was confirmed, check the factor is new shares per old share (a 2-for-1 split is 2). Then check that old EPS times old shares equals new EPS times new shares.
+  - Answer the reviewer questions, or leave them marked MISSING. Run it again when the missing terms arrive. Nothing is filed, sent or traded.
 how_it_works:
-  - title: Reconcile basic and diluted issuer EPS
-    text: Run the governing workflow when On a user-supplied filing or revised share/instrument note, compare the source date and accounting period with the last accepted EPS model.
-  - title: Stock-split EPS restatement
-    text: If a confirmed split or reverse split affects comparatives, build the separate restatement schedule before rerunning the EPS workflow. Missing conversion terms pause only the affected instrument; never infer exercise or conversion.
-output_shape: |-
-  An EPS change register, reconciled native workbook and reviewer questions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last accepted model
+    text: Reads the saved record if it belongs to this company, or sets a first baseline. Compares the filing date, accounting period, currency and scale with the record. If nothing changed and no review is due, it says so and stops.
+  - title: Checks for a confirmed split first
+    text: If a split or reverse split is confirmed, it builds the restatement schedule before anything else. Earlier share counts are multiplied by the factor and earlier EPS is divided by it. Total earnings stay the same.
+  - title: Rebuilds basic EPS
+    text: Weights the dated share counts across the period and divides profit to ordinary shareholders by the result. This is the control figure for the rest of the review.
+  - title: Tests each option and convertible
+    text: Adds options using the treasury method. Orders convertibles from most to least dilutive, and leaves out any that would raise EPS.
+  - title: Pauses on missing terms
+    text: A missing exercise or conversion term stops that one instrument only. It is listed as MISSING and never guessed.
+  - title: Reconciles and saves the record
+    text: Ties basic and diluted EPS to numerators and shares, lists every changed instrument, and writes a short record for next time. It keeps the old record.
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <new filing, split, new or changed instruments>
+  SPLIT RESTATEMENT          factor <n> new per old; shares <old> to <new>;
+                             EPS <old> to <new>; earnings unchanged <n>
+  BASIC EPS                  profit <n> / weighted shares <n> = <n>
+  DILUTED EPS                options +<n> shares; convertibles +<n> shares,
+                             +<n> profit; excluded <list and why> = <n>
+  CHANGE REGISTER            <instrument | change | source and date | effect on EPS>
+  REVIEWER QUESTIONS         <one per missing term>
+
+  RECORD FOR NEXT REVIEW  accepted filings, control profit, share intervals,
+                          instruments in and out, open checks
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The new dated filing, or the revised share, option and convertible notes
+    - The profit to ordinary shareholders, with its period and date
+    - Your materiality threshold, reporting date, currency, scale and accounting basis
+    - Your last accepted EPS model and its record (optional on a first run)
+    - The issuer's own EPS note (optional, to tie your figures to what it reported)
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can create spreadsheets.
+    - A named person who knows the filings and will check the result
+  output:
+    - name: Changed since last review
+      contains: The new filing, any confirmed split, and each new or changed option or convertible, with its filing page and date.
+    - name: Split restatement (only if a split is confirmed)
+      contains: The factor as new shares per old share, restated shares and EPS for earlier periods. Total earnings stay the same.
+    - name: Basic EPS
+      contains: Profit to ordinary shareholders divided by weighted shares, tied to the issuer's note.
+    - name: Diluted EPS
+      contains: Option and convertible effects, with each instrument marked included or left out and why. Anything that would raise EPS is left out.
+    - name: Change register
+      contains: "One row per change: the instrument, what changed, the source and date, and the effect on EPS."
+    - name: Reviewer questions
+      contains: One question for each missing term, such as an exercise or conversion price.
+    - name: Record for next review
+      contains: Accepted filings, control profit, dated share intervals, instruments in and out, and open checks.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops. Each check that failed or could not run, or "none".
+    - name: Workbook (if your AI can make one)
+      contains: Inputs, formulas and a checks tab, so you can click into each figure.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Basic/diluted numerators and shares reconcile, every changed instrument is explained and all missing terms remain explicit; no account, filing or trade is changed.
+  - what: Your materiality threshold
+    how: Set a tighter or looser threshold, such as 0.005 per share. Changes below it stay in the register but are not raised as questions.
+  - what: A new instrument
+    how: Add the terms of a new option grant or convertible note. It is tested on its own and the register shows its effect on diluted EPS.
+  - what: A reverse split
+    how: Give a factor below 1, such as 0.5. Shares halve, EPS doubles, and total earnings stay the same.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - Basic/diluted numerators and shares reconcile, every changed instrument is explained and all missing terms remain explicit; no account, filing or trade is changed.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +119,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
+  - Write your materiality threshold into the agent's file once, so every run uses the same one.
+  - Keep one sheet with the issuer's option and convertible terms, with the filing page for each, and paste it in every time.
+  - Pair it with the Stock split earnings adjustment calculator when you only need one restatement, and the Cash buyback EPS checker when a buyback is the question.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The company's own filing page
+      why: Gives the dated notes on shares, options and convertibles, so each input has a source.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The issuer's own EPS note, so basic and diluted EPS can be tied to what was reported.
+    - The option and convertible tables with exercise and conversion prices, not a summary.
+    - A named reviewer who will answer the questions it raises.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: EPS
+    meaning: Earnings per share. Profit to ordinary shareholders divided by the weighted average number of shares.
+  - term: Diluted EPS
+    meaning: EPS after counting shares that options and convertibles could add, when they would lower EPS.
+  - term: Anti-dilutive
+    meaning: An instrument that would raise EPS if counted. It is left out of diluted EPS.
+  - term: Stock split
+    meaning: Each old share becomes more than one new share. A 2-for-1 split doubles the shares and halves EPS.
+  - term: Treasury method
+    meaning: A way to count options. Money from exercise is assumed to buy back shares at the average price, so only the net new shares count.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

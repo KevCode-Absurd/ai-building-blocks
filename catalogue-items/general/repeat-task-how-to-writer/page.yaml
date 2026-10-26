@@ -1,6 +1,6 @@
 new_slug: repeat-task-how-to-writer
 name: Repeat task how-to writer
-summary: Paste how you do a repeat task. Get exact steps, fixes and who to ask if it fails.
+summary: Turn your rough steps for a repeat task into a how-to anyone can follow, with fixes for each step, a check, an undo and who to ask.
 job: document-work
 thinking: low
 thinking_why: It puts your rough steps into a fixed layout with few judgement calls.
@@ -11,6 +11,10 @@ when:
   - Only one person knows how to do this task.
   - A new person starts and you are about to explain it again.
   - A task breaks now and then and the fix is not written down.
+not_for:
+  - "Your task has many roles or branches: use the Repeat task step guide writer."
+  - "You want to review a runbook you already have: use the SOP and runbook checker."
+  - "You need a contract or long document made simple: use the Plain-words contract summary."
 you_give:
   - The task name, how often and who does it
   - Your steps as you do them
@@ -25,6 +29,26 @@ how_to_use:
   - Under it, paste the task and your steps.
   - Send it and read the result.
   - Ask someone who has never done it to follow the how-to and note where they stall.
+output_sample:
+  input:
+    - The task name, how often it runs and who does it
+    - Your steps as you do them now, even if rough
+    - What usually goes wrong (optional)
+  output:
+    - name: PURPOSE
+      contains: One line on what the task does and when to run it.
+    - name: BEFORE YOU START
+      contains: The access, files, tools and information needed before step 1.
+    - name: STEPS
+      contains: Numbered single actions, each with what you should see and what to try if it fails.
+    - name: CHECK IT WORKED
+      contains: A line that tells you the task is done right.
+    - name: UNDO IT
+      contains: How to reverse the task if something went wrong.
+    - name: WHO TO ASK
+      contains: The person to contact if you are stuck, or a gap marker if no name was given.
+    - name: MISSING
+      contains: Lines that mark anything a new person would have to guess.
 how_it_works:
   - title: Set the scene
     text: Purpose and what must be ready.

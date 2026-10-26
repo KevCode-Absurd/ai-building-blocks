@@ -2,36 +2,97 @@ thinking: medium
 thinking_why: It balances cover, cost and fairness.
 new_slug: shift-schedule-planner
 name: Shift schedule planner
-summary: Give it your demand and staff. Get a shift pattern, a weekly schedule
-  and a fair rotation for nights and weekends.
+summary: "Plan a fair shift pattern, a weekly schedule and a rotation for nights and weekends, with a swap policy and staff notice. Not legal advice."
 job: hire-people
 headline: Shift schedule planner
-subhead: A weekly schedule, a shift pattern and a fair rotation for the shifts
-  nobody likes, ready to hand to your team. Fair rotation cuts complaints and
-  swap requests.
+subhead: "Give it your opening hours, expected demand and staff. You get a headcount, a shift pattern, a weekly schedule table, a fair rotation for the shifts nobody likes, and a swap policy."
 explain: |
-  A weekly schedule, a shift pattern and a fair rotation for the shifts nobody likes, ready to hand to your team. Fair rotation cuts complaints and swap requests.
+  When staff say the rota is unfair, the cause is often no written rule for who works nights, weekends and holidays. This shift schedule planner puts the rule in writing and builds the schedule from it.
 
-  Start with your demand and your staff. It works out how many people you need per hour from forecast volume and shift length, then picks a pattern such as fixed, rotating or 4-on-3-off. Nights, weekends and holidays are shared out by a clear rule, not by who shouts loudest. It also checks rest periods and predictive scheduling laws, and writes the shift swap policy and the message that tells staff about changes.
+  First it works out how many people you need per time block from demand and shift length, with a buffer for absence. It then picks a pattern, such as fixed, rotating or 4-on-3-off. It builds a table with staff in rows and days in columns, and shares the hard shifts by one clear rule with a count for each person.
+
+  It also writes a one-page swap and open-shift policy and a short note to tell staff about changes. It checks the schedule only against rules you give it. Anything else is marked not checked.
 when:
   - You run a team with nights or weekends and people say the rota is unfair.
-  - You need to know how many people to hire for a given opening time.
+  - You need to know how many people to hire to cover your opening hours.
   - Staff keep asking to swap shifts and you have no clear policy.
-  - You must tell employees about a schedule change and want clear wording.
-  - You want to check a rota against rest-period rules.
+  - You must tell staff about a schedule change and want clear wording.
+not_for:
+  - "You want to match staff to hourly demand and compare costs: use the Shift schedule builder."
+  - "You need a legal check of rest or overtime rules: ask an employment adviser in your country before you publish."
+  - "Your team is two or three people: a simple shared calendar is enough."
 you_give:
-  - Opening hours and expected demand
-  - Number of staff and shift lengths
-  - Local scheduling rules (optional)
-  - Current rota or complaints (optional)
+  - Opening hours and expected demand, or a busy and quiet pattern
+  - The number of staff, their roles and the shift lengths you can use
+  - Rules you must follow, such as rest between shifts (optional)
+  - Your current rota or staff complaints (optional)
 you_get:
+  - A headcount for each time block, with the working shown
   - A shift pattern that fits your demand
-  - A weekly or monthly schedule
-  - A fair rotation for nights and weekends
-  - A shift swap and open-shift policy
-  - A staff notice about schedule changes
+  - A schedule table with staff in rows and days in columns
+  - A fair rotation for nights, weekends and holidays
+  - A swap and open-shift policy and a staff notice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. Paste the skill text into the chat.
+  - Paste your opening hours, demand, staff list, shift lengths and any rules. A spreadsheet export works.
+  - Check the headcount working first. Fix any demand figure that looks wrong and ask again.
+  - Read the schedule table and the count of nights and weekends for each person. Ask for changes until it feels fair.
+  - Read the rule check. Anything marked not checked is yours to confirm with an employment adviser.
+  - Send the staff notice and swap policy when the schedule is final.
+output_sample:
+  input:
+    - Opening hours and expected demand
+    - The number of staff, roles and shift lengths
+    - Rules you must follow (optional)
+    - Your current rota or complaints (optional)
+  output:
+    - name: Headcount
+      contains: People needed for each time block, with the working and an absence buffer.
+    - name: Shift pattern
+      contains: The chosen pattern, such as rotating or 4-on-3-off, with a line on why it fits.
+    - name: Schedule table
+      contains: Staff in rows, days in columns, a shift code in each cell and a key.
+    - name: Fair rotation
+      contains: One rule for sharing nights, weekends and holidays, with each person's count.
+    - name: Swap and open-shift policy
+      contains: One page on who can swap, who approves, deadlines and unfilled shifts.
+    - name: Staff notice
+      contains: A short message about the schedule or a change to it.
+    - name: Rule check
+      contains: Each rule you gave marked met, broken or not checked.
+how_it_works:
+  - title: Collect your facts
+    text: It asks once for hours, demand, staff, shift lengths and rules. Missing items are marked.
+  - title: Size the team
+    text: It works out headcount per time block and shows the working.
+  - title: Pick a pattern
+    text: It chooses fixed, rotating or similar and says why.
+  - title: Build and share
+    text: It builds the table and shares hard shifts by one stated rule.
+  - title: Write the policy and notice
+    text: It adds the swap policy and the staff message.
+  - title: Check the rules
+    text: It ticks only the rules you gave and lists the rest as not checked.
+output_shape: |
+  Headcount: <time block> | <people needed> | <working>
+  Pattern: <name> - <why>
+  Schedule: <staff> | <Mon> | <Tue> | ... with <shift codes> and <key>
+  Rotation rule: <rule> - <count per person>
+  Swap policy: <who>, <approval>, <deadline>, <unfilled shifts>
+  Staff notice: <message>
+  Rule check: <rule> - <met, broken or not checked>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It can build the table and write the policy. For long tables, ask for one week at a time.
+  inputs:
+    - Last month's rota
+    - Sales or ticket numbers by hour
+    - Staff availability and time-off requests
+terms:
+  - term: Rotating pattern
+    meaning: Each team moves through day, evening and night shifts on a set cycle.
+  - term: 4-on-3-off
+    meaning: A pattern where a person works four days, then has three days off.
+  - term: Open shift
+    meaning: A shift that nobody is assigned to yet.

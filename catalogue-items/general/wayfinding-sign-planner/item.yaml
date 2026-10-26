@@ -1,6 +1,6 @@
 slug: wayfinding-sign-planner
 name: "Wayfinding sign planner"
-summary: "Describe your place and its routes. Get a sign plan a first-time visitor can follow, with one lead mark and a walkthrough."
+summary: "Plan signs a first-time visitor can follow: every decision point, one lead mark, what each sign says and rules staff can reuse."
 category: general
 type: skill
 role: make
@@ -12,6 +12,7 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
+needs_mode: manual
 minds: [erik-spiekermann]
 credits:
   - {title: "T for Toronto", by: "Erik Spiekermann, 2021", url: "https://spiekermann.com/en/t-for-toronto", used: "One dominant mark that reads from far away, with a master colour leading and smaller labels under it"}

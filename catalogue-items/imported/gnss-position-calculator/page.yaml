@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set steps with a few choices.
 new_slug: gnss-position-calculator
 name: GNSS position calculator
-summary: Give it RINEX satellite data. Get receiver positions worked out from
-  chosen satellite groups.
+summary: Turn RINEX satellite files into GNSS receiver positions. Pick satellite groups, check DOP and scatter, and compare one group against several.
 job: build-software
 headline: GNSS position calculator
-subhead: Give it RINEX satellite data. Get receiver positions worked out from
-  chosen satellite groups. Bring rINEX 3 observation file. Use the result to
-  plan your next step.
+subhead: Give it RINEX satellite data. Get receiver positions worked out from chosen satellite groups. Bring rINEX 3 observation file. Use the result to plan your next step.
 explain: |
   Where a receiver was, worked out from satellite data you already have. Give it RINEX observation and navigation files and it calculates positions using pseudoranges from GPS, GLONASS, Galileo, BeiDou, QZSS, NavIC and SBAS.
 
@@ -18,6 +15,10 @@ when:
   - You want to see if adding Galileo improves accuracy.
   - You are teaching how satellite positioning works.
   - You need to test how an elevation mask changes your result.
+not_for:
+  - "You need centimetre-level carrier-phase positioning (RTK or PPP): use a dedicated RTK or PPP tool, as this skill only uses pseudoranges."
+  - "Your files are RINEX version 4: convert them to version 3 first, or use a tool built for version 4."
+  - "You want to combine GNSS with motion sensor (IMU) data: use MATLAB's inertial sensor fusion tools or an INS filter."
 you_give:
   - RINEX 3 observation file
   - RINEX 3 navigation file
@@ -29,8 +30,32 @@ you_get:
   - Single versus multi-system comparison
   - MATLAB code you can rerun
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Navigation Toolbox.
+  - Open an AI that can run MATLAB code. You need MATLAB with the Navigation Toolbox, release R2026a or newer.
+  - Paste the skill into the chat, or load the skill folder.
+  - Add your RINEX 3 observation and navigation files. Say which satellite systems to use.
+  - Set the elevation mask and signal strength cutoff you want, or ask your AI to use the defaults.
+  - Check the file summary and the DOP values first. Weak geometry means the positions are less reliable.
+  - Rerun with another satellite group or mask, then compare. Add a known true position to measure the error.
+output_sample:
+  input:
+    - Your RINEX 3 observation file
+    - Your RINEX 3 navigation file
+    - Which satellite systems to use, such as GPS or GPS plus Galileo
+    - Elevation mask and signal strength cutoff (optional)
+    - A known true position to compare against (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the Navigation Toolbox, release R2026a or newer
+  output:
+    - name: File check
+      contains: The RINEX version and the satellite systems and observation codes found in your files, checked before anything else runs.
+    - name: Position solutions
+      contains: A receiver position for each epoch, worked out from the satellite groups you chose.
+    - name: Dilution of precision
+      contains: DOP values per epoch, with a note when geometry is weak.
+    - name: Quality metrics
+      contains: Scatter RMS, satellite count and the number of epochs skipped.
+    - name: Comparison plots
+      contains: Labelled figures that compare one satellite group against several.
+    - name: Ground truth comparison
+      contains: The error against a known true position, only if you supply one.

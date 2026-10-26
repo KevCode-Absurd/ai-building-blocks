@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: brand_brain
     required: false
+  - type: plan
+    required: false
 outputs:
   - type: plan
   - type: copy_draft

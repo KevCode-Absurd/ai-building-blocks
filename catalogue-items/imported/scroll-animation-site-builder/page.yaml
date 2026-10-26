@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans the motion first, then writes the page.
 new_slug: scroll-animation-site-builder
 name: Scroll animation site builder
-summary: Describe the site. Get a scroll-driven page with layered depth, motion
-  and smooth reveals, built in code.
+summary: Build a scroll animation website with layered depth, overlapping sections and smooth reveals. Give it your brief and images. You get one HTML file.
 job: build-websites
 headline: Scroll animation site builder
-subhead: Describe the site. Get a scroll-driven page with layered depth, motion
-  and smooth reveals, built in code. Bring a brief for the site. Use the result
-  to plan your next step.
+subhead: Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code. Bring a brief for the site. Use the result to plan your next step.
 explain: |
   A scroll-driven web page where layers move at different speeds, sections overlap, text slides in and products rise between sections, built with plain CSS and JavaScript. No 3D software is needed, only flat images.
 
@@ -18,6 +15,10 @@ when:
   - Your landing page is flat and you want sections that overlap as you scroll.
   - You have product images and need them to float between sections.
   - Your scroll animation stutters and you need it fixed.
+not_for:
+  - "You need a plain brochure page or a quick landing page scaffold: use a simple page template or a website builder, not this skill."
+  - "You want true 3D scenes or WebGL: use a 3D tool or a web developer, since this skill only uses flat images, CSS and JavaScript."
+  - "You have no images and only need written page copy: ask your AI to write the copy first, then come back with the brief."
 you_give:
   - A brief for the site
   - Product or hero images
@@ -29,8 +30,29 @@ you_get:
   - Effects matched to each section
   - A performance and reduced-motion check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - "Open a chat with your AI and paste the skill text. Say which mode you want: build a new page, add effects to a page you have, or fix slow animation."
+  - Paste your brief and add your images. Add your brand colours and copy if you have them.
+  - Read the asset audit and depth plan first. Ask for changes before the code is written.
+  - Copy the HTML file your AI gives you, save it as a file ending in .html and open it in your browser.
+  - Scroll the page and check it runs smoothly. Turn on reduced motion in your device settings to check the page still works.
+  - Tell your AI what to change, such as which section feels flat or which effect stutters.
+output_sample:
+  input:
+    - Your brief for the site
+    - Your product or hero images
+    - Your brand colours and copy (optional)
+    - An existing page to improve (optional)
+  prerequisites:
+    - An AI that can read your images
+    - A browser to open the HTML file and check the motion
+  output:
+    - name: Asset audit
+      contains: "A check of each image: whether the background is clear, which layer it suits and if it needs resizing."
+    - name: Depth plan
+      contains: Which element sits on which of the six depth layers, and how each layer moves as you scroll.
+    - name: Technique list
+      contains: A note at the top of the file naming which of the 45 techniques were used.
+    - name: Single HTML file
+      contains: The full page with inline CSS and JavaScript, GSAP loaded from a CDN, and comments on each section.
+    - name: Accessibility and performance checks
+      contains: Reduced-motion handling and speed-friendly animation rules applied to the page.

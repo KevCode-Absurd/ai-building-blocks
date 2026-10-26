@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scopes the steps, then builds a script.
 new_slug: setup-wizard-builder
 name: Setup wizard builder
-summary: Describe a manual setup job. Get a script that walks you through each
-  step and saves what you enter.
+summary: Turn a tedious manual setup job into a setup wizard script. It opens each page, tells you what to copy, and saves your keys to .env or GitHub.
 job: build-software
 headline: Setup wizard builder
-subhead: A bash script that walks you through a tedious manual job one stage at
-  a time. It opens each web page, tells you what to click and copy, and saves
-  what you enter in the right place.
+subhead: A bash script that walks you through a tedious manual job one stage at a time. It opens each web page, tells you what to click and copy, and saves what you enter in the right place.
 explain: |
   A bash script that walks you through a tedious manual job one stage at a time. It opens each web page, tells you what to click and copy, and saves what you enter in the right place. Use it for setting up outside services, a one-off migration, or moving a project to a new state.
 
@@ -18,6 +15,10 @@ when:
   - You do the same setup for each new client and it takes an hour of clicking.
   - A migration has irreversible steps and you want a confirm at each one.
   - You want GitHub secrets written for you without pasting them into chat.
+not_for:
+  - You want your AI to do the steps itself, such as editing code or running commands. Ask your AI to do them directly, no wizard needed.
+  - Your repo has live secrets in env files and you cannot move or hide them first. Do the setup by hand, or redact the files before your AI reads them.
+  - The job is a single step, such as copying one key. Do it by hand, a script is more work than the task.
 you_give:
   - The manual procedure to automate
   - Your repo with env files and workflows
@@ -29,8 +30,29 @@ you_get:
   - Values saved to .env or GitHub secrets
   - A closing summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Move or redact any live secrets in your env files first. Your AI reads your repo, so it can see what is in them.
+  - Open your AI in a tool that can read your repo and run code, such as Claude Code. Paste in the skill text.
+  - Describe the manual job and name the services involved.
+  - Check the stage list your AI shows you. Add, drop or reorder stages, then approve it.
+  - Run the script it builds in your terminal. Follow each prompt, then delete the script when the job is done unless you want to keep it.
+output_sample:
+  input:
+    - The manual job you want to walk through, in plain words
+    - Your repo, with env files, config and workflow files
+    - The services involved, such as payment or database tools
+    - Whether to keep the wizard after use (optional)
+  prerequisites:
+    - An AI that can read your repo files and run code
+    - A bash terminal on your computer, to run the finished script
+    - The GitHub command line tool, only if you want GitHub secrets written
+  output:
+    - name: Stage list
+      contains: Each stage in order, with where each value comes from, where it is saved, and whether it is secret.
+    - name: Stage instructions
+      contains: The exact path for each stage, such as which page to open and what to click and copy.
+    - name: Wizard script
+      contains: A bash script built from a fixed template, with one stage per step and a confirm before any step you cannot undo.
+    - name: Saved values
+      contains: Your entries written to .env files and, if needed, to GitHub secrets and variables.
+    - name: Closing summary
+      contains: A short wrap-up shown at the end of the run, plus how to run the script.

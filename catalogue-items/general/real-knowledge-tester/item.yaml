@@ -1,14 +1,14 @@
 slug: real-knowledge-tester
 name: Real knowledge tester
-summary: Name a topic and your claim. Get the hardest follow-up questions, which you can answer, and where you only sound right.
+summary: Test how well you really know a topic. Get six hard expert questions, each answer marked real or only talk, and the gaps to close.
 category: general
 type: skill
 role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
-  - {type: question, required: false}
+  - {type: question, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report, required: true}
   - {type: question, required: true}
@@ -21,3 +21,6 @@ credits:
   - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
     by: Peter D. Kaufman (editor), with talks by Charles T. Munger
     used: The story of the speaker who knew the lecture and the real expert who could answer the next hard question, the warning that you are the easiest person to fool, and the rule that ignorance you could remove with a little work is a fault
+needs_mode: manual
+before: [circle-of-competence-mapper]
+next: [learn-borrow-or-pass-planner, advice-skin-in-the-game-checker]

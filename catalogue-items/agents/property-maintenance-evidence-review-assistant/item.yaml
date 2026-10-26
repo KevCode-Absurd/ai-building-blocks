@@ -1,6 +1,6 @@
 slug: property-maintenance-evidence-review-assistant
 name: Property maintenance evidence review assistant
-summary: A maintenance handover, access constraints and overdue decisions.
+summary: "Turn open repair tickets and access notes into a property maintenance handover with overdue decisions and closure checks."
 category: agent
 type: agent
 role: orchestrate
@@ -21,9 +21,9 @@ uses:
   - source-note-summariser
 steps:
   - uses: prepare-a-property-maintenance-handover
-    note: "Run when: A maintenance status, accepted appointment or access approval changes."
+    note: "Run when: A maintenance status, accepted appointment or access approval changes. Hands the handover and the list of tickets claimed complete to step 2."
   - uses: source-note-summariser
-    note: Run prepare-a-property-maintenance-handover for changed evidence or a due review. If completion is claimed, check the actual ticket closure evidence before marking it complete. Missing access or safety approval remains a blocker for the responsible professional.
+    note: "For each ticket claimed complete, read the actual closure record and say what it proves. Uses the closure records you attach (contractor report, sign-off or email) with step 1's handover. A ticket stays open until the record shows who did the work, what was done and when. Missing access or safety approval stays a blocker for the responsible professional."
 schedule: At a user-requested maintenance review. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

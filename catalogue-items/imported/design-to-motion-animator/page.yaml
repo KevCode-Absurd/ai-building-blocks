@@ -1,0 +1,99 @@
+name: Design animator
+headline: Design animator
+summary: Turn a static design into an animated HTML version that loops, with checks on the still frame and loop, plus MP4 or GIF files if you ask.
+job: design-work
+thinking: high
+thinking_why: It must keep the still design, layer positions, motion and captured frames consistent without hiding rendering limits.
+subhead: Give your AI a Figma frame or a static image. Get an animated HTML version with still-frame and loop checks, plus MP4 or GIF files when you request them.
+explain: >-
+  This skill recreates a supplied design before adding movement. It separates the moving layers, keeps the background and stacking order, then gives charts, lists or other visuals a clear motion sequence.
+
+
+  For a standalone showcase it can build a repeating HTML animation and requested video or GIF exports. For a website it adds only the requested animated sections, keeps live text readable and provides a still state for reduced motion.
+
+
+  The AI checks the still frame, clipping, loop seam and recorded frames before claiming an export is finished. Results depend on source layers and available rendering tools; a flat screenshot may limit what can be separated.
+when:
+  - You want to animate a supplied interface design or product mockup.
+  - You need a looping design showcase for a presentation or marketing page.
+  - You want selected website visuals to move while text stays readable.
+  - You need a video or GIF of a design to post online.
+not_for:
+  - "You want hovers, menus or toasts inside a shipping product: use a product motion skill such as emilkowalski/skills."
+  - "You want a redesign or new layout: ask a designer, because this keeps your design exactly as it is."
+  - "You only need a quick screenshot or a still image: export it from Figma, no animation tool needed."
+you_give:
+  - A Figma frame or a static image you have permission to use.
+  - A brief saying whether this is a standalone showcase or a website section.
+  - The requested output formats and output folder.
+  - An authorized design connection for Figma, plus browser and encoding tools for requested renders.
+you_get:
+  - An animated HTML version or the requested website section code.
+  - Still-frame, motion and loop-check notes with visible limits.
+  - MP4 or GIF exports when requested and successfully rendered.
+how_to_use:
+  - Download the complete folder and read AI-BLOCKS-USAGE.md.
+  - Give it to an AI coding environment that can read files and preview a browser page.
+  - Supply the design, choose the showcase or website scope, and name requested formats.
+  - Ask the AI to follow SKILL.md within that scope, then review the still and motion checks.
+output_sample:
+  input:
+    - A Figma frame or a static image you have permission to use
+    - Whether this is a standalone showcase or a website section
+    - The formats you want, such as MP4 or GIF (optional)
+  prerequisites:
+    - An AI coding environment that can read files and preview a browser page
+    - An authorized Figma connection, if you share a Figma frame
+    - A video encoder such as FFmpeg, if you want MP4 or GIF files
+  output:
+    - name: Plan summary
+      contains: The context, layout, background, load order, story for each visual and loop length, stated before building.
+    - name: Animated HTML
+      contains: A rebuilt copy of your design that loads from an empty state and loops, or the website section code.
+    - name: Still-frame check
+      contains: How closely the finished still frame matches your source, with the weakest area named.
+    - name: Overflow and loop-seam checks
+      contains: Results on clipping and on the point where the loop restarts.
+    - name: <name>-x.mp4
+      contains: A high quality video for X, made only if you ask for it and it renders.
+    - name: <name>-loop.gif
+      contains: A 960px wide GIF for a website, made only if requested.
+    - name: <name>-800x500.gif
+      contains: A small GIF cropped to the content, always delivered for a showcase.
+    - name: Limits note
+      contains: A plain list of anything that could not be reproduced exactly.
+how_it_works:
+  - title: Read the design
+    text: The AI inspects the supplied frame or image and identifies its layers, background and intended result.
+  - title: Rebuild the still
+    text: It matches the layout and records differences before adding movement.
+  - title: Add the motion
+    text: Visual elements load and tell a short story, with a still reduced-motion state.
+  - title: Check and export
+    text: Requested renders use controlled capture. The AI checks clipping and loop seams and reports what actually passed.
+output_shape: HTML animation or website section files, verification notes, and only the MP4 or GIF exports requested and successfully produced.
+judge:
+  - The still comparison records visible differences and any actual image metrics.
+  - Motion stays inside intended shapes and keeps the background unchanged where required.
+  - Website text stays readable and reduced motion shows the finished still.
+  - Requested loops are checked for seams, reset state and clipping.
+  - Rendered files are claimed only after successful capture and encoding; credentials stay out of code and logs.
+test:
+  - Try a small supplied design with one card and one moving visual.
+  - Compare the still against the reference and inspect the first, middle and final frames.
+  - Check reduced motion and a loop seam before using the result.
+improve:
+  - Correct a visible layout, clipping or reset error and repeat the affected check.
+tweaks:
+  - what: Context
+    how: Use a standalone showcase or limit work to selected website sections.
+  - what: Exports
+    how: Request only video or GIF formats you need and can render with available tools.
+works_best_with:
+  tools:
+    - name: An AI coding environment with a browser
+      why: Builds local animation files and checks the actual still and motion.
+    - name: An authorized Figma connection
+      why: Reads the supplied frame when separate source layers are available.
+    - name: FFmpeg or another encoder
+      why: Produces requested video or GIF exports after capture.

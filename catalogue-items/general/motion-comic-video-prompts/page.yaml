@@ -1,6 +1,6 @@
 new_slug: motion-comic-video-prompts
 name: Motion comic video clip prompt writer
-summary: Share your comic script and product photos. Get character, storyboard and clip prompts, plus an edit list and approval checkpoints.
+summary: Turn your comic ad script and product photos into motion comic video clip prompts, with an edit list and three approval points along the way.
 job: make-video-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a comic ad script and want to make it with AI image and video tools.
   - Earlier attempts gave you garbled lettering or a product with a made-up label.
   - You want a short, handmade-looking problem-and-fix story for vertical video.
+not_for:
+  - "You still need the comic script: write it first with the Motion comic video ad script writer."
+  - "Your proof depends on pouring, stretching or fitting, or on a real person's result: film a live demo or use a testimonial video."
+  - "You want a quick edit of a clip you already have: use your video editor, such as CapCut."
 you_give:
   - The comic script, with its panels, captions, narration and cast note
   - Photos of your product (front, side, top, out of the pack), how it's used, and the one claim
@@ -31,6 +35,32 @@ how_to_use:
   - Approve or change the hero card, then make the reference images and say which you picked.
   - Make and approve the sheets and lock lines, then the panel stills.
   - Make one clip per panel, then add captions, narration and the photo panel in your editor last.
+output_sample:
+  input:
+    - Your comic script with panels, captions, narration and a note on the cast
+    - Photos of your product from the front, side and top, plus how it is used and your one claim
+    - Your brand colours and lettering font (optional)
+    - The clip lengths your video tool accepts (optional)
+  prerequisites:
+    - An AI that can make images and video, or links to tools that can
+    - A paid image or video tool account may be needed, and the skill asks before you spend
+  output:
+    - name: Panel list
+      contains: Every panel with a named cut into it, what is drawn, and the ink style set once.
+    - name: Avatar card
+      contains: A short fixed description of the hero and the narrator's voice, held for your approval.
+    - name: Reference image prompts
+      contains: Three or four prompts for the hero in the ink line, so you can pick one.
+    - name: Sheets and lock lines
+      contains: Hero, product and place sheet prompts, plus short lines pasted into every prompt to keep the look fixed.
+    - name: Storyboard
+      contains: One still prompt per panel with its cut, one motion, caption, narration, length and sound.
+    - name: Panel clip prompts
+      contains: One clip prompt per panel, with flat ink and a single small motion.
+    - name: Edit list
+      contains: Captions, narration, sound, the real product photo panel, the offer and safe zones for editing.
+    - name: Checks missed
+      contains: One line for each check the prompts still missed, or none.
 how_it_works:
   - title: Reads the script
     text: Checks a comic fits, confirms 5 to 8 panels with a named cut into each, and sets the ink line once.

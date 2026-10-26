@@ -1,53 +1,110 @@
 new_slug: net-leverage-covenant-checker
 name: Net leverage covenant checker
 headline: Net leverage covenant checker
-summary: Check contractual net leverage and debt headroom with an explicit cash-netting cap.
+summary: Check a net debt to EBITDA loan covenant on one test date. Get net debt, your ratio against the limit and the room left.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Net leverage, permitted debt and signed covenant headroom. Share signed test definition, dated included debt, eligible unrestricted cash, cash-netting cap, contractual EBITDA and maximum leverage ratio.
+subhead: Give it the debt that counts, the cash that counts, the cash cap, EBITDA as your loan agreement defines it and the maximum ratio. It works out net debt, your ratio, the most net debt allowed and the room left. A negative room means the test is missed.
 explain: |-
-  Net leverage, permitted debt and signed covenant headroom.
+  Many loan agreements cap how much net debt a company can carry compared with its EBITDA. Net debt is the debt that counts, less the cash that counts. This covenant checker does that sum the way the contract words it, for one test date. It gives you the ratio, the limit in money terms and the room left.
 
-  Private credit covenants. Illustrative figures only. 100 less permitted cash20 leaves80 net debt; EBITDA20 gives4x and20 headroom at5x. EBITDA15 leaves-5 headroom.
+  Two details trip people up. Only the cash the contract allows can be taken off, and often there is a cap on how much. So the cash credit is the smaller of eligible cash and the cap. And the debt and EBITDA must be the contract's own versions, not the ones in your accounts. The skill never swaps in accounting net debt.
+
+  Practice numbers, not a real loan: debt 100, eligible cash 30, cash cap 20, EBITDA 20 and a limit of 5.0 times. Only 20 of cash counts, so net debt is 80. The ratio is 80 / 20 = 4.0 times. The most net debt allowed is 5 x 20 = 100, so the room is 20. If EBITDA falls to 15, the ratio is 5.33 times, the limit drops to 75, and the room is -5. That is 5 over.
 when:
-  - You need net leverage, permitted debt and signed covenant headroom.
-  - You work on private credit covenants and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your lender sends a compliance certificate and you want to check the ratio before anyone signs it.
+  - You are planning next quarter and want to see how far EBITDA can fall before the test is missed.
+  - A deal will add debt, and you want to know how much room is left under the cap.
+  - A board member or reviewer asks where the covenant number comes from.
+not_for:
+  - The test is about cash flow cover or fixed charges, not net debt. Use the Debt service covenant headroom checker or the Fixed charge coverage bridge builder.
+  - You are over the limit and want to test an equity fix. Use the Equity cure scenario checker.
+  - You need to know if you are in default, or what the contract means. This gives arithmetic for a reviewer. Ask your lawyer or lender.
 you_give:
-  - Signed test definition, dated included debt, eligible unrestricted cash, cash-netting cap, contractual EBITDA and maximum leverage ratio.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The covenant test wording from your loan agreement
+  - The debt that counts under the contract on the test date (from the compliance certificate or lender statement)
+  - The cash that counts, and the cap on how much cash can be taken off (from the agreement and your bank statements)
+  - EBITDA as the contract defines it, for the test period
+  - The maximum ratio allowed, such as 5.0 times
+  - Your own covenant spreadsheet (optional)
 you_get:
-  - Net leverage, permitted debt and signed covenant headroom.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Net debt after the cash credit
+  - Your ratio of net debt to EBITDA
+  - The most net debt the contract allows
+  - The room left, or the shortfall shown as a negative number
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the covenant wording and the five numbers. Say the test date, the currency and the units, such as USD millions. Attach the agreement page if you can.
+  - Ask in plain words, such as how much room do we have at the test date, and what if EBITDA is 10% lower?
+  - Check one line yourself. Net debt is debt less the smaller of eligible cash and the cap. Room is the limit times EBITDA, less net debt.
+  - Read MISSING and CHECKS MISSED before you send anything to a lender. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Map included debt, cash eligibility, netting cap and EBITDA to the same covenant test date; never substitute accounting net debt
-    text: Map included debt, cash eligibility, netting cap and EBITDA to the same covenant test date; never substitute accounting net debt.
-  - title: 2. Net only the lesser of eligible cash and contractual cash cap from included debt
-    text: Net only the lesser of eligible cash and contractual cash cap from included debt.
-  - title: 3. Divide by contractual positive EBITDA and compare net debt with maximum ratio times EBITDA; identify negative headroom without asserting legal default
-    text: Divide by contractual positive EBITDA and compare net debt with maximum ratio times EBITDA; identify negative headroom without asserting legal default.
+  - title: Matches the test
+    text: Lines up the debt, the cash, the cash cap and EBITDA with the same test date and the contract's definitions. It never swaps in accounting net debt.
+  - title: Takes off the cash credit
+    text: Subtracts only the smaller of eligible cash and the contract's cash cap from the debt that counts.
+  - title: Works out the ratio
+    text: Divides net debt by the contract's EBITDA. If EBITDA is zero or negative, it stops and says so.
+  - title: Finds the room
+    text: Multiplies the maximum ratio by EBITDA to get the most net debt allowed, then subtracts net debt. A negative result is shown, not hidden.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given. It does not say you are in default. That is for a reviewer.
 output_shape: |-
-  Net leverage, permitted debt and signed covenant headroom.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Net debt <amount> | Ratio <x> times | Maximum allowed <x> times | Most net debt allowed <amount> | Room left <amount>
+
+  SCOPE AND SOURCES
+  <test date, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <included debt, eligible cash, cash cap, contract EBITDA, maximum ratio>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures; cash credit as the smaller of eligible cash and the cap>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The covenant test wording from your loan agreement
+    - The debt that counts and the cash that counts, with the cash cap
+    - EBITDA as the contract defines it
+    - The maximum ratio allowed
+    - Your own covenant spreadsheet (optional)
+  prerequisites:
+    - The loan agreement or the latest compliance certificate
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Net debt, your ratio, the most net debt allowed and the room left, shown negative if the test is missed.
+    - name: SCOPE AND SOURCES
+      contains: The test date, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, including the cash credit and why it is capped.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Eligible cash already excludes restricted and nonqualifying balances.
+  - what: EBITDA falls
+    how: Ask for a lower EBITDA, such as 10% less. You see the new ratio and whether the room turns negative.
+  - what: No cash cap
+    how: Say the contract has none. Then all eligible cash counts, and the skill notes the change.
+  - what: A different maximum ratio
+    how: Change the limit, such as a step-down from 5.0 to 4.5 times. The room is worked out again.
 judge:
   - Eligible cash already excludes restricted and nonqualifying balances.
   - Positive EBITDA and the actual test applicability are required.
@@ -62,15 +119,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the loan agreement that defines debt, eligible cash, the cash cap and EBITDA
+    - The latest compliance certificate
+    - A named reviewer and the question you want answered
 terms:
+  - term: Covenant
+    meaning: A rule in a loan agreement that the borrower has to keep, such as a limit on debt.
+  - term: Net debt
+    meaning: The debt that counts under the contract, less the cash that counts.
+  - term: EBITDA
+    meaning: Earnings before interest, tax, depreciation and amortization, as the contract defines it.
+  - term: Headroom
+    meaning: How much more net debt you could carry before the limit is hit. Below zero means over the limit.
+  - term: Cash cap
+    meaning: The most cash the contract lets you take off debt.
+  - term: Test date
+    meaning: The date the lender measures the covenant on.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real loan.

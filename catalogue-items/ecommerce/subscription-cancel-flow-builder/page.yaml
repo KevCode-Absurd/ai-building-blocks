@@ -1,6 +1,6 @@
 new_slug: subscription-cancel-flow-builder
 name: "Subscription cancel flow builder"
-summary: "Give it your cancel reasons and portal options. Get a cancel flow with one save per reason and a failed-payment plan."
+summary: "Build a subscription cancel flow with one save offer per cancel reason, delay rules and a failed-payment plan, from your reasons and portal limits."
 job: keep-customers
 thinking: high
 thinking_why: "It balances margin, timing and legal limits across many branches, so a stronger model makes fewer mistakes."
@@ -17,6 +17,10 @@ when:
   - You have a subscription portal such as Skio or Recharge and your save rate is under 10 or 15 percent.
   - Customers cancel because they have too much product, and you only offer a discount.
   - You lose subscribers when a card fails and have no flow for it.
+not_for:
+  - You sell one-off items like a rug or a shirt. A cancel flow needs a natural repeat order, so start with a simple after-purchase email instead.
+  - Your portal cannot branch by reason or show a splash screen. Ask your portal's support what it can do first, or build the flow by hand.
+  - You want a full audit of why subscribers leave over time. Ask a person who knows your numbers to review your cancel data first.
 
 you_give:
   - The reasons customers give today, or a survey
@@ -36,6 +40,32 @@ how_to_use:
   - Give your margin room, such as the biggest discount you can afford on an order.
   - Check the flow for a visible way to cancel at every step, then build it in your portal.
   - Track save rate per reason and repeat orders after a save, and fix the reason with the most cancels first.
+output_sample:
+  input:
+    - Your cancel reasons, or a customer survey (required)
+    - What your subscription portal can do, such as skip, delay, swap or discount
+    - Your margin room for a save discount
+    - Your subscription orders and use rate per product (optional)
+    - A founder video or message, and failed-payment data (optional)
+  prerequisites:
+    - A subscription portal that can show a splash screen and branch by reason
+  output:
+    - name: Ground rule check
+      contains: Confirms cancelling stays easy to find at every step, with a skip-save link on each screen.
+    - name: Cancel flow
+      contains: The start screen, then one action, copy and discount cap for each of six or seven reasons plus Other.
+    - name: Delay and skip rules
+      contains: Settings for skip, delay up to 30 days and easy frequency changes.
+    - name: Proactive pause
+      contains: The rule that spots overstocked customers and the email that suggests a pause.
+    - name: After the cancel
+      contains: A confirmation with no offers, one or two plain-text emails and a win-back plan for day 30 to 60.
+    - name: Failed payments
+      contains: A flow for each payment type, with a card update fallback and SMS for opted-in customers only.
+    - name: Tracking sheet
+      contains: Columns for reason, shown, saved, save rate, repeat orders after a save and discount cost.
+    - name: Checks missed
+      contains: Any checks that failed, plus a list of inputs you did not give.
 
 how_it_works:
   - title: Sets the ground rule

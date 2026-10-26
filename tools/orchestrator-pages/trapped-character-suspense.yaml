@@ -1,6 +1,6 @@
 new_slug: trapped-character-suspense
 name: Build suspense in a story where your character cannot leave
-summary: Tell it who is stuck and who holds them. Get a sealed setting, mood map, cost ladder and fair-escape check.
+summary: Plan a trapped character story with rising dread. Give it who is stuck and who holds them. Get a sealed setting, mood scale, cost ladder and escape check.
 job: write-and-tell-stories
 thinking: high
 thinking_why: It builds a story plan across five skills and judges whether each part is fair to a reader. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You are writing a story about someone trapped, watched or cornered, in a house, a job, a family or a town.
   - Your middle chapters repeat, or the dread drops once the setup is done.
   - Readers say your villain is scary only in the big scenes, or that the ending was too easy.
+not_for:
+  - Your character can leave freely. Use a plain story outline, since this plan needs every exit shut for a reason.
+  - You already have a finished draft and only want to know if each scene changes something. Use the scene-turn-checker skill on its own.
+  - You want the scenes written out as prose. Use the Page-turner scene drafter after this plan is done.
 
 you_give:
   - Who is stuck, who or what holds them, and where, in a few sentences
@@ -37,6 +41,28 @@ how_to_use:
   - Describe who is trapped, who holds them and where. It works step by step and saves each result.
   - Answer its questions about the person in power and what your character would hate to lose.
   - Paste your scene list when it asks, for the last check.
+output_sample:
+  input:
+    - Who is trapped, who or what holds them, and where
+    - How the person in power talks and what they want
+    - What your character would hate to lose
+    - Your scene list, for the last step
+  prerequisites:
+    - An AI chat that can keep five steps in view, such as Claude, ChatGPT or Gemini
+    - Files or a project folder if you want each step saved as its own file
+  output:
+    - name: "Step 1: Sealed setting"
+      contains: The place, what is within reach, every exit and why it is shut, a watch list of objects, and what only they know.
+    - name: "Step 2: Mood scale"
+      contains: Each mood of the person in power, with a warning sign, what they do, what it costs, and the triggers.
+    - name: "Step 3: Cost ladder and clock"
+      contains: Attempts in order, each costing more than the last, what stays lost, and a deadline the character cannot move.
+    - name: "Step 4: Fair escapes"
+      contains: A verdict of fair, weak or cheat for each escape, where it is planted, and a fix.
+    - name: "Step 5: Scene check"
+      contains: Each scene marked for what changes in it, the choice that changes it, and whether it is flagged.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Seal the setting

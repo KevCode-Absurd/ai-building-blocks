@@ -1,6 +1,6 @@
 new_slug: video-opening-line-batch-writer
 name: "Video opening line batch writer"
-summary: "Paste your product and post idea. Get ten different video hooks and the two to film first."
+summary: "Get ten video opening lines for your Reel, TikTok or Short, plus a first picture for the best three and the two to film first."
 job: grow-social
 thinking: low
 thinking_why: "It writes short lines from your facts, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - "You have a video idea and no strong first line."
   - "Your videos get views for three seconds and then drop."
   - "You want a batch of options before you film anything."
+not_for:
+  - "You want a full video script: use the Short video hook writer, or write the rest yourself once you pick a hook."
+  - "You are writing paid ad copy: use the Ad opening writer and reviewer."
+  - "Your video is long and the first three seconds are not the problem: fix the middle or the topic with a person who knows your viewers."
 
 you_give:
   - "What you sell and the post idea"
@@ -33,6 +37,21 @@ how_to_use:
   - "Add your product, post idea and who it is for under the prompt."
   - "Say what you can really film, so the first pictures are ones you can shoot."
   - "Film the two it picks. Keep the others for next week."
+output_sample:
+  input:
+    - What you sell and your post idea
+    - Who should stop scrolling (optional)
+    - What you can really film in the first shot (optional)
+    - One proof number you can back up (optional)
+  output:
+    - name: HOOKS
+      contains: Ten opening lines in ten different styles, each with its on-screen text and word count.
+    - name: TOP THREE
+      contains: The best three hooks, each with a first picture you can film and a quick stranger test.
+    - name: FILM FIRST
+      contains: The two hooks to film first, and the reason for each pick.
+    - name: MISSING
+      contains: Anything you did not give, listed so nothing is made up.
 
 how_it_works:
   - title: "Work on the opening only"

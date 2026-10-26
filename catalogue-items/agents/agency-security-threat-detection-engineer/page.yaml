@@ -1,0 +1,122 @@
+name: Threat Detection Engineer agent
+summary: Name the technique and your log sources. Get a Sigma detection rule,
+  its false-positive cases, and where it sits in your MITRE ATT&CK coverage.
+headline: Threat Detection Engineer agent
+subhead: Name the attacker technique you want to catch and the logs you
+  actually collect. It writes a vendor-neutral Sigma rule, lists the cases
+  that would falsely trigger it, and says where this sits in your MITRE
+  ATT&CK coverage.
+job: secure-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A detection rule that fires on everything gets muted within a week, and a rule that never fires gives you nothing when it matters. This agent writes rules for a specific technique against the log sources you actually have, not a generic template, and it writes the false-positive cases before deployment, not after the team complains.
+
+  It uses Sigma, a vendor-neutral rule format, so the same rule maps to Splunk, Sentinel or whatever SIEM you run. For each rule it also places the technique on the MITRE ATT&CK framework, so you can see what this closes and what's still an open gap in your coverage, instead of guessing at how complete your detections are.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+when:
+  - You know the attacker technique you want to detect (from a MITRE ATT&CK ID, a threat report, or your own incident) and want a rule for it.
+  - You want to know which MITRE ATT&CK techniques your current detections actually cover, and which are gaps.
+  - A detection rule is too noisy and you want its false-positive cases named so it can be tuned, not just muted.
+  - You're setting up detection-as-code and want rules written in Sigma so they aren't locked to one SIEM.
+not_for:
+  - You have an active incident right now, not a detection gap to close. Use the Incident Responder agent.
+  - You want to test whether an attack actually gets through your defenses. Use the Penetration Tester agent.
+  - You want a one-time snapshot of your overall security posture, not an ongoing detection rule. Use the Security posture auditor.
+you_give:
+  - The technique you want to detect, named plainly or by its MITRE ATT&CK ID, and why (a threat report, a past incident, a known gap).
+  - The log sources you actually collect (process logs, PowerShell logging, cloud audit logs, and so on) and how long you keep them.
+  - Your SIEM or detection platform, if you want the rule compiled to a specific query language (optional, Sigma works everywhere).
+  - Any known-benign activity that looks similar to the technique, so false positives can be named up front (optional).
+you_get:
+  - A Sigma detection rule for the named technique, built against the log sources you actually have.
+  - A false-positive list: the normal activity most likely to trigger it, named before deployment, not after.
+  - A MITRE ATT&CK coverage note: where this technique sits, and what's still a gap nearby.
+  - A validation plan: how to confirm the rule fires on the real technique and stays quiet on normal activity.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
+  - Name the technique you want to detect and the log sources you actually collect.
+  - Say which SIEM you use if you want the rule compiled to its query language; otherwise you'll get Sigma.
+  - Say "Write the detection rule, its false-positive cases, and where this sits in my ATT&CK coverage."
+  - Check the log sources it assumes against what you actually collect. A rule needing a log you don't have won't fire.
+  - Run the validation plan against real or simulated activity before you trust the rule in production.
+how_it_works:
+  - title: Confirm the technique and log sources
+    text: It names the exact technique to detect and checks it against the log sources you say you actually collect.
+  - title: Write the Sigma rule
+    text: It builds a vendor-neutral detection rule for that technique, so it isn't locked to one SIEM.
+  - title: Name the false positives
+    text: It lists the normal activity most likely to look like the technique, before the rule ever reaches production.
+  - title: Map to MITRE ATT&CK
+    text: It places the technique on the framework and notes nearby techniques that are still a gap.
+  - title: Plan validation
+    text: It describes how to confirm the rule fires on the real technique (via a known-bad sample or simulation) and stays quiet otherwise.
+output_shape: |-
+  DETECTION RULE (Sigma)
+    title: <technique name>
+    logsource: <category/product>
+    detection: <condition>
+    level: <severity>
+
+  FALSE POSITIVE CASES
+    <normal activity> | <why it looks similar> | <how to exclude it>
+
+  MITRE ATT&CK MAPPING
+    Technique: <ID and name> | Tactic: <name> | Nearby gaps: <list>
+
+  VALIDATION PLAN
+    <step> | <what confirms the rule works>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <assumption or gap> | <what to verify>
+output_sample:
+  input:
+    - The technique to detect, named or by MITRE ATT&CK ID
+    - The log sources you actually collect
+    - Your SIEM, if you want a compiled query (optional)
+    - Known-benign activity that looks similar (optional)
+  prerequisites:
+    - Log collection already in place for the sources the rule needs
+  output:
+    - name: Detection rule
+      contains: A Sigma rule for the named technique, built against the log sources you have.
+    - name: False positive cases
+      contains: Normal activity most likely to trigger the rule, and how to exclude it.
+    - name: MITRE ATT&CK mapping
+      contains: Where the technique sits on the framework, and nearby coverage gaps.
+    - name: Validation plan
+      contains: How to confirm the rule fires on the real technique and stays quiet on normal activity.
+    - name: Assumptions and checks
+      contains: What the agent assumed and which facts you still need to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any good chat AI can write the Sigma rule and the ATT&CK mapping from what you describe.
+  inputs:
+    - A sample of the actual log lines you'd expect the technique to produce.
+    - Your current detection rule list, so new coverage doesn't duplicate an existing rule.
+    - A recent threat report or incident that named the technique.
+terms:
+  - term: Sigma
+    meaning: A shared, vendor-neutral format for writing detection rules, so one rule can be converted to many SIEMs.
+  - term: MITRE ATT&CK
+    meaning: A public, shared list of attacker techniques and tactics, used to track what your detections actually cover.
+  - term: False positive
+    meaning: A normal, harmless action that a detection rule mistakes for an attack.
+tweaks:
+  - what: Log sources
+    how: Name only what you actually collect. A rule built for a log you don't have will never fire.
+  - what: Technique specificity
+    how: Name one technique, not "detect ransomware." A specific technique gets a rule that actually works.
+improve:
+  - Keep each rule with its false-positive list and validation result, so tuning starts from what's already known.
+  - Pair it with the Security incident triager once rules are live, to triage what they fire on.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

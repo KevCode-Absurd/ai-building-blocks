@@ -2,17 +2,63 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-meeting-minutes
 name: Internal meeting minutes writer
-summary: Share your meeting notes. Get decisions, action items, owners and open
-  questions in a concise record.
+summary: Turn your meeting notes or transcript into clear meeting minutes. You get decisions, action items with owners and due dates, and open questions.
 job: organise-work
 headline: Internal meeting minutes writer
-subhead: Share your meeting notes. Get decisions, action items, owners and open
-  questions in a concise record. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Paste your notes or transcript from a short internal meeting. Your AI writes minutes that put decisions and action items first. Anything missing is marked TBD, never guessed.
+not_for:
+  - "Your meeting ran over 60 minutes: split the notes by topic and write minutes for each part, or ask a colleague to review the long version."
+  - "You need minutes for a client or outside guests: write a short summary email yourself, in your own voice and tone."
+  - "You only need a quick list of tasks: copy the action items straight into your task tracker and skip the full minutes."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tools are needed.
+  - Paste your notes or transcript. Add the title, date, organizer and who attended.
+  - "Say: if an owner or due date is not in the notes, mark it TBD. Do not guess."
+  - Answer up to three questions if your AI asks them.
+  - Check each action item for the right owner and date. Fix any TBD you can.
+  - Send the draft to the organizer to check, then share it with the team.
+output_sample:
+  input:
+    - Your meeting notes or transcript
+    - Meeting title, date and organizer
+    - Who came and who did not
+    - Your agenda (optional)
+  output:
+    - name: Metadata
+      contains: Title, date, times, organizer, location, who wrote the minutes and who receives them.
+    - name: Attendance
+      contains: Who was present, who sent regrets and who took notes.
+    - name: Agenda
+      contains: The agenda items in order, each with a short title.
+    - name: Summary
+      contains: A short paragraph on the goal of the meeting and the main outcome.
+    - name: Decisions Made
+      contains: Each decision with who approved it, a one or two line reason and an effective date.
+    - name: Action Items
+      contains: Each task with an owner, a due date, what counts as done and any link.
+    - name: Notes by Agenda Item
+      contains: Key points and open questions for each agenda item.
+    - name: Parking Lot / Unresolved Items
+      contains: Topics set aside, why, and who or which meeting should settle them.
+    - name: Risks / Blockers
+      contains: Any risks, their impact and who will handle them.
+    - name: Next Meeting / Follow-up
+      contains: The proposed next date and what that meeting should cover.
+when:
+  - You just finished a team sync, stand-up or design review and have rough notes.
+  - You have a transcript and need a short record of what was decided.
+  - You want every action item to have an owner and a due date.
+  - You need minutes in the same layout every week.
+you_give:
+  - Your meeting notes or transcript
+  - The meeting title, date and start time or length
+  - The organizer's name
+  - Who attended and who was absent
+  - Your agenda (optional)
+  - Who should review the minutes (optional)
+you_get:
+  - A record with decisions, each with who approved it and why
+  - Action items with an owner, a due date and what counts as done
+  - Notes for each agenda item, with open questions
+  - A parking lot for topics that need another meeting
+  - TBD marks where your notes leave out an owner or date

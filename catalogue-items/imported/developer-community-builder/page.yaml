@@ -2,36 +2,99 @@ thinking: medium
 thinking_why: It fits known community methods to your audience.
 new_slug: developer-community-builder
 name: Developer community builder
-summary: Describe your developers. Get a plan for channels, onboarding and
-  events that grows a Discord or forum.
+summary: "Get a plan for your developer community on Discord, Slack or a forum: platform pick, channels, welcome text, rules and a 90-day calendar."
 job: grow-social
 headline: Developer community builder
-subhead: Describe your developers. Get a plan for channels, onboarding and
-  events that grows a Discord or forum. Bring a short description of your
-  developers. Use the result to plan your next step.
+subhead: Describe your developers and your product. It picks a platform, lays out channels, writes the welcome message and rules, and plans 90 days of prompts and events. Use it to start a developer community or revive a quiet one.
 explain: |
-  A plan for a developer community that people actually join and stay in, covering where it lives, how it is laid out and how new members get started.
+  Developer communities often start with a Discord server and a hope that people will turn up. Members join, see a long list of channels, and leave. This developer community builder starts with who your developers are and where they already talk, then builds the plan from there.
 
-  The skill begins with who your developers are, where they already talk, and how they write to each other. Then it compares platforms such as Discord, Slack, GitHub Discussions, Discourse and Circle, and picks one that fits your audience. It lays out channels with clear purposes, welcome steps for new members, rules, moderation habits, and events and programmes that keep people returning. You can use it for a new community or to fix one that has gone quiet.
+  It compares Discord, Slack, GitHub Discussions, Discourse and Circle, and picks one for your audience. It keeps the channel list short, writes the first message a new member sees, and sets rules sized to the time your team has for moderation.
+
+  Then it plans 90 days of weekly prompts and monthly events, and picks a few health numbers to watch. The thresholds it suggests are starting points from the original author, not industry standards.
 when:
-  - You are launching a Discord or forum for the people who use your product.
+  - You are launching a Discord server or forum for the people who use your product.
   - Your community has members but almost nobody posts.
   - You cannot decide between Discord, Slack and a forum.
-  - New members join, look around and leave because they do not know where to
-    start.
+  - New members join, look around and leave because they do not know where to start.
+not_for:
+  - Your product has no active users yet. Start with a docs page and a support inbox first, and build a community once people ask for one.
+  - You want a contributor program and deeper health checks as well. Use the Developer Community Builder agent.
+  - Your goal is promoting an open source project, not running a community. Use the open source promoter.
 you_give:
-  - A short description of your developers
+  - A short description of your developers, such as their role and where they talk now
   - Your product and what it does
+  - Hours per week your team can give to moderation
   - Platforms you already use (optional)
-  - Your team's time for moderation
+  - Whether the community is new or already exists
 you_get:
-  - A platform recommendation with reasons
-  - A channel layout with the purpose of each
-  - A new-member welcome flow
-  - Community rules and moderation guidance
-  - An events and engagement calendar
+  - A platform pick with reasons and a runner-up
+  - A channel map with a one-line purpose for each channel
+  - A welcome message and a new-member path
+  - Rules and a plan for handling problems
+  - A 90-day calendar of prompts and events
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat.
+  - Describe your developers, including their job, their experience, where they already talk and how they write. A few lines is enough.
+  - Add your product, the hours your team has for moderation, and whether the community is new or already exists.
+  - Read the platform pick first. If you already use another platform and want to stay, say so and ask for the plan on that one.
+  - Check the channel map. Cut any channel you cannot fill with posts in the first month.
+  - Copy the welcome message into your platform, then follow the 90-day calendar one week at a time.
+how_it_works:
+  - title: Understand your developers
+    text: It uses the audience details you give it, such as who they are, where they talk and how they write.
+  - title: Pick a platform
+    text: It compares Discord, Slack, GitHub Discussions, Discourse and Circle against your audience and picks one.
+  - title: Lay out the channels
+    text: It gives each channel one purpose and a posting rule, starting small.
+  - title: Write the first-day experience
+    text: It drafts the welcome message, the new-member path and the member roles.
+  - title: Set rules and moderation
+    text: It writes a short code of conduct and a playbook for common problems, sized to your moderation time.
+  - title: Plan engagement and metrics
+    text: It plans weekly prompts, monthly events and recognition, then picks a few health numbers to track.
+output_shape: |
+  ## Platform pick
+  <choice, reasons, runner-up>
+  ## Channel map
+  <channel: purpose, posting rule>
+  ## Welcome and onboarding
+  <welcome text, new-member path, roles>
+  ## Rules and moderation
+  <code of conduct, problem playbook>
+  ## 90-day calendar
+  <week: prompt or event, effort>
+  ## Health numbers
+  <what to track, how to read it>
+output_sample:
+  input:
+    - A short description of your developers and where they talk
+    - Your product and what it does
+    - Hours per week your team can spend on moderation
+    - Platforms you already use (optional)
+  output:
+    - name: Platform pick
+      contains: The platform that fits your audience, why, and when the runner-up would win.
+    - name: Channel map
+      contains: Each channel with its purpose and posting rule, starting small.
+    - name: Welcome and onboarding
+      contains: The welcome message, the new-member path and the member roles.
+    - name: Rules and moderation
+      contains: A short code of conduct and how to respond to common problems.
+    - name: 90-day calendar
+      contains: Weekly prompts and monthly events, each with the effort it takes.
+    - name: Health numbers
+      contains: Three to five numbers to watch, such as response time and new member return rate.
+works_best_with:
+  tools:
+    - {name: "Claude, ChatGPT or Gemini", why: "Any chat AI works. Nothing needs to run and no file access is needed."}
+  inputs:
+    - "Your docs, support questions or GitHub issues, to show what your developers ask about"
+    - "A list of where your developers already talk, such as Reddit or Stack Overflow"
+terms:
+  - term: Onboarding
+    meaning: What a new member sees and does in their first day, from the welcome message to their first post.
+  - term: Moderation
+    meaning: Watching the community, applying the rules and dealing with problems.
+  - term: Code of conduct
+    meaning: A short list of how members should and should not behave.

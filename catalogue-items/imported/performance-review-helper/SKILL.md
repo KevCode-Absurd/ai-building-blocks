@@ -26,6 +26,19 @@ Generate performance review templates and help structure feedback.
 
 If no mode is specified, ask what type of review they need.
 
+## Steps
+
+1. Pick the mode. If the user has not named one, ask once: self-assessment, manager review or calibration.
+2. Gather what the mode needs. Ask for all missing items in one message.
+   - Self-assessment: the review period, notes on 3 to 5 accomplishments, last period's goals and how they went.
+   - Manager review: the employee name and role, the period, the goals set, and your notes or examples of their work.
+   - Calibration: the team list with role, level and tenure, each proposed rating, and your company's own rating targets (if it has any).
+3. Fill the matching template below. Use only what the user gave. Never invent an accomplishment, a number, a rating or a quote. Where a detail is missing, write `[MISSING: what is needed]`.
+4. Make each claim specific. Turn "great job" into what the person did and what changed. If there is no example, write `[add an example]`.
+5. After the template, list what to check before it is used: every example is true, ratings match the evidence, and the person has heard the main points before the review meeting.
+
+Not for disciplinary action, dismissal or hiring decisions. Those go through your HR team or company policy.
+
 ## Output — Self-Assessment Template
 
 ```markdown
@@ -92,7 +105,7 @@ If no mode is specified, ask what type of review they need.
 | [Skill] | [Level] | [Level] | [How to get there] |
 
 ### Compensation Recommendation
-[Promotion / Equity refresh / Adjustment / No change — with justification]
+[Promotion / Equity refresh / Adjustment / No change — with justification. This is a suggestion for the manager to decide, not a decision.]
 ```
 
 ## Output — Calibration
@@ -107,11 +120,11 @@ If no mode is specified, ask what type of review they need.
 | [Name] | [Role] | [Level] | [X years] | [Rating] | [Key context] |
 
 ### Rating Distribution
-| Rating | Count | % of Team | Company Target |
+| Rating | Count | % of Team | Your company's target |
 |--------|-------|-----------|----------------|
-| Exceeds Expectations | [X] | [X]% | ~15-20% |
-| Meets Expectations | [X] | [X]% | ~60-70% |
-| Below Expectations | [X] | [X]% | ~10-15% |
+| Exceeds Expectations | [X] | [X]% | [your target, or none] |
+| Meets Expectations | [X] | [X]% | [your target, or none] |
+| Below Expectations | [X] | [X]% | [your target, or none] |
 
 ### Calibration Discussion Points
 1. **[Employee]** — [Why this rating may need discussion, e.g., borderline, first review at level, recent role change]

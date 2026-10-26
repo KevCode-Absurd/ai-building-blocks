@@ -40,7 +40,7 @@ test('Workers passes asset requests intact so Cloudflare retains rewrites, redir
   }
 });
 
-test('Workers deployment keeps API-only execution, HTML routing and isolated staging data', () => {
+test('Workers deployment protects API, MCP and consent routing while isolating staging data', () => {
   const config = JSON.parse(fs.readFileSync('wrangler.example.jsonc', 'utf8'));
   assert.equal(config.main, 'src/worker.ts');
   assert.equal(config.pages_build_output_dir, undefined);
@@ -49,7 +49,9 @@ test('Workers deployment keeps API-only execution, HTML routing and isolated sta
   assert.equal(config.assets.html_handling, 'auto-trailing-slash');
   assert.equal(config.assets.not_found_handling, undefined, 'Missing paths reach the router for canonical repair and a custom 404');
   assert(config.compatibility_flags.includes('assets_navigation_has_no_effect'));
-  assert.deepEqual(config.assets.run_worker_first, ['/api', '/api/*']);
+  assert.deepEqual(config.assets.run_worker_first, ['/api', '/api/*', '/mcp', '/mcp/*', '/oauth/*', '/.well-known/*', '/connect-mcp', '/connect-mcp.html']);
+  assert.equal(config.vars.PUBLIC_API_ENABLED, 'false');
+  assert.equal(config.vars.MCP_OAUTH_ENABLED, 'false');
   const prod = config.d1_databases, stage = config.env.staging.d1_databases;
   assert.deepEqual(prod.map(db => db.binding), ['COMMENTS', 'SPACES', 'COMPOSER']);
   assert.deepEqual(stage.map(db => db.binding), prod.map(db => db.binding));

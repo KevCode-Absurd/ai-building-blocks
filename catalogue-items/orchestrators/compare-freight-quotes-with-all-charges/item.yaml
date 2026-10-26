@@ -1,6 +1,6 @@
 slug: compare-freight-quotes-with-all-charges
 name: Compare freight quotes with all charges
-summary: Share the source files. Get a normalized freight comparison, charge checks and open questions.
+summary: "Compare freight quotes on the same shipment with every charge counted. Get a side-by-side table, what each quote leaves out and questions to ask."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,11 +8,11 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
-  - type: question
-    required: false
   - type: document
+    required: true
+  - type: brief
+    required: false
+  - type: question
     required: false
 outputs:
   - type: audit_report
@@ -22,9 +22,9 @@ uses:
   - invoice-totals-checker
 steps:
   - uses: vendor-comparison-writer
-    note: Normalize the supplied lane, load basis, service scope, handling, insurance, delivery and exit charges. Keep missing surcharges unknown rather than zero.
+    note: "Put each quote on the same route and load basis and list every charge line by line. Mark any missing charge unknown, never zero. Pass one charge table per quote to step 2."
   - uses: invoice-totals-checker
-    note: Recompute the comparable quoted charges with explicit units and currencies; use only conversion rates and tax treatment supplied for this review.
+    note: "Takes step 1's charge table for each quote and adds up its lines with their units and currency. Shows stated total, recomputed total and the gap. Use only exchange rates and tax treatment the person supplied."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

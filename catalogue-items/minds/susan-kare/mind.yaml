@@ -16,6 +16,30 @@ use_cases:
   - "Test icons quickly on a few people and keep the ones they remember"
   - "Clean up the small details of a screen: lines, buttons and spacing"
   - "Turn a long feature list into a set of clear, matching symbols"
+not_for:
+  - "You need a bold logo from a small independent studio: use the Aaron Draplin mind instead."
+  - "You need to explain numbers with charts: use the Cole Nussbaumer Knaflic mind instead."
+  - "You need a final trademark, legal or accessibility sign-off: ask a trademark lawyer, an accessibility tester or a professional designer."
+output_sample:
+  input:
+    - The idea you want the icon or symbol to show, in plain words
+    - Who will see it and how small it will appear
+    - Where it will be used, such as an app, a form or a logo
+    - Any rules you must follow, such as colours or brand style (optional)
+    - Icons or designs you already have (optional)
+  output:
+    - name: The idea in plain words
+      contains: A short plain statement of what the symbol must say, before any drawing starts.
+    - name: Metaphors to sketch
+      contains: A short list of everyday objects or signs that could carry the meaning, with a note on where to look if you are stuck.
+    - name: Several options
+      contains: A range of ways to draw the idea on a small grid, described in words so you can compare them side by side.
+    - name: Quick test plan
+      contains: A way to show the options to a few people without explaining, and keep the ones they get right away.
+    - name: Her pick and reason
+      contains: A clear choice judged on whether it is meaningful, memorable and clear.
+    - name: Cleanup notes
+      contains: Small fixes for lines, spacing and details so the symbol still reads at the smallest size.
 seats:
   - {seat: "Icons and small screens", asks: "If I showed this once, would someone know what it means and remember it?"}
   - {seat: "Friendly interfaces", asks: "Does this feel like a tool for people, or like a cold machine?"}

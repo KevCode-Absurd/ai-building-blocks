@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks questions and writes what it learns.
 new_slug: inbox-rules-interviewer
 name: Inbox rules interviewer
-summary: Answer questions about your email. Get a saved guide to your senders,
-  reply voice and rules for triage.
+summary: Set up inbox triage rules by answering a short interview. You get seven saved files on your senders, reply voice and sorting rules.
 job: hire-people
 headline: Inbox rules interviewer
-subhead: Answer questions about your email. Get a saved guide to your senders,
-  reply voice and rules for triage. Bring answers to the interview questions.
-  Use the result to plan your next step.
+subhead: Answer questions about your email. Get a saved guide to your senders, reply voice and rules for triage. Bring answers to the interview questions. Use the result to plan your next step.
 explain: |
   A saved set of files that tells an AI how you handle email: who matters, how you sound when you reply, and what to do with each kind of message. You answer once, and the later triage runs from your answers.
 
@@ -19,6 +16,10 @@ when:
   - Your priorities changed and the old sorting rules are out of date.
   - You want replies drafted in your own voice.
   - You are about to start automatic inbox triage and need the setup first.
+not_for:
+  - "You want a shared team inbox sorted: set a plain filter rule in your email app, or ask a teammate who knows the senders."
+  - "You only need a one-off clean-up of your inbox: a quick manual pass is faster than an interview."
+  - "You already have your rules saved and want your mail sorted now: run the inbox triage skill that reads these files, not this setup."
 you_give:
   - Answers to the interview questions
   - Examples of emails you reply to and ones you ignore
@@ -29,7 +30,32 @@ you_get:
   - Rules on senders and priorities
   - Seven saved files the triage skill reads
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. Paste the full text of the skill file into it.
+  - 'Say: "Set up my inbox." Your AI asks one question at a time and tells you why it asks.'
+  - Answer each question. Pick from the choices where they are given. Paste a few real emails and replies when asked.
+  - After each section, your AI saves that file to an Email folder in your workspace. If it cannot save files, ask it to show the text so you can copy it.
+  - Check the reply voice file and fix anything that does not sound like you.
+  - Run this again when your work or priorities change. Then use the inbox triage skill to sort your mail.
+output_sample:
+  input:
+    - Your answers to the interview questions, one at a time
+    - Examples of emails you reply to and ones you ignore
+    - Samples of your past replies (optional)
+    - Your pricing and terms, if you get pitches or offers (optional)
+  prerequisites:
+    - An AI that can save files to a workspace folder, or one you can copy the files from by hand
+  output:
+    - name: email-taxonomy.md
+      contains: Your sorting scheme for email types, plus how and when you want your triage report delivered.
+    - name: email-patterns.md
+      contains: How you sound when you reply, with templates and the hard rules your replies must follow.
+    - name: evaluation-framework.md
+      contains: A decision tree for pitches and offers. Made only if you get them.
+    - name: rate-card.md
+      contains: Your prices, terms and how you negotiate. Made only if you have pricing.
+    - name: blocklist.md
+      contains: Senders to skip automatically and decline patterns, which grows over time.
+    - name: tracker.md
+      contains: Follow-ups, overdue items and deadlines. It starts mostly empty.
+    - name: triage-log/
+      contains: An empty folder where each triage run saves its own log.

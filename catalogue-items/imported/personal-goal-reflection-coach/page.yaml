@@ -2,14 +2,24 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: personal-goal-reflection-coach
 name: Personal goal reflection coach
-summary: Share a goal or choice to explore. Get focused questions and a small next step you own.
+summary: "Share a personal goal or choice and get personal goal coaching: one clear question at a time, and a small next step that you choose and own."
 job: think-and-decide
 headline: Personal goal reflection coach
-subhead: Share the personal goal or choice you want coaching on and what would make the conversation useful. It listens, asks focused questions, and helps you weigh options. You get a clearer decision or small next step. This supports routine adult reflection within stated limits.
+subhead: Tell your AI the goal or choice you want to think through. It asks one question at a time and helps you weigh your options. You choose what to do next, or you choose to pause.
+not_for:
+  - "You want a plain answer, a fact or a plan for a goal you already chose: ask your AI directly, or use a planning tool."
+  - "You need help with your health, money, law, addiction or safety: talk to a qualified professional or your local emergency service."
+  - "You want to find how an AI could help your day or work: use the Daily life discovery skill, not this coach."
 you_give:
-  - An adult's explicit request for coaching, a topic, desired mode, and boundaries.
+  - The goal or choice you want to explore
+  - "What kind of help you want: reflection, options, a plan or listening"
+  - Your deadline for deciding (optional)
+  - Limits, like topics to skip (optional)
 you_get:
-  - A user-owned reflection, choice, small experiment, progress review, or deliberate pause.
+  - A short reflection of what you said, in your own words
+  - The options you weighed, with the tradeoffs
+  - One small next step you chose, or a clear choice to pause
+  - A closing check on what changed
 how_it_works:
   - title: Agree on the help
     text: Check scope and whether the person wants reflection, options, a plan, or simple listening.
@@ -24,7 +34,33 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - Where the skill points to ../teach-me/SKILL.md, use the related/teach-me folder inside it. We copied it in so the skill works on its own.
-  - Where the skill points to ../community-guides/SKILL.md, use the related/community-guides folder inside it. We copied it in so the skill works on its own.
+  - Download the skill folder. Use an AI that can read files, such as Claude. You can paste SKILL.md into a chat, but the reference files then will not load.
+  - "Start a chat and say: Follow this skill and coach me on a goal."
+  - "Say what you are working on and what would help: reflection, options, a plan or listening. Mention any deadline or limits."
+  - Answer one question at a time. Say so if a guess is wrong, and say no to any exercise you do not want.
+  - Pick your own next step, or choose to pause. Finish by saying what changed and whether to go on.
+  - The skill points to two related skills, teach-me and community-guides. Copies are in the related folder inside it. You do not need them for coaching.
+output_sample:
+  input:
+    - The goal or choice you want to think through
+    - "What would make the chat useful: reflection, options, a plan, or just listening"
+    - Any limits, like topics to avoid or a deadline (optional)
+  prerequisites:
+    - An adult asking for coaching in their own words
+    - A chat AI that can read the skill files, so it can follow the safety rules
+  output:
+    - name: Agreement on the help
+      contains: A short check of your topic, the kind of help you want and any limits.
+    - name: Reflection
+      contains: Your own words played back, with questions asked one at a time and held as guesses.
+    - name: Options
+      contains: Choices you came up with first, plus more only if you ask, with the tradeoffs.
+    - name: Small next step
+      contains: One step you choose, sized to fit your time and means, with a way to review it.
+    - name: Closing check
+      contains: What changed, whether the chat helped, and whether to continue, pause, switch mode or end.
+when:
+  - You feel stuck on a choice, like changing jobs, and want to talk it through.
+  - You have a goal but keep putting it off, and want to see why.
+  - You want someone to listen first, with no advice.
+  - You want to look back on a goal and see what has changed.

@@ -1,0 +1,147 @@
+name: macOS Spatial/Metal Engineer agent
+summary: Plan a Swift and Metal 3D renderer for Mac and Apple Vision Pro, with GPU drawing for large scenes, gaze and hand input, and frame rate checks.
+headline: macOS Spatial/Metal Engineer agent
+subhead: Describe what you want to draw and which Apple devices must show it. It plans the Metal drawing, the Vision Pro link, the layout and the input. You get a design, draft Swift and Metal code and a profiling list to run.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Drawing thousands of nodes in 3D on a Mac, and then in stereo on Apple Vision
+  Pro, is a speed problem first. Draw each node one at a time and the frame rate
+  falls. Update data on the wrong side of the GPU and it stalls. A Swift and
+  Metal rendering plan has to set a frame budget before it picks any technique.
+
+
+  This agent works from that budget. It plans instanced drawing, buffers that
+  the CPU and GPU share without waiting, hiding what is out of view and cutting
+  detail with distance. For Vision Pro it plans the stereo link, gaze and pinch
+  input, and comfort limits. It also plans how a graph lays itself out, such as
+  force-directed or grouped.
+
+
+  It writes designs and draft code. It cannot build in Xcode, run a GPU capture
+  or wear the headset. The figures in the source profile, such as 90 frames a
+  second with 25,000 nodes, are targets to test on your hardware, not results.
+  It is a role profile from Agency Agents, shared under MIT.
+when:
+  - You want to draw tens of thousands of items, such as a graph or a point cloud, in a Mac app with Metal.
+  - You want the same scene in a window on a Mac and in an immersive view on Vision Pro.
+  - Your Metal drawing drops frames and you want a plan for fixing it.
+  - You need gaze and pinch picking, so a person can select an item in 3D.
+not_for:
+  - You are building the windows and buttons of a visionOS app, with no custom GPU drawing. Use the visionOS Spatial Engineer agent.
+  - You want a 3D experience that runs in a web browser. Use the XR Immersive Developer agent.
+  - Your game runs in Unity or Unreal. Use the Unity Architect agent or the Unreal Systems Engineer agent.
+  - You want an iPhone or iPad app. Use the Mobile App Builder agent.
+you_give:
+  - What you want to draw and how many items, such as a graph of 25,000 nodes or one 3D model
+  - Which devices must show it, such as a Mac only or a Mac and Vision Pro
+  - Your frame rate and memory goals
+  - Where the data comes from and how often it changes
+  - Your existing Swift or Metal code, or notes from a GPU capture, pasted as text (optional)
+you_get:
+  - A frame budget and a rendering plan for the scene
+  - A Vision Pro plan with the stereo link, input and comfort rules, if you need it
+  - A layout plan for how items are placed, if your data is a graph
+  - A table of speed targets to test, marked as targets
+  - Draft Swift and Metal code for the parts you ask for, marked as not run
+  - A profiling checklist to run in Xcode
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe what to draw, how many items, which devices, and your frame rate goal. Paste any Swift or Metal code you already have.
+  - Type "Plan the rendering and give me a frame budget, then draft the pipeline." Your AI asks once for anything missing.
+  - Read the speed targets first. Replace any that do not match your needs with your own numbers.
+  - Build the draft in Xcode and run a GPU capture on your own Mac. Your AI cannot build or profile for you.
+  - If Vision Pro is a target, test on the device and check comfort over a long session before you trust the plan.
+how_it_works:
+  - title: Set the goal and the budget
+    text: It states what is drawn, on which devices, and a time budget per frame. It asks once for missing facts, then marks them.
+  - title: Plan the Metal drawing
+    text: It plans instanced drawing, shared buffers that avoid stalls, hiding items out of view, and lower detail at distance.
+  - title: Plan the layout
+    text: It picks how items are placed, such as force-directed, tiered or grouped, and whether the GPU does the work.
+  - title: Plan Vision Pro
+    text: It plans the stereo link, gaze and pinch picking, steps from a window to full immersion, and comfort and access needs.
+  - title: Plan profiling
+    text: It lists what to capture in Xcode's tools, what to compare with the targets, and what to change if a target fails.
+output_shape: |-
+  GOAL AND ASSUMPTIONS
+    <what is drawn> | <devices> | <frame and memory goals> | <data source> | <assumptions>
+
+  RENDERING PLAN
+    <technique> | <why it helps> | <risk>
+
+  LAYOUT PLAN
+    <method> | <runs on CPU or GPU> | <when it recalculates>
+
+  VISION PRO PLAN
+    <stereo link> | <input> | <comfort and access rules>
+
+  SPEED TARGETS (TO TEST)
+    <measure> | <target> | <how to capture it>
+
+  DRAFT CODE (NOT RUN)
+    <file name> | <what it does>
+
+  PROFILING CHECKLIST AND NEXT STEP
+    <capture> | <what to look for> | <what to change>
+output_sample:
+  input:
+    - What you want to draw and how many items
+    - Which devices must show it, such as Mac and Vision Pro
+    - Your frame rate and memory goals
+    - Your existing Swift or Metal code (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - A Mac with Xcode to build and profile the draft code
+    - An Apple Vision Pro, if that is a target
+  output:
+    - name: Goal and assumptions
+      contains: What is drawn, on which devices, the frame and memory goals and what the plan assumes.
+    - name: Rendering plan
+      contains: Each drawing technique, why it helps and its risk.
+    - name: Layout plan
+      contains: How items are placed and whether the GPU or the CPU does it.
+    - name: Vision Pro plan
+      contains: The stereo link, gaze and pinch input and the comfort rules.
+    - name: Speed targets
+      contains: A table of targets to test with how to capture each one.
+    - name: Profiling checklist
+      contains: What to capture in Xcode, what to look for and what to change.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your Swift and Metal files together and spot a buffer or draw call that wastes time.
+  inputs:
+    - A GPU capture summary from Xcode, pasted as text.
+    - Your Mac model and chip, so the targets match the hardware.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Start with the Mac window only. Add Vision Pro once the Mac version holds its frame rate.
+  - what: Speed targets
+    how: Give your own frame rate and memory limits, so the plan does not use the profile's numbers.
+improve:
+  - Keep your GPU capture results from each run and paste them in next time, so the plan changes only what the numbers show.
+terms:
+  - term: Metal
+    meaning: Apple's tool for programming the graphics card on Mac, iPhone and Vision Pro.
+  - term: Instanced drawing
+    meaning: Drawing many copies of one shape with a single instruction, which is much faster than one at a time.
+  - term: Compositor Services
+    meaning: The Apple framework that lets a Mac app send its drawing to Vision Pro.
+  - term: Stereo rendering
+    meaning: Drawing a scene twice, once for each eye, so it looks three-dimensional.
+  - term: Frame budget
+    meaning: The time you have to draw one frame. At 90 frames a second it is about 11 milliseconds.
+  - term: LOD
+    meaning: Level of detail. Using a simpler shape for items that are far away.

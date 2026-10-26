@@ -1,37 +1,52 @@
 new_slug: post-purchase-flow-builder
 name: Post-purchase flow builder
-summary: "Give it your products and delivery times. Get a six-email flow: thank-you, add-on, how-to, social ask and check-in."
+summary: "Plan the six emails sent after an order. Get the trigger, an order-count split, outlines and subject ideas for each email."
 job: write-emails
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
 headline: Post-purchase flow builder
-subhead: Give it your products, what pairs with each, your delivery time, and how-to steps. It builds the emails sent after someone orders. You get the trigger and filters, a split by order count, six email outlines with subject ideas, and a list of campaign winners to add later.
+subhead: Give it your products, what pairs with each, your delivery time and your how-to steps. It plans the emails sent after someone orders. You get the trigger and filters, a split by order count, six email outlines with subject ideas, and a list of campaign winners to add later.
 explain: |
-  After an order, buyers may want reassurance, useful instructions and clear status updates. This skill plans a sequence to test; it does not guarantee fewer returns or more second orders.
+  After an order, buyers want reassurance, clear instructions and honest status updates. This post-purchase flow builder plans a six-email sequence to test. It does not promise fewer returns or more second orders.
 
-  It starts with a plain-text thank-you, followed by an add-on, a neutral order update, a how-to, one social ask and a check-in. A message can say shipped or arrived only when actual status supports it. Otherwise it labels the estimate and asks about receipt. Wording can differ for first and later orders.
+  The flow starts with a plain-text thank-you from the founder, then an add-on, a neutral order update, a how-to, one social ask and a check-in. The first email changes its wording for first, second, third and later orders.
+
+  It never says "shipped" or "arrived" unless a real order event backs it up. With only an elapsed-time estimate, it labels the estimate and asks if the order arrived. It also keeps unsourced stats out, such as open rates or repeat-buyer spend.
+
 when:
   - Your only email after an order is the shop's own order confirmation.
   - Customers write in asking how to use the product, or return it for avoidable reasons.
   - You want more second orders and don't know where to start.
+  - You are setting up Klaviyo flows for a Shopify store and need the post-purchase one.
+
+not_for:
+  - "You want to plan reorder or refill timing: use the Reorder and second-order planner."
+  - "Your customers have gone quiet for months: use the Win-back flow builder."
+  - "You want shipping updates, a tracking page and a late-parcel script: use the Delivery update flow builder."
+  - "You sell by subscription: this plan is for one-off orders, so use the Subscription cancel flow builder for cancellations."
+
 you_give:
   - Your products or categories, and what pairs with each
   - Your estimated delivery time
   - A mission line, a support address and the one social platform to ask for
   - How-to steps or tips for each product
   - Your review app, if you use one (optional)
-  - Verified shipping or delivery events where available, or the known timing basis and missing status
+  - Verified shipping or delivery events where you have them (optional)
+
 you_get:
-  - A flow spec with trigger, filters and a split by number of past orders
+  - A flow spec with the trigger, filters and a split by number of past orders
   - Six email outlines with subject line ideas
+  - An opening line for first, second, third and later orders
   - Timing for each email and a rule for when to move it
   - A list of campaign winners to copy into the flow later
+
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Open the skill in your AI. Claude, ChatGPT and Gemini all work. Add it to your AI, or copy it and paste it into a new chat.
   - Paste your products, delivery time, how-to tips and mission line.
   - Check that your email tool can split by number of orders and that smart sending is off.
-  - Review email 1 as a plain-text note from the approved sender. Build and send through your own tool only under the agreed sending rules.
+  - Review email 1 as a plain-text note that comes from you. Build the flow in your own email tool.
   - After a month, compare repeat orders inside 30 days with the month before.
+
 how_it_works:
   - title: Sets the trigger
     text: Placed order. A second order starts a new run, and cancelled orders stay out.
@@ -40,28 +55,47 @@ how_it_works:
   - title: Thanks before selling
     text: Email 1 is a plain-text founder note that tells buyers what happens next and offers support. Its goal is to ease buyer's remorse.
   - title: Adds a neutral order update
-    text: Plans an add-on and later update. A delay alone cannot prove shipment. Use on-its-way wording only with reliable status evidence.
+    text: Plans an add-on and an order update. A delay alone cannot prove shipment, so on-its-way wording needs reliable status.
   - title: Teaches and asks once
     text: A how-to by product, then one ask to follow on a single social platform.
   - title: Checks receipt without assuming it
-    text: Use a verified delivery event or a clearly stated timing estimate. Without confirmed receipt, ask whether it arrived and offer help; do not claim arrival or product use.
+    text: Uses a verified delivery event or a clearly stated estimate. Without confirmed receipt, it asks whether the order arrived and offers help.
+
 output_shape: |
   POST-PURCHASE FLOW  <store>
   TRIGGER  placed order | filters: <placed order 0 times since start, cancelled 0> | smart sending off
-  SPLIT    <first | second | third | fourth and more>
+  SPLIT    <first | second | third | fourth and more>, with an opening line for each
 
   1  <0 to 30 min> | founder thank-you, plain text | <next steps, support, P.S.>
-  2  <~24 hours> | add more | <block: best sellers or matched items>
-  3  <stated delay or verified shipping event> | neutral order update, shipment wording only if verified | <status basis and gaps>
-  4  <+3 days> | how to get the most from <product> | <steps, tips, recommended block>
-  5  <+7 days> | follow us on <one platform> | one ask only
-  6  <verified arrival or labelled delivery estimate> | check-in | <ask about receipt if unknown, support, review or reorder link where appropriate>
+  2  <about 24 hours> | add more | <block: best sellers or matched items>
+  3  <stated delay or verified shipping event> | neutral order update | <status basis and gaps>
+  4  <about +3 days> | how to get the most from <product> | <steps, tips, recommended block>
+  5  <about +7 days> | follow us on <one platform> | one ask only
+  6  <verified arrival or labelled estimate> | check-in | <ask about receipt if unknown, support, review or reorder link>
 
   SUBJECT IDEAS   <per email>
   CAMPAIGN WINNERS TO ADD   <list>
   FIRST TESTS     <email 1 timing, then the split>
-  CHECKS MISSED: <none or the list>
+  CHECKS MISSED: <checks that failed, or none>
   MISSING: <what was not given>
+
+output_sample:
+  input:
+    - "Your products or categories, and what pairs with each"
+    - "Your estimated delivery time"
+    - "Your mission line, support address and one social platform"
+    - "How-to steps for each product"
+    - "Your brand brain (optional)"
+  prerequisites:
+    - "An email tool that can split by number of orders, such as Klaviyo"
+  output:
+    - {name: "Trigger, filters and split", contains: "Placed order trigger, filters, smart sending off, and the split by first, second, third and later orders."}
+    - {name: "Email 1", contains: "A plain-text founder thank-you with next steps, support and a P.S., plus an opening line for each order count."}
+    - {name: "Emails 2 to 5", contains: "The add-on, neutral order update, how-to and one social ask, each with timing and sections."}
+    - {name: "Email 6", contains: "A check-in that asks about receipt unless arrival is verified, with support and a review or reorder link."}
+    - {name: "Subject ideas", contains: "A few subject line options for each email."}
+    - {name: "Campaign winners and first tests", contains: "Campaigns to copy into the flow later, and which two tests to run first."}
+
 tweaks:
   - what: Your delivery time
     how: Give a supported delivery range and any known ship date. An elapsed estimate can set a check-in, but it cannot confirm shipment, arrival or product use.
@@ -71,6 +105,7 @@ tweaks:
     how: If it has its own review request flow, the skill leaves the review ask to that flow and avoids a double ask.
   - what: Your margin
     how: A thank-you code in the review email also works as a cross-sell, but may not suit low-margin or subscription products.
+
 judge:
   - Email 1 is plain text from the founder with a clear "what happens next" and no discount.
   - The first email has wording for first, second, third and later orders.
@@ -78,6 +113,7 @@ judge:
   - Email 5 makes one ask only.
   - Time-based claims (open rates, repeat spend) are left out or marked as numbers to check.
   - No shipped, on-its-way, arrived or used-product statement comes from elapsed time alone. Unknown status remains visible.
+
 test:
   - Place a test order and watch the flow. Email 1 should arrive after your shop's own confirmation.
   - Give it an apparel store and a technical product. The how-to email should differ in depth.
@@ -85,11 +121,13 @@ test:
   - Run it twice on the same facts. The email order and filters should match.
   - "Give three elapsed days with no shipping event: write a neutral order update, not an on-its-way claim."
   - "Give a ship date plus an elapsed delivery estimate without a delivery event: ask whether it arrived instead of asserting receipt or use."
+
 improve:
   - Add your real how-to steps and care notes to the skill file, one set per product.
   - Add your mission line and the exact wording you use to offer support.
   - Add campaigns that have worked, such as a proof email, and list when to copy each into the flow.
   - Pair it with the reorder and second-order planner and the win-back flow builder.
+
 works_best_with:
   tools:
     - name: Klaviyo
@@ -103,6 +141,7 @@ works_best_with:
     - A support inbox export of the most common how-to questions
     - Return reasons from the last quarter
     - A list of your best-performing campaigns
+
 terms:
   - term: Buyer's remorse
     meaning: Doubt a person feels soon after buying, such as wondering if they chose well.
@@ -110,3 +149,5 @@ terms:
     meaning: An email with no design, written like a note from a person.
   - term: Smart sending
     meaning: A setting that skips anyone who got another email recently. Turn it off for flows.
+  - term: Order-count split
+    meaning: Sending different wording to first-time buyers and repeat buyers.

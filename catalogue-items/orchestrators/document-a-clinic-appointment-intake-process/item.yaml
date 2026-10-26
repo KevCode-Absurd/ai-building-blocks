@@ -1,6 +1,6 @@
 slug: document-a-clinic-appointment-intake-process
 name: Document a clinic appointment intake process
-summary: Share the source files. Get an administrative intake procedure and unresolved process questions.
+summary: "Write a clear clinic appointment intake procedure for front desk staff. Share your approved process. Get plain steps and a list of open questions."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,24 +10,18 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: question
-    required: false
-  - type: copy_draft
-    required: false
-  - type: brand_brain
+  - type: source_text
     required: false
 outputs:
   - type: document
-  - type: copy_draft
-  - type: feedback_notes
 uses:
   - process-and-sop-writer
   - plain-english-editor
 steps:
   - uses: process-and-sop-writer
-    note: Document administrative booking, identity checks, consent handling, approved information collection and escalation using only the clinic supplied process. Exclude diagnosis and clinical prioritization.
+    note: Document administrative booking, identity checks, consent handling, approved information collection and escalation using only the clinic supplied process. Exclude diagnosis and clinical prioritization. Hands the full procedure and open questions to step 2.
   - uses: plain-english-editor
-    note: Edit the actual administrative procedure produced in the prior step for clear staff actions while preserving approved clinical boundaries and privacy instructions.
+    note: Edit the actual administrative procedure produced in the prior step for clear staff actions while preserving approved clinical boundaries and privacy instructions. Hands back the plain-language procedure and a list of every change.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

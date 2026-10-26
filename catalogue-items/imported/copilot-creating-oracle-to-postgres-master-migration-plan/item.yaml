@@ -12,6 +12,7 @@ inputs:
     required: true
 outputs:
   - type: code_change
+  - type: plan
 uses: []
 origin: imported
 source:

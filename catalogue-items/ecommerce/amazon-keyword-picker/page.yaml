@@ -1,6 +1,6 @@
 new_slug: amazon-keyword-picker
 name: "Amazon keyword picker"
-summary: "Give it your product and a keyword export. Get the phrases for your title, bullets and backend."
+summary: "Find the Amazon keyword phrases for your title, bullets and backend. Give it your product facts and a keyword export, and it marks each phrase use or drop."
 job: sell-on-amazon
 thinking: medium
 thinking_why: "It sorts hundreds of phrases against filters and your product facts, which needs care but no deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You have chosen a product and need the phrases for its Amazon title and bullets.
   - You have a keyword export of hundreds of lines and no time to read it all.
   - Your listing gets few views and you suspect it is missing the phrases buyers type.
+not_for:
+  - "You want keywords for articles or web pages: use a general keyword researcher, as this one works to Amazon title, bullet and backend limits."
+  - "You have a strong, established brand and want bigger phrases: loosen the filters first, as they are set for a new brand."
+  - "You have no keyword export yet: pull one from a keyword tool first, or you get only phrases from your product facts with no volumes."
 
 you_give:
   - Your product facts and benefits
@@ -32,6 +36,30 @@ how_to_use:
   - Paste your product facts, including what is true about it (organic, caffeine free, size, form).
   - Paste the keyword exports for your seed phrases and for two or three competitor ASINs.
   - Check the dropped list for any phrase you disagree with, then pass the tiers to the Amazon listing writer.
+output_sample:
+  input:
+    - Your product facts and benefits, including what is true and untrue
+    - Keyword exports for 2 or 3 seed phrases
+    - Keyword exports for 2 or 3 competitor ASINs
+    - Competitor titles and bullets (optional)
+    - Whether your brand is new or established (optional)
+  prerequisites:
+    - A keyword tool that exports volume, competing products and keyword sales, such as Helium 10
+  output:
+    - name: MAIN PHRASE
+      contains: The product name buyers type most, with its volume estimate and competing products. It goes first in the title.
+    - name: SECONDARY PHRASES
+      contains: Specific, true phrases for the title and bullets, each with volume and why it fits.
+    - name: BULLET PHRASES
+      contains: Phrases for your bullets, each with volume and the benefit it supports.
+    - name: BACKEND ONLY
+      contains: Leftover true phrases, common misspellings and synonyms for the hidden backend field.
+    - name: DROPPED
+      contains: Phrases removed as too generic, brand names, not true for your product, or too competitive.
+    - name: FOR MANUAL ADS
+      contains: The best phrases for manual ad campaigns, each with a match type suggestion.
+    - name: MISSING and CHECKS MISSED
+      contains: Any input you did not give and any check the result failed, or none.
 
 how_it_works:
   - title: Starts from seeds

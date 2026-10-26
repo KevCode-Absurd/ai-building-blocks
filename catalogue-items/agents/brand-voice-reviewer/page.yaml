@@ -1,19 +1,26 @@
 new_slug: brand-voice-reviewer
 name: Brand voice reviewer
-summary: Give it each draft before it goes out. Get it checked against your voice, fixed and re-checked, with repeat slips tracked.
+summary: "Brand voice review for every draft: it fixes only the lines that slip, rechecks up to three rounds, and flags voice mistakes that keep coming back."
 job: brand-file
 thinking: medium
 thinking_why: It checks, rewrites flagged lines and checks again, up to three rounds. A mid-size model works. Use a stronger one for long pages.
 headline: Brand voice reviewer
-subhead: Give it any draft before it goes out, with your brand file. It checks the draft against your voice, rewrites only the lines that fail, checks again until it passes or three rounds are done, and tracks the slips that keep coming back.
+subhead: Give it any ad, email or page before it goes out, with your brand file. It checks the draft against your voice, rewrites only the lines that fail, checks again until it passes or three rounds are done, and tracks the slips that keep coming back.
 explain: |
-  A brand voice slips when many people write and no one checks. Copy goes out that sounds like a different company, or makes a claim you do not make. A single check helps, but a fix can add new slips, and nobody notices the same mistake coming back every month.
+  A brand voice review is easy to skip when many people write and no one checks. Copy goes out that sounds like a different company, or makes a claim you do not make. A single check helps, but a fix can add new slips, and nobody notices the same mistake coming back every month.
 
   This agent checks each draft against your voice guide and ranks what it finds. It rewrites only the flagged lines, never changes a fact, price or claim, and checks again. It stops after three rounds and gives a person what is left. It also counts which slips repeat across drafts, and when one shows up three times, it suggests a rule for your guide. It never publishes or sends anything.
 when:
   - Several people or tools write your copy and it does not always sound like you.
   - You want every ad, email or page checked before it ships, the same way each time.
   - The same voice mistakes keep showing up and you want to fix the cause.
+  - A freelancer or a tool sends you copy and you need a repeatable brand voice check before you approve it.
+not_for:
+  - You have no brand file or voice yet. Build one first with the Brand profile builder or the Brand voice one-pager writer.
+  - You want to check one draft once and read the findings yourself. Use the Draft brand voice checker.
+  - You want a quick polish on a single ad without saving anything. Use the Brand voice editor.
+  - You want to strip stock AI wording rather than match a voice. Use the AI-style wording editor.
+  - The draft is a short internal note that no customer will see. It is more checking than it needs.
 you_give:
   - The draft, and where it will be used
   - Your brand file, with voice, claims and what you do not say
@@ -30,7 +37,31 @@ how_to_use:
   - Give it the draft and your brand file. The first time, give it your voice guide, or let it build one and approve it.
   - Read the final draft and the open flags. Fix what is left yourself.
   - Say yes to any guide rule you want added.
-  - Run it on every draft. It keeps the slip count in a review folder.
+  - Run it on every draft. It keeps the slip count in a review folder, which needs Claude Code or another AI that can save files. In a plain chat, paste the slip list back in next time.
+output_sample:
+  input:
+    - Your draft, and where it will be used
+    - Your brand file, with voice, claims and what you do not say
+    - Your voice guide (optional)
+    - Proof for any claims in the draft (optional)
+  prerequisites:
+    - A brand file, such as one made with the Brand profile builder
+    - An AI that can save files, if you want the repeat slip count kept between drafts (optional)
+  output:
+    - name: Result
+      contains: One line saying passed or not passed, how many rounds it took, and whether the guide used was approved or a draft.
+    - name: Final draft
+      contains: The best round of your draft, with the changed lines marked.
+    - name: What changed
+      contains: Each changed line, the slip it fixed and the round it was fixed in.
+    - name: Still open
+      contains: Any flag left for a person, including claim and legal flags, or none.
+    - name: Repeat slips
+      contains: Slips seen in three or more drafts, with a suggested rule for your guide.
+    - name: Files and missing
+      contains: Each round's saved file, then every MISSING line in one list.
+    - name: Checks missed
+      contains: Each check that failed or could not run, or none.
 how_it_works:
   - title: Get the guide
     text: Uses your voice guide, or builds one from your brand file once and waits for your approval.
@@ -62,6 +93,9 @@ output_shape: |-
 
   FILES AND MISSING
     <each round's file> | MISSING: <every line>
+
+  CHECKS MISSED
+    <each check that failed or could not run>   (or: none)
 tweaks:
   - what: Your voice guide
     how: A real guide with examples gives much better checks than a short list of adjectives. Build one once and keep it.
@@ -95,3 +129,10 @@ works_best_with:
   inputs:
     - Your five best past pieces of copy as examples
     - A list of claims you may and may not make
+terms:
+  - term: Voice guide
+    meaning: A short document that says how your brand sounds, with example lines and words you use or avoid.
+  - term: Slip
+    meaning: One place where a draft does not sound like your brand, such as hype words or the wrong tone.
+  - term: Repeat slip
+    meaning: The same kind of slip found in three or more drafts. The agent then suggests a rule for your guide.

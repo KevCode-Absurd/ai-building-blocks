@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It must be fair, private and clear, so it needs care.
 new_slug: accommodation-process
 name: Workplace accommodation process builder
-summary: Describe your team. Get a workplace accommodation request process, a
-  draft policy and manager guidance.
+summary: "Build a workplace accommodation process: a request path, a draft policy and manager wording that respect privacy. Not legal advice."
 job: hire-people
 headline: Workplace accommodation process builder
-subhead: "Describe your team, your country and any policy you already have. It
-  designs the path from first request to follow-up: who to tell, what to ask and
-  what paperwork to require. You get a step-by-step process, a draft policy,
-  manager wording and a documentation do and don't list. Not legal advice."
+subhead: "Describe your team, your country and any policy you already have. It designs the path from first request to follow-up: who to tell, what to ask and what paperwork to require. You get a step-by-step process, a draft policy, manager wording and a documentation do and don't list. Not legal advice."
 explain: |
   Staff who need a workplace accommodation get a clear, kind way to ask, and managers get guidance on handling requests. It is not legal advice. Check the final version with a lawyer or HR adviser.
 
@@ -19,6 +15,10 @@ when:
   - A manager gets a request and does not know what to say.
   - You want your hiring process to work for candidates with disabilities.
   - You need to explain policy without pressuring anyone to disclose.
+not_for:
+  - "You face a disputed or complex case: ask a lawyer or an HR adviser before you act."
+  - "You need a medical or legal ruling on one person's condition: ask an occupational health expert or a lawyer."
+  - "You only want a general code of conduct or handbook: write that with your HR lead, not this process builder."
 you_give:
   - A short description of your team and its size
   - Your country or region
@@ -31,7 +31,28 @@ you_get:
   - A documentation do and don't list
   - A way to review outcomes over time
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill's instructions.
+  - Describe your team, its size and your country or region.
+  - Add your current policy or a specific request, if you have one (optional).
+  - Ask for the full process, the draft policy and the manager wording.
+  - Read the result, then have a lawyer or HR adviser check it before you use it.
+  - Try it with one manager first, and set a date to review outcomes.
+output_sample:
+  input:
+    - A short description of your team and its size
+    - Your country or region
+    - Your current policy (optional)
+    - A specific request you must handle (optional)
+  output:
+    - name: Accommodation request process
+      contains: Steps from first request to follow-up, with who to tell, what to ask and what to avoid.
+    - name: Draft employee policy
+      contains: Plain wording that tells staff how to ask for help without pressure to share medical details.
+    - name: Manager guidance and sample wording
+      contains: What managers can say and ask, and when to bring in HR or legal.
+    - name: Documentation do and don't list
+      contains: What paperwork to require and what not to request.
+    - name: Accessible hiring and remote work checks
+      contains: Ways to make interviews and remote or hybrid work accessible by default.
+    - name: Outcome review plan
+      contains: A way to check past decisions later for consistency and fairness.

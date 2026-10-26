@@ -1,6 +1,6 @@
 new_slug: marketing-plan-law-checker
 name: "Marketing plan law checker"
-summary: "Paste your marketing plan. Get the laws it breaks, the line behind each, a score and fixes."
+summary: "Check your marketing plan against 13 buyer-mind rules before you spend. You get a score out of 100, the plan line behind each verdict and a fix list."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to read a plan against thirteen tests and judge each one from what the plan really says, so more thinking time finds more faults."
@@ -14,10 +14,14 @@ explain: |
   This skill reads the plan first and says what it is first in, and which rung it holds. Then it runs the thirteen tests one at a time: leadership, category, mind, perception, focus, exclusivity, ladder, duality, opposite, division, line extension, sacrifice and resources. Each gets pass, warn, fail or not applicable, with the line of your plan that shows it. It adds a strategy that fits your rung, and a fix list in order of damage. A fail is a question to answer, not a doom call. Leaders can break some of these rules. Smaller players mostly can't.
 
 when:
-  - You have a launch or marketing plan and want it attacked before you spend.
+  - You have a launch or marketing plan and want it tested before you spend.
   - Your plan says "better quality" or "more choice" and little else.
   - You plan to put your name on a new product or a new customer group.
   - You are second or third in your market and the plan copies the leader.
+not_for:
+  - "Your plan is only a price cut, coupon run or sale: use the Long-run effects checker, which looks at what discounts do over time."
+  - "You only need to know if a brand name can stretch to a new product: use the Brand name stretch checker."
+  - "You want a plan written for you: ask a marketer or use your AI to draft one first. This checker tests a plan, it does not write it."
 
 you_give:
   - Your marketing plan, as rough as it is
@@ -35,6 +39,28 @@ how_to_use:
   - Paste the plan. Add your rivals and what buyers say about each, if you have it.
   - Read the fails first. For each one, check the plan line it quotes and decide if the skill read it right.
   - Take the fix list to your team. Then run "Brand name stretch checker" on any new product, and "One bold move picker" to choose what to back.
+output_sample:
+  input:
+    - Your marketing plan, as written
+    - Your main rivals and what each is known for (optional)
+    - Your brand facts, such as name, products and buyers (optional)
+  output:
+    - name: The plan in one line
+      contains: What you sell, to whom, what is new and where the money goes.
+    - name: Where you sit
+      contains: What the plan is first in, the rung you hold and whether that is evidence or a guess.
+    - name: The thirteen tests
+      contains: A pass, warn, fail or n/a for each rule, with the plan line behind it and one line of why.
+    - name: Score
+      contains: Points out of the tests that apply, shown as a sum and a score out of 100.
+    - name: The strategy for your rung
+      contains: What a leader, second or third place brand does here, and what your plan does instead.
+    - name: Fix list, worst first
+      contains: Up to seven changes to the plan, each tied to a rule and the cost of ignoring it.
+    - name: Keep
+      contains: The parts of the plan that already fit.
+    - name: Missing and checks missed
+      contains: Facts that would change a verdict, and any checks the skill could not finish.
 
 how_it_works:
   - title: Reads the plan

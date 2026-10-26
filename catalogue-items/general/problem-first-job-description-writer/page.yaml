@@ -1,6 +1,6 @@
 new_slug: problem-first-job-description-writer
 name: "Problem-first job description writer"
-summary: "Paste the problem the hire must solve. Get a job description built around it, with success at six months."
+summary: "Write a job description around the problem your new hire must solve. Paste the problem and get a clear six-month picture and only needed skills."
 job: hire-people
 thinking: low
 thinking_why: "It shapes one document from the problem and facts you give it."
@@ -17,6 +17,10 @@ when:
   - "You are hiring for the first time and the role is really a problem with a name."
   - "The last posting brought fifty applicants who could not do the job."
   - "You want the right person to recognise themselves in the first paragraph."
+not_for:
+  - "You are hiring for a high-volume role with a fixed task list: use your standard job template."
+  - "You already have applicants and need to pick between them: use the Applicant shortlist builder."
+  - "You need interview questions, not a posting: use the Interview question set maker."
 
 you_give:
   - "The problem and how you know it is a problem"
@@ -34,6 +38,32 @@ how_to_use:
   - "Add what will be true in six months and the practical facts."
   - "Read THE PROBLEM aloud. If a good candidate would not recognise it, sharpen your input and run again."
   - "Check local posting rules, then post it."
+output_sample:
+  input:
+    - The problem the hire must solve, and how you know it is a problem
+    - What will be true in six months if the hire works out
+    - Who they work with and what tools they use (optional)
+    - Pay range, place and hours (optional)
+    - Your company in two lines (optional)
+  output:
+    - name: TITLE
+      contains: A plain job title people search for, under six words.
+    - name: THE PROBLEM
+      contains: Two to four sentences that open the posting, with the evidence you gave.
+    - name: SIX MONTHS FROM NOW
+      contains: Three to five lines of what will be true, each one you could check.
+    - name: YOU HAVE PROBABLY
+      contains: Two or three past situations that would prepare someone for this problem.
+    - name: SKILLS
+      contains: Only the skills the problem needs, each marked MUST or HELPS.
+    - name: HOW THE WORK HAPPENS
+      contains: Who they report to, who they work with, tools, hours, place and pay.
+    - name: HOW TO APPLY
+      contains: One thing to send, such as a short note on a similar problem they fixed.
+    - name: MISSING
+      contains: Facts you did not give, so nothing is guessed.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Opens with the problem"

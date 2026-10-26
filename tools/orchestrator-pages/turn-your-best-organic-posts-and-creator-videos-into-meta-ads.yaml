@@ -1,6 +1,6 @@
 new_slug: turn-your-best-organic-posts-and-creator-videos-into-meta-ads
 name: "Turn your best posts and creator videos into ads"
-summary: Give it your posts with views and your product facts. Get ranked posts, checked scripts, creator briefs and a test layout.
+summary: Turn your best organic posts into Meta ads. Give it posts with views and product facts. Get ranked posts, checked scripts, creator briefs and a test plan.
 job: launch-and-scale-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A few of your posts beat your normal views and you want to run them as ads.
   - You work with creators and need briefs they can film from without a call.
   - You want to test new video ads against your best ad without wasting spend.
+not_for:
+  - "You do not own the post or have the creator's written yes: ask the creator for permission first, or film a new video from a brief."
+  - "You have fewer than about ten posts: give your own typical view number, so it can still rank them."
+  - "You only want to check one ad against Meta's rules: use the Meta ad policy checker."
 you_give:
   - A list of your posts with views and dates, from your own account or from creators
   - Who owns each account that posted
@@ -32,6 +36,29 @@ how_to_use:
   - Paste your posts with views and dates, and say who owns each account.
   - Get written permission from any creator whose post you run as is. The first step lists who must agree.
   - Send the briefs to creators, then build the test campaign it lays out.
+output_sample:
+  input:
+    - A list of your posts with views and dates
+    - Who owns each account that posted
+    - Your product facts and current offer
+    - Your target cost per sale, daily budget and stock position
+    - Your current campaigns and results by ad (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Written permission from any creator whose post you run as is
+  output:
+    - name: Organic post to ad promoter
+      contains: Posts ranked against your normal views, each marked run as is or reshoot, with who must agree.
+    - name: Video script bridge checker
+      contains: A bridge map and a score out of 100 for each reshoot script, with a tighter script.
+    - name: Meta ads compliance checker
+      contains: A verdict on each script, findings with fixes, and a rewritten script.
+    - name: Creator filming brief writer
+      contains: A brief per creator with the idea, run order, must-haves and file naming.
+    - name: Meta test campaign planner
+      contains: Campaign layout, named ad packs with minimum spend, settings checklist and rules for adding ads.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Organic post to ad promoter
     text: Finds your normal views per post, ranks the posts that beat it, marks each run as is or reshoot, and clears the rights and rules.

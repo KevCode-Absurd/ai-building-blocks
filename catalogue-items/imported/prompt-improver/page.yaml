@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It picks a framework and fills it from your request.
 new_slug: prompt-improver
 name: Prompt improver
-summary: Give it a rough prompt. Get it rebuilt into a clear, structured prompt
-  using a fitting framework.
+summary: Turn a rough request into a clear prompt for any AI. Give it your idea and get a prompt improver result you can paste and use right away.
 job: set-up-ai
 headline: Prompt improver
-subhead: Turn a rough request like "help me code Python" into a clear,
-  structured prompt you can paste straight into any AI. No prompting jargon
-  needed.
+subhead: Turn a rough request like "help me code Python" into a clear, structured prompt you can paste straight into any AI. No prompting jargon needed.
 explain: |
   Turn a rough request like "help me code Python" into a clear, structured prompt you can paste straight into any AI. No prompting jargon needed.
 
@@ -18,6 +15,10 @@ when:
   - Your prompts give generic answers.
   - The task needs step-by-step reasoning, like debugging or planning.
   - You want a reusable prompt for a task you repeat.
+not_for:
+  - "You need live data, research or checked facts: use a web search or an expert in that field, since this only rewrites your prompt."
+  - "You already have a clear, detailed prompt: send it to your AI as it is, because a rewrite adds little."
+  - "You want the AI to do the task itself: ask your AI directly, because this skill only gives back a prompt."
 you_give:
   - Your rough prompt or idea
   - What you will use the answer for
@@ -27,7 +28,21 @@ you_get:
   - Fitting structure for the task
   - Questions only if something key is unclear
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the instructions from this skill into the chat.
+  - Send your rough prompt, such as "help me code Python".
+  - Say what you will use the answer for, and add any limits.
+  - Answer any questions it asks. It asks at most 3.
+  - Copy the prompt from the code block and paste it into a new chat to use it.
+output_sample:
+  input:
+    - Your rough prompt or idea
+    - What you will use the answer for (optional)
+    - Any must-have details or limits (optional)
+  output:
+    - name: Clarifying questions
+      contains: Up to 3 short questions, only when the task type, audience, scope or format is too unclear to guess.
+    - name: Improved prompt
+      contains: Your request rebuilt with a role, a clear task, steps where needed, and the output format you want.
+    - name: Code block
+      contains: The finished prompt sits in one block, so you can copy it and paste it into any AI.

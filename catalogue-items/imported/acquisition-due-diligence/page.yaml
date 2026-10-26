@@ -2,37 +2,92 @@ thinking: high
 thinking_why: Deals have many risks to weigh, so it needs deep reasoning.
 new_slug: acquisition-due-diligence
 name: Acquisition due diligence planner
-summary: Describe the deal. Get a due diligence checklist, valuation checks, red
-  flags and an integration plan.
+summary: "Plan a company purchase or sale: get a due diligence checklist, valuation checks, red flags and an integration plan. Not legal advice."
 job: money-and-investing
 headline: Acquisition due diligence planner
-subhead: Describe the deal, the parties, your reason for it and your timeline.
-  It starts by testing why this deal makes sense, then lists what a buyer
-  reviews and the valuation methods to cross-check the price. You get a due
-  diligence checklist, valuation checks, a red flag list, an integration plan
-  and a pre-signing verification list.
+subhead: Describe the deal, which side you are on, your reason for it and your timeline. Your AI tests whether the deal makes sense, then gives you a due diligence checklist, valuation checks and red flags. You also get an integration plan or a sale preparation plan.
 explain: |
-  Before you sign a deal to buy or sell a company, this skill hands you a due diligence list, valuation checks and an integration plan, so you ask the right questions.
+  Buying or selling a company is easy to get wrong when you do not know what to ask. This skill is an acquisition due diligence planner. It gives you a list of questions to put to the other side before you sign, so you spot problems early.
 
-  It starts with one question: why this deal? The strategic reason has to be clear before anything else. Then comes a checklist covering the areas a buyer reviews, and valuation methods to cross-check the price. For integration, it offers frameworks for the first days after close. If you are the one being bought, it covers readiness signs, six to twelve months of preparation, and negotiation points. It lists red flags for both sides and ends with a check to run before any letter of intent or signature.
+  It starts with one question: why this deal? Before anything else, the buyer should know whether buying beats building, and what is really being bought: people, technology or customers. Then it lists what to check in each area, from finance and legal to people and customers, with the red flags to look for. It gives valuation methods to cross-check a price. The ranges in the original guide are examples, so you check them against current market data.
+
+  If you are the one being bought, it covers readiness signs, six to twelve months of preparation and negotiation points. It ends with checks to run before any letter of intent or signature. It is a planning aid, so a lawyer and an accountant should review the real deal.
 when:
-  - You are weighing the purchase of a smaller company.
-  - You want to sell your business and need to prepare.
-  - You need a list of what to ask in due diligence.
-  - You want a plan for the first 100 days after a deal.
+  - You are weighing the purchase of a smaller company and want a list of what to ask.
+  - You want to sell your business and need to get ready for buyers.
+  - You need a plan for the first 100 days after a deal closes.
+  - You got an offer and want to know which terms to push on.
+not_for:
+  - "You are checking a startup before you invest or join it: use the startup due diligence reviewer."
+  - "You need a request list for an Indian deal, with status tracking: use the due diligence checklist builder."
+  - "You only want to estimate what an early-stage company is worth: use the early-stage valuation estimator or the valuation method comparer."
+  - "You need legal, tax or financial advice, or a formal valuation: hire a lawyer, an accountant or an M&A advisor."
 you_give:
-  - A description of the deal and parties
+  - A description of the deal and the parties
+  - Whether you are buying or being bought
   - Your reason for the deal
-  - Financial figures you have (optional)
   - Your timeline
+  - Financial figures you have (optional)
 you_get:
-  - A due diligence checklist
-  - Valuation checks
-  - An integration plan
-  - A list of red flags
-  - A pre-signing verification list
+  - A short test of why this deal makes sense
+  - A due diligence checklist by area
+  - Valuation checks to cross-check the price
+  - A list of red flags for your deal
+  - A 100-day integration plan, or a sale preparation plan
+  - A pre-signing list with each check marked done, open or not applicable
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, and add the files in the references folder if you can. No code or paid tools are needed.
+  - Say whether you are buying or being bought. Describe the deal, the other party, your reason and your timeline. Paste any figures you have.
+  - Read the "why this deal" test first. If your reason is weak, stop and rethink before you spend on advisors.
+  - Send the checklist to the other side or your advisors. Mark each answer as done or open, and note any red flag.
+  - Check every valuation figure against current comparable deals. Do not trust a figure your AI quotes without a source.
+  - Take the pre-signing list to your lawyer and accountant before you sign anything.
+how_it_works:
+  - title: Test the reason
+    text: It asks why this deal, whether buying beats building, and what you are really buying.
+  - title: Build the checklist
+    text: It lists questions and red flags for finance, tech, legal, people, market and customers.
+  - title: Cross-check the price
+    text: It lists valuation methods and tells you which sources to check for current comparables.
+  - title: Plan what follows
+    text: For a buyer it plans integration. For a seller it plans preparation and negotiation points.
+  - title: List red flags
+    text: It names the warning signs that fit your deal, using only what you told it.
+  - title: Check before you sign
+    text: It gives plain checks on legal terms, data and valuation to run with your advisors.
+output_sample:
+  input:
+    - A description of the deal and the parties
+    - Whether you are buying or being bought
+    - Your reason for the deal and your timeline
+    - Financial figures you have (optional)
+  output:
+    - name: Why this deal
+      contains: A short test of buy versus build and what you are really buying.
+    - name: Due diligence checklist
+      contains: Questions and red flags by area, with what to collect from the other side.
+    - name: Valuation checks
+      contains: Methods to cross-check the price and what to verify against current deals.
+    - name: Red flags
+      contains: Warning signs that fit your deal, drawn from what you told your AI.
+    - name: Integration or preparation plan
+      contains: The first 100 days after close for a buyer, or sale preparation for a seller.
+    - name: Pre-signing list
+      contains: Legal, data and valuation checks, each marked done, open or not applicable.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a planning task in text. Claude, ChatGPT or Gemini can run it from pasted notes.
+  inputs:
+    - The target's financial statements
+    - A draft letter of intent or term sheet
+    - A list of key staff and customers
+terms:
+  - term: due diligence
+    meaning: A careful check of a company's finances, contracts, people and risks before you buy it.
+  - term: letter of intent
+    meaning: An early document that sets out the main terms of a deal before the final contract.
+  - term: earnout
+    meaning: Part of the price paid later, only if the business hits set targets.
+  - term: data room
+    meaning: A secure folder where a seller shares documents with buyers.

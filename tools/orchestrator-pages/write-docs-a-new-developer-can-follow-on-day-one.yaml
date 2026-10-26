@@ -1,6 +1,6 @@
 new_slug: write-docs-a-new-developer-can-follow-on-day-one
 name: Write docs a new developer can follow on day one
-summary: Give it the codebase. Get an architecture read, a README with decisions, a quickstart and a first-run test.
+summary: Write docs for a new developer from your codebase. You get an architecture read, a README with decisions, a quickstart and a first-run test.
 job: document-work
 thinking: high
 thinking_why: It must understand a codebase and explain it accurately to a stranger. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Someone starts in two weeks and the README is two years old.
   - You are the only person who knows why the code is shaped this way.
   - Your last new developer took a month to run the app.
+not_for:
+  - "Your README is already current and nobody is joining soon: skip this and just update the README by hand."
+  - "You need a guide for a business task, not code: write a plain checklist with a colleague who does the work."
+  - "You have no codebase the AI can open, only an idea: sketch the plan with a teammate first."
 you_give:
   - The codebase, in a folder the AI can open
   - Fifteen minutes to answer questions about the decisions behind it
@@ -30,6 +34,28 @@ how_to_use:
   - Open the codebase in Claude Code and start. It reads the architecture and asks you about the decisions.
   - Read the guide and the quickstart. Fix anything that is wrong about your setup.
   - Read the first-run report and fix every broken step before the new developer starts.
+output_sample:
+  input:
+    - Your codebase, in a folder the AI can open
+    - Your answers to a short interview about why the code is built this way
+    - Who the new developer is and what they already know
+    - Your current README and docs (optional)
+  prerequisites:
+    - A coding agent such as Claude Code that can read the project files
+    - A clean machine or container for the first-run test
+  output:
+    - name: Architecture read
+      contains: The parts of the codebase, how they talk, where things live and what is unusual, written for a newcomer.
+    - name: README
+      contains: What the project is, each decision with its reason, and what not to change and why.
+    - name: Onboarding guide
+      contains: Where to start reading, the main flows, the conventions and the gotchas.
+    - name: Quickstart
+      contains: Each command from a clean machine to a running app, with the output to expect and what to do if not.
+    - name: First-run report
+      contains: Each quickstart step marked passed or broke, with any assumed knowledge and a fix.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read the architecture
     text: Describes the parts of the codebase, how they talk and where things live, for a newcomer.

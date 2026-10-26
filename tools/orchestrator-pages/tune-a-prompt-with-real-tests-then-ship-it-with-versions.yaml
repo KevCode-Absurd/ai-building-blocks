@@ -1,6 +1,6 @@
 new_slug: tune-a-prompt-with-real-tests-then-ship-it-with-versions
 name: Tune a prompt with real tests, then keep versions
-summary: Give it a rough prompt. Get a clear version, scores on your tests and safe rules for changing it.
+summary: "Tune a prompt with real tests: give it a rough prompt and your test cases. You get a clear version, scores for each change and rules for safe edits."
 job: set-up-ai
 thinking: medium
 thinking_why: Scoring against test cases is steady work. A mid-size model is enough. The cheapest one may miss subtle misses.
@@ -14,6 +14,10 @@ when:
   - A prompt gives good answers one day and weak ones the next.
   - Several people edit the same prompt and you cannot tell which edit hurt.
   - A prompt runs in a product or a weekly routine, and a bad answer costs you.
+not_for:
+  - "You will use the prompt once and want a quick rewrite: use the Prompt improver on its own."
+  - "You have no way to judge a good answer yet: write down what good looks like first, or ask a teammate who reads the answers."
+  - "You only want rules for editing a prompt you already tested: use the Prompt change manager on its own."
 you_give:
   - The rough prompt
   - What a good answer looks like and who reads it
@@ -30,6 +34,28 @@ how_to_use:
   - Paste the rough prompt and say what a good answer is.
   - When it pauses, write 10 to 20 test cases with the answer you would accept. Include two or three where it failed before.
   - After the scores, save the best version as version 1 in a file, with the test cases beside it.
+output_sample:
+  input:
+    - Your rough prompt
+    - What a good answer looks like and who reads it
+    - Examples of answers that went wrong (optional)
+    - Where the prompt lives and who edits it (optional)
+    - 10 to 20 test cases you write when the workflow pauses
+  prerequisites:
+    - An AI that can read the handoff pack files, such as Claude Code or a Claude Project
+  output:
+    - name: Rebuilt prompt
+      contains: One clear prompt, with a note on what was added or cut.
+    - name: Test case pause
+      contains: Your 10 to 20 test cases, each with an answer you would accept.
+    - name: Scores
+      contains: A baseline score, a score for each version, what each change did and the best version.
+    - name: Version 1 save
+      contains: Your chosen best version, saved in a file with its test cases beside it.
+    - name: Version rules
+      contains: Where prompts live, how versions are named, a check before each change, a small trial and rollback steps.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Rebuild the rough prompt
     text: Works out what the prompt is for, picks a fitting structure, adds the missing context, format and limits, and returns one clean prompt.

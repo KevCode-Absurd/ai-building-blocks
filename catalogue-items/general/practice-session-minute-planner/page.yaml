@@ -1,6 +1,6 @@
 new_slug: practice-session-minute-planner
 name: "Practice session minute planner"
-summary: "Paste the skill, the group and the time. Get a session planned minute by minute with one thing to fix."
+summary: "Plan a practice session minute by minute. Give it the skill, the group and your time. You get timed blocks and a coach card."
 job: teach-and-train
 thinking: low
 thinking_why: "It arranges given basics into timed blocks from a fixed pattern."
@@ -17,6 +17,10 @@ when:
   - "You are training new support agents, sales reps or kitchen staff and have one hour."
   - "You coach a team and the last session drifted."
   - "The same mistake keeps happening and you want a session built around fixing it."
+not_for:
+  - "You need a one-off talk or a lesson with no practice in it: use a standard lesson plan, or write the talk outline yourself."
+  - "You want to score how well people did the skill: use the Task rubric drafter."
+  - "You need a plan for a full course over many weeks: sketch the weekly topics yourself first, then plan each session here."
 
 you_give:
   - "The skill, in one line"
@@ -34,6 +38,31 @@ how_to_use:
   - "Give the exact minutes and what went wrong last time."
   - "Print the COACH'S CARD. Run the session from it, not from the full plan."
   - "After the session, note what the live run showed and feed it into the next plan."
+output_sample:
+  input:
+    - The skill you are teaching, in one line
+    - "Your group: how many people, their level, and last mistakes"
+    - Minutes, room and equipment
+    - The one thing to fix (optional)
+  output:
+    - name: SESSION GOAL
+      contains: One checkable line on what each person will do correctly by the end.
+    - name: BASICS
+      contains: Three to five small parts of the skill in the order they are done, with the fix marked.
+    - name: BLOCKS
+      contains: Timed blocks of 5 to 12 minutes, each with the drill, what to watch for and what to say.
+    - name: THE FIX
+      contains: Where the fix sits, how many repetitions it gets, and the before-and-after check.
+    - name: LIVE RUN
+      contains: The minute it starts, the conditions, and what the coach notes while staying silent.
+    - name: CLOSE
+      contains: "Two lines: one thing done well today and one thing to practise before next time."
+    - name: COACH'S CARD
+      contains: A one-card version of the plan with block, minutes, watch for and what to say.
+    - name: MISSING
+      contains: Any group, time or equipment facts you did not give.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
 
 how_it_works:
   - title: "Sets the goal"

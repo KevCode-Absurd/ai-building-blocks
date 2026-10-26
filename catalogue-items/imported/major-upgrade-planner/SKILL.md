@@ -28,12 +28,28 @@ Master major dependency version upgrades, compatibility analysis, staged upgrade
 
 - The task is unrelated to dependency upgrade
 - You need a different domain or tool outside this scope
+- The update is only a minor or patch version (a normal update is enough)
+- The project has no tests at all (build a basic test or smoke check first, or the plan cannot prove each step worked)
 
 ## Instructions
 
 - Clarify goals, constraints, and required inputs.
 - Apply relevant best practices and validate outcomes.
 - Provide actionable steps and verification.
+
+## Output Format
+
+Give the user a plan with these parts, in order:
+
+1. **Version change**: package, current version, target version, and whether it is a major, minor or patch step.
+2. **Likely breaking changes**: each one with its source (changelog or migration guide). If you have not read the source, write "to check" and do not guess.
+3. **Compatibility table**: columns are Package, Current version, Needed version, Changes first?, Source. Mark unknown cells UNKNOWN.
+4. **Stages**: numbered, one major version or one package per stage, in order.
+5. **Tests per stage**: what to run before moving on (unit, build, integration, end-to-end).
+6. **Rollback point per stage**: a git tag or branch to return to.
+7. **Blocked steps**: any step that needs a supporting file this copy does not include.
+
+Never invent versions, changelog entries or commands. Read the user's dependency file first. If the package, target version or dependency file is missing, ask once, then mark it MISSING. Do not run an upgrade command without the user's say-so, and do not change files. After the plan, suggest the first stage to run.
 
 ## Use this skill when
 
@@ -66,7 +82,7 @@ PATCH: Bug fixes, backward compatible
 # npm
 npm outdated
 npm audit
-npm audit fix
+npm audit fix   # changes your lock file: read the diff, and run it as its own stage
 
 # yarn
 yarn outdated
@@ -203,6 +219,8 @@ npx react-codeshift \
 ```
 
 ### Custom Migration Script
+Warning: this rewrites every matching file. Commit first, run on a copy or branch, and review the diff before keeping it. Only use it when a codemod does not exist.
+
 ```javascript
 // migration-script.js
 const fs = require('fs');
@@ -284,6 +302,8 @@ describe('E2E Tests', () => {
 ## Automated Dependency Updates
 
 ### Renovate Configuration
+Auto-merge is safe only if your tests must pass before a merge. Check that branch protection requires them.
+
 ```json
 // renovate.json
 {
@@ -323,31 +343,26 @@ updates:
 
 ## Rollback Plan
 
-```javascript
-// rollback.sh
-#!/bin/bash
+Before each stage, mark a point you can return to. Ask the user before running any command that discards work.
 
-# Save current state
-git stash
-git checkout -b upgrade-branch
+```bash
+# Before the stage: commit or save your work, then mark it
+git status                      # should be clean
+git tag before-upgrade-<package>
+git checkout -b upgrade-<package>
 
-# Attempt upgrade
-npm install package@latest
+# Do the stage, then test
+npm install <package>@<target>
+npm run test && npm run build
 
-# Run tests
-if npm run test; then
-  echo "Upgrade successful"
-  git add package.json package-lock.json
-  git commit -m "chore: upgrade package"
-else
-  echo "Upgrade failed, rolling back"
-  git checkout main
-  git branch -D upgrade-branch
-  npm install  # Restore from package-lock.json
-fi
+# If tests fail: stop and show the user the errors.
+# Only with the user's OK, return to the marked point:
+#   git checkout <your-main-branch>      (your upgrade branch stays for review)
+#   npm ci                               (restore from the lock file)
 ```
 
 ## Common Upgrade Patterns
+
 
 ### Lock File Management
 ```bash
@@ -362,6 +377,7 @@ yarn upgrade-interactive  # Interactive upgrades
 
 ### Peer Dependency Resolution
 ```bash
+# Last resort only. These hide real conflicts: say so in the plan and test twice.
 # npm 7+: strict peer dependencies
 npm install --legacy-peer-deps  # Ignore peer deps
 

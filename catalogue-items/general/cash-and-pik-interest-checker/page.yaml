@@ -1,53 +1,111 @@
 new_slug: cash-and-pik-interest-checker
 name: Cash and PIK interest checker
 headline: Cash and PIK interest checker
-summary: Separate cash interest from principal growth under one fixed opening-balance PIK period.
+summary: Split a loan's interest for one period into cash paid and PIK interest added to the balance. Get both amounts and the new loan total.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Cash interest, capitalized interest and ending principal. Share opening principal, fixed cash coupon, fixed PIK coupon, agreed year fraction and capitalization timing.
+subhead: Give it the loan balance at the start, the cash rate, the PIK rate and the part of the year covered. It works out the cash you pay, the interest added to the loan and the new balance. If a number is missing, it says so and stops.
 explain: |-
-  Cash interest, capitalized interest and ending principal.
+  Some loans charge two kinds of interest at once. One part is paid in cash. The other part, called PIK interest (paid in kind), is added to the loan, so the loan grows. This cash and PIK interest checker keeps the two apart. You see what you pay now and what you will owe later.
 
-  Private credit interest. Illustrative figures only. 100 at8% cash and4% PIK for one year costs8 cash and adds4 principal. Half a year halves both charges.
+  Both rates apply to the same starting balance and the same part of the year. Only the PIK part joins the loan. The cash part goes into your cash plan. It does not charge cash interest on the PIK part in the same period, unless your contract says to.
+
+  It first checks that the loan really pays both at once. If the borrower can choose cash or PIK each period, that is a different case, and the skill says so. Practice numbers: 100 at 8% cash and 4% PIK for one year is 8 paid in cash, 4 added, and a new balance of 104.
 when:
-  - You need cash interest, capitalized interest and ending principal.
-  - You work on private credit interest and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A loan note says 8% cash and 4% PIK, and you want to know what you pay and what gets added.
+  - A lender statement shows a new balance, and you want to check the added interest.
+  - You are building a cash plan and need paid interest kept apart from interest that grows the debt.
+  - A reviewer asks where the total interest cost comes from.
+not_for:
+  - The borrower can pick cash or PIK each period. This skill assumes both parts always apply, so read the contract first.
+  - You need several years, repayments or changing rates. Use the Floating rate repricing planner for rate changes, or the Debt cash sweep checker for paydowns.
+  - You need the interest on a note that turns into shares. Use the Convertible note interest checker.
 you_give:
-  - Opening principal, fixed cash coupon, fixed PIK coupon, agreed year fraction and capitalization timing.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The loan balance at the start of the period (from the lender statement)
+  - The cash rate and the PIK rate, each per year (from the loan agreement)
+  - The part of the year covered, or the start and end dates and the contract's day count
+  - The date PIK interest is added to the balance (from the loan agreement)
+  - The currency and units, such as USD millions
+  - Your own loan spreadsheet (optional)
 you_get:
-  - Cash interest, capitalized interest and ending principal.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Cash interest for the period
+  - PIK interest added to the loan
+  - The new loan balance
+  - Total interest cost, cash plus PIK
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste the loan terms: the starting balance, both rates, the period and when PIK is added. Say the currency and units. Attach the page of the agreement if you can."
+  - "Ask your question in plain words, such as: how much cash do we pay this year, and what will the loan be at the end?"
+  - Check one line yourself. Cash interest is balance times cash rate times the share of the year. PIK uses the PIK rate. Only PIK goes onto the balance.
+  - Read MISSING and CHECKS MISSED before you use any figure.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Confirm coupons are simultaneous cash and PIK components, not an elective toggle; identify when PIK capitalizes
-    text: Confirm coupons are simultaneous cash and PIK components, not an elective toggle; identify when PIK capitalizes.
-  - title: 2. Apply each annual coupon to opening principal and the same contractual year fraction
-    text: Apply each annual coupon to opening principal and the same contractual year fraction.
-  - title: 3. Add only PIK interest to principal and keep cash interest in the cash funding schedule; reconcile total interest burden
-    text: Add only PIK interest to principal and keep cash interest in the cash funding schedule; reconcile total interest burden.
+  - title: Reads the contract terms
+    text: Confirms the loan pays both coupons at the same time, not as a choice, and notes when PIK is added to the loan.
+  - title: Applies each rate
+    text: Multiplies the starting balance by each yearly rate and the same share of the year, using the contract's day count.
+  - title: Splits cash from PIK
+    text: Puts cash interest in the cash schedule. Adds only the PIK interest to the loan.
+  - title: Checks the total
+    text: Adds cash and PIK interest and ties the total back to the inputs.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given and lists checks it could not run. It never fills a gap with zero.
 output_shape: |-
-  Cash interest, capitalized interest and ending principal.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Cash interest <amount> | PIK interest added <amount> | Ending loan balance <amount> | Total interest <amount>
+
+  SCOPE AND SOURCES
+  <period, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <opening balance, cash rate, PIK rate, share of year, day count, date PIK is added>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of total interest to cash plus PIK>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The loan balance at the start of the period
+    - The cash rate and the PIK rate, each per year
+    - The share of the year, or the dates and day count
+    - The date PIK interest is added to the balance
+    - Your own loan spreadsheet (optional)
+  prerequisites:
+    - The loan agreement or lender statement that shows both rates
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Cash interest, PIK interest added, the ending loan balance and total interest.
+    - name: SCOPE AND SOURCES
+      contains: The period, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that cash plus PIK equals total interest.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: No cash-interest charge on same-period PIK unless the contract specifies that convention.
+  - what: Half a year
+    how: Change the share of the year. Both charges shrink by the same amount.
+  - what: Different day count
+    how: Tell it the day count in your contract, such as actual days in the year, and it uses that.
+  - what: Interest on the PIK part
+    how: Say so if your contract charges cash interest on PIK in the same period. By default it does not.
 judge:
   - No cash-interest charge on same-period PIK unless the contract specifies that convention.
   - Annual rates and year fraction follow actual day count.
@@ -62,15 +120,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the loan agreement that sets both rates and when PIK is added
+    - The lender statement for the period
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: PIK interest
+    meaning: Interest paid in kind. It is added to the loan instead of being paid in cash.
+  - term: Capitalized interest
+    meaning: Interest that has been added to the loan balance.
+  - term: Year fraction
+    meaning: The share of a year the interest covers. Half a year is 0.5.
+  - term: Day count
+    meaning: The rule your contract uses to count days in a year.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+  - term: Illustrative figures
+    meaning: Practice numbers that show how the sums work. They are not a real loan.

@@ -1,6 +1,6 @@
 new_slug: rival-matchup-scorer
 name: Rival matchup scorer
-summary: Describe you and a rival. Get a side-by-side on the five factors, with where to fight and where to avoid.
+summary: Compare you and a rival on five factors and see where to fight and where to stay out. A rival matchup scorer with ranked options.
 job: study-competitors
 thinking: medium
 thinking_why: It weighs evidence on both sides and ranks options, but the factors are fixed.
@@ -14,6 +14,10 @@ when:
   - You are about to go up against a bigger rival and need to know where you can win.
   - You are choosing between fighting a rival on price, avoiding them, or going after a gap they ignore.
   - A rival just launched something and you have to decide whether to respond.
+not_for:
+  - "You need to decide whether to launch now: use the Go or no-go launch checker."
+  - "You have no facts about the rival yet: gather what you know first, or ask a customer or your sales team."
+  - "You want a list of features and prices side by side: use a simple table in a spreadsheet."
 you_give:
   - "A description of you: product or service, customers, team, money and time"
   - A description of the rival in the same terms
@@ -30,6 +34,29 @@ how_to_use:
   - Say what you do not know about the rival. It marks those points as guesses.
   - Read the ranked options first, then the thin spots.
   - Pick one position to hold, and one opening to wait for.
+output_sample:
+  input:
+    - "A description of you: product or service, customers, team, money and time"
+    - A description of the rival in the same terms
+    - The contest in one line, such as a market, a tender or a customer group
+    - A competitor set from your own research (optional)
+  output:
+    - name: The contest
+      contains: One line naming both sides and what they compete for.
+    - name: Scores
+      contains: Each side rated 1 to 5 on five factors, with evidence or a GUESS flag, and a total out of 25.
+    - name: The seven questions
+      contains: Answers on leaders, timing, ground, rules, people and fairness, with guesses marked.
+    - name: Options, cheapest first
+      contains: Four ways to face the rival, ranked by cost, with the best one marked.
+    - name: Where they are thin
+      contains: Places the rival is stretched, slow or unready, and where it is strong.
+    - name: Cost of a long contest
+      contains: The time, money and people a drawn-out fight would take from you.
+    - name: Hold first, then wait for
+      contains: One position you can defend, and the opening to wait for.
+    - name: Missing and checks missed
+      contains: Facts it lacked and any of its own checks that failed, or none.
 how_it_works:
   - title: Sets the contest
     text: Names the two sides and the exact thing they compete for.

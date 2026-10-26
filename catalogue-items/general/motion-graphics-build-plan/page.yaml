@@ -1,6 +1,6 @@
 new_slug: motion-graphics-build-plan
 name: "Motion graphics video build planner"
-summary: "Paste your graphic script and attach cutouts. Get an exact build plan and a text table with sources."
+summary: "Turn a motion graphics script into a build plan for a video ad, with every number, chart and product shot checked and built exactly as written."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have a motion graphics script and want it built without a single wrong number.
   - Your last AI-made graphic ad came back with misspelled words or a redrawn label.
   - You want to build ads in code with Claude Code and need a clear plan to hand it.
+not_for:
+  - "You want a still image ad or an ad with no fixed numbers: write the brief yourself or ask your AI for a simple image prompt."
+  - "You have no script yet: write one first with the Motion graphics video ad script writer, then bring it here."
+  - "You want a video model to film people or a scene: this plan only builds graphics, so hire a video editor or use a video tool directly."
 
 you_give:
   - The script from the motion graphics script skill (look card, fact sheet, shot table, cast note)
@@ -36,6 +40,32 @@ how_to_use:
   - Approve the product card, pick a test frame, then approve the theme and the style frames.
   - For code, open Claude Code in a Remotion project and give it the theme and scene list.
   - Watch the preview at phone size and check every number against the text table before the final render.
+output_sample:
+  input:
+    - Your motion graphics script (look card, fact sheet with sources, shot table)
+    - Cutouts of your product with the background removed
+    - Your font files, logo and colour codes (optional)
+    - Your route, code or editor, and whether you want moving backgrounds (optional)
+  prerequisites:
+    - Claude Code with a Remotion project, only if you build in code
+    - A video tool, only if you want moving backgrounds
+  output:
+    - name: Script check and canvas
+      contains: Whether every number has a source and every chart starts at zero, plus the canvas size, frame rate and safe area.
+    - name: Product card
+      contains: Which cutout each shot uses, its size, shadow and voice, and what must never change. Stops for your OK.
+    - name: Test frames
+      contains: Three or four frames of your cutout on the background, varying only shadow, size or crop.
+    - name: Product sheet and theme
+      contains: Your cutouts with label lines checked, plus colour codes, fonts, sizes and easing every scene shares.
+    - name: Storyboard
+      contains: One style frame per shot with layers back to front and every move timed in frames.
+    - name: Build
+      contains: A Remotion scene list or editor layer list, and wordless background prompts if you want them.
+    - name: Text table and edit list
+      contains: Each shot's exact text, timing and source, plus voice, music, end card and preview render.
+    - name: Checks missed
+      contains: One line for each check the plan still missed, or none.
 
 how_it_works:
   - title: Checks the script

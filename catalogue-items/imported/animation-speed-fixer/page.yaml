@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must spot which code makes the screen redraw.
 new_slug: animation-speed-fixer
 name: Animation speed fixer
-summary: Point it at stuttering animations. Get each slow spot found and a small
-  fix that smooths it.
+summary: Fix animation lag on your website. Give it your slow animation code. You get each slow line, why it lags, and a small fix.
 job: build-websites
 headline: Animation speed fixer
-subhead: Animations that stutter make a good product feel cheap. Point this
-  skill at the troubled code and it finds each slow spot, explains the cause in
-  one sentence, and gives a small fix.
+subhead: Animations that stutter make a good product feel cheap. Point this skill at the troubled code and it finds each slow spot, explains the cause in one sentence, and gives a small fix.
 explain: |
   Animations that stutter make a good product feel cheap. Point this skill at the troubled code and it finds each slow spot, explains the cause in one sentence, and gives a small fix.
 
@@ -18,6 +15,10 @@ when:
   - A menu or card slide drops frames on phones.
   - You added a blur effect and the interface got heavy.
   - You want a check on animation code before it goes live.
+not_for:
+  - "You build a native phone app: use the tools made for that platform, such as Xcode Instruments or Android Studio profiler."
+  - "You want a first look at what is slow: use the Performance tab in your browser devtools, then come back with the code."
+  - "Your page has no motion at all: there is nothing to fix, so check image size and page load instead."
 you_give:
   - The file or component with the animation
   - What feels slow, and on which device
@@ -28,8 +29,24 @@ you_get:
   - A concrete code fix
   - A list of safer properties to animate
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste the file or component with the slow animation. If your AI can read files, upload it instead.
+  - Say what feels slow and on which device, for example a menu that drops frames on phones.
+  - Read each quoted line and its reason, then paste in the fix that suits you.
+  - Test again on the same device to check the motion is smooth. This skill reads code only and does not run your page.
+output_sample:
+  input:
+    - The file or component that holds the animation
+    - What feels slow, and on which device (optional)
+    - The animation library you use, such as GSAP or Motion (optional)
+  prerequisites:
+    - An AI that can read your code files, or code you can paste into the chat
+  output:
+    - name: Violations
+      contains: Each slow line of code, quoted exactly as it appears in your file.
+    - name: Why it matters
+      contains: One short sentence on why that line makes the screen redraw too much.
+    - name: Concrete fix
+      contains: A code change you can paste in, such as moving from width to transform.
+    - name: Safer properties
+      contains: Which properties are cheap to animate, like transform and opacity, and which cost more.

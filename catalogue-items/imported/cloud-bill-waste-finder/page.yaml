@@ -2,36 +2,101 @@ thinking: medium
 thinking_why: It reads cost data and ranks the easy savings.
 new_slug: cloud-bill-waste-finder
 name: Cloud bill waste finder
-summary: Point it at your AWS account. Get idle and unused resources listed,
-  with the savings for each fix.
+summary: Find idle servers, loose disks and other AWS waste, with a ranked list of fixes and what each could save you every month.
 job: ship-and-host
 headline: Cloud bill waste finder
-subhead: A list of AWS resources you pay for but do not use, with the savings
-  from fixing each. Point it at your account and it reviews your spending, finds
-  the waste and tells you what to switch off or shrink.
+subhead: Give it read-only access to your AWS account, or a Cost Explorer export. It finds spending you can cut, such as idle servers, unattached disks and old snapshots. You get a table sorted by monthly saving. It lists fixes and never deletes anything.
 explain: |
-  A list of AWS resources you pay for but do not use, with the savings from fixing each. Point it at your account and it reviews your spending, finds the waste and tells you what to switch off or shrink.
+  An AWS bill rises for quiet reasons: a test server nobody switched off, a disk left behind, a backup from two years ago. This skill is an AWS cost checker. It reads your spending and your resources, then ranks what to fix by money saved.
 
-  It uses the AWS command line and Cost Explorer. First it breaks spending down by service, region and tag, and flags months where cost jumped. Then it hunts for idle servers with low CPU, disks not attached to anything, old snapshots, unused fixed IP addresses, quiet databases and old storage files that could move to cheaper tiers. It checks where commitment plans or smaller instance sizes would cut cost, and adds an estimated saving for each action.
+  First it breaks your bill down by service, region and tag, and flags the months where cost jumped. Then it looks for idle servers with low CPU, disks not attached to anything, old snapshots, unused fixed IP addresses and quiet databases. It also checks whether a savings plan or a smaller server size would cut the bill.
+
+  Every row says why it was flagged and how sure the AI is. A saving it cannot measure is marked unknown. Nothing is stopped or deleted until you confirm each resource in writing.
 when:
   - Your AWS bill rose and you cannot see why.
   - You suspect forgotten test servers and disks are still running.
-  - You want to know if a savings plan would pay off.
-  - You need a list of fixes ranked by dollars saved.
+  - You want to know if a savings plan or a smaller server would pay off.
+  - Your boss wants a list of cloud savings ranked by dollars.
+not_for:
+  - You only want this month's total. The AWS Billing console shows it faster.
+  - Your cloud is Azure or Google Cloud, not AWS. This skill only reads AWS accounts.
+  - You want a GitHub issue per finding. Use the AWS resource cost reviewer.
+  - You want to change a live production system with no test copy. Ask an engineer who knows the setup to do the fixes.
 you_give:
-  - AWS command line access with read rights
-  - Cost Explorer access
-  - The time period to review
-  - Resources to leave alone (optional)
+  - AWS command line access, signed in with read-only rights
+  - The period to review, such as the last 3 months
+  - Tags, accounts or resources to leave alone (optional)
+  - A Cost Explorer export as a CSV, if you cannot give command line access (optional)
 you_get:
-  - Spend by service, region and tag
-  - A list of idle and unused resources
-  - Estimated savings per fix
-  - Right-sizing suggestions
-  - Commitment plan options
+  - Spend by service, region and tag, with the months that jumped
+  - A table of idle and unused resources, sorted by monthly saving
+  - A reason and a confidence level for every row
+  - Right-sizing and savings plan options
+  - A list of what it could not check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and connect to your AWS account.
+  - Pick an AI that can run commands, such as Claude Code, and set up the AWS command line with a read-only login. In a plain chat, run each command yourself and paste the results back.
+  - Know that Cost Explorer charges for each request it receives. Ask your AI to keep the number of requests low, and check the current price on the AWS pricing page.
+  - Paste the skill, then give the period and the leave-alone list. The AI works out the dates, so you do not type any.
+  - Read the findings table. Check each flagged resource in the AWS console before you act on it.
+  - Confirm each fix by name, for example "yes, delete vol-123". Take a snapshot first for any disk.
+  - Make the changes yourself or approve a script that does only what you confirmed. Set an AWS Budget alert so the next jump is caught early.
+how_it_works:
+  - title: Read the bill
+    text: It pulls 3 to 6 months of Cost Explorer data and finds the top five services, the growth rate and any month that jumped.
+  - title: Hunt for waste
+    text: It looks for unattached disks, unused IP addresses, old snapshots, low-CPU servers and quiet databases, region by region.
+  - title: Price each fix
+    text: It estimates the monthly saving for each row and marks anything it cannot measure as unknown.
+  - title: Check commitments and sizes
+    text: It tests whether a savings plan or a smaller instance size would lower the bill.
+  - title: List, then wait
+    text: It hands back the table and the first three fixes. It runs no stop or delete command until you confirm each resource.
+output_shape: |
+  Spend summary: <top 5 services> | <growth rate> | <months that jumped>
+  Findings table: <resource ID> | <type> | <region> | <why flagged> | <est. monthly saving> | <suggested action> | <confidence>
+  Commitment options: <plan or reserved instance> | <usage it rests on> | <what to check>
+  Right-sizing list: <instance> | <current size> | <CPU read> | <smaller size to try>
+  Not checked: <regions, accounts or services it could not read>
+  Next step: <first three fixes>
+output_sample:
+  input:
+    - AWS command line access with read-only rights
+    - The period to review, such as the last 3 months
+    - Tags or resources to leave alone (optional)
+    - A Cost Explorer CSV export (optional)
+  prerequisites:
+    - An AI that can run commands, or a way to paste results back to it
+    - Cost Explorer turned on in your AWS account
+    - A read-only login, not an admin one
+  output:
+    - name: Spend summary
+      contains: Your top five services by cost, how fast spend is growing and any month that jumped.
+    - name: Findings table
+      contains: Each idle or unused resource with region, reason, estimated monthly saving, action and confidence.
+    - name: Commitment options
+      contains: Where a savings plan or reserved instance might pay off, and what you must check first.
+    - name: Right-sizing list
+      contains: Servers that look too big, with the CPU readings behind each call.
+    - name: Not checked
+      contains: Regions, accounts or services the AI could not read, so you know the gaps.
+    - name: Next step
+      contains: The first three fixes to make and a reminder to set a budget alert.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the AWS command line for you and show each command before it runs.
+    - name: Any good chat AI
+      why: Works if you run the commands yourself and paste the results, or paste a Cost Explorer CSV.
+  inputs:
+    - A Cost Explorer export grouped by service and by month
+    - Your tag rules, so costs can be split by team or project
+    - A list of accounts and regions you really use
+terms:
+  - term: Cost Explorer
+    meaning: AWS's own tool for charts and data about what you spend. Each request to its API is billed.
+  - term: Snapshot
+    meaning: A saved copy of a disk at one moment, kept in case you need to restore it.
+  - term: Savings plan
+    meaning: A deal where you promise to spend a set amount for a year or more and pay less per hour.
+  - term: Right-sizing
+    meaning: Moving a server to a smaller size that still does the job.

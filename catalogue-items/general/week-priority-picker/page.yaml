@@ -1,6 +1,6 @@
 new_slug: week-priority-picker
 name: Week priority picker
-summary: Paste your task list and real hours. Get the big tasks that matter, three priorities and tomorrow's list.
+summary: Paste your task list, real hours and main goal. Get the big tasks that matter, three weekly priorities with protected time and tomorrow's list.
 job: plan-strategy
 thinking: low
 thinking_why: It sorts a list against your hours, with a fixed result.
@@ -14,6 +14,10 @@ when:
   - Your list is long and the main project has not moved.
   - You are starting a week and want a plan that fits your hours.
   - You keep putting off the same task.
+not_for:
+  - "You have one urgent deadline and no list to sort: just block time for that task and start it today."
+  - "You need a roadmap for a whole team: use a shared project planner or a planning meeting with your team."
+  - "You want the full version with every check: use the Weekly big-task sorter."
 you_give:
   - Every open task, with rough hours
   - Your real hours this week
@@ -28,6 +32,28 @@ how_to_use:
   - Count real hours, after meetings and travel.
   - Include promises you made to others.
   - Run it again at the start of each week.
+output_sample:
+  input:
+    - Every open task, with rough hours
+    - Your real hours this week, after meetings and travel
+    - Your main goal this month, in one sentence
+  output:
+    - name: BIG
+      contains: Each big task with its hours and a short reason it moves your goal.
+    - name: SMALL
+      contains: Each small task marked to batch on a day, hand to a named person, or drop.
+    - name: LEVER
+      contains: The one task that makes several others easier, and what it helps.
+    - name: PUT OFF LONGEST
+      contains: The task you have avoided longest and a verdict on whether it moves your goal.
+    - name: HOURS
+      contains: The total hours of big tasks set against your real hours, with the sums shown.
+    - name: THREE PRIORITIES
+      contains: Three tasks in order, each with a day, hours and what done looks like.
+    - name: TOMORROW
+      contains: Tomorrow's tasks with start times.
+    - name: MISSING
+      contains: Any hours or effort you did not give, so you know what the plan lacks.
 how_it_works:
   - title: List everything
     text: Every task with rough hours.

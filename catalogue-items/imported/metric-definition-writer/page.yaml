@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The format is strict, but the definition needs your business rules.
 new_slug: metric-definition-writer
 name: Metric definition writer
-summary: Tell it how a metric is worked out. Get one agreed definition as
-  checked YAML your team can reuse.
+summary: Write one agreed metric definition as checked YAML. Give it the calculation and who uses it. You get a file for dbt that ends the query arguments.
 job: document-work
 headline: Metric definition writer
-subhead: One agreed definition for a metric, written as YAML that a tool can
-  check and your team can reuse. It ends the arguments over how a number is
-  worked out when two teams run different queries for the same thing.
+subhead: One agreed definition for a metric, written as YAML that a tool can check and your team can reuse. It ends the arguments over how a number is worked out when two teams run different queries for the same thing.
 explain: |
   One agreed definition for a metric, written as YAML that a tool can check and your team can reuse. It ends the arguments over how a number is worked out when two teams run different queries for the same thing.
 
@@ -18,6 +15,10 @@ when:
   - You are setting up the dbt Semantic Layer and need metric files.
   - A leader asks how churn is calculated and no one can point to a source.
   - You are writing a data catalog entry for a key model.
+not_for:
+  - "You need one number for a one-off question: write a plain SQL query instead."
+  - "You only want a written note about a data table: add an entry to your data catalog instead."
+  - "You have no agreed rule yet for how the metric is worked out: settle it with the data owner first, then come back."
 you_give:
   - The metric or model name
   - The calculation as SQL, a formula or plain steps
@@ -30,8 +31,28 @@ you_get:
   - dbt-ready field names
   - Notes on edge cases
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Download the skill folder and open it in an AI that can run code, such as Claude with file access.
+  - "Say: use the semantic model builder skill to define my metric. Then paste the metric name, the calculation, who uses it and what a good value looks like."
+  - Add your source tables and any YAML you already have (optional). Say if you need dbt Semantic Layer field names, and which dbt version.
+  - Let your AI run the template script, fill in the YAML, then run the checking script.
+  - Read the validation report and the edge case notes. Fix anything flagged, then get the data owner to confirm the definition.
+  - Save the final files and share them with your team.
+output_sample:
+  input:
+    - The metric or model name
+    - The calculation as SQL, a formula or plain steps
+    - Who uses it, what decision it informs and what a good value looks like
+    - Your source tables and column names (optional)
+    - Existing YAML to check (optional)
+  prerequisites:
+    - An AI that can run code, so it can run the template and checking scripts
+    - The skill folder, which holds the scripts and reference notes
+  output:
+    - name: assets/metric_definition.yaml
+      contains: The filled metric definition, with its calculation, business context, edge cases and known traps.
+    - name: assets/dimension_definition.yaml
+      contains: The filled dimension definition, if you asked for dimensions.
+    - name: assets/entity_definition.yaml
+      contains: The filled entity definition, if you asked for entities.
+    - name: Validation report
+      contains: A check of required fields, types and links between items, shown in the chat.

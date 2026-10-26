@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: Where the item sits on the body decides if the photo looks real.
 new_slug: accessory-try-on-photo-maker
 name: Accessory try-on photo maker
-summary: Give it a shoe, bag, watch or necklace photo. Get a prompt that puts it
-  on a person.
+summary: Make an accessory try-on photo from your product shot. Give it a shoe, bag, watch or necklace photo and get a prompt that puts it on a model.
 job: product-photos
 headline: Accessory try-on photo maker
-subhead: Give it a clear product photo, a reference photo of the model and
-  scene, and where the item should sit. It writes the image prompt with exact
-  placement, perspective and shadow rules that keep the product unchanged. You
-  get the prompt, and the on-model picture once your image tool draws it.
+subhead: Give it a clear product photo, a reference photo of the model and scene, and where the item should sit. It writes the image prompt with exact placement, perspective and shadow rules that keep the product unchanged. You get the prompt, and the on-model picture once your image tool draws it.
 explain: |
   A real-looking person can wear your shoe, bag, watch, glasses or necklace in a photo made from your product picture.
 
@@ -19,6 +15,10 @@ when:
   - You have a flat product photo and need a lifestyle version.
   - You want the same scene with a different product in it.
   - You need the product to stay true to the real item.
+not_for:
+  - "You want clothing on a model: this skill is for worn items like glasses, watches and bags, so use a photographer or a clothing try-on tool."
+  - "You need photos of real customers or a real shoot: a person must take those, and marketplaces may ask you to label made-up images."
+  - "You only have a blurry, cropped or cluttered product photo: retake the photo first, or the product will not stay true."
 you_give:
   - A clear photo of the product
   - A reference photo of the model and scene
@@ -30,9 +30,28 @@ you_get:
   - Rules that keep the product unchanged
   - The finished on-model image, once your image tool runs it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Add your product photo, your model photo and where the item should be worn.
+  - Read the prompt it writes. Check the placement line and the keep-unchanged rules.
+  - To get the picture, run the prompt in your image tool. It uses paid credits and a key, so do a cost check first.
+  - Ask for 2 to 4 versions, pick the best, and fix any problem with the fix-up lines.
+  - Label the image as illustrative where a marketplace asks for it.
+output_sample:
+  input:
+    - "A clear photo of your product (optional: more angles of it)"
+    - A reference photo of the model and scene
+    - Where the item should sit, such as nose bridge, wrist or neck
+  prerequisites:
+    - An image tool that can edit with several pictures, with an account or key, which costs credits
+    - An AI that can run code, if you want it to draw the image for you
+  output:
+    - name: Image prompt
+      contains: One block of text that names the product, the model photo, the exact placement and what must not change.
+    - name: Placement line
+      contains: Where the item sits on the body, with perspective, scale and contact shadow.
+    - name: Keep-unchanged rules
+      contains: Orders to keep product shape, colour, hardware and logo the same, and leave face and background alone.
+    - name: Fix-up lines
+      contains: Extra sentences to add if the item sits wrong, looks too big, doubles up or changes the face.
+    - name: On-model image
+      contains: One portrait JPEG per run, with 2 to 4 versions to pick from if you ask for them.

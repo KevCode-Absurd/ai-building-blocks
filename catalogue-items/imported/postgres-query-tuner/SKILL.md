@@ -8,18 +8,26 @@ date_added: "2026-02-27"
 
 # Supabase Postgres Best Practices
 
-Comprehensive performance optimization guide for Postgres, maintained by Supabase. Contains rules across 8 categories, prioritized by impact to guide automated query optimization and schema design.
+Postgres performance rules maintained by Supabase, in 8 categories ordered by impact. Use them to tune one slow query, or the table and settings it depends on, one change at a time.
 
-## When to Use
-Reference these guidelines when:
-- Writing SQL queries or designing schemas
-- Implementing indexes or query optimization
-- Reviewing database performance issues
-- Configuring connection pooling or scaling
-- Optimizing for Postgres-specific features
-- Working with Row-Level Security (RLS)
+## What you need
 
-## Rule Categories by Priority
+- The slow query, as plain SQL.
+- The definitions of the tables it reads, with their existing indexes.
+- Optional but useful: EXPLAIN ANALYZE output for the query, table sizes, how often the query runs, and database settings.
+
+If the query or the tables are missing, ask once. If they are still missing, say what you cannot judge and write `MISSING: <what>`. Never invent table names, columns, sizes or timings. You cannot run SQL in a chat, so ask the user to run EXPLAIN ANALYZE and paste the result.
+
+## Steps
+
+1. **Read the query and tables.** List what the query reads, joins, filters and sorts on. Note anything missing.
+2. **Read the plan.** If the user gave EXPLAIN ANALYZE output, find the slowest step (for example a sequential scan on a large table). If not, ask for it before guessing.
+3. **Match a rule.** Use the category prefixes below to find the rule file in `rules/` that covers the slow step. Read it before you write the fix. If the rule files are not available in this chat, say "rule file not available" and apply the category from general Postgres knowledge.
+4. **Apply the top fix only.** Rewrite the query or write the index, type or settings change. Use the user's own table and column names, not the rule file's examples.
+5. **Say what it costs.** For example a larger index, slower writes, or a table lock while an index builds. Check the rule file for a note on this.
+6. **Re-measure.** Ask the user to run it on a copy of the database and paste a second EXPLAIN ANALYZE. Compare the two runs. If the query is still slow, go back to step 2 for the next fix.
+
+## Rule categories by priority
 
 | Priority | Category | Impact | Prefix |
 |----------|----------|--------|--------|
@@ -32,32 +40,54 @@ Reference these guidelines when:
 | 7 | Monitoring & Diagnostics | LOW-MEDIUM | `monitor-` |
 | 8 | Advanced Features | LOW | `advanced-` |
 
-## How to Use
+## Rule files
 
-Read individual rule files for detailed explanations and SQL examples:
+Read individual rule files for the explanation and SQL examples:
 
 ```
 rules/query-missing-indexes.md
-rules/schema-partial-indexes.md
+rules/query-partial-indexes.md
 rules/_sections.md
 ```
 
-Each rule file contains:
-- Brief explanation of why it matters
-- Incorrect SQL example with explanation
-- Correct SQL example with explanation
-- Optional EXPLAIN output or metrics
-- Additional context and references
-- Supabase-specific notes (when applicable)
+Each rule file contains: why it matters, an incorrect SQL example, a correct SQL example, optional EXPLAIN output or metrics, more context and references, and Supabase-specific notes where they apply.
 
-## Full Compiled Document
+For the full compiled guide with every rule expanded, see `AGENTS.md`.
 
-For the complete guide with all rules expanded: `AGENTS.md`
+## Output
 
-### When to Use
-This skill is applicable to execute the workflow or actions described in the overview.
+For each change, in order:
+
+- **Slow step**: what the plan shows and where.
+- **Change n**: the name of the fix and its rule file.
+- **Before** and **After**: the SQL.
+- **Why it helps**: one or two plain sentences.
+- **Cost**: what it adds or slows down.
+- **Test it**: what to run on a copy and what to compare.
+- **Next**: the next change to try if the query is still slow.
+
+End with **Not checked**. Do not promise a speed-up. The rule files quote figures from their own examples, and the user's database will differ.
+
+## Checks
+
+- Every change names a rule file, or says "rule file not available".
+- Every SQL snippet uses the user's real table and column names.
+- Index and settings changes come with a cost note and a test step on a copy.
+- You did not run, or claim to have run, any query.
+
+## When not to use
+
+- The database is not Postgres.
+- The user wants the whole app and schema reviewed. Use the Postgres performance tuner skill.
+- The user wants new tables designed. Use the Postgres schema designer.
+- A live database is failing now. Tell the user to get a database admin first.
+
+## Credit and licence
+
+These rules were written by Supabase. This copy comes from the `sickn33/agentic-awesome-skills` collection, whose written content is under CC BY 4.0 (see `LICENSE-CONTENT`). Keep the credit to Supabase and sickn33 when you reuse it.
 
 ## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+- Use this skill only when the task clearly matches Postgres query, schema or settings tuning.
+- Do not treat the output as a substitute for tests on your own data, a security review, or approval before costly or destructive changes.
+- Stop and ask if required inputs, permissions, safety boundaries or success criteria are missing.

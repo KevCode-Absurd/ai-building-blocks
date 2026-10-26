@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: product_photos, required: true}
   - {type: product_data, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: document}
 uses: []

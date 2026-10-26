@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Safety reports need exact structure and careful wording.
 new_slug: clinical-report-draft-checker
 name: Clinical report draft checker
-summary: Give it de-identified case or trial data. Get a structured report draft
-  and checks for gaps.
+summary: Check a clinical report draft for gaps and numbers that don't add up. Give it de-identified facts and get a marked draft outline.
 job: document-work
 headline: Clinical report draft checker
-subhead: Give it de-identified case or trial data. Get a structured report draft
-  and checks for gaps. Bring de-identified or synthetic facts. Use the result to
-  plan your next step.
+subhead: Give it de-identified or made-up facts, each with a source. It builds a draft outline for your report type and checks it for gaps and numbers that do not add up. Every page is marked as a draft.
 explain: |
   A structured draft for a clinical case, trial or safety report, plus checks that show what is missing or inconsistent. It works only with de-identified or invented data, and every output is marked as a draft not for clinical use.
 
@@ -16,22 +13,48 @@ explain: |
 when:
   - You are drafting a case report and need a proper outline.
   - You want to check your tables for numbers that do not add up.
-  - You need to see which required sections are empty.
-  - You must keep a record of the source of each fact.
+  - You need to see which required sections are still empty.
+  - You must keep a record of where each fact came from.
+not_for:
+  - "You want a diagnosis, treatment advice or dosing: ask the responsible doctor or other qualified clinician."
+  - "You need an individual case safety report or a reportability decision: use your safety physician or regulatory professional."
+  - "You want to sign, file or send a report: a qualified person must review and submit it through your official route."
 you_give:
-  - De-identified or synthetic facts
-  - The report type
-  - Source records for each fact
+  - A list of de-identified or made-up facts, each with an ID and a source note
+  - The report type, such as case report, trial report or safety report
+  - Your tables of counts (optional)
   - A reporting guide you follow (optional)
 you_get:
-  - A structured draft
-  - A list of gaps and inconsistencies
-  - A source tracking sheet
-  - Checks on tables and sections
-  - Draft markers on every page
+  - A structured draft marked as not for clinical use
+  - A list of gaps and missing details
+  - A source sheet that links each fact to its record
+  - Results of checks on your tables and sections
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on local files.
+  - Remove all real patient details. Use only de-identified or made-up facts. Raw patient notes are not accepted.
+  - Write your facts as a list with an ID and a source for each one. Ask your AI to follow this skill.
+  - Pick the report type and ask your AI to make the blank template first.
+  - Fill in only facts you can verify. Ask your AI to run the checks.
+  - Read the gap list and the failed checks. Fix the facts yourself. Never let the AI guess.
+  - This needs an AI that can run Python code on files. In a plain chat, you get the outline and a manual checklist.
+output_sample:
+  input:
+    - A list of verified facts, each with an ID and a source note, in synthetic or de-identified form
+    - The report type, such as case report, diagnostic report, trial report or safety report
+    - Your tables of counts, if the report has them (optional)
+    - The reporting guide you follow (optional)
+  prerequisites:
+    - An AI that can run Python 3.11 or newer on local files
+    - Facts that are already de-identified or made up, never real patient records
+  output:
+    - name: Report template
+      contains: An empty JSON outline for your report type, with no clinical content filled in.
+    - name: Draft report
+      contains: The outline filled only with your verified facts, with a draft warning on every page.
+    - name: Source-fact manifest
+      contains: Each fact with its ID and where it came from, so every line can be traced.
+    - name: Gap list
+      contains: Missing dates, units, outcomes or empty sections that a person must resolve.
+    - name: Consistency check results
+      contains: Numbers that do not add up, such as counts larger than their totals.
+    - name: Review notes
+      contains: What a qualified reviewer must check before anyone uses the draft.

@@ -1,7 +1,7 @@
 new_slug: shareholder-distribution-coverage
 name: Shareholder distribution coverage
 headline: Shareholder distribution coverage
-summary: Compare dividends and net repurchases with independently reconciled equity cash flow.
+summary: Check if dividends and net buybacks fit within equity free cash flow. You get a bridge showing the funding surplus or shortfall.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
   - You work on public equity and share counts and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You want to know if a dividend is sustainable or whether to buy or sell: ask a licensed financial adviser, as this tool only checks one period."
+  - "You need coverage based on FCFF or EBITDA: build that in your own spreadsheet, as this tool uses equity free cash flow only."
+  - "You only have announced buybacks that have not been carried out: wait for the cash-flow statement, as only executed repurchases count."
 you_give:
   - Cash dividends, actual repurchases, equity issuance proceeds and a sourced free-cash-flow-to-equity schedule for matching periods.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,29 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Cash dividends for each period
+    - Executed share repurchases for each period
+    - Equity issuance proceeds for each period
+    - Your free-cash-flow-to-equity schedule, with sources
+    - Currency, scale and fiscal calendar
+  prerequisites:
+    - An AI that can create and read spreadsheet files, for the workbook
+    - Node.js 20 or later, to run the bundled calculation (optional)
+  output:
+    - name: Distribution bridge
+      contains: Dividends plus net repurchases compared with equity free cash flow, showing the surplus or shortfall.
+    - name: Scope and dated sources
+      contains: The periods, currency, scale and the source page for each input.
+    - name: Inputs and assumptions
+      contains: Every input and assumption, kept apart from reported facts.
+    - name: Model calculations and reconciliations
+      contains: The formulas, plus debt movement and cash balance reconciliations.
+    - name: Actual file verification
+      contains: The checks that ran on the workbook, such as recalculation and reopening the saved file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not supplied and any checks that failed or could not run.
 how_it_works:
   - title: 1. Identify distributions and equity issuance separately in the cash-flow statement; exclude announced but unexecuted buybacks
     text: Identify distributions and equity issuance separately in the cash-flow statement; exclude announced but unexecuted buybacks.

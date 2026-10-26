@@ -2,17 +2,56 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-board-and-investor-communication
 name: Board and investor update planner
-summary: Share company facts and decisions due. Get a board story, investor
-  update and questions to prepare for.
+summary: Plan your board meeting and investor update. Share your numbers and decisions due. Get a board story, an update draft and questions to prepare for.
 job: plan-strategy
 headline: Board and investor update planner
-subhead: Share company facts and decisions due. Get a board story, investor
-  update and questions to prepare for. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI your company numbers and the decisions you need from the board. It builds a board story, an investor update draft and a list of likely questions. It also helps you plan how to share bad news early.
+not_for:
+  - You have no board yet, as a pre-seed founder. Talk to your advisers or first investors in a short email instead.
+  - You need one short message, such as a thank-you or an intro. Write it yourself or ask your AI for a quick draft.
+  - You need the full financial model behind your numbers. Ask your finance lead or accountant to build it first.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tools are needed.
+  - "Gather your numbers first: ARR, burn, runway, targets against actuals, and your last update."
+  - Paste them in with the decisions you need from the board. Say if you have bad news.
+  - Ask for a board plan, an investor update, or both.
+  - Check every number against your own records. Your AI must not guess figures.
+  - Send the pre-read 48 to 72 hours before the meeting.
+output_sample:
+  input:
+    - Your current ARR, burn and runway
+    - Your metric targets and what you actually hit
+    - Your last investor update (optional)
+    - The decisions you need from the board
+    - Any bad news you must share, such as a missed target (optional)
+  output:
+    - name: Board meeting plan
+      contains: A pre-read list and a meeting agenda that puts the story first and the data second.
+    - name: Three Things story
+      contains: What is working, what is not, and what you are doing about it.
+    - name: Metric scorecard
+      contains: Your metrics sorted into four tiers, with a green, yellow or red health mark.
+    - name: Bad news plan
+      contains: How to tell the board about a miss before the meeting, and what to say.
+    - name: Monthly investor update
+      contains: A short draft built from your numbers, wins, misses and asks.
+    - name: Questions to prepare for
+      contains: Questions your board is likely to ask, so you can plan your answers.
+when:
+  - A board meeting is coming and you need a plan for it.
+  - You missed a target and must tell your board and investors.
+  - It is time for your monthly investor update.
+  - Your board meetings feel long and you want clearer decisions.
+you_give:
+  - Your current ARR, burn and runway
+  - Your metric targets and your actual results
+  - The decisions you need from the board
+  - Your last investor update (optional)
+  - Any bad news or misses to share (optional)
+you_get:
+  - A board meeting plan with a pre-read list and agenda
+  - "A Three Things story: what works, what does not, and the fix"
+  - A metric scorecard sorted by importance
+  - A plan for sharing bad news before the meeting
+  - A draft monthly investor update
+  - A list of questions to prepare for

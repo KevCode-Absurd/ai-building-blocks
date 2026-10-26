@@ -1,6 +1,6 @@
 ---
 name: marketing-brief-writer
-description: Use before you hire a writer or agency, or when a campaign did not work and you cannot say why. Records what has been tried, who buys and who does not, why people really buy, states the one thing to say, checks whether the offer should change first, and ends with the action and how it will be counted. Ends with what is missing and any of its checks it missed.
+description: Use before you hire a writer or agency, or when a campaign did not work and you cannot say why. Records what has been tried, who buys and who does not, why people really buy, states the one thing to say, checks whether the offer should change first, and ends with the action and how it will be counted. Not for briefs on one buyer's doubts (use the Buyer brief writer) or designer briefs for ad images (use the Ad test brief writer). Ends with what is missing and any of its checks it missed.
 ---
 
 # Marketing brief writer
@@ -9,27 +9,29 @@ Good marketing starts with a brief, and a brief starts with facts about results 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+This skill runs in any chat AI. It needs no files, web access or paid tools. One fact is required: what you sell. The skill never invents a result, a quote or a buyer.
+
+**What you need:**
+- **What you sell** (yours): a few lines, with facts such as price and who it is for.
 
 **Makes it better (optional):**
-- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **What you tried before** (yours): emails, ads, posts or mailings, with what each brought in.
+- **Customer words** (yours): reviews, support messages or call notes. The [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder) turns them into buying reasons.
+- **Your offer** (yours): price, terms, guarantee and delivery.
+- **Brand notes** (yours): voice, and claims you may and may not make.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+**Recommended steps before this one** (optional):
+1. If you have reviews or support emails, run the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring the reviews.
+2. If you cannot say how you differ from rivals, run the [Product differentiation checker](https://useaiblocks.com/skills/product-differentiation-checker). Bring your product facts.
 3. This one.
 
-**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
-
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, customer words, your offer. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they have already pasted or attached, including an about-me note or brand notes. In Claude Code, look in the project too.
+2. **If what you sell is missing,** ask for one or two lines about the product in one short message, even if the user has said go ahead. If only optional items are missing, go ahead and mark them `MISSING:`.
+3. **Do the job.** Mark each gap with `MISSING:` and never invent a result, a quote or a buyer. Say each point once. In CHECKS MISSED, name only the checks that failed, or write "none".
 
 **Tools that do this best:**
-- **Any good chat AI:** Turning notes into a one-page brief is text work any strong chat AI handles well.
+- **Claude, ChatGPT or Gemini:** Turning notes into a one-page brief is text work.
 - **Your email or order export:** Real numbers on past results make the first section solid instead of a guess.
 <!-- /needs -->
 
@@ -46,32 +48,66 @@ How to start:
 1. **Record what has been tried.** For each past attempt (emails, ads, posts, mailings, a launch), write what it was, when, the spend if known, and the result as a number or "unknown". If nothing was tried, write that. Ask the person to fill gaps before going on.
 2. **List who buys and who does not.** For buyers: who they are, when they buy, and how they found you. For non-buyers: who looked and left, and why, as far as the input shows. Mark every guess as a guess.
 3. **Find why people really buy.** List the reasons buyers gave in their own words, with the source. Next to them, list the reasons the maker gives. Mark where they differ. A reason that appears only on the maker's side goes under "unproven".
-4. **State the one thing to say.** Write one sentence a stranger could repeat: who it is for, what they get, why it beats the other options. Do this before any thought of tone, slogans or style. If you cannot write it from the evidence, write what is missing instead of making one up.
+4. **State the one thing to say.** Write one sentence a stranger could repeat: who it is for, what they get, why it beats the other options. Do this before any thought of tone, slogans or style. If you cannot write it from the evidence, write the best draft you can from the product facts, label it "draft, no buyer proof", and say what is missing.
 5. **Check the offer.** Ask whether a small change to the product, price, terms or guarantee would add more value than any wording could. List up to three such changes, each with the buyer reason that supports it and the cost to the seller, if known. Say "none found" if none are supported.
 6. **Pick the action.** Choose the single action you want the reader to take, such as buy, book, reply or visit. Write the exact next step and where it happens.
-7. **Decide how it will be counted.** Name the measure (sales, replies, bookings), the source of the number, the date to read it, and what result would count as working. If the person has no baseline, say what to record from today.
-8. **Add the practical parts.** Write the audience, the tone in one line taken from the brand file, the claims allowed and not allowed, and who signs the work off.
+7. **Decide how it will be counted.** Name the measure (sales, replies, bookings), the source of the number, the date to read it, and what result would count as working. Always propose a measure that fits the action, even with no baseline. If there is no baseline, write "today's number: MISSING" and say what to record from today. Never leave the whole section blank.
+8. **Add the practical parts.** Write the audience, the tone in one line taken from the brand notes, the claims allowed and not allowed, and who signs the work off.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
-## What you hand back
+## Output format
 
-A one-page brief: goal, what has been tried, who buys and who does not, why they really buy, the one thing to say, the offer check, the action and how it will be counted. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+Use these headings, in this order:
+
+```
+GOAL
+<what the work must achieve, in one line, with a number if you have one>
+
+WHAT HAS BEEN TRIED
+<attempt> | Result: <result or unknown>
+
+WHO BUYS AND WHO DOES NOT
+Buyers: <who, when, why> | Non-buyers: <who, why not>
+
+WHY THEY REALLY BUY
+<reason in their words> | Source: <review, call or MISSING>
+
+THE ONE THING TO SAY
+<one sentence>
+
+THE OFFER CHECK
+<small change worth trying first, or none found>
+
+THE ACTION AND THE COUNT
+Action: <what the reader does> | Counted by: <measure, source and date>
+
+PRACTICAL NOTES
+Audience: <who> | Tone: <one line> | Claims allowed and not allowed: <list> | Sign-off: <who>
+
+MISSING
+<what would sharpen the brief, or none>
+
+CHECKS MISSED
+<one line per check still missed, or none>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Company mantra writer](https://useaiblocks.com/skills/company-mantra-writer). It takes the buyer brief.
-- **Test the idea with real people** with the [Business model guess tester](https://useaiblocks.com/skills/business-model-guess-tester). It takes the buyer brief.
-- **Shape the product** with the [Weak part design-out planner](https://useaiblocks.com/skills/weak-part-design-out-planner). It takes the buyer brief.
+- **Get designer briefs to test the idea** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
+- **Turn the brief into one numbered goal and a test calendar** with the [One-goal marketing plan builder](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the brief.
+- **Test the one thing to say cheaply** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Check before you hand it back
 
 - Every question about past results, buyers and non-buyers is answered or marked unknown.
-- The message fits in one sentence.
-- The brief names how results will be counted.
+- The message fits in one sentence, or is labelled a draft with what is missing.
+- The brief names how results will be counted, even if the baseline is MISSING.
 - The offer is checked, not just the wording.
+- Reasons to buy come from customers, or are marked unproven.
+- The output uses the headings above.
 
 ## If something is missing
 

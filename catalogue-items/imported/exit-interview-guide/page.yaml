@@ -2,34 +2,96 @@ thinking: high
 thinking_why: Fair handling of complaints needs careful steps.
 new_slug: exit-interview-guide
 name: Exit interview and grievance guide
-summary: Describe the case. Get a fair step-by-step way to handle it, plus exit
-  interview questions. Not legal advice.
+summary: Get exit interview questions that draw honest answers, plus a fair six-step way to handle an employee complaint. Not legal advice.
 job: hire-people
 headline: Exit interview and grievance guide
-subhead: A fair, documented way to handle an employee relations case, plus exit
-  interview questions that get honest answers. It is guidance for HR, not legal
-  advice.
+subhead: Describe an employee who is leaving or a complaint that landed on your desk. Your AI writes exit and stay interview questions, or a six-step plan to handle the complaint fairly with a neutral case record. It is guidance for HR, not legal advice.
 explain: |
-  A fair, documented way to handle an employee relations case, plus exit interview questions that get honest answers. It is guidance for HR, not legal advice.
+  People who leave often say what they think is polite, and a complaint can go wrong at the first note you write. This exit interview guide helps with both: questions that get honest answers, and a fair order of steps for a grievance.
 
-  For exits, it writes a question list, advises on keeping the talk private and calm, and shows how to read answers across many leavers for turnover trends. It also writes stay interview questions to learn what keeps your best people. For grievances and investigations, it lays out the steps in a sensible order and asks you to check local law and company policy. It covers related items such as improvement plans, remote work policies and employee surveys.
+  For exits, it writes about 10 questions by theme, tells you who should run the talk, and shows how to tag answers so you can spot turnover patterns each quarter. It also writes stay interview questions to learn what keeps your strongest people.
+
+  For a complaint, it gives six steps: intake, acknowledge, fact-finding plan, decide, communicate with an appeal, and close. Each step has a short output, and the case record stays neutral. It asks for your policy and local rules, and it will not state a legal rule for you.
 when:
   - An employee is leaving and you want real feedback, not polite answers.
-  - You want to find out why people quit and spot patterns.
-  - A grievance has landed and you need a fair step-by-step process.
+  - You want to find out why people quit and spot patterns across leavers.
+  - A complaint landed and you need a fair, step-by-step process.
   - You want stay interviews to keep your strongest people.
+not_for:
+  - "The complaint is about harassment, discrimination or safety: use the Workplace investigation guide and talk to an employment lawyer."
+  - "Two people are in conflict and need a talk: use the Workplace conflict mediation guide."
+  - "You need the leaving checklist, handover and access removal: use the Offboarding plan builder."
+  - "You are planning to fire someone: use the Termination risk checker first."
 you_give:
-  - Description of the case or exit
-  - Role and team of the person (optional)
-  - Your company policy and local rules (optional)
+  - A description of the exit or the complaint, with no names
+  - The role and team (optional)
+  - Your company policy and any local rules you know (optional)
   - Past exit feedback (optional)
 you_get:
-  - Exit interview question list
+  - Exit interview questions grouped by theme
+  - Notes on who should run the talk and how to keep it calm
+  - A method to spot turnover trends each quarter
   - Stay interview questions
-  - Step-by-step case handling plan
-  - Method to spot turnover trends
+  - A six-step complaint plan with an output for each step
+  - A neutral case record template
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill.
+  - For an exit, say the role, the team and why the person is leaving if you know. For a complaint, describe what was reported in neutral words and leave names out.
+  - Paste your own policy if you have one. Do not paste legal letters or medical details.
+  - Read the questions or the case plan. Cut any question you would not ask out loud.
+  - For a complaint, have your HR lead or a lawyer check the plan before you act.
+how_it_works:
+  - title: Pick the job
+    text: It asks if this is an exit, a stay interview or a complaint, and what you already know.
+  - title: Write the questions
+    text: It writes exit or stay interview questions by theme and notes who should lead the talk.
+  - title: Plan the trends
+    text: It shows how to tag answers by theme and add them up each quarter.
+  - title: Run the six steps
+    text: For a complaint it covers intake, acknowledgement, fact-finding, decision, appeal and closing.
+  - title: Keep the record neutral
+    text: It writes notes that record what was said or seen, not guesses about intent.
+  - title: Check the limits
+    text: It stops and points you to a lawyer for serious claims and does not state local law as fact.
+output_shape: |
+  ## Exit interview questions
+  <theme>: <question>
+  ## How to run the talk
+  ## Trend method
+  ## Stay interview questions
+  ## Case plan
+  1 Intake / 2 Acknowledge / 3 Fact-finding plan / 4 Decide / 5 Communicate and appeal / 6 Close
+  ## Case record template
+output_sample:
+  input:
+    - A description of the exit or the complaint, with no names
+    - The role and team (optional)
+    - Your company policy and local rules (optional)
+    - Past exit feedback (optional)
+  output:
+    - name: Exit interview questions
+      contains: About 10 questions grouped by theme, including why the person is leaving.
+    - name: How to run the talk
+      contains: Who should lead it, where to hold it and how to keep it calm.
+    - name: Trend method
+      contains: How to tag answers by theme and add them up each quarter.
+    - name: Stay interview questions
+      contains: Questions to learn what keeps a strong person and what might make them leave.
+    - name: Case plan
+      contains: Six steps for a complaint, each with a short output.
+    - name: Case record template
+      contains: A neutral note with dates, facts, who was present and next steps.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a writing and planning job. Claude, ChatGPT or Gemini all do it well.
+  inputs:
+    - Your grievance or disciplinary policy
+    - Your last year of exit feedback, without names
+terms:
+  - term: Grievance
+    meaning: A formal complaint from an employee about how they were treated at work.
+  - term: Stay interview
+    meaning: A talk with a current employee about what keeps them and what might make them leave.
+  - term: Retaliation
+    meaning: Punishing someone for raising a concern.

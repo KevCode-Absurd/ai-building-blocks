@@ -1,6 +1,6 @@
 new_slug: one-buyer-ad-copy
 name: "Get ad copy for one buyer, built on one fact"
-summary: "Give it customer reviews and product facts. Get a buyer brief, ten first lines, the ad copy and headlines to test."
+summary: "Write ad copy for one buyer from your customer reviews and product facts. Get a buyer brief, ten first lines, the ad and headlines to test."
 job: write-ad-copy
 
 headline: "Ad copy for one buyer, built on a fact you can prove"
@@ -15,6 +15,10 @@ when:
   - Your ads open on the product name or a vague promise, and people scroll past.
   - You have reviews and product facts but no clear idea who the ad should speak to.
   - You want a set of first lines, an ad and headlines you can test against each other.
+not_for:
+  - You have no reviews yet. Collect at least a dozen real customer words first, or ask a few buyers why they bought.
+  - You only want ad first lines. Use the Ad opening writer and reviewer, or the Ad hook writer for a quick batch.
+  - You already have an ad and only want a fresh headline. Use the Ad headline writer.
 
 you_give:
   - Customer reviews, copied as written
@@ -34,6 +38,27 @@ how_to_use:
   - Have your inputs ready. Paste at least a dozen real reviews, and your product facts with prices and any claims you can prove.
   - It works step by step and saves each result. Read the buyer brief first. If the buyer or moment is wrong, every line after it is too.
   - Pick the first line and headline you like, put them on the ad, and run them against each other.
+output_sample:
+  input:
+    - Your customer reviews, copied as written
+    - Your product facts, such as price, ingredients or materials, and how it is used
+    - Your brand file (optional)
+    - Your platform's limits for headline and main text (optional)
+  prerequisites:
+    - An AI that can read files, so it can follow HANDOFF.md and save each step's result
+  output:
+    - name: Buyer brief
+      contains: The buyer, the moment they started looking, what holds them back, and short quotes in their words.
+    - name: Angle brief
+      contains: How much the buyer knows, how the ad opens and argues, and what it asks for.
+    - name: First lines
+      contains: Ten first lines that name the buyer's moment, each scored out of 100.
+    - name: Ad copy
+      contains: The ad built on one product fact, with the source beside every line.
+    - name: Headlines
+      contains: Short headlines with character counts, and the one to test first.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Writes the buyer brief
@@ -78,18 +103,18 @@ example:
     BUYER BRIEF
     Moment: after the third tub of greens powder went stale | Stops them: "Is this just candy?"
     Their words: "tastes like grass", "never finish the tub"
-    
+
     FIRST LINES (3 of 10)
     The tub you never finish. (84/100)
     Greens you can eat from a pouch. (78/100)
-    
+
     AD COPY
     Fact: 6g fiber per pack (product page)
     Most greens go in a shaker. This one goes in your bag: 6g of fiber in a pack you tear open.
-    
+
     HEADLINES
     Greens without the shaker (24) ... Test first: Greens without the shaker
-    
+
     MISSING: grams of sugar per pack
 
 tweaks:

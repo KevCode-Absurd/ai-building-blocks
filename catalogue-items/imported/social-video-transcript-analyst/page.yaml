@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads long transcripts and pulls out the key parts.
 new_slug: social-video-transcript-analyst
 name: Social video transcript analyst
-summary: Give it video posts. Get the hooks, claims, quotes and themes pulled
-  from what was said. Collects data from websites.
+summary: Pull hooks, claims and quotes from social video transcripts. Give it video links and get a report of what was said and ideas to reuse.
 job: research-topics
 headline: Social video transcript analyst
-subhead: The words spoken in social videos, pulled apart into hooks, claims,
-  quotes and themes you can reuse. You give video links, and the skill collects
-  the transcripts and studies what was said.
+subhead: The words spoken in social videos, pulled apart into hooks, claims, quotes and themes you can reuse. You give video links, and the skill collects the transcripts and studies what was said.
 explain: |
   The words spoken in social videos, pulled apart into hooks, claims, quotes and themes you can reuse. You give video links, and the skill collects the transcripts and studies what was said.
 
@@ -18,6 +15,10 @@ when:
   - You need a summary of a long video without watching it.
   - You want to compare what ten creators say about one topic.
   - You want to repurpose a podcast clip into posts.
+not_for:
+  - "You have no ScrapeCreators API key: paste the transcript yourself into your AI, or ask a person to type it up."
+  - "The video is private or needs a login: this skill only reads public posts, so copy the words by hand."
+  - "The video has no spoken words or no transcript: it can only fall back on the title and caption, so watch it yourself."
 you_give:
   - Links to the videos
   - "What you want from them: summary, hooks or quotes"
@@ -29,8 +30,27 @@ you_get:
   - Common themes across videos
   - Content ideas based on what was said
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - Get a ScrapeCreators API key from scrapecreators.com. Check their site for current plans and costs before you start.
+  - Open an AI that can run code and use the web, and add your key when it asks.
+  - Paste the skill, then paste your video links. Say if you want a summary, hooks, quotes or ideas.
+  - Check the report. Quotes are word for word, but mark any garbled lines as approximate.
+  - If you reuse a creator's words, credit them and link to the video.
+output_sample:
+  input:
+    - Links to public social videos
+    - What you want from them, such as a summary, hooks or quotes
+    - Other creators to compare (optional)
+  prerequisites:
+    - A ScrapeCreators API key, which is a paid data service
+    - An AI that can run code and reach the web
+  output:
+    - name: TL;DR
+      contains: The main themes, the strongest hooks and the best ideas to reuse.
+    - name: Transcript-by-Transcript Notes
+      contains: "For each video: the hook, core idea, best quote, call to action and stand-alone ideas, with its link."
+    - name: Patterns Across the Set
+      contains: A table of repeated themes and hook styles, with proof and example links.
+    - name: Hooks Swipe File
+      contains: A list of the opening lines, word for word.
+    - name: Repurposing Ideas
+      contains: Starter ideas for a LinkedIn post, X thread, short video script and newsletter section.

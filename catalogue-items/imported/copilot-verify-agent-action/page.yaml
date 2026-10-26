@@ -2,17 +2,57 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-verify-agent-action
 name: Agent action approval reviewer
-summary: Share a proposed agent action. Get its scope, risks and missing
-  evidence checked before execution.
+summary: Check an AI agent action before it runs. Get a review of its scope, approval, risks and missing evidence, with a clear result and reason.
 job: set-up-ai
 headline: Agent action approval reviewer
-subhead: Share a proposed agent action. Get its scope, risks and missing
-  evidence checked before execution. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI the action an agent wants to run, plus its approval record and evidence. It checks that the approval matches the exact action and looks for gaps. You get a report with a clear result and the reason. It never approves or runs anything.
+not_for:
+  - "You want to run or approve the action: this review never does either, so use your human approver and your own enforcement point."
+  - "The action is low stakes and has no approval step: use a normal code review or your change checklist."
+  - "You only have a rough idea of the action and no approval record: gather the details first, or expect an INCONCLUSIVE result."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Gather the request, the proposed action, the approval record and the evidence behind it.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions from the skill file.
+  - Paste your items one by one. Say which ones you do not have. Your AI lists them as missing.
+  - Read the result first, then the control matrix. This works in a plain chat and needs no code running.
+  - Fix the step named under Required next action, then run the review again with the new details.
+  - Pass the report to your human approver. They decide, and a separate system enforces it.
+output_sample:
+  input:
+    - The original request from the user or system
+    - The exact action the agent wants to run, with all its settings
+    - The approval record, with who approved it and when
+    - The assessment that says the action is justified, and its evidence
+    - Recent monitoring events and the current time (optional)
+  output:
+    - name: Result
+      contains: One review result, a note that execution is not authorized, and the verified action digest or NOT_VERIFIED.
+    - name: Action
+      contains: The operation, target, key settings, scope, validity window and maximum number of uses.
+    - name: Control matrix
+      contains: Six checks, each marked pass, fail, inconclusive or not applicable, with evidence and a reason.
+    - name: Supporting evidence
+      contains: The evidence that backs the action.
+    - name: Refuting evidence and defeaters
+      contains: The evidence that argues against the action, kept apart from the support.
+    - name: Required next action
+      contains: The smallest concrete step that could change the result.
+    - name: Boundaries
+      contains: What this review did not prove.
+when:
+  - An AI agent wants to deploy, send, buy or delete something and a person must approve first.
+  - You want to confirm an approval still matches the exact action that is about to run.
+  - An approval looks old, reused or signed off by reviewers who may think alike.
+  - You need to audit the evidence behind an agent's decision before anyone acts.
+you_give:
+  - The original request from the user or system.
+  - The exact proposed action, with its target, settings, scope and expiry.
+  - The approval record, with who approved it, when, and for what.
+  - The assessment that says the action is justified, with its evidence and policy.
+  - Recent monitoring events and the current time (optional).
+you_get:
+  - "A review result: blocked, inconclusive, eligible with controls, or eligible for a human decision."
+  - A table of six checks, each with its status and reason.
+  - The supporting evidence and the evidence against, listed separately.
+  - The smallest next step that could change the result.
+  - A clear note that the action is not authorized by this review.

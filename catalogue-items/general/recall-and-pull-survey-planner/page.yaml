@@ -1,6 +1,6 @@
 new_slug: recall-and-pull-survey-planner
 name: "Recall and pull survey planner"
-summary: "Paste your ad and your buyers. Get a short survey that shows who remembers it and whether they buy more."
+summary: "Plan a short ad recall survey. Find who remembers your ad, then see if they buy more. You get the questions, sample size and answer sheet."
 job: read-ad-results
 thinking: medium
 thinking_why: "The design follows a fixed pattern, but it has to fit the questions and sample to your product and audience."
@@ -17,6 +17,10 @@ when:
   - "Sales moved and you cannot tell whether the ad had anything to do with it."
   - "You want to know if people remember your ad before you decide to change it."
   - "You have a small budget and need a cheap way to judge an ad."
+not_for:
+  - "You can run a sales test or a holdout test, where one area sees the ad and another does not: use that, it gives a cleaner answer."
+  - "You already have filled-in answers and want the numbers worked out: use the Ad recall and pull calculator."
+  - "You have no way to reach any buyers, not even your own customers: ask a few customers in person first, or wait until you can reach more."
 
 you_give:
   - "Your ad or the claim it makes"
@@ -33,6 +37,29 @@ how_to_use:
   - "Paste your ad and say who buys and how you can reach people."
   - "Ask the questions exactly as written, in order, to at least the number it gives."
   - "Take the filled-in sheet to the Ad recall and pull calculator."
+output_sample:
+  input:
+    - Your ad, or the claim it makes
+    - Who might buy your product, and how you can reach some of them
+    - How often people buy (optional)
+    - A rival's ad to compare against (optional)
+  output:
+    - name: Target answer
+      contains: The claim in the words you hope people use, plus near-miss answers that sound close but do not count.
+    - name: Who to ask
+      contains: The group to survey, a screening question, and how you will reach them.
+    - name: Questions
+      contains: Four neutral questions in a fixed order, with recall asked before buying.
+    - name: Scoring rule
+      contains: What counts as knowing the ad and what does not, set before any answers come in.
+    - name: How many
+      contains: How many people to ask so about 100 of them know the ad, based on expected recall.
+    - name: Answer sheet
+      contains: The columns to fill in for each person, ready for the Ad recall and pull calculator.
+    - name: When to repeat
+      contains: A date to ask again with the same questions and the same scoring rule.
+    - name: MISSING and CHECKS MISSED
+      contains: What would sharpen the plan, and one line for each check the plan still misses.
 
 how_it_works:
   - title: "Sets the target answer"

@@ -1,50 +1,87 @@
 new_slug: compare-facilities-service-contract-options
 name: Compare facilities service contract options
 headline: Compare facilities service contract options
-summary: Share the source files. Get a service comparison, contract differences and review questions.
+summary: "Compare facilities contractor proposals side by side. Share the quotes and contracts; get a cost and risk table, plain-words terms and questions."
 job: check-contracts
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A service comparison, contract differences and review questions. Share comparable contractor proposals, full current terms, scope, service frequency, performance evidence and decision criteria. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share each contractor's proposal and full contract terms for the same sites and the same contract period. It sets cost, start-up and exit effort side by side, then summarises each contract in plain words, covering notice, renewal, access, liability and service duties. You get open questions for a qualified reviewer. It marks any fact it cannot check.
 explain: |-
-  A service comparison, contract differences and review questions.
+  How do you compare facilities service contracts, such as cleaning, security or maintenance? Quotes rarely line up. One contractor prices per visit, another per month. One includes call-outs and another bills them later. A low price can hide a long notice period or a costly exit.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Scope, term and frequency use the same basis; insurance, performance and savings remain unverified without records. Missing tools or evidence stay visible in the final summary.
+  This workflow puts every proposal on the same basis first: the same sites, the same service and frequency, the same contract period. It builds the cost table, a risk table and a proceed, negotiate or pass call for each contractor. It then reads each actual contract and sets out, in plain words, what each side must do, when the money moves, how it ends and which clauses to watch. Insurance, past performance and savings stay marked unverified until you supply records. It is a plain summary for a qualified reviewer, not legal advice.
 when:
-  - You need a service comparison, contract differences and review questions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have two or three contractor proposals for cleaning, security, maintenance or grounds and need one comparison.
+  - A quote looks cheap and you want to see its notice period, renewal and exit terms before you sign.
+  - You are choosing a replacement for a contractor who is not delivering.
+  - You need to show a manager or board why one contractor was chosen.
+not_for:
+  - "You are comparing prices for goods from suppliers: use Compare supplier prices on the same basis."
+  - "You are comparing freight quotes: use Compare freight quotes with all charges."
+  - "You already have a contractor and are renewing: use Prepare a contract renewal negotiation."
+  - "You need a lawyer's reading of the liability or termination wording. This gives a plain summary for a qualified reviewer, not legal advice."
 you_give:
-  - Comparable contractor proposals, full current terms, scope, service frequency, performance evidence and decision criteria.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Each contractor's proposal, priced for the same sites and the same contract period
+  - Each contractor's full contract terms, pasted in full
+  - Your site list, the service you need and how often
+  - What matters most, such as price, exit terms or cover for absences
+  - Your current contractor's terms and results (optional)
+  - Service reports, complaints or references for each contractor (optional)
 you_get:
-  - A service comparison, contract differences and review questions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A side-by-side table of cost over the contract period, start-up cost and exit effort for each contractor
+  - A risk table and a proceed, negotiate or pass call for each, with negotiation points
+  - A plain-words summary of each contract: your duties, theirs, money and dates, how it ends, clauses to watch
+  - Questions to put to each contractor or to your reviewer
+  - A list of facts it could not verify, such as insurance, past performance and savings
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack. It has a workflow file and one SKILL.md for each of its two steps. Add them to your AI, such as Claude, ChatGPT or Gemini.
+  - Attach each proposal and each contract in full. Say which sites are covered, which service you need and for how long.
+  - Say what matters most to you. If any proposal covers different sites, a different period or a different service level, say so, and the comparison will flag it.
+  - Ask the AI to follow the workflow file, save each step's result and stop if a required check fails.
+  - Read the unverified facts and the contract questions before you rely on the table. Take the clause questions to a qualified reviewer.
 how_it_works:
-  - title: Vendor comparison writer
-    text: Compare supplied service coverage, total costs, mobilization, transition and exit effort using the same site list and contract period.
-  - title: Plain-words contract summary
-    text: Summarize the relevant notice, renewal, access, liability and service obligations from each actual contract for qualified review.
+  - title: Compare the proposals
+    text: Puts service coverage, total cost, start-up, transition and exit effort for each contractor on the same sites and the same contract period.
+  - title: Summarise each contract
+    text: Sets out the notice, renewal, access, liability and service duties from each actual contract, for a qualified reviewer.
 output_shape: |-
-  Scope and source coverage
-  A service comparison, contract differences and review questions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCE COVERAGE
+    Sites: <list> | Service and frequency: <...> | Period: <...> | Proposals and contracts read: <list>
+
+  STEP 1: PROPOSAL COMPARISON
+    Cost: <contractor | annual | year 1 | whole period | notes>
+    Start-up, transition and exit effort: <contractor | what it takes>
+    Risks: <risk | likelihood | impact | fix> | Strengths and concerns
+    Call: <proceed / negotiate / pass> for each | Negotiation points
+
+  STEP 2: CONTRACT SUMMARIES (one per contractor)
+    What it is | Your duties | Their duties | Money and dates | How it ends | Watch these clauses | Vague or missing | Questions to ask
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | Unverified facts: <list> | CHECKS MISSED: <list or none> | One next step
+output_sample:
+  input:
+    - "Each contractor's proposal, priced for the same sites and period"
+    - "Each contractor's full contract terms"
+    - "Your site list, the service you need and how often"
+    - "What matters most to you"
+  prerequisites:
+    - "An AI that can read attached files (a chat AI is enough)"
+  output:
+    - {name: "Scope and source coverage", contains: "The sites, service, period and each proposal and contract that was read."}
+    - {name: "Step 1 proposal comparison", contains: "Cost, start-up and exit effort side by side, risks, and a proceed, negotiate or pass call."}
+    - {name: "Step 2 contract summaries", contains: "Per contractor: duties, money and dates, how it ends, clauses to watch and questions."}
+    - {name: "Unverified facts", contains: "Insurance, performance and savings claims that need a record before you rely on them."}
+    - {name: "Hand-back summary", contains: "Each saved file, any step not run, the checks missed and one next step."}
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Scope, term and frequency use the same basis; insurance, performance and savings remain unverified without records.
+  - what: The sites and period
+    how: Give one site list and one contract length for every contractor. A quote for different sites cannot be compared.
+  - what: Price basis
+    how: Say whether each quote includes call-outs, extras and tax, and whether prices rise each year.
+  - what: Your current contractor
+    how: Add their terms and results. The table then shows what changing would cost.
+  - what: What matters most
+    how: Say if price, exit terms or cover for absences comes first. The calls are weighed against it.
 judge:
   - Scope, term and frequency use the same basis; insurance, performance and savings remain unverified without records.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,8 +95,8 @@ test:
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
   - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep each decision, with the questions the contractors answered, so the next renewal starts from facts.
+  - Record checks that need a person, such as insurance certificates and references, and complete them before you sign.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
@@ -70,3 +107,8 @@ works_best_with:
 terms:
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+  - term: Total cost over the period
+    meaning: Every charge for the whole contract length, including start-up and any exit cost, not just the monthly price.
+  - term: Notice period
+    meaning: How long before the end of the contract you must tell the contractor you are leaving or changing it.
+next: [prepare-a-contract-renewal-negotiation, plan-a-vendor-change-without-losing-work]

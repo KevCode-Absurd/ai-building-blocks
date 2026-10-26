@@ -1,6 +1,6 @@
 new_slug: holdings-results-review
 name: "Holdings business results reviewer"
-summary: "List your holdings and what you know of each. Get every one sorted keeper, watch or weak by business results."
+summary: "Review your holdings by how each business is doing, not by price. Get every one sorted keeper, watch, weak or not understood, with the figure behind it."
 job: money-and-investing
 thinking: high
 thinking_why: "It reads several years of figures for several businesses and has to ignore price. Mixed-up figures change the labels, so give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You own several shares or stakes and want to review them by the business, not the price.
   - A holding fell and you cannot tell if the business is worse or only the price.
   - You suspect you hold things you cannot explain.
+not_for:
+  - "You want to know what to buy or sell today: this gives no trade calls, so ask a licensed financial adviser."
+  - "You hold only broad index funds: there is no single business to review, so check the fund's fees and mix on your fund provider's site."
+  - "You want to rank and size your bets: this reviews what you own, so use the Twenty-punch bet ranker after it."
 
 you_give:
   - Your holdings, with share of the total, date bought and why
@@ -35,6 +39,26 @@ how_to_use:
   - Add the yearly figures you have. Annual report summaries are enough.
   - Read the labels, then the disagreements. They show where to look next.
   - Take the result to "Twenty-punch bet ranker" to rank and size what you hold.
+output_sample:
+  input:
+    - Your holdings, with share of the total, date bought and why you bought each
+    - Four or five years of earnings, return on equity, debt and margin for each business (optional)
+    - How long you can leave the money (optional)
+  output:
+    - name: Holdings table
+      contains: Each holding with its share of the total, date bought, your reason, and whether it is a single business or a fund.
+    - name: Results table
+      contains: Yearly earnings, return on equity, debt to equity and margin for each business, with price left out.
+    - name: The labels
+      contains: Keeper, watch, weak or not understood for each holding, with whether your reason still holds and the figure behind it.
+    - name: One-dollar cross-check
+      contains: Profit each business kept compared with the rise in its market value over the same years.
+    - name: Where results and price disagree
+      contains: Two rankings, by results and by price, with the holdings where they differ far apart and what to look into.
+    - name: What you understand
+      contains: A count of holdings in each group and the share of your money in things you do not understand.
+    - name: Missing and checks missed
+      contains: Gaps in your figures, plus any check the review could not pass.
 
 how_it_works:
   - title: Lists the holdings

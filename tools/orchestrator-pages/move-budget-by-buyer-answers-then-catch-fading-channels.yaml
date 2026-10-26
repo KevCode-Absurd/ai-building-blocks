@@ -1,6 +1,6 @@
 new_slug: move-budget-by-buyer-answers-then-catch-fading-channels
 name: Move budget by buyer answers, then catch fading channels
-summary: Give it survey answers and spend by channel. Get over-credited channels, a budget move and a fade check.
+summary: Find which ad channels really bring buyers. Give it survey answers and spend by channel to move budget and catch fading channels.
 job: read-ad-results
 thinking: high
 thinking_why: It compares survey answers with platform reports and weighs weak evidence. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Platform reports add up to more sales than your store shows.
   - Your checkout survey says one thing and your ad reports say another.
   - A channel that worked is slipping and you want to know if it is wearing out.
+not_for:
+  - "You have one channel or very few orders: run a single holdout test, or ask the person who runs your ads to switch that channel off for a short time."
+  - "You only want to know why sales dropped: use the Ad sales drop analyst."
+  - "You want a plain report of ad results to share with your team: use the Ad results report writer."
 you_give:
   - Checkout survey answers, with how many orders answered
   - Spend and platform-reported sales by channel for a closed date range
@@ -30,6 +34,26 @@ how_to_use:
   - Give it survey answers as they were written. It sorts them into channels.
   - Make only the budget move it picks and leave it for eight weeks.
   - When it pauses, export monthly numbers by channel, with earlier months too.
+output_sample:
+  input:
+    - Your checkout survey answers, with how many orders answered
+    - Spend and platform-reported sales by channel for a closed date range
+    - New-customer revenue by channel and any test results (optional)
+    - After the pause, monthly spend, responses and customers by channel, including earlier months
+  prerequisites:
+    - An AI that can read files from the handoff pack
+    - A checkout survey that asks buyers where they first heard of you
+  output:
+    - name: "Step 1: Post-purchase survey reader"
+      contains: Answer count, a channel table, a trust call on your numbers, and one small budget move to test.
+    - name: "Step 2: Next-dollar budget allocator"
+      contains: A ranking of where the next ten thousand dollars goes, the evidence grade, and a test plan.
+    - name: Pause
+      contains: A prompt to make the budget move, wait eight weeks, then export monthly numbers by channel.
+    - name: "Step 3: Channel decay checker"
+      contains: A table of fading channels, where each fell, likely causes, small refreshes and one channel to try.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Compare survey with platform reports
     text: Checks there are enough answers to trust, sorts them into channels, compares each channel's share of spend, platform sales and answers, and picks a small budget move to test.

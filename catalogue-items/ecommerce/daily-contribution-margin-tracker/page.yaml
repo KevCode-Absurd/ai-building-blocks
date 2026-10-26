@@ -1,6 +1,6 @@
 new_slug: daily-contribution-margin-tracker
 name: "Daily contribution margin tracker"
-summary: "Give it daily sales, costs and ad spend. Get a daily contribution margin sheet with a returns accrual."
+summary: "Track daily contribution margin for your online store. Give it sales, costs and ad spend. You get a daily sheet with returns counted as expected."
 job: track-numbers
 thinking: medium
 thinking_why: "It sets up a sheet from a short formula and a returns rule, which a mid-size model does well if it checks each column."
@@ -17,6 +17,10 @@ when:
   - You judge a day by revenue and only learn at month end whether it made money.
   - Returns post late and make last month look different once they land.
   - Your team argues about which number matters.
+not_for:
+  - "Your store has no returns history yet: start with a simple sheet of sales minus costs, then switch once you have about 90 days of returns."
+  - "You have no variable cost data, such as shipping or payment fees: work those out first with your accountant or your store reports."
+  - "You want a full profit and loss with rent and salaries: ask your accountant or use your bookkeeping tool."
 
 you_give:
   - Daily net sales
@@ -36,6 +40,26 @@ how_to_use:
   - Add your monthly contribution goal and fixed costs if you want the owner's view.
   - Paste the formulas into a sheet and check three days by hand.
   - Share the daily number with the whole team.
+output_sample:
+  input:
+    - Your daily net sales
+    - Your product cost and variable costs, per order or as a percent
+    - Your daily ad spend
+    - Your return rate from the last 90 days
+    - Your monthly goal and fixed costs (optional)
+  output:
+    - name: Daily sheet
+      contains: One row per day with net sales, returns accrual, costs, ad spend, contribution margin and margin as a percent of sales.
+    - name: Formulas
+      contains: The returns accrual and contribution margin formulas to paste into your sheet.
+    - name: Month-end check
+      contains: Accrued returns against actual returns, the difference, and a new rate from the last 90 days.
+    - name: Owner view
+      contains: Month contribution margin, fixed costs, profit, goal and gap. Kept apart from the media buyer's view.
+    - name: Metric pyramid
+      contains: The metrics to show, ranked, with contribution margin on top and channel ROAS at the bottom.
+    - name: Checks missed and missing inputs
+      contains: Any check that failed and any input you did not give, marked MISSING.
 
 how_it_works:
   - title: Sets the formula

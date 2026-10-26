@@ -2,17 +2,59 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-creating-oracle-to-postgres-master-migration-plan
 name: Oracle to Postgres program planner
-summary: Share your .NET solution. Get a project inventory, migration scope and
-  a master plan to track the work.
+summary: Plan your Oracle to Postgres migration. Share your .NET solution and get a project inventory, a migration order and a master plan file.
 job: build-software
 headline: Oracle to Postgres program planner
-subhead: Share your .NET solution. Get a project inventory, migration scope and
-  a master plan to track the work. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: "Share your .NET solution folder. It lists every project, marks each one as migrate, skip, already migrated or test, and puts the projects in a safe order. It saves the result as one plan file you can track."
+explain: |
+  A big .NET solution rarely moves from Oracle to PostgreSQL in one go. Before any code changes, you need to know which projects touch Oracle and which ones depend on each other. This Oracle to Postgres migration planner reads the solution and answers both.
+
+  Each project gets a class, and shared libraries go first in the order. You can ask for changes to any class or to the order, and you confirm the list before it saves anything.
+
+  The file is MasterMigrationPlan.md, saved in .github/oracle-to-postgres-migration/Reports. Keep it in your repository and update it as each project moves.
+when:
+  - "You are starting an Oracle to PostgreSQL move with many .NET projects."
+  - "You need to know which projects in a solution use Oracle."
+  - "A manager asks for the order and scope of the migration."
+  - "You want one shared file that tracks the migration across projects."
+not_for:
+  - "You have one project, or a solution with no Oracle use: check that project by hand, no master plan needed."
+  - "You want the database schema and DDL converted: use a schema tool such as ora2pg, this item only plans the work."
+  - "You want to rewrite the code for one project: do that project by project after the plan is made."
+you_give:
+  - "Your .NET solution file (.sln or .slnx)"
+  - "The project files, config files and code in the same folder"
+  - "Oracle DDL files, if you have them (optional)"
+  - "Changes you want to the project list or order (optional)"
+you_get:
+  - "A table with the number of projects to migrate, already migrated, skipped and test projects"
+  - "A numbered list of each project with its path, its class and notes"
+  - "A migration order with the reason for each place, shared libraries first"
+  - "A saved file named MasterMigrationPlan.md to track the work"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI tool in a place where it can read your solution folder. It needs file access.
+  - Paste this skill into the chat, or add it to your AI tool's skills.
+  - Ask it to make an Oracle to Postgres master migration plan for your solution. Say which solution file to use if there is more than one.
+  - Check the list of projects and their classes. Ask for changes to any class or to the order.
+  - Confirm the list. Your AI then saves MasterMigrationPlan.md in .github/oracle-to-postgres-migration/Reports.
+  - Keep that file in your repository. Use it to track the work, and share it with anyone who migrates a project.
+output_sample:
+  input:
+    - Your .NET solution file (.sln or .slnx)
+    - Your project files, config files and code in the same folder
+    - Oracle DDL files (optional)
+    - Changes you want to make to the project list or order (optional)
+  prerequisites:
+    - An AI that can read the files in your solution folder
+    - A place to save MasterMigrationPlan.md in your repository
+  output:
+    - name: Header
+      contains: The solution name, the solution root folder, and the dates the plan was created and last updated.
+    - name: DDL Artifacts
+      contains: Where your DDL files are, and whether an outside tool already made the Postgres DDL.
+    - name: Solution Summary
+      contains: A table counting total projects, projects to migrate, already migrated, skipped and test projects.
+    - name: Project Inventory
+      contains: A numbered table of each project with its path, its class (migrate, skip, already migrated or test) and notes.
+    - name: Migration Order
+      contains: A numbered list of projects to migrate, with the reason for each place, shared libraries first.

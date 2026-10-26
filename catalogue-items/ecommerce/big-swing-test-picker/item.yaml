@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: performance_sheet, required: true}
   - {type: audit_report, required: false}
+  - {type: shortlist, required: false}
   - {type: question, required: false}
 outputs:
   - {type: shortlist}

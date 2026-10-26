@@ -1,6 +1,6 @@
 new_slug: lifetime-punch-card-bet-ranker
 name: "Twenty-punch bet ranker"
-summary: "List your bet ideas. Get the top one to three ranked and sized, and a written no for the rest."
+summary: "Rank your bet ideas with a twenty-punch card. Get one to three sized picks and a written no for the rest, so you stop spreading thin."
 job: money-and-investing
 thinking: medium
 thinking_why: "It scores and ranks against fixed rules, then sizes with a survival limit. The scoring needs judgement, but the method is set."
@@ -17,6 +17,10 @@ when:
   - You have a long list of ideas and a thin spread of effort or money across them.
   - You keep adding new bets and never back one properly.
   - You need a reason to say no to a good-looking idea.
+not_for:
+  - You have already made the decision. Use a financial adviser to check the plan, not this ranker.
+  - You need to pay off debt. Talk to a financial adviser or your lender, since ranking bets will not fix that.
+  - You want a buy or sell call on a named stock or fund. This skill never gives one, so ask a licensed adviser.
 
 you_give:
   - A report on the odds for each bet, or a list with notes
@@ -34,6 +38,27 @@ how_to_use:
   - Say how big the pot is and what must stay safe.
   - Name what you would do with the pot if you backed none of the ideas.
   - Take the picks to the "Room for error plan checker".
+output_sample:
+  input:
+    - Your list of bet ideas, with what you know about each
+    - A report on the odds for each bet (optional)
+    - The pot of money, time or effort you can commit (optional)
+    - Your best other uses for the same pot (optional)
+  output:
+    - name: The card
+      contains: How many punches you have and what counts as one big commitment.
+    - name: Scored list
+      contains: Each idea scored 1 to 5 on understanding, edge and survivability.
+    - name: The picks
+      contains: One to three ideas in order, each with the alternative it beats, its size and what it must not risk.
+    - name: The no list
+      contains: A one-line reason for every idea that did not make the cut.
+    - name: Worth re-testing
+      contains: Ideas you could retest later and what you would need to learn first.
+    - name: Missing
+      contains: Facts that would firm up the sizes.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 
 how_it_works:
   - title: Sets the card

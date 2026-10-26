@@ -1,15 +1,13 @@
 slug: equity-cure-scenario-checker
 name: Equity cure scenario checker
-summary: Check an EBITDA-only cure without giving the cash a second debt-netting benefit.
+summary: "See how much equity cure a net debt to EBITDA covenant needs, how much your agreement allows, the new ratio and any gap left."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - net-leverage-covenant-checker
+  - deal-ebitda-addback-checker
+  - review-leverage-headroom-and-cure
 origin: own
 version: 1.0.0
 added: 2026-10-22

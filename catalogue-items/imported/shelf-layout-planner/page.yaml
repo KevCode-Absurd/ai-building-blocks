@@ -2,35 +2,98 @@ thinking: medium
 thinking_why: It ranks products by sales and fits them to shelves.
 new_slug: shelf-layout-planner
 name: Shelf layout planner
-summary: Give it your products and shelf sizes. Get a shelf layout that gives
-  your best sellers the best space.
+summary: Get a shelf-by-shelf layout with facings for each product, so your best sellers get the best space. Built from your sales, margins and shelf sizes.
 job: plan-supply-chain
 headline: Shelf layout planner
-subhead: A shelf layout that puts your best sellers in the best spots and gives
-  each product the right amount of space. You list your products with sizes,
-  sales rates and margins, plus your shelf or fixture sizes.
+subhead: Give it your products with sizes, sales and margins, plus your shelf sizes. It decides how many facings each product gets and where it sits. You get a shelf-by-shelf plan with a reason for each placement and groups that sell together.
 explain: |
-  A shelf layout that puts your best sellers in the best spots and gives each product the right amount of space. You list your products with sizes, sales rates and margins, plus your shelf or fixture sizes.
+  A shelf reset is easy to get wrong. Slow sellers hog eye level, fast sellers run out by noon, and nobody can say why anything sits where it does. This shelf layout planner (a planogram builder) ranks your products by sales and margin, then fits them to your shelves.
 
-  It starts by asking about store type, traffic flow and goals: sales, profit or availability. Then it applies space rules. Fast sellers get more facings at eye level, which gives roughly 40 percent of sales, with chest level about 30 percent, waist 20 and floor 10. High margin items get prime spots, impulse items go to end caps and checkout, and destination items can sit at the back. More space has diminishing returns, so facings are capped by demand.
+  It starts with your store type, how shoppers move through it, and your goal: sales, profit or fewer empty shelves. Then it applies space rules. Fast sellers get more facings at eye level. High-margin items get prime spots. Impulse items go to end caps and checkout. Extra space has diminishing returns, so facings are capped by demand.
+
+  You get a shelf-by-shelf plan with a reason for each placement. If you have no sales data, it says the layout is based on size and common sense only, and does not invent numbers.
 when:
   - You are resetting a category and need to decide who gets eye level.
-  - Some shelves are always empty and others overstocked.
-  - You want to place impulse items where they will sell.
-  - You need a layout that balances sales against restocking labour.
+  - Some shelves are always empty while others are overstocked.
+  - You want to put impulse items where they will sell.
+  - You need a layout that balances sales against restocking time.
+not_for:
+  - You sell online only, or have no shelf sizes. There is nothing to lay out yet.
+  - You want to decide how much stock each store gets. That is stock allocation, not shelf layout.
+  - You run a second-hand shop. Use the resale store pricing and layout planner.
 you_give:
-  - Product list with sizes
-  - Sales and margin by product
-  - Shelf and fixture dimensions
-  - Store type and goals
+  - Product list with sizes, from your stock sheet
+  - Sales and margin by product, from your till or sales report
+  - Shelf and fixture sizes
+  - Store type and your goal
   - Restocking limits (optional)
 you_get:
-  - Facings per product
-  - A shelf by shelf placement
-  - Cross merchandising groups
-  - Reasons for each placement
+  - Facings for each product
+  - A shelf-by-shelf placement
+  - Groups of products to place together
+  - A reason for each placement
+  - A reset plan and a way to check it worked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Paste your product list with sizes, sales and margin, then your shelf sizes. A spreadsheet export works.
+  - Say your goal: sales, profit or fewer empty shelves.
+  - Answer its questions. It marks any missing numbers instead of making them up.
+  - Check the shelf plan against your floor. Does every product fit its shelf?
+  - Reset one section first. Compare sales per facing after a few weeks before you do the rest.
+how_it_works:
+  - title: Ask about your store
+    text: It asks about store type, shopper flow and your goal, then lists your products and shelves.
+  - title: Rank products
+    text: It ranks products by sales and margin to find the ones that earn the best space.
+  - title: Set facings
+    text: It gives each product a number of facings, capped by demand, since extra space has diminishing returns.
+  - title: Place on shelves
+    text: It puts fast sellers at eye level, impulse items on end caps, and destination items at the back.
+  - title: Group and explain
+    text: It groups items that sell together and gives a reason for each placement.
+output_shape: |
+  Planogram Report
+  Summary: <category>, <fixtures>, <goal>, <product count>
+  Product changes: <product>, <current facings>, <new facings>, <reason>
+  Shelf plan: <fixture>, <shelf>, <product x facings>
+  Groups: <group>, <products>, <why>
+  Reset steps: <phase>, <actions>, <hours>, <week>
+  Check: <what to compare after a few weeks>
+output_sample:
+  input:
+    - Your product list with sizes
+    - Sales and margin by product
+    - Shelf or fixture sizes
+    - Store type and goal
+  prerequisites:
+    - An AI that can run Python, for the space models (optional)
+  output:
+    - name: Executive summary
+      contains: Category, fixtures, goal, product count and current performance if you gave it.
+    - name: Product changes
+      contains: Current and new facings for each product, with the reason for the change.
+    - name: Shelf-level plan
+      contains: Each fixture, shelf by shelf, with products and facings in order.
+    - name: Cross-merchandising groups
+      contains: Products to place together, and why they sell together.
+    - name: Reset steps
+      contains: Phases, actions, products affected and staff hours for the change.
+    - name: Risks and fixes
+      contains: What could go wrong in a reset, and how to prevent it.
+works_best_with:
+  tools:
+    - name: ChatGPT with data analysis, or Claude with code execution
+      why: They can run the space models on your sales file.
+    - name: Any good chat AI
+      why: Fine for one shelf run, using a short list of products.
+  inputs:
+    - Sales by product from the last 3 to 6 months
+    - Photos of the current shelves
+    - Brand or supplier rules on minimum facings
+terms:
+  - term: Facing
+    meaning: One unit of a product shown at the front of the shelf. Three facings means three side by side.
+  - term: Planogram
+    meaning: A diagram of what goes on each shelf.
+  - term: Cross-merchandising
+    meaning: Placing products that sell together near each other.

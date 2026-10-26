@@ -1,6 +1,6 @@
 new_slug: plan-a-month-of-campaign-emails-that-sell-without-discounts
 name: Plan a month of campaign emails that sell without discounts
-summary: Give it your products and brand file. Get 100 email ideas, a month calendar, a written email and a layout brief.
+summary: Plan a month of campaign emails that sell without discounts. Give it your products and brand file. Get 100 ideas, a calendar, one email and a brief.
 job: write-emails
 thinking: high
 thinking_why: It runs five skills in a row and each one builds on the last. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You email your list only when there is a sale, and you want the other weeks to earn money too.
   - You have a product launch or restock next month and need a full set of campaign emails planned around it.
   - You hand email design to a freelancer and want a clear brief for each email instead of a long chat.
+not_for:
+  - "You need one sale email for a single offer: use the Campaign email writer on its own."
+  - "You need automatic emails for shoppers who leave a cart: use the Cart and checkout email planner."
+  - "You have a draft and only want a quality check: use the Email draft readiness checker."
 you_give:
   - Your product facts, such as what each product is, what is in it and how it is used
   - Your brand file, so the emails sound like you and only make claims you can back
@@ -33,17 +37,40 @@ how_to_use:
   - Paste your product facts and brand file first. Add reviews and customer questions if you have them.
   - When it pauses, pick the first slot on the calendar and write its brief in one paragraph.
   - Read the review before the layout brief is made. Fix the three fixes, then let it carry on.
+output_sample:
+  input:
+    - Your product facts, such as what each product is and how it is used
+    - Your brand file with your voice and approved claims
+    - Customer reviews and questions (optional)
+    - Your current offers and key dates (optional)
+    - A one-paragraph brief for the first email, which it asks for halfway through
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff folder
+    - A brand file, ideally from the Website brand brain builder
+  output:
+    - name: Email topic bank
+      contains: Ten topics with ten ideas each, every idea with one takeaway, a format and any claim to check.
+    - name: Month calendar
+      contains: The send pace, dated sends with type and angle, a mix check and a production schedule.
+    - name: Campaign email
+      contains: Subject and preview options, the email block by block, a plain-text version and two A/B variants.
+    - name: Draft review
+      contains: Lead, length and subject counts, a marked draft, a score out of 100, a verdict and three fixes.
+    - name: Layout brief
+      contains: A block table, design flow, build plan, alt text and a test plan for your designer.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Build the idea bank
     text: Email topic bank builder writes 10 broad topics and 10 ideas under each, from your products, reviews and customer questions. Each idea has one takeaway and one format.
   - title: Plan the month
     text: Email campaign calendar planner sets how many sends a week your team can handle, locks fixed dates first and fills the gaps with ideas from the bank. It checks the mix of email types and the ratio of discount emails.
   - title: Write the first email
-    text: Campaign email writer takes your brief for one slot. It writes a subject, a preview, the email block by block, a plain-text version and two A/B variants, and checks every claim against your facts.
+    text: Campaign email writer takes one slot from the calendar and your brief. It writes a subject, a preview, the email block by block, a plain-text version and two A/B variants, and checks every claim against your facts.
   - title: Review the draft
     text: Email draft reviewer counts the lead, length and subject line, marks cuts, and scores the draft out of 100. You get a ship or fix verdict and three fixes.
   - title: Brief the designer
-    text: Email layout brief writer turns the reviewed copy into a block-by-block layout with button places, a product grid, alt text and a test plan.
+    text: Email layout brief writer takes the draft with the reviewer's cuts applied and turns it into a block-by-block layout with button places, a product grid, alt text and a test plan.
 output_shape: |-
   STEP 1: EMAIL TOPIC BANK
     10 topics | 10 ideas under each, with one takeaway, a format and any claim to check | first 10 to send

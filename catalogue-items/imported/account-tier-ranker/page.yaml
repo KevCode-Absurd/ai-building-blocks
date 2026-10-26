@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It scores many accounts against a set of rules.
 new_slug: account-tier-ranker
 name: Account tier ranker
-summary: Give it your accounts. Get a fit score, an activity score and a tier
-  for each, with reasons.
+summary: Tier your accounts by fit and activity so you know where to spend time. Get scores, a tier and a next move for each account.
 job: sell-and-negotiate
 headline: Account tier ranker
-subhead: Give it a list of accounts or your whole book, your ideal customer
-  profile and a connected CRM. It scores each account for fit from 0 to 10 using
-  size, industry and tools, then scores recent activity. You get both scores, a
-  tier for each account, the reason behind each score and a suggested move per
-  tier.
+subhead: Give it a list of accounts or your whole book, your ideal customer profile and a connected CRM. It scores each account for fit from 0 to 10 using size, industry and tools, then scores recent activity. You get both scores, a tier for each account, the reason behind each score and a suggested move per tier.
 explain: |
   A long list of accounts becomes a short list of where your time pays off most. Each account is scored for fit and for activity, with a plain reason.
 
@@ -20,6 +15,10 @@ when:
   - A new quarter starts and you want to reset priorities.
   - You want to find strong-fit accounts that have gone quiet.
   - Your team argues about which accounts matter most.
+not_for:
+  - "You have fewer than about 20 accounts: review them by hand, since a score adds little."
+  - "You have no CRM, book file or ideal customer profile: write down who your best customer is first, then come back."
+  - "You want to fix messy CRM fields: update the records yourself or in your CRM, as this only flags what could not be scored."
 you_give:
   - A list of accounts, or your full book
   - Your ideal customer profile
@@ -31,8 +30,26 @@ you_get:
   - A reason behind each score
   - A suggested move per tier
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read your CRM, email and calendar.
+output_sample:
+  input:
+    - "Your accounts: all you own, a named list or a saved CRM view"
+    - "Your ideal customer profile: industries, size, job titles and red flags"
+    - A connected CRM, or a spreadsheet of your accounts
+    - Your email (optional)
+  prerequisites:
+    - A CRM connected to your AI, or an uploaded spreadsheet of your accounts
+    - Your ideal customer profile, or an answer to one question your AI asks
+  output:
+    - name: Tier A table
+      contains: "High fit and high activity accounts with scores, open deal, last touch and next action: progress the deal and add contacts."
+    - name: Tier B table
+      contains: "High fit, low activity accounts with scores and next action: start outreach and look for a reason to reach out."
+    - name: Tier C table
+      contains: "Low fit, high activity accounts with scores and next action: hold one discovery call to confirm fit or drop them."
+    - name: Deprioritized accounts
+      contains: Low fit, low activity accounts listed by name only, with no active move. Revisit them each quarter.
+    - name: Coverage gaps
+      contains: Tier A or B accounts with no activity in 30 days or more, and accounts missing fields so they could not be scored.

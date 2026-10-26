@@ -1,46 +1,28 @@
 ---
 name: build-a-project-debt-service-cash-pack
-description: "A linked project cash, debt repayment and loan-life cover schedule"
+description: "Use when you need a three-year project cash and debt repayment schedule with a loan-life cover check on the lender's definitions. Not for traffic-driven revenue, availability payments or periods other than three annual years."
 ---
 
 # Build a project debt service cash pack
 
-A linked project cash, debt repayment and loan-life cover schedule.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Turn three years of project cash into a repayment schedule and a loan-life cover check. Three steps run in order on one cash series: build cash available for debt service, size the repayments, then test cover over the loan's life.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **Three years of project cash** (yours): annual operating cash records or approved scenarios, marked accrual or actual cash.
+- **The lender's cash definition** (yours): what counts as cash available for debt service.
+- **Loan terms** (yours): the opening balance, fixed rate, target cover and the loan-life discount rate, from the loan agreement.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** a spreadsheet export of your project model, so the AI reads real figures.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Three annual project operating cash records or approved scenarios, financing CFADS definition, loan opening balance, fixed rate, target service cover and contractual loan-life rate. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter.
+The items under "Before you start", as of one reporting date, with the currency and scale stated once. If the discount rate for the loan-life test is not in the agreement text you were given, mark it MISSING and do not use your own cost of capital. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,11 +32,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Project cash available bridge** (`project-cash-available-bridge`). Build one source-driven CFADS bridge for each of the three annual periods. Pass the actual annual qualifying cash series and definition ledger; the single-period example is a method reference, not a full forecast. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-project-cash-available-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Project cash available bridge** (`project-cash-available-bridge`). Build one source-driven CFADS bridge for each of the three annual periods. Pass the actual annual qualifying cash series and definition ledger; the single-period example is a method reference, not a full forecast. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-project-cash-available-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** all three years are built on one declared basis, working capital is not deducted twice, and the definition ledger names each item the lender includes or leaves out.
 
-2. **Debt repayment sculpting planner** (`debt-repayment-sculpting-planner`). Use that qualifying annual series, actual opening debt and financing rate to calculate target service, interest, principal, residual balance and any interest-capacity gap. Return the exact debt horizon and balance to the coverage step. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-debt-repayment-sculpting-planner.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Debt repayment sculpting planner** (`debt-repayment-sculpting-planner`). Use that qualifying annual series, actual opening debt and financing rate to calculate target service, interest, principal, residual balance and any interest-capacity gap. Return the exact debt horizon and balance to the coverage step. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-debt-repayment-sculpting-planner.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** interest plus principal equals target service each year, closing loan equals opening loan less principal, and any year where cash does not cover interest is shown as a gap.
 
-3. **Loan life cash cover checker** (`loan-life-cash-cover-checker`). Discount the same eligible cash over the remaining debt tenor at the contract-defined loan-life rate. Reconcile source cash and opening debt to prior steps; do not substitute WACC or include cash beyond maturity. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-loan-life-cash-cover-checker.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Loan life cash cover checker** (`loan-life-cash-cover-checker`). Discount the same eligible cash over the remaining debt tenor at the contract-defined loan-life rate. Reconcile source cash and opening debt to prior steps; do not substitute WACC or include cash beyond maturity. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-loan-life-cash-cover-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** step 3 uses the same cash series and opening loan as steps 1 and 2, the contract's discount rate is used instead of WACC, and no cash after maturity is counted.
 
 ## Workbook checks
 
@@ -62,7 +44,7 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Acceptance
 
-- All annual cash is rebuilt from dated sources; principal rollforward ties; cash beyond maturity and financing proceeds are excluded from loan-life cover. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+- The same eligible cash series runs through all three steps; cash available is built once on a declared basis, repayments tie to target service, and loan-life cover uses the contract's discount rate and no cash beyond maturity.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
 - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
@@ -71,4 +53,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the cash by year, the repayment schedule and the loan-life cover ratio, and name any year where cash does not cover interest. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that nothing was paid, sent or filed, and that a person who knows the agreement must check the definitions before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Test covenant headroom** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Check cash and PIK interest against a sweep** with the [Review sponsor debt cash demands](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow, if the debt is sponsor-backed.
+Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

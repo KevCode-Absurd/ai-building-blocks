@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It compares messages, then rewrites per audience.
 new_slug: company-story-aligner
 name: Company story aligner
-summary: Give it what you tell each group. Find contradictions and get one story
-  framed for each audience.
+summary: Find where your messages to staff, investors and customers clash. Get one company story, reframed for each group. Fix mixed messages before anyone sees them.
 job: write-and-tell-stories
 headline: Company story aligner
-subhead: One company story that stays true across every group you speak to, with
-  each version framed for what that group cares about. Mixed messages are how
-  trust slips, so this finds them before staff, investors or customers do.
+subhead: One company story that stays true across every group you speak to, with each version framed for what that group cares about. Mixed messages are how trust slips, so this finds them before staff, investors or customers do.
 explain: |
   One company story that stays true across every group you speak to, with each version framed for what that group cares about. Mixed messages are how trust slips, so this finds them before staff, investors or customers do.
 
   You give Claude what you currently tell each audience. It writes a short core narrative that all else comes from, in plain specific words. It then builds a table showing how the same fact lands with employees, investors, customers and candidates. A shift of resources from one product to another reads as job risk to staff and focus to investors. The skill checks your messages against the core story and lists contradictions to fix.
 when:
-  - You are announcing a change and need one message that works for staff and
-    investors.
+  - You are announcing a change and need one message that works for staff and investors.
   - Your all-hands and investor update seem to say different things.
   - A hard quarter is coming and you want to explain it honestly to every group.
   - You are writing your company story for the first time.
+not_for:
+  - "You only send a routine update where no facts changed: just write the update yourself."
+  - "You need a legal, financial or regulatory disclosure: ask your lawyer or finance lead, not this skill."
+  - "You need a full crisis plan right now: use the crisis steps inside this skill, and ask a lawyer to review any public claims."
 you_give:
   - Past messages to each audience
   - The upcoming news or change
@@ -30,7 +30,24 @@ you_get:
   - A list of contradictions
   - Draft messages for each group
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste each past message on its own. Add its date and who it was for.
+  - Add the news or change you plan to share, and list the groups you need to reach.
+  - Add your mission and company stage, then ask your AI to build the core narrative and check for contradictions.
+  - Read the contradiction list first. Fix the less accurate message before you send any new draft.
+  - Check each draft message against your real facts before you send it.
+output_sample:
+  input:
+    - What you have told each group so far, pasted with its date and who it was for
+    - The news or change you need to share
+    - The groups you need to reach, such as staff, investors, customers and candidates
+    - Your mission and the stage your company is at
+  output:
+    - name: Core narrative
+      contains: One short paragraph on why the company exists, what you build, your approach and where you stand now.
+    - name: Audience translation table
+      contains: The same facts framed for what staff, investors, customers and candidates each need to hear.
+    - name: Contradiction list
+      contains: Places where your messages to different groups disagree, with a note on which version looks true.
+    - name: Draft message for each group
+      contains: A short message per audience built from the core story, with no change in the facts.

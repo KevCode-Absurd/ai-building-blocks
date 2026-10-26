@@ -1,46 +1,58 @@
 new_slug: check-acquisition-refinancing-funds
 name: Check acquisition refinancing funds
 headline: Check acquisition refinancing funds
-summary: Trace debt face value to refinancing payoff cash and the complete closing funding gap.
+summary: Check the cash new debt really raises, the cost of paying off old debt, and whether an acquisition closing is fully funded.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation. Share actual issue price and fees, payoff letter and premium, distinct refinancing fees, acquisition uses, buyer available cash, rollover and sponsor commitments.
+subhead: Give it the new debt terms, the lender's payoff letter and your closing budget. Your AI traces the debt's face value to the cash you receive, then to the payoff, then to a sources and uses table that shows any gap.
 explain: |-
-  A linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation.
+  New debt rarely puts its full face value in your account. A discount and some fees come off first. If the same deal pays off old debt, the lender adds a premium, and the refinancing has fees of its own. Then the buyer's cash, rolled equity and sponsor money must cover everything. This workflow follows one chain of numbers so each fee is counted once.
 
-  Acquisition financing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 turns the debt's face value into cash received. Step 2 takes that cash and the lender's payoff letter and adds only the refinancing fees not already taken out. Step 3 sets the cash against the purchase price, the payoff and the fees, and shows what the sponsor must still fund.
+
+  A gap is shown as a gap. The workflow never plugs it, and it never uses face value as if it were usable cash.
 when:
-  - You need a linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation.
-  - You work on acquisition financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are buying a company and paying off its old debt at closing.
+  - A lender sends a payoff letter and you need to check the number before wiring.
+  - The draft funds flow for a closing does not add up.
+  - A sponsor asks how much equity cash the deal needs.
+not_for:
+  - "You want what the seller receives at closing: use the Reconcile seller closing cash workflow."
+  - "You want interest, cash sweep and debt ratios after closing: use the Review sponsor debt cash demands workflow."
+  - "You are tracking a construction loan drawn in stages: use the Reconcile construction draws and completion funding workflow."
 you_give:
-  - Actual issue price and fees, payoff letter and premium, distinct refinancing fees, acquisition uses, buyer available cash, rollover and sponsor commitments.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The new debt terms: face value, issue price or discount, and fees taken out at issue (from the financing documents)"
+  - The payoff letter for the old debt, with any prepayment premium
+  - Refinancing fees billed separately (from the invoices or the funds flow draft)
+  - The purchase price and other uses of cash at closing
+  - The buyer's available cash, any rollover equity and sponsor commitments
 you_get:
-  - A linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The cash the new debt really raises, next to its face value
+  - The old debt payoff and premium, with refinancing fees shown once
+  - A sources and uses table for closing
+  - The funding gap, if any, and who must cover it
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the financing terms, the payoff letter and the draft funds flow. Say the closing date, currency and scale.
+  - Ask your AI to follow the pack and save each step's file.
+  - After step 1, check the cash received against the lender's funding notice. After step 2, check the payoff against the payoff letter.
+  - After step 3, check that sources equal uses with no unexplained plug. Finish every MISSING line before closing.
 how_it_works:
   - title: Debt issue proceeds checker
-    text: Reconcile issued face to actual cash proceeds after OID and only those fees withheld at issue. Preserve the principal amount separately.
+    text: Turns face value into cash received after the discount and only the fees withheld at issue. Keeps the principal as its own line. Hands step 2 the net cash.
   - title: Refinancing closing cost checker
-    text: Use net financing cash from the first schedule and the real payoff letter. Include only refinancing fees not already deducted, identifying the old debt payoff and premium separately.
+    text: Takes the net cash from step 1 and the payoff letter. Adds refinancing fees not already deducted. Shows old principal, premium and fees separately. Hands step 3 each use.
   - title: Deal funding gap checker
-    text: Map actual old principal and premium into payoff use and remaining fees into distinct fee uses. Use the same net debt cash as source, then reconcile purchase use, closing cash, rollover and sponsor funding without plugging a gap.
+    text: Lists the payoff, fees, purchase price and closing cash as uses. Lists net debt cash, rollover and sponsor money as sources. Shows the gap and does not plug it. Check before you wire, sources and uses match line by line.
 output_shape: |-
-  A linked debt face-to-cash-to-payoff-to-closing sources and uses reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <financing terms, payoff letter, funds flow and dates>
+  DEBT CASH               <face value | discount | fees at issue | cash received>
+  REFINANCING             <old principal | premium | refinancing fees>
+  SOURCES AND USES        <each source | each use | gap>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,13 +74,40 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A spreadsheet tool and an AI that reads files
+      why: The three steps pass one set of numbers along. The AI should recalculate and keep each source and use traceable.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The lender's funding notice, to match the cash received.
+    - The signed purchase agreement, for the purchase price.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Face value
+    meaning: The amount of debt on paper. It is not the cash you receive.
+  - term: Original issue discount (OID)
+    meaning: A price below face value on new debt, which cuts the cash you receive.
+  - term: Payoff letter
+    meaning: The lender's statement of what must be paid to close out old debt on a given date.
+  - term: Sources and uses
+    meaning: A table of where closing cash comes from and where it goes.
+  - term: Rollover
+    meaning: Equity a seller keeps in the new company instead of taking cash.
+output_sample:
+  input:
+    - The new debt terms and the old debt payoff letter
+    - Refinancing fees and the purchase price
+    - Buyer cash, rollover and sponsor commitments
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-1-debt-issue-proceeds-checker.md
+      contains: Face value, discount, fees at issue and the cash the new debt actually raises.
+    - name: outputs/step-2-refinancing-closing-cost-checker.md
+      contains: Old principal payoff, premium and refinancing fees, each shown once.
+    - name: outputs/step-3-deal-funding-gap-checker.md
+      contains: Sources and uses at closing, with any funding gap left visible.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines, checks missed and one suggested next step.
+next:
+  - reconcile-seller-closing-cash
+  - review-sponsor-debt-cash-demands
+  - review-maturity-funding-and-credit-limits
+before: []

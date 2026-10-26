@@ -1,52 +1,87 @@
 new_slug: prepare-a-thesis-defence-evidence-brief
 name: Prepare a thesis defence evidence brief
 headline: Prepare a thesis defence evidence brief
-summary: Share the source files. Get a defence outline, evidence index and question preparation notes.
+summary: Prepare for your thesis defence with a timed slide outline, page references for every claim and practice questions on your methods and limits.
 job: speak-and-persuade
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A defence outline, evidence index and question preparation notes. Share the completed thesis, actual results and limitations, examination format, approved slide outline and available presentation time. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI your finished thesis, your presentation time and the exam format. It pulls out your contribution, methods, results and limits with page numbers, builds a timed defence outline, then proofreads it. You also get practice questions.
 explain: |-
-  A defence outline, evidence index and question preparation notes.
+  A defence has one problem. You know your thesis well, but you must say its core in a short time, and then answer questions you did not choose. The usual mistakes are to retell the whole thesis, or to freeze when someone asks why you chose one method over another.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Each defence claim links to the thesis; likely questions remain practice prompts, not examiner predictions. Missing tools or evidence stay visible in the final summary.
+  This workflow begins with the thesis itself. Step 1 pulls out what you claim as your contribution, how you got there, what you found, what you could not show and what is still open, each with a page number. Step 2 builds a timed outline that links every claim on a slide to the page that backs it, and adds practice questions about your method choices, other explanations and limits. Step 3 proofreads the outline and notes so terms and figures match your thesis.
+
+  The practice questions come from the thesis. They are not a forecast of what your examiners will ask. No rehearsal or exam has happened when the workflow ends, and it says so.
 when:
-  - You need a defence outline, evidence index and question preparation notes.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your thesis is finished and your defence date is set.
+  - You must present for 15 to 30 minutes and then take questions.
+  - Your supervisor told you to be ready to explain why you chose your method.
+  - You want to see which claims in your thesis you cannot point to a page for.
+not_for:
+  - Your thesis is still being written. Ask your supervisor for feedback on the draft first.
+  - You are giving a short talk at a student conference. Use the Prepare a student conference talk workflow.
+  - You want slides made from a paper with every figure traced. Use the Build a research talk from checked figures workflow.
+  - You want to predict what your examiners will ask. This workflow only gives practice questions from your own thesis.
 you_give:
-  - The completed thesis, actual results and limitations, examination format, approved slide outline and available presentation time.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your finished thesis, as a file or the chapters pasted in
+  - Your actual results and the limits you stated
+  - The exam format and how long you have to present
+  - Your approved slide outline, if you have one (optional)
+  - Feedback from your supervisor or examiners on earlier drafts (optional)
 you_get:
-  - A defence outline, evidence index and question preparation notes.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A summary of your contribution, methods, results, limits and open questions, with page references
+  - A timed defence outline, with each claim linked to the page that backs it
+  - Speaker notes for each slide
+  - Practice questions on your method choices, other explanations and limits
+  - A proofread outline and notes, with a hand-back summary naming every gap
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini. Use one that can open long files.
+  - Attach your thesis. Say how long you have, how the exam works and any slide outline you were given.
+  - Check step 1 against your own thesis. Each page number must lead to the claim it names.
+  - Answer each practice question out loud, with a timer. Mark the ones where you could not point to a page.
+  - Take the outline to your supervisor and ask them to rehearse with you. The AI cannot do that for you.
 how_it_works:
   - title: Source note summariser
-    text: Extract the thesis contribution, methods, results, limitations and open questions with page references.
+    text: "Reads your thesis and lists your contribution, methods, results, limits and open questions, each with a page reference. Hands step 2 the list. Check before moving on: each page number leads to its claim."
   - title: Presentation builder
-    text: Work in outline and speaker-notes mode to connect the actual contribution to evidence within the defence duration. Include method choices, counter-explanations and limits as practice questions.
+    text: "Builds a timed outline and speaker notes that tie each claim to evidence in the time you have. Adds practice questions on method choices, other explanations and limits."
   - title: Proofreader
-    text: Check the prepared outline and notes for consistent terminology, exact figures and wording; record that no examination or rehearsal has happened.
+    text: "Checks the outline and notes for the same terms, exact figures and clear wording as your thesis. Lists each change. Records that no rehearsal or exam has happened."
 output_shape: |-
-  Scope and source coverage
-  A defence outline, evidence index and question preparation notes.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  THESIS MAP      <contribution | methods | results | limits | open questions>, each with a page
+  OUTLINE         <slide | claim | page in thesis | minutes>, total <n>
+  SPEAKER NOTES   <slide | what to say | evidence to point at>
+  PRACTICE QUESTIONS <question | why it may be asked | where in the thesis the answer sits>
+  PROOFREAD       <each change | reason>
+  MISSING         <each gap and the claim it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Your finished thesis
+    - Your results and the limits you stated
+    - The exam format and your presentation time
+    - Your approved slide outline (optional)
+  prerequisites:
+    - An AI that can read a long file or chapters pasted in
+    - The pack with its three component skills
+  output:
+    - name: Thesis map
+      contains: Your contribution, methods, results, limits and open questions, each with a page reference.
+    - name: Defence outline
+      contains: Each slide with its claim, the page that backs it and its minutes, adding up to your slot.
+    - name: Speaker notes
+      contains: What to say for each slide and what evidence to point at.
+    - name: Practice questions
+      contains: Questions on method choices, other explanations and limits, with the page where each answer sits.
+    - name: Hand-back summary
+      contains: Each saved file, every MISSING line and a note that no rehearsal or exam has happened.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Each defence claim links to the thesis; likely questions remain practice prompts, not examiner predictions.
+  - what: Time
+    how: Change the minutes you have. The outline keeps the claims that matter most and says what it cut.
+  - what: Field
+    how: Name your field and exam style. The practice questions follow how your field tests method and limits.
+  - what: Focus
+    how: Name a chapter you worry about. The map and the questions spend more time on it.
 judge:
   - Each defence claim links to the thesis; likely questions remain practice prompts, not examiner predictions.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -64,11 +99,17 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini
+      why: They can read long files. If your thesis is too long for one go, paste one chapter at a time and say which pages it holds.
+    - name: A slide tool such as PowerPoint or Google Slides (optional)
+      why: You build the slides there from the outline. This workflow does not make the slide file.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your supervisor's notes on your last draft.
+    - The department's rules for the defence.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Contribution
+    meaning: What your thesis adds that was not known or shown before.
+  - term: Limits
+    meaning: What your work could not show, such as a small sample or one setting only.
+  - term: Practice question
+    meaning: A question to rehearse with, taken from your own thesis. It is not a guess at the exam.

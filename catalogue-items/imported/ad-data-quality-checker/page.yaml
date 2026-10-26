@@ -2,39 +2,109 @@ thinking: high
 thinking_why: Each check needs exact settings, and a wrong call hides bad data.
 new_slug: ad-data-quality-checker
 name: Ad data quality checker
-summary: Give it your ad and sales tables. Get nine checks that catch missing
-  spend, duplicates and empty columns.
+summary: Check your ad and sales data in BigQuery before you report. Nine checks find spend gaps, double-counted leads and empty columns.
 job: track-numbers
 headline: Ad data quality checker
-subhead: Give it your ad and sales tables, the date window, the time zone and
-  the systems you are comparing. It runs nine checks, including that spend adds
-  up across buckets, leads are not double counted and columns are filled. You
-  get the result of each check, the rows that failed, a column fill report and a
-  repeatable record.
+subhead: For people who keep ad and sales data in Google BigQuery. Give it your tables, the date window, the time zone and the systems you compare. It runs the checks you pick from nine, and returns pass, unknown or fail for each, with the rows that failed.
 explain: |
-  Nine checks run on your ad and sales tables and catch missing spend, duplicates, double-counted leads and empty columns before they distort a report.
+  Before you send an ad report, you want to know the numbers add up. This ad data quality checker runs nine SQL checks on your ad and sales tables. It finds missing spend, double-counted leads, sources that disagree and columns that are empty.
 
-  The skill makes you state your evidence first: the reporting window, time zone and which systems you are comparing. It then runs the checks on typed inputs, including every excluded row, so nothing disappears quietly. It checks that spend adds up across all buckets, that funnel counts add up with unknowns kept, that rates use the right population, and that each lead has one primary record. It compares sources that claim to measure the same thing. The result is complete and repeatable, with the scope of each check labelled.
+  You state your evidence first: the date window, the time zone, the systems and which tables are complete. Each check then returns pass, unknown or fail. Unknown is not a pass. If a table is partial, the check says so and does not guess. A gap in spend is shown as a gap, never called a deleted ad.
+
+  This is an expert tool. The checks are SQL scripts that run in BigQuery, a Google data service that charges for the data each query reads. They do not match people, sort traffic or work out which ad caused a sale.
 when:
-  - Your ad spend total does not match the platform's invoice.
-  - You suspect leads are counted twice in your report.
-  - A column in your data looks empty and you want proof.
-  - You need a repeatable check before sending a report to a client.
+  - Your ad spend total does not match the platform's invoice, and you need to see which dates differ.
+  - You suspect leads are counted twice in your funnel report.
+  - A column in your data looks empty and you need proof before you drop it.
+  - You must show a client that the data is clean before a report goes out.
+not_for:
+  - Your data is not in BigQuery. The scripts need it. For a first look at any file, use the Dataset profiler.
+  - You want to know which channel or ad earned a sale. Use the Lead to ad matcher or the Cross-platform conversion reconciler.
+  - You want a quick score for a spreadsheet. Use the Data quality scorecard maker for blanks, duplicates and stale data against your own rules.
+  - You want your own tracking set up or fixed. Use the Meta pixel and server events fixer.
 you_give:
-  - Ad and sales tables, with the date window
-  - The systems you want to compare
-  - The time zone for the report
+  - Your ad and sales tables in BigQuery
+  - The date window and the time zone for the report
+  - The systems you want to compare, such as your CRM and an ad platform
+  - Which tables are complete and which are partial
   - A list of expected columns (optional)
 you_get:
-  - Results for nine quality checks
-  - Rows or groups that failed
-  - A column fill report
-  - The scope of each check
-  - A repeatable record of the findings
+  - A pass, unknown or fail for each check you run
+  - The dates, rows or columns that failed
+  - A column fill report that tells empty from missing
+  - The scope of each check, so you know what it covered
+  - A repeatable record of the finding
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Node code and SQL on your own BigQuery
-    data.
+  - Check what you have. You need a BigQuery project with billing on and the bq tool signed in. Each query can cost money, so keep the 1 GiB limit in the commands.
+  - Use an AI tool that can run commands, such as Claude Code. A plain chat window can plan the check but cannot run it.
+  - Add this skill. Tell it the date window, the time zone, the systems to compare and which tables are complete.
+  - Pick the checks that fit your question. It swaps the sample rows in the SQL for your own typed tables.
+  - Read the summary first, then the full finding. Treat unknown as "not proven", not as pass.
+  - Fix the failed dates or columns at the source. Run the same check again to see the result change.
+how_it_works:
+  - title: States the evidence
+    text: Sets the report scope, time zone, date window, systems and which side is complete.
+  - title: Chooses the checks
+    text: Picks from nine checks to fit your question, such as spend, funnel counts or empty columns.
+  - title: Types the inputs
+    text: Checks every row, including excluded ones. Unknown money stays unknown and is never read as zero.
+  - title: Runs the SQL
+    text: Runs one script per check in BigQuery, with a cost cap and no permanent tables created.
+  - title: Returns the full finding
+    text: Gives status, reasons, evidence and details unchanged, with a short summary above.
+  - title: Ranks the result
+    text: Fail beats unknown, and unknown beats pass. A proven local defect can fail a check even when data is partial.
+output_shape: |
+  SUMMARY
+  Check: <name> | Status: <pass / unknown / fail> | Reasons: <list>
+  Failed or unknown: <dates, rows or columns>
+  Scope: <window, time zone, systems, which sides were complete>
+  Next step: <one action>
+
+  FULL FINDING (unchanged)
+  check_id, configuration, status, reasons, evidence_refs, details, diagnostics
+output_sample:
+  input:
+    - Your ad and sales tables in BigQuery
+    - The date window and time zone for the report
+    - The systems you want to compare
+    - Which tables are complete (and which are partial)
+  prerequisites:
+    - A BigQuery project with billing on, and the bq tool signed in
+    - An AI tool that can run commands and edit SQL
+  output:
+    - name: Spend conservation
+      contains: Whether spend adds up across all five buckets for one stage, date by date.
+    - name: Funnel additivity
+      contains: Whether the four funnel counts add up, with unknowns kept and not dropped.
+    - name: Unmapped share and ad match rate
+      contains: Whether the unmapped share stays under your ceiling and the match rate above your floor.
+    - name: Primary uniqueness
+      contains: Whether each lead has only one primary record.
+    - name: Source parity
+      contains: Whether two sources that claim to count the same thing agree.
+    - name: Schema name policy
+      contains: Whether any column name breaks your forbidden-name list, including nested names.
+    - name: Column population
+      contains: Which columns are populated, all empty, missing or not observed.
+    - name: Ad and campaign spend coverage
+      contains: Where spend exists on one side but not the other, in both directions.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the bq command and the SQL scripts in the skill folder.
+    - name: Google BigQuery
+      why: The checks are written for BigQuery Standard SQL and need it to run.
+  inputs:
+    - The invoice or platform spend total for the same window
+    - Your CRM lead export with the primary-record flag
+    - A list of column names your policy forbids
+terms:
+  - term: BigQuery
+    meaning: A Google data service where you store tables and run SQL on them. It bills for the data each query reads.
+  - term: Spend conservation
+    meaning: A check that total spend stays the same as it moves from the source into the report.
+  - term: Funnel additivity
+    meaning: A check that the stage counts across all buckets add up to the whole.
+  - term: Unknown
+    meaning: The data is not complete enough to say pass or fail. It is not a pass.

@@ -1,6 +1,6 @@
 new_slug: review-video-ad
 name: "Turn reviews into a video ad ready to film"
-summary: "Give it your website and reviews. You get a script in your customers' words, then every stage to the clips."
+summary: "Turn customer reviews into a video ad script, then a storyboard and clip prompts ready to film. Every script line has a source. You approve each stage."
 job: make-video-ads
 
 headline: "Turn reviews into a video ad ready to film"
@@ -15,6 +15,10 @@ when:
   - You need a new video ad and don't know where to start.
   - Your current video ads sound like the rest of your category.
   - You have plenty of reviews but have never turned them into a script.
+not_for:
+  - "You have no reviews yet or no chosen buyer: write the buyer down first, or get a few reviews, then come back."
+  - "Your site facts are not confirmed yet: run the Brand profile builder on its own first, then start this."
+  - "You already have a script and only want the storyboard: use the Video avatar and storyboard planner."
 
 you_give:
   - Your website, as a link or saved pages
@@ -34,6 +38,33 @@ how_to_use:
   - Have your inputs ready. Your website link, your reviews, one or two sentences on who the ad is for, your product facts and real product photos.
   - Fix anything wrong in the brand file's fact sheet, check the buying reasons, and fix anything the ad rules check marks "Fix first".
   - Approve the avatar card, then the sheets, then the storyboard. Nothing is made until you say yes.
+output_sample:
+  input:
+    - Your website, as a link or saved pages
+    - Your customer reviews, copied as written
+    - Who the ad is for, what they want and what makes them doubt
+    - Your product facts and the claims you may and may not make
+    - Your real product photos (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with a project or Claude Code
+    - A video tool or paid credits to turn clip prompts into clips (optional, only to make the clips)
+  output:
+    - name: Brand file
+      contains: Eight files of your facts, offers, buyers, proof, claims and voice, each fact tagged by where it came from.
+    - name: Buying reasons
+      contains: A ranked map of why people buy and what nearly stopped them, counted by separate people.
+    - name: Script
+      contains: Beats from opening to call to action, each with spoken line, on-screen text, picture note and evidence.
+    - name: Read-aloud fixes
+      contains: Changes to stiff lines and the locked script with those changes made, with no claim altered.
+    - name: Ad rules check
+      contains: A verdict and the exact lines that break Facebook and Instagram ad rules, with a fix for each.
+    - name: Avatar, sheets and storyboard
+      contains: The avatar card, character and product sheets, lock lines, and one frame and shot card per shot, each approved by you.
+    - name: Shot list and clip prompts
+      contains: Timed shot tables, clip prompts that describe only motion, and the edit list.
+    - name: Hand-back summary
+      contains: Each step's file, the clip and shot counts, the three approvals and every gap in one list.
 
 how_it_works:
   - title: Builds your brand file

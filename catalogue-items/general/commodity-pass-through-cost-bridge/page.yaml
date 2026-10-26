@@ -1,55 +1,110 @@
 new_slug: commodity-pass-through-cost-bridge
 name: Commodity pass through cost bridge
 headline: Commodity pass through cost bridge
-summary: A commodity cost and pass-through contribution bridge
+summary: See how a commodity price rise cuts your margin per unit and how much a price rise wins back. Get a per-unit and period bridge.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A commodity cost and pass-through contribution bridge. Share original and scenario commodity cost per kilogram, physical kilograms per finished unit, other unit cash cost, approved selling price, pass-through share and planned volume.
+subhead: Give it the old and new commodity price per kilogram, kilograms used per unit, other cost per unit, your selling price, the share of the rise you pass on and planned volume. You get the extra cost per unit, the price you recover, and the margin per unit and for the period.
 explain: |-
-  A commodity cost and pass-through contribution bridge.
+  When a raw material gets dearer, you can raise your price, absorb the cost, or do some of each. A commodity price pass-through bridge shows what each choice does to the margin on one finished unit. It starts with the extra cost per unit, takes off the part you recover through price, and leaves the part you absorb.
 
-  FP&A input cost scenarios. Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.
+  The sums only work when the units match. A price per kilogram needs kilograms per unit. This skill checks that the price and the usage share the same unit and currency before it calculates anything. It also keeps a price scenario separate from a price you have already contracted to pay.
+
+  Volume is held fixed. The skill does not guess how many customers you lose when you raise prices. That is an assumption you can change, and it is shown as one.
 when:
-  - You need a commodity cost and pass-through contribution bridge.
-  - You work on fp&a input cost scenarios and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A key ingredient or material costs more and you need to decide how much to pass on.
+  - You want to know the margin per unit if you raise your price by half of the cost rise, or all of it.
+  - A buyer or a manager asks what the cost rise costs you per period, and how much of it you won back.
+  - You are building a cost scenario and need each step traced to an input.
+not_for:
+  - You want a forecast of commodity prices, or advice on hedging or buying. It uses a price you supply and does not predict one.
+  - You want to know how many customers you will lose after a price rise. Volume is held fixed, so it gives no demand estimate.
+  - "You are costing one trip or route: use the Freight trip cash margin calculator."
+  - "Your cost problem is waste or low yield in making the product: use the Manufacturing yield and unit cost calculator."
 you_give:
-  - Original and scenario commodity cost per kilogram, physical kilograms per finished unit, other unit cash cost, approved selling price, pass-through share and planned volume.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The old and the new commodity price per kilogram, with dates and currency
+  - Kilograms of the commodity in one finished unit
+  - Your other cash cost per unit
+  - Your current selling price per unit
+  - The share of the cost rise you pass on, from 0 to 1 (0.5 means half)
+  - Planned units for the period
 you_get:
-  - A commodity cost and pass-through contribution bridge.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The extra input cost per unit
+  - The price recovered, and the part left unrecovered
+  - The new selling price and the margin per unit
+  - The margin for the period, beside the original
+  - Sources, assumptions and a list of anything missing
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open Claude, ChatGPT or Gemini and add the skill, or paste SKILL.md into a new chat. A spreadsheet-capable AI can also build the workbook.
+  - Paste the old and new price per kilogram, the kilograms per unit, your other costs, your price, the pass-through share and the units. Add dates and currency.
+  - Check the units first. If your invoice is per tonne or per pound, tell the AI so it converts to kilograms and shows the step.
+  - Ask for the bridge. Try a second run with a different pass-through share to compare two choices.
+  - Read the unrecovered line and CHECKS MISSED before you quote any figure to someone else.
+output_sample:
+  input:
+    - Old and new commodity price per kilogram, with dates and currency
+    - Kilograms per finished unit and your other cash cost per unit
+    - Your selling price, the pass-through share and planned units
+    - A spreadsheet tool, if you want a workbook (optional)
+  prerequisites:
+    - An AI that can create and reopen spreadsheet files (only if you want a workbook)
+    - Node.js 20 or later (only to run the bundled calculation script)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, scale and the dated source for every figure.
+    - name: Inputs and assumptions
+      contains: Each figure with its sign and source, and any assumption made.
+    - name: Per-unit bridge
+      contains: Extra input cost, price recovered, unrecovered cost, new selling price and margin per unit.
+    - name: Period contribution
+      contains: Margin for the period at planned volume, beside the original and the change explained.
+    - name: Editable workbook
+      contains: The bridge as a spreadsheet with inputs, formulas and checks, if you ask for one.
+    - name: Actual file verification
+      contains: What was recalculated, rendered and reopened in the saved file, and what could not run.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs you did not give and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Source physical input intensity and original commodity invoice basis; distinguish a price scenario from a contracted future purchase
-    text: Source physical input intensity and original commodity invoice basis; distinguish a price scenario from a contracted future purchase.
-  - title: 3. Calculate incremental input cash per finished unit and apply only the approved pass-through fraction to the selling-price scenario
-    text: Calculate incremental input cash per finished unit and apply only the approved pass-through fraction to the selling-price scenario.
-  - title: 4. Rebuild unit and volume contribution, reconcile margin movement to recovered versus unrecovered input inflation and retain demand assumptions
-    text: Rebuild unit and volume contribution, reconcile margin movement to recovered versus unrecovered input inflation and retain demand assumptions.
+  - title: Maps your sources
+    text: Lists each dated price, unit and currency, and marks missing evidence before any maths.
+  - title: Checks the units
+    text: Confirms the price and the usage share one mass unit and one currency, and labels a scenario price as a scenario.
+  - title: Works out the extra cost
+    text: The price change times kilograms per unit gives the extra cost per finished unit.
+  - title: Applies the pass-through
+    text: Only the share you approved is added to the selling price. The rest is unrecovered cost.
+  - title: Rebuilds the margin
+    text: Unit margin and period margin are recalculated, and the change is tied back to the unrecovered cost.
 output_shape: |-
-  A commodity cost and pass-through contribution bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  COMMODITY PASS-THROUGH BRIDGE (<currency>, <period>)
+  Old price: <per kg>  New price: <per kg>  Change: <per kg>
+  Kilograms per unit: <kg>
+  Extra input cost per unit: <amount>
+  Price recovered (<pass-through share>): <amount>
+  Unrecovered cost per unit: <amount>
+  New selling price: <amount>
+  Unit margin: <original> -> <scenario>
+  Period margin (<units> units): <original> -> <scenario>
+
+  SOURCES AND ASSUMPTIONS
+  <figure | source | date | assumption>
+
+  ACTUAL FILE VERIFICATION
+  <what was recalculated, rendered and reopened>
+
+  MISSING:
+  <each missing input>
+
+  CHECKS MISSED:
+  <each check that failed or could not run, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+  - what: Pass-through share
+    how: Run it at 0, at half and at 1 to see the whole range of choices side by side.
+  - what: Units
+    how: Give the price and the usage in the same unit. Tell the AI if your invoice uses tonnes or pounds.
+  - what: Scenario or contract
+    how: Say whether the new price is a what-if or a price you have already agreed to pay.
 judge:
   - Every material driver traces to a dated source; actuals and scenarios remain separate.
   - Missing evidence blocks the affected calculation instead of becoming a zero.
@@ -69,10 +124,13 @@ works_best_with:
     - name: Node.js 20 or later
       why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your supplier invoice for the original price
+    - The new quote or price scenario, with its date
+    - Your bill of materials, showing kilograms per unit
 terms:
+  - term: Pass-through share
+    meaning: The part of a cost rise you add to your selling price, from 0 (none) to 1 (all).
+  - term: Unit margin
+    meaning: Selling price per unit, less the cash cost of making that unit.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not real data.

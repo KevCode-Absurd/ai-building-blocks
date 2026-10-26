@@ -15,8 +15,8 @@ outputs:
   - {type: angle_library}
 uses: [customer-job-interview-planner, customer-buying-reasons-finder]
 steps:
-  - {uses: customer-job-interview-planner, note: "A plan to learn the job buyers hired it for"}
-  - {uses: customer-buying-reasons-finder, note: "Ranks the reasons in the answers with the exact phrases customers used."}
+  - {uses: customer-job-interview-planner, note: "A plan to learn the job buyers hired it for. Hands the plan to your interviews; you bring back each customer's own words for step 2."}
+  - {uses: customer-buying-reasons-finder, note: "Reads the customer answers you collected by following step 1's plan, not the plan itself. Ranks the reasons in the answers with the exact phrases customers used."}
 origin: rebuilt
 version: 1.0.0
 minds: [clayton-christensen]

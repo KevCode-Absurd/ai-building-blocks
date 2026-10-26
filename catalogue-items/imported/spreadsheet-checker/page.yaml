@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It profiles data and takes care not to break formulas.
 new_slug: spreadsheet-checker
 name: Spreadsheet checker
-summary: Give it a spreadsheet. Get it cleaned, reconciled and analysed with
-  formulas and formatting kept intact.
+summary: Check a spreadsheet for odd totals, broken formulas and messy data. Your original stays safe, and you get findings with proof and a new file.
 job: work-with-files
 headline: Spreadsheet checker
-subhead: A spreadsheet that has been inspected, cleaned or analysed without
-  breaking your original. The skill works on a copy and records the file's
-  fingerprint, so the source stays safe.
+subhead: A spreadsheet that has been inspected, cleaned or analysed without breaking your original. The skill works on a copy and records the file's fingerprint, so the source stays safe.
 explain: |
   A spreadsheet that has been inspected, cleaned or analysed without breaking your original. The skill works on a copy and records the file's fingerprint, so the source stays safe. It lists every sheet, then separates stored values from formulas.
 
@@ -18,6 +15,10 @@ when:
   - Two versions of a sheet differ and you need the changes.
   - You need a summary, pivot or chart without breaking formulas.
   - A messy CSV needs repair before you can use it.
+not_for:
+  - "You need to change a live database or a production workbook: work in a local spreadsheet app, or ask the file's owner to make the change."
+  - "Your data must not leave your machine: use a local spreadsheet app, or an AI setup that runs only on your computer."
+  - "You want a forecast or a promise about future results: ask an analyst, because this checks past data and does not guarantee outcomes."
 you_give:
   - The spreadsheet or CSV file
   - The question you want answered
@@ -30,8 +31,31 @@ you_get:
   - A new output file with your edits
   - Reconciliation results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open spreadsheets.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files. If your data is private, use a setup that stays on your computer.
+  - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
+  - Attach a copy of your spreadsheet or CSV. Add your question and any totals you trust.
+  - 'Paste this first prompt: "Follow this skill. Check my attached file and answer my question. Work on a copy. Ask me what unclear columns mean."'
+  - Read the findings and the data quality notes first. Then check the new file before you use it.
+  - If your AI cannot run code, it can still read the file and describe it. It will mark values as not recalculated.
+output_sample:
+  input:
+    - Your spreadsheet or CSV file
+    - The question you want answered
+    - Totals you trust, to check against (optional)
+    - Whether formatting, formulas and macros must stay (optional)
+  prerequisites:
+    - An AI that can run code and open files, for the best results
+    - A copy of your file you are happy to share with that AI
+  output:
+    - name: Source and scope
+      contains: The file path, a file fingerprint, the format, a list of every sheet, and what the check covers.
+    - name: Findings
+      contains: Each result with its method, filters, units, period and the place in the file where the proof sits.
+    - name: Data quality and formula issues
+      contains: Problems such as duplicates, blanks, odd types and inconsistent formulas, kept apart from business conclusions.
+    - name: New output file
+      contains: Your requested edits saved to a new workbook or table, never over the original.
+    - name: Reconciliation and checks
+      contains: How totals matched your trusted figures, what was recalculated and reopened, and what could not be verified.
+    - name: Assumptions and limits
+      contains: What your AI assumed about unclear columns, and values labelled as calculated, estimated, cached or missing.

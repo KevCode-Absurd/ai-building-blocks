@@ -1,51 +1,65 @@
 new_slug: reconcile-cash-pool-interest-and-fees
-name: Reconcile cash pool interest and fees
-headline: Reconcile cash pool interest and fees
-summary: A pool interest residual and external fee reconciliation
+name: Cash pool interest and fee checker
+headline: Cash pool interest and fee checker
+summary: Share group cash-pool records, agreed rates and bank charges. Get entity interest schedules, a pool residual and a separate fee check.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A pool interest residual and external fee reconciliation. Share same-period entity deposit/borrowing records, signed pool agreements, external service contract, bank charge invoice and actual transaction counts.
+subhead: Share each company's deposit and loan balances for one period, the signed pool agreement and the bank's fee invoice. Your AI works out each company's interest, finds what the pool center keeps, then checks the bank's fees against real payment counts. You get both side by side in one bridge, with gaps marked.
 explain: |-
-  A pool interest residual and external fee reconciliation.
+  A cash pool nets the bank accounts of many group companies into one balance. Each company earns or pays interest on its own balance, and the bank adds fees on top. The pool residual is what borrowers pay minus what depositors earn. It is often mixed up with the bank's fees, or called profit.
 
-  Treasury pool economics. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow does the two jobs in order. First it builds interest for each company from its balance, the agreed rate and the days in the period. Then it works the bank fees out again from the contract prices and the real count of payments and receipts, and sets them beside the residual in a separate bridge.
+
+  It never calls the residual a cash balance or a profit. Bank interest, taxes and other costs you did not supply are listed as missing, so nobody reads the bridge as a net result by mistake. It does arithmetic on the terms you give. It does not judge whether the pool is legal or tax-efficient.
 when:
-  - You need a pool interest residual and external fee reconciliation.
-  - You work on treasury pool economics and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your group runs a cash pool and the center's interest does not match what the bank shows.
+  - A bank fee invoice arrives and you want to check it against the contract and real counts.
+  - You must show how interest moved between group companies in one month or quarter.
+  - An auditor or lender asks how the pool residual was worked out.
+not_for:
+  - "You only want the interest split by company: use the Group cash pool interest calculator."
+  - "You only want to check one bank bill with no pool: use the Bank service fee checker."
+  - "You want to know how much cash the group can reach and when: use the Treasury liquidity and payment timing checker."
+  - "You need advice on tax or transfer pricing for the pool: ask your tax adviser. This only does the sums."
 you_give:
-  - Same-period entity deposit/borrowing records, signed pool agreements, external service contract, bank charge invoice and actual transaction counts.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Each company's deposit and loan balances for the period, from your treasury system or bank statements
+  - The signed pool agreement, with the agreed rates, the day-count basis and the period dates
+  - The bank's fee contract or price list for the pool accounts
+  - The bank's fee invoice for the same period, and the real count of payments and receipts from the bank portal
+  - Bank interest, taxes or other pool costs, if you want a net view (optional)
 you_get:
-  - A pool interest residual and external fee reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Interest for each company, worked out from its balance, rate and days
+  - "The pool residual: interest paid by borrowers minus interest paid to depositors"
+  - Bank fees worked out again from the contract, and any gap against the invoice
+  - A bridge with the residual and the external fees side by side
+  - A list of missing costs and checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the balances, pool agreement, fee contract and invoice. Say the period, the currency and the reporting date.
+  - Tell your AI to follow the pack and save each step's file. In a plain chat, ask for each step as its own section.
+  - After step 1, check that every company uses the same days and basis. Borrower interest minus depositor interest must equal the residual.
+  - After step 2, check that the payment counts belong to the invoice period. Then read the bridge. It is not a net profit figure until the missing costs are in.
 how_it_works:
-  - title: Cash pool interest allocator
-    text: Build the entity interest schedule from the approved internal rates and actual principal-days. Pass the center residual and accrual window as one component of pool economics, not a cash balance or accounting profit.
-  - title: Bank fee reconciliation checker
-    text: Recompute external fees using matching account-period activity. Compare the bank-fee amount with the pool residual in a separate summary bridge; disclose bank interest, taxes and other costs not included before describing a net result.
+  - title: Group cash pool interest calculator
+    text: "Builds interest for each company from its balance, the agreed rate and the days. Hands step 2 the pool residual and the accrual window as one part of pool economics. Check before moving on: borrower interest minus depositor interest equals the residual."
+  - title: Bank service fee checker
+    text: "Works the bank fees out again from contract prices and the real counts for the same account and period. Sets the fee total beside the residual in a separate bridge. Check before you rely on it: bank interest, taxes and other costs you did not supply are listed before any net result is named."
 output_shape: |-
-  A pool interest residual and external fee reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES    <files, dates, currency, scale, period>
+  INTEREST BY COMPANY  <company | balance | rate | days | interest>
+  POOL RESIDUAL        <borrower interest | depositor interest | residual>
+  BANK FEE CHECK       <fee line | count | price | expected | billed | difference>
+  BRIDGE               <residual | external fees | costs not supplied>
+  MISSING              <each gap and what it stops>
+  CHECKS MISSED        <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: All entity interest and external charges use the same period/currency; internal transfers cancel at group level; external fees are deducted once.
+  - what: Day-count basis
+    how: Give the basis from the agreement, such as 360 or 365 days. A wrong basis moves every company's interest.
+  - what: More than one pool
+    how: Run one pool and its bank accounts at a time, so counts and rates stay matched.
+  - what: Net view
+    how: Add bank interest, taxes and other costs if you want a net result. Without them the bridge stays partial.
 judge:
   - All entity interest and external charges use the same period/currency; internal transfers cancel at group level; external fees are deducted once.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -60,13 +74,36 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads files and builds spreadsheets
+      why: Interest and fees are sums you can check cell by cell. In a plain chat the schedules come back as tables.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Last period's bridge, to compare against (optional).
+    - A chart of the pool structure, if the agreement is hard to read.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Cash pool
+    meaning: A bank set-up that nets many group accounts into one balance.
+  - term: Pool residual
+    meaning: "What the pool center keeps: interest from borrowing companies minus interest paid to depositing ones."
+  - term: Day-count basis
+    meaning: How a year is counted for interest, such as 360 or 365 days.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains the difference between two records that should match.
+output_sample:
+  input:
+    - Each company's deposit and loan balances for one period
+    - The signed pool agreement, with rates and day-count basis
+    - The bank fee contract, the invoice and the real payment and receipt counts
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook (optional)
+  output:
+    - name: outputs/step-1-cash-pool-interest-allocator.md
+      contains: Interest for each company and the pool residual, with the days and basis used.
+    - name: outputs/step-2-bank-fee-reconciliation-checker.md
+      contains: Expected bank fees, unused credit and any gap against the invoice.
+    - name: Bridge
+      contains: The pool residual and the external fees side by side, with missing costs listed.
+    - name: Workbook (optional)
+      contains: The schedules in one linked spreadsheet, if your AI can build files.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.

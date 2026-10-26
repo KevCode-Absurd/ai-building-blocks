@@ -1,6 +1,6 @@
 slug: staff-announcement-writer
 name: Staff announcement writer
-summary: Say what is changing. Get a clear internal announcement, a rollout plan and answers to likely questions.
+summary: "Write a clear staff announcement, plus manager talking points, a FAQ and a rollout order, for routine news or a hard change."
 category: general
 boards: []
 type: skill
@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: document
 uses: []

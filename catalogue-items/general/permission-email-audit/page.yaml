@@ -1,6 +1,6 @@
 new_slug: permission-email-audit
 name: "Permission email audit"
-summary: "Paste your email list source and last ten messages. Get which contacts gave real permission and which messages earn it."
+summary: "Check if your email list gave real permission and which messages earn their place. Paste your sign-up wording and last ten emails. Get a score out of 100."
 job: check-ads
 thinking: medium
 thinking_why: "It judges consent and message value from your own evidence, in fixed steps."
@@ -17,6 +17,10 @@ when:
   - "Your list is growing but opens and replies are falling."
   - "You bought, borrowed or collected addresses at events and are unsure what you can send."
   - "You send many messages and want to know which ones to cut."
+not_for:
+  - "You only send receipts, password resets or order updates: you don't need this, because those messages are not marketing."
+  - "You want to review the timing and order of a full email sequence: use a flow audit from your email platform or a person who knows your setup."
+  - "You need to know if your list is legal to email: ask a lawyer, because this skill judges your evidence and does not give legal advice."
 
 you_give:
   - "Where your addresses come from, with the sign-up wording"
@@ -35,6 +39,27 @@ how_to_use:
   - "Paste your last ten messages, subject line and body."
   - "Add any replies or numbers you have."
   - "Make the changes it lists and check the next three messages against the promise."
+output_sample:
+  input:
+    - Where your addresses come from, with the exact sign-up wording
+    - Your last ten messages, subject and body
+    - Replies, forwards or complaints you have received (optional)
+    - Opens, clicks and unsubscribes by message (optional)
+  output:
+    - name: Score
+      contains: A score out of 100, split into consent, messages and value signs, with how it was worked out.
+    - name: Contact groups
+      contains: Each source of addresses with the reason people gave theirs and a permission verdict of real, weak or none.
+    - name: Messages
+      contains: Each of the ten messages tested for expected, personal and missed if stopped, with a keep, change or cut verdict.
+    - name: Signs the relationship is valued
+      contains: A list of replies, forwards, questions and thanks that show people want your messages.
+    - name: The sign-up promise
+      contains: What you told people they would get, and whether your next three messages fit it.
+    - name: Changes
+      contains: No more than five changes, in order.
+    - name: Missing and checks missed
+      contains: Gaps in your evidence, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Names the reasons"

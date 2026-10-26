@@ -1,6 +1,6 @@
 slug: urgent-versus-important-sorter
 name: "Urgent versus important sorter"
-summary: "Paste your task list with rough hours. Get four boxes, your real time split, and what to drop, hand off and protect."
+summary: "Sort your task list into urgent and important boxes. See where your hours really go, and what to drop, hand off or protect."
 category: general
 type: skill
 role: make
@@ -17,3 +17,6 @@ version: 1.0.0
 minds: [stephen-covey]
 credits:
   - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "Habit 3: the time management matrix of urgent and important, why crisis work grows, getting time for the important work by saying no to the urgent but unimportant, and handing work off"}
+next: [results-agreement-writer, values-to-week-planner, weekly-time-audit-planner]
+before: [roles-and-goals-mapper, weekly-time-audit-planner]
+needs_mode: manual

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It is a clear formula with a few variations.
 new_slug: order-quantity-calculator
 name: Order quantity calculator
-summary: Give it demand, order cost and holding cost. Get the order size with
-  the lowest total cost, with discounts compared.
+summary: Work out your best order quantity from yearly demand, order cost and holding cost. See total cost for each option and if a bulk discount pays off.
 job: plan-supply-chain
 headline: Order quantity calculator
-subhead: The order size that gives you the lowest total cost, worked out from
-  your demand, ordering cost and holding cost. You see how far off your current
-  habit is and what it costs.
+subhead: The order size that gives you the lowest total cost, worked out from your demand, ordering cost and holding cost. You see how far off your current habit is and what it costs.
 explain: |
   The order size that gives you the lowest total cost, worked out from your demand, ordering cost and holding cost. You see how far off your current habit is and what it costs.
 
@@ -18,6 +15,10 @@ when:
   - A supplier offers a discount for larger orders and you must decide.
   - Storage is limited and you need a sensible lot size.
   - You are setting reorder rules for a new product.
+not_for:
+  - "Your demand swings a lot or follows seasons: this formula assumes steady demand, so use a safety stock method or ask a planner."
+  - "You stock many items under one tight budget: run each item alone, then have a person adjust for the total cash limit."
+  - "You only need a quick reorder date and have no cost data: set a reorder point by hand from lead time and daily sales."
 you_give:
   - Yearly demand
   - Cost per order or setup
@@ -30,8 +31,31 @@ you_get:
   - Discount analysis
   - Reorder point and frequency
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - "Collect your numbers: yearly demand, unit cost, cost per order, holding cost rate and lead time. Add supplier minimums and price breaks if you have them."
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your numbers below it. Say how many units you order now and how often.
+  - Ask for the order quantity report with a cost comparison for each option.
+  - Check the results against your storage space and supplier minimums. Round the order size to fit your packs.
+  - If your AI can run code, ask it to draw the cost curve. Without code, it can still do the sums in chat.
+output_sample:
+  input:
+    - Yearly demand in units
+    - Unit cost
+    - Cost per order or setup
+    - Holding cost rate per year
+    - Supplier minimums, price breaks and lead time (optional)
+  prerequisites:
+    - An AI that can run code is best, but a chat AI can do the sums by hand
+  output:
+    - name: Executive summary
+      contains: Your current ordering habit, the recommended order size, the yearly saving and what to change.
+    - name: Input parameters
+      contains: A table of the demand, cost and holding figures the calculation used.
+    - name: Optimal policy
+      contains: A table comparing your current habit with the best order size, orders per year and days between orders.
+    - name: Cost breakdown
+      contains: Purchase, ordering and holding cost for your habit and for the best size, with the difference.
+    - name: Reorder point
+      contains: The stock level that should trigger a new order, worked out from lead time and daily demand.
+    - name: Implementation recommendations
+      contains: Short steps to adjust order size, set the reorder point and review the numbers each quarter.

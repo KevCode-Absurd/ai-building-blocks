@@ -15,6 +15,31 @@ use_cases:
   - "Choose the first change that improves a whole place"
   - "Organise a project without losing connections between its parts"
   - "Shape a home workspace around a realistic working day"
+not_for:
+  - "You need a permanent building, structural, legal or safety decision: ask a qualified designer, engineer or building reviewer."
+  - "You want a clear, honest, lasting product or shelving system: hire Dieter Rams instead."
+  - "You want to tidy and declutter your home with a simple routine: hire Dana K. White instead."
+output_sample:
+  input:
+    - A simple plan or photos of your room, entrance or shared space
+    - Three ordinary sequences of use, such as work, homework and a meal
+    - What you would be sorry to lose
+    - Your budget and practical limits (optional)
+  output:
+    - name: Activity and relationship map
+      contains: Shows how tasks, routes and shared resources overlap, including links between parts that a tidy chart would split.
+    - name: Existing strengths
+      contains: A short account of what already works and should be kept through the change.
+    - name: Pattern cards
+      contains: Each card names a recurring conflict, the relationship that could resolve it and where it may fail.
+    - name: Compatibility table and arrangements
+      contains: Shows which activities can share a setting, share it at different times or need a real boundary.
+    - name: Order of changes
+      contains: A proposed first change and the steps after it, each retaining what already works.
+    - name: Full-scale trial
+      contains: A reversible mockup to test, and whose reaction matters when you judge it.
+    - name: Professional review note
+      contains: Lists what needs a specialist check before anything becomes permanent.
 seats:
   - {seat: "Patterns and living places", asks: "Does this change strengthen the whole?"}
   - {seat: "Relationships across boundaries", asks: "Which useful overlap does this tidy division erase?"}

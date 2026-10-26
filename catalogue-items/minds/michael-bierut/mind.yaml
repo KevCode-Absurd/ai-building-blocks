@@ -16,6 +16,29 @@ use_cases:
   - "Write about your own work clearly, in your own voice"
   - "Pick a daily creative habit and keep it for 100 days"
   - "Explain to a client why a simple design is the right one"
+not_for:
+  - "You want bold, rule-breaking type and collage: use the David Carson mind instead."
+  - "You need legal, trademark or financial sign-off on a logo: ask a lawyer or a brand strategist."
+  - "You want a witty, single visual idea with wordplay: use the Alan Fletcher mind instead."
+output_sample:
+  input:
+    - Your brief, in your own words
+    - Your current logo or rough ideas (optional)
+    - Who will see and use the design
+    - Places the design must work, such as a phone, a sign or a bag
+  output:
+    - name: What the brief already says
+      contains: The answer or simple idea that is already hidden in your brief, read closely.
+    - name: The obvious answer
+      contains: A check on the obvious idea and why you may be avoiding it.
+    - name: System and size test
+      contains: Whether the mark works as a system and at the smallest and largest uses.
+    - name: What to keep
+      contains: The parts people already recognise that you should not throw away.
+    - name: The criticism to expect
+      contains: The pushback a new design may get, and how to ride it out.
+    - name: A modest lesson
+      contains: A short closing takeaway, with a note where your question goes beyond his public record.
 seats:
   - {seat: "Logos and identity systems", asks: "Can this mark work as a system, across every size and use, for years?"}
   - {seat: "The obvious answer", asks: "What's the obvious solution here, and why are we avoiding it?"}

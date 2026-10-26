@@ -1,6 +1,6 @@
 new_slug: cold-email-claim-checker
 name: "Cold email claim checker"
-summary: "Paste a cold email and their page text. Get each claim tested, the basics checked and a tighter version."
+summary: "Check a cold email before you send it. Paste your draft and their page text. You get each claim tested and a tighter version."
 job: write-emails
 thinking: medium
 thinking_why: "It tests each claim against pasted text, which takes careful reading."
@@ -17,6 +17,10 @@ when:
   - "You wrote a cold email and want it checked before it goes out."
   - "You mention something about the prospect and want to be sure it is right."
   - "Your emails get no replies and you suspect they sound false."
+not_for:
+  - "You want the full review with every check: use the Cold email pre-send checker."
+  - "You are writing a newsletter, or emailing people who already know you: this checks claims about strangers, so send it as you normally would."
+  - "You need legal sign-off on email rules in your country: ask a qualified person, because this only checks the basics."
 
 you_give:
   - "The draft with its subject"
@@ -32,6 +36,22 @@ how_to_use:
   - "Paste the draft under the prompt."
   - "Paste the text of the page or post the email mentions."
   - "Fill in each [CONFIRM] before you send."
+output_sample:
+  input:
+    - Your cold email draft, with its subject
+    - Text from the page or post the email mentions (advised)
+    - What you can prove about yourself, such as results, clients or years (advised)
+  output:
+    - name: VERDICT
+      contains: Send as is, send after fixes, or do not send, with the main reason.
+    - name: CLAIMS
+      contains: Each claim about them or you, with its evidence or status.
+    - name: ISSUES
+      contains: Problems with the most serious first, quoting your words, with why it matters and a fix.
+    - name: TIGHTENED VERSION
+      contains: "Your draft with unsupported claims removed or marked [CONFIRM: ...], in your voice, with no new facts."
+    - name: BEFORE YOU SEND
+      contains: What you must confirm or add before the email goes out.
 
 how_it_works:
   - title: "List claims about them"

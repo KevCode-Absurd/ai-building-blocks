@@ -1,7 +1,6 @@
 slug: excel-handover-guide-writer
 name: Excel workbook handover writer
-summary: Share a working workbook and its update process. Get a guide explaining
-  inputs, formulas, refresh steps and known limits.
+summary: Write a handover guide for an Excel workbook so its next owner knows the inputs, formulas, update steps and risks. Your original file stays unchanged.
 category: general
 type: skill
 role: write

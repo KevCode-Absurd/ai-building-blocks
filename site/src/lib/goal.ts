@@ -1,6 +1,7 @@
 // Starting from a goal: "a landing page for my best ad" becomes the steps that make it, or the pages to read.
 // Plain code, no AI: the same words always give the same answer.
 import { type Block, type Catalogue, kindOf, portLabel, taskOf, workflowEntries } from "./data";
+import { GENERIC_PORTS, sameFamily } from "./next-steps.mjs";
 
 export const GOAL_EXAMPLES = ["a landing page for my best ad", "video ads from my reviews", "find why my ads stopped selling"];
 
@@ -27,10 +28,12 @@ export function planFromGoal(c: Catalogue, goal: string): Plan | null {
   const name = goal.trim().replace(/^./, (m) => m.toUpperCase()).slice(0, 80);
   const flowsList = c.blocks.filter((b) => b.category === "orchestrator");
 
+  // A ready workflow's old titles and its slug say the job in plain words ("open-a-shopify-store-and-take-your-first-order").
+  const topicalToks = toks.filter((t) => !GENERIC.has(t));
   const wf = flowsList
-    .map((b) => ({ b, h: hits(toks, `${b.name} ${b.headline} ${b.summary}`) }))
-    .filter((x) => x.h >= 2 && x.h / toks.length >= 0.6)
-    .sort((x, y) => y.h - x.h || y.b.steps.length - x.b.steps.length)[0];
+    .map((b) => { const text = `${b.name} ${b.headline} ${b.summary} ${(b.aliases ?? []).join(" ")} ${b.slug.replace(/-/g, " ")}`; return { b, h: hits(toks, text), topical: hits(topicalToks, text) }; })
+    .filter((x) => x.h >= 2 && x.h / toks.length >= 0.6 && (!topicalToks.length || x.topical > 0))
+    .sort((x, y) => y.h - x.h || y.topical - x.topical || y.b.steps.length - x.b.steps.length)[0];
   if (wf) return { slugs: workflowEntries(wf.b).filter((s) => c.bySlug[s]), name, from: { workflow: wf.b } };
 
   const pool = c.blocks.filter((b) => b.category !== "orchestrator" && b.type !== "agent");
@@ -57,8 +60,9 @@ export function planFromGoal(c: Catalogue, goal: string): Plan | null {
     for (const p of needed) {
       if (have.has(p.type) || !makers[p.type] || depth >= 3 || picked.length >= 5) continue;
       // A maker that needs things nobody has yet makes the chain longer, so it loses to one that can start now.
+      // A maker from another line of work (a buyer brief for a budget, a brand file for a bug fix) is not a step before it.
       const best = makers[p.type]
-        .filter((m) => m.slug !== b.slug && !picked.includes(m.slug))
+        .filter((m) => m.slug !== b.slug && !picked.includes(m.slug) && (before.get(b.slug)?.has(m.slug) || (GENERIC_PORTS.has(p.type) ? m.task === b.task : sameFamily(m.task, b.task))))
         .map((m) => ({ m, s: (before.get(b.slug)?.has(m.slug) ? 6 : 0) + hits(toks, `${m.name} ${m.summary}`) * 2 + m.usedIn * 0.2 + (kindOf(m) === "skill" ? 1 : 0) - m.inputs.filter((q) => q.required && makers[q.type] && !have.has(q.type)).length * 2 }))
         .sort((x, y) => y.s - x.s)[0];
       if (best) want(best.m, depth + 1);
@@ -71,7 +75,7 @@ export function planFromGoal(c: Catalogue, goal: string): Plan | null {
   if (target.b.role !== "check") {
     const made = new Set(target.b.outputs.map((p) => p.type).filter((t) => !["brief", "brand_brain", "plan"].includes(t)));
     const check = pool
-      .filter((b) => b.role === "check" && b.task !== "set-up-ai" && !picked.includes(b.slug) && b.inputs.some((p) => made.has(p.type)))
+      .filter((b) => b.role === "check" && b.task !== "set-up-ai" && !picked.includes(b.slug) && b.inputs.some((p) => made.has(p.type)) && sameFamily(b.task, target.b.task))
       // A check built for this kind of work (it needs it) beats one that can also read it.
       .sort((x, y) => Number(y.inputs.some((p) => p.required && made.has(p.type))) - Number(x.inputs.some((p) => p.required && made.has(p.type))) || y.usedIn - x.usedIn)[0];
     if (check) add(check);

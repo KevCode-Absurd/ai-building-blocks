@@ -6,7 +6,7 @@ also: [business]
 years: "1967–"
 living: true
 known_for: "Former Apple design leader who helped shape products including the iMac and iPhone. His recorded talks cover use, materials, craft and close team work."
-summary: "Review how a product or service feels to use through Jony Ive’s recorded approach. Find hidden friction, question surface simplicity and test thoughtful details."
+summary: "Get a design review of your product or service through Jony Ive's recorded approach. Find where care is missing and what to remove."
 use_cases:
   - "Review a product, a package or a screen for the small details people feel but don't notice"
   - "Decide whether to drop a familiar feature to make something simpler"
@@ -16,6 +16,27 @@ use_cases:
   - "Plan how a small team can work closely, with prototypes on the table"
   - "Check that a beautiful design also works well, and fix where it doesn't"
   - "Write a design brief that starts from how people will use the thing"
+not_for:
+  - "You need a legal, medical or compliance decision: ask a qualified specialist, because this is a design view and not expert advice."
+  - "You want to know if real users can do a task: run a usability test with a few real users instead."
+  - "You want a chart or a data picture made clear: use Cole Nussbaumer Knaflic or Alberto Cairo, who teach that work."
+output_sample:
+  input:
+    - Your product, package, screen or service, described in plain words
+    - Who uses it and how they use it
+    - Materials and how it is made (optional)
+    - A rough model, sketch or step-by-step journey (optional)
+  output:
+    - name: First questions
+      contains: A short set of questions about use, care, simplicity and making, asked before any advice.
+    - name: Where care is missing
+      contains: Two or three places, such as edges, seams or first moments, where the product shows less care.
+    - name: What to remove
+      contains: A feature or habit to drop, what it blocks, and the problems its removal would create.
+    - name: One-week test plan
+      contains: A plain plan to use the product for a week, fix use first, then the details.
+    - name: Limits note
+      contains: One line saying when your question goes beyond his recorded views, and that his views are dated to 2019.
 seats:
   - {seat: "Industrial design and care", asks: "Where have we stopped caring, in the places nobody will look?"}
   - {seat: "Simplicity", asks: "What would we have to give up to make this genuinely simpler to use?"}

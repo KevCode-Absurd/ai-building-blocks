@@ -1,6 +1,6 @@
 new_slug: reach-before-repeat-planner
 name: "Reach-before-repeat planner"
-summary: "Paste your channels and budget. Get a plan that reaches more different people first and repeats only after."
+summary: "Plan your ad budget to reach more new people before repeats. Give it your channels, costs and buyer pool. You get a ranked reach plan."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "The rule is fixed, but it needs real numbers on who each channel reaches, and some will be missing."
@@ -17,6 +17,10 @@ when:
   - "You run your ad in one place a lot and want to know if you should spread it."
   - "Your reports show impressions and frequency but not unique people."
   - "You are about to spend more and want it to reach people who have not seen the ad."
+not_for:
+  - Only a narrow group could ever buy your product. Name that group and reach them directly, or ask a person who knows the trade.
+  - The ad is not remembered or does not pull. Use the Ad distraction checker or the Selling proposition finder first.
+  - You want to know if a running campaign should change. Use the Campaign keep-or-change checker.
 
 you_give:
   - "Your channels and what you spend on each"
@@ -34,6 +38,29 @@ how_to_use:
   - "Paste your channel list with spend and the unique people each one reaches."
   - "Say how many people could buy. If unsure, give a range."
   - "Ask the platforms for unique reach, not impressions, if you do not have it."
+output_sample:
+  input:
+    - Your channels and what you spend on each
+    - Unique people each channel reaches (optional)
+    - How many people could buy your product
+    - A recall and pull report on the ad (optional)
+  output:
+    - name: FIT
+      contains: Says whether this product suits wide spreading, and why.
+    - name: AD READY?
+      contains: Shows recall and pull, and says if the ad is ready or needs a fix first.
+    - name: WHERE YOU REACH NOW
+      contains: A table of each channel with spend, unique people reached and cost per 1,000 unique people.
+    - name: COVERAGE
+      contains: The share of your buyer pool you reach now, with the sum and the overlap you assumed.
+    - name: NEXT MONEY, IN ORDER
+      contains: Places to add spend, ranked by new people reached per unit of spend.
+    - name: WHEN TO ADD REPEATS
+      contains: The coverage point where repeats should start, and how to add them.
+    - name: SANITY CHECK
+      contains: How recall should move with coverage, and when to survey again.
+    - name: MISSING and CHECKS MISSED
+      contains: What would sharpen the plan, and any checks the plan still fails.
 
 how_it_works:
   - title: "Checks the fit"

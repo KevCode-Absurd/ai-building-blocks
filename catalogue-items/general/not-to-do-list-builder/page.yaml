@@ -1,6 +1,6 @@
 new_slug: not-to-do-list-builder
 name: "Not-to-do list builder"
-summary: "Paste your week and habits. Get a stop list, with a rule and a swap for each."
+summary: "Build a not-to-do list from your real week. Each habit gets a stop rule with a number, a swap and a review date. Free, in any chat AI."
 job: think-and-decide
 thinking: medium
 thinking_why: "It judges which habits cost the most and writes a checkable rule for each. The method is fixed."
@@ -17,6 +17,10 @@ when:
   - Your day is a string of small requests and the real work waits.
   - You know which habits waste your time but have no rule that stops them.
   - A few clients or tasks seem to take most of your energy for little return.
+not_for:
+  - "Your role has a fixed schedule and no habit is yours to change: ask your manager to review the schedule, or start with a time log."
+  - "You do not yet know where your hours go: use the Weekly time audit planner first, then come back."
+  - "You need to rank projects or pick between big options: write a simple pros and cons list, or ask a trusted colleague."
 
 you_give:
   - A plan or calendar of last week, or a list of how your days went
@@ -35,6 +39,29 @@ how_to_use:
   - Tell it which rules you cannot change.
   - Pick the three rules you will start with, not all of them.
   - Set the review date and check what held.
+output_sample:
+  input:
+    - A plan or calendar of last week, or a list of how your days went
+    - The habits you think cost you most
+    - Your goals this quarter (optional)
+    - Rules you cannot change, such as on-call hours (optional)
+  output:
+    - name: Where the time went
+      contains: Each block or habit with its weekly hours, and a mark for false emergencies.
+    - name: 80/20 check
+      contains: The few tasks or clients that take most effort for little return, with a referral script if needed.
+    - name: The not-to-do list
+      contains: One line per habit to stop, with a rule you can check and a swap.
+    - name: Helpers
+      contains: Auto-reply wording and an agenda rule for meeting invites, where they fit your habits.
+    - name: Protected block
+      contains: One day or block each week away from devices, and what it is for.
+    - name: Review
+      contains: A date one week out, what to check, and whether to keep, change or drop each rule.
+    - name: Missing
+      contains: Facts it could not find that would change the list.
+    - name: Checks missed
+      contains: One line for each check the list still fails, or none.
 
 how_it_works:
   - title: Looks at where time went

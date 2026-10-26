@@ -1,27 +1,36 @@
 new_slug: clay-town-video-prompts
 name: "Clay town video clip prompt writer"
-summary: "Paste your clay-town script and attach product photos. Get stop-motion image and clip prompts, stage by stage."
+summary: "Turn a clay-town ad script into stop-motion image and clip prompts: avatar card, sheets, storyboard, clips and an edit list."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Clay town video clip prompt writer"
-subhead: Give it a narrated clay-town script and product photos. It casts a lead and crowd, builds sheets and a storyboard with one mover per shot, and writes stop-motion clips, stopping three times for your OK. You get every prompt and an edit list.
+subhead: Give it a narrated clay-town script and photos of your product. It plans the lead and the crowd, builds the sheets and a storyboard with one mover per shot, then writes the stop-motion clip prompts. It stops three times for your OK. You get every prompt and an edit list.
 
 explain: |
-  AI tools can make convincing clay animation, but they slip out of it easily. Faces drift between shots, a crowd turns to mush when everyone moves at once, water comes out photo-real, and the label on your clay pack reads as nonsense.
+  AI tools can make convincing clay animation, but they slip out of it. Faces drift between shots. A crowd turns to mush when everyone moves at once. Water comes out photo-real. The label on your clay pack reads as nonsense.
 
-  This skill runs the same six stages as every video block here, planned the way a stop-motion crew plans a shoot. It writes the lead's avatar card, turns it into an image, and makes sheets of every angle, the crowd, the clay product and each empty set. A set bible (set, light, palette, lens) and the lead's full description are locked there and pasted into every prompt. The storyboard gives each shot a frame, a card with its one mover, and a planned scene change. Clips are 2 to 5 seconds, with stepped stop-motion timing for the figures and a smooth camera. You approve the avatar, the sheets and the storyboard first.
+  This skill writes the prompts the way a stop-motion crew plans a shoot, in six stages. It writes the lead's avatar card, turns it into an image, then makes sheets of every angle, the crowd, the clay product and each empty set. Four fixed lines (set, light, palette, lens) and the lead's full description are pasted into every prompt. The storyboard gives each shot a frame and one mover. Clips run 2 to 5 seconds, with stepped stop-motion timing for the figures and a smooth camera.
+
+  You approve the avatar, the sheets and the storyboard before any video credits are spent.
 
 when:
   - You have a narrated clay-town script and need it made with AI image and video tools.
   - Your clay clips keep sliding into a smooth computer-graphics look, or the crowd falls apart.
   - You want to approve each step before you spend credits on video.
+  - You want the same clay lead and set to look the same across a whole ad.
+
+not_for:
+  - You have no script yet. Write one first with the Clay town video ad script writer, then come back.
+  - You want one character on one tabletop with one changing object. Use the Claymation video clip prompt writer.
+  - You want a single still image, not a clip. Use the Clay town image ad maker.
+  - You want a paper look, not clay. Use the Paper craft video clip prompt writer.
 
 you_give:
-  - The narrated script with its shots, set card and cast note
-  - Real photos of your product's front, side and top, and every line of its label
-  - How the product is used
+  - The narrated clay-town script, with its shots, set card and cast note
+  - Real photos of your product's front, side and top, from your own shoot or listing, and every line of its label typed out
+  - How the product is used, in the steps your brand really uses
   - Your brand colours and tone (optional)
   - Your video tool's clip lengths and whether it takes a first and last frame (optional)
 you_get:
@@ -32,11 +41,12 @@ you_get:
   - Any of its own checks the prompts still miss, one line each
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the script, ideally from "Get a clay town ad script with a crowd", attach your product photos and type out every label line.
-  - Approve the avatar card, then make the reference images and pick one.
-  - Make the sheets and approve them with the lock lines, then approve the storyboard.
-  - Make the clips from the approved frames, record the narration, and cut the edit from the edit list.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It writes prompts only. You make the pictures and clips in an image tool and a video tool, which may cost credits.
+  - Paste the script. The best start is one from the Clay town video ad script writer. Attach your product photos and type out every label line.
+  - Approve the avatar card. Make the reference images and pick one.
+  - Make the sheets. Compare the product sheet with your real pack, word by word. Then approve the sheets with the lock lines.
+  - Approve the storyboard. Make each clip from its approved frame, 2 or 3 takes each, and pick the best.
+  - Record the narration and cut the edit from the edit list. Check the offer and renewal wording against your ad platform's rules before the ad goes live.
 
 how_it_works:
   - title: Takes in the script
@@ -161,6 +171,31 @@ example:
     pasted in full where this shows [SET], [LIGHT], [PALETTE], [LENS]
     and [LEAD])
 
+output_sample:
+  input:
+    - "Your narrated clay-town script, with its set card and cast note"
+    - "Photos of your product (front, side, top) with every label line typed out"
+    - "How the product is used"
+    - "Your brand colours and your video tool's clip lengths (optional)"
+  prerequisites:
+    - "A script from the Clay town video ad script writer, for the best start"
+    - "An image tool and a video tool to make the pictures and clips"
+  output:
+    - name: "Avatar card"
+      contains: "The lead's role, look, clothes and what never changes, plus a crowd of 3 or 4 base figures."
+    - name: "Reference image prompts"
+      contains: "Prompts for 3 or 4 clay images of the lead, and which one to pick."
+    - name: "Sheet prompts and lock lines"
+      contains: "Character, crowd, product and set sheets, with the set, light, palette, lens and lead lines."
+    - name: "Storyboard"
+      contains: "A frame prompt and shot card for every shot, with the planned scene changes."
+    - name: "Clip prompts"
+      contains: "One prompt per clip with stop-motion timing, counted beats, one camera move and a hold line."
+    - name: "Edit list"
+      contains: "Clip order, captions, voice, end card, safe zones and any MISSING lines."
+    - name: "Checks missed"
+      contains: "One line for each check the prompts still fail, or none."
+
 tweaks:
   - what: The finish
     how: Crisp gives fine tool lines for a premium feel. Handled adds some thumbprints. Rough gives big prints and lumpy shapes for a silly brand. The SET line changes with it.
@@ -192,9 +227,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
-    - {name: "Veo", why: "Takes a first and a last frame, so a planned change starts and ends exactly where you want."}
-    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot."}
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match. Check the current limit in the tool."}
+    - {name: "Veo", why: "Takes a first and a last frame, so a planned change starts and ends exactly where you want. Check that your plan includes it."}
+    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot. Check the current limit in the tool."}
     - {name: "ElevenLabs", why: "Reads the narration in a stock voice from its library, with tags for pauses and pace."}
   inputs:
     - "Photos of real stop-motion clay figures you like, so the finish line names marks that exist"

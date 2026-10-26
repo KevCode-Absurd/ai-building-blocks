@@ -92,3 +92,25 @@ improve:
   - Add the real emails that brought buyers back in the past to step 2 as examples.
   - Re-run steps 4 and 5 every quarter on a fresh export.
   - Pair it with the first-weeks workflow so fewer buyers lapse in the first place.
+not_for:
+  - "Your emails land in spam and open rates fell: use Fix inbox placement and win back your opens."
+  - "You only want to find which customers have gone quiet: use Lapsed customer finder."
+  - "You sell by subscription and want to cut cancellations: use Churn reducer."
+output_sample:
+  input:
+    - Your orders export, with customer, date, order value, discount and refund
+    - Your email tool flow and campaign revenue
+    - Your discount limits and best sellers
+    - Reviews or survey comments (optional)
+    - Your own rule for when a subscriber counts as quiet (optional)
+  output:
+    - name: Repeat order bottleneck
+      contains: First-to-second order rate, profit per customer and the one stage to fix first.
+    - name: Win-back flow
+      contains: A trigger day, an exit rule and three to six email outlines with offers.
+    - name: Flow map by stage
+      contains: Which customer stage gets the win-back flow and which gets other emails.
+    - name: Sunset flow
+      contains: Who counts as unengaged, a three-email last-chance flow and a monthly routine.
+    - name: Performance read
+      contains: What the win-back earned, what to repeat and a channel health score out of 100.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It searches, reads and then pulls the findings together.
 new_slug: paper-research-assistant
 name: Paper research assistant
-summary: Name a topic or paper. Get a literature scan, a deep read or a reading
-  list from Semantic Scholar and arXiv.
+summary: Run a literature scan, deep read or reading list on any research topic. Searches Semantic Scholar and arXiv and pulls out the key papers.
 job: think-and-decide
 headline: Paper research assistant
-subhead: A literature scan, a close read of one paper, an impact check or a
-  reading list, pulled from free academic sources. You name a topic or paper and
-  get organised results.
+subhead: A literature scan, a close read of one paper, an impact check or a reading list, pulled from free academic sources. You name a topic or paper and get organised results.
 explain: |
   A literature scan, a close read of one paper, an impact check or a reading list, pulled from free academic sources. You name a topic or paper and get organised results.
 
@@ -18,6 +15,10 @@ when:
   - You want a plain summary of what one paper does and finds.
   - You need to know how much influence a paper has had.
   - You are checking what has already been published on your idea.
+not_for:
+  - "You need the full text of a paywalled paper: get it through your library or from the author, because this only downloads open arXiv PDFs."
+  - "You have a scanned PDF with no selectable text: run it through an OCR tool first, then read it."
+  - "You want alerts when new papers appear: set up alerts in Google Scholar, because this only runs when you ask."
 you_give:
   - Topic, paper title or arXiv link
   - Python on your computer
@@ -28,8 +29,28 @@ you_get:
   - Citation and impact summary
   - Ordered reading list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the internet.
+  - Open an AI that can run code and reach the internet, such as Claude with code tools turned on.
+  - Paste this skill into the chat, or add its folder if your AI takes files.
+  - "Say what you want: a scan, a deep read, an impact check or a reading list. Add the topic, title or arXiv link."
+  - Let your AI install the three Python add-ons if it asks. This happens once per session.
+  - Check the paper IDs and titles it lists before you ask for a PDF download.
+  - Save the result to your notes. If Semantic Scholar says it is busy, wait ten seconds and ask again.
+output_sample:
+  input:
+    - A topic, paper title, DOI or arXiv link
+    - How many papers you want to see (optional)
+    - A folder to save PDFs in (optional)
+  prerequisites:
+    - An AI that can run code and reach the internet
+    - Python on your computer, with three small add-ons the skill installs for you
+  output:
+    - name: Literature scan table
+      contains: A ranked list of papers with title, year, citation count and ID, then a question on which ones to read closely.
+    - name: Deep read summary
+      contains: "One paper in four parts: the problem, the method, the key result and the limits."
+    - name: Impact summary
+      contains: Papers that cite your chosen paper, grouped by year or theme, with the most cited follow-ups called out.
+    - name: Reading list
+      contains: Papers on your topic in a suggested order, each with its ID so you can look it up again.
+    - name: Saved PDF
+      contains: The arXiv paper downloaded to your folder, with the full save path shown.

@@ -11,6 +11,29 @@ metadata:
 
 Use the local Node.js modules to make identity and attribution decisions reproducible. They take caller-owned records and return decisions; they do not authenticate webhooks, provision infrastructure, persist data, or send conversions.
 
+## Before you run it (AI Blocks notes)
+
+This skill links visits to people. Before you run anything, ask the user to confirm they have consent or another lawful basis to link these visits to contacts, and that the data stays in their own environment. Hashes are pseudonymous, not anonymous, so treat them as personal data. If the user cannot confirm, stop and say why.
+
+You need to run Node.js code. If you cannot, explain the rules and the decisions in words only, say clearly that nothing was run, and give no counts.
+
+Ask once for what is missing: visit records, the contact list, the identify evidence (form fills, logins, webhook events), the source system and scope of each, and the bindings that say which visitor scope may match which contact scope. Mark anything not given as `MISSING: <what>`. Never invent a binding, a contact or a match. Never match on IP address or on a bare ID shared across sources.
+
+Run the three test scripts first. If a test fails, stop and report it.
+
+Never print raw emails or phone numbers in your reply. Refer to contacts by their opaque keys.
+
+## What to hand back
+
+1. **Rules used**: repeat window, what counts as evidence, and source links.
+2. **Counts**: visits matched, unclear and unlinked.
+3. **Visit decisions**: for each visit, its status, the contact key or keys, the evidence keys and, for unclear ones, the reason `shared_device`.
+4. **Shared-device list**: devices with more than one contact.
+5. **Form matches** (if webhooks were supplied): the method used, the confidence score, any diagnostics, and whether it was a replay. Say these scores are operating settings, not probabilities.
+6. **Limits**: what the data cannot prove.
+7. **MISSING**: inputs not given, or none.
+
+
 ## Choose the relevant contract
 
 - For canonical identities, thirty-minute touch deduplication, Direct entry, or late arrivals, read [identity-contract.md](references/identity-contract.md) and use `scripts/identity-primitives.mjs`.

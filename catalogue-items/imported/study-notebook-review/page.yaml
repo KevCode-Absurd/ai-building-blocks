@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: study-notebook-review
 name: Study notebook review
-summary: Share due lesson notes. Recall each topic, get honest feedback and
-  update your next review dates.
+summary: "Run a study notebook review: recall each old topic first, get honest feedback, and see new review dates for every lesson note that is due."
 job: study-and-practice
 headline: Study notebook review
-subhead: Give it the lesson notes and review dates from your study notebook. It
-  asks what you recall before showing the notes, then checks the gaps. You get
-  feedback, fresh review dates and a mixed quiz across the topics you revisited.
-explain: Give it the lesson notes and review dates from your study notebook. It
-  asks what you recall before showing the notes, then checks the gaps. You get
-  feedback, fresh review dates and a mixed quiz across the topics you revisited.
+subhead: Give it the lesson notes and review dates from your study notebook. It asks what you recall before showing the notes, then checks the gaps. You get feedback, fresh review dates and a mixed quiz across the topics you revisited.
+not_for:
+  - "You have a brand-new topic and no lesson notes yet: build the lessons first with the agent-tutor skill, then come back here."
+  - "You want a quick one-off quiz on a topic: ask your AI for a short quiz and skip the notebook."
+  - "Your notes have no review dates and no dashboard: set those up first, or this skill has no queue to read."
+explain: Give it the lesson notes and review dates from your study notebook. It asks what you recall before showing the notes, then checks the gaps. You get feedback, fresh review dates and a mixed quiz across the topics you revisited.
 you_give:
   - Lesson notes with review intervals, due dates and key takeaways.
   - Your study notebook dashboard and recall answers.
@@ -27,8 +26,31 @@ how_it_works:
   - title: Step 3
     text: Run a mixed quiz and update notes, dashboard and session log.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write local study notes.
+  - Open your AI in a tool that can read and write files in your notes folder. Paste in this skill's instructions, or add the skill folder.
+  - Point it to your study notes folder, or your Obsidian vault.
+  - Say you want to review. It reads your Up for review list and picks the due notes.
+  - Explain each topic from memory before it shows anything. Answer honestly.
+  - Take the mixed quiz at the end.
+  - Check that the new due dates and the session log look right.
+output_sample:
+  input:
+    - Your lesson notes, each with a review block (interval, ease, due date)
+    - Your dashboard with an Up for review list
+    - Your spoken or typed recall of each topic, from memory
+    - Your review settings (optional)
+  prerequisites:
+    - An AI that can read and write files in your notes folder (an Obsidian vault)
+    - Lesson notes made with the agent-tutor skill
+  output:
+    - name: Recall check
+      contains: One prompt per due topic asking you to explain it from memory before any notes are shown.
+    - name: Retention verdict
+      contains: "A plain call for each topic: solid, shaky but recoverable, or gone, judged against the note's key takeaways."
+    - name: Updated review block
+      contains: New interval, ease and due date written into each note's review frontmatter.
+    - name: Mixed mini-quiz
+      contains: 5 to 8 questions across all topics reviewed today, scored against a 70% pass mark.
+    - name: Dashboard review queue
+      contains: The Up for review list, current and sorted by due date, with finished notes removed.
+    - name: Session log entry
+      contains: A review entry in the day's log file with a retention verdict for each topic.

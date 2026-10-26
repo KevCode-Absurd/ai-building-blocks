@@ -1,0 +1,143 @@
+name: Sales spreadsheet extraction agent
+summary: Pull month to date and year to date sales numbers out of messy Excel reports into one clean table, with a log of skipped rows.
+headline: Sales spreadsheet extraction agent
+subhead: Give it your Excel or CSV sales reports and your list of reps. It maps the columns, finds out which sheet holds which figures and pulls each rep's numbers into one table. You get the clean table, a quota attainment column and an import log of rows that failed or did not match.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Sales reports arrive in different shapes. One file says "Revenue", another
+  says "Total Sales". One sheet is called "MTD" and another "Year End". This
+  sales spreadsheet extraction agent reads each sheet, matches the column names,
+  finds what each sheet covers and pulls the figures into one clean table. You
+  can use that table for reporting. It is built to clean up sales data from
+  Excel.
+
+
+  It works with clear rules. It matches each row to a rep by email or full name,
+  and skips rows that do not match, with a warning. It reads dollar signs and
+  commas as numbers. It works out quota attainment only when both revenue and
+  quota are there. It never overwrites an earlier figure without a sign that
+  the file is a new version. It logs every file, sheet and row: read, kept,
+  failed and skipped.
+
+
+  In a chat, it works on files you attach or paste. It does not watch a folder
+  or write to a database. That needs a script that someone runs on your
+  computer or server. This is a role profile from Agency Agents, shared under
+  MIT. The download includes the original profile, its licence and a setup
+  guide. The profile's speed and success targets describe an automated system.
+  They are not results measured by AI Blocks.
+when:
+  - Your reps or regions each send a sales workbook, and the column names do not match.
+  - You need month to date and year to date figures from many sheets, as one table.
+  - You want a record of what was read, what was skipped and why, before you build a report from it.
+  - A report is wrong, and you need to trace each number back to its file and sheet.
+not_for:
+  - "You already have one clean table and want a report by territory and rep: use the Sales data consolidation agent."
+  - "You want to review deal health or forecast a quarter from a CRM export: use the Sales pipeline health and forecast agent."
+  - "You want an AI to fill in a CRM record from a call note: use the CRM activity logger."
+  - "You need a script that watches a folder and writes to a database. Ask the AI for code, then have a developer run and check it."
+you_give:
+  - Your sales Excel or CSV files, attached or pasted, with the sheet names
+  - Your list of reps, with full names and emails, so rows can be matched
+  - What each figure means, if the names are unclear, such as whether a "Total" column is revenue
+  - Whether a file is a new version of an earlier one (optional)
+  - Quotas, if they are not already in the files (optional)
+you_get:
+  - A column map that shows which column in each file became revenue, units, deals or quota
+  - A clean table with one row per rep, per sheet type, with the source file and sheet named
+  - Quota attainment for each row that has both revenue and quota
+  - An import log that counts rows read, kept, failed and skipped, with the reason
+  - A list of rows that did not match a rep, so you can fix the names
+  - Open checks for you to settle before you use the numbers
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Attach your Excel or CSV files if your AI accepts files. If not, copy each sheet in as text and name the sheet above it.
+  - Paste your list of reps with full names and emails. Say what each sheet type means, such as "MTD is month to date".
+  - Say "Extract the metrics and show the column map and import log".
+  - Read the column map first. Correct any wrong match, such as a column read as revenue that is really units.
+  - Check three rows against the original files. When they match, use the table for your report.
+how_it_works:
+  - title: List the files
+    text: It names each file and sheet, and marks the ones that look like temporary or empty copies.
+  - title: Map the columns
+    text: It matches column names such as revenue, sales and total sales to one standard name, and shows each match.
+  - title: Find the sheet type
+    text: It reads the sheet name for month to date, year to date or year end. If the name is unclear, it asks once.
+  - title: Match the reps
+    text: It matches each row to your rep list by email or full name. Rows it cannot match are skipped and listed.
+  - title: Clean and calculate
+    text: It turns currency text into numbers and works out quota attainment where revenue and quota both exist.
+  - title: Log the result
+    text: It counts rows read, kept, failed and skipped for each sheet, and lists the open checks.
+output_shape: |-
+  COLUMN MAP
+    <file> | <sheet> | <column as written> | <standard name> | <how sure>
+
+  EXTRACTED METRICS
+    <rep> | <sheet type, MTD, YTD or Year End> | <revenue> | <units> | <deals> | <quota> | <attainment %, or n/a> | <file and sheet>
+
+  IMPORT LOG
+    <file> | <sheet> | Rows read <n> | Kept <n> | Failed <n> | Skipped <n> | <reasons>
+
+  UNMATCHED ROWS
+    <row as written> | <closest rep name, if any> | <what to fix>
+
+  OPEN CHECKS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your sales Excel or CSV files, with sheet names
+    - Your list of reps with full names and emails
+    - What each sheet type means, if unclear
+    - Quotas, if they are not in the files (optional)
+  prerequisites:
+    - An AI that can read attached spreadsheets, or the sheets copied in as text
+    - A rep list to match names against
+  output:
+    - name: Column map
+      contains: Each column you used and the standard name it was matched to.
+    - name: Extracted metrics
+      contains: Revenue, units, deals, quota and attainment by rep and sheet type, with the source named.
+    - name: Import log
+      contains: Rows read, kept, failed and skipped for each sheet, with reasons.
+    - name: Unmatched rows
+      contains: Rows that did not match a rep, with the closest name and what to fix.
+    - name: Open checks
+      contains: Figures and matches to confirm against the original files.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They can read an attached workbook, so every sheet is checked and no row is dropped from a paste.
+    - name: Excel or Google Sheets
+      why: Open the clean table there, add a pivot and compare three rows with the original.
+  inputs:
+    - A rep list with email addresses, which gives the safest match.
+    - One example of each sheet type, so the agent learns your layout.
+    - The date each file was created.
+terms:
+  - term: Column map
+    meaning: A list that shows which column in each file was treated as revenue, units, deals or quota.
+  - term: MTD, YTD, year end
+    meaning: Month to date, year to date and the full-year figure or projection.
+  - term: Quota attainment
+    meaning: Revenue divided by quota, times 100.
+  - term: Import log
+    meaning: A record of what the agent read, kept, failed and skipped for each file.
+tweaks:
+  - what: Scope
+    how: Start with one file to check the column map, then add the rest.
+  - what: Matching
+    how: Say whether to match by email only, or by full name when there is no email.
+  - what: Output
+    how: Ask for the table as CSV text so you can paste it into a sheet.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

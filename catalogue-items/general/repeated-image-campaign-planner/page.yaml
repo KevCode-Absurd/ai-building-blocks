@@ -1,39 +1,54 @@
 new_slug: repeated-image-campaign-planner
 name: "Repeated image campaign planner"
-summary: "Name your product and give one photo. Get a plan to repeat one flat image in new colours."
+summary: "Turn one product photo into look-alike images that change only colour. Get the colour list, steps a helper can follow and a price."
+
 job: make-image-ads
 thinking: low
 thinking_why: "The plan follows a fixed pattern, with one source image and a set of colour changes."
 
 headline: "Repeated image campaign planner"
-subhead: Give it your product and one plain photo. It picks the one thing your buyers know on sight, plans a set built from that single image with only the colour changed, writes steps others can follow, and sets a price for the volume you will make.
+subhead: "Give it your product and one plain photo. It finds the one thing your buyers know on sight, then plans a set of images built from that single photo, with only the colour changing. You get the colour list, steps a helper can follow and a price for the volume."
 
 explain: |
-  Many campaigns spend weeks on a new look for every image. A set built from one flat image repeated in new colours is fast to make, easy to recognise and easy for a team to extend. It suits a product, a service mark, a poster series or a run of social posts.
+  Many image campaigns spend weeks on a new look for every picture. A set built from one flat photo, repeated in new colours, is fast to make and easy to recognise. It also stays easy for a helper to extend later. It suits a product, a poster series or a run of social posts.
 
-  This skill picks the one thing your buyers already recognise on sight. It uses a plain photo as the only source, repeats it as a set and changes only the colour. It writes the steps so someone else can make the next one, keeps happy accidents that help, and sets a price that fits the number you will make. The surface stays flat, with no hidden meaning to explain. You get an image plan, ready for a tool that makes pictures.
+  This repeated image campaign planner starts by finding the one thing your buyers already know you by. It uses one plain photo as the only source and changes nothing but the colour from piece to piece. Then it writes the steps so someone else can make the next piece without asking you.
+
+  It also says which slips can stay and which must go, and it checks the set at thumbnail size. If two colours look alike on a phone, it changes one before it hands the plan back. It plans the pictures and does not draw them, so you make them in ChatGPT, Gemini or an image editor.
 
 when:
-  - You need a run of images fast and want them to look like one family.
-  - You have one strong product photo and want to use it more than once.
-  - You want a method that a helper or freelancer can repeat without you.
+  - "You need a run of images fast, such as a launch week of posts, and want them to look like one family."
+  - "You have one strong product photo and want to use it ten times without it looking the same."
+  - "A freelancer or helper will make the next pieces, and you want steps they can follow without you."
+  - "You sell prints, posters or merch in colour options and need a price that fits the number you will make."
+
+not_for:
+  - "Your photo has several subjects or no one clear shape. Use the Single image ad planner."
+  - "You want a different idea for each ad, not one image in many colours. Use the Image ad remake planner."
+  - "You want the written words on the image set exactly. Use the Image ad maker with exact text."
+  - "You want to know which style your past ads won with. Use the Winning image ad style finder."
 
 you_give:
-  - What you sell, and the one thing buyers know it by
-  - One plain photo of it
-  - Your brand file (optional), for colours and tone
+  - "What you sell, and the one thing buyers know it by (a shape, a pack, a mark)"
+  - "One plain, centred, well-lit photo of it, attached"
+  - "How many pieces you plan to make, and where they will be seen (optional)"
+  - "Your cost per piece (optional)"
+  - "Your brand colours, or colours to avoid (optional)"
+
 you_get:
-  - A plan for a set built from one source image
-  - A colour list for the set
-  - Written steps for making each one
-  - A price for the volume you plan to make
+  - "The one thing your buyers know on sight, and why"
+  - "The set: how many pieces, with one colour for each"
+  - "Numbered steps a helper can follow to make the next piece"
+  - "A keep-or-fix rule for slips and happy accidents"
+  - "A price for the volume with the sum shown, and a thumbnail check"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Name your product and attach one plain photo of it.
-  - Say how many pieces you plan to make and where they will be seen.
-  - Look at the set on a phone-sized screen. It should read at a glance.
-  - Give the written steps to someone else and see if they can make the next piece.
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start a chat with it. If not, copy it and paste it in."
+  - "Say what you sell and attach one plain photo of it. A busy photo will not repeat well."
+  - "Say how many pieces you plan to make and where they will be seen, such as phone, poster or shelf. Add your cost per piece if you know it."
+  - "Read THE SET first. Check the colours stay apart when you shrink them to phone size."
+  - "Give the steps to a helper, or follow them yourself in ChatGPT (GPT Image), Gemini (Nano Banana) or an image editor. Claude plans the set but can't draw it."
+  - "Check that the piece you make matches the plan before you make the rest."
 
 how_it_works:
   - title: Finds the known thing
@@ -81,6 +96,33 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check missed, or none>
+
+output_sample:
+  input:
+    - "What you sell, and the one thing buyers know it by"
+    - "One plain photo of it"
+    - "How many pieces, and where they will be seen (optional)"
+    - "Your cost per piece and brand colours (optional)"
+  prerequisites:
+    - "An image tool such as ChatGPT (GPT Image), Gemini (Nano Banana) or an image editor, to make the pieces"
+    - "Your brand brain from the Website brand brain builder (optional)"
+  output:
+    - name: "The known thing"
+      contains: "What buyers recognise on sight, and one line on why."
+    - name: "Source image"
+      contains: "The one photo every piece is made from, and what it must show."
+    - name: "The set"
+      contains: "How many pieces, with one colour and one use for each."
+    - name: "Steps for the next one"
+      contains: "Numbered steps with the file, size, position, background and colour value."
+    - name: "Happy accidents"
+      contains: "Which slips may stay because they help, and which must go."
+    - name: "Price for the volume"
+      contains: "A price for the number you will make, with the sum shown."
+    - name: "Small-screen check"
+      contains: "How each piece looks at thumbnail size, with any look-alike colours already changed."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "What would sharpen the plan, and one line per check still missed."
 
 tweaks:
   - what: The one photo

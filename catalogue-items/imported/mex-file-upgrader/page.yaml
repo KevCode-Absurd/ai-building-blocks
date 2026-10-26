@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps old calls to new ones across files.
 new_slug: mex-file-upgrader
 name: MEX file upgrader
-summary: Give it old C, C++ or Fortran MEX files. Get them moved to the newer
-  complex number format.
+summary: Upgrade old MEX files to the newer complex number format. Give it your C, C++ or Fortran source and get converted code you can build with -R2018a.
 job: test-and-fix-code
 headline: MEX file upgrader
-subhead: Give it old C, C++ or Fortran MEX files. Get them moved to the newer
-  complex number format. Bring your .c, .cpp, .cxx, .F or .f90 MEX files. Use
-  the result to plan your next step.
+subhead: Give it your old MEX source files. It counts the old calls and asks where to save the new code. You get converted files, build steps and a note on every change.
 explain: |
   Old MATLAB MEX files in C, C++ or Fortran moved to the newer interleaved complex format, so they build with the current compiler flag and run faster on complex arrays. You hand over the source and it does the conversion in seven set steps.
 
@@ -18,18 +15,46 @@ when:
   - You want to build with the R2018a flag.
   - A MEX function is slow on large complex arrays.
   - You need to know how many old API calls a file uses.
+not_for:
+  - "You are writing a new MEX function from scratch: use the typed calls like mxGetDoubles from the start, no conversion is needed."
+  - "Your code uses the C++ MEX API (matlab::mex::Function): this skill only covers files that use the C Matrix API in mex.h, so ask a MATLAB developer or the MathWorks docs."
+  - "Your file already uses typed calls like mxGetDoubles or mxGetComplexDoubles: it is already in the newer format, so just build it with -R2018a."
 you_give:
-  - Your .c, .cpp, .cxx, .F or .f90 MEX files
-  - Where to save the converted files
-  - MATLAB and compiler details (optional)
+  - Your MEX source files (.c, .cpp, .cxx, .F or .f90)
+  - "Where to save the converted files: a new file or in place"
+  - Your MATLAB version (optional)
 you_get:
   - A count of old API calls and a performance note
   - Converted source using the newer calls
   - A summary of each change
   - Build and test steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with a C or Fortran compiler.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste in your MEX source files.
+  - Answer when it asks where to save the converted code.
+  - Check the change summary. Old calls like mxGetPr and mxGetPi should now be typed calls like mxGetComplexDoubles.
+  - Build the new file in MATLAB with mex -R2018a. This needs a MATLAB licence and a working C or Fortran compiler.
+  - Run your own tests and compare with the old results before you use the new file.
+output_sample:
+  input:
+    - Your MEX source files (.c, .cpp, .cxx, .F or .f90)
+    - "Where to save the converted code: a new file or in place"
+    - Your MATLAB version and compiler details (optional)
+  prerequisites:
+    - An AI that can run MATLAB with a working C or Fortran compiler, to build and test the result
+    - A MATLAB licence
+  output:
+    - name: Pre-upgrade check
+      contains: A count of old calls such as mxGetPr and mxGetPi, and whether the file handles complex data.
+    - name: Output file choice
+      contains: Your answer on whether to write a new file or edit the original, and the file name used.
+    - name: Converted source
+      contains: Your code with old calls swapped for typed calls like mxGetDoubles and mxGetComplexDoubles.
+    - name: Build step
+      contains: The mex command to build the converted file with the -R2018a flag.
+    - name: Verification
+      contains: Checks that the new build gives the same results as the old one.
+    - name: Change summary
+      contains: A short note on each change made and why.
+    - name: Benchmark (offered)
+      contains: A MATLAB script that times the old and new builds on large complex arrays.

@@ -2,35 +2,98 @@ thinking: medium
 thinking_why: It sizes the lift from past promos, then plans stock.
 new_slug: promotion-and-stock-planner
 name: Promotion and stock planner
-summary: Give it past promotions and stock. Get a promo calendar with expected
-  sales lift and the extra stock to have ready.
+summary: Plan a promotion calendar with the sales lift, return after trade spend, and the extra stock to have ready, built from your own past deals.
 job: plan-supply-chain
 headline: Promotion and stock planner
-subhead: A promotion calendar that shows what to run and when. It shows how much
-  extra each deal should sell and how much stock to have ready.
+subhead: Give it your past promotions, normal sales, trade spend and lead times. It works out the lift for each deal type from your own history, the return after costs, and the extra stock you need by week. You get a promotion calendar.
 explain: |
-  A promotion calendar that shows what to run and when. It shows how much extra each deal should sell and how much stock to have ready. A good promo then does not end in empty shelves or a warehouse full of leftovers.
+  A promotion that sells out on day two loses sales. One that leaves a warehouse of leftovers loses money. This promotion planning skill links the two: how much a deal will sell, and how much stock to have ready for it.
 
-  You share past promotions, normal sales, trade spend and lead times. The skill estimates the lift for each deal type, such as price cuts, features, displays and multi-buys. It checks the return after trade costs and flags deals that only pull sales forward. Then it turns the lift into extra production and stock by location, tests it against capacity, and spaces events so they do not compete.
+  You share past promotions, normal sales, trade spend and lead times. The skill works out the lift for each deal type from your own history, such as price cuts, features, displays and multi-buys. It checks the return after trade costs and flags deals that only pull sales forward from later weeks.
+
+  Then it turns the lift into extra stock by week and place, tests that against your capacity, and spaces the deals so they do not compete. With no promotion history, it tells you so and suggests a small test promotion instead of guessing a lift.
 when:
-  - You plan next quarter's deals with retailers and need to know which ones pay
-    off.
-  - Last promotion sold out early and you want to size the next one properly.
+  - You plan next quarter's deals with retailers and need to know which ones pay off.
+  - Your last promotion sold out early and you want to size the next one properly.
   - You need to tell production how much extra to build.
-  - You want to compare promotion types by return, not by habit.
+  - You want to compare deal types by return, not by habit.
+not_for:
+  - You have no past promotions or no normal-sales baseline. Gather that first, or run one small test deal and measure it.
+  - You want to clear old stock with a markdown. Use the clearance discount planner.
+  - You only need a demand forecast with no deals. Use the demand forecast planner.
 you_give:
-  - History of past promotions and results
-  - Baseline sales without promotion
+  - Past promotions with dates, price and units sold, from your sales report
+  - Normal weekly sales without a promotion
   - Trade spend and cost data
   - Lead times and capacity
   - Promotion budget and goals
 you_get:
-  - Promotion calendar
-  - Expected lift per deal
-  - Return on spend
-  - Extra stock needed by timing
+  - A promotion calendar
+  - Expected lift for each deal type
+  - Return after trade spend for each deal
+  - Extra stock needed by week and location
+  - A clear go, change or stop for each deal
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Paste your promotion history and your normal weekly sales as a table. A spreadsheet export works.
+  - Add trade spend, lead times, capacity, budget and goal.
+  - Answer its questions. If you have no history, say so. It will not make up a lift.
+  - Check the lift for each deal type against what you remember. Does the best deal match your gut?
+  - Fitting the lift needs an AI that can run Python. A small table can be done in plain chat.
+how_it_works:
+  - title: Gather your history
+    text: It lists past promotions, normal sales, trade spend, lead times and capacity, and marks what is missing.
+  - title: Estimate lift per deal type
+    text: It measures how much each deal type lifted sales above normal, using your own numbers.
+  - title: Work out the return
+    text: It subtracts trade spend and costs from the extra profit, and flags deals that only shift sales.
+  - title: Turn lift into stock
+    text: It sizes extra production and stock by week and location, and tests it against capacity.
+  - title: Build the calendar
+    text: It spaces the deals so they do not compete, and gives each a go, change or stop.
+output_shape: |
+  Promotional Plan
+  Summary: <product>, <channel>, <weeks>, <mechanics>, <prices>
+  Forecast: <baseline units>, <promo units>, <incremental units>, <lift>
+  Trade spend: <item>, <cost>, <total>
+  Return: <incremental profit>, <trade spend>, <net profit>, <ROI>
+  Recommendation: <go, change or stop>, <reason>
+  Supply plan: <build week>, <quantity>, <ship week>, <set-up week>
+output_sample:
+  input:
+    - Past promotions with dates, price and units sold
+    - Normal weekly sales without a promotion
+    - Trade spend, lead times and capacity
+    - Your budget and goal
+  prerequisites:
+    - An AI that can run Python, to fit the lift from your history (optional for small tables)
+  output:
+    - name: Promotion summary
+      contains: Product, channel, weeks, deal type and the regular and promotional price.
+    - name: Forecasted performance
+      contains: Baseline, promotional and extra units, revenue and gross profit, with the lift.
+    - name: Trade spend and ROI
+      contains: Each cost, the total, the net profit and the return on spend.
+    - name: Recommendation
+      contains: Go, change or stop for the deal, with the reason in one line.
+    - name: Supply chain plan
+      contains: Build week, quantity, ship week and set-up week for the extra stock.
+    - name: Stock by week and location
+      contains: The extra units each place needs, week by week, checked against capacity.
+works_best_with:
+  tools:
+    - name: ChatGPT with data analysis, or Claude with code execution
+      why: They can fit the lift model to your sales table and show the result.
+    - name: Any good chat AI
+      why: Fine for the calendar and stock plan once you give it lift figures.
+  inputs:
+    - Two years of weekly sales by product
+    - Retailer promotion calendars
+    - Production lead times by product
+terms:
+  - term: Lift
+    meaning: How much more a product sells during a deal than it would have sold anyway.
+  - term: Trade spend
+    meaning: Money you pay retailers for a deal, such as discounts, feature fees and display fees.
+  - term: Baseline
+    meaning: Normal sales with no promotion running.

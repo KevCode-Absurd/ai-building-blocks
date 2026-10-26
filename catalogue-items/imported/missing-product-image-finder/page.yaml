@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It counts images per product.
 new_slug: missing-product-image-finder
 name: Missing product image finder
-summary: Get products and variants with no image or too few images, so no page
-  goes live looking bare.
+summary: Find Shopify products and variants with no image or too few images before a launch. Get a list and a CSV of the gaps to fix.
 job: product-photos
 headline: Missing product image finder
-subhead: A list of Shopify products and variants with no image, or fewer than
-  you want, so no page goes live looking bare. Run it before a launch or a sale
-  and fix the gaps first.
+subhead: A list of Shopify products and variants with no image, or fewer than you want, so no page goes live looking bare. Run it before a launch or a sale and fix the gaps first.
 explain: |
   A list of Shopify products and variants with no image, or fewer than you want, so no page goes live looking bare. Run it before a launch or a sale and fix the gaps first.
 
@@ -18,6 +15,10 @@ when:
   - A bulk import left some products blank.
   - Customers pick a colour and see the wrong picture.
   - You want a rule that every product has at least three images.
+not_for:
+  - "You want to check photo quality, alt text or whether a photo matches the product: review the photos yourself or ask a designer."
+  - "Your AI cannot read your Shopify admin or run the Shopify CLI: check the Products list in Shopify admin by hand, sorted by image."
+  - "You need to change images in bulk: this only reads and reports, so fix the gaps in Shopify admin or with an import file."
 you_give:
   - Your store domain
   - The minimum number of images per product
@@ -29,8 +30,30 @@ you_get:
   - A readable list or JSON output
   - A count of the gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open Claude, ChatGPT or Gemini with a tool that can run code and use the Shopify CLI. Paste in the skill text.
+  - Sign in first with the Shopify CLI. Give it read access to products for your store.
+  - Tell your AI your store domain. Add your minimum images, whether to check variants, and which product status to scan.
+  - Read the summary and the list of flagged products. Fix the zero-image products first.
+  - Open the CSV file to see each gap by product and variant. Note that only the first 10 images and 50 variants per product are read.
+output_sample:
+  input:
+    - Your store domain
+    - The fewest images each product should have (optional, default 1)
+    - Whether to check variants too (optional, default yes)
+    - "Which products to scan: active, draft or all (optional, default active)"
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A Shopify CLI sign-in with permission to read products
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step progress lines
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Summary report
+      contains: Counts of products scanned, products with no images, products below your minimum and variants missing an image.
+    - name: Products needing images
+      contains: Each flagged product by title with its image count, and a note if it is below your minimum.
+    - name: image_audit CSV file
+      contains: One row per issue with product, handle, image count, issue, and variant details.
+    - name: JSON summary (optional)
+      contains: The same counts as the report in a machine-readable form, if you ask for JSON.

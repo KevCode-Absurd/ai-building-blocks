@@ -2,34 +2,100 @@ thinking: medium
 thinking_why: It audits pages, then plans fixes for each.
 new_slug: tool-pages-seo-fixer
 name: Tool pages SEO fixer
-summary: Point it at a site with many tool or feature pages. Get duplicate text
-  found and unique titles and copy planned.
+summary: Find repeated text across your tool or feature pages. Get unique titles, descriptions and a rewrite order so each page can rank on its own.
 job: get-found-in-search
 headline: Tool pages SEO fixer
-subhead: If you run a site with dozens of tool or feature pages that all use the
-  same template text, search engines treat them as copies and rank them low.
+subhead: Give it the text from your tool, product or feature pages. It finds what repeats from page to page, then plans a unique title, description, intro and internal links for each one, in the order to fix them.
 explain: |
-  If you run a site with dozens of tool or feature pages that all use the same template text, search engines treat them as copies and rank them low. This skill finds that duplication and plans a way to give each page its own words.
+  Sites with many tool or feature pages often build every page from one template. Only the name changes. Google can read those pages as copies of each other and rank none of them well. This tool pages SEO fixer shows you where your text repeats, so you can fix duplicate content across a set of similar pages.
 
-  It was shaped by an audit where 93 of 105 tool pages shared identical text. The skill compares pages, reports how much text repeats, and builds a content register with one record per page for title, summary, uses, steps and questions. It then plans unique titles, meta descriptions, URL slugs and internal links, and adds signs of expertise and trust. It expects page data in a structured form such as JSON, YAML or a database.
+  It compares the page text you give it and reports what is shared. Then it builds a content register: one record per page with its own title, meta description, intro, steps and questions. It plans slugs and internal links, and adds a byline and date so pages do not look authorless.
+
+  The method came from one author's audit of their own site. We have not checked their numbers, so treat them as an example. The skill works from your pages and measures only what you give it.
 when:
-  - Your tool pages all rank low and look alike.
-  - Search Console warns about duplicate content.
-  - You have 50 or more feature pages and need a plan to differentiate them.
-  - Tool pages are not getting indexed.
+  - Dozens of your tool or feature pages look alike and none of them rank.
+  - Search Console warns about duplicate pages or "crawled, not indexed" for your tool pages.
+  - You have 50 or more feature pages and need a plan to make each one different.
+  - Your page titles all follow one pattern with only the tool name swapped in.
+not_for:
+  - You have fewer than about 10 pages. Rewrite them by hand with the page SEO optimizer.
+  - You want to fix slow pages. This skill does not check speed. Use the technical SEO auditor.
+  - You want a plan for the whole site, not just similar pages. Use the SEO site auditor.
 you_give:
-  - Your site or code repository
-  - A list of the tool pages
-  - Where page content is stored
-  - Search Console data (optional)
+  - A list of your tool or feature pages, with names and links
+  - The text on each page, pasted or in files (title, description, headings, body)
+  - Where the page content is kept, such as a spreadsheet, JSON file or database
+  - Search Console data for the pages (optional)
 you_get:
-  - A duplicate text report
-  - A per-page content register
-  - Unique titles and descriptions
-  - Slug and internal link plan
-  - A rewrite order
+  - A duplicate text report that shows which sentences repeat across pages
+  - A content register with one record per page
+  - A unique title and meta description for each page, with character counts
+  - A slug and internal link plan
+  - A rewrite order, so you fix the pages that matter first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. Add the detailed guide file too if your tool takes files.
+  - Paste the list of pages and the text from each one. If you have more than about 20 pages, start with one group and repeat for the next.
+  - Add your Search Console export for those pages if you have one. It sets the rewrite order.
+  - Read the duplicate text report first. Check that the repeated sentences it lists really do repeat on your pages.
+  - Check each register entry. Anything marked MISSING needs a real fact from you, such as how the tool works. Do not let your AI make it up.
+  - Finish one page fully before you start the next. Paste the new text into your site, then check the live page in Search Console.
+how_it_works:
+  - title: Look at your setup
+    text: It asks how your pages are built and where the shared template and page content live.
+  - title: Measure the duplication
+    text: It compares the text you gave it and lists the sentences that repeat across pages.
+  - title: Build the content register
+    text: It writes one record per page with its own title, description, intro, steps and questions.
+  - title: Plan titles, slugs and links
+    text: It gives each page a unique title and description, a clean slug, and at least 2 related pages to link to.
+  - title: Add trust signals
+    text: It plans an author line, a last-updated date and an about page, so the pages do not look authorless.
+  - title: Set the rewrite order
+    text: It puts pages with the most search impressions first and flags blog posts for questions your tool pages cannot answer.
+output_shape: |
+  ## Duplicate text report
+  <page | share of text repeated | repeated sentences>
+  ## Content register
+  <slug | name | meta_title | meta_description | introduction | steps | faqs | related_tools>
+  ## Title and description plan
+  <page | title (<n> characters) | description (<n> characters)>
+  ## Slug and internal link plan
+  <page | slug | links to>
+  ## Rewrite order
+  <1. page, 2. page, ...>
+output_sample:
+  input:
+    - A list of your tool or feature pages with their links
+    - The text on each page, pasted or in files
+    - Where the page content is stored
+    - Search Console data for the pages (optional)
+  prerequisites:
+    - Page content kept in a structured form such as a spreadsheet, JSON, YAML or a database
+    - Access to edit your page titles, descriptions and body text
+  output:
+    - name: Duplicate text report
+      contains: Which pages share the same sentences, with an estimate of how much text repeats.
+    - name: Content register
+      contains: One record per page with its own title, description, intro, steps, questions and related pages.
+    - name: Title and description plan
+      contains: A unique title under 60 characters and a description of 120 to 160 characters for each page.
+    - name: Slug and internal link plan
+      contains: Which slugs to keep or change, plus the pages each page should link to.
+    - name: Rewrite order
+      contains: Your pages ranked by search impressions, so you fix the ones that matter first.
+works_best_with:
+  tools:
+    - {name: "Claude or ChatGPT with file upload", why: "You can attach a page export and the register comes back as a table."}
+    - {name: "An AI that can read your code", why: "It can find the shared template for you and run the optional checks in the guide."}
+  inputs:
+    - "A Search Console export for the pages"
+    - "Your real facts about how each tool works, so no intro is invented"
+terms:
+  - term: Duplicate content
+    meaning: Text that appears on more than one page, so search engines struggle to tell the pages apart.
+  - term: Content register
+    meaning: A list with one record per page, holding that page's own title, description, intro and questions.
+  - term: Slug
+    meaning: The last part of a page link, such as meta-tag-generator.
+  - term: Internal link
+    meaning: A link from one page on your site to another.

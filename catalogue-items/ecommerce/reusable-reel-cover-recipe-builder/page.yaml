@@ -1,44 +1,118 @@
 new_slug: reusable-reel-cover-recipe-builder
 name: Reusable Reel cover recipe builder
-summary: Build a repeatable Reel cover style using your portrait, title, colors and brand rules.
+summary: "Make every Instagram Reel cover look like one brand. Get a title with one accent word, a reusable cover recipe and an image prompt for your portrait."
 job: grow-social
 headline: Reusable Reel cover recipe builder
-subhead: Share approved portrait, reel topic, title and brand colors. Get a reusable cover layout, title treatment and image prompt.
+subhead: "Give it your approved portrait, a Reel title and your brand colors. It splits the title into lines with one accent word, writes a cover recipe card you can reuse, and writes the image prompt to paste into a tool that draws."
 explain: |-
-  Build a repeatable Reel cover style using your portrait, title, colors and brand rules.
+  Reels that share one cover style look like one brand in your feed. Covers made one at a time drift. The font changes, the portrait moves and the accent color wanders. This Reel cover maker fixes the layout once, as a recipe card, so each new cover only needs a new title.
 
-  Share approved portrait, reel topic, title and brand colors. Get a reusable cover layout, title treatment and image prompt.
+  It starts with the title. It cuts it to four to eight words in three or four short lines, then picks one accent word: the payoff word, the number or the surprise. The recipe card then sets the canvas, background, portrait spot, title place, accent color and logo. Starting colors are included, and you swap in your own.
+
+  The skill writes text. It cannot draw. You get an image prompt to paste into ChatGPT, Gemini or another tool that draws, with your portrait attached. It never changes your face, and it adds no claim to a title that you did not give it.
 when:
-  - You need a reusable cover layout, title treatment and image prompt.
-  - You need reusable reel cover recipe builder for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You post Reels every week and each cover looks different from the last.
+  - An editor or helper asks "what should the cover look like?" and you have no answer.
+  - You are starting a series and want all the covers to match.
+  - You want your best old Reels to get new covers in one style.
+not_for:
+  - "You want the title or opening line written first: use the Short video hook writer."
+  - "You want a YouTube thumbnail: use the Thumbnail and title planner."
+  - "You want the cover drawn for you now. This skill writes the recipe and prompt. ChatGPT or Gemini draws it."
+  - "Your covers are square posts or have no portrait. The recipe assumes a tall cover with a portrait at the bottom right."
 you_give:
-  - Approved portrait
-  - Reel topic
-  - Title and brand colors
+  - An approved portrait: a photo you own or have consent to use
+  - Your Reel title, or the topic if you want title options
+  - Your brand colors for background, text and accent (optional)
+  - The word you want highlighted (optional)
+  - Your logo (optional)
+  - The mood you want, such as serious, warm or playful (optional)
 you_get:
-  - A reusable cover layout, title treatment and image prompt
-  - The sources used, missing inputs and assumptions
+  - The title split into three or four lines, with one accent word and why it was picked
+  - A cover recipe card with canvas size, background, portrait spot, title place, colors and logo
+  - An image prompt to paste into a tool that draws, with the files to attach
+  - A check of the cover against the recipe rules, with fixes made
+  - Reuse notes that say what changes for each Reel and what stays fixed
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - Attach your portrait and, if you have one, your logo. Type your title (or the topic) and your brand colors.
+  - Read the title lines and the accent word. Change the word if it is not the punch of your hook.
+  - Copy the image prompt into a tool that draws, such as ChatGPT or Gemini. Attach your portrait there too.
+  - Compare the picture with the recipe card. Check that the text is easy to read at small size. Ask for changes to the prompt, not to your face.
+  - Save the recipe card in your brand file. For the next Reel, give only a new title.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm approved portrait, reel topic, title and brand colors. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: Cover Recipe
-    text: Follow the cover recipe section in the full method and keep its required fields and decision rules.
-  - title: Title Rules
-    text: Follow the title rules section in the full method and keep its required fields and decision rules.
-  - title: Output
-    text: Follow the output section in the full method and keep its required fields and decision rules.
-  - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a reusable cover layout, title treatment and image prompt. Check facts, math and the decisions before any action.
+  - title: Collect the inputs
+    text: It asks once for a portrait, a title or topic and brand colors. Anything missing is marked, and default colors are named as defaults.
+  - title: Cut the title
+    text: It trims the title to four to eight words in three or four lines with no end punctuation, and adds no claim you did not supply.
+  - title: Pick one accent word
+    text: It chooses the payoff word, the number or the surprise, and says why. There is never more than one.
+  - title: Fill the recipe card
+    text: It sets a 1080 by 1920 canvas, a flat dark background with light grain, the portrait at bottom right, the title at top left and the accent color on one word.
+  - title: Write the image prompt
+    text: It writes one block of text for an image tool. It says to use your portrait as it is and lists what to leave out.
+  - title: Check and write reuse notes
+    text: It checks word count, contrast, safe areas and the one-accent rule, and lists what changes for each new Reel.
+output_shape: |-
+  TITLE LINES  <line 1> / <line 2> / <line 3> | accent word <word> | why <one line>
+  COVER RECIPE CARD
+    canvas 1080 x 1920 | background <color>, flat, light grain | portrait bottom 40%, right-aligned, chest up
+    title top 55%, left-aligned, <font style>, <text color> | accent <color> on <word> only | logo <place or none>
+  IMAGE PROMPT  <one block of text for an image tool> | attach <portrait, logo>
+  CHECKS  <check> | <pass or fix made>
+  REUSE NOTES  changes each time <title, accent word> | stays fixed <everything on the recipe card>
+  MISSING AND CHECKS MISSED  <list or none>
+output_sample:
+  input:
+    - Your approved portrait
+    - Your Reel title, or the topic
+    - Your brand colors (optional)
+    - Your logo (optional)
+  prerequisites:
+    - An AI that draws images, such as ChatGPT or Gemini, to turn the prompt into the cover
+  output:
+    - name: Title lines
+      contains: Your title cut into short lines, with the one accent word and why it was picked.
+    - name: Cover recipe card
+      contains: Canvas size, background, portrait spot, title place, colors and logo, ready to reuse.
+    - name: Image prompt
+      contains: A block of text to paste into an image tool, with the files to attach.
+    - name: Checks
+      contains: Word count, contrast, safe area and one-accent checks, with any fixes made.
+    - name: Reuse notes
+      contains: What to change for each new Reel and what to keep the same.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  tools:
+    - name: ChatGPT or Gemini
+      why: They draw images from the prompt and accept your portrait as an attachment.
+    - name: Canva or a similar editor
+      why: You can fix the title on the picture, or build the cover there from the recipe card.
+  inputs:
+    - A clear portrait with the same lighting as your other covers.
+    - Your brand file, with colors and font names.
+    - A list of your next five Reel titles, so you can make the set in one go.
+terms:
+  - term: Accent word
+    meaning: The one word in the title that gets the accent color, so people notice it first.
+  - term: Recipe card
+    meaning: A short sheet with every layout value for the cover, so each one matches.
+  - term: Cutout
+    meaning: Your portrait with its background removed, so it sits cleanly on the cover.
+  - term: Safe area
+    meaning: The part of a cover that stays visible when Instagram crops it or puts buttons on top.
+tweaks:
+  - what: Brand colors
+    how: Give your background, text and accent colors as hex codes. Without them, the starting colors are used.
+  - what: Title length
+    how: Shorter titles read better on a phone. Keep to eight words or fewer.
+  - what: Case
+    how: Use all capitals or sentence case, and keep the same for every cover in a series.
+  - what: Accent word
+    how: Name the word yourself if the skill's pick misses the point of the hook.
+improve:
+  - Save the recipe card in your brand file and paste it in at the start of each new batch.
+  - Edit SKILL.md to change the starting colors and the layout values to match your brand.
+  - After a month, compare views on Reels with the new covers and the old ones, then adjust one thing at a time.
+  - Pair it with the Short video hook writer, so the title is strong before the cover is made.

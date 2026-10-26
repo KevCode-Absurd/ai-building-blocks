@@ -2,37 +2,108 @@ thinking: medium
 thinking_why: It applies set finance methods to your figures.
 new_slug: startup-finance-advisor
 name: Startup finance advisor
-summary: Give it your numbers. Get unit economics, runway, fundraising steps and
-  a finance pack for the board.
+summary: Turn your startup numbers into runway scenarios, unit economics by cohort, a raise plan and a board finance pack outline.
 job: money-and-investing
 headline: Startup finance advisor
-subhead: Finance questions that usually wait for a part-time CFO get answered
-  from your own numbers. You get burn and runway under base, good and bad cases,
-  unit economics split by customer cohort instead of blended, and a plan for the
-  next raise.
+subhead: Give it your monthly revenue, costs, cash and customer churn. It works out burn and runway under three cases, unit economics by customer group, and what a raise would cost you in dilution. You get a plan, decision triggers and a board finance pack outline.
 explain: |
-  Finance questions that usually wait for a part-time CFO get answered from your own numbers. You get burn and runway under base, good and bad cases, unit economics split by customer cohort instead of blended, and a plan for the next raise.
+  A startup finance advisor answers the questions that usually wait for a part-time CFO, using your own numbers. You get burn and runway under base, good and bad cases, unit economics split by customer group instead of blended, and a plan for the next raise.
 
-  It starts with pointed questions: your burn multiple, whether you survive if fundraising takes six months, and your net revenue retention. Then it works through dilution, cash tactics and the layout of a board finance pack. It also asks you to set decision triggers now, such as the runway at which you start cutting, so you are not deciding in a panic. Some steps can run small Python scripts for burn, unit economics and round scenarios.
+  It starts with five pointed questions. What is your burn multiple? Would you survive if fundraising took six months? What is your net revenue retention? It then covers dilution, cash tactics and the layout of a board finance pack. It asks you to set decision triggers now, such as the runway at which you start cutting, so you do not decide in a panic.
+
+  The three Python scripts in the folder run on sample data only. Your AI either edits them to use your numbers or does the maths in the chat.
 when:
-  - You are about to raise money and need to know how much dilution each option
-    costs.
+  - You are about to raise money and need to know how much dilution each option costs.
   - Your board wants a finance pack and you do not know what to put in it.
-  - You suspect blended customer numbers are hiding a drop in newer cohorts.
+  - You suspect blended customer numbers hide a drop in newer customer groups.
   - You want to know when to start cutting costs before cash gets tight.
+not_for:
+  - You want a full three to five year model in a spreadsheet. Use the Startup financial model builder.
+  - You only want the month your cash runs out, with odds. Use the Startup runway forecaster.
+  - You need audited accounts, tax advice or legal review of a term sheet. Use an accountant or lawyer.
 you_give:
-  - Monthly revenue, costs and cash balance
+  - Monthly revenue, costs and cash balance for the last 6 to 12 months
   - Customer counts and churn by signup month
   - Planned hires and spend
   - Funding plans or term sheet details (optional)
+  - ARR and net new ARR, if you sell subscriptions (optional)
 you_get:
-  - Runway scenarios for base, good and bad cases
-  - Unit economics by cohort and by channel
+  - Runway for base, good and bad cases
+  - Unit economics by customer group and by channel
   - A fundraising timeline with dilution estimates
   - A board finance pack outline
   - Decision triggers tied to runway
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste the text of SKILL.md into a new chat.
+  - Paste your monthly numbers from your books or a spreadsheet. Add churn by signup month and your hiring plan.
+  - Say what you need first: runway, unit economics, a raise plan or a board pack.
+  - If your AI can run Python, ask it to edit the scripts to use your numbers. If not, ask it to show the maths step by step.
+  - Check the cash balance and last month's burn against your bank. Read each assumption tagged as assumed.
+  - Take the plan to your accountant or an experienced adviser before you raise money or cut costs.
+how_it_works:
+  - title: Ask the key questions
+    text: It starts with burn multiple, a six-month raise, cohort economics, net revenue retention and decision triggers.
+  - title: Model burn and runway
+    text: It builds base, good and bad runway cases from your cash, costs and hiring plan.
+  - title: Split unit economics
+    text: It works out lifetime value by customer group and acquisition cost by channel, never one blended number.
+  - title: Plan the raise
+    text: It models dilution, option pool effects and round scenarios so you see the cost of each option.
+  - title: Set decision triggers
+    text: It agrees the runway at which you cut spend or start raising, before cash is tight.
+  - title: Write the board pack
+    text: It outlines P&L, cash, burn, forecast and asks, and flags red items such as falling gross margin.
+output_shape: |
+  Bottom line: <one or two sentences>
+  What we found: <metric> | <value> | <verified, medium or assumed>
+  Runway: <base months> | <good months> | <bad months> | <cash-out date>
+  Unit economics: <customer group> | <lifetime value> | <acquisition cost> | <payback>
+  Raise plan: <amount>, <dilution>, <timeline>
+  Decision triggers: <runway at which to act> and <action>
+  Board pack outline: <section list>
+  Your decision: <the one choice to make>
+output_sample:
+  input:
+    - Monthly revenue, costs and cash balance for the last 6 to 12 months
+    - Customer counts and churn by signup month
+    - Planned hires and spend
+    - Funding plans or term sheet details (optional)
+  prerequisites:
+    - An AI that can run Python 3.9 or newer, to use the three scripts (optional)
+    - A spreadsheet or your accounting export for the monthly figures
+  output:
+    - name: Bottom line
+      contains: The answer to your question in one or two sentences.
+    - name: Runway scenarios
+      contains: Months of cash left under base, good and bad cases, with cash-out dates.
+    - name: Unit economics
+      contains: Lifetime value by customer group, acquisition cost by channel, and payback time.
+    - name: Fundraising plan
+      contains: Timeline, dilution for each option and the round scenarios modelled.
+    - name: Decision triggers
+      contains: The runway at which you cut spend or start raising, and what you do then.
+    - name: Board finance pack outline
+      contains: The sections a board expects, from P&L and cash to forecast and asks.
+    - name: Red flags and assumptions
+      contains: Items that need attention now, with each number tagged verified, medium or assumed.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It can run the Python scripts when code tools are on, and shows each step of the maths.
+    - name: ChatGPT
+      why: Its data analysis tool can load your spreadsheet and edit the scripts.
+  inputs:
+    - A cohort table of customers by signup month
+    - Your current cap table
+    - Your bank balance on the day you run it
+terms:
+  - term: Burn multiple
+    meaning: Cash burned divided by new yearly revenue added. A lower number means efficient growth.
+  - term: Runway
+    meaning: How many months your cash lasts at the current burn.
+  - term: Cohort
+    meaning: A group of customers who signed up in the same month.
+  - term: Net revenue retention
+    meaning: Revenue from this year's customers, compared with the same customers a year ago.
+  - term: Dilution
+    meaning: The share of your company you give up when you raise money.

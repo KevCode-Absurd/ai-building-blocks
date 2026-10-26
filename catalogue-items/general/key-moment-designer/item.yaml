@@ -1,6 +1,6 @@
 slug: key-moment-designer
 name: "Key moment designer"
-summary: "Name an event like a first day or a launch. Get the one peak to build and the rest kept simple."
+summary: "Plan an event people remember. Get the one peak worth building, the expected step to break and a plan with owners, dates and costs."
 category: general
 type: skill
 role: make
@@ -15,3 +15,5 @@ version: 1.0.0
 minds: [chip-heath]
 credits:
   - {title: "Breaking the script: how companies can make themselves memorable", by: "Chip Heath, Knowledge at Wharton", used: "Memory keeps peaks, so build one and keep the rest simple; break the expected script on purpose; the four parts of a defining moment: lift, insight, pride and connection"}
+next: [internal-update-writer, recognition-plan-designer]
+needs_mode: manual

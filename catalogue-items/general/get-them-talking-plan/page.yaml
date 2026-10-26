@@ -1,6 +1,6 @@
 new_slug: get-them-talking-plan
 name: "Get-them-talking conversation planner"
-summary: "Paste your brief on the person. Get a warm start, questions they enjoy answering and where to stop and listen."
+summary: "Plan a conversation that gets the other person talking. Give it a brief on them. You get a warm start, open questions and a close."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It must judge which questions will draw a person out and where to listen, but the plan shape is fixed."
@@ -17,6 +17,10 @@ when:
   - "You are meeting a person who matters and want them to feel heard."
   - "You are shy and dread small talk."
   - "You are at a conference and want one good conversation, not ten thin ones."
+not_for:
+  - "You need to negotiate or make a hard sell: prepare your terms and limits in a short written list first, then meet."
+  - "You are making a first cold approach to someone you have no brief on: send a short intro message instead."
+  - "You want to write up notes after the meeting: use the Contact memory card writer."
 
 you_give:
   - "A brief on the person, such as from \"Before-you-meet brief writer\""
@@ -34,6 +38,30 @@ how_to_use:
   - "Say how long you will have and where."
   - "Read the plan once and pick three questions to carry in your head."
   - "Write notes within an hour after the meeting."
+output_sample:
+  input:
+    - A brief on the person, such as one from the Before-you-meet brief writer
+    - Where you will meet and how long you will have
+    - Your aim for the meeting (optional)
+  prerequisites:
+    - A brief on the person. Without one, the plan uses general questions and tells you to learn about them first.
+  output:
+    - name: How they should feel at the end
+      contains: One line on how the person should feel when they leave, and what you will not do.
+    - name: The first ten seconds
+      contains: How to say their name, a warm greeting and one true reason you are glad to meet.
+    - name: Questions
+      contains: "Six to eight open questions in three layers: their start, what they treasure and right now."
+    - name: Listening rules
+      contains: Rules for not interrupting, follow-ups, and two places to stay quiet on purpose.
+    - name: Two true appreciations
+      contains: Two things you honestly admire, each with the moment to say it.
+    - name: If you have an ask
+      contains: Your ask put in terms of what it does for them, and when to make it.
+    - name: The close
+      contains: A thanks by name, one thing you will do and when you will be in touch.
+    - name: Missing and checks missed
+      contains: What the plan could not know, and any checks it failed, or none.
 
 how_it_works:
   - title: "Sets the feeling you want"

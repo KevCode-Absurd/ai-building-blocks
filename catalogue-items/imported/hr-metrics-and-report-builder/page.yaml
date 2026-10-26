@@ -2,34 +2,78 @@ thinking: medium
 thinking_why: It picks measures and reads patterns in your data.
 new_slug: hr-metrics-and-report-builder
 name: HR metrics and report builder
-summary: Share your people data and questions. Get the right metrics, a
-  dashboard layout and a leadership report that tells the story.
+summary: Choose the HR metrics that matter, define each one, lay out a dashboard and draft a monthly people report that leaders will read.
 job: hire-people
 headline: HR metrics and report builder
-subhead: A people report that leadership will read and act on. Share your HR
-  data and the questions you face, and get the right metrics, a dashboard layout
-  and a monthly report that tells a clear story.
+subhead: "Share the decisions leaders face and the people data you have. It picks 5 to 8 HR metrics, defines each one, checks your data for gaps and lays out a dashboard by reader. You get a monthly report template and, if you share exits, patterns in turnover by group."
 explain: |
-  A people report that leadership will read and act on. Share your HR data and the questions you face, and get the right metrics, a dashboard layout and a monthly report that tells a clear story.
+  An HR metrics pack and a monthly HR report that leaders will read, built around the decisions they need to make and not around the data you happen to hold.
 
-  It starts by matching metrics to your goals, then defines each one exactly, such as time to fill, turnover rate and cost per hire, so everyone counts the same way. It looks at turnover data for the causes of people leaving and for early signs of flight risk. It lays out dashboards for different readers, like executives and recruiters, and gives plain tips for charts non-HR people can follow. It also covers data quality checks, privacy rules for people data and simple forecasts.
+  The skill starts with those decisions. It then picks a short list of metrics, and defines each in one line so everyone counts the same way, for example turnover rate or time to fill. It checks your data and tells you what is missing before it builds anything.
+
+  It lays out one dashboard per reader, such as an executive or a recruiter. It does not predict who will leave. It shows patterns by team, never by named person, and it never adds benchmarks without a source from you.
 when:
   - Leaders ask for HR numbers and you are unsure which ones matter.
-  - Turnover is rising and you need to find out why.
-  - Your monthly report is a pile of tables nobody reads.
+  - Turnover is rising and you want to find patterns by team and tenure.
+  - Your monthly people report is a pile of tables that nobody reads.
   - You need rules for keeping people data accurate and private.
+not_for:
+  - "You only need a headcount or turnover report from a spreadsheet: use the Headcount and turnover reporter."
+  - "You want to predict which named employees will leave: this skill does not do that. Use your HR and legal advisers first."
+  - "You want a report on hiring speed and pipeline: use the Hiring progress reporter."
+  - "You want to audit HR files for legal risk: use the HR compliance audit planner."
 you_give:
-  - HR data such as headcount, exits and hires
-  - The decisions leaders must make
+  - The decisions leaders need to make in the next few months
+  - Your HR data, such as headcount, hires and exits, as a table or spreadsheet
   - Survey results (optional)
   - Your industry and company size (optional)
 you_get:
-  - A short list of metrics with definitions
-  - A dashboard layout
-  - A leadership report template
-  - Turnover findings and priorities
+  - A short list of metrics with a one-line definition and owner for each
+  - A data check that names what is missing or wrong
+  - A dashboard layout for each reader
+  - A monthly report template
+  - Turnover patterns by group, if you share exits
+  - Rules for who may see people data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed. Upload a spreadsheet if you have one.
+  - Paste the skill text, then tell it the decisions leaders face. If you are not sure, say so and pick from the three it suggests.
+  - Paste or upload your people data. Take out names where you can.
+  - Read the data check first. Fix the gaps, then ask it to build the dashboard and report.
+  - Check every definition with HR and finance, so the numbers match your own records.
+  - Have HR or legal read the turnover and data rules before you share the pack.
+output_sample:
+  input:
+    - The decisions leaders must make soon
+    - Headcount, hires and exits data, as a spreadsheet or table
+    - Survey results and your company size (optional)
+  output:
+    - name: Metrics table
+      contains: Five to eight metrics, each with a definition, formula in words, owner and data needed.
+    - name: Data check
+      contains: What is missing or looks wrong in your data, before any number is shown.
+    - name: Dashboard layout
+      contains: For each reader, the metrics, chart type and how often it updates.
+    - name: Turnover findings
+      contains: Patterns by team, tenure and level, likely causes to check, and which are guesses.
+    - name: Monthly report template
+      contains: A short summary, metrics table, what changed and actions with owners.
+    - name: Data rules
+      contains: Who may see what, how long data is kept and a monthly quality check.
+how_it_works:
+  - title: Start with decisions
+    text: It asks what leaders must decide, so the metrics have a purpose.
+  - title: Pick and define metrics
+    text: It chooses a short list and defines each one in plain words.
+  - title: Check the data
+    text: It lists what each metric needs and flags gaps, duplicates and bad dates.
+  - title: Lay out the dashboard
+    text: It sets a one-screen view for each reader.
+  - title: Draft the report
+    text: It writes a monthly report template and, if you share exits, turnover patterns by group.
+terms:
+  - term: Turnover rate
+    meaning: The share of people who left in a period.
+  - term: Time to fill
+    meaning: Days from opening a role to an accepted offer.
+  - term: Data quality check
+    meaning: A regular look for duplicates, blanks and numbers that do not add up.

@@ -1,6 +1,6 @@
 new_slug: tiktok-shop-breakout-finder
 name: "TikTok Shop breakout finder"
-summary: "Attach TikTok Shop product graphs. Get a score out of 100 for each, and test or drop."
+summary: "Find TikTok Shop products worth testing. Attach your research graphs and get each one scored out of 100, with a clear test, cross-check or drop call."
 job: find-products
 thinking: medium
 thinking_why: "It reads graphs and lists across many products, so a mid-size model that reads images well is a good fit."
@@ -17,6 +17,10 @@ when:
   - You pulled a list of products from a TikTok Shop research tool and need to cut it to one to test.
   - A product's graph looks good and you want to know if it is an early breakout or already fading.
   - Your last tests lost money and you want to know if your revenue band is set wrong.
+not_for:
+  - "You want to judge margin and landed cost: use the winning product scorer, then come back here for the graphs."
+  - "You want to see who already runs Meta ads for a product: use the competitor saturation checker, or search the Meta Ad Library yourself."
+  - "You have no graphs or video dates from a TikTok Shop research tool: collect that data first, because this skill will not guess it."
 
 you_give:
   - Screenshots or exports of each product, with price, 30 day revenue and the 7, 30 and 180 day graphs
@@ -36,6 +40,28 @@ how_to_use:
   - Attach a screenshot of each product's graphs and its top videos with dates.
   - Read the hard drops first, then the passes. Cross-check the best one to three on Google Trends and the Ad Library.
   - Test one product at a time with 5 to 8 ads for 2 to 3 days, using your own footage.
+output_sample:
+  input:
+    - Screenshots or exports of each product with price, 30 day revenue and the 7, 30 and 180 day graphs
+    - The top videos for each product with posting dates and revenue
+    - Whether the revenue came from video or live streams
+    - Your revenue band and live-stream cutoff (optional)
+  prerequisites:
+    - A TikTok Shop research tool that shows 30 and 180 day graphs
+    - An AI that can read images, if you attach screenshots
+  output:
+    - name: BAND USED
+      contains: The revenue band, live-stream cutoff and category the check was run with.
+    - name: PRODUCT block
+      contains: "For each product: price, 30 day revenue, a mark for each of the ten checks, a score out of 100 and a verdict."
+    - name: CROSS-CHECK FIRST
+      contains: One to three products to look up on Google Trends and the Meta Ad Library before you spend.
+    - name: BAND CHANGE
+      contains: Whether to raise the floor, lower the cap or keep your revenue band, with one reason.
+    - name: TEST PLAN
+      contains: A hook idea from the winning clip, a creator-style body, 5 to 8 ads and a 2 to 3 day test.
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that could not be run and any input you did not give.
 
 how_it_works:
   - title: Sets the filters

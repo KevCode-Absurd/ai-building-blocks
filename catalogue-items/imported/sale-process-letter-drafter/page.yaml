@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a standard letter format.
 new_slug: sale-process-letter-drafter
 name: Sale process letter drafter
-summary: Describe a sale process. Get a draft letter with bid instructions,
-  deadlines and meeting details.
+summary: Draft a sale process letter with bid instructions, deadlines and meeting details. Give it your deal facts and get a letter for your advisor to check.
 job: money-and-investing
 headline: Sale process letter drafter
-subhead: "The letter that tells bidders how your sale will run: when to bid,
-  what to include and how to meet management. Describe the process and get a
-  draft for an advisor to check."
+subhead: "The letter that tells bidders how your sale will run: when to bid, what to include and how to meet management. Describe the process and get a draft for an advisor to check."
 explain: |
   The letter that tells bidders how your sale will run: when to bid, what to include and how to meet management. Describe the process and get a draft for an advisor to check.
 
@@ -18,6 +15,10 @@ when:
   - The first round is over and you need final bid instructions.
   - You want to invite shortlisted buyers to meet management.
   - You need consistent letters for every bidder.
+not_for:
+  - "You are a buyer writing a bid: ask your own deal advisor or lawyer, as this drafts the seller's letter only."
+  - "You are offering shares to the public: use a lawyer who handles public offerings."
+  - "Your deal is regulated or crosses borders: have a lawyer lead the letter and use this only for a first draft."
 you_give:
   - Deal code name and seller goals
   - Timeline and key dates
@@ -29,7 +30,31 @@ you_get:
   - Deadlines and submission details
   - A confidentiality and contacts section
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your deal code name, round dates, bid address, data room access and what the seller wants.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Say which letter you need: first process letter, final bid letter or management meeting invite."
+  - Paste in your deal facts. If a fact is missing, your AI should ask you.
+  - Check every date and contact. Then ask your advisor and lawyer to review the draft before you send it.
+output_sample:
+  input:
+    - Deal code name and what the seller wants
+    - Round dates and deadlines
+    - Where bids should be sent
+    - Which letter you need (optional)
+  output:
+    - name: Header
+      contains: Date, deal code name, a Confidential mark and the buyer the letter is addressed to.
+    - name: Introduction
+      contains: A short overview of the deal and what the seller wants from the process.
+    - name: Process Overview
+      contains: The timeline, key dates and how many rounds to expect.
+    - name: IOI Requirements
+      contains: "What a first offer must cover: value range, payment form, financing, checks, timing and conditions."
+    - name: Submission Details
+      contains: Where to send the bid, the deadline with date and time, and the format.
+    - name: Confidentiality Reminder
+      contains: A note on the NDA and data room access.
+    - name: Contact Information
+      contains: The advisor contacts for questions.
+    - name: Final bid, meeting invite or word file
+      contains: "For later rounds: the extra bid terms or meeting details, as a Word letter with a letterhead placeholder."

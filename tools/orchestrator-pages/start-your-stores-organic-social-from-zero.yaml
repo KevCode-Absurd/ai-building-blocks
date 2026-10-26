@@ -1,6 +1,6 @@
 new_slug: start-your-stores-organic-social-from-zero
 name: Start your store's organic social from zero
-summary: Give it your accounts and product. Get a setup score, formats and hooks to film, then a verdict.
+summary: "Start your store's organic social from zero: check your accounts, pick short video formats and hooks to film, then learn which formats to keep."
 job: grow-social
 thinking: high
 thinking_why: It runs four skills in a row and reads your own post data at the end. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are starting social for your store and want a plan before you film.
   - Your posts get almost no views and you do not know if it is the account or the videos.
   - You have posted at least 20 videos and want to know which formats to keep.
+not_for:
+  - You have no product yet. Build the product and offer first, then come back to plan your store's social posts.
+  - Your account setup is already fixed. Use the Brand social account checker alone, or go straight to the Short video format picker.
+  - You only want to find why one post flopped. Use the Social post performance reviewer.
 you_give:
   - A list of your accounts with type, country and how you publish
   - The topics of your last 20 posts, one line each, if you have them
@@ -32,15 +36,37 @@ how_to_use:
   - List your accounts and say how each one posts. Make the fixes, starting with the biggest, and decide who will be on camera.
   - Film the formats it picks. Post your best 10 to 15 videos by hand over three weeks, and keep posting until you have at least 20.
   - Export views and watch time for every post and bring them back. With fewer than 20 posts it tells you to keep posting.
+output_sample:
+  input:
+    - Your social accounts, with type, country and how you post
+    - Your product, price and key benefit
+    - Who can be on camera, and what props you have
+    - Who you serve, in a line or two
+    - Your posts with format, hook, topic, date and views (after you post)
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+    - Your brand brain from the Website brand brain builder (optional)
+    - At least 20 posted videos before the last step
+  output:
+    - name: "Step 1: Account check"
+      contains: Eight setup rules marked pass or fix, a score out of 100, fixes in order, and the one platform to keep.
+    - name: "Step 2: Formats"
+      contains: Format picks that fit your product and people, a script outline for each, ten hooks and a tutorial shot plan.
+    - name: "Step 3: Hook scores"
+      contains: Each hook scored out of 100, who it attracts, rewrites for weak ones, and which to film first.
+    - name: "Step 4: What worked"
+      contains: Top posts and flops, a keep, change or drop verdict by format and hook type, and the next test.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the account setup
     text: "Checks eight setup rules: account type, country, posting method, platforms, one hero platform, topic, outbound links and on-target ideas. It scores them and orders the fixes."
   - title: Pick the formats
-    text: Checks what you can film with your people and props, picks the formats that fit, writes a script outline for each and ten hooks.
+    text: Takes your product and who will be on camera once the setup is fixed. Checks what you can film with your people and props, picks the formats that fit, writes a script outline for each and ten hooks.
   - title: Score the hooks
     text: Rates each hook for clarity and relevance, checks who it attracts, and rewrites the weak ones so you film the best first.
   - title: Read what worked
-    text: Reads your posts in groups, makes lists of hits, flat posts and flops, gives each format a verdict and sets the next test loop.
+    text: Reads the export of the posts you filmed and published after steps 2 and 3, in groups, makes lists of hits, flat posts and flops, gives each format a verdict and sets the next test loop.
 output_shape: |-
   STEP 1: ACCOUNT CHECK
     Eight rules with pass or fix | score out of 100 with the sum | fixes in order | the one platform to keep

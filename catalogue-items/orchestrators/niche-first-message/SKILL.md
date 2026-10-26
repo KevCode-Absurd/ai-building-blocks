@@ -49,9 +49,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Niche readiness checker.** Use the skill `niche-readiness-checker`. A niche verdict, a one-line niche statement and the next step
-2. **Stranger first-message writer.** Use the skill `stranger-first-message-writer`. Give it the plan from the steps before. A first message a stranger can read in seconds. Reads the plan from the step before
-3. **Sales role splitter.** Use the skill `sales-role-splitter`. Give it the plan from the steps before. Which job to split out first, who owns it and what to track. Reads the plan from the step before
+1. **Niche readiness checker.** Use the skill `niche-readiness-checker`. A niche verdict, a one-line niche statement and the next step. Hands the niche plan to the message writer and the role splitter
+2. **Stranger first-message writer.** Use the skill `stranger-first-message-writer`. Give it the plan from step 1. A first message a stranger can read in seconds. Hands the message to step 3 as the outreach work to hand over
+3. **Sales role splitter.** Use the skill `sales-role-splitter`. Give it the niche plan from step 1, your list of who does which sales job, and the message from step 2. Which job to split out first, who owns it and what to track
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

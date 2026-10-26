@@ -1,53 +1,94 @@
 new_slug: challenge-terminal-value-with-excess-returns
 name: Challenge terminal value with excess returns
 headline: Challenge terminal value with excess returns
-summary: Compare explicit excess-return fade assumptions with the economics implied by a terminal value.
+summary: Test whether your terminal value quietly assumes returns that last forever, and see the reinvestment and return on capital it implies.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A terminal-value challenge workbook with finite-excess-return and implied-reinvestment cases. Share invested-capital/NPAT schedules, competitive-advantage evidence, stable NOPAT, WACC, growth and proposed terminal values.
-explain: |-
-  A terminal-value challenge workbook with finite-excess-return and implied-reinvestment cases.
+subhead: Give it invested capital, operating profit after tax, your cost of capital, growth and the terminal value you propose. It builds a case where excess returns fade, a stable-growth case with its reinvestment, and the reinvestment your terminal value implies. You get one workbook that sets the three side by side.
+explain: |
+  A terminal value often carries most of a valuation. It can hide a bold claim: that a company keeps earning above its cost of capital forever, while growing without investing much. Few businesses can do that. Rivals arrive, and growth needs capital.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow checks the claim three ways. Step 1 builds a case where the excess return fades to zero after a stated period. Step 2 builds a stable-growth case and shows the reinvestment and return on capital it needs. Step 3 works backward from your terminal value to the reinvestment rate and return on capital it implies. The cases are compared and explained. They are never averaged.
+
+  It tests a terminal value you already have. It does not forecast the company, and it does not say what the value should be. The fade case is clearly labelled sourced or hypothetical.
 when:
-  - You need a terminal-value challenge workbook with finite-excess-return and implied-reinvestment cases.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your terminal value is most of your enterprise value and someone asks what it assumes.
+  - A terminal value comes from an exit multiple and you want to know what growth and returns sit behind it.
+  - You assume a company keeps earning above its cost of capital after the forecast ends.
+  - A reviewer asks if your terminal growth rate fits your reinvestment.
+not_for:
+  - You want to connect the forecast's growth to the investment it needs. Use the Link operating growth to terminal reinvestment workflow. This one tests a terminal value you already have.
+  - You want to stress many valuation assumptions at once. Use the Review equity valuation sensitivity assumptions workflow.
+  - The company has no stable end state, such as an early-stage business with negative profit. The checks assume a stable year.
+  - You only need the implied reinvestment from one terminal value. Use the Implied terminal reinvestment schedule.
 you_give:
-  - Invested-capital/NPAT schedules, competitive-advantage evidence, stable NOPAT, WACC, growth and proposed terminal values.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Invested capital and operating profit after tax (NOPAT) for the forecast years (from your model and the filings)
+  - Evidence for any lasting competitive advantage, such as filings or market data (optional)
+  - First stable-year NOPAT and the stable growth rate (from your model)
+  - Your cost of capital (WACC), with its date and source
+  - The terminal value you propose, or the exit multiple behind it
+  - The reporting date, currency and scale
 you_get:
-  - A terminal-value challenge workbook with finite-excess-return and implied-reinvestment cases.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "A fade case: excess returns for two years, then none"
+  - A stable-growth case with its reinvestment rate and return on capital
+  - The reinvestment rate and return on capital your terminal value implies
+  - A note on where the three cases differ and why
+  - A flag if the terminal value needs returns above the cost of capital forever
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach your valuation model or its schedules, and paste the terminal value, growth rate and cost of capital with their sources. Say if any figure is your own assumption.
+  - After step 1, check that the fade case is labelled sourced or hypothetical and that it states what it assumes about capital.
+  - After step 2, check that the stable case states its reinvestment rate and return on capital, and whether it assumes returns above the cost of capital forever.
+  - After step 3, read how the three cases differ. Fill every MISSING line before using the result in a valuation.
 how_it_works:
   - title: Economic profit fade schedule
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build a sourced or explicitly hypothetical excess-return fade case; require the constant-capital/no-later-excess-return assumptions for this focused fixture and expand when actual capital changes.
+    text: Builds a case where excess returns last for two years, then fall to zero. Needs evidence that capital stays constant and no later excess return follows. Widen the case if capital changes. Hands step 2 the invested capital and NOPAT.
   - title: Terminal growth reinvestment check
-    text: Build a separate stable operating case with evidenced reinvestment and ROC; document whether it assumes perpetual excess returns that differ from the fade case.
+    text: Builds a separate stable case with its reinvestment and return on capital. Says whether it assumes returns above the cost of capital forever. Is not blended with the fade case.
   - title: Implied terminal reinvestment schedule
-    text: Backsolve the supplied or exit-multiple terminal value into reinvestment and ROC. Reconcile periods and explain scenario differences rather than blending incompatible values automatically.
-output_shape: |-
-  A terminal-value challenge workbook with finite-excess-return and implied-reinvestment cases.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Backsolves your terminal value into the reinvestment rate and return on capital it implies, on the same periods, NOPAT, growth and cost of capital. Explains scenario differences instead of averaging them.
+output_shape: |
+  PERIOD AND UNITS  <valuation date>, <currency>, <scale>, WACC <n%> (<source, date>)
+
+  1 FADE CASE       <per year: invested capital | NOPAT | capital charge | economic profit>
+                    excess return ends after <n> years; labelled <sourced or hypothetical>
+  2 STABLE CASE     growth <n%>, return on capital <n%>, reinvestment rate <n%>, terminal value <n>
+  3 IMPLIED BY YOUR TERMINAL VALUE  reinvestment rate <n%>, return on capital <n%>
+
+  WHERE THEY DIFFER  <one line per gap between the three cases, and why>
+  FLAGS              <terminal value needs returns above WACC forever, or none>
+  SOURCES, MISSING and CHECKS MISSED  <one line each>
+output_sample:
+  input:
+    - Invested capital and NOPAT schedules
+    - Stable-year NOPAT, stable growth and your cost of capital (WACC)
+    - The terminal value you propose, or the exit multiple behind it
+    - Evidence for any lasting competitive advantage (optional)
+  prerequisites:
+    - Your valuation model, or the schedules it uses
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: 1 FADE CASE
+      contains: Economic profit year by year with excess returns fading to zero, labelled sourced or hypothetical.
+    - name: 2 STABLE CASE
+      contains: Stable growth with the reinvestment rate and return on capital it needs, and what it assumes about returns.
+    - name: 3 IMPLIED BY YOUR TERMINAL VALUE
+      contains: The reinvestment rate and return on capital hidden in the terminal value you proposed.
+    - name: WHERE THEY DIFFER
+      contains: Each gap between the three cases and the reason, with no blended figure.
+    - name: FLAGS, SOURCES, MISSING and CHECKS MISSED
+      contains: Any need for permanent excess returns, where each figure came from, each gap, and checks that could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every case states its advantage period, capital path and terminal excess return; values share timing/currency; implied infeasibility is flagged rather than hidden by an arbitrary blended target.
+  - what: A longer fade
+    how: Ask for excess returns to last longer than two years. The workbook says what evidence supports that and marks it hypothetical if none.
+  - what: A higher terminal growth
+    how: Raise stable growth. The needed reinvestment rises, and the page flags it if return on capital would have to jump.
+  - what: An exit multiple
+    how: Give an exit multiple instead of a terminal value. Step 3 converts it and shows the implied return on capital.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one linked workbook with inputs, formulas and a checks tab.
 judge:
   - Every case states its advantage period, capital path and terminal excess return; values share timing/currency; implied infeasibility is flagged rather than hidden by an arbitrary blended target.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +99,33 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a note of the competitive-advantage evidence behind each company's fade period, and paste it in every run.
+  - Save each version of the terminal value and its checks, so a change in WACC or growth shows what moved.
+  - Run the Review equity valuation sensitivity assumptions workflow on the result to see how much the value moves.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: Your valuation model
+      why: Export the forecast and terminal value as a sheet, so the AI starts from your real figures.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - A dated, sourced cost of capital.
+    - Filings or market data that support how long excess returns last.
+    - A named reviewer who knows the sector.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Terminal value
+    meaning: The value placed on a business for all years after the forecast ends.
+  - term: Excess return
+    meaning: A return on capital above the cost of capital. It lets a business create value.
+  - term: NOPAT
+    meaning: Net operating profit after tax. Operating profit less the tax on it.
+  - term: Return on capital
+    meaning: Operating profit after tax divided by the capital invested.
+  - term: Reinvestment rate
+    meaning: The share of profit put back into the business to fund growth.
+  - term: WACC
+    meaning: Weighted average cost of capital. The blended return that lenders and shareholders require.
+before: []
+next:
+  - review-equity-valuation-sensitivity-assumptions
+  - link-operating-growth-to-terminal-reinvestment

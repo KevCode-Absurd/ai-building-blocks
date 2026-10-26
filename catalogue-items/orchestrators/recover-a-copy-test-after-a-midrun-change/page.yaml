@@ -36,3 +36,24 @@ how_it_works:
     text: Choose resume unchanged, restart aligned versions, run a new bounded test or stop for evidence. Specify the single variable, preserved facts, allocation, outcome, guardrails, conversion-lag handling, uncertainty/analysis plan, exposure/time limits, owner and next decision. Any required sample sizing depends on baseline, useful effect and design, not a universal spend or day count. Return the contract in chat or named files, not an implied launched experiment.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You are planning a new copy test: use the Cross-over copy test planner."
+  - "Nothing changed during the test and you only want to read the result: use the Split-run result reader."
+  - "You want to pick the next idea to test from scratch: use the One-change experiment planner."
+output_sample:
+  input:
+    - The original test plan with the control and variant copy
+    - Results with dates, time zone and how each ad version maps to the numbers
+    - A dated log of every change to the offer, page, tracking or ads
+    - Your approved current facts, such as price and offer terms
+  output:
+    - name: Change and impact timeline
+      contains: Each change with its date, the versions it touched and which test periods it splits.
+    - name: Comparability matrix
+      contains: Which groups are clean to compare, which are confounded, and why.
+    - name: Observed result table
+      contains: Counts and rates for valid groups, with a decision of supported, inconclusive or unusable.
+    - name: Copy patch or no-change record
+      contains: A minimal fix for a stale offer or fact, or a clear note that none is needed.
+    - name: Recovery pack
+      contains: Resume, restart or stop, with one variable, limits, guardrails, owner and next decision.

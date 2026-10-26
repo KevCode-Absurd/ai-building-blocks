@@ -1,6 +1,6 @@
 new_slug: subscription-offer-designer
 name: "Subscription offer designer"
-summary: "Give it price, margin and cash. Get a subscription offer and your max CAC."
+summary: "Design a subscription offer for products people reorder. Give your price, margin and cash. You get discounts, gifts, a prepaid plan and your max CAC."
 job: make-offer
 thinking: high
 thinking_why: "It balances cash, margin and offer design across several steps, so a stronger model avoids unsafe suggestions."
@@ -17,6 +17,10 @@ when:
   - You sell something people use up and reorder, and want a subscription offer that wins first-order subscribers.
   - You want to move from a flat subscribe discount to a real offer with gifts, bulk tiers or a prepaid plan.
   - You want to know how much you can spend to win a subscriber, and how much cash you need to fund it.
+not_for:
+  - "You sell a one-off item people do not reorder: use a bundle offer with a fair price instead of a subscription."
+  - "You cannot fund about 90 days of loss on first orders: start with a bundle offer that stays profitable on order one."
+  - "You only want to check if your current subscribers pay back: use the Subscription payback checker."
 
 you_give:
   - Price, product cost, landed cost and shipping by pack size
@@ -36,6 +40,28 @@ how_to_use:
   - Add subscriber and one-time value at month 3 and 6 if you have it. If not, say so.
   - Read the cash check first. If you cannot fund about 90 days of loss, take the bundle route it suggests.
   - Run the offer as a test with a holdout and come back after 90 to 120 days.
+output_sample:
+  input:
+    - Your price, product cost, landed cost and shipping by pack size
+    - How long one unit lasts and how long buyers need to see a result
+    - Your cash and how many months you can wait for payback
+    - Month-3 and month-6 value of subscribers and one-time buyers (optional)
+    - Your current subscribe discount, take rate and CAC (optional)
+  output:
+    - name: The case
+      contains: Subscriber value against one-time buyer value, marked as your data or as an example only.
+    - name: Fit and cash check
+      contains: Whether the product suits a subscription and whether you can fund about 90 days of first-order loss.
+    - name: Offer sheet
+      contains: First-order and recurring discounts, bulk ladder, long plan and gifts with their cost and shown value.
+    - name: Product page and cadence
+      contains: Three options for the page, plus units per cycle and a cap per cadence.
+    - name: Margin and max CAC
+      contains: Order one and month-2 margin, the most you can pay per subscriber, and the cash needed.
+    - name: Where it appears
+      contains: Every place the offer must be shown so nothing contradicts it.
+    - name: Test plan
+      contains: What to test, the holdout share, and a read at 90 to 120 days.
 
 how_it_works:
   - title: Make the case with your numbers

@@ -16,6 +16,29 @@ use_cases:
   - "Rethink your workspace so your team talks and decides faster"
   - "Plan a negotiation by working out who holds the power and how to shift it"
   - "Start a business on a tight budget and decide what to spend on first"
+not_for:
+  - "You need valuation, investing or portfolio advice: use the Aswath Damodaran or Benjamin Graham minds, or a qualified financial adviser for your own savings."
+  - "You want a plan for selling and bouncing back from failure in real estate or sales: use the Barbara Corcoran mind."
+  - "You have a legal, medical or tax question: ask a qualified lawyer, doctor or accountant, because this mind gives none of that advice."
+output_sample:
+  input:
+    - The real problem in your business, work or life, in a few lines
+    - "What you already have: skills, tools, contacts and any cash"
+    - Your current price or offer, if the problem is about money (optional)
+    - Who already follows or trusts you (optional)
+  output:
+    - name: The real problem
+      contains: A short opening that names the problem behind the obvious one, such as a money story or a focus problem.
+    - name: A story and a rule
+      contains: A short story from his public work on Queens or FUBU, then a simple rule or list you can use.
+    - name: Trades and what you have
+      contains: What you can do this week with what you own, and what you could trade for instead of buying.
+    - name: Three priorities
+      contains: Three things that would make the week a win, plus what to say no to.
+    - name: One small first step
+      contains: A single action for today or this week, such as a 10% price test or one live video.
+    - name: Not on record note
+      contains: One line marking anything he never wrote about, so you know where the advice is ours.
 seats:
   - {seat: "Doing more with less", asks: "What can we do this week without spending a dollar, and what can we trade for the rest?"}
   - {seat: "Focus and priorities", asks: "Which three things will actually move us forward, and what are we saying no to?"}

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores ideas, then outlines the best.
 new_slug: free-tool-idea-planner
 name: Free tool idea planner
-summary: Describe your buyers. Get free calculator or tool ideas that bring
-  leads, with a build plan.
+summary: Find a free calculator or tool idea that brings in leads. Give it your buyers and goal. You get scored ideas, a pick and a build plan.
 job: build-product
 headline: Free tool idea planner
-subhead: Describe your buyers. Get free calculator or tool ideas that bring
-  leads, with a build plan. Bring your product and who buys it. Use the result
-  to plan your next step.
+subhead: Describe your buyers. Get free calculator or tool ideas that bring leads, with a build plan. Bring your product and who buys it. Use the result to plan your next step.
 explain: |
   Ideas for a free calculator or small tool that brings in leads and search traffic, plus a plan to build it and a check that it is worth the effort.
 
@@ -18,6 +15,10 @@ when:
   - You need leads but ads are costly.
   - You have a few tool ideas and need to pick one.
   - You want to know if a free tool is worth the build time.
+not_for:
+  - "You want a downloadable ebook, checklist or template: use a lead magnet planner, or write the guide yourself."
+  - "You already know the tool and only need it built: hire a developer or use a no-code form tool such as Typeform or Tally."
+  - "You want to improve the page the tool sits on: use a landing page review instead."
 you_give:
   - Your product and who buys it
   - "Your goal: leads, traffic or awareness"
@@ -30,7 +31,28 @@ you_get:
   - Build plan
   - Promotion and follow-up plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather five things first: your product, who buys it, your goal, your build time and skills, and your promotion budget."
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Paste your five answers. If you have a product summary or brand notes, paste those too.
+  - Read the scored ideas. Check that the top pick fits what you sell and that you can build it in the time you have.
+  - Ask your AI to adjust the build plan to your budget, then start with the smallest first version.
+  - This works in a plain chat. It needs no code, files or paid tools.
+output_sample:
+  input:
+    - Your product and who buys it
+    - "Your goal: leads, traffic or awareness"
+    - Your build skills and time
+    - Your promotion budget (optional)
+  output:
+    - name: Tool ideas
+      contains: Several free tool ideas that fit your buyers, such as calculators, generators, graders or checkers.
+    - name: Evaluation scorecard
+      contains: Each idea rated 1 to 5 on eight factors, like search demand, buyer match and build effort, with a total.
+    - name: Pick and reasons
+      contains: The top idea, plus why it won and whether it is a strong, promising or weak candidate.
+    - name: Build plan
+      contains: A small first version, what to skip at first, and whether to build it, use a no-code tool or embed one.
+    - name: Lead capture plan
+      contains: How much of the tool to gate, and what to ask for in return.
+    - name: Promotion and follow-up
+      contains: Search phrases for the tool page, ways to earn links, and what happens after someone uses it.

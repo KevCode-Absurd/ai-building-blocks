@@ -1,0 +1,155 @@
+name: Product Manager agent
+summary: Turn a feature idea into a product plan. Get a problem statement, a build or defer recommendation, a product requirements doc and a roadmap.
+headline: Product Manager agent
+subhead: Describe the idea, who it is for and what evidence you have. It finds the real problem behind the request, scores the options, gives a build or defer call, and drafts the requirements, roadmap or launch plan you ask for.
+job: build-product
+thinking: high
+thinking_why: It weighs user need, business goals and effort, and states how sure it is. Use a model that can reason through trade-offs and flag weak evidence.
+explain: >-
+  Most feature requests are solutions in disguise. "Add a filter" might mean
+  people cannot find things, or that one big customer asked loudly. This product
+  manager agent asks what problem sits underneath before it plans anything. It
+  turns a rough idea into a problem statement, a view of the options and a clear
+  recommendation, then into the document your team needs next.
+
+
+  You pick the output. It can write an opportunity assessment, a product
+  requirements document (PRD), a now-next-later roadmap, or a launch plan.
+  Every roadmap item needs an owner, a measure of success and a time horizon.
+  Each plan also lists what you are not building, and why.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It works from the
+  facts you give it. It will not make up interviews, usage data or revenue
+  figures, and it marks gaps instead. The original's success targets are goals,
+  not results from AI Blocks.
+when:
+  - A stakeholder says "we need feature X" and you want to know if it is the right thing to build.
+  - You have too many ideas and need to choose, say no to some and explain why.
+  - Your engineers ask for a clear spec before they start.
+  - You are about to launch and need a plan that covers support, marketing and rollback.
+not_for:
+  - You only want a short requirements document from a few lines. Use the Product requirements writer.
+  - You need to order tickets for the next sprint. Use the Sprint Prioritizer agent.
+  - You have raw customer feedback to sort first. Use the Feedback Synthesizer agent, then bring its themes here.
+  - You need engineering estimates, legal review or financial forecasts. Ask the engineers, a lawyer or your finance lead.
+  - Your request is still vague. Use the Requirements question asker to sharpen it before you start.
+you_give:
+  - The idea or request, and who asked for it
+  - Who the users are and what they struggle with now
+  - Your goals for the next quarter, such as a number you want to move
+  - What evidence you have, such as interview notes, support tickets, usage numbers or competitor notes
+  - Which document you want, such as an assessment, a requirements doc, a roadmap or a launch plan
+  - Team size and deadlines, and anything you cannot change (optional)
+you_get:
+  - A problem statement with the evidence behind it and the gaps in that evidence
+  - An options table with a build, test small, defer or stop recommendation and how sure it is
+  - The document you chose, in a ready-to-share layout
+  - A list of what you are not building and when to revisit it
+  - Open questions with an owner and a date for each
+  - A suggested next step, such as which user to interview or which spec to write next
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Include the idea, the users, your goal, the evidence you have and which document you want.
+  - Your AI asks once for anything missing. Anything still unknown is marked as an assumption you can change.
+  - Read the problem statement and the evidence gaps first. If the evidence is thin, collect more before you act on the recommendation.
+  - Share the document with your team. Replace every ASSUMED and MISSING item with real numbers or names.
+  - Take the next step it names, then bring the new facts back and ask for a revised plan.
+how_it_works:
+  - title: Find the real problem
+    text: It asks why up to three times, separates the user's pain from the proposed fix, and states who has it and how often.
+  - title: Check the evidence
+    text: It lists what you have, such as interviews, data and tickets, and marks every gap instead of filling it.
+  - title: Compare the options
+    text: It sets out build, a smaller version, buy, wait and stop, with pros, cons and effort. Scores such as RICE use only numbers you give or mark as assumed.
+  - title: Make a recommendation
+    text: It gives one call, how confident it is, and what would change its mind.
+  - title: Write the document
+    text: It writes your chosen format. The PRD has the problem, goals and measures, non-goals, users, scope, risks, open questions and a launch plan.
+  - title: Say what you are not building
+    text: It lists requests set aside with the reason and the condition to revisit, so the same request does not return unanswered.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <idea> | asked by: <who> | goal: <metric> | ASSUMED: <list> | MISSING: <list>
+
+  PROBLEM STATEMENT
+    <who has the problem, how often, what it costs> | evidence: <source> | evidence gaps: <list>
+
+  OPTIONS
+    <build | smaller version | buy | defer | stop> | pros | cons | effort <S, M, L or MISSING>
+
+  RECOMMENDATION
+    <build, test small, defer or stop> | confidence <low, medium or high, why> | would change if <evidence>
+
+  DOCUMENT (the one you chose)
+    PRD: problem | goals and measures | non-goals | users and stories with acceptance checks | solution | risks and dependencies | open questions | launch plan with rollback trigger
+    OR Roadmap: now | next | later | each item with owner, measure and horizon
+    OR Launch plan: audience | message | checklist by team | success measures | rollback trigger
+
+  WHAT WE ARE NOT BUILDING
+    <request> | source | reason | revisit when <condition>
+
+  OPEN QUESTIONS AND NEXT STEP
+    <question> | owner <name or MISSING> | by <date or MISSING>
+output_sample:
+  input:
+    - Your idea or request, and who asked for it
+    - Who the users are and what they struggle with
+    - Your goal and the evidence you have, such as notes, tickets or numbers
+    - Which document you want (optional, the default is an assessment and a PRD)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Your own notes or data, so the plan rests on real evidence
+  output:
+    - name: Problem statement
+      contains: Who has the problem, how often, what it costs, and the evidence and gaps behind it.
+    - name: Options and recommendation
+      contains: Build, smaller version, buy, defer or stop, with one call, its confidence and what would change it.
+    - name: PRD, roadmap or launch plan
+      contains: The one you chose, in a layout your team can share and edit.
+    - name: Not building list
+      contains: Requests set aside, with the reason and the condition to revisit them.
+    - name: Open questions
+      contains: Each question that must be answered before work starts, with an owner and a date.
+    - name: Next step
+      contains: One action to take next, such as a user interview or a spec review.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach interview notes, a ticket export or a spreadsheet of usage numbers.
+    - name: Your team's document tool, such as Notion or Google Docs
+      why: Paste the PRD or roadmap there so the team can comment and fill in the gaps.
+  inputs:
+    - Five or more user interview notes, or the nearest real evidence you have.
+    - The numbers behind your goal, such as sign-ups or support tickets per week.
+    - A list of requests from sales and customers that you have not yet answered.
+terms:
+  - term: PRD
+    meaning: Product requirements document. A plan that says what to build, for whom and how you will know it worked.
+  - term: Non-goal
+    meaning: Something you choose not to do in this version, written down so no one assumes it is included.
+  - term: RICE
+    meaning: A score of reach, impact, confidence and effort that helps compare ideas. It is only as good as its inputs.
+  - term: Roadmap
+    meaning: A ranked plan of what the team will work on, and in what order.
+  - term: Rollback trigger
+    meaning: The result that tells you to switch a launch off, such as errors rising above a set level.
+  - term: Acceptance criteria
+    meaning: Plain checks that show a feature does what it should.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Document type
+    how: Name one document, such as "write a PRD" or "build a now-next-later roadmap". Without it, you get an assessment and a PRD.
+  - what: Evidence rules
+    how: Say what counts as enough evidence for you, such as five interviews, so it flags thin cases the same way each time.
+  - what: Audience
+    how: Say who will read it, such as engineers or executives, and it adjusts length and detail.
+improve:
+  - Bring back real results after launch and ask it to compare what happened to what the plan predicted.
+  - Keep your not-building list and add to it each time you say no.

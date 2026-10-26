@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads the query step by step and explains each part.
 new_slug: plain-words-sql-explainer
 name: Plain-words SQL explainer
-summary: Paste a SQL query. Get what it counts, which rows it keeps and what
-  each column means, in plain words.
+summary: Paste a SQL query and get a plain-words explanation of what it counts, which rows it keeps and what each column means. Check it against the question.
 job: document-work
 headline: Plain-words SQL explainer
-subhead: A SQL query turned into a plain description of what it counts, which
-  rows it keeps and what each output column means. Anyone can then check whether
-  the query matches the question.
+subhead: A SQL query turned into a plain description of what it counts, which rows it keeps and what each output column means. Anyone can then check whether the query matches the question.
 explain: |
   A SQL query turned into a plain description of what it counts, which rows it keeps and what each output column means. Anyone can then check whether the query matches the question.
 
@@ -18,6 +15,10 @@ when:
   - You inherited undocumented queries and need to document them.
   - You want to check a query against the business request.
   - A new analyst needs to learn your SQL.
+not_for:
+  - "You want to make a slow query faster: ask a database admin or use your database's query planner."
+  - "You need a new query written from a business question: ask your AI to write one, then come back to explain it."
+  - "You want to fix wrong results in your data: check the source tables with the person who owns them."
 you_give:
   - The SQL query
   - The business question it answers
@@ -28,7 +29,28 @@ you_get:
   - A meaning for each output column
   - Problems flagged with check questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Paste your SQL query. Say what business question it answers.
+  - Add notes on key tables, columns and status values if you have them.
+  - Read the join and filter sections first. Check they match the question you were asked.
+  - Send the validation questions to the person who wrote the query.
+  - Save the finished document in your data catalog or dbt docs, so the next person can find it.
+output_sample:
+  input:
+    - Your SQL query, from SELECT to the end
+    - The business question the query answers
+    - Notes on what key tables and columns mean (optional)
+    - Rules for status values, dates or currency (optional)
+  output:
+    - name: Purpose
+      contains: What the query is meant to answer, in one or two plain sentences.
+    - name: Sources and joins
+      contains: Which tables are combined, and whether each join keeps or drops rows.
+    - name: Filters as business rules
+      contains: Each filter condition rewritten as a plain rule anyone can read.
+    - name: Grouping and totals
+      contains: What each total or count adds up, and at what level it works.
+    - name: Output columns
+      contains: The business meaning of each column, with edge cases like nulls, rounding or currency.
+    - name: Issues and validation questions
+      contains: Possible problems such as repeated rows or fixed dates, plus 3 to 5 questions for the query author.

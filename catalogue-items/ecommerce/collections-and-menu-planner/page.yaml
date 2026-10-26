@@ -1,6 +1,6 @@
 new_slug: collections-and-menu-planner
 name: "Collections and menu planner"
-summary: "Give it your products. Get collections, filters, a menu and search settings so shoppers find things fast."
+summary: "Plan your store collections and menu: give it your product list and get tags, collections, filters, a short menu and search settings."
 job: set-up-store
 thinking: low
 thinking_why: "It sorts a list into groups with fixed rules, so a fast, cheap model is enough."
@@ -17,6 +17,10 @@ when:
   - You are setting up a new store and have products but no collections or menu yet.
   - Your menu has grown messy, or shoppers tell you they cannot find things.
   - You have 30 or more products and need filters that work.
+not_for:
+  - You have fewer than about 15 products. Make a few simple collections and a short menu by hand.
+  - You want product page text or photos. Write those yourself or ask your AI for copy, as this plans structure only.
+  - Your store is not on Shopify. It can still plan the logic, but check the names in your own platform first.
 
 you_give:
   - A product list with type, material, colour, size, price and audience
@@ -36,6 +40,32 @@ how_to_use:
   - Add two or three competitor menus if you can, and how shoppers describe what they want.
   - Fix the tags and types in your store first, in the bulk editor, then build the collections.
   - Count the clicks from the homepage to a few products, and tell it if any take more than three.
+output_sample:
+  input:
+    - Your product list with type, material, colour, size, price and audience
+    - Your catalogue size and platform
+    - How shoppers search for your products
+    - Two or three competitor menus (optional)
+    - Your current menu and collections (optional)
+  prerequisites:
+    - A Shopify store on a paid plan, to build the result with Search & Discovery and the bulk editor
+  output:
+    - name: TAGS AND TYPES
+      contains: One spelling for each product type, with the tags each product needs.
+    - name: COLLECTIONS
+      contains: Each collection marked manual or smart, with the rule that fills it.
+    - name: HOMEPAGE
+      contains: The collection list, a new arrivals collection and a best sellers collection to show.
+    - name: FILTERS
+      contains: Filters in order of importance, each with the product data it needs.
+    - name: MENU
+      contains: A menu tree of up to three levels in plain words.
+    - name: CLICK-DEPTH CHECK
+      contains: Clicks from the homepage to sample products, and the path for each.
+    - name: SEARCH
+      contains: Predictive search, synonym pairs and where the search icon goes.
+    - name: GAPS
+      contains: Product data to fill in before the filters will work.
 
 how_it_works:
   - title: Fixes names

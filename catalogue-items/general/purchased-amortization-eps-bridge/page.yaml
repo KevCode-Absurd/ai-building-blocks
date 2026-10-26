@@ -1,46 +1,118 @@
 new_slug: purchased-amortization-eps-bridge
 name: Purchased amortization EPS bridge
 headline: Purchased amortization EPS bridge
-summary: Tie acquired-intangible amortization and its disclosed tax effect to an alternative EPS measure.
+summary: Show reported earnings per share next to EPS with acquired-intangible amortization added back after tax, both on the same share count.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions. Share reported ordinary income, purchased-intangible amortization, its recognized tax benefit and matching diluted shares.
-explain: |-
-  A reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions.
+subhead: Give it reported income, the amortization of intangibles from acquisitions, the tax benefit the company reported on it, and the diluted share count. It adds back the after-tax amount and divides both incomes by the same shares. You get reported EPS, adjusted EPS and the gap.
 
-  Issuer accounting and earnings. Illustrative figures.20 amortization less2.5 tax benefit gives17.5 after-tax adjustment. Income100/50=$2 EPS;117.5/50=$2.35 alternative EPS. A tax benefit5 gives15 adjustment and$2.30 alternative EPS.
+explain: |-
+  Some companies report an adjusted EPS that leaves out the amortization of intangibles they bought in acquisitions. The adjusted number looks higher. A reader needs to see the step from the reported EPS to the adjusted one, with the tax effect and the share count shown.
+
+  This skill builds that reconciliation. It takes the amortization and subtracts the tax benefit the company disclosed on it. That is the after-tax adjustment. It adds the adjustment to reported income and divides both incomes by the same diluted shares. It does not guess a tax rate. If the tax effect is not disclosed, it marks it as missing.
+
+  It also adds the cautions that the add-back leaves out. The company paid real money for the acquired assets, and many firms keep buying new ones. The adjusted figure is not profit under the accounting rules, and it is not automatically a one-off. The result shows what the add-back does and where it stops.
+
 when:
-  - You need a reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions.
-  - You work on issuer accounting and earnings and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A company's earnings release shows an adjusted EPS that excludes acquisition amortization, and you want to see how it was built.
+  - You are comparing two companies, one that adds amortization back and one that does not.
+  - An analyst asks how much of an EPS gap is just the amortization line.
+  - A reviewer wants the tax effect and the share count behind an adjusted EPS shown on separate lines.
+
+not_for:
+  - "The company has no acquired intangibles. There is nothing to add back."
+  - "You want to change the share count, for example after a buyback. Use the Cash-funded buyback EPS bridge."
+  - "You want to test whether convertible bonds or options dilute EPS. Use the Convertible EPS inclusion test."
+  - "You want to see whether earnings turn into cash. Use the Cash versus earnings checker."
+
 you_give:
-  - Reported ordinary income, purchased-intangible amortization, its recognized tax benefit and matching diluted shares.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Reported income for ordinary shareholders, from the income statement"
+  - "Amortization of purchased intangibles for the year, from the intangibles note"
+  - "The tax benefit the company reported on that amortization"
+  - "The diluted share count that matches the income"
+  - "The currency, scale and period"
+
 you_get:
-  - A reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The after-tax adjustment: amortization less its tax benefit"
+  - "Reported EPS and EPS with the adjustment added back"
+  - "The per-share size of the adjustment"
+  - "A short note on what the add-back leaves out"
+  - "A list of anything missing, and what it held back"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach the earnings release or annual report if your AI reads files."
+  - "Give the four figures with the currency and the period. Say which line each one comes from."
+  - "Check the inputs table first. Amortization must be the purchased-intangible line only, not software or loan costs."
+  - "Read reported EPS, adjusted EPS and the gap. Confirm both use the same share count."
+  - "If the tax benefit is missing, find it in the tax note or the company's reconciliation. It will not use an assumed rate."
+  - "Have a qualified accountant review the result before anyone uses it in a report."
+
 how_it_works:
-  - title: 1. Identify purchased-intangible amortization separately from software, financing costs and internally developed assets; retain the statutory line
-    text: Identify purchased-intangible amortization separately from software, financing costs and internally developed assets; retain the statutory line.
-  - title: 2. Subtract the specifically attributable recognized tax benefit from amortization to obtain the after-tax adjustment
-    text: Subtract the specifically attributable recognized tax benefit from amortization to obtain the after-tax adjustment.
-  - title: 3. Divide reported and alternative income by the same appropriate diluted share count, and explain why an addback does not erase purchase cost or ongoing asset replacement
-    text: Divide reported and alternative income by the same appropriate diluted share count, and explain why an addback does not erase purchase cost or ongoing asset replacement.
+  - title: Isolates the amortization
+    text: Separates purchased-intangible amortization from software, financing costs and internally built assets.
+  - title: Finds the after-tax amount
+    text: Subtracts the disclosed tax benefit on that amortization from the amortization.
+  - title: Adds it to reported income
+    text: Keeps the reported income line and shows the adjusted income beside it.
+  - title: Divides by the same shares
+    text: Uses one diluted share count for both incomes, so the only change is the add-back.
+  - title: Adds the cautions
+    text: Notes that the add-back does not erase the purchase cost or the need to replace assets.
+  - title: Lists the gaps
+    text: Names every figure it was missing and every check that did not run.
+
 output_shape: |-
-  A reported-to-amortization-excluded EPS reconciliation with cash and recurrence cautions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES
+  <figure> | <source> | <date> | <currency, scale, period>
+
+  INPUTS AND ASSUMPTIONS
+  Reported income: <n> | Amortization: <n> | Tax benefit: <n> | Diluted shares: <n>
+
+  EPS BRIDGE
+  After-tax adjustment: <amortization - tax benefit>
+  Adjusted income: <reported income + adjustment>
+  Reported EPS: <reported income / diluted shares>
+  Adjusted EPS: <adjusted income / diluted shares>
+  Per-share adjustment: <adjustment / diluted shares>
+
+  WHAT THE ADD-BACK LEAVES OUT
+  <cash paid for the acquisitions, asset replacement, and any other caution that fits>
+
+  CHECKS RUN
+  <check> | <result>
+
+  MISSING
+  <figure and what it held back>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Reported income for ordinary shareholders and the diluted share count"
+    - "Amortization of purchased intangibles for the year"
+    - "The tax benefit the company reported on that amortization"
+  prerequisites:
+    - "The income statement, the intangibles note and the tax note for the same period"
+  output:
+    - name: "SCOPE AND SOURCES"
+      contains: "Each figure with where it came from, its date, currency, scale and period."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "Reported income, amortization, tax benefit and diluted shares as supplied."
+    - name: "EPS BRIDGE"
+      contains: "The after-tax adjustment, adjusted income, reported EPS, adjusted EPS and the per-share gap."
+    - name: "WHAT THE ADD-BACK LEAVES OUT"
+      contains: "Plain cautions: the purchase cost was real cash, assets get replaced, and the result is not accounting profit."
+    - name: "CHECKS RUN"
+      contains: "Each tie-out and its result, such as both EPS figures using the same share count."
+    - name: "MISSING"
+      contains: "Any figure it could not find, and which result it held back."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [cash-funded-buyback-eps-bridge, cash-versus-earnings-checker, convertible-eps-inclusion-test]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -48,29 +120,40 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: The actual disclosed tax effect is used rather than assuming all amortization is deductible.
+
 judge:
   - The actual disclosed tax effect is used rather than assuming all amortization is deductible.
   - Reported and alternative EPS reconcile with the same denominator and ownership attribution.
   - Tie all inputs to source notes, dates, currency, scale and signs.
   - Retain reported figures beside analytical adjustments and list every unresolved source gap.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The company's own reconciliation from reported to adjusted EPS, if it publishes one.
+    - A named reviewer and an explicit question, such as "how big is the gap?"
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: EPS
+    meaning: Earnings per share. Income for ordinary shareholders divided by the number of shares.
+  - term: Diluted shares
+    meaning: The share count including extra shares that options or convertibles could create.
+  - term: Purchased intangibles
+    meaning: Assets bought in an acquisition that have no physical form, such as customer lists and brands.
+  - term: Amortization
+    meaning: The cost of an intangible asset spread over its useful life, shown as an expense each year.
+  - term: Add-back
+    meaning: An amount added back to reported income to get an adjusted figure.

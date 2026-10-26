@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows known deployment steps with some setup choices.
 new_slug: model-launch-engineer
 name: Model launch engineer
-summary: Give it a trained model. Get it running as a live service with an API
-  and container.
+summary: Turn a trained model into a live service. Give it your model file and get an API, a Docker container and deploy files to host it.
 job: ship-and-host
 headline: Model launch engineer
-subhead: Give it a trained model. Get it running as a live service with an API
-  and container. Bring the trained model file. Use the result to plan your next
-  step.
+subhead: Give it a trained model. Get it running as a live service with an API and container. Bring the trained model file. Use the result to plan your next step.
 explain: |
   A trained model running as a live service that other programs can call, packaged so it starts the same way on any machine.
 
@@ -18,10 +15,14 @@ when:
   - You need a health check so the host can restart the model if it hangs.
   - Traffic is growing and you need it to scale on its own.
   - You want to ship a new model version without breaking the old one.
+not_for:
+  - "You only need answers from a ready-made AI model: use a hosted model API from a cloud provider instead of building your own service."
+  - "You have no trained model file yet: train and test the model first, or ask a data scientist to help."
+  - "You want to run it on your own laptop for a quick demo: a notebook or a simple local script is enough."
 you_give:
-  - The trained model file
-  - The data preparation code it needs
-  - Where it will run, such as Kubernetes or serverless
+  - Your trained model file, from a source you trust
+  - The data preparation code the model needs
+  - Where it will run, such as Docker, Kubernetes or serverless
   - Expected traffic and speed needs (optional)
 you_get:
   - A model API with input checks
@@ -30,8 +31,33 @@ you_get:
   - Health check and logging
   - Smoke tests after launch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini. Use one that can run code and read your files, since this skill writes and tests code.
+  - Paste the skill text, then add your model file, your data preparation code and where it will run.
+  - Say how much traffic you expect, if you know.
+  - Check the API code and Dockerfile your AI writes before you build anything.
+  - Build the container and deploy it. You need Docker and a hosting account, which may cost money.
+  - Read the smoke test results and fix any failed test before real users call the service.
+output_sample:
+  input:
+    - Your trained model file
+    - The data preparation code the model needs
+    - Where it will run, such as Docker, Kubernetes or a serverless service
+    - Expected traffic and speed needs (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Docker installed on your machine
+    - A place to host the container, and an account with it (may be paid)
+    - A model file from a source you trust
+  output:
+    - name: app.py
+      contains: The web API in FastAPI or Flask, with a health check, input checks and clear error messages.
+    - name: requirements.txt
+      contains: The pinned list of tools the service needs, without training-only tools.
+    - name: Dockerfile
+      contains: A container recipe that packs the model and API so it starts the same way anywhere.
+    - name: Deployment manifests
+      contains: Kubernetes files with resource limits, health probes and automatic scaling, or the setup for a serverless service.
+    - name: Smoke test results
+      contains: Test requests sent to the live service, with a pass or fail for each known input.
+    - name: Monitoring and update plan
+      contains: Suggested checks for speed and errors, and a safe way to release new model versions.

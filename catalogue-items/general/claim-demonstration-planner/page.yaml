@@ -1,6 +1,6 @@
 new_slug: claim-demonstration-planner
 name: "Claim demonstration planner"
-summary: "Paste your claim and product facts. Get a short script where every spoken line has a picture showing the same thing."
+summary: "Turn your claim into a short video ad script where each spoken line has a matching picture. Give it your claim and product facts."
 job: make-video-ads
 thinking: medium
 thinking_why: "The rules are fixed, but finding a picture that proves an invisible benefit takes judgment."
@@ -17,6 +17,10 @@ when:
   - "You have a claim and no idea how to show it in 30 seconds."
   - "Your video ads show lifestyle shots while the voice talks about the product."
   - "Your benefit is invisible, such as protection, freshness or safety, and you cannot film it."
+not_for:
+  - Your claim is unproven. Run the USP claim checker first to find out what you can honestly say.
+  - You cannot film or test anything that shows the claim. Ask a person who makes videos for ideas, or use plain text ads.
+  - You only want to check a finished script for rejected lines. Use the Meta ads compliance checker.
 
 you_give:
   - "Your claim, or a report that names it"
@@ -33,6 +37,27 @@ how_to_use:
   - "Paste the claim report from the USP claim checker and your product facts."
   - "Say what you can film and what you cannot."
   - "Film the demonstration first, before anything else in the script."
+output_sample:
+  input:
+    - Your claim, or a report that names it
+    - Your product facts and anything you can really show
+    - The length you want, 15 to 60 seconds (optional)
+    - What you can film, such as props and setting (optional)
+  output:
+    - name: Claim line
+      contains: The claim cut to one spoken line a viewer can repeat.
+    - name: The demonstration
+      contains: What the viewer watches happen, what it needs to film, and any stand-in picture with its label.
+    - name: Script
+      contains: A table with the seconds, the spoken words and the picture that shows those words.
+    - name: Cut
+      contains: Each shot or line removed, with the reason it did not carry the claim.
+    - name: To film first
+      contains: The demonstration shot to film before anything else.
+    - name: Missing
+      contains: Facts or tests you need to confirm before filming.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: "Says the claim out loud"

@@ -15,6 +15,29 @@ use_cases:
   - "Plan a lower-demand week that respects care and work commitments"
   - "Compare a big makeover with smaller changes you can maintain"
   - "Build a practical skills plan with neighbours or an existing group"
+not_for:
+  - "You want to design a site from scratch with plant and land placement: use the Bill Mollison mind."
+  - "You want a clean, honest design for a product you will buy or make: use the Dieter Rams mind."
+  - "You need legal, electrical or food-safety sign-off: ask a qualified assessor, your council or a licensed tradesperson."
+output_sample:
+  input:
+    - The household idea, purchase or routine you want to change
+    - What you already own, use and have space for
+    - Who lives there and how much time each person has
+    - Limits such as tenure, access, budget and permissions (optional)
+  output:
+    - name: Resource and constraint map
+      contains: Useful spaces, objects, skills and routines already in your home, with the limits of tenure, access and resources.
+    - name: Options note
+      contains: A comparison of a new purchase with repair, sharing, a changed routine or no change, with evidence gaps marked.
+    - name: Connection map
+      contains: Which household tasks can support each other, which links add burden, and who is responsible for each.
+    - name: Project brief
+      contains: One useful garden or repair project with the skill needed, a realistic time commitment and care after the start.
+    - name: Staged plan
+      contains: A smaller first stage compared with the full makeover, showing what each stage depends on and requires.
+    - name: Technical questions
+      contains: Points for a qualified person to check before you act, such as permissions, electrical or food safety.
 seats:
   - {seat: "Household adaptation and manageable design", asks: "What can the place and routines you already have support?"}
   - {seat: "Built, biological and behavioural connections", asks: "Which habit or relationship matters as much as the new equipment?"}

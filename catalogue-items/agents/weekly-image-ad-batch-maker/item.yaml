@@ -15,16 +15,15 @@ inputs:
 outputs:
   - {type: image_prompt}
   - {type: ad_copy}
-  - {type: plan}
 uses: [winning-image-ad-style-finder, scroll-stopping-image-ads, image-ad-settings-picker, single-image-ad-planner, ad-first-line-writer-and-scorer, accurate-product-image-ad-maker, pre-launch-ad-checker]
 steps:
-  - {uses: winning-image-ad-style-finder, note: "When six or more ads are measured: the style your winners share and new ad plans that each change one thing."}
-  - {uses: scroll-stopping-image-ads, note: "Only when fewer than six ads are measured: a set of image ads from your reviews and photos, each with a different reason to buy."}
-  - {uses: image-ad-settings-picker, note: "Once per batch: locks the size, look and rules so every ad in the batch is made the same way."}
-  - {uses: single-image-ad-planner, note: "For each planned ad: the layout, the words on the image and the feed text."}
-  - {uses: ad-first-line-writer-and-scorer, note: "For each ad: scores the first line. A line under 3 of 4 is fixed and scored once more."}
-  - {uses: accurate-product-image-ad-maker, note: "For each ad that passes: a prompt that keeps your real product, then a check on the first picture that comes back."}
-  - {uses: pre-launch-ad-checker, note: "For each ad before hand-back, and again after each fix: stop-ship items are fixed and checked again, two rounds at most."}
+  - {uses: winning-image-ad-style-finder, note: "When six or more ads are measured: the style your winners share and new ad plans that each change one thing. Hands on: the style and the ad plans, as the brief for step 3."}
+  - {uses: scroll-stopping-image-ads, note: "Instead of step 1, only when fewer than six ads are measured: a set of image ads from your reviews and photos, each with a different reason to buy. Uses your brand facts, reviews and photos, not step 1's output. Hands on: the ad concepts, as the brief for step 3."}
+  - {uses: image-ad-settings-picker, note: "Once per batch: locks the size, look and rules so every ad in the batch is made the same way. Uses the ad plans from step 1, or the concepts from step 2, as the brief. Hands on: the locked brief for step 4."}
+  - {uses: single-image-ad-planner, note: "For each planned ad: the layout, the words on the image and the feed text, from the locked brief. Hands on: the ad words, for the first-line check."}
+  - {uses: ad-first-line-writer-and-scorer, note: "For each ad: scores the first line. A line under 3 of 4 is fixed and scored once more. Hands on: the checked first line, which goes into the image prompt in step 6."}
+  - {uses: accurate-product-image-ad-maker, note: "For each ad that passes: a prompt that keeps your real product, using step 5's checked first line, your photos and the product's lock lines, then a check on the first picture that comes back."}
+  - {uses: pre-launch-ad-checker, note: "For each ad before hand-back, and again after each fix: reads the plan, words and prompt from steps 4 to 6. Stop-ship items are fixed and checked again, two rounds at most."}
 schedule: "Every Monday, after the weekend's ad results are in"
 asks_before: [making pictures with an image tool that bills credits, uploading or publishing any ad, changing a live ad account, spending any ad budget]
 origin: own

@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: persona
     required: false
+  - type: email_flow
+    required: false
 outputs:
   - type: email_flow
     required: true

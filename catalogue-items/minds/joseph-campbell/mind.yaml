@@ -16,6 +16,27 @@ use_cases:
   - "Find the work you'd do even if no one paid you, and test whether you can build a life around it"
   - "Read an old story or symbol as a metaphor rather than a literal claim"
   - "Name the inner 'dragon' (the fear or habit) that is holding a character or a person back"
+not_for:
+  - "You need a plan for money, risk or rent before a big career move: ask a practical adviser, such as an accountant, first."
+  - "You are facing grief, illness or a crisis: speak with a doctor or counselor, since this mind explores stories and is not a clinician."
+  - "You want to decide whether to quit or keep going on a project: use Annie Duke (annie-duke), who separates decision quality from outcomes."
+output_sample:
+  input:
+    - The story, change or choice you are stuck in
+    - Who it serves, such as your customer, team or family
+    - What you have already tried or refused (optional)
+    - What you want at the end, such as an outline, a talk or a decision (optional)
+  output:
+    - name: Opening story
+      contains: One or two stories from different places that share the same shape as your problem.
+    - name: Shared shape
+      contains: The stages that fit your story, such as the call, the refusal, the threshold and the trial.
+    - name: Link to your life
+      contains: How that pattern reads your job, launch, loss or brand, with the dragon named.
+    - name: What you bring back
+      contains: What the return looks like and who it helps.
+    - name: Question to carry
+      contains: One closing question for you to take away and think about.
 seats:
   - {seat: "The hero's journey", asks: "Where is the call to adventure here, and what is the trial that will change us?"}
   - {seat: "Myth and meaning", asks: "What larger story are people living inside, and does it still fit the times?"}

@@ -1,52 +1,88 @@
 new_slug: prepare-work-examples-for-a-job-interview
 name: Prepare work examples for a job interview
 headline: Prepare work examples for a job interview
-summary: Share the source files. Get a role evidence map, concise example answers and practice questions.
+summary: Turn your real work history into interview answers. Get a role evidence map, short example answers and practice questions for the job.
 job: find-a-job
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A role evidence map, concise example answers and practice questions. Share the role description, interview format and your own documented work examples. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Paste the job description, say how the interview will run and share notes on your own work. Your AI picks your best real example for each skill the role needs. You get short answers and practice questions.
 explain: |-
-  A role evidence map, concise example answers and practice questions.
+  Most people walk into an interview with a list of jobs, not a set of stories. This workflow turns the job post into the skills an interviewer is likely to test, then matches each skill to something you really did.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Examples describe your actual contribution and outcomes; practice questions are not claims about the employer. Missing tools or evidence stay visible in the final summary.
+  It runs three steps in order. The first lists the skills the role needs and what each looks like at work. The second picks your genuine examples and says where you have none. The third writes practice questions with signs of a strong answer.
+
+  Your examples describe what you did and what came of it. If you have no example for a skill, the page says so and does not make one up. The practice questions are samples, not a guess at what this employer will ask.
 when:
-  - You need a role evidence map, concise example answers and practice questions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have an interview next week and the job post lists ten skills.
+  - Someone says 'tell me about a time when...' and you freeze.
+  - You are moving into a new field and need to show how past work fits.
+  - You have a pile of old project notes and do not know which ones matter.
+not_for:
+  - You need a resume and answers to application questions. Use Tailor a job application to real evidence.
+  - You are the one hiring and want questions to ask candidates. Use the Interview question set maker, or Run fair interviews and choose the candidate on evidence.
+  - You have no record of your own work yet. Write down three projects first, then run this.
 you_give:
-  - The role description, interview format and your own documented work examples.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The job description, copied from the job post
+  - How the interview will run, such as panel, case study or phone screen (from the invite)
+  - "Notes on your own work: projects, results, feedback you can describe"
+  - Your deadline, and anything you cannot share, such as client names (optional)
+  - Your current resume (optional)
 you_get:
-  - A role evidence map, concise example answers and practice questions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A role evidence map: each skill the role needs, matched to one of your real examples or marked as a gap"
+  - A short example answer for each matched skill, in first person
+  - Practice questions with signs of a strong answer
+  - A list of gaps and facts to check before you speak
+  - A summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini. Pick one that can read files.
+  - Paste the job description and the interview format. Then paste your work notes and say how long you have to prepare.
+  - "Say: follow the workflow file, save each step, and stop if a check fails."
+  - Read the evidence map first. Fix anything that is not true to what you did, and add dates or results the AI marked missing.
+  - Say each answer out loud. Cut any line you could not back up if asked.
+  - Use the practice questions with a friend, then work on the gaps.
+output_sample:
+  input:
+    - The job description
+    - How the interview will run
+    - Notes on your own work
+    - Your resume (optional)
+  prerequisites:
+    - An AI that can read files or long pasted text
+  output:
+    - name: step-01-role-skills-framework-builder.md
+      contains: The skills the role is likely to test, each with what it looks like at work.
+    - name: step-02-resume-job-application-builder.md
+      contains: "The role evidence map: each skill matched to your real example or marked as a gap, plus short answers."
+    - name: step-03-interview-question-set-maker.md
+      contains: Practice questions with signs of a strong answer, labelled as samples.
+    - name: Hand-back summary
+      contains: Files saved, missing facts, checks not run and one next step.
 how_it_works:
   - title: Role skills framework builder
-    text: Translate the role requirements into observable skills the interview may examine.
+    text: Turns the job post into the skills the interview may test. Hands step 2 a list of skills, each with what it looks like at work.
   - title: Resume and job application builder
-    text: Select genuine work examples for those skills and identify gaps honestly.
+    text: Matches each skill to a real example from your notes, writes a short answer, and lists gaps. Hands step 3 the matched skills and the gaps.
   - title: Interview question set maker
-    text: Create role-related practice questions and strong-answer indicators; label them sample questions rather than predictions of the employer interview.
+    text: Writes practice questions and signs of a strong answer for each skill. Labels them samples, not predictions of the employer's interview.
 output_shape: |-
-  Scope and source coverage
-  A role evidence map, concise example answers and practice questions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ROLE <title>, INTERVIEW FORMAT <format>, SOURCES <list>
+
+  1 SKILLS THE ROLE TESTS   <skill>: what it looks like at work
+  2 EVIDENCE MAP           <skill> | <your example> | <what you did> | <result you can show> | <source>
+                          GAP: <skill>, no example found
+  3 EXAMPLE ANSWERS        <skill>: situation, what you did, result (about 120 words)
+  4 PRACTICE QUESTIONS     <question> | signs of a strong answer | <skill>
+
+  MISSING        <each gap and what would fill it>
+  CHECKS MISSED  <one line each, or none>
+  NEXT STEP      <one action>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Examples describe your actual contribution and outcomes; practice questions are not claims about the employer.
+  - what: Interview format
+    how: Say if it is a panel, a case study or a phone screen. The practice questions and answer length change to fit.
+  - what: Which projects to use
+    how: Name two or three projects you want to lead with. The map starts with those and notes any skill they do not cover.
+  - what: Evidence you can show
+    how: Add real figures from your own records, such as sales or hours saved. Answers will include them, and cite where they came from.
 judge:
   - Examples describe your actual contribution and outcomes; practice questions are not claims about the employer.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +95,19 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - After the interview, add what you were asked and what landed. Next time the questions start from that.
+  - Keep your best evidence map. Reuse it for the next role and change only the skills list.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Any good chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It needs to read the job post and your notes together.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Feedback from managers or clients about your work
+    - Numbers from your own records, such as sales or time saved
+    - The names and roles of your interviewers
+    - A past interview question list from the same employer
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Evidence map
+    meaning: A table that matches each skill the job needs to something you really did.
+  - term: Gap
+    meaning: A skill the job needs where your notes show no example.

@@ -2,12 +2,16 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-volunteer-program-planner
 name: Nonprofit volunteer program planner
-summary: Share volunteer roles and current issues. Get clear roles, screening steps, training, shift plans, and follow-ups.
+summary: "Plan your nonprofit volunteer program: clear roles, screening by risk, onboarding, shift plans and a way to spot why volunteers leave."
 job: hire-people
 headline: Nonprofit volunteer program planner
 subhead: Share the work volunteers will do, who they serve, and where your current process breaks down. It plans recruitment, risk-based screening, training, shifts, and recognition. You get clear roles and practical steps for keeping volunteers active, with staff review of screening and safety.
 when:
   - You need this task done for a nonprofit, community program, or donated-goods store.
+not_for:
+  - "You want to recruit board members: use the Nonprofit board recruitment skill, or ask your current board chair."
+  - "You want to hire or keep paid staff: use a staff retention or HR guide, or talk to an HR adviser."
+  - "You need a legal ruling on background checks: ask a lawyer or your insurer, since rules differ by state."
 you_give:
   - Volunteer roles, time needs, people served, risk limits, current intake steps, and any attendance records.
 you_get:
@@ -26,5 +30,30 @@ works_best_with:
   inputs:
     - Screening and onboarding volunteers touches background checks and duty of care.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - List your volunteer roles with hours, who each role serves, and the risk involved.
+  - Add how people sign up and start now, plus any attendance records you have.
+  - Ask for position descriptions, a screening tier policy, an onboarding checklist, a shift plan and retention measures.
+  - Check the screening tiers with your insurer or a lawyer. Background check rules differ by state.
+  - Some scheduling tools it names, such as VolunteerHub, need a paid account. A shared calendar or sheet works for small programs.
+output_sample:
+  input:
+    - The volunteer roles you need filled, with hours and who each role serves
+    - Your current sign-up and welcome steps
+    - Any sign-up, attendance or drop-off records (optional)
+    - Your funder or insurer rules on screening (optional)
+  output:
+    - name: Volunteer position descriptions
+      contains: "For each role: purpose, duties, time needed, skills, who supervises, and what the volunteer gets."
+    - name: Screening tier policy
+      contains: Each role matched to a risk tier, with the checks that tier needs.
+    - name: Application form fields
+      contains: The details to collect, including contact, availability, skills, emergency contact and screening consent.
+    - name: Onboarding sequence
+      contains: A welcome email, orientation, role training, a first shift with a buddy, and a two-week check-in.
+    - name: Scheduling and reminder plan
+      contains: A sign-up method sized to your numbers, plus shift reminders and a no-show plan.
+    - name: Recognition calendar
+      contains: Thanks after each shift, milestone awards, and an annual event, with dates.
+    - name: Retention tracking
+      contains: New applicants, active volunteers and volunteers lost, with 90-day and 12-month retention rates.

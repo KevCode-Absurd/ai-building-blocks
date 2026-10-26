@@ -1,6 +1,6 @@
 new_slug: customer-interview-notes
 name: "Customer conversation notes sorter"
-summary: "Paste raw notes from customer talks. Get facts, praise and feature ideas told apart, plus the follow-up question for each."
+summary: "Sort raw customer interview notes into facts, compliments and feature ideas. Get a follow-up question for every weak note."
 job: understand-customers
 thinking: medium
 thinking_why: "It judges what each note is worth, but the categories are fixed."
@@ -17,6 +17,10 @@ when:
   - You've done a few conversations and your notes are a mix of quotes and feelings.
   - Everyone you spoke to "liked it" and you don't know what to do next.
   - You need to share what customers said with a team without handing over just your opinion.
+not_for:
+  - "You want questions to ask before the talk: use the Customer interview question writer."
+  - "You need a yes or no on your idea after five or so talks: use the Idea evidence review."
+  - "You have one short talk and no quotes: write down what the person said and did first, then come back."
 
 you_give:
   - Your notes from one or more conversations, as rough as they are
@@ -35,6 +39,29 @@ how_to_use:
   - Say what you were trying to learn, so it can see which notes matter.
   - Read the weak-data list first, then ask the follow-up questions in your next talks.
   - Share the sorted notes, with the quotes, with anyone else making decisions.
+output_sample:
+  input:
+    - Your raw notes from one or more customer conversations
+    - Who each talk was with and the date (optional)
+    - What you were trying to learn (optional)
+    - Exact quotes in quotation marks (optional)
+  output:
+    - name: What you have
+      contains: How many conversations and items you pasted, and how many are facts.
+    - name: Sorted notes
+      contains: Each note per person with a mark, a kind, what it is worth and a question to ask next.
+    - name: Weak data
+      contains: Compliments, fluff and feature ideas listed apart, with the likely reasons behind each idea.
+    - name: Real signals
+      contains: Pains, goals, obstacles, workarounds and money, with how many people said each.
+    - name: Each person
+      contains: A verdict of likely customer, complainer or not a customer, with the reason.
+    - name: To do
+      contains: Follow-ups and next steps you promised.
+    - name: Missing
+      contains: What the notes lack.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: Checks the notes

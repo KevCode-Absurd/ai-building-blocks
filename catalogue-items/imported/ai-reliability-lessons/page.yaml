@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It compares the same question across kinds of knowledge.
 new_slug: ai-reliability-lessons
 name: Subject-by-subject AI reliability lesson planner
-summary: Name two or more subjects. Get lessons that show where AI is reliable
-  and where it distorts, subject by subject.
+summary: Plan AI literacy lessons that compare how reliable AI is in two or three school subjects, so students learn where it can be trusted.
 job: teach-and-train
 headline: Subject-by-subject AI reliability lesson planner
-subhead: A lesson sequence that shows students where AI answers can be trusted
-  and where they bend the truth, one school subject at a time. A chatbot may do
-  well on a biology process and badly on a historical judgement.
+subhead: A lesson sequence that shows students where AI answers can be trusted and where they bend the truth, one school subject at a time. A chatbot may do well on a biology process and badly on a historical judgement.
 explain: |
   A lesson sequence that shows students where AI answers can be trusted and where they bend the truth, one school subject at a time. A chatbot may do well on a biology process and badly on a historical judgement. Students find out why.
 
@@ -18,6 +15,10 @@ when:
   - You are planning cross-subject AI literacy work.
   - Students think one AI check works for everything.
   - You need a lesson that compares AI in history and science, for example.
+not_for:
+  - You teach only one subject. Use a plain check of AI answers against your own notes and sources instead.
+  - You want to teach students how to write good prompts. Use a basic prompting lesson from your school or exam board instead.
+  - You need one worksheet to mark a single AI answer. Ask a colleague or your subject lead for a simple answer-checking sheet instead.
 you_give:
   - Two or three subjects to compare
   - Year group
@@ -29,7 +30,29 @@ you_get:
   - A comparison and recording protocol
   - A reliability framework and discussion guide
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell it the two or three subjects you want to compare and the year group.
+  - Add the question type and your time limit if you have them (optional).
+  - Read the plan and check the questions fit your syllabus.
+  - Give students the same AI chatbot and the comparison protocol, then run the lesson.
+  - Use the discussion guide to help them draw conclusions together.
+output_sample:
+  input:
+    - The two or three subjects to compare
+    - The year group
+    - The type of question to use, such as cause or how it works (optional)
+    - Which kind of knowledge to stress (optional)
+    - Time available (optional)
+  prerequisites:
+    - Students need the same AI chatbot to run the questions. Check that a free account is enough for your class.
+  output:
+    - name: Knowledge Type Analysis
+      contains: How each subject builds knowledge, what counts as evidence there, and why that affects how far AI can be trusted.
+    - name: Anchor Question Set
+      contains: The same type of question written in each subject's own terms, ready for students to put to AI.
+    - name: Comparison Protocol
+      contains: Steps for running the questions through AI and what students should record for each answer.
+    - name: AI Reliability Framework
+      contains: A way for students to judge where AI answers hold up and where they bend the truth.
+    - name: Discussion Guide
+      contains: Questions to help students compare their results and reach conclusions about AI in each subject.

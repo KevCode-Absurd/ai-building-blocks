@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It runs set read-only checks and writes up the result.
 new_slug: advisory-exposure-checker
 name: Advisory exposure checker
-summary: Name a breach or package advisory. Get a read-only check of your
-  machine and projects, saved as a report.
+summary: Check if a breach or package advisory affects your computer and projects. Get a read-only check and a saved report with a clear verdict.
 job: secure-code
 headline: Advisory exposure checker
-subhead: Name the advisory, package or vulnerability and the folders to check.
-  It picks the relevant checks, searches your Node and Python projects for
-  affected versions and looks at installed tools, changing nothing on your
-  machine. You get the list of checks run, what was found, a clear verdict, a
-  saved report and follow-up steps for you.
+subhead: Name the advisory, package or vulnerability and the folders to check. It picks the relevant checks, searches your Node and Python projects for affected versions and looks at installed tools, changing nothing on your machine. You get the list of checks run, what was found, a clear verdict, a saved report and follow-up steps for you.
 explain: |
   Find out if a security advisory touches your computer and projects with a read-only check, saved as a report. Nothing on your machine is changed.
 
@@ -20,6 +15,10 @@ when:
   - You want to know if you are exposed to a new vulnerability.
   - Your team asks for proof that you checked.
   - You want a record of what you looked at.
+not_for:
+  - "You want the problem fixed for you: this only looks and lists steps, so run the fix yourself or ask a developer."
+  - "Your AI cannot run commands on your computer: ask a security person to check, or do the checks by hand."
+  - "You need a full security review of a company network: hire a security professional."
 you_give:
   - The name of the advisory, package or vulnerability
   - The folders or projects to check
@@ -32,8 +31,28 @@ you_get:
   - A saved report
   - Follow-up steps for you
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run read-only commands and save a file.
+  - Open an AI that can run read-only commands and save one file, such as Claude Code or Codex.
+  - Paste the skill, then name the advisory, CVE or package you want checked.
+  - Say which folders to search. This keeps the check to those places and not your whole home folder.
+  - Let it run the checks. It reads your files and settings but changes nothing.
+  - Read the verdict. The only file it writes is the report, in the security-audits folder in your Documents.
+  - If the verdict is Affected, run the fix steps listed under Follow-ups yourself.
+output_sample:
+  input:
+    - The advisory, CVE or package name
+    - The folders or projects to check (optional)
+    - "Your computer type: Mac, Linux or Windows (optional)"
+  prerequisites:
+    - An AI that can run read-only commands on your computer
+    - Permission for it to read your home folder and shell settings
+  output:
+    - name: Advisories in scope
+      contains: The advisory, what it affects, and which versions are at risk.
+    - name: Audit results
+      contains: A table with each check run and what it found, such as a version or none.
+    - name: Verdict
+      contains: One of Not affected, Affected or Partially affected, with short reasons.
+    - name: Action taken
+      contains: A note that nothing was changed, installed or removed.
+    - name: Follow-ups
+      contains: Steps for you to run yourself, or none if nothing is needed.

@@ -1,6 +1,6 @@
 new_slug: email-draft-reviewer
 name: "Email draft reviewer"
-summary: "Paste an email. Get cuts, a pacing map, subject fixes, a score out of 100 and a verdict."
+summary: "Paste your email draft to get cuts, a pacing map, subject line fixes, a score out of 100 and a ship or fix verdict before you send it."
 job: write-emails
 thinking: low
 thinking_why: "It counts words, spots patterns and edits lines against a clear rubric, which a fast model does well."
@@ -17,6 +17,10 @@ when:
   - You wrote a campaign email and want a second pair of eyes before it goes out.
   - A flow email, such as a welcome or a cart reminder, gets opens but few clicks.
   - Your emails sound like the company talking about itself.
+not_for:
+  - "You need order, shipping or legal emails to stay formal: keep the 'we' lines as they are and ask a person to check the terms."
+  - "You want a final check for typos: use a spell checker or a proofreader after your edits."
+  - "You want the email written from scratch: ask your AI to write a first draft, then bring it here to review."
 
 you_give:
   - The email draft, its subject line and preview text
@@ -35,6 +39,30 @@ how_to_use:
   - Paste your brand voice rules if you have them, so the review doesn't cut your style.
   - Make the three fixes, then run the review again on the new draft.
   - Rest the draft overnight, then read it aloud before it goes out.
+output_sample:
+  input:
+    - Your email draft
+    - Its subject line and preview text
+    - Who it goes to and the one goal
+    - Your brand voice rules (optional)
+    - Open and click results from past sends (optional)
+  output:
+    - name: COUNTS
+      contains: Word counts for the lead and the whole email, subject line characters, and how many I and we lines it has.
+    - name: MARKED DRAFT
+      contains: Your draft with cut marks and rewrite notes in place.
+    - name: PACING MAP
+      contains: A bar for each line showing its length, so you can see where the rhythm breaks.
+    - name: SUBJECT LINES
+      contains: Three subject line rewrites.
+    - name: FLIPPED TO YOU
+      contains: Each I or we line shown before and after, rewritten to speak to the reader.
+    - name: SCORE
+      contains: A score out of 100 with the sum shown, taking off points for each fault.
+    - name: VERDICT and THREE FIXES
+      contains: Ship or fix, plus the three changes that matter most.
+    - name: NOTE and MISSING
+      contains: A reminder that the limits are rules of thumb, and any input that was not given.
 
 how_it_works:
   - title: Counts the lead and length

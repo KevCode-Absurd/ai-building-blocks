@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It weighs two tools and plans reliable steps.
 new_slug: no-code-automation-planner
 name: No-code automation planner
-summary: Describe a task to automate. Get the right Zapier or Make setup, built
-  to hold up, and when to switch to code.
+summary: Plan a no-code automation in Zapier or Make. Get a tool pick, a trigger and filter layout, test tips, and a sign for when to move to code.
 job: connect-tools
 headline: No-code automation planner
-subhead: The right Zapier or Make setup for a task, built so it keeps working,
-  with a warning for when it is time to move to code.
+subhead: The right Zapier or Make setup for a task, built so it keeps working, with a warning for when it is time to move to code.
 explain: |
   The right Zapier or Make setup for a task, built so it keeps working, with a warning for when it is time to move to code.
 
@@ -17,6 +15,10 @@ when:
   - You cannot decide between Zapier and Make.
   - Your automation runs too often or sends duplicates.
   - You wonder if your growing zap should become real code.
+not_for:
+  - "You run very high volumes or heavy logic: ask a developer to build it in code, or use a custom build."
+  - "You only want to build one simple flow in a tool you already chose: follow that tool's own template or guide."
+  - "You need a tested, checked plan for sensitive data or money: have a person review it before you turn it on."
 you_give:
   - The task you want to automate
   - The apps involved
@@ -28,7 +30,26 @@ you_get:
   - Test and naming tips
   - A sign for when to switch to code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running, files or web access is needed.
+  - Describe the task in plain words. Name the apps, how often it runs and how much data moves.
+  - Add your budget if you have one (optional).
+  - Read the tool choice and the trigger, filter and action layout.
+  - Build the flow in Zapier or Make. Test it on real sample data before you turn it on.
+  - If the first test passes, watch the first few real runs. If it grows or slows, run the switch-to-code check again.
+output_sample:
+  input:
+    - The task you want to automate
+    - The apps involved
+    - How often it runs and how much data
+    - Your budget (optional)
+  prerequisites:
+    - A free or paid Zapier or Make account to build the plan (the AI only plans it, you build it)
+  output:
+    - name: Tool choice
+      contains: Whether Zapier or Make fits your task better, with the reasons.
+    - name: Trigger and filter layout
+      contains: The trigger, the filters that stop unwanted runs, and the actions in order.
+    - name: Naming and test tips
+      contains: A clear name for the flow and how to test it on real sample data.
+    - name: Switch-to-code check
+      contains: Signs that your flow is too big, slow or complex for no-code and should move to code.

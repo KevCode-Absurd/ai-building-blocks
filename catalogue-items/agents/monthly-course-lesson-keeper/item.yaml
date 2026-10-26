@@ -16,11 +16,11 @@ outputs:
   - {type: plan}
 uses: [documentation-checker, accessible-lesson-auditor, small-working-example-explainer, lesson-opener-planner, recall-quiz-writer]
 steps:
-  - {uses: documentation-checker, note: "Every month, for lessons that teach a tool, product or process: claims that are now false, drift from how the thing works today, and weak spots."}
-  - {uses: accessible-lesson-auditor, note: "Every month, for the lessons learners complained about or that are due for review: a check against Universal Design for Learning, fixes ranked by impact."}
-  - {uses: small-working-example-explainer, note: "Only for a lesson where learners keep asking the same how question: the smallest example that shows the mechanism, with traced values."}
-  - {uses: lesson-opener-planner, note: "Only for a lesson being rewritten: a five-minute opener that brings back what learners already know."}
-  - {uses: recall-quiz-writer, note: "Only for a lesson being rewritten, or one with no quiz: a low-stakes recall quiz at three levels, with answers."}
+  - {uses: documentation-checker, note: "Every month, for lessons that teach a tool, product or process: claims that are now false, drift from how the thing works today, and weak spots. Uses the lesson and the current docs or code. Passes on the false claims, to fix first."}
+  - {uses: accessible-lesson-auditor, note: "Every month, for the lessons learners complained about or that are due for review: a check against Universal Design for Learning, fixes ranked by impact. Uses the lesson text itself, not step 1's report. Passes on the ranked fixes."}
+  - {uses: small-working-example-explainer, note: "Only for a lesson where learners keep asking the same how question: the smallest example that shows the mechanism, with traced values. Uses that question from your learner notes, not step 2's audit. Passes on the example, to put before the explanation."}
+  - {uses: lesson-opener-planner, note: "Only for a lesson being rewritten: a five-minute opener that brings back what learners already know. Uses the lesson and the one before it, not the example. Passes on the opener, which the rewritten lesson starts with."}
+  - {uses: recall-quiz-writer, note: "Only for a lesson being rewritten, or one with no quiz: a low-stakes recall quiz at three levels, with answers. Uses the rewritten lesson text, with the example and opener in place, as its source. Passes on the quiz, saved with the lesson."}
 schedule: "On the first Monday of each month, after last month's learner questions are collected"
 asks_before: [publishing or replacing any lesson, emailing learners, changing the course outline or order, removing a lesson, changing a price or an access rule, replying to a learner]
 minds: [andrej-karpathy]

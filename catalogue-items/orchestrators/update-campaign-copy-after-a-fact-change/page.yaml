@@ -31,8 +31,31 @@ how_it_works:
   - title: Approve the wording boundary before rewriting
     text: Pair every new assertion and condition with its supporting fact. Recompute only affected arithmetic, showing inputs and units. Retain legal/offer qualifiers intact. Do not substitute a more persuasive claim or infer a new discount, guarantee or testimonial.
   - title: Patch the affected copy by surface
-    text: Run only the writer branch needed for an affected ad, email or page. Supply the actual baseline and request a bounded patch, not a fresh concept round. Preserve approved voice, language, audience, layout role and all unaffected facts. Return a minimal snippet with placement or a requested full-file replacement and a change log.
+    text: Run only the writer branch needed for an affected ad, email or page, in this order, ads then email then page. Each later branch also takes the updated wording from the branch before it, so the facts agree across surfaces. Supply the actual baseline and request a bounded patch, not a fresh concept round. Preserve approved voice, language, audience, layout role and all unaffected facts. Return a minimal snippet with placement or a requested full-file replacement and a change log.
   - title: Review the actual patched pack and prepare release
     text: Compare every changed field against the approved card and review cross-surface consistency. Confirm dependent prices, dates, exclusions and CTA promises agree. Recheck unchanged locks for accidental drift. Build a publisher handoff listing exact old/new versions, effective time, destinations, approval scope and rollback copy. Check rendered/live states only with actual tools and access; chat copy review is not that evidence.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You are writing a new campaign, not changing an old one: use Campaign brief and calendar builder."
+  - "You only want to check one finished ad before it goes live: use Pre-launch ad checker."
+  - "You want to see which copy a changed fact touches, without rewriting it: use Campaign change impact mapper."
+output_sample:
+  input:
+    - Your current ads, emails and page copy, each marked with its version and where it runs
+    - The approved old and new fact or offer, with the start date and conditions
+    - Proof for the claims that change, and your brand rules
+    - Where the copy will be published
+  output:
+    - name: Impact map
+      contains: Every field the change touches, what depends on it and which content stays locked.
+    - name: Evidence decisions
+      contains: Each claim marked current, needs review or withdrawn, with its source.
+    - name: Claim register
+      contains: The exact allowed wording and terms for each changed surface.
+    - name: Patched copy
+      contains: Short revised snippets or full files for ads, email and page, with a change log.
+    - name: Before and after review
+      contains: A check that prices, dates and calls to action agree across the pack.
+    - name: Publisher handoff
+      contains: Old and new versions, start time, destinations, approvals, rollback copy and checks not yet run.

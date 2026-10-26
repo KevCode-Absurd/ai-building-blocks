@@ -1,11 +1,11 @@
 new_slug: sales-drop-diagnosis
 name: Find why sales dropped and brief your next ads
-summary: Give it your ad results. Get the reasons sales fell, ideas you haven't tried, a test brief and headlines.
+summary: Find why your ad sales dropped. Give it two periods of ad results and get the cause, untried ideas, a test brief and headlines.
 job: read-ad-results
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
 headline: Find out why ad sales dropped and what to make to win them back
-subhead: Give it your ad results for two periods and your brand file. It works out every figure from the totals, finds which link in the chain moved, maps what your ads have not tried, briefs three new ideas and writes headlines for them.
+subhead: Give it your ad results for two periods and your brand file. It finds which part of your ad path got worse. Then it maps ideas you have not tried, writes a test brief and writes headlines.
 explain: |-
   When cost per sale jumps, the usual move is to change the ad you can see. The cause is often somewhere else, such as broken tracking, a worn-out ad or a page that stopped converting.
 
@@ -14,6 +14,10 @@ when:
   - Your cost per sale rose and you do not know why.
   - You are about to change your ads on a guess.
   - You need a brief for your designer that rests on numbers.
+not_for:
+  - "You have no past results, such as a first launch: wait for data, or start with a plain plan for your first test ads."
+  - "You have no brand file yet: build one first with the Website brand brain builder, then come back."
+  - "You only want the cause of the drop: use the Ad sales drop analyst."
 you_give:
   - Your ad results export, one row per ad, for this period and the one before
   - Your brand file
@@ -29,6 +33,27 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. It works step by step and saves each result.
+output_sample:
+  input:
+    - Your ad results export for this period, one row per ad
+    - Your ad results export for the period before
+    - Your brand file
+    - Your target cost per sale (optional)
+    - Your store's own revenue for the period (optional)
+  prerequisites:
+    - Your brand file, made with the Website brand brain builder
+    - An AI that can read files, such as Claude with a project or Claude Code
+  output:
+    - name: outputs/step-01-ad-sales-drop-analyst.md
+      contains: "The drop report: a counting check, which part of the ad path moved, reasons for and against, and ranked fixes."
+    - name: outputs/step-02-untried-ad-idea-finder.md
+      contains: A map of what your past ads have tried, with the five biggest gaps.
+    - name: outputs/step-03-ad-test-brief-writer.md
+      contains: A test brief with three ideas, each aimed at a different buyer doubt, with versions of each.
+    - name: outputs/step-04-ad-headline-writer.md
+      contains: Headlines for each idea, with the one to test first marked.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Finds why sales dropped
     text: Uses the sales drop analyst to recalculate rates, check tracking first, and split the change into its links.

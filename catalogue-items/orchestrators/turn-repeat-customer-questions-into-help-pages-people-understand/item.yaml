@@ -14,11 +14,11 @@ outputs:
   - {type: audit_report}
 uses: [customer-question-researcher, solved-ticket-help-page-writer, text-difficulty-checker, plain-english-editor, documentation-checker]
 steps:
-  - {uses: customer-question-researcher, note: "For each question, the answer your docs, tickets and chats already give, each source named, with gaps and contradictions marked."}
-  - {uses: solved-ticket-help-page-writer, note: "A help page for each question: the steps in order, what the reader should see after each, and what to do if it fails. Written for someone who has never written in."}
-  - {uses: text-difficulty-checker, note: "The reading level of each page, the sentences and words that push it up, and which pages need a rewrite."}
-  - {uses: plain-english-editor, note: "Each flagged page rewritten in plain English with the same substance, following George Orwell's rules: short words, active voice, cut what adds nothing."}
-  - {uses: documentation-checker, note: "Each page checked as a reader would use it: missing steps, wrong names for buttons or screens, promises your docs do not back. Fixes listed and applied."}
+  - {uses: customer-question-researcher, note: "For each question, the answer your docs, tickets and chats already give, each source named, with gaps and contradictions marked. Hands step 2 the sourced answer for each question."}
+  - {uses: solved-ticket-help-page-writer, note: "A help page for each question: the steps in order, what the reader should see after each, and what to do if it fails. Written for someone who has never written in. Hands step 3 the finished pages."}
+  - {uses: text-difficulty-checker, note: "The reading level of each page, the sentences and words that push it up, and which pages need a rewrite. Hands step 4 the list of pages to rewrite."}
+  - {uses: plain-english-editor, note: "Each flagged page rewritten in plain English with the same substance, following George Orwell's rules: short words, active voice, cut what adds nothing. Hands step 5 the rewritten pages."}
+  - {uses: documentation-checker, note: "Each page checked as a reader would use it: missing steps, wrong names for buttons or screens, promises your docs do not back. Fixes listed and applied. This is the final check, so the pages it hands back are the ones to publish."}
 origin: own
 version: 1.0.0
 minds: [george-orwell, william-zinsser]

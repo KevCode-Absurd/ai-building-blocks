@@ -1,6 +1,6 @@
 slug: definition-tester
 name: "Definition tester"
-summary: "Paste a claim that uses a big word like fair or loyal. Get tested definitions and the counter-cases that break them."
+summary: "Test a claim built on a word like fair or loyal. Get a plain definition tried against hard cases, and your claim reworded."
 category: general
 type: skill
 role: check
@@ -11,6 +11,7 @@ inputs:
   - {type: voc_reviews, required: false}
 outputs:
   - {type: audit_report}
+  - {type: question}
 origin: rebuilt
 version: 1.0.0
 minds: [socrates, albert-einstein]
@@ -19,3 +20,4 @@ credits:
   - {title: "Meno", by: "Plato (Jowett translation, public domain)", url: "https://www.gutenberg.org/ebooks/1643", used: "Asking what a thing is, not for a list of examples, and testing each answer against cases"}
   - {title: "Relativity: The Special and General Theory", by: "Albert Einstein (Lawson translation, public domain)", url: "https://www.gutenberg.org/ebooks/5001", used: "A word has no meaning until there is a way to decide a real case"}
   - {title: "Sidelights on Relativity", by: "Albert Einstein (public domain)", url: "https://www.gutenberg.org/ebooks/7333", used: "Tying a concept to something you can measure or check"}
+next: [claim-skepticism-kit, real-knowledge-tester]

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies a ready theme to work that already exists.
 new_slug: slide-and-page-styler
 name: Slide and page styler
-summary: Pick one of ten themes or ask for a new one. Get your slides, docs or
-  page restyled to match.
+summary: Restyle your slides, docs or web page in one clear look. Pick from ten ready themes or ask for a custom one. Your content stays the same.
 job: design-work
 headline: Slide and page styler
-subhead: Slides, docs or a web page that look designed, in one consistent style.
-  You pick from ten ready-made themes, or ask for a new one made for your topic,
-  and the skill restyles your work to match.
+subhead: Slides, docs or a web page that look designed, in one consistent style. You pick from ten ready-made themes, or ask for a new one made for your topic, and the skill restyles your work to match.
 explain: |
   Slides, docs or a web page that look designed, in one consistent style. You pick from ten ready-made themes, or ask for a new one made for your topic, and the skill restyles your work to match.
 
@@ -18,6 +15,10 @@ when:
   - You want your report and your landing page to share one look.
   - You are unsure about colours and want to see options first.
   - You need a custom theme for a specific audience.
+not_for:
+  - "You need exact print colours or a brand-locked document: use your brand guide and a designer, or your own design tool."
+  - "You want new slides or a new page built from scratch: build the content first, then come back to style it."
+  - "You only want to fix wording or structure: edit the text yourself or ask your AI for a rewrite, as this only changes colours and fonts."
 you_give:
   - The slides, doc or page to style
   - A theme choice, or a description of the mood you want
@@ -28,7 +29,23 @@ you_get:
   - Exact colours and fonts used
   - A custom theme if none fit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - The slides, doc or page you want to style
+    - Your theme choice, or a few words on the mood you want
+    - Your brand colours (optional)
+  prerequisites:
+    - An AI that can open your file and show a PDF, if you want to see the theme showcase
+  output:
+    - name: Theme showcase
+      contains: A PDF that shows all ten themes so you can see them side by side before you choose.
+    - name: Theme choice check
+      contains: A question asking which theme you want, and a wait for your clear yes before anything changes.
+    - name: Restyled file
+      contains: Your slides, doc or page with the chosen theme's colours and fonts applied the same way throughout.
+    - name: Theme details
+      contains: The hex colour codes and the heading and body fonts that were used.
+    - name: Custom theme (if none fit)
+      contains: A new named theme with colours and fonts, shown to you for review before it is applied.

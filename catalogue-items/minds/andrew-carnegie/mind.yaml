@@ -16,6 +16,30 @@ use_cases:
   - "Plan how a business owner can give money away well while still alive"
   - "Check a plan for what it will cost the people who do the hard work"
   - "Pick the work no rival will take on, and make it your edge"
+not_for:
+  - "You want advice on valuing a stock or choosing an investment: use the Benjamin Graham mind, since Carnegie gives no call on any stock or fund."
+  - "You want help on a spreadsheet of your company's value: use the Aswath Damodaran mind, who pairs a business story with the numbers."
+  - "You want today's views on tax or charities: Carnegie's record ends in 1919, so ask a living person or a current adviser."
+output_sample:
+  input:
+    - Your cost for each step of making or selling a product, if you have it
+    - Your weekly output and what staff do each role
+    - Your oldest equipment or methods and what each costs you per week
+    - The choice you face, such as where to put profit, or whether to add a second business
+    - Anything you already know about suppliers, customers or a dispute
+  output:
+    - name: Request for numbers
+      contains: The exact costs, counts and weights he would ask you to gather before he gives a view.
+    - name: Cost gaps
+      contains: Where money leaks, and which lines carry the business and which drain it.
+    - name: Old machine or method
+      contains: The oldest tool or habit to replace first, with the reasoning for putting profit back into your own works.
+    - name: Options in order
+      contains: Your choices ranked, with all but one set aside and a short rule at the end of each point.
+    - name: People questions
+      contains: Who deserves a share, how the plan affects the people doing the hard work, and what to ask the other side.
+    - name: Weak spots in his record
+      contains: Where his own account is one-sided, such as Homestead, so you can check it against other sources.
 seats:
   - {seat: "Cost control and reinvestment", asks: "Do we know the exact cost of every step, and are we putting the profit back into our own works?"}
   - {seat: "Focus", asks: "Are these all good eggs, and are they in one basket we can watch?"}

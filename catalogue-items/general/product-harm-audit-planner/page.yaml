@@ -1,55 +1,65 @@
 new_slug: product-harm-audit-planner
 name: "Product harm audit planner"
-summary: "Paste your products and what they are made of. Get the biggest harm ranked, a swap plan and its cost."
+summary: "Find the biggest harm your products do to people and places. Get it ranked, a small swap test and what the switch will cost."
 job: plan-strategy
 thinking: high
 thinking_why: "It weighs harms across materials and supply chains with thin evidence and must state its limits."
 
 headline: "Product harm audit planner"
-subhead: Paste your products, what they are made of and what each earns. It lists the harm each one does to people and places, ranks the biggest, plans a small test of a swap, prices the switch in money and sales and sets a date to audit again.
+subhead: "Paste your products, what they are made of and what each one earns. It lists the harm each product does to people and places, ranks the biggest and plans a small test of a swap. You get the cost of switching in money and sales, and a date to audit again."
 
 explain: |
-  Most product reviews check what a product does for the buyer. Few check what it does to the people who make it or the place it comes from. When they do, they usually fix the easy thing and leave the biggest harm, because the biggest harm sits in the best seller.
+  A product harm audit checks what each thing you sell does to the people who make it and the places it comes from. Most reviews fix the easy harm and leave the big one. The big one often sits in your best seller, so it stays.
 
-  This skill lists each product with its share of income and audits what it takes from or does to people and places, with the evidence for each. It picks the single biggest harm, even if it is your top seller, then plans a test of a replacement in a small run. It states the cost of switching in money and sales before you commit, then plans the full switch, how to tell customers why and when to audit again.
+  This skill ranks harm by size, not by how easy it is to fix. Each harm gets a line of evidence and a confidence level. If you gave it nothing on a point, it writes "unknown", not "none". It then picks the single biggest harm, even if it is your top seller, and plans a small run of a replacement.
+
+  It also prices the switch before you commit, in money and in sales, and sets a date to check again. It does not call a product safe or green, and it is not a certification or a legal check.
 
 when:
-  - You want to cut the harm your products do but do not know where to start.
-  - A supplier, material or process is under pressure from customers or rules.
-  - You need a plan to change a best seller without losing the business.
+  - You sell physical products and want to cut the harm they do, but you don't know where to start.
+  - A customer, a rule or a supplier is putting pressure on a material or a process.
+  - Your best seller causes the biggest harm and you need a way to change it without losing the business.
+  - Customers ask how your products are made and you can't answer with evidence.
+
+not_for:
+  - "You need a legal, safety or health sign-off, or a certificate: hire a qualified auditor. This skill does not certify anything."
+  - "You already know the harm and only want to test a swap: use the Small test and rollout planner."
+  - "You want to cut cost, not harm: use the Raw cost breakdown finder or the Price-first cost planner."
 
 you_give:
-  - "Your products with the share of income each earns"
-  - "What each is made of, where and how, as far as you know"
-  - "Your brand values and promises (optional)"
-  - "Any known replacement material or process (optional)"
+  - "Your products, each with the share of income it earns (from your sales report)"
+  - "What each is made of, where and by whom, as far as you know (from supplier lists or data sheets)"
+  - "Supplier audit reports or certificates you hold (optional)"
+  - "A replacement material or process you know of (optional)"
+  - "Your cost per unit and prices, so the switch is priced in numbers (optional)"
 
 you_get:
-  - "An audit of every product's effect on people and places, each harm with its evidence"
-  - "The single biggest harm named and ranked above the rest"
-  - "A small test plan for a swap"
-  - "The cost of switching in money and sales, and a date for the next audit"
+  - "Every product listed with its share of income"
+  - "A harm audit, each harm with its evidence and how sure it is"
+  - "The single biggest harm, with the runners-up"
+  - "A small test plan for a swap, with a pass line and a date"
+  - "The cost of switching in money and sales, a note to customers and a date to audit again"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste your products with income shares and what each is made of."
-  - "Add what you know about where and how they are made."
-  - "Check the harms it lists and add evidence it is missing."
-  - "Run the small test, bring back the result and ask it to price the full switch."
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "Paste your products with their income shares. Add what each is made of and where."
+  - "Add any supplier reports or certificates. A harm with no evidence is marked low confidence."
+  - "Read the ranked harms. Correct anything wrong and add the evidence it missed."
+  - "Run the small test it plans. Bring the result back and ask it to price the full switch."
 
 how_it_works:
   - title: Lists income shares
-    text: Puts every product next to the share of income it brings in.
+    text: Puts every product next to the share of income it brings in, largest first.
   - title: Audits harm
-    text: Writes what each product takes from or does to people and places, with evidence.
+    text: Writes what each product takes from or does to people and places, with evidence and a confidence level.
   - title: Picks the biggest
-    text: Names the single biggest harm, even if it sits in a top seller.
+    text: Names the single biggest harm, even if it sits in a top seller, and shows the runners-up.
   - title: Plans a small test
-    text: Finds or designs a replacement and tests it in a small run first.
+    text: Finds or designs a replacement and tests it in a small run first, with a pass line.
   - title: Prices the switch
-    text: States cost in money and in sales before you commit.
+    text: States cost in money and in sales before you commit, as a range with what it rests on.
   - title: Plans the full switch
-    text: Sets the switch, how to tell customers why and a re-audit date.
+    text: Sets dated steps, a plain note to customers and a re-audit date.
 
 output_shape: |
   PRODUCTS AND INCOME
@@ -79,6 +89,33 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "Your products and the share of income each earns"
+    - "What each is made of, where and by whom"
+    - "Supplier reports or certificates (optional)"
+    - "A replacement you know of (optional)"
+    - "Your costs and prices (optional)"
+  prerequisites:
+    - "Your brand brain from the Website brand brain builder (optional)"
+  output:
+    - name: "Products and income"
+      contains: "Each product with its share of income, what it is made of and where."
+    - name: "Harm audit"
+      contains: "For each product, the harm to people and to places, with the evidence and how sure it is."
+    - name: "The biggest harm"
+      contains: "The one harm ranked first, why it ranks first, the runners-up and what is still unknown."
+    - name: "Small test of a swap"
+      contains: "The replacement, what to test, the size of the run, the pass line and a date."
+    - name: "Cost of switching"
+      contains: "Money and sales at risk as ranges, with what each figure rests on."
+    - name: "Full switch and customer message"
+      contains: "Dated steps if the test passes, and a plain note to customers on what changed and why."
+    - name: "Re-audit"
+      contains: "A date within twelve months, what gets checked again and who owns it."
+    - name: "Missing and Checks missed"
+      contains: "Evidence you did not give, and any check the skill could not pass."
+
 tweaks:
   - what: Evidence for each harm
     how: Add audit reports, supplier visits or certifications. Harms without evidence are marked low confidence.
@@ -86,6 +123,8 @@ tweaks:
     how: Say where materials come from and who makes the product. Harm often sits several steps back.
   - what: Your limits
     how: State what you cannot change this year, such as a contract. The plan works around it.
+  - what: Your promises
+    how: Share what you have told customers or staff. The note to customers stays inside those promises.
   - what: Replacement options
     how: Name any you have heard of. It tests those first.
 
@@ -109,7 +148,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "It organises evidence and drafts the plan in plain text."}
+    - {name: "Claude, ChatGPT or Gemini", why: "It organises evidence and drafts the plan in plain text. No files, web access or paid tools needed."}
     - {name: "A supplier audit or certification report", why: "Gives it real evidence instead of guesses."}
   inputs:
     - "Supplier lists with locations"
@@ -121,3 +160,5 @@ terms:
     meaning: A written check of what a product takes from or does to people and places.
   - term: Small run
     meaning: A test batch large enough to learn from and small enough to afford if it fails.
+  - term: Confidence
+    meaning: How sure the skill is about a harm. It is high only when you gave evidence.

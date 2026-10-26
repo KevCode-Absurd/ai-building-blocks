@@ -1,53 +1,90 @@
 new_slug: trace-why-work-keeps-missing-deadlines
 name: Trace why work keeps missing deadlines
 headline: Trace why work keeps missing deadlines
-summary: Share the source files. Get a delay map, evidence-backed cause hypotheses and a small improvement test.
+summary: Find where repeated work waits and why deadlines slip. Get a delay map, causes backed by your records and one small fix to test.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A delay map, evidence-backed cause hypotheses and a small improvement test. Share repeated workflow records with stage owners, active and queue time, rework, observed timing ranges, original estimates and team capacity. Your AI prepares the work and marks any facts it cannot verify.
+subhead: "Give it your records for repeated work: stages, owners, time worked, time waiting and the dates you promised. Your AI maps where jobs wait, checks your estimates against what really happened, and plans one small change to test."
 explain: |-
-  A delay map, evidence-backed cause hypotheses and a small improvement test.
+  Work that keeps missing its deadline is rarely late because people work slowly. More often it sits in a queue between two stages, or comes back for rework. This workflow looks at records from many similar jobs to find where time is lost, instead of arguing about one late job.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The analysis uses comparable repeated work and separates waiting time from active work; missing stage timing leads to an instrumentation plan. Missing tools or evidence stay visible in the final summary.
+  It runs three skills. The first splits each stage into working time and waiting time and ranks the bottlenecks. The second compares your estimates with how long similar jobs really took, so you know how far off your estimates run. The third plans one change, with a measured starting point and a review date.
+
+  A delay counts as repeated only when it shows in at least 3 jobs. Causes stay guesses unless your records prove them. If your records have no stage times, you get a list of what to record, not a made-up delay map.
 when:
-  - You need a delay map, evidence-backed cause hypotheses and a small improvement test.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Jobs of the same kind finish late again and again, and nobody agrees why.
+  - A customer or manager asks "why does this always take longer than you said?"
+  - You are about to hire or buy a tool, and want to know where the time goes first.
+  - You want a delivery date you can promise, based on how past jobs really ran.
+not_for:
+  - "One job ran late once: review that job alone with the Failure postmortem writer."
+  - "A problem keeps coming back but it is not about time: use the Root cause finder."
+  - "You have a feeling but no records of start and finish times: record them for a few weeks first. This workflow then gives you a list of what to write down, not a delay map."
 you_give:
-  - Repeated workflow records with stage owners, active and queue time, rework, observed timing ranges, original estimates and team capacity.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: The bundled Python process tools."
+  - Records of past jobs of the same kind, with each stage, its owner and its start and finish dates (from your task tool or a spreadsheet)
+  - For each stage, time spent working and time spent waiting, if you have it
+  - The estimate or promised date for each job, and the real finish date
+  - People or hours available at each stage (optional)
+  - Limits on what you may change, such as no new hires (optional)
 you_get:
-  - A delay map, evidence-backed cause hypotheses and a small improvement test.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A delay map: each stage with its owner, working time, waiting time and rework"
+  - A ranked list of bottlenecks, each with the records behind it
+  - Likely causes, marked as proven by records or as a guess to test
+  - How far your estimates run off, with the range and the number of jobs used
+  - A plan for one small change, with a starting number, an owner and a review date
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Put your records in one spreadsheet. One row per job and stage works best.
+  - Give the pack to Claude, ChatGPT or Gemini. Attach the records and say what you may change.
+  - Ask your AI to follow SKILL.md, and to stop and ask if a stage has no times.
+  - Read the delay map. Look for the stage with the longest wait, not the longest work.
+  - Pick the one change in the plan and tell its owner. On the review date, run the workflow again with new records.
+  - Some steps can run small scripts to check the sums. A chat AI without code tools does them by hand and says so.
 how_it_works:
   - title: Process bottleneck finder
-    text: Map where the supplied work waited and which dependencies repeatedly delayed completion.
+    text: "Splits each stage into working time and waiting time, counts rework and ranks the bottlenecks. Hands step 2 the ranked list and the finished jobs with their estimate and real finish. Check first: waiting time and working time are shown apart."
   - title: Outside view timeline estimator
-    text: Compare estimates with similar completed work and show the range and sample limits.
+    text: "Compares each finished job's estimate with its real time, then finds the typical overrun and the range. It says how many jobs it used. Hands step 3 the numbers to start from. Check first: every ratio comes from your records."
   - title: Change rollout planner
-    text: Plan adoption of one bounded process change with an owner, measured baseline, review date and success check.
+    text: "Plans one change aimed at the top bottleneck, with an owner, a starting number, a review date and a success check. Check first: the change targets a stage that showed up in at least 3 jobs."
 output_shape: |-
-  Scope and source coverage
-  A delay map, evidence-backed cause hypotheses and a small improvement test.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  DELAY MAP       <stage | owner | working time | waiting time | rework | rank>
+  CAUSES          <stage | PROVEN BY RECORDS or HYPOTHESIS | rows behind it | what else could explain it | how to test>
+  ESTIMATE CHECK  <jobs used | median actual / estimate | range | sample note>
+  SMALL TEST      <change | owner | starting number | start | review date | success check>
+  RECORDING PLAN  <only for stages with no times: what to write down>
+  FILES SAVED     <each file and the step that made it>
+  MISSING         <each gap, and what it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Records of past jobs, with stages, owners and dates
+    - Time worked and time waiting per stage
+    - The estimate and real finish for each job
+    - Limits on what you may change (optional)
+  prerequisites:
+    - At least a few finished jobs of the same kind
+    - An AI that can run code, for the sum checks (optional)
+  output:
+    - name: Delay map
+      contains: Each stage with its owner, working time, waiting time and rework.
+    - name: Bottleneck list
+      contains: Stages ranked by lost time, with the records behind each one.
+    - name: Cause hypotheses
+      contains: Each likely cause marked as proven or a guess, with how to test it.
+    - name: Estimate check
+      contains: How far estimates ran off, the range, and how many jobs it rests on.
+    - name: Small test
+      contains: One change with an owner, a starting number, a review date and a success check.
+    - name: Recording plan
+      contains: "For stages with no times: what to write down so the next run works."
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The analysis uses comparable repeated work and separates waiting time from active work; missing stage timing leads to an instrumentation plan.
+  - what: Job type
+    how: Run it on one kind of job at a time. Mixed jobs hide the stage that really delays you.
+  - what: Time period
+    how: Use the last 10 to 20 finished jobs, not a year of history. Recent work shows what is true now.
+  - what: Goal
+    how: Say whether you want a better promise date or a faster process. The plan then picks the matching change.
 judge:
   - The analysis uses comparable repeated work and separates waiting time from active work; missing stage timing leads to an instrumentation plan.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,16 +97,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Record start, wait and finish times for every job from now on, so the next run uses facts, not memory.
+  - Run the workflow again on the review date and compare the new waiting time with the starting number.
+  - Keep one list of changes you tried and what happened, so you do not repeat a test that failed.
 works_best_with:
   tools:
-    - name: The bundled Python process tools
-      why: Meaningful bottleneck estimates need measured stage owners, active/wait times and repeated-work evidence.
+    - name: An AI that can run code
+      why: Meaningful delay numbers need arithmetic on many rows. A code-capable AI checks the sums. A plain chat AI does them by hand and flags that.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Timestamps from your task tool, not a summary from memory.
+    - A named person who decides which change to try.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Bottleneck
+    meaning: The stage that limits how fast the whole process can finish work.
+  - term: Waiting time
+    meaning: Time a job sits in a queue, with nobody working on it.
+  - term: Rework
+    meaning: Work sent back to an earlier stage to be done again.
+  - term: Outside view
+    meaning: Judging a plan by how similar past jobs went, not by how this one looks.
+next:
+  - weekly-status-update-writer

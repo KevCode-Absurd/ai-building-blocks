@@ -2,34 +2,62 @@ thinking: medium
 thinking_why: It breaks work down and tracks it over time.
 new_slug: software-project-manager
 name: Software project manager
-summary: Describe your project. Get work split into tasks, sprints tracked and
-  status reports written.
+summary: Plan a software project with this project manager skill. Give it goals and team size. You get tasks, a sprint plan and a status report.
 job: organise-work
 headline: Software project manager
-subhead: A software project broken into clear tasks, with sprints tracked and
-  status reports written for you. You describe the project, team and deadlines,
-  and the skill acts as a project manager.
+subhead: Tell your AI about your software project, your team and your deadlines. It splits the work into small tasks, plans your sprints and writes status reports. It can also push the plan into your tracker if you give it access.
 explain: |
   A software project broken into clear tasks, with sprints tracked and status reports written for you. You describe the project, team and deadlines, and the skill acts as a project manager.
 
   It gathers the team, capacity and method you use, like Scrum or Kanban. Then it splits each goal into epics, user stories and sub-tasks small enough to finish in a day or two, each with acceptance criteria. It estimates effort, plans sprints around what the team can handle, and writes progress reports that flag risks and slipping dates. It can connect to Jira, Linear, GitHub Issues or Trello if you give it access. Without access, it produces lists you can paste in.
 when:
   - You have a big goal and no task list.
-  - You need a status report for your manager every Friday.
+  - Your manager wants a status report every Friday.
   - Your sprint is overloaded and you need to cut scope.
   - You want tasks written so any developer can pick them up.
+not_for:
+  - "You work alone or the project is not software: use a simple checklist in a notes app or spreadsheet."
+  - "You only need one feature split into stories: ask your AI for that one feature, no sprint setup needed."
+  - "You want a person to judge team morale or settle disputes: talk to your team lead, as this skill only plans and reports."
 you_give:
-  - The project goals and deadlines
-  - Your team and their capacity
-  - "Your method: Scrum, Kanban or mixed"
-  - Tracker access, such as Jira (optional)
+  - Your project goals and deadlines
+  - Your team, their roles and how much work each person can take
+  - "Your method: Scrum, Kanban or a mix"
+  - Your existing backlog (optional)
+  - Access to your tracker, such as Jira, Linear, GitHub Issues or Trello (optional)
+  - Slack or Teams access for daily digests (optional)
 you_get:
-  - Epics, stories and tasks with acceptance criteria
-  - Effort estimates
-  - A sprint plan
-  - Status reports with risks
+  - Epics, stories and small tasks with acceptance criteria
+  - Effort estimates in story points
+  - A sprint plan sized to your team's capacity
+  - A risk list with owners and fixes
+  - A status report with burndown data and next actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe your project, your team, your deadlines and your method. Add your backlog if you have one.
+  - "Ask for what you need: a task breakdown, a sprint plan or a status report."
+  - Check the estimates and dependencies. Fix anything that does not match how your team works.
+  - Copy the lists into your tracker by hand. This works with no setup.
+  - To sync with Jira, Linear, GitHub Issues or Trello, you need an account and an access key, and some plans may cost money. Slack or Teams posting is optional.
+output_sample:
+  input:
+    - Your project goals and deadlines
+    - Your team, their roles and how much work each can take
+    - "Your method: Scrum, Kanban or a mix"
+    - Your tracker, such as Jira, Linear, GitHub Issues or Trello (optional)
+    - Your existing backlog (optional)
+  prerequisites:
+    - A tracker account and access key, only if you want the plan pushed into Jira, Linear, GitHub Issues or Trello
+    - An AI that can connect to your tracker, only if you want live sync
+    - Slack or Teams access, only if you want daily digests posted (optional)
+  output:
+    - name: Task breakdown
+      contains: Epics, user stories and small sub-tasks, each story with acceptance criteria, effort points and dependencies.
+    - name: Sprint plan
+      contains: Sprint goal, dates, chosen stories, assignees and total points against team capacity, or a Kanban board with work limits.
+    - name: Progress and blocker check
+      contains: Burndown data, tasks running past their estimate and blocked work that stalls other tasks.
+    - name: Risk register
+      contains: Each risk with likelihood, impact, owner and a plan to reduce it.
+    - name: Status report
+      contains: Sprint goal result, finished and carried-over stories, velocity trend, top risks and next actions.

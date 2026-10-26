@@ -40,15 +40,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Hiring packet builder.** Use the skill `hiring-packet-builder`. Makes the job post, the scoring guide and the offer template that every later step uses.
-2. **Applicant shortlist builder.** Use the skill `applicant-shortlist-builder`. Give it the document from the steps before. Scores applicants only on the needs written in the job post from the step before.
+2. **Applicant shortlist builder.** Use the skill `applicant-shortlist-builder`. Give it the job post from step 1. Scores applicants only on the needs written in that job post. Hands on a ranked shortlist for you to interview.
 
 Pause here: Interview the people on the shortlist using the questions and scoring guide from the packet. Write your notes straight after each interview.
 
-3. **Fair candidate comparer.** Use the skill `fair-candidate-comparer`. Compares candidates using the interview notes you took against the scoring guide. You make the hiring call.
+3. **Fair candidate comparer.** Use the skill `fair-candidate-comparer`. Uses your own interview notes (taken with step 1's questions on the people shortlisted in step 2), not a file from step 2. Scores them against the scoring guide and hands on a comparison. You make the hiring call.
 
 Pause here: Pick your finalist. Fill the offer template from the packet with the role, pay and start date.
 
-4. **Offer letter and non-compete checker.** Use the skill `offer-letter-check`. Give it the document from the steps before. Checks the filled-in offer letter, built from the template in step one, before you send it. Not legal advice.
+4. **Offer letter and non-compete checker.** Use the skill `offer-letter-check`. Give it the offer letter you filled in from step 1's template, not step 3's comparison. Hands back risky terms to review before you send it. Not legal advice.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

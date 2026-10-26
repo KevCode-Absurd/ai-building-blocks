@@ -1,6 +1,6 @@
 new_slug: story-email-writer
 name: "Story email writer"
-summary: "Give it your list and one true story. Get three personal email drafts."
+summary: "Write a story email for your store's list. Give it one true story and get three personal drafts with subject lines and a pick to send first."
 job: write-emails
 thinking: medium
 thinking_why: "It writes short personal copy in set structures from your true story. A mid-size model does this well, and you edit for voice."
@@ -17,6 +17,10 @@ when:
   - Your emails are all sales, and you want a few that build trust between them.
   - You want a founder email for your welcome or post-purchase flow.
   - Your list is warm, and you want to answer the doubts that stop a second purchase.
+not_for:
+  - "Your list is cold or new and has not met you yet: set up a welcome flow first, then come back to this."
+  - "You want a sale or promo email with a discount and picture: write it in your email tool, such as Klaviyo, with your usual promo layout."
+  - "You have no true story or customer result at all: gather one from a founder moment or a customer message first, or ask a customer for their result."
 
 you_give:
   - Your product and its main benefit
@@ -37,6 +41,28 @@ how_to_use:
   - Paste a true story or customer result. If you have none, say so.
   - Read the three drafts aloud and edit them in your own voice.
   - Send the first pick and compare it with a normal promo email on clicks and revenue per send.
+output_sample:
+  input:
+    - Your product and its main benefit
+    - "Who is on the list: bought before, took a discount, or reads your newsletter"
+    - "The one action you want: shop, read or reply"
+    - A common belief you can challenge honestly (optional)
+    - One true story or customer result (optional)
+  output:
+    - name: Who is on the list
+      contains: The list type and the buyer doubts the emails will answer, such as risk, price or whether it works.
+    - name: "Draft 1: Challenge, justify, need"
+      contains: A subject line, preview text and a 200 to 300 word email that challenges a belief, with one call to action and a P.S.
+    - name: "Draft 2: Problem, promise, agitate, solution"
+      contains: A subject line, preview text and an email that names a problem and shows what waiting costs, with one call to action and a P.S.
+    - name: "Draft 3: Hook, story, offer"
+      contains: A subject line, preview text and an email built on your true story, ending with a one sentence lesson and an offer.
+    - name: Send first
+      contains: Which draft to send first and why, plus how to test it against a normal promo.
+    - name: Claims check
+      contains: Each claim, result and guarantee matched to your facts, marked pass or fail.
+    - name: Missing
+      contains: Anything you did not give, such as a true story, list type, action or proof for the belief.
 
 how_it_works:
   - title: Starts with the list

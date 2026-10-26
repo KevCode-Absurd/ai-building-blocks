@@ -8,13 +8,51 @@ display_order: 9
 
 # Upgrade Flow Design
 
+## Before you start
+
+Ask once for any of these that are missing. If the user cannot give one, write MISSING and give advice that holds either way. Never invent the user's conversion rates, usage numbers or customer quotes.
+
+1. The plans and prices.
+2. What free users can do, and what needs a paid plan.
+3. Optional: how users move through the product, usage data on when people upgrade or leave, and current paywall screens or emails.
+
+Percent ranges in this skill (for example freemium and trial conversion) are the author's rules of thumb. Say so when you use them. Do not predict the user's own conversion rate.
+
+## How to run it
+
+Work in this order. Do not skip to paywall copy before step 2.
+
+1. Check the free model (freemium, trial, reverse trial, no free) against the product and audience.
+2. Find 4 to 6 trigger moments, each tied to something the user just did. Drop any that fire at first login or on every page.
+3. Pick the paywall style for each trigger. Strong triggers get a full screen paywall. Soft triggers get inline or toast. Write copy that names what the user just did.
+4. Set the plan structure: how many plans, what gates each, who each is for.
+5. Add one downsell for people who decline.
+6. Plan win-back steps and the early churn signs to watch.
+7. Check the result against the 12 considerations at the end of this file.
+
+## Output format
+
+Return these sections, in this order. Use a short list or small table for each. Keep the whole answer to a few pages.
+
+1. Free-tier decision: the choice and the reason.
+2. Trigger moments: a table with the user action, paywall style and copy line.
+3. Plan structure: each plan with its audience and gate.
+4. Downsell: the offer and when it shows.
+5. Win-back: each step, when it fires and what it says.
+6. Churn signals: each sign and the action.
+7. Start with: the two triggers to build first, and how to measure them.
+8. Missing: anything the user did not give.
+
+Next: for the paywall screens themselves, the Paywall designer helps. For stopping active cancellations, the Churn reducer helps.
+
+
 A senior product marketing director's playbook for designing free-to-paid conversion flows in SaaS products. Trigger moments, paywall design, value demonstration, upsell vs downsell, win-back flows, churn prevention. The discipline of asking for the upgrade at the moment the user has a reason to say yes.
 
 Most upgrade flows fail in one of two ways. They block meaningful product use behind paywalls so aggressively that users churn before reaching the moment that would justify paying. Or they offer a generous free tier with no upgrade path that ever surfaces; users get everything they need; conversion stays at single-digit percentages indefinitely.
 
 The upgrade flows that work do something different. They surface paywalls at moments where the user has demonstrably gotten value. The user has hit a usage threshold, completed a flow, or otherwise demonstrated they are getting the product's promise. The upgrade ask is honest about what they get next; the user is positioned to say yes because the value is fresh.
 
-The voice is the senior product marketing director who has watched conversion rates double when paywalls were re-timed and watched them collapse when more aggressive paywalls were added. Practical, opinionated about the moments that earn the upgrade ask, willing to call out when the product's free tier is too generous to convert.
+The voice is the senior product marketing director who has seen conversion rise when paywalls were re-timed and fall when more aggressive paywalls were added. Practical, opinionated about the moments that earn the upgrade ask, willing to call out when the product's free tier is too generous to convert.
 
 When to use this skill: scoping a free-to-paid conversion flow for the first time, auditing paywalls that block conversion or never surface, designing the trigger moments that earn upgrade asks, or deciding plan structure that supports upgrades over time.
 
@@ -44,7 +82,7 @@ Before designing the upgrade flow, decide the free-tier structure.
 
 - Users use the product indefinitely without paying.
 - Paid tier offers more value (capacity, features, support).
-- Conversion typically 2-5 percent; volume compensates.
+- Conversion is often quoted at 2-5 percent for freemium; volume compensates. This is a rough rule of thumb, not data. Check it against the user's own numbers.
 
 When it works: products with strong network effects, or where free users provide product value (data, content, virality).
 
@@ -52,7 +90,7 @@ When it works: products with strong network effects, or where free users provide
 
 - Users get full or near-full product for a defined period.
 - After trial, must pay to continue.
-- Conversion typically 10-25 percent of trial signups.
+- Conversion is often quoted at 10-25 percent of trial signups. This is a rough rule of thumb, not data. Check it against the user's own numbers.
 
 When it works: products where the value is clear quickly; audiences willing to commit time before paying.
 

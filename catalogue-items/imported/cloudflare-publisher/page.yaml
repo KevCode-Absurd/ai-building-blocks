@@ -2,33 +2,98 @@ thinking: low
 thinking_why: It follows a set deploy path.
 new_slug: cloudflare-publisher
 name: Cloudflare publisher
-summary: Point it at your project. Get it live on Cloudflare, with the link to open.
+summary: Put your site or app live on Cloudflare Pages or Workers and get the public link, after you confirm the account and address.
 job: ship-and-host
 headline: Cloudflare publisher
-subhead: Point it at your project. Get it live on Cloudflare, with the link to
-  open. Bring your project folder. Use the result to plan your next step.
+subhead: Give it your project folder and say what it does. It checks your Cloudflare sign-in, picks the right product, such as Pages or Workers, and deploys it once you say yes. You get the live link, the command it ran and any errors left to fix.
 explain: |
-  Your project goes live on Cloudflare, and you get the link to open. No guessing which product to use or which command to run.
+  Deploying to Cloudflare means choosing between Pages, Workers and a dozen add-ons, then running the right command with the right login. This skill is a Cloudflare deploy guide your AI can follow. It does the choosing and the command for you.
 
-  First it checks you are signed in with Wrangler, Cloudflare's command-line tool. Then it works through short decision trees: do you need to run code, store data, or serve a site? It picks between Workers, Pages, KV, D1, R2, queues and the rest, and loads the matching notes. Then it runs the deploy and waits, since a publish can take a few minutes. You need a Cloudflare account and a login or API token.
+  It first checks you are signed in with Wrangler, Cloudflare's command line tool. Then it asks what the project needs: run code, store data or serve a site. It picks the matching product and reads the notes for it. Before it publishes anything, it tells you the account and the public address, and waits for your yes.
+
+  A deploy can take a few minutes. When it finishes you get the live link. Some products, such as R2, Queues and Containers, may need a paid plan, so it checks the pricing page and tells you first.
 when:
   - You have a finished site and want it public today.
   - You are not sure whether to use Workers or Pages.
   - You need to add storage or a database to a Cloudflare project.
   - A deploy keeps failing and you suspect a sign-in problem.
+not_for:
+  - Your site already runs on a host that works for you. Moving it adds risk with no gain.
+  - You want a different host. Use the Netlify publisher, Vercel publisher or Render publisher.
+  - You need to check that the live site is the new version. Use the Deploy verifier after you publish.
+  - You have no Cloudflare account and do not want to make one. Make the account first, since the skill cannot do it for you.
 you_give:
   - Your project folder
-  - A Cloudflare account and login
-  - What the project does (optional)
+  - A Cloudflare account, with a login set up on your own machine
+  - What the project does, such as a static site or an app with a database (optional)
 you_get:
-  - The right Cloudflare product for the job
+  - The Cloudflare product that fits the job, with the reason
   - A live deployment
-  - The link to open it
-  - Fixes if the deploy fails
+  - The public link to open
+  - The exact deploy command it ran
+  - Any errors left, each with a fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and reach your Cloudflare
-    account.
+  - Use an AI that can run commands, such as Claude Code. In a plain chat, run each command yourself and paste the result back.
+  - Make a free Cloudflare account. On your own machine, run wrangler login. Do not paste a password or token into the chat.
+  - Paste the skill and point it at your project folder. Say what the project does.
+  - Check the product it picks, the account name and the public address. Say yes only when all three are right.
+  - If the deploy is blocked by your AI tool's network limits, it will ask you first. Allow it only if you trust the command.
+  - Open the link. Check the pages that matter, then set up a custom domain if you want one.
+how_it_works:
+  - title: Check the sign-in
+    text: It runs wrangler whoami to see which account is signed in, and sends you to the login steps if none is.
+  - title: Pick the product
+    text: It asks if you need to run code, store data or serve a site, and picks Pages, Workers or a storage product.
+  - title: Read the product notes
+    text: It opens the notes for that product so the setup matches Cloudflare's own guidance.
+  - title: Confirm before publishing
+    text: It tells you the account, project name and public address, and waits for your yes. It also names any paid plan the product may need.
+  - title: Deploy and wait
+    text: It runs the deploy command and allows several minutes for it to finish.
+  - title: Report the result
+    text: It gives you the live link, the command it ran and any errors left, with fixes.
+output_shape: |
+  Live URL: <address the deploy printed>
+  Product used: <Pages, Workers or other> | <why it fit>
+  Command run: <exact deploy command> | <account it ran against>
+  Errors left: <warning or failure> | <next fix> (or "none")
+  Next step: <open the link, check the pages, add a custom domain>
+output_sample:
+  input:
+    - Your project folder
+    - A Cloudflare account, signed in on your own machine
+    - What the project does (optional)
+  prerequisites:
+    - An AI that can run commands, such as Claude Code
+    - Node.js, so the Wrangler tool can run
+    - A Cloudflare account. Some products may need a paid plan.
+  output:
+    - name: Live URL
+      contains: The public address of your deployed project, as printed by the deploy.
+    - name: Product used
+      contains: Pages, Workers or another Cloudflare product, with the reason it fits.
+    - name: Command run
+      contains: The exact deploy command and the account it ran against.
+    - name: Errors left
+      contains: Any warning or failure still open, with the next fix, or "none".
+    - name: Next step
+      contains: What to check on the live site and how to add a custom domain.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the Wrangler commands on your machine and show each one before it runs.
+    - name: Any good chat AI
+      why: Works if you run each command yourself and paste back what it printed.
+  inputs:
+    - The build command and output folder of your project
+    - The domain name you want to use, if you have one
+    - A list of any keys or settings the project needs, by name only
+terms:
+  - term: Wrangler
+    meaning: Cloudflare's command line tool for signing in and deploying.
+  - term: Pages
+    meaning: Cloudflare's product for hosting sites that are built from a folder or a Git repo.
+  - term: Workers
+    meaning: Cloudflare's product for running your code on its network, close to your visitors.
+  - term: Deploy
+    meaning: To put your project on the internet so other people can open it.

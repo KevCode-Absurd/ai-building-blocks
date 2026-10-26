@@ -1,0 +1,165 @@
+name: Sales Engineer agent
+summary: Plan the technical side of a B2B sale with discovery questions, a demo story, a proof-of-concept scope with pass marks and answers to technical doubts.
+headline: Sales Engineer agent
+subhead: Paste your discovery notes on a deal, what your product does and any rivals. It plans the technical questions to ask, builds a demo that starts with the buyer's problem, scopes a proof of concept with pass marks agreed in advance, and decodes the technical doubts you will hear.
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A technical buyer says "does it support SSO?" and the seller answers yes. The
+  buyer really meant "will this pass our security review?" Deals are lost in
+  gaps like that. This sales engineer agent helps with the technical side of a
+  B2B sale, from the first discovery call to the technical decision. It plans
+  the demo, the proof of concept and the answers to the doubts the buyer's
+  team will raise.
+
+
+  It builds a demo as a short story. It restates the buyer's problem with their
+  numbers, shows the result first, then shows how it works, and ends with proof
+  from a similar customer. A proof of concept is a pass or fail test, not a free
+  trial. The pass marks are written down before any set-up, the scope stays
+  narrow and the timeline is short. For rivals it uses Fact, Impact, Act: a true
+  fact, why it matters to this buyer, and what you do about it.
+
+  This is a role profile from Agency Agents, shared under MIT. It works only from
+  what you paste. It cannot run your product, open the buyer's systems or check
+  a rival. Its success rates, such as 70% technical wins and 80% of proofs
+  turning into deals, are the author's targets, not results from AI Blocks.
+when:
+  - You have finished a discovery call and need to turn it into a demo that fits the buyer.
+  - A buyer asks for a proof of concept and you want to keep it small, with clear pass marks.
+  - A technical evaluator asks a hard question and you want to know what they are really asking.
+  - A rival is in the evaluation and you need an honest, fact-based plan for each technical point.
+not_for:
+  - You are negotiating price, discounts or contract terms. Use the Deal desk reviewer.
+  - You are answering a formal questionnaire or tender. Use the RFP response builder.
+  - You want a deal scored for risk. Use the Deal Strategist agent.
+  - You need a short demo script for a simple product with no technical evaluation. Use the Counter demo script writer.
+  - You want it to run the demo or the test. It cannot access your product or the buyer's systems.
+you_give:
+  - Your discovery notes on the buyer's problem, their systems and their technical team
+  - What your product does and the limits you know of
+  - The buyer's security, integration and scale needs, as far as you know them
+  - The rivals in the evaluation and what the buyer has said about them (optional)
+  - Any demo or test date and the people who will attend (optional)
+  - A customer story you can use as proof, with the figures you may share (optional)
+you_get:
+  - Technical discovery questions for what you still do not know
+  - A demo plan that opens with the buyer's problem and shows the result first
+  - A proof of concept plan with a problem statement, pass marks, scope in and out, a short timeline and a decision gate
+  - A Fact, Impact, Act note for each rival, plus where you win, fight or lose
+  - A table that decodes technical doubts into what the buyer means and how to respond
+  - A list of facts to confirm and an honest list of what your product cannot do yet
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your discovery notes, what your product does and any known limits. Say which job you want first, such as a demo plan or a proof of concept plan.
+  - Answer any question once. Anything you skip is marked MISSING. It will not invent a feature, a customer or a figure.
+  - Read the demo plan and compare it with what your product can really show. Cut anything you cannot show live.
+  - Agree the proof of concept pass marks with the buyer in writing before any set-up starts.
+  - Paste what happened after each demo or test and ask for the next step and the next set of questions.
+how_it_works:
+  - title: Fill the technical picture
+    text: It lists what you know about the buyer's stack, links to other tools, security needs and scale, and what is missing.
+  - title: Plan the questions
+    text: It writes discovery questions for the gaps, including honest ones that bring out needs where you are strong.
+  - title: Build the demo story
+    text: It restates the problem, shows the end result, explains how it works and ends with proof from a similar customer.
+  - title: Scope the proof of concept
+    text: It writes one problem statement, pass marks, what is out of scope, a short timeline and a go or no-go gate.
+  - title: Position against rivals
+    text: It gives a Fact, Impact, Act note per rival and sorts each criterion into win, fight or lose.
+  - title: Decode the doubts
+    text: It turns each technical question into what the buyer probably means and how to answer the real worry.
+  - title: List what is unproven
+    text: It names the facts and limits to confirm before you use any of it.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <account> | buyer's problem <line> | technical team <roles> | ASSUMED: <list> | MISSING: <list>
+
+  TECHNICAL DISCOVERY
+    <area: stack, links to other tools, security, scale> | known <facts> | questions to ask <list> | why it matters
+
+  DEMO PLAN
+    audience <technical, business or both> | problem restated <with buyer's numbers> | outcome to show first <result> | how it works <steps> | proof <customer story or MISSING> | aha moment target | backup deep-dive path
+
+  PROOF OF CONCEPT PLAN
+    problem statement <one sentence> | pass marks <criterion, target, how measured> | in scope <list> | out of scope <list> | timeline <days with a midpoint check> | decision gate <go or no-go>
+
+  COMPETITIVE NOTES
+    <rival> | Fact <true statement> | Impact <why it matters to this buyer> | Act <what to say or do> | zone <win, fight or lose> | landmine question <honest question>
+
+  DOUBT DECODER
+    <what they say> | <what they probably mean> | <how to respond>
+
+  KNOWN LIMITS
+    <what the product does not do natively> | what customers do instead | on the roadmap <only if the user said so>
+
+  STILL TO CHECK
+    <item> | who confirms it
+output_sample:
+  input:
+    - Your discovery notes on the buyer's problem, systems and technical team
+    - What your product does, and its known limits
+    - The rivals in the evaluation (optional)
+    - A customer story and figures you may share (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Access to your product, so you can check that every demo step works
+  output:
+    - name: Technical discovery
+      contains: Questions for the gaps in what you know about the buyer's stack, security and scale.
+    - name: Demo plan
+      contains: A story that opens with the buyer's problem, shows the result first and ends with proof.
+    - name: Proof of concept plan
+      contains: One problem statement, pass marks, scope in and out, a short timeline and a decision gate.
+    - name: Competitive notes
+      contains: Fact, Impact, Act for each rival, with where you win, fight or lose and honest questions.
+    - name: Doubt decoder
+      contains: Each technical question matched to what the buyer probably means and how to answer it.
+    - name: Known limits
+      contains: What your product does not do natively, and what customers do instead.
+    - name: Still to check
+      contains: Facts and claims to confirm before you use them with the buyer.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They turn raw discovery notes into a demo story and a proof plan. You paste your notes in and check each step against your product.
+    - name: Your own demo or test environment
+      why: The AI cannot run your product. Rehearse every step there before the buyer sees it.
+  inputs:
+    - The buyer's security questionnaire or architecture notes.
+    - Names, roles and priorities of each technical person on their side.
+    - Notes from your last call, with the exact words the buyer used.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: First job
+    how: Ask for one thing first, such as the demo plan or the proof of concept plan. Add the rest when you have confirmed it.
+  - what: Audience
+    how: Say who is in the room. A technical evaluator needs depth on design and APIs. A business sponsor needs results and timing.
+  - what: Length
+    how: Give the real demo time. A tight 30 minutes on three points beats an hour on twelve.
+improve:
+  - After each demo, paste what the buyer said and did, and ask what to change for the next one.
+  - Keep a list of doubts you hear often and the answers that worked, and paste it in each time.
+terms:
+  - term: Proof of concept (POC)
+    meaning: A short test, with set pass marks, to show the product works in the buyer's setting.
+  - term: Technical discovery
+    meaning: Questions about the buyer's systems, links to other tools, security and scale.
+  - term: Fact, Impact, Act
+    meaning: A way to write a rival note. State a true fact, say why it matters to the buyer, then say what to do.
+  - term: Landmine question
+    meaning: An honest question that brings up a need where you are strong and a rival is weak.
+  - term: SSO
+    meaning: Single sign-on, which lets people use one login for many systems.
+  - term: Decision gate
+    meaning: The point where the buyer says go or no-go, based on the pass marks.

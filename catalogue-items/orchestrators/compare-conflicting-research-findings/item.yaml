@@ -1,6 +1,6 @@
 slug: compare-conflicting-research-findings
 name: Compare conflicting research findings
-summary: Share the source files. Get a paper comparison, disagreement map and evidence gaps.
+summary: Compare research papers that disagree, in one pass. Get a claims table, a disagreement map and the evidence gaps, with a table or section for each claim.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,23 +8,25 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
-    required: false
+    required: true
+  - type: question
+    required: true
   - type: copy_draft
     required: false
-outputs:
   - type: document
+    required: false
+outputs:
   - type: audit_report
+  - type: document
 uses:
   - research-literature-comparison
   - unsupported-claim-spotter
 steps:
   - uses: research-literature-comparison
-    note: Read the full supplied papers and build the claims, comparability and contested-findings map with section or table locations.
+    note: "Read the full supplied papers and build the claims, comparability and contested-findings map with section or table locations. Hands the written comparison to step 2."
   - uses: unsupported-claim-spotter
-    note: Review the written synthesis against the supplied papers. Mark overgeneralization and causal language beyond the actual design; this pass is not an independent truth verdict.
+    note: "Review the written comparison from step 1 against the supplied papers. Mark overgeneralization and causal language beyond the actual design; this pass is not an independent truth verdict."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

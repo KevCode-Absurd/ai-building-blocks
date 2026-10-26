@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a set deploy path.
 new_slug: vercel-publisher
 name: Vercel publisher
-summary: Say "deploy my app". Get it live on Vercel as a preview or production
-  site, with the link.
+summary: Deploy your app to Vercel and get a live preview link back. Production only when you ask. Works with the Vercel CLI or without a login.
 job: ship-and-host
 headline: Vercel publisher
-subhead: Say deploy my app and get a live address back. It uses the Vercel
-  command line tool if you have it, and a no-login fallback if you do not.
+subhead: Say deploy my app and get a live address back. It uses the Vercel command line tool if you have it, and a no-login fallback if you do not.
 explain: |
   Say deploy my app and get a live address back. It uses the Vercel command line tool if you have it, and a no-login fallback if you do not.
 
@@ -17,19 +15,40 @@ when:
   - You do not have a Vercel account yet and want to try it.
   - Your build is slow and a default time limit keeps cutting it off.
   - You need to ship to production after checking the preview.
+not_for:
+  - Your project holds secrets, .env files or private data. Remove them first, or use the Vercel CLI with your own account.
+  - You need a site that stays private. The no-login preview link is public, so use your own Vercel account with access settings.
+  - You want the AI to test the live site after it deploys. This skill only returns the link, so check the site yourself.
 you_give:
-  - The project folder or an archive of it
-  - The Vercel CLI (optional)
-  - A yes for production (optional)
-  - Permission for network access if blocked
+  - Your project folder, or a zipped copy of it
+  - A clear yes for production (optional)
+  - Permission for network access, if your AI is blocked (optional)
 you_get:
   - A preview link
   - A claim link when deploying without login
   - A production deploy on request
   - Troubleshooting for network errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and reach your Vercel account.
+  - Open an AI that can run commands and see your project folder. Paste in this skill.
+  - Remove secrets and .env files from the project first. The no-login deploy uploads the whole folder, and the preview link is public.
+  - Say "deploy my app". Your AI checks for the Vercel CLI and deploys a preview.
+  - If you are not signed in to Vercel, it uses the no-login method. You get a preview link and a claim link.
+  - Open the preview link and check the site. Then say "deploy to production" if you want it live.
+  - If the deploy fails on the network, say yes when your AI asks to rerun it with wider access.
+output_sample:
+  input:
+    - Your project folder or a zipped copy of it
+    - A yes for production (optional)
+    - Permission for network access, if your AI is blocked (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - The Vercel CLI and a Vercel account (optional, a no-login fallback exists)
+  output:
+    - name: Preview link
+      contains: The live address of your deployed project. Every deploy is a preview unless you ask for production.
+    - name: Claim link
+      contains: A link that lets you take ownership of the deploy later. Only given for no-login deploys.
+    - name: Production deploy
+      contains: A live production release, made only when you clearly ask for it.
+    - name: Network fix offer
+      contains: If the deploy is blocked, a request to rerun it with wider network access.

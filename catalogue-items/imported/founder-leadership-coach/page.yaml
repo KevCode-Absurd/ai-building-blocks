@@ -2,35 +2,85 @@ thinking: medium
 thinking_why: It coaches with set frameworks on what you share.
 new_slug: founder-leadership-coach
 name: Founder leadership coach
-summary: Describe how you spend your week. Get a delegation plan, calendar audit
-  and your blind spots named.
+summary: "Find out what only you should do as a founder. Get your type and blind spot, a delegation plan and an audit of your calendar."
 job: lead-people
 headline: Founder leadership coach
-subhead: A clear picture of how you work as a founder, where you are the
-  bottleneck, and what to hand off first. It comes with a delegation plan and a
-  calendar audit.
+subhead: Describe your week, your meetings and your team. Your AI names your founder type and blind spot, shows where you are the bottleneck, and picks your first three handoffs. You also get a calendar audit and an energy check.
 explain: |
-  A clear picture of how you work as a founder, where you are the bottleneck, and what to hand off first. It comes with a delegation plan and a calendar audit.
+  Many founders end up in every meeting and every decision. The company slows down because everything waits for you. This skill is a founder coach you can talk to any time. It helps you see where you are the bottleneck and what to hand off first.
 
-  It starts by placing you as a builder, seller, operator or visionary and naming the blind spot that goes with it. It then looks at why you hold on to tasks and sorts your week by what only you can do. A calendar audit shows where your energy goes. It covers growing from small teams to larger ones, where your style starts to shape culture, and suggests the hire that complements you. It also addresses burnout and self-doubt directly.
+  You describe your week. Your AI places you as a builder, seller, operator or visionary, and names the blind spot that comes with it. It looks at why you hold on to certain tasks. It sorts your week into what only you can do and what someone else can take.
+
+  A calendar audit shows where your time and energy go. It suggests the kind of hire that fills your gap and what to hand over first. It also checks for burnout signs and self-doubt. It is coaching, not therapy or legal advice.
 when:
   - You are in every meeting and nothing moves without you.
-  - You feel overloaded and do not know what to delegate.
-  - You suspect your style is slowing the team as it grows.
+  - You are overloaded and cannot tell what to delegate first.
+  - You think your style is slowing the team as it grows.
   - You are a first-time CEO and want an honest read on your gaps.
+not_for:
+  - "You have no team yet: this coaches delegation and hiring, so use it once you have people to hand work to."
+  - "You are in a mental health crisis or severe burnout: talk to a doctor or therapist first. This is coaching, not care."
+  - "You want a plan for your own one-on-ones with staff: use the one-on-one meeting planner."
+  - "You are a manager, not a founder, and want help giving feedback: use the feedback conversation planner."
 you_give:
   - How you spend a typical week
-  - Calendar or list of recurring meetings
-  - Team size and who reports to you
-  - What you avoid or enjoy most (optional)
+  - Your calendar or list of recurring meetings
+  - Your team size and who reports to you
+  - What you avoid and what you enjoy most (optional)
 you_get:
   - Your founder type and blind spot
-  - Delegation plan with first handoffs
-  - Calendar audit
-  - Complement hire suggestion
-  - Energy and burnout check
+  - A delegation plan with your first three handoffs
+  - A calendar audit with what to cut or hand off
+  - The kind of hire that would complement you
+  - An energy and burnout check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. No code or paid tools are needed.
+  - Paste the last four weeks of your calendar as text or a list of recurring meetings. Say how many people work with you.
+  - Describe a normal week in your own words. Say what you put off and what you enjoy most.
+  - Read your founder type first. Tell your AI where it is wrong, and ask it to redo the plan.
+  - Pick one handoff from the delegation plan and do it this week. Review the plan again in a month.
+how_it_works:
+  - title: Place your founder type
+    text: It asks what you do with a free hour and what you put off, then names your type and blind spot.
+  - title: Find why you hold on
+    text: It checks the common reasons founders keep work, such as control and speed.
+  - title: Sort what to hand off
+    text: It uses a skill and will check and a delegation ladder to pick the first handoffs.
+  - title: Audit your calendar
+    text: It groups four weeks into strategy, people, external, execution, admin and recovery, and flags what stands out.
+  - title: Check energy and growth
+    text: It looks at what drains you and how your role should change as the team grows.
+  - title: Suggest next steps
+    text: It names the complement hire and the first handoff to start this week.
+output_sample:
+  input:
+    - How you spend a typical week
+    - Your calendar or recurring meetings for the last four weeks
+    - Your team size and who reports to you
+    - What you avoid and what you enjoy most (optional)
+  output:
+    - name: Founder type and blind spot
+      contains: Whether you lean builder, seller, operator or visionary, and what that tends to miss.
+    - name: Delegation plan
+      contains: Your first three handoffs, each with the level of trust to give and a first step.
+    - name: Calendar audit
+      contains: A table of where your time goes by category, with the flags worth acting on.
+    - name: Complement hire
+      contains: The kind of person who would cover your gap, and what they would own first.
+    - name: Energy check
+      contains: What gives and drains you, plus any burnout signs worth taking seriously.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a talk-it-through skill. Claude, ChatGPT or Gemini can all run it from pasted text.
+  inputs:
+    - Anonymous feedback from your team
+    - Your org chart
+    - Notes from your last board or advisor meeting
+terms:
+  - term: delegation ladder
+    meaning: Five levels of handing off work, from "do exactly what I say" to "handle it and tell me only if it is unusual."
+  - term: calendar audit
+    meaning: Sorting your recent meetings into groups to see where your time really goes.
+  - term: blind spot
+    meaning: Something you do or miss that others see and you do not.

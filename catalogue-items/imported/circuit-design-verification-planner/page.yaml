@@ -1,12 +1,16 @@
 new_slug: circuit-design-verification-planner
 name: Check a circuit and its evidence
-summary: Check a circuit with part limits, worst-case math and a staged test plan. Keep predicted and measured results separate.
+summary: Check a circuit against part limits and worst-case math. You get a staged bench test plan that keeps predicted and measured results apart.
 job: build-product
 headline: Check a circuit and its evidence
 subhead: Bring a circuit, exact part data and readings. Check limits and loading, then plan the next safe measurement.
 explain: Bring a circuit, exact part data and readings. Check limits and loading, then plan the next safe measurement.
 when:
   - You want to check a circuit and its evidence.
+not_for:
+  - "You need ESP32 pin rules, firmware, flashing or recovery steps: use the repository's esp32-development skill."
+  - "You need FPGA design, RTL, simulation or timing closure: use the repository's fpga-development skill."
+  - "You need mains, medical, high energy or certified safety sign-off: hire a qualified engineer or a test lab."
 you_give:
   - The actual topology, supply/load/signal ranges and exact component documentation.
   - Known measurements, instrument setup, acceptable error and current physical limits.
@@ -14,9 +18,35 @@ you_get:
   - A reproducible conditional calculation or fault/evidence ledger.
   - A staged bench plan with expected ranges, limits, next checks and acceptance scope.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - "Gather your facts first: part numbers, datasheet revisions, supply and load ranges, and the meter and probe ratings you will use."
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions, or upload the skill folder if your AI accepts files.
+  - "Paste your circuit, part data and any readings. Say what decision you need: check, pick a part, find a fault or plan a test."
+  - Read the answer. Check that each fact is labeled as modeled, user-reported or measured.
+  - Run only the bench steps you have checked against your own part and instrument limits. Take the readings it asks for.
+  - Paste your new readings back in and ask for the next check. Stop after three rounds that go nowhere and ask a specialist.
+output_sample:
+  input:
+    - "Your circuit: a schematic, a netlist or a clear description of the parts and wiring"
+    - The exact part numbers and datasheet revisions
+    - Supply, load and signal ranges
+    - Readings you already took, with the meter or probe setup (optional)
+    - What error you can accept (optional)
+  prerequisites:
+    - The datasheets for your key parts, or links to them
+    - Your own meter or scope if you want to run the bench steps
+  output:
+    - name: Decision
+      contains: "One verdict: accepted, rejected, accepted under named assumptions, or not yet clear, with the reason."
+    - name: Calculation record
+      contains: Worst-case math with units, assumptions, the controlling corner and the margin left.
+    - name: Evidence row
+      contains: Test point, instrument setup, predicted value, reported reading, what it means and the next check.
+    - name: Evidence labels
+      contains: Each fact marked as modeled, simulated, user-reported or measured.
+    - name: Staged bench plan
+      contains: Unpowered checks first, then powered steps with expected ranges, safe limits and how to restore the setup.
+    - name: Missing facts
+      contains: Facts you still need to supply, marked as blocking or useful, and the smallest next test.
 how_it_works:
   - title: Fix the physical contract
     text: Identify topology, exact parts, operating versus absolute limits, function and missing facts that change the decision.

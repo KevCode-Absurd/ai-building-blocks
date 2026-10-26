@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs one checklist per AI search tool.
 new_slug: ai-search-platform-checker
 name: AI search platform checker
-summary: Give it a site. Get a score and fix list for Google AI Overviews,
-  ChatGPT, Perplexity and more.
+summary: Check how your site shows up in AI search. Get a score and fix list for Google AI Overviews, ChatGPT, Perplexity, Gemini and Bing Copilot.
 job: get-found-in-search
 headline: AI search platform checker
-subhead: Each AI search tool picks its sources by its own rules, so a site that
-  wins in one can be missing from another. Only about one domain in nine is
-  cited by both ChatGPT and Google AI Overviews for the same question.
+subhead: Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. Only about one domain in nine is cited by both ChatGPT and Google AI Overviews for the same question.
 explain: |
   Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. Only about one domain in nine is cited by both ChatGPT and Google AI Overviews for the same question. This check scores your site on each platform separately.
 
@@ -18,6 +15,10 @@ when:
   - You want to pick which AI platform to work on first.
   - You need platform-specific edits for one key page.
   - You have to show a client where each AI engine stands.
+not_for:
+  - Your site has no public pages yet. Publish a few pages first, then run the check.
+  - You want a quick look at one page only. Read that page yourself against the checklist, or ask your AI for a short review.
+  - You want your Google rankings tracked over time. Use a rank tracking tool, since this check gives a one-time report.
 you_give:
   - Your website address
   - Your main topic or industry
@@ -28,8 +29,27 @@ you_get:
   - Action items for each platform
   - One saved report file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open web pages.
+  - Open Claude, ChatGPT or Gemini. Use one that can open web pages, or the check will be weaker.
+  - Paste the skill text into the chat, or upload the skill file.
+  - Type your website address and your main topic or industry. Add the questions you want to win if you have them.
+  - Ask your AI to check your site against each platform and write the report.
+  - Read the scores first. Start with the platform your buyers use most, then do the quick wins.
+output_sample:
+  input:
+    - Your website address
+    - Your main topic or industry
+    - The questions you most want to win (optional)
+  prerequisites:
+    - An AI that can open web pages, so it can read your site
+    - A paid account and extra tools only if you want the report as a PDF
+  output:
+    - name: Overall Platform Readiness
+      contains: One summary of how ready your site is across all five AI search platforms.
+    - name: Platform Scores
+      contains: A score from 0 to 100 for each of the five platforms.
+    - name: Platform Details
+      contains: For each platform, what your site does well, the gaps found, and the fixes to make.
+    - name: Prioritized Action Plan
+      contains: Fixes sorted into quick wins for this week, medium-term for this month, and strategic for this quarter.
+    - name: GEO-PLATFORM-OPTIMIZATION.md
+      contains: The saved report file that holds all of the sections above.

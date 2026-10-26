@@ -12,20 +12,38 @@ Build comprehensive 3-5 year financial models with revenue projections, cost str
 
 ## Use this skill when
 
-- Working on startup financial modeling tasks or workflows
-- Needing guidance, best practices, or checklists for startup financial modeling
+- You need a multi-year forecast for a startup: revenue, costs, cash, runway and scenarios
+- You want to test a hiring plan, a price change or a raise against cash
 
 ## Do not use this skill when
 
-- The task is unrelated to startup financial modeling
-- You need a different domain or tool outside this scope
+- You need tax, audited accounts or a model an investor has signed off. Use an accountant or finance lead
+- You only want runway from past cash data, or advice on a raise. Use the Startup runway forecaster or the Startup finance advisor
 
-## Instructions
+## What you need
 
-- Clarify goals, constraints, and required inputs.
-- Apply relevant best practices and validate outcomes.
-- Provide actionable steps and verification.
-- Use the examples below; no separate implementation playbook is bundled.
+Ask once for anything missing, then mark what stays missing as `MISSING: <what>`. Never invent an input.
+
+- Business model (subscription, marketplace, e-commerce, services) and pricing
+- Expected new customers per month and retention or churn
+- Team size and hiring plan, with pay
+- Current cash and any money coming in
+- Optional: costs already known, payment terms, a planned raise
+
+If the user has no history, build from stated assumptions and label each one `assumption`. Do not fill a gap with a benchmark and present it as their number.
+
+## What you hand back
+
+If your AI can make an Excel file, build one with live formulas. If not, give tables in the chat and the formulas as text. Either way, give:
+
+1. **Assumptions table.** Every input, its value, and where it came from (user or assumption).
+2. **Revenue by cohort.** New customers, retained customers and revenue each month.
+3. **Costs by category.** COGS, S&M, R&D, G&A and headcount cost each month.
+4. **Cash flow and runway.** Beginning cash, inflows, outflows, ending cash, net burn and runway each month.
+5. **Key metrics.** MRR/ARR, CAC, LTV, payback, burn multiple.
+6. **Three scenarios side by side.** Conservative, base, optimistic, with only the variable assumptions changed.
+7. **What moves the result most.** The three assumptions that change cash or runway the most.
+8. **Checks.** Totals tie across sheets, cash balances roll forward, runway uses the one definition below. List anything unchecked as `CHECKS MISSED:` (or "none").
 
 ## Overview
 
@@ -89,10 +107,12 @@ ARR = MRR × 12
 - Monthly burn rate
 - Runway (months of cash remaining)
 
-**Formula:**
+**Formula (use this one definition everywhere in the model):**
 ```
-Net Cash Burn = Cash Outflows - Operating Cash Inflows
-Runway = Current Cash Balance / Net Cash Burn  # only when Net Cash Burn > 0
+Net Cash Burn (month) = Cash Outflows - Operating Cash Inflows
+Runway (months) = Ending Cash / Average Net Cash Burn over the next 3 months
+                  # only when that average Net Cash Burn > 0; otherwise report "not applicable"
+Cash-out month = the first month where Ending Cash < 0, read from the monthly table
 ```
 
 ### Headcount Planning
@@ -105,7 +125,7 @@ Track headcount by department and role.
 - Revenue per employee
 - Headcount by department (% of total)
 
-**Typical Ratios (Early-Stage SaaS):**
+**Typical Ratios (Early-Stage SaaS), unsourced rules of thumb, check against your market:**
 - Engineering: 40-50%
 - Sales & Marketing: 25-35%
 - G&A: 10-15%
@@ -181,7 +201,7 @@ Define new customers acquired each month.
 **Retention Curve:**
 Model customer retention over time.
 
-**Typical SaaS Retention:**
+**Typical SaaS Retention (illustrative, unsourced: use the user's own retention if they have it):**
 - Month 1: 100%
 - Month 3: 90%
 - Month 6: 85%
@@ -234,14 +254,14 @@ Beginning Cash
 = Ending Cash
 ```
 
-**Runway Calculation:**
+**Runway Calculation (same definition as Core Components):**
 ```
 If Ending Cash < 0:
   Funding Need = -Ending Cash
   Runway = 0
 Else:
-  Runway = Ending Cash / Average Positive Monthly Net Cash Burn
-If Net Cash Burn <= 0: report runway as not applicable, not a negative duration
+  Runway = Ending Cash / Average Net Cash Burn over the next 3 months
+If Average Net Cash Burn <= 0: report runway as not applicable, not a negative duration
 ```
 
 ### Step 6: Calculate Key Metrics
@@ -294,13 +314,13 @@ Create three scenarios with different assumptions.
 - Contraction MRR (downgrades)
 - Churned MRR (lost customers)
 
-**Key Ratios:**
+**Key Ratios (unsourced, check against your market):**
 - Gross margin: 75-85%
 - S&M as % revenue: 40-60% (early stage)
 - CAC payback: < 12 months
 - Net retention: 100-120%
 
-**Example Projection:**
+**Example Projection (made-up numbers to show the layout, not a forecast):**
 ```
 Year 1: $500K ARR, 50 customers, $41.7K MRR by Dec
 Year 2: $2.5M ARR, 200 customers, $208K MRR by Dec
@@ -314,12 +334,12 @@ Year 3: $8M ARR, 600 customers, $667K MRR by Dec
 - Take rate (% of GMV)
 - Net revenue = GMV × Take rate
 
-**Key Ratios:**
+**Key Ratios (unsourced, check against your market):**
 - Take rate: 10-30% depending on category
 - CAC for buyers vs. sellers
 - Contribution margin: 60-70%
 
-**Example Projection:**
+**Example Projection (made-up numbers to show the layout, not a forecast):**
 ```
 Year 1: $5M GMV, 15% take rate = $750K revenue
 Year 2: $20M GMV, 15% take rate = $3M revenue
@@ -334,7 +354,7 @@ Year 3: $60M GMV, 15% take rate = $9M revenue
 - Average order value (AOV)
 - Purchase frequency
 
-**Key Ratios:**
+**Key Ratios (unsourced, check against your market):**
 - Gross margin: 40-60%
 - Contribution margin: 20-35%
 - CAC payback: 3-6 months
@@ -347,7 +367,7 @@ Year 3: $60M GMV, 15% take rate = $9M revenue
 - Utilization rate
 - Team capacity
 
-**Key Ratios:**
+**Key Ratios (unsourced, check against your market):**
 - Gross margin: 50-70%
 - Utilization: 70-85%
 - Revenue per employee
@@ -421,7 +441,7 @@ Ensure runway to achieve next milestone + 6 months buffer.
 
 ## Model Validation
 
-**Sanity Checks:**
+**Sanity Checks (these targets are rules of thumb, unsourced; flag a miss, do not treat it as an error):**
 - [ ] Revenue growth rate is achievable (3x in Year 2, 2x in Year 3)
 - [ ] Unit economics are realistic (LTV/CAC > 3, payback < 18 months)
 - [ ] Burn multiple is reasonable (< 2.0 in Year 2-3)
@@ -441,7 +461,7 @@ This skill is self-contained. Build a project-owned model from the formulas abov
 
 ## Quick Start
 
-To create a startup financial model:
+To create a startup financial model (answer in the order of "What you hand back" above):
 
 1. **Define business model** - Revenue drivers and pricing
 2. **Project revenue** - Cohort-based with retention
@@ -454,6 +474,10 @@ To create a startup financial model:
 9. **Integrate fundraising** - Model funding rounds and milestones
 
 Record assumptions and validate formulas in the project-owned model.
+
+## After this
+
+Suggest: send the model to an accountant or finance lead to check, then use the Startup finance advisor for the raise plan and the board pack. Update the model each month with actual numbers.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

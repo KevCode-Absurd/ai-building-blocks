@@ -1,0 +1,136 @@
+name: Focus Music Architect agent
+summary: Get copy-and-paste prompts for instrumental focus music in Suno, Udio or Stable Audio, matched to your task, tempo and need for no vocals.
+headline: Focus Music Architect agent
+subhead: Say what you are working on, how long and how much beat you can stand. The agent picks a music style and tempo, then writes ready-to-paste prompts with no vocals. You get a focus music brief for your AI music tool.
+job: work-with-audio
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Plain "study music" prompts often bring back vocals, sharp cymbals or a sudden drop that breaks your concentration. This focus music architect agent writes prompts that steer an AI music tool away from those problems, so the track works as background for deep work.
+
+  It starts with your task. Reading a long spec, writing code and clearing email each call for different music, so it matches the task to a style and tempo range, such as felt piano at a slow pace for careful thinking or a steady synth pulse for fast work. Then it writes the prompt: the sound you want, the structure tags, and a second list of things to leave out, such as vocals, speech and loud drum hits. It keeps the harmony simple and the track easy to loop.
+
+  It writes prompts. It does not make the music, and tools such as Suno and Udio may still return vocals, so you must listen first. The profile's links between certain sounds and focus are the author's view and not settled science, so treat them as taste, not treatment. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its claims are not results measured by AI Blocks.
+when:
+  - You want 60 minutes or more of music with no singing to work or study to.
+  - Your last "focus playlist" prompt came back with vocals, drops or harsh sounds.
+  - You need different music for different jobs, such as careful reading, coding or a rush task.
+  - You make a focus app, video or stream and need a set of matching background tracks.
+not_for:
+  - "You want a song with lyrics, or a catchy music bed for a video: use the Suno song and music bed prompt writer."
+  - "You want music for a game that changes with play: use the Game Audio Engineer agent."
+  - "You want a voice or narration: use the ElevenLabs voice description writer or the Voiceover maker."
+  - "You want proof that music treats stress, sleep, ADHD or any health condition. This agent makes no health claims: ask a qualified professional."
+  - "You want licensed tracks for a business: use a music library and check its licence."
+you_give:
+  - What you will be doing while the music plays, such as reading, coding or writing
+  - How long a session lasts
+  - How much beat you want, from none to a steady pulse
+  - The AI music tool you use, such as Suno, Udio or Stable Audio
+  - Sounds you like or cannot stand, such as piano or drums (optional)
+  - Where the track will be used, such as a personal playlist or a public video (optional)
+you_get:
+  - A style and tempo picked for your task, with a plain reason
+  - Copy-and-paste prompts for your music tool, each with a list of sounds to leave out
+  - A set of 3 to 7 style options if you want variety
+  - A listening checklist for vocals, harsh sounds and loops
+  - Tips to fix a track that came back wrong, and notes on usage rights to check
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Tell it your task, session length, beat preference and music tool. Say "Prompts only. Make no health claims." Your AI asks once for what is missing.
+  - Copy one prompt into your music tool. Put the leave-out list in its negative or exclude box if it has one. If it has none, add the words to the prompt.
+  - Listen to the first 30 seconds and the end. Reject any track with vocals, speech, sharp cymbals or a sudden jump in volume.
+  - Paste what went wrong back into the chat and ask for a fixed prompt.
+  - Check the music tool's terms before you use a track in public or for sale.
+how_it_works:
+  - title: Read the task
+    text: It asks what you are doing, for how long and how much beat you want, then names a fitting style.
+  - title: Choose the sound
+    text: It picks the instruments, tempo range and a simple pattern that repeats, such as felt piano or soft synth pulses.
+  - title: Write the prompt
+    text: It builds a prompt with structure tags and a plain description, tuned for the tool you named.
+  - title: Add the leave-outs
+    text: It adds a list of sounds to exclude, such as vocals, speech and sharp highs.
+  - title: Check for tiring sounds
+    text: It checks the prompt for jumps in volume, harsh highs and complex chord changes.
+  - title: Plan the fix
+    text: It lists what to listen for and how to reword the prompt if a track comes back wrong.
+output_shape: |-
+  YOUR TASK
+    Doing <task> | Session <length> | Beat <none, light or steady> | Tool <name>
+
+  PICK
+    Style <name> | Tempo <range> | Why it fits <one line>
+
+  PROMPT
+    Prompt <text to paste>
+    Leave out <vocals, speech, sounds to exclude>
+    Structure tags <intro, loop, outro>
+
+  OPTIONS (if asked)
+    <style> | <tempo> | <best for> | <prompt>
+
+  LISTENING CHECK
+    <what to listen for> | <what to do if it fails>
+
+  RIGHTS AND LIMITS
+    <tool terms to check> | <claims this brief does not make>
+output_sample:
+  input:
+    - What you will be doing while the music plays, and for how long
+    - How much beat you want
+    - The AI music tool you use
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - An account with an AI music tool such as Suno, Udio or Stable Audio
+  output:
+    - name: Your task
+      contains: Your task, session length, beat preference and music tool in one line.
+    - name: Pick
+      contains: The style and tempo range chosen for your task, with a one-line reason.
+    - name: Prompt
+      contains: A ready-to-paste prompt, a list of sounds to leave out and structure tags for the tool.
+    - name: Options
+      contains: Up to seven style choices, each with tempo, best use and a prompt.
+    - name: Listening check
+      contains: What to check in each track, such as vocals or harsh highs, and how to fix it.
+    - name: Rights and limits
+      contains: Terms to check with your music tool and the health claims this brief does not make.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Beat
+    how: Say "no beat at all" for piano or drones, or "light pulse" for lo-fi or soft synths.
+  - what: Tool
+    how: Name your music tool so the prompt uses its tag style and limits on prompt length.
+  - what: Length
+    how: Ask for a prompt that suits a loop, or one that builds slowly over a long track.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: BPM
+    meaning: Beats per minute. A higher number means a faster pulse.
+  - term: Negative prompt
+    meaning: A list of sounds you want the music tool to leave out.
+  - term: Binaural beat
+    meaning: Two slightly different tones, one in each ear, which some people use as background. Its effects on focus are debated.
+  - term: Brown noise
+    meaning: A deep, soft hiss, lower in tone than white noise.
+  - term: Ostinato
+    meaning: A short musical pattern that repeats, which keeps music steady and easy to ignore.
+  - term: Loop
+    meaning: A track that can repeat without a clear start or end.
+works_best_with:
+  tools:
+    - name: Suno, Udio or Stable Audio
+      why: These tools turn the prompt into a track. Your chat AI writes the prompt but cannot make or play music.
+    - name: Claude, ChatGPT or Gemini
+      why: Pasted text is enough to write the prompts.
+  inputs:
+    - A track you liked, described in your own words, such as "soft piano, no drums".
+    - Headphones, so you can hear faint vocals before you start work.

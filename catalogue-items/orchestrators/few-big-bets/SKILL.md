@@ -34,10 +34,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Mispriced bet tester.** Use the skill `mispriced-bet-tester`. For each idea, whether the odds really favour you or the price already says it
-2. **Twenty-punch bet ranker.** Use the skill `lifetime-punch-card-bet-ranker`. Give it the audit report from the steps before. A short ranked list with sizes. Reads the odds test from the step before
-3. **Incentive checker.** Use the skill `incentive-checker`. Give it the plan from the steps before. Who gains from steering you, and where it pulls the wrong way. Reads the sized plan
-4. **Room for error plan checker.** Use the skill `room-for-error-plan-checker`. Give it the plan from the steps before. Whether the concentrated plan survives a bad year. Reads the sized plan
+1. **Mispriced bet tester.** Use the skill `mispriced-bet-tester`. For each idea, whether the odds really favour you or the price already says it. Hands the odds test to step 2.
+2. **Twenty-punch bet ranker.** Use the skill `lifetime-punch-card-bet-ranker`. Give it the audit report from the steps before. A short ranked list with sizes. Reads the odds test from the step before and hands the sized plan to steps 3, 4 and 5.
+3. **Incentive checker.** Use the skill `incentive-checker`. Give it the plan from the steps before. Who gains from steering you, and where it pulls the wrong way. Uses the sized plan from step 2 (not step 3's report), and hands its audit to the rule writer in step 5.
+4. **Room for error plan checker.** Use the skill `room-for-error-plan-checker`. Give it the plan from the steps before. Whether the concentrated plan survives a bad year. Uses the sized plan from step 2 (not the incentive audit), and hands its audit to the rule writer in step 5.
 5. **Sit-still rule writer.** Use the skill `sit-still-rule-writer`. Give it the plan and the audit report from the steps before. A one-page holding rule set. Reads the sized plan and the risk checks
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

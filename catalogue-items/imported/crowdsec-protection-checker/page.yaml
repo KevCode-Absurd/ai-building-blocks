@@ -1,12 +1,16 @@
 new_slug: crowdsec-protection-checker
 name: Check CrowdSec protection
-summary: Trace logs, detections and blocking in CrowdSec. Find where protection stops working and plan a scoped fix with an undo path.
+summary: Check CrowdSec protection from log capture to blocking. Find the stage that fails and get a small fix with an undo plan.
 job: secure-code
 headline: Check CrowdSec protection
 subhead: Bring host details and log samples. Trace each stage, then get a fix and proof plan.
 explain: Bring host details and log samples. Trace each stage, then get a fix and proof plan.
 when:
   - You want to check CrowdSec protection.
+not_for:
+  - "You need general firewall design: use a firewall guide or your platform's own docs, then come back for the CrowdSec part."
+  - "You need Kubernetes or reverse-proxy design: ask a person or tool that knows that platform, and use this only for the CrowdSec link."
+  - "You want to change live blocking with no undo plan or maintenance window: agree both with your team first."
 you_give:
   - The authorized host/container, installed CrowdSec version, log samples and observed symptoms.
   - Read access plus the agreed action scope, maintenance window and rollback plan before changes.
@@ -17,6 +21,26 @@ how_to_use:
   - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
   - Provide the inputs listed here and ask your AI to follow the skill.
   - Review the result and any missing facts before using it.
+output_sample:
+  input:
+    - Your host or container name, and the CrowdSec version
+    - A few log lines from the service you protect
+    - What you see going wrong
+    - Your allowed scope, maintenance window and undo plan
+  prerequisites:
+    - Read access to the host or container
+    - An AI that can read your pasted command output (it cannot run commands for you in a chat)
+  output:
+    - name: Scope and undo record
+      contains: The target, version, what may be changed, and how to undo each change.
+    - name: Stage-by-stage diagnosis
+      contains: Status and evidence for log capture, parsing, scenarios, decisions and the bouncer, in that order.
+    - name: Failed stage
+      contains: The first stage where protection stops, and why an alert alone does not prove blocking.
+    - name: Bounded fix
+      contains: A small change that fixes the failed stage, with the safety checks to run before it.
+    - name: Proof plan
+      contains: A harmless test to show the proxy or firewall really blocks, plus what the test cannot show.
 how_it_works:
   - title: Confirm scope and recovery
     text: Record target, version, read/write boundary and undo path. Prefer inspection and simulation before enforcement.

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows chart conventions with set checks.
 new_slug: helm-chart-builder
 name: Helm chart builder
-summary: Describe your service. Get a Helm chart for Kubernetes with sensible
-  values, checks and safe defaults.
+summary: Build a Helm chart for your Kubernetes service. Describe it and get a chart with clear values, safe defaults and lint and test steps.
 job: ship-and-host
 headline: Helm chart builder
-subhead: "A Helm chart for your Kubernetes service that other people can trust
-  and use. Describe the service and the skill scaffolds a chart with the right
-  shape for it: a web service, a background worker, a scheduled job, a stateful
-  service or a shared library chart."
+subhead: "A Helm chart for your Kubernetes service that other people can trust and use. Describe the service and the skill scaffolds a chart with the right shape for it: a web service, a background worker, a scheduled job, a stateful service or a shared library chart."
 explain: |
   A Helm chart for your Kubernetes service that other people can trust and use. Describe the service and the skill scaffolds a chart with the right shape for it: a web service, a background worker, a scheduled job, a stateful service or a shared library chart.
 
@@ -19,6 +15,10 @@ when:
   - You are asked to review a teammate's Helm chart.
   - You need a security check on RBAC, network rules and pod settings.
   - You want a values.yaml other people can understand.
+not_for:
+  - "Your cluster uses only Kustomize or plain manifests: keep using those, since a Helm chart adds a layer you do not need."
+  - "You need to build a deploy pipeline: ask a DevOps engineer or a CI tool, not this skill."
+  - "You have no Kubernetes service yet and only want to host a simple site: use your host's own deploy steps."
 you_give:
   - A description of the service or its manifests
   - The workload type
@@ -30,8 +30,34 @@ you_get:
   - A review of problems in an existing chart
   - Test and lint steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in a place where it can read your project files and run code. Make sure Helm is installed.
+  - Paste the skill into the chat, or add the skill folder to your AI tool.
+  - "Describe your service and say which kind it is: web service, worker, scheduled job, stateful service or library chart."
+  - To check a chart you already have, share its folder and ask for a review, or for a security audit.
+  - Read the result. Check the values file first, then run helm lint and helm test.
+output_sample:
+  input:
+    - A short description of your service
+    - The workload type, such as web service, worker, scheduled job or stateful service
+    - Dependencies such as a database (optional)
+    - An existing chart to review (optional)
+  prerequisites:
+    - Helm installed, so your AI can run helm lint and helm test
+    - An AI that can run code and read your project files
+  output:
+    - name: Chart.yaml
+      contains: The chart name, version and any dependencies such as a database.
+    - name: values.yaml
+      contains: Default settings with sensible values that other people can read and change.
+    - name: values.schema.json
+      contains: An optional schema that checks values before the chart installs.
+    - name: templates/_helpers.tpl
+      contains: Shared template helpers, including standard labels used by every resource.
+    - name: Workload templates
+      contains: Resources that fit your workload type, such as a Deployment, Service, CronJob or StatefulSet.
+    - name: Security hardening
+      contains: Resource limits, non-root containers, network policies, minimal permissions and careful handling of secrets.
+    - name: Chart review
+      contains: Problems found in a chart you already have, such as hardcoded values and missing labels.
+    - name: Security audit
+      contains: Findings on permissions, network rules, pod settings and secrets, with fixes.

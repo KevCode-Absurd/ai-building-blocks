@@ -1,0 +1,130 @@
+name: Data Privacy Officer agent
+summary: Review one way you use customer data under GDPR or CCPA. Get the duties that apply, the proof you lack and what to fix first.
+headline: Data Privacy Officer agent
+subhead: Describe one way you use personal data, such as a mailing list, a tracking pixel or a new app. It checks the plan against the privacy laws that fit where your customers live. You get the duties that apply, the proof you are missing and a fix order.
+job: check-contracts
+thinking: high
+thinking_why: It weighs legal rules against your facts and must not call anything lawful without proof. Use a model that reasons well and says when it is unsure.
+explain: |-
+  A privacy review (also called a data protection review or GDPR check) goes wrong in two ways. People jump to how to protect the data and never ask if they need it. Or they quote a rule from memory and keep no record of why they chose what they did. This agent starts with the questions a privacy officer asks first. Why do you collect each item? What gives you the right to use it?
+
+  Then it walks through the duties a regulator would ask about. Do you keep a record of what you do with data? Is a risk check needed before launch? Can you answer a customer who asks to see or delete their data, on time? What must a vendor contract say? What happens if the data leaves the country? For each duty you see what you already have as proof, and what is missing.
+
+  It keeps what you told it apart from what it assumes, and it never says "compliant" without evidence. It also marks which points need a real privacy lawyer. The result is an AI reading of public privacy rules, not legal advice.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You plan to add a sign-up form, tracking pixel or customer database and want to know which privacy duties it brings.
+  - A customer asks you to send or delete their data and you are not sure what you must do, or by when.
+  - You are about to sign with a vendor who will hold your customer data and want to know what the contract must cover.
+  - A buyer, partner or investor asks how you handle personal data and you have nothing written down.
+not_for:
+  - You need a legal opinion, or a paper to file with a regulator. Take its questions to a privacy lawyer instead.
+  - You want your code and data use checked for GDPR risks. Use the GDPR privacy checker.
+  - You want an evidence checklist for SOC 2 or ISO 27001. Use the Compliance Auditor agent.
+you_give:
+  - One way you use personal data, in a few lines. Say what you collect, from whom, why, who receives it and how long you keep it.
+  - Where your customers or staff live, such as the EU, the UK or California. This decides which laws apply.
+  - Your privacy notice, vendor contract or data list (optional)
+  - Your business size, and whether the data is sensitive, such as health, children's or payment data (optional)
+you_get:
+  - A table of the duties that apply, with the rule behind each and the proof you have
+  - A list of missing evidence and the questions you still need to answer
+  - A fix list in order, with how big each job is
+  - A list of points to take to a privacy lawyer
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe one data activity in plain words. Say what you collect, from whom, why, who receives it and how long you keep it.
+  - Say where your customers live. Attach your privacy notice or vendor contract if you have one. No code or web access is needed.
+  - Type "Review this. Show what you saw for each duty. Do not call anything compliant without proof."
+  - Read the evidence gaps first. Fill in what you can, then ask it to run the review again.
+  - Take the lawyer questions to a privacy lawyer before you act. Check any article number it quotes against the law's own text.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the one activity, who is affected and where they live. Anything missing is asked once, then marked MISSING.
+  - title: Question the need
+    text: For each data item it asks why you need it. It lists what you could drop or keep for less time.
+  - title: Find the legal reason
+    text: It matches each purpose to a lawful basis, the legal reason to use the data. It warns when consent is a weak choice.
+  - title: Test the duties
+    text: It goes through records, risk checks, customer requests, breach steps, vendor contracts and transfers. It says if each applies, does not apply or is unclear.
+  - title: Match the proof
+    text: Each duty is marked Seen, Not seen or Not supplied, based only on what you gave it.
+  - title: Rank and hand back
+    text: It orders the fixes, then lists what a privacy lawyer should decide.
+output_shape: |-
+  SCOPE
+    Activity <what> | Who is affected <people> | Where they live <places> | Laws tested <list>
+
+  DATA NEED CHECK
+    <data item> | <why needed> | <keep, drop or keep for less time>
+
+  DUTIES TABLE
+    <duty> | <rule in one line> | <applies, does not apply or unclear> | <proof: Seen, Not seen or Not supplied> | <gap>
+
+  EVIDENCE GAPS
+    <what is missing> | <which duty it limits> | <how to get it>
+
+  FIX LIST (in order)
+    <action> | <why now> | <small, medium or large> | <who should do it>
+
+  QUESTIONS FOR YOUR PRIVACY LAWYER
+    <point the AI cannot settle> | <what the lawyer should confirm>
+output_sample:
+  input:
+    - One way you use personal data, in a few lines
+    - Where your customers or staff live
+    - Your privacy notice, vendor contract or data list (optional)
+    - Your business size and whether the data is sensitive (optional)
+  prerequisites:
+    - An AI that can read files, if you attach a notice or contract
+  output:
+    - name: Scope
+      contains: The activity reviewed, who is affected, where they live and which laws were tested.
+    - name: Data need check
+      contains: Each data item with why you need it, and any you could drop or keep for less time.
+    - name: Duties table
+      contains: Each duty with the rule in one line, whether it applies, and the proof seen or missing.
+    - name: Evidence gaps
+      contains: What is missing, which duty it limits and how to get it.
+    - name: Fix list
+      contains: Actions in order, each marked small, medium or large, with who should do it.
+    - name: Questions for your privacy lawyer
+      contains: Points the AI cannot settle, with what the lawyer should confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads your privacy notice and vendor contracts next to your description, and can tie each duty to a line in them.
+  inputs:
+    - A list of the vendors that touch the data, and the country each one stores it in.
+    - How long you keep each kind of data today.
+    - Any past risk checks or logs of customer requests.
+terms:
+  - term: Personal data
+    meaning: Any detail that points to a real person, such as a name, email address or device ID.
+  - term: Lawful basis
+    meaning: The legal reason that lets you use someone's data, such as a contract with them or their consent.
+  - term: Risk check (DPIA)
+    meaning: A written check of the risks to people before a high-risk use of their data. DPIA is short for data protection impact assessment.
+  - term: Data subject request
+    meaning: A request from a person to see, fix, move or delete the data you hold about them.
+  - term: GDPR
+    meaning: The European Union's privacy law. The UK has its own version, and California has the CCPA.
+tweaks:
+  - what: Scope
+    how: Review one activity at a time, such as "the newsletter sign-up". A whole company in one go gives vague answers.
+  - what: Where your customers live
+    how: Name every place you sell to. A US-only shop and one with EU customers face different duties.
+  - what: Sensitive data
+    how: Say if you hold health, children's, biometric or payment data. It raises the bar for several duties.
+improve:
+  - Keep each review and its fix list with your data records, so the next review starts from the last one.
+  - Add your own vendor list and retention times to the pack, so you do not retype them.
+  - Pair it with the Policy page drafter once the gaps are fixed, to update your privacy notice.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

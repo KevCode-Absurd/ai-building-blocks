@@ -1,51 +1,91 @@
 new_slug: separate-pension-cost-funding-and-remeasurement
 name: Separate pension cost funding and remeasurement
 headline: Separate pension cost funding and remeasurement
-summary: Link pension obligations and assets to service cost, financing, OCI and actual contributions.
+summary: Split a company's pension deficit change into employer contributions, service cost, interest and remeasurement under IAS 19.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked pension funded-status and recognized-cost workbook. Share plan obligation/asset notes, discount rates, service and financing costs, OCI, actual contributions and closing funded status.
-explain: |-
-  A linked pension funded-status and recognized-cost workbook.
+subhead: "Give it the pension note: opening and closing obligation and plan assets, contributions, service cost, discount rate, remeasurement and the reported pension expense. It separates cash paid in from every other move in the deficit, then splits the rest into cost and remeasurement. You get a bridge that ties to the closing deficit."
+explain: |
+  A pension deficit moves for many reasons. The company pays cash in. Staff earn more benefits. Interest builds on the deficit. Markets and assumptions change what the assets and the promises are worth. Reports blend these together, so people read contributions as expense or call a remeasurement loss an operating cost.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow keeps them apart. Step 1 proves the opening and closing deficit as obligation less plan assets, then pulls out the employer's cash contributions. What is left is every other movement. Step 2 splits that into service cost, net interest and remeasurement, and sets the profit and loss cost beside the expense the company reported. Contributions are funding, not expense. Remeasurement goes to other comprehensive income, not operating cost.
+
+  It follows IAS 19, the international pension standard, with a simple pattern for net interest. It does not value the plan. That is a job for an actuary.
 when:
-  - You need a linked pension funded-status and recognized-cost workbook.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are reading an annual report where the pension deficit grew and you want to know why.
+  - Reported pension expense and cash contributions are far apart, and you want the gap explained.
+  - A remeasurement loss hit equity and you need to know how much of it was cost.
+  - You are valuing a company and need to know what pension cash really leaves each year.
+not_for:
+  - The plan is defined contribution. The company pays in and owes nothing more, so read the expense line as it is.
+  - The company reports under US GAAP, not IAS 19. This method does not fit, so use that standard's pension note.
+  - You need the size of the obligation or the value of the assets. That takes an actuary.
+  - You want earnings per share or comprehensive income reconciled. Use Reconcile alternative EPS and comprehensive income.
 you_give:
-  - Plan obligation/asset notes, discount rates, service and financing costs, OCI, actual contributions and closing funded status.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Opening and closing benefit obligation and plan assets (from the pension note)
+  - Employer cash contributions for the year (from the pension note or cash flow statement)
+  - Service cost, the discount rate at the start of the year, and the remeasurement gain or loss (from the pension note)
+  - The pension expense reported in profit and loss
+  - The currency, scale and period, plus any asset ceiling, plan change or settlement the note mentions
 you_get:
-  - A linked pension funded-status and recognized-cost workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Opening and closing deficit, proved from obligation less plan assets
+  - Employer contributions split from every other deficit movement
+  - Net interest, profit and loss cost, and the gap to the reported expense
+  - Total cost with remeasurement kept apart in other comprehensive income
+  - A closing deficit that ties to the note, with exceptions and gaps listed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Pick one that can make spreadsheets if you want a workbook.
+  - Attach the pension note from the annual report and the cash flow statement. Say the currency, scale and period.
+  - After step 1, check opening and closing deficit equal obligation less assets and match the note, and that contributions sit apart from the other movements.
+  - After step 2, check closing deficit equals opening deficit plus total cost less contributions. The gap to the reported expense must be shown, not forced to zero.
+  - Fill every MISSING line. Have a qualified accountant review the result before anyone uses it in a report. Nothing here files or sends anything.
 how_it_works:
   - title: Pension funded-status change schedule
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove opening/closing plan assets and obligations and isolate contributions from all other deficit movements, keeping plan/perimeter and asset-ceiling exceptions visible.
+    text: Matches obligations and assets by date, plan and currency. Subtracts assets from obligations at both dates. Adds contributions back to isolate all other deficit movement. Keeps any asset ceiling or plan change visible. Hands step 2 the non-contribution movement.
   - title: Pension service and financing bridge
-    text: Decompose the same non-contribution movement into service, financing, remeasurement and other disclosed items. Reconcile net liability and cash funding without equating contributions with expense.
+    text: Splits that movement into service cost, net interest and remeasurement. Net interest is the opening deficit times the discount rate. Compares the profit and loss cost with the reported expense and shows the gap. Rolls the deficit forward after contributions.
 output_shape: |-
-  A linked pension funded-status and recognized-cost workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  PERIOD AND BASIS   <period>, <currency>, <scale>
+
+  1 FUNDED STATUS   opening deficit <n> (obligation <n> - assets <n>) | closing deficit <n> | change <n>
+                    contributions <n> | all other movements <n>
+
+  2 COST BRIDGE     service cost <n> + net interest <n> = profit and loss cost <n>
+                    reported expense <n> | gap <n>
+                    remeasurement <n, in other comprehensive income> | total cost <n>
+                    closing deficit = opening <n> + total cost <n> - contributions <n> = <n>
+
+  EXCEPTIONS   <asset ceiling, settlements, plan changes, or none>
+  MISSING   <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Opening and closing benefit obligation and plan assets
+    - Employer contributions, service cost and the discount rate
+    - The remeasurement gain or loss and the reported pension expense
+    - The currency, scale and period
+  prerequisites:
+    - The pension note from the annual report
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: Step 1 funded status
+      contains: Opening and closing deficit, the change, contributions, and all other movements apart.
+    - name: Step 2 cost bridge
+      contains: Service cost, net interest, profit and loss cost, the gap to reported expense, remeasurement and total cost.
+    - name: Closing deficit tie
+      contains: Opening deficit plus total cost less contributions, matched to the note.
+    - name: Exceptions
+      contains: Asset ceiling, settlements and plan changes the simple pattern leaves out.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Both schedules reconcile the same plan/date/perimeter; P&L, OCI and cash funding remain separate; settlements, asset ceilings and FX gaps are listed explicitly.
+  - what: A bigger remeasurement loss
+    how: Raise it. Total cost and the closing deficit rise, and profit and loss cost stays the same.
+  - what: A different discount rate
+    how: Change it. Net interest and the gap to the reported expense move.
+  - what: No reported expense
+    how: Leave it out. Step 2 shows the computed cost and marks the gap MISSING instead of guessing.
 judge:
   - Both schedules reconcile the same plan/date/perimeter; P&L, OCI and cash funding remain separate; settlements, asset ceilings and FX gaps are listed explicitly.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +96,33 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each year's pension note in one folder, so opening figures always come from last year's closing figures.
+  - Record any gap to the reported expense with its cause, such as past service cost or a settlement.
+  - Run Reconcile working capital and tax cash next, to explain the other cash differences in the same report.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: The annual report's pension note
+      why: It holds the obligation, assets, rates and contributions. Use the note itself, not a summary.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The plan note for two years in a row, so opening matches last closing.
+    - Notes on any plan change, settlement or asset ceiling.
+    - A qualified accountant to review the result.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Defined benefit plan
+    meaning: A pension that promises a set benefit, so the company carries the risk if assets fall short.
+  - term: Deficit
+    meaning: The pension promise (obligation) minus the plan's assets, when the promise is larger.
+  - term: Remeasurement
+    meaning: A gain or loss from changed assumptions or asset returns. It goes to other comprehensive income, not profit.
+  - term: Net interest
+    meaning: Interest on the deficit, here the opening deficit times the discount rate.
+  - term: IAS 19
+    meaning: The international accounting standard for employee benefits, including pensions.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+before: []
+next:
+  - reconcile-working-capital-and-tax-cash
+  - separate-financing-effects-from-operating-cash

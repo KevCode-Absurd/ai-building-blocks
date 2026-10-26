@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must tell odd patterns from honest refunds.
 new_slug: repeat-partial-refund-spotter
 name: Repeat partial refund spotter
-summary: Get orders with many partial refunds or high refund share, a sign of
-  fraud, complaints or process gaps.
+summary: Find Shopify orders with repeat partial refunds or a high refund share. Spot fraud, product complaints and returns gaps in your recent orders.
 job: run-your-store
 headline: Repeat partial refund spotter
-subhead: "Orders that look odd: several small refunds on one order, or a large
-  share of the total refunded. These can point to fraud, a product complaint or
-  a gap in how you handle returns."
+subhead: "Orders that look odd: several small refunds on one order, or a large share of the total refunded. These can point to fraud, a product complaint or a gap in how you handle returns."
 explain: |
   Orders that look odd: several small refunds on one order, or a large share of the total refunded. These can point to fraud, a product complaint or a gap in how you handle returns.
 
@@ -18,6 +15,10 @@ when:
   - A staff member may be refunding too freely.
   - You want to find products that cause repeat complaints.
   - You review refunds each month and want a shortlist.
+not_for:
+  - "You want to screen orders for fraud at checkout: use order-risk-report, which looks at risk before the order ships."
+  - "You need to settle one refund dispute: read that order's refund notes and talk to the customer directly."
+  - "You want to change or issue refunds: this only reads data, so use your Shopify admin."
 you_give:
   - Store domain
   - Days to look back
@@ -30,8 +31,26 @@ you_get:
   - Notes attached to each refund
   - Shortlist to check by hand
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. Paste in the skill text.
+  - "Sign in to Shopify with read access to orders: shopify store auth --store your-store.myshopify.com --scopes read_orders."
+  - Give your AI your store domain. Add the days to look back and any limits you want to change.
+  - Let it run. It only reads data and changes nothing in your store.
+  - Open the CSV and sort by refund share, highest first.
+  - Read the refund notes on each flagged order before you contact any customer.
+output_sample:
+  input:
+    - Your store domain
+    - How many days back to look (90 by default)
+    - Number of partial refunds that counts as repeated (2 by default)
+    - Refund share that counts as high (optional, 0.5 by default)
+    - Smallest order value to check (optional, 25 by default)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A Shopify login with read access to orders
+  output:
+    - name: Summary report
+      contains: Counts of partially refunded orders, orders flagged for repeat refunds, orders flagged for high share, and repeat-flagged customers.
+    - name: Top flagged customers
+      contains: Customers with the most refunded money, with their flagged order count and refund share.
+    - name: partial_refund_patterns CSV file
+      contains: One row per flagged order with totals, refund count, refund share, flag reason and first and last refund dates.

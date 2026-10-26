@@ -1,22 +1,56 @@
 new_slug: aws-resource-inventory-reader
 name: Read AWS resource inventory
-summary: Read AWS resource details within an agreed account and region. Return a short table and leave secret values untouched.
+summary: Read your AWS resource inventory with read-only commands. Ask about EC2, S3, RDS and more, and get a short table plus a note on gaps.
 job: connect-tools
 headline: Read AWS resource inventory
-subhead: Bring a scoped AWS question and read access. Get filtered facts with clear gaps and limits.
+subhead: Ask a plain question about your AWS setup, like which servers are running. Your AI runs read-only AWS commands and shows the answer in a short table. It never changes anything and never shows secret values.
 explain: Bring a scoped AWS question and read access. Get filtered facts with clear gaps and limits.
 when:
-  - You want to read AWS resource inventory.
+  - You want to know which EC2 servers are running in one region.
+  - You need a list of S3 buckets, databases or Lambda functions before a review.
+  - You are checking who has MFA turned on or which roles exist.
+  - You want to find everything tagged for production.
+not_for:
+  - "You want to create, change or delete AWS resources: use the AWS console or your cloud engineer. This skill only reads."
+  - "You need to audit many AWS accounts at once: ask your cloud admin for a cross-account report. This skill checks one account at a time."
+  - "You need the value of a secret or a parameter: read it yourself in AWS with the right access. This skill shows names and details only."
 you_give:
-  - The inventory question, authorized AWS account/profile and regions.
-  - An installed AWS CLI with permission to read the relevant metadata.
+  - Your question about AWS resources.
+  - The AWS account or profile to use.
+  - The region to check (optional).
+  - A tag, name or state to filter by (optional).
 you_get:
-  - Focused resource metadata tables and stated query scope.
-  - Clear permission, missing-resource and region limits without a resource mutation.
+  - A count of what was found.
+  - A short table with the useful details for each resource.
+  - The account and region the answer covers.
+  - A note on gaps, such as missing permissions or empty regions.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Use an AI that can run commands on your computer, and make sure the AWS CLI is installed and signed in.
+  - Add the skill folder to your AI tool, or paste the SKILL.md text into the chat.
+  - "Ask your question and name the account and region, for example: list running EC2 instances in eu-west-1."
+  - Check the account and region at the top of the answer before you trust it.
+  - Read the gaps and limits note, then ask for a narrower filter if the list is long.
+output_sample:
+  input:
+    - Your question, such as which EC2 instances are running
+    - The AWS account or profile to use
+    - The region to check (optional)
+    - Filters such as a tag, a name or a state (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - The AWS CLI installed and signed in
+    - Permission to read the resource details you ask about
+  output:
+    - name: Account and region check
+      contains: The account and region the answer comes from, so you know where the facts apply.
+    - name: Count line
+      contains: How many resources were found, with an offer to filter when the list is long.
+    - name: Resource table
+      contains: A short table with the useful fields for each resource, such as ID, type, state and name.
+    - name: Gaps and limits
+      contains: Missing permissions, empty regions and anything the query could not see.
+    - name: Next filter offer
+      contains: A prompt to narrow the list by state, type or tag.
 how_it_works:
   - title: Fix identity and scope
     text: Resolve the service, filters, account and region before selecting commands.

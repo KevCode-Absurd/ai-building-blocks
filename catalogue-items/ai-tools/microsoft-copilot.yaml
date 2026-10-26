@@ -2,31 +2,32 @@ slug: microsoft-copilot
 name: Microsoft Copilot
 maker: Microsoft
 url: https://copilot.microsoft.com
-promise: "Draft and summarise work in Microsoft apps, including Word, Excel, Outlook and Teams."
+promise: "Draft, summarise and make images in chat, or inside Word, Excel and Outlook."
 use_cases: [ask-an-assistant, write-copy, research, make-images]
 categories: [chat-assistant, productivity]
 what_it_does:
-  - Answers questions and drafts text in a chat.
-  - Writes and rewrites inside Word and Outlook.
-  - Summarises long email threads and documents.
-  - Helps with formulas and charts in Excel.
-  - Makes images from a written description.
+  - "Chats to find answers, draft content, summarise information and make images from a description (copilot.com, checked 26 Oct 2026)."
+  - "Is free with a signed-in Microsoft account, with usage limits on some features (copilot.com, checked 26 Oct 2026)."
+  - "Works inside the Word, Excel, PowerPoint and Outlook desktop apps on a paid Microsoft 365 plan (checked 26 Oct 2026)."
+  - "In Excel, needs your file saved to OneDrive with AutoSave on (checked 26 Oct 2026)."
+  - "Names Researcher, Analyst and Cowork as Copilot features. The page does not say which plan includes each (microsoft.com, checked 26 Oct 2026)."
 benefits:
-  - Draft a reply or report without leaving your Microsoft apps.
-  - Catch up on a long thread in a few lines.
-  - Get help with a spreadsheet formula you do not know.
-  - Start on the free app, then add it to your Microsoft 365 plan.
+  - "Get a first draft of an email, report or outline to edit."
+  - "Paste in a long text and ask for a short summary."
+  - "Make an image for a slide without leaving the chat."
+  - "Start free, then add the in-app features through a Microsoft 365 plan."
 best_for:
   - Teams that already run on Microsoft 365.
   - Office work such as email, documents, slides and spreadsheets.
-  - Companies that want admin controls over AI use.
+  - People who want to try an assistant free before paying.
 not_for:
-  - Teams that do not use Microsoft apps.
-  - Work in other apps, since its best features sit inside Microsoft apps.
+  - "Teams that do not use Microsoft apps. Use Claude, ChatGPT or Gemini instead."
+  - "Free-plan users who expect Copilot inside Word, Excel and Outlook. Those features need a paid Microsoft 365 plan."
+  - "Long research with sources you can check. Try Perplexity or NotebookLM."
 pricing:
   model: freemium
-  from: US$9.99 per month
-  note: The Copilot app has a free plan. Microsoft 365 Personal costs US$9.99 per month and Premium US$19.99 per month. Business Copilot plans are priced per user, so check the page.
+  from: US$9.99 per month (Microsoft 365 Personal; checked 26 Oct 2026)
+  note: "The Copilot chat is free with a signed-in Microsoft account, with usage limits (checked 26 Oct 2026). The in-app features need a paid plan. Microsoft 365 Personal is US$9.99 a month or US$99.99 a year. Family is US$129.99 a year. Premium is US$19.99 a month or US$199.99 a year. Pro is US$99.99 a month. Personal includes the Word, Excel, PowerPoint and Outlook desktop apps with Copilot, and AI features carry usage limits. Prices are from microsoft.com/microsoft-copilot/for-individuals, checked 26 Oct 2026. Business Copilot plans are priced per user and we did not check them."
 works_with:
   - Word
   - Excel
@@ -39,7 +40,33 @@ blocks:
   - ai-search-visibility-optimiser
   - ai-citation-scorer
 alternatives: [chatgpt, claude, gemini, notion-ai]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  chat:
+    - "Go to copilot.com and sign in with a Microsoft account. The chat is free with one (checked 26 Oct 2026)."
+    - "Paste a short email thread, or a report you know well, and ask for a summary in three lines."
+    - "Read the summary against the original. Fix anything it left out or got wrong."
+    - "Ask it to draft a reply or an outline from the same text, then edit it yourself."
+  in-app:
+    - "Check that you have Microsoft 365 Personal, Family or Premium. The AI features need one of them (checked 26 Oct 2026)."
+    - "Open a document in Word or a message in Outlook and look for the Copilot option. We did not check where it sits in each app or version."
+    - "For Excel, save the file to OneDrive and turn AutoSave on first (checked 26 Oct 2026)."
+    - "Ask for one small job, such as a summary or a rewrite, and review it before you keep it."
+needs:
+  - "A Microsoft account to sign in."
+  - "For the in-app features: a Microsoft 365 Personal, Family or Premium plan, or a business Copilot plan."
+  - "For Excel: your file saved in OneDrive with AutoSave on."
+  - "The text or file you want help with, pasted in or open in the app."
+example:
+  task: "Summarise a long email thread so you can reply fast."
+  cost: "Free in the Copilot chat, within its usage limits. In Outlook or Word you need a paid plan, from US$9.99 a month for Microsoft 365 Personal."
+  reply: "A short summary of what was said, and a draft reply if you ask for one. Check names, dates and amounts against the thread before you send."
+not_verified:
+  - "Which exact Word, Excel and Outlook features come with which plan. The page lists the apps but does not match features to plans."
+  - "That it summarises threads inside Outlook, or builds formulas and charts in Excel. The page names the apps, not those jobs."
+  - "Business Copilot prices and what they include."
+  - "How much the free chat lets you do each day."
 sources:
   - https://www.microsoft.com/en-us/microsoft-copilot/for-individuals
-  - https://eesel.ai/blog/copilot-pricing
+  - https://copilot.com

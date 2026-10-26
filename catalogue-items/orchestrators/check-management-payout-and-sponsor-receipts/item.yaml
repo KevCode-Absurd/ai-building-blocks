@@ -1,15 +1,13 @@
 slug: check-management-payout-and-sponsor-receipts
 name: Check management payout and sponsor receipts
-summary: Carry a simple vested incentive payout into a sole sponsor annual receipt timeline.
+summary: "Check a management incentive payout from sale proceeds, then see the sponsor's yearly return and cash multiple on its own cash."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false

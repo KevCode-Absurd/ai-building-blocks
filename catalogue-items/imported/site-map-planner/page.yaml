@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It structures many pages into one plan.
 new_slug: site-map-planner
 name: Site map planner
-summary: Describe your site. Get a page hierarchy, navigation, URL plan and
-  internal linking map.
+summary: "Plan your site map: get a page tree, menu plan, URL list and internal link map from a short brief about your business and goals."
 job: build-websites
 headline: Site map planner
-subhead: A site map with page hierarchy, navigation, URL plan and internal
-  links, so visitors find things and search engines follow your structure. It
-  stops a site from growing into a pile of orphan pages.
+subhead: A site map with page hierarchy, navigation, URL plan and internal links, so visitors find things and search engines follow your structure. It stops a site from growing into a pile of orphan pages.
 explain: |
   A site map with page hierarchy, navigation, URL plan and internal links, so visitors find things and search engines follow your structure. It stops a site from growing into a pile of orphan pages.
 
@@ -18,6 +15,10 @@ when:
   - Your menu has grown messy and visitors cannot find pages.
   - You are restructuring and must keep old URLs working.
   - You want internal links that help search rankings.
+not_for:
+  - You want an XML sitemap file for Google. Use an SEO audit tool or your site platform's sitemap setting instead.
+  - You only need to pick a website builder. Compare platforms on their own first, then come back to plan your pages.
+  - You have a one-page site. A simple list of sections on that page is enough.
 you_give:
   - What the business does and who it serves
   - Site goals
@@ -30,7 +31,27 @@ you_get:
   - An internal linking map
   - Redirect notes for moved pages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - "Paste your business brief first: what you do, who you serve and your top 3 goals."
+  - Add your site type and platform. If the site exists, paste your current URL list and say what is broken.
+  - Answer any questions your AI asks, such as your 5 most important pages.
+  - "Read the results in order: page tree, visual sitemap, URL table, navigation spec, then linking plan."
+  - Check that every old URL you must keep has a redirect before you build.
+output_sample:
+  input:
+    - What your business does and who it serves
+    - Your top 3 goals for the site
+    - Your site type and platform
+    - Your current page list or URLs (optional)
+    - The 5 most important pages (optional)
+  output:
+    - name: Page hierarchy
+      contains: A text tree of every page and its URL, from the homepage down to detail pages.
+    - name: Visual sitemap
+      contains: A Mermaid diagram showing how pages connect and which ones sit in the header and footer.
+    - name: URL map table
+      contains: One row per page with its URL, parent page, menu location and priority.
+    - name: Navigation spec
+      contains: The ordered header items, footer columns, sidebar menu if needed, and breadcrumb notes.
+    - name: Internal linking plan
+      contains: Hub pages and their linked pages, cross-section links, and a check for orphan pages.

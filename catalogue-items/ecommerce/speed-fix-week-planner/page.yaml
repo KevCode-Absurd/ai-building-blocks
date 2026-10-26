@@ -1,6 +1,6 @@
 new_slug: speed-fix-week-planner
 name: "Speed fix week planner"
-summary: "Paste your speed problems and store numbers. Get this week's three fixes and what each could earn."
+summary: "Plan your store speed fixes for the week. Paste your problem list and store numbers to get three fixes, ranked, with a range of extra orders."
 job: speed-up-store
 thinking: low
 thinking_why: "It ranks a list by effort and traffic with fixed sums."
@@ -17,6 +17,10 @@ when:
   - "You have a long list of speed problems and one week."
   - "You are briefing a developer."
   - "You need to decide if speed work is worth doing at all."
+not_for:
+  - "Your store already passes Core Web Vitals on mobile: review your offers, page copy or ads first, since more speed work will likely move little."
+  - "You have no speed problem list yet: run a speed report first, or ask a developer for an audit, then come back."
+  - "You want every check in full detail: use the Speed fix ranker instead."
 
 you_give:
   - "The problems (required): from a speed report or an audit."
@@ -34,6 +38,25 @@ how_to_use:
   - "Under it, paste your details: the problems; monthly sessions by page type; conversion rate and average order value; who does the work and for how many hours."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Your list of speed problems from a speed report or audit
+    - Monthly sessions by page type (homepage, collection, product)
+    - Your conversion rate and average order value
+    - Who does the work and for how many hours (optional)
+  output:
+    - name: BASIS
+      contains: Your sessions by page type, conversion rate and order value, so you can see what the sums use.
+    - name: THIS WEEK
+      contains: Your top three fixes with page, type, hours, risk, a low to high gain in orders a month, and who does it.
+    - name: NEXT MONTH
+      contains: Four to eight more fixes, listed in shorter form.
+    - name: PARKED
+      contains: The remaining fixes, each with a reason it can wait.
+    - name: CHECK FIRST
+      contains: A reminder to compare mobile and desktop conversion before you promise any gain.
+    - name: MISSING
+      contains: Anything you did not give, so you can add it and run it again.
 
 how_it_works:
   - title: "Check it is worth it"

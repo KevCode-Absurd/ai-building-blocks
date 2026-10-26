@@ -16,8 +16,8 @@ outputs:
   - {type: audit_report}
 uses: [video-ad-edit-planner, branded-video-captions, pre-launch-ad-checker]
 steps:
-  - {uses: video-ad-edit-planner, note: "Starts the chain: the cut list for your clips."}
-  - {uses: branded-video-captions, note: "Reads the cut you exported and the script, and adds timed captions."}
+  - {uses: video-ad-edit-planner, note: "Starts the chain: the cut list for your clips, with caption windows. You cut and export the video from it."}
+  - {uses: branded-video-captions, note: "Reads the video you exported from step 1's cut list, plus the script and step 1's caption windows, and adds timed captions. Hands the captioned video to step 3."}
   - {uses: pre-launch-ad-checker, note: "Checks the captioned video from the step before and gives a ship or fix verdict."}
 origin: rebuilt
 version: 1.0.0

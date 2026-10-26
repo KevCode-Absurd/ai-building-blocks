@@ -1,83 +1,133 @@
 new_slug: excel-handover-guide-writer
 name: Excel workbook handover writer
-summary: Share your workbook and update steps. Get a guide for its next owner.
+summary: Write a handover guide for an Excel workbook so its next owner knows the inputs, formulas, update steps and risks. Your original file stays unchanged.
 job: work-with-files
 thinking: high
 thinking_why: Native file features, source meaning and check evidence must
   survive the workflow.
 headline: Excel workbook handover writer
-subhead: Share a working workbook and its update process. Get a guide explaining
-  inputs, formulas, refresh steps and known limits. Work on a copy of your file.
-  Get a clear record of what passed and what still needs checking.
+subhead: Give it a workbook you run, plus the steps you follow to update it and who is taking over. It reads the sheets, formulas and links, then writes a guide for the next owner. You get inputs, update steps, risks and open questions, with a record of what was checked.
 explain: >-
-  Share a working workbook and its update process. Get a guide explaining
-  inputs, formulas, refresh steps and known limits.
+  When someone leaves a role, the workbook they ran often goes with a short
+  note: "just update the blue cells and hit refresh." The next owner finds
+  hidden sheets, links to files they cannot open and formulas nobody can explain.
+  An Excel handover guide writes that knowledge down before it is lost.
 
 
-  It works with the actual Excel files and follows a specific method for this
-  task. Your source files stay intact. The method starts by checking what your
-  AI already knows and which files it can read. It asks only for missing facts
-  that change the work.
+  This skill reads the actual workbook rather than the owner's memory. It lists
+  each sheet and what it does. It maps every input to its source, unit and
+  period. It traces the main outputs back to the formulas and inputs behind
+  them, and notes any cell that was typed over by hand. Then it writes the real
+  update sequence, with the point to stop at and how to recover if a refresh
+  fails.
 
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  It does not run macros or refresh data connections unless you say it may. A
+  step it did not run is written as an instruction, not as a tested step. Any
+  fact it cannot confirm goes to a list of open items for you to settle. Your
+  original workbook is never changed.
 when:
-  - Share a working workbook and its update process. Get a guide explaining
-    inputs, formulas, refresh steps and known limits.
-  - The actual workbook, source-file locations supplied with permission, update
-    process, target Excel version and intended next owner.
-  - You need a checked copy while keeping your original files intact.
+  - You are leaving a role or moving teams and someone else must run your monthly workbook.
+  - You took over a workbook with no notes and want it written down before you change anything.
+  - An audit or a manager asks how a report in Excel is built and where its numbers come from.
+  - A workbook breaks every month at the same step and nobody can say why.
+
+not_for:
+  - "You want a cleaned or fixed version of the workbook. Use the Spreadsheet formula auditor or the Messy spreadsheet cleaner."
+  - "You want to compare two versions and see what changed. Use the Excel workbook change reviewer."
+  - "You only want to know if a PivotTable is safe to share. Use the Excel PivotTable refresh planner."
+  - "Your AI cannot open the file and you cannot paste the sheets. It can then only write a plan, and every fact is marked as unchecked."
+
 you_give:
-  - The actual workbook, source-file locations supplied with permission, update
-    process, target Excel version and intended next owner.
-  - The app and file tools your AI can use for the requested work
+  - "The workbook itself, as an upload, or pasted lists of its sheets, key formulas and data connections"
+  - "The steps you follow to update it, even rough ones"
+  - "Where the source files or data come from, and who has access (no passwords)"
+  - "Who the next owner is and how well they know Excel"
+  - "Your Excel version, if you know it (optional)"
+
 you_get:
-  - workbook-handover.md, a dependency inventory and an unchanged source
-    workbook.
-  - A record of source files, changes and check results
-  - Missing facts and any checks that could not run
+  - "A handover guide, workbook-handover.md, written for the next owner"
+  - "A sheet map and a list of every input with its source, unit and period"
+  - "The key outputs traced back to their formulas, with any hand-typed overrides"
+  - "A numbered update sequence with stop points and what to do if a refresh fails"
+  - "A check table and a list of open items, with what was not run"
+
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Upload the workbook if your AI reads files. If it cannot, paste the sheet names, the formulas behind your main outputs and the list of data connections."
+  - "Describe how you update the workbook, step by step, and who will take over."
+  - "Read the guide as the next owner. Check that the sheet map matches what you see, and that each update step is real."
+  - "Settle the open items, such as a source nobody can name, then ask your AI to update the guide."
+  - "Share the guide with the new owner next to the original workbook. Run one update together before you hand over."
+
 how_it_works:
-  - title: Step 1
-    text: 1. Read existing documentation and confirmed context before asking for
-      information. Inspect actual sheets, formulas, names and connections to
-      distinguish observed behavior from the owner’s description.
-  - title: Step 2
-    text: 2. Map each input to its source, unit, period and expected grain. Record
-      access requirements without copying passwords, tokens or private
-      connection strings.
-  - title: Step 3
-    text: 3. Trace important outputs to their owning formulas and inputs. Explain
-      deliberate overrides and the difference between blank, zero and missing
-      data.
-  - title: Step 4
-    text: 4. Write the real update sequence, validation controls, stop conditions
-      and recovery from a failed refresh. Mark unexecuted steps as instructions
-      rather than completed tests.
-  - title: Step 5
-    text: 5. Have the guide point to exact sheets, ranges and safe example files.
-      Preserve the original workbook and leave unresolved dependencies or
-      ownership decisions clearly listed.
+  - title: Reads the workbook
+    text: Looks at the real sheets, formulas, named ranges and connections, and separates what it saw from what the owner said.
+  - title: Maps the inputs
+    text: Records each input's source, unit, period and level of detail, and what access is needed without copying passwords.
+  - title: Traces the outputs
+    text: Follows each important output back to its formulas and inputs, and notes hand-typed overrides and the difference between blank, zero and missing.
+  - title: Writes the update steps
+    text: Writes the order to follow, the checks along the way, when to stop and how to recover from a failed refresh.
+  - title: Marks what was not run
+    text: Writes any step it did not run as an instruction, not as a tested step.
+  - title: Lists what is left open
+    text: Names any dependency or owner decision that is still unresolved.
+
 output_shape: |-
-  FILES
-  workbook-handover.md, a dependency inventory and an unchanged source workbook.
+  WORKBOOK-HANDOVER.MD
+  PURPOSE AND OWNER
+  <what the workbook is for, who runs it, how often>
+
+  SHEET MAP
+  <sheet> | <input, calculation or output> | <what it does>
+
+  INPUTS
+  <input> | <source and who owns it> | <unit and period> | <how it gets in>
+
+  KEY OUTPUTS
+  <output cell or range> | <built from> | <hand-typed overrides>
+
+  UPDATE STEPS
+  1. <step> | <check> | <stop if> | <if it fails>
 
   SOURCE MAP
-  <file and version> | <sheet, cell or slide> | <what it supports>
+  <file and version> | <sheet, cell or range> | <what it supports>
 
   CHECKS
   <check> | <passed, failed or not run> | <evidence>
 
   OPEN ITEMS
   <missing fact or unsupported check> | <next action>
+
+output_sample:
+  input:
+    - "Your workbook, or pasted sheet names, key formulas and data connections"
+    - "The steps you follow to update it"
+    - "Where the data comes from, and who takes over"
+    - "Your Excel version (optional)"
+  prerequisites:
+    - "An AI that can read an uploaded Excel file, or the pasted lists above"
+  output:
+    - name: "PURPOSE AND OWNER"
+      contains: "What the workbook is for, who runs it and how often it is updated."
+    - name: "SHEET MAP"
+      contains: "Each sheet marked as input, calculation or output, with what it does."
+    - name: "INPUTS"
+      contains: "Each input with its source, owner, unit, period and how it gets into the file."
+    - name: "KEY OUTPUTS"
+      contains: "The main outputs traced to their formulas, with any hand-typed overrides."
+    - name: "UPDATE STEPS"
+      contains: "Numbered steps with a check, a stop point and a recovery for each."
+    - name: "SOURCE MAP"
+      contains: "Which file, sheet and range supports each statement in the guide."
+    - name: "CHECKS"
+      contains: "Each check marked passed, failed or not run, with the evidence."
+    - name: "OPEN ITEMS"
+      contains: "What is still unknown or untested, and who should settle it."
+
+next: [excel-workbook-change-reviewer, spreadsheet-formula-auditor, excel-pivot-refresh-planner]
+
 tweaks:
   - what: Your source files
     how: The actual workbook, source-file locations supplied with permission, update
@@ -118,3 +168,23 @@ tests:
       execution not run.
   - input: An output depends on a missing external workbook
     expected: List the exact unresolved dependency and affected outputs.
+
+works_best_with:
+  tools:
+    - name: An AI that can read Excel files
+      why: Lets it inspect the real sheets, formulas and connections, so the guide is checked, not guessed.
+    - name: Microsoft Excel
+      why: Needed to refresh connections and test the update steps. Without it, steps stay marked as not run.
+  inputs:
+    - Any notes the previous owner left, even rough ones.
+    - A short list of the three outputs people actually use.
+
+terms:
+  - term: Named range
+    meaning: A cell or group of cells given a name, so formulas can use the name instead of the address.
+  - term: Data connection
+    meaning: A link from the workbook to data in another file or system, which Refresh All can update.
+  - term: Override
+    meaning: A number typed over a formula, so the cell no longer updates by itself.
+  - term: Refresh
+    meaning: Pulling the latest data from a source into the workbook.

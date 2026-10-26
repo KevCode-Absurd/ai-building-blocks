@@ -16,6 +16,31 @@ use_cases:
   - "Plan wayfinding for a building, venue or event"
   - "Check a design for unwanted associations with the past"
   - "Lead a design team so people own their part and still fit the whole"
+not_for:
+  - "You need a screen, app or post-1991 brand: he has no record there, so use a current UX or product designer."
+  - "You want bold, expressive type and collage, not a shared rule set: use David Carson."
+  - "You want witty one-off visual ideas, not a system for a whole team: use Alan Fletcher."
+output_sample:
+  input:
+    - Your brand, venue or event, and what it is for
+    - Who will see it and where
+    - Your practical limits, such as team size or budget
+    - The colours, signs or rules you use now (optional)
+  output:
+    - name: Purpose and feeling
+      contains: The atmosphere the brand or event should have, stated before any design choices.
+    - name: What to avoid
+      contains: Colours, symbols and looks to rule out, with the reason for each.
+    - name: Colour choices
+      contains: Colours picked for what they mean to the people who will see them.
+    - name: Core rules
+      contains: A short list of firm rules for colour, type, format and grid.
+    - name: Signs and wayfinding plan
+      contains: Simple figures on one grid, one per service, and where visitors may get lost.
+    - name: Where to play and where to hold
+      contains: Where the team may use judgment and where the rules must stay fixed.
+    - name: Who it serves
+      contains: A check on whether the design makes ordinary life more reasonable or just more decorated.
 seats:
   - {seat: "Systems and signs", asks: "What are the few rules for colour, type and grid that make every piece belong to one family?"}
   - {seat: "Atmosphere first", asks: "What feeling should people have here, and which colours and symbols would wreck it?"}

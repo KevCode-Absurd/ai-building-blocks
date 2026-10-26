@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds clear rating rules from the skills you need.
 new_slug: interview-scorecard-builder
 name: Interview scorecard builder
-summary: Give it your interview stages. Get scorecards, question banks, a phone
-  screen script and a rating guide.
+summary: Build an interview scorecard for each hiring stage. Get rating guides, questions with probes and a phone screen script that keep ratings tied to evidence.
 job: hire-people
 headline: Interview scorecard builder
-subhead: Interviewers who rate on evidence instead of gut feel. Give it your
-  interview stages and the role. It builds one scorecard per stage, each with
-  three to five skills.
+subhead: Interviewers who rate on evidence instead of gut feel. Give it your interview stages and the role. It builds one scorecard per stage, each with three to five skills.
 explain: |
   Interviewers who rate on evidence instead of gut feel. Give it your interview stages and the role. It builds one scorecard per stage, each with three to five skills. Every skill gets a plain definition, what a 1 to 5 rating looks like in real behaviours, two or three questions with follow-up probes, and a field to write down what was observed.
 
@@ -18,6 +15,10 @@ when:
   - You are setting up interviews for a new role and need forms fast.
   - Hiring debriefs end in arguments because nobody wrote down evidence.
   - You want one consistent rating scale across all your interviewers.
+not_for:
+  - "You hire one person and have no panel: write the phone screen script on its own, or ask a colleague to sit in."
+  - "You want to judge a CV or application before any interview: use a simple checklist of the must-have skills from the job ad."
+  - "You need the Job Match Score: it is only worked out inside Teamtailor, so this page can only set up the kits for it."
 you_give:
   - Your interview stages for the role
   - The role's must-have skills and values
@@ -30,7 +31,32 @@ you_get:
   - A phone screen script
   - A debrief checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Add the role, your interview stages, and the must-have skills and values.
+  - Add your own rating scale and phone screen topics if you have them.
+  - Ask for the scorecards, then the phone screen script.
+  - Read each rating guide and check it fits your role before you share it with interviewers.
+  - Ask for teamtailor-setup.md only if you use Teamtailor.
+output_sample:
+  input:
+    - Your interview stages for the role
+    - The role's must-have skills and company values
+    - Your rating scale, if you have one (optional)
+    - The phone screen topics (optional)
+  prerequisites:
+    - Teamtailor, a paid hiring tool, only if you want the teamtailor-setup.md step. The scorecards work without it.
+  output:
+    - name: Scorecards
+      contains: One scorecard per interview stage, each with three to five skills and a stage rating from 1 to 5.
+    - name: Competency rubric
+      contains: A plain definition of each skill and what each rating looks like in real behaviour.
+    - name: Questions with probes
+      contains: Two or three questions per skill, each with follow-up probes and a field to note what you saw.
+    - name: Gut feeling field
+      contains: A separate box for instinct, so it never outweighs the evidence.
+    - name: Screening Guide
+      contains: A timed phone screen script with a pre-screen checklist, questions, role pitch and logistics.
+    - name: Calibration Exercises
+      contains: Short exercises that help interviewers rate the same way.
+    - name: teamtailor-setup.md
+      contains: Steps to set up the kits and stages in Teamtailor, if you use it.

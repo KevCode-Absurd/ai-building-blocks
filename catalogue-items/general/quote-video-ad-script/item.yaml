@@ -1,7 +1,7 @@
 slug: quote-video-ad-script
 renamed_from: video-ad-script-writer-from-customer-quotes
 name: "Video ad script writer from customer quotes"
-summary: "Paste real customer quotes and facts. Get a sourced video script, checked openings and a first test plan."
+summary: "Write a video ad script from real customer quotes: nine beats with a source for every line, checked openings and a first test plan."
 category: general
 boards: [ecommerce]
 type: skill
@@ -20,6 +20,8 @@ inputs:
   - type: brand_brain
     required: false
   - type: angle_library
+    required: false
+  - type: plan
     required: false
 outputs:
   - {type: script}

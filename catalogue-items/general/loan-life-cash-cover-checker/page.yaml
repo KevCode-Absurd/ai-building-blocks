@@ -1,55 +1,115 @@
 new_slug: loan-life-cash-cover-checker
 name: Loan life cash cover checker
 headline: Loan life cash cover checker
-summary: A discounted loan-life cash cover and cushion
+summary: Check whether three years of cash cover what you owe. Get the loan life cover ratio and the cash cushion above the loan balance.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A discounted loan-life cash cover and cushion. Share three annual qualifying debt-service cash amounts, current loan balance and agreement-defined loan-life discount rate.
+subhead: Give it the cash you will have to pay the loan in each of three years, the loan balance today and the discount rate your loan agreement sets. It brings that cash back to today's value. You get the loan life cover ratio and the cushion above the balance.
 explain: |-
-  A discounted loan-life cash cover and cushion.
+  A lender wants to know if the cash a project makes is enough to repay the loan. The loan life cover ratio, or LLCR, answers that in one number. It is the value today of the cash left to repay the loan, divided by the loan balance. This loan life cash cover checker gives you that ratio and the cushion in money.
 
-  Project loan life coverage. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+  Only cash the agreement counts is included, and only cash that arrives before the loan ends. Each year's cash is brought back to today at the discount rate written in the loan agreement. That is not your own cost of capital or a valuation rate. The ratio is the discounted cash over the opening loan balance. The cushion is the same two numbers subtracted, so a negative cushion is a shortfall.
+
+  Practice numbers: cash of 110, 121 and 133.10 over three years at 10% is worth 100 each year today, or 300. A loan balance of 240 gives a cover ratio of 1.25 and a cushion of 60. If the loan were 320, the ratio would be 0.94 and the cushion minus 20.
 when:
-  - You need a discounted loan-life cash cover and cushion.
-  - You work on project loan life coverage and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender or your board asks if the cash from a project covers the loan.
+  - You are checking a loan covenant that is set on loan life cover.
+  - You want to see how much a lower cash forecast cuts the cushion.
+  - You are reading a loan agreement and need to apply its discount rate to a cash forecast.
+not_for:
+  - "You want to test cash against each year's repayment: use the Debt service covenant headroom checker."
+  - You want to value the project or the shares. The discount rate here comes from the loan agreement, not from a valuation.
+  - "You first need to work out how much cash is really available: use the Project cash available bridge."
+  - You need a credit decision. This skill checks one ratio. It does not approve a loan.
 you_give:
-  - Three annual qualifying debt-service cash amounts, current loan balance and agreement-defined loan-life discount rate.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The cash you will have to repay the loan in each of the next three years (from your forecast and the loan agreement's definition of qualifying cash)
+  - The loan balance today (from your lender statement)
+  - The discount rate your loan agreement sets for this test (from the agreement)
+  - The reporting date, the currency and the units, such as USD thousands
+  - The date the loan ends, if it is within three years (optional)
 you_get:
-  - A discounted loan-life cash cover and cushion.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The value today of the cash that can repay the loan
+  - The loan life cover ratio
+  - The cash cushion above the loan balance, shown as plus or minus
+  - A check that no cash after the loan end is counted
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste the three years of qualifying cash, the loan balance, the discount rate from the agreement, the reporting date and the units."
+  - Say which cash the agreement counts. If you are not sure, paste that clause and let the AI quote it back.
+  - Check the ratio yourself. It is the discounted cash divided by the loan balance. Cash arrives at the end of each year.
+  - Read MISSING and CHECKS MISSED before you use any figure.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
-    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
-  - title: 2. Confirm the remaining loan horizon and remove cash beyond maturity or excluded by the agreement
-    text: Confirm the remaining loan horizon and remove cash beyond maturity or excluded by the agreement.
-  - title: 3. Discount end-year qualifying cash at the supplied financing-definition rate; keep valuation WACC and equity returns out of the calculation
-    text: Discount end-year qualifying cash at the supplied financing-definition rate; keep valuation WACC and equity returns out of the calculation.
-  - title: 4. Divide present qualifying cash by opening loan balance and show the signed currency cushion over debt
-    text: Divide present qualifying cash by opening loan balance and show the signed currency cushion over debt.
+  - title: Maps your sources
+    text: Notes the dates, contract definitions, period ends, currency and units, and flags any source that is missing.
+  - title: Fixes the loan horizon
+    text: Confirms how long the loan has left and removes cash that arrives after the loan ends or that the agreement leaves out.
+  - title: Discounts the cash
+    text: Brings each year's cash back to today at the rate from the loan agreement. It keeps valuation rates and equity returns out.
+  - title: Finds the ratio and cushion
+    text: Divides the discounted cash by the opening loan balance and subtracts the two to show the cushion.
+  - title: Marks the gaps
+    text: Writes MISSING for any number you did not give and lists any check it could not run. It never fills a gap with zero.
 output_shape: |-
-  A discounted loan-life cash cover and cushion.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Discounted cash <amount> | Loan balance <amount> | Cover ratio <number> | Cushion <amount> (negative means short)
+
+  CASH BY YEAR
+  <one row per year: qualifying cash | discount factor | value today>
+
+  SCOPE AND SOURCES
+  <reporting date, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <cash each year and what it includes, loan balance, agreement discount rate, loan end date, timing>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, and the check that no cash after loan end is included>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Qualifying cash for each of three years
+    - The loan balance today
+    - The discount rate set by the loan agreement
+    - The loan end date (optional)
+  prerequisites:
+    - The loan agreement clauses that define qualifying cash and the discount rate
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The discounted cash, the loan balance, the loan life cover ratio and the cushion above the loan.
+    - name: CASH BY YEAR
+      contains: One row per year with its cash, discount factor and value today.
+    - name: SCOPE AND SOURCES
+      contains: The reporting date, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that no cash after loan end is counted.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Actual records, contractual terms and scenarios remain distinguishable.
+  - what: A lower cash forecast
+    how: Cut one year's cash. The ratio and cushion fall, and the year rows show where.
+  - what: A different discount rate
+    how: Use the rate from the agreement. A higher rate lowers the value today and the ratio.
+  - what: A larger loan balance
+    how: Change the balance alone. The discounted cash stays put and the cushion shrinks.
 judge:
   - Actual records, contractual terms and scenarios remain distinguishable.
   - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
@@ -64,15 +124,24 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The loan agreement pages that define qualifying cash, the loan end date and the discount rate
+    - Your cash forecast for each of the three years
+    - A named reviewer and the reporting date
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Loan life cover ratio (LLCR)
+    meaning: The value today of cash available to repay a loan, divided by the loan balance.
+  - term: Qualifying cash
+    meaning: The cash the loan agreement allows you to count when it tests cover.
+  - term: Discount rate
+    meaning: The rate used to bring future cash back to today's value.
+  - term: Cushion
+    meaning: Discounted cash minus the loan balance. A negative number means a shortfall.
+  - term: Loan life
+    meaning: The time left until the loan has to be repaid.

@@ -1,55 +1,114 @@
 new_slug: currency-forward-settlement-checker
 name: Currency forward settlement checker
 headline: Currency forward settlement checker
-summary: A payable and forward settlement reconciliation
+summary: Check a currency forward at settlement. Get the locked payment, the gain or loss against spot, the foreign amount left to buy and total cash.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A payable and forward settlement reconciliation. Share a confirmed forward buying foreign currency, notional, contractual forward rate, same-date payable, settlement spot and fees.
+subhead: Give it a confirmed forward contract to buy foreign currency, the bill you owe in that currency, the spot rate on settlement day and any fees. It works out what you pay under the forward, what the same amount would have cost at spot, and what is still left to pay. Missing numbers are marked, never set to zero.
 explain: |-
-  A payable and forward settlement reconciliation.
+  A company owes a bill in a foreign currency. To fix the cost, it signs a forward: an agreement to buy a set amount of that currency on a set date at a set rate. When the day comes, three questions follow. How much did the forward cost? Was that better or worse than buying at the spot rate that day? And is the whole bill covered?
 
-  Treasury contract settlement. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  This currency forward settlement checker answers them with plain sums. The locked payment is the foreign amount times the forward rate. The same amount at the settlement spot rate gives the comparison, so you see the gain or loss from having the forward. If the bill is bigger than the forward, the leftover foreign units are bought at spot, and fees are added. Total cash must tie back to locked payment plus leftover cost plus fees.
+
+  It is an arithmetic check on a settled contract, not a view on where rates will go. It works only from the contract terms and rates you give it. It never fetches a rate, and it asks you to confirm which way each rate is quoted before it uses it.
 when:
-  - You need a payable and forward settlement reconciliation.
-  - You work on treasury contract settlement and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A forward you signed has reached its settlement date and you need the cash cost, tied to the contract.
+  - Your accountant asks how much the forward saved or cost compared with paying at spot.
+  - The bill is bigger than the forward and you need to know how much foreign currency is still uncovered.
+  - You are checking a bank's settlement advice against the contract terms.
+not_for:
+  - The forward has not settled yet and you want its current fair value. This does not give one.
+  - You want collateral, close-out or hedge accounting treatment. Take those to your accountant or treasury adviser.
+  - Your forward sells foreign currency instead of buying it. This version covers buying only.
+  - You want to net several currency exposures first. Use the Currency exposure netting checker.
+  - You want to compare a whole cash forecast with what happened. Use the Treasury forecast backtest checker.
 you_give:
-  - A confirmed forward buying foreign currency, notional, contractual forward rate, same-date payable, settlement spot and fees.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The forward notional, which is the foreign amount you agreed to buy (from the confirmation)
+  - The forward rate, with how it is quoted, such as USD per EUR (from the confirmation)
+  - The bill you owe in the foreign currency, due on the same date (from the invoice)
+  - The spot rate on the settlement date, with how it is quoted (from your bank or a rate source you trust)
+  - Fees charged on the contract (from the bank's advice)
+  - Your reporting currency and the units, such as USD in thousands
+  - Your own spreadsheet of the contract (optional)
 you_get:
-  - A payable and forward settlement reconciliation.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The locked payment you make under the forward, in your reporting currency
+  - The cash gain or loss against buying the same amount at spot
+  - The foreign amount still unpaid, or a note that you bought more than you owe
+  - Total cash for the bill, with fees, tied back to its parts
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste the forward confirmation details and the bill. Say how each rate is quoted, such as USD per EUR, and give the settlement date, currency and units."
+  - Give the spot rate for the settlement date and say where you got it. If you do not have one, the comparison is marked MISSING.
+  - "Check one line yourself: locked payment is the foreign amount times the forward rate. For 100 at 1.10 that is 110."
+  - Read MISSING and CHECKS MISSED before you pass any figure on. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Read buy/sell direction, settlement date, foreign notional, reporting-currency-per-foreign-unit rate and actual contract fees
-    text: Read buy/sell direction, settlement date, foreign notional, reporting-currency-per-foreign-unit rate and actual contract fees.
-  - title: 3. For a buy-foreign forward, compute locked reporting-currency payment and compare with the same notional at settlement spot
-    text: For a buy-foreign forward, compute locked reporting-currency payment and compare with the same notional at settlement spot.
-  - title: 4. Apply bought currency to the payable, show residual foreign units and reconcile total reporting cash to locked plus residual settlement and fees
-    text: Apply bought currency to the payable, show residual foreign units and reconcile total reporting cash to locked plus residual settlement and fees.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. A rate with no stated direction is queried before use.
+  - title: Reads the contract
+    text: Takes the direction (buy), settlement date, foreign amount, forward rate and fees from the confirmation you gave.
+  - title: Works out the locked payment
+    text: Multiplies the foreign amount by the forward rate. This is what you pay under the forward.
+  - title: Compares with spot
+    text: Multiplies the same amount by the settlement spot rate. The difference is the cash gain or loss from the forward.
+  - title: Covers the bill
+    text: Takes the forward amount off the bill. Any foreign units left are priced at spot. A negative balance means you bought more than you owe, and it is shown on its own line.
+  - title: Ties the total
+    text: Total cash must equal locked payment plus the cost of the leftover units plus fees. Gaps are marked MISSING.
 output_shape: |-
-  A payable and forward settlement reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Locked payment <amount> | Gain or loss against spot <amount> | Foreign amount left <units> | Total cash <amount>
+
+  SCOPE AND SOURCES
+  <settlement date, reporting currency, units; source and date for each input; how each rate is quoted>
+
+  INPUTS AND ASSUMPTIONS
+  <forward notional, forward rate, bill, settlement spot, fees>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <each sum with its figures; total cash ties to locked payment plus leftover cost plus fees>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The forward confirmation, with the foreign amount and the forward rate
+    - The bill you owe in the foreign currency
+    - The spot rate on settlement day and the fees
+    - Your reporting currency and units
+  prerequisites:
+    - How each rate is quoted, such as USD per EUR
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Locked payment, gain or loss against spot, foreign amount left and total cash.
+    - name: SCOPE AND SOURCES
+      contains: The settlement date, currency and units, with the source and date of each input and how each rate is quoted.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each figure you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum shown, and the check that total cash ties to its parts.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every material input has a source location, date, unit, sign and approval status.
+    how: Use the same reporting currency and units for every figure. Say them once at the start.
+  - what: Rate direction
+    how: Write each rate as reporting currency per one foreign unit. If your source quotes the other way, say so and let the AI flip it.
+  - what: Fees
+    how: Say whether fees are in the reporting currency or the foreign currency, so they are added in the right units.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
@@ -64,15 +123,27 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The forward confirmation from your bank
+    - The supplier invoice in the foreign currency
+    - The bank's settlement advice with the fees
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Currency forward
+    meaning: An agreement to buy or sell a set amount of a currency on a set date at a rate fixed today.
+  - term: Spot rate
+    meaning: The exchange rate for buying a currency right now, here taken on the settlement date.
+  - term: Notional
+    meaning: The foreign currency amount the forward contract covers.
+  - term: Overhedge
+    meaning: Buying more foreign currency under the forward than you owe.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+  - term: Illustrative figures
+    meaning: Practice numbers that show how the sums work. They are not a real contract.

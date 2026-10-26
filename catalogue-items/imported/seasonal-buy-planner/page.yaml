@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It shapes a demand curve, then splits the buy.
 new_slug: seasonal-buy-planner
 name: Seasonal buy planner
-summary: Give it last season sales. Get how much to buy early, how much to hold
-  back, and when to mark down.
+summary: "Plan your seasonal buy: give it last season's sales and targets. You get early and reserve order amounts, reorder triggers and markdown timing."
 job: plan-supply-chain
 headline: Seasonal buy planner
-subhead: "A season buy plan that says how much to order up front, how much to
-  keep in reserve, and when to mark items down. It balances two costs: running
-  out of winners and being stuck with leftovers."
+subhead: "A season buy plan that says how much to order up front, how much to keep in reserve, and when to mark items down. It balances two costs: running out of winners and being stuck with leftovers."
 explain: |
   A season buy plan that says how much to order up front, how much to keep in reserve, and when to mark items down. It balances two costs: running out of winners and being stuck with leftovers.
 
@@ -18,6 +15,10 @@ when:
   - Last season ended with too much stock and heavy markdowns.
   - You want to know how much to hold back for reorders after launch.
   - You need a markdown calendar for the end of the season.
+not_for:
+  - "You are launching new products with no past sales: ask your AI for a demand forecast first, or use a similar past item as a guide."
+  - "You need to split stock across stores: use a store allocation plan, which this plan does not cover."
+  - "You want a forecast for next week or next month, not a whole season: use a simple forecast in a spreadsheet."
 you_give:
   - Last season's weekly sales by style
   - Sell-through and markdown history
@@ -30,7 +31,35 @@ you_get:
   - Reorder and cut triggers
   - A markdown timing plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool. Use Claude, ChatGPT or Gemini. For the code tests, pick one that can run Python.
+  - Paste the skill text from this page into the chat.
+  - Add last season's weekly sales sheet. Use one row per style per week, with units sold, price, stock on hand and markdowns.
+  - Answer its questions about your category, season length, budget, margin targets and supplier lead times.
+  - Check the plan. The code uses default guesses for demand swings and markdown depth. Swap in your own figures and ask it to run again.
+  - Use the reorder and cut triggers at week 4 and the markdown plan at week 8.
+output_sample:
+  input:
+    - Last season's weekly sales by style
+    - Sell-through and markdown history
+    - Sales, margin and budget targets
+    - Season dates and supplier lead times
+    - Your mix of carry-over and new styles (optional)
+  prerequisites:
+    - An AI that can run Python code, if you want the buy tests and simulations run for you
+  output:
+    - name: Executive Summary
+      contains: The season, total buy, sales target, margin target and number of styles in one short view.
+    - name: Financial Plan
+      contains: Buy at cost and retail, markup, sales plan, sell-through goal, markdown budget and margin.
+    - name: Category Mix
+      contains: Buy amount, share, style count, average price and strategy for each category.
+    - name: New vs. Carry-Over
+      contains: How the buy splits between proven styles and new ones, with the risk of each.
+    - name: Weekly Receipt Flow
+      contains: When stock should arrive across the season and what each delivery is for.
+    - name: Risk Assessment
+      contains: The main risks, how likely and costly each is, and how to cut them.
+    - name: Success Metrics
+      contains: Sales, sell-through, markdown and margin checks for week 4, week 8 and season end.
+    - name: Action Plan
+      contains: Dated tasks with an owner, from final orders to clearance markdowns.

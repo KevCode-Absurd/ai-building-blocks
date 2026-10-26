@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: feared-outcome-image-ad-maker
 name: "Feared outcome image ad maker"
-summary: "Paste your story ad and buyers' fear. Get a quiet photo prompt and the step to offer."
+summary: "Turn your story ad and the fear buyers name into a feared outcome image ad: one quiet paperwork photo prompt, plus the step your copy must offer."
 job: make-image-ads
 
 headline: "Feared outcome image ad maker"
@@ -14,9 +14,14 @@ explain: |
   It starts with a gate. The fear must be one your buyers state themselves, the story must offer a step the reader can take with a fact behind it, and the fear can't be about illness or the body. Then it turns the fear into its paperwork: the one ordinary object that would arrive if it came true, such as a card statement, a repair quote or a renewal letter. It places that object where post lands, among real clutter, and keeps the scene calm.
 
 when:
-  - Your buyers name a feared next step in their own words (the price jump after the first order, the repair quote, the lost deposit).
-  - A picture of today's problem isn't moving people, and the worry about later is what makes them act.
+  - Your buyers name a feared next step in their own words, such as a price jump, a repair quote or a lost deposit.
+  - A picture of today's problem isn't moving people, and the worry about what comes next is what makes them act.
   - Your story already offers a clear step the reader can take.
+  - The fear is about money, bills or paperwork, not health. For how daily life changed, use the Empty room image ad maker.
+not_for:
+  - "Your buyers fear illness, injury or something about the body: use the Empty room image ad maker, which shows how daily life changed."
+  - "You only want to show the problem as it is today: use the Problem moment image ad maker."
+  - "You have no story ad yet, or it offers no step to take: write the story first, because a fear with no way out makes people scroll away."
 
 you_give:
   - Your approved story ad and the worry in it
@@ -36,6 +41,31 @@ how_to_use:
   - Add the feared next step exactly as your buyers say it, with its source.
   - Say what step the story offers and the fact behind it, if the story doesn't make it obvious.
   - Read the "step for the copy" line and check your story's first lines deliver it.
+output_sample:
+  input:
+    - Your approved story ad and the worry in it
+    - What your buyers fear happens next, in their words, with its source
+    - The step your story offers and the fact that backs it
+    - Outcomes your brand may never suggest (optional)
+  output:
+    - name: GATE
+      contains: "Whether the fear is your buyers', the story offers a doable step, and the fear is safe to show: pass or stop."
+    - name: SCENE
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: THE OBJECT
+      contains: The one piece of paperwork and the fear it stands for.
+    - name: WHERE IT LANDS
+      contains: The place, the clutter, the light, and whether a hand shows at the edge.
+    - name: LINE UNDER IMAGE
+      contains: A short caption of about 27 characters, with its type and exact character count.
+    - name: STEP FOR THE COPY
+      contains: What the first lines of your story must offer.
+    - name: FLAGS
+      contains: What the copy must not promise, and anything the AI inferred.
+    - name: IMAGE PROMPT
+      contains: A 60 to 120 word prompt ready to paste into an image tool.
+    - name: CHECKS MISSED
+      contains: Any of the six checks still failing, or none.
 
 how_it_works:
   - title: Sets the house rules

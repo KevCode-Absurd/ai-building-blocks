@@ -1,6 +1,6 @@
 new_slug: monthly-search-console-keeper
 name: Monthly Search Console keeper
-summary: Give it your Search Console export each month. Get pages to push, thin pages to fix and the next posts to write.
+summary: Check your monthly Search Console export to see which pages to push, which thin pages to fix and which posts to write next.
 job: get-found-in-search
 thinking: high
 thinking_why: It ranks pages by value, sorts each problem into rewrite, fix or expand, and judges last month's pushes against slow-moving data. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your site gets visitors from search and nobody looks at the data more than twice a year.
   - You have pages stuck just off the first page and do not know which ones are worth the push.
   - You plan posts by instinct and want them to come from what people search for.
+not_for:
+  - "You have only one month of data or no search traffic yet: run a one-off review of your Search Console export by hand, or ask a friendly SEO for a quick look."
+  - "You want the AI to edit your site, submit pages or buy links: it will not. Make those changes yourself or ask your web person."
+  - "You only need a new post written from one keyword: ask your AI for a plain outline, or use the Keyword to post outline writer."
 you_give:
   - Last month's Search Console export with queries, pages, clicks, impressions and position
   - Your site address and page list
@@ -33,6 +37,31 @@ how_to_use:
   - Tell it what a visitor is worth once. It saves it.
   - Read the quick wins. Make the changes you agree with on your site, then tell the agent which were done.
   - Run it again on the second Monday of next month. It judges what you changed.
+output_sample:
+  input:
+    - Last month's Search Console export with queries, pages, clicks, impressions and position
+    - Your site address and page list
+    - What a sign-up or sale is worth to you (advised)
+    - A read-only connection to your site (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI that can keep files between months, such as Claude Code, to hold the page and post logs
+    - The same Search Console date range each month
+  output:
+    - name: Last month
+      contains: Clicks and impressions against the month before, and how many pushed pages moved, stayed the same or fell.
+    - name: Basics first
+      contains: Duplicate titles, a missing sitemap and dead links to fix before any new writing. Runs once a quarter.
+    - name: Quick wins
+      contains: At most three pages, each with position, clicks, the action (rewrite, fix or expand) and what it is worth.
+    - name: Thin pages
+      contains: Pages that are empty, short or get views and no clicks, with the searches each should answer.
+    - name: Rewrites
+      contains: An answer-first rewrite for any page where the writing is the problem.
+    - name: Posts to write
+      contains: Two or three outlines, each with its target search, intent, headings and what it must cover.
+    - name: Files and missing
+      contains: Each step's saved file, the updated pages.md and posts.md logs, and every MISSING line.
 how_it_works:
   - title: Read last month
     text: Compares each pushed page with the month before and marks it moved, no change or fell.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must find a design fix, not just a reminder.
 new_slug: mistake-proofing-designer
 name: Mistake-proofing designer
-summary: Point it at code, a form or a process. Get changes that make the wrong
-  move impossible or loud.
+summary: Find what keeps going wrong in your code, form or process. Get mistake-proofing fixes that make the wrong move impossible or loud.
 job: test-and-fix-code
 headline: Mistake-proofing designer
-subhead: Changes to your code, form or process that make the wrong move
-  impossible, or make it loud the moment it happens. Point it at something that
-  keeps going wrong and you get fixes that do not rely on anyone remembering.
+subhead: Changes to your code, form or process that make the wrong move impossible, or make it loud the moment it happens. Point it at something that keeps going wrong and you get fixes that do not rely on anyone remembering.
 explain: |
   Changes to your code, form or process that make the wrong move impossible, or make it loud the moment it happens. Point it at something that keeps going wrong and you get fixes that do not rely on anyone remembering.
 
@@ -18,6 +15,10 @@ when:
   - You handle money, permissions or deletion and failures are silent.
   - You are designing an API that callers keep misusing.
   - You want to find what is easy to get wrong in a module.
+not_for:
+  - "You have a one-off bug with no repeat: fix it and add a normal test, or ask a teammate for a code review."
+  - "You need proof that a design is correct: use a security review, a domain expert or a full test plan."
+  - "You want a simple reminder or checklist: write a doc, but know it is only training and will fade."
 you_give:
   - The code, form or process to harden
   - The mistake that keeps happening
@@ -28,7 +29,24 @@ you_get:
   - Concrete changes such as types or constraints
   - A note on which fixes rely only on memory
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste the code, form or process that keeps going wrong. Say what mistake keeps happening.
+  - Add how costly the mistake is, if you know (optional).
+  - Read the hazards and fixes. Your AI will propose changes first and wait for your go-ahead.
+  - Approve the fixes you want, then ask your AI to write them. Check each one against real callers before you ship.
+output_sample:
+  input:
+    - The code, form or process you want to harden
+    - The mistake that keeps happening
+    - How costly it is when it happens (optional)
+  output:
+    - name: Hazard list
+      contains: Each mistake someone could make, what happens when they do, whether it is silent, and what stops it today.
+    - name: Three lens check
+      contains: Whether the wrong thing can fit, a wrong or incomplete set can pass, or steps can run in the wrong order.
+    - name: Proposed device and rung
+      contains: The fix for each hazard, and whether it is control, warning or detection.
+    - name: Tradeoff note
+      contains: Why a higher rung was not taken, such as the language limit or the number of callers it would break.
+    - name: Docs-only flag
+      contains: Any fix that relies only on someone remembering, marked as not a real mistake-proofing device.

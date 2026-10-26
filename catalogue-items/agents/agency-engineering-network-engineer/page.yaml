@@ -1,0 +1,159 @@
+name: Network Engineer agent
+summary: "Find why traffic fails on Cisco, Juniper or Palo Alto gear. Get the path, the likely cause, exact commands to run and a change plan with rollback."
+headline: Network Engineer agent
+subhead: Paste your show-command output, your config and what is failing. It follows the packet path, separates facts from guesses, and names the layer that is failing. You get the next commands to run and, for any change, pre-checks, validation and a rollback.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  When a network breaks, guessing makes it worse. This agent reads what your
+  devices report, then works out where the traffic stops. It checks the routing
+  table and the real forwarding path separately, because a route can exist
+  while packets still don't flow. It covers Cisco IOS and IOS-XE, Cisco ASA
+  and FTD, Juniper Junos and Palo Alto PAN-OS.
+
+
+  It follows the Network Engineer profile. Every change comes with the impact,
+  the commands that prove it worked, and the exact way to undo it. It writes
+  commands for your platform's own syntax. It asks you to keep a console or
+  out-of-band way in before you touch routing, access lists or zones. It tells
+  you which commands are safe to run and which need a maintenance window.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its targets
+  describe the intended work. They are not measured results from AI Blocks.
+  Your AI reads output and writes commands. It can't log in to your devices.
+  You run every command yourself.
+when:
+  - Users can't reach a site or app, and you have a traceroute, show output or logs.
+  - A BGP or OSPF neighbour won't come up, or routes are missing.
+  - A firewall rule or NAT isn't doing what you expect on Cisco ASA, Palo Alto or Junos.
+  - You must change a router or firewall in a maintenance window and need steps and a rollback.
+not_for:
+  - Your equipment is Huawei, H3C, Ruijie or Hillstone. Use the China Network Engineer agent.
+  - The whole service is down and you need to run the response. Use the Incident Response Commander agent.
+  - You need to log in and change live devices for you. This agent only writes the plan and commands. You run them.
+you_give:
+  - The problem in one line, with the source and destination addresses
+  - Make, model and software version of each device on the path
+  - Output of the show commands you have already run, with passwords and keys removed
+  - A sketch or list of the path from source to destination (optional)
+  - Your change window, and whether you have a console or out-of-band way in
+you_get:
+  - The packet path, and which layer is failing, with the evidence
+  - Facts kept apart from guesses
+  - The exact next commands to run on your platform
+  - For a change, pre-checks, steps in order, validation commands and rollback
+  - The impact of the change, and what else it could touch
+  - A list of what is still missing
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe the problem with the source and destination addresses. Name each device's make and software.
+  - Paste your show output. Remove passwords, SNMP strings, keys and pre-shared secrets first.
+  - Run only the next commands it lists, and paste the new output back. It narrows the cause each round.
+  - For a change, check the rollback and the console plan before you start. Read the impact line twice.
+  - Run the validation commands after the change and keep the output with your change record.
+how_it_works:
+  - title: Read the intent and the topology
+    text: It finds the sites, VLANs, zones, routing protocols and NAT points involved, and asks once for what is missing.
+  - title: Capture the state first
+    text: It lists what to record before any change, such as configs, neighbour status, route tables, counters and sessions.
+  - title: Isolate the fault
+    text: It separates cabling and links, routing, firewall policy and NAT, DNS, the application and one-way paths.
+  - title: Check control plane and forwarding
+    text: It checks that the route is in the table and that packets really leave by the expected interface and match the right rule.
+  - title: Design the change
+    text: It writes platform-specific commands, the expected result of each, validation commands and the exact rollback.
+  - title: Guard the order
+    text: It puts low-risk steps first, protects your management access, and saves or commits only after checks pass.
+output_shape: |-
+  PACKET PATH
+    <source> enters <interface or VLAN>, routes via <next hop>, exits <interface>, and should match <rule>
+
+  EVIDENCE
+    Facts: <what the output shows> | Hypotheses: <what is not yet proven>
+
+  LIKELY FAILING LAYER
+    <link, routing, policy and NAT, DNS or application> | <why> | <how sure>
+
+  NEXT COMMANDS
+    <platform> | <command> | <what it tells you> | <safe to run now or needs a window>
+
+  CHANGE PLAN (if a change is needed)
+    Pre-checks: <commands and expected results>
+    Steps: <numbered, platform-specific>
+    Validation: <commands and expected results>
+    Rollback: <exact commands, and the trigger to use them>
+
+  IMPACT
+    <who or what the change touches> | <blast radius>
+
+  MISSING INFORMATION
+    MISSING: <what> | <why it matters>
+output_sample:
+  input:
+    - The problem, with the source and destination addresses
+    - The make, model and software version of each device on the path
+    - Show-command output and config, with secrets removed
+    - Your change window and your console or out-of-band access (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - Access to your devices, to run the commands it lists
+  output:
+    - name: Packet path
+      contains: The route a packet takes from source to destination, and where it should be matched or changed.
+    - name: Evidence
+      contains: What your output proves, kept apart from what is only a guess.
+    - name: Likely failing layer
+      contains: Which layer is failing, with the reason and how sure the AI is.
+    - name: Next commands
+      contains: Exact commands for your platform, what each shows, and whether it is safe to run now.
+    - name: Change plan
+      contains: Pre-checks, steps in order, validation commands and an exact rollback.
+    - name: Impact
+      contains: What the change touches and how wide the effect could be.
+    - name: Missing information
+      contains: What is still unknown and why it matters.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Platform and version
+    how: Name the exact software for each device. Commands and commit steps differ between Cisco, Junos and PAN-OS.
+  - what: Size of the change window
+    how: Say how long you have and whether you can reload. It orders the steps to fit.
+  - what: Evidence you already have
+    how: Paste traceroutes, counters and logs before you ask for a fix. It starts from facts.
+improve:
+  - Keep a baseline of normal route counts, interface errors and session numbers, and paste it in next time.
+  - Save each change plan with its rollback and the result, so the next one starts from a proven pattern.
+  - Pair it with the Incident Response Commander agent when an outage needs owners and updates.
+terms:
+  - term: Packet path
+    meaning: The route a packet takes from the sender to its destination.
+  - term: Control plane
+    meaning: The part of a device that decides where traffic should go, such as the route table.
+  - term: Forwarding
+    meaning: The part that actually sends each packet out of an interface.
+  - term: BGP and OSPF
+    meaning: Two ways routers share routes with each other.
+  - term: NAT
+    meaning: Changing the address on a packet as it passes through a router or firewall.
+  - term: Rollback
+    meaning: The exact steps that put the device back as it was.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read long configs and several show outputs together.
+  inputs:
+    - A simple diagram or list of your devices and links.
+    - A saved baseline of normal route counts and interface errors.
+    - The vendor's own command reference for your software version.

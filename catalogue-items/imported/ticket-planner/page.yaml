@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It splits work into ordered pieces.
 new_slug: ticket-planner
 name: Ticket planner
-summary: Give it a plan or spec. Get small tickets that each say what blocks
-  them, posted to your tracker.
+summary: Turn a plan or spec into small tickets that each list what blocks them. Use this ticket planner to split work and post it to your tracker.
 job: build-software
 headline: Ticket planner
-subhead: A big plan becomes a set of small tickets, each one a thin slice that
-  works from start to finish and says which other tickets must be done first.
+subhead: A big plan becomes a set of small tickets, each one a thin slice that works from start to finish and says which other tickets must be done first.
 explain: |
   A big plan becomes a set of small tickets, each one a thin slice that works from start to finish and says which other tickets must be done first. Your team can then see what to start today and what has to wait.
 
@@ -17,6 +15,10 @@ when:
   - Your tickets are too big and keep getting stuck.
   - You want each ticket to show what blocks it.
   - You are about to start work with an AI and need small chunks.
+not_for:
+  - "You have one small task or a single bug: write the ticket by hand, or just ask your AI to fix it."
+  - "You want to change one thing across the whole codebase, like a rename: plan it as a person first, then list the steps in order."
+  - "You have no plan yet and only a rough idea: write a short spec first, then bring it here."
 you_give:
   - The plan, spec or issue link
   - Access to your issue tracker
@@ -28,8 +30,29 @@ you_get:
   - A review round with you before posting
   - Tickets posted to your tracker in order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your issue tracker.
+  - Paste your plan or spec into your AI, or give it a link to the issue. Paste the skill text first.
+  - Say if you want tickets posted to a tracker. It needs access to the tracker and the setup step the skill names. With no tracker, it saves one file per ticket.
+  - Let your AI read your codebase if it can. This helps titles match your own words.
+  - Read the numbered list. Say if tickets are too big, too small or wrongly linked.
+  - Repeat until the list feels right, then approve it.
+  - Check the posted tickets in your tracker. The first ticket with no blockers is where work can start.
+output_sample:
+  input:
+    - Your plan, spec or a link to an issue
+    - Access to your issue tracker (optional)
+    - Your codebase, so titles use your own words (optional)
+    - Your view on how big each ticket should be (optional)
+  prerequisites:
+    - A tracker set up through the setup step the skill asks for, if you want tickets posted there
+    - An AI that can read your files and reach your tracker, if you want it to post for you
+  output:
+    - name: Proposed ticket list
+      contains: A numbered list where each ticket has a short title, what it delivers, and which tickets must finish first.
+    - name: Review round
+      contains: Questions to you about ticket size, blockers, and whether any tickets should be merged or split.
+    - name: Approved tickets
+      contains: Each ticket written out with what to build, a checklist of what done looks like, and its blockers.
+    - name: Local ticket files
+      contains: If you have no tracker, one numbered file per ticket with blockers first, saved under a scratch folder.
+    - name: Tracker issues
+      contains: If you have a tracker, one issue per ticket, posted in order, with blocking links or a blocked-by list.

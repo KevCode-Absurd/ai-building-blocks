@@ -1,6 +1,6 @@
 slug: ai-instruction-writer
 name: AI instruction writer
-summary: Say which skill or instruction file you are writing. Get it written so your AI follows it well.
+summary: "Rewrite your AGENTS.md, CLAUDE.md or skill so your AI follows it the same way each run. Get a sharper trigger line and a tighter file."
 category: general
 boards: []
 type: skill

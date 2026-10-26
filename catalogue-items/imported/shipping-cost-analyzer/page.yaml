@@ -2,35 +2,77 @@ thinking: medium
 thinking_why: It compares two money sources and explains the gap.
 new_slug: shipping-cost-analyzer
 name: Shipping cost analyzer
-summary: Run it on your orders. Get shipping you charged against shipping you
-  paid, by carrier and method.
+summary: See what you charge for shipping and give away, by carrier and method. Add your carrier costs to find where Shopify shipping loses you money.
 job: run-your-store
 headline: Shipping cost analyzer
-subhead: A table of what you charged customers for shipping against what you
-  paid carriers, split by carrier and method. It shows exactly where you are
-  subsidising delivery and where you overcharge.
+subhead: Give it your Shopify store and a number of days. It totals what customers paid for shipping and what you gave away in discounts and free shipping, by carrier and method. Add your carrier costs to see where you lose money.
 explain: |
-  A table of what you charged customers for shipping against what you paid carriers, split by carrier and method. It shows exactly where you are subsidising delivery and where you overcharge.
+  Shipping can quietly eat your margin. To see where, you need two numbers for each method: what the customer paid, and what the carrier charged you. This shipping cost analyzer for Shopify gets the first from your orders. You bring the second.
 
-  It reads your paid Shopify orders for a chosen period (30 days unless you say otherwise) and pulls each order's shipping lines. For every line it records what the customer paid and the cost recorded, then groups the totals by carrier and shipping method. Gaps and margins are flagged. It only reads data and changes nothing in your store. You need a signed-in Shopify CLI session with order access, and orders typed in by hand may have no cost data.
+  Your AI reads your paid orders for the window you pick, 30 days by default. It groups the shipping lines by carrier and method. For each group it shows what customers were charged, the discounts given and the free shipping orders.
+
+  Shopify holds only what the customer was charged. It does not hold what you paid the carrier, unless your carrier app writes it back. So give your AI the cost per parcel from your invoices or rate card. Then it shows the net for each method. Without costs, it shows charges and discounts only, and says so.
 when:
   - Shipping seems to eat your margin and you cannot see which method does it.
-  - You want to know whether your free-shipping threshold costs too much.
+  - You want to know whether your free shipping threshold costs too much.
   - You are about to change rates and need the real numbers first.
   - Your finance person asks what shipping really costs per carrier.
+not_for:
+  - You have no carrier invoices or rate card and want your true cost. Get those first, or the report can show charges only.
+  - You want carriers compared on delivery time. Use the Carrier performance comparer.
+  - You want zones with no shipping rate found. Use the Shipping rate gap finder.
+  - You want profit after all costs. Use the Store profit margin calculator.
 you_give:
-  - Your Shopify store address
-  - Number of days to look back (optional)
-  - Shopify CLI sign-in with order read access
-  - Output style, readable or JSON (optional)
+  - Your Shopify store address, like mystore.myshopify.com
+  - How many days back to look (optional, default 30)
+  - What each carrier or method costs you per parcel, from your invoices or rate card (optional, needed for a loss figure)
+  - Readable report or JSON (optional)
 you_get:
-  - Shipping charged against shipping paid
-  - A breakdown by carrier and method
-  - A list of lines sold at a loss
-  - A readable or JSON report
+  - What customers were charged for shipping, by carrier and method
+  - Shipping discounts and free shipping orders for each method
+  - A net figure for each method if you gave costs
+  - A list of methods that lose money, or a note that costs are missing
+  - A CSV you can sort or share
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Gather your carrier costs. A rate card, or the total on each carrier invoice for the window, is enough. Skip this if you only want charges and discounts.
+  - Connect your AI to your Shopify store with read-only access to orders. No connection? Export your orders with the shipping method, charged and discount, and paste them in.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Give it your store address, the days to look back and your carrier costs.
+  - Read the top of the report first. It says whether costs were supplied. If not, no method can be called a loss.
+  - Check that each method matched to the right cost. Then look at the methods that lose money, and decide on rates or your free shipping level.
+output_sample:
+  input:
+    - Your Shopify store address
+    - How many days back to look (optional)
+    - Carrier cost per parcel or invoice total per method (optional)
+  prerequisites:
+    - Read-only access to your Shopify orders, or an orders export with shipping method, charge and discount
+    - The read_all_orders permission if your window is longer than 60 days
+  output:
+    - name: Settings and gaps
+      contains: The window used and whether carrier costs were supplied or are missing.
+    - name: Totals
+      contains: Orders analyzed, total charged to customers and the number of free shipping orders.
+    - name: Table by carrier and method
+      contains: Orders, charged, discounts, average charged and, with costs, cost and net for each method.
+    - name: Methods that lose money
+      contains: Methods where charges fall short of cost, or a note that cost is missing.
+    - name: shipping_cost_<date>.csv
+      contains: One row per shipping line with method, carrier, amount charged, original price, discount and currency.
+    - name: Next step
+      contains: One action, such as checking a rate or testing a new free shipping level.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with a Shopify connection
+      why: It reads your orders directly, so you skip the export.
+    - name: A spreadsheet
+      why: Handy for keeping a carrier cost table to reuse each month.
+  inputs:
+    - Carrier invoices for the same dates
+    - Your free shipping threshold
+terms:
+  - term: Shipping line
+    meaning: The part of an order that records the shipping method and what was charged for it.
+  - term: Subsidy
+    meaning: Shipping you pay for that the customer did not pay for.
+  - term: Free shipping threshold
+    meaning: The order value above which you stop charging for shipping.

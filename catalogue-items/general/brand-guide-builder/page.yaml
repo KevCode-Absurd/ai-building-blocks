@@ -1,6 +1,6 @@
 new_slug: brand-guide-builder
 name: Brand guide builder
-summary: Attach your brand file. Get a printable brand guide and a values file to paste into any tool.
+summary: Turn your brand file into a printable brand guide and a values file to paste into any design tool. Colour pairs are checked so text stays readable.
 job: brand-file
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - A designer, freelancer or agency is starting work with you and needs your rules in one place.
   - Your brand rules live across a few files and nobody can find the hex codes.
   - You want a sheet you can paste into an AI image or design tool so it stays on brand.
+not_for:
+  - "Your brand has no colour codes or fonts yet: use the Website brand brain builder first, then come back."
+  - "You need a logo or a new visual identity designed: hire a designer, because this only writes down what you already have."
+  - "You want a quick set of brand notes for your AI to write in your voice: use the Website brand brain builder."
 you_give:
   - Your brand file, mainly voice-and-look.md and proof-and-claims.md
   - Your logo file and its rules, such as clear space and smallest size (optional)
@@ -30,6 +34,27 @@ how_to_use:
   - Add your logo rules and, for web work, your site's colour variables and button styles.
   - Open the HTML file in a browser and print to PDF with margins set to none.
   - Check "Not yet captured" on the quick sheet and fill those gaps in your brand file.
+output_sample:
+  input:
+    - Your brand file, mainly voice-and-look.md and proof-and-claims.md
+    - Your logo rules, such as clear space and smallest size (optional)
+    - Your site's styles, such as colour variables and button looks (optional)
+  prerequisites:
+    - A brand file with at least colours (hex codes) and one font, or your own notes with them
+    - An AI that can write an HTML file, so you can open it and print to PDF
+  output:
+    - name: brand-guide.html
+      contains: A printable guide of up to eight A4 pages in your colours and fonts, one topic per page.
+    - name: Quick sheet (page 2)
+      contains: Colours, readable colour pairs, fonts, voice in five words, one copy rule, one picture rule and gaps to fill.
+    - name: Colour and Type pages
+      contains: Each colour with name, hex and job, a contrast table, and fonts set in your own lines.
+    - name: Voice and Pictures pages
+      contains: Voice traits with real lines, claims you may and may not make, and your picture style.
+    - name: brand-tokens.md
+      contains: Every colour, font and rule to copy, with CSS variables and a design tokens block.
+    - name: Note and CHECKS MISSED
+      contains: Pages left out and why, colour pairs that fail for text, and any checks the guide still misses.
 how_it_works:
   - title: Checks the minimum
     text: Needs colours with hex codes and at least one font, and asks for them if they're missing. Any other topic with nothing on file is left out and listed as a gap.

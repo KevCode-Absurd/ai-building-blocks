@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks varied questions, then files each answer in the right place.
 new_slug: readme-and-decision-interviewer
 name: README and decision interviewer
-summary: Answer a few quick questions at a time. Get a README and short decision
-  records that hold your plans.
+summary: Turn your project ideas into a README and short decision records. Your AI asks a few questions at a time and saves your answers as plain files.
 job: build-software
 headline: README and decision interviewer
-subhead: Your project vision and decisions captured in a README and short
-  decision records, written from a quick interview. You answer a few questions
-  at a time, and your taste and reasoning end up saved as plain text.
+subhead: Your project vision and decisions captured in a README and short decision records, written from a quick interview. You answer a few questions at a time, and your taste and reasoning end up saved as plain text.
 explain: |
   Your project vision and decisions captured in a README and short decision records, written from a quick interview. You answer a few questions at a time, and your taste and reasoning end up saved as plain text.
 
@@ -18,6 +15,10 @@ when:
   - Your team keeps re-debating decisions that were already made.
   - A new AI agent needs context on how you work.
   - You want a README that states vision, not only install steps.
+not_for:
+  - Your decisions are already written down and fixed. Keep your current docs, or start from a plain README template.
+  - You only need install and usage steps. Write those by hand or use a simple README template.
+  - You want a person to review a risky choice. Talk it through with your team, because this skill records your views and does not challenge them.
 you_give:
   - Your project folder
   - Time to answer short questions
@@ -28,8 +29,25 @@ you_get:
   - Reasons behind each decision
   - Updated docs after each session
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and save files in your project.
+  - Open your AI in a chat that can read and save files in your project folder. If it cannot, paste your README and notes into the chat.
+  - "Paste the skill text and say: start the README and decision interview."
+  - Answer the questions you find most useful. You can skip the rest.
+  - Check each update. Tell your AI to fix anything that is wrong or too long.
+  - Say "we're done" when you have covered enough. Save the README and the docs folder in your project.
+output_sample:
+  input:
+    - Your project folder
+    - Your existing README or notes (optional)
+    - Your answers to a few short questions each round
+    - The language you want the docs in (optional)
+  prerequisites:
+    - An AI that can read and save files in your project folder, or you copy the results by hand
+  output:
+    - name: README.md
+      contains: Your project vision added where it fits, with existing install, usage and contributor sections kept as they are.
+    - name: docs/adr/NNNN-slug.md
+      contains: One short numbered record per decision, with Status, Context, Decision and Consequences.
+    - name: Question rounds
+      contains: Two or three varied questions per round, on different angles, until you say you are done.
+    - name: Updated docs after each round
+      contains: Your confirmed answers filed in the README or a new record, with open questions and tentative ideas kept apart.

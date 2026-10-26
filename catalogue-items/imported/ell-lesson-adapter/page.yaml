@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reviews each lesson stage and adds support.
 new_slug: ell-lesson-adapter
 name: Lesson adapter for language learners
-summary: Paste your lesson plan. Get a version that supports students learning
-  English in reading, writing, speaking and listening.
+summary: Adapt your lesson plan for English language learners. Get language goals, support for each stage and a checklist, so every student can follow.
 job: teach-and-train
 headline: Lesson adapter for language learners
-subhead: Your lesson plan, rewritten so students learning English can follow the
-  content and still learn the subject. Paste the plan, and you get a version
-  with clear language goals added.
+subhead: Give it your lesson plan, subject and year group. It adds language goals and support at each stage, so students learning English can follow the lesson and still learn the subject. SIOP is a lesson method for teaching content to English learners.
 explain: |
   Your lesson plan, rewritten so students learning English can follow the content and still learn the subject. Paste the plan, and you get a version with clear language goals added.
 
@@ -18,18 +15,42 @@ when:
   - You want language goals added to a lesson plan you already have.
   - You need ways to build background knowledge first.
   - You want more talk and practice in the lesson.
+not_for:
+  - "Your class has no students learning English: teach your plan as it is."
+  - "You need a full scheme of work: adapt one lesson at a time, or ask a colleague who teaches English as an additional language."
+  - "You only want to check how hard the lesson language is: use a language demand check, not this adapter."
 you_give:
-  - Your lesson plan
-  - Subject
-  - Year group
-  - Number and level of English learners (optional)
+  - Your lesson plan, with topic, activities, resources and the learning goal
+  - The subject
+  - The year group
+  - How many students are learning English, and their levels (optional)
+  - The lesson length (optional)
 you_get:
   - A lesson plan with language and content goals
   - Support steps for each phase
   - Interaction and practice ideas
   - Review and check activities
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code or paid tools are needed.
+  - Paste your lesson plan. Add the subject and year group.
+  - Add how many students are learning English and their levels, and the lesson length, if you know them.
+  - Read the SIOP checklist to see which parts of the method are covered.
+  - Read the Teacher Adaptations and What Changed and Why. Fix anything that does not suit your class before you teach it.
+output_sample:
+  input:
+    - Your lesson plan, with topic, activities, resources and the learning goal
+    - The subject, such as science or geography
+    - The year group
+    - How many students are learning English, and their levels (optional)
+    - How long the lesson is (optional)
+  output:
+    - name: Objectives
+      contains: Content goals and language goals, written to display on the board.
+    - name: Modified Lesson Plan
+      contains: Your lesson with support added at each stage, including interaction and practice.
+    - name: SIOP Component Checklist
+      contains: Shows how each part of the SIOP model is covered in the new lesson.
+    - name: Teacher Adaptations
+      contains: Extra steps for you to take, based on the students' English levels.
+    - name: What Changed and Why
+      contains: A short list of each change you will see, with the reason for it.

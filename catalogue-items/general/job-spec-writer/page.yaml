@@ -1,6 +1,6 @@
 new_slug: job-spec-writer
 name: Job spec writer
-summary: Paste your watch notes and leads. Get one job written as a situation, with its practical, social and emotional sides.
+summary: "Turn your customer watch notes into a job spec: one moment, the progress they want, and its practical, social and emotional sides."
 job: understand-customers
 thinking: high
 thinking_why: It has to tell a real job from a need or a feature using messy notes, and say when there is no job. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have notes from watching or talking to customers and a vague sense of why they buy.
   - Your customer description is a list of ages, incomes and titles.
   - You are about to design or sell something and cannot say what it is hired to do.
+not_for:
+  - "You have no leads or notes yet: use the Job hunting spot finder first to find where to watch customers."
+  - "You want to see who else competes for the same job: use the Job rival mapper once your spec is written."
+  - "You need a price or a feature decision: this spec shows the job, so make that call with your own sales data."
 you_give:
   - A ranked list of leads, from the Job hunting spot finder or your own
   - Notes and customer words from watching or talking to people
@@ -30,6 +34,31 @@ how_to_use:
   - Say which lead you want written first.
   - Read the one-line job to a customer if you can. Ask if it sounds like them.
   - Carry the spec to "Job rival mapper".
+output_sample:
+  input:
+    - Your ranked leads, from the Job hunting spot finder or your own list
+    - Notes and customer words from watching or talking to people
+    - Your current product (optional)
+  prerequisites:
+    - Notes with the customer's own words, ideally word for word
+    - The Job hunting spot finder result, if you have it
+  output:
+    - name: Circumstance
+      contains: Who, where, when and what they were doing, plus what came before and what comes next.
+    - name: The job in one line
+      contains: "One sentence: when this happens, I want to do this, so I can get that."
+    - name: The three sides
+      contains: The practical, social and emotional sides, each tied to a note, and which one weighs most.
+    - name: The struggle
+      contains: What goes wrong, what they tried, the workaround, what it costs and what blocks them.
+    - name: Trade-offs
+      contains: What they will give up and what they will not, based on what they did.
+    - name: Job test
+      contains: Pass or fail on each test of whether this is a real job.
+    - name: Not for
+      contains: The kind of customer this job does not serve.
+    - name: Missing and checks missed
+      contains: Gaps in your notes and any checks the skill did not pass.
 how_it_works:
   - title: Picks one circumstance
     text: Splits notes that cover several moments, because each moment is a separate job.

@@ -1,6 +1,6 @@
 new_slug: sales-letter-outline-planner
 name: "Sales letter outline planner"
-summary: "Paste your research and chosen theme. Get a full outline, with headline ideas and the proof each claim needs."
+summary: "Plan a sales letter outline before you write it. Give it your research and theme. You get ordered sections, headline ideas and the proof each claim needs."
 job: write-landing-page
 thinking: medium
 thinking_why: "It orders a whole piece and decides what each claim needs, within fixed steps."
@@ -17,6 +17,10 @@ when:
   - "You are about to write a long sales page, letter or email launch."
   - "A draft you wrote feels disordered and you cannot say why."
   - "You need a brief for a writer or an AI to write from."
+not_for:
+  - "You only need a short ad or one headline: use the Fact-based ad copy writer."
+  - "You want the finished landing page copy, not a plan: use the Proof-backed sales copy writer."
+  - "You have no research on why customers buy yet: use the Customer buying reasons finder first."
 
 you_give:
   - "An angle library with a chosen theme"
@@ -37,6 +41,31 @@ how_to_use:
   - "Read the outline for order and check each claim's proof."
   - "Show it to someone outside the project and bring back their notes."
   - "Use the brief to write the piece."
+output_sample:
+  input:
+    - Your angle library with a chosen theme
+    - "Your product facts: price, contents, guarantee, proof"
+    - A buyer persona (optional)
+    - The goal for the piece, such as break-even or profit per send (optional)
+  prerequisites:
+    - Your angle library, from the Customer buying reasons finder or your own notes
+  output:
+    - name: Theme
+      contains: The chosen angle and the main feeling, in two lines.
+    - name: Headline pile
+      contains: At least 12 headline ideas, sorted by benefit, feeling or news.
+    - name: Outline
+      contains: Each section in order, with what it holds and the small yes it must win.
+    - name: Benefit chains
+      contains: Each main benefit taken from feature to a picture of it in daily life.
+    - name: Claims and proof
+      contains: A table of each claim with its proof, or a mark to cut it.
+    - name: Boxes
+      contains: Slow material moved into sidebars, with where each one sits.
+    - name: Top options
+      contains: Three options each for the headline, the deck and the lead-in direction.
+    - name: Client goal, outside read and checks missed
+      contains: The break-even or profit goal, questions for an outside reader, gaps, and any checks still missed.
 
 how_it_works:
   - title: "States the theme"

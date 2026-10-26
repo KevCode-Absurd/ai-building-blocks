@@ -15,11 +15,12 @@ outputs:
   - {type: audit_report}
 uses: [voice-and-tone-guide-writer, draft-brand-voice-checker, brand-voice-rewriter]
 steps:
-  - {uses: voice-and-tone-guide-writer, note: "Once, only if you have no voice guide: the traits, tone by situation and word lists every later check is measured against."}
-  - {uses: draft-brand-voice-checker, note: "Every draft, then again after each rewrite: the deviations ranked by severity, with before and after fixes."}
-  - {uses: brand-voice-rewriter, note: "Only when the check finds a major deviation or more than three minor ones: a rewrite of the flagged lines in your voice, up to three rounds."}
+  - {uses: voice-and-tone-guide-writer, note: "Once, only if you have no voice guide: the traits, tone by situation and word lists every later check is measured against. Hands the voice guide to the checker and the rewriter."}
+  - {uses: draft-brand-voice-checker, note: "Every draft, then again after each rewrite: the deviations ranked by severity, with before and after fixes. Checks against the guide from step 1. Hands the ranked flags to the rewriter."}
+  - {uses: brand-voice-rewriter, note: "Only when the check finds a major deviation or more than three minor ones: a rewrite of the flagged lines in your voice, up to three rounds. Works from your draft and the checker's flags. Hands the rewritten draft back to the checker."}
 schedule: "Each time a draft is ready to go out"
 asks_before: [publishing or sending any copy, changing the voice guide or the brand file, adding a rule from repeat slips, making a legal or claim change without a qualified person's check]
 origin: own
 version: 1.0.0
 example_pending: true
+needs_mode: manual

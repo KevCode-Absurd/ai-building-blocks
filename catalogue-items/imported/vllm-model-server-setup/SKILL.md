@@ -10,44 +10,63 @@ dependencies: [vllm, torch, transformers]
 
 # vLLM - High-Performance LLM Serving
 
+vLLM serves open language models with PagedAttention (a block-based KV cache) and continuous batching (mixing prefill and decode requests). It gives you an OpenAI-compatible endpoint.
+
+## Before you start
+
+Ask once for anything missing. Never invent a model name, GPU or target.
+
+1. **Model.** The exact Hugging Face model ID. Gated models (such as Llama) need a Hugging Face token and an accepted licence. Tell the user to set the token as an environment variable themselves, and never ask for it in chat.
+2. **GPU.** Type, memory per card and how many. vLLM needs a supported GPU. NVIDIA is the main path. AMD ROCm and others are covered in the vLLM docs.
+3. **Target.** Expected users at once, and a response-time goal if they have one. If they have none, say so and set a goal to measure, not a guess.
+4. **Quantized model OK?** (optional) Smaller files that fit smaller cards, with some quality risk.
+
+If your AI cannot run commands on the user's GPU machine, write the commands, say they are untested, and ask the user to paste the output of each step.
+
+Flag names change between vLLM versions. Run `vllm serve --help` on the user's install and check each flag below against it before you use it.
+
+## When not to use
+
+- No GPU, or you want CPU or laptop use for one person: use llama.cpp.
+- You want a quick one-off script or research test: Hugging Face transformers is simpler.
+- You need the absolute top speed on NVIDIA only, and can accept a longer setup: look at TensorRT-LLM.
+- You do not want to run servers. Use a hosted API instead.
+
 ## Quick start
 
-vLLM achieves 24x higher throughput than standard transformers through PagedAttention (block-based KV cache) and continuous batching (mixing prefill/decode requests).
-
-**Installation**:
+**Install** (in a clean Python environment):
 ```bash
 pip install vllm
 ```
 
-**Basic offline inference**:
-```python
-from vllm import LLM, SamplingParams
-
-llm = LLM(model="meta-llama/Llama-3-8B-Instruct")
-sampling = SamplingParams(temperature=0.7, max_tokens=256)
-
-outputs = llm.generate(["Explain quantum computing"], sampling)
-print(outputs[0].outputs[0].text)
+**Start the OpenAI-compatible server** (use the user's model ID in place of `<model-id>`):
+```bash
+vllm serve <model-id>
 ```
 
-**OpenAI-compatible server**:
+**Test call with the OpenAI client:**
 ```bash
-vllm serve meta-llama/Llama-3-8B-Instruct
-
-# Query with OpenAI SDK
 python -c "
 from openai import OpenAI
 client = OpenAI(base_url='http://localhost:8000/v1', api_key='EMPTY')
 print(client.chat.completions.create(
-    model='meta-llama/Llama-3-8B-Instruct',
+    model='<model-id>',
     messages=[{'role': 'user', 'content': 'Hello!'}]
 ).choices[0].message.content)
 "
 ```
 
-## Common workflows
+Offline use, with no server (for large batches):
+```python
+from vllm import LLM, SamplingParams
 
-### Workflow 1: Production API deployment
+llm = LLM(model="<model-id>")
+sampling = SamplingParams(temperature=0.7, max_tokens=256)
+outputs = llm.generate(["Explain quantum computing"], sampling)
+print(outputs[0].outputs[0].text)
+```
+
+## Workflow 1: Production API deployment
 
 Copy this checklist and track progress:
 
@@ -55,120 +74,105 @@ Copy this checklist and track progress:
 Deployment Progress:
 - [ ] Step 1: Configure server settings
 - [ ] Step 2: Test with limited traffic
-- [ ] Step 3: Enable monitoring
-- [ ] Step 4: Deploy to production
-- [ ] Step 5: Verify performance metrics
+- [ ] Step 3: Check metrics
+- [ ] Step 4: Lock down access
+- [ ] Step 5: Deploy and verify against your own targets
 ```
 
 **Step 1: Configure server settings**
 
-Choose configuration based on your model size:
+Start from these and change one setting at a time:
 
 ```bash
-# For 7B-13B models on single GPU
-vllm serve meta-llama/Llama-3-8B-Instruct \
+# A model that fits on one GPU
+vllm serve <model-id> \
   --gpu-memory-utilization 0.9 \
   --max-model-len 8192 \
   --port 8000
 
-# For 30B-70B models with tensor parallelism
-vllm serve meta-llama/Llama-2-70b-hf \
+# A model too big for one GPU: split it across GPUs
+vllm serve <model-id> \
   --tensor-parallel-size 4 \
   --gpu-memory-utilization 0.9 \
-  --quantization awq \
   --port 8000
 
-# For production with caching and metrics
-vllm serve meta-llama/Llama-3-8B-Instruct \
+# A quantized model (use a model that was already quantized with this method)
+vllm serve <awq-model-id> \
+  --quantization awq \
   --gpu-memory-utilization 0.9 \
-  --enable-prefix-caching \
-  --enable-metrics \
-  --metrics-port 9090 \
-  --port 8000 \
-  --host 0.0.0.0
+  --port 8000
+
+# Repeated prompt starts, such as a long shared system prompt
+vllm serve <model-id> --enable-prefix-caching
 ```
+
+Tensor parallel size must divide the model's number of attention heads evenly. Two, four and eight GPUs usually work. Check the model's config, and do not assume any size will.
 
 **Step 2: Test with limited traffic**
 
-Run load test before production:
+Send light, realistic traffic before real users. A tool such as `locust` works. Record these on the user's own setup:
 
+- Time to first token (how long before the reply starts)
+- Requests handled per second
+- GPU memory use (`nvidia-smi`)
+- Any out-of-memory errors in the log
+
+Compare them with the target from "Before you start". If there was no target, write down what you measured and let the user decide if it is enough.
+
+**Step 3: Check metrics**
+
+The server exposes Prometheus metrics at `/metrics` on the server port. Check the vLLM docs for your version.
 ```bash
-# Install load testing tool
-pip install locust
-
-# Create test_load.py with sample requests
-# Run: locust -f test_load.py --host http://localhost:8000
+curl http://localhost:8000/metrics | grep vllm
 ```
+Watch the first-token time, the number of running requests and the cache use.
 
-Verify TTFT (time to first token) < 500ms and throughput > 100 req/sec.
+**Step 4: Lock down access**
 
-**Step 3: Enable monitoring**
+- Binding to `--host 0.0.0.0` makes the server reachable from other machines. Only do it behind a firewall or a gateway that requires sign-in.
+- Set an API key (`--api-key`) or put an authenticating proxy in front of the server.
+- Use `--trust-remote-code` only for a model you trust. It runs code that comes with the model.
+- Never put tokens or keys in a command that is saved in shared notes.
 
-vLLM exposes Prometheus metrics on port 9090:
+**Step 5: Deploy and verify**
 
+Docker gives a repeatable setup:
 ```bash
-curl http://localhost:9090/metrics | grep vllm
-```
-
-Key metrics to monitor:
-- `vllm:time_to_first_token_seconds` - Latency
-- `vllm:num_requests_running` - Active requests
-- `vllm:gpu_cache_usage_perc` - KV cache utilization
-
-**Step 4: Deploy to production**
-
-Use Docker for consistent deployment:
-
-```bash
-# Run vLLM in Docker
 docker run --gpus all -p 8000:8000 \
   vllm/vllm-openai:latest \
-  --model meta-llama/Llama-3-8B-Instruct \
-  --gpu-memory-utilization 0.9 \
-  --enable-prefix-caching
+  --model <model-id> \
+  --gpu-memory-utilization 0.9
 ```
+Repeat the Step 2 test against it. Pass only if the numbers meet the user's targets and the logs show no out-of-memory errors.
 
-**Step 5: Verify performance metrics**
+## Workflow 2: Offline batch inference
 
-Check that deployment meets targets:
-- TTFT < 500ms (for short prompts)
-- Throughput > target req/sec
-- GPU utilization > 80%
-- No OOM errors in logs
-
-### Workflow 2: Offline batch inference
-
-For processing large datasets without server overhead.
-
-Copy this checklist:
+For large sets of prompts, without a server.
 
 ```
 Batch Processing:
 - [ ] Step 1: Prepare input data
-- [ ] Step 2: Configure LLM engine
+- [ ] Step 2: Configure the engine
 - [ ] Step 3: Run batch inference
-- [ ] Step 4: Process results
+- [ ] Step 4: Save results
 ```
 
 **Step 1: Prepare input data**
-
 ```python
-# Load prompts from file
 prompts = []
 with open("prompts.txt") as f:
     prompts = [line.strip() for line in f]
-
 print(f"Loaded {len(prompts)} prompts")
 ```
+If `prompts.txt` is missing, ask the user for it. Do not make up prompts.
 
-**Step 2: Configure LLM engine**
-
+**Step 2: Configure the engine**
 ```python
 from vllm import LLM, SamplingParams
 
 llm = LLM(
-    model="meta-llama/Llama-3-8B-Instruct",
-    tensor_parallel_size=2,  # Use 2 GPUs
+    model="<model-id>",
+    tensor_parallel_size=2,  # number of GPUs; set to 1 for a single GPU
     gpu_memory_utilization=0.9,
     max_model_len=4096
 )
@@ -176,164 +180,92 @@ llm = LLM(
 sampling = SamplingParams(
     temperature=0.7,
     top_p=0.95,
-    max_tokens=512,
-    stop=["</s>", "\n\n"]
+    max_tokens=512
 )
 ```
 
-**Step 3: Run batch inference**
-
-vLLM automatically batches requests for efficiency:
-
+**Step 3: Run**
 ```python
-# Process all prompts in one call
-outputs = llm.generate(prompts, sampling)
-
-# vLLM handles batching internally
-# No need to manually chunk prompts
+outputs = llm.generate(prompts, sampling)  # vLLM batches internally
 ```
 
-**Step 4: Process results**
-
+**Step 4: Save results**
 ```python
-# Extract generated text
-results = []
-for output in outputs:
-    prompt = output.prompt
-    generated = output.outputs[0].text
-    results.append({
-        "prompt": prompt,
-        "generated": generated,
-        "tokens": len(output.outputs[0].token_ids)
-    })
-
-# Save to file
 import json
 with open("results.jsonl", "w") as f:
-    for result in results:
-        f.write(json.dumps(result) + "\n")
-
-print(f"Processed {len(results)} prompts")
+    for output in outputs:
+        f.write(json.dumps({
+            "prompt": output.prompt,
+            "generated": output.outputs[0].text,
+            "tokens": len(output.outputs[0].token_ids),
+        }) + "\n")
+print(f"Processed {len(outputs)} prompts")
 ```
 
-### Workflow 3: Quantized model serving
+## Workflow 3: Quantized model serving
 
-Fit large models in limited GPU memory.
+Fit a big model on less GPU memory.
 
 ```
 Quantization Setup:
-- [ ] Step 1: Choose quantization method
-- [ ] Step 2: Find or create quantized model
-- [ ] Step 3: Launch with quantization flag
-- [ ] Step 4: Verify accuracy
+- [ ] Step 1: Choose the method
+- [ ] Step 2: Find a pre-quantized model
+- [ ] Step 3: Launch with the matching flag
+- [ ] Step 4: Check quality
 ```
 
-**Step 1: Choose quantization method**
+**Step 1: Choose the method**
 
-- **AWQ**: Best for 70B models, minimal accuracy loss
-- **GPTQ**: Wide model support, good compression
-- **FP8**: Fastest on H100 GPUs
+- **AWQ**: common for large models, usually a small quality loss.
+- **GPTQ**: wide model support.
+- **FP8**: needs GPUs that support it, such as H100.
 
-**Step 2: Find or create quantized model**
+Check the vLLM quantization docs for which methods your GPU supports.
 
-Use pre-quantized models from HuggingFace:
+**Step 2: Find a pre-quantized model**
 
+Search Hugging Face for a model already quantized with the method you chose. Use a source you trust and read its model card.
+
+**Step 3: Launch**
 ```bash
-# Search for AWQ models
-# Example: TheBloke/Llama-2-70B-AWQ
+vllm serve <quantized-model-id> --quantization awq --gpu-memory-utilization 0.9
 ```
+Use the flag that matches the model's method. Read the memory use from `nvidia-smi` and report it. Do not quote a figure you did not measure.
 
-**Step 3: Launch with quantization flag**
+**Step 4: Check quality**
 
-```bash
-# Using pre-quantized model
-vllm serve TheBloke/Llama-2-70B-AWQ \
-  --quantization awq \
-  --tensor-parallel-size 1 \
-  --gpu-memory-utilization 0.95
-
-# Results: 70B model in ~40GB VRAM
-```
-
-**Step 4: Verify accuracy**
-
-Test outputs match expected quality:
-
-```python
-# Compare quantized vs non-quantized responses
-# Verify task-specific performance unchanged
-```
-
-## When to use vs alternatives
-
-**Use vLLM when:**
-- Deploying production LLM APIs (100+ req/sec)
-- Serving OpenAI-compatible endpoints
-- Limited GPU memory but need large models
-- Multi-user applications (chatbots, assistants)
-- Need low latency with high throughput
-
-**Use alternatives instead:**
-- **llama.cpp**: CPU/edge inference, single-user
-- **HuggingFace transformers**: Research, prototyping, one-off generation
-- **TensorRT-LLM**: NVIDIA-only, need absolute maximum performance
-- **Text-Generation-Inference**: Already in HuggingFace ecosystem
+Send the same 10 to 20 real prompts to the quantized and the full model if both fit. Compare the answers on the user's own task. Report any drop you see.
 
 ## Common issues
 
-**Issue: Out of memory during model loading**
-
-Reduce memory usage:
+**Out of memory when loading**
 ```bash
-vllm serve MODEL \
-  --gpu-memory-utilization 0.7 \
-  --max-model-len 4096
+vllm serve <model-id> --gpu-memory-utilization 0.7 --max-model-len 4096
 ```
+Or use a quantized model.
 
-Or use quantization:
-```bash
-vllm serve MODEL --quantization awq
-```
+**Slow first token**
+Try `--enable-prefix-caching` for repeated prompt starts. Try `--enable-chunked-prefill` for long prompts.
 
-**Issue: Slow first token (TTFT > 1 second)**
+**Model not found, or access denied**
+Check the model ID spelling first. For gated models, check the user has accepted the licence and set their Hugging Face token. Use `--trust-remote-code` only if the model card says it needs it and you trust the source.
 
-Enable prefix caching for repeated prompts:
-```bash
-vllm serve MODEL --enable-prefix-caching
-```
+**Low throughput**
+Check `nvidia-smi` for idle GPU time. Raise `--max-num-seqs` slowly and watch memory.
 
-For long prompts, enable chunked prefill:
-```bash
-vllm serve MODEL --enable-chunked-prefill
-```
+**Slower than expected on several GPUs**
+Check that the GPUs are linked well and that tensor parallel size divides the attention heads. Speculative decoding can help. Its flags change by version, so check the docs.
 
-**Issue: Model not found error**
+## Output
 
-Use `--trust-remote-code` for custom models:
-```bash
-vllm serve MODEL --trust-remote-code
-```
+End with these, in this order:
 
-**Issue: Low throughput (<50 req/sec)**
-
-Increase concurrent sequences:
-```bash
-vllm serve MODEL --max-num-seqs 512
-```
-
-Check GPU utilization with `nvidia-smi` - should be >80%.
-
-**Issue: Inference slower than expected**
-
-Verify tensor parallelism uses power of 2 GPUs:
-```bash
-vllm serve MODEL --tensor-parallel-size 4  # Not 3
-```
-
-Enable speculative decoding for faster generation:
-```bash
-vllm serve MODEL --speculative-model DRAFT_MODEL
-```
+1. **Launch command**: the one command to start the server, in a code block.
+2. **Settings table**: model, GPU count, memory use setting, context length, port, quantization, and a reason for each choice.
+3. **Test result**: the test call and the reply, or "not run" with the reason.
+4. **Measured numbers**: first-token time, requests per second and GPU memory, as measured, or "not measured".
+5. **Go-live checklist**: access locked down, token set, logs clean, targets met. Mark each done or not done.
+6. **Next**: the one thing to do next, such as a longer load test.
 
 ## Advanced topics
 
@@ -345,13 +277,11 @@ vllm serve MODEL --speculative-model DRAFT_MODEL
 
 **Troubleshooting**: See [references/troubleshooting.md](references/troubleshooting.md) for detailed error messages, debugging steps, and performance diagnostics.
 
-## Hardware requirements
+## Hardware
 
-- **Small models (7B-13B)**: 1x A10 (24GB) or A100 (40GB)
-- **Medium models (30B-40B)**: 2x A100 (40GB) with tensor parallelism
-- **Large models (70B+)**: 4x A100 (40GB) or 2x A100 (80GB), use AWQ/GPTQ
+Memory needs depend on the model, the context length and the number of users. Work out the need from the model card and measure it. As a rough guide, small models fit one 24 GB to 40 GB card, and large models need several cards or a quantized version.
 
-Supported platforms: NVIDIA (primary), AMD ROCm, Intel GPUs, TPUs
+Supported platforms: NVIDIA (primary), AMD ROCm, Intel GPUs, TPUs. Check the vLLM docs for your hardware.
 
 ## Resources
 
@@ -359,6 +289,3 @@ Supported platforms: NVIDIA (primary), AMD ROCm, Intel GPUs, TPUs
 - GitHub: https://github.com/vllm-project/vllm
 - Paper: "Efficient Memory Management for Large Language Model Serving with PagedAttention" (SOSP 2023)
 - Community: https://discuss.vllm.ai
-
-
-

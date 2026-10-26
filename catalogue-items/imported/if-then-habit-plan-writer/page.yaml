@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes short plans from one goal.
 new_slug: if-then-habit-plan-writer
 name: If-then habit plan writer
-summary: Give it a goal a student struggles to follow through on. Get if-then
-  plans and a simple obstacle plan.
+summary: Write if-then plans and an obstacle plan to help a student build a study habit they keep dropping. Give it one habit and a year group.
 job: teach-and-train
 headline: If-then habit plan writer
-subhead: A simple plan that helps a student do what they already know they
-  should do. Name the habit that is hard to keep and get if-then plans plus a
-  plan for the obstacle that gets in the way.
+subhead: A simple plan that helps a student do what they already know they should do. Name the habit that is hard to keep and get if-then plans plus a plan for the obstacle that gets in the way.
 explain: |
   A simple plan that helps a student do what they already know they should do. Name the habit that is hard to keep and get if-then plans plus a plan for the obstacle that gets in the way. It is written for teachers.
 
@@ -18,6 +15,10 @@ when:
   - You want to help a class build one study habit this term.
   - A student gives up when a distraction shows up.
   - You need a quick plan for a short chat with a student.
+not_for:
+  - The student has no wish to change. Talk with them first to find out why, before you write any plan.
+  - The habit has many parts, like a full revision timetable. Split it into one small habit and run this once for each.
+  - You need a whole-school behaviour policy. Write that with your colleagues. This tool makes plans for one habit.
 you_give:
   - The habit the student should start or stop
   - Their year group
@@ -29,7 +30,26 @@ you_get:
   - Exact words for the student to use
   - A simple way to track progress
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Open the skill file and paste its full text into the chat.
+  - Type the habit and the year group. Add the obstacle and how long it should last if you know them.
+  - Ask your AI to reply in the skill's set format, from the if-then plan to the monitoring plan.
+  - Read the plan with the student. Change the trigger and words until they sound like the student.
+output_sample:
+  input:
+    - The habit the student should start or stop
+    - Their year group
+    - The main thing that gets in the way (optional)
+    - Whether it is for one student, a small group or a class (optional)
+    - How long the habit should last (optional)
+  output:
+    - name: The Implementation Intention
+      contains: "The if-then plan: the trigger, the action and where it happens."
+    - name: WOOP Framework
+      contains: The student's wish, best outcome, main obstacle and a plan for that obstacle.
+    - name: Student Script
+      contains: Exact words the student can say or write to themselves.
+    - name: Coping Plans
+      contains: Extra if-then plans for the things most likely to get in the way.
+    - name: Monitoring Plan
+      contains: A simple way to check whether the plan is working.

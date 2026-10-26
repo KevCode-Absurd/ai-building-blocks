@@ -1,37 +1,111 @@
 new_slug: meta-manage-ads-on-a-daily-basis-planner
 name: Daily Meta ad review planner
-summary: Review daily Meta results against local baselines. Separate urgent faults from weak signals and rank the next checks.
+summary: "Get a daily review table for your Meta ads: each ad marked keep, watch, refresh or pause, with the proof and the next checks ranked."
 job: launch-and-scale-ads
 headline: Daily Meta ad review planner
-subhead: Review daily Meta results against local baselines. Separate urgent faults from weak signals and rank the next checks.
+subhead: "Paste your Meta Ads Manager results and your break-even cost per sale. It reviews campaigns, then ad sets, then ads against your own numbers. You get a table that marks each ad keep, gather more evidence, investigate, refresh or pause, with the proof and a follow-up date."
 explain: |-
-  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+  Checking Meta ads every morning makes it easy to pause an ad after one bad day, or to call a winner after two sales. A ROAS of 1.0 can look fine and still lose money, because product and running costs are not in it. ROAS means the sales an ad is credited with, divided by what you spent on it.
 
-  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+  This skill does a daily Meta ads review the same way each day. It starts with what each campaign is for, then ad sets, then single ads, using the same dates and the same definition of a purchase. It marks each ad against your own break-even cost per sale. Thin evidence is called thin, and clicks, cart adds and frequency are treated as clues, not proof.
+
+  It does not touch your account. It proposes actions with the evidence, the money at risk and a follow-up date, and you decide. A cap on spend with no purchase is your own risk limit, not proof that an ad can never work.
 when:
-  - You need a campaign plan with proposed settings and review points.
+  - You open Meta Ads Manager every morning and can't tell which ads need action.
+  - An ad has spent money with no purchases and you wonder whether to pause it.
+  - A teammate or agency calls an ad a winner after one or two sales.
+  - You want one daily routine that gives the same kind of answer every day.
+not_for:
+  - "You are launching a new campaign and have no results yet: use the Meta creative test campaign planner."
+  - "You want to scale a campaign that already works: use the Meta campaign scaling planner."
+  - "You want a weekly review that also checks store sales and costs: use the Meta Ads weekly account reviewer."
+  - "You want a second opinion on one change before you make it: use the Meta campaign change reviewer."
+  - You don't know your break-even cost per sale. The skill will hold every pause until you give one.
 you_give:
-  - Campaign settings, dated results, target economics and budget limits
-  - The exact change you want and actions you authorize
+  - "Your Meta Ads Manager results for the last 7 to 14 days, broken down by campaign, ad set and ad, and the same for the period before (export as CSV)"
+  - "The columns it needs: date, campaign, ad set, ad, spend, purchases and revenue. Helpful extras: impressions, link clicks, frequency and add to cart"
+  - Your time zone, currency and attribution window, shown in your export settings
+  - Your break-even cost per sale and your target, and the most you will let one ad spend with no purchase
+  - Which changes you allow, such as "propose only" (optional)
 you_get:
-  - A campaign plan with proposed settings and review points
-  - Missing inputs and a bounded verification plan
+  - "A daily table with every ad marked maintain, gather more evidence, investigate, creative refresh or proposed pause"
+  - The proof behind each mark, who owns it, the money at risk and a follow-up date
+  - A short urgent list of faults, such as broken tracking or an ad that stopped delivering
+  - The next checks, ranked
+  - A replacement brief when the problem looks like the creative
+  - A list of what is missing
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - In Meta Ads Manager, set the date range, break the table down by ad and export it. Export the period before it too. Attach or paste both.
+  - Add your break-even cost per sale, your budget limits and the most you will let one ad spend with no purchase. Write "propose only" if you want no changes made.
+  - Read the urgent list first, then the table. Check every pause proposal in Ads Manager yourself before you act.
+  - Make the changes you agree with, note the date, and run it again tomorrow with a fresh export.
 how_it_works:
-  - title: Step 1
-    text: Set a review window appropriate to volume and conversion delay, with a recent comparison window. Record account, dates, timezone, currency, attribution and data freshness. Five to seven days is a historical starting example, not enough evidence for every account.
-  - title: Step 2
-    text: Establish the approved decision basis before changing ads. Acquisition CPA limits require contribution per order or an explicitly approved lifetime-value and cash-payback model. A revenue-to-ad-spend ratio of one is not profit break-even when product and operating costs remain.
-  - title: Step 3
-    text: Review campaign purpose first, then ad sets, then individual ads. Compare spend, purchases, revenue and CPA on the same definitions. Separate new tests, evergreen, scaling and retargeting contexts; do not automatically spare retargeting from the same economic and evidence checks.
-  - title: Step 4
-    text: Classify each ad as maintain, gather more evidence, investigate, creative refresh or proposed pause. A zero-purchase spend threshold is an owner-set risk cap, not statistical proof that the creative can never work. Consider sample size, lag and broken tracking before a pause recommendation.
-  - title: Step 5
-    text: Use click, landing-page, cart, frequency, cost and view metrics as diagnostic clues. Strong engagement does not establish profitable acquisition. Create a specific replacement brief when evidence points to a creative gap rather than endlessly changing audiences.
-  - title: Step 6
-    text: Deliver proposed actions with evidence, owner, spend exposure and follow-up date. Make authorized changes only, record exact settings before and after, and verify actual status. On the next review compare outcomes without pretending one platform-allocated observation proves causality.
+  - title: Sets the window
+    text: Picks a review window that fits your volume and how long buyers take to convert, with a recent comparison period. It records account, dates, time zone, currency and attribution. A few days is a starting point, not proof for every account.
+  - title: Fixes the break-even
+    text: Needs your approved cost per sale before it changes anything. A ROAS of 1.0 is not profit when product and running costs remain.
+  - title: Reviews top down
+    text: Campaign purpose first, then ad sets, then single ads, with the same definitions at each level. New tests, always-on, scaling and retargeting are judged in their own context. Retargeting gets no free pass.
+  - title: Marks every ad
+    text: Maintain, gather more evidence, investigate, creative refresh or proposed pause. It weighs sample size, conversion delay and tracking before it proposes a pause.
+  - title: Reads the clues
+    text: Clicks, landing page views, cart adds, frequency and cost help explain a result. Strong engagement does not prove profitable sales.
+  - title: Proposes the next steps
+    text: Each action comes with the proof, an owner, the money at risk and a follow-up date. When the creative is the gap, it writes a replacement brief instead of changing audiences again.
+output_shape: |
+  REVIEW  account <name> | dates <from to> vs <from to> | time zone <tz> | currency <cur> | attribution <window> | data fresh to <date>
+  BASELINE  break-even cost per sale <$ or MISSING> | target <$ or MISSING> | zero-purchase spend cap per ad <$ or MISSING>
+
+  URGENT  <faults needing action today, or none>
+
+  DAILY TABLE
+  <level> | <name> | spend | purchases | revenue | cost per sale | vs baseline | MARK | proof | owner | money at risk | follow-up date
+  (MARK = maintain | gather more evidence | investigate | creative refresh | proposed pause)
+
+  CLUES  <clicks, landing page, cart, frequency notes for each flagged ad>
+  NEXT CHECKS  1. <check> 2. <check> ...
+  REPLACEMENT BRIEF  <only if the creative is the gap: hook, angle, proof, format>
+  NOT RUN  <check, why>
+  MISSING: <what was not given>
+output_sample:
+  input:
+    - Your Meta Ads Manager results by campaign, ad set and ad, for a recent window and the one before it
+    - Your break-even cost per sale and the most you will let one ad spend with no purchase
+    - Your time zone, currency and attribution window
+    - The changes you allow (optional)
+  prerequisites:
+    - Purchase tracking that works in Meta Ads Manager
+  output:
+    - name: REVIEW and BASELINE
+      contains: The dates, time zone, currency and attribution it used, plus your break-even and spend cap, or MISSING.
+    - name: URGENT
+      contains: Faults that need action today, such as broken tracking, spend with no data or an ad that stopped delivering.
+    - name: DAILY TABLE
+      contains: Every ad with spend, purchases, cost per sale, its mark, the proof, an owner, money at risk and a follow-up date.
+    - name: CLUES
+      contains: What clicks, landing page views, cart adds and frequency suggest for each flagged ad.
+    - name: NEXT CHECKS
+      contains: The checks to run next, ranked by money at risk.
+    - name: REPLACEMENT BRIEF
+      contains: When the creative is the gap, a brief for a new hook, angle, proof and format.
+    - name: NOT RUN and MISSING
+      contains: Any check that could not run and any input you did not give.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "Source of the export. Set the table to break down by ad and pick the same attribution window for both periods."}
+    - {name: "Any good chat AI", why: "Reads a pasted or attached CSV and builds the table. It needs no connection to your ad account."}
+  inputs:
+    - "Your break-even cost per sale, from your product margin and shipping costs"
+    - "A note of any change you made in the last few days, so it is not blamed or credited wrongly"
+terms:
+  - term: Break-even cost per sale
+    meaning: The most you can pay to win one sale and not lose money, after product and running costs.
+  - term: ROAS
+    meaning: Sales credited to an ad divided by what the ad cost. It is not profit.
+  - term: Attribution window
+    meaning: How long after a click or view Meta still credits an ad with a sale.
+  - term: Gather more evidence
+    meaning: The ad has too little data to judge yet, so you wait and set a date to look again.

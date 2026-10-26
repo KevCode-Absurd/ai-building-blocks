@@ -2,37 +2,63 @@ thinking: high
 thinking_why: It must pick, set up and check heavy pipelines.
 new_slug: sequencing-pipeline-runner
 name: Sequencing pipeline runner
-summary: Point it at sequencing data or a public set. Get an nf-core pipeline
-  run for RNA-seq, variants or ATAC-seq.
+summary: Run an nf-core sequencing pipeline on your FASTQ files or a public GEO or SRA dataset, for RNA-seq, variant calling or ATAC-seq.
 job: build-software
 headline: Sequencing pipeline runner
-subhead: Point it at sequencing data or a public set. Get an nf-core pipeline
-  run for RNA-seq, variants or ATAC-seq. Bring fASTQ files or a GEO or SRA
-  accession. Use the result to plan your next step.
+subhead: Give it your FASTQ files, or a GEO or SRA accession. It picks the right nf-core pipeline, checks your setup and runs a test first. Then it runs your data and checks the results.
 explain: |
   A finished nf-core pipeline run on your sequencing data, for RNA-seq, variant calling or ATAC-seq, set up for people without a bioinformatics background. It can start from FASTQ files you have or fetch a public dataset from GEO or SRA.
 
   The steps run in order, with a pause for your approval at key choices. It fetches study info and asks which samples to download. A check confirms Docker, Nextflow and Java work, with fixes if not. You confirm the pipeline, then it runs the built-in test profile, which must pass. It builds the samplesheet, confirms the genome with you, runs the full job and checks the outputs. It needs a computer with those tools.
 when:
-  - You have RNA-seq reads and want a differential expression analysis run for
-    you.
+  - You have RNA-seq reads and want a differential expression analysis run for you.
   - You found a public GEO dataset and want to reanalyse it.
   - You need variant calling run without learning Nextflow first.
-  - Your pipeline failed and you suspect the environment.
+  - Your pipeline failed and you suspect your setup.
+not_for:
+  - "You work with single-cell data or another data type: run the right nf-core pipeline directly, or ask a bioinformatician."
+  - "You have no computer with Docker, Nextflow and Java, and cannot install them: ask your IT team or a bioinformatics core to run it."
+  - "You want results ready to publish: the output needs expert review first, so ask a bioinformatician to check it."
 you_give:
-  - FASTQ files or a GEO or SRA accession
-  - The analysis type
-  - The reference genome
+  - Your FASTQ files, or a GEO or SRA accession
+  - "The type of analysis: RNA-seq, variant calling or ATAC-seq"
+  - The reference genome, such as human or mouse
   - A computer with Docker, Nextflow and Java
 you_get:
-  - An environment check
-  - A pipeline chosen with your approval
-  - A samplesheet
-  - Completed pipeline outputs
-  - A verification of results
+  - A check of your computer setup, with fixes for what fails
+  - The right nf-core pipeline for your data, picked with your approval
+  - A samplesheet that lists your samples
+  - Finished pipeline results, including a MultiQC report
+  - A check that the key result files exist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and download public data.
+  - Use an AI that can run code on your computer and download files. A plain chat window cannot run this.
+  - Check your computer has enough disk space, memory and time for a full run. Full runs can be heavy.
+  - Paste the skill into your AI. Tell it your files or your GEO or SRA accession.
+  - "Approve each choice it asks about: the samples, the pipeline, the genome and the pipeline options."
+  - Read the Nextflow install command before you run it. It downloads a script from the web.
+  - Have an expert review the results before you use them. Cite the pipeline when you publish.
+output_sample:
+  input:
+    - Your FASTQ files, or a GEO or SRA accession
+    - "The type of analysis: RNA-seq, variant calling or ATAC-seq"
+    - The reference genome you want to use
+    - A computer with Docker, Nextflow and Java
+  prerequisites:
+    - An AI that can run code and download files
+    - A computer with Docker, Nextflow and Java installed
+    - Enough disk space, memory and time for a full run
+  output:
+    - name: Study info and sample choice
+      contains: For a public dataset, the study details and the samples you agreed to download.
+    - name: Environment check
+      contains: A pass or fail on Docker, Nextflow and Java, with fixes for anything that fails.
+    - name: Pipeline choice
+      contains: The nf-core pipeline and version that fit your data, confirmed by you.
+    - name: Test run
+      contains: A small test run of the pipeline that must pass before your real data runs.
+    - name: samplesheet.csv
+      contains: A table that lists your samples and files in the layout the chosen pipeline needs.
+    - name: Pipeline results
+      contains: A MultiQC report, plus gene counts for RNA-seq, variant files for sarek, or peak calls for ATAC-seq.
+    - name: Output check
+      contains: A check that the run finished and that the key result files exist.

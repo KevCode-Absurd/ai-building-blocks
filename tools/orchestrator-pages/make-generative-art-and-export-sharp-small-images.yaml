@@ -1,6 +1,6 @@
 new_slug: make-generative-art-and-export-sharp-small-images
 name: Make generative art and export sharp, small images
-summary: Describe the look. Get a coded art piece, sharp stills of it and smaller files.
+summary: Describe the look you want and get generative art you can run, sharp stills of it, and smaller image files for your site, poster or post.
 job: make-images
 thinking: medium
 thinking_why: The art step writes real code. A mid-level model is enough.
@@ -16,6 +16,10 @@ when:
   - You want original art for a site, a poster or a social post.
   - You want a result you can repeat and tweak later.
   - You need stills of a piece, not the running page.
+not_for:
+  - "You want photos or pictures of people: use an image model, since this makes art drawn in code."
+  - "You only need to shrink images you already have: use the Image compressor."
+  - "You want a favicon from an existing picture: use the Favicon maker."
 you_give:
   - A description of the look, such as mood, colours and movement
   - How many stills you need and what they are for
@@ -30,6 +34,23 @@ how_to_use:
   - Describe the look in a few lines. Name colours and a mood.
   - Open the page it makes and try a few seeds. Pick the ones you like.
   - Say how many stills you need and where they will be used.
+output_sample:
+  input:
+    - "A few lines on the look: colours, mood and how fast things move"
+    - How many stills you need
+    - Where the stills will be used, such as screen or print
+  prerequisites:
+    - An AI that can run code and open a web page
+    - A screenshot tool on your computer
+  output:
+    - name: step-01-generative-art-maker.md
+      contains: The art page you can run in a browser, with a seed and controls.
+    - name: step-02-app-screenshot-maker.md
+      contains: The sharp stills captured from the running art page, with clear names.
+    - name: step-03-image-compressor.md
+      contains: The smaller WebP or PNG files, plus the size before and after.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the art page
     text: Names the style, writes what it expresses, codes a piece that runs in the browser and adds controls and a seed.

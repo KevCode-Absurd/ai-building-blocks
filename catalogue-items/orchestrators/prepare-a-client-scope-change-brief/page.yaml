@@ -1,52 +1,89 @@
 new_slug: prepare-a-client-scope-change-brief
 name: Prepare a client scope change brief
 headline: Prepare a client scope change brief
-summary: Share the source files. Get a scope comparison, delivery options and client decision draft.
+summary: Compare a client's change request with your signed scope, see what it does to your team's hours and get decision options and a draft reply.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A scope comparison, delivery options and client decision draft. Share the signed engagement, actual change request, current commitments, effort evidence, available hours and approval rules. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the signed engagement, the client's change request and your current commitments. It finds what the contract covers, checks your team's hours and drafts a decision brief with options, cost and date effects, and open questions.
 explain: |-
-  A scope comparison, delivery options and client decision draft.
+  A client asks for one more thing, and the easy answer is yes. This workflow prepares a client scope change brief first, so you answer with the contract and your real hours in front of you.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Original and proposed commitments remain separate; the client has not accepted a change until evidence confirms it. Missing tools or evidence stay visible in the final summary.
+  Step 1 reads the signed engagement and finds what is in scope, what is excluded, how changes are handled, the fees and the notice terms, with clause references. Step 2 sets the request against your team's actual commitments, skills, effort ranges and free hours, and shows what it does to work already promised. Step 3 drafts a decision brief for the client with options, cost and date effects you can support, and the questions still open.
+
+  The original scope and the proposed change stay in separate columns. Nothing counts as accepted until you have evidence the client agreed. It reads what you give it and does not give legal advice.
 when:
-  - You need a scope comparison, delivery options and client decision draft.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A client emails "can you also do this?" in the middle of a project.
+  - A request sounds small but touches work already promised to someone else.
+  - You suspect a request is outside the contract and need to show where.
+  - A client wants the same date for more work and you have to say what gives.
+not_for:
+  - The client already signed the change. Plan the hours with the Team capacity planner.
+  - You need a lawyer's view on what the contract means, or a dispute is under way. This workflow gives no legal advice.
+  - You only want a plain summary of the contract. Use the Plain-words contract summary.
+  - The change is a priced variation on a building job. Use the Prepare a construction variation decision workflow.
+  - The request is for a whole new project. Use the Prepare a clear client project kickoff workflow.
 you_give:
-  - The signed engagement, actual change request, current commitments, effort evidence, available hours and approval rules.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - "The signed engagement: contract, proposal or statement of work"
+  - The client's change request, as they wrote it (email, message or notes)
+  - Your current commitments and dates for the team
+  - "Effort evidence: your estimates or time on similar past work"
+  - Hours your people have free, and who must approve a change on your side
 you_get:
-  - A scope comparison, delivery options and client decision draft.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A scope comparison: original scope against the requested change, with clause references"
+  - The effect on your team's hours and on work already promised
+  - Two or three delivery options, each with cost and date effects you can support
+  - A draft decision brief for the client, with open questions and approval status
+  - A list of what you could not verify, such as a missing clause
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Open Claude, ChatGPT or Gemini. Pick one that can read files, since you will attach a contract.
+  - Add the workflow pack. Attach the signed engagement and the client's request, then paste your commitments, effort estimates and free hours.
+  - After step 1, check the clause references against your own copy. Fix any line the AI cannot point to a clause for.
+  - After step 2, check the hours with whoever runs delivery. If an estimate is a guess, mark it as one.
+  - Send the decision draft to the account owner for review first. It goes to the client only after a person approves it.
 how_it_works:
   - title: Plain-words contract summary
-    text: Locate deliverables, exclusions, change procedure, fee and notice provisions in the signed engagement with clause references.
+    text: "Reads the signed engagement and finds the deliverables, exclusions, change procedure, fees and notice terms, each with a clause reference. Hands step 2 the baseline scope and the change rules. Check before moving on: every line cites a clause or says it is not covered."
   - title: Team capacity planner
-    text: Check the requested change against real commitments, skills, effort ranges and available hours. Expose consequences for existing work.
+    text: "Sets the request against your team's real commitments, skills, effort ranges and free hours. Shows what moves or slips in work already promised. Hands step 3 the effect on hours and dates. Check before moving on: estimates are labeled as given or assumed."
   - title: Stakeholder update writer
-    text: Draft a client decision brief with options, supported cost and date implications, open questions and approval status.
+    text: "Drafts the client decision brief: the options, the cost and date effects you can support, open questions and approval status. The draft is not sent. Hand-back check: the original scope and the proposed change stay separate."
 output_shape: |-
-  Scope and source coverage
-  A scope comparison, delivery options and client decision draft.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE COMPARISON   <deliverable or term> | original scope (clause <n>) | requested change | in, out or unclear
+  CHANGE RULES       <how changes are approved> | fee or notice terms | clause <n>
+  TEAM EFFECT        <person or role> | hours needed | hours free | work promised that moves
+  OPTIONS            <option> | cost effect | date effect | what it assumes
+  DECISION DRAFT     <summary for the client> | options | open questions | approval status: not accepted
+  MISSING            <each gap, and what it stops>
+  CHECKS MISSED      <one line each, or none>
+output_sample:
+  input:
+    - The signed engagement
+    - The client's change request
+    - Your current commitments and effort estimates
+    - Hours your team has free, and who approves a change
+  prerequisites:
+    - An AI that can read files, to read the contract (optional if you paste the clauses)
+  output:
+    - name: Scope comparison
+      contains: Each deliverable and exclusion, the requested change, and whether it is in, out or unclear, with clause references.
+    - name: Change rules
+      contains: How your contract says changes are approved, plus fee and notice terms.
+    - name: Team effect
+      contains: Hours needed against hours free, and which promised work moves or slips.
+    - name: Options
+      contains: Two or three ways to respond, each with the cost and date effects you can support.
+    - name: Decision draft
+      contains: A client-ready brief with the options, open questions and approval status. Not sent.
+    - name: MISSING and CHECKS MISSED
+      contains: Clauses or figures you did not supply, and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Original and proposed commitments remain separate; the client has not accepted a change until evidence confirms it.
+  - what: A tighter deadline
+    how: Keep the date fixed and run step 2 again. The options show what has to give.
+  - what: More people
+    how: Add a person with free hours. The team effect and options change.
+  - what: A smaller change
+    how: Cut the request to part of what the client asked. Compare the two briefs.
 judge:
   - Original and proposed commitments remain separate; the client has not accepted a change until evidence confirms it.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +96,25 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Save the signed scope and every change brief in one folder, so each change builds on the last.
+  - Write your change procedure in plain words once, and paste it every run.
+  - Keep a record of actual hours on past changes to use as effort evidence.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It can quote the contract by clause, so the comparison rests on the document and not on memory.
+    - name: Your time tracking or project tool
+      why: Past hours on similar work make effort estimates something you can support.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The original proposal and any earlier change notes.
+    - A named person who approves changes on your side.
 terms:
+  - term: Scope
+    meaning: The work the contract says you will do, and what it leaves out.
+  - term: Change procedure
+    meaning: The steps your contract says both sides follow to agree a change.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+next:
+  - prepare-a-construction-variation-decision
+  - check-capacity-before-promising-a-delivery-date

@@ -56,11 +56,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Remake the ad plan.** Use the skill `video-ad-style-remake-planner`. Start from your best script and write a remake plan that keeps every word in its place.
-2. **Fix lines nobody would say.** Use the skill `ad-script-read-aloud-editor`. Give it the script from the steps before. Read the script aloud and fix the lines that sound written, changing no claim or number.
-3. **Check the format fits.** Use the skill `video-ad-format-picker`. Give it the script from the steps before. Score formats for the remade script and confirm motion graphics ranks well before you build.
-4. **Plan the build.** Use the skill `motion-graphics-build-plan`. Give it the script from the steps before. Take the remade script through the build stages, with the words set as live text.
-5. **Check the ads against Meta rules.** Use the skill `meta-ads-compliance-checker`. Give it the script from the steps before. Check the script and the on-screen words against Facebook and Instagram ad rules.
+1. **Remake the ad plan.** Use the skill `video-ad-style-remake-planner`. Start from your best script and write a remake plan that keeps every word in its place. Hands the remade script to the read-aloud step.
+2. **Fix lines nobody would say.** Use the skill `ad-script-read-aloud-editor`. Give it the script from the steps before. Read the script aloud and fix the lines that sound written, changing no claim or number. Hands the final script to the format check, the build plan and the rules check.
+3. **Check the format fits.** Use the skill `video-ad-format-picker`. Give it the final script from step 2. Score formats for it and confirm motion graphics ranks well before you build. Hands you a go or stop. The build uses the script, not this score.
+4. **Plan the build.** Use the skill `motion-graphics-build-plan`. Give it the final script from step 2, plus your product facts and cutouts. Take it through the build stages, with the words set as live text. Hands the build plan and the on-screen words to the rules check.
+5. **Check the ads against Meta rules.** Use the skill `meta-ads-compliance-checker`. Give it the final script from step 2 and the on-screen words in step 4's build plan. Check them against Facebook and Instagram ad rules. Hands back a verdict with each flagged line quoted.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

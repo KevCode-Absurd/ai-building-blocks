@@ -28,9 +28,9 @@ how_to_use:
   - Review the result before approving external actions.
 how_it_works:
   - title: Due task follow up drafter
-    text: Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear.
-  - title: Brand voice editor
-    text: Paste your ad and customer quotes. Get off-brand words fixed, claims untouched, and a score out of 100.
+    text: Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear. Hands the drafts to step 2.
+  - title: Brand voice checker
+    text: Takes the follow-up drafts from step 1 and checks them against your voice notes or past emails. Each off-voice line gets a before and after fix. Facts and recipients stay as step 1 set them.
 output_shape: |-
   Follow-up draft ledger
   Edited drafts
@@ -53,3 +53,24 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+
+not_for:
+  - "You want to chase late invoices: use the Late invoice reminder writer."
+  - "You want a stalled sales lead nudged: use the Almost-buyer follow-up writer or the Follow-up email sequence writer."
+  - "You want one reply to an upset customer: use the Angry customer reply writer."
+output_sample:
+  input:
+    - Your task list or action register, with due dates and owners
+    - The email threads that match each due task
+    - Your brand voice notes or a few past emails (optional)
+  prerequisites:
+    - An AI that can read your files, or an export you can paste
+  output:
+    - name: follow-up-drafts.md
+      contains: One draft per task, with task ID, thread ID, To, CC, subject and body.
+    - name: draft-ledger.csv
+      contains: Each draft's version, state and message ID, so a rerun does not double send.
+    - name: Missing facts and pending approvals
+      contains: Tasks with no thread or recipient, and drafts waiting for your yes.
+    - name: Edited drafts
+      contains: The same drafts with off-brand words fixed. Claims and facts are left alone.

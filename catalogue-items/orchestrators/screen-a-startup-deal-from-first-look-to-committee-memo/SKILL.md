@@ -44,13 +44,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Review the company.** Use the skill `startup-due-diligence-reviewer`. Team, market, product and traction as a diligence lead would see them, the claims that need checking and the questions to ask the founders.
-2. **Estimate a valuation range.** Use the skill `early-stage-valuation-estimator`. Give it the review and the asking terms. A valuation range for this stage with the method shown, so the founder's number is one input among several.
+1. **Review the company.** Use the skill `startup-due-diligence-reviewer`. Team, market, product and traction as a diligence lead would see them, the claims that need checking and the questions to ask the founders. Hands the review to step 2.
+2. **Estimate a valuation range.** Use the skill `early-stage-valuation-estimator`. Give it the document from the steps before. A valuation range for this stage with the method shown, so the founder's number is one input among several. Takes the review from step 1 and your asking terms, and hands the range to step 3.
 
 Pause here: Ask the founders the open questions. Paste their answers before going on.
 
-3. **Write the screening memo.** Use the skill `deal-screening-memo-writer`. Give it the review, the range and the founders' answers. A short memo with a clear call: pass, proceed or wait for a named piece of evidence, and the three facts the call rests on.
-4. **Draft the committee memo.** Use the skill `investment-committee-memo`. Give it the screening memo and everything before it. The committee memo: the case for, the strongest case against, the terms, the risks and what would change your mind. Only drafted if the call was proceed.
+3. **Write the screening memo.** Use the skill `deal-screening-memo-writer`. Give it the document from the steps before. A short memo with a clear call: pass, proceed or wait for a named piece of evidence, and the three facts the call rests on. Takes the review and the range and hands the screening memo to step 4.
+4. **Draft the committee memo.** Use the skill `investment-committee-memo`. Give it the audit report and the document from the steps before. The committee memo: the case for, the strongest case against, the terms, the risks and what would change your mind. Takes the screening memo, the range and your deal documents. Only drafted if the call was proceed.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

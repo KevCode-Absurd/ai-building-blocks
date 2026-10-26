@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set test method and reads what the browser shows.
 new_slug: web-app-tester
 name: Web app tester
-summary: Point it at your local app. Get its screens tried in a real browser,
-  with screenshots and error logs.
+summary: Test your web app in a real browser before users find the bugs. Get screenshots and console error logs from your local app.
 job: test-and-fix-code
 headline: Web app tester
-subhead: Your local web app tried out in a real browser, with screenshots and
-  error logs so you can see what breaks. You find out about broken buttons and
-  console errors before users do.
+subhead: Your local web app tried out in a real browser, with screenshots and error logs so you can see what breaks. You find out about broken buttons and console errors before users do.
 explain: |
   Your local web app tried out in a real browser, with screenshots and error logs so you can see what breaks. You find out about broken buttons and console errors before users do.
 
@@ -18,19 +15,43 @@ when:
   - A user reported a bug you cannot reproduce.
   - You want proof that a sign-up flow completes.
   - You need screenshots of your app for a bug report.
+not_for:
+  - "You want to test a live site or a system you do not control: use a manual check or a hosted test service instead."
+  - "You have no way to run code or install Python on your computer: ask a developer to run the test for you."
+  - "You only need to read the page text or code, not click through it: open the file and read it yourself."
 you_give:
   - The address or start command for your local app
   - The flow to test, such as sign up
   - Test logins for your app (optional)
   - What a pass looks like (optional)
 you_get:
-  - A browser test script
-  - Screenshots of each step
-  - Browser console and error logs
-  - A list of what failed
+  - A browser test script you can run again.
+  - Screenshots of the steps in your flow.
+  - Browser console and error logs.
+  - A list of what failed. Attach the screenshots and logs to a bug ticket, or run the test again after a fix.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Install Python and Playwright on your computer. Your AI must be able to run code and open a browser.
+  - Start your app, or have its start command ready, such as npm run dev.
+  - Open your AI and paste this skill. Add your app address, the flow to test and any test logins.
+  - Ask your AI to run the helper script with --help first, so it learns how to start your server.
+  - Let it run the test script. Then read the screenshots, the console errors and the failure list.
+  - Fix what broke and ask it to run the same test again.
+output_sample:
+  input:
+    - The address or start command for your local app
+    - The flow you want to test, such as sign up
+    - Test logins for your app (optional)
+    - What a pass looks like (optional)
+  prerequisites:
+    - An AI that can run code and open a browser
+    - Python and Playwright installed on your computer
+    - Your app running locally, or a start command for it
+  output:
+    - name: Playwright test script
+      contains: A Python script that opens your app in a browser and clicks through the flow you chose.
+    - name: Screenshots
+      contains: Pictures of the page taken while the script runs, so you can see what the browser showed.
+    - name: Console logs
+      contains: Messages and errors the browser printed while your flow ran.
+    - name: Failure list
+      contains: A short list of the steps or buttons that did not work.

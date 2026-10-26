@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It groups changes and rewrites them in plain words.
 new_slug: app-store-release-notes-writer
 name: App Store release notes writer
-summary: Point it at your app's code history. Get plain "What's New" notes users
-  can read, based on real changes.
+summary: Turn your git history into plain App Store release notes. Get short "What's New" bullets for users, each tied to a real change.
 job: write-and-tell-stories
 headline: App Store release notes writer
-subhead: Plain "What's New" notes your users can read, built from what truly
-  changed since your last release. No more guessing from memory or pasting raw
-  commit text.
+subhead: Plain "What's New" notes your users can read, built from what truly changed since your last release. No more guessing from memory or pasting raw commit text.
 explain: |
   Plain "What's New" notes your users can read, built from what truly changed since your last release. No more guessing from memory or pasting raw commit text.
 
@@ -18,6 +15,10 @@ when:
   - Your commit log reads like code and users need plain words.
   - You want notes sorted into new, improved and fixed.
   - You want to be sure each bullet matches a real change.
+not_for:
+  - "Your app has no git history: write the notes by hand from your own list of changes."
+  - "You need final legal or regulatory wording: ask a person who handles compliance to write or approve it."
+  - "You want notes for a web app or a changelog file: use a manual changelog or ask a human editor."
 you_give:
   - Your project folder with git history
   - The last release tag (optional)
@@ -28,8 +29,24 @@ you_get:
   - Internal work left out
   - Each bullet traced to a real commit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in a tool that can run code and read your project folder.
+  - Paste the skill text, or upload the skill folder with its helper script.
+  - Point your AI at your project and say "Write App Store release notes since the last tag".
+  - Add your last release tag, your wanted length or a character limit if you have them.
+  - Check each bullet against your changes and answer any questions the AI asks.
+  - Paste the bullets into the "What's New" field in App Store Connect and check the character limit.
+output_sample:
+  input:
+    - Your project folder with git history
+    - The last release tag (optional)
+    - Your wanted number of bullets (optional)
+    - A storefront character limit (optional)
+  prerequisites:
+    - An AI that can run code and read your project files, so it can run the helper script
+  output:
+    - name: Title
+      contains: An optional heading with "What's New" or your app name and version number.
+    - name: Release note bullets
+      contains: Five to ten short bullets, one sentence each, written in plain words about what users will notice.
+    - name: Questions about unclear changes
+      contains: A short list of changes the AI could not tell were user-facing, so you can confirm them.

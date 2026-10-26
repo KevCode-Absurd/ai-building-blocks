@@ -1,26 +1,25 @@
 slug: inventory-borrowing-base-builder
 name: Inventory borrowing base builder
-summary: An inventory collateral advance with binding caps
+summary: "Work out how much a lender may advance against your inventory. Uses cost, appraised value, rates, a cap and reserves, and shows which limit binds."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next: [revolver-availability-checker]
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -1,53 +1,109 @@
 new_slug: preferred-return-accrual-checker
 name: Preferred return accrual checker
 headline: Preferred return accrual checker
-summary: Accrue a simple preferred-return period on a constant unreturned capital balance.
+summary: Work out a fund's preferred return at a simple yearly rate. Get the new amount, the unpaid total and the first payment due to investors.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Current-period preference, cumulative unpaid preference and first-tier obligation. Share lPA simple-accrual terms, constant eligible unreturned capital, annual hurdle, actual year fraction and unpaid opening preference.
+subhead: Give it the capital not yet returned, the yearly hurdle rate, the part of the year covered and any preferred return still unpaid. It works out the new preferred return, the unpaid total, and the cash needed before any profit is shared.
 explain: |-
-  Current-period preference, cumulative unpaid preference and first-tier obligation.
+  Many funds promise investors a minimum yearly return before the manager takes a share of profit. That minimum is the preferred return, or hurdle. This preferred return accrual checker works out how much has built up on the capital investors have not yet been repaid. It also adds any amount still unpaid from before.
 
-  Private fund distributions. Illustrative figures only. 100 at8% simple for2 years accrues16; opening unpaid5 yields21 and first tier121. One year yields13 unpaid.
+  This skill covers simple accrual only. The rate applies to the capital, and the unpaid preferred return earns nothing itself. The cash needed first is the unreturned capital plus the unpaid preferred return. Only after that is paid does profit get shared. If capital comes in or goes out during the period, you have to split the period into dated parts first.
+
+  Practice numbers, not a real fund: 100 of capital at 8% simple for 2 years builds 16. With 5 unpaid from before, the unpaid preferred return is 21. The first payment due is 100 + 21 = 121. For one year, the new amount is 8, the unpaid total is 13, and the first payment due is 113.
 when:
-  - You need current-period preference, cumulative unpaid preference and first-tier obligation.
-  - You work on private fund distributions and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your fund agreement promises investors an 8% preferred return, and you want to know what has built up so far.
+  - A distribution is coming, and you want the amount investors must receive before the manager shares in profit.
+  - An investor statement shows an unpaid preferred return, and you want to check the figure.
+  - A reviewer asks how the hurdle number in your payout table was reached.
+not_for:
+  - Capital came in or went out during the period. Split it into dated parts first. This covers one constant balance.
+  - The hurdle compounds, or the manager gets a catch-up. This covers simple accrual only, so read the fund agreement first.
+  - You want to split a whole payout between investors and the manager. Use the No-catchup waterfall checker, and bring this result to it.
 you_give:
-  - LPA simple-accrual terms, constant eligible unreturned capital, annual hurdle, actual year fraction and unpaid opening preference.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The fund agreement wording on the preferred return and how it builds up
+  - The capital not yet returned to investors, held constant over the period (from the investor statement)
+  - The yearly hurdle rate, such as 8% (from the fund agreement)
+  - The part of the year covered, such as 2 years, or the start and end dates and the day count
+  - Any preferred return still unpaid at the start (from the investor statement)
+  - Your own fund spreadsheet (optional)
 you_get:
-  - Current-period preference, cumulative unpaid preference and first-tier obligation.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The preferred return built up in this period
+  - The total unpaid preferred return
+  - The cash needed first, which is unreturned capital plus the unpaid preferred return
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the agreement wording, the capital, the rate, the period and any unpaid amount. Say the currency and units, such as USD millions. Attach the agreement page if you can.
+  - Ask in plain words, such as how much preferred return is owed after 2 years, and what must be paid before carry?
+  - Check one line yourself. Capital times the yearly rate times the years gives the new amount. Add what was unpaid before.
+  - Read MISSING and CHECKS MISSED before you use any figure. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Confirm simple rather than compound preference and the exact date from which each contribution earns the hurdle
-    text: Confirm simple rather than compound preference and the exact date from which each contribution earns the hurdle.
-  - title: 2. For a constant eligible balance multiply capital by annual rate and contractual year fraction
-    text: For a constant eligible balance multiply capital by annual rate and contractual year fraction.
-  - title: 3. Add unpaid opening preference without interest on that preference; combine with unreturned capital for the first-tier cash requirement
-    text: Add unpaid opening preference without interest on that preference; combine with unreturned capital for the first-tier cash requirement.
+  - title: Checks the accrual type
+    text: Confirms the agreement uses simple, not compound, accrual and finds the date each contribution starts to earn the hurdle.
+  - title: Applies the rate
+    text: Multiplies the unreturned capital by the yearly rate and the part of the year, using the agreement's day count.
+  - title: Adds what was unpaid
+    text: Adds the opening unpaid preferred return. It earns no interest of its own in this simple case.
+  - title: Finds the first payment due
+    text: Adds the unreturned capital to the unpaid preferred return. That is the cash investors take before profit is shared.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given. It never fills a gap with zero.
 output_shape: |-
-  Current-period preference, cumulative unpaid preference and first-tier obligation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Preferred return this period <amount> | Unpaid preferred return <amount> | First payment due <amount>
+
+  SCOPE AND SOURCES
+  <period, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <unreturned capital, yearly rate, share of year, day count, opening unpaid amount, simple accrual>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures; first payment tied to capital plus unpaid preferred return>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The capital not yet returned to investors
+    - The yearly hurdle rate
+    - The part of the year covered
+    - Any preferred return still unpaid at the start
+    - Your own fund spreadsheet (optional)
+  prerequisites:
+    - The fund agreement page that sets the preferred return
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The preferred return for the period, the unpaid total and the first payment due.
+    - name: SCOPE AND SOURCES
+      contains: The period, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it, with the accrual type and day count stated.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and a check that the first payment equals capital plus unpaid return.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Any contribution or return within the interval requires separate dated subperiods.
+  - what: Half a year
+    how: Change the part of the year to 0.5. The new amount halves, and the unpaid total follows.
+  - what: No unpaid amount from before
+    how: Say the opening unpaid amount is zero because you know it is. The skill then uses zero and notes why.
+  - what: A different rate
+    how: Change the yearly hurdle, such as 6% or 10%. The amounts are worked out again.
 judge:
   - Any contribution or return within the interval requires separate dated subperiods.
   - Opening unpaid preference earns no interest in this simple structure.
@@ -62,15 +118,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the fund agreement that sets the hurdle, how it builds up and the day count
+    - The latest investor statement, with unreturned capital and unpaid preferred return
+    - A named reviewer and the question you want answered
 terms:
+  - term: Preferred return
+    meaning: A minimum yearly return that investors get before the manager shares in profit. Also called the hurdle.
+  - term: Unreturned capital
+    meaning: Money investors put in that has not yet been paid back to them.
+  - term: Simple accrual
+    meaning: The rate applies to the capital only. Unpaid return does not earn more return.
+  - term: Carry
+    meaning: The manager's share of profit above the hurdle.
+  - term: Catch-up
+    meaning: A rule that lets the manager take extra profit after the hurdle, until they have a set share.
+  - term: Day count
+    meaning: The rule your agreement uses to count days in a year.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real fund.

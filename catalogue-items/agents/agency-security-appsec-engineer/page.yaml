@@ -1,0 +1,147 @@
+name: Application Security Engineer agent
+summary: Get a threat model and secure code review for your feature, with bugs to fix before merge, hardening tips and security requirements you can test.
+headline: Application Security Engineer agent
+subhead: Describe a feature or paste the code that handles sign-in, user input or data. It maps what could be attacked, reviews the code for common flaws, and turns each risk into a fix and a test. You get findings ranked by what to fix before you ship.
+job: secure-code
+thinking: high
+thinking_why: It reasons about attackers, design and code at once, and must not call code safe because a tool found nothing. Use a model that reasons well and says when it is unsure.
+explain: |-
+  Most security bugs are honest mistakes by good developers who were never taught the risk. An application security review works best when it happens early. First you ask how the feature could be attacked, then you read the code that matters most, then you turn every risk into a requirement someone can test.
+
+  This agent follows that order. It lists what is worth protecting and where trust changes, such as the internet to your server and your server to your database. It walks through the six STRIDE questions: could someone pretend to be another user, change data, deny they acted, read what they should not, block the service, or gain more rights than they should. Then it reads the code you paste for the flaws behind the OWASP Top 10, such as injection, broken access checks, weak sign-in, bad cryptography and exposed data. Each finding is marked "fix before merge" or "improve when you can". It shows the fix in your language and framework, not just the problem.
+
+  Scanning tools miss logic and access bugs, so this review does not replace them, and it does not replace a human penetration test. In a chat it reads only what you paste, and it never runs a scanner. The profile's deadlines, such as fix a critical bug in 7 days, are examples from the original author. Set your own with your team.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to build a feature that handles sign-in, payments, uploads or personal data and want the risks listed first.
+  - A teammate opened a pull request touching access checks or user input and you want a security review of it.
+  - A customer sent a security questionnaire and you need a threat model and a list of security requirements.
+  - Your scanner reports many issues and you want to know which ones matter and what to fix first.
+not_for:
+  - Your code was mostly written by an AI tool and you worry about leaked keys or open database rules. Use the AI-Generated Code Security Auditor agent.
+  - You want only a threat model with no code review. Use the Threat modeler.
+  - You want someone to attack your running app. Use the Penetration Tester agent, and only on systems you own.
+  - You want a security design for a whole company or cloud setup. Use the Security Architect agent.
+you_give:
+  - A short description of the feature or system, what it does and what data it handles.
+  - The code to review, pasted or uploaded, such as sign-in code, API routes or file upload handling (optional)
+  - Your language, framework and where it runs, such as Python with Django on AWS.
+  - How sensitive the data is, and any rules you follow, such as PCI-DSS, HIPAA or SOC 2 (optional)
+  - Your scanner results or past findings (optional)
+you_get:
+  - A threat model with assets, trust boundaries and a table of threats by STRIDE
+  - Code findings split into fix before merge and improve when you can, each with evidence and a fix
+  - A numbered list of security requirements you can test
+  - Tests to add so each fixed bug stays fixed
+  - Advice on scanning tools and a list of what was not checked
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the feature and your stack. Paste the code that handles sign-in, access checks, user input or data. Remove real keys and personal data first. For a whole project, use an AI tool that can open your project folder.
+  - Type "Threat model this first, then review the code. Mark each finding fix before merge or improve later. Show the evidence and the fix. Tell me what you could not check."
+  - Read the fix-before-merge findings first. Ask it to explain any you do not follow, and to show the fix in your framework.
+  - Turn the requirements into tickets and the tests into real tests. The AI does not run any code.
+  - After you fix, paste the changed code back and ask it to confirm each fix really closes the bug.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the feature, data, stack and rules, and says what it will not see, such as your live system.
+  - title: Map assets and trust boundaries
+    text: It lists what is worth protecting and where data crosses from untrusted to trusted.
+  - title: Run the STRIDE questions
+    text: It checks spoofing, tampering, denial of having acted, data exposure, service blocking and extra rights, one by one.
+  - title: Review the code
+    text: It reads sign-in, access checks, input handling, cryptography and file handling, and traces untrusted input to where it is used.
+  - title: Turn risks into requirements
+    text: It writes exact, testable requirements, such as "check the owner on every request", not "use good security".
+  - title: Rank and hand back
+    text: It marks findings fix before merge or improve later, adds regression tests, and lists what was not checked.
+output_shape: |-
+  SCOPE
+    Feature <what> | Data <kinds and sensitivity> | Stack <list> | Rules <list>
+
+  ASSETS AND TRUST BOUNDARIES
+    <asset> | <where it lives> | <who owns it>
+    <boundary> | <from untrusted to trusted>
+
+  THREAT TABLE (STRIDE)
+    <category> | <threat> | <where> | <risk> | <fix>
+
+  CODE FINDINGS
+    <number> [<fix before merge or improve later>] <what is wrong> | <file and line> | <severity>
+      Evidence: <the code or path that shows it>
+      Fix: <change in your language and framework>
+
+  SECURITY REQUIREMENTS
+    <numbered, testable requirement>
+
+  TESTS TO ADD
+    <test> | <what it proves>
+
+  SCANNING AND TRACKING ADVICE
+    <tool type> | <where it fits> | <what it will miss>
+
+  GAPS AND CHECKS
+    <what was not checked> | <how to check it>
+output_sample:
+  input:
+    - A short description of the feature and the data it handles
+    - The code to review (optional)
+    - Your language, framework and where it runs
+    - Data sensitivity and rules you follow (optional)
+  prerequisites:
+    - Real keys and personal data removed from anything you paste
+    - An AI tool that can open your project folder, if you want a whole project reviewed
+  output:
+    - name: Scope
+      contains: The feature, data, stack and rules the review was built on.
+    - name: Assets and trust boundaries
+      contains: What is worth protecting, where it lives and where trust changes.
+    - name: Threat table
+      contains: Threats grouped by the six STRIDE questions, each with where, risk and fix.
+    - name: Code findings
+      contains: Each flaw marked fix before merge or improve later, with evidence and a fix in your framework.
+    - name: Security requirements
+      contains: Numbered requirements that can be tested in review or in automated tests.
+    - name: Tests to add
+      contains: Regression tests that stop each fixed bug from coming back.
+    - name: Scanning and tracking advice
+      contains: Where scanners fit, what they will miss and how to track fixes to closure.
+    - name: Gaps and checks
+      contains: What the review could not check and how you can check it.
+works_best_with:
+  tools:
+    - name: Claude Code, Cursor or another AI tool that can open your project folder
+      why: It can follow untrusted input across files, which finds more than reading one pasted snippet.
+  inputs:
+    - A simple diagram or list of how data moves between your app, services and database.
+    - Your dependency list, such as package.json or requirements.txt, so it can flag risky libraries to check.
+    - The last scan report or penetration test summary.
+terms:
+  - term: Threat model
+    meaning: A written list of what could go wrong, how an attacker would do it and what stops them.
+  - term: STRIDE
+    meaning: Six threat types to check. Spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege.
+  - term: OWASP Top 10
+    meaning: A public list of the most common web app security flaws, kept by the OWASP community.
+  - term: SAST and DAST
+    meaning: Scanner types. SAST reads your code. DAST tests your running app from outside.
+  - term: Injection
+    meaning: A flaw where user input is run as a command, such as a database query, instead of treated as plain text.
+tweaks:
+  - what: Scope
+    how: Review one feature or one pull request at a time. A whole app in one go gives shallow findings.
+  - what: Language
+    how: Name your language and framework so fixes use your own libraries and not generic advice.
+  - what: Deadlines
+    how: Set your own fix times by risk. The profile's example times are only a starting idea.
+improve:
+  - Keep the threat model with the feature and update it when the design changes.
+  - Turn each fixed bug into a test so it cannot return.
+  - Pair it with the AI-Generated Code Security Auditor agent when AI tools wrote much of the code.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

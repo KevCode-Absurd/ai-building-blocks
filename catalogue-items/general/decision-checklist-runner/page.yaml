@@ -1,6 +1,6 @@
 new_slug: decision-checklist-runner
 name: Decision checklist runner
-summary: Paste your checklist and a decision. Get each item answered with evidence, a pass, fail or unknown, and a clear call.
+summary: Run your checklist on a real decision. Each item gets a fact, a pass, fail or unknown, then a clear go, wait or no call.
 job: think-and-decide
 thinking: medium
 thinking_why: It answers each item from evidence and applies fixed rules, with some judgment on what counts as a pass.
@@ -14,6 +14,10 @@ when:
   - You are about to decide and feel very sure.
   - A decision has a deadline and you are tempted to skip checks.
   - You want a written record of why you chose, to judge later.
+not_for:
+  - "You have no written checklist yet: build one first with the Decision checklist builder."
+  - "Your checklist is out of date or has vague items: fix it with the Checklist upkeep planner."
+  - "The choice is routine, with no deadline and little at stake: just decide, or ask a friend."
 you_give:
   - Your checklist, or the output of "Decision checklist builder"
   - The decision, with what is at stake and when it is due
@@ -28,6 +32,30 @@ how_to_use:
   - Paste your checklist, then describe the decision and the facts you have.
   - Answer any unknowns it asks about, or leave them marked as fails.
   - Save the record. After the result, bring it to "Checklist upkeep planner".
+output_sample:
+  input:
+    - Your checklist, with a pass line for each item
+    - The decision, what is at stake and when it is due
+    - The facts you have, such as numbers, quotes and names (optional)
+  prerequisites:
+    - A written checklist, for example from the Decision checklist builder
+  output:
+    - name: The decision
+      contains: One line on what you are deciding, the stakes, the deadline and whether it can be undone.
+    - name: Run
+      contains: Every item in order, with its answer, the fact behind it, and PASS, FAIL or UNKNOWN.
+    - name: Totals
+      contains: The count of fails and unknowns, and any one cause they share.
+    - name: The call
+      contains: Go, wait or no, with the reason and what would change it.
+    - name: Record
+      contains: The date, what you expect by when, what would show you wrong, and your main reason.
+    - name: List problems
+      contains: Items that were vague, unused or missing, to take to the upkeep step.
+    - name: Missing
+      contains: Facts it needed but did not have, marked so nothing is guessed.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 how_it_works:
   - title: Restate the decision
     text: Writes what is being decided, the stakes, the date and whether it can be undone.

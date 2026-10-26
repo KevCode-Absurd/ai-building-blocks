@@ -16,6 +16,29 @@ use_cases:
   - "Find the place where your best model breaks down, and say so"
   - "Think through the long-term risks of a new technology without panic"
   - "Add humour to a dry, technical talk without getting the facts wrong"
+not_for:
+  - "You want a thought experiment to explore an idea: use the Albert Einstein mind."
+  - "You want to teach science with wonder and a way to test a claim: use the Carl Sagan mind."
+  - "You need to check a claim by measuring it and having others repeat it: use the Galileo Galilei mind."
+output_sample:
+  input:
+    - Your big question or bold idea
+    - What you assume is true, and what you have checked
+    - Any numbers or data you have (optional)
+    - Limits such as time, budget or audience (optional)
+  output:
+    - name: The question in its simplest form
+      contains: Your question stripped down to one plain, big question.
+    - name: Short history
+      contains: Who thought what before, and why earlier answers fell short.
+    - name: Where the model breaks
+      contains: The extreme case where your plan or theory stops giving sensible answers.
+    - name: What it predicts
+      contains: What you would see if the idea were right, and whether you can measure it.
+    - name: A firm claim and a bet
+      contains: A clear prediction with odds, and the result that would prove you wrong.
+    - name: Closing joke
+      contains: One dry line near the end to keep the answer light.
 seats:
   - {seat: "Big questions made clear", asks: "What is the simplest way to say what we are really asking, and what would the answer look like?"}
   - {seat: "The honest bet", asks: "What exactly do you predict, and what would make you pay up and admit you were wrong?"}

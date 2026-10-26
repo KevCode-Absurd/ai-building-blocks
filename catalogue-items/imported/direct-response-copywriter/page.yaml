@@ -2,35 +2,66 @@ thinking: medium
 thinking_why: It applies set copy frameworks to your offer.
 new_slug: direct-response-copywriter
 name: Direct response copywriter
-summary: Describe your offer. Get headlines, emails, calls to action or a full
-  sales page that sells.
+summary: Write headlines, emails, calls to action or sales page copy that sounds like a person and pushes to act, using only your real proof.
 job: write-landing-page
 headline: Direct response copywriter
-subhead: Describe your offer. Get headlines, emails, calls to action or a full
-  sales page that sells. Bring a description of your offer. Use the result to
-  plan your next step.
+subhead: Describe your offer, your buyer and the result they get. You get 10 headline options, an email, button lines or a full sales page in a natural voice. Every number and quote comes from you, or stays a labelled gap.
 explain: |
-  Copy that reads like a person talking and still pushes the reader to act: headlines, emails, calls to action or a full sales page.
+  Most sales copy reads like a brochure. This direct response copywriter works the other way. It treats the headline as most of the job, then writes like you would explain the offer to a smart friend who doubts you a little.
 
-  The method treats the headline as most of the job. Its main formula is an action, a specific result, and a timeframe or contrast, as in "days, not weeks". It also teaches story headlines and specific-fact headlines drawn from famous ads. The voice rule is simple: write to a smart friend who is sceptical but curious, and back every claim with a detail. Describe your offer, your buyer and what they get, and you get drafts built on those principles.
+  The headline method starts from one pattern: an action, a specific result, and a time or contrast, such as "days, not weeks". It also gives story, question, specific-fact and before-and-after headlines, drawn from classic ads. Body copy uses open questions, short opening lines and a "so what?" check that pushes each feature down to what the buyer gains.
+
+  Proof rules come first. It will not invent a number, a customer quote or a result. If you give none, you get a labelled gap to fill. Medical, money or legal claims are sent to review.
 when:
-  - Your sales page gets visits but few sign-ups.
-  - You need ten headline options for one offer.
-  - A launch email sequence has to be written by Friday.
-  - Your current copy sounds like a brochure, not a person.
+  - Your sales page gets visits but few sign-ups, and the headline is weak.
+  - You need 10 headline options for one offer before Friday.
+  - Your email sequence or ad copy sounds like a brochure, not a person.
+  - You want a first draft of a full sales page from your offer and reviews.
+not_for:
+  - "You only need a short bridge page between an ad and a video: use the bridge page writer."
+  - "You want landing page copy built on a confirmed brief: use the honest conversion copywriter or the conversion page writer."
+  - "Your offer makes medical, money or legal claims: get compliance review first. This skill will not write those claims."
+  - You have no offer or buyer yet. Work out who it is for first, because copy cannot fix that.
 you_give:
-  - A description of your offer
-  - Who it is for
+  - A description of your offer, in plain words
+  - Who it is for and what they struggle with
   - The main result buyers get
-  - Proof such as numbers or testimonials (optional)
-  - "The format you need: headline, email or page"
+  - Real proof, such as numbers, reviews and testimonials, only if you have it (optional)
+  - The format you need, such as headlines, an email, button lines or a page
 you_get:
-  - Headline options built from proven formulas
-  - Email or page copy in a natural voice
-  - Calls to action
-  - A reason behind each copy choice
+  - Ten headline options grouped by formula, with one pick marked
+  - Email copy with subject line, preview text, body and one call to action
+  - Button lines that say what the reader gets
+  - Sales page copy in labelled sections, when you ask for a page
+  - A list of facts to fill in and claims to check
+  - A short plan to test your versions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Say what you want back first, such as "10 headlines" or "a launch email". Then add your offer, buyer, main result and any real proof.
+  - Read the "Placeholders to fill" list. Replace each gap with a real fact, or cut the line.
+  - Read the copy out loud. Fix any line that sounds like an ad. Cut any claim you cannot back up.
+  - Test your headline versions one at a time. Change one thing, and keep the version with the best result.
+output_sample:
+  input:
+    - Your offer and who it is for
+    - The main result buyers get
+    - Real proof, such as reviews and numbers (optional)
+    - The format you want, such as headlines, an email or a page
+  output:
+    - name: Headline options
+      contains: Ten headlines grouped by formula, each with a one-line reason and one marked pick.
+    - name: Email copy
+      contains: Subject line, preview text, body and one call to action, as separate labelled parts.
+    - name: Call to action lines
+      contains: Three to five benefit-led button lines with a short reassurance line under each.
+    - name: Sales page sections
+      contains: Hook, problem, proof, solution, objections and final call to action, when you ask for a page.
+    - name: Placeholders to fill
+      contains: Each missing number or quote, and where you can find the real one.
+    - name: Test plan
+      contains: How to compare versions by changing one thing at a time.
+works_best_with: Claude, ChatGPT or Gemini. Paste your real customer reviews and the exact words buyers use. It gives much better copy than a short description.
+terms:
+  - Direct response: Copy meant to get one action now, such as a click or a purchase.
+  - Open loop: A question you raise and answer a little later, to keep people reading.
+  - Call to action: The button or line that tells the reader what to do next.

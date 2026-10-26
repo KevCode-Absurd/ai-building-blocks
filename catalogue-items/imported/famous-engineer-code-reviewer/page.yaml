@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It argues from several views, which takes some thought.
 new_slug: famous-engineer-code-reviewer
 name: Famous engineer code reviewer
-summary: Give it code. Get blunt reviews in the voices of well-known engineers,
-  each tied to their written views.
+summary: Get a code review from well-known engineers' views, with findings tied to their written principles. Paste your code and get a clear verdict.
 job: test-and-fix-code
 headline: Famous engineer code reviewer
-subhead: A code review in the voices of well-known engineers, each finding tied
-  to something they have written or said. The notes are blunter and more
-  concrete than a generic review.
+subhead: A code review in the voices of well-known engineers, each finding tied to something they have written or said. The notes are blunter and more concrete than a generic review.
 explain: |
   A code review in the voices of well-known engineers, each finding tied to something they have written or said. The notes are blunter and more concrete than a generic review.
 
@@ -18,6 +15,10 @@ when:
   - A pull request is about to merge and you want a second view.
   - You want feedback on a README or quick start from a product angle.
   - You keep getting vague review comments and want specific ones.
+not_for:
+  - "Your change is cosmetic or has no logic change: a quick check by a teammate is enough, or use a lighter generic review."
+  - "Your code is a throwaway prototype: skip the review and test it by running it."
+  - "Your AI cannot search the web and the engineer is not covered in the skill's principles file: pick another engineer or ask a person to review."
 you_give:
   - The code, diff or pull request
   - The language and what it should do
@@ -28,8 +29,27 @@ you_get:
   - A product-angle check
   - A final verdict
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill text, or upload the skill folder if your AI reads files.
+  - Paste your diff, code or pull request text. Say which language it is and what it should do.
+  - Name the engineers you want, or say you want the skill to pick them. It always adds one product view.
+  - Read the findings from the top. Fix blockers and critical items first.
+  - Check each cited principle. Treat the engineer's name as a lens, and confirm each finding is a real problem.
+  - Run the review again after you fix blockers or critical items.
+output_sample:
+  input:
+    - Your code, diff or pull request
+    - The language and what the code should do
+    - Which kinds of engineers you want (optional)
+  prerequisites:
+    - An AI that can read your files and the skill's principles file, or a chat where you paste the code and the skill text
+  output:
+    - name: Findings
+      contains: Each issue is ranked blocker, critical, warning or note, with the engineer lens that spotted it.
+    - name: Principle and confidence
+      contains: Each finding names the documented principle behind it and marks confidence as high, moderate or low.
+    - name: Product check
+      contains: One product-minded view on the first-use experience, such as error messages, docs or onboarding.
+    - name: Zero-finding proof
+      contains: If an area is clean, three or more principles the code meets and how it meets them.
+    - name: Verdict
+      contains: A final call of approve, concerns or block, with what to fix before merge.

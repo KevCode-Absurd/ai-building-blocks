@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It gathers public pages and compares them.
 new_slug: competitor-messaging-comparer
 name: Competitor messaging comparer
-summary: Name your rivals. Get a messaging and positioning comparison with
-  content gaps. Reads public web pages.
+summary: Compare how your rivals pitch themselves and find the messages nobody owns. Get a competitor messaging comparison with content gaps from public pages.
 job: study-competitors
 headline: Competitor messaging comparer
-subhead: A side by side look at how your rivals describe themselves, what
-  content they publish and where they have gone quiet. You can see which claims
-  are crowded and which message nobody owns.
+subhead: A side by side look at how your rivals describe themselves, what content they publish and where they have gone quiet. You can see which claims are crowded and which message nobody owns.
 explain: |
   A side by side look at how your rivals describe themselves, what content they publish and where they have gone quiet. You can see which claims are crowded and which message nobody owns.
 
@@ -18,6 +15,10 @@ when:
   - A competitor just launched and you need to know how they pitch it.
   - Your content team wants topics rivals have missed.
   - You need a competitive brief before a planning meeting.
+not_for:
+  - "You need one quick fact about a rival, such as a price: search their site or ask a person on your sales team."
+  - "You need a one-page sales sheet to use on calls: ask your AI for a battlecard after the brief is done."
+  - "You need private data, such as rival traffic or revenue: use a paid research tool, because this reads public pages only."
 you_give:
   - One or more competitor names
   - What you sell and to whom (optional)
@@ -29,8 +30,32 @@ you_get:
   - Recent news and launches
   - A list of gaps to use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can search the web, as the skill needs it to read rival pages.
+  - Paste the skill text into the chat.
+  - Type the names of your competitors. Add what you sell and how you differ if you like (optional).
+  - Say which areas matter most, such as messaging or pricing (optional). If you skip this, it covers all areas.
+  - Check the sources for any claim you plan to act on. Treat figures without a source as unconfirmed.
+  - Reply with one of the follow-up offers at the end, such as a battlecard or new messaging.
+output_sample:
+  input:
+    - The names of one or more competitors
+    - What you sell and to whom (optional)
+    - Your key differences (optional)
+    - Focus areas, such as messaging or pricing (optional)
+  prerequisites:
+    - An AI that can search the web
+  output:
+    - name: Executive Summary
+      contains: A short view of the competitive landscape, with your biggest opportunity and your biggest threat.
+    - name: Competitor Profiles
+      contains: "For each rival: overview, messaging, product positioning, content strategy, strengths and weaknesses."
+    - name: Messaging Comparison Matrix
+      contains: A table comparing tagline, target buyer, differentiator, tone and core promise across you and your rivals.
+    - name: Content Gap Analysis
+      contains: Topics, formats and keywords your rivals cover that you do not, and the reverse.
+    - name: Opportunities
+      contains: Positioning gaps, unclaimed message angles and audiences your rivals underserve.
+    - name: Threats
+      contains: Where rivals are strong, trends that favor them and recent moves that could shift the market.
+    - name: Recommended Actions
+      contains: Three to five steps, split into quick wins and longer-term moves.

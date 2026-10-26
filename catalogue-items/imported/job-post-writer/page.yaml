@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must pick the real needs and choose words carefully.
 new_slug: job-post-writer
 name: Job post writer
-summary: Describe the role and your team. Get a clear job description that
-  attracts the right people and avoids biased wording.
+summary: Write a clear job post that draws the right applicants. Give it the role and your team. You get a draft with biased wording flagged.
 job: hire-people
 headline: Job post writer
-subhead: A job description that candidates want to answer and that does not turn
-  good people away by accident. Describe the role, your team and what the hire
-  will accomplish.
+subhead: A job description that candidates want to answer and that does not turn good people away by accident. Describe the role, your team and what the hire will accomplish.
 explain: |
   A job description that candidates want to answer and that does not turn good people away by accident. Describe the role, your team and what the hire will accomplish. If you give only a title, the skill asks short questions about the problem the person solves, what success looks like in six to twelve months, and the level and scope.
 
@@ -18,6 +15,10 @@ when:
   - Your old job post attracts the wrong people.
   - A hiring manager sent a messy wish list and you must shape it.
   - You want to remove wording that might discourage some applicants.
+not_for:
+  - "You need an internal requisition or a legal job spec: use a role profile or your company's HR template."
+  - "You only want to check pay or contract terms: ask HR or a lawyer, not this skill."
+  - "You want to find or contact candidates: use a search tool or ask a recruiter, since this skill only writes the post."
 you_give:
   - The role title and level
   - What the person will achieve in the first year
@@ -29,7 +30,35 @@ you_get:
   - Questions that fill any gaps
   - A rewrite of weak sections
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool and paste in this skill's instructions. In Claude, you can also upload the skill folder.
+  - Paste in the role title, level and what the hire should achieve in the first year.
+  - Add your team and company details. Add an old job post if you want a rewrite.
+  - Answer any short questions the AI asks about gaps.
+  - Read the bias check and the sensitive information check. Fix anything flagged before you publish.
+  - Saving jd.md as a file needs an AI that can create files. In a plain chat, copy the text yourself.
+output_sample:
+  input:
+    - The role title and level
+    - What the person will achieve in the first 6 to 12 months
+    - Your team and company context
+    - An old job post to rewrite (optional)
+    - Your hiring manager's notes (optional)
+  prerequisites:
+    - An AI that can save files, if you want the post saved as jd.md. In a plain chat, it shows the text instead.
+  output:
+    - name: The Opportunity
+      contains: A short opening that says why the role matters and what the person will solve.
+    - name: What You'll Do
+      contains: The work framed around results, not a long task list.
+    - name: What You'll Bring
+      contains: The skills and experience that truly matter, kept short and free of inflated demands.
+    - name: What We Offer
+      contains: Pay approach, benefits and what it is like to work with you.
+    - name: About the company
+      contains: A brief company story drawn from your saved company notes, if you have them.
+    - name: Inclusive language review
+      contains: Wording that may put off some applicants, with suggested fixes.
+    - name: Sensitive information review
+      contains: Lines with private figures or plans that you should remove before posting.
+    - name: jd.md
+      contains: The finished job description, saved as a file in the role folder.

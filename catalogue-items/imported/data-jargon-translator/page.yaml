@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It swaps hard terms for plain ones without changing the facts.
 new_slug: data-jargon-translator
 name: Data jargon translator
-summary: Paste your technical findings and name the reader. Get jargon found and
-  the text rewritten in plain business words.
+summary: Turn technical findings into plain business words your boss or client can act on. Paste your text, name the reader, get a jargon report and a rewrite.
 job: write-and-tell-stories
 headline: Data jargon translator
-subhead: Paste your technical findings and name the reader. Get jargon found and
-  the text rewritten in plain business words. Bring your technical text or
-  findings. Use the result to plan your next step.
+subhead: Paste your technical findings and name the reader. Get jargon found and the text rewritten in plain business words. Bring your technical text or findings. Use the result to plan your next step.
 explain: |
   A technical write up becomes something a VP, finance lead or product manager can act on, with the original kept in an appendix for the experts.
 
@@ -18,6 +15,10 @@ when:
   - You wrote an analysis and suspect it is full of jargon.
   - A stakeholder keeps asking what a statistical term means.
   - You must present test results to a finance team.
+not_for:
+  - "You need final audit or regulatory wording where exact technical terms are required: keep the original analysis and ask a specialist to review it."
+  - "You want to run the analysis or check the statistics: use your analyst, or a stats tool, since this only rewrites text you already have."
+  - "You need a slide deck or a long report from scratch: write the plain version here, then build the deck in your usual tool."
 you_give:
   - Your technical text or findings
   - The reader's role
@@ -28,7 +29,25 @@ you_get:
   - Plain business version
   - Original text appendix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your technical text. Say who will read it, such as a VP or a finance lead.
+  - Add the decision the reader needs to make, if you know it (optional).
+  - If your AI can run code, it can use the scripts to find jargon and score reading level. If not, ask it to check by hand in chat.
+  - Check that the plain version says the same true things as your original, especially any numbers and test results.
+  - Send the plain version to your reader. Keep the original appendix for anyone who wants the technical detail.
+output_sample:
+  input:
+    - Your technical text or findings
+    - The reader's role, such as VP, product manager, operations or finance
+    - The decision the reader needs to make (optional)
+  prerequisites:
+    - An AI that can run code, if you want the jargon and reading level scripts to run (otherwise your AI can check by hand in chat)
+  output:
+    - name: Jargon detection report
+      contains: A list of the technical terms in your draft that a business reader may not know.
+    - name: Readability score before and after
+      contains: The reading grade level and sentence complexity of your text, then of the rewrite, aiming for grade 10 or lower.
+    - name: Translated text
+      contains: A plain business version that keeps what each statistic says, matched to your reader's role and questions.
+    - name: Original text appendix
+      contains: Your original technical text, kept beside the plain version for technical reviewers.

@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: Picking the right metric for your stage takes some reasoning.
 new_slug: startup-metrics-picker
 name: Startup metrics picker
-summary: Describe your business stage. Get the one metric to focus on and a
-  short list of numbers to track. Uses Lean Analytics.
+summary: Pick the one metric your startup should track this quarter. Give your model and stage. You get a partner metric, a target and a short list.
 job: track-numbers
 headline: Startup metrics picker
-subhead: Picking the one number your startup should chase this quarter, and
-  dropping the rest from the wall. You describe your business type and stage,
-  and get a single main metric, a partner metric that stops it being gamed, and
-  a short list to watch.
+subhead: Picking the one number your startup should chase this quarter, and dropping the rest from the wall. You describe your business type and stage, and get a single main metric, a partner metric that stops it being gamed, and a short list to watch.
 explain: |
   Picking the one number your startup should chase this quarter, and dropping the rest from the wall. You describe your business type and stage, and get a single main metric, a partner metric that stops it being gamed, and a short list to watch.
 
   The method comes from the book Lean Analytics. It separates metrics that change a decision from vanity totals like cumulative signups. It rewrites totals as ratios, splits data by signup month and by channel, and asks you to set a target, a date and a pre-agreed response if you miss. It can also score your current dashboard from 0 to 10 and list what to fix.
 when:
   - Your dashboard has twenty numbers and nobody can say which one matters.
-  - You are reporting to a board or investors and want charts that show real
-    progress.
+  - You are reporting to a board or investors and want charts that show real progress.
   - You just passed a milestone and the metric you track no longer fits.
   - Your team keeps arguing about what success means for this quarter.
+not_for:
+  - "You have an idea but no customers yet: talk to ten likely buyers first, because there is no data to measure."
+  - "You want to plan tests and learn from them: use a build-measure-learn method, not a metrics picker."
+  - "You want to fix why users leave: look at your sign-up and first-use steps by hand, then pick a metric."
 you_give:
   - Your business model, such as subscription, marketplace or shop
   - Your current stage
@@ -32,7 +31,28 @@ you_get:
   - A short tracking list
   - A score and fixes for your current dashboard
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into the chat.
+  - "Write a short brief: your business model, your stage, the numbers you track now, and your biggest risk (optional)."
+  - Ask your AI to pick your one metric and score your dashboard.
+  - Check that it named your model and stage correctly. Fix them if not, then ask it to run again.
+  - Share the target, date and miss plan with your team before the quarter starts.
+output_sample:
+  input:
+    - Your business model, such as subscription, marketplace or shop
+    - Your current stage
+    - The numbers you track now
+    - Your biggest current risk (optional)
+  output:
+    - name: Model and stage
+      contains: The business model and stage your AI read from your answers, so you can correct them.
+    - name: Main metric
+      contains: The one number to focus on for your model and stage, and why it fits.
+    - name: Partner metric
+      contains: A second number that stops the main one from being gamed.
+    - name: Target, date and miss plan
+      contains: A line in the sand, a date to check it, and what you will do if you miss.
+    - name: Tracking list
+      contains: A short list of other numbers to watch, written as ratios rather than totals.
+    - name: Dashboard score
+      contains: A score from 0 to 10 for the numbers you track now, with fixes to reach 10.

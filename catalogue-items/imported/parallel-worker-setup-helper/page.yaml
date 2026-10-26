@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must match setup to how each worker starts.
 new_slug: parallel-worker-setup-helper
 name: Parallel worker setup helper
-summary: Give it code that fails on workers. Get paths, variables and shared
-  objects set up on each worker.
+summary: Fix parallel MATLAB code that fails on workers. Give it your code and get the right setup for paths, libraries, connections and data.
 job: build-software
 headline: Parallel worker setup helper
-subhead: Parallel MATLAB code that stops failing on workers because each worker
-  has the paths, variables and objects it needs. It fixes errors like undefined
-  function, cannot serialize or slow data transfer.
+subhead: Parallel MATLAB code that stops failing on workers because each worker has the paths, variables and objects it needs. It fixes errors like undefined function, cannot serialize or slow data transfer.
 explain: |
   Parallel MATLAB code that stops failing on workers because each worker has the paths, variables and objects it needs. It fixes errors like undefined function, cannot serialize or slow data transfer.
 
@@ -18,6 +15,10 @@ when:
   - Each worker needs its own database connection.
   - Large data is copied again on every loop pass and it is slow.
   - You use spmd only to set things up before a loop.
+not_for:
+  - "You have one parfor loop over data already in memory: MATLAB sends it to workers for you, so leave the code as it is."
+  - "You are still choosing between process and thread pools: pick the pool type first, or ask a MATLAB colleague or the MathWorks docs."
+  - "You do not have Parallel Computing Toolbox: run a normal for loop, since workers need that toolbox."
 you_give:
   - Your MATLAB code
   - The error message (optional)
@@ -28,8 +29,25 @@ you_get:
   - Reduced data transfer
   - Cleaned-up replacement for spmd setup
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your MATLAB code. Add the error message if you have one.
+  - Say what each worker needs, such as a library, a database connection, a path or a data file.
+  - Read the cause note first, then check the setup code fits your case.
+  - Run the fixed code in MATLAB yourself. Your AI cannot run it unless it has MATLAB access.
+output_sample:
+  input:
+    - Your MATLAB code that uses parfor or parfeval
+    - The error message you see on workers (optional)
+    - What each worker needs, such as a library, database, path or data file
+  prerequisites:
+    - MATLAB with Parallel Computing Toolbox, if you want to run the fixed code
+    - Database Toolbox, only if your workers need database connections
+  output:
+    - name: Cause of the failure
+      contains: A short note on why the code fails on workers, such as a missing library, path or object that cannot be copied.
+    - name: Setup code
+      contains: Code using parallel.pool.Constant, parfevalOnAll or parpool options, chosen to fit what each worker needs.
+    - name: Fixed parfor code
+      contains: Your loop rewritten to read the per-worker value, so setup runs once per worker and not on every pass.
+    - name: spmd replacement
+      contains: If your code uses spmd only for setup, a version with proper cleanup in its place.
